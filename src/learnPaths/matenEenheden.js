@@ -1,7 +1,7 @@
-// Leerpad: Maten en eenheden — Cito groep 7-8
+// Leerpad: Maten en eenheden — Doorstroomtoets groep 7-8
 // 8 stappen in 7 hoofdstukken (A t/m G).
-// Doelgroep: groep 6-8 basisschool, met focus op Cito-eindtoets-stijl.
-// Sprint-5+ S4 audit-3 (2026-05-08): nieuw Cito-content-pad voor ICP.
+// Doelgroep: groep 6-8 basisschool, met focus op Doorstroomtoets-stijl.
+// Sprint-5+ S4 audit-3 (2026-05-08): nieuw Toets-content-pad voor ICP.
 
 const COLORS = {
   axis: "#e0e6f0",
@@ -26,7 +26,7 @@ const chapters = [
   { letter: "D", title: "Inhoud: L, dL, cL, mL", emoji: "🥤", from: 3, to: 3 },
   { letter: "E", title: "Tijd: uur, minuut, seconde", emoji: "⏱️", from: 4, to: 4 },
   { letter: "F", title: "Omrekenen — de truc", emoji: "🔄", from: 5, to: 5 },
-  { letter: "G", title: "Cito-redactiesommen + eindtoets", emoji: "🏆", from: 6, to: 7 },
+  { letter: "G", title: "Toets-redactiesommen + eindtoets", emoji: "🏆", from: 6, to: 7 },
 ];
 
 // SVG: maten-trapje voor lengte (km↔mm), gewicht (ton↔mg) of inhoud (L↔mL).
@@ -92,7 +92,7 @@ const steps = [
   // STAP 1: Wat zijn maten?
   {
     title: "Wat zijn maten en eenheden?",
-    explanation: "Bij rekenen heb je vaak getallen mét een **eenheid**: 5 **meter**, 200 **gram**, 1,5 **liter**, 30 **minuten**.\n\nEen eenheid vertelt **wat je meet**:\n• **Lengte** — hoe lang of hoe ver iets is. Eenheden: km, m, cm, mm.\n• **Gewicht** — hoe zwaar iets is. Eenheden: ton, kg, g, mg.\n• **Inhoud** — hoeveel ergens in zit (vloeistof). Eenheden: L, dL, cL, mL.\n• **Tijd** — hoe lang iets duurt. Eenheden: uur, minuut, seconde.\n\n**Waarom verschillende eenheden?**\nOmdat objecten verschillen in grootte. Je meet de afstand naar Den Haag in **km** (kilometer), maar de lengte van een potlood in **cm** (centimeter). Het zou raar zijn om te zeggen: 'mijn potlood is 0,00015 km lang' — dat is hetzelfde maar lastig te lezen.\n\n**De truc bij Cito**:\nVeel sommen vragen je om om te rekenen *(bijvoorbeeld km naar m, of g naar kg)*. Dan moet je weten **hoeveel keer 10** elke stap is. Dat leer je in dit pad.\n\n**Voorbeeld**:\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 cm = 10 mm\n\nKlinkt veel? Geen zorg — er is een handig **trapje** waarmee je het altijd kunt opzoeken.",
+    explanation: "Bij rekenen heb je vaak getallen mét een **eenheid**: 5 **meter**, 200 **gram**, 1,5 **liter**, 30 **minuten**.\n\nEen eenheid vertelt **wat je meet**:\n• **Lengte** — hoe lang of hoe ver iets is. Eenheden: km, m, cm, mm.\n• **Gewicht** — hoe zwaar iets is. Eenheden: ton, kg, g, mg.\n• **Inhoud** — hoeveel ergens in zit (vloeistof). Eenheden: L, dL, cL, mL.\n• **Tijd** — hoe lang iets duurt. Eenheden: uur, minuut, seconde.\n\n**Waarom verschillende eenheden?**\nOmdat objecten verschillen in grootte. Je meet de afstand naar Den Haag in **km** (kilometer), maar de lengte van een potlood in **cm** (centimeter). Het zou raar zijn om te zeggen: 'mijn potlood is 0,00015 km lang' — dat is hetzelfde maar lastig te lezen.\n\n**De truc bij de Doorstroomtoets**:\nVeel sommen vragen je om om te rekenen *(bijvoorbeeld km naar m, of g naar kg)*. Dan moet je weten **hoeveel keer 10** elke stap is. Dat leer je in dit pad.\n\n**Voorbeeld**:\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 cm = 10 mm\n\nKlinkt veel? Geen zorg — er is een handig **trapje** waarmee je het altijd kunt opzoeken.",
     svg: voorbeeldSvg(),
     checks: [
       {
@@ -143,7 +143,7 @@ const steps = [
   // STAP 2: Lengte
   {
     title: "Lengte — km, m, dm, cm, mm",
-    explanation: "Lengte gaat over **afstand**. Hier is het maten-trapje van groot naar klein:\n\n**km → hm → dam → m → dm → cm → mm**\n\nIeder stapje is **× 10** (omlaag) of **÷ 10** (omhoog).\n\n**Vaak gebruikte stappen**:\n• 1 km = **1000** m  *(afstanden tussen steden)*\n• 1 m = **100** cm  *(meubels, mensen)*\n• 1 m = **1000** mm  *(schroeven, papier-dikte)*\n• 1 cm = **10** mm  *(potlood-dikte)*\n\n**Voorbeelden om te onthouden**:\n• Een dubbeltje is ongeveer **15 mm** breed.\n• Een potlood is **15-20 cm** lang.\n• Een Nederlandse voordeur is **2 m** hoog.\n• De marathon is **42 km** lang.\n\n**Cito-truc**:\nAls je twijfelt, vraag jezelf af: *'Kan ik dit met een liniaal meten?'* Zo ja → cm of mm. *'Past het in mijn kamer?'* → m. *'Loop ik er meer dan een minuut over?'* → km.\n\n**Veel-voorkomende fout**:\nLeerlingen vergeten dat 1 m **niet** 10 cm is — het is **100** cm. Tussen m en cm zitten 2 stapjes (m → dm → cm), dus × 100, niet × 10.",
+    explanation: "Lengte gaat over **afstand**. Hier is het maten-trapje van groot naar klein:\n\n**km → hm → dam → m → dm → cm → mm**\n\nIeder stapje is **× 10** (omlaag) of **÷ 10** (omhoog).\n\n**Vaak gebruikte stappen**:\n• 1 km = **1000** m  *(afstanden tussen steden)*\n• 1 m = **100** cm  *(meubels, mensen)*\n• 1 m = **1000** mm  *(schroeven, papier-dikte)*\n• 1 cm = **10** mm  *(potlood-dikte)*\n\n**Voorbeelden om te onthouden**:\n• Een dubbeltje is ongeveer **15 mm** breed.\n• Een potlood is **15-20 cm** lang.\n• Een Nederlandse voordeur is **2 m** hoog.\n• De marathon is **42 km** lang.\n\n**Toets-truc**:\nAls je twijfelt, vraag jezelf af: *'Kan ik dit met een liniaal meten?'* Zo ja → cm of mm. *'Past het in mijn kamer?'* → m. *'Loop ik er meer dan een minuut over?'* → km.\n\n**Veel-voorkomende fout**:\nLeerlingen vergeten dat 1 m **niet** 10 cm is — het is **100** cm. Tussen m en cm zitten 2 stapjes (m → dm → cm), dus × 100, niet × 10.",
     svg: trapjeSvg(["km","hm","dam","m","dm","cm","mm"], COLORS.meter, "Lengte-trapje (× 10 per stap)"),
     checks: [
       {
@@ -194,7 +194,7 @@ const steps = [
   // STAP 3: Gewicht
   {
     title: "Gewicht — ton, kg, g, mg",
-    explanation: "Gewicht gaat over **hoe zwaar** iets is. Hier zijn de **belangrijkste 3 stappen**:\n\n**ton → kg → g → mg**\n\nLet op: tussen ton en kg, en tussen kg en g, en tussen g en mg zit telkens **× 1000** (drie stapjes ineens, niet × 10).\n\n**Vaak gebruikte stappen**:\n• 1 ton = **1000** kg  *(zware vrachtwagens)*\n• 1 kg = **1000** g  *(boodschappen)*\n• 1 g = **1000** mg  *(medicijnen)*\n\n**Voorbeelden om te onthouden**:\n• Een appel ≈ **200 g**.\n• Een pak melk = **1 kg** (= 1 L water-equivalent).\n• Een mens-volwassene = **60-90 kg**.\n• Een auto = **1-2 ton** *(1000-2000 kg)*.\n\n**Cito-truc**:\n• 'Ik kan het optillen met 1 vinger' → mg of g.\n• 'Ik kan het tillen, maar niet lang' → kg.\n• 'Ik heb een hijskraan nodig' → ton.\n\n**Veel-voorkomende fout**:\nLeerlingen denken dat kg → g is × 100 (zoals lengte). Bij gewicht is het **× 1000**! Dat is de belangrijkste verwarring.\n\n**Handige weet**:\n• 1 L water = **1 kg** *(precies, bij kamertemperatuur)*\n• 500 g = ½ kg = **'pondje'** *(spreektaal)*\n• 250 g = ¼ kg = **'kwart pondje'** *(in slagerij)*",
+    explanation: "Gewicht gaat over **hoe zwaar** iets is. Hier zijn de **belangrijkste 3 stappen**:\n\n**ton → kg → g → mg**\n\nLet op: tussen ton en kg, en tussen kg en g, en tussen g en mg zit telkens **× 1000** (drie stapjes ineens, niet × 10).\n\n**Vaak gebruikte stappen**:\n• 1 ton = **1000** kg  *(zware vrachtwagens)*\n• 1 kg = **1000** g  *(boodschappen)*\n• 1 g = **1000** mg  *(medicijnen)*\n\n**Voorbeelden om te onthouden**:\n• Een appel ≈ **200 g**.\n• Een pak melk = **1 kg** (= 1 L water-equivalent).\n• Een mens-volwassene = **60-90 kg**.\n• Een auto = **1-2 ton** *(1000-2000 kg)*.\n\n**Toets-truc**:\n• 'Ik kan het optillen met 1 vinger' → mg of g.\n• 'Ik kan het tillen, maar niet lang' → kg.\n• 'Ik heb een hijskraan nodig' → ton.\n\n**Veel-voorkomende fout**:\nLeerlingen denken dat kg → g is × 100 (zoals lengte). Bij gewicht is het **× 1000**! Dat is de belangrijkste verwarring.\n\n**Handige weet**:\n• 1 L water = **1 kg** *(precies, bij kamertemperatuur)*\n• 500 g = ½ kg = **'pondje'** *(spreektaal)*\n• 250 g = ¼ kg = **'kwart pondje'** *(in slagerij)*",
     svg: trapjeSvg(["ton","100kg","10kg","kg","100g","10g","g","100mg","10mg","mg"], COLORS.gewicht, "Gewicht-trapje (× 10 per stap, ELK 1000-blok = 3 stappen)"),
     checks: [
       {
@@ -245,7 +245,7 @@ const steps = [
   // STAP 4: Inhoud
   {
     title: "Inhoud — L, dL, cL, mL",
-    explanation: "Inhoud is **hoeveel vloeistof ergens in zit**. Het trapje:\n\n**L → dL → cL → mL**\n\nIeder stapje is × 10. Dus:\n• 1 L = **10** dL\n• 1 dL = **10** cL\n• 1 cL = **10** mL\n• 1 L = **1000** mL  *(dat is 3 stappen ineens)*\n\n**Vaak gebruikte stappen**:\n• 1 L = **1000** mL  *(pak melk)*\n• 1 L = **100** cL  *(grote fles fris)*\n• 1 L = **10** dL  *(grote drinkbeker)*\n\n**Voorbeelden om te onthouden**:\n• Een glas water ≈ **200 mL** *(= 2 dL)*\n• Een pak melk = **1 L**.\n• Een autotank ≈ **50-60 L**.\n• Een eetlepel ≈ **15 mL**.\n• Een theelepel ≈ **5 mL**.\n\n**Cito-truc**:\n• Past in een glas → mL of cL.\n• Past in een fles → L.\n• Past in een bad → vele L (ongeveer 150 L).\n\n**Slimme weet**:\n• **1 mL = 1 cm³** *(1 kubieke centimeter)*. Dus een doosje van 1 cm × 1 cm × 1 cm bevat precies 1 mL water.\n• **1 L = 1 dm³** *(1 kubieke decimeter)*. Een melkpak van 10 cm × 10 cm × 10 cm = 1 L.\n\n**Veel-voorkomende fout**:\nVerwarring tussen cL en mL. **1 cL = 10 mL** *(niet 100!)*. En **1 dL = 100 mL**.",
+    explanation: "Inhoud is **hoeveel vloeistof ergens in zit**. Het trapje:\n\n**L → dL → cL → mL**\n\nIeder stapje is × 10. Dus:\n• 1 L = **10** dL\n• 1 dL = **10** cL\n• 1 cL = **10** mL\n• 1 L = **1000** mL  *(dat is 3 stappen ineens)*\n\n**Vaak gebruikte stappen**:\n• 1 L = **1000** mL  *(pak melk)*\n• 1 L = **100** cL  *(grote fles fris)*\n• 1 L = **10** dL  *(grote drinkbeker)*\n\n**Voorbeelden om te onthouden**:\n• Een glas water ≈ **200 mL** *(= 2 dL)*\n• Een pak melk = **1 L**.\n• Een autotank ≈ **50-60 L**.\n• Een eetlepel ≈ **15 mL**.\n• Een theelepel ≈ **5 mL**.\n\n**Toets-truc**:\n• Past in een glas → mL of cL.\n• Past in een fles → L.\n• Past in een bad → vele L (ongeveer 150 L).\n\n**Slimme weet**:\n• **1 mL = 1 cm³** *(1 kubieke centimeter)*. Dus een doosje van 1 cm × 1 cm × 1 cm bevat precies 1 mL water.\n• **1 L = 1 dm³** *(1 kubieke decimeter)*. Een melkpak van 10 cm × 10 cm × 10 cm = 1 L.\n\n**Veel-voorkomende fout**:\nVerwarring tussen cL en mL. **1 cL = 10 mL** *(niet 100!)*. En **1 dL = 100 mL**.",
     svg: trapjeSvg(["L","dL","cL","mL"], COLORS.inhoud, "Inhoud-trapje (× 10 per stap)"),
     checks: [
       {
@@ -296,7 +296,7 @@ const steps = [
   // STAP 5: Tijd
   {
     title: "Tijd — uur, minuut, seconde",
-    explanation: "Tijd is **anders dan andere maten**. Eenheden gaan **niet** in stappen van 10, maar van **60** (en bij dagen: 24).\n\n**De stappen**:\n• 1 uur = **60** minuten\n• 1 minuut = **60** seconden\n• 1 dag = **24** uur\n• 1 week = **7** dagen\n• 1 jaar ≈ **365** dagen\n\n**Voorbeelden om te onthouden**:\n• Een tandenpoetsing = **2 minuten** *(120 sec)*.\n• Een schooldag = **6-7 uur**.\n• Een voetbalwedstrijd = **90 minuten** *(1,5 uur)*.\n• Een werkdag = **8 uur**.\n\n**Cito-truc — tijdsom**:\n*'Een film begint om 14:30 en duurt 2 uur en 15 minuten. Hoe laat eindigt de film?'*\n• Eerst de uren: 14:30 + 2 uur = **16:30**.\n• Dan de minuten: 16:30 + 15 min = **16:45**.\n\n**Cito-truc — duur berekenen**:\n*'Mike begint zijn huiswerk om 16:45 en is klaar om 18:30. Hoe lang heeft hij gewerkt?'*\n• Stap 1: tot het hele uur: 16:45 → 17:00 = **15 min**.\n• Stap 2: hele uren: 17:00 → 18:00 = **1 uur**.\n• Stap 3: laatste deel: 18:00 → 18:30 = **30 min**.\n• Totaal: **1 uur 45 minuten**.\n\n**Veel-voorkomende fout**:\nDecimaal denken bij tijd: 2,5 uur = **2 uur 30 min** *(niet 2 uur 50 min!)*. Half uur = 30 minuten, niet 50 omdat het 60-stelsel is.\n\n**Tip**:\nTeken bij tijdsommen op een papiertje een 'tijd-balkje' van begin → eind. Geeft overzicht.",
+    explanation: "Tijd is **anders dan andere maten**. Eenheden gaan **niet** in stappen van 10, maar van **60** (en bij dagen: 24).\n\n**De stappen**:\n• 1 uur = **60** minuten\n• 1 minuut = **60** seconden\n• 1 dag = **24** uur\n• 1 week = **7** dagen\n• 1 jaar ≈ **365** dagen\n\n**Voorbeelden om te onthouden**:\n• Een tandenpoetsing = **2 minuten** *(120 sec)*.\n• Een schooldag = **6-7 uur**.\n• Een voetbalwedstrijd = **90 minuten** *(1,5 uur)*.\n• Een werkdag = **8 uur**.\n\n**Toets-truc — tijdsom**:\n*'Een film begint om 14:30 en duurt 2 uur en 15 minuten. Hoe laat eindigt de film?'*\n• Eerst de uren: 14:30 + 2 uur = **16:30**.\n• Dan de minuten: 16:30 + 15 min = **16:45**.\n\n**Toets-truc — duur berekenen**:\n*'Mike begint zijn huiswerk om 16:45 en is klaar om 18:30. Hoe lang heeft hij gewerkt?'*\n• Stap 1: tot het hele uur: 16:45 → 17:00 = **15 min**.\n• Stap 2: hele uren: 17:00 → 18:00 = **1 uur**.\n• Stap 3: laatste deel: 18:00 → 18:30 = **30 min**.\n• Totaal: **1 uur 45 minuten**.\n\n**Veel-voorkomende fout**:\nDecimaal denken bij tijd: 2,5 uur = **2 uur 30 min** *(niet 2 uur 50 min!)*. Half uur = 30 minuten, niet 50 omdat het 60-stelsel is.\n\n**Tip**:\nTeken bij tijdsommen op een papiertje een 'tijd-balkje' van begin → eind. Geeft overzicht.",
     svg: `<svg viewBox="0 0 400 160">
 <rect x="0" y="0" width="400" height="160" fill="${COLORS.paper}"/>
 <text x="200" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">Tijd-stappen (NIET × 10!)</text>
@@ -367,7 +367,7 @@ const steps = [
   // STAP 6: Omrekenen — de truc
   {
     title: "Omrekenen — komma verschuiven",
-    explanation: "Bij omrekenen tussen eenheden hoef je **niet altijd te rekenen**. Vaak verschuift de **komma** alleen.\n\n**De gouden regel**:\n• Eenheid **groter maken** *(bv. cm → m)* → komma **naar links**.\n• Eenheid **kleiner maken** *(bv. m → cm)* → komma **naar rechts**.\n• Per stapje op het trapje = 1 plek komma verschuiven.\n\n**Voorbeelden lengte**:\n• **350 cm** → m? Trapje cm → dm → m = **2 stappen** omhoog → komma 2 plaatsen naar links → **3,50 m**.\n• **2,5 km** → m? Trapje km → hm → dam → m = **3 stappen** omlaag → komma 3 plaatsen naar rechts → **2500 m**.\n\n**Voorbeelden gewicht**:\n• **1500 g** → kg? g → kg = 3 stappen omhoog → komma 3 naar links → **1,5 kg**.\n• **0,75 kg** → g? kg → g = 3 stappen omlaag → komma 3 naar rechts → **750 g**.\n\n**Voorbeelden inhoud**:\n• **750 mL** → L? mL → L = 3 stappen omhoog → **0,75 L**.\n• **1,2 L** → mL? L → mL = 3 stappen omlaag → **1200 mL**.\n\n**Cito-truc**:\nMaak voor jezelf een mini-tabel:\n```\nkm  hm  dam  m   dm  cm  mm\n```\nSchrijf het getal op de juiste plek en verschuif de komma.\n\n**Voorbeeld**:\n*'Hoeveel cm is 0,42 m?'*\n• Plaats 0,42 op de m-plek.\n• Schuif komma 2 plekken naar rechts (m → dm → cm).\n• Antwoord: **42 cm**.\n\n**Veel-voorkomende fout**:\nVergeten welke kant op te schuiven. Onthoud: groter eenheid → kleiner getal *(want minder van die grote)*. Kleinere eenheid → groter getal.",
+    explanation: "Bij omrekenen tussen eenheden hoef je **niet altijd te rekenen**. Vaak verschuift de **komma** alleen.\n\n**De gouden regel**:\n• Eenheid **groter maken** *(bv. cm → m)* → komma **naar links**.\n• Eenheid **kleiner maken** *(bv. m → cm)* → komma **naar rechts**.\n• Per stapje op het trapje = 1 plek komma verschuiven.\n\n**Voorbeelden lengte**:\n• **350 cm** → m? Trapje cm → dm → m = **2 stappen** omhoog → komma 2 plaatsen naar links → **3,50 m**.\n• **2,5 km** → m? Trapje km → hm → dam → m = **3 stappen** omlaag → komma 3 plaatsen naar rechts → **2500 m**.\n\n**Voorbeelden gewicht**:\n• **1500 g** → kg? g → kg = 3 stappen omhoog → komma 3 naar links → **1,5 kg**.\n• **0,75 kg** → g? kg → g = 3 stappen omlaag → komma 3 naar rechts → **750 g**.\n\n**Voorbeelden inhoud**:\n• **750 mL** → L? mL → L = 3 stappen omhoog → **0,75 L**.\n• **1,2 L** → mL? L → mL = 3 stappen omlaag → **1200 mL**.\n\n**Toets-truc**:\nMaak voor jezelf een mini-tabel:\n```\nkm  hm  dam  m   dm  cm  mm\n```\nSchrijf het getal op de juiste plek en verschuif de komma.\n\n**Voorbeeld**:\n*'Hoeveel cm is 0,42 m?'*\n• Plaats 0,42 op de m-plek.\n• Schuif komma 2 plekken naar rechts (m → dm → cm).\n• Antwoord: **42 cm**.\n\n**Veel-voorkomende fout**:\nVergeten welke kant op te schuiven. Onthoud: groter eenheid → kleiner getal *(want minder van die grote)*. Kleinere eenheid → groter getal.",
     svg: `<svg viewBox="0 0 400 200">
 <rect x="0" y="0" width="400" height="200" fill="${COLORS.paper}"/>
 <text x="200" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">Komma verschuiven — voorbeeld</text>
@@ -440,10 +440,10 @@ const steps = [
     ],
   },
 
-  // STAP 7: Cito-redactiesommen
+  // STAP 7: Toets-redactiesommen
   {
-    title: "Cito-redactiesommen — eenheden mixen",
-    explanation: "Op de Doorstroomtoets krijg je vaak **verhalen** waar je eenheden moet **omrekenen** vóór je kunt rekenen. Dat is de truc.\n\n**Cito-strategie in 4 stappen**:\n1. **Lees het verhaal** rustig en onderstreep getallen + eenheden.\n2. **Maak alles dezelfde eenheid** *(meestal de kleinste)*.\n3. **Reken** zoals een normale som.\n4. **Antwoord in de gevraagde eenheid** *(let op!)*.\n\n**Voorbeeld 1 — gewicht**:\n*'Mama koopt 3 zakken aardappels van 2,5 kg en een zak van 750 g. Wat is het totaal in kg?'*\n• Stap 1: getallen = 3 × 2,5 kg + 750 g.\n• Stap 2: alles in g = 3 × 2500 + 750 = 7500 + 750 = **8250 g**.\n• Stap 3: gevraagd in kg → **8,25 kg**.\n\n**Voorbeeld 2 — inhoud + verdelen**:\n*'Een fles bevat 1,5 L limonade. Je wilt glazen van 250 mL vullen. Hoeveel volle glazen krijg je?'*\n• Stap 1: getallen = 1,5 L en 250 mL.\n• Stap 2: alles in mL → 1,5 L = 1500 mL.\n• Stap 3: 1500 ÷ 250 = **6 glazen**.\n\n**Voorbeeld 3 — lengte + tijd**:\n*'Tom fietst 12 km in een halfuur. Hoeveel m per minuut?'*\n• Stap 1: 12 km in 30 min.\n• Stap 2: alles in m + min → 12.000 m in 30 min.\n• Stap 3: 12.000 ÷ 30 = **400 m per minuut**.\n\n**Veel-voorkomende fouten**:\n• Vergeten om eerst om te rekenen → telt 2,5 kg + 750 als getallen ipv eenheden.\n• Antwoord in verkeerde eenheid geven *(in kg gevraagd, in g geantwoord)*.\n• Decimaal en gehele getallen door elkaar halen.\n\n**Tip bij Cito**:\nSchrijf altijd 2 dingen op vóór je rekent:\n1. Welke eenheid is de **kleinste**?\n2. In welke eenheid wordt het **antwoord** gevraagd?\n\nDat scheelt 90% van de fouten.",
+    title: "Toets-redactiesommen — eenheden mixen",
+    explanation: "Op de Doorstroomtoets krijg je vaak **verhalen** waar je eenheden moet **omrekenen** vóór je kunt rekenen. Dat is de truc.\n\n**Toets-strategie in 4 stappen**:\n1. **Lees het verhaal** rustig en onderstreep getallen + eenheden.\n2. **Maak alles dezelfde eenheid** *(meestal de kleinste)*.\n3. **Reken** zoals een normale som.\n4. **Antwoord in de gevraagde eenheid** *(let op!)*.\n\n**Voorbeeld 1 — gewicht**:\n*'Mama koopt 3 zakken aardappels van 2,5 kg en een zak van 750 g. Wat is het totaal in kg?'*\n• Stap 1: getallen = 3 × 2,5 kg + 750 g.\n• Stap 2: alles in g = 3 × 2500 + 750 = 7500 + 750 = **8250 g**.\n• Stap 3: gevraagd in kg → **8,25 kg**.\n\n**Voorbeeld 2 — inhoud + verdelen**:\n*'Een fles bevat 1,5 L limonade. Je wilt glazen van 250 mL vullen. Hoeveel volle glazen krijg je?'*\n• Stap 1: getallen = 1,5 L en 250 mL.\n• Stap 2: alles in mL → 1,5 L = 1500 mL.\n• Stap 3: 1500 ÷ 250 = **6 glazen**.\n\n**Voorbeeld 3 — lengte + tijd**:\n*'Tom fietst 12 km in een halfuur. Hoeveel m per minuut?'*\n• Stap 1: 12 km in 30 min.\n• Stap 2: alles in m + min → 12.000 m in 30 min.\n• Stap 3: 12.000 ÷ 30 = **400 m per minuut**.\n\n**Veel-voorkomende fouten**:\n• Vergeten om eerst om te rekenen → telt 2,5 kg + 750 als getallen ipv eenheden.\n• Antwoord in verkeerde eenheid geven *(in kg gevraagd, in g geantwoord)*.\n• Decimaal en gehele getallen door elkaar halen.\n\n**Tip bij de Doorstroomtoets**:\nSchrijf altijd 2 dingen op vóór je rekent:\n1. Welke eenheid is de **kleinste**?\n2. In welke eenheid wordt het **antwoord** gevraagd?\n\nDat scheelt 90% van de fouten.",
     checks: [
       {
         q: "Mama koopt **2 pakken meel van 750 g** en **1 pak van 1,5 kg**. Hoeveel **kg** in totaal?",
@@ -506,8 +506,8 @@ const steps = [
 
   // STAP 8: Eindopdracht
   {
-    title: "Eindopdracht — Cito-mix",
-    explanation: "Tijd voor een **mix-toets** met alles wat je hebt geleerd. Deze vragen zijn in **echte Cito-stijl**:\n• Korte verhalen.\n• Eenheden door elkaar.\n• Soms een 'val'-antwoord dat heel logisch lijkt maar fout is.\n\n**Aanpak**:\n1. Lees rustig.\n2. Onderstreep getallen + eenheden.\n3. Reken alles om naar dezelfde eenheid.\n4. Reken.\n5. Check: is mijn antwoord in de juiste eenheid?\n\n**Tip**: bij twijfel — vul je antwoord even in 'omgekeerd'. Klopt het terug? Dan zit je goed.\n\nVeel succes!",
+    title: "Eindopdracht — Doorstroomtoets-mix",
+    explanation: "Tijd voor een **mix-toets** met alles wat je hebt geleerd. Deze vragen zijn in **echte Doorstroomtoets-stijl**:\n• Korte verhalen.\n• Eenheden door elkaar.\n• Soms een 'val'-antwoord dat heel logisch lijkt maar fout is.\n\n**Aanpak**:\n1. Lees rustig.\n2. Onderstreep getallen + eenheden.\n3. Reken alles om naar dezelfde eenheid.\n4. Reken.\n5. Check: is mijn antwoord in de juiste eenheid?\n\n**Tip**: bij twijfel — vul je antwoord even in 'omgekeerd'. Klopt het terug? Dan zit je goed.\n\nVeel succes!",
     checks: [
       {
         q: "Een marathon is **42 km en 195 m**. Hoeveel **m** in totaal?",
@@ -607,12 +607,12 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const matenEenheden = {
   id: "maten-eenheden",
-  title: "Maten en eenheden — Cito groep 7-8",
+  title: "Maten en eenheden — Doorstroomtoets groep 7-8",
   emoji: "📏",
   level: "groep6-8",
   subject: "rekenen",
   // SLO-niveau (G4 sprint-5+ S4): 1F einde-basisschool, kerndomein
-  // 'Meten en meetkunde — maten en eenheden'. Cito-eindtoets-onderdeel.
+  // 'Meten en meetkunde — maten en eenheden'. Doorstroomtoets-onderdeel.
   referentieNiveau: "1F",
   sloThema: "Meten en meetkunde — maten en eenheden",
   prerequisites: [
@@ -620,7 +620,7 @@ const matenEenheden = {
     { id: "kommagetallen-po", title: "Kommagetallen", niveau: "po-1F" },
   ],
   intro:
-    "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Cito/IEP-stijl. ~15 min per deel.",
+    "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Doorstroomtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Cito/IEP-stijl. ~15 min per deel.",
   triggerKeywords: [
     "maten","eenheden","kilometer","meter","centimeter","millimeter",
     "kilogram","gram","milligram","ton","liter","milliliter","deciliter",

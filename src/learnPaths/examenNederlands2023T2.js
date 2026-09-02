@@ -35,7 +35,7 @@ const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
   theorie:
-    "Cito-truc leesvaardigheid: kop + alinea 1 = onderwerp. Slot-alinea = conclusie/oproep/nuancering. Tekstverbanden via signaalwoord: tegenstelling (maar/echter), gevolg (dus/daardoor), doel-middel (om...te), opsomming (en, ook), voorbeeld (zoals).",
+    "Toets-truc leesvaardigheid: kop + alinea 1 = onderwerp. Slot-alinea = conclusie/oproep/nuancering. Tekstverbanden via signaalwoord: tegenstelling (maar/echter), gevolg (dus/daardoor), doel-middel (om...te), opsomming (en, ook), voorbeeld (zoals).",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -206,7 +206,7 @@ const steps = [
           nogSimpeler: "Informeren-EEN",
         },
         [
-          { woord: "een vs de", uitleg: "'Een' = één van meerdere. 'De' = de enige. Bij Cito altijd opletten." },
+          { woord: "een vs de", uitleg: "'Een' = één van meerdere. 'De' = de enige. Bij de Doorstroomtoets altijd opletten." },
         ],
       ),
     }],

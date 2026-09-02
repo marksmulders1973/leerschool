@@ -1,5 +1,5 @@
 // Leerpad: Continenten en wereldkennis — groep 6-8 PO.
-// Cito-onderdeel wereldoriëntatie (aardrijkskunde). Referentieniveau 1F.
+// Toets-onderdeel wereldoriëntatie (aardrijkskunde). Referentieniveau 1F.
 // 6 stappen met uitlegPad. Bouwt voort op topografieNederland.
 
 import { createElement } from "react";
@@ -34,7 +34,7 @@ const chapters = [
   { letter: "C", title: "Landen op continent", emoji: "🏛️", from: 2, to: 2 },
   { letter: "D", title: "Tijdzones", emoji: "🕐", from: 3, to: 3 },
   { letter: "E", title: "Beroemde steden + wonderen", emoji: "🗽", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 const steps = [
@@ -60,12 +60,12 @@ const steps = [
             { woord: "continent", uitleg: "Groot stuk land op de aarde." },
             { woord: "Antarctica", uitleg: "Het zuid-pool-continent, alleen ijs en pinguïns." },
           ],
-          theorie: "Cito-feit: in Nederland is het antwoord ALTIJD 7 continenten. Andere systemen bestaan, maar zijn niet wat Cito vraagt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
+          theorie: "Toets-feit: in Nederland is het antwoord ALTIJD 7 continenten. Andere systemen bestaan, maar zijn niet wat De toets vraagt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
           voorbeelden: [
             { type: "stap", tekst: "Trek de wereldkaart in je hoofd: Amerika links (Noord boven, Zuid onder = 2), Europa + Afrika in midden (= 2), Azië rechts (= 1), Australië/Oceanië onder Azië (= 1), Antarctica onderin (= 1). Totaal 7." },
-            { type: "stap", tekst: "Veel-fout: 5 zeggen (oude indeling). Op Cito-NL altijd 7." },
+            { type: "stap", tekst: "Veel-fout: 5 zeggen (oude indeling). Op de toets altijd 7." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Zegt iemand '5 continenten'? Dat is verouderd. Op Cito = 7. Schrijf dit getal vet in je hoofd." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Zegt iemand '5 continenten'? Dat is verouderd. Op de Doorstroomtoets = 7. Schrijf dit getal vet in je hoofd." }],
           niveaus: {
             basis: "7 continenten.",
             simpeler: "Tel ze op: N-Am, Z-Am, Europa, Afrika, Azië, Oceanië, Antarctica. 7.",
@@ -85,7 +85,7 @@ const steps = [
             { titel: "Andere continenten ligging", tekst: "Azië = oosten (China, Japan). Afrika = zuiden (Egypte, Kenia). Noord-Amerika = westen (VS, Canada). Niet via die kant kom je naar Nederland zonder oversteek." },
           ],
           woorden: [{ woord: "continent", uitleg: "Groot landmassief op aarde." }, { woord: "Europa", uitleg: "Continent waar Nederland op ligt." }],
-          theorie: "Cito-truc continent-vraag: zoek per land in welk continent het ligt. Nederland = Europa is een vrijwel altijd-correct antwoord.",
+          theorie: "Toets-truc continent-vraag: zoek per land in welk continent het ligt. Nederland = Europa is een vrijwel altijd-correct antwoord.",
           voorbeelden: [{ type: "stap", tekst: "Andere Europa-landen: Frankrijk, Duitsland, Spanje, Italië, Polen — allemaal vrij dichtbij Nederland." }],
           basiskennis: [{ onderwerp: "Vlucht", uitleg: "Vanaf Schiphol vlieg je ~1u naar buurland. Naar Azië (China) ~10u. Naar Australië ~24u." }],
           niveaus: {
@@ -133,7 +133,7 @@ const steps = [
             { woord: "pinguïn", uitleg: "Vogel die niet kan vliegen maar wel zwemmen; leeft op Antarctica + dichtbij." },
             { woord: "onderzoeksstation", uitleg: "Plek waar wetenschappers tijdelijk wonen + experimenten doen." },
           ],
-          theorie: "Cito-truc: Antarctica = koudst, niet bewoond. Geen verwarring met Arctica (Noordpool, daar wonen wél mensen — Inuit, Sami).",
+          theorie: "Toets-truc: Antarctica = koudst, niet bewoond. Geen verwarring met Arctica (Noordpool, daar wonen wél mensen — Inuit, Sami).",
           voorbeelden: [
             { type: "verbazing", tekst: "Antarctica is het droogste continent — er valt amper sneeuw. Het ijs is opgebouwd over miljoenen jaren." },
             { type: "nederland", tekst: "Nederland heeft sinds 1988 een eigen onderzoeksstation: 'Dirck Gerritsz Laboratorium'." },
@@ -153,7 +153,7 @@ const steps = [
   {
     title: "De 5 oceanen",
     explanation:
-      "Naast 7 continenten heeft de wereld **5 oceanen** *(grote zeeën)*.\n\n**De 5 oceanen** *(uit je hoofd!)*:\n1. **Stille Oceaan** *(Pacific)* — grootst.\n2. **Atlantische Oceaan** — tussen Europa/Afrika en Amerika.\n3. **Indische Oceaan** — onder India.\n4. **Noordelijke IJszee** *(Arctische)* — bij de Noordpool.\n5. **Zuidelijke IJszee** *(Antarctische)* — bij de Zuidpool.\n\n**Grootste — Stille Oceaan**:\n• Beslaat ongeveer **een derde van de aarde**.\n• Tussen Azië/Oceanië en Amerika.\n• 'Stille' = leek rustig bij ontdekkers, niet altijd zo!\n\n**Atlantische Oceaan**:\n• Tussen Europa/Afrika (rechts) en Amerika (links).\n• Hier ligt Nederland aan *(via de Noordzee, die deel uitmaakt van de Atlantische Oceaan)*.\n\n**Indische Oceaan**:\n• Onder Azië, tussen Afrika en Australië.\n• Veel tropische eilanden zoals Madagaskar.\n\n**De 2 IJszeeën**:\n• **Noordelijke** — bij de Noordpool, ijs het hele jaar.\n• **Zuidelijke** — om Antarctica heen.\n\n**Cito-truc**:\nOnthoud op alfabet: **A**tlantisch, **I**ndisch, **N**oordelijke IJszee, **S**tille, **Z**uidelijke IJszee → AINSZ.\n\nOf onthoud: '5 oceanen, 2 bij de polen, 3 in het 'midden': Atlantisch, Indisch, Stille'.",
+      "Naast 7 continenten heeft de wereld **5 oceanen** *(grote zeeën)*.\n\n**De 5 oceanen** *(uit je hoofd!)*:\n1. **Stille Oceaan** *(Pacific)* — grootst.\n2. **Atlantische Oceaan** — tussen Europa/Afrika en Amerika.\n3. **Indische Oceaan** — onder India.\n4. **Noordelijke IJszee** *(Arctische)* — bij de Noordpool.\n5. **Zuidelijke IJszee** *(Antarctische)* — bij de Zuidpool.\n\n**Grootste — Stille Oceaan**:\n• Beslaat ongeveer **een derde van de aarde**.\n• Tussen Azië/Oceanië en Amerika.\n• 'Stille' = leek rustig bij ontdekkers, niet altijd zo!\n\n**Atlantische Oceaan**:\n• Tussen Europa/Afrika (rechts) en Amerika (links).\n• Hier ligt Nederland aan *(via de Noordzee, die deel uitmaakt van de Atlantische Oceaan)*.\n\n**Indische Oceaan**:\n• Onder Azië, tussen Afrika en Australië.\n• Veel tropische eilanden zoals Madagaskar.\n\n**De 2 IJszeeën**:\n• **Noordelijke** — bij de Noordpool, ijs het hele jaar.\n• **Zuidelijke** — om Antarctica heen.\n\n**Toets-truc**:\nOnthoud op alfabet: **A**tlantisch, **I**ndisch, **N**oordelijke IJszee, **S**tille, **Z**uidelijke IJszee → AINSZ.\n\nOf onthoud: '5 oceanen, 2 bij de polen, 3 in het 'midden': Atlantisch, Indisch, Stille'.",
     checks: [
       {
         q: "Hoeveel **oceanen** zijn er?",
@@ -170,13 +170,13 @@ const steps = [
           stappen: [
             { titel: "De Stille Oceaan = grootste", tekst: "De **Stille Oceaan** (in het Engels: *Pacific*) is veruit de grootste. Hij beslaat ongeveer **een derde van de aarde** — meer water dan alle continenten samen!" },
             { titel: "Waar ligt hij?", tekst: "Tussen Azië/Oceanië (links) en Amerika (rechts). Als je vanuit Tokio naar Los Angeles vliegt, kruis je de Stille Oceaan." },
-            { titel: "Volgorde van groot naar klein", tekst: "1) Stille (grootst) → 2) Atlantische → 3) Indische → 4) Zuidelijke IJszee → 5) Noordelijke IJszee (kleinst). Onthoud de **top-3** voor Cito." },
+            { titel: "Volgorde van groot naar klein", tekst: "1) Stille (grootst) → 2) Atlantische → 3) Indische → 4) Zuidelijke IJszee → 5) Noordelijke IJszee (kleinst). Onthoud de **top-3** voor de Doorstroomtoets." },
           ],
           woorden: [
             { woord: "Stille Oceaan", uitleg: "Grootste oceaan, tussen Azië en Amerika." },
             { woord: "Pacific", uitleg: "Engelse naam voor Stille Oceaan = 'rustig'." },
           ],
-          theorie: "Cito-truc oceanen-rangorde: **S-A-I** (Stille-Atlantische-Indische) van groot naar klein. De 2 IJszeeën zijn klein (bij de polen). De Stille Oceaan is zelfs groter dan ALLE continenten bij elkaar.",
+          theorie: "Toets-truc oceanen-rangorde: **S-A-I** (Stille-Atlantische-Indische) van groot naar klein. De 2 IJszeeën zijn klein (bij de polen). De Stille Oceaan is zelfs groter dan ALLE continenten bij elkaar.",
           voorbeelden: [
             { type: "stap", tekst: "Op een wereldkaart: Stille Oceaan = alles links + rechts (omdat hij doorloopt). Kijk hoe blauw die kant is — bijna alleen water." },
             { type: "stap", tekst: "Waarom 'Stille'? Ontdekkers vonden hem op een rustig moment kalm. Echte naam is dus deels misleidend (er zijn ook stormen daar)." },
@@ -208,7 +208,7 @@ const steps = [
   {
     title: "Beroemde landen op elk continent",
     explanation:
-      "**Per continent een paar landen** om te kennen *(Cito stelt vaak: 'in welk continent ligt X?')*.\n\n**Europa**:\n• Nederland, België, Frankrijk, Duitsland, Spanje, Italië, Engeland (UK), Portugal, Polen, Griekenland, Zweden, Noorwegen, Denemarken, Finland.\n\n**Azië**:\n• China, India, Japan, Indonesië, Thailand, Vietnam, Turkije, Iran, Saoedi-Arabië, Israël, Filipijnen, Pakistan.\n\n**Afrika**:\n• Egypte, Marokko, Zuid-Afrika, Nigeria, Kenia, Ethiopië, Tanzania, Algerije.\n\n**Noord-Amerika**:\n• Verenigde Staten (VS), Canada, Mexico, Cuba.\n\n**Zuid-Amerika**:\n• Brazilië, Argentinië, Chili, Peru, Colombia, Venezuela.\n\n**Oceanië**:\n• Australië, Nieuw-Zeeland, Fiji, Papoea-Nieuw-Guinea.\n\n**🌍 Tik op de wereldbol** op een land — dan vragen we welk land het is, of wat de hoofdstad is. Draai en zoom om het goede land te vinden.\n\n**Cito-vragen**:\n*'In welk continent ligt Brazilië?'* → Zuid-Amerika.\n*'In welk continent ligt China?'* → Azië.\n*'In welk continent ligt Egypte?'* → Afrika.\n\n**Trucs voor onthouden**:\n• **Europa** klein maar veel landen — Nederland, Frankrijk, Duitsland zijn buren.\n• **Azië** groot — China en India zijn de 2 grootste landen *(qua mensen)*.\n• **Afrika** — Egypte (piramiden) is bovenaan, Zuid-Afrika onderaan.\n• **Amerika's** — Noord/Zuid via Mexico.\n\n**Veel-voorkomende fout**:\nDenken dat **Turkije** en **Rusland** in Europa liggen. Beide liggen voor het grootste deel in Azië *(maar hebben een klein stuk in Europa)*. Voor Cito: meestal Azië.",
+      "**Per continent een paar landen** om te kennen *(de toets stelt vaak: 'in welk continent ligt X?')*.\n\n**Europa**:\n• Nederland, België, Frankrijk, Duitsland, Spanje, Italië, Engeland (UK), Portugal, Polen, Griekenland, Zweden, Noorwegen, Denemarken, Finland.\n\n**Azië**:\n• China, India, Japan, Indonesië, Thailand, Vietnam, Turkije, Iran, Saoedi-Arabië, Israël, Filipijnen, Pakistan.\n\n**Afrika**:\n• Egypte, Marokko, Zuid-Afrika, Nigeria, Kenia, Ethiopië, Tanzania, Algerije.\n\n**Noord-Amerika**:\n• Verenigde Staten (VS), Canada, Mexico, Cuba.\n\n**Zuid-Amerika**:\n• Brazilië, Argentinië, Chili, Peru, Colombia, Venezuela.\n\n**Oceanië**:\n• Australië, Nieuw-Zeeland, Fiji, Papoea-Nieuw-Guinea.\n\n**🌍 Tik op de wereldbol** op een land — dan vragen we welk land het is, of wat de hoofdstad is. Draai en zoom om het goede land te vinden.\n\n**toetsvragen**:\n*'In welk continent ligt Brazilië?'* → Zuid-Amerika.\n*'In welk continent ligt China?'* → Azië.\n*'In welk continent ligt Egypte?'* → Afrika.\n\n**Trucs voor onthouden**:\n• **Europa** klein maar veel landen — Nederland, Frankrijk, Duitsland zijn buren.\n• **Azië** groot — China en India zijn de 2 grootste landen *(qua mensen)*.\n• **Afrika** — Egypte (piramiden) is bovenaan, Zuid-Afrika onderaan.\n• **Amerika's** — Noord/Zuid via Mexico.\n\n**Veel-voorkomende fout**:\nDenken dat **Turkije** en **Rusland** in Europa liggen. Beide liggen voor het grootste deel in Azië *(maar hebben een klein stuk in Europa)*. Voor de Doorstroomtoets: meestal Azië.",
     interactiveComponent: LandBol,
     checks: [
       {
@@ -256,7 +256,7 @@ const steps = [
   {
     title: "Tijdzones — waarom is het ergens nacht?",
     explanation:
-      "De aarde **draait om z'n eigen as** *(in 24 uur)*. Daardoor is het ergens **dag** terwijl het ergens anders **nacht** is.\n\n**Daarom werken we met tijdzones**:\nElke zone is **1 uur verschoven** van de buur-zone.\n\n**Voorbeelden — als het 12:00 's middags is in Nederland** *(wintertijd, UTC+1)*:\n• **Engeland (Londen)**: 11:00 (1 uur eerder).\n• **Spanje (Madrid)**: 12:00 (zelfde tijdzone).\n• **Duitsland (Berlijn)**: 12:00.\n• **Griekenland (Athene)**: 13:00 (1 uur later).\n• **Turkije (Istanbul)**: 14:00.\n• **India (Mumbai)**: 16:30.\n• **China (Beijing)**: 19:00.\n• **Japan (Tokio)**: 20:00.\n• **VS-Oostkust (New York)**: 06:00 *('s ochtends)*.\n• **VS-Westkust (LA)**: 03:00 *(midden in de nacht)*.\n• **Australië (Sydney)**: 21:00 *('s avonds)*.\n\n**Eenvoudige regel**:\n• Ten **oosten** van Nederland → **uur later** *(uurwerk vooruit)*.\n• Ten **westen** van Nederland → **uur eerder** *(uurwerk achteruit)*.\n\n**Cito-vragen** over tijdzones:\n*'Het is 14:00 in Nederland. Hoe laat is het in Beijing *(7 uur later)*?'*\n• 14:00 + 7 uur = **21:00**.\n\n*'Het is 12:00 in Nederland. Hoe laat is het in New York *(6 uur eerder)*?'*\n• 12:00 − 6 uur = **06:00**.\n\n**Waarom tijdzones?**\nOm te zorgen dat 12:00 's middags overal ongeveer **midden op de dag** is *(zon hoogste punt)*.\n\n**Datumlijn**:\nIn de Stille Oceaan loopt de **datumlijn**. Aan de ene kant is het al de volgende dag, aan de andere kant nog de vorige. Vliegers van Tokio naar LA 'reizen terug in tijd'.",
+      "De aarde **draait om z'n eigen as** *(in 24 uur)*. Daardoor is het ergens **dag** terwijl het ergens anders **nacht** is.\n\n**Daarom werken we met tijdzones**:\nElke zone is **1 uur verschoven** van de buur-zone.\n\n**Voorbeelden — als het 12:00 's middags is in Nederland** *(wintertijd, UTC+1)*:\n• **Engeland (Londen)**: 11:00 (1 uur eerder).\n• **Spanje (Madrid)**: 12:00 (zelfde tijdzone).\n• **Duitsland (Berlijn)**: 12:00.\n• **Griekenland (Athene)**: 13:00 (1 uur later).\n• **Turkije (Istanbul)**: 14:00.\n• **India (Mumbai)**: 16:30.\n• **China (Beijing)**: 19:00.\n• **Japan (Tokio)**: 20:00.\n• **VS-Oostkust (New York)**: 06:00 *('s ochtends)*.\n• **VS-Westkust (LA)**: 03:00 *(midden in de nacht)*.\n• **Australië (Sydney)**: 21:00 *('s avonds)*.\n\n**Eenvoudige regel**:\n• Ten **oosten** van Nederland → **uur later** *(uurwerk vooruit)*.\n• Ten **westen** van Nederland → **uur eerder** *(uurwerk achteruit)*.\n\n**toetsvragen** over tijdzones:\n*'Het is 14:00 in Nederland. Hoe laat is het in Beijing *(7 uur later)*?'*\n• 14:00 + 7 uur = **21:00**.\n\n*'Het is 12:00 in Nederland. Hoe laat is het in New York *(6 uur eerder)*?'*\n• 12:00 − 6 uur = **06:00**.\n\n**Waarom tijdzones?**\nOm te zorgen dat 12:00 's middags overal ongeveer **midden op de dag** is *(zon hoogste punt)*.\n\n**Datumlijn**:\nIn de Stille Oceaan loopt de **datumlijn**. Aan de ene kant is het al de volgende dag, aan de andere kant nog de vorige. Vliegers van Tokio naar LA 'reizen terug in tijd'.",
     checks: [
       {
         q: "Hoeveel uur draait de aarde om z'n eigen as?",
@@ -285,7 +285,7 @@ const steps = [
             { woord: "tijdzone", uitleg: "Gebied op aarde met dezelfde kloktijd." },
             { woord: "eerder/later", uitleg: "Eerder = aftrekken. Later = optellen." },
           ],
-          theorie: "Cito-truc tijdzone-rekenen: lees of de andere stad **eerder** of **later** is. Eerder → MIN (aftrekken). Later → PLUS (optellen). Dan gewoon de uren rekenen. Pas op bij negatieve uitkomsten of >24 (dag wisselt).",
+          theorie: "Toets-truc tijdzone-rekenen: lees of de andere stad **eerder** of **later** is. Eerder → MIN (aftrekken). Later → PLUS (optellen). Dan gewoon de uren rekenen. Pas op bij negatieve uitkomsten of >24 (dag wisselt).",
           voorbeelden: [
             { type: "stap", tekst: "NL 15:00 → London (1 uur eerder) = 15 − 1 = 14:00." },
             { type: "stap", tekst: "NL 10:00 → Beijing (7 uur later) = 10 + 7 = 17:00." },
@@ -312,7 +312,7 @@ const steps = [
   {
     title: "Beroemde steden en wonderen",
     explanation:
-      "Cito vraagt vaak naar **beroemde plaatsen**.\n\n**🏙️ Tik op de wereldbol** op de zwarte stip van een hoofdstad om te ontdekken welke stad het is, of kies 'Oefenen' en zoek de gevraagde hoofdstad op.\n\n**Europa**:\n• **Parijs** — hoofdstad Frankrijk, Eiffeltoren.\n• **Londen** — hoofdstad Engeland, Big Ben, Buckingham Palace.\n• **Rome** — hoofdstad Italië, Colosseum, Vaticaan.\n• **Madrid** — hoofdstad Spanje.\n• **Berlijn** — hoofdstad Duitsland.\n• **Amsterdam** — hoofdstad Nederland.\n• **Brussel** — hoofdstad België, EU-hoofdkwartier.\n\n**Buiten Europa**:\n• **New York** — Vrijheidsbeeld, Empire State.\n• **Washington D.C.** — hoofdstad VS.\n• **Tokio** — hoofdstad Japan.\n• **Beijing** — hoofdstad China, Verboden Stad.\n• **Mumbai** + **New Delhi** — India.\n• **Sydney** — Australië, Opera House.\n• **Rio de Janeiro** — Brazilië, Christusbeeld.\n• **Caïro** — Egypte, dichtbij piramiden van Gizeh.\n\n**De 7 Wereldwonderen (oudheid)**:\n1. Piramiden van Gizeh *(Egypte, enige nog bestaand)*.\n2. Hangende tuinen van Babylon *(verdwenen)*.\n3. Beeld van Zeus in Olympia *(Griekenland, verdwenen)*.\n4. Tempel van Artemis te Efeze *(Turkije, verdwenen)*.\n5. Mausoleum van Halicarnassus *(Turkije, verdwenen)*.\n6. Kolossus van Rhodos *(Griekenland, verdwenen)*.\n7. Vuurtoren van Alexandrië *(Egypte, verdwenen)*.\n\n**Moderne wereldwonderen** *(nieuw, 2007)*:\n• Chinese Muur *(China)*.\n• Petra *(Jordanië)*.\n• Christusbeeld *(Brazilië)*.\n• Machu Picchu *(Peru)*.\n• Chichén Itzá *(Mexico)*.\n• Colosseum *(Italië)*.\n• Taj Mahal *(India)*.\n\n**Cito-truc — koppelingen**:\n• Eiffeltoren → Parijs → Frankrijk → Europa.\n• Big Ben → Londen → Engeland → Europa.\n• Piramiden → Gizeh → Egypte → Afrika.\n• Christusbeeld → Rio → Brazilië → Zuid-Amerika.",
+      "De toets vraagt vaak naar **beroemde plaatsen**.\n\n**🏙️ Tik op de wereldbol** op de zwarte stip van een hoofdstad om te ontdekken welke stad het is, of kies 'Oefenen' en zoek de gevraagde hoofdstad op.\n\n**Europa**:\n• **Parijs** — hoofdstad Frankrijk, Eiffeltoren.\n• **Londen** — hoofdstad Engeland, Big Ben, Buckingham Palace.\n• **Rome** — hoofdstad Italië, Colosseum, Vaticaan.\n• **Madrid** — hoofdstad Spanje.\n• **Berlijn** — hoofdstad Duitsland.\n• **Amsterdam** — hoofdstad Nederland.\n• **Brussel** — hoofdstad België, EU-hoofdkwartier.\n\n**Buiten Europa**:\n• **New York** — Vrijheidsbeeld, Empire State.\n• **Washington D.C.** — hoofdstad VS.\n• **Tokio** — hoofdstad Japan.\n• **Beijing** — hoofdstad China, Verboden Stad.\n• **Mumbai** + **New Delhi** — India.\n• **Sydney** — Australië, Opera House.\n• **Rio de Janeiro** — Brazilië, Christusbeeld.\n• **Caïro** — Egypte, dichtbij piramiden van Gizeh.\n\n**De 7 Wereldwonderen (oudheid)**:\n1. Piramiden van Gizeh *(Egypte, enige nog bestaand)*.\n2. Hangende tuinen van Babylon *(verdwenen)*.\n3. Beeld van Zeus in Olympia *(Griekenland, verdwenen)*.\n4. Tempel van Artemis te Efeze *(Turkije, verdwenen)*.\n5. Mausoleum van Halicarnassus *(Turkije, verdwenen)*.\n6. Kolossus van Rhodos *(Griekenland, verdwenen)*.\n7. Vuurtoren van Alexandrië *(Egypte, verdwenen)*.\n\n**Moderne wereldwonderen** *(nieuw, 2007)*:\n• Chinese Muur *(China)*.\n• Petra *(Jordanië)*.\n• Christusbeeld *(Brazilië)*.\n• Machu Picchu *(Peru)*.\n• Chichén Itzá *(Mexico)*.\n• Colosseum *(Italië)*.\n• Taj Mahal *(India)*.\n\n**Toets-truc — koppelingen**:\n• Eiffeltoren → Parijs → Frankrijk → Europa.\n• Big Ben → Londen → Engeland → Europa.\n• Piramiden → Gizeh → Egypte → Afrika.\n• Christusbeeld → Rio → Brazilië → Zuid-Amerika.",
     interactiveComponent: HoofdstadBol,
     checks: [
       {
@@ -342,11 +342,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — wereld-mix",
+    title: "Toets-eindopdracht — wereld-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: continenten, oceanen, landen, tijdzones, steden.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: continenten, oceanen, landen, tijdzones, steden.\n\nVeel succes!",
     checks: [
       {
         q: "Op welk continent ligt **Italië**?",

@@ -34,7 +34,7 @@ const steps = [
             { woord: "Industriële Revolutie", uitleg: "Periode 1750-1900: omwenteling naar machine-productie." },
             { woord: "fabriek", uitleg: "Gebouw waar machines + arbeiders samen producten maken." },
           ],
-          theorie: "Cito-feit: Engeland 'won' omdat het steenkool, ijzer EN kapitaal had. Plus geen oorlog op eigen land (eiland). Andere landen volgden 50-100 jaar later.",
+          theorie: "Toets-feit: Engeland 'won' omdat het steenkool, ijzer EN kapitaal had. Plus geen oorlog op eigen land (eiland). Andere landen volgden 50-100 jaar later.",
           voorbeelden: [
             { type: "stap", tekst: "Engeland: eerste fabrieken in Manchester (textiel) rond 1780." },
             { type: "stap", tekst: "Nederland: eerste fabrieken in Twente (textiel) rond 1860-1870." },
@@ -68,7 +68,7 @@ const steps = [
             { woord: "tijdvak", uitleg: "Een periode in geschiedenis met eigen kenmerken." },
             { woord: "canon NL", uitleg: "Officiële NL-canon: 50 vensters over 10 tijdvakken." },
           ],
-          theorie: "Cito-feit: de 10 tijdvakken zijn een vaste vraag op Doorstroomtoets. Tijdvak-naam onthouden + grof tijdperk. Industriële Revolutie zit in tijdvak 8.",
+          theorie: "Toets-feit: de 10 tijdvakken zijn een vaste vraag op Doorstroomtoets. Tijdvak-naam onthouden + grof tijdperk. Industriële Revolutie zit in tijdvak 8.",
           voorbeelden: [
             { type: "stap", tekst: "Tijdvak 7 (pruiken + revoluties) = 1700s = Franse Revolutie + Verlichting." },
             { type: "stap", tekst: "Tijdvak 9 (wereldoorlogen) = 1900-1950 = WO1 + WO2." },
@@ -109,7 +109,7 @@ const steps = [
             { woord: "stoommachine", uitleg: "Motor op stoom van gekookt water." },
             { woord: "James Watt", uitleg: "Schotse uitvinder, verbeterde stoommachine in 1769." },
           ],
-          theorie: "Cito-tip uitvinders onthouden: Watt = STOOM (1769). Stephenson = TREIN (1825). Bell = TELEFOON (1876). Edison = GLOEILAMP (1879). Ford = LOPENDE BAND (1908). Op tijdvolgorde.",
+          theorie: "Toets-tip uitvinders onthouden: Watt = STOOM (1769). Stephenson = TREIN (1825). Bell = TELEFOON (1876). Edison = GLOEILAMP (1879). Ford = LOPENDE BAND (1908). Op tijdvolgorde.",
           voorbeelden: [
             { type: "stap", tekst: "De eenheid 'watt' (W) voor elektrisch vermogen is naar James Watt vernoemd." },
             { type: "stap", tekst: "Stoom-eenheid kon eerst alleen mijnen leegpompen → later treinen + fabrieken." },
@@ -145,7 +145,7 @@ const steps = [
   {
     title: "Fabrieken + samenleving",
     explanation:
-      "**Fabrieken** ontstonden — grote gebouwen waar veel machines + arbeiders samen werkten.\n\n**Verschil**:\n• **Vóór**: ambachtsman thuis, eigen tempo.\n• **Na**: fabriek, **lopende band**, vast tempo, **uurloon**, baas die toezicht houdt.\n\n**Werkomstandigheden** *(1800-1850)*:\n• Werkdag: **12-16 uur**, 6 dagen per week.\n• Gevaarlijk *(machines zonder beschermingen, ongelukken)*.\n• Stoffig + bedompt.\n• **Geen vakantiedagen**, geen ziekteverzekering, geen pensioen.\n• Laag loon *(amper genoeg om te eten)*.\n\n**Stadsgroei** *(verstedelijking)*:\n• Mensen trokken massaal naar **fabrieksteden** voor werk.\n• London: van 1 miljoen (1800) → 6,5 miljoen (1900).\n• In NL: Tilburg, Twente, Limburg groeiden mee.\n• **Krottenwijken**: arbeiders woonden in vieze, kleine huisjes.\n• **Hygiëne** slecht: cholera-epidemieën *(NL: 1832, 1849, 1866)*.\n\n**Sociale klassen**:\n• **Burgerij (bourgeoisie)**: fabriekseigenaren, kooplui, dokters. Rijk geworden.\n• **Arbeidersklasse (proletariaat)**: fabriekswerkers. Arm. Geen rechten.\n• Voor de Revolutie was er vooral: adel + boeren. Burgerij groeide enorm.\n\n**Voordelen** Industriële Revolutie:\n• Goedkopere goederen *(kleding, gereedschap, voedsel)*.\n• Snel reizen + communiceren.\n• Wetenschap + gezondheidszorg vooruit.\n• Op lange termijn: hogere levensstandaard.\n\n**Nadelen** *(vooral 1800-1850)*:\n• Slechte werkomstandigheden.\n• Kinderarbeid.\n• Vervuiling van lucht + rivieren.\n• Steden ongezond + onveilig.\n• Mensen vervreemd van eigen werk *(maakten 1 onderdeel, nooit hele product)*.\n\n**Cito-feitje**:\nDe gemiddelde levensverwachting in een Engelse fabrieksstad in 1850 was **30 jaar**. In platteland was het 50 jaar. Vervuiling + ziekte maakten stad ongezond.",
+      "**Fabrieken** ontstonden — grote gebouwen waar veel machines + arbeiders samen werkten.\n\n**Verschil**:\n• **Vóór**: ambachtsman thuis, eigen tempo.\n• **Na**: fabriek, **lopende band**, vast tempo, **uurloon**, baas die toezicht houdt.\n\n**Werkomstandigheden** *(1800-1850)*:\n• Werkdag: **12-16 uur**, 6 dagen per week.\n• Gevaarlijk *(machines zonder beschermingen, ongelukken)*.\n• Stoffig + bedompt.\n• **Geen vakantiedagen**, geen ziekteverzekering, geen pensioen.\n• Laag loon *(amper genoeg om te eten)*.\n\n**Stadsgroei** *(verstedelijking)*:\n• Mensen trokken massaal naar **fabrieksteden** voor werk.\n• London: van 1 miljoen (1800) → 6,5 miljoen (1900).\n• In NL: Tilburg, Twente, Limburg groeiden mee.\n• **Krottenwijken**: arbeiders woonden in vieze, kleine huisjes.\n• **Hygiëne** slecht: cholera-epidemieën *(NL: 1832, 1849, 1866)*.\n\n**Sociale klassen**:\n• **Burgerij (bourgeoisie)**: fabriekseigenaren, kooplui, dokters. Rijk geworden.\n• **Arbeidersklasse (proletariaat)**: fabriekswerkers. Arm. Geen rechten.\n• Voor de Revolutie was er vooral: adel + boeren. Burgerij groeide enorm.\n\n**Voordelen** Industriële Revolutie:\n• Goedkopere goederen *(kleding, gereedschap, voedsel)*.\n• Snel reizen + communiceren.\n• Wetenschap + gezondheidszorg vooruit.\n• Op lange termijn: hogere levensstandaard.\n\n**Nadelen** *(vooral 1800-1850)*:\n• Slechte werkomstandigheden.\n• Kinderarbeid.\n• Vervuiling van lucht + rivieren.\n• Steden ongezond + onveilig.\n• Mensen vervreemd van eigen werk *(maakten 1 onderdeel, nooit hele product)*.\n\n**Toets-feitje**:\nDe gemiddelde levensverwachting in een Engelse fabrieksstad in 1850 was **30 jaar**. In platteland was het 50 jaar. Vervuiling + ziekte maakten stad ongezond.",
     checks: [
       {
         q: "Werkdag in **vroege fabriek**?",
@@ -162,7 +162,7 @@ const steps = [
             { woord: "arbeider", uitleg: "Iemand die in fabriek werkt voor loon." },
             { woord: "Kinderwetje 1874", uitleg: "NL-wet die kinderarbeid (<12 jaar) verbood — eerste stap arbeidsrecht." },
           ],
-          theorie: "Cito-feit: de huidige '8-urige werkdag' is bevochten door arbeiders + vakbonden. In ~1900 werd dit normaal. Voor 1900: 12-16 uur was standaard.",
+          theorie: "Toets-feit: de huidige '8-urige werkdag' is bevochten door arbeiders + vakbonden. In ~1900 werd dit normaal. Voor 1900: 12-16 uur was standaard.",
           voorbeelden: [
             { type: "stap", tekst: "Een 10-jarige in 1840 werkte 12 uur in textielfabriek voor een paar centen per dag." },
             { type: "stap", tekst: "Pas vanaf 1919 (NL Arbeidswet) werd 8 uur per dag wettelijk maximum." },
@@ -191,12 +191,12 @@ const steps = [
             { woord: "proletariaat", uitleg: "Arbeiders-klasse." },
             { woord: "adel", uitleg: "Edelen, geboorte-recht (graaf, baron, etc)." },
           ],
-          theorie: "Cito-feit: bourgeoisie + proletariaat = Industriële Revolutie's twee nieuwe klassen. Niet adel (oud), niet boeren (oud), niet kerk. Nieuwe groep mensen door industrie.",
+          theorie: "Toets-feit: bourgeoisie + proletariaat = Industriële Revolutie's twee nieuwe klassen. Niet adel (oud), niet boeren (oud), niet kerk. Nieuwe groep mensen door industrie.",
           voorbeelden: [
             { type: "stap", tekst: "Bourgeois-naam: 'burger' (van stad). Industrialisatie gaf rijke kooplui meer macht dan adel — vandaar Franse Revolutie 1789." },
             { type: "stap", tekst: "Karl Marx schreef in 'Communistisch Manifest' (1848): bourgeoisie buit proletariaat uit → revolutie nodig." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Bourgeoisie = rijke. Proletariaat = arme. Allebei woorden uit Frans/Latijn — Cito kent ze allebei." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bourgeoisie = rijke. Proletariaat = arme. Allebei woorden uit Frans/Latijn — de toets kent ze allebei." }],
           niveaus: {
             basis: "Rijke burgerij (fabriekseigenaren, kooplui).",
             simpeler: "Bourgeoisie = nieuwe rijke groep door Industriële Revolutie.",
@@ -221,7 +221,7 @@ const steps = [
   {
     title: "Kinderarbeid + sociale strijd",
     explanation:
-      "**Kinderarbeid** was normaal — kinderen werkten al vanaf **6 jaar**.\n\n**Waarom**:\n• Arme gezinnen hadden geld nodig.\n• Kinderen waren **goedkoop** *(half loon van volwassene)*.\n• Klein → konden in nauwe ruimtes onder machines.\n• Geen schoolplicht.\n\n**Werk van kinderen**:\n• Spinnerij + weverij: garens repareren.\n• Mijn: kolenkar duwen, deur open-dicht.\n• Schoorsteenveger *(kleine jongens werden in schoorsteen geduwd)*.\n• Fabriek: machines schoonmaken *(soms terwijl ze draaien)*.\n\n**Gevolgen**:\n• Veel **ongelukken** + dood.\n• Geen onderwijs → blijven arm.\n• Lichamelijke beschadiging *(misvormde ruggen, longziekte)*.\n\n**Sociale beweging** ontstond:\n\n**1. Kinderwetje Van Houten (NL, 1874)**:\n• Verbod kinderen jonger dan **12 jaar** in fabrieken.\n• Eerste sociale wet in NL.\n• Werd nog niet altijd goed nageleefd.\n\n**2. Leerplichtwet (NL, 1900)**:\n• Alle kinderen van 6 tot 12 **moeten naar school**.\n• Einde van massale kinderarbeid in NL.\n\n**3. Vakbonden** *(arbeidersverenigingen)*:\n• Arbeiders **samen** voor betere voorwaarden.\n• NL eerste vakbond: **ANWV** (1871).\n• Stakingen = drukmiddel.\n\n**4. Socialisme + communisme**:\n• **Karl Marx** *(1818-1883)*: schreef 'Het Kapitaal' + 'Communistisch Manifest'.\n• Idee: arbeiders moeten productiemiddelen bezitten.\n• Inspireerde latere revoluties *(Rusland 1917)*.\n\n**5. Algemeen kiesrecht**:\n• Vóór 1800: alleen rijke mannen mochten stemmen.\n• Mannen NL: **1917** *(actief kiesrecht voor alle mannen)*.\n• Vrouwen NL: **1919** *(actief)* / **1922** *(passief)*.\n\n**6. Sociale wetten** NL:\n• **1901**: Ongevallenwet *(verzekering bij ongeluk)*.\n• **1913**: Invaliditeitswet.\n• **1919**: 8-urige werkdag.\n• **1947**: Noodwet ouderdomsvoorzieningen *(eerste AOW)*.\n• **1957**: Algemene Ouderdomswet *(AOW definitief)*.\n\n**Cito-tip**: het verband tussen Industriële Revolutie en sociale strijd is favoriete vraag. **Oorzaak-gevolg**: slechte omstandigheden → vakbond + wetten → betere arbeidsvoorwaarden.",
+      "**Kinderarbeid** was normaal — kinderen werkten al vanaf **6 jaar**.\n\n**Waarom**:\n• Arme gezinnen hadden geld nodig.\n• Kinderen waren **goedkoop** *(half loon van volwassene)*.\n• Klein → konden in nauwe ruimtes onder machines.\n• Geen schoolplicht.\n\n**Werk van kinderen**:\n• Spinnerij + weverij: garens repareren.\n• Mijn: kolenkar duwen, deur open-dicht.\n• Schoorsteenveger *(kleine jongens werden in schoorsteen geduwd)*.\n• Fabriek: machines schoonmaken *(soms terwijl ze draaien)*.\n\n**Gevolgen**:\n• Veel **ongelukken** + dood.\n• Geen onderwijs → blijven arm.\n• Lichamelijke beschadiging *(misvormde ruggen, longziekte)*.\n\n**Sociale beweging** ontstond:\n\n**1. Kinderwetje Van Houten (NL, 1874)**:\n• Verbod kinderen jonger dan **12 jaar** in fabrieken.\n• Eerste sociale wet in NL.\n• Werd nog niet altijd goed nageleefd.\n\n**2. Leerplichtwet (NL, 1900)**:\n• Alle kinderen van 6 tot 12 **moeten naar school**.\n• Einde van massale kinderarbeid in NL.\n\n**3. Vakbonden** *(arbeidersverenigingen)*:\n• Arbeiders **samen** voor betere voorwaarden.\n• NL eerste vakbond: **ANWV** (1871).\n• Stakingen = drukmiddel.\n\n**4. Socialisme + communisme**:\n• **Karl Marx** *(1818-1883)*: schreef 'Het Kapitaal' + 'Communistisch Manifest'.\n• Idee: arbeiders moeten productiemiddelen bezitten.\n• Inspireerde latere revoluties *(Rusland 1917)*.\n\n**5. Algemeen kiesrecht**:\n• Vóór 1800: alleen rijke mannen mochten stemmen.\n• Mannen NL: **1917** *(actief kiesrecht voor alle mannen)*.\n• Vrouwen NL: **1919** *(actief)* / **1922** *(passief)*.\n\n**6. Sociale wetten** NL:\n• **1901**: Ongevallenwet *(verzekering bij ongeluk)*.\n• **1913**: Invaliditeitswet.\n• **1919**: 8-urige werkdag.\n• **1947**: Noodwet ouderdomsvoorzieningen *(eerste AOW)*.\n• **1957**: Algemene Ouderdomswet *(AOW definitief)*.\n\n**Toets-tip**: het verband tussen Industriële Revolutie en sociale strijd is favoriete vraag. **Oorzaak-gevolg**: slechte omstandigheden → vakbond + wetten → betere arbeidsvoorwaarden.",
     checks: [
       {
         q: "Wanneer **kinderwetje** Van Houten?",
@@ -238,7 +238,7 @@ const steps = [
             { woord: "Kinderwetje van Van Houten", uitleg: "NL-wet uit 1874 die kinderarbeid (<12 jaar) in fabrieken verbood." },
             { woord: "Samuel van Houten", uitleg: "Liberale NL-politicus die de wet schreef." },
           ],
-          theorie: "Cito-feit sociale wetgeving NL:\n• **1874** Kinderwetje Van Houten (geen fabrieksarbeid <12).\n• **1900** Leerplichtwet (kinderen 6-12 naar school).\n• **1919** 8-urige werkdag.\n• **1957** AOW (pensioen).\nElk een mijlpaal naar moderne verzorgingsstaat.",
+          theorie: "Toets-feit sociale wetgeving NL:\n• **1874** Kinderwetje Van Houten (geen fabrieksarbeid <12).\n• **1900** Leerplichtwet (kinderen 6-12 naar school).\n• **1919** 8-urige werkdag.\n• **1957** AOW (pensioen).\nElk een mijlpaal naar moderne verzorgingsstaat.",
           voorbeelden: [
             { type: "stap", tekst: "Voor 1874: een 8-jarig meisje kon 12 uur per dag in textielfabriek werken voor een paar centen." },
             { type: "stap", tekst: "1900 Leerplicht maakte 1874 wet pas écht effectief — kinderen MOESTEN naar school = konden niet meer werken." },
@@ -274,7 +274,7 @@ const steps = [
   {
     title: "Nederland en de industriële revolutie",
     explanation:
-      "NL kwam **later** dan Engeland — pas vanaf **~1870**. Waarom?\n\n• **Geen steenkool** in Holland *(wel in Limburg, maar dat hoorde bij België tot 1839)*.\n• **Geen ijzer-erts**.\n• **Veel scheepvaart** + handel *(VOC)* — minder druk om te industrialiseren.\n• **Conservatieve elite**.\n\n**Wel** kwam Limburg-mijnbouw, Twente-textiel, Brabant-leder vroeger.\n\n**Belangrijke NL-industrieën** *(rond 1900)*:\n\n**1. Textiel — Twente**:\n• Spinnerijen + weverijen.\n• Bedrijven: Van Heek, Ten Cate.\n• Hele steden draaiden op textiel: Enschede, Hengelo, Almelo.\n\n**2. Steenkool — Limburg** *(vanaf 1860)*:\n• Staatsmijnen (publiek) + particuliere mijnen.\n• 12 mijnen tot 1974 *(sluiting laatste mijn)*.\n• Mijnramp 1925: ramp bij Heerlen.\n\n**3. Scheepsbouw — Rotterdam, Amsterdam**:\n• Drogedokken voor grote stoomschepen.\n• Bedrijven: Wilton-Fijenoord, Nederlandsche Dok Maatschappij.\n\n**4. Voedingsmiddelen**:\n• Margarine in Oss *(Jurgens, Van den Bergh — werd Unilever)*.\n• Bier *(Heineken vanaf 1864, Amstel)*.\n• Chocolade *(Verkade, Droste)*.\n\n**5. Glas + keramiek**:\n• Tegelfabrieken Maastricht *(Mosa, Boch)*.\n• Glas: Leerdam.\n\n**6. Electrotechnisch — Eindhoven**:\n• **Philips** *(1891)* — gloeilampen, daarna radio's, TV's.\n• Eindhoven groeide van 5.000 → 100.000 inwoners.\n\n**7. Chemie**:\n• Akzo, DSM *(uit staatsmijnen ontwikkeld)*.\n• Royal Shell *(1907)*.\n\n**NL kenmerken**:\n• **Snelle inhaal** in 50 jaar.\n• Sterke **bedrijfsdynastieën** *(Philips, Heineken, Van Heek)*.\n• Vooral **familiaire ondernemingen**.\n• Calvinistische arbeidsethiek.\n\n**Erfgoed van Industriële Revolutie**:\n• Spoorwegen: 3.400 km in NL nu.\n• Industriestadjes (Twente, Limburg).\n• **NS** + **PostNL** voortgekomen uit toen.\n• Onderwijsstelsel met leerplicht.\n• Sociale wetten basis voor verzorgingsstaat.\n\n**Cito-feitje**:\nEindhoven werd door **Philips** van klein dorp tot 5e stad van NL. Bij sluiting Philips-fabrieken (jaren 1990) bleek de afhankelijkheid groot — daarna omgebouwd tot 'Brainport' met hi-tech bedrijven (ASML).",
+      "NL kwam **later** dan Engeland — pas vanaf **~1870**. Waarom?\n\n• **Geen steenkool** in Holland *(wel in Limburg, maar dat hoorde bij België tot 1839)*.\n• **Geen ijzer-erts**.\n• **Veel scheepvaart** + handel *(VOC)* — minder druk om te industrialiseren.\n• **Conservatieve elite**.\n\n**Wel** kwam Limburg-mijnbouw, Twente-textiel, Brabant-leder vroeger.\n\n**Belangrijke NL-industrieën** *(rond 1900)*:\n\n**1. Textiel — Twente**:\n• Spinnerijen + weverijen.\n• Bedrijven: Van Heek, Ten Cate.\n• Hele steden draaiden op textiel: Enschede, Hengelo, Almelo.\n\n**2. Steenkool — Limburg** *(vanaf 1860)*:\n• Staatsmijnen (publiek) + particuliere mijnen.\n• 12 mijnen tot 1974 *(sluiting laatste mijn)*.\n• Mijnramp 1925: ramp bij Heerlen.\n\n**3. Scheepsbouw — Rotterdam, Amsterdam**:\n• Drogedokken voor grote stoomschepen.\n• Bedrijven: Wilton-Fijenoord, Nederlandsche Dok Maatschappij.\n\n**4. Voedingsmiddelen**:\n• Margarine in Oss *(Jurgens, Van den Bergh — werd Unilever)*.\n• Bier *(Heineken vanaf 1864, Amstel)*.\n• Chocolade *(Verkade, Droste)*.\n\n**5. Glas + keramiek**:\n• Tegelfabrieken Maastricht *(Mosa, Boch)*.\n• Glas: Leerdam.\n\n**6. Electrotechnisch — Eindhoven**:\n• **Philips** *(1891)* — gloeilampen, daarna radio's, TV's.\n• Eindhoven groeide van 5.000 → 100.000 inwoners.\n\n**7. Chemie**:\n• Akzo, DSM *(uit staatsmijnen ontwikkeld)*.\n• Royal Shell *(1907)*.\n\n**NL kenmerken**:\n• **Snelle inhaal** in 50 jaar.\n• Sterke **bedrijfsdynastieën** *(Philips, Heineken, Van Heek)*.\n• Vooral **familiaire ondernemingen**.\n• Calvinistische arbeidsethiek.\n\n**Erfgoed van Industriële Revolutie**:\n• Spoorwegen: 3.400 km in NL nu.\n• Industriestadjes (Twente, Limburg).\n• **NS** + **PostNL** voortgekomen uit toen.\n• Onderwijsstelsel met leerplicht.\n• Sociale wetten basis voor verzorgingsstaat.\n\n**Toets-feitje**:\nEindhoven werd door **Philips** van klein dorp tot 5e stad van NL. Bij sluiting Philips-fabrieken (jaren 1990) bleek de afhankelijkheid groot — daarna omgebouwd tot 'Brainport' met hi-tech bedrijven (ASML).",
     checks: [
       {
         q: "Waarom **later** NL?",
@@ -304,7 +304,7 @@ const steps = [
   },
   {
     title: "Eind-toets — industriële revolutie mix",
-    explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
+    explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "**Industriële Revolutie** ging vooral over?", options: ["Machines + fabrieken", "Computers", "Schepen", "Oorlog"], answer: 0, wrongHints: [null, "Veel later.", "Niet primair.", "Niet."] },
       { q: "Stoommachine **uitgevonden** door?", options: ["James Watt", "Edison", "Marx", "Ford"], answer: 0, wrongHints: [null, "Gloeilamp.", "Filosoof.", "Auto."] },

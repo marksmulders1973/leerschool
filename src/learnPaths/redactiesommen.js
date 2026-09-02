@@ -1,5 +1,5 @@
 // Leerpad: Redactiesommen — voor groep 5-8
-// 5 stappen. Cito-stijl verhaal-sommen.
+// 5 stappen. Doorstroomtoets-stijl verhaal-sommen.
 // Sprint A (2026-05-08).
 
 const COLORS = {
@@ -17,13 +17,13 @@ const chapters = [
   { letter: "B", title: "Stappenplan — wat moet je doen?", emoji: "🔍", from: 1, to: 1 },
   { letter: "C", title: "Eén-stap-sommen", emoji: "➕", from: 2, to: 2 },
   { letter: "D", title: "Twee-stap-sommen + meer", emoji: "🔁", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
   {
     title: "Wat is een redactiesom?",
-    explanation: "Een **redactiesom** is een rekensom in een **verhaal**. Je moet eerst lezen wat er gevraagd wordt, en dan zelf bedenken welke som je moet maken.\n\n**Voorbeeld**:\n*'Lisa heeft 24 stickers. Ze geeft er 8 weg. Hoeveel houdt ze over?'*\n\nDit is geen 'kale som' (24 − 8). Je moet eerst lezen, daarna de som maken.\n\n**Waarom moeilijker dan kale sommen?**\n• Je moet de **vraag begrijpen**.\n• Je moet zelf **kiezen welke bewerking** *(+, −, ×, of ÷)*.\n• Vaak zijn er **extra getallen** die niet relevant zijn (Cito-strikgetallen).\n• Soms zijn er **meerdere stappen** nodig.\n\n**Cito-vraagvorm — 4 standaard-typen**:\n1. **Optellen**: 'samen', 'totaal', 'in totaal'.\n2. **Aftrekken**: 'verschil', 'meer dan', 'over', 'rest'.\n3. **Vermenigvuldigen**: 'per', 'elk', 'iedereen krijgt'.\n4. **Delen**: 'gelijk verdeeld', 'hoeveel ieder', 'in groepen van'.\n\n**Belangrijk**:\nLezen = **de helft van het werk**. Als je vraag verkeerd begrijpt, gaat alles fout.",
+    explanation: "Een **redactiesom** is een rekensom in een **verhaal**. Je moet eerst lezen wat er gevraagd wordt, en dan zelf bedenken welke som je moet maken.\n\n**Voorbeeld**:\n*'Lisa heeft 24 stickers. Ze geeft er 8 weg. Hoeveel houdt ze over?'*\n\nDit is geen 'kale som' (24 − 8). Je moet eerst lezen, daarna de som maken.\n\n**Waarom moeilijker dan kale sommen?**\n• Je moet de **vraag begrijpen**.\n• Je moet zelf **kiezen welke bewerking** *(+, −, ×, of ÷)*.\n• Vaak zijn er **extra getallen** die niet relevant zijn (Toets-strikgetallen).\n• Soms zijn er **meerdere stappen** nodig.\n\n**Toets-vraagvorm — 4 standaard-typen**:\n1. **Optellen**: 'samen', 'totaal', 'in totaal'.\n2. **Aftrekken**: 'verschil', 'meer dan', 'over', 'rest'.\n3. **Vermenigvuldigen**: 'per', 'elk', 'iedereen krijgt'.\n4. **Delen**: 'gelijk verdeeld', 'hoeveel ieder', 'in groepen van'.\n\n**Belangrijk**:\nLezen = **de helft van het werk**. Als je vraag verkeerd begrijpt, gaat alles fout.",
     checks: [
       {
         q: "Welk woord zegt vaak: **vermenigvuldigen**?",
@@ -40,7 +40,7 @@ const steps = [
             { woord: "per", uitleg: "Hint voor vermenigvuldigen (× aantal)." },
             { woord: "elk", uitleg: "Synoniem van 'per' — ook keer-bewerking." },
           ],
-          theorie: "Cito-truc redactiesommen: zoek het SIGNAAL-woord. Dat bepaalt welke bewerking. Lees vraag rustig, onderstreep cijfers + signaalwoorden, kies dan bewerking.",
+          theorie: "Toets-truc redactiesommen: zoek het SIGNAAL-woord. Dat bepaalt welke bewerking. Lees vraag rustig, onderstreep cijfers + signaalwoorden, kies dan bewerking.",
           voorbeelden: [
             { type: "stap", tekst: "'5 dozen met 12 koeken per doos' = 5 × 12 (per = keer)." },
             { type: "stap", tekst: "'10 vrienden krijgen elk €2' = 10 × 2 = €20 (elk = keer)." },
@@ -71,7 +71,7 @@ const steps = [
 
   {
     title: "Stappenplan — een redactiesom oplossen",
-    explanation: "**Cito-stappenplan voor élke redactiesom**:\n\n**Stap 1 — Lees rustig** *(2 keer als 't moet)*. Onderstreep:\n• De **getallen** met hun eenheid (24 stickers, 8 stickers).\n• De **vraag** (hoeveel **over**?).\n\n**Stap 2 — Welke bewerking?** Zoek signaal-woorden:\n• 'samen', 'totaal' → +\n• 'verschil', 'over', 'meer dan', 'minder dan' → −\n• 'per', 'elk', 'iedereen' → ×\n• 'gelijk verdeeld', 'hoeveel ieder' → ÷\n\n**Stap 3 — Schrijf de som op** met getallen + bewerking.\n\n**Stap 4 — Reken** zoals een normale som.\n\n**Stap 5 — Antwoord met eenheid**. *(Niet alleen '8' maar '8 koeken' of '€ 8')*.\n\n**Voorbeeld toegepast**:\n*'Een klas heeft 24 boeken. Er zijn 18 leerlingen. Iedereen krijgt 1 boek. Hoeveel boeken **over**?'*\n\n• Stap 1: getallen = 24 boeken, 18 leerlingen. Vraag = hoeveel over.\n• Stap 2: 'over' → aftrekken.\n• Stap 3: 24 − 18.\n• Stap 4: = 6.\n• Stap 5: **6 boeken over**.\n\n**Cito-valkuilen**:\n• **Strikgetallen**: 'Lisa is 9 jaar en heeft 24 stickers'. De 9 is niet relevant!\n• **Verkeerde volgorde**: 'aftrekken' kan ook 'eerst optellen, dan iets anders eraf'.\n• **Vergeten eenheid**: '€ 8 wisselgeld' niet alleen '8'.",
+    explanation: "**Toets-stappenplan voor élke redactiesom**:\n\n**Stap 1 — Lees rustig** *(2 keer als 't moet)*. Onderstreep:\n• De **getallen** met hun eenheid (24 stickers, 8 stickers).\n• De **vraag** (hoeveel **over**?).\n\n**Stap 2 — Welke bewerking?** Zoek signaal-woorden:\n• 'samen', 'totaal' → +\n• 'verschil', 'over', 'meer dan', 'minder dan' → −\n• 'per', 'elk', 'iedereen' → ×\n• 'gelijk verdeeld', 'hoeveel ieder' → ÷\n\n**Stap 3 — Schrijf de som op** met getallen + bewerking.\n\n**Stap 4 — Reken** zoals een normale som.\n\n**Stap 5 — Antwoord met eenheid**. *(Niet alleen '8' maar '8 koeken' of '€ 8')*.\n\n**Voorbeeld toegepast**:\n*'Een klas heeft 24 boeken. Er zijn 18 leerlingen. Iedereen krijgt 1 boek. Hoeveel boeken **over**?'*\n\n• Stap 1: getallen = 24 boeken, 18 leerlingen. Vraag = hoeveel over.\n• Stap 2: 'over' → aftrekken.\n• Stap 3: 24 − 18.\n• Stap 4: = 6.\n• Stap 5: **6 boeken over**.\n\n**Toets-valkuilen**:\n• **Strikgetallen**: 'Lisa is 9 jaar en heeft 24 stickers'. De 9 is niet relevant!\n• **Verkeerde volgorde**: 'aftrekken' kan ook 'eerst optellen, dan iets anders eraf'.\n• **Vergeten eenheid**: '€ 8 wisselgeld' niet alleen '8'.",
     checks: [
       {
         q: "*'Tom is 11 jaar. Hij heeft 36 knikkers. Hij verliest er 8.'* Welk **getal is niet relevant**?",
@@ -80,7 +80,7 @@ const steps = [
         wrongHints: [null,"Dat is wel relevant — beginaantal knikkers.","Dat is wel relevant — verloren knikkers.","Wel — leeftijd doet er niet toe."],
         uitlegPad: {
           stappen: [
-            { titel: "Cito-strik: extra info", tekst: "Cito stopt soms EXTRA cijfers in een vraag die NIET nodig zijn. Doel: testen of je goed leest + alleen het belangrijke pakt." },
+            { titel: "Toets-strik: extra info", tekst: "De toets stopt soms EXTRA cijfers in een vraag die NIET nodig zijn. Doel: testen of je goed leest + alleen het belangrijke pakt." },
             { titel: "Wat is de vraag eigenlijk?", tekst: "Vraag gaat over **knikkers** (eindstand). Je hebt: beginstand (36) en verlies (8). Reken: 36 − 8 = 28. Leeftijd (11 jaar) is NIET nodig om dit te beantwoorden." },
             { titel: "Truc: onderstreep wat je nodig hebt", tekst: "Lees vraag. Vraag jezelf: 'Welke getallen helpen mij?' Onderstreep die. Andere getallen = afleiders. Veel kinderen rekenen met alle 3 — dan klopt het antwoord niet." },
           ],
@@ -88,7 +88,7 @@ const steps = [
             { woord: "afleider", uitleg: "Extra info die niet nodig is voor antwoord." },
             { woord: "redactiesom", uitleg: "Verhaaltje met cijfers — bereken iets." },
           ],
-          theorie: "Cito-tip: bij verhaaltjes-sommen ALTIJD vragen: 'Welke info heb ik echt nodig?' Schrap of negeer wat irrelevant is. Cito test bewust met afleiders.",
+          theorie: "Toets-tip: bij verhaaltjes-sommen ALTIJD vragen: 'Welke info heb ik echt nodig?' Schrap of negeer wat irrelevant is. De toets test bewust met afleiders.",
           voorbeelden: [
             { type: "stap", tekst: "'Anna heeft 5 € + 3 broers en ze koopt iets van €2.' Antwoord = €5−€2=€3. 'Broers' is afleider." },
             { type: "stap", tekst: "'Trein vertrekt om 8:15 en heeft 6 wagons. Aankomst om 9:30.' Reistijd vraag = 1u15min. 'Wagons' is afleider." },
@@ -122,7 +122,7 @@ const steps = [
             { woord: "per stuk / per liter", uitleg: "Prijs voor 1 eenheid (1 liter, 1 stuk)." },
             { woord: "delen", uitleg: "Totaal ÷ aantal eenheden = per-eenheid." },
           ],
-          theorie: "Cito-truc 'per stuk'-vragen: ALTIJD delen. Totaal-prijs ÷ aantal-stuks = prijs per stuk. Werkt voor liters, kilo's, stuks, etc.",
+          theorie: "Toets-truc 'per stuk'-vragen: ALTIJD delen. Totaal-prijs ÷ aantal-stuks = prijs per stuk. Werkt voor liters, kilo's, stuks, etc.",
           voorbeelden: [
             { type: "stap", tekst: "3 boeken €36 → per boek = 36÷3 = €12." },
             { type: "stap", tekst: "500 g €4,50 → per kg = €4,50 ÷ 0,5 = €9." },
@@ -140,7 +140,7 @@ const steps = [
 
   {
     title: "Eén-stap-sommen — direct rekenen",
-    explanation: "Eén-stap-sommen hebben **één bewerking** nodig. Lees, kies, reken.\n\n**Voorbeelden**:\n\n**A. Optellen**:\n*'Lisa kocht 12 stickers. Vandaag krijgt ze er 8. Hoeveel nu?'*\n• 12 + 8 = **20 stickers**.\n\n**B. Aftrekken**:\n*'Een klas heeft 28 leerlingen. 5 zijn ziek. Hoeveel zijn er aanwezig?'*\n• 28 − 5 = **23 leerlingen**.\n\n**C. Vermenigvuldigen**:\n*'In 5 zakken zitten elk 24 snoepjes. Hoeveel totaal?'*\n• 5 × 24 = **120 snoepjes**.\n\n**D. Delen**:\n*'72 koekjes verdeeld over 8 kinderen. Hoeveel ieder?'*\n• 72 ÷ 8 = **9 koekjes per kind**.\n\n**Cito-tip**: een Cito-vraag is meestal **kort** — 1 tot 3 zinnen. Lees rustig en let op signaal-woorden.\n\n**Veel-voorkomende fout**:\nVraag verkeerd begrijpen. Lees **2 keer** als je twijfelt. Beter rustig dan snel-fout.",
+    explanation: "Eén-stap-sommen hebben **één bewerking** nodig. Lees, kies, reken.\n\n**Voorbeelden**:\n\n**A. Optellen**:\n*'Lisa kocht 12 stickers. Vandaag krijgt ze er 8. Hoeveel nu?'*\n• 12 + 8 = **20 stickers**.\n\n**B. Aftrekken**:\n*'Een klas heeft 28 leerlingen. 5 zijn ziek. Hoeveel zijn er aanwezig?'*\n• 28 − 5 = **23 leerlingen**.\n\n**C. Vermenigvuldigen**:\n*'In 5 zakken zitten elk 24 snoepjes. Hoeveel totaal?'*\n• 5 × 24 = **120 snoepjes**.\n\n**D. Delen**:\n*'72 koekjes verdeeld over 8 kinderen. Hoeveel ieder?'*\n• 72 ÷ 8 = **9 koekjes per kind**.\n\n**Toets-tip**: een toetsvraag is meestal **kort** — 1 tot 3 zinnen. Lees rustig en let op signaal-woorden.\n\n**Veel-voorkomende fout**:\nVraag verkeerd begrijpen. Lees **2 keer** als je twijfelt. Beter rustig dan snel-fout.",
     checks: [
       {
         q: "*'Een doos heeft 35 ballen, 12 zijn rood. Hoeveel **niet rood**?'*",
@@ -165,7 +165,7 @@ const steps = [
 
   {
     title: "Twee-stap-sommen — eerst dit, dan dat",
-    explanation: "**Twee-stap-sommen** vereisen meerdere bewerkingen. Doe ze in **stappen**.\n\n**Voorbeeld 1 — winkel**:\n*'Mam koopt 3 broden van € 2,80 en betaalt met € 10. Wisselgeld?'*\n\n• **Stap 1**: 3 × €2,80 = **€8,40** *(prijs van broden)*.\n• **Stap 2**: €10,00 − €8,40 = **€1,60 wisselgeld**.\n\n**Voorbeeld 2 — verdelen**:\n*'48 koekjes worden over 6 zakken verdeeld. Per zak gaan er 2 weg. Hoeveel zit er nu in elke zak?'*\n\n• Stap 1: 48 koekjes ÷ 6 zakken = **8 koekjes per zak**.\n• Stap 2: 8 koekjes − 2 koekjes = **6 koekjes per zak**.\n\n**Voorbeeld 3 — combinatie**:\n*'In een doos zitten 12 rode + 18 blauwe + 20 groene knikkers. Hoeveel zijn rood of blauw?'*\n\n• Stap 1: tel rood + blauw: 12 + 18 = **30 knikkers**.\n• Stap 2: 20 groene knikkers zijn niet gevraagd, **30 knikkers is het antwoord**.\n\n**Cito-tip**:\n• **Schrijf elke stap apart op**. Niet alles in 1 keer in je hoofd.\n• **Gebruik de uitkomst van stap 1** in stap 2.\n• **Vergeet de eenheid** niet bij het eindantwoord.\n\n**Veel-voorkomende fout**:\nDirect proberen 1 grote berekening te maken. Twee stapjes zijn betrouwbaarder dan 1 lange.",
+    explanation: "**Twee-stap-sommen** vereisen meerdere bewerkingen. Doe ze in **stappen**.\n\n**Voorbeeld 1 — winkel**:\n*'Mam koopt 3 broden van € 2,80 en betaalt met € 10. Wisselgeld?'*\n\n• **Stap 1**: 3 × €2,80 = **€8,40** *(prijs van broden)*.\n• **Stap 2**: €10,00 − €8,40 = **€1,60 wisselgeld**.\n\n**Voorbeeld 2 — verdelen**:\n*'48 koekjes worden over 6 zakken verdeeld. Per zak gaan er 2 weg. Hoeveel zit er nu in elke zak?'*\n\n• Stap 1: 48 koekjes ÷ 6 zakken = **8 koekjes per zak**.\n• Stap 2: 8 koekjes − 2 koekjes = **6 koekjes per zak**.\n\n**Voorbeeld 3 — combinatie**:\n*'In een doos zitten 12 rode + 18 blauwe + 20 groene knikkers. Hoeveel zijn rood of blauw?'*\n\n• Stap 1: tel rood + blauw: 12 + 18 = **30 knikkers**.\n• Stap 2: 20 groene knikkers zijn niet gevraagd, **30 knikkers is het antwoord**.\n\n**Toets-tip**:\n• **Schrijf elke stap apart op**. Niet alles in 1 keer in je hoofd.\n• **Gebruik de uitkomst van stap 1** in stap 2.\n• **Vergeet de eenheid** niet bij het eindantwoord.\n\n**Veel-voorkomende fout**:\nDirect proberen 1 grote berekening te maken. Twee stapjes zijn betrouwbaarder dan 1 lange.",
     checks: [
       {
         q: "*'Een fles 1,5 L kost € 2,10. Hoe duur per glas van 250 mL?'*",
@@ -189,8 +189,8 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — redactiesommen mix",
-    explanation: "Mix-toets met redactiesommen in Cito-stijl. Soms 1 stap, soms 2 stappen. Lees rustig, gebruik het stappenplan.\n\nVeel succes!",
+    title: "Toets-eindopdracht — redactiesommen mix",
+    explanation: "Mix-toets met redactiesommen in Doorstroomtoets-stijl. Soms 1 stap, soms 2 stappen. Lees rustig, gebruik het stappenplan.\n\nVeel succes!",
     checks: [
       {
         q: "*'In een tuin staan 24 rozen, 18 tulpen en 12 zonnebloemen. Hoeveel bloemen **totaal**?'*",
@@ -268,7 +268,7 @@ const steps = [
           ],
           woorden: [
             { woord: "% opgegeten", uitleg: "Deel dat weg is. Rest = 100% − dat percentage." },
-            { woord: "1 kg", uitleg: "1000 gram. Cito vraagt vaak omrekening tussen kg/g." },
+            { woord: "1 kg", uitleg: "1000 gram. De toets vraagt vaak omrekening tussen kg/g." },
           ],
           theorie: "Drie-stap-vraag:\n1. Eenheid omrekenen (kg → g)\n2. Bereken rest-percentage (100 − % weg)\n3. Pas dat percentage toe op totaal",
           voorbeelden: [{ type: "stap", tekst: "1 kg, 25% op = 75% over = 750 gram." }],
@@ -313,7 +313,7 @@ const steps = [
           ],
           theorie: "Bij 'X-deel doet A, rest doet B' → reken (1 − X-deel) voor de rest. Of: trek 'A-aantal' af van totaal.",
           voorbeelden: [{ type: "stap", tekst: "30 kinderen, 3/5 buiten spelen → 2/5 binnen = 12 kinderen." }],
-          basiskennis: [{ onderwerp: "Schooladvies-vraag", uitleg: "Cito-stof. Doorstroomtoets gebruikt dit soort verdelingen vaak." }],
+          basiskennis: [{ onderwerp: "Schooladvies-vraag", uitleg: "toetsstof. Doorstroomtoets gebruikt dit soort verdelingen vaak." }],
           niveaus: { basis: "1/3 van 27 = 9.", simpeler: "Rest = 1/3. 27 ÷ 3 = 9 naar HAVO/VWO.", nogSimpeler: "9" },
         },
       },
@@ -343,7 +343,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const redactiesommen = {
   id: "redactiesommen-pad",
-  title: "Redactiesommen — Cito groep 5-8",
+  title: "Redactiesommen — Doorstroomtoets groep 5-8",
   emoji: "📖",
   level: "groep5-8",
   subject: "rekenen",

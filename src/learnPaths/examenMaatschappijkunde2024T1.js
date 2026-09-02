@@ -54,7 +54,7 @@ const steps = [
             { woord: "motie", uitleg: "Uitspraak van de Kamer (geen wet)." },
             { woord: "vragenrecht", uitleg: "Recht om vragen te stellen aan regering." },
           ],
-          theorie: "Cito-feit: nieuwe wetten komen meestal van de regering, maar via initiatiefrecht kan élke partij in de Tweede Kamer een eigen wet indienen. Bekend voorbeeld: initiatiefwet pulsvisserij (PvdD).",
+          theorie: "Toets-feit: nieuwe wetten komen meestal van de regering, maar via initiatiefrecht kan élke partij in de Tweede Kamer een eigen wet indienen. Bekend voorbeeld: initiatiefwet pulsvisserij (PvdD).",
           voorbeelden: [{ type: "stap", tekst: "GroenLinks dient initiatiefwet in voor afschaffing eigen risico zorg → recht van initiatief." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Wet maken = initiatief. Vraag stellen = vragenrecht. Onderzoeken = enquête. Verzoek doen = motie." }],
           niveaus: {

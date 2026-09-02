@@ -2,7 +2,7 @@
 //
 // Doel: ICP-conversie verbeteren door 'spelletjes' (OBLITERATOR, PvP,
 // Hall of Fame) te verbergen voor niet-ingelogde bezoekers. Bezorgde
-// Cito-ouder ziet zo eerst een serieus oefenplatform.
+// Toets-ouder ziet zo eerst een serieus oefenplatform.
 //
 // Activeren via Vercel env-var:
 //   VITE_HIDE_GAME_FOR_GUESTS=true
@@ -51,7 +51,7 @@ export function urlHasGameDeepLink() {
  * StudentProgress voor leerkracht, ClassManager)?
  *
  * Per audit-3 S2: leerkracht-flow is een B2B-koop-cyclus (maanden,
- * pilots) terwijl Cito-ouder-ICP individueel + direct koopt. Tot
+ * pilots) terwijl Toets-ouder-ICP individueel + direct koopt. Tot
  * post-PMF blijven teacher-features achter feature-flag voor non-teacher.
  *
  * Regels:
@@ -79,7 +79,7 @@ export function teacherFeaturesVisibleForUser(authUser, userRole = null) {
  *
  * Per audit-3 S3: 3D-modellen kosten veel ontwikkeltijd (Claude.ai TSX-
  * workflow per model) maar bedienen alleen VO-onderbouw (klas 1-3
- * meetkunde). Voor Cito-ouder-ICP (groep 6-8) = nul ROI. Beslissing:
+ * meetkunde). Voor Toets-ouder-ICP (groep 6-8) = nul ROI. Beslissing:
  * geen NIEUWE 3D-modellen tot post-PMF; bestaande blijven werken,
  * maar via deze flag kan Mark ze tijdelijk dichtschakelen voor
  * performance/data-besparing op trage netwerken.

@@ -51,7 +51,7 @@ function overzichtSvg() {
 <text x="232" y="157" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">interpunctie</text>
 <text x="232" y="169" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">leestekens · zinnen</text>
 
-<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte Cito-voorbeelden: zie externe PDF onder elke stap</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte Toets-voorbeelden: zie externe PDF onder elke stap</text>
 </svg>`;
 }
 
@@ -65,7 +65,7 @@ const steps = [
     title: "Woordenschat — ~20 min",
     refOnderdeel: "geen",
     explanation:
-      "**Wat verwacht je op de Doorstroomtoets?**\n\nBij taal krijg je vaak 10-15 woordenschatvragen. De toets test:\n\n• **Wat betekent een moeilijk woord**? *(bv. 'verlamd' — kan zich niet bewegen)*\n• **Welke uitspraak hoort bij een woord** in een tekst? *(context-vraag)*\n• **Welk woord past in een zin** (synoniem-vraag)? *(bv. 'opvallend' = 'in het oog springend')*\n\n**Cito-truc 1 — context geeft de hint**:\nLees het hele zinnetje, niet alleen het woord. Vaak staat de betekenis vlak vóór of na het woord.\n\nVoorbeeld: *'Iedereen was **stomverbaasd** toen de poes het deurtje opende.'*\n→ Stomverbaasd = heel erg verbaasd, want het was iets bijzonders.\n\n**Cito-truc 2 — eliminatie**:\nBij 4 keuzes: streep 2 antwoorden door die zeker fout zijn. Dan heb je 50% kans, dat is veel beter dan gokken.\n\n**Cito-truc 3 — woordfamilies**:\n• 'verlamd' lijkt op 'lam' = niet kunnen bewegen.\n• 'onbarmhartig' = 'on' + 'barmhartig' (vriendelijk-meelevend) = niet meelevend, hard.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
+      "**Wat verwacht je op de Doorstroomtoets?**\n\nBij taal krijg je vaak 10-15 woordenschatvragen. De toets test:\n\n• **Wat betekent een moeilijk woord**? *(bv. 'verlamd' — kan zich niet bewegen)*\n• **Welke uitspraak hoort bij een woord** in een tekst? *(context-vraag)*\n• **Welk woord past in een zin** (synoniem-vraag)? *(bv. 'opvallend' = 'in het oog springend')*\n\n**Toets-truc 1 — context geeft de hint**:\nLees het hele zinnetje, niet alleen het woord. Vaak staat de betekenis vlak vóór of na het woord.\n\nVoorbeeld: *'Iedereen was **stomverbaasd** toen de poes het deurtje opende.'*\n→ Stomverbaasd = heel erg verbaasd, want het was iets bijzonders.\n\n**Toets-truc 2 — eliminatie**:\nBij 4 keuzes: streep 2 antwoorden door die zeker fout zijn. Dan heb je 50% kans, dat is veel beter dan gokken.\n\n**Toets-truc 3 — woordfamilies**:\n• 'verlamd' lijkt op 'lam' = niet kunnen bewegen.\n• 'onbarmhartig' = 'on' + 'barmhartig' (vriendelijk-meelevend) = niet meelevend, hard.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     svg: overzichtSvg(),
     checks: [
       {
@@ -84,7 +84,7 @@ const steps = [
             { titel: "Synoniem = zelfde betekenis", tekst: "Een synoniem is een ander woord met (bijna) dezelfde betekenis. 'Enorm' = heel groot." },
           ],
           woorden: [{ woord: "synoniem", uitleg: "Woord dat (bijna) hetzelfde betekent als een ander woord." }],
-          theorie: "Synoniemen zijn handig voor afwisseling in tekst. Cito vraagt vaak: 'welk woord is hetzelfde als X?'",
+          theorie: "Synoniemen zijn handig voor afwisseling in tekst. De toets vraagt vaak: 'welk woord is hetzelfde als X?'",
           voorbeelden: [{ type: "stap", tekst: "blij = vrolijk. snel = vlug. mooi = prachtig. boos = woedend." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Het tegenovergestelde van een synoniem is een 'antoniem' — woord met juist andere betekenis." }],
           niveaus: {
@@ -145,7 +145,7 @@ const steps = [
             { titel: "Context-hint", tekst: "'De docent gaf een toelichting bij de som' = de docent legde de som uit. Klopt met 'uitleg'." },
           ],
           woorden: [{ woord: "toelichting", uitleg: "Een uitleg of verduidelijking — extra info om iets beter te begrijpen." }],
-          theorie: "Cito-truc bij moeilijke woorden: kijk naar stam ('licht' van 'verlichten') en context (wat past in de zin?).",
+          theorie: "Toets-truc bij moeilijke woorden: kijk naar stam ('licht' van 'verlichten') en context (wat past in de zin?).",
           voorbeelden: [{ type: "stap", tekst: "'Hij gaf een toelichting bij zijn keuze' = hij legde uit waarom hij koos." }],
           basiskennis: [{ onderwerp: "Stam: licht", uitleg: "'Licht' kan ook 'helder/duidelijk' betekenen. Toelichten = duidelijk maken." }],
           niveaus: {
@@ -166,7 +166,7 @@ const steps = [
             { titel: "Stam 'verstoren'", tekst: "Verstoren = onderbreken/uit-orde-brengen. Onverstoorbaar = kan niet onderbroken worden." },
           ],
           woorden: [{ woord: "onverstoorbaar", uitleg: "Rustig en stabiel, niet uit balans door geluid of stress." }],
-          theorie: "Cito-truc 'on-' voorvoegsel: ontkenning. Bekwaam → onbekwaam. Mogelijk → onmogelijk. Verstoorbaar → onverstoorbaar.",
+          theorie: "Toets-truc 'on-' voorvoegsel: ontkenning. Bekwaam → onbekwaam. Mogelijk → onmogelijk. Verstoorbaar → onverstoorbaar.",
           voorbeelden: [{ type: "stap", tekst: "'De kapitein bleef onverstoorbaar tijdens de storm' = hij bleef kalm onder zware omstandigheden." }],
           basiskennis: [{ onderwerp: "Toets-context", uitleg: "'Tijdens de toets' = stresssituatie. Onverstoorbaar past = rustig blijven." }],
           niveaus: {
@@ -192,7 +192,7 @@ const steps = [
             { titel: "Moeilijk woord", tekst: "'Precair' is een formeel woord. Komt uit het Latijn (precarius = afhankelijk van gunst). In NL: onzeker, riskant, gevaarlijk." },
           ],
           woorden: [{ woord: "precair", uitleg: "Onzeker, riskant, kwetsbaar — situatie die snel kan misgaan." }],
-          theorie: "Cito-tip: bij onbekend woord, kijk naar de context. 'Uiterst' geeft aan dat het sterk is — pakt geen 'saai' of 'vrolijk'.",
+          theorie: "Toets-tip: bij onbekend woord, kijk naar de context. 'Uiterst' geeft aan dat het sterk is — pakt geen 'saai' of 'vrolijk'.",
           voorbeelden: [{ type: "stap", tekst: "'De zieke baby's gezondheid was precair' = ernstige zorg. Daarom 'onzeker/gevaarlijk'" }],
           basiskennis: [{ onderwerp: "Context-hint", uitleg: "'Uiterst precair' = heel onzeker. 'Uiterst' versterkt = niet positief." }],
           niveaus: {
@@ -216,7 +216,7 @@ const steps = [
             { woord: "inmenging", uitleg: "Zich bemoeien met iets dat je niet aangaat — meestal ongewenst." },
             { woord: "connotatie", uitleg: "Bijbetekenis of gevoelswaarde van een woord (positief/negatief/neutraal)." },
           ],
-          theorie: "Cito-truc: woord-context geeft gevoel. 'Verstoord' is negatief → kies negatieve betekenis voor inmenging.",
+          theorie: "Toets-truc: woord-context geeft gevoel. 'Verstoord' is negatief → kies negatieve betekenis voor inmenging.",
           voorbeelden: [{ type: "stap", tekst: "'Inmenging in buitenlandse politiek' = ander land mengt zich (negatief). 'Inmenging van leerkracht' = leerkracht bemoeit zich ongewenst." }],
           basiskennis: [{ onderwerp: "Tegenstelling", uitleg: "Inmenging ↔ afzijdig blijven / je niet ermee bemoeien." }],
           niveaus: {
@@ -257,7 +257,7 @@ const steps = [
             { titel: "Context", tekst: "Soldaat redde 3 mensen → dat vraagt moed (gevaar trotseren)." },
           ],
           woorden: [{ woord: "moedig", uitleg: "Dapper, durft iets gevaarlijks, niet bang." }],
-          theorie: "Cito-strategie bij woord met '-ig' achtervoegsel: kijk naar de stam vóór '-ig'. Moed-ig = met moed. Speel-s = met speel.",
+          theorie: "Toets-strategie bij woord met '-ig' achtervoegsel: kijk naar de stam vóór '-ig'. Moed-ig = met moed. Speel-s = met speel.",
           voorbeelden: [{ type: "stap", tekst: "Soortgelijke woorden: dapper, heldhaftig, onverschrokken — alle met-moed-doen." }],
           basiskennis: [{ onderwerp: "Tegenstelling", uitleg: "Moedig ↔ bang/laf/vreesachtig." }],
           niveaus: {
@@ -278,7 +278,7 @@ const steps = [
             { titel: "Context-hint", tekst: "Koningin = formele persoon → sprak plechtig = formeel/met waardigheid." },
           ],
           woorden: [{ woord: "plechtig", uitleg: "Formeel, ernstig, met respect — bij speciale gelegenheden." }],
-          theorie: "Cito-truc bij moeilijk bijwoord: kijk wie/wat doet de actie. Koningin/troonrede/herdenking → formele context = plechtig.",
+          theorie: "Toets-truc bij moeilijk bijwoord: kijk wie/wat doet de actie. Koningin/troonrede/herdenking → formele context = plechtig.",
           voorbeelden: [{ type: "stap", tekst: "'Hij beloofde plechtig' = beloofde serieus + formeel. 'Plechtige opening' = officiële opening." }],
           basiskennis: [{ onderwerp: "Verwant", uitleg: "Plechtigheid = de gebeurtenis zelf (bv huwelijksplechtigheid). Plechtig = de manier." }],
           niveaus: {
@@ -301,7 +301,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
-            { titel: "Onbekend woord? Kijk context", tekst: "Bij Cito krijg je soms onbekende woorden. Geen paniek — lees de zin eromheen voor hints." },
+            { titel: "Onbekend woord? Kijk context", tekst: "Bij de Doorstroomtoets krijg je soms onbekende woorden. Geen paniek — lees de zin eromheen voor hints." },
             { titel: "Wat past bij 'liep'?", tekst: "De zin is over LOPEN. 'Vrolijk lopen' en 'boos lopen' zijn vaag gevoelens, geen manier van lopen. 'Snel' en 'met moeite' beschrijven HOE iemand loopt." },
             { titel: "Kreupel = mank", tekst: "'Kreupel' betekent: niet goed kunnen lopen, vaak door pijn of een wond aan voet/been. Synoniem: mankend." },
           ],
@@ -309,12 +309,12 @@ const steps = [
             { woord: "kreupel", uitleg: "Niet goed lopend, vaak door blessure." },
             { woord: "mank", uitleg: "Synoniem van kreupel. Iemand met een mank been loopt scheef." },
           ],
-          theorie: "Cito-strategie bij onbekend woord: kijk wat ervoor en erna staat. Welk soort actie of beschrijving past bij die zin? Schrap antwoorden die niet bij de context passen.",
+          theorie: "Toets-strategie bij onbekend woord: kijk wat ervoor en erna staat. Welk soort actie of beschrijving past bij die zin? Schrap antwoorden die niet bij de context passen.",
           voorbeelden: [
             { type: "stap", tekst: "'De hond hinkte naar de bak.' → hinken = kreupel lopen, alleen op 3 poten." },
             { type: "stap", tekst: "'Na de val liep hij mank de trap op.' → mank = met moeite." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij Cito woordenschat: schrap eerst antwoorden die NIET in de context passen. Dan blijven 1-2 over." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij de Doorstroomtoets woordenschat: schrap eerst antwoorden die NIET in de context passen. Dan blijven 1-2 over." }],
           niveaus: {
             basis: "Kreupel = niet goed kunnen lopen (door wond).",
             simpeler: "Kreupel = mank = met moeite lopen.",
@@ -337,7 +337,7 @@ const steps = [
             { woord: "synoniem", uitleg: "Hetzelfde betekenend. (groot = enorm)." },
             { woord: "tegenstelling / antoniem", uitleg: "Tegenovergestelde betekenis. (groot ↔ klein)." },
           ],
-          theorie: "Cito-tip: bij synoniem-vragen altijd ook de tegenstellingen schrappen. Die staan vaak verlokkend tussen de antwoorden. Lees: betekent het echt hetzelfde?",
+          theorie: "Toets-tip: bij synoniem-vragen altijd ook de tegenstellingen schrappen. Die staan vaak verlokkend tussen de antwoorden. Lees: betekent het echt hetzelfde?",
           voorbeelden: [
             { type: "stap", tekst: "blij = vrolijk. moe = vermoeid. snel = vlug. groot = enorm." },
             { type: "stap", tekst: "Maar: blij ≠ verdrietig (tegenstelling), groot ≠ klein (tegenstelling)." },
@@ -365,7 +365,7 @@ const steps = [
             { woord: "uitzonderlijk", uitleg: "Niet gewoon, zeldzaam, bijzonder." },
             { woord: "uitzondering", uitleg: "Iets wat niet de gewone regel volgt." },
           ],
-          theorie: "Cito-truc: woord opdelen. Vaak zit de betekenis in een deel ('uit-zonder-lijk' = 'niet zoals anders').",
+          theorie: "Toets-truc: woord opdelen. Vaak zit de betekenis in een deel ('uit-zonder-lijk' = 'niet zoals anders').",
           voorbeelden: [
             { type: "stap", tekst: "Een uitzonderlijke leerling = bijzonder slimme leerling." },
             { type: "stap", tekst: "Uitzonderlijk warm weer = ongewoon warm." },
@@ -393,7 +393,7 @@ const steps = [
             { woord: "synoniem", uitleg: "Woord met dezelfde betekenis." },
             { woord: "prachtig", uitleg: "Heel mooi — sterker dan 'mooi'." },
           ],
-          theorie: "Cito-tip: zoek het meest dichtbij-staande synoniem. Soms zijn er meerdere passende, maar één staat het dichtst bij de oorspronkelijke betekenis.",
+          theorie: "Toets-tip: zoek het meest dichtbij-staande synoniem. Soms zijn er meerdere passende, maar één staat het dichtst bij de oorspronkelijke betekenis.",
           voorbeelden: [
             { type: "stap", tekst: "mooi = prachtig = schitterend = fraai." },
             { type: "stap", tekst: "groot = enorm = reusachtig. Klein = piepklein = mini." },
@@ -417,7 +417,7 @@ const steps = [
             { titel: "Context-hint", tekst: "'Na de race' = na lichamelijke inspanning → moe past." },
           ],
           woorden: [{ woord: "uitgeput", uitleg: "Helemaal op, geen energie meer." }],
-          theorie: "Cito-truc: bij moeilijk woord, kijk naar context-zin. 'Na de race' = na sport → vermoeidheid past.",
+          theorie: "Toets-truc: bij moeilijk woord, kijk naar context-zin. 'Na de race' = na sport → vermoeidheid past.",
           voorbeelden: [{ type: "stap", tekst: "Uitgeput ↔ uitgerust. Beide met 'uit-' maar tegengesteld." }],
           basiskennis: [{ onderwerp: "Letterlijke/figuurlijke betekenis", uitleg: "Een put kan ook 'uitgeput' zijn = leeg = geen water meer. Zelfde idee voor mensen: geen energie." }],
           niveaus: {
@@ -442,7 +442,7 @@ const steps = [
             { woord: "voorzichtig", uitleg: "Met aandacht, om risico te vermijden." },
             { woord: "roekeloos", uitleg: "Zonder nadenken, zonder oppassen." },
           ],
-          theorie: "Cito-tip bij tegenstellingen: zoek het MEEST tegengesteld. 'Snel' is wel tegenovergesteld aan 'langzaam' maar voorzichtig betekent meer dan alleen langzaam.",
+          theorie: "Toets-tip bij tegenstellingen: zoek het MEEST tegengesteld. 'Snel' is wel tegenovergesteld aan 'langzaam' maar voorzichtig betekent meer dan alleen langzaam.",
           voorbeelden: [
             { type: "stap", tekst: "Voorzichtig auto rijden vs roekeloos auto rijden." },
             { type: "stap", tekst: "Andere tegenstellingen: vrolijk ↔ verdrietig, snel ↔ langzaam, vroeg ↔ laat." },
@@ -468,7 +468,7 @@ const steps = [
             { woord: "leugen", uitleg: "Iets vertellen dat niet waar is — bewust misleiden." },
             { woord: "geheim", uitleg: "Iets WAAR dat je niet vertelt — verschilt van leugen." },
           ],
-          theorie: "Cito-truc: lees context-werkwoord ('verzon') → wijst naar 'niet echt' = leugen.",
+          theorie: "Toets-truc: lees context-werkwoord ('verzon') → wijst naar 'niet echt' = leugen.",
           voorbeelden: [{ type: "stap", tekst: "'Hij vertelde een leugen over zijn rapport' = hij gaf een verkeerd cijfer door bewust." }],
           basiskennis: [{ onderwerp: "Onderscheid", uitleg: "Leugen = bewust niet-waar. Vergissing = niet-waar maar niet bewust. Geheim = waar maar achtergehouden." }],
           niveaus: {
@@ -488,7 +488,7 @@ const steps = [
             { titel: "Briljant = schitterend slim", tekst: "Een briljant denkbeeld is een idee dat heel goed in elkaar zit. Letterlijk komt 'briljant' van een geslepen diamant — die fonkelt." },
           ],
           woorden: [{ woord: "briljant", uitleg: "Heel intelligent of schitterend; ook: een geslepen diamant." }],
-          theorie: "Cito vraagt soms naar woorden met dubbele betekenis. Kijk altijd of de zin over een ding of over een eigenschap gaat.",
+          theorie: "De toets vraagt soms naar woorden met dubbele betekenis. Kijk altijd of de zin over een ding of over een eigenschap gaat.",
           voorbeelden: [{ type: "stap", tekst: "'Wat een briljant plan!' = wat een geweldig plan." }],
           basiskennis: [{ onderwerp: "Synoniemen", uitleg: "Briljant ≈ schitterend, geniaal, geweldig (in betekenis 'heel goed')." }],
           niveaus: {
@@ -514,7 +514,7 @@ const steps = [
             { titel: "Doorslag = beslissing", tekst: "'De doorslag geven' = de beslissende stem hebben. Iets dat doorslaggevend is, bepaalt de uitkomst." },
           ],
           woorden: [{ woord: "doorslaggevend", uitleg: "Beslissend; geeft de doorslag in een besluit." }],
-          theorie: "Bij Cito zie je vaak abstracte woorden uit krant/tv-taal. Kijk naar woorden binnen het woord (door + slag + gevend) — dat helpt vaak.",
+          theorie: "Bij de Doorstroomtoets zie je vaak abstracte woorden uit krant/tv-taal. Kijk naar woorden binnen het woord (door + slag + gevend) — dat helpt vaak.",
           voorbeelden: [{ type: "stap", tekst: "'Het doelpunt was doorslaggevend voor de wedstrijd' = dat doelpunt bepaalde de uitslag." }],
           basiskennis: [{ onderwerp: "Familie", uitleg: "'Beslissend' is een goed synoniem. Tegenover: 'onbelangrijk' of 'bijzaak'." }],
           niveaus: {
@@ -540,7 +540,7 @@ const steps = [
             { titel: "Hachelijk = gevaarlijk", tekst: "Een hachelijke situatie is een situatie waarin het mis kan gaan. Komt van 'hachje' (oud woord voor leven/huid riskeren)." },
           ],
           woorden: [{ woord: "hachelijk", uitleg: "Gevaarlijk, riskant, netelig — iets kan slecht aflopen." }],
-          theorie: "Cito gebruikt soms ouderwetse woorden. Bij twijfel: kijk of het woord positief of negatief klinkt in de zin. 'Hachelijk' klinkt niet plezierig — dus negatief.",
+          theorie: "De toets gebruikt soms ouderwetse woorden. Bij twijfel: kijk of het woord positief of negatief klinkt in de zin. 'Hachelijk' klinkt niet plezierig — dus negatief.",
           voorbeelden: [{ type: "stap", tekst: "'In een hachelijke positie' = in een lastige/gevaarlijke positie." }],
           basiskennis: [{ onderwerp: "Synoniemen", uitleg: "Hachelijk ≈ riskant, gevaarlijk, netelig, kritiek." }],
           niveaus: {
@@ -561,7 +561,7 @@ const steps = [
             { titel: "Wanneer gebruikt?", tekst: "Iemand die voorzichtig is in een nieuwe situatie 'kijkt eerst de kat uit de boom' — kijkt rustig hoe het gaat." },
           ],
           woorden: [{ woord: "spreekwoord", uitleg: "Vaste uitdrukking met figuurlijke betekenis." }],
-          theorie: "Cito test soms bekende spreekwoorden. Truc: vraag jezelf 'wat doet iemand in een gewone situatie als dit gezegd wordt?' — niet letterlijk de dieren of dingen voorstellen.",
+          theorie: "De toets test soms bekende spreekwoorden. Truc: vraag jezelf 'wat doet iemand in een gewone situatie als dit gezegd wordt?' — niet letterlijk de dieren of dingen voorstellen.",
           voorbeelden: [
             { type: "stap", tekst: "'Pas op de kleintjes' = let op de details / op kleine uitgaven." },
             { type: "stap", tekst: "'Op hete kolen zitten' = ongeduldig zijn." },
@@ -599,7 +599,7 @@ const steps = [
             { woord: "optimistisch", uitleg: "Verwacht dat het goed gaat." },
             { woord: "pessimistisch", uitleg: "Verwacht dat het slecht gaat." },
           ],
-          theorie: "Cito test soms paren tegenstellingen. Truc: zoek het woord met 'on-', 'pessi-', 'a-' of 'anti-' ervoor.",
+          theorie: "De toets test soms paren tegenstellingen. Truc: zoek het woord met 'on-', 'pessi-', 'a-' of 'anti-' ervoor.",
           voorbeelden: [{ type: "stap", tekst: "gelovig ↔ ongelovig. Sociaal ↔ asociaal." }],
           basiskennis: [{ onderwerp: "Familie", uitleg: "Synoniem optimist ≈ positief, hoopvol. Synoniem pessimist ≈ negatief, somber." }],
           niveaus: {
@@ -640,10 +640,10 @@ const steps = [
         wrongHints: [null, "Geen synoniem voor snel.", "Geen.", "Andere dimensie — afstand niet snelheid."],
         uitlegPad: {
           stappen: [
-            { titel: "Synoniem-pairs", tekst: "'Snel' en 'rap' betekenen hetzelfde. Cito vraagt vaak synoniemen tussen bijvoeglijke naamwoorden." },
+            { titel: "Synoniem-pairs", tekst: "'Snel' en 'rap' betekenen hetzelfde. De toets vraagt vaak synoniemen tussen bijvoeglijke naamwoorden." },
           ],
           woorden: [{ woord: "rap", uitleg: "Snel, vlot, vlug." }],
-          theorie: "Cito-truc: kijk eerst welk antwoord LIJKT op 'snel' qua gevoel. Snel = beweging-eigenschap. Lang/veel/ver zijn andere dingen.",
+          theorie: "Toets-truc: kijk eerst welk antwoord LIJKT op 'snel' qua gevoel. Snel = beweging-eigenschap. Lang/veel/ver zijn andere dingen.",
           voorbeelden: [{ type: "stap", tekst: "Snel = vlug = rap = vlot." }],
           basiskennis: [{ onderwerp: "Andere synoniemen voor snel", uitleg: "vlug, vlot, ras, kwiek, behendig." }],
           niveaus: {
@@ -819,7 +819,7 @@ const steps = [
     title: "Begrijpend lezen — ~20 min",
     refOnderdeel: "lezen",
     explanation:
-      "**Wat verwacht je op de Doorstroomtoets?**\n\nBegrijpend lezen is de **grootste taal-onderdeel**: 20-30 vragen na een paar teksten.\n\n**De Cito-vraagsoorten** *(uit je hoofd!)*:\n• **Hoofdgedachte**: 'Waar gaat de hele tekst over?' → meestal in de eerste of laatste alinea.\n• **Detail**: 'Wat staat er in alinea 2?' → zoek in alinea 2.\n• **Verband**: 'Waarom?' / 'Wat is het gevolg?' → zoek signaalwoorden zoals 'omdat', 'daardoor'.\n• **Bedoeling**: 'Waarom schreef de schrijver?' → informeren / overtuigen / amuseren.\n\n**Stappenplan**:\n1. **Skim** de tekst — lees titel + eerste/laatste zin van elke alinea.\n2. **Lees de vraag** voordat je de hele tekst leest.\n3. **Zoek terug** in de tekst — leg je vinger bij de juiste alinea.\n4. **Check** dat het antwoord echt in de tekst staat, niet je eigen mening.\n\n**Cito-strikvraag** — let op deze 3:\n• *'Welke zin klopt **niet**?'* — het juiste antwoord is degene die fout is.\n• Antwoorden die 'lijken te kloppen' maar net niet zo in de tekst staan.\n• 'Altijd' / 'nooit' in antwoorden — vaak fout (te absoluut).\n\n**Voorbeeld-tekst**:\n*'In Nederland slapen vleermuizen meestal overdag. Ze hangen onderste-boven aan een tak. 's Avonds vliegen ze uit om insecten te vangen.'*\n\n**Vraag**: Wanneer vliegen vleermuizen?\n• Antwoord: 's avonds *(staat letterlijk in de tekst)*.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
+      "**Wat verwacht je op de Doorstroomtoets?**\n\nBegrijpend lezen is de **grootste taal-onderdeel**: 20-30 vragen na een paar teksten.\n\n**De Toets-vraagsoorten** *(uit je hoofd!)*:\n• **Hoofdgedachte**: 'Waar gaat de hele tekst over?' → meestal in de eerste of laatste alinea.\n• **Detail**: 'Wat staat er in alinea 2?' → zoek in alinea 2.\n• **Verband**: 'Waarom?' / 'Wat is het gevolg?' → zoek signaalwoorden zoals 'omdat', 'daardoor'.\n• **Bedoeling**: 'Waarom schreef de schrijver?' → informeren / overtuigen / amuseren.\n\n**Stappenplan**:\n1. **Skim** de tekst — lees titel + eerste/laatste zin van elke alinea.\n2. **Lees de vraag** voordat je de hele tekst leest.\n3. **Zoek terug** in de tekst — leg je vinger bij de juiste alinea.\n4. **Check** dat het antwoord echt in de tekst staat, niet je eigen mening.\n\n**Toets-strikvraag** — let op deze 3:\n• *'Welke zin klopt **niet**?'* — het juiste antwoord is degene die fout is.\n• Antwoorden die 'lijken te kloppen' maar net niet zo in de tekst staan.\n• 'Altijd' / 'nooit' in antwoorden — vaak fout (te absoluut).\n\n**Voorbeeld-tekst**:\n*'In Nederland slapen vleermuizen meestal overdag. Ze hangen onderste-boven aan een tak. 's Avonds vliegen ze uit om insecten te vangen.'*\n\n**Vraag**: Wanneer vliegen vleermuizen?\n• Antwoord: 's avonds *(staat letterlijk in de tekst)*.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
       {
         q: "*Tekst: 'De zon schijnt vandaag fel. Veel mensen gaan naar het strand.'* **Waarom** gaan veel mensen naar het strand?",
@@ -831,13 +831,13 @@ const steps = [
           stappen: [
             { titel: "Wat staat er ECHT in de tekst?", tekst: "De tekst zegt: 1) zon schijnt fel, 2) mensen gaan naar strand. De reden moet komen uit wat erin staat." },
             { titel: "Verband zoeken", tekst: "Twee zinnen achter elkaar over hetzelfde onderwerp = er is meestal een verband. Mensen gaan naar het strand BECAUSE zon = mooie strand-dag." },
-            { titel: "Cito-truc: blijf in de tekst", tekst: "Antwoorden die NIET in de tekst staan (honger, regen, avond) zijn fout. Alleen wat genoemd is telt." },
+            { titel: "Toets-truc: blijf in de tekst", tekst: "Antwoorden die NIET in de tekst staan (honger, regen, avond) zijn fout. Alleen wat genoemd is telt." },
           ],
           woorden: [
             { woord: "tekst-vraag", uitleg: "Antwoord moet uit de tekst komen, niet uit je eigen mening." },
             { woord: "verband", uitleg: "Waarom-vragen zoeken een oorzaak-gevolg-koppeling in de tekst." },
           ],
-          theorie: "Cito-strategie: bij 'waarom'-vragen, zoek wat de tekst zegt als reden. Schrap antwoorden die niet in de tekst staan. Twee gerelateerde zinnen geven vaak de oorzaak.",
+          theorie: "Toets-strategie: bij 'waarom'-vragen, zoek wat de tekst zegt als reden. Schrap antwoorden die niet in de tekst staan. Twee gerelateerde zinnen geven vaak de oorzaak.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst: 'Het regende. De wedstrijd ging niet door.' → Waarom ging wedstrijd niet door? → Omdat het regende." },
             { type: "stap", tekst: "Tekst: 'Anna oefende veel. Ze won.' → Waarom won Anna? → Omdat ze veel oefende." },
@@ -857,7 +857,7 @@ const steps = [
         wrongHints: [null, "Grapjes komen overal in de tekst voor.", "Grafieken zijn aparte plaatjes.", "Opdrachten staan onder de tekst."],
       },
       {
-        q: "Cito-truc: voordat je de tekst leest, **lees je eerst** ... ?",
+        q: "Toets-truc: voordat je de tekst leest, **lees je eerst** ... ?",
         options: ["De vragen", "Het einde", "Niets, gewoon beginnen", "Alle alinea's heel langzaam"],
         answer: 0,
         wrongHints: [null, "Niet alleen het einde — je weet dan niet wat te zoeken.", "Zonder vragen lezen kost meer tijd.", "Te langzaam — je moet snel kunnen scannen."],
@@ -866,18 +866,18 @@ const steps = [
             { titel: "Vragen eerst", tekst: "Door eerst de vragen te lezen weet je waar je naar moet zoeken in de tekst. Spaart tijd." },
           ],
           woorden: [{ woord: "skimmen", uitleg: "Snel door een tekst kijken om het belangrijkste te pakken." }],
-          theorie: "Cito-strategie: scan vragen → skim tekst → zoek per vraag terug.",
+          theorie: "Toets-strategie: scan vragen → skim tekst → zoek per vraag terug.",
           voorbeelden: [{ type: "stap", tekst: "Vraag noemt 'vleermuis-tijd' → zoek 'avond' of 'nacht' in de tekst." }],
           basiskennis: [{ onderwerp: "Slim lezen", uitleg: "Niet alles even diep lezen — focus waar je het antwoord verwacht." }],
           niveaus: {
             basis: "Lees eerst de vragen.",
-            simpeler: "Cito-tip: kijk eerst even welke vragen er gesteld worden. Dan weet je waar je naar moet zoeken.",
+            simpeler: "Toets-tip: kijk eerst even welke vragen er gesteld worden. Dan weet je waar je naar moet zoeken.",
             nogSimpeler: "De vragen",
           },
         },
       },
       {
-        q: "Welke antwoorden zijn op een **Cito** vaak **fout**?",
+        q: "Welke antwoorden zijn op een **de toets** vaak **fout**?",
         options: ["Met 'altijd' of 'nooit'", "Met cijfers", "Met namen", "Korte antwoorden"],
         answer: 0,
         wrongHints: [null, "Cijfers zijn vaak juiste feiten.", "Namen kunnen kloppen.", "Lengte zegt niets over juistheid."],
@@ -891,14 +891,14 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is een hoofdgedachte?", tekst: "De hoofdgedachte is in ÉÉN zin: waar gaat de hele tekst over? Niet één klein detail, maar de centrale boodschap." },
-            { titel: "Cito-truc: combineer onderwerp + boodschap", tekst: "Onderwerp = honden. Boodschap = zij helpen bij brand. Hoofdgedachte = 'Honden zijn nuttig bij brand'. Past beide samen." },
+            { titel: "Toets-truc: combineer onderwerp + boodschap", tekst: "Onderwerp = honden. Boodschap = zij helpen bij brand. Hoofdgedachte = 'Honden zijn nuttig bij brand'. Past beide samen." },
             { titel: "Schrap te smal/breed", tekst: "'Honden eten brood' = staat niet in tekst. 'Brand is gevaarlijk' = te breed (niet over honden). 'Iedereen wil hond' = niet de boodschap." },
           ],
           woorden: [
             { woord: "hoofdgedachte", uitleg: "Centrale boodschap van de hele tekst, in 1 zin." },
             { woord: "detail", uitleg: "Klein stukje informatie — niet de hoofdgedachte." },
           ],
-          theorie: "Cito-strategie hoofdgedachte: 1) Wat is het onderwerp? 2) Wat is de boodschap erover? 3) Voeg samen tot 1 zin. Vaak staat de hoofdgedachte in de eerste of laatste alinea.",
+          theorie: "Toets-strategie hoofdgedachte: 1) Wat is het onderwerp? 2) Wat is de boodschap erover? 3) Voeg samen tot 1 zin. Vaak staat de hoofdgedachte in de eerste of laatste alinea.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst over plastic in zee → hoofdgedachte: 'plastic is een groot probleem in de zee'." },
             { type: "stap", tekst: "Tekst over voetbal-WK → hoofdgedachte: 'het WK is een groot voetbaltoernooi'." },
@@ -922,9 +922,9 @@ const steps = [
             { titel: "Signaalwoorden", tekst: "Tegenstelling-woorden geven aan dat er iets verrassends komt: **maar / toch / hoewel / echter / desondanks**." },
           ],
           woorden: [{ woord: "signaalwoord", uitleg: "Woord dat een verband aangeeft in een tekst (oorzaak, gevolg, tegenstelling, opsomming)." }],
-          theorie: "Cito-vraag-type: signaalwoorden herkennen helpt verbanden te zien in de tekst. 'Toch' = tegenstelling.",
+          theorie: "toetsvraag-type: signaalwoorden herkennen helpt verbanden te zien in de tekst. 'Toch' = tegenstelling.",
           voorbeelden: [{ type: "stap", tekst: "Soorten: oorzaak/gevolg (omdat, daardoor), tegenstelling (maar, toch), opsomming (en, ook)." }],
-          basiskennis: [{ onderwerp: "Verbanden", uitleg: "Snel signaalwoorden vinden = snel verbanden begrijpen = sneller Cito-tekst-vragen oplossen." }],
+          basiskennis: [{ onderwerp: "Verbanden", uitleg: "Snel signaalwoorden vinden = snel verbanden begrijpen = sneller Toets-tekst-vragen oplossen." }],
           niveaus: {
             basis: "Toch.",
             simpeler: "'Toch' betekent 'maar' — geeft een tegenstelling aan. In de Sahara valt geen regen, MAAR (toch) leven er kamelen.",
@@ -976,13 +976,13 @@ const steps = [
           stappen: [
             { titel: "Wat is een alinea?", tekst: "Een alinea is een groep zinnen die SAMEN over één onderwerp gaan. Daarna volgt vaak een witregel of een inspring." },
             { titel: "Hoe herken je een alinea?", tekst: "Kijk naar de tekst: zie je een witregel of een nieuwe regel die iets inspringt? Daar begint een nieuwe alinea." },
-            { titel: "Waarom alinea's?", tekst: "Door alinea's wordt een tekst overzichtelijk. Elke alinea heeft een kerngedachte. Bij Cito heel handig om naar te verwijzen: 'alinea 3 zegt...'." },
+            { titel: "Waarom alinea's?", tekst: "Door alinea's wordt een tekst overzichtelijk. Elke alinea heeft een kerngedachte. Bij de Doorstroomtoets heel handig om naar te verwijzen: 'alinea 3 zegt...'." },
           ],
           woorden: [
             { woord: "alinea", uitleg: "Groep zinnen over één onderwerp, gescheiden door witregel." },
             { woord: "paragraaf", uitleg: "Engels woord voor alinea." },
           ],
-          theorie: "Cito-tip: bij lange teksten, eerst tellen hoeveel alinea's er zijn. Bij een 'detail-vraag over alinea 2' weet je dan precies waar te zoeken.",
+          theorie: "Toets-tip: bij lange teksten, eerst tellen hoeveel alinea's er zijn. Bij een 'detail-vraag over alinea 2' weet je dan precies waar te zoeken.",
           voorbeelden: [
             { type: "stap", tekst: "Een schoolboek heeft per hoofdstuk vaak 10-20 alinea's." },
             { type: "stap", tekst: "Een nieuwsartikel: elke alinea = 2-4 zinnen over één deelonderwerp." },
@@ -1003,7 +1003,7 @@ const steps = [
         wrongHints: [null, "Tegenstelling = 'maar' / 'echter'.", "Gevolg = 'dus' / 'daardoor'.", "Conclusie = 'kortom' / 'dus'."],
       },
       {
-        q: "Cito-strik: een vraag heeft **'NIET'** in. Wat doe je?",
+        q: "Toets-strik: een vraag heeft **'NIET'** in. Wat doe je?",
         options: ["Zoek de fout / uitzondering", "Negeer dat woord", "Onmogelijk te beantwoorden", "Kies eerste optie"],
         answer: 0,
         wrongHints: [null, "Niet — heel belangrijk.", "Wel — gewoon goed lezen.", "Random kiezen werkt niet."],
@@ -1024,7 +1024,7 @@ const steps = [
             { woord: "omdat", uitleg: "Geeft REDEN aan (wat ervoor zorgt)." },
             { woord: "daardoor", uitleg: "Geeft GEVOLG aan (wat erna komt)." },
           ],
-          theorie: "Cito-vraag: lees de zin goed. Wat komt er NA 'omdat'? Dat is de reden. Bij 'daardoor' komt het gevolg.",
+          theorie: "toetsvraag: lees de zin goed. Wat komt er NA 'omdat'? Dat is de reden. Bij 'daardoor' komt het gevolg.",
           voorbeelden: [
             { type: "stap", tekst: "'Tom won de wedstrijd OMDAT hij goed oefende.' → reden = goed oefenen." },
             { type: "stap", tekst: "'Tom oefende goed. DAARDOOR won hij.' → gevolg = winnen." },
@@ -1053,7 +1053,7 @@ const steps = [
             { woord: "daardoor", uitleg: "Wijst op het gevolg (wat komt eruit)." },
             { woord: "omdat", uitleg: "Wijst op de reden (wat ervoor zorgt)." },
           ],
-          theorie: "Cito-truc: bij 'daardoor' staat ervoor de reden, erna het gevolg. Vraag jezelf 'WAT gebeurde er DOOR die reden?' Antwoord = gevolg.",
+          theorie: "Toets-truc: bij 'daardoor' staat ervoor de reden, erna het gevolg. Vraag jezelf 'WAT gebeurde er DOOR die reden?' Antwoord = gevolg.",
           voorbeelden: [
             { type: "stap", tekst: "'Het regende hard. Daardoor werd het wegdek glad.' → glad = gevolg." },
             { type: "stap", tekst: "Vergelijk: 'Het wegdek werd glad OMDAT het regende.' → zelfde idee, andere woordvolgorde." },
@@ -1067,13 +1067,13 @@ const steps = [
         },
       },
       {
-        q: "*Cito-tip*: een **lange tekst** lees je **eerst** ...?",
+        q: "*Toets-tip*: een **lange tekst** lees je **eerst** ...?",
         options: ["Globaal (titel + alinea-koppen)", "Heel langzaam", "Achteruit", "Niet"],
         answer: 0,
         wrongHints: [null, "Te traag.", "Niet zinvol.", "Wel — globaal."],
         uitlegPad: {
           stappen: [
-            { titel: "Eerst overzicht, dan details", tekst: "Bij een lange Cito-tekst NIET meteen woord-voor-woord lezen. Eerst snel een overzicht maken." },
+            { titel: "Eerst overzicht, dan details", tekst: "Bij een lange Toets-tekst NIET meteen woord-voor-woord lezen. Eerst snel een overzicht maken." },
             { titel: "Skim-techniek", tekst: "Lees alleen: TITEL + EERSTE ALINEA + LAATSTE ALINEA + de KOPJES van alinea's. Zo weet je waar de tekst over gaat." },
             { titel: "Dan: vraag → tekst", tekst: "Pas DAARNA lees je de vraag. Bij elke vraag zoek je het stukje tekst dat erbij hoort. Dat heet 'gericht lezen'." },
           ],
@@ -1081,9 +1081,9 @@ const steps = [
             { woord: "globaal lezen", uitleg: "Snel scannen voor het grote plaatje." },
             { woord: "gericht lezen", uitleg: "Per vraag het juiste stukje tekst zoeken." },
           ],
-          theorie: "Cito-leesstrategie: 1) globaal skimmen voor overzicht. 2) Lees de eerste vraag. 3) Zoek gericht het antwoord in de tekst. 4) Volgende vraag. Tijd besparen!",
+          theorie: "Toets-leesstrategie: 1) globaal skimmen voor overzicht. 2) Lees de eerste vraag. 3) Zoek gericht het antwoord in de tekst. 4) Volgende vraag. Tijd besparen!",
           voorbeelden: [{ type: "stap", tekst: "Tekst van 4 alinea's: lees titel + alinea 1 + alinea 4 voor overzicht. Vraag 2 gaat over alinea 3? → lees alleen die alinea grondig." }],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij Cito-leestoetsen zit veel info IN de tekst maar je hoeft niet alles te onthouden. Zoek per vraag." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij Toets-leestoetsen zit veel info IN de tekst maar je hoeft niet alles te onthouden. Zoek per vraag." }],
           niveaus: {
             basis: "Eerst globaal (titel + koppen). Dan per vraag gericht lezen.",
             simpeler: "Snel overzicht eerst, dan per vraag het stukje zoeken.",
@@ -1099,7 +1099,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet.", "Wel te bepalen."],
       },
       {
-        q: "Wat is een **detail-vraag** bij Cito?",
+        q: "Wat is een **detail-vraag** bij de Doorstroomtoets?",
         options: ["'Wat staat er in alinea 2?'", "'Wat vind jij?'", "'Wat is de mening?'", "'Welk plaatje?'"],
         answer: 0,
         wrongHints: [null, "Niet — eigen mening.", "Niet primair.", "Niet."],
@@ -1107,13 +1107,13 @@ const steps = [
           stappen: [
             { titel: "Detail-vraag = specifiek", tekst: "Een detail-vraag vraagt naar één concreet stukje informatie. Bijvoorbeeld: 'Hoe oud is Tom?' of 'Welk land wordt genoemd?'" },
             { titel: "Antwoord staat in de tekst", tekst: "Het antwoord op een detail-vraag staat LETTERLIJK ergens in de tekst. Je hoeft niet te raden — gewoon zoeken." },
-            { titel: "Cito-strategie: zoek terug", tekst: "Stappen: 1) lees de vraag goed. 2) Zoek de juiste alinea. 3) Lees die alinea grondig. 4) Antwoord komt eruit." },
+            { titel: "Toets-strategie: zoek terug", tekst: "Stappen: 1) lees de vraag goed. 2) Zoek de juiste alinea. 3) Lees die alinea grondig. 4) Antwoord komt eruit." },
           ],
           woorden: [
             { woord: "detail-vraag", uitleg: "Vraag over specifieke informatie in de tekst." },
             { woord: "hoofdgedachte-vraag", uitleg: "Iets ANDERS: vraagt naar de boodschap van hele tekst." },
           ],
-          theorie: "Cito-vraagsoorten: detail (specifieke info), hoofdgedachte (centrale boodschap), bedoeling (waarom schreef de auteur), verband (oorzaak-gevolg). Bij detail: ZOEK in de tekst, niet je eigen mening.",
+          theorie: "Toets-vraagsoorten: detail (specifieke info), hoofdgedachte (centrale boodschap), bedoeling (waarom schreef de auteur), verband (oorzaak-gevolg). Bij detail: ZOEK in de tekst, niet je eigen mening.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst zegt: 'De Sahara is in Afrika.' Detail-vraag: 'In welk werelddeel ligt de Sahara?' → Afrika." },
             { type: "stap", tekst: "Tekst zegt: 'In 1969 ging Apollo 11 naar de maan.' Detail: 'In welk jaar?' → 1969." },
@@ -1127,7 +1127,7 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel **leestips** voordat je vraag beantwoordt? Cito-strategie?",
+        q: "Hoeveel **leestips** voordat je vraag beantwoordt? Toets-strategie?",
         options: ["Lees vraag → zoek terug in tekst", "Lees vraag → gok", "Lees alleen tekst", "Niets"],
         answer: 0,
         wrongHints: [null, "Niet — slim zoeken.", "Onefficiënt.", "Wel — strategie."],
@@ -1144,7 +1144,7 @@ const steps = [
             { titel: "Reden vs gevolg", tekst: "In deze zin: gevolg = 'plant ging dood'. Reden = 'te weinig water'. Verbindingswoord = 'doordat'." },
           ],
           woorden: [{ woord: "doordat", uitleg: "Verbindingswoord dat de reden aanwijst." }],
-          theorie: "Cito vraagt vaak naar reden + gevolg. Hulpwoorden: 'omdat', 'doordat', 'vanwege' wijzen naar de REDEN. 'Daardoor', 'dus', 'vandaar' wijzen naar het GEVOLG.",
+          theorie: "De toets vraagt vaak naar reden + gevolg. Hulpwoorden: 'omdat', 'doordat', 'vanwege' wijzen naar de REDEN. 'Daardoor', 'dus', 'vandaar' wijzen naar het GEVOLG.",
           voorbeelden: [{ type: "stap", tekst: "'Ik ben moe doordat ik laat naar bed ging.' → reden = laat naar bed." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag: 'WAAROM gebeurde het?' Antwoord = reden." }],
           niveaus: {
@@ -1173,7 +1173,7 @@ const steps = [
             { titel: "Hoe vind je hem?", tekst: "Vraag jezelf: 'als ik deze tekst in één zin zou samenvatten, wat staat er dan?' Vaak vind je iets in inleiding of slot terug." },
           ],
           woorden: [{ woord: "hoofdgedachte", uitleg: "De kernboodschap van een tekst." }],
-          theorie: "Bij Cito staat de hoofdgedachte vaak NIET letterlijk in de tekst. Je moet 'm afleiden. Pas op voor antwoorden die alleen een detail noemen.",
+          theorie: "Bij de Doorstroomtoets staat de hoofdgedachte vaak NIET letterlijk in de tekst. Je moet 'm afleiden. Pas op voor antwoorden die alleen een detail noemen.",
           voorbeelden: [{ type: "stap", tekst: "Tekst over hond uitlaten met regen: hoofdgedachte = 'ook bij slecht weer is uitlaten nodig'. NIET: 'het regende veel'." }],
           basiskennis: [{ onderwerp: "Anders dan", uitleg: "Onderwerp ≠ hoofdgedachte. Onderwerp = WAAR de tekst over gaat. Hoofdgedachte = WAT de schrijver erover zegt." }],
           niveaus: {
@@ -1195,18 +1195,18 @@ const steps = [
         ref: "S",
         options: ["Feit kun je controleren, mening is wat iemand vindt", "Feit is positief, mening is negatief", "Geen verschil", "Feit staat in inleiding, mening in slot"],
         answer: 0,
-        wrongHints: [null, "Geen verband met positief/negatief.", "Wel een verschil — belangrijk bij Cito!", "Staat geen vaste plek voor."],
+        wrongHints: [null, "Geen verband met positief/negatief.", "Wel een verschil — belangrijk bij de Doorstroomtoets!", "Staat geen vaste plek voor."],
         uitlegPad: {
           stappen: [
             { titel: "Feit = controleerbaar", tekst: "Een feit is iets waar iedereen het over eens kan zijn omdat het te controleren is. *'De aarde draait om de zon.'* = feit (bewezen)." },
             { titel: "Mening = persoonlijk", tekst: "Een mening is wat iemand denkt of vindt. *'Aardrijkskunde is het leukste vak.'* = mening (niet iedereen vindt dat)." },
-            { titel: "Cito-truc", tekst: "Bij 'feit of mening?'-vragen: kun je het opzoeken in een boek of meten? Feit. Begint met 'ik vind' of 'volgens mij'? Mening." },
+            { titel: "Toets-truc", tekst: "Bij 'feit of mening?'-vragen: kun je het opzoeken in een boek of meten? Feit. Begint met 'ik vind' of 'volgens mij'? Mening." },
           ],
           woorden: [
             { woord: "feit", uitleg: "Iets dat te bewijzen of te controleren is." },
             { woord: "mening", uitleg: "Wat iemand persoonlijk denkt." },
           ],
-          theorie: "Bij Cito krijg je vaak een lijst zinnen en moet je per zin zeggen: feit of mening? Let op signaalwoorden zoals 'mijns inziens', 'ik denk', 'volgens mij' = mening.",
+          theorie: "Bij de Doorstroomtoets krijg je vaak een lijst zinnen en moet je per zin zeggen: feit of mening? Let op signaalwoorden zoals 'mijns inziens', 'ik denk', 'volgens mij' = mening.",
           voorbeelden: [
             { type: "stap", tekst: "'Nederland heeft 17 miljoen inwoners.' = feit." },
             { type: "stap", tekst: "'Nederlandse zomers zijn te kort.' = mening." },
@@ -1237,7 +1237,7 @@ const steps = [
             { titel: "Hoe vinden?", tekst: "Vraag: 'als ik de hele alinea wegstreep behalve één zin, welke moet blijven?' Dat is de kernzin." },
           ],
           woorden: [{ woord: "alinea", uitleg: "Blok tekst over één onderwerp." }],
-          theorie: "Cito-truc: kernzin staat vaak voorin of achteraan in een alinea. Niet altijd! Bij argumentatie soms achteraan ('Dus...').",
+          theorie: "Toets-truc: kernzin staat vaak voorin of achteraan in een alinea. Niet altijd! Bij argumentatie soms achteraan ('Dus...').",
           voorbeelden: [{ type: "stap", tekst: "Alinea over honden — kernzin: 'Honden zijn loyale dieren.' De rest geeft voorbeelden." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Hoofdgedachte = boodschap van HELE tekst. Kernzin = boodschap van ÉÉN alinea." }],
           niveaus: {
@@ -1272,7 +1272,7 @@ const steps = [
             { titel: "3 vragen", tekst: "Vraag bij elk artikel: 1) Wat beweert de schrijver? 2) Welk bewijs geeft hij? 3) Is dat bewijs betrouwbaar?" },
           ],
           woorden: [{ woord: "kritisch", uitleg: "Beoordelen of iets klopt, niet zomaar accepteren." }],
-          theorie: "Cito-truc: vraag je af 'wie schreef dit?' en 'waar haalt hij zijn informatie vandaan?'. Een mening van één persoon is geen bewijs.",
+          theorie: "Toets-truc: vraag je af 'wie schreef dit?' en 'waar haalt hij zijn informatie vandaan?'. Een mening van één persoon is geen bewijs.",
           voorbeelden: [{ type: "stap", tekst: "Reclame: 'Onze pasta is het lekkerst!' → mening van fabrikant. Niet betrouwbaar als feit." }],
           basiskennis: [{ onderwerp: "Bronnen", uitleg: "Wetenschappers, officiële instanties (CBS, RIVM) zijn betrouwbaarder dan reclame of social-media-posts." }],
           niveaus: {
@@ -1307,7 +1307,7 @@ const steps = [
             { titel: "Volgorde-signalen", tekst: "Woorden als 'eerst, vervolgens, daarna, ten slotte' wijzen naar STAPPEN. De tekst loopt chronologisch." },
           ],
           woorden: [{ woord: "structuur", uitleg: "Manier waarop tekst is opgebouwd: stappen, tegenstelling, voorbeeld, etc." }],
-          theorie: "Cito-truc: scan signaalwoorden. 'Eerst/dan' = volgorde. 'Maar/echter' = tegenstelling. 'Omdat/doordat' = reden. 'Bijvoorbeeld' = voorbeeld.",
+          theorie: "Toets-truc: scan signaalwoorden. 'Eerst/dan' = volgorde. 'Maar/echter' = tegenstelling. 'Omdat/doordat' = reden. 'Bijvoorbeeld' = voorbeeld.",
           voorbeelden: [{ type: "stap", tekst: "Receptenboek = volgorde-structuur. Politiek artikel = vaak voor/tegen-structuur." }],
           basiskennis: [{ onderwerp: "Andere structuren", uitleg: "Voorbeeld-opsomming, vergelijking, oorzaak-gevolg." }],
           niveaus: {
@@ -1350,7 +1350,7 @@ const steps = [
             { titel: "Functie", tekst: "Schrijvers gebruiken citaten om hun verhaal kracht te geven — een echt persoon zegt zelf iets." },
           ],
           woorden: [{ woord: "citaat", uitleg: "Letterlijke aanhaling, tussen aanhalingstekens." }],
-          theorie: "Cito-truc: zie je tekst tussen 'aanhalingstekens', dan is dat een citaat. De bronvermelding staat er vaak achter.",
+          theorie: "Toets-truc: zie je tekst tussen 'aanhalingstekens', dan is dat een citaat. De bronvermelding staat er vaak achter.",
           voorbeelden: [{ type: "stap", tekst: "'De aarde draait,' zei Galileo. → citaat van Galileo." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Citaat = letterlijke woorden. Parafrase = navertelling in eigen woorden." }],
           niveaus: {
@@ -1513,7 +1513,7 @@ const steps = [
         options: ["De tong van de slak", "Een soort blad", "Het huisje van de slak", "Een tandarts voor dieren"],
         answer: 0,
         wrongHints: [null, "Lees terug: waar zitten de tandjes op? Het woord erna legt het uit.", "Het huisje wordt nergens genoemd.", "Denk niet te ver — het antwoord staat gewoon in de tekst."],
-        explanation: "Na een komma legt de tekst het woord uit: 'op zijn tong, de radula' — de radula ís dus die tong. Uitleg-tussen-komma's is een veelgebruikte Cito-truc.",
+        explanation: "Na een komma legt de tekst het woord uit: 'op zijn tong, de radula' — de radula ís dus die tong. Uitleg-tussen-komma's is een veelgebruikte Toets-truc.",
       },
       {
         q: "*'Sara spaarde drie maanden voor nieuwe schaatsen. Toen ze eindelijk genoeg had, bleek de winkel ze niet meer te verkopen.'*\n\nWelk gevoel past het best bij Sara aan het einde?",
@@ -1531,7 +1531,7 @@ const steps = [
     title: "Spelling — ~20 min",
     refOnderdeel: "taalverzorging",
     explanation:
-      "**Wat verwacht je op de Doorstroomtoets?**\n\n5-10 spelling-vragen — vaak meerkeuze: 'welk woord is **goed gespeld**?'\n\n**De top-5 valkuilen**:\n• **d/t/dt** — *'wordt'* (hij wordt = stam + t) vs *'word'* (ik word = alleen stam).\n• **ei vs ij** — hier helpt geen regel, je moet ze **uit je hoofd kennen** (zie [spelling-ei-ij-au-ou pad]).\n• **au vs ou** — zelfde verhaal, uit je hoofd.\n• **Samengestelde woorden**: 'paardenstaart' is één woord, 'paard staart' niet.\n• **Hoofdletters**: alleen aan begin van zin, of bij namen.\n\n**'t kofschip-truc voor werkwoord-spelling** *(verleden tijd!)*:\n• Stam eindigt op **'t kofschip-letter** (t, k, f, s, ch, p) → **+ te** of **+ ten**.\n• Anders → **+ de** of **+ den**.\n\nVoorbeelden:\n• 'praten' → 'praat' (stam) → eindigt op 't' → 't kofschip → 'praatte' (verleden tijd).\n• 'wandelen' → 'wandel' → eindigt op 'l' (niet 't kofschip) → 'wandelde'.\n\n**Cito-truc — 'wordt' of 'word'?**\n• 'Ik **word** ziek' *(ik + stam, geen t)*.\n• 'Hij **wordt** ziek' *(hij + stam + t)*.\n• Vervang door 'lopen': loop / loopt. Hetzelfde patroon.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
+      "**Wat verwacht je op de Doorstroomtoets?**\n\n5-10 spelling-vragen — vaak meerkeuze: 'welk woord is **goed gespeld**?'\n\n**De top-5 valkuilen**:\n• **d/t/dt** — *'wordt'* (hij wordt = stam + t) vs *'word'* (ik word = alleen stam).\n• **ei vs ij** — hier helpt geen regel, je moet ze **uit je hoofd kennen** (zie [spelling-ei-ij-au-ou pad]).\n• **au vs ou** — zelfde verhaal, uit je hoofd.\n• **Samengestelde woorden**: 'paardenstaart' is één woord, 'paard staart' niet.\n• **Hoofdletters**: alleen aan begin van zin, of bij namen.\n\n**'t kofschip-truc voor werkwoord-spelling** *(verleden tijd!)*:\n• Stam eindigt op **'t kofschip-letter** (t, k, f, s, ch, p) → **+ te** of **+ ten**.\n• Anders → **+ de** of **+ den**.\n\nVoorbeelden:\n• 'praten' → 'praat' (stam) → eindigt op 't' → 't kofschip → 'praatte' (verleden tijd).\n• 'wandelen' → 'wandel' → eindigt op 'l' (niet 't kofschip) → 'wandelde'.\n\n**Toets-truc — 'wordt' of 'word'?**\n• 'Ik **word** ziek' *(ik + stam, geen t)*.\n• 'Hij **wordt** ziek' *(hij + stam + t)*.\n• Vervang door 'lopen': loop / loopt. Hetzelfde patroon.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
       {
         q: "Welke zin is **goed gespeld**?",
@@ -1585,7 +1585,7 @@ const steps = [
             { woord: "ei (korte ei)", uitleg: "Klassieke ei: trein, mei, klein, klein, etc." },
             { woord: "ij (lange ij)", uitleg: "Klassieke ij: vlijtig, lijden, blijven, pijn." },
           ],
-          theorie: "Cito-spelling 'ei/ij': leer de meest-voorkomende woorden uit hoofd. Bij twijfel: spreek hardop en raden — vaak voel je 't.",
+          theorie: "Toets-spelling 'ei/ij': leer de meest-voorkomende woorden uit hoofd. Bij twijfel: spreek hardop en raden — vaak voel je 't.",
           voorbeelden: [{ type: "stap", tekst: "Met ei: trein/reis/mei/zei/klein. Met ij: blij/wijn/lijden/pijn/krijgen." }],
           basiskennis: [{ onderwerp: "Tip", uitleg: "Veel met ij: werkwoorden (krijgen, blijven, lijken). Veel met ei: korte concrete dingen (trein, mei, zei, klein)." }],
           niveaus: {
@@ -1642,7 +1642,7 @@ const steps = [
             { woord: "au", uitleg: "pauw, blauw, klauw, kabouter, paus, auto." },
             { woord: "ou", uitleg: "hout, koud, oud, stout, vouw, schouder." },
           ],
-          theorie: "Cito-tip: ezelsbruggetjes helpen. 'Pauw' heeft 'au' — denk aan de vogel. 'Stout' heeft 'ou' — denk aan stout zijn. Bij twijfel: opzoeken en oefenen.",
+          theorie: "Toets-tip: ezelsbruggetjes helpen. 'Pauw' heeft 'au' — denk aan de vogel. 'Stout' heeft 'ou' — denk aan stout zijn. Bij twijfel: opzoeken en oefenen.",
           voorbeelden: [
             { type: "stap", tekst: "Met au: pauw, blauw, klauw, paus, gauw, kabouter, auto." },
             { type: "stap", tekst: "Met ou: hout, oud, koud, stout, schouder, vouw, gouden." },
@@ -1676,7 +1676,7 @@ const steps = [
             { woord: "samenstelling", uitleg: "Twee woorden samen één nieuw woord." },
             { woord: "tussen-n", uitleg: "Vaak een -n tussen: zonNebloem, pannenkoek, boekenkast." },
           ],
-          theorie: "Cito-regel: bij samenstellingen NOOIT spatie. 'pannen koek' = fout. 'pannenkoek' = goed. Engels gebruikt vaak spaties (ice cream), Nederlands plakt vast.",
+          theorie: "Toets-regel: bij samenstellingen NOOIT spatie. 'pannen koek' = fout. 'pannenkoek' = goed. Engels gebruikt vaak spaties (ice cream), Nederlands plakt vast.",
           voorbeelden: [
             { type: "stap", tekst: "huis + deur → huisdeur (1 woord)." },
             { type: "stap", tekst: "school + tas → schooltas (1 woord)." },
@@ -1736,7 +1736,7 @@ const steps = [
             { titel: "Kofschip-check", tekst: "'wandelen' → stam 'wandel' → eindigt op 'l' → NIET 't kofschip → +de (+den voor meervoud) → 'wandelden'." },
           ],
           woorden: [{ woord: "'t kofschip", uitleg: "Geheugensteuntje: t, k, f, s, ch, p — bij deze letters +te(n), anders +de(n)." }],
-          theorie: "Cito test vaak werkwoordspelling verleden tijd meervoud. Stappenplan: 1) stam zoeken, 2) laatste letter checken, 3) +de(n) of +te(n) plakken.",
+          theorie: "De toets test vaak werkwoordspelling verleden tijd meervoud. Stappenplan: 1) stam zoeken, 2) laatste letter checken, 3) +de(n) of +te(n) plakken.",
           voorbeelden: [
             { type: "stap", tekst: "'praten' → 'praat' → eindigt op 't' → +te(n) → 'praatten'." },
             { type: "stap", tekst: "'spelen' → 'speel' → 'l' niet in kofschip → +de(n) → 'speelden'." },
@@ -1769,10 +1769,10 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Samenstelling = aan elkaar", tekst: "Twee woorden die samen iets nieuws betekenen schrijf je aan elkaar: fiets + pad = fietspad." },
-            { titel: "Cito-valkuil", tekst: "Nederlands schrijft samenstellingen vaak aan elkaar; Engels juist los. Niet door elkaar halen!" },
+            { titel: "Toets-valkuil", tekst: "Nederlands schrijft samenstellingen vaak aan elkaar; Engels juist los. Niet door elkaar halen!" },
           ],
           woorden: [{ woord: "samenstelling", uitleg: "Eén woord gemaakt van twee of meer woorden." }],
-          theorie: "Cito test vaak: 'paardenstaart' / 'paard en staart'? Vraag jezelf: betekent het iets nieuws of zijn het 2 dingen? Nieuw = aan elkaar.",
+          theorie: "De toets test vaak: 'paardenstaart' / 'paard en staart'? Vraag jezelf: betekent het iets nieuws of zijn het 2 dingen? Nieuw = aan elkaar.",
           voorbeelden: [
             { type: "stap", tekst: "tafel + kleed = tafelkleed (één ding)." },
             { type: "stap", tekst: "school + plein = schoolplein (één plek)." },
@@ -1799,10 +1799,10 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "ei of ij?", tekst: "Voor ei/ij bestaat geen regel. Je moet woorden gewoon UIT JE HOOFD kennen. 'Eiland' schrijf je met ei." },
-            { titel: "Cito-truc", tekst: "Bij twijfel: kun je het woord met 'ij' nog ergens in zien? Komt 'ij-land' veel voor? Nee. 'Eiland' wel. Vertrouw op wat bekend voelt." },
+            { titel: "Toets-truc", tekst: "Bij twijfel: kun je het woord met 'ij' nog ergens in zien? Komt 'ij-land' veel voor? Nee. 'Eiland' wel. Vertrouw op wat bekend voelt." },
           ],
           woorden: [{ woord: "ei vs ij", uitleg: "Beide klinken hetzelfde, maar verschillende spelling. Geen regel." }],
-          theorie: "Cito-tip: er staan ~50 woorden vaak in toetsen. Trein, fiets, ei, ijs, mei, hij, zij, blij, wij — leer ze één voor één.",
+          theorie: "Toets-tip: er staan ~50 woorden vaak in toetsen. Trein, fiets, ei, ijs, mei, hij, zij, blij, wij — leer ze één voor één.",
           voorbeelden: [
             { type: "stap", tekst: "Met ei: ei, eiland, klein, plein, gein." },
             { type: "stap", tekst: "Met ij: ijs, hij, zij, blij, mij, wij, vrij." },
@@ -1838,7 +1838,7 @@ const steps = [
             { titel: "Wanneer?", tekst: "Sinds 1995 schrijven we 'tussen-n' als het eerste woord een meervouds-'en' heeft." },
           ],
           woorden: [{ woord: "tussen-n", uitleg: "Extra letter 'en' tussen 2 woorden bij samenstelling." }],
-          theorie: "Cito-truc: woorden zoals 'pannenkoek', 'rozenstruik', 'boekenkast' — altijd met tussen-n. Bij twijfel: kan eerste woord ook 'enen' krijgen (pannen, rozen, boeken)? Ja → tussen-n.",
+          theorie: "Toets-truc: woorden zoals 'pannenkoek', 'rozenstruik', 'boekenkast' — altijd met tussen-n. Bij twijfel: kan eerste woord ook 'enen' krijgen (pannen, rozen, boeken)? Ja → tussen-n.",
           voorbeelden: [
             { type: "stap", tekst: "boek + kast = boekenkast (boekens? boeken? → boeken → tussen-n)." },
             { type: "stap", tekst: "zon + brand = zonnebrand (zonnen? Ja → tussen-n)." },
@@ -1867,7 +1867,7 @@ const steps = [
             { titel: "ti vs si", tekst: "In veel Nederlandse woorden klinkt 'ti' als 'si': station, politie, vakantie. Maar je schrijft 'ti'." },
           ],
           woorden: [{ woord: "uitspraak vs spelling", uitleg: "Een woord kan anders klinken dan je het schrijft." }],
-          theorie: "Cito-truc: bij woorden met -tie-/-tion-uitspraak: schrijf altijd met 'ti'. Behalve in echt fonetisch-NL: 'pensioen', 'ambitie' — ja ook 'ti'.",
+          theorie: "Toets-truc: bij woorden met -tie-/-tion-uitspraak: schrijf altijd met 'ti'. Behalve in echt fonetisch-NL: 'pensioen', 'ambitie' — ja ook 'ti'.",
           voorbeelden: [{ type: "stap", tekst: "vakantie (vak-an-sie), informatie, politie, kantine — allemaal 'ti'." }],
           basiskennis: [{ onderwerp: "Geheugen", uitleg: "Bijna alle '-sie'-klinkende achtervoegsels schrijf je '-tie'." }],
           niveaus: {
@@ -1917,11 +1917,11 @@ const steps = [
             { titel: "-je / -tje / -etje", tekst: "Verkleinwoorden eindigen op -je, -tje, -etje of -pje. NOOIT op -ie (dat is spreektaal)." },
           ],
           woorden: [{ woord: "verkleinwoord", uitleg: "Klein gemaakt woord: huis → huisje, bal → balletje." }],
-          theorie: "Cito-truc verkleinwoord: kies tussen -je / -tje / -etje / -pje afhankelijk van laatste klanken. Regels uit je hoofd leren of voelen wat klinkt.",
+          theorie: "Toets-truc verkleinwoord: kies tussen -je / -tje / -etje / -pje afhankelijk van laatste klanken. Regels uit je hoofd leren of voelen wat klinkt.",
           voorbeelden: [
             { type: "stap", tekst: "huis → huisje. boom → boompje. man → mannetje. raam → raampje." },
           ],
-          basiskennis: [{ onderwerp: "Schrijftaal", uitleg: "'-ie' (huizie, autie) is spreektaal — Cito wil schrijftaal." }],
+          basiskennis: [{ onderwerp: "Schrijftaal", uitleg: "'-ie' (huizie, autie) is spreektaal — de toets wil schrijftaal." }],
           niveaus: {
             basis: "huisje.",
             simpeler: "Verkleinwoord NL = -je.",
@@ -2077,7 +2077,7 @@ const steps = [
     title: "Taalverzorging — interpunctie & zinnen — ~20 min",
     refOnderdeel: "taalverzorging",
     explanation:
-      "**Wat verwacht je op de Doorstroomtoets?**\n\nTaalverzorging = **leestekens + zinsbouw**. 5-10 vragen.\n\n**Top-4 onderwerpen**:\n• **Punt of vraagteken?** Een vraag eindigt op **'?'**. Een zin op **'.'**\n• **Komma's** — bij opsommingen (appel, peer, druif **en** banaan) en tussen 2 zinnen met *omdat / maar / als*.\n• **Aanhalingstekens** *''*\\* — bij wat iemand zegt.\n• **Hoofdletter aan begin** — altijd.\n\n**Cito-truc 1 — opsomming**:\n• 'Ik kocht appels, peren, druiven **en** bananen.'\n• Tussen de laatste 2 staat **'en'** (geen komma).\n\n**Cito-truc 2 — zinnen verbinden**:\n• 'Ik ben moe, **omdat** ik laat opbleef.' *(één zin met 2 delen)*\n• Geen punt midden in — de komma scheidt de delen.\n\n**Cito-truc 3 — directe rede**:\n• Mama zei: '**Ga je tanden poetsen.**'\n• Aanhalingstekens om wat ze zegt + dubbele punt ervoor.\n\n**Cito-truc 4 — zin vs deelzin**:\nEen volledige zin heeft een **onderwerp** (wie?) + **werkwoord** (doet wat?). Anders is het geen complete zin.\n• ✓ 'De hond rent.' *(hond = onderwerp, rent = werkwoord)*\n• ✗ 'De rennende hond.' *(geen werkwoord — geen zin)*\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
+      "**Wat verwacht je op de Doorstroomtoets?**\n\nTaalverzorging = **leestekens + zinsbouw**. 5-10 vragen.\n\n**Top-4 onderwerpen**:\n• **Punt of vraagteken?** Een vraag eindigt op **'?'**. Een zin op **'.'**\n• **Komma's** — bij opsommingen (appel, peer, druif **en** banaan) en tussen 2 zinnen met *omdat / maar / als*.\n• **Aanhalingstekens** *''*\\* — bij wat iemand zegt.\n• **Hoofdletter aan begin** — altijd.\n\n**Toets-truc 1 — opsomming**:\n• 'Ik kocht appels, peren, druiven **en** bananen.'\n• Tussen de laatste 2 staat **'en'** (geen komma).\n\n**Toets-truc 2 — zinnen verbinden**:\n• 'Ik ben moe, **omdat** ik laat opbleef.' *(één zin met 2 delen)*\n• Geen punt midden in — de komma scheidt de delen.\n\n**Toets-truc 3 — directe rede**:\n• Mama zei: '**Ga je tanden poetsen.**'\n• Aanhalingstekens om wat ze zegt + dubbele punt ervoor.\n\n**Toets-truc 4 — zin vs deelzin**:\nEen volledige zin heeft een **onderwerp** (wie?) + **werkwoord** (doet wat?). Anders is het geen complete zin.\n• ✓ 'De hond rent.' *(hond = onderwerp, rent = werkwoord)*\n• ✗ 'De rennende hond.' *(geen werkwoord — geen zin)*\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".\n\n**Klaar voor 5 oefenvragen?**",
     checks: [
       {
         q: "Hoe **eindigt een vraag**?",
@@ -2181,7 +2181,7 @@ const steps = [
             { woord: "werkwoord", uitleg: "De actie zelf (slaapt, rent, eet)." },
             { woord: "lidwoord", uitleg: "de, het, een — hoort bij het onderwerp." },
           ],
-          theorie: "Cito-tip: 'Wie of wat + werkwoord?' is de onderwerps-vraag. Antwoord = onderwerp. 'De kat slaapt' → 'Wie slaapt?' → de kat.",
+          theorie: "Toets-tip: 'Wie of wat + werkwoord?' is de onderwerps-vraag. Antwoord = onderwerp. 'De kat slaapt' → 'Wie slaapt?' → de kat.",
           voorbeelden: [
             { type: "stap", tekst: "'Lisa rent.' → Wie rent? → Lisa." },
             { type: "stap", tekst: "'De auto rijdt.' → Wat rijdt? → de auto." },
@@ -2209,7 +2209,7 @@ const steps = [
             { woord: "werkwoord", uitleg: "Actie (rent, slaapt). Eindigt vaak op -t (bij hij/zij/het)." },
             { woord: "bijwoord", uitleg: "Beschrijft HOE iets gebeurt (hard, snel, langzaam)." },
           ],
-          theorie: "Cito-tip: 'Wat doet [onderwerp]?' is de werkwoord-vraag. Antwoord = werkwoord. 'Lisa rent hard' → Wat doet Lisa? → rent.",
+          theorie: "Toets-tip: 'Wat doet [onderwerp]?' is de werkwoord-vraag. Antwoord = werkwoord. 'Lisa rent hard' → Wat doet Lisa? → rent.",
           voorbeelden: [
             { type: "stap", tekst: "'Tom leest.' → wat doet Tom? → leest." },
             { type: "stap", tekst: "'De kat eet snel.' → wat doet de kat? → eet. ('snel' = hoe = bijwoord)." },
@@ -2237,7 +2237,7 @@ const steps = [
             { woord: "lijdend voorwerp", uitleg: "WAT ondergaat de actie. Antwoord op 'wat + werkwoord + onderwerp'." },
             { woord: "onderwerp", uitleg: "WIE/WAT doet de actie." },
           ],
-          theorie: "Cito-truc: zoek werkwoord (eet) + onderwerp (ik). Vraag dan: 'wat eet ik?' Antwoord = lijdend voorwerp. Niet alle zinnen hebben er één — 'Ik slaap' heeft geen lijdend voorwerp.",
+          theorie: "Toets-truc: zoek werkwoord (eet) + onderwerp (ik). Vraag dan: 'wat eet ik?' Antwoord = lijdend voorwerp. Niet alle zinnen hebben er één — 'Ik slaap' heeft geen lijdend voorwerp.",
           voorbeelden: [
             { type: "stap", tekst: "'Tom leest een boek.' → wat leest Tom? → een boek." },
             { type: "stap", tekst: "'Lisa schrijft een brief.' → wat schrijft Lisa? → een brief." },
@@ -2265,7 +2265,7 @@ const steps = [
             { woord: "bijvoeglijk naamwoord", uitleg: "Beschrijft een kenmerk (kleur, grootte, vorm, gevoel)." },
             { woord: "zelfstandig naamwoord", uitleg: "Het DING dat beschreven wordt (auto, kind, huis)." },
           ],
-          theorie: "Cito-tip: bijvoeglijk naamwoord eindigt vaak op -e in NL (rode, grote). Of staat op zichzelf (rood, groot). Test: kun je 'mooi' / 'lelijk' / een kleur ervan maken? Dan is het een bijvoeglijk naamwoord.",
+          theorie: "Toets-tip: bijvoeglijk naamwoord eindigt vaak op -e in NL (rode, grote). Of staat op zichzelf (rood, groot). Test: kun je 'mooi' / 'lelijk' / een kleur ervan maken? Dan is het een bijvoeglijk naamwoord.",
           voorbeelden: [
             { type: "stap", tekst: "'De blauwe lucht.' → blauwe = beschrijft de lucht." },
             { type: "stap", tekst: "'Het zware boek.' → zware = beschrijft het boek." },
@@ -2293,7 +2293,7 @@ const steps = [
             { woord: "persoonlijk voornaamwoord", uitleg: "Vervangt een persoon/ding (ik, jij, hij, zij, wij, jullie)." },
             { woord: "bezittelijk voornaamwoord", uitleg: "Iets anders: mijn, jouw, zijn, haar — geeft bezit aan." },
           ],
-          theorie: "Cito-tip: persoonlijk voornaamwoorden zijn de KORTE woorden die naar mensen verwijzen: ik/jij/hij/zij/wij/jullie. Niet te verwarren met namen (Tom = naam, hij = persoonlijk vnw).",
+          theorie: "Toets-tip: persoonlijk voornaamwoorden zijn de KORTE woorden die naar mensen verwijzen: ik/jij/hij/zij/wij/jullie. Niet te verwarren met namen (Tom = naam, hij = persoonlijk vnw).",
           voorbeelden: [
             { type: "stap", tekst: "'Lisa is jarig. ZIJ krijgt cadeautjes.' → 'zij' verwijst naar Lisa." },
             { type: "stap", tekst: "'Tom en ik gaan zwemmen. WIJ vertrekken.' → 'wij' verwijst naar Tom en mij." },
@@ -2317,7 +2317,7 @@ const steps = [
             { titel: "Voorbeeld", tekst: "'Ik wil pizza, friet, ijs en cola.' → komma's tussen alle behalve voor 'en'." },
           ],
           woorden: [{ woord: "opsomming", uitleg: "Lijstje van dingen achter elkaar." }],
-          theorie: "Cito-truc: tel de items in de opsomming. Bij N items zet je N-2 komma's + 1 'en' (geen komma ervoor).",
+          theorie: "Toets-truc: tel de items in de opsomming. Bij N items zet je N-2 komma's + 1 'en' (geen komma ervoor).",
           voorbeelden: [{ type: "stap", tekst: "Drie items: 'A, B en C'. Vier items: 'A, B, C en D'." }],
           basiskennis: [{ onderwerp: "Uitzondering", uitleg: "Geen komma bij 2 items: 'rood en blauw' — geen komma." }],
           niveaus: {
@@ -2350,7 +2350,7 @@ const steps = [
             { titel: "Vorm", tekst: "[Wie] zei: '[wat hij/zij zei.]' → Mama zei: 'Kom eten.'" },
           ],
           woorden: [{ woord: "directe rede", uitleg: "Letterlijk opschrijven wat iemand zegt." }],
-          theorie: "Cito test vaak: vorm van directe rede. Onthoud: dubbele punt + aanhalingstekens + hoofdletter binnen. Punt mag binnen of buiten aanhalingstekens — meestal binnen.",
+          theorie: "De toets test vaak: vorm van directe rede. Onthoud: dubbele punt + aanhalingstekens + hoofdletter binnen. Punt mag binnen of buiten aanhalingstekens — meestal binnen.",
           voorbeelden: [{ type: "stap", tekst: "Indirect: 'Mama zei dat ik moest komen eten.' (geen aanhalingstekens nodig)." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Indirecte rede = navertellen. Geen aanhalingstekens. Directe rede = letterlijk citeren. Wel aanhalingstekens." }],
           niveaus: {
@@ -2377,7 +2377,7 @@ const steps = [
             { titel: "Voorbeelden", tekst: "Amsterdam, Nederland, Tom = hoofdletter. Maandag, juni, wiskunde = klein." },
           ],
           woorden: [{ woord: "eigennaam", uitleg: "Naam van een persoon, plaats, land, organisatie." }],
-          theorie: "Cito-vraagtype: 'welke zin staat goed?' Antwoorden verschillen vaak in hoofdletters bij dagen of plaatsen.",
+          theorie: "Toets-vraagtype: 'welke zin staat goed?' Antwoorden verschillen vaak in hoofdletters bij dagen of plaatsen.",
           voorbeelden: [
             { type: "stap", tekst: "'Ik ga naar Spanje.' (land = hoofdletter)" },
             { type: "stap", tekst: "'Ik leer Engels.' (taal = hoofdletter — uitzondering!)" },
@@ -2431,7 +2431,7 @@ const steps = [
             { titel: "Voorbeelden", tekst: "'Tom kookte: pasta, pizza.' (lijst) — 'Hij zei: kom hier.' (citaat) — 'Dit is mijn idee: we gaan zwemmen.' (uitleg)." },
           ],
           woorden: [{ woord: "dubbele punt", uitleg: "`:` — kondigt iets aan na de zin." }],
-          theorie: "Cito-truc: dubbele punt staat bijna altijd VOOR iets dat komt, niet midden in een zin als 'gewone' pauze.",
+          theorie: "Toets-truc: dubbele punt staat bijna altijd VOOR iets dat komt, niet midden in een zin als 'gewone' pauze.",
           voorbeelden: [{ type: "stap", tekst: "Recept: '500g meel, 2 eieren'. De dubbele punt kondigt de lijst aan." }],
           basiskennis: [{ onderwerp: "Andere tekens", uitleg: "Komma = pauze. Punt = einde. Vraagteken = vraag. Uitroepteken = nadruk/emotie." }],
           niveaus: {
@@ -2467,10 +2467,10 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Bijwoord = bij werkwoord", tekst: "Een bijwoord vertelt HOE iets gebeurt. 'Rent SNEL' — 'snel' zegt iets over het rennen." },
-            { titel: "Cito-truc", tekst: "Vraag bij elk woord: 'beschrijft het de actie?' Zo ja → bijwoord. Beschrijft het een ding/persoon → bijvoeglijk nw." },
+            { titel: "Toets-truc", tekst: "Vraag bij elk woord: 'beschrijft het de actie?' Zo ja → bijwoord. Beschrijft het een ding/persoon → bijvoeglijk nw." },
           ],
           woorden: [{ woord: "bijwoord", uitleg: "Woord dat HOE/WAAR/WANNEER een actie gebeurt aanduidt." }],
-          theorie: "Cito test bijwoorden meestal als 'welk woord beschrijft de manier?' Antwoord: bijwoord eindigt vaak op -lijk of -ig.",
+          theorie: "De toets test bijwoorden meestal als 'welk woord beschrijft de manier?' Antwoord: bijwoord eindigt vaak op -lijk of -ig.",
           voorbeelden: [
             { type: "stap", tekst: "Hij schrijft mooi. (bijwoord = mooi)" },
             { type: "stap", tekst: "Ze loopt vlug. (bijwoord = vlug)" },

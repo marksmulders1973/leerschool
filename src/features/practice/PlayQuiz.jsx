@@ -124,7 +124,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   ].filter(Boolean).join("\n");
   const isSelfStudy = gameState.mode === "self" || noTimer;
 
-  // Cito-eindtoets-simulatie: 50 vragen op cito-flow → 60 min countdown.
+  // Doorstroomtoets-simulatie: 50 vragen op cito-flow → 60 min countdown.
   // Geeft echte eindtoets-tijdsdruk-ervaring. Banner toont resterende tijd
   // bovenaan, kleurt rood bij laatste 5 min. Bij 0:00 → automatisch finish.
   const isCitoSimulation = gameState.quiz?.subject === "cito" && gameState.questions.length >= 50;
@@ -290,8 +290,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     return () => clearInterval(elapsedRef.current);
   }, [gameState.startedAt]);
 
-  // Cito-simulatie auto-finish: als de 60 min countdown afloopt, de quiz
-  // wordt automatisch beëindigd op de huidige stand. Net als de echte Cito.
+  // Toets-simulatie auto-finish: als de 60 min countdown afloopt, de quiz
+  // wordt automatisch beëindigd op de huidige stand. Net als de echte Doorstroomtoets.
   useEffect(() => {
     if (!isCitoSimulation) return;
     if (simRemaining > 0) return;

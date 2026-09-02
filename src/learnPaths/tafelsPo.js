@@ -1,5 +1,5 @@
 // Leerpad: Vermenigvuldigingstafels (1 t/m 10) — groep 4-5 PO.
-// Cito-onderdeel rekenen-basis. Referentieniveau 1F.
+// Toets-onderdeel rekenen-basis. Referentieniveau 1F.
 // 6 stappen met uitlegPad. Belangrijk fundament voor groep 6-8.
 // + stap G (11 aug 2026): "ken ze allemaal"-oefenronde met typ-antwoorden.
 
@@ -25,7 +25,7 @@ const chapters = [
   { letter: "C", title: "Basis-tafels (3, 4)", emoji: "🟡", from: 2, to: 2 },
   { letter: "D", title: "Lastige tafels (6, 7, 8, 9)", emoji: "🔴", from: 3, to: 3 },
   { letter: "E", title: "Slimme tafel-trucs", emoji: "💡", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
   { letter: "G", title: "Oefen ze allemaal!", emoji: "🧮", from: 6, to: 6 },
 ];
 
@@ -104,7 +104,7 @@ const steps = [
   {
     title: "Wat is een tafel (vermenigvuldigen)?",
     explanation:
-      "Een **tafel** is een **rijtje vermenigvuldigingen** met hetzelfde getal.\n\n**Voorbeeld — tafel van 3**:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• ...tot 10 × 3 = 30.\n\nElk antwoord is **3 meer** dan de vorige *(stappen van 3)*.\n\n**Wat betekent 'keer'?**\n• **3 × 4** = **3 keer 4** = 4 + 4 + 4 = 12.\n• **5 × 2** = 5 keer 2 = 2 + 2 + 2 + 2 + 2 = 10.\n\nDus 'keer' is **hetzelfde optellen, maar korter**.\n\n**Waarom tafels leren?**\nBij **redactiesommen** *(verhaaltjes-sommen)* en **rekenen op grote getallen** heb je tafels nodig:\n• 4 zakjes met 6 koekjes = 4 × 6 = 24 koekjes.\n• 1 boek kost €7, 5 boeken kosten 5 × €7 = €35.\n\n**Belangrijke regel**:\nDe volgorde **maakt niet uit**:\n• 3 × 4 = 12.\n• 4 × 3 = 12.\nDit heet de **wisselregel** (of 'commutatief').\n\n**Cito-truc — 'rooster' tekenen**:\nBij 4 × 6 stel je voor: 4 rijen van 6 vakjes. Totaal = 4 × 6 = 24 vakjes. Helpt om 'keer' te visualiseren.",
+      "Een **tafel** is een **rijtje vermenigvuldigingen** met hetzelfde getal.\n\n**Voorbeeld — tafel van 3**:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• ...tot 10 × 3 = 30.\n\nElk antwoord is **3 meer** dan de vorige *(stappen van 3)*.\n\n**Wat betekent 'keer'?**\n• **3 × 4** = **3 keer 4** = 4 + 4 + 4 = 12.\n• **5 × 2** = 5 keer 2 = 2 + 2 + 2 + 2 + 2 = 10.\n\nDus 'keer' is **hetzelfde optellen, maar korter**.\n\n**Waarom tafels leren?**\nBij **redactiesommen** *(verhaaltjes-sommen)* en **rekenen op grote getallen** heb je tafels nodig:\n• 4 zakjes met 6 koekjes = 4 × 6 = 24 koekjes.\n• 1 boek kost €7, 5 boeken kosten 5 × €7 = €35.\n\n**Belangrijke regel**:\nDe volgorde **maakt niet uit**:\n• 3 × 4 = 12.\n• 4 × 3 = 12.\nDit heet de **wisselregel** (of 'commutatief').\n\n**Toets-truc — 'rooster' tekenen**:\nBij 4 × 6 stel je voor: 4 rijen van 6 vakjes. Totaal = 4 × 6 = 24 vakjes. Helpt om 'keer' te visualiseren.",
     svg: groepjesSvg(),
     checks: [
       {
@@ -134,7 +134,7 @@ const steps = [
             { woord: "wisselregel", uitleg: "Bij × maakt volgorde niet uit." },
             { woord: "vermenigvuldigen", uitleg: "Keer doen, hetzelfde getal vaak optellen." },
           ],
-          theorie: "Cito-truc — gebruik de wisselregel om makkelijker te rekenen. **7 × 3** voelt soms lastig, maar **3 × 7** ('drie keer zeven') is iets vertrouwder. Beide = 21. Kies de versie die voor jou snelste werkt.",
+          theorie: "Toets-truc — gebruik de wisselregel om makkelijker te rekenen. **7 × 3** voelt soms lastig, maar **3 × 7** ('drie keer zeven') is iets vertrouwder. Beide = 21. Kies de versie die voor jou snelste werkt.",
           voorbeelden: [
             { type: "stap", tekst: "8 × 2 = 2 × 8 = 16. Vaak weet je '2 keer 8' sneller dan '8 keer 2'." },
             { type: "stap", tekst: "Let op: wisselregel werkt NIET bij delen of aftrekken! 10 − 3 ≠ 3 − 10." },
@@ -160,7 +160,7 @@ const steps = [
   {
     title: "Makkelijke tafels — 2, 5 en 10",
     explanation:
-      "**Sommige tafels zijn extra makkelijk**. Begin hiermee!\n\n**Tafel van 10** — gewoon 0 erbij plakken:\n• 1 × 10 = 10\n• 2 × 10 = 20\n• 3 × 10 = 30\n• 4 × 10 = 40\n• ...tot 10 × 10 = 100.\n\n**Tafel van 5** — eindigt op 5 of 0:\n• 1 × 5 = 5\n• 2 × 5 = 10\n• 3 × 5 = 15\n• 4 × 5 = 20\n• 5 × 5 = 25\n• 6 × 5 = 30\n• 7 × 5 = 35\n• 8 × 5 = 40\n• 9 × 5 = 45\n• 10 × 5 = 50.\n\n**Tafel van 2** — gewoon verdubbelen:\n• 1 × 2 = 2\n• 2 × 2 = 4\n• 3 × 2 = 6\n• 4 × 2 = 8\n• 5 × 2 = 10\n• ...tot 10 × 2 = 20.\n\n**Cito-truc**:\n• Tafel van 10 → cijfer + 0 erachter.\n• Tafel van 5 → cijfer × 10, dan ÷ 2. *(Of: 5, 10, 15, 20... stappen van 5.)*\n• Tafel van 2 → cijfer + cijfer (verdubbelen).\n\n**Slimme trucs**:\n• **5 × 8** = 5 × 10 ÷ 2 = 50 ÷ 2 = **40**.\n• **2 × 7** = 7 + 7 = **14**.\n• **10 × 12** = 120 (gewoon 0 erbij).",
+      "**Sommige tafels zijn extra makkelijk**. Begin hiermee!\n\n**Tafel van 10** — gewoon 0 erbij plakken:\n• 1 × 10 = 10\n• 2 × 10 = 20\n• 3 × 10 = 30\n• 4 × 10 = 40\n• ...tot 10 × 10 = 100.\n\n**Tafel van 5** — eindigt op 5 of 0:\n• 1 × 5 = 5\n• 2 × 5 = 10\n• 3 × 5 = 15\n• 4 × 5 = 20\n• 5 × 5 = 25\n• 6 × 5 = 30\n• 7 × 5 = 35\n• 8 × 5 = 40\n• 9 × 5 = 45\n• 10 × 5 = 50.\n\n**Tafel van 2** — gewoon verdubbelen:\n• 1 × 2 = 2\n• 2 × 2 = 4\n• 3 × 2 = 6\n• 4 × 2 = 8\n• 5 × 2 = 10\n• ...tot 10 × 2 = 20.\n\n**Toets-truc**:\n• Tafel van 10 → cijfer + 0 erachter.\n• Tafel van 5 → cijfer × 10, dan ÷ 2. *(Of: 5, 10, 15, 20... stappen van 5.)*\n• Tafel van 2 → cijfer + cijfer (verdubbelen).\n\n**Slimme trucs**:\n• **5 × 8** = 5 × 10 ÷ 2 = 50 ÷ 2 = **40**.\n• **2 × 7** = 7 + 7 = **14**.\n• **10 × 12** = 120 (gewoon 0 erbij).",
     svg: tafelRijSvg([10, 20, 30, 40, 50, 60, 70, 80, 90, 100], "10"),
     checks: [
       {
@@ -175,7 +175,7 @@ const steps = [
             { titel: "Snelle check", tekst: "Tel mee: 10, 20, 30, 40, 50, 60, **70** — dat was 7 stapjes. Klopt!" },
           ],
           woorden: [{ woord: "tafel van 10", uitleg: "10, 20, 30, 40, 50, 60, 70, 80, 90, 100. Makkelijkste tafel." }],
-          theorie: "Cito-truc: × 10 = laatste cijfer is 0, eerste cijfer is het andere getal. 3 × 10 = 30, 8 × 10 = 80.",
+          theorie: "Toets-truc: × 10 = laatste cijfer is 0, eerste cijfer is het andere getal. 3 × 10 = 30, 8 × 10 = 80.",
           voorbeelden: [{ type: "stap", tekst: "Probeer ook andersom: 70 ÷ 10 = 7 (0 weghalen)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel van 10 is altijd makkelijkst — leer deze als eerste." }],
           niveaus: {
@@ -197,7 +197,7 @@ const steps = [
             { titel: "Tafel-5 eigenschap", tekst: "Antwoorden eindigen op 0 of 5: 5, 10, 15, 20, 25, 30, 35, 40, 45, 50. Past dit antwoord erin? 30 eindigt op 0 ✓." },
           ],
           woorden: [{ woord: "tafel van 5", uitleg: "5, 10, 15, 20, 25, 30, 35, 40, 45, 50." }],
-          theorie: "Cito-truc tafel-5: altijd 0 of 5 als laatste cijfer. Geen 23 of 27 — moet rond/vijf zijn.",
+          theorie: "Toets-truc tafel-5: altijd 0 of 5 als laatste cijfer. Geen 23 of 27 — moet rond/vijf zijn.",
           voorbeelden: [{ type: "stap", tekst: "8 × 5: 8 × 10 = 80, ÷ 2 = 40. Klopt: tel-stap 5, 10, 15, 20, 25, 30, 35, 40." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel-5 ↔ tafel-10: 5 keer iets is altijd helft van 10 keer dat ding." }],
           niveaus: {
@@ -219,7 +219,7 @@ const steps = [
             { titel: "Tafel-2 als 'plus zelf'", tekst: "Tafel-2 onthouden: 2, 4, 6, 8, 10, 12, 14, 16, **18**, 20. Bij elke stap kom je 2 erbij — totdat je bij 9 keer = 18 bent." },
           ],
           woorden: [{ woord: "verdubbelen", uitleg: "Een getal bij zichzelf optellen — × 2." }],
-          theorie: "Cito-truc tafel-2: gewoon dubbel. 7 × 2 = 7 + 7 = 14. 5 × 2 = 10. Werkt makkelijk uit het hoofd.",
+          theorie: "Toets-truc tafel-2: gewoon dubbel. 7 × 2 = 7 + 7 = 14. 5 × 2 = 10. Werkt makkelijk uit het hoofd.",
           voorbeelden: [{ type: "stap", tekst: "9 × 2 = 9 + 9. Schrijf het op je vingers als nodig: 2-4-6-8-10-12-14-16-18 = 9 stapjes." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel-2 leer je als eerste echte tafel — de basis voor alle anderen." }],
           niveaus: {
@@ -242,7 +242,7 @@ const steps = [
   {
     title: "Basis-tafels — 3 en 4",
     explanation:
-      "Na de makkelijke tafels komen 3 en 4.\n\n**Tafel van 3** — stappen van 3:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• 6 × 3 = 18\n• 7 × 3 = 21\n• 8 × 3 = 24\n• 9 × 3 = 27\n• 10 × 3 = 30.\n\n**Tafel van 4** — stappen van 4 (= 2 × van tafel 2):\n• 1 × 4 = 4\n• 2 × 4 = 8\n• 3 × 4 = 12\n• 4 × 4 = 16\n• 5 × 4 = 20\n• 6 × 4 = 24\n• 7 × 4 = 28\n• 8 × 4 = 32\n• 9 × 4 = 36\n• 10 × 4 = 40.\n\n**Cito-truc — tafel van 4 via 2**:\nElk antwoord in tafel-4 is **dubbel** van tafel-2.\n• Tafel-2: 2, 4, 6, 8, 10, ...\n• Tafel-4: 4, 8, 12, 16, 20, ... *(dubbele)*.\n\n**Oefen-tip**:\nLeer eerst tafel-3 en tafel-4 als rij op (3, 6, 9, 12, 15...) en (4, 8, 12, 16, 20...). Net als versjes. Dan kun je je rij opzeggen en vinden waar het antwoord staat.",
+      "Na de makkelijke tafels komen 3 en 4.\n\n**Tafel van 3** — stappen van 3:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• 6 × 3 = 18\n• 7 × 3 = 21\n• 8 × 3 = 24\n• 9 × 3 = 27\n• 10 × 3 = 30.\n\n**Tafel van 4** — stappen van 4 (= 2 × van tafel 2):\n• 1 × 4 = 4\n• 2 × 4 = 8\n• 3 × 4 = 12\n• 4 × 4 = 16\n• 5 × 4 = 20\n• 6 × 4 = 24\n• 7 × 4 = 28\n• 8 × 4 = 32\n• 9 × 4 = 36\n• 10 × 4 = 40.\n\n**Toets-truc — tafel van 4 via 2**:\nElk antwoord in tafel-4 is **dubbel** van tafel-2.\n• Tafel-2: 2, 4, 6, 8, 10, ...\n• Tafel-4: 4, 8, 12, 16, 20, ... *(dubbele)*.\n\n**Oefen-tip**:\nLeer eerst tafel-3 en tafel-4 als rij op (3, 6, 9, 12, 15...) en (4, 8, 12, 16, 20...). Net als versjes. Dan kun je je rij opzeggen en vinden waar het antwoord staat.",
     checks: [
       {
         q: "**4 × 3** = ?",
@@ -313,12 +313,12 @@ const steps = [
           woorden: [
             { woord: "splitsen", uitleg: "Eén grote som in 2 kleinere makkelijkere stukken delen." },
           ],
-          theorie: "Cito-onthoud-tip: '8 × 7 = 56' — zeg het hardop, als een rijmpje. Of: **'56 = 7 × 8'** (5-6 in volgorde komt na 7-8). Sommige juffen leren dit als 'mooie reeks': 5-6-7-8.",
+          theorie: "Toets-onthoud-tip: '8 × 7 = 56' — zeg het hardop, als een rijmpje. Of: **'56 = 7 × 8'** (5-6 in volgorde komt na 7-8). Sommige juffen leren dit als 'mooie reeks': 5-6-7-8.",
           voorbeelden: [
             { type: "stap", tekst: "Met wisselregel: 8 × 7 = 7 × 8. Zeg het zoals jij het makkelijkst onthoudt." },
             { type: "stap", tekst: "Niet 48 (= 6 × 8 of 8 × 6). Niet 64 (= 8 × 8). Goed: **56**." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Top-3 lastige tafel-sommen: 7×8=56, 7×9=63, 8×9=72. Leer deze 3 expliciet — ze komen op Cito vaak terug." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Top-3 lastige tafel-sommen: 7×8=56, 7×9=63, 8×9=72. Leer deze 3 expliciet — ze komen op de Doorstroomtoets vaak terug." }],
           niveaus: {
             basis: "56.",
             simpeler: "8 × 7 = (8 × 10) − (8 × 3) = 80 − 24 = 56.",
@@ -345,7 +345,7 @@ const steps = [
   {
     title: "Slimme tafel-trucs",
     explanation:
-      "Je hoeft tafels niet **uit het hoofd te kennen** als je **trucjes** kunt gebruiken.\n\n**Truc 1 — Wisselregel** *(volgorde wisselen)*:\n3 × 7 = 7 × 3. Kies de versie die jij makkelijker vindt.\n\n**Truc 2 — Splitsen**:\nGroot getal splitsen in kleinere delen.\n• **7 × 12** = 7 × (10 + 2) = (7 × 10) + (7 × 2) = 70 + 14 = **84**.\n• **8 × 13** = (8 × 10) + (8 × 3) = 80 + 24 = **104**.\n• **6 × 25** = (6 × 20) + (6 × 5) = 120 + 30 = **150**.\n\n**Truc 3 — Via tafel-10**:\nTafel-10 is makkelijkst. Werk daar omheen.\n• **9 × n** = (10 × n) − n.\n• **11 × n** = (10 × n) + n.\n• **15 × n** = (10 × n) + (5 × n).\n\n**Truc 4 — Verdubbelen**:\n• 4 × n = (2 × n) × 2.\n• 8 × n = (4 × n) × 2 = ((2 × n) × 2) × 2.\n\n**Truc 5 — Helft + helft**:\n• 5 × n = (10 × n) ÷ 2.\n• Bv: 5 × 24 = (10 × 24) ÷ 2 = 240 ÷ 2 = **120**.\n\n**Truc 6 — Bekende dingen herkennen**:\n• 9 × 9 = **81**.\n• 8 × 8 = **64**.\n• 7 × 7 = **49**.\n• 6 × 6 = **36**.\n• 5 × 5 = **25**.\n• 12 × 12 = 144.\n\n**Cito-tip — vertrouwen op trucs**:\nAls je een tafel echt niet weet, gebruik een truc. Schrijf op kladpapier wat je deed. Sneller dan blind gokken.",
+      "Je hoeft tafels niet **uit het hoofd te kennen** als je **trucjes** kunt gebruiken.\n\n**Truc 1 — Wisselregel** *(volgorde wisselen)*:\n3 × 7 = 7 × 3. Kies de versie die jij makkelijker vindt.\n\n**Truc 2 — Splitsen**:\nGroot getal splitsen in kleinere delen.\n• **7 × 12** = 7 × (10 + 2) = (7 × 10) + (7 × 2) = 70 + 14 = **84**.\n• **8 × 13** = (8 × 10) + (8 × 3) = 80 + 24 = **104**.\n• **6 × 25** = (6 × 20) + (6 × 5) = 120 + 30 = **150**.\n\n**Truc 3 — Via tafel-10**:\nTafel-10 is makkelijkst. Werk daar omheen.\n• **9 × n** = (10 × n) − n.\n• **11 × n** = (10 × n) + n.\n• **15 × n** = (10 × n) + (5 × n).\n\n**Truc 4 — Verdubbelen**:\n• 4 × n = (2 × n) × 2.\n• 8 × n = (4 × n) × 2 = ((2 × n) × 2) × 2.\n\n**Truc 5 — Helft + helft**:\n• 5 × n = (10 × n) ÷ 2.\n• Bv: 5 × 24 = (10 × 24) ÷ 2 = 240 ÷ 2 = **120**.\n\n**Truc 6 — Bekende dingen herkennen**:\n• 9 × 9 = **81**.\n• 8 × 8 = **64**.\n• 7 × 7 = **49**.\n• 6 × 6 = **36**.\n• 5 × 5 = **25**.\n• 12 × 12 = 144.\n\n**Toets-tip — vertrouwen op trucs**:\nAls je een tafel echt niet weet, gebruik een truc. Schrijf op kladpapier wat je deed. Sneller dan blind gokken.",
     checks: [
       {
         q: "**7 × 12** = ? *(via splitsen)*",
@@ -380,7 +380,7 @@ const steps = [
             { woord: "splitsen", uitleg: "Een getal opdelen in 2 makkelijkere getallen." },
             { woord: "× 25", uitleg: "= × 20 + × 5 (splitsen) OF = × 100 ÷ 4 (kwart van 100)." },
           ],
-          theorie: "Cito-truc voor ×25: er is ook een **trucje** — × 25 = ÷ 4 × 100. Bv: 6 × 25 = 6 ÷ 4 × 100 = 1,5 × 100 = 150. Maar splitsen werkt altijd, ook bij rare getallen. Begin met splitsen.",
+          theorie: "Toets-truc voor ×25: er is ook een **trucje** — × 25 = ÷ 4 × 100. Bv: 6 × 25 = 6 ÷ 4 × 100 = 1,5 × 100 = 150. Maar splitsen werkt altijd, ook bij rare getallen. Begin met splitsen.",
           voorbeelden: [
             { type: "stap", tekst: "**8 × 25** via splitsen: (8 × 20) + (8 × 5) = 160 + 40 = 200." },
             { type: "stap", tekst: "**4 × 15** via splitsen: (4 × 10) + (4 × 5) = 40 + 20 = 60." },
@@ -396,11 +396,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — tafel-mix",
+    title: "Toets-eindopdracht — tafel-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Alle tafels door elkaar + redactiesommen.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Alle tafels door elkaar + redactiesommen.\n\nVeel succes!",
     checks: [
       {
         q: "**6 × 7** = ?",

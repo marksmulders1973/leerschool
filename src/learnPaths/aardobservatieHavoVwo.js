@@ -98,7 +98,7 @@ const steps = [
         wrongHints: [null, "Niet — zee-ijs heeft geen effect (Archimedes).", "Marginaal effect.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Twee mechanismen", tekst: "**Zeespiegelstijging**: (1) **smeltend landijs** (Groenland, Antarctica, gletsjers) voegt nieuw water toe. (2) **Thermische uitzetting**: warm water heeft groter volume. Zee-ijs heeft geen effect (zit al in water — Archimedes-principe)." }],
-          theorie: "Cito-favoriet: 'Waarom heeft smelten van Arctisch zee-ijs nauwelijks invloed op zeespiegel?' Antwoord: drijft al, geen volume-toename.",
+          theorie: "Toets-favoriet: 'Waarom heeft smelten van Arctisch zee-ijs nauwelijks invloed op zeespiegel?' Antwoord: drijft al, geen volume-toename.",
           niveaus: { basis: "Landijs + uitzetting.", simpeler: "Smelten landijs + warm zeewater", nogSimpeler: "A." },
         },
       },
@@ -141,7 +141,7 @@ const steps = [
         wrongHints: [null, "'El Niño' is wel Spaans, maar geen berg — denk aan de oceaan.", "Orkanen krijgen persoonsnamen, maar dit verschijnsel keert elke paar jaar terug — wat gebeurt er dan met het zeewater?", "Geen rekenmodel — het is een écht natuurverschijnsel in de Grote Oceaan."],
         uitlegPad: {
           stappen: [{ titel: "ENSO-cyclus", tekst: "**El Niño** = periodiek (2-7 jaar) opwarming oostelijke Stille Oceaan → minder regen Indonesië/Australië (droogte/brand) + meer regen Z-Amerika kust + minder visstand Peru. **La Niña** = tegenovergesteld. Beïnvloedt wereld-weer voor 1-2 jaar." }],
-          theorie: "Cito-actueel: 2023-24 was sterk El Niño-jaar → extreme bosbranden Canada/Amazone, hittegolven.",
+          theorie: "Toets-actueel: 2023-24 was sterk El Niño-jaar → extreme bosbranden Canada/Amazone, hittegolven.",
           niveaus: { basis: "Pacific-opwarming.", simpeler: "El Niño = warm Pacific", nogSimpeler: "El Niño" },
         },
       },
@@ -222,7 +222,7 @@ const steps = [
         wrongHints: [null, "Niet voldoende — gevolg ook nodig.", "Niet alleen — ook kans.", "Niet — wel berekenbaar."],
         uitlegPad: {
           stappen: [{ titel: "Drievoudige formule", tekst: "**Risico = kans × gevolg × kwetsbaarheid**. Hoge kans + lage kwetsbaarheid (NL aardbeving via gas-winning, lichte huizen) = matig risico. Hoge kans + hoge kwetsbaarheid (Bangladesh moesson + dichte bevolking) = zeer hoog risico." }],
-          theorie: "Cito-favoriet: vergelijk landen met gelijke fysieke dreiging maar verschillende kwetsbaarheid → verschil in uitkomst.",
+          theorie: "Toets-favoriet: vergelijk landen met gelijke fysieke dreiging maar verschillende kwetsbaarheid → verschil in uitkomst.",
           niveaus: { basis: "Kans × gevolg × kwetsbaarheid.", simpeler: "3-componenten", nogSimpeler: "Drie" },
         },
       },
@@ -254,7 +254,7 @@ const steps = [
         wrongHints: [null, "Niet — gelijke magnitude.", "Speelt mee maar niet primair.", "Niet — structureel verschil."],
         uitlegPad: {
           stappen: [{ titel: "Bouwvoorschriften beslissen", tekst: "**Japan**: strikte aardbevings-bestendige bouw + early-warning + oefeningen → weinig doden bij M7. **Iran**: oudere lemen huizen + corruptie bij vergunningen + weinig voorbereiding → tienduizenden doden bij M7. Zelfde fysieke kracht, **enorm verschil in kwetsbaarheid**." }],
-          theorie: "Cito-pattern: 'leg verschil in uitkomst uit ondanks gelijke magnitude'. Bouwvoorschriften + economie + cultuur.",
+          theorie: "Toets-patroon: 'leg verschil in uitkomst uit ondanks gelijke magnitude'. Bouwvoorschriften + economie + cultuur.",
           niveaus: { basis: "Kwetsbaarheid.", simpeler: "Bouw + voorbereiding", nogSimpeler: "Bouw" },
         },
       },
@@ -295,7 +295,7 @@ const steps = [
         wrongHints: [null, "'Day Zero' telt af naar de dag dat iets óp is — wat raakt er op in een droge stad?", "Geen militaire term — denk aan de kranen in Kaapstad in 2018.", "Geen plotselinge ramp — het is een dag waar je maandenlang naartoe telt. Wat raakt op?"],
         uitlegPad: {
           stappen: [{ titel: "Water op", tekst: "**Kaapstad 2018**: na 3 jaar droogte dreigde stad-reservoirs leeg op een 'Day Zero' → 4 mln mensen zonder kraanwater. Met rantsoenering (50 L per dag per persoon) net vermeden. Toekomst: meer steden risico (Mexico City, Lima)." }],
-          theorie: "Cito-actueel: klimaatverandering verschuift neerslag-patronen → meer steden risico op water-tekort.",
+          theorie: "Toets-actueel: klimaatverandering verschuift neerslag-patronen → meer steden risico op water-tekort.",
           niveaus: { basis: "Stad zonder water.", simpeler: "Day Zero = water-op", nogSimpeler: "A." },
         },
       },

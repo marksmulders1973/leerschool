@@ -57,7 +57,7 @@ const steps = [
         wrongHints: [null, "Mist het minteken.", "Niet — dat zou afgeleide van −cos zijn? Nee.", "Niet — andere functie."],
         uitlegPad: {
           stappen: [{ titel: "Goniometrische tabel", tekst: "**∫ sin(x) dx = −cos(x) + C**. Reden: d/dx(−cos x) = −(−sin x) = sin x. ✓\n\nVergelijk: ∫ cos(x) dx = sin(x) + C (zonder min)." }],
-          theorie: "Cito-favoriet-val: min-teken vergeten. Onthoud: sin → −cos, cos → +sin.",
+          theorie: "Toets-favoriet-val: min-teken vergeten. Onthoud: sin → −cos, cos → +sin.",
           niveaus: { basis: "−cos(x) + C.", simpeler: "sin → −cos", nogSimpeler: "−cos+C" },
         },
       },
@@ -109,7 +109,7 @@ const steps = [
         wrongHints: [null, "Niet — helling is afgeleide.", "Niet — andere bewerking.", "Niet — booglengte vergt andere integraal."],
         uitlegPad: {
           stappen: [{ titel: "Integraal = oppervlakte", tekst: "Bij **f(x) ≥ 0** op [a,b]: bepaalde integraal **= oppervlakte** tussen grafiek en x-as, tussen x=a en x=b. Geometrische interpretatie van integralen." }],
-          theorie: "Cito-favoriet: 'wat stelt deze integraal voor in figuur?' Antwoord: gearceerde gebied.",
+          theorie: "Toets-favoriet: 'wat stelt deze integraal voor in figuur?' Antwoord: gearceerde gebied.",
           niveaus: { basis: "Oppervlakte.", simpeler: "f≥0 → integraal = opp", nogSimpeler: "Opp" },
         },
       },
@@ -201,7 +201,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is afgeleide ln.", "Niet zinvol.", "Niet — kettingvorm verkeerd."],
         uitlegPad: {
           stappen: [{ titel: "Partieel met truc", tekst: "Truc: schrijf ln(x) = ln(x) · 1. Partieel: u=ln(x), du=1/x dx; dv=1·dx, v=x. ∫ ln(x) dx = x·ln(x) − ∫ x · (1/x) dx = x·ln(x) − ∫ 1 dx = **x·ln(x) − x + C**." }],
-          theorie: "Cito-klassieker. Onthoud: ∫ ln(x) dx = x(ln x − 1) + C.",
+          theorie: "Toets-klassieker. Onthoud: ∫ ln(x) dx = x(ln x − 1) + C.",
           niveaus: { basis: "x·ln(x) − x + C.", simpeler: "Partieel met truc → x·ln(x) − x + C", nogSimpeler: "x·ln(x)−x+C" },
         },
       },
@@ -221,7 +221,7 @@ const steps = [
         wrongHints: [null, "Niet — gebruik integraal.", "Niet — te groot.", "Niet — extreem groot."],
         uitlegPad: {
           stappen: [{ titel: "s = ∫v dt", tekst: "Afstand = ∫[0,5] 2t dt = [t²] van 0 tot 5 = 25 − 0 = **25 m**." }],
-          theorie: "Algemene regel: ∫ snelheid dt = afstand. Cito-klassieker.",
+          theorie: "Algemene regel: ∫ snelheid dt = afstand. Toets-klassieker.",
           niveaus: { basis: "25 m.", simpeler: "[t²]0→5 = 25", nogSimpeler: "25" },
         },
       },
@@ -243,7 +243,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is max.", "Niet — interval-eindpunt.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "f_gem-formule", tekst: "f_gem = (1/(b−a)) · ∫[a,b] f(x) dx = (1/3) · ∫[0,3] x² dx = (1/3) · [x³/3] 0→3 = (1/3) · 9 = **3**." }],
-          theorie: "Cito-toepassing: 'gem temperatuur tussen 12u en 18u' = (1/6)·∫T(t) dt.",
+          theorie: "Toets-toepassing: 'gem temperatuur tussen 12u en 18u' = (1/6)·∫T(t) dt.",
           niveaus: { basis: "3.", simpeler: "(1/3)·9 = 3", nogSimpeler: "3" },
         },
       },
@@ -318,7 +318,7 @@ const steps = [
         wrongHints: [null, "Niet — negatief deel telt mee.", "Niet — onjuist.", "Wel mogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Negatieve snelheid", tekst: "v(t) = t²−4. Voor t<2: v<0 (achteruit). t>2: v>0.\n\nVerplaatsing = ∫[0,3] (t²−4) dt = [t³/3 − 4t] 0→3 = 9 − 12 = **−3**.\n\nDus netto 3 m **achteruit** verplaatst. (Afgelegde afstand = som van |stukken| = anders.)" }],
-          theorie: "Verschil tussen 'verplaatsing' (integraal, kan negatief) en 'afstand' (positieve som). Cito let goed op.",
+          theorie: "Verschil tussen 'verplaatsing' (integraal, kan negatief) en 'afstand' (positieve som). De toets let goed op.",
           niveaus: { basis: "−3.", simpeler: "∫(t²−4) 0→3 = 9−12 = −3", nogSimpeler: "−3" },
         },
       },
@@ -329,7 +329,7 @@ const steps = [
         wrongHints: [null, "Niet — geen kettingvorm met afgeleide.", "Niet zonder techniek.", "Wel — via partieel."],
         uitlegPad: {
           stappen: [{ titel: "LIATE: A vóór T", tekst: "**Partiële integratie**. Kies u = x (A), dv = sin(x) dx (T). Dan du=dx, v=−cos(x).\n\n∫ x·sin(x) dx = x·(−cos x) − ∫ (−cos x) dx = −x·cos x + sin x + C = **sin(x) − x·cos(x) + C**." }],
-          theorie: "Cito-klassieker. LIATE: A=x voor T=sin → x wordt u.",
+          theorie: "Toets-klassieker. LIATE: A=x voor T=sin → x wordt u.",
           niveaus: { basis: "Partieel.", simpeler: "x·sin = partieel", nogSimpeler: "Partieel" },
         },
       },

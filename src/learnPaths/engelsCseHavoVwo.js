@@ -81,7 +81,7 @@ const steps = [
         wrongHints: [null, "Niet — feitelijk + neutraal.", "Niet — uitleg van onderzoek.", "Bevat meningen maar van geïnterviewde, niet auteur."],
         uitlegPad: {
           stappen: [{ titel: "Opinion = mening", tekst: "**Opinion column** (vaak in The Guardian, NY Times etc.) = persoonlijke mening van schrijver, vaak controversieel. CSE-favoriet voor intentie- en toon-vragen." }],
-          theorie: "Cito-tip: in opinion column zit auteur-mening duidelijk; in nieuws-artikel pas op met 'mening van schrijver vs van geïnterviewde'.",
+          theorie: "Toets-tip: in opinion column zit auteur-mening duidelijk; in nieuws-artikel pas op met 'mening van schrijver vs van geïnterviewde'.",
           niveaus: { basis: "Opinion column.", simpeler: "Subjectief = opinion", nogSimpeler: "Opinion" },
         },
       },
@@ -92,7 +92,7 @@ const steps = [
   {
     title: "Vraagsoorten + register op HAVO/VWO",
     explanation:
-      "HAVO/VWO Engels CSE heeft **complexere vraagsoorten** dan VMBO. Plus: **register** (formeel/informeel) speelt grote rol.\n\n**Uitgebreide vraagsoorten** (boven VMBO-niveau):\n\n**1. Intentie/purpose** ('What is the author's purpose?'):\n• To inform / persuade / entertain / warn / criticise.\n• Strategie: kijk naar **toon** + **slot**. Vooral laatste alinea.\n\n**2. Argumentation** ('On which argument does the author rely?'):\n• Type argumenten herkennen (feit / voorbeeld / autoriteit).\n• Drogredenen identificeren.\n\n**3. Function** ('What is the function of paragraph 4?'):\n• Inleiden / toelichten / nuanceren / weerleggen / concluderen.\n• Strategie: vraag wat paragraaf **toevoegt** aan tekst.\n\n**4. Implication** ('What is implied/suggested?'):\n• Niet letterlijk gezegd maar gesuggereerd.\n• Strategie: lees **tussen de regels** + 'als-dan' afleiden.\n\n**5. Tone/mood**:\n• Sarcastic / cynical / nostalgic / hopeful / critical / neutral / ironic.\n• Cito-pattern: zoek emotie-woorden + word-choice.\n\n**6. Register** (formaliteit-niveau):\n• Very formal: academic English, complex zinnen.\n• Formal: news / professional letter.\n• Neutral: standaard-Engels.\n• Informal: spreektaal, idioms.\n• Slang/colloquial: 'gonna', 'wanna', 'yeah'.\n\n**Cito-register-vraag-favoriet**:\n• 'How would you describe the register of this article?'\n• Strategie: kijk naar **woordkeuze** (Latin-derived = formeler) + **zinslengte** + **gebruik 'I/we'**.\n\n**7. Vergelijking-vraag**:\n• 'How do paragraph 2 and 5 relate?'\n• Soorten: contrast / continuatie / illustratie / weerlegging.\n\n**8. Title-keuze**:\n• 'Which would be the best title?'\n• Strategie: titel moet **hoofdgedachte** weerspiegelen.\n\n**Signaalwoorden HAVO/VWO** (uitbreiding):\n• **Causaal**: consequently, hence, accordingly, owing to.\n• **Concessie**: notwithstanding, albeit, granted that.\n• **Vergelijking**: similarly, likewise, in the same vein.\n• **Versterking**: indeed, in fact, moreover, furthermore.\n• **Tegenstelling**: nonetheless, conversely, on the other hand.\n• **Klassieke val**: 'However' staat soms na lange concessie — let op.\n\n**Cito-truc — toonvragen**:\nCheck **drie elementen**: word-choice (positief/negatief/emotioneel) + figuur-spraak (irony/hyperbool) + auteur-intentie. Combo geeft toon.",
+      "HAVO/VWO Engels CSE heeft **complexere vraagsoorten** dan VMBO. Plus: **register** (formeel/informeel) speelt grote rol.\n\n**Uitgebreide vraagsoorten** (boven VMBO-niveau):\n\n**1. Intentie/purpose** ('What is the author's purpose?'):\n• To inform / persuade / entertain / warn / criticise.\n• Strategie: kijk naar **toon** + **slot**. Vooral laatste alinea.\n\n**2. Argumentation** ('On which argument does the author rely?'):\n• Type argumenten herkennen (feit / voorbeeld / autoriteit).\n• Drogredenen identificeren.\n\n**3. Function** ('What is the function of paragraph 4?'):\n• Inleiden / toelichten / nuanceren / weerleggen / concluderen.\n• Strategie: vraag wat paragraaf **toevoegt** aan tekst.\n\n**4. Implication** ('What is implied/suggested?'):\n• Niet letterlijk gezegd maar gesuggereerd.\n• Strategie: lees **tussen de regels** + 'als-dan' afleiden.\n\n**5. Tone/mood**:\n• Sarcastic / cynical / nostalgic / hopeful / critical / neutral / ironic.\n• Toets-patroon: zoek emotie-woorden + word-choice.\n\n**6. Register** (formaliteit-niveau):\n• Very formal: academic English, complex zinnen.\n• Formal: news / professional letter.\n• Neutral: standaard-Engels.\n• Informal: spreektaal, idioms.\n• Slang/colloquial: 'gonna', 'wanna', 'yeah'.\n\n**Toets-register-vraag-favoriet**:\n• 'How would you describe the register of this article?'\n• Strategie: kijk naar **woordkeuze** (Latin-derived = formeler) + **zinslengte** + **gebruik 'I/we'**.\n\n**7. Vergelijking-vraag**:\n• 'How do paragraph 2 and 5 relate?'\n• Soorten: contrast / continuatie / illustratie / weerlegging.\n\n**8. Title-keuze**:\n• 'Which would be the best title?'\n• Strategie: titel moet **hoofdgedachte** weerspiegelen.\n\n**Signaalwoorden HAVO/VWO** (uitbreiding):\n• **Causaal**: consequently, hence, accordingly, owing to.\n• **Concessie**: notwithstanding, albeit, granted that.\n• **Vergelijking**: similarly, likewise, in the same vein.\n• **Versterking**: indeed, in fact, moreover, furthermore.\n• **Tegenstelling**: nonetheless, conversely, on the other hand.\n• **Klassieke val**: 'However' staat soms na lange concessie — let op.\n\n**Toets-truc — toonvragen**:\nCheck **drie elementen**: word-choice (positief/negatief/emotioneel) + figuur-spraak (irony/hyperbool) + auteur-intentie. Combo geeft toon.",
     checks: [
       {
         q: "*'What is the author's purpose in the final paragraph?'* — welke vraag-type?",
@@ -101,7 +101,7 @@ const steps = [
         wrongHints: [null, "Niet — purpose is breder dan detail.", "Niet — verwijswoorden.", "Niet — toon vs purpose verschilt."],
         uitlegPad: {
           stappen: [{ titel: "Purpose = intentie/doel", tekst: "**Purpose** = WAAROM schrijver dit deel schreef. Niet 'wat staat er' (detail) of 'hoe formeel is 't' (register), maar 'wat wil schrijver bereiken'. Vaak: conclude / persuade / warn / criticise." }],
-          theorie: "Cito-strategie: lees laatste alinea zorgvuldig + kijk naar zinnen die actie/conclusie suggereren.",
+          theorie: "Toets-strategie: lees laatste alinea zorgvuldig + kijk naar zinnen die actie/conclusie suggereren.",
           niveaus: { basis: "Intentie.", simpeler: "Purpose = intentie", nogSimpeler: "Purpose" },
         },
       },
@@ -124,7 +124,7 @@ const steps = [
         wrongHints: [null, "Niet — however = tegenstelling.", "Niet — geen voorbeeld.", "Niet — geen samenvatting."],
         uitlegPad: {
           stappen: [{ titel: "However = tegenstelling", tekst: "**However** = klassiek contrast-signaalwoord. Voorgaande zin zei iets positiefs over studie; deze keert om: 'maar is bekritiseerd'. Vooral belangrijk bij conclusie-vragen — zin na 'however' is vaak echte mening." }],
-          theorie: "Cito-trick: kijk altijd zin NA 'however' / 'nonetheless' / 'on the contrary' voor hoofdstandpunt.",
+          theorie: "Toets-trick: kijk altijd zin NA 'however' / 'nonetheless' / 'on the contrary' voor hoofdstandpunt.",
           niveaus: { basis: "Contrast.", simpeler: "However = maar = contrast", nogSimpeler: "Contrast" },
         },
       },
@@ -135,7 +135,7 @@ const steps = [
         wrongHints: [null, "Niet — bedoeld tegenovergestelde.", "Niet — emotie.", "Niet — niet zakelijk."],
         uitlegPad: {
           stappen: [{ titel: "Sarcasme = positief woord, negatieve bedoeling", tekst: "**Sarcastisch**: 'great' + 'just what I needed' in regen-context = duidelijk tegenovergestelde bedoeling. Cynisme/sarcasm in tekst herkennen aan **mismatch** tussen woordkeuze + context." }],
-          theorie: "Cito-truc: bij toon-vragen — past de letterlijke betekenis bij wat schrijver écht bedoelt? Mismatch = irony of sarcasme.",
+          theorie: "Toets-truc: bij toon-vragen — past de letterlijke betekenis bij wat schrijver écht bedoelt? Mismatch = irony of sarcasme.",
           niveaus: { basis: "Sarcastisch.", simpeler: "Positief woord + slechte situatie = sarcasme", nogSimpeler: "Sarcastisch" },
         },
       },
@@ -175,7 +175,7 @@ const steps = [
         wrongHints: [null, "Niet — alleen voor moeilijke.", "Wel handig bij specifieke vragen.", "Werkt voor zowel mc als open."],
         uitlegPad: {
           stappen: [{ titel: "Markeer + door", tekst: "Bij **twijfel/onzeker** vraag: markeer met **\\*** of cirkel rond vraag-nummer + ga **door** naar volgende. Aan eind terug. Voorkomt tijd-verlies + frisse blik op tweede beurt." }],
-          theorie: "Cito-strategie: max 2-3 min per vraag. Daarna markeren + door. Niet 8 min op 1 vraag besteden.",
+          theorie: "Toets-strategie: max 2-3 min per vraag. Daarna markeren + door. Niet 8 min op 1 vraag besteden.",
           niveaus: { basis: "Bij twijfel.", simpeler: "Twijfel = markeer + door", nogSimpeler: "Markeer" },
         },
       },
@@ -186,7 +186,7 @@ const steps = [
         wrongHints: [null, "Niet — open vragen meestal in NL.", "Te kort — geen volle antwoord.", "Te lang — overbodig."],
         uitlegPad: {
           stappen: [{ titel: "NL + bewijs uit tekst", tekst: "Open vragen: **Nederlands volledige zin** + **2-3 bewijspunten** uit tekst. 'De schrijver vindt X omdat (1) ... en (2) ...'. Punten per bewijspunt." }],
-          theorie: "Cito-scoring: 1 bewijs = 1 punt, 2 = 2 punten. Geen extra punten voor lang antwoord.",
+          theorie: "Toets-scoring: 1 bewijs = 1 punt, 2 = 2 punten. Geen extra punten voor lang antwoord.",
           niveaus: { basis: "NL volledig + bewijs.", simpeler: "Open = NL volle zin + bewijs", nogSimpeler: "NL + bewijs" },
         },
       },
@@ -197,7 +197,7 @@ const steps = [
         wrongHints: [null, "Niet — kost veel tijd.", "Soms wel — maar eerst context.", "Niet voor de vraag overslaan."],
         uitlegPad: {
           stappen: [{ titel: "Context > woordenboek", tekst: "**Eerst context lezen** (zin met onbekend woord + 1-2 ervoor/erna). Vaak kun je betekenis raden uit context. Pas als context niet helpt: woordenboek (30-60 sec verlies). Direct woordenboek = tijd-verlies." }],
-          theorie: "Cito-tip: ~80% van onbekende woorden is uit context te raden bij HAVO/VWO-leerlingen.",
+          theorie: "Toets-tip: ~80% van onbekende woorden is uit context te raden bij HAVO/VWO-leerlingen.",
           niveaus: { basis: "Context eerst.", simpeler: "Onbekend = context lezen", nogSimpeler: "Context" },
         },
       },
@@ -208,7 +208,7 @@ const steps = [
         wrongHints: [null, "Niet — wel risico maar minder dan eind-haasten.", "Markeren is JUIST strategie.", "Klok kijken is goed."],
         uitlegPad: {
           stappen: [{ titel: "Eind-haasten = punten missen", tekst: "Klassieke val: leerling besteedt te veel tijd aan begin → laatste 10-15 vragen in 10 min → veel punten missen. **Voorkom door tijd-check elke 2 vragen** + markeren bij twijfel + door." }],
-          theorie: "Cito-strategie: berekening hoeveel tijd je hebt per pagina/tekst → blijf daaronder.",
+          theorie: "Toets-strategie: berekening hoeveel tijd je hebt per pagina/tekst → blijf daaronder.",
           niveaus: { basis: "Eind-haasten.", simpeler: "Eind-haasten = punten missen", nogSimpeler: "Eind-haasten" },
         },
       },
@@ -219,7 +219,7 @@ const steps = [
   {
     title: "Literair fragment (VWO) + tone-analyse",
     explanation:
-      "**VWO** heeft op CSE altijd **1 literair fragment** (roman / short story / soms gedicht). Vereist andere skills dan journalistiek.\n\n**Verschil met non-fictie**:\n| | Journalistiek | Literair |\n|---|---|---|\n| Doel | Informeren / overtuigen | Vermaak + reflectie |\n| Toon | Vast (formal/neutral) | Wisselend, vaak ambigu |\n| Personage | Auteur zelf | Verteller (≠ auteur) + characters |\n| Vraag-typen | Feit / argument | Tone / character / sub-text |\n| Tijd | Heden | Vaak verleden / dialogue |\n\n**Verteller-soorten** (POV — point of view):\n• **First-person (I/we)**: hoofdpersoon vertelt. Subjectief.\n• **Third-person limited (he/she)**: weet alleen wat hoofdpersoon weet.\n• **Third-person omniscient**: alwetende verteller.\n• **Second-person (you)**: zeldzaam — lezer wordt aangesproken.\n\n**Character-analyse**:\n• **Round character**: complex, ontwikkelt zich (protagonist).\n• **Flat character**: 1-dimensionaal (vaak supporting).\n• **Static**: verandert niet.\n• **Dynamic**: verandert door verhaal.\n\n**Tone in literatuur**:\n• Auteur kan **andere toon** dan personage hebben.\n• 'Reliable narrator': we vertrouwen de verteller.\n• 'Unreliable narrator': verteller liegt of mist info — lezer moet doorzien.\n\n**Sub-text** (wat NIET letterlijk gezegd):\n• Personage zegt 'It's fine.' maar context suggereert dat 't NIET fine is.\n• Cito-favoriet: 'What does X really feel?'\n\n**Literaire stijlmiddelen** (engels):\n• **Metaphor**: 'The world is a stage.'\n• **Simile** (met 'as' of 'like'): 'as cold as ice.'\n• **Personification**: 'The wind whispered.'\n• **Foreshadowing**: voorspellen toekomst-gebeurtenis in verhaal.\n• **Flashback**: terugkijken naar verleden.\n• **Symbolism**: object/locatie staat voor abstract idee.\n• **Irony**: tegenovergestelde van wat lijkt (situational / verbal / dramatic).\n• **Mood vs tone**:\n  - **Mood** = sfeer die lezer voelt.\n  - **Tone** = houding schrijver.\n  - Voorbeeld: somber mood + sarcastic tone in dystopie-roman.\n\n**Cito-VWO-literair-strategie**:\n1. **Lees fragment 2x**: 1e voor verhaal-overzicht, 2e voor details.\n2. **Identificeer verteller-POV**.\n3. **Markeer character-emoties** in margin.\n4. **Zoek symbolen + recurring images**.\n5. **Vraag jezelf**: WAT zegt fragment ZONDER te zeggen?\n\n**Veel-gevraagde VWO-vraag-typen**:\n• 'How does X feel at this moment?'\n• 'What does the [object/setting] symbolise?'\n• 'What is the tone of the narrator?'\n• 'What does the dialogue reveal about character?'\n• 'How does the fragment build tension?'",
+      "**VWO** heeft op CSE altijd **1 literair fragment** (roman / short story / soms gedicht). Vereist andere skills dan journalistiek.\n\n**Verschil met non-fictie**:\n| | Journalistiek | Literair |\n|---|---|---|\n| Doel | Informeren / overtuigen | Vermaak + reflectie |\n| Toon | Vast (formal/neutral) | Wisselend, vaak ambigu |\n| Personage | Auteur zelf | Verteller (≠ auteur) + characters |\n| Vraag-typen | Feit / argument | Tone / character / sub-text |\n| Tijd | Heden | Vaak verleden / dialogue |\n\n**Verteller-soorten** (POV — point of view):\n• **First-person (I/we)**: hoofdpersoon vertelt. Subjectief.\n• **Third-person limited (he/she)**: weet alleen wat hoofdpersoon weet.\n• **Third-person omniscient**: alwetende verteller.\n• **Second-person (you)**: zeldzaam — lezer wordt aangesproken.\n\n**Character-analyse**:\n• **Round character**: complex, ontwikkelt zich (protagonist).\n• **Flat character**: 1-dimensionaal (vaak supporting).\n• **Static**: verandert niet.\n• **Dynamic**: verandert door verhaal.\n\n**Tone in literatuur**:\n• Auteur kan **andere toon** dan personage hebben.\n• 'Reliable narrator': we vertrouwen de verteller.\n• 'Unreliable narrator': verteller liegt of mist info — lezer moet doorzien.\n\n**Sub-text** (wat NIET letterlijk gezegd):\n• Personage zegt 'It's fine.' maar context suggereert dat 't NIET fine is.\n• Toets-favoriet: 'What does X really feel?'\n\n**Literaire stijlmiddelen** (engels):\n• **Metaphor**: 'The world is a stage.'\n• **Simile** (met 'as' of 'like'): 'as cold as ice.'\n• **Personification**: 'The wind whispered.'\n• **Foreshadowing**: voorspellen toekomst-gebeurtenis in verhaal.\n• **Flashback**: terugkijken naar verleden.\n• **Symbolism**: object/locatie staat voor abstract idee.\n• **Irony**: tegenovergestelde van wat lijkt (situational / verbal / dramatic).\n• **Mood vs tone**:\n  - **Mood** = sfeer die lezer voelt.\n  - **Tone** = houding schrijver.\n  - Voorbeeld: somber mood + sarcastic tone in dystopie-roman.\n\n**VWO-examen-literair-strategie**:\n1. **Lees fragment 2x**: 1e voor verhaal-overzicht, 2e voor details.\n2. **Identificeer verteller-POV**.\n3. **Markeer character-emoties** in margin.\n4. **Zoek symbolen + recurring images**.\n5. **Vraag jezelf**: WAT zegt fragment ZONDER te zeggen?\n\n**Veel-gevraagde VWO-vraag-typen**:\n• 'How does X feel at this moment?'\n• 'What does the [object/setting] symbolise?'\n• 'What is the tone of the narrator?'\n• 'What does the dialogue reveal about character?'\n• 'How does the fragment build tension?'",
     checks: [
       {
         q: "Wat is het verschil tussen **mood** en **tone**?",
@@ -228,7 +228,7 @@ const steps = [
         wrongHints: [null, "Niet — verschillen.", "Niet relevant.", "Niet — geen kwaliteit-oordeel."],
         uitlegPad: {
           stappen: [{ titel: "Mood ≠ tone", tekst: "**Mood** = sfeer/atmosfeer die LEZER voelt (gloomy / hopeful / tense). **Tone** = houding van AUTEUR/verteller (sarcastic / earnest / detached). Kan verschillen: somber mood + ironic tone tegelijk." }],
-          theorie: "Cito-VWO-favoriet om dit verschil te testen. Onthouden: mood = atmosfeer, tone = attitude.",
+          theorie: "VWO-examen-favoriet om dit verschil te testen. Onthouden: mood = atmosfeer, tone = attitude.",
           niveaus: { basis: "Mood=sfeer, tone=houding.", simpeler: "Mood = lezer-sfeer, tone = auteur-houding", nogSimpeler: "Verschillen" },
         },
       },
@@ -239,7 +239,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld — dat is reliable.", "Wel — komt vaak voor in moderne literatuur.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Unreliable = lezer moet doorzien", tekst: "**Unreliable narrator** = verteller die liegt / details vergeet / overdrijft / cognitief beperkt is. Lezer moet **tussen de regels** lezen om 'echte' verhaal te vinden. Klassieke voorbeelden: Catcher in the Rye (Holden), Lolita (Humbert), Gone Girl." }],
-          theorie: "Cito-VWO-strategie: bij first-person-vertelling — denk altijd 'is dit echt zo of liegt verteller?'.",
+          theorie: "VWO-examen-strategie: bij first-person-vertelling — denk altijd 'is dit echt zo of liegt verteller?'.",
           niveaus: { basis: "Misleidende verteller.", simpeler: "Unreliable = liegt/mist info", nogSimpeler: "Misleidt" },
         },
       },
@@ -261,7 +261,7 @@ const steps = [
         wrongHints: [null, "Niet — woordkeuze is somber.", "Niet — geen feiten-toon.", "Niet — geen romance."],
         uitlegPad: {
           stappen: [{ titel: "Woordkeuze = mood", tekst: "**Empty / echoing / silence** = somber, vacuüm, eenzaam. Lezer voelt zelf onbehagen. Klassieke woorden voor 'lonely / eerie mood'." }],
-          theorie: "Cito-tip: bij mood-vragen — zoek **3-5 adjectieven/zelfstandige naamwoorden** met emotie-lading.",
+          theorie: "Toets-tip: bij mood-vragen — zoek **3-5 adjectieven/zelfstandige naamwoorden** met emotie-lading.",
           niveaus: { basis: "Eenzaam.", simpeler: "Empty + echoing = lonely mood", nogSimpeler: "Eenzaam" },
         },
       },
@@ -302,7 +302,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet relevant op leesvaardigheid.", "Niet primair.", "Niet primair."],
         uitlegPad: {
-          stappen: [{ titel: "Opinion + sarcasme = tone-vraag", tekst: "Bij **opinion column met sarcasme** test Cito: kan leerling de **echte mening** achter sarcastisch oppervlak herkennen? Vraag-soort: tone / intentie / implication." }],
+          stappen: [{ titel: "Opinion + sarcasme = tone-vraag", tekst: "Bij **opinion column met sarcasme** test voor de toets: kan leerling de **echte mening** achter sarcastisch oppervlak herkennen? Vraag-soort: tone / intentie / implication." }],
           niveaus: { basis: "Intentie + ironie.", simpeler: "Sarcasme = ironie-vraag", nogSimpeler: "Ironie" },
         },
       },
@@ -333,7 +333,7 @@ const steps = [
         wrongHints: [null, "Niet — 'preliminary' is voorlopig.", "Niet — wel suggestief.", "Niet — wel zinvol."],
         uitlegPad: {
           stappen: [{ titel: "Preliminary + suggest = voorzichtig", tekst: "**'While preliminary, suggest'** = voorzichtig + voorlopig. Niet definitief, maar wijst wel in richting. Wetenschappelijke voorzichtigheid-toon." }],
-          theorie: "Cito-vocab: 'preliminary' (voorlopig), 'tentative' (aarzelend), 'inconclusive' (geen conclusie mogelijk) = vaak in onderzoek-teksten.",
+          theorie: "Toets-vocab: 'preliminary' (voorlopig), 'tentative' (aarzelend), 'inconclusive' (geen conclusie mogelijk) = vaak in onderzoek-teksten.",
           niveaus: { basis: "Voorlopig.", simpeler: "Preliminary = voorlopig + nieuwe richting", nogSimpeler: "Voorlopig" },
         },
       },

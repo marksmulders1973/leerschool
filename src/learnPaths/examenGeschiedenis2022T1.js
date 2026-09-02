@@ -33,7 +33,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-1/gt-01
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc geschiedenis: zoek jaartal-anker + match met bekende gebeurtenis. Datum-truc werkt vaak bij multiple choice.",
+  theorie: "Toets-truc geschiedenis: zoek jaartal-anker + match met bekende gebeurtenis. Datum-truc werkt vaak bij multiple choice.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -93,7 +93,7 @@ const steps = [
         { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "kenmerken Nazi-Duitsland: terreur Gestapo + concentratiekampen — kern van deze vraag" },
       ],
       uitlegPad: compact(
-        "Nazi-Duitsland (1933-1945) = terreur (Gestapo, willekeurige arrestaties) + strafkampen (Dachau 1933, Auschwitz 1940). USSR-Stalin (1924-1953) = showprocessen + zuiveringen. Cito test of je beide regimes uit elkaar houdt.",
+        "Nazi-Duitsland (1933-1945) = terreur (Gestapo, willekeurige arrestaties) + strafkampen (Dachau 1933, Auschwitz 1940). USSR-Stalin (1924-1953) = showprocessen + zuiveringen. De toets test of je beide regimes uit elkaar houdt.",
         { basis: "Terreur + strafkampen.", simpeler: "Nazi = terreur (Gestapo) + concentratiekampen. Showprocessen = Stalin USSR.", nogSimpeler: "Terreur + strafkampen" },
         [{ woord: "Gestapo", uitleg: "Geheime staatspolitie Nazi-Duitsland." }, { woord: "showproces", uitleg: "Geënsceneerd proces met vooraf bepaalde uitspraak — kenmerk Stalin." }],
       ),

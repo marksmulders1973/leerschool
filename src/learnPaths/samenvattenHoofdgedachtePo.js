@@ -17,13 +17,13 @@ const chapters = [
   { letter: "B", title: "Hoofdgedachte vinden", emoji: "🔍", from: 1, to: 1 },
   { letter: "C", title: "Hoofd vs bijzaken", emoji: "✏️", from: 2, to: 2 },
   { letter: "D", title: "Samenvatting maken", emoji: "📝", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
   {
     title: "Wat is een hoofdgedachte?",
-    explanation: "**Hoofdgedachte** = waar de tekst **vooral over gaat**. De **kernboodschap** in 1 of 2 zinnen samengevat.\n\n**Voorbeeld** — een tekst over voetbal:\n*'Voetbal is wereldwijd de populairste sport. Miljoenen mensen kijken WK-finales. Er zijn voetbal-clubs in elk land. Kinderen beginnen al jong met voetballen op school.'*\n\n**Hoofdgedachte**: *'Voetbal is een populaire sport over de hele wereld.'*\n\n**Niet de hoofdgedachte**:\n• 'Kinderen beginnen jong met voetballen' — dat is een **detail**, geen hoofdpunt.\n• 'WK-finales worden bekeken door miljoenen' — ook detail.\n\n**Verschil hoofdgedachte vs onderwerp**:\n• **Onderwerp** = waar gaat het over? *(1 woord/zin: 'voetbal')*.\n• **Hoofdgedachte** = wat zegt de tekst over dat onderwerp? *(volle zin)*.\n\n**Hoofdgedachte staat vaak**:\n1. **In de eerste zin** van de alinea.\n2. **In de laatste zin** als samenvatting.\n3. **In de titel** of kop.\n\n**Cito-vraag-typen**:\n• 'Wat is de hoofdgedachte van deze tekst?'\n• 'Welke zin geeft het beste de hoofdgedachte weer?'\n• 'Welk antwoord beschrijft het hoofdpunt?'\n\n**Cito-tip**:\nVraag jezelf: *'Wat zou ik vertellen aan iemand die de tekst niet heeft gelezen?'* — dat is de hoofdgedachte.",
+    explanation: "**Hoofdgedachte** = waar de tekst **vooral over gaat**. De **kernboodschap** in 1 of 2 zinnen samengevat.\n\n**Voorbeeld** — een tekst over voetbal:\n*'Voetbal is wereldwijd de populairste sport. Miljoenen mensen kijken WK-finales. Er zijn voetbal-clubs in elk land. Kinderen beginnen al jong met voetballen op school.'*\n\n**Hoofdgedachte**: *'Voetbal is een populaire sport over de hele wereld.'*\n\n**Niet de hoofdgedachte**:\n• 'Kinderen beginnen jong met voetballen' — dat is een **detail**, geen hoofdpunt.\n• 'WK-finales worden bekeken door miljoenen' — ook detail.\n\n**Verschil hoofdgedachte vs onderwerp**:\n• **Onderwerp** = waar gaat het over? *(1 woord/zin: 'voetbal')*.\n• **Hoofdgedachte** = wat zegt de tekst over dat onderwerp? *(volle zin)*.\n\n**Hoofdgedachte staat vaak**:\n1. **In de eerste zin** van de alinea.\n2. **In de laatste zin** als samenvatting.\n3. **In de titel** of kop.\n\n**toetsvraag-typen**:\n• 'Wat is de hoofdgedachte van deze tekst?'\n• 'Welke zin geeft het beste de hoofdgedachte weer?'\n• 'Welk antwoord beschrijft het hoofdpunt?'\n\n**Toets-tip**:\nVraag jezelf: *'Wat zou ik vertellen aan iemand die de tekst niet heeft gelezen?'* — dat is de hoofdgedachte.",
     checks: [
       {
         q: "Wat is een **hoofdgedachte**?",
@@ -41,7 +41,7 @@ const steps = [
             { woord: "detail", uitleg: "Klein stukje informatie binnen tekst." },
             { woord: "titel", uitleg: "Naam van de tekst — slechts een hint." },
           ],
-          theorie: "Cito-tip hoofdgedachte: kijk wat het ONDERWERP is + wat de schrijver ERVAN VINDT/zegt. Onderwerp + boodschap = hoofdgedachte.",
+          theorie: "Toets-tip hoofdgedachte: kijk wat het ONDERWERP is + wat de schrijver ERVAN VINDT/zegt. Onderwerp + boodschap = hoofdgedachte.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst over kraanwater: hoofdgedachte = 'NL-kraanwater is veilig en goedkoop'." },
             { type: "stap", tekst: "Tekst over Pluto: hoofdgedachte = 'Pluto is geen planeet meer sinds 2006'." },
@@ -63,13 +63,13 @@ const steps = [
           stappen: [
             { titel: "Twee verschillende dingen", tekst: "**Onderwerp** = waarover gaat de tekst? (1-3 woorden). **Hoofdgedachte** = WAT zegt de tekst erover? (een hele zin)." },
             { titel: "Voorbeeld: voetbal", tekst: "Tekst over voetbal. Onderwerp = 'voetbal'. Hoofdgedachte = 'voetbal is de populairste sport wereldwijd' (volledige boodschap)." },
-            { titel: "Cito-truc", tekst: "Vraag eerst: WAARover gaat het = onderwerp. Vraag daarna: WAT zegt de tekst erover = hoofdgedachte. Twee verschillende vragen!" },
+            { titel: "Toets-truc", tekst: "Vraag eerst: WAARover gaat het = onderwerp. Vraag daarna: WAT zegt de tekst erover = hoofdgedachte. Twee verschillende vragen!" },
           ],
           woorden: [
             { woord: "onderwerp", uitleg: "WAAROVER de tekst gaat (1-3 woorden)." },
             { woord: "hoofdgedachte", uitleg: "Wat de tekst over het onderwerp ZEGT (zin)." },
           ],
-          theorie: "Cito-formule: ONDERWERP + WAT WORDT GEZEGD = HOOFDGEDACHTE. Bijvoorbeeld: 'kraanwater' (onderwerp) + 'is veilig' (boodschap) = 'kraanwater is veilig' (hoofdgedachte).",
+          theorie: "Toets-formule: ONDERWERP + WAT WORDT GEZEGD = HOOFDGEDACHTE. Bijvoorbeeld: 'kraanwater' (onderwerp) + 'is veilig' (boodschap) = 'kraanwater is veilig' (hoofdgedachte).",
           voorbeelden: [
             { type: "stap", tekst: "Tekst over honden. Onderwerp = 'honden'. Hoofdgedachte = 'honden zijn trouwe huisdieren'." },
             { type: "stap", tekst: "Tekst over plastic in zee. Onderwerp = 'plastic in zee'. Hoofdgedachte = 'plastic in zee is een groot probleem'." },
@@ -97,10 +97,10 @@ const steps = [
             { woord: "rode draad", uitleg: "Wat alle zinnen met elkaar verbindt." },
             { woord: "hoofdgedachte", uitleg: "De kernboodschap die alle zinnen samenvat." },
           ],
-          theorie: "Cito-truc hoofdgedachte: lees alle zinnen + vraag 'wat is hier het ONDERWERP?' (honden) + 'wat wordt erover gezegd?' (zijn fijn/loyaal/beschermend/speels). Onderwerp + boodschap = hoofdgedachte.",
+          theorie: "Toets-truc hoofdgedachte: lees alle zinnen + vraag 'wat is hier het ONDERWERP?' (honden) + 'wat wordt erover gezegd?' (zijn fijn/loyaal/beschermend/speels). Onderwerp + boodschap = hoofdgedachte.",
           voorbeelden: [
             { type: "stap", tekst: "*'Sneeuw is wit. Het smelt bij 0°C. Kinderen spelen erin.'* → hoofdgedachte: 'Sneeuw is een natuurverschijnsel/leuk om mee te spelen'." },
-            { type: "stap", tekst: "Pas op: 'Katten zijn beter' is een MENING die NIET in de tekst staat. Cito wil dat je uit de TEKST haalt, niet eigen mening." },
+            { type: "stap", tekst: "Pas op: 'Katten zijn beter' is een MENING die NIET in de tekst staat. De toets wil dat je uit de TEKST haalt, niet eigen mening." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Antwoord MOET uit de tekst komen. Niet vermeld in tekst = niet hoofdgedachte." }],
           niveaus: {
@@ -115,7 +115,7 @@ const steps = [
 
   {
     title: "Hoofdgedachte vinden — strategieën",
-    explanation: "**Hoe vind je de hoofdgedachte?**\n\n**1. Lees de titel** — geeft vaak een hint.\n• Titel 'Voordelen van fietsen' → hoofdgedachte = 'fietsen heeft voordelen'.\n\n**2. Lees de eerste zin van elke alinea** — vaak 'topic-sentence'.\n• Eerste zinnen geven samenvatting van de alinea.\n\n**3. Lees de laatste alinea / conclusie** — geeft samenvatting.\n\n**4. Vraag: 'Wat is het rode draadje?'**\n• Wat komt steeds terug?\n• Wat is het hoofdthema dat alle alinea's verbindt?\n\n**5. Sleutelwoorden tellen**:\n• Welke woorden komen vaak voor?\n• Bijv. tekst over 'vrienden' — hoofdgedachte gaat over vriendschap.\n\n**Cito-fout 1**:\nKiezen voor een **detail** in plaats van het hoofdpunt.\n• Tekst over voetbal: detail = 'Messi is wereldspeler'.\n• Hoofd = 'voetbal is populair wereldwijd'.\n\n**Cito-fout 2**:\nKiezen voor een **te algemene** stelling.\n• Te algemeen: 'sporten zijn leuk'.\n• Beter: 'voetbal is wereldwijd populair'.\n\n**Cito-fout 3**:\nKiezen voor een **mening die NIET in tekst staat**.\n• Tekst zegt nergens dat 'tennis beter is dan voetbal'.\n• Antwoord moet komen uit de tekst.\n\n**Cito-tip**:\nHet juiste antwoord is meestal in **eigen woorden** wat de tekst zegt — niet een letterlijke quote. Maar wel binnen de tekst-info.",
+    explanation: "**Hoe vind je de hoofdgedachte?**\n\n**1. Lees de titel** — geeft vaak een hint.\n• Titel 'Voordelen van fietsen' → hoofdgedachte = 'fietsen heeft voordelen'.\n\n**2. Lees de eerste zin van elke alinea** — vaak 'topic-sentence'.\n• Eerste zinnen geven samenvatting van de alinea.\n\n**3. Lees de laatste alinea / conclusie** — geeft samenvatting.\n\n**4. Vraag: 'Wat is het rode draadje?'**\n• Wat komt steeds terug?\n• Wat is het hoofdthema dat alle alinea's verbindt?\n\n**5. Sleutelwoorden tellen**:\n• Welke woorden komen vaak voor?\n• Bijv. tekst over 'vrienden' — hoofdgedachte gaat over vriendschap.\n\n**Toets-fout 1**:\nKiezen voor een **detail** in plaats van het hoofdpunt.\n• Tekst over voetbal: detail = 'Messi is wereldspeler'.\n• Hoofd = 'voetbal is populair wereldwijd'.\n\n**Toets-fout 2**:\nKiezen voor een **te algemene** stelling.\n• Te algemeen: 'sporten zijn leuk'.\n• Beter: 'voetbal is wereldwijd populair'.\n\n**Toets-fout 3**:\nKiezen voor een **mening die NIET in tekst staat**.\n• Tekst zegt nergens dat 'tennis beter is dan voetbal'.\n• Antwoord moet komen uit de tekst.\n\n**Toets-tip**:\nHet juiste antwoord is meestal in **eigen woorden** wat de tekst zegt — niet een letterlijke quote. Maar wel binnen de tekst-info.",
     checks: [
       {
         q: "Waar **vind je vaak** de hoofdgedachte in een tekst?",
@@ -126,13 +126,13 @@ const steps = [
           stappen: [
             { titel: "Schrijvers zetten hoofdgedachte vaak vooraan", tekst: "Veel schrijvers beginnen met hun belangrijkste boodschap — dan weet de lezer waar het over gaat. Daarom: vaak in **titel + eerste alinea**." },
             { titel: "Kijk ook naar de laatste alinea", tekst: "Goede schrijvers HERHALEN de hoofdgedachte in de conclusie, soms in andere bewoording. Dus eerste én laatste alinea zijn beide goede zoek-plekken." },
-            { titel: "Cito-strategie", tekst: "Bij Cito-leesbegrip: lees eerst titel, dan EERSTE ZIN van elke alinea. Dat zijn de 'topic-sentences'. Vat samen → dat is meestal de hoofdgedachte." },
+            { titel: "Toets-strategie", tekst: "Bij Toets-leesbegrip: lees eerst titel, dan EERSTE ZIN van elke alinea. Dat zijn de 'topic-sentences'. Vat samen → dat is meestal de hoofdgedachte." },
           ],
           woorden: [
             { woord: "topic-sentence", uitleg: "Eerste zin van een alinea — samenvatting van wat erin staat." },
             { woord: "conclusie", uitleg: "Laatste alinea — vaak herhaling van hoofdgedachte." },
           ],
-          theorie: "Cito-tip: TITEL + EERSTE + LAATSTE alinea = 3 plekken om hoofdgedachte te vinden. Werkt voor 80%+ van teksten.",
+          theorie: "Toets-tip: TITEL + EERSTE + LAATSTE alinea = 3 plekken om hoofdgedachte te vinden. Werkt voor 80%+ van teksten.",
           voorbeelden: [
             { type: "stap", tekst: "Titel: 'Voordelen van fietsen' → hoofdgedachte = 'fietsen heeft veel voordelen'." },
             { type: "stap", tekst: "Eerste zin: 'Plastic is een groot probleem voor de zee.' → hoofdgedachte = dit." },
@@ -160,7 +160,7 @@ const steps = [
             { woord: "topic-sentence", uitleg: "Eerste zin van alinea, vaak de hoofdgedachte." },
             { woord: "bewijs", uitleg: "Zinnen die de hoofdgedachte ondersteunen (onderzoek, voorbeelden)." },
           ],
-          theorie: "Cito-leesstrategie hoofdgedachte:\n1. Lees zin 1 — kandidaat hoofdgedachte.\n2. Lezen volgende zinnen: bewijzen ze zin 1? Dan is zin 1 = hoofd.\n3. Antwoord MOET uit tekst komen, niet eigen kennis.",
+          theorie: "Toets-leesstrategie hoofdgedachte:\n1. Lees zin 1 — kandidaat hoofdgedachte.\n2. Lezen volgende zinnen: bewijzen ze zin 1? Dan is zin 1 = hoofd.\n3. Antwoord MOET uit tekst komen, niet eigen kennis.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst: 'Sporten is gezond. Het versterkt je hart. Het verbetert je humeur.' → hoofdgedachte = 'sporten is gezond'." },
             { type: "stap", tekst: "Tekst: 'Plastic in zee is een probleem. 8 miljoen ton komt erin per jaar. Dieren stikken erin.' → hoofdgedachte = 'plastic in zee is een probleem'." },
@@ -174,13 +174,13 @@ const steps = [
         },
       },
       {
-        q: "Cito-fout — wat is **GEEN goede hoofdgedachte**?",
+        q: "Toets-fout — wat is **GEEN goede hoofdgedachte**?",
         options: ["Een detail uit de tekst","Wat tekst zegt in eigen woorden","Wat tekst herhaalt over alle alinea's","De rode draad"],
         answer: 0,
         wrongHints: [null, "Wel goed — eigen woorden gebruiken is juist sterk.", "Wel goed — wat steeds terugkomt = hoofdgedachte.", "Wel goed — synoniem voor hoofdgedachte."],
         uitlegPad: {
           stappen: [
-            { titel: "Cito-instinker: kies geen detail", tekst: "Bij hoofdgedachte-vragen zitten in de opties vaak DETAILS uit de tekst — die zien er bekend uit en lijken juist. Maar een detail is NIET de hoofdgedachte." },
+            { titel: "Toets-instinker: kies geen detail", tekst: "Bij hoofdgedachte-vragen zitten in de opties vaak DETAILS uit de tekst — die zien er bekend uit en lijken juist. Maar een detail is NIET de hoofdgedachte." },
             { titel: "Wat is een detail vs hoofdgedachte?", tekst: "Tekst over voetbal:\n• **DETAIL**: 'Messi heeft 8 Gouden Ballen gewonnen' (specifieke info)\n• **HOOFD**: 'voetbal is wereldwijd populair' (algemene rode draad)\nDe hoofdgedachte staat boven de details — het is wat alle details ONDERSTEUNEN." },
             { titel: "Hoe herken je een detail-val?", tekst: "Optie is een detail als:\n• Het maar over 1 alinea gaat (geen rode draad).\n• Het een specifiek getal / naam / feit is.\n• Andere alinea's zeggen er niets over.\nDe hoofdgedachte dekt ALLE alinea's." },
           ],
@@ -188,12 +188,12 @@ const steps = [
             { woord: "detail", uitleg: "Klein specifiek feit binnen tekst." },
             { woord: "rode draad", uitleg: "Het thema dat door alle alinea's loopt." },
           ],
-          theorie: "Cito-truc detail vs hoofdgedachte: lees elke optie + vraag 'klopt dit voor de HELE tekst, of slechts 1 zin?'. Als alleen voor 1 zin → detail. Als voor hele tekst → hoofdgedachte.",
+          theorie: "Toets-truc detail vs hoofdgedachte: lees elke optie + vraag 'klopt dit voor de HELE tekst, of slechts 1 zin?'. Als alleen voor 1 zin → detail. Als voor hele tekst → hoofdgedachte.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst over fietsen. Detail: 'Mijn oom fietst 20 km'. Hoofd: 'fietsen is gezond'. De hoofd dekt de hele tekst, de detail is 1 anekdote." },
             { type: "stap", tekst: "Pas op: 'Wat tekst herhaalt over alle alinea's' KLINKT als de hoofdgedachte want = rode draad. Niet weggooien als afleider!" },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Hoofd = ALLE alinea's. Detail = 1 alinea / 1 zin. Detail-opties zijn val-strikken bij Cito." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Hoofd = ALLE alinea's. Detail = 1 alinea / 1 zin. Detail-opties zijn val-strikken bij de Doorstroomtoets." }],
           niveaus: {
             basis: "Een detail uit de tekst is GEEN hoofdgedachte.",
             simpeler: "Detail = klein stukje uit 1 zin. Hoofdgedachte = rode draad door HELE tekst.",
@@ -206,7 +206,7 @@ const steps = [
 
   {
     title: "Hoofdzaken vs bijzaken",
-    explanation: "**Hoofdzaak** = belangrijke informatie. **Bijzaak** = extra detail.\n\n**Hoe verschil zien**:\n• **Hoofdzaak**: ondersteunt direct de hoofdgedachte.\n• **Bijzaak**: leuk detail, maar niet essentieel.\n\n**Voorbeeld** — over hond:\n*'De hond is een trouwe huisdier. Hij beschermt zijn baasje en speelt graag. De buurman heeft ook een hond, een witte bouvier van 4 jaar oud. Honden eten meestal brokjes.'*\n\n**Hoofdzaken**:\n• Hond is trouwe huisdier.\n• Hij beschermt zijn baasje.\n• Hij speelt graag.\n\n**Bijzaken** *(weglaten kan)*:\n• 'Buurman heeft een witte bouvier van 4 jaar' — leuk detail, maar niet over 'hond als huisdier'.\n• 'Honden eten brokjes' — wel waar, maar gaat naast het hoofdpunt.\n\n**Truc — kun je het schrappen?**\nLees de tekst zonder een zin. Verandert de hoofdboodschap? Nee → bijzaak. Ja → hoofdzaak.\n\n**Soorten bijzaken**:\n1. **Voorbeelden** *(soms hoofdzaak, soms bij)*.\n2. **Anecdotes** — verhaaltjes (bij).\n3. **Cijfers en details** — extra info (bij).\n4. **Zijwegen** — info die het onderwerp ietsje raakt (bij).\n\n**Cito-vraag-typen**:\n• 'Welke zin is een **bijzaak**?'\n• 'Welke informatie is **NIET** essentieel?'\n• 'Welk feit kun je **weglaten** zonder de boodschap te verliezen?'",
+    explanation: "**Hoofdzaak** = belangrijke informatie. **Bijzaak** = extra detail.\n\n**Hoe verschil zien**:\n• **Hoofdzaak**: ondersteunt direct de hoofdgedachte.\n• **Bijzaak**: leuk detail, maar niet essentieel.\n\n**Voorbeeld** — over hond:\n*'De hond is een trouwe huisdier. Hij beschermt zijn baasje en speelt graag. De buurman heeft ook een hond, een witte bouvier van 4 jaar oud. Honden eten meestal brokjes.'*\n\n**Hoofdzaken**:\n• Hond is trouwe huisdier.\n• Hij beschermt zijn baasje.\n• Hij speelt graag.\n\n**Bijzaken** *(weglaten kan)*:\n• 'Buurman heeft een witte bouvier van 4 jaar' — leuk detail, maar niet over 'hond als huisdier'.\n• 'Honden eten brokjes' — wel waar, maar gaat naast het hoofdpunt.\n\n**Truc — kun je het schrappen?**\nLees de tekst zonder een zin. Verandert de hoofdboodschap? Nee → bijzaak. Ja → hoofdzaak.\n\n**Soorten bijzaken**:\n1. **Voorbeelden** *(soms hoofdzaak, soms bij)*.\n2. **Anecdotes** — verhaaltjes (bij).\n3. **Cijfers en details** — extra info (bij).\n4. **Zijwegen** — info die het onderwerp ietsje raakt (bij).\n\n**toetsvraag-typen**:\n• 'Welke zin is een **bijzaak**?'\n• 'Welke informatie is **NIET** essentieel?'\n• 'Welk feit kun je **weglaten** zonder de boodschap te verliezen?'",
     checks: [
       {
         q: "Tekst: 'Fietsen is gezond. Het is goed voor je hart en je spieren. Mijn oom Henk fietst elke dag 20 km.'\n\n**Welke zin is een bijzaak**?",
@@ -224,7 +224,7 @@ const steps = [
             { woord: "bijzaak", uitleg: "Detail/anecdote — leuk, maar kan weg." },
             { woord: "schrap-test", uitleg: "Truc: lees zonder die zin — verandert de boodschap?" },
           ],
-          theorie: "Cito-truc hoofd-bij: bijzaken zijn vaak:\n• **Anecdotes** ('mijn oom...', 'ik herinner me...')\n• **Specifieke voorbeelden** met eigennamen\n• **Cijfers/details** die over 1 geval gaan\nHoofdzaken zijn algemeen + dekken het hoofdthema.",
+          theorie: "Toets-truc hoofd-bij: bijzaken zijn vaak:\n• **Anecdotes** ('mijn oom...', 'ik herinner me...')\n• **Specifieke voorbeelden** met eigennamen\n• **Cijfers/details** die over 1 geval gaan\nHoofdzaken zijn algemeen + dekken het hoofdthema.",
           voorbeelden: [
             { type: "stap", tekst: "*'Honden zijn loyaal. Ze beschermen je. Mijn buurman heeft een Labrador.'* → 'buurman/Labrador' = bijzaak (anecdote)." },
             { type: "stap", tekst: "*'Lezen is goed. Het ontwikkelt je woordenschat. Ik las gisteren een boek over piraten.'* → 'gisteren piraten-boek' = bijzaak." },
@@ -280,7 +280,7 @@ const steps = [
             { woord: "schrap-test", uitleg: "Truc: lees tekst zonder zin — verandert boodschap?" },
             { woord: "essentieel", uitleg: "Onmisbaar — verwijderen = boodschap valt uit elkaar." },
           ],
-          theorie: "Cito-truc voor lange teksten met veel zinnen:\n1. Lees zin\n2. Mentaal schrappen\n3. Verandert kern-boodschap? → hoofd\n4. Geen verandering? → bijzaak\nWerkt voor ALLE tekstsoorten (informatief, betogend, verhalend, instructief).",
+          theorie: "Toets-truc voor lange teksten met veel zinnen:\n1. Lees zin\n2. Mentaal schrappen\n3. Verandert kern-boodschap? → hoofd\n4. Geen verandering? → bijzaak\nWerkt voor ALLE tekstsoorten (informatief, betogend, verhalend, instructief).",
           voorbeelden: [
             { type: "stap", tekst: "*'Lezen is goed. Het ontwikkelt woordenschat. Mijn buurjongen leest nooit.'* → zin 3 schrappen verandert boodschap niet → bijzaak (negatieve anecdote)." },
             { type: "stap", tekst: "*'Bewegen is gezond. Het versterkt hart en spieren. Onderzoekers raden 1 uur per dag aan.'* → alle 3 zinnen versterken elkaar → ALLE 3 hoofdzaak." },
@@ -298,7 +298,7 @@ const steps = [
 
   {
     title: "Samenvatting maken",
-    explanation: "**Samenvatten** = de tekst korter maken zonder de hoofdboodschap te verliezen.\n\n**Goede samenvatting bevat**:\n1. **Hoofdgedachte** (1 zin).\n2. **Hoofdzaken** *(belangrijke punten)*.\n3. **In eigen woorden** (niet kopiëren).\n4. **Korter dan origineel** *(meestal ~25-30%)*.\n\n**Goede samenvatting bevat NIET**:\n• Bijzaken / details.\n• Voorbeelden (tenzij essentieel).\n• Eigen mening (alleen wat tekst zegt).\n• Letterlijke kopie van zinnen.\n\n**Stappen om samen te vatten**:\n1. **Lees** de hele tekst eerst.\n2. **Onderstreep** hoofdpunten in elke alinea.\n3. **Schrap** bijzaken.\n4. **Schrijf** in 3-5 zinnen wat de tekst zegt.\n5. **Controleer**: klopt jouw samenvatting met origineel?\n\n**Voorbeeld**:\n**Tekst**: *'Vrienden zijn belangrijk. Ze geven je steun in moeilijke tijden. Mijn vriend Jan heeft me geholpen toen ik mijn fiets kwijt was. Vrienden vieren ook leuke momenten met je. Onderzoek toont dat mensen met vrienden langer leven.'*\n\n**Samenvatting**: *'Vrienden zijn belangrijk: ze geven steun, vieren leuke momenten, en mensen met vrienden leven zelfs langer.'*\n\n*(Zit niet in: 'mijn vriend Jan en de fiets' — dat is een bijzaak/anecdote)*.\n\n**Cito-tip**:\nGoede samenvatting kan **opnieuw uitgelegd** worden door iemand die de tekst niet kent. Test: leg de samenvatting voor → snapt iemand het?",
+    explanation: "**Samenvatten** = de tekst korter maken zonder de hoofdboodschap te verliezen.\n\n**Goede samenvatting bevat**:\n1. **Hoofdgedachte** (1 zin).\n2. **Hoofdzaken** *(belangrijke punten)*.\n3. **In eigen woorden** (niet kopiëren).\n4. **Korter dan origineel** *(meestal ~25-30%)*.\n\n**Goede samenvatting bevat NIET**:\n• Bijzaken / details.\n• Voorbeelden (tenzij essentieel).\n• Eigen mening (alleen wat tekst zegt).\n• Letterlijke kopie van zinnen.\n\n**Stappen om samen te vatten**:\n1. **Lees** de hele tekst eerst.\n2. **Onderstreep** hoofdpunten in elke alinea.\n3. **Schrap** bijzaken.\n4. **Schrijf** in 3-5 zinnen wat de tekst zegt.\n5. **Controleer**: klopt jouw samenvatting met origineel?\n\n**Voorbeeld**:\n**Tekst**: *'Vrienden zijn belangrijk. Ze geven je steun in moeilijke tijden. Mijn vriend Jan heeft me geholpen toen ik mijn fiets kwijt was. Vrienden vieren ook leuke momenten met je. Onderzoek toont dat mensen met vrienden langer leven.'*\n\n**Samenvatting**: *'Vrienden zijn belangrijk: ze geven steun, vieren leuke momenten, en mensen met vrienden leven zelfs langer.'*\n\n*(Zit niet in: 'mijn vriend Jan en de fiets' — dat is een bijzaak/anecdote)*.\n\n**Toets-tip**:\nGoede samenvatting kan **opnieuw uitgelegd** worden door iemand die de tekst niet kent. Test: leg de samenvatting voor → snapt iemand het?",
     checks: [
       {
         q: "Wat hoort **NIET** in een goede samenvatting?",
@@ -316,7 +316,7 @@ const steps = [
             { woord: "objectief", uitleg: "Zonder eigen mening — alleen wat de feiten zeggen." },
             { woord: "recensie", uitleg: "Mening-stuk over een tekst/film/boek (= apart van samenvatting)." },
           ],
-          theorie: "Cito-checklist goede samenvatting:\n✓ Korter dan origineel (~25-30%)\n✓ Hoofdgedachte expliciet\n✓ Hoofdzaken (2-3)\n✓ Eigen woorden\n✗ Geen mening\n✗ Geen bijzaken\n✗ Geen letterlijke kopie",
+          theorie: "Toets-checklist goede samenvatting:\n✓ Korter dan origineel (~25-30%)\n✓ Hoofdgedachte expliciet\n✓ Hoofdzaken (2-3)\n✓ Eigen woorden\n✗ Geen mening\n✗ Geen bijzaken\n✗ Geen letterlijke kopie",
           voorbeelden: [
             { type: "stap", tekst: "WEL: 'Volgens de schrijver is X gezond omdat Y.' (objectief, citeert tekst)" },
             { type: "stap", tekst: "NIET: 'X is super gezond, iedereen zou meer X moeten doen!' (eigen mening, niet uit tekst)" },
@@ -344,7 +344,7 @@ const steps = [
             { woord: "samenvatten", uitleg: "Kort maken zonder hoofdboodschap te verliezen." },
             { woord: "uitbreiden", uitleg: "Langer maken — tegenovergestelde van samenvatten." },
           ],
-          theorie: "Cito-vuistregel samenvatting:\n• ~25-30% van originele lengte\n• Hoofdgedachte expliciet\n• Hoofdzaken aanwezig\n• Bijzaken weg\n• Eigen woorden (geen kopie)",
+          theorie: "Toets-vuistregel samenvatting:\n• ~25-30% van originele lengte\n• Hoofdgedachte expliciet\n• Hoofdzaken aanwezig\n• Bijzaken weg\n• Eigen woorden (geen kopie)",
           voorbeelden: [
             { type: "stap", tekst: "Tekst 400 woorden → samenvatting 100-120 woorden." },
             { type: "stap", tekst: "Krantenartikel 600 woorden → samenvatting 150-200 woorden." },
@@ -390,7 +390,7 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — samenvatten mix",
+    title: "Toets-eindopdracht — samenvatten mix",
     explanation: "Mix-toets: hoofdgedachte vinden, hoofd/bij scheiden, samenvatten.",
     checks: [
       {
@@ -408,7 +408,7 @@ const steps = [
             { woord: "topic-sentence", uitleg: "Eerste zin van alinea — vaak de hoofdgedachte." },
             { woord: "bewijs / voorbeeld", uitleg: "Concrete details die de hoofdgedachte ondersteunen." },
           ],
-          theorie: "Cito-truc lees-strategie: lees ZIN 1 eerst. Vaak is dat al de hoofdgedachte. Daarna check je: ondersteunen de andere zinnen die uitspraak? Zo ja → bevestigd.",
+          theorie: "Toets-truc lees-strategie: lees ZIN 1 eerst. Vaak is dat al de hoofdgedachte. Daarna check je: ondersteunen de andere zinnen die uitspraak? Zo ja → bevestigd.",
           voorbeelden: [
             { type: "stap", tekst: "*'Honden zijn loyaal. Ze beschermen je. Ze spelen graag.'* → zin 1 = hoofdgedachte. Andere zinnen = bewijs." },
             { type: "stap", tekst: "*'Plastic is een probleem. 8 miljoen ton per jaar in zee. Dieren stikken erin.'* → zin 1 = hoofdgedachte. Cijfers = bewijs." },
@@ -435,7 +435,7 @@ const steps = [
             { woord: "anecdote", uitleg: "Persoonlijk verhaaltje binnen tekst — meestal bijzaak." },
             { woord: "algemeen feit", uitleg: "Geldt voor iedereen — meestal hoofdzaak." },
           ],
-          theorie: "Cito-truc bijzaak-herkenning in algemene teksten:\n• Eigennaam + actie = bijna altijd anecdote = bijzaak\n• 'Mijn / mijn oom / gisteren' = signaalwoorden bijzaak\n• Algemeen feit zonder personen = hoofdzaak",
+          theorie: "Toets-truc bijzaak-herkenning in algemene teksten:\n• Eigennaam + actie = bijna altijd anecdote = bijzaak\n• 'Mijn / mijn oom / gisteren' = signaalwoorden bijzaak\n• Algemeen feit zonder personen = hoofdzaak",
           voorbeelden: [
             { type: "stap", tekst: "Tekst over honden: 'Honden zijn loyaal' = hoofd. 'Mijn buurman heeft een Labrador' = bijzaak." },
             { type: "stap", tekst: "Tekst over fietsen: 'Fietsen is gezond' = hoofd. 'Oom Henk fietst 20 km per dag' = bijzaak." },
@@ -458,7 +458,7 @@ const steps = [
           stappen: [
             { titel: "Waarom NIET letterlijk kopiëren?", tekst: "Een **samenvatting** moet laten zien dat je de tekst zelf hebt **begrepen**. Als je zinnen letterlijk overschrijft, laat je alleen zien dat je kunt **kopiëren** — niet dat je weet wat er staat." },
             { titel: "Wat je WEL doet bij goede samenvatting", tekst: "1. **Eigen woorden** — herschrijf in je eigen taal\n2. **Hoofdpunten kiezen** — alleen de belangrijkste zinnen\n3. **Kort houden** — ~25-30% van origineel\n4. **Logische volgorde** — eerst hoofdgedachte, dan steunende info" },
-            { titel: "Cito-instinker bij deze vraag", tekst: "De vraag vraagt: 'Wat is **NIET** goed?' Let op het woordje **NIET** — je moet de FOUTE strategie aanvinken. De 3 goede strategieën zijn afleiders. Bij NIET-vragen altijd extra goed lezen wat er staat:\n• 'NIET in samenvatting' → kies wat er NIET in hoort\n• 'WEL in samenvatting' → kies wat er WEL in hoort\nVerwisselen = direct fout, zelfs als je inhoud snapt." },
+            { titel: "Toets-instinker bij deze vraag", tekst: "De vraag vraagt: 'Wat is **NIET** goed?' Let op het woordje **NIET** — je moet de FOUTE strategie aanvinken. De 3 goede strategieën zijn afleiders. Bij NIET-vragen altijd extra goed lezen wat er staat:\n• 'NIET in samenvatting' → kies wat er NIET in hoort\n• 'WEL in samenvatting' → kies wat er WEL in hoort\nVerwisselen = direct fout, zelfs als je inhoud snapt." },
           ],
           woorden: [
             { woord: "strategie", uitleg: "Aanpak / manier om iets te doen." },
@@ -486,7 +486,7 @@ const steps = [
           stappen: [
             { titel: "Lees het tekst-onderwerp goed", tekst: "De tekst gaat over **VOORdelen** van fietsen. Het sleutelwoord is **'voordelen'** = positieve kanten, goede dingen. Een hoofdgedachte moet bij DIT onderwerp passen." },
             { titel: "Match: past de zin bij 'voordelen'?", tekst: "• A: 'Fietsen is **gevaarlijk**' → dat is een NADEEL, NIET een voordeel. → **past NIET** → slechte hoofdgedachte\n• B: 'Fietsen is gezond' → voordeel ✓\n• C: 'Fietsen is milieuvriendelijk' → voordeel ✓\n• D: 'Fietsen is goedkoop' → voordeel ✓\n\nAlleen A wijkt af van het onderwerp." },
-            { titel: "Cito-truc: positief vs negatief onderwerp", tekst: "Bij Cito-vragen 'kies de slechte hoofdgedachte':\n• Zoek altijd het sleutelwoord in het onderwerp (voordelen / nadelen / gevolgen / oorzaken / oplossingen).\n• Een optie die in TEGEN-richting wijst = slechte hoofdgedachte.\nVoorbeeld:\n• Tekst over 'gevaren van roken' → 'roken is leuk' = slechte hoofdgedachte (gevaar = negatief, leuk = positief)" },
+            { titel: "Toets-truc: positief vs negatief onderwerp", tekst: "Bij toetsvragen 'kies de slechte hoofdgedachte':\n• Zoek altijd het sleutelwoord in het onderwerp (voordelen / nadelen / gevolgen / oorzaken / oplossingen).\n• Een optie die in TEGEN-richting wijst = slechte hoofdgedachte.\nVoorbeeld:\n• Tekst over 'gevaren van roken' → 'roken is leuk' = slechte hoofdgedachte (gevaar = negatief, leuk = positief)" },
           ],
           woorden: [
             { woord: "voordeel", uitleg: "Iets goeds, positieve kant." },
@@ -515,7 +515,7 @@ const steps = [
           stappen: [
             { titel: "Waar plaats een schrijver de hoofdgedachte?", tekst: "Schrijvers willen dat de lezer **snel begrijpt** waarover de tekst gaat. Daarom zetten ze de hoofdgedachte op een **opvallende plek**:\n• **Titel** — meteen zichtbaar bovenaan\n• **Eerste zin** (van eerste alinea) — opening\n• Soms herhaald in **laatste zin/alinea** als conclusie" },
             { titel: "Waarom NIET in voetnoten/plaatjes/bibliografie?", tekst: "• **Voetnoten** = extra info met bron-vermelding, onderaan pagina. Geen hoofdgedachte.\n• **Plaatjes** = ondersteuning bij tekst, geen tekst zelf. Een grafiek kan illustreren, niet uitleggen wat de tekst zegt.\n• **Bibliografie** = lijst van geraadpleegde boeken/sites. Geen inhoud, alleen bronnen." },
-            { titel: "Cito-truc: 3-plekken-check", tekst: "Als je snel de hoofdgedachte zoekt, check in deze volgorde:\n1. **Titel** — bevat vaak het hoofd-onderwerp\n2. **Eerste zin** — vaak meteen de stelling\n3. **Laatste zin** — vaak de conclusie\nBij Cito-tijdsdruk kun je vaak 80% van de hoofdgedachte vinden via deze 3 plekken zonder de hele tekst te lezen." },
+            { titel: "Toets-truc: 3-plekken-check", tekst: "Als je snel de hoofdgedachte zoekt, check in deze volgorde:\n1. **Titel** — bevat vaak het hoofd-onderwerp\n2. **Eerste zin** — vaak meteen de stelling\n3. **Laatste zin** — vaak de conclusie\nBij Toets-tijdsdruk kun je vaak 80% van de hoofdgedachte vinden via deze 3 plekken zonder de hele tekst te lezen." },
           ],
           woorden: [
             { woord: "voetnoot", uitleg: "Aanvullende notitie onderaan pagina, vaak met bron-verwijzing." },
@@ -571,7 +571,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Signaalwoorden voor conclusie", tekst: "Aan het einde van een betogende tekst staat vaak een **conclusie** = de hoofdgedachte samengevat. Signaalwoorden die dit aanduiden:\n• **Dus** ('… dus is recyclen belangrijk')\n• **Daarom** ('… daarom moeten we minder vlees eten')\n• **Kortom** ('… kortom, lezen is goed voor je brein')\n• **Concluderend** ('… concluderend: deze methode werkt')\n• **Tot slot** ('… tot slot blijft de boodschap…')\n• **Samengevat** ('… samengevat:…')" },
-            { titel: "Cito-truc: 4 signaalwoord-groepen", tekst: "Cito vraagt vaak naar signaalwoorden:\n• **Conclusie**: dus, daarom, kortom, samengevat\n• **Tegenstelling**: maar, echter, hoewel, daarentegen\n• **Voorbeeld**: bijvoorbeeld, namelijk, zoals\n• **Volgorde**: eerst, daarna, vervolgens, ten slotte\n\nElke groep helpt verschillende vraag-types:\n• Hoofdgedachte? → zoek **conclusie**-signalen\n• Argument-vraag? → kijk **tegenstelling** + **voorbeeld**" },
+            { titel: "Toets-truc: 4 signaalwoord-groepen", tekst: "De toets vraagt vaak naar signaalwoorden:\n• **Conclusie**: dus, daarom, kortom, samengevat\n• **Tegenstelling**: maar, echter, hoewel, daarentegen\n• **Voorbeeld**: bijvoorbeeld, namelijk, zoals\n• **Volgorde**: eerst, daarna, vervolgens, ten slotte\n\nElke groep helpt verschillende vraag-types:\n• Hoofdgedachte? → zoek **conclusie**-signalen\n• Argument-vraag? → kijk **tegenstelling** + **voorbeeld**" },
             { titel: "Voorbeeld in tekst", tekst: "*'Roken is slecht voor longen. Het kost geld. Het stinkt. **Daarom** raden artsen aan om niet te beginnen.'*\n\nLaatste zin met 'daarom' = hoofdgedachte van tekst. Drie redenen (longen/geld/stank) leiden naar conclusie 'niet beginnen met roken'." },
           ],
           woorden: [
@@ -579,12 +579,12 @@ const steps = [
             { woord: "conclusie", uitleg: "Slotzin/-alinea die samenvat wat tekst wil zeggen. Vaak hoofdgedachte." },
             { woord: "betoog", uitleg: "Tekst die mening verdedigt + lezer wil overtuigen." },
           ],
-          theorie: "**Cito-aanpak hoofdgedachte vinden** (3 plaatsen):\n1. **Titel** — vaak hoofdthema\n2. **Eerste zin** of eerste alinea — vaak introductie van hoofdgedachte\n3. **Laatste alinea** — vaak conclusie met signaalwoorden\n\nKijk waar signaalwoorden 'dus/daarom/kortom' staan = vaak hoofdgedachte daar.",
+          theorie: "**Toets-aanpak hoofdgedachte vinden** (3 plaatsen):\n1. **Titel** — vaak hoofdthema\n2. **Eerste zin** of eerste alinea — vaak introductie van hoofdgedachte\n3. **Laatste alinea** — vaak conclusie met signaalwoorden\n\nKijk waar signaalwoorden 'dus/daarom/kortom' staan = vaak hoofdgedachte daar.",
           voorbeelden: [
             { type: "stap", tekst: "'Kinderen leren beter na ontbijt. Wetenschappers bewezen dit. Daarom: ALTIJD ontbijten voor school.' → hoofdgedachte = laatste zin met 'daarom'." },
             { type: "stap", tekst: "'Plastic vervuilt zeeën. Diereet plastic. Kortom: minder plastic kopen.' → 'kortom' wijst op hoofdgedachte." },
           ],
-          basiskennis: [{ onderwerp: "Niet 'maar'", uitleg: "Tegenstelling-signaalwoorden (maar, hoewel) wijzen op nuance — niet conclusie. Cito-instinker." }],
+          basiskennis: [{ onderwerp: "Niet 'maar'", uitleg: "Tegenstelling-signaalwoorden (maar, hoewel) wijzen op nuance — niet conclusie. Toets-instinker." }],
           niveaus: { basis: "Dus / daarom / kortom.", simpeler: "Signaalwoorden voor conclusie aan einde tekst: 'dus', 'daarom', 'kortom', 'samengevat'. Daar staat vaak hoofdgedachte.", nogSimpeler: "Dus/daarom" },
         },
       },
@@ -597,13 +597,13 @@ const steps = [
           stappen: [
             { titel: "Toepassing signaalwoord-truc", tekst: "Net geleerd: 'dus' wijst op conclusie. In deze tekst:\n• Zin 1: scholen verbieden mobiel\n• Zin 2: kinderen concentreren beter (effect)\n• Zin 3: **'Dus** is dit verbod een goede zaak'\n\nLaatste zin = hoofdgedachte = **mobielverbod is positief**." },
             { titel: "Korte samenvatting maken", tekst: "Hoofdgedachte = de **kern in 1 zin**. Voor deze tekst:\n• **Mobielverbod op scholen is een goede zaak** (= optie A)\n\nAlternatieven afvallen:\n• B 'duur' — niet genoemd\n• C 'streng' — focus op effect, niet streng-zijn\n• D 'oneerlijk' — geen tegenstem in tekst\n\nKies altijd antwoord dat zin-3-conclusie BEST samenvat." },
-            { titel: "Cito-tip: betogende tekst", tekst: "**Betogende tekst** = schrijver wil overtuigen. Structuur:\n1. Stelling/probleem\n2. Argumenten + bewijs\n3. Conclusie (= hoofdgedachte)\n\nDeze 3-stappen-structuur komt veel voor in Cito-opgaven. Herkennen helpt om hoofdgedachte snel te vinden — zit meestal **aan einde**." },
+            { titel: "Toets-tip: betogende tekst", tekst: "**Betogende tekst** = schrijver wil overtuigen. Structuur:\n1. Stelling/probleem\n2. Argumenten + bewijs\n3. Conclusie (= hoofdgedachte)\n\nDeze 3-stappen-structuur komt veel voor in Toets-opgaven. Herkennen helpt om hoofdgedachte snel te vinden — zit meestal **aan einde**." },
           ],
           woorden: [
             { woord: "betogende tekst", uitleg: "Tekst die mening verdedigt + lezer wil overtuigen." },
             { woord: "argument", uitleg: "Reden waarom iets klopt of waarom iemand iets vindt." },
           ],
-          theorie: "Bij Cito-vraag 'wat is hoofdgedachte?' bij betoogtekst:\n1. **Zoek conclusie-signaal** in laatste alinea\n2. **Vat zin om** in eenvoudige woorden\n3. **Kies optie** die zin-conclusie best raakt\n4. **Negeer** opties over details die niet in tekst staan",
+          theorie: "Bij toetsvraag 'wat is hoofdgedachte?' bij betoogtekst:\n1. **Zoek conclusie-signaal** in laatste alinea\n2. **Vat zin om** in eenvoudige woorden\n3. **Kies optie** die zin-conclusie best raakt\n4. **Negeer** opties over details die niet in tekst staan",
           voorbeelden: [
             { type: "stap", tekst: "Tekst over fietshelm met 'daarom adviseren artsen helm' → hoofdgedachte = 'fietshelm dragen is verstandig'." },
           ],
@@ -620,13 +620,13 @@ const steps = [
           stappen: [
             { titel: "Doel van samenvatten", tekst: "Een **samenvatting** vat in **eigen woorden** + **kort** een tekst samen. Hoort:\n• **20-30% van origineel** (vuistregel)\n• Alle **hoofdpunten** bevatten\n• Geen **details / voorbeelden** uitgebreid\n• Geen **eigen mening** toevoegen\n• Lopende tekst (geen lijst)" },
             { titel: "Wat is TE LANG?", tekst: "Te lang = **>40-50% van origineel**. Dan ben je niet meer aan het samenvatten maar **herschrijven**. Veel mensen doen dit fout:\n• Schrijven alle voorbeelden over\n• Citeren te veel\n• Houden alle bijzaken erin\n\n**Doel samenvatting**: lezer KAN tekst overslaan + toch hoofdgedachte begrijpen. Te lang = doel mislukt." },
-            { titel: "Cito-tip: aanpak", tekst: "**Samenvatten-stappenplan**:\n1. **Lees** tekst 2× — eerst overzicht, dan details\n2. **Markeer** hoofdgedachte + hoofdpunten\n3. **Negeer** voorbeelden + details + bijzaken\n4. **Herschrijf** in eigen woorden — kort\n5. **Check** lengte: 20-30% van origineel?\n6. **Lees terug**: snapt iemand het zonder het origineel?\n\nBij Cito: vaak **specifieke woordlimiet** (bv. 'maximaal 50 woorden')." },
+            { titel: "Toets-tip: aanpak", tekst: "**Samenvatten-stappenplan**:\n1. **Lees** tekst 2× — eerst overzicht, dan details\n2. **Markeer** hoofdgedachte + hoofdpunten\n3. **Negeer** voorbeelden + details + bijzaken\n4. **Herschrijf** in eigen woorden — kort\n5. **Check** lengte: 20-30% van origineel?\n6. **Lees terug**: snapt iemand het zonder het origineel?\n\nBij voor de toets: vaak **specifieke woordlimiet** (bv. 'maximaal 50 woorden')." },
           ],
           woorden: [
             { woord: "samenvatting", uitleg: "Korte versie van tekst met alleen hoofdpunten. 20-30% origineel." },
             { woord: "hoofdpunt", uitleg: "Belangrijkste inhoud per alinea/onderdeel." },
           ],
-          theorie: "Goede samenvatting kenmerken (Cito-criteria):\n• Compleet — alle hoofdpunten\n• Beknopt — 20-30% lengte\n• Eigen woorden — geen letterlijk citeren\n• Objectief — geen mening\n• Logisch — zelfde volgorde meestal\n• Begrijpelijk — los van origineel\n\nFouten: te lang, mening toevoegen, voorbeelden meenemen, eigen interpretatie.",
+          theorie: "Goede samenvatting kenmerken (Toets-criteria):\n• Compleet — alle hoofdpunten\n• Beknopt — 20-30% lengte\n• Eigen woorden — geen letterlijk citeren\n• Objectief — geen mening\n• Logisch — zelfde volgorde meestal\n• Begrijpelijk — los van origineel\n\nFouten: te lang, mening toevoegen, voorbeelden meenemen, eigen interpretatie.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst 200 woorden → samenvatting ~50-60 woorden = OK." },
             { type: "stap", tekst: "Tekst 200 woorden → samenvatting 180 woorden = veel te lang, niet samengevat." },
@@ -650,7 +650,7 @@ const steps = [
       { q: "Een **goede samenvatting** lees je als?", options: ["Compactere versie die je het origineel laat overslaan","Een gewone tekst","Een vraag","Een lijst losse woorden"], answer: 0, wrongHints: [null, "Niet — korter.", "Niet — verklarend.", "Te kort meestal."] },
       { q: "Welke **vraag aan jezelf** helpt bij hoofdgedachte vinden?", options: ["Als ik in 1 zin uitleg waarover de tekst gaat — wat zeg ik?","Hoeveel woorden zijn er?","Wie heeft de tekst gemaakt?","Welke kleur is de letter?"], answer: 0, wrongHints: [null, "Telling.", "Niet inhoud.", "Niet relevant."] },
       { q: "Wat is een **bijzaak** in een nieuwsbericht?", options: ["Detail dat verhaal kleur geeft, maar niet essentieel","Het hoofd-feit","De titel","De datum"], answer: 0, wrongHints: [null, "Dat is hoofdzaak.", "Niet inhoud.", "Niet bijzaak."] },
-      { q: "Bij Cito vragen ze vaak: 'Wat is de hoofdgedachte?'. Welk type vraag is dat?", options: ["Inferentie","Letterlijk","Tellen","Mening"], answer: 0, wrongHints: [null, "Niet exact in tekst.", "Niet.", "Geen eigen mening."] },
+      { q: "Bij de Doorstroomtoets vragen ze vaak: 'Wat is de hoofdgedachte?'. Welk type vraag is dat?", options: ["Inferentie","Letterlijk","Tellen","Mening"], answer: 0, wrongHints: [null, "Niet exact in tekst.", "Niet.", "Geen eigen mening."] },
       { q: "*'De tekst gaat erover dat lezen belangrijk is en wat het oplevert.'* — kan dit de hoofdgedachte zijn?", options: ["Ja — onderwerp + kernidee","Nee","Alleen titel","Alleen samenvatting"], answer: 0, wrongHints: [null, "Wel.", "Te kort voor titel.", "Veel korter dan samenvatting."] },
       { q: "Wat doe je als de **eerste zin** géén kernzin is?", options: ["Verder zoeken in de alinea","Stoppen","Random kiezen","Niet samenvatten"], answer: 0, wrongHints: [null, "Niet — blijf zoeken.", "Niet — gericht zoeken.", "Wel — kan altijd."] },
       { q: "Welke vraag past niet bij een **goede samenvatting**?", options: ["Wat vind ik er zelf van?","Wat is de hoofdgedachte?","Welke hoofdpunten staan erin?","Wat is het tekstdoel?"], answer: 0, wrongHints: [null, "Wel — kerntaak.", "Wel — bouwstenen.", "Wel — context."] },
@@ -662,7 +662,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const samenvattenHoofdgedachtePo = {
   id: "samenvatten-hoofdgedachte-po",
-  title: "Samenvatten en hoofdgedachte — Cito groep 5-8",
+  title: "Samenvatten en hoofdgedachte — Doorstroomtoets groep 5-8",
   emoji: "💭",
   level: "groep5-8",
   subject: "begrijpend-lezen",
@@ -673,7 +673,7 @@ const samenvattenHoofdgedachtePo = {
     { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
   ],
   intro:
-    "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Cito-stijl. ~12 min.",
+    "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Doorstroomtoets-stijl. ~12 min.",
   triggerKeywords: [
     "samenvatten","samenvatting","hoofdgedachte","kerngedachte","onderwerp",
     "hoofdzaak","bijzaak","leesvaardigheid","studievaardigheden","tekst",

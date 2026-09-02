@@ -1,5 +1,5 @@
 // Leerpad: Oppervlakte en omtrek (groep 6-8 basisschool)
-// 6 stappen × 3 checks = 18 vragen. Cito-rekenen stof.
+// 6 stappen × 3 checks = 18 vragen. Toets-rekenen stof.
 // Stijl: praktische voorbeelden, geheugentrucs (rondje = omtrek, vlak = oppervlakte).
 
 const chapters = [
@@ -12,7 +12,7 @@ const chapters = [
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
+  theorie: "Toets-truc oppervlakte/omtrek: OMTREK = rondje langs de rand (in cm/m/km). OPPERVLAKTE = vlak vullen (in cm²/m²/km² — altijd kwadraat!). Geheugentrucs: omtrek = 'om-rondje', oppervlakte = 'opper-vlak'.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -21,7 +21,7 @@ const compact = (kern, niveaus, woorden = []) => ({
 const steps = [
   {
     title: "Stap 1 — Wat is het verschil tussen omtrek en oppervlakte?",
-    explanation: "**Omtrek** en **oppervlakte** zijn 2 verschillende dingen — vaak verward.\n\n**🔄 OMTREK**\n- Hoe lang is de **rand** rondom een figuur?\n- Loop met je vinger langs alle zijden — wat is de totale lengte?\n- Eenheid: **cm, m, km** (gewoon lengte)\n- Voorbeeld: hek om een tuin\n\n**🟦 OPPERVLAKTE**\n- Hoe veel **vlak** zit er IN een figuur?\n- Hoeveel kleine vierkantjes passen erin?\n- Eenheid: **cm², m², km², ha** (altijd kwadraat-symbool ²)\n- Voorbeeld: tapijt op de vloer leggen, tuin bezaaien met gras\n\n**🎯 Truc om ze uit elkaar te houden**:\n- **Om-trek** = je **trekt eromheen** (rondje)\n- **Opper-vlak** = het hele **vlak** binnen de rand\n\n**Cito-valkuil**: bij een vraag goed lezen: gaat het over **omheining** (omtrek) of over **bestrating** (oppervlakte)? Vraag in tweesporig: 'Hoeveel meter hek heb je nodig?' = omtrek. 'Hoeveel tegels heb je nodig?' = oppervlakte.",
+    explanation: "**Omtrek** en **oppervlakte** zijn 2 verschillende dingen — vaak verward.\n\n**🔄 OMTREK**\n- Hoe lang is de **rand** rondom een figuur?\n- Loop met je vinger langs alle zijden — wat is de totale lengte?\n- Eenheid: **cm, m, km** (gewoon lengte)\n- Voorbeeld: hek om een tuin\n\n**🟦 OPPERVLAKTE**\n- Hoe veel **vlak** zit er IN een figuur?\n- Hoeveel kleine vierkantjes passen erin?\n- Eenheid: **cm², m², km², ha** (altijd kwadraat-symbool ²)\n- Voorbeeld: tapijt op de vloer leggen, tuin bezaaien met gras\n\n**🎯 Truc om ze uit elkaar te houden**:\n- **Om-trek** = je **trekt eromheen** (rondje)\n- **Opper-vlak** = het hele **vlak** binnen de rand\n\n**Toets-valkuil**: bij een vraag goed lezen: gaat het over **omheining** (omtrek) of over **bestrating** (oppervlakte)? Vraag in tweesporig: 'Hoeveel meter hek heb je nodig?' = omtrek. 'Hoeveel tegels heb je nodig?' = oppervlakte.",
     emoji: "📐",
     checks: [
       {
@@ -86,7 +86,7 @@ const steps = [
   },
   {
     title: "Stap 2 — Omtrek rechthoek + vierkant",
-    explanation: "**Rechthoek**: 4 zijden, tegenoverliggende zijden gelijk.\n\n**Omtrek-formule rechthoek**:\n- O = 2 × **lengte** + 2 × **breedte**\n- Of: O = 2 × (L + B)\n- Of gewoon: alle 4 zijden optellen → L + B + L + B\n\n**Vierkant**: speciaal geval van rechthoek waar alle 4 zijden GELIJK zijn.\n\n**Omtrek-formule vierkant**:\n- O = 4 × **zijde**\n- Want alle 4 zijden zijn even lang\n\n**Voorbeeld 1**: rechthoek 7 cm × 3 cm.\n- Omtrek = 2×(7+3) = 2×10 = **20 cm**\n- Of: 7+3+7+3 = 20 cm\n\n**Voorbeeld 2**: vierkant met zijde 5 m.\n- Omtrek = 4 × 5 = **20 m**\n\n**Cito-valkuil**: soms krijg je de omtrek en MOET je de zijde terug-rekenen.\nVoorbeeld: omtrek vierkant = 24 cm. Wat is zijde? → 24 ÷ 4 = **6 cm**.",
+    explanation: "**Rechthoek**: 4 zijden, tegenoverliggende zijden gelijk.\n\n**Omtrek-formule rechthoek**:\n- O = 2 × **lengte** + 2 × **breedte**\n- Of: O = 2 × (L + B)\n- Of gewoon: alle 4 zijden optellen → L + B + L + B\n\n**Vierkant**: speciaal geval van rechthoek waar alle 4 zijden GELIJK zijn.\n\n**Omtrek-formule vierkant**:\n- O = 4 × **zijde**\n- Want alle 4 zijden zijn even lang\n\n**Voorbeeld 1**: rechthoek 7 cm × 3 cm.\n- Omtrek = 2×(7+3) = 2×10 = **20 cm**\n- Of: 7+3+7+3 = 20 cm\n\n**Voorbeeld 2**: vierkant met zijde 5 m.\n- Omtrek = 4 × 5 = **20 m**\n\n**Toets-valkuil**: soms krijg je de omtrek en MOET je de zijde terug-rekenen.\nVoorbeeld: omtrek vierkant = 24 cm. Wat is zijde? → 24 ÷ 4 = **6 cm**.",
     emoji: "⬛",
     checks: [
       {
@@ -153,7 +153,7 @@ const steps = [
   },
   {
     title: "Stap 3 — Oppervlakte rechthoek + vierkant",
-    explanation: "**Oppervlakte-formule rechthoek**:\n- A = **lengte × breedte**\n- A = L × B\n- Eenheid: cm² of m²\n\n**Oppervlakte-formule vierkant**:\n- A = **zijde × zijde**\n- A = z × z = z²\n- (vierkant van een getal — vandaar het ² in 'vierkante meter')\n\n**Voorbeeld 1**: rechthoek 7 cm × 3 cm.\n- Oppervlakte = 7 × 3 = **21 cm²**\n\n**Voorbeeld 2**: vierkant met zijde 5 m.\n- Oppervlakte = 5 × 5 = **25 m²**\n- Of: 5² = 25 m²\n\n**Eenheid-conversies** (handig om snel te kennen):\n- 1 m² = **10.000 cm²** (LET OP: niet 100, want 100×100 = 10.000)\n- 1 km² = **1.000.000 m²** (1000×1000)\n- 1 ha (hectare) = **10.000 m²** (= 100m × 100m vierkant)\n- 1 km² = **100 ha**\n\n**Cito-valkuil**: omrekenen lengte naar oppervlakte is anders dan gewone lengte! 1m = 100cm, maar 1m² = 10.000 cm² (NIET 100). Komt omdat OPPERVLAKTE 2 dimensies heeft.",
+    explanation: "**Oppervlakte-formule rechthoek**:\n- A = **lengte × breedte**\n- A = L × B\n- Eenheid: cm² of m²\n\n**Oppervlakte-formule vierkant**:\n- A = **zijde × zijde**\n- A = z × z = z²\n- (vierkant van een getal — vandaar het ² in 'vierkante meter')\n\n**Voorbeeld 1**: rechthoek 7 cm × 3 cm.\n- Oppervlakte = 7 × 3 = **21 cm²**\n\n**Voorbeeld 2**: vierkant met zijde 5 m.\n- Oppervlakte = 5 × 5 = **25 m²**\n- Of: 5² = 25 m²\n\n**Eenheid-conversies** (handig om snel te kennen):\n- 1 m² = **10.000 cm²** (LET OP: niet 100, want 100×100 = 10.000)\n- 1 km² = **1.000.000 m²** (1000×1000)\n- 1 ha (hectare) = **10.000 m²** (= 100m × 100m vierkant)\n- 1 km² = **100 ha**\n\n**Toets-valkuil**: omrekenen lengte naar oppervlakte is anders dan gewone lengte! 1m = 100cm, maar 1m² = 10.000 cm² (NIET 100). Komt omdat OPPERVLAKTE 2 dimensies heeft.",
     emoji: "⬛",
     checks: [
       {
@@ -185,7 +185,7 @@ const steps = [
         options: ["100 cm²", "1.000 cm²", "10.000 cm²", "1.000.000 cm²"],
         answer: 2,
         wrongHints: ["Oppervlakte is 2D — je moet in TWEE richtingen omrekenen, niet één. Hoeveel cm past er in 1 m?", "Tussen-getal — niet correct.", null, "Te veel — oppervlakte heeft twee dimensies, maar je hebt er te véél bijgeteld."],
-        explanation: "**1 m² = 100 cm × 100 cm = 10.000 cm²**. Truc: lengte-conversie ×100, maar oppervlakte (vierkant) ×100×100 = 10.000. Belangrijke Cito-trap!",
+        explanation: "**1 m² = 100 cm × 100 cm = 10.000 cm²**. Truc: lengte-conversie ×100, maar oppervlakte (vierkant) ×100×100 = 10.000. Belangrijke Toets-trap!",
         uitlegPad: compact(
           "1m = 100cm. 1m² = 100×100 = 10.000 cm² (NIET 100). Steeds 1 dimensie meer: m³ = 100³ = 1.000.000 cm³.",
           { basis: "10.000.", simpeler: "1m² = 100cm × 100cm = 10.000 cm².", nogSimpeler: "10.000" },
@@ -220,7 +220,7 @@ const steps = [
   },
   {
     title: "Stap 4 — Driehoek-oppervlakte",
-    explanation: "**Driehoek-oppervlakte** is iets lastiger dan rechthoek.\n\n**Formule**:\n- A = **½ × basis × hoogte**\n- Of: A = (basis × hoogte) ÷ 2\n\n**Waar kijk je voor de hoogte?** De **hoogte staat LOODRECHT (haaks)** op de basis. Niet een schuine zijde!\n\n**Voorbeeld**: driehoek met basis = 8 cm, hoogte = 5 cm.\n- A = ½ × 8 × 5 = **20 cm²**\n- Of: (8 × 5) ÷ 2 = 40 ÷ 2 = 20\n\n**Waarom ÷ 2?** Een driehoek is precies de **helft** van een rechthoek. Trek je een diagonaal in een rechthoek? Krijg je 2 driehoeken die samen de hele rechthoek vormen.\n\n**Bijzondere gevallen**:\n- **Rechthoekige driehoek**: de 2 rechte zijden zijn basis + hoogte (handig: ze staan al haaks!).\n- **Gelijkzijdige driehoek**: alle 3 zijden gelijk. Hoogte = lastig te zien (niet zijde zelf).\n\n**Cito-truc**: kijk goed waar de hoogte in de figuur is aangegeven (met stippellijntje en hoekje ⊥). Pak NIET zomaar de langste zijde als 'hoogte'.",
+    explanation: "**Driehoek-oppervlakte** is iets lastiger dan rechthoek.\n\n**Formule**:\n- A = **½ × basis × hoogte**\n- Of: A = (basis × hoogte) ÷ 2\n\n**Waar kijk je voor de hoogte?** De **hoogte staat LOODRECHT (haaks)** op de basis. Niet een schuine zijde!\n\n**Voorbeeld**: driehoek met basis = 8 cm, hoogte = 5 cm.\n- A = ½ × 8 × 5 = **20 cm²**\n- Of: (8 × 5) ÷ 2 = 40 ÷ 2 = 20\n\n**Waarom ÷ 2?** Een driehoek is precies de **helft** van een rechthoek. Trek je een diagonaal in een rechthoek? Krijg je 2 driehoeken die samen de hele rechthoek vormen.\n\n**Bijzondere gevallen**:\n- **Rechthoekige driehoek**: de 2 rechte zijden zijn basis + hoogte (handig: ze staan al haaks!).\n- **Gelijkzijdige driehoek**: alle 3 zijden gelijk. Hoogte = lastig te zien (niet zijde zelf).\n\n**Toets-truc**: kijk goed waar de hoogte in de figuur is aangegeven (met stippellijntje en hoekje ⊥). Pak NIET zomaar de langste zijde als 'hoogte'.",
     emoji: "🔺",
     checks: [
       {
@@ -287,7 +287,7 @@ const steps = [
   },
   {
     title: "Stap 5 — Cirkel: omtrek + oppervlakte",
-    explanation: "**Cirkel** heeft 2 belangrijke maten:\n- **Straal (r)** = van middelpunt naar rand\n- **Diameter (d)** = van rand naar rand door middelpunt. **d = 2r**\n\n**Omtrek cirkel** (rondje langs de rand):\n- O = **π × d** (pi maal diameter)\n- O = **2 × π × r** (pi maal 2 maal straal)\n- π (pi) ≈ **3,14** (oneindig veel decimalen, vaak ronden we naar 3,14)\n\n**Oppervlakte cirkel** (vlak binnenin):\n- A = **π × r²**\n- (pi maal straal in het kwadraat)\n\n**Voorbeeld 1**: cirkel met straal 5 cm.\n- Omtrek = 2 × π × 5 = 10π ≈ 10 × 3,14 = **31,4 cm**\n- Oppervlakte = π × 5² = π × 25 ≈ 25 × 3,14 = **78,5 cm²**\n\n**Voorbeeld 2**: cirkel met diameter 10 m.\n- Straal = 10÷2 = 5 m\n- Omtrek = π × 10 = 10π ≈ **31,4 m**\n- Oppervlakte = π × 5² ≈ **78,5 m²**\n\n**Cito-truc**: kijk goed of de vraag STRAAL of DIAMETER geeft. Vaak verleidt de toets je om diameter te gebruiken waar straal moet (of andersom).\n\n**Geheugentruc**: 'OMtrek = OMtrek-rondje = π × d' (allebei begint met letters). 'Oppervlakte = vlak = r² (twee dimensies, dus kwadraat)'.",
+    explanation: "**Cirkel** heeft 2 belangrijke maten:\n- **Straal (r)** = van middelpunt naar rand\n- **Diameter (d)** = van rand naar rand door middelpunt. **d = 2r**\n\n**Omtrek cirkel** (rondje langs de rand):\n- O = **π × d** (pi maal diameter)\n- O = **2 × π × r** (pi maal 2 maal straal)\n- π (pi) ≈ **3,14** (oneindig veel decimalen, vaak ronden we naar 3,14)\n\n**Oppervlakte cirkel** (vlak binnenin):\n- A = **π × r²**\n- (pi maal straal in het kwadraat)\n\n**Voorbeeld 1**: cirkel met straal 5 cm.\n- Omtrek = 2 × π × 5 = 10π ≈ 10 × 3,14 = **31,4 cm**\n- Oppervlakte = π × 5² = π × 25 ≈ 25 × 3,14 = **78,5 cm²**\n\n**Voorbeeld 2**: cirkel met diameter 10 m.\n- Straal = 10÷2 = 5 m\n- Omtrek = π × 10 = 10π ≈ **31,4 m**\n- Oppervlakte = π × 5² ≈ **78,5 m²**\n\n**Toets-truc**: kijk goed of de vraag STRAAL of DIAMETER geeft. Vaak verleidt de toets je om diameter te gebruiken waar straal moet (of andersom).\n\n**Geheugentruc**: 'OMtrek = OMtrek-rondje = π × d' (allebei begint met letters). 'Oppervlakte = vlak = r² (twee dimensies, dus kwadraat)'.",
     emoji: "⭕",
     checks: [
       {
@@ -319,7 +319,7 @@ const steps = [
         options: ["3,12", "3,14", "3,16", "3,18"],
         answer: 1,
         wrongHints: ["Net te laag. π begint met 3,14...", null, "Net te hoog.", "Te hoog. π is iets kleiner dan 3,16."],
-        explanation: "**π ≈ 3,14** (op 2 decimalen). Volledig: 3,14159265... Voor Cito gebruik je meestal 3,14. Op rekenmachine = π-knop.",
+        explanation: "**π ≈ 3,14** (op 2 decimalen). Volledig: 3,14159265... Voor de Doorstroomtoets gebruik je meestal 3,14. Op rekenmachine = π-knop.",
         uitlegPad: compact(
           "π = 3,14159... Op 2 decimalen: 3,14. Pi-dag = 14 maart (3-14 datum-notatie).",
           { basis: "3,14.", simpeler: "Pi = 3,14 op 2 decimalen.", nogSimpeler: "3,14" },
@@ -330,7 +330,7 @@ const steps = [
   },
   {
     title: "Stap 6 — Praktijk-vraagstukken",
-    explanation: "Op de Cito en in het echt komen oppervlakte + omtrek vaak in **praktijksituaties** voor:\n\n**Voorbeelden**:\n- 🏡 **Tuin omheinen** → omtrek (hoeveel meter hek?)\n- 🎨 **Muur behangen** → oppervlakte (hoeveel rollen?)\n- 🟨 **Vloer betegelen** → oppervlakte (hoeveel tegels?)\n- 🧶 **Lint om cadeau** → omtrek\n- 🌱 **Gazon mest geven** → oppervlakte\n- 🚪 **Schuur schilderen** → oppervlakte van de muren\n- 🛣️ **Rondje hardlopen om vijver** → omtrek\n\n**Aanpak Cito-vraag (3 stappen)**:\n1. **Lees goed**: gaat het om **rand** (omtrek) of **vlak** (oppervlakte)?\n2. **Maak schets**: teken figuur + zet getallen erbij.\n3. **Reken uit + check eenheid**: m, m², m³? Klopt het?\n\n**Cito-valkuilen**:\n- Een **schuine zijde** is geen 'hoogte' van een driehoek — die staat haaks.\n- 1 m² ≠ 100 cm² — het is **10.000 cm²**.\n- Bij cirkel: gebruik **straal** voor r², niet diameter.\n- Soms moet je een **gat eraf trekken** (bv. tuin met vijver: tuin-oppervlakte − vijver-oppervlakte = gras).\n\n**Combinatie-vragen**: soms gevraagd OMTREK én OPPERVLAKTE in 1 vraag. Lees vraag 2× — pak de juiste formule.",
+    explanation: "Op de Doorstroomtoets en in het echt komen oppervlakte + omtrek vaak in **praktijksituaties** voor:\n\n**Voorbeelden**:\n- 🏡 **Tuin omheinen** → omtrek (hoeveel meter hek?)\n- 🎨 **Muur behangen** → oppervlakte (hoeveel rollen?)\n- 🟨 **Vloer betegelen** → oppervlakte (hoeveel tegels?)\n- 🧶 **Lint om cadeau** → omtrek\n- 🌱 **Gazon mest geven** → oppervlakte\n- 🚪 **Schuur schilderen** → oppervlakte van de muren\n- 🛣️ **Rondje hardlopen om vijver** → omtrek\n\n**Aanpak toetsvraag (3 stappen)**:\n1. **Lees goed**: gaat het om **rand** (omtrek) of **vlak** (oppervlakte)?\n2. **Maak schets**: teken figuur + zet getallen erbij.\n3. **Reken uit + check eenheid**: m, m², m³? Klopt het?\n\n**Toets-valkuilen**:\n- Een **schuine zijde** is geen 'hoogte' van een driehoek — die staat haaks.\n- 1 m² ≠ 100 cm² — het is **10.000 cm²**.\n- Bij cirkel: gebruik **straal** voor r², niet diameter.\n- Soms moet je een **gat eraf trekken** (bv. tuin met vijver: tuin-oppervlakte − vijver-oppervlakte = gras).\n\n**Combinatie-vragen**: soms gevraagd OMTREK én OPPERVLAKTE in 1 vraag. Lees vraag 2× — pak de juiste formule.",
     emoji: "🛋️",
     checks: [
       {
@@ -362,7 +362,7 @@ const steps = [
         options: ["94,2 cm²", "188,4 cm²", "706,5 cm²", "2826 cm²"],
         answer: 2,
         wrongHints: ["Dat is de omtrek van de pizza, niet de oppervlakte. Welke formule geeft oppervlakte?", "Foute formule — de oppervlakte van een cirkel gebruik je π × r². Welke maat is r?", null, "Je hebt de diameter gekwadrateerd — maar de formule vraagt de straal. Wat is het verschil tussen straal en diameter?"],
-        explanation: "**Diameter = 30, straal = 15**. Oppervlakte = π × r² = 3,14 × 15² = 3,14 × 225 = **706,5 cm²**. Cito-trap: pas op voor diameter ipv straal!",
+        explanation: "**Diameter = 30, straal = 15**. Oppervlakte = π × r² = 3,14 × 15² = 3,14 × 225 = **706,5 cm²**. Toets-trap: pas op voor diameter ipv straal!",
         uitlegPad: compact(
           "Pizza diameter=30, straal=15. Oppervlakte = πr² = 3,14×225 = 706,5 cm². Niet 30² gebruiken!",
           { basis: "π × 15² = 706,5 cm².", simpeler: "Straal = halve diameter = 15. π×15² = 706,5.", nogSimpeler: "706,5" },
@@ -381,7 +381,7 @@ const oppervlakteOmtrekPo = {
   subject: "rekenen",
   referentieNiveau: "po-1F",
   sloThema: "Rekenen - meten + meetkunde",
-  intro: "18 vragen Cito-rekenen groep 6-8: verschil omtrek vs oppervlakte, rechthoek + vierkant + driehoek + cirkel, eenheid-conversies (1 m² = 10.000 cm²), praktijkvraagstukken (tuin met vijver, pizza, plinten).",
+  intro: "18 vragen Toets-rekenen groep 6-8: verschil omtrek vs oppervlakte, rechthoek + vierkant + driehoek + cirkel, eenheid-conversies (1 m² = 10.000 cm²), praktijkvraagstukken (tuin met vijver, pizza, plinten).",
   triggerKeywords: ["oppervlakte omtrek po", "rechthoek vierkant", "driehoek oppervlakte", "cirkel pi", "m² cm² conversie", "praktijkvraagstuk meten"],
   prerequisites: [
     { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },

@@ -1,5 +1,5 @@
 // Leerpad: Wereldreligies (groep 7-8 basisschool)
-// 6 stappen × 3 checks = 18 vragen. Cito-cultuur-stof.
+// 6 stappen × 3 checks = 18 vragen. Toets-cultuur-stof.
 // Stijl: feitelijk + neutraal (geen geloofsoordeel). Sluit aan op
 // godsdiensten-culturen-po (al bestaand) maar gestructureerder per religie.
 
@@ -13,7 +13,7 @@ const chapters = [
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc religies: koppel naam → heilig boek + gebouw + symbool. Monotheïsme (1 god) = christendom/islam/jodendom. Polytheïsme (meerdere goden) = hindoeïsme. Niet-theïstisch = boeddhisme (filosofie).",
+  theorie: "Toets-truc religies: koppel naam → heilig boek + gebouw + symbool. Monotheïsme (1 god) = christendom/islam/jodendom. Polytheïsme (meerdere goden) = hindoeïsme. Niet-theïstisch = boeddhisme (filosofie).",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -293,7 +293,7 @@ const wereldreligiesPo = {
   subject: "wereldorientatie",
   referentieNiveau: "po-1F",
   sloThema: "Wereldoriëntatie - religies + culturen",
-  intro: "18 vragen Cito-stof groep 7-8 over de 5 wereldreligies: christendom, islam, hindoeïsme, boeddhisme, jodendom. Heilige boeken, gebouwen, symbolen, feesten. Neutraal + feitelijk.",
+  intro: "18 vragen toetsstof groep 7-8 over de 5 wereldreligies: christendom, islam, hindoeïsme, boeddhisme, jodendom. Heilige boeken, gebouwen, symbolen, feesten. Neutraal + feitelijk.",
   triggerKeywords: ["wereldreligies", "christendom", "islam", "jodendom", "hindoeisme", "boeddhisme", "heilige boeken", "monotheisme polytheisme"],
   prerequisites: [
     { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },

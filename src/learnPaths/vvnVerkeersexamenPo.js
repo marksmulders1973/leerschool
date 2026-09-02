@@ -29,7 +29,7 @@ const steps = [
   {
     title: "Verkeersborden — herken aan vorm en kleur",
     explanation:
-      "Op het **VVN-verkeersexamen** komen veel vragen over **verkeersborden**. Geluk: aan de vorm + kleur kun je vaak al de betekenis raden.\n\n**Vorm + kleur = betekenis-categorie**:\n\n**Rond + rode rand = VERBOD**:\n• Mag NIET. Bv. 🚫 inrijden verboden, geen fietsen toegestaan, snelheid-limiet.\n• Rode rand = stop / niet doen / verboden.\n• Snelheid-bord: cijfer in rondje met rode rand = maximumsnelheid.\n\n**Rond + blauw = GEBOD**:\n• Je MOET. Bv. ✓ verplicht fietspad, voorgeschreven rijrichting.\n• Blauwe achtergrond met witte pijl = je MOET die richting.\n\n**Driehoekig + rode rand = WAARSCHUWING**:\n• Pas op! Bv. ⚠️ gevaarlijke bocht, schoolzone, drempel.\n• Wit binnen, rode rand, driehoekig staand op punt.\n\n**Vierkant of rechthoekig + blauw = INFORMATIE**:\n• Vertelt je iets. Bv. ℹ️ ziekenhuis, parkeerplaats, einde fietspad.\n• Geen verplichting, alleen info.\n\n**Achthoekig + rood = STOP**:\n• Eén specifiek bord: **STOP-bord** (8-hoekig, rood). Altijd stoppen + voorrang verlenen.\n\n**Belangrijke borden voor fietsers**:\n• **B6** (omgekeerde driehoek, rode rand): verleen voorrang — JIJ moet wachten. Hoort bij de **haaientanden** op het wegdek.\n• **B1** (gele ruit met witte rand): voorrangsweg — JIJ hebt juist voorrang.\n• **G11** (rond, blauw): verplicht fietspad — je MOET hier rijden als fietser.\n• **G13** (rechthoekig, blauw): onverplicht fietspad (alternatief).\n\n**Cito-VVN-truc**: bij twijfel — wat is de **vorm**? Wat is de **kleur**? Daar zit de halve betekenis.",
+      "Op het **VVN-verkeersexamen** komen veel vragen over **verkeersborden**. Geluk: aan de vorm + kleur kun je vaak al de betekenis raden.\n\n**Vorm + kleur = betekenis-categorie**:\n\n**Rond + rode rand = VERBOD**:\n• Mag NIET. Bv. 🚫 inrijden verboden, geen fietsen toegestaan, snelheid-limiet.\n• Rode rand = stop / niet doen / verboden.\n• Snelheid-bord: cijfer in rondje met rode rand = maximumsnelheid.\n\n**Rond + blauw = GEBOD**:\n• Je MOET. Bv. ✓ verplicht fietspad, voorgeschreven rijrichting.\n• Blauwe achtergrond met witte pijl = je MOET die richting.\n\n**Driehoekig + rode rand = WAARSCHUWING**:\n• Pas op! Bv. ⚠️ gevaarlijke bocht, schoolzone, drempel.\n• Wit binnen, rode rand, driehoekig staand op punt.\n\n**Vierkant of rechthoekig + blauw = INFORMATIE**:\n• Vertelt je iets. Bv. ℹ️ ziekenhuis, parkeerplaats, einde fietspad.\n• Geen verplichting, alleen info.\n\n**Achthoekig + rood = STOP**:\n• Eén specifiek bord: **STOP-bord** (8-hoekig, rood). Altijd stoppen + voorrang verlenen.\n\n**Belangrijke borden voor fietsers**:\n• **B6** (omgekeerde driehoek, rode rand): verleen voorrang — JIJ moet wachten. Hoort bij de **haaientanden** op het wegdek.\n• **B1** (gele ruit met witte rand): voorrangsweg — JIJ hebt juist voorrang.\n• **G11** (rond, blauw): verplicht fietspad — je MOET hier rijden als fietser.\n• **G13** (rechthoekig, blauw): onverplicht fietspad (alternatief).\n\n**VVN-truc**: bij twijfel — wat is de **vorm**? Wat is de **kleur**? Daar zit de halve betekenis.",
     checks: [
       {
         q: "Wat betekent **dit bord**?",
@@ -40,7 +40,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Rond rood = verbod", tekst: "**Rond + rode rand** = altijd 'mag niet'. Voorbeeld: bord '50' rond met rode rand = max 50 km/u. Bord met fiets en streep erdoor = fietsen verboden." }],
           woorden: [{ woord: "verbod", uitleg: "Iets mag NIET." }, { woord: "gebod", uitleg: "Iets MOET." }],
-          theorie: "Cito-VVN-pattern: cijfer in rondje met rode rand = snelheid. Geen rondje = ander soort bord.",
+          theorie: "VVN-pattern: cijfer in rondje met rode rand = snelheid. Geen rondje = ander soort bord.",
           niveaus: { basis: "Rond + rode rand — A.", simpeler: "Verbod = rond + rood", nogSimpeler: "Rond rood" },
         },
       },
@@ -52,7 +52,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is rond + rood.", "Niet — dat is rond + blauw.", "Niet — dat is rechthoekig + blauw."],
         uitlegPad: {
           stappen: [{ titel: "Driehoek = waarschuwing", tekst: "**Driehoek met rode rand** (puntige top boven of beneden) waarschuwt voor gevaar. In het bord: wat ER kan gebeuren. Bv. driehoek met fiets = fietspad-kruising, driehoek met kinderen = schoolzone." }],
-          theorie: "Cito-VVN: ALTIJD oppassen bij driehoek + rood. Snelheid verminderen + oplettend rijden.",
+          theorie: "VVN: ALTIJD oppassen bij driehoek + rood. Snelheid verminderen + oplettend rijden.",
           niveaus: { basis: "Waarschuwing — A.", simpeler: "Driehoek + rood = pas op", nogSimpeler: "Driehoek rood" },
         },
       },
@@ -131,7 +131,7 @@ const steps = [
         wrongHints: [null, "Niet — voetganger heeft voorrang.", "Niet — gevaarlijk + onbeleefd.", "Niet — wel verplicht stoppen."],
         uitlegPad: {
           stappen: [{ titel: "Zebra = voetganger eerst", tekst: "Op **zebrapad** (witte strepen) heeft de **voetganger altijd voorrang**. Auto + fiets STOPPEN — ook als voetganger nog niet helemaal oversteekt. Boete bij overtreding (~€280)." }],
-          theorie: "Cito-VVN: leerlingen moeten dit pad-niveau testen. ~3-4 vragen over zebra/voetganger gemiddeld in examen.",
+          theorie: "VVN: leerlingen moeten dit pad-niveau testen. ~3-4 vragen over zebra/voetganger gemiddeld in examen.",
           niveaus: { basis: "Stop — A.", simpeler: "Zebra + voetganger = stop", nogSimpeler: "Stop" },
         },
       },
@@ -153,7 +153,7 @@ const steps = [
         wrongHints: [null, "Niet — rood = ALTIJD stop.", "Niet — niet veiliger.", "Niet — ook eraf moet je wachten."],
         uitlegPad: {
           stappen: [{ titel: "Rood = altijd stop", tekst: "**Rood verkeerslicht** = altijd stoppen voor stopstreep, ongeacht ander verkeer. Wachten tot **groen**. Boete bij door rood: fietser €110, auto €280. Bij ongeluk: jouw schuld." }],
-          theorie: "Cito-VVN: bij rood ALTIJD stop. Geen uitzonderingen voor fietsers (in tegenstelling tot sommige andere landen — in België mogen fietsers soms rechtsaf bij rood).",
+          theorie: "VVN: bij rood ALTIJD stop. Geen uitzonderingen voor fietsers (in tegenstelling tot sommige andere landen — in België mogen fietsers soms rechtsaf bij rood).",
           niveaus: { basis: "Stoppen — A.", simpeler: "Rood = stop", nogSimpeler: "Stop" },
         },
       },
@@ -196,7 +196,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is rechtsaf.", "Niet — fietsen hebben geen knipperlichten.", "Niet — verplicht."],
         uitlegPad: {
           stappen: [{ titel: "Linker hand = linksaf", tekst: "Bij **linksaf**: linker hand uitsteken **op tijd** (~5m voor kruising). Bij **rechtsaf**: rechter hand uitsteken. Boete als je niet aangeeft: ~€110 + risico ongeluk." }],
-          theorie: "Cito-VVN: ~2 vragen per examen over hand-aangeven. Ezelsbruggetje: 'links-link' (linkerhand voor linksaf, allebei met L).",
+          theorie: "VVN: ~2 vragen per examen over hand-aangeven. Ezelsbruggetje: 'links-link' (linkerhand voor linksaf, allebei met L).",
           niveaus: { basis: "Linker hand — A.", simpeler: "Linksaf = linker hand uit", nogSimpeler: "Links = links" },
         },
       },
@@ -207,7 +207,7 @@ const steps = [
         wrongHints: [null, "Niet — geen wet in NL.", "Niet — geen plicht voor groep.", "Niet — wél sterk aanbevolen."],
         uitlegPad: {
           stappen: [{ titel: "Geen helm-plicht in NL", tekst: "Helm is **niet verplicht** voor gewone fietsen in NL (uniek in Europa — Engeland/Duitsland ook geen plicht maar wel meer cultuur). Wel **sterk aanbevolen**: helm vermindert hersenletsel bij val met ~50%. **WEL VERPLICHT**: voor speed-pedelec (45km/u) en bromfiets." }],
-          theorie: "Cito-actueel: discussie over helm-plicht voor kinderen (jaarlijks gespreks-onderwerp). Vooralsnog niet ingevoerd.",
+          theorie: "Toets-actueel: discussie over helm-plicht voor kinderen (jaarlijks gespreks-onderwerp). Vooralsnog niet ingevoerd.",
           niveaus: { basis: "Nee, wel aanbevolen — A.", simpeler: "Helm = niet verplicht", nogSimpeler: "Niet verplicht" },
         },
       },
@@ -218,7 +218,7 @@ const steps = [
         wrongHints: [null, "Niet verboden — wel met 2 handen veiliger.", "Niet — helm is juist aanbevolen.", "Overdag geen licht-plicht."],
         uitlegPad: {
           stappen: [{ titel: "Telefoon-verbod 1 juli 2019", tekst: "**Sinds 1 juli 2019**: telefoon vasthouden tijdens fietsen verboden. **Boete ~€160**. Hands-free (oortje, telefoon in tas) is wel toegestaan. Doel: voorkomen ongelukken door afleiding." }],
-          theorie: "Cito-actueel: 2019-wet = vaak in examens. Ezelsbruggetje: 'fiets + telefoon = 2 handen aan stuur OF helemaal geen telefoon'.",
+          theorie: "Toets-actueel: 2019-wet = vaak in examens. Ezelsbruggetje: 'fiets + telefoon = 2 handen aan stuur OF helemaal geen telefoon'.",
           niveaus: { basis: "Telefoon vasthouden — A.", simpeler: "2019 = telefoon-verbod fiets", nogSimpeler: "Telefoon verboden" },
         },
       },
@@ -229,7 +229,7 @@ const steps = [
         wrongHints: [null, "Nergens in NL 30 km/u-zone-limiet voor e-bike.", "Speed-pedelec, met kenteken + helm.", "Auto-snelheid binnen bebouwde kom."],
         uitlegPad: {
           stappen: [{ titel: "E-bike vs speed-pedelec", tekst: "Een gewone **e-bike** (electrische fiets met trapondersteuning) heeft max **25 km/u**. Boven die snelheid stopt motor — je moet zelf harder trappen. Tot 25 km/u = fiets (geen kenteken, geen helm-plicht). Boven 25 km/u = **speed-pedelec** = bromfiets-categorie (helm + kenteken + rijbewijs)." }],
-          theorie: "Cito-actueel: e-bike-populariteit + speed-pedelec-ongelukken. Veel discussie.",
+          theorie: "Toets-actueel: e-bike-populariteit + speed-pedelec-ongelukken. Veel discussie.",
           niveaus: { basis: "25 km/u — A.", simpeler: "E-bike-limiet = 25", nogSimpeler: "25" },
         },
       },
@@ -240,7 +240,7 @@ const steps = [
   {
     title: "Gevaarlijke situaties — leer de signalen",
     explanation:
-      "Een groot deel van VVN-examen-vragen draait om **gevaar herkennen**. Op deze leeftijd is verkeer-bewustzijn cruciaal.\n\n**Belangrijkste gevaren voor fietsers**:\n\n**1. Vrachtauto-dode-hoek**:\n• Vrachtauto-chauffeur **ziet jou NIET** aan rechterkant + voorkant + achterkant.\n• Gevaar: bij rechtsafslaan op kruising — vrachtauto draait, fietser onder wielen.\n• **Vuistregel**: chauffeur in spiegel kunnen zien = chauffeur kan jou zien. Niet → JIJ in dode hoek.\n• **Strategie**: nooit naast een vrachtauto staan bij kruising. Stoppen + wachten tot vrachtauto weg is.\n\n**2. Auto-deur ('dooring')**:\n• Geparkeerde auto langs fietspad. Bestuurder opent plotseling deur.\n• Fietser kan tegen deur botsen → val of letsel.\n• **Strategie**: houd ~1m afstand van geparkeerde auto's.\n\n**3. Voetgangers stappen onverwacht over**:\n• Vooral bij geparkeerde auto's, drukke straat, schoolzone.\n• **Strategie**: rij langzamer in straten met veel obstakels.\n\n**4. Slechte wegdek + glad**:\n• **Regen**: minder grip, langere remafstand.\n• **Bladeren herfst**: glad als regen.\n• **Sneeuw + ijs winter**: extreem glad — fietsen mijden of sterk vertragen.\n• **Tramrails**: wielen kunnen vastlopen — kruis tramrails in HOEK van 90° (haaks).\n\n**5. Tegemoetkomend verkeer + linksaf**:\n• Wanneer JIJ linksaf wil: tegemoetkomend verkeer heeft VOORRANG.\n• Wachten + duidelijk hand uitsteken.\n\n**6. Drukke kruisingen**:\n• Te veel signalen tegelijk verwerken.\n• **Strategie**: bij twijfel — STOPPEN. Niet schatten.\n\n**Algemene vuistregels**:\n• **Defensief rijden**: ga uit van fouten van anderen. Verwacht het slechtste.\n• **Voorspelbaar**: blijf in je baan, geen wilde manoeuvres.\n• **Oogcontact**: zoek oogcontact met auto-chauffeurs op kruising. Knik = ze hebben je gezien.\n• **Geen koptelefoon op beide oren**: je hoort waarschuwingen niet.\n\n**Cito-VVN-truc**: bij examen-vraag 'wat is gevaarlijkste situatie?' — kies optie met **vrachtauto + rechtsaf-kruising** als die aanwezig is. Of de optie waarbij JIJ in dode hoek bent.",
+      "Een groot deel van VVN-examen-vragen draait om **gevaar herkennen**. Op deze leeftijd is verkeer-bewustzijn cruciaal.\n\n**Belangrijkste gevaren voor fietsers**:\n\n**1. Vrachtauto-dode-hoek**:\n• Vrachtauto-chauffeur **ziet jou NIET** aan rechterkant + voorkant + achterkant.\n• Gevaar: bij rechtsafslaan op kruising — vrachtauto draait, fietser onder wielen.\n• **Vuistregel**: chauffeur in spiegel kunnen zien = chauffeur kan jou zien. Niet → JIJ in dode hoek.\n• **Strategie**: nooit naast een vrachtauto staan bij kruising. Stoppen + wachten tot vrachtauto weg is.\n\n**2. Auto-deur ('dooring')**:\n• Geparkeerde auto langs fietspad. Bestuurder opent plotseling deur.\n• Fietser kan tegen deur botsen → val of letsel.\n• **Strategie**: houd ~1m afstand van geparkeerde auto's.\n\n**3. Voetgangers stappen onverwacht over**:\n• Vooral bij geparkeerde auto's, drukke straat, schoolzone.\n• **Strategie**: rij langzamer in straten met veel obstakels.\n\n**4. Slechte wegdek + glad**:\n• **Regen**: minder grip, langere remafstand.\n• **Bladeren herfst**: glad als regen.\n• **Sneeuw + ijs winter**: extreem glad — fietsen mijden of sterk vertragen.\n• **Tramrails**: wielen kunnen vastlopen — kruis tramrails in HOEK van 90° (haaks).\n\n**5. Tegemoetkomend verkeer + linksaf**:\n• Wanneer JIJ linksaf wil: tegemoetkomend verkeer heeft VOORRANG.\n• Wachten + duidelijk hand uitsteken.\n\n**6. Drukke kruisingen**:\n• Te veel signalen tegelijk verwerken.\n• **Strategie**: bij twijfel — STOPPEN. Niet schatten.\n\n**Algemene vuistregels**:\n• **Defensief rijden**: ga uit van fouten van anderen. Verwacht het slechtste.\n• **Voorspelbaar**: blijf in je baan, geen wilde manoeuvres.\n• **Oogcontact**: zoek oogcontact met auto-chauffeurs op kruising. Knik = ze hebben je gezien.\n• **Geen koptelefoon op beide oren**: je hoort waarschuwingen niet.\n\n**VVN-truc**: bij examen-vraag 'wat is gevaarlijkste situatie?' — kies optie met **vrachtauto + rechtsaf-kruising** als die aanwezig is. Of de optie waarbij JIJ in dode hoek bent.",
     checks: [
       {
         q: "Wat is **dode hoek** bij een vrachtauto?",
@@ -248,7 +248,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Bijna — wel dichtbij maar de hele dode hoek is groter.", "Bijna — verschillende plekken.", "Niet — chauffeur zit IN cabine, geen dode hoek."],
         uitlegPad: {
-          stappen: [{ titel: "Dode hoek = onzichtbaar voor chauffeur", tekst: "**Dode hoek** = gebieden waar de **vrachtauto-chauffeur jou NIET kan zien** in spiegels. Vooral: **rechtsvoor**, **rechts naast cabine**, **achterkant**. Op kruising bij rechtsafslaan = meest dodelijk. Cito-VVN: jaarlijks ~10 fietser-doden in NL door dode-hoek-ongelukken." }],
+          stappen: [{ titel: "Dode hoek = onzichtbaar voor chauffeur", tekst: "**Dode hoek** = gebieden waar de **vrachtauto-chauffeur jou NIET kan zien** in spiegels. Vooral: **rechtsvoor**, **rechts naast cabine**, **achterkant**. Op kruising bij rechtsafslaan = meest dodelijk. VVN: jaarlijks ~10 fietser-doden in NL door dode-hoek-ongelukken." }],
           woorden: [{ woord: "dode hoek", uitleg: "Plek bij voertuig waar bestuurder met spiegels niet kan zien." }],
           theorie: "Vuistregel: zie ik chauffeur in z'n spiegel? Zo ja, kan hij/zij mij ook zien. Niet? → dode hoek → gevaar.",
           voorbeelden: [{ type: "feit", tekst: "Vrachtauto-chauffeur zit ~2,5m hoog. Naast cabine is ~3 meter blinde zone." }],
@@ -263,7 +263,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Haaks = 90°", tekst: "Kruis tramrails **haaks** (= recht eroverheen, in hoek van 90°). Schuin kruisen = fiets-wiel kan in rail blijven steken → val. Haaks oversteken = wielen rollen er soepel overheen." }],
           woorden: [{ woord: "haaks", uitleg: "In hoek van 90 graden, loodrecht." }],
-          theorie: "Cito-VVN: in steden met tram (Amsterdam, Den Haag, Utrecht, Rotterdam) komt deze vraag vaker voor.",
+          theorie: "VVN: in steden met tram (Amsterdam, Den Haag, Utrecht, Rotterdam) komt deze vraag vaker voor.",
           niveaus: { basis: "Haaks — A.", simpeler: "Tramrails kruisen = recht (90°)", nogSimpeler: "Recht" },
         },
       },
@@ -274,7 +274,7 @@ const steps = [
         wrongHints: [null, "Niet — wel veel verandert.", "Niet — juist voorzichtiger.", "Niet — zicht juist minder."],
         uitlegPad: {
           stappen: [{ titel: "Nat = langere stoptijd", tekst: "Nat wegdek = **minder grip** voor band → kan slippen. **Remafstand wordt ~50% langer** dan droog. Strategie: **langzamer fietsen** + meer afstand houden tot voorganger. Voor groot risico-gebied (bladeren + sneeuw + ijs) ook." }],
-          theorie: "Cito-VVN: examen-vraag-favoriet. Onthoud: regen = meer afstand + langzamer.",
+          theorie: "VVN: examen-vraag-favoriet. Onthoud: regen = meer afstand + langzamer.",
           niveaus: { basis: "Langere remafstand — A.", simpeler: "Regen = minder grip + meer afstand", nogSimpeler: "Minder grip" },
         },
       },
@@ -286,7 +286,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Dooring' = auto-deur-ongeluk", tekst: "**'Dooring'** = fietser botst tegen plotseling geopende auto-deur. Auto-bestuurder vergeet vaak om kant op te kijken. **Strategie**: houd ~1 meter afstand van geparkeerde auto's, ook al lijkt het verleidelijk om dichterbij te rijden." }],
           woorden: [{ woord: "dooring", uitleg: "Engelse term voor fiets-tegen-autodeur-ongeluk." }],
-          theorie: "Cito-actueel: ~1.500 dooring-ongelukken in NL per jaar. 30% leidt tot ziekenhuis-opname.",
+          theorie: "Toets-actueel: ~1.500 dooring-ongelukken in NL per jaar. 30% leidt tot ziekenhuis-opname.",
           niveaus: { basis: "Deur kan open — A.", simpeler: "Geparkeerde auto = deur-risico", nogSimpeler: "Deur" },
         },
       },
@@ -308,7 +308,7 @@ const steps = [
   {
     title: "VVN-examen-eindopdracht",
     explanation:
-      "Mix van borden + voorrang + veilig fietsen + gevaren. Cito-VVN-stijl.\n\nVeel succes!",
+      "Mix van borden + voorrang + veilig fietsen + gevaren. VVN-stijl.\n\nVeel succes!",
     checks: [
       {
         q: "Wat betekent **dit bord**?",
@@ -359,7 +359,7 @@ const steps = [
         wrongHints: [null, "Niet — extreem gevaarlijk (dode hoek).", "Niet — geluid niet altijd gehoord.", "Niet — kan ongeluk veroorzaken."],
         uitlegPad: {
           stappen: [{ titel: "NOOIT naast rechtsafslaande vrachtauto", tekst: "Bij vrachtauto die rechtsafslaat sta JE in **dode hoek**. Chauffeur ziet je NIET. Bij draaibeweging kun je onder wielen komen. **ALTIJD wachten** tot vrachtauto helemaal weg is. Jaarlijks 5-10 doden in NL door dit." }],
-          theorie: "Cito-VVN-favoriet: dode-hoek-vraag komt elk examen voor.",
+          theorie: "VVN-favoriet: dode-hoek-vraag komt elk examen voor.",
           niveaus: { basis: "Wachten — A.", simpeler: "Vrachtauto rechtsaf = JIJ wachten", nogSimpeler: "Wachten" },
         },
       },

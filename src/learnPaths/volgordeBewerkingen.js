@@ -1,6 +1,6 @@
 // Leerpad: Volgorde van bewerkingen + haakjes
 // 7 stappen in 4 hoofdstukken (A t/m D).
-// Doelgroep: groep 5-7 basisschool. Cito-relevant.
+// Doelgroep: groep 5-7 basisschool. toets-relevant.
 
 const COLORS = {
   axis: "#e0e6f0",
@@ -480,7 +480,7 @@ const volgordeBewerkingen = {
     { id: "tafels-po", title: "Tafels", niveau: "po-1F" },
   ],
   intro:
-    "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. Cito-relevant voor groep 5-7.",
+    "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. toets-relevant voor groep 5-7.",
   triggerKeywords: [
     "volgorde bewerkingen","HMVDOA","PEMDAS","haakjes","machten","kwadraat",
     "rekenvolgorde","wat eerst","keer of plus eerst",

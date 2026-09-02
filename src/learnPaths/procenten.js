@@ -481,7 +481,7 @@ const procenten = {
   emoji: "💯",
   level: "klas1-vwo",
   subject: "wiskunde",
-  // SLO-niveau (G4b): 2F basis-vmbo, 2S streef. Cito-onderdeel.
+  // SLO-niveau (G4b): 2F basis-vmbo, 2S streef. Toets-onderdeel.
   referentieNiveau: "2F",
   sloThema: "Verhoudingen — procenten",
   topics: ["WI.rekenen.procenten"],

@@ -1,5 +1,5 @@
 // Leerpad: Spreekwoorden + uitdrukkingen — groep 6-8 taal/Cito.
-// Cito-vraag: figuurlijk taalgebruik vs letterlijk. Referentieniveau 1F-2F.
+// toetsvraag: figuurlijk taalgebruik vs letterlijk. Referentieniveau 1F-2F.
 // 6 stappen.
 
 const stepEmojis = ["💬", "🐱", "🌧️", "🎯", "📚", "🏆"];
@@ -9,7 +9,7 @@ const chapters = [
   { letter: "B", title: "Veel-gebruikte uitdrukkingen", emoji: "🐱", from: 1, to: 1 },
   { letter: "C", title: "Spreekwoorden", emoji: "🌧️", from: 2, to: 2 },
   { letter: "D", title: "Uitdrukking + situatie", emoji: "🎯", from: 3, to: 3 },
-  { letter: "E", title: "Cito-strategie", emoji: "📚", from: 4, to: 4 },
+  { letter: "E", title: "Toets-strategie", emoji: "📚", from: 4, to: 4 },
   { letter: "F", title: "Eind-toets", emoji: "🏆", from: 5, to: 5 },
 ];
 
@@ -17,7 +17,7 @@ const steps = [
   {
     title: "Letterlijk vs figuurlijk",
     explanation:
-      "**Letterlijk** = de woorden betekenen precies wat er staat.\n**Figuurlijk** = de woorden betekenen iets **anders** dan wat er staat *(een soort plaatje)*.\n\n**Voorbeelden**:\n\n• *'Ik eet een appel.'* → **letterlijk** *(je eet écht een appel)*.\n• *'Ik ga koud op die toets.'* → **figuurlijk** *(je gaat niet écht koud op een toets, je bedoelt: rustig, zonder zenuwen)*.\n\n**Waarom figuurlijk taalgebruik?**\n• Maakt taal **levendiger** + leuker.\n• Sterke beeldspraak: 'het regent pijpenstelen' is sterker dan 'het regent hard'.\n• Cultureel — generatieoverdracht van wijsheden.\n\n**Soorten figuurlijk taalgebruik**:\n\n**1. Uitdrukking** *(idioom)*: vaste combinatie van woorden met betekenis die je los niet kunt afleiden.\n• *'De kat op het spek binden'* — iemand in verleiding brengen.\n• *'Het loopt in de papieren'* — het wordt duur.\n\n**2. Spreekwoord**: korte volkswijsheid, vaak met les of moraal.\n• *'Hoge bomen vangen veel wind.'* — bekende mensen krijgen veel kritiek.\n• *'Wie het kleine niet eert, is het grote niet weert.'* — wees zuinig met kleine dingen.\n\n**3. Vergelijking**: *'zo + bijvoeglijk naamwoord + als + zelfstandig naamwoord'*.\n• *'Zo zwart als roet'*.\n• *'Zo wit als sneeuw'*.\n• *'Zo dom als het achtereind van een varken'*.\n\n**4. Metafoor**: zonder *'als'* — gewoon iets vergelijken.\n• *'Ze is een engel.'* — bedoelt: ze is heel lief, niet écht een engel.\n• *'De wereld is een toneel.'*\n\n**Cito-vraag-type**:\nVaak: 'Wat betekent de uitdrukking *'het is in kannen en kruiken'*?'\n→ Antwoord: 'het is afgerond / klaar'.\n\nLetterlijke betekenis is **fout** in deze vraag.",
+      "**Letterlijk** = de woorden betekenen precies wat er staat.\n**Figuurlijk** = de woorden betekenen iets **anders** dan wat er staat *(een soort plaatje)*.\n\n**Voorbeelden**:\n\n• *'Ik eet een appel.'* → **letterlijk** *(je eet écht een appel)*.\n• *'Ik ga koud op die toets.'* → **figuurlijk** *(je gaat niet écht koud op een toets, je bedoelt: rustig, zonder zenuwen)*.\n\n**Waarom figuurlijk taalgebruik?**\n• Maakt taal **levendiger** + leuker.\n• Sterke beeldspraak: 'het regent pijpenstelen' is sterker dan 'het regent hard'.\n• Cultureel — generatieoverdracht van wijsheden.\n\n**Soorten figuurlijk taalgebruik**:\n\n**1. Uitdrukking** *(idioom)*: vaste combinatie van woorden met betekenis die je los niet kunt afleiden.\n• *'De kat op het spek binden'* — iemand in verleiding brengen.\n• *'Het loopt in de papieren'* — het wordt duur.\n\n**2. Spreekwoord**: korte volkswijsheid, vaak met les of moraal.\n• *'Hoge bomen vangen veel wind.'* — bekende mensen krijgen veel kritiek.\n• *'Wie het kleine niet eert, is het grote niet weert.'* — wees zuinig met kleine dingen.\n\n**3. Vergelijking**: *'zo + bijvoeglijk naamwoord + als + zelfstandig naamwoord'*.\n• *'Zo zwart als roet'*.\n• *'Zo wit als sneeuw'*.\n• *'Zo dom als het achtereind van een varken'*.\n\n**4. Metafoor**: zonder *'als'* — gewoon iets vergelijken.\n• *'Ze is een engel.'* — bedoelt: ze is heel lief, niet écht een engel.\n• *'De wereld is een toneel.'*\n\n**toetsvraag-type**:\nVaak: 'Wat betekent de uitdrukking *'het is in kannen en kruiken'*?'\n→ Antwoord: 'het is afgerond / klaar'.\n\nLetterlijke betekenis is **fout** in deze vraag.",
     checks: [
       {
         q: "Wat is **figuurlijk**?",
@@ -34,7 +34,7 @@ const steps = [
             { woord: "letterlijk", uitleg: "Woorden betekenen precies wat er staat." },
             { woord: "figuurlijk", uitleg: "Woorden betekenen iets anders (beeldspraak)." },
           ],
-          theorie: "Cito-vraag-type: 'Wat betekent uitdrukking X?' De letterlijke betekenis is bijna altijd FOUT. Je moet de FIGUURLIJKE betekenis weten. Daarom uitdrukkingen leren.",
+          theorie: "toetsvraag-type: 'Wat betekent uitdrukking X?' De letterlijke betekenis is bijna altijd FOUT. Je moet de FIGUURLIJKE betekenis weten. Daarom uitdrukkingen leren.",
           voorbeelden: [
             { type: "stap", tekst: "'De kat uit de boom kijken' = figuurlijk = afwachten. Letterlijk zou raar zijn." },
             { type: "stap", tekst: "'Boter op het hoofd hebben' = figuurlijk = schuldig zijn. Letterlijk zou vies zijn." },
@@ -62,7 +62,7 @@ const steps = [
             { woord: "pijpensteel", uitleg: "Het lange deel van een tabakspijp (vroeger gebruikelijk)." },
             { woord: "uitdrukking", uitleg: "Vaste woord-combinatie met figuurlijke betekenis." },
           ],
-          theorie: "Cito-tip uitdrukkingen: oude woorden (pijpensteel, korf, kruik) blijven in uitdrukkingen, ook al zien we ze niet vaak meer. Dat maakt sommige uitdrukkingen onlogisch — pas gewoon de **bedoelde betekenis** toe.",
+          theorie: "Toets-tip uitdrukkingen: oude woorden (pijpensteel, korf, kruik) blijven in uitdrukkingen, ook al zien we ze niet vaak meer. Dat maakt sommige uitdrukkingen onlogisch — pas gewoon de **bedoelde betekenis** toe.",
           voorbeelden: [
             { type: "stap", tekst: "'Het regent pijpenstelen, we kunnen niet naar buiten' = het regent hard, dus we blijven binnen." },
             { type: "stap", tekst: "Andere weer-uitdrukkingen: 'het is hondenweer' (slecht weer), 'het is om geen hond door te jagen' (heel slecht weer)." },
@@ -96,7 +96,7 @@ const steps = [
             { woord: "metafoor", uitleg: "Korte beeldspraak: A IS B (zonder 'als')." },
             { woord: "vergelijking", uitleg: "A is zo X ALS B (met 'als')." },
           ],
-          theorie: "Cito-tip beeldspraak: zoek 'als' in de zin. Heeft het 'als'? → vergelijking. Heeft het geen 'als' maar wel iets-is-iets-anders? → metafoor.",
+          theorie: "Toets-tip beeldspraak: zoek 'als' in de zin. Heeft het 'als'? → vergelijking. Heeft het geen 'als' maar wel iets-is-iets-anders? → metafoor.",
           voorbeelden: [
             { type: "stap", tekst: "'Hij vecht ALS een leeuw' = vergelijking (met 'als')." },
             { type: "stap", tekst: "'Hij is een leeuw' = metafoor (zonder 'als')." },
@@ -115,7 +115,7 @@ const steps = [
   {
     title: "Veel-gebruikte uitdrukkingen",
     explanation:
-      "Top-30 Cito-uitdrukkingen — leer ze uit het hoofd.\n\n**Lichaam**:\n• *'Iets uit je duim zuigen'* — iets verzinnen.\n• *'Een appeltje met iemand te schillen hebben'* — iets uit te praten.\n• *'Iemand een poot uitdraaien'* — iemand te veel laten betalen.\n• *'Door de bocht gaan'* — iets toegeven.\n• *'Voet bij stuk houden'* — niet toegeven.\n• *'De handen ineenslaan'* — samenwerken.\n• *'Zijn hart vasthouden'* — zich grote zorgen maken.\n\n**Dieren**:\n• *'Een kat in de zak kopen'* — iets slechts kopen *(zonder kijken)*.\n• *'Twee vliegen in één klap'* — twee dingen tegelijk doen.\n• *'Een muis in een hoekje'* — heel stil/verlegen.\n• *'Het hondje van de bakker zijn'* — een vleier zijn.\n• *'Een wolf in schaapskleren'* — slecht persoon doet aardig.\n• *'De kat uit de boom kijken'* — afwachten.\n• *'Op je tenen lopen'* — heel voorzichtig zijn.\n\n**Eten**:\n• *'Met de mond vol tanden staan'* — niet weten wat te zeggen.\n• *'Een appeltje voor de dorst'* — geld of voorraad opzij voor later.\n• *'De koe bij de horens vatten'* — een probleem direct aanpakken.\n• *'Iets met een korreltje zout nemen'* — niet alles geloven.\n• *'Boter op het hoofd hebben'* — schuldig zijn.\n• *'Iets onder de pet houden'* — geheim houden.\n\n**Geld**:\n• *'In de rooie staan'* — schulden hebben.\n• *'Het regent geld'* — verdienen veel.\n• *'Op de kleintjes letten'* — zuinig zijn.\n• *'Met een sisser aflopen'* — beter aflopen dan gedacht.\n\n**Plek**:\n• *'In zak en as zitten'* — heel verdrietig zijn.\n• *'Op rozen zitten'* — het heel goed hebben.\n• *'De wind van voren krijgen'* — een uitbrander krijgen.\n• *'De hete adem in je nek voelen'* — onder druk staan.\n\n**Cito-tip**:\nNiet alle uitdrukkingen moeten je weten. Maak een lijst van de **20-30 meest voorkomende** + oefen die. Komt 1 onbekende: kijk goed naar context.",
+      "Top-30 Toets-uitdrukkingen — leer ze uit het hoofd.\n\n**Lichaam**:\n• *'Iets uit je duim zuigen'* — iets verzinnen.\n• *'Een appeltje met iemand te schillen hebben'* — iets uit te praten.\n• *'Iemand een poot uitdraaien'* — iemand te veel laten betalen.\n• *'Door de bocht gaan'* — iets toegeven.\n• *'Voet bij stuk houden'* — niet toegeven.\n• *'De handen ineenslaan'* — samenwerken.\n• *'Zijn hart vasthouden'* — zich grote zorgen maken.\n\n**Dieren**:\n• *'Een kat in de zak kopen'* — iets slechts kopen *(zonder kijken)*.\n• *'Twee vliegen in één klap'* — twee dingen tegelijk doen.\n• *'Een muis in een hoekje'* — heel stil/verlegen.\n• *'Het hondje van de bakker zijn'* — een vleier zijn.\n• *'Een wolf in schaapskleren'* — slecht persoon doet aardig.\n• *'De kat uit de boom kijken'* — afwachten.\n• *'Op je tenen lopen'* — heel voorzichtig zijn.\n\n**Eten**:\n• *'Met de mond vol tanden staan'* — niet weten wat te zeggen.\n• *'Een appeltje voor de dorst'* — geld of voorraad opzij voor later.\n• *'De koe bij de horens vatten'* — een probleem direct aanpakken.\n• *'Iets met een korreltje zout nemen'* — niet alles geloven.\n• *'Boter op het hoofd hebben'* — schuldig zijn.\n• *'Iets onder de pet houden'* — geheim houden.\n\n**Geld**:\n• *'In de rooie staan'* — schulden hebben.\n• *'Het regent geld'* — verdienen veel.\n• *'Op de kleintjes letten'* — zuinig zijn.\n• *'Met een sisser aflopen'* — beter aflopen dan gedacht.\n\n**Plek**:\n• *'In zak en as zitten'* — heel verdrietig zijn.\n• *'Op rozen zitten'* — het heel goed hebben.\n• *'De wind van voren krijgen'* — een uitbrander krijgen.\n• *'De hete adem in je nek voelen'* — onder druk staan.\n\n**Toets-tip**:\nNiet alle uitdrukkingen moeten je weten. Maak een lijst van de **20-30 meest voorkomende** + oefen die. Komt 1 onbekende: kijk goed naar context.",
     checks: [
       {
         q: "*'Een appeltje met iemand te schillen hebben'* — wat?",
@@ -132,12 +132,12 @@ const steps = [
             { woord: "een appeltje schillen", uitleg: "Figuurlijk: iets uit te praten hebben." },
             { woord: "ongenoegen", uitleg: "Iets dat je niet zint, irritatie." },
           ],
-          theorie: "Cito-tip: bij uitdrukkingen-vragen denk je: 'wat is het FIGUURLIJK?' Letterlijke betekenis is bijna altijd FOUT. Onthoud de top-30 vaak-voorkomende uitdrukkingen.",
+          theorie: "Toets-tip: bij uitdrukkingen-vragen denk je: 'wat is het FIGUURLIJK?' Letterlijke betekenis is bijna altijd FOUT. Onthoud de top-30 vaak-voorkomende uitdrukkingen.",
           voorbeelden: [
             { type: "stap", tekst: "Andere lichaams-uitdrukkingen: 'voet bij stuk houden' = niet toegeven. 'Hart vasthouden' = zorgen maken." },
             { type: "stap", tekst: "Andere eten-uitdrukkingen: 'koekje van eigen deeg' = iemand zijn eigen behandeling teruggeven." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Maak een uitdrukkingen-lijst. Leer er 5-10 per week. Op Cito komen 2-4 vragen erover." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Maak een uitdrukkingen-lijst. Leer er 5-10 per week. Op de Doorstroomtoets komen 2-4 vragen erover." }],
           niveaus: {
             basis: "Een appeltje met iemand schillen = iets uit te praten.",
             simpeler: "Iets bespreken, vaak met lichte irritatie.",
@@ -161,7 +161,7 @@ const steps = [
             { woord: "saldo", uitleg: "Hoeveel geld er op je rekening staat." },
             { woord: "rood-stand", uitleg: "Toegestane schuld op rekening (bank betaalt vooruit)." },
           ],
-          theorie: "Cito-feit financien-uitdrukkingen:\n• **'In de rooie'** = schuld.\n• **'In het zwart'** = winst/positief.\n• **'Op de kleintjes letten'** = zuinig zijn.\n• **'Het regent geld'** = veel verdienen.",
+          theorie: "Toets-feit financien-uitdrukkingen:\n• **'In de rooie'** = schuld.\n• **'In het zwart'** = winst/positief.\n• **'Op de kleintjes letten'** = zuinig zijn.\n• **'Het regent geld'** = veel verdienen.",
           voorbeelden: [
             { type: "stap", tekst: "'Hij stond €200 in de rooie aan het eind van de maand' = hij had €200 schuld bij de bank." },
             { type: "stap", tekst: "Niet verwarren met 'op rood licht staan' (verkeer) of 'rood worden' (schaamte)." },
@@ -191,7 +191,7 @@ const steps = [
   {
     title: "Spreekwoorden",
     explanation:
-      "**Spreekwoorden** = volkswijsheden, vaak met een **les**.\n\nTop-20 Cito-spreekwoorden:\n\n**Over geduld + tijd**:\n• *'Beter laat dan nooit.'* — beter laat doen dan helemaal niet.\n• *'Rome is niet op één dag gebouwd.'* — grote dingen kosten tijd.\n• *'Wie het laatst lacht, lacht het best.'* — wacht maar af wie wint.\n• *'Haastige spoed is zelden goed.'* — te snel werken = fouten.\n\n**Over zuinigheid**:\n• *'Wie het kleine niet eert, is het grote niet weert.'* — wees zuinig.\n• *'Goedkoop is duurkoop.'* — goedkope dingen gaan vaak snel kapot.\n• *'Beter een vogel in de hand dan tien in de lucht.'* — wat je hebt is meer waard dan iets onzekers.\n\n**Over werken**:\n• *'Wie niet werkt, zal niet eten.'* — alleen door werk verdien je.\n• *'Vele handen maken licht werk.'* — samen gaat het makkelijk.\n• *'Hoge bomen vangen veel wind.'* — bekende mensen krijgen veel kritiek.\n• *'Wie het onderste uit de kan wil, krijgt het lid op de neus.'* — wie alles wil, krijgt niets.\n\n**Over vrienden + familie**:\n• *'Eigen haard is goud waard.'* — thuis is het mooist.\n• *'Bloed kruipt waar het niet gaan kan.'* — familie blijft familie.\n• *'Een goede buur is beter dan een verre vriend.'* — buren helpen meer.\n• *'Vele vrienden, weinig hulp.'* — als je in nood zit zijn er weinig over.\n\n**Over leren**:\n• *'Al doende leert men.'* — door te doen leer je.\n• *'Wie zijn neus schendt, schendt zijn aangezicht.'* — wie zichzelf in de problemen brengt, lijdt het meest.\n• *'Een gewaarschuwd man telt voor twee.'* — als je waarschuwt, ben je sterker.\n\n**Over geluk + tegenslag**:\n• *'Na regen komt zonneschijn.'* — na slechte tijden komen goede.\n• *'Wat je in de wieg leert, leer je in het graf niet meer.'* — wat je jong leert, blijft je leven lang.\n• *'Onbekend maakt onbemind.'* — wat je niet kent, vind je niet mooi.\n\n**Cito-vraag-trick**:\nVaak: 'Welk spreekwoord past bij deze situatie?'\nLees situatie → denk aan **les** → kies spreekwoord met **zelfde les**.",
+      "**Spreekwoorden** = volkswijsheden, vaak met een **les**.\n\nTop-20 Toets-spreekwoorden:\n\n**Over geduld + tijd**:\n• *'Beter laat dan nooit.'* — beter laat doen dan helemaal niet.\n• *'Rome is niet op één dag gebouwd.'* — grote dingen kosten tijd.\n• *'Wie het laatst lacht, lacht het best.'* — wacht maar af wie wint.\n• *'Haastige spoed is zelden goed.'* — te snel werken = fouten.\n\n**Over zuinigheid**:\n• *'Wie het kleine niet eert, is het grote niet weert.'* — wees zuinig.\n• *'Goedkoop is duurkoop.'* — goedkope dingen gaan vaak snel kapot.\n• *'Beter een vogel in de hand dan tien in de lucht.'* — wat je hebt is meer waard dan iets onzekers.\n\n**Over werken**:\n• *'Wie niet werkt, zal niet eten.'* — alleen door werk verdien je.\n• *'Vele handen maken licht werk.'* — samen gaat het makkelijk.\n• *'Hoge bomen vangen veel wind.'* — bekende mensen krijgen veel kritiek.\n• *'Wie het onderste uit de kan wil, krijgt het lid op de neus.'* — wie alles wil, krijgt niets.\n\n**Over vrienden + familie**:\n• *'Eigen haard is goud waard.'* — thuis is het mooist.\n• *'Bloed kruipt waar het niet gaan kan.'* — familie blijft familie.\n• *'Een goede buur is beter dan een verre vriend.'* — buren helpen meer.\n• *'Vele vrienden, weinig hulp.'* — als je in nood zit zijn er weinig over.\n\n**Over leren**:\n• *'Al doende leert men.'* — door te doen leer je.\n• *'Wie zijn neus schendt, schendt zijn aangezicht.'* — wie zichzelf in de problemen brengt, lijdt het meest.\n• *'Een gewaarschuwd man telt voor twee.'* — als je waarschuwt, ben je sterker.\n\n**Over geluk + tegenslag**:\n• *'Na regen komt zonneschijn.'* — na slechte tijden komen goede.\n• *'Wat je in de wieg leert, leer je in het graf niet meer.'* — wat je jong leert, blijft je leven lang.\n• *'Onbekend maakt onbemind.'* — wat je niet kent, vind je niet mooi.\n\n**toetsvraag-trick**:\nVaak: 'Welk spreekwoord past bij deze situatie?'\nLees situatie → denk aan **les** → kies spreekwoord met **zelfde les**.",
     checks: [
       {
         q: "*'Rome is niet op één dag gebouwd'* — wat is les?",
@@ -208,7 +208,7 @@ const steps = [
             { woord: "spreekwoord", uitleg: "Korte wijsheid met les." },
             { woord: "moraal / les", uitleg: "Wat je leert uit de uitspraak." },
           ],
-          theorie: "Cito-truc spreekwoord-vragen: zoek de **LES** (= algemene wijsheid), niet de letterlijke woorden. Rome / vogels / boter / koeien zijn maar BEELDEN — de wijsheid is universeel.",
+          theorie: "Toets-truc spreekwoord-vragen: zoek de **LES** (= algemene wijsheid), niet de letterlijke woorden. Rome / vogels / boter / koeien zijn maar BEELDEN — de wijsheid is universeel.",
           voorbeelden: [
             { type: "stap", tekst: "Andere spreekwoorden over tijd: 'Haastige spoed is zelden goed.' 'Beter laat dan nooit.' 'Geduld is een schone zaak.'" },
             { type: "stap", tekst: "Engels equivalent: 'Rome wasn't built in a day.' = exact zelfde betekenis." },
@@ -244,7 +244,7 @@ const steps = [
   {
     title: "Uitdrukking + situatie matchen",
     explanation:
-      "**Cito-vraag-type**: krijg situatie → kies passende uitdrukking / spreekwoord.\n\n**Werkwijze**:\n1. Lees situatie goed.\n2. Bepaal de **kern-les** *(geduld, doorzettingsvermogen, samenwerking, etc.)*.\n3. Match met spreekwoord dat **zelfde les** geeft.\n4. Negeer afleiders die alleen letterlijk passen.\n\n**Voorbeelden**:\n\n**Situatie 1**:\n*'Lisa is laat begonnen met leren voor de toets, maar in de laatste week leerde ze elke dag 3 uur. Ze haalde een goed cijfer.'*\n\nWelk spreekwoord past?\nA. Beter laat dan nooit. ✅\nB. Goedkoop is duurkoop.\nC. Vele handen maken licht werk.\nD. Op rood licht staan.\n\n**Antwoord: A** — laat begonnen, toch goed afgelopen.\n\n**Situatie 2**:\n*'Peter wilde de mooiste fiets en de beste laptop en de duurste schoenen kopen — maar nu heeft hij geen geld meer voor eten.'*\n\nWelk spreekwoord past?\nA. Wie het onderste uit de kan wil, krijgt het lid op de neus. ✅\nB. Rome is niet op één dag gebouwd.\nC. Een appeltje voor de dorst.\nD. Op de kleintjes letten.\n\n**Antwoord: A** — wie alles wil, krijgt niets.\n\n**Situatie 3**:\n*'Marie en haar oma wonen elk in een ander land. Ze zien elkaar maar 1× per jaar, maar als oma binnenkomt is de band meteen warm weer.'*\n\nWelk spreekwoord?\nA. Bloed kruipt waar het niet gaan kan. ✅\nB. Wie niet werkt, zal niet eten.\nC. Goedkoop is duurkoop.\nD. Beter laat dan nooit.\n\n**Antwoord: A** — familieband blijft, ondanks afstand.\n\n**Strategie bij twijfel**:\n• Werk **uitsluitend** — sluit antwoorden die NIET de situatie beschrijven uit.\n• Vermijd antwoorden die alleen **letterlijk** passen *(als het verhaal over eten gaat, hoeft het spreekwoord niet over eten te gaan)*.\n• Kijk naar **kern-emotie** *(verdriet, dapperheid, geduld, hebzucht, samenwerking)*.\n\n**Veel-voorkomende valkuilen**:\n• Twee spreekwoorden lijken op elkaar *(bijv. 'Beter laat dan nooit' vs 'Haastige spoed is zelden goed')* — kies welke past bij de **richting** van situatie.\n• Soms past geen enkel perfect → kies het **dichtstbijzijnde**.",
+      "**toetsvraag-type**: krijg situatie → kies passende uitdrukking / spreekwoord.\n\n**Werkwijze**:\n1. Lees situatie goed.\n2. Bepaal de **kern-les** *(geduld, doorzettingsvermogen, samenwerking, etc.)*.\n3. Match met spreekwoord dat **zelfde les** geeft.\n4. Negeer afleiders die alleen letterlijk passen.\n\n**Voorbeelden**:\n\n**Situatie 1**:\n*'Lisa is laat begonnen met leren voor de toets, maar in de laatste week leerde ze elke dag 3 uur. Ze haalde een goed cijfer.'*\n\nWelk spreekwoord past?\nA. Beter laat dan nooit. ✅\nB. Goedkoop is duurkoop.\nC. Vele handen maken licht werk.\nD. Op rood licht staan.\n\n**Antwoord: A** — laat begonnen, toch goed afgelopen.\n\n**Situatie 2**:\n*'Peter wilde de mooiste fiets en de beste laptop en de duurste schoenen kopen — maar nu heeft hij geen geld meer voor eten.'*\n\nWelk spreekwoord past?\nA. Wie het onderste uit de kan wil, krijgt het lid op de neus. ✅\nB. Rome is niet op één dag gebouwd.\nC. Een appeltje voor de dorst.\nD. Op de kleintjes letten.\n\n**Antwoord: A** — wie alles wil, krijgt niets.\n\n**Situatie 3**:\n*'Marie en haar oma wonen elk in een ander land. Ze zien elkaar maar 1× per jaar, maar als oma binnenkomt is de band meteen warm weer.'*\n\nWelk spreekwoord?\nA. Bloed kruipt waar het niet gaan kan. ✅\nB. Wie niet werkt, zal niet eten.\nC. Goedkoop is duurkoop.\nD. Beter laat dan nooit.\n\n**Antwoord: A** — familieband blijft, ondanks afstand.\n\n**Strategie bij twijfel**:\n• Werk **uitsluitend** — sluit antwoorden die NIET de situatie beschrijven uit.\n• Vermijd antwoorden die alleen **letterlijk** passen *(als het verhaal over eten gaat, hoeft het spreekwoord niet over eten te gaan)*.\n• Kijk naar **kern-emotie** *(verdriet, dapperheid, geduld, hebzucht, samenwerking)*.\n\n**Veel-voorkomende valkuilen**:\n• Twee spreekwoorden lijken op elkaar *(bijv. 'Beter laat dan nooit' vs 'Haastige spoed is zelden goed')* — kies welke past bij de **richting** van situatie.\n• Soms past geen enkel perfect → kies het **dichtstbijzijnde**.",
     checks: [
       {
         q: "Marie kreeg 's morgens een rapport met 1 zes — verdrietig. 's Middags kreeg ze een lieve brief van oma. Spreekwoord?",
@@ -273,18 +273,18 @@ const steps = [
     ],
   },
   {
-    title: "Cito-strategie + valkuilen",
+    title: "Toets-strategie + valkuilen",
     explanation:
-      "**Cito-tips** voor uitdrukking-vragen:\n\n**1. Letterlijk uitsluiten**:\nVraag noemt 'koe bij horens vatten' → antwoord met 'koe op boerderij' is letterlijk = bijna altijd fout.\n\n**2. Twee opties die lijken op elkaar**:\nSoms zijn twee opties bijna hetzelfde — kies de **specifieke** boven de algemene.\n• *'Iets met een korreltje zout nemen'* = **niet alles letterlijk geloven**.\n• Niet: 'iets met zout strooien' *(letterlijk)*.\n\n**3. Context-woorden zoeken**:\nIn de situatie staan vaak **signaalwoorden**:\n• *'Hij wachtte maandenlang...'* → spreekwoord over geduld.\n• *'Plotseling...'* → spreekwoord over onverwachte gebeurtenis.\n• *'Iedereen samen...'* → spreekwoord over samenwerken.\n• *'Hij had spijt...'* → spreekwoord over fout/leren.\n\n**4. Begint met 'beter' of 'wie...'**:\nVeel spreekwoorden beginnen zo:\n• *'Beter laat dan nooit'* / *'Beter een vogel in de hand'* / *'Beter een goede buur'*.\n• *'Wie A doet, krijgt B'* — een 'als-dan' regel.\n\n**5. Tijd-aanduidingen letten**:\n• Spreekwoorden met *'morgen / vandaag'* gaan vaak over timing.\n• *'Komt tijd, komt raad.'* — wacht maar.\n\n**6. Drie soorten foute antwoorden Cito gebruikt**:\n• **Letterlijk** *(over koe als dier)*.\n• **Klinkt similar** *(zelfde dier maar andere les)*.\n• **Helemaal niets met situatie** *(afleider)*.\n\n**7. Bij volledig onbekend spreekwoord**:\nKijk in de optie naar **kern-woorden**:\n• 'Boter' → over schuld of eerlijkheid.\n• 'Hand' → over werken of nemen.\n• 'Tijd' → over geduld.\n• 'Geld' → over zuinigheid.\n\n**8. Lijst voor thuis**:\nMaak je eigen lijst van 30 uitdrukkingen + spreekwoorden die je vaak tegenkomt. Schrijf ernaast wat ze betekenen. Oefen elke avond 5 minuten.\n\n**9. Niet stressen**:\nCito vraagt op 50 vragen ongeveer 3-5 spreekwoord-uitdrukking-vragen. Dat is **6-10%**. Belangrijk maar geen toets-bepaler.\n\n**Voorbeeld-vraag**:\n*'Welke uitdrukking betekent: iemand in de problemen brengen?'*\nA. Het stof opwerken.\nB. Op het verkeerde paard wedden.\nC. Iemand met de neus op de feiten drukken.\nD. Op tijd opzeggen.\n\n**Antwoord**: C — iemand wijzen op een fout / probleem.\n\n**Cito-feitje**:\nKinderen die thuis veel **lezen** scoren gemiddeld 20% hoger op spreekwoord-vragen. Lees boeken met dialoog en oude verhalen — daar zitten veel uitdrukkingen in.",
+      "**Toets-tips** voor uitdrukking-vragen:\n\n**1. Letterlijk uitsluiten**:\nVraag noemt 'koe bij horens vatten' → antwoord met 'koe op boerderij' is letterlijk = bijna altijd fout.\n\n**2. Twee opties die lijken op elkaar**:\nSoms zijn twee opties bijna hetzelfde — kies de **specifieke** boven de algemene.\n• *'Iets met een korreltje zout nemen'* = **niet alles letterlijk geloven**.\n• Niet: 'iets met zout strooien' *(letterlijk)*.\n\n**3. Context-woorden zoeken**:\nIn de situatie staan vaak **signaalwoorden**:\n• *'Hij wachtte maandenlang...'* → spreekwoord over geduld.\n• *'Plotseling...'* → spreekwoord over onverwachte gebeurtenis.\n• *'Iedereen samen...'* → spreekwoord over samenwerken.\n• *'Hij had spijt...'* → spreekwoord over fout/leren.\n\n**4. Begint met 'beter' of 'wie...'**:\nVeel spreekwoorden beginnen zo:\n• *'Beter laat dan nooit'* / *'Beter een vogel in de hand'* / *'Beter een goede buur'*.\n• *'Wie A doet, krijgt B'* — een 'als-dan' regel.\n\n**5. Tijd-aanduidingen letten**:\n• Spreekwoorden met *'morgen / vandaag'* gaan vaak over timing.\n• *'Komt tijd, komt raad.'* — wacht maar.\n\n**6. Drie soorten foute antwoorden De toets gebruikt**:\n• **Letterlijk** *(over koe als dier)*.\n• **Klinkt similar** *(zelfde dier maar andere les)*.\n• **Helemaal niets met situatie** *(afleider)*.\n\n**7. Bij volledig onbekend spreekwoord**:\nKijk in de optie naar **kern-woorden**:\n• 'Boter' → over schuld of eerlijkheid.\n• 'Hand' → over werken of nemen.\n• 'Tijd' → over geduld.\n• 'Geld' → over zuinigheid.\n\n**8. Lijst voor thuis**:\nMaak je eigen lijst van 30 uitdrukkingen + spreekwoorden die je vaak tegenkomt. Schrijf ernaast wat ze betekenen. Oefen elke avond 5 minuten.\n\n**9. Niet stressen**:\nCito vraagt op 50 vragen ongeveer 3-5 spreekwoord-uitdrukking-vragen. Dat is **6-10%**. Belangrijk maar geen toets-bepaler.\n\n**Voorbeeld-vraag**:\n*'Welke uitdrukking betekent: iemand in de problemen brengen?'*\nA. Het stof opwerken.\nB. Op het verkeerde paard wedden.\nC. Iemand met de neus op de feiten drukken.\nD. Op tijd opzeggen.\n\n**Antwoord**: C — iemand wijzen op een fout / probleem.\n\n**Toets-feitje**:\nKinderen die thuis veel **lezen** scoren gemiddeld 20% hoger op spreekwoord-vragen. Lees boeken met dialoog en oude verhalen — daar zitten veel uitdrukkingen in.",
     checks: [
       {
-        q: "Hoe vaak komen **spreekwoord/uitdrukking-vragen** op Cito ongeveer voor?",
+        q: "Hoe vaak komen **spreekwoord/uitdrukking-vragen** op de Doorstroomtoets ongeveer voor?",
         options: ["3-5 vragen (6-10%)", "Helft", "Alle", "Geen"],
         answer: 0,
         wrongHints: [null, "Veel minder.", null, "Wel."],
       },
       {
-        q: "Hoe **letterlijk uitsluiten** werkt bij Cito?",
+        q: "Hoe **letterlijk uitsluiten** werkt bij de Doorstroomtoets?",
         options: ["Antwoord met figuurlijk = vaak goed", "Letterlijk is goed", "Beide", "Geen verschil"],
         answer: 0,
         wrongHints: [null, "Bijna nooit.", null, "Wel."],
@@ -305,7 +305,7 @@ const steps = [
   },
   {
     title: "Eind-toets — uitdrukking mix",
-    explanation: "Mix-toets in Cito-stijl.\n\nVeel succes!",
+    explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "*'Twee vliegen in één klap'* — wat?", options: ["Twee dingen tegelijk lukken", "Letterlijk vliegen", "Boos", "Sneller"], answer: 0, wrongHints: [null, "Figuurlijk.", null, "Wel maar specifiek."] },
       { q: "*'Beter een vogel in de hand dan tien in de lucht'* — les?", options: ["Wat je hebt is meer waard dan onzekerheid", "Vogels", "Tellen", "Vliegen"], answer: 0, wrongHints: [null, "Het gaat niet écht over vogels — wat 'heb je in de hand' en wat 'vliegt nog rond'?", "Tel niet, vergelijk: iets zékers tegenover iets onzekers.", null] },
@@ -335,17 +335,17 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const spreekwoordenUitdrukkingenPo = {
   id: "spreekwoorden-uitdrukkingen-po",
-  title: "Spreekwoorden + uitdrukkingen (Cito groep 6-8)",
+  title: "Spreekwoorden + uitdrukkingen (Doorstroomtoets groep 6-8)",
   emoji: "💬",
   level: "groep6-8",
   subject: "taal",
   referentieNiveau: "1F",
-  sloThema: "Taal — figuurlijk taalgebruik / Cito",
+  sloThema: "Taal — figuurlijk taalgebruik / Doorstroomtoets",
   prerequisites: [
     { id: "woordenschat-po", title: "Woordenschat", niveau: "1F" },
   ],
   intro:
-    "Spreekwoorden + uitdrukkingen voor Cito groep 6-8 — letterlijk vs figuurlijk + top-30 uitdrukkingen (lichaam/dier/eten) + top-20 spreekwoorden + matching-strategie (Cito-vraag) + valkuilen. ~15 min.",
+    "Spreekwoorden + uitdrukkingen voor Doorstroomtoets groep 6-8 — letterlijk vs figuurlijk + top-30 uitdrukkingen (lichaam/dier/eten) + top-20 spreekwoorden + matching-strategie (toetsvraag) + valkuilen. ~15 min.",
   triggerKeywords: [
     "spreekwoord", "spreekwoorden",
     "uitdrukking", "uitdrukkingen", "idioom",

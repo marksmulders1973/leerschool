@@ -123,7 +123,7 @@ const steps = [
           woorden: [{ woord: "plein", uitleg: "Open ruimte midden in stad of dorp." }],
           theorie: "ei-ezelsbrug 'klein-plein-trein-rein-brein-eind' — leer als geheel.",
           voorbeelden: [{ type: "rijm", tekst: "Op het plein staat een trein die klein is." }],
-          basiskennis: [{ onderwerp: "Cito-strikvraag", uitleg: "Plein/plijn lijkt op rijm (klein/klijn). Beide ei!" }],
+          basiskennis: [{ onderwerp: "Toets-strikvraag", uitleg: "Plein/plijn lijkt op rijm (klein/klijn). Beide ei!" }],
           niveaus: { basis: "plein = ei.", simpeler: "Plein staat in ei-groep met klein/trein/rein. Allemaal ei.", nogSimpeler: "Ei" },
         },
       },

@@ -106,7 +106,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Klassieke faux ami! Bibliotheek = *bibliothèque*.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Faux ami #1", tekst: "**Librairie** = boekwinkel (waar je boeken **koopt**). Bibliotheek (waar je boeken **leent**) = **bibliothèque**. Cito-klassieker — leerlingen verwarren dit constant." }],
+          stappen: [{ titel: "Faux ami #1", tekst: "**Librairie** = boekwinkel (waar je boeken **koopt**). Bibliotheek (waar je boeken **leent**) = **bibliothèque**. Toets-klassieker — leerlingen verwarren dit constant." }],
           theorie: "Memo: 'librairie' is een 'librai' (boekverkoper) z'n winkel.",
           niveaus: { basis: "Boekwinkel.", simpeler: "Librairie = boekwinkel", nogSimpeler: "Boekwinkel" },
         },
@@ -117,7 +117,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Faux! *ne...que* = alleen maar (positief!).", "Niet correct.", "Niet correct."],
         uitlegPad: {
-          stappen: [{ titel: "ne...que ≠ ontkenning", tekst: "**ne...que** = alleen maar = beperking, **niet** ontkenning. *Il ne lit que des romans* = Hij leest **alleen** romans (= Hij leest niets anders dan romans).\n\nVerwarrend omdat *ne* meestal ontkenning is. Cito-favoriete val." }],
+          stappen: [{ titel: "ne...que ≠ ontkenning", tekst: "**ne...que** = alleen maar = beperking, **niet** ontkenning. *Il ne lit que des romans* = Hij leest **alleen** romans (= Hij leest niets anders dan romans).\n\nVerwarrend omdat *ne* meestal ontkenning is. Toets-favoriete val." }],
           theorie: "Andere ne-constructies: ne...pas (niet), ne...jamais (nooit), ne...rien (niets), ne...personne (niemand) — die zijn wel ontkenning.",
           niveaus: { basis: "Alleen.", simpeler: "ne...que = alleen", nogSimpeler: "Alleen" },
         },
@@ -158,7 +158,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Faux ami! Niet 100%.", "Te zwak.", "Niet correct."],
         uitlegPad: {
-          stappen: [{ titel: "Faux ami val", tekst: "**Sans doute** = waarschijnlijk (~80% kans). Klinkt als 'zonder twijfel' maar betekent juist **niet** absoluut zeker. Voor 'zeker' gebruik je *sans aucun doute*. Cito-favoriete val." }],
+          stappen: [{ titel: "Faux ami val", tekst: "**Sans doute** = waarschijnlijk (~80% kans). Klinkt als 'zonder twijfel' maar betekent juist **niet** absoluut zeker. Voor 'zeker' gebruik je *sans aucun doute*. Toets-favoriete val." }],
           niveaus: { basis: "Waarschijnlijk.", simpeler: "Sans doute = wschnl.", nogSimpeler: "Wschnl" },
         },
       },
@@ -189,7 +189,7 @@ const steps = [
         wrongHints: [null, "Niet — passé composé.", "Niet — futur.", "Niet — conditionnel."],
         uitlegPad: {
           stappen: [{ titel: "Imparfait = was-aan-het-eten", tekst: "**Imparfait**: doorlopende of gewoonte-handeling in verleden. *Je mangeais quand il a téléphoné* = Ik was aan het eten toen hij belde. **Passé composé** voor voltooide: *J'ai mangé* = Ik heb gegeten." }],
-          theorie: "Cito-pattern: tijdlijn-vragen door tijden interpreteren.",
+          theorie: "Toets-patroon: tijdlijn-vragen door tijden interpreteren.",
           niveaus: { basis: "Doorlopend.", simpeler: "Imparfait = bezig/gewoonte", nogSimpeler: "A." },
         },
       },
@@ -210,7 +210,7 @@ const steps = [
   {
     title: "Cultuur + actualiteit-context",
     explanation:
-      "CSE Frans-teksten gaan vaak over Franse maatschappij, cultuur, politiek of Europese actualiteit. **Context-kennis** helpt enorm.\n\n**Frankrijk in een notendop**:\n• Bevolking: ~68 mln.\n• Hoofdstad: Paris.\n• President: bestaat sinds Vijfde Republiek (1958, De Gaulle).\n• Huidig: Emmanuel Macron (sinds 2017, herkozen 2022).\n• Parlement: Assemblée Nationale + Sénat.\n• Premier: door president benoemd.\n• EU + euro + Schengen-zone.\n• Lid VN-Veiligheidsraad (vetorecht).\n• Kernmacht.\n\n**Belangrijke Franse media** (vaak bron voor CSE-teksten):\n• Le Monde (kwaliteits-krant, links-liberaal).\n• Le Figaro (rechts-liberaal).\n• Libération (links).\n• Le Parisien (populair).\n• Mediapart (digitaal, onderzoeksjournalistiek).\n• Courrier International (buitenlands nieuws-overzicht).\n\n**Franse politieke partijen** (recente):\n• **Renaissance** (Macron, centrum).\n• **Rassemblement National** (Le Pen, extreem-rechts).\n• **La France Insoumise** (Mélenchon, extreem-links).\n• **Les Républicains** (klassiek rechts).\n• **Parti Socialiste** (PS, traditioneel links).\n• **Europe Écologie Les Verts** (groenen).\n\n**Recente Franse + Europese onderwerpen** (CSE 2024-25):\n• Gele Hesjes (Gilets jaunes 2018-).\n• Pensioenhervorming + protesten 2023.\n• Klimaatbeleid + Europese Green Deal.\n• Russisch-Oekraïense oorlog + EU-respons.\n• Energiecrisis + kernenergie-keuze (FR is grote kernenergie-producent).\n• Immigratie + integratie-debat.\n• Banlieues-spanningen (voorsteden Parijs).\n• Vaccinatie-debat post-COVID.\n• AI-regulering (EU AI Act 2024).\n• Olympische Spelen Paris 2024.\n\n**Frankrijk-specifieke begrippen**:\n• **Laïcité** = staats-secularisme (sinds wet 1905). Belangrijk: openbare ruimte religieus-neutraal. Geen hoofddoek in openbare scholen, geen kruisen in stadhuizen.\n• **Banlieue** = voorstad. Vaak negatief connotation (sociaal kwetsbare wijken rond Parijs).\n• **Brevet** = einde-onderbouw-examen (~3e klas).\n• **Baccalauréat** = einddiploma middelbare school.\n• **Grandes écoles** = elite-hogescholen (Polytechnique, ENA-opvolger, HEC).\n• **Sécurité sociale (sécu)** = sociaal zekerheidssysteem.\n• **SMIC** = minimumloon.\n• **TGV** = hoge-snelheidstrein.\n• **TVA** = BTW.\n• **EHPAD** = verpleeghuis ouderen.\n• **HLM** = sociale-woningbouw (vergelijkbaar met NL-corporatie).\n\n**Franse cultuur-iconen**:\n• Schrijvers: Victor Hugo, Albert Camus, Marcel Proust, Simone de Beauvoir, Annie Ernaux (Nobelprijs 2022).\n• Filosofen: Sartre, Foucault, Beauvoir, Camus.\n• Kunstenaars: Monet, Cézanne, Picasso (geboren in Spanje, woonde FR).\n• Muziek: Edith Piaf, Charles Aznavour, Daft Punk, Stromae (Belgische), Aya Nakamura.\n• Film: Truffaut, Godard, Audiard, recente: Houda Benyamina, Céline Sciamma.\n• Sport: Zinedine Zidane, Kylian Mbappé, Antoine Griezmann.\n\n**Franse + Europese cijfers** (vaak in CSE):\n• EU-leden: 27 sinds Brexit (2020).\n• EU-bevolking: ~448 mln.\n• Euro-zone: 21 landen (Bulgarije erbij sinds 2026).\n• Klimaat: EU-doel 55% CO₂-reductie 2030 vs 1990.\n• Frankrijk kernenergie: ~70% elektriciteit.\n\n**Tips voor algemeen actualiteits-bewustzijn**:\n• Lees soms NL-krant over Frans/EU-nieuws.\n• Volg podcast 'Inside Europe' of YouTube-kanaal France 24.\n• Bekijk recente examens (examenblad.nl) — terugkerende thema's herkennen.\n\n**Cito-pattern**: vragen over **achtergrond of cultureel begrip** zonder dat het in tekst zelf staat. Iemand die Macron niet kent of Olympische Spelen Paris niet, mist context-clue.",
+      "CSE Frans-teksten gaan vaak over Franse maatschappij, cultuur, politiek of Europese actualiteit. **Context-kennis** helpt enorm.\n\n**Frankrijk in een notendop**:\n• Bevolking: ~68 mln.\n• Hoofdstad: Paris.\n• President: bestaat sinds Vijfde Republiek (1958, De Gaulle).\n• Huidig: Emmanuel Macron (sinds 2017, herkozen 2022).\n• Parlement: Assemblée Nationale + Sénat.\n• Premier: door president benoemd.\n• EU + euro + Schengen-zone.\n• Lid VN-Veiligheidsraad (vetorecht).\n• Kernmacht.\n\n**Belangrijke Franse media** (vaak bron voor CSE-teksten):\n• Le Monde (kwaliteits-krant, links-liberaal).\n• Le Figaro (rechts-liberaal).\n• Libération (links).\n• Le Parisien (populair).\n• Mediapart (digitaal, onderzoeksjournalistiek).\n• Courrier International (buitenlands nieuws-overzicht).\n\n**Franse politieke partijen** (recente):\n• **Renaissance** (Macron, centrum).\n• **Rassemblement National** (Le Pen, extreem-rechts).\n• **La France Insoumise** (Mélenchon, extreem-links).\n• **Les Républicains** (klassiek rechts).\n• **Parti Socialiste** (PS, traditioneel links).\n• **Europe Écologie Les Verts** (groenen).\n\n**Recente Franse + Europese onderwerpen** (CSE 2024-25):\n• Gele Hesjes (Gilets jaunes 2018-).\n• Pensioenhervorming + protesten 2023.\n• Klimaatbeleid + Europese Green Deal.\n• Russisch-Oekraïense oorlog + EU-respons.\n• Energiecrisis + kernenergie-keuze (FR is grote kernenergie-producent).\n• Immigratie + integratie-debat.\n• Banlieues-spanningen (voorsteden Parijs).\n• Vaccinatie-debat post-COVID.\n• AI-regulering (EU AI Act 2024).\n• Olympische Spelen Paris 2024.\n\n**Frankrijk-specifieke begrippen**:\n• **Laïcité** = staats-secularisme (sinds wet 1905). Belangrijk: openbare ruimte religieus-neutraal. Geen hoofddoek in openbare scholen, geen kruisen in stadhuizen.\n• **Banlieue** = voorstad. Vaak negatief connotation (sociaal kwetsbare wijken rond Parijs).\n• **Brevet** = einde-onderbouw-examen (~3e klas).\n• **Baccalauréat** = einddiploma middelbare school.\n• **Grandes écoles** = elite-hogescholen (Polytechnique, ENA-opvolger, HEC).\n• **Sécurité sociale (sécu)** = sociaal zekerheidssysteem.\n• **SMIC** = minimumloon.\n• **TGV** = hoge-snelheidstrein.\n• **TVA** = BTW.\n• **EHPAD** = verpleeghuis ouderen.\n• **HLM** = sociale-woningbouw (vergelijkbaar met NL-corporatie).\n\n**Franse cultuur-iconen**:\n• Schrijvers: Victor Hugo, Albert Camus, Marcel Proust, Simone de Beauvoir, Annie Ernaux (Nobelprijs 2022).\n• Filosofen: Sartre, Foucault, Beauvoir, Camus.\n• Kunstenaars: Monet, Cézanne, Picasso (geboren in Spanje, woonde FR).\n• Muziek: Edith Piaf, Charles Aznavour, Daft Punk, Stromae (Belgische), Aya Nakamura.\n• Film: Truffaut, Godard, Audiard, recente: Houda Benyamina, Céline Sciamma.\n• Sport: Zinedine Zidane, Kylian Mbappé, Antoine Griezmann.\n\n**Franse + Europese cijfers** (vaak in CSE):\n• EU-leden: 27 sinds Brexit (2020).\n• EU-bevolking: ~448 mln.\n• Euro-zone: 21 landen (Bulgarije erbij sinds 2026).\n• Klimaat: EU-doel 55% CO₂-reductie 2030 vs 1990.\n• Frankrijk kernenergie: ~70% elektriciteit.\n\n**Tips voor algemeen actualiteits-bewustzijn**:\n• Lees soms NL-krant over Frans/EU-nieuws.\n• Volg podcast 'Inside Europe' of YouTube-kanaal France 24.\n• Bekijk recente examens (examenblad.nl) — terugkerende thema's herkennen.\n\n**Toets-patroon**: vragen over **achtergrond of cultureel begrip** zonder dat het in tekst zelf staat. Iemand die Macron niet kent of Olympische Spelen Paris niet, mist context-clue.",
     checks: [
       {
         q: "Wat is **laïcité**?",
@@ -219,7 +219,7 @@ const steps = [
         wrongHints: [null, "Dat zou 'amour de la France' zijn.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "1905-wet", tekst: "**Laïcité** = Frans staats-secularisme: openbare ruimte (school, stadhuis, ziekenhuis) is religieus-neutraal. Wet 1905 scheidt kerk en staat. Daarom: geen hoofddoek op openbare scholen, geen religieuze symbolen in ambtenaren-ruimten. Vaak fel debat." }],
-          theorie: "Cito-favoriet: hoofddoekenwet 2004, burqa-verbod 2010, debat over politieagenten met religieuze symbolen.",
+          theorie: "Toets-favoriet: hoofddoekenwet 2004, burqa-verbod 2010, debat over politieagenten met religieuze symbolen.",
           niveaus: { basis: "Secularisme.", simpeler: "Laïcité = neutrale staat", nogSimpeler: "Neutraal" },
         },
       },
@@ -260,7 +260,7 @@ const steps = [
         wrongHints: [null, "Niet — weinig olie-stroom.", "Niet — uitgefaseerd.", "Wel groeiend maar niet 70%."],
         uitlegPad: {
           stappen: [{ titel: "Kern = Franse keuze", tekst: "**Frankrijk: ~70% elektriciteit uit kernenergie** (56 reactoren). Sinds jaren '70 strategische keuze. Pro: lage CO₂, energie-onafhankelijk. Con: afval, ontmanteling-kosten, Fukushima-zorgen. Macron heeft pro-kern-koers; nieuwe EPR-reactoren in aanbouw." }],
-          theorie: "Cito-actueel: klimaat-debat + energie-onafhankelijkheid sinds Oekraïne-oorlog → Europa heroverweegt kern.",
+          theorie: "Toets-actueel: klimaat-debat + energie-onafhankelijkheid sinds Oekraïne-oorlog → Europa heroverweegt kern.",
           niveaus: { basis: "Kernenergie.", simpeler: "FR 70% = kern", nogSimpeler: "Kern" },
         },
       },
@@ -279,7 +279,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Faux ami met EN 'actually'.", "Niet — *aujourd'hui*.", "Tegenovergesteld."],
         uitlegPad: {
-          stappen: [{ titel: "Faux ami met EN", tekst: "**Actuellement** = momenteel / op dit moment / tegenwoordig. **Niet** 'actually' (daadwerkelijk) = *en fait, vraiment*. Cito-favoriete val voor leerlingen die ook Engels leren." }],
+          stappen: [{ titel: "Faux ami met EN", tekst: "**Actuellement** = momenteel / op dit moment / tegenwoordig. **Niet** 'actually' (daadwerkelijk) = *en fait, vraiment*. Toets-favoriete val voor leerlingen die ook Engels leren." }],
           niveaus: { basis: "Momenteel.", simpeler: "Actuellement = nu", nogSimpeler: "Nu" },
         },
       },

@@ -38,7 +38,7 @@ const BRON_LINK = "https://www.examenblad.nl/2025/vmbo-gl/documenten/cse-2/gt-11
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Beleidsfasen? 4 fasen (agenda→voorbereiding→bepaling→uitvoering). Rechtszitting-onderdelen? 5 (tenlastelegging→verhoor→requisitoir→pleidooi+laatste woord→vonnis). Kamer-rechten? 5 (amendement/initiatief/budget/interpellatie + motie).",
+  theorie: "Toets-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Beleidsfasen? 4 fasen (agenda→voorbereiding→bepaling→uitvoering). Rechtszitting-onderdelen? 5 (tenlastelegging→verhoor→requisitoir→pleidooi+laatste woord→vonnis). Kamer-rechten? 5 (amendement/initiatief/budget/interpellatie + motie).",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

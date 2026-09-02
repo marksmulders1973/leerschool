@@ -46,7 +46,7 @@ const GRATIS = [
     emoji: "📝",
     titel: "Redactiesommen-bundel",
     groep: "groep 5-8",
-    tekst: "Verhaaltjessommen in Cito-stijl: van signaalwoorden herkennen tot twee-stap-sommen. Met kladruimte per som, ouder-stappenplan en antwoordsleutel met uitleg.",
+    tekst: "Verhaaltjessommen in Doorstroomtoets-stijl: van signaalwoorden herkennen tot twee-stap-sommen. Met kladruimte per som, ouder-stappenplan en antwoordsleutel met uitleg.",
     accent: "#ab47bc",
   },
   {

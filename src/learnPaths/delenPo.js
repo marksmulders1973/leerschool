@@ -1,5 +1,5 @@
 // Leerpad: Delen — groep 5-6 PO.
-// Cito-onderdeel rekenen. Referentieniveau 1F.
+// Toets-onderdeel rekenen. Referentieniveau 1F.
 // 6 stappen met uitlegPad.
 // + stap G (11 aug 2026): "ken ze allemaal"-oefenronde met typ-antwoorden.
 
@@ -26,7 +26,7 @@ const chapters = [
   { letter: "C", title: "Delen door 3, 4, 6, 7, 8, 9", emoji: "🟡", from: 2, to: 2 },
   { letter: "D", title: "Delen met rest", emoji: "🔴", from: 3, to: 3 },
   { letter: "E", title: "Praktijk — verdelen", emoji: "🛒", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
   { letter: "G", title: "Oefen ze allemaal!", emoji: "🧮", from: 6, to: 6 },
 ];
 
@@ -57,7 +57,7 @@ const steps = [
   {
     title: "Wat is delen?",
     explanation:
-      "**Delen** is het tegenovergestelde van **vermenigvuldigen**.\n\n**Voorbeeld 1 — verdelen in groepen**:\n*'12 snoepjes verdeel je over 3 kinderen.'*\n• 12 ÷ 3 = **4 snoepjes per kind**.\n\n**Voorbeeld 2 — hoeveel groepen passen erin?**:\n*'Een doos met 24 koekjes; 6 koekjes per zakje. Hoeveel zakjes?'*\n• 24 ÷ 6 = **4 zakjes**.\n\n**Symbool**: **÷** of **/** of **:**\n• 20 ÷ 4 = 5.\n• 20 / 4 = 5.\n• 20 : 4 = 5.\nAllemaal hetzelfde.\n\n**Verschil tussen × en ÷**:\n• 3 × 4 = 12 *(samenvoegen)*.\n• 12 ÷ 4 = 3 *(opdelen)*.\n• 12 ÷ 3 = 4 *(opdelen anders)*.\n\nDelen is de **omgekeerde** van keer. Als 4 × 3 = 12, dan 12 ÷ 3 = 4 en 12 ÷ 4 = 3.\n\n**Cito-truc — gebruik tafel terug**:\nVoor 18 ÷ 3: denk *'wat keer 3 is 18?'*. Antwoord: **6 keer**. Dus 18 ÷ 3 = **6**.\n\n**Belangrijke termen**:\n• **Deeltal** = wat je deelt *(in 12 ÷ 3 is dat 12)*.\n• **Deler** = waardoor je deelt *(de 3)*.\n• **Quotiënt** = uitkomst *(de 4)*.\n\nMaar je hoeft die termen niet uit het hoofd te leren — Cito vraagt het zelden.\n\n**Pas op — delen door 1 en door zichzelf**:\n• 7 ÷ 1 = **7** *(elk getal blijft hetzelfde gedeeld door 1)*.\n• 7 ÷ 7 = **1** *(elk getal door zichzelf = 1)*.\n• 0 ÷ 7 = **0** *(0 verdeeld geeft 0)*.\n• 7 ÷ 0 = **mag niet!** *(delen door 0 bestaat niet)*.",
+      "**Delen** is het tegenovergestelde van **vermenigvuldigen**.\n\n**Voorbeeld 1 — verdelen in groepen**:\n*'12 snoepjes verdeel je over 3 kinderen.'*\n• 12 ÷ 3 = **4 snoepjes per kind**.\n\n**Voorbeeld 2 — hoeveel groepen passen erin?**:\n*'Een doos met 24 koekjes; 6 koekjes per zakje. Hoeveel zakjes?'*\n• 24 ÷ 6 = **4 zakjes**.\n\n**Symbool**: **÷** of **/** of **:**\n• 20 ÷ 4 = 5.\n• 20 / 4 = 5.\n• 20 : 4 = 5.\nAllemaal hetzelfde.\n\n**Verschil tussen × en ÷**:\n• 3 × 4 = 12 *(samenvoegen)*.\n• 12 ÷ 4 = 3 *(opdelen)*.\n• 12 ÷ 3 = 4 *(opdelen anders)*.\n\nDelen is de **omgekeerde** van keer. Als 4 × 3 = 12, dan 12 ÷ 3 = 4 en 12 ÷ 4 = 3.\n\n**Toets-truc — gebruik tafel terug**:\nVoor 18 ÷ 3: denk *'wat keer 3 is 18?'*. Antwoord: **6 keer**. Dus 18 ÷ 3 = **6**.\n\n**Belangrijke termen**:\n• **Deeltal** = wat je deelt *(in 12 ÷ 3 is dat 12)*.\n• **Deler** = waardoor je deelt *(de 3)*.\n• **Quotiënt** = uitkomst *(de 4)*.\n\nMaar je hoeft die termen niet uit het hoofd te leren — De toets vraagt het zelden.\n\n**Pas op — delen door 1 en door zichzelf**:\n• 7 ÷ 1 = **7** *(elk getal blijft hetzelfde gedeeld door 1)*.\n• 7 ÷ 7 = **1** *(elk getal door zichzelf = 1)*.\n• 0 ÷ 7 = **0** *(0 verdeeld geeft 0)*.\n• 7 ÷ 0 = **mag niet!** *(delen door 0 bestaat niet)*.",
     svg: delenSvg(),
     checks: [
       {
@@ -75,7 +75,7 @@ const steps = [
             { woord: "delen", uitleg: "Iets eerlijk verdelen in evenveel-grote groepen." },
             { woord: "÷", uitleg: "Deelteken — kan ook : of / zijn." },
           ],
-          theorie: "Cito-truc voor delen: zoek de **tafel terug**. 12 ÷ 4 → wat × 4 = 12? → 3. 20 ÷ 5 → wat × 5 = 20? → 4. Werk altijd via de bekende tafel-rij.",
+          theorie: "Toets-truc voor delen: zoek de **tafel terug**. 12 ÷ 4 → wat × 4 = 12? → 3. 20 ÷ 5 → wat × 5 = 20? → 4. Werk altijd via de bekende tafel-rij.",
           voorbeelden: [
             { type: "stap", tekst: "**15 ÷ 3** → wat × 3 = 15? → 5. Antwoord: 5." },
             { type: "stap", tekst: "**24 ÷ 6** → wat × 6 = 24? → 4. Antwoord: 4." },
@@ -113,7 +113,7 @@ const steps = [
   {
     title: "Makkelijke delingen — door 2, 5 en 10",
     explanation:
-      "**Delen door 10** — 0 weghalen / komma 1 plek naar links:\n• 30 ÷ 10 = 3\n• 70 ÷ 10 = 7\n• 100 ÷ 10 = 10\n• 250 ÷ 10 = 25\n\n**Delen door 5** — verdubbelen en dan ÷ 10:\n• 35 ÷ 5 = (35 × 2) ÷ 10 = 70 ÷ 10 = **7**.\n• 50 ÷ 5 = 10.\n• Of gewoon tafel-5 terug: 'wat × 5 = 35?' → 7.\n\n**Delen door 2** — gewoon halveren:\n• 8 ÷ 2 = 4\n• 14 ÷ 2 = 7\n• 30 ÷ 2 = 15\n• 18 ÷ 2 = 9\n\n**Cito-truc**:\n• Delen door 10 → cijfer komma 1 plek naar links *(of een 0 weg)*.\n• Delen door 5 → ÷ 10 en × 2.\n• Delen door 2 → halveren (helft pakken).\n\n**Voorbeelden**:\n• 60 ÷ 10 = **6**.\n• 60 ÷ 5 = **12** *(60 ÷ 10 × 2 = 6 × 2)*.\n• 60 ÷ 2 = **30**.\n\n**Slim — combinatie van trucs**:\n*'40 ÷ 2 = ?'* — halveren: 40/2 = 20.\n*'80 ÷ 10 = ?'* — 0 eraf: 8.\n*'45 ÷ 5 = ?'* — tafel-5 terug: 9 × 5 = 45 → antwoord 9.",
+      "**Delen door 10** — 0 weghalen / komma 1 plek naar links:\n• 30 ÷ 10 = 3\n• 70 ÷ 10 = 7\n• 100 ÷ 10 = 10\n• 250 ÷ 10 = 25\n\n**Delen door 5** — verdubbelen en dan ÷ 10:\n• 35 ÷ 5 = (35 × 2) ÷ 10 = 70 ÷ 10 = **7**.\n• 50 ÷ 5 = 10.\n• Of gewoon tafel-5 terug: 'wat × 5 = 35?' → 7.\n\n**Delen door 2** — gewoon halveren:\n• 8 ÷ 2 = 4\n• 14 ÷ 2 = 7\n• 30 ÷ 2 = 15\n• 18 ÷ 2 = 9\n\n**Toets-truc**:\n• Delen door 10 → cijfer komma 1 plek naar links *(of een 0 weg)*.\n• Delen door 5 → ÷ 10 en × 2.\n• Delen door 2 → halveren (helft pakken).\n\n**Voorbeelden**:\n• 60 ÷ 10 = **6**.\n• 60 ÷ 5 = **12** *(60 ÷ 10 × 2 = 6 × 2)*.\n• 60 ÷ 2 = **30**.\n\n**Slim — combinatie van trucs**:\n*'40 ÷ 2 = ?'* — halveren: 40/2 = 20.\n*'80 ÷ 10 = ?'* — 0 eraf: 8.\n*'45 ÷ 5 = ?'* — tafel-5 terug: 9 × 5 = 45 → antwoord 9.",
     checks: [
       {
         q: "**24 ÷ 2** = ?",
@@ -127,7 +127,7 @@ const steps = [
             { titel: "Check terug", tekst: "12 × 2 = 24 ✓. Vermenigvuldigen + delen zijn elkaars tegenpolen — terug-rekenen bevestigt." },
           ],
           woorden: [{ woord: "halveren", uitleg: "In 2 gelijke stukken splitsen." }],
-          theorie: "Cito-truc: ÷ 2 = halveren. ÷ 4 = halveren + nog eens halveren. ÷ 10 = laatste cijfer (0) weghalen.",
+          theorie: "Toets-truc: ÷ 2 = halveren. ÷ 4 = halveren + nog eens halveren. ÷ 10 = laatste cijfer (0) weghalen.",
           voorbeelden: [
             { type: "stap", tekst: "18 ÷ 2 = 9. 30 ÷ 2 = 15. 100 ÷ 2 = 50." },
             { type: "stap", tekst: "Odd-getal halveren: 25 ÷ 2 = 12,5 (komma!). Voor PO mostly even getallen." },
@@ -152,7 +152,7 @@ const steps = [
             { titel: "Bij grotere getallen", tekst: "100 ÷ 10 = 10. 250 ÷ 10 = 25. 1000 ÷ 10 = 100. Altijd: 0 eraf." },
           ],
           woorden: [{ woord: "tientallen", uitleg: "Getallen die delen op 10 (10, 20, 30, ...)." }],
-          theorie: "Cito-truc: ÷ 10 = 0 weg. ÷ 100 = 2 nullen weg. ÷ 1000 = 3 nullen weg.",
+          theorie: "Toets-truc: ÷ 10 = 0 weg. ÷ 100 = 2 nullen weg. ÷ 1000 = 3 nullen weg.",
           voorbeelden: [{ type: "stap", tekst: "70 ÷ 10 = 7. 900 ÷ 10 = 90. 30 ÷ 10 = 3." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Werkt alleen bij getallen die op 0 eindigen (tientallen). 47 ÷ 10 zou 4,7 zijn — komma erbij." }],
           niveaus: {
@@ -174,7 +174,7 @@ const steps = [
             { titel: "Check", tekst: "7 × 5 = 35 ✓. Terug-rekenen bevestigt het antwoord altijd." },
           ],
           woorden: [{ woord: "tafel van 5", uitleg: "5, 10, 15, 20, 25, 30, 35, 40, ..." }],
-          theorie: "Cito-truc: ÷ 5 → kijk welke veelvoud van 5 het is. Tafel-5 ken je uit je hoofd, dus terug-zoeken is snel.",
+          theorie: "Toets-truc: ÷ 5 → kijk welke veelvoud van 5 het is. Tafel-5 ken je uit je hoofd, dus terug-zoeken is snel.",
           voorbeelden: [
             { type: "stap", tekst: "45 ÷ 5 = 9 (9 × 5 = 45). 60 ÷ 5 = 12. 75 ÷ 5 = 15." },
             { type: "stap", tekst: "Bij niet-tafel-5 (bv. 32 ÷ 5): kom uit op 6 rest 2, of 6,4." },
@@ -200,7 +200,7 @@ const steps = [
   {
     title: "Delen door 3 t/m 9",
     explanation:
-      "De **tafel terugzoeken** is bij delen door 3-9 essentieel.\n\n**Voorbeeld**: 28 ÷ 7 = ?\n→ Denk: 'wat × 7 = 28?' → 4 × 7 = 28. Dus 28 ÷ 7 = **4**.\n\n**Delingen die je vaak ziet** *(uit je hoofd handig)*:\n\n**Door 3**:\n• 9 ÷ 3 = 3\n• 12 ÷ 3 = 4\n• 15 ÷ 3 = 5\n• 18 ÷ 3 = 6\n• 21 ÷ 3 = 7\n• 24 ÷ 3 = 8\n• 27 ÷ 3 = 9\n• 30 ÷ 3 = 10\n\n**Door 4**:\n• 16 ÷ 4 = 4\n• 20 ÷ 4 = 5\n• 24 ÷ 4 = 6\n• 28 ÷ 4 = 7\n• 32 ÷ 4 = 8\n• 36 ÷ 4 = 9\n\n**Door 6**:\n• 24 ÷ 6 = 4\n• 30 ÷ 6 = 5\n• 36 ÷ 6 = 6\n• 42 ÷ 6 = 7\n• 48 ÷ 6 = 8\n• 54 ÷ 6 = 9\n\n**Door 7**:\n• 21 ÷ 7 = 3\n• 28 ÷ 7 = 4\n• 35 ÷ 7 = 5\n• 42 ÷ 7 = 6\n• 49 ÷ 7 = 7\n• 56 ÷ 7 = 8\n• 63 ÷ 7 = 9\n\n**Door 8**:\n• 32 ÷ 8 = 4\n• 40 ÷ 8 = 5\n• 48 ÷ 8 = 6\n• 56 ÷ 8 = 7\n• 64 ÷ 8 = 8\n• 72 ÷ 8 = 9\n\n**Door 9**:\n• 27 ÷ 9 = 3\n• 36 ÷ 9 = 4\n• 45 ÷ 9 = 5\n• 54 ÷ 9 = 6\n• 63 ÷ 9 = 7\n• 72 ÷ 9 = 8\n• 81 ÷ 9 = 9\n\n**Cito-truc — schatten**:\nBij grote getallen — schat eerst.\n*'63 ÷ 7 = ?'* Schatting: 70/7 = 10. Dus iets onder 10. Inderdaad: 9.",
+      "De **tafel terugzoeken** is bij delen door 3-9 essentieel.\n\n**Voorbeeld**: 28 ÷ 7 = ?\n→ Denk: 'wat × 7 = 28?' → 4 × 7 = 28. Dus 28 ÷ 7 = **4**.\n\n**Delingen die je vaak ziet** *(uit je hoofd handig)*:\n\n**Door 3**:\n• 9 ÷ 3 = 3\n• 12 ÷ 3 = 4\n• 15 ÷ 3 = 5\n• 18 ÷ 3 = 6\n• 21 ÷ 3 = 7\n• 24 ÷ 3 = 8\n• 27 ÷ 3 = 9\n• 30 ÷ 3 = 10\n\n**Door 4**:\n• 16 ÷ 4 = 4\n• 20 ÷ 4 = 5\n• 24 ÷ 4 = 6\n• 28 ÷ 4 = 7\n• 32 ÷ 4 = 8\n• 36 ÷ 4 = 9\n\n**Door 6**:\n• 24 ÷ 6 = 4\n• 30 ÷ 6 = 5\n• 36 ÷ 6 = 6\n• 42 ÷ 6 = 7\n• 48 ÷ 6 = 8\n• 54 ÷ 6 = 9\n\n**Door 7**:\n• 21 ÷ 7 = 3\n• 28 ÷ 7 = 4\n• 35 ÷ 7 = 5\n• 42 ÷ 7 = 6\n• 49 ÷ 7 = 7\n• 56 ÷ 7 = 8\n• 63 ÷ 7 = 9\n\n**Door 8**:\n• 32 ÷ 8 = 4\n• 40 ÷ 8 = 5\n• 48 ÷ 8 = 6\n• 56 ÷ 8 = 7\n• 64 ÷ 8 = 8\n• 72 ÷ 8 = 9\n\n**Door 9**:\n• 27 ÷ 9 = 3\n• 36 ÷ 9 = 4\n• 45 ÷ 9 = 5\n• 54 ÷ 9 = 6\n• 63 ÷ 9 = 7\n• 72 ÷ 9 = 8\n• 81 ÷ 9 = 9\n\n**Toets-truc — schatten**:\nBij grote getallen — schat eerst.\n*'63 ÷ 7 = ?'* Schatting: 70/7 = 10. Dus iets onder 10. Inderdaad: 9.",
     checks: [
       {
         q: "**24 ÷ 3** = ?",
@@ -216,7 +216,7 @@ const steps = [
           woorden: [
             { woord: "tafel terugzoeken", tekst: "Bij delen: welke factor maakt het deeltal? = antwoord." },
           ],
-          theorie: "Cito-truc voor delen door 3: tafel-3 is een veel-voorkomende. Leer hem **uit het hoofd**: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. Bij elke ÷3 vraag → tel waar het getal staat.",
+          theorie: "Toets-truc voor delen door 3: tafel-3 is een veel-voorkomende. Leer hem **uit het hoofd**: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. Bij elke ÷3 vraag → tel waar het getal staat.",
           voorbeelden: [
             { type: "stap", tekst: "**18 ÷ 3** = 6 (18 is 6e stap: 3, 6, 9, 12, 15, **18**)." },
             { type: "stap", tekst: "**27 ÷ 3** = 9 (27 is 9e stap)." },
@@ -268,7 +268,7 @@ const steps = [
   {
     title: "Delen met rest",
     explanation:
-      "Soms gaat een deling **niet precies op**. Dan blijft er een **rest** over.\n\n**Voorbeeld**: 11 ÷ 3 = ?\n• 3 × 3 = 9 *(net niet 11)*.\n• 3 × 4 = 12 *(te veel)*.\n• Dus 11 ÷ 3 = **3 rest 2**.\n\nWaarom rest 2? 11 − 9 = 2. *(11 = 3 × 3 + 2.)*\n\n**Schrijfwijze**:\n• 11 ÷ 3 = **3 rest 2** *(meeste Cito)*.\n• 11 ÷ 3 = **3 r 2** *(verkort)*.\n• 11 ÷ 3 = **3⅔** *(met breuk: rest÷deler = 2/3)*.\n\n**Stappenplan**:\n1. Zoek de **grootste tafel-keer** die NIET groter is dan het deeltal.\n2. **Trek af** om de rest te vinden.\n3. Schrijf 'rest X'.\n\n**Cito-voorbeelden**:\n• 17 ÷ 5 = 3 rest 2 *(want 5×3=15, 17-15=2)*.\n• 22 ÷ 4 = 5 rest 2 *(want 4×5=20, 22-20=2)*.\n• 30 ÷ 7 = 4 rest 2 *(want 7×4=28, 30-28=2)*.\n• 50 ÷ 8 = 6 rest 2 *(want 8×6=48)*.\n\n**Cito-truc — rest 0**:\nAls het precies opgaat: rest = 0.\n• 20 ÷ 4 = 5 rest 0.\nMeestal schrijf je dan gewoon 'rest 0' niet — gewoon 'precies 5'.\n\n**Praktijk-vraag — wat doe je met rest?**:\nSoms moet je **afronden naar boven** *(want de rest moet ook ergens heen)*:\n• 'In 1 doos passen 6 ballen. Hoeveel dozen voor 20 ballen?'\n• 20 ÷ 6 = 3 rest 2 → je hebt **4 dozen nodig** *(3 vol + 1 extra voor de rest)*.\n\nSoms **afronden naar beneden** *(want rest hou je over)*:\n• 'Per fles 5 glazen. Hoeveel glazen uit 23 flessen?'\n• 23 × 5 = 115 → dan 115 ÷ niet relevant. Toch gewoon: 23 ÷ 5 = 4 rest 3. Maar hier vraag is anders. Skip dit voorbeeld voor nu.\n\nDe **Cito-strikvraag** test of je weet **wanneer je naar boven afrondt** (dozen, dragen).",
+      "Soms gaat een deling **niet precies op**. Dan blijft er een **rest** over.\n\n**Voorbeeld**: 11 ÷ 3 = ?\n• 3 × 3 = 9 *(net niet 11)*.\n• 3 × 4 = 12 *(te veel)*.\n• Dus 11 ÷ 3 = **3 rest 2**.\n\nWaarom rest 2? 11 − 9 = 2. *(11 = 3 × 3 + 2.)*\n\n**Schrijfwijze**:\n• 11 ÷ 3 = **3 rest 2** *(meeste de toets)*.\n• 11 ÷ 3 = **3 r 2** *(verkort)*.\n• 11 ÷ 3 = **3⅔** *(met breuk: rest÷deler = 2/3)*.\n\n**Stappenplan**:\n1. Zoek de **grootste tafel-keer** die NIET groter is dan het deeltal.\n2. **Trek af** om de rest te vinden.\n3. Schrijf 'rest X'.\n\n**Toets-voorbeelden**:\n• 17 ÷ 5 = 3 rest 2 *(want 5×3=15, 17-15=2)*.\n• 22 ÷ 4 = 5 rest 2 *(want 4×5=20, 22-20=2)*.\n• 30 ÷ 7 = 4 rest 2 *(want 7×4=28, 30-28=2)*.\n• 50 ÷ 8 = 6 rest 2 *(want 8×6=48)*.\n\n**Toets-truc — rest 0**:\nAls het precies opgaat: rest = 0.\n• 20 ÷ 4 = 5 rest 0.\nMeestal schrijf je dan gewoon 'rest 0' niet — gewoon 'precies 5'.\n\n**Praktijk-vraag — wat doe je met rest?**:\nSoms moet je **afronden naar boven** *(want de rest moet ook ergens heen)*:\n• 'In 1 doos passen 6 ballen. Hoeveel dozen voor 20 ballen?'\n• 20 ÷ 6 = 3 rest 2 → je hebt **4 dozen nodig** *(3 vol + 1 extra voor de rest)*.\n\nSoms **afronden naar beneden** *(want rest hou je over)*:\n• 'Per fles 5 glazen. Hoeveel glazen uit 23 flessen?'\n• 23 × 5 = 115 → dan 115 ÷ niet relevant. Toch gewoon: 23 ÷ 5 = 4 rest 3. Maar hier vraag is anders. Skip dit voorbeeld voor nu.\n\nDe **Toets-strikvraag** test of je weet **wanneer je naar boven afrondt** (dozen, dragen).",
     checks: [
       {
         q: "**11 ÷ 3** = ?",
@@ -299,7 +299,7 @@ const steps = [
             { titel: "Naar boven afronden", tekst: "Die 2 extra eieren moeten ook in een doos. Dus 3 vol + 1 doos met 2 = 4 dozen nodig." },
           ],
           woorden: [{ woord: "afronden naar boven", uitleg: "Bij 'hoeveel dozen' altijd naar boven afronden, want rest moet ook in een doos." }],
-          theorie: "Bij Cito-doos-vragen: rest > 0 → +1 doos.",
+          theorie: "Bij Toets-doos-vragen: rest > 0 → +1 doos.",
           voorbeelden: [{ type: "stap", tekst: "Bij 'aantal containers/dozen': rest = extra container nodig." }],
           basiskennis: [{ onderwerp: "Niet afsnijden", uitleg: "Je kunt geen halve doos hebben." }],
           niveaus: {
@@ -316,7 +316,7 @@ const steps = [
   {
     title: "Praktijk — verdelen en prijs-per-stuk",
     explanation:
-      "Cito-praktijksommen draaien vaak om **eerlijk verdelen** of **prijs per stuk**.\n\n**Voorbeeld 1 — verdelen**:\n*'Een zak van 24 dropjes verdeel je over 4 kinderen. Hoeveel krijgen ze elk?'*\n• 24 ÷ 4 = **6 dropjes per kind**.\n\n**Voorbeeld 2 — prijs per stuk**:\n*'5 boeken kosten samen €25. Hoe duur is 1 boek?'*\n• €25 ÷ 5 = **€5 per boek**.\n\n**Voorbeeld 3 — hoeveel passen erin?**:\n*'In 1 bus passen 50 mensen. Voor schoolreis zijn er 200 kinderen. Hoeveel bussen?'*\n• 200 ÷ 50 = **4 bussen**.\n\n**Voorbeeld 4 — met rest (afronden naar boven)**:\n*'In 1 doos passen 8 ballen. Hoeveel dozen voor 50 ballen?'*\n• 50 ÷ 8 = 6 rest 2.\n• Dus **7 dozen** nodig (rest moet ook ergens heen).\n\n**Voorbeeld 5 — geld delen**:\n*'4 kinderen verdelen €36 gelijk. Hoeveel per kind?'*\n• €36 ÷ 4 = **€9 per kind**.\n\n**Voorbeeld 6 — tafels in actie**:\n*'Een leerkracht maakt groepjes van 4. De klas heeft 28 kinderen. Hoeveel groepjes?'*\n• 28 ÷ 4 = **7 groepjes**.\n\n**Cito-tip**:\n• 'Hoeveel **per** stuk?' → delen.\n• 'Hoeveel **groepjes** van X?' → delen.\n• 'Hoeveel **dozen/zakjes** nodig?' → delen + naar boven afronden.\n• 'Hoeveel **passen erin**?' → delen + naar **beneden** afronden *(want te veel past niet)*.",
+      "Toets-praktijksommen draaien vaak om **eerlijk verdelen** of **prijs per stuk**.\n\n**Voorbeeld 1 — verdelen**:\n*'Een zak van 24 dropjes verdeel je over 4 kinderen. Hoeveel krijgen ze elk?'*\n• 24 ÷ 4 = **6 dropjes per kind**.\n\n**Voorbeeld 2 — prijs per stuk**:\n*'5 boeken kosten samen €25. Hoe duur is 1 boek?'*\n• €25 ÷ 5 = **€5 per boek**.\n\n**Voorbeeld 3 — hoeveel passen erin?**:\n*'In 1 bus passen 50 mensen. Voor schoolreis zijn er 200 kinderen. Hoeveel bussen?'*\n• 200 ÷ 50 = **4 bussen**.\n\n**Voorbeeld 4 — met rest (afronden naar boven)**:\n*'In 1 doos passen 8 ballen. Hoeveel dozen voor 50 ballen?'*\n• 50 ÷ 8 = 6 rest 2.\n• Dus **7 dozen** nodig (rest moet ook ergens heen).\n\n**Voorbeeld 5 — geld delen**:\n*'4 kinderen verdelen €36 gelijk. Hoeveel per kind?'*\n• €36 ÷ 4 = **€9 per kind**.\n\n**Voorbeeld 6 — tafels in actie**:\n*'Een leerkracht maakt groepjes van 4. De klas heeft 28 kinderen. Hoeveel groepjes?'*\n• 28 ÷ 4 = **7 groepjes**.\n\n**Toets-tip**:\n• 'Hoeveel **per** stuk?' → delen.\n• 'Hoeveel **groepjes** van X?' → delen.\n• 'Hoeveel **dozen/zakjes** nodig?' → delen + naar boven afronden.\n• 'Hoeveel **passen erin**?' → delen + naar **beneden** afronden *(want te veel past niet)*.",
     checks: [
       {
         q: "**32 koekjes** over **8 kinderen** eerlijk. **Per kind**?",
@@ -333,7 +333,7 @@ const steps = [
             { woord: "eerlijk verdelen", uitleg: "Iedereen krijgt evenveel = delen." },
             { woord: "per kind", uitleg: "Signaalwoord 'per' = delen." },
           ],
-          theorie: "Cito-truc redactiesommen — signaalwoorden:\n• **'per'** / **'elk'** / **'iedere'** / **'eerlijk verdelen'** → DELEN\n• **'totaal'** / **'samen'** → meestal × of +\n• **'over X groepen'** → delen door X.",
+          theorie: "Toets-truc redactiesommen — signaalwoorden:\n• **'per'** / **'elk'** / **'iedere'** / **'eerlijk verdelen'** → DELEN\n• **'totaal'** / **'samen'** → meestal × of +\n• **'over X groepen'** → delen door X.",
           voorbeelden: [
             { type: "stap", tekst: "**'48 appels in dozen van 6'** → 48 ÷ 6 = 8 dozen." },
             { type: "stap", tekst: "**'€60 over 5 kinderen'** → 60 ÷ 5 = €12 per kind." },
@@ -367,11 +367,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — delen-mix",
+    title: "Toets-eindopdracht — delen-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: gewone delingen, rest, verdelen, prijs-per-stuk.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: gewone delingen, rest, verdelen, prijs-per-stuk.\n\nVeel succes!",
     checks: [
       {
         q: "**45 ÷ 9** = ?",

@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Dat is base.", "Niet — andere definitie (Lewis).", "Niet primair — Arrhenius-zicht."],
         uitlegPad: {
           stappen: [{ titel: "Zuur staat proton af", tekst: "**Brønsted-zuur** = stof die **H⁺ (proton) afstaat** aan andere stof. Voorbeeld: HCl + H₂O → Cl⁻ + H₃O⁺. HCl is zuur, geeft proton aan H₂O." }],
-          theorie: "Cito-formulering: 'Brønsted-zuur = protondonor, Brønsted-base = protonacceptor'.",
+          theorie: "Toets-formulering: 'Brønsted-zuur = protondonor, Brønsted-base = protonacceptor'.",
           niveaus: { basis: "H⁺-donor.", simpeler: "Zuur = H⁺ afgeven", nogSimpeler: "Donor" },
         },
       },
@@ -200,7 +200,7 @@ const steps = [
         wrongHints: [null, "Niet — niet in bloed.", "Niet — sterk zuur, geen buffer.", "Niet — bloed-pH zeer nauw gereguleerd."],
         uitlegPad: {
           stappen: [{ titel: "Bicarbonaat = bloed-pH", tekst: "**Bicarbonaat-buffer** H₂CO₃ ⇌ HCO₃⁻ + H⁺ houdt bloed-pH op 7,35-7,45. Cruciaal — afwijking >0,4 = levensbedreigend. CO₂ uit ademhaling + nier-reabsorptie HCO₃⁻ samen reguleren." }],
-          theorie: "Cito-actueel: hyperventilatie verhoogt pH (alkalose), longontsteking kan pH verlagen (acidose).",
+          theorie: "Toets-actueel: hyperventilatie verhoogt pH (alkalose), longontsteking kan pH verlagen (acidose).",
           niveaus: { basis: "Bicarbonaat.", simpeler: "Bloed-buffer = bicarbonaat", nogSimpeler: "Bicarbonaat" },
         },
       },
@@ -260,7 +260,7 @@ const steps = [
         wrongHints: [null, "Wel — vaste relatie.", "Niet — overal in zwak-zuur-titratie.", "Wel — bekende relatie."],
         uitlegPad: {
           stappen: [{ titel: "Half-eq. = pKa", tekst: "Bij halfequivalentiepunt is precies de helft van zwak zuur omgezet in geconjugeerde base. Dan: [HA] = [A⁻] → Henderson-Hasselbalch: pH = pKa + log(1) = **pKa**. Handig om pKa experimenteel te bepalen." }],
-          theorie: "Cito-toepassing: titratiekromme aflezen → punt waar pH=pKa.",
+          theorie: "Toets-toepassing: titratiekromme aflezen → punt waar pH=pKa.",
           niveaus: { basis: "Ja.", simpeler: "Half-eq.: pH=pKa", nogSimpeler: "Ja" },
         },
       },
@@ -321,7 +321,7 @@ const steps = [
         wrongHints: [null, "Niet — verergert schade.", "Wel relevant.", "Niet primair (suikers zijn ander mechanisme)."],
         uitlegPad: {
           stappen: [{ titel: "Glazuur kwetsbaar", tekst: "Cola pH 2,5 → veel onder 5,5 → glazuur lost op. Tips: minder drinken, **water spoelen** na om pH te verhogen, **niet direct poetsen** (glazuur is verzacht — poetsen schuurt het weg). Wacht 30 min." }],
-          theorie: "Cito-toepassing: zuur-base-chemie in dagelijks leven. Tandarts-advies = direct uit chemie.",
+          theorie: "Toets-toepassing: zuur-base-chemie in dagelijks leven. Tandarts-advies = direct uit chemie.",
           niveaus: { basis: "Spoelen + niet poetsen.", simpeler: "Niet meteen poetsen, wel spoelen", nogSimpeler: "Spoelen" },
         },
       },

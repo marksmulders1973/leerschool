@@ -35,7 +35,7 @@ const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
   theorie:
-    "Cito-truc leesvaardigheid: ZOOM IN op kop, alinea 1, slot. Deelonderwerp = wat dit STUK behandelt, hoofdonderwerp = wat de HELE tekst behandelt, hoofdgedachte = wat de schrijver wil zeggen IN 1 ZIN. Verbanden: let op signaalwoorden (daarmee/daardoor = oorzaak-gevolg; maar/toch = tegenstelling). Doel-typen: informeren/overtuigen/amuseren/activeren.",
+    "Toets-truc leesvaardigheid: ZOOM IN op kop, alinea 1, slot. Deelonderwerp = wat dit STUK behandelt, hoofdonderwerp = wat de HELE tekst behandelt, hoofdgedachte = wat de schrijver wil zeggen IN 1 ZIN. Verbanden: let op signaalwoorden (daarmee/daardoor = oorzaak-gevolg; maar/toch = tegenstelling). Doel-typen: informeren/overtuigen/amuseren/activeren.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

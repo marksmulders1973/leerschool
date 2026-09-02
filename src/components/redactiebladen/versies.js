@@ -3,7 +3,7 @@
 // Versie A = de bestaande bundel uit het redactiesommen-leerpad; deze file
 // bevat de verse versies. Antwoord staat altijd op index 0 — de pagina
 // husselt seeded (net als versie A), zodat blad en sleutel blijven matchen.
-// Eigen werk in Cito-stijl; elke som is handmatig nagerekend.
+// Eigen werk in Doorstroomtoets-stijl; elke som is handmatig nagerekend.
 
 export const REDACTIE_VERSIES = {
   B: {

@@ -1,5 +1,5 @@
 // Verzamel en sample meerkeuze-vragen uit onze PO-leerpaden voor een
-// Cito-stijl oefen-toets. Sprint C v1 (2026-05-08).
+// Doorstroomtoets-stijl oefen-toets. Sprint C v1 (2026-05-08).
 //
 // Verschil met TextbookQuiz: dit gebruikt onze eigen kwaliteit-
 // gecontroleerde checks (denkprikkel-wrongHints) uit groep5-8-paden.
@@ -9,14 +9,14 @@
 //   { id, question, options, answer, wrongHints, subject, pathTitle, stepTitle }
 
 // Mark P0 STAP 2 (2026-05-19): vervangen door pathManifest-filter +
-// lazy getLearnPath ipv eager ALL_LEARN_PATHS-import. Bij Cito-mix
+// lazy getLearnPath ipv eager ALL_LEARN_PATHS-import. Bij Doorstroomtoets-mix
 // laden we alleen de PO-paden (~25-30 van 165), niet de hele bundel.
 import pathManifest from "../learnPaths/pathManifest.generated.json";
 import { getLearnPath } from "../learnPaths/pathLoaders.js";
 import { shuffleOpties } from "./shuffleOpties.js";
 import { getWrongChecks } from "./adaptiveStore.js";
 
-// Welke `subject`-keys horen bij welk Cito-onderdeel.
+// Welke `subject`-keys horen bij welk Toets-onderdeel.
 // Schema's-stappenplannen + samenvatten zijn als `subject: "taal"`
 // gemarkeerd voor vindbaarheid maar inhoudelijk studievaardigheden;
 // herkenbaar aan sloThema-prefix.
@@ -88,7 +88,7 @@ export async function gatherPoChecks(opts = {}) {
       checks.forEach((c, checkIdx) => {
         if (!c || !Array.isArray(c.options) || typeof c.answer !== "number") return;
         if (!c.q && !c.question) return;
-        // Checks met `disabled: true` zijn buiten de Cito-mix sample gehouden —
+        // Checks met `disabled: true` zijn buiten de Doorstroomtoets-mix sample gehouden —
         // typisch omdat ze leunen op step.svg/tabel-context die in sample-flow
         // verloren gaat. Ze blijven beschikbaar in het oorspronkelijke leerpad.
         if (c.disabled) return;
@@ -155,7 +155,7 @@ function annotateWithWrongHistory(checks) {
 }
 
 // Sample N vragen met een mix-verdeling.
-// mix = { rekenen: 0.5, taal: 0.35, studievaardigheden: 0.15 } (default Cito-achtig).
+// mix = { rekenen: 0.5, taal: 0.35, studievaardigheden: 0.15 } (default Toets-achtig).
 // Als een pijler te weinig vragen heeft wordt het tekort uit de andere pijlers
 // aangevuld zodat je altijd `count` vragen krijgt.
 //
@@ -165,7 +165,7 @@ function annotateWithWrongHistory(checks) {
 //
 // opts.subjectFilter: indien gezet ("rekenen" / "taal" / "studievaardigheden"
 // of een array daarvan) wordt de pool beperkt tot die pijler(s) — gebruikt
-// voor vak-specifieke Cito-oefen-knop op StudentHome.
+// voor vak-specifieke Toets-oefen-knop op StudentHome.
 export async function sampleCitoMix(count, mix, rng = Math.random, opts = {}) {
   const adaptive = opts.adaptive !== false;
   // doorstroomtoetsOnly propageert naar gatherPoChecks zodat groep<7-paden

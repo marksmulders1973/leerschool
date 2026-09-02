@@ -484,14 +484,14 @@ const steps = [
           stappen: [
             { titel: "Wat is een moesson?", tekst: "**Moesson** is een **seizoens-wind** die elke 6 maanden van richting verandert. Veroorzaakt twee duidelijke seizoenen:\n• **Droge moesson** — wind uit binnenland, geen regen\n• **Natte moesson** — wind uit zee, veel regen + overstromingen" },
             { titel: "Waar?", tekst: "Vooral **Zuid-Azië**: India, Bangladesh, Pakistan, Sri Lanka, Myanmar, Thailand, Vietnam, China-zuid.\n\nIn India duurt natte moesson **juni-september**. Mumbai kan in die maanden 1.500-2.000 mm regen krijgen (NL: ~800 mm per heel jaar!). Cyclus is voorspelbaar — boeren plannen oogst eromheen." },
-            { titel: "Cito-feit: klimaat + economie", tekst: "Moesson = levensader Azië:\n• Rijst-bouw afhankelijk van regen\n• Half miljard mensen afhankelijk van moesson\n• Te weinig regen = droogte/honger\n• Te veel regen = overstromingen + ziektes\n• Klimaatverandering maakt moesson onvoorspelbaarder" },
+            { titel: "Toets-feit: klimaat + economie", tekst: "Moesson = levensader Azië:\n• Rijst-bouw afhankelijk van regen\n• Half miljard mensen afhankelijk van moesson\n• Te weinig regen = droogte/honger\n• Te veel regen = overstromingen + ziektes\n• Klimaatverandering maakt moesson onvoorspelbaarder" },
           ],
           woorden: [
             { woord: "moesson", uitleg: "Seizoens-wind met droog/nat-wisseling. Vooral Azië." },
             { woord: "tropisch", uitleg: "Klimaat bij evenaar — warm + veel regen." },
             { woord: "cycloon", uitleg: "Tropische storm — Azië noemt het anders dan orkaan (VS) of taifoen (Pacifisch)." },
           ],
-          theorie: "Andere klimaat-fenomenen Cito-stof:\n• **El Niño** — Pacific-oceaan-opwarming, beïnvloedt wereldweer\n• **Föhn** — droge bergwind (Alpen)\n• **Mistral** — koude wind Frankrijk\n• **Sirocco** — hete wind Sahara → Italië",
+          theorie: "Andere klimaat-fenomenen toetsstof:\n• **El Niño** — Pacific-oceaan-opwarming, beïnvloedt wereldweer\n• **Föhn** — droge bergwind (Alpen)\n• **Mistral** — koude wind Frankrijk\n• **Sirocco** — hete wind Sahara → Italië",
           voorbeelden: [
             { type: "feit", tekst: "Cherrapunji (India) is wettest plek op aarde — ~11.000 mm regen/jaar door moesson." },
           ],
@@ -508,18 +508,18 @@ const steps = [
           stappen: [
             { titel: "Köppen-systeem 1900", tekst: "**Wladimir Köppen** (Duits-Russisch klimatoloog, 1846-1940) bedacht in 1900 een systeem om klimaten in te delen. Nog steeds standaard:\n• **A** — Tropisch (warm + nat, evenaar)\n• **B** — Droog (woestijn + steppe)\n• **C** — Gematigd (NL = Cfb)\n• **D** — Continentaal/land (Rusland)\n• **E** — Polair (Antarctica + Noordpool)\n\nElke groep heeft subtypes (Cfb, Csa, Aw, etc.)." },
             { titel: "Nederland = Cfb", tekst: "NL valt onder **Cfb** = **gematigd zeeklimaat**:\n• **C** = gematigd (geen extremen)\n• **f** = vol jaar nat (volle regen)\n• **b** = warmste maand 10-22°C\n\nKenmerken: milde winter (3-5°C), koele zomer (17-19°C), regen heel jaar. Door **Noordzee + Golfstroom** stabieler dan landen op zelfde breedte." },
-            { titel: "Cito-feit: 5 klimaatgordels herkennen", tekst: "**Wereld-kaart klimaten** (van evenaar naar pool):\n• Evenaar: A — tropisch (Amazone, Congo)\n• Subtropen: B — woestijn (Sahara, Australia)\n• Gematigd: C — Europa, oostkust VS\n• Continentaal: D — Rusland, Canada-binnen\n• Pool: E — Antarctica, Groenland\n\nCito vraagt vaak: 'Welk klimaat hoort bij land X?'" },
+            { titel: "Toets-feit: 5 klimaatgordels herkennen", tekst: "**Wereld-kaart klimaten** (van evenaar naar pool):\n• Evenaar: A — tropisch (Amazone, Congo)\n• Subtropen: B — woestijn (Sahara, Australia)\n• Gematigd: C — Europa, oostkust VS\n• Continentaal: D — Rusland, Canada-binnen\n• Pool: E — Antarctica, Groenland\n\nCito vraagt vaak: 'Welk klimaat hoort bij land X?'" },
           ],
           woorden: [
             { woord: "Köppen-classificatie", uitleg: "Wereldwijd systeem voor klimaat-indeling. A-E hoofdgroepen + subtypes." },
             { woord: "Cfb", uitleg: "Klimaat-code NL: gematigd, vol jaar nat, warmste maand 10-22°C." },
             { woord: "Golfstroom", uitleg: "Warme zee-stroming uit Caribisch gebied → Noord-Atlantische Oceaan → houdt NL/UK 5-10°C warmer dan zou moeten." },
           ],
-          theorie: "Cito-kaart-vragen:\n• Locatie op kaart → welk klimaat?\n• Klimaat → welke landen passen?\n• Effect klimaat op natuur (regenwoud-tropisch, woestijn-droog, etc.)",
+          theorie: "Toets-kaart-vragen:\n• Locatie op kaart → welk klimaat?\n• Klimaat → welke landen passen?\n• Effect klimaat op natuur (regenwoud-tropisch, woestijn-droog, etc.)",
           voorbeelden: [
             { type: "feit", tekst: "Spanje-zuid = Csa (mediterraan, droge zomer). NL = Cfb (vol jaar nat). Beide C maar verschillende sub." },
           ],
-          basiskennis: [{ onderwerp: "5 letters onthouden", uitleg: "ABCDE = Tropisch/Droog/Gematigd/Land/Polair. Cito-letters wel kunnen plaatsen." }],
+          basiskennis: [{ onderwerp: "5 letters onthouden", uitleg: "ABCDE = Tropisch/Droog/Gematigd/Land/Polair. Toets-letters wel kunnen plaatsen." }],
           niveaus: { basis: "5 hoofdgroepen A-B-C-D-E.", simpeler: "Köppen verdeelt wereld-klimaten in 5 groepen: A tropisch, B droog, C gematigd (NL), D land, E polair.", nogSimpeler: "5 klimaten" },
         },
       },

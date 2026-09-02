@@ -1,5 +1,5 @@
 // Leerpad: Grafieken lezen — staaf, lijn, cirkel — groep 6-8.
-// Cito-onderdeel verwerken van informatie. Referentieniveau 1F.
+// Toets-onderdeel verwerken van informatie. Referentieniveau 1F.
 // 6 stappen met uitlegPad en SVG-visualisaties.
 
 const COLORS = {
@@ -23,7 +23,7 @@ const chapters = [
   { letter: "C", title: "Lijngrafiek", emoji: "📈", from: 2, to: 2 },
   { letter: "D", title: "Cirkeldiagram", emoji: "🥧", from: 3, to: 3 },
   { letter: "E", title: "Tabel ↔ grafiek", emoji: "🔁", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function staafSvg(data, title) {
@@ -133,7 +133,7 @@ const steps = [
   {
     title: "Wat is een grafiek?",
     explanation:
-      "Een **grafiek** is een **plaatje van getallen**. Het laat snel zien hoeveel iets is, of hoe iets verandert.\n\n**3 soorten die je vaak ziet bij Cito**:\n• **Staafdiagram** — balkjes die laten zien hoe veel ergens van is.\n• **Lijngrafiek** — een lijn die laat zien hoe iets verandert (bv. door de tijd).\n• **Cirkeldiagram** *(ook wel taartdiagram)* — taart-stukjes die laten zien welke groep hoe groot is.\n\n**Wat je altijd moet lezen voor je iets afleest**:\n1. **Titel** — waar gaat de grafiek over?\n2. **Eenheid** — gaat het over aantallen, procenten, euro's, graden?\n3. **Assen** — wat staat onderaan (x-as), wat staat aan de zijkant (y-as)?\n4. **Legenda** — als er meerdere kleuren zijn, wat betekent welke kleur?\n\n**Voorbeeld**: een grafiek heet *'Aantal kinderen per klas'*. De getallen op de zijkant gaan van 0 tot 30. Onderaan staan klas 1, 2, 3, 4. Dan weet je: het gaat om hoeveel kinderen per klas.",
+      "Een **grafiek** is een **plaatje van getallen**. Het laat snel zien hoeveel iets is, of hoe iets verandert.\n\n**3 soorten die je vaak ziet bij de Doorstroomtoets**:\n• **Staafdiagram** — balkjes die laten zien hoe veel ergens van is.\n• **Lijngrafiek** — een lijn die laat zien hoe iets verandert (bv. door de tijd).\n• **Cirkeldiagram** *(ook wel taartdiagram)* — taart-stukjes die laten zien welke groep hoe groot is.\n\n**Wat je altijd moet lezen voor je iets afleest**:\n1. **Titel** — waar gaat de grafiek over?\n2. **Eenheid** — gaat het over aantallen, procenten, euro's, graden?\n3. **Assen** — wat staat onderaan (x-as), wat staat aan de zijkant (y-as)?\n4. **Legenda** — als er meerdere kleuren zijn, wat betekent welke kleur?\n\n**Voorbeeld**: een grafiek heet *'Aantal kinderen per klas'*. De getallen op de zijkant gaan van 0 tot 30. Onderaan staan klas 1, 2, 3, 4. Dan weet je: het gaat om hoeveel kinderen per klas.",
     svg: staafSvg(
       [
         { l: "klas 1", v: 25, c: COLORS.bar },
@@ -151,16 +151,16 @@ const steps = [
         wrongHints: [null, "Te beperkt — je moet weten waar de grafiek over gaat.", "Kleuren zijn handig, maar context is belangrijker.", "Een punt geeft geen overzicht."],
         uitlegPad: {
           stappen: [
-            { titel: "Drie dingen vóór je gaat rekenen", tekst: "Bij elke Cito-grafiek check je eerst **3 dingen** voordat je een getal aankijkt:\n1. **Titel** — waar gaat de grafiek over?\n2. **Assen** — wat staat op x-as (onder) en y-as (zijkant)?\n3. **Eenheid** — meet de grafiek euro's, kinderen, °C, kilo's?" },
+            { titel: "Drie dingen vóór je gaat rekenen", tekst: "Bij elke Toets-grafiek check je eerst **3 dingen** voordat je een getal aankijkt:\n1. **Titel** — waar gaat de grafiek over?\n2. **Assen** — wat staat op x-as (onder) en y-as (zijkant)?\n3. **Eenheid** — meet de grafiek euro's, kinderen, °C, kilo's?" },
             { titel: "Waarom belangrijk?", tekst: "Zonder context zie je alleen getallen. Met context begrijp je wat ze betekenen. Een staaf van '40' kan betekenen: 40 mm regen, 40 kinderen, 40 euro of 40 °C — totaal verschillende dingen!" },
-            { titel: "Cito-instinker", tekst: "Vergeet de **eenheid niet** in je antwoord. Op Cito staat soms in 4 opties: '40', '40 mm', '40 cm', '40 kinderen'. Alleen het juiste getal ÉN de juiste eenheid is goed." },
+            { titel: "Toets-instinker", tekst: "Vergeet de **eenheid niet** in je antwoord. Op de Doorstroomtoets staat soms in 4 opties: '40', '40 mm', '40 cm', '40 kinderen'. Alleen het juiste getal ÉN de juiste eenheid is goed." },
           ],
           woorden: [
             { woord: "x-as", uitleg: "Horizontale as, onderaan de grafiek." },
             { woord: "y-as", uitleg: "Verticale as, zijkant van de grafiek." },
             { woord: "eenheid", uitleg: "Wat de getallen meten (mm, °C, kg, €, etc.)." },
           ],
-          theorie: "Cito-volgorde grafiek lezen:\n1. Lees TITEL — waar gaat dit over?\n2. Lees ASSEN — wat is X (vaak tijd of categorie), wat is Y (waarde)?\n3. Check EENHEID — wat meet je?\n4. PAS DAN getal aflezen.",
+          theorie: "Toets-volgorde grafiek lezen:\n1. Lees TITEL — waar gaat dit over?\n2. Lees ASSEN — wat is X (vaak tijd of categorie), wat is Y (waarde)?\n3. Check EENHEID — wat meet je?\n4. PAS DAN getal aflezen.",
           voorbeelden: [
             { type: "stap", tekst: "Titel 'Regen per maand'. X-as: jan-dec. Y-as: mm. Eenheid: mm. Nu weet je: deze grafiek toont mm regen per maand." },
             { type: "stap", tekst: "Zelfde getal '60' op een 'regen-mm'-grafiek = 60 mm regen. Op een 'kinderen'-grafiek = 60 kinderen. Eenheid maakt alles." },
@@ -182,14 +182,14 @@ const steps = [
           stappen: [
             { titel: "Elk grafiektype heeft een doel", tekst: "Vier types grafiek, elk voor een andere vraag:\n• **Lijngrafiek** = verandering over **tijd** (temperatuur door de dag)\n• **Staafdiagram** = **vergelijken** van groepen (regen per maand)\n• **Cirkeldiagram** = **verdeling** van een geheel (sport-keuze in klas)\n• **Tabel** = exacte **getallen** netjes geordend" },
             { titel: "Lijngrafiek = tijd-verloop", tekst: "Een lijn loopt **van links naar rechts** = van vroeg naar laat. De **hoogte** is de waarde op dat moment. Stijgt de lijn? Dan wordt de waarde groter. Daalt? Wordt kleiner." },
-            { titel: "Cito-truc grafiek herkennen", tekst: "Lees de vraag:\n• 'door de tijd' / 'op verschillende momenten' / 'wanneer' → **lijngrafiek**\n• 'vergelijk groep X met Y' → **staaf**\n• 'welk deel' / 'percentage van' → **cirkel/taart**\n• 'exact aantal van...' → **tabel**" },
+            { titel: "Toets-truc grafiek herkennen", tekst: "Lees de vraag:\n• 'door de tijd' / 'op verschillende momenten' / 'wanneer' → **lijngrafiek**\n• 'vergelijk groep X met Y' → **staaf**\n• 'welk deel' / 'percentage van' → **cirkel/taart**\n• 'exact aantal van...' → **tabel**" },
           ],
           woorden: [
             { woord: "lijngrafiek", uitleg: "Toont verandering door de tijd." },
             { woord: "x-as", uitleg: "Onder, vaak tijd (uren/dagen/jaren)." },
             { woord: "y-as", uitleg: "Zijkant, waarde op dat moment." },
           ],
-          theorie: "Cito-grafiek-keuze:\n• Tijd → LIJN\n• Vergelijken groepen → STAAF\n• Verdeling van geheel → CIRKEL\n• Exacte getallen → TABEL\nEerst onderscheid type, daarna aflezen.",
+          theorie: "Toets-grafiek-keuze:\n• Tijd → LIJN\n• Vergelijken groepen → STAAF\n• Verdeling van geheel → CIRKEL\n• Exacte getallen → TABEL\nEerst onderscheid type, daarna aflezen.",
           voorbeelden: [
             { type: "stap", tekst: "Temperatuur door de dag = lijngrafiek (tijd op x-as)." },
             { type: "stap", tekst: "Babygewicht na maanden = lijngrafiek (maanden op x-as)." },
@@ -219,7 +219,7 @@ const steps = [
             { woord: "taartdiagram", uitleg: "Synoniem voor cirkeldiagram." },
             { woord: "100%", uitleg: "Het geheel — alle stukken samen." },
           ],
-          theorie: "Cito-grafiek-keuze:\n• Tijd-verloop → LIJN\n• Vergelijken groepen → STAAF\n• Deel van geheel → CIRKEL\n• Exacte getallen → TABEL\nKern: bij vragen over 'percentage' of 'deel-van' → altijd cirkel.",
+          theorie: "Toets-grafiek-keuze:\n• Tijd-verloop → LIJN\n• Vergelijken groepen → STAAF\n• Deel van geheel → CIRKEL\n• Exacte getallen → TABEL\nKern: bij vragen over 'percentage' of 'deel-van' → altijd cirkel.",
           voorbeelden: [
             { type: "stap", tekst: "Sport-keuze in klas (voetbal 50%, hockey 25%, zwemmen 25%) = cirkel." },
             { type: "stap", tekst: "Verkiezingsuitslag per partij (PVV 24%, GroenLinks-PvdA 16%, etc.) = cirkel." },
@@ -240,7 +240,7 @@ const steps = [
   {
     title: "Staafdiagram lezen",
     explanation:
-      "Een **staafdiagram** heeft balken naast elkaar. Elke balk is een groep. De hoogte van de balk vertelt het aantal of de hoeveelheid.\n\n**Stappenplan**:\n1. Zoek de balk waar de vraag over gaat *(bv. 'maandag')*.\n2. Kijk hoe hoog die balk is.\n3. Lees het getal aan de y-as (de zijkant) af.\n4. Schrijf het op + eenheid *(bv. '12 kinderen', '€20', '30 °C')*.\n\n**Voorbeeld**: een staafdiagram van regen-millimeters per maand. De balk voor **maart** komt tot bij **40 mm**.\n→ Antwoord: in maart viel **40 mm regen**.\n\n**Verschil aflezen — 2 balken**:\n*'Hoeveel meer kinderen op donderdag dan op maandag?'*\n• Donderdag: 30 kinderen.\n• Maandag: 22 kinderen.\n• Verschil: 30 − 22 = **8 kinderen**.\n\n**Cito-truc**:\n• Bij vragen 'hoeveel meer' / 'hoeveel minder' → **aftrekken**.\n• Bij vragen 'in totaal' → **optellen**.\n• Bij 'hoeveel keer zo veel' → **delen**.",
+      "Een **staafdiagram** heeft balken naast elkaar. Elke balk is een groep. De hoogte van de balk vertelt het aantal of de hoeveelheid.\n\n**Stappenplan**:\n1. Zoek de balk waar de vraag over gaat *(bv. 'maandag')*.\n2. Kijk hoe hoog die balk is.\n3. Lees het getal aan de y-as (de zijkant) af.\n4. Schrijf het op + eenheid *(bv. '12 kinderen', '€20', '30 °C')*.\n\n**Voorbeeld**: een staafdiagram van regen-millimeters per maand. De balk voor **maart** komt tot bij **40 mm**.\n→ Antwoord: in maart viel **40 mm regen**.\n\n**Verschil aflezen — 2 balken**:\n*'Hoeveel meer kinderen op donderdag dan op maandag?'*\n• Donderdag: 30 kinderen.\n• Maandag: 22 kinderen.\n• Verschil: 30 − 22 = **8 kinderen**.\n\n**Toets-truc**:\n• Bij vragen 'hoeveel meer' / 'hoeveel minder' → **aftrekken**.\n• Bij vragen 'in totaal' → **optellen**.\n• Bij 'hoeveel keer zo veel' → **delen**.",
     svg: staafSvg(
       [
         { l: "ma", v: 22, c: COLORS.bar },
@@ -291,7 +291,7 @@ const steps = [
             { titel: "Verschil = aftrekken", tekst: "Donderdag 30 kinderen − dinsdag 18 kinderen = 12 kinderen meer." },
           ],
           woorden: [{ woord: "verschil", uitleg: "Hoeveel meer of minder de ene balk is dan de andere." }],
-          theorie: "'Hoeveel meer' bij Cito = altijd aftrekken (groot − klein).",
+          theorie: "'Hoeveel meer' bij de Doorstroomtoets = altijd aftrekken (groot − klein).",
           voorbeelden: [{ type: "stap", tekst: "Donderdag = 30, dinsdag = 18. 30 − 18 = 12. Dus 12 kinderen meer." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Optellen geeft 'totaal'. Aftrekken geeft 'verschil'." }],
           niveaus: {
@@ -308,15 +308,15 @@ const steps = [
         wrongHints: [null, "Te weinig — heb je alle 5 dagen meegeteld? 22+18+26+30+24.", "Te weinig — dat is alleen donderdag.", "Te veel — controleer optelling."],
         uitlegPad: {
           stappen: [
-            { titel: "'Totaal' = optellen", tekst: "Bij Cito: woord **'totaal'** of **'samen'** of **'in totaal'** → ALLE balken bij elkaar **optellen**." },
+            { titel: "'Totaal' = optellen", tekst: "Bij de Doorstroomtoets: woord **'totaal'** of **'samen'** of **'in totaal'** → ALLE balken bij elkaar **optellen**." },
             { titel: "Tel alle 5 dagen op", tekst: "Maandag 22 + dinsdag 18 + woensdag 26 + donderdag 30 + vrijdag 24 = **120 kinderen**." },
             { titel: "Slim optellen-truc", tekst: "Niet domweg achter elkaar. Maak slimme paren:\n• 22 + 18 = 40 (mooi rond)\n• 26 + 24 = 50 (mooi rond)\n• Subtotaal: 40 + 50 = 90\n• Plus donderdag: 90 + 30 = **120**.\nSneller + minder kans op fouten." },
           ],
           woorden: [
-            { woord: "totaal / in totaal", uitleg: "Signaalwoord voor OPTELLEN bij Cito." },
+            { woord: "totaal / in totaal", uitleg: "Signaalwoord voor OPTELLEN bij de Doorstroomtoets." },
             { woord: "verschil / hoeveel meer", uitleg: "Signaalwoord voor AFTREKKEN." },
           ],
-          theorie: "Cito-signaalwoorden bij grafiekvragen:\n• 'totaal' / 'samen' / 'in totaal' → +\n• 'verschil' / 'hoeveel meer/minder' → −\n• 'gemiddeld' → som ÷ aantal\n• 'hoeveel keer zo veel' → ÷",
+          theorie: "Toets-signaalwoorden bij grafiekvragen:\n• 'totaal' / 'samen' / 'in totaal' → +\n• 'verschil' / 'hoeveel meer/minder' → −\n• 'gemiddeld' → som ÷ aantal\n• 'hoeveel keer zo veel' → ÷",
           voorbeelden: [
             { type: "stap", tekst: "5 maanden regen totaal: 60+50+40+70+80 = 300 mm." },
             { type: "stap", tekst: "3 vakken score-gemiddelde: (8+7+6)÷3 = 21÷3 = 7." },
@@ -338,13 +338,13 @@ const steps = [
           stappen: [
             { titel: "'Meeste' = hoogste getal", tekst: "Het signaalwoord **'meeste'** vraagt om het **hoogste getal**. Bij een staafdiagram = de **langste/hoogste balk**." },
             { titel: "Vergelijk de 5 dagen", tekst: "Lees alle waardes:\n• ma = 22\n• di = 18\n• wo = 26\n• **do = 30** ← hoogste!\n• vr = 24\nDe hoogste = 30, dat is **donderdag**." },
-            { titel: "Cito-instinker: GETAL vs DAG", tekst: "Vraag is: **'Op welke DAG'** — dus antwoord = de **dagnaam** (donderdag), NIET het getal (30).\nCito test of je de juiste taal-vorm in de opties pakt:\n• 'Op welke dag?' → dag-naam\n• 'Hoeveel kinderen?' → getal\n• 'Hoeveel meer dan ma?' → verschil-getal\nVerkeerde vraag-vorm aanvinken = punt kwijt, ook al klopt je redenering." },
+            { titel: "Toets-instinker: GETAL vs DAG", tekst: "Vraag is: **'Op welke DAG'** — dus antwoord = de **dagnaam** (donderdag), NIET het getal (30).\nCito test of je de juiste taal-vorm in de opties pakt:\n• 'Op welke dag?' → dag-naam\n• 'Hoeveel kinderen?' → getal\n• 'Hoeveel meer dan ma?' → verschil-getal\nVerkeerde vraag-vorm aanvinken = punt kwijt, ook al klopt je redenering." },
           ],
           woorden: [
             { woord: "meeste", uitleg: "Het hoogste aantal, grootste hoeveelheid." },
             { woord: "minste", uitleg: "Het laagste aantal, kleinste hoeveelheid." },
           ],
-          theorie: "Cito-signaalwoorden bij staaf:\n• 'meeste' / 'hoogste' / 'grootste' → hoogste balk\n• 'minste' / 'laagste' / 'kleinste' → laagste balk\n• 'op welke dag' → antwoord = dagnaam (NIET getal)\n• 'hoeveel' → antwoord = getal\n\n3 stappen: 1) bepaal extreme (max/min) 2) lees waarde 3) check wat de vraag VRAAGT (dag of getal).",
+          theorie: "Toets-signaalwoorden bij staaf:\n• 'meeste' / 'hoogste' / 'grootste' → hoogste balk\n• 'minste' / 'laagste' / 'kleinste' → laagste balk\n• 'op welke dag' → antwoord = dagnaam (NIET getal)\n• 'hoeveel' → antwoord = getal\n\n3 stappen: 1) bepaal extreme (max/min) 2) lees waarde 3) check wat de vraag VRAAGT (dag of getal).",
           voorbeelden: [
             { type: "stap", tekst: "Staaf verkoop ijsjes ma-vr: 12-8-18-22-30. Welke dag minst? → di (8). Hoeveel op vr? → 30." },
             { type: "stap", tekst: "Staaf regen jan-apr: 60-80-40-50. Welke maand meest? → feb (80). Hoeveel mm in mrt? → 40 mm." },
@@ -364,7 +364,7 @@ const steps = [
   {
     title: "Lijngrafiek lezen",
     explanation:
-      "Een **lijngrafiek** laat zien hoe iets verandert. Bijvoorbeeld: temperatuur over de dag, of het gewicht van een baby per maand.\n\n**Wat je leest**:\n• **x-as** (onderaan) = de tijd — uur, dag, week, jaar.\n• **y-as** (zijkant) = de waarde — temperatuur, aantal, prijs, gewicht.\n• **De lijn** verbindt de meetpunten.\n\n**Stijgen of dalen?**:\n• Lijn gaat **omhoog** → iets wordt **meer/hoger**.\n• Lijn gaat **omlaag** → iets wordt **minder/lager**.\n• Lijn blijft **gelijk** → er verandert **niets**.\n\n**Voorbeeld**: een grafiek van de temperatuur van 's morgens tot 's avonds.\n• Om 8 uur: 12 °C.\n• Om 14 uur: 22 °C.\n• Om 20 uur: 16 °C.\n→ Tussen 8 en 14 uur: lijn stijgt → het werd **warmer**.\n→ Tussen 14 en 20 uur: lijn daalt → het werd **kouder**.\n\n**Cito-truc — Wanneer was het meest / minst?**:\n• Zoek het **hoogste punt** = wanneer was het MEEST.\n• Zoek het **laagste punt** = wanneer was het MINST.\n• **Steilste stijging** = grootste toename.",
+      "Een **lijngrafiek** laat zien hoe iets verandert. Bijvoorbeeld: temperatuur over de dag, of het gewicht van een baby per maand.\n\n**Wat je leest**:\n• **x-as** (onderaan) = de tijd — uur, dag, week, jaar.\n• **y-as** (zijkant) = de waarde — temperatuur, aantal, prijs, gewicht.\n• **De lijn** verbindt de meetpunten.\n\n**Stijgen of dalen?**:\n• Lijn gaat **omhoog** → iets wordt **meer/hoger**.\n• Lijn gaat **omlaag** → iets wordt **minder/lager**.\n• Lijn blijft **gelijk** → er verandert **niets**.\n\n**Voorbeeld**: een grafiek van de temperatuur van 's morgens tot 's avonds.\n• Om 8 uur: 12 °C.\n• Om 14 uur: 22 °C.\n• Om 20 uur: 16 °C.\n→ Tussen 8 en 14 uur: lijn stijgt → het werd **warmer**.\n→ Tussen 14 en 20 uur: lijn daalt → het werd **kouder**.\n\n**Toets-truc — Wanneer was het meest / minst?**:\n• Zoek het **hoogste punt** = wanneer was het MEEST.\n• Zoek het **laagste punt** = wanneer was het MINST.\n• **Steilste stijging** = grootste toename.",
     svg: lijnSvg(
       [
         { x: "08:00", y: 12 },
@@ -385,13 +385,13 @@ const steps = [
           stappen: [
             { titel: "'Warmst' = hoogste temperatuur", tekst: "Het woord **'warmst'** vraagt om het **HOOGSTE getal** in graden Celsius. Bij een lijngrafiek = het **HOOGSTE PUNT** op de y-as." },
             { titel: "Vergelijk de 3 waardes", tekst: "• 8u → 12°C\n• 14u → **22°C** ← hoogste!\n• 20u → 16°C\n→ 14u heeft de hoogste waarde, dus 14u is het warmst." },
-            { titel: "Signaalwoorden temperatuur", tekst: "Cito gebruikt veel signaalwoorden bij temperatuur-vragen:\n• **'warmst'** / **'hoogste'** / **'top'** → grootste waarde → ↗\n• **'koudst'** / **'laagste'** / **'dieptepunt'** → kleinste waarde → ↘\n• **'wanneer'** → vraag om TIJD, antwoord = uur/dag\n• **'hoe warm'** → vraag om WAARDE, antwoord = °C" },
+            { titel: "Signaalwoorden temperatuur", tekst: "De toets gebruikt veel signaalwoorden bij temperatuur-vragen:\n• **'warmst'** / **'hoogste'** / **'top'** → grootste waarde → ↗\n• **'koudst'** / **'laagste'** / **'dieptepunt'** → kleinste waarde → ↘\n• **'wanneer'** → vraag om TIJD, antwoord = uur/dag\n• **'hoe warm'** → vraag om WAARDE, antwoord = °C" },
           ],
           woorden: [
             { woord: "hoogste punt", uitleg: "Toppunt van een lijngrafiek = grootste waarde." },
             { woord: "laagste punt", uitleg: "Dieptepunt = kleinste waarde." },
           ],
-          theorie: "Cito-truc lijngrafiek extremen:\n• Hoogste punt → maximum-waarde\n• Laagste punt → minimum-waarde\n• Vraagt 'wanneer' → antwoord = tijd (x-as)\n• Vraagt 'hoe warm/veel' → antwoord = waarde (y-as)",
+          theorie: "Toets-truc lijngrafiek extremen:\n• Hoogste punt → maximum-waarde\n• Laagste punt → minimum-waarde\n• Vraagt 'wanneer' → antwoord = tijd (x-as)\n• Vraagt 'hoe warm/veel' → antwoord = waarde (y-as)",
           voorbeelden: [
             { type: "stap", tekst: "Verkoopgrafiek: 'Wanneer meest verkocht?' → kijk hoogste staaf/punt → noem die dag/maand." },
             { type: "stap", tekst: "Bevolkingsgrafiek: 'Wanneer minst inwoners?' → kijk laagste punt → noem dat jaar." },
@@ -414,7 +414,7 @@ const steps = [
             { titel: "Verschil = aftrekken", tekst: "14u = 22 °C. 8u = 12 °C. Verschil = 22 − 12 = 10 °C." },
           ],
           woorden: [{ woord: "°C", uitleg: "Graden Celsius — de eenheid voor temperatuur." }],
-          theorie: "Bij Cito-temperatuur-vragen: pak de 2 waardes en trek af.",
+          theorie: "Bij Toets-temperatuur-vragen: pak de 2 waardes en trek af.",
           voorbeelden: [{ type: "stap", tekst: "22 °C − 12 °C = 10 °C warmer." }],
           basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Schrijf °C bij het antwoord." }],
           niveaus: {
@@ -433,14 +433,14 @@ const steps = [
           stappen: [
             { titel: "Lijn-interpretatie in 3 vormen", tekst: "Bij een lijngrafiek is de **richting** van de lijn alles:\n• **Omhoog ↗** = waarde stijgt (warmer / meer / hoger)\n• **Omlaag ↘** = waarde daalt (kouder / minder / lager)\n• **Vlak →** = waarde verandert NIET (constant / blijft hetzelfde)" },
             { titel: "Vlakke lijn = stabiel", tekst: "Een vlakke lijn betekent: **er gebeurt niets nieuws**. Voorbeelden:\n• Temperatuur blijft 20 °C de hele middag → vlakke lijn op 20.\n• Aantal kinderen in klas blijft 25 elke dag → vlak op 25." },
-            { titel: "Combinatie van richtingen lezen", tekst: "Bij Cito krijg je vaak grafieken die **eerst stijgen, dan vlak, dan dalen**. Tip:\n• Lees per stuk: stijgt het, daalt het, of vlak?\n• Onderscheid de fases — vaak komt er een vraag over één specifieke fase." },
+            { titel: "Combinatie van richtingen lezen", tekst: "Bij de Doorstroomtoets krijg je vaak grafieken die **eerst stijgen, dan vlak, dan dalen**. Tip:\n• Lees per stuk: stijgt het, daalt het, of vlak?\n• Onderscheid de fases — vaak komt er een vraag over één specifieke fase." },
           ],
           woorden: [
             { woord: "stijgend", uitleg: "Lijn gaat omhoog = waarde wordt groter." },
             { woord: "dalend", uitleg: "Lijn gaat omlaag = waarde wordt kleiner." },
             { woord: "constant / vlak", uitleg: "Lijn blijft hetzelfde = waarde verandert niet." },
           ],
-          theorie: "Cito-richting bij lijngrafiek:\n• ↗ omhoog = stijgt = MEER\n• ↘ omlaag = daalt = MINDER\n• → vlak = constant = HETZELFDE\nLees de richting eerst, dan getal aflezen.",
+          theorie: "Toets-richting bij lijngrafiek:\n• ↗ omhoog = stijgt = MEER\n• ↘ omlaag = daalt = MINDER\n• → vlak = constant = HETZELFDE\nLees de richting eerst, dan getal aflezen.",
           voorbeelden: [
             { type: "stap", tekst: "Grafiek 'aantal kinderen op overblijf' blijft hele week op 25 = klas is constant elke dag." },
             { type: "stap", tekst: "Grafiek 'temperatuur' stijgt 8u-14u, dan vlak 14u-17u, dan daalt → middag-warm, vlak in piek, avond koeler." },
@@ -469,7 +469,7 @@ const steps = [
             { woord: "y-as", uitleg: "Verticaal, zijkant. De waarde / hoeveelheid." },
             { woord: "legenda", uitleg: "Aparte uitleg-blok bij grafiek (= NIET op as)." },
           ],
-          theorie: "Cito-truc as-verwarring voorkomen: 'Y staat als een vork omhoog' = verticaal. 'X loopt als een streep' = horizontaal. Y altijd waarde, X altijd categorie/tijd.",
+          theorie: "Toets-truc as-verwarring voorkomen: 'Y staat als een vork omhoog' = verticaal. 'X loopt als een streep' = horizontaal. Y altijd waarde, X altijd categorie/tijd.",
           voorbeelden: [
             { type: "stap", tekst: "Temperatuur-grafiek: x-as = uren (8u, 10u, 12u...), y-as = °C." },
             { type: "stap", tekst: "Klas-grafiek: x-as = dagen (ma, di...), y-as = aantal kinderen." },
@@ -489,7 +489,7 @@ const steps = [
   {
     title: "Cirkeldiagram (taartdiagram) lezen",
     explanation:
-      "Een **cirkeldiagram** is een **taart**. De hele taart = **100%** = alles. Elk stuk is een groep en heeft een **percentage**.\n\n**Voorbeeld**: een klas van 20 leerlingen — hun favoriete sport.\n• Voetbal: 50% van de leerlingen = 10 leerlingen.\n• Hockey: 25% = 5 leerlingen.\n• Zwemmen: 15% = 3 leerlingen.\n• Anders: 10% = 2 leerlingen.\n\n**Cito-stappenplan**:\n1. Zoek het stuk dat de vraag bedoelt *(via kleur of label)*.\n2. Lees het **percentage** af *(of meet hoe groot het stuk is)*.\n3. **Reken om naar aantal** als nodig: percentage × totaal ÷ 100.\n\n**Slimme percentage-trucs voor 8-jarigen**:\n• 50% = de helft (÷ 2).\n• 25% = een kwart (÷ 4).\n• 10% = een tiende (÷ 10).\n• 75% = drie kwart.\n\n**Voorbeeld omrekenen**:\n*'Van 40 leerlingen kiest 25% voor zwemmen. Hoeveel zwemmers?'*\n• 25% = ¼.\n• ¼ van 40 = 40 ÷ 4 = **10 zwemmers**.\n\n**Check**: alle stukken van de taart **samen = 100%** altijd! Als de getallen niet kloppen, heb je iets gemist.",
+      "Een **cirkeldiagram** is een **taart**. De hele taart = **100%** = alles. Elk stuk is een groep en heeft een **percentage**.\n\n**Voorbeeld**: een klas van 20 leerlingen — hun favoriete sport.\n• Voetbal: 50% van de leerlingen = 10 leerlingen.\n• Hockey: 25% = 5 leerlingen.\n• Zwemmen: 15% = 3 leerlingen.\n• Anders: 10% = 2 leerlingen.\n\n**Toets-stappenplan**:\n1. Zoek het stuk dat de vraag bedoelt *(via kleur of label)*.\n2. Lees het **percentage** af *(of meet hoe groot het stuk is)*.\n3. **Reken om naar aantal** als nodig: percentage × totaal ÷ 100.\n\n**Slimme percentage-trucs voor 8-jarigen**:\n• 50% = de helft (÷ 2).\n• 25% = een kwart (÷ 4).\n• 10% = een tiende (÷ 10).\n• 75% = drie kwart.\n\n**Voorbeeld omrekenen**:\n*'Van 40 leerlingen kiest 25% voor zwemmen. Hoeveel zwemmers?'*\n• 25% = ¼.\n• ¼ van 40 = 40 ÷ 4 = **10 zwemmers**.\n\n**Check**: alle stukken van de taart **samen = 100%** altijd! Als de getallen niet kloppen, heb je iets gemist.",
     svg: cirkelSvg(
       [
         { l: "Voetbal 50%", v: 50, c: "#69f0ae" },
@@ -509,7 +509,7 @@ const steps = [
           stappen: [
             { titel: "Grootst = hoogste percentage", tekst: "Bij een cirkeldiagram is **grootst** = het stuk met het **hoogste percentage**. Visueel = het **grootste taart-stuk**." },
             { titel: "Vergelijk de 4 percentages", tekst: "• Voetbal **50%** ← hoogste!\n• Hockey 25%\n• Zwemmen 15%\n• Anders 10%\nVoetbal heeft 50%, dat is de helft van de hele taart. De rest samen is óók maar de helft. Voetbal wint dus duidelijk." },
-            { titel: "Cito-truc cirkeldiagram", tekst: "Bij cirkeldiagrammen werken **twee dingen** tegelijk:\n1. **Percentage** (cijfer) → hoogste = grootst\n2. **Visueel stuk** (oogmaat) → grootste taartpunt = grootst\nBeide kloppen altijd. Check ze tegen elkaar: als 50% lijkt op een klein stukje, is er iets mis met de tekening — vertrouw het getal." },
+            { titel: "Toets-truc cirkeldiagram", tekst: "Bij cirkeldiagrammen werken **twee dingen** tegelijk:\n1. **Percentage** (cijfer) → hoogste = grootst\n2. **Visueel stuk** (oogmaat) → grootste taartpunt = grootst\nBeide kloppen altijd. Check ze tegen elkaar: als 50% lijkt op een klein stukje, is er iets mis met de tekening — vertrouw het getal." },
           ],
           woorden: [
             { woord: "grootste stuk", uitleg: "Hoogste percentage = grootste taart-deel." },
@@ -540,7 +540,7 @@ const steps = [
           woorden: [{ woord: "%", uitleg: "Per honderd. 50% = 50 per 100 = de helft." }],
           theorie: "Procent × totaal ÷ 100. Of voor mooie getallen: 50% = ÷ 2, 25% = ÷ 4, 10% = ÷ 10.",
           voorbeelden: [{ type: "stap", tekst: "50% van 20 kinderen = 10 kinderen voetbal." }],
-          basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Bij Cito: schrijf 'kinderen' of de juiste eenheid bij het getal." }],
+          basiskennis: [{ onderwerp: "Eenheid mee", uitleg: "Bij de Doorstroomtoets: schrijf 'kinderen' of de juiste eenheid bij het getal." }],
           niveaus: {
             basis: "50% × 20 = 10 kinderen.",
             simpeler: "50% is de helft. De helft van 20 = 10. Dus 10 kinderen kiezen voetbal.",
@@ -563,7 +563,7 @@ const steps = [
             { woord: "25%", uitleg: "Een kwart = ¼ = 1 op de 4." },
             { woord: "%", uitleg: "Per honderd. 25% = 25 op de 100 = 1 op de 4." },
           ],
-          theorie: "Cito-truc procenten in cirkeldiagrammen:\n• 50% = helft → ÷ 2\n• 25% = kwart → ÷ 4\n• 10% = tiende → ÷ 10\n• Voor andere %: gebruik 'procent × totaal ÷ 100'.\nBij Cito-cirkeldiagrammen zijn vaak mooie %-jes (10/20/25/50) → snel uit het hoofd.",
+          theorie: "Toets-truc procenten in cirkeldiagrammen:\n• 50% = helft → ÷ 2\n• 25% = kwart → ÷ 4\n• 10% = tiende → ÷ 10\n• Voor andere %: gebruik 'procent × totaal ÷ 100'.\nBij Toets-cirkeldiagrammen zijn vaak mooie %-jes (10/20/25/50) → snel uit het hoofd.",
           voorbeelden: [
             { type: "stap", tekst: "25% van 40 = 40 ÷ 4 = 10." },
             { type: "stap", tekst: "25% van 100 = 100 ÷ 4 = 25 (lekker rond, daarom heten ze ook 25%)." },
@@ -586,16 +586,16 @@ const steps = [
           stappen: [
             { titel: "Een taart is een geheel = 100%", tekst: "Bij een cirkeldiagram is de **hele cirkel** = het **totale aantal** = **100%**. Alle stukken samen vormen die hele cirkel — dus alle % samen = 100%." },
             { titel: "Voorbeeld: sport-keuze klas", tekst: "Voetbal 50% + Hockey 25% + Zwemmen 15% + Anders 10% = **100%** ✓\nDe stukken sluiten precies aan tot de hele cirkel. Geen overlap, geen gaten." },
-            { titel: "Cito-truc: ontbrekend stuk berekenen", tekst: "Soms vraagt Cito: 'Drie stukken zijn 40%, 30%, en 20%. Hoeveel is het vierde?'\nReken: 100% − (40+30+20) = 100 − 90 = **10%**.\nOmdat alle stukken samen 100% MOETEN zijn, kun je het ontbrekende stuk altijd berekenen." },
+            { titel: "Toets-truc: ontbrekend stuk berekenen", tekst: "Soms vraagt voor de toets: 'Drie stukken zijn 40%, 30%, en 20%. Hoeveel is het vierde?'\nReken: 100% − (40+30+20) = 100 − 90 = **10%**.\nOmdat alle stukken samen 100% MOETEN zijn, kun je het ontbrekende stuk altijd berekenen." },
           ],
           woorden: [
             { woord: "100%", uitleg: "Het hele geheel. Alles wat er is." },
             { woord: "deel van geheel", uitleg: "Een % van de 100%." },
           ],
-          theorie: "Cito-rekenregel cirkeldiagram:\n• Alle stukken samen = 100% (altijd)\n• Ontbrekend stuk = 100% − (som andere stukken)\n• Cirkel kan niet meer dan 100% (zou een 2e cirkel zijn)\n• Cirkel kan ook niet minder dan 100% (dat zou een 'gat' zijn)",
+          theorie: "Toets-rekenregel cirkeldiagram:\n• Alle stukken samen = 100% (altijd)\n• Ontbrekend stuk = 100% − (som andere stukken)\n• Cirkel kan niet meer dan 100% (zou een 2e cirkel zijn)\n• Cirkel kan ook niet minder dan 100% (dat zou een 'gat' zijn)",
           voorbeelden: [
             { type: "stap", tekst: "Verkiezingsuitslag: 4 partijen krijgen 40+30+20+10 = 100% (klopt)." },
-            { type: "stap", tekst: "Cito-vraag: 'Rood 35%, Blauw 25%, Groen 30%. Hoeveel Geel?' → 100 − (35+25+30) = 100 − 90 = 10%." },
+            { type: "stap", tekst: "toetsvraag: 'Rood 35%, Blauw 25%, Groen 30%. Hoeveel Geel?' → 100 − (35+25+30) = 100 − 90 = 10%." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Cirkel = ALTIJD 100%. Gebruik dit om ontbrekende stukken te berekenen via 100 − rest." }],
           niveaus: {
@@ -612,7 +612,7 @@ const steps = [
   {
     title: "Van tabel naar grafiek (en terug)",
     explanation:
-      "Een **tabel** is gewoon **getallen in rijen en kolommen**. Een grafiek is hetzelfde — maar dan als plaatje.\n\nVoorbeeld:\n\n| Dag | Aantal ijsjes verkocht |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\nIn een **staafdiagram** zou maandag een balk van 12 worden, vrijdag een balk van 30, etc.\n\n**Cito-vraag-type 1**: *'Welke dag is het laagst in de tabel?'*\n• Zoek het kleinste getal: 8 (dinsdag).\n\n**Cito-vraag-type 2**: *'Hoeveel ijsjes in de hele week?'*\n• Tel alle dagen op: 12 + 8 + 18 + 22 + 30 = **90 ijsjes**.\n\n**Cito-vraag-type 3**: *'Hoeveel meer op vrijdag dan op maandag?'*\n• Verschil: 30 − 12 = **18 ijsjes meer**.\n\n**Cito-tip — tabel vs grafiek**:\n• **Exact getal** = tabel makkelijker.\n• **Patroon zien** (stijgt het? daalt het?) = grafiek makkelijker.\n• Bij twijfel: maak even snel een staafje per dag op kladpapier.",
+      "Een **tabel** is gewoon **getallen in rijen en kolommen**. Een grafiek is hetzelfde — maar dan als plaatje.\n\nVoorbeeld:\n\n| Dag | Aantal ijsjes verkocht |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\nIn een **staafdiagram** zou maandag een balk van 12 worden, vrijdag een balk van 30, etc.\n\n**toetsvraag-type 1**: *'Welke dag is het laagst in de tabel?'*\n• Zoek het kleinste getal: 8 (dinsdag).\n\n**toetsvraag-type 2**: *'Hoeveel ijsjes in de hele week?'*\n• Tel alle dagen op: 12 + 8 + 18 + 22 + 30 = **90 ijsjes**.\n\n**toetsvraag-type 3**: *'Hoeveel meer op vrijdag dan op maandag?'*\n• Verschil: 30 − 12 = **18 ijsjes meer**.\n\n**Toets-tip — tabel vs grafiek**:\n• **Exact getal** = tabel makkelijker.\n• **Patroon zien** (stijgt het? daalt het?) = grafiek makkelijker.\n• Bij twijfel: maak even snel een staafje per dag op kladpapier.",
     checks: [
       {
         q: "Tabel: ma 12, di 8, wo 18, do 22, vr 30 ijsjes. **Op welke dag minst** verkocht?",
@@ -623,7 +623,7 @@ const steps = [
           stappen: [
             { titel: "'Minst' = laagste getal", tekst: "Bij een **tabel** zoek je het **laagste getal** als de vraag 'minst' / 'minste' / 'laagste' bevat." },
             { titel: "Loop door de tabel — vergelijk", tekst: "• ma = 12\n• **di = 8** ← laagste!\n• wo = 18\n• do = 22\n• vr = 30\nHet kleinste getal is **8**, dat hoort bij **dinsdag**." },
-            { titel: "Cito-truc: dagen bij rekenen", tekst: "Bij tabel-vragen met dagen:\n• 'minst' / 'minste' / 'laagste' → kleinste getal\n• 'meeste' / 'hoogste' → grootste getal\n• 'verschil' → groot − klein\n• 'totaal' → alles +\n\nVerwar 'minst' niet met 'minder dan X' (= aftrekken). 'Minst' = extreme zoeken." },
+            { titel: "Toets-truc: dagen bij rekenen", tekst: "Bij tabel-vragen met dagen:\n• 'minst' / 'minste' / 'laagste' → kleinste getal\n• 'meeste' / 'hoogste' → grootste getal\n• 'verschil' → groot − klein\n• 'totaal' → alles +\n\nVerwar 'minst' niet met 'minder dan X' (= aftrekken). 'Minst' = extreme zoeken." },
           ],
           woorden: [
             { woord: "minst", uitleg: "Het kleinste aantal/laagste getal in de groep." },
@@ -651,13 +651,13 @@ const steps = [
           stappen: [
             { titel: "'Totaal' = alle 5 dagen optellen", tekst: "Het signaalwoord **'totaal'** vraagt om **alle waardes bij elkaar**. Bij week-tabel: tel alle 5 dagen op." },
             { titel: "Slim optellen in paren", tekst: "Niet alles in 1 keer in je hoofd — maak paren:\n• ma + di = 12 + 8 = **20**\n• wo + do = 18 + 22 = **40**\n• vr alleen = **30**\n\nNu paren samen:\n• 20 + 40 = **60**\n• 60 + 30 = **90**\n→ **Totaal = 90 ijsjes**." },
-            { titel: "Slimme trucs voor optellen", tekst: "Cito-trucs bij grotere optellingen:\n• Zoek **paren die mooi uitkomen**: 12+8 = 20 (rond getal!), 18+22 = 40 (rond!)\n• Maak van moeilijke som een ronde-getallen-som\n• Tel de eenheden eerst, daarna tientallen\n• Schat eerst: 5 dagen × ~18 gemiddeld ≈ 90 → 90 klopt qua orde van grootte" },
+            { titel: "Slimme trucs voor optellen", tekst: "Toets-trucs bij grotere optellingen:\n• Zoek **paren die mooi uitkomen**: 12+8 = 20 (rond getal!), 18+22 = 40 (rond!)\n• Maak van moeilijke som een ronde-getallen-som\n• Tel de eenheden eerst, daarna tientallen\n• Schat eerst: 5 dagen × ~18 gemiddeld ≈ 90 → 90 klopt qua orde van grootte" },
           ],
           woorden: [
             { woord: "totaal", uitleg: "Alle waardes samen, na optellen." },
             { woord: "paren", uitleg: "Twee getallen samen — vaak makkelijker dan alles in 1 keer." },
           ],
-          theorie: "Cito-tabel signaalwoorden:\n• 'Totaal' → +\n• 'Samen' → +\n• 'In totaal verkocht' → +\n• 'Hele week/dag/jaar' → + (alles binnen die periode)\n\nNooit anders dan +. Alleen aftrekken bij 'verschil' / 'hoeveel meer/minder'.",
+          theorie: "Toets-tabel signaalwoorden:\n• 'Totaal' → +\n• 'Samen' → +\n• 'In totaal verkocht' → +\n• 'Hele week/dag/jaar' → + (alles binnen die periode)\n\nNooit anders dan +. Alleen aftrekken bij 'verschil' / 'hoeveel meer/minder'.",
           voorbeelden: [
             { type: "stap", tekst: "Tabel cijfers per dag: 5+7+9+6+8 = 35 punten totaal." },
             { type: "stap", tekst: "Tabel regen jan-apr: 60+50+40+70 = 220 mm in 4 maanden." },
@@ -693,11 +693,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — grafieken-mix",
+    title: "Toets-eindopdracht — grafieken-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Verschillende grafiek-types door elkaar. **Lees altijd eerst**: titel, eenheid, x-as, y-as. Dan pas de vraag beantwoorden.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Verschillende grafiek-types door elkaar. **Lees altijd eerst**: titel, eenheid, x-as, y-as. Dan pas de vraag beantwoorden.\n\nVeel succes!",
     checks: [
       {
         q: "Staafdiagram regen-mm: jan 60, feb 80, mrt 40, apr 50. **Totaal regen-mm** in deze 4 maanden?",
@@ -708,13 +708,13 @@ const steps = [
           stappen: [
             { titel: "'Totaal' = alle balken bij elkaar optellen", tekst: "Het woord **'totaal'** is een **signaalwoord voor +** (optellen). Bij staafdiagram: **alle balken bij elkaar** = totaal." },
             { titel: "Stap-voor-stap optellen", tekst: "Lees elke balk en tel op:\n• jan = 60\n• feb = 80\n• mrt = 40\n• apr = 50\n\nReken slim:\n60 + 80 = **140**\n140 + 40 = **180**\n180 + 50 = **230**\n→ **Totaal = 230 mm**." },
-            { titel: "Cito-truc: tussenstappen opschrijven", tekst: "Bij 4+ getallen: NIET alles in 1 keer in je hoofd doen — kans op fout te groot.\nOpsplitsen in **2 stappen**:\n• Eerst: jan+feb = 60+80 = 140\n• Daarna: mrt+apr = 40+50 = 90\n• Tot slot: 140 + 90 = 230 ✓\nTwee kleine sommen = nauwkeuriger dan één grote." },
+            { titel: "Toets-truc: tussenstappen opschrijven", tekst: "Bij 4+ getallen: NIET alles in 1 keer in je hoofd doen — kans op fout te groot.\nOpsplitsen in **2 stappen**:\n• Eerst: jan+feb = 60+80 = 140\n• Daarna: mrt+apr = 40+50 = 90\n• Tot slot: 140 + 90 = 230 ✓\nTwee kleine sommen = nauwkeuriger dan één grote." },
           ],
           woorden: [
             { woord: "totaal", uitleg: "Alle getallen samen, na optellen." },
             { woord: "optellen", uitleg: "Cijfers samen tellen tot één getal (+)." },
           ],
-          theorie: "Cito-signaalwoorden optellen:\n• 'Totaal' → alles +\n• 'Samen' → alles +\n• 'Bij elkaar' → alles +\n• 'Alles in...' → alles +\n• 'Hoeveel in totaal verkocht/gegeten/...' → alles +\n\nTegenpolen (NIET optellen):\n• 'Verschil' → −\n• 'Hoeveel meer/minder' → −\n• 'Per dag/maand gemiddeld' → totaal ÷ aantal",
+          theorie: "Toets-signaalwoorden optellen:\n• 'Totaal' → alles +\n• 'Samen' → alles +\n• 'Bij elkaar' → alles +\n• 'Alles in...' → alles +\n• 'Hoeveel in totaal verkocht/gegeten/...' → alles +\n\nTegenpolen (NIET optellen):\n• 'Verschil' → −\n• 'Hoeveel meer/minder' → −\n• 'Per dag/maand gemiddeld' → totaal ÷ aantal",
           voorbeelden: [
             { type: "stap", tekst: "Staaf ijsjes ma-vr: 12+8+18+22+30 = 90 ijsjes totaal." },
             { type: "stap", tekst: "Staaf inwoners 4 buurten: 200+350+150+300 = 1.000 inwoners totaal." },
@@ -737,13 +737,13 @@ const steps = [
           stappen: [
             { titel: "'Aangekomen' = verschil = aftrekken", tekst: "Het woord **'aangekomen'** betekent: hoeveel ERBIJ gekomen sinds het begin. Dat is een **verschil-vraag** → aftrekken." },
             { titel: "Bereken: eind − begin", tekst: "**Begin**: 3 kg (bij geboorte).\n**Eind**: 6 kg (na 3 maanden).\n**Aangekomen** = 6 − 3 = **3 kg**." },
-            { titel: "Cito-instinker: vergeet niet de eenheid", tekst: "Antwoord = '3 **kg**', niet alleen '3'. Op Cito staat soms in de opties: '3', '3 kg', '3 g', '3 maanden'. Alleen het juiste getal MET juiste eenheid is goed." },
+            { titel: "Toets-instinker: vergeet niet de eenheid", tekst: "Antwoord = '3 **kg**', niet alleen '3'. Op de Doorstroomtoets staat soms in de opties: '3', '3 kg', '3 g', '3 maanden'. Alleen het juiste getal MET juiste eenheid is goed." },
           ],
           woorden: [
             { woord: "aangekomen", uitleg: "Hoeveel ERBIJ gekomen sinds begin. Bij gewicht: zwaarder geworden." },
             { woord: "verschil", uitleg: "Resultaat van aftrekken (groot − klein)." },
           ],
-          theorie: "Cito-signaalwoorden bij groei-vragen:\n• 'aangekomen' / 'gegroeid' / 'erbij' → eind − begin (aftrekken)\n• 'totaal nu' / 'eindgewicht' → alleen eind aflezen\n• 'gemiddeld per maand' → verschil ÷ aantal maanden",
+          theorie: "Toets-signaalwoorden bij groei-vragen:\n• 'aangekomen' / 'gegroeid' / 'erbij' → eind − begin (aftrekken)\n• 'totaal nu' / 'eindgewicht' → alleen eind aflezen\n• 'gemiddeld per maand' → verschil ÷ aantal maanden",
           voorbeelden: [
             { type: "stap", tekst: "Plant 10 cm bij start, 25 cm na 4 weken. Gegroeid: 25 − 10 = 15 cm." },
             { type: "stap", tekst: "Baby weegt 3 kg bij geboorte, 9 kg na 1 jaar. Aangekomen: 9 − 3 = 6 kg." },
@@ -765,7 +765,7 @@ const steps = [
           stappen: [
             { titel: "Wat betekent 50%?", tekst: "**50%** = **de helft** van het totaal. Een **percentage** zegt: zoveel **van de 100** delen.\n• 50% = 50 van de 100 = **helft**\n• 25% = 25 van de 100 = **kwart**\n• 100% = alles" },
             { titel: "50% van 40 berekenen", tekst: "**Truc voor 50%**: gewoon **÷ 2** (delen door 2 = helft).\n• 40 ÷ 2 = **20 kinderen**\n\nAlternatief (langere weg):\n• 50% = 50/100 = 0,5\n• 0,5 × 40 = 20 kinderen ✓\nZelfde antwoord. Bij 50% is delen door 2 altijd het snelst." },
-            { titel: "Cito-procent-trucs (snel)", tekst: "Onthoud deze ezelsbruggetjes voor Cito:\n• **50%** → ÷ 2 (helft)\n• **25%** → ÷ 4 (kwart)\n• **10%** → ÷ 10 (1 nul ervanaf)\n• **20%** → ÷ 5 (of 2× de 10%)\n• **75%** → 3× de 25% (drie kwart)\n• **100%** → alles\n\nCheck: rood 25% van 40 = 40÷4 = 10 kinderen. Geel 25% = ook 10. Blauw 50% = 20. Totaal: 10+10+20 = 40 ✓" },
+            { titel: "Toets-procent-trucs (snel)", tekst: "Onthoud deze ezelsbruggetjes voor de Doorstroomtoets:\n• **50%** → ÷ 2 (helft)\n• **25%** → ÷ 4 (kwart)\n• **10%** → ÷ 10 (1 nul ervanaf)\n• **20%** → ÷ 5 (of 2× de 10%)\n• **75%** → 3× de 25% (drie kwart)\n• **100%** → alles\n\nCheck: rood 25% van 40 = 40÷4 = 10 kinderen. Geel 25% = ook 10. Blauw 50% = 20. Totaal: 10+10+20 = 40 ✓" },
           ],
           woorden: [
             { woord: "percentage", uitleg: "Aantal per 100, geschreven als %." },
@@ -778,7 +778,7 @@ const steps = [
             { type: "stap", tekst: "200 zakjes, 10% gratis → 200÷10 = 20 gratis." },
             { type: "stap", tekst: "80 leerlingen, 50% meisjes → 80÷2 = 40 meisjes." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "50% = helft = ÷ 2. 25% = kwart = ÷ 4. Onthoud deze 2, dan kun je veel Cito-vragen snel." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "50% = helft = ÷ 2. 25% = kwart = ÷ 4. Onthoud deze 2, dan kun je veel toetsvragen snel." }],
           niveaus: {
             basis: "50% van 40 = 40÷2 = 20 kinderen.",
             simpeler: "50% = de helft. Helft van 40 kinderen = 20.",
@@ -795,14 +795,14 @@ const steps = [
           stappen: [
             { titel: "'Minst' = laagste balk", tekst: "**'Komt het minst voor'** = het dier met het **kleinste aantal** = de **laagste balk** in de staaf-diagram." },
             { titel: "Vergelijk alle 4 huisdieren", tekst: "• Hond = 12\n• Kat = 18\n• **Vogel = 4** ← laagste!\n• Vis = 6\n\nGesorteerd van laag naar hoog: vogel (4) < vis (6) < hond (12) < kat (18).\n→ Vogel is met **4** het minst." },
-            { titel: "Cito-instinker: vergelijk ALLE opties", tekst: "Veel kinderen kiezen het EERSTE lage getal dat ze zien. Maar je moet **ALLE 4** vergelijken — anders mis je iets lagers.\nVoorbeeld: je ziet vis (6) en denkt 'dat lijkt laag, kies vis'. Maar vogel is **nog lager** (4). Pas op dat je niet stopt bij het eerste 'best lijkende' antwoord.\n→ **Truc**: schrijf alle 4 getallen op in volgorde, dan pak de laagste." },
+            { titel: "Toets-instinker: vergelijk ALLE opties", tekst: "Veel kinderen kiezen het EERSTE lage getal dat ze zien. Maar je moet **ALLE 4** vergelijken — anders mis je iets lagers.\nVoorbeeld: je ziet vis (6) en denkt 'dat lijkt laag, kies vis'. Maar vogel is **nog lager** (4). Pas op dat je niet stopt bij het eerste 'best lijkende' antwoord.\n→ **Truc**: schrijf alle 4 getallen op in volgorde, dan pak de laagste." },
           ],
           woorden: [
             { woord: "minst", uitleg: "Het kleinste aantal." },
             { woord: "meest", uitleg: "Het grootste aantal." },
             { woord: "vergelijken", uitleg: "Twee of meer getallen naast elkaar zetten en bepalen welke groter/kleiner is." },
           ],
-          theorie: "Cito-staafdiagram 'minst/meest':\n1. Lees alle 4 (of meer) balken af.\n2. Vergelijk volledig — alle getallen.\n3. Zoek extreme (laagste = minst, hoogste = meest).\n4. Pak het LABEL van die balk als antwoord (vraag 'welk dier?' → naam dier).\n\nNooit stoppen bij het eerste 'best lijkende' getal — alle opties checken.",
+          theorie: "Toets-staafdiagram 'minst/meest':\n1. Lees alle 4 (of meer) balken af.\n2. Vergelijk volledig — alle getallen.\n3. Zoek extreme (laagste = minst, hoogste = meest).\n4. Pak het LABEL van die balk als antwoord (vraag 'welk dier?' → naam dier).\n\nNooit stoppen bij het eerste 'best lijkende' getal — alle opties checken.",
           voorbeelden: [
             { type: "stap", tekst: "Staaf sport-keuze: voetbal 20, hockey 15, tennis 8, zwemmen 12. Minst? → tennis (8)." },
             { type: "stap", tekst: "Staaf cijfers wiskunde-toets: 5= 2 keer, 6= 5 keer, 7= 8 keer, 8= 4 keer. Welk cijfer minst? → 5 (slechts 2 keer)." },
@@ -816,7 +816,7 @@ const steps = [
         },
       },
       {
-        q: "Lijngrafiek temperatuur. Bij Cito staat een **stijgende** lijn. Wat betekent dat?",
+        q: "Lijngrafiek temperatuur. Bij de Doorstroomtoets staat een **stijgende** lijn. Wat betekent dat?",
         options: ["Het wordt warmer", "Het wordt kouder", "Niets verandert", "De thermometer is stuk"],
         answer: 0,
         wrongHints: [null, "Kouder = lijn omlaag.", "Niets = vlakke lijn.", "Niet zonder reden te zeggen — neem aan dat de grafiek klopt."],
@@ -830,7 +830,7 @@ const steps = [
             { woord: "stijgend", uitleg: "Lijn omhoog, waarde wordt groter." },
             { woord: "dalend", uitleg: "Lijn omlaag, waarde wordt kleiner." },
           ],
-          theorie: "Cito-vertaaltabel lijn-richting:\n• Temperatuur stijgt → het wordt warmer\n• Temperatuur daalt → het wordt kouder\n• Aantal mensen stijgt → meer mensen\n• Aantal mensen daalt → minder mensen\n• Bedrag stijgt → duurder\n• Bedrag daalt → goedkoper",
+          theorie: "Toets-vertaaltabel lijn-richting:\n• Temperatuur stijgt → het wordt warmer\n• Temperatuur daalt → het wordt kouder\n• Aantal mensen stijgt → meer mensen\n• Aantal mensen daalt → minder mensen\n• Bedrag stijgt → duurder\n• Bedrag daalt → goedkoper",
           voorbeelden: [
             { type: "stap", tekst: "Grafiek auto-prijs stijgend → auto wordt duurder." },
             { type: "stap", tekst: "Grafiek hoeveelheid regen dalend → minder regen." },
@@ -899,7 +899,7 @@ const grafiekenLezenPo = {
     { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
   ],
   intro:
-    "Grafieken lezen voor groep 6-8 — staafdiagram, lijngrafiek, taartdiagram, tabel ↔ grafiek. Cito-praktijksommen met temperatuur, regen, klas-aantallen, koekjes. ~15 min.",
+    "Grafieken lezen voor groep 6-8 — staafdiagram, lijngrafiek, taartdiagram, tabel ↔ grafiek. Toets-praktijksommen met temperatuur, regen, klas-aantallen, koekjes. ~15 min.",
   triggerKeywords: [
     "grafiek", "staaf", "lijn", "cirkel", "taart", "diagram",
     "tabel", "aflezen", "verschil", "temperatuur",

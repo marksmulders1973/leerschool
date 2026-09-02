@@ -27,7 +27,7 @@ const steps = [
   {
     title: "Vóór 1848 — de koning bepaalde alles",
     explanation:
-      "In de jaren **1815-1848** was Nederland een koninkrijk waarin **koning Willem I** (en later Willem II) zelf de macht had. Dit heet een **absolute monarchie**.\n\n**Hoe werkte het toen**:\n• De koning benoemde **ministers** die alleen verantwoording aflegden aan hem (niet aan het volk).\n• Er was een **Staten-Generaal** (parlement), maar dat had weinig macht.\n• Geen vrijheid van pers, godsdienst of onderwijs.\n• Stemrecht alleen voor rijke mannen — vrouwen + arbeiders geen stem.\n\n**Waarom 1848 een omslag werd**:\n• In heel Europa: **revolutiejaar 1848**. In Parijs viel de koning, in Wenen opstand, in Duitsland kort een parlement.\n• Koning Willem II was bang voor dezelfde opstand in Nederland.\n• Hij riep tegen Thorbecke: *'Ik ben van conservatief in één nacht liberaal geworden.'*\n• Resultaat: de **grondwet van 1848** werd ingevoerd — door **Johan Rudolph Thorbecke** geschreven.\n\n**Cito-/examen-feit**: Thorbecke = liberaal, schreef de grondwet, vader van de moderne Nederlandse democratie.",
+      "In de jaren **1815-1848** was Nederland een koninkrijk waarin **koning Willem I** (en later Willem II) zelf de macht had. Dit heet een **absolute monarchie**.\n\n**Hoe werkte het toen**:\n• De koning benoemde **ministers** die alleen verantwoording aflegden aan hem (niet aan het volk).\n• Er was een **Staten-Generaal** (parlement), maar dat had weinig macht.\n• Geen vrijheid van pers, godsdienst of onderwijs.\n• Stemrecht alleen voor rijke mannen — vrouwen + arbeiders geen stem.\n\n**Waarom 1848 een omslag werd**:\n• In heel Europa: **revolutiejaar 1848**. In Parijs viel de koning, in Wenen opstand, in Duitsland kort een parlement.\n• Koning Willem II was bang voor dezelfde opstand in Nederland.\n• Hij riep tegen Thorbecke: *'Ik ben van conservatief in één nacht liberaal geworden.'*\n• Resultaat: de **grondwet van 1848** werd ingevoerd — door **Johan Rudolph Thorbecke** geschreven.\n\n**Toets-/examen-feit**: Thorbecke = liberaal, schreef de grondwet, vader van de moderne Nederlandse democratie.",
     checks: [
       {
         q: "Welke koning regeerde NL in **1848** toen de grondwet werd herzien?",
@@ -75,7 +75,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Census-kiesrecht", tekst: "Census-kiesrecht: alleen wie genoeg belasting betaalde mocht stemmen. Resultaat: ~10% van mannen, 0% vrouwen. Pas in **1917 algemeen mannen-kiesrecht**, **1919 vrouwen-kiesrecht** (Aletta Jacobs)." }],
           woorden: [{ woord: "census-kiesrecht", uitleg: "Stemrecht gekoppeld aan inkomen of bezit." }, { woord: "algemeen kiesrecht", uitleg: "Iedereen volwassene mag stemmen, ongeacht inkomen/geslacht." }],
-          theorie: "Cito-examen-feit: vrouwenkiesrecht NL 1919, vóór de meeste andere Europese landen.",
+          theorie: "Toets-examen-feit: vrouwenkiesrecht NL 1919, vóór de meeste andere Europese landen.",
           niveaus: { basis: "Alleen rijke mannen — A.", simpeler: "Census = je moest rijk genoeg zijn", nogSimpeler: "Rijke mannen" },
         },
       },
@@ -121,7 +121,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Twee kanten van de medaille", tekst: "**Onschendbaar** = de koning kan persoonlijk niet voor de rechter gedaagd worden voor staatszaken. **Verantwoordelijk** = de minister tekent mee, dus die is wél aansprakelijk. Bij misser → minister af, koning blijft." }],
           woorden: [{ woord: "onschendbaar", uitleg: "Kan niet juridisch vervolgd worden." }, { woord: "verantwoordelijk", uitleg: "Aansprakelijk voor wat er gebeurt." }],
-          theorie: "Cito-examen-vraag-klassieker: 'Wie tekent een wet?' → Koning + minister beide. → Bij fout: minister af.",
+          theorie: "Toets-examen-vraag-klassieker: 'Wie tekent een wet?' → Koning + minister beide. → Bij fout: minister af.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Toeslagenaffaire 2021: kabinet trad af, koning bleef." }],
           niveaus: { basis: "Koning niet vervolgbaar, minister stapt op — A.", simpeler: "Onschendbaar koning + verantwoordelijke ministers", nogSimpeler: "Minister af, koning blijft" },
         },
@@ -179,7 +179,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "W-U-R: wetgevend, uitvoerend, rechterlijk", tekst: "Trias = drie. Politica = macht. Drie machten: wetten MAKEN (wetgevend), wetten UITVOEREN (uitvoerend), wetten BEOORDELEN/STRAFFEN (rechterlijk). Allemaal apart, zodat geen één alles bepaalt." }],
           woorden: [{ woord: "trias politica", uitleg: "Drie-machtige scheiding van staat: wetgevend + uitvoerend + rechterlijk." }, { woord: "Montesquieu", uitleg: "Franse filosoof (1689-1755), Verlichting, schreef 'De l'esprit des lois' (1748)." }],
-          theorie: "Cito-truc: ezelsbruggetje WUR — Wet maken, Uitvoeren, Recht spreken.",
+          theorie: "Toets-truc: ezelsbruggetje WUR — Wet maken, Uitvoeren, Recht spreken.",
           niveaus: { basis: "Wetgevend / uitvoerend / rechterlijk — A.", simpeler: "WUR = drie functies van staat", nogSimpeler: "WUR" },
         },
       },
@@ -202,7 +202,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Levenslange benoeming = onafhankelijkheid", tekst: "Rechters benoemd **voor het leven** (in praktijk tot pensioen ~70). Reden: een rechter mag GEEN angst hebben dat regering hem ontslaat als hij ongunstig oordeelt. Dat beschermt **onafhankelijkheid van de rechterlijke macht**." }],
           woorden: [{ woord: "onafhankelijkheid", uitleg: "Niet afhankelijk van een andere instantie voor je baan/oordeel." }],
-          theorie: "Cito-link: in landen zonder onafhankelijke rechter (bv. dictaturen) kan regering rechters ontslaan die ongunstig oordelen — dan is rechtspraak een schijn-instituut.",
+          theorie: "Toets-link: in landen zonder onafhankelijke rechter (bv. dictaturen) kan regering rechters ontslaan die ongunstig oordelen — dan is rechtspraak een schijn-instituut.",
           niveaus: { basis: "Voor het leven — A.", simpeler: "Levenslang = onafhankelijk van regering", nogSimpeler: "Levenslang" },
         },
       },
@@ -214,7 +214,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Art. 1 grondwet (1983)", tekst: "*'Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld. Discriminatie wegens godsdienst, levensovertuiging, politieke gezindheid, ras, geslacht of op welke grond dan ook, is niet toegestaan.'* Toegevoegd in 1983-grondwetsherziening." }],
           woorden: [{ woord: "discriminatie", uitleg: "Ongelijke behandeling op basis van een persoonlijk kenmerk." }],
-          theorie: "Voor Cito: art. 1 = anti-discriminatie. Daterend 1983 (NIET 1848 — vergissing-val).",
+          theorie: "Voor de Doorstroomtoets: art. 1 = anti-discriminatie. Daterend 1983 (NIET 1848 — vergissing-val).",
           niveaus: { basis: "Gelijke behandeling — A.", simpeler: "Art. 1 = anti-discriminatie", nogSimpeler: "Anti-discriminatie" },
         },
       },
@@ -236,7 +236,7 @@ const steps = [
   {
     title: "Regering, parlement, koning vandaag",
     explanation:
-      "Hoe is **Nederland nu** (2025) ingericht?\n\n**1. Koning Willem-Alexander (2013-)** — staatshoofd, ceremonieel.\n• Tekent wetten + benoemt formeel regering.\n• Houdt **Troonrede** op derde dinsdag van september (= Prinsjesdag).\n• Geen politieke uitspraken in openbaar.\n• Onschendbaar (zie deel B).\n\n**2. Regering (kabinet)** — uitvoerende macht.\n• Koning + ministers + staatssecretarissen.\n• Voorzitter = **Minister-President** (vandaag: Dick Schoof, kabinet Schoof, juli 2024-).\n• Ministers leiden departementen (Onderwijs, Financiën, Justitie, etc.).\n• Komen samen in **Ministerraad** (elke vrijdag).\n\n**3. Parlement (Staten-Generaal)** — wetgevende macht (samen met regering).\n• **Tweede Kamer**: 150 leden, gekozen door volk, eens per 4 jaar (of eerder bij val kabinet).\n• **Eerste Kamer**: 75 leden, gekozen door **provinciale staten** (indirect).\n• Tweede Kamer = controleert regering, dient wetten in, kan motie van wantrouwen indienen.\n• Eerste Kamer = toetst wetten op kwaliteit + grondwettigheid.\n\n**4. Verkiezingen**:\n• Tweede Kamer: elke 4 jaar (laatste 2023).\n• Provinciale staten: elke 4 jaar (laatste 2023) → kiezen Eerste Kamer.\n• Europees Parlement: elke 5 jaar (laatste 2024).\n• Gemeenteraad: elke 4 jaar (laatste 2022).\n\n**5. Politieke partijen** (Tweede Kamer 2023):\n• PVV (Wilders, 37 zetels — grootste), GL-PvdA (Timmermans), VVD (Yesilgöz), NSC (Omtzigt), D66, BBB, CDA, SP, ChristenUnie, etc.\n• Geen partij heeft meerderheid → **coalitie** nodig (vandaag: PVV+VVD+NSC+BBB).\n\n**Onthoud voor Cito**:\n• 150 = Tweede Kamer, 75 = Eerste Kamer.\n• Premier ≠ koning. Koning is staatshoofd, premier leidt regering.\n• Prinsjesdag = 3e dinsdag september = Troonrede + Miljoenennota.",
+      "Hoe is **Nederland nu** (2025) ingericht?\n\n**1. Koning Willem-Alexander (2013-)** — staatshoofd, ceremonieel.\n• Tekent wetten + benoemt formeel regering.\n• Houdt **Troonrede** op derde dinsdag van september (= Prinsjesdag).\n• Geen politieke uitspraken in openbaar.\n• Onschendbaar (zie deel B).\n\n**2. Regering (kabinet)** — uitvoerende macht.\n• Koning + ministers + staatssecretarissen.\n• Voorzitter = **Minister-President** (vandaag: Dick Schoof, kabinet Schoof, juli 2024-).\n• Ministers leiden departementen (Onderwijs, Financiën, Justitie, etc.).\n• Komen samen in **Ministerraad** (elke vrijdag).\n\n**3. Parlement (Staten-Generaal)** — wetgevende macht (samen met regering).\n• **Tweede Kamer**: 150 leden, gekozen door volk, eens per 4 jaar (of eerder bij val kabinet).\n• **Eerste Kamer**: 75 leden, gekozen door **provinciale staten** (indirect).\n• Tweede Kamer = controleert regering, dient wetten in, kan motie van wantrouwen indienen.\n• Eerste Kamer = toetst wetten op kwaliteit + grondwettigheid.\n\n**4. Verkiezingen**:\n• Tweede Kamer: elke 4 jaar (laatste 2023).\n• Provinciale staten: elke 4 jaar (laatste 2023) → kiezen Eerste Kamer.\n• Europees Parlement: elke 5 jaar (laatste 2024).\n• Gemeenteraad: elke 4 jaar (laatste 2022).\n\n**5. Politieke partijen** (Tweede Kamer 2023):\n• PVV (Wilders, 37 zetels — grootste), GL-PvdA (Timmermans), VVD (Yesilgöz), NSC (Omtzigt), D66, BBB, CDA, SP, ChristenUnie, etc.\n• Geen partij heeft meerderheid → **coalitie** nodig (vandaag: PVV+VVD+NSC+BBB).\n\n**Onthoud voor de Doorstroomtoets**:\n• 150 = Tweede Kamer, 75 = Eerste Kamer.\n• Premier ≠ koning. Koning is staatshoofd, premier leidt regering.\n• Prinsjesdag = 3e dinsdag september = Troonrede + Miljoenennota.",
     checks: [
       {
         q: "Hoeveel zetels heeft de **Tweede Kamer**?",

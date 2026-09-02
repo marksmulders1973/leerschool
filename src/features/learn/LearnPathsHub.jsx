@@ -114,8 +114,8 @@ const PATH_THEMES = {
 // leerling ziet eerst klas-4 paden, dan klas-3, dan klas-5/bovenbouw, etc.
 const BUCKET_ORDER = ["po", "klas-1", "klas-2", "klas-3", "klas-4", "bovenbouw"];
 
-// Cito-pijlers voor entry-screen-filter (2026-05-16 — Agent B-aanbeveling).
-// Mapt elk leerpad-`subject` naar 1 of meerdere Cito-pijlers. Subject "rekenen"
+// Toets-pijlers voor entry-screen-filter (2026-05-16 — Agent B-aanbeveling).
+// Mapt elk leerpad-`subject` naar 1 of meerdere Toets-pijlers. Subject "rekenen"
 // valt onder "rekenen"-pijler, "wiskunde" ook (basis-wiskunde groep 6-8
 // hoort bij rekenen-pijler). "geschiedenis"/"biologie"/"aardrijkskunde" valt
 // onder "wereld" (wereldoriëntatie).
@@ -303,7 +303,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
   // Filtert paden op title + triggerKeywords + subject.
   const [searchQuery, setSearchQuery] = useState("");
   // Entry-screen filters (P0 — Agent B-aanbeveling 2026-05-16). Op de vak-grid
-  // krijgt de gebruiker een filter-bar bovenaan voor zoek + Cito-pijler +
+  // krijgt de gebruiker een filter-bar bovenaan voor zoek + Toets-pijler +
   // niveau. Bij actief filter switchen we van vak-grid naar resultaten-lijst
   // zodat ouders met "breuken groep 6"-vraag direct vinden i.p.v. 80+ paden
   // doorscrollen.
@@ -720,7 +720,7 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
             )}
           </div>
 
-          {/* Cito-pijler-pillen */}
+          {/* Toets-pijler-pillen */}
           <div style={{ display: "flex", flexWrap: "wrap", gap: 6, marginBottom: 8 }}>
             <span style={{ fontSize: 11, color: C.muted, fontWeight: 700, alignSelf: "center", marginRight: 4 }}>
               CITO:

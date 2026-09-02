@@ -1,7 +1,7 @@
 // Redactiebladen-pagina "/redactiebladen" — printbare bundel verhaaltjessommen
 // (redactiesommen), onderdeel van de print-lijn (Mark 2026-07-02).
 // De sommen komen rechtstreeks uit het redactiesommen-leerpad (eigen werk,
-// Cito-stijl): lezen → zelf de som bedenken → rekenen. Mét kladruimte per som,
+// Doorstroomtoets-stijl): lezen → zelf de som bedenken → rekenen. Mét kladruimte per som,
 // een ouderpagina met het stappenplan + signaalwoorden-tabel, en een
 // antwoordsleutel met korte uitleg achter de e-mail-poort (zelfde recept als
 // het oefenpakket; wie al ontgrendelde hoeft niets opnieuw te doen).
@@ -204,7 +204,7 @@ export default function RedactiebladenPage({ setPage } = {}) {
         <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 18px", lineHeight: 1.5 }}>
           Verhaaltjessommen zijn hét struikelblok bij rekenen: het rekenen lukt wel, het
           <strong style={{ color: "var(--color-text, #e8edf5)" }}> lezen en kiezen van de som</strong> niet. Deze bundel bevat{" "}
-          {totaal} sommen in Cito-stijl, opgebouwd van signaalwoorden naar twee-stap-sommen — met
+          {totaal} sommen in Doorstroomtoets-stijl, opgebouwd van signaalwoorden naar twee-stap-sommen — met
           kladruimte per som, een ouderpagina met het stappenplan en een antwoordsleutel met uitleg.
         </p>
 
@@ -302,7 +302,7 @@ export default function RedactiebladenPage({ setPage } = {}) {
               <p style={{ margin: "0 0 4px" }}><strong>Naam:</strong> ______________________________</p>
               <p style={{ margin: 0 }}><strong>Datum:</strong> ______________________________</p>
             </div>
-            <div style={{ marginTop: 44, color: "#9aa6b4", fontSize: 12 }}>© {BRAND.publisher} · {BRAND.domain} · Eigen oefensommen in Cito-stijl.</div>
+            <div style={{ marginTop: 44, color: "#9aa6b4", fontSize: 12 }}>© {BRAND.publisher} · {BRAND.domain} · Eigen oefensommen in Doorstroomtoets-stijl.</div>
           </div>
         </Sheet>
 

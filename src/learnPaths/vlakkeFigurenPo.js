@@ -1,5 +1,5 @@
 // Leerpad: Vlakke figuren (omtrek + oppervlakte) — voor groep 5-8
-// 5 stappen. Cito-stijl praktijksommen.
+// 5 stappen. Doorstroomtoets-stijl praktijksommen.
 // Sprint A (2026-05-08).
 
 const COLORS = {
@@ -17,7 +17,7 @@ const stepEmojis = ["⬜","🔺","🔵","🛒","🏆"];
 const chapters = [
   { letter: "A", title: "Vierkant en rechthoek", emoji: "⬜", from: 0, to: 1 },
   { letter: "B", title: "Driehoek", emoji: "🔺", from: 2, to: 2 },
-  { letter: "C", title: "Praktijk + Cito-eindopdracht", emoji: "🏆", from: 3, to: 4 },
+  { letter: "C", title: "Praktijk + Toets-eindopdracht", emoji: "🏆", from: 3, to: 4 },
 ];
 
 function rechthoekSvg(b, h, label) {
@@ -50,7 +50,7 @@ function driehoekSvg(basis, hoogte, label) {
 const steps = [
   {
     title: "Omtrek + oppervlakte — wat is het?",
-    explanation: "Twee belangrijke maten van een figuur:\n\n• **Omtrek** = de **lengte** rondom het figuur. Stel je een hek om de tuin voor — hoe lang is dat hek? *Eenheid: m, cm, km*.\n• **Oppervlakte** = hoeveel **plek** het figuur inneemt. Stel je gras op de tuin — hoeveel m² gras? *Eenheid: m², cm², km².*\n\n**Verschil makkelijk**:\n• Omtrek meet je in **meters** (1 dimensie — lengte).\n• Oppervlakte meet je in **vierkante meters** (2 dimensies — lengte × breedte).\n\n**Vierkant** *(alle 4 zijden gelijk)*:\n• Omtrek = **4 × zijde**.\n• Oppervlakte = **zijde × zijde** *(of zijde²)*.\n\nVoorbeeld: vierkant van 5 m.\n• Omtrek = 4 × 5 = **20 m**.\n• Oppervlakte = 5 × 5 = **25 m²**.\n\n**Rechthoek** *(2 zijden lang, 2 zijden breed)*:\n• Omtrek = **2 × (lengte + breedte)**.\n• Oppervlakte = **lengte × breedte**.\n\nVoorbeeld: rechthoek 6 m × 4 m.\n• Omtrek = 2 × (6 + 4) = 2 × 10 = **20 m**.\n• Oppervlakte = 6 × 4 = **24 m²**.\n\n**Cito-tip**:\nLet altijd op de **eenheid**! 'Meter' bij omtrek, '**vierkante meter (m²)**' bij oppervlakte.",
+    explanation: "Twee belangrijke maten van een figuur:\n\n• **Omtrek** = de **lengte** rondom het figuur. Stel je een hek om de tuin voor — hoe lang is dat hek? *Eenheid: m, cm, km*.\n• **Oppervlakte** = hoeveel **plek** het figuur inneemt. Stel je gras op de tuin — hoeveel m² gras? *Eenheid: m², cm², km².*\n\n**Verschil makkelijk**:\n• Omtrek meet je in **meters** (1 dimensie — lengte).\n• Oppervlakte meet je in **vierkante meters** (2 dimensies — lengte × breedte).\n\n**Vierkant** *(alle 4 zijden gelijk)*:\n• Omtrek = **4 × zijde**.\n• Oppervlakte = **zijde × zijde** *(of zijde²)*.\n\nVoorbeeld: vierkant van 5 m.\n• Omtrek = 4 × 5 = **20 m**.\n• Oppervlakte = 5 × 5 = **25 m²**.\n\n**Rechthoek** *(2 zijden lang, 2 zijden breed)*:\n• Omtrek = **2 × (lengte + breedte)**.\n• Oppervlakte = **lengte × breedte**.\n\nVoorbeeld: rechthoek 6 m × 4 m.\n• Omtrek = 2 × (6 + 4) = 2 × 10 = **20 m**.\n• Oppervlakte = 6 × 4 = **24 m²**.\n\n**Toets-tip**:\nLet altijd op de **eenheid**! 'Meter' bij omtrek, '**vierkante meter (m²)**' bij oppervlakte.",
     svg: rechthoekSvg(8, 5, "Rechthoek 8 × 5 m"),
     checks: [
       {
@@ -100,7 +100,7 @@ const steps = [
 
   {
     title: "Praktijk — vierkant en rechthoek",
-    explanation: "Praktijk-sommen waar je omtrek en oppervlakte gebruikt:\n\n**Voorbeeld 1 — hek om tuin**:\n*'Een tuin is 12 m × 8 m. Hoeveel meter hek heb je nodig?'*\n• Hek = **omtrek** = 2 × (12 + 8) = **40 m**.\n\n**Voorbeeld 2 — gras zaaien**:\n*'Een grasveld 15 m × 10 m. Hoeveel m² gras nodig?'*\n• Gras = **oppervlakte** = 15 × 10 = **150 m²**.\n\n**Voorbeeld 3 — rand om foto**:\n*'Een foto 20 cm × 15 cm wordt omlijnd. Hoeveel cm lijst nodig?'*\n• Lijst = **omtrek** = 2 × (20 + 15) = **70 cm**.\n\n**Voorbeeld 4 — tegels**:\n*'Een vloer 6 m × 4 m wordt betegeld met tegels van 50 × 50 cm. Hoeveel tegels nodig?'*\n• Vloer = 6 × 4 = 24 m² = 240.000 cm².\n• Tegel = 50 × 50 = 2.500 cm².\n• Aantal: 240.000 ÷ 2.500 = **96 tegels**.\n\n**Cito-vraag — kies juiste maat**:\n• 'Hek', 'lijst', 'rand' → **omtrek**.\n• 'Gras', 'tegels', 'verf', 'tapijt' → **oppervlakte**.\n\n**Veel-voorkomende fout**:\nOmtrek en oppervlakte verwarren. Vraag: meet je *langs de rand* (omtrek) of *over het hele vlak* (oppervlakte)?",
+    explanation: "Praktijk-sommen waar je omtrek en oppervlakte gebruikt:\n\n**Voorbeeld 1 — hek om tuin**:\n*'Een tuin is 12 m × 8 m. Hoeveel meter hek heb je nodig?'*\n• Hek = **omtrek** = 2 × (12 + 8) = **40 m**.\n\n**Voorbeeld 2 — gras zaaien**:\n*'Een grasveld 15 m × 10 m. Hoeveel m² gras nodig?'*\n• Gras = **oppervlakte** = 15 × 10 = **150 m²**.\n\n**Voorbeeld 3 — rand om foto**:\n*'Een foto 20 cm × 15 cm wordt omlijnd. Hoeveel cm lijst nodig?'*\n• Lijst = **omtrek** = 2 × (20 + 15) = **70 cm**.\n\n**Voorbeeld 4 — tegels**:\n*'Een vloer 6 m × 4 m wordt betegeld met tegels van 50 × 50 cm. Hoeveel tegels nodig?'*\n• Vloer = 6 × 4 = 24 m² = 240.000 cm².\n• Tegel = 50 × 50 = 2.500 cm².\n• Aantal: 240.000 ÷ 2.500 = **96 tegels**.\n\n**toetsvraag — kies juiste maat**:\n• 'Hek', 'lijst', 'rand' → **omtrek**.\n• 'Gras', 'tegels', 'verf', 'tapijt' → **oppervlakte**.\n\n**Veel-voorkomende fout**:\nOmtrek en oppervlakte verwarren. Vraag: meet je *langs de rand* (omtrek) of *over het hele vlak* (oppervlakte)?",
     checks: [
       {
         q: "Een **tuin 18 × 12 m** krijgt een hek. Hoeveel **meter hek**?",
@@ -149,7 +149,7 @@ const steps = [
 
   {
     title: "Driehoek — basis × hoogte ÷ 2",
-    explanation: "Een **driehoek** heeft 3 zijden. De omtrek is gewoon de som van alle 3 zijden. Maar de **oppervlakte** is bijzonder.\n\n**Formule**:\n• Oppervlakte driehoek = **(basis × hoogte) ÷ 2**.\n\n**Belangrijk**: 'hoogte' is **NIET** een schuine zijde. Het is de **loodrechte** afstand van de top naar de basis (recht omhoog).\n\n**Voorbeeld**: driehoek met basis 8 m en hoogte 5 m.\n• Oppervlakte = (8 × 5) ÷ 2 = 40 ÷ 2 = **20 m²**.\n\n**Waarom delen door 2?**\nOmdat een driehoek **half** een rechthoek is. Stel je voor: rechthoek 8 × 5 m → oppervlakte 40 m². Snij diagonaal door = 2 driehoeken van 20 m² elk.\n\n**Cito-truc**:\n• Eerst basis × hoogte → dan ÷ 2.\n• Of eerst ÷ 2 → dan vermenigvuldigen *(als één van beide getallen even is, scheelt fouten)*.\n\n**Voorbeeld**: basis 10, hoogte 6.\n• 10 × 6 = 60. ÷ 2 = **30 m²**.\n• Of: 10 × 6 ÷ 2 = 10 × 3 = **30 m²**.\n\n**Veel-voorkomende fout**:\n'Hoogte' verwarren met een zijde. **Hoogte = loodrecht** vanaf de top naar de basis. In een schuine driehoek is dat een **gestippelde lijn**, niet een echte zijde.",
+    explanation: "Een **driehoek** heeft 3 zijden. De omtrek is gewoon de som van alle 3 zijden. Maar de **oppervlakte** is bijzonder.\n\n**Formule**:\n• Oppervlakte driehoek = **(basis × hoogte) ÷ 2**.\n\n**Belangrijk**: 'hoogte' is **NIET** een schuine zijde. Het is de **loodrechte** afstand van de top naar de basis (recht omhoog).\n\n**Voorbeeld**: driehoek met basis 8 m en hoogte 5 m.\n• Oppervlakte = (8 × 5) ÷ 2 = 40 ÷ 2 = **20 m²**.\n\n**Waarom delen door 2?**\nOmdat een driehoek **half** een rechthoek is. Stel je voor: rechthoek 8 × 5 m → oppervlakte 40 m². Snij diagonaal door = 2 driehoeken van 20 m² elk.\n\n**Toets-truc**:\n• Eerst basis × hoogte → dan ÷ 2.\n• Of eerst ÷ 2 → dan vermenigvuldigen *(als één van beide getallen even is, scheelt fouten)*.\n\n**Voorbeeld**: basis 10, hoogte 6.\n• 10 × 6 = 60. ÷ 2 = **30 m²**.\n• Of: 10 × 6 ÷ 2 = 10 × 3 = **30 m²**.\n\n**Veel-voorkomende fout**:\n'Hoogte' verwarren met een zijde. **Hoogte = loodrecht** vanaf de top naar de basis. In een schuine driehoek is dat een **gestippelde lijn**, niet een echte zijde.",
     svg: driehoekSvg(10, 6, "Driehoek b=10, h=6 → opp = 30"),
     checks: [
       {
@@ -199,7 +199,7 @@ const steps = [
 
   {
     title: "Praktijk — schoolse situaties",
-    explanation: "Cito-vragen mengen vaak omtrek/oppervlakte met andere onderwerpen *(geld, kosten, tegels, verf)*.\n\n**Voorbeeld 1**:\n*'Een kantoor van 10 × 8 m wordt geverfd. 1 liter verf is voor 10 m². Hoeveel liter?'*\n• Oppervlakte = 80 m².\n• Liter = 80 ÷ 10 = **8 L**.\n\n**Voorbeeld 2**:\n*'Een tuin 20 × 15 m. Hek kost € 8 per meter. Wat kost het hek?'*\n• Omtrek = 2 × (20 + 15) = 70 m.\n• Kost = 70 × 8 = **€ 560**.\n\n**Voorbeeld 3 — gras + hek**:\n*'Een gras-veld 25 × 12 m. Het kost € 5 per m² gras + € 6 per meter hek. Totaal?'*\n• Gras-oppervlakte = 25 × 12 = 300 m². Kost = 300 × 5 = € 1500.\n• Hek-omtrek = 2 × (25 + 12) = 74 m. Kost = 74 × 6 = € 444.\n• Totaal = **€ 1944**.\n\n**Stappenplan**:\n1. Lees: heb je omtrek of oppervlakte nodig?\n2. Reken die uit met de juiste formule.\n3. Vermenigvuldig met de prijs/factor.\n4. Voeg samen als het meerdere onderdelen zijn.",
+    explanation: "toetsvragen mengen vaak omtrek/oppervlakte met andere onderwerpen *(geld, kosten, tegels, verf)*.\n\n**Voorbeeld 1**:\n*'Een kantoor van 10 × 8 m wordt geverfd. 1 liter verf is voor 10 m². Hoeveel liter?'*\n• Oppervlakte = 80 m².\n• Liter = 80 ÷ 10 = **8 L**.\n\n**Voorbeeld 2**:\n*'Een tuin 20 × 15 m. Hek kost € 8 per meter. Wat kost het hek?'*\n• Omtrek = 2 × (20 + 15) = 70 m.\n• Kost = 70 × 8 = **€ 560**.\n\n**Voorbeeld 3 — gras + hek**:\n*'Een gras-veld 25 × 12 m. Het kost € 5 per m² gras + € 6 per meter hek. Totaal?'*\n• Gras-oppervlakte = 25 × 12 = 300 m². Kost = 300 × 5 = € 1500.\n• Hek-omtrek = 2 × (25 + 12) = 74 m. Kost = 74 × 6 = € 444.\n• Totaal = **€ 1944**.\n\n**Stappenplan**:\n1. Lees: heb je omtrek of oppervlakte nodig?\n2. Reken die uit met de juiste formule.\n3. Vermenigvuldig met de prijs/factor.\n4. Voeg samen als het meerdere onderdelen zijn.",
     checks: [
       {
         q: "Een tuin **15 × 12 m**. Hek kost **€ 10/m**. Hekkosten?",
@@ -247,8 +247,8 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — vlakke figuren mix",
-    explanation: "Mix-toets met omtrek + oppervlakte in Cito-stijl.\n\nVeel succes!",
+    title: "Toets-eindopdracht — vlakke figuren mix",
+    explanation: "Mix-toets met omtrek + oppervlakte in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       {
         q: "Vierkant zijde **9 m** — oppervlakte?",
@@ -329,7 +329,7 @@ const steps = [
           stappen: [
             { titel: "Stap 1: oppervlakte in cm²", tekst: "Raam-rechthoek: 120 × 80 = **9.600 cm²**." },
             { titel: "Stap 2: omrekenen naar m²", tekst: "1 m = 100 cm dus 1 m² = 100 × 100 = **10.000 cm²**. 9.600 ÷ 10.000 = **0,96 m²**." },
-            { titel: "Cito-instinker: eenheid", tekst: "Lengte: 1 m = 100 cm. **Maar oppervlakte: 1 m² = 10.000 cm²**. Lees vraag goed — gevraagde eenheid is cruciaal." },
+            { titel: "Toets-instinker: eenheid", tekst: "Lengte: 1 m = 100 cm. **Maar oppervlakte: 1 m² = 10.000 cm²**. Lees vraag goed — gevraagde eenheid is cruciaal." },
           ],
           woorden: [
             { woord: "m² ↔ cm²", uitleg: "1 m² = 10.000 cm². Niet 100 (dat is lengte). Twee keer 100." },
@@ -340,7 +340,7 @@ const steps = [
             { type: "stap", tekst: "Tafel 1 m × 50 cm = 100 × 50 = 5.000 cm² = 0,5 m²." },
             { type: "stap", tekst: "Tuin 20 m × 15 m = 300 m² = 3.000.000 cm² = 0,03 ha." },
           ],
-          basiskennis: [{ onderwerp: "Cito test omrekening", uitleg: "Cito test bijna altijd op eenheid bij oppervlakte-vragen. Lees of m² of cm² gevraagd." }],
+          basiskennis: [{ onderwerp: "De toets test omrekening", uitleg: "De toets test bijna altijd op eenheid bij oppervlakte-vragen. Lees of m² of cm² gevraagd." }],
           niveaus: { basis: "0,96 m².", simpeler: "120 × 80 = 9.600 cm². 9.600 ÷ 10.000 = 0,96 m².", nogSimpeler: "0,96 m²" },
         },
       },
@@ -353,7 +353,7 @@ const steps = [
           stappen: [
             { titel: "Splits in eenvoudige stukken", tekst: "L-vorm = optellen van twee rechthoeken.\n• Rechthoek 1: 8 × 4 = **32 m²**\n• Uitstekend stuk: 3 × 2 = **6 m²**" },
             { titel: "Tel op", tekst: "Totale oppervlakte = 32 + 6 = **38 m²**." },
-            { titel: "Cito-truc: complexe vormen splitsen", tekst: "Bij L-vormen, T-vormen of trapjes-vormen: knip in **rechthoeken** waarvan je oppervlakte makkelijk weet. Tel ze op. Bij INGEVOEGDE vormen (gat erin): trek af.\nAltijd schets maken op kladpapier." },
+            { titel: "Toets-truc: complexe vormen splitsen", tekst: "Bij L-vormen, T-vormen of trapjes-vormen: knip in **rechthoeken** waarvan je oppervlakte makkelijk weet. Tel ze op. Bij INGEVOEGDE vormen (gat erin): trek af.\nAltijd schets maken op kladpapier." },
           ],
           woorden: [
             { woord: "samengestelde vorm", uitleg: "Vorm die uit meerdere eenvoudige delen bestaat." },
@@ -377,7 +377,7 @@ const steps = [
           stappen: [
             { titel: "Aantal tegels per richting", tekst: "Tegel = 30 cm. Vloer 3 m = 300 cm → 300 ÷ 30 = **10 tegels lang**. Vloer 2,4 m = 240 cm → 240 ÷ 30 = **8 tegels breed**." },
             { titel: "Totaal tegels", tekst: "10 × 8 = **80 tegels** passen perfect (geen knippen nodig — gelukkig, want 3 m én 2,4 m zijn deelbaar door 30 cm)." },
-            { titel: "Cito-truc: passend rekenen", tekst: "Bij 'hoeveel tegels?'-vragen: deel beide richtingen apart door tegel-afmeting. Reken in zelfde eenheid (cm). Vermenigvuldig de twee aantallen.\n\nAlternatieve methode via oppervlakte:\n• Vloer = 3 × 2,4 = 7,2 m²\n• Tegel = 0,3 × 0,3 = 0,09 m²\n• Tegels: 7,2 ÷ 0,09 = 80 ✓" },
+            { titel: "Toets-truc: passend rekenen", tekst: "Bij 'hoeveel tegels?'-vragen: deel beide richtingen apart door tegel-afmeting. Reken in zelfde eenheid (cm). Vermenigvuldig de twee aantallen.\n\nAlternatieve methode via oppervlakte:\n• Vloer = 3 × 2,4 = 7,2 m²\n• Tegel = 0,3 × 0,3 = 0,09 m²\n• Tegels: 7,2 ÷ 0,09 = 80 ✓" },
           ],
           woorden: [
             { woord: "passen / dekken", uitleg: "Hoeveel kleine vormen samen 1 grote dekken." },
@@ -420,7 +420,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const vlakkeFigurenPo = {
   id: "vlakke-figuren-po",
-  title: "Vlakke figuren — Cito groep 5-8",
+  title: "Vlakke figuren — Doorstroomtoets groep 5-8",
   emoji: "⬜",
   level: "groep5-8",
   subject: "rekenen",

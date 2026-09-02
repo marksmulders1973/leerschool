@@ -35,7 +35,7 @@ const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
   theorie:
-    "Cito leesvaardigheid: 4 doelen (informeren/overtuigen/amuseren/activeren). Doelgroep = wie ECHT de oproep kan opvolgen. Tekstverband alineas onderling: opsomming/tegenstelling/gevolg/conclusie/uitwerking. Hoofdgedachte = wat schrijver wil zeggen IN 1 ZIN.",
+    "De toets leesvaardigheid: 4 doelen (informeren/overtuigen/amuseren/activeren). Doelgroep = wie ECHT de oproep kan opvolgen. Tekstverband alineas onderling: opsomming/tegenstelling/gevolg/conclusie/uitwerking. Hoofdgedachte = wat schrijver wil zeggen IN 1 ZIN.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

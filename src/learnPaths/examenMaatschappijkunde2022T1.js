@@ -44,7 +44,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-1/gt-11
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Wie werkt waar (ambtenaren/Kamerleden/wethouders)? EU-instellingen scheiden (Commissie initieert, Parlement controleert, Raad besluit). Strafuitsluitingsgronden: noodweer/overmacht/ontoerekeningsvatbaarheid.",
+  theorie: "Toets-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Wie werkt waar (ambtenaren/Kamerleden/wethouders)? EU-instellingen scheiden (Commissie initieert, Parlement controleert, Raad besluit). Strafuitsluitingsgronden: noodweer/overmacht/ontoerekeningsvatbaarheid.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

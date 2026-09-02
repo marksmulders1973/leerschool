@@ -48,7 +48,7 @@ const BRON_LINK = "https://www.examenblad.nl/2023/vmbo-gl/documenten/cse-1/gt-00
 const compactUitleg = (kernUitleg, niveaus) => ({
   stappen: [{ titel: "Kern", tekst: kernUitleg }],
   woorden: [],
-  theorie: "Cito-truc: lees de bron-tekst zorgvuldig, koppel sleutel-woorden uit vraag aan tekst. Antwoord moet letterlijk te onderbouwen zijn met een zin uit de tekst.",
+  theorie: "Toets-truc: lees de bron-tekst zorgvuldig, koppel sleutel-woorden uit vraag aan tekst. Antwoord moet letterlijk te onderbouwen zijn met een zin uit de tekst.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

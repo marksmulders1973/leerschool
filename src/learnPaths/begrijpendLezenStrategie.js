@@ -1,6 +1,6 @@
 // Leerpad: Begrijpend lezen — strategieën voor groep 5-8
 // 7 stappen in 4 hoofdstukken (A t/m D).
-// Doelgroep: groep 5-8 basisschool. Kern-Cito-onderdeel.
+// Doelgroep: groep 5-8 basisschool. Kern-Toets-onderdeel.
 
 const COLORS = {
   axis: "#e0e6f0",
@@ -87,7 +87,7 @@ const steps = [
             { woord: "begrijpen", uitleg: "Snappen, doorhebben wat iets betekent." },
             { woord: "vaardigheid", uitleg: "Iets dat je kunt door te oefenen." },
           ],
-          theorie: "Drie soorten lezen: TECHNISCH (woorden ontcijferen), BEGRIJPEND (snappen wat er staat), STUDEREND (onthouden + toepassen). Bij Cito wordt vooral begrijpend getoetst.",
+          theorie: "Drie soorten lezen: TECHNISCH (woorden ontcijferen), BEGRIJPEND (snappen wat er staat), STUDEREND (onthouden + toepassen). Bij de Doorstroomtoets wordt vooral begrijpend getoetst.",
           voorbeelden: [{ type: "kern", tekst: "Tekst lezen + er een vraag over kunnen beantwoorden = begrijpend gelezen." }],
           basiskennis: [{ onderwerp: "Lezen ≠ snappen", uitleg: "Je kunt woorden hardop voorlezen zonder te snappen wat er staat." }],
           niveaus: {
@@ -108,14 +108,14 @@ const steps = [
             { titel: "Hoeveel?", tekst: "Meestal 3-5 teksten per onderdeel, 3-5 vragen per tekst." },
           ],
           woorden: [
-            { woord: "Doorstroomtoets", uitleg: "Landelijke eindtoets in groep 8 (sinds 2024, voorheen Cito-eindtoets) — meet wat je in 8 jaar basisschool hebt geleerd." },
+            { woord: "Doorstroomtoets", uitleg: "Landelijke eindtoets in groep 8 (sinds 2024, voorheen Doorstroomtoets) — meet wat je in 8 jaar basisschool hebt geleerd." },
           ],
           theorie: "Doorstroomtoets test of je een ECHTE tekst kunt begrijpen — dus geen losse zinnetjes maar verhalen, krantenartikelen, instructies.",
           voorbeelden: [{ type: "Toets-format", tekst: "Tekst over 'gezond ontbijt' (250 woorden) → 4 vragen: hoofdgedachte, detail, woordbetekenis, conclusie." }],
-          basiskennis: [{ onderwerp: "Cito = breed", uitleg: "Cito test rekenen, taal, studievaardigheden — niet alleen lezen." }],
+          basiskennis: [{ onderwerp: "De toets = breed", uitleg: "De toets test rekenen, taal, studievaardigheden — niet alleen lezen." }],
           niveaus: {
-            basis: "Cito = lange teksten + vragen.",
-            simpeler: "Stel je voor: je krijgt een artikel uit de krant en daarna een paar vragen over wat erin stond. Dat is wat Cito doet bij begrijpend lezen.",
+            basis: "De toets = lange teksten + vragen.",
+            simpeler: "Stel je voor: je krijgt een artikel uit de krant en daarna een paar vragen over wat erin stond. Dat is wat de toets doet bij begrijpend lezen.",
             nogSimpeler: "Lange teksten + vragen",
           },
         },
@@ -204,7 +204,7 @@ const steps = [
   },
   {
     title: "Signaalwoorden — woorden die jou helpen",
-    explanation: "**Signaalwoorden** zijn kleine woorden die zeggen **wat er gaat komen** of **hoe iets verbonden is**. Ze zijn cruciaal bij begrijpend lezen.\n\n**6 belangrijke groepen**:\n\n**1. Tijd** *(volgorde)*: eerst, daarna, vervolgens, nu, later, intussen, vroeger, tot slot.\n→ De schrijver vertelt iets in **chronologische volgorde**.\n\n**2. Oorzaak & gevolg** *(waarom)*: omdat, doordat, daardoor, dus, daarom, vandaar.\n→ Iets gebeurt **omdat** iets anders gebeurde. *'Omdat het regende, werd de wedstrijd afgelast.'*\n\n**3. Opsomming** *(meerdere dingen)*: ten eerste, ten tweede, ook, bovendien, verder, daarnaast, ten slotte.\n→ Een **lijstje** wordt opgesomd. *'Ten eerste is fruit gezond. Ten tweede is het lekker. Ten derde is het goedkoop.'*\n\n**4. Tegenstelling** *(maar, niet)*: maar, echter, toch, hoewel, desondanks, in tegenstelling tot, daarentegen.\n→ Iets onverwachts of tegenovergestelds komt. *'Het regent, **maar** we gaan toch buiten spelen.'*\n\n**5. Voorbeeld** *(zoals)*: bijvoorbeeld, zoals, als illustratie, namelijk, bijv.\n→ Er komt een **voorbeeld** of toelichting.\n\n**6. Conclusie / samenvatting**: kortom, dus, samenvattend, concluderend, tot slot, eindelijk.\n→ De schrijver **vat samen** of **trekt een conclusie**.\n\n**Waarom belangrijk?**\nSignaalwoorden vertellen je **hoe alinea's of zinnen verbonden zijn**. Als je een **oorzaak/gevolg-vraag** krijgt, zoek dan signaalwoorden zoals 'omdat', 'daardoor'. Als de vraag is over een **tegenstelling**, zoek 'maar' of 'echter'.\n\n**Voorbeeld**:\n*\"Veel kinderen kijken te veel TV. **Daardoor** lezen ze minder. **Daarentegen** zijn er ook kinderen die juist veel boeken lezen. **Bijvoorbeeld** Sara, die elke dag een boek leest. **Kortom**: het verschilt per kind.\"*\n\n• 'Daardoor' = gevolg → 'minder lezen' is gevolg van 'te veel TV'.\n• 'Daarentegen' = tegenstelling → er bestaan ook andere kinderen.\n• 'Bijvoorbeeld' = voorbeeld → Sara als illustratie.\n• 'Kortom' = conclusie → de schrijver vat samen.\n\n**Pro-tip op de Cito**: als de vraag is *\"Wat is het verband tussen X en Y?\"* — kijk naar de signaalwoorden ertussen. Die geven het antwoord meestal letterlijk.",
+    explanation: "**Signaalwoorden** zijn kleine woorden die zeggen **wat er gaat komen** of **hoe iets verbonden is**. Ze zijn cruciaal bij begrijpend lezen.\n\n**6 belangrijke groepen**:\n\n**1. Tijd** *(volgorde)*: eerst, daarna, vervolgens, nu, later, intussen, vroeger, tot slot.\n→ De schrijver vertelt iets in **chronologische volgorde**.\n\n**2. Oorzaak & gevolg** *(waarom)*: omdat, doordat, daardoor, dus, daarom, vandaar.\n→ Iets gebeurt **omdat** iets anders gebeurde. *'Omdat het regende, werd de wedstrijd afgelast.'*\n\n**3. Opsomming** *(meerdere dingen)*: ten eerste, ten tweede, ook, bovendien, verder, daarnaast, ten slotte.\n→ Een **lijstje** wordt opgesomd. *'Ten eerste is fruit gezond. Ten tweede is het lekker. Ten derde is het goedkoop.'*\n\n**4. Tegenstelling** *(maar, niet)*: maar, echter, toch, hoewel, desondanks, in tegenstelling tot, daarentegen.\n→ Iets onverwachts of tegenovergestelds komt. *'Het regent, **maar** we gaan toch buiten spelen.'*\n\n**5. Voorbeeld** *(zoals)*: bijvoorbeeld, zoals, als illustratie, namelijk, bijv.\n→ Er komt een **voorbeeld** of toelichting.\n\n**6. Conclusie / samenvatting**: kortom, dus, samenvattend, concluderend, tot slot, eindelijk.\n→ De schrijver **vat samen** of **trekt een conclusie**.\n\n**Waarom belangrijk?**\nSignaalwoorden vertellen je **hoe alinea's of zinnen verbonden zijn**. Als je een **oorzaak/gevolg-vraag** krijgt, zoek dan signaalwoorden zoals 'omdat', 'daardoor'. Als de vraag is over een **tegenstelling**, zoek 'maar' of 'echter'.\n\n**Voorbeeld**:\n*\"Veel kinderen kijken te veel TV. **Daardoor** lezen ze minder. **Daarentegen** zijn er ook kinderen die juist veel boeken lezen. **Bijvoorbeeld** Sara, die elke dag een boek leest. **Kortom**: het verschilt per kind.\"*\n\n• 'Daardoor' = gevolg → 'minder lezen' is gevolg van 'te veel TV'.\n• 'Daarentegen' = tegenstelling → er bestaan ook andere kinderen.\n• 'Bijvoorbeeld' = voorbeeld → Sara als illustratie.\n• 'Kortom' = conclusie → de schrijver vat samen.\n\n**Pro-tip op de Doorstroomtoets**: als de vraag is *\"Wat is het verband tussen X en Y?\"* — kijk naar de signaalwoorden ertussen. Die geven het antwoord meestal letterlijk.",
     svg: signaalwoordenSvg(),
     checks: [
       {
@@ -352,7 +352,7 @@ const steps = [
           ],
           theorie: "Snelle hoofdgedachte-vind-strategie:\n1. Lees titel\n2. Lees eerste zin van elke alinea\n3. Lees laatste zin van laatste alinea\n4. Schrijf in 1 zin: 'Deze tekst gaat over...'",
           voorbeelden: [{ type: "skim", tekst: "4 alinea's? 4 eerste zinnen + 1 laatste = 5 zinnen lezen. In 30 sec heb je de boodschap." }],
-          basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Cito heeft 5-7 min per tekst. Skimmen = sneller, niet minder grondig." }],
+          basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "De toets heeft 5-7 min per tekst. Skimmen = sneller, niet minder grondig." }],
           niveaus: {
             basis: "Eerste + laatste zin per alinea.",
             simpeler: "Niet alle 200 woorden lezen. Lees alleen de eerste zin van elke alinea — daar staat meestal het hoofdpunt. Plus de laatste zin (die vat vaak samen).",
@@ -364,7 +364,7 @@ const steps = [
   },
   {
     title: "Skim + scan — slim lezen",
-    explanation: "**Twee technieken** die je veel tijd besparen op de Doorstroomtoets:\n\n**1. SKIMMEN** — *snel overzicht*\nDoel: weten waar de tekst over gaat, zonder hem helemaal te lezen.\n\n**Hoe**:\n• Lees de **titel** + **eerste zin** van elke alinea.\n• Zoek **vetgedrukte woorden** of woorden met aanhalingstekens.\n• Kijk naar **plaatjes** + onderschriften.\n• Tijd: 30 seconden voor een hele tekst.\n\n**Wanneer**:\n• Aan het **begin** — om in 30 sec te weten waar de tekst over gaat.\n• Voordat je vragen leest.\n\n**2. SCANNEN** — *gericht zoeken*\nDoel: een **specifiek antwoord** vinden zonder alle tekst te lezen.\n\n**Hoe**:\n• Je hebt al de vraag gelezen.\n• Kijk in welk deel van de tekst het antwoord ZOU staan.\n• Loop daar **kris-kras doorheen** met je oog tot je een **kernwoord** uit de vraag tegenkomt.\n• Lees alleen **die zin** + de zin ervoor en erna.\n\n**Wanneer**:\n• Bij **specifieke vragen**: 'Hoeveel jaar leeft een hond gemiddeld?'\n• Niet bij hoofd-idee-vragen — daar moet je echt lezen.\n\n**De ideale leesvolgorde voor Cito**:\n\n**Stap 1**: SKIM de tekst (~30 sec) → wat is het onderwerp?\n**Stap 2**: Lees de **vragen** door (~30 sec) → wat moet je weten?\n**Stap 3**: SCAN voor antwoorden (~2-3 min per vraag) → zoek gericht.\n**Stap 4**: Bij twijfel — lees nogmaals het stukje rond het antwoord.\n\n**Belangrijk: het antwoord staat altijd in de tekst** *(of is logisch af te leiden)*.\n\n**Veelgemaakte fout**: alle teksten woord-voor-woord lezen vanaf de eerste zin tot de laatste. Dat kost veel te veel tijd voor een Cito.\n\n**Pro-trucje**: bij de Cito heb je **~5-7 minuten per tekst** met 3-5 vragen. Verdeel: ~1 min skim + 4-6 min vragen. Niet meer dan 2 min op 1 vraag.\n\n**Wat als je geen antwoord vindt?**\n• Lees de zin **eromheen** in de tekst — soms zit het verstopt.\n• Vraag **anders gesteld**: het antwoord is misschien in andere woorden.\n• Kun je het echt niet vinden? **Skip** + ga door.",
+    explanation: "**Twee technieken** die je veel tijd besparen op de Doorstroomtoets:\n\n**1. SKIMMEN** — *snel overzicht*\nDoel: weten waar de tekst over gaat, zonder hem helemaal te lezen.\n\n**Hoe**:\n• Lees de **titel** + **eerste zin** van elke alinea.\n• Zoek **vetgedrukte woorden** of woorden met aanhalingstekens.\n• Kijk naar **plaatjes** + onderschriften.\n• Tijd: 30 seconden voor een hele tekst.\n\n**Wanneer**:\n• Aan het **begin** — om in 30 sec te weten waar de tekst over gaat.\n• Voordat je vragen leest.\n\n**2. SCANNEN** — *gericht zoeken*\nDoel: een **specifiek antwoord** vinden zonder alle tekst te lezen.\n\n**Hoe**:\n• Je hebt al de vraag gelezen.\n• Kijk in welk deel van de tekst het antwoord ZOU staan.\n• Loop daar **kris-kras doorheen** met je oog tot je een **kernwoord** uit de vraag tegenkomt.\n• Lees alleen **die zin** + de zin ervoor en erna.\n\n**Wanneer**:\n• Bij **specifieke vragen**: 'Hoeveel jaar leeft een hond gemiddeld?'\n• Niet bij hoofd-idee-vragen — daar moet je echt lezen.\n\n**De ideale leesvolgorde voor de Doorstroomtoets**:\n\n**Stap 1**: SKIM de tekst (~30 sec) → wat is het onderwerp?\n**Stap 2**: Lees de **vragen** door (~30 sec) → wat moet je weten?\n**Stap 3**: SCAN voor antwoorden (~2-3 min per vraag) → zoek gericht.\n**Stap 4**: Bij twijfel — lees nogmaals het stukje rond het antwoord.\n\n**Belangrijk: het antwoord staat altijd in de tekst** *(of is logisch af te leiden)*.\n\n**Veelgemaakte fout**: alle teksten woord-voor-woord lezen vanaf de eerste zin tot de laatste. Dat kost veel te veel tijd voor een de toets.\n\n**Pro-trucje**: bij de Doorstroomtoets heb je **~5-7 minuten per tekst** met 3-5 vragen. Verdeel: ~1 min skim + 4-6 min vragen. Niet meer dan 2 min op 1 vraag.\n\n**Wat als je geen antwoord vindt?**\n• Lees de zin **eromheen** in de tekst — soms zit het verstopt.\n• Vraag **anders gesteld**: het antwoord is misschien in andere woorden.\n• Kun je het echt niet vinden? **Skip** + ga door.",
     svg: signaalwoordenSvg(),
     checks: [
       {
@@ -416,24 +416,24 @@ const steps = [
         },
       },
       {
-        q: "Welke is de **ideale** leesvolgorde voor Cito?",
+        q: "Welke is de **ideale** leesvolgorde voor de Doorstroomtoets?",
         options: ["Skim → vragen lezen → scannen voor antwoord","Hele tekst woord-voor-woord, dan vragen","Vragen eerst gokken, dan tekst lezen","Alleen vragen lezen, geen tekst"],
         answer: 0,
         wrongHints: [null,"Lukt het je in de tijd om elke zin woord-voor-woord te lezen?","Kun je vragen goed beantwoorden zónder de tekst te bekijken?","Heb je genoeg aan alleen de vragen, of moet de tekst er ook bij?"],
         uitlegPad: {
           stappen: [
-            { titel: "3 stappen voor Cito", tekst: "1. SKIM tekst (30 sec) — wat is onderwerp? 2. Lees alle vragen — wat moet je weten? 3. SCAN voor elk antwoord." },
+            { titel: "3 stappen voor de Doorstroomtoets", tekst: "1. SKIM tekst (30 sec) — wat is onderwerp? 2. Lees alle vragen — wat moet je weten? 3. SCAN voor elk antwoord." },
             { titel: "Waarom in deze volgorde?", tekst: "Tekst eerst woord-voor-woord = TE TRAAG. Vragen gokken = onbetrouwbaar. Alleen vragen lezen = niet genoeg info." },
           ],
           woorden: [
             { woord: "leesvolgorde", uitleg: "De stappen waarin je een tekst + vragen aanpakt." },
           ],
-          theorie: "Tijd op Cito: ~5-7 min per tekst met 3-5 vragen. Volgorde skim→vragen→scan past in die tijd. Anders loop je achter.",
+          theorie: "Tijd op de Doorstroomtoets: ~5-7 min per tekst met 3-5 vragen. Volgorde skim→vragen→scan past in die tijd. Anders loop je achter.",
           voorbeelden: [{ type: "tijd", tekst: "Skim 30 sec + vragen lezen 30 sec + scannen ~3 min = ~4 min. Je hebt 1-3 min over voor twijfelvragen." }],
           basiskennis: [{ onderwerp: "Strategie wint van snelheid", uitleg: "Slim aanpakken > snel lezen. Een goede strategie scheelt minuten." }],
           niveaus: {
             basis: "Skim → vragen → scan.",
-            simpeler: "Stappen voor Cito: (1) snel overzicht tekst (skim), (2) lees wat je moet vinden (vragen), (3) zoek elk antwoord gericht (scan). Dat is de slimste volgorde.",
+            simpeler: "Stappen voor de Doorstroomtoets: (1) snel overzicht tekst (skim), (2) lees wat je moet vinden (vragen), (3) zoek elk antwoord gericht (scan). Dat is de slimste volgorde.",
             nogSimpeler: "Skim → vragen → scan",
           },
         },
@@ -507,9 +507,9 @@ const steps = [
             { woord: "afleiden", uitleg: "Iemand zijn aandacht ergens anders krijgen." },
             { woord: "dialect", uitleg: "Streektaal — bv. Limburgs of Brabants." },
           ],
-          theorie: "Veel-voorkomende strikken bij Cito:\n- 'NIET' verstopt in vraag\n- 2 antwoordopties bijna gelijk\n- Foute optie gebruikt LETTERLIJKE woorden uit tekst\n- Vraag draait om jouw mening (gebruik tekst-mening, niet eigen)",
+          theorie: "Veel-voorkomende strikken bij de Doorstroomtoets:\n- 'NIET' verstopt in vraag\n- 2 antwoordopties bijna gelijk\n- Foute optie gebruikt LETTERLIJKE woorden uit tekst\n- Vraag draait om jouw mening (gebruik tekst-mening, niet eigen)",
           voorbeelden: [{ type: "strik", tekst: "Vraag: 'Welk argument noemt schrijver NIET?' — als je 'NIET' mist, kies je het verkeerde antwoord." }],
-          basiskennis: [{ onderwerp: "Lees zorgvuldig", uitleg: "Bij Cito: liever 30 sec extra lezen dan strik missen." }],
+          basiskennis: [{ onderwerp: "Lees zorgvuldig", uitleg: "Bij de Doorstroomtoets: liever 30 sec extra lezen dan strik missen." }],
           niveaus: {
             basis: "Strikvraag = bedoeld om je af te leiden.",
             simpeler: "Stel: een vraag is zo geformuleerd dat je het verkeerde antwoord kiest. Dat heet strikvraag. Niet om je te plagen — om te testen of je goed leest.",
@@ -521,7 +521,7 @@ const steps = [
   },
   {
     title: "Eindopdracht — alles samen",
-    explanation: "**Snelle samenvatting**:\n\n**3 tekstsoorten**:\n• Informatief — feiten\n• Betogend — overtuigen\n• Verhalend — vermaken\n\n**6 signaalwoord-groepen**:\n• Tijd, oorzaak/gevolg, opsomming, tegenstelling, voorbeeld, conclusie\n\n**Tekst-opbouw**: inleiding + kern + slot. Hoofdgedachte vaak in 1e of laatste alinea.\n\n**Slim lezen**: skim eerst, scan voor antwoorden.\n\n**Vraagsoorten**: letterlijk, inferentie, hoofdgedachte, woordbetekenis, opbouw — elk een eigen aanpak.\n\n**5 grote tips voor de Cito**:\n1. **Lees de vragen vóór de tekst** — weet wat je zoekt.\n2. **Skim** de tekst eerst — 30 seconden voor overzicht.\n3. **Scan** gericht voor het antwoord — niet alles herlezen.\n4. **Onderlijn 'NIET'** in NIET-vragen.\n5. **Skip** moeilijke vragen + kom later terug.\n\n**Veel succes!**\n\n*\"Begrijpend lezen is geen ijsschots — je hoeft niet alles te begrijpen, je moet de juiste delen vinden.\"*",
+    explanation: "**Snelle samenvatting**:\n\n**3 tekstsoorten**:\n• Informatief — feiten\n• Betogend — overtuigen\n• Verhalend — vermaken\n\n**6 signaalwoord-groepen**:\n• Tijd, oorzaak/gevolg, opsomming, tegenstelling, voorbeeld, conclusie\n\n**Tekst-opbouw**: inleiding + kern + slot. Hoofdgedachte vaak in 1e of laatste alinea.\n\n**Slim lezen**: skim eerst, scan voor antwoorden.\n\n**Vraagsoorten**: letterlijk, inferentie, hoofdgedachte, woordbetekenis, opbouw — elk een eigen aanpak.\n\n**5 grote tips voor de Doorstroomtoets**:\n1. **Lees de vragen vóór de tekst** — weet wat je zoekt.\n2. **Skim** de tekst eerst — 30 seconden voor overzicht.\n3. **Scan** gericht voor het antwoord — niet alles herlezen.\n4. **Onderlijn 'NIET'** in NIET-vragen.\n5. **Skip** moeilijke vragen + kom later terug.\n\n**Veel succes!**\n\n*\"Begrijpend lezen is geen ijsschots — je hoeft niet alles te begrijpen, je moet de juiste delen vinden.\"*",
     svg: signaalwoordenSvg(),
     checks: [
       {
@@ -585,7 +585,7 @@ const steps = [
           ],
           theorie: "Slimme leesvolgorde: 1) skim tekst, 2) lees vragen, 3) scan voor antwoorden. Zo werk je gericht ipv blind.",
           voorbeelden: [{ type: "tijd", tekst: "Skim 30 sec + vragen 30 sec = 1 min. Daarna scan je per vraag. Totaal sneller dan alles woord-voor-woord." }],
-          basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Cito heeft strakke tijd per onderdeel. Strategie wint." }],
+          basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "De toets heeft strakke tijd per onderdeel. Strategie wint." }],
           niveaus: {
             basis: "Skim + vragen lezen = eerste stap.",
             simpeler: "Stel je krijgt een lange tekst. Begin je woord-voor-woord? Nee — eerst even snel scannen wat erin staat (skim) + bekijk de vragen. Daarna gericht zoeken.",
@@ -594,13 +594,13 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel tijd heb je ongeveer per tekst (3-5 vragen) op Cito?",
+        q: "Hoeveel tijd heb je ongeveer per tekst (3-5 vragen) op de Doorstroomtoets?",
         options: ["~5-7 minuten","30 seconden","30 minuten","1 uur"],
         answer: 0,
         wrongHints: [null,"Lukt het je in een halve minuut om een tekst én 3-5 vragen te doen?","Krijg je echt 30 minuten voor maar één tekst?","Is een uur per tekst realistisch — of moet er meer mee in dat uur?"],
         uitlegPad: {
           stappen: [
-            { titel: "Cito-tijd per tekst", tekst: "Bij begrijpend lezen krijg je ~5-7 minuten per tekst-met-vragen. Niet meer, niet minder." },
+            { titel: "Toets-tijd per tekst", tekst: "Bij begrijpend lezen krijg je ~5-7 minuten per tekst-met-vragen. Niet meer, niet minder." },
             { titel: "Hoe verdeel je dat?", tekst: "~30 sec skim + ~30 sec vragen lezen + ~1 min per vraag voor scannen = past in 5-7 min." },
           ],
           woorden: [
@@ -611,7 +611,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Skip moeilijke vraag", uitleg: "Vraag te lastig? Skip + kom later terug. Niet vastlopen." }],
           niveaus: {
             basis: "5-7 min per tekst.",
-            simpeler: "Bij Cito: ongeveer een minuut of 5-7 voor een tekst plus de vragen erover. Moet je strak op tijd werken.",
+            simpeler: "Bij de Doorstroomtoets: ongeveer een minuut of 5-7 voor een tekst plus de vragen erover. Moet je strak op tijd werken.",
             nogSimpeler: "5-7 min",
           },
         },
@@ -631,7 +631,7 @@ const steps = [
           ],
           theorie: "Strategie bij NIET-vragen: (1) markeer 'NIET' (2) loop ALLE 4 opties langs in tekst (3) 3 staan er, 1 niet, die ene = antwoord.",
           voorbeelden: [{ type: "markeren", tekst: "Vraag: 'Welk dier zit __NIET__ in de dierentuin?' Onderlijnen helpt je herinneren: ik zoek het ene dat MIST." }],
-          basiskennis: [{ onderwerp: "Tijdens toets schrijven mag", uitleg: "Bij Cito mag je het examenboekje markeren met potlood." }],
+          basiskennis: [{ onderwerp: "Tijdens toets schrijven mag", uitleg: "Bij de Doorstroomtoets mag je het examenboekje markeren met potlood." }],
           niveaus: {
             basis: "Onderlijn 'NIET'.",
             simpeler: "'NIET' is een klein woord, makkelijk te missen. Onderlijn 'm — dan vergeet je niet dat je het TEGENOVERGESTELDE zoekt.",
@@ -646,19 +646,19 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld — bij 'volgens de tekst' mag je GEEN eigen mening geven.", "Niet — je moet juist alleen die tekst gebruiken.", "Tegenovergesteld — tekst is essentieel."],
         uitlegPad: {
           stappen: [
-            { titel: "'Volgens de tekst'-signaal", tekst: "Bij Cito-vragen met **'volgens de tekst'** of **'wat zegt de tekst over X'**: je moet je antwoord BASEREN op precies wat er staat. Niet wat jij denkt of weet uit eigen ervaring." },
-            { titel: "Cito-instinker: algemene kennis", tekst: "Stel: tekst zegt 'Sommige honden bijten'. Vraag: 'Volgens de tekst, bijten honden?'\n• A) Ja, alle honden\n• B) Sommige honden\n• C) Nee, honden bijten niet\n• D) Honden zijn lief\n\nAntwoord: **B** — wat tekst zegt. Niet **A** (eigen kennis: niet alle honden), niet **D** (eigen mening). **De tekst is de baas**." },
-            { titel: "Cito-truc: terug naar tekst", tekst: "**Stappenplan**:\n1. Lees vraag rustig\n2. Onderstreep 'volgens de tekst'-signaal\n3. **Ga TERUG naar tekst** — zoek waar het over gaat\n4. Lees relevante alinea\n5. Kies optie die het BEST de tekst weergeeft\n6. Negeer opties die alleen kloppen volgens jou — niet volgens tekst" },
+            { titel: "'Volgens de tekst'-signaal", tekst: "Bij toetsvragen met **'volgens de tekst'** of **'wat zegt de tekst over X'**: je moet je antwoord BASEREN op precies wat er staat. Niet wat jij denkt of weet uit eigen ervaring." },
+            { titel: "Toets-instinker: algemene kennis", tekst: "Stel: tekst zegt 'Sommige honden bijten'. Vraag: 'Volgens de tekst, bijten honden?'\n• A) Ja, alle honden\n• B) Sommige honden\n• C) Nee, honden bijten niet\n• D) Honden zijn lief\n\nAntwoord: **B** — wat tekst zegt. Niet **A** (eigen kennis: niet alle honden), niet **D** (eigen mening). **De tekst is de baas**." },
+            { titel: "Toets-truc: terug naar tekst", tekst: "**Stappenplan**:\n1. Lees vraag rustig\n2. Onderstreep 'volgens de tekst'-signaal\n3. **Ga TERUG naar tekst** — zoek waar het over gaat\n4. Lees relevante alinea\n5. Kies optie die het BEST de tekst weergeeft\n6. Negeer opties die alleen kloppen volgens jou — niet volgens tekst" },
           ],
           woorden: [
-            { woord: "volgens de tekst", uitleg: "Cito-signaal: gebruik alleen tekst-info, geen eigen kennis/mening." },
+            { woord: "volgens de tekst", uitleg: "Toets-signaal: gebruik alleen tekst-info, geen eigen kennis/mening." },
             { woord: "interpretatie", uitleg: "Wat je VAN de tekst kunt afleiden — strict op basis van wat staat." },
           ],
           theorie: "Verschillende vraagtypen begrijpend lezen:\n• **'Wat staat in de tekst?'** → letterlijk zoeken\n• **'Wat bedoelt schrijver?'** → interpretatie (waar leidt het naar?)\n• **'Wat is hoofdgedachte?'** → samenvatting in 1 zin\n• **'Wat NIET in tekst?'** → uitsluiting (zie eerdere check)\n\nEigen mening is NOOIT antwoord bij begrijpend lezen.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst zegt: 'Plastic vervuilt zeeën.' Vraag: 'Volgens tekst, wat doet plastic?' → 'Vervuilt zeeën' (niet 'beschermt vissen' of jouw eigen mening)." },
           ],
-          basiskennis: [{ onderwerp: "Niet je eigen kennis", uitleg: "Cito test of je TEKST kunt lezen, niet of je veel weet. 'Volgens de tekst' is grens." }],
+          basiskennis: [{ onderwerp: "Niet je eigen kennis", uitleg: "De toets test of je TEKST kunt lezen, niet of je veel weet. 'Volgens de tekst' is grens." }],
           niveaus: { basis: "Alleen tekst.", simpeler: "'Volgens de tekst' = je antwoord moet uit DE TEKST komen, geen eigen mening. Tekst is de baas.", nogSimpeler: "Tekst-alleen" },
         },
       },
@@ -669,33 +669,33 @@ const steps = [
         wrongHints: [null, "Scannen werkt voor overzicht, niet voor begrip.", "Te oppervlakkig — 'letterlijk' is half-lezen.", "Tegenovergesteld — overslaan kan veel betekenis kosten."],
         uitlegPad: {
           stappen: [
-            { titel: "Goed lezen vs scannen", tekst: "Twee technieken:\n• **Scannen** = ogen snel over tekst voor sleutelwoorden (zoals 'wanneer' / 'jaartal' opzoeken)\n• **Goed lezen** = stuk voor stuk + alle woorden snappen + verband leggen\n\nBij **Cito-detail-vragen** ('wat staat in alinea 2?') = goed lezen. Bij **algemene vragen** ('waar gaat tekst over?') = scannen + globaal lezen genoeg." },
+            { titel: "Goed lezen vs scannen", tekst: "Twee technieken:\n• **Scannen** = ogen snel over tekst voor sleutelwoorden (zoals 'wanneer' / 'jaartal' opzoeken)\n• **Goed lezen** = stuk voor stuk + alle woorden snappen + verband leggen\n\nBij **Toets-detail-vragen** ('wat staat in alinea 2?') = goed lezen. Bij **algemene vragen** ('waar gaat tekst over?') = scannen + globaal lezen genoeg." },
             { titel: "Goed-lezen stappenplan", tekst: "1. **Lees zin tot komma/punt**\n2. **Snap alle woorden** (onbekend? raad uit context)\n3. **Wat zegt de zin?** Eigen woorden in hoofd herhalen\n4. **Verbind met vorige zin** (en/maar/dus?)\n5. **Volgende zin**\n\nDuurt langer maar je 'krijgt' de tekst echt." },
-            { titel: "Cito-tip: gemarkeerd onthouden", tekst: "Tijdens lezen MAG je markeren in Cito-boekje:\n• **Onderstreep** belangrijke zinnen\n• **Cirkel** sleutelwoorden\n• **Schrijf in marge** vraagtekens bij niet-begrip\n\nMaakt later terug-vinden makkelijker. Brein onthoudt ook beter wat je actief markeert dan passief leest." },
+            { titel: "Toets-tip: gemarkeerd onthouden", tekst: "Tijdens lezen MAG je markeren in Toets-boekje:\n• **Onderstreep** belangrijke zinnen\n• **Cirkel** sleutelwoorden\n• **Schrijf in marge** vraagtekens bij niet-begrip\n\nMaakt later terug-vinden makkelijker. Brein onthoudt ook beter wat je actief markeert dan passief leest." },
           ],
           woorden: [
             { woord: "scannen", uitleg: "Snel kijken voor specifiek info (jaartal, naam, getal). Niet alles lezen." },
             { woord: "globaal lezen", uitleg: "Hele tekst rustig doorlezen voor algemeen begrip. Geen detail." },
             { woord: "goed lezen", uitleg: "Zin voor zin met begrip + verband leggen. Voor detail-vragen." },
           ],
-          theorie: "Wanneer welke techniek:\n• **Cito-tijdsdruk + globaal**: 1 keer rustig doorlezen\n• **Detail-vraag** (wat staat in alinea X?): goed lezen of scannen + goed lezen alinea\n• **Hoofdgedachte**: globaal lezen + conclusie zoeken\n• **'Volgens tekst'-vraag**: terug + goed lezen relevante zin\n\nProfs wisselen technieken. Bij de Doorstroomtoets = goed leren wisselen.",
+          theorie: "Wanneer welke techniek:\n• **Toets-tijdsdruk + globaal**: 1 keer rustig doorlezen\n• **Detail-vraag** (wat staat in alinea X?): goed lezen of scannen + goed lezen alinea\n• **Hoofdgedachte**: globaal lezen + conclusie zoeken\n• **'Volgens tekst'-vraag**: terug + goed lezen relevante zin\n\nProfs wisselen technieken. Bij de Doorstroomtoets = goed leren wisselen.",
           voorbeelden: [
             { type: "stap", tekst: "Bij vraag 'wat zegt alinea 3?' = lees alinea 3 goed. Niet hele tekst." },
           ],
-          basiskennis: [{ onderwerp: "Niet alles even grondig", uitleg: "Goed lezen kost tijd. Bij Cito: leer WANNEER goed lezen + wanneer scannen. Mix is sleutel." }],
-          niveaus: { basis: "Stuk voor stuk + begrip.", simpeler: "Goed lezen: zin voor zin, alle woorden snappen, verband leggen. Bij detail-vragen Cito nodig.", nogSimpeler: "Grondig" },
+          basiskennis: [{ onderwerp: "Niet alles even grondig", uitleg: "Goed lezen kost tijd. Bij de Doorstroomtoets: leer WANNEER goed lezen + wanneer scannen. Mix is sleutel." }],
+          niveaus: { basis: "Stuk voor stuk + begrip.", simpeler: "Goed lezen: zin voor zin, alle woorden snappen, verband leggen. Bij detail-vragen de toets nodig.", nogSimpeler: "Grondig" },
         },
       },
       {
         q: "Hoe verbeter je je **leesvaardigheid** op lange termijn?",
-        options: ["Veel boeken lezen + woordenschat bouwen","Alleen Cito oefenen","Streaming kijken","Niets doen"],
+        options: ["Veel boeken lezen + woordenschat bouwen","Alleen toets-oefenen","Streaming kijken","Niets doen"],
         answer: 0,
-        wrongHints: [null, "Cito oefenen helpt, maar zonder lezen blijft basis te smal.", "Niet — beelden ipv tekst trainen leesvaardigheid niet.", "Tegenovergesteld — leesvaardigheid groeit met inspanning."],
+        wrongHints: [null, "toets oefenen helpt, maar zonder lezen blijft basis te smal.", "Niet — beelden ipv tekst trainen leesvaardigheid niet.", "Tegenovergesteld — leesvaardigheid groeit met inspanning."],
         uitlegPad: {
           stappen: [
-            { titel: "Waarom lezen helpt", tekst: "**Leesvaardigheid** is een vaardigheid die je opbouwt door **veel lezen**:\n• **Meer woordenschat** — onbekende woorden vaker zien → kennen\n• **Beter verband zien** — hoe schrijvers zinnen bouwen\n• **Sneller lezen** — automatische herkenning patronen\n• **Beter begrip context** — wereld + onderwerpen-kennis\n\nOnderzoek (Cito-bron): kinderen die **30 min/dag** lezen scoren **20-30% hoger** op begrijpend lezen dan niet-lezers." },
+            { titel: "Waarom lezen helpt", tekst: "**Leesvaardigheid** is een vaardigheid die je opbouwt door **veel lezen**:\n• **Meer woordenschat** — onbekende woorden vaker zien → kennen\n• **Beter verband zien** — hoe schrijvers zinnen bouwen\n• **Sneller lezen** — automatische herkenning patronen\n• **Beter begrip context** — wereld + onderwerpen-kennis\n\nOnderzoek (Toets-bron): kinderen die **30 min/dag** lezen scoren **20-30% hoger** op begrijpend lezen dan niet-lezers." },
             { titel: "Wat lezen? Top-tips groep 7-8", tekst: "**Fictie** (verhalen):\n• Jip & Janneke / Pluk (Schmidt)\n• Kruistocht in Spijkerbroek (Beckman)\n• Brief voor de koning (Dragt)\n• Harry Potter / Roald Dahl\n\n**Non-fictie** (informatie):\n• Jeugd-encyclopedie\n• National Geographic Junior\n• Nieuws-apps voor kinderen (NOS Jeugdjournaal-tekst)\n• Junior-versies populaire onderwerpen (Beeld + Geluid, NEMO)\n\n**Wat NIET doet**: alleen instagram-bijschriften lezen (te kort, te eenvoudig)." },
-            { titel: "Cito-feit: bibliotheek + scholen", tekst: "**NL beleid**:\n• Bibliotheek lid <18 jaar = GRATIS\n• Veel scholen hebben leesbeleid (15 min stillezen per dag)\n• **DEAR-tijd** (Drop Everything And Read) op sommige scholen\n• Leestoets-resultaten in PISA-onderzoek: NL daalde — leerlingen lezen minder dan vroeger. Daarom: zelf MEER lezen = direct voordeel." },
+            { titel: "Toets-feit: bibliotheek + scholen", tekst: "**NL beleid**:\n• Bibliotheek lid <18 jaar = GRATIS\n• Veel scholen hebben leesbeleid (15 min stillezen per dag)\n• **DEAR-tijd** (Drop Everything And Read) op sommige scholen\n• Leestoets-resultaten in PISA-onderzoek: NL daalde — leerlingen lezen minder dan vroeger. Daarom: zelf MEER lezen = direct voordeel." },
           ],
           woorden: [
             { woord: "leesvaardigheid", uitleg: "Vermogen om geschreven tekst te lezen + begrijpen." },
@@ -704,9 +704,9 @@ const steps = [
           ],
           theorie: "Lezen-trainings­advies:\n• **Begin klein**: 10 min/dag, bouw op naar 30 min\n• **Kies wat JIJ leuk vindt** (geen gedwongen literatuur)\n• **Lees voor slapen**: combineert + ontspant\n• **Wissel fictie + non-fictie** voor variatie\n• **Praat over wat je leest** met ouder/vriend (versterkt onthouden)\n\nBijproduct: lezers slapen vaak beter (zonder schermtijd vóór slapen).",
           voorbeelden: [
-            { type: "feit", tekst: "Onderzoek Universiteit Leiden: leerlingen die thuis 5+ boeken lezen per jaar scoren ~1 jaar voor op Cito-niveau." },
+            { type: "feit", tekst: "Onderzoek Universiteit Leiden: leerlingen die thuis 5+ boeken lezen per jaar scoren ~1 jaar voor op Toets-niveau." },
           ],
-          basiskennis: [{ onderwerp: "Niet alleen voor toets", uitleg: "Lezen voor levenslange vaardigheid — niet alleen Cito. Hoog-opleidings volwassenen lezen gemiddeld meer dan laag-opleids." }],
+          basiskennis: [{ onderwerp: "Niet alleen voor toets", uitleg: "Lezen voor levenslange vaardigheid — niet alleen de toets. Hoog-opleidings volwassenen lezen gemiddeld meer dan laag-opleids." }],
           niveaus: { basis: "Veel lezen.", simpeler: "Leesvaardigheid groeit door VEEL lezen — boeken + tijdschriften + jeugd-encyclopedie. 30 min/dag = grote sprong.", nogSimpeler: "Lezen" },
         },
       },
@@ -746,7 +746,7 @@ const begrijpendLezenStrategie = {
     { id: "schemas-stappenplannen-po", title: "Schema's en stappenplannen", niveau: "po-1F" },
   ],
   intro:
-    "Hoe je slim leest in plaats van alles woord-voor-woord. Tekstsoorten herkennen (informatief/betogend/verhalend), 6 groepen signaalwoorden, hoofdgedachte vinden, skim+scan-techniek, en 5 vraagsoorten met aparte aanpakken. Cito-relevant.",
+    "Hoe je slim leest in plaats van alles woord-voor-woord. Tekstsoorten herkennen (informatief/betogend/verhalend), 6 groepen signaalwoorden, hoofdgedachte vinden, skim+scan-techniek, en 5 vraagsoorten met aparte aanpakken. toets-relevant.",
   triggerKeywords: [
     "begrijpend lezen","begrijpend","tekst lezen","tekstanalyse",
     "informatieve tekst","betogende tekst","verhalende tekst",

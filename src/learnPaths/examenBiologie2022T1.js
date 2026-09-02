@@ -14,7 +14,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-1/gt-01
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc: koppel sleutel-begrip uit vraag aan kern-functie van orgaan/proces.",
+  theorie: "Toets-truc: koppel sleutel-begrip uit vraag aan kern-functie van orgaan/proces.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

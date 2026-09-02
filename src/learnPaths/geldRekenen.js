@@ -1,5 +1,5 @@
 // Leerpad: Geld rekenen — voor groep 5-8
-// 5 stappen. Cito-stijl praktijksommen.
+// 5 stappen. Doorstroomtoets-stijl praktijksommen.
 // Sprint A (2026-05-08).
 
 const COLORS = {
@@ -18,7 +18,7 @@ const chapters = [
   { letter: "B", title: "Optellen en aftrekken", emoji: "➕", from: 1, to: 1 },
   { letter: "C", title: "Wisselgeld + slim kopen", emoji: "🛒", from: 2, to: 2 },
   { letter: "D", title: "Vergelijken — wat is voordeligst?", emoji: "📊", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -98,7 +98,7 @@ const steps = [
 
   {
     title: "Optellen en aftrekken met geld",
-    explanation: "Geldsommen werken net als gewone sommen, maar pas op met de **komma**.\n\n**Voorbeelden — optellen**:\n• € 2,50 + € 1,75 = ?\n  - 2,50 + 1,75 — schrijf onder elkaar, zorg dat komma's recht staan.\n  - Eindbedrag: **€ 4,25**.\n\n• € 0,80 + € 0,30 = ?\n  - Cents: 80 + 30 = 110 cent = € 1,10.\n  - Of: 0,80 + 0,30 = **1,10**.\n\n**Voorbeelden — aftrekken**:\n• € 5,00 − € 2,35 = ?\n  - Schrijf onder elkaar: 5,00 − 2,35.\n  - Eindbedrag: **€ 2,65**.\n\n• € 10,00 − € 3,75 = ?\n  - Truc: gebruik 9,99 − 3,75 = 6,24, dan +0,01 = **€ 6,25**.\n\n**Cito-tip**:\n• Schrijf altijd **netjes onder elkaar** met komma's recht.\n• Cento's tellen los kan ook: € 2,75 + € 1,80 → 275 + 180 = 455 cent → **€ 4,55**.",
+    explanation: "Geldsommen werken net als gewone sommen, maar pas op met de **komma**.\n\n**Voorbeelden — optellen**:\n• € 2,50 + € 1,75 = ?\n  - 2,50 + 1,75 — schrijf onder elkaar, zorg dat komma's recht staan.\n  - Eindbedrag: **€ 4,25**.\n\n• € 0,80 + € 0,30 = ?\n  - Cents: 80 + 30 = 110 cent = € 1,10.\n  - Of: 0,80 + 0,30 = **1,10**.\n\n**Voorbeelden — aftrekken**:\n• € 5,00 − € 2,35 = ?\n  - Schrijf onder elkaar: 5,00 − 2,35.\n  - Eindbedrag: **€ 2,65**.\n\n• € 10,00 − € 3,75 = ?\n  - Truc: gebruik 9,99 − 3,75 = 6,24, dan +0,01 = **€ 6,25**.\n\n**Toets-tip**:\n• Schrijf altijd **netjes onder elkaar** met komma's recht.\n• Cento's tellen los kan ook: € 2,75 + € 1,80 → 275 + 180 = 455 cent → **€ 4,55**.",
     checks: [
       {
         q: "**€ 3,40 + € 1,75** = ?",
@@ -156,7 +156,7 @@ const steps = [
         wrongHints: [null, "Te weinig — €2,99 is bijna €3 en €4,99 is bijna €5. Samen bijna €8 — maar hoeveel cent er net af?", "Verkeerd afgerond. Tel de centen op: 99 + 99 = ? cent, en reken dan verder.", "Te veel — schat 3 + 5: het antwoord moet net onder die schatting liggen."],
         uitlegPad: {
           stappen: [
-            { titel: "Cito-truc: bijna-rond-getal", tekst: "€2,99 ≈ €3 en €4,99 ≈ €5. Reken eerst met de ronde getallen: €3 + €5 = €8. Dan corrigeren voor de 'bijna-eurootjes'." },
+            { titel: "Toets-truc: bijna-rond-getal", tekst: "€2,99 ≈ €3 en €4,99 ≈ €5. Reken eerst met de ronde getallen: €3 + €5 = €8. Dan corrigeren voor de 'bijna-eurootjes'." },
             { titel: "Correctie toepassen", tekst: "Elke 'X,99' is 1 cent minder dan X+1 hele euro's. Twee keer 'bijna-euro' = 2 cent minder. €8 − €0,02 = **€7,98**." },
             { titel: "Of: cent-stijl", tekst: "Cent: 99 + 99 = 198 → €1,98 → onthoudje 1. Euro: 2 + 4 + 1 = 7. Antwoord €7,98. Beide trucs werken." },
           ],
@@ -169,7 +169,7 @@ const steps = [
             { type: "stap", tekst: "€1,99 + €2,99 = €5 − €0,02 = €4,98." },
             { type: "stap", tekst: "€4,99 + €4,99 + €4,99 = €15 − €0,03 = €14,97." },
           ],
-          basiskennis: [{ onderwerp: "Cito-instinker", uitleg: "Winkel-prijzen zijn vaak X,99 om groter lijkende korting te lijken. Echte verschil is 1 cent." },],
+          basiskennis: [{ onderwerp: "Toets-instinker", uitleg: "Winkel-prijzen zijn vaak X,99 om groter lijkende korting te lijken. Echte verschil is 1 cent." },],
           niveaus: { basis: "€2,99+€4,99=€7,98.", simpeler: "€2,99 ≈ €3. €4,99 ≈ €5. Samen €8. Min 2 cent (twee 'bijna') = €7,98.", nogSimpeler: "€7,98" },
         },
       },
@@ -178,7 +178,7 @@ const steps = [
 
   {
     title: "Wisselgeld berekenen",
-    explanation: "Bij **wisselgeld** krijg je terug = (wat je betaalt) − (wat het kost).\n\n**Voorbeeld**: een ijsje kost € 1,80. Je betaalt met € 5. Wisselgeld?\n• €5,00 − €1,80 = **€3,20**.\n\n**Cito-truc — terug-tellen**:\nJe kunt ook **vooruit tellen** vanaf de prijs.\n• €1,80 → €0,20 erbij → €2,00 *(20 cent)*\n• €2,00 → €3 erbij → €5,00 *(3 euro)*\n• Totaal terug: **€3 + €0,20 = €3,20**.\n\n**Voorbeeld 2**: 3 spullen van € 2,75 betaalt met biljet van € 10:\n• 3 × €2,75 = €8,25.\n• €10 − €8,25 = **€1,75 wisselgeld**.\n\n**Cito-tip**:\nReken altijd met de **gevolgde cijfers** *(een biljet van 5,00 lees je als € 5)*. Schrijf netjes op.",
+    explanation: "Bij **wisselgeld** krijg je terug = (wat je betaalt) − (wat het kost).\n\n**Voorbeeld**: een ijsje kost € 1,80. Je betaalt met € 5. Wisselgeld?\n• €5,00 − €1,80 = **€3,20**.\n\n**Toets-truc — terug-tellen**:\nJe kunt ook **vooruit tellen** vanaf de prijs.\n• €1,80 → €0,20 erbij → €2,00 *(20 cent)*\n• €2,00 → €3 erbij → €5,00 *(3 euro)*\n• Totaal terug: **€3 + €0,20 = €3,20**.\n\n**Voorbeeld 2**: 3 spullen van € 2,75 betaalt met biljet van € 10:\n• 3 × €2,75 = €8,25.\n• €10 − €8,25 = **€1,75 wisselgeld**.\n\n**Toets-tip**:\nReken altijd met de **gevolgde cijfers** *(een biljet van 5,00 lees je als € 5)*. Schrijf netjes op.",
     checks: [
       {
         q: "Een tas kost **€ 24,50**. Je betaalt met **€ 50**. Wisselgeld?",
@@ -239,7 +239,7 @@ const steps = [
           stappen: [
             { titel: "Stap 1: totale kosten", tekst: "Patatje + frisdrank = €2,80 + €1,75. Cent: 80+75=155 (=€1,55). Euro: 2+1+1=4. Totaal **€4,55**." },
             { titel: "Stap 2: wisselgeld", tekst: "Betaald €10 − kosten €4,55 = wisselgeld. Vooruit-tellen: 4,55 → 5 = +0,45. Van 5 → 10 = +5. Totaal **€5,45**." },
-            { titel: "Cito-truc bij twee-stappen-vragen", tekst: "Cito gebruikt vaak vragen met 2 stappen: eerst kosten optellen, dan aftrekken van betaald bedrag. Schat eerst om grove fouten te vermijden: kosten ~€5, betaald €10, dus wisselgeld ~€5. €5,45 past." },
+            { titel: "Toets-truc bij twee-stappen-vragen", tekst: "De toets gebruikt vaak vragen met 2 stappen: eerst kosten optellen, dan aftrekken van betaald bedrag. Schat eerst om grove fouten te vermijden: kosten ~€5, betaald €10, dus wisselgeld ~€5. €5,45 past." },
           ],
           woorden: [
             { woord: "twee-stappen-vraag", uitleg: "Vraag waarin je eerst iets uitrekent (totaal), dan iets anders (wisselgeld)." },
@@ -250,7 +250,7 @@ const steps = [
             { type: "stap", tekst: "Ijsje €1,80 + drinken €2,20 = €4. Betaald €5: wisselgeld €1." },
             { type: "stap", tekst: "Boek €7,95 + pen €2,05 = €10. Betaald €10: wisselgeld €0 precies." },
           ],
-          basiskennis: [{ onderwerp: "Niet 1 product vergeten", uitleg: "Bij Cito staan vaak meerdere producten — lees alles voor je rekent." }],
+          basiskennis: [{ onderwerp: "Niet 1 product vergeten", uitleg: "Bij de Doorstroomtoets staan vaak meerdere producten — lees alles voor je rekent." }],
           niveaus: { basis: "Kosten €4,55. Wisselgeld €5,45.", simpeler: "Eerst optellen: €2,80 + €1,75 = €4,55. Dan: €10 − €4,55 = €5,45.", nogSimpeler: "€5,45" },
         },
       },
@@ -259,7 +259,7 @@ const steps = [
 
   {
     title: "Wat is voordeligst? — vergelijken",
-    explanation: "Cito-vragen vragen vaak: **welke aanbieding is goedkoper per stuk**?\n\n**Voorbeeld**: chips!\n• A: een zak van **200 g** voor **€ 1,80**.\n• B: een zak van **500 g** voor **€ 4,00**.\n\nWelke is **voordeliger per gram**?\n\n**Aanpak — prijs per eenheid berekenen**:\n• A: 1,80 ÷ 200 = € 0,009 per gram = **0,9 cent per g**.\n• B: 4,00 ÷ 500 = € 0,008 per gram = **0,8 cent per g**.\n\n**Antwoord**: B is goedkoper per gram.\n\n**Cito-truc — vergelijk per 100 g**:\nMakkelijker zonder kommagetallen:\n• A: 200 g voor € 1,80 → 100 g = € 0,90.\n• B: 500 g voor € 4,00 → 100 g = € 0,80.\n• Per 100 g: B is goedkoper.\n\n**Voorbeeld 2 — limonade**:\n• A: 1 L = € 2,40.\n• B: 1,5 L = € 3,30.\n\nPer L:\n• A: € 2,40.\n• B: 3,30 ÷ 1,5 = € 2,20.\n• B is voordeliger.\n\n**Cito-tip**:\nReken altijd **per zelfde eenheid** *(per 100 g, per liter, per stuk)*. Anders vergelijk je appels met peren.",
+    explanation: "toetsvragen vragen vaak: **welke aanbieding is goedkoper per stuk**?\n\n**Voorbeeld**: chips!\n• A: een zak van **200 g** voor **€ 1,80**.\n• B: een zak van **500 g** voor **€ 4,00**.\n\nWelke is **voordeliger per gram**?\n\n**Aanpak — prijs per eenheid berekenen**:\n• A: 1,80 ÷ 200 = € 0,009 per gram = **0,9 cent per g**.\n• B: 4,00 ÷ 500 = € 0,008 per gram = **0,8 cent per g**.\n\n**Antwoord**: B is goedkoper per gram.\n\n**Toets-truc — vergelijk per 100 g**:\nMakkelijker zonder kommagetallen:\n• A: 200 g voor € 1,80 → 100 g = € 0,90.\n• B: 500 g voor € 4,00 → 100 g = € 0,80.\n• Per 100 g: B is goedkoper.\n\n**Voorbeeld 2 — limonade**:\n• A: 1 L = € 2,40.\n• B: 1,5 L = € 3,30.\n\nPer L:\n• A: € 2,40.\n• B: 3,30 ÷ 1,5 = € 2,20.\n• B is voordeliger.\n\n**Toets-tip**:\nReken altijd **per zelfde eenheid** *(per 100 g, per liter, per stuk)*. Anders vergelijk je appels met peren.",
     checks: [
       {
         q: "Pak A: **6 koekjes voor € 1,20**. Pak B: **10 koekjes voor € 2,40**. Welke is **goedkoper per koekje**?",
@@ -318,7 +318,7 @@ const steps = [
           stappen: [
             { titel: "Per liter berekenen", tekst: "A: 2 L voor €2,40 → 1 L = €2,40 ÷ 2 = **€1,20**. B: 1 L voor €1,30 → 1 L = **€1,30**." },
             { titel: "Vergelijken", tekst: "A €1,20/L < B €1,30/L. A is **10 cent goedkoper per liter**. Hoewel A duurder TOTAAL lijkt, krijg je meer voor je geld." },
-            { titel: "Cito-instinker: hoogste totaalprijs ≠ duurste", tekst: "A kost €2,40 (hoger dan B's €1,30). Maar je krijgt 2L (dubbele hoeveelheid). Reken altijd per L of per kg om eerlijk te vergelijken." },
+            { titel: "Toets-instinker: hoogste totaalprijs ≠ duurste", tekst: "A kost €2,40 (hoger dan B's €1,30). Maar je krijgt 2L (dubbele hoeveelheid). Reken altijd per L of per kg om eerlijk te vergelijken." },
           ],
           woorden: [
             { woord: "per liter", uitleg: "Prijs gedeeld door het aantal liters." },
@@ -329,7 +329,7 @@ const steps = [
             { type: "per-L", tekst: "Cola: 1L €1,50 vs 2L €2,50 → 1L=€1,50, per-L bij 2L=€1,25. 2L-fles voordeliger." },
             { type: "per-stuk", tekst: "Appel: 1 los €0,50 vs 5-pak €2,00 → per stuk €0,40. 5-pak voordeliger." },
           ],
-          basiskennis: [{ onderwerp: "Familiepak", uitleg: "Vaak (niet altijd!) is groter pak voordeliger per eenheid. Cito test of je kunt NA-rekenen." }],
+          basiskennis: [{ onderwerp: "Familiepak", uitleg: "Vaak (niet altijd!) is groter pak voordeliger per eenheid. De toets test of je kunt NA-rekenen." }],
           niveaus: { basis: "A €1,20/L. B €1,30/L. A wint.", simpeler: "A: 2 liter voor €2,40 → 1 liter = €1,20. B: 1 liter = €1,30. A is goedkoper per liter.", nogSimpeler: "A goedkoper" },
         },
       },
@@ -337,8 +337,8 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — geldsommen mix",
-    explanation: "Mix-toets met geldsommen in Cito-stijl. Verschillende vragen — winkel, wisselgeld, vergelijken.\n\nVeel succes!",
+    title: "Toets-eindopdracht — geldsommen mix",
+    explanation: "Mix-toets met geldsommen in Doorstroomtoets-stijl. Verschillende vragen — winkel, wisselgeld, vergelijken.\n\nVeel succes!",
     checks: [
       {
         q: "**€ 4,75 + € 2,80** = ?",
@@ -441,7 +441,7 @@ const steps = [
             { type: "stap", tekst: "€2,50/week × 4 weken: 4×€2=€8, 4×€0,50=€2, totaal €10." },
             { type: "stap", tekst: "€5,25/week × 6 weken: 6×€5=€30, 6×€0,25=€1,50, totaal €31,50." },
           ],
-          basiskennis: [{ onderwerp: "Spaardoel-rekenen", uitleg: "Cito test vaak: 'Hoe lang om €X bij elkaar te sparen?' = X ÷ weekbedrag." }],
+          basiskennis: [{ onderwerp: "Spaardoel-rekenen", uitleg: "De toets test vaak: 'Hoe lang om €X bij elkaar te sparen?' = X ÷ weekbedrag." }],
           niveaus: { basis: "8 × €7,50 = €60.", simpeler: "8 × €7 = €56. Plus 8 × €0,50 = €4. Totaal €60.", nogSimpeler: "€60" },
         },
       },
@@ -494,7 +494,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const geldRekenen = {
   id: "geld-rekenen",
-  title: "Geld rekenen — Cito groep 5-8",
+  title: "Geld rekenen — Doorstroomtoets groep 5-8",
   emoji: "💶",
   level: "groep5-8",
   subject: "rekenen",
@@ -505,7 +505,7 @@ const geldRekenen = {
     { id: "procenten-po", title: "Procenten", niveau: "po-1F" },
   ],
   intro:
-    "Geld rekenen voor groep 5-8: euro's en centen, optellen + aftrekken, wisselgeld berekenen, vergelijken (wat is voordeligst). Cito-stijl praktijksommen. ~12 min.",
+    "Geld rekenen voor groep 5-8: euro's en centen, optellen + aftrekken, wisselgeld berekenen, vergelijken (wat is voordeligst). Doorstroomtoets-stijl praktijksommen. ~12 min.",
   triggerKeywords: [
     "geld","euro","cent","wisselgeld","prijs","kosten","betalen","goedkoper",
     "voordeliger","vergelijken","kassabon",

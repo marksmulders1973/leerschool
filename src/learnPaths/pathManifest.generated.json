@@ -105,7 +105,7 @@
   {
     "id": "algoritmen-programmeren-po",
     "file": "./algoritmenProgrammerenPo.js",
-    "title": "Algoritmen + programmeren (Cito groep 6-8)",
+    "title": "Algoritmen + programmeren (Doorstroomtoets groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
     "emoji": "📋",
@@ -125,7 +125,7 @@
       "if-else",
       "functie"
     ],
-    "intro": "Algoritmen + programmeren voor Cito groep 6-8 — wat is algoritme (stappenplan, recept, GPS-Dijkstra-NL'er) + bouwstenen (variabele/if/loop/functie/lijst) + Ada Lovelace + talen (Scratch/Python/JavaScr",
+    "intro": "Algoritmen + programmeren voor Doorstroomtoets groep 6-8 — wat is algoritme (stappenplan, recept, GPS-Dijkstra-NL'er) + bouwstenen (variabele/if/loop/functie/lijst) + Ada Lovelace + talen (Scratch/Pyt",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -481,7 +481,7 @@
   {
     "id": "bekende-boeken-literatuur-po",
     "file": "./bekendeBoekenLiteratuurPo.js",
-    "title": "Bekende boeken + literatuur (Cito groep 6-8)",
+    "title": "Bekende boeken + literatuur (Doorstroomtoets groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
     "emoji": "📖",
@@ -501,7 +501,7 @@
       "Carry Slee",
       "Francine Oomen"
     ],
-    "intro": "Bekende kinderboeken + literatuur voor Cito groep 6-8 — Annie M.G. Schmidt (Jip+Janneke, Pluk, Otje) + Fiep Westendorp + Tonke Dragt + Vriens + moderne (Slee, Oomen) + internationaal (Dahl, Rowling) +",
+    "intro": "Bekende kinderboeken + literatuur voor Doorstroomtoets groep 6-8 — Annie M.G. Schmidt (Jip+Janneke, Pluk, Otje) + Fiep Westendorp + Tonke Dragt + Vriens + moderne (Slee, Oomen) + internationaal (Dahl,",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -510,7 +510,7 @@
   {
     "id": "bekende-nederlanders-po",
     "file": "./bekendeNederlandersPo.js",
-    "title": "Bekende Nederlanders (Cito groep 6-8)",
+    "title": "Bekende Nederlanders (Doorstroomtoets groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
     "emoji": "📜",
@@ -530,7 +530,7 @@
       "Aletta Jacobs",
       "vrouwenkiesrecht"
     ],
-    "intro": "Bekende Nederlanders voor Cito groep 6-8 — historisch (Erasmus/Willem van Oranje/Hugo de Groot/Leeuwenhoek/Huygens/Eisinga) + sport (Cruijff/Van Basten/Kramer/Wüst/Verstappen) + modern (Willem-Alexand",
+    "intro": "Bekende Nederlanders voor Doorstroomtoets groep 6-8 — historisch (Erasmus/Willem van Oranje/Hugo de Groot/Leeuwenhoek/Huygens/Eisinga) + sport (Cruijff/Van Basten/Kramer/Wüst/Verstappen) + modern (Wil",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -539,7 +539,7 @@
   {
     "id": "bekende-wetenschappers-po",
     "file": "./bekendeWetenschappersPo.js",
-    "title": "Bekende wetenschappers (Cito groep 6-8)",
+    "title": "Bekende wetenschappers (Doorstroomtoets groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
     "emoji": "🔭",
@@ -559,7 +559,7 @@
       "natuurlijke selectie",
       "Galapagos"
     ],
-    "intro": "Bekende wetenschappers voor Cito groep 6-8 — Copernicus/Galileo (zon-middelpunt) + Newton (zwaartekracht, 3 wetten) + Darwin (evolutie) + Mendel/Pasteur/Fleming + Einstein (E=mc²) + Curie (radium) + T",
+    "intro": "Bekende wetenschappers voor Doorstroomtoets groep 6-8 — Copernicus/Galileo (zon-middelpunt) + Newton (zwaartekracht, 3 wetten) + Darwin (evolutie) + Mendel/Pasteur/Fleming + Einstein (E=mc²) + Curie (",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -596,7 +596,7 @@
   {
     "id": "beroepen-werk-po",
     "file": "./beroepenWerkPo.js",
-    "title": "Beroepen + werk (Cito groep 6-8)",
+    "title": "Beroepen + werk (Doorstroomtoets groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
     "emoji": "👷",
@@ -616,7 +616,7 @@
       "netto",
       "minimumloon"
     ],
-    "intro": "Beroepen + werk voor Cito groep 6-8 — wat is beroep (werknemer/ZZP/vrijwilliger) + 4 sectoren (primair/secundair/tertiair/quartair) + MBO/HBO/WO + voorbeelden beroepen + salaris (bruto/netto/minimum/C",
+    "intro": "Beroepen + werk voor Doorstroomtoets groep 6-8 — wat is beroep (werknemer/ZZP/vrijwilliger) + 4 sectoren (primair/secundair/tertiair/quartair) + MBO/HBO/WO + voorbeelden beroepen + salaris (bruto/nett",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -782,7 +782,7 @@
   {
     "id": "breuken-po",
     "file": "./breukenPo.js",
-    "title": "Breuken — Cito groep 5-8",
+    "title": "Breuken — Doorstroomtoets groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
     "emoji": "🍕",
@@ -802,7 +802,7 @@
       "vereenvoudigen",
       "½"
     ],
-    "intro": "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Cito-stijl praktijksommen. ~15 min.",
+    "intro": "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 5,
@@ -927,7 +927,7 @@
   {
     "id": "cijferend-rekenen",
     "file": "./cijferendRekenen.js",
-    "title": "Cijferend rekenen — Cito groep 6-8",
+    "title": "Cijferend rekenen — Doorstroomtoets groep 6-8",
     "subject": "rekenen",
     "level": "groep6-8",
     "emoji": "🔢",
@@ -956,7 +956,7 @@
   {
     "id": "cito-strategieen-groep8",
     "file": "./citoStrategieenGroep8.js",
-    "title": "Cito Doorstroomtoets — strategieën voor groep 8",
+    "title": "De toets Doorstroomtoets — strategieën voor groep 8",
     "subject": "cito",
     "level": "groep8",
     "emoji": "🎯",
@@ -1401,7 +1401,7 @@
   {
     "id": "dichten-poezie-rijmen-po",
     "file": "./dichtenPoezieRijmenPo.js",
-    "title": "Dichten + poëzie + rijm (Cito groep 5-8)",
+    "title": "Dichten + poëzie + rijm (Doorstroomtoets groep 5-8)",
     "subject": "taal",
     "level": "groep5-8",
     "emoji": "🎭",
@@ -1421,7 +1421,7 @@
       "personificatie",
       "hyperbool"
     ],
-    "intro": "Dichten + poëzie voor Cito groep 5-8 — wat is gedicht (proza vs gedicht, bekende dichters) + rijm + ritme (eind/begin/binnenrijm, AABB/ABAB/ABBA) + beeldspraak (personificatie/hyperbool/metafoor) + so",
+    "intro": "Dichten + poëzie voor Doorstroomtoets groep 5-8 — wat is gedicht (proza vs gedicht, bekende dichters) + rijm + ritme (eind/begin/binnenrijm, AABB/ABAB/ABBA) + beeldspraak (personificatie/hyperbool/met",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -1495,7 +1495,7 @@
       "warmbloedig",
       "koudbloedig"
     ],
-    "intro": "Dierenklassen voor groep 5-8 — 6 hoofdklassen (zoogdieren/vogels/vissen/reptielen/amfibieën/insecten), kenmerken, voedselketens, biotopen. Cito-onderdeel wereldoriëntatie. ~15 min.",
+    "intro": "Dierenklassen voor groep 5-8 — 6 hoofdklassen (zoogdieren/vogels/vissen/reptielen/amfibieën/insecten), kenmerken, voedselketens, biotopen. Toets-onderdeel wereldoriëntatie. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
@@ -1561,7 +1561,7 @@
   {
     "id": "digitale-geletterdheid-po",
     "file": "./digitaleGeletterdheidPo.js",
-    "title": "Digitale geletterdheid (Cito groep 6-8)",
+    "title": "Digitale geletterdheid (Doorstroomtoets groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
     "emoji": "💻",
@@ -1581,7 +1581,7 @@
       "bron",
       "AI"
     ],
-    "intro": "Digitale geletterdheid voor Cito groep 6-8 — computer + internet basis (CPU/HTTPS/WWW/Tim Berners-Lee) + slim zoeken (Google-trucs + bronnen-controle + AI-hallucinatie) + veiligheid (wachtwoord + 2FA ",
+    "intro": "Digitale geletterdheid voor Doorstroomtoets groep 6-8 — computer + internet basis (CPU/HTTPS/WWW/Tim Berners-Lee) + slim zoeken (Google-trucs + bronnen-controle + AI-hallucinatie) + veiligheid (wachtw",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -1610,7 +1610,7 @@
       "amn",
       "dia"
     ],
-    "intro": "~75 Cito-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 mi",
+    "intro": "~75 Doorstroomtoets-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Toets-voorbeelden: gratis voorbeeldopgavenboekje op cit",
     "stepCount": 6,
     "checkCount": 264,
     "chapterCount": 4,
@@ -1763,7 +1763,7 @@
   {
     "id": "eetcultuur-nederland-po",
     "file": "./eetcultuurNederlandPo.js",
-    "title": "Eetcultuur NL + invloeden (Cito groep 6-8)",
+    "title": "Eetcultuur NL + invloeden (Doorstroomtoets groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
     "emoji": "🥔",
@@ -1783,7 +1783,7 @@
       "rijsttafel",
       "Indonesisch"
     ],
-    "intro": "Eetcultuur NL voor Cito groep 6-8 — Hollandse keuken (stamppot/haring/stroopwafels) + vis+brood+zuivel (kazen Gouda/Edam/Leerdam, 14 kg per persoon) + invloeden uit koloniaal verleden (rijsttafel = NL",
+    "intro": "Eetcultuur NL voor Doorstroomtoets groep 6-8 — Hollandse keuken (stamppot/haring/stroopwafels) + vis+brood+zuivel (kazen Gouda/Edam/Leerdam, 14 kg per persoon) + invloeden uit koloniaal verleden (rijs",
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
@@ -1850,7 +1850,7 @@
   {
     "id": "emoties-sociaal-po",
     "file": "./emotiesSocialePo.js",
-    "title": "Emoties + sociaal omgaan (Cito groep 6-8)",
+    "title": "Emoties + sociaal omgaan (Doorstroomtoets groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
     "emoji": "😊",
@@ -1870,7 +1870,7 @@
       "ik-boodschap",
       "pesten"
     ],
-    "intro": "Emoties + sociaal omgaan voor Cito groep 6-8 — 6 basis-emoties (Ekman) + omgaan met boosheid/verdriet/angst + vrienden maken + conflict oplossen (ik-boodschap) + pesten (4 soorten + KiVa + Kindertelef",
+    "intro": "Emoties + sociaal omgaan voor Doorstroomtoets groep 6-8 — 6 basis-emoties (Ekman) + omgaan met boosheid/verdriet/angst + vrienden maken + conflict oplossen (ik-boodschap) + pesten (4 soorten + KiVa + ",
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
@@ -2077,7 +2077,7 @@
   {
     "id": "evolutie-mens-po",
     "file": "./evolutieMensPo.js",
-    "title": "Evolutie + mens (Cito groep 6-8)",
+    "title": "Evolutie + mens (Doorstroomtoets groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
     "emoji": "🐒",
@@ -2097,7 +2097,7 @@
       "Homo sapiens",
       "voorouder"
     ],
-    "intro": "Evolutie voor Cito groep 6-8 — Darwin/natuurlijke selectie + voorbeelden (Galapagos-vinken + pepermot) + mens stamboom (Australopithecus/Lucy/Neanderthaler/Homo sapiens) + reis uit Afrika + bewijzen (",
+    "intro": "Evolutie voor Doorstroomtoets groep 6-8 — Darwin/natuurlijke selectie + voorbeelden (Galapagos-vinken + pepermot) + mens stamboom (Australopithecus/Lucy/Neanderthaler/Homo sapiens) + reis uit Afrika +",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -3494,7 +3494,7 @@
   {
     "id": "geld-rekenen",
     "file": "./geldRekenen.js",
-    "title": "Geld rekenen — Cito groep 5-8",
+    "title": "Geld rekenen — Doorstroomtoets groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
     "emoji": "💶",
@@ -3513,7 +3513,7 @@
       "vergelijken",
       "kassabon"
     ],
-    "intro": "Geld rekenen voor groep 5-8: euro's en centen, optellen + aftrekken, wisselgeld berekenen, vergelijken (wat is voordeligst). Cito-stijl praktijksommen. ~12 min.",
+    "intro": "Geld rekenen voor groep 5-8: euro's en centen, optellen + aftrekken, wisselgeld berekenen, vergelijken (wat is voordeligst). Doorstroomtoets-stijl praktijksommen. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -3660,7 +3660,7 @@
   {
     "id": "gezonde-voeding-po",
     "file": "./gezondeVoedingPo.js",
-    "title": "Gezonde voeding (Cito groep 6-8)",
+    "title": "Gezonde voeding (Doorstroomtoets groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
     "emoji": "🍎",
@@ -3680,7 +3680,7 @@
       "suiker",
       "zout"
     ],
-    "intro": "Gezonde voeding voor Cito groep 6-8 — voedingsstoffen (koolhydraat/eiwit/vet/vitamine/mineraal/water) + Schijf van Vijf (groente 250g, vis 1x/week) + wat te beperken (suiker max 25g, zout max 5g, alco",
+    "intro": "Gezonde voeding voor Doorstroomtoets groep 6-8 — voedingsstoffen (koolhydraat/eiwit/vet/vitamine/mineraal/water) + Schijf van Vijf (groente 250g, vis 1x/week) + wat te beperken (suiker max 25g, zout m",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -3718,7 +3718,7 @@
   {
     "id": "godsdiensten-culturen-po",
     "file": "./godsdienstenCulturenPo.js",
-    "title": "Godsdiensten + culturen (Cito groep 6-8)",
+    "title": "Godsdiensten + culturen (Doorstroomtoets groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
     "emoji": "⛪",
@@ -3738,7 +3738,7 @@
       "Mohammed",
       "Ramadan"
     ],
-    "intro": "Godsdiensten + culturen voor Cito groep 6-8 — wat is religie (5 wereldgodsdiensten, atheist, NL-statistieken) + christendom (Jezus, paus, Reformatie) + islam (5 zuilen, Ramadan) + jodendom (Abraham, M",
+    "intro": "Godsdiensten + culturen voor Doorstroomtoets groep 6-8 — wat is religie (5 wereldgodsdiensten, atheist, NL-statistieken) + christendom (Jezus, paus, Reformatie) + islam (5 zuilen, Ramadan) + jodendom ",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -3850,7 +3850,7 @@
       "procent",
       "totaal"
     ],
-    "intro": "Grafieken lezen voor groep 6-8 — staafdiagram, lijngrafiek, taartdiagram, tabel ↔ grafiek. Cito-praktijksommen met temperatuur, regen, klas-aantallen, koekjes. ~15 min.",
+    "intro": "Grafieken lezen voor groep 6-8 — staafdiagram, lijngrafiek, taartdiagram, tabel ↔ grafiek. Toets-praktijksommen met temperatuur, regen, klas-aantallen, koekjes. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
@@ -4062,7 +4062,7 @@
   {
     "id": "informatiebronnen-po",
     "file": "./informatiebronnenPo.js",
-    "title": "Informatiebronnen (Cito groep 6-8)",
+    "title": "Informatiebronnen (Doorstroomtoets groep 6-8)",
     "subject": "taal",
     "level": "groep6-8",
     "emoji": "🔍",
@@ -4082,7 +4082,7 @@
       "primaire bron",
       "secundaire bron"
     ],
-    "intro": "Bronnen voor de Cito-Doorstroomtoets — woordenboek, atlas, encyclopedie, inhoudsopgave + index, betrouwbaarheid + fake news. 5 stappen × ~5 vragen. ~15 min.",
+    "intro": "Bronnen voor de Doorstroomtoets — woordenboek, atlas, encyclopedie, inhoudsopgave + index, betrouwbaarheid + fake news. 5 stappen × ~5 vragen. ~15 min.",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -4153,16 +4153,16 @@
       "aanhalingstekens",
       "taalverzorging"
     ],
-    "intro": "Interpunctie voor groep 5-7 — hoofdletters, punt, vraagteken, uitroepteken, komma's, aanhalingstekens. Met Cito-stijl oefenvragen en duidelijke regels. ~15 min.",
+    "intro": "Interpunctie voor groep 5-7 — hoofdletters, punt, vraagteken, uitroepteken, komma's, aanhalingstekens. Met Doorstroomtoets-stijl oefenvragen en duidelijke regels. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 25
   },
   {
     "id": "kaartlezen-po",
     "file": "./kaartlezenPo.js",
-    "title": "Kaartlezen — Cito groep 5-8",
+    "title": "Kaartlezen — Doorstroomtoets groep 5-8",
     "subject": "aardrijkskunde",
     "level": "groep5-8",
     "emoji": "🗺️",
@@ -4182,7 +4182,7 @@
       "schaal",
       "legenda"
     ],
-    "intro": "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Cito-stijl. ~12 min.",
+    "intro": "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -4278,7 +4278,7 @@
   {
     "id": "klassieke-muziek-po",
     "file": "./klassiekeMuziekPo.js",
-    "title": "Klassieke muziek + componisten (Cito groep 6-8)",
+    "title": "Klassieke muziek + componisten (Doorstroomtoets groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
     "emoji": "🎼",
@@ -4298,7 +4298,7 @@
       "orkest",
       "dirigent"
     ],
-    "intro": "Klassieke muziek voor Cito groep 6-8 — muziek-basis (melodie/ritme/tempo/instrumenten) + 5 perioden (barok-klassiek-romantiek) + grote 3 (Bach/Mozart-wonderkind/Beethoven-doof) + Vivaldi/Tsjaikovski +",
+    "intro": "Klassieke muziek voor Doorstroomtoets groep 6-8 — muziek-basis (melodie/ritme/tempo/instrumenten) + 5 perioden (barok-klassiek-romantiek) + grote 3 (Bach/Mozart-wonderkind/Beethoven-doof) + Vivaldi/Ts",
     "stepCount": 4,
     "checkCount": 25,
     "chapterCount": 4,
@@ -4468,7 +4468,7 @@
       "wisselgeld",
       "totaal"
     ],
-    "intro": "Kommagetallen voor groep 6-8 — wat ze zijn, optellen/aftrekken met komma's uitgelijnd, vermenigvuldigen, delen, en Cito-praktijksommen met geld/meten. ~15 min.",
+    "intro": "Kommagetallen voor groep 6-8 — wat ze zijn, optellen/aftrekken met komma's uitgelijnd, vermenigvuldigen, delen, en Toets-praktijksommen met geld/meten. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
@@ -4502,7 +4502,7 @@
   {
     "id": "koude-oorlog-modern-po",
     "file": "./koudeOorlogModernPo.js",
-    "title": "Koude Oorlog + moderne geschiedenis (Cito groep 7-8)",
+    "title": "Koude Oorlog + moderne geschiedenis (Doorstroomtoets groep 7-8)",
     "subject": "geschiedenis",
     "level": "groep7-8",
     "emoji": "🧊",
@@ -4522,7 +4522,7 @@
       "Kennedy",
       "Vietnam-oorlog"
     ],
-    "intro": "Koude Oorlog + moderne geschiedenis voor Cito groep 7-8 — VS vs USSR (kapitalisme vs communisme + NAVO 1949 + Rutte 2024) + crises (Berlijnse Muur 1961, Cuba 1962 bijna-kernoorlog, Vietnam) + val Muur",
+    "intro": "Koude Oorlog + moderne geschiedenis voor Doorstroomtoets groep 7-8 — VS vs USSR (kapitalisme vs communisme + NAVO 1949 + Rutte 2024) + crises (Berlijnse Muur 1961, Cuba 1962 bijna-kernoorlog, Vietnam)",
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
@@ -4560,7 +4560,7 @@
   {
     "id": "kritisch-denken-po",
     "file": "./kritischDenkenPo.js",
-    "title": "Kritisch denken + denkfouten (Cito groep 6-8)",
+    "title": "Kritisch denken + denkfouten (Doorstroomtoets groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
     "emoji": "🤔",
@@ -4580,7 +4580,7 @@
       "nepnieuws",
       "fake news"
     ],
-    "intro": "Kritisch denken voor Cito groep 6-8 — wat is kritisch denken (5 W's + niet alles geloven) + 10 denkfouten (bevestigingsbias/anker/groepsdruk/halo/sunk cost - Daniel Kahneman) + 10 drogredenen (ad homi",
+    "intro": "Kritisch denken voor Doorstroomtoets groep 6-8 — wat is kritisch denken (5 W's + niet alles geloven) + 10 denkfouten (bevestigingsbias/anker/groepsdruk/halo/sunk cost - Daniel Kahneman) + 10 drogreden",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -4777,7 +4777,7 @@
       "hersenen",
       "schijf van vijf"
     ],
-    "intro": "Het lichaam voor groep 6-8 — skelet, spieren, bloed, organen, Schijf van Vijf, gezonde gewoontes. Cito-onderdeel wereldoriëntatie. ~15 min.",
+    "intro": "Het lichaam voor groep 6-8 — skelet, spieren, bloed, organen, Schijf van Vijf, gezonde gewoontes. Toets-onderdeel wereldoriëntatie. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
@@ -5042,7 +5042,7 @@
   {
     "id": "maten-eenheden",
     "file": "./matenEenheden.js",
-    "title": "Maten en eenheden — Cito groep 7-8",
+    "title": "Maten en eenheden — Doorstroomtoets groep 7-8",
     "subject": "rekenen",
     "level": "groep6-8",
     "emoji": "📏",
@@ -5062,7 +5062,7 @@
       "liter",
       "milliliter"
     ],
-    "intro": "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Ci",
+    "intro": "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Doorstroomtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in C",
     "stepCount": 8,
     "checkCount": 42,
     "chapterCount": 7,
@@ -5071,7 +5071,7 @@
   {
     "id": "maten-omtrek-oppervlakte-po",
     "file": "./matenOmtrekOppervlaktePo.js",
-    "title": "Maten + Omtrek + Oppervlakte + Inhoud (Cito groep 7-8)",
+    "title": "Maten + Omtrek + Oppervlakte + Inhoud (Doorstroomtoets groep 7-8)",
     "subject": "rekenen",
     "level": "groep6-8",
     "emoji": "📏",
@@ -5091,7 +5091,7 @@
       "omtrek",
       "oppervlakte"
     ],
-    "intro": "Cito-meetkunde voor Doorstroomtoets — lengte-maten omrekenen (km/m/cm/mm), omtrek + oppervlakte (rechthoek, vierkant, driehoek, cirkel), inhoud (kubus, balk, cilinder), schaal + praktijksommen. 5 stap",
+    "intro": "Toets-meetkunde voor Doorstroomtoets — lengte-maten omrekenen (km/m/cm/mm), omtrek + oppervlakte (rechthoek, vierkant, driehoek, cirkel), inhoud (kubus, balk, cilinder), schaal + praktijksommen. 5 sta",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -5178,7 +5178,7 @@
       "aquarium",
       "zwembad"
     ],
-    "intro": "Volume voor groep 6-8 — wat volume is, kubus + balk berekenen, liters/cm³/m³ omrekenen, Cito-praktijksommen met zwembad, aquarium en doos. ~15 min.",
+    "intro": "Volume voor groep 6-8 — wat volume is, kubus + balk berekenen, liters/cm³/m³ omrekenen, Toets-praktijksommen met zwembad, aquarium en doos. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
@@ -5451,7 +5451,7 @@
   {
     "id": "nederlandse-kunstenaars-po",
     "file": "./nederlandseKunstenaarsPo.js",
-    "title": "Nederlandse kunstenaars (Cito groep 6-8)",
+    "title": "Nederlandse kunstenaars (Doorstroomtoets groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
     "emoji": "🎨",
@@ -5471,7 +5471,7 @@
       "Zonnebloemen",
       "Sterrennacht"
     ],
-    "intro": "Nederlandse kunstenaars voor Cito groep 6-8 — Rembrandt (Nachtwacht) + Vermeer (Meisje met Parel) + Gouden Eeuw (Jan Steen/Hals) + Van Gogh (Zonnebloemen/Sterrennacht) + Mondriaan + De Stijl (Rietveld",
+    "intro": "Nederlandse kunstenaars voor Doorstroomtoets groep 6-8 — Rembrandt (Nachtwacht) + Vermeer (Meisje met Parel) + Gouden Eeuw (Jan Steen/Hals) + Van Gogh (Zonnebloemen/Sterrennacht) + Mondriaan + De Stij",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -5532,7 +5532,7 @@
   {
     "id": "negatieve-getallen-po",
     "file": "./negatieveGetallenPo.js",
-    "title": "Negatieve getallen — Cito groep 5-8",
+    "title": "Negatieve getallen — Doorstroomtoets groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
     "emoji": "🌡️",
@@ -5616,7 +5616,7 @@
   {
     "id": "olympische-spelen-po",
     "file": "./olympischeSpelenPo.js",
-    "title": "Olympische Spelen + sport (Cito groep 6-8)",
+    "title": "Olympische Spelen + sport (Doorstroomtoets groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
     "emoji": "🥇",
@@ -5636,7 +5636,7 @@
       "Femke Bol",
       "Sifan Hassan"
     ],
-    "intro": "Olympische Spelen voor Cito groep 6-8 — geschiedenis (Olympia → Athene 1896 → Parijs 2024) + 5 ringen + motto + sport-categorieën (atletiek/water/bal/wintersport) + medailles + Paralympics + NL-helden",
+    "intro": "Olympische Spelen voor Doorstroomtoets groep 6-8 — geschiedenis (Olympia → Athene 1896 → Parijs 2024) + 5 ringen + motto + sport-categorieën (atletiek/water/bal/wintersport) + medailles + Paralympics ",
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
@@ -5748,7 +5748,7 @@
   {
     "id": "ontdekkingsreizen-po",
     "file": "./ontdekkingsreizenPo.js",
-    "title": "Ontdekkingsreizen (Cito groep 6-8)",
+    "title": "Ontdekkingsreizen (Doorstroomtoets groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
     "emoji": "🧭",
@@ -5768,7 +5768,7 @@
       "Nova Zembla",
       "VOC"
     ],
-    "intro": "Ontdekkingsreizen voor Cito groep 6-8 — waarom op reis (specerijen, goud) + Columbus 1492 + Vasco da Gama + Magellan + slavenhandel + NL-ontdekkers (Tasman, Hudson, Barentsz, Roggeveen) + VOC + Nieuw-",
+    "intro": "Ontdekkingsreizen voor Doorstroomtoets groep 6-8 — waarom op reis (specerijen, goud) + Columbus 1492 + Vasco da Gama + Magellan + slavenhandel + NL-ontdekkers (Tasman, Hudson, Barentsz, Roggeveen) + V",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -5791,7 +5791,7 @@
       "m² cm² conversie",
       "praktijkvraagstuk meten"
     ],
-    "intro": "18 vragen Cito-rekenen groep 6-8: verschil omtrek vs oppervlakte, rechthoek + vierkant + driehoek + cirkel, eenheid-conversies (1 m² = 10.000 cm²), praktijkvraagstukken (tuin met vijver, pizza, plinte",
+    "intro": "18 vragen Toets-rekenen groep 6-8: verschil omtrek vs oppervlakte, rechthoek + vierkant + driehoek + cirkel, eenheid-conversies (1 m² = 10.000 cm²), praktijkvraagstukken (tuin met vijver, pizza, plint",
     "stepCount": 6,
     "checkCount": 26,
     "chapterCount": 4,
@@ -5858,7 +5858,7 @@
   {
     "id": "oudheid-egyptenaren-grieken-romeinen-po",
     "file": "./oudheidEgyptiansGriekenPo.js",
-    "title": "Oudheid — Egyptenaren + Grieken + Romeinen (Cito groep 6-8)",
+    "title": "Oudheid — Egyptenaren + Grieken + Romeinen (Doorstroomtoets groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
     "emoji": "🏺",
@@ -5878,7 +5878,7 @@
       "Grieken",
       "Athene"
     ],
-    "intro": "Oudheid voor Cito groep 6-8 — Egyptenaren (Nijl/farao's/Toetanchamon/piramides/mummies/hiëroglyfen + Rosetta-steen) + Grieken (Athene democratie 508 v.Chr./Socrates-Plato-Aristoteles/Olympische Spelen",
+    "intro": "Oudheid voor Doorstroomtoets groep 6-8 — Egyptenaren (Nijl/farao's/Toetanchamon/piramides/mummies/hiëroglyfen + Rosetta-steen) + Grieken (Athene democratie 508 v.Chr./Socrates-Plato-Aristoteles/Olympi",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -6275,7 +6275,7 @@
   {
     "id": "politiek-democratie-po",
     "file": "./politiekDemocratiePo.js",
-    "title": "Politiek + democratie (Cito groep 6-8)",
+    "title": "Politiek + democratie (Doorstroomtoets groep 6-8)",
     "subject": "geschiedenis",
     "level": "groep6-8",
     "emoji": "🗳️",
@@ -6357,7 +6357,7 @@
   {
     "id": "procenten-po",
     "file": "./procentenPo.js",
-    "title": "Procenten — Cito groep 5-8",
+    "title": "Procenten — Doorstroomtoets groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
     "emoji": "💯",
@@ -6374,7 +6374,7 @@
       "duurder",
       "verhouding"
     ],
-    "intro": "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Cito-stijl praktijksommen. ~15 min.",
+    "intro": "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 5,
@@ -6551,7 +6551,7 @@
   {
     "id": "recyclen-afval-po",
     "file": "./recyclenAfvalPo.js",
-    "title": "Recyclen + afval + duurzaam (Cito groep 6-8)",
+    "title": "Recyclen + afval + duurzaam (Doorstroomtoets groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
     "emoji": "♻️",
@@ -6571,7 +6571,7 @@
       "plastic",
       "plastic-soup"
     ],
-    "intro": "Recyclen voor Cito groep 6-8 — afval-soorten (GFT/PMD/glas/papier/restafval) + scheiden (NL 64% recycle, EU-top) + statiegeld + Ladder van Lansink (voorkomen→hergebruiken→recyclen) + circulaire econom",
+    "intro": "Recyclen voor Doorstroomtoets groep 6-8 — afval-soorten (GFT/PMD/glas/papier/restafval) + scheiden (NL 64% recycle, EU-top) + statiegeld + Ladder van Lansink (voorkomen→hergebruiken→recyclen) + circul",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -6580,7 +6580,7 @@
   {
     "id": "redactiesommen-pad",
     "file": "./redactiesommen.js",
-    "title": "Redactiesommen — Cito groep 5-8",
+    "title": "Redactiesommen — Doorstroomtoets groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
     "emoji": "📖",
@@ -6732,7 +6732,7 @@
   {
     "id": "ruimtevaart-po",
     "file": "./ruimtevaartPo.js",
-    "title": "Ruimtevaart (Cito groep 6-8)",
+    "title": "Ruimtevaart (Doorstroomtoets groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
     "emoji": "🚀",
@@ -6752,7 +6752,7 @@
       "Apollo 13",
       "Joeri Gagarin"
     ],
-    "intro": "Ruimtevaart voor Cito groep 6-8 — hoe raket werkt (Newton's 3e wet, brandstof, lanceerlocaties) + maanlanding Apollo 11 (Armstrong/Aldrin 1969) + ISS (sinds 1998, André Kuipers) + Mars-rovers + SpaceX",
+    "intro": "Ruimtevaart voor Doorstroomtoets groep 6-8 — hoe raket werkt (Newton's 3e wet, brandstof, lanceerlocaties) + maanlanding Apollo 11 (Armstrong/Aldrin 1969) + ISS (sinds 1998, André Kuipers) + Mars-rove",
     "stepCount": 4,
     "checkCount": 24,
     "chapterCount": 4,
@@ -6777,7 +6777,7 @@
   {
     "id": "samenvatten-hoofdgedachte-po",
     "file": "./samenvattenHoofdgedachtePo.js",
-    "title": "Samenvatten en hoofdgedachte — Cito groep 5-8",
+    "title": "Samenvatten en hoofdgedachte — Doorstroomtoets groep 5-8",
     "subject": "begrijpend-lezen",
     "level": "groep5-8",
     "emoji": "💭",
@@ -6795,7 +6795,7 @@
       "studievaardigheden",
       "tekst"
     ],
-    "intro": "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Cito-stijl. ~12 min.",
+    "intro": "Hoofdgedachte vinden, hoofd/bijzaken scheiden, samenvatting maken. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -6820,7 +6820,7 @@
   {
     "id": "schatten-afronden",
     "file": "./schattenAfronden.js",
-    "title": "Schatten en afronden — Cito groep 5-8",
+    "title": "Schatten en afronden — Doorstroomtoets groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
     "emoji": "🤔",
@@ -6874,7 +6874,7 @@
   {
     "id": "schemas-stappenplannen-po",
     "file": "./schemasStappenplannenPo.js",
-    "title": "Schema's en stappenplannen — Cito groep 5-8",
+    "title": "Schema's en stappenplannen — Doorstroomtoets groep 5-8",
     "subject": "taal",
     "level": "groep5-8",
     "emoji": "📋",
@@ -6891,7 +6891,7 @@
       "informatiebronnen",
       "tabel"
     ],
-    "intro": "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Cito-stijl. ~12 min.",
+    "intro": "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -6929,7 +6929,7 @@
   {
     "id": "schrijven-teksten-po",
     "file": "./schrijvenTekstenPo.js",
-    "title": "Schrijven van teksten (Cito groep 6-8)",
+    "title": "Schrijven van teksten (Doorstroomtoets groep 6-8)",
     "subject": "taal",
     "level": "groep6-8",
     "emoji": "📝",
@@ -6949,7 +6949,7 @@
       "formeel",
       "informeel"
     ],
-    "intro": "Schrijven voor de Cito-Doorstroomtoets — tekstdoelen, brief/e-mail, samenvatten, opinie + drogredenen. 5 stappen × ~5 vragen. ~15 min.",
+    "intro": "Schrijven voor de Doorstroomtoets — tekstdoelen, brief/e-mail, samenvatten, opinie + drogredenen. 5 stappen × ~5 vragen. ~15 min.",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -7103,7 +7103,7 @@
   {
     "id": "spelling-overige-po",
     "file": "./spellingOverigePo.js",
-    "title": "Spelling overige — Cito groep 5-8",
+    "title": "Spelling overige — Doorstroomtoets groep 5-8",
     "subject": "spelling",
     "level": "groep5-8",
     "emoji": "✒️",
@@ -7123,7 +7123,7 @@
       "tropisch",
       "mogelijk"
     ],
-    "intro": "-isch / -lijk, leestekens, samenstellingen, hoofdletters. Cito-stijl woordtoets. ~12 min.",
+    "intro": "-isch / -lijk, leestekens, samenstellingen, hoofdletters. Doorstroomtoets-stijl woordtoets. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -7132,12 +7132,12 @@
   {
     "id": "spreekwoorden-uitdrukkingen-po",
     "file": "./spreekwoordenUitdrukkingenPo.js",
-    "title": "Spreekwoorden + uitdrukkingen (Cito groep 6-8)",
+    "title": "Spreekwoorden + uitdrukkingen (Doorstroomtoets groep 6-8)",
     "subject": "taal",
     "level": "groep6-8",
     "emoji": "💬",
     "referentieNiveau": "1F",
-    "sloThema": "Taal — figuurlijk taalgebruik / Cito",
+    "sloThema": "Taal — figuurlijk taalgebruik / Doorstroomtoets",
     "triggerKeywords": [
       "spreekwoord",
       "spreekwoorden",
@@ -7151,7 +7151,7 @@
       "cito-taal",
       "doorstroomtoets-taal"
     ],
-    "intro": "Spreekwoorden + uitdrukkingen voor Cito groep 6-8 — letterlijk vs figuurlijk + top-30 uitdrukkingen (lichaam/dier/eten) + top-20 spreekwoorden + matching-strategie (Cito-vraag) + valkuilen. ~15 min.",
+    "intro": "Spreekwoorden + uitdrukkingen voor Doorstroomtoets groep 6-8 — letterlijk vs figuurlijk + top-30 uitdrukkingen (lichaam/dier/eten) + top-20 spreekwoorden + matching-strategie (toetsvraag) + valkuilen.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
@@ -7482,7 +7482,7 @@
       "aflezen",
       "verschil"
     ],
-    "intro": "Tabellen en grafieken voor Doorstroomtoets groep 6-8 (voorheen Cito-eindtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdrac",
+    "intro": "Tabellen en grafieken voor Doorstroomtoets groep 6-8 (voorheen Doorstroomtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdra",
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 5,
@@ -7660,7 +7660,7 @@
   {
     "id": "tijd-snelheid-afstand-po",
     "file": "./tijdSnelheidAfstandPo.js",
-    "title": "Tijd + Snelheid + Afstand (Cito groep 7-8)",
+    "title": "Tijd + Snelheid + Afstand (Doorstroomtoets groep 7-8)",
     "subject": "rekenen",
     "level": "groep6-8",
     "emoji": "🏃",
@@ -7680,7 +7680,7 @@
       "V=S/T",
       "T=S/V"
     ],
-    "intro": "Tijd + snelheid + afstand voor Cito-Doorstroomtoets — tijdseenheden + omrekenen, snelheid km/h ↔ m/s, S=V·T-formule, snelheid + tijd berekenen, praktijksommen (reistijden, marathon, inhalen). 5 stappe",
+    "intro": "Tijd + snelheid + afstand voor Doorstroomtoets — tijdseenheden + omrekenen, snelheid km/h ↔ m/s, S=V·T-formule, snelheid + tijd berekenen, praktijksommen (reistijden, marathon, inhalen). 5 stappen × 5",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -7767,7 +7767,7 @@
       "WO1",
       "WO2"
     ],
-    "intro": "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Cito-doorstroomtoets-stof wil dekken.",
+    "intro": "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Toets-doorstroomtoets-stof wil dekken.",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -7834,7 +7834,7 @@
       "rivier europa",
       "bergen europa"
     ],
-    "intro": "18 vragen Cito-stof groep 7-8: hoofdsteden per windrichting, grote zeeën + rivieren, bergketens. Aansluiting op topografie-nederland + europese-unie-po.",
+    "intro": "18 vragen toetsstof groep 7-8: hoofdsteden per windrichting, grote zeeën + rivieren, bergketens. Aansluiting op topografie-nederland + europese-unie-po.",
     "stepCount": 6,
     "checkCount": 18,
     "chapterCount": 3,
@@ -7863,7 +7863,7 @@
       "noord-holland",
       "zuid-holland"
     ],
-    "intro": "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Wadden­eilanden, Deltawerken en de buurlanden. Cito-relevant voor groep 7-8.",
+    "intro": "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Wadden­eilanden, Deltawerken en de buurlanden. toets-relevant voor groep 7-8.",
     "stepCount": 9,
     "checkCount": 40,
     "chapterCount": 5,
@@ -8112,7 +8112,7 @@
   {
     "id": "verhoudingen-po",
     "file": "./verhoudingenPo.js",
-    "title": "Verhoudingen — Cito groep 5-8",
+    "title": "Verhoudingen — Doorstroomtoets groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
     "emoji": "⚖️",
@@ -8129,7 +8129,7 @@
       "mengsel",
       "omrekenen"
     ],
-    "intro": "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Cito-stijl praktijksommen. ~15 min.",
+    "intro": "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Doorstroomtoets-stijl praktijksommen. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 5,
@@ -8167,7 +8167,7 @@
   {
     "id": "verkeersregels-veiligheid-po",
     "file": "./verkeersregelsVeiligheidPo.js",
-    "title": "Verkeersregels + veiligheid (Cito groep 6-8)",
+    "title": "Verkeersregels + veiligheid (Doorstroomtoets groep 6-8)",
     "subject": "wereldorientatie",
     "level": "groep6-8",
     "emoji": "🚦",
@@ -8187,7 +8187,7 @@
       "fietsverlichting",
       "helm"
     ],
-    "intro": "Verkeersregels voor Cito groep 6-8 + verkeersexamen groep 7 — verkeersborden (verbod/gebod/waarschuwing/info) + lichten + fiets-uitrusting + regels (mobiel verboden, alcohol grens) + voorrang (rechts/",
+    "intro": "Verkeersregels voor Doorstroomtoets groep 6-8 + verkeersexamen groep 7 — verkeersborden (verbod/gebod/waarschuwing/info) + lichten + fiets-uitrusting + regels (mobiel verboden, alcohol grens) + voorra",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -8297,7 +8297,7 @@
   {
     "id": "vlakke-figuren-po",
     "file": "./vlakkeFigurenPo.js",
-    "title": "Vlakke figuren — Cito groep 5-8",
+    "title": "Vlakke figuren — Doorstroomtoets groep 5-8",
     "subject": "rekenen",
     "level": "groep5-8",
     "emoji": "⬜",
@@ -8346,7 +8346,7 @@
       "2+3*4",
       "exponenten"
     ],
-    "intro": "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. Cito-relevant voor groep 5-7.",
+    "intro": "Wat doe je eerst — × of +? De volgorde-regel HMVDOA: Haakjes, Machten, ×÷, +−. Met haakjes om volgorde te forceren, machten als kwadraat, en de bekende valkuilen. toets-relevant voor groep 5-7.",
     "stepCount": 7,
     "checkCount": 40,
     "chapterCount": 4,
@@ -8520,7 +8520,7 @@
       "molen",
       "gemaal"
     ],
-    "intro": "Nederland en water voor groep 6-8 — onder zeeniveau, dijken+duinen, polders, Watersnoodramp 1953, Deltawerken. Cito-onderdeel wereldoriëntatie. ~15 min.",
+    "intro": "Nederland en water voor groep 6-8 — onder zeeniveau, dijken+duinen, polders, Watersnoodramp 1953, Deltawerken. Toets-onderdeel wereldoriëntatie. ~15 min.",
     "stepCount": 6,
     "checkCount": 40,
     "chapterCount": 6,
@@ -8529,7 +8529,7 @@
   {
     "id": "waterkringloop-po",
     "file": "./waterkringloopPo.js",
-    "title": "Waterkringloop (Cito groep 6-8)",
+    "title": "Waterkringloop (Doorstroomtoets groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
     "emoji": "💧",
@@ -8549,7 +8549,7 @@
       "regenboog",
       "wolken"
     ],
-    "intro": "Waterkringloop voor Cito groep 6-8 — 4 fasen (verdamping/condensatie/neerslag/afstroming) + soorten wolken (cumulus/cirrus/cumulonimbus) + soorten neerslag (regen/sneeuw/hagel/ijzel/mist/dauw/regenboo",
+    "intro": "Waterkringloop voor Doorstroomtoets groep 6-8 — 4 fasen (verdamping/condensatie/neerslag/afstroming) + soorten wolken (cumulus/cirrus/cumulonimbus) + soorten neerslag (regen/sneeuw/hagel/ijzel/mist/da",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -8558,7 +8558,7 @@
   {
     "id": "weersvoorspelling-po",
     "file": "./weersvoorspellingPo.js",
-    "title": "Weer + weersvoorspelling (Cito groep 6-8)",
+    "title": "Weer + weersvoorspelling (Doorstroomtoets groep 6-8)",
     "subject": "natuur",
     "level": "groep6-8",
     "emoji": "🌤️",
@@ -8578,7 +8578,7 @@
       "isobaren",
       "onweer"
     ],
-    "intro": "Weer voor Cito groep 6-8 — wat is weer (temperatuur/neerslag/wind/druk) + wind + luchtdruk + onweer/bliksem + KNMI in De Bilt + voorspellen via radar/satelliet/computermodellen + weerkaart-symbolen + ",
+    "intro": "Weer voor Doorstroomtoets groep 6-8 — wat is weer (temperatuur/neerslag/wind/druk) + wind + luchtdruk + onweer/bliksem + KNMI in De Bilt + voorspellen via radar/satelliet/computermodellen + weerkaart-",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -8616,7 +8616,7 @@
   {
     "id": "werelddelen-landen-po",
     "file": "./werelddelenLandenPo.js",
-    "title": "Werelddelen + landen (Cito groep 6-8)",
+    "title": "Werelddelen + landen (Doorstroomtoets groep 6-8)",
     "subject": "aardrijkskunde",
     "level": "groep6-8",
     "emoji": "🌍",
@@ -8636,7 +8636,7 @@
       "oceaan",
       "Pacific"
     ],
-    "intro": "Werelddelen + landen voor Cito groep 6-8 — 7 continenten + 5 oceanen + grote landen + hoofdsteden (Frankrijk-Parijs, Brazilië-Brasília etc.) + bekende plekken (Everest, Sahara, Nijl, Amazone, Great Wa",
+    "intro": "Werelddelen + landen voor Doorstroomtoets groep 6-8 — 7 continenten + 5 oceanen + grote landen + hoofdsteden (Frankrijk-Parijs, Brazilië-Brasília etc.) + bekende plekken (Everest, Sahara, Nijl, Amazon",
     "stepCount": 4,
     "checkCount": 40,
     "chapterCount": 4,
@@ -8703,16 +8703,16 @@
   {
     "id": "wereldorientatie-mix-po",
     "file": "./wereldorientatieMixPo.js",
-    "title": "Wereldoriëntatie mix (groep 7-8 Cito-stijl)",
+    "title": "Wereldoriëntatie mix (groep 7-8 Doorstroomtoets-stijl)",
     "subject": "wereldorientatie",
     "level": "groep7-8",
     "emoji": "🌍",
     "referentieNiveau": "po-doorstroomtoets-wereldorientatie",
-    "sloThema": "Wereldoriëntatie groep 7-8 — Cito-stijl gemixed eindtoets",
+    "sloThema": "Wereldoriëntatie groep 7-8 — Doorstroomtoets-stijl gemixed eindtoets",
     "triggerKeywords": [
       "wereldoriëntatie",
       "wereld-oriëntatie",
-      "Cito-eindtoets",
+      "Doorstroomtoets",
       "Doorstroomtoets wereldoriëntatie",
       "tijdvakken NL",
       "10 tijdvakken",
@@ -8723,7 +8723,7 @@
       "Willem van Oranje",
       "Tachtigjarige Oorlog"
     ],
-    "intro": "Wereldoriëntatie groep 7-8 mixed — Cito-eindtoets-stijl. Geschiedenis (10 tijdvakken NL + WO2 + Anne Frank + Watersnood 1953), aardrijkskunde (12 provincies + 27 EU + werelddelen + klimaat), natuur + ",
+    "intro": "Wereldoriëntatie groep 7-8 mixed — Doorstroomtoets-stijl. Geschiedenis (10 tijdvakken NL + WO2 + Anne Frank + Watersnood 1953), aardrijkskunde (12 provincies + 27 EU + werelddelen + klimaat), natuur +",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -8748,7 +8748,7 @@
       "heilige boeken",
       "monotheisme polytheisme"
     ],
-    "intro": "18 vragen Cito-stof groep 7-8 over de 5 wereldreligies: christendom, islam, hindoeïsme, boeddhisme, jodendom. Heilige boeken, gebouwen, symbolen, feesten. Neutraal + feitelijk.",
+    "intro": "18 vragen toetsstof groep 7-8 over de 5 wereldreligies: christendom, islam, hindoeïsme, boeddhisme, jodendom. Heilige boeken, gebouwen, symbolen, feesten. Neutraal + feitelijk.",
     "stepCount": 6,
     "checkCount": 18,
     "chapterCount": 4,
@@ -8757,7 +8757,7 @@
   {
     "id": "werkwoord-tijden-po",
     "file": "./werkwoordTijdenPo.js",
-    "title": "Werkwoordsvervoeging T/V — Cito groep 7-8",
+    "title": "Werkwoordsvervoeging T/V — Doorstroomtoets groep 7-8",
     "subject": "taal",
     "level": "groep5-8",
     "emoji": "📝",
@@ -9042,7 +9042,7 @@
   {
     "id": "woordenschat-po",
     "file": "./woordenschatPo.js",
-    "title": "Woordenschat — Cito groep 5-8",
+    "title": "Woordenschat — Doorstroomtoets groep 5-8",
     "subject": "taal",
     "level": "groep5-8",
     "emoji": "📚",
@@ -9058,7 +9058,7 @@
       "woord",
       "leeswoord"
     ],
-    "intro": "Woordenschat voor groep 5-8: synoniemen (zelfde betekenis), antoniemen (tegenstelling), betekenis in zin via context. Cito-stijl. ~12 min.",
+    "intro": "Woordenschat voor groep 5-8: synoniemen (zelfde betekenis), antoniemen (tegenstelling), betekenis in zin via context. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,
@@ -9096,7 +9096,7 @@
   {
     "id": "woordsoorten-po",
     "file": "./woordsoortenPo.js",
-    "title": "Woordsoorten herkennen — Cito groep 5-8",
+    "title": "Woordsoorten herkennen — Doorstroomtoets groep 5-8",
     "subject": "taal",
     "level": "groep5-8",
     "emoji": "🔤",
@@ -9113,7 +9113,7 @@
       "bezittelijk",
       "aanwijzend"
     ],
-    "intro": "Zelfstandig naamwoord, werkwoord, bijvoeglijk naamwoord, lidwoord, voornaamwoord. Cito-stijl. ~12 min.",
+    "intro": "Zelfstandig naamwoord, werkwoord, bijvoeglijk naamwoord, lidwoord, voornaamwoord. Doorstroomtoets-stijl. ~12 min.",
     "stepCount": 5,
     "checkCount": 40,
     "chapterCount": 5,

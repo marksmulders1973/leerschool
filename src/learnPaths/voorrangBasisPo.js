@@ -5,7 +5,7 @@
 //
 // Mark wens 2026-05-19: simpele + meest voorkomende, met plaatje.
 // USP: Squla stopt bij groep 5, Junior Einstein is betaald — Leerkwartier
-// biedt dit gratis met uitlegPad-3-niveau in dezelfde app als Cito-stof.
+// biedt dit gratis met uitlegPad-3-niveau in dezelfde app als toetsstof.
 
 // ── SVG-helpers ─────────────────────────────────────────────
 // Compacte top-down kruispunt-tekeningen, mobiel-vriendelijk.
@@ -223,7 +223,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld — de andere weg heeft voorrang.", "Niet — wel wachten, geen uitstappen.", "Toeteren is geen voorrangsregel."],
         uitlegPad: {
           stappen: [{ titel: "Haaientanden = jij wacht", tekst: "**Haaientanden** = driehoekjes die naar jou wijzen op de weg. Betekenen: **jij moet voorrang geven**. De andere weg is voorrangsweg. Hetzelfde als bord B6." }],
-          theorie: "Cito-VVN-favoriet. Ezelsbruggetje: haai 'eet jou op' = jij moet wachten.",
+          theorie: "VVN-favoriet. Ezelsbruggetje: haai 'eet jou op' = jij moet wachten.",
           niveaus: { basis: "Wachten.", simpeler: "Haaientanden = jij wacht", nogSimpeler: "Wachten" },
         },
       },

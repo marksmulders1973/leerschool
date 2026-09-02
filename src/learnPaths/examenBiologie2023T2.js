@@ -8,7 +8,7 @@ const BRON_LINK = "https://www.examenblad.nl/2023/vmbo-gl/documenten/cse-2/gt-01
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc biologie: zoek SLEUTELWOORD + match definitie. Voortplanting plant? → zowel stuifmeel (geslachtelijk) als wortelstokken (ongeslachtelijk). Bouwstof/brandstof onderscheid: eiwit=bouw, suiker=brandstof.",
+  theorie: "Toets-truc biologie: zoek SLEUTELWOORD + match definitie. Voortplanting plant? → zowel stuifmeel (geslachtelijk) als wortelstokken (ongeslachtelijk). Bouwstof/brandstof onderscheid: eiwit=bouw, suiker=brandstof.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

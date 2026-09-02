@@ -1,5 +1,5 @@
 // Leerpad: Gemiddelde / modus / mediaan — groep 7-8 PO.
-// Cito-onderdeel statistiek/verwerken informatie. Referentieniveau 1F.
+// Toets-onderdeel statistiek/verwerken informatie. Referentieniveau 1F.
 // 6 stappen met uitlegPad.
 
 const COLORS = {
@@ -23,7 +23,7 @@ const chapters = [
   { letter: "C", title: "Modus", emoji: "🏆", from: 2, to: 2 },
   { letter: "D", title: "Mediaan", emoji: "🎯", from: 3, to: 3 },
   { letter: "E", title: "Wanneer wat gebruiken?", emoji: "🤔", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏁", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏁", from: 5, to: 5 },
 ];
 
 function getalRijSvg(getallen, gemiddelde, label) {
@@ -137,7 +137,7 @@ const steps = [
   {
     title: "Gemiddelde uitrekenen — som ÷ aantal",
     explanation:
-      "**Formule** *(uit je hoofd leren!)*:\n\n**Gemiddelde = som van alle getallen ÷ aantal getallen**\n\n**Stappenplan**:\n1. **Tel alle getallen op** (de som).\n2. **Tel hoeveel getallen** je hebt (het aantal).\n3. **Deel** de som door het aantal.\n\n**Voorbeeld 1 — toets-cijfers**:\nLisa heeft 4 toetsen: **6, 7, 8, 7**.\n• Stap 1: som = 6 + 7 + 8 + 7 = **28**.\n• Stap 2: aantal = **4 toetsen**.\n• Stap 3: gemiddelde = 28 ÷ 4 = **7**.\n→ Gemiddeld cijfer Lisa = **7**.\n\n**Voorbeeld 2 — temperatuur**:\nWeek temperaturen: 18°C, 20°C, 22°C, 19°C, 21°C *(5 dagen)*.\n• Som = 18 + 20 + 22 + 19 + 21 = **100 °C**.\n• Aantal = **5**.\n• Gemiddelde = 100 ÷ 5 = **20 °C**.\n\n**Voorbeeld 3 — zakgeld**:\n4 vrienden krijgen €5, €4, €6, €5 per week.\n• Som = €5 + €4 + €6 + €5 = **€20**.\n• Aantal = **4**.\n• Gemiddelde = €20 ÷ 4 = **€5 per persoon**.\n\n**Cito-truc — check je antwoord**:\nJe gemiddelde **moet tussen het laagste en hoogste getal liggen**. Als je 6/7/8/7 hebt en je antwoord is 12 → fout, want 12 is hoger dan alle getallen.",
+      "**Formule** *(uit je hoofd leren!)*:\n\n**Gemiddelde = som van alle getallen ÷ aantal getallen**\n\n**Stappenplan**:\n1. **Tel alle getallen op** (de som).\n2. **Tel hoeveel getallen** je hebt (het aantal).\n3. **Deel** de som door het aantal.\n\n**Voorbeeld 1 — toets-cijfers**:\nLisa heeft 4 toetsen: **6, 7, 8, 7**.\n• Stap 1: som = 6 + 7 + 8 + 7 = **28**.\n• Stap 2: aantal = **4 toetsen**.\n• Stap 3: gemiddelde = 28 ÷ 4 = **7**.\n→ Gemiddeld cijfer Lisa = **7**.\n\n**Voorbeeld 2 — temperatuur**:\nWeek temperaturen: 18°C, 20°C, 22°C, 19°C, 21°C *(5 dagen)*.\n• Som = 18 + 20 + 22 + 19 + 21 = **100 °C**.\n• Aantal = **5**.\n• Gemiddelde = 100 ÷ 5 = **20 °C**.\n\n**Voorbeeld 3 — zakgeld**:\n4 vrienden krijgen €5, €4, €6, €5 per week.\n• Som = €5 + €4 + €6 + €5 = **€20**.\n• Aantal = **4**.\n• Gemiddelde = €20 ÷ 4 = **€5 per persoon**.\n\n**Toets-truc — check je antwoord**:\nJe gemiddelde **moet tussen het laagste en hoogste getal liggen**. Als je 6/7/8/7 hebt en je antwoord is 12 → fout, want 12 is hoger dan alle getallen.",
     svg: getalRijSvg([6, 7, 8, 7], 7, "Cijfers Lisa — gem 7"),
     checks: [
       {
@@ -172,7 +172,7 @@ const steps = [
             { titel: "Delen", tekst: "Gemiddelde = 100 ÷ 5 = **20 °C**." },
           ],
           woorden: [{ woord: "gemiddelde", uitleg: "Som van alle waarden gedeeld door aantal waarden." }],
-          theorie: "Cito-check: gemiddelde 20 ligt tussen laagste 18 en hoogste 22 → klopt qua range.",
+          theorie: "Toets-check: gemiddelde 20 ligt tussen laagste 18 en hoogste 22 → klopt qua range.",
           voorbeelden: [{ type: "schatten", tekst: "Snelle schatting: alle waarden liggen rond 20. Gemiddelde moet dan ook ~20 zijn." }],
           basiskennis: [{ onderwerp: "Eenheid meenemen", uitleg: "Het antwoord is een temperatuur, dus '°C' erbij." }],
           niveaus: {
@@ -214,7 +214,7 @@ const steps = [
             { titel: "Delen", tekst: "Gemiddelde = 45 ÷ 5 = **9 km per keer**." },
           ],
           woorden: [{ woord: "per keer", uitleg: "Per gerend rondje — dus we delen door aantal rondjes." }],
-          theorie: "Cito-truc: schatten. Meeste waarden zijn rond 9. Gemiddelde moet ook ~9 zijn.",
+          theorie: "Toets-truc: schatten. Meeste waarden zijn rond 9. Gemiddelde moet ook ~9 zijn.",
           voorbeelden: [{ type: "check", tekst: "5 × 9 = 45 ✓ — de som klopt." }],
           basiskennis: [{ onderwerp: "Tussen min en max", uitleg: "9 ligt tussen 8 (laagst) en 10 (hoogst) → klopt." }],
           niveaus: {
@@ -231,7 +231,7 @@ const steps = [
   {
     title: "Modus — het getal dat het meest voorkomt",
     explanation:
-      "De **modus** is het **getal dat het vaakst voorkomt** in een rijtje.\n\n**Voorbeeld**: 3, 5, 4, 5, 6, 5, 7.\n• Hoe vaak komt elk getal voor?\n  - 3 → 1×\n  - 4 → 1×\n  - 5 → **3×** ← winnaar!\n  - 6 → 1×\n  - 7 → 1×\n• Modus = **5**.\n\n**Cito-truc — tellen met streepjes**:\nLeg een streepje per getal. De rij met de meeste streepjes = modus.\n\nVoorbeeld kleur-stemmen klas:\n• rood ||| (3)\n• blauw |||||||| (8)\n• groen || (2)\n• geel ||| (3)\n\n→ Modus = **blauw** *(meest gestemd)*.\n\n**Speciale gevallen**:\n• **2 modussen**: als 2 getallen even vaak voorkomen, zijn beide modussen.\n• **Geen modus**: als elk getal maar 1× voorkomt, is er geen modus.\n\n**Wanneer is modus handig?**\nBij **categorieën** zoals favoriete sport, kleur, dier. Bij **vaak voorkomende getallen** zoals schoenmaat (welke maat verkoopt het meest?).\n\nGemiddelde werkt niet voor categorieën — je kunt geen 'gemiddelde kleur' uitrekenen. Maar je kunt wel een **modus** (de meeste-gekozen kleur) bepalen.",
+      "De **modus** is het **getal dat het vaakst voorkomt** in een rijtje.\n\n**Voorbeeld**: 3, 5, 4, 5, 6, 5, 7.\n• Hoe vaak komt elk getal voor?\n  - 3 → 1×\n  - 4 → 1×\n  - 5 → **3×** ← winnaar!\n  - 6 → 1×\n  - 7 → 1×\n• Modus = **5**.\n\n**Toets-truc — tellen met streepjes**:\nLeg een streepje per getal. De rij met de meeste streepjes = modus.\n\nVoorbeeld kleur-stemmen klas:\n• rood ||| (3)\n• blauw |||||||| (8)\n• groen || (2)\n• geel ||| (3)\n\n→ Modus = **blauw** *(meest gestemd)*.\n\n**Speciale gevallen**:\n• **2 modussen**: als 2 getallen even vaak voorkomen, zijn beide modussen.\n• **Geen modus**: als elk getal maar 1× voorkomt, is er geen modus.\n\n**Wanneer is modus handig?**\nBij **categorieën** zoals favoriete sport, kleur, dier. Bij **vaak voorkomende getallen** zoals schoenmaat (welke maat verkoopt het meest?).\n\nGemiddelde werkt niet voor categorieën — je kunt geen 'gemiddelde kleur' uitrekenen. Maar je kunt wel een **modus** (de meeste-gekozen kleur) bepalen.",
     svg: modusSvg(),
     checks: [
       {
@@ -246,7 +246,7 @@ const steps = [
           ],
           woorden: [{ woord: "modus", uitleg: "Het vaakst voorkomende getal in een rijtje." }],
           theorie: "Modus ≠ hoogste of laagste. Modus = vaakste. Belangrijk om uit elkaar te houden.",
-          voorbeelden: [{ type: "streepjes", tekst: "Cito-truc: zet een streepje per keer dat een getal voorkomt. Het getal met de meeste streepjes = modus." }],
+          voorbeelden: [{ type: "streepjes", tekst: "Toets-truc: zet een streepje per keer dat een getal voorkomt. Het getal met de meeste streepjes = modus." }],
           basiskennis: [{ onderwerp: "Speciale gevallen", uitleg: "Soms zijn er twee modussen (twee getallen even vaak). Soms is er géén modus (alles 1×)." }],
           niveaus: {
             basis: "5 (komt 3× voor).",
@@ -287,7 +287,7 @@ const steps = [
           ],
           woorden: [{ woord: "modus", uitleg: "Het vaakst voorkomende getal." }],
           theorie: "Bij ongesorteerde rijtjes: maak een tellijst met streepjes.",
-          voorbeelden: [{ type: "stap", tekst: "Cito-truc: streep weg wat je hebt geteld. 6, 7, 8, 7, 6, 7, 5 → 5:1, 6:2, 7:3, 8:1." }],
+          voorbeelden: [{ type: "stap", tekst: "Toets-truc: streep weg wat je hebt geteld. 6, 7, 8, 7, 6, 7, 5 → 5:1, 6:2, 7:3, 8:1." }],
           basiskennis: [{ onderwerp: "Niet hoogste", uitleg: "8 is hoogste maar slechts 1×. Modus is vaakste, niet hoogste." }],
           niveaus: {
             basis: "7 (3×).",
@@ -309,7 +309,7 @@ const steps = [
   {
     title: "Mediaan — het middelste getal",
     explanation:
-      "De **mediaan** is het **middelste getal** als je alles op volgorde zet — van klein naar groot.\n\n**Stappenplan**:\n1. Zet de getallen op **volgorde** *(klein → groot)*.\n2. Pak het **middelste** getal.\n\n**Voorbeeld 1 — oneven aantal**:\nGetallen: 3, 8, 5, 9, 7.\n• Op volgorde: 3, 5, **7**, 8, 9.\n• Middelste *(positie 3 van 5)*: **7**.\n• Mediaan = **7**.\n\n**Voorbeeld 2 — even aantal**:\nGetallen: 4, 6, 8, 10 *(4 getallen)*.\n• Op volgorde: 4, 6, 8, 10.\n• Geen ÉÉN middelste — pak de **2 middelste** en neem hun gemiddelde.\n• Middelste 2: 6 en 8. Gemiddelde = (6+8) ÷ 2 = **7**.\n• Mediaan = **7**.\n\n**Cito-truc**:\n• **Oneven** aantal getallen (3, 5, 7, ...) → er is 1 middelste getal.\n• **Even** aantal getallen (2, 4, 6, ...) → neem gemiddelde van de 2 middelste.\n\n**Mediaan vs gemiddelde — wat is het verschil?**:\n• Gemiddelde gebruikt **alle getallen** (en kan beïnvloed worden door extreme uitschieters).\n• Mediaan kijkt alleen naar het **midden**. Een rare uitschieter heeft minder effect.\n\nVoorbeeld: cijfers 6, 7, 7, 7, **2** *(2 = iemand was ziek)*.\n• Gemiddelde = (6+7+7+7+2) ÷ 5 = 29 ÷ 5 = **5,8**.\n• Mediaan = 6 op volgorde = 2, 6, **7**, 7, 7 → 7.\n• Mediaan (7) geeft een beter beeld van 'normale' klas dan gemiddelde (5,8).",
+      "De **mediaan** is het **middelste getal** als je alles op volgorde zet — van klein naar groot.\n\n**Stappenplan**:\n1. Zet de getallen op **volgorde** *(klein → groot)*.\n2. Pak het **middelste** getal.\n\n**Voorbeeld 1 — oneven aantal**:\nGetallen: 3, 8, 5, 9, 7.\n• Op volgorde: 3, 5, **7**, 8, 9.\n• Middelste *(positie 3 van 5)*: **7**.\n• Mediaan = **7**.\n\n**Voorbeeld 2 — even aantal**:\nGetallen: 4, 6, 8, 10 *(4 getallen)*.\n• Op volgorde: 4, 6, 8, 10.\n• Geen ÉÉN middelste — pak de **2 middelste** en neem hun gemiddelde.\n• Middelste 2: 6 en 8. Gemiddelde = (6+8) ÷ 2 = **7**.\n• Mediaan = **7**.\n\n**Toets-truc**:\n• **Oneven** aantal getallen (3, 5, 7, ...) → er is 1 middelste getal.\n• **Even** aantal getallen (2, 4, 6, ...) → neem gemiddelde van de 2 middelste.\n\n**Mediaan vs gemiddelde — wat is het verschil?**:\n• Gemiddelde gebruikt **alle getallen** (en kan beïnvloed worden door extreme uitschieters).\n• Mediaan kijkt alleen naar het **midden**. Een rare uitschieter heeft minder effect.\n\nVoorbeeld: cijfers 6, 7, 7, 7, **2** *(2 = iemand was ziek)*.\n• Gemiddelde = (6+7+7+7+2) ÷ 5 = 29 ÷ 5 = **5,8**.\n• Mediaan = 6 op volgorde = 2, 6, **7**, 7, 7 → 7.\n• Mediaan (7) geeft een beter beeld van 'normale' klas dan gemiddelde (5,8).",
     svg: mediaanSvg(),
     checks: [
       {
@@ -373,7 +373,7 @@ const steps = [
   {
     title: "Wanneer wat gebruiken? — keuzehulp",
     explanation:
-      "Drie begrippen, drie situaties. **Welke gebruik je waarvoor?**\n\n**1. Gemiddelde** = som ÷ aantal.\n• Gebruik bij: cijfers, lengtes, gewichten, prijzen, temperaturen.\n• Voordeel: gebruikt alle getallen.\n• Nadeel: gevoelig voor uitschieters (extreem hoge of lage waardes).\n\n**2. Modus** = vaakst.\n• Gebruik bij: kleuren, schoenmaten, favoriete dieren, sport-keuzes.\n• Voordeel: werkt ook voor woorden/categorieën.\n• Nadeel: zegt niets over hoe verspreid de groep is.\n\n**3. Mediaan** = middelste op volgorde.\n• Gebruik bij: inkomens, huizenprijzen — overal waar uitschieters zijn.\n• Voordeel: minder gevoelig voor uitschieters.\n• Nadeel: een beetje meer werk (sorteren).\n\n**Cito-tip — herken de woorden in een vraag**:\n• *'gemiddeld'* → bereken gemiddelde.\n• *'meest', 'vaakst'* → modus.\n• *'middelste', 'mediaan'* → mediaan.\n\n**Voorbeeld** *'In een klas van 25 leerlingen is de gemiddelde leeftijd 11 jaar. De meest voorkomende leeftijd (modus) is 12.'*\n• Sommigen zijn dus jonger (lager dan 12) — daarom is gemiddelde 11 en modus 12.\n• Beide kloppen — verschillende dingen meten.",
+      "Drie begrippen, drie situaties. **Welke gebruik je waarvoor?**\n\n**1. Gemiddelde** = som ÷ aantal.\n• Gebruik bij: cijfers, lengtes, gewichten, prijzen, temperaturen.\n• Voordeel: gebruikt alle getallen.\n• Nadeel: gevoelig voor uitschieters (extreem hoge of lage waardes).\n\n**2. Modus** = vaakst.\n• Gebruik bij: kleuren, schoenmaten, favoriete dieren, sport-keuzes.\n• Voordeel: werkt ook voor woorden/categorieën.\n• Nadeel: zegt niets over hoe verspreid de groep is.\n\n**3. Mediaan** = middelste op volgorde.\n• Gebruik bij: inkomens, huizenprijzen — overal waar uitschieters zijn.\n• Voordeel: minder gevoelig voor uitschieters.\n• Nadeel: een beetje meer werk (sorteren).\n\n**Toets-tip — herken de woorden in een vraag**:\n• *'gemiddeld'* → bereken gemiddelde.\n• *'meest', 'vaakst'* → modus.\n• *'middelste', 'mediaan'* → mediaan.\n\n**Voorbeeld** *'In een klas van 25 leerlingen is de gemiddelde leeftijd 11 jaar. De meest voorkomende leeftijd (modus) is 12.'*\n• Sommigen zijn dus jonger (lager dan 12) — daarom is gemiddelde 11 en modus 12.\n• Beide kloppen — verschillende dingen meten.",
     checks: [
       {
         q: "Vraag: *'Welke schoenmaat verkoopt het **meest** in onze winkel?'* Welk begrip?",
@@ -402,11 +402,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — statistiek-mix",
+    title: "Toets-eindopdracht — statistiek-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Verschillende sommen door elkaar — gemiddelde, modus, mediaan.\n\n**Tip**: lees rustig en kijk welk woord in de vraag staat (*gemiddeld* / *meest* / *middelste*). Daar zit de hint.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Verschillende sommen door elkaar — gemiddelde, modus, mediaan.\n\n**Tip**: lees rustig en kijk welk woord in de vraag staat (*gemiddeld* / *meest* / *middelste*). Daar zit de hint.\n\nVeel succes!",
     checks: [
       {
         q: "Cijfers: 7, 8, 9, 6, 5 *(5 toetsen)*. **Gemiddeld**?",

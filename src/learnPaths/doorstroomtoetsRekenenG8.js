@@ -49,7 +49,7 @@ function overzichtSvg() {
 <text x="232" y="157" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">verhaaltjes-sommen</text>
 <text x="232" y="169" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">echte context</text>
 
-<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte Cito-voorbeelden: zie externe PDF onder elke stap</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte Toets-voorbeelden: zie externe PDF onder elke stap</text>
 </svg>`;
 }
 
@@ -58,7 +58,7 @@ const steps = [
   {
     title: "Breuken & decimalen — ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Wat verwacht je op de Doorstroomtoets?**\n\nBij rekenen krijg je vrijwel altijd 5-8 breuken-vragen + decimaal-vragen. De toets test:\n\n• **Optellen** met gelijke noemers (3/8 + 5/8) — makkelijk.\n• **Optellen** met ongelijke noemers (1/3 + 1/4) — eerst gelijknamig maken.\n• **Vergelijken**: welke is groter? 3/5 of 2/3?\n• **Decimaal omzetten**: 1/4 = 0,25 / 3/4 = 0,75 / 1/8 = 0,125.\n• **Vereenvoudigen**: 10/20 = 1/2 (kleinste vorm).\n\n**Truc voor optellen met ongelijke noemers**:\n1. Vind kleinste gemeenschappelijke noemer (KGN).\n2. Maak beide breuken gelijknamig.\n3. Tel tellers op, noemer blijft.\n\nVoorbeeld: 1/3 + 1/4 → KGN = 12 → 4/12 + 3/12 = 7/12.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie Cito.s gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor 5 oefenvragen?**",
+    explanation: "**Wat verwacht je op de Doorstroomtoets?**\n\nBij rekenen krijg je vrijwel altijd 5-8 breuken-vragen + decimaal-vragen. De toets test:\n\n• **Optellen** met gelijke noemers (3/8 + 5/8) — makkelijk.\n• **Optellen** met ongelijke noemers (1/3 + 1/4) — eerst gelijknamig maken.\n• **Vergelijken**: welke is groter? 3/5 of 2/3?\n• **Decimaal omzetten**: 1/4 = 0,25 / 3/4 = 0,75 / 1/8 = 0,125.\n• **Vereenvoudigen**: 10/20 = 1/2 (kleinste vorm).\n\n**Truc voor optellen met ongelijke noemers**:\n1. Vind kleinste gemeenschappelijke noemer (KGN).\n2. Maak beide breuken gelijknamig.\n3. Tel tellers op, noemer blijft.\n\nVoorbeeld: 1/3 + 1/4 → KGN = 12 → 4/12 + 3/12 = 7/12.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie de toets.s gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor 5 oefenvragen?**",
     svg: overzichtSvg(),
     checks: [
       {
@@ -133,7 +133,7 @@ const steps = [
           woorden: [{ woord: "GGD", uitleg: "Grootste Gemene Deler. Grootste getal waar beide getallen door deelbaar zijn." }, { woord: "vereenvoudigen", uitleg: "Breuk in kleinste vorm zetten zonder waarde te veranderen." }],
           theorie: "6 = 2×3. 9 = 3×3. Gemene factor = 3. Door 3 delen: 6→2, 9→3. Antwoord 2/3. Verder kan niet (2 en 3 hebben geen gemene deler > 1).",
           voorbeelden: [{ type: "tekening", tekst: "Pizza in 9 stukken, 6 stukken gepakt. = 2/3 van de pizza (dezelfde hoeveelheid, andere uitdrukking)." }],
-          basiskennis: [{ onderwerp: "Examen-tip", uitleg: "Vereenvoudig altijd zo ver mogelijk. Cito rekent 6/9 vaak fout als 'niet vereenvoudigd'." }],
+          basiskennis: [{ onderwerp: "Examen-tip", uitleg: "Vereenvoudig altijd zo ver mogelijk. De toets rekent 6/9 vaak fout als 'niet vereenvoudigd'." }],
           niveaus: { basis: "2/3 (door 3 delen).", simpeler: "6 en 9 delen beide door 3. 6/9 = 2/3.", nogSimpeler: "2/3" },
         },
       },
@@ -300,7 +300,7 @@ const steps = [
             { titel: "Stap", tekst: "3/4 + 1/4 = (3+1)/4 = 4/4 = 1 heel." },
           ],
           woorden: [{ woord: "teller / noemer", uitleg: "Teller staat boven, noemer onder. Bij optellen met zelfde noemer: tellers samen, noemer blijft." }],
-          theorie: "Cito-truc: kijk eerst of noemers gelijk zijn. Zo ja: tellers optellen. Anders: eerst gelijknamig maken.",
+          theorie: "Toets-truc: kijk eerst of noemers gelijk zijn. Zo ja: tellers optellen. Anders: eerst gelijknamig maken.",
           voorbeelden: [
             { type: "stap", tekst: "2/5 + 1/5 = 3/5." },
             { type: "stap", tekst: "5/8 + 3/8 = 8/8 = 1." },
@@ -330,7 +330,7 @@ const steps = [
             { titel: "Rekenen", tekst: "1/2 × 60 = 60 ÷ 2 = 30." },
           ],
           woorden: [{ woord: "van", uitleg: "In sommen: 'breuk van getal' = breuk × getal." }],
-          theorie: "Cito-truc: 'breuk van X' = X delen door de noemer, daarna keer de teller. Bij 1/2: gewoon delen door 2.",
+          theorie: "Toets-truc: 'breuk van X' = X delen door de noemer, daarna keer de teller. Bij 1/2: gewoon delen door 2.",
           voorbeelden: [
             { type: "stap", tekst: "1/4 van 80 = 80 ÷ 4 = 20." },
             { type: "stap", tekst: "3/4 van 80 = 20 × 3 = 60." },
@@ -366,7 +366,7 @@ const steps = [
             { titel: "Omrekenen", tekst: "1/2 = 3/6. 1/3 = 2/6. Dan: 3/6 + 2/6 = 5/6." },
           ],
           woorden: [{ woord: "gelijknamig", uitleg: "Zelfde noemer hebben." }],
-          theorie: "Cito-truc bij optellen breuken met verschillende noemers: vermenigvuldig kruislings of zoek het kleinste gemene veelvoud.",
+          theorie: "Toets-truc bij optellen breuken met verschillende noemers: vermenigvuldig kruislings of zoek het kleinste gemene veelvoud.",
           voorbeelden: [{ type: "stap", tekst: "1/4 + 1/2 = 1/4 + 2/4 = 3/4." }],
           basiskennis: [{ onderwerp: "KGV", uitleg: "Kleinste gemene veelvoud = kleinste getal waar beide noemers in passen. Voor 2 en 3 = 6. Voor 4 en 6 = 12." }],
           niveaus: {
@@ -404,7 +404,7 @@ const steps = [
             { titel: "Heel × breuk", tekst: "Vermenigvuldig met breuk: keer de teller, noemer blijft. 3 × 1/4 = 3/4." },
           ],
           woorden: [{ woord: "vermenigvuldigen breuk", uitleg: "Keer teller × heel getal. Noemer blijft." }],
-          theorie: "Cito-truc: 3 × 1/4 betekent '3 keer een kwartje' = 3/4. Visueel: 3 punten van een kwart pizza.",
+          theorie: "Toets-truc: 3 × 1/4 betekent '3 keer een kwartje' = 3/4. Visueel: 3 punten van een kwart pizza.",
           voorbeelden: [{ type: "stap", tekst: "4 × 1/2 = 4/2 = 2 hele." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Als teller > noemer wordt: kun je het omzetten naar heel getal + breuk." }],
           niveaus: {
@@ -424,7 +424,7 @@ const steps = [
             { titel: "Vereenvoudigen = delen", tekst: "Een breuk vereenvoudig je door teller én noemer te delen door dezelfde deler. 3 en 8 hebben geen gemene deler > 1." },
           ],
           woorden: [{ woord: "vereenvoudigen", uitleg: "Breuk omzetten naar kleinere getallen (zelfde waarde)." }],
-          theorie: "Cito-truc: zoek de grootste gemene deler. 6/9 = 2/3 (beide door 3). 4/8 = 1/2 (beide door 4).",
+          theorie: "Toets-truc: zoek de grootste gemene deler. 6/9 = 2/3 (beide door 3). 4/8 = 1/2 (beide door 4).",
           voorbeelden: [{ type: "stap", tekst: "8/12: beide door 4 = 2/3." }],
           basiskennis: [{ onderwerp: "Onvereenvoudigbaar", uitleg: "Breuken zoals 3/8, 5/7, 2/9: geen gemene deler — al simpelst." }],
           niveaus: {
@@ -468,7 +468,7 @@ const steps = [
             { titel: "Breuk × breuk", tekst: "Tellers vermenigvuldigen, noemers vermenigvuldigen. 1/2 × 1/2 = (1×1)/(2×2) = 1/4." },
           ],
           woorden: [{ woord: "vermenigvuldigen breuken", uitleg: "Teller × teller / noemer × noemer." }],
-          theorie: "Cito-truc: bij breuk×breuk wordt het altijd KLEINER (omdat je een deel pakt van een deel).",
+          theorie: "Toets-truc: bij breuk×breuk wordt het altijd KLEINER (omdat je een deel pakt van een deel).",
           voorbeelden: [{ type: "stap", tekst: "1/3 × 1/2 = 1/6. 'helft van een derde'." }],
           basiskennis: [{ onderwerp: "Visueel", uitleg: "Een halve pizza, daarvan de helft = een kwart pizza." }],
           niveaus: {
@@ -629,7 +629,7 @@ const steps = [
   {
     title: "Procenten & verhoudingen — ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Procenten zijn de meest gevraagde categorie op de Doorstroomtoets.**\n\nVerwacht:\n• **% van bedrag**: 15% van €80 = ?\n• **Korting**: €40 met 25% korting = ?\n• **Procent uitrekenen**: 12 van de 60 = ?%\n• **Verhouding**: 'op 8 leerlingen 3 meiden' — schaal.\n• **Snelheid + tijd + afstand**: km/u uitrekenen.\n\n**Truc voor procenten**: % is 'per honderd'. 25% = 25/100 = 1/4. 50% = 1/2. 10% = 1/10. 1% = 1/100.\n\n**Snelle rekenmethode**:\n• 10% = deel door 10\n• 1% = deel door 100\n• 50% = deel door 2\n• Voor 25%: deel door 4\n\nVoorbeeld: 30% van €40 → 10% = €4, dus 30% = 3 × €4 = €12.\n\n**Verhouding**: 'op 8 leerlingen zijn 3 meiden' = 3 op 8 = 3/8 = 37,5%.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële Cito-voorbeelden in de [gratis PDF](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).",
+    explanation: "**Procenten zijn de meest gevraagde categorie op de Doorstroomtoets.**\n\nVerwacht:\n• **% van bedrag**: 15% van €80 = ?\n• **Korting**: €40 met 25% korting = ?\n• **Procent uitrekenen**: 12 van de 60 = ?%\n• **Verhouding**: 'op 8 leerlingen 3 meiden' — schaal.\n• **Snelheid + tijd + afstand**: km/u uitrekenen.\n\n**Truc voor procenten**: % is 'per honderd'. 25% = 25/100 = 1/4. 50% = 1/2. 10% = 1/10. 1% = 1/100.\n\n**Snelle rekenmethode**:\n• 10% = deel door 10\n• 1% = deel door 100\n• 50% = deel door 2\n• Voor 25%: deel door 4\n\nVoorbeeld: 30% van €40 → 10% = €4, dus 30% = 3 × €4 = €12.\n\n**Verhouding**: 'op 8 leerlingen zijn 3 meiden' = 3 op 8 = 3/8 = 37,5%.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële Toets-voorbeelden in de [gratis PDF](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PROCENT-TRUCS</text>
 <rect x="20" y="40" width="135" height="35" rx="6" fill="${COLORS.paper}" stroke="${COLORS.good}" stroke-width="1.2"/>
@@ -814,7 +814,7 @@ const steps = [
             { titel: "Halveer breuk", tekst: "Helft van 1/2 = 1/4 (verdubbel de noemer: 2 → 4)." },
           ],
           woorden: [{ woord: "halveren breuk", uitleg: "Teller × 1 en noemer × 2 (of teller ÷ 2 als even)." }],
-          theorie: "Cito-truc: % en breuken samen — schrijf % als breuk. 50% = 1/2. Dan × of × elkaar.",
+          theorie: "Toets-truc: % en breuken samen — schrijf % als breuk. 50% = 1/2. Dan × of × elkaar.",
           voorbeelden: [{ type: "stap", tekst: "50% van 1/2 = 1/2 × 1/2 = 1/4. 25% van 1/2 = 1/4 × 1/2 = 1/8." }],
           basiskennis: [{ onderwerp: "Visualiseer", uitleg: "Pizza in 2 = halve. Half daarvan = kwart. Klopt." }],
           niveaus: {
@@ -930,7 +930,7 @@ const steps = [
             { titel: "Stap 2 (nieuwe prijs)", tekst: "Nieuwe prijs = €80 − €20 = €60. Maar de vraag is alleen de KORTING: €20." },
           ],
           woorden: [{ woord: "uitverkoop", uitleg: "Goedkoper verkocht dan oorspronkelijk." }],
-          theorie: "Cito-truc: 25% = 1/4. 50% = 1/2. 10% = 1/10. Deze breuken maken procent-rekenen sneller.",
+          theorie: "Toets-truc: 25% = 1/4. 50% = 1/2. 10% = 1/10. Deze breuken maken procent-rekenen sneller.",
           voorbeelden: [
             { type: "stap", tekst: "10% van €60 = €6 (gewoon door 10)." },
             { type: "stap", tekst: "75% van €80 = 3 × €20 = €60." },
@@ -954,7 +954,7 @@ const steps = [
             { titel: "Reken", tekst: "12 ÷ 3 = 4 sets. Elke set heeft 2 peren → 4 × 2 = 8 peren." },
           ],
           woorden: [{ woord: "verhouding", uitleg: "Hoe groot iets is in vergelijking met iets anders, in 'X : Y' notatie." }],
-          theorie: "Cito-truc: 'X delen door eerste getal, keer tweede getal' werkt altijd bij dit type vraag.",
+          theorie: "Toets-truc: 'X delen door eerste getal, keer tweede getal' werkt altijd bij dit type vraag.",
           voorbeelden: [
             { type: "stap", tekst: "Verhouding 1:4 — bij 5 → 5 × 4 = 20." },
             { type: "stap", tekst: "Verhouding 5:2 — bij 10 → 10 ÷ 5 × 2 = 4." },
@@ -993,7 +993,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "10% = / 10", tekst: "10% is altijd 'gedeeld door 10'. 250 ÷ 10 = 25." },
-            { titel: "Cito-truc", tekst: "Begin altijd met 10% berekenen. Dan vermenigvuldig of optellen voor andere percentages: 20% = 2×10%, 30% = 3×10%, 5% = 10%/2." },
+            { titel: "Toets-truc", tekst: "Begin altijd met 10% berekenen. Dan vermenigvuldig of optellen voor andere percentages: 20% = 2×10%, 30% = 3×10%, 5% = 10%/2." },
           ],
           woorden: [{ woord: "%", uitleg: "Per honderd. 10% = 10 per 100 = 1/10." }],
           theorie: "10% van iets vinden: schuif de komma 1 plek naar links. 250 → 25,0. Bij 1% komma 2 plekken.",
@@ -1032,7 +1032,7 @@ const steps = [
             { titel: "Reken", tekst: "0,8 × 50 = 40. OF: 10% van 50 = 5. 8 × 5 = 40." },
           ],
           woorden: [{ woord: "%", uitleg: "10% = 0,1 (komma 2 plekken links). 80% = 0,8." }],
-          theorie: "Cito-truc: 80% = 8/10. Dus 8/10 van 50 = (50/10) × 8 = 5 × 8 = 40.",
+          theorie: "Toets-truc: 80% = 8/10. Dus 8/10 van 50 = (50/10) × 8 = 5 × 8 = 40.",
           voorbeelden: [{ type: "stap", tekst: "25% van 80 = 0,25 × 80 = 20." }],
           basiskennis: [{ onderwerp: "Snel uit het hoofd", uitleg: "50% = helft. 10% = /10. Bouw andere % daaruit op." }],
           niveaus: {
@@ -1056,10 +1056,10 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "2-stappen", tekst: "Stap 1: 15% van €40 = €6. Stap 2: €40 − €6 = €34." },
-            { titel: "Cito-shortcut", tekst: "85% × €40 = €34 (omdat 100% − 15% = 85%)." },
+            { titel: "Toets-shortcut", tekst: "85% × €40 = €34 (omdat 100% − 15% = 85%)." },
           ],
           woorden: [{ woord: "afgeprijsd", uitleg: "Goedkoper gemaakt — korting eraf." }],
-          theorie: "Cito-truc bij korting: óf bedrag berekenen + aftrekken, óf direct nieuwe prijs (100−%) × oud.",
+          theorie: "Toets-truc bij korting: óf bedrag berekenen + aftrekken, óf direct nieuwe prijs (100−%) × oud.",
           voorbeelden: [{ type: "stap", tekst: "20% korting op €50 = €50 × 0,80 = €40." }],
           basiskennis: [{ onderwerp: "Verhoging", uitleg: "Verhoging 15%: (100+15)% = 115% × oud bedrag." }],
           niveaus: {
@@ -1092,7 +1092,7 @@ const steps = [
             { titel: "Voor 6 personen", tekst: "50 g × 6 = 300 g pasta." },
           ],
           woorden: [{ woord: "evenredig", uitleg: "Meer personen = meer voedsel, in dezelfde verhouding." }],
-          theorie: "Cito-truc bij recept-opschalen: bereken eerst per persoon (basis), dan vermenigvuldig.",
+          theorie: "Toets-truc bij recept-opschalen: bereken eerst per persoon (basis), dan vermenigvuldig.",
           voorbeelden: [{ type: "stap", tekst: "Recept 4 pers = 8 eieren. Per pers = 2. Voor 6 pers = 12 eieren." }],
           basiskennis: [{ onderwerp: "Direct evenredig", uitleg: "Bij dit type vraag: ratio blijft gelijk. 2× zoveel personen = 2× zoveel materiaal." }],
           niveaus: {
@@ -1110,7 +1110,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "150% = 1,5", tekst: "150% betekent 1,5× het oorspronkelijke. 1,5 × 40 = 60." },
-            { titel: "Cito-truc", tekst: "100% van 40 = 40. 50% extra = 20. Samen 60." },
+            { titel: "Toets-truc", tekst: "100% van 40 = 40. 50% extra = 20. Samen 60." },
           ],
           woorden: [{ woord: "150%", uitleg: "Anderhalf keer iets." }],
           theorie: "% > 100% betekent meer dan het origineel. 200% = dubbel. 150% = 1,5×.",
@@ -1289,7 +1289,7 @@ const steps = [
   {
     title: "Meten & schaal — ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Meten zit altijd in de Doorstroomtoets.** Eenheden omrekenen + schaal lezen.\n\n**Lengte-trapje** (×10 per stap):\nkm → hm → dam → **m** → dm → cm → mm\n\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 m = 1000 mm\n• 1 cm = 10 mm\n\n**Gewicht** (idem ×10/×1000):\n• 1 kg = 1000 g\n• 1 g = 1000 mg\n• 1 ton = 1000 kg\n\n**Inhoud**:\n• 1 L = 10 dL = 100 cL = 1000 mL\n\n**Schaal**: getal op kaart × werkelijk.\nSchaal **1:200.000** betekent: 1 cm op kaart = 200.000 cm = 2 km in werkelijkheid.\n\n**Truc — komma verschuiven**:\nTussen mm en m zit 3 stappen → komma 3 plekken verschuiven.\n• mm → m: ÷ 1000 (komma 3 plekken links)\n• m → mm: × 1000 (komma 3 plekken rechts)\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Voor 'echte' voorbeelden: Cito.s PDF: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.",
+    explanation: "**Meten zit altijd in de Doorstroomtoets.** Eenheden omrekenen + schaal lezen.\n\n**Lengte-trapje** (×10 per stap):\nkm → hm → dam → **m** → dm → cm → mm\n\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 m = 1000 mm\n• 1 cm = 10 mm\n\n**Gewicht** (idem ×10/×1000):\n• 1 kg = 1000 g\n• 1 g = 1000 mg\n• 1 ton = 1000 kg\n\n**Inhoud**:\n• 1 L = 10 dL = 100 cL = 1000 mL\n\n**Schaal**: getal op kaart × werkelijk.\nSchaal **1:200.000** betekent: 1 cm op kaart = 200.000 cm = 2 km in werkelijkheid.\n\n**Truc — komma verschuiven**:\nTussen mm en m zit 3 stappen → komma 3 plekken verschuiven.\n• mm → m: ÷ 1000 (komma 3 plekken links)\n• m → mm: × 1000 (komma 3 plekken rechts)\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Voor 'echte' voorbeelden: De toets.s PDF: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">LENGTE-TRAPJE</text>
 <text x="160" y="38" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">× 10 per stap, ÷ 10 omhoog</text>
@@ -1420,7 +1420,7 @@ const steps = [
             { woord: "omtrek", uitleg: "Lengte rondom een vorm. Voor rechthoek: 2 × (lengte + breedte)." },
             { woord: "oppervlakte", uitleg: "Iets ANDERS: lengte × breedte. Hier: 5 × 8 = 40 m². Meet je in m²." },
           ],
-          theorie: "Cito-truc: lees goed of er om OMTREK of OPPERVLAKTE wordt gevraagd. Hek = rondom = omtrek. Tegels op vloer = bedekking = oppervlakte.",
+          theorie: "Toets-truc: lees goed of er om OMTREK of OPPERVLAKTE wordt gevraagd. Hek = rondom = omtrek. Tegels op vloer = bedekking = oppervlakte.",
           voorbeelden: [
             { type: "stap", tekst: "Rechthoek 3 × 4: omtrek = 2 × (3+4) = 14. Oppervlakte = 3 × 4 = 12." },
             { type: "stap", tekst: "Vierkant zijde 6: omtrek = 4 × 6 = 24. Oppervlakte = 6 × 6 = 36." },
@@ -1498,7 +1498,7 @@ const steps = [
             { titel: "Komma 3 plekken", tekst: "× 1000 = komma 3 plekken naar rechts: 2,5 → 25 → 250 → 2500." },
           ],
           woorden: [{ woord: "milli / kilo", uitleg: "Milli = duizendste. Kilo = duizend. Tussen kg en g zit dus factor 1000." }],
-          theorie: "Cito-truc: tussen kg en g zit 3 stappen op het trapje. Komma 3 plekken verschuiven.",
+          theorie: "Toets-truc: tussen kg en g zit 3 stappen op het trapje. Komma 3 plekken verschuiven.",
           voorbeelden: [
             { type: "stap", tekst: "0,5 kg = 500 g (komma 3 rechts: 0,500)." },
             { type: "stap", tekst: "1500 g = 1,5 kg (komma 3 links)." },
@@ -1523,7 +1523,7 @@ const steps = [
             { titel: "Stap 2 — naar km", tekst: "100.000 cm = 1000 m = 1 km. (cm → m: ÷100, m → km: ÷1000)" },
           ],
           woorden: [{ woord: "schaal", uitleg: "Verhouding tussen kaartmaat en werkelijke maat." }],
-          theorie: "Cito-truc: lees schaal als 'op kaart : in werkelijkheid'. Eerst × schaal, dan omrekenen naar gevraagde eenheid (m of km).",
+          theorie: "Toets-truc: lees schaal als 'op kaart : in werkelijkheid'. Eerst × schaal, dan omrekenen naar gevraagde eenheid (m of km).",
           voorbeelden: [{ type: "stap", tekst: "Schaal 1:1000, 5 cm op kaart = 5 × 1000 = 5000 cm = 50 m werkelijk." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vermenigvuldig kaartmaat × schaal → cm werkelijk → omrekenen naar m of km." }],
           niveaus: {
@@ -1562,7 +1562,7 @@ const steps = [
             { titel: "Reken", tekst: "75 cL ÷ 100 = 0,75 L. Komma 2 plekken naar links." },
           ],
           woorden: [{ woord: "cL / dL / mL", uitleg: "1 L = 10 dL = 100 cL = 1000 mL." }],
-          theorie: "Cito-truc bij inhoud: leer 'wijnfles'-getal: 75 cL = 0,75 L = inhoud van een normale wijnfles.",
+          theorie: "Toets-truc bij inhoud: leer 'wijnfles'-getal: 75 cL = 0,75 L = inhoud van een normale wijnfles.",
           voorbeelden: [{ type: "stap", tekst: "1500 mL = 1,5 L. 250 mL = 0,25 L." }],
           basiskennis: [{ onderwerp: "Trap", uitleg: "L → dL → cL → mL met telkens × 10. Komma per stap." }],
           niveaus: {
@@ -1596,7 +1596,7 @@ const steps = [
             { titel: "Reken", tekst: "45 / 60 = 0,75. Of: 15 min = 1/4 uur = 0,25. 45 min = 3 × 0,25 = 0,75 uur." },
           ],
           woorden: [{ woord: "kwartier", uitleg: "15 minuten = 1/4 uur = 0,25 uur." }],
-          theorie: "Cito-truc tijd-decimaal: 15 min = 0,25 uur. 30 min = 0,5 uur. 45 min = 0,75 uur.",
+          theorie: "Toets-truc tijd-decimaal: 15 min = 0,25 uur. 30 min = 0,5 uur. 45 min = 0,75 uur.",
           voorbeelden: [
             { type: "stap", tekst: "1 uur en 30 min = 1,5 uur." },
             { type: "stap", tekst: "2 uur en 15 min = 2,25 uur." },
@@ -1626,7 +1626,7 @@ const steps = [
             { titel: "Reken", tekst: "3 × 4 × 5 = 60 cm³." },
           ],
           woorden: [{ woord: "cm³", uitleg: "Kubieke centimeter — 1 cm × 1 cm × 1 cm doosje." }],
-          theorie: "Cito-truc volume: doe het in stappen — eerst 2 zijden (12), dan keer 3e (12×5=60).",
+          theorie: "Toets-truc volume: doe het in stappen — eerst 2 zijden (12), dan keer 3e (12×5=60).",
           voorbeelden: [{ type: "stap", tekst: "Kubus 2×2×2 = 8 cm³. Kubus 4×4×4 = 64 cm³." }],
           basiskennis: [{ onderwerp: "Inhoud", uitleg: "1 cm³ = 1 mL. 1 dm³ = 1 L. 1000 cm³ = 1 L." }],
           niveaus: {
@@ -1671,7 +1671,7 @@ const steps = [
             { titel: "Reken", tekst: "√64 = 8 (want 8 × 8 = 64)." },
           ],
           woorden: [{ woord: "wortel (√)", uitleg: "Inverse van vermenigvuldigen met zichzelf." }],
-          theorie: "Cito-truc: leer kwadraten uit hoofd: 4²=16, 5²=25, 6²=36, 7²=49, 8²=64, 9²=81, 10²=100.",
+          theorie: "Toets-truc: leer kwadraten uit hoofd: 4²=16, 5²=25, 6²=36, 7²=49, 8²=64, 9²=81, 10²=100.",
           voorbeelden: [{ type: "stap", tekst: "Vierkant opp 100 cm² → zijde 10 cm." }],
           basiskennis: [{ onderwerp: "Anders", uitleg: "Bij rechthoek heb je 2 maten nodig om zijde te vinden. Bij vierkant 1 maat." }],
           niveaus: {
@@ -1837,7 +1837,7 @@ const steps = [
   {
     title: "Redactiesommen — eindopdracht ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Redactiesommen** = vragen verstopt in een verhaaltje. Vaak de moeilijkste op de Doorstroomtoets — niet door de wiskunde, maar omdat je moet uitvogelen WELKE wiskunde je nodig hebt.\n\n**Aanpak in 4 stappen**:\n\n**1. Lees rustig** — minstens 2 keer.\n**2. Onderstreep getallen** + **kringel het vraagteken**.\n**3. Bedenk** welke som hier zit (+, -, ×, ÷, %, gemiddelde, oppervlakte, etc.).\n**4. Reken + check** of het antwoord redelijk is.\n\n**Veelvoorkomende types**:\n• **Inkoop + winst**: 'kocht voor X, verkocht voor Y, winst?'\n• **Tijd + tarief**: 'verdient €10/u, werkt 3,5 u, totaal?'\n• **Verdelen**: '4 vrienden delen €60, ieder krijgt?'\n• **Snelheid**: '60 km in 1,5 uur, km/u?'\n• **Gemiddelde**: 'cijfers 6, 7, 8, gemiddeld?'\n\n**Examen-tip**: schrijf TUSSENSTAPPEN op. Cito geeft alleen punten voor goed antwoord — maar tussenstappen helpen JOU om geen domme fout te maken.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden: Cito.s PDF: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor de eindopdracht?** 5 gemixte redactiesommen.",
+    explanation: "**Redactiesommen** = vragen verstopt in een verhaaltje. Vaak de moeilijkste op de Doorstroomtoets — niet door de wiskunde, maar omdat je moet uitvogelen WELKE wiskunde je nodig hebt.\n\n**Aanpak in 4 stappen**:\n\n**1. Lees rustig** — minstens 2 keer.\n**2. Onderstreep getallen** + **kringel het vraagteken**.\n**3. Bedenk** welke som hier zit (+, -, ×, ÷, %, gemiddelde, oppervlakte, etc.).\n**4. Reken + check** of het antwoord redelijk is.\n\n**Veelvoorkomende types**:\n• **Inkoop + winst**: 'kocht voor X, verkocht voor Y, winst?'\n• **Tijd + tarief**: 'verdient €10/u, werkt 3,5 u, totaal?'\n• **Verdelen**: '4 vrienden delen €60, ieder krijgt?'\n• **Snelheid**: '60 km in 1,5 uur, km/u?'\n• **Gemiddelde**: 'cijfers 6, 7, 8, gemiddeld?'\n\n**Examen-tip**: schrijf TUSSENSTAPPEN op. De toets geeft alleen punten voor goed antwoord — maar tussenstappen helpen JOU om geen domme fout te maken.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden: De toets.s PDF: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor de eindopdracht?** 5 gemixte redactiesommen.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">REDACTIE-AANPAK</text>
 <rect x="20" y="40" width="280" height="30" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
@@ -2022,7 +2022,7 @@ const steps = [
           stappen: [
             { titel: "Stap 1: deel het deel door het geheel", tekst: "Je vraagt: welk DEEL van het GEHEEL haalt voldoende? 18 (deel) ÷ 24 (geheel) = 0,75." },
             { titel: "Stap 2: keer 100 voor procent", tekst: "0,75 × 100 = **75%**." },
-            { titel: "Cito-controle", tekst: "Even checken: 18 is meer dan helft van 24 (=12), dus moet boven 50% zijn. 75% klopt." },
+            { titel: "Toets-controle", tekst: "Even checken: 18 is meer dan helft van 24 (=12), dus moet boven 50% zijn. 75% klopt." },
           ],
           woorden: [
             { woord: "deel-van-het-geheel", uitleg: "Deel ÷ geheel × 100 = %." },
@@ -2096,7 +2096,7 @@ const steps = [
             { titel: "Reken", tekst: "€27 ÷ 3 = €9 per persoon." },
           ],
           woorden: [{ woord: "verdelen", uitleg: "Iets in gelijke stukken splitsen." }],
-          theorie: "Cito-truc bij redactiesommen: zoek signaalwoord 'eerlijk' / 'gelijk verdeeld'. Dat wijst altijd naar delen.",
+          theorie: "Toets-truc bij redactiesommen: zoek signaalwoord 'eerlijk' / 'gelijk verdeeld'. Dat wijst altijd naar delen.",
           voorbeelden: [{ type: "stap", tekst: "€60 over 4 vrienden = €60 ÷ 4 = €15 per persoon." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Controleer met vermenigvuldigen: €9 × 3 = €27 ✓." }],
           niveaus: {
@@ -2123,7 +2123,7 @@ const steps = [
             { titel: "Reken", tekst: "7 + 8 + 6 + 9 = 30. Aantal = 4. Gemiddelde = 30 ÷ 4 = 7,5." },
           ],
           woorden: [{ woord: "gemiddelde", uitleg: "Som van getallen gedeeld door het aantal getallen." }],
-          theorie: "Cito-truc: tel + deel. Check of het tussen het kleinste en grootste getal in ligt — anders heb je een rekenfout.",
+          theorie: "Toets-truc: tel + deel. Check of het tussen het kleinste en grootste getal in ligt — anders heb je een rekenfout.",
           voorbeelden: [{ type: "stap", tekst: "Cijfers 4, 6 en 8 — gemiddelde = (4+6+8)/3 = 18/3 = 6." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Antwoord moet altijd liggen tussen kleinste en grootste waarde." }],
           niveaus: {
@@ -2150,7 +2150,7 @@ const steps = [
             { titel: "Reken", tekst: "Verschil = 100 − 80 = 20. Stijging = 20/80 × 100 = 25%." },
           ],
           woorden: [{ woord: "procentuele stijging", uitleg: "Hoeveel procent iets toeneemt t.o.v. het oude getal." }],
-          theorie: "Cito-truc: deel ALTIJD door het OUDE getal (de uitgangswaarde), niet door het nieuwe. Veel leerlingen rekenen dit fout.",
+          theorie: "Toets-truc: deel ALTIJD door het OUDE getal (de uitgangswaarde), niet door het nieuwe. Veel leerlingen rekenen dit fout.",
           voorbeelden: [
             { type: "stap", tekst: "Van 200 naar 250: 50/200 × 100 = 25% stijging." },
             { type: "stap", tekst: "Van 100 naar 80: −20/100 × 100 = 20% daling." },
@@ -2174,7 +2174,7 @@ const steps = [
             { titel: "Reken", tekst: "120 ÷ 5 = 24 weken." },
           ],
           woorden: [{ woord: "sparen", uitleg: "Geld opzijleggen voor later." }],
-          theorie: "Cito-truc bij sparen: totaal ÷ per keer = aantal keer. Check: 24 × 5 = €120 ✓.",
+          theorie: "Toets-truc bij sparen: totaal ÷ per keer = aantal keer. Check: 24 × 5 = €120 ✓.",
           voorbeelden: [{ type: "stap", tekst: "€60 sparen, €4/week → 60 ÷ 4 = 15 weken." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Vermenigvuldig terug: aantal × bedrag/keer = totaal." }],
           niveaus: {
@@ -2207,7 +2207,7 @@ const steps = [
             { titel: "Reken", tekst: "24 ÷ 4 = 6 m." },
           ],
           woorden: [{ woord: "oppervlakte", uitleg: "Hoe groot een vlak is, in m² of cm²." }],
-          theorie: "Cito-truc: bij opp-vraag, schrijf altijd de formule eerst op (l × b = opp). Vul dan in en los op.",
+          theorie: "Toets-truc: bij opp-vraag, schrijf altijd de formule eerst op (l × b = opp). Vul dan in en los op.",
           voorbeelden: [{ type: "stap", tekst: "Opp 50 m², lengte 10 m → breedte = 50 / 10 = 5 m." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Vermenigvuldig terug: 6 × 4 = 24 ✓." }],
           niveaus: {
@@ -2234,7 +2234,7 @@ const steps = [
             { titel: "Reken", tekst: "1/4 van 240 = 60. 240 − 60 = 180. Check: 3/4 van 240 = 180 ✓." },
           ],
           woorden: [{ woord: "wegGEVEN vs HOUDEN", uitleg: "Let op welk deel gevraagd wordt: weggegeven of overgebleven." }],
-          theorie: "Cito-truc: lees vraag goed. 'Houdt over' = totaal − weggegeven. 'Geeft weg' = direct het deel.",
+          theorie: "Toets-truc: lees vraag goed. 'Houdt over' = totaal − weggegeven. 'Geeft weg' = direct het deel.",
           voorbeelden: [{ type: "stap", tekst: "100 koeken, 1/5 verkocht: verkocht=20, over=80." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Tel weggegeven + over: moet totaal zijn. 60 + 180 = 240 ✓." }],
           niveaus: {
@@ -2272,7 +2272,7 @@ const steps = [
             { titel: "10% = / 10", tekst: "Schuif komma 1 plek naar links: €12,50 → €1,25." },
           ],
           woorden: [{ woord: "fooi", uitleg: "Extra geld voor goede service, vaak 5-10% van rekening." }],
-          theorie: "Cito-truc 10%: gewoon komma 1 plek naar links.",
+          theorie: "Toets-truc 10%: gewoon komma 1 plek naar links.",
           voorbeelden: [{ type: "stap", tekst: "10% van €25,50 = €2,55." }],
           basiskennis: [{ onderwerp: "5%", uitleg: "5% = helft van 10%. Dus 5% van €12,50 = €1,25 / 2 = €0,625." }],
           niveaus: {
@@ -2292,7 +2292,7 @@ const steps = [
             { titel: "Kans = deel / totaal", tekst: "Totaal = 12+18 = 30. Kans op meisje = 18/30 = 0,6 = 60%." },
           ],
           woorden: [{ woord: "kans", uitleg: "Hoe waarschijnlijk iets is, in procent of breuk." }],
-          theorie: "Cito-truc kans: aantal gewenst / aantal totaal × 100%.",
+          theorie: "Toets-truc kans: aantal gewenst / aantal totaal × 100%.",
           voorbeelden: [{ type: "stap", tekst: "Dobbelsteen — kans op 6 = 1/6 ≈ 17%." }],
           basiskennis: [{ onderwerp: "Som = 100%", uitleg: "Kans op meisje + jongen = 100%. 60% + 40% = 100% ✓." }],
           niveaus: {
@@ -2385,7 +2385,7 @@ const steps = [
             { titel: "Rest-sommen: omhoog of omlaag?", tekst: "8 volle tenten + 5 kinderen over. Die 5 kunnen niet buiten slapen → 9 tenten. Bij 'hoeveel heb je nodig' rond je omhoog af." },
           ],
           woorden: [{ woord: "rest", uitleg: "Wat er overblijft na het delen: 53 ÷ 6 = 8 rest 5." }],
-          theorie: "Cito test of je de rest goed gebruikt. 'Hoeveel tenten nodig?' → omhoog. 'Hoeveel volle tenten?' → omlaag. Lees de vraag dus precies.",
+          theorie: "De toets test of je de rest goed gebruikt. 'Hoeveel tenten nodig?' → omhoog. 'Hoeveel volle tenten?' → omlaag. Lees de vraag dus precies.",
           voorbeelden: [{ type: "stap", tekst: "127 kinderen, bussen van 50: 127 ÷ 50 = 2 rest 27 → 3 bussen nodig." }],
           basiskennis: [{ onderwerp: "Controle", uitleg: "9 tenten × 6 plekken = 54 plekken ≥ 53 kinderen ✓. 8 tenten = 48 plekken — te weinig." }],
           niveaus: {
@@ -2923,7 +2923,7 @@ const doorstroomtoetsRekenenG8 = {
     { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
   ],
   intro:
-    "~75 Cito-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Cito-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 min totaal (4× ~20 min) — splits gerust in 4 dagelijkse kwartier-sessies.",
+    "~75 Doorstroomtoets-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Toets-voorbeelden: gratis voorbeeldopgavenboekje op cito.nl. ~80 min totaal (4× ~20 min) — splits gerust in 4 dagelijkse kwartier-sessies.",
   triggerKeywords: [
     "doorstroomtoets", "doorstroom", "doorstroomtoets rekenen",
     "cito", "cito-eindtoets", "cito eindtoets", "cito rekenen", "cito groep 8",

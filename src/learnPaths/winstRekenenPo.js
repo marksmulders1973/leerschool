@@ -1,5 +1,5 @@
 // Leerpad: Winst rekenen — groep 6-8 PO.
-// Onderdeel Cito-rekenen + leefwereld (financiële educatie). Referentieniveau 1F.
+// Onderdeel Toets-rekenen + leefwereld (financiële educatie). Referentieniveau 1F.
 // 3 stappen met uitlegPad. Volgt op geld-rekenen.
 //
 // Dit is de "winst-stap" achter de Zookwartier-kraampjes en het inkoop-bonnetje:
@@ -22,7 +22,7 @@ const stepEmojis = ["🏷️", "📈", "🏆"];
 const chapters = [
   { letter: "A", title: "Inkoop, verkoop en winst", emoji: "🏷️", from: 0, to: 0 },
   { letter: "B", title: "Winst per stuk + totale winst", emoji: "📈", from: 1, to: 1 },
-  { letter: "C", title: "Cito-eindopdracht", emoji: "🏆", from: 2, to: 2 },
+  { letter: "C", title: "Toets-eindopdracht", emoji: "🏆", from: 2, to: 2 },
 ];
 
 // Inkoop − naar − verkoop, met de winst als groen blokje ertussen (€4 → €7 = €3).
@@ -55,7 +55,7 @@ const steps = [
   {
     title: "Inkoop, verkoop en winst",
     explanation:
-      "Stel je hebt een **kraampje** of een **dierenpark**. Je koopt iets in en verkoopt het weer. Drie woorden helpen je rekenen:\n\n• **Inkoopprijs** 🏷️ = wat het **jou** kost om iets te kopen of te maken.\n• **Verkoopprijs** = het bedrag waarvoor jij het **aan een ander** verkoopt.\n• **Winst** 📈 = wat je **overhoudt**.\n\n**De som**:\n> **Winst = verkoopprijs − inkoopprijs**\n\n**Voorbeeld**:\n• Je koopt een knuffel in voor **€4**.\n• Je verkoopt 'm voor **€7**.\n• Winst: €7 − €4 = **€3**.\n\n**Belangrijk — verkoop boven je inkoop!**\nVerkoop je **goedkoper** dan je inkoop, dan houd je niets over: je maakt **verlies**.\n• Inkoop €6, verkoop €5 → €5 − €6 = **−€1** *(€1 verlies)*.\n\nDaarom kiezen winkels en kraampjes een verkoopprijs die **hoger** is dan de inkoop. Maar niet té hoog, want dan koopt niemand het.\n\n**In Mijn Park** zie je dit terug: een dier of een patatje koop je in, en als een bezoeker het koopt verdien jij de **winst** *(verkoop − inkoop)*.\n\n**Cito-vragen**:\n*'Wat is winst?'* → verkoopprijs min inkoopprijs.\n*'Inkoop €4, verkoop €7 — winst?'* → €3.\n*'Verkoop lager dan inkoop?'* → verlies.",
+      "Stel je hebt een **kraampje** of een **dierenpark**. Je koopt iets in en verkoopt het weer. Drie woorden helpen je rekenen:\n\n• **Inkoopprijs** 🏷️ = wat het **jou** kost om iets te kopen of te maken.\n• **Verkoopprijs** = het bedrag waarvoor jij het **aan een ander** verkoopt.\n• **Winst** 📈 = wat je **overhoudt**.\n\n**De som**:\n> **Winst = verkoopprijs − inkoopprijs**\n\n**Voorbeeld**:\n• Je koopt een knuffel in voor **€4**.\n• Je verkoopt 'm voor **€7**.\n• Winst: €7 − €4 = **€3**.\n\n**Belangrijk — verkoop boven je inkoop!**\nVerkoop je **goedkoper** dan je inkoop, dan houd je niets over: je maakt **verlies**.\n• Inkoop €6, verkoop €5 → €5 − €6 = **−€1** *(€1 verlies)*.\n\nDaarom kiezen winkels en kraampjes een verkoopprijs die **hoger** is dan de inkoop. Maar niet té hoog, want dan koopt niemand het.\n\n**In Mijn Park** zie je dit terug: een dier of een patatje koop je in, en als een bezoeker het koopt verdien jij de **winst** *(verkoop − inkoop)*.\n\n**toetsvragen**:\n*'Wat is winst?'* → verkoopprijs min inkoopprijs.\n*'Inkoop €4, verkoop €7 — winst?'* → €3.\n*'Verkoop lager dan inkoop?'* → verlies.",
     svg: winstSvg(),
     checks: [
       {
@@ -74,7 +74,7 @@ const steps = [
             { woord: "verkoopprijs", uitleg: "Het bedrag waarvoor jij het aan een ander verkoopt." },
             { woord: "winst", uitleg: "Wat je overhoudt: verkoop − inkoop." },
           ],
-          theorie: "Cito-kern: Winst = Verkoop − Inkoop. Truc: 'Wat je KRIJGT' min 'wat het je KOSTTE'. Het antwoord moet positief zijn als je boven je inkoop verkoopt.",
+          theorie: "Toets-kern: Winst = Verkoop − Inkoop. Truc: 'Wat je KRIJGT' min 'wat het je KOSTTE'. Het antwoord moet positief zijn als je boven je inkoop verkoopt.",
           voorbeelden: [
             { type: "stap", tekst: "Verkoop €10, inkoop €6 → winst €4." },
             { type: "stap", tekst: "Verkoop €3, inkoop €2 → winst €1." },
@@ -101,7 +101,7 @@ const steps = [
           woorden: [
             { woord: "aftrekken", uitleg: "Iets eraf halen (het min-teken −)." },
           ],
-          theorie: "Cito-valkuil: niet het hele verkoopbedrag (€7) is winst — de inkoop van €4 was je eerst kwijt. Winst is alleen het verschil: €3.",
+          theorie: "Toets-valkuil: niet het hele verkoopbedrag (€7) is winst — de inkoop van €4 was je eerst kwijt. Winst is alleen het verschil: €3.",
           voorbeelden: [
             { type: "stap", tekst: "Inkoop €2, verkoop €5 → winst €3." },
             { type: "stap", tekst: "Inkoop €8, verkoop €12 → winst €4." },
@@ -134,7 +134,7 @@ const steps = [
           woorden: [
             { woord: "verlies", uitleg: "Het tegenovergestelde van winst — je raakt geld kwijt." },
           ],
-          theorie: "Cito-kern: verkoop < inkoop → verlies. Verkoop > inkoop → winst. Verkoop = inkoop → je houdt niets over (quitte).",
+          theorie: "Toets-kern: verkoop < inkoop → verlies. Verkoop > inkoop → winst. Verkoop = inkoop → je houdt niets over (quitte).",
           voorbeelden: [
             { type: "stap", tekst: "Inkoop €10, verkoop €8 → €2 verlies." },
             { type: "stap", tekst: "Inkoop €5, verkoop €5 → geen winst, geen verlies (quitte)." },
@@ -205,7 +205,7 @@ const steps = [
   {
     title: "Winst per stuk en totale winst",
     explanation:
-      "Verkoop je **meerdere** dingen, dan reken je vaak eerst de **winst per stuk** uit en daarna de **totale winst**.\n\n**Winst per stuk** = verkoopprijs − inkoopprijs *(per één ding)*.\n\n**Totale winst** = winst per stuk **×** aantal.\n\n**Voorbeeld** *(kraampje)*:\n• Een ijsje koop je in voor **€0,50**.\n• Je verkoopt het voor **€1,20**.\n• Winst per ijsje: €1,20 − €0,50 = **€0,70**.\n• Verkoop je er **10**? Totale winst: €0,70 × 10 = **€7**.\n\n**Let op — opbrengst is niet hetzelfde als winst!**\n• **Opbrengst** = al het geld dat **binnenkomt** *(verkoopprijs × aantal)*.\n• **Winst** = wat je **overhoudt** *(opbrengst − inkoopkosten)*.\n• 10 ijsjes verkopen voor €1,20 = €12 opbrengst, maar de winst is maar €7.\n\n**Andersom rekenen — welke verkoopprijs?**\nWil je een bepaalde winst maken, dan reken je terug:\n> **Verkoopprijs = inkoopprijs + winst die je wilt**\n• Inkoop €3, je wilt €2 winst → verkoop voor €3 + €2 = **€5**.\n\n**Cito-vragen**:\n*'Winst €2 per stuk, 5 stuks — totale winst?'* → €10.\n*'Inkoop €3, je wilt €2 winst — verkoopprijs?'* → €5.\n*'Opbrengst of winst?'* → opbrengst = alles binnen, winst = wat overblijft.",
+      "Verkoop je **meerdere** dingen, dan reken je vaak eerst de **winst per stuk** uit en daarna de **totale winst**.\n\n**Winst per stuk** = verkoopprijs − inkoopprijs *(per één ding)*.\n\n**Totale winst** = winst per stuk **×** aantal.\n\n**Voorbeeld** *(kraampje)*:\n• Een ijsje koop je in voor **€0,50**.\n• Je verkoopt het voor **€1,20**.\n• Winst per ijsje: €1,20 − €0,50 = **€0,70**.\n• Verkoop je er **10**? Totale winst: €0,70 × 10 = **€7**.\n\n**Let op — opbrengst is niet hetzelfde als winst!**\n• **Opbrengst** = al het geld dat **binnenkomt** *(verkoopprijs × aantal)*.\n• **Winst** = wat je **overhoudt** *(opbrengst − inkoopkosten)*.\n• 10 ijsjes verkopen voor €1,20 = €12 opbrengst, maar de winst is maar €7.\n\n**Andersom rekenen — welke verkoopprijs?**\nWil je een bepaalde winst maken, dan reken je terug:\n> **Verkoopprijs = inkoopprijs + winst die je wilt**\n• Inkoop €3, je wilt €2 winst → verkoop voor €3 + €2 = **€5**.\n\n**toetsvragen**:\n*'Winst €2 per stuk, 5 stuks — totale winst?'* → €10.\n*'Inkoop €3, je wilt €2 winst — verkoopprijs?'* → €5.\n*'Opbrengst of winst?'* → opbrengst = alles binnen, winst = wat overblijft.",
     checks: [
       {
         q: "Je maakt **€2 winst per stuk** en verkoopt **5 stuks**. Hoeveel **totale winst**?",
@@ -222,7 +222,7 @@ const steps = [
             { woord: "winst per stuk", uitleg: "Wat je aan één ding verdient." },
             { woord: "totale winst", uitleg: "De winst van alle stuks samen." },
           ],
-          theorie: "Cito-truc: 'per stuk' + 'aantal' → vermenigvuldigen. Winst per stuk × aantal = totale winst.",
+          theorie: "Toets-truc: 'per stuk' + 'aantal' → vermenigvuldigen. Winst per stuk × aantal = totale winst.",
           voorbeelden: [
             { type: "stap", tekst: "€3 winst per stuk × 4 stuks = €12." },
             { type: "stap", tekst: "€0,50 winst per stuk × 10 stuks = €5." },
@@ -249,7 +249,7 @@ const steps = [
           woorden: [
             { woord: "terugrekenen", uitleg: "Van het antwoord (winst) terug naar de verkoopprijs." },
           ],
-          theorie: "Cito-truc: ken je de inkoop én de gewenste winst? Tel ze op: verkoopprijs = inkoop + winst. Check altijd met verkoop − inkoop = winst.",
+          theorie: "Toets-truc: ken je de inkoop én de gewenste winst? Tel ze op: verkoopprijs = inkoop + winst. Check altijd met verkoop − inkoop = winst.",
           voorbeelden: [
             { type: "stap", tekst: "Inkoop €4, wil €3 winst → verkoop €7." },
             { type: "stap", tekst: "Inkoop €1,50, wil €0,50 winst → verkoop €2." },
@@ -276,7 +276,7 @@ const steps = [
           woorden: [
             { woord: "winst per stuk", uitleg: "Verkoopprijs − inkoopprijs van één ding." },
           ],
-          theorie: "Cito-tip: reken met centen als de bedragen onder €2 zijn. €1,20 = 120 cent, €0,50 = 50 cent, verschil 70 cent = €0,70.",
+          theorie: "Toets-tip: reken met centen als de bedragen onder €2 zijn. €1,20 = 120 cent, €0,50 = 50 cent, verschil 70 cent = €0,70.",
           voorbeelden: [
             { type: "stap", tekst: "Inkoop €0,80, verkoop €2 → winst €1,20." },
             { type: "stap", tekst: "Inkoop €1, verkoop €1,50 → winst €0,50." },
@@ -304,7 +304,7 @@ const steps = [
             { woord: "opbrengst", uitleg: "Al het geld dat binnenkomt: verkoopprijs × aantal." },
             { woord: "winst", uitleg: "Wat overblijft ná de inkoopkosten." },
           ],
-          theorie: "Cito-valkuil: opbrengst ≠ winst. Opbrengst = alles wat binnenkomt. Winst = opbrengst − inkoopkosten. De vraag hier vraagt alleen de opbrengst.",
+          theorie: "Toets-valkuil: opbrengst ≠ winst. Opbrengst = alles wat binnenkomt. Winst = opbrengst − inkoopkosten. De vraag hier vraagt alleen de opbrengst.",
           voorbeelden: [
             { type: "stap", tekst: "5 dingen × €2 = €10 opbrengst." },
             { type: "stap", tekst: "10 ijsjes × €1,20 = €12 opbrengst (winst is minder, want de inkoop gaat er nog af)." },
@@ -371,11 +371,11 @@ const steps = [
     ],
   },
 
-  // STAP C: Cito-mix
+  // STAP C: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — winst mix",
+    title: "Toets-eindopdracht — winst mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: winst (verkoop − inkoop), winst per stuk × aantal, terugrekenen naar de verkoopprijs, en het verschil tussen opbrengst en winst.\n\nKijk goed of je moet **optellen, aftrekken of keer doen**. Veel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: winst (verkoop − inkoop), winst per stuk × aantal, terugrekenen naar de verkoopprijs, en het verschil tussen opbrengst en winst.\n\nKijk goed of je moet **optellen, aftrekken of keer doen**. Veel succes!",
     checks: [
       {
         q: "Inkoop **€5**, verkoop **€8**. Hoeveel **winst**?",

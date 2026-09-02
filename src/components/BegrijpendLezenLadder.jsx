@@ -7,7 +7,7 @@ import { LADDER_THEMES, LADDER_NIVEAUS, LADDER_CONTENT } from "../data/begrijpen
 // Begrijpend lezen — OPBOUWEND. Keuzescherm vooraf (onderwerp + startlengte),
 // daarna een leesflow die per stap langer wordt. Voor wie gewone teksten te lang
 // vindt (collega-wens 18 jun 2026). Zelfstandig scherm; teruglink naar de
-// begrijpend-lezen-keuzepagina. Sober, geen sfeer-art (Cito-regel).
+// begrijpend-lezen-keuzepagina. Sober, geen sfeer-art (Toets-regel).
 
 const C = {
   bg: "#0d1f3c",

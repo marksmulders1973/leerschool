@@ -118,7 +118,7 @@ export default function ExamenBronBanner({ examenBron, compact = false }) {
         </div>
       </div>
       <div style={{ fontSize: 11.5, marginTop: 8, opacity: 0.85, lineHeight: 1.5 }}>
-        Letterlijk overgenomen uit het Cito-examenboekje. Gratis te downloaden bij{" "}
+        Letterlijk overgenomen uit het Toets-examenboekje. Gratis te downloaden bij{" "}
         <a
           href="https://www.examenblad.nl"
           target="_blank"

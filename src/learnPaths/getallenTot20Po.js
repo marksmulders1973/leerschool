@@ -83,7 +83,7 @@ const steps = [
         wrongHints: [null, "Tel het na: is 10 + 8 echt gelijk aan 20?", "Tel het na: is 10 + 5 echt gelijk aan 20?", "Te veel — 10 + 12 gaat al voorbij 20."],
         uitlegPad: {
           stappen: [{ titel: "Tientallen + eenheden", tekst: "20 = 2 tientallen = 10 + 10. Twee tientallen samen = 20." }],
-          theorie: "Cito-onthouden: 20 is bijzonder = 2 keer 10.",
+          theorie: "Toets-onthouden: 20 is bijzonder = 2 keer 10.",
           niveaus: { basis: "10 + 10 = 20.", simpeler: "Twee tientallen = 20.", nogSimpeler: "10" },
         },
       },
@@ -124,7 +124,7 @@ const steps = [
         wrongHints: [null, "Tel het na: is 5 + 4 echt gelijk aan 10?", "Te veel — 7 + 4 gaat al voorbij 10.", "Tel het na: is 3 + 6 echt gelijk aan 10?"],
         uitlegPad: {
           stappen: [{ titel: "Tientallen-buurman", tekst: "6 + 4 = 10. Onthoud: 10 = 6+4 (buurman-paar), 7+3, 8+2, 9+1, 5+5. Allemaal samen 10." }],
-          theorie: "Cito-truc: 'Welke maakt 10?' kennis = essentieel voor groep 3-4. Oefen lijstje 'tientallen-paren'.",
+          theorie: "Toets-truc: 'Welke maakt 10?' kennis = essentieel voor groep 3-4. Oefen lijstje 'tientallen-paren'.",
           niveaus: { basis: "6 + 4 = 10.", simpeler: "6 en 4 samen = 10.", nogSimpeler: "6+4" },
         },
       },
@@ -158,7 +158,7 @@ const steps = [
   {
     title: "Aftrekken tot 10 — eraf halen",
     explanation:
-      "**Aftrekken** = eraf halen. Tegenovergesteld van optellen.\n\n**Tellen-omlaag**:\n• 8 - 3 → begin bij 8, tel terug: 7, 6, **5**.\n• 6 - 2 → 5, **4**.\n\n**Familie-sommen**:\n• Als je 3 + 4 = 7 weet, weet je ook 7 - 3 = 4 en 7 - 4 = 3.\n• Eén optelsom + twee aftreksommen = **één familie**.\n\n**Min 0** = blijft hetzelfde:\n• 8 - 0 = 8. Niets eraf.\n\n**Iets - zichzelf** = 0:\n• 7 - 7 = 0. Alles eraf = niets over.\n\n**Cito-truc bijna-dubbele**:\n• 9 - 4 = (10 - 4) - 1 = 6 - 1 = 5.\n• Of: 9 - 4 = 5 (want 4 + 5 = 9).\n\n**LET OP**: **volgorde maakt WEL uit** bij aftrekken!\n• 5 - 3 = 2 ✓.\n• 3 - 5 = ?? → 'negatief', leren we later. Voor groep 3-4: niet doen.\n\n**Cito-truc 'verschil'**:\n• 'Wat is het **verschil** tussen 8 en 3?' → 8 - 3 = 5.\n• Verschil = altijd aftrekken (groot min klein).",
+      "**Aftrekken** = eraf halen. Tegenovergesteld van optellen.\n\n**Tellen-omlaag**:\n• 8 - 3 → begin bij 8, tel terug: 7, 6, **5**.\n• 6 - 2 → 5, **4**.\n\n**Familie-sommen**:\n• Als je 3 + 4 = 7 weet, weet je ook 7 - 3 = 4 en 7 - 4 = 3.\n• Eén optelsom + twee aftreksommen = **één familie**.\n\n**Min 0** = blijft hetzelfde:\n• 8 - 0 = 8. Niets eraf.\n\n**Iets - zichzelf** = 0:\n• 7 - 7 = 0. Alles eraf = niets over.\n\n**Toets-truc bijna-dubbele**:\n• 9 - 4 = (10 - 4) - 1 = 6 - 1 = 5.\n• Of: 9 - 4 = 5 (want 4 + 5 = 9).\n\n**LET OP**: **volgorde maakt WEL uit** bij aftrekken!\n• 5 - 3 = 2 ✓.\n• 3 - 5 = ?? → 'negatief', leren we later. Voor groep 3-4: niet doen.\n\n**Toets-truc 'verschil'**:\n• 'Wat is het **verschil** tussen 8 en 3?' → 8 - 3 = 5.\n• Verschil = altijd aftrekken (groot min klein).",
     checks: [
       {
         q: "**6 - 2** = ?",
@@ -177,7 +177,7 @@ const steps = [
         wrongHints: [null, "Te veel — hoeveel moet je bij 7 optellen om 10 te krijgen?", "Te weinig — dat is 10-8.", "Te veel — dat is 10-5."],
         uitlegPad: {
           stappen: [{ titel: "Tientallen-buurman", tekst: "10 - 7 = 3 (want 7 + 3 = 10, dus 10 - 7 = 3). **Familie-som**." }],
-          theorie: "Cito-truc: '10 min iets' is **buurman van dat iets** dat samen 10 maakt.",
+          theorie: "Toets-truc: '10 min iets' is **buurman van dat iets** dat samen 10 maakt.",
           niveaus: { basis: "10 - 7 = 3.", simpeler: "10 - 7 = 3 (want 7+3=10).", nogSimpeler: "3" },
         },
       },
@@ -219,7 +219,7 @@ const steps = [
   {
     title: "Sommen tot 20 — over de 10 heen",
     explanation:
-      "Voor groep 3-4 is **over de 10 heen rekenen** lastig.\n\n**Truc: maak eerst tien**:\n• 8 + 5 = ?\n• Stap 1: 8 + 2 = 10 (eerst 10 maken, splits 5 in 2 + 3).\n• Stap 2: 10 + 3 = 13.\n• Dus 8 + 5 = 13. ✓\n\n**Truc: splits het tweede getal**:\n• 7 + 6 = 7 + 3 + 3 = 10 + 3 = 13.\n• 9 + 5 = 9 + 1 + 4 = 10 + 4 = 14.\n\n**Aftrekken over 10**:\n• 13 - 5 = ?\n• Stap 1: 13 - 3 = 10 (eerst 10 maken).\n• Stap 2: 10 - 2 = 8.\n• Dus 13 - 5 = 8. ✓\n\n**Onthoud die '10' als rustpunt** — het tussenstap-getal.\n\n**Sommen 11-20**:\n• 11 = 10 + 1.\n• 14 = 10 + 4.\n• 17 = 10 + 7.\n• Dus 14 + 3 = (10+4) + 3 = 10 + 7 = 17. Eenvoudig.\n\n**Cito-truc redactiesom**:\n• 'Sam heeft 8 knikkers, krijgt 5 erbij. Hoeveel nu?'\n• Plus-som: 8 + 5 = 13.\n• Antwoord: 13 knikkers.",
+      "Voor groep 3-4 is **over de 10 heen rekenen** lastig.\n\n**Truc: maak eerst tien**:\n• 8 + 5 = ?\n• Stap 1: 8 + 2 = 10 (eerst 10 maken, splits 5 in 2 + 3).\n• Stap 2: 10 + 3 = 13.\n• Dus 8 + 5 = 13. ✓\n\n**Truc: splits het tweede getal**:\n• 7 + 6 = 7 + 3 + 3 = 10 + 3 = 13.\n• 9 + 5 = 9 + 1 + 4 = 10 + 4 = 14.\n\n**Aftrekken over 10**:\n• 13 - 5 = ?\n• Stap 1: 13 - 3 = 10 (eerst 10 maken).\n• Stap 2: 10 - 2 = 8.\n• Dus 13 - 5 = 8. ✓\n\n**Onthoud die '10' als rustpunt** — het tussenstap-getal.\n\n**Sommen 11-20**:\n• 11 = 10 + 1.\n• 14 = 10 + 4.\n• 17 = 10 + 7.\n• Dus 14 + 3 = (10+4) + 3 = 10 + 7 = 17. Eenvoudig.\n\n**Toets-truc redactiesom**:\n• 'Sam heeft 8 knikkers, krijgt 5 erbij. Hoeveel nu?'\n• Plus-som: 8 + 5 = 13.\n• Antwoord: 13 knikkers.",
     checks: [
       {
         q: "**8 + 5** = ?",
@@ -260,7 +260,7 @@ const steps = [
         wrongHints: [null, "Te weinig — je hebt 3 erbij geteld, maar de som vraagt om 4.", "Te veel — je hebt 5 erbij geteld, maar de som vraagt om 4.", "Niet — dat is 9-4."],
         uitlegPad: {
           stappen: [{ titel: "Redactiesom = plus", tekst: "Krijgt 4 erbij → plus-som. 9 + 4 = 9 + 1 + 3 = 10 + 3 = **13**." }],
-          theorie: "Cito-trucs voor redactiesom: zoek signaalwoorden. 'Krijgt erbij' = plus. 'Geeft weg' / 'verliest' = min.",
+          theorie: "Toets-trucs voor redactiesom: zoek signaalwoorden. 'Krijgt erbij' = plus. 'Geeft weg' / 'verliest' = min.",
           niveaus: { basis: "9+4 = 13.", simpeler: "Plus-som: 9+4=13.", nogSimpeler: "13" },
         },
       },

@@ -3,7 +3,7 @@
 // loop op naar Doorstroomtoets-lengte. Zijn dochter vond gewone teksten te lang.
 // Daarom: per onderwerp 4 niveaus van oplopende lengte. De gebruiker kiest vooraf
 // (1) het onderwerp en (2) op welke lengte hij wil starten; daarna loopt het
-// vanzelf op. Sober, geen sfeer-art (Cito-regel). Vragen = echt begrip:
+// vanzelf op. Sober, geen sfeer-art (Toets-regel). Vragen = echt begrip:
 // letterlijk / inferentie / hoofdgedachte. wrongHints = denkprikkels, nooit het
 // antwoord weggeven.
 

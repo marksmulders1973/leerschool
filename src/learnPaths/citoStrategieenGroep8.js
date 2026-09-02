@@ -34,7 +34,7 @@ function onderdelenSvg() {
   ];
   return `<svg viewBox="0 0 320 280">
 <rect x="0" y="0" width="320" height="280" fill="${COLORS.paper}"/>
-<text x="160" y="20" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">Onderdelen Cito Doorstroomtoets — globaal overzicht</text>
+<text x="160" y="20" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">Onderdelen de toets Doorstroomtoets — globaal overzicht</text>
 
 ${stuks.slice(0, 3).map((s, i) => `
 <rect x="${s.x}" y="50" width="${s.w}" height="80" rx="8" fill="${s.kleur}" opacity="0.50"/>
@@ -79,15 +79,15 @@ function tijdSvg() {
 
 const steps = [
   {
-    title: "Wat is de Cito Doorstroomtoets?",
-    explanation: "Aan het einde van groep 8 maak je de **Doorstroomtoets** (vroeger heette dit de 'Eindtoets'). Sinds 2024 zijn er meerdere aanbieders: **Cito** (meest gebruikt), IEP, ROUTE 8, AMN. Veel scholen kiezen Cito.\n\nDeze toets:\n\n• **Test wat je in 8 jaar basisschool hebt geleerd** — rekenen, taal, soms ook wereldoriëntatie.\n• **Geeft een toetsadvies** voor je vervolg-niveau (vmbo / havo / vwo).\n• Wordt op **alle reguliere basisscholen** afgenomen.\n• Duurt **meerdere dagdelen**, gespreid over ~3 dagen in begin februari.\n\n**Belangrijk — regels sinds 2024**:\n\nJouw schooladvies wordt eerst gegeven (uiterlijk **eind januari**). Daarna maak je de Doorstroomtoets in **eerste of tweede week van februari**. Vervolgens geldt:\n\n• Toetsadvies **hoger** dan schooladvies → school **moet** het schooladvies heroverwegen (niet 'kan'). Vaak gaat advies dan omhoog.\n• Toetsadvies **lager** dan schooladvies → schooladvies blijft staan.\n\nDus: **toets kan alleen helpen, niet schaden**. Geen reden om bang te zijn dat je 'omlaag valt'.\n\n**Wat je niet hoeft te kunnen**:\n• Geen rekenmachine — alles uit het hoofd of op papier.\n• Geen kladpapier — vaak wel, maar simpel.\n• Geen heel diepgaande wereldkennis — wel **basis**.\n\n**Wat je WEL moet kunnen**:\n• **Tekst lezen + samenvatten** in eigen woorden.\n• **Rekenen** met breuken, procenten, oppervlakte, volume, schaal, snelheid.\n• **Spellen + grammatica** — werkwoordsvormen, leestekens, hoofdletters.\n• **Studievaardigheden** — kaart aflezen, grafiek interpreteren, woordenboek-zoeken.\n\n**Stress over Cito?**\nVeel kinderen vinden het spannend. Tip: zie 't als een kans om te laten zien wat je kunt — niet als een examen waar je voor of tegen kan slagen. **Iedereen 'haalt' de toets** — er is geen zakken.\n\n**Goed nieuws**: je hoeft niet 100% te scoren. Het gemiddelde ligt rond ~70-75%. Iedereen maakt een paar fouten — dat is normaal.",
+    title: "Wat is de Doorstroomtoets Doorstroomtoets?",
+    explanation: "Aan het einde van groep 8 maak je de **Doorstroomtoets** (vroeger heette dit de 'Eindtoets'). Sinds 2024 zijn er meerdere aanbieders: **Cito** (meest gebruikt), IEP, ROUTE 8, AMN. Veel scholen kiezen de toets.\n\nDeze toets:\n\n• **Test wat je in 8 jaar basisschool hebt geleerd** — rekenen, taal, soms ook wereldoriëntatie.\n• **Geeft een toetsadvies** voor je vervolg-niveau (vmbo / havo / vwo).\n• Wordt op **alle reguliere basisscholen** afgenomen.\n• Duurt **meerdere dagdelen**, gespreid over ~3 dagen in begin februari.\n\n**Belangrijk — regels sinds 2024**:\n\nJouw schooladvies wordt eerst gegeven (uiterlijk **eind januari**). Daarna maak je de Doorstroomtoets in **eerste of tweede week van februari**. Vervolgens geldt:\n\n• Toetsadvies **hoger** dan schooladvies → school **moet** het schooladvies heroverwegen (niet 'kan'). Vaak gaat advies dan omhoog.\n• Toetsadvies **lager** dan schooladvies → schooladvies blijft staan.\n\nDus: **toets kan alleen helpen, niet schaden**. Geen reden om bang te zijn dat je 'omlaag valt'.\n\n**Wat je niet hoeft te kunnen**:\n• Geen rekenmachine — alles uit het hoofd of op papier.\n• Geen kladpapier — vaak wel, maar simpel.\n• Geen heel diepgaande wereldkennis — wel **basis**.\n\n**Wat je WEL moet kunnen**:\n• **Tekst lezen + samenvatten** in eigen woorden.\n• **Rekenen** met breuken, procenten, oppervlakte, volume, schaal, snelheid.\n• **Spellen + grammatica** — werkwoordsvormen, leestekens, hoofdletters.\n• **Studievaardigheden** — kaart aflezen, grafiek interpreteren, woordenboek-zoeken.\n\n**Stress over de toets?**\nVeel kinderen vinden het spannend. Tip: zie 't als een kans om te laten zien wat je kunt — niet als een examen waar je voor of tegen kan slagen. **Iedereen 'haalt' de toets** — er is geen zakken.\n\n**Goed nieuws**: je hoeft niet 100% te scoren. Het gemiddelde ligt rond ~70-75%. Iedereen maakt een paar fouten — dat is normaal.",
     svg: onderdelenSvg(),
     checks: [
       {
-        q: "Wat is de Cito Doorstroomtoets?",
+        q: "Wat is de Doorstroomtoets Doorstroomtoets?",
         options: ["Een toets aan het einde van groep 8 die advies geeft voor de middelbare school","Een toets om groep 8 over te doen","Een wereldwijd examen","Een huiswerktoets"],
         answer: 0,
-        wrongHints: [null,"Wat denk je: zakt iemand voor de Cito, of mag iedereen door?","Wordt deze toets ook in andere landen afgenomen?","Wie maakt deze toets — alleen jij thuis, of iedereen op school?"],
+        wrongHints: [null,"Wat denk je: zakt iemand voor de Doorstroomtoets, of mag iedereen door?","Wordt deze toets ook in andere landen afgenomen?","Wie maakt deze toets — alleen jij thuis, of iedereen op school?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat doet de toets?", tekst: "Geeft een ADVIES voor je vervolg-school (vmbo/havo/vwo). Niet om groep 8 over te doen." },
@@ -97,11 +97,11 @@ const steps = [
             { woord: "Doorstroomtoets", uitleg: "Toets eind groep 8, sinds 2024. Geeft advies voor middelbare school." },
             { woord: "Voortgezet onderwijs (VO)", uitleg: "Officiele naam voor middelbare school." },
           ],
-          theorie: "Belangrijk: je krijgt eerst SCHOOLADVIES (januari), DAARNA Cito (februari). Toets kan advies HOGER bijstellen, niet lager.",
-          voorbeelden: [{ type: "advies-flow", tekst: "Schooladvies vmbo-tl + Cito havo → school MOET heroverwegen. Andersom (advies havo + Cito vmbo) → advies blijft havo." }],
+          theorie: "Belangrijk: je krijgt eerst SCHOOLADVIES (januari), DAARNA de toets (februari). Toets kan advies HOGER bijstellen, niet lager.",
+          voorbeelden: [{ type: "advies-flow", tekst: "Schooladvies vmbo-tl + de toets havo → school MOET heroverwegen. Andersom (advies havo + de toets vmbo) → advies blijft havo." }],
           basiskennis: [{ onderwerp: "Geen zakken", uitleg: "Iedereen mag door naar de middelbare school. Geen examen-stress." }],
           niveaus: {
-            basis: "Cito = toets in groep 8 + advies middelbare school.",
+            basis: "De toets = toets in groep 8 + advies middelbare school.",
             simpeler: "Aan het einde van groep 8 maak je een grote toets. Die helpt te bepalen welk soort middelbare school (vmbo/havo/vwo) bij jou past.",
             nogSimpeler: "Toets + advies middelbare school",
           },
@@ -115,14 +115,14 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is leidend?", tekst: "Het SCHOOLADVIES van je leerkracht is de basis. Die kent je al 8 jaar." },
-            { titel: "Cito-rol", tekst: "Cito kan het advies HOGER duwen, niet lager. Het is een check, geen overrule." },
+            { titel: "Toets-rol", tekst: "De toets kan het advies HOGER duwen, niet lager. Het is een check, geen overrule." },
           ],
           woorden: [
             { woord: "leidend", uitleg: "De belangrijkste, doorslaggevende. Wat de basis is." },
             { woord: "schooladvies", uitleg: "De juffrouw/meester adviseert welk niveau bij jou past — vmbo/havo/vwo." },
           ],
           theorie: "Sinds 2024: schooladvies leidend, Doorstroomtoets als HEROVERWEGINGSMOGELIJKHEID bij hoger resultaat.",
-          voorbeelden: [{ type: "leidend", tekst: "Schooladvies = vmbo-tl. Cito = havo. School heroverweegt → advies meestal omhoog naar havo." }],
+          voorbeelden: [{ type: "leidend", tekst: "Schooladvies = vmbo-tl. De toets = havo. School heroverweegt → advies meestal omhoog naar havo." }],
           basiskennis: [{ onderwerp: "Vertrouw je leerkracht", uitleg: "8 jaar observatie weegt zwaarder dan 1 toets." }],
           niveaus: {
             basis: "Schooladvies = leidend.",
@@ -154,7 +154,7 @@ const steps = [
   },
   {
     title: "Tijd-management — pacing",
-    explanation: "Je hebt **niet onbeperkt tijd** — gemiddeld krijg je **~1 minuut per vraag**. Snelheid is belangrijk, maar niet ten koste van zorgvuldigheid.\n\n**De 3 fases per onderdeel** *(~50 vragen, ~50 minuten)*:\n\n**Fase 1 — Eerste 12-15 vragen** *(de makkelijke)*\nDe toets begint vaak met simpele vragen. Dit zijn de 'gratis' punten. **Doe ze snel** — 30 seconden per vraag — en bewaar tijd voor later. Niet **te snel** dat je dom-fouten maakt!\n\n**Fase 2 — Middelste 25-30 vragen** *(de gewone)*\nNormaal tempo. ~1 minuut per vraag. **Lees goed**, denk na, kies. **Twijfel je tussen 2 opties? Markeer en ga door** (zie volgende stap).\n\n**Fase 3 — Laatste 10-15 vragen** *(de zwaarste)*\nMoeilijkste vragen + tijd om twijfels te checken. **Niet panieken** als je hier ergens vastloopt — sla over en ga door.\n\n**De drie KEY-regels**:\n\n**1. Vastlopen? SKIP.**\nLiever 3 vragen verderop goed dan 5 minuten op 1 vraag dom-staren. Doorstroomtoetsen geven evenveel punten per vraag — een makkelijke is even waardevol als een moeilijke.\n\n**2. Bewaar 5 minuten voor controle.**\nAan het einde: ga snel terug naar de markeerd vragen. Vaak weet je het tweede keer wel.\n\n**3. Vul ALTIJD iets in.**\nGeen vraag leeg laten! Bij Cito krijg je geen aftrek voor verkeerde antwoorden — alleen punten voor goede. Beter een gokje dan niets.\n\n**Trucje voor pacing**: kijk om de 10 vragen op de klok.\n• Vraag 10 → moet ~10 min bezig zijn.\n• Vraag 25 → ~25 min.\n• Vraag 40 → ~40 min.\n• Loop je voor: rustig aan + extra check.\n• Loop je achter: skip moeilijke en kom terug.",
+    explanation: "Je hebt **niet onbeperkt tijd** — gemiddeld krijg je **~1 minuut per vraag**. Snelheid is belangrijk, maar niet ten koste van zorgvuldigheid.\n\n**De 3 fases per onderdeel** *(~50 vragen, ~50 minuten)*:\n\n**Fase 1 — Eerste 12-15 vragen** *(de makkelijke)*\nDe toets begint vaak met simpele vragen. Dit zijn de 'gratis' punten. **Doe ze snel** — 30 seconden per vraag — en bewaar tijd voor later. Niet **te snel** dat je dom-fouten maakt!\n\n**Fase 2 — Middelste 25-30 vragen** *(de gewone)*\nNormaal tempo. ~1 minuut per vraag. **Lees goed**, denk na, kies. **Twijfel je tussen 2 opties? Markeer en ga door** (zie volgende stap).\n\n**Fase 3 — Laatste 10-15 vragen** *(de zwaarste)*\nMoeilijkste vragen + tijd om twijfels te checken. **Niet panieken** als je hier ergens vastloopt — sla over en ga door.\n\n**De drie KEY-regels**:\n\n**1. Vastlopen? SKIP.**\nLiever 3 vragen verderop goed dan 5 minuten op 1 vraag dom-staren. Doorstroomtoetsen geven evenveel punten per vraag — een makkelijke is even waardevol als een moeilijke.\n\n**2. Bewaar 5 minuten voor controle.**\nAan het einde: ga snel terug naar de markeerd vragen. Vaak weet je het tweede keer wel.\n\n**3. Vul ALTIJD iets in.**\nGeen vraag leeg laten! Bij de Doorstroomtoets krijg je geen aftrek voor verkeerde antwoorden — alleen punten voor goede. Beter een gokje dan niets.\n\n**Trucje voor pacing**: kijk om de 10 vragen op de klok.\n• Vraag 10 → moet ~10 min bezig zijn.\n• Vraag 25 → ~25 min.\n• Vraag 40 → ~40 min.\n• Loop je voor: rustig aan + extra check.\n• Loop je achter: skip moeilijke en kom terug.",
     svg: tijdSvg(),
     checks: [
       {
@@ -168,7 +168,7 @@ const steps = [
             { titel: "Waarom?", tekst: "5 min op 1 vraag = 5 makkelijke vragen daarna missen. Tijdsverlies." },
           ],
           woorden: [{ woord: "skippen", uitleg: "Overslaan om later terug te komen." }],
-          theorie: "Cito-tijd is strak. Liever 50 vragen aanraken dan 30 met perfectionisme. Aan einde tijd voor twijfels.",
+          theorie: "Toets-tijd is strak. Liever 50 vragen aanraken dan 30 met perfectionisme. Aan einde tijd voor twijfels.",
           voorbeelden: [{ type: "tijdverdeling", tekst: "75 min, 50 vragen = 1.5 min/vraag. Vastlopen op 1 vraag mag niet meer dan 2 min." }],
           basiskennis: [{ onderwerp: "Markeer skip", uitleg: "Onderlijn vraagnummer op kladpapier zodat je 'm later terugvindt." }],
           niveaus: {
@@ -210,9 +210,9 @@ const steps = [
             { titel: "Wat te doen?", tekst: "Vul gewoon iets in. Geen punten af voor fout — alleen punten voor goed." },
           ],
           woorden: [{ woord: "gokken", uitleg: "Een antwoord kiezen zonder zeker te zijn." }],
-          theorie: "Cito straft NIET voor foute antwoorden. Leeg laten = 0 punten gegarandeerd. Gokken = kans op 1 punt. Altijd gokken.",
+          theorie: "De toets straft NIET voor foute antwoorden. Leeg laten = 0 punten gegarandeerd. Gokken = kans op 1 punt. Altijd gokken.",
           voorbeelden: [{ type: "kans", tekst: "Twijfel tussen A en B = 50% goed. Bij 4 onbekend = 25%. Bij 0 invullen = altijd 0%." }],
-          basiskennis: [{ onderwerp: "Geen strafpunten", uitleg: "Bij Cito zijn er geen aftrek-punten voor fout." }],
+          basiskennis: [{ onderwerp: "Geen strafpunten", uitleg: "Bij de Doorstroomtoets zijn er geen aftrek-punten voor fout." }],
           niveaus: {
             basis: "Gokken = altijd beter dan leeg.",
             simpeler: "Stel: leeg = 0 punten. Gokken = misschien 1 punt. Wat kies je? Gokken natuurlijk.",
@@ -240,7 +240,7 @@ const steps = [
           woorden: [{ woord: "voor-bedenken", uitleg: "Antwoord eerst zelf bedenken voordat je opties leest." }],
           theorie: "Met eigen antwoord in je hoofd: zoek de optie die DAAR bij past. Anders laat je je beïnvloeden door verleidelijke valstrik-opties.",
           voorbeelden: [{ type: "voorbedenken", tekst: "Vraag: 'Hoofdstad van België?' Eerst denken: 'Brussel'. Dan opties bekijken — Brussel staat erbij = direct kiezen." }],
-          basiskennis: [{ onderwerp: "Anti-valstrik", uitleg: "Cito-makers zetten BEWUST verleidelijke foute opties. Voorbedenken beschermt je." }],
+          basiskennis: [{ onderwerp: "Anti-valstrik", uitleg: "Toets-makers zetten BEWUST verleidelijke foute opties. Voorbedenken beschermt je." }],
           niveaus: {
             basis: "Eerst zelf bedenken.",
             simpeler: "Stel: vraag over hoofdstad België. Bedenk EERST 'Brussel' in je hoofd. Daarna kijk je naar opties — je herkent Brussel meteen. Anders laat je je verwarren door 'Antwerpen' of 'Brugge'.",
@@ -285,7 +285,7 @@ const steps = [
             { woord: "absoluut", uitleg: "Zonder uitzondering. Bv. 'altijd', 'nooit', 'iedereen'." },
             { woord: "uitzondering", uitleg: "Een geval dat anders is dan de regel." },
           ],
-          theorie: "Cito-trucje: als 'altijd' of 'nooit' in een optie staat, vraag jezelf: 'is er een uitzondering?'. Bijna altijd = ja → optie is fout.",
+          theorie: "Toets-trucje: als 'altijd' of 'nooit' in een optie staat, vraag jezelf: 'is er een uitzondering?'. Bijna altijd = ja → optie is fout.",
           voorbeelden: [{ type: "absoluut", tekst: "'Vogels kunnen ALTIJD vliegen' = fout (pinguïn, struisvogel kunnen niet). 'Vogels kunnen MEESTAL vliegen' = OK." }],
           basiskennis: [{ onderwerp: "Logica van extremen", uitleg: "Extreme uitspraken zijn meestal ongenuanceerd = fout in toetsen." }],
           niveaus: {
@@ -315,7 +315,7 @@ const steps = [
           woorden: [{ woord: "skimmen", uitleg: "Snel-overzicht-techniek." }],
           theorie: "Volgorde: skim → vragen → scan voor antwoorden. Anders verlies je tijd.",
           voorbeelden: [{ type: "tijd", tekst: "Skim 30s + vragen 30s = 1 min. Daarna 1 min per vraag = past in 5-7 min totaal." }],
-          basiskennis: [{ onderwerp: "Niet woord-voor-woord", uitleg: "Cito-tijd is te kort voor diep-lezen. Slim aanpakken." }],
+          basiskennis: [{ onderwerp: "Niet woord-voor-woord", uitleg: "Toets-tijd is te kort voor diep-lezen. Slim aanpakken." }],
           niveaus: {
             basis: "Skim + vragen lezen eerst.",
             simpeler: "Niet meteen heel artikel lezen. Eerst snel scannen waar het over gaat (skim) + bekijken wat je moet vinden (vragen). Dan gericht zoeken.",
@@ -336,7 +336,7 @@ const steps = [
           woorden: [{ woord: "tekstgebaseerd", uitleg: "Antwoord komt uit de tekst, niet uit jezelf." }],
           theorie: "Begrijpend-lezen-regel #1: alle antwoorden zijn in de tekst (letterlijk OF logisch af te leiden). Je eigen mening telt niet.",
           voorbeelden: [{ type: "eigen mening", tekst: "Vraag: 'Volgens de schrijver, is roken slecht?' Schrijver kan ANDERE mening hebben dan jij. Antwoord = wat schrijver zegt, niet jouw mening." }],
-          basiskennis: [{ onderwerp: "Cito ≠ algemene kennis", uitleg: "Begrijpend lezen test LEEScapaciteit, niet weten." }],
+          basiskennis: [{ onderwerp: "De toets ≠ algemene kennis", uitleg: "Begrijpend lezen test LEEScapaciteit, niet weten." }],
           niveaus: {
             basis: "Antwoord = uit tekst.",
             simpeler: "Wat de schrijver zegt geldt — ook al ben je het er niet mee eens. Je eigen kennis of mening telt niet bij begrijpend lezen.",
@@ -432,7 +432,7 @@ const steps = [
             { woord: "verhoogd", uitleg: "Hoger geworden, omhoog gegaan." },
             { woord: "goedkoper", uitleg: "Lagere prijs, omlaag gegaan." },
           ],
-          theorie: "**Cito-strikvragen** spelen vaak met TAAL: zelfde percentage, verschillende richting. Lees zorgvuldig: hoger of lager?\n\nSignaalwoorden:\n• OMLAAG: korting, goedkoper, verlaagd, afgenomen, daling\n• OMHOOG: verhoogd, duurder, toegenomen, stijging, premie",
+          theorie: "**Toets-strikvragen** spelen vaak met TAAL: zelfde percentage, verschillende richting. Lees zorgvuldig: hoger of lager?\n\nSignaalwoorden:\n• OMLAAG: korting, goedkoper, verlaagd, afgenomen, daling\n• OMHOOG: verhoogd, duurder, toegenomen, stijging, premie",
           voorbeelden: [
             { type: "min", tekst: "€100, 20% goedkoper = €100 − €20 = €80." },
             { type: "plus", tekst: "€100, 20% verhoogd = €100 + €20 = €120." },
@@ -486,10 +486,10 @@ const steps = [
           woorden: [{ woord: "houding", uitleg: "Hoe je over iets denkt en jezelf erop voorbereidt." }],
           theorie: "Onderzoek: matige spanning helpt prestatie, hoge stress blokkeert. Doel = matige spanning (focus) niet hoge (paniek).\n\nTrucjes:\n- Goed slapen avond ervoor\n- Ontbijt eten\n- Diep ademhalen voor je begint\n- Mantra: 'ik doe gewoon mijn best'",
           voorbeelden: [{ type: "mantra", tekst: "Voor toets: zeg in jezelf 'ik ben voorbereid, ik doe mijn best, dat is genoeg'. Werkt." }],
-          basiskennis: [{ onderwerp: "Cito ≠ overleven", uitleg: "Toets = kans om te laten zien wat je kunt. Geen examen waar je voor zakt." }],
+          basiskennis: [{ onderwerp: "De toets ≠ overleven", uitleg: "Toets = kans om te laten zien wat je kunt. Geen examen waar je voor zakt." }],
           niveaus: {
             basis: "Rustig + best doen.",
-            simpeler: "Doorstroomtoets = kans om te laten zien wat je kunt. Niet doodstress over. Iedereen 'haalt' Cito (geen zakken). Doe gewoon je best.",
+            simpeler: "Doorstroomtoets = kans om te laten zien wat je kunt. Niet doodstress over. Iedereen 'haalt' de toets (geen zakken). Doe gewoon je best.",
             nogSimpeler: "Rustig + best",
           },
         },
@@ -498,22 +498,22 @@ const steps = [
         q: "Doorstroomtoets: wat krijg je als resultaat?",
         options: ["Advies voor vervolg-niveau (vmbo/havo/vwo)","Een eindcijfer als 7,5","Een tijdsregistratie","Niets"],
         answer: 0,
-        wrongHints: [null,"Krijg je bij Cito hetzelfde soort cijfer als op je rapport?","Telt hoe snel je was, of vooral wat je antwoordde?","Krijg je echt niets terug, of wel een soort uitkomst?"],
+        wrongHints: [null,"Krijg je bij de Doorstroomtoets hetzelfde soort cijfer als op je rapport?","Telt hoe snel je was, of vooral wat je antwoordde?","Krijg je echt niets terug, of wel een soort uitkomst?"],
         uitlegPad: {
           stappen: [
-            { titel: "Resultaat = ADVIES", tekst: "Cito geeft een ADVIES voor vervolg-niveau (vmbo / havo / vwo). Geen cijfer." },
+            { titel: "Resultaat = ADVIES", tekst: "De toets geeft een ADVIES voor vervolg-niveau (vmbo / havo / vwo). Geen cijfer." },
             { titel: "Wat doe je ermee?", tekst: "Het advies wordt vergeleken met schooladvies. Hoger? School heroverweegt. Lager? Schooladvies blijft." },
           ],
           woorden: [
             { woord: "toetsadvies", uitleg: "Het advies dat de Doorstroomtoets geeft over je vervolg-niveau." },
             { woord: "schooladvies", uitleg: "Het advies van je leerkracht (gegeven in januari)." },
           ],
-          theorie: "Cito-resultaat is GEEN rapportcijfer. Geen 7,5. Het is een ADVIES: 'past best bij vmbo-tl' of 'past best bij havo'. Komt medio maart binnen.",
-          voorbeelden: [{ type: "advies", tekst: "Schooladvies = vmbo-tl (januari). Cito-advies = havo (februari). School heroverweegt → vaak gaat advies naar havo." }],
-          basiskennis: [{ onderwerp: "Geen punt-cijfer", uitleg: "Anders dan rapport: Cito geeft niveau-categorie, geen cijfer." }],
+          theorie: "Toets-resultaat is GEEN rapportcijfer. Geen 7,5. Het is een ADVIES: 'past best bij vmbo-tl' of 'past best bij havo'. Komt medio maart binnen.",
+          voorbeelden: [{ type: "advies", tekst: "Schooladvies = vmbo-tl (januari). Toets-advies = havo (februari). School heroverweegt → vaak gaat advies naar havo." }],
+          basiskennis: [{ onderwerp: "Geen punt-cijfer", uitleg: "Anders dan rapport: De toets geeft niveau-categorie, geen cijfer." }],
           niveaus: {
-            basis: "Cito = advies vervolg-niveau.",
-            simpeler: "Wat krijg je terug van Cito? Geen 7 of 8. Maar: 'past best bij vmbo' of 'past best bij havo' — een advies voor je middelbare school.",
+            basis: "De toets = advies vervolg-niveau.",
+            simpeler: "Wat krijg je terug van de toets? Geen 7 of 8. Maar: 'past best bij vmbo' of 'past best bij havo' — een advies voor je middelbare school.",
             nogSimpeler: "Advies",
           },
         },
@@ -533,17 +533,17 @@ const steps = [
             { woord: "heroverwegen", uitleg: "Nog eens bekijken om eventueel aan te passen." },
           ],
           theorie: "Sinds 2024 gewijzigde regels:\n- Schooladvies leidend (basis voor middelbaar)\n- Toetsadvies HOGER → school MOET heroverwegen (niet 'kan')\n- Toetsadvies LAGER → schooladvies blijft\n\nDoel: leerkracht-oordeel telt zwaarder dan 1 toetsdag.",
-          voorbeelden: [{ type: "heroverweging", tekst: "Schooladvies vmbo-tl + Cito havo → school heroverweegt → vaak naar havo. Andersom (havo-advies + Cito vmbo) blijft havo." }],
+          voorbeelden: [{ type: "heroverweging", tekst: "Schooladvies vmbo-tl + de toets havo → school heroverweegt → vaak naar havo. Andersom (havo-advies + de toets vmbo) blijft havo." }],
           basiskennis: [{ onderwerp: "Twee adviezen", uitleg: "Vroeger: 1 advies. Nu: 2 (school + toets), school telt zwaarder." }],
           niveaus: {
             basis: "Schooladvies eerst + leidend. Toetsadvies kan ophogen.",
-            simpeler: "Eerst krijg je schooladvies van leerkracht (januari). Dan Cito (februari). Cito-resultaat hoger = school MOET nog eens kijken. Lager = schooladvies blijft.",
-            nogSimpeler: "School eerst + Cito-check",
+            simpeler: "Eerst krijg je schooladvies van leerkracht (januari). Dan de toets (februari). Toets-resultaat hoger = school MOET nog eens kijken. Lager = schooladvies blijft.",
+            nogSimpeler: "School eerst + Toets-check",
           },
         },
       },
       {
-        q: "Wat is **niet handig** te doen tijdens Cito?",
+        q: "Wat is **niet handig** te doen tijdens de toets?",
         options: ["Doorpiekeren op 1 vraag tot je het weet","Skippen + later terugkomen","Iets gokken bij twijfel","Eliminatie van foute opties"],
         answer: 0,
         wrongHints: [null,"Verlies je tijd of win je tijd door even verder te gaan?","Helpt iets invullen je punten, of kost het je punten?","Helpt het wegstrepen van foute opties je sneller naar een antwoord?"],
@@ -555,7 +555,7 @@ const steps = [
           woorden: [{ woord: "doorpiekeren", uitleg: "Eindeloos blijven nadenken zonder resultaat — vastlopen mentaal." }],
           theorie: "Slimme strategieën: skip, gokken, eliminatie, markeren, schatten. Allemaal verstandig. NIET-slim: doorpiekeren / leeg laten / paniekeren.",
           voorbeelden: [{ type: "tijdverlies", tekst: "Vraag 8 = lastig. Doorpiekeren 5 min → vraag 9-15 niet gehaald. = 7 punten verloren voor misschien 1 punt." }],
-          basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Cito-tijd is strak. Elke minuut telt." }],
+          basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Toets-tijd is strak. Elke minuut telt." }],
           niveaus: {
             basis: "Doorpiekeren = niet handig.",
             simpeler: "De andere opties (skippen, gokken, eliminatie) zijn allemaal SLIM. Doorpiekeren op 1 vraag = je verliest tijd voor 5 andere. Slechtste optie.",
@@ -572,7 +572,7 @@ const steps = [
           stappen: [
             { titel: "Slaap = brein-prestatie", tekst: "Wetenschappers tonen: **goede nachtrust voor toets** = beter resultaat dan extra studeren. Brein verwerkt geleerde stof tijdens slaap. 10-12-jarigen hebben **9-10 uur** slaap nodig." },
             { titel: "Avond-routine voor toets", tekst: "**Wel doen**:\n• Vroeg eten (geen zwaar maal)\n• Spullen klaar leggen (potlood, gum, bril, lunch)\n• Iets ontspannends — boek, tekenen, wandeling\n• In bed uiterlijk 21:00\n• Telefoon NIET in slaapkamer (blauw licht verstoort slaap)\n\n**Niet doen**:\n• Tot middernacht oefenen\n• Stress-gesprekken\n• Caffeïne (cola, ijskoffie)\n• Beeldscherm 1 uur voor slapen" },
-            { titel: "Cito-feit: prestatie + slaap", tekst: "Onderzoek Universiteit Tilburg: kinderen die <8 uur slapen vóór toets scoorden **15% lager** dan goed-uitgeruste klasgenoten. Studeer-uren < slaap-uren in prestatie-impact. Daarom: **voorbereiding gebeurt WEKEN vooraf, niet avond ervoor**." },
+            { titel: "Toets-feit: prestatie + slaap", tekst: "Onderzoek Universiteit Tilburg: kinderen die <8 uur slapen vóór toets scoorden **15% lager** dan goed-uitgeruste klasgenoten. Studeer-uren < slaap-uren in prestatie-impact. Daarom: **voorbereiding gebeurt WEKEN vooraf, niet avond ervoor**." },
           ],
           woorden: [
             { woord: "consolidatie", uitleg: "Brein-proces waarbij dagelijkse kennis wordt vastgezet in lange-termijn-geheugen. Gebeurt vooral in slaap." },
@@ -595,7 +595,7 @@ const steps = [
           stappen: [
             { titel: "De 'schat + markeer + door'-truc", tekst: "Bij lastige vraag (>1 min vast):\n1. **Schat** een redelijk antwoord (vergelijk met opties: welke past qua orde van grootte?)\n2. **Markeer** vraag (rondje om vraag-nummer)\n3. **Ga door** naar volgende\n4. **Kom terug** in laatste 5 minuten als er tijd over is\n\nNooit leeg laten — geschat antwoord = 25% kans op punt vs 0% bij leeg." },
             { titel: "Eliminatie-truc voor rekenvragen", tekst: "Bij meerkeuze 4 opties:\n• **Schat eerst**: ongeveer hoeveel kan het antwoord zijn?\n• **Sluit onmogelijke opties uit** (te groot, te klein, verkeerde eenheid)\n• Vaak blijven 2 plausibele opties over → kans 50% bij gok\n• Soms 1 = direct juiste antwoord\n\nVoorbeeld: '4 × 25 = ?' Opties: 1) 80, 2) 100, 3) 200, 4) 500. Schat 4×25=100 → optie 2." },
-            { titel: "Cito-feit: tijd-management", tekst: "Doorstroomtoets ~150 min totaal. **Tip**:\n• Maak eerst **alle makkelijke vragen** (~80% van vragen)\n• Markeer lastige\n• **Laatste 15 min**: terug naar gemarkeerde vragen\n• **Niet panieken** bij 1 lastige — er zijn 100+ vragen, 1 missen heeft minimaal effect" },
+            { titel: "Toets-feit: tijd-management", tekst: "Doorstroomtoets ~150 min totaal. **Tip**:\n• Maak eerst **alle makkelijke vragen** (~80% van vragen)\n• Markeer lastige\n• **Laatste 15 min**: terug naar gemarkeerde vragen\n• **Niet panieken** bij 1 lastige — er zijn 100+ vragen, 1 missen heeft minimaal effect" },
           ],
           woorden: [
             { woord: "markeren", uitleg: "Klein tekentje (rondje, kruisje) bij vraag-nummer om later terug te keren." },
@@ -619,7 +619,7 @@ const steps = [
           stappen: [
             { titel: "Eliminatie-strategie", tekst: "Bij meerkeuze 4 opties + je weet 2 zeker fout:\n• Optie 1: gokken tussen overgebleven 2 → **50% kans op punt**\n• Optie 2: leeg laten → **0% kans op punt**\n\nWiskundig: gokken is altijd beter dan leeg laten bij MC-toetsen zonder strafpunten. Bij Doorstroomtoets = geen strafpunten." },
             { titel: "Hoe elimineer je?", tekst: "Sluit fout-opties uit op basis van:\n• **Eenheid klopt niet** (vraag in km, antwoord in cm)\n• **Orde van grootte** klopt niet (vraagt 'hoeveel kinderen', antwoord 1.000.000)\n• **Direct tegengesteld** aan wat tekst zegt\n• **Belachelijk** (klopt niet met logica)\n\nVaak blijven 2 plausibele opties — gok tussen die." },
-            { titel: "Cito-feit: kans-berekening", tekst: "Bij 4 opties + willekeurige gok:\n• Geen eliminatie: **25%** kans op punt\n• 1 fout eruit: **33%** kans (3 over)\n• 2 fout eruit: **50%** kans (2 over)\n• 3 fout eruit: **100%** kans (= weten welke goed is)\n\nElke eliminatie verhoogt je kans. Doe het altijd!" },
+            { titel: "Toets-feit: kans-berekening", tekst: "Bij 4 opties + willekeurige gok:\n• Geen eliminatie: **25%** kans op punt\n• 1 fout eruit: **33%** kans (3 over)\n• 2 fout eruit: **50%** kans (2 over)\n• 3 fout eruit: **100%** kans (= weten welke goed is)\n\nElke eliminatie verhoogt je kans. Doe het altijd!" },
           ],
           woorden: [
             { woord: "eliminatie", uitleg: "Uitsluiten van onmogelijke antwoorden." },
@@ -628,7 +628,7 @@ const steps = [
           ],
           theorie: "Wiskundige logica gokken:\n• 25% per vraag bij willekeur\n• 40 vragen × 25% = 10 punten gemiddeld zonder kennis\n• Met half-eliminatie: ~50% × N = veel meer punten\n\nBijdrage aan totaal-score: niet onderschatten.",
           voorbeelden: [
-            { type: "stap", tekst: "Vraag: 'Wat is Cito-eindtoets-datum 2027?' Opties: 1) jan, 2) april, 3) juni, 4) sept. Cito is altijd februari → eliminate 3+4. Gok 1 of 2 = 50% kans." },
+            { type: "stap", tekst: "Vraag: 'Wat is Doorstroomtoets-datum 2027?' Opties: 1) jan, 2) april, 3) juni, 4) sept. De toets is altijd februari → eliminate 3+4. Gok 1 of 2 = 50% kans." },
           ],
           basiskennis: [{ onderwerp: "Nooit blanco bij MC", uitleg: "Bij multiple-choice + geen strafpunten: gokken altijd beter dan blanco. Math achter de logica." }],
           niveaus: { basis: "Gok tussen 2.", simpeler: "Bij MC: weet je 2 opties zeker fout, gok tussen overgebleven 2 = 50% kans op punt. Beter dan leeg (0%).", nogSimpeler: "Gokken" },
@@ -650,7 +650,7 @@ const steps = [
             { woord: "cortisol", uitleg: "Stress-hormoon. Helpt alert zijn, te veel = verlammend." },
             { woord: "4-7-8", uitleg: "Ademhalingstruc: 4 in, 7 vast, 8 uit. Kalmeert direct." },
           ],
-          theorie: "Stress-management Cito:\n• **Erkennen** dat stress normaal is\n• **Ademen** om kalmeren (4-7-8)\n• **Bewegen** om energie kwijt te raken\n• **Praten** als het te veel wordt\n\nNet als sport-prestatie: te gespannen = mindere prestatie. Iets stress = scherp. Veel = verlamd.",
+          theorie: "Stress-management voor de toets:\n• **Erkennen** dat stress normaal is\n• **Ademen** om kalmeren (4-7-8)\n• **Bewegen** om energie kwijt te raken\n• **Praten** als het te veel wordt\n\nNet als sport-prestatie: te gespannen = mindere prestatie. Iets stress = scherp. Veel = verlamd.",
           voorbeelden: [
             { type: "stap", tekst: "Topsporters gebruiken 4-7-8 ademhalingsoefening ook vóór belangrijke wedstrijden — zelfde principe." },
           ],
@@ -681,7 +681,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const citoStrategieenGroep8 = {
   id: "cito-strategieen-groep8",
-  title: "Cito Doorstroomtoets — strategieën voor groep 8",
+  title: "De toets Doorstroomtoets — strategieën voor groep 8",
   emoji: "🎯",
   level: "groep8",
   subject: "cito",

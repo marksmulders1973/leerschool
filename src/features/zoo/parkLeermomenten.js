@@ -385,7 +385,7 @@ export const LEERMOMENT_BY_ASSET = {
   alpaca: "boerderij",
   donkey: "boerderij",
   trein: "stoomtrein",
-  // Station heeft nu een eigen leermoment (roosters lezen = Cito-studievaardig-
+  // Station heeft nu een eigen leermoment (roosters lezen = Toets-studievaardig-
   // heden); de rijdende trein zelf blijft het stoomtrein-verhaal vertellen.
   station: "station",
   tree: "boom",

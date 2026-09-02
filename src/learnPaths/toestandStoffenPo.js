@@ -1,5 +1,5 @@
 // Leerpad: Toestanden van stoffen (vast/vloeibaar/gas) — groep 6-8 PO.
-// Cito-onderdeel wereldoriëntatie (natuurkunde-basis). Referentieniveau 1F.
+// Toets-onderdeel wereldoriëntatie (natuurkunde-basis). Referentieniveau 1F.
 // 5 stappen met uitlegPad.
 
 const COLORS = {
@@ -22,7 +22,7 @@ const chapters = [
   { letter: "B", title: "Vloeistoffen", emoji: "💧", from: 1, to: 1 },
   { letter: "C", title: "Gassen", emoji: "💨", from: 2, to: 2 },
   { letter: "D", title: "Overgangen + watercyclus", emoji: "🔄", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 function toestandSvg() {
@@ -170,7 +170,7 @@ const steps = [
         wrongHints: [null, "Vast is een echte toestand — iets dat hard is.", "Vloeibaar is een echte toestand — water bv.", "Gas is een echte toestand — lucht bv."],
         uitlegPad: {
           stappen: [
-            { titel: "Let op de vraag — NIET!", tekst: "Cito-strikvraag: zoek het ene woord dat **GEEN** toestand is. Drie van de vier zijn toestanden — eentje is anders." },
+            { titel: "Let op de vraag — NIET!", tekst: "Toets-strikvraag: zoek het ene woord dat **GEEN** toestand is. Drie van de vier zijn toestanden — eentje is anders." },
             { titel: "De 3 toestanden van stoffen", tekst: "Een stof kan zijn:\n• **Vast** (bv. ijs, hout)\n• **Vloeibaar** (bv. water, melk)\n• **Gas** (bv. lucht, stoom)\nMeer dan deze 3 zijn er niet voor PO." },
             { titel: "Wat is 'vloeibaarheid'?", tekst: "**Vloeibaarheid** is geen toestand maar een **eigenschap** — hoe makkelijk iets vloeit (water = veel vloeibaarheid, honing = weinig). Pas op met dit soort -heid-woorden, het zijn geen toestanden." },
           ],
@@ -178,7 +178,7 @@ const steps = [
             { woord: "toestand", uitleg: "Vorm waarin een stof zit: vast, vloeibaar of gas." },
             { woord: "eigenschap", uitleg: "Kenmerk van een stof (bv. kleur, vloeibaarheid, gewicht)." },
           ],
-          theorie: "Cito-truc: woorden eindigend op **-heid** of **-baarheid** zijn vaak **eigenschappen**, niet toestanden. Vloeibaarheid, hardheid, dichtheid = eigenschappen. Vast/vloeibaar/gas = toestanden.",
+          theorie: "Toets-truc: woorden eindigend op **-heid** of **-baarheid** zijn vaak **eigenschappen**, niet toestanden. Vloeibaarheid, hardheid, dichtheid = eigenschappen. Vast/vloeibaar/gas = toestanden.",
           voorbeelden: [
             { type: "stap", tekst: "Hardheid van een steen = eigenschap. De steen-toestand = vast." },
             { type: "stap", tekst: "Stroperigheid van honing = eigenschap. Toestand = vloeibaar." },
@@ -198,7 +198,7 @@ const steps = [
   {
     title: "Vloeistoffen — eigenschappen",
     explanation:
-      "**Vloeistoffen** zijn een speciale toestand. Wat is bijzonder?\n\n**Eigenschappen**:\n1. **Stromen** — water 'loopt' van hoog naar laag.\n2. **Vorm aannemen** — past zich aan aan glas, kop, plas.\n3. **Niet samen te drukken** — 1 liter water blijft 1 liter, ook onder druk.\n4. **Verdampen** — kan langzaam in lucht 'verdwijnen' (wordt damp).\n5. **Mengen of niet** — sommige vloeistoffen mengen *(water + limonadesiroop)*, andere niet *(water + olie)*.\n\n**Belangrijke vloeistoffen**:\n• **Water** (H₂O) — meest voorkomende vloeistof op aarde.\n• **Melk** — water met vetdeeltjes en eiwitten.\n• **Olie** — drijft op water *(lichter)*.\n• **Honing** — vloeibaar maar **dik** *(stroperig)*.\n\n**Cito-experiment-vraag**:\n*'Wat gebeurt als je water en olie mengt?'*\n• Olie **drijft op** water *(olie is lichter)*.\n• Ze mengen **niet** — vormen 2 lagen.\n\n*'Wat gebeurt als je honing in water doet?'*\n• Honing **zinkt** *(zwaarder dan water)* en lost langzaam op.\n\n*'Wat verdwijnt sneller — water uit een diep glas of uit een vlakke schaal?'*\n• Uit de **vlakke schaal** *(meer oppervlak voor verdamping)*.\n\n**Belangrijke termen**:\n• **Stroperig** = dik, langzaam vloeiend *(honing, siroop)*.\n• **Dun** = snel vloeiend *(water, alcohol)*.\n• **Verdampen** = vloeistof → gas, langzaam, ook onder kookpunt.\n• **Oplossen** = vaste stof verdwijnt in vloeistof *(suiker in thee)*.",
+      "**Vloeistoffen** zijn een speciale toestand. Wat is bijzonder?\n\n**Eigenschappen**:\n1. **Stromen** — water 'loopt' van hoog naar laag.\n2. **Vorm aannemen** — past zich aan aan glas, kop, plas.\n3. **Niet samen te drukken** — 1 liter water blijft 1 liter, ook onder druk.\n4. **Verdampen** — kan langzaam in lucht 'verdwijnen' (wordt damp).\n5. **Mengen of niet** — sommige vloeistoffen mengen *(water + limonadesiroop)*, andere niet *(water + olie)*.\n\n**Belangrijke vloeistoffen**:\n• **Water** (H₂O) — meest voorkomende vloeistof op aarde.\n• **Melk** — water met vetdeeltjes en eiwitten.\n• **Olie** — drijft op water *(lichter)*.\n• **Honing** — vloeibaar maar **dik** *(stroperig)*.\n\n**Toets-experiment-vraag**:\n*'Wat gebeurt als je water en olie mengt?'*\n• Olie **drijft op** water *(olie is lichter)*.\n• Ze mengen **niet** — vormen 2 lagen.\n\n*'Wat gebeurt als je honing in water doet?'*\n• Honing **zinkt** *(zwaarder dan water)* en lost langzaam op.\n\n*'Wat verdwijnt sneller — water uit een diep glas of uit een vlakke schaal?'*\n• Uit de **vlakke schaal** *(meer oppervlak voor verdamping)*.\n\n**Belangrijke termen**:\n• **Stroperig** = dik, langzaam vloeiend *(honing, siroop)*.\n• **Dun** = snel vloeiend *(water, alcohol)*.\n• **Verdampen** = vloeistof → gas, langzaam, ook onder kookpunt.\n• **Oplossen** = vaste stof verdwijnt in vloeistof *(suiker in thee)*.",
     checks: [
       {
         q: "Waarom drijft **olie** op water?",
@@ -245,7 +245,7 @@ const steps = [
   {
     title: "Gassen — onzichtbaar maar overal",
     explanation:
-      "**Gassen** zijn vaak onzichtbaar maar **overal om ons heen**.\n\n**Voorbeelden**:\n• **Lucht** — mengsel van stikstof (~78%), zuurstof (~21%), CO₂, edelgassen.\n• **Stoom** — water in gas-vorm.\n• **Koolzuurgas (CO₂)** — in cola, bier, lucht.\n• **Helium** — in ballonnen *(stijgt op omdat het lichter is dan lucht)*.\n• **Aardgas** — voor verwarming + koken in Nederland.\n\n**Eigenschappen van gas**:\n1. **Vult de hele ruimte** — een ballon vult zich helemaal als je gas erin pompt.\n2. **Onzichtbaar** *(meestal)* — wel zichtbaar bij stoom of mist, want dan zijn er minimal kleine waterdruppeltjes in.\n3. **Samen te drukken** — je kunt veel gas in een klein flesje persen *(bv. propaan-gasfles)*.\n4. **Beweegt heel snel** — moleculen rennen rond.\n5. **Verspreid** — geur van eten gaat door het hele huis.\n\n**Cito-feitjes om te kennen**:\n• Lucht is **niets** zien, maar voel je wel *(wind)*.\n• Stoom is **niet** echt water-damp die je ziet — die is onzichtbaar. Wat je ziet zijn kleine waterdruppeltjes (mist).\n• **Ballon met helium stijgt** omdat helium lichter is dan lucht. Een ballon met gewone lucht zinkt.\n\n**Cito-vraag**:\n*'Wat is een mengsel van gassen?'*\n→ Lucht.\n\n**Pas op**:\n• **Adem** = bevat zuurstof in en koolstofdioxide uit.\n• **Zuurstof** is een gas dat je nodig hebt om te leven.\n• **Koolstofdioxide (CO₂)** is wat planten 'inademen' en jij 'uitademt'.\n\n**Brandstoffen**:\n• Aardgas, propaan, butaan — allemaal gassen die kunnen branden.\n• **Vuur** heeft 3 dingen nodig: brandstof + zuurstof + warmte. Vandaar dat zonder zuurstof geen vuur kan.",
+      "**Gassen** zijn vaak onzichtbaar maar **overal om ons heen**.\n\n**Voorbeelden**:\n• **Lucht** — mengsel van stikstof (~78%), zuurstof (~21%), CO₂, edelgassen.\n• **Stoom** — water in gas-vorm.\n• **Koolzuurgas (CO₂)** — in cola, bier, lucht.\n• **Helium** — in ballonnen *(stijgt op omdat het lichter is dan lucht)*.\n• **Aardgas** — voor verwarming + koken in Nederland.\n\n**Eigenschappen van gas**:\n1. **Vult de hele ruimte** — een ballon vult zich helemaal als je gas erin pompt.\n2. **Onzichtbaar** *(meestal)* — wel zichtbaar bij stoom of mist, want dan zijn er minimal kleine waterdruppeltjes in.\n3. **Samen te drukken** — je kunt veel gas in een klein flesje persen *(bv. propaan-gasfles)*.\n4. **Beweegt heel snel** — moleculen rennen rond.\n5. **Verspreid** — geur van eten gaat door het hele huis.\n\n**Toets-feitjes om te kennen**:\n• Lucht is **niets** zien, maar voel je wel *(wind)*.\n• Stoom is **niet** echt water-damp die je ziet — die is onzichtbaar. Wat je ziet zijn kleine waterdruppeltjes (mist).\n• **Ballon met helium stijgt** omdat helium lichter is dan lucht. Een ballon met gewone lucht zinkt.\n\n**toetsvraag**:\n*'Wat is een mengsel van gassen?'*\n→ Lucht.\n\n**Pas op**:\n• **Adem** = bevat zuurstof in en koolstofdioxide uit.\n• **Zuurstof** is een gas dat je nodig hebt om te leven.\n• **Koolstofdioxide (CO₂)** is wat planten 'inademen' en jij 'uitademt'.\n\n**Brandstoffen**:\n• Aardgas, propaan, butaan — allemaal gassen die kunnen branden.\n• **Vuur** heeft 3 dingen nodig: brandstof + zuurstof + warmte. Vandaar dat zonder zuurstof geen vuur kan.",
     checks: [
       {
         q: "**Lucht** is een mengsel van vooral ... ?",
@@ -274,13 +274,13 @@ const steps = [
           stappen: [
             { titel: "Mens en plant zijn elkaars 'maatje'", tekst: "Mensen + dieren **ademen zuurstof IN** en **CO₂ UIT**.\nPlanten doen het **omgekeerd**: **CO₂ IN** en **zuurstof UIT** (via fotosynthese, met zonlicht). We hebben elkaar dus nodig." },
             { titel: "Fotosynthese in 1 regel", tekst: "Plant + **CO₂** + water + zonlicht → **zuurstof** + suiker (energie voor de plant). De plant maakt eigen voedsel + geeft zuurstof terug aan de lucht." },
-            { titel: "Waarom dit belangrijk is", tekst: "Zonder planten = geen verse zuurstof. Daarom is **regenwoud** zo belangrijk voor de aarde — een soort 'longen' van de planeet. Cito-feit: bomen + planten = onmisbaar voor lucht." },
+            { titel: "Waarom dit belangrijk is", tekst: "Zonder planten = geen verse zuurstof. Daarom is **regenwoud** zo belangrijk voor de aarde — een soort 'longen' van de planeet. Toets-feit: bomen + planten = onmisbaar voor lucht." },
           ],
           woorden: [
             { woord: "fotosynthese", uitleg: "Proces waarbij planten zonlicht omzetten in energie + zuurstof maken." },
             { woord: "CO₂", uitleg: "Koolstofdioxide = kool-stof-di-oxide, het gas dat mensen uitademen." },
           ],
-          theorie: "Cito-truc lucht-cyclus: mens **IN: O₂ UIT: CO₂** ↔ plant **IN: CO₂ UIT: O₂**. Geef-en-neem-relatie. Onthoud: 'planten ademen ANDERSOM dan wij'.",
+          theorie: "Toets-truc lucht-cyclus: mens **IN: O₂ UIT: CO₂** ↔ plant **IN: CO₂ UIT: O₂**. Geef-en-neem-relatie. Onthoud: 'planten ademen ANDERSOM dan wij'.",
           voorbeelden: [
             { type: "stap", tekst: "Vis ademt zuurstof OPGELOST in water (via kieuwen). Planten in water (waterplanten) maken die zuurstof — daarom belang van waterplanten in aquarium." },
             { type: "stap", tekst: "Bij donker stopt fotosynthese (geen zonlicht), maar planten ademen dan ook zuurstof in (zoals wij). Netto: meer zuurstof geven dan nemen." },
@@ -300,7 +300,7 @@ const steps = [
   {
     title: "Overgangen + watercyclus",
     explanation:
-      "Stoffen kunnen **van toestand veranderen** door warmte of kou.\n\n**De 6 overgangen** *(uit je hoofd!)*:\n• **Smelten** = vast → vloeibaar *(ijs → water)*.\n• **Stollen** = vloeibaar → vast *(water → ijs)*.\n• **Verdampen** = vloeibaar → gas *(water → stoom)*.\n• **Condenseren** = gas → vloeibaar *(stoom → water op koude ruit)*.\n• **Sublimeren** = vast → gas *(ijs verdwijnt direct, zoals bij vriesdroge)*.\n• **Desublimeren** = gas → vast *(rijp op gras 's winters)*.\n\n**Voorbeeld water**:\n• 0°C: water bevriest *(stollen)*.\n• 100°C: water kookt *(verdampen)*.\n• Tussen 0-100°C: vloeibaar.\n• Onder 0°C: vast *(ijs)*.\n• Boven 100°C: gas *(stoom)*.\n\nDit zijn **standaard druk** *(zeeniveau)*. Hoog in de bergen kookt water iets onder 100°C.\n\n**De watercyclus**:\n1. **Zon** verwarmt zee, meer, rivier → water **verdampt**.\n2. Waterdamp **stijgt op** in de lucht.\n3. Hoog in de lucht **koelt** het af → **condenseert** tot wolk.\n4. Druppels in wolken groeien → **regen** valt naar beneden.\n5. Regen valt op land of zee → cyclus begint opnieuw.\n\n**Cito-feitjes over de watercyclus**:\n• Wolken zijn **kleine waterdruppeltjes**, geen pure damp.\n• **Bewolking** ontstaat als waterdamp condenseert.\n• Sneeuw is bevroren water *(condenseert + bevriest in 1 stap, soms direct uit damp)*.\n\n**Veel-voorkomende fout**:\n• Denken dat ijs gewoon weg-gaat als het 'verdampt'. Eigenlijk smelt het meestal eerst tot water, dan verdampt.\n• Echte sublimatie *(direct van vast naar gas)* gebeurt wel bij heel koude omstandigheden *(bv. vrieskast — ijs verdwijnt zonder eerst water te worden, zogenoemd 'vriesbrand')*.",
+      "Stoffen kunnen **van toestand veranderen** door warmte of kou.\n\n**De 6 overgangen** *(uit je hoofd!)*:\n• **Smelten** = vast → vloeibaar *(ijs → water)*.\n• **Stollen** = vloeibaar → vast *(water → ijs)*.\n• **Verdampen** = vloeibaar → gas *(water → stoom)*.\n• **Condenseren** = gas → vloeibaar *(stoom → water op koude ruit)*.\n• **Sublimeren** = vast → gas *(ijs verdwijnt direct, zoals bij vriesdroge)*.\n• **Desublimeren** = gas → vast *(rijp op gras 's winters)*.\n\n**Voorbeeld water**:\n• 0°C: water bevriest *(stollen)*.\n• 100°C: water kookt *(verdampen)*.\n• Tussen 0-100°C: vloeibaar.\n• Onder 0°C: vast *(ijs)*.\n• Boven 100°C: gas *(stoom)*.\n\nDit zijn **standaard druk** *(zeeniveau)*. Hoog in de bergen kookt water iets onder 100°C.\n\n**De watercyclus**:\n1. **Zon** verwarmt zee, meer, rivier → water **verdampt**.\n2. Waterdamp **stijgt op** in de lucht.\n3. Hoog in de lucht **koelt** het af → **condenseert** tot wolk.\n4. Druppels in wolken groeien → **regen** valt naar beneden.\n5. Regen valt op land of zee → cyclus begint opnieuw.\n\n**Toets-feitjes over de watercyclus**:\n• Wolken zijn **kleine waterdruppeltjes**, geen pure damp.\n• **Bewolking** ontstaat als waterdamp condenseert.\n• Sneeuw is bevroren water *(condenseert + bevriest in 1 stap, soms direct uit damp)*.\n\n**Veel-voorkomende fout**:\n• Denken dat ijs gewoon weg-gaat als het 'verdampt'. Eigenlijk smelt het meestal eerst tot water, dan verdampt.\n• Echte sublimatie *(direct van vast naar gas)* gebeurt wel bij heel koude omstandigheden *(bv. vrieskast — ijs verdwijnt zonder eerst water te worden, zogenoemd 'vriesbrand')*.",
     svg: watercyclusSvg(),
     checks: [
       {
@@ -318,7 +318,7 @@ const steps = [
             { woord: "smelten", uitleg: "Vast → vloeibaar (door warmte)." },
             { woord: "stollen", uitleg: "Vloeibaar → vast (door kou). Tegenovergestelde van smelten." },
           ],
-          theorie: "Cito-truc overgangen-tabel (uit het hoofd!):\n• vast→vloeibaar = **smelten**\n• vloeibaar→vast = **stollen**\n• vloeibaar→gas = **verdampen**\n• gas→vloeibaar = **condenseren**\n6 overgangen totaal (+ sublimeren + desublimeren), maar deze 4 zijn de belangrijkste.",
+          theorie: "Toets-truc overgangen-tabel (uit het hoofd!):\n• vast→vloeibaar = **smelten**\n• vloeibaar→vast = **stollen**\n• vloeibaar→gas = **verdampen**\n• gas→vloeibaar = **condenseren**\n6 overgangen totaal (+ sublimeren + desublimeren), maar deze 4 zijn de belangrijkste.",
           voorbeelden: [
             { type: "stap", tekst: "Lood smelt bij 327°C. IJs bij 0°C. Boter bij ~32°C (lichaamswarmte is bijna genoeg)." },
             { type: "stap", tekst: "Smelten gebeurt altijd MET warmte. Geen warmte erbij = blijft vast." },
@@ -352,11 +352,11 @@ const steps = [
     ],
   },
 
-  // STAP 5: Cito-mix
+  // STAP 5: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — toestanden-mix",
+    title: "Toets-eindopdracht — toestanden-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: 3 toestanden, overgangen, watercyclus.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: 3 toestanden, overgangen, watercyclus.\n\nVeel succes!",
     checks: [
       {
         q: "Wat is **stollen**?",
@@ -425,8 +425,8 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Smelten + vriezen", tekst: "Bij **0°C** gebeurt twee dingen:\n• Water → IJs (vriezen/stollen)\n• IJs → water (smelten)\n\nHet is hetzelfde getal — heen + terug. Onder 0°C: ijs. Boven 0°C: water (vloeibaar)." },
-            { titel: "Cito-feit: gladde wegen", tekst: "Bij temperaturen rond 0°C ontstaan **gladde wegen**. Water op weg-oppervlak kan ineens bevriezen bij dalende temperatuur. Strooidiensten gebruiken **zout** — dat verlaagt vriespunt tot ~-9°C.\n\nDaarom strooien: zout verandert moment van bevriezen. Bij -15°C werkt zout niet meer." },
-            { titel: "Cito-tip: vergeten niet", tekst: "**Belangrijke temperaturen onthouden**:\n• 0°C — water/ijs\n• 100°C — water/stoom\n• 37°C — gemiddelde lichaamstemperatuur\n• ~20°C — kamer-temperatuur\n• -18°C — vriezer (modern)\n• 4°C — koelkast" },
+            { titel: "Toets-feit: gladde wegen", tekst: "Bij temperaturen rond 0°C ontstaan **gladde wegen**. Water op weg-oppervlak kan ineens bevriezen bij dalende temperatuur. Strooidiensten gebruiken **zout** — dat verlaagt vriespunt tot ~-9°C.\n\nDaarom strooien: zout verandert moment van bevriezen. Bij -15°C werkt zout niet meer." },
+            { titel: "Toets-tip: vergeten niet", tekst: "**Belangrijke temperaturen onthouden**:\n• 0°C — water/ijs\n• 100°C — water/stoom\n• 37°C — gemiddelde lichaamstemperatuur\n• ~20°C — kamer-temperatuur\n• -18°C — vriezer (modern)\n• 4°C — koelkast" },
           ],
           woorden: [
             { woord: "smelten", uitleg: "Vast → vloeibaar. Bv. ijs → water." },

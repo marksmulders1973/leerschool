@@ -1,5 +1,5 @@
 // Leerpad: Meetkunde — bouwsels (kubus + balk volume), groep 6-8.
-// Cito-onderdeel meten/meetkunde, referentieniveau 1F.
+// Toets-onderdeel meten/meetkunde, referentieniveau 1F.
 // 6 stappen, met uitlegPad en SVG-visualisatie van een kubus + balk.
 
 const COLORS = {
@@ -23,7 +23,7 @@ const chapters = [
   { letter: "C", title: "Volume van een balk", emoji: "📐", from: 2, to: 2 },
   { letter: "D", title: "Eenheden omrekenen", emoji: "🔄", from: 3, to: 3 },
   { letter: "E", title: "Praktijk-sommen", emoji: "🏊", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 // SVG: een kubus in 3D-perspectief met label van zijde-lengte.
@@ -140,7 +140,7 @@ const steps = [
   {
     title: "Volume van een kubus",
     explanation:
-      "Een **kubus** is een blok waarbij **alle ribben even lang** zijn. Denk aan een dobbelsteen of een ijsblokje.\n\n**Formule**:\n**V = zijde × zijde × zijde**  (ook wel zijde³)\n\n**Voorbeeld 1**: een kubus met zijde 3 cm.\n• V = 3 cm × 3 cm × 3 cm = **27 cm³**.\n\n**Voorbeeld 2**: een kubus met zijde 5 cm.\n• V = 5 × 5 × 5 = **125 cm³**.\n\n**Voorbeeld 3 — Rubik's kubus**: ribbe ongeveer 6 cm.\n• V = 6 × 6 × 6 = **216 cm³**.\n\n**Cito-truc**:\nDe formule is altijd hetzelfde getal **3 keer met zichzelf vermenigvuldigd**. Dat heet **'tot de derde macht'** of **zijde³**.\n\n**Veel-voorkomende fout**:\n• Vergeten met 3 te vermenigvuldigen — een kubus heeft 3 richtingen (lengte, breedte, hoogte). Allemaal even lang.\n• De eenheid vergeten: het antwoord is **cm³** (kubieke cm), niet cm of cm².",
+      "Een **kubus** is een blok waarbij **alle ribben even lang** zijn. Denk aan een dobbelsteen of een ijsblokje.\n\n**Formule**:\n**V = zijde × zijde × zijde**  (ook wel zijde³)\n\n**Voorbeeld 1**: een kubus met zijde 3 cm.\n• V = 3 cm × 3 cm × 3 cm = **27 cm³**.\n\n**Voorbeeld 2**: een kubus met zijde 5 cm.\n• V = 5 × 5 × 5 = **125 cm³**.\n\n**Voorbeeld 3 — Rubik's kubus**: ribbe ongeveer 6 cm.\n• V = 6 × 6 × 6 = **216 cm³**.\n\n**Toets-truc**:\nDe formule is altijd hetzelfde getal **3 keer met zichzelf vermenigvuldigd**. Dat heet **'tot de derde macht'** of **zijde³**.\n\n**Veel-voorkomende fout**:\n• Vergeten met 3 te vermenigvuldigen — een kubus heeft 3 richtingen (lengte, breedte, hoogte). Allemaal even lang.\n• De eenheid vergeten: het antwoord is **cm³** (kubieke cm), niet cm of cm².",
     svg: kubusSvg("4 cm", "Kubus met zijde 4 cm — V = 4 × 4 × 4 = 64 cm³"),
     checks: [
       {
@@ -236,7 +236,7 @@ const steps = [
   {
     title: "Volume-eenheden omrekenen",
     explanation:
-      "Bij Cito staan vaak vragen waar je **eenheden moet omrekenen**. Bijvoorbeeld: \"hoeveel liter is 2500 cm³?\"\n\n**De vaste regels**:\n• 1 dm³ = 1 liter = 1000 cm³\n• 1 m³ = 1000 dm³ = 1000 liter\n• 1 liter = 1000 mL\n\n**Cito-truc** *(super-handig)*:\nGa van **groot naar klein** = keer 1000. Ga van **klein naar groot** = deel 1000.\n\n**Voorbeelden**:\n• 2 liter = 2 × 1000 = **2000 mL**.\n• 3500 mL = 3500 ÷ 1000 = **3,5 liter**.\n• 4 dm³ = **4 liter** *(rechtstreeks gelijk!)*.\n• 5000 cm³ = 5000 ÷ 1000 = **5 dm³** = **5 liter**.\n• 2 m³ = 2 × 1000 = **2000 liter**.\n\n**De makkelijkste truc**:\nOnthoud: **1 liter = 1 dm³ = 1000 cm³**. Alles bouwt hierop voort.\n\n**Veel-voorkomende fout**:\n• Verwarring met lengte-eenheden. Bij **volume** is het in stapjes van **1000**, niet 10.\n• 1 cm³ ≠ 1 mL (wel zo — dit is goed!). 1 mL = 1 cm³ precies.",
+      "Bij de Doorstroomtoets staan vaak vragen waar je **eenheden moet omrekenen**. Bijvoorbeeld: \"hoeveel liter is 2500 cm³?\"\n\n**De vaste regels**:\n• 1 dm³ = 1 liter = 1000 cm³\n• 1 m³ = 1000 dm³ = 1000 liter\n• 1 liter = 1000 mL\n\n**Toets-truc** *(super-handig)*:\nGa van **groot naar klein** = keer 1000. Ga van **klein naar groot** = deel 1000.\n\n**Voorbeelden**:\n• 2 liter = 2 × 1000 = **2000 mL**.\n• 3500 mL = 3500 ÷ 1000 = **3,5 liter**.\n• 4 dm³ = **4 liter** *(rechtstreeks gelijk!)*.\n• 5000 cm³ = 5000 ÷ 1000 = **5 dm³** = **5 liter**.\n• 2 m³ = 2 × 1000 = **2000 liter**.\n\n**De makkelijkste truc**:\nOnthoud: **1 liter = 1 dm³ = 1000 cm³**. Alles bouwt hierop voort.\n\n**Veel-voorkomende fout**:\n• Verwarring met lengte-eenheden. Bij **volume** is het in stapjes van **1000**, niet 10.\n• 1 cm³ ≠ 1 mL (wel zo — dit is goed!). 1 mL = 1 cm³ precies.",
     checks: [
       {
         q: "**2 liter** = ... mL?",
@@ -283,7 +283,7 @@ const steps = [
   {
     title: "Praktijk-sommen — zwembad, doos, aquarium",
     explanation:
-      "Tijd voor Cito-stijl sommen. **Lees rustig** en zet altijd de eenheid bij het antwoord.\n\n**Stappenplan**:\n1. Wat is het — kubus of balk?\n2. Zoek de afmetingen (lengte, breedte, hoogte óf 1 zijde).\n3. Reken: l × b × h, of zijde × zijde × zijde.\n4. **Zet de eenheid** bij het antwoord (cm³, dm³, m³ of liter).\n5. Kijk: is de vraag om volume of om liters? Zo ja → reken om.\n\n**Voorbeeld 1 — zwembad**:\n*'Een zwembad is 8 m lang, 4 m breed en 2 m diep. Hoeveel m³ water past erin?'*\n• V = 8 × 4 × 2 = **64 m³**.\n\n**Voorbeeld 2 — aquarium**:\n*'Een aquarium van 50 cm × 30 cm × 30 cm. Hoeveel liter?'*\n• V = 50 × 30 × 30 = 45.000 cm³.\n• Naar liter: 45.000 ÷ 1000 = **45 liter**.\n\n**Voorbeeld 3 — schoenendoos**:\n*'Een doos van 30 cm × 20 cm × 10 cm. Past er 1 schoenen-paar in als die doos minimaal 5000 cm³ vraagt?'*\n• V = 30 × 20 × 10 = 6000 cm³.\n• 6000 > 5000 → **ja, past erin** (zelfs ruim).",
+      "Tijd voor Doorstroomtoets-stijl sommen. **Lees rustig** en zet altijd de eenheid bij het antwoord.\n\n**Stappenplan**:\n1. Wat is het — kubus of balk?\n2. Zoek de afmetingen (lengte, breedte, hoogte óf 1 zijde).\n3. Reken: l × b × h, of zijde × zijde × zijde.\n4. **Zet de eenheid** bij het antwoord (cm³, dm³, m³ of liter).\n5. Kijk: is de vraag om volume of om liters? Zo ja → reken om.\n\n**Voorbeeld 1 — zwembad**:\n*'Een zwembad is 8 m lang, 4 m breed en 2 m diep. Hoeveel m³ water past erin?'*\n• V = 8 × 4 × 2 = **64 m³**.\n\n**Voorbeeld 2 — aquarium**:\n*'Een aquarium van 50 cm × 30 cm × 30 cm. Hoeveel liter?'*\n• V = 50 × 30 × 30 = 45.000 cm³.\n• Naar liter: 45.000 ÷ 1000 = **45 liter**.\n\n**Voorbeeld 3 — schoenendoos**:\n*'Een doos van 30 cm × 20 cm × 10 cm. Past er 1 schoenen-paar in als die doos minimaal 5000 cm³ vraagt?'*\n• V = 30 × 20 × 10 = 6000 cm³.\n• 6000 > 5000 → **ja, past erin** (zelfs ruim).",
     checks: [
       {
         q: "Een **zwembad** van **6 m × 3 m × 1,5 m**. Hoeveel **m³**?",
@@ -341,11 +341,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix eindopdracht
+  // STAP 6: Doorstroomtoets-mix eindopdracht
   {
-    title: "Cito-eindopdracht — volume-mix",
+    title: "Toets-eindopdracht — volume-mix",
     explanation:
-      "Mix-toets in echte Cito-stijl. Verschillende sommen door elkaar — kubus, balk, eenheden omrekenen.\n\n**Tip**: lees de vraag eerst rustig, zet **eenheid** altijd bij je antwoord. Bij twijfel — kies bewust kubus (1 zijde) of balk (3 getallen).\n\nVeel succes!",
+      "Mix-toets in echte Doorstroomtoets-stijl. Verschillende sommen door elkaar — kubus, balk, eenheden omrekenen.\n\n**Tip**: lees de vraag eerst rustig, zet **eenheid** altijd bij je antwoord. Bij twijfel — kies bewust kubus (1 zijde) of balk (3 getallen).\n\nVeel succes!",
     checks: [
       {
         q: "Kubus met zijde **4 cm**. Volume?",
@@ -433,7 +433,7 @@ const meetkundeBouwsels = {
     { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
   ],
   intro:
-    "Volume voor groep 6-8 — wat volume is, kubus + balk berekenen, liters/cm³/m³ omrekenen, Cito-praktijksommen met zwembad, aquarium en doos. ~15 min.",
+    "Volume voor groep 6-8 — wat volume is, kubus + balk berekenen, liters/cm³/m³ omrekenen, Toets-praktijksommen met zwembad, aquarium en doos. ~15 min.",
   triggerKeywords: [
     "volume", "kubus", "balk", "inhoud", "liter", "cm3", "cm³", "dm³", "m³",
     "kubieke", "aquarium", "zwembad", "doos", "bouwsel", "ribbe", "zijde",

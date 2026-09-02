@@ -1,5 +1,5 @@
 // Leerpad: Tijdsduur uitrekenen — groep 6-8 PO.
-// Cito-onderdeel meten: tijd. Referentieniveau 1F.
+// Toets-onderdeel meten: tijd. Referentieniveau 1F.
 // 6 stappen met uitlegPad. Eenheden expliciet (uur, minuten, seconden).
 // Bouwt voort op klokkijken (groep 3-5).
 
@@ -22,7 +22,7 @@ const chapters = [
   { letter: "C", title: "Tijden optellen & aftrekken", emoji: "➕", from: 2, to: 2 },
   { letter: "D", title: "24-uurs format", emoji: "🚂", from: 3, to: 3 },
   { letter: "E", title: "Praktijk — school + reizen", emoji: "🏫", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function klokSvg(uur, min, label) {
@@ -83,7 +83,7 @@ const steps = [
   {
     title: "Wat is tijdsduur?",
     explanation:
-      "**Tijdsduur** is **hoe lang iets duurt** — van begin tot eind.\n\n**Voorbeelden**:\n• Een schooldag duurt 6 uur en 30 minuten.\n• Een voetbalwedstrijd duurt 90 minuten.\n• Een aflevering van een tekenfilm duurt 25 minuten.\n• Slapen 's nachts: 9 uur.\n\n**Eenheden voor tijd**:\n• **seconden** (s) — voor heel korte dingen *(een knipoog ~0,3 s)*.\n• **minuten** (min) — voor korte stukken *(les van 45 min)*.\n• **uren** (u) — voor langere periodes *(school 6 uur)*.\n• **dagen** — voor heel lange dingen *(vakantie 14 dagen)*.\n\n**Belangrijke afspraken** *(uit je hoofd!)*:\n• 1 minuut = **60 seconden**.\n• 1 uur = **60 minuten** = **3600 seconden**.\n• 1 dag = **24 uur**.\n• 1 week = 7 dagen.\n• 1 jaar = ongeveer 365 dagen.\n\n**Cito-truc — niet 100, maar 60!**\nBij tijd gaat het in stappen van **60** *(niet 100 zoals bij geld)*. Dus 1 uur en 70 minuten ≠ 1u 70m, maar 2u 10m (omdat 70 min = 60 min + 10 min = 1u 10 min).\n\n**Wat is verschil tussen 'tijdstip' en 'tijdsduur'?**\n• **Tijdstip** = wanneer? (bv. om 14:30 uur).\n• **Tijdsduur** = hoe lang? (bv. 45 minuten).",
+      "**Tijdsduur** is **hoe lang iets duurt** — van begin tot eind.\n\n**Voorbeelden**:\n• Een schooldag duurt 6 uur en 30 minuten.\n• Een voetbalwedstrijd duurt 90 minuten.\n• Een aflevering van een tekenfilm duurt 25 minuten.\n• Slapen 's nachts: 9 uur.\n\n**Eenheden voor tijd**:\n• **seconden** (s) — voor heel korte dingen *(een knipoog ~0,3 s)*.\n• **minuten** (min) — voor korte stukken *(les van 45 min)*.\n• **uren** (u) — voor langere periodes *(school 6 uur)*.\n• **dagen** — voor heel lange dingen *(vakantie 14 dagen)*.\n\n**Belangrijke afspraken** *(uit je hoofd!)*:\n• 1 minuut = **60 seconden**.\n• 1 uur = **60 minuten** = **3600 seconden**.\n• 1 dag = **24 uur**.\n• 1 week = 7 dagen.\n• 1 jaar = ongeveer 365 dagen.\n\n**Toets-truc — niet 100, maar 60!**\nBij tijd gaat het in stappen van **60** *(niet 100 zoals bij geld)*. Dus 1 uur en 70 minuten ≠ 1u 70m, maar 2u 10m (omdat 70 min = 60 min + 10 min = 1u 10 min).\n\n**Wat is verschil tussen 'tijdstip' en 'tijdsduur'?**\n• **Tijdstip** = wanneer? (bv. om 14:30 uur).\n• **Tijdsduur** = hoe lang? (bv. 45 minuten).",
     checks: [
       {
         q: "**1 uur** is hoeveel **minuten**?",
@@ -97,7 +97,7 @@ const steps = [
             { titel: "Andere tijd-omrekeningen", tekst: "1 minuut = 60 seconden. 1 dag = 24 uur. 1 week = 7 dagen. 1 jaar = ~365 dagen." },
           ],
           woorden: [{ woord: "60-base", uitleg: "Tijd gaat met 60, niet 100. Sinds de oude Babyloniërs." }],
-          theorie: "Cito-truc: bij tijd-vraag — altijd 60 omrekenen, niet 100. Veelgemaakte fout: '1 uur 70 min' (niet bestaand) ipv '2 uur 10 min'.",
+          theorie: "Toets-truc: bij tijd-vraag — altijd 60 omrekenen, niet 100. Veelgemaakte fout: '1 uur 70 min' (niet bestaand) ipv '2 uur 10 min'.",
           voorbeelden: [
             { type: "stap", tekst: "2 uur = 2 × 60 = 120 min. 30 min = 1/2 uur = halve. 90 min = 1u 30min." },
           ],
@@ -121,7 +121,7 @@ const steps = [
             { titel: "Check: snel uitrekenen", tekst: "3 × 6 = 18. Plus 0 erachter (vermenigvuldigen met 10 voor de extra 0). = 180." },
           ],
           woorden: [{ woord: "seconde", uitleg: "Korte tijd-eenheid. 60 zitten er in een minuut." }],
-          theorie: "Cito-truc: ÷ 60 of × 60. Minuten naar seconden = × 60. Seconden naar minuten = ÷ 60.",
+          theorie: "Toets-truc: ÷ 60 of × 60. Minuten naar seconden = × 60. Seconden naar minuten = ÷ 60.",
           voorbeelden: [
             { type: "stap", tekst: "5 min = 300 sec. 10 min = 600 sec. Half min = 30 sec." },
           ],
@@ -141,14 +141,14 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Tijdsduur = hoe lang", tekst: "**Tijdsduur** vertelt hoe lang iets duurt — van begin tot eind. Bv. een schooldag duurt 6,5 uur. Een film 1 uur 30 min." },
-            { titel: "Verschil met tijdstip", tekst: "**Tijdstip** = wanneer? (om 14:00). **Tijdsduur** = hoe lang? (30 minuten). Cito test of je deze 2 begrippen niet door elkaar haalt." },
-            { titel: "Cito-truc bij vraag-tekst", tekst: "Kijk naar woorden: 'hoe lang' / 'duurt' / 'totale tijd' → tijdsduur. 'Wanneer' / 'om welk uur' / 'hoe laat' → tijdstip." },
+            { titel: "Verschil met tijdstip", tekst: "**Tijdstip** = wanneer? (om 14:00). **Tijdsduur** = hoe lang? (30 minuten). De toets test of je deze 2 begrippen niet door elkaar haalt." },
+            { titel: "Toets-truc bij vraag-tekst", tekst: "Kijk naar woorden: 'hoe lang' / 'duurt' / 'totale tijd' → tijdsduur. 'Wanneer' / 'om welk uur' / 'hoe laat' → tijdstip." },
           ],
           woorden: [
             { woord: "tijdsduur", uitleg: "Hoe lang iets duurt (een aantal minuten/uren)." },
             { woord: "tijdstip", uitleg: "Wanneer iets gebeurt (een klok-tijd zoals 14:30)." },
           ],
-          theorie: "Bij Cito-rekenen-vragen 80% kans dat het gaat om tijdsduur berekenen tussen 2 tijdstippen. Bv. 'van 9:15 tot 10:45 — hoe lang?' = duur-vraag.",
+          theorie: "Bij Toets-rekenen-vragen 80% kans dat het gaat om tijdsduur berekenen tussen 2 tijdstippen. Bv. 'van 9:15 tot 10:45 — hoe lang?' = duur-vraag.",
           voorbeelden: [
             { type: "stap", tekst: "Tijdstip: het is nu 13:45 (klok-aanwijzing). Tijdsduur: het duurde 45 minuten (van 13:00 tot 13:45)." },
           ],
@@ -187,7 +187,7 @@ const steps = [
   {
     title: "Tijdsduur tussen 2 klokken",
     explanation:
-      "Vaak vraagt Cito: *'Hoe lang duurt het van 10:45 tot 12:20?'*\n\n**Cito-stappenplan — opklimmen**:\n1. Reken van **start-tijd naar volgende heel uur**.\n2. Tel **hele uren** erbij tot je vóór de eind-tijd zit.\n3. Tel de **resterende minuten** erbij.\n4. Tel alles op = tijdsduur.\n\n**Voorbeeld — 10:45 tot 12:20**:\n• Stap 1: 10:45 → 11:00 = **15 minuten**.\n• Stap 2: 11:00 → 12:00 = **1 uur**.\n• Stap 3: 12:00 → 12:20 = **20 minuten**.\n• Stap 4: 15 min + 1 uur + 20 min = **1 uur 35 minuten**.\n\n**Voorbeeld — 8:30 tot 11:15**:\n• 8:30 → 9:00 = 30 min.\n• 9:00 → 11:00 = 2 uur.\n• 11:00 → 11:15 = 15 min.\n• Totaal: 30 + 2u + 15 = **2 uur 45 minuten**.\n\n**Voorbeeld — 14:50 tot 15:20** *(over een heel uur heen)*:\n• 14:50 → 15:00 = 10 min.\n• 15:00 → 15:20 = 20 min.\n• Totaal: **30 minuten**.\n\n**Cito-truc — kleine duur (binnen 1 uur)**:\nGewoon minuten aftrekken werkt soms ook:\n• 15:20 − 14:50: 20 − 50 gaat niet → leen 60 min van het uur: (15:80) − (14:50) — wait, beter eerst de opklim-methode gebruiken.\n\n**Veel-voorkomende fout**:\n• Vergeten over het heel uur heen te springen. *'Van 10:50 tot 11:10 — niet 20 min, maar 20 min ✓'*. Wacht — wel correct. Maar: *'Van 10:50 tot 11:30 — niet 80 min, maar 40 min'* — splits hier: 10 min + 30 min = 40 min.",
+      "Vaak vraagt voor de toets: *'Hoe lang duurt het van 10:45 tot 12:20?'*\n\n**Toets-stappenplan — opklimmen**:\n1. Reken van **start-tijd naar volgende heel uur**.\n2. Tel **hele uren** erbij tot je vóór de eind-tijd zit.\n3. Tel de **resterende minuten** erbij.\n4. Tel alles op = tijdsduur.\n\n**Voorbeeld — 10:45 tot 12:20**:\n• Stap 1: 10:45 → 11:00 = **15 minuten**.\n• Stap 2: 11:00 → 12:00 = **1 uur**.\n• Stap 3: 12:00 → 12:20 = **20 minuten**.\n• Stap 4: 15 min + 1 uur + 20 min = **1 uur 35 minuten**.\n\n**Voorbeeld — 8:30 tot 11:15**:\n• 8:30 → 9:00 = 30 min.\n• 9:00 → 11:00 = 2 uur.\n• 11:00 → 11:15 = 15 min.\n• Totaal: 30 + 2u + 15 = **2 uur 45 minuten**.\n\n**Voorbeeld — 14:50 tot 15:20** *(over een heel uur heen)*:\n• 14:50 → 15:00 = 10 min.\n• 15:00 → 15:20 = 20 min.\n• Totaal: **30 minuten**.\n\n**Toets-truc — kleine duur (binnen 1 uur)**:\nGewoon minuten aftrekken werkt soms ook:\n• 15:20 − 14:50: 20 − 50 gaat niet → leen 60 min van het uur: (15:80) − (14:50) — wait, beter eerst de opklim-methode gebruiken.\n\n**Veel-voorkomende fout**:\n• Vergeten over het heel uur heen te springen. *'Van 10:50 tot 11:10 — niet 20 min, maar 20 min ✓'*. Wacht — wel correct. Maar: *'Van 10:50 tot 11:30 — niet 80 min, maar 40 min'* — splits hier: 10 min + 30 min = 40 min.",
     svg: tijdsverschilSvg(),
     checks: [
       {
@@ -238,7 +238,7 @@ const steps = [
   {
     title: "Tijden optellen en aftrekken",
     explanation:
-      "Bij **tijden optellen** moet je opletten: als minuten ≥ 60, draag je een uur op.\n\n**Voorbeeld — optellen**:\n*'Een film duurt 1 uur 45 minuten. Ze begint om 15:30. Wanneer is hij afgelopen?'*\n• 15:30 + 1 uur = 16:30.\n• 16:30 + 45 min = 17:15 *(want 30 + 45 = 75 min = 1 uur 15 min)*.\n• Antwoord: **17:15**.\n\n**Voorbeeld — uren+minuten optellen**:\n*'2 uur 40 min + 1 uur 35 min = ?'*\n• Uren: 2 + 1 = 3 uur.\n• Minuten: 40 + 35 = 75 min = **1 uur 15 min**.\n• Totaal: 3 uur + 1 uur 15 min = **4 uur 15 min**.\n\n**Voorbeeld — aftrekken**:\n*'Een treinrit duurde 2 uur 20 min. Ik kwam aan om 14:05. Wanneer ben ik vertrokken?'*\n• 14:05 − 2 uur = 12:05.\n• 12:05 − 20 min = 11:45.\n• Antwoord: vertrokken om **11:45**.\n\n**Cito-truc — lenen bij aftrekken**:\nAls je minuten af moet trekken en het gaat niet *(bv. 5 min − 20 min)*: leen 60 min van het uur.\n• 14:05 − 20 min = 13:65 − 20 = **13:45**.\n• Of: 14:05 − 5 min = 14:00, dan nog 15 min eraf = 13:45.\n\n**Veel-voorkomende fout**:\nVergeten te lenen of vergeten te dragen. Tijd gaat met 60, niet 100!",
+      "Bij **tijden optellen** moet je opletten: als minuten ≥ 60, draag je een uur op.\n\n**Voorbeeld — optellen**:\n*'Een film duurt 1 uur 45 minuten. Ze begint om 15:30. Wanneer is hij afgelopen?'*\n• 15:30 + 1 uur = 16:30.\n• 16:30 + 45 min = 17:15 *(want 30 + 45 = 75 min = 1 uur 15 min)*.\n• Antwoord: **17:15**.\n\n**Voorbeeld — uren+minuten optellen**:\n*'2 uur 40 min + 1 uur 35 min = ?'*\n• Uren: 2 + 1 = 3 uur.\n• Minuten: 40 + 35 = 75 min = **1 uur 15 min**.\n• Totaal: 3 uur + 1 uur 15 min = **4 uur 15 min**.\n\n**Voorbeeld — aftrekken**:\n*'Een treinrit duurde 2 uur 20 min. Ik kwam aan om 14:05. Wanneer ben ik vertrokken?'*\n• 14:05 − 2 uur = 12:05.\n• 12:05 − 20 min = 11:45.\n• Antwoord: vertrokken om **11:45**.\n\n**Toets-truc — lenen bij aftrekken**:\nAls je minuten af moet trekken en het gaat niet *(bv. 5 min − 20 min)*: leen 60 min van het uur.\n• 14:05 − 20 min = 13:65 − 20 = **13:45**.\n• Of: 14:05 − 5 min = 14:00, dan nog 15 min eraf = 13:45.\n\n**Veel-voorkomende fout**:\nVergeten te lenen of vergeten te dragen. Tijd gaat met 60, niet 100!",
     checks: [
       {
         q: "**1 uur 40 min + 50 min** = ?",
@@ -286,7 +286,7 @@ const steps = [
   {
     title: "24-uurs format — treinen, vluchten, programma's",
     explanation:
-      "Bij **roosters en vertrektijden** gebruiken we het **24-uurs format**: geen ochtend/middag, maar gewoon 00:00 tot 23:59.\n\n**Hoe lees je 24-uurs tijden?**\n• **00:00** tot **11:59** = ochtend.\n• **12:00** = middag.\n• **13:00** = 1 uur 's middags.\n• **18:00** = 6 uur 's avonds.\n• **22:00** = 10 uur 's avonds.\n• **23:59** = bijna middernacht.\n\n**Omrekenen 12-uurs → 24-uurs**:\n• 's morgens 8 uur → **08:00**.\n• 's middags 1 uur → **13:00** (12 + 1).\n• 's avonds 7 uur → **19:00** (12 + 7).\n• 's avonds 11 uur → **23:00** (12 + 11).\n\n**Voorbeeld — vluchten**:\n*'Vlucht vertrekt 09:25, duurt 7 uur 40 min. Aankomst?'*\n• 09:25 + 7 uur = 16:25.\n• 16:25 + 40 min = **17:05**.\n\n**Voorbeeld — over middernacht**:\n*'Nachtvlucht vertrekt 22:30, duurt 3 uur 15 min. Aankomst?'*\n• 22:30 + 3 uur = 25:30 = 01:30 *(volgende dag)*.\n• 01:30 + 15 min = **01:45** *(volgende dag)*.\n\n**Cito-truc — TV-gids**:\n*'Programma start 20:15, eindigt 21:50. Hoe lang?'*\n• Verschil 20:15 → 21:50.\n• 20:15 → 21:00 = 45 min.\n• 21:00 → 21:50 = 50 min.\n• Totaal: 45 + 50 = **95 min** = **1 uur 35 min**.\n\n**Veel-voorkomende fout**:\nVergeten dat na 23:59 komt 00:00 (de volgende dag).",
+      "Bij **roosters en vertrektijden** gebruiken we het **24-uurs format**: geen ochtend/middag, maar gewoon 00:00 tot 23:59.\n\n**Hoe lees je 24-uurs tijden?**\n• **00:00** tot **11:59** = ochtend.\n• **12:00** = middag.\n• **13:00** = 1 uur 's middags.\n• **18:00** = 6 uur 's avonds.\n• **22:00** = 10 uur 's avonds.\n• **23:59** = bijna middernacht.\n\n**Omrekenen 12-uurs → 24-uurs**:\n• 's morgens 8 uur → **08:00**.\n• 's middags 1 uur → **13:00** (12 + 1).\n• 's avonds 7 uur → **19:00** (12 + 7).\n• 's avonds 11 uur → **23:00** (12 + 11).\n\n**Voorbeeld — vluchten**:\n*'Vlucht vertrekt 09:25, duurt 7 uur 40 min. Aankomst?'*\n• 09:25 + 7 uur = 16:25.\n• 16:25 + 40 min = **17:05**.\n\n**Voorbeeld — over middernacht**:\n*'Nachtvlucht vertrekt 22:30, duurt 3 uur 15 min. Aankomst?'*\n• 22:30 + 3 uur = 25:30 = 01:30 *(volgende dag)*.\n• 01:30 + 15 min = **01:45** *(volgende dag)*.\n\n**Toets-truc — TV-gids**:\n*'Programma start 20:15, eindigt 21:50. Hoe lang?'*\n• Verschil 20:15 → 21:50.\n• 20:15 → 21:00 = 45 min.\n• 21:00 → 21:50 = 50 min.\n• Totaal: 45 + 50 = **95 min** = **1 uur 35 min**.\n\n**Veel-voorkomende fout**:\nVergeten dat na 23:59 komt 00:00 (de volgende dag).",
     checks: [
       {
         q: "**4 uur 's middags** in 24-uurs format?",
@@ -334,7 +334,7 @@ const steps = [
   {
     title: "Praktijk — school, reizen, sport",
     explanation:
-      "Cito-praktijksommen met tijd komen vaak voor — school, reizen, sport.\n\n**Voorbeeld — schooldag**:\n*'School begint 8:30, eindigt 14:45. Hoe lang ben je op school?'*\n• 8:30 → 9:00 = 30 min.\n• 9:00 → 14:00 = 5 uur.\n• 14:00 → 14:45 = 45 min.\n• Totaal: 30 + 5u + 45 = **6 uur 15 min**.\n\n**Voorbeeld — reizen**:\n*'Trein vertrekt 7:45, aankomst 10:30. Reistijd?'*\n• 7:45 → 8:00 = 15 min.\n• 8:00 → 10:00 = 2 uur.\n• 10:00 → 10:30 = 30 min.\n• Totaal: **2 uur 45 min**.\n\n**Voorbeeld — sportwedstrijd**:\n*'Een wedstrijd begint 14:00, duurt 2 keer 35 min met 10 min pauze. Eindtijd?'*\n• 14:00 + 35 min = 14:35.\n• 14:35 + 10 min pauze = 14:45.\n• 14:45 + 35 min = **15:20**.\n\n**Voorbeeld — bedrijfsuren**:\n*'Bibliotheek open 9:00-17:30. Hoeveel uur per dag?'*\n• 9:00 → 12:00 = 3 uur.\n• 12:00 → 17:00 = 5 uur.\n• 17:00 → 17:30 = 30 min.\n• Totaal: **8 uur 30 min**.\n\n**Cito-tip**:\nBij meerdere stappen *(film + pauze + film, of trein + bus)*: reken **elk deel apart**, tel daarna alles op.",
+      "Toets-praktijksommen met tijd komen vaak voor — school, reizen, sport.\n\n**Voorbeeld — schooldag**:\n*'School begint 8:30, eindigt 14:45. Hoe lang ben je op school?'*\n• 8:30 → 9:00 = 30 min.\n• 9:00 → 14:00 = 5 uur.\n• 14:00 → 14:45 = 45 min.\n• Totaal: 30 + 5u + 45 = **6 uur 15 min**.\n\n**Voorbeeld — reizen**:\n*'Trein vertrekt 7:45, aankomst 10:30. Reistijd?'*\n• 7:45 → 8:00 = 15 min.\n• 8:00 → 10:00 = 2 uur.\n• 10:00 → 10:30 = 30 min.\n• Totaal: **2 uur 45 min**.\n\n**Voorbeeld — sportwedstrijd**:\n*'Een wedstrijd begint 14:00, duurt 2 keer 35 min met 10 min pauze. Eindtijd?'*\n• 14:00 + 35 min = 14:35.\n• 14:35 + 10 min pauze = 14:45.\n• 14:45 + 35 min = **15:20**.\n\n**Voorbeeld — bedrijfsuren**:\n*'Bibliotheek open 9:00-17:30. Hoeveel uur per dag?'*\n• 9:00 → 12:00 = 3 uur.\n• 12:00 → 17:00 = 5 uur.\n• 17:00 → 17:30 = 30 min.\n• Totaal: **8 uur 30 min**.\n\n**Toets-tip**:\nBij meerdere stappen *(film + pauze + film, of trein + bus)*: reken **elk deel apart**, tel daarna alles op.",
     checks: [
       {
         q: "School **8:15** tot **14:30**. Hoeveel **uur** op school?",
@@ -379,11 +379,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — tijd-mix",
+    title: "Toets-eindopdracht — tijd-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: omzetten van eenheden, tijdsduur, optellen, aftrekken, 24-uurs.\n\n**Tip**: tekenen op kladpapier helpt. Zet de begin-tijd, eind-tijd, en stappen ertussen.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: omzetten van eenheden, tijdsduur, optellen, aftrekken, 24-uurs.\n\n**Tip**: tekenen op kladpapier helpt. Zet de begin-tijd, eind-tijd, en stappen ertussen.\n\nVeel succes!",
     checks: [
       {
         q: "**90 minuten** = ... ?",

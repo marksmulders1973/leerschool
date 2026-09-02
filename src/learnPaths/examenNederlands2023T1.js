@@ -35,7 +35,7 @@ const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
   theorie:
-    "Cito-truc Nederlands leesvaardigheid: kop + alinea 1 = onderwerp + invalshoek. Alinea 2-4 = uitwerking met voorbeelden. Slot-alinea = conclusie/nuancering/oproep. Tekstverbanden: oorzaak-gevolg (daardoor/dus), opsomming (en, ook), tegenstelling (maar, echter), doel-middel (om...te), reden (omdat, want), voorbeeld (zoals, namelijk).",
+    "Toets-truc Nederlands leesvaardigheid: kop + alinea 1 = onderwerp + invalshoek. Alinea 2-4 = uitwerking met voorbeelden. Slot-alinea = conclusie/nuancering/oproep. Tekstverbanden: oorzaak-gevolg (daardoor/dus), opsomming (en, ook), tegenstelling (maar, echter), doel-middel (om...te), reden (omdat, want), voorbeeld (zoals, namelijk).",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

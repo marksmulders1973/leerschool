@@ -32,7 +32,7 @@ const BRON_LINK = "https://www.examenblad.nl/2025/vmbo-gl/documenten/cse-1/gt-11
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Recht parlement? 4 rechten (amendement/initiatief/budget/interpellatie). Rechtszitting? 5 onderdelen (tenlastelegging→verhoor→requisitoir→pleidooi→vonnis). Crimineel-gedrag-theorie? 4 hoofdtheorieën (anomie/binding/etiket/neutralisatie).",
+  theorie: "Toets-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Recht parlement? 4 rechten (amendement/initiatief/budget/interpellatie). Rechtszitting? 5 onderdelen (tenlastelegging→verhoor→requisitoir→pleidooi→vonnis). Crimineel-gedrag-theorie? 4 hoofdtheorieën (anomie/binding/etiket/neutralisatie).",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

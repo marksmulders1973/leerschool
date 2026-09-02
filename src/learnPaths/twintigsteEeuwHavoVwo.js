@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — niet bedoeling.", "Niet relevant.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "Allein-schuld DE", tekst: "**Artikel 231 Versailles**: 'Duitsland is alleen verantwoordelijk voor WO1 + alle schade'. Basis voor schadevergoeding (132 mld). Voor Duitsers vernederend + economisch verlammend. Voedde nationalistische haat + voorbereidende slogan voor Hitler ('Dolkstoot-legende')." }],
-          theorie: "Cito-favoriet: leg uit waarom Versailles bijdroeg aan WO2. Antwoord: vernedering + economische ellende → Hitler-aanhang.",
+          theorie: "Toets-favoriet: leg uit waarom Versailles bijdroeg aan WO2. Antwoord: vernedering + economische ellende → Hitler-aanhang.",
           niveaus: { basis: "DE alleen schuldig.", simpeler: "Art 231 = DE schuld", nogSimpeler: "A." },
         },
       },
@@ -138,7 +138,7 @@ const steps = [
         wrongHints: [null, "Veel te laag.", "Veel te laag.", "Niet helemaal — nog hoger."],
         uitlegPad: {
           stappen: [{ titel: "Tragisch hoog %", tekst: "Van ~140.000 NL-Joden werden **~104.000 vermoord (~75%)**. **Hoogste percentage West-Europa**. Redenen: efficiënte NL-administratie (registratie 1941), goede coöperatie politie, geografisch geen ontsnap mogelijk, weinig verzet eerst. Anne Frank een van velen." }],
-          theorie: "Vergelijking: België 40%, Frankrijk 25%, Denemarken 1% (door succesvolle redding-actie). Cito-favoriet: 'leg uit waarom % NL hoger dan BE/DK'.",
+          theorie: "Vergelijking: België 40%, Frankrijk 25%, Denemarken 1% (door succesvolle redding-actie). Toets-favoriet: 'leg uit waarom % NL hoger dan BE/DK'.",
           niveaus: { basis: "75%.", simpeler: "104k/140k = 75%", nogSimpeler: "75" },
         },
       },
@@ -247,7 +247,7 @@ const steps = [
         wrongHints: [null, "Niet — geen actieve dader.", "Niet relevant.", "Wel — Dutchbat."],
         uitlegPad: {
           stappen: [{ titel: "Falen 'safe area'", tekst: "**Srebrenica juli 1995**: Bosnische enclave was 'VN safe area' onder bescherming van **Nederlands bataljon (Dutchbat)** (~600 lichtbewapend). Servische troepen onder generaal **Mladić** drongen door, Dutchbat kon niet stoppen → **8.372 moslim-mannen + jongens vermoord** in dagen. Grootste massamoord Europa na WO2. NL-rapport 2002 → kabinet-Kok ontslag-nemen. Mladić in 2017 levenslang ICTY. Trauma + schaamte NL." }],
-          theorie: "Cito-favoriet: 'leg uit waarom Srebrenica NL-trauma'. Antwoord: NL faalde mensen te beschermen, hoewel mandaat te zwak was.",
+          theorie: "Toets-favoriet: 'leg uit waarom Srebrenica NL-trauma'. Antwoord: NL faalde mensen te beschermen, hoewel mandaat te zwak was.",
           niveaus: { basis: "Dutchbat kon niet beschermen.", simpeler: "Srebrenica = NL falen", nogSimpeler: "A." },
         },
       },

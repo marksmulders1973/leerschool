@@ -56,7 +56,7 @@ const steps = [
             { woord: "parlement", uitleg: "Volksvertegenwoordiging — Tweede + Eerste Kamer." },
             { woord: "constitutionele monarchie", uitleg: "Koning + parlement + grondwet — geen absolute koning." },
           ],
-          theorie: "Cito-truc: 1848 = Thorbecke = parlement meer macht. Drie veranderingen onthouden: 1) ministers verantwoordelijk aan Kamer, 2) Tweede Kamer rechtstreeks gekozen, 3) grondrechten erin (vrijheid van drukpers, vergadering).",
+          theorie: "Toets-truc: 1848 = Thorbecke = parlement meer macht. Drie veranderingen onthouden: 1) ministers verantwoordelijk aan Kamer, 2) Tweede Kamer rechtstreeks gekozen, 3) grondrechten erin (vrijheid van drukpers, vergadering).",
           voorbeelden: [
             { type: "feit", tekst: "In 1848 woedden revoluties in Frankrijk, Duitsland, Italië. Willem II zei: 'Ik ben in 24 uur van conservatief liberaal geworden' — om revolutie in NL te voorkomen." },
           ],
@@ -111,12 +111,12 @@ const steps = [
             { woord: "eerlijk proces", uitleg: "Proces met onafhankelijke rechter, verdediging, onschuld-vermoeden." },
             { woord: "show-proces", uitleg: "Proces met vast-staande uitkomst, vaak openbaar maar niet eerlijk." },
           ],
-          theorie: "Cito-truc rechtsstaat-vraag: kijk naar **kern-kenmerken** (eerlijk proces + onafhankelijke rechter + advocaat + beroep), niet naar oppervlakte (openbaar/gesloten zitting). Een dictatuur kan show-processen openbaar houden voor propaganda.",
+          theorie: "Toets-truc rechtsstaat-vraag: kijk naar **kern-kenmerken** (eerlijk proces + onafhankelijke rechter + advocaat + beroep), niet naar oppervlakte (openbaar/gesloten zitting). Een dictatuur kan show-processen openbaar houden voor propaganda.",
           voorbeelden: [
             { type: "feit", tekst: "Stalin's Grote Zuiveringen (1936-1938): drie show-processen tegen oude bolsjewieken. Bekentenissen onder marteling, executies binnen 24 uur. Openbaar maar volstrekt oneerlijk." },
             { type: "feit", tekst: "Neurenberg-tribunaal (1945-46): nazi-leiders berecht door geallieerden. Met advocaten, verdediging, bewijslast — wél een eerlijk proces ondanks de zware misdrijven." },
           ],
-          basiskennis: [{ onderwerp: "Cito-strikvraag", uitleg: "Het woord 'openbaar' klinkt positief en lijkt op rechtsstaat-kenmerk. Maar dictaturen waren ook openbaar — dat is geen onderscheidend criterium. **Eerlijk proces** is wél onderscheidend." }],
+          basiskennis: [{ onderwerp: "Toets-strikvraag", uitleg: "Het woord 'openbaar' klinkt positief en lijkt op rechtsstaat-kenmerk. Maar dictaturen waren ook openbaar — dat is geen onderscheidend criterium. **Eerlijk proces** is wél onderscheidend." }],
           niveaus: {
             basis: "Geen rechtsstaat want geen eerlijk proces.",
             simpeler: "Rechtsstaat = wet boven macht + eerlijk proces. Show-processen waren openbaar maar uitkomst stond vast → géén eerlijk proces → géén rechtsstaat.",
@@ -168,7 +168,7 @@ const steps = [
             { woord: "neutraliteit", uitleg: "Geen partij kiezen in een oorlog — Nederland 1914-1918." },
             { woord: "distributiesysteem", uitleg: "Rantsoenering — bonnen voor schaarse goederen." },
           ],
-          theorie: "Cito-truc oorzaak-vs-gevolg vraag: lees de vraag heel zorgvuldig. 'Oorzaak van' → wat veroorzaakt het. 'Gevolg van' → wat ontstaat erdoor. Distributiesysteem was duidelijk gevolg (= oplossing voor het tekort), niet oorzaak.",
+          theorie: "Toets-truc oorzaak-vs-gevolg vraag: lees de vraag heel zorgvuldig. 'Oorzaak van' → wat veroorzaakt het. 'Gevolg van' → wat ontstaat erdoor. Distributiesysteem was duidelijk gevolg (= oplossing voor het tekort), niet oorzaak.",
           voorbeelden: [
             { type: "feit", tekst: "1918: in Nederlandse steden 'aardappel-oproer' uitgebroken — vrouwen plunderden distributiekantoren omdat hun bonnen geen eten meer kregen." },
             { type: "feit", tekst: "Engelse blokkade was zo effectief dat Duitsland 800.000 burgers verloor aan hongersnood — 'Steckrübenwinter' 1916-1917 (knollenwinter)." },
@@ -225,7 +225,7 @@ const steps = [
             { woord: "regering in ballingschap", uitleg: "Regering die vanuit het buitenland (Londen) doorregeert." },
             { woord: "Luftwaffe", uitleg: "Duitse luchtmacht in WO2." },
           ],
-          theorie: "Cito-truc tijdvolgorde-vraag: schrijf de gebeurtenissen op datum. Inval (10 mei) → vlucht Wilhelmina (13 mei) → Rotterdam-bom (14 mei) → capitulatie (14 mei avond). Reactie OP bombardement = capitulatie. Mobilisatie was al maanden eerder.",
+          theorie: "Toets-truc tijdvolgorde-vraag: schrijf de gebeurtenissen op datum. Inval (10 mei) → vlucht Wilhelmina (13 mei) → Rotterdam-bom (14 mei) → capitulatie (14 mei avond). Reactie OP bombardement = capitulatie. Mobilisatie was al maanden eerder.",
           voorbeelden: [
             { type: "feit", tekst: "In totaal verloor NL ~2000 militaren tijdens de 5-dagen-strijd. Rotterdam-burgerslachtoffers: ~900. Toaal NL slachtoffers WO2 (incl. holocaust): ~250.000." },
             { type: "feit", tekst: "Het bombardement was gepland op 12 mei, maar wegens slecht weer uitgesteld. Een onderhandelingspoging om Rotterdam te sparen werd door communicatiefout onderbroken." },
@@ -282,7 +282,7 @@ const steps = [
             { woord: "vergrijzing", uitleg: "Bevolking wordt gemiddeld ouder — meer ouderen per werker." },
             { woord: "babyboomers", uitleg: "Generatie geboren 1946-1964 — explosieve geboortegolf na WO2." },
           ],
-          theorie: "Cito-truc verzorgingsstaat-vraag: zoek de optie die **direct de financiën raakt**. Vergrijzing = meer uitkeringen + minder premie-betalers = direct financieel probleem. Ontzuiling/secularisatie/overlegeconomie zijn maatschappelijke trends zonder direct effect op AOW-pot.",
+          theorie: "Toets-truc verzorgingsstaat-vraag: zoek de optie die **direct de financiën raakt**. Vergrijzing = meer uitkeringen + minder premie-betalers = direct financieel probleem. Ontzuiling/secularisatie/overlegeconomie zijn maatschappelijke trends zonder direct effect op AOW-pot.",
           voorbeelden: [
             { type: "feit", tekst: "In 1957 (invoering AOW): 7 werkenden per 1 AOW'er. In 2020: 3 werkenden per 1 AOW'er. In 2040: voorspelling 2 werkenden per 1 AOW'er." },
             { type: "feit", tekst: "Daarom verhoogde de regering-Rutte in 2012 de pensioenleeftijd geleidelijk: 65 → 67, daarna gekoppeld aan stijgende levensverwachting." },
@@ -339,7 +339,7 @@ const steps = [
             { woord: "Fluwelen Revolutie", uitleg: "Vreedzame omverwerping communisme Tsjechoslowakije 1989." },
             { woord: "Gorbatsjov", uitleg: "Laatste Sovjet-leider 1985-1991, gaf landen vrijheid (Glasnost/Perestrojka)." },
           ],
-          theorie: "Cito-truc datum-vraag: 1991 = einde Koude Oorlog. Eliminate optie A (EU-uitbreiding kwam pas 2004). Eliminate B (Russische invloed groeide juist niet, maar kromp). Eliminate D (fascisme al weg in 1945). Blijft over: C — communisme verdween.",
+          theorie: "Toets-truc datum-vraag: 1991 = einde Koude Oorlog. Eliminate optie A (EU-uitbreiding kwam pas 2004). Eliminate B (Russische invloed groeide juist niet, maar kromp). Eliminate D (fascisme al weg in 1945). Blijft over: C — communisme verdween.",
           voorbeelden: [
             { type: "feit", tekst: "Václav Havel — toneelschrijver-dissident — werd na de Fluwelen Revolutie eerste niet-communistische president van Tsjechoslowakije (1989-1992)." },
             { type: "feit", tekst: "Lech Wałęsa — Poolse elektricien + Solidarność-leider — werd president Polen (1990-1995). Nobelprijs voor de Vrede in 1983." },

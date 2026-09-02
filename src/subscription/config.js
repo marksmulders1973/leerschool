@@ -1,6 +1,6 @@
 // Audit-1 (2026-05-13): paywall-infrastructuur klaar, gating UIT tot Mark
 // expliciet aanzet. Reden: 2026-mei = 0 gebruikers, eerst groei. Schakel
-// pas aan rond Cito-piek nov 2026 of bij eerste 100+ DAU.
+// pas aan rond Toets-piek nov 2026 of bij eerste 100+ DAU.
 //
 // Hoe schakel je de paywall LIVE?
 //
@@ -19,7 +19,7 @@
 export const PAYWALL_ACTIVE = false;
 
 // Provisional release-doel — bij die datum echte gating overwegen.
-export const PAYWALL_PLANNED_GO_LIVE = "2027-01-15"; // Cito-piek 2027
+export const PAYWALL_PLANNED_GO_LIVE = "2027-01-15"; // Toets-piek 2027
 
 // Tier-mapping (sluit aan op Supabase `subscriptions.tier`-check).
 export const TIERS = {

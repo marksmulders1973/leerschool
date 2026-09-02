@@ -9,7 +9,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-2/gt-02
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc economie: zoek begrip-anker in vraag + match definitie. 'Welke werkloosheid' / 'incidentele uitgave' / 'wie berekent' = directe definitie-toets.",
+  theorie: "Toets-truc economie: zoek begrip-anker in vraag + match definitie. 'Welke werkloosheid' / 'incidentele uitgave' / 'wie berekent' = directe definitie-toets.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

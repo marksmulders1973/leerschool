@@ -25,7 +25,7 @@ import PaywallGate from "../../subscription/PaywallGate.jsx";
 import { GratisBadge } from "../../subscription/ProBadge.jsx";
 import { PRO_MODEL } from "../../subscription/proPlan.js";
 
-// Snelkeuzes = de tien Cito-kern-struikelonderwerpen uit het bouwplan, zodat
+// Snelkeuzes = de tien Toets-kern-struikelonderwerpen uit het bouwplan, zodat
 // een leerkracht in één tik klaar is zonder te hoeven zoeken.
 const SNELKEUZES = [
   { id: "breuken-po", label: "🍕 Breuken" },

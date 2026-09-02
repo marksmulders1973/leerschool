@@ -1,6 +1,6 @@
 // Leerpad: Topografie Nederland — provincies, hoofdsteden, grote steden, water
 // 10 stappen in 5 hoofdstukken (A t/m E).
-// Doelgroep: groep 6-8 basisschool. Cito-relevant.
+// Doelgroep: groep 6-8 basisschool. toets-relevant.
 
 import { PROV_PATHS, PROV_LABELS, KAART_PUNTEN } from "./nederlandKaartPaths.js";
 
@@ -613,7 +613,7 @@ const topografieNederland = {
     { id: "kaartlezen-po", title: "Kaartlezen", niveau: "po-1F" },
   ],
   intro:
-    "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Wadden­eilanden, Deltawerken en de buurlanden. Cito-relevant voor groep 7-8.",
+    "Alles over Nederland in één leerpad: 12 provincies + hoofdsteden, 3 grote rivieren, 5 grootste steden, Wadden­eilanden, Deltawerken en de buurlanden. toets-relevant voor groep 7-8.",
   triggerKeywords: [
     "topografie nederland","provincies nederland","hoofdsteden",
     "groningen","friesland","drenthe","overijssel","flevoland","gelderland","utrecht",

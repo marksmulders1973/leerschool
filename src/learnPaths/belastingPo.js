@@ -1,5 +1,5 @@
 // Leerpad: Belasting — groep 6-8 PO.
-// Onderdeel Cito-rekenen + leefwereld (financiële educatie). Referentieniveau 1F.
+// Onderdeel Toets-rekenen + leefwereld (financiële educatie). Referentieniveau 1F.
 // 4 stappen met uitlegPad. Sluit op geld-rekenen + financiele-vorming-po.
 //
 // Dit pad is de "waarom betalen we samen?" + redactiesom-brug achter het
@@ -22,7 +22,7 @@ const chapters = [
   { letter: "A", title: "Wat is belasting?", emoji: "🏛️", from: 0, to: 0 },
   { letter: "B", title: "Belasting op je loon", emoji: "💼", from: 1, to: 1 },
   { letter: "C", title: "Btw in de winkelprijs", emoji: "🧾", from: 2, to: 2 },
-  { letter: "D", title: "Cito-eindopdracht", emoji: "🏆", from: 3, to: 3 },
+  { letter: "D", title: "Toets-eindopdracht", emoji: "🏆", from: 3, to: 3 },
 ];
 
 // Bruto → belasting eraf → netto, als 3 blokjes met een ronde som (€100 / 20%).
@@ -57,7 +57,7 @@ const steps = [
   {
     title: "Wat is belasting + waarom betalen we het?",
     explanation:
-      "**Belasting** is geld dat je aan de **overheid** betaalt. Daarmee betalen we **samen** dingen die iedereen gebruikt.\n\n**Waar gaat belasting naartoe?** 🏛️\n• **Wegen** en fietspaden.\n• **Scholen** *(ook die van jou!)*.\n• **Ziekenhuizen** en de dokter.\n• **Brandweer** en **politie**.\n• Straatverlichting, parken, dijken die ons droog houden.\n\nZou niemand belasting betalen, dan was er geen geld voor deze dingen. **Samen betalen** = iedereen kan een dokter, school en veilige weg gebruiken.\n\n**Wie int de belasting?**\nDe **Belastingdienst** *(een dienst van de overheid)* zorgt dat de belasting binnenkomt en eerlijk verdeeld wordt.\n\n**Wie betaalt mee?**\nBijna iedereen die geld verdient of iets koopt. **Wie meer verdient, betaalt meestal meer** belasting. Zo dragen sterke schouders een grotere last.\n\n**Twee soorten belasting die jij al tegenkomt**:\n1. **Belasting op loon** — als je werkt, gaat er een stukje van je loon af *(volgende stap)*.\n2. **Btw** — als je iets koopt, zit er belasting in de prijs verstopt *(stap daarna)*.\n\n**Cito-vragen**:\n*'Wat is belasting?'* → geld voor de overheid om samen dingen van te betalen.\n*'Waarvan betalen we belasting?'* → wegen, scholen, ziekenhuizen, politie.\n*'Wie int belasting?'* → de Belastingdienst.",
+      "**Belasting** is geld dat je aan de **overheid** betaalt. Daarmee betalen we **samen** dingen die iedereen gebruikt.\n\n**Waar gaat belasting naartoe?** 🏛️\n• **Wegen** en fietspaden.\n• **Scholen** *(ook die van jou!)*.\n• **Ziekenhuizen** en de dokter.\n• **Brandweer** en **politie**.\n• Straatverlichting, parken, dijken die ons droog houden.\n\nZou niemand belasting betalen, dan was er geen geld voor deze dingen. **Samen betalen** = iedereen kan een dokter, school en veilige weg gebruiken.\n\n**Wie int de belasting?**\nDe **Belastingdienst** *(een dienst van de overheid)* zorgt dat de belasting binnenkomt en eerlijk verdeeld wordt.\n\n**Wie betaalt mee?**\nBijna iedereen die geld verdient of iets koopt. **Wie meer verdient, betaalt meestal meer** belasting. Zo dragen sterke schouders een grotere last.\n\n**Twee soorten belasting die jij al tegenkomt**:\n1. **Belasting op loon** — als je werkt, gaat er een stukje van je loon af *(volgende stap)*.\n2. **Btw** — als je iets koopt, zit er belasting in de prijs verstopt *(stap daarna)*.\n\n**toetsvragen**:\n*'Wat is belasting?'* → geld voor de overheid om samen dingen van te betalen.\n*'Waarvan betalen we belasting?'* → wegen, scholen, ziekenhuizen, politie.\n*'Wie int belasting?'* → de Belastingdienst.",
     svg: loonSvg(),
     checks: [
       {
@@ -80,7 +80,7 @@ const steps = [
             { woord: "belasting", uitleg: "Geld dat je aan de overheid betaalt." },
             { woord: "overheid", uitleg: "Het bestuur van het land (regering, gemeente)." },
           ],
-          theorie: "Cito-kern: belasting = geld voor de overheid om er gezamenlijke dingen van te betalen (wegen, scholen, zorg, veiligheid). Het is geen cadeau en geen korting — het gaat juist van jou áf naar de overheid.",
+          theorie: "Toets-kern: belasting = geld voor de overheid om er gezamenlijke dingen van te betalen (wegen, scholen, zorg, veiligheid). Het is geen cadeau en geen korting — het gaat juist van jou áf naar de overheid.",
           voorbeelden: [
             { type: "stap", tekst: "Jouw school heeft een gebouw, juffen en boeken nodig. Dat wordt grotendeels van belasting betaald." },
             { type: "stap", tekst: "De brandweer komt gratis als er brand is — omdat we die samen via belasting betalen." },
@@ -150,7 +150,7 @@ const steps = [
   {
     title: "Belasting op je loon — van bruto naar netto",
     explanation:
-      "Als je later **werkt**, verdien je **loon**. Maar je krijgt niet alles in je hand: er gaat eerst **belasting** af.\n\n**Drie woorden** *(uit het hoofd!)*:\n• **Brutoloon** 💼 = je héle loon, vóórdat er iets af gaat.\n• **Belasting** = het stukje dat naar de overheid gaat.\n• **Nettoloon** 💰 = wat je **overhoudt** en echt krijgt.\n\n**De som**:\n> **Netto = bruto − belasting**\n\n**Voorbeeld**:\n• Brutoloon: **€100**.\n• Belasting: **€20**.\n• Netto: €100 − €20 = **€80**.\n\nJe baas *(de werkgever)* haalt de belasting er al **vanaf voordat** jij je loon krijgt. Je hoeft het dus niet zelf te regelen.\n\n**Rekenen met procenten** *(%)*:\nVaak is de belasting een **percentage** van je loon. Bijvoorbeeld **20%**:\n• 20% van €100 = €20 *(truc: bij €100 is het percentage gelijk aan het bedrag)*.\n• 10% van €100 = €10, dus 20% = 2 × €10 = €20.\n• Netto = €100 − €20 = €80.\n\n**Op je loonstrookje** *(papiertje van je werk)* zie je deze drie regels netjes onder elkaar: bruto, belasting eraf, netto in je spaarpot.\n\n**Cito-vragen**:\n*'Wat is netto?'* → wat je overhoudt nadat de belasting eraf is.\n*'Bruto €100, belasting €20 — netto?'* → €80.\n*'Wie haalt de belasting van je loon?'* → je werkgever, voordat je het krijgt.",
+      "Als je later **werkt**, verdien je **loon**. Maar je krijgt niet alles in je hand: er gaat eerst **belasting** af.\n\n**Drie woorden** *(uit het hoofd!)*:\n• **Brutoloon** 💼 = je héle loon, vóórdat er iets af gaat.\n• **Belasting** = het stukje dat naar de overheid gaat.\n• **Nettoloon** 💰 = wat je **overhoudt** en echt krijgt.\n\n**De som**:\n> **Netto = bruto − belasting**\n\n**Voorbeeld**:\n• Brutoloon: **€100**.\n• Belasting: **€20**.\n• Netto: €100 − €20 = **€80**.\n\nJe baas *(de werkgever)* haalt de belasting er al **vanaf voordat** jij je loon krijgt. Je hoeft het dus niet zelf te regelen.\n\n**Rekenen met procenten** *(%)*:\nVaak is de belasting een **percentage** van je loon. Bijvoorbeeld **20%**:\n• 20% van €100 = €20 *(truc: bij €100 is het percentage gelijk aan het bedrag)*.\n• 10% van €100 = €10, dus 20% = 2 × €10 = €20.\n• Netto = €100 − €20 = €80.\n\n**Op je loonstrookje** *(papiertje van je werk)* zie je deze drie regels netjes onder elkaar: bruto, belasting eraf, netto in je spaarpot.\n\n**toetsvragen**:\n*'Wat is netto?'* → wat je overhoudt nadat de belasting eraf is.\n*'Bruto €100, belasting €20 — netto?'* → €80.\n*'Wie haalt de belasting van je loon?'* → je werkgever, voordat je het krijgt.",
     svg: loonSvg(),
     checks: [
       {
@@ -168,7 +168,7 @@ const steps = [
             { woord: "brutoloon", uitleg: "Je hele loon, vóór de belasting." },
             { woord: "nettoloon", uitleg: "Wat je overhoudt, ná de belasting." },
           ],
-          theorie: "Cito-truc: NETto = wat NET overblijft. BRUto is het BRok dat je nog moet 'opsplitsen' in belasting + netto.",
+          theorie: "Toets-truc: NETto = wat NET overblijft. BRUto is het BRok dat je nog moet 'opsplitsen' in belasting + netto.",
           voorbeelden: [
             { type: "stap", tekst: "Bruto €50, belasting €10 → netto €40." },
             { type: "stap", tekst: "Bruto €200, belasting €40 → netto €160." },
@@ -195,7 +195,7 @@ const steps = [
           woorden: [
             { woord: "aftrekken", uitleg: "Iets eraf halen (het min-teken −)." },
           ],
-          theorie: "Cito-valkuil: niet optellen! De belasting gaat van je loon ÁF. €100 + €20 = €120 is fout. Het is €100 − €20 = €80.",
+          theorie: "Toets-valkuil: niet optellen! De belasting gaat van je loon ÁF. €100 + €20 = €120 is fout. Het is €100 − €20 = €80.",
           voorbeelden: [
             { type: "stap", tekst: "Bruto €30, belasting €6 → €30 − €6 = €24 netto." },
             { type: "stap", tekst: "Bruto €1000, belasting €200 → €1000 − €200 = €800 netto." },
@@ -222,7 +222,7 @@ const steps = [
           woorden: [
             { woord: "procent (%)", uitleg: "Zoveel per honderd. 20% = 20 per 100." },
           ],
-          theorie: "Cito-truc procenten: reken eerst 10% uit (één nul wegstrepen of delen door 10). Daarna keer zoveel als nodig. 20% = 2 × 10%, 30% = 3 × 10%.",
+          theorie: "Toets-truc procenten: reken eerst 10% uit (één nul wegstrepen of delen door 10). Daarna keer zoveel als nodig. 20% = 2 × 10%, 30% = 3 × 10%.",
           voorbeelden: [
             { type: "stap", tekst: "10% van €1000 = €100, dus 20% = €200." },
             { type: "stap", tekst: "Controle: netto = €1000 − €200 = €800. Klopt: €800 + €200 = €1000." },
@@ -280,7 +280,7 @@ const steps = [
   {
     title: "Btw — de belasting die in de prijs zit",
     explanation:
-      "Belasting betaal je niet alleen over je loon. Ook als je iets **koopt** betaal je belasting: de **btw**.\n\n**Btw** *(belasting toegevoegde waarde)* zit al **in de prijs verstopt**. Je betaalt 'm automatisch mee bij de kassa. De winkel geeft dat stukje door aan de **Belastingdienst**.\n\n**Twee tarieven in Nederland**:\n• **9%** *(laag tarief)* — op **eten, drinken en dieren** 🍎🐶.\n• **21%** *(hoog tarief)* — op bijna **al het andere** *(speelgoed, kleding, een telefoon)*.\n\n**Belangrijk**: het prijskaartje is de prijs **inclusief** btw. Je betaalt dus nooit méér dan wat op het kaartje staat — de btw zit er al in.\n\n**Voorbeeld** *(redactiesom)*:\n• Een knuffel kost **€10** *(dat is inclusief btw)*.\n• Daarvan is **€1** btw.\n• Voor de knuffel zelf is dan: €10 − €1 = **€9**.\n\nZo zit in elke prijs een klein stukje belasting. Bij een park vol dieren in **Mijn Park** zie je dit terug op je **bonnetje**: de prijs van het dier + de btw die er al in zat.\n\n**Waarom btw?**\nNet als loonbelasting: van de btw betaalt de overheid **samen** de wegen, scholen en ziekenhuizen.\n\n**Cito-vragen**:\n*'Wat is btw?'* → belasting die al in de winkelprijs zit.\n*'Welk tarief op eten?'* → 9% *(laag)*.\n*'Prijs €10, €1 btw — hoeveel voor het product zelf?'* → €9.",
+      "Belasting betaal je niet alleen over je loon. Ook als je iets **koopt** betaal je belasting: de **btw**.\n\n**Btw** *(belasting toegevoegde waarde)* zit al **in de prijs verstopt**. Je betaalt 'm automatisch mee bij de kassa. De winkel geeft dat stukje door aan de **Belastingdienst**.\n\n**Twee tarieven in Nederland**:\n• **9%** *(laag tarief)* — op **eten, drinken en dieren** 🍎🐶.\n• **21%** *(hoog tarief)* — op bijna **al het andere** *(speelgoed, kleding, een telefoon)*.\n\n**Belangrijk**: het prijskaartje is de prijs **inclusief** btw. Je betaalt dus nooit méér dan wat op het kaartje staat — de btw zit er al in.\n\n**Voorbeeld** *(redactiesom)*:\n• Een knuffel kost **€10** *(dat is inclusief btw)*.\n• Daarvan is **€1** btw.\n• Voor de knuffel zelf is dan: €10 − €1 = **€9**.\n\nZo zit in elke prijs een klein stukje belasting. Bij een park vol dieren in **Mijn Park** zie je dit terug op je **bonnetje**: de prijs van het dier + de btw die er al in zat.\n\n**Waarom btw?**\nNet als loonbelasting: van de btw betaalt de overheid **samen** de wegen, scholen en ziekenhuizen.\n\n**toetsvragen**:\n*'Wat is btw?'* → belasting die al in de winkelprijs zit.\n*'Welk tarief op eten?'* → 9% *(laag)*.\n*'Prijs €10, €1 btw — hoeveel voor het product zelf?'* → €9.",
     checks: [
       {
         q: "Wat is **btw**?",
@@ -297,7 +297,7 @@ const steps = [
             { woord: "btw", uitleg: "Belasting toegevoegde waarde — belasting in de verkoopprijs." },
             { woord: "inclusief", uitleg: "Er al in zit (de btw zit ín de prijs)." },
           ],
-          theorie: "Cito-kern: btw is belasting in de prijs van wat je koopt. Het prijskaartje is altijd inclusief btw — je betaalt nooit extra bij de kassa.",
+          theorie: "Toets-kern: btw is belasting in de prijs van wat je koopt. Het prijskaartje is altijd inclusief btw — je betaalt nooit extra bij de kassa.",
           voorbeelden: [
             { type: "stap", tekst: "Op een appel zit 9% btw. Op een step zit 21% btw." },
             { type: "stap", tekst: "Staat er €5 op het kaartje? Dan betaal je €5 — de btw zit er al in." },
@@ -330,7 +330,7 @@ const steps = [
           woorden: [
             { woord: "totaalprijs", uitleg: "De prijs inclusief btw (wat op het kaartje staat)." },
           ],
-          theorie: "Cito-valkuil: de btw zit AL in de prijs. Niet optellen (€10 + €1 = €11 is fout). Je haalt de btw er juist af om te zien wat het product zelf kost: €10 − €1 = €9.",
+          theorie: "Toets-valkuil: de btw zit AL in de prijs. Niet optellen (€10 + €1 = €11 is fout). Je haalt de btw er juist af om te zien wat het product zelf kost: €10 − €1 = €9.",
           voorbeelden: [
             { type: "stap", tekst: "Bal €20, btw €2 → bal zelf €18." },
             { type: "stap", tekst: "Boek €15, btw €1 → boek zelf €14." },
@@ -385,11 +385,11 @@ const steps = [
     ],
   },
 
-  // STAP D: Cito-mix
+  // STAP D: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — belasting mix",
+    title: "Toets-eindopdracht — belasting mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: wat is belasting, loon (bruto → netto) en btw in de prijs. Reken rustig en kijk goed of je moet **optellen of aftrekken**.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: wat is belasting, loon (bruto → netto) en btw in de prijs. Reken rustig en kijk goed of je moet **optellen of aftrekken**.\n\nVeel succes!",
     checks: [
       {
         q: "Belasting gebruiken we om **samen** te betalen voor?",

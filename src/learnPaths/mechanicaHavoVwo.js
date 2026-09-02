@@ -36,7 +36,7 @@ const steps = [
         wrongHints: [null, "Niet — versnelling = helling.", "Niet — tijd is as.", "Niet — snelheid is y-waarde."],
         uitlegPad: {
           stappen: [{ titel: "Oppervlakte v-t = afstand", tekst: "Bij eenparige beweging: x = v·t. Op v-t-grafiek vormt v·t een **rechthoek** waarvan oppervlakte = afstand. Bij variabele v: oppervlakte onder curve = integraal van v over t = **verplaatsing**." }],
-          theorie: "Cito-classics: 'gegeven v-t-diagram, hoeveel m heeft auto afgelegd?' Antwoord: oppervlakte bepalen (rechthoek, driehoek, trapezium).",
+          theorie: "Toets-classics: 'gegeven v-t-diagram, hoeveel m heeft auto afgelegd?' Antwoord: oppervlakte bepalen (rechthoek, driehoek, trapezium).",
           niveaus: { basis: "Verplaatsing.", simpeler: "Opp. v-t = afstand", nogSimpeler: "Afstand" },
         },
       },
@@ -78,7 +78,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — minuten-conversie.", "Niet — m vs km, dan tijd nog."],
         uitlegPad: {
           stappen: [{ titel: "km/h ÷ 3,6 = m/s", tekst: "1 km = 1000 m, 1 h = 3600 s → 1 km/h = 1000/3600 = **1/3,6 m/s**. Dus km/h ÷ 3,6 = m/s. Omgekeerd: m/s × 3,6 = km/h.\n\nVoorbeeld: 90 km/h ÷ 3,6 = 25 m/s." }],
-          theorie: "Cito-klassieker. Onthoud: 36 km/h = 10 m/s.",
+          theorie: "Toets-klassieker. Onthoud: 36 km/h = 10 m/s.",
           niveaus: { basis: "÷ 3,6.", simpeler: "km/h → m/s = ÷3,6", nogSimpeler: "÷3,6" },
         },
       },
@@ -168,7 +168,7 @@ const steps = [
         wrongHints: [null, "Mist factor.", "Mist veel.", "Te groot."],
         uitlegPad: {
           stappen: [{ titel: "E_k = ½mv²", tekst: "E_k = ½ × m × v² = ½ × 1000 × 20² = ½ × 1000 × 400 = **200.000 J = 200 kJ**." }],
-          theorie: "Bij verdubbelen v wordt E_k 4×. Cito-favoriet: 'auto van 50 → 100 km/h hoeveel x energie meer?' → 4×.",
+          theorie: "Bij verdubbelen v wordt E_k 4×. Toets-favoriet: 'auto van 50 → 100 km/h hoeveel x energie meer?' → 4×.",
           niveaus: { basis: "200.000 J.", simpeler: "½·1000·400 = 200000", nogSimpeler: "200 kJ" },
         },
       },
@@ -202,7 +202,7 @@ const steps = [
         wrongHints: [null, "Niet — kwadraat.", "Tegenovergesteld.", "Niet — wel groter."],
         uitlegPad: {
           stappen: [{ titel: "v² in formule", tekst: "Remafstand s = v²/(2a). Verdubbelen v → v² ×4 → **s ×4**.\n\n50 km/h vergt bv 15 m. 100 km/h vergt 60 m.\n\nDit is reden waarom snelheidslimiet zo cruciaal is voor verkeersveiligheid." }],
-          theorie: "Cito-toepassing: dodehoek + reactietijd. Reactietijd schaalt lineair (×2), remafstand schaalt kwadratisch (×4). Samen veel langere stopafstand bij hoge snelheid.",
+          theorie: "Toets-toepassing: dodehoek + reactietijd. Reactietijd schaalt lineair (×2), remafstand schaalt kwadratisch (×4). Samen veel langere stopafstand bij hoge snelheid.",
           niveaus: { basis: "4× lang.", simpeler: "v² → ×4", nogSimpeler: "4×" },
         },
       },

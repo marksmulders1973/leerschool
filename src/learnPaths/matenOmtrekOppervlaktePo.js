@@ -10,7 +10,7 @@ const chapters = [
   { letter: "B", title: "Omtrek + Oppervlakte rechthoek", emoji: "📐", from: 1, to: 1 },
   { letter: "C", title: "Andere figuren (driehoek, cirkel)", emoji: "🟦", from: 2, to: 2 },
   { letter: "D", title: "Inhoud (kubus, balk, cilinder)", emoji: "🧊", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht (praktijksommen)", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht (praktijksommen)", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Lengte-maten — km, m, cm, mm omrekenen",
     explanation:
-      "**Lengte-eenheden (van groot naar klein)**:\n• **km** (kilometer) — 1 km = 1000 m. Afstanden tussen steden.\n• **hm** (hectometer) — 1 hm = 100 m. Wegmarkering (hectometerpaaltjes).\n• **dam** (decameter) — 1 dam = 10 m. Niet vaak gebruikt.\n• **m** (meter) — basis-eenheid.\n• **dm** (decimeter) — 1 dm = 0,1 m = 10 cm.\n• **cm** (centimeter) — 1 cm = 0,01 m = 10 mm.\n• **mm** (millimeter) — 1 mm = 0,001 m.\n\n**Geheugen-truc**: **K H D | M | d c m** (komma in midden bij m).\n• Naar **rechts** (kleinere eenheid): × 10 per stap.\n• Naar **links** (grotere eenheid): ÷ 10 per stap.\n\n**Tabel** (oefen-handig):\n• 1 km = 10 hm = 100 dam = 1000 m.\n• 1 m = 10 dm = 100 cm = 1000 mm.\n• 1 km = 1 000 000 mm.\n\n**Belangrijke omrekeningen**:\n• 2 km = 2000 m.\n• 5 m = 500 cm.\n• 30 mm = 3 cm.\n• 1,5 m = 150 cm = 1500 mm.\n• 0,75 km = 750 m.\n\n**Cito-vraag-types**:\n• 'Reken 2,3 m om naar cm' (2,3 × 100 = 230 cm).\n• 'Hoeveel km is 1500 m?' (1500 / 1000 = 1,5 km).\n• 'Optellen verschillende eenheden': 1 km + 200 m = 1,2 km = 1200 m.\n\n**Praktijk-toepassing**:\n• **Schaal** op kaart: 1 cm = 1 km betekent: elke cm op kaart = 1 km echt.\n• Voorbeeld: kaart 1:100 000 → 1 cm op kaart = 100 000 cm = 1 km echt.\n\n**Cito-valkuilen**:\n• Verwarring tussen mm en cm: 30 mm ≠ 30 cm! 30 mm = 3 cm.\n• Decimale komma plaatsing: 1,5 km = 1500 m, NIET 15 m.\n• 1 m² ≠ 100 cm² (zie stap B — oppervlakte werkt anders).",
+      "**Lengte-eenheden (van groot naar klein)**:\n• **km** (kilometer) — 1 km = 1000 m. Afstanden tussen steden.\n• **hm** (hectometer) — 1 hm = 100 m. Wegmarkering (hectometerpaaltjes).\n• **dam** (decameter) — 1 dam = 10 m. Niet vaak gebruikt.\n• **m** (meter) — basis-eenheid.\n• **dm** (decimeter) — 1 dm = 0,1 m = 10 cm.\n• **cm** (centimeter) — 1 cm = 0,01 m = 10 mm.\n• **mm** (millimeter) — 1 mm = 0,001 m.\n\n**Geheugen-truc**: **K H D | M | d c m** (komma in midden bij m).\n• Naar **rechts** (kleinere eenheid): × 10 per stap.\n• Naar **links** (grotere eenheid): ÷ 10 per stap.\n\n**Tabel** (oefen-handig):\n• 1 km = 10 hm = 100 dam = 1000 m.\n• 1 m = 10 dm = 100 cm = 1000 mm.\n• 1 km = 1 000 000 mm.\n\n**Belangrijke omrekeningen**:\n• 2 km = 2000 m.\n• 5 m = 500 cm.\n• 30 mm = 3 cm.\n• 1,5 m = 150 cm = 1500 mm.\n• 0,75 km = 750 m.\n\n**toetsvraag-types**:\n• 'Reken 2,3 m om naar cm' (2,3 × 100 = 230 cm).\n• 'Hoeveel km is 1500 m?' (1500 / 1000 = 1,5 km).\n• 'Optellen verschillende eenheden': 1 km + 200 m = 1,2 km = 1200 m.\n\n**Praktijk-toepassing**:\n• **Schaal** op kaart: 1 cm = 1 km betekent: elke cm op kaart = 1 km echt.\n• Voorbeeld: kaart 1:100 000 → 1 cm op kaart = 100 000 cm = 1 km echt.\n\n**Toets-valkuilen**:\n• Verwarring tussen mm en cm: 30 mm ≠ 30 cm! 30 mm = 3 cm.\n• Decimale komma plaatsing: 1,5 km = 1500 m, NIET 15 m.\n• 1 m² ≠ 100 cm² (zie stap B — oppervlakte werkt anders).",
     checks: [
       {
         q: "**3,5 km** is hoeveel meter?",
@@ -81,7 +81,7 @@ const steps = [
   {
     title: "Omtrek + Oppervlakte — rechthoek + vierkant",
     explanation:
-      "**Omtrek** = lengte van alle zijden samen (de lijn rondom).\n**Oppervlakte** = hoeveel ruimte het figuur bedekt (binnen-vlak).\n\n**Rechthoek** (lengte L, breedte B):\n• Omtrek = **2·L + 2·B = 2(L+B)**.\n• Oppervlakte = **L × B**.\n\n**Vierkant** (zijde z):\n• Omtrek = **4 × z**.\n• Oppervlakte = **z × z = z²**.\n\n**Oppervlakte-eenheden**:\n• **mm²** (vierkante millimeter).\n• **cm²** = 100 mm² (10×10).\n• **dm²** = 100 cm² (10×10).\n• **m²** = 100 dm² = **10 000 cm²** (100×100).\n• **dam² (are, a)** = 100 m². Klein park.\n• **hm² (hectare, ha)** = 100 are = 10 000 m². Voetbalveld ~0,7 ha.\n• **km²** = 100 ha = 1 000 000 m². Stad.\n\n**Cito-valkuil**: tussen elke eenheid is factor **100** (niet 10 zoals bij lengte!) want oppervlakte is 2D.\n\n**Voorbeeld**: rechthoek 5 m × 3 m.\n• Omtrek = 2(5+3) = 16 m.\n• Oppervlakte = 5 × 3 = 15 m².\n\n**Omkering van eenheid**:\n• 15 m² → cm²? × 10 000 → 150 000 cm².\n• 5000 mm² → cm²? ÷ 100 → 50 cm².\n\n**Praktisch — kamer-tegels**:\nKamer 4 m × 5 m = 20 m². Tegels van 30 cm × 30 cm = 0,3 × 0,3 = 0,09 m². Aantal tegels = 20 / 0,09 ≈ 223. Plus 10% reserve.\n\n**Cito-valkuil**:\n• Verwar oppervlakte (cm²) NIET met lengte (cm) — eenheden checken.\n• Bij niet-rechthoekige figuren: opdelen in rechthoeken.",
+      "**Omtrek** = lengte van alle zijden samen (de lijn rondom).\n**Oppervlakte** = hoeveel ruimte het figuur bedekt (binnen-vlak).\n\n**Rechthoek** (lengte L, breedte B):\n• Omtrek = **2·L + 2·B = 2(L+B)**.\n• Oppervlakte = **L × B**.\n\n**Vierkant** (zijde z):\n• Omtrek = **4 × z**.\n• Oppervlakte = **z × z = z²**.\n\n**Oppervlakte-eenheden**:\n• **mm²** (vierkante millimeter).\n• **cm²** = 100 mm² (10×10).\n• **dm²** = 100 cm² (10×10).\n• **m²** = 100 dm² = **10 000 cm²** (100×100).\n• **dam² (are, a)** = 100 m². Klein park.\n• **hm² (hectare, ha)** = 100 are = 10 000 m². Voetbalveld ~0,7 ha.\n• **km²** = 100 ha = 1 000 000 m². Stad.\n\n**Toets-valkuil**: tussen elke eenheid is factor **100** (niet 10 zoals bij lengte!) want oppervlakte is 2D.\n\n**Voorbeeld**: rechthoek 5 m × 3 m.\n• Omtrek = 2(5+3) = 16 m.\n• Oppervlakte = 5 × 3 = 15 m².\n\n**Omkering van eenheid**:\n• 15 m² → cm²? × 10 000 → 150 000 cm².\n• 5000 mm² → cm²? ÷ 100 → 50 cm².\n\n**Praktisch — kamer-tegels**:\nKamer 4 m × 5 m = 20 m². Tegels van 30 cm × 30 cm = 0,3 × 0,3 = 0,09 m². Aantal tegels = 20 / 0,09 ≈ 223. Plus 10% reserve.\n\n**Toets-valkuil**:\n• Verwar oppervlakte (cm²) NIET met lengte (cm) — eenheden checken.\n• Bij niet-rechthoekige figuren: opdelen in rechthoeken.",
     checks: [
       {
         q: "Rechthoek 6 m × 4 m. **Omtrek**?",
@@ -146,7 +146,7 @@ const steps = [
   {
     title: "Driehoek + Cirkel — formules + toepassing",
     explanation:
-      "**Driehoek**:\n• Oppervlakte = **½ × basis × hoogte**.\n• Omtrek = som van alle 3 zijden (gewoon optellen).\n• **Hoogte** = loodrecht op basis, niet schuine zijde!\n\nVoorbeeld: basis 8 cm, hoogte 5 cm. Opp = ½ × 8 × 5 = 20 cm².\n\n**Cirkel** (straal r, diameter d = 2r):\n• Omtrek (= 'cirkelomtrek' of 'omtrek') = **2 × π × r = π × d**.\n• Oppervlakte = **π × r²**.\n• π (pi) ≈ 3,14 (Cito gebruikt vaak 3,14).\n\nVoorbeeld: cirkel met straal 5 cm.\n• Omtrek = 2 × 3,14 × 5 = 31,4 cm.\n• Oppervlakte = 3,14 × 5² = 3,14 × 25 = 78,5 cm².\n\n**Trapezium** (alleen VWO/HAVO maar handig):\n• Opp = ½ × (a + b) × hoogte (a, b zijn de twee parallelle zijden).\n\n**Combinaties + samengestelde figuren**:\n• Halve cirkel = ½ × π × r² (oppervlakte).\n• Rechthoek + halve cirkel erop = beide oppervlakten optellen.\n\n**Cito-truc bij cirkel-vragen**:\n• Cito vraagt meestal: 'gebruik π = 3,14'. NIET 22/7 of andere benadering.\n• Antwoord moet correct afgerond worden (meestal op 1 decimaal).\n\n**Veelgemaakte fout**:\n• Bij driehoek: 'schuine zijde × basis' → fout. Hoogte is **loodrecht** op basis.\n• Bij cirkel: oppervlakte vs omtrek verwarren — formules altijd checken: opp = π·r², omtrek = 2·π·r.\n• Eenheid: oppervlakte ALTIJD vierkant (cm² etc.).",
+      "**Driehoek**:\n• Oppervlakte = **½ × basis × hoogte**.\n• Omtrek = som van alle 3 zijden (gewoon optellen).\n• **Hoogte** = loodrecht op basis, niet schuine zijde!\n\nVoorbeeld: basis 8 cm, hoogte 5 cm. Opp = ½ × 8 × 5 = 20 cm².\n\n**Cirkel** (straal r, diameter d = 2r):\n• Omtrek (= 'cirkelomtrek' of 'omtrek') = **2 × π × r = π × d**.\n• Oppervlakte = **π × r²**.\n• π (pi) ≈ 3,14 (De toets gebruikt vaak 3,14).\n\nVoorbeeld: cirkel met straal 5 cm.\n• Omtrek = 2 × 3,14 × 5 = 31,4 cm.\n• Oppervlakte = 3,14 × 5² = 3,14 × 25 = 78,5 cm².\n\n**Trapezium** (alleen VWO/HAVO maar handig):\n• Opp = ½ × (a + b) × hoogte (a, b zijn de twee parallelle zijden).\n\n**Combinaties + samengestelde figuren**:\n• Halve cirkel = ½ × π × r² (oppervlakte).\n• Rechthoek + halve cirkel erop = beide oppervlakten optellen.\n\n**Toets-truc bij cirkel-vragen**:\n• De toets vraagt meestal: 'gebruik π = 3,14'. NIET 22/7 of andere benadering.\n• Antwoord moet correct afgerond worden (meestal op 1 decimaal).\n\n**Veelgemaakte fout**:\n• Bij driehoek: 'schuine zijde × basis' → fout. Hoogte is **loodrecht** op basis.\n• Bij cirkel: oppervlakte vs omtrek verwarren — formules altijd checken: opp = π·r², omtrek = 2·π·r.\n• Eenheid: oppervlakte ALTIJD vierkant (cm² etc.).",
     checks: [
       {
         q: "Driehoek met **basis 10 cm + hoogte 6 cm**. Oppervlakte?",
@@ -212,7 +212,7 @@ const steps = [
   {
     title: "Inhoud — kubus, balk, cilinder",
     explanation:
-      "**Inhoud** = hoeveel ruimte een 3D-figuur inneemt (binnen-volume).\n\n**Kubus** (alle zijden gelijk, zijde z):\n• Inhoud = **z × z × z = z³**.\n• Voorbeeld: zijde 4 cm → inhoud = 64 cm³.\n\n**Balk** (lengte L, breedte B, hoogte H):\n• Inhoud = **L × B × H**.\n• Voorbeeld: 5 × 3 × 2 = 30 cm³.\n\n**Cilinder** (straal r grondvlak, hoogte h):\n• Inhoud = **π × r² × h** (= grondvlak × hoogte).\n• Voorbeeld: r=3, h=10 → π × 9 × 10 = 282,6 cm³.\n\n**Inhoud-eenheden**:\n• **mm³** (kubieke millimeter).\n• **cm³** = 1000 mm³.\n• **dm³** = 1000 cm³.\n• **m³** = 1000 dm³ = 1 000 000 cm³.\n\n**Cito-tip**: tussen elke inhoud-eenheid is factor **1000** (niet 10 zoals lengte, niet 100 zoals oppervlakte). 3D = 10³.\n\n**Liter-relatie**:\n• **1 L = 1 dm³ = 1000 cm³ = 1000 mL**.\n• 1 m³ = 1000 L.\n• 1 cm³ = 1 mL.\n• Heel handig in praktijk: emmer 10 L = 10 dm³ = 10 000 cm³.\n\n**Voorbeelden CSE-stijl**:\n• Pak melk 1 L = 1 dm³. Hoeveel ml in 0,25 L? 250 ml.\n• Aquarium 50 cm × 30 cm × 25 cm. Inhoud? 37 500 cm³ = 37,5 L.\n• Cylinder-pot d=6 cm, h=10 cm. Inhoud? π × 3² × 10 = 282,6 cm³ ≈ 283 mL.\n\n**Veelgemaakte fouten**:\n• Inhoud-eenheden niet ÷ 100 of × 10, MAAR factor 1000.\n• Bij cilinder: r ipv d gebruiken voor formule.\n• Vergeet dat hoogte loodrecht op grondvlak staat.\n\n**Combinaties**:\n• Halve cilinder = ½ × π × r² × h.\n• L-vormige tank: opdelen in balken.",
+      "**Inhoud** = hoeveel ruimte een 3D-figuur inneemt (binnen-volume).\n\n**Kubus** (alle zijden gelijk, zijde z):\n• Inhoud = **z × z × z = z³**.\n• Voorbeeld: zijde 4 cm → inhoud = 64 cm³.\n\n**Balk** (lengte L, breedte B, hoogte H):\n• Inhoud = **L × B × H**.\n• Voorbeeld: 5 × 3 × 2 = 30 cm³.\n\n**Cilinder** (straal r grondvlak, hoogte h):\n• Inhoud = **π × r² × h** (= grondvlak × hoogte).\n• Voorbeeld: r=3, h=10 → π × 9 × 10 = 282,6 cm³.\n\n**Inhoud-eenheden**:\n• **mm³** (kubieke millimeter).\n• **cm³** = 1000 mm³.\n• **dm³** = 1000 cm³.\n• **m³** = 1000 dm³ = 1 000 000 cm³.\n\n**Toets-tip**: tussen elke inhoud-eenheid is factor **1000** (niet 10 zoals lengte, niet 100 zoals oppervlakte). 3D = 10³.\n\n**Liter-relatie**:\n• **1 L = 1 dm³ = 1000 cm³ = 1000 mL**.\n• 1 m³ = 1000 L.\n• 1 cm³ = 1 mL.\n• Heel handig in praktijk: emmer 10 L = 10 dm³ = 10 000 cm³.\n\n**Voorbeelden CSE-stijl**:\n• Pak melk 1 L = 1 dm³. Hoeveel ml in 0,25 L? 250 ml.\n• Aquarium 50 cm × 30 cm × 25 cm. Inhoud? 37 500 cm³ = 37,5 L.\n• Cylinder-pot d=6 cm, h=10 cm. Inhoud? π × 3² × 10 = 282,6 cm³ ≈ 283 mL.\n\n**Veelgemaakte fouten**:\n• Inhoud-eenheden niet ÷ 100 of × 10, MAAR factor 1000.\n• Bij cilinder: r ipv d gebruiken voor formule.\n• Vergeet dat hoogte loodrecht op grondvlak staat.\n\n**Combinaties**:\n• Halve cilinder = ½ × π × r² × h.\n• L-vormige tank: opdelen in balken.",
     checks: [
       {
         q: "Kubus met **zijde 5 cm**. Inhoud?",
@@ -273,9 +273,9 @@ const steps = [
 
   // ─── E. Eindopdracht ──────────────────────────────────────
   {
-    title: "Cito-eindopdracht — praktijksommen mix",
+    title: "Toets-eindopdracht — praktijksommen mix",
     explanation:
-      "**Cito-meetkunde** is altijd PRAKTIJK-gericht:\n• Tuin-oppervlakte voor gras.\n• Tegels berekenen.\n• Verfblik voor muur.\n• Aquarium-inhoud.\n• Schaal op kaart.\n\n**Werkwijze elke som**:\n1. **Lees** rustig.\n2. **Maak tekening** als geen plaatje gegeven.\n3. **Label** alle gegeven maten.\n4. **Identificeer**: vraag naar omtrek, oppervlakte, inhoud?\n5. **Formule** kiezen + invullen.\n6. **Controleer eenheid** (cm? cm²? cm³? L?).\n7. **Antwoord** rond af zoals gevraagd.\n\n**Eenheid-tips**:\n• Lengte: cm, m, km.\n• Oppervlakte: cm², m², ha.\n• Inhoud: cm³, m³, L.\n• Tip: 'twee dimensies maken vierkant', '3D maakt kubiek'.\n\n**Voorbeeld-som**:\nEen rechthoekige tuin is 12 m × 8 m. Eromheen leg je een pad van 1 m breed.\n• Buitenmaten met pad: (12+2) × (8+2) = 14 × 10 = 140 m².\n• Tuin zelf: 96 m².\n• Pad-oppervlakte: 140 − 96 = 44 m².\n\n**Tuintegel-som**:\nKamer 5 × 4 m, tegels 25 × 25 cm. Hoeveel?\n• Kamer = 20 m² = 200 000 cm².\n• Tegel = 25 × 25 = 625 cm².\n• Aantal = 200 000 / 625 = 320 tegels.\n• + 10% reserve → 352 tegels.\n\n**Verfblik-som**:\nMuur 4 × 3 m. Eén blik dekt 8 m².\n• Muur = 12 m².\n• Blikken nodig: 12 / 8 = 1,5 → ALTIJD afronden naar boven → 2 blikken.\n\n**Aquarium-som**:\nKubus-aquarium zijde 50 cm. Vullen tot 80%.\n• Inhoud totaal: 50³ = 125 000 cm³ = 125 L.\n• 80% = 100 L.",
+      "**Toets-meetkunde** is altijd PRAKTIJK-gericht:\n• Tuin-oppervlakte voor gras.\n• Tegels berekenen.\n• Verfblik voor muur.\n• Aquarium-inhoud.\n• Schaal op kaart.\n\n**Werkwijze elke som**:\n1. **Lees** rustig.\n2. **Maak tekening** als geen plaatje gegeven.\n3. **Label** alle gegeven maten.\n4. **Identificeer**: vraag naar omtrek, oppervlakte, inhoud?\n5. **Formule** kiezen + invullen.\n6. **Controleer eenheid** (cm? cm²? cm³? L?).\n7. **Antwoord** rond af zoals gevraagd.\n\n**Eenheid-tips**:\n• Lengte: cm, m, km.\n• Oppervlakte: cm², m², ha.\n• Inhoud: cm³, m³, L.\n• Tip: 'twee dimensies maken vierkant', '3D maakt kubiek'.\n\n**Voorbeeld-som**:\nEen rechthoekige tuin is 12 m × 8 m. Eromheen leg je een pad van 1 m breed.\n• Buitenmaten met pad: (12+2) × (8+2) = 14 × 10 = 140 m².\n• Tuin zelf: 96 m².\n• Pad-oppervlakte: 140 − 96 = 44 m².\n\n**Tuintegel-som**:\nKamer 5 × 4 m, tegels 25 × 25 cm. Hoeveel?\n• Kamer = 20 m² = 200 000 cm².\n• Tegel = 25 × 25 = 625 cm².\n• Aantal = 200 000 / 625 = 320 tegels.\n• + 10% reserve → 352 tegels.\n\n**Verfblik-som**:\nMuur 4 × 3 m. Eén blik dekt 8 m².\n• Muur = 12 m².\n• Blikken nodig: 12 / 8 = 1,5 → ALTIJD afronden naar boven → 2 blikken.\n\n**Aquarium-som**:\nKubus-aquarium zijde 50 cm. Vullen tot 80%.\n• Inhoud totaal: 50³ = 125 000 cm³ = 125 L.\n• 80% = 100 L.",
     checks: [
       {
         q: "Een vierkante tuin met **omtrek 32 m**. Oppervlakte?",
@@ -347,7 +347,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const matenOmtrekOppervlaktePo = {
   id: "maten-omtrek-oppervlakte-po",
-  title: "Maten + Omtrek + Oppervlakte + Inhoud (Cito groep 7-8)",
+  title: "Maten + Omtrek + Oppervlakte + Inhoud (Doorstroomtoets groep 7-8)",
   emoji: "📏",
   level: "groep6-8",
   subject: "rekenen",
@@ -358,7 +358,7 @@ const matenOmtrekOppervlaktePo = {
     { id: "verhoudingen", title: "Verhoudingen + breuken", niveau: "groep5-6" },
   ],
   intro:
-    "Cito-meetkunde voor Doorstroomtoets — lengte-maten omrekenen (km/m/cm/mm), omtrek + oppervlakte (rechthoek, vierkant, driehoek, cirkel), inhoud (kubus, balk, cilinder), schaal + praktijksommen. 5 stappen × 5 vragen. ~15 min.",
+    "Toets-meetkunde voor Doorstroomtoets — lengte-maten omrekenen (km/m/cm/mm), omtrek + oppervlakte (rechthoek, vierkant, driehoek, cirkel), inhoud (kubus, balk, cilinder), schaal + praktijksommen. 5 stappen × 5 vragen. ~15 min.",
   triggerKeywords: [
     "maten", "lengte",
     "km", "kilometer", "meter", "centimeter", "millimeter",
@@ -377,7 +377,7 @@ const matenOmtrekOppervlaktePo = {
     "cm³", "m³", "liter", "L",
     "aquarium",
     "tegels berekenen", "verf",
-    "Cito rekenen",
+    "De toets rekenen",
     "Doorstroomtoets rekenen",
   ],
   chapters,

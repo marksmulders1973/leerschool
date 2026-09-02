@@ -27,7 +27,7 @@ const steps = [
   {
     title: "Waterschap-traditie + Watersnood 1953",
     explanation:
-      "Nederland ligt voor **26%** onder zeeniveau. Zonder dijken zou ~60% van het land onder water staan. Water-beheer is hier eeuwen-oud.\n\n**Waterschap — vroegste 'democratie' van NL**:\n• Oudste bestaande: **Hoogheemraadschap Rijnland** (1255).\n• Boeren langs rivieren + zee organiseerden samen dijkbeheer.\n• Iedereen die land had **moest meedoen** of betalen — eerste vorm van belasting + verplichting.\n• Vandaag: **21 waterschappen** in NL. Apart bestuur, eigen verkiezingen.\n• Taken: dijken, gemalen, waterzuivering, peilbeheer.\n\n**Watersnoodramp 1953** — keerpunt:\n• Nacht **31 januari → 1 februari 1953**: zware storm + springvloed in Noordzee.\n• Dijken bezweken in **Zeeland, Zuid-Holland, Brabant**.\n• **1.836 mensen** verdronken in NL (+ 28.000 vee).\n• 200.000 hectare onder water.\n• 100.000 mensen geëvacueerd.\n• Communicatie miste — geen telefoon-waarschuwing, geen radio 's nachts.\n• Land was **niet voorbereid** ondanks waarschuwingen sinds 1939.\n\n**Reacties**:\n• Solidariteit: hulp uit hele NL, België, Duitsland.\n• Koningin Juliana bezocht slachtoffers.\n• **Deltacommissie** ingesteld februari 1953 — moest plan maken zodat dit nooit meer kon.\n\n**Cito-feit**: Watersnood is **grootste vredestijds-ramp** in moderne NL-geschiedenis. Memorial-monument staat in Ouwerkerk.",
+      "Nederland ligt voor **26%** onder zeeniveau. Zonder dijken zou ~60% van het land onder water staan. Water-beheer is hier eeuwen-oud.\n\n**Waterschap — vroegste 'democratie' van NL**:\n• Oudste bestaande: **Hoogheemraadschap Rijnland** (1255).\n• Boeren langs rivieren + zee organiseerden samen dijkbeheer.\n• Iedereen die land had **moest meedoen** of betalen — eerste vorm van belasting + verplichting.\n• Vandaag: **21 waterschappen** in NL. Apart bestuur, eigen verkiezingen.\n• Taken: dijken, gemalen, waterzuivering, peilbeheer.\n\n**Watersnoodramp 1953** — keerpunt:\n• Nacht **31 januari → 1 februari 1953**: zware storm + springvloed in Noordzee.\n• Dijken bezweken in **Zeeland, Zuid-Holland, Brabant**.\n• **1.836 mensen** verdronken in NL (+ 28.000 vee).\n• 200.000 hectare onder water.\n• 100.000 mensen geëvacueerd.\n• Communicatie miste — geen telefoon-waarschuwing, geen radio 's nachts.\n• Land was **niet voorbereid** ondanks waarschuwingen sinds 1939.\n\n**Reacties**:\n• Solidariteit: hulp uit hele NL, België, Duitsland.\n• Koningin Juliana bezocht slachtoffers.\n• **Deltacommissie** ingesteld februari 1953 — moest plan maken zodat dit nooit meer kon.\n\n**Toets-feit**: Watersnood is **grootste vredestijds-ramp** in moderne NL-geschiedenis. Memorial-monument staat in Ouwerkerk.",
     checks: [
       {
         q: "Wanneer was de **Watersnoodramp**?",
@@ -37,7 +37,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Nacht van 31 jan op 1 feb 1953", tekst: "Springvloed + storm samen 's nachts → dijken bezweken in Zeeland. **1.836 doden** in NL. Datum vaak afgekort als **'de Ramp'** of **'1 februari 1953'**." }],
           woorden: [{ woord: "springvloed", uitleg: "Extra hoge vloed bij volle/nieuwe maan, ~30% hoger dan normaal." }],
-          theorie: "Cito-feit: 'Bevrijdingsdag' = 5 mei 1945. 'Watersnoodramp' = 1 februari 1953. Niet verwarren.",
+          theorie: "Toets-feit: 'Bevrijdingsdag' = 5 mei 1945. 'Watersnoodramp' = 1 februari 1953. Niet verwarren.",
           niveaus: { basis: "1 februari 1953 — A.", simpeler: "1953 = watersnood", nogSimpeler: "1953" },
         },
       },
@@ -85,7 +85,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Dijk = aarden wal", tekst: "**Dijk** = opgeworpen aarden wal langs water (zee/rivier) om overstroming te voorkomen. NL heeft ~22.000 km dijken (zee + rivier + boezem). Hoogte 's-Heerenhoek = laagste plek NL (-6,76m NAP)." }],
           woorden: [{ woord: "NAP", uitleg: "Normaal Amsterdams Peil — meetpunt zeeniveau voor hoogte in NL." }],
-          theorie: "Cito-feit: ~26% van NL ligt onder NAP. Hardst beschermd: Randstad-gebied.",
+          theorie: "Toets-feit: ~26% van NL ligt onder NAP. Hardst beschermd: Randstad-gebied.",
           niveaus: { basis: "Aarden wal — A.", simpeler: "Dijk = grondwal tegen water", nogSimpeler: "Dijk" },
         },
       },
@@ -105,7 +105,7 @@ const steps = [
         wrongHints: [null, "Niet — toen overstroming, dat triggerde plan.", "Niet — andere ramp.", "Niet — provincie Flevoland."],
         uitlegPad: {
           stappen: [{ titel: "28 mei 1932 = sluitstuk", tekst: "Bouw startte 1927 vanuit Wieringen + Friese kant. Beide kanten ontmoetten elkaar op 28 mei 1932 — 'sluitgat' werd gedicht. Plan Lely had geduurd van 1891 → 1932 (40 jaar van plan naar werkelijkheid)." }],
-          theorie: "Cito-truc: 1932 = Afsluitdijk. 1953 = watersnood. Niet verwarren.",
+          theorie: "Toets-truc: 1932 = Afsluitdijk. 1953 = watersnood. Niet verwarren.",
           niveaus: { basis: "1932 — A.", simpeler: "Afsluitdijk = 1932", nogSimpeler: "1932" },
         },
       },
@@ -138,7 +138,7 @@ const steps = [
         wrongHints: [null, "Oude provincie sinds 1796.", "Provincie sinds 1839.", "Een van oudste — bestaat al eeuwen."],
         uitlegPad: {
           stappen: [{ titel: "Flevoland = 12e provincie", tekst: "**Flevoland** opgericht 1 januari **1986** uit drooggemaakte polders. Bevat: Noordoostpolder + Oostelijk Flevoland + Zuidelijk Flevoland. Hoofdstad **Lelystad** — grootste stad **Almere** (vandaag ~220.000 inwoners)." }],
-          theorie: "Cito-feit: NL heeft 12 provincies sinds 1986. Daarvoor 11.",
+          theorie: "Toets-feit: NL heeft 12 provincies sinds 1986. Daarvoor 11.",
           niveaus: { basis: "Flevoland — A.", simpeler: "1986 = Flevoland", nogSimpeler: "Flevoland" },
         },
       },
@@ -149,7 +149,7 @@ const steps = [
         wrongHints: [null, "Niet — Deltawerken in Zeeland.", "Vissersdorpen aan Markermeer (Volendam, Marken).", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Markerwaard nooit gebouwd", tekst: "**Markerwaard** = oorspronkelijk 5e polder-plan (Lely). Begin '80 geschrapt — milieubeweging + financieel + minder noodzaak. **Markermeer** bleef open water. **Marker Wadden** sinds 2016: kunstmatige eilandjes voor vogel-/natuurherstel." }],
-          theorie: "Cito-actueel: Markerwaard-schrap = symbool voor milieu-bewustzijn jaren '80 (RUS-bos verzet etc).",
+          theorie: "Toets-actueel: Markerwaard-schrap = symbool voor milieu-bewustzijn jaren '80 (RUS-bos verzet etc).",
           niveaus: { basis: "Geschrapte polder — A.", simpeler: "Markerwaard = nooit gebouwd", nogSimpeler: "Geschrapt" },
         },
       },
@@ -214,7 +214,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hoogste norm ter wereld", tekst: "**Randstad-norm**: 1 keer per **10.000 jaar** mag dijk falen. Zeeland-norm: 1× per **4.000 jaar**. Rivierdijken NL: 1× per **1.250 jaar**. Internationaal record-strikt: VS-norm 1× per 100 jaar, Japan 1× per 200." }],
           woorden: [{ woord: "overstromingsnorm", uitleg: "Acceptabele kans dat een dijk faalt per jaar." }],
-          theorie: "Cito-actueel: door klimaatverandering moeten dijken nóg sterker — discussie over verhoging norm naar 1× per 100.000 jaar.",
+          theorie: "Toets-actueel: door klimaatverandering moeten dijken nóg sterker — discussie over verhoging norm naar 1× per 100.000 jaar.",
           niveaus: { basis: "1 per 10.000 jaar — A.", simpeler: "Randstad = 1/10000 jaar", nogSimpeler: "10000" },
         },
       },
@@ -225,7 +225,7 @@ const steps = [
   {
     title: "Klimaatverandering + Nederland nu",
     explanation:
-      "Tegen 2100 verwacht **KNMI** een zeespiegelstijging van **0,3 tot 1,2 meter** (afhankelijk van wereld-klimaatbeleid). Voor laag NL is dit een existentiële uitdaging.\n\n**Klimaat-uitdagingen voor NL**:\n• **Zeespiegelstijging**: hogere dijken nodig.\n• **Bodemdaling**: vooral West-NL daalt 5-10 mm/jaar (veen klinkt in).\n• **Extreem weer**: zwaarder regen + langere droogte.\n• **Rivieren**: pieken in afvoer Rijn + Maas door extreme regen in Duitsland/Frankrijk.\n• **Verzilting**: zout zeewater dringt landinwaarts via gronwater.\n\n**Aanpassings-strategieën**:\n\n**1. Dijken verhogen + versterken**:\n• **Hoogwaterbeschermingsprogramma** (HWBP): 1.500 km dijken versterken 2020-2050.\n• Kosten ~€7 miljard.\n\n**2. Ruimte voor de Rivier (2007-2019)**:\n• Hoogwaterproblemen Rijn/Maas (1993 + 1995 evacuaties).\n• Aanpak: rivieren **MEER ruimte** geven ipv hogere dijken. **Uiterwaarden verdiept**, **nieuwe nevengeulen** gegraven.\n• Bv. **Ruimte voor de Waal Nijmegen** (2015): nevengeul + waterfront — toerisme-prijs.\n\n**3. Maeslantkering reserveren** + bouw vermoedelijk **2e Maeslantkering** in toekomst.\n\n**4. Watertoets**:\n• Bij elke nieuwe woningbouw verplichte check: kan dit gebied water aan?\n• 'Niet bouwen in diepste polders' — beleidsregel.\n\n**5. Zoetwater-buffer**:\n• Bij langere droogte (zoals 2018-2022): minder zoetwater Rijn → IJsselmeer gebruikt als reserve.\n• Discussie over **Markermeer-rol** voor drinkwater.\n\n**6. Drijvende huizen + waterwoningen**:\n• Experimenten in **IJburg Amsterdam** + Maasbommel.\n• Houden mee met water-niveau.\n\n**7. Wadden + ecologische hervorming**:\n• Mariene reservaten.\n• Marker Wadden = 1.000 ha kunstmatige eilandjes voor natuur.\n\n**Politieke discussies**:\n• Wie betaalt? Waterschapsbelasting? Inkomstenbelasting?\n• **Klimaatakkoord 2019**: NL streeft 49% CO₂-reductie 2030 vs 1990.\n• **2030-doel**: kabinet Schoof wil minder ambitieus.\n\n**Onthoud voor Cito**:\n• KNMI = klimaat-instituut. Voorspellingen worden tot 2100 ge-extrapoleerd.\n• Ruimte voor de Rivier = klassiek voorbeeld 'klimaatadaptatie' i.p.v. alleen dijken.\n• Bodemdaling = NL-specifiek probleem (veen + drainage).",
+      "Tegen 2100 verwacht **KNMI** een zeespiegelstijging van **0,3 tot 1,2 meter** (afhankelijk van wereld-klimaatbeleid). Voor laag NL is dit een existentiële uitdaging.\n\n**Klimaat-uitdagingen voor NL**:\n• **Zeespiegelstijging**: hogere dijken nodig.\n• **Bodemdaling**: vooral West-NL daalt 5-10 mm/jaar (veen klinkt in).\n• **Extreem weer**: zwaarder regen + langere droogte.\n• **Rivieren**: pieken in afvoer Rijn + Maas door extreme regen in Duitsland/Frankrijk.\n• **Verzilting**: zout zeewater dringt landinwaarts via gronwater.\n\n**Aanpassings-strategieën**:\n\n**1. Dijken verhogen + versterken**:\n• **Hoogwaterbeschermingsprogramma** (HWBP): 1.500 km dijken versterken 2020-2050.\n• Kosten ~€7 miljard.\n\n**2. Ruimte voor de Rivier (2007-2019)**:\n• Hoogwaterproblemen Rijn/Maas (1993 + 1995 evacuaties).\n• Aanpak: rivieren **MEER ruimte** geven ipv hogere dijken. **Uiterwaarden verdiept**, **nieuwe nevengeulen** gegraven.\n• Bv. **Ruimte voor de Waal Nijmegen** (2015): nevengeul + waterfront — toerisme-prijs.\n\n**3. Maeslantkering reserveren** + bouw vermoedelijk **2e Maeslantkering** in toekomst.\n\n**4. Watertoets**:\n• Bij elke nieuwe woningbouw verplichte check: kan dit gebied water aan?\n• 'Niet bouwen in diepste polders' — beleidsregel.\n\n**5. Zoetwater-buffer**:\n• Bij langere droogte (zoals 2018-2022): minder zoetwater Rijn → IJsselmeer gebruikt als reserve.\n• Discussie over **Markermeer-rol** voor drinkwater.\n\n**6. Drijvende huizen + waterwoningen**:\n• Experimenten in **IJburg Amsterdam** + Maasbommel.\n• Houden mee met water-niveau.\n\n**7. Wadden + ecologische hervorming**:\n• Mariene reservaten.\n• Marker Wadden = 1.000 ha kunstmatige eilandjes voor natuur.\n\n**Politieke discussies**:\n• Wie betaalt? Waterschapsbelasting? Inkomstenbelasting?\n• **Klimaatakkoord 2019**: NL streeft 49% CO₂-reductie 2030 vs 1990.\n• **2030-doel**: kabinet Schoof wil minder ambitieus.\n\n**Onthoud voor de Doorstroomtoets**:\n• KNMI = klimaat-instituut. Voorspellingen worden tot 2100 ge-extrapoleerd.\n• Ruimte voor de Rivier = klassiek voorbeeld 'klimaatadaptatie' i.p.v. alleen dijken.\n• Bodemdaling = NL-specifiek probleem (veen + drainage).",
     checks: [
       {
         q: "Wat wordt voorspeld als **zeespiegelstijging** in NL tot 2100?",
@@ -235,7 +235,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "KNMI 2023-scenario's", tekst: "Bij **lage** CO₂-uitstoot: ~30-50 cm in 2100. Bij **hoge** uitstoot (alles blijft zo): tot ~1,2m. Bij extreme **kantelpunt-scenario's** (Antarctische ijsmelt): >2m mogelijk." }],
           woorden: [{ woord: "KNMI", uitleg: "Koninklijk Nederlands Meteorologisch Instituut — staat in De Bilt." }],
-          theorie: "Cito-actueel: getallen worden elke ~5 jaar herzien als IPCC nieuwe rapporten publiceert.",
+          theorie: "Toets-actueel: getallen worden elke ~5 jaar herzien als IPCC nieuwe rapporten publiceert.",
           niveaus: { basis: "0,3-1,2 m — A.", simpeler: "Zeespiegel +0,3-1,2m tot 2100", nogSimpeler: "1m" },
         },
       },
@@ -247,7 +247,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Nieuwe rivierstrategie", tekst: "Na hoogwater Rijn/Maas 1993+1995 (evacuaties Roermond + Limburg) koos NL voor **anders denken**. Niet alleen hoger dijken, maar **uiterwaarden verbreden** + **nevengeulen graven**. Voorbeeld: Nijmegen kreeg een 'nieuwe Waal-arm' met park (klaar 2015)." }],
           woorden: [{ woord: "uiterwaard", uitleg: "Vlak land langs een rivier dat bij hoogwater onderloopt." }, { woord: "nevengeul", uitleg: "Extra rivierloop naast de hoofdgeul, zodat water meer weg kan." }],
-          theorie: "Cito-feit: 'Ruimte voor de Rivier' programma 2007-2019, ~€2,3 miljard, 34 projecten langs Rijn/Maas/IJssel/Waal.",
+          theorie: "Toets-feit: 'Ruimte voor de Rivier' programma 2007-2019, ~€2,3 miljard, 34 projecten langs Rijn/Maas/IJssel/Waal.",
           niveaus: { basis: "Meer ruimte ipv hogere dijken — A.", simpeler: "Ruimte voor Rivier = rivier breder maken", nogSimpeler: "Meer ruimte" },
         },
       },
@@ -282,7 +282,7 @@ const steps = [
         wrongHints: [null, "Pas 2050-doel (klimaatneutraal).", "Te weinig — EU eist meer.", "Wel een doel — Klimaatakkoord 2019."],
         uitlegPad: {
           stappen: [{ titel: "Klimaatakkoord 2019", tekst: "**Klimaatakkoord** ondertekend juni 2019 door regering + werkgevers + milieugroepen. Doel: **49% CO₂-reductie 2030** vs 1990. **2050**: 95% reductie + klimaatneutraal. Sectoren: industrie / mobiliteit / gebouwde omgeving / landbouw / elektriciteit." }],
-          theorie: "Cito-actueel: kabinet Schoof (2024+) wil minder ambitieus, terug naar 2030-doel onder druk.",
+          theorie: "Toets-actueel: kabinet Schoof (2024+) wil minder ambitieus, terug naar 2030-doel onder druk.",
           niveaus: { basis: "49% — A.", simpeler: "NL 2030-doel = -49% CO₂", nogSimpeler: "49%" },
         },
       },

@@ -37,7 +37,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "VOC 1602-1799", tekst: "**VOC** opgericht **20 maart 1602** door de Staten-Generaal. Bestond 197 jaar. Eerste multinationale onderneming. Vandaag de **VOC-mentaliteit** (term Balkenende 2006) verwijst kritisch naar deze historie." }],
           woorden: [{ woord: "VOC", uitleg: "Verenigde Oostindische Compagnie — Nederlands handelsbedrijf in Azië 1602-1799." }, { woord: "octrooi", uitleg: "Monopolie/exclusieve recht verleend door overheid." }],
-          theorie: "Cito-feit: VOC = 1602. Tegenhanger: WIC (West-Indische Compagnie) = 1621 — opereerde in Amerika/West-Afrika.",
+          theorie: "Toets-feit: VOC = 1602. Tegenhanger: WIC (West-Indische Compagnie) = 1621 — opereerde in Amerika/West-Afrika.",
           voorbeelden: [{ type: "feit", tekst: "VOC was eerste bedrijf ter wereld met verhandelbare aandelen (Amsterdamse beurs)." }],
           niveaus: { basis: "1602 — A.", simpeler: "VOC = 1602", nogSimpeler: "1602" },
         },
@@ -50,7 +50,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Specerijen = goud van toen", tekst: "Specerijen (vooral nootmuskaat + kruidnagel uit de **Molukken**) waren in Europa zeer schaars en duur. VOC vestigde gewelddadig monopolie — bv. **Banda-eilanden bloedbad** 1621 onder J.P. Coen om controle te krijgen." }],
           woorden: [{ woord: "specerij", uitleg: "Geurig + smaakvol kruid uit tropen, gebruikt voor eten/conservering." }, { woord: "Molukken", uitleg: "Eilandengroep oostelijk Indonesië, beroemd om kruidnagel + nootmuskaat." }],
-          theorie: "Cito-controversie: J.P. Coen wordt nu zelden meer in straatnamen genoemd vanwege Banda-massamoord.",
+          theorie: "Toets-controversie: J.P. Coen wordt nu zelden meer in straatnamen genoemd vanwege Banda-massamoord.",
           voorbeelden: [{ type: "feit", tekst: "1621: ~14.000 Bandanezen vermoord/verbannen door Coen om monopolie te garanderen." }],
           niveaus: { basis: "Specerijen — A.", simpeler: "Nootmuskaat etc. = VOC-hoofdproduct", nogSimpeler: "Specerijen" },
         },
@@ -62,7 +62,7 @@ const steps = [
         wrongHints: [null, "Tachtigjarige Oorlog-einde — VOC bestond toen pas 46 jaar.", "Cultuurstelsel-start — VOC al 31 jaar failliet.", "Veel te laat."],
         uitlegPad: {
           stappen: [{ titel: "1799 = VOC einde", tekst: "Door **corruptie**, **lange oorlogen met Engeland** (Vierde Engelse Oorlog 1780-84) en concurrentie viel VOC om. Bezittingen werden door Nederlandse staat overgenomen — begin van koloniale staat **Nederlands-Indië**." }],
-          theorie: "VOC werd 197 jaar oud (1602-1799). Cito-truc: VOC = 1602, einde 1799, dus 197 jaar.",
+          theorie: "VOC werd 197 jaar oud (1602-1799). Toets-truc: VOC = 1602, einde 1799, dus 197 jaar.",
           niveaus: { basis: "1799 — A.", simpeler: "VOC faillissement = 1799", nogSimpeler: "1799" },
         },
       },
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Bijna — Jakarta is moderne naam (sinds 1949).", "Britse kolonie, nu eigen staat.", "Filipijns — geen Nederlandse kolonie."],
         uitlegPad: {
           stappen: [{ titel: "Batavia = oud, Jakarta = nieuw", tekst: "1619: J.P. Coen sticht **Batavia** op locatie van Jakarta-stad. Naam blijft tot 1942 (Japanse bezetting). 1949: officiële naam **Jakarta** voor onafhankelijke hoofdstad Indonesië." }],
-          theorie: "Cito-truc: zelfde plek, twee namen. Batavia = NL-tijd. Jakarta = onafhankelijk Indonesië.",
+          theorie: "Toets-truc: zelfde plek, twee namen. Batavia = NL-tijd. Jakarta = onafhankelijk Indonesië.",
           niveaus: { basis: "Batavia — A.", simpeler: "Nederlandse hoofdstad-naam = Batavia", nogSimpeler: "Batavia" },
         },
       },
@@ -129,7 +129,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Multatuli = Latijn voor 'ik heb veel geleden'", tekst: "**Eduard Douwes Dekker** (1820-1887), oud-assistent-resident op Java, schreef de roman als wraak op de NL-koloniale staat. *Max Havelaar* = klassieker van NL-literatuur + politieke aanklacht. Naam **'Max Havelaar'** is ook fairtrade-koffiemerk geworden." }],
           woorden: [{ woord: "Multatuli", uitleg: "Pseudoniem van E. Douwes Dekker, Latijn voor 'ik heb veel geleden'." }],
-          theorie: "Cito-aanknopingspunt: Multatuli-citaat 'De Javaan wordt mishandeld' = bekendste protestzin van koloniale tijd.",
+          theorie: "Toets-aanknopingspunt: Multatuli-citaat 'De Javaan wordt mishandeld' = bekendste protestzin van koloniale tijd.",
           niveaus: { basis: "Multatuli — A.", simpeler: "Max Havelaar = Multatuli", nogSimpeler: "Multatuli" },
         },
       },
@@ -141,7 +141,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "OIE — onthoud O-I-E", tekst: "Speerpunten ethische politiek volgens **koningin Wilhelmina** (troonrede 1901):\n• **O**nderwijs: scholen voor inheemse bevolking\n• **I**rrigatie: betere waterwerken voor landbouw\n• **E**migratie: Javaanse boeren overplaatsen naar minder-bevolkte eilanden (Sumatra, Sulawesi)" }],
           woorden: [{ woord: "ethische politiek", uitleg: "Nieuwe koloniale koers 1901: NL als 'voogd' die welvaart in Indië moet bevorderen." }],
-          theorie: "Cito-criticus: ethische politiek was deels propaganda — in praktijk bleef het meeste geld naar NL gaan + slechts ~1% Indonesiërs kreeg onderwijs.",
+          theorie: "Toets-criticus: ethische politiek was deels propaganda — in praktijk bleef het meeste geld naar NL gaan + slechts ~1% Indonesiërs kreeg onderwijs.",
           niveaus: { basis: "Onderwijs Irrigatie Emigratie — A.", simpeler: "OIE = ethische politiek", nogSimpeler: "OIE" },
         },
       },
@@ -172,7 +172,7 @@ const steps = [
         wrongHints: [null, "Begin WO2 in Europa, maar Japan-Indië-oorlog later.", "Einde Japanse bezetting, geen begin.", "Onafhankelijkheid Indonesië, geen Japan-aanval."],
         uitlegPad: {
           stappen: [{ titel: "Maart 1942 = NL-overgave", tekst: "Pearl Harbor december 1941. Daarna Japan zuidelijk: Filipijnen, Maleisië, Singapore. Maart 1942 NL-overgave bij Kalidjati. Bezetting 1942-1945 (~3,5 jaar)." }],
-          theorie: "Cito-feit: NL-Indië capituleerde sneller dan Japan-veld in Europa verloopt. 3 maanden van aanval tot overgave.",
+          theorie: "Toets-feit: NL-Indië capituleerde sneller dan Japan-veld in Europa verloopt. 3 maanden van aanval tot overgave.",
           niveaus: { basis: "1942 — A.", simpeler: "Japan veroverde NL-Indië in 1942", nogSimpeler: "1942" },
         },
       },
@@ -217,7 +217,7 @@ const steps = [
         wrongHints: [null, "Niet — Japanse overmacht was juist een schok.", "Veel effect — psychologische omslag.", "Niet helemaal verdwenen, maar wel doorbroken."],
         uitlegPad: {
           stappen: [{ titel: "Mythe van witte overmacht", tekst: "Vóór 1942: koloniale ideologie dat 'witte mensen' van nature heersers zijn. **Japan's snelle overwinning** doorbrak die mythe — Aziaten konden Europeanen verslaan. Dit gaf nationalistische bewegingen overal in Azië (Indonesië, Vietnam, Maleisië, Birma) extra kracht na 1945." }],
-          theorie: "Cito-link: deze 'doorbroken mythe' verklaart waarom dekolonisatie in heel Azië versnelde na 1945.",
+          theorie: "Toets-link: deze 'doorbroken mythe' verklaart waarom dekolonisatie in heel Azië versnelde na 1945.",
           niveaus: { basis: "Doorbroken — A.", simpeler: "Japan won = NL-prestige weg", nogSimpeler: "Doorbroken" },
         },
       },
@@ -237,7 +237,7 @@ const steps = [
         wrongHints: [null, "Niet — Japan-capitulatie, geen onafhankelijkheidsverklaring.", "Niet — pas officiële NL-erkenning, 4 jaar later.", "Niet — start nationalistische beweging Boedi Oetomo."],
         uitlegPad: {
           stappen: [{ titel: "17 aug 1945 = Hari Kemerdekaan", tekst: "**Soekarno** las de **Proclamasi Kemerdekaan** (onafhankelijkheidsverklaring) voor om 10:00 op 17 augustus 1945, 2 dagen na Japans' capitulatie. Tekst werd op een typemachine getypt door **Sayuti Melik**. **Hari Kemerdekaan** (Onafhankelijkheidsdag) is Indonesische nationale feestdag." }],
-          theorie: "Cito-tijdlijn: 15 aug Japan over → 17 aug Indonesië verklaart onafhankelijkheid → 1945-49 strijd → 27 dec 1949 NL erkent.",
+          theorie: "Toets-tijdlijn: 15 aug Japan over → 17 aug Indonesië verklaart onafhankelijkheid → 1945-49 strijd → 27 dec 1949 NL erkent.",
           niveaus: { basis: "17 augustus 1945 — A.", simpeler: "Soekarno-proclamatie = 17-8-1945", nogSimpeler: "17-8-1945" },
         },
       },
@@ -249,7 +249,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Politionele actie' = eufemisme", tekst: "**Politionele acties** klinkt onschuldig (politie-werk, orde-handhaving) maar het waren **militaire offensieven** met tienduizenden NL-soldaten. NL-regering wilde geen 'oorlog' erkennen om buitenlandse interventie te vermijden. Sinds 2022 wordt officieel **'koloniale oorlog'** gebruikt." }],
           woorden: [{ woord: "eufemisme", uitleg: "Verzachtende term voor iets onaangenaams." }, { woord: "politionele actie", uitleg: "NL-eufemisme voor militair offensief 1947 + 1948 in Indonesië." }],
-          theorie: "Cito-controversie: NL-regering wijzigde in 2022 historische terminologie naar 'koloniale oorlog' op advies van wetenschappelijk onderzoek (KITLV/NIOD).",
+          theorie: "Toets-controversie: NL-regering wijzigde in 2022 historische terminologie naar 'koloniale oorlog' op advies van wetenschappelijk onderzoek (KITLV/NIOD).",
           niveaus: { basis: "Politionele acties — A.", simpeler: "Officiële NL-naam = politionele acties", nogSimpeler: "Politioneel" },
         },
       },
@@ -272,7 +272,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "VS + VN = breekijzer", tekst: "**Verenigde Staten** dreigde **Marshall-hulp** (Europese wederopbouw na WO2) in te trekken als NL doorging. Voor NL was Marshall-geld essentieel voor wederopbouw. Plus: VN-Veiligheidsraad keurde NL-acties af (resolutie 1947). NL moest plooien." }],
           woorden: [{ woord: "Marshall-hulp", uitleg: "Amerikaans steunprogramma voor wederopbouw Europa na WO2 (1948-1952)." }],
-          theorie: "Cito-context: VS in 1948 al Koude Oorlog-modus. Wilde geen instabiele kolonies waar communisme kon groeien — duwde dekolonisatie door.",
+          theorie: "Toets-context: VS in 1948 al Koude Oorlog-modus. Wilde geen instabiele kolonies waar communisme kon groeien — duwde dekolonisatie door.",
           niveaus: { basis: "VS — A.", simpeler: "Amerika dreigde Marshall-hulp", nogSimpeler: "VS" },
         },
       },
@@ -283,7 +283,7 @@ const steps = [
         wrongHints: [null, "Niet — Beatrix bezocht Indonesië 1995, geen excuses.", "Juliana tekende soevereiniteitsoverdracht, geen excuses.", "Niet — Wilhelmina overleed 1962, lang vóór 2020."],
         uitlegPad: {
           stappen: [{ titel: "Excuses 2020", tekst: "**10 maart 2020**: koning Willem-Alexander biedt tijdens staatsbezoek Indonesië excuses aan voor 'buitensporig geweld' van NL-zijde in 1945-1949. Eerste expliciete koninklijke excuses. **2022**: ook premier Rutte excuses voor slavernijverleden in Indonesië/Suriname." }],
-          theorie: "Cito-actueel: 2020-excuses + 2022-slavernij-excuses zijn kantelpunten in NL-koloniale herinnering.",
+          theorie: "Toets-actueel: 2020-excuses + 2022-slavernij-excuses zijn kantelpunten in NL-koloniale herinnering.",
           niveaus: { basis: "Willem-Alexander — A.", simpeler: "2020-excuses = Willem-Alexander", nogSimpeler: "Willem-A" },
         },
       },

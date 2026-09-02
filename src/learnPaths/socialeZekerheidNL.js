@@ -62,7 +62,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Grote Depressie", tekst: "**1929 Wall Street-crash** = wereldwijde economische crisis. NL-werkloosheid piekt op ~25-30%. **Geen werkloosheidsuitkering** — alleen vernederende 'steun'. Premier **Colijn** voerde zware **bezuinigingen** door (klassiek-liberale aanpak), wat de crisis verergerde." }],
           woorden: [{ woord: "Grote Depressie", uitleg: "Wereldwijde economische crisis 1929-1939." }, { woord: "Colijn", uitleg: "ARP-premier 1933-1939, koos voor bezuinigingen." }],
-          theorie: "Cito-leerpunt: NL-aanpak Colijn werd later bekritiseerd. VS-president Roosevelt koos juist voor uitgaven (New Deal) — bleek effectiever.",
+          theorie: "Toets-leerpunt: NL-aanpak Colijn werd later bekritiseerd. VS-president Roosevelt koos juist voor uitgaven (New Deal) — bleek effectiever.",
           niveaus: { basis: "Massa-werkloosheid — A.", simpeler: "Jaren '30 = 30% werkloos", nogSimpeler: "Werkloos" },
         },
       },
@@ -94,7 +94,7 @@ const steps = [
   {
     title: "Drees + Vadertje Drees — start welvaartsstaat",
     explanation:
-      "Na **WO2** lag NL in puin. Maar het was juist deze periode waarin de basis voor de **moderne welvaartsstaat** werd gelegd.\n\n**Willem Drees (1886-1988)** — bijgenaamd **'Vadertje Drees'**:\n• PvdA-leider, **premier 1948-1958** (langste premierschap NL).\n• Sober, betrouwbaar, geliefd bij arbeiders.\n• Symbool van wederopbouw na WO2.\n\n**Belangrijkste wetten onder Drees**:\n\n**1947 Noodwet Ouderdomsvoorziening**:\n• Tijdelijke uitkering voor ouderen (65+).\n• Vrijwillig, lage uitkering.\n• Drees zelf trok eerste uitkering uit — symbolisch gebaar.\n\n**1957 AOW (Algemene Ouderdomswet)**:\n• **Volksverzekering**: iedereen vanaf 15 betaalt premie, iedereen krijgt uitkering vanaf **65 jaar** (later 67).\n• Niet meer afhankelijk van familie of armenzorg.\n• Werd in heel Europa overgenomen als model.\n• Beroemd citaat: *'Van Drees krijgen we het geld!'* (oudere bevolking).\n\n**Andere wetten in deze periode**:\n• **1949 Werkloosheidswet** (eerste versie).\n• **1956 Algemene Weduwen- en Wezenwet** (AWW): uitkering voor overlevenden.\n• **1965 Algemene Bijstandswet** (ABW): wie geen baan + geen recht op andere uitkering had, kreeg laatste-redmiddel-uitkering.\n\n**Beleid principes**:\n• **Volksverzekering**: voor iedereen, ongeacht inkomen of werkstatus.\n• **Werknemersverzekering**: alleen werknemers (WW, WIA, ZW).\n• **Premies + belastingen** = gezamenlijke pot.\n\n**Cito-link**: AOW = **1957** = kantelpunt sociale zekerheid NL. Vóór 1957 = liefdadigheid. Na 1957 = wettelijk recht voor elke 65-plusser.",
+      "Na **WO2** lag NL in puin. Maar het was juist deze periode waarin de basis voor de **moderne welvaartsstaat** werd gelegd.\n\n**Willem Drees (1886-1988)** — bijgenaamd **'Vadertje Drees'**:\n• PvdA-leider, **premier 1948-1958** (langste premierschap NL).\n• Sober, betrouwbaar, geliefd bij arbeiders.\n• Symbool van wederopbouw na WO2.\n\n**Belangrijkste wetten onder Drees**:\n\n**1947 Noodwet Ouderdomsvoorziening**:\n• Tijdelijke uitkering voor ouderen (65+).\n• Vrijwillig, lage uitkering.\n• Drees zelf trok eerste uitkering uit — symbolisch gebaar.\n\n**1957 AOW (Algemene Ouderdomswet)**:\n• **Volksverzekering**: iedereen vanaf 15 betaalt premie, iedereen krijgt uitkering vanaf **65 jaar** (later 67).\n• Niet meer afhankelijk van familie of armenzorg.\n• Werd in heel Europa overgenomen als model.\n• Beroemd citaat: *'Van Drees krijgen we het geld!'* (oudere bevolking).\n\n**Andere wetten in deze periode**:\n• **1949 Werkloosheidswet** (eerste versie).\n• **1956 Algemene Weduwen- en Wezenwet** (AWW): uitkering voor overlevenden.\n• **1965 Algemene Bijstandswet** (ABW): wie geen baan + geen recht op andere uitkering had, kreeg laatste-redmiddel-uitkering.\n\n**Beleid principes**:\n• **Volksverzekering**: voor iedereen, ongeacht inkomen of werkstatus.\n• **Werknemersverzekering**: alleen werknemers (WW, WIA, ZW).\n• **Premies + belastingen** = gezamenlijke pot.\n\n**Toets-link**: AOW = **1957** = kantelpunt sociale zekerheid NL. Vóór 1957 = liefdadigheid. Na 1957 = wettelijk recht voor elke 65-plusser.",
     checks: [
       {
         q: "Wie was de premier achter de **AOW (1957)**?",
@@ -140,7 +140,7 @@ const steps = [
         wrongHints: [null, "Te laag — wel sommige andere landen.", "Pas vanaf ~2024 in NL.", "Niet — wel pensioenleeftijd in sommige Europese landen historisch."],
         uitlegPad: {
           stappen: [{ titel: "65 sinds 1957, nu 67+", tekst: "AOW startte op **65 jaar** in 1957. Door **vergrijzing** + langere levensverwachting werd vanaf 2013 stapsgewijs verhoogd: 65→66 (2018) → 67 (2024) → gekoppeld aan levensverwachting (~67½ in 2027)." }],
-          theorie: "Cito-actueel: AOW-leeftijd nu **67 jaar**. Sinds 2024 vast op 67. Daarna gekoppeld aan levensverwachting.",
+          theorie: "Toets-actueel: AOW-leeftijd nu **67 jaar**. Sinds 2024 vast op 67. Daarna gekoppeld aan levensverwachting.",
           niveaus: { basis: "65 jaar — A.", simpeler: "AOW-start = 65", nogSimpeler: "65" },
         },
       },
@@ -173,7 +173,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "WAO = arbeidsongeschiktheid", tekst: "**Wet op de Arbeidsongeschiktheidsverzekering 1967**. Werknemer die langdurig niet kan werken door ziekte/handicap kreeg 80% van laatste loon. Veel te ruim — gebruikt voor verborgen ontslag in jaren '80. Vervangen door **WIA** (2006) met strenger criterium." }],
           woorden: [{ woord: "WAO", uitleg: "Wet op de Arbeidsongeschiktheidsverzekering 1967-2005." }, { woord: "WIA", uitleg: "Wet werk en inkomen naar arbeidsvermogen, vanaf 2006." }],
-          theorie: "Cito-actueel: bij volledige + duurzame arbeidsongeschiktheid (vandaag): **IVA** (75% van loon). Bij gedeeltelijke: **WGA**.",
+          theorie: "Toets-actueel: bij volledige + duurzame arbeidsongeschiktheid (vandaag): **IVA** (75% van loon). Bij gedeeltelijke: **WGA**.",
           niveaus: { basis: "WAO — A.", simpeler: "1967 arbeidsongeschiktheid = WAO", nogSimpeler: "WAO" },
         },
       },
@@ -222,7 +222,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "AKW sinds 1962", tekst: "**Algemene Kinderbijslagwet** (AKW). Iedere ouder krijgt **per kind een vast bedrag per kwartaal** van overheid, ongeacht inkomen. Volksverzekering. Bedrag stijgt met leeftijd kind. ~10 miljard euro/jaar totaal." }],
           woorden: [{ woord: "AKW", uitleg: "Algemene Kinderbijslagwet — uitkering per kind aan ouders." }],
-          theorie: "Cito-feit: ouders met inkomen onder bepaalde grens kunnen ook **kindgebondenbudget** + **kinderopvangtoeslag** krijgen — extra toeslagen.",
+          theorie: "Toets-feit: ouders met inkomen onder bepaalde grens kunnen ook **kindgebondenbudget** + **kinderopvangtoeslag** krijgen — extra toeslagen.",
           niveaus: { basis: "Kinderbijslag — A.", simpeler: "AKW = kinderbijslag", nogSimpeler: "Kinderbijslag" },
         },
       },
@@ -233,7 +233,7 @@ const steps = [
   {
     title: "Vanaf 1973 — crisis en hervorming",
     explanation:
-      "De **welvaartsstaat liep in 1973 tegen grenzen aan**. Twee oliecrises + structurele veranderingen dwongen NL tot hervormingen.\n\n**1973 Eerste oliecrisis**:\n• Yom Kippur-oorlog Israël-Arabische landen.\n• Arabische olielanden zetten **olie-embargo** in tegen NL (vanwege pro-Israël-houding).\n• **Autoloze zondagen** — geen verkeer op zondag in NL.\n• Olieprijs verviervoudigd.\n• Werkloosheid steeg → druk op WW + WAO.\n\n**1979 Tweede oliecrisis** (Iraanse revolutie). Recessie.\n\n**1982 Akkoord van Wassenaar**:\n• Werkgevers + vakbonden + regering (Lubbers I): **loonmatiging in ruil voor werktijdverkorting** (40 → 38 uur).\n• Begin van **'no nonsense'-politiek** premier Lubbers (CDA, 1982-1994).\n\n**1980-2000 hervormingen welvaartsstaat**:\n• **1987 stelsel-herziening**: WW + bijstand strenger, WAO-criteria aangescherpt.\n• **2001 WGA/IVA**: ruime WAO vervangen door strenger **WIA** (2006).\n• **2015 grote decentralisatie**: gemeenten verantwoordelijk voor jeugdzorg + Wmo + Participatiewet. Bezuiniging.\n• **AOW-leeftijd verhoogd**: 65 → 66 → 67 (vanaf 2024).\n\n**Belangrijke premiers**:\n• **Lubbers** (CDA, 1982-1994): bezuiniger, hervormer.\n• **Kok** (PvdA, 1994-2002): paars-kabinetten (PvdA + VVD + D66), economische groei.\n• **Balkenende** (CDA, 2002-2010): kredietcrisis 2008.\n• **Rutte** (VVD, 2010-2024): bezuinigingen na crisis 2008 + euro-crisis.\n• **Schoof** (PVV+VVD+NSC+BBB, 2024-): rechts-conservatief.\n\n**Hedendaagse uitdagingen**:\n• **Vergrijzing**: meer ouderen → meer AOW + zorg, minder werkenden.\n• **AOW-leeftijd verhoging** politiek heet.\n• **Toeslagenaffaire 2019-2021**: kabinet trad af na onterecht beschuldigde ouders kinderbijslag.\n• **Wonen-crisis**: starters kunnen geen huis kopen.\n\n**Onthoud voor Cito**:\n• 1973 = oliecrisis → einde 'gouden jaren'.\n• 1982 Wassenaar = loonmatiging + 38-uurs-werkweek.\n• Vergrijzing = belangrijkste lange-termijn-bedreiging welvaartsstaat.",
+      "De **welvaartsstaat liep in 1973 tegen grenzen aan**. Twee oliecrises + structurele veranderingen dwongen NL tot hervormingen.\n\n**1973 Eerste oliecrisis**:\n• Yom Kippur-oorlog Israël-Arabische landen.\n• Arabische olielanden zetten **olie-embargo** in tegen NL (vanwege pro-Israël-houding).\n• **Autoloze zondagen** — geen verkeer op zondag in NL.\n• Olieprijs verviervoudigd.\n• Werkloosheid steeg → druk op WW + WAO.\n\n**1979 Tweede oliecrisis** (Iraanse revolutie). Recessie.\n\n**1982 Akkoord van Wassenaar**:\n• Werkgevers + vakbonden + regering (Lubbers I): **loonmatiging in ruil voor werktijdverkorting** (40 → 38 uur).\n• Begin van **'no nonsense'-politiek** premier Lubbers (CDA, 1982-1994).\n\n**1980-2000 hervormingen welvaartsstaat**:\n• **1987 stelsel-herziening**: WW + bijstand strenger, WAO-criteria aangescherpt.\n• **2001 WGA/IVA**: ruime WAO vervangen door strenger **WIA** (2006).\n• **2015 grote decentralisatie**: gemeenten verantwoordelijk voor jeugdzorg + Wmo + Participatiewet. Bezuiniging.\n• **AOW-leeftijd verhoogd**: 65 → 66 → 67 (vanaf 2024).\n\n**Belangrijke premiers**:\n• **Lubbers** (CDA, 1982-1994): bezuiniger, hervormer.\n• **Kok** (PvdA, 1994-2002): paars-kabinetten (PvdA + VVD + D66), economische groei.\n• **Balkenende** (CDA, 2002-2010): kredietcrisis 2008.\n• **Rutte** (VVD, 2010-2024): bezuinigingen na crisis 2008 + euro-crisis.\n• **Schoof** (PVV+VVD+NSC+BBB, 2024-): rechts-conservatief.\n\n**Hedendaagse uitdagingen**:\n• **Vergrijzing**: meer ouderen → meer AOW + zorg, minder werkenden.\n• **AOW-leeftijd verhoging** politiek heet.\n• **Toeslagenaffaire 2019-2021**: kabinet trad af na onterecht beschuldigde ouders kinderbijslag.\n• **Wonen-crisis**: starters kunnen geen huis kopen.\n\n**Onthoud voor de Doorstroomtoets**:\n• 1973 = oliecrisis → einde 'gouden jaren'.\n• 1982 Wassenaar = loonmatiging + 38-uurs-werkweek.\n• Vergrijzing = belangrijkste lange-termijn-bedreiging welvaartsstaat.",
     checks: [
       {
         q: "Wat gebeurde tijdens de **eerste oliecrisis (1973)** in NL?",
@@ -243,7 +243,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Autoloze zondagen 1973", tekst: "Arabische olielanden zetten **olie-embargo** in tegen NL na NL-steun aan Israël (Yom Kippur-oorlog). NL-regering reageerde met **autoloze zondagen** (4 november-1 december 1973 + nog 2 in 1974). Geen verkeer behalve hulpdiensten. Mensen reden op **fiets** + **paard-en-wagen** op de A28!" }],
           woorden: [{ woord: "olie-embargo", uitleg: "Beperking olie-export naar bepaalde landen als politiek wapen." }],
-          theorie: "Cito-foto-favoriet: lege snelweg + mensen op fiets — symbool van oliecrisis.",
+          theorie: "Toets-foto-favoriet: lege snelweg + mensen op fiets — symbool van oliecrisis.",
           niveaus: { basis: "Autoloze zondagen — A.", simpeler: "1973 oliecrisis = autoloze zondagen", nogSimpeler: "Autoloos" },
         },
       },
@@ -254,7 +254,7 @@ const steps = [
         wrongHints: [null, "Niet — grondwet 1983 was apart.", "Wel onder Lubbers, maar niet Wassenaar.", "Veel later (1999/2002)."],
         uitlegPad: {
           stappen: [{ titel: "Werkgever + vakbond + Lubbers", tekst: "**24 november 1982**: VNO-NCW (werkgevers) + FNV (vakbonden) + regering Lubbers tekenen in Wassenaar. **Werkgevers**: minder loonstijging. **Werknemers**: 40-uurs naar **38-uurs werkweek**. **Regering**: minder werkloosheid + economisch herstel. **Wassenaar** = klassiek voorbeeld poldermodel." }],
-          theorie: "Cito-feit: na Wassenaar groeide NL-economie hard in jaren '80 + '90. Internationaal geprezen als 'Polder-wonder'.",
+          theorie: "Toets-feit: na Wassenaar groeide NL-economie hard in jaren '80 + '90. Internationaal geprezen als 'Polder-wonder'.",
           niveaus: { basis: "Loonmatiging + werktijd — A.", simpeler: "Wassenaar = loon ↓ + uren ↓", nogSimpeler: "Loonmatiging" },
         },
       },
@@ -266,7 +266,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vergrijzing → 67", tekst: "Door **vergrijzing** (langer leven + minder kinderen) werd AOW-leeftijd vanaf 2013 verhoogd: 65→65y3mnd→...→**67** (sinds 2024). Voor toekomst gekoppeld aan **levensverwachting** (~67½ in 2027)." }],
           woorden: [{ woord: "vergrijzing", uitleg: "Toename oudere bevolking + afname jongere — minder werkenden per gepensioneerde." }],
-          theorie: "Cito-feit: 1957 → 65 jaar. 2024 → 67 jaar. Verhoging van 2 jaar in 67 jaar tijd. Toekomst: gekoppeld aan levensverwachting.",
+          theorie: "Toets-feit: 1957 → 65 jaar. 2024 → 67 jaar. Verhoging van 2 jaar in 67 jaar tijd. Toekomst: gekoppeld aan levensverwachting.",
           niveaus: { basis: "67 jaar — A.", simpeler: "AOW vandaag = 67", nogSimpeler: "67" },
         },
       },
@@ -277,7 +277,7 @@ const steps = [
         wrongHints: [null, "Niet — auto's geen rol.", "Niet relevant.", "Niet — andere context."],
         uitlegPad: {
           stappen: [{ titel: "Toeslagenaffaire = grote staat-schande", tekst: "Belastingdienst beschuldigde ~26.000 ouders onterecht van **kinderopvangtoeslag-fraude** (vooral mensen met dubbele achternaam / migratie-achtergrond). Moesten tienduizenden euro's terugbetalen. Veel gezinnen geruïneerd — schuldenproblemen, scheidingen, uithuisplaatsingen kinderen. **Kabinet Rutte III** trad af **15 januari 2021** na kritisch onderzoeksrapport." }],
-          theorie: "Cito-actueel: toeslagenaffaire = grootste staat-schandaal sinds WO2. Excuses + €30.000 compensatie per ouder. Premier Rutte bleef wel aan.",
+          theorie: "Toets-actueel: toeslagenaffaire = grootste staat-schandaal sinds WO2. Excuses + €30.000 compensatie per ouder. Premier Rutte bleef wel aan.",
           niveaus: { basis: "Onterecht fraude-beschuldiging ouders — A.", simpeler: "Belastingdienst pakte ouders verkeerd aan", nogSimpeler: "Belastingdienst-fout" },
         },
       },
@@ -348,7 +348,7 @@ const steps = [
         wrongHints: [null, "Niet — toen trad Rutte IV af.", "Niet — toen vorming Rutte I.", "Niet — VS-aanslagen, geen NL-kabinet."],
         uitlegPad: {
           stappen: [{ titel: "Rutte III viel jan 2021", tekst: "Na rapport parlementaire onderzoekscommissie Toeslagenaffaire ('Ongekend onrecht') in december 2020 trad **kabinet Rutte III** demissionair af op **15 januari 2021**. Rutte zelf bleef premier in IV." }],
-          theorie: "Cito-actueel: na demissionair kabinet kwamen verkiezingen maart 2021. Rutte IV gevormd januari 2022.",
+          theorie: "Toets-actueel: na demissionair kabinet kwamen verkiezingen maart 2021. Rutte IV gevormd januari 2022.",
           niveaus: { basis: "15 januari 2021 — A.", simpeler: "Rutte III af = jan 2021", nogSimpeler: "Jan 2021" },
         },
       },

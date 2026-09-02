@@ -1,5 +1,5 @@
 // Leerpad: Schatten en afronden — voor groep 5-8
-// 5 stappen. Cito-stijl praktijksommen.
+// 5 stappen. Doorstroomtoets-stijl praktijksommen.
 // Sprint A (2026-05-08).
 
 const COLORS = {
@@ -17,13 +17,13 @@ const chapters = [
   { letter: "B", title: "Afronden op 10/100/1000", emoji: "🔄", from: 1, to: 1 },
   { letter: "C", title: "Schatten van sommen", emoji: "➕", from: 2, to: 2 },
   { letter: "D", title: "Praktijk — kassabon + tijden", emoji: "🛒", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
   {
     title: "Wat is schatten?",
-    explanation: "**Schatten** is een getal **bijna goed** opgeven, niet helemaal precies. Vaak handig om snel te checken of een antwoord klopt.\n\n**Voorbeeld**:\n*'Hoeveel is 23 × 19?'*\n• Schatten: 20 × 20 = **400**.\n• Echte uitkomst: 23 × 19 = 437.\n• Klopt — beide bij 400.\n\n**Wanneer schatten**:\n• Snel checken bij Cito: 'Klinkt mijn antwoord redelijk?'\n• In de winkel: 'Past dit binnen mijn budget?'\n• Bij grote getallen waar exact weten niet hoeft.\n\n**Cito-truc — schatten als check**:\nNa een berekening, schat altijd om te zien of je antwoord 'klopt qua grootte'. Als je 437 antwoord en jouw schatting was 400, dan zit je goed. Als jouw antwoord 4370 was, klopt iets niet.\n\n**Verschil schatten vs. afronden**:\n• **Afronden**: een precies getal bijna-precies maken *(123 → 120)*.\n• **Schatten**: een ruwe inschatting *(soms zonder precies getal)*.",
+    explanation: "**Schatten** is een getal **bijna goed** opgeven, niet helemaal precies. Vaak handig om snel te checken of een antwoord klopt.\n\n**Voorbeeld**:\n*'Hoeveel is 23 × 19?'*\n• Schatten: 20 × 20 = **400**.\n• Echte uitkomst: 23 × 19 = 437.\n• Klopt — beide bij 400.\n\n**Wanneer schatten**:\n• Snel checken bij de Doorstroomtoets: 'Klinkt mijn antwoord redelijk?'\n• In de winkel: 'Past dit binnen mijn budget?'\n• Bij grote getallen waar exact weten niet hoeft.\n\n**Toets-truc — schatten als check**:\nNa een berekening, schat altijd om te zien of je antwoord 'klopt qua grootte'. Als je 437 antwoord en jouw schatting was 400, dan zit je goed. Als jouw antwoord 4370 was, klopt iets niet.\n\n**Verschil schatten vs. afronden**:\n• **Afronden**: een precies getal bijna-precies maken *(123 → 120)*.\n• **Schatten**: een ruwe inschatting *(soms zonder precies getal)*.",
     checks: [
       {
         q: "**Schat 28 × 41**. Welk antwoord komt het dichtst bij?",
@@ -34,13 +34,13 @@ const steps = [
           stappen: [
             { titel: "Stap 1: rond beide getallen af op 10", tekst: "28 → afgerond op tientallen = **30**. 41 → afgerond op tientallen = **40**." },
             { titel: "Stap 2: vermenigvuldig de afgeronde getallen", tekst: "30 × 40 = 3 × 4 × 100 = 1200." },
-            { titel: "Check: klopt het qua grootte?", tekst: "Echte uitkomst: 28 × 41 = 1148. Schatting 1200 zit er dicht bij. Met schatten op 10 ben je vaak ~5% van de echte waarde af — goed genoeg voor Cito-controle." },
+            { titel: "Check: klopt het qua grootte?", tekst: "Echte uitkomst: 28 × 41 = 1148. Schatting 1200 zit er dicht bij. Met schatten op 10 ben je vaak ~5% van de echte waarde af — goed genoeg voor Toets-controle." },
           ],
           woorden: [
             { woord: "schatten", uitleg: "Snel een ongeveer-antwoord berekenen door af te ronden." },
             { woord: "afronden", uitleg: "Een getal vereenvoudigen naar een 'rond' getal." },
           ],
-          theorie: "Cito-tip schatten: rond af op tientallen (handig getal), reken met die. Goed voor: 1) sneller rekenen, 2) check of je echte antwoord ongeveer klopt.",
+          theorie: "Toets-tip schatten: rond af op tientallen (handig getal), reken met die. Goed voor: 1) sneller rekenen, 2) check of je echte antwoord ongeveer klopt.",
           voorbeelden: [
             { type: "stap", tekst: "Schat 47 × 19 → 50 × 20 = 1000. Echt: 893." },
             { type: "stap", tekst: "Schat 19 × 21 → 20 × 20 = 400. Echt: 399." },
@@ -55,9 +55,9 @@ const steps = [
       },
       {
         q: "**Wanneer is schatten handig**?",
-        options: ["Snel checken of een antwoord klopt","Alleen bij Cito","Nooit — altijd precies","Alleen bij grote getallen"],
+        options: ["Snel checken of een antwoord klopt","Alleen bij de Doorstroomtoets","Nooit — altijd precies","Alleen bij grote getallen"],
         answer: 0,
-        wrongHints: [null,"Niet alleen bij Cito — overal in echte rekensommen.","Wel handig — een snelle check is waardevol.","Ook bij kleine getallen kun je schatten."],
+        wrongHints: [null,"Niet alleen bij de Doorstroomtoets — overal in echte rekensommen.","Wel handig — een snelle check is waardevol.","Ook bij kleine getallen kun je schatten."],
       },
       {
         q: "**Schat het totaal**: € 4,80 + € 7,20 + € 12,30",
@@ -70,7 +70,7 @@ const steps = [
 
   {
     title: "Afronden op 10, 100 of 1000",
-    explanation: "**Afronden** = een getal **vereenvoudigen** naar een 'rond' getal.\n\n**Regel — kijken naar de cijfer ERNA**:\n• **0, 1, 2, 3, 4** → **naar beneden** afronden.\n• **5, 6, 7, 8, 9** → **naar boven** afronden.\n\n**Afronden op 10**:\n• 23 → 20 *(3 = naar beneden)*\n• 27 → 30 *(7 = naar boven)*\n• 25 → 30 *(5 = naar boven, regel)*\n• 144 → 140 *(4 = naar beneden)*\n\n**Afronden op 100**:\n• 247 → 200 *(4 = naar beneden, kijk naar TIENTAL)*\n• 270 → 300 *(7 in tienen = naar boven)*\n• 850 → 900 *(5 in tienen = naar boven)*\n\n**Afronden op 1000**:\n• 2300 → 2000 *(3 in honderden = naar beneden)*\n• 2700 → 3000 *(7 in honderden = naar boven)*\n• 1500 → 2000.\n\n**Cito-truc — kijk naar het juiste cijfer**:\n• Op 10 → kijk naar **eenheden**.\n• Op 100 → kijk naar **tientallen**.\n• Op 1000 → kijk naar **honderdtallen**.\n\n**Veel-voorkomende fout**:\nNiet de juiste cijfer bekijken. Voor 'op 100': kijk naar de tien, niet de eenheden.",
+    explanation: "**Afronden** = een getal **vereenvoudigen** naar een 'rond' getal.\n\n**Regel — kijken naar de cijfer ERNA**:\n• **0, 1, 2, 3, 4** → **naar beneden** afronden.\n• **5, 6, 7, 8, 9** → **naar boven** afronden.\n\n**Afronden op 10**:\n• 23 → 20 *(3 = naar beneden)*\n• 27 → 30 *(7 = naar boven)*\n• 25 → 30 *(5 = naar boven, regel)*\n• 144 → 140 *(4 = naar beneden)*\n\n**Afronden op 100**:\n• 247 → 200 *(4 = naar beneden, kijk naar TIENTAL)*\n• 270 → 300 *(7 in tienen = naar boven)*\n• 850 → 900 *(5 in tienen = naar boven)*\n\n**Afronden op 1000**:\n• 2300 → 2000 *(3 in honderden = naar beneden)*\n• 2700 → 3000 *(7 in honderden = naar boven)*\n• 1500 → 2000.\n\n**Toets-truc — kijk naar het juiste cijfer**:\n• Op 10 → kijk naar **eenheden**.\n• Op 100 → kijk naar **tientallen**.\n• Op 1000 → kijk naar **honderdtallen**.\n\n**Veel-voorkomende fout**:\nNiet de juiste cijfer bekijken. Voor 'op 100': kijk naar de tien, niet de eenheden.",
     checks: [
       {
         q: "**Rond af op 10: 47**",
@@ -93,7 +93,7 @@ const steps = [
             { woord: "afronden op 100", uitleg: "Maak hele honderdtallen (300, 400, 500, ...)." },
             { woord: "5-regel", uitleg: "5, 6, 7, 8, 9 → omhoog. 0, 1, 2, 3, 4 → omlaag." },
           ],
-          theorie: "Cito-tip: kijk altijd 1 cijfer NA waar je naartoe rondt. Bij op 100: kijk tientallen. Bij op 10: kijk eenheden. Bij op 1000: kijk honderdtallen.",
+          theorie: "Toets-tip: kijk altijd 1 cijfer NA waar je naartoe rondt. Bij op 100: kijk tientallen. Bij op 10: kijk eenheden. Bij op 1000: kijk honderdtallen.",
           voorbeelden: [
             { type: "stap", tekst: "247 op 100 → 4 in tien = omlaag → 200." },
             { type: "stap", tekst: "850 op 100 → 5 in tien = omhoog → 900." },
@@ -117,7 +117,7 @@ const steps = [
 
   {
     title: "Schatten van sommen — eerst afronden, dan rekenen",
-    explanation: "Bij Cito-vragen staat soms: *'Schat ongeveer'*. Dan ronden we eerst af en rekenen daarna.\n\n**Voorbeeld 1**:\n*'Schat 287 + 419'*\n• Afronden op 100: 300 + 400 = **700**.\n• Echte som: 287 + 419 = 706. Klopt!\n\n**Voorbeeld 2**:\n*'Schat 78 × 23'*\n• Afronden op 10: 80 × 20 = **1600**.\n• Echte som: 78 × 23 = 1794. Klopt qua grootte.\n\n**Voorbeeld 3 — verschil**:\n*'Schat 612 − 387'*\n• Afronden op 100: 600 − 400 = **200**.\n• Echte som: 612 − 387 = 225. Klopt.\n\n**Cito-tip**:\n• Schatten geeft **niet de exacte uitkomst**. Bij Cito is meestal een schatting goed als 't dicht bij de echte uitkomst zit.\n• Gebruik schatten als **check**: 'klopt mijn echte antwoord met mijn schatting?'\n\n**Hoe accurate?**:\n• Op 10 afronden = ruim 90% accuraat.\n• Op 100 afronden = ruim 80% accuraat.\n• Op 1000 afronden = ruim 70% accuraat.\n\n**Praktijk**:\n*'Drie boodschappen kosten € 12,80 + € 8,40 + € 6,75. Klopt het dat ik € 30 nodig heb?'*\n• Schatten: €13 + €8 + €7 = **€28**.\n• Antwoord: ja, €30 is genoeg.",
+    explanation: "Bij toetsvragen staat soms: *'Schat ongeveer'*. Dan ronden we eerst af en rekenen daarna.\n\n**Voorbeeld 1**:\n*'Schat 287 + 419'*\n• Afronden op 100: 300 + 400 = **700**.\n• Echte som: 287 + 419 = 706. Klopt!\n\n**Voorbeeld 2**:\n*'Schat 78 × 23'*\n• Afronden op 10: 80 × 20 = **1600**.\n• Echte som: 78 × 23 = 1794. Klopt qua grootte.\n\n**Voorbeeld 3 — verschil**:\n*'Schat 612 − 387'*\n• Afronden op 100: 600 − 400 = **200**.\n• Echte som: 612 − 387 = 225. Klopt.\n\n**Toets-tip**:\n• Schatten geeft **niet de exacte uitkomst**. Bij de Doorstroomtoets is meestal een schatting goed als 't dicht bij de echte uitkomst zit.\n• Gebruik schatten als **check**: 'klopt mijn echte antwoord met mijn schatting?'\n\n**Hoe accurate?**:\n• Op 10 afronden = ruim 90% accuraat.\n• Op 100 afronden = ruim 80% accuraat.\n• Op 1000 afronden = ruim 70% accuraat.\n\n**Praktijk**:\n*'Drie boodschappen kosten € 12,80 + € 8,40 + € 6,75. Klopt het dat ik € 30 nodig heb?'*\n• Schatten: €13 + €8 + €7 = **€28**.\n• Antwoord: ja, €30 is genoeg.",
     checks: [
       {
         q: "**Schat 198 + 412** (afgerond op 100):",
@@ -134,7 +134,7 @@ const steps = [
             { woord: "afronden op 100", uitleg: "Hele honderdtallen maken (100/200/300/...)." },
             { woord: "schatten + optellen", uitleg: "Eerst afronden, dan + doen." },
           ],
-          theorie: "Cito-tip: bij grote sommen ALTIJD even schatten als check. 198 + 412 mag niet 1000 of 100 zijn — als jouw echte berekening dat zegt, heb je fout gerekend.",
+          theorie: "Toets-tip: bij grote sommen ALTIJD even schatten als check. 198 + 412 mag niet 1000 of 100 zijn — als jouw echte berekening dat zegt, heb je fout gerekend.",
           voorbeelden: [
             { type: "stap", tekst: "Schat 287 + 419 → 300 + 400 = 700. Echt: 706." },
             { type: "stap", tekst: "Schat 612 − 387 → 600 − 400 = 200. Echt: 225." },
@@ -164,7 +164,7 @@ const steps = [
 
   {
     title: "Praktijk — kassabon + tijdsbesteding",
-    explanation: "Schatten is overal handig in praktijk:\n\n**Voorbeeld 1 — winkel-budget**:\n*'Heb ik genoeg geld? Met € 25 kunnen we kopen: brood € 2,15 + kaas € 4,30 + appels € 3,80 + chips € 1,50 + koek € 2,90.'*\n\nSchatten:\n• 2 + 4 + 4 + 2 + 3 = 15. Genoeg!\n\n**Voorbeeld 2 — reistijd**:\n*'Trein vertrekt 14:18, aankomst 16:47. Hoe lang duurt de reis ongeveer?'*\n• Afronden: 14:20 → 16:50 = **2,5 uur**.\n• Echte tijd: 2 uur 29 min ≈ 2,5 uur. Klopt.\n\n**Voorbeeld 3 — afstand schatten**:\n*'Sven loopt naar school. Hij doet er 28 minuten over. Hoe ver is dat ongeveer?'*\n• Mensen lopen ~5 km/uur, dus ~80 m/min.\n• 28 min × 80 m/min ≈ 2200 m = **~2 km**.\n\n**Cito-tip — controle achter elke som**:\nNa elke berekening — schat het antwoord. Klopt het qua grootte? Zo nee → fout gemaakt, opnieuw kijken.",
+    explanation: "Schatten is overal handig in praktijk:\n\n**Voorbeeld 1 — winkel-budget**:\n*'Heb ik genoeg geld? Met € 25 kunnen we kopen: brood € 2,15 + kaas € 4,30 + appels € 3,80 + chips € 1,50 + koek € 2,90.'*\n\nSchatten:\n• 2 + 4 + 4 + 2 + 3 = 15. Genoeg!\n\n**Voorbeeld 2 — reistijd**:\n*'Trein vertrekt 14:18, aankomst 16:47. Hoe lang duurt de reis ongeveer?'*\n• Afronden: 14:20 → 16:50 = **2,5 uur**.\n• Echte tijd: 2 uur 29 min ≈ 2,5 uur. Klopt.\n\n**Voorbeeld 3 — afstand schatten**:\n*'Sven loopt naar school. Hij doet er 28 minuten over. Hoe ver is dat ongeveer?'*\n• Mensen lopen ~5 km/uur, dus ~80 m/min.\n• 28 min × 80 m/min ≈ 2200 m = **~2 km**.\n\n**Toets-tip — controle achter elke som**:\nNa elke berekening — schat het antwoord. Klopt het qua grootte? Zo nee → fout gemaakt, opnieuw kijken.",
     checks: [
       {
         q: "Een kassabon: **€ 4,85 + € 7,15 + € 12,40 + € 3,60**. Schat:",
@@ -188,8 +188,8 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — schatten + afronden mix",
-    explanation: "Mix-toets met afrond- en schat-vragen in Cito-stijl.\n\nVeel succes!",
+    title: "Toets-eindopdracht — schatten + afronden mix",
+    explanation: "Mix-toets met afrond- en schat-vragen in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       {
         q: "**Rond 4567 af op 1000**:",
@@ -230,7 +230,7 @@ const steps = [
           stappen: [
             { titel: "Wanneer schat je?", tekst: "Bij winkel-vragen zonder rekenmachine: rond eerst af naar makkelijk getal, daarna rekenen." },
             { titel: "Rond af + reken", tekst: "19,80 ≈ 20 (bijna ronde getal). 20 × 4 = **80**. Exact zou zijn: 19,80 × 4 = 79,20 — dichtbij 80." },
-            { titel: "Cito-truc snel schatten", tekst: "Bij **× of ÷** met kommagetallen: rond beide kanten af naar makkelijke getallen, reken in hoofd. Foutmarge meestal <10%. Bij **'past het in mijn budget?'**-vragen vaak voldoende." },
+            { titel: "Toets-truc snel schatten", tekst: "Bij **× of ÷** met kommagetallen: rond beide kanten af naar makkelijke getallen, reken in hoofd. Foutmarge meestal <10%. Bij **'past het in mijn budget?'**-vragen vaak voldoende." },
           ],
           woorden: [
             { woord: "schatten", uitleg: "Ongeveer-berekening met makkelijke getallen, sneller dan precies." },
@@ -241,7 +241,7 @@ const steps = [
             { type: "stap", tekst: "€8,90 × 3 → ~9 × 3 = ~€27 (echt: €26,70)." },
             { type: "stap", tekst: "€12,10 × 5 → ~12 × 5 = ~€60 (echt: €60,50)." },
           ],
-          basiskennis: [{ onderwerp: "Cito tip", uitleg: "Vraag 'ongeveer hoeveel' = schatten. Vraag 'precies hoeveel' = uitrekenen." }],
+          basiskennis: [{ onderwerp: "De toets tip", uitleg: "Vraag 'ongeveer hoeveel' = schatten. Vraag 'precies hoeveel' = uitrekenen." }],
           niveaus: { basis: "20 × 4 = 80.", simpeler: "19,80 ≈ 20 euro. 4 × 20 = €80.", nogSimpeler: "~80" },
         },
       },
@@ -271,7 +271,7 @@ const steps = [
           stappen: [
             { titel: "Schatten voor budget-check", tekst: "Bij 'past het in budget?'-vragen schat je eerst grof. 24 × €2,15." },
             { titel: "Splits in stukken", tekst: "24 × €2 = €48 (hoofdrekenen makkelijk). 24 × €0,15 = 24 × 15 cent = 360 cent = €3,60. Totaal: €48 + €3,60 = **€51,60**." },
-            { titel: "Conclusie + Cito-tip", tekst: "€51,60 > €50 budget → past NET niet. Cito-tip: bij budget-vragen altijd zelfs naar boven afronden voor zekerheid. Een 'misschien-past'-antwoord is risicovol." },
+            { titel: "Conclusie + Toets-tip", tekst: "€51,60 > €50 budget → past NET niet. Toets-tip: bij budget-vragen altijd zelfs naar boven afronden voor zekerheid. Een 'misschien-past'-antwoord is risicovol." },
           ],
           woorden: [
             { woord: "budget", uitleg: "Maximum geld dat je mag uitgeven." },
@@ -292,7 +292,7 @@ const steps = [
           stappen: [
             { titel: "Afronden op 1000", tekst: "Kijk naar de **honderden-cijfer**:\n• 4.612 → 6 in honderden ≥ 5 → afronden naar BOVEN = **5.000**\n• 3.298 → 2 in honderden < 5 → afronden naar BENEDEN = **3.000**" },
             { titel: "Reken met ronde getallen", tekst: "5.000 + 3.000 = **8.000**. Schat-check: echt antwoord 4.612 + 3.298 = 7.910 (vlak bij 8.000) ✓." },
-            { titel: "Cito-truc — eerst afronden, dan optellen", tekst: "Bij grote getallen: afronden naar boven of onder via tussen-cijfer. Decimaal voor afronding 1000 = honderden-cijfer." },
+            { titel: "Toets-truc — eerst afronden, dan optellen", tekst: "Bij grote getallen: afronden naar boven of onder via tussen-cijfer. Decimaal voor afronding 1000 = honderden-cijfer." },
           ],
           woorden: [
             { woord: "afronden op 1000", uitleg: "Naar de dichtstbijzijnde 1000. Kijk naar honderden-cijfer." },
@@ -353,7 +353,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const schattenAfronden = {
   id: "schatten-afronden",
-  title: "Schatten en afronden — Cito groep 5-8",
+  title: "Schatten en afronden — Doorstroomtoets groep 5-8",
   emoji: "🤔",
   level: "groep5-8",
   subject: "rekenen",

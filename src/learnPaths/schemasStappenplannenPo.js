@@ -17,13 +17,13 @@ const chapters = [
   { letter: "B", title: "Stappenplan volgen", emoji: "➡️", from: 1, to: 1 },
   { letter: "C", title: "Beslisboom — keuzes", emoji: "🔀", from: 2, to: 2 },
   { letter: "D", title: "Schema's interpreteren", emoji: "🧭", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
   {
     title: "Wat is een schema?",
-    explanation: "Een **schema** is een **overzicht** van informatie in vakjes en met pijlen. Het maakt duidelijk **hoe iets werkt** of **wat met wat samenhangt**.\n\n**Soorten schema's**:\n1. **Stappenplan**: stap 1 → stap 2 → stap 3.\n   - Bijv. 'hoe maak je pannenkoeken'.\n2. **Beslisboom**: ja/nee-vragen die je naar een antwoord leiden.\n   - Bijv. 'welk dier ben je?'\n3. **Boomschema**: een hoofdcategorie met subcategorieën.\n   - Bijv. dieren → zoogdieren / vissen / vogels.\n4. **Tijdslijn**: gebeurtenissen op volgorde van tijd.\n   - Bijv. geschiedenis-overzicht.\n5. **Mindmap**: woorden rondom een centraal idee.\n\n**Onderdelen** in elk schema:\n• **Vakjes/cirkels** met informatie.\n• **Pijlen** of lijnen die verbinden.\n• Soms een **legenda** *(wat de symbolen betekenen)*.\n• Een **titel** van het schema.\n\n**Cito-vraag-typen**:\n• 'Wat is de eerste stap?' → kijk naar bovenste/eerste vakje.\n• 'Wat komt na X?' → volg de pijl.\n• 'Welk antwoord krijg je als je deze keuzes maakt?' → loop de beslisboom door.\n\n**Tip**: Lees eerst de **titel** en **legenda** voordat je vragen beantwoordt. Daarna scan het schema globaal — wat is de structuur?",
+    explanation: "Een **schema** is een **overzicht** van informatie in vakjes en met pijlen. Het maakt duidelijk **hoe iets werkt** of **wat met wat samenhangt**.\n\n**Soorten schema's**:\n1. **Stappenplan**: stap 1 → stap 2 → stap 3.\n   - Bijv. 'hoe maak je pannenkoeken'.\n2. **Beslisboom**: ja/nee-vragen die je naar een antwoord leiden.\n   - Bijv. 'welk dier ben je?'\n3. **Boomschema**: een hoofdcategorie met subcategorieën.\n   - Bijv. dieren → zoogdieren / vissen / vogels.\n4. **Tijdslijn**: gebeurtenissen op volgorde van tijd.\n   - Bijv. geschiedenis-overzicht.\n5. **Mindmap**: woorden rondom een centraal idee.\n\n**Onderdelen** in elk schema:\n• **Vakjes/cirkels** met informatie.\n• **Pijlen** of lijnen die verbinden.\n• Soms een **legenda** *(wat de symbolen betekenen)*.\n• Een **titel** van het schema.\n\n**toetsvraag-typen**:\n• 'Wat is de eerste stap?' → kijk naar bovenste/eerste vakje.\n• 'Wat komt na X?' → volg de pijl.\n• 'Welk antwoord krijg je als je deze keuzes maakt?' → loop de beslisboom door.\n\n**Tip**: Lees eerst de **titel** en **legenda** voordat je vragen beantwoordt. Daarna scan het schema globaal — wat is de structuur?",
     checks: [
       {
         q: "Wat zegt een **stappenplan**?",
@@ -34,13 +34,13 @@ const steps = [
           stappen: [
             { titel: "Wat is een stappenplan?", tekst: "Een **stappenplan** is een lijst van stappen in een BEPAALDE VOLGORDE om iets te doen. Het zegt: doe eerst dit, dan dat, daarna dat." },
             { titel: "Volgorde = belangrijk", tekst: "De volgorde is geen optie — die is VAST. Je kunt niet 'bakken' voordat je 'beslag' hebt. Stappenplan dwingt logische volgorde af." },
-            { titel: "Voorbeelden", tekst: "Een **recept** is een stappenplan. Een **routebeschrijving** ook. Bij Cito krijg je vaak stappenplannen waar je moet zien welke stap waar staat." },
+            { titel: "Voorbeelden", tekst: "Een **recept** is een stappenplan. Een **routebeschrijving** ook. Bij de Doorstroomtoets krijg je vaak stappenplannen waar je moet zien welke stap waar staat." },
           ],
           woorden: [
             { woord: "stappenplan", uitleg: "Lijst stappen in vaste volgorde." },
             { woord: "volgorde", uitleg: "Welke stap eerst, welke daarna." },
           ],
-          theorie: "Cito-tip: bij stappenplan-vragen lees je ALLE stappen voordat je antwoord geeft. Vaak gaat de vraag over volgorde, ontbrekende stap, of wissel-mogelijkheid.",
+          theorie: "Toets-tip: bij stappenplan-vragen lees je ALLE stappen voordat je antwoord geeft. Vaak gaat de vraag over volgorde, ontbrekende stap, of wissel-mogelijkheid.",
           voorbeelden: [
             { type: "stap", tekst: "Recept pannenkoek: 1) kom pakken, 2) ingrediënten, 3) mixen, 4) bakken. Volgorde vast." },
             { type: "stap", tekst: "Naar school: 1) opstaan, 2) ontbijten, 3) jas aan, 4) deur uit. Volgorde logisch." },
@@ -68,7 +68,7 @@ const steps = [
             { woord: "pijl", uitleg: "Symbool dat verband of volgorde aangeeft." },
             { woord: "diagram", uitleg: "Schema met dozen + pijlen om iets uit te leggen." },
           ],
-          theorie: "Cito-tip pijlen: pijl wijst van het EERSTE naar het LATERE. Of van 'oorzaak' naar 'gevolg'. Lees in de richting van de pijl.",
+          theorie: "Toets-tip pijlen: pijl wijst van het EERSTE naar het LATERE. Of van 'oorzaak' naar 'gevolg'. Lees in de richting van de pijl.",
           voorbeelden: [
             { type: "stap", tekst: "Stroomdiagram: 'Computer aan → log in → app open → werken'. Pijlen = volgorde stappen." },
             { type: "stap", tekst: "Indeling: 'Voertuigen → Auto's / Fietsen / Boten'. Pijlen = soort-van-relatie." },
@@ -92,7 +92,7 @@ const steps = [
 
   {
     title: "Stappenplan volgen",
-    explanation: "**Stappenplan** = lijst stappen in **volgorde**.\n\n**Voorbeeld — pannenkoeken**:\n1. Pak een kom.\n2. Doe meel, melk, ei in de kom.\n3. Mix totdat het glad is.\n4. Verhit boter in de pan.\n5. Schenk beslag in de pan.\n6. Bak 2 minuten per kant.\n\n**Stap-volgorde is belangrijk**:\n• Je kunt niet 'bakken' (stap 6) zonder eerst de **kom** te pakken.\n• Stappen dwingen een **logische volgorde** af.\n\n**Cito-vraag-typen**:\n• 'Wat doe je vóór stap X?' → stap (X-1).\n• 'Wat doe je na stap Y?' → stap (Y+1).\n• 'Welke stap mist?' → kijk welke logische stap ontbreekt.\n• 'Mag je stap A en B verwisselen?' → check of de tweede de eerste nodig heeft.\n\n**Voorbeeld — verwisselbaar?**\n• Stap 2 ('meel') en stap 3 ('mix') — kun je niet wisselen, je moet eerst meel hebben voordat je kunt mixen.\n• Stap 1 en stap 4 ('kom' en 'pan') — wel wisselbaar (onafhankelijk).\n\n**Tip — Cito-stappen**:\nLees ALLE stappen voordat je een vraag beantwoordt. Vaak gaat de vraag over volgorde of het MISSEN van een stap.\n\n**Belangrijke woorden in stappen**:\n• 'eerst', 'vervolgens', 'dan', 'daarna', 'tenslotte'.\n• Deze woorden geven volgorde aan.",
+    explanation: "**Stappenplan** = lijst stappen in **volgorde**.\n\n**Voorbeeld — pannenkoeken**:\n1. Pak een kom.\n2. Doe meel, melk, ei in de kom.\n3. Mix totdat het glad is.\n4. Verhit boter in de pan.\n5. Schenk beslag in de pan.\n6. Bak 2 minuten per kant.\n\n**Stap-volgorde is belangrijk**:\n• Je kunt niet 'bakken' (stap 6) zonder eerst de **kom** te pakken.\n• Stappen dwingen een **logische volgorde** af.\n\n**toetsvraag-typen**:\n• 'Wat doe je vóór stap X?' → stap (X-1).\n• 'Wat doe je na stap Y?' → stap (Y+1).\n• 'Welke stap mist?' → kijk welke logische stap ontbreekt.\n• 'Mag je stap A en B verwisselen?' → check of de tweede de eerste nodig heeft.\n\n**Voorbeeld — verwisselbaar?**\n• Stap 2 ('meel') en stap 3 ('mix') — kun je niet wisselen, je moet eerst meel hebben voordat je kunt mixen.\n• Stap 1 en stap 4 ('kom' en 'pan') — wel wisselbaar (onafhankelijk).\n\n**Tip — Toets-stappen**:\nLees ALLE stappen voordat je een vraag beantwoordt. Vaak gaat de vraag over volgorde of het MISSEN van een stap.\n\n**Belangrijke woorden in stappen**:\n• 'eerst', 'vervolgens', 'dan', 'daarna', 'tenslotte'.\n• Deze woorden geven volgorde aan.",
     checks: [
       {
         q: "Stap-recept: 1) Kom pakken. 2) Meel + melk doen. 3) Mixen. 4) Bakken.\n\nWat doe je **vóór mixen**?",
@@ -117,7 +117,7 @@ const steps = [
 
   {
     title: "Beslisboom — keuzes maken",
-    explanation: "**Beslisboom** = schema met **ja/nee-vragen** die je naar een antwoord leiden.\n\n**Voorbeeld — Welk dier ben je?**\n```\nLeef je in water?\n  Ja → Heb je veren?\n           Ja → eend\n           Nee → vis\n  Nee → Heb je vleugels?\n           Ja → vogel\n           Nee → zoogdier\n```\n\n**Hoe lezen**:\n1. Begin **bovenaan**.\n2. Beantwoord de eerste vraag.\n3. Volg de **ja-pijl** of de **nee-pijl**.\n4. Beantwoord de volgende vraag.\n5. Eindig bij een **eindvak** (geen vragen meer).\n\n**Cito-vraag-typen**:\n• 'Welk antwoord krijg je als je deze keuzes maakt?' → loop pad door.\n• 'Welke vraag MIST?' → kijk welke logische vraag ontbreekt.\n• 'Wat als je bij ALLE vragen 'nee' antwoordt?' → volg alleen 'nee'-pijlen.\n\n**Voorbeeld — pad volgen**:\n• Leef je in water? **Ja**.\n• Heb je veren? **Nee**.\n• Antwoord = **vis**.\n\n**Tip — beslisboom**:\nMet een potlood het pad markeren helpt om niet te verdwalen. Of je teken een lijntje van vraag naar antwoord.\n\n**Verschil met stappenplan**:\n• Stappenplan = **alle** stappen doen, in volgorde.\n• Beslisboom = je doet alleen de stappen die **bij jouw keuze** horen.",
+    explanation: "**Beslisboom** = schema met **ja/nee-vragen** die je naar een antwoord leiden.\n\n**Voorbeeld — Welk dier ben je?**\n```\nLeef je in water?\n  Ja → Heb je veren?\n           Ja → eend\n           Nee → vis\n  Nee → Heb je vleugels?\n           Ja → vogel\n           Nee → zoogdier\n```\n\n**Hoe lezen**:\n1. Begin **bovenaan**.\n2. Beantwoord de eerste vraag.\n3. Volg de **ja-pijl** of de **nee-pijl**.\n4. Beantwoord de volgende vraag.\n5. Eindig bij een **eindvak** (geen vragen meer).\n\n**toetsvraag-typen**:\n• 'Welk antwoord krijg je als je deze keuzes maakt?' → loop pad door.\n• 'Welke vraag MIST?' → kijk welke logische vraag ontbreekt.\n• 'Wat als je bij ALLE vragen 'nee' antwoordt?' → volg alleen 'nee'-pijlen.\n\n**Voorbeeld — pad volgen**:\n• Leef je in water? **Ja**.\n• Heb je veren? **Nee**.\n• Antwoord = **vis**.\n\n**Tip — beslisboom**:\nMet een potlood het pad markeren helpt om niet te verdwalen. Of je teken een lijntje van vraag naar antwoord.\n\n**Verschil met stappenplan**:\n• Stappenplan = **alle** stappen doen, in volgorde.\n• Beslisboom = je doet alleen de stappen die **bij jouw keuze** horen.",
     checks: [
       {
         q: "Beslisboom: 'Heb je honger? Ja → eet. Nee → drink water'.\n\nJe hebt **dorst**, niet honger. Wat doe je?",
@@ -134,7 +134,7 @@ const steps = [
             { woord: "beslisboom", uitleg: "Schema met ja/nee-vragen die naar antwoord leiden." },
             { woord: "pad volgen", uitleg: "Bij elke vraag het juiste antwoord (ja/nee) kiezen en doorlopen." },
           ],
-          theorie: "Cito-tip beslisboom: lees ALTIJD de exacte vraag, niet wat erop LIJKT. Vraag is 'honger?', dus antwoord ja of nee daarop. Daarna volg pijl.",
+          theorie: "Toets-tip beslisboom: lees ALTIJD de exacte vraag, niet wat erop LIJKT. Vraag is 'honger?', dus antwoord ja of nee daarop. Daarna volg pijl.",
           voorbeelden: [
             { type: "stap", tekst: "Vraag: 'regent het?' Het is bewolkt maar geen regen. → antwoord NEE. Volg nee-pijl." },
             { type: "stap", tekst: "Bij twijfel: kies de letterlijke betekenis van de vraag. 'Honger' is geen 'dorst'." },
@@ -164,7 +164,7 @@ const steps = [
 
   {
     title: "Schema's interpreteren — informatie eruit halen",
-    explanation: "Bij Cito krijg je vaak een **schema/diagram met tekst en pijlen** en moet je een **vraag beantwoorden**.\n\n**Aanpak**:\n1. **Lees titel** — waar gaat het over?\n2. **Lees legenda** — wat betekenen de symbolen/kleuren?\n3. **Scan het schema** globaal.\n4. **Lees pas dan de vraag**.\n5. **Vind het juiste vakje** of pad.\n6. **Antwoord**.\n\n**Voorbeeld — voedselketen**:\n```\nGras → Konijn → Vos\n```\n• Gras wordt door konijn gegeten.\n• Konijn wordt door vos gegeten.\n• Pijl = 'wordt gegeten door'.\n\n**Vragen**:\n• 'Wat eet vos?' → konijn.\n• 'Wat eet konijn?' → gras.\n• 'Wat gebeurt als alle vossen weg zijn?' → konijnen worden niet meer gegeten → kunnen aantal stijgen → grasaantal daalt.\n\n**Soorten schema's bij Cito**:\n• **Stamboom** *(familie)*: opa-oma → vader → kind.\n• **Voedselketen** *(natuur)*: planten → planteneter → vleeseter.\n• **Productie-keten** *(spullen)*: katoen → garen → kleren.\n• **Tijdslijn**: jaartal-overzicht.\n\n**Cito-tip**:\nVeel schema-vragen vereisen logisch nadenken: 'wat als X wegvalt?'. Volg de pijlen na om het effect te bepalen.",
+    explanation: "Bij de Doorstroomtoets krijg je vaak een **schema/diagram met tekst en pijlen** en moet je een **vraag beantwoorden**.\n\n**Aanpak**:\n1. **Lees titel** — waar gaat het over?\n2. **Lees legenda** — wat betekenen de symbolen/kleuren?\n3. **Scan het schema** globaal.\n4. **Lees pas dan de vraag**.\n5. **Vind het juiste vakje** of pad.\n6. **Antwoord**.\n\n**Voorbeeld — voedselketen**:\n```\nGras → Konijn → Vos\n```\n• Gras wordt door konijn gegeten.\n• Konijn wordt door vos gegeten.\n• Pijl = 'wordt gegeten door'.\n\n**Vragen**:\n• 'Wat eet vos?' → konijn.\n• 'Wat eet konijn?' → gras.\n• 'Wat gebeurt als alle vossen weg zijn?' → konijnen worden niet meer gegeten → kunnen aantal stijgen → grasaantal daalt.\n\n**Soorten schema's bij de Doorstroomtoets**:\n• **Stamboom** *(familie)*: opa-oma → vader → kind.\n• **Voedselketen** *(natuur)*: planten → planteneter → vleeseter.\n• **Productie-keten** *(spullen)*: katoen → garen → kleren.\n• **Tijdslijn**: jaartal-overzicht.\n\n**Toets-tip**:\nVeel schema-vragen vereisen logisch nadenken: 'wat als X wegvalt?'. Volg de pijlen na om het effect te bepalen.",
     checks: [
       {
         q: "Voedselketen: gras → konijn → vos.\n\n**Wat eet vos**?",
@@ -194,7 +194,7 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — schema's mix",
+    title: "Toets-eindopdracht — schema's mix",
     explanation: "Mix-toets: stappenplan, beslisboom, schema-interpretatie.",
     checks: [
       {
@@ -235,24 +235,24 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Stappenplan = volgorde", tekst: "Een stappenplan helpt je iets **systematisch + zonder fout** te doen. Vooral handig bij:\n• Redactiesommen (lange verhaal-vragen)\n• Examen-opgaven\n• Practicum biologie/scheikunde\n• Een recept\n\nEerste stap is bijna ALTIJD: **lees rustig, begrijp wat er gevraagd wordt** — niet meteen aan rekenen!" },
-            { titel: "Cito-tip: 5-stappen-rekenen", tekst: "**Officieel stappenplan rekenen** (uit veel rekenboeken):\n1. **Lees + begrijp** vraag\n2. **Onderstreep** getallen + sleutelwoorden\n3. **Schets** (als handig)\n4. **Reken** uit\n5. **Controleer** antwoord (klopt eenheid? Past schatting?)\n\nVeelgemaakte fout: stap 4 meteen doen zonder 1+2. Dan reken je iets anders dan gevraagd." },
-            { titel: "Studievaardigheid voor Cito", tekst: "Doorstroomtoets (groep 8) test ook **studievaardigheid** — slim leren + werken. Stappenplannen vallen daaronder:\n• **Lezen** (begrijpend lezen-vragen)\n• **Rekenen** (5-stappen)\n• **Wereldoriëntatie** (informatie zoeken)\n\nKinderen die stappenplan-aanpak gebruiken scoren gemiddeld 10-15% hoger op toetsen zoals de Doorstroomtoets." },
+            { titel: "Toets-tip: 5-stappen-rekenen", tekst: "**Officieel stappenplan rekenen** (uit veel rekenboeken):\n1. **Lees + begrijp** vraag\n2. **Onderstreep** getallen + sleutelwoorden\n3. **Schets** (als handig)\n4. **Reken** uit\n5. **Controleer** antwoord (klopt eenheid? Past schatting?)\n\nVeelgemaakte fout: stap 4 meteen doen zonder 1+2. Dan reken je iets anders dan gevraagd." },
+            { titel: "Studievaardigheid voor de Doorstroomtoets", tekst: "Doorstroomtoets (groep 8) test ook **studievaardigheid** — slim leren + werken. Stappenplannen vallen daaronder:\n• **Lezen** (begrijpend lezen-vragen)\n• **Rekenen** (5-stappen)\n• **Wereldoriëntatie** (informatie zoeken)\n\nKinderen die stappenplan-aanpak gebruiken scoren gemiddeld 10-15% hoger op toetsen zoals de Doorstroomtoets." },
           ],
           woorden: [
             { woord: "stappenplan", uitleg: "Lijst van stappen in vaste volgorde voor een taak." },
-            { woord: "studievaardigheid", uitleg: "Vaardigheid om effectief te leren + werken. Cito test dit." },
+            { woord: "studievaardigheid", uitleg: "Vaardigheid om effectief te leren + werken. De toets test dit." },
             { woord: "structureren", uitleg: "Iets ordenen in vaste delen of stappen." },
           ],
-          theorie: "Stappenplan-types die Cito test:\n• **Rekenen** — 5-stappen (lees → markeer → schets → reken → check)\n• **Schrijven** — opzet → uitwerken → herlezen → fout-check\n• **Lezen** — globaal lezen → vraag begrijpen → terug naar tekst → antwoord kiezen\n• **Probleem oplossen** — wat weet ik? Wat zoek ik? Welke stappen?",
+          theorie: "Stappenplan-types die De toets test:\n• **Rekenen** — 5-stappen (lees → markeer → schets → reken → check)\n• **Schrijven** — opzet → uitwerken → herlezen → fout-check\n• **Lezen** — globaal lezen → vraag begrijpen → terug naar tekst → antwoord kiezen\n• **Probleem oplossen** — wat weet ik? Wat zoek ik? Welke stappen?",
           voorbeelden: [
             { type: "feit", tekst: "Schaak-grootmeesters gebruiken óók stappenplannen (positie analyseren → opties bedenken → beste zet → uitvoeren). Gestructureerd denken werkt overal." },
           ],
           basiskennis: [{ onderwerp: "Niet 'tijd verspillen'", uitleg: "Stap 1 (lezen) lijkt vertraging maar BESPAART tijd: betere antwoorden, minder fouten, minder herrekenen." }],
-          niveaus: { basis: "Stap 1 = lezen.", simpeler: "Stappenplan stap 1 is altijd: lees + begrijp. Pas dan rekenen. Cito-tip: niet meteen tellen, eerst de vraag SNAPPEN.", nogSimpeler: "Stap 1" },
+          niveaus: { basis: "Stap 1 = lezen.", simpeler: "Stappenplan stap 1 is altijd: lees + begrijp. Pas dan rekenen. Toets-tip: niet meteen tellen, eerst de vraag SNAPPEN.", nogSimpeler: "Stap 1" },
         },
       },
       {
-        q: "**Beslisboom voor schooladvies VMBO/HAVO/VWO**:\n• Score Cito 525-535 → VMBO-GL/TL\n• 536-545 → HAVO\n• 546+ → VWO\n\n**Welk advies bij score 540**?",
+        q: "**Beslisboom voor schooladvies VMBO/HAVO/VWO**:\n• Score de toets 525-535 → VMBO-GL/TL\n• 536-545 → HAVO\n• 546+ → VWO\n\n**Welk advies bij score 540**?",
         options: ["HAVO","VMBO-GL/TL","VWO","Geen"],
         answer: 0,
         wrongHints: [null, "Te laag — 540 zit hoger dan VMBO-grens.", "Te hoog — VWO begint pas bij 546.", "Wel een advies."],
@@ -260,11 +260,11 @@ const steps = [
           stappen: [
             { titel: "Wat is een beslisboom?", tekst: "Een **beslisboom** is een schema waarmee je via **JA/NEE-vragen** of **getallen-vergelijkingen** tot een conclusie komt.\n\nVoorbeeld:\n```\nIs score ≥ 546? → JA → VWO\n                  → NEE → Is score ≥ 536? → JA → HAVO\n                                            → NEE → VMBO\n```\n\nVeel gebruikt bij: schooladvies, medische diagnose, kledings-keuze (warm/koud), recept-keuze." },
             { titel: "Stap voor stap: score 540", tekst: "Voor score **540**, ga we door de boom:\n1. Is 540 ≥ 546? **NEE** (540 < 546, geen VWO)\n2. Is 540 ≥ 536? **JA** (540 > 536) → **HAVO** ✓\n\nDe regels:\n• 525-535: **VMBO-GL/TL**\n• 536-545: **HAVO**\n• 546+: **VWO**\n\n540 zit in 536-545 → HAVO." },
-            { titel: "Cito-feit: schooladvies in NL", tekst: "**Belangrijk**: dit voorbeeld is GEFICTIONALISEERD. Werkelijk schooladvies hangt af van **veel factoren**:\n• Doorstroomtoets-score (was Cito)\n• Schooladvies van leerkracht (zwaarder dan toets sinds 2014)\n• Motivatie + werkhouding\n• Sociale + emotionele ontwikkeling\n\nSinds **2024** geeft Doorstroomtoets het **belangrijkste advies**. Leerkracht maakt eindvoorstel + bespreekt met ouders. Bij twijfel: hoger advies meestal beter (stapelen mogelijk)." },
+            { titel: "Toets-feit: schooladvies in NL", tekst: "**Belangrijk**: dit voorbeeld is GEFICTIONALISEERD. Werkelijk schooladvies hangt af van **veel factoren**:\n• Doorstroomtoets-score (was de toets)\n• Schooladvies van leerkracht (zwaarder dan toets sinds 2014)\n• Motivatie + werkhouding\n• Sociale + emotionele ontwikkeling\n\nSinds **2024** geeft Doorstroomtoets het **belangrijkste advies**. Leerkracht maakt eindvoorstel + bespreekt met ouders. Bij twijfel: hoger advies meestal beter (stapelen mogelijk)." },
           ],
           woorden: [
             { woord: "beslisboom", uitleg: "Schema dat via vragen of getal-vergelijkingen tot een keuze leidt." },
-            { woord: "Doorstroomtoets", uitleg: "Officiële naam sinds 2024 voor de vroegere 'Cito-eindtoets' in groep 8." },
+            { woord: "Doorstroomtoets", uitleg: "Officiële naam sinds 2024 voor de vroegere 'Doorstroomtoets' in groep 8." },
             { woord: "schooladvies", uitleg: "Aanbeveling van basisschool voor middelbare school (VMBO/HAVO/VWO)." },
           ],
           theorie: "Beslisboom-stappen (algemeen):\n1. **Start bij wortel** (eerste vraag)\n2. **Beantwoord** met JA/NEE of getal-vergelijking\n3. **Volg de tak** die past\n4. **Herhaal** tot je aan een bladknoop (eind-conclusie) komt\n\nGebruikt in: medische diagnose, computer-algoritmen, recept-keuze, route-planning.",
@@ -272,7 +272,7 @@ const steps = [
             { type: "voorbeeld", tekst: "Beslisboom 'wat trek ik aan?': Regent het? → JA → jas + paraplu. → NEE → Koud? → JA → trui. → NEE → T-shirt." },
             { type: "voorbeeld", tekst: "Beslisboom 'vis-naam': Heeft schubben? → Heeft tentakels? etc. → Maakt biologen mogelijk te onderscheiden." },
           ],
-          basiskennis: [{ onderwerp: "Onthoud grenzen", uitleg: "Bij beslisboom-vragen op Cito: kijk goed of grens INCLUSIEF is. '≥ 536' betekent 536 telt mee. '> 536' niet." }],
+          basiskennis: [{ onderwerp: "Onthoud grenzen", uitleg: "Bij beslisboom-vragen op de Doorstroomtoets: kijk goed of grens INCLUSIEF is. '≥ 536' betekent 536 telt mee. '> 536' niet." }],
           niveaus: { basis: "HAVO.", simpeler: "540 valt in 536-545 → HAVO-advies. Beslisboom: te laag voor VWO (≥546), te hoog voor VMBO (525-535).", nogSimpeler: "HAVO" },
         },
       },
@@ -285,7 +285,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een voedselketen?", tekst: "Een **voedselketen** toont wie wie eet in de natuur. De **pijl** wijst naar **wie GEGETEN wordt**:\n• Zon → plant (plant gebruikt zonne-energie via fotosynthese)\n• Plant → koe (koe eet plant)\n• Koe → mens (mens eet koe = vlees)\n\nDe energie **stroomt door** de keten — elke stap verliest energie als warmte. Daarom: weinig roofdieren bovenaan, veel planten onderaan." },
             { titel: "Onderdelen voedselketen", tekst: "**Producenten** (bovenkant): planten — maken energie van zon via **fotosynthese**.\n**Consumenten**:\n• **Eerste-orde** (primair) — eten planten: koeien, konijnen, sprinkhanen\n• **Tweede-orde** (secundair) — eten primaire consumenten: vossen, kippen, mensen\n• **Derde-orde** (tertiair) — top-roofdieren: tijger, haai, adelaar\n\n**Afbrekers**: bacteriën + schimmels die dode planten/dieren opruimen → terug naar grond → nieuwe planten." },
-            { titel: "Cito-feit: voedselweb vs keten", tekst: "**Voedselketen** = simpel, 1 lijn (zon → A → B → C).\n**Voedselweb** = realistischer, meerdere ketens door elkaar.\n\nBv. een vos eet niet alleen konijnen, maar ook muizen, vogels, bessen. Konijnen worden gegeten door vossen, vogels, mensen. Tekening: ALLE pijlen samen = web.\n\nCito vraagt vaak: 'Wat gebeurt als roofdier verdwijnt?' Antwoord: prooi-populatie stijgt → plant-populatie daalt → systeem uit balans." },
+            { titel: "Toets-feit: voedselweb vs keten", tekst: "**Voedselketen** = simpel, 1 lijn (zon → A → B → C).\n**Voedselweb** = realistischer, meerdere ketens door elkaar.\n\nBv. een vos eet niet alleen konijnen, maar ook muizen, vogels, bessen. Konijnen worden gegeten door vossen, vogels, mensen. Tekening: ALLE pijlen samen = web.\n\nCito vraagt vaak: 'Wat gebeurt als roofdier verdwijnt?' Antwoord: prooi-populatie stijgt → plant-populatie daalt → systeem uit balans." },
           ],
           woorden: [
             { woord: "voedselketen", uitleg: "Lijn die toont wie wie eet in natuur. Energie stroomt door." },
@@ -293,7 +293,7 @@ const steps = [
             { woord: "consument", uitleg: "Dier dat ander voedsel eet (geen plant maakt zelf eten)." },
             { woord: "afbreker", uitleg: "Bacterie/schimmel die dood materiaal opruimt." },
           ],
-          theorie: "Cito-tip: voedselketen lezen\n• Pijl wijst naar wat gegeten wordt (zie A→B = A wordt door B gegeten? Of: A→B = A eet B?)\n• NL-conventie: **A → B betekent 'A wordt gegeten door B'** OF energie stroomt richting van pijl\n• Bij elke nieuwe schakel: ~90% energie verloren als warmte (ecologische piramide)",
+          theorie: "Toets-tip: voedselketen lezen\n• Pijl wijst naar wat gegeten wordt (zie A→B = A wordt door B gegeten? Of: A→B = A eet B?)\n• NL-conventie: **A → B betekent 'A wordt gegeten door B'** OF energie stroomt richting van pijl\n• Bij elke nieuwe schakel: ~90% energie verloren als warmte (ecologische piramide)",
           voorbeelden: [
             { type: "voorbeeld", tekst: "Eenvoudige voedselketen tuin: blad → rups → vogel → kat." },
             { type: "voorbeeld", tekst: "Zee-voedselketen: plankton → kleine vis → tonijn → mens." },
@@ -329,7 +329,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const schemasStappenplannenPo = {
   id: "schemas-stappenplannen-po",
-  title: "Schema's en stappenplannen — Cito groep 5-8",
+  title: "Schema's en stappenplannen — Doorstroomtoets groep 5-8",
   emoji: "📋",
   level: "groep5-8",
   subject: "taal",
@@ -340,7 +340,7 @@ const schemasStappenplannenPo = {
     { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
   ],
   intro:
-    "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Cito-stijl. ~12 min.",
+    "Schema's, stappenplannen, beslisbomen en tijdslijnen lezen. Doorstroomtoets-stijl. ~12 min.",
   triggerKeywords: [
     "schema","stappenplan","beslisboom","tijdslijn","voedselketen",
     "diagram","studievaardigheden","informatiebronnen","tabel",

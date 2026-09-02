@@ -15,7 +15,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-1/gt-02
 const compactUitleg = (kernUitleg, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kernUitleg }],
   woorden,
-  theorie: "Cito-truc: lees de vraag zorgvuldig, koppel sleutel-begrip uit vraag aan het juiste economische concept.",
+  theorie: "Toets-truc: lees de vraag zorgvuldig, koppel sleutel-begrip uit vraag aan het juiste economische concept.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

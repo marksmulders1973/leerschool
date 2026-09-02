@@ -123,7 +123,7 @@ const steps = [
         wrongHints: [null, "Niet — geen rechtstreekse aantal.", "Niet — irrelevant.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Octaangetal = brandeigenschap", tekst: "**Octaangetal** geeft hoe **goed brandstof presteert** in motor. Schaal: octaan (zeer goed) = 100, heptaan (slecht, klopt) = 0. Benzine 95 = vergelijkbaar met mix van 95% octaan + 5% heptaan." }],
-          theorie: "Cito-actueel: Euro 95 / 98 verwijst naar octaangetal. Hogere octaangetal = duurder + voor zwaardere motoren.",
+          theorie: "Toets-actueel: Euro 95 / 98 verwijst naar octaangetal. Hogere octaangetal = duurder + voor zwaardere motoren.",
           niveaus: { basis: "Verbrandingseigenschap.", simpeler: "Octaangetal = brandkwaliteit", nogSimpeler: "Brand" },
         },
       },
@@ -146,7 +146,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is aardgas (geen vloeistof).", "Niet — diesel, niet aansteker.", "Niet — benzeen is anders (aromatisch)."],
         uitlegPad: {
           stappen: [{ titel: "Butaan = vloeibaar bij druk", tekst: "**Butaan** (C₄H₁₀) is gas bij kamertemperatuur maar wordt **vloeibaar onder druk** in aansteker. Bij openen vervliegt + ontbrandt. Propaan (C₃H₈) zit in barbecue-tanks." }],
-          theorie: "Cito-pattern: butaan vs propaan = vergelijkbaar maar butaan vloeibaar bij lagere druk.",
+          theorie: "Toets-patroon: butaan vs propaan = vergelijkbaar maar butaan vloeibaar bij lagere druk.",
           niveaus: { basis: "Butaan.", simpeler: "Aansteker = butaan", nogSimpeler: "Butaan" },
         },
       },
@@ -157,7 +157,7 @@ const steps = [
   {
     title: "Functionele groepen — alcoholen, zuren, esters",
     explanation:
-      "**Functionele groep** = chemisch reactief deel van een molecuul. Bepaalt eigenschappen + reacties.\n\n**Belangrijkste functionele groepen op HAVO/VWO**:\n\n**1. Alcohol** (-OH, hydroxylgroep):\n• Voorbeeld: ethanol C₂H₅OH (drank-alcohol).\n• Naamgeving: -ol-uitgang.\n• Methanol (CH₃OH) = giftig (auto-brandstof, biobrandstof).\n• Ethanol (CH₃CH₂OH) = drinkbaar (in maat).\n• Propanol, butanol, etc.\n\n**2. Carbonzuur** (-COOH):\n• Voorbeeld: azijnzuur (ethaanzuur) CH₃COOH.\n• Naamgeving: -zuur-uitgang.\n• Mierenzuur (methaanzuur) HCOOH = giftig.\n• Citroenzuur, melkzuur, vetzuren.\n• Reageren als **zwak zuur** (proton-donor).\n\n**3. Ester** (-COO-, koppelt zuur + alcohol):\n• Voorbeeld: ethylacetaat (ester van azijnzuur + ethanol).\n• Naamgeving: alcohol-naam + zuur-naam-aat.\n• Geuren in fruit + parfum: ester-verbindingen.\n• Banaan-aroma = isoamyl-acetaat.\n\n**4. Aldehyde** (-CHO, eindstandig):\n• Voorbeeld: formaldehyde HCHO.\n• Naamgeving: -al-uitgang.\n• Gebruikt in conservering, plastic.\n\n**5. Keton** (C=O, midden in keten):\n• Voorbeeld: aceton CH₃COCH₃.\n• Naamgeving: -on-uitgang.\n• Aceton in nagellak-verwijderaar.\n\n**6. Amine** (-NH₂, lijkt op ammoniak):\n• Voorbeeld: methylamine CH₃NH₂.\n• Aminozuren bevatten amine + carbonzuur.\n• Basische eigenschappen.\n\n**Ester-vorming (verestering)**:\nZuur + alcohol → ester + water (omkeerbare reactie):\n• CH₃COOH + CH₃CH₂OH ⇌ CH₃COOCH₂CH₃ + H₂O\n• Azijnzuur + ethanol → ethylacetaat + water.\n\n**Detecteren met indicatoren** (Cito-onderdeel):\n• Alcohol: niet zuur/basisch in water.\n• Carbonzuur: zuur in water (pH < 7), rood lakmoes.\n• Amine: basisch in water (pH > 7), blauw lakmoes.\n• Pas op: niet alle organische verbindingen reageren met lakmoes.",
+      "**Functionele groep** = chemisch reactief deel van een molecuul. Bepaalt eigenschappen + reacties.\n\n**Belangrijkste functionele groepen op HAVO/VWO**:\n\n**1. Alcohol** (-OH, hydroxylgroep):\n• Voorbeeld: ethanol C₂H₅OH (drank-alcohol).\n• Naamgeving: -ol-uitgang.\n• Methanol (CH₃OH) = giftig (auto-brandstof, biobrandstof).\n• Ethanol (CH₃CH₂OH) = drinkbaar (in maat).\n• Propanol, butanol, etc.\n\n**2. Carbonzuur** (-COOH):\n• Voorbeeld: azijnzuur (ethaanzuur) CH₃COOH.\n• Naamgeving: -zuur-uitgang.\n• Mierenzuur (methaanzuur) HCOOH = giftig.\n• Citroenzuur, melkzuur, vetzuren.\n• Reageren als **zwak zuur** (proton-donor).\n\n**3. Ester** (-COO-, koppelt zuur + alcohol):\n• Voorbeeld: ethylacetaat (ester van azijnzuur + ethanol).\n• Naamgeving: alcohol-naam + zuur-naam-aat.\n• Geuren in fruit + parfum: ester-verbindingen.\n• Banaan-aroma = isoamyl-acetaat.\n\n**4. Aldehyde** (-CHO, eindstandig):\n• Voorbeeld: formaldehyde HCHO.\n• Naamgeving: -al-uitgang.\n• Gebruikt in conservering, plastic.\n\n**5. Keton** (C=O, midden in keten):\n• Voorbeeld: aceton CH₃COCH₃.\n• Naamgeving: -on-uitgang.\n• Aceton in nagellak-verwijderaar.\n\n**6. Amine** (-NH₂, lijkt op ammoniak):\n• Voorbeeld: methylamine CH₃NH₂.\n• Aminozuren bevatten amine + carbonzuur.\n• Basische eigenschappen.\n\n**Ester-vorming (verestering)**:\nZuur + alcohol → ester + water (omkeerbare reactie):\n• CH₃COOH + CH₃CH₂OH ⇌ CH₃COOCH₂CH₃ + H₂O\n• Azijnzuur + ethanol → ethylacetaat + water.\n\n**Detecteren met indicatoren** (Toets-onderdeel):\n• Alcohol: niet zuur/basisch in water.\n• Carbonzuur: zuur in water (pH < 7), rood lakmoes.\n• Amine: basisch in water (pH > 7), blauw lakmoes.\n• Pas op: niet alle organische verbindingen reageren met lakmoes.",
     checks: [
       {
         q: "Welke **functionele groep** heeft ethanol?",
@@ -188,7 +188,7 @@ const steps = [
         wrongHints: [null, "Niet — andere reactie nodig.", "Niet — keton uit alcohol-oxidatie.", "Niet — uit ammoniak-derivaten."],
         uitlegPad: {
           stappen: [{ titel: "Verestering", tekst: "**Alcohol + carbonzuur → ester + water** (omkeerbare reactie). Voorbeeld: ethanol + azijnzuur → ethylacetaat + water. Esters geuren prettig (fruit, parfum)." }],
-          theorie: "Cito-favoriet: ester-vorming als reactie-vraag. Vergeet 'water' niet als bijproduct.",
+          theorie: "Toets-favoriet: ester-vorming als reactie-vraag. Vergeet 'water' niet als bijproduct.",
           niveaus: { basis: "Ester.", simpeler: "Alcohol + zuur = ester (+ water)", nogSimpeler: "Ester" },
         },
       },
@@ -210,7 +210,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is juist zuur.", "Niet — wel reactie.", "Niet — basisch."],
         uitlegPad: {
           stappen: [{ titel: "Amine = ammoniak-derivaat", tekst: "**Amines** (-NH₂) zijn afgeleid van ammoniak (NH₃). N heeft 1 vrij elektronenpaar — kan H⁺ opnemen → basisch. pH > 7 in water." }],
-          theorie: "Cito-pattern: amines kleuren rood lakmoes BLAUW (basisch), carbonzuren omgekeerd.",
+          theorie: "Toets-patroon: amines kleuren rood lakmoes BLAUW (basisch), carbonzuren omgekeerd.",
           niveaus: { basis: "N neemt H⁺ op.", simpeler: "Amine basisch door N", nogSimpeler: "H⁺ op" },
         },
       },
@@ -221,7 +221,7 @@ const steps = [
   {
     title: "Reacties + verbranding",
     explanation:
-      "Organische verbindingen ondergaan diverse reacties. Belangrijkste voor HAVO/VWO:\n\n**1. Verbranding (oxidatie)**:\n\n**Volledige verbranding** (genoeg zuurstof):\n• Alkaan + O₂ → **CO₂ + H₂O** + warmte.\n• Bv. propaan: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O.\n• **Balansvergelijking**: tel C, H, O links + rechts. Moet kloppen.\n\n**Onvolledige verbranding** (te weinig zuurstof):\n• Alkaan + minder O₂ → **CO** (koolmonoxide) + H₂O + roet.\n• Gevaarlijk: CO is reukloos + dodelijk (CO-vergiftiging).\n• Zwart roet zichtbaar.\n• Gebeurt in slecht-ventileerde geisers, oude open haarden.\n\n**Energie-vergelijking**:\n• Verbrandingsreactie is **exotherm** = geeft energie af (warmte + licht).\n• Brandstof-waarde: hoeveel J energie per gram of mol.\n• Methaan ~890 kJ/mol bij volledige verbranding.\n\n**2. Substitutie (alkanen + halogeen)**:\n• CH₄ + Cl₂ → CH₃Cl + HCl (met UV-licht).\n• 1 H vervangen door Cl.\n• Klassiek HAVO-reactie.\n\n**3. Additie (alkenen + alkynen)**:\n• Dubbele binding kan reageren met H₂, X₂ (halogeen), HX, etc.\n• Bv: etheen + waterstof → ethaan: C₂H₄ + H₂ → C₂H₆.\n• Bv: etheen + broom → 1,2-dibromoethaan: C₂H₄ + Br₂ → C₂H₄Br₂.\n• Onverzadigd → verzadigd.\n\n**4. Polymerisatie**:\n• Vele kleine monomeren → polymeer (lange keten).\n• Voorbeeld plastics: etheen (C₂H₄) → poly-etheen (PE, plastic-zak).\n• Andere: PVC (uit chloor-etheen), PET (frisdrank-flessen).\n\n**5. Verestering** (zie stap C):\n• Alcohol + zuur → ester + water.\n\n**6. Hydrolyse**:\n• Omgekeerd van verestering: ester + water → alcohol + zuur.\n• Ook eiwit-verbindingen, vetten, koolhydraten kunnen hydrolyseren.\n\n**Brandstoffen** (Cito-actueel):\n• Aardgas (methaan): NL-belangrijkste energiebron tot ~2020.\n• Benzine: mix van C₅-C₁₂ alkanen.\n• Diesel: mix van C₁₀-C₂₀.\n• LPG: butaan + propaan.\n• Biobrandstoffen: ethanol uit maïs/suikerriet, biodiesel uit plantaardige olie.\n• Waterstof: schoon (alleen H₂O bij verbranding), maar duur.\n\n**Klimaat-context**: bij elke verbranding van koolstof-verbindingen komt **CO₂** vrij. Hoofdoorzaak antropogene klimaatverandering. Oplossingen: minder fossiele brandstof, meer hernieuwbaar.",
+      "Organische verbindingen ondergaan diverse reacties. Belangrijkste voor HAVO/VWO:\n\n**1. Verbranding (oxidatie)**:\n\n**Volledige verbranding** (genoeg zuurstof):\n• Alkaan + O₂ → **CO₂ + H₂O** + warmte.\n• Bv. propaan: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O.\n• **Balansvergelijking**: tel C, H, O links + rechts. Moet kloppen.\n\n**Onvolledige verbranding** (te weinig zuurstof):\n• Alkaan + minder O₂ → **CO** (koolmonoxide) + H₂O + roet.\n• Gevaarlijk: CO is reukloos + dodelijk (CO-vergiftiging).\n• Zwart roet zichtbaar.\n• Gebeurt in slecht-ventileerde geisers, oude open haarden.\n\n**Energie-vergelijking**:\n• Verbrandingsreactie is **exotherm** = geeft energie af (warmte + licht).\n• Brandstof-waarde: hoeveel J energie per gram of mol.\n• Methaan ~890 kJ/mol bij volledige verbranding.\n\n**2. Substitutie (alkanen + halogeen)**:\n• CH₄ + Cl₂ → CH₃Cl + HCl (met UV-licht).\n• 1 H vervangen door Cl.\n• Klassiek HAVO-reactie.\n\n**3. Additie (alkenen + alkynen)**:\n• Dubbele binding kan reageren met H₂, X₂ (halogeen), HX, etc.\n• Bv: etheen + waterstof → ethaan: C₂H₄ + H₂ → C₂H₆.\n• Bv: etheen + broom → 1,2-dibromoethaan: C₂H₄ + Br₂ → C₂H₄Br₂.\n• Onverzadigd → verzadigd.\n\n**4. Polymerisatie**:\n• Vele kleine monomeren → polymeer (lange keten).\n• Voorbeeld plastics: etheen (C₂H₄) → poly-etheen (PE, plastic-zak).\n• Andere: PVC (uit chloor-etheen), PET (frisdrank-flessen).\n\n**5. Verestering** (zie stap C):\n• Alcohol + zuur → ester + water.\n\n**6. Hydrolyse**:\n• Omgekeerd van verestering: ester + water → alcohol + zuur.\n• Ook eiwit-verbindingen, vetten, koolhydraten kunnen hydrolyseren.\n\n**Brandstoffen** (Toets-actueel):\n• Aardgas (methaan): NL-belangrijkste energiebron tot ~2020.\n• Benzine: mix van C₅-C₁₂ alkanen.\n• Diesel: mix van C₁₀-C₂₀.\n• LPG: butaan + propaan.\n• Biobrandstoffen: ethanol uit maïs/suikerriet, biodiesel uit plantaardige olie.\n• Waterstof: schoon (alleen H₂O bij verbranding), maar duur.\n\n**Klimaat-context**: bij elke verbranding van koolstof-verbindingen komt **CO₂** vrij. Hoofdoorzaak antropogene klimaatverandering. Oplossingen: minder fossiele brandstof, meer hernieuwbaar.",
     checks: [
       {
         q: "Bij **volledige verbranding** van methaan ontstaat:",
@@ -241,7 +241,7 @@ const steps = [
         wrongHints: [null, "Niet — onruikbaar = gevaar.", "Niet — onzichtbaar.", "Wel brandbaar maar dat is niet hoofd-gevaar."],
         uitlegPad: {
           stappen: [{ titel: "CO bind aan hemoglobine", tekst: "**CO** bindt 200× sterker aan hemoglobine dan zuurstof. Hemoglobine kan geen O₂ meer vervoeren → verstikking. **Reukloos + smaakloos** → slachtoffer merkt niets, valt in slaap, sterft. Slecht-ventileerde geisers = klassieke oorzaak." }],
-          theorie: "Cito-actueel: CO-melders verplicht sinds 2024 in elke woning met gasapparaat. Voorkomt ~10 NL-doden per jaar.",
+          theorie: "Toets-actueel: CO-melders verplicht sinds 2024 in elke woning met gasapparaat. Voorkomt ~10 NL-doden per jaar.",
           niveaus: { basis: "Reukloos + dodelijk.", simpeler: "CO = stille killer", nogSimpeler: "Reukloos" },
         },
       },
@@ -252,7 +252,7 @@ const steps = [
         wrongHints: [null, "Niet — dat heeft -OH erbij.", "Niet — zelfde uitgangsstof.", "Niet — minder koolstof."],
         uitlegPad: {
           stappen: [{ titel: "Additie aan dubbele binding", tekst: "**Additie**: C=C neemt H₂ op → C-C (enkele binding). C₂H₄ (etheen, onverzadigd) + H₂ → **C₂H₆** (ethaan, verzadigd)." }],
-          theorie: "Cito-pattern: onverzadigde verbindingen (=C= of ≡C≡) kunnen ADDITIE ondergaan. Verzadigde alleen substitutie.",
+          theorie: "Toets-patroon: onverzadigde verbindingen (=C= of ≡C≡) kunnen ADDITIE ondergaan. Verzadigde alleen substitutie.",
           niveaus: { basis: "Ethaan.", simpeler: "Etheen + H₂ = ethaan", nogSimpeler: "Ethaan" },
         },
       },
@@ -275,7 +275,7 @@ const steps = [
         wrongHints: [null, "Niet — O₂-niveau blijft hoog.", "Niet relevant.", "Niet — methaan = uitgangsstof bij verbranding."],
         uitlegPad: {
           stappen: [{ titel: "CO₂ = broeikasgas", tekst: "Bij verbranding van fossiele brandstof komt **CO₂** vrij. CO₂ houdt warmte vast in atmosfeer → **versterkt broeikaseffect** → klimaatopwarming. Sinds 1850: CO₂ van 280 ppm → 420 ppm (2024)." }],
-          theorie: "Cito-actueel: NL-klimaatakkoord 2019 wil 49% CO₂-reductie 2030 vs 1990 (zie pad Sociale Zekerheid).",
+          theorie: "Toets-actueel: NL-klimaatakkoord 2019 wil 49% CO₂-reductie 2030 vs 1990 (zie pad Sociale Zekerheid).",
           niveaus: { basis: "CO₂ = broeikas.", simpeler: "CO₂ → klimaatopwarming", nogSimpeler: "CO₂" },
         },
       },

@@ -1,5 +1,5 @@
 // Leerpad: Verhoudingen — voor groep 5-8 (PO-versie)
-// 6 stappen in 5 hoofdstukken. Cito-stijl praktijksommen.
+// 6 stappen in 5 hoofdstukken. Doorstroomtoets-stijl praktijksommen.
 // Sprint-5+ S4 (2026-05-08).
 
 const COLORS = {
@@ -18,7 +18,7 @@ const chapters = [
   { letter: "B", title: "Recepten — siroop en water", emoji: "🍋", from: 1, to: 1 },
   { letter: "C", title: "Verhoudingstabel", emoji: "📋", from: 2, to: 2 },
   { letter: "D", title: "Recepten omrekenen + schaal", emoji: "🍪", from: 3, to: 4 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function siroopSvg() {
@@ -57,7 +57,7 @@ function tabelSvg() {
 const steps = [
   {
     title: "Wat is een verhouding?",
-    explanation: "Een **verhouding** zegt hoe twee dingen zich tot elkaar **verhouden**. Niet de losse getallen, maar de **verhouding** ertussen.\n\n**Voorbeelden**:\n• In een klas zitten 8 jongens en 12 meisjes. Verhouding **jongens : meisjes = 8 : 12 = 2 : 3**.\n• Een limonade-recept: 1 deel siroop op 4 delen water. Verhouding **1 : 4**.\n• Op een schoolplein 50 fietsen en 25 steps. Verhouding **2 : 1**.\n\n**Notatie**: we schrijven het met een **dubbelpunt** ':' (lees: 'tot').\n\n**Vereenvoudigen**: net als breuken kun je verhoudingen kleiner maken door beide getallen door hetzelfde te delen.\n• 8 : 12 → ÷4 → **2 : 3**\n• 50 : 25 → ÷25 → **2 : 1**\n• 100 : 400 → ÷100 → **1 : 4**\n\n**Verschil met breuk**:\n• 2/5 betekent: 2 delen van een totaal van 5.\n• 2 : 3 betekent: 2 delen naast 3 delen — totaal 5 delen.\n\n**Cito-tip**: kijk altijd of je een verhouding kunt **vereenvoudigen** voordat je verder rekent. Dat scheelt!",
+    explanation: "Een **verhouding** zegt hoe twee dingen zich tot elkaar **verhouden**. Niet de losse getallen, maar de **verhouding** ertussen.\n\n**Voorbeelden**:\n• In een klas zitten 8 jongens en 12 meisjes. Verhouding **jongens : meisjes = 8 : 12 = 2 : 3**.\n• Een limonade-recept: 1 deel siroop op 4 delen water. Verhouding **1 : 4**.\n• Op een schoolplein 50 fietsen en 25 steps. Verhouding **2 : 1**.\n\n**Notatie**: we schrijven het met een **dubbelpunt** ':' (lees: 'tot').\n\n**Vereenvoudigen**: net als breuken kun je verhoudingen kleiner maken door beide getallen door hetzelfde te delen.\n• 8 : 12 → ÷4 → **2 : 3**\n• 50 : 25 → ÷25 → **2 : 1**\n• 100 : 400 → ÷100 → **1 : 4**\n\n**Verschil met breuk**:\n• 2/5 betekent: 2 delen van een totaal van 5.\n• 2 : 3 betekent: 2 delen naast 3 delen — totaal 5 delen.\n\n**Toets-tip**: kijk altijd of je een verhouding kunt **vereenvoudigen** voordat je verder rekent. Dat scheelt!",
     svg: siroopSvg(),
     checks: [
       {
@@ -107,7 +107,7 @@ const steps = [
 
   {
     title: "Recept — siroop en water",
-    explanation: "Verhoudingen kom je vaak tegen bij **recepten**.\n\n**Voorbeeld**: limonade-recept zegt 1 : 4 (1 deel siroop op 4 delen water).\n\nAls je een **glas vult van 200 mL**:\n• 1 + 4 = **5 delen totaal** in één glas.\n• Elk deel = 200 ÷ 5 = **40 mL**.\n• Dus: **40 mL siroop + 160 mL water**.\n\n**Slimme aanpak — denk in 'delen'**:\n• Bij 1 : 4 zit 1 deel van 5 = **1/5** in siroop.\n• Bij 2 : 3 zit 2 deel van 5 = **2/5** in het eerste.\n• Bij 3 : 7 zit 3 deel van 10 = **3/10** in het eerste.\n\n**Voorbeeld 2**: een schip-bemanning is 1 : 5 (kapitein : matrozen). Als er 24 mensen zijn:\n• 1 + 5 = 6 delen.\n• Elk deel = 24 ÷ 6 = 4.\n• Kapiteins: 1 × 4 = **4**.\n• Matrozen: 5 × 4 = **20**.\n• Check: 4 + 20 = 24 ✓.\n\n**Cito-truc**: tel altijd eerst **alle delen samen** (1 + 4 = 5, 2 + 3 = 5, etc.). Verdeel dan het totaal door dat getal — en je kent de waarde van **één deel**.",
+    explanation: "Verhoudingen kom je vaak tegen bij **recepten**.\n\n**Voorbeeld**: limonade-recept zegt 1 : 4 (1 deel siroop op 4 delen water).\n\nAls je een **glas vult van 200 mL**:\n• 1 + 4 = **5 delen totaal** in één glas.\n• Elk deel = 200 ÷ 5 = **40 mL**.\n• Dus: **40 mL siroop + 160 mL water**.\n\n**Slimme aanpak — denk in 'delen'**:\n• Bij 1 : 4 zit 1 deel van 5 = **1/5** in siroop.\n• Bij 2 : 3 zit 2 deel van 5 = **2/5** in het eerste.\n• Bij 3 : 7 zit 3 deel van 10 = **3/10** in het eerste.\n\n**Voorbeeld 2**: een schip-bemanning is 1 : 5 (kapitein : matrozen). Als er 24 mensen zijn:\n• 1 + 5 = 6 delen.\n• Elk deel = 24 ÷ 6 = 4.\n• Kapiteins: 1 × 4 = **4**.\n• Matrozen: 5 × 4 = **20**.\n• Check: 4 + 20 = 24 ✓.\n\n**Toets-truc**: tel altijd eerst **alle delen samen** (1 + 4 = 5, 2 + 3 = 5, etc.). Verdeel dan het totaal door dat getal — en je kent de waarde van **één deel**.",
     checks: [
       {
         q: "Een recept zegt **1 : 3 (siroop : water)**. Voor een glas van **400 mL** — hoeveel **siroop**?",
@@ -156,7 +156,7 @@ const steps = [
 
   {
     title: "Verhoudingstabel — denk in stapjes",
-    explanation: "De **verhoudingstabel** is de Cito-favoriet. Je vult getallen in een tabel die de verhouding vasthoudt.\n\n**Voorbeeld**: limonade 1 : 4. Bij 100 mL siroop hoort 400 mL water.\n\n| siroop | water |\n|--------|-------|\n| 100 mL | 400 mL |\n| 200 mL | 800 mL |\n| 300 mL | 1200 mL |\n\n**Regel**: wat je met 1 kant doet, doe je ook met de **andere kant** (× of ÷ met hetzelfde getal).\n\n• 100 → 200 = × 2 → ook water: 400 → 800.\n• 100 → 50 = ÷ 2 → ook water: 400 → 200.\n• 100 → 250 = × 2,5 → ook water: 400 → 1000.\n\n**Stappen voor moeilijke vragen**:\n*'4 broden kosten € 12. Wat kosten 7 broden?'*\n\n| broden | euro |\n|--------|------|\n| 4 | 12 |\n| 1 | 3 *(deel door 4)* |\n| 7 | 21 *(maal 7)* |\n\nDus 7 broden kosten **€ 21**.\n\n**Cito-truc — 'tussenstap via 1'**:\nAls de getallen niet handig delen, ga eerst naar **1** *(eenheid-prijs)* en dan naar het gewenste aantal.",
+    explanation: "De **verhoudingstabel** is de Toets-favoriet. Je vult getallen in een tabel die de verhouding vasthoudt.\n\n**Voorbeeld**: limonade 1 : 4. Bij 100 mL siroop hoort 400 mL water.\n\n| siroop | water |\n|--------|-------|\n| 100 mL | 400 mL |\n| 200 mL | 800 mL |\n| 300 mL | 1200 mL |\n\n**Regel**: wat je met 1 kant doet, doe je ook met de **andere kant** (× of ÷ met hetzelfde getal).\n\n• 100 → 200 = × 2 → ook water: 400 → 800.\n• 100 → 50 = ÷ 2 → ook water: 400 → 200.\n• 100 → 250 = × 2,5 → ook water: 400 → 1000.\n\n**Stappen voor moeilijke vragen**:\n*'4 broden kosten € 12. Wat kosten 7 broden?'*\n\n| broden | euro |\n|--------|------|\n| 4 | 12 |\n| 1 | 3 *(deel door 4)* |\n| 7 | 21 *(maal 7)* |\n\nDus 7 broden kosten **€ 21**.\n\n**Toets-truc — 'tussenstap via 1'**:\nAls de getallen niet handig delen, ga eerst naar **1** *(eenheid-prijs)* en dan naar het gewenste aantal.",
     svg: tabelSvg(),
     checks: [
       {
@@ -206,7 +206,7 @@ const steps = [
 
   {
     title: "Recepten omrekenen — voor meer of minder mensen",
-    explanation: "Een recept is meestal voor **een vast aantal mensen**. Bij meer of minder mensen reken je het hele recept om.\n\n**Voorbeeld**: pannenkoek-recept voor **4 personen**:\n• 200 g meel\n• 400 mL melk\n• 2 eieren\n\n**Voor 6 personen** *(× 1,5)*:\n• 200 × 1,5 = **300 g meel**\n• 400 × 1,5 = **600 mL melk**\n• 2 × 1,5 = **3 eieren**\n\n**Voor 1 persoon** *(÷ 4)*:\n• 200 ÷ 4 = 50 g meel\n• 400 ÷ 4 = 100 mL melk\n• 2 ÷ 4 = ½ ei (in praktijk: 1 ei voor 2 mensen)\n\n**Cito-aanpak**:\n1. **Welke factor?** Aantal nieuwe mensen ÷ aantal oude mensen.\n2. **Vermenigvuldig** alle ingrediënten met die factor.\n\n**Voorbeeld 2 — recept voor 8, jij maakt voor 6**:\n• Factor = 6/8 = 0,75 *(ofwel ÷ 8 × 6)*.\n• Alle ingrediënten × 0,75.\n\n**Cito-truc voor mooie getallen**:\nGa via 1 persoon. Als recept voor 8 = 200g, dan 1 persoon = 25g. Voor 6 = 6 × 25 = 150g. Sneller dan met komma-factor rekenen.",
+    explanation: "Een recept is meestal voor **een vast aantal mensen**. Bij meer of minder mensen reken je het hele recept om.\n\n**Voorbeeld**: pannenkoek-recept voor **4 personen**:\n• 200 g meel\n• 400 mL melk\n• 2 eieren\n\n**Voor 6 personen** *(× 1,5)*:\n• 200 × 1,5 = **300 g meel**\n• 400 × 1,5 = **600 mL melk**\n• 2 × 1,5 = **3 eieren**\n\n**Voor 1 persoon** *(÷ 4)*:\n• 200 ÷ 4 = 50 g meel\n• 400 ÷ 4 = 100 mL melk\n• 2 ÷ 4 = ½ ei (in praktijk: 1 ei voor 2 mensen)\n\n**Toets-aanpak**:\n1. **Welke factor?** Aantal nieuwe mensen ÷ aantal oude mensen.\n2. **Vermenigvuldig** alle ingrediënten met die factor.\n\n**Voorbeeld 2 — recept voor 8, jij maakt voor 6**:\n• Factor = 6/8 = 0,75 *(ofwel ÷ 8 × 6)*.\n• Alle ingrediënten × 0,75.\n\n**Toets-truc voor mooie getallen**:\nGa via 1 persoon. Als recept voor 8 = 200g, dan 1 persoon = 25g. Voor 6 = 6 × 25 = 150g. Sneller dan met komma-factor rekenen.",
     checks: [
       {
         q: "Recept voor **4 personen** gebruikt **300 g pasta**. Voor **6 personen**?",
@@ -255,7 +255,7 @@ const steps = [
 
   {
     title: "Schaal op de kaart",
-    explanation: "Een **schaal** is een **verhouding** tussen kaart-afstand en werkelijke afstand.\n\n**Voorbeeld**: schaal **1 : 100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt = **1 km**.\n\n**Belangrijke schalen** (schoolse kaarten):\n• 1 : 100 → 1 cm = 1 m (plattegrond kamer)\n• 1 : 1.000 → 1 cm = 10 m (school-plattegrond)\n• 1 : 10.000 → 1 cm = 100 m (klein gebied)\n• 1 : 100.000 → 1 cm = 1 km (regio-kaart)\n• 1 : 1.000.000 → 1 cm = 10 km (provincie-kaart)\n\n**Aanpak — twee soorten vragen**:\n\n**A. Kaart → werkelijk** *(meten naar werkelijkheid)*:\n• Op kaart staat 5 cm + schaal 1 : 100.000.\n• 5 × 100.000 = 500.000 cm = 5.000 m = **5 km**.\n\n**B. Werkelijk → kaart** *(plannen op kaart)*:\n• Werkelijke afstand 8 km = 800.000 cm.\n• Bij schaal 1 : 100.000: 800.000 ÷ 100.000 = **8 cm op kaart**.\n\n**Truc voor schaal 1 : 100.000** *(meest gebruikt)*:\n• 1 cm op kaart = 1 km in echt. Heel simpel.\n• Werkelijke km = direct cm op kaart.\n\n**Cito-tip**:\nLet op **eenheden**! Schaal-getallen werken in cm. Reken alles eerst naar cm voor je deelt of vermenigvuldigt.",
+    explanation: "Een **schaal** is een **verhouding** tussen kaart-afstand en werkelijke afstand.\n\n**Voorbeeld**: schaal **1 : 100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt = **1 km**.\n\n**Belangrijke schalen** (schoolse kaarten):\n• 1 : 100 → 1 cm = 1 m (plattegrond kamer)\n• 1 : 1.000 → 1 cm = 10 m (school-plattegrond)\n• 1 : 10.000 → 1 cm = 100 m (klein gebied)\n• 1 : 100.000 → 1 cm = 1 km (regio-kaart)\n• 1 : 1.000.000 → 1 cm = 10 km (provincie-kaart)\n\n**Aanpak — twee soorten vragen**:\n\n**A. Kaart → werkelijk** *(meten naar werkelijkheid)*:\n• Op kaart staat 5 cm + schaal 1 : 100.000.\n• 5 × 100.000 = 500.000 cm = 5.000 m = **5 km**.\n\n**B. Werkelijk → kaart** *(plannen op kaart)*:\n• Werkelijke afstand 8 km = 800.000 cm.\n• Bij schaal 1 : 100.000: 800.000 ÷ 100.000 = **8 cm op kaart**.\n\n**Truc voor schaal 1 : 100.000** *(meest gebruikt)*:\n• 1 cm op kaart = 1 km in echt. Heel simpel.\n• Werkelijke km = direct cm op kaart.\n\n**Toets-tip**:\nLet op **eenheden**! Schaal-getallen werken in cm. Reken alles eerst naar cm voor je deelt of vermenigvuldigt.",
     checks: [
       {
         q: "Schaal **1 : 100.000**. Op kaart **3 cm** — werkelijk?",
@@ -303,8 +303,8 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — verhoudingen mix",
-    explanation: "Mix-toets in echte Cito-stijl. Verschillende verhoudings-vragen door elkaar — recept, schaal, klas, kostprijs.\n\n**Hint**: maak voor lastige vragen een **tabel** op kladpapier en vul in stapjes in.\n\nVeel succes!",
+    title: "Toets-eindopdracht — verhoudingen mix",
+    explanation: "Mix-toets in echte Doorstroomtoets-stijl. Verschillende verhoudings-vragen door elkaar — recept, schaal, klas, kostprijs.\n\n**Hint**: maak voor lastige vragen een **tabel** op kladpapier en vul in stapjes in.\n\nVeel succes!",
     checks: [
       {
         q: "Een fles van **750 mL** kost **€ 3,75**. Wat is de **prijs per 100 mL**?",
@@ -385,7 +385,7 @@ const steps = [
           stappen: [
             { titel: "Stap 1: vergrotings­factor", tekst: "Hoeveel keer GROTER is recept B? 12 pannenkoeken ÷ 4 pannenkoeken = **3 keer groter**. Alle ingrediënten moeten dus × 3." },
             { titel: "Stap 2: ingrediënten × 3", tekst: "• Meel: 200 g × 3 = **600 g**\n• Ei: 1 × 3 = **3 eieren**\n• Melk: 300 ml × 3 = **900 ml**\n\nAlle 3 ingrediënten in dezelfde verhouding aanpassen — anders smaak verandert." },
-            { titel: "Cito-truc: recept-rekenen", tekst: "Bij recept-vragen:\n1. **Bereken factor**: gewenst aantal ÷ oorspronkelijk aantal\n2. **Vermenigvuldig** ALLE ingrediënten met die factor\n3. **Check** met andere ingrediënt of factor klopt\n\nLet op: factor kan ook **kleiner dan 1** zijn (bv. recept voor 6 → 4 pannenkoeken = 4÷6 = 2/3 × alles)." },
+            { titel: "Toets-truc: recept-rekenen", tekst: "Bij recept-vragen:\n1. **Bereken factor**: gewenst aantal ÷ oorspronkelijk aantal\n2. **Vermenigvuldig** ALLE ingrediënten met die factor\n3. **Check** met andere ingrediënt of factor klopt\n\nLet op: factor kan ook **kleiner dan 1** zijn (bv. recept voor 6 → 4 pannenkoeken = 4÷6 = 2/3 × alles)." },
           ],
           woorden: [
             { woord: "verhoudingsfactor", uitleg: "Getal waarmee je alles vermenigvuldigt om naar nieuwe verhouding te komen." },
@@ -409,7 +409,7 @@ const steps = [
           stappen: [
             { titel: "Wat is schaal 1:25.000?", tekst: "**Schaal 1:25.000** = **1 cm op kaart komt overeen met 25.000 cm werkelijk**. Of: kaart is 25.000× kleiner dan werkelijkheid." },
             { titel: "Stap 1: × schaal-getal", tekst: "8 cm op kaart × 25.000 = **200.000 cm** werkelijk." },
-            { titel: "Stap 2: eenheden omrekenen", tekst: "200.000 cm = 2.000 m (÷ 100) = **2 km** (÷ 1.000). Antwoord: weg is 2 km lang.\n\n**Cito-tip schaal-conversie**:\n• 1:25.000 → 1 cm = 250 m = 0,25 km\n• 1:50.000 → 1 cm = 500 m = 0,5 km\n• 1:100.000 → 1 cm = 1 km\n• 1:200.000 → 1 cm = 2 km" },
+            { titel: "Stap 2: eenheden omrekenen", tekst: "200.000 cm = 2.000 m (÷ 100) = **2 km** (÷ 1.000). Antwoord: weg is 2 km lang.\n\n**Toets-tip schaal-conversie**:\n• 1:25.000 → 1 cm = 250 m = 0,25 km\n• 1:50.000 → 1 cm = 500 m = 0,5 km\n• 1:100.000 → 1 cm = 1 km\n• 1:200.000 → 1 cm = 2 km" },
           ],
           woorden: [
             { woord: "schaal", uitleg: "Verhouding kaart vs werkelijkheid. 1:25.000 = kaart is 25.000× kleiner." },
@@ -420,7 +420,7 @@ const steps = [
             { type: "stap", tekst: "Plattegrond 1:100. Tafel 5 cm = 5×100 = 500 cm = 5 m." },
             { type: "stap", tekst: "Stad-kaart 1:10.000. Park 12 cm = 12×10.000 = 120.000 cm = 1,2 km." },
           ],
-          basiskennis: [{ onderwerp: "Eenheid in antwoord", uitleg: "Veel Cito-fouten = vergeten cm naar m of km om te zetten. Antwoord 200.000 cm = 2 km — gewone weg-lengte." },],
+          basiskennis: [{ onderwerp: "Eenheid in antwoord", uitleg: "Veel Toets-fouten = vergeten cm naar m of km om te zetten. Antwoord 200.000 cm = 2 km — gewone weg-lengte." },],
           niveaus: { basis: "2 km.", simpeler: "8 cm × 25.000 = 200.000 cm. ÷100 = 2.000 m. ÷1.000 = 2 km.", nogSimpeler: "2 km" },
         },
       },
@@ -433,7 +433,7 @@ const steps = [
           stappen: [
             { titel: "Stap 1: prijs per m²", tekst: "€ 12 voor 4 m² → 12 ÷ 4 = **€ 3 per m²**. Dit is de **eenheidsprijs**." },
             { titel: "Stap 2: vermenigvuldig", tekst: "10 m² × € 3/m² = **€ 30**.\n\nOf: directe verhouding 4:12 = 10:?\n→ Vermenigvuldigingsfactor: 10 ÷ 4 = 2,5.\n→ 12 × 2,5 = € 30. Beide methoden geven hetzelfde." },
-            { titel: "Cito-tip: prijs-per-eenheid", tekst: "Bij verhoudings-vragen met geld/oppervlakte/inhoud: bereken **prijs per eenheid** eerst.\n• Aantal × prijs per eenheid = totaal\n• Totaal ÷ aantal = prijs per eenheid\n\nGebruikt bij:\n• Schilderen (€/m²)\n• Eten kopen (€/kg)\n• Reisplan (km/uur of €/km)" },
+            { titel: "Toets-tip: prijs-per-eenheid", tekst: "Bij verhoudings-vragen met geld/oppervlakte/inhoud: bereken **prijs per eenheid** eerst.\n• Aantal × prijs per eenheid = totaal\n• Totaal ÷ aantal = prijs per eenheid\n\nGebruikt bij:\n• Schilderen (€/m²)\n• Eten kopen (€/kg)\n• Reisplan (km/uur of €/km)" },
           ],
           woorden: [
             { woord: "eenheidsprijs", uitleg: "Prijs per 1 eenheid (per m², per kg, per stuk)." },
@@ -473,7 +473,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const verhoudingenPo = {
   id: "verhoudingen-po",
-  title: "Verhoudingen — Cito groep 5-8",
+  title: "Verhoudingen — Doorstroomtoets groep 5-8",
   emoji: "⚖️",
   level: "groep5-8",
   subject: "rekenen",
@@ -484,7 +484,7 @@ const verhoudingenPo = {
     { id: "breuken-po", title: "Breuken", niveau: "po-1F" },
   ],
   intro:
-    "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Cito-stijl praktijksommen. ~15 min.",
+    "Verhoudingen voor groep 5-8: wat is een verhouding, recepten omrekenen, verhoudingstabellen, schaal op de kaart. Doorstroomtoets-stijl praktijksommen. ~15 min.",
   triggerKeywords: [
     "verhouding","verhoudingen","recept","schaal","kaart",
     "vereenvoudigen","verhoudingstabel","mengsel","omrekenen",

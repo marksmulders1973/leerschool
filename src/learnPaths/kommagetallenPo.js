@@ -1,5 +1,5 @@
 // Leerpad: Kommagetallen — groep 6-8 PO.
-// Cito-onderdeel decimalen + geld + meten. Referentieniveau 1F.
+// Toets-onderdeel decimalen + geld + meten. Referentieniveau 1F.
 // 6 stappen met uitlegPad. Eenheden expliciet (€, m, kg) per Mark's regel.
 
 const COLORS = {
@@ -22,7 +22,7 @@ const chapters = [
   { letter: "C", title: "Vermenigvuldigen", emoji: "✖️", from: 2, to: 2 },
   { letter: "D", title: "Delen", emoji: "➗", from: 3, to: 3 },
   { letter: "E", title: "Praktijk — geld + meten", emoji: "🛒", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function plaatswaardenSvg() {
@@ -79,7 +79,7 @@ const steps = [
   {
     title: "Wat is een kommagetal?",
     explanation:
-      "Een **kommagetal** *(ook wel decimaal genoemd)* is een getal met een **komma** erin. De komma scheidt het **hele** deel van het **stukje** deel.\n\n**Voorbeeld**: **3,5** *(spreek uit: drie-komma-vijf)*.\n• **3** is het hele deel.\n• **5** ná de komma = vijf-tienden = 5/10 = een half.\n• Dus 3,5 = drie-en-een-half.\n\n**Wat staat op welke plek?**\nVoor het getal **123,45**:\n• **1** = honderden *(100)*.\n• **2** = tientallen *(20)*.\n• **3** = eenheden *(3)*.\n• Komma.\n• **4** = tienden *(4 stukjes van 1/10)* = 0,4.\n• **5** = honderdsten *(5 stukjes van 1/100)* = 0,05.\n\nAlles bij elkaar: 100 + 20 + 3 + 0,4 + 0,05 = **123,45**.\n\n**Cito-truc — een kommagetal lezen**:\nLees het vóór de komma als gewoon getal. Lees de komma als 'komma'. Lees ná de komma de cijfers één voor één.\n• 12,5 = 'twaalf-komma-vijf'.\n• 7,03 = 'zeven-komma-nul-drie'.\n• 0,8 = 'nul-komma-acht'.\n\n**Kommagetallen ↔ breuken**:\n• 0,5 = ½ *(de helft)*.\n• 0,25 = ¼ *(een kwart)*.\n• 0,75 = ¾ *(drie kwart)*.\n• 0,1 = 1/10 *(een tiende)*.\n\n**Wanneer kom je kommagetallen tegen?**\n• Geld: € 4,25.\n• Lengte: 1,80 m.\n• Gewicht: 0,5 kg = een halve kilo.\n• Temperatuur: 36,7 °C.\n• Tijd: 3,5 uur = 3 uur en een half.",
+      "Een **kommagetal** *(ook wel decimaal genoemd)* is een getal met een **komma** erin. De komma scheidt het **hele** deel van het **stukje** deel.\n\n**Voorbeeld**: **3,5** *(spreek uit: drie-komma-vijf)*.\n• **3** is het hele deel.\n• **5** ná de komma = vijf-tienden = 5/10 = een half.\n• Dus 3,5 = drie-en-een-half.\n\n**Wat staat op welke plek?**\nVoor het getal **123,45**:\n• **1** = honderden *(100)*.\n• **2** = tientallen *(20)*.\n• **3** = eenheden *(3)*.\n• Komma.\n• **4** = tienden *(4 stukjes van 1/10)* = 0,4.\n• **5** = honderdsten *(5 stukjes van 1/100)* = 0,05.\n\nAlles bij elkaar: 100 + 20 + 3 + 0,4 + 0,05 = **123,45**.\n\n**Toets-truc — een kommagetal lezen**:\nLees het vóór de komma als gewoon getal. Lees de komma als 'komma'. Lees ná de komma de cijfers één voor één.\n• 12,5 = 'twaalf-komma-vijf'.\n• 7,03 = 'zeven-komma-nul-drie'.\n• 0,8 = 'nul-komma-acht'.\n\n**Kommagetallen ↔ breuken**:\n• 0,5 = ½ *(de helft)*.\n• 0,25 = ¼ *(een kwart)*.\n• 0,75 = ¾ *(drie kwart)*.\n• 0,1 = 1/10 *(een tiende)*.\n\n**Wanneer kom je kommagetallen tegen?**\n• Geld: € 4,25.\n• Lengte: 1,80 m.\n• Gewicht: 0,5 kg = een halve kilo.\n• Temperatuur: 36,7 °C.\n• Tijd: 3,5 uur = 3 uur en een half.",
     svg: plaatswaardenSvg(),
     checks: [
       {
@@ -141,7 +141,7 @@ const steps = [
   {
     title: "Optellen & aftrekken — komma's onder elkaar!",
     explanation:
-      "Bij optellen en aftrekken met kommagetallen geldt **één belangrijke regel**:\n\n**De komma's moeten recht onder elkaar staan.**\n\nDat is alles. Verder doe je het net als gewoon optellen/aftrekken.\n\n**Voorbeeld optellen**:\n```\n  3,50\n+ 2,70\n─────\n  6,20\n```\nKomma's staan recht. Antwoord-komma op dezelfde plek. Dus **3,50 + 2,70 = 6,20**.\n\n**Voorbeeld aftrekken**:\n```\n  8,25\n− 3,40\n─────\n  4,85\n```\nKomma op dezelfde plek. **8,25 − 3,40 = 4,85**.\n\n**Cito-truc — verschillende aantallen cijfers**:\nAls de getallen niet evenveel cijfers ná de komma hebben, **vul aan met nullen**:\n• 5,2 + 3,75 → schrijf als **5,20** + 3,75.\n• 4,5 + 2 → schrijf als 4,5 + 2,0 (of 4,50 + 2,00).\n\nNullen aan het eind veranderen niets aan de waarde, maar maken het optellen makkelijker.\n\n**Aandachtspunt — gehele getallen**:\nEen getal zonder komma (zoals 5) is gelijk aan 5,0 of 5,00 of 5,000. Allemaal hetzelfde getal!\n\n**Veel-voorkomende fout**:\nKomma's NIET recht onder elkaar zetten. Dan kan **0,5 + 2** worden gerekend als 0,5 + 2 = 2,5 (correct) maar als je 0,5 + 02 doet zonder uitlijnen kun je per ongeluk 7 antwoorden.",
+      "Bij optellen en aftrekken met kommagetallen geldt **één belangrijke regel**:\n\n**De komma's moeten recht onder elkaar staan.**\n\nDat is alles. Verder doe je het net als gewoon optellen/aftrekken.\n\n**Voorbeeld optellen**:\n```\n  3,50\n+ 2,70\n─────\n  6,20\n```\nKomma's staan recht. Antwoord-komma op dezelfde plek. Dus **3,50 + 2,70 = 6,20**.\n\n**Voorbeeld aftrekken**:\n```\n  8,25\n− 3,40\n─────\n  4,85\n```\nKomma op dezelfde plek. **8,25 − 3,40 = 4,85**.\n\n**Toets-truc — verschillende aantallen cijfers**:\nAls de getallen niet evenveel cijfers ná de komma hebben, **vul aan met nullen**:\n• 5,2 + 3,75 → schrijf als **5,20** + 3,75.\n• 4,5 + 2 → schrijf als 4,5 + 2,0 (of 4,50 + 2,00).\n\nNullen aan het eind veranderen niets aan de waarde, maar maken het optellen makkelijker.\n\n**Aandachtspunt — gehele getallen**:\nEen getal zonder komma (zoals 5) is gelijk aan 5,0 of 5,00 of 5,000. Allemaal hetzelfde getal!\n\n**Veel-voorkomende fout**:\nKomma's NIET recht onder elkaar zetten. Dan kan **0,5 + 2** worden gerekend als 0,5 + 2 = 2,5 (correct) maar als je 0,5 + 02 doet zonder uitlijnen kun je per ongeluk 7 antwoorden.",
     svg: optellenSvg(),
     checks: [
       {
@@ -189,7 +189,7 @@ const steps = [
   {
     title: "Vermenigvuldigen met kommagetallen",
     explanation:
-      "Vermenigvuldigen met kommagetallen heeft een **trucje** *(uit je hoofd!)*:\n\n**Stap 1**: doe alsof de komma er **niet staat** (gewone vermenigvuldiging).\n**Stap 2**: tel de cijfers **ná** de komma — in beide getallen samen.\n**Stap 3**: zet die komma in het antwoord, geteld vanaf rechts.\n\n**Voorbeeld 1**: 0,5 × 0,3 = ?\n• Stap 1: 5 × 3 = 15.\n• Stap 2: cijfers ná komma: 0,5 heeft 1, 0,3 heeft 1 → totaal 2.\n• Stap 3: 2 plaatsen vanaf rechts → 0,15.\n• Dus 0,5 × 0,3 = **0,15**.\n\n**Voorbeeld 2**: 2,4 × 3 = ?\n• Stap 1: 24 × 3 = 72.\n• Stap 2: cijfers ná komma: 2,4 heeft 1, 3 heeft 0 → totaal 1.\n• Stap 3: 1 plaats vanaf rechts → 7,2.\n• Dus 2,4 × 3 = **7,2**.\n\n**Voorbeeld 3**: 1,5 × 1,2 = ?\n• Stap 1: 15 × 12 = 180.\n• Stap 2: 1 + 1 = 2 cijfers ná komma.\n• Stap 3: 2 plaatsen vanaf rechts → 1,80 = 1,8.\n• Dus 1,5 × 1,2 = **1,8**.\n\n**Cito-truc — schatten als check**:\n• 2,4 × 3 → ongeveer 2 × 3 = 6. Antwoord 7,2 klopt qua grootte.\n• 0,5 × 0,3 → 0,5 is de helft, dus de helft van 0,3 = 0,15. Klopt.\n\n**Belangrijke regel**:\nAls je kommagetal vermenigvuldigt met een gewoon getal: alleen het kommagetal heeft cijfers ná de komma.",
+      "Vermenigvuldigen met kommagetallen heeft een **trucje** *(uit je hoofd!)*:\n\n**Stap 1**: doe alsof de komma er **niet staat** (gewone vermenigvuldiging).\n**Stap 2**: tel de cijfers **ná** de komma — in beide getallen samen.\n**Stap 3**: zet die komma in het antwoord, geteld vanaf rechts.\n\n**Voorbeeld 1**: 0,5 × 0,3 = ?\n• Stap 1: 5 × 3 = 15.\n• Stap 2: cijfers ná komma: 0,5 heeft 1, 0,3 heeft 1 → totaal 2.\n• Stap 3: 2 plaatsen vanaf rechts → 0,15.\n• Dus 0,5 × 0,3 = **0,15**.\n\n**Voorbeeld 2**: 2,4 × 3 = ?\n• Stap 1: 24 × 3 = 72.\n• Stap 2: cijfers ná komma: 2,4 heeft 1, 3 heeft 0 → totaal 1.\n• Stap 3: 1 plaats vanaf rechts → 7,2.\n• Dus 2,4 × 3 = **7,2**.\n\n**Voorbeeld 3**: 1,5 × 1,2 = ?\n• Stap 1: 15 × 12 = 180.\n• Stap 2: 1 + 1 = 2 cijfers ná komma.\n• Stap 3: 2 plaatsen vanaf rechts → 1,80 = 1,8.\n• Dus 1,5 × 1,2 = **1,8**.\n\n**Toets-truc — schatten als check**:\n• 2,4 × 3 → ongeveer 2 × 3 = 6. Antwoord 7,2 klopt qua grootte.\n• 0,5 × 0,3 → 0,5 is de helft, dus de helft van 0,3 = 0,15. Klopt.\n\n**Belangrijke regel**:\nAls je kommagetal vermenigvuldigt met een gewoon getal: alleen het kommagetal heeft cijfers ná de komma.",
     checks: [
       {
         q: "**0,4 × 0,2** = ?",
@@ -238,7 +238,7 @@ const steps = [
   {
     title: "Delen met kommagetallen",
     explanation:
-      "Delen met een kommagetal kent **2 hoofdgevallen**:\n\n**Geval 1 — Delen door een geheel getal**:\nDoe gewoon staartdeling. De komma in het antwoord komt op dezelfde plek als in het deeltal.\n\n**Voorbeeld**: 4,8 ÷ 2 = ?\n• 4 ÷ 2 = 2 → komma → 8 ÷ 2 = 4.\n• Dus 4,8 ÷ 2 = **2,4**.\n\n**Geval 2 — Delen door een kommagetal**:\n**Verschuif de komma** in beide getallen totdat de deler een **geheel getal** wordt.\n\n**Voorbeeld**: 6,4 ÷ 0,2 = ?\n• 0,2 heeft 1 cijfer ná komma — schuif beide kommas 1 plaats naar rechts.\n• Wordt: 64 ÷ 2 = **32**.\n• Dus 6,4 ÷ 0,2 = **32**.\n\n**Voorbeeld 2**: 1,5 ÷ 0,3 = ?\n• Verschuif komma 1 plaats: wordt 15 ÷ 3 = 5.\n• Dus 1,5 ÷ 0,3 = **5**.\n\n**Cito-truc — schatten**:\n• 4,8 ÷ 2 → ongeveer 5 ÷ 2 = 2,5. Antwoord 2,4 klopt qua grootte.\n• 6,4 ÷ 0,2 → 0,2 is een vijfde, dus 6,4 × 5 = 32. Klopt.\n\n**Belangrijk**:\nDelen door een **kleiner dan 1** kommagetal geeft een **groter** antwoord. Bv. 6,4 ÷ 0,2 = 32 *(veel groter dan 6,4!)*. Dat lijkt vreemd maar klopt — je kijkt hoe vaak 0,2 in 6,4 past.\n\n**Veel-voorkomende fout**:\nKomma vergeten of verkeerd verschuiven. Controleer met een schatting.",
+      "Delen met een kommagetal kent **2 hoofdgevallen**:\n\n**Geval 1 — Delen door een geheel getal**:\nDoe gewoon staartdeling. De komma in het antwoord komt op dezelfde plek als in het deeltal.\n\n**Voorbeeld**: 4,8 ÷ 2 = ?\n• 4 ÷ 2 = 2 → komma → 8 ÷ 2 = 4.\n• Dus 4,8 ÷ 2 = **2,4**.\n\n**Geval 2 — Delen door een kommagetal**:\n**Verschuif de komma** in beide getallen totdat de deler een **geheel getal** wordt.\n\n**Voorbeeld**: 6,4 ÷ 0,2 = ?\n• 0,2 heeft 1 cijfer ná komma — schuif beide kommas 1 plaats naar rechts.\n• Wordt: 64 ÷ 2 = **32**.\n• Dus 6,4 ÷ 0,2 = **32**.\n\n**Voorbeeld 2**: 1,5 ÷ 0,3 = ?\n• Verschuif komma 1 plaats: wordt 15 ÷ 3 = 5.\n• Dus 1,5 ÷ 0,3 = **5**.\n\n**Toets-truc — schatten**:\n• 4,8 ÷ 2 → ongeveer 5 ÷ 2 = 2,5. Antwoord 2,4 klopt qua grootte.\n• 6,4 ÷ 0,2 → 0,2 is een vijfde, dus 6,4 × 5 = 32. Klopt.\n\n**Belangrijk**:\nDelen door een **kleiner dan 1** kommagetal geeft een **groter** antwoord. Bv. 6,4 ÷ 0,2 = 32 *(veel groter dan 6,4!)*. Dat lijkt vreemd maar klopt — je kijkt hoe vaak 0,2 in 6,4 past.\n\n**Veel-voorkomende fout**:\nKomma vergeten of verkeerd verschuiven. Controleer met een schatting.",
     checks: [
       {
         q: "**6,8 ÷ 2** = ?",
@@ -286,7 +286,7 @@ const steps = [
   {
     title: "Praktijk-sommen — geld & meten",
     explanation:
-      "Cito-praktijksommen draaien vaak om **geld** *(euro's)* of **meten** *(meters/kilo's)*. Beide gebruiken kommagetallen.\n\n**Voorbeeld 1 — geld**:\n*'3 boeken van € 4,75. Hoeveel **totaal**?'*\n• 3 × €4,75 → 3 × 475 = 1425 → 2 decimalen → **€14,25**.\n\n**Voorbeeld 2 — wisselgeld**:\n*'Boodschappen kosten €7,80. Je betaalt met €10. Wisselgeld?'*\n• €10,00 − €7,80 = **€2,20**.\n\n**Voorbeeld 3 — meten**:\n*'Een touw van 5,4 m wordt in stukjes van 0,6 m geknipt. Aantal stukjes?'*\n• 5,4 ÷ 0,6 → 54 ÷ 6 = **9 stukjes**.\n\n**Voorbeeld 4 — gewicht delen**:\n*'4 kinderen delen 2,8 kg snoep gelijk. Per kind?'*\n• 2,8 kg ÷ 4 = **0,7 kg per kind** = **700 gram**.\n\n**Cito-tip — altijd eenheid mee**:\nSchrijf '€', 'kg', 'm' bij je antwoord. Veel punten worden gemist door eenheid weg te laten.\n\n**Eenheden-truc**:\n• 1 kg = 1000 gram. Dus 0,5 kg = 500 g.\n• 1 m = 100 cm. Dus 1,5 m = 150 cm.\n• 1 liter = 1000 mL. Dus 0,75 L = 750 mL.",
+      "Toets-praktijksommen draaien vaak om **geld** *(euro's)* of **meten** *(meters/kilo's)*. Beide gebruiken kommagetallen.\n\n**Voorbeeld 1 — geld**:\n*'3 boeken van € 4,75. Hoeveel **totaal**?'*\n• 3 × €4,75 → 3 × 475 = 1425 → 2 decimalen → **€14,25**.\n\n**Voorbeeld 2 — wisselgeld**:\n*'Boodschappen kosten €7,80. Je betaalt met €10. Wisselgeld?'*\n• €10,00 − €7,80 = **€2,20**.\n\n**Voorbeeld 3 — meten**:\n*'Een touw van 5,4 m wordt in stukjes van 0,6 m geknipt. Aantal stukjes?'*\n• 5,4 ÷ 0,6 → 54 ÷ 6 = **9 stukjes**.\n\n**Voorbeeld 4 — gewicht delen**:\n*'4 kinderen delen 2,8 kg snoep gelijk. Per kind?'*\n• 2,8 kg ÷ 4 = **0,7 kg per kind** = **700 gram**.\n\n**Toets-tip — altijd eenheid mee**:\nSchrijf '€', 'kg', 'm' bij je antwoord. Veel punten worden gemist door eenheid weg te laten.\n\n**Eenheden-truc**:\n• 1 kg = 1000 gram. Dus 0,5 kg = 500 g.\n• 1 m = 100 cm. Dus 1,5 m = 150 cm.\n• 1 liter = 1000 mL. Dus 0,75 L = 750 mL.",
     checks: [
       {
         q: "Een tas van **€ 24,75** met een **€ 50-biljet**. Wisselgeld?",
@@ -335,11 +335,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — kommagetallen-mix",
+    title: "Toets-eindopdracht — kommagetallen-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: optellen, aftrekken, vermenigvuldigen, delen + praktijk.\n\n**Tip**: zet komma's altijd recht onder elkaar bij optellen/aftrekken. Tel decimalen bij vermenigvuldigen. Verschuif komma's bij delen door een kommagetal.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: optellen, aftrekken, vermenigvuldigen, delen + praktijk.\n\n**Tip**: zet komma's altijd recht onder elkaar bij optellen/aftrekken. Tel decimalen bij vermenigvuldigen. Verschuif komma's bij delen door een kommagetal.\n\nVeel succes!",
     checks: [
       {
         q: "**4,7 + 2,8** = ?",
@@ -423,7 +423,7 @@ const kommagetallenPo = {
     { id: "breuken-po", title: "Breuken", niveau: "po-1F" },
   ],
   intro:
-    "Kommagetallen voor groep 6-8 — wat ze zijn, optellen/aftrekken met komma's uitgelijnd, vermenigvuldigen, delen, en Cito-praktijksommen met geld/meten. ~15 min.",
+    "Kommagetallen voor groep 6-8 — wat ze zijn, optellen/aftrekken met komma's uitgelijnd, vermenigvuldigen, delen, en Toets-praktijksommen met geld/meten. ~15 min.",
   triggerKeywords: [
     "kommagetal", "decimaal", "decimalen", "komma",
     "tienden", "honderdsten", "wisselgeld", "totaal",

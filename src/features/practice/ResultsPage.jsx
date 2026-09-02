@@ -26,7 +26,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
   // M2 audit-3: 'Deel de app'-sectie default ingeklapt om ResultsPage-clutter
   // weg te halen. Gebruiker die wil delen klikt zelf de toggle open.
   const [showDeelApp, setShowDeelApp] = useState(false);
-  // H6 audit-3 sprint-4: Cito-indicatie default ingeklapt om vertrouwens-
+  // H6 audit-3 sprint-4: Toets-indicatie default ingeklapt om vertrouwens-
   // breuk te voorkomen ('Richting vmbo-bb' direct lezen na 1 score = paniek).
   const [showCitoIndicatie, setShowCitoIndicatie] = useState(false);
   // Focus-trap voor iOS-install modal (G3a sprint-3 vervolg sprint-4)
@@ -206,10 +206,10 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
           </div>
         )}
 
-        {/* Cito-eindtoets-simulatie advies-banner: bij ≥50 vragen op
+        {/* Doorstroomtoets-simulatie advies-banner: bij ≥50 vragen op
             cito-onderwerp tonen we een richt-advies vmbo/havo/vwo gebaseerd op
             score. NIET officieel — alleen indicatie. Echte advies komt van
-            leerkracht + officiële Cito-uitslag. */}
+            leerkracht + officiële Toets-uitslag. */}
         {(() => {
           const isSimulatie = (quiz?.subject === "cito" || latest.subject === "cito") && latest.total >= 50;
           if (!isSimulatie) return null;

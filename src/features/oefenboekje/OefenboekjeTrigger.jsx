@@ -14,7 +14,7 @@
 // Publiek bèta-live, net als de ouderkaart (Mark 1 aug: Familie-laag niet meer
 // geheim). Gebruikt een gewone link zodat het niet afhangt van de navigatie-
 // internals van de leerpad-speler. GEEN examen-paden: die bevatten authentieke
-// examenvragen (examenblad.nl / Cito-stijl) die we niet als los werkblad printen.
+// examenvragen (examenblad.nl / Doorstroomtoets-stijl) die we niet als los werkblad printen.
 // ══════════════════════════════════════════════════════════════════════
 import { track } from "../../utils.js";
 

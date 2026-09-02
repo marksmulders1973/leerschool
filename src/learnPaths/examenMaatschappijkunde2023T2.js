@@ -38,7 +38,7 @@ const BRON_LINK = "https://www.examenblad.nl/2023/vmbo-gl/documenten/cse-2/gt-11
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. EU? 4 instellingen (Commissie/Raad/Parlement/Europese Raad). Beleidsfasen? 4 fasen. Trias politica? 3 machten (wetgevend/uitvoerend/rechterlijk). Klassenjustitie = ongelijke behandeling.",
+  theorie: "Toets-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. EU? 4 instellingen (Commissie/Raad/Parlement/Europese Raad). Beleidsfasen? 4 fasen. Trias politica? 3 machten (wetgevend/uitvoerend/rechterlijk). Klassenjustitie = ongelijke behandeling.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

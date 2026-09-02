@@ -47,7 +47,7 @@ const steps = [
         wrongHints: [null, "Niet — bewuste handelingen.", "Niet — vitale functies.", "Niet — schakeling + hormonen."],
         uitlegPad: {
           stappen: [{ titel: "Cerebellum = balans", tekst: "**Kleine hersenen (cerebellum)**: coördinatie + evenwicht + fijne motoriek. Beschadiging → wankel lopen + tremor. Bv: alcohol-effect zit hier deels." }],
-          theorie: "Cito-favoriet: 'iemand kan niet meer rechtuit lopen' → kleine hersenen.",
+          theorie: "Toets-favoriet: 'iemand kan niet meer rechtuit lopen' → kleine hersenen.",
           niveaus: { basis: "Kleine hersenen.", simpeler: "Coördinatie = cerebellum", nogSimpeler: "Klein" },
         },
       },
@@ -131,7 +131,7 @@ const steps = [
         wrongHints: [null, "Niet — te traag, reflex omzeilt hersenen.", "Niet — wel via ruggenmerg.", "Niet — verkeerd systeem."],
         uitlegPad: {
           stappen: [{ titel: "Snel = via ruggenmerg", tekst: "**Reflexboog**: receptor → sensorisch neuron → ruggenmerg (eventueel schakelneuron) → motorneuron → spier. **Omzeilt** grote hersenen. Bewustzijn ('au!') komt later via opwaartse banen." }],
-          theorie: "Cito-favoriet: 'waarom is reflex zo snel?' Antwoord: omzeilt grote hersenen.",
+          theorie: "Toets-favoriet: 'waarom is reflex zo snel?' Antwoord: omzeilt grote hersenen.",
           niveaus: { basis: "Via ruggenmerg.", simpeler: "Reflex = ruggenmerg", nogSimpeler: "Ruggenmerg" },
         },
       },
@@ -141,7 +141,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet primair — myeline eerst.", "Niet primair.", "Niet primair."],
         uitlegPad: {
-          stappen: [{ titel: "MS = myeline aangetast", tekst: "**Multiple Sclerose**: auto-immuun-aandoening waarbij eigen afweersysteem myeline rond axonen afbreekt. Gevolgen: tragere geleiding, fouten, klachten als spierzwakte, vermoeidheid, visusproblemen. Cito-eindexamen-classic." }],
+          stappen: [{ titel: "MS = myeline aangetast", tekst: "**Multiple Sclerose**: auto-immuun-aandoening waarbij eigen afweersysteem myeline rond axonen afbreekt. Gevolgen: tragere geleiding, fouten, klachten als spierzwakte, vermoeidheid, visusproblemen. Toets-eindexamen-classic." }],
           theorie: "Onderscheid: MS = myeline. ALS = motorneuron-cellichaam. Parkinson = dopamine-neuronen. Alzheimer = hippocampus-cellen.",
           niveaus: { basis: "Myelineschede.", simpeler: "MS = myeline", nogSimpeler: "Myeline" },
         },
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Niet — versterkt juist niet, corrigeert.", "Reflex is iets anders.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Negatief = tegen-bewegend", tekst: "**Negatieve terugkoppeling**: afwijking → tegenmaatregel → terug naar setpoint. Te warm → zweten → koeler. Te koud → rillen → warmer. Werkt zoals thermostaat: stabiliseert systeem." }],
-          theorie: "Cito-favoriet: 'beschrijf negatieve terugkoppeling bij lichaamstemperatuur' — bovenstaande regel.",
+          theorie: "Toets-favoriet: 'beschrijf negatieve terugkoppeling bij lichaamstemperatuur' — bovenstaande regel.",
           niveaus: { basis: "Negatieve terugkoppeling.", simpeler: "Negatief = corrigeert", nogSimpeler: "Negatief" },
         },
       },

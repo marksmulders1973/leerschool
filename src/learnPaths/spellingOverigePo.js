@@ -17,13 +17,13 @@ const chapters = [
   { letter: "B", title: "Leestekens — punt, komma, vraagteken", emoji: "✒️", from: 1, to: 1 },
   { letter: "C", title: "Samenstellingen — woorden plakken", emoji: "🔗", from: 2, to: 2 },
   { letter: "D", title: "Hoofdletters", emoji: "🅰️", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
   {
     title: "Spelling van -isch en -lijk",
-    explanation: "Twee woord-eindes die vaak fout gaan: **-isch** en **-lijk**.\n\n**Regel -isch**:\nAls een woord eindigt op een **'ies'-klank** *(zoals in 'tropisch')* schrijf je **-isch** (met -ch).\n• tropisch (niet 'tropies')\n• logisch\n• elektrisch\n• fantastisch\n• komisch\n\n**Truc**: zet er '-e' achter. Hoor je 'iese'? Dan -isch.\n• tropisch → tropische ✓\n• logisch → logische ✓\n\n**Uitzondering**: na een **f, t, p, ch, k, s** krijgt het soms 'ies'-spelling, bijv. 'fris', 'kennis'. Maar dat zijn meestal **andere** woorden, geen -isch-woorden.\n\n**Regel -lijk**:\nWoorden die eindigen op een **'-uk'-klank** schrijf je met **-lijk**.\n• vrolijk\n• mogelijk\n• waarschijnlijk\n• gemakkelijk\n• gevaarlijk\n\n**Truc**: zet er '-e' achter. Hoor je '-luk-e'? Dan -lijk.\n• vrolijk → vrolijke ✓\n\n**Cito-tip**:\n• Hoor je 'iese' op het eind → schrijf -isch.\n• Hoor je '-uk' op het eind → schrijf -lijk.",
+    explanation: "Twee woord-eindes die vaak fout gaan: **-isch** en **-lijk**.\n\n**Regel -isch**:\nAls een woord eindigt op een **'ies'-klank** *(zoals in 'tropisch')* schrijf je **-isch** (met -ch).\n• tropisch (niet 'tropies')\n• logisch\n• elektrisch\n• fantastisch\n• komisch\n\n**Truc**: zet er '-e' achter. Hoor je 'iese'? Dan -isch.\n• tropisch → tropische ✓\n• logisch → logische ✓\n\n**Uitzondering**: na een **f, t, p, ch, k, s** krijgt het soms 'ies'-spelling, bijv. 'fris', 'kennis'. Maar dat zijn meestal **andere** woorden, geen -isch-woorden.\n\n**Regel -lijk**:\nWoorden die eindigen op een **'-uk'-klank** schrijf je met **-lijk**.\n• vrolijk\n• mogelijk\n• waarschijnlijk\n• gemakkelijk\n• gevaarlijk\n\n**Truc**: zet er '-e' achter. Hoor je '-luk-e'? Dan -lijk.\n• vrolijk → vrolijke ✓\n\n**Toets-tip**:\n• Hoor je 'iese' op het eind → schrijf -isch.\n• Hoor je '-uk' op het eind → schrijf -lijk.",
     checks: [
       {
         q: "**'tropisch'** of **'tropies'**?",
@@ -112,7 +112,7 @@ const steps = [
 
   {
     title: "Leestekens — punt, komma, vraagteken",
-    explanation: "**Leestekens** maken een tekst leesbaar.\n\n**Punt . **\n• **Einde van een zin** die een gewone **mededeling** is.\n• 'De zon schijnt vandaag.'\n• Na een afkorting: 'mevr.', 'bv.', 'a.u.b.'\n\n**Komma , **\n• **Pauze in een zin** of bij **opsomming**.\n• 'Ik kocht appels, peren en bananen.' *(de laatste vóór 'en' is optioneel)*.\n• Na 'maar', 'omdat' soms wel/niet — luister naar de pauze.\n• Tussen twee hoofdzinnen verbonden met 'en'/'of'/'maar' kan komma.\n\n**Vraagteken ?**\n• **Einde van een vraag**.\n• 'Wat is jouw naam?'\n\n**Uitroepteken !**\n• **Sterk gevoel** of **bevel**.\n• 'Wauw, geweldig!' / 'Stop!' / 'Pas op!'\n\n**Cito-fouten**:\n• Vergeten van punt aan eind = fout.\n• ? aan einde van een mededeling = fout.\n• Komma's missen in opsomming = fout.\n\n**Voorbeeld**:\n*'Wat een mooie dag'* — mist een **!** of **.**\n*'Ben jij ziek'* — mist een **?**\n\n**Cito-tip**:\nLees de zin hardop in je hoofd. Hoor je de stem **omhoog gaan** aan eind → vraagteken. Hoor je **uitroep** → uitroepteken. Anders: **punt**.",
+    explanation: "**Leestekens** maken een tekst leesbaar.\n\n**Punt . **\n• **Einde van een zin** die een gewone **mededeling** is.\n• 'De zon schijnt vandaag.'\n• Na een afkorting: 'mevr.', 'bv.', 'a.u.b.'\n\n**Komma , **\n• **Pauze in een zin** of bij **opsomming**.\n• 'Ik kocht appels, peren en bananen.' *(de laatste vóór 'en' is optioneel)*.\n• Na 'maar', 'omdat' soms wel/niet — luister naar de pauze.\n• Tussen twee hoofdzinnen verbonden met 'en'/'of'/'maar' kan komma.\n\n**Vraagteken ?**\n• **Einde van een vraag**.\n• 'Wat is jouw naam?'\n\n**Uitroepteken !**\n• **Sterk gevoel** of **bevel**.\n• 'Wauw, geweldig!' / 'Stop!' / 'Pas op!'\n\n**Toets-fouten**:\n• Vergeten van punt aan eind = fout.\n• ? aan einde van een mededeling = fout.\n• Komma's missen in opsomming = fout.\n\n**Voorbeeld**:\n*'Wat een mooie dag'* — mist een **!** of **.**\n*'Ben jij ziek'* — mist een **?**\n\n**Toets-tip**:\nLees de zin hardop in je hoofd. Hoor je de stem **omhoog gaan** aan eind → vraagteken. Hoor je **uitroep** → uitroepteken. Anders: **punt**.",
     checks: [
       {
         q: "*'Hoe oud ben je___'* — welk leesteken?",
@@ -179,7 +179,7 @@ const steps = [
 
   {
     title: "Samenstellingen — woorden plakken",
-    explanation: "**Samenstellingen** = twee of meer woorden aan elkaar geplakt tot één woord.\n\n**Voorbeelden**:\n• tand + arts = **tandarts**\n• voetbal + schoen = **voetbalschoen**\n• boek + kast = **boekenkast**\n• zonne + bril = **zonnebril**\n\n**Hoofdregel**: schrijf het samengestelde woord aan elkaar.\n• ✓ tandarts (niet 'tand arts')\n• ✓ voetbalschoen (niet 'voetbal schoen')\n\n**Tussenletter -en-**:\nSoms zit er een '-en-' tussen.\n• boek**en**kast (1 boek of meer? meer)\n• pann**en**koek\n• Regel: de eerste woord-deel kun je je voorstellen in **meervoud** → **-en-** ertussen.\n  - 'boekenkast' = kast voor **boeken** (meervoud).\n  - 'pannenkoek' = koek uit een **pan** — toch -en-, dat is een uitzondering!\n\n**Tussenletter -e-**:\n• zonn**e**bril (de zon — 1 stuk, dus -e-)\n• begrot**e**ningskosten\n• regel: enkelvoud-zelfstandig naamwoord met -e- tussen.\n\n**Cito-fouten**:\n• 'voetbal schoen' (los geschreven) = fout. Aan elkaar.\n• 'pannekoek' = fout sinds 1995. Het is **pannenkoek**.\n• 'boekenwurm' = goed (boekenwurm — een persoon die veel boeken leest).\n\n**Tip**: Twijfel? Probeer het hardop:\n• 'voetbalschoen' = 1 ding (een soort schoen voor voetbal). Aan elkaar.",
+    explanation: "**Samenstellingen** = twee of meer woorden aan elkaar geplakt tot één woord.\n\n**Voorbeelden**:\n• tand + arts = **tandarts**\n• voetbal + schoen = **voetbalschoen**\n• boek + kast = **boekenkast**\n• zonne + bril = **zonnebril**\n\n**Hoofdregel**: schrijf het samengestelde woord aan elkaar.\n• ✓ tandarts (niet 'tand arts')\n• ✓ voetbalschoen (niet 'voetbal schoen')\n\n**Tussenletter -en-**:\nSoms zit er een '-en-' tussen.\n• boek**en**kast (1 boek of meer? meer)\n• pann**en**koek\n• Regel: de eerste woord-deel kun je je voorstellen in **meervoud** → **-en-** ertussen.\n  - 'boekenkast' = kast voor **boeken** (meervoud).\n  - 'pannenkoek' = koek uit een **pan** — toch -en-, dat is een uitzondering!\n\n**Tussenletter -e-**:\n• zonn**e**bril (de zon — 1 stuk, dus -e-)\n• begrot**e**ningskosten\n• regel: enkelvoud-zelfstandig naamwoord met -e- tussen.\n\n**Toets-fouten**:\n• 'voetbal schoen' (los geschreven) = fout. Aan elkaar.\n• 'pannekoek' = fout sinds 1995. Het is **pannenkoek**.\n• 'boekenwurm' = goed (boekenwurm — een persoon die veel boeken leest).\n\n**Tip**: Twijfel? Probeer het hardop:\n• 'voetbalschoen' = 1 ding (een soort schoen voor voetbal). Aan elkaar.",
     checks: [
       {
         q: "Welke is **goed** geschreven?",
@@ -266,7 +266,7 @@ const steps = [
 
   {
     title: "Hoofdletters — wanneer wel?",
-    explanation: "**Hoofdletter (BIG letter)** schrijf je in deze gevallen:\n\n**1. Aan het begin van een zin**.\n• 'Het regent vandaag.'\n• 'Na het ontbijt ging ik naar school.'\n\n**2. Eigennamen** *(namen van mensen, dieren, plaatsen)*:\n• Tom, Lisa, Amsterdam, Jupiter, Nederland\n• Mijn hond Buddy is lief.\n\n**3. Landen, talen, nationaliteiten**:\n• België, Frankrijk, Duitsland\n• Nederlands, Engels, Frans\n• een Nederlander, een Belg\n\n**4. Dagen, maanden NIET (tegenwoordig)**:\n• maandag, dinsdag — **kleine letter**\n• januari, februari — **kleine letter**\n• Uitzondering: aan begin van zin natuurlijk wel.\n\n**5. Feestdagen — meestal kleine letter**:\n• kerst, sinterklaas, pasen — kleine letter (sinds spelling-update)\n• MAAR: namen als 'Kerstmis' soms wel hoofdletter — context-afhankelijk.\n\n**6. Titels van boeken/films — eerste woord**:\n• 'Harry Potter en de Steen der Wijzen' — alleen het eerste woord+eigennamen.\n\n**7. God, namen religies**:\n• God, Allah, Boeddha — hoofdletter.\n• christendom, islam — kleine letter (dat zijn algemene woorden).\n\n**Cito-fouten**:\n• 'maandag' met **M** = fout (tenzij begin van zin).\n• 'amsterdam' zonder hoofdletter = fout.\n• Een naam zonder hoofdletter = fout.\n\n**Voorbeeld-zin**:\n*'Op maandag 5 mei 2026 ging Tom naar Amsterdam.'*\n• 'Op' = begin zin → hoofdletter.\n• 'maandag' = dag → klein.\n• '5 mei' = datum → klein.\n• '2026' = jaar.\n• 'Tom' = naam → hoofdletter.\n• 'Amsterdam' = plaats → hoofdletter.",
+    explanation: "**Hoofdletter (BIG letter)** schrijf je in deze gevallen:\n\n**1. Aan het begin van een zin**.\n• 'Het regent vandaag.'\n• 'Na het ontbijt ging ik naar school.'\n\n**2. Eigennamen** *(namen van mensen, dieren, plaatsen)*:\n• Tom, Lisa, Amsterdam, Jupiter, Nederland\n• Mijn hond Buddy is lief.\n\n**3. Landen, talen, nationaliteiten**:\n• België, Frankrijk, Duitsland\n• Nederlands, Engels, Frans\n• een Nederlander, een Belg\n\n**4. Dagen, maanden NIET (tegenwoordig)**:\n• maandag, dinsdag — **kleine letter**\n• januari, februari — **kleine letter**\n• Uitzondering: aan begin van zin natuurlijk wel.\n\n**5. Feestdagen — meestal kleine letter**:\n• kerst, sinterklaas, pasen — kleine letter (sinds spelling-update)\n• MAAR: namen als 'Kerstmis' soms wel hoofdletter — context-afhankelijk.\n\n**6. Titels van boeken/films — eerste woord**:\n• 'Harry Potter en de Steen der Wijzen' — alleen het eerste woord+eigennamen.\n\n**7. God, namen religies**:\n• God, Allah, Boeddha — hoofdletter.\n• christendom, islam — kleine letter (dat zijn algemene woorden).\n\n**Toets-fouten**:\n• 'maandag' met **M** = fout (tenzij begin van zin).\n• 'amsterdam' zonder hoofdletter = fout.\n• Een naam zonder hoofdletter = fout.\n\n**Voorbeeld-zin**:\n*'Op maandag 5 mei 2026 ging Tom naar Amsterdam.'*\n• 'Op' = begin zin → hoofdletter.\n• 'maandag' = dag → klein.\n• '5 mei' = datum → klein.\n• '2026' = jaar.\n• 'Tom' = naam → hoofdletter.\n• 'Amsterdam' = plaats → hoofdletter.",
     checks: [
       {
         q: "Welke zin is **goed**?",
@@ -352,7 +352,7 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — spelling-mix",
+    title: "Toets-eindopdracht — spelling-mix",
     explanation: "Mix-toets: -isch/-lijk, leestekens, samenstellingen, hoofdletters.",
     checks: [
       {
@@ -483,10 +483,10 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Samenstellingen aan-elkaar", tekst: "Een **samenstelling** is 2+ woorden samen tot 1: 'fiets' + 'pomp' = **'fietspomp'**. Schrijfregel: **aan elkaar, zonder spatie of streepje**." },
-            { titel: "Cito-instinker: spaties", tekst: "Veel mensen schrijven 'fiets pomp' (engels-stijl). FOUT in NL. Andere voorbeelden:\n• ✓ kinderboek (niet 'kinder boek')\n• ✓ schoolplein (niet 'school plein')\n• ✓ wereldoorlog (niet 'wereld oorlog')\n• ✓ tijdsverschil (niet 'tijds verschil')\n\nUitzondering: **streepje** soms bij klinker-conflicten of woorden met merkenamen." },
+            { titel: "Toets-instinker: spaties", tekst: "Veel mensen schrijven 'fiets pomp' (engels-stijl). FOUT in NL. Andere voorbeelden:\n• ✓ kinderboek (niet 'kinder boek')\n• ✓ schoolplein (niet 'school plein')\n• ✓ wereldoorlog (niet 'wereld oorlog')\n• ✓ tijdsverschil (niet 'tijds verschil')\n\nUitzondering: **streepje** soms bij klinker-conflicten of woorden met merkenamen." },
           ],
           woorden: [{ woord: "samenstelling", uitleg: "2+ woorden gecombineerd tot 1 nieuw woord. Zonder spatie." }],
-          theorie: "Cito-spelfout #1 = spaties in samenstellingen. Engels heeft wel spaties ('book store') maar NL niet ('boekwinkel').",
+          theorie: "Toets-spelfout #1 = spaties in samenstellingen. Engels heeft wel spaties ('book store') maar NL niet ('boekwinkel').",
           voorbeelden: [{ type: "fout", tekst: "✗ 'pizza koerier' → ✓ 'pizzakoerier'." }],
           basiskennis: [{ onderwerp: "Geen Engels", uitleg: "NL = aan elkaar. Engels = spaties. Verwar niet." }],
           niveaus: { basis: "Aan elkaar.", simpeler: "Samenstelling 'fiets+pomp' = fietspomp, aan elkaar zonder spatie of streepje.", nogSimpeler: "Aan elkaar" },
@@ -506,7 +506,7 @@ const steps = [
             { woord: "eigennaam", uitleg: "Naam van specifieke persoon/plaats/ding. Met hoofdletter." },
             { woord: "soortnaam", uitleg: "Algemene aanduiding (jongen, stad, rivier). Kleine letter." },
           ],
-          theorie: "Cito-hoofdletter-checklist:\n• Begin zin → HL\n• Eigennaam → HL\n• Taal-naam → HL (Nederlands, Engels)\n• Maand/dag/seizoen → klein\n• 'God' (christelijke God) → HL\n• Gewoon zelfstandig naamwoord → klein",
+          theorie: "Toets-hoofdletter-checklist:\n• Begin zin → HL\n• Eigennaam → HL\n• Taal-naam → HL (Nederlands, Engels)\n• Maand/dag/seizoen → klein\n• 'God' (christelijke God) → HL\n• Gewoon zelfstandig naamwoord → klein",
           voorbeelden: [{ type: "stap", tekst: "✓ 'Op maandag ga ik naar Amsterdam.' (HL voor Amsterdam, klein voor maandag)" }],
           basiskennis: [{ onderwerp: "Anders dan Engels", uitleg: "NL-maanden + dagen: klein. Engels: groot. Verwar niet." }],
           niveaus: { basis: "Nederland.", simpeler: "Landnamen altijd hoofdletter: Nederland, Frankrijk, Duitsland.", nogSimpeler: "HL" },
@@ -520,7 +520,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "'-isch'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-isch'**:\n• fantastisch\n• elektrisch\n• logisch\n• magisch\n• klassiek (verwarrend! Zonder -h: 'klassiek')\n\nDe -h is stil — je hoort 'fantasties' maar SCHRIJFT '-isch'." },
-            { titel: "Cito-truc: hoor vs schrijf", tekst: "**Belangrijk verschil**:\n• HOREN: 'fan-tas-ties'\n• SCHRIJVEN: 'fan-tas-tisch'\n\nDat 'h' op het einde is ALTIJD aanwezig in '-isch'-woorden. Vergelijk Latijnse herkomst: 'fantasticus' (Latijn) → '-isch' (NL).\n\nVeel-gemaakte fouten: 'fantastiesch' (te veel klinkers) of 'logies' (vergeten -h)." },
+            { titel: "Toets-truc: hoor vs schrijf", tekst: "**Belangrijk verschil**:\n• HOREN: 'fan-tas-ties'\n• SCHRIJVEN: 'fan-tas-tisch'\n\nDat 'h' op het einde is ALTIJD aanwezig in '-isch'-woorden. Vergelijk Latijnse herkomst: 'fantasticus' (Latijn) → '-isch' (NL).\n\nVeel-gemaakte fouten: 'fantastiesch' (te veel klinkers) of 'logies' (vergeten -h)." },
           ],
           woorden: [
             { woord: "-isch uitgang", uitleg: "Standaard-NL-uitgang voor veel bijvoeglijke naamwoorden uit Latijn/Grieks." },
@@ -540,7 +540,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "'-lijk'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-lijk'**:\n• vriendelijk\n• gelukkig (uitzondering: -ig ipv -lijk)\n• menselijk\n• kinderlijk\n• plotseling (-ling, niet -lijk)\n\nUitgang -lijk = vaste schrijfwijze, niet '-lik' of '-lijc'." },
-            { titel: "Cito-truc: hoor vs schrijf", tekst: "Je hoort '-lijk' uitspraak: '-lik' (zonder de j-klank). Maar schrijft altijd **-lijk** met j+k.\n\nVeel-gemaakte fout: 'vriendelik' = klinkt OK maar SCHRIJF-fout. Onthoud: bij -lijk altijd j-k samen, in die volgorde." },
+            { titel: "Toets-truc: hoor vs schrijf", tekst: "Je hoort '-lijk' uitspraak: '-lik' (zonder de j-klank). Maar schrijft altijd **-lijk** met j+k.\n\nVeel-gemaakte fout: 'vriendelik' = klinkt OK maar SCHRIJF-fout. Onthoud: bij -lijk altijd j-k samen, in die volgorde." },
           ],
           woorden: [
             { woord: "-lijk uitgang", uitleg: "Standaard-NL-uitgang voor veel bijvoeglijke naamwoorden." },
@@ -574,7 +574,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const spellingOverigePo = {
   id: "spelling-overige-po",
-  title: "Spelling overige — Cito groep 5-8",
+  title: "Spelling overige — Doorstroomtoets groep 5-8",
   emoji: "✒️",
   level: "groep5-8",
   subject: "spelling",
@@ -584,7 +584,7 @@ const spellingOverigePo = {
     { id: "spelling-ei-ij-au-ou", title: "Spelling ei/ij + au/ou", niveau: "po-1F" },
   ],
   intro:
-    "-isch / -lijk, leestekens, samenstellingen, hoofdletters. Cito-stijl woordtoets. ~12 min.",
+    "-isch / -lijk, leestekens, samenstellingen, hoofdletters. Doorstroomtoets-stijl woordtoets. ~12 min.",
   triggerKeywords: [
     "spelling","leestekens","komma","punt","vraagteken","uitroepteken",
     "isch","lijk","samenstellingen","hoofdletters","tropisch","mogelijk",

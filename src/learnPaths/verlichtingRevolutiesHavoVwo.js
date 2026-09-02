@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Niet primair.", "Bestond nog niet als verenigd land."],
         uitlegPad: {
           stappen: [{ titel: "Erfvijand-strategie", tekst: "**Frankrijk** steunde koloniën met leger + vloot, vooral na Slag bij Saratoga 1777. Reden: revanche op aartsvijand Engeland (na 7-jarige oorlog 1763-verlies Canada). Markies de la Fayette uit FR vocht mee. Frans-Amerikaanse alliantie kostte Frankrijk veel geld — droeg bij aan eigen revolutie 1789!" }],
-          theorie: "Cito-pattern: ironie — Frankrijk hielp Amerikanen tegen monarchie, droeg bij aan eigen monarchie-val.",
+          theorie: "Toets-patroon: ironie — Frankrijk hielp Amerikanen tegen monarchie, droeg bij aan eigen monarchie-val.",
           niveaus: { basis: "Frankrijk.", simpeler: "FR steunde VS", nogSimpeler: "FR" },
         },
       },
@@ -137,7 +137,7 @@ const steps = [
         wrongHints: [null, "Wel claim van gelijkheid.", "Bestond wel.", "Bestonden wel."],
         uitlegPad: {
           stappen: [{ titel: "Slavernij + inheemsen", tekst: "Onafhankelijkheidsverklaring zegt **'all men are created equal'** — maar **slavernij** bleef bestaan tot 1865 (Amerikaanse Burgeroorlog + 13e Amendement), **inheemse Amerikanen** kregen geen burgerrechten tot 1924, vrouwen geen stemrecht tot 1920. 'Alle mensen' = praktisch alleen witte, mannelijke, bezittende protestanten." }],
-          theorie: "Cito-favoriet: hypocrisie-onderwerp. Belangrijk om gelijktijdig ideaal én praktijk te zien.",
+          theorie: "Toets-favoriet: hypocrisie-onderwerp. Belangrijk om gelijktijdig ideaal én praktijk te zien.",
           niveaus: { basis: "Slavernij.", simpeler: "Slaven bleven", nogSimpeler: "A." },
         },
       },
@@ -258,7 +258,7 @@ const steps = [
         wrongHints: [null, "Niet — wel onafhankelijk maar samen met BE.", "Niet — Napoleon-tijdperk afgelopen.", "Niet — koninkrijk."],
         uitlegPad: {
           stappen: [{ titel: "Buffer tegen FR", tekst: "**Congres van Wenen**: NL + BE samengevoegd tot **Verenigd Koninkrijk der Nederlanden** onder koning **Willem I** (1815). Bedoeld als sterke buffer tegen Frankrijk. Hield maar tot 1830 — **Belgische Revolutie** maakt België onafhankelijk." }],
-          theorie: "Cito-pattern: Willem I gestructureerd door Verlichting + Napoleon-bestuurlijke modellen. Belgen vonden hem te calvinistisch + autoritair.",
+          theorie: "Toets-patroon: Willem I gestructureerd door Verlichting + Napoleon-bestuurlijke modellen. Belgen vonden hem te calvinistisch + autoritair.",
           niveaus: { basis: "VKN.", simpeler: "1815 = NL+BE samen", nogSimpeler: "A." },
         },
       },
@@ -318,7 +318,7 @@ const steps = [
         wrongHints: [null, "Wel.", "Niet — onafgemaakt.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Onafgewerkte revolutie", tekst: "**Paradox**: Verlichtingsidealen 'alle mensen gelijk' werden geproclameerd, maar **slavernij bleef** in VS (tot 1865) + FR-koloniën (terug onder Napoleon 1802), **vrouwen kregen geen stemrecht**, **inheemse Amerikanen + kolonisaties** werden niet als gelijken behandeld. Postkoloniale kritiek: Verlichting was westers + mannelijk + bezittend, sloot anderen uit." }],
-          theorie: "Cito-favoriet: ideaal vs praktijk evalueren. Belangrijk te zien dat strijd doorging in 19e + 20e eeuw (vrouwenkiesrecht 1919 NL, dekolonisatie 20e eeuw, civil rights 1960s VS).",
+          theorie: "Toets-favoriet: ideaal vs praktijk evalueren. Belangrijk te zien dat strijd doorging in 19e + 20e eeuw (vrouwenkiesrecht 1919 NL, dekolonisatie 20e eeuw, civil rights 1960s VS).",
           niveaus: { basis: "Slavernij.", simpeler: "Idealen ≠ praktijk", nogSimpeler: "A." },
         },
       },

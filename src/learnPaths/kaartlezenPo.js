@@ -17,13 +17,13 @@ const chapters = [
   { letter: "B", title: "Kompasroos — windrichtingen", emoji: "🧭", from: 1, to: 1 },
   { letter: "C", title: "Schaal — afstanden meten", emoji: "📏", from: 2, to: 2 },
   { letter: "D", title: "Legenda — symbolen lezen", emoji: "📍", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
   {
     title: "Wat is een kaart?",
-    explanation: "Een **kaart** is een tekening van een **stuk van de wereld** vanuit de lucht (vogelvlucht). Geeft weer waar dingen liggen.\n\n**Soorten kaarten**:\n• **Wegenkaart**: wegen, steden, fietspaden.\n• **Topografische kaart**: hoogtes, rivieren, bossen.\n• **Atlas-kaart**: landen en grenzen.\n• **Plattegrond**: gebouw of stadsdeel van bovenaf.\n\n**Onderdelen van een kaart**:\n1. **Titel** — waar gaat de kaart over?\n2. **Kompasroos** — waar is noord, zuid, oost, west?\n3. **Schaal** — hoeveel km is 1 cm op de kaart?\n4. **Legenda** — wat betekenen kleuren en symbolen?\n5. **Coördinaten** — soms een raster met letters/cijfers (B3, C5).\n\n**Kleuren op een kaart** (algemene regel):\n• **Blauw** = water (zeeën, rivieren, meren).\n• **Groen** = laagland, weiland.\n• **Geel/bruin** = bergen, hoogland.\n• **Wit** = sneeuw of geen info.\n• **Rood** = hoofdwegen.\n\n**Cito-tip**:\nLees ALTIJD eerst de **titel** en de **legenda** voordat je de kaart bekijkt. Anders weet je niet wat je ziet.",
+    explanation: "Een **kaart** is een tekening van een **stuk van de wereld** vanuit de lucht (vogelvlucht). Geeft weer waar dingen liggen.\n\n**Soorten kaarten**:\n• **Wegenkaart**: wegen, steden, fietspaden.\n• **Topografische kaart**: hoogtes, rivieren, bossen.\n• **Atlas-kaart**: landen en grenzen.\n• **Plattegrond**: gebouw of stadsdeel van bovenaf.\n\n**Onderdelen van een kaart**:\n1. **Titel** — waar gaat de kaart over?\n2. **Kompasroos** — waar is noord, zuid, oost, west?\n3. **Schaal** — hoeveel km is 1 cm op de kaart?\n4. **Legenda** — wat betekenen kleuren en symbolen?\n5. **Coördinaten** — soms een raster met letters/cijfers (B3, C5).\n\n**Kleuren op een kaart** (algemene regel):\n• **Blauw** = water (zeeën, rivieren, meren).\n• **Groen** = laagland, weiland.\n• **Geel/bruin** = bergen, hoogland.\n• **Wit** = sneeuw of geen info.\n• **Rood** = hoofdwegen.\n\n**Toets-tip**:\nLees ALTIJD eerst de **titel** en de **legenda** voordat je de kaart bekijkt. Anders weet je niet wat je ziet.",
     checks: [
       {
         q: "Welke is **GEEN** onderdeel van een kaart?",
@@ -72,7 +72,7 @@ const steps = [
 
   {
     title: "Kompasroos — windrichtingen",
-    explanation: "**Kompasroos** = symbool dat **windrichtingen** aanwijst.\n\n**4 hoofdrichtingen**:\n• **N** = Noord (boven)\n• **Z** = Zuid (onder)\n• **O** = Oost (rechts)\n• **W** = West (links)\n\n**Engelse versie**:\n• N (north), S (south), E (east), W (west).\n• 'S' staat dus voor Zuid op Engelse kaarten.\n\n**Tussenrichtingen**:\n• **NO** = Noordoost (boven-rechts)\n• **ZO** = Zuidoost (onder-rechts)\n• **ZW** = Zuidwest (onder-links)\n• **NW** = Noordwest (boven-links)\n\n**Trucje om te onthouden**:\n*'**N**ooit **O**p **Z**ondag **W**erken'* — N-O-Z-W tegen de klok in (bovenaan beginnen, dan oost, zuid, west).\n\n**Op een kaart**:\n• **Boven** = Noord (meestal).\n• **Onder** = Zuid.\n• **Rechts** = Oost.\n• **Links** = West.\n\n**Cito-vraag-typen**:\n• 'Welke richting ligt stad X t.o.v. stad Y?'\n• 'Loop je naar het noorden, kom je aan bij...?'\n\n**Voorbeeld**:\nAmsterdam ligt **noord** van Rotterdam (zit hogerop op de kaart).\nRotterdam ligt dus **zuid** van Amsterdam.\n\n**Cito-tip**:\nKijk altijd waar de **N-pijl** wijst. Soms is 'noord' niet boven (op vakantie-kaarten of plattegronden).",
+    explanation: "**Kompasroos** = symbool dat **windrichtingen** aanwijst.\n\n**4 hoofdrichtingen**:\n• **N** = Noord (boven)\n• **Z** = Zuid (onder)\n• **O** = Oost (rechts)\n• **W** = West (links)\n\n**Engelse versie**:\n• N (north), S (south), E (east), W (west).\n• 'S' staat dus voor Zuid op Engelse kaarten.\n\n**Tussenrichtingen**:\n• **NO** = Noordoost (boven-rechts)\n• **ZO** = Zuidoost (onder-rechts)\n• **ZW** = Zuidwest (onder-links)\n• **NW** = Noordwest (boven-links)\n\n**Trucje om te onthouden**:\n*'**N**ooit **O**p **Z**ondag **W**erken'* — N-O-Z-W tegen de klok in (bovenaan beginnen, dan oost, zuid, west).\n\n**Op een kaart**:\n• **Boven** = Noord (meestal).\n• **Onder** = Zuid.\n• **Rechts** = Oost.\n• **Links** = West.\n\n**toetsvraag-typen**:\n• 'Welke richting ligt stad X t.o.v. stad Y?'\n• 'Loop je naar het noorden, kom je aan bij...?'\n\n**Voorbeeld**:\nAmsterdam ligt **noord** van Rotterdam (zit hogerop op de kaart).\nRotterdam ligt dus **zuid** van Amsterdam.\n\n**Toets-tip**:\nKijk altijd waar de **N-pijl** wijst. Soms is 'noord' niet boven (op vakantie-kaarten of plattegronden).",
     checks: [
       {
         q: "Op een normale kaart, **N** ligt aan de:",
@@ -135,7 +135,7 @@ const steps = [
 
   {
     title: "Schaal — werkelijke afstanden",
-    explanation: "**Schaal** = verhouding tussen **afstand op de kaart** en **werkelijke afstand**.\n\n**Voorbeeld**:\n• Schaal **1:100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt.\n• 100.000 cm = 1.000 m = **1 km**.\n• Dus 1 cm op kaart = 1 km in het echt.\n\n**Andere schalen**:\n• 1:50.000 → 1 cm = 0,5 km = 500 m.\n• 1:25.000 → 1 cm = 250 m.\n• 1:1.000.000 → 1 cm = 10 km.\n\n**Hoe rekenen**:\n1. Meet de afstand op de kaart in cm.\n2. Vermenigvuldig met de schaal.\n3. Reken om naar km of m.\n\n**Voorbeeld**:\nSchaal 1:100.000. Afstand op kaart = 5 cm.\n• 5 cm × 100.000 = 500.000 cm.\n• 500.000 cm = 5.000 m = **5 km**.\n\n**Schaalbalk**:\nSommige kaarten hebben een **balk** met streepjes en getallen, bijv:\n```\n0  1  2  3  4 km\n|--|--|--|--|\n```\nDan meet je hoe vaak die balk past tussen 2 punten.\n\n**Soorten kaarten + schaal**:\n• **Plattegrond huis**: 1:50 of 1:100 (heel klein gebied).\n• **Stadsplan**: 1:10.000.\n• **Wegenkaart provincie**: 1:200.000.\n• **Wereldkaart**: 1:50.000.000.\n\n**Cito-tip**:\nGroter getal achter de ':' = **kleiner** stuk wereld zichtbaar. 1:1.000.000 toont meer dan 1:1.000.",
+    explanation: "**Schaal** = verhouding tussen **afstand op de kaart** en **werkelijke afstand**.\n\n**Voorbeeld**:\n• Schaal **1:100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt.\n• 100.000 cm = 1.000 m = **1 km**.\n• Dus 1 cm op kaart = 1 km in het echt.\n\n**Andere schalen**:\n• 1:50.000 → 1 cm = 0,5 km = 500 m.\n• 1:25.000 → 1 cm = 250 m.\n• 1:1.000.000 → 1 cm = 10 km.\n\n**Hoe rekenen**:\n1. Meet de afstand op de kaart in cm.\n2. Vermenigvuldig met de schaal.\n3. Reken om naar km of m.\n\n**Voorbeeld**:\nSchaal 1:100.000. Afstand op kaart = 5 cm.\n• 5 cm × 100.000 = 500.000 cm.\n• 500.000 cm = 5.000 m = **5 km**.\n\n**Schaalbalk**:\nSommige kaarten hebben een **balk** met streepjes en getallen, bijv:\n```\n0  1  2  3  4 km\n|--|--|--|--|\n```\nDan meet je hoe vaak die balk past tussen 2 punten.\n\n**Soorten kaarten + schaal**:\n• **Plattegrond huis**: 1:50 of 1:100 (heel klein gebied).\n• **Stadsplan**: 1:10.000.\n• **Wegenkaart provincie**: 1:200.000.\n• **Wereldkaart**: 1:50.000.000.\n\n**Toets-tip**:\nGroter getal achter de ':' = **kleiner** stuk wereld zichtbaar. 1:1.000.000 toont meer dan 1:1.000.",
     checks: [
       {
         q: "Schaal **1:100.000**. 1 cm op kaart = ___ in het echt.",
@@ -198,7 +198,7 @@ const steps = [
 
   {
     title: "Legenda — symbolen interpreteren",
-    explanation: "**Legenda** = uitleg van de **symbolen en kleuren** op de kaart.\n\n**Standaard-symbolen**:\n• **Blauwe lijn** = rivier of beek\n• **Blauwe vlek** = meer of zee\n• **Rode lijn** = hoofdweg / snelweg\n• **Zwarte lijn** = spoorlijn (vaak met streepjes)\n• **Stippeltjes** = wandelpad of fietspad\n• **Driehoekje** = berg of camping\n• **Vierkantje** = gebouw of station\n• **Cirkel** = stad (groter = grotere stad)\n• **Boom-tekentje** = bos\n• **Kerk-tekentje** = kerk\n• **Vliegtuig** = vliegveld\n• **Anker** = haven\n\n**Op atlas-kaarten** (politieke):\n• **Lijn met stippen** = landgrens.\n• **Dubbele lijn** = provincie-grens.\n• **Ster** = hoofdstad.\n• **Punt** = gewone stad.\n\n**Cito-vraag-typen**:\n• 'Wat betekent dit symbool?' → kijk in legenda.\n• 'Hoeveel campings staan er op de kaart?' → tel driehoekjes.\n• 'Welke kaart-symbool staat voor X?' → matchen.\n\n**Cito-tip**:\nLegenda staat meestal in een **hoek** of langs de **rand** van de kaart. Als je een symbool niet herkent, **eerst legenda checken**, niet gokken.\n\n**Voorbeeld-vraag**:\n*'Op de kaart staat 5 keer een kerk-tekentje. Hoeveel kerken staan er in dit gebied?'*\n→ 5 (gewoon tellen).",
+    explanation: "**Legenda** = uitleg van de **symbolen en kleuren** op de kaart.\n\n**Standaard-symbolen**:\n• **Blauwe lijn** = rivier of beek\n• **Blauwe vlek** = meer of zee\n• **Rode lijn** = hoofdweg / snelweg\n• **Zwarte lijn** = spoorlijn (vaak met streepjes)\n• **Stippeltjes** = wandelpad of fietspad\n• **Driehoekje** = berg of camping\n• **Vierkantje** = gebouw of station\n• **Cirkel** = stad (groter = grotere stad)\n• **Boom-tekentje** = bos\n• **Kerk-tekentje** = kerk\n• **Vliegtuig** = vliegveld\n• **Anker** = haven\n\n**Op atlas-kaarten** (politieke):\n• **Lijn met stippen** = landgrens.\n• **Dubbele lijn** = provincie-grens.\n• **Ster** = hoofdstad.\n• **Punt** = gewone stad.\n\n**toetsvraag-typen**:\n• 'Wat betekent dit symbool?' → kijk in legenda.\n• 'Hoeveel campings staan er op de kaart?' → tel driehoekjes.\n• 'Welke kaart-symbool staat voor X?' → matchen.\n\n**Toets-tip**:\nLegenda staat meestal in een **hoek** of langs de **rand** van de kaart. Als je een symbool niet herkent, **eerst legenda checken**, niet gokken.\n\n**Voorbeeld-vraag**:\n*'Op de kaart staat 5 keer een kerk-tekentje. Hoeveel kerken staan er in dit gebied?'*\n→ 5 (gewoon tellen).",
     checks: [
       {
         q: "Welke vorm hoort meestal bij het kaart-symbool voor een **camping**?",
@@ -252,7 +252,7 @@ const steps = [
           woorden: [{ woord: "legenda", uitleg: "Uitleg-vakje met betekenis van symbolen op kaart." }],
           theorie: "Legenda staat meestal in een hoek of langs de rand — eerste hulp bij onbekende tekens.",
           voorbeelden: [{ type: "stap", tekst: "Symbool zie je → naar legenda → 'Aha, dat is een molen'." }],
-          basiskennis: [{ onderwerp: "Niet gokken", uitleg: "Cito wil precieze antwoorden. Gokken = punten verliezen." }],
+          basiskennis: [{ onderwerp: "Niet gokken", uitleg: "De toets wil precieze antwoorden. Gokken = punten verliezen." }],
           niveaus: { basis: "Legenda.", simpeler: "Onbekend symbool? Kijk in de legenda (uitleg-vakje). Niet gokken.", nogSimpeler: "Legenda" },
         },
       },
@@ -260,7 +260,7 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — kaartlezen mix",
+    title: "Toets-eindopdracht — kaartlezen mix",
     explanation: "Mix-toets: kompasroos, schaal, legenda, kaartlezen-totaal.",
     checks: [
       {
@@ -356,19 +356,19 @@ const steps = [
           stappen: [
             { titel: "Wat is een legenda?", tekst: "Een **legenda** is een klein vakje op de kaart (vaak hoek onderaan) dat **uitlegt wat de symbolen, kleuren + lijnen betekenen**. Zonder legenda snap je de kaart niet." },
             { titel: "Voorbeelden legenda-items", tekst: "• **Kleuren**: blauw = water, groen = bos/park, geel = woestijn/zand\n• **Lijnen**: dik = snelweg, dun = lokale weg, stippels = wandelpad\n• **Symbolen**: dennenboom = bos, kerk = religieus gebouw, treintje = station\n• **Hoogtelijnen**: lijnen die punten van gelijke hoogte verbinden" },
-            { titel: "Cito-truc: kaart lezen-stappenplan", tekst: "1. **Titel** — wat toont de kaart?\n2. **Schaal** — hoe klein/groot?\n3. **Legenda** — wat betekenen symbolen?\n4. **Windroos** — welke kant is noord?\n5. PAS DAN het kaart-detail lezen.\n\nVeel Cito-fouten = legenda niet lezen + symbool verkeerd interpreteren." },
+            { titel: "Toets-truc: kaart lezen-stappenplan", tekst: "1. **Titel** — wat toont de kaart?\n2. **Schaal** — hoe klein/groot?\n3. **Legenda** — wat betekenen symbolen?\n4. **Windroos** — welke kant is noord?\n5. PAS DAN het kaart-detail lezen.\n\nVeel Toets-fouten = legenda niet lezen + symbool verkeerd interpreteren." },
           ],
           woorden: [
             { woord: "legenda", uitleg: "Verklarend vakje op kaart met betekenis van symbolen + kleuren." },
             { woord: "symbool", uitleg: "Klein plaatje dat iets voorstelt (boom, kerk, weg)." },
             { woord: "topografische kaart", uitleg: "Detail-kaart met hoogteverschillen, wegen, gebouwen." },
           ],
-          theorie: "Kaart-onderdelen Cito-stof:\n• **Titel** — wat\n• **Schaal** — hoe groot\n• **Legenda** — wat betekenen tekens\n• **Windroos** — richting\n• **Coördinaten** — locatie precies (vakjes A1, B2 of GPS)\n\nElk onderdeel onmisbaar.",
+          theorie: "Kaart-onderdelen toetsstof:\n• **Titel** — wat\n• **Schaal** — hoe groot\n• **Legenda** — wat betekenen tekens\n• **Windroos** — richting\n• **Coördinaten** — locatie precies (vakjes A1, B2 of GPS)\n\nElk onderdeel onmisbaar.",
           voorbeelden: [
             { type: "stap", tekst: "ANWB-kaart legenda: rood lijn = snelweg, geel = autoweg, zwart = kleine weg, blauw = water." },
             { type: "stap", tekst: "Atlas-kaart: lichter blauw = ondiep water, donkerder = dieper. Tonen we via kleur-verloop." },
           ],
-          basiskennis: [{ onderwerp: "Altijd kijken", uitleg: "Cito-tip: kijk EERST legenda voor je een kaart-vraag beantwoordt. Anders kun je symbolen verkeerd interpreteren." }],
+          basiskennis: [{ onderwerp: "Altijd kijken", uitleg: "Toets-tip: kijk EERST legenda voor je een kaart-vraag beantwoordt. Anders kun je symbolen verkeerd interpreteren." }],
           niveaus: { basis: "Uitleg symbolen.", simpeler: "Legenda = vakje op kaart dat uitlegt wat de symbolen + kleuren + lijnen betekenen.", nogSimpeler: "Uitleg symbolen" },
         },
       },
@@ -381,7 +381,7 @@ const steps = [
           stappen: [
             { titel: "Wat zijn hoogtelijnen?", tekst: "**Hoogtelijnen** (ook 'contourlijnen') zijn **lijnen op een topografische kaart die punten van DEZELFDE hoogte verbinden**.\n\nElke lijn = bepaalde hoogte boven zeespiegel. Bv:\n• 50 m hoogtelijn\n• 100 m hoogtelijn\n• 150 m hoogtelijn" },
             { titel: "Wat zegt afstand tussen lijnen?", tekst: "• **Dicht bij elkaar** (kleine afstand) → **steile helling**, snelle hoogteverandering. Berg of klif.\n• **Ver uit elkaar** (grote afstand) → **flauwe helling** of vlak. Polder of dal.\n• **Gesloten cirkels** → top van berg of heuvel.\n• **Concentrische cirkels** → typische bergvorm.\n\nNL heeft weinig hoogtelijnen (vlak). Limburg + duinen wel." },
-            { titel: "Cito-feit: hoogste punt NL", tekst: "Op NL-kaart zie je hoogtelijnen vooral bij:\n• **Limburg** — Heuvelland + Drielandenpunt\n• **Veluwe** — heuvelachtig deel\n• **Duinen** langs kust\n• **Sallandse heuvelrug** in Overijssel\n\nHoogste punt NL = **Vaalserberg** (322,5 m) in Zuid-Limburg. Vergeleken met buitenland heel laag — Mount Everest 8.849 m." },
+            { titel: "Toets-feit: hoogste punt NL", tekst: "Op NL-kaart zie je hoogtelijnen vooral bij:\n• **Limburg** — Heuvelland + Drielandenpunt\n• **Veluwe** — heuvelachtig deel\n• **Duinen** langs kust\n• **Sallandse heuvelrug** in Overijssel\n\nHoogste punt NL = **Vaalserberg** (322,5 m) in Zuid-Limburg. Vergeleken met buitenland heel laag — Mount Everest 8.849 m." },
           ],
           woorden: [
             { woord: "hoogtelijn", uitleg: "Lijn op kaart die punten van zelfde hoogte verbindt." },
@@ -405,7 +405,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is een windroos?", tekst: "Een **windroos** is een **klein kompas-symbool** in een hoek van de kaart. Toont:\n• **Noord (N)** — meestal boven (pijl ↑)\n• **Oost (O)** — rechts\n• **Zuid (Z)** — onder\n• **West (W)** — links\n\nOok soms 8 of 16 tussen-richtingen (NO, ZO, ZW, NW)." },
-            { titel: "Cito-feit: noord altijd boven?", tekst: "**Conventie**: bij moderne kaarten staat **noord altijd boven**. Daarom toont windroos vaak alleen noord-pijl + impliciet de rest.\n\nUitzonderingen:\n• Oude kaarten: oost boven (christelijke traditie, richting Jeruzalem)\n• Sommige stadsplattegronden: gedraaid voor leesbaarheid\n• Wandelroutes: noord soms niet boven\n\nALTIJD windroos checken — zonder weet je niet welke kant noord is." },
+            { titel: "Toets-feit: noord altijd boven?", tekst: "**Conventie**: bij moderne kaarten staat **noord altijd boven**. Daarom toont windroos vaak alleen noord-pijl + impliciet de rest.\n\nUitzonderingen:\n• Oude kaarten: oost boven (christelijke traditie, richting Jeruzalem)\n• Sommige stadsplattegronden: gedraaid voor leesbaarheid\n• Wandelroutes: noord soms niet boven\n\nALTIJD windroos checken — zonder weet je niet welke kant noord is." },
           ],
           woorden: [
             { woord: "windroos", uitleg: "Kompas-symbool op kaart dat 4-16 richtingen aangeeft." },
@@ -416,7 +416,7 @@ const steps = [
             { type: "stap", tekst: "Atlas-kaarten: windroos altijd zichtbaar in legenda." },
             { type: "stap", tekst: "Op stadsplattegrond Amsterdam centraal: noord-pijl helpt om noordkant Amstel te vinden." },
           ],
-          basiskennis: [{ onderwerp: "Altijd checken", uitleg: "Voor route-vraag op Cito-kaart: kijk ALTIJD eerst de windroos. Anders weet je niet welke kant 'noord' is op die specifieke kaart." }],
+          basiskennis: [{ onderwerp: "Altijd checken", uitleg: "Voor route-vraag op Toets-kaart: kijk ALTIJD eerst de windroos. Anders weet je niet welke kant 'noord' is op die specifieke kaart." }],
           niveaus: { basis: "Kompas-symbool richtingen.", simpeler: "Windroos = klein kompas-tekentje op kaart dat aangeeft welke kant noord/oost/zuid/west is.", nogSimpeler: "Kompas op kaart" },
         },
       },
@@ -429,7 +429,7 @@ const steps = [
           stappen: [
             { titel: "Digitaal vs papier", tekst: "Een **digitale kaart** (Google Maps, Apple Maps, ANWB-app, BuienRadar) is net als papieren kaart maar:\n• **Inzoomen + uitzoomen** mogelijk (schaal verandert)\n• **Eigen locatie** via GPS zichtbaar (blauw stip)\n• **Live verkeer** + werk-zaamheden\n• **Route-planning** automatisch\n• **Spraak-aanwijzingen** ('Sla links af')\n\nMaar **basis is hetzelfde**: gebied + symbolen + schaal." },
             { titel: "Hoe weet je telefoon waar je bent?", tekst: "**GPS** (Global Positioning System) = ~30 satellieten rond aarde. Je telefoon ontvangt signaal van ≥3 satellieten + berekent positie (driehoek-meting). Nauwkeurigheid: **3-10 meter**.\n\nDriehoeksmeting-truc: als satelliet 1 zegt 'je bent 100 km van mij', satelliet 2 zegt 'je bent 120 km van mij', dan ben je op kruispunt van 2 cirkels. Met 3 satellieten = precies 1 punt." },
-            { titel: "Cito-feit: GPS-eigenaardig­heid", tekst: "**Belangrijke feitjes**:\n• GPS gemaakt door **VS-leger** in 1970s\n• Sinds 2000 vrij beschikbaar voor iedereen\n• EU heeft eigen versie: **Galileo** (sinds 2016)\n• China: **BeiDou**\n• Rusland: **GLONASS**\n• Modernste telefoons gebruiken meerdere systemen samen voor extra precisie\n• Werkt OOK zonder internet (alleen kaart-data moet je downloaden)" },
+            { titel: "Toets-feit: GPS-eigenaardig­heid", tekst: "**Belangrijke feitjes**:\n• GPS gemaakt door **VS-leger** in 1970s\n• Sinds 2000 vrij beschikbaar voor iedereen\n• EU heeft eigen versie: **Galileo** (sinds 2016)\n• China: **BeiDou**\n• Rusland: **GLONASS**\n• Modernste telefoons gebruiken meerdere systemen samen voor extra precisie\n• Werkt OOK zonder internet (alleen kaart-data moet je downloaden)" },
           ],
           woorden: [
             { woord: "GPS", uitleg: "Global Positioning System. Satelliet-systeem om locatie te bepalen." },
@@ -468,7 +468,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const kaartlezenPo = {
   id: "kaartlezen-po",
-  title: "Kaartlezen — Cito groep 5-8",
+  title: "Kaartlezen — Doorstroomtoets groep 5-8",
   emoji: "🗺️",
   level: "groep5-8",
   subject: "aardrijkskunde",
@@ -479,7 +479,7 @@ const kaartlezenPo = {
     { id: "werelddelen-landen-po", title: "Werelddelen", niveau: "po-1F" },
   ],
   intro:
-    "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Cito-stijl. ~12 min.",
+    "Kompasroos, schaal, legenda en symbolen op kaarten begrijpen. Doorstroomtoets-stijl. ~12 min.",
   triggerKeywords: [
     "kaart","kaartlezen","atlas","plattegrond","kompasroos","windrichting",
     "noord","zuid","oost","west","schaal","legenda","studievaardigheden",

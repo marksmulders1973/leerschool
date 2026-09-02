@@ -9,7 +9,7 @@ import { track, getIncomingRef } from "../utils.js";
 //   1. E-mail + VERPLICHTE consent-checkbox (AVG: losse, niet-voorgevinkte
 //      toestemming van de OUDER) → "Verder".
 //   2. Skipbaar mini-profiel: voornaam kind (optioneel) + groep (6/7/8) +
-//      max 3 vakken (Cito-kern voorgevinkt). "Klaar" of "Sla over" → één
+//      max 3 vakken (Toets-kern voorgevinkt). "Klaar" of "Sla over" → één
 //      insert naar upgrade_waitlist (plan='gratis-lesmateriaal' + source +
 //      consent_at + kind_voornaam + kind_groep + vakken).
 //
@@ -227,7 +227,7 @@ export default function GratisLesmateriaal({ source = "onbekend", onPrintPakket,
       {step === "profiel" && (
         <>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.78)", lineHeight: 1.5, marginBottom: 14 }}>
-            Nog 2 snelle vraagjes (10 sec) zodat we het op maat maken. Of sla over — dan sturen we de algemene Cito-mix.
+            Nog 2 snelle vraagjes (10 sec) zodat we het op maat maken. Of sla over — dan sturen we de algemene Doorstroomtoets-mix.
           </div>
 
           <div style={{ marginBottom: 14 }}>

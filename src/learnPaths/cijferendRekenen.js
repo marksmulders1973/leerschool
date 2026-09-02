@@ -1,5 +1,5 @@
 // Leerpad: Cijferend rekenen — voor groep 6-8
-// 7 stappen in 5 hoofdstukken. Cito-stijl praktijksommen + redactie.
+// 7 stappen in 5 hoofdstukken. Doorstroomtoets-stijl praktijksommen + redactie.
 // Sprint-5+ S4 (2026-05-08).
 // + stap F (11 aug 2026): "ken ze allemaal"-oefenronde plus & min met typ-antwoorden.
 
@@ -23,7 +23,7 @@ const chapters = [
   { letter: "B", title: "Optellen + aftrekken", emoji: "➕", from: 1, to: 2 },
   { letter: "C", title: "Vermenigvuldigen", emoji: "✖️", from: 3, to: 4 },
   { letter: "D", title: "Delen + redactiesommen", emoji: "🛒", from: 5, to: 5 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 6, to: 6 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 6, to: 6 },
   { letter: "F", title: "Oefen plus & min!", emoji: "🧮", from: 7, to: 7 },
 ];
 
@@ -46,13 +46,13 @@ ${lines}
 const steps = [
   {
     title: "Wat is cijferend rekenen?",
-    explanation: "**Cijferend rekenen** is het rekenen onder elkaar in **kolommen** — net hoe je het op papier doet. Het werkt voor grote getallen waar 'uit het hoofd' niet meer lukt.\n\n**De truc**: zet getallen **netjes onder elkaar** zodat eenheden, tientallen, honderdtallen elk in hun eigen kolom staan.\n\n**Vergelijking**:\n• Hoofdrekenen: 23 + 14 = 37 *(snel uit je hoofd)*.\n• Cijferend: 487 + 326 = ? *(handig om op te schrijven)*.\n\n**De vier basis-bewerkingen** die je kunt cijferen:\n• **Optellen** (+) — kolomsgewijs, met onthouden bij 10.\n• **Aftrekken** (−) — kolomsgewijs, met lenen.\n• **Vermenigvuldigen** (×) — een 'staart-deling' achterwaarts.\n• **Delen** (:) — bus-bewerking of staartdeling.\n\n**Belangrijk om te onthouden**:\n• Werk altijd van **rechts naar links** (eenheden eerst, dan tientallen, dan honderdtallen).\n• Schrijf netjes onder elkaar — anders gaat het mis.\n• Bij optellen onthoud je een 'overschietje'. Bij aftrekken leen je van de buurman.\n\n**Cito-context**:\nVeel Cito-vragen vragen om grote berekeningen die je écht moet **opschrijven**. Cijferen kost tijd maar is **betrouwbaar**.",
+    explanation: "**Cijferend rekenen** is het rekenen onder elkaar in **kolommen** — net hoe je het op papier doet. Het werkt voor grote getallen waar 'uit het hoofd' niet meer lukt.\n\n**De truc**: zet getallen **netjes onder elkaar** zodat eenheden, tientallen, honderdtallen elk in hun eigen kolom staan.\n\n**Vergelijking**:\n• Hoofdrekenen: 23 + 14 = 37 *(snel uit je hoofd)*.\n• Cijferend: 487 + 326 = ? *(handig om op te schrijven)*.\n\n**De vier basis-bewerkingen** die je kunt cijferen:\n• **Optellen** (+) — kolomsgewijs, met onthouden bij 10.\n• **Aftrekken** (−) — kolomsgewijs, met lenen.\n• **Vermenigvuldigen** (×) — een 'staart-deling' achterwaarts.\n• **Delen** (:) — bus-bewerking of staartdeling.\n\n**Belangrijk om te onthouden**:\n• Werk altijd van **rechts naar links** (eenheden eerst, dan tientallen, dan honderdtallen).\n• Schrijf netjes onder elkaar — anders gaat het mis.\n• Bij optellen onthoud je een 'overschietje'. Bij aftrekken leen je van de buurman.\n\n**Toets-context**:\nVeel toetsvragen vragen om grote berekeningen die je écht moet **opschrijven**. Cijferen kost tijd maar is **betrouwbaar**.",
     checks: [
       {
         q: "Wanneer is **cijferend rekenen handig**?",
-        options: ["Bij grote getallen die niet in je hoofd passen","Altijd, ook bij 5+3","Alleen bij delen","Alleen op de Cito"],
+        options: ["Bij grote getallen die niet in je hoofd passen","Altijd, ook bij 5+3","Alleen bij delen","Alleen op de Doorstroomtoets"],
         answer: 0,
-        wrongHints: [null,"Te overdreven — kleine sommen doe je in je hoofd.","Niet alleen delen — alle 4 bewerkingen kun je cijferen.","Niet alleen Cito — overal in echte rekensommen."],
+        wrongHints: [null,"Te overdreven — kleine sommen doe je in je hoofd.","Niet alleen delen — alle 4 bewerkingen kun je cijferen.","Niet alleen de toets — overal in echte rekensommen."],
         uitlegPad: {
           stappen: [{ titel: "Wanneer cijferen?", tekst: "Voor GROTE getallen die niet in je hoofd passen. 5+3 = hoofd. 487+326 = papier." }],
           woorden: [{ woord: "cijferend", uitleg: "Onder elkaar in kolommen op papier rekenen." }],
@@ -95,7 +95,7 @@ const steps = [
 
   {
     title: "Cijferend optellen — onthouden bij 10",
-    explanation: "Bij **cijferend optellen** zet je getallen **onder elkaar** en tel je per kolom op. Bij 10 of meer **onthoud je 1** voor de volgende kolom.\n\n**Voorbeeld 1**: 247 + 158\n```\n  2 4 7\n+ 1 5 8\n-------\n```\n• **Eenheden**: 7 + 8 = 15. Schrijf 5, onthoud 1.\n• **Tientallen**: 4 + 5 + 1 (onthouden) = 10. Schrijf 0, onthoud 1.\n• **Honderdtallen**: 2 + 1 + 1 (onthouden) = 4. Schrijf 4.\n\n**Antwoord**: 405.\n\n**Voorbeeld 2**: 1268 + 537\n```\n  1 2 6 8\n+   5 3 7\n--------\n```\n• Eenheden: 8 + 7 = 15. Schrijf 5, onthoud 1.\n• Tientallen: 6 + 3 + 1 = 10. Schrijf 0, onthoud 1.\n• Honderdtallen: 2 + 5 + 1 = 8. Schrijf 8.\n• Duizendtallen: 1. Schrijf 1.\n\n**Antwoord**: 1805.\n\n**Cito-tip**:\n• Schrijf **netjes**: gebruik ruitjespapier of zorg dat je kolommen recht onder elkaar staan.\n• Bij grote getallen — schrijf het **onthoud-getal klein boven** de volgende kolom zodat je 't niet vergeet.\n• Check je antwoord met een **schatting**: 247 + 158 ≈ 250 + 160 = 410. Klopt 405? ✓.\n\n**Veel-voorkomende fout**:\nVergeten het 'onthoudje' op te tellen. Daarom altijd opschrijven, niet onthouden in je hoofd.",
+    explanation: "Bij **cijferend optellen** zet je getallen **onder elkaar** en tel je per kolom op. Bij 10 of meer **onthoud je 1** voor de volgende kolom.\n\n**Voorbeeld 1**: 247 + 158\n```\n  2 4 7\n+ 1 5 8\n-------\n```\n• **Eenheden**: 7 + 8 = 15. Schrijf 5, onthoud 1.\n• **Tientallen**: 4 + 5 + 1 (onthouden) = 10. Schrijf 0, onthoud 1.\n• **Honderdtallen**: 2 + 1 + 1 (onthouden) = 4. Schrijf 4.\n\n**Antwoord**: 405.\n\n**Voorbeeld 2**: 1268 + 537\n```\n  1 2 6 8\n+   5 3 7\n--------\n```\n• Eenheden: 8 + 7 = 15. Schrijf 5, onthoud 1.\n• Tientallen: 6 + 3 + 1 = 10. Schrijf 0, onthoud 1.\n• Honderdtallen: 2 + 5 + 1 = 8. Schrijf 8.\n• Duizendtallen: 1. Schrijf 1.\n\n**Antwoord**: 1805.\n\n**Toets-tip**:\n• Schrijf **netjes**: gebruik ruitjespapier of zorg dat je kolommen recht onder elkaar staan.\n• Bij grote getallen — schrijf het **onthoud-getal klein boven** de volgende kolom zodat je 't niet vergeet.\n• Check je antwoord met een **schatting**: 247 + 158 ≈ 250 + 160 = 410. Klopt 405? ✓.\n\n**Veel-voorkomende fout**:\nVergeten het 'onthoudje' op te tellen. Daarom altijd opschrijven, niet onthouden in je hoofd.",
     svg: kolomSvg(["247","158"], "+", "405"),
     checks: [
       {
@@ -154,7 +154,7 @@ const steps = [
 
   {
     title: "Cijferend aftrekken — lenen bij de buur",
-    explanation: "Bij **cijferend aftrekken** is het lastiger: als je niet genoeg hebt in een kolom, **leen je 1** van de kolom links ervan.\n\n**Voorbeeld**: 524 − 258\n```\n  5 2 4\n− 2 5 8\n-------\n```\n• **Eenheden**: 4 − 8 → kan niet (4 < 8). Leen 1 van tientallen.\n  - Tientallen wordt 1 (was 2).\n  - Eenheden wordt 14. 14 − 8 = **6**.\n• **Tientallen**: 1 − 5 → kan niet. Leen 1 van honderdtallen.\n  - Honderdtallen wordt 4 (was 5).\n  - Tientallen wordt 11. 11 − 5 = **6**.\n• **Honderdtallen**: 4 − 2 = **2**.\n\n**Antwoord**: 266.\n\n**Voorbeeld 2**: 1000 − 347 *(de gevreesde 1000-min)*\n```\n  1 0 0 0\n−   3 4 7\n--------\n```\n• Eenheden: 0 − 7 → leen. Maar tientallen is ook 0! → leen door naar honderdtallen, ook 0! → leen door naar duizendtallen.\n• Truc: behandel 1000 als 999+1: 999 − 347 = 652, dan + 1 = **653**.\n\n**Cito-tip**:\nBij **leen-sommen door meer kolommen heen** *(zoals 1000 − iets)*, gebruik de truc: doe **999 − getal**, dan **+1**.\n\n**Voorbeeld**: 5000 − 1234\n• 4999 − 1234 = 3765.\n• 3765 + 1 = **3766**.\n\n**Veel-voorkomende fouten**:\n• Vergeten dat de buurman **1 minder** is geworden na lenen.\n• Bij dubbel-lenen door 0-kolom — de truc gebruiken.",
+    explanation: "Bij **cijferend aftrekken** is het lastiger: als je niet genoeg hebt in een kolom, **leen je 1** van de kolom links ervan.\n\n**Voorbeeld**: 524 − 258\n```\n  5 2 4\n− 2 5 8\n-------\n```\n• **Eenheden**: 4 − 8 → kan niet (4 < 8). Leen 1 van tientallen.\n  - Tientallen wordt 1 (was 2).\n  - Eenheden wordt 14. 14 − 8 = **6**.\n• **Tientallen**: 1 − 5 → kan niet. Leen 1 van honderdtallen.\n  - Honderdtallen wordt 4 (was 5).\n  - Tientallen wordt 11. 11 − 5 = **6**.\n• **Honderdtallen**: 4 − 2 = **2**.\n\n**Antwoord**: 266.\n\n**Voorbeeld 2**: 1000 − 347 *(de gevreesde 1000-min)*\n```\n  1 0 0 0\n−   3 4 7\n--------\n```\n• Eenheden: 0 − 7 → leen. Maar tientallen is ook 0! → leen door naar honderdtallen, ook 0! → leen door naar duizendtallen.\n• Truc: behandel 1000 als 999+1: 999 − 347 = 652, dan + 1 = **653**.\n\n**Toets-tip**:\nBij **leen-sommen door meer kolommen heen** *(zoals 1000 − iets)*, gebruik de truc: doe **999 − getal**, dan **+1**.\n\n**Voorbeeld**: 5000 − 1234\n• 4999 − 1234 = 3765.\n• 3765 + 1 = **3766**.\n\n**Veel-voorkomende fouten**:\n• Vergeten dat de buurman **1 minder** is geworden na lenen.\n• Bij dubbel-lenen door 0-kolom — de truc gebruiken.",
     svg: kolomSvg(["524","258"], "−", "266"),
     checks: [
       {
@@ -212,7 +212,7 @@ const steps = [
 
   {
     title: "Cijferend vermenigvuldigen — 1 cijfer × meerdere",
-    explanation: "Bij **cijferend vermenigvuldigen** vermenigvuldig je elk cijfer apart.\n\n**Voorbeeld 1**: 234 × 4\n```\n    2 3 4\n  ×     4\n--------\n```\n• Eenheden: 4 × 4 = 16. Schrijf 6, onthoud 1.\n• Tientallen: 4 × 3 = 12, plus 1 (onthoud) = 13. Schrijf 3, onthoud 1.\n• Honderdtallen: 4 × 2 = 8, plus 1 = 9. Schrijf 9.\n\n**Antwoord**: 936.\n\n**Voorbeeld 2**: 12 × 27 *(2 cijfers × 2 cijfers — staart-aanpak)*\n```\n      1 2\n    × 2 7\n--------\n      8 4   ← 12 × 7\n  + 2 4 0   ← 12 × 20 (let op nul achteraan!)\n--------\n    3 2 4\n```\n\n**Stappen**:\n1. Vermenigvuldig 12 × 7 = 84. Schrijf onder de streep.\n2. Vermenigvuldig 12 × 2 (= eigenlijk 12 × 20). Zet **nul-plaatshouder** achteraan, dan 12 × 2 = 24, dus 240.\n3. Tel beide regels op: 84 + 240 = **324**.\n\n**Cito-tip**:\n• Schrijf de **nul-plaatshouders** netjes op. Dat is de meest gemaakte fout.\n• Check met schatting: 12 × 27 ≈ 12 × 25 = 300. Antwoord 324 zit in de buurt ✓.\n\n**Trucs voor 'mooie' getallen**:\n• × 10 → komma 1 plek naar rechts.\n• × 100 → komma 2 plekken naar rechts.\n• × 5 → ÷ 2 dan × 10. Voorbeeld: 84 × 5 = (84 ÷ 2) × 10 = 42 × 10 = 420.",
+    explanation: "Bij **cijferend vermenigvuldigen** vermenigvuldig je elk cijfer apart.\n\n**Voorbeeld 1**: 234 × 4\n```\n    2 3 4\n  ×     4\n--------\n```\n• Eenheden: 4 × 4 = 16. Schrijf 6, onthoud 1.\n• Tientallen: 4 × 3 = 12, plus 1 (onthoud) = 13. Schrijf 3, onthoud 1.\n• Honderdtallen: 4 × 2 = 8, plus 1 = 9. Schrijf 9.\n\n**Antwoord**: 936.\n\n**Voorbeeld 2**: 12 × 27 *(2 cijfers × 2 cijfers — staart-aanpak)*\n```\n      1 2\n    × 2 7\n--------\n      8 4   ← 12 × 7\n  + 2 4 0   ← 12 × 20 (let op nul achteraan!)\n--------\n    3 2 4\n```\n\n**Stappen**:\n1. Vermenigvuldig 12 × 7 = 84. Schrijf onder de streep.\n2. Vermenigvuldig 12 × 2 (= eigenlijk 12 × 20). Zet **nul-plaatshouder** achteraan, dan 12 × 2 = 24, dus 240.\n3. Tel beide regels op: 84 + 240 = **324**.\n\n**Toets-tip**:\n• Schrijf de **nul-plaatshouders** netjes op. Dat is de meest gemaakte fout.\n• Check met schatting: 12 × 27 ≈ 12 × 25 = 300. Antwoord 324 zit in de buurt ✓.\n\n**Trucs voor 'mooie' getallen**:\n• × 10 → komma 1 plek naar rechts.\n• × 100 → komma 2 plekken naar rechts.\n• × 5 → ÷ 2 dan × 10. Voorbeeld: 84 × 5 = (84 ÷ 2) × 10 = 42 × 10 = 420.",
     checks: [
       {
         q: "**324 × 3** = ?",
@@ -264,7 +264,7 @@ const steps = [
 
   {
     title: "Cijferend delen — bus-bewerking",
-    explanation: "**Cijferend delen** is de moeilijkste — ook wel **staartdeling** genoemd. We doen het vereenvoudigde versie: **bus-bewerking** *(dezelfde idee, simpeler opgeschreven)*.\n\n**Voorbeeld**: 144 ÷ 6\n• Begin links: hoeveel keer past 6 in 14? **2 keer** (2 × 6 = 12). Schrijf 2.\n• Rest = 14 − 12 = 2. Trek volgend cijfer (4) erbij = 24.\n• Hoeveel keer past 6 in 24? **4 keer** (4 × 6 = 24). Schrijf 4.\n• Rest = 0.\n\n**Antwoord**: 24.\n\n**Voorbeeld 2**: 525 ÷ 7\n• 7 in 5? Past niet (5 < 7). Pak 52.\n• 7 in 52? **7 keer** (7 × 7 = 49). Schrijf 7.\n• Rest = 52 − 49 = 3. Trek 5 erbij = 35.\n• 7 in 35? **5 keer** (5 × 7 = 35). Schrijf 5.\n• Rest = 0.\n\n**Antwoord**: 75.\n\n**Met rest** *(als de deling niet rond uitkomt)*:\n*'74 ÷ 8'*\n• 8 in 7? Past niet.\n• 8 in 74? **9 keer** (9 × 8 = 72). Schrijf 9.\n• Rest = 74 − 72 = 2.\n\n**Antwoord**: 9 rest 2.\n\n**Cito-vraag-vorm**: *'74 koekjes verdeeld over 8 kinderen — hoeveel ieder, hoeveel over?'*\n• Ieder krijgt **9 koekjes**, **2 over**.\n\n**Cito-tip**:\n• Werk **van links naar rechts** (omgekeerd dan optellen!).\n• Pak telkens net genoeg cijfers dat de deler erin past.\n• Schrijf netjes — anders raak je het spoor kwijt.\n\n**Trucs voor mooie delers**:\n• ÷ 10 → komma 1 plek naar links.\n• ÷ 5 → × 2 dan ÷ 10. Voorbeeld: 84 ÷ 5 = (84 × 2) ÷ 10 = 168 ÷ 10 = 16,8.\n• ÷ 4 → ÷ 2 ÷ 2.",
+    explanation: "**Cijferend delen** is de moeilijkste — ook wel **staartdeling** genoemd. We doen het vereenvoudigde versie: **bus-bewerking** *(dezelfde idee, simpeler opgeschreven)*.\n\n**Voorbeeld**: 144 ÷ 6\n• Begin links: hoeveel keer past 6 in 14? **2 keer** (2 × 6 = 12). Schrijf 2.\n• Rest = 14 − 12 = 2. Trek volgend cijfer (4) erbij = 24.\n• Hoeveel keer past 6 in 24? **4 keer** (4 × 6 = 24). Schrijf 4.\n• Rest = 0.\n\n**Antwoord**: 24.\n\n**Voorbeeld 2**: 525 ÷ 7\n• 7 in 5? Past niet (5 < 7). Pak 52.\n• 7 in 52? **7 keer** (7 × 7 = 49). Schrijf 7.\n• Rest = 52 − 49 = 3. Trek 5 erbij = 35.\n• 7 in 35? **5 keer** (5 × 7 = 35). Schrijf 5.\n• Rest = 0.\n\n**Antwoord**: 75.\n\n**Met rest** *(als de deling niet rond uitkomt)*:\n*'74 ÷ 8'*\n• 8 in 7? Past niet.\n• 8 in 74? **9 keer** (9 × 8 = 72). Schrijf 9.\n• Rest = 74 − 72 = 2.\n\n**Antwoord**: 9 rest 2.\n\n**toetsvraag-vorm**: *'74 koekjes verdeeld over 8 kinderen — hoeveel ieder, hoeveel over?'*\n• Ieder krijgt **9 koekjes**, **2 over**.\n\n**Toets-tip**:\n• Werk **van links naar rechts** (omgekeerd dan optellen!).\n• Pak telkens net genoeg cijfers dat de deler erin past.\n• Schrijf netjes — anders raak je het spoor kwijt.\n\n**Trucs voor mooie delers**:\n• ÷ 10 → komma 1 plek naar links.\n• ÷ 5 → × 2 dan ÷ 10. Voorbeeld: 84 ÷ 5 = (84 × 2) ÷ 10 = 168 ÷ 10 = 16,8.\n• ÷ 4 → ÷ 2 ÷ 2.",
     checks: [
       {
         q: "**168 ÷ 8** = ?",
@@ -318,8 +318,8 @@ const steps = [
   },
 
   {
-    title: "Praktijk — Cito-redactiesommen",
-    explanation: "In Cito-vragen kom je grote berekeningen tegen in **verhalen**. Tijd om uit het verhaal te halen wat te rekenen, en cijferend uit te werken.\n\n**Stappenplan**:\n1. **Lees rustig** en onderstreep getallen + de vraag.\n2. **Welke bewerking?** + (samen), − (verschil), × (steeds dezelfde keer iets), ÷ (verdelen).\n3. Schrijf de som **op papier** en cijfer.\n4. **Check** met schatting.\n\n**Voorbeeld 1**:\n*'In een doos zitten 24 dozen koekjes. Elke doos heeft 18 koekjes. Hoeveel koekjes in totaal?'*\n• Bewerking: × *('elke doos hetzelfde')*.\n• Som: 24 × 18 = ?\n• Cijferend: 24 × 8 = 192. 24 × 10 = 240. Totaal = 432.\n• **Antwoord**: 432 koekjes.\n\n**Voorbeeld 2**:\n*'Een klas heeft 156 stickers. Ze worden gelijk verdeeld over 13 leerlingen. Hoeveel ieder?'*\n• Bewerking: ÷ *('gelijk verdeeld')*.\n• Som: 156 ÷ 13 = ?\n• 13 × 12 = 156 ✓.\n• **Antwoord**: 12 stickers per leerling.\n\n**Voorbeeld 3 — combinatie**:\n*'Een kapper heeft op maandag 23 klanten, op dinsdag 31, op woensdag 28. Hoeveel klanten in totaal? En als hij € 25 per klant rekent — hoeveel verdiend?'*\n• Stap 1: 23 + 31 + 28 = 82 klanten.\n• Stap 2: 82 × 25 = € 2050.\n\n**Cito-trucs voor verhalen**:\n• 'Samen' / 'totaal' → +.\n• 'Verschil' / 'meer dan' / 'over' → −.\n• 'Per' / 'elke' → ×.\n• 'Gelijk verdeeld' / 'hoeveel ieder' → ÷.",
+    title: "Praktijk — Toets-redactiesommen",
+    explanation: "In toetsvragen kom je grote berekeningen tegen in **verhalen**. Tijd om uit het verhaal te halen wat te rekenen, en cijferend uit te werken.\n\n**Stappenplan**:\n1. **Lees rustig** en onderstreep getallen + de vraag.\n2. **Welke bewerking?** + (samen), − (verschil), × (steeds dezelfde keer iets), ÷ (verdelen).\n3. Schrijf de som **op papier** en cijfer.\n4. **Check** met schatting.\n\n**Voorbeeld 1**:\n*'In een doos zitten 24 dozen koekjes. Elke doos heeft 18 koekjes. Hoeveel koekjes in totaal?'*\n• Bewerking: × *('elke doos hetzelfde')*.\n• Som: 24 × 18 = ?\n• Cijferend: 24 × 8 = 192. 24 × 10 = 240. Totaal = 432.\n• **Antwoord**: 432 koekjes.\n\n**Voorbeeld 2**:\n*'Een klas heeft 156 stickers. Ze worden gelijk verdeeld over 13 leerlingen. Hoeveel ieder?'*\n• Bewerking: ÷ *('gelijk verdeeld')*.\n• Som: 156 ÷ 13 = ?\n• 13 × 12 = 156 ✓.\n• **Antwoord**: 12 stickers per leerling.\n\n**Voorbeeld 3 — combinatie**:\n*'Een kapper heeft op maandag 23 klanten, op dinsdag 31, op woensdag 28. Hoeveel klanten in totaal? En als hij € 25 per klant rekent — hoeveel verdiend?'*\n• Stap 1: 23 + 31 + 28 = 82 klanten.\n• Stap 2: 82 × 25 = € 2050.\n\n**Toets-trucs voor verhalen**:\n• 'Samen' / 'totaal' → +.\n• 'Verschil' / 'meer dan' / 'over' → −.\n• 'Per' / 'elke' → ×.\n• 'Gelijk verdeeld' / 'hoeveel ieder' → ÷.",
     checks: [
       {
         q: "Een vrachtwagen vervoert **35 dozen van 28 kg**. Wat is het **totale gewicht** (kg)?",
@@ -393,8 +393,8 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — alles cijferen",
-    explanation: "Mix-toets met cijferen in Cito-stijl. Verschillende bewerkingen door elkaar — kies zelf welke aanpak.\n\n**Hint**: schrijf álle sommen op en cijfer. Schaat af met schatting voor je antwoord opschrijft.\n\nVeel succes!",
+    title: "Toets-eindopdracht — alles cijferen",
+    explanation: "Mix-toets met cijferen in Doorstroomtoets-stijl. Verschillende bewerkingen door elkaar — kies zelf welke aanpak.\n\n**Hint**: schrijf álle sommen op en cijfer. Schaat af met schatting voor je antwoord opschrijft.\n\nVeel succes!",
     checks: [
       {
         q: "**3456 + 2789** = ?",
@@ -530,7 +530,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const cijferendRekenen = {
   id: "cijferend-rekenen",
-  title: "Cijferend rekenen — Cito groep 6-8",
+  title: "Cijferend rekenen — Doorstroomtoets groep 6-8",
   emoji: "🔢",
   level: "groep6-8",
   subject: "rekenen",

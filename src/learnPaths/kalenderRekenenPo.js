@@ -1,5 +1,5 @@
 // Leerpad: Kalender-rekenen (data + dagen + leeftijd) — groep 6-8 PO.
-// Cito-onderdeel meten: tijd. Referentieniveau 1F.
+// Toets-onderdeel meten: tijd. Referentieniveau 1F.
 // 6 stappen met uitlegPad.
 
 const COLORS = {
@@ -21,7 +21,7 @@ const chapters = [
   { letter: "C", title: "Schrikkeljaar + speciale data", emoji: "🌍", from: 2, to: 2 },
   { letter: "D", title: "Leeftijden", emoji: "🎂", from: 3, to: 3 },
   { letter: "E", title: "Praktijk — vakantie + school", emoji: "🏖️", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function kalenderSvg() {
@@ -90,7 +90,7 @@ const steps = [
             { woord: "gewoon jaar", uitleg: "365 dagen." },
             { woord: "schrikkeljaar", uitleg: "366 dagen, elke 4 jaar." },
           ],
-          theorie: "Cito-feit: 365 = gewoon. 366 = schrikkel. 360 = bestaat niet (denk-fout). 364 = bestaat niet. Onthoud deze 2 cijfers.",
+          theorie: "Toets-feit: 365 = gewoon. 366 = schrikkel. 360 = bestaat niet (denk-fout). 364 = bestaat niet. Onthoud deze 2 cijfers.",
           voorbeelden: [
             { type: "stap", tekst: "1 januari + 365 dagen = 1 januari volgend jaar (in gewoon jaar)." },
             { type: "stap", tekst: "1 januari + 366 dagen = 1 januari volgend jaar (in schrikkeljaar zoals 2024)." },
@@ -128,7 +128,7 @@ const steps = [
   {
     title: "Dagen tellen — vooruit en achteruit",
     explanation:
-      "Cito vraagt vaak: *'Wat is de dag X dagen na DATUM?'* of *'X dagen geleden was DATUM'*.\n\n**Stappenplan — vooruit tellen (na)**:\n1. Schrijf de start-datum op.\n2. Tel zo veel mogelijk **hele weken** (7 dagen) — verschuif de datum gewoon, dag-naam blijft hetzelfde.\n3. Tel de resterende dagen één voor één.\n\n**Voorbeeld**: 'Wat is 10 dagen na **donderdag 5 maart**?'\n• 10 dagen = **7 + 3 dagen**.\n• Vrijdag 5 maart + 1 week = vrijdag 12 maart.\n• 12 maart + 3 dagen = za 13, zo 14, **ma 15 maart**.\n• Antwoord: **maandag 15 maart**.\n\n**Stappenplan — achteruit tellen (geleden)**:\nZelfde, maar terug in plaats van vooruit.\n\n**Voorbeeld**: '14 dagen geleden was woensdag 20 mei. Welke dag is **vandaag** = wat als jij toen al wist het is 'vandaag 14 dagen later'?'* Beter: 'Wat is 14 dagen NA woensdag 20 mei?'\n• 14 dagen = 2 weken.\n• Datum + 14 = 3 juni. Dag-naam blijft **woensdag** *(want hele weken)*.\n• Antwoord: woensdag 3 juni.\n\n**Cito-truc — dag-naam berekenen**:\n• **+7 dagen = zelfde dag-naam** (dezelfde dag van de week).\n• **+1 dag** = volgende dag.\n• **+14 dagen** = ook zelfde dag.\n• **+21 dagen** = zelfde dag.\n\nElk veelvoud van 7 → dezelfde dag-naam.\n\n**Veel-voorkomende fout**:\n• Vergeten dat een maand niet altijd 30 of 31 heeft.\n• Vergeten dat februari 28 of 29 dagen heeft.\n• Verwarring tussen 'na' en 'geleden'.",
+      "De toets vraagt vaak: *'Wat is de dag X dagen na DATUM?'* of *'X dagen geleden was DATUM'*.\n\n**Stappenplan — vooruit tellen (na)**:\n1. Schrijf de start-datum op.\n2. Tel zo veel mogelijk **hele weken** (7 dagen) — verschuif de datum gewoon, dag-naam blijft hetzelfde.\n3. Tel de resterende dagen één voor één.\n\n**Voorbeeld**: 'Wat is 10 dagen na **donderdag 5 maart**?'\n• 10 dagen = **7 + 3 dagen**.\n• Vrijdag 5 maart + 1 week = vrijdag 12 maart.\n• 12 maart + 3 dagen = za 13, zo 14, **ma 15 maart**.\n• Antwoord: **maandag 15 maart**.\n\n**Stappenplan — achteruit tellen (geleden)**:\nZelfde, maar terug in plaats van vooruit.\n\n**Voorbeeld**: '14 dagen geleden was woensdag 20 mei. Welke dag is **vandaag** = wat als jij toen al wist het is 'vandaag 14 dagen later'?'* Beter: 'Wat is 14 dagen NA woensdag 20 mei?'\n• 14 dagen = 2 weken.\n• Datum + 14 = 3 juni. Dag-naam blijft **woensdag** *(want hele weken)*.\n• Antwoord: woensdag 3 juni.\n\n**Toets-truc — dag-naam berekenen**:\n• **+7 dagen = zelfde dag-naam** (dezelfde dag van de week).\n• **+1 dag** = volgende dag.\n• **+14 dagen** = ook zelfde dag.\n• **+21 dagen** = zelfde dag.\n\nElk veelvoud van 7 → dezelfde dag-naam.\n\n**Veel-voorkomende fout**:\n• Vergeten dat een maand niet altijd 30 of 31 heeft.\n• Vergeten dat februari 28 of 29 dagen heeft.\n• Verwarring tussen 'na' en 'geleden'.",
     checks: [
       {
         q: "**7 dagen na maandag** is welke dag?",
@@ -175,7 +175,7 @@ const steps = [
   {
     title: "Schrikkeljaar + speciale data",
     explanation:
-      "**Schrikkeljaar** = een jaar met **366 dagen**. Dat extra dagje zit in februari (29 i.p.v. 28).\n\n**Wanneer is het schrikkeljaar?**\n• Elk **4e jaar**: 2020, 2024, 2028, 2032, 2036, ...\n• Behalve hele eeuwen (1900, 2100 niet), tenzij deelbaar door 400 (2000 wél, 2400 wél).\n• Voor Cito kun je makkelijk werken met: 'deelbaar door 4 → schrikkeljaar'. Bv. 2024 ÷ 4 = 506 → schrikkeljaar ✓.\n\n**Voorbeelden**:\n• 2024 — schrikkeljaar (deelbaar door 4).\n• 2025 — gewoon jaar.\n• 2026 — gewoon jaar.\n• 2027 — gewoon jaar.\n• 2028 — schrikkeljaar.\n• 2100 — geen schrikkeljaar *(eeuwjaar, niet deelbaar door 400)*.\n\n**Speciale data om te kennen**:\n• **1 januari** — Nieuwjaarsdag.\n• **5 december** — Sinterklaas (pakjesavond).\n• **25 december** — Eerste kerstdag.\n• **26 december** — Tweede kerstdag.\n• **31 december** — Oudejaarsdag.\n• **27 april** — Koningsdag.\n• **4 mei** — Dodenherdenking.\n• **5 mei** — Bevrijdingsdag.\n• **Pasen** — eerste zondag na de eerste volle maan na 21 maart *(verandert per jaar)*.\n\n**Cito-truc — schrikkeljaar 'deel door 4'**:\nKijk of het jaartal deelbaar is door 4. Zo ja: 99% schrikkeljaar.\n\n**Veel-voorkomende fout**:\nDenken dat 29 februari elk jaar bestaat. Alleen in schrikkeljaar.",
+      "**Schrikkeljaar** = een jaar met **366 dagen**. Dat extra dagje zit in februari (29 i.p.v. 28).\n\n**Wanneer is het schrikkeljaar?**\n• Elk **4e jaar**: 2020, 2024, 2028, 2032, 2036, ...\n• Behalve hele eeuwen (1900, 2100 niet), tenzij deelbaar door 400 (2000 wél, 2400 wél).\n• Voor de Doorstroomtoets kun je makkelijk werken met: 'deelbaar door 4 → schrikkeljaar'. Bv. 2024 ÷ 4 = 506 → schrikkeljaar ✓.\n\n**Voorbeelden**:\n• 2024 — schrikkeljaar (deelbaar door 4).\n• 2025 — gewoon jaar.\n• 2026 — gewoon jaar.\n• 2027 — gewoon jaar.\n• 2028 — schrikkeljaar.\n• 2100 — geen schrikkeljaar *(eeuwjaar, niet deelbaar door 400)*.\n\n**Speciale data om te kennen**:\n• **1 januari** — Nieuwjaarsdag.\n• **5 december** — Sinterklaas (pakjesavond).\n• **25 december** — Eerste kerstdag.\n• **26 december** — Tweede kerstdag.\n• **31 december** — Oudejaarsdag.\n• **27 april** — Koningsdag.\n• **4 mei** — Dodenherdenking.\n• **5 mei** — Bevrijdingsdag.\n• **Pasen** — eerste zondag na de eerste volle maan na 21 maart *(verandert per jaar)*.\n\n**Toets-truc — schrikkeljaar 'deel door 4'**:\nKijk of het jaartal deelbaar is door 4. Zo ja: 99% schrikkeljaar.\n\n**Veel-voorkomende fout**:\nDenken dat 29 februari elk jaar bestaat. Alleen in schrikkeljaar.",
     checks: [
       {
         q: "Is **2024** een schrikkeljaar?",
@@ -186,13 +186,13 @@ const steps = [
           stappen: [
             { titel: "De 'deel door 4'-truc", tekst: "**Vuistregel**: een jaar is een **schrikkeljaar** als het deelbaar is door **4**. Test 2024: 2024 ÷ 4 = 506 (rond getal, geen rest) → **schrikkeljaar**." },
             { titel: "Snel testen", tekst: "Kijk naar de **laatste 2 cijfers**: deelbaar door 4? Dan is het jaar dat ook.\n• 2024 → 24 ÷ 4 = 6 ✓ schrikkel\n• 2025 → 25 ÷ 4 = 6,25 ✗ gewoon\n• 2026 → 26 ÷ 4 = 6,5 ✗ gewoon\n• 2028 → 28 ÷ 4 = 7 ✓ schrikkel" },
-            { titel: "Uitzondering: eeuw-jaren", tekst: "**Hele eeuwen** (eindigend op 00) zijn alleen schrikkel als deelbaar door 400. Bv:\n• 1900: niet door 400 → **geen** schrikkel\n• 2000: wel door 400 → **wel** schrikkel\n• 2100: niet door 400 → geen schrikkel\nVoor Cito groep 6-8 meestal niet getoetst, maar handig om te weten." },
+            { titel: "Uitzondering: eeuw-jaren", tekst: "**Hele eeuwen** (eindigend op 00) zijn alleen schrikkel als deelbaar door 400. Bv:\n• 1900: niet door 400 → **geen** schrikkel\n• 2000: wel door 400 → **wel** schrikkel\n• 2100: niet door 400 → geen schrikkel\nVoor Doorstroomtoets groep 6-8 meestal niet getoetst, maar handig om te weten." },
           ],
           woorden: [
             { woord: "schrikkeljaar", uitleg: "Jaar met 366 dagen (1 dag extra in februari)." },
             { woord: "deelbaar", uitleg: "Een getal valt rond te delen (geen rest)." },
           ],
-          theorie: "Cito-truc schrikkeljaar:\n• Deelbaar door 4 → ja\n• Eindigt op 00 → moet ook door 400 deelbaar\n• Bv. 2024, 2028, 2032 = schrikkel. 2025, 2026, 2027 = gewoon.",
+          theorie: "Toets-truc schrikkeljaar:\n• Deelbaar door 4 → ja\n• Eindigt op 00 → moet ook door 400 deelbaar\n• Bv. 2024, 2028, 2032 = schrikkel. 2025, 2026, 2027 = gewoon.",
           voorbeelden: [
             { type: "stap", tekst: "2024 ÷ 4 = 506. Geen rest. Schrikkeljaar ✓." },
             { type: "stap", tekst: "2026 ÷ 4 = 506,5. Wel rest. Geen schrikkel." },
@@ -231,7 +231,7 @@ const steps = [
   {
     title: "Leeftijden uitrekenen",
     explanation:
-      "**Hoe bereken je een leeftijd?**\n\n**Formule** *(uit je hoofd!)*:\n**Leeftijd = huidig jaar − geboortejaar**\n\n**Maar let op**: ben je dit jaar al **jarig geweest**? Zo niet, **1 jaar eraf**.\n\n**Voorbeeld 1**: Anna is geboren op **3 mei 2010**. Hoe oud is ze op **1 augustus 2026**?\n• 2026 − 2010 = 16.\n• Is ze in 2026 al jarig geweest *(3 mei)*? Ja, 1 augustus is ná 3 mei.\n• Antwoord: **16 jaar**.\n\n**Voorbeeld 2**: Tom is geboren op **20 oktober 2013**. Hoe oud is hij op **5 maart 2026**?\n• 2026 − 2013 = 13.\n• Is hij in 2026 al jarig geweest *(20 oktober)*? **Nee** — 5 maart is vóór 20 oktober.\n• Dus 1 jaar eraf: **12 jaar**.\n\n**Cito-stappenplan**:\n1. Trek geboortejaar af van huidig jaar.\n2. Check: heeft de jarige al verjaardag gehad dit jaar?\n   - **Ja** → klaar, leeftijd is het verschil.\n   - **Nee** → trek 1 af.\n\n**Voorbeeld 3 — meer mensen vergelijken**:\n*'Lisa is geboren in 2014, haar broer Jeroen in 2012. Hoeveel jaar verschil?'*\n• 2014 − 2012 = 2 jaar.\n• **Lisa is 2 jaar jonger dan Jeroen**.\n\n**Cito-truc — vraagstelling**:\n• *'Hoeveel ouder?'* → groot − klein (= verschil).\n• *'In welk jaar wordt X = leeftijd?'* → geboortejaar + leeftijd.\n\n**Voorbeeld 4**: 'Mark is geboren in 2014. Wanneer wordt hij 18?'\n• 2014 + 18 = 2032. **In 2032 wordt Mark 18**.",
+      "**Hoe bereken je een leeftijd?**\n\n**Formule** *(uit je hoofd!)*:\n**Leeftijd = huidig jaar − geboortejaar**\n\n**Maar let op**: ben je dit jaar al **jarig geweest**? Zo niet, **1 jaar eraf**.\n\n**Voorbeeld 1**: Anna is geboren op **3 mei 2010**. Hoe oud is ze op **1 augustus 2026**?\n• 2026 − 2010 = 16.\n• Is ze in 2026 al jarig geweest *(3 mei)*? Ja, 1 augustus is ná 3 mei.\n• Antwoord: **16 jaar**.\n\n**Voorbeeld 2**: Tom is geboren op **20 oktober 2013**. Hoe oud is hij op **5 maart 2026**?\n• 2026 − 2013 = 13.\n• Is hij in 2026 al jarig geweest *(20 oktober)*? **Nee** — 5 maart is vóór 20 oktober.\n• Dus 1 jaar eraf: **12 jaar**.\n\n**Toets-stappenplan**:\n1. Trek geboortejaar af van huidig jaar.\n2. Check: heeft de jarige al verjaardag gehad dit jaar?\n   - **Ja** → klaar, leeftijd is het verschil.\n   - **Nee** → trek 1 af.\n\n**Voorbeeld 3 — meer mensen vergelijken**:\n*'Lisa is geboren in 2014, haar broer Jeroen in 2012. Hoeveel jaar verschil?'*\n• 2014 − 2012 = 2 jaar.\n• **Lisa is 2 jaar jonger dan Jeroen**.\n\n**Toets-truc — vraagstelling**:\n• *'Hoeveel ouder?'* → groot − klein (= verschil).\n• *'In welk jaar wordt X = leeftijd?'* → geboortejaar + leeftijd.\n\n**Voorbeeld 4**: 'Mark is geboren in 2014. Wanneer wordt hij 18?'\n• 2014 + 18 = 2032. **In 2032 wordt Mark 18**.",
     checks: [
       {
         q: "Hoe **bereken** je iemands leeftijd?",
@@ -280,7 +280,7 @@ const steps = [
   {
     title: "Praktijk — vakantie, school, geboorten",
     explanation:
-      "Cito-praktijksommen mengen vaak: data + tellen + leeftijd.\n\n**Voorbeeld — vakantie**:\n*'De vakantie duurt van zaterdag 19 juli t/m zondag 31 augustus. Hoeveel dagen vakantie?'*\n• Juli: van 19 juli t/m 31 juli = 31 − 19 + 1 = **13 dagen** (+1 omdat 19 juli zelf meedoet).\n• Augustus: van 1 augustus t/m 31 augustus = **31 dagen**.\n• Totaal: 13 + 31 = **44 dagen**.\n\n**Voorbeeld — schooltrip**:\n*'School-uitje is 4 dagen. We vertrekken maandag 14 mei. Op welke dag komen we terug?'*\n• Maandag 14 mei (dag 1) → di 15 (dag 2) → wo 16 (dag 3) → do 17 (dag 4).\n• Terugkomst: **donderdag 17 mei**.\n\n**Voorbeeld — geboorten**:\n*'Tante Lisa wordt op 1 oktober 2026 35 jaar. In welk jaar is ze geboren?'*\n• 2026 − 35 = **1991**.\n\n**Voorbeeld — vergelijken**:\n*'Joost is geboren in 2014. Lisa is 3 jaar ouder. In welk jaar is Lisa geboren?'*\n• Lisa is 3 ouder → 3 jaar eerder geboren.\n• 2014 − 3 = **2011**.\n\n**Cito-tip**:\n• 'Hoeveel dagen van X t/m Y?' → tel beide datums mee (groot − klein + 1).\n• 'Hoeveel dagen van X tot Y?' → niet beide meetellen (groot − klein).",
+      "Toets-praktijksommen mengen vaak: data + tellen + leeftijd.\n\n**Voorbeeld — vakantie**:\n*'De vakantie duurt van zaterdag 19 juli t/m zondag 31 augustus. Hoeveel dagen vakantie?'*\n• Juli: van 19 juli t/m 31 juli = 31 − 19 + 1 = **13 dagen** (+1 omdat 19 juli zelf meedoet).\n• Augustus: van 1 augustus t/m 31 augustus = **31 dagen**.\n• Totaal: 13 + 31 = **44 dagen**.\n\n**Voorbeeld — schooltrip**:\n*'School-uitje is 4 dagen. We vertrekken maandag 14 mei. Op welke dag komen we terug?'*\n• Maandag 14 mei (dag 1) → di 15 (dag 2) → wo 16 (dag 3) → do 17 (dag 4).\n• Terugkomst: **donderdag 17 mei**.\n\n**Voorbeeld — geboorten**:\n*'Tante Lisa wordt op 1 oktober 2026 35 jaar. In welk jaar is ze geboren?'*\n• 2026 − 35 = **1991**.\n\n**Voorbeeld — vergelijken**:\n*'Joost is geboren in 2014. Lisa is 3 jaar ouder. In welk jaar is Lisa geboren?'*\n• Lisa is 3 ouder → 3 jaar eerder geboren.\n• 2014 − 3 = **2011**.\n\n**Toets-tip**:\n• 'Hoeveel dagen van X t/m Y?' → tel beide datums mee (groot − klein + 1).\n• 'Hoeveel dagen van X tot Y?' → niet beide meetellen (groot − klein).",
     checks: [
       {
         q: "Hoeveel **dagen** is een **week**?",
@@ -323,11 +323,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — kalender-mix",
+    title: "Toets-eindopdracht — kalender-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: data tellen, schrikkeljaar, leeftijden, praktijksommen.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: data tellen, schrikkeljaar, leeftijden, praktijksommen.\n\nVeel succes!",
     checks: [
       {
         q: "Hoeveel **dagen** in een **schrikkeljaar**?",
@@ -354,7 +354,7 @@ const steps = [
         wrongHints: [null, "Te veel.", "Te weinig.", "Te weinig."],
         uitlegPad: {
           stappen: [
-            { titel: "Let op de vraag — 'tot' vs 't/m'", tekst: "Belangrijk verschil in Cito-vragen:\n• **'tot'** = einddag NIET meetellen\n• **'t/m' (tot en met)** = einddag WEL meetellen\nHier staat 'tot' → 10 juli zelf telt niet mee." },
+            { titel: "Let op de vraag — 'tot' vs 't/m'", tekst: "Belangrijk verschil in toetsvragen:\n• **'tot'** = einddag NIET meetellen\n• **'t/m' (tot en met)** = einddag WEL meetellen\nHier staat 'tot' → 10 juli zelf telt niet mee." },
             { titel: "Reken: 10 juni → 10 juli", tekst: "Van 10 juni tot 10 juli is precies **1 maand**. Juni heeft **30 dagen**. Dus 30 dagen tussen 10 juni en 10 juli (10 juli niet meegerekend)." },
             { titel: "Optellen-methode (check)", tekst: "Van 10 juni tot 30 juni = 30 − 10 = **20 dagen** (juni klaar).\nVan 1 juli tot 10 juli (10 juli niet mee) = **9 dagen**.\nTotaal: 20 + 9 = 29... \nMaar denk goed na: 10 juni telt mee als startpunt — niet als 'verstreken dag'. Vanaf 10 juni: 20 dagen later = 30 juni. Daarna nog 10 dagen = 10 juli. Totaal: **30 dagen**." },
           ],
@@ -362,7 +362,7 @@ const steps = [
             { woord: "tot vs t/m", uitleg: "'tot' = einde NIET inclusief, 't/m' = wel inclusief." },
             { woord: "verstreken dagen", uitleg: "Aantal dagen dat voorbij is gegaan." },
           ],
-          theorie: "Cito-truc datumverschil:\n• **Zelfde dag-getal volgende maand** → aantal dagen van die maand.\n• 10 jun tot 10 jul = juni-dagen = 30.\n• 5 mrt tot 5 apr = maart-dagen = 31.\n• 15 feb tot 15 mrt = februari-dagen = 28 (of 29 in schrikkel).",
+          theorie: "Toets-truc datumverschil:\n• **Zelfde dag-getal volgende maand** → aantal dagen van die maand.\n• 10 jun tot 10 jul = juni-dagen = 30.\n• 5 mrt tot 5 apr = maart-dagen = 31.\n• 15 feb tot 15 mrt = februari-dagen = 28 (of 29 in schrikkel).",
           voorbeelden: [
             { type: "stap", tekst: "Van 5 jan tot 5 feb = januari-dagen = 31." },
             { type: "stap", tekst: "Van 20 sep tot 20 okt = september-dagen = 30." },

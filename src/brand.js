@@ -10,7 +10,7 @@ export const BRAND = {
   email: "info@smulsoft.nl",
   publisher: "Smulsoft",
   // Maand 1 snoei (visie-bewaker 2026-05-10): identiteits-tekst aangescherpt.
-  // ICP = Cito-ouder. "Spelen" weg uit payoff (game-impliciet, niet ICP).
+  // ICP = Toets-ouder. "Spelen" weg uit payoff (game-impliciet, niet ICP).
   // Slogan benadrukt "écht begrijpen" als didactische belofte.
   slogan: "Een kwartier per dag — écht begrijpen wat je leert.",
   payoff: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag is genoeg.",

@@ -1,5 +1,5 @@
 // Leerpad: Het lichaam + gezondheid — groep 6-8 PO.
-// Cito-onderdeel wereldoriëntatie (natuur+gezondheid). Referentieniveau 1F.
+// Toets-onderdeel wereldoriëntatie (natuur+gezondheid). Referentieniveau 1F.
 // 6 stappen met uitlegPad.
 
 const COLORS = {
@@ -24,7 +24,7 @@ const chapters = [
   { letter: "C", title: "Organen", emoji: "🫁", from: 2, to: 2 },
   { letter: "D", title: "Voeding (Schijf van Vijf)", emoji: "🥦", from: 3, to: 3 },
   { letter: "E", title: "Hygiëne + slaap + sport", emoji: "💪", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function skeletSvg() {
@@ -85,7 +85,7 @@ const steps = [
   {
     title: "Het skelet — botten van je lichaam",
     explanation:
-      "Het **skelet** is alle **botten** in je lichaam — samen meer dan **200 botten** *(206 bij volwassenen, baby's hebben er nog meer omdat sommige later samengroeien)*.\n\n**Wat doet je skelet?**\n1. **Vorm geven** aan je lichaam.\n2. **Bescherming** van organen *(schedel beschermt hersenen, ribben beschermen hart+longen)*.\n3. **Beweging** mogelijk maken *(spieren trekken aan botten)*.\n4. **Bloed maken** *(in het beenmerg, midden in je grote botten)*.\n\n**Belangrijkste botten** *(uit je hoofd!)*:\n• **Schedel** — beschermt je hersenen.\n• **Wervelkolom** *(rug)* — een ketting van 33 wervels van nek tot stuit.\n• **Ribben** — 12 paar, beschermen hart + longen.\n• **Sleutelbeen** — boven je schouder.\n• **Opperarmbot** — bovenarm.\n• **Spaakbeen + ellepijp** — onderarm.\n• **Bekken** *(heup)* — verbindt benen met rug.\n• **Bovenbeen-bot (dijbeen)** — grootste bot van je lijf.\n• **Scheenbeen + kuitbeen** — onderbeen.\n• **Hand**: 27 botjes per hand. **Voet**: 26 botjes.\n\n**Cito-feitjes**:\n• Het **grootste bot** is het **dijbeen**.\n• Het **kleinste bot** zit in je **oor** *(stijgbeugel — 3 mm)*.\n• Botten zijn levend! Ze groeien én herstellen na een breuk.\n• **Gewricht** = plek waar 2 botten elkaar ontmoeten *(knie, elleboog)*.\n\n**Gewrichten** = plekken waar botten kunnen bewegen:\n• **Scharniergewricht**: knie, elleboog *(één richting)*.\n• **Kogelgewricht**: schouder, heup *(alle richtingen)*.",
+      "Het **skelet** is alle **botten** in je lichaam — samen meer dan **200 botten** *(206 bij volwassenen, baby's hebben er nog meer omdat sommige later samengroeien)*.\n\n**Wat doet je skelet?**\n1. **Vorm geven** aan je lichaam.\n2. **Bescherming** van organen *(schedel beschermt hersenen, ribben beschermen hart+longen)*.\n3. **Beweging** mogelijk maken *(spieren trekken aan botten)*.\n4. **Bloed maken** *(in het beenmerg, midden in je grote botten)*.\n\n**Belangrijkste botten** *(uit je hoofd!)*:\n• **Schedel** — beschermt je hersenen.\n• **Wervelkolom** *(rug)* — een ketting van 33 wervels van nek tot stuit.\n• **Ribben** — 12 paar, beschermen hart + longen.\n• **Sleutelbeen** — boven je schouder.\n• **Opperarmbot** — bovenarm.\n• **Spaakbeen + ellepijp** — onderarm.\n• **Bekken** *(heup)* — verbindt benen met rug.\n• **Bovenbeen-bot (dijbeen)** — grootste bot van je lijf.\n• **Scheenbeen + kuitbeen** — onderbeen.\n• **Hand**: 27 botjes per hand. **Voet**: 26 botjes.\n\n**Toets-feitjes**:\n• Het **grootste bot** is het **dijbeen**.\n• Het **kleinste bot** zit in je **oor** *(stijgbeugel — 3 mm)*.\n• Botten zijn levend! Ze groeien én herstellen na een breuk.\n• **Gewricht** = plek waar 2 botten elkaar ontmoeten *(knie, elleboog)*.\n\n**Gewrichten** = plekken waar botten kunnen bewegen:\n• **Scharniergewricht**: knie, elleboog *(één richting)*.\n• **Kogelgewricht**: schouder, heup *(alle richtingen)*.",
     svg: skeletSvg(),
     checks: [
       {
@@ -95,7 +95,7 @@ const steps = [
         wrongHints: [null, "Veel te weinig.", "Veel te veel.", "Niet precies dat aantal."],
         uitlegPad: {
           stappen: [
-            { titel: "206 botten — een geheugen-getal", tekst: "Een volwassen mens heeft **206 botten**. Onthoud dit getal — het komt vaak op Cito-vragen voor. **'Meer dan 200'** is het juiste antwoord-bereik." },
+            { titel: "206 botten — een geheugen-getal", tekst: "Een volwassen mens heeft **206 botten**. Onthoud dit getal — het komt vaak op toetsvragen voor. **'Meer dan 200'** is het juiste antwoord-bereik." },
             { titel: "Baby's hebben er meer!", tekst: "Een **baby** heeft ongeveer **270 botten**. Tijdens het opgroeien groeien sommige botten aan elkaar (bv. de schedel-platen). Een volwassene eindigt op 206." },
             { titel: "Waar zitten er veel?", tekst: "**Hand** = 27 botjes per hand (54 totaal voor 2 handen).\n**Voet** = 26 botjes per voet (52 totaal).\nDus alleen al **handen + voeten = 106** van de 206 botten — meer dan de helft!" },
           ],
@@ -103,7 +103,7 @@ const steps = [
             { woord: "skelet", uitleg: "Alle botten in je lichaam samen." },
             { woord: "wervelkolom", uitleg: "Ketting van 33 wervels langs je rug." },
           ],
-          theorie: "Cito-truc bot-aantallen: 50 of 100 = te weinig (handen alleen al hebben meer). 1000 = te veel. **Tussen 200 en 300 = correct**. Bij 'meer dan 200' = ja.",
+          theorie: "Toets-truc bot-aantallen: 50 of 100 = te weinig (handen alleen al hebben meer). 1000 = te veel. **Tussen 200 en 300 = correct**. Bij 'meer dan 200' = ja.",
           voorbeelden: [
             { type: "stap", tekst: "Schedel: lijkt 1 bot, maar bestaat eigenlijk uit 22 botten die samengegroeid zijn." },
             { type: "stap", tekst: "Grootste bot = dijbeen (~46 cm bij volwassene). Kleinste = stijgbeugel in je oor (3 mm)." },
@@ -128,7 +128,7 @@ const steps = [
             { titel: "Geen schedel / wervelkolom", tekst: "Schedel = 22 botten samen (lijkt 1 bot maar is gefuseerd). Wervelkolom = 33 losse wervels op een kolom. Beide zijn dus geen 'één bot'." },
           ],
           woorden: [{ woord: "dijbeen", uitleg: "Bot tussen heup en knie — grootste van je lichaam." }],
-          theorie: "Cito-truc bot-grootte: dijbeen > opperarmbot > scheenbeen > kuitbeen. Allemaal lange botten in de extremiteiten.",
+          theorie: "Toets-truc bot-grootte: dijbeen > opperarmbot > scheenbeen > kuitbeen. Allemaal lange botten in de extremiteiten.",
           voorbeelden: [
             { type: "stap", tekst: "Bij een volwassene 1,80 m lang is het dijbeen ongeveer 46 cm = een kwart van je hele lengte!" },
             { type: "stap", tekst: "Tegenover dijbeen: stijgbeugel in oor = 3 mm = kleinste bot van het lichaam." },
@@ -156,7 +156,7 @@ const steps = [
             { woord: "schedel", uitleg: "Bot rond hoofd — beschermt hersenen." },
             { woord: "hersenen", uitleg: "Het denk-orgaan in je hoofd." },
           ],
-          theorie: "Cito-truc: bot beschermt orgaan dat ernaast zit. Schedel ↔ hersenen. Ribbenkast ↔ hart+longen. Bekkenbot ↔ blaas+darmen.",
+          theorie: "Toets-truc: bot beschermt orgaan dat ernaast zit. Schedel ↔ hersenen. Ribbenkast ↔ hart+longen. Bekkenbot ↔ blaas+darmen.",
           voorbeelden: [
             { type: "stap", tekst: "Fietshelm = extra bescherming op de schedel. Voor 12-jarigen wettelijk niet verplicht maar wel slim — schedel zelf is niet onverwoestbaar." },
           ],
@@ -184,7 +184,7 @@ const steps = [
             { woord: "kraakbeen", uitleg: "Zacht-glad weefsel als beschermlaag tussen botten." },
             { woord: "gewrichtsvloeistof", uitleg: "Smeermiddel in een gewricht." },
           ],
-          theorie: "Cito-truc gewricht: 2 botten + beweging mogelijk = gewricht. Geen beweging? Dan zijn ze vastgegroeid (zoals schedel-platen) — geen gewricht.",
+          theorie: "Toets-truc gewricht: 2 botten + beweging mogelijk = gewricht. Geen beweging? Dan zijn ze vastgegroeid (zoals schedel-platen) — geen gewricht.",
           voorbeelden: [
             { type: "stap", tekst: "Knie buigen: dijbeen + scheenbeen schuiven langs elkaar (scharnier). Schouder draaien: kogelvorm in komvorm (alle richtingen)." },
             { type: "stap", tekst: "Bij artrose slijt kraakbeen → bot wrijft over bot → pijn. Daarom heupoperaties bij ouderen — heup-gewricht wordt vervangen." },
@@ -204,7 +204,7 @@ const steps = [
   {
     title: "Spieren en bloed",
     explanation:
-      "**Spieren** zorgen dat je kunt **bewegen**. Ze zitten vast aan botten en kunnen samentrekken *(korter worden)* of ontspannen.\n\n**Hoeveel spieren?**\nMeer dan **600** in je lichaam!\n\n**3 soorten spieren**:\n1. **Skeletspieren** — om te bewegen *(armen, benen, gezicht)*. Je kunt ze bewust besturen.\n2. **Hartspier** — alleen in het hart. Werkt automatisch.\n3. **Gladde spieren** — in maag, darmen, bloedvaten. Werken automatisch.\n\n**Voorbeelden van bekende spieren**:\n• **Biceps** — bovenarm, voorkant.\n• **Triceps** — bovenarm, achterkant.\n• **Buikspieren** *(rechte buikspier = 'sixpack')*.\n• **Bilspieren** — grootste spier van je lichaam.\n• **Kuitspier** — achterkant onderbeen.\n• **Kaakspier (masseter)** — de sterkste spier in verhouding tot zijn grootte.\n\n**Bloed — wat zit erin?**\n• **Rode bloedcellen** — vervoeren zuurstof.\n• **Witte bloedcellen** — vechten tegen ziektes.\n• **Plaatjes** — zorgen voor stolling *(korst bij wondjes)*.\n• **Plasma** — vloeistof, vervoert voedingsstoffen.\n\n**Bloedsomloop**:\n1. Hart pompt bloed door je lichaam via **slagaders**.\n2. Bloed brengt zuurstof + voeding naar alle cellen.\n3. Op terugweg pakt bloed afval (zoals CO₂) op.\n4. Bloed gaat terug naar hart via **aders**.\n5. Bloed gaat naar longen om CO₂ uit te ademen + nieuwe zuurstof op te halen.\n\n**Hart-feitjes**:\n• Klopt ongeveer **70 keer per minuut** *(in rust)*.\n• Pompt **5 liter bloed per minuut**.\n• Heeft 4 kamers: 2 boezems + 2 kamers.\n\n**Cito-vraag**: 'Wat doet je hart?' → Bloed pompen door je lichaam.",
+      "**Spieren** zorgen dat je kunt **bewegen**. Ze zitten vast aan botten en kunnen samentrekken *(korter worden)* of ontspannen.\n\n**Hoeveel spieren?**\nMeer dan **600** in je lichaam!\n\n**3 soorten spieren**:\n1. **Skeletspieren** — om te bewegen *(armen, benen, gezicht)*. Je kunt ze bewust besturen.\n2. **Hartspier** — alleen in het hart. Werkt automatisch.\n3. **Gladde spieren** — in maag, darmen, bloedvaten. Werken automatisch.\n\n**Voorbeelden van bekende spieren**:\n• **Biceps** — bovenarm, voorkant.\n• **Triceps** — bovenarm, achterkant.\n• **Buikspieren** *(rechte buikspier = 'sixpack')*.\n• **Bilspieren** — grootste spier van je lichaam.\n• **Kuitspier** — achterkant onderbeen.\n• **Kaakspier (masseter)** — de sterkste spier in verhouding tot zijn grootte.\n\n**Bloed — wat zit erin?**\n• **Rode bloedcellen** — vervoeren zuurstof.\n• **Witte bloedcellen** — vechten tegen ziektes.\n• **Plaatjes** — zorgen voor stolling *(korst bij wondjes)*.\n• **Plasma** — vloeistof, vervoert voedingsstoffen.\n\n**Bloedsomloop**:\n1. Hart pompt bloed door je lichaam via **slagaders**.\n2. Bloed brengt zuurstof + voeding naar alle cellen.\n3. Op terugweg pakt bloed afval (zoals CO₂) op.\n4. Bloed gaat terug naar hart via **aders**.\n5. Bloed gaat naar longen om CO₂ uit te ademen + nieuwe zuurstof op te halen.\n\n**Hart-feitjes**:\n• Klopt ongeveer **70 keer per minuut** *(in rust)*.\n• Pompt **5 liter bloed per minuut**.\n• Heeft 4 kamers: 2 boezems + 2 kamers.\n\n**toetsvraag**: 'Wat doet je hart?' → Bloed pompen door je lichaam.",
     checks: [
       {
         q: "Hoeveel spieren heeft een mens ongeveer?",
@@ -228,7 +228,7 @@ const steps = [
             { woord: "slagaders", uitleg: "Bloedvaten WEG van het hart, dragen zuurstofrijk bloed." },
             { woord: "aders", uitleg: "Bloedvaten NAAR het hart, dragen zuurstofarm bloed terug." },
           ],
-          theorie: "Cito-feit: hart-functie = **bloed pompen**. Niet ademen (longen), niet verteren (maag), niet denken (hersenen). Elk orgaan heeft 1 hoofdtaak — onthoud die.",
+          theorie: "Toets-feit: hart-functie = **bloed pompen**. Niet ademen (longen), niet verteren (maag), niet denken (hersenen). Elk orgaan heeft 1 hoofdtaak — onthoud die.",
           voorbeelden: [
             { type: "stap", tekst: "5 liter bloed pompt het hart per minuut. In een dag = ~7000 liter — gelijk aan vullen van 35 badkuipen!" },
             { type: "stap", tekst: "Hart heeft 4 kamers: 2 boezems (boven) + 2 kamers (onder). Linkerkant pompt naar lichaam, rechterkant naar longen." },
@@ -260,7 +260,7 @@ const steps = [
   {
     title: "De organen — wat doet elk?",
     explanation:
-      "Organen zijn **delen van je lichaam** met een speciale taak.\n\n**De belangrijkste organen** *(uit je hoofd!)*:\n\n• **Hersenen** — denken, voelen, besturen. In je hoofd.\n• **Hart** — pompt bloed. In je borst, iets links.\n• **Longen** — ademen *(zuurstof in, CO₂ uit)*. In je borst.\n• **Maag** — verteert eten *(eerste stap)*. Boven in de buik.\n• **Darmen** — neemt voedingsstoffen op + maakt poep. In de buik.\n• **Lever** — filtert bloed, maakt gal. Rechtsboven in buik.\n• **Nieren** — filteren urine uit bloed *(je hebt er 2)*. In de rug.\n• **Blaas** — slaat urine op. Onder in buik.\n• **Huid** — beschermt je hele lichaam. Grootste 'orgaan'.\n• **Ogen** — zien.\n• **Oren** — horen + evenwicht.\n• **Neus** — ruiken + ademen.\n• **Tong** — proeven + praten + slikken.\n\n**Cito-vragen — kerntaak per orgaan**:\n*'Welk orgaan filtert bloed?'* → Lever (of nieren bij urine).\n*'Welk orgaan vermalst eten?'* → Maag.\n*'Welk orgaan pompt bloed?'* → Hart.\n*'Welk orgaan vat zuurstof op uit lucht?'* → Longen.\n\n**Zintuigen** *(5 stuks)*:\n• Zien — ogen.\n• Horen — oren.\n• Ruiken — neus.\n• Proeven — tong.\n• Voelen — huid.\n\n**Hoeveel organen?**\nNiet precies te zeggen — afhankelijk hoe je telt. Maar de **bovenstaande lijst** is wat je moet kennen voor Cito.",
+      "Organen zijn **delen van je lichaam** met een speciale taak.\n\n**De belangrijkste organen** *(uit je hoofd!)*:\n\n• **Hersenen** — denken, voelen, besturen. In je hoofd.\n• **Hart** — pompt bloed. In je borst, iets links.\n• **Longen** — ademen *(zuurstof in, CO₂ uit)*. In je borst.\n• **Maag** — verteert eten *(eerste stap)*. Boven in de buik.\n• **Darmen** — neemt voedingsstoffen op + maakt poep. In de buik.\n• **Lever** — filtert bloed, maakt gal. Rechtsboven in buik.\n• **Nieren** — filteren urine uit bloed *(je hebt er 2)*. In de rug.\n• **Blaas** — slaat urine op. Onder in buik.\n• **Huid** — beschermt je hele lichaam. Grootste 'orgaan'.\n• **Ogen** — zien.\n• **Oren** — horen + evenwicht.\n• **Neus** — ruiken + ademen.\n• **Tong** — proeven + praten + slikken.\n\n**toetsvragen — kerntaak per orgaan**:\n*'Welk orgaan filtert bloed?'* → Lever (of nieren bij urine).\n*'Welk orgaan vermalst eten?'* → Maag.\n*'Welk orgaan pompt bloed?'* → Hart.\n*'Welk orgaan vat zuurstof op uit lucht?'* → Longen.\n\n**Zintuigen** *(5 stuks)*:\n• Zien — ogen.\n• Horen — oren.\n• Ruiken — neus.\n• Proeven — tong.\n• Voelen — huid.\n\n**Hoeveel organen?**\nNiet precies te zeggen — afhankelijk hoe je telt. Maar de **bovenstaande lijst** is wat je moet kennen voor de Doorstroomtoets.",
     svg: organenSvg(),
     checks: [
       {
@@ -294,7 +294,7 @@ const steps = [
   {
     title: "Schijf van Vijf — gezond eten",
     explanation:
-      "De **Schijf van Vijf** is een Nederlandse manier om te leren wat **gezond** eten is. Elke dag moet je iets uit **alle 5 vakken** eten.\n\n**De 5 vakken**:\n1. **Groente + fruit** — vitamines + vezels (250g groente + 2 stuks fruit per dag).\n2. **Brood + graan + aardappel + pasta + rijst** — energie (koolhydraten).\n3. **Vis + peulvruchten + vlees + ei + noten** — eiwitten (bouwstof).\n4. **Zuivel + kaas** — calcium voor botten.\n5. **Smeer- + bereidingsvet** — onverzadigd vet (zoals olie + boter).\n\n**+ niet vergeten**: **water drinken** (~1,5 liter per dag).\n\n**Wat hoort NIET in de Schijf van Vijf?**\n• **Snoep + koek + frisdrank + chips** — heten 'extra's', mogen soms maar zijn niet voor elke dag.\n• **Veel zout, suiker, verzadigd vet** — niet gezond in grote hoeveelheden.\n\n**Cito-stikvraag** — *'Welke is groente?'*\n• Tomaat = groente *(Cito-realiteit, ook al is het biologisch een vrucht)*.\n• Aardappel = NIET in groente-vak, maar in koolhydraten-vak.\n• Banaan = fruit.\n• Pinda = peulvrucht (vak 3, bouwstof).\n\n**Andere belangrijke regels**:\n• **Eet langzaam** — geeft maag tijd om te zeggen 'genoeg!'.\n• **Niet te veel suiker** — slecht voor tanden + gewicht.\n• **Niet te veel zout** — slecht voor hart en nieren.\n• **Niet te veel verzadigd vet** *(boter, vet vlees)* — verstopt slagaders.\n• **Wel onverzadigd vet** *(olijfolie, noten, vis)* — gezond.\n\n**Wat is een 'koolhydraat'?**\nEnergie uit brood, pasta, rijst, aardappel. Je lichaam zet het om in suiker → energie om te bewegen + denken.",
+      "De **Schijf van Vijf** is een Nederlandse manier om te leren wat **gezond** eten is. Elke dag moet je iets uit **alle 5 vakken** eten.\n\n**De 5 vakken**:\n1. **Groente + fruit** — vitamines + vezels (250g groente + 2 stuks fruit per dag).\n2. **Brood + graan + aardappel + pasta + rijst** — energie (koolhydraten).\n3. **Vis + peulvruchten + vlees + ei + noten** — eiwitten (bouwstof).\n4. **Zuivel + kaas** — calcium voor botten.\n5. **Smeer- + bereidingsvet** — onverzadigd vet (zoals olie + boter).\n\n**+ niet vergeten**: **water drinken** (~1,5 liter per dag).\n\n**Wat hoort NIET in de Schijf van Vijf?**\n• **Snoep + koek + frisdrank + chips** — heten 'extra's', mogen soms maar zijn niet voor elke dag.\n• **Veel zout, suiker, verzadigd vet** — niet gezond in grote hoeveelheden.\n\n**Toets-strikvraag** — *'Welke is groente?'*\n• Tomaat = groente *(Toets-realiteit, ook al is het biologisch een vrucht)*.\n• Aardappel = NIET in groente-vak, maar in koolhydraten-vak.\n• Banaan = fruit.\n• Pinda = peulvrucht (vak 3, bouwstof).\n\n**Andere belangrijke regels**:\n• **Eet langzaam** — geeft maag tijd om te zeggen 'genoeg!'.\n• **Niet te veel suiker** — slecht voor tanden + gewicht.\n• **Niet te veel zout** — slecht voor hart en nieren.\n• **Niet te veel verzadigd vet** *(boter, vet vlees)* — verstopt slagaders.\n• **Wel onverzadigd vet** *(olijfolie, noten, vis)* — gezond.\n\n**Wat is een 'koolhydraat'?**\nEnergie uit brood, pasta, rijst, aardappel. Je lichaam zet het om in suiker → energie om te bewegen + denken.",
     checks: [
       {
         q: "Hoeveel vakken heeft de **Schijf van Vijf**?",
@@ -311,10 +311,10 @@ const steps = [
             { woord: "Schijf van Vijf", uitleg: "Nederlandse richtlijn voor gezond eten, met 5 vakken." },
             { woord: "Voedingscentrum", uitleg: "Organisatie die in NL voedingsadvies geeft." },
           ],
-          theorie: "Cito-feit: het Voedingscentrum maakt de Schijf. Niet alles wat smaakt mag — snoep + frisdrank + chips heten **'extra's'** en zitten **NIET** in de Schijf. Mogen soms, niet elke dag.",
+          theorie: "Toets-feit: het Voedingscentrum maakt de Schijf. Niet alles wat smaakt mag — snoep + frisdrank + chips heten **'extra's'** en zitten **NIET** in de Schijf. Mogen soms, niet elke dag.",
           voorbeelden: [
             { type: "stap", tekst: "Per dag: 250 gram groente + 2 stuks fruit. Beide tellen samen in vak 1." },
-            { type: "stap", tekst: "Aardappel zit in vak 2 (koolhydraten), NIET in groente-vak. Cito-instinker!" },
+            { type: "stap", tekst: "Aardappel zit in vak 2 (koolhydraten), NIET in groente-vak. Toets-instinker!" },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schijf van **Vijf** = **5** vakken. Letterlijk in de naam." }],
           niveaus: {
@@ -349,7 +349,7 @@ const steps = [
   {
     title: "Hygiëne, slaap en bewegen",
     explanation:
-      "Naast eten zijn er andere dingen die belangrijk zijn voor **gezond blijven**.\n\n**Hygiëne — schoonhouden**:\n• **Handen wassen** vóór eten + na toilet + na buiten zijn. Met **zeep**, **20 seconden**. Hierdoor minder ziektes.\n• **Tanden poetsen** 2× per dag, 2 minuten lang. Voorkomt gaatjes.\n• **Douchen** of in bad — minimaal een paar keer per week.\n• **Schone kleren** — bacteriën gaan in vuile kleren groeien.\n• **Niezen in elleboog** — om druppeltjes niet rond te slingeren.\n\n**Slaap**:\n• Kinderen *(6-12 jr)*: **9-11 uur** per nacht.\n• Tieners: 8-10 uur.\n• Volwassenen: 7-9 uur.\n• Tijdens slaap **herstelt** het lichaam + verwerken hersenen wat je geleerd hebt.\n• **Te weinig slaap** = moe, niet goed kunnen leren, vaker ziek.\n\n**Sporten + bewegen**:\n• **Elke dag** minimaal 1 uur bewegen voor kinderen.\n• Voorbeelden: fietsen naar school, voetbal, dansen, zwemmen, springen.\n• Voordelen:\n  - Sterkere spieren + botten.\n  - Betere conditie.\n  - Beter slapen.\n  - Vrolijker gevoel *(geluksstofjes in de hersenen)*.\n• **Te lang stilzitten** = niet gezond.\n\n**Beeldscherm-tijd**:\n• Niet te veel TV / tablet / telefoon.\n• Vooral niet vlak voor slapengaan *(blauw licht houdt je wakker)*.\n• Ouders geven vaak een limiet — bv. 1-2 uur op een schooldag.\n\n**Cito-vraag**: 'Waarom handen wassen?' → om bacteriën weg te krijgen en ziekte te voorkomen.",
+      "Naast eten zijn er andere dingen die belangrijk zijn voor **gezond blijven**.\n\n**Hygiëne — schoonhouden**:\n• **Handen wassen** vóór eten + na toilet + na buiten zijn. Met **zeep**, **20 seconden**. Hierdoor minder ziektes.\n• **Tanden poetsen** 2× per dag, 2 minuten lang. Voorkomt gaatjes.\n• **Douchen** of in bad — minimaal een paar keer per week.\n• **Schone kleren** — bacteriën gaan in vuile kleren groeien.\n• **Niezen in elleboog** — om druppeltjes niet rond te slingeren.\n\n**Slaap**:\n• Kinderen *(6-12 jr)*: **9-11 uur** per nacht.\n• Tieners: 8-10 uur.\n• Volwassenen: 7-9 uur.\n• Tijdens slaap **herstelt** het lichaam + verwerken hersenen wat je geleerd hebt.\n• **Te weinig slaap** = moe, niet goed kunnen leren, vaker ziek.\n\n**Sporten + bewegen**:\n• **Elke dag** minimaal 1 uur bewegen voor kinderen.\n• Voorbeelden: fietsen naar school, voetbal, dansen, zwemmen, springen.\n• Voordelen:\n  - Sterkere spieren + botten.\n  - Betere conditie.\n  - Beter slapen.\n  - Vrolijker gevoel *(geluksstofjes in de hersenen)*.\n• **Te lang stilzitten** = niet gezond.\n\n**Beeldscherm-tijd**:\n• Niet te veel TV / tablet / telefoon.\n• Vooral niet vlak voor slapengaan *(blauw licht houdt je wakker)*.\n• Ouders geven vaak een limiet — bv. 1-2 uur op een schooldag.\n\n**toetsvraag**: 'Waarom handen wassen?' → om bacteriën weg te krijgen en ziekte te voorkomen.",
     checks: [
       {
         q: "Hoe **lang** moet je handen wassen?",
@@ -378,11 +378,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — lichaam-mix",
+    title: "Toets-eindopdracht — lichaam-mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: skelet, organen, voeding, gezondheid.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: skelet, organen, voeding, gezondheid.\n\nVeel succes!",
     checks: [
       {
         q: "Wat **beschermt** je **hart en longen**?",
@@ -466,7 +466,7 @@ const lichaamGezondheidPo = {
     { id: "dieren-seizoenen-natuur", title: "Natuur (basis)", niveau: "po-1F" },
   ],
   intro:
-    "Het lichaam voor groep 6-8 — skelet, spieren, bloed, organen, Schijf van Vijf, gezonde gewoontes. Cito-onderdeel wereldoriëntatie. ~15 min.",
+    "Het lichaam voor groep 6-8 — skelet, spieren, bloed, organen, Schijf van Vijf, gezonde gewoontes. Toets-onderdeel wereldoriëntatie. ~15 min.",
   triggerKeywords: [
     "lichaam", "gezondheid", "skelet", "botten", "spieren", "hart",
     "longen", "maag", "lever", "nieren", "hersenen",

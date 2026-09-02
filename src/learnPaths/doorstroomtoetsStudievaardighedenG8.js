@@ -56,11 +56,11 @@ function overzichtSvg() {
 <text x="232" y="157" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">stappenplan</text>
 <text x="232" y="169" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">stroomdiagram</text>
 
-<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte Cito-voorbeelden: zie externe PDF onder elke stap</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte Toets-voorbeelden: zie externe PDF onder elke stap</text>
 </svg>`;
 }
 
-const examenLink = "Cito.s gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf";
+const examenLink = "De toets.s gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf";
 
 const steps = [
   // STAP 1: Kaart + schaal
@@ -68,7 +68,7 @@ const steps = [
     title: "Kaart + schaal lezen — ~20 min",
     refOnderdeel: "geen",
     explanation:
-      "**Studievaardigheden bij Cito** test of je informatie kunt **opzoeken en gebruiken**. Dat kan op een kaart, in een tabel, in een atlas, of via een schema.\n\n**Kaarten lezen — wat moet je kennen?**\n\n**1. Schaal**\n• **1 : 100.000** = 1 cm op kaart = 100.000 cm in het echt = 1 km.\n• **1 : 50.000** = 1 cm = 500 m = 0,5 km.\n• **1 : 25.000** = 1 cm = 250 m = 0,25 km.\n\n**Truc**: schaal omrekenen → deel door 100 *(cm → m)*. Dan door 1000 *(m → km)*.\n\n**Voorbeeld**:\n*'Schaal 1:50.000. Op de kaart is een weg 4 cm. Hoeveel km in werkelijkheid?'*\n• 4 × 50.000 = 200.000 cm = 2000 m = **2 km**.\n\n**2. Windrichting**\n• Op de **kompasroos** zie je N(oord), O(ost), Z(uid), W(est).\n• **NO** = noord-oost (tussen N en O).\n• Veel kaarten: noord boven, oost rechts, zuid onder, west links.\n\n**3. Legenda**\nElke kaart heeft een **legenda** *(tekst-box met symbolen-uitleg)*:\n• Blauwe lijn = rivier of weg met water.\n• Bruine vlek = berg of heuvel.\n• Groene vlek = bos of park.\n• Stippellijn = wandelpad of grens.\n• Driehoek met getal = hoogtepunt *(bv. 312 m boven NAP)*.\n\n**4. Coördinaten**\nKaarten in atlas hebben vakken zoals **A4** of **C2**:\n• Letter = horizontale kolom *(boven)*.\n• Cijfer = verticale rij *(opzij)*.\n\n**Voorbeeld Cito-vraag**:\n*'In welk vak ligt de stad Groningen?'* → kijk in legend + tel kolommen/rijen.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
+      "**Studievaardigheden bij de Doorstroomtoets** test of je informatie kunt **opzoeken en gebruiken**. Dat kan op een kaart, in een tabel, in een atlas, of via een schema.\n\n**Kaarten lezen — wat moet je kennen?**\n\n**1. Schaal**\n• **1 : 100.000** = 1 cm op kaart = 100.000 cm in het echt = 1 km.\n• **1 : 50.000** = 1 cm = 500 m = 0,5 km.\n• **1 : 25.000** = 1 cm = 250 m = 0,25 km.\n\n**Truc**: schaal omrekenen → deel door 100 *(cm → m)*. Dan door 1000 *(m → km)*.\n\n**Voorbeeld**:\n*'Schaal 1:50.000. Op de kaart is een weg 4 cm. Hoeveel km in werkelijkheid?'*\n• 4 × 50.000 = 200.000 cm = 2000 m = **2 km**.\n\n**2. Windrichting**\n• Op de **kompasroos** zie je N(oord), O(ost), Z(uid), W(est).\n• **NO** = noord-oost (tussen N en O).\n• Veel kaarten: noord boven, oost rechts, zuid onder, west links.\n\n**3. Legenda**\nElke kaart heeft een **legenda** *(tekst-box met symbolen-uitleg)*:\n• Blauwe lijn = rivier of weg met water.\n• Bruine vlek = berg of heuvel.\n• Groene vlek = bos of park.\n• Stippellijn = wandelpad of grens.\n• Driehoek met getal = hoogtepunt *(bv. 312 m boven NAP)*.\n\n**4. Coördinaten**\nKaarten in atlas hebben vakken zoals **A4** of **C2**:\n• Letter = horizontale kolom *(boven)*.\n• Cijfer = verticale rij *(opzij)*.\n\n**Voorbeeld toetsvraag**:\n*'In welk vak ligt de stad Groningen?'* → kijk in legend + tel kolommen/rijen.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     svg: overzichtSvg(),
     checks: [
       {
@@ -82,7 +82,7 @@ const steps = [
             { titel: "Vermenigvuldig", tekst: "3 cm × 1 km/cm = 3 km." },
           ],
           woorden: [{ woord: "schaalgetal", uitleg: "Het getal achter '1:' geeft aan hoeveel cm in werkelijkheid 1 cm op kaart vertegenwoordigt." }],
-          theorie: "Cito-truc: bij 1:100.000 hoef je niet te rekenen — 1 cm = 1 km direct.",
+          theorie: "Toets-truc: bij 1:100.000 hoef je niet te rekenen — 1 cm = 1 km direct.",
           voorbeelden: [{ type: "stap", tekst: "1:25.000 → 1 cm = 250 m. 1:50.000 → 1 cm = 500 m. 1:200.000 → 1 cm = 2 km." }],
           basiskennis: [{ onderwerp: "Omrekening", uitleg: "100.000 cm = 1.000 m = 1 km. Onthoud deze stap." }],
           niveaus: {
@@ -123,7 +123,7 @@ const steps = [
             { titel: "Reken om naar km", tekst: "200.000 cm = 2.000 m = 2 km." },
           ],
           woorden: [{ woord: "schaal 1:50.000", uitleg: "1 cm op kaart = 50.000 cm = 500 m = 0,5 km in het echt." }],
-          theorie: "Bij Cito-schaalvragen altijd: vermenigvuldig de afstand op de kaart met het schaalgetal, dan omrekenen naar km.",
+          theorie: "Bij Toets-schaalvragen altijd: vermenigvuldig de afstand op de kaart met het schaalgetal, dan omrekenen naar km.",
           voorbeelden: [{ type: "stap", tekst: "Bij 1:100.000 is 1 cm op kaart = 1 km. Handig om te onthouden." }],
           basiskennis: [{ onderwerp: "100 cm = 1 m, 1000 m = 1 km", uitleg: "Centimeter, meter, kilometer — stappen van 100 en 1000." }],
           niveaus: {
@@ -183,7 +183,7 @@ const steps = [
             { woord: "ZW", uitleg: "Zuid-west: tussen Z en W." },
             { woord: "NW", uitleg: "Noord-west: tussen N en W." },
           ],
-          theorie: "Cito-truc tussenrichtingen: de naam zegt het zelf. NO = N + O. Lees de letters en combineer de hoofdrichtingen.",
+          theorie: "Toets-truc tussenrichtingen: de naam zegt het zelf. NO = N + O. Lees de letters en combineer de hoofdrichtingen.",
           voorbeelden: [
             { type: "stap", tekst: "Tussen Noord en Oost = NO (Noord-oost)." },
             { type: "stap", tekst: "Tussen Zuid en West = ZW (Zuid-west)." },
@@ -302,7 +302,7 @@ const steps = [
             { woord: "vegetatie", uitleg: "Planten, bomen, gras." },
             { woord: "legenda", uitleg: "Op kaart staat een legenda die ALLE kleuren uitlegt." },
           ],
-          theorie: "Cito-tip: bij een kaart-vraag eerst de LEGENDA bekijken. Daar staan alle gebruikte kleuren en symbolen netjes uitgelegd.",
+          theorie: "Toets-tip: bij een kaart-vraag eerst de LEGENDA bekijken. Daar staan alle gebruikte kleuren en symbolen netjes uitgelegd.",
           voorbeelden: [
             { type: "stap", tekst: "Een groot groen gebied = waarschijnlijk bos of natuurpark." },
             { type: "stap", tekst: "Een lange blauwe lijn = rivier. Een grote blauwe vlek = meer of zee." },
@@ -330,7 +330,7 @@ const steps = [
             { woord: "schaalbalk", uitleg: "Maatstreepje dat zegt hoeveel 1 cm in werkelijkheid is." },
             { woord: "legenda", uitleg: "Lijstje met betekenis van kleuren en symbolen." },
           ],
-          theorie: "Cito-truc kaart-elementen: vraag jezelf: 1) wat moet ik weten? 2) Welk element heeft die info? Afstand→schaal. Kleur→legenda. Richting→kompas. Onderwerp→titel.",
+          theorie: "Toets-truc kaart-elementen: vraag jezelf: 1) wat moet ik weten? 2) Welk element heeft die info? Afstand→schaal. Kleur→legenda. Richting→kompas. Onderwerp→titel.",
           voorbeelden: [
             { type: "stap", tekst: "Hoe ver van A naar B? → schaalbalk gebruiken." },
             { type: "stap", tekst: "Wat is die groene vlek? → legenda gebruiken." },
@@ -364,7 +364,7 @@ const steps = [
             { woord: "stippellijn", uitleg: "Onderbroken lijntjes - - - voor fiets/wandelroute." },
             { woord: "legenda", uitleg: "Op de kaart staat altijd uitgelegd welke lijn wat betekent." },
           ],
-          theorie: "Cito-tip: kijk altijd eerst in de LEGENDA. Daar staat exact welke lijn welke betekenis heeft. Op verschillende kaarten kan het iets anders zijn.",
+          theorie: "Toets-tip: kijk altijd eerst in de LEGENDA. Daar staat exact welke lijn welke betekenis heeft. Op verschillende kaarten kan het iets anders zijn.",
           voorbeelden: [
             { type: "stap", tekst: "Op een fietsknooppunten-kaart staan stippellijnen voor fietsroutes." },
             { type: "stap", tekst: "Op autokaarten: gele snelwegen, rode hoofdwegen, witte landwegen." },
@@ -386,7 +386,7 @@ const steps = [
           stappen: [
             { titel: "Stap 1: cm op kaart × schaal", tekst: "Schaal 1:2.500 betekent: 1 cm op kaart = 2.500 cm in echt. 2 cm op kaart = 2 × 2.500 = **5.000 cm**." },
             { titel: "Stap 2: cm naar m", tekst: "100 cm = 1 m. Dus 5.000 cm ÷ 100 = **50 m**." },
-            { titel: "Cito-check: realistisch?", tekst: "Een stadsplattegrond toont vaak een paar straten. 50 m = ongeveer een straat-lengte → realistisch! 50 cm of 2,5 km zouden raar zijn." },
+            { titel: "Toets-check: realistisch?", tekst: "Een stadsplattegrond toont vaak een paar straten. 50 m = ongeveer een straat-lengte → realistisch! 50 cm of 2,5 km zouden raar zijn." },
           ],
           woorden: [
             { woord: "stadsplattegrond", uitleg: "Kaart van een stad, hele kleine schaal voor detail." },
@@ -428,7 +428,7 @@ const steps = [
             { titel: "Stap 2 — naar km", tekst: "400.000 cm = 4.000 m = 4 km." },
           ],
           woorden: [{ woord: "schaal 1:200.000", uitleg: "1 cm op kaart = 200.000 cm = 2 km in werkelijkheid." }],
-          theorie: "Cito-truc: bij grote schaal-getallen (1:100.000+) wordt het altijd kilometers, niet meters.",
+          theorie: "Toets-truc: bij grote schaal-getallen (1:100.000+) wordt het altijd kilometers, niet meters.",
           voorbeelden: [{ type: "stap", tekst: "1:100.000 — 5 cm = 5 km." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schuif komma in schaal-getal 5 plekken naar links voor km: 200.000 cm → 2 km." }],
           niveaus: {
@@ -454,7 +454,7 @@ const steps = [
             { titel: "Windroos", tekst: "N boven, Z onder, O rechts, W links. Geheugentruc: 'Nooit Zonder Onze Werkboeken' (klok rond)." },
           ],
           woorden: [{ woord: "windroos", uitleg: "Symbool met 4 (of 8) richtingen: N, O, Z, W." }],
-          theorie: "Cito-truc: in een echte kaart is N bijna altijd bovenaan. Onthoud: NOZW = klokswijze (N-O-Z-W). Of: O is naar de zon op (zon komt op in oost).",
+          theorie: "Toets-truc: in een echte kaart is N bijna altijd bovenaan. Onthoud: NOZW = klokswijze (N-O-Z-W). Of: O is naar de zon op (zon komt op in oost).",
           voorbeelden: [{ type: "stap", tekst: "Vanuit Amsterdam ligt Duitsland in het oosten." }],
           basiskennis: [{ onderwerp: "Tussen-richtingen", uitleg: "NO = noord-oost (tussen N en O). ZW = zuid-west. Etc." }],
           niveaus: {
@@ -505,7 +505,7 @@ const steps = [
             { titel: "Voorbeelden", tekst: "1:50 = plattegrond huis. 1:5.000 = stadsplattegrond. 1:1.000.000 = landkaart NL. 1:30.000.000 = wereldkaart." },
           ],
           woorden: [{ woord: "topografie", uitleg: "Plaats van bergen, rivieren, steden op een kaart." }],
-          theorie: "Cito-truc: bij vraag 'welke schaal voor X gebied' — kies grootste schaalgetal voor groot gebied.",
+          theorie: "Toets-truc: bij vraag 'welke schaal voor X gebied' — kies grootste schaalgetal voor groot gebied.",
           voorbeelden: [{ type: "stap", tekst: "Wandelroute: 1:10.000 (kleine schaal). Atlas van Europa: 1:5.000.000." }],
           basiskennis: [{ onderwerp: "Klein vs groot", uitleg: "Kleine schaal = klein getal (1:100) = klein gebied groot getekend. Grote schaal = groot getal = veel land in kleine ruimte." }],
           niveaus: {
@@ -643,7 +643,7 @@ const steps = [
     title: "Tabel + grafiek lezen — ~20 min",
     refOnderdeel: "geen",
     explanation:
-      "Bij studievaardigheden krijg je vaak een **tabel** of een **grafiek** en moet je daar informatie uit halen.\n\n**Cito-stappen**:\n1. **Lees titel + assen** — waar gaat het over?\n2. **Welke eenheid** — euro's, mensen, °C, mm?\n3. **Zoek de vraag-cel/balk** — onderaan staat meestal categorieën (dagen, klassen), zijkant staat hoeveelheid.\n4. **Lees af + schrijf met eenheid**.\n\n**Tabel-vraag-typen**:\n• **Aflezen**: 'Hoeveel kinderen op woensdag?'\n• **Verschil**: 'Hoeveel meer op vrijdag dan op maandag?'\n• **Totaal**: 'Totaal aantal kinderen in week?'\n• **Patroon**: 'Welke dag is een stijging te zien?'\n• **Gemiddelde**: 'Gemiddeld aantal per dag?'\n\n**Voorbeeld-tabel — Aantal ijsjes verkocht per dag**:\n\n| Dag | Aantal |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\n**Cito-vragen**:\n*'Op welke dag het minst verkocht?'* → dinsdag (8).\n*'Hoeveel verschil tussen vrijdag en maandag?'* → 30 − 12 = **18 ijsjes**.\n*'Totaal in deze 5 dagen?'* → 12+8+18+22+30 = **90 ijsjes**.\n*'Gemiddeld per dag?'* → 90 ÷ 5 = **18 ijsjes**.\n\n**Grafiek-typen**:\n• **Staafdiagram** = vergelijken van groepen.\n• **Lijngrafiek** = verandering door tijd.\n• **Cirkeldiagram (taart)** = verdeling van geheel (100%).\n\n**Cito-truc — cirkeldiagram**:\nGroepen tellen samen op tot **100%**. Als 3 groepen 25%, 35% en x zijn, dan x = 100 − 25 − 35 = **40%**.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
+      "Bij studievaardigheden krijg je vaak een **tabel** of een **grafiek** en moet je daar informatie uit halen.\n\n**Toets-stappen**:\n1. **Lees titel + assen** — waar gaat het over?\n2. **Welke eenheid** — euro's, mensen, °C, mm?\n3. **Zoek de vraag-cel/balk** — onderaan staat meestal categorieën (dagen, klassen), zijkant staat hoeveelheid.\n4. **Lees af + schrijf met eenheid**.\n\n**Tabel-vraag-typen**:\n• **Aflezen**: 'Hoeveel kinderen op woensdag?'\n• **Verschil**: 'Hoeveel meer op vrijdag dan op maandag?'\n• **Totaal**: 'Totaal aantal kinderen in week?'\n• **Patroon**: 'Welke dag is een stijging te zien?'\n• **Gemiddelde**: 'Gemiddeld aantal per dag?'\n\n**Voorbeeld-tabel — Aantal ijsjes verkocht per dag**:\n\n| Dag | Aantal |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\n**toetsvragen**:\n*'Op welke dag het minst verkocht?'* → dinsdag (8).\n*'Hoeveel verschil tussen vrijdag en maandag?'* → 30 − 12 = **18 ijsjes**.\n*'Totaal in deze 5 dagen?'* → 12+8+18+22+30 = **90 ijsjes**.\n*'Gemiddeld per dag?'* → 90 ÷ 5 = **18 ijsjes**.\n\n**Grafiek-typen**:\n• **Staafdiagram** = vergelijken van groepen.\n• **Lijngrafiek** = verandering door tijd.\n• **Cirkeldiagram (taart)** = verdeling van geheel (100%).\n\n**Toets-truc — cirkeldiagram**:\nGroepen tellen samen op tot **100%**. Als 3 groepen 25%, 35% en x zijn, dan x = 100 − 25 − 35 = **40%**.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     checks: [
       {
         q: "Tabel: ma 10, di 12, wo 15, do 8, vr 20 kinderen. **Op welke dag minst**?",
@@ -660,7 +660,7 @@ const steps = [
             { woord: "minst", uitleg: "Het LAAGSTE getal — kleinste hoeveelheid." },
             { woord: "meest", uitleg: "Het HOOGSTE getal — grootste hoeveelheid." },
           ],
-          theorie: "Cito-tip bij tabellen: lees eerst rustig ALLE waardes. Onderstreep ze met je vinger. Dan pas vergelijken. Onthoud goed: vraagt het 'minst' of 'meest'?",
+          theorie: "Toets-tip bij tabellen: lees eerst rustig ALLE waardes. Onderstreep ze met je vinger. Dan pas vergelijken. Onthoud goed: vraagt het 'minst' of 'meest'?",
           voorbeelden: [
             { type: "stap", tekst: "Cijfers: 5, 7, 3, 9. Minst = 3. Meest = 9." },
             { type: "stap", tekst: "Bedragen: €20, €15, €8, €25. Minst = €8." },
@@ -767,7 +767,7 @@ const steps = [
             { woord: "lijngrafiek", uitleg: "Verandering door tijd (2020, 2021, 2022...)." },
             { woord: "cirkeldiagram", uitleg: "Verdeling van 100% (taart-stukjes)." },
           ],
-          theorie: "Cito-strategie diagrammen kiezen: vraag jezelf: 'wat wil ik vergelijken/zien?' 1) Groepen → staaf. 2) Tijd-verandering → lijn. 3) Verdeling % → cirkel.",
+          theorie: "Toets-strategie diagrammen kiezen: vraag jezelf: 'wat wil ik vergelijken/zien?' 1) Groepen → staaf. 2) Tijd-verandering → lijn. 3) Verdeling % → cirkel.",
           voorbeelden: [
             { type: "stap", tekst: "Temperatuur per dag = lijngrafiek (tijd)." },
             { type: "stap", tekst: "Aantal leerlingen per klas = staafdiagram (vergelijken)." },
@@ -801,7 +801,7 @@ const steps = [
             { type: "stap", tekst: "Van 100 → 80: verschil 20. 20/100 = 0,20 = 20% afname." },
             { type: "stap", tekst: "Van 50 → 60: verschil 10. 10/50 = 0,20 = 20% toename." },
           ],
-          basiskennis: [{ onderwerp: "Cito-truc", uitleg: "Vraag altijd: 'gedeeld door welke waarde?' → de BEGIN-waarde. Niet de kleinste." }],
+          basiskennis: [{ onderwerp: "Toets-truc", uitleg: "Vraag altijd: 'gedeeld door welke waarde?' → de BEGIN-waarde. Niet de kleinste." }],
           niveaus: {
             basis: "% afname = (verschil ÷ beginwaarde) × 100.",
             simpeler: "30 lezers minder van 80. 30/80 = 0,375 = 37,5%.",
@@ -828,7 +828,7 @@ const steps = [
             { type: "stap", tekst: "Cirkel: 50% + 30% + rest? Rest = 100 − 80 = 20%." },
             { type: "stap", tekst: "Cirkel: 40% + 20% + 10% + rest? Rest = 100 − 70 = 30%." },
           ],
-          basiskennis: [{ onderwerp: "Cito-controle", uitleg: "Tel altijd ALLE delen op om te checken dat het 100% wordt. Anders mist er een stuk." }],
+          basiskennis: [{ onderwerp: "Toets-controle", uitleg: "Tel altijd ALLE delen op om te checken dat het 100% wordt. Anders mist er een stuk." }],
           niveaus: {
             basis: "Rest = 100 − (alles wat al bekend is).",
             simpeler: "35+25+25 = 85. 100−85 = 15%.",
@@ -875,7 +875,7 @@ const steps = [
           stappen: [
             { titel: "Stap 1: tel alles op", tekst: "Tel alle getallen bij elkaar op. 100 + 200 + 300 + 400 + 500 = **1.500**." },
             { titel: "Stap 2: deel door aantal", tekst: "Tel hoeveel getallen er zijn. Er zijn 5 getallen. Deel: 1.500 ÷ 5 = **300**." },
-            { titel: "Cito-controle", tekst: "Het gemiddelde ligt altijd ergens tussen het laagste (100) en het hoogste (500). 300 zit precies in het midden — klopt." },
+            { titel: "Toets-controle", tekst: "Het gemiddelde ligt altijd ergens tussen het laagste (100) en het hoogste (500). 300 zit precies in het midden — klopt." },
           ],
           woorden: [
             { woord: "gemiddelde", uitleg: "Som ÷ aantal." },
@@ -936,7 +936,7 @@ const steps = [
             { woord: "staaf", uitleg: "Verticale of horizontale balk in een staafdiagram." },
             { woord: "y-as", uitleg: "Verticale as: hier lees je de waardes af." },
           ],
-          theorie: "Cito-truc bij staafdiagram: oogjes op de y-as (verticale as) houden. Vergelijk de hoogtes, niet de breedtes. De hoogste staaf wint qua waarde.",
+          theorie: "Toets-truc bij staafdiagram: oogjes op de y-as (verticale as) houden. Vergelijk de hoogtes, niet de breedtes. De hoogste staaf wint qua waarde.",
           voorbeelden: [
             { type: "stap", tekst: "Diagram met klas A=20, B=30, C=25 leerlingen. Hoogste = B (30). Meeste leerlingen = klas B." },
             { type: "stap", tekst: "Sport-cijfers: 15, 20, 8. Hoogste staaf = 20. Beste cijfer = 20." },
@@ -964,7 +964,7 @@ const steps = [
             { woord: "mediaan", uitleg: "Middelste getal na sorteren." },
             { woord: "gemiddelde", uitleg: "Som ÷ aantal — iets ANDERS dan mediaan!" },
           ],
-          theorie: "Cito-truc: bij ONEVEN aantal getallen (3, 5, 7, ...) is mediaan het middelste. Bij EVEN aantal (4, 6, ...): tel de 2 middelste op, deel door 2.",
+          theorie: "Toets-truc: bij ONEVEN aantal getallen (3, 5, 7, ...) is mediaan het middelste. Bij EVEN aantal (4, 6, ...): tel de 2 middelste op, deel door 2.",
           voorbeelden: [
             { type: "stap", tekst: "3 getallen 4-6-10: mediaan = 6 (midden)." },
             { type: "stap", tekst: "4 getallen 2-4-6-10: mediaan = (4+6)/2 = 5." },
@@ -988,7 +988,7 @@ const steps = [
             { titel: "Of rechtdoor", tekst: "10+20=30, +30=60, +40=100, +50=150." },
           ],
           woorden: [{ woord: "som", uitleg: "Resultaat van optellen — alles bij elkaar." }],
-          theorie: "Cito-truc: paartjes-techniek werkt bij rijen met regelmatige toename (10/20/30...). Tel eindpunten: 10+50 = laatste+eerste.",
+          theorie: "Toets-truc: paartjes-techniek werkt bij rijen met regelmatige toename (10/20/30...). Tel eindpunten: 10+50 = laatste+eerste.",
           voorbeelden: [{ type: "stap", tekst: "Som 1+2+3+4+5 = (1+5)+(2+4)+3 = 6+6+3 = 15." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Som groter dan grootste term (50) — klopt." }],
           niveaus: {
@@ -1013,7 +1013,7 @@ const steps = [
             { woord: "cirkeldiagram", uitleg: "Cirkel verdeeld in stukjes (%). Som = 100%." },
             { woord: "afronding", uitleg: "33,333... wordt op papier vaak 33% — daardoor 'mist' 1%." },
           ],
-          theorie: "Cito-controle bij cirkeldiagram: tel alle % op. Moet 100% zijn. Klopt het niet? → er mist een sectie OF er is afgerond.",
+          theorie: "Toets-controle bij cirkeldiagram: tel alle % op. Moet 100% zijn. Klopt het niet? → er mist een sectie OF er is afgerond.",
           voorbeelden: [
             { type: "stap", tekst: "Cirkel met 50% + 25% + 25% = 100%. Klopt." },
             { type: "stap", tekst: "Cirkel met 33% + 33% + 33% = 99%. Klopt niet exact." },
@@ -1043,7 +1043,7 @@ const steps = [
             { titel: "Wanneer kiezen?", tekst: "Gebruik een lijngrafiek als je wil zien hoe iets stijgt of daalt door de tijd: temperatuur per dag, leerlingen per jaar, e.d." },
           ],
           woorden: [{ woord: "x-as / y-as", uitleg: "X-as = horizontaal onderaan. Y-as = verticaal links." }],
-          theorie: "Cito-truc: bij lijngrafiek-vragen kijk eerst naar de x-as (welke periode) en y-as (welke eenheid).",
+          theorie: "Toets-truc: bij lijngrafiek-vragen kijk eerst naar de x-as (welke periode) en y-as (welke eenheid).",
           voorbeelden: [{ type: "stap", tekst: "Grafiek 'Temperatuur per uur' = lijn die op- en neergaat over 24 uur." }],
           basiskennis: [{ onderwerp: "Andere typen", uitleg: "Staaf = vergelijken groepen. Cirkel = verdeling geheel. Lijn = verloop tijd." }],
           niveaus: {
@@ -1076,7 +1076,7 @@ const steps = [
             { titel: "Reken", tekst: "100 − 50 − 30 = 20%." },
           ],
           woorden: [{ woord: "cirkeldiagram", uitleg: "Taart-diagram waar alle delen samen 100% zijn." }],
-          theorie: "Cito-truc: cirkeldiagram-vragen vragen vaak naar het ontbrekende stuk. Tel de bekende stukken op, trek van 100 af.",
+          theorie: "Toets-truc: cirkeldiagram-vragen vragen vaak naar het ontbrekende stuk. Tel de bekende stukken op, trek van 100 af.",
           voorbeelden: [{ type: "stap", tekst: "Vier delen: 25% + 35% + 25% + x. x = 100 − 85 = 15%." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Tel alle delen op: moeten 100% zijn." }],
           niveaus: {
@@ -1127,7 +1127,7 @@ const steps = [
             { titel: "Snel rekenen", tekst: "Formule: (eind − begin) + 1 = (20 − 10) + 1 = 11." },
           ],
           woorden: [{ woord: "t/m", uitleg: "Tot en met — beide grenzen meetellen." }],
-          theorie: "Cito-truc bij vragen 'hoeveel getallen tussen X en Y': altijd +1 bij 'inclusief beide'.",
+          theorie: "Toets-truc bij vragen 'hoeveel getallen tussen X en Y': altijd +1 bij 'inclusief beide'.",
           voorbeelden: [{ type: "stap", tekst: "1 t/m 5: 1, 2, 3, 4, 5 = 5 getallen." }],
           basiskennis: [{ onderwerp: "Exclusief", uitleg: "Bij 'tussen 10 en 20' (exclusief): 11, 12, ..., 19 = 9 getallen." }],
           niveaus: {
@@ -1189,7 +1189,7 @@ const steps = [
           woorden: [{ woord: "dienstregeling", uitleg: "Tabel met vertrektijden van bus of trein." }],
           theorie: "Zoek eerst het patroon (hier: elke 20 minuten). Bussen die al vertrokken zijn tellen niet — alleen wat komt.",
           voorbeelden: [{ type: "stap", tekst: "Tijden 10:05, 10:25, 10:45 — jij komt 10:30 → eerstvolgende = 10:45 → 15 min wachten." }],
-          basiskennis: [{ onderwerp: "Valkuil", uitleg: "Cito zet er graag een vertrektijd vlak vóór jouw aankomst in — die mis je net." }],
+          basiskennis: [{ onderwerp: "Valkuil", uitleg: "De toets zet er graag een vertrektijd vlak vóór jouw aankomst in — die mis je net." }],
           niveaus: {
             basis: "Volgende bus 9:52, dus 12 minuten.",
             simpeler: "9:32 ben je net gemist. 9:52 − 9:40 = 12 minuten.",
@@ -1260,7 +1260,7 @@ const steps = [
     title: "Woordenboek, atlas + index — ~20 min",
     refOnderdeel: "geen",
     explanation:
-      "Cito test of je weet hoe je **dingen opzoekt** in een boek of atlas.\n\n**Woordenboek**:\nAlle woorden staan **op alfabet** *(A → Z)*.\n• Eerst kijken naar **eerste letter**.\n• Bij gelijke eerste letter → **tweede letter** vergelijken.\n• Etc.\n\n**Voorbeeld — welk woord staat eerder?**\n• **'beest'** staat vóór **'beker'** *(b-e-e- staat vóór b-e-k-)*.\n• **'kat'** staat vóór **'kater'** *(kortere komt eerst als begin gelijk)*.\n• **'tafel'** staat na **'paard'** *(p staat voor t)*.\n\n**Truc** — gebruik **hoofdwoord** boven aan de pagina:\nLinker pagina-hoofdwoord = **eerste** woord op die pagina.\nRechter pagina-hoofdwoord = **laatste** woord op die pagina.\nZit je gezochte woord daartussen? → op deze 2 pagina's.\n\n**Atlas**:\nEen atlas heeft:\n• **Inhoudsopgave** voorin — waar staat welke kaart?\n• **Index** achterin — waar staat welke stad/rivier?\n\n**Voorbeeld — index gebruiken**:\n*'Waar staat Rotterdam?'*\nIndex: \"Rotterdam ... 14 B3\"\n→ Ga naar **bladzijde 14**, vak **B3**.\n\n**Bibliotheek-systeem**:\n• Boeken op alfabet op auteur achternaam.\n• Of op onderwerp-nummer (Dewey, bv. 500 = natuurwetenschappen).\n\n**Inhoudsopgave gebruiken**:\nVoorin een boek/atlas staat een lijst van **hoofdstukken + bladzijde-nummers**:\n• Hoofdstuk 1 — Klimaat — blz 5\n• Hoofdstuk 2 — Bevolking — blz 12\n• etc.\n\n**Index gebruiken**:\nAchterin een boek staat een lijst van **onderwerpen op alfabet** met paginanummers:\n• atoom ... 23, 45\n• bacterie ... 67\n• cel ... 12, 34, 89\n\nZo zoek je snel een onderwerp.\n\n**Cito-vragen**:\n*'Wat doet de index van een atlas?'*\n→ Geeft je het bladzijde-nummer + kaart-vak voor een plaatsnaam.\n\n*'Wat staat in de inhoudsopgave?'*\n→ Een lijst van hoofdstukken met bladzijde-nummers.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
+      "De toets test of je weet hoe je **dingen opzoekt** in een boek of atlas.\n\n**Woordenboek**:\nAlle woorden staan **op alfabet** *(A → Z)*.\n• Eerst kijken naar **eerste letter**.\n• Bij gelijke eerste letter → **tweede letter** vergelijken.\n• Etc.\n\n**Voorbeeld — welk woord staat eerder?**\n• **'beest'** staat vóór **'beker'** *(b-e-e- staat vóór b-e-k-)*.\n• **'kat'** staat vóór **'kater'** *(kortere komt eerst als begin gelijk)*.\n• **'tafel'** staat na **'paard'** *(p staat voor t)*.\n\n**Truc** — gebruik **hoofdwoord** boven aan de pagina:\nLinker pagina-hoofdwoord = **eerste** woord op die pagina.\nRechter pagina-hoofdwoord = **laatste** woord op die pagina.\nZit je gezochte woord daartussen? → op deze 2 pagina's.\n\n**Atlas**:\nEen atlas heeft:\n• **Inhoudsopgave** voorin — waar staat welke kaart?\n• **Index** achterin — waar staat welke stad/rivier?\n\n**Voorbeeld — index gebruiken**:\n*'Waar staat Rotterdam?'*\nIndex: \"Rotterdam ... 14 B3\"\n→ Ga naar **bladzijde 14**, vak **B3**.\n\n**Bibliotheek-systeem**:\n• Boeken op alfabet op auteur achternaam.\n• Of op onderwerp-nummer (Dewey, bv. 500 = natuurwetenschappen).\n\n**Inhoudsopgave gebruiken**:\nVoorin een boek/atlas staat een lijst van **hoofdstukken + bladzijde-nummers**:\n• Hoofdstuk 1 — Klimaat — blz 5\n• Hoofdstuk 2 — Bevolking — blz 12\n• etc.\n\n**Index gebruiken**:\nAchterin een boek staat een lijst van **onderwerpen op alfabet** met paginanummers:\n• atoom ... 23, 45\n• bacterie ... 67\n• cel ... 12, 34, 89\n\nZo zoek je snel een onderwerp.\n\n**toetsvragen**:\n*'Wat doet de index van een atlas?'*\n→ Geeft je het bladzijde-nummer + kaart-vak voor een plaatsnaam.\n\n*'Wat staat in de inhoudsopgave?'*\n→ Een lijst van hoofdstukken met bladzijde-nummers.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     checks: [
       {
         q: "Welk woord staat **eerder** in het woordenboek?",
@@ -1304,7 +1304,7 @@ const steps = [
             { woord: "inhoudsopgave", uitleg: "Voorin — lijst van hoofdstukken met pagina." },
             { woord: "index / register", uitleg: "Achterin — alfabetische lijst van begrippen met pagina." },
           ],
-          theorie: "Cito-strategie: 1) hoofdstuk zoeken? → kijk in inhoudsopgave (voorin). 2) Specifiek woord/begrip zoeken? → kijk in de index (achterin).",
+          theorie: "Toets-strategie: 1) hoofdstuk zoeken? → kijk in inhoudsopgave (voorin). 2) Specifiek woord/begrip zoeken? → kijk in de index (achterin).",
           voorbeelden: [
             { type: "stap", tekst: "Wil je hoofdstuk over 'planten'? Inhoudsopgave voorin: 'Hoofdstuk 3 — Planten ... blz. 42'." },
             { type: "stap", tekst: "Wil je weten waar 'fotosynthese' staat? Index achterin: 'fotosynthese ... blz. 45, 78, 102'." },
@@ -1382,7 +1382,7 @@ const steps = [
           woorden: [
             { woord: "alfabetische volgorde", uitleg: "A-B-C-D-...-X-Y-Z. Eerste letter telt, dan tweede, dan derde." },
           ],
-          theorie: "Cito-truc: bij gelijke beginletter kijk je naar de volgende. Bij gelijke 2 letters → 3e letter. Etc.",
+          theorie: "Toets-truc: bij gelijke beginletter kijk je naar de volgende. Bij gelijke 2 letters → 3e letter. Etc.",
           voorbeelden: [
             { type: "stap", tekst: "Auto vs Boom: A < B, dus auto eerst." },
             { type: "stap", tekst: "School vs Sport: beide S-, dan C vs P. C komt eerst → school." },
@@ -1422,7 +1422,7 @@ const steps = [
             { woord: "hoofdwoorden", uitleg: "Eerste + laatste woord op de pagina (boven in dik)." },
             { woord: "kopwoorden", uitleg: "Synoniem van hoofdwoorden." },
           ],
-          theorie: "Cito-tip: gebruik altijd hoofdwoorden om snel een woord op te zoeken. Eerst pagina vinden via hoofdwoorden, dan in die pagina precies zoeken.",
+          theorie: "Toets-tip: gebruik altijd hoofdwoorden om snel een woord op te zoeken. Eerst pagina vinden via hoofdwoorden, dan in die pagina precies zoeken.",
           voorbeelden: [
             { type: "stap", tekst: "Hoofdwoorden 'auto' en 'avond'. Zoek je 'augustus'? A-U-G past tussen A-U-T en A-V → ja." },
             { type: "stap", tekst: "Hoofdwoorden 'paard' en 'piano'. Zoek je 'plant'? P-L past niet tussen P-A en P-I → nee, andere pagina." },
@@ -1491,7 +1491,7 @@ const steps = [
             { titel: "Vak-code lezen", tekst: "Op de kaart staat een raster: kolommen met letters (A, B, C, ...) en rijen met cijfers (1, 2, 3, ...). C4 = kolom C, rij 4." },
           ],
           woorden: [{ woord: "raster", uitleg: "Kruislijn-tekening over de kaart om plekken snel te vinden." }],
-          theorie: "Cito-truc: bij index altijd 2 dingen oppakken: bladzijde + vak. Eerst de pagina openen, dan in het raster zoeken.",
+          theorie: "Toets-truc: bij index altijd 2 dingen oppakken: bladzijde + vak. Eerst de pagina openen, dan in het raster zoeken.",
           voorbeelden: [{ type: "stap", tekst: "'Berlijn ... 14 B2' → blz 14, vak B2 (kolom B, rij 2)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Letter = kolom (links-rechts). Cijfer = rij (boven-onder)." }],
           niveaus: {
@@ -1524,7 +1524,7 @@ const steps = [
             { titel: "Stappen", tekst: "1) Zoek Spanje in index → krijg pagina + vak. 2) Ga naar die pagina, vind het vak." },
           ],
           woorden: [{ woord: "index", uitleg: "Alfabetische lijst achterin een boek met paginanummers." }],
-          theorie: "Cito-truc: inhoudsopgave = hoofdstukken. Index = onderwerpen/plaatsen. Voor één plek altijd index.",
+          theorie: "Toets-truc: inhoudsopgave = hoofdstukken. Index = onderwerpen/plaatsen. Voor één plek altijd index.",
           voorbeelden: [{ type: "stap", tekst: "Zoek 'Madrid' → index zegt '22 C4' → blz 22 vak C4 op de kaart." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Index = einde, alfabetisch. Inhoudsopgave = begin, op volgorde van hoofdstukken." }],
           niveaus: {
@@ -1574,7 +1574,7 @@ const steps = [
             { titel: "Ctrl+F = Find", tekst: "In bijna elk programma: Ctrl+F opent een zoekvenster waar je een woord typt. Geeft alle plekken waar het woord voorkomt." },
           ],
           woorden: [{ woord: "Ctrl+F", uitleg: "Sneltoets voor 'Find' (zoek)." }],
-          theorie: "Cito-tip: bij digitaal zoeken in lange tekst, gebruik Ctrl+F om snel een woord te vinden in plaats van scrollen.",
+          theorie: "Toets-tip: bij digitaal zoeken in lange tekst, gebruik Ctrl+F om snel een woord te vinden in plaats van scrollen.",
           voorbeelden: [{ type: "stap", tekst: "In een digitale Doorstroomtoets met lange tekst: Ctrl+F → typ 'kerncentrale' → ga direct naar die plek." }],
           basiskennis: [{ onderwerp: "Andere sneltoetsen", uitleg: "Ctrl+C = kopiëren. Ctrl+V = plakken. Ctrl+S = opslaan. Ctrl+P = print." }],
           niveaus: {
@@ -1700,7 +1700,7 @@ const steps = [
     title: "Schema's + stappenplan — ~20 min",
     refOnderdeel: "geen",
     explanation:
-      "Een **schema** geeft veel informatie kort weer met **kaders, pijlen en woorden**.\n\n**Typen schema's**:\n\n**1. Stroomdiagram / stappenplan**\nLaat een **volgorde van stappen** zien.\n• Met **pijlen** tussen kaders.\n• Vaak met **ja/nee-keuzes** *(ruitvorm)*.\n\nVoorbeeld koffie-zetten:\n```\nstart → water koken → koffie in filter → giet water erop → koffie klaar\n```\n\n**2. Boomdiagram**\nLaat een **verdeling van groepen** zien:\n```\nDieren\n├── Zoogdieren\n│   ├── Hond\n│   └── Kat\n└── Vogels\n    ├── Mus\n    └── Adelaar\n```\n\n**3. Vergelijkings-tabel**\nLaat zien wat **overeenkomt en verschilt** tussen 2+ dingen.\n• Bv. fiets vs auto: snelheid, kosten, milieu.\n\n**Cito-truc — schema lezen**:\n• **Volg de pijlen** in de richting waar ze wijzen.\n• Bij **ja/nee**: lees de vraag in de ruit, kies de pijl.\n• **Tel de stappen**.\n\n**Voorbeeld Cito-vraag**:\nSchema toont: 'Stap 1 (water koken) → Stap 2 (filter inzetten) → Stap 3 (koffie scheppen) → Stap 4 (water gieten) → klaar'.\n*'Welke stap komt na 'filter inzetten'?'*\n→ Koffie scheppen *(stap 3)*.\n\n**Stappenplan zelf maken**:\nVoor een doel — bv. 'taart bakken':\n1. Lees recept.\n2. Verzamel ingrediënten.\n3. Meng + kneed.\n4. Bak in oven.\n5. Laat afkoelen.\n\n**Voorbeeld Cito-vraag**:\n*'Welke stap moet eerst?'* → recept lezen. Anders weet je niet wat je nodig hebt.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
+      "Een **schema** geeft veel informatie kort weer met **kaders, pijlen en woorden**.\n\n**Typen schema's**:\n\n**1. Stroomdiagram / stappenplan**\nLaat een **volgorde van stappen** zien.\n• Met **pijlen** tussen kaders.\n• Vaak met **ja/nee-keuzes** *(ruitvorm)*.\n\nVoorbeeld koffie-zetten:\n```\nstart → water koken → koffie in filter → giet water erop → koffie klaar\n```\n\n**2. Boomdiagram**\nLaat een **verdeling van groepen** zien:\n```\nDieren\n├── Zoogdieren\n│   ├── Hond\n│   └── Kat\n└── Vogels\n    ├── Mus\n    └── Adelaar\n```\n\n**3. Vergelijkings-tabel**\nLaat zien wat **overeenkomt en verschilt** tussen 2+ dingen.\n• Bv. fiets vs auto: snelheid, kosten, milieu.\n\n**Toets-truc — schema lezen**:\n• **Volg de pijlen** in de richting waar ze wijzen.\n• Bij **ja/nee**: lees de vraag in de ruit, kies de pijl.\n• **Tel de stappen**.\n\n**Voorbeeld toetsvraag**:\nSchema toont: 'Stap 1 (water koken) → Stap 2 (filter inzetten) → Stap 3 (koffie scheppen) → Stap 4 (water gieten) → klaar'.\n*'Welke stap komt na 'filter inzetten'?'*\n→ Koffie scheppen *(stap 3)*.\n\n**Stappenplan zelf maken**:\nVoor een doel — bv. 'taart bakken':\n1. Lees recept.\n2. Verzamel ingrediënten.\n3. Meng + kneed.\n4. Bak in oven.\n5. Laat afkoelen.\n\n**Voorbeeld toetsvraag**:\n*'Welke stap moet eerst?'* → recept lezen. Anders weet je niet wat je nodig hebt.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     checks: [
       {
         q: "Wat is een **stroomdiagram**?",
@@ -1736,7 +1736,7 @@ const steps = [
             { titel: "Recept eerst", tekst: "Zonder recept weet je niet welke ingrediënten, hoeveelheden, of stappen nodig zijn." },
           ],
           woorden: [{ woord: "stappenplan", tekst: "Volgorde van handelingen om een doel te bereiken." }],
-          theorie: "Cito-tip: bij volgorde-vragen, denk 'wat is logisch ZONDER het volgende stap?' — kan je bakken zonder recept? Nee.",
+          theorie: "Toets-tip: bij volgorde-vragen, denk 'wat is logisch ZONDER het volgende stap?' — kan je bakken zonder recept? Nee.",
           voorbeelden: [{ type: "stap", tekst: "Volgorde taart: 1. Recept lezen → 2. Ingrediënten verzamelen → 3. Mengen → 4. Bakken → 5. Afkoelen → 6. Eten." }],
           basiskennis: [{ onderwerp: "Logica eerst", uitleg: "Stappen die NIETS weten over volgende = beginstappen." }],
           niveaus: {
@@ -1779,13 +1779,13 @@ const steps = [
           stappen: [
             { titel: "Logische volgorde", tekst: "Een stappenplan moet in logische volgorde. Stap 1 moet kunnen WAT MOGELIJK is zonder de andere stappen." },
             { titel: "Recept eerst lezen", tekst: "Hoe weet je WELKE ingrediënten je nodig hebt? Pas als je het RECEPT hebt gelezen. Dus: recept → ingrediënten → mengen → bakken." },
-            { titel: "Cito-truc: doe het in je hoofd", tekst: "Loop het stappenplan in je hoofd na alsof je het zelf gaat doen. Bij elke stap: 'kan ik dit nu? Of moet er iets eerder?' Dan zie je de fout." },
+            { titel: "Toets-truc: doe het in je hoofd", tekst: "Loop het stappenplan in je hoofd na alsof je het zelf gaat doen. Bij elke stap: 'kan ik dit nu? Of moet er iets eerder?' Dan zie je de fout." },
           ],
           woorden: [
             { woord: "stappenplan", uitleg: "Lijstje stappen om iets te doen, in volgorde." },
             { woord: "volgorde", uitleg: "Welke stap eerst, welke daarna." },
           ],
-          theorie: "Cito-vraag: stappenplannen worden vaak gegeven met 1 fout in de volgorde. Lees ze één voor één en denk: 'kan dit pas NA stap X?' Dan moet stap X eerst.",
+          theorie: "toetsvraag: stappenplannen worden vaak gegeven met 1 fout in de volgorde. Lees ze één voor één en denk: 'kan dit pas NA stap X?' Dan moet stap X eerst.",
           voorbeelden: [
             { type: "stap", tekst: "Goed: Recept → Ingrediënten → Mengen → Bakken." },
             { type: "stap", tekst: "Fout: Ingrediënten → Recept → ... — want zonder recept weet je niet wat je moet kopen." },
@@ -1876,7 +1876,7 @@ const steps = [
             { titel: "Volg de pijl", tekst: "Lees mee in de richting waar de pijl naartoe wijst — dan loop je het stappenplan in de goede volgorde." },
           ],
           woorden: [{ woord: "stappenschema", uitleg: "Tekening die stappen + volgorde laat zien." }],
-          theorie: "Cito-truc: bij ja/nee-pijlen — eerst lees je de vraag in de ruit, dan kies je de juiste pijl.",
+          theorie: "Toets-truc: bij ja/nee-pijlen — eerst lees je de vraag in de ruit, dan kies je de juiste pijl.",
           voorbeelden: [{ type: "stap", tekst: "Schema 'start → A → B → einde' = volgorde A vóór B." }],
           basiskennis: [{ onderwerp: "Pijlrichting", uitleg: "Pijl wijst naar wat NA komt. Niet wat ervóór staat." }],
           niveaus: {
@@ -1902,7 +1902,7 @@ const steps = [
             { titel: "Tijdlijn = volgorde", tekst: "Een tijdlijn loopt van vroeger (links) naar nu (rechts). Vergelijk jaartallen om te plaatsen." },
           ],
           woorden: [{ woord: "tijdlijn", uitleg: "Visuele lijn met jaartallen om gebeurtenissen op volgorde te zetten." }],
-          theorie: "Cito-truc: tel even op vingers — komt 1975 voor of na 1950? Na. Voor 2000? Ja. Dus tussen 1950 en 2000.",
+          theorie: "Toets-truc: tel even op vingers — komt 1975 voor of na 1950? Na. Voor 2000? Ja. Dus tussen 1950 en 2000.",
           voorbeelden: [{ type: "stap", tekst: "Eerste mens op de maan (1969) ligt tussen WO2-einde (1945) en val Berlijnse Muur (1989)." }],
           basiskennis: [{ onderwerp: "Eeuw", uitleg: "Eeuw = 100 jaar. 20e eeuw = 1901-2000." }],
           niveaus: {
@@ -1940,7 +1940,7 @@ const steps = [
             { titel: "Pijl in voedselketen", tekst: "De pijl wijst van prooi naar wie het eet. 'Gras → konijn' betekent 'konijn eet gras'. 'Konijn → vos' betekent 'vos eet konijn'." },
           ],
           woorden: [{ woord: "voedselketen", uitleg: "Schema van wie wie eet in de natuur." }],
-          theorie: "Cito-truc: pijl-richting in voedselketen wijst altijd OP naar wie het opeet. Vossen staan boven konijnen.",
+          theorie: "Toets-truc: pijl-richting in voedselketen wijst altijd OP naar wie het opeet. Vossen staan boven konijnen.",
           voorbeelden: [{ type: "stap", tekst: "Plant → rups → vogel → roofvogel." }],
           basiskennis: [{ onderwerp: "Hoogste", uitleg: "Aan einde van keten staan vaak roofdieren met geen vijanden (top-predatoren)." }],
           niveaus: {
@@ -2019,7 +2019,7 @@ const steps = [
             { titel: "'Terwijl' = tegelijkertijd", tekst: "Stappen die tegelijk kunnen, tel je maar één keer (de langste telt). Alleen stappen die ná elkaar moeten, tel je op." },
           ],
           woorden: [{ woord: "minimaal", uitleg: "Op zijn minst — de kortst mogelijke tijd." }],
-          theorie: "Cito test of je ziet welke stappen parallel lopen. Zoek woorden als 'terwijl', 'ondertussen', 'tegelijk'.",
+          theorie: "De toets test of je ziet welke stappen parallel lopen. Zoek woorden als 'terwijl', 'ondertussen', 'tegelijk'.",
           voorbeelden: [{ type: "stap", tekst: "Thee zetten (4 min) terwijl je brood smeert (3 min) = 4 min, niet 7." }],
           basiskennis: [{ onderwerp: "Volgorde-woorden", uitleg: "'Daarna' = optellen. 'Terwijl' = de langste van de twee nemen." }],
           niveaus: {
@@ -2084,7 +2084,7 @@ const steps = [
     title: "Eind-opdracht — studievaardigheden mix",
     refOnderdeel: "geen",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: kaart, tabel, woordenboek, schema.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: kaart, tabel, woordenboek, schema.\n\nVeel succes!",
     checks: [
       {
         q: "Schaal **1:25.000**. Op kaart **8 cm**. Werkelijkheid?",
@@ -2097,7 +2097,7 @@ const steps = [
             { titel: "Omzetten naar km", tekst: "200.000 cm = 2.000 m = 2 km. (cm ÷ 100 = m, m ÷ 1000 = km)." },
           ],
           woorden: [{ woord: "1:25.000", uitleg: "Wandelkaart-schaal. 1 cm op kaart = 25.000 cm = 250 m in het echt." }],
-          theorie: "Cito-schaal-2-stappen: (1) afstand × schaalgetal = cm werkelijk. (2) cm → m → km.",
+          theorie: "Toets-schaal-2-stappen: (1) afstand × schaalgetal = cm werkelijk. (2) cm → m → km.",
           voorbeelden: [{ type: "stap", tekst: "1:25.000 = 1 cm = 250 m. 8 cm = 8 × 250 m = 2000 m = 2 km." }],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "1:25.000 = wandelkaart. 1:50.000 = ANWB-kaart. 1:1.000.000 = atlas." }],
           niveaus: {
@@ -2139,7 +2139,7 @@ const steps = [
             { titel: "Trek van 100% af", tekst: "100% − 90% = 10% rest." },
           ],
           woorden: [{ woord: "cirkeldiagram-100%", uitleg: "Alle stukken samen vormen altijd 100% — de hele cirkel." }],
-          theorie: "Cito-truc: bij missende waarde in cirkeldiagram = (100% − som bekende waarden).",
+          theorie: "Toets-truc: bij missende waarde in cirkeldiagram = (100% − som bekende waarden).",
           voorbeelden: [{ type: "stap", tekst: "20 + 35 + ? = 100 → ? = 45." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Het kleinste stuk is meestal 'de rest'. Hier: 10% past." }],
           niveaus: {
@@ -2205,7 +2205,7 @@ const steps = [
             { woord: "werelddeel", uitleg: "Een van de 7 grote continenten: Afrika/Azië/Europa/Noord-Amerika/Zuid-Amerika/Oceanië/Antarctica." },
             { woord: "Sinaï", uitleg: "Schiereiland van Egypte dat oostelijk van het Suezkanaal ligt — geografisch Azië." },
           ],
-          theorie: "Cito-aardrijkskunde-truc: lees vraag goed. 'In welk werelddeel ligt land X?' = primair werelddeel.",
+          theorie: "Toets-aardrijkskunde-truc: lees vraag goed. 'In welk werelddeel ligt land X?' = primair werelddeel.",
           voorbeelden: [{ type: "stap", tekst: "Turkije: deels Azië, deels Europa, primair Azië. Rusland: deels Europa, deels Azië, vaak beide genoemd." }],
           basiskennis: [{ onderwerp: "Buurlanden Egypte", uitleg: "Egypte grenst aan: Libië (W), Sudan (Z), Israël (NO). Plus Middellandse Zee + Rode Zee." }],
           niveaus: {
@@ -2261,7 +2261,7 @@ const steps = [
             { titel: "Alfabet bij gelijke begin", tekst: "Begin gelijk ('ta')? Kijk naar de volgende letter. 'a' komt eerst, dan 'b', dan 'f'." },
           ],
           woorden: [{ woord: "alfabetische volgorde", uitleg: "A, B, C, D, ... Volgorde van letters in het alfabet." }],
-          theorie: "Cito-truc: vergelijk letter voor letter tot je een verschil vindt.",
+          theorie: "Toets-truc: vergelijk letter voor letter tot je een verschil vindt.",
           voorbeelden: [{ type: "stap", tekst: "'kat' vs 'kar': k-a-t vs k-a-r → t na r. Dus 'kar' eerst." }],
           basiskennis: [{ onderwerp: "Geheugensteun", uitleg: "ABCDEFGHIJK..." }],
           niveaus: {
@@ -2303,10 +2303,10 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Legenda = sleutel", tekst: "De legenda staat naast/onder de grafiek en geeft betekenis aan elke kleur, symbool of streep." },
-            { titel: "Cito-truc", tekst: "Bij grafiek met meerdere lijnen of staven: lees altijd EERST de legenda. Anders weet je niet wat je ziet." },
+            { titel: "Toets-truc", tekst: "Bij grafiek met meerdere lijnen of staven: lees altijd EERST de legenda. Anders weet je niet wat je ziet." },
           ],
           woorden: [{ woord: "legenda", uitleg: "Sleutel/uitleg van symbolen en kleuren bij een kaart of grafiek." }],
-          theorie: "Cito test soms: 'Wat betekent de rode lijn?'. Antwoord vind je in de legenda, niet in de grafiek zelf.",
+          theorie: "De toets test soms: 'Wat betekent de rode lijn?'. Antwoord vind je in de legenda, niet in de grafiek zelf.",
           voorbeelden: [{ type: "stap", tekst: "Kaart met blauw = water, groen = bos, geel = zand → legenda toont dit." }],
           basiskennis: [{ onderwerp: "Soort tekens", uitleg: "Legenda kan symbolen tonen (•, ★, ▲), of kleuren, of streep-patronen." }],
           niveaus: {

@@ -178,7 +178,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is binnen 2σ (70-130).", "Te weinig.", "Te veel — dat is binnen 3σ."],
         uitlegPad: {
           stappen: [{ titel: "Binnen 1σ", tekst: "μ = 100, σ = 15. Bereik 85-115 = μ ± σ. Volgens 68%-regel: **68%** ligt hier." }],
-          theorie: "Cito-voorbeeld-pattern: IQ-vragen met N(100,15). Ook lengte N(170,8) of cijfers N(6,1).",
+          theorie: "Toets-voorbeeld-pattern: IQ-vragen met N(100,15). Ook lengte N(170,8) of cijfers N(6,1).",
           niveaus: { basis: "68%.", simpeler: "85-115 = ±1σ = 68%", nogSimpeler: "68%" },
         },
       },
@@ -306,7 +306,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is binnen 1σ uitschieter (84% < of 16%>).", "Wel groot deel — niet helft.", "Niet — dat is groter dan μ+σ."],
         uitlegPad: {
           stappen: [{ titel: "Z-truc", tekst: "Z = (198 − 184)/7 = 2. P(Z > 2) ≈ **2,5%** (uit 68-95-99,7: 95% binnen 2σ → 5% buiten → 2,5% boven)." }],
-          theorie: "Cito-truc-cluster: P(Z > 1) ≈ 16%. P(Z > 2) ≈ 2,5%. P(Z > 3) ≈ 0,15%.",
+          theorie: "Toets-truc-cluster: P(Z > 1) ≈ 16%. P(Z > 2) ≈ 2,5%. P(Z > 3) ≈ 0,15%.",
           niveaus: { basis: "~2,5%.", simpeler: "198 = μ+2σ = top 2,5%", nogSimpeler: "2,5%" },
         },
       },

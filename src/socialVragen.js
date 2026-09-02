@@ -6,7 +6,7 @@
 // USP op het moment van de hoogste nieuwsgierigheid, en wordt daarna naar de
 // gratis oefentoets / account genudged.
 //
-// REGEL: eigen vragen "in stijl van" de Doorstroomtoets (Cito-vragen zijn
+// REGEL: eigen vragen "in stijl van" de Doorstroomtoets (toetsvragen zijn
 // auteursrechtelijk — niet kopiëren). VMBO-examenvragen mogen authentiek
 // (examenblad.nl = openbaar) als `bron` ingevuld is.
 //
@@ -124,7 +124,7 @@ export const SOCIAL_VRAGEN = {
     },
   },
 
-  // ── Pool-uitbreiding 2026-06-05: meer Cito-pijlers voor dagelijkse posts
+  // ── Pool-uitbreiding 2026-06-05: meer Toets-pijlers voor dagelijkse posts
   //    (taal, begrijpend lezen, spelling, studievaardigheden, rekenen). Eigen
   //    vragen "in stijl van" de Doorstroomtoets, elk gekoppeld aan een leerpad.
 

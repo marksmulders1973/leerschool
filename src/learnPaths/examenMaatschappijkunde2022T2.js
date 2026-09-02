@@ -44,7 +44,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-2/gt-11
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Politieke stromingen: liberaal/sociaal/christen-democratisch/ecologisch/nationalistisch/populistisch. 3 soorten sancties: hoofdstraf/bijkomende straf/maatregel. Theorieën crimineel gedrag: anomie/binding/etiket/neutralisatie/rationele keuze.",
+  theorie: "Toets-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Politieke stromingen: liberaal/sociaal/christen-democratisch/ecologisch/nationalistisch/populistisch. 3 soorten sancties: hoofdstraf/bijkomende straf/maatregel. Theorieën crimineel gedrag: anomie/binding/etiket/neutralisatie/rationele keuze.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

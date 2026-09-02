@@ -3,7 +3,7 @@
 // 23% van het taal-deel). Voorheen was dit een gap in Leerkwartier — alleen
 // een pilot-pad doorstroomtoetsTaalG8 bevatte enkele losse vragen.
 //
-// 5 stappen × ~5 checks = ~25 Cito-stijl oefenvragen.
+// 5 stappen × ~5 checks = ~25 Doorstroomtoets-stijl oefenvragen.
 // Referentieniveau 1F/1S.
 
 const COLORS = {
@@ -22,7 +22,7 @@ const chapters = [
   { letter: "B", title: "Brief & e-mail", emoji: "✉️", from: 1, to: 1 },
   { letter: "C", title: "Samenvatten", emoji: "📝", from: 2, to: 2 },
   { letter: "D", title: "Opinie & argumentatie", emoji: "🗣️", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -30,7 +30,7 @@ const steps = [
   {
     title: "Wat wil de schrijver? — Tekstdoelen",
     explanation:
-      "Een goede schrijver weet **waarom** hij schrijft. Bij Cito moet je vaak het **tekstdoel** herkennen.\n\n**4 tekstdoelen — onthoud OBIA**:\n• **O — Overtuigen** *(de schrijver wil dat je iets denkt of doet)*. Voorbeeld: reclame, opiniestuk, ingezonden brief.\n• **B — Beschrijven / informeren** *(de schrijver geeft feiten)*. Voorbeeld: krantenbericht, encyclopedie, schoolboek.\n• **I — Instrueren** *(de schrijver legt uit hoe iets moet)*. Voorbeeld: recept, handleiding, stappenplan.\n• **A — Amuseren** *(de schrijver wil dat je lacht of geniet)*. Voorbeeld: gedicht, mop, verhaal.\n\n**Cito-truc**: lees de **eerste én laatste zin**. Daar zit het tekstdoel meestal in. Reclame eindigt met \"koop nu\" → Overtuigen. Recept begint met \"je hebt nodig\" → Instrueren.\n\n**Veel-voorkomende valkuilen**:\n• Reclame ziet eruit als informeren, maar wil **kopen** → Overtuigen.\n• Een grappig verhaal kan ook iets leren — kijk welk doel **hoofdzaak** is.",
+      "Een goede schrijver weet **waarom** hij schrijft. Bij de Doorstroomtoets moet je vaak het **tekstdoel** herkennen.\n\n**4 tekstdoelen — onthoud OBIA**:\n• **O — Overtuigen** *(de schrijver wil dat je iets denkt of doet)*. Voorbeeld: reclame, opiniestuk, ingezonden brief.\n• **B — Beschrijven / informeren** *(de schrijver geeft feiten)*. Voorbeeld: krantenbericht, encyclopedie, schoolboek.\n• **I — Instrueren** *(de schrijver legt uit hoe iets moet)*. Voorbeeld: recept, handleiding, stappenplan.\n• **A — Amuseren** *(de schrijver wil dat je lacht of geniet)*. Voorbeeld: gedicht, mop, verhaal.\n\n**Toets-truc**: lees de **eerste én laatste zin**. Daar zit het tekstdoel meestal in. Reclame eindigt met \"koop nu\" → Overtuigen. Recept begint met \"je hebt nodig\" → Instrueren.\n\n**Veel-voorkomende valkuilen**:\n• Reclame ziet eruit als informeren, maar wil **kopen** → Overtuigen.\n• Een grappig verhaal kan ook iets leren — kijk welk doel **hoofdzaak** is.",
     checks: [
       {
         q: "Wat is het **tekstdoel** van een **handleiding** bij een nieuwe fiets?",
@@ -96,7 +96,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Ik vind' = mening = Overtuigen", tekst: "Zodra je 'ik vind', 'volgens mij', 'mijn mening is' leest, weet je: de schrijver wil je MENING beïnvloeden. Doel = **Overtuigen**." }],
           woorden: [{ woord: "mening", uitleg: "Wat iemand persoonlijk denkt. Niet bewijsbaar zoals een feit." }],
-          theorie: "Cito-truc: zoek 'ik vind', 'volgens mij', 'het is belangrijk dat'. → Overtuigen.",
+          theorie: "Toets-truc: zoek 'ik vind', 'volgens mij', 'het is belangrijk dat'. → Overtuigen.",
           voorbeelden: [{ type: "controle", tekst: "'Ik vind voetbal de mooiste sport.' = mening = Overtuigen." }],
           basiskennis: [{ onderwerp: "Mening vs feit", uitleg: "FEIT: '40% van NL doet aan sport'. MENING: 'Sporten is geweldig'." }],
           niveaus: { basis: "Ik vind = mening = Overtuigen.", simpeler: "'Ik vind' is geen feit maar mening. Schrijver wil je overtuigen.", nogSimpeler: "Mening = Overtuigen" },
@@ -109,7 +109,7 @@ const steps = [
   {
     title: "Brief & e-mail — formeel of informeel?",
     explanation:
-      "Een **brief** of **e-mail** schrijven is een Cito-vraag-favoriet. Belangrijk: kies de **juiste toon** (register).\n\n**Formeel** = beleefd, voor mensen die je NIET goed kent (bv. juf, gemeente, bedrijf).\n• Aanhef: *Geachte heer / mevrouw* of *Beste meneer/mevrouw [achternaam]*.\n• U-vorm: *u*, *uw*.\n• Afsluiting: *Met vriendelijke groet, [voornaam achternaam]*.\n\n**Informeel** = vrij, voor familie/vrienden.\n• Aanhef: *Hoi / Hallo [voornaam]*.\n• Je-vorm: *je*, *jouw*.\n• Afsluiting: *Groetjes, [voornaam]* of *Doei, [voornaam]*.\n\n**Cito-valkuilen**:\n• 'Beste' kan formeel of informeel zijn — kijk naar wat erna komt (achternaam = formeel, voornaam = informeel).\n• Een e-mail aan de docent gebruikt **u-vorm** ook al ben je een kind.\n• Geen smileys of afkortingen in formele post.",
+      "Een **brief** of **e-mail** schrijven is een toetsvraag-favoriet. Belangrijk: kies de **juiste toon** (register).\n\n**Formeel** = beleefd, voor mensen die je NIET goed kent (bv. juf, gemeente, bedrijf).\n• Aanhef: *Geachte heer / mevrouw* of *Beste meneer/mevrouw [achternaam]*.\n• U-vorm: *u*, *uw*.\n• Afsluiting: *Met vriendelijke groet, [voornaam achternaam]*.\n\n**Informeel** = vrij, voor familie/vrienden.\n• Aanhef: *Hoi / Hallo [voornaam]*.\n• Je-vorm: *je*, *jouw*.\n• Afsluiting: *Groetjes, [voornaam]* of *Doei, [voornaam]*.\n\n**Toets-valkuilen**:\n• 'Beste' kan formeel of informeel zijn — kijk naar wat erna komt (achternaam = formeel, voornaam = informeel).\n• Een e-mail aan de docent gebruikt **u-vorm** ook al ben je een kind.\n• Geen smileys of afkortingen in formele post.",
     checks: [
       {
         q: "Je schrijft de **gemeente** voor een vraag. Welke aanhef past?",
@@ -133,7 +133,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Formeel = U-vorm", tekst: "In formele brieven: 'u' (onderwerp) en 'uw' (bezit). Bv. 'Ik schrijf u over uw besluit'. Niet 'jij' of 'je'." }],
           woorden: [{ woord: "U-vorm", uitleg: "Beleefde aanspreekvorm in NL: u (jij) en uw (jouw)." }],
-          theorie: "Cito-regel: formele brief → altijd u/uw. Informele brief → je/jouw of jij.",
+          theorie: "Toets-regel: formele brief → altijd u/uw. Informele brief → je/jouw of jij.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Formeel: 'Hoe gaat het met u?' Informeel: 'Hoe gaat het met jou?'" }],
           basiskennis: [{ onderwerp: "Hoofdletter U", uitleg: "U met hoofdletter is extra-beleefd (bv. aan koningshuis). Normaal kleine 'u'." }],
           niveaus: { basis: "Formeel = u.", simpeler: "Beleefd → u en uw (niet jij/je).", nogSimpeler: "U-vorm = formeel." },
@@ -163,7 +163,7 @@ const steps = [
           woorden: [{ woord: "verzoeken", uitleg: "Beleefd vragen om iets." }, { woord: "register", uitleg: "Toon van een tekst — formeel of informeel." }],
           theorie: "Formele zinnen: langer, hoffelijker, geen straattaal. 'Hierbij', 'verzoek', 'graag' zijn formele signalen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Formeel: 'Ik zou u graag willen spreken.' Informeel: 'Kan ik je even spreken?'" }],
-          basiskennis: [{ onderwerp: "Cito-val", uitleg: "Een te losse zin in formele context → punten aftrek. 'Hey' / 'doei' / afkortingen → mijden." }],
+          basiskennis: [{ onderwerp: "Toets-val", uitleg: "Een te losse zin in formele context → punten aftrek. 'Hey' / 'doei' / afkortingen → mijden." }],
           niveaus: { basis: "Eerste = formeel + beleefd.", simpeler: "'Hierbij...verzoeken...u' = beleefde brief-taal.", nogSimpeler: "Beleefd" },
         },
       },
@@ -175,7 +175,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Signalen herkennen", tekst: "**'Meneer Janssen'** (achternaam) + **'u'** (beleefd) + **'namens onze klas'** (groep, niet persoon) = drie formele signalen. Dus formele brief." }],
           woorden: [{ woord: "namens", uitleg: "In de naam van iemand anders / een groep." }],
-          theorie: "Cito-truc: tel formele signalen. Achternaam, u-vorm, beleefde woorden = 3-uit-3 → formeel.",
+          theorie: "Toets-truc: tel formele signalen. Achternaam, u-vorm, beleefde woorden = 3-uit-3 → formeel.",
           voorbeelden: [{ type: "controle", tekst: "Informeel: 'Hoi Piet, ik schrijf je namens m'n klas' (voornaam + 'je')." }],
           basiskennis: [{ onderwerp: "'Beste' is dubbel", uitleg: "'Beste meneer Janssen' = formeel (achternaam). 'Beste Piet' = informeel (voornaam). Het verschil zit in WIE." }],
           niveaus: { basis: "Meneer + u = formeel.", simpeler: "Achternaam + u-vorm + 'namens' = formele brief.", nogSimpeler: "Formeel" },
@@ -188,7 +188,7 @@ const steps = [
   {
     title: "Samenvatten — hoofdgedachte vinden",
     explanation:
-      "**Samenvatten** = de tekst korter maken zonder belangrijke info te verliezen. Cito-vraag-favoriet.\n\n**Stappenplan samenvatten (Cito-truc)**:\n1. Lees de hele tekst.\n2. Vind de **hoofdgedachte** — wat is de **belangrijkste boodschap**? (vaak in eerste/laatste alinea)\n3. Per alinea: wat is de **kern-zin**? (vaak de eerste zin)\n4. Schrijf de hoofdgedachte + kern-zinnen in eigen woorden.\n5. Lengte = **20-30%** van de oorspronkelijke tekst.\n\n**Wat WEGLATEN**:\n• Voorbeelden ('zoals bijvoorbeeld...').\n• Details (datums, getallen tenzij heel belangrijk).\n• Herhalingen.\n• Mening van de schrijver (tenzij hoofdpunt).\n\n**Cito-signaalwoorden voor hoofdgedachte**:\n• 'Dit betekent dat...', 'Kort gezegd...', 'Conclusie:', 'Het komt erop neer dat...'.\n• Vaak in **laatste alinea** of vlak voor 'kortom'.\n\n**Veel-voorkomende fout**: de eerste zin van de tekst klakkeloos overnemen. Niet altijd is de eerste zin de hoofdgedachte.",
+      "**Samenvatten** = de tekst korter maken zonder belangrijke info te verliezen. toetsvraag-favoriet.\n\n**Stappenplan samenvatten (Toets-truc)**:\n1. Lees de hele tekst.\n2. Vind de **hoofdgedachte** — wat is de **belangrijkste boodschap**? (vaak in eerste/laatste alinea)\n3. Per alinea: wat is de **kern-zin**? (vaak de eerste zin)\n4. Schrijf de hoofdgedachte + kern-zinnen in eigen woorden.\n5. Lengte = **20-30%** van de oorspronkelijke tekst.\n\n**Wat WEGLATEN**:\n• Voorbeelden ('zoals bijvoorbeeld...').\n• Details (datums, getallen tenzij heel belangrijk).\n• Herhalingen.\n• Mening van de schrijver (tenzij hoofdpunt).\n\n**Toets-signaalwoorden voor hoofdgedachte**:\n• 'Dit betekent dat...', 'Kort gezegd...', 'Conclusie:', 'Het komt erop neer dat...'.\n• Vaak in **laatste alinea** of vlak voor 'kortom'.\n\n**Veel-voorkomende fout**: de eerste zin van de tekst klakkeloos overnemen. Niet altijd is de eerste zin de hoofdgedachte.",
     checks: [
       {
         q: "Wat is de **eerste stap** bij samenvatten van een tekst?",
@@ -196,11 +196,11 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te vroeg — eerst weten waar de tekst over gaat.", "Niet — eerst kijken, dan schrijven.", "Niet — titel is geen samenvatting."],
         uitlegPad: {
-          stappen: [{ titel: "Eerst lezen, dan begrijpen", tekst: "Cito-regel #1: **lees de hele tekst** voor je samenvat. Anders mis je context. Pas DAARNA onderstreep je kern-zinnen." }],
+          stappen: [{ titel: "Eerst lezen, dan begrijpen", tekst: "Toets-regel #1: **lees de hele tekst** voor je samenvat. Anders mis je context. Pas DAARNA onderstreep je kern-zinnen." }],
           woorden: [{ woord: "samenvatten", uitleg: "Tekst korter maken, alleen kern-info bewaren." }],
           theorie: "Vijf-stappen-plan: 1) lezen, 2) hoofdgedachte vinden, 3) kern-zinnen markeren, 4) eigen woorden, 5) check op lengte 20-30%.",
           voorbeelden: [{ type: "controle", tekst: "Tekst van 500 woorden → samenvatting 100-150 woorden." }],
-          basiskennis: [{ onderwerp: "Niet-skippen", uitleg: "Veel leerlingen slaan stap 1 over — kost punten op Cito." }],
+          basiskennis: [{ onderwerp: "Niet-skippen", uitleg: "Veel leerlingen slaan stap 1 over — kost punten op de Doorstroomtoets." }],
           niveaus: { basis: "Eerst lezen.", simpeler: "Stap 1 van samenvatten = hele tekst lezen.", nogSimpeler: "Eerst lezen." },
         },
       },
@@ -212,7 +212,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Signaalwoorden van conclusie", tekst: "**'Kortom', 'concluderend', 'dit betekent dat', 'samenvattend', 'al met al'** → altijd: de schrijver geeft de **hoofdgedachte**. Pak meteen die zin." }],
           woorden: [{ woord: "signaalwoord", uitleg: "Woord dat aankondigt wat er komt (conclusie, voorbeeld, tegenstelling)." }],
-          theorie: "Cito-leesstrategie: scan op signaalwoorden VOOR je grondig leest. Levert hoofdgedachte snel.",
+          theorie: "Toets-leesstrategie: scan op signaalwoorden VOOR je grondig leest. Levert hoofdgedachte snel.",
           voorbeelden: [{ type: "controle", tekst: "'Kortom, sporten is goed voor je gezondheid.' = hoofdgedachte." }],
           basiskennis: [{ onderwerp: "Niet alle signaalwoorden zijn conclusie", uitleg: "'Bijvoorbeeld' = voorbeeld-signaal. 'Maar' = tegenstelling-signaal. 'Want' = reden-signaal." }],
           niveaus: { basis: "Kortom = conclusie.", simpeler: "'Kortom' kondigt hoofdgedachte aan.", nogSimpeler: "Kortom" },
@@ -238,9 +238,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dan vat je niet samen.", "Vaak te kort — kern + sleutelpunten zijn meer dan 1 zin.", "Niet — een samenvatting is altijd korter dan het origineel."],
         uitlegPad: {
-          stappen: [{ titel: "Vuistregel 25%", tekst: "Een Cito-samenvatting = ongeveer **20-30%** van de oorspronkelijke tekst. Bv. 500 woorden tekst → 100-150 woorden samenvatting. Korter? Te weinig info. Langer? Geen samenvatting meer." }],
+          stappen: [{ titel: "Vuistregel 25%", tekst: "Een Toets-samenvatting = ongeveer **20-30%** van de oorspronkelijke tekst. Bv. 500 woorden tekst → 100-150 woorden samenvatting. Korter? Te weinig info. Langer? Geen samenvatting meer." }],
           woorden: [{ woord: "vuistregel", uitleg: "Algemene richtlijn die meestal klopt." }],
-          theorie: "Cito-tip: tel woorden. Past je samenvatting niet in 20-30%? Schrap voorbeelden en details.",
+          theorie: "Toets-tip: tel woorden. Past je samenvatting niet in 20-30%? Schrap voorbeelden en details.",
           voorbeelden: [{ type: "controle", tekst: "300-woord tekst → ~75 woord samenvatting." }],
           basiskennis: [{ onderwerp: "Niet te kort", uitleg: "1 zin = geen samenvatting, maar slogan. Verlies van nuance." }],
           niveaus: { basis: "20-30%.", simpeler: "Vuistregel: een kwart van origineel.", nogSimpeler: "Korter, maar niet té." },
@@ -254,7 +254,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Conclusie-zin = hoofdgedachte", tekst: "De zin **direct na 'Kortom'** is de hoofdgedachte. 'Groente en fruit zijn de basis van een gezonde voeding' = exact dat. Geen interpretatie nodig — gewoon kopiëren." }],
           woorden: [{ woord: "hoofdgedachte", uitleg: "De belangrijkste boodschap van de tekst — alles draait hierom." }],
-          theorie: "Cito-strategie: zoek 'kortom' / 'concluderend' / 'het komt erop neer dat' → de zin erna is je hoofdgedachte.",
+          theorie: "Toets-strategie: zoek 'kortom' / 'concluderend' / 'het komt erop neer dat' → de zin erna is je hoofdgedachte.",
           voorbeelden: [{ type: "controle", tekst: "'Concluderend: lezen vergroot je woordenschat.' → hoofdgedachte = 'Lezen vergroot je woordenschat'." }],
           basiskennis: [{ onderwerp: "Geen interpretatie", uitleg: "Bij conclusie-zinnen niet zelf woorden veranderen. Letterlijk overnemen." }],
           niveaus: { basis: "De conclusie-zin.", simpeler: "Na 'kortom' staat de hoofdgedachte.", nogSimpeler: "Kortom-zin = hoofdgedachte" },
@@ -267,7 +267,7 @@ const steps = [
   {
     title: "Opinie geven — argumenten onderbouwen",
     explanation:
-      "Een **mening** geven kun je iedereen. Een **opinie met argumenten onderbouwen** is moeilijker — en exact wat Cito test.\n\n**Verschil**:\n• **Mening** = wat je vindt. 'Ik vind aardrijkskunde leuk.'\n• **Argument** = REDEN waarom je dat vindt. 'Aardrijkskunde is leuk **omdat** je over verre landen leert.'\n• **Voorbeeld** = concreet geval dat argument ondersteunt. '...Bijvoorbeeld: ik wist niet dat IJsland 30 actieve vulkanen heeft.'\n\n**Argument-soorten (Cito groep 7-8)**:\n• **Feit-argument**: '...want uit onderzoek blijkt dat 80% van de kinderen het leuk vindt.'\n• **Voorbeeld-argument**: '...want toen ik laatst over Japan leerde, was iedereen geïnteresseerd.'\n• **Gevoel-argument**: '...want ik voel me trots als ik veel hoofdsteden weet.' (zwakste — alleen jij voelt zo).\n• **Autoriteit-argument**: '...want de meester zegt dat AK belangrijk is.' (matig — wie zegt het zelf-belangrijk?).\n\n**Cito-truc opbouw opiniestuk**:\n1. Onderwerp + mening (1 zin)\n2. 2-3 argumenten met voorbeeld\n3. Tegenargument noemen + weerleggen ('Sommigen denken dat... maar...')\n4. Slot-zin = je mening herhalen\n\n**Drogredenen** (= foute argumenten, valstrik in Cito):\n• Persoonlijke aanval ('Jij hebt ongelijk omdat je dom bent').\n• Generaliseren ('Iedereen vindt het leuk').\n• Vals dilemma ('Of jij stemt voor, of je bent tegen kinderen').",
+      "Een **mening** geven kun je iedereen. Een **opinie met argumenten onderbouwen** is moeilijker — en exact wat De toets test.\n\n**Verschil**:\n• **Mening** = wat je vindt. 'Ik vind aardrijkskunde leuk.'\n• **Argument** = REDEN waarom je dat vindt. 'Aardrijkskunde is leuk **omdat** je over verre landen leert.'\n• **Voorbeeld** = concreet geval dat argument ondersteunt. '...Bijvoorbeeld: ik wist niet dat IJsland 30 actieve vulkanen heeft.'\n\n**Argument-soorten (Doorstroomtoets groep 7-8)**:\n• **Feit-argument**: '...want uit onderzoek blijkt dat 80% van de kinderen het leuk vindt.'\n• **Voorbeeld-argument**: '...want toen ik laatst over Japan leerde, was iedereen geïnteresseerd.'\n• **Gevoel-argument**: '...want ik voel me trots als ik veel hoofdsteden weet.' (zwakste — alleen jij voelt zo).\n• **Autoriteit-argument**: '...want de meester zegt dat AK belangrijk is.' (matig — wie zegt het zelf-belangrijk?).\n\n**Toets-truc opbouw opiniestuk**:\n1. Onderwerp + mening (1 zin)\n2. 2-3 argumenten met voorbeeld\n3. Tegenargument noemen + weerleggen ('Sommigen denken dat... maar...')\n4. Slot-zin = je mening herhalen\n\n**Drogredenen** (= foute argumenten, valstrik in de Doorstroomtoets):\n• Persoonlijke aanval ('Jij hebt ongelijk omdat je dom bent').\n• Generaliseren ('Iedereen vindt het leuk').\n• Vals dilemma ('Of jij stemt voor, of je bent tegen kinderen').",
     checks: [
       {
         q: "*'Ik vind voetbal de mooiste sport, want het houdt je gezond.'* Welk argument-soort?",
@@ -277,7 +277,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bewijsbaar = feit", tekst: "'Voetbal houdt je gezond' is **bewijsbaar** via onderzoek/cijfers. Dus feit-argument — sterk type. Beter dan 'omdat ik het leuk vind' (gevoel)." }],
           woorden: [{ woord: "argument", uitleg: "Reden achter een mening." }],
-          theorie: "Sterkste argumenten: feit > voorbeeld > autoriteit > gevoel. Cito waardeert feit/voorbeeld het meest.",
+          theorie: "Sterkste argumenten: feit > voorbeeld > autoriteit > gevoel. De toets waardeert feit/voorbeeld het meest.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Feit: 'WHO zegt dat 60 min sport/dag het immuunsysteem verbetert' → bewijs." }],
           basiskennis: [{ onderwerp: "Bewijsbaarheid", uitleg: "Feit = kan worden gecheckt. Gevoel = alleen jouw beleving." }],
           niveaus: { basis: "Gezond = bewijsbaar = feit.", simpeler: "'Gezond' kun je meten → feit-argument.", nogSimpeler: "Bewijsbaar = feit" },
@@ -289,9 +289,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Geen aanval op een persoon.", "Geen of-of-keuze.", "Niet — dit is juist een fout argument."],
         uitlegPad: {
-          stappen: [{ titel: "'Iedereen weet' = generaliseren", tekst: "'Iedereen' = **iedereen ter wereld**? Nee. Dit is een **generalisatie** — een uitspraak alsof alles voor iedereen geldt. Drogreden — Cito-val." }],
+          stappen: [{ titel: "'Iedereen weet' = generaliseren", tekst: "'Iedereen' = **iedereen ter wereld**? Nee. Dit is een **generalisatie** — een uitspraak alsof alles voor iedereen geldt. Drogreden — Toets-val." }],
           woorden: [{ woord: "drogreden", uitleg: "Foute reden — lijkt logisch maar is het niet." }, { woord: "generaliseren", uitleg: "Iets over 'iedereen' zeggen zonder bewijs." }],
-          theorie: "Cito-letten op: 'iedereen', 'alle mensen', 'niemand', 'altijd', 'nooit' → drogreden-signalen.",
+          theorie: "Toets-letten op: 'iedereen', 'alle mensen', 'niemand', 'altijd', 'nooit' → drogreden-signalen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Alle kinderen houden van pizza' → niet waar — er zijn kinderen die geen pizza lusten." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Vraag: ken ik 1 voorbeeld dat tégen deze uitspraak ingaat? Zo ja → generalisatie." }],
           niveaus: { basis: "'Iedereen' = generaliseren.", simpeler: "'Iedereen weet' is geen bewijs — drogreden.", nogSimpeler: "Iedereen" },
@@ -305,7 +305,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Voorbeeld = concreet geval", tekst: "Een voorbeeld-argument geeft een **specifieke ervaring**: 'Ik las... over... en leerde...'. Dat is sterker dan 'lezen is leuk' (mening) of 'iedereen leest' (drogreden)." }],
           woorden: [{ woord: "voorbeeld-argument", uitleg: "Bewijs uit een concrete situatie." }],
-          theorie: "Cito-tip: een voorbeeld-argument begint vaak met 'Ik las...', 'Laatst zag ik...', 'Bij ons in de klas...'.",
+          theorie: "Toets-tip: een voorbeeld-argument begint vaak met 'Ik las...', 'Laatst zag ik...', 'Bij ons in de klas...'.",
           voorbeelden: [{ type: "controle", tekst: "Goed voorbeeld: 'Toen ik dyslexie kreeg, lezen werd minder leuk maar ik leerde dat met de juiste hulp het lukt.'" }],
           basiskennis: [{ onderwerp: "Persoonlijk maar concreet", uitleg: "Voorbeeld-argument = jouw ervaring met FEITEN. Niet alleen je gevoel." }],
           niveaus: { basis: "Concrete ervaring = voorbeeld.", simpeler: "Boek + plankton geleerd = voorbeeld.", nogSimpeler: "Eigen ervaring" },
@@ -317,7 +317,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — sterker juist als je 't tegenkomt.", "Niet — dan ziet de lezer niet dat je 'm hebt overwogen.", "Niet — dan verlies je je eigen punt."],
         uitlegPad: {
-          stappen: [{ titel: "Tegenargument toelaten = sterker", tekst: "Cito-truc: noem de **tegenargumenten** ('Sommigen denken dat...'), **weerleg** ze ('...maar dat klopt niet omdat...'), en kom terug naar jouw mening. Dat toont dat je doordenkt." }],
+          stappen: [{ titel: "Tegenargument toelaten = sterker", tekst: "Toets-truc: noem de **tegenargumenten** ('Sommigen denken dat...'), **weerleg** ze ('...maar dat klopt niet omdat...'), en kom terug naar jouw mening. Dat toont dat je doordenkt." }],
           woorden: [{ woord: "weerleggen", uitleg: "Tegenargument onderuit halen met bewijs." }],
           theorie: "Opbouw opiniestuk: mening → 2-3 argumenten → tegenargument + weerlegging → herhaalde mening (slot).",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Sommige ouders vinden zakgeld leerzaam, maar onderzoek toont dat kinderen zonder zakgeld even goed leren omgaan met geld.'" }],
@@ -342,11 +342,11 @@ const steps = [
     ],
   },
 
-  // ─── E. Cito-eindopdracht ──────────────────────────────────
+  // ─── E. Toets-eindopdracht ──────────────────────────────────
   {
-    title: "Cito-eindopdracht — alles samen",
+    title: "Toets-eindopdracht — alles samen",
     explanation:
-      "Mix van tekstdoelen + brief + samenvatten + opinie. Cito-stijl vragen door elkaar — zoals in de Doorstroomtoets-test.\n\n**Strategie eindopdracht**:\n• Lees vraag eerst, daarna pas tekstje.\n• Tijdsbudget: ~1 min per meerkeuze-vraag.\n• Twijfel? Sluit eerst de duidelijk foute opties uit.\n• Open vraag? Beantwoord in volledige zinnen.\n\nVeel succes!",
+      "Mix van tekstdoelen + brief + samenvatten + opinie. Doorstroomtoets-stijl vragen door elkaar — zoals in de Doorstroomtoets-test.\n\n**Strategie eindopdracht**:\n• Lees vraag eerst, daarna pas tekstje.\n• Tijdsbudget: ~1 min per meerkeuze-vraag.\n• Twijfel? Sluit eerst de duidelijk foute opties uit.\n• Open vraag? Beantwoord in volledige zinnen.\n\nVeel succes!",
     checks: [
       {
         q: "Welke opbouw past bij een goed **opiniestuk**?",
@@ -354,7 +354,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — opiniestuk MOET een mening hebben.", "Niet — opiniestuk gaat juist over jouw mening.", "Niet — dat is een handleiding-structuur."],
         uitlegPad: {
-          stappen: [{ titel: "Opiniestuk-structuur", tekst: "Goede opbouw: 1) Mening (1 zin); 2) 2-3 argumenten met voorbeeld; 3) Tegenargument noemen + weerleggen; 4) Slot-zin (mening herhalen). Cito kijkt naar deze 4 elementen." }],
+          stappen: [{ titel: "Opiniestuk-structuur", tekst: "Goede opbouw: 1) Mening (1 zin); 2) 2-3 argumenten met voorbeeld; 3) Tegenargument noemen + weerleggen; 4) Slot-zin (mening herhalen). De toets kijkt naar deze 4 elementen." }],
           niveaus: { basis: "4 stappen: mening, argumenten, tegen weerleggen, slot.", simpeler: "Opiniestuk = jouw mening + redenen + tegenargument-weerleggen.", nogSimpeler: "Opbouw 1" },
         },
       },
@@ -394,7 +394,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — grammaticaal klopt het.", "Niet de kwestie hier — kijk naar 'iedereen'.", "Niet — lengte is geen probleem."],
         uitlegPad: {
-          stappen: [{ titel: "'Iedereen' = drogreden", tekst: "'Iedereen wil meer huiswerk' is een **generalisatie** — niet bewijsbaar (er zijn vast leerlingen die GEEN extra huiswerk willen). Drogreden, Cito-val." }],
+          stappen: [{ titel: "'Iedereen' = drogreden", tekst: "'Iedereen wil meer huiswerk' is een **generalisatie** — niet bewijsbaar (er zijn vast leerlingen die GEEN extra huiswerk willen). Drogreden, Toets-val." }],
           niveaus: { basis: "Iedereen = generaliseren.", simpeler: "'Iedereen' is geen bewijs = drogreden.", nogSimpeler: "Generaliseren" },
         },
       },
@@ -406,7 +406,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const schrijvenTekstenPo = {
   id: "schrijven-teksten-po",
-  title: "Schrijven van teksten (Cito groep 6-8)",
+  title: "Schrijven van teksten (Doorstroomtoets groep 6-8)",
   emoji: "📝",
   level: "groep6-8",
   subject: "taal",
@@ -418,7 +418,7 @@ const schrijvenTekstenPo = {
     { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen-strategie", niveau: "po-1F" },
   ],
   intro:
-    "Schrijven voor de Cito-Doorstroomtoets — tekstdoelen, brief/e-mail, samenvatten, opinie + drogredenen. 5 stappen × ~5 vragen. ~15 min.",
+    "Schrijven voor de Doorstroomtoets — tekstdoelen, brief/e-mail, samenvatten, opinie + drogredenen. 5 stappen × ~5 vragen. ~15 min.",
   triggerKeywords: [
     "schrijven", "tekstdoel", "brief", "email", "e-mail",
     "samenvatten", "hoofdgedachte", "opinie", "argument",

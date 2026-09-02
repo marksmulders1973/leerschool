@@ -90,7 +90,7 @@ export { SAMPLE_QUESTIONS } from "./data/sampleQuestions.js";
 
 
 // ─── Cito Oefenen — onderdelen ──────────────────────────────────
-// Gebruikt door het aparte Cito-bakje in de app (citoMode: true in SUBJECTS)
+// Gebruikt door het aparte Toets-bakje in de app (citoMode: true in SUBJECTS)
 export const CITO_ONDERDELEN = [
   { id: "rekenen",          label: "Rekenen & Wiskunde", icon: "🔢", color: "#00c853" },
   { id: "taal",             label: "Taal",               icon: "📝", color: "#00e676" },

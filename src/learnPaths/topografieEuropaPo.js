@@ -1,6 +1,6 @@
 // Leerpad: Topografie Europa (groep 7-8 basisschool)
 // 6 stappen × 3 checks = 18 vragen. Aansluiting op europese-unie-po +
-// topografie-nederland. Cito-stof wereldoriëntatie.
+// topografie-nederland. toetsstof wereldoriëntatie.
 // Stijl: kort, NL-context-bridge (welk land grenst aan ons + buurland-feiten).
 
 const chapters = [
@@ -12,7 +12,7 @@ const chapters = [
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc topografie: lijst per windrichting onthouden + geheugentrucs (bv. 'Wie Pa Bedrog Vraagt' voor Wenen-Praag-Boedapest-Vlaanderen). Hoofdsteden vaak in vraag verstopt.",
+  theorie: "Toets-truc topografie: lijst per windrichting onthouden + geheugentrucs (bv. 'Wie Pa Bedrog Vraagt' voor Wenen-Praag-Boedapest-Vlaanderen). Hoofdsteden vaak in vraag verstopt.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -292,7 +292,7 @@ const topografieEuropaPo = {
   subject: "wereldorientatie",
   referentieNiveau: "po-1F",
   sloThema: "Wereldoriëntatie - topografie Europa",
-  intro: "18 vragen Cito-stof groep 7-8: hoofdsteden per windrichting, grote zeeën + rivieren, bergketens. Aansluiting op topografie-nederland + europese-unie-po.",
+  intro: "18 vragen toetsstof groep 7-8: hoofdsteden per windrichting, grote zeeën + rivieren, bergketens. Aansluiting op topografie-nederland + europese-unie-po.",
   triggerKeywords: ["topografie europa", "hoofdsteden europa", "europese landen", "rivier europa", "bergen europa"],
   prerequisites: [
     { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },

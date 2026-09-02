@@ -572,7 +572,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           stappen: [
             { titel: "Balans-structuur", tekst: "Een **balans** heeft 2 kanten:\n• **Debet (links)** = **bezittingen** (activa): gebouwen, voorraad, geld in kas, auto's, computers\n• **Credit (rechts)** = **eigen vermogen + schulden** (passiva): kapitaal eigenaar + leningen + crediteuren\n\n**Regel**: debet = credit (altijd in evenwicht). Vandaar 'balans'." },
             { titel: "Voorbeelden activa/passiva", tekst: "**Activa (debet)**:\n• Gebouw waarde €500.000\n• Voorraad waarde €50.000\n• Kasgeld €5.000\n• Bank-saldo €20.000\n• Auto's €30.000\n• Totaal: €605.000\n\n**Passiva (credit)** moet ook €605.000:\n• Eigen vermogen €200.000\n• Hypotheek €350.000\n• Leveranciers-schuld €55.000" },
-            { titel: "Cito-feit: ezelsbruggetje", tekst: "**'D-A en C-P'** = Debet-Activa + Credit-Passiva. Onthoud deze!\n\nIn boekhoud-software (Exact, AFAS): debet + credit altijd zichtbaar. Bij verkoop: debet kas, credit voorraad. Bij inkoop: debet voorraad, credit kas/schuld. Symmetrisch boekhouden = dubbel boekhouden, uitvinding 1494 door Luca Pacioli (Italiaans monnik)." },
+            { titel: "Toets-feit: ezelsbruggetje", tekst: "**'D-A en C-P'** = Debet-Activa + Credit-Passiva. Onthoud deze!\n\nIn boekhoud-software (Exact, AFAS): debet + credit altijd zichtbaar. Bij verkoop: debet kas, credit voorraad. Bij inkoop: debet voorraad, credit kas/schuld. Symmetrisch boekhouden = dubbel boekhouden, uitvinding 1494 door Luca Pacioli (Italiaans monnik)." },
           ],
           woorden: [
             { woord: "debet", uitleg: "Linker-kant balans: bezittingen + uitgaven." },
@@ -597,7 +597,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           stappen: [
             { titel: "Wat is liquiditeit?", tekst: "**Liquiditeit** = **mate waarin bezittingen snel naar geld omgezet kunnen worden**. Belangrijk voor bedrijven om rekeningen te betalen.\n\n**Liquide volgorde** (snelst naar langzaamst):\n• **Kas** (direct beschikbaar)\n• **Bank** (binnen 1 dag)\n• **Vorderingen** (klanten betalen binnen 30-60 dagen)\n• **Voorraad** (moet eerst verkocht)\n• **Gebouwen** (kost maanden om te verkopen)" },
             { titel: "Liquiditeitsratio's", tekst: "Bedrijven berekenen **liquiditeit-ratio's** om gezondheid te checken:\n• **Current Ratio** = vlottende activa ÷ kortlopende schulden. Streven: >1.0 (kan schulden betalen)\n• **Quick Ratio** = (vlottende activa - voorraad) ÷ kortlopende schulden. Strenger\n• **Kas-ratio** = kas + bank ÷ kortlopende schulden\n\nLage ratio = bedrijf kan rekeningen niet betalen = faillissement-risico." },
-            { titel: "Cito-feit: bedrijven failliet", tekst: "Veel bedrijven gaan **failliet** ondanks winst! Reden: te lage liquiditeit. Voorbeeld:\n• Winst van €100.000\n• Maar al je geld zit in voorraad\n• Geen geld om huur/lonen te betalen\n• Failliet\n\nLes voor Cito: winst ≠ liquiditeit. **Cashflow is koning**." },
+            { titel: "Toets-feit: bedrijven failliet", tekst: "Veel bedrijven gaan **failliet** ondanks winst! Reden: te lage liquiditeit. Voorbeeld:\n• Winst van €100.000\n• Maar al je geld zit in voorraad\n• Geen geld om huur/lonen te betalen\n• Failliet\n\nLes voor de Doorstroomtoets: winst ≠ liquiditeit. **Cashflow is koning**." },
           ],
           woorden: [
             { woord: "liquide", uitleg: "Snel naar geld om te zetten (kas, bank)." },
@@ -621,7 +621,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           stappen: [
             { titel: "Wat is afschrijven?", tekst: "**Afschrijven** = de **waarde van een vast actief (auto, machine, gebouw) over de jaren verlagen** op de balans. Reden: deze spullen slijten + verouderen.\n\nVoorbeeld: bedrijf koopt **vrachtwagen €60.000**, gebruikt 6 jaar:\n• Afschrijving: €60.000 ÷ 6 jaar = **€10.000/jaar**\n• Jaar 1 op balans: €50.000\n• Jaar 2: €40.000\n• ...\n• Jaar 6: €0 (boekwaarde)" },
             { titel: "Waarom afschrijven?", tekst: "**Doelen**:\n• Reëel beeld van bedrijfswaarde\n• Verspreid kosten over gebruiksjaren\n• **Belasting-voordeel**: afschrijving = kosten = minder winst = minder belasting\n• Voorbereid op vervanging (sparen voor nieuwe machine)\n\nElke vaste activa heeft eigen **levensduur**:\n• Auto: 5 jaar\n• Computer: 3 jaar\n• Gebouw: 33 jaar\n• Machine: 10 jaar" },
-            { titel: "Cito-feit: methodes", tekst: "**Afschrijvingsmethoden**:\n• **Lineair**: gelijke € per jaar (simpelste)\n• **Degressief**: meer eerste jaren, minder later (versneld)\n• **Productie-eenheden**: op basis van gebruik (km of uren)\n\nKeuze afhankelijk van bedrijfsbeleid + belasting-regels. Cito-VMBO: meestal lineair." },
+            { titel: "Toets-feit: methodes", tekst: "**Afschrijvingsmethoden**:\n• **Lineair**: gelijke € per jaar (simpelste)\n• **Degressief**: meer eerste jaren, minder later (versneld)\n• **Productie-eenheden**: op basis van gebruik (km of uren)\n\nKeuze afhankelijk van bedrijfsbeleid + belasting-regels. VMBO-examen: meestal lineair." },
           ],
           woorden: [
             { woord: "afschrijven", uitleg: "Waarde-vermindering van vast actief over levensduur." },
@@ -632,7 +632,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           voorbeelden: [
             { type: "stap", tekst: "Bedrijfsauto €30.000, 5 jaar, restwaarde €0. → €6.000/jaar afschrijven. Na 3 jaar boekwaarde €12.000." },
           ],
-          basiskennis: [{ onderwerp: "Cito-economie-stof", uitleg: "Afschrijven = examen-VMBO-stof. Lineair-formule moeten kunnen toepassen." }],
+          basiskennis: [{ onderwerp: "Toets-economie-stof", uitleg: "Afschrijven = examen-VMBO-stof. Lineair-formule moeten kunnen toepassen." }],
           niveaus: { basis: "Waarde-vermindering vast actief.", simpeler: "Afschrijven = waarde van auto/machine over jaren verlagen op balans. Lineair: gelijke € per jaar.", nogSimpeler: "Waarde dalen" },
         },
       },

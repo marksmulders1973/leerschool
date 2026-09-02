@@ -34,12 +34,12 @@ const VAKKEN_PO = [
   { id: "aardrijkskunde" },
 ];
 
-// PO-vakken die op Cito-eindtoets / doorstroomtoets voorkomen — krijgen
+// PO-vakken die op Doorstroomtoets / doorstroomtoets voorkomen — krijgen
 // een derde knop "Cito oefenen" naast Leren + Oefenen. Mark UX-keuze
 // 2026-05-08: cirkel-rond per onderdeel + ICP-prominentie.
 const CITO_VAKKEN_PO = new Set(["rekenen", "taal", "spelling", "begrijpend-lezen", "natuur"]);
 
-// Vak-id → Cito-pijler voor sampleCitoMix subjectFilter.
+// Vak-id → Toets-pijler voor sampleCitoMix subjectFilter.
 // Spelling/begrijpend-lezen zitten in pijler "taal", natuur in
 // "studievaardigheden" (zie shared/citoMixVragen.js).
 const VAK_TO_CITO_PIJLER = {
@@ -904,8 +904,8 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           <button
             onClick={() => {
               SoundEngine.play("click");
-              // Open Cito-toets met alle pijlers gemixt (geen filter)
-              onCitoOefenenSubject(null, "Alle Cito-vakken");
+              // Open Doorstroomtoets met alle pijlers gemixt (geen filter)
+              onCitoOefenenSubject(null, "Alle Toets-vakken");
             }}
             style={{
               display: "flex",
@@ -936,7 +936,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             <span style={{ fontSize: 16, color: "rgba(255,213,79,0.75)" }} aria-hidden="true">›</span>
           </button>
         )}
-        {/* Cito-pijler-chips (P0b vindbaarheid 2026-05-12): direct-toegang
+        {/* Toets-pijler-chips (P0b vindbaarheid 2026-05-12): direct-toegang
             tot één van de 4 Doorstroomtoets-onderdelen ipv eerst 'alles gemixt'.
             Review-fix 2026-05-12: minHeight 44 (a11y) + contrast verhoogd. */}
         {onCitoOefenenSubject && (

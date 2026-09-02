@@ -16,7 +16,7 @@ import { BRAND } from "../brand.js";
 const FAQ = [
   {
     q: "Wanneer is de Doorstroomtoets?",
-    a: "Voor groep 8: derde week van januari (sinds 2024 heet de Cito-eindtoets officieel Doorstroomtoets). Leerkwartier helpt vanaf groep 6, dus geen stress in groep 8.",
+    a: "Voor groep 8: eind januari, begin februari (in 2027 vanaf 25 januari). Sinds 2024 heet de vroegere Cito-eindtoets officieel Doorstroomtoets. Leerkwartier helpt vanaf groep 6, dus geen stress in groep 8.",
   },
   {
     q: "Kost het iets?",

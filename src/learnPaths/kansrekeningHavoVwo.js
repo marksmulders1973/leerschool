@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is P(A) zelf.", "Kansen kunnen niet >1.", "Niet — geen onmogelijk."],
         uitlegPad: {
           stappen: [{ titel: "Complement = 1 − P(A)", tekst: "Som van P(A) + P(niet A) = 1 (alle mogelijkheden). Dus P(niet A) = **1 − 0,3 = 0,7**." }],
-          theorie: "Cito-truc: bij 'minstens 1' vragen → gebruik complement. P(minstens 1) = 1 − P(niemand).",
+          theorie: "Toets-truc: bij 'minstens 1' vragen → gebruik complement. P(minstens 1) = 1 − P(niemand).",
           niveaus: { basis: "0,7.", simpeler: "1 − 0,3 = 0,7", nogSimpeler: "0,7" },
         },
       },
@@ -56,7 +56,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is 1 dobbelsteen.", "Niet — onafhankelijk, dus vermenigvuldigen.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Productregel onafhankelijk", tekst: "P(eerste 6) = 1/6. P(tweede 6) = 1/6. Onafhankelijk → P(beide 6) = 1/6 × 1/6 = **1/36**." }],
-          theorie: "Cito-pattern: 'én'-vragen + onafhankelijk → vermenigvuldigen.",
+          theorie: "Toets-patroon: 'én'-vragen + onafhankelijk → vermenigvuldigen.",
           niveaus: { basis: "1/36.", simpeler: "1/6 × 1/6 = 1/36", nogSimpeler: "1/36" },
         },
       },
@@ -88,7 +88,7 @@ const steps = [
   {
     title: "Boomdiagram + product-regel",
     explanation:
-      "**Boomdiagram** = visualisatie van opeenvolgende gebeurtenissen. Standaard-tool voor HAVO/VWO kansrekening.\n\n**Opbouw**:\n• Elk **knooppunt** = beslissingsmoment / kansgebeurtenis.\n• Elke **tak** = mogelijke uitkomst met kans erop.\n• **Eindpaden** = combinaties van uitkomsten.\n\n**Voorbeeld**: 2 keer gooien met dobbelsteen, P(6 en 6)?\n```\nEerste worp           Tweede worp\n               1/6 → 6   (P = 1/6 × 1/6 = 1/36)\n               5/6 → niet 6\n  1/6 → 6\n  5/6 → niet 6 →\n```\nResultaat: P(beide 6) = 1/6 × 1/6 = 1/36.\n\n**Twee regels**:\n\n**1. Product-regel** (langs een pad):\n• Vermenigvuldig kansen langs één pad in boom.\n• $P(\\text{pad}) = P(\\text{tak 1}) \\cdot P(\\text{tak 2}) \\cdots$\n• Bv: P(rood eerst + blauw tweede) = P(rood) × P(blauw | rood).\n\n**2. Som-regel** (over verschillende paden):\n• Tel kansen van paden die zelfde gebeurtenis opleveren.\n• Bv: P(minstens 1 rood in 2 trekkingen) = P(R eerst) + P(R tweede zonder eerste).\n\n**Voorbeeld vaas met knikkers**:\nVaas: 3 rood + 2 blauw. Trek 2 zonder terugleggen.\n• P(beide rood) = (3/5) × (2/4) = 6/20 = 0,3.\n• Pad 1: R eerst (3/5), R tweede (2/4) = 6/20.\n• P(1 rood + 1 blauw) = P(RB) + P(BR) = (3/5)(2/4) + (2/5)(3/4) = 6/20 + 6/20 = 12/20 = 0,6.\n\n**Cito-favoriet**: 'Bereken kans op minstens 1 van iets'. Gebruik complement:\n• P(minstens 1 rood) = 1 − P(geen rode) = 1 − (2/5)(1/4) = 1 − 2/20 = 18/20 = 0,9.\n\n**Beslissing-pad-aantal**:\n• Bij n stappen, elke 2 keuzes: 2^n paden.\n• 3 keer muntje: 2^3 = 8 paden (KKK, KKM, KMK, KMM, MKK, MKM, MMK, MMM).",
+      "**Boomdiagram** = visualisatie van opeenvolgende gebeurtenissen. Standaard-tool voor HAVO/VWO kansrekening.\n\n**Opbouw**:\n• Elk **knooppunt** = beslissingsmoment / kansgebeurtenis.\n• Elke **tak** = mogelijke uitkomst met kans erop.\n• **Eindpaden** = combinaties van uitkomsten.\n\n**Voorbeeld**: 2 keer gooien met dobbelsteen, P(6 en 6)?\n```\nEerste worp           Tweede worp\n               1/6 → 6   (P = 1/6 × 1/6 = 1/36)\n               5/6 → niet 6\n  1/6 → 6\n  5/6 → niet 6 →\n```\nResultaat: P(beide 6) = 1/6 × 1/6 = 1/36.\n\n**Twee regels**:\n\n**1. Product-regel** (langs een pad):\n• Vermenigvuldig kansen langs één pad in boom.\n• $P(\\text{pad}) = P(\\text{tak 1}) \\cdot P(\\text{tak 2}) \\cdots$\n• Bv: P(rood eerst + blauw tweede) = P(rood) × P(blauw | rood).\n\n**2. Som-regel** (over verschillende paden):\n• Tel kansen van paden die zelfde gebeurtenis opleveren.\n• Bv: P(minstens 1 rood in 2 trekkingen) = P(R eerst) + P(R tweede zonder eerste).\n\n**Voorbeeld vaas met knikkers**:\nVaas: 3 rood + 2 blauw. Trek 2 zonder terugleggen.\n• P(beide rood) = (3/5) × (2/4) = 6/20 = 0,3.\n• Pad 1: R eerst (3/5), R tweede (2/4) = 6/20.\n• P(1 rood + 1 blauw) = P(RB) + P(BR) = (3/5)(2/4) + (2/5)(3/4) = 6/20 + 6/20 = 12/20 = 0,6.\n\n**Toets-favoriet**: 'Bereken kans op minstens 1 van iets'. Gebruik complement:\n• P(minstens 1 rood) = 1 − P(geen rode) = 1 − (2/5)(1/4) = 1 − 2/20 = 18/20 = 0,9.\n\n**Beslissing-pad-aantal**:\n• Bij n stappen, elke 2 keuzes: 2^n paden.\n• 3 keer muntje: 2^3 = 8 paden (KKK, KKM, KMK, KMM, MKK, MKM, MMK, MMM).",
     checks: [
       {
         q: "In een boomdiagram **vermenigvuldig** je kansen:",
@@ -140,7 +140,7 @@ const steps = [
         wrongHints: [null, "Niet — veel paden = ingewikkeld.", "Niet — voor opeenvolgende, niet 'minstens'.", "Wel formule."],
         uitlegPad: {
           stappen: [{ titel: "Complement-truc", tekst: "**Minstens 1** is gemakkelijker via complement: P(≥1 succes) = **1 − P(0 successen)**. Sneller dan optellen van P(1) + P(2) + P(3)." }],
-          theorie: "Cito-CSE-favoriet: 'minstens 1' → altijd complement.",
+          theorie: "CSE-favoriet: 'minstens 1' → altijd complement.",
           niveaus: { basis: "Complement.", simpeler: "Minstens 1 = 1 − P(nul)", nogSimpeler: "Complement" },
         },
       },
@@ -160,7 +160,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is 5², niet 5!.", "Niet — dat is 5×3, niet faculteit.", "Niet — dat is 5×12."],
         uitlegPad: {
           stappen: [{ titel: "Faculteit = aftellen × elkaar", tekst: "5! = 5 × 4 × 3 × 2 × 1 = **120**." }],
-          theorie: "Cito-truc: faculteit groeit snel. 10! = 3.628.800. 20! is veel groter dan miljarden.",
+          theorie: "Toets-truc: faculteit groeit snel. 10! = 3.628.800. 20! is veel groter dan miljarden.",
           niveaus: { basis: "120.", simpeler: "5×4×3×2×1 = 120", nogSimpeler: "120" },
         },
       },
@@ -192,7 +192,7 @@ const steps = [
         wrongHints: [null, "Wel beperkt.", "Niet — dat is som, niet product.", "Niet — veel meer."],
         uitlegPad: {
           stappen: [{ titel: "Productregel", tekst: "**26 letters × 26 × 10 cijfers × 10 × 10 × 26 × 26 = 26⁴ × 10³ = 456.976.000** mogelijke kentekens. In praktijk minder door uitsluiting verwarrende combinaties." }],
-          theorie: "Cito-pattern: productregel voor 'aantal codes/wachtwoorden/etiketten' vragen.",
+          theorie: "Toets-patroon: productregel voor 'aantal codes/wachtwoorden/etiketten' vragen.",
           niveaus: { basis: "26²×10³×26².", simpeler: "Productregel = 26⁴·10³", nogSimpeler: "A = veel." },
         },
       },
@@ -213,7 +213,7 @@ const steps = [
   {
     title: "Venndiagram + verwachtingswaarde",
     explanation:
-      "**Venndiagram** = cirkels die overlappen, voor het visualiseren van gebeurtenissen + hun overlap.\n\n**Twee cirkels A en B**:\n• Linker cirkel zonder overlap = alleen A (P(A en niet B)).\n• Rechter zonder overlap = alleen B.\n• **Overlap** = A én B (P(A ∩ B)).\n• Buiten beide cirkels = niet A en niet B.\n\n**Som-regel** (Venn-formule):\n• $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.\n• Trek doorsnede af om geen dubbel-telling.\n• Bv. 60% NL'ers eet vis (A), 40% drinkt wijn (B), 20% beide → P(A of B) = 60+40−20 = 80%.\n\n**Onverenigbare gebeurtenissen** (disjunct, uitsluitend):\n• $P(A \\cap B) = 0$.\n• Dan $P(A \\cup B) = P(A) + P(B)$ — geen aftrek.\n• Bv: dobbelsteen — 6 én oneven = onmogelijk → 0.\n\n**Verwachtingswaarde** (E):\n• 'Gemiddeld' resultaat op lange termijn.\n• Formule: $E(X) = \\sum (\\text{waarde} \\cdot \\text{kans})$ over alle uitkomsten.\n• Voorbeeld dobbelsteen: E = (1+2+3+4+5+6)/6 = 21/6 = 3,5.\n• Beslissing-tool: positieve E = winst op lange termijn, negatief = verlies.\n\n**Voorbeeld loterij**:\n• Lot kost €2. Win €100 met kans 1/100. Anders 0.\n• E(winst) = (100 × 1/100) + (−2 × 99/100) = 1 − 1,98 = **−0,98**.\n• Per lot verlies je gemiddeld 98 cent. Casino-truc: E altijd net negatief voor speler.\n\n**Gokken/casino-tip**:\n• Roulette enkele kleur: E < 0 (door 0/00-vakje).\n• Loterij: E sterk negatief.\n• Verzekering: E negatief voor consument (anders maakt verzekeraar geen winst).\n• Beleggen: E meestal positief op lange termijn (~7% per jaar aandelen historisch).\n\n**Cito-eindexamen-pattern**:\n• 'Bereken verwachte winst.'\n• 'Is dit spel eerlijk?' (= is E = 0?).\n• 'Hoeveel moet je inzetten zodat spel eerlijk wordt?'",
+      "**Venndiagram** = cirkels die overlappen, voor het visualiseren van gebeurtenissen + hun overlap.\n\n**Twee cirkels A en B**:\n• Linker cirkel zonder overlap = alleen A (P(A en niet B)).\n• Rechter zonder overlap = alleen B.\n• **Overlap** = A én B (P(A ∩ B)).\n• Buiten beide cirkels = niet A en niet B.\n\n**Som-regel** (Venn-formule):\n• $P(A \\cup B) = P(A) + P(B) - P(A \\cap B)$.\n• Trek doorsnede af om geen dubbel-telling.\n• Bv. 60% NL'ers eet vis (A), 40% drinkt wijn (B), 20% beide → P(A of B) = 60+40−20 = 80%.\n\n**Onverenigbare gebeurtenissen** (disjunct, uitsluitend):\n• $P(A \\cap B) = 0$.\n• Dan $P(A \\cup B) = P(A) + P(B)$ — geen aftrek.\n• Bv: dobbelsteen — 6 én oneven = onmogelijk → 0.\n\n**Verwachtingswaarde** (E):\n• 'Gemiddeld' resultaat op lange termijn.\n• Formule: $E(X) = \\sum (\\text{waarde} \\cdot \\text{kans})$ over alle uitkomsten.\n• Voorbeeld dobbelsteen: E = (1+2+3+4+5+6)/6 = 21/6 = 3,5.\n• Beslissing-tool: positieve E = winst op lange termijn, negatief = verlies.\n\n**Voorbeeld loterij**:\n• Lot kost €2. Win €100 met kans 1/100. Anders 0.\n• E(winst) = (100 × 1/100) + (−2 × 99/100) = 1 − 1,98 = **−0,98**.\n• Per lot verlies je gemiddeld 98 cent. Casino-truc: E altijd net negatief voor speler.\n\n**Gokken/casino-tip**:\n• Roulette enkele kleur: E < 0 (door 0/00-vakje).\n• Loterij: E sterk negatief.\n• Verzekering: E negatief voor consument (anders maakt verzekeraar geen winst).\n• Beleggen: E meestal positief op lange termijn (~7% per jaar aandelen historisch).\n\n**Toets-eindexamen-pattern**:\n• 'Bereken verwachte winst.'\n• 'Is dit spel eerlijk?' (= is E = 0?).\n• 'Hoeveel moet je inzetten zodat spel eerlijk wordt?'",
     checks: [
       {
         q: "P(A) = 0,5, P(B) = 0,4, P(A en B) = 0,2. Wat is **P(A of B)**?",
@@ -222,7 +222,7 @@ const steps = [
         wrongHints: [null, "Niet — vergeet de aftrek.", "Niet — minder dan dat.", "Onmogelijk — kansen ≤1."],
         uitlegPad: {
           stappen: [{ titel: "Som-regel: tel + trek af", tekst: "P(A of B) = P(A) + P(B) − P(A en B) = 0,5 + 0,4 − 0,2 = **0,7**." }],
-          theorie: "Cito-Venn-favoriet. Trek doorsnede af om dubbel-telling te voorkomen.",
+          theorie: "Toets-Venn-favoriet. Trek doorsnede af om dubbel-telling te voorkomen.",
           niveaus: { basis: "0,7.", simpeler: "0,5+0,4-0,2 = 0,7", nogSimpeler: "0,7" },
         },
       },
@@ -296,7 +296,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is 5! voor rij, niet ronde tafel.", "Te weinig.", "Niet — dat is 6!."],
         uitlegPad: {
           stappen: [{ titel: "Ronde tafel = (n-1)!", tekst: "Bij **ronde tafel** is 'eerste plaats' niet uniek → (n-1)! = 4! = **24**. Voor rij is 't 5! = 120." }],
-          theorie: "Cito-truc: ronde tafel = (n-1)! ipv n!. Belangrijk verschil.",
+          theorie: "Toets-truc: ronde tafel = (n-1)! ipv n!. Belangrijk verschil.",
           niveaus: { basis: "24.", simpeler: "(5-1)! = 24", nogSimpeler: "24" },
         },
       },

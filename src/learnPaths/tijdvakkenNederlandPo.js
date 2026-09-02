@@ -1,6 +1,6 @@
 // Leerpad: Tijdvakken Nederland — geschiedenis voor groep 6-8.
 // Vult de "binnenkort"-tegel onder Geschiedenis op StudentHome PO-modus.
-// 5 stappen, basis-tijdlijn van prehistorie tot nu, Cito-doorstroomtoets-
+// 5 stappen, basis-tijdlijn van prehistorie tot nu, Toets-doorstroomtoets-
 // niveau (geschiedenis-vragen op DT komen uit deze brede stof).
 
 const COLORS = {
@@ -18,13 +18,13 @@ const chapters = [
   { letter: "B", title: "Middeleeuwen — ridders & graven", emoji: "🏰", from: 1, to: 1 },
   { letter: "C", title: "Gouden Eeuw & Republiek", emoji: "⚓", from: 2, to: 2 },
   { letter: "D", title: "Industrie, oorlog & nu", emoji: "⚙️", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht — tijdlijn-mix", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht — tijdlijn-mix", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
   {
     title: "Prehistorie & Romeinse tijd",
-    explanation: "**Prehistorie** = de tijd vóór er geschreven werd *(ongeveer tot het jaar 0)*. Mensen woonden eerst in grotten, daarna in eenvoudige huizen.\n\n**Hunebedden**: stenen graven uit ~3000 v.Chr. Te zien in **Drenthe**. De Trechterbeker-cultuur bouwde ze.\n\n**Romeinse Tijd** *(±50 v.Chr. — 400 n.Chr.)*:\n• De Romeinen veroverden delen van wat nu Nederland is.\n• Grens-rivier: de **Rijn** *(Limes)*.\n• Romeinen brachten wegen, baden, wijn, en het **schrift**.\n• Belangrijkste Nederlandse Romeinse stad: **Nijmegen** *(Noviomagus)*.\n• Bataven leefden in het rivierengebied; in 69 n.Chr. kwam de **Bataafse opstand** onder Julius Civilis.\n\n**Volksverhuizingen** *(±400 n.Chr.)*:\nNa de val van Rome trokken Germaanse stammen door Europa. Friezen, Saksen en Franken vestigden zich in Nederland.\n\n**Cito-tip**: jaartal 0 is een goed mentaal anker. Alles vóór 0 = v.Chr. *(steeds verder weg = hogere getallen)*. Alles na 0 = n.Chr.",
+    explanation: "**Prehistorie** = de tijd vóór er geschreven werd *(ongeveer tot het jaar 0)*. Mensen woonden eerst in grotten, daarna in eenvoudige huizen.\n\n**Hunebedden**: stenen graven uit ~3000 v.Chr. Te zien in **Drenthe**. De Trechterbeker-cultuur bouwde ze.\n\n**Romeinse Tijd** *(±50 v.Chr. — 400 n.Chr.)*:\n• De Romeinen veroverden delen van wat nu Nederland is.\n• Grens-rivier: de **Rijn** *(Limes)*.\n• Romeinen brachten wegen, baden, wijn, en het **schrift**.\n• Belangrijkste Nederlandse Romeinse stad: **Nijmegen** *(Noviomagus)*.\n• Bataven leefden in het rivierengebied; in 69 n.Chr. kwam de **Bataafse opstand** onder Julius Civilis.\n\n**Volksverhuizingen** *(±400 n.Chr.)*:\nNa de val van Rome trokken Germaanse stammen door Europa. Friezen, Saksen en Franken vestigden zich in Nederland.\n\n**Toets-tip**: jaartal 0 is een goed mentaal anker. Alles vóór 0 = v.Chr. *(steeds verder weg = hogere getallen)*. Alles na 0 = n.Chr.",
     checks: [
       {
         q: "Waar zijn de **hunebedden** te vinden?",
@@ -88,7 +88,7 @@ const steps = [
 
   {
     title: "Middeleeuwen — ridders, graven en kloosters",
-    explanation: "**Middeleeuwen** *(±500 — 1500)*: tijd van ridders, kastelen, kloosters en boeren.\n\n**Karel de Grote** *(742-814)*:\n• Frankische koning, later **keizer** *(800)*.\n• Stichtte een groot rijk in West-Europa.\n• Bracht het christendom *(verplicht voor zijn onderdanen)*.\n\n**Feodaal stelsel** *(leenstelsel)*:\n• De koning gaf grond *(leen)* aan hertogen, graven, ridders.\n• Ridders moesten loyaliteit en militaire dienst leveren.\n• Boeren werkten op het land voor hun heer.\n\n**Holland en Utrecht**:\n• Na 1000 ontstonden Holland *(graafschap)* en het Sticht *(bisdom Utrecht)*.\n• Belangrijkste graven: de **Hollandse graven** zoals **Floris V** *(1254-1296)*.\n• Floris werd vermoord door edelen die hem niet vertrouwden.\n\n**Steden ontstaan**:\n• Vanaf ~1100 groeiden handelssteden zoals **Dordrecht**, **Brugge**, **Gent**.\n• Mensen kregen meer vrijheid in de stad *('stadslucht maakt vrij')*.\n• **Hanze** *(handelsverbond)*: steden in Noord-Europa werkten samen.\n\n**Cito-tip**: middeleeuwen = duizend jaar! Onthoud 3 ankers: 800 *(Karel)*, 1100 *(steden ontstaan)*, 1300 *(Floris V)*.",
+    explanation: "**Middeleeuwen** *(±500 — 1500)*: tijd van ridders, kastelen, kloosters en boeren.\n\n**Karel de Grote** *(742-814)*:\n• Frankische koning, later **keizer** *(800)*.\n• Stichtte een groot rijk in West-Europa.\n• Bracht het christendom *(verplicht voor zijn onderdanen)*.\n\n**Feodaal stelsel** *(leenstelsel)*:\n• De koning gaf grond *(leen)* aan hertogen, graven, ridders.\n• Ridders moesten loyaliteit en militaire dienst leveren.\n• Boeren werkten op het land voor hun heer.\n\n**Holland en Utrecht**:\n• Na 1000 ontstonden Holland *(graafschap)* en het Sticht *(bisdom Utrecht)*.\n• Belangrijkste graven: de **Hollandse graven** zoals **Floris V** *(1254-1296)*.\n• Floris werd vermoord door edelen die hem niet vertrouwden.\n\n**Steden ontstaan**:\n• Vanaf ~1100 groeiden handelssteden zoals **Dordrecht**, **Brugge**, **Gent**.\n• Mensen kregen meer vrijheid in de stad *('stadslucht maakt vrij')*.\n• **Hanze** *(handelsverbond)*: steden in Noord-Europa werkten samen.\n\n**Toets-tip**: middeleeuwen = duizend jaar! Onthoud 3 ankers: 800 *(Karel)*, 1100 *(steden ontstaan)*, 1300 *(Floris V)*.",
     checks: [
       {
         q: "Wie werd in **800 keizer**?",
@@ -157,7 +157,7 @@ const steps = [
 
   {
     title: "Gouden Eeuw & Republiek",
-    explanation: "**Tachtigjarige Oorlog** *(1568 — 1648)*:\n• Nederlanden in opstand tegen Spaanse koning **Filips II**.\n• Aanleiding: **godsdienst** *(protestant ↔ katholiek)*, **belasting**, **verlies van rechten**.\n• Leider: **Willem van Oranje** *('vader des vaderlands')*.\n• 1581: **Plakkaat van Verlatinghe** *(verklaring dat Filips niet meer onze koning is — eerste \"onafhankelijkheidsverklaring\")*.\n• 1584: Willem vermoord in Delft.\n• 1648: **Vrede van Münster** — Republiek officieel onafhankelijk.\n\n**De Republiek** *(1588-1795)*:\n• Geen koning! 7 provincies bestuurd door **Staten-Generaal** + **stadhouder**.\n• Belangrijkste stadhouders uit huis Oranje-Nassau.\n\n**Gouden Eeuw** *(17e eeuw)*:\n• **VOC** *(1602)* en **WIC** *(1621)*: handelscompagnieën met Azië en Amerika.\n• Amsterdam = grootste handelsstad ter wereld.\n• Schilderkunst: **Rembrandt**, **Vermeer**, **Frans Hals**.\n• Wetenschap: **Christiaan Huygens** *(slingerklok)*, **Antoni van Leeuwenhoek** *(microscoop)*.\n• Tegelijk: **slavenhandel** door WIC — donkere kant van de Gouden Eeuw.\n\n**Cito-tip**: jaartallen onthouden via verhaal: '1568 begon, 1648 vrede = 80 jaar oorlog'.",
+    explanation: "**Tachtigjarige Oorlog** *(1568 — 1648)*:\n• Nederlanden in opstand tegen Spaanse koning **Filips II**.\n• Aanleiding: **godsdienst** *(protestant ↔ katholiek)*, **belasting**, **verlies van rechten**.\n• Leider: **Willem van Oranje** *('vader des vaderlands')*.\n• 1581: **Plakkaat van Verlatinghe** *(verklaring dat Filips niet meer onze koning is — eerste \"onafhankelijkheidsverklaring\")*.\n• 1584: Willem vermoord in Delft.\n• 1648: **Vrede van Münster** — Republiek officieel onafhankelijk.\n\n**De Republiek** *(1588-1795)*:\n• Geen koning! 7 provincies bestuurd door **Staten-Generaal** + **stadhouder**.\n• Belangrijkste stadhouders uit huis Oranje-Nassau.\n\n**Gouden Eeuw** *(17e eeuw)*:\n• **VOC** *(1602)* en **WIC** *(1621)*: handelscompagnieën met Azië en Amerika.\n• Amsterdam = grootste handelsstad ter wereld.\n• Schilderkunst: **Rembrandt**, **Vermeer**, **Frans Hals**.\n• Wetenschap: **Christiaan Huygens** *(slingerklok)*, **Antoni van Leeuwenhoek** *(microscoop)*.\n• Tegelijk: **slavenhandel** door WIC — donkere kant van de Gouden Eeuw.\n\n**Toets-tip**: jaartallen onthouden via verhaal: '1568 begon, 1648 vrede = 80 jaar oorlog'.",
     checks: [
       {
         q: "Hoe lang duurde de **Tachtigjarige Oorlog**?",
@@ -226,7 +226,7 @@ const steps = [
 
   {
     title: "Industriële tijd, oorlogen & nu",
-    explanation: "**Bataafse Republiek** *(1795-1806)* en **Koninkrijk** *(1815)*:\n• 1795: Fransen veroveren Republiek → Bataafse Republiek.\n• Napoleon maakt zijn broer **Lodewijk Napoleon** koning *(1806)*.\n• 1813: Napoleon weg → **Willem I** wordt eerste koning van Nederland *(1815)*.\n\n**Industriële Revolutie** *(±1800-1900)*:\n• **Stoommachines**, fabrieken, treinen, telegraaf.\n• Mensen verhuizen van platteland naar stad *('verstedelijking')*.\n• Zware kinderarbeid — pas in **1874** verboden voor kinderen onder 12 *(Wet van Houten)*.\n\n**Eerste Wereldoorlog** *(1914-1918)*:\n• Nederland was **neutraal**, maar economisch zwaar geraakt.\n\n**Tweede Wereldoorlog** *(1940-1945)*:\n• Mei 1940: Duitsland valt Nederland binnen — Rotterdam gebombardeerd.\n• Bezetting 5 jaar.\n• **Holocaust**: ±104.000 Nederlandse Joden vermoord.\n• **Anne Frank** schreef haar dagboek in onderduik in Amsterdam.\n• Mei 1945: bevrijding.\n\n**Na 1945**:\n• Wederopbouw, **Marshall-hulp** uit VS.\n• 1957: **Europese Economische Gemeenschap** *(later EU)*.\n• 1999: **euro** ingevoerd *(briefjes en munten in 2002)*.\n• 2024: doorstroomtoets vervangt Cito-eindtoets *(jouw eigen tijd!)*\n\n**Cito-tip**: jaartal-anker = 1900 = grens tussen 'oude' en 'moderne' tijd.",
+    explanation: "**Bataafse Republiek** *(1795-1806)* en **Koninkrijk** *(1815)*:\n• 1795: Fransen veroveren Republiek → Bataafse Republiek.\n• Napoleon maakt zijn broer **Lodewijk Napoleon** koning *(1806)*.\n• 1813: Napoleon weg → **Willem I** wordt eerste koning van Nederland *(1815)*.\n\n**Industriële Revolutie** *(±1800-1900)*:\n• **Stoommachines**, fabrieken, treinen, telegraaf.\n• Mensen verhuizen van platteland naar stad *('verstedelijking')*.\n• Zware kinderarbeid — pas in **1874** verboden voor kinderen onder 12 *(Wet van Houten)*.\n\n**Eerste Wereldoorlog** *(1914-1918)*:\n• Nederland was **neutraal**, maar economisch zwaar geraakt.\n\n**Tweede Wereldoorlog** *(1940-1945)*:\n• Mei 1940: Duitsland valt Nederland binnen — Rotterdam gebombardeerd.\n• Bezetting 5 jaar.\n• **Holocaust**: ±104.000 Nederlandse Joden vermoord.\n• **Anne Frank** schreef haar dagboek in onderduik in Amsterdam.\n• Mei 1945: bevrijding.\n\n**Na 1945**:\n• Wederopbouw, **Marshall-hulp** uit VS.\n• 1957: **Europese Economische Gemeenschap** *(later EU)*.\n• 1999: **euro** ingevoerd *(briefjes en munten in 2002)*.\n• 2024: doorstroomtoets vervangt Doorstroomtoets *(jouw eigen tijd!)*\n\n**Toets-tip**: jaartal-anker = 1900 = grens tussen 'oude' en 'moderne' tijd.",
     checks: [
       {
         q: "Wie was **eerste koning van Nederland** *(1815)*?",
@@ -290,7 +290,7 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — tijdlijn-mix",
+    title: "Toets-eindopdracht — tijdlijn-mix",
     explanation: "Mix-toets over de hele Nederlandse geschiedenis. Test of je de **volgorde** van gebeurtenissen onthoudt.",
     checks: [
       {
@@ -383,11 +383,11 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — geen historisch concept.", "Niet — geen onderwijs-systeem.", "Niet — geen museum."],
         uitlegPad: {
-          stappen: [{ titel: "Niet alles wat klinkt is echt", tekst: "Cito test soms of je leerlingen onderscheid maken tussen echte historische begrippen + verzonnen. 'Patatkar-school' = bedacht. Echt: Tachtigjarige Oorlog, Gouden Eeuw, etc." }],
+          stappen: [{ titel: "Niet alles wat klinkt is echt", tekst: "De toets test soms of je leerlingen onderscheid maken tussen echte historische begrippen + verzonnen. 'Patatkar-school' = bedacht. Echt: Tachtigjarige Oorlog, Gouden Eeuw, etc." }],
           woorden: [{ woord: "kritisch denken", uitleg: "Niet automatisch geloven dat naam = echt." }],
-          theorie: "Bij Cito: kies alleen antwoorden waar je weet dat ze echt-historisch zijn. Bedacht = vermijden.",
+          theorie: "Bij de Doorstroomtoets: kies alleen antwoorden waar je weet dat ze echt-historisch zijn. Bedacht = vermijden.",
           voorbeelden: [{ type: "stap", tekst: "'Was Karel de Grote koning van Frankrijk?' → JA (echt). 'Patatkar' → twijfel = wegstrepen." }],
-          basiskennis: [{ onderwerp: "Bedachte termen", uitleg: "Cito gebruikt soms gekke + verzonnen termen als afleider. Niet kiezen als je niet zeker weet." }],
+          basiskennis: [{ onderwerp: "Bedachte termen", uitleg: "De toets gebruikt soms gekke + verzonnen termen als afleider. Niet kiezen als je niet zeker weet." }],
           niveaus: { basis: "Niet echt.", simpeler: "Bestaat niet in geschiedenis.", nogSimpeler: "Verzonnen" },
         },
       },
@@ -399,14 +399,14 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "WO2 in NL — sleuteldatums", tekst: "• **10 mei 1940**: Duitsland valt NL binnen, Rotterdam gebombardeerd\n• **15 mei 1940**: NL capituleert\n• **1940-1945**: Duitse bezetting\n• **Joden-vervolging** intensiveert vanaf 1941 (~104.000 NL-joden vermoord)\n• **5 september 1944 'Dolle Dinsdag'**: zuiden bevrijd\n• **Hongerwinter 1944-1945**: west-NL extreem honger\n• **5 mei 1945**: bevrijding hele NL — Bevrijdingsdag" },
-            { titel: "Cito-feit: belangrijke namen", tekst: "**WO2-Nederlanders**:\n• **Anne Frank** (1929-1945) — Joods meisje, dagboek\n• **Koningin Wilhelmina** — vluchtte naar Engeland, leidde verzet via radio\n• **Verzet** — illegale kranten, onderduikadressen, sabotage\n• **NSB** — collaborerende NL-partij onder Mussert\n• **Hannie Schaft** — verzetsstrijder, beroemd door rood haar\n\nWO2 is **kernstof Cito-geschiedenis** + Doorstroomtoets." },
+            { titel: "Toets-feit: belangrijke namen", tekst: "**WO2-Nederlanders**:\n• **Anne Frank** (1929-1945) — Joods meisje, dagboek\n• **Koningin Wilhelmina** — vluchtte naar Engeland, leidde verzet via radio\n• **Verzet** — illegale kranten, onderduikadressen, sabotage\n• **NSB** — collaborerende NL-partij onder Mussert\n• **Hannie Schaft** — verzetsstrijder, beroemd door rood haar\n\nWO2 is **kernstof Toets-geschiedenis** + Doorstroomtoets." },
           ],
           woorden: [
             { woord: "bezetting", uitleg: "Periode waarin vreemde macht een land controleert." },
             { woord: "verzet", uitleg: "Illegaal werk tegen bezetter (kranten, onderduik, sabotage)." },
             { woord: "bevrijding", uitleg: "Einde bezetting. Voor NL: 5 mei 1945." },
           ],
-          theorie: "WO2-Cito-kerntermen:\n• 10 mei 1940 — invasie\n• 1942-1944 — Holocaust intensiveert\n• 1944 Hongerwinter\n• 5 mei 1945 — bevrijding\n• 4+5 mei nu = nationale herdenkings­dagen\n• Anne Frank Huis (Amsterdam) — symbool",
+          theorie: "WO2-Toets-kerntermen:\n• 10 mei 1940 — invasie\n• 1942-1944 — Holocaust intensiveert\n• 1944 Hongerwinter\n• 5 mei 1945 — bevrijding\n• 4+5 mei nu = nationale herdenkings­dagen\n• Anne Frank Huis (Amsterdam) — symbool",
           voorbeelden: [
             { type: "stap", tekst: "Op 4 mei (Dodenherdenking) staan we 2 minuten stil voor WO2-slachtoffers. 5 mei = Bevrijdingsdag (feest)." },
           ],
@@ -423,14 +423,14 @@ const steps = [
           stappen: [
             { titel: "Wat was Industriële Revolutie?", tekst: "**Industriële Revolutie** = grote verandering van **handwerk → machine-productie**. Begon **Engeland ~1750-1850**, daarna naar rest van Europa.\n\n**Belangrijke uitvindingen**:\n• Stoommachine (Watt ~1769)\n• Spinmachine (textiel)\n• Stoomtrein (1800+)\n• Telegraaf (1830+)" },
             { titel: "Waarom NL later?", tekst: "Nederland startte **industrialisering ~1850-1870**, een halve eeuw na Engeland. Redenen:\n• NL focuste op handel (VOC, koloniën)\n• Geen veel kolen/ijzer (Engeland had wel)\n• Pas vanaf spoorwegen (1840+) + stoommachines werden NL-fabrieken modern\n• **Twentse textiel** (Enschede, Almelo) was eerste industrie-cluster\n• **Philips** opgericht 1891 in Eindhoven (gloeilampen)" },
-            { titel: "Cito-feit: gevolgen", tekst: "**Effect op samenleving**:\n• Mensen van platteland → stad (urbanisatie)\n• Fabrieken vervangen huisindustrie\n• Kinderen werkten in fabrieken (Kinderwet 1874 verbood arbeid <12 jaar)\n• Spoorwegen (1839 eerste NL-traject Amsterdam-Haarlem)\n• Beter onderwijs nodig voor machine-bediening\n• Sociale problemen → vakbonden + arbeidersrechten" },
+            { titel: "Toets-feit: gevolgen", tekst: "**Effect op samenleving**:\n• Mensen van platteland → stad (urbanisatie)\n• Fabrieken vervangen huisindustrie\n• Kinderen werkten in fabrieken (Kinderwet 1874 verbood arbeid <12 jaar)\n• Spoorwegen (1839 eerste NL-traject Amsterdam-Haarlem)\n• Beter onderwijs nodig voor machine-bediening\n• Sociale problemen → vakbonden + arbeidersrechten" },
           ],
           woorden: [
             { woord: "Industriële Revolutie", uitleg: "Overgang van handwerk naar machine-productie. Engeland 1750-1850, NL ~1850-1900." },
             { woord: "stoommachine", uitleg: "Machine die water-stoom omzet in beweging. James Watt 1769." },
             { woord: "urbanisatie", uitleg: "Verplaatsing platteland → stad. Steden groeien snel." },
           ],
-          theorie: "NL-tijdvakken (Cito-bron):\n• Prehistorie - Romeinse tijd\n• Middeleeuwen 500-1500\n• Gouden Eeuw 1600-1700\n• 80-jr Oorlog 1568-1648\n• Republiek 1648-1795\n• Napoleon 1795-1813\n• Koninkrijk 1815+\n• **Industriële Revolutie ~1850-1900**\n• WO1 (1914-1918) — NL neutraal\n• WO2 (1940-1945) — NL bezet\n• Wederopbouw + EU (1945+)",
+          theorie: "NL-tijdvakken (Toets-bron):\n• Prehistorie - Romeinse tijd\n• Middeleeuwen 500-1500\n• Gouden Eeuw 1600-1700\n• 80-jr Oorlog 1568-1648\n• Republiek 1648-1795\n• Napoleon 1795-1813\n• Koninkrijk 1815+\n• **Industriële Revolutie ~1850-1900**\n• WO1 (1914-1918) — NL neutraal\n• WO2 (1940-1945) — NL bezet\n• Wederopbouw + EU (1945+)",
           voorbeelden: [
             { type: "feit", tekst: "Philips Eindhoven groeide van gloeilampen (1891) tot wereldconcern. Iconisch NL-bedrijf van Industriële Revolutie." },
           ],
@@ -471,7 +471,7 @@ const tijdvakkenNederlandPo = {
     { id: "bekende-nederlanders-po", title: "Historische Nederlanders", niveau: "po-1F" },
   ],
   intro:
-    "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Cito-doorstroomtoets-stof wil dekken.",
+    "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Toets-doorstroomtoets-stof wil dekken.",
   triggerKeywords: [
     "geschiedenis", "tijdvakken", "tijdlijn", "Romeinen", "Middeleeuwen",
     "Karel de Grote", "Willem van Oranje", "Tachtigjarige Oorlog",

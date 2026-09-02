@@ -1,8 +1,8 @@
-// Leerpad: Begrijpend lezen — echte oefenteksten (Cito-stijl) voor groep 7-8.
+// Leerpad: Begrijpend lezen — echte oefenteksten (Doorstroomtoets-stijl) voor groep 7-8.
 // Audit-2 v2 cito-content-agent (2026-05-08) identificeerde dat begrijpend
 // lezen 0% gedekt was met echte oefenteksten. Dit pad sluit dat gat.
 //
-// Per stap: 1 tekst van ~200-250 woorden + 4 Cito-stijl meerkeuzevragen.
+// Per stap: 1 tekst van ~200-250 woorden + 4 Doorstroomtoets-stijl meerkeuzevragen.
 // Vraagvarianten: letterlijk / inferentie / hoofdgedachte / woordbetekenis.
 // Plausibele afleiders, geen dummies.
 
@@ -21,7 +21,7 @@ const chapters = [
   { letter: "B", title: "Instructieve tekst — uitleggen", emoji: "📖", from: 1, to: 1 },
   { letter: "C", title: "Betogende tekst — mening", emoji: "🗣️", from: 2, to: 2 },
   { letter: "D", title: "Verhalende tekst", emoji: "📓", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht — mix", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht — mix", emoji: "🏆", from: 4, to: 4 },
 ];
 
 // ── Tekst 1: zakelijke tekst (informatief) ──────────────────────────
@@ -194,7 +194,7 @@ const steps = [
             { woord: "omwenteling", uitleg: "Eén volledige draai of rondje." },
             { woord: "samengesteld woord", uitleg: "Een lang woord gemaakt van 2 of meer kortere woorden geplakt. Bv. fiets+wiel, school+plein." },
           ],
-          theorie: "**Woordbetekenis-vragen — 3 strategieën:**\n\n1. **Splits**: lang woord? Splits in delen. Elk deel ken je vaak.\n2. **Context**: lees de zin ERVOOR en ERNA. Wat zou logisch zijn?\n3. **Eliminatie**: kruis af welke opties NIET kunnen (geen ban-deel = geen band).\n\nLet op: Cito kiest vaak 4 opties die WEL bestaan, maar maar 1 past bij de TEKST.",
+          theorie: "**Woordbetekenis-vragen — 3 strategieën:**\n\n1. **Splits**: lang woord? Splits in delen. Elk deel ken je vaak.\n2. **Context**: lees de zin ERVOOR en ERNA. Wat zou logisch zijn?\n3. **Eliminatie**: kruis af welke opties NIET kunnen (geen ban-deel = geen band).\n\nLet op: De toets kiest vaak 4 opties die WEL bestaan, maar maar 1 past bij de TEKST.",
           voorbeelden: [
             { type: "splits", tekst: "Pedaal + omwenteling = trappen + 1x rond = pedaal-trapje. Als je elk deel kent, ken je het hele woord." },
             { type: "context", tekst: "Tekst: '1 pedaalomwenteling met meer afstand'. Wat klopt: '1 keer trappen met de pedalen' (gaat over afstand met fietsen). De andere opties (band, automerk, rem) passen niet bij die zin." },
@@ -238,7 +238,7 @@ const steps = [
             { woord: "rode draad", uitleg: "Het ene wat door de hele tekst loopt — wat in elke alinea terugkomt." },
             { woord: "detail", uitleg: "Een klein feit uit de tekst (bv. een jaartal of naam). NIET het hoofdpunt." },
           ],
-          theorie: "**De hoofdgedachte vinden — 3 vragen:**\n\n1. Waar gaat ELKE alinea over? Schrijf in 1 woord per alinea.\n2. Wat zit er in ALLE alinea's? Dat is de rode draad.\n3. De hoofdgedachte is meestal een ZIN die de hele rode draad samenvat.\n\n**Trucs van Cito-makers:**\n- Vaak zijn er 4 antwoorden waarvan 3 echt KLOPPEN (komen voor in de tekst), maar als DETAIL.\n- Het juiste antwoord is meestal het ALGEMEENSTE — niet een specifiek feit.",
+          theorie: "**De hoofdgedachte vinden — 3 vragen:**\n\n1. Waar gaat ELKE alinea over? Schrijf in 1 woord per alinea.\n2. Wat zit er in ALLE alinea's? Dat is de rode draad.\n3. De hoofdgedachte is meestal een ZIN die de hele rode draad samenvat.\n\n**Trucs van Toets-makers:**\n- Vaak zijn er 4 antwoorden waarvan 3 echt KLOPPEN (komen voor in de tekst), maar als DETAIL.\n- Het juiste antwoord is meestal het ALGEMEENSTE — niet een specifiek feit.",
           voorbeelden: [
             { type: "fiets-tekst", tekst: "4 alinea's = 4 momenten in tijd (1817 → 1900). Rode draad = VERANDERING door 200 jaar. Hoofdgedachte = 'de fiets is in 200 jaar steeds veranderd'." },
             { type: "andere", tekst: "Tekst over koffie. Alinea 1 Ethiopië, Alinea 2 Arabië, Alinea 3 Europa, Alinea 4 wereldwijd. Rode draad: VERSPREIDING. Hoofdgedachte = 'koffie heeft zich verspreid over de wereld'." },
@@ -778,9 +778,9 @@ const steps = [
     ],
   },
 
-  // ── Stap 5 — Cito-eindopdracht ──────────────────────────────────
+  // ── Stap 5 — Toets-eindopdracht ──────────────────────────────────
   {
-    title: "Cito-eindopdracht — vier teksten gemixt",
+    title: "Toets-eindopdracht — vier teksten gemixt",
     explanation: "**Vier vragen, één over elke tekst-soort.** Test of je het verschil tussen tekstsoorten en vraagtypen onder de knie hebt.\n\nBij de eindtoets krijg je deze mix: zakelijke + instructieve + betogende + verhalende teksten. Soms heel kort, soms langer.\n\n*Veel succes!*",
     checks: [
       {
@@ -962,7 +962,7 @@ const steps = [
           voorbeelden: [
             { type: "betoog-signaal", tekst: "Tekst 3: 'Ik ben van mening', 'Daarom: laat de telefoon thuis'. = mening + argumenten = betogend." },
           ],
-          basiskennis: [{ onderwerp: "Per tekstsoort andere vragen", uitleg: "Cito-vragen verschillen per tekstsoort. Bij betoog → standpunt en argument. Bij verhaal → motieven en gevoelens." }],
+          basiskennis: [{ onderwerp: "Per tekstsoort andere vragen", uitleg: "toetsvragen verschillen per tekstsoort. Bij betoog → standpunt en argument. Bij verhaal → motieven en gevoelens." }],
           niveaus: {
             basis: "Mening + argumenten = betogend. Tekst 'telefoons niet op school' is dat.",
             simpeler: "Welke tekst heeft een DUIDELIJKE MENING? 'Telefoons niet op school' is iemands mening. De andere zijn: feiten (fiets), stappen (paperclip), verhaal (Sara).",
@@ -976,14 +976,14 @@ const steps = [
         options: [
           "De woorden eromheen lezen om het te raden via context",
           "De vraag overslaan",
-          "Een woordenboek pakken (mag niet bij Cito)",
+          "Een woordenboek pakken (mag niet bij de Doorstroomtoets)",
           "Nooit antwoord invullen — die vraag laat je leeg",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Nooit overslaan — er is altijd een gok-kans van 25%.",
-          "Bij Cito mag dat inderdaad niet — context is je beste vriend.",
+          "Bij de Doorstroomtoets mag dat inderdaad niet — context is je beste vriend.",
           "Beter een gok dan leeg — geen punten af voor fout.",
         ],
         uitlegPad: {
@@ -995,7 +995,7 @@ const steps = [
             { woord: "context", uitleg: "De woorden RONDOM een onbekend woord — geven vaak een hint over de betekenis." },
             { woord: "strategie", uitleg: "Een slimme manier om iets aan te pakken." },
           ],
-          theorie: "**Bij Cito en andere toetsen: NOOIT leeg laten.** Geen woordenboek, geen overslaan. Strategie:\n1. Splits onbekend woord in delen.\n2. Lees zin ervoor + erna.\n3. Maak een redelijke gok op basis van context.\n4. Vul het beste antwoord in (gok-kans 25%, leeg = 0%).",
+          theorie: "**Bij de Doorstroomtoets en andere toetsen: NOOIT leeg laten.** Geen woordenboek, geen overslaan. Strategie:\n1. Splits onbekend woord in delen.\n2. Lees zin ervoor + erna.\n3. Maak een redelijke gok op basis van context.\n4. Vul het beste antwoord in (gok-kans 25%, leeg = 0%).",
           voorbeelden: [
             { type: "context", tekst: "'De vogel maakt een prachtig krakend geluid.' Onbekend woord 'krakend'? Context: vogel + geluid → een soort vogelgeluid." },
           ],
@@ -1015,15 +1015,15 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Context-aanpak", tekst: "Onbekend woord 'wanhopig' in zin 'De jongen rende **wanhopig** naar zijn moeder.' Wat helpt:\n• **Actie**: rennen → snelheid, urgentie\n• **Doel**: naar moeder → wellicht behoefte, troost, redding\n• **Combinatie**: rennen + naar moeder = situatie van nood\n\nDus 'wanhopig' = **zonder hoop, in nood**. Het bijwoord versterkt de emotionele lading." },
-            { titel: "Cito-truc context-bewijs", tekst: "Bij onbekende-woord-vragen op Cito: zoek **3 aanwijzingen** in context:\n1. Wie doet wat?\n2. Waarom?\n3. Welk gevoel/effect?\n\nVoor 'wanhopig': een kind dat naar moeder rent. Niet voor de lol. Iets is ernstig. Bijwoord = emotie. Dus 'wanhopig' = sterk negatief gevoel." },
-            { titel: "Cito-feit: bijwoord-positie", tekst: "**Bijwoord** beschrijft het **werkwoord**. 'Rende wanhopig' = manier waarop hij rende. Andere bijwoorden:\n• 'Rende snel' = focus snelheid\n• 'Rende vrolijk' = focus emotie\n• 'Rende wanhopig' = focus combo nood + emotie\n\nBij Cito-onbekende-woord-vragen: kijk altijd bij welk werkwoord/zelfstandig naamwoord het hoort." },
+            { titel: "Toets-truc context-bewijs", tekst: "Bij onbekende-woord-vragen op de Doorstroomtoets: zoek **3 aanwijzingen** in context:\n1. Wie doet wat?\n2. Waarom?\n3. Welk gevoel/effect?\n\nVoor 'wanhopig': een kind dat naar moeder rent. Niet voor de lol. Iets is ernstig. Bijwoord = emotie. Dus 'wanhopig' = sterk negatief gevoel." },
+            { titel: "Toets-feit: bijwoord-positie", tekst: "**Bijwoord** beschrijft het **werkwoord**. 'Rende wanhopig' = manier waarop hij rende. Andere bijwoorden:\n• 'Rende snel' = focus snelheid\n• 'Rende vrolijk' = focus emotie\n• 'Rende wanhopig' = focus combo nood + emotie\n\nBij Toets-onbekende-woord-vragen: kijk altijd bij welk werkwoord/zelfstandig naamwoord het hoort." },
           ],
           woorden: [
             { woord: "wanhopig", uitleg: "Zonder hoop. Heel verdrietig + bang. Behoefte aan redding/hulp." },
             { woord: "bijwoord", uitleg: "Woord dat werkwoord beschrijft (rende SNEL/WANHOPIG/RUSTIG)." },
             { woord: "context", uitleg: "Woorden + zinnen rondom een onbekend woord die helpen betekenis te raden." },
           ],
-          theorie: "Onbekend-woord-aanpak Cito:\n1. Lees zin + ontbrekend woord\n2. Lees vorige + volgende zin (context-breed)\n3. Welke EMOTIE/ACTIE past?\n4. Kies optie die best past\n5. Negeer letterlijke vertaling als context anders zegt",
+          theorie: "Onbekend-woord-aanpak voor de toets:\n1. Lees zin + ontbrekend woord\n2. Lees vorige + volgende zin (context-breed)\n3. Welke EMOTIE/ACTIE past?\n4. Kies optie die best past\n5. Negeer letterlijke vertaling als context anders zegt",
           voorbeelden: [
             { type: "stap", tekst: "'Het kind keek SCHUW naar de hond.' Context: kind + hond = bang/voorzichtig → 'schuw' = verlegen, bang." },
           ],
@@ -1039,17 +1039,17 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Tegenstelling-signaalwoorden", tekst: "Bij een **tegenstelling** verandert de tekst van richting. Signaalwoorden:\n• **Maar**\n• **Echter**\n• **Hoewel**\n• **Daarentegen**\n• **Aan de andere kant**\n• **Toch**\n\nVoorbeeld: 'Hij wilde fietsen, maar het regende.' De 'maar' geeft tegenstelling tussen wens + realiteit." },
-            { titel: "Cito-truc: signaalwoord-groepen", tekst: "**4 hoofd-groepen**:\n• **Tegenstelling**: maar, echter, hoewel, toch\n• **Conclusie**: dus, daarom, kortom\n• **Voorbeeld**: bijvoorbeeld, namelijk, zoals\n• **Volgorde**: eerst, daarna, ten slotte\n\nKennis hiervan helpt vraagtypen snel oplossen." },
+            { titel: "Toets-truc: signaalwoord-groepen", tekst: "**4 hoofd-groepen**:\n• **Tegenstelling**: maar, echter, hoewel, toch\n• **Conclusie**: dus, daarom, kortom\n• **Voorbeeld**: bijvoorbeeld, namelijk, zoals\n• **Volgorde**: eerst, daarna, ten slotte\n\nKennis hiervan helpt vraagtypen snel oplossen." },
           ],
           woorden: [
             { woord: "tegenstelling", uitleg: "Onverwachte wending. Iets dat afwijkt van eerder gezegde." },
             { woord: "signaalwoord", uitleg: "Klein woord dat aangeeft wat schrijver doet (vergelijken, concluderen, voorbeelden)." },
           ],
-          theorie: "Tegenstellingen helpen Cito-vragen:\n• 'Welke zin spreekt vorige tegen?' → zoek 'maar/echter'\n• 'Wat is wending in tekst?' → tegenstelling-signaal\n• 'Welke alinea afwijkt?' → kijk woord aan begin",
+          theorie: "Tegenstellingen helpen toetsvragen:\n• 'Welke zin spreekt vorige tegen?' → zoek 'maar/echter'\n• 'Wat is wending in tekst?' → tegenstelling-signaal\n• 'Welke alinea afwijkt?' → kijk woord aan begin",
           voorbeelden: [
             { type: "stap", tekst: "'Honden zijn aardig. MAAR sommige bijten.' Tegenstelling met 'maar'." },
           ],
-          basiskennis: [{ onderwerp: "Niet vergeten", uitleg: "Bij begrijpend lezen Cito: signaalwoorden zijn TOP-tip om snel structuur te zien." }],
+          basiskennis: [{ onderwerp: "Niet vergeten", uitleg: "Bij begrijpend lezen voor de toets: signaalwoorden zijn TOP-tip om snel structuur te zien." }],
           niveaus: { basis: "Maar = tegenstelling.", simpeler: "'Maar' signaleert tegenstelling. 'Daarom' = conclusie, 'bijvoorbeeld' = voorbeeld, 'eerst' = volgorde.", nogSimpeler: "Maar" },
         },
       },
@@ -1061,8 +1061,8 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Eerste zin = thema-aanwijzer", tekst: "De **eerste zin** of **eerste alinea** geeft vaak het **thema** van de tekst. Schrijvers gebruiken dit om:\n• Lezer voor te bereiden\n• Verwachting te scheppen\n• Hoofdgedachte aan te kondigen\n\nVoorbeeld: 'Vroeger waren fietsen veel zwaarder dan nu.' → thema = **vergelijking vroeger vs nu bij fietsen**. Vervolg gaat dat uitwerken." },
-            { titel: "Cito-truc: voorspellen", tekst: "Bij Cito-vragen over **structuur** of **vervolg**: kijk wat eerste zin BELOOFT.\n• 'Honden zijn slim' → vervolg = bewijs / voorbeelden van honden-slimheid\n• 'Klimaatverandering is urgent' → vervolg = effecten / oplossingen\n• 'De geschiedenis van de fiets begint in 1817' → vervolg = chronologisch verhaal\n\nOpties die NIET passen bij thema → niet kiezen." },
-            { titel: "Cito-feit: tekst-structuur", tekst: "**Typische tekst-structuur**:\n1. **Inleiding** (1ste alinea) = thema + waarom belangrijk\n2. **Kern** (2-4 alinea's) = uitwerking, voorbeelden, bewijs\n3. **Slot** (laatste alinea) = conclusie / samenvatting / mening\n\nVoorspellen werkt op alle 3 niveaus. Slot vaak voorspelbaar uit inleiding-thema." },
+            { titel: "Toets-truc: voorspellen", tekst: "Bij toetsvragen over **structuur** of **vervolg**: kijk wat eerste zin BELOOFT.\n• 'Honden zijn slim' → vervolg = bewijs / voorbeelden van honden-slimheid\n• 'Klimaatverandering is urgent' → vervolg = effecten / oplossingen\n• 'De geschiedenis van de fiets begint in 1817' → vervolg = chronologisch verhaal\n\nOpties die NIET passen bij thema → niet kiezen." },
+            { titel: "Toets-feit: tekst-structuur", tekst: "**Typische tekst-structuur**:\n1. **Inleiding** (1ste alinea) = thema + waarom belangrijk\n2. **Kern** (2-4 alinea's) = uitwerking, voorbeelden, bewijs\n3. **Slot** (laatste alinea) = conclusie / samenvatting / mening\n\nVoorspellen werkt op alle 3 niveaus. Slot vaak voorspelbaar uit inleiding-thema." },
           ],
           woorden: [
             { woord: "thema", uitleg: "Hoofdonderwerp van de tekst." },
@@ -1111,7 +1111,7 @@ const begrijpendLezenTekstenPo = {
     { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
   ],
   intro:
-    "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op de Doorstroomtoets (voorheen Cito-eindtoets) begrijpend lezen.",
+    "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op de Doorstroomtoets (voorheen Doorstroomtoets) begrijpend lezen.",
   triggerKeywords: [
     "begrijpend lezen", "tekst lezen", "leesvaardigheid",
     "zakelijke tekst", "instructieve tekst", "betogende tekst", "verhalende tekst",

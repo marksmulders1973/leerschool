@@ -165,7 +165,7 @@ const steps = [
         wrongHints: [null, "Niet — moreel sterk, niet bindend.", "Wel bindend.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "Hof Straatsburg", tekst: "**EVRM** (Europees Verdrag Rechten van de Mens, 1950) is **juridisch bindend** voor Raad van Europa-lidstaten. Burgers kunnen klagen bij **Europees Hof Mensenrechten (EHRM) Straatsburg**. **UVRM** (Universele Verklaring, 1948) is wereldwijd moreel sterk maar **niet juridisch bindend**." }],
-          theorie: "Cito-actueel: NL veroordeeld bij EHRM voor o.a. Toeslagenaffaire-elementen + Urgenda klimaat.",
+          theorie: "Toets-actueel: NL veroordeeld bij EHRM voor o.a. Toeslagenaffaire-elementen + Urgenda klimaat.",
           niveaus: { basis: "EVRM.", simpeler: "EVRM = bindend", nogSimpeler: "A." },
         },
       },

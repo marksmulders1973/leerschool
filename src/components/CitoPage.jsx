@@ -23,7 +23,7 @@ const ONDERDELEN = [
     subject: "rekenen",
     topic: "Doorstroomtoets rekenen en wiskunde groep 7-8: breuken, decimalen, meten, verbanden, meetkunde",
     leerpaden: [
-      { id: "redactiesommen-pad", label: "🧮 Redactiesommen — Cito-stijl", dur: "~15 min" },
+      { id: "redactiesommen-pad", label: "🧮 Redactiesommen — Doorstroomtoets-stijl", dur: "~15 min" },
       { id: "procenten-po", label: "% Procenten", dur: "~12 min" },
       { id: "breuken-po", label: "🍕 Breuken", dur: "~12 min" },
       { id: "verhoudingen-po", label: "⚖️ Verhoudingen", dur: "~12 min" },
@@ -380,7 +380,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             </span>
             <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
               <span style={{ width: 12, height: 12, borderRadius: 3, background: "rgba(0,176,255,0.25)", border: "1.5px solid #00b0ff" }} />
-              <strong style={{ color: "#00b0ff" }}>🎯 Oefenen</strong> — Cito-stijl + proef-toets
+              <strong style={{ color: "#00b0ff" }}>🎯 Oefenen</strong> — Doorstroomtoets-stijl + proef-toets
             </span>
           </div>
 
@@ -694,7 +694,7 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
             💡 Over de Doorstroomtoets
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.6 }}>
-            De Doorstroomtoets (sinds 2024 — vroeger Cito-eindtoets) wordt gemaakt in groep 8 (begin februari).
+            De Doorstroomtoets (sinds 2024 — vroeger Doorstroomtoets) wordt gemaakt in groep 8 (begin februari).
             Vragen zijn in Cito/IEP/Route 8-stijl: meerkeuze over rekenen, taal, begrijpend lezen en wereldoriëntatie.
             Vragen komen uit een vaste vragenbank van 450+ items.
           </div>

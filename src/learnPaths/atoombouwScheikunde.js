@@ -570,7 +570,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           stappen: [
             { titel: "Atoom-structuur", tekst: "Een atoom bestaat uit **3 onderdelen**:\n• **Proton** (+) — in kern, positief geladen\n• **Neutron** (0) — in kern, geen lading\n• **Electron** (−) — buiten kern, negatief geladen\n\n**Kern** = centrum waarin protonen + neutronen zitten. Heel klein (1/10.000 van atoom-doorsnee) maar **99,9% van massa**." },
             { titel: "Voorbeeld koolstof (C)", tekst: "Koolstof-atoom (C-12):\n• **6 protonen** in kern\n• **6 neutronen** in kern\n• **6 elektronen** in 2 schalen rond kern\n• Atoomnummer = 6 (aantal protonen)\n• Massagetal = 12 (protonen + neutronen)" },
-            { titel: "Cito-feit: Rutherford-experiment 1911", tekst: "**Ernest Rutherford** (1911) ontdekte de **kern** met beroemd experiment:\n• Schoot positieve deeltjes op dunne goudfolie\n• Verwachtte: rechtdoor (atoom = pudding)\n• Vond: meeste rechtdoor, MAAR enkele kaatsten terug\n• Conclusie: atoom heeft **dichte positieve kern** + lege ruimte\n\nDit gaf modern atoom-model. Voor Rutherford = pudding-model (Thomson). Na = planeet-model (Bohr)." },
+            { titel: "Toets-feit: Rutherford-experiment 1911", tekst: "**Ernest Rutherford** (1911) ontdekte de **kern** met beroemd experiment:\n• Schoot positieve deeltjes op dunne goudfolie\n• Verwachtte: rechtdoor (atoom = pudding)\n• Vond: meeste rechtdoor, MAAR enkele kaatsten terug\n• Conclusie: atoom heeft **dichte positieve kern** + lege ruimte\n\nDit gaf modern atoom-model. Voor Rutherford = pudding-model (Thomson). Na = planeet-model (Bohr)." },
           ],
           woorden: [
             { woord: "atoomkern", uitleg: "Centrum atoom met protonen + neutronen. Klein maar zwaar." },
@@ -582,7 +582,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           voorbeelden: [
             { type: "feit", tekst: "Aantal protonen = atoomnummer. Periodiek systeem op atoomnummer gesorteerd: H(1), He(2), Li(3), ... C(6), N(7), O(8)." },
           ],
-          basiskennis: [{ onderwerp: "Cito-stof", uitleg: "Atoom-structuur is basis-scheikunde. Kern + elektronen onderscheid moeten kunnen maken." }],
+          basiskennis: [{ onderwerp: "toetsstof", uitleg: "Atoom-structuur is basis-scheikunde. Kern + elektronen onderscheid moeten kunnen maken." }],
           niveaus: { basis: "Centrum met p+n.", simpeler: "Atoomkern = centrum atoom. Bevat protonen (+) + neutronen (0). Heel klein maar bevat bijna alle massa. Elektronen draaien eromheen.", nogSimpeler: "Centrum atoom" },
         },
       },
@@ -595,14 +595,14 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           stappen: [
             { titel: "Wat is periodiek systeem?", tekst: "Het **periodiek systeem der elementen** is een **tabel** met alle bekende **chemische elementen** (atomen) gerangschikt op:\n• **Rijen (periodes)** — toenemend atoomnummer\n• **Kolommen (groepen)** — gelijkende eigenschappen\n\nIn totaal ~**118 elementen** (2024). Eerste 92 in natuur, rest in lab gemaakt." },
             { titel: "Geschiedenis: Mendeleev 1869", tekst: "**Dmitri Mendeleev** (Russisch chemist, 1834-1907) bedacht in **1869** het systeem. Geniaal aan zijn werk: hij **liet lege plekken open** voor onbekende elementen + voorspelde hun eigenschappen.\n\nVoorspellingen klopten later (Gallium 1875, Germanium 1886). Bewees dat de logica klopte." },
-            { titel: "Cito-feit: belangrijke groepen", tekst: "**Eerste kolom**: alkalimetalen (Na, K) — reactief, glanzend\n**Laatste kolom**: edelgassen (He, Ne, Ar) — niet reactief\n**Tussen**: metalen (Fe, Cu, Au, Ag)\n**Rechts**: niet-metalen (C, N, O, S)\n\nElk element heeft **symbool** (1-2 letters):\n• H = Waterstof\n• O = Zuurstof\n• C = Koolstof\n• Fe = IJzer (van 'ferrum')\n• Au = Goud (van 'aurum')" },
+            { titel: "Toets-feit: belangrijke groepen", tekst: "**Eerste kolom**: alkalimetalen (Na, K) — reactief, glanzend\n**Laatste kolom**: edelgassen (He, Ne, Ar) — niet reactief\n**Tussen**: metalen (Fe, Cu, Au, Ag)\n**Rechts**: niet-metalen (C, N, O, S)\n\nElk element heeft **symbool** (1-2 letters):\n• H = Waterstof\n• O = Zuurstof\n• C = Koolstof\n• Fe = IJzer (van 'ferrum')\n• Au = Goud (van 'aurum')" },
           ],
           woorden: [
             { woord: "element", uitleg: "Zuiver chemisch deel — alle atomen identiek (alle koolstof-atomen zelfde)." },
             { woord: "atoomnummer", uitleg: "Aantal protonen — uniek per element. H=1, He=2." },
             { woord: "atoomsymbool", uitleg: "1-2 letters voor element. H, O, Fe, Au." },
           ],
-          theorie: "Belangrijke elementen Cito:\n• H (1) - waterstof\n• C (6) - koolstof (basis leven)\n• N (7) - stikstof (78% lucht)\n• O (8) - zuurstof (21% lucht)\n• Na (11) - natrium (zout)\n• Cl (17) - chloor\n• Fe (26) - ijzer\n• Cu (29) - koper\n• Ag (47) - zilver\n• Au (79) - goud",
+          theorie: "Belangrijke elementen voor de toets:\n• H (1) - waterstof\n• C (6) - koolstof (basis leven)\n• N (7) - stikstof (78% lucht)\n• O (8) - zuurstof (21% lucht)\n• Na (11) - natrium (zout)\n• Cl (17) - chloor\n• Fe (26) - ijzer\n• Cu (29) - koper\n• Ag (47) - zilver\n• Au (79) - goud",
           voorbeelden: [
             { type: "feit", tekst: "Element 117 (Tennessine) werd in 2010 gemaakt + bestond slechts ~50 milliseconden voor het vervalde. Moeilijker maken hoe verder je gaat." },
           ],
@@ -619,7 +619,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           stappen: [
             { titel: "Wat is een isotoop?", tekst: "**Isotopen** zijn atomen van **HETZELFDE element** met **DIFFERENT aantal neutronen**. Aantal protonen blijft gelijk (anders ander element).\n\nVoorbeeld koolstof:\n• **C-12** (6 p + 6 n) — meest voorkomend, stabiel\n• **C-13** (6 p + 7 n) — stabiel, ~1% van koolstof\n• **C-14** (6 p + 8 n) — radioactief, vervalt over tijd" },
             { titel: "Waarom interessant?", tekst: "**Radioactieve isotopen** vervallen + zenden straling uit. Toepassingen:\n• **Koolstof-14-datering**: bepalen ouderdom van organisch materiaal (mummies, fossielen). Halveringstijd 5.730 jaar.\n• **Medische diagnose**: bv jodium-131 voor schildklier-test\n• **Kernreactoren**: uranium-235 (splijtbaar)\n• **Bestraling**: kanker-therapie met cobalt-60" },
-            { titel: "Cito-feit: ouderdom-bepalen", tekst: "**Koolstof-14-datering** werkt zo:\n1. Levende dieren/planten nemen C-14 op (kleine deel)\n2. Bij dood stopt opname\n3. C-14 vervalt naar N-14 (halveringstijd 5.730 jaar)\n4. Meet hoeveel C-14 over is → bereken ouderdom\n\nBerucht voorbeeld: **Tutankhamun mummie** ~3.300 jaar oud. **Otzi de IJsman** (Alpen) ~5.300 jaar. Werkt voor 50.000 jaar max." },
+            { titel: "Toets-feit: ouderdom-bepalen", tekst: "**Koolstof-14-datering** werkt zo:\n1. Levende dieren/planten nemen C-14 op (kleine deel)\n2. Bij dood stopt opname\n3. C-14 vervalt naar N-14 (halveringstijd 5.730 jaar)\n4. Meet hoeveel C-14 over is → bereken ouderdom\n\nBerucht voorbeeld: **Tutankhamun mummie** ~3.300 jaar oud. **Otzi de IJsman** (Alpen) ~5.300 jaar. Werkt voor 50.000 jaar max." },
           ],
           woorden: [
             { woord: "isotoop", uitleg: "Variant van element met ander aantal neutronen." },

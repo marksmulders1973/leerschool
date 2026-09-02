@@ -1,5 +1,5 @@
 // Leerpad: Nederland en water — groep 6-8 PO.
-// Cito-onderdeel wereldoriëntatie (aardrijkskunde Nederland). Ref 1F.
+// Toets-onderdeel wereldoriëntatie (aardrijkskunde Nederland). Ref 1F.
 // 6 stappen met uitlegPad.
 
 const COLORS = {
@@ -24,7 +24,7 @@ const chapters = [
   { letter: "C", title: "Polders + droogmaking", emoji: "🌾", from: 2, to: 2 },
   { letter: "D", title: "Watersnoodramp 1953", emoji: "💧", from: 3, to: 3 },
   { letter: "E", title: "Deltawerken", emoji: "🏗️", from: 4, to: 4 },
-  { letter: "F", title: "Cito-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function dijkSvg() {
@@ -76,7 +76,7 @@ const steps = [
   {
     title: "Nederland en water — een land onder zeeniveau",
     explanation:
-      "Nederland is **uniek** in Europa: een groot deel ligt **onder zeeniveau**.\n\n**De feiten** *(uit je hoofd!)*:\n• Ongeveer **een kwart (25%)** van Nederland ligt **onder zeeniveau**.\n• Het diepste punt: **Zuidplaspolder** *(bij Rotterdam)*, ongeveer **6,76 meter** onder NAP *(Normaal Amsterdams Peil = zeeniveau)*.\n• Zonder dijken zou een groot deel onder water lopen.\n\n**Belangrijke wateren in Nederland**:\n• **Noordzee** — bij Den Haag, IJmuiden, Scheveningen.\n• **IJsselmeer** *(vroeger Zuiderzee)* — afgesloten van zee in 1932.\n• **Waddenzee** — boven Friesland en Groningen.\n• **Grote rivieren**: Rijn, Maas, Waal, IJssel, Schelde.\n• **Oosterschelde + Westerschelde** — Zeeland.\n\n**Waarom liggen we zo laag?**\n• Veel land was vroeger **zee, meer of moeras**.\n• In de loop van eeuwen hebben Nederlanders **water weggepompt** en **dijken gebouwd** om land te winnen.\n• Het land dat zo ontstaat heet een **polder**.\n\n**Cito-truc — 'NAP'**:\nNAP = **Normaal Amsterdams Peil** = de **standaard waterstand** in Nederland. Alles is gemeten **hoeveel meter boven of onder** NAP.\n\n• Een gebied is bv. **+3 NAP** = 3 meter boven zeeniveau.\n• Of **-2 NAP** = 2 meter onder zeeniveau.\n\n**Beroemde uitspraak**:\n*'God created the world, but the Dutch made Holland.'* — God maakte de wereld, maar de Nederlanders maakten Holland.",
+      "Nederland is **uniek** in Europa: een groot deel ligt **onder zeeniveau**.\n\n**De feiten** *(uit je hoofd!)*:\n• Ongeveer **een kwart (25%)** van Nederland ligt **onder zeeniveau**.\n• Het diepste punt: **Zuidplaspolder** *(bij Rotterdam)*, ongeveer **6,76 meter** onder NAP *(Normaal Amsterdams Peil = zeeniveau)*.\n• Zonder dijken zou een groot deel onder water lopen.\n\n**Belangrijke wateren in Nederland**:\n• **Noordzee** — bij Den Haag, IJmuiden, Scheveningen.\n• **IJsselmeer** *(vroeger Zuiderzee)* — afgesloten van zee in 1932.\n• **Waddenzee** — boven Friesland en Groningen.\n• **Grote rivieren**: Rijn, Maas, Waal, IJssel, Schelde.\n• **Oosterschelde + Westerschelde** — Zeeland.\n\n**Waarom liggen we zo laag?**\n• Veel land was vroeger **zee, meer of moeras**.\n• In de loop van eeuwen hebben Nederlanders **water weggepompt** en **dijken gebouwd** om land te winnen.\n• Het land dat zo ontstaat heet een **polder**.\n\n**Toets-truc — 'NAP'**:\nNAP = **Normaal Amsterdams Peil** = de **standaard waterstand** in Nederland. Alles is gemeten **hoeveel meter boven of onder** NAP.\n\n• Een gebied is bv. **+3 NAP** = 3 meter boven zeeniveau.\n• Of **-2 NAP** = 2 meter onder zeeniveau.\n\n**Beroemde uitspraak**:\n*'God created the world, but the Dutch made Holland.'* — God maakte de wereld, maar de Nederlanders maakten Holland.",
     svg: dijkSvg(),
     checks: [
       {
@@ -94,7 +94,7 @@ const steps = [
             { woord: "zeeniveau", uitleg: "Hoogte van het zeewater = nulpunt (NAP)." },
             { woord: "NAP", uitleg: "Normaal Amsterdams Peil = standaard zeeniveau in NL." },
           ],
-          theorie: "Cito-feit: 25% onder zeeniveau is een typisch Doorstroomtoets-getal. Onthoud 'ongeveer een **kwart**' — makkelijk te vertalen naar 25%.",
+          theorie: "Toets-feit: 25% onder zeeniveau is een typisch Doorstroomtoets-getal. Onthoud 'ongeveer een **kwart**' — makkelijk te vertalen naar 25%.",
           voorbeelden: [
             { type: "stap", tekst: "Het Westland (kassen) ligt onder zeeniveau. Schiphol ligt op -4 NAP (4 meter onder zee)." },
             { type: "stap", tekst: "Vergelijk: alleen Bangladesh + de Maladiven hebben vergelijkbaar lage gebieden. Nederland is uniek in Europa." },
@@ -132,7 +132,7 @@ const steps = [
   {
     title: "Dijken en duinen — hoe we droge voeten houden",
     explanation:
-      "Nederland houdt het water buiten met **3 hoofdsoorten waterkeringen**:\n\n**1. Dijken** *(door mensen gemaakt)*\nGrote aarden walen die water tegenhouden. Hoog en breed.\n• **Zeedijk** — tegen de zee aan.\n• **Rivierdijk** — langs een rivier.\n• **Polderdijk** — tussen polder en water.\n\n**Voorbeelden van bekende dijken**:\n• **Afsluitdijk** — 32 km, sluit IJsselmeer af van Waddenzee *(klaar 1932)*.\n• **Houtribdijk** — tussen Lelystad en Enkhuizen.\n• **Veluwemeer-dijken**.\n\n**2. Duinen** *(door de natuur gemaakt)*\nZand-heuvels langs de kust, gevormd door wind en zee.\n• Maken een natuurlijke bescherming tegen de zee.\n• Langs de Hollandse kust *(Noord/Zuid-Holland)* en bij de Waddeneilanden.\n\n**3. Stormvloedkeringen** *(speciale beweegbare dijken)*\nGroot stalen 'hekken' die alleen dichtgaan bij storm.\n• **Maeslantkering** — bij Rotterdam, bekendste.\n• **Oosterscheldekering** — onderdeel Deltawerken.\n• **Hartelkering** + **Hollandsche IJssel-kering**.\n\n**Cito-vraag**:\n*'Wat is het verschil tussen een dijk en een duin?'*\n→ Dijk is door mensen gemaakt, duin door de natuur (wind + zand).\n\n**Wie zorgt voor de dijken?**\nElk gebied heeft een **waterschap**. Dat is een soort overheid speciaal voor water. Ze:\n• Onderhouden dijken.\n• Pompen polder-water weg.\n• Houden waterstand bij.\n• Heffen 'waterschapsbelasting' bij inwoners.\n\nNederland heeft **21 waterschappen**.",
+      "Nederland houdt het water buiten met **3 hoofdsoorten waterkeringen**:\n\n**1. Dijken** *(door mensen gemaakt)*\nGrote aarden walen die water tegenhouden. Hoog en breed.\n• **Zeedijk** — tegen de zee aan.\n• **Rivierdijk** — langs een rivier.\n• **Polderdijk** — tussen polder en water.\n\n**Voorbeelden van bekende dijken**:\n• **Afsluitdijk** — 32 km, sluit IJsselmeer af van Waddenzee *(klaar 1932)*.\n• **Houtribdijk** — tussen Lelystad en Enkhuizen.\n• **Veluwemeer-dijken**.\n\n**2. Duinen** *(door de natuur gemaakt)*\nZand-heuvels langs de kust, gevormd door wind en zee.\n• Maken een natuurlijke bescherming tegen de zee.\n• Langs de Hollandse kust *(Noord/Zuid-Holland)* en bij de Waddeneilanden.\n\n**3. Stormvloedkeringen** *(speciale beweegbare dijken)*\nGroot stalen 'hekken' die alleen dichtgaan bij storm.\n• **Maeslantkering** — bij Rotterdam, bekendste.\n• **Oosterscheldekering** — onderdeel Deltawerken.\n• **Hartelkering** + **Hollandsche IJssel-kering**.\n\n**toetsvraag**:\n*'Wat is het verschil tussen een dijk en een duin?'*\n→ Dijk is door mensen gemaakt, duin door de natuur (wind + zand).\n\n**Wie zorgt voor de dijken?**\nElk gebied heeft een **waterschap**. Dat is een soort overheid speciaal voor water. Ze:\n• Onderhouden dijken.\n• Pompen polder-water weg.\n• Houden waterstand bij.\n• Heffen 'waterschapsbelasting' bij inwoners.\n\nNederland heeft **21 waterschappen**.",
     checks: [
       {
         q: "Wat is het verschil tussen een **dijk** en een **duin**?",
@@ -179,7 +179,7 @@ const steps = [
   {
     title: "Polders — land uit water gemaakt",
     explanation:
-      "Een **polder** is een stuk land dat:\n• **Lager ligt** dan het omringende water.\n• Omgeven is door **dijken**.\n• Wordt **drooggehouden** met gemalen *(pompen)*.\n\n**Hoe maak je een polder?**\n1. **Dijk** om het gebied bouwen.\n2. **Water wegpompen** uit het gebied *(eerst met windmolens, nu met gemalen)*.\n3. **Sloten graven** voor afvoer.\n4. **Wachten** tot bodem opdroogt en kan worden bewerkt.\n5. **Bouwen + boeren** kunnen er gaan wonen/werken.\n\n**Beroemde Nederlandse polders**:\n• **Beemster** *(1612)* — eerste grote droogmakerij, UNESCO werelderfgoed.\n• **Haarlemmermeer** *(1852)* — waar Schiphol nu ligt.\n• **Flevopolder** *(1957-1968)* — provincie Flevoland, droogmakerij.\n• **Wieringermeer** *(1930)* — eerste Zuiderzeepolder.\n\n**Provincie Flevoland — een poldervraag voor Cito**:\nFlevoland is **de jongste provincie van Nederland** *(provincie sinds 1986)*. Het is helemaal **drooggelegde polder**:\n• Wieringermeerpolder.\n• Noordoostpolder.\n• Oostelijk Flevoland.\n• Zuidelijk Flevoland.\n\nAlmere is de **grootste stad** in Flevoland *(en groeit hard)*.\n\n**Cito-truc — molens**:\n• **Korenmolen** = maalt graan tot meel.\n• **Watermolen** = pompt water weg.\n• **Poldermolen** = specifiek voor polder drooghouden.\n\nDe vroege molens waren **windmolens** *(wind als energiebron)*. Nu zijn het meestal **elektrische gemalen**.",
+      "Een **polder** is een stuk land dat:\n• **Lager ligt** dan het omringende water.\n• Omgeven is door **dijken**.\n• Wordt **drooggehouden** met gemalen *(pompen)*.\n\n**Hoe maak je een polder?**\n1. **Dijk** om het gebied bouwen.\n2. **Water wegpompen** uit het gebied *(eerst met windmolens, nu met gemalen)*.\n3. **Sloten graven** voor afvoer.\n4. **Wachten** tot bodem opdroogt en kan worden bewerkt.\n5. **Bouwen + boeren** kunnen er gaan wonen/werken.\n\n**Beroemde Nederlandse polders**:\n• **Beemster** *(1612)* — eerste grote droogmakerij, UNESCO werelderfgoed.\n• **Haarlemmermeer** *(1852)* — waar Schiphol nu ligt.\n• **Flevopolder** *(1957-1968)* — provincie Flevoland, droogmakerij.\n• **Wieringermeer** *(1930)* — eerste Zuiderzeepolder.\n\n**Provincie Flevoland — een poldervraag voor de Doorstroomtoets**:\nFlevoland is **de jongste provincie van Nederland** *(provincie sinds 1986)*. Het is helemaal **drooggelegde polder**:\n• Wieringermeerpolder.\n• Noordoostpolder.\n• Oostelijk Flevoland.\n• Zuidelijk Flevoland.\n\nAlmere is de **grootste stad** in Flevoland *(en groeit hard)*.\n\n**Toets-truc — molens**:\n• **Korenmolen** = maalt graan tot meel.\n• **Watermolen** = pompt water weg.\n• **Poldermolen** = specifiek voor polder drooghouden.\n\nDe vroege molens waren **windmolens** *(wind als energiebron)*. Nu zijn het meestal **elektrische gemalen**.",
     svg: polderSvg(),
     checks: [
       {
@@ -213,7 +213,7 @@ const steps = [
   {
     title: "Watersnoodramp 1953",
     explanation:
-      "In de nacht van **31 januari op 1 februari 1953** brak in Nederland een **enorme ramp** uit. Een **stormvloed** vanuit de Noordzee combineerde met **springtij** *(extreem hoge vloed)* en **noordwesten storm**.\n\n**Wat gebeurde er?**\n• Dijken in **Zeeland**, **Zuid-Holland** en **Noord-Brabant** braken op meerdere plekken.\n• Zo'n **150.000 hectare land** liep onder water.\n• **1.836 mensen** verdronken.\n• **70.000 mensen** moesten hun huis ontvluchten.\n• Veel **dieren verdronken** (paarden, koeien, schapen).\n• Veel huizen, scholen, kerken verwoest.\n\n**Waarom zo erg?**\n• De dijken waren niet sterk genoeg.\n• Mensen kregen geen waarschuwing op tijd.\n• Veel mensen sliepen — wisten niet wat er gebeurde.\n• De radio en kerktoren-bel hadden geen storm-waarschuwing.\n\n**De ramp veranderde Nederland**:\n• Bewustzijn: **dit mag nooit meer gebeuren**.\n• Begin van de **Deltawerken** *(zie volgende stap)*.\n• Stormwaarschuwing-systeem opgezet.\n• Dijken langs zee + grote rivieren werden veel hoger en sterker.\n\n**Cito-tip — feitjes om te kennen**:\n• Jaar: **1953** *(31 jan - 1 feb)*.\n• Doden: **1836** *(let op: dit jaartal lijkt op een jaar, maar is aantal slachtoffers)*.\n• Provincies hardst getroffen: **Zeeland**, **Zuid-Holland**, **Noord-Brabant**.\n• Reactie: **Deltawerken** gebouwd 1958-1997.\n\n**Hulp van buitenland**:\nDe internationale gemeenschap hielp. Vooral de UK stuurde schepen, materiaal, geld.",
+      "In de nacht van **31 januari op 1 februari 1953** brak in Nederland een **enorme ramp** uit. Een **stormvloed** vanuit de Noordzee combineerde met **springtij** *(extreem hoge vloed)* en **noordwesten storm**.\n\n**Wat gebeurde er?**\n• Dijken in **Zeeland**, **Zuid-Holland** en **Noord-Brabant** braken op meerdere plekken.\n• Zo'n **150.000 hectare land** liep onder water.\n• **1.836 mensen** verdronken.\n• **70.000 mensen** moesten hun huis ontvluchten.\n• Veel **dieren verdronken** (paarden, koeien, schapen).\n• Veel huizen, scholen, kerken verwoest.\n\n**Waarom zo erg?**\n• De dijken waren niet sterk genoeg.\n• Mensen kregen geen waarschuwing op tijd.\n• Veel mensen sliepen — wisten niet wat er gebeurde.\n• De radio en kerktoren-bel hadden geen storm-waarschuwing.\n\n**De ramp veranderde Nederland**:\n• Bewustzijn: **dit mag nooit meer gebeuren**.\n• Begin van de **Deltawerken** *(zie volgende stap)*.\n• Stormwaarschuwing-systeem opgezet.\n• Dijken langs zee + grote rivieren werden veel hoger en sterker.\n\n**Toets-tip — feitjes om te kennen**:\n• Jaar: **1953** *(31 jan - 1 feb)*.\n• Doden: **1836** *(let op: dit jaartal lijkt op een jaar, maar is aantal slachtoffers)*.\n• Provincies hardst getroffen: **Zeeland**, **Zuid-Holland**, **Noord-Brabant**.\n• Reactie: **Deltawerken** gebouwd 1958-1997.\n\n**Hulp van buitenland**:\nDe internationale gemeenschap hielp. Vooral de UK stuurde schepen, materiaal, geld.",
     checks: [
       {
         q: "In welk jaar was de **Watersnoodramp**?",
@@ -230,7 +230,7 @@ const steps = [
             { woord: "Watersnoodramp", uitleg: "De overstromingsramp van 1953." },
             { woord: "springtij", uitleg: "Extra hoge vloed bij volle/nieuwe maan." },
           ],
-          theorie: "Cito-jaartal-rij voor NL+water:\n• **1932** = Afsluitdijk klaar (Zuiderzee dicht).\n• **1953** = Watersnoodramp.\n• **1958-1997** = Deltawerken bouw.\n• **1986** = Oosterscheldekering klaar.",
+          theorie: "Toets-jaartal-rij voor NL+water:\n• **1932** = Afsluitdijk klaar (Zuiderzee dicht).\n• **1953** = Watersnoodramp.\n• **1958-1997** = Deltawerken bouw.\n• **1986** = Oosterscheldekering klaar.",
           voorbeelden: [
             { type: "stap", tekst: "Het getal 1836 in de ramp = aantal slachtoffers. Verwar het NIET met een jaartal." },
             { type: "stap", tekst: "Sinds 1953 staat 1 feb in NL geheugen als ramp-dag. Veel gedenktekens in Zeeland." },
@@ -291,7 +291,7 @@ const steps = [
             { woord: "Deltawerken", uitleg: "Reeks projecten 1958-1997 in Zeeland en zuid Zuid-Holland tegen overstromingen." },
             { woord: "Afsluitdijk", uitleg: "Dijk uit 1932 die de Zuiderzee veranderde in IJsselmeer." },
           ],
-          theorie: "Cito-truc onderscheiden: **Afsluitdijk = 1932 = noord** (boven Friesland). **Deltawerken = 1958-1997 = zuid** (Zeeland + Zuid-Holland). 2 verschillende projecten, 30+ jaar uit elkaar.",
+          theorie: "Toets-truc onderscheiden: **Afsluitdijk = 1932 = noord** (boven Friesland). **Deltawerken = 1958-1997 = zuid** (Zeeland + Zuid-Holland). 2 verschillende projecten, 30+ jaar uit elkaar.",
           voorbeelden: [
             { type: "stap", tekst: "Onderdelen Deltawerken: Oosterscheldekering, Brouwersdam, Haringvlietdam, Veerse Gatdam, Maeslantkering (afsluitend stuk)." },
             { type: "stap", tekst: "Afsluitdijk = los project. Vaak verward met Deltawerken omdat beide dijken zijn — maar het zijn 2 verschillende reeksen." },
@@ -334,11 +334,11 @@ const steps = [
     ],
   },
 
-  // STAP 6: Cito-mix
+  // STAP 6: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — Nederland en water mix",
+    title: "Toets-eindopdracht — Nederland en water mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: NAP, dijken, polders, watersnood, Deltawerken.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: NAP, dijken, polders, watersnood, Deltawerken.\n\nVeel succes!",
     checks: [
       {
         q: "Wat betekent **NAP**?",
@@ -408,7 +408,7 @@ const waterErfgoedNederlandPo = {
     { id: "topografie-nederland", title: "Topografie Nederland", niveau: "po-1F" },
   ],
   intro:
-    "Nederland en water voor groep 6-8 — onder zeeniveau, dijken+duinen, polders, Watersnoodramp 1953, Deltawerken. Cito-onderdeel wereldoriëntatie. ~15 min.",
+    "Nederland en water voor groep 6-8 — onder zeeniveau, dijken+duinen, polders, Watersnoodramp 1953, Deltawerken. Toets-onderdeel wereldoriëntatie. ~15 min.",
   triggerKeywords: [
     "water", "dijk", "duin", "polder", "NAP",
     "watersnood", "deltawerken", "afsluitdijk",

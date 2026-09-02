@@ -8,7 +8,7 @@ import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.j
 // - "Toets"-label opende eigenlijk student-home (verwarrend) → vervangen door
 //   directe Doorstroomtoets-ingang (USP + ICP-focus uit CLAUDE.md).
 //
-// Reden Scorebord (Hall of Fame) eerder weggehaald: Cito-doelgroep is
+// Reden Scorebord (Hall of Fame) eerder weggehaald: Toets-doelgroep is
 // faalangst-gevoelig; vergelijking met klasgenoten = anti-leren. Component+route
 // blijven bestaan (`leaderboard` page rendert nog), maar geen entry-point in nav.
 //

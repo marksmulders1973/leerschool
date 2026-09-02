@@ -164,7 +164,7 @@ export default function ExamensPage({ onBack, onHome, prefilterVak, onPlayExamen
             </h2>
             <p style={{ fontSize: 14, color: C.muted, lineHeight: 1.55, marginBottom: 18 }}>
               Voor de basisschool is de <strong style={{ color: C.text }}>Doorstroomtoets</strong> (vroeger
-              Cito-eindtoets) belangrijker. Daar oefen je voor in 15 minuten per dag.
+              Doorstroomtoets) belangrijker. Daar oefen je voor in 15 minuten per dag.
             </p>
             {onGoCito && (
               <button

@@ -21,7 +21,7 @@ const chapters = [
   { letter: "B", title: "Hoeveel is X% van iets?", emoji: "🛒", from: 2, to: 3 },
   { letter: "C", title: "Welk % is dit van het totaal?", emoji: "🎒", from: 4, to: 4 },
   { letter: "D", title: "Korting in de winkel", emoji: "💸", from: 5, to: 5 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 6, to: 6 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 6, to: 6 },
 ];
 
 // Visualisatie: 10×10 grid met X cellen ingekleurd voor procentvoorstelling.
@@ -98,7 +98,7 @@ const steps = [
             { woord: "procent (%)", uitleg: "Per honderd (per centum, Latijns)." },
             { woord: "verhouding", uitleg: "Hoeveel van het ene tegenover hoeveel van het andere." },
           ],
-          theorie: "Cito-tip: lees het symbool % als 'per 100' of 'van 100'. Dan begrijp je elk procent-vraagstuk. 25% = 25 per 100 = een kwart.",
+          theorie: "Toets-tip: lees het symbool % als 'per 100' of 'van 100'. Dan begrijp je elk procent-vraagstuk. 25% = 25 per 100 = een kwart.",
           voorbeelden: [
             { type: "stap", tekst: "100% = 100 per 100 = ALLES." },
             { type: "stap", tekst: "50% = 50 per 100 = de HELFT." },
@@ -128,7 +128,7 @@ const steps = [
             { woord: "0%", uitleg: "Niets." },
             { woord: "50%", uitleg: "De helft." },
           ],
-          theorie: "Cito-truc 100% denken: 'het geheel' = wat je telt. 100% van 30 leerlingen = alle 30. 100% van een meter = 1 meter (= 100 cm). 100% past altijd bij ALLES — niet '100 stuks'.",
+          theorie: "Toets-truc 100% denken: 'het geheel' = wat je telt. 100% van 30 leerlingen = alle 30. 100% van een meter = 1 meter (= 100 cm). 100% past altijd bij ALLES — niet '100 stuks'.",
           voorbeelden: [
             { type: "stap", tekst: "Spaarpot bevat €40. 100% van je spaargeld = €40 (alles)." },
             { type: "stap", tekst: "Beker met 200 ml water. 100% vol = 200 ml." },
@@ -154,7 +154,7 @@ const steps = [
   // STAP 2: % ↔ breuk ↔ komma
   {
     title: "Procent, breuk en kommagetal",
-    explanation: "Een procent is **3 manieren om hetzelfde te zeggen**. Procent — breuk — kommagetal.\n\nVoorbeeld:\n• **50%** = **½** = **0,5**\n• **25%** = **¼** = **0,25**\n• **75%** = **¾** = **0,75**\n• **10%** = **¹⁄₁₀** = **0,1**\n\n**Truc 1: van % naar kommagetal**\nDeel door 100 (= komma 2 plekken naar links).\n\n• 35% → 0,35\n• 8% → 0,08\n• 60% → 0,6\n\n**Truc 2: van kommagetal naar %**\nMaal 100 (= komma 2 plekken naar rechts).\n\n• 0,72 → 72%\n• 0,9 → 90%\n• 0,05 → 5%\n\n**Vier sleutel-percentages om vast uit je hoofd te leren**:\n\n| % | breuk | wat het betekent |\n|---|-------|-------|\n| **25%** | ¼ | een vierde |\n| **50%** | ½ | de helft |\n| **75%** | ¾ | drie kwart |\n| **100%** | 1 | alles |\n\nMet alleen deze 4 kun je heel veel Cito-vragen al doen!",
+    explanation: "Een procent is **3 manieren om hetzelfde te zeggen**. Procent — breuk — kommagetal.\n\nVoorbeeld:\n• **50%** = **½** = **0,5**\n• **25%** = **¼** = **0,25**\n• **75%** = **¾** = **0,75**\n• **10%** = **¹⁄₁₀** = **0,1**\n\n**Truc 1: van % naar kommagetal**\nDeel door 100 (= komma 2 plekken naar links).\n\n• 35% → 0,35\n• 8% → 0,08\n• 60% → 0,6\n\n**Truc 2: van kommagetal naar %**\nMaal 100 (= komma 2 plekken naar rechts).\n\n• 0,72 → 72%\n• 0,9 → 90%\n• 0,05 → 5%\n\n**Vier sleutel-percentages om vast uit je hoofd te leren**:\n\n| % | breuk | wat het betekent |\n|---|-------|-------|\n| **25%** | ¼ | een vierde |\n| **50%** | ½ | de helft |\n| **75%** | ¾ | drie kwart |\n| **100%** | 1 | alles |\n\nMet alleen deze 4 kun je heel veel toetsvragen al doen!",
     svg: tabelSvg(),
     checks: [
       {
@@ -172,7 +172,7 @@ const steps = [
             { woord: "breuk", uitleg: "Teller / noemer (3/4 = 3 boven, 4 onder)." },
             { woord: "vereenvoudigen", uitleg: "Delen door gemeenschappelijke deler." },
           ],
-          theorie: "Cito-vuistregel: 25% = ¼. 50% = ½. 75% = ¾. Dit zijn de meest gebruikte. Onthoud ze uit het hoofd!",
+          theorie: "Toets-vuistregel: 25% = ¼. 50% = ½. 75% = ¾. Dit zijn de meest gebruikte. Onthoud ze uit het hoofd!",
           voorbeelden: [
             { type: "stap", tekst: "75% van 20 = ¾ van 20 = 20÷4×3 = 5×3 = 15." },
             { type: "stap", tekst: "75% van 100 = 75. Hele klas? 75 van 100 leerlingen — 3 op de 4." },
@@ -203,7 +203,7 @@ const steps = [
   // STAP 3: Hoeveel is X% van Y?
   {
     title: "Hoeveel is X% van een getal?",
-    explanation: "Veel Cito-vragen vragen: *'Hoeveel is X% van Y?'*\n\nVoorbeeld: *'Hoeveel is 20% van 60?'*\n\n**Aanpak 1 — via 1%** *(handig voor lastige getallen)*:\n• 1% van 60 = 60 ÷ 100 = 0,6\n• 20% = 20 × 0,6 = **12**\n\n**Aanpak 2 — via kommagetal**:\n• 20% = 0,20\n• 0,20 × 60 = **12**\n\n**Aanpak 3 — slim met breuken** *(snelst voor 25/50/75/10/20%)*:\n• 50% van 60 = 60 ÷ 2 = **30** (de helft)\n• 25% van 60 = 60 ÷ 4 = **15** (een vierde)\n• 10% van 60 = 60 ÷ 10 = **6**\n• 20% van 60 = 2 × (10% van 60) = 2 × 6 = **12**\n\n**De 10%-truc** *(super-handig)*:\n10% is altijd **÷ 10**. Daarna kun je elke 10%-stap optellen.\n\nVoorbeelden:\n• 10% van 80 = 8\n• 30% van 80 = 3 × 8 = 24\n• 70% van 80 = 7 × 8 = 56\n\n**Hint bij Cito**:\nKijk eerst of het een 'mooi' percentage is (10, 25, 50, 75, 100). Zo ja → gebruik de breuken-truc. Zo niet → eerst 1% of 10% berekenen, dan vermenigvuldigen.",
+    explanation: "Veel toetsvragen vragen: *'Hoeveel is X% van Y?'*\n\nVoorbeeld: *'Hoeveel is 20% van 60?'*\n\n**Aanpak 1 — via 1%** *(handig voor lastige getallen)*:\n• 1% van 60 = 60 ÷ 100 = 0,6\n• 20% = 20 × 0,6 = **12**\n\n**Aanpak 2 — via kommagetal**:\n• 20% = 0,20\n• 0,20 × 60 = **12**\n\n**Aanpak 3 — slim met breuken** *(snelst voor 25/50/75/10/20%)*:\n• 50% van 60 = 60 ÷ 2 = **30** (de helft)\n• 25% van 60 = 60 ÷ 4 = **15** (een vierde)\n• 10% van 60 = 60 ÷ 10 = **6**\n• 20% van 60 = 2 × (10% van 60) = 2 × 6 = **12**\n\n**De 10%-truc** *(super-handig)*:\n10% is altijd **÷ 10**. Daarna kun je elke 10%-stap optellen.\n\nVoorbeelden:\n• 10% van 80 = 8\n• 30% van 80 = 3 × 8 = 24\n• 70% van 80 = 7 × 8 = 56\n\n**Hint bij de Doorstroomtoets**:\nKijk eerst of het een 'mooi' percentage is (10, 25, 50, 75, 100). Zo ja → gebruik de breuken-truc. Zo niet → eerst 1% of 10% berekenen, dan vermenigvuldigen.",
     checks: [
       {
         q: "**50% van 80** = ?",
@@ -232,7 +232,7 @@ const steps = [
             { woord: "korting", uitleg: "Bedrag dat van de prijs af gaat." },
             { woord: "besparing", uitleg: "Synoniem van korting — wat je niet hoeft te betalen." },
           ],
-          theorie: "Cito-strik: vraag naar 'bespaar' of 'korting' = je rekent het kortings-BEDRAG. Bij 'nieuwe prijs' reken je het bedrag NA aftrek (€200 − €50 = €150).",
+          theorie: "Toets-strik: vraag naar 'bespaar' of 'korting' = je rekent het kortings-BEDRAG. Bij 'nieuwe prijs' reken je het bedrag NA aftrek (€200 − €50 = €150).",
           voorbeelden: [
             { type: "stap", tekst: "Korting €50 = bespaar je. Nieuwe prijs = €200 − €50 = €150." },
             { type: "stap", tekst: "20% korting op €80? → 20% van €80 = €16 bespaard, betaal €64." },
@@ -257,7 +257,7 @@ const steps = [
   // STAP 4: Vier-stap-sommen winkel
   {
     title: "% in de winkel — slimme tactiek",
-    explanation: "In de winkel zie je vaak korting-bordjes. Bijvoorbeeld:\n\n*'Spijkerbroek normaal € 60. Nu 25% korting.'*\n\n**Vraag**: hoeveel betaal je nu?\n\n**Slimme aanpak — 2 manieren**:\n\n**Manier 1 — bereken korting, trek af**:\n• Korting = 25% van €60 = ¼ × €60 = **€15**\n• Nieuwe prijs = €60 − €15 = **€45**\n\n**Manier 2 — direct het overgebleven deel** *(sneller!)*:\n• Als je 25% korting krijgt, betaal je nog **75%** *(want 100% − 25% = 75%)*.\n• 75% van €60 = ¾ × €60 = **€45**.\n\nManier 2 is **één stap sneller** — je hoeft niet eerst korting te berekenen + dan af te trekken.\n\n**Cito-trucs voor populaire kortingen**:\n• **50% korting** → betaal je de helft\n• **25% korting** → betaal je 75% (drie kwart)\n• **10% korting** → betaal je 90%\n• **75% korting** → betaal je 25% (een kwart)\n\n**Voorbeeldsom**:\n*'Een telefoon van € 400 heeft 30% korting. Wat betaal je?'*\n\n**Manier 2 (snelst)**:\n• Je betaalt 100% − 30% = **70%** van de prijs.\n• 10% van €400 = €40.\n• 70% van €400 = 7 × €40 = **€280**.",
+    explanation: "In de winkel zie je vaak korting-bordjes. Bijvoorbeeld:\n\n*'Spijkerbroek normaal € 60. Nu 25% korting.'*\n\n**Vraag**: hoeveel betaal je nu?\n\n**Slimme aanpak — 2 manieren**:\n\n**Manier 1 — bereken korting, trek af**:\n• Korting = 25% van €60 = ¼ × €60 = **€15**\n• Nieuwe prijs = €60 − €15 = **€45**\n\n**Manier 2 — direct het overgebleven deel** *(sneller!)*:\n• Als je 25% korting krijgt, betaal je nog **75%** *(want 100% − 25% = 75%)*.\n• 75% van €60 = ¾ × €60 = **€45**.\n\nManier 2 is **één stap sneller** — je hoeft niet eerst korting te berekenen + dan af te trekken.\n\n**Toets-trucs voor populaire kortingen**:\n• **50% korting** → betaal je de helft\n• **25% korting** → betaal je 75% (drie kwart)\n• **10% korting** → betaal je 90%\n• **75% korting** → betaal je 25% (een kwart)\n\n**Voorbeeldsom**:\n*'Een telefoon van € 400 heeft 30% korting. Wat betaal je?'*\n\n**Manier 2 (snelst)**:\n• Je betaalt 100% − 30% = **70%** van de prijs.\n• 10% van €400 = €40.\n• 70% van €400 = 7 × €40 = **€280**.",
     checks: [
       {
         q: "Een schoen normaal **€ 80**, met **25% korting**. Hoeveel **betaal je**?",
@@ -266,7 +266,7 @@ const steps = [
         wrongHints: [null, "Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.", "Te weinig — 25% van €80 = €20, dus je betaalt €80 − €20.", "Te veel — heb je überhaupt korting gepakt?"],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is de vraag?", tekst: "**Hoeveel BETAAL je?** Niet 'hoeveel bespaar je'. Lees rustig — Cito test of je dit verschil herkent." },
+            { titel: "Wat is de vraag?", tekst: "**Hoeveel BETAAL je?** Niet 'hoeveel bespaar je'. Lees rustig — De toets test of je dit verschil herkent." },
             { titel: "Manier 1: bereken korting, trek af", tekst: "Stap 1: 25% van €80. 25% = ¼. €80 ÷ 4 = **€20** korting.\nStap 2: nieuwe prijs = €80 − €20 = **€60**." },
             { titel: "Manier 2: direct 75% berekenen (snelste!)", tekst: "Als je 25% korting krijgt, betaal je nog **75%** (100% − 25%).\n75% van €80 = ¾ × €80 = €80 ÷ 4 × 3 = €20 × 3 = **€60**.\nZelfde antwoord, één stap minder!" },
           ],
@@ -274,7 +274,7 @@ const steps = [
             { woord: "korting", uitleg: "Hoeveel wordt afgetrokken van de oude prijs." },
             { woord: "nieuwe prijs", uitleg: "Wat je nu écht betaalt = oude prijs − korting." },
           ],
-          theorie: "Cito-truc winkel:\n• 25% korting → je betaalt 75%\n• 50% korting → je betaalt 50%\n• 10% korting → je betaalt 90%\n• 75% korting → je betaalt 25%\nDirect rekenen wat je BETAALT is meestal sneller dan eerst korting + dan aftrekken.",
+          theorie: "Toets-truc winkel:\n• 25% korting → je betaalt 75%\n• 50% korting → je betaalt 50%\n• 10% korting → je betaalt 90%\n• 75% korting → je betaalt 25%\nDirect rekenen wat je BETAALT is meestal sneller dan eerst korting + dan aftrekken.",
           voorbeelden: [
             { type: "stap", tekst: "€100 met 25% korting = je betaalt €75. €40 met 25% korting = je betaalt €30." },
             { type: "stap", tekst: "Bedenk: 'is dit de korting of de nieuwe prijs?' = belangrijkste vraag bij %." },
@@ -306,7 +306,7 @@ const steps = [
   // STAP 5: Welk % is X van Y?
   {
     title: "Welk percentage is dit van het totaal?",
-    explanation: "De omgekeerde Cito-vraag: *'X van Y — welk percentage is dat?'*\n\nVoorbeeld: *'In een klas van 25 leerlingen zijn 5 meisjes. Welk percentage meisjes is dat?'*\n\n**Aanpak — de gouden regel**:\n• % = (deel ÷ totaal) × 100\n• Hier: 5 ÷ 25 = 0,20 → × 100 = **20%**\n\n**Slimme aanpak voor kleine breuken** *(sneller)*:\n• 5 op 25 = 1 op 5 *(beide ÷ 5)* = 1/5 = **20%**\n• Hoofd: 1/5 = 20%, 1/4 = 25%, 1/2 = 50%, 1/10 = 10%.\n\n**Cito-voorbeelden**:\n*'Op een toets van 40 vragen heeft Tim 30 goed. Welk percentage is dat?'*\n• 30/40 = 3/4 = **75%**.\n\n*'Van de 200 leerlingen op school spelen er 40 voetbal. Welk percentage?'*\n• 40/200 = 1/5 = **20%**.\n\n**Truc**: probeer eerst te delen tot je een 'mooie' breuk krijgt (1/2, 1/4, 1/5, 1/10).\n\n**Veel-voorkomende fout**:\nVergeten te × 100. Dan krijg je 0,2 ipv 20%. Beide kloppen wiskundig, maar de vraag vraagt een **percentage**.",
+    explanation: "De omgekeerde toetsvraag: *'X van Y — welk percentage is dat?'*\n\nVoorbeeld: *'In een klas van 25 leerlingen zijn 5 meisjes. Welk percentage meisjes is dat?'*\n\n**Aanpak — de gouden regel**:\n• % = (deel ÷ totaal) × 100\n• Hier: 5 ÷ 25 = 0,20 → × 100 = **20%**\n\n**Slimme aanpak voor kleine breuken** *(sneller)*:\n• 5 op 25 = 1 op 5 *(beide ÷ 5)* = 1/5 = **20%**\n• Hoofd: 1/5 = 20%, 1/4 = 25%, 1/2 = 50%, 1/10 = 10%.\n\n**Toets-voorbeelden**:\n*'Op een toets van 40 vragen heeft Tim 30 goed. Welk percentage is dat?'*\n• 30/40 = 3/4 = **75%**.\n\n*'Van de 200 leerlingen op school spelen er 40 voetbal. Welk percentage?'*\n• 40/200 = 1/5 = **20%**.\n\n**Truc**: probeer eerst te delen tot je een 'mooie' breuk krijgt (1/2, 1/4, 1/5, 1/10).\n\n**Veel-voorkomende fout**:\nVergeten te × 100. Dan krijg je 0,2 ipv 20%. Beide kloppen wiskundig, maar de vraag vraagt een **percentage**.",
     checks: [
       {
         q: "Op een toets van **20 vragen** heeft Sven **15 goed**. Welk **percentage**?",
@@ -323,7 +323,7 @@ const steps = [
             { woord: "percentage uit deel + totaal", uitleg: "(deel / totaal) × 100 = procent." },
             { woord: "vereenvoudigen", uitleg: "Teller + noemer door zelfde getal delen → 'mooie' breuk." },
           ],
-          theorie: "Cito-truc 'welk %?' vragen:\n1. Reken **deel / totaal** als breuk.\n2. Vereenvoudig naar bekende breuk (½, ¼, ¾, ⅕, ...).\n3. Zet om naar %.\nSneller dan elke keer × 100 doen.",
+          theorie: "Toets-truc 'welk %?' vragen:\n1. Reken **deel / totaal** als breuk.\n2. Vereenvoudig naar bekende breuk (½, ¼, ¾, ⅕, ...).\n3. Zet om naar %.\nSneller dan elke keer × 100 doen.",
           voorbeelden: [
             { type: "stap", tekst: "30 van 40 = 30/40 = 3/4 = 75%." },
             { type: "stap", tekst: "10 van 50 = 10/50 = 1/5 = 20%." },
@@ -355,7 +355,7 @@ const steps = [
   // STAP 6: Korting in de winkel - meer praktijk
   {
     title: "Praktijk-sommen — winkel + sport",
-    explanation: "Tijd voor mix-sommen in Cito-stijl. **Lees rustig en onderstreep getallen + percentages**.\n\n**Stappenplan voor elke %-som**:\n1. **Wat ken ik?** Het totaal of het deel?\n2. **Wat zoek ik?** Het andere deel, of het percentage?\n3. **Welke aanpak?** 1%-truc, 10%-truc, of breuken-truc?\n4. **Schrijf op** en reken in stapjes.\n\n**Voorbeeld — sport**:\n*'Marc speelt 50 wedstrijden basketbal. Hij won 30. Welk percentage gewonnen?'*\n• 30/50 = 3/5 = 60%.\n\n**Voorbeeld — winkel**:\n*'Een bagagetas was € 60. Met 40% korting?'*\n• Snel: je betaalt 100% − 40% = **60%** van de prijs.\n• 10% van €60 = €6, dus 60% = 6 × €6 = **€36**.\n\n**Voorbeeld — combinatie**:\n*'Anna bespaart € 15 op een truitje van € 60. Welk korting-percentage?'*\n• €15 van €60 = 15/60 = 1/4 = **25% korting**.\n\n**Veel-voorkomende val**:\n• 'Welk percentage MEER?' vraagt iets anders dan 'Welk percentage IS het?'. Lees rustig.\n• 'Korting' = aftrek. 'Toename' = optel.",
+    explanation: "Tijd voor mix-sommen in Doorstroomtoets-stijl. **Lees rustig en onderstreep getallen + percentages**.\n\n**Stappenplan voor elke %-som**:\n1. **Wat ken ik?** Het totaal of het deel?\n2. **Wat zoek ik?** Het andere deel, of het percentage?\n3. **Welke aanpak?** 1%-truc, 10%-truc, of breuken-truc?\n4. **Schrijf op** en reken in stapjes.\n\n**Voorbeeld — sport**:\n*'Marc speelt 50 wedstrijden basketbal. Hij won 30. Welk percentage gewonnen?'*\n• 30/50 = 3/5 = 60%.\n\n**Voorbeeld — winkel**:\n*'Een bagagetas was € 60. Met 40% korting?'*\n• Snel: je betaalt 100% − 40% = **60%** van de prijs.\n• 10% van €60 = €6, dus 60% = 6 × €6 = **€36**.\n\n**Voorbeeld — combinatie**:\n*'Anna bespaart € 15 op een truitje van € 60. Welk korting-percentage?'*\n• €15 van €60 = 15/60 = 1/4 = **25% korting**.\n\n**Veel-voorkomende val**:\n• 'Welk percentage MEER?' vraagt iets anders dan 'Welk percentage IS het?'. Lees rustig.\n• 'Korting' = aftrek. 'Toename' = optel.",
     checks: [
       {
         q: "Een hoodie van **€ 80** heeft **40% korting**. Wat **betaal** je?",
@@ -384,10 +384,10 @@ const steps = [
     ],
   },
 
-  // STAP 7: Eindopdracht — Cito-mix
+  // STAP 7: Eindopdracht — Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — mix",
-    explanation: "Mix-toets in echte Cito-stijl. Verschillende sommen door elkaar — winkel, sport, school, korting, gewoon-percentage. **Lees rustig** en gebruik de aanpak uit stap 6.\n\n**Tip**: bij twijfel — vul je antwoord even in en check terug. Klopt het verhaal? Dan zit je goed.\n\nVeel succes!",
+    title: "Toets-eindopdracht — mix",
+    explanation: "Mix-toets in echte Doorstroomtoets-stijl. Verschillende sommen door elkaar — winkel, sport, school, korting, gewoon-percentage. **Lees rustig** en gebruik de aanpak uit stap 6.\n\n**Tip**: bij twijfel — vul je antwoord even in en check terug. Klopt het verhaal? Dan zit je goed.\n\nVeel succes!",
     checks: [
       {
         q: "**40% van 90** = ?",
@@ -447,11 +447,11 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const procentenPo = {
   id: "procenten-po",
-  title: "Procenten — Cito groep 5-8",
+  title: "Procenten — Doorstroomtoets groep 5-8",
   emoji: "💯",
   level: "groep5-8",
   subject: "rekenen",
-  // SLO-niveau (S4 audit-3 2026-05-08): 1F einde-basisschool. Cito-onderdeel
+  // SLO-niveau (S4 audit-3 2026-05-08): 1F einde-basisschool. Toets-onderdeel
   // verhoudingen + procenten in praktijkcontext.
   referentieNiveau: "1F",
   sloThema: "Verhoudingen — procenten",
@@ -460,7 +460,7 @@ const procentenPo = {
     { id: "breuken-po", title: "Breuken", niveau: "po-1F" },
   ],
   intro:
-    "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Cito-stijl praktijksommen. ~15 min.",
+    "Procenten voor groep 5-8 — wat % betekent, hoe je ermee rekent, korting in de winkel, hoeveel % is X van Y. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
   triggerKeywords: [
     "procent","procenten","%","korting","percentage",
     "uitverkoop","goedkoper","duurder","verhouding",

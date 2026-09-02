@@ -9,7 +9,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-2/gt-01
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc geschiedenis: zoek jaartal-anker + match periode-kenmerk. Bij begrippen-vraag → match definitie: liberalisme=vrijheid+vrije markt, socialisme=arbeiders+sociaal, populisme=sterke leider+'wij vs zij', democratie=vrije verkiezingen.",
+  theorie: "Toets-truc geschiedenis: zoek jaartal-anker + match periode-kenmerk. Bij begrippen-vraag → match definitie: liberalisme=vrijheid+vrije markt, socialisme=arbeiders+sociaal, populisme=sterke leider+'wij vs zij', democratie=vrije verkiezingen.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

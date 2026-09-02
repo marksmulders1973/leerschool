@@ -535,14 +535,14 @@ const steps = [
           stappen: [
             { titel: "Wat is marktevenwicht?", tekst: "**Marktevenwicht** = de **prijs waar vraag PRECIES gelijk is aan aanbod**. Alle producten worden verkocht, geen overschot of tekort.\n\nGrafisch: kruispunt van **vraaglijn** (omlaag-hellend) + **aanbodlijn** (omhoog-hellend). Op kruispunt: evenwichts­prijs + evenwichts­hoeveelheid." },
             { titel: "Te hoog of te laag", tekst: "**Boven evenwichts­prijs**: te duur → weinig kopers, veel aanbieders → **overschot** → prijs daalt richting evenwicht.\n\n**Onder evenwichts­prijs**: te goedkoop → veel kopers, weinig aanbieders → **tekort** → prijs stijgt richting evenwicht.\n\nMarkt zoekt automatisch evenwicht (Adam Smith's 'onzichtbare hand')." },
-            { titel: "Cito-feit: voorbeelden", tekst: "**Concertkaartjes**: bij te laag → uitverkocht in seconden + zwarte markt. Bij te hoog → lege zaal. Organisator zoekt prijs waar precies alles verkocht is.\n\n**Avondklok-fenomeen**: prijs van mondkapjes ging in 2020 van €0,50 naar €5+ door enorm gestegen vraag. Aanbod kon niet bijhouden → tekort + prijsstijging." },
+            { titel: "Toets-feit: voorbeelden", tekst: "**Concertkaartjes**: bij te laag → uitverkocht in seconden + zwarte markt. Bij te hoog → lege zaal. Organisator zoekt prijs waar precies alles verkocht is.\n\n**Avondklok-fenomeen**: prijs van mondkapjes ging in 2020 van €0,50 naar €5+ door enorm gestegen vraag. Aanbod kon niet bijhouden → tekort + prijsstijging." },
           ],
           woorden: [
             { woord: "marktevenwicht", uitleg: "Prijs waar vraag = aanbod. Geen tekort, geen overschot." },
             { woord: "overschot", uitleg: "Meer aanbod dan vraag bij die prijs." },
             { woord: "tekort", uitleg: "Meer vraag dan aanbod bij die prijs." },
           ],
-          theorie: "Cito-grafiek-lezen marktevenwicht:\n• X-as: hoeveelheid Q\n• Y-as: prijs P\n• Vraaglijn: daalt van linksboven naar rechtsonder\n• Aanbodlijn: stijgt van linksonder naar rechtsboven\n• Kruispunt = evenwicht (Pe, Qe)",
+          theorie: "Toets-grafiek-lezen marktevenwicht:\n• X-as: hoeveelheid Q\n• Y-as: prijs P\n• Vraaglijn: daalt van linksboven naar rechtsonder\n• Aanbodlijn: stijgt van linksonder naar rechtsboven\n• Kruispunt = evenwicht (Pe, Qe)",
           voorbeelden: [
             { type: "stap", tekst: "Bioscoop kaartje: te duur (€20) = lege zaal. Te goedkoop (€2) = uitverkocht 2 weken vooraf. Evenwicht ~€10 = vol maar geen wachtrij." },
           ],
@@ -559,7 +559,7 @@ const steps = [
           stappen: [
             { titel: "Wet: meer vraag = hoger prijs", tekst: "Als **vraag stijgt** maar aanbod gelijk blijft:\n• Meer kopers willen zelfde aantal producten\n• Schaarste ontstaat\n• Verkopers kunnen meer vragen\n• **Prijs stijgt**\n\nVoorbeeld: bij hete zomer → meer vraag naar airco's → prijs stijgt." },
             { titel: "Vier scenario's", tekst: "**4 marktbewegingen**:\n• **Vraag ↑, aanbod gelijk** → prijs ↑\n• **Vraag ↓, aanbod gelijk** → prijs ↓\n• **Vraag gelijk, aanbod ↑** → prijs ↓ (overschot)\n• **Vraag gelijk, aanbod ↓** → prijs ↑ (tekort)\n\nCito-truc: teken vraag-aanbod-grafiek, schuif lijn, kijk waar nieuw kruispunt is." },
-            { titel: "Cito-feit: reële voorbeelden", tekst: "**Voorbeelden uit nieuws**:\n• **Corona-mondkapjes 2020**: vraag exploded → prijs ×10\n• **Crypto Bitcoin**: vraag hoog → prijs stijgt\n• **Tweedehands gameconsole** als nieuwe uitverkoopt → prijs tweedehands stijgt\n• **Voetbalkaartjes finale**: enorme vraag → zwarte-markt prijs ×5" },
+            { titel: "Toets-feit: reële voorbeelden", tekst: "**Voorbeelden uit nieuws**:\n• **Corona-mondkapjes 2020**: vraag exploded → prijs ×10\n• **Crypto Bitcoin**: vraag hoog → prijs stijgt\n• **Tweedehands gameconsole** als nieuwe uitverkoopt → prijs tweedehands stijgt\n• **Voetbalkaartjes finale**: enorme vraag → zwarte-markt prijs ×5" },
           ],
           woorden: [
             { woord: "schaarste", uitleg: "Te weinig product voor alle mensen die het willen." },
@@ -582,7 +582,7 @@ const steps = [
           stappen: [
             { titel: "Vraag-lijn-verschuivers", tekst: "**Vraaglijn verschuift NAAR RECHTS (meer vraag)** door:\n• **Inkomen stijgt** (meer geld om uit te geven)\n• **Smaak verandert** (item wordt hip)\n• **Bevolking groeit** (meer kopers)\n• **Prijs alternatief stijgt** (mensen schakelen over)\n• **Verwachting toekomst** (prijs gaat stijgen → kopen NU)\n\nVraaglijn verschuift naar LINKS (minder vraag) bij tegenovergestelde." },
             { titel: "Aanbod-lijn-verschuivers", tekst: "**Aanbod-lijn verschuift** door productie-factoren:\n• Productie­kosten dalen (meer aanbod)\n• Technologie verbetert\n• Belasting daalt\n• Lonen werknemers dalen\n• Nieuwe aanbieders op markt\n\nBelangrijk verschil: **vraag = consument-kant, aanbod = producent-kant**. Verwar niet." },
-            { titel: "Cito-truc: oorzaak-effect", tekst: "Cito vraagt vaak: 'Wat gebeurt met prijs als X verandert?'\n1. Bepaal of het VRAAG of AANBOD raakt\n2. Verschuif juiste lijn (links of rechts)\n3. Lees nieuwe evenwicht\n4. Prijs hoger of lager?\n\nGeldt voor heel economie-Cito: macro-economisch denken." },
+            { titel: "Toets-truc: oorzaak-effect", tekst: "De toets vraagt vaak: 'Wat gebeurt met prijs als X verandert?'\n1. Bepaal of het VRAAG of AANBOD raakt\n2. Verschuif juiste lijn (links of rechts)\n3. Lees nieuwe evenwicht\n4. Prijs hoger of lager?\n\nGeldt voor heel economie-voor de toets: macro-economisch denken." },
           ],
           woorden: [
             { woord: "verschuiven", uitleg: "Lijn op grafiek beweegt — niet langs lijn." },
@@ -605,7 +605,7 @@ const steps = [
           stappen: [
             { titel: "Wat is concurrentie?", tekst: "**Concurrentie** = wedijver tussen bedrijven om klanten + winst. Bedrijven doen verschillende dingen:\n• **Lagere prijs** (Aldi/Lidl-strategie)\n• **Hogere kwaliteit** (premium-merk)\n• **Betere klantenservice**\n• **Slimmere marketing** (TikTok-reclame)\n• **Innovatie** (nieuwe producten)\n• **Locatie** (winkel op betere plek)" },
             { titel: "Marktvormen", tekst: "Verschillende marktsituaties:\n• **Volledige concurrentie**: veel bedrijven, gelijke producten (graan)\n• **Monopolistische concurrentie**: veel bedrijven, verschillende producten (kleding-merken)\n• **Oligopolie**: weinig grote bedrijven (energie, telecom)\n• **Monopolie**: 1 bedrijf (NS, vroeger)\n\nMeer concurrentie = beter voor consument (lagere prijzen, betere kwaliteit)." },
-            { titel: "Cito-feit: ACM + EU-regels", tekst: "**ACM** (Autoriteit Consument & Markt) = NL toezicht op eerlijke concurrentie. Pakt aan:\n• **Kartelvorming** (bedrijven afspreken prijzen)\n• **Misbruik machtspositie** (groot bedrijf duwt kleine weg)\n• **Misleidende reclame**\n\nVoorbeeld: 2019 supermarkten beboet voor afspraken brood-prijzen. Boete = €30+ miljoen." },
+            { titel: "Toets-feit: ACM + EU-regels", tekst: "**ACM** (Autoriteit Consument & Markt) = NL toezicht op eerlijke concurrentie. Pakt aan:\n• **Kartelvorming** (bedrijven afspreken prijzen)\n• **Misbruik machtspositie** (groot bedrijf duwt kleine weg)\n• **Misleidende reclame**\n\nVoorbeeld: 2019 supermarkten beboet voor afspraken brood-prijzen. Boete = €30+ miljoen." },
           ],
           woorden: [
             { woord: "concurrentie", uitleg: "Wedijver tussen bedrijven om klanten." },
@@ -628,20 +628,20 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is een substituut?", tekst: "**Substituut** = **alternatief product dat dezelfde behoefte vervult**. Als prijs van product A stijgt, schakelen consumenten naar substituut B.\n\nVoorbeelden:\n• Boter ↔ margarine\n• Coca-Cola ↔ Pepsi\n• Trein ↔ auto (voor reizen)\n• Koffie ↔ thee\n• iPhone ↔ Samsung Galaxy" },
-            { titel: "Substituut vs complement", tekst: "**Substituut**: vervanger. Hogere prijs A → meer vraag B (concurrenten).\n\n**Complement**: hoort bij. Bv. printer + inktcartridge. Hogere prijs A → MINDER vraag B (samen gekocht).\n\nVoorbeelden complementen:\n• Game-console + games\n• Auto + benzine\n• Smartphone + opladers\n\nBij Cito wisselen complementen + substituten regelmatig — let goed op." },
-            { titel: "Cito-feit: prijselasticiteit", tekst: "**Hoe sterker het substituut**, hoe **gevoeliger de vraag voor prijs**:\n• Sterke substituten = klanten snel weg bij prijsstijging (perfect concurrentie)\n• Geen substituut = monopolie (klanten moeten betalen)\n\nVoorbeeld: paracetamol = veel substituten → goedkoop. Insuline = geen substituut → duurder + ethisch debat over prijs (VS)." },
+            { titel: "Substituut vs complement", tekst: "**Substituut**: vervanger. Hogere prijs A → meer vraag B (concurrenten).\n\n**Complement**: hoort bij. Bv. printer + inktcartridge. Hogere prijs A → MINDER vraag B (samen gekocht).\n\nVoorbeelden complementen:\n• Game-console + games\n• Auto + benzine\n• Smartphone + opladers\n\nBij de toets wisselen complementen + substituten regelmatig — let goed op." },
+            { titel: "Toets-feit: prijselasticiteit", tekst: "**Hoe sterker het substituut**, hoe **gevoeliger de vraag voor prijs**:\n• Sterke substituten = klanten snel weg bij prijsstijging (perfect concurrentie)\n• Geen substituut = monopolie (klanten moeten betalen)\n\nVoorbeeld: paracetamol = veel substituten → goedkoop. Insuline = geen substituut → duurder + ethisch debat over prijs (VS)." },
           ],
           woorden: [
             { woord: "substituut", uitleg: "Vervanger-product dat zelfde behoefte vervult." },
             { woord: "complement", uitleg: "Product dat hoort bij ander product (samen gekocht)." },
             { woord: "monopolie", uitleg: "Enige aanbieder zonder substituut." },
           ],
-          theorie: "Cito-economie-relaties:\n• A↑ + B-vraag↑ = substituten (alternatieven)\n• A↑ + B-vraag↓ = complementen (samen kopen)\n• A↑ + B-vraag onveranderd = ongerelateerd",
+          theorie: "Toets-economie-relaties:\n• A↑ + B-vraag↑ = substituten (alternatieven)\n• A↑ + B-vraag↓ = complementen (samen kopen)\n• A↑ + B-vraag onveranderd = ongerelateerd",
           voorbeelden: [
             { type: "stap", tekst: "Boterprijs ×2 → margarine-verkoop stijgt 30% (mensen schakelen)." },
             { type: "stap", tekst: "Auto-prijs ×2 → benzine-vraag daalt (complementair — minder rijden)." },
           ],
-          basiskennis: [{ onderwerp: "Belangrijk in Cito-VMBO", uitleg: "Vraag-aanbod + substituten/complementen = examen-stof economie VMBO klas 3-4." }],
+          basiskennis: [{ onderwerp: "Belangrijk in VMBO-examen", uitleg: "Vraag-aanbod + substituten/complementen = examen-stof economie VMBO klas 3-4." }],
           niveaus: { basis: "Vervanger.", simpeler: "Substituut = alternatief product dat zelfde doel vervult (boter ↔ margarine). Hogere prijs van A → meer kopen van B.", nogSimpeler: "Alternatief" },
         },
       },

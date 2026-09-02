@@ -7,7 +7,7 @@
 const tekst1 = {
   titel: "T1 — Ook lichte gehoorschade leidt tot lagere schoolresultaten",
   body:
-    "**(1)** Uit onderzoek onder ~4.500 Rotterdamse kinderen (Generation R, Erasmus MC) blijkt dat zelfs heel licht gehoorverlies (15-20 decibel) al leidt tot één à twee punten lagere Cito-scores. Jongens hebben daarnaast vaker concentratieproblemen.\n\n**(2)** *Opzet:* twee jaar eerder kregen de 9-11-jarigen een gehoortest; één op de vijf bleek licht gehoorverlies te hebben. De onderzoekers bekeken de Cito-scores en lieten ouders vragenlijsten invullen.\n\n**(3)** *Resultaten:* ook bij heel lichte gehoorschade scoren kinderen lager. Dat matig/slecht gehoor slechter doet presteren wás al bekend — nieuw is dat zélfs heel lichte schade dat effect heeft.\n\n**(4-7)** Waaróm is niet onderzocht; vermoedelijk kost luisteren meer energie. Leraren kunnen rekening houden (kind vooraan zetten). Een vervolgtest volgt op 13-16-jarige leeftijd.",
+    "**(1)** Uit onderzoek onder ~4.500 Rotterdamse kinderen (Generation R, Erasmus MC) blijkt dat zelfs heel licht gehoorverlies (15-20 decibel) al leidt tot één à twee punten lagere Toets-scores. Jongens hebben daarnaast vaker concentratieproblemen.\n\n**(2)** *Opzet:* twee jaar eerder kregen de 9-11-jarigen een gehoortest; één op de vijf bleek licht gehoorverlies te hebben. De onderzoekers bekeken de Toets-scores en lieten ouders vragenlijsten invullen.\n\n**(3)** *Resultaten:* ook bij heel lichte gehoorschade scoren kinderen lager. Dat matig/slecht gehoor slechter doet presteren wás al bekend — nieuw is dat zélfs heel lichte schade dat effect heeft.\n\n**(4-7)** Waaróm is niet onderzocht; vermoedelijk kost luisteren meer energie. Leraren kunnen rekening houden (kind vooraan zetten). Een vervolgtest volgt op 13-16-jarige leeftijd.",
 };
 
 const tekst2 = {
@@ -35,7 +35,7 @@ const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
   theorie:
-    "Cito-truc leesvaardigheid: ZOOM IN op kop, alinea 1, slot. Een kopje vat samen waar een blok alinea's over gaat. Hoofdresultaat/hoofdgedachte = de kernuitkomst in 1 zin. Doel-typen: informeren/overtuigen/amuseren/activeren — een flyer/advertentie wil activeren (aanzetten tot doen).",
+    "Toets-truc leesvaardigheid: ZOOM IN op kop, alinea 1, slot. Een kopje vat samen waar een blok alinea's over gaat. Hoofdresultaat/hoofdgedachte = de kernuitkomst in 1 zin. Doel-typen: informeren/overtuigen/amuseren/activeren — een flyer/advertentie wil activeren (aanzetten tot doen).",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -71,7 +71,7 @@ const steps = [
         null,
         "Dekt alleen alinea 2 (de opzet); alinea 3 gaat juist over wat eruit kwam.",
       ],
-      explanation: "Alinea 2 beschrijft de opzet (gehoortest, Cito-scores, vragenlijsten), alinea 3 de uitkomsten ('Uit de resultaten bleek dat...'). Samen draait het blok vooral om wat het onderzoek heeft opgeleverd: de resultaten.",
+      explanation: "Alinea 2 beschrijft de opzet (gehoortest, Toets-scores, vragenlijsten), alinea 3 de uitkomsten ('Uit de resultaten bleek dat...'). Samen draait het blok vooral om wat het onderzoek heeft opgeleverd: de resultaten.",
       examenBron: BRON_LABEL(1),
       bronLink: BRON_LINK,
       bronTekst: tekst1,

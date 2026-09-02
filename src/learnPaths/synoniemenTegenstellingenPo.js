@@ -1,5 +1,5 @@
 // Leerpad: Synoniemen + tegenstellingen — groep 5-7 PO.
-// Cito-onderdeel woordenschat. Referentieniveau 1F.
+// Toets-onderdeel woordenschat. Referentieniveau 1F.
 // 5 stappen met uitlegPad.
 
 const COLORS = {
@@ -20,7 +20,7 @@ const chapters = [
   { letter: "B", title: "Synoniemen-paren", emoji: "🔁", from: 1, to: 1 },
   { letter: "C", title: "Wat zijn tegenstellingen?", emoji: "⚖️", from: 2, to: 2 },
   { letter: "D", title: "Welk woord past?", emoji: "🎯", from: 3, to: 3 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 function woordkaartSvg() {
@@ -48,7 +48,7 @@ const steps = [
   {
     title: "Wat is een synoniem?",
     explanation:
-      "Een **synoniem** is een woord dat **bijna hetzelfde betekent** als een ander woord.\n\n**Voorbeelden**:\n• **blij** = vrolijk = gelukkig.\n• **enorm** = heel groot = reusachtig.\n• **mooi** = prachtig = schitterend.\n• **rennen** = hard lopen = sprinten.\n• **gauw** = snel = vlug.\n\n**Waarom zijn synoniemen handig?**\n• Je tekst wordt **leuker om te lezen**. Anders herhaal je elk woord.\n• Je kunt **precieser zijn** *(een 'mooie' bloem is iets anders dan een 'prachtige' bloem)*.\n• Bij Cito moet je vaak een synoniem **herkennen** in meerkeuze-vragen.\n\n**Cito-truc — het juiste woord kiezen**:\nLees de zin met de optie erin. Past het natuurlijk? Soms zijn meerdere woorden synoniem maar past één beter in de context.\n\nBijvoorbeeld:\n*'De jongen rende ___ naar huis.'*\n• Synoniemen van 'snel': vlug, gauw, hard.\n• Maar 'hard' past hier — 'hard rennen' is gangbaar.\n\n**Pas op — niet altijd 100% hetzelfde**:\n• 'Goed' en 'lekker' zijn synoniem in *'lekker eten'* = 'goed eten'. \n• Maar *'lekker weer'* zou je niet snel 'goed weer' noemen — verschillende nuance.\n\nSynoniemen lijken op elkaar maar zijn niet identiek.",
+      "Een **synoniem** is een woord dat **bijna hetzelfde betekent** als een ander woord.\n\n**Voorbeelden**:\n• **blij** = vrolijk = gelukkig.\n• **enorm** = heel groot = reusachtig.\n• **mooi** = prachtig = schitterend.\n• **rennen** = hard lopen = sprinten.\n• **gauw** = snel = vlug.\n\n**Waarom zijn synoniemen handig?**\n• Je tekst wordt **leuker om te lezen**. Anders herhaal je elk woord.\n• Je kunt **precieser zijn** *(een 'mooie' bloem is iets anders dan een 'prachtige' bloem)*.\n• Bij de Doorstroomtoets moet je vaak een synoniem **herkennen** in meerkeuze-vragen.\n\n**Toets-truc — het juiste woord kiezen**:\nLees de zin met de optie erin. Past het natuurlijk? Soms zijn meerdere woorden synoniem maar past één beter in de context.\n\nBijvoorbeeld:\n*'De jongen rende ___ naar huis.'*\n• Synoniemen van 'snel': vlug, gauw, hard.\n• Maar 'hard' past hier — 'hard rennen' is gangbaar.\n\n**Pas op — niet altijd 100% hetzelfde**:\n• 'Goed' en 'lekker' zijn synoniem in *'lekker eten'* = 'goed eten'. \n• Maar *'lekker weer'* zou je niet snel 'goed weer' noemen — verschillende nuance.\n\nSynoniemen lijken op elkaar maar zijn niet identiek.",
     svg: woordkaartSvg(),
     checks: [
       {
@@ -60,14 +60,14 @@ const steps = [
           stappen: [
             { titel: "Synoniem = (bijna) hetzelfde", tekst: "Een **synoniem** is een ander woord dat (bijna) dezelfde betekenis heeft. Bv. blij = vrolijk = gelukkig. Drie woorden, één gevoel." },
             { titel: "Waarom 'bijna' hetzelfde?", tekst: "Synoniemen zijn niet altijd 100% identiek. *'Lekker'* en *'goed'* zijn synoniem bij **eten** ('lekker eten' = 'goed eten'), maar niet bij **weer** ('lekker weer' klinkt natuurlijker dan 'goed weer'). Nuance-verschil." },
-            { titel: "Waarom belangrijk?", tekst: "Schrijven met synoniemen voorkomt saaie herhaling. Op Cito krijg je vaak: 'welk woord betekent (bijna) hetzelfde als X?'. Dat is een synoniem-vraag." },
+            { titel: "Waarom belangrijk?", tekst: "Schrijven met synoniemen voorkomt saaie herhaling. Op de Doorstroomtoets krijg je vaak: 'welk woord betekent (bijna) hetzelfde als X?'. Dat is een synoniem-vraag." },
           ],
           woorden: [
             { woord: "synoniem", uitleg: "Ander woord met (bijna) dezelfde betekenis." },
             { woord: "antoniem", uitleg: "Tegenovergesteld woord (de tegenstelling)." },
             { woord: "homoniem", uitleg: "Woord met meerdere betekenissen — bv. 'bank'." },
           ],
-          theorie: "Cito-truc: zoek bij synoniem-vragen het woord dat in dezelfde zin hetzelfde gevoel/idee oproept als het oorspronkelijke woord.",
+          theorie: "Toets-truc: zoek bij synoniem-vragen het woord dat in dezelfde zin hetzelfde gevoel/idee oproept als het oorspronkelijke woord.",
           voorbeelden: [
             { type: "stap", tekst: "**blij = vrolijk** — beide positieve gevoelens, kunnen elkaar vervangen." },
             { type: "stap", tekst: "**blij ≠ boos** — tegenovergesteld gevoel, dus geen synoniem maar een antoniem." },
@@ -123,7 +123,7 @@ const steps = [
             { woord: "enorm", uitleg: "Heel erg groot." },
             { woord: "reusachtig", uitleg: "Zo groot als een reus = enorm." },
           ],
-          theorie: "Cito-truc: zoek bij synoniemen-vragen het woord dat **dezelfde categorie + dezelfde richting** heeft. Enorm = grootte + groot. Dus zoek ander grootte-woord dat ook 'groot' betekent → reusachtig.",
+          theorie: "Toets-truc: zoek bij synoniemen-vragen het woord dat **dezelfde categorie + dezelfde richting** heeft. Enorm = grootte + groot. Dus zoek ander grootte-woord dat ook 'groot' betekent → reusachtig.",
           voorbeelden: [
             { type: "stap", tekst: "*'Hij heeft een enorme hond.'* = *'Hij heeft een reusachtige hond.'* Beide zinnen betekenen hetzelfde." },
             { type: "stap", tekst: "*'Een kleine hond'* = tegenstelling. *'Een snelle hond'* = ander kenmerk (snelheid, niet grootte)." },
@@ -143,7 +143,7 @@ const steps = [
   {
     title: "Veel-gebruikte synoniemen-paren",
     explanation:
-      "Hier zijn **synoniem-paren** die je vaak op Cito ziet *(uit je hoofd!)*:\n\n**Gevoelens**:\n• blij = vrolijk / gelukkig\n• boos = kwaad / nijdig\n• bang = angstig\n• verdrietig = bedroefd\n• verbaasd = stomverbaasd / verrast\n\n**Grootte**:\n• groot = enorm / reusachtig\n• klein = minuscuul / piepklein\n• veel = talloos / massa's\n• weinig = schaars / beperkt\n\n**Snelheid**:\n• snel = vlug / gauw / rap\n• langzaam = traag / sloom\n\n**Eigenschappen**:\n• mooi = prachtig / schitterend / oogverblindend\n• lelijk = onaantrekkelijk\n• slim = intelligent / pienter / knap (bij denken)\n• dom = stom / onnozel\n• gemeen = vals / hatelijk\n• aardig = vriendelijk / lief\n\n**Werkwoorden**:\n• zien = aanschouwen / opmerken\n• zeggen = vertellen / spreken\n• lopen = wandelen / gaan\n• rennen = sprinten / hollen\n• eten = nuttigen / opeten / verorberen\n• maken = creëren / vervaardigen\n\n**Plekken**:\n• huis = woning / verblijf\n• school = leerinstelling / onderwijsplek\n• tuin = hof\n\n**Tijd**:\n• vandaag = heden\n• gisteren = de dag ervoor\n• morgen = de dag erna\n\n**Cito-truc** — kies de optie die het **dichtst** bij de oorspronkelijke betekenis ligt. Bij twijfel: probeer in een zin in te vullen.",
+      "Hier zijn **synoniem-paren** die je vaak op de Doorstroomtoets ziet *(uit je hoofd!)*:\n\n**Gevoelens**:\n• blij = vrolijk / gelukkig\n• boos = kwaad / nijdig\n• bang = angstig\n• verdrietig = bedroefd\n• verbaasd = stomverbaasd / verrast\n\n**Grootte**:\n• groot = enorm / reusachtig\n• klein = minuscuul / piepklein\n• veel = talloos / massa's\n• weinig = schaars / beperkt\n\n**Snelheid**:\n• snel = vlug / gauw / rap\n• langzaam = traag / sloom\n\n**Eigenschappen**:\n• mooi = prachtig / schitterend / oogverblindend\n• lelijk = onaantrekkelijk\n• slim = intelligent / pienter / knap (bij denken)\n• dom = stom / onnozel\n• gemeen = vals / hatelijk\n• aardig = vriendelijk / lief\n\n**Werkwoorden**:\n• zien = aanschouwen / opmerken\n• zeggen = vertellen / spreken\n• lopen = wandelen / gaan\n• rennen = sprinten / hollen\n• eten = nuttigen / opeten / verorberen\n• maken = creëren / vervaardigen\n\n**Plekken**:\n• huis = woning / verblijf\n• school = leerinstelling / onderwijsplek\n• tuin = hof\n\n**Tijd**:\n• vandaag = heden\n• gisteren = de dag ervoor\n• morgen = de dag erna\n\n**Toets-truc** — kies de optie die het **dichtst** bij de oorspronkelijke betekenis ligt. Bij twijfel: probeer in een zin in te vullen.",
     checks: [
       {
         q: "Synoniem van **'snel'**?",
@@ -161,7 +161,7 @@ const steps = [
             { woord: "vlug", uitleg: "Synoniem voor snel, vooral in beweging." },
             { woord: "traag", uitleg: "Antoniem (tegenstelling): lage snelheid." },
           ],
-          theorie: "Cito-truc: bij snelheids-woorden vraag jezelf — gaat het snel of langzaam? Synoniem = zelfde 'kant' (snel of langzaam).",
+          theorie: "Toets-truc: bij snelheids-woorden vraag jezelf — gaat het snel of langzaam? Synoniem = zelfde 'kant' (snel of langzaam).",
           voorbeelden: [{ type: "stap", tekst: "Snel-synoniemen sorteren op stijl: vlug (alledaags), gauw (informeel), rap (informeel), kwiek (literair). Allemaal snelheid + positief." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Snel ↔ traag is een klassiek antoniem-paar. Twee andere klassieke paren: groot↔klein, mooi↔lelijk." }],
           niveaus: {
@@ -208,7 +208,7 @@ const steps = [
             { woord: "prachtig", uitleg: "Heel erg mooi." },
             { woord: "mooi", uitleg: "Aantrekkelijk om te zien." },
           ],
-          theorie: "Cito-truc paren-vraag: lees beide woorden van elk paar. Vraag: zeggen ze hetzelfde? Ja → synoniem. Tegengesteld → antoniem.",
+          theorie: "Toets-truc paren-vraag: lees beide woorden van elk paar. Vraag: zeggen ze hetzelfde? Ja → synoniem. Tegengesteld → antoniem.",
           voorbeelden: [{ type: "stap", tekst: "Synoniem-paren: blij+vrolijk, snel+vlug, klein+miniscuul. Antoniem-paren: dag+nacht, jong+oud." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bij paren: 'kunnen ze elkaar vervangen in een zin?' Ja → synoniem. Nee, betekenis wordt omgekeerd → antoniem." }],
           niveaus: {
@@ -225,7 +225,7 @@ const steps = [
         wrongHints: [null, "Sprinten = heel snel rennen — wel synoniem.", "Hollen = oud-NL voor rennen — wel synoniem.", "Snel lopen ≈ rennen — wel synoniem."],
         uitlegPad: {
           stappen: [
-            { titel: "Let op de vraag — GEEN!", tekst: "Bij Cito staat soms het woord **GEEN** (vaak met hoofdletters) in de vraag. Dat draait de vraag om: je zoekt niet het woord dat hetzelfde betekent, maar het woord dat **anders** betekent." },
+            { titel: "Let op de vraag — GEEN!", tekst: "Bij de Doorstroomtoets staat soms het woord **GEEN** (vaak met hoofdletters) in de vraag. Dat draait de vraag om: je zoekt niet het woord dat hetzelfde betekent, maar het woord dat **anders** betekent." },
             { titel: "Wat is 'rennen'?", tekst: "**Rennen** = heel hard lopen, snel voortbewegen. Een atleet die de 100 meter doet, rent. Synoniemen: sprinten, hollen, snel lopen — allemaal snel-bewegen." },
             { titel: "Welk woord past NIET?", tekst: "**Wandelen** = rustig lopen, voor je plezier of om ergens te komen. Niet snel. Dus wandelen is GEEN synoniem van rennen — dat is het antwoord op de GEEN-vraag." },
           ],
@@ -233,7 +233,7 @@ const steps = [
             { woord: "rennen", uitleg: "Heel hard lopen, snel." },
             { woord: "wandelen", uitleg: "Rustig lopen, niet snel." },
           ],
-          theorie: "Cito-truc bij GEEN-vragen: lees de vraag 2x. Onderstreep het woord 'GEEN'. Zoek dan het ene woord dat NIET in het rijtje past. Vaak zijn 3 opties synoniemen + 1 is iets anders (de tegenstelling, of een ander concept).",
+          theorie: "Toets-truc bij GEEN-vragen: lees de vraag 2x. Onderstreep het woord 'GEEN'. Zoek dan het ene woord dat NIET in het rijtje past. Vaak zijn 3 opties synoniemen + 1 is iets anders (de tegenstelling, of een ander concept).",
           voorbeelden: [
             { type: "stap", tekst: "*'Welk woord is GEEN synoniem van blij?'* Opties: vrolijk, gelukkig, **boos**, opgewekt. Antwoord = boos (tegenstelling)." },
             { type: "stap", tekst: "*'Welk woord is GEEN synoniem van groot?'* Opties: enorm, reusachtig, **klein**, gigantisch. Antwoord = klein." },
@@ -253,7 +253,7 @@ const steps = [
   {
     title: "Tegenstellingen (antoniem)",
     explanation:
-      "Een **tegenstelling** *(of antoniem)* is een woord met de **omgekeerde** betekenis.\n\n**Voorbeelden**:\n• groot ↔ klein\n• blij ↔ verdrietig\n• snel ↔ langzaam\n• mooi ↔ lelijk\n• rijk ↔ arm\n• warm ↔ koud\n• licht ↔ donker / zwaar\n• boven ↔ onder\n• binnen ↔ buiten\n• voor ↔ achter / na\n• vroeg ↔ laat\n• jong ↔ oud\n• ja ↔ nee\n• altijd ↔ nooit\n• alles ↔ niets\n• veel ↔ weinig\n• beginnen ↔ stoppen / eindigen\n• komen ↔ gaan\n• openen ↔ sluiten\n\n**'On-' truc**:\nVeel tegenstellingen worden gemaakt door **on-** voor het woord te zetten:\n• vriendelijk ↔ **on**vriendelijk\n• zichtbaar ↔ **on**zichtbaar\n• mogelijk ↔ **on**mogelijk\n• gelukkig ↔ **on**gelukkig\n• voorzichtig ↔ **on**voorzichtig\n\n**Maar pas op** — niet altijd:\n• **on**weer = niet 'geen weer', maar specifiek storm.\n• **on**kruid = wild gras, niet 'geen kruid'.\n\n**'Niet-' is ook tegenstelling**:\n• rokers ↔ **niet**-rokers\n• zwemmers ↔ **niet**-zwemmers\n\n**Cito-truc — herken het woord 'tegenovergestelde'**:\nAls de vraag zegt *'tegenovergestelde'* of *'precies het tegenoverde'*, zoek **niet** een synoniem maar een **tegenstelling**.",
+      "Een **tegenstelling** *(of antoniem)* is een woord met de **omgekeerde** betekenis.\n\n**Voorbeelden**:\n• groot ↔ klein\n• blij ↔ verdrietig\n• snel ↔ langzaam\n• mooi ↔ lelijk\n• rijk ↔ arm\n• warm ↔ koud\n• licht ↔ donker / zwaar\n• boven ↔ onder\n• binnen ↔ buiten\n• voor ↔ achter / na\n• vroeg ↔ laat\n• jong ↔ oud\n• ja ↔ nee\n• altijd ↔ nooit\n• alles ↔ niets\n• veel ↔ weinig\n• beginnen ↔ stoppen / eindigen\n• komen ↔ gaan\n• openen ↔ sluiten\n\n**'On-' truc**:\nVeel tegenstellingen worden gemaakt door **on-** voor het woord te zetten:\n• vriendelijk ↔ **on**vriendelijk\n• zichtbaar ↔ **on**zichtbaar\n• mogelijk ↔ **on**mogelijk\n• gelukkig ↔ **on**gelukkig\n• voorzichtig ↔ **on**voorzichtig\n\n**Maar pas op** — niet altijd:\n• **on**weer = niet 'geen weer', maar specifiek storm.\n• **on**kruid = wild gras, niet 'geen kruid'.\n\n**'Niet-' is ook tegenstelling**:\n• rokers ↔ **niet**-rokers\n• zwemmers ↔ **niet**-zwemmers\n\n**Toets-truc — herken het woord 'tegenovergestelde'**:\nAls de vraag zegt *'tegenovergestelde'* of *'precies het tegenoverde'*, zoek **niet** een synoniem maar een **tegenstelling**.",
     checks: [
       {
         q: "Wat is het **tegenovergestelde** van **'groot'**?",
@@ -300,7 +300,7 @@ const steps = [
   {
     title: "Welk woord past in een zin?",
     explanation:
-      "Cito stelt vaak: *'Welk woord past het beste in deze zin?'*\n\nDe **truc**: lees de hele zin met elke optie. Welke past natuurlijk?\n\n**Voorbeeld 1**:\n*'De auto reed ___ door de bocht.'*\nOpties: snel / blauw / koud / luid.\n• Snel — past *(snelheid bij bocht)*.\n• Blauw — kleur, past niet bij 'reden door bocht'.\n• Koud — temperatuur, past niet bij bocht.\n• Luid — geluid, kan maar 'snel' past beter bij 'reden door'.\n→ **Snel** is het beste antwoord.\n\n**Voorbeeld 2**:\n*'Anna voelde zich ___ na het slechte cijfer.'*\nOpties: vrolijk / verdrietig / hongerig / klein.\n• Vrolijk past niet bij 'slecht cijfer'.\n• Verdrietig past wel.\n• Hongerig heeft niets met cijfer te maken.\n• Klein verwijst naar grootte.\n→ **Verdrietig** is het beste antwoord.\n\n**Cito-stappenplan**:\n1. Lees de hele zin *(niet alleen het stuk eromheen)*.\n2. Bedenk welk **gevoel/onderwerp** centraal staat.\n3. Lees elke optie in de zin.\n4. Welke past natuurlijk + houdt logisch verband?\n5. Streep onzinnige opties door — kies de overgebleven beste.\n\n**Pas op — meerdere kunnen 'kloppen'**:\nSoms kunnen 2 woorden technisch passen, maar 1 is **natuurlijker**. Kies degene die het meest gangbaar is in normaal Nederlands.",
+      "De toets stelt vaak: *'Welk woord past het beste in deze zin?'*\n\nDe **truc**: lees de hele zin met elke optie. Welke past natuurlijk?\n\n**Voorbeeld 1**:\n*'De auto reed ___ door de bocht.'*\nOpties: snel / blauw / koud / luid.\n• Snel — past *(snelheid bij bocht)*.\n• Blauw — kleur, past niet bij 'reden door bocht'.\n• Koud — temperatuur, past niet bij bocht.\n• Luid — geluid, kan maar 'snel' past beter bij 'reden door'.\n→ **Snel** is het beste antwoord.\n\n**Voorbeeld 2**:\n*'Anna voelde zich ___ na het slechte cijfer.'*\nOpties: vrolijk / verdrietig / hongerig / klein.\n• Vrolijk past niet bij 'slecht cijfer'.\n• Verdrietig past wel.\n• Hongerig heeft niets met cijfer te maken.\n• Klein verwijst naar grootte.\n→ **Verdrietig** is het beste antwoord.\n\n**Toets-stappenplan**:\n1. Lees de hele zin *(niet alleen het stuk eromheen)*.\n2. Bedenk welk **gevoel/onderwerp** centraal staat.\n3. Lees elke optie in de zin.\n4. Welke past natuurlijk + houdt logisch verband?\n5. Streep onzinnige opties door — kies de overgebleven beste.\n\n**Pas op — meerdere kunnen 'kloppen'**:\nSoms kunnen 2 woorden technisch passen, maar 1 is **natuurlijker**. Kies degene die het meest gangbaar is in normaal Nederlands.",
     checks: [
       {
         q: "Welk woord past hier? *'De jongen rende ___ naar huis.'*",
@@ -335,7 +335,7 @@ const steps = [
             { woord: "gangbaar", uitleg: "Wat normaal of vaak wordt gezegd in het Nederlands." },
             { woord: "bijvoeglijk naamwoord", uitleg: "Woord dat iets vertelt over een ander woord (mooi huis, oude man)." },
           ],
-          theorie: "Cito-truc 'past het beste': bedenk welke combi je het vaakst in een boek of krant zou lezen. *'Oude man'* = duizenden boeken. *'Blauwe man'* = bijna nooit. Kies de natuurlijkste, niet de meest letterlijk-kloppende.",
+          theorie: "Toets-truc 'past het beste': bedenk welke combi je het vaakst in een boek of krant zou lezen. *'Oude man'* = duizenden boeken. *'Blauwe man'* = bijna nooit. Kies de natuurlijkste, niet de meest letterlijk-kloppende.",
           voorbeelden: [
             { type: "stap", tekst: "*'De ___ kat sliep op de bank.'* Opties: dikke / boze / snelle / luide. **Dikke** past het beste — dat is een gangbaar beeld bij slapende kat." },
             { type: "stap", tekst: "*'Het was een ___ feest.'* Opties: gezellig / koud / klein / vies. **Gezellig** past het beste — typisch woord bij een feest." },
@@ -351,11 +351,11 @@ const steps = [
     ],
   },
 
-  // STAP 5: Cito-mix
+  // STAP 5: Doorstroomtoets-mix
   {
-    title: "Cito-eindopdracht — synoniem + tegenstelling mix",
+    title: "Toets-eindopdracht — synoniem + tegenstelling mix",
     explanation:
-      "Mix-toets in Cito-stijl. Door elkaar: synoniemen, tegenstellingen, woord-in-zin.\n\nVeel succes!",
+      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: synoniemen, tegenstellingen, woord-in-zin.\n\nVeel succes!",
     checks: [
       {
         q: "Synoniem van **'verdrietig'**?",

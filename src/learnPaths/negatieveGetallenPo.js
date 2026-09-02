@@ -1,5 +1,5 @@
 // Leerpad: Negatieve getallen — voor groep 5-8
-// 5 stappen. Cito-stijl praktijksommen.
+// 5 stappen. Doorstroomtoets-stijl praktijksommen.
 // Sprint A (2026-05-08).
 
 const COLORS = {
@@ -18,7 +18,7 @@ const chapters = [
   { letter: "A", title: "Wat is een negatief getal?", emoji: "🌡️", from: 0, to: 0 },
   { letter: "B", title: "Getalslijn — optellen + aftrekken", emoji: "➡️", from: 1, to: 2 },
   { letter: "C", title: "Praktijk — temperatuur en geld", emoji: "💸", from: 3, to: 3 },
-  { letter: "D", title: "Cito-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "D", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 function thermometerSvg(temp, label) {
@@ -59,7 +59,7 @@ ${Array.from({ length: range + 1 }).map((_, i) => {
 const steps = [
   {
     title: "Wat is een negatief getal?",
-    explanation: "**Negatieve getallen** zijn getallen **kleiner dan 0**. Ze zien er uit met een **min-teken**: −1, −2, −3, etc.\n\n**Echte voorbeelden**:\n• **Temperatuur**: in de winter daalt 't onder nul. −5 °C = vijf graden onder nul.\n• **Geld**: een **schuld** is negatief. Je hebt −€ 50 = je moet 50 euro betalen.\n• **Verlies**: een **kelder** is onder grondniveau. -2 verdieping = 2 onder nul.\n\n**Op de getalslijn**:\nGetallen gaan in beide richtingen vanaf nul:\n```\n← ... -5  -4  -3  -2  -1   0   +1  +2  +3  +4  +5 ...→\n```\n\n**Hoe lees je**:\n• 'Min vier' = −4.\n• 'Min twaalf' = −12.\n• 'Plus drie' = +3 *(of gewoon 3)*.\n\n**Welk getal is groter?**\n• −1 is **groter** dan −5. *(Op de getalslijn ligt −1 rechts van −5.)*\n• 0 is groter dan elke negatieve. \n• Elke positieve is groter dan elke negatieve.\n\n**Cito-tip**:\nDenk aan een thermometer. **Hoger** = warmer = groter. **Lager** = kouder = kleiner.",
+    explanation: "**Negatieve getallen** zijn getallen **kleiner dan 0**. Ze zien er uit met een **min-teken**: −1, −2, −3, etc.\n\n**Echte voorbeelden**:\n• **Temperatuur**: in de winter daalt 't onder nul. −5 °C = vijf graden onder nul.\n• **Geld**: een **schuld** is negatief. Je hebt −€ 50 = je moet 50 euro betalen.\n• **Verlies**: een **kelder** is onder grondniveau. -2 verdieping = 2 onder nul.\n\n**Op de getalslijn**:\nGetallen gaan in beide richtingen vanaf nul:\n```\n← ... -5  -4  -3  -2  -1   0   +1  +2  +3  +4  +5 ...→\n```\n\n**Hoe lees je**:\n• 'Min vier' = −4.\n• 'Min twaalf' = −12.\n• 'Plus drie' = +3 *(of gewoon 3)*.\n\n**Welk getal is groter?**\n• −1 is **groter** dan −5. *(Op de getalslijn ligt −1 rechts van −5.)*\n• 0 is groter dan elke negatieve. \n• Elke positieve is groter dan elke negatieve.\n\n**Toets-tip**:\nDenk aan een thermometer. **Hoger** = warmer = groter. **Lager** = kouder = kleiner.",
     svg: thermometerSvg(-5, "Vijf graden onder nul"),
     checks: [
       {
@@ -109,7 +109,7 @@ const steps = [
 
   {
     title: "Getalslijn — stappen tellen",
-    explanation: "Op de getalslijn kun je **lopen** *(stappen tellen)* om sommen te maken.\n\n**Optellen** = naar **rechts** lopen.\n**Aftrekken** = naar **links** lopen.\n\n**Voorbeeld 1**: 3 − 5 = ?\n• Begin op 3.\n• 5 stappen naar links: 3 → 2 → 1 → 0 → −1 → **−2**.\n• Antwoord: **−2**.\n\n**Voorbeeld 2**: −4 + 6 = ?\n• Begin op −4.\n• 6 stappen naar rechts: −4 → −3 → −2 → −1 → 0 → 1 → **2**.\n• Antwoord: **+2**.\n\n**Voorbeeld 3**: −2 − 3 = ?\n• Begin op −2.\n• 3 stappen naar links: −2 → −3 → −4 → **−5**.\n• Antwoord: **−5**.\n\n**Cito-truc — denken in 'stappen op de getalslijn'**:\nVooral handig bij sommen waar het mis gaat in je hoofd. Teken de getalslijn op kladpapier en wandel.\n\n**Sneltrucs voor optellen**:\n• Plus een positief = naar rechts.\n• Plus een negatief = naar links.\n• Min een positief = naar links.\n• Min een negatief = naar **rechts** *(min een minus = plus)*.",
+    explanation: "Op de getalslijn kun je **lopen** *(stappen tellen)* om sommen te maken.\n\n**Optellen** = naar **rechts** lopen.\n**Aftrekken** = naar **links** lopen.\n\n**Voorbeeld 1**: 3 − 5 = ?\n• Begin op 3.\n• 5 stappen naar links: 3 → 2 → 1 → 0 → −1 → **−2**.\n• Antwoord: **−2**.\n\n**Voorbeeld 2**: −4 + 6 = ?\n• Begin op −4.\n• 6 stappen naar rechts: −4 → −3 → −2 → −1 → 0 → 1 → **2**.\n• Antwoord: **+2**.\n\n**Voorbeeld 3**: −2 − 3 = ?\n• Begin op −2.\n• 3 stappen naar links: −2 → −3 → −4 → **−5**.\n• Antwoord: **−5**.\n\n**Toets-truc — denken in 'stappen op de getalslijn'**:\nVooral handig bij sommen waar het mis gaat in je hoofd. Teken de getalslijn op kladpapier en wandel.\n\n**Sneltrucs voor optellen**:\n• Plus een positief = naar rechts.\n• Plus een negatief = naar links.\n• Min een positief = naar links.\n• Min een negatief = naar **rechts** *(min een minus = plus)*.",
     svg: getalslijnSvg(-7, 7, -2),
     checks: [
       {
@@ -159,7 +159,7 @@ const steps = [
 
   {
     title: "Min een minus = plus",
-    explanation: "Een **lastige** maar belangrijke regel:\n\n**Twee min-tekens op rij worden plus**.\n\n**Voorbeeld**: 5 − (−3) = ?\n\nDe '−(−3)' betekent: je trekt een negatief getal af. Dat is hetzelfde als **er drie bij optellen**.\n\nDus: 5 − (−3) = 5 + 3 = **8**.\n\n**Waarom?**\nStel je hebt geld: € 5. Een 'schuld' van € 3 betekent dat je in totaal € 5 − € 3 = € 2 hebt. Maar als die schuld **wegvalt** *(wordt afgetrokken)*, krijg je € 3 erbij. Dus 5 − (−3) = 8.\n\n**Andere voorbeelden**:\n• −2 − (−5) = −2 + 5 = **+3**.\n• 4 + (−6) = 4 − 6 = **−2** *(plus een negatief = aftrekken)*.\n• −7 + (−3) = −7 − 3 = **−10**.\n\n**Cito-truc — telkens-tekens-regel**:\nKijk naar de **2 tekens op rij**:\n• + + = **plus**\n• + − = **min**\n• − + = **min**\n• − − = **plus**\n\nVoorbeeld: 8 − − 5 = 8 + 5 = **13** *(want −− = +)*.\n\n**Cito-vraag-vorm**:\n*'In een spel kun je punten verliezen. Sven had +12 en verliest dan −5 (dus krijgt 5 erbij). Wat is zijn nieuwe score?'*\n• Niet aftrekken want 'verliest' van negatief = krijgt erbij.\n• 12 − (−5) = 12 + 5 = **17**.",
+    explanation: "Een **lastige** maar belangrijke regel:\n\n**Twee min-tekens op rij worden plus**.\n\n**Voorbeeld**: 5 − (−3) = ?\n\nDe '−(−3)' betekent: je trekt een negatief getal af. Dat is hetzelfde als **er drie bij optellen**.\n\nDus: 5 − (−3) = 5 + 3 = **8**.\n\n**Waarom?**\nStel je hebt geld: € 5. Een 'schuld' van € 3 betekent dat je in totaal € 5 − € 3 = € 2 hebt. Maar als die schuld **wegvalt** *(wordt afgetrokken)*, krijg je € 3 erbij. Dus 5 − (−3) = 8.\n\n**Andere voorbeelden**:\n• −2 − (−5) = −2 + 5 = **+3**.\n• 4 + (−6) = 4 − 6 = **−2** *(plus een negatief = aftrekken)*.\n• −7 + (−3) = −7 − 3 = **−10**.\n\n**Toets-truc — telkens-tekens-regel**:\nKijk naar de **2 tekens op rij**:\n• + + = **plus**\n• + − = **min**\n• − + = **min**\n• − − = **plus**\n\nVoorbeeld: 8 − − 5 = 8 + 5 = **13** *(want −− = +)*.\n\n**toetsvraag-vorm**:\n*'In een spel kun je punten verliezen. Sven had +12 en verliest dan −5 (dus krijgt 5 erbij). Wat is zijn nieuwe score?'*\n• Niet aftrekken want 'verliest' van negatief = krijgt erbij.\n• 12 − (−5) = 12 + 5 = **17**.",
     checks: [
       {
         q: "**8 − (−3)** = ?",
@@ -208,7 +208,7 @@ const steps = [
 
   {
     title: "Praktijk — temperatuur en geld",
-    explanation: "Negatieve getallen zie je vooral in:\n\n**Temperatuur**:\n*'In de winter daalde de temperatuur van +3 °C overdag naar −7 °C 's nachts. Hoeveel graden was 't gedaald?'*\n\n• Verschil = +3 − (−7) = 3 + 7 = **10 graden**.\n\nOf op de thermometer: van +3 → 0 = 3 omlaag. Van 0 → −7 = 7 omlaag. Totaal **10 omlaag**.\n\n**Geld** *(schuld + saldo)*:\n*'Mark heeft saldo van € 25 op rekening. Hij betaalt € 40 boodschappen. Wat is zijn saldo nu?'*\n\n• 25 − 40 = **−€ 15** *(roodstand)*.\n\n*'Hij krijgt zijn loon van € 100. Wat is zijn saldo?'*\n• −15 + 100 = **+€ 85**.\n\n**Diepte / hoogte** *(zeespiegel)*:\nNederland ligt deels onder zeespiegel.\n• Schiphol: −4 m *(4 meter onder zeespiegel)*.\n• Mont Blanc: +4810 m *(boven zeespiegel)*.\n\n**Cito-tip — verschil van temperaturen**:\nVerschil = grotere getal − kleinere getal *(altijd positief uitkomst)*.\n• Tussen +5 en −3: verschil = 5 − (−3) = 5 + 3 = **8**.\n• Tussen +20 en −10: verschil = 20 − (−10) = 20 + 10 = **30**.\n\n**Slimme aanpak**: tel apart het 'positieve deel' (tot 0) en het 'negatieve deel' (van 0 omlaag). Dan tel je beide samen.",
+    explanation: "Negatieve getallen zie je vooral in:\n\n**Temperatuur**:\n*'In de winter daalde de temperatuur van +3 °C overdag naar −7 °C 's nachts. Hoeveel graden was 't gedaald?'*\n\n• Verschil = +3 − (−7) = 3 + 7 = **10 graden**.\n\nOf op de thermometer: van +3 → 0 = 3 omlaag. Van 0 → −7 = 7 omlaag. Totaal **10 omlaag**.\n\n**Geld** *(schuld + saldo)*:\n*'Mark heeft saldo van € 25 op rekening. Hij betaalt € 40 boodschappen. Wat is zijn saldo nu?'*\n\n• 25 − 40 = **−€ 15** *(roodstand)*.\n\n*'Hij krijgt zijn loon van € 100. Wat is zijn saldo?'*\n• −15 + 100 = **+€ 85**.\n\n**Diepte / hoogte** *(zeespiegel)*:\nNederland ligt deels onder zeespiegel.\n• Schiphol: −4 m *(4 meter onder zeespiegel)*.\n• Mont Blanc: +4810 m *(boven zeespiegel)*.\n\n**Toets-tip — verschil van temperaturen**:\nVerschil = grotere getal − kleinere getal *(altijd positief uitkomst)*.\n• Tussen +5 en −3: verschil = 5 − (−3) = 5 + 3 = **8**.\n• Tussen +20 en −10: verschil = 20 − (−10) = 20 + 10 = **30**.\n\n**Slimme aanpak**: tel apart het 'positieve deel' (tot 0) en het 'negatieve deel' (van 0 omlaag). Dan tel je beide samen.",
     checks: [
       {
         q: "Temperatuur is **+5 °C**, daalt **8 graden**. **Nieuwe temperatuur**?",
@@ -256,8 +256,8 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — negatieve getallen mix",
-    explanation: "Mix-toets in Cito-stijl met negatieve getallen — temperatuur, saldo, sommen.\n\nVeel succes!",
+    title: "Toets-eindopdracht — negatieve getallen mix",
+    explanation: "Mix-toets in Doorstroomtoets-stijl met negatieve getallen — temperatuur, saldo, sommen.\n\nVeel succes!",
     checks: [
       {
         q: "**−8 + 5** = ?",
@@ -338,7 +338,7 @@ const steps = [
           stappen: [
             { titel: "Verschil = afstand op getalslijn", tekst: "Van −5 °C naar +12 °C: tel stappen. Stappen tot 0: **5**. Stappen van 0 tot 12: **12**. Samen: 5 + 12 = **17**." },
             { titel: "Truc: hoog − laag", tekst: "Verschil = grootste min kleinste. **+12 − (−5)** = 12 + 5 = 17. Twee minnen worden plus." },
-            { titel: "Cito-instinker", tekst: "Verschil is ALTIJD positief. Hoeveel graden ertussen, ongeacht richting. Veelgemaakte fout: −7 of −17 invullen omdat de laagste temperatuur negatief is. Verschil = afstand, en afstand is altijd ≥ 0." },
+            { titel: "Toets-instinker", tekst: "Verschil is ALTIJD positief. Hoeveel graden ertussen, ongeacht richting. Veelgemaakte fout: −7 of −17 invullen omdat de laagste temperatuur negatief is. Verschil = afstand, en afstand is altijd ≥ 0." },
           ],
           woorden: [
             { woord: "verschil", uitleg: "Hoeveel ertussen zit. Altijd positief getal." },
@@ -349,7 +349,7 @@ const steps = [
             { type: "stap", tekst: "Verschil tussen +5 en −3: 5 + 3 = 8." },
             { type: "stap", tekst: "Verschil tussen −10 en −2: 10 − 2 = 8 (allebei negatief, kleinere afstand)." },
           ],
-          basiskennis: [{ onderwerp: "Weer-vraag", uitleg: "Cito veel met temperatuur: −5°C 's nachts vs +12°C overdag → verschil 17 graden." }],
+          basiskennis: [{ onderwerp: "Weer-vraag", uitleg: "De toets veel met temperatuur: −5°C 's nachts vs +12°C overdag → verschil 17 graden." }],
           niveaus: { basis: "17 °C.", simpeler: "Van −5 naar 0 = 5. Van 0 naar +12 = 12. Samen: 17 graden verschil.", nogSimpeler: "17" },
         },
       },
@@ -362,7 +362,7 @@ const steps = [
           stappen: [
             { titel: "Diepte = negatief", tekst: "Onder zeespiegel: getallen negatief. −12 m = 12 meter onder water." },
             { titel: "Stijgen = optellen", tekst: "Stijgen = richting 0 (omhoog). −12 + 8 = **−4**. Hij is nog 4 m onder de zeespiegel." },
-            { titel: "Cito-context: hoogte vs diepte", tekst: "• Boven zeespiegel: positief (+150 m berg)\n• Onder zeespiegel: negatief (−12 m duiker)\n• Zeespiegel zelf: 0 m\nStijgen = + (omhoog). Dalen = − (omlaag)." },
+            { titel: "Toets-context: hoogte vs diepte", tekst: "• Boven zeespiegel: positief (+150 m berg)\n• Onder zeespiegel: negatief (−12 m duiker)\n• Zeespiegel zelf: 0 m\nStijgen = + (omhoog). Dalen = − (omlaag)." },
           ],
           woorden: [
             { woord: "zeespiegel", uitleg: "Niveau van de zee = 0 m. Boven = +, onder = −." },
@@ -386,7 +386,7 @@ const steps = [
           stappen: [
             { titel: "Negatieven: groter cijfer = kleiner getal", tekst: "Bij negatieve getallen is het tegenovergesteld dan bij positieven. **−9 < −3** (omdat −9 verder van 0 ligt, dus kleiner)." },
             { titel: "Volgorde op getalslijn", tekst: "Links naar rechts: kleinste naar grootste.\n←  −9    −3    0    +4  →\nDus de juiste volgorde: **−9, −3, 0, +4**." },
-            { titel: "Cito-instinker", tekst: "Veelgemaakte fout: −9 plaatsen NA −3 omdat '9 > 3'. Bij negatieven werkt het andersom — '−9 ligt verder onder nul dan −3'." },
+            { titel: "Toets-instinker", tekst: "Veelgemaakte fout: −9 plaatsen NA −3 omdat '9 > 3'. Bij negatieven werkt het andersom — '−9 ligt verder onder nul dan −3'." },
           ],
           woorden: [
             { woord: "klein naar groot", uitleg: "Van links naar rechts op getalslijn." },
@@ -410,7 +410,7 @@ const steps = [
           stappen: [
             { titel: "Min × plus = min", tekst: "Regel: bij vermenigvuldigen tellen we de minnen.\n• min × plus → **min**\n• plus × min → **min**\n• min × min → **plus**\n• plus × plus → **plus**\nHier: (−5) × 3 → één min → **negatief antwoord**." },
             { titel: "Reken het getal", tekst: "5 × 3 = 15. Met minteken (één minus): **−15**." },
-            { titel: "Cito-truc: tel de minnen", tekst: "Vermenigvuldig de getallen normaal. Tel daarna hoeveel minnen er totaal staan. **Oneven** aantal minnen → eindantwoord min. **Even** aantal minnen → plus.\n• (−2) × (−3) = 6 (twee min = even = plus)\n• (−2) × 3 = −6 (een min = oneven = min)" },
+            { titel: "Toets-truc: tel de minnen", tekst: "Vermenigvuldig de getallen normaal. Tel daarna hoeveel minnen er totaal staan. **Oneven** aantal minnen → eindantwoord min. **Even** aantal minnen → plus.\n• (−2) × (−3) = 6 (twee min = even = plus)\n• (−2) × 3 = −6 (een min = oneven = min)" },
           ],
           woorden: [
             { woord: "vermenigvuldigen met negatief", uitleg: "Reken getal normaal, kijk minnen-aantal voor teken." },
@@ -422,7 +422,7 @@ const steps = [
             { type: "stap", tekst: "(−2) × (−7) = +14 (2 min = even = +)." },
             { type: "stap", tekst: "(−1) × (−1) × (−1) = −1 (3 min = oneven = −)." },
           ],
-          basiskennis: [{ onderwerp: "Examen-stof", uitleg: "Dit is brugklas-VO-stof, maar Cito-eindtoets test het ook." }],
+          basiskennis: [{ onderwerp: "Examen-stof", uitleg: "Dit is brugklas-VO-stof, maar Doorstroomtoets test het ook." }],
           niveaus: { basis: "−15.", simpeler: "Min × plus = min. 5 × 3 = 15. Met minteken: −15.", nogSimpeler: "−15" },
         },
       },
@@ -453,7 +453,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const negatieveGetallenPo = {
   id: "negatieve-getallen-po",
-  title: "Negatieve getallen — Cito groep 5-8",
+  title: "Negatieve getallen — Doorstroomtoets groep 5-8",
   emoji: "🌡️",
   level: "groep5-8",
   subject: "rekenen",

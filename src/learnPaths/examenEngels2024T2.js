@@ -90,7 +90,7 @@ const steps = [
         leerpadLink: { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid" },
         voorkennisKeten: [
           { id: "woordenschat-engels-po", title: "Woordenschat Engels", niveau: "po-1F", why: "begrijpen 'workforce', 'shrinking', 'ageing population', 'civil servants'" },
-          { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "Cito-strategie 'waarom-vraag': zoek causale zin met 'because' / 'in order to' / 'hopes that' — kern van deze vraag" },
+          { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "Toets-strategie 'waarom-vraag': zoek causale zin met 'because' / 'in order to' / 'hopes that' — kern van deze vraag" },
           { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis", niveau: "VMBO-GT eindexamen", why: "vergrijzing-context: Japan + NL beide vergrijzen — link naar verzorgingsstaat-discussie" },
         ],
         uitlegPad: {
@@ -105,7 +105,7 @@ const steps = [
             { woord: "ageing population", uitleg: "Vergrijzende bevolking — meer ouderen." },
             { woord: "address a problem", uitleg: "Een probleem aanpakken / oplossen." },
           ],
-          theorie: "Cito-truc bij waarom-vragen Engels: zoek in de tekst woorden als **hopes that / because / in order to / so that / to address**. Daar staat de oorzaak/het doel. Dan parafraseer naar de Nederlandse opties.",
+          theorie: "Toets-truc bij waarom-vragen Engels: zoek in de tekst woorden als **hopes that / because / in order to / so that / to address**. Daar staat de oorzaak/het doel. Dan parafraseer naar de Nederlandse opties.",
           voorbeelden: [
             { type: "stap", tekst: "Sleutel-zin alinea 3 → *'address the problem of shrinking population'* → personeelstekort door vergrijzing → C." },
             { type: "feit", tekst: "Japan heeft een van de oudste bevolkingen ter wereld: 29% is ouder dan 65 (NL: 20%, VS: 17%)." },
@@ -164,7 +164,7 @@ const steps = [
             { woord: "legacy", uitleg: "Erfenis, blijvende invloed." },
             { woord: "monarch", uitleg: "Vorst, koning(in)." },
           ],
-          theorie: "Cito-truc bij 'why' / 'reason'-vragen: zoek in de tekst de zinnen met **to + werkwoord** (= doel) of **because / since / as**. Mattel's motief is letterlijk uitgesproken in alinea 3.",
+          theorie: "Toets-truc bij 'why' / 'reason'-vragen: zoek in de tekst de zinnen met **to + werkwoord** (= doel) of **because / since / as**. Mattel's motief is letterlijk uitgesproken in alinea 3.",
           voorbeelden: [
             { type: "stap", tekst: "Andere Tribute Collection-Barbies: Ella Fitzgerald (jazz), Helen Keller (activiste), Maya Angelou (dichteres) — allemaal 'visionary individuals'. Bevestigt het patroon: eerbetoon-collectie." },
           ],
@@ -221,7 +221,7 @@ const steps = [
             { woord: "correspondence", uitleg: "Briefwisseling." },
             { woord: "classified", uitleg: "Geheim, vertrouwelijk." },
           ],
-          theorie: "Cito-truc subtitel-keuze: kijk welke optie ALLE belangrijke elementen van de tekst dekt. Niet alleen één alinea. Eliminate opties die maar over één aspect gaan (alleen leeftijd, alleen marine) of die feitelijk fout zijn.",
+          theorie: "Toets-truc subtitel-keuze: kijk welke optie ALLE belangrijke elementen van de tekst dekt. Niet alleen één alinea. Eliminate opties die maar over één aspect gaan (alleen leeftijd, alleen marine) of die feitelijk fout zijn.",
           voorbeelden: [
             { type: "stap", tekst: "Wartime brieven aan 'darling Iris' = liefdesbrief = alledaags (niet militair geheim). Tegelijk: 1941 WO2 = historisch belangrijke tijd." },
           ],
@@ -279,7 +279,7 @@ const steps = [
             { woord: "flora and fauna", uitleg: "Planten en dieren — natuur." },
             { woord: "analyse", uitleg: "Onderzoeken, ontleden (neutraal)." },
           ],
-          theorie: "Cito-truc 'best describes'-vraag: let op de **toon-werkwoorden** in de opties. 'Celebrates' = positief vieren. 'Analyses' = neutraal onderzoeken. 'Praises' = positief prijzen. 'Questions' = twijfelen. Match toon van tekst met toon van optie.",
+          theorie: "Toets-truc 'best describes'-vraag: let op de **toon-werkwoorden** in de opties. 'Celebrates' = positief vieren. 'Analyses' = neutraal onderzoeken. 'Praises' = positief prijzen. 'Questions' = twijfelen. Match toon van tekst met toon van optie.",
           voorbeelden: [
             { type: "stap", tekst: "Sleutel-woorden tekst: 'spectacular', 'sheer beauty', 'beautiful movie locations'. Allemaal positief-vierend → 'celebrates'" },
           ],
@@ -335,7 +335,7 @@ const steps = [
             { woord: "misfortune", uitleg: "Pech / tegenslag." },
             { woord: "artifact", uitleg: "Voorwerp uit het verleden — archeologisch object." },
           ],
-          theorie: "Cito-truc 'becomes clear about X'-vragen: zoek alinea waar X expliciet spreekt of een actie doet. Dan extract de essentie. Niet wat de schrijver of een ander zegt — wat zegt X zelf.",
+          theorie: "Toets-truc 'becomes clear about X'-vragen: zoek alinea waar X expliciet spreekt of een actie doet. Dan extract de essentie. Niet wat de schrijver of een ander zegt — wat zegt X zelf.",
           voorbeelden: [
             { type: "stap", tekst: "Nicole's letter: 'I took a piece of history captured in a time with so much negative energy attached to it' — zij denkt dat de negatieve energie haar tegenslag bracht." },
             { type: "feit", tekst: "Vulkaan Vesuvius (79 n.Chr.) doodde 16.000 mensen in Pompeii en Herculaneum. 'Curse of Pompeii' is een populaire mythe — toeristen sturen sinds 1900 stiekem gestolen stenen terug omdat ze pech denken te hebben." },
@@ -378,7 +378,7 @@ const steps = [
         leerpadLink: { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid" },
         voorkennisKeten: [
           { id: "woordenschat-engels-po", title: "Woordenschat Engels", niveau: "po-1F", why: "begrijpen 'playful', 'outraged', 'enthusiastic', 'rude' — toon-werkwoorden onderscheiden" },
-          { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "Cito-truc toon-vraag: ironische opmerking herkennen + onderscheiden van boze / verontwaardigde tonen" },
+          { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "Toets-truc toon-vraag: ironische opmerking herkennen + onderscheiden van boze / verontwaardigde tonen" },
         ],
         uitlegPad: {
           stappen: [
@@ -393,7 +393,7 @@ const steps = [
             { woord: "rude", uitleg: "Onbeschoft, beledigend." },
             { woord: "irony", uitleg: "Ironie — het tegenovergestelde zeggen van wat je bedoelt." },
           ],
-          theorie: "Cito-truc toon-vraag: lees de zin hardop. Klinkt het serieus, woedend, vrolijk of speels? Een tegenstrijdige uitspraak ('good news for no-one') = vrijwel altijd ironie/playful. Schrijver maakt grap, niet kwaad of enthousiast.",
+          theorie: "Toets-truc toon-vraag: lees de zin hardop. Klinkt het serieus, woedend, vrolijk of speels? Een tegenstrijdige uitspraak ('good news for no-one') = vrijwel altijd ironie/playful. Schrijver maakt grap, niet kwaad of enthousiast.",
           voorbeelden: [
             { type: "stap", tekst: "Andere playful-ironie voorbeelden: 'Just what we needed!' (sarcastisch over slecht nieuws). 'Brilliant.' (na ramp). 'Perfect timing.' (na storing)." },
             { type: "feit", tekst: "Britse journalistiek gebruikt veel deze toon — Guardian / Independent typische voorbeelden. Helpt zware onderwerpen toegankelijk maken." },

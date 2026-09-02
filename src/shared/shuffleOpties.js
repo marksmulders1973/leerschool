@@ -3,7 +3,7 @@
 // Waarom: in de leerpad-data staat het juiste antwoord vrijwel altijd op
 // index 0 (auteurs-conventie: wrongHints beginnen met null). In een toets
 // zou "altijd A klikken" dan bijna 100% scoren. Daarom schudden we bij het
-// bouwen van toets-flows (proef-toets, examen-mix, Cito-mix) per vraag.
+// bouwen van toets-flows (proef-toets, examen-mix, Doorstroomtoets-mix) per vraag.
 //
 // Veiligheden:
 // - Opties met vaste positie ("geen van beide", "allebei", "A en B", ...)

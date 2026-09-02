@@ -409,11 +409,11 @@ export default function App() {
   const [learnInitialSearch, setLearnInitialSearch] = useState("");
   const [activeCurriculumId, setActiveCurriculumId] = useState(null);
   // Mark UX-keuze (2026-05-08): vak-tegels op StudentHome krijgen 3 acties
-  // (Leren / Oefenen / Cito oefenen) voor Cito-relevante vakken; volgorde
+  // (Leren / Oefenen / Cito oefenen) voor Toets-relevante vakken; volgorde
   // afhankelijk van entryContext zodat de actie waarmee je binnen kwam
   // bovenaan komt. "Cirkel rond"-UX.
   const [entryContext, setEntryContext] = useState(null); // null | "leren" | "oefenen" | "cito"
-  // Vak-filter voor de Cito-oefen-toets (wanneer leerling klikt op "Cito
+  // Vak-filter voor de Toets-oefen-toets (wanneer leerling klikt op "Cito
   // oefenen" op een vak-tegel). Pijler-id zoals "rekenen"/"taal".
   const [citoToetsSubject, setCitoToetsSubject] = useState(null);
   const [citoToetsSubjectLabel, setCitoToetsSubjectLabel] = useState(null);
@@ -1088,7 +1088,7 @@ export default function App() {
     } catch {}
     // quiz_id op alle quiz-events (dagrapport-agent 7 aug): zonder dit is de
     // funnel start→afronden niet per poging te volgen — de "10% completion"
-    // bleek 25× een herstartte 50-vragen-Cito-simulatie in één sessie.
+    // bleek 25× een herstartte 50-vragen-Toets-simulatie in één sessie.
     track("quiz_started", { quiz_id: quiz.id, subject: quiz.subject, level: quiz.level, mode, questions_count: questions.length, has_topic: !!(quiz.topic), has_textbook: !!(quiz.textbook?.bookName) });
     setGameState({ quiz, mode, questions, currentQ: 0, score: 0, answers: [], timePerQuestion: quiz.timePerQuestion != null ? quiz.timePerQuestion : 20, startedAt: Date.now() });
     setPage("play");
@@ -1269,7 +1269,7 @@ export default function App() {
     setGameState(null);
     // NIET setCurrentQuiz(null) hier (Fable-review 2 sep 2026): ResultsPage
     // bouwt "Nog een keer", "5 vragen erbij", "Volgende tafel", "Terug" en
-    // het Cito-vervolgblok op currentQuiz. Sinds 23 mrt werd hij hier gewist,
+    // het Toets-vervolgblok op currentQuiz. Sinds 23 mrt werd hij hier gewist,
     // waardoor al die knoppen naar student-home vielen. Een nieuwe quiz zet
     // hem sowieso opnieuw.
     setPage("results");
@@ -1646,7 +1646,7 @@ export default function App() {
         />
       )}
       {page === "obliteratorPlay" && (
-        // S1: niet-ingelogd + flag aan → game verbergen voor Cito-ouder-ICP.
+        // S1: niet-ingelogd + flag aan → game verbergen voor Toets-ouder-ICP.
         // Deeplink-bezoekers (via ?play=obliterator) komen via 'obliteratorDirect'
         // route binnen, niet 'obliteratorPlay'. Guest die direct naar
         // /obliterator gaat → redirect home met login-suggestie.
@@ -2116,7 +2116,7 @@ export default function App() {
               timePerQuestion: config.timePerQuestion,
               preGeneratedQuestions: shuffled.slice(0, config.questionCount),
               topic: config.topic,
-              title: `Cito — ${label}`,
+              title: `Doorstroomtoets — ${label}`,
             };
             setCurrentQuiz(quiz);
             startGame(quiz, "self");

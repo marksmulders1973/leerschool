@@ -1,7 +1,7 @@
 // Leerpad: Europese Unie (groep 7-8 basisschool)
 // 6 stappen × 3 checks = 18 vragen. Sluit aan bij maatschappij-examenstof
 // (Commissie/Raad/Parlement) en wereldoriëntatie Doorstroomtoets.
-// Stijl: kort, Cito-achtig, NL-context (buurlanden + euro).
+// Stijl: kort, Toets-achtig, NL-context (buurlanden + euro).
 
 const chapters = [
   { letter: "A", title: "Wat is de EU?", emoji: "🇪🇺", from: 0, to: 1 },
@@ -12,7 +12,7 @@ const chapters = [
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc EU: onthouden 27 lidstaten, 21 euro-landen, 12 sterren op vlag. Instellingen: Commissie initieert, Parlement controleert, Raad besluit.",
+  theorie: "Toets-truc EU: onthouden 27 lidstaten, 21 euro-landen, 12 sterren op vlag. Instellingen: Commissie initieert, Parlement controleert, Raad besluit.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

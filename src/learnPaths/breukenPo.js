@@ -1,5 +1,5 @@
 // Leerpad: Breuken — voor groep 5-8 (PO-versie)
-// 7 stappen in 5 hoofdstukken. Cito-stijl praktijksommen.
+// 7 stappen in 5 hoofdstukken. Doorstroomtoets-stijl praktijksommen.
 // Sprint-5+ S4 (2026-05-08).
 
 const COLORS = {
@@ -20,7 +20,7 @@ const chapters = [
   { letter: "B", title: "Vereenvoudigen + gelijke breuken", emoji: "🟰", from: 2, to: 2 },
   { letter: "C", title: "Optellen en aftrekken", emoji: "➕", from: 3, to: 4 },
   { letter: "D", title: "Vermenigvuldigen + praktijk", emoji: "🛒", from: 5, to: 5 },
-  { letter: "E", title: "Cito-eindopdracht", emoji: "🏆", from: 6, to: 6 },
+  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 6, to: 6 },
 ];
 
 function pizzaSvg(teller, noemer, kleur, label) {
@@ -47,7 +47,7 @@ ${stukken.join("")}
 const steps = [
   {
     title: "Wat is een breuk?",
-    explanation: "Een **breuk** is een **deel van iets**. Stel je hebt een pizza die je in 4 gelijke stukken snijdt. Eet je 1 stuk? Dan eet je **1/4** van de pizza. Eet je 3 stukken? Dan eet je **3/4**.\n\n**Notatie**: een breuk heeft 2 getallen:\n• **Bovenkant** = **teller** *(hoeveel stukken neem je?)*\n• **Onderkant** = **noemer** *(in hoeveel gelijke stukken is het verdeeld?)*\n\nDus **3/4**: noemer = 4 stukken totaal, teller = 3 stukken die je hebt.\n\n**Sleutel-breuken om te kennen** (basis voor alle Cito-vragen):\n• 1/2 = de helft\n• 1/3 = een derde\n• 1/4 = een kwart (een vierde)\n• 1/5 = een vijfde\n• 1/10 = een tiende\n\n**Breuk versus heel getal**:\n• 4/4 = 4 van 4 stukken = **alles** = 1.\n• 6/3 = 6 van 3 stukken = **2 hele dingen**.\n• 5/2 = 5 van 2 = **2½** (twee-en-een-half).\n\n**Echte breuken**: teller < noemer (kleiner dan 1 geheel).\n**Onechte breuken**: teller ≥ noemer (1 geheel of meer).\n\n**Praktijk**:\n• ½ uur = 30 minuten\n• ¼ pak meel = 250 g uit 1 kg pak\n• ⅔ van de klas = 20 leerlingen uit 30",
+    explanation: "Een **breuk** is een **deel van iets**. Stel je hebt een pizza die je in 4 gelijke stukken snijdt. Eet je 1 stuk? Dan eet je **1/4** van de pizza. Eet je 3 stukken? Dan eet je **3/4**.\n\n**Notatie**: een breuk heeft 2 getallen:\n• **Bovenkant** = **teller** *(hoeveel stukken neem je?)*\n• **Onderkant** = **noemer** *(in hoeveel gelijke stukken is het verdeeld?)*\n\nDus **3/4**: noemer = 4 stukken totaal, teller = 3 stukken die je hebt.\n\n**Sleutel-breuken om te kennen** (basis voor alle toetsvragen):\n• 1/2 = de helft\n• 1/3 = een derde\n• 1/4 = een kwart (een vierde)\n• 1/5 = een vijfde\n• 1/10 = een tiende\n\n**Breuk versus heel getal**:\n• 4/4 = 4 van 4 stukken = **alles** = 1.\n• 6/3 = 6 van 3 stukken = **2 hele dingen**.\n• 5/2 = 5 van 2 = **2½** (twee-en-een-half).\n\n**Echte breuken**: teller < noemer (kleiner dan 1 geheel).\n**Onechte breuken**: teller ≥ noemer (1 geheel of meer).\n\n**Praktijk**:\n• ½ uur = 30 minuten\n• ¼ pak meel = 250 g uit 1 kg pak\n• ⅔ van de klas = 20 leerlingen uit 30",
     svg: pizzaSvg(3, 4, COLORS.pizza1, "drie kwart pizza"),
     checks: [
       {
@@ -97,7 +97,7 @@ const steps = [
 
   {
     title: "Soorten breuken — woorden",
-    explanation: "Voor Cito moet je breuken in woorden kunnen lezen.\n\n**Standaard-namen**:\n• 1/2 = **half**\n• 1/3 = **derde**\n• 1/4 = **kwart** *(of 'vierde')*\n• 1/5 = **vijfde**\n• 1/10 = **tiende**\n• 1/100 = **honderdste**\n\n**Combinaties**:\n• 2/3 = **twee-derde**\n• 3/4 = **drie-kwart**\n• 5/8 = **vijf-achtste**\n\n**Hele getallen + breuk** *(gemengde breuk)*:\n• 1½ = **één-en-een-half**\n• 2¼ = **twee-en-een-kwart**\n• 3⅓ = **drie-en-een-derde**\n\n**Cito-truc — woorden vertalen naar getallen**:\n*'Drie kwart van de leerlingen'* = **3/4 van het totaal**.\n*'Twee derde van de pizza'* = **2/3 van de pizza**.\n*'Een halve liter'* = **0,5 L** = **1/2 L**.\n\n**Praktijk-equivalenten**:\n• 1/2 uur = 30 minuten\n• 1/4 uur = 15 minuten\n• 3/4 uur = 45 minuten\n• 1/2 kg = 500 g\n• 1/4 kg = 250 g\n• 1/2 L = 500 mL\n• 1/4 L = 250 mL",
+    explanation: "Voor de Doorstroomtoets moet je breuken in woorden kunnen lezen.\n\n**Standaard-namen**:\n• 1/2 = **half**\n• 1/3 = **derde**\n• 1/4 = **kwart** *(of 'vierde')*\n• 1/5 = **vijfde**\n• 1/10 = **tiende**\n• 1/100 = **honderdste**\n\n**Combinaties**:\n• 2/3 = **twee-derde**\n• 3/4 = **drie-kwart**\n• 5/8 = **vijf-achtste**\n\n**Hele getallen + breuk** *(gemengde breuk)*:\n• 1½ = **één-en-een-half**\n• 2¼ = **twee-en-een-kwart**\n• 3⅓ = **drie-en-een-derde**\n\n**Toets-truc — woorden vertalen naar getallen**:\n*'Drie kwart van de leerlingen'* = **3/4 van het totaal**.\n*'Twee derde van de pizza'* = **2/3 van de pizza**.\n*'Een halve liter'* = **0,5 L** = **1/2 L**.\n\n**Praktijk-equivalenten**:\n• 1/2 uur = 30 minuten\n• 1/4 uur = 15 minuten\n• 3/4 uur = 45 minuten\n• 1/2 kg = 500 g\n• 1/4 kg = 250 g\n• 1/2 L = 500 mL\n• 1/4 L = 250 mL",
     checks: [
       {
         q: "**Een halve liter** = ?",
@@ -146,7 +146,7 @@ const steps = [
 
   {
     title: "Vereenvoudigen + gelijke breuken",
-    explanation: "Veel breuken zien er **anders uit** maar zijn **gelijk**. Net als verhoudingen kun je breuken **vereenvoudigen**.\n\n**Voorbeelden van gelijke breuken**:\n• 1/2 = 2/4 = 3/6 = 4/8 = 50/100\n• 1/3 = 2/6 = 3/9 = 4/12\n• 2/4 = 1/2 *(door 2 vereenvoudigd)*\n• 6/8 = 3/4 *(door 2 vereenvoudigd)*\n• 4/12 = 1/3 *(door 4 vereenvoudigd)*\n\n**Truc**: deel teller én noemer door hetzelfde getal.\n\n• **6/9** → ÷ 3 → **2/3**\n• **8/12** → ÷ 4 → **2/3**\n• **15/20** → ÷ 5 → **3/4**\n• **10/100** → ÷ 10 → **1/10**\n\n**Cito-tip**:\nKijk altijd naar de **grootste gemeenschappelijke deler**. Dat scheelt stappen.\n\n**Voorbeeld**: 12/18.\n• Beide deelbaar door 2 → 6/9.\n• Beide deelbaar door 3 → 2/3. *(eindresultaat)*\n\nOf in één stap: beide deelbaar door 6 → 2/3.\n\n**Veel-voorkomende fout**:\nAlleen teller of alleen noemer delen. Dan klopt de breuk niet meer. Doe altijd **beide**.\n\n**Pittige Cito-vraag**: *'Welke breuk is gelijk aan 4/6?'* Antwoorden zoals 2/3, 8/12, 6/9 zijn allemaal correct — maar Cito vraagt meestal de **vereenvoudigde** vorm.",
+    explanation: "Veel breuken zien er **anders uit** maar zijn **gelijk**. Net als verhoudingen kun je breuken **vereenvoudigen**.\n\n**Voorbeelden van gelijke breuken**:\n• 1/2 = 2/4 = 3/6 = 4/8 = 50/100\n• 1/3 = 2/6 = 3/9 = 4/12\n• 2/4 = 1/2 *(door 2 vereenvoudigd)*\n• 6/8 = 3/4 *(door 2 vereenvoudigd)*\n• 4/12 = 1/3 *(door 4 vereenvoudigd)*\n\n**Truc**: deel teller én noemer door hetzelfde getal.\n\n• **6/9** → ÷ 3 → **2/3**\n• **8/12** → ÷ 4 → **2/3**\n• **15/20** → ÷ 5 → **3/4**\n• **10/100** → ÷ 10 → **1/10**\n\n**Toets-tip**:\nKijk altijd naar de **grootste gemeenschappelijke deler**. Dat scheelt stappen.\n\n**Voorbeeld**: 12/18.\n• Beide deelbaar door 2 → 6/9.\n• Beide deelbaar door 3 → 2/3. *(eindresultaat)*\n\nOf in één stap: beide deelbaar door 6 → 2/3.\n\n**Veel-voorkomende fout**:\nAlleen teller of alleen noemer delen. Dan klopt de breuk niet meer. Doe altijd **beide**.\n\n**Pittige toetsvraag**: *'Welke breuk is gelijk aan 4/6?'* Antwoorden zoals 2/3, 8/12, 6/9 zijn allemaal correct — maar De toets vraagt meestal de **vereenvoudigde** vorm.",
     checks: [
       {
         q: "**12/16** vereenvoudigd?",
@@ -195,7 +195,7 @@ const steps = [
 
   {
     title: "Optellen en aftrekken — gelijke noemer",
-    explanation: "Bij optellen en aftrekken van breuken moet de **noemer hetzelfde** zijn.\n\n**Met gelijke noemer — eenvoudig**:\n• Alleen **tellers** optellen of aftrekken.\n• Noemer **blijft hetzelfde**.\n\nVoorbeelden:\n• **1/4 + 2/4 = 3/4**\n• **3/8 + 2/8 = 5/8**\n• **5/6 − 2/6 = 3/6 = 1/2**\n• **7/10 − 3/10 = 4/10 = 2/5** *(vereenvoudigd)*\n\n**Met ongelijke noemer — eerst gelijk maken**:\n*'1/2 + 1/4'*\n• Maak gelijke noemer: 1/2 = 2/4.\n• Nu: 2/4 + 1/4 = **3/4**.\n\n*'1/3 + 1/2'*\n• Gemeenschappelijke noemer 6: 1/3 = 2/6, 1/2 = 3/6.\n• 2/6 + 3/6 = **5/6**.\n\n**Cito-truc — gemeenschappelijke noemer**:\n• 1/2 + 1/4 → noemer 4 *(want 4 past op zowel 2 als 4)*.\n• 1/3 + 1/4 → noemer 12 *(3 × 4)*.\n• 1/2 + 1/5 → noemer 10 *(2 × 5)*.\n\n**Stappenplan**:\n1. Zijn de noemers gelijk? Zo ja → tellers optellen.\n2. Zo nee → eerst gelijknamig maken.\n3. Tellers samenvoegen.\n4. Vereenvoudig waar mogelijk.\n\n**Veel-voorkomende fout**:\nDe noemers ook optellen. **Dat mag NIET** — alleen tellers veranderen.",
+    explanation: "Bij optellen en aftrekken van breuken moet de **noemer hetzelfde** zijn.\n\n**Met gelijke noemer — eenvoudig**:\n• Alleen **tellers** optellen of aftrekken.\n• Noemer **blijft hetzelfde**.\n\nVoorbeelden:\n• **1/4 + 2/4 = 3/4**\n• **3/8 + 2/8 = 5/8**\n• **5/6 − 2/6 = 3/6 = 1/2**\n• **7/10 − 3/10 = 4/10 = 2/5** *(vereenvoudigd)*\n\n**Met ongelijke noemer — eerst gelijk maken**:\n*'1/2 + 1/4'*\n• Maak gelijke noemer: 1/2 = 2/4.\n• Nu: 2/4 + 1/4 = **3/4**.\n\n*'1/3 + 1/2'*\n• Gemeenschappelijke noemer 6: 1/3 = 2/6, 1/2 = 3/6.\n• 2/6 + 3/6 = **5/6**.\n\n**Toets-truc — gemeenschappelijke noemer**:\n• 1/2 + 1/4 → noemer 4 *(want 4 past op zowel 2 als 4)*.\n• 1/3 + 1/4 → noemer 12 *(3 × 4)*.\n• 1/2 + 1/5 → noemer 10 *(2 × 5)*.\n\n**Stappenplan**:\n1. Zijn de noemers gelijk? Zo ja → tellers optellen.\n2. Zo nee → eerst gelijknamig maken.\n3. Tellers samenvoegen.\n4. Vereenvoudig waar mogelijk.\n\n**Veel-voorkomende fout**:\nDe noemers ook optellen. **Dat mag NIET** — alleen tellers veranderen.",
     checks: [
       {
         q: "**1/4 + 2/4** = ?",
@@ -235,7 +235,7 @@ const steps = [
           woorden: [{ woord: "vereenvoudigen na", uitleg: "Antwoord altijd zo simpel mogelijk maken." }],
           theorie: "Aftrekken bij gelijke noemer: tellers aftrekken, dan vereenvoudigen.",
           voorbeelden: [{ type: "stap", tekst: "5/6 - 2/6 = 3/6 = 1/2 (beide ÷3)." }],
-          basiskennis: [{ onderwerp: "Cito wil simpelste vorm", uitleg: "Antwoord 3/6 is goed, maar Cito vraagt vereenvoudigde: 1/2." }],
+          basiskennis: [{ onderwerp: "De toets wil simpelste vorm", uitleg: "Antwoord 3/6 is goed, maar De toets vraagt vereenvoudigde: 1/2." }],
           niveaus: { basis: "1/2.", simpeler: "5/6 - 2/6 = 3/6. Vereenvoudig: 3 en 6 beide ÷3 → 1/2.", nogSimpeler: "1/2" },
         },
       },
@@ -244,7 +244,7 @@ const steps = [
 
   {
     title: "Vermenigvuldigen — een breuk × een heel getal",
-    explanation: "Een breuk vermenigvuldigen met een heel getal is **simpeler dan optellen**: je vermenigvuldigt alleen de **teller**.\n\n**Voorbeeld**:\n• 3 × 1/4 = **3/4**.\n• 5 × 1/2 = 5/2 = **2½**.\n• 4 × 2/3 = 8/3 = **2⅔**.\n\n**Visueel**: 3 × 1/4 betekent: 3 kwartjes pizza = drie-kwart pizza.\n\n**'Wat is X/Y van iets'** — de Cito-favoriet:\n*'Hoeveel is 3/4 van 20?'*\n\n**Aanpak 1 — eerst delen, dan keer**:\n• 20 ÷ 4 = 5 *(één-kwart)*\n• 5 × 3 = **15**\n\n**Aanpak 2 — eerst keer, dan delen**:\n• 20 × 3 = 60\n• 60 ÷ 4 = **15**\n\nBeide kloppen — de eerste is meestal handiger want je werkt met kleinere getallen.\n\n**Cito-voorbeelden**:\n*'2/3 van 30 leerlingen werkt mee'* → 30 ÷ 3 × 2 = **20 leerlingen**.\n*'3/8 van een pak van 800 g'* → 800 ÷ 8 × 3 = **300 g**.\n*'1/5 van € 25'* → 25 ÷ 5 = **€ 5**.\n\n**Cito-truc — 'breuk van iets' met grote getallen**:\nGa altijd via de **eenheids-breuk** (1/4, 1/3, 1/5, etc.). Dan tel je gewoon op.\n\nVoorbeeld: *'3/7 van 84'*\n• 1/7 van 84 = 84 ÷ 7 = 12.\n• 3/7 = 3 × 12 = **36**.",
+    explanation: "Een breuk vermenigvuldigen met een heel getal is **simpeler dan optellen**: je vermenigvuldigt alleen de **teller**.\n\n**Voorbeeld**:\n• 3 × 1/4 = **3/4**.\n• 5 × 1/2 = 5/2 = **2½**.\n• 4 × 2/3 = 8/3 = **2⅔**.\n\n**Visueel**: 3 × 1/4 betekent: 3 kwartjes pizza = drie-kwart pizza.\n\n**'Wat is X/Y van iets'** — de Toets-favoriet:\n*'Hoeveel is 3/4 van 20?'*\n\n**Aanpak 1 — eerst delen, dan keer**:\n• 20 ÷ 4 = 5 *(één-kwart)*\n• 5 × 3 = **15**\n\n**Aanpak 2 — eerst keer, dan delen**:\n• 20 × 3 = 60\n• 60 ÷ 4 = **15**\n\nBeide kloppen — de eerste is meestal handiger want je werkt met kleinere getallen.\n\n**Toets-voorbeelden**:\n*'2/3 van 30 leerlingen werkt mee'* → 30 ÷ 3 × 2 = **20 leerlingen**.\n*'3/8 van een pak van 800 g'* → 800 ÷ 8 × 3 = **300 g**.\n*'1/5 van € 25'* → 25 ÷ 5 = **€ 5**.\n\n**Toets-truc — 'breuk van iets' met grote getallen**:\nGa altijd via de **eenheids-breuk** (1/4, 1/3, 1/5, etc.). Dan tel je gewoon op.\n\nVoorbeeld: *'3/7 van 84'*\n• 1/7 van 84 = 84 ÷ 7 = 12.\n• 3/7 = 3 × 12 = **36**.",
     checks: [
       {
         q: "**3/4 van 20** = ?",
@@ -293,7 +293,7 @@ const steps = [
 
   {
     title: "Praktijk — winkel + recept + tijd",
-    explanation: "Tijd voor mix-sommen in Cito-stijl. Breuken kom je overal tegen — winkel, recept, tijd, klas-statistiek.\n\n**Stappenplan voor breuk-sommen**:\n1. **Wat ken ik?** Het totaal of een deel?\n2. **Wat is de breuk?** *(let op woorden: 'half', 'kwart', 'drie-kwart')*\n3. **Welke aanpak?** Via 1 deel of via vermenigvuldigen?\n4. Reken in stapjes en schrijf op.\n\n**Voorbeeld — winkel**:\n*'Een pak meel van 1 kg. Je gebruikt 1/4 voor pannenkoeken. Hoeveel g blijft over?'*\n• 1 kg = 1000 g.\n• 1/4 = 1000 ÷ 4 = 250 g gebruikt.\n• Rest = 1000 − 250 = **750 g**.\n\n**Voorbeeld — tijd**:\n*'De film duurt 2 uur. Je hebt 1/3 gezien. Hoeveel minuten resteren?'*\n• 2 uur = 120 min.\n• 1/3 gezien = 120 ÷ 3 = 40 min gezien.\n• Rest = 120 − 40 = **80 min**.\n\n**Voorbeeld — klas**:\n*'In een klas van 28 zitten 3/4 jongens. Hoeveel meisjes?'*\n• Jongens: 28 × 3/4 = 21.\n• Meisjes = 28 − 21 = **7**. *(of: 1/4 = 7)*",
+    explanation: "Tijd voor mix-sommen in Doorstroomtoets-stijl. Breuken kom je overal tegen — winkel, recept, tijd, klas-statistiek.\n\n**Stappenplan voor breuk-sommen**:\n1. **Wat ken ik?** Het totaal of een deel?\n2. **Wat is de breuk?** *(let op woorden: 'half', 'kwart', 'drie-kwart')*\n3. **Welke aanpak?** Via 1 deel of via vermenigvuldigen?\n4. Reken in stapjes en schrijf op.\n\n**Voorbeeld — winkel**:\n*'Een pak meel van 1 kg. Je gebruikt 1/4 voor pannenkoeken. Hoeveel g blijft over?'*\n• 1 kg = 1000 g.\n• 1/4 = 1000 ÷ 4 = 250 g gebruikt.\n• Rest = 1000 − 250 = **750 g**.\n\n**Voorbeeld — tijd**:\n*'De film duurt 2 uur. Je hebt 1/3 gezien. Hoeveel minuten resteren?'*\n• 2 uur = 120 min.\n• 1/3 gezien = 120 ÷ 3 = 40 min gezien.\n• Rest = 120 − 40 = **80 min**.\n\n**Voorbeeld — klas**:\n*'In een klas van 28 zitten 3/4 jongens. Hoeveel meisjes?'*\n• Jongens: 28 × 3/4 = 21.\n• Meisjes = 28 − 21 = **7**. *(of: 1/4 = 7)*",
     checks: [
       {
         q: "Een pizza in **8 stukken** — Tom eet **3/8**. Hoeveel **stukken** zijn over?",
@@ -355,8 +355,8 @@ const steps = [
   },
 
   {
-    title: "Cito-eindopdracht — breuken mix",
-    explanation: "Mix-toets in Cito-stijl. Breuken in alle vormen — visueel, in woorden, met of zonder context.\n\nVeel succes!",
+    title: "Toets-eindopdracht — breuken mix",
+    explanation: "Mix-toets in Doorstroomtoets-stijl. Breuken in alle vormen — visueel, in woorden, met of zonder context.\n\nVeel succes!",
     checks: [
       {
         q: "Welke breuk is **het kleinst**?",
@@ -465,7 +465,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const breukenPo = {
   id: "breuken-po",
-  title: "Breuken — Cito groep 5-8",
+  title: "Breuken — Doorstroomtoets groep 5-8",
   emoji: "🍕",
   level: "groep5-8",
   subject: "rekenen",
@@ -475,7 +475,7 @@ const breukenPo = {
     { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
   ],
   intro:
-    "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Cito-stijl praktijksommen. ~15 min.",
+    "Breuken voor groep 5-8: wat is een breuk, vereenvoudigen, optellen/aftrekken met gelijke en ongelijke noemers, breuk-van-een-getal. Met Doorstroomtoets-stijl praktijksommen. ~15 min.",
   triggerKeywords: [
     "breuk","breuken","teller","noemer","half","kwart",
     "derde","vijfde","tiende","gelijknamig","vereenvoudigen",

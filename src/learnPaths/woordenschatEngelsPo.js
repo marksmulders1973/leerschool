@@ -1,5 +1,5 @@
 // Leerpad: Woordenschat Engels — basis groep 6-8.
-// Mark 2026-05-14: Engels-tegel was leeg op StudentHome; Cito-eindtoets heeft
+// Mark 2026-05-14: Engels-tegel was leeg op StudentHome; Doorstroomtoets heeft
 // geen Engels-onderdeel, maar veel groep 7-8-scholen geven wel Engels-les
 // (Early-English). Pad dekt de meest voorkomende woordcategorieën — voldoende
 // voor brugklas-overgang.
@@ -58,7 +58,7 @@ const steps = [
             { titel: "Truc om te onthouden", tekst: "Engels heeft 12 maanden, 12 uren op een klok-helft. 'Twelve' kom je dagelijks tegen — bv. 'It's twelve o'clock' = 'Het is 12 uur'." },
           ],
           woorden: [{ woord: "twelve", uitleg: "Engels voor 12." }, { woord: "eleven", uitleg: "Engels voor 11. Ook geen -teen." }],
-          theorie: "Cito-truc Engels getallen: 0-12 zijn losse woorden, 13-19 = -teen-patroon, 20-90 = -ty-patroon.",
+          theorie: "Toets-truc Engels getallen: 0-12 zijn losse woorden, 13-19 = -teen-patroon, 20-90 = -ty-patroon.",
           voorbeelden: [{ type: "stap", tekst: "Op een klok: '12 o'clock' = twelve o'clock. Maand december = twelve month." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Twelve (12) vs twenty (20) — let op de uitspraak: TWELVE vs TWENty (klemtoon vooraan)." }],
           niveaus: {
@@ -76,9 +76,9 @@ const steps = [
             { titel: "Bouwblok herkennen", tekst: "Eerste deel = het cijfer: seven (7) + teen = seventeen (17). Net zo: thir (3) + teen, fif (5) + teen, eigh (8) + teen." },
           ],
           woorden: [{ woord: "seventeen", uitleg: "Engels voor 17. Klemtoon op '-teen'." }, { woord: "seventy", uitleg: "Engels voor 70. Klemtoon op 'SE-venty'." }],
-          theorie: "Cito-truc: -teen vs -ty horen totaal anders. Op luister-vragen: lange klemtoon achter = teens. Vooraan = tens.",
+          theorie: "Toets-truc: -teen vs -ty horen totaal anders. Op luister-vragen: lange klemtoon achter = teens. Vooraan = tens.",
           voorbeelden: [{ type: "stap", tekst: "Een kind van 17 = 'seventeen years old'. Een opa van 70 = 'seventy years old'." }],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Cito-strikvraag: zorg dat je 17 (seventeen) en 70 (seventy) niet verwart in geschrift én uitspraak." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Toets-strikvraag: zorg dat je 17 (seventeen) en 70 (seventy) niet verwart in geschrift én uitspraak." }],
           niveaus: {
             basis: "17 = seventeen.",
             simpeler: "seven + teen = seventeen.",
@@ -94,7 +94,7 @@ const steps = [
             { titel: "Geen 'fourty' bestaat", tekst: "'Fourty' is ALTIJD fout in Engels. Geen native speaker schrijft het zo. Alleen 'forty' = correct." },
           ],
           woorden: [{ woord: "forty", uitleg: "Engels voor 40 — zonder u." }],
-          theorie: "Cito-strikvraag: forty wordt vaak fout geschreven door Nederlandse leerlingen omdat het verband met four (4) verwarrend lijkt. Onthoud: 40 = forty, niet fourty.",
+          theorie: "Toets-strikvraag: forty wordt vaak fout geschreven door Nederlandse leerlingen omdat het verband met four (4) verwarrend lijkt. Onthoud: 40 = forty, niet fourty.",
           voorbeelden: [{ type: "stap", tekst: "Forty winks = een dutje. Forty days and forty nights = veertig dagen en nachten (Bijbel-uitdrukking)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Veel native speakers maken zelfs deze fout — jij doet het beter als je 'forty zonder u' onthoudt." }],
           niveaus: {

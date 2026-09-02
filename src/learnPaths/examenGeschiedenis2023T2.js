@@ -15,7 +15,7 @@ const BRON_LINK = "https://www.examenblad.nl/2023/vmbo-gl/documenten/cse-2/gt-01
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc geschiedenis: zoek jaartal-anker + match periode-kenmerk. Spotprent? Lees TOELICHTING + symboliek (figuren = landen of partijen).",
+  theorie: "Toets-truc geschiedenis: zoek jaartal-anker + match periode-kenmerk. Spotprent? Lees TOELICHTING + symboliek (figuren = landen of partijen).",
   voorbeelden: [],
   basiskennis: [],
   niveaus,

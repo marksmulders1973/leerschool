@@ -1,6 +1,6 @@
 // Leerpad: Werkwoordsspelling d/t — de basisregels
 // 9 stappen in 5 hoofdstukken (A t/m E).
-// Doelgroep: groep 5-8 basisschool. Cito-relevant.
+// Doelgroep: groep 5-8 basisschool. toets-relevant.
 
 const COLORS = {
   axis: "#e0e6f0",
@@ -518,7 +518,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Voltooid deelwoord recipe", tekst: "**Voltooid deelwoord** = **ge- + stam + -t/-d**.\n• Stam-eindletter in 't kofschip (t,k,f,s,ch,p)? → **-t**\n• Anders → **-d**\n\nVoor 'werken':\n• Stam: werk\n• 'k' staat in 't kofschip → -t\n• Voltooid deelwoord: **ge-werk-t = gewerkt**\n\nHulpwerkwoord ervoor: 'is/heeft'. 'Hij is/heeft gewerkt'." },
-            { titel: "Cito-tip: VTT vs VT", tekst: "**Drie tijden onderscheiden**:\n• Tegenwoordig (TT): 'hij werkt'\n• Verleden (VT): 'hij werkte'\n• Voltooid (VTT): 'hij heeft gewerkt'\n\nLezen vraag scherp! 'Hij is gisteren ____' = voltooide gebeurtenis = VTT = gewerkt." },
+            { titel: "Toets-tip: VTT vs VT", tekst: "**Drie tijden onderscheiden**:\n• Tegenwoordig (TT): 'hij werkt'\n• Verleden (VT): 'hij werkte'\n• Voltooid (VTT): 'hij heeft gewerkt'\n\nLezen vraag scherp! 'Hij is gisteren ____' = voltooide gebeurtenis = VTT = gewerkt." },
           ],
           woorden: [
             { woord: "voltooid deelwoord", uitleg: "Werkwoordsvorm met ge-. Bij hulpwerkwoord 'hebben/zijn'." },
@@ -540,7 +540,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Word vs wordt", tekst: "Werkwoord **'worden'** — TT-vervoeging:\n• Ik: word (stam zonder t)\n• Jij/hij/zij/het: **wordt** (stam + t)\n• Wij/jullie/zij: worden (hele werkwoord)\n\nStam = 'word'. Eindigt op 'd'. Hij + stam + t = 'word + t' = **wordt** (twee letters dt)." },
-            { titel: "Cito-instinker: dt of d?", tekst: "**Veel-gemaakte fouten**:\n• 'Hij word' ✗ — mist de t (verplicht bij hij-vorm)\n• 'Hij wort' ✗ — geen d, kan niet (stam = word, met d)\n• 'Hij wordt' ✓ — d (van stam) + t (van uitgang)\n\nKlinkt hetzelfde: 'wort'. Maar SCHRIJVEN met dt." },
+            { titel: "Toets-instinker: dt of d?", tekst: "**Veel-gemaakte fouten**:\n• 'Hij word' ✗ — mist de t (verplicht bij hij-vorm)\n• 'Hij wort' ✗ — geen d, kan niet (stam = word, met d)\n• 'Hij wordt' ✓ — d (van stam) + t (van uitgang)\n\nKlinkt hetzelfde: 'wort'. Maar SCHRIJVEN met dt." },
           ],
           woorden: [
             { woord: "wordt", uitleg: "TT 3e persoon van worden. Stam (word) + t = wordt. Dubbele letter dt." },

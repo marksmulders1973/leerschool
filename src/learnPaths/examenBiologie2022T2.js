@@ -9,7 +9,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-2/gt-01
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Cito-truc biologie: zoek SLEUTELWOORD in vraag + match definitie. Hormonen → klier (alvleesklier/bijnier/hypofyse/schildklier). Zenuwen → soort cel (gevoel/beweging/schakel). Leergedrag → 3 vormen (gewenning/inprenting/conditionering).",
+  theorie: "Toets-truc biologie: zoek SLEUTELWOORD in vraag + match definitie. Hormonen → klier (alvleesklier/bijnier/hypofyse/schildklier). Zenuwen → soort cel (gevoel/beweging/schakel). Leergedrag → 3 vormen (gewenning/inprenting/conditionering).",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
