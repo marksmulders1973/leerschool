@@ -315,7 +315,7 @@ export const TEXTBOOK_QUESTIONS = {
     0: [
       { q: "Welk getal is 100 minder dan 5072?", options: ["4972", "5172", "5062", "4072"], answer: 0, explanation: "5072 − 100 = 4972 (alleen het honderdtal-cijfer wordt 1 minder: 0→9, leen 1 van duizendtallen)." },
       { q: "Hoeveel duizendtallen zitten in 9876?", options: ["9", "8", "98", "987"], answer: 0, explanation: "Eerste cijfer = duizendtallen. 9876 → 9 duizendtallen + 876." },
-      { q: "Welk getal is afgerond 3000?", options: ["2987", "3499", "3500", "3501"], answer: 0, explanation: "Afronden op duizendtallen: kijk naar honderdtal-cijfer. 2987 → honderdtal=9 → naar boven → 3000. 3499 → 3000 (ja!), 3500/3501 → 4000. Maar het gevraagde is een getal dat 3000 wordt → 2987 én 3499 werken — maar 2987 is het meest tegen-intuïtieve. Actually: 2987 rondt af naar 3000 (omdat tientallen 87 → naar boven). Dat is het juiste antwoord." },
+      { q: "Welk getal wordt 3000 als je afrondt op duizendtallen?", options: ["2987", "2499", "3500", "3501"], answer: 0, explanation: "Afronden op duizendtallen: kijk naar het honderdtal. 2987 → honderdtal 9 → naar boven → 3000. 2499 → 2000, 3500 en 3501 → 4000." },
       { q: "Welk getal is groter: 5004 of 5040?", options: ["5040", "5004", "Gelijk", "Niet vergelijkbaar"], answer: 0, explanation: "5004 < 5040 (5040 heeft 4 op tientallen-plek, 5004 heeft 0)." },
     ],
     1: [

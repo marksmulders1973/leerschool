@@ -2257,10 +2257,10 @@ const steps = [
         wrongHints: [null, "Niet — vergat korting eraf.", "Te veel korting.", "Niet."],
       },
       {
-        q: "**Stel**: 3 vrienden willen **€18 eerlijk delen** — Tom doet niet mee. Hoeveel **per overgebleven persoon**?",
+        q: "**Drie vrienden** delen **€18 eerlijk**. Hoeveel krijgt **ieder**?",
         options: ["€6", "€9", "€18", "€3"],
         answer: 0,
-        wrongHints: [null, "Niet — hoeveel is 18 gedeeld door 3?", "Dat is wat 2 delen.", "Wat 6 delen."],
+        wrongHints: [null, "Dat is €18 gedeeld door 2 — het zijn er drie.", "Dat is het hele bedrag, nog niet gedeeld.", "Dat is €18 gedeeld door 6 — het zijn er drie."],
       },
       {
         q: "**Bordje** met **€12,50** + **fooi 10%**. Hoeveel **fooi**?",

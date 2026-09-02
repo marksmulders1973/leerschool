@@ -80,15 +80,15 @@ const steps = [
       },
       {
         q: "Bij een pizza in **6 stukken** eet je **4**. Welke **breuk** is dat?",
-        options: ["4/6","6/4","4/10","2/3"],
+        options: ["4/6","6/4","4/10","2/6"],
         answer: 0,
-        wrongHints: [null,"Andersom — teller is wat je eet (4), noemer is totaal (6).","Niet optellen — de noemer is alleen het totaal stukken (6).","Klopt vereenvoudigd, maar de eerste optie is letterlijk wat de vraag zegt."],
+        wrongHints: [null,"Andersom — teller is wat je eet (4), noemer is totaal (6).","Niet optellen — de noemer is alleen het totaal stukken (6).","2/6 is maar 2 stukken van de 6 — jij at er 4."],
         uitlegPad: {
           stappen: [{ titel: "Wat boven, wat onder", tekst: "TELLER (boven) = wat je hebt = 4. NOEMER (onder) = totaal = 6. → 4/6." }],
           woorden: [{ woord: "teller", uitleg: "Bovenste getal van breuk = aantal dat je hebt." }, { woord: "noemer", uitleg: "Onderste getal = totaal aantal stukken." }],
           theorie: "Breuk = aantal je hebt / totaal. Teller boven, noemer onder.",
           voorbeelden: [{ type: "test", tekst: "Pizza 6 stukken (=noemer 6). Eet 4 (=teller 4). Breuk = 4/6." }],
-          basiskennis: [{ onderwerp: "2/3 ook waar", uitleg: "4/6 = 2/3 vereenvoudigd, maar Cito vraagt letterlijk 4 van 6." }],
+          basiskennis: [{ onderwerp: "2/3 is hetzelfde", uitleg: "4/6 kun je vereenvoudigen tot 2/3 — dezelfde hoeveelheid. De toets vraagt hier letterlijk 4 van de 6 stukken." }],
           niveaus: { basis: "4/6.", simpeler: "Teller (boven) = wat je eet = 4. Noemer (onder) = totaal = 6. = 4/6", nogSimpeler: "4/6" },
         },
       },
