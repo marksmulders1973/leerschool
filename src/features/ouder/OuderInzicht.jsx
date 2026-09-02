@@ -353,10 +353,11 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const deleteAllMyData = async () => {
     if (!authUser) return;
     if (!window.confirm(
-      "Weet je het zeker?\n\nDit verwijdert al je gekoppelde data:\n" +
-      "• je gekoppelde kinderen\n" +
-      "• je voortgang en scores (waar je ingelogd was)\n" +
-      "• je feedback-berichten\n\n" +
+      "Weet je het zeker?\n\nDit verwijdert alles wat aan je account hangt:\n" +
+      "• je gekoppelde kinderen en klaargezette lessen\n" +
+      "• je voortgang, scores, doelen en park (waar je ingelogd was)\n" +
+      "• je feedback-berichten, e-mailinschrijvingen en een eventuele partner-plek\n" +
+      "• je account zelf — je wordt uitgelogd en kunt opnieuw beginnen\n\n" +
       "Anonieme spelers-data (zonder login) blijft staan tot je 'm via e-mail verwijdert.\n\n" +
       "Doorgaan?"
     )) return;
@@ -379,6 +380,16 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     setDeleteDone(true);
     setChildren([]);
     setSelectedChild(null);
+    // F6 (Fable-review 2 sep 2026): de RPC verwijdert nu óók het auth-account.
+    // De lokale sessie is daarmee ongeldig → uitloggen en lokale sporen wissen,
+    // na een korte pauze zodat de "✅ Verwijderd"-melding nog zichtbaar is.
+    setTimeout(async () => {
+      try { await supabase.auth.signOut(); } catch {}
+      try {
+        Object.keys(localStorage).filter((k) => /^(lk_|ls_|studiebol_|sb-)/.test(k)).forEach((k) => localStorage.removeItem(k));
+      } catch {}
+      try { window.location.assign("/"); } catch {}
+    }, 2500);
   };
 
   const generateInvite = async () => {
@@ -1226,11 +1237,11 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginBottom: 12, lineHeight: 1.5 }}>
             Onder de AVG (art. 17) heb je recht op vergetelheid. Met deze knop
-            wis je alle data die aan je Google-account gekoppeld is.
+            wis je alle data die aan je Google-account gekoppeld is, inclusief het account zelf.
           </div>
           {deleteDone ? (
             <div style={{ padding: "10px 12px", borderRadius: 10, background: "rgba(105,240,174,0.12)", border: "1px solid rgba(105,240,174,0.4)", color: "var(--color-brand-primary-100)", fontSize: 12, fontWeight: 700 }}>
-              ✅ Verwijderd. Log uit om de browser-state te wissen.
+              ✅ Verwijderd, inclusief je account. Je wordt zo automatisch uitgelogd.
             </div>
           ) : (
             <button

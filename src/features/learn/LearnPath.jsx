@@ -458,6 +458,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [path, stepIdx]);
   const resumeAppliedRef = useRef(false);
+  // F10 (Fable-review 2 sep 2026): de bewaarde vraag-index werd hier wél gezet,
+  // maar startCheck() ("Naar de vragen ▶") reset naar 0 → kind begon tóch bij
+  // vraag 1. Nu onthouden we 'm in een ref die startCheck één keer opmaakt.
+  const resumeCheckIdxRef = useRef(null);
   useEffect(() => {
     if (!path || resumeAppliedRef.current) return;
     resumeAppliedRef.current = true;
@@ -465,7 +469,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       const r = loadResume(player);
       if (r && r.pathId === pathId && r.stepIdx === stepIdx && typeof r.checkIdx === "number") {
         const checks = mcChecks(path.steps?.[stepIdx]);
-        if (r.checkIdx > 0 && r.checkIdx < checks.length) setCheckIdx(r.checkIdx);
+        if (r.checkIdx > 0 && r.checkIdx < checks.length) {
+          setCheckIdx(r.checkIdx);
+          resumeCheckIdxRef.current = r.checkIdx;
+        }
       }
     } catch { /* */ }
   }, [path, player, pathId, stepIdx]);
@@ -620,7 +627,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
   const startCheck = () => {
     setMode("checking");
-    setCheckIdx(0);
+    // Exact hervatten (F10): eenmalig bij de bewaarde vraag verdergaan.
+    const hervat = resumeCheckIdxRef.current;
+    resumeCheckIdxRef.current = null;
+    setCheckIdx(typeof hervat === "number" ? hervat : 0);
     setSelected(null);
     setAttempts(1);
   };

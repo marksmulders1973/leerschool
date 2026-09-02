@@ -1,0 +1,12 @@
+-- F6 Fable-review 2 sep 2026 — toegepast op live DB via MCP op dezelfde dag.
+-- "Verwijder al mijn data" (AVG art. 17) wiste 13 tabellen en liet learning_goals,
+-- diagnostic_assessments, daily_plans/completions, leraar_leerling_links,
+-- referral_codes, partner_claims, push_subscriptions, kwartiercheck_results
+-- én het auth-account staan. Nu:
+--   1. dynamisch álle public-tabellen met user_id (behalve household_accounts)
+--   2. parent_user_id / teacher_user_id / maker_user_id / pvp host+guest
+--   3. child_user_id / student_user_id in andermans koppelingen → null
+--   4. e-mailgebonden: upgrade_waitlist, kwartiercheck_results, partner_email → null
+--   5. profiles + auth.users (cascadet identities/sessions/rest); client logt uit.
+-- Retour: {ok, totaal, per_tabel, account_verwijderd:true}.
+-- Volledige body: zie live DB (pg_get_functiondef('public.delete_my_data')).
