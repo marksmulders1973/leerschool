@@ -75,7 +75,10 @@ export function vangPartnerCode() {
     // F3 (Fable-review 2 sep 2026): een verzonnen code (?partner=TEST123)
     // bleef anders voor altijd staan mét gratis-belofte. Achteraf checken;
     // onbekend → weer weghalen (alleen als er nog geen plek geclaimd is).
-    if (nieuw) {
+    // Níét alleen bij `nieuw`: de stille SW-herlaad bij een verse installatie
+    // brak de eerste RPC af (live gezien 2 sep), dus bij elk ?partner=-bezoek
+    // zonder geclaimde plek opnieuw checken — één goedkope RPC.
+    if (!ls.get(KEY_STATUS)) {
       partnerCodeBekend(code).then((bekend) => {
         if (bekend === false && ls.get(KEY_CODE) === code && !ls.get(KEY_STATUS)) {
           ls.set(KEY_CODE, "");
