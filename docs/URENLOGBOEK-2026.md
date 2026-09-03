@@ -42,6 +42,7 @@
 | vr 28 aug | ~2 | 💻📋✉️ Ochtend-dagrapport (cijfers + Meesterplan-PDF) · v489 datum-correctie Doorstroomtoets 2027 (7 pagina's + app-countdown) · outreach: Leergeld-Midden 20 + VoorleesExpress deel 2 48 verstuurd · Mark: ere-schermen gekeurd |
 | za 29 aug | | (geen sessie gelogd) |
 | zo 30 aug | ~1 | 💻📋 Weekend-dagrapport (cijfers + Froukje-radar + Meesterplan-PDF) |
+| do 3 sep | ~2,5 (ochtend, voorstel) | 💻📱 KvK-slots bekeken (laten staan) · kliktocht 2 agents + 10 P1-fixes v567 · wereldbol-video gemaakt + gepost FB/IG (LinkedIn zelf) · dagrapport. Avond 2 sep (park samenhang 3 sprints, F15/F20/F23, spoor/wereldbol-fixes, ~4 u) zit in de wo-regel als dat klopt — anders splitsen. |
 | **Offline (15%-vuistregel)** | ~3,5 | 📞 gesprekken over de app met collega's/familie/winkels/school (15% van ~24,5 sessie-uren ma-vr; regel ingesteld 28 aug) |
 
 ## Week 36 (ma 31 aug – zo 6 sep)
