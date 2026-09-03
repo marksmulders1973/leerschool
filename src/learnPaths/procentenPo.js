@@ -21,7 +21,7 @@ const chapters = [
   { letter: "B", title: "Hoeveel is X% van iets?", emoji: "🛒", from: 2, to: 3 },
   { letter: "C", title: "Welk % is dit van het totaal?", emoji: "🎒", from: 4, to: 4 },
   { letter: "D", title: "Korting in de winkel", emoji: "💸", from: 5, to: 5 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 6, to: 6 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 6, to: 6 },
 ];
 
 // Visualisatie: 10×10 grid met X cellen ingekleurd voor procentvoorstelling.
@@ -306,7 +306,7 @@ const steps = [
   // STAP 5: Welk % is X van Y?
   {
     title: "Welk percentage is dit van het totaal?",
-    explanation: "De omgekeerde toetsvraag: *'X van Y — welk percentage is dat?'*\n\nVoorbeeld: *'In een klas van 25 leerlingen zijn 5 meisjes. Welk percentage meisjes is dat?'*\n\n**Aanpak — de gouden regel**:\n• % = (deel ÷ totaal) × 100\n• Hier: 5 ÷ 25 = 0,20 → × 100 = **20%**\n\n**Slimme aanpak voor kleine breuken** *(sneller)*:\n• 5 op 25 = 1 op 5 *(beide ÷ 5)* = 1/5 = **20%**\n• Hoofd: 1/5 = 20%, 1/4 = 25%, 1/2 = 50%, 1/10 = 10%.\n\n**Toets-voorbeelden**:\n*'Op een toets van 40 vragen heeft Tim 30 goed. Welk percentage is dat?'*\n• 30/40 = 3/4 = **75%**.\n\n*'Van de 200 leerlingen op school spelen er 40 voetbal. Welk percentage?'*\n• 40/200 = 1/5 = **20%**.\n\n**Truc**: probeer eerst te delen tot je een 'mooie' breuk krijgt (1/2, 1/4, 1/5, 1/10).\n\n**Veel-voorkomende fout**:\nVergeten te × 100. Dan krijg je 0,2 ipv 20%. Beide kloppen wiskundig, maar de vraag vraagt een **percentage**.",
+    explanation: "De omgekeerde toetsvraag: *'X van Y — welk percentage is dat?'*\n\nVoorbeeld: *'In een klas van 25 leerlingen zijn 5 meisjes. Welk percentage meisjes is dat?'*\n\n**Aanpak — de gouden regel**:\n• % = (deel ÷ totaal) × 100\n• Hier: 5 ÷ 25 = 0,20 → × 100 = **20%**\n\n**Slimme aanpak voor kleine breuken** *(sneller)*:\n• 5 op 25 = 1 op 5 *(beide ÷ 5)* = 1/5 = **20%**\n• Hoofd: 1/5 = 20%, 1/4 = 25%, 1/2 = 50%, 1/10 = 10%.\n\n**Voorbeelden uit de toets**:\n*'Op een toets van 40 vragen heeft Tim 30 goed. Welk percentage is dat?'*\n• 30/40 = 3/4 = **75%**.\n\n*'Van de 200 leerlingen op school spelen er 40 voetbal. Welk percentage?'*\n• 40/200 = 1/5 = **20%**.\n\n**Truc**: probeer eerst te delen tot je een 'mooie' breuk krijgt (1/2, 1/4, 1/5, 1/10).\n\n**Veel-voorkomende fout**:\nVergeten te × 100. Dan krijg je 0,2 ipv 20%. Beide kloppen wiskundig, maar de vraag vraagt een **percentage**.",
     checks: [
       {
         q: "Op een toets van **20 vragen** heeft Sven **15 goed**. Welk **percentage**?",
@@ -386,7 +386,7 @@ const steps = [
 
   // STAP 7: Eindopdracht — Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — mix",
+    title: "Eindopdracht — mix",
     explanation: "Mix-toets in echte Doorstroomtoets-stijl. Verschillende sommen door elkaar — winkel, sport, school, korting, gewoon-percentage. **Lees rustig** en gebruik de aanpak uit stap 6.\n\n**Tip**: bij twijfel — vul je antwoord even in en check terug. Klopt het verhaal? Dan zit je goed.\n\nVeel succes!",
     checks: [
       {

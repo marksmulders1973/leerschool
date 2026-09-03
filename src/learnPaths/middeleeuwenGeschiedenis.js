@@ -23,7 +23,7 @@ const chapters = [
   { letter: "C", title: "Ridders + kruistochten", emoji: "⚔️", from: 2, to: 2 },
   { letter: "D", title: "Boeren + horigen + steden", emoji: "🌾", from: 3, to: 3 },
   { letter: "E", title: "Pest + einde middeleeuwen", emoji: "🦠", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function tijdslijnSvg() {

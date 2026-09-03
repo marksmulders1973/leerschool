@@ -22,7 +22,7 @@ const chapters = [
   { letter: "C", title: "Punt, vraag, uitroep", emoji: "❓", from: 2, to: 2 },
   { letter: "D", title: "Komma's", emoji: ",", from: 3, to: 3 },
   { letter: "E", title: "Aanhalingstekens", emoji: '"', from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function leestekensSvg() {
@@ -325,7 +325,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — interpunctie-mix",
+    title: "Eindopdracht — interpunctie-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: hoofdletters, leestekens, komma's, aanhalingstekens.\n\n**Tip**: bij twijfel lees de zin hardop. Pauzeer je? → komma. Verwacht je antwoord? → vraagteken. Begint zin? → hoofdletter.\n\nVeel succes!",
     checks: [

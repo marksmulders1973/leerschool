@@ -23,7 +23,7 @@ const chapters = [
   { letter: "C", title: "Modus", emoji: "🏆", from: 2, to: 2 },
   { letter: "D", title: "Mediaan", emoji: "🎯", from: 3, to: 3 },
   { letter: "E", title: "Wanneer wat gebruiken?", emoji: "🤔", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏁", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏁", from: 5, to: 5 },
 ];
 
 function getalRijSvg(getallen, gemiddelde, label) {
@@ -404,7 +404,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — statistiek-mix",
+    title: "Eindopdracht — statistiek-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Verschillende sommen door elkaar — gemiddelde, modus, mediaan.\n\n**Tip**: lees rustig en kijk welk woord in de vraag staat (*gemiddeld* / *meest* / *middelste*). Daar zit de hint.\n\nVeel succes!",
     checks: [

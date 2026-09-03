@@ -17,7 +17,7 @@ const chapters = [
   { letter: "B", title: "Hoofdgedachte vinden", emoji: "🔍", from: 1, to: 1 },
   { letter: "C", title: "Hoofd vs bijzaken", emoji: "✏️", from: 2, to: 2 },
   { letter: "D", title: "Samenvatting maken", emoji: "📝", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -390,7 +390,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — samenvatten mix",
+    title: "Eindopdracht — samenvatten mix",
     explanation: "Mix-toets: hoofdgedachte vinden, hoofd/bij scheiden, samenvatten.",
     checks: [
       {

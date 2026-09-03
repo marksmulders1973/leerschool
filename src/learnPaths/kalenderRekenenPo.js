@@ -21,7 +21,7 @@ const chapters = [
   { letter: "C", title: "Schrikkeljaar + speciale data", emoji: "🌍", from: 2, to: 2 },
   { letter: "D", title: "Leeftijden", emoji: "🎂", from: 3, to: 3 },
   { letter: "E", title: "Praktijk — vakantie + school", emoji: "🏖️", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function kalenderSvg() {
@@ -325,7 +325,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — kalender-mix",
+    title: "Eindopdracht — kalender-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: data tellen, schrikkeljaar, leeftijden, praktijksommen.\n\nVeel succes!",
     checks: [

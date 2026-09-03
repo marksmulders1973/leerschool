@@ -24,7 +24,7 @@ const chapters = [
   { letter: "C", title: "Voedselweb + energiepiramide", emoji: "🕸️", from: 2, to: 2 },
   { letter: "D", title: "Koolstof- + waterkringloop", emoji: "🔄", from: 3, to: 3 },
   { letter: "E", title: "Verstoringen + biodiversiteit", emoji: "⚠️", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function piramideSvg() {
@@ -283,7 +283,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — ecosystemen mix",
+    title: "Eindopdracht — ecosystemen mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: producent/consument, voedselweb, energiepiramide, kringlopen, biodiversiteit.\n\nVeel succes!",
     checks: [

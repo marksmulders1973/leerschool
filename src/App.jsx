@@ -668,7 +668,12 @@ export default function App() {
     if (urlCode && urlCode.length <= 8) setPendingCode(urlCode.toUpperCase());
   }, []);
 
-  useEffect(() => { pageRef.current = page; }, [page]);
+  // Kliktocht 3 sep 2026: onthoud ook de vórige pagina, zodat schermen met
+  // meerdere ingangen (voortgang, thuis-overzicht, maatje) terugkeren naar
+  // waar je vandaan kwam i.p.v. altijd naar home.
+  const vorigePageRef = useRef("home");
+  useEffect(() => { vorigePageRef.current = pageRef.current; pageRef.current = page; }, [page]);
+  const terugNaarVorige = (toegestaan, standaard = "home") => setPage(toegestaan.includes(vorigePageRef.current) ? vorigePageRef.current : standaard);
 
   // Profielen op dit apparaat (Mark 12 aug: "wisselen van profiel op de
   // persoonlijke pagina"): elke gebruikte naam komt in lk_namen; per naam
@@ -688,6 +693,13 @@ export default function App() {
   const wisselProfiel = (naam) => {
     const n = (naam || "").trim();
     if (!n) return;
+    // Kliktocht 3 sep: keert de ouder terug via de 🔁-wissel op /mijn (i.p.v. de
+    // pill op de kind-home), dan moet de kind-wissel-bewaking óók uit — anders
+    // blijven de profiel-schrijfacties van de ouder stil geblokkeerd.
+    if (terugNaarOuder?.naam && n.toLowerCase() === terugNaarOuder.naam.toLowerCase()) {
+      setTerugNaarOuder(null);
+      try { localStorage.removeItem(TERUG_NAAR_OUDER_KEY); } catch { /* */ }
+    }
     let p = {};
     try { p = JSON.parse(localStorage.getItem(`lk_profiel:${n}`) || "{}"); } catch {}
     setUserName(n);
@@ -1416,7 +1428,7 @@ export default function App() {
               setLearnPathReturnPage("my-mastery");
               setPage("learn-path");
             }}
-            onBack={() => setPage("home")}
+            onBack={() => terugNaarVorige(["mijn-pagina", "student-home", "teacher-home"])}
             onHome={goHome}
           />
         );
@@ -1579,7 +1591,7 @@ export default function App() {
           ) : (
             <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} onPlayObliterator={() => setPage("obliteratorPlay")}
               onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setLearnPathReturnPage("zoo"); setPage("learn-path"); }}
-              onOpenLeerpaden={() => setPage("learn-paths-hub")} onOpenMaatje={() => setPage("maatje")} onOpenGalerij={() => setPage("galerij")} />
+              onOpenLeerpaden={() => { setLearnHubReturnPage("zoo"); setPage("learn-paths-hub"); }} onOpenMaatje={() => setPage("maatje")} onOpenGalerij={() => setPage("galerij")} />
           )}
         </Suspense>
       )}
@@ -1594,7 +1606,7 @@ export default function App() {
               pagina uit te komen (Charley woont daar), niet op home. */}
           <MaatjePocket
             userName={userName || ""}
-            onHome={() => setPage("mijn-pagina")}
+            onHome={() => terugNaarVorige(["zoo", "student-home"], "mijn-pagina")}
             onOpenLeren={() => setPage("learn-paths-hub")}
             onOpenPark={() => setPage("zoo")}
           />
@@ -1739,6 +1751,7 @@ export default function App() {
         <TeacherHome
           userName={userName}
           authUser={authUser}
+          onHome={goHome}
           onLogin={loginWithConsent}
           quizzes={quizzes}
           classes={classes}
@@ -1925,12 +1938,13 @@ export default function App() {
                 : /^(klas|vmbo|mavo|havo|vwo|bovenbouw|vo)/.test(n) ? "vo"
                 : null
             );
+            setLearnHubReturnPage("student-home"); // kliktocht 3 sep: terug uit de hub = terug naar de tegels
             setPage("learn-paths-hub");
           }}
           onResumeLearnPath={(pathId, stepIdx) => {
             setActiveLearnPathId(pathId);
             setActiveLearnStepIdx(typeof stepIdx === "number" ? stepIdx : 0);
-            setLearnPathReturnPage("home");
+            setLearnPathReturnPage("student-home");
             setPage("learn-path");
           }}
           onBack={() => setPage("home")}
@@ -2356,7 +2370,7 @@ export default function App() {
             startGame({ ...currentQuiz, id: currentQuiz.id + "-replay-" + Date.now(), preGeneratedQuestions: latest.questions }, "self");
           }}
           onLeaderboard={() => setPage("leaderboard")}
-          onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setPage("learn-path"); }}
+          onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setLearnPathReturnPage("student-home"); setPage("learn-path"); }}
           onNextTafel={(() => {
             const topic = currentQuiz?.topic;
             if (!topic?.startsWith("tafel van ")) return undefined;
@@ -2432,7 +2446,7 @@ export default function App() {
         <OuderDashboard
           authUser={authUser}
           subscription={subscription}
-          onBack={() => setPage("home")}
+          onBack={() => terugNaarVorige(["mijn-pagina", "student-home"])}
           onHome={goHome}
           onUpgrade={() => setPage("pro")}
           onLogin={loginWithConsent}

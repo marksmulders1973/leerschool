@@ -22,7 +22,7 @@ const chapters = [
   { letter: "B", title: "Brief & e-mail", emoji: "✉️", from: 1, to: 1 },
   { letter: "C", title: "Samenvatten", emoji: "📝", from: 2, to: 2 },
   { letter: "D", title: "Opinie & argumentatie", emoji: "🗣️", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -342,9 +342,9 @@ const steps = [
     ],
   },
 
-  // ─── E. Toets-eindopdracht ──────────────────────────────────
+  // ─── E. Eindopdracht ──────────────────────────────────
   {
-    title: "Toets-eindopdracht — alles samen",
+    title: "Eindopdracht — alles samen",
     explanation:
       "Mix van tekstdoelen + brief + samenvatten + opinie. Doorstroomtoets-stijl vragen door elkaar — zoals in de Doorstroomtoets-test.\n\n**Strategie eindopdracht**:\n• Lees vraag eerst, daarna pas tekstje.\n• Tijdsbudget: ~1 min per meerkeuze-vraag.\n• Twijfel? Sluit eerst de duidelijk foute opties uit.\n• Open vraag? Beantwoord in volledige zinnen.\n\nVeel succes!",
     checks: [

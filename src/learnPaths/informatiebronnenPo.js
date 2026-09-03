@@ -22,7 +22,7 @@ const chapters = [
   { letter: "B", title: "Woordenboek & alfabetisch zoeken", emoji: "📖", from: 1, to: 1 },
   { letter: "C", title: "Inhoudsopgave & index", emoji: "📑", from: 2, to: 2 },
   { letter: "D", title: "Betrouwbaarheid + fake news", emoji: "✅", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -302,9 +302,9 @@ const steps = [
     ],
   },
 
-  // ─── E. Toets-eindopdracht ─────────────────────────────────
+  // ─── E. Eindopdracht ─────────────────────────────────
   {
-    title: "Toets-eindopdracht — bronnen door elkaar",
+    title: "Eindopdracht — bronnen door elkaar",
     explanation:
       "Mix van bron-kiezen + alfabetisch + inhoudsopgave/index + betrouwbaarheid. Doorstroomtoets-stijl door elkaar.\n\n**Strategie eindopdracht**:\n• Lees de hele vraag — wat ZOEKT de leerling?\n• Welke bron past het beste?\n• Twijfel? Sluit duidelijk foute opties uit.\n\nVeel succes!",
     checks: [

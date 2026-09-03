@@ -158,7 +158,7 @@ export default async function handler(req, res) {
 
   let body = req.body;
   if (typeof body === "string") { try { body = JSON.parse(body); } catch { body = {}; } }
-  const email = String(body?.email || "").trim().slice(0, 120);
+  const email = String(body?.email || "").trim().toLowerCase().slice(0, 120);
   const vak = String(body?.vak || "topografie");
   const foutIds = Array.isArray(body?.foutIds) ? body.foutIds.slice(0, 12).map((x) => String(x).slice(0, 40)) : [];
   const totaal = Math.min(20, Math.max(1, parseInt(body?.totaal, 10) || 10));

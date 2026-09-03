@@ -20,7 +20,7 @@ const chapters = [
   { letter: "B", title: "Synoniemen-paren", emoji: "🔁", from: 1, to: 1 },
   { letter: "C", title: "Wat zijn tegenstellingen?", emoji: "⚖️", from: 2, to: 2 },
   { letter: "D", title: "Welk woord past?", emoji: "🎯", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 function woordkaartSvg() {
@@ -353,7 +353,7 @@ const steps = [
 
   // STAP 5: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — synoniem + tegenstelling mix",
+    title: "Eindopdracht — synoniem + tegenstelling mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: synoniemen, tegenstellingen, woord-in-zin.\n\nVeel succes!",
     checks: [

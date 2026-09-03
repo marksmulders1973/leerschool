@@ -22,7 +22,7 @@ const chapters = [
   { letter: "C", title: "Tijden optellen & aftrekken", emoji: "➕", from: 2, to: 2 },
   { letter: "D", title: "24-uurs format", emoji: "🚂", from: 3, to: 3 },
   { letter: "E", title: "Praktijk — school + reizen", emoji: "🏫", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function klokSvg(uur, min, label) {
@@ -381,7 +381,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — tijd-mix",
+    title: "Eindopdracht — tijd-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: omzetten van eenheden, tijdsduur, optellen, aftrekken, 24-uurs.\n\n**Tip**: tekenen op kladpapier helpt. Zet de begin-tijd, eind-tijd, en stappen ertussen.\n\nVeel succes!",
     checks: [

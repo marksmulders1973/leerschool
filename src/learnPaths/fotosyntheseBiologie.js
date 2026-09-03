@@ -24,7 +24,7 @@ const chapters = [
   { letter: "C", title: "Bladeren als fabriekjes", emoji: "🍃", from: 2, to: 2 },
   { letter: "D", title: "Zuurstof + ademen", emoji: "🫁", from: 3, to: 3 },
   { letter: "E", title: "Planten in de voedselketen", emoji: "🥗", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function fotosyntheseSvg() {

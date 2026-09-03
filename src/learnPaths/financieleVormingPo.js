@@ -23,7 +23,7 @@ const chapters = [
   { letter: "C", title: "Sparen + rente", emoji: "🏦", from: 2, to: 2 },
   { letter: "D", title: "Begroten (50/30/20)", emoji: "📊", from: 3, to: 3 },
   { letter: "E", title: "Lenen + reclame-trucs", emoji: "⚠️", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function begrotingSvg() {
@@ -353,7 +353,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — geldwijsheid mix",
+    title: "Eindopdracht — geldwijsheid mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: geld-functies, zakgeld, sparen, begroten, lenen.\n\nVeel succes!",
     checks: [

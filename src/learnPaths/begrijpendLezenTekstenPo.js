@@ -21,7 +21,7 @@ const chapters = [
   { letter: "B", title: "Instructieve tekst — uitleggen", emoji: "📖", from: 1, to: 1 },
   { letter: "C", title: "Betogende tekst — mening", emoji: "🗣️", from: 2, to: 2 },
   { letter: "D", title: "Verhalende tekst", emoji: "📓", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht — mix", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht — mix", emoji: "🏆", from: 4, to: 4 },
 ];
 
 // ── Tekst 1: zakelijke tekst (informatief) ──────────────────────────
@@ -778,9 +778,9 @@ const steps = [
     ],
   },
 
-  // ── Stap 5 — Toets-eindopdracht ──────────────────────────────────
+  // ── Stap 5 — Eindopdracht ──────────────────────────────────
   {
-    title: "Toets-eindopdracht — vier teksten gemixt",
+    title: "Eindopdracht — vier teksten gemixt",
     explanation: "**Vier vragen, één over elke tekst-soort.** Test of je het verschil tussen tekstsoorten en vraagtypen onder de knie hebt.\n\nBij de eindtoets krijg je deze mix: zakelijke + instructieve + betogende + verhalende teksten. Soms heel kort, soms langer.\n\n*Veel succes!*",
     checks: [
       {
@@ -1111,7 +1111,7 @@ const begrijpendLezenTekstenPo = {
     { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F" },
   ],
   intro:
-    "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op de Doorstroomtoets (voorheen Doorstroomtoets) begrijpend lezen.",
+    "Vier echte oefenteksten van ~200 woorden + 4 Doorstroomtoets-stijl vragen elk: zakelijk, instructief, betogend, verhalend. Plus een gemixte eindopdracht. Perfect voor groep 7-8 die zich voorbereidt op de Doorstroomtoets (voorheen Cito-eindtoets) begrijpend lezen.",
   triggerKeywords: [
     "begrijpend lezen", "tekst lezen", "leesvaardigheid",
     "zakelijke tekst", "instructieve tekst", "betogende tekst", "verhalende tekst",

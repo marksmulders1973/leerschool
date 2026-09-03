@@ -10,7 +10,7 @@ const chapters = [
   { letter: "B", title: "Omtrek + Oppervlakte rechthoek", emoji: "📐", from: 1, to: 1 },
   { letter: "C", title: "Andere figuren (driehoek, cirkel)", emoji: "🟦", from: 2, to: 2 },
   { letter: "D", title: "Inhoud (kubus, balk, cilinder)", emoji: "🧊", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht (praktijksommen)", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht (praktijksommen)", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -273,7 +273,7 @@ const steps = [
 
   // ─── E. Eindopdracht ──────────────────────────────────────
   {
-    title: "Toets-eindopdracht — praktijksommen mix",
+    title: "Eindopdracht — praktijksommen mix",
     explanation:
       "**Toets-meetkunde** is altijd PRAKTIJK-gericht:\n• Tuin-oppervlakte voor gras.\n• Tegels berekenen.\n• Verfblik voor muur.\n• Aquarium-inhoud.\n• Schaal op kaart.\n\n**Werkwijze elke som**:\n1. **Lees** rustig.\n2. **Maak tekening** als geen plaatje gegeven.\n3. **Label** alle gegeven maten.\n4. **Identificeer**: vraag naar omtrek, oppervlakte, inhoud?\n5. **Formule** kiezen + invullen.\n6. **Controleer eenheid** (cm? cm²? cm³? L?).\n7. **Antwoord** rond af zoals gevraagd.\n\n**Eenheid-tips**:\n• Lengte: cm, m, km.\n• Oppervlakte: cm², m², ha.\n• Inhoud: cm³, m³, L.\n• Tip: 'twee dimensies maken vierkant', '3D maakt kubiek'.\n\n**Voorbeeld-som**:\nEen rechthoekige tuin is 12 m × 8 m. Eromheen leg je een pad van 1 m breed.\n• Buitenmaten met pad: (12+2) × (8+2) = 14 × 10 = 140 m².\n• Tuin zelf: 96 m².\n• Pad-oppervlakte: 140 − 96 = 44 m².\n\n**Tuintegel-som**:\nKamer 5 × 4 m, tegels 25 × 25 cm. Hoeveel?\n• Kamer = 20 m² = 200 000 cm².\n• Tegel = 25 × 25 = 625 cm².\n• Aantal = 200 000 / 625 = 320 tegels.\n• + 10% reserve → 352 tegels.\n\n**Verfblik-som**:\nMuur 4 × 3 m. Eén blik dekt 8 m².\n• Muur = 12 m².\n• Blikken nodig: 12 / 8 = 1,5 → ALTIJD afronden naar boven → 2 blikken.\n\n**Aquarium-som**:\nKubus-aquarium zijde 50 cm. Vullen tot 80%.\n• Inhoud totaal: 50³ = 125 000 cm³ = 125 L.\n• 80% = 100 L.",
     checks: [

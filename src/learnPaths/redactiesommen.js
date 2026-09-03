@@ -17,7 +17,7 @@ const chapters = [
   { letter: "B", title: "Stappenplan — wat moet je doen?", emoji: "🔍", from: 1, to: 1 },
   { letter: "C", title: "Eén-stap-sommen", emoji: "➕", from: 2, to: 2 },
   { letter: "D", title: "Twee-stap-sommen + meer", emoji: "🔁", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -189,7 +189,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — redactiesommen mix",
+    title: "Eindopdracht — redactiesommen mix",
     explanation: "Mix-toets met redactiesommen in Doorstroomtoets-stijl. Soms 1 stap, soms 2 stappen. Lees rustig, gebruik het stappenplan.\n\nVeel succes!",
     checks: [
       {

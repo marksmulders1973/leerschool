@@ -18,7 +18,7 @@ const chapters = [
   { letter: "A", title: "Wat is een negatief getal?", emoji: "🌡️", from: 0, to: 0 },
   { letter: "B", title: "Getalslijn — optellen + aftrekken", emoji: "➡️", from: 1, to: 2 },
   { letter: "C", title: "Praktijk — temperatuur en geld", emoji: "💸", from: 3, to: 3 },
-  { letter: "D", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "D", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 function thermometerSvg(temp, label) {
@@ -256,7 +256,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — negatieve getallen mix",
+    title: "Eindopdracht — negatieve getallen mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl met negatieve getallen — temperatuur, saldo, sommen.\n\nVeel succes!",
     checks: [
       {

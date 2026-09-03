@@ -377,7 +377,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   };
 
   // Helper voor inline link-knoppen in hero-zin (Mark 2026-05-15): doorklikbare
-  // 'Doorstroomtoets' / 'Toets-toetsen' / 'VMBO/HAVO/VWO-examens' spans die
+  // 'Doorstroomtoets' / 'Doorstroomtoetsen' / 'VMBO/HAVO/VWO-examens' spans die
   // visueel als link voelen (kleur + onderlijn-op-hover) maar buttons zijn.
   const linkSpanStyle = (kleur) => ({
     background: "transparent",

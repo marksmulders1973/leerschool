@@ -22,7 +22,7 @@ const chapters = [
   { letter: "C", title: "Vermenigvuldigen", emoji: "✖️", from: 2, to: 2 },
   { letter: "D", title: "Delen", emoji: "➗", from: 3, to: 3 },
   { letter: "E", title: "Praktijk — geld + meten", emoji: "🛒", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function plaatswaardenSvg() {
@@ -337,7 +337,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — kommagetallen-mix",
+    title: "Eindopdracht — kommagetallen-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: optellen, aftrekken, vermenigvuldigen, delen + praktijk.\n\n**Tip**: zet komma's altijd recht onder elkaar bij optellen/aftrekken. Tel decimalen bij vermenigvuldigen. Verschuif komma's bij delen door een kommagetal.\n\nVeel succes!",
     checks: [

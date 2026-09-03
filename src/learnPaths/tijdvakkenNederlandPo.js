@@ -18,7 +18,7 @@ const chapters = [
   { letter: "B", title: "Middeleeuwen — ridders & graven", emoji: "🏰", from: 1, to: 1 },
   { letter: "C", title: "Gouden Eeuw & Republiek", emoji: "⚓", from: 2, to: 2 },
   { letter: "D", title: "Industrie, oorlog & nu", emoji: "⚙️", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht — tijdlijn-mix", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht — tijdlijn-mix", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -290,7 +290,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — tijdlijn-mix",
+    title: "Eindopdracht — tijdlijn-mix",
     explanation: "Mix-toets over de hele Nederlandse geschiedenis. Test of je de **volgorde** van gebeurtenissen onthoudt.",
     checks: [
       {
@@ -471,7 +471,7 @@ const tijdvakkenNederlandPo = {
     { id: "bekende-nederlanders-po", title: "Historische Nederlanders", niveau: "po-1F" },
   ],
   intro:
-    "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Toets-doorstroomtoets-stof wil dekken.",
+    "Hoofdlijnen van de Nederlandse geschiedenis: prehistorie + Romeinen, Middeleeuwen, Gouden Eeuw + Republiek, industrie + WO + nu. ~15 min. Voor groep 6-8 die de Doorstroomtoets-stof wil dekken.",
   triggerKeywords: [
     "geschiedenis", "tijdvakken", "tijdlijn", "Romeinen", "Middeleeuwen",
     "Karel de Grote", "Willem van Oranje", "Tachtigjarige Oorlog",

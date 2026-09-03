@@ -620,7 +620,7 @@ const matenEenheden = {
     { id: "kommagetallen-po", title: "Kommagetallen", niveau: "po-1F" },
   ],
   intro:
-    "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Doorstroomtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Cito/IEP-stijl. ~15 min per deel.",
+    "Maten en eenheden voor Doorstroomtoets groep 7-8 (voorheen Cito-eindtoets): lengte (km/m/cm/mm), gewicht (kg/g/ton), inhoud (L/mL), tijd (uur/min/sec), de komma-verschuif-truc, en redactiesommen in Cito/IEP-stijl. ~15 min per deel.",
   triggerKeywords: [
     "maten","eenheden","kilometer","meter","centimeter","millimeter",
     "kilogram","gram","milligram","ton","liter","milliliter","deciliter",

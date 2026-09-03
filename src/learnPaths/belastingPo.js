@@ -22,7 +22,7 @@ const chapters = [
   { letter: "A", title: "Wat is belasting?", emoji: "🏛️", from: 0, to: 0 },
   { letter: "B", title: "Belasting op je loon", emoji: "💼", from: 1, to: 1 },
   { letter: "C", title: "Btw in de winkelprijs", emoji: "🧾", from: 2, to: 2 },
-  { letter: "D", title: "Toets-eindopdracht", emoji: "🏆", from: 3, to: 3 },
+  { letter: "D", title: "Eindopdracht", emoji: "🏆", from: 3, to: 3 },
 ];
 
 // Bruto → belasting eraf → netto, als 3 blokjes met een ronde som (€100 / 20%).
@@ -387,7 +387,7 @@ const steps = [
 
   // STAP D: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — belasting mix",
+    title: "Eindopdracht — belasting mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: wat is belasting, loon (bruto → netto) en btw in de prijs. Reken rustig en kijk goed of je moet **optellen of aftrekken**.\n\nVeel succes!",
     checks: [

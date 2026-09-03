@@ -24,7 +24,7 @@ const chapters = [
   { letter: "C", title: "Organen", emoji: "🫁", from: 2, to: 2 },
   { letter: "D", title: "Voeding (Schijf van Vijf)", emoji: "🥦", from: 3, to: 3 },
   { letter: "E", title: "Hygiëne + slaap + sport", emoji: "💪", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function skeletSvg() {
@@ -380,7 +380,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — lichaam-mix",
+    title: "Eindopdracht — lichaam-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: skelet, organen, voeding, gezondheid.\n\nVeel succes!",
     checks: [

@@ -315,16 +315,36 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
       const { onderwerp, html, text } = maakRapportMail(adres, secties, niveauSectie, vriendCode);
       // Partner-mail: kopie naar het tweede adres als het geldig is en niet
       // gelijk aan het ouder-adres (geen dubbele bezorging).
-      const ontvangers = [adres];
-      const partner = partnerVan.get(adres);
-      if (partner && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(partner) && partner !== adres) ontvangers.push(partner);
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ from: FROM, to: ontvangers, subject: onderwerp, html, text }),
+        body: JSON.stringify({ from: FROM, to: [adres], subject: onderwerp, html, text }),
       });
       if (!r.ok) { fouten.push(adres.slice(0, 6) + ":" + r.status); continue; }
       gelukt++;
+      // 👥 Partner-meelezer: eigen mail mét eigen afmeld-link (kliktocht 3 sep
+      // 2026 — de partner heeft geen account en kon zich nergens afmelden).
+      // Alleen ná bevestiging (de RPC geeft het adres anders niet door).
+      const partner = partnerVan.get(adres);
+      if (partner && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(partner) && partner !== adres) {
+        try {
+          const pq = await sb(`parent_child_links?partner_email=eq.${encodeURIComponent(partner)}&partner_token=not.is.null&select=partner_token&limit=1`, { method: "GET" }, base, key);
+          const prow = pq.ok ? await pq.json().catch(() => []) : [];
+          const ptoken = Array.isArray(prow) && prow[0]?.partner_token ? prow[0].partner_token : null;
+          const af = ptoken ? `${SITE}/api/unsubscribe?partner=${encodeURIComponent(ptoken)}` : `${SITE}/ouder`;
+          const voet = `<p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:10px 0 0;">Je leest mee met dit rapport omdat ${adres} je daarvoor uitnodigde. Liever niet meer? <a href="${af}" style="color:#9fb0c6;">Afmelden als meelezer</a> — direct geregeld.</p>`;
+          const phtml = html.replace("</div></body></html>", `${voet}</div></body></html>`);
+          const ptext = `${text}\n\nJe leest mee omdat ${adres} je uitnodigde. Niet meer meelezen: ${af}`;
+          const pr = await fetch("https://api.resend.com/emails", {
+            method: "POST",
+            headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
+            body: JSON.stringify({ from: FROM, to: [partner], subject: onderwerp, html: phtml, text: ptext }),
+          });
+          if (!pr.ok) fouten.push("partner-" + adres.slice(0, 6) + ":" + pr.status);
+        } catch (e) {
+          fouten.push("partner-" + adres.slice(0, 6) + ":" + String(e).slice(0, 40));
+        }
+      }
     } catch (e) {
       fouten.push(adres.slice(0, 6) + ":" + String(e).slice(0, 50));
     }

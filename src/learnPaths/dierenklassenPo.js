@@ -25,7 +25,7 @@ const chapters = [
   { letter: "C", title: "Vissen + amfibieën", emoji: "🐟", from: 2, to: 2 },
   { letter: "D", title: "Reptielen + insecten", emoji: "🦎", from: 3, to: 3 },
   { letter: "E", title: "Voedselketens + biotopen", emoji: "🐝", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function dierenklassenSvg() {
@@ -417,7 +417,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — dieren-mix",
+    title: "Eindopdracht — dieren-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: dierenklassen, kenmerken, voedselketen.\n\nVeel succes!",
     checks: [

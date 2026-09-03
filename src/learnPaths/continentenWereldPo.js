@@ -34,7 +34,7 @@ const chapters = [
   { letter: "C", title: "Landen op continent", emoji: "🏛️", from: 2, to: 2 },
   { letter: "D", title: "Tijdzones", emoji: "🕐", from: 3, to: 3 },
   { letter: "E", title: "Beroemde steden + wonderen", emoji: "🗽", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 const steps = [
@@ -344,7 +344,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — wereld-mix",
+    title: "Eindopdracht — wereld-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: continenten, oceanen, landen, tijdzones, steden.\n\nVeel succes!",
     checks: [

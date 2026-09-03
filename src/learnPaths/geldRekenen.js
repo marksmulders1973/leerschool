@@ -18,7 +18,7 @@ const chapters = [
   { letter: "B", title: "Optellen en aftrekken", emoji: "➕", from: 1, to: 1 },
   { letter: "C", title: "Wisselgeld + slim kopen", emoji: "🛒", from: 2, to: 2 },
   { letter: "D", title: "Vergelijken — wat is voordeligst?", emoji: "📊", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -337,7 +337,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — geldsommen mix",
+    title: "Eindopdracht — geldsommen mix",
     explanation: "Mix-toets met geldsommen in Doorstroomtoets-stijl. Verschillende vragen — winkel, wisselgeld, vergelijken.\n\nVeel succes!",
     checks: [
       {

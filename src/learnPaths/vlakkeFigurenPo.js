@@ -17,7 +17,7 @@ const stepEmojis = ["⬜","🔺","🔵","🛒","🏆"];
 const chapters = [
   { letter: "A", title: "Vierkant en rechthoek", emoji: "⬜", from: 0, to: 1 },
   { letter: "B", title: "Driehoek", emoji: "🔺", from: 2, to: 2 },
-  { letter: "C", title: "Praktijk + Toets-eindopdracht", emoji: "🏆", from: 3, to: 4 },
+  { letter: "C", title: "Praktijk + Eindopdracht", emoji: "🏆", from: 3, to: 4 },
 ];
 
 function rechthoekSvg(b, h, label) {
@@ -247,7 +247,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — vlakke figuren mix",
+    title: "Eindopdracht — vlakke figuren mix",
     explanation: "Mix-toets met omtrek + oppervlakte in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       {

@@ -23,7 +23,7 @@ const chapters = [
   { letter: "C", title: "Volume van een balk", emoji: "📐", from: 2, to: 2 },
   { letter: "D", title: "Eenheden omrekenen", emoji: "🔄", from: 3, to: 3 },
   { letter: "E", title: "Praktijk-sommen", emoji: "🏊", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 // SVG: een kubus in 3D-perspectief met label van zijde-lengte.
@@ -343,7 +343,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix eindopdracht
   {
-    title: "Toets-eindopdracht — volume-mix",
+    title: "Eindopdracht — volume-mix",
     explanation:
       "Mix-toets in echte Doorstroomtoets-stijl. Verschillende sommen door elkaar — kubus, balk, eenheden omrekenen.\n\n**Tip**: lees de vraag eerst rustig, zet **eenheid** altijd bij je antwoord. Bij twijfel — kies bewust kubus (1 zijde) of balk (3 getallen).\n\nVeel succes!",
     checks: [

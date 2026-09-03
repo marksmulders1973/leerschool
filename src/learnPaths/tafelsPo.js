@@ -25,7 +25,7 @@ const chapters = [
   { letter: "C", title: "Basis-tafels (3, 4)", emoji: "🟡", from: 2, to: 2 },
   { letter: "D", title: "Lastige tafels (6, 7, 8, 9)", emoji: "🔴", from: 3, to: 3 },
   { letter: "E", title: "Slimme tafel-trucs", emoji: "💡", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
   { letter: "G", title: "Oefen ze allemaal!", emoji: "🧮", from: 6, to: 6 },
 ];
 
@@ -398,7 +398,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — tafel-mix",
+    title: "Eindopdracht — tafel-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Alle tafels door elkaar + redactiesommen.\n\nVeel succes!",
     checks: [

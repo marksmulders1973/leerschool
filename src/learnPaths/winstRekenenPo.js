@@ -22,7 +22,7 @@ const stepEmojis = ["🏷️", "📈", "🏆"];
 const chapters = [
   { letter: "A", title: "Inkoop, verkoop en winst", emoji: "🏷️", from: 0, to: 0 },
   { letter: "B", title: "Winst per stuk + totale winst", emoji: "📈", from: 1, to: 1 },
-  { letter: "C", title: "Toets-eindopdracht", emoji: "🏆", from: 2, to: 2 },
+  { letter: "C", title: "Eindopdracht", emoji: "🏆", from: 2, to: 2 },
 ];
 
 // Inkoop − naar − verkoop, met de winst als groen blokje ertussen (€4 → €7 = €3).
@@ -373,7 +373,7 @@ const steps = [
 
   // STAP C: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — winst mix",
+    title: "Eindopdracht — winst mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: winst (verkoop − inkoop), winst per stuk × aantal, terugrekenen naar de verkoopprijs, en het verschil tussen opbrengst en winst.\n\nKijk goed of je moet **optellen, aftrekken of keer doen**. Veel succes!",
     checks: [

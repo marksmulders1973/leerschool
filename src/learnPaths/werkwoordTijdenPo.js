@@ -16,7 +16,7 @@ const chapters = [
   { letter: "A", title: "Wat is een werkwoord?", emoji: "📝", from: 0, to: 0 },
   { letter: "B", title: "Tegenwoordige tijd", emoji: "⏰", from: 1, to: 1 },
   { letter: "C", title: "Verleden tijd — sterke en zwakke", emoji: "⏳", from: 2, to: 3 },
-  { letter: "D", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "D", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -217,7 +217,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — werkwoordstijden mix",
+    title: "Eindopdracht — werkwoordstijden mix",
     explanation: "Mix-toets: tegenwoordige tijd, verleden tijd, kofschip, sterke werkwoorden.\n\nVeel succes!",
     checks: [
       {

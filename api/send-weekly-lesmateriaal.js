@@ -346,7 +346,9 @@ export default async function handler(req, res) {
   // geleden mail kreeg, en niet is uitgeschreven, en op de lesmateriaal-lijst staat.
   const drempel = new Date(Date.now() - DAGEN_TUSSEN * 86400000).toISOString();
   const filter =
-    `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol,leesladder,redactiebladen)` +
+    // Kliktocht 3 sep: 'weekpakket' (voordeur-code-mail) hoorde er niet bij →
+    // een bevestigde lead kreeg nooit de beloofde wekelijkse code.
+    `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol,leesladder,redactiebladen,weekpakket)` +
     `&unsubscribed_at=is.null` +
     `&or=(last_sent_at.is.null,last_sent_at.lt.${drempel})` +
     // F15 (2 sep 2026): de eerste mail (het gevraagde ding + bevestig-link) mag

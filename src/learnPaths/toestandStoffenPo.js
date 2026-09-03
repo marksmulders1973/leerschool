@@ -22,7 +22,7 @@ const chapters = [
   { letter: "B", title: "Vloeistoffen", emoji: "💧", from: 1, to: 1 },
   { letter: "C", title: "Gassen", emoji: "💨", from: 2, to: 2 },
   { letter: "D", title: "Overgangen + watercyclus", emoji: "🔄", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 function toestandSvg() {
@@ -354,7 +354,7 @@ const steps = [
 
   // STAP 5: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — toestanden-mix",
+    title: "Eindopdracht — toestanden-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: 3 toestanden, overgangen, watercyclus.\n\nVeel succes!",
     checks: [

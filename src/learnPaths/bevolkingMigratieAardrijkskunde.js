@@ -24,7 +24,7 @@ const chapters = [
   { letter: "C", title: "Migratie — soorten", emoji: "✈️", from: 2, to: 2 },
   { letter: "D", title: "Push + pull factoren", emoji: "↔️", from: 3, to: 3 },
   { letter: "E", title: "Nederland als migratie-land", emoji: "🇳🇱", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function bevolkingsSvg() {
@@ -263,7 +263,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — bevolking & migratie mix",
+    title: "Eindopdracht — bevolking & migratie mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: bevolking, dichtheid, migratie, push/pull, NL.\n\nVeel succes!",
     checks: [

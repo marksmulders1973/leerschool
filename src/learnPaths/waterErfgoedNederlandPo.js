@@ -24,7 +24,7 @@ const chapters = [
   { letter: "C", title: "Polders + droogmaking", emoji: "🌾", from: 2, to: 2 },
   { letter: "D", title: "Watersnoodramp 1953", emoji: "💧", from: 3, to: 3 },
   { letter: "E", title: "Deltawerken", emoji: "🏗️", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function dijkSvg() {
@@ -336,7 +336,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — Nederland en water mix",
+    title: "Eindopdracht — Nederland en water mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Door elkaar: NAP, dijken, polders, watersnood, Deltawerken.\n\nVeel succes!",
     checks: [

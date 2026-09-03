@@ -9,7 +9,7 @@ const chapters = [
   { letter: "B", title: "Snelheid-eenheden", emoji: "🏃", from: 1, to: 1 },
   { letter: "C", title: "Afstand berekenen (S=V·T)", emoji: "📏", from: 2, to: 2 },
   { letter: "D", title: "Snelheid + Tijd berekenen", emoji: "🧮", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht — praktijksommen", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht — praktijksommen", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -283,7 +283,7 @@ const steps = [
 
   // ─── E. Eindopdracht ──────────────────────────────────────
   {
-    title: "Toets-eindopdracht — praktijksommen mix",
+    title: "Eindopdracht — praktijksommen mix",
     explanation:
       "**Toets-tijd-snelheid-afstand** is altijd PRAKTISCH:\n• Reistijden bus/trein/auto.\n• Sport-records.\n• Vertraging + inhaal.\n• Treinen kruisen.\n• Met pauzes.\n\n**Werkwijze**:\n1. **Lees** rustig — wat is GEGEVEN, wat GEVRAAGD?\n2. **Eenheden check**: km/h + uren? m/s + s?\n3. **Formule** kiezen: V=S/T, S=V×T, T=S/V.\n4. **Bereken** stap voor stap.\n5. **Eenheid bij antwoord** (km, h, min, m/s).\n6. **Check** door terug te rekenen.\n\n**Voorbeeld-som** (Doorstroomtoets-stijl):\n\n**Som 1 — Reisplan**:\nNL → Frankrijk. Vertrek 8:00. Pauze 1 uur in België (12:00-13:00). Snelheid 90 km/h, totale rij-afstand 1080 km. Aankomst?\n• Rij-tijd: 1080/90 = 12 uur.\n• Met 1 uur pauze: totaal 13 uur.\n• Aankomst: 8:00 + 13 = **21:00**.\n\n**Som 2 — Inhalen**:\nLeo fietst 10:00 weg, 18 km/h. Mark vertrekt 10:15, 24 km/h. Wanneer haalt Mark Leo in?\n• Bij 10:15: Leo is al 0,25 × 18 = 4,5 km vooruit.\n• Snelheids-verschil: 24 − 18 = 6 km/h.\n• Inhaaltijd: 4,5/6 = 0,75 h = 45 min.\n• Mark haalt om 10:15 + 45 min = **11:00**.\n\n**Som 3 — Marathon**:\n42 km marathon in 3 h 30 min. Gemiddelde snelheid?\n• 3 h 30 min = 3,5 h.\n• V = 42/3,5 = **12 km/h**.\n\n**Som 4 — Vliegen**:\nAmsterdam-Tokyo vlucht: 9000 km, 11 uur (incl. wind-effecten). Gemiddelde snelheid?\n• 9000/11 = ~**818 km/h**.\n\n**Som 5 — Twee treinen tegelijk**:\nTrein Amsterdam 130 km/h, Trein Den Haag 110 km/h. Recht naar elkaar, 60 km uit elkaar om 10:00. Wanneer kruisen?\n• Samen 240 km/h.\n• Tijd: 60/240 = 0,25 h = 15 min.\n• Om **10:15** kruisen ze.\n\n**Toets-valkuilen**:\n• **Eenheden missen**: km/h + minuten → vergeet om te rekenen.\n• **Pauzes vergeten** in totaltijd.\n• **Gemiddelde snelheid** verwarrend bij verschillende stukken (zie stap B Som 9).\n• **'Wanneer' vs 'hoe lang'**: 'Wanneer arriveert' = vertrek + reisduur.\n\n**Tip Doorstroomtoets-stijl-vraag-types**:\n• Meerkeuze: bereken alle 4 opties + zie welke past.\n• Tekening helpt — schets reisplan op tijdas.\n• Schrijf eenheid groot in antwoord — vergeet je 'm dan minder.",
     checks: [

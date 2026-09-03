@@ -20,7 +20,7 @@ const chapters = [
   { letter: "B", title: "Vereenvoudigen + gelijke breuken", emoji: "🟰", from: 2, to: 2 },
   { letter: "C", title: "Optellen en aftrekken", emoji: "➕", from: 3, to: 4 },
   { letter: "D", title: "Vermenigvuldigen + praktijk", emoji: "🛒", from: 5, to: 5 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 6, to: 6 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 6, to: 6 },
 ];
 
 function pizzaSvg(teller, noemer, kleur, label) {
@@ -244,7 +244,7 @@ const steps = [
 
   {
     title: "Vermenigvuldigen — een breuk × een heel getal",
-    explanation: "Een breuk vermenigvuldigen met een heel getal is **simpeler dan optellen**: je vermenigvuldigt alleen de **teller**.\n\n**Voorbeeld**:\n• 3 × 1/4 = **3/4**.\n• 5 × 1/2 = 5/2 = **2½**.\n• 4 × 2/3 = 8/3 = **2⅔**.\n\n**Visueel**: 3 × 1/4 betekent: 3 kwartjes pizza = drie-kwart pizza.\n\n**'Wat is X/Y van iets'** — de Toets-favoriet:\n*'Hoeveel is 3/4 van 20?'*\n\n**Aanpak 1 — eerst delen, dan keer**:\n• 20 ÷ 4 = 5 *(één-kwart)*\n• 5 × 3 = **15**\n\n**Aanpak 2 — eerst keer, dan delen**:\n• 20 × 3 = 60\n• 60 ÷ 4 = **15**\n\nBeide kloppen — de eerste is meestal handiger want je werkt met kleinere getallen.\n\n**Toets-voorbeelden**:\n*'2/3 van 30 leerlingen werkt mee'* → 30 ÷ 3 × 2 = **20 leerlingen**.\n*'3/8 van een pak van 800 g'* → 800 ÷ 8 × 3 = **300 g**.\n*'1/5 van € 25'* → 25 ÷ 5 = **€ 5**.\n\n**Toets-truc — 'breuk van iets' met grote getallen**:\nGa altijd via de **eenheids-breuk** (1/4, 1/3, 1/5, etc.). Dan tel je gewoon op.\n\nVoorbeeld: *'3/7 van 84'*\n• 1/7 van 84 = 84 ÷ 7 = 12.\n• 3/7 = 3 × 12 = **36**.",
+    explanation: "Een breuk vermenigvuldigen met een heel getal is **simpeler dan optellen**: je vermenigvuldigt alleen de **teller**.\n\n**Voorbeeld**:\n• 3 × 1/4 = **3/4**.\n• 5 × 1/2 = 5/2 = **2½**.\n• 4 × 2/3 = 8/3 = **2⅔**.\n\n**Visueel**: 3 × 1/4 betekent: 3 kwartjes pizza = drie-kwart pizza.\n\n**'Wat is X/Y van iets'** — de Toets-favoriet:\n*'Hoeveel is 3/4 van 20?'*\n\n**Aanpak 1 — eerst delen, dan keer**:\n• 20 ÷ 4 = 5 *(één-kwart)*\n• 5 × 3 = **15**\n\n**Aanpak 2 — eerst keer, dan delen**:\n• 20 × 3 = 60\n• 60 ÷ 4 = **15**\n\nBeide kloppen — de eerste is meestal handiger want je werkt met kleinere getallen.\n\n**Voorbeelden uit de toets**:\n*'2/3 van 30 leerlingen werkt mee'* → 30 ÷ 3 × 2 = **20 leerlingen**.\n*'3/8 van een pak van 800 g'* → 800 ÷ 8 × 3 = **300 g**.\n*'1/5 van € 25'* → 25 ÷ 5 = **€ 5**.\n\n**Toets-truc — 'breuk van iets' met grote getallen**:\nGa altijd via de **eenheids-breuk** (1/4, 1/3, 1/5, etc.). Dan tel je gewoon op.\n\nVoorbeeld: *'3/7 van 84'*\n• 1/7 van 84 = 84 ÷ 7 = 12.\n• 3/7 = 3 × 12 = **36**.",
     checks: [
       {
         q: "**3/4 van 20** = ?",
@@ -355,7 +355,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — breuken mix",
+    title: "Eindopdracht — breuken mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl. Breuken in alle vormen — visueel, in woorden, met of zonder context.\n\nVeel succes!",
     checks: [
       {

@@ -66,8 +66,11 @@ export async function handleBevestig(req, res) {
       const rows = q.ok ? await q.json().catch(() => []) : [];
       const email = Array.isArray(rows) && rows[0]?.email ? String(rows[0].email).toLowerCase() : null;
       if (!email) return res.status(200).send(pagina("Deze link is niet (meer) geldig", "Vraag het materiaal gewoon opnieuw aan op leerkwartier.app, dan krijg je een verse link.", false));
+      // Kliktocht 3 sep: ilike zonder joker = hoofdletter-ongevoelig (een lead
+      // die "Mark@…" typte kreeg anders "Gelukt" maar bleef onbevestigd).
+      const patroon = email.replace(/[\\%_]/g, "\\$&");
       await sb(
-        `upgrade_waitlist?email=eq.${encodeURIComponent(email)}&confirmed_at=is.null`,
+        `upgrade_waitlist?email=ilike.${encodeURIComponent(patroon)}&confirmed_at=is.null`,
         { method: "PATCH", body: JSON.stringify({ confirmed_at: new Date().toISOString() }) },
         base, key
       );

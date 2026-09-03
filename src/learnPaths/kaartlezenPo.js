@@ -17,7 +17,7 @@ const chapters = [
   { letter: "B", title: "Kompasroos — windrichtingen", emoji: "🧭", from: 1, to: 1 },
   { letter: "C", title: "Schaal — afstanden meten", emoji: "📏", from: 2, to: 2 },
   { letter: "D", title: "Legenda — symbolen lezen", emoji: "📍", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -260,7 +260,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — kaartlezen mix",
+    title: "Eindopdracht — kaartlezen mix",
     explanation: "Mix-toets: kompasroos, schaal, legenda, kaartlezen-totaal.",
     checks: [
       {

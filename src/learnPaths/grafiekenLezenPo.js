@@ -23,7 +23,7 @@ const chapters = [
   { letter: "C", title: "Lijngrafiek", emoji: "📈", from: 2, to: 2 },
   { letter: "D", title: "Cirkeldiagram", emoji: "🥧", from: 3, to: 3 },
   { letter: "E", title: "Tabel ↔ grafiek", emoji: "🔁", from: 4, to: 4 },
-  { letter: "F", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "F", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function staafSvg(data, title) {
@@ -695,7 +695,7 @@ const steps = [
 
   // STAP 6: Doorstroomtoets-mix
   {
-    title: "Toets-eindopdracht — grafieken-mix",
+    title: "Eindopdracht — grafieken-mix",
     explanation:
       "Mix-toets in Doorstroomtoets-stijl. Verschillende grafiek-types door elkaar. **Lees altijd eerst**: titel, eenheid, x-as, y-as. Dan pas de vraag beantwoorden.\n\nVeel succes!",
     checks: [

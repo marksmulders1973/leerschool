@@ -460,7 +460,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — data lezen mix",
+    title: "Eindopdracht — data lezen mix",
     explanation: "Mix-toets met tabellen en grafieken in Doorstroomtoets-stijl. Verschillende vorm en bewerkingen door elkaar.\n\n**Hint**: lees telkens eerst titel + assen, dan vraag, dan reken.\n\nVeel succes!",
     svg: staafDiagram([
       { l: "Tom", v: 24 },
@@ -602,7 +602,7 @@ const tabellenGrafieken = {
     { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F" },
   ],
   intro:
-    "Tabellen en grafieken voor Doorstroomtoets groep 6-8 (voorheen Doorstroomtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdracht. ~15 min.",
+    "Tabellen en grafieken voor Doorstroomtoets groep 6-8 (voorheen Cito-eindtoets): tabel lezen, staafdiagram, lijngrafiek (verloop in tijd), cirkeldiagram (taartstukken). Met praktijksommen en eindopdracht. ~15 min.",
   triggerKeywords: [
     "tabel","grafiek","staafdiagram","lijngrafiek","cirkeldiagram",
     "taartdiagram","data","verloop","gemiddelde","aflezen","verschil",

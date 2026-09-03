@@ -17,7 +17,7 @@ const chapters = [
   { letter: "B", title: "Synoniemen — woorden met dezelfde betekenis", emoji: "🔄", from: 1, to: 1 },
   { letter: "C", title: "Antoniemen — tegenovergestelde", emoji: "↔️", from: 2, to: 2 },
   { letter: "D", title: "Woorden in zinnen begrijpen", emoji: "🤔", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -246,7 +246,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — woordenschat mix",
+    title: "Eindopdracht — woordenschat mix",
     explanation: "Mix-toets: synoniemen, antoniemen, betekenis in zin.\n\nVeel succes!",
     checks: [
       {

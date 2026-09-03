@@ -17,7 +17,7 @@ const chapters = [
   { letter: "B", title: "Leestekens — punt, komma, vraagteken", emoji: "✒️", from: 1, to: 1 },
   { letter: "C", title: "Samenstellingen — woorden plakken", emoji: "🔗", from: 2, to: 2 },
   { letter: "D", title: "Hoofdletters", emoji: "🅰️", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -352,7 +352,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — spelling-mix",
+    title: "Eindopdracht — spelling-mix",
     explanation: "Mix-toets: -isch/-lijk, leestekens, samenstellingen, hoofdletters.",
     checks: [
       {

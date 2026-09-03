@@ -18,7 +18,7 @@ const chapters = [
   { letter: "B", title: "Recepten — siroop en water", emoji: "🍋", from: 1, to: 1 },
   { letter: "C", title: "Verhoudingstabel", emoji: "📋", from: 2, to: 2 },
   { letter: "D", title: "Recepten omrekenen + schaal", emoji: "🍪", from: 3, to: 4 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 5, to: 5 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 5, to: 5 },
 ];
 
 function siroopSvg() {
@@ -303,7 +303,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — verhoudingen mix",
+    title: "Eindopdracht — verhoudingen mix",
     explanation: "Mix-toets in echte Doorstroomtoets-stijl. Verschillende verhoudings-vragen door elkaar — recept, schaal, klas, kostprijs.\n\n**Hint**: maak voor lastige vragen een **tabel** op kladpapier en vul in stapjes in.\n\nVeel succes!",
     checks: [
       {

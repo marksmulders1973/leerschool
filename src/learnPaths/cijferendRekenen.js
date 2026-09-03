@@ -23,7 +23,7 @@ const chapters = [
   { letter: "B", title: "Optellen + aftrekken", emoji: "➕", from: 1, to: 2 },
   { letter: "C", title: "Vermenigvuldigen", emoji: "✖️", from: 3, to: 4 },
   { letter: "D", title: "Delen + redactiesommen", emoji: "🛒", from: 5, to: 5 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 6, to: 6 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 6, to: 6 },
   { letter: "F", title: "Oefen plus & min!", emoji: "🧮", from: 7, to: 7 },
 ];
 
@@ -393,7 +393,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — alles cijferen",
+    title: "Eindopdracht — alles cijferen",
     explanation: "Mix-toets met cijferen in Doorstroomtoets-stijl. Verschillende bewerkingen door elkaar — kies zelf welke aanpak.\n\n**Hint**: schrijf álle sommen op en cijfer. Schaat af met schatting voor je antwoord opschrijft.\n\nVeel succes!",
     checks: [
       {

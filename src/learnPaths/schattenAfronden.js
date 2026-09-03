@@ -17,7 +17,7 @@ const chapters = [
   { letter: "B", title: "Afronden op 10/100/1000", emoji: "🔄", from: 1, to: 1 },
   { letter: "C", title: "Schatten van sommen", emoji: "➕", from: 2, to: 2 },
   { letter: "D", title: "Praktijk — kassabon + tijden", emoji: "🛒", from: 3, to: 3 },
-  { letter: "E", title: "Toets-eindopdracht", emoji: "🏆", from: 4, to: 4 },
+  { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
 const steps = [
@@ -188,7 +188,7 @@ const steps = [
   },
 
   {
-    title: "Toets-eindopdracht — schatten + afronden mix",
+    title: "Eindopdracht — schatten + afronden mix",
     explanation: "Mix-toets met afrond- en schat-vragen in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       {

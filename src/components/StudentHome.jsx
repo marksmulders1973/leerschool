@@ -905,7 +905,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
             onClick={() => {
               SoundEngine.play("click");
               // Open Doorstroomtoets met alle pijlers gemixt (geen filter)
-              onCitoOefenenSubject(null, "Alle Toets-vakken");
+              onCitoOefenenSubject(null, "Alle onderdelen");
             }}
             style={{
               display: "flex",
