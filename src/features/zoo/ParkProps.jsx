@@ -2348,6 +2348,208 @@ export function Station({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
+// ══════════════════════════════════════════════════════════════════════════
+// 🚂 STOOMTREIN — losse onderdelen (Mark 3 sep: "de trein rijdt dwars op het
+// spoor, maak in orde en veel gedetailleerder, net als in Harry Potter").
+// Alle modellen zijn opgebouwd met de NEUS op +X (net als de dwarsliggers),
+// zodat rotation.y = atan2(-dir.z, dir.x) klopt. Vóór 3 sep stonden de
+// modellen langs X maar draaide de code de Z-as in de rijrichting → dwars.
+// ══════════════════════════════════════════════════════════════════════════
+const TREIN_ROOD = "#a01c22";      // scharlaken ketel (Hogwarts Express)
+const TREIN_DONKER = "#6f171c";    // dieper karmijn voor de rijtuigen
+const TREIN_ZWART = "#17181a";     // rookkast, dak, onderstel
+const TREIN_MESSING = "#c8a02f";   // banden, naven, biesjes
+const TREIN_KOPER = "#b4703a";     // koperen schoorsteenrand
+const TREIN_CREME = "#e8dcc0";     // crèmekleurige band boven de ramen
+const TREIN_GLAS = "#22343d";
+// Model-eenheid → wereld-eenheid (1 rail-tegel = 2 m): de loc wordt zo ~3,3 m
+// lang en ~2,3 m hoog, iets groter dan een speler — zoals een échte stoomtrein.
+const TREIN_SCHAAL = 1.45;
+
+// Eén wiel: band + gekleurde velg + spaken + messing naaf. Draait mee met de
+// afgelegde afstand (`spinRef` = meter-teller van de trein), dus de wielen
+// rollen écht en staan stil zodra de trein stilstaat.
+function Wiel({ x, z, r = 0.26, spaken = 0, velg = TREIN_ROOD, spinRef = null }) {
+  const g = useRef();
+  const kant = z >= 0 ? 1 : -1; // spiegelen zodat de velg-kant naar buiten wijst
+  useFrame(() => { if (g.current && spinRef) g.current.rotation.y = -kant * (spinRef.current / r); });
+  return (
+    <group ref={g} position={[x, r, z]} rotation={[(kant * Math.PI) / 2, 0, 0]}>
+      <mesh castShadow><cylinderGeometry args={[r, r, 0.085, 14]} /><meshStandardMaterial color={velg} roughness={0.6} /></mesh>
+      <mesh position={[0, 0.012, 0]}><cylinderGeometry args={[r * 0.78, r * 0.78, 0.09, 14]} /><meshStandardMaterial color={TREIN_ZWART} roughness={0.7} /></mesh>
+      {Array.from({ length: spaken }).map((_, i) => (
+        <mesh key={i} position={[0, 0.065, 0]} rotation={[0, (i * Math.PI) / spaken, 0]}>
+          <boxGeometry args={[r * 1.5, 0.02, 0.06]} /><meshStandardMaterial color={velg} roughness={0.7} />
+        </mesh>
+      ))}
+      <mesh position={[0, 0.075, 0]}><cylinderGeometry args={[0.055, 0.055, 0.05, 8]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.7} roughness={0.35} /></mesh>
+    </group>
+  );
+}
+
+// Stootbalk met twee buffers (dx = +1 vóór, -1 achter).
+function Buffers({ dx, x, y = 0.46 }) {
+  return (
+    <group>
+      <mesh position={[x, y, 0]} castShadow><boxGeometry args={[0.09, 0.30, 0.96]} /><meshStandardMaterial color={TREIN_ROOD} flatShading roughness={0.75} /></mesh>
+      {[0.30, -0.30].map((z) => (
+        <mesh key={z} position={[x + dx * 0.09, y, z]} rotation={[0, 0, Math.PI / 2]}>
+          <cylinderGeometry args={[0.065, 0.065, 0.14, 8]} /><meshStandardMaterial color="#d9dde1" metalness={0.5} roughness={0.4} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+// De locomotief: ketel met messing banden, rookkast + koperen schoorsteen,
+// stoomdom, cabine met échte raamopeningen, grote drijfwielen met spaken en —
+// het detail dat een stoomtrein pas een stoomtrein maakt — drijfstangen die
+// met de wielen meebewegen.
+function Locomotief({ spinRef }) {
+  const stangL = useRef(), stangR = useRef();
+  const R_DRIJF = 0.26, KRUK = 0.125;   // wielstraal + kruktap-straal
+  const STANG_X = -0.42;                // midden tussen beide drijfwielen
+  useFrame(() => {
+    const f = spinRef ? spinRef.current / R_DRIJF : 0;
+    // Links en rechts staan een kwartslag uit fase (de "quartering" van een
+    // echte loc), zo staat de trein nooit op een dood punt.
+    if (stangR.current) stangR.current.position.set(STANG_X + Math.sin(f) * KRUK, R_DRIJF + Math.cos(f) * KRUK, 0.55);
+    if (stangL.current) stangL.current.position.set(STANG_X + Math.sin(f + Math.PI / 2) * KRUK, R_DRIJF + Math.cos(f + Math.PI / 2) * KRUK, -0.55);
+  });
+  const spaken = LOW_END ? 0 : 6;
+  return (
+    <group>
+      {/* ── onderstel + wielen ── */}
+      {[0.42, -0.42].map((z) => (
+        <mesh key={z} position={[-0.05, 0.36, z]}><boxGeometry args={[1.9, 0.14, 0.05]} /><meshStandardMaterial color={TREIN_ZWART} roughness={0.8} /></mesh>
+      ))}
+      <Wiel x={-0.10} z={0.44} r={R_DRIJF} spaken={spaken} spinRef={spinRef} />
+      <Wiel x={-0.10} z={-0.44} r={R_DRIJF} spaken={spaken} spinRef={spinRef} />
+      <Wiel x={-0.74} z={0.44} r={R_DRIJF} spaken={spaken} spinRef={spinRef} />
+      <Wiel x={-0.74} z={-0.44} r={R_DRIJF} spaken={spaken} spinRef={spinRef} />
+      <Wiel x={0.66} z={0.42} r={0.16} spinRef={spinRef} />
+      <Wiel x={0.66} z={-0.42} r={0.16} spinRef={spinRef} />
+      {!LOW_END && (
+        <>
+          <mesh ref={stangR}><boxGeometry args={[0.82, 0.07, 0.05]} /><meshStandardMaterial color="#cfd4d8" metalness={0.25} roughness={0.35} /></mesh>
+          <mesh ref={stangL}><boxGeometry args={[0.82, 0.07, 0.05]} /><meshStandardMaterial color="#cfd4d8" metalness={0.25} roughness={0.35} /></mesh>
+        </>
+      )}
+      {/* ── loopplank + stootbalk ── */}
+      <mesh position={[-0.02, 0.55, 0]} castShadow><boxGeometry args={[2.26, 0.06, 0.92]} /><meshStandardMaterial color={TREIN_ZWART} roughness={0.85} /></mesh>
+      {[0.46, -0.46].map((z) => (
+        <mesh key={z} position={[-0.02, 0.59, z]}><boxGeometry args={[2.28, 0.025, 0.07]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.6} roughness={0.4} /></mesh>
+      ))}
+      <Buffers dx={1} x={1.10} />
+      {/* ── ketel met messing banden ── */}
+      <mesh position={[0.28, 0.90, 0]} rotation={[0, 0, Math.PI / 2]} castShadow>
+        <cylinderGeometry args={[0.30, 0.30, 1.22, 16]} /><meshStandardMaterial color={TREIN_ROOD} roughness={0.5} metalness={0.15} />
+      </mesh>
+      {[-0.12, 0.28, 0.68].map((bx) => (
+        <mesh key={bx} position={[bx, 0.90, 0]} rotation={[0, 0, Math.PI / 2]}>
+          <cylinderGeometry args={[0.313, 0.313, 0.045, 16]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.7} roughness={0.35} />
+        </mesh>
+      ))}
+      {/* ── rookkast met deur, handgreep en lamp ── */}
+      <mesh position={[1.02, 0.90, 0]} rotation={[0, 0, Math.PI / 2]} castShadow>
+        <cylinderGeometry args={[0.315, 0.315, 0.34, 16]} /><meshStandardMaterial color={TREIN_ZWART} roughness={0.7} />
+      </mesh>
+      <mesh position={[1.20, 0.90, 0]} rotation={[0, 0, Math.PI / 2]}>
+        <cylinderGeometry args={[0.28, 0.28, 0.06, 16]} /><meshStandardMaterial color="#2c2d30" roughness={0.6} metalness={0.2} />
+      </mesh>
+      <mesh position={[1.24, 0.90, 0]}><boxGeometry args={[0.04, 0.24, 0.035]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.7} roughness={0.35} /></mesh>
+      <mesh position={[1.24, 0.90, 0]}><boxGeometry args={[0.04, 0.035, 0.24]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.7} roughness={0.35} /></mesh>
+      <mesh position={[1.22, 1.17, 0]} rotation={[0, 0, Math.PI / 2]}>
+        <cylinderGeometry args={[0.085, 0.085, 0.12, 10]} />
+        <meshStandardMaterial color="#f6e6a8" emissive="#ffdf8a" emissiveIntensity={0.7} roughness={0.4} />
+      </mesh>
+      {/* ── schoorsteen met koperen rand ── */}
+      <mesh position={[1.00, 1.33, 0]} castShadow><cylinderGeometry args={[0.105, 0.13, 0.30, 12]} /><meshStandardMaterial color={TREIN_ZWART} roughness={0.75} /></mesh>
+      <mesh position={[1.00, 1.52, 0]}><cylinderGeometry args={[0.155, 0.115, 0.11, 12]} /><meshStandardMaterial color={TREIN_KOPER} metalness={0.65} roughness={0.35} /></mesh>
+      {/* ── stoomdom, zandkist en fluit ── */}
+      <mesh position={[0.44, 1.26, 0]} castShadow><cylinderGeometry args={[0.145, 0.17, 0.22, 12]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.7} roughness={0.3} /></mesh>
+      <mesh position={[0.44, 1.37, 0]}><sphereGeometry args={[0.145, 10, 6]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.7} roughness={0.3} /></mesh>
+      <mesh position={[0.08, 1.24, 0]}><boxGeometry args={[0.26, 0.17, 0.34]} /><meshStandardMaterial color={TREIN_ROOD} flatShading roughness={0.6} /></mesh>
+      <mesh position={[-0.20, 1.26, 0]}><cylinderGeometry args={[0.045, 0.045, 0.18, 8]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.7} roughness={0.3} /></mesh>
+      {/* ── vuurkist + voorschot met ronde cabineramen ── */}
+      <mesh position={[-0.34, 0.86, 0]} castShadow><boxGeometry args={[0.42, 0.60, 0.78]} /><meshStandardMaterial color={TREIN_ROOD} flatShading roughness={0.6} /></mesh>
+      <mesh position={[-0.60, 0.95, 0]}><boxGeometry args={[0.06, 0.72, 0.86]} /><meshStandardMaterial color={TREIN_ROOD} roughness={0.6} /></mesh>
+      {[0.22, -0.22].map((z) => (
+        <mesh key={z} position={[-0.565, 1.14, z]} rotation={[0, 0, Math.PI / 2]}>
+          <cylinderGeometry args={[0.105, 0.105, 0.05, 10]} /><meshStandardMaterial color={TREIN_GLAS} roughness={0.25} metalness={0.3} />
+        </mesh>
+      ))}
+      {/* ── cabine: onderpaneel, raamstijlen (dus een échte raamopening), dak ── */}
+      {[0.41, -0.41].map((z) => (
+        <group key={z}>
+          <mesh position={[-1.02, 0.76, z]} castShadow><boxGeometry args={[0.86, 0.36, 0.06]} /><meshStandardMaterial color={TREIN_ROOD} flatShading roughness={0.6} /></mesh>
+          <mesh position={[-1.02, 0.72, z * 1.08]}><boxGeometry args={[0.30, 0.11, 0.02]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.7} roughness={0.35} /></mesh>
+          <mesh position={[-0.64, 1.10, z]}><boxGeometry args={[0.10, 0.32, 0.06]} /><meshStandardMaterial color={TREIN_ROOD} roughness={0.6} /></mesh>
+          <mesh position={[-1.40, 1.10, z]}><boxGeometry args={[0.10, 0.32, 0.06]} /><meshStandardMaterial color={TREIN_ROOD} roughness={0.6} /></mesh>
+          <mesh position={[-1.02, 1.31, z]}><boxGeometry args={[0.86, 0.12, 0.06]} /><meshStandardMaterial color={TREIN_ROOD} roughness={0.6} /></mesh>
+        </group>
+      ))}
+      {[0.33, -0.33].map((z) => (
+        <mesh key={z} position={[-1.44, 0.95, z]}><boxGeometry args={[0.06, 0.72, 0.22]} /><meshStandardMaterial color={TREIN_ROOD} roughness={0.6} /></mesh>
+      ))}
+      <mesh position={[-1.02, 1.41, 0]} castShadow><boxGeometry args={[1.04, 0.08, 1.00]} /><meshStandardMaterial color={TREIN_ZWART} roughness={0.8} /></mesh>
+      {/* ── stoom uit de schoorsteen: waait naar achteren (neus = +X) ── */}
+      <StoomPluim top={[1.00, 1.62, 0]} drift={[-1.15, 0, 0]} scale={1.05} />
+    </group>
+  );
+}
+
+// De tender: de kolenwagen die altijd achter een stoomlocomotief hangt.
+function Tender({ spinRef }) {
+  return (
+    <group>
+      <mesh position={[0, 0.50, 0]}><boxGeometry args={[1.34, 0.10, 0.82]} /><meshStandardMaterial color={TREIN_ZWART} roughness={0.85} /></mesh>
+      <Wiel x={0.42} z={0.44} r={0.20} spinRef={spinRef} />
+      <Wiel x={0.42} z={-0.44} r={0.20} spinRef={spinRef} />
+      <Wiel x={-0.42} z={0.44} r={0.20} spinRef={spinRef} />
+      <Wiel x={-0.42} z={-0.44} r={0.20} spinRef={spinRef} />
+      <mesh position={[0, 0.80, 0]} castShadow><boxGeometry args={[1.30, 0.52, 0.90]} /><meshStandardMaterial color={TREIN_ROOD} flatShading roughness={0.6} /></mesh>
+      <mesh position={[0, 0.63, 0]}><boxGeometry args={[1.32, 0.025, 0.92]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.6} roughness={0.4} /></mesh>
+      <mesh position={[0, 1.07, 0]}><boxGeometry args={[1.32, 0.05, 0.94]} /><meshStandardMaterial color="#7d161b" roughness={0.7} /></mesh>
+      {/* kolen op de tender */}
+      {(LOW_END ? [[-0.2, 0]] : [[-0.28, 0.12], [0.02, -0.14], [0.28, 0.06]]).map(([kx, kz], i) => (
+        <mesh key={i} position={[kx, 1.12, kz]} rotation={[0.4, i * 1.1, 0.3]}>
+          <boxGeometry args={[0.34, 0.16, 0.34]} /><meshStandardMaterial color="#26262a" flatShading roughness={1} />
+        </mesh>
+      ))}
+      <Buffers dx={-1} x={-0.72} y={0.44} />
+    </group>
+  );
+}
+
+// Een rijtuig: karmijnrode bak, crèmekleurige band, gouden biesjes, vier ramen
+// per kant met stijlen ertussen en een licht dak met lantaarnopbouw.
+function Rijtuig({ spinRef }) {
+  return (
+    <group>
+      <mesh position={[0, 0.50, 0]}><boxGeometry args={[2.04, 0.12, 0.84]} /><meshStandardMaterial color={TREIN_ZWART} roughness={0.85} /></mesh>
+      <Wiel x={0.66} z={0.44} r={0.20} spinRef={spinRef} />
+      <Wiel x={0.66} z={-0.44} r={0.20} spinRef={spinRef} />
+      <Wiel x={-0.66} z={0.44} r={0.20} spinRef={spinRef} />
+      <Wiel x={-0.66} z={-0.44} r={0.20} spinRef={spinRef} />
+      <mesh position={[0, 0.94, 0]} castShadow><boxGeometry args={[2.00, 0.80, 0.92]} /><meshStandardMaterial color={TREIN_DONKER} flatShading roughness={0.6} /></mesh>
+      {/* ramen als één donkere strook met stijlen ervoor → 4 ramen per kant */}
+      <mesh position={[0, 1.12, 0]}><boxGeometry args={[1.68, 0.30, 0.94]} /><meshStandardMaterial color={TREIN_GLAS} roughness={0.25} metalness={0.3} /></mesh>
+      {!LOW_END && [-0.56, 0, 0.56].map((sx) => (
+        <mesh key={sx} position={[sx, 1.12, 0]}><boxGeometry args={[0.08, 0.32, 0.95]} /><meshStandardMaterial color={TREIN_DONKER} roughness={0.6} /></mesh>
+      ))}
+      <mesh position={[0, 1.30, 0]}><boxGeometry args={[2.02, 0.10, 0.945]} /><meshStandardMaterial color={TREIN_CREME} roughness={0.8} /></mesh>
+      <mesh position={[0, 1.235, 0]}><boxGeometry args={[2.02, 0.025, 0.95]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.6} roughness={0.4} /></mesh>
+      <mesh position={[0, 0.63, 0]}><boxGeometry args={[2.02, 0.025, 0.95]} /><meshStandardMaterial color={TREIN_MESSING} metalness={0.6} roughness={0.4} /></mesh>
+      {!LOW_END && [0.88, -0.88].map((dx) => (
+        <mesh key={dx} position={[dx, 0.86, 0]}><boxGeometry args={[0.05, 0.62, 0.945]} /><meshStandardMaterial color="#5c1216" roughness={0.7} /></mesh>
+      ))}
+      <mesh position={[0, 1.41, 0]} castShadow><boxGeometry args={[2.02, 0.10, 0.98]} /><meshStandardMaterial color="#b9bec2" roughness={0.85} /></mesh>
+      <mesh position={[0, 1.50, 0]}><boxGeometry args={[1.56, 0.10, 0.64]} /><meshStandardMaterial color="#c6cbcf" roughness={0.85} /></mesh>
+    </group>
+  );
+}
+
 // De lange trein die JOUW route volgt: een locomotief + meerdere wagons. `route`
 // = { pts:[{x,y,z}...], loop:bool }. We lopen met een afstand `s` over de poly-
 // lijn; elke wagon zit een vaste afstand achter de vorige. `headRef` krijgt de
@@ -2404,7 +2606,28 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
   }, [route]);
 
   const SNELHEID = 2.6; // wereld-units per sec
-  const WAGON_GAP = 1.7;
+  // 🚂 De trein = locomotief + tender + rijtuigen. Elk deel heeft zijn eigen
+  // lengte, zodat de koppelingen overal even strak zitten — één vaste
+  // WAGON_GAP liet de langere loc en de korte tender juist uit elkaar lopen.
+  const alleKarren = useMemo(() => {
+    // lengtes in MODEL-eenheden; × TREIN_SCHAAL geeft de afstand op het spoor
+    const delen = [{ type: "loco", len: 2.3 }, { type: "tender", len: 1.4 }];
+    for (let i = 0; i < wagons; i++) delen.push({ type: "rijtuig", len: 2.1 });
+    let d = 0;
+    delen.forEach((deel, i) => {
+      if (i > 0) d += ((delen[i - 1].len + deel.len) / 2 + 0.24) * TREIN_SCHAAL; // 0,24 = koppeling
+      deel.offset = d;
+    });
+    return delen;
+  }, [wagons]);
+  // Korte, zelfgelegde spoortjes: een kind legt soms maar drie rails (1 tegel =
+  // 2 m). Haak dan de wagons af die niet passen — anders rijdt de trein over
+  // zijn eigen staart heen. De locomotief blijft altijd staan.
+  const karren = useMemo(() => {
+    if (!data || !data.total) return alleKarren;
+    const ruimte = data.total - (data.loop ? 2 : 1.2 * TREIN_SCHAAL);
+    return alleKarren.filter((k, i) => i === 0 || k.offset + k.len * TREIN_SCHAAL * 0.5 <= ruimte);
+  }, [alleKarren, data]);
   // Richting van de rit: bij een niet-gesloten spoor pendelt de trein heen en
   // weer (review 17 jul: hij klemde vast op het eindpunt en stond dan voorgoed
   // stil — juist bij het eerste rechte spoor dat een kind legt).
@@ -2436,7 +2659,7 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
       const g = refs.current[i];
       if (!g) continue;
       // Wagons hangen áchter de kop, gezien in de rijrichting.
-      const info = posOp(headS - i * WAGON_GAP * richtingRef.current);
+      const info = posOp(headS - (karren[i]?.offset || 0) * richtingRef.current);
       if (!info) continue;
       if (i === 0) {
         // 🔊 treingeluid: volume op camera-afstand + doppler (throttled in parkAudio)
@@ -2445,11 +2668,14 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
         audioD.current = dCam;
       }
       g.position.copy(info.p);
-      // +π: de wagon-modellen wezen met hun achterkant vooruit (Mark: "trein
-      // rijdt achteruit"); 1.6× groter zodat hij in verhouding is met de speler.
-      // Bij terugrijden nóg eens π zodat de neus in de rijrichting wijst.
-      g.rotation.y = Math.atan2(info.dir.x, info.dir.z) + Math.PI + (terug ? Math.PI : 0);
-      g.scale.setScalar(1.6);
+      // 🔴 Mark 3 sep (foto "de trein rijdt dwars op het spoor"): de modellen
+      // zijn opgebouwd met de neus op +X — net als de dwarsliggers — dus de
+      // rijrichting hoort op de lokale X-as: atan2(-dir.z, dir.x). De oude
+      // formule (atan2(dir.x, dir.z) + π) zette de Z-as in de rijrichting en
+      // draaide de hele trein dus een kwartslag dwars. Bij terugrijden +π
+      // zodat de neus altijd vooruit wijst.
+      g.rotation.y = Math.atan2(-info.dir.z, info.dir.x) + (terug ? Math.PI : 0);
+      g.scale.setScalar(TREIN_SCHAAL);
       if (i === 0 && headRef) {
         // Stabiel object muteren i.p.v. elke frame een nieuw {p, dir} + clones.
         // NB: de ref start als {} (truthy!) — dus op .p checken, niet op .current.
@@ -2475,7 +2701,6 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
   }, [data]);
 
   if (!data) return null;
-  const carts = [{ loco: true }, ...Array.from({ length: wagons }, () => ({ loco: false }))];
   const railSeg = Math.max(48, Math.round(data.total * 4));
   return (
     <group>
@@ -2494,27 +2719,9 @@ export function RouteTrain({ route, headRef = null, wagons = 3, onLeermoment = n
       {/* delta-guard op de trein-klik (park-zwerm 17 jul): zonder deze check
           opende een camera-sleep die toevallig op de rijdende trein eindigde
           ongewild het leermoment + hardop-spraak. Zelfde patroon als bezoekers. */}
-      {carts.map((c, i) => (
+      {karren.map((k, i) => (
         <group key={i} ref={(el) => (refs.current[i] = el)} onClick={onLeermoment ? (e) => { if (e.delta > 8) return; e.stopPropagation(); onLeermoment("stoomtrein"); } : undefined}>
-          {c.loco ? (
-            <group>
-              <mesh position={[0, 0.45, 0]} castShadow><boxGeometry args={[1.5, 0.7, 0.9]} /><meshStandardMaterial color="#c0392b" flatShading roughness={0.7} /></mesh>
-              <mesh position={[0.5, 0.95, 0]} castShadow><boxGeometry args={[0.5, 0.55, 0.8]} /><meshStandardMaterial color="#922b21" flatShading roughness={0.7} /></mesh>
-              <mesh position={[-0.55, 0.85, 0]} castShadow><cylinderGeometry args={[0.12, 0.16, 0.4, 10]} /><meshStandardMaterial color="#34495e" roughness={0.8} /></mesh>
-              {/* stoom uit de schoorsteen (schoorsteen op -x = voorkant; cabine op +x) —
-                  de pluim waait naar de cabine toe, dus met de rijrichting mee naar achteren */}
-              <StoomPluim top={[-0.55, 1.05, 0]} drift={[0.9, 0, 0]} />
-              <mesh position={[0, 0.18, 0.32]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.18, 0.18, 0.12, 10]} /><meshStandardMaterial color="#222" /></mesh>
-              <mesh position={[0, 0.18, -0.32]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.18, 0.18, 0.12, 10]} /><meshStandardMaterial color="#222" /></mesh>
-            </group>
-          ) : (
-            <group>
-              <mesh position={[0, 0.42, 0]} castShadow><boxGeometry args={[1.3, 0.55, 0.85]} /><meshStandardMaterial color={i % 2 ? "#2e86c1" : "#f1c40f"} flatShading roughness={0.7} /></mesh>
-              <mesh position={[0, 0.75, 0]} castShadow><boxGeometry args={[1.34, 0.12, 0.9]} /><meshStandardMaterial color="#fff" roughness={0.8} /></mesh>
-              <mesh position={[0, 0.16, 0.3]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.15, 0.15, 0.1, 10]} /><meshStandardMaterial color="#222" /></mesh>
-              <mesh position={[0, 0.16, -0.3]} rotation={[0, 0, Math.PI / 2]}><cylinderGeometry args={[0.15, 0.15, 0.1, 10]} /><meshStandardMaterial color="#222" /></mesh>
-            </group>
-          )}
+          {k.type === "loco" ? <Locomotief spinRef={sRef} /> : k.type === "tender" ? <Tender spinRef={sRef} /> : <Rijtuig spinRef={sRef} />}
         </group>
       ))}
     </group>
@@ -2664,9 +2871,11 @@ export function RideCamera({ headRef, active }) {
     if (!active || !headRef || !headRef.current) return;
     const { p, dir } = headRef.current;
     if (!p || !dir) return;
-    // Eerste-persoon: je zit ín de locomotief en kijkt vooruit over het spoor.
-    camera.position.set(p.x, p.y + 1.6, p.z);
-    camera.lookAt(p.x + dir.x * 6, p.y + 1.1, p.z + dir.z * 6);
+    // Je zit bovenop de cabine en kijkt vooruit over de schoorsteen. Sinds de
+    // grote stoomtrein (3 sep) mag de camera niet meer op 1,6 m midden in de
+    // loc staan — dan kijk je zó tegen de ketel aan.
+    camera.position.set(p.x - dir.x * 1.4, p.y + 2.6, p.z - dir.z * 1.4);
+    camera.lookAt(p.x + dir.x * 7, p.y + 1.3, p.z + dir.z * 7);
   });
   return null;
 }
