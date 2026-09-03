@@ -458,7 +458,12 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
   const tailRef = useRef();    // staart (Charley) — kwispelt
   const legsRef = useRef([]);  // 4 pootjes (Charley) — lopen
   const [bubble, setBubble] = useState(null);
-  const st = useRef({ bt: 0, next: 4 + Math.random() * 4, introDone: false, pet: 0, grow: 0.8 });
+  // Begroeting ("Hoi, ik ben Charley!") alléén de allereerste keer op dit
+  // apparaat — niet bij élke park-opening (Mark 3 sep 2026: "telkens als het
+  // park opent zie je Charley's tekst zo groot … minder ongevraagd aanwezig").
+  const introKey = `lk_maatje_intro_${kind}`;
+  const introAlGedaan = (() => { try { return !!localStorage.getItem(introKey); } catch { return true; } })();
+  const st = useRef({ bt: 0, next: introAlGedaan ? 20 : 3, introDone: introAlGedaan, pet: 0, grow: 0.8, laatstePlek: null, plekGezegd: new Set() });
   const model = b?.model;
   const vliegt = !!b?.vliegt;
   const zweef = !model && (kind === "draakje" || kind === "bubbel" || kind === "ster" || kind === "fenix");
@@ -590,17 +595,40 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
     // anders tekstballonnen midden in beeld zonder buddy).
     if (st.current.bt > 0) { st.current.bt -= dt; if (st.current.bt <= 0) setBubble(null); }
     st.current.next -= dt;
+    // 📍 Aankomst bij een plek = het moment om iets te zeggen ("Kijk, de
+    // paarden!") — één keer per plek, meteen, niet op de klok. Daarbuiten
+    // houdt het maatje z'n mond zo veel mogelijk (Mark 3 sep 2026: "minder
+    // ongevraagd aanwezig zijn"). Tikken op het maatje = altijd praten.
+    const f = factsRef?.current;
+    const plekId = f?.nabij?.id || null;
+    if (plekId !== st.current.laatstePlek) {
+      st.current.laatstePlek = plekId;
+      if (plekId && !st.current.plekGezegd.has(plekId) && st.current.bt <= 0) st.current.next = Math.min(st.current.next, 1.2);
+    }
     if (st.current.next <= 0 && !verborgen) {
-      if (!st.current.introDone) { setBubble({ e: b.emoji, t: `Hoi, ik ben ${effNaam}! ${b.flavor}` }); st.current.introDone = true; st.current.bt = 4.5; }
-      else {
-        const p = buddyPraatje(b.soort, factsRef?.current);
-        setBubble(p);
-        // Een vraag over de plek waar je staat mag langer blijven hangen (tikbaar).
-        st.current.bt = p?.momentId ? 7 : 3.8;
+      if (!st.current.introDone) {
+        // Kort en één keer per apparaat — geen slogan meer.
+        setBubble({ e: b.emoji, t: `Hoi, ik ben ${effNaam}!` });
+        st.current.introDone = true; st.current.bt = 3.2;
+        try { localStorage.setItem(introKey, "1"); } catch { /* privé-modus */ }
+        st.current.next = 20;
+      } else if (plekId && !st.current.plekGezegd.has(plekId) && f?.nabij?.titel) {
+        const n = f.nabij;
+        st.current.plekGezegd.add(plekId);
+        setBubble({ e: n.emoji || "📍", t: n.vraag ? `Kijk, ${n.titel.toLowerCase()}! ${n.vraag}` : `Kijk, ${n.titel.toLowerCase()}!`, momentId: n.id });
+        st.current.bt = 7;   // tikbaar → uitleg-kaart, mag even blijven hangen
+        st.current.next = 40 + Math.random() * 20;
+      } else {
+        // Zonder aanleiding: alleen bij écht nieuws (score/honger/baby) en
+        // anders hooguit één los zinnetje per ~2 minuten.
+        const nieuws = !!(f && (f.goedeScore?.vak || f.honger || f.baby));
+        if (nieuws || Math.random() < 0.35) {
+          const p = buddyPraatje(b.soort, f ? { ...f, nabij: null } : f);
+          setBubble(p);
+          st.current.bt = 3.8;
+        }
+        st.current.next = 60 + Math.random() * 40;
       }
-      // Niet te vaak kletsen (12-agent-review: elke ~12s voelt opdringerig,
-      // zeker voor oudere kinderen) — om de ~25-40s is genoeg.
-      st.current.next = 25 + Math.random() * 15;
     }
 
     // Buddy-positie doorgeven (voor de "door de ogen van je buddy"-camera).
@@ -617,16 +645,19 @@ export default function Buddy({ kind, posRef, faceRef, heightRef, factsRef, groe
       onPointerOver={(e) => { e.stopPropagation(); document.body.style.cursor = "pointer"; }}
       onPointerOut={() => { document.body.style.cursor = "default"; }}
     >
+      {/* Géén distanceFactor op het wolkje: vaste schermgrootte. Met
+          afstand-schaling werd het bij het openen van het park (camera vlak
+          bij het maatje) een reuze-balk over het hele scherm (Mark 3 sep). */}
       {bubble && !verborgen && (
-        <Html position={[0, 1.05, 0]} center distanceFactor={9} zIndexRange={[5, 0]} style={{ pointerEvents: bubble.momentId && onBubbleTap ? "auto" : "none" }}>
+        <Html position={[0, 1.05, 0]} center zIndexRange={[5, 0]} style={{ pointerEvents: bubble.momentId && onBubbleTap ? "auto" : "none" }}>
           {/* Wolkje mét vraag over de plek = tikbaar → uitleg-kaart (kind-review
               2 sep: "een ballon die ik niet kan aanklikken en na 3,8 s weg is"). */}
           <div
             onClick={bubble.momentId && onBubbleTap ? (e) => { e.stopPropagation(); onBubbleTap(bubble.momentId); setBubble(null); } : undefined}
             style={{ background: "#fff", borderRadius: 14, padding: bubble.momentId ? "5px 11px" : "3px 10px", lineHeight: 1.25, boxShadow: "0 2px 7px rgba(0,0,0,.28)", userSelect: "none", whiteSpace: bubble.momentId ? "normal" : "nowrap", maxWidth: bubble.momentId ? 230 : undefined, display: "flex", alignItems: "center", gap: 5, cursor: bubble.momentId && onBubbleTap ? "pointer" : "default", border: bubble.momentId ? "2px solid #ffd54f" : "none" }}
           >
-            <span style={{ fontSize: 18 }}>{bubble.e}</span>
-            {bubble.t && <span style={{ fontSize: 12, fontWeight: 800, color: "#2a3340" }}>{bubble.t}{bubble.momentId ? <span style={{ color: "#1f7a3a" }}> ▶</span> : null}</span>}
+            <span style={{ fontSize: 16 }}>{bubble.e}</span>
+            {bubble.t && <span style={{ fontSize: 13, fontWeight: 800, color: "#2a3340" }}>{bubble.t}{bubble.momentId ? <span style={{ color: "#1f7a3a" }}> ▶</span> : null}</span>}
           </div>
         </Html>
       )}
