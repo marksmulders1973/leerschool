@@ -10,6 +10,7 @@
 
 > Bron: `docs/GEMEENTE-BETAALT-PLAN.md` (2 sep 2026). Ooievaarspas = voor altijd gratis (referentie, geen omzet).
 - **sep**: KvK ma 28 sep → meteen KOR aanvragen · tekst "partner-aanbod 2028: €25/kind/jaar, gemeente betaalt" (Mark-akkoord)
+- **🗓️ Tijdlijn geld-spoor (Mark-akkoord 3 sep, aan Esther gemeld):** 28 sep KvK → 29 sep–5 okt zakelijke rekening (Knab) + KvK-nr aan Esther → 5–12 okt Stripe-account + verificatie + Ooievaarspas-formulier (datum **1 januari 2027**) → okt webhook/betaalflow bouwen + test PRO2027 → nov Stripe live (stil) + Ooievaarspas plaatst aanbieding → **dec voorverkoop Seizoenspas + cadeau-codes kerstpakketten** (belofte "in 2026 helemaal gratis" blijft heel) → **1 jan 2027 Familie betaald voor niet-pashouders**.
 - **okt**: Leergeld-mail mét prijs · leveranciers-aanmelding 4-6 stadspassen/kindpakketten · partner-rapport v1
 - **vóór nov**: gemeentegesprekken (begroting 2027 wordt in nov vastgesteld)
 - **najaar 2027**: verleng-ronde bestaande codes met 2028-prijs
