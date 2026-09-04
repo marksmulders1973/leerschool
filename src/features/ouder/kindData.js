@@ -16,7 +16,12 @@ import supabase from "../../supabase.js";
  * @param {object} opts  { select, subject?, limit? }
  */
 export async function haalScoresVoorKind(link, { select, subject = null, limit = 50 } = {}) {
-  if (!link?.child_name) return [];
+  // Werkt voor beide koppelsoorten: parent_child_links (child_name) en
+  // leraar_leerling_links (student_name). 4 sep 2026: de leerpad-functie
+  // hieronder had dit al, deze niet - daardoor bleef het toetsen-blok bij de
+  // leerkracht leeg terwijl de rij er wel stond.
+  const naam = link?.child_name || link?.student_name;
+  if (!naam) return [];
   const bouw = () => {
     let q = supabase.from("leaderboard").select(select);
     if (subject) q = q.eq("subject", subject);
@@ -24,7 +29,7 @@ export async function haalScoresVoorKind(link, { select, subject = null, limit =
   };
   const vragen = [];
   if (link.id) vragen.push(bouw().eq("link_id", link.id).order("completed_at", { ascending: false }).limit(limit));
-  let legacy = bouw().is("link_id", null).eq("player_name", link.child_name);
+  let legacy = bouw().is("link_id", null).eq("player_name", naam);
   if (link.child_user_id) legacy = legacy.eq("user_id", link.child_user_id);
   vragen.push(legacy.order("completed_at", { ascending: false }).limit(limit));
   const res = await Promise.all(vragen);
