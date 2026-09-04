@@ -50,3 +50,21 @@ de voortgang gemeten uit `learn_progress` (zie `src/shared/ui/LesVoortgang.jsx`)
 
 Het vinkje telt nog steeds als "af" wanneer het aanstaat — een kind dat het wél
 aantikt, moet niet ineens weer "bezig" te zien krijgen.
+
+## 4. Klassengrootte: geen cap, wel getest tot 2 — schaalt op papier tot 30+
+
+Voor leerkrachten zit er géén maximum op het aantal gekoppelde leerlingen (de
+ouder-kant heeft `MAX_KINDEREN = 3`). `haalLeerlingOverzicht()` doet twee
+`.in(link_id, [...])`-queries en het scherm rendert één rij per leerling —
+dat is bij 28-32 leerlingen (Nederlandse praktijk: gemiddeld 23, geen wettelijk
+maximum, veel scholen hanteren 28) geen probleem. Wél nog nooit met een echte
+klas getest; het zwaarste punt zal `LesDetail` zijn dat per opengeklapte les
+het leerpad lazy laadt (~50 kB) — acceptabel, want je klapt er één tegelijk open.
+
+## 5. `topic_mastery` heeft dezelfde RLS-regel als `learn_progress` had — en dat is oké
+
+`tm_select_own_or_legacy` laat een ingelogde gebruiker alleen eigen rijen zien.
+Alleen `api/send-ouder-rapport.js` leest die tabel voor een ander kind, en die
+draait met de service-role-key (omzeilt RLS). Ouder- en leerkracht-schermen
+lezen mastery niet. Gaat dat ooit veranderen, dan is hier dezelfde
+koppeling-policy nodig als in `20260904_ouder_leest_learn_progress.sql`.
