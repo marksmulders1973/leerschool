@@ -68,3 +68,12 @@ Alleen `api/send-ouder-rapport.js` leest die tabel voor een ander kind, en die
 draait met de service-role-key (omzeilt RLS). Ouder- en leerkracht-schermen
 lezen mastery niet. Gaat dat ooit veranderen, dan is hier dezelfde
 koppeling-policy nodig als in `20260904_ouder_leest_learn_progress.sql`.
+
+## 6. `leaderboard.detail` is publiek leesbaar
+
+Het scorebord heeft een SELECT-policy `true` — het is een publiek bord. Sinds
+v527 staat daar per toets ook `detail` in (vraagtekst, gekozen en juist
+antwoord, goed/fout). Geen persoonsgegevens buiten de al zichtbare
+speler-naam, maar wel meer dan een score. Bij een privacy-ronde: `detail`
+uit de publieke select halen (aparte tabel met koppeling-policy, of een
+view zonder die kolom voor het bord).
