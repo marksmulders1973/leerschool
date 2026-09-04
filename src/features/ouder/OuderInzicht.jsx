@@ -1,7 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../../supabase.js";
 import { haalScoresVoorKind, haalLeerpadVoortgangVoorKind } from "./kindData.js";
-import pathManifest from "../../learnPaths/pathManifest.generated.json";
+import LesVoortgang, { PATHS_BY_ID } from "../../shared/ui/LesVoortgang.jsx";
 import { isLaunchPromoActive } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { clearAll as clearAdaptive } from "../../shared/adaptiveStore.js";
@@ -16,9 +16,6 @@ import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/
 import KindOverzicht from "./KindOverzicht.jsx";
 import CharleyTip from "../../components/CharleyTip.jsx";
 
-// Manifest-only (~155 kB) i.p.v. alle leerpaden (5,8 MB) — zelfde truc als
-// Curriculum.jsx. Nodig om "3 van de 5 delen" te kunnen tonen.
-const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
 // Gedeeld ouder-inzicht-blok (Mark 14 aug): dezelfde ouder-functionaliteit —
 // kind koppelen (code via WhatsApp/e-mail/kopiëren), partner-mail, betalen en
@@ -82,42 +79,6 @@ function generateCode() {
   return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
 }
 
-
-// 💛 Statusregel onder een klaargezette les. Toont de échte voortgang uit
-// learn_progress in plaats van alleen het handmatige vinkje van het kind
-// (Mark 4 sep 2026: "daar achter verwacht ik voortgang, bv. 30/100").
-function KlaarStatus({ item, voortgang }) {
-  const totaal = PATHS_BY_ID[item.path_id]?.stepCount || 0;
-  const gedaan = voortgang?.gedaan || 0;
-  const af = item.gedaan || (totaal > 0 && gedaan >= totaal);
-  const kleur = af ? "#69f0ae" : gedaan > 0 ? "#ffd54f" : "rgba(255,255,255,0.45)";
-
-  let tekst;
-  if (af && totaal > 0) tekst = "✓ afgerond — alle " + totaal + " delen gedaan";
-  else if (af) tekst = "✓ je kind heeft dit gedaan";
-  else if (gedaan > 0 && totaal > 0) tekst = "bezig — " + gedaan + " van de " + totaal + " delen";
-  else if (gedaan > 0) tekst = "bezig — " + gedaan + (gedaan === 1 ? " deel" : " delen") + " gedaan";
-  else tekst = totaal > 0 ? "nog te doen — " + totaal + " delen" : "nog te doen";
-
-  const wanneer = voortgang?.laatste
-    ? voortgang.laatste.toLocaleDateString("nl-NL", { day: "numeric", month: "short" }) +
-      " om " + voortgang.laatste.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" })
-    : null;
-
-  return (
-    <div>
-      <div style={{ fontSize: 11, color: kleur, fontWeight: 700 }}>{tekst}</div>
-      {totaal > 0 && (
-        <div style={{ height: 4, borderRadius: 3, background: "rgba(255,255,255,0.10)", marginTop: 4, overflow: "hidden" }}>
-          <div style={{ width: Math.min(100, Math.round((gedaan / totaal) * 100)) + "%", height: "100%", background: kleur, borderRadius: 3, transition: "width .3s" }} />
-        </div>
-      )}
-      {wanneer && (
-        <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", marginTop: 3 }}>laatst gewerkt: {wanneer}</div>
-      )}
-    </div>
-  );
-}
 
 export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, onHierOefenen, onOpenLes, embedded = false }) {
   // Welkom-paneel — toont ouders de voordelen + gratis-USP vs Squla/Junior Einstein.
@@ -1026,7 +987,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
-                    <KlaarStatus item={it} voortgang={padVoortgang[it.path_id]} />
+                    <LesVoortgang item={it} voortgang={padVoortgang[it.path_id]} watNu="je kind" />
                   </div>
                   {onOpenLes && (
                     <button
@@ -1078,7 +1039,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{p.emoji}</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{p.titel}</div>
-                    <KlaarStatus item={{ path_id: p.pathId, gedaan: false }} voortgang={p.voortgang} />
+                    <LesVoortgang item={{ path_id: p.pathId, gedaan: false }} voortgang={p.voortgang} watNu="je kind" />
                   </div>
                   {onOpenLes && (
                     <button

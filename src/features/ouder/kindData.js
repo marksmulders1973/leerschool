@@ -49,7 +49,10 @@ export async function haalScoresVoorKind(link, { select, subject = null, limit =
  * → Map van learn_path_id naar { stappen:Set, gedaan:n, laatste:Date, pogingen:n }
  */
 export async function haalLeerpadVoortgangVoorKind(link, { limit = 400 } = {}) {
-  if (!link?.child_name) return {};
+  // Werkt voor beide koppelsoorten: parent_child_links (child_name) en
+  // leraar_leerling_links (student_name).
+  const naam = link?.child_name || link?.student_name;
+  if (!naam) return {};
   const kolommen = "id, learn_path_id, step_idx, attempts, completed_at";
   const vragen = [];
   if (link.id) {
@@ -60,7 +63,7 @@ export async function haalLeerpadVoortgangVoorKind(link, { limit = 400 } = {}) {
     );
   }
   let legacy = supabase.from("learn_progress").select(kolommen)
-    .is("link_id", null).eq("player_name", link.child_name);
+    .is("link_id", null).eq("player_name", naam);
   if (link.child_user_id) legacy = legacy.eq("user_id", link.child_user_id);
   vragen.push(legacy.order("completed_at", { ascending: false }).limit(limit));
 

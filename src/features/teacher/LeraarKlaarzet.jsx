@@ -5,6 +5,8 @@ import {
   haalOpenLeerlingCodes, trekLeerlingCodeIn,
   haalKlaargezetVoorLink, haalWeg, haalLeerlingOverzicht, KLAARGEZET_EVENT,
 } from "../../shared/ouderKlaargezet.js";
+import { haalLeerpadVoortgangVoorKind } from "../ouder/kindData.js";
+import LesVoortgang from "../../shared/ui/LesVoortgang.jsx";
 
 // 👩‍🏫 Leerkracht zet lessen klaar voor één leerling (Mark 15 aug 2026) — de
 // leerkracht-variant van de ouder→kind-"klaarzet". Op naam, cross-device:
@@ -17,6 +19,8 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   const [students, setStudents] = useState([]);
   const [selected, setSelected] = useState(null);
   const [klaarLijst, setKlaarLijst] = useState([]);
+  // 📚 Échte voortgang uit learn_progress (4 sep 2026) — zie LesVoortgang.jsx.
+  const [padVoortgang, setPadVoortgang] = useState({});
   const [inviteName, setInviteName] = useState("");
   // Openstaande codes uit link_codes (30 aug, spiegel van de ouder-kant):
   // de "wacht op je leerling"-kaarten. Persistent — een verse code overleeft
@@ -89,9 +93,12 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   };
 
   useEffect(() => {
-    if (!selected?.verified) { setKlaarLijst([]); return; }
+    if (!selected?.verified) { setKlaarLijst([]); setPadVoortgang({}); return; }
     let cancel = false;
-    const laad = () => haalKlaargezetVoorLink(selected.id, "leraar").then((r) => { if (!cancel) setKlaarLijst(r); });
+    const laad = () => {
+      haalKlaargezetVoorLink(selected.id, "leraar").then((r) => { if (!cancel) setKlaarLijst(r); });
+      haalLeerpadVoortgangVoorKind(selected).then((r) => { if (!cancel) setPadVoortgang(r); });
+    };
     laad();
     window.addEventListener(KLAARGEZET_EVENT, laad);
     return () => { cancel = true; window.removeEventListener(KLAARGEZET_EVENT, laad); };
@@ -240,9 +247,7 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
                       <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
-                        <div style={{ fontSize: 11, color: it.gedaan ? "#69f0ae" : "rgba(255,255,255,0.45)", fontWeight: 700 }}>
-                          {it.gedaan ? "✓ gemaakt" : "nog te doen"}
-                        </div>
+                        <LesVoortgang item={it} voortgang={padVoortgang[it.path_id]} watNu="je leerling" />
                       </div>
                       {onOpenLes && (
                         <button onClick={() => onOpenLes(it.path_id)} title="Bekijk de les"
