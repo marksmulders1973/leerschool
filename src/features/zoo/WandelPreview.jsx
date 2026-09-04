@@ -94,6 +94,37 @@ function offsetPolyline(punten, off) {
   return out;
 }
 
+// 🎯 De middellijn van de route — EXACT dezelfde curve als het zwarte pad.
+//
+// Mark 4 sep 2026 (foto): "kun je elk pad (blauw, groen, geel) netjes over het
+// midden van het zwarte pad laten lopen, soms loopt hij door het gras?"
+//
+// Dat klopte, en dit was de oorzaak: het zwarte pad is een Catmull-Rom-CURVE
+// door de waypoints (zie Leerpadlint), maar de stippen liepen in RECHTE lijnen
+// van waypoint naar waypoint. In een rechte stuk maakt dat niets uit, maar in
+// een bocht snijdt een rechte lijn de curve af — en dan ligt de stippenlijn
+// naast het asfalt in het gras. Hoe scherper de bocht, hoe verder ernaast.
+//
+// Daarom sampelen we hier dezelfde curve met dezelfde parameters (gesloten,
+// catmullrom, spanning 0.5), zodat de stippen gegarandeerd over het midden van
+// het pad lopen.
+function routeMiddellijn(cells) {
+  if (!cells || cells.length < 3) {
+    return (cells || []).map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
+  }
+  const pts = cells.map(([cx, cz]) => new THREE.Vector3(cx * CELL, 0, cz * CELL));
+  const curve = new THREE.CatmullRomCurve3(pts, true, "catmullrom", 0.5);
+  // fijn genoeg dat de koorde-afwijking in de scherpste bocht ver binnen de
+  // padbreedte (2,4 m) blijft
+  const n = Math.max(240, Math.round(curve.getLength() / (CELL * 0.3)));
+  const arr = [];
+  for (let i = 0; i <= n; i++) {
+    const p = curve.getPointAt(i / n);
+    arr.push(new THREE.Vector2(p.x, p.z));
+  }
+  return arr;
+}
+
 // Stippen langs een polyline (wereld-punten), met dedupe-raster zodat heen en
 // terug over dezelfde straat op één lijn samenvallen.
 function stippenLangs(punten, offset, bezet) {
@@ -126,7 +157,7 @@ function RouteStippen({ route, heightRef, doelen }) {
   const instRef = useRef();
 
   const { stappen, stempels, vlaggen } = useMemo(() => {
-    const pts = route.cells.map(([cx, cz]) => new THREE.Vector2(cx * CELL, cz * CELL));
+    const pts = routeMiddellijn(route.cells);
     const bezet = new Set();
     const hoofd = stippenLangs(pts, route.offset, bezet);
     const stappen = [];
