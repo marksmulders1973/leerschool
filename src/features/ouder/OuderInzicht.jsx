@@ -2,6 +2,7 @@ import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../../supabase.js";
 import { haalScoresVoorKind, haalLeerpadVoortgangVoorKind } from "./kindData.js";
 import LesVoortgang, { PATHS_BY_ID } from "../../shared/ui/LesVoortgang.jsx";
+import LesDetail from "../../shared/ui/LesDetail.jsx";
 import { isLaunchPromoActive } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { clearAll as clearAdaptive } from "../../shared/adaptiveStore.js";
@@ -237,6 +238,8 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // zet een kind zelden aan. De échte voortgang staat in learn_progress; die
   // lezen we er nu naast, zodat een klaargezette les vanzelf meegroeit.
   const [padVoortgang, setPadVoortgang] = useState({});
+  // Welke les staat opengeklapt met het "wat is er precies gemaakt"-detail?
+  const [openDetail, setOpenDetail] = useState(null);
   useEffect(() => {
     const link = selectedChildVerified;
     if (!link?.id) { setKlaarLijst([]); setPadVoortgang({}); return; }
@@ -983,12 +986,22 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               {klaarLijst.map((it) => (
-                <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 8, padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div key={it.id} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
                     <LesVoortgang item={it} voortgang={padVoortgang[it.path_id]} watNu="je kind" />
                   </div>
+                  {/* 🔍 Mark 4 sep: "inzien wat er exact gemaakt is en wat niet" */}
+                  <button
+                    onClick={() => setOpenDetail(openDetail === it.path_id ? null : it.path_id)}
+                    aria-expanded={openDetail === it.path_id}
+                    title="Bekijk per vraag hoe het ging"
+                    style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
+                  >
+                    {openDetail === it.path_id ? "Verberg" : "Wat precies?"}
+                  </button>
                   {onOpenLes && (
                     <button
                       onClick={() => onOpenLes(it.path_id)}
@@ -1006,6 +1019,10 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   >
                     ×
                   </button>
+                </div>
+                {openDetail === it.path_id && (
+                  <LesDetail pathId={it.path_id} voortgang={padVoortgang[it.path_id]} naam={selectedChild} />
+                )}
                 </div>
               ))}
             </div>
@@ -1035,12 +1052,21 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               {zelfGedaan.map((p) => (
-                <div key={p.pathId} style={{ display: "flex", alignItems: "center", gap: 8, padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div key={p.pathId} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{p.emoji}</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{p.titel}</div>
                     <LesVoortgang item={{ path_id: p.pathId, gedaan: false }} voortgang={p.voortgang} watNu="je kind" />
                   </div>
+                  <button
+                    onClick={() => setOpenDetail(openDetail === p.pathId ? null : p.pathId)}
+                    aria-expanded={openDetail === p.pathId}
+                    title="Bekijk per vraag hoe het ging"
+                    style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
+                  >
+                    {openDetail === p.pathId ? "Verberg" : "Wat precies?"}
+                  </button>
                   {onOpenLes && (
                     <button
                       onClick={() => onOpenLes(p.pathId)}
@@ -1050,6 +1076,10 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                       Bekijk
                     </button>
                   )}
+                </div>
+                {openDetail === p.pathId && (
+                  <LesDetail pathId={p.pathId} voortgang={p.voortgang} naam={selectedChild} />
+                )}
                 </div>
               ))}
             </div>

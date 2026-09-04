@@ -609,8 +609,16 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     return null;
   })();
 
+  // 📝 Per vraag bijhouden hoeveel keer er fout geantwoord werd vóór het
+  // goede antwoord (Mark 4 sep 2026: de ouder wil per vraag zien hoe het ging).
+  // Een ref en geen state: het hoeft niets te hertekenen, het gaat alleen mee
+  // naar de database bij completeStep(). Sleutel = de echte vraag-index, want
+  // de volgorde kan door checkOrder geschud zijn.
+  const checkFoutenRef = useRef({});
+
   const goToStep = (idx) => {
     clearPendingTimers();
+    checkFoutenRef.current = {};
     setStepIdx(idx);
     setCheckIdx(0);
     setSelected(null);
@@ -700,6 +708,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       setLastWrongAnswer(currentCheck.options?.[i] || null);
       setCorrectStreak(0);
       adaptRecordWrong(pathId, stepIdx, realCheckIdx);
+      checkFoutenRef.current[realCheckIdx] = (checkFoutenRef.current[realCheckIdx] || 0) + 1;
       // Tel fout per vraag voor adaptief uitlegpad-niveau (auto-switch naar simpeler bij ≥2).
       // Audit 2026-05-13 QW2: examenBron-conditie verwijderd zodat ALLE 2000+ uitlegPad-checks
       // adaptief werken, niet alleen de 61 examenvragen.
@@ -737,6 +746,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       schedule(() => completeStep(), 1200);
     } else {
       setAttempts((a) => a + 1);
+      checkFoutenRef.current[realCheckIdx] = (checkFoutenRef.current[realCheckIdx] || 0) + 1;
     }
   };
 
@@ -754,12 +764,17 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // B0.4 (7-bots-review): supabase-js v2 throwt niet — de oude try/catch
     // ving dus nooit iets en een RLS-/offline-fout verdween geruisloos
     // terwijl de UI "voltooid!" toonde. Nu: error-veld checken + 1 retry.
+    // check_fouten = per vraag van deze stap het aantal foute pogingen, in
+    // de volgorde waarin de vragen in het leerpad staan. `attempts` blijft
+    // staan voor oude lezers, maar die telde alleen de láátste vraag mee.
+    const foutenPerVraag = checks.map((_, i) => checkFoutenRef.current[i] || 0);
     const row = metLinkId({
       player_name: player,
       user_id: authUser?.id || null,
       learn_path_id: pathId,
       step_idx: stepIdx,
       attempts,
+      check_fouten: foutenPerVraag,
     });
     // F1 (Fable-review, 2 sep 2026): sleutel was (player_name, pad, stap) →
     // een tweede kind met dezelfde voornaam kon nooit opslaan (upsert werd

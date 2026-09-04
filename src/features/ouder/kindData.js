@@ -53,7 +53,7 @@ export async function haalLeerpadVoortgangVoorKind(link, { limit = 400 } = {}) {
   // leraar_leerling_links (student_name).
   const naam = link?.child_name || link?.student_name;
   if (!naam) return {};
-  const kolommen = "id, learn_path_id, step_idx, attempts, completed_at";
+  const kolommen = "id, learn_path_id, step_idx, attempts, completed_at, check_fouten";
   const vragen = [];
   if (link.id) {
     vragen.push(
@@ -77,11 +77,20 @@ export async function haalLeerpadVoortgangVoorKind(link, { limit = 400 } = {}) {
     const sleutel = `${r.learn_path_id}|${r.step_idx}`;
     const nieuw = !gezien.has(sleutel);
     gezien.add(sleutel);
-    const p = (perPad[r.learn_path_id] ||= { stappen: new Set(), pogingen: 0, laatste: null });
+    const p = (perPad[r.learn_path_id] ||= { stappen: new Set(), pogingen: 0, laatste: null, perStap: {} });
     p.stappen.add(r.step_idx);
     if (nieuw) p.pogingen += r.attempts || 1;
     const t = r.completed_at ? new Date(r.completed_at) : null;
     if (t && (!p.laatste || t > p.laatste)) p.laatste = t;
+    // Nieuwste rij per stap wint (de lijst komt aflopend op completed_at binnen).
+    if (nieuw) {
+      p.perStap[r.step_idx] = {
+        wanneer: t,
+        pogingen: r.attempts || 1,
+        // per vraag het aantal foute pogingen; null voor rijen van vóór 4 sep 2026
+        fouten: Array.isArray(r.check_fouten) ? r.check_fouten : null,
+      };
+    }
   }
   for (const p of Object.values(perPad)) p.gedaan = p.stappen.size;
   return perPad;

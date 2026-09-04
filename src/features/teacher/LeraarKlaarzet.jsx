@@ -7,6 +7,7 @@ import {
 } from "../../shared/ouderKlaargezet.js";
 import { haalLeerpadVoortgangVoorKind } from "../ouder/kindData.js";
 import LesVoortgang from "../../shared/ui/LesVoortgang.jsx";
+import LesDetail from "../../shared/ui/LesDetail.jsx";
 
 // 👩‍🏫 Leerkracht zet lessen klaar voor één leerling (Mark 15 aug 2026) — de
 // leerkracht-variant van de ouder→kind-"klaarzet". Op naam, cross-device:
@@ -21,6 +22,8 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   const [klaarLijst, setKlaarLijst] = useState([]);
   // 📚 Échte voortgang uit learn_progress (4 sep 2026) — zie LesVoortgang.jsx.
   const [padVoortgang, setPadVoortgang] = useState({});
+  // Welke les staat open met het "wat is er precies gemaakt"-detail?
+  const [openDetail, setOpenDetail] = useState(null);
   const [inviteName, setInviteName] = useState("");
   // Openstaande codes uit link_codes (30 aug, spiegel van de ouder-kant):
   // de "wacht op je leerling"-kaarten. Persistent — een verse code overleeft
@@ -243,12 +246,21 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
               {klaarLijst.length > 0 ? (
                 <div style={{ display: "flex", flexDirection: "column", gap: 6, marginBottom: 8 }}>
                   {klaarLijst.map((it) => (
-                    <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 8, padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                    <div key={it.id} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                    <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                       <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
                       <div style={{ flex: 1, minWidth: 0 }}>
                         <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
                         <LesVoortgang item={it} voortgang={padVoortgang[it.path_id]} watNu="je leerling" />
                       </div>
+                      <button
+                        onClick={() => setOpenDetail(openDetail === it.path_id ? null : it.path_id)}
+                        aria-expanded={openDetail === it.path_id}
+                        title="Bekijk per vraag hoe het ging"
+                        style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
+                      >
+                        {openDetail === it.path_id ? "Verberg" : "Wat precies?"}
+                      </button>
                       {onOpenLes && (
                         <button onClick={() => onOpenLes(it.path_id)} title="Bekijk de les"
                           style={{ flexShrink: 0, padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12, cursor: "pointer" }}>
@@ -257,6 +269,10 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
                       )}
                       <button onClick={() => verwijderKlaar(it.path_id)} aria-label="Haal weg" title="Haal deze les weg"
                         style={{ flexShrink: 0, background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
+                    </div>
+                    {openDetail === it.path_id && (
+                      <LesDetail pathId={it.path_id} voortgang={padVoortgang[it.path_id]} naam={selected?.student_name || "je leerling"} />
+                    )}
                     </div>
                   ))}
                 </div>
