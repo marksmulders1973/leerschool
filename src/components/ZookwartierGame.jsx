@@ -28,6 +28,7 @@ import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamV
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad, hierContextVoor } from "../features/zoo/parkLeermomenten";
 import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark, herstelWandeling } from "../features/zoo/wandelRoutes";
+import { LINT_BANDEN } from "../features/zoo/leerpadLint";
 import { WANDEL_REWARD } from "../features/zoo/zooEconomy";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import { parkAudioStart, parkAudioStil, parkAudioStop } from "../features/zoo/parkAudio";
@@ -3036,6 +3037,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div style={{ position: "absolute", left: 10, bottom: COARSE_POINTER ? 208 : 104, zIndex: 12, maxWidth: "min(320px, 80vw)", background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 34px 8px 12px", font: "700 12.5px/1.4 system-ui", color: "#234", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
           🥾 {wandelRoute.naam} · stop {wandeling.stopIdx + 1} van {stopsVan(wandeling).length}
           <div style={{ font: "800 13px system-ui", marginTop: 2 }}>Loop naar {wandelStop.emoji} {wandelStop.label}!</div>
+          {/* 📚 Voor welke groep is deze stop? (Mark 4 sep: "kan hierbij gezet
+              worden welke groep, bv groep 8"). De band van het leermoment is
+              precies; valt terug op de groep van de route. */}
+          {(() => {
+            const m = PARK_LEERMOMENTEN[wandelStop.moment];
+            const band = typeof m?.band === "number" ? LINT_BANDEN[m.band] : null;
+            const groep = band?.groep || wandelRoute.groep;
+            return groep ? (
+              <div style={{ font: "700 11.5px system-ui", color: "#3b5568", marginTop: 3 }}>
+                📚 {groep}
+              </div>
+            ) : null;
+          })()}
           {wandelStop.reden === "klaargezet-juf" && (
             <div style={{ font: "700 11.5px system-ui", color: "#8a4a8a", marginTop: 2 }}>💛 Voor jou klaargezet door je juf of meester!</div>
           )}
