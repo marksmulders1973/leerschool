@@ -1328,15 +1328,19 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                           {s.level} — {fmtDatum(s.completed_at, { day: "numeric", month: "short" })}
                           {s.total ? <span style={{ color: "rgba(255,255,255,0.35)" }}> · {s.score}/{s.total}</span> : null}
                         </span>
-                        {/* 📝 Per vraag goed/fout/overgeslagen (Mark 4 sep) */}
-                        <button
-                          onClick={() => setOpenToets(openToets === s.id ? null : s.id)}
-                          aria-expanded={openToets === s.id}
-                          title="Bekijk per vraag wat er goed, fout of overgeslagen was"
-                          style={{ flexShrink: 0, padding: "4px 9px", borderRadius: 7, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11, cursor: "pointer" }}
-                        >
-                          {openToets === s.id ? "Verberg" : "Wat precies?"}
-                        </button>
+                        {/* 📝 Per vraag goed/fout/overgeslagen (Mark 4 sep). Alleen als
+                            er detail is — toetsen van vóór 1 sep hebben dat niet, en een
+                            knop die op "niets" uitkomt is erger dan geen knop. */}
+                        {Array.isArray(s.detail) && s.detail.length > 0 && (
+                          <button
+                            onClick={() => setOpenToets(openToets === s.id ? null : s.id)}
+                            aria-expanded={openToets === s.id}
+                            title="Bekijk per vraag wat er goed, fout of overgeslagen was"
+                            style={{ flexShrink: 0, padding: "4px 9px", borderRadius: 7, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11, cursor: "pointer" }}
+                          >
+                            {openToets === s.id ? "Verberg" : "Wat precies?"}
+                          </button>
+                        )}
                         <ScoreBadge pct={s.percentage} />
                       </div>
                       {openToets === s.id && (

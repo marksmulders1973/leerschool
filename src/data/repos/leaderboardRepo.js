@@ -65,7 +65,7 @@ export function bouwToetsDetail(questions, gekozenIdxPerVraag) {
       const opties = Array.isArray(q?.options) ? q.options : [];
       const kort = (t, n) => (t == null ? null : String(t).slice(0, n));
       return {
-        v: kort(q?.question, 200),
+        v: kort(q?.question ?? q?.text ?? q?.q ?? q?.vraag ?? q?.prompt ?? null, 200),
         a: idx != null ? kort(opties[idx], 120) : null,
         j: kort(opties[q?.answer], 120),
         goed: idx != null && idx === q?.answer,
