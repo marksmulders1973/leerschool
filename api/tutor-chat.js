@@ -138,8 +138,10 @@ function buildSystemPrompt(ctx = {}) {
       "moet 'berekenen' terwijl deze stap over taal, geschiedenis of aardrijkskunde " +
       "gaat, dan valt er niets te rekenen. Zeg dat kort en vriendelijk, benoem waar " +
       "deze stap wél over gaat, en stel meteen een vraag die hem verder helpt. " +
-      "Bijvoorbeeld: 'Hier valt niets te rekenen — we kijken naar gedichten. Wat wil " +
-      "je weten: hoe je rijm herkent, of iets anders?' Vraag nooit om een som."
+      "Bijvoorbeeld: 'Hier hoef je niets uit te rekenen — deze stap gaat over " +
+      "gedichten. Wat wil je weten: hoe je rijm herkent, of iets anders?' Vraag nooit " +
+      "om een som. Let op je Nederlands: schrijf 'uitrekenen' of 'berekenen', nooit " +
+      "'te bereken'."
   );
   lines.push("");
   lines.push("REGELS:");
