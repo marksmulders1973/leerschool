@@ -112,7 +112,7 @@ export default function LesDetail({ pathId, voortgang, naam = "je kind" }) {
     <div style={{ marginTop: 8, borderTop: "1px solid rgba(255,255,255,0.08)", paddingTop: 8 }}>
       {!iets && (
         <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 6 }}>
-          {naam} is hier nog niet aan begonnen. Hieronder staat wat er klaarstaat.
+          {naam} is hier nog niet aan begonnen. Hieronder zie je de delen die klaarstaan; zodra er aan een deel gewerkt is, verschijnen de vragen erbij.
         </div>
       )}
       {iets && !heeftVraagDetail && (
@@ -143,13 +143,17 @@ export default function LesDetail({ pathId, voortgang, naam = "je kind" }) {
                   {stap.title || `Deel ${i + 1}`}
                 </span>
                 <span style={{ fontSize: 10.5, color: kleur, fontWeight: 700, flexShrink: 0 }}>
-                  {isGedaan ? "gemaakt" : "staat nog open"}
+                  {isGedaan
+                    ? "gemaakt"
+                    : checks.length > 0
+                      ? `staat nog open — ${checks.length} ${checks.length === 1 ? "vraag" : "vragen"}`
+                      : "staat nog open"}
                 </span>
               </div>
               {wanneer && (
                 <div style={{ fontSize: 10, color: "rgba(255,255,255,0.3)", marginLeft: 20, marginTop: 1 }}>{wanneer}</div>
               )}
-              {checks.length > 0 && (
+              {isGedaan && checks.length > 0 && (
                 <div style={{ marginLeft: 20, marginTop: 4 }}>
                   {checks.map((c, ci) => (
                     <VraagRegel
