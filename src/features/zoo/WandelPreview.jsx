@@ -21,6 +21,7 @@ import * as THREE from "three";
 import { CELL } from "./grid";
 import { WANDEL_ROUTES } from "./wandelRoutes";
 import { LINT_BANDEN, LINT_WAYPOINTS, LINT_BAND_STARTS, LINT_START } from "./leerpadLint";
+import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET } from "./parkLeermomenten";
 
 export function wandelPreviewActief() {
   try {
@@ -395,6 +396,43 @@ export function Leerpadlint({ heightRef }) {
   );
 }
 
+// 🎨 Bij welke groep-band hoort dit object? (Mark 4 sep: "heeft elk ding zijn
+// eigen kleurtje en route?" → keuze A: elk inrit-paadje krijgt de kleur van het
+// niveau waar dat object bij hoort.) De band staat op het leermoment, gezet via
+// TAAK_VOLGORDE in parkLeermomenten.js.
+function bandVanAsset(assetId) {
+  const m = PARK_LEERMOMENTEN[LEERMOMENT_BY_ASSET[assetId] || assetId];
+  return m && typeof m.band === "number" ? m.band : null;
+}
+
+// 🪧 Het bordje bij een inrit: "opdracht 2 / Groep 5" in de bandkleur.
+// Een canvas-plaatje in plaats van een <Html>-overlay, want er staan er 24 in
+// het park en dat zijn 24 DOM-elementen die elke frame herpositioneerd worden.
+const _opdrachtTex = new Map();
+function maakOpdrachtTextuur(nummer, band) {
+  const sleutel = nummer + "|" + band;
+  if (_opdrachtTex.has(sleutel)) return _opdrachtTex.get(sleutel);
+  const b = LINT_BANDEN[band] || LINT_BANDEN[0];
+  const c = document.createElement("canvas");
+  c.width = 256; c.height = 128;
+  const g = c.getContext("2d");
+  g.fillStyle = b.kleur;
+  g.fillRect(0, 0, 256, 128);
+  g.strokeStyle = "rgba(0,0,0,0.22)"; g.lineWidth = 6;
+  g.strokeRect(3, 3, 250, 122);
+  g.fillStyle = b.tekstKleur;
+  g.textAlign = "center";
+  g.font = "800 34px system-ui, sans-serif";
+  g.fillText("opdracht " + nummer, 128, 52);
+  g.font = "700 26px system-ui, sans-serif";
+  g.globalAlpha = 0.85;
+  g.fillText(b.groep, 128, 92);
+  const tex = new THREE.CanvasTexture(c);
+  tex.anisotropy = 4;
+  _opdrachtTex.set(sleutel, tex);
+  return tex;
+}
+
 // 🛣️ Opritten — korte zwarte asfalt-inritten van de hoofdweg naar elk
 // leer-object, ALTIJD zichtbaar (Mark 24 aug 2026: "kan er een oprit van de
 // hoofdweg naar elk ding komen zodat je overal kunt komen?"). Keuze Mark:
@@ -425,14 +463,21 @@ function opritSporen(doelen) {
   const sporen = [];
   for (const doel of doelen) {
     const eind = new THREE.Vector2(doel.x, doel.z);
-    let foot = mid[0], best = Infinity;
-    for (const s of mid) { const d = (s.x - eind.x) ** 2 + (s.y - eind.y) ** 2; if (d < best) { best = d; foot = s; } }
+    let foot = mid[0], best = Infinity, footIdx = 0;
+    for (let i = 0; i < mid.length; i++) {
+      const sm = mid[i];
+      const d = (sm.x - eind.x) ** 2 + (sm.y - eind.y) ** 2;
+      if (d < best) { best = d; foot = sm; footIdx = i; }
+    }
     const start = foot.clone();
     const len = start.distanceTo(eind);
     if (len < 2.2) continue; // object staat praktisch al op de weg → geen oprit nodig
     const dir = eind.clone().sub(start).normalize();
     const eindWeg = eind.clone().addScaledVector(dir, -PLEIN_R); // stop vóór het object
-    sporen.push({ start, eindWeg, dir, hoek: Math.atan2(dir.x, dir.y) });
+    // band = de kleur; padIdx = hoe ver langs de lus (mid is gelijkmatig
+    // gesampled, dus de index is de volgorde waarin je ze tegenkomt)
+    sporen.push({ start, eindWeg, dir, hoek: Math.atan2(dir.x, dir.y),
+      id: doel.id, band: bandVanAsset(doel.id), padIdx: footIdx });
   }
   return sporen;
 }
@@ -456,36 +501,81 @@ export function opritCellen(doelen, marge = 1) {
 
 export function Opritten({ heightRef, doelen }) {
   const wegRef = useRef();
-  const { tegels, pleinen } = useMemo(() => {
+  const markRef = useRef();
+  const { tegels, pleinen, bordjes } = useMemo(() => {
+    const sporen = opritSporen(doelen);
+
+    // 🔢 Nummeren per kleur (Mark 4 sep: "geel opdracht 1, daarna geel opdracht
+    // 2"). Binnen elke band tellen we in de volgorde waarin je de inritten
+    // tegenkomt als je vanaf de ingang over de lus loopt — dus opdracht 1 is
+    // altijd de eerste die je ziet, niet een willekeurige.
+    const perBand = new Map();
+    for (const sp of sporen) {
+      if (sp.band == null) continue;
+      if (!perBand.has(sp.band)) perBand.set(sp.band, []);
+      perBand.get(sp.band).push(sp);
+    }
+    for (const lijst of perBand.values()) {
+      lijst.sort((a, b) => a.padIdx - b.padIdx);
+      lijst.forEach((sp, i) => { sp.nummer = i + 1; });
+    }
+
     const tegels = [];
     const pleinen = [];
-    for (const sp of opritSporen(doelen)) {
+    const bordjes = [];
+    for (const sp of sporen) {
       const len = sp.start.distanceTo(sp.eindWeg);
       const n = Math.max(1, Math.round(len / OPRIT_STAP));
       for (let i = 0; i <= n; i++) {
         const p = sp.start.clone().addScaledVector(sp.dir, (i / n) * len);
-        tegels.push({ x: p.x, z: p.y, hoek: sp.hoek });
+        tegels.push({ x: p.x, z: p.y, hoek: sp.hoek, band: sp.band });
       }
-      pleinen.push({ x: sp.eindWeg.x, z: sp.eindWeg.y });
+      pleinen.push({ x: sp.eindWeg.x, z: sp.eindWeg.y, band: sp.band });
+      // Het bordje staat een stukje de inrit in en in de berm ernaast, zodat
+      // het niet op de hoofdweg staat en je het ziet aankomen.
+      if (sp.band != null && sp.nummer) {
+        const zij = new THREE.Vector2(-sp.dir.y, sp.dir.x);
+        const p = sp.start.clone()
+          .addScaledVector(sp.dir, Math.min(2.0, len * 0.35))
+          .addScaledVector(zij, 1.35);
+        bordjes.push({ x: p.x, z: p.y, hoek: sp.hoek, band: sp.band, nummer: sp.nummer });
+      }
     }
-    return { tegels, pleinen };
+    return { tegels, pleinen, bordjes };
   }, [doelen]);
 
   const hoogte = (x, z) => (heightRef?.current ? heightRef.current(x, z) : 0);
 
   useLayoutEffect(() => {
     const inst = wegRef.current;
+    const mark = markRef.current;
     if (!inst || !tegels.length) return;
     const m = new THREE.Matrix4();
     const q = new THREE.Quaternion();
     const liggend = new THREE.Quaternion().setFromEuler(new THREE.Euler(-Math.PI / 2, 0, 0));
-    const schaal = new THREE.Vector3(OPRIT_BREEDTE, OPRIT_STAP * 1.8, 1);
+    const schaalWeg = new THREE.Vector3(OPRIT_BREEDTE, OPRIT_STAP * 1.8, 1);
+    const schaalStreep = new THREE.Vector3(0.30, OPRIT_STAP * 1.8, 1);
+    const kleur = new THREE.Color();
     tegels.forEach((s, i) => {
       q.setFromEuler(new THREE.Euler(0, s.hoek, 0)).multiply(liggend);
-      m.compose(new THREE.Vector3(s.x, hoogte(s.x, s.z) + 0.05, s.z), q, schaal);
+      const y = hoogte(s.x, s.z);
+      m.compose(new THREE.Vector3(s.x, y + 0.05, s.z), q, schaalWeg);
       inst.setMatrixAt(i, m);
+      // 🎨 Gekleurd middenstreepje in de kleur van de groep-band — precies
+      // hetzelfde patroon als op de hoofdweg, zodat je aan de inrit al ziet
+      // voor welk niveau die plek is.
+      if (mark) {
+        m.compose(new THREE.Vector3(s.x, y + 0.062, s.z), q, schaalStreep);
+        mark.setMatrixAt(i, m);
+        kleur.set(LINT_BANDEN[s.band]?.kleur || "#9aa0a6");
+        mark.setColorAt(i, kleur);
+      }
     });
     inst.instanceMatrix.needsUpdate = true;
+    if (mark) {
+      mark.instanceMatrix.needsUpdate = true;
+      if (mark.instanceColor) mark.instanceColor.needsUpdate = true;
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [tegels, heightRef]);
 
@@ -497,14 +587,41 @@ export function Opritten({ heightRef, doelen }) {
         <planeGeometry args={[1, 1]} />
         <meshStandardMaterial color="#26262b" transparent opacity={0.98} roughness={0.95} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
       </instancedMesh>
-      {/* ⭕ Klein rond pleintje vlak vóór elk object (een nette sta-plek). */}
+      {/* 🎨 Gekleurd middenstreepje per inrit (kleur = de groep van dat object) */}
+      <instancedMesh key={`opritstreep-${tegels.length}`} ref={markRef} args={[null, null, tegels.length]} frustumCulled={false}>
+        <planeGeometry args={[1, 1]} />
+        <meshStandardMaterial vertexColors transparent opacity={0.95} roughness={0.7} depthWrite={false} polygonOffset polygonOffsetFactor={-3} />
+      </instancedMesh>
+      {/* ⭕ Klein rond pleintje vlak vóór elk object, met een gekleurde rand. */}
       {pleinen.map((p, i) => {
         const y = hoogte(p.x, p.z);
         return (
-          <mesh key={"plein" + i} position={[p.x, y + 0.045, p.z]} rotation={[-Math.PI / 2, 0, 0]}>
-            <circleGeometry args={[PLEIN_R, 28]} />
-            <meshStandardMaterial color="#2b2b30" transparent opacity={0.98} roughness={0.95} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
-          </mesh>
+          <group key={"plein" + i} position={[p.x, y, p.z]}>
+            <mesh position={[0, 0.045, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+              <circleGeometry args={[PLEIN_R, 28]} />
+              <meshStandardMaterial color="#2b2b30" transparent opacity={0.98} roughness={0.95} depthWrite={false} polygonOffset polygonOffsetFactor={-2} />
+            </mesh>
+            <mesh position={[0, 0.055, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+              <ringGeometry args={[PLEIN_R - 0.16, PLEIN_R, 28]} />
+              <meshStandardMaterial color={LINT_BANDEN[p.band]?.kleur || "#9aa0a6"} transparent opacity={0.9} roughness={0.7} depthWrite={false} polygonOffset polygonOffsetFactor={-3} />
+            </mesh>
+          </group>
+        );
+      })}
+      {/* 🪧 Genummerd bordje bij elke inrit: "opdracht 2 · Groep 5" */}
+      {bordjes.map((b, i) => {
+        const y = hoogte(b.x, b.z);
+        return (
+          <group key={"bord" + i} position={[b.x, y, b.z]} rotation={[0, b.hoek + Math.PI, 0]}>
+            <mesh position={[0, 0.42, 0]} castShadow>
+              <boxGeometry args={[0.07, 0.84, 0.07]} />
+              <meshStandardMaterial color="#7a5230" />
+            </mesh>
+            <mesh position={[0, 0.98, 0]} castShadow>
+              <boxGeometry args={[0.92, 0.46, 0.05]} />
+              <meshStandardMaterial map={maakOpdrachtTextuur(b.nummer, b.band)} />
+            </mesh>
+          </group>
         );
       })}
     </group>
