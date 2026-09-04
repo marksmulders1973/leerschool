@@ -58,7 +58,10 @@ export function bouwToetsDetail(questions, gekozenIdxPerVraag) {
   try {
     if (!Array.isArray(questions) || questions.length === 0) return null;
     return questions.map((q, i) => {
-      const idx = Array.isArray(gekozenIdxPerVraag) ? gekozenIdxPerVraag[i] : null;
+      const ruw = Array.isArray(gekozenIdxPerVraag) ? gekozenIdxPerVraag[i] : null;
+      // -1 = "Ik weet het niet" of tijd om (PlayQuiz), null = niet aan toe
+      // gekomen (CitoLeerpadToets). Beide tellen als overgeslagen.
+      const idx = typeof ruw === "number" && ruw >= 0 ? ruw : null;
       const opties = Array.isArray(q?.options) ? q.options : [];
       const kort = (t, n) => (t == null ? null : String(t).slice(0, n));
       return {
