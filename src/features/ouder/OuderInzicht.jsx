@@ -3,6 +3,7 @@ import supabase from "../../supabase.js";
 import { haalScoresVoorKind, haalLeerpadVoortgangVoorKind } from "./kindData.js";
 import LesVoortgang, { PATHS_BY_ID } from "../../shared/ui/LesVoortgang.jsx";
 import LesDetail from "../../shared/ui/LesDetail.jsx";
+import ToetsDetail from "../../shared/ui/ToetsDetail.jsx";
 import { isLaunchPromoActive } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { clearAll as clearAdaptive } from "../../shared/adaptiveStore.js";
@@ -240,6 +241,8 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   const [padVoortgang, setPadVoortgang] = useState({});
   // Welke les staat opengeklapt met het "wat is er precies gemaakt"-detail?
   const [openDetail, setOpenDetail] = useState(null);
+  // 📝 Welke toets staat opengeklapt met het per-vraag-detail (Mark 4 sep 2026)?
+  const [openToets, setOpenToets] = useState(null);
   useEffect(() => {
     const link = selectedChildVerified;
     if (!link?.id) { setKlaarLijst([]); setPadVoortgang({}); return; }
@@ -291,7 +294,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     // + naam(+uid) voor rijen van vóór de koppeling — zie kindData.js.
     haalScoresVoorKind(
       { id: selectedChildVerified?.id, child_name: selectedChild, child_user_id: selectedChildVerified?.child_user_id },
-      { select: "id, subject, level, score, total, percentage, time_taken, completed_at", limit: 50 }
+      { select: "id, subject, level, score, total, percentage, time_taken, completed_at, detail", limit: 50 }
     ).then((rows) => {
       setChildScores(rows || []);
       setScoresLoading(false);
@@ -311,7 +314,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     }
     haalScoresVoorKind(
       { id: selectedChildVerified.id, child_name: selectedChild, child_user_id: selectedChildVerified.child_user_id },
-      { select: "id, subject, level, percentage, completed_at", subject: "cito", limit: 100 }
+      { select: "id, subject, level, score, total, percentage, completed_at, detail", subject: "cito", limit: 100 }
     ).then((rows) => setCitoScores(rows || []));
     // Zelfde deps-verfijning als het scores-effect hierboven (6s-poll-flits).
   }, [selectedChild, selectedChildVerified?.id, selectedChildVerified?.child_user_id]);
@@ -1319,11 +1322,26 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 <div style={{ borderRadius: 16, border: "1px solid rgba(255,107,53,0.25)", background: "rgba(255,107,53,0.06)", padding: "14px 16px" }}>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ff8c42", marginBottom: 10, display: "flex", alignItems: "center", gap: 6 }}><DoorstroomtoetsLogo size={18} /> Doorstroomtoets voortgang</div>
                   {citoScores.slice(0, 5).map((s, i) => (
-                    <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-                      <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>
-                        {s.level} — {fmtDatum(s.completed_at, { day: "numeric", month: "short" })}
-                      </span>
-                      <ScoreBadge pct={s.percentage} />
+                    <div key={s.id || i} style={{ marginBottom: 6 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
+                        <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", flex: 1, minWidth: 0 }}>
+                          {s.level} — {fmtDatum(s.completed_at, { day: "numeric", month: "short" })}
+                          {s.total ? <span style={{ color: "rgba(255,255,255,0.35)" }}> · {s.score}/{s.total}</span> : null}
+                        </span>
+                        {/* 📝 Per vraag goed/fout/overgeslagen (Mark 4 sep) */}
+                        <button
+                          onClick={() => setOpenToets(openToets === s.id ? null : s.id)}
+                          aria-expanded={openToets === s.id}
+                          title="Bekijk per vraag wat er goed, fout of overgeslagen was"
+                          style={{ flexShrink: 0, padding: "4px 9px", borderRadius: 7, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11, cursor: "pointer" }}
+                        >
+                          {openToets === s.id ? "Verberg" : "Wat precies?"}
+                        </button>
+                        <ScoreBadge pct={s.percentage} />
+                      </div>
+                      {openToets === s.id && (
+                        <ToetsDetail detail={s.detail} naam={selectedChild} onOefen={onOpenLes} />
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1335,7 +1353,8 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   🕐 Recente activiteit
                 </div>
                 {recentScores.map((s, i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "center", padding: "9px 16px", borderBottom: "1px solid rgba(255,255,255,0.04)", gap: 12 }}>
+                  <div key={s.id || i} style={{ padding: "9px 16px", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "rgba(255,255,255,0.75)" }}>
                         {SUBJECT_LABELS[s.subject] || s.subject} · {s.level}
@@ -1345,10 +1364,24 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                         {s.time_taken ? ` · ⏱ ${s.time_taken < 60 ? `${s.time_taken}s` : `${Math.floor(s.time_taken / 60)}m ${s.time_taken % 60}s`}` : ""}
                       </div>
                     </div>
+                    {Array.isArray(s.detail) && s.detail.length > 0 && (
+                      <button
+                        onClick={() => setOpenToets(openToets === s.id ? null : s.id)}
+                        aria-expanded={openToets === s.id}
+                        title="Bekijk per vraag wat er goed, fout of overgeslagen was"
+                        style={{ flexShrink: 0, padding: "4px 9px", borderRadius: 7, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11, cursor: "pointer" }}
+                      >
+                        {openToets === s.id ? "Verberg" : "Wat precies?"}
+                      </button>
+                    )}
                     <div style={{ textAlign: "right" }}>
                       <ScoreBadge pct={s.percentage} />
                       <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.25)", marginTop: 2 }}>{s.score}/{s.total}</div>
                     </div>
+                  </div>
+                  {openToets === s.id && (
+                    <ToetsDetail detail={s.detail} naam={selectedChild} onOefen={onOpenLes} />
+                  )}
                   </div>
                 ))}
               </div>

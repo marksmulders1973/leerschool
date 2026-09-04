@@ -5,7 +5,8 @@ import {
   haalOpenLeerlingCodes, trekLeerlingCodeIn,
   haalKlaargezetVoorLink, haalWeg, haalLeerlingOverzicht, KLAARGEZET_EVENT,
 } from "../../shared/ouderKlaargezet.js";
-import { haalLeerpadVoortgangVoorKind } from "../ouder/kindData.js";
+import { haalLeerpadVoortgangVoorKind, haalScoresVoorKind } from "../ouder/kindData.js";
+import ToetsDetail, { telToets } from "../../shared/ui/ToetsDetail.jsx";
 import LesVoortgang from "../../shared/ui/LesVoortgang.jsx";
 import LesDetail from "../../shared/ui/LesDetail.jsx";
 
@@ -24,6 +25,12 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   const [padVoortgang, setPadVoortgang] = useState({});
   // Welke les staat open met het "wat is er precies gemaakt"-detail?
   const [openDetail, setOpenDetail] = useState(null);
+  // 📝 Toetsen van de gekozen leerling + welke staat open (Mark 4 sep 2026:
+  // "dat de leraar ziet wat de kinderen exact gemaakt hebben en wat daarvan
+  // goed of fout was"). De leerkracht-kant toonde tot nu toe alleen
+  // klaargezette lessen; toetsen die een leerling maakte waren onzichtbaar.
+  const [toetsen, setToetsen] = useState([]);
+  const [openToets, setOpenToets] = useState(null);
   const [inviteName, setInviteName] = useState("");
   // Openstaande codes uit link_codes (30 aug, spiegel van de ouder-kant):
   // de "wacht op je leerling"-kaarten. Persistent — een verse code overleeft
@@ -96,11 +103,17 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
   };
 
   useEffect(() => {
-    if (!selected?.verified) { setKlaarLijst([]); setPadVoortgang({}); return; }
+    if (!selected?.verified) { setKlaarLijst([]); setPadVoortgang({}); setToetsen([]); return; }
     let cancel = false;
     const laad = () => {
       haalKlaargezetVoorLink(selected.id, "leraar").then((r) => { if (!cancel) setKlaarLijst(r); });
       haalLeerpadVoortgangVoorKind(selected).then((r) => { if (!cancel) setPadVoortgang(r); });
+      // Toetsen lezen op de leerkracht-koppeling (link_id) + legacy op naam —
+      // haalScoresVoorKind werkt met student_name sinds v575.
+      haalScoresVoorKind(selected, {
+        select: "id, subject, level, title, score, total, percentage, completed_at, detail",
+        limit: 10,
+      }).then((r) => { if (!cancel) setToetsen(r || []); });
     };
     laad();
     window.addEventListener(KLAARGEZET_EVENT, laad);
@@ -279,6 +292,50 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
               ) : (
                 <div style={{ fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>
                   Nog niets klaargezet voor {selected.student_name}.
+                </div>
+              )}
+              {/* 📝 Toetsen die deze leerling maakte — met per vraag goed/fout/
+                  overgeslagen. Data komt uit leaderboard.detail (sinds v527). */}
+              {toetsen.length > 0 && (
+                <div style={{ margin: "10px 0 12px", borderRadius: 10, border: "1px solid rgba(0,176,255,0.25)", background: "rgba(0,176,255,0.05)", padding: "10px 12px" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "#00b0ff", marginBottom: 6 }}>
+                    📝 Toetsen van {selected.student_name}
+                  </div>
+                  <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+                    {toetsen.map((t) => {
+                      const tel = Array.isArray(t.detail) ? telToets(t.detail) : null;
+                      const datum = t.completed_at ? new Date(t.completed_at).toLocaleDateString("nl-NL", { day: "numeric", month: "short" }) : "";
+                      const kleur = t.percentage >= 80 ? "#69f0ae" : t.percentage >= 50 ? "#ffd54f" : "#ff8a80";
+                      return (
+                        <div key={t.id} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                          <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                            <div style={{ flex: 1, minWidth: 0 }}>
+                              <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--color-text-strong)" }}>
+                                {t.title || (t.subject === "cito" ? "Doorstroomtoets" : t.subject)}{t.level ? " · " + t.level : ""}
+                              </div>
+                              <div style={{ fontSize: 11, color: "rgba(255,255,255,0.45)", marginTop: 1 }}>
+                                {datum} · <span style={{ color: kleur, fontWeight: 700 }}>{t.score}/{t.total} ({t.percentage}%)</span>
+                                {tel && tel.over > 0 ? <span> · {tel.over} overgeslagen</span> : null}
+                              </div>
+                            </div>
+                            {Array.isArray(t.detail) && t.detail.length > 0 && (
+                              <button
+                                onClick={() => setOpenToets(openToets === t.id ? null : t.id)}
+                                aria-expanded={openToets === t.id}
+                                title="Bekijk per vraag wat er goed, fout of overgeslagen was"
+                                style={{ flexShrink: 0, padding: "5px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
+                              >
+                                {openToets === t.id ? "Verberg" : "Wat precies?"}
+                              </button>
+                            )}
+                          </div>
+                          {openToets === t.id && (
+                            <ToetsDetail detail={t.detail} naam={selected.student_name} onOefen={onOpenLes} />
+                          )}
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
               {onKlaarzetten && (
