@@ -25,12 +25,14 @@ export const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p])
 export default function LesVoortgang({ item, voortgang, watNu = "je kind" }) {
   const totaal = PATHS_BY_ID[item?.path_id]?.stepCount || 0;
   const gedaan = voortgang?.gedaan || 0;
-  const af = item?.gedaan || (totaal > 0 && gedaan >= totaal);
+  const gemetenAf = totaal > 0 && gedaan >= totaal;
+  const af = item?.gedaan || gemetenAf;
   const kleur = af ? "#69f0ae" : gedaan > 0 ? "#ffd54f" : "rgba(255,255,255,0.45)";
 
   let tekst;
-  if (af && totaal > 0) tekst = "✓ afgerond — alle " + totaal + " delen gedaan";
-  else if (af) tekst = "✓ " + watNu + " heeft dit gedaan";
+  if (gemetenAf) tekst = "✓ afgerond — alle " + totaal + " delen gedaan";
+  else if (af && gedaan > 0 && totaal > 0) tekst = "✓ afgevinkt door " + watNu + " — " + gedaan + " van de " + totaal + " delen gezien";
+  else if (af) tekst = "✓ afgevinkt door " + watNu;
   else if (gedaan > 0 && totaal > 0) tekst = "bezig — " + gedaan + " van de " + totaal + " delen";
   else if (gedaan > 0) tekst = "bezig — " + gedaan + (gedaan === 1 ? " deel" : " delen") + " gedaan";
   else tekst = totaal > 0 ? "nog te doen — " + totaal + " delen" : "nog te doen";
