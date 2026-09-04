@@ -420,6 +420,17 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // vuurde completeStep of setMode("wrong") nog ná navigatie en sleurde de
   // leerling terug naar een verlaten context.
   const pendingTimersRef = useRef([]);
+  // 📝 Per vraag bijhouden hoeveel keer er fout geantwoord werd vóór het goede
+  // antwoord (Mark 4 sep 2026: de ouder wil per vraag zien hoe het ging). Een
+  // ref en geen state: het hoeft niets te hertekenen, het gaat alleen mee naar
+  // de database bij completeStep(). Sleutel = de echte vraag-index, want de
+  // volgorde kan door checkOrder geschud zijn.
+  //
+  // ⚠️ Moet hier staan, bóven alle conditionele returns. Stond eerst vlak boven
+  // goToStep() — dus ná `if (!path) return ...` — waardoor het aantal hooks
+  // veranderde zodra het lazy geladen pad binnenkwam: React error #310 en een
+  // wit scherm bij élk leerpad.
+  const checkFoutenRef = useRef({});
   // Eerste-poging-score van deze sessie (B0.6) — voedt het AllDone-scherm.
   const sessionScoreRef = useRef({ tries: 0, correct: 0 });
   const schedule = useCallback((fn, ms) => {
@@ -608,13 +619,6 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     }
     return null;
   })();
-
-  // 📝 Per vraag bijhouden hoeveel keer er fout geantwoord werd vóór het
-  // goede antwoord (Mark 4 sep 2026: de ouder wil per vraag zien hoe het ging).
-  // Een ref en geen state: het hoeft niets te hertekenen, het gaat alleen mee
-  // naar de database bij completeStep(). Sleutel = de echte vraag-index, want
-  // de volgorde kan door checkOrder geschud zijn.
-  const checkFoutenRef = useRef({});
 
   const goToStep = (idx) => {
     clearPendingTimers();
