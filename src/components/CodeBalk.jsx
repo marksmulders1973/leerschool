@@ -299,12 +299,12 @@ export default function CodeBalk() {
       ) : (
         <div>
           <div style={{ font: "800 13.5px/1.4 system-ui", color: "#7a5b00", marginBottom: 4 }}>
-            🎟️ Vul je code in — bijvoorbeeld van je gemeente, de voedselbank of de bibliotheek:
+            🎟️ Vul je code in — van je gemeente, de voedselbank of de bibliotheek, óf de koppelcode van je vader, moeder, juf of meester:
           </div>
           {/* Geruststelling (28 aug 2026): mensen openden de balk zonder code
               en dachten dat ze er één nodig hadden om te mogen oefenen. */}
           <div style={{ font: "600 12px/1.45 system-ui", color: "#8a7a3d", marginBottom: 8 }}>
-            Geen code? Geen probleem — oefenen is gratis, ook zonder code. Een code van een organisatie geeft je gezin daarbovenop alle Familie-extra&apos;s cadeau.
+            Geen code? Geen probleem — oefenen is gratis, ook zonder code. Een code van een organisatie geeft je gezin daarbovenop alle Familie-extra&apos;s cadeau; met een koppelcode van thuis of school kunnen zij meekijken hoe het gaat.
           </div>
           <div style={{ display: "flex", gap: 8 }}>
             <input
@@ -334,7 +334,7 @@ export default function CodeBalk() {
           ) : (
             <div style={{ marginTop: 8, background: "rgba(124,58,237,0.08)", border: "1.5px solid rgba(124,58,237,0.4)", borderRadius: 10, padding: "10px 12px" }}>
               <div style={{ font: "700 12.5px/1.45 system-ui", color: "#5b21b6" }}>
-                🔐 Dit lijkt een <strong>koppelcode</strong> van thuis of school! Kies eerst je eigen naam in de app (tik bovenaan op "Ik ben leerling") en typ de code daarna nóg een keer hier — dan koppelen we meteen. We hebben hem alvast voor je onthouden.
+                🔐 Dit is een <strong>koppelcode</strong> van thuis of school — die hoort bij jóuw naam. Tik bovenaan op "Ik ben leerling" en kies je naam; daarna koppelen we je meteen. Je hoeft de code niet nog een keer in te typen, we hebben hem onthouden.
               </div>
             </div>
           ))}

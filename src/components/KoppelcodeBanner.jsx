@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../supabase.js";
 import { bewaarKoppeling, koppelingVoor } from "../shared/koppeling.js";
 
@@ -33,23 +33,27 @@ export default function KoppelcodeBanner({ userName }) {
   const [open, setOpen] = useState(() => {
     try { return !!sessionStorage.getItem("lk_koppelcode_voorstel"); } catch { return false; }
   });
+  // Kwam deze code uit de balk op home? Alleen dán koppelen we automatisch —
+  // een code die iemand hier zit te typen mag nooit halverwege ingestuurd worden.
+  const uitVoordeur = useRef(null);
   const [code, setCode] = useState(() => {
     try {
       const c = sessionStorage.getItem("lk_koppelcode_voorstel") || "";
       sessionStorage.removeItem("lk_koppelcode_voorstel");
+      uitVoordeur.current = c || null;
       return c;
     } catch { return ""; }
   });
   const [busy, setBusy] = useState(false);
   const [msg, setMsg] = useState(null); // { ok: bool, text: string, rol?: string }
 
-  if (!userName) return null;
-
-  const submit = async (e) => {
-    e?.preventDefault?.();
+  // Eén plek voor het koppelen zelf, zodat zowel de knop als de automatische
+  // afhandeling hem kan gebruiken. Staat bewust vóór de early return: hooks
+  // mogen niet achter een conditionele return staan.
+  const doeClaim = useCallback(async (ruweCode) => {
     setBusy(true);
     setMsg(null);
-    const trimmed = code.trim().toUpperCase();
+    const trimmed = String(ruweCode || "").trim().toUpperCase();
     if (trimmed.length < 4) {
       setMsg({ ok: false, text: "Vul de hele code in (6 letters)." });
       setBusy(false);
@@ -76,6 +80,24 @@ export default function KoppelcodeBanner({ userName }) {
       setMsg({ ok: false, text: "Geen verbinding met de koppel-server. Probeer het zo nog eens." });
     }
     setBusy(false);
+  }, [userName]);
+
+  // 🔗 Automatisch koppelen (Mark 4 sep 2026). Het kind typte de koppelcode al
+  // in bij de voordeur en koos daarna zijn naam — dat is de bevestiging. Nog
+  // een keer op "Koppelen" moeten tikken is een lege stap, en de oude tekst
+  // stuurde mensen zelfs terug om de code opnieuw te typen.
+  const autoGedaan = useRef(false);
+  useEffect(() => {
+    if (autoGedaan.current || !userName || !uitVoordeur.current) return;
+    autoGedaan.current = true;
+    doeClaim(uitVoordeur.current);
+  }, [userName, doeClaim]);
+
+  if (!userName) return null;
+
+  const submit = (e) => {
+    e?.preventDefault?.();
+    doeClaim(code);
   };
 
   // 🎉 Feestelijke eindstaat (stap 3 = klaar). Cadeau-framing; verwijst naar de
