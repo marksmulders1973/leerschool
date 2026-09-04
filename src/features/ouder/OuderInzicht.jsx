@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../../supabase.js";
-import { haalScoresVoorKind } from "./kindData.js";
+import { haalScoresVoorKind, haalLeerpadVoortgangVoorKind } from "./kindData.js";
+import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { isLaunchPromoActive } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { clearAll as clearAdaptive } from "../../shared/adaptiveStore.js";
@@ -14,6 +15,10 @@ import VriendenWerven from "../referral/VriendenWerven.jsx";
 import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import KindOverzicht from "./KindOverzicht.jsx";
 import CharleyTip from "../../components/CharleyTip.jsx";
+
+// Manifest-only (~155 kB) i.p.v. alle leerpaden (5,8 MB) — zelfde truc als
+// Curriculum.jsx. Nodig om "3 van de 5 delen" te kunnen tonen.
+const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
 // Gedeeld ouder-inzicht-blok (Mark 14 aug): dezelfde ouder-functionaliteit —
 // kind koppelen (code via WhatsApp/e-mail/kopiëren), partner-mail, betalen en
@@ -75,6 +80,43 @@ function generateCode() {
   const bytes = new Uint8Array(6);
   crypto.getRandomValues(bytes);
   return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
+}
+
+
+// 💛 Statusregel onder een klaargezette les. Toont de échte voortgang uit
+// learn_progress in plaats van alleen het handmatige vinkje van het kind
+// (Mark 4 sep 2026: "daar achter verwacht ik voortgang, bv. 30/100").
+function KlaarStatus({ item, voortgang }) {
+  const totaal = PATHS_BY_ID[item.path_id]?.stepCount || 0;
+  const gedaan = voortgang?.gedaan || 0;
+  const af = item.gedaan || (totaal > 0 && gedaan >= totaal);
+  const kleur = af ? "#69f0ae" : gedaan > 0 ? "#ffd54f" : "rgba(255,255,255,0.45)";
+
+  let tekst;
+  if (af && totaal > 0) tekst = "✓ afgerond — alle " + totaal + " delen gedaan";
+  else if (af) tekst = "✓ je kind heeft dit gedaan";
+  else if (gedaan > 0 && totaal > 0) tekst = "bezig — " + gedaan + " van de " + totaal + " delen";
+  else if (gedaan > 0) tekst = "bezig — " + gedaan + (gedaan === 1 ? " deel" : " delen") + " gedaan";
+  else tekst = totaal > 0 ? "nog te doen — " + totaal + " delen" : "nog te doen";
+
+  const wanneer = voortgang?.laatste
+    ? voortgang.laatste.toLocaleDateString("nl-NL", { day: "numeric", month: "short" }) +
+      " om " + voortgang.laatste.toLocaleTimeString("nl-NL", { hour: "2-digit", minute: "2-digit" })
+    : null;
+
+  return (
+    <div>
+      <div style={{ fontSize: 11, color: kleur, fontWeight: 700 }}>{tekst}</div>
+      {totaal > 0 && (
+        <div style={{ height: 4, borderRadius: 3, background: "rgba(255,255,255,0.10)", marginTop: 4, overflow: "hidden" }}>
+          <div style={{ width: Math.min(100, Math.round((gedaan / totaal) * 100)) + "%", height: "100%", background: kleur, borderRadius: 3, transition: "width .3s" }} />
+        </div>
+      )}
+      {wanneer && (
+        <div style={{ fontSize: 10, color: "rgba(255,255,255,0.35)", marginTop: 3 }}>laatst gewerkt: {wanneer}</div>
+      )}
+    </div>
+  );
 }
 
 export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, onHierOefenen, onOpenLes, embedded = false }) {
@@ -229,15 +271,38 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // map óók op de ouder-pagina zien — dan kunnen ze samen de vragen bekijken
   // en helpen"). Ouder leest z'n eigen koppeling via RLS.
   const [klaarLijst, setKlaarLijst] = useState([]);
+  // 📚 Leerpad-voortgang (Mark 4 sep 2026: "ik zie niet wat hij gedaan heeft").
+  // `gedaan` in ouder_klaargezet is een handmatig vinkje van het kind, en dat
+  // zet een kind zelden aan. De échte voortgang staat in learn_progress; die
+  // lezen we er nu naast, zodat een klaargezette les vanzelf meegroeit.
+  const [padVoortgang, setPadVoortgang] = useState({});
   useEffect(() => {
-    const linkId = selectedChildVerified?.id;
-    if (!linkId) { setKlaarLijst([]); return; }
+    const link = selectedChildVerified;
+    if (!link?.id) { setKlaarLijst([]); setPadVoortgang({}); return; }
     let cancel = false;
-    const laad = () => haalKlaargezetVoorLink(linkId).then((r) => { if (!cancel) setKlaarLijst(r); });
+    const laad = () => {
+      haalKlaargezetVoorLink(link.id).then((r) => { if (!cancel) setKlaarLijst(r); });
+      haalLeerpadVoortgangVoorKind(link).then((r) => { if (!cancel) setPadVoortgang(r); });
+    };
     laad();
     window.addEventListener(KLAARGEZET_EVENT, laad);
     return () => { cancel = true; window.removeEventListener(KLAARGEZET_EVENT, laad); };
   }, [selectedChildVerified?.id]);
+  // Wat het kind zélf koos = alle leerpaden met voortgang die niet in de
+  // klaargezet-lijst staan. Nieuwste bovenaan, hooguit 6 zodat het overzicht
+  // een overzicht blijft.
+  const klaarIds = new Set(klaarLijst.map((k) => k.path_id));
+  const zelfGedaan = Object.entries(padVoortgang)
+    .filter(([pathId]) => !klaarIds.has(pathId))
+    .map(([pathId, voortgang]) => ({
+      pathId,
+      voortgang,
+      titel: PATHS_BY_ID[pathId]?.title || pathId,
+      emoji: PATHS_BY_ID[pathId]?.emoji || "📘",
+    }))
+    .sort((a, b) => (b.voortgang?.laatste || 0) - (a.voortgang?.laatste || 0))
+    .slice(0, 6);
+
   const verwijderKlaar = async (pathId) => {
     if (!selectedChildVerified?.id) return;
     await haalWeg(selectedChildVerified.id, pathId);
@@ -961,9 +1026,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
-                    <div style={{ fontSize: 11, color: it.gedaan ? "#69f0ae" : "rgba(255,255,255,0.45)", fontWeight: 700 }}>
-                      {it.gedaan ? "✓ je kind heeft dit gedaan" : "nog te doen"}
-                    </div>
+                    <KlaarStatus item={it} voortgang={padVoortgang[it.path_id]} />
                   </div>
                   {onOpenLes && (
                     <button
@@ -993,6 +1056,42 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 + Meer lessen klaarzetten
               </button>
             )}
+          </div>
+        )}
+
+        {/* 📚 Zelf gekozen leerpaden (Mark 4 sep 2026). Het overzicht las tot nu
+            toe alleen de quiz-scores uit `leaderboard`; een kind dat leerpad-
+            stappen doet schrijft naar `learn_progress` en was dus onzichtbaar.
+            Hier staat wat je kind uit zichzelf heeft opgepakt — alles wat jij
+            hebt klaargezet staat hierboven al. */}
+        {selectedChildVerified && zelfGedaan.length > 0 && (
+          <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.28)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", margin: "4px 0 10px" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#69f0ae", marginBottom: 2 }}>
+              📚 {selectedChild} pakte dit zelf op
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>
+              Lessen die {selectedChild} zonder jouw hulp heeft gekozen.
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {zelfGedaan.map((p) => (
+                <div key={p.pathId} style={{ display: "flex", alignItems: "center", gap: 8, padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{p.emoji}</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{p.titel}</div>
+                    <KlaarStatus item={{ path_id: p.pathId, gedaan: false }} voortgang={p.voortgang} />
+                  </div>
+                  {onOpenLes && (
+                    <button
+                      onClick={() => onOpenLes(p.pathId)}
+                      title="Open de les om mee te kijken"
+                      style={{ flexShrink: 0, padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(105,240,174,0.4)", background: "rgba(105,240,174,0.12)", color: "#69f0ae", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12, cursor: "pointer" }}
+                    >
+                      Bekijk
+                    </button>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
