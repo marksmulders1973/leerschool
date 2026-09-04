@@ -123,6 +123,25 @@ function buildSystemPrompt(ctx = {}) {
       "eromheen ('wat gebeurt daar met dat woord?')."
   );
   lines.push("");
+  lines.push(
+    "JE HEBT DE LEERSTOF AL VOOR JE. Onder HUIDIGE STAP-CONTEXT staat precies " +
+      "waar de leerling mee bezig is: het onderwerp, de stap, de uitleg die op zijn " +
+      "scherm staat, en als die er is de vraag met de antwoordopties. Vraag dus NOOIT " +
+      "of de leerling 'de som of de vraag even doorstuurt' en zeg nooit dat je niet " +
+      "kunt zien waar het over gaat — je ziet het wél. Zegt de leerling 'dit', " +
+      "'deze', 'dat' of 'het' zonder erbij te vertellen wat (bv. 'ik snap dit niet', " +
+      "'hoe doe je dit', 'hoe bereken je dit'), dan bedoelt hij ALTIJD de vraag of de " +
+      "uitleg van deze stap. Ga daar meteen mee aan de slag."
+  );
+  lines.push(
+    "PAST DE VRAAG NIET BIJ HET VAK? Vraagt de leerling bijvoorbeeld hoe hij iets " +
+      "moet 'berekenen' terwijl deze stap over taal, geschiedenis of aardrijkskunde " +
+      "gaat, dan valt er niets te rekenen. Zeg dat kort en vriendelijk, benoem waar " +
+      "deze stap wél over gaat, en stel meteen een vraag die hem verder helpt. " +
+      "Bijvoorbeeld: 'Hier valt niets te rekenen — we kijken naar gedichten. Wat wil " +
+      "je weten: hoe je rijm herkent, of iets anders?' Vraag nooit om een som."
+  );
+  lines.push("");
   lines.push("REGELS:");
   lines.push("- Maximum 3 zinnen. Eenvoudig Nederlands. Geen lange opsommingen.");
   lines.push(ageInstructie(ageGroup));
@@ -180,7 +199,7 @@ function buildSystemPrompt(ctx = {}) {
   if (ctx.pathTitle) lines.push(`Onderwerp: ${kort(ctx.pathTitle, 200)}`);
   if (ctx.stepTitle) lines.push(`Stap: ${kort(ctx.stepTitle, 200)}`);
   if (ctx.stepExplanation) {
-    const explShort = String(ctx.stepExplanation).slice(0, 1800);
+    const explShort = String(ctx.stepExplanation).slice(0, 2600);
     lines.push("Uitleg die de leerling net heeft gelezen:");
     lines.push(explShort);
   }
@@ -193,6 +212,13 @@ function buildSystemPrompt(ctx = {}) {
     // Audit 2026-05-14: juiste antwoord NIET meer in context. AI moet uit
     // uitleg + opties zelf afleiden welke optie correct is. Voorkomt
     // lek-risico ("Het juiste antwoord is C, omdat...").
+  }
+  if (!ctx.currentCheckQuestion && ctx.stepExplanation) {
+    lines.push("");
+    lines.push(
+      "Er staat op dit moment GEEN vraag op het scherm: de leerling is de uitleg " +
+        "hierboven aan het lezen. Zegt hij 'dit' of 'deze', dan bedoelt hij die uitleg."
+    );
   }
   if (ctx.lastWrongAnswer) {
     lines.push(`De leerling koos zojuist fout: "${kort(ctx.lastWrongAnswer, 200)}".`);
