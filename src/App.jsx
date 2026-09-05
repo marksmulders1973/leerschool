@@ -128,8 +128,14 @@ import { loadLeaderboardForPlayer, insertLeaderboardEntry, bouwToetsDetail } fro
 function quizDetail(result) {
   if (!Array.isArray(result?.answers) || !Array.isArray(result?.questions)) return null;
   const idxArr = new Array(result.questions.length).fill(null);
-  result.answers.forEach((a) => { if (a && a.questionIndex != null) idxArr[a.questionIndex] = a.selected; });
-  return bouwToetsDetail(result.questions, idxArr);
+  const extra = new Array(result.questions.length).fill(null);
+  result.answers.forEach((a) => {
+    if (!a || a.questionIndex == null) return;
+    idxArr[a.questionIndex] = a.selected;
+    // "Ik weet het niet" (Mark 5 sep 2026): eerlijk apart van tijd-om, mét pad-advies.
+    if (a.weetNiet) extra[a.questionIndex] = { wn: true, pad: a.pad || null };
+  });
+  return bouwToetsDetail(result.questions, idxArr, extra);
 }
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";

@@ -18,16 +18,20 @@ const KLEUR = {
   goed: "#69f0ae",
   fout: "#ff8a80",
   over: "rgba(255,255,255,0.38)",
+  weetniet: "#ffd54f",
 };
 
+// "weetniet" (Mark 5 sep 2026): het kind koos zelf "Ik weet het niet" — eerlijk
+// apart van een vraag die gewoon open bleef. Sinds v586 bewaard als `wn: true`.
 function status(item) {
+  if (item?.wn) return "weetniet";
   if (item?.a == null) return "over";
   return item?.goed ? "goed" : "fout";
 }
 
-/** Telt goed/fout/overgeslagen — ook bruikbaar voor een samenvattingsregel elders. */
+/** Telt goed/fout/overgeslagen/weet-niet — ook bruikbaar voor een samenvattingsregel elders. */
 export function telToets(detail) {
-  const t = { goed: 0, fout: 0, over: 0, totaal: 0 };
+  const t = { goed: 0, fout: 0, over: 0, weetniet: 0, totaal: 0 };
   for (const it of Array.isArray(detail) ? detail : []) {
     t[status(it)] += 1;
     t.totaal += 1;
@@ -38,8 +42,8 @@ export function telToets(detail) {
 function VraagRegel({ nummer, item, onOefen }) {
   const s = status(item);
   const kleur = KLEUR[s];
-  const icoon = s === "goed" ? "✓" : s === "fout" ? "✗" : "○";
-  const label = s === "goed" ? "goed" : s === "fout" ? "fout" : "overgeslagen";
+  const icoon = s === "goed" ? "✓" : s === "fout" ? "✗" : s === "weetniet" ? "?" : "○";
+  const label = s === "goed" ? "goed" : s === "fout" ? "fout" : s === "weetniet" ? "zei: weet ik niet" : "overgeslagen";
   return (
     <div style={{ padding: "5px 0", borderTop: "1px solid rgba(255,255,255,0.05)" }}>
       <div style={{ display: "flex", gap: 8, alignItems: "flex-start" }}>
@@ -76,6 +80,30 @@ function VraagRegel({ nummer, item, onOefen }) {
           goed was: {item.j}
         </div>
       )}
+      {/* "Weet ik niet" is het eerlijkste signaal dat er is — daar hoort meteen
+          het advies bij: oefen dit deel (het leerpad dat bij de vraag past). */}
+      {s === "weetniet" && (
+        <div style={{ marginLeft: 20, marginTop: 3, fontSize: 11, lineHeight: 1.5 }}>
+          {item?.j && <span style={{ color: "rgba(105,240,174,0.85)" }}>goed was: {item.j}</span>}
+          {item?.pad && onOefen ? (
+            <>
+              {item?.j && <span style={{ color: "rgba(255,255,255,0.3)" }}> · </span>}
+              <span style={{ color: "rgba(255,213,79,0.9)" }}>advies: </span>
+              <button
+                onClick={() => onOefen(item.pad)}
+                style={{ background: "none", border: "none", padding: 0, color: "#ffd54f", fontSize: 11, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}
+              >
+                oefen dit deel
+              </button>
+            </>
+          ) : (
+            <>
+              {item?.j && <span style={{ color: "rgba(255,255,255,0.3)" }}> · </span>}
+              <span style={{ color: "rgba(255,213,79,0.9)" }}>advies: oefen dit onderwerp samen</span>
+            </>
+          )}
+        </div>
+      )}
       {s === "goed" && item?.j && (
         <div style={{ marginLeft: 20, marginTop: 2, fontSize: 10.5, color: "rgba(255,255,255,0.32)" }}>
           antwoord: {item.j}
@@ -109,7 +137,13 @@ export default function ToetsDetail({ detail, naam = "je kind", onOefen }) {
         <span style={{ color: KLEUR.goed }}>✓ {t.goed} goed</span>
         <span style={{ color: KLEUR.fout }}>✗ {t.fout} fout</span>
         <span style={{ color: KLEUR.over }}>○ {t.over} overgeslagen</span>
+        {t.weetniet > 0 && <span style={{ color: KLEUR.weetniet }}>? {t.weetniet} weet ik niet</span>}
       </div>
+      {t.weetniet > 0 && (
+        <div style={{ fontSize: 11, color: "rgba(255,213,79,0.75)", marginBottom: 6, lineHeight: 1.5 }}>
+          {naam} zei bij {t.weetniet === 1 ? "één vraag" : `${t.weetniet} vragen`} eerlijk "weet ik niet" — precies daar helpt oefenen het meest. Tik op "oefen dit deel".
+        </div>
+      )}
       {t.over > 0 && (
         <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 6, lineHeight: 1.5 }}>
           {naam} liet {t.over === 1 ? "één vraag" : `${t.over} vragen`} open — bij de echte Doorstroomtoets telt een open vraag als fout, dus gokken is altijd beter dan overslaan.

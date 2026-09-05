@@ -54,7 +54,7 @@ export async function loadLeaderboardForPlayer({ userId, playerName, limit = 500
  * van het gekozen antwoord voor vraag i, of null bij onbeantwoord.
  * Faalt stil naar null: het scorebord-resultaat zelf mag hier nooit op breken.
  */
-export function bouwToetsDetail(questions, gekozenIdxPerVraag) {
+export function bouwToetsDetail(questions, gekozenIdxPerVraag, extraPerVraag = null) {
   try {
     if (!Array.isArray(questions) || questions.length === 0) return null;
     return questions.map((q, i) => {
@@ -62,6 +62,9 @@ export function bouwToetsDetail(questions, gekozenIdxPerVraag) {
       // -1 = "Ik weet het niet" of tijd om (PlayQuiz), null = niet aan toe
       // gekomen (CitoLeerpadToets). Beide tellen als overgeslagen.
       const idx = typeof ruw === "number" && ruw >= 0 ? ruw : null;
+      // extraPerVraag[i] = { wn: true, pad } als het kind zelf "Ik weet het niet"
+      // koos (Mark 5 sep 2026: eerlijk tonen + advies "oefen dit deel").
+      const ex = Array.isArray(extraPerVraag) ? extraPerVraag[i] : null;
       const opties = Array.isArray(q?.options) ? q.options : [];
       const kort = (t, n) => (t == null ? null : String(t).slice(0, n));
       return {
@@ -70,7 +73,8 @@ export function bouwToetsDetail(questions, gekozenIdxPerVraag) {
         j: kort(opties[q?.answer], 120),
         goed: idx != null && idx === q?.answer,
         ond: (q?.refOnderdeel && q.refOnderdeel !== "geen" ? q.refOnderdeel : null) || q?.topic || null,
-        pad: q?.leerpadLink?.id || null,
+        pad: q?.leerpadLink?.id || ex?.pad || null,
+        ...(ex?.wn ? { wn: true } : {}),
       };
     });
   } catch {
