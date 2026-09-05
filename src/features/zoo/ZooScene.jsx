@@ -5,7 +5,8 @@
 import { Suspense, useState, useMemo, useCallback, useRef, memo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@react-three/drei";
-import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide } from "three";
+import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide, InstancedBufferAttribute, MeshStandardMaterial } from "three";
+import { grondShader, grasPolGeometrie, grasPolMateriaal, windTik } from "./realisme";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -495,6 +496,8 @@ function grasKleur(i, j, out) {
 // Alles via 2 InstancedMeshes (1681 vakjes) → maar 2 draw-calls.
 const KL_AARDE = new Color("#8a6a44");
 const KL_STEENLAAG = new Color("#7d7568");
+// het grondmateriaal één keer, op module-niveau: overleeft park verlaten/terugkomen
+const GROND_MAT = grondShader(new MeshStandardMaterial({ roughness: 1, metalness: 0 }));
 function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGround, onHover, onPlace, onMissTap, onSculpt, onWater, onGround }) {
   const refTop = useRef(), refKol = useRef();
   const AANTAL = TER_N * TER_N;
@@ -504,6 +507,12 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
     const dummy = new Object3D();
     const c = new Color();
     const BODEM = -4.8;
+    // 🌱 grasMix per vakje: 1 = sprietjes-textuur, 0 = korrel (zand/rots/verf)
+    let grasMixAttr = top.geometry.getAttribute("grasMix");
+    if (!grasMixAttr || grasMixAttr.count !== AANTAL) {
+      grasMixAttr = new InstancedBufferAttribute(new Float32Array(AANTAL), 1);
+      top.geometry.setAttribute("grasMix", grasMixAttr);
+    }
     let k = 0;
     for (let i = 0; i < TER_N; i++) {
       const wx = -TER_EXT + i * TER_STEP;
@@ -518,15 +527,18 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
         const gk = `${Math.round(wx / CELL)},${Math.round(wz / CELL)}`;
         const verf = ground[gk] ? GROUND_COLOR[ground[gk]] : null;
         if (verf) {
-          // geschilderde grond (zand/rots/...): vaste kleur + subtiele korrel
+          // geschilderde grond (zand/rots/...): vaste kleur + zandkorrel-textuur
           c.set(verf).multiplyScalar(0.94 + 0.06 * (((i * 7 + j * 13) % 5) / 4));
+          grasMixAttr.setX(k, 0);
         } else if (h <= 0.6) {
           // vlak gras: natuurlijke, vlekkerige groentinten (grasKleur varieert al)
           grasKleur(i, j, c);
+          grasMixAttr.setX(k, 1);
         } else {
-          // hellingen/toppen: rots/steen/sneeuw-look + subtiele korrel
+          // hellingen/toppen: rots/steen/sneeuw-look; gras loopt nog even door
           hoogteKleur(h, c);
           c.multiplyScalar(0.94 + 0.06 * (((i * 7 + j * 13) % 5) / 4));
+          grasMixAttr.setX(k, Math.max(0, 1 - (h - 0.6) / 2.2));
         }
         top.setColorAt(k, c);
         // Kolom eronder (aarde, hoger = steen) tot de bodem.
@@ -545,6 +557,7 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
     }
     top.instanceMatrix.needsUpdate = true;
     kol.instanceMatrix.needsUpdate = true;
+    grasMixAttr.needsUpdate = true;
     if (top.instanceColor) top.instanceColor.needsUpdate = true;
     if (kol.instanceColor) kol.instanceColor.needsUpdate = true;
     top.computeBoundingSphere();
@@ -561,9 +574,12 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
       {/* Blokgrootte = TER_STEP (de raster-stap), niet CELL: sinds de ruimte-
           verdubbeling (23 aug) is TER_STEP 4 m terwijl CELL 2 m bleef, dus met
           CELL zouden de vloer-blokken losse vlakken worden met gaten ertussen. */}
-      <instancedMesh ref={refTop} args={[undefined, undefined, AANTAL]} receiveShadow {...handlers}>
+      {/* 🌱 Echte grastextuur (Mark 5 sep, van Brian's eiland): sprietje voor
+          sprietje geschilderd, op WERELD-positie geplakt zodat hij naadloos over
+          alle blokken doorloopt, twee tegel-maten gemengd tegen herhaling en
+          vervagend in de verte. De vlekkerige instance-kleuren blijven eronder. */}
+      <instancedMesh ref={refTop} args={[undefined, undefined, AANTAL]} receiveShadow material={GROND_MAT} {...handlers}>
         <boxGeometry args={[TER_STEP, 0.4, TER_STEP]} />
-        <meshStandardMaterial map={grijsMaps.terreinTop()} roughness={1} metalness={0} />
       </instancedMesh>
       <instancedMesh ref={refKol} args={[undefined, undefined, AANTAL]} receiveShadow {...handlers}>
         <boxGeometry args={[TER_STEP, 1, TER_STEP]} />
@@ -579,10 +595,14 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
 // gras. Uit op zwakke toestellen (LOW_END) en 1 instanced draw-call.
 // NB: geometrie/materiaal als r3f-children (niet via `args`), anders ruimt r3f
 // ze bij het verlaten van het park op → crash bij terugkomst (park-fix 16 aug).
-const SPRIET_H = 0.9; // hoogte van het graspolletje (plane staat rechtop, midden op pivot)
+// 🌿 Graspollen (Mark 5 sep, van Brian's eiland): 3D-pollen van 5 sprietjes,
+// donker onderin en licht aan de punt, wuivend in de wind (in de shader, kost
+// de processor niets). Twee pollen per gras-vakje, op ~60% van de vakjes,
+// alleen op laag, onbeschilderd gras en niet op de paden. Eén draw-call.
+const POL_PER_VAKJE = 2;
+const GRAS_POL_GEO = grasPolGeometrie();
 function GrasSprieten({ field, ground = {}, padCellen = null }) {
   const ref = useRef();
-  const tex = useMemo(() => grasSprietTex(), []);
   const pollen = useMemo(() => {
     const out = [];
     for (let i = 0; i < TER_N; i++) {
@@ -594,15 +614,18 @@ function GrasSprieten({ field, ground = {}, padCellen = null }) {
         const h = blokHoogte(heightAt(field, wx, wz));
         if (h > 0.6) continue; // alleen laag/vlak gras
         const seed = ((i * 73856093) ^ (j * 19349663)) >>> 0;
-        if (((seed >>> 8) & 0xff) / 255 > 0.4) continue; // ~40% van de vakjes
-        const jx = (((seed >>> 3) & 0xff) / 255 - 0.5) * 1.4;
-        const jz = (((seed >>> 11) & 0xff) / 255 - 0.5) * 1.4;
-        // Geen gras óp de paden (Brian 20 aug: "planten in het looppad") —
-        // check de cel van de uitgewaaierde eindpositie tegen de pad-tegels.
-        if (padCellen && padCellen.has(`${Math.round((wx + jx) / CELL)},${Math.round((wz + jz) / CELL)}`)) continue;
-        const rot = (((seed >>> 17) & 0xff) / 255) * Math.PI;
-        const sc = 0.75 + (((seed >>> 23) & 0xff) / 255) * 0.5;
-        out.push([wx + jx, h, wz + jz, rot, sc]);
+        if (((seed >>> 8) & 0xff) / 255 > 0.6) continue; // ~60% van de vakjes
+        for (let p = 0; p < POL_PER_VAKJE; p++) {
+          const s2 = (seed + p * 2654435761) >>> 0;
+          const jx = (((s2 >>> 3) & 0xff) / 255 - 0.5) * (TER_STEP - 0.6);
+          const jz = (((s2 >>> 11) & 0xff) / 255 - 0.5) * (TER_STEP - 0.6);
+          // Geen gras óp de paden (Brian 20 aug: "planten in het looppad")
+          if (padCellen && padCellen.has(`${Math.round((wx + jx) / CELL)},${Math.round((wz + jz) / CELL)}`)) continue;
+          const rot = (((s2 >>> 17) & 0xff) / 255) * Math.PI * 2;
+          const sc = 1.7 + (((s2 >>> 23) & 0xff) / 255) * 1.2;
+          const tint = ((s2 >>> 27) & 0x1f) / 31;
+          out.push([wx + jx, h, wz + jz, rot, sc, tint]);
+        }
       }
     }
     return out;
@@ -610,26 +633,36 @@ function GrasSprieten({ field, ground = {}, padCellen = null }) {
   useEffect(() => {
     const m = ref.current;
     if (!m) return;
-    const d = new Object3D();
-    pollen.forEach(([x, y, z, rot, sc], n) => {
-      // plane is gecentreerd → onderkant op de grond = midden op y + halve hoogte
-      d.position.set(x, y + (SPRIET_H * sc) / 2, z);
+    if (!m.instanceColor || m.instanceColor.count < pollen.length) {
+      m.instanceColor = new InstancedBufferAttribute(new Float32Array(Math.max(1, pollen.length) * 3), 3);
+    }
+    const d = new Object3D(), c = new Color();
+    pollen.forEach(([x, y, z, rot, sc, tint], n) => {
+      d.position.set(x, y, z);
       d.rotation.set(0, rot, 0);
       d.scale.set(sc, sc, sc);
       d.updateMatrix();
       m.setMatrixAt(n, d.matrix);
+      // gewoon groen, af en toe een geel-dorre pol
+      if (tint > 0.93) c.setHSL(0.16 + tint * 0.03, 0.30, 0.44);
+      else c.setHSL(0.25 + tint * 0.07, 0.50, 0.30 + tint * 0.14);
+      m.setColorAt(n, c);
     });
     m.count = pollen.length;
     m.instanceMatrix.needsUpdate = true;
+    m.instanceColor.needsUpdate = true;
     m.computeBoundingSphere();
   }, [pollen]);
   if (!pollen.length) return null;
   return (
-    <instancedMesh ref={ref} args={[undefined, undefined, pollen.length]} frustumCulled={false}>
-      <planeGeometry args={[1.5, SPRIET_H]} />
-      <meshStandardMaterial map={tex} transparent alphaTest={0.5} side={DoubleSide} roughness={1} metalness={0} />
-    </instancedMesh>
+    <instancedMesh ref={ref} args={[undefined, undefined, pollen.length]} geometry={GRAS_POL_GEO} material={grasPolMateriaal()} frustumCulled={false} />
   );
+}
+
+// 🌬️ Eén klokje voor alle wind-shaders (graspollen, bladeren): elk beeldje de tijd doorgeven.
+function Wind() {
+  useFrame((st) => windTik(st.clock.elapsedTime));
+  return null;
 }
 
 // Meertjes: doorzichtige blauwe wateroppervlakken op de ondergelopen vakjes, met
@@ -1685,6 +1718,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
 
       {/* Dag-nacht-cyclus stuurt zon, omgevingslicht en luchtkleur. */}
       <DayNight />
+      <Wind />
       {/* Drijvende wolken + rondcirkelende vogeltjes vullen de lucht. */}
       <SkyClouds />
       {/* 🛩️ Witte zeppelins hoog boven het park — later reclame-doek voor partners. */}
