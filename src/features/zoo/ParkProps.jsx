@@ -6,7 +6,8 @@ import { useRef, useState, useMemo, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, PlaneGeometry, BoxGeometry, MeshStandardMaterial, SRGBColorSpace, BufferGeometry, Float32BufferAttribute } from "three";
-import { steenGeometrie, steenMateriaal, schorsMateriaal, loofKroonGeometrie, loofMateriaal, palmStamGeometrie, palmKroonGeometrie, palmStamMateriaal, palmBladMateriaal, grasPolGeometrie, varenMateriaal } from "./realisme";
+import { steenGeometrie, steenMateriaal, schorsMateriaal, loofKroonGeometrie, loofMateriaal, palmStamGeometrie, palmKroonGeometrie, palmStamMateriaal, palmBladMateriaal, grasPolGeometrie, varenMateriaal, luchtTextuur, grondShader } from "./realisme";
+import { MeshBasicMaterial as HemelBasisMateriaal, BackSide as HemelBinnenkant, MeshStandardMaterial as HeuvelMateriaal } from "three";
 import { CylinderGeometry, SphereGeometry } from "three";
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
@@ -26,7 +27,7 @@ const VLIEG_MIN = 3, VLIEG_MAX = 150, VLIEG_START = 4.5;
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
 // (schoolapp, kinderen moeten hun park blijven zien).
 const CYCLE = 600; // seconden per dag (langere dag → kind speelt vrijwel altijd in het licht)
-const KLEUR_DAG = new Color("#aaddff");
+const KLEUR_DAG = new Color("#cfe3f0");   // = horizon-kleur van het lucht-panorama, zodat de mist er naadloos in overloopt
 const KLEUR_NACHT = new Color("#1b2a4a");
 const KLEUR_ZONSOP = new Color("#ffb27a");
 const ZON_DAG = new Color("#fff4e0");
@@ -1674,20 +1675,32 @@ function Vogel({ radius, height, speed, phase, color }) {
   );
 }
 
+// 🌤️ De lucht (Mark 5 sep, van Brian's eiland): geen bolletjes-wolken meer maar
+// een rondom-panorama — geschilderd verloop, ruis-wolken met zonkant en schaduw,
+// zon-gloed en nevel bij de horizon — op een bol die met de camera meereist.
+// De dag-nacht-cyclus kleurt de bol mee (nacht = donkerblauw, zonsop = warm).
+const HEMEL_MAT = new HemelBasisMateriaal({ map: luchtTextuur(), side: HemelBinnenkant, fog: false, depthWrite: false, toneMapped: false });
+const T_DAG = new Color("#ffffff"), T_NACHT = new Color("#26365e"), T_ZONSOP = new Color("#ffcfa8");
+function Hemel() {
+  const ref = useRef();
+  const tmp = useRef(new Color());
+  useFrame((state) => {
+    const m = ref.current; if (!m) return;
+    m.position.copy(state.camera.position);
+    const phase = (state.clock.elapsedTime % CYCLE) / CYCLE;
+    const e = Math.sin(phase * Math.PI * 2);
+    const daglicht = Math.max(0, Math.min(1, (e + 0.2) / 1.0));
+    const horizon = Math.max(0, 1 - Math.abs(e) / 0.35);
+    HEMEL_MAT.color.copy(tmp.current.copy(T_NACHT).lerp(T_DAG, daglicht).lerp(T_ZONSOP, horizon * 0.35));
+  });
+  return (
+    <mesh ref={ref} material={HEMEL_MAT} renderOrder={-10} frustumCulled={false}>
+      <sphereGeometry args={[520, 48, 32]} />
+    </mesh>
+  );
+}
+
 export function SkyClouds() {
-  // Bouw één keer een set wolk-clusters: elk een handvol overlappende blobs.
-  const wolken = useMemo(() => {
-    const maakBlobs = (n) => Array.from({ length: n }, () => [
-      (Math.random() - 0.5) * 3.4, (Math.random() - 0.5) * 0.7, (Math.random() - 0.5) * 1.6,
-      0.8 + Math.random() * 0.7,
-    ]);
-    return Array.from({ length: 6 }, (_, i) => ({
-      pos: [-50 + (i * 104) / 6 + Math.random() * 8, 21 + Math.random() * 9, -34 + Math.random() * 64],
-      scale: 1.1 + Math.random() * 1.1,
-      speed: 0.35 + Math.random() * 0.4,
-      blobs: maakBlobs(4 + Math.floor(Math.random() * 3)),
-    }));
-  }, []);
   const vogels = useMemo(() => (
     [
       { radius: 20, height: 13, speed: 0.18, phase: 0, color: "#3a3f48" },
@@ -1697,7 +1710,7 @@ export function SkyClouds() {
   ), []);
   return (
     <group>
-      {wolken.map((w, i) => <Wolk key={i} data={w} />)}
+      <Hemel />
       {vogels.map((v, i) => <Vogel key={i} {...v} />)}
     </group>
   );
@@ -2154,10 +2167,11 @@ export function PopcornKraam({ position = [0, 0, 0], kraam = null }) {
 // neerzetten zodat je park niet vlak is.
 export function HillMound({ position = [0, 0, 0], size = 1.2, color = "#82bb55" }) {
   const w = 1.45 * size, h = 0.62 * size;
+  // dezelfde grastextuur als de parkvloer (op wereldpositie → loopt naadloos door)
+  const mat = useMemo(() => grondShader(new HeuvelMateriaal({ color, roughness: 1, metalness: 0 }), { grasMixVast: 1 }), [color]);
   return (
-    <mesh position={[position[0], 0, position[2]]} scale={[w, h, w]} castShadow receiveShadow>
+    <mesh position={[position[0], 0, position[2]]} scale={[w, h, w]} castShadow receiveShadow material={mat}>
       <sphereGeometry args={[1, 22, 12, 0, Math.PI * 2, 0, Math.PI / 2]} />
-      <meshStandardMaterial color={color} roughness={1} />
     </mesh>
   );
 }

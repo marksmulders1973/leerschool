@@ -13,7 +13,7 @@
 // gebleven, dus de wereld ligt nog precies waar hij lag.
 import { useEffect, useMemo, useRef } from "react";
 import { Color, Object3D, IcosahedronGeometry, CylinderGeometry, MeshStandardMaterial, InstancedBufferAttribute } from "three";
-import { grondShader, granietTextuur, schorsMateriaal, loofKroonGeometrie, loofMateriaal } from "./realisme";
+import { grondShader, granietTextuur, schorsMateriaal, loofKroonGeometrie, loofMateriaal, waterMateriaal } from "./realisme";
 
 // Klein deterministisch toevalletje (mulberry32) → de wereld ziet er elke
 // sessie hetzelfde uit en Math.random vervuilt geen re-renders.
@@ -78,6 +78,7 @@ const KROON_GEO = loofKroonGeometrie(14, 5);
 const GRAS_MAT = grondShader(new MeshStandardMaterial({ roughness: 1, metalness: 0 }), { grasMixVast: 1 });
 const BERG_MAT = new MeshStandardMaterial({ map: granietTextuur(), bumpMap: granietTextuur(), bumpScale: 0.3, roughness: 1, metalness: 0 });
 const SNEEUW_MAT = new MeshStandardMaterial({ roughness: 0.9, metalness: 0 });
+const MEER_MAT = waterMateriaal({ kleur: "#2f8fbf", opacity: 0.9 });
 
 const GROEN = ["#6fb254", "#7cbf5a", "#5da24b", "#86c46a"];
 const BERGGRIJS = ["#8d8a85", "#7f7d79", "#9a968f"];
@@ -151,9 +152,8 @@ export default function Buitenwereld() {
 
       {/* Meertje met zandige oever. */}
       <group position={[-102, 0, 16]}>
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.03, 0]}>
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.03, 0]} material={MEER_MAT}>
           <circleGeometry args={[13, 24]} />
-          <meshStandardMaterial color="#3f9cc9" roughness={0.15} metalness={0.05} transparent opacity={0.9} />
         </mesh>
         <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.05, 0]}>
           <ringGeometry args={[12.6, 15.5, 32]} />

@@ -626,8 +626,10 @@ export const luchtTextuur = () => once("lucht", () => {
   const yTop = Math.floor(H * 0.52), dikte = new Float32Array(W * yTop), fijn = new Float32Array(W * yTop);
   for (let y = 0; y < yTop; y++) {
     const elev = (0.5 - y / H) * Math.PI, vc = (elev / (Math.PI / 2)) * (1 + 0.6 * elev);
-    const grensC = 0.53 + 0.16 * stap(0.35, 1.25, elev) + 0.20 * stap(0.10, 0.0, elev), fadeC = stap(1.40, 1.05, elev);
-    const band = stap(0.005, 0.03, elev) * stap(0.20, 0.07, elev), hoog = stap(0.65, 0.95, elev) * stap(1.45, 1.20, elev);
+    // In het park kijk je vaak schuin omhoog: boven ~60° laten we alle wolken
+    // uitdoven, anders rekt het panorama ze bij de pool uit tot ringen.
+    const grensC = 0.53 + 0.16 * stap(0.35, 1.25, elev) + 0.20 * stap(0.10, 0.0, elev), fadeC = stap(1.10, 0.80, elev);
+    const band = stap(0.005, 0.03, elev) * stap(0.20, 0.07, elev), hoog = stap(0.50, 0.72, elev) * stap(1.05, 0.85, elev);
     for (let x = 0; x < W; x++) {
       const x01 = x / W, nC = fbm(x01, vc, 8, 6, 1.15, 0.0);
       let d = stap(grensC, grensC + 0.11, nC) * fadeC;
@@ -665,3 +667,80 @@ export const luchtTextuur = () => once("lucht", () => {
   t.magFilter = t.minFilter = LinearFilter; t.generateMipmaps = false;
   return t;
 });
+
+// ══════════════════════════════════════════════════════════════════
+// WATER: rimpels die over elkaar heen glijden, spiegeling van het lucht-panorama
+// (meer als je er schuin op kijkt = fresnel) en een zon-glinstering. Werkt op
+// een gewoon MeshStandardMaterial, dus schaduwen en fog blijven gewoon werken.
+// ══════════════════════════════════════════════════════════════════
+export const rimpelTextuur = () => once("rimpel", () => {
+  const N = 256, vast = maakVast(9090);
+  const c = document.createElement("canvas"); c.width = c.height = N;
+  const g = c.getContext("2d"), beeld = g.createImageData(N, N), d = beeld.data;
+  // sinussen met hele frequenties zijn vanzelf naadloos
+  const golven = [];
+  for (let i = 0; i < 10; i++) { const f = 2 + Math.floor(vast() * 8), hoek = vast() * Math.PI * 2; golven.push({ fx: Math.round(Math.cos(hoek) * f), fy: Math.round(Math.sin(hoek) * f), fase: vast() * 6.283, amp: 1 / (1 + f * 0.25) }); }
+  for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+    let v = 0, tot = 0;
+    for (const w of golven) { v += Math.sin((w.fx * x + w.fy * y) / N * 6.283 + w.fase) * w.amp; tot += w.amp; }
+    const i = (y * N + x) * 4, k = 128 + (v / tot) * 110;
+    d[i] = d[i + 1] = d[i + 2] = k; d[i + 3] = 255;
+  }
+  g.putImageData(beeld, 0, 0);
+  const t = new CanvasTexture(c);
+  t.wrapS = t.wrapT = RepeatWrapping;
+  return t;
+});
+const waterUniforms = new Set();
+export function waterTik(t) { for (const u of waterUniforms) u.value = t; }
+export function waterMateriaal(opties = {}) {
+  const mat = new MeshStandardMaterial({ color: opties.kleur || "#2f8fbf", roughness: 0.08, metalness: 0.0, transparent: true, opacity: opties.opacity ?? 0.86, ...opties.extra });
+  mat.onBeforeCompile = (sh) => {
+    sh.uniforms.tijd = { value: 0 }; waterUniforms.add(sh.uniforms.tijd);
+    sh.uniforms.rimpelMap = { value: rimpelTextuur() };
+    sh.uniforms.luchtMap = { value: luchtTextuur() };
+    sh.uniforms.zonRichting = { value: ZON_RICHTING.clone() };
+    sh.vertexShader = sh.vertexShader
+      .replace("#include <common>", "#include <common>\nvarying vec3 vWposW;")
+      .replace("#include <project_vertex>", `#include <project_vertex>
+        { vec4 wp = vec4(transformed, 1.0);
+          #ifdef USE_INSTANCING
+            wp = instanceMatrix * wp;
+          #endif
+          vWposW = (modelMatrix * wp).xyz; }`);
+    sh.fragmentShader = sh.fragmentShader
+      .replace("#include <common>", `#include <common>
+        uniform float tijd; uniform sampler2D rimpelMap; uniform sampler2D luchtMap; uniform vec3 zonRichting;
+        varying vec3 vWposW;`)
+      // rimpels: de normaal een tikje kantelen op basis van twee schuivende ruislagen
+      .replace("#include <normal_fragment_maps>", `#include <normal_fragment_maps>
+        { vec2 uv = vWposW.xz;
+          const float e = 1.0 / 256.0;
+          vec2 u1 = uv * 0.35 + tijd * vec2(0.020, 0.013);
+          vec2 u2 = uv * 0.71 - tijd * vec2(0.015, 0.024);
+          float h1 = texture2D(rimpelMap, u1).r, h2 = texture2D(rimpelMap, u2).r;
+          vec2 grad = vec2(texture2D(rimpelMap, u1 + vec2(e, 0.0)).r - h1, texture2D(rimpelMap, u1 + vec2(0.0, e)).r - h1)
+                    + 0.6 * vec2(texture2D(rimpelMap, u2 + vec2(e, 0.0)).r - h2, texture2D(rimpelMap, u2 + vec2(0.0, e)).r - h2);
+          grad *= 256.0 * 0.012;
+          vec3 nW = normalize(vec3(-grad.x, 1.0, -grad.y));
+          normal = normalize(normalMatrix * nW); }`)
+      // spiegeling + zon-glinstering er bovenop
+      .replace("#include <opaque_fragment>", `
+        { vec3 kijk = normalize(cameraPosition - vWposW);
+          vec3 nW = inverseTransformDirection(normal, viewMatrix);
+          float fres = pow(1.0 - max(dot(nW, kijk), 0.0), 3.0);
+          fres = 0.05 + 0.70 * fres;
+          vec3 refl = reflect(-kijk, nW); refl.y = max(refl.y, 0.02);
+          float phi = atan(refl.z, -refl.x); if (phi < 0.0) phi += 6.2831853;
+          vec2 uvL = vec2(phi / 6.2831853, 1.0 - acos(clamp(refl.y, -1.0, 1.0)) / 3.14159265);
+          vec3 lucht = texture2D(luchtMap, uvL).rgb;
+          outgoingLight = mix(outgoingLight, lucht, fres);
+          vec3 halfv = normalize(kijk + zonRichting);
+          float nh = max(dot(nW, halfv), 0.0);
+          outgoingLight += vec3(1.0, 0.95, 0.82) * (pow(nh, 380.0) * 1.2 + pow(nh, 40.0) * 0.12);
+          diffuseColor.a = max(diffuseColor.a, fres); }
+        #include <opaque_fragment>`);
+  };
+  mat.customProgramCacheKey = () => "water-" + (opties.kleur || "") + (opties.opacity ?? "");
+  return mat;
+}
