@@ -73,7 +73,9 @@ export function bouwToetsDetail(questions, gekozenIdxPerVraag, extraPerVraag = n
         j: kort(opties[q?.answer], 120),
         goed: idx != null && idx === q?.answer,
         ond: (q?.refOnderdeel && q.refOnderdeel !== "geen" ? q.refOnderdeel : null) || q?.topic || null,
-        pad: q?.leerpadLink?.id || ex?.pad || null,
+        // pathId = vraag uit een leerpad (oefen-Doorstroomtoets, v590) — dat pad
+        // ís het "oefen dit deel"-advies.
+        pad: q?.leerpadLink?.id || q?.pathId || ex?.pad || null,
         ...(ex?.wn ? { wn: true } : {}),
       };
     });

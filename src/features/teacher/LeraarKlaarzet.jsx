@@ -330,7 +330,7 @@ export default function LeraarKlaarzet({ authUser, onKlaarzetten, onOpenLes }) {
                             )}
                           </div>
                           {openToets === t.id && (
-                            <ToetsDetail detail={t.detail} naam={selected.student_name} onOefen={onOpenLes} />
+                            <ToetsDetail detail={t.detail} naam={selected.student_name} onOefen={onOpenLes} vak={t.subject} niveau={t.level} />
                           )}
                         </div>
                       );

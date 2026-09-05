@@ -1344,7 +1344,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                         <ScoreBadge pct={s.percentage} />
                       </div>
                       {openToets === s.id && (
-                        <ToetsDetail detail={s.detail} naam={selectedChild} onOefen={onOpenLes} />
+                        <ToetsDetail detail={s.detail} naam={selectedChild} onOefen={onOpenLes} vak={s.subject} niveau={s.level} />
                       )}
                     </div>
                   ))}
@@ -1384,7 +1384,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     </div>
                   </div>
                   {openToets === s.id && (
-                    <ToetsDetail detail={s.detail} naam={selectedChild} onOefen={onOpenLes} />
+                    <ToetsDetail detail={s.detail} naam={selectedChild} onOefen={onOpenLes} vak={s.subject} niveau={s.level} />
                   )}
                   </div>
                 ))}

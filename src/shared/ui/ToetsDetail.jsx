@@ -14,6 +14,18 @@
 // a == null betekent: niet beantwoord. In een toets kán je een vraag laten
 // staan — anders dan in een leerpad. Dat is dus het echte "overgeslagen".
 
+import { padVoorToetsVraag } from "../../learnPaths/padVoorToetsVraag.js";
+
+// Oudere rijen (vóór v588) hebben geen `pad` per vraag. Dan zoeken we 'm bij
+// het tonen op uit de vraagtekst + vak/groep van de toets — zelfde module als
+// bij het wegschrijven, dus ouder én leerkracht zien ook bij oude toetsen
+// "oefen dit" (Mark 5 sep 2026: "doe hetzelfde voor de leerkracht-kant").
+function padVan(item, vak, niveau) {
+  if (item?.pad) return item.pad;
+  if (!item?.v) return null;
+  return padVoorToetsVraag({ q: item.v }, vak || "cito", niveau || null)?.id || null;
+}
+
 const KLEUR = {
   goed: "#69f0ae",
   fout: "#ff8a80",
@@ -39,8 +51,9 @@ export function telToets(detail) {
   return t;
 }
 
-function VraagRegel({ nummer, item, onOefen }) {
+function VraagRegel({ nummer, item, onOefen, vak, niveau }) {
   const s = status(item);
+  const pad = padVan(item, vak, niveau);
   const kleur = KLEUR[s];
   const icoon = s === "goed" ? "✓" : s === "fout" ? "✗" : s === "weetniet" ? "?" : "○";
   const label = s === "goed" ? "goed" : s === "fout" ? "fout" : s === "weetniet" ? "zei: weet ik niet" : "overgeslagen";
@@ -62,11 +75,11 @@ function VraagRegel({ nummer, item, onOefen }) {
           <span style={{ color: "rgba(255,138,128,0.85)" }}>koos: {item.a}</span>
           <span style={{ color: "rgba(255,255,255,0.3)" }}> · </span>
           <span style={{ color: "rgba(105,240,174,0.85)" }}>goed was: {item.j}</span>
-          {item.pad && onOefen && (
+          {pad && onOefen && (
             <>
               <span style={{ color: "rgba(255,255,255,0.3)" }}> · </span>
               <button
-                onClick={() => onOefen(item.pad)}
+                onClick={() => onOefen(pad)}
                 style={{ background: "none", border: "none", padding: 0, color: "#ff9fb2", fontSize: 11, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}
               >
                 oefen dit
@@ -85,12 +98,12 @@ function VraagRegel({ nummer, item, onOefen }) {
       {s === "weetniet" && (
         <div style={{ marginLeft: 20, marginTop: 3, fontSize: 11, lineHeight: 1.5 }}>
           {item?.j && <span style={{ color: "rgba(105,240,174,0.85)" }}>goed was: {item.j}</span>}
-          {item?.pad && onOefen ? (
+          {pad && onOefen ? (
             <>
               {item?.j && <span style={{ color: "rgba(255,255,255,0.3)" }}> · </span>}
               <span style={{ color: "rgba(255,213,79,0.9)" }}>advies: </span>
               <button
-                onClick={() => onOefen(item.pad)}
+                onClick={() => onOefen(pad)}
                 style={{ background: "none", border: "none", padding: 0, color: "#ffd54f", fontSize: 11, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}
               >
                 oefen dit deel
@@ -120,8 +133,10 @@ function VraagRegel({ nummer, item, onOefen }) {
  * @param {Array}    detail   leaderboard.detail
  * @param {string}   naam     naam van het kind/de leerling
  * @param {Function} onOefen  (padId) => void — opent het leerpad bij een fout (optioneel)
+ * @param {string}   vak      leaderboard.subject — voor het pad-advies bij oude rijen zonder `pad`
+ * @param {string}   niveau   leaderboard.level  — idem ("groep8")
  */
-export default function ToetsDetail({ detail, naam = "je kind", onOefen }) {
+export default function ToetsDetail({ detail, naam = "je kind", onOefen, vak = null, niveau = null }) {
   if (!Array.isArray(detail) || detail.length === 0) {
     return (
       <div style={{ fontSize: 11.5, color: "rgba(255,255,255,0.4)", padding: "8px 0", lineHeight: 1.5 }}>
@@ -142,7 +157,7 @@ export default function ToetsDetail({ detail, naam = "je kind", onOefen }) {
       {t.weetniet > 0 && (
         <div style={{ fontSize: 11, color: "rgba(255,213,79,0.75)", marginBottom: 6, lineHeight: 1.5 }}>
           {naam} zei bij {t.weetniet === 1 ? "één vraag" : `${t.weetniet} vragen`} eerlijk "weet ik niet" — precies daar helpt oefenen het meest.
-          {detail.some((it) => it?.wn && it?.pad) && onOefen ? ' Tik op "oefen dit deel".' : ""}
+          {detail.some((it) => it?.wn && padVan(it, vak, niveau)) && onOefen ? ' Tik op "oefen dit deel".' : ""}
         </div>
       )}
       {t.over > 0 && (
@@ -152,7 +167,7 @@ export default function ToetsDetail({ detail, naam = "je kind", onOefen }) {
       )}
       <div>
         {detail.map((item, i) => (
-          <VraagRegel key={i} nummer={i + 1} item={item} onOefen={onOefen} />
+          <VraagRegel key={i} nummer={i + 1} item={item} onOefen={onOefen} vak={vak} niveau={niveau} />
         ))}
       </div>
     </div>

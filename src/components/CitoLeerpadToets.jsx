@@ -56,6 +56,10 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   );
   const [questions, setQuestions] = useState([]);
   const [answers, setAnswers] = useState([]);
+  // 🤔 "Ik weet het niet" (Mark 5 sep 2026, v590): eerlijk apart bewaard van
+  // "niet aan toe gekomen". answers[i] wordt -1 (telt als beantwoord + fout),
+  // weetNiet[i] = true gaat mee naar leaderboard.detail (wn) voor ouder/leraar.
+  const [weetNiet, setWeetNiet] = useState([]);
   const [idx, setIdx] = useState(0);
   const [secondsLeft, setSecondsLeft] = useState(0);
   const tickRef = useRef(null);
@@ -128,6 +132,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
       dropFiredRef.current = false;
       setQuestions(shuffled);
       setAnswers(new Array(shuffled.length).fill(null));
+      setWeetNiet(new Array(shuffled.length).fill(false));
       setIdx(0);
       setSecondsLeft(config.minutes * 60);
       setMode("running");
@@ -208,7 +213,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
           total: questions.length,
           percentage: Math.round((goedTotaal / questions.length) * 100),
           time_taken: Math.max(0, config.minutes * 60 - secondsLeft),
-          detail: bouwToetsDetail(questions, answers),
+          detail: bouwToetsDetail(questions, answers, questions.map((q, i) => ({ wn: !!weetNiet[i], pad: q?.pathId || null }))),
         });
       })();
     }
@@ -264,6 +269,17 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
   const goNext = () => {
     if (idx + 1 < questions.length) setIdx(idx + 1);
     else setMode("done");
+  };
+  // "Ik weet het niet": de toets gaat gewoon door (Mark 5 sep 2026). In de
+  // oefen-modus zie je eerst het goede antwoord; in de simulatie ga je direct
+  // door, zoals bij een echte toets.
+  const zegWeetNiet = () => {
+    if (directeFeedback && answers[idx] != null) return;
+    if (answers[idx] == null) telAntwoordVoorVriend();
+    track("dont_know_clicked", { subject: "cito", simulatie: simulatieMode, at_question: idx + 1 });
+    setAnswers((prev) => { const next = prev.slice(); next[idx] = -1; return next; });
+    setWeetNiet((prev) => { const next = prev.slice(); next[idx] = true; return next; });
+    if (!directeFeedback) goNext();
   };
   const goPrev = () => {
     if (idx > 0) setIdx(idx - 1);
@@ -494,7 +510,8 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               const wrong = answers[i] !== q.answer;
               if (!wrong) return null;
               const givenIdx = answers[i];
-              const givenLabel = givenIdx !== null && givenIdx !== undefined
+              const zeiWeetNiet = givenIdx === -1;
+              const givenLabel = givenIdx !== null && givenIdx !== undefined && givenIdx >= 0
                 ? q.options[givenIdx]
                 : null;
               const correctLabel = q.options[q.answer];
@@ -523,7 +540,9 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                     <MdInline text={q.question} />
                   </div>
                   <div style={{ fontSize: 12, color: C.muted, marginBottom: 4 }}>
-                    {givenLabel === null ? (
+                    {zeiWeetNiet ? (
+                      <span style={{ color: "#ffd54f" }}>🤔 Jij zei: weet ik niet</span>
+                    ) : givenLabel === null ? (
                       <span style={{ color: "#ffb74d" }}>Niet beantwoord</span>
                     ) : (
                       <>Jouw antwoord: <span style={{ color: C.bad }}><MdInline text={givenLabel} /></span></>
@@ -807,6 +826,21 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
           );
         })}
 
+        {/* 🤔 Ik weet het niet — telt eerlijk mee, de toets gaat door (v590) */}
+        {answered == null && (
+          <button
+            onClick={zegWeetNiet}
+            style={{ display: "block", width: "100%", padding: "11px 14px", marginBottom: 10, background: "rgba(255,213,79,0.08)", border: "1px dashed rgba(255,213,79,0.45)", borderRadius: 12, color: "#ffd54f", fontFamily: "var(--font-body)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}
+          >
+            🤔 Ik weet het niet
+          </button>
+        )}
+        {answered === -1 && (
+          <div style={{ marginTop: 4, marginBottom: 8, padding: "10px 12px", borderRadius: 12, background: "rgba(255,213,79,0.10)", border: "1px solid rgba(255,213,79,0.35)", fontSize: 14, color: "#ffd54f", fontWeight: 700 }}>
+            🤔 Eerlijk gezegd: weet ik niet. Dat is prima — de toets gaat gewoon door.
+            {directeFeedback && <div style={{ marginTop: 4, fontWeight: 600, color: "rgba(255,213,79,0.85)" }}>Tip voor na de toets: dit onderdeel staat in het leerpad — je ziet 'm straks bij je uitslag.</div>}
+          </div>
+        )}
         {/* Leermoment direct na een fout antwoord (alleen oefen-modus) */}
         {directeFeedback && answered != null && answered !== q.answer && (
           <div
@@ -820,8 +854,8 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
               lineHeight: 1.5,
             }}
           >
-            <div style={{ fontWeight: 800, color: C.bad, marginBottom: 4 }}>Nog niet goed</div>
-            {q.wrongHints?.[answered] && (
+            <div style={{ fontWeight: 800, color: C.bad, marginBottom: 4 }}>{answered === -1 ? "Zo zit het" : "Nog niet goed"}</div>
+            {answered >= 0 && q.wrongHints?.[answered] && (
               <div style={{ marginBottom: q.explanation ? 6 : 0 }}>
                 💡 <MdInline text={q.wrongHints[answered]} />
               </div>
@@ -831,7 +865,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                 <MdInline text={q.explanation} />
               </div>
             )}
-            {!q.wrongHints?.[answered] && !q.explanation && (
+            {!(answered >= 0 && q.wrongHints?.[answered]) && !q.explanation && (
               <div>Kijk nog eens goed naar het groene antwoord — daar zit het verschil.</div>
             )}
           </div>
