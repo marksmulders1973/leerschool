@@ -141,7 +141,8 @@ export default function ToetsDetail({ detail, naam = "je kind", onOefen }) {
       </div>
       {t.weetniet > 0 && (
         <div style={{ fontSize: 11, color: "rgba(255,213,79,0.75)", marginBottom: 6, lineHeight: 1.5 }}>
-          {naam} zei bij {t.weetniet === 1 ? "één vraag" : `${t.weetniet} vragen`} eerlijk "weet ik niet" — precies daar helpt oefenen het meest. Tik op "oefen dit deel".
+          {naam} zei bij {t.weetniet === 1 ? "één vraag" : `${t.weetniet} vragen`} eerlijk "weet ik niet" — precies daar helpt oefenen het meest.
+          {detail.some((it) => it?.wn && it?.pad) && onOefen ? ' Tik op "oefen dit deel".' : ""}
         </div>
       )}
       {t.over > 0 && (
