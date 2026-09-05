@@ -283,6 +283,7 @@ import onderwijsNiveausVmboHavoVwo from "./onderwijsNiveausVmboHavoVwo.js";
 import mediaWijsheidMaatschappijleer from "./mediaWijsheidMaatschappijleer.js";
 import klimaatveranderingAardrijkskunde from "./klimaatveranderingAardrijkskunde.js";
 import energiebronnenPo from "./energiebronnenPo.js";
+import vulkanenPo from "./vulkanenPo.js";
 import spreekwoordenUitdrukkingenPo from "./spreekwoordenUitdrukkingenPo.js";
 import industrieleRevolutiePo from "./industrieleRevolutiePo.js";
 import politiekDemocratiePo from "./politiekDemocratiePo.js";
@@ -462,6 +463,7 @@ export const ALL_LEARN_PATHS = {
   "toestand-stoffen-po": toestandStoffenPo,
   "dierenklassen-po": dierenklassenPo,
   "energiebronnen-po": energiebronnenPo,
+  "vulkanen-po": vulkanenPo,
   "negatieve-getallen-po": negatieveGetallenPo,
   "werkwoord-tijden-po": werkwoordTijdenPo,
   "woordenschat-po": woordenschatPo,

@@ -1758,7 +1758,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <Buitenwereld />
         {/* 🌋 poort + leerbord aan de voet van de vulkaan → "Aardlagen en vulkanen" */}
         <group position={[VULKAAN_POORT.x, buitenHoogte(VULKAAN_POORT.x, VULKAAN_POORT.z), VULKAAN_POORT.z]} rotation={[0, VULKAAN_POORT.rot, 0]}>
-          <MagischePoort kleur="#ffb0a0" emoji="🌋" label="Aardlagen & vulkanen" breedte={3.0} hoogte={3.2} />
+          <MagischePoort kleur="#ffb0a0" emoji="🌋" label="Vulkanen" breedte={3.0} hoogte={3.2} />
           {onOefenen ? <LeerBord moment="vulkaan" onOefenen={onOefenen} position={[2.6, 0, 0.4]} /> : null}
         </group>
         {/* 🚶 Wandelroute (Mark-go 20 aug "bouw maar in de echte app"): de

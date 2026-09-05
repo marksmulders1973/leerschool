@@ -337,7 +337,10 @@ export const PARK_LEERMOMENTEN = {
     id: "vulkaan", emoji: "🌋", titel: "De vulkaan",
     praatje: "Diep onder de grond is het zó heet dat steen smelt tot gloeiende lava. Soms zoekt die een weg omhoog en barst een vulkaan uit. De aarde bestaat namelijk uit grote schollen die langzaam bewegen — daar waar ze schuiven, ontstaan vulkanen en bergen.",
     weetje: "Lava is meer dan 1000 graden heet. Als het afkoelt wordt het weer keihard steen — en juist rond vulkanen is de grond daarna heel vruchtbaar.",
-    leerpadId: "platentektoniek-aardrijkskunde", leerLabel: "Aardlagen en vulkanen",
+    // Mark 6 sep 2026: eerst het groep 6-8-pad (hoort bij Brian's vulkaan in het
+    // park), het klas 2-3-pad over aardlagen/platen als vervolgstap.
+    leerpadId: "vulkanen-po", leerLabel: "Vulkanen",
+    leerpadId2: "platentektoniek-aardrijkskunde", leerLabel2: "Aardlagen en platen (middelbare school)",
   },
   kas: {
     id: "kas", emoji: "🥬", titel: "De kas",

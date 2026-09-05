@@ -1047,7 +1047,7 @@ export function Vulkaan({ position = [0, 0, 0], rotation = 0 }) {
       <mesh position={[0, 2.5, 0]}><cylinderGeometry args={[0.5, 0.5, 0.1, 16]} /><meshStandardMaterial color="#ff6a1e" emissive="#ff3a00" emissiveIntensity={0.7} /></mesh>
       {[0, 1, 2].map((i) => <mesh key={i} position={[Math.sin(i * 2) * 0.7, 1.7, Math.cos(i * 2) * 0.7]} rotation={[0.4, i, 0]}><boxGeometry args={[0.12, 0.9, 0.04]} /><meshStandardMaterial color="#ff7a2e" emissive="#ff5a1e" emissiveIntensity={0.5} /></mesh>)}
       <mesh ref={rook} position={[0, 2.6, 0]}><sphereGeometry args={[0.55, 10, 8]} /><meshStandardMaterial color="#9a9088" transparent opacity={0.5} /></mesh>
-      <MagischePoort kleur="#ffb0a0" emoji="🌋" label="Aardlagen & vulkanen" z={-1.9} breedte={2.8} hoogte={3.0} />
+      <MagischePoort kleur="#ffb0a0" emoji="🌋" label="Vulkanen" z={-1.9} breedte={2.8} hoogte={3.0} />
     </group>
   );
 }
