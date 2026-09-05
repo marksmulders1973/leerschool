@@ -8,7 +8,7 @@ import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide, InstancedBufferAttribute, MeshStandardMaterial } from "three";
 import { grondShader, grasPolGeometrie, grasPolMateriaal, windTik } from "./realisme";
 import { eilandWaterMateriaal, eilandWaterTik, waterDieptekaart } from "./waterEiland";
-import { buitenHoogte } from "./eilandVorm";
+import { buitenHoogte, VULKAAN } from "./eilandVorm";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -949,6 +949,15 @@ const POORT_KLEIN_AFSTAND = 2.4;
 const POORT_AFSTAND = { tempel: 9.6, wereldbol: 4.6, ...Object.fromEntries(POORT_KLEIN_ASSETS.map((id) => [id, POORT_KLEIN_AFSTAND])) };
 // Emoji van het leermoment voor de kleine poort (zonder ZooScene aan de hele tabel te koppelen).
 const PARK_LEERMOMENTEN_EMOJI = (momentId) => hierContextVoor(momentId)?.emoji || "✨";
+// 🌋 Vaste poort aan de voet van Brian's vulkaan (Mark 6 sep): de vulkaan is geen
+// geplaatst item maar decor buiten het hek; de poort staat aan de parkkant van
+// de voet en opent het leerpad van het 'vulkaan'-leermoment (aardrijkskunde).
+const VULKAAN_POORT = (() => {
+  // aan de voet (0,98 R) op de lijn vulkaan → parkmidden, met de doorgang naar het park gericht
+  const d = Math.hypot(VULKAAN.x, VULKAAN.z), ux = -VULKAAN.x / d, uz = -VULKAAN.z / d, r = VULKAAN.R * 0.98;
+  return { assetId: "vulkaan", x: VULKAAN.x + ux * r, z: VULKAAN.z + uz * r, rot: Math.atan2(ux, uz) };
+})();
+const VASTE_POORTEN = [VULKAAN_POORT];
 function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   const acc = useRef(0);
   const binnen = useRef(null); // assetId waar je nu "in" staat
@@ -976,6 +985,10 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
       const lim = straal * straal;
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
       if (d2 < lim && d2 < bestD2) { bestD2 = d2; dichtst = it.assetId; }
+    }
+    for (const vp of VASTE_POORTEN) {
+      const d2 = (vp.x - p.x) * (vp.x - p.x) + (vp.z - p.z) * (vp.z - p.z);
+      if (d2 < 2.4 * 2.4 && d2 < bestD2) { bestD2 = d2; dichtst = vp.assetId; }
     }
     if (dichtst !== binnen.current) {
       const wasLeeg = binnen.current == null;
@@ -1743,6 +1756,11 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* De wereld buiten het hek: grasvlakte, blok-heuvels, bos, bergen,
             meertje en het weggetje met bushalte — geen "einde van de wereld". */}
         <Buitenwereld />
+        {/* 🌋 poort + leerbord aan de voet van de vulkaan → "Aardlagen en vulkanen" */}
+        <group position={[VULKAAN_POORT.x, buitenHoogte(VULKAAN_POORT.x, VULKAAN_POORT.z), VULKAAN_POORT.z]} rotation={[0, VULKAAN_POORT.rot, 0]}>
+          <MagischePoort kleur="#ffb0a0" emoji="🌋" label="Aardlagen & vulkanen" breedte={3.0} hoogte={3.2} />
+          {onOefenen ? <LeerBord moment="vulkaan" onOefenen={onOefenen} position={[2.6, 0, 0.4]} /> : null}
+        </group>
         {/* 🚶 Wandelroute (Mark-go 20 aug "bouw maar in de echte app"): de
             voetstappen staan altijd aan; de gele bouwbordjes alleen met ?wandel=1. */}
         {/* 🎓 Het doorlopende leerpad-lint = het hoofdpad van het park (Mark 22

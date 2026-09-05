@@ -27,6 +27,12 @@ import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad, hierContextVoor } from "../features/zoo/parkLeermomenten";
+import { VULKAAN } from "../features/zoo/eilandVorm";
+// spawn-plek voor ?scene=vulkaan: 30 m vóór de voet (je ziet de hele berg), op de lijn parkmidden → vulkaan
+const VULKAAN_SPAWN = (() => { const d = Math.hypot(VULKAAN.x, VULKAAN.z), r = VULKAAN.R + 30; return [VULKAAN.x - (VULKAAN.x / d) * r, 0, VULKAAN.z - (VULKAAN.z / d) * r]; })();
+// camera-yaw die vanaf die plek naar de vulkaan kijkt (de camera staat aan de
+// yaw-kant van het poppetje: yaw π = camera op +z, kijkt naar -z)
+const VULKAAN_KIJK_YAW = Math.atan2(VULKAAN.x, VULKAAN.z);
 import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark, herstelWandeling } from "../features/zoo/wandelRoutes";
 import { LINT_BANDEN } from "../features/zoo/leerpadLint";
 import { WANDEL_REWARD } from "../features/zoo/zooEconomy";
@@ -1681,9 +1687,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       return (TAFEREEL_BY_ID[id] || PARK_LEERMOMENTEN[id]) ? id : null;
     } catch { return null; }
   });
-  const deeplinkSpawn = deeplinkScene && TAFEREEL_BY_ID[deeplinkScene]
-    ? [TAFEREEL_BY_ID[deeplinkScene].pos[0], 0, TAFEREEL_BY_ID[deeplinkScene].pos[1] + 4]
-    : null;
+  // 🌋 ?scene=vulkaan (Mark 6 sep): de vulkaan staat buiten het hek op een vaste
+  // plek — spawn aan de voet, aan de parkkant, met de camera erop gericht.
+  const deeplinkSpawn = deeplinkScene === "vulkaan"
+    ? VULKAAN_SPAWN
+    : deeplinkScene && TAFEREEL_BY_ID[deeplinkScene]
+      ? [TAFEREEL_BY_ID[deeplinkScene].pos[0], 0, TAFEREEL_BY_ID[deeplinkScene].pos[1] + 4]
+      : null;
+  useEffect(() => { if (deeplinkScene === "vulkaan") { inputRef.current.cam.yaw = VULKAAN_KIJK_YAW; inputRef.current.cam.pitch = 0.02; inputRef.current.cam.dist = 14; } }, [deeplinkScene]);
   const deeplinkKlaar = useRef(false);
   useEffect(() => {
     if (!deeplinkScene || !loaded || deeplinkKlaar.current) return;

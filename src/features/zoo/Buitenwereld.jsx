@@ -13,7 +13,8 @@
 // gebleven, dus de wereld ligt nog precies waar hij lag.
 import { useEffect, useMemo, useRef } from "react";
 import { Color, Object3D, IcosahedronGeometry, CylinderGeometry, MeshStandardMaterial, InstancedBufferAttribute, PlaneGeometry, Float32BufferAttribute } from "three";
-import { buitenHoogte, ZEE_Y, KUST_R, LAND_R } from "./eilandVorm";
+import { eilandBasis, ZEE_Y, KUST_R, LAND_R, VULKAAN } from "./eilandVorm";
+import BuitenVulkaan from "./BuitenVulkaan";
 import { TER_EXT } from "./terrain";
 import { grondShader, granietTextuur, schorsMateriaal, loofKroonGeometrie, loofMateriaal } from "./realisme";
 import { eilandWaterMateriaal } from "./waterEiland";
@@ -98,7 +99,9 @@ const LAND_GEO = (() => {
   for (let i = 0; i < n; i++) {
     const x = p.getX(i), z = p.getZ(i), r = Math.hypot(x, z);
     // onder het park-terrein verstoppen we het vlak diep in de grond
-    p.setY(i, (Math.abs(x) < TER_EXT - 4 && Math.abs(z) < TER_EXT - 4) ? -6 : buitenHoogte(x, z));
+    // (eilandBasis, níét buitenHoogte: de vulkaan heeft z'n eigen fijne mesh — dit
+    // grove vlak blijft eronder plat liggen, anders steekt het gras door de krater)
+    p.setY(i, (Math.abs(x) < TER_EXT - 4 && Math.abs(z) < TER_EXT - 4) ? -6 : eilandBasis(x, z));
     const strand = glad(LAND_R - 14, LAND_R + 6, r), natF = glad(KUST_R - 14, KUST_R + 2, r);
     const vlek = 0.5 + 0.5 * Math.sin(x * 0.05 + 1.3) * Math.cos(z * 0.043 + 0.4);
     c.copy(gras).lerp(gras2, vlek).lerp(zand, strand).lerp(nat, natF * 0.7);
@@ -150,6 +153,9 @@ export default function Buitenwereld() {
       const hoek = (i / 10) * Math.PI * 2 + rng() * 0.5;
       const r = 128 + rng() * 22;         // bergen aan de kust (256-300 m)
       const cx = Math.sin(hoek) * r, cz = Math.cos(hoek) * r;
+      // 🌋 Mark 6 sep: op deze plek staat nu Brian's vulkaan (BuitenVulkaan) —
+      // de berg die daar stond vervalt. (×2 = de schaal van deze groep.)
+      if (Math.hypot(cx * 2 - VULKAAN.x, cz * 2 - VULKAAN.z) < VULKAAN.R + 30) continue;
       let topY = 0;
       const lagen = 2 + Math.floor(rng() * 2);
       let s = 30 + rng() * 18;
@@ -183,6 +189,8 @@ export default function Buitenwereld() {
     <>
       {/* 🏝️ het eiland: gras → strand → zeebodem (wereld-maten, niet geschaald) */}
       <mesh geometry={LAND_GEO} material={LAND_MAT} receiveShadow />
+      {/* 🌋 Brian's vulkaan (wereld-maten: je kunt hem beklimmen) */}
+      <BuitenVulkaan />
       {/* 🌊 de zee rondom, tot de horizon */}
       {ZEE_STROKEN.map((s, i) => (
         <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[s.x, ZEE_Y, s.z]} material={ZEE_MAT}>
