@@ -627,7 +627,7 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                             marginBottom: 8,
                           }}
                         >
-                          📚 Bekijk het uitlegpad
+                          💡 Bekijk de hulp bij deze vraag
                         </button>
                       )}
                       {hasUitlegPad && isUitlegOpen && (

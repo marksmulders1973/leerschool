@@ -1489,6 +1489,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     onClose={() => setShowUitlegPad(false)}
                     verbergNiveaus={attempts === 1}
                     onWoordHulp={openWoordHulp}
+                    onBuddy={() => setShowTutor(true)}
+                    onNaarUitleg={() => setMode("reading")}
+                    antwoordTekst={Array.isArray(currentCheck.options) ? currentCheck.options[currentCheck.answer] : null}
                   />
                 )}
                 {showUitlegPad && !currentCheck.uitlegPad && currentCheck.leerpadLink && (
@@ -1735,6 +1738,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
                 onClose={() => setShowUitlegPad(false)}
                 onWoordHulp={openWoordHulp}
+                onBuddy={() => setShowTutor(true)}
+                onNaarUitleg={() => setMode("reading")}
               />
             )}
             <button onClick={() => setMode("reading")} style={{ ...btnSecondary(), marginTop: 14 }}>

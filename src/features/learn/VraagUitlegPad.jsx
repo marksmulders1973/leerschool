@@ -39,12 +39,33 @@ export function bumpVraagFouten(vraagId) {
   }
 }
 
-export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiveau = "basis", verbergNiveaus = false, onWoordHulp = null }) {
+// Mark 5 sep 2026 ("is het dan niet wat sober?"): (1) heet nu "Hulp bij deze
+// vraag" — het woord "pad" is voor de leerpaden, dit is hulp bij één vraag;
+// (2) vóór de eerste poging één échte denk-hint (het 'nog simpeler'-niveau is
+// in veel paden al als vraag geformuleerd) + Charley + "lees de uitleg nog
+// eens", i.p.v. een leeg paneel; stappen die het antwoord verklappen blijven
+// dan dicht; (3) onderdelen staan open als er maar één of twee zijn.
+export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiveau = "basis", verbergNiveaus = false, onWoordHulp = null, onBuddy = null, onNaarUitleg = null, antwoordTekst = null, buddyNaam = "Charley" }) {
   if (!uitlegPad) return null;
 
   const fouten = useMemo(() => (vraagId ? getVraagFouten(vraagId) : 0), [vraagId]);
   const initieelNiveau = fouten >= 2 ? "simpeler" : defaultNiveau;
   const [niveau, setNiveau] = useState(initieelNiveau);
+
+  // Vóór de eerste poging: stappen die (bijna) het antwoord bevatten niet tonen.
+  const antwoordLower = antwoordTekst ? String(antwoordTekst).trim().toLowerCase() : "";
+  const verklapt = (tekst) => !!antwoordLower && antwoordLower.length >= 1 && String(tekst || "").toLowerCase().includes(antwoordLower);
+  const stappen = (uitlegPad.stappen || []).filter((s) => !(verbergNiveaus && verklapt((s.titel || "") + " " + (s.tekst || ""))));
+  // Denk-hint vóór de eerste poging: liefst 'nogSimpeler' (vaak een vraag), anders 'simpeler' als die geen antwoord verklapt.
+  const denkHint = verbergNiveaus
+    ? [uitlegPad.niveaus?.nogSimpeler, uitlegPad.niveaus?.simpeler].find((t) => t && !verklapt(t)) || null
+    : null;
+  // Onderdelen tellen: bij 1-2 onderdelen alles open (inklappen bespaart dan niets).
+  const aantalSecties =
+    (!verbergNiveaus && (uitlegPad.niveaus?.[niveau] || uitlegPad.niveaus?.basis) ? 1 : 0) +
+    (stappen.length > 0 ? 1 : 0) + (uitlegPad.woorden?.length > 0 ? 1 : 0) + (uitlegPad.theorie ? 1 : 0) +
+    (uitlegPad.voorbeelden?.length > 0 ? 1 : 0) + (uitlegPad.basiskennis?.length > 0 ? 1 : 0);
+  const openStandaard = aantalSecties <= 2;
 
   // 1 keer per open scherm naar boven scrollen
   useEffect(() => {
@@ -68,7 +89,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
     >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
         <div style={{ fontSize: 16, fontWeight: 700, color: "#5db3ff", fontFamily: "var(--font-display)" }}>
-          📚 Uitlegpad bij deze vraag
+          💡 Hulp bij deze vraag
         </div>
         {onClose && (
           <button
@@ -125,11 +146,52 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         </div>
       )}
 
+      {/* DENK-HINT vóór de eerste poging: één vraag die je op weg helpt, geen antwoord. */}
+      {verbergNiveaus && denkHint && (
+        <div style={{
+          marginBottom: 12,
+          padding: "12px 14px",
+          background: "rgba(255,213,79,0.10)",
+          border: "1px solid rgba(255,213,79,0.35)",
+          borderRadius: 10,
+          fontSize: 15,
+          lineHeight: 1.55,
+          color: "var(--color-text-strong)",
+        }}>
+          <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase", color: "#ffd54f", marginBottom: 4 }}>🤔 Denk eerst hierover</div>
+          <VoorleesBlok tekst={denkHint}>
+            <MdInline text={denkHint} />
+          </VoorleesBlok>
+        </div>
+      )}
+
+      {/* Hulp-knoppen: Charley (maatje) + terug naar de uitleg van deze stap. */}
+      {(onBuddy || onNaarUitleg) && (
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
+          {onBuddy && (
+            <button
+              onClick={onBuddy}
+              style={{ flex: 1, minWidth: 150, minHeight: 44, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,213,79,0.45)", background: "rgba(255,213,79,0.08)", color: "#ffd54f", fontWeight: 700, fontSize: 13, fontFamily: "var(--font-display)", cursor: "pointer" }}
+            >
+              🐶 Vraag het aan {buddyNaam}
+            </button>
+          )}
+          {onNaarUitleg && (
+            <button
+              onClick={onNaarUitleg}
+              style={{ flex: 1, minWidth: 150, minHeight: 44, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(66,165,245,0.45)", background: "rgba(66,165,245,0.08)", color: "#5db3ff", fontWeight: 700, fontSize: 13, fontFamily: "var(--font-display)", cursor: "pointer" }}
+            >
+              📖 Lees de uitleg van deze stap nog eens
+            </button>
+          )}
+        </div>
+      )}
+
       {/* NIVEAU-UITLEG — default DICHT om antwoord-verklap te vermijden.
           niveaus.basis is in veel paden letterlijk het antwoord ("9.", "Ja.")
           en zou de leerling van denken weghouden. Audit 2026-05-13 QW1. */}
       {!verbergNiveaus && niveauTekst && (
-        <Section title="💡 Korte uitleg" defaultOpen={false}>
+        <Section title="💡 Korte uitleg" defaultOpen={openStandaard}>
           <VoorleesBlok tekst={niveauTekst}>
             <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
               <MdInline text={niveauTekst} />
@@ -150,10 +212,10 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
       )}
 
       {/* STAPPEN */}
-      {uitlegPad.stappen?.length > 0 && (
-        <Section title="🪜 Stap voor stap door de vraag">
+      {stappen.length > 0 && (
+        <Section title="🪜 Stap voor stap door de vraag" defaultOpen={openStandaard}>
           <ol style={{ paddingLeft: 20, margin: 0, lineHeight: 1.6 }}>
-            {uitlegPad.stappen.map((s, i) => (
+            {stappen.map((s, i) => (
               <li key={i} style={{ marginBottom: 10 }}>
                 {s.titel && <strong>{s.titel}: </strong>}
                 {s.tekst}
@@ -166,7 +228,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
       {/* MOEILIJKE WOORDEN. Met onWoordHulp (Mark 11 jul) is elk woord tikbaar
           → hulp-kaartje met buddy-knop + eventuele les over dat woord. */}
       {uitlegPad.woorden?.length > 0 && (
-        <Section title="🔤 Moeilijke woorden">
+        <Section title="🔤 Moeilijke woorden" defaultOpen={openStandaard}>
           <dl style={{ margin: 0, lineHeight: 1.55 }}>
             {uitlegPad.woorden.map((w, i) => (
               <div key={i} style={{ marginBottom: 8 }}>
@@ -193,7 +255,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
 
       {/* THEORIE */}
       {uitlegPad.theorie && (
-        <Section title="📘 Theorie achter de vraag">
+        <Section title="📘 Theorie achter de vraag" defaultOpen={openStandaard}>
           <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
             <MdInline text={uitlegPad.theorie} />
           </div>
@@ -202,7 +264,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
 
       {/* VOORBEELDEN */}
       {uitlegPad.voorbeelden?.length > 0 && (
-        <Section title="✨ Voorbeelden uit het echte leven">
+        <Section title="✨ Voorbeelden uit het echte leven" defaultOpen={openStandaard}>
           <ul style={{ paddingLeft: 18, margin: 0, lineHeight: 1.6 }}>
             {uitlegPad.voorbeelden.map((v, i) => (
               <li key={i} style={{ marginBottom: 8 }}>
@@ -230,7 +292,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
 
       {/* BASISKENNIS (terug-stap) */}
       {uitlegPad.basiskennis?.length > 0 && (
-        <Section title="🧱 Basiskennis die je hierbij nodig hebt">
+        <Section title="🧱 Basiskennis die je hierbij nodig hebt" defaultOpen={openStandaard}>
           {uitlegPad.basiskennis.map((b, i) => (
             <div key={i} style={{ marginBottom: 8 }}>
               <div style={{ fontWeight: 700, color: "var(--color-text-strong)" }}>{b.onderwerp}</div>
@@ -270,7 +332,7 @@ function Section({ title, children, defaultOpen = false }) {
         minHeight: 32,
       }}>
         <span>{title}</span>
-        <span style={{ fontSize: 11, color: "var(--color-text-soft)", marginLeft: 8 }}>tik om te openen</span>
+        <span style={{ fontSize: 11, color: "var(--color-text-soft)", marginLeft: 8 }}>{defaultOpen ? "" : "tik om te openen"}</span>
       </summary>
       <div style={{ fontSize: 14, marginTop: 10 }}>{children}</div>
     </details>
