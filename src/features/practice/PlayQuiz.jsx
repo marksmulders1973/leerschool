@@ -3,7 +3,6 @@ import styles from "../../styles.js";
 import { SUBJECTS } from "../../constants.js";
 import { SoundEngine, track } from "../../utils.js";
 import { padVoorToetsVraag } from "../../learnPaths/padVoorToetsVraag.js";
-import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
 import { recordAnswer as recordMasteryAnswer, recordRefAnswer } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { checkOpenAnswer } from "./openAnswerCheck.js";
@@ -952,10 +951,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
       {/* Quit confirmation overlay */}
       {showQuitConfirm && (() => {
-        const stopSubject = gameState?.quiz?.subject;
-        const stopLevel = gameState?.quiz?.level;
-        const stopAllowed = stopSubject ? categoryToLearnSubjects(stopSubject) : null;
-        const matched = onLearnPathRequest ? findLearnPathForQuestion(question?.q, stopAllowed, stopLevel) : null;
+        // v591: zelfde pad-zoeker als "Ik weet het niet" (v588 verwijderde de
+        // oude import maar liet dit blok staan → ReferenceError bij élke Stop,
+        // ~40 min live; les: na een import-wissel álle gebruikers grep'en).
+        const gevonden = onLearnPathRequest ? padVoorToetsVraag(question, gameState?.quiz?.subject, gameState?.quiz?.level) : null;
+        const matched = gevonden ? { pathId: gevonden.id, stepIdx: gevonden.stepIdx || 0 } : null;
         return (
         <div
           ref={quitConfirmRef}
