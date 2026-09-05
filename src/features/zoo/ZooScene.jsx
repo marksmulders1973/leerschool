@@ -6,7 +6,8 @@ import { Suspense, useState, useMemo, useCallback, useRef, memo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@react-three/drei";
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide, InstancedBufferAttribute, MeshStandardMaterial } from "three";
-import { grondShader, grasPolGeometrie, grasPolMateriaal, windTik, waterMateriaal, waterTik } from "./realisme";
+import { grondShader, grasPolGeometrie, grasPolMateriaal, windTik } from "./realisme";
+import { eilandWaterMateriaal, eilandWaterTik, waterDieptekaart } from "./waterEiland";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -291,7 +292,7 @@ function BlokFontein({ x, y, z }) {
       {rand.map(([bx, bz], i) => (
         <mesh key={i} castShadow receiveShadow position={[bx, 0.35, bz]}><boxGeometry args={[1, 0.7, 1]} /><meshStandardMaterial map={grijsMaps.muur()} color="#a3a8ae" roughness={1} /></mesh>
       ))}
-      <mesh position={[0, 0.42, 0]} rotation={[-Math.PI / 2, 0, 0]} material={WATER_MAT}><planeGeometry args={[3, 3]} /></mesh>
+      <mesh position={[0, 0.42, 0]} rotation={[-Math.PI / 2, 0, 0]} material={WATER_MAT}><planeGeometry args={[3, 3, 4, 4]} /></mesh>
       <mesh castShadow position={[0, 0.9, 0]}><boxGeometry args={[0.6, 1.1, 0.6]} /><meshStandardMaterial map={grijsMaps.buiten()} color="#8f959c" roughness={1} /></mesh>
       <mesh position={[0, 1.55, 0]}><boxGeometry args={[0.35, 0.35, 0.35]} /><meshStandardMaterial color="#bfe3f2" transparent opacity={0.7} roughness={0.3} /></mesh>
     </group>
@@ -498,8 +499,10 @@ const KL_AARDE = new Color("#8a6a44");
 const KL_STEENLAAG = new Color("#7d7568");
 // het grondmateriaal één keer, op module-niveau: overleeft park verlaten/terugkomen
 const GROND_MAT = grondShader(new MeshStandardMaterial({ roughness: 1, metalness: 0 }));
-// 💧 Water (Mark 5 sep, van Brian's eiland): rimpels, spiegeling van de lucht en zon-glinstering
-const WATER_MAT = waterMateriaal({ kleur: "#2b8fc4", opacity: 0.8 });
+// 💧 Water = het water van Brian's eiland (Mark 5 sep): golfjes, rimpels, spiegeling
+// van de lucht, zon-glinstering, kleur/doorzichtigheid op diepte (uit de dieptekaart
+// van het terrein), lichtvlekken op de bodem en schuim langs de oever.
+const WATER_MAT = eilandWaterMateriaal();
 function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGround, onHover, onPlace, onMissTap, onSculpt, onWater, onGround }) {
   const refTop = useRef(), refKol = useRef();
   const AANTAL = TER_N * TER_N;
@@ -663,7 +666,7 @@ function GrasSprieten({ field, ground = {}, padCellen = null }) {
 
 // 🌬️ Eén klokje voor alle wind-shaders (graspollen, bladeren): elk beeldje de tijd doorgeven.
 function Wind() {
-  useFrame((st) => { windTik(st.clock.elapsedTime); waterTik(st.clock.elapsedTime); });
+  useFrame((st) => { windTik(st.clock.elapsedTime); eilandWaterTik(st.clock.elapsedTime); });
   return null;
 }
 
@@ -679,7 +682,7 @@ function WaterPools({ cells }) {
         const [x, z] = cellToWorld(gx, gz);
         return (
           <mesh key={`${gx},${gz}`} rotation={[-Math.PI / 2, 0, 0]} position={[x, WATER_SURFACE_Y, z]} receiveShadow material={WATER_MAT}>
-            <planeGeometry args={[CELL + 0.02, CELL + 0.02]} />
+            <planeGeometry args={[CELL + 0.02, CELL + 0.02, 4, 4]} />
           </mesh>
         );
       })}
@@ -734,7 +737,7 @@ function Stream({ path, terrain }) {
         const p = points[i];
         return (
           <mesh key={`${gx},${gz}`} rotation={[-Math.PI / 2, 0, 0]} position={[p.x, p.y - 0.08, p.z]} material={WATER_MAT}>
-            <planeGeometry args={[1.5, 1.5]} />
+            <planeGeometry args={[1.5, 1.5, 3, 3]} />
           </mesh>
         );
       })}
@@ -1400,6 +1403,9 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   const onSculpt = (x, z) => { if (onTerrainChange) onTerrainChange(applyBrush(terrain || flatField(), x, z, sculptDir * 0.9)); };
   // Beken (stroompaden) + meertjes op basis van het terrein + de water-bronnen.
   const water = useMemo(() => computeWater(terrain, waterSeeds), [terrain, waterSeeds]);
+  // dieptekaart voor de water-shader: hoe diep is elke kuil (oppervlak − terrein)
+  const waterDiepte = useMemo(() => waterDieptekaart(terrain, WATER_SURFACE_Y), [terrain]);
+  useEffect(() => { const oud = WATER_MAT.uniforms.dieptemap.value; WATER_MAT.uniforms.dieptemap.value = waterDiepte; return () => { if (oud && oud !== waterDiepte) oud.dispose(); }; }, [waterDiepte]);
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 
