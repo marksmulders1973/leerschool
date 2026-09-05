@@ -12,7 +12,9 @@
 // bergen, schors + bladerkronen in het bos. Lay-out en posities zijn gelijk
 // gebleven, dus de wereld ligt nog precies waar hij lag.
 import { useEffect, useMemo, useRef } from "react";
-import { Color, Object3D, IcosahedronGeometry, CylinderGeometry, MeshStandardMaterial, InstancedBufferAttribute } from "three";
+import { Color, Object3D, IcosahedronGeometry, CylinderGeometry, MeshStandardMaterial, InstancedBufferAttribute, PlaneGeometry, Float32BufferAttribute } from "three";
+import { buitenHoogte, ZEE_Y, KUST_R, LAND_R } from "./eilandVorm";
+import { TER_EXT } from "./terrain";
 import { grondShader, granietTextuur, schorsMateriaal, loofKroonGeometrie, loofMateriaal } from "./realisme";
 import { eilandWaterMateriaal } from "./waterEiland";
 
@@ -82,6 +84,44 @@ const SNEEUW_MAT = new MeshStandardMaterial({ roughness: 0.9, metalness: 0 });
 // het buitenmeer ligt buiten de dieptekaart → vaste diepte van 2,5 m (donker, met lichtaders)
 const MEER_MAT = eilandWaterMateriaal({ diepteVast: 2.5, golfAmp: 2 });
 
+// 🏝️ HET EILAND (Mark 5 sep): het park ligt op een eiland. Buiten het park-terrein
+// eerst gras (daar staan bos, heuvels, bergen, meertje en het weggetje), dan een
+// strand dat zacht onder water duikt, en dan zee tot de horizon. De vorm staat in
+// eilandVorm.js — de speler gebruikt precies dezelfde functie om te lopen/zwemmen.
+const glad = (a, b2, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b2 - a))); return t * t * (3 - 2 * t); };
+const LAND_GEO = (() => {
+  const N = 120, S = 800;
+  const g = new PlaneGeometry(S, S, N, N); g.rotateX(-Math.PI / 2);
+  const p = g.attributes.position, n = p.count;
+  const kleur = new Float32Array(n * 3), mix = new Float32Array(n);
+  const gras = new Color("#6fb254"), gras2 = new Color("#5da24b"), zand = new Color("#dfcf9a"), nat = new Color("#b4a273"), c = new Color();
+  for (let i = 0; i < n; i++) {
+    const x = p.getX(i), z = p.getZ(i), r = Math.hypot(x, z);
+    // onder het park-terrein verstoppen we het vlak diep in de grond
+    p.setY(i, (Math.abs(x) < TER_EXT - 4 && Math.abs(z) < TER_EXT - 4) ? -6 : buitenHoogte(x, z));
+    const strand = glad(LAND_R - 14, LAND_R + 6, r), natF = glad(KUST_R - 14, KUST_R + 2, r);
+    const vlek = 0.5 + 0.5 * Math.sin(x * 0.05 + 1.3) * Math.cos(z * 0.043 + 0.4);
+    c.copy(gras).lerp(gras2, vlek).lerp(zand, strand).lerp(nat, natF * 0.7);
+    kleur[i * 3] = c.r; kleur[i * 3 + 1] = c.g; kleur[i * 3 + 2] = c.b;
+    mix[i] = 1 - strand;   // 1 = grastextuur, 0 = zandkorrels
+  }
+  g.setAttribute("color", new Float32BufferAttribute(kleur, 3));
+  g.setAttribute("grasMix", new Float32BufferAttribute(mix, 1));
+  g.computeVertexNormals();
+  return g;
+})();
+const LAND_MAT = grondShader(new MeshStandardMaterial({ vertexColors: true, roughness: 1, metalness: 0 }));
+// de zee: vier stroken rondom het park-terrein (geen vlak ónder het park, anders
+// schijnt het door gegraven vijvers), met het eiland-water en diepte op afstand
+const ZEE_MAT = eilandWaterMateriaal({ eilandR: KUST_R, golfAmp: 3 });
+const ZEE_BINNEN = 150, ZEE_TOT = 950;
+const ZEE_STROKEN = [
+  { w: ZEE_TOT * 2, h: ZEE_TOT - ZEE_BINNEN, x: 0, z: (ZEE_TOT + ZEE_BINNEN) / 2, sx: 120, sz: 50 },
+  { w: ZEE_TOT * 2, h: ZEE_TOT - ZEE_BINNEN, x: 0, z: -(ZEE_TOT + ZEE_BINNEN) / 2, sx: 120, sz: 50 },
+  { w: ZEE_TOT - ZEE_BINNEN, h: ZEE_BINNEN * 2, x: (ZEE_TOT + ZEE_BINNEN) / 2, z: 0, sx: 50, sz: 24 },
+  { w: ZEE_TOT - ZEE_BINNEN, h: ZEE_BINNEN * 2, x: -(ZEE_TOT + ZEE_BINNEN) / 2, z: 0, sx: 50, sz: 24 },
+];
+
 const GROEN = ["#6fb254", "#7cbf5a", "#5da24b", "#86c46a"];
 const BERGGRIJS = ["#8d8a85", "#7f7d79", "#9a968f"];
 
@@ -92,7 +132,7 @@ export default function Buitenwereld() {
     // Glooiende heuvels: clusters van platte bollen, half in de grond (zelfde plekken als de oude blok-heuvels).
     for (let i = 0; i < 24; i++) {
       const hoek = rng() * Math.PI * 2;
-      const r = 98 + rng() * 100;
+      const r = 98 + rng() * 45;          // heuvels blijven op het land (tot ~290 m)
       const cx = Math.sin(hoek) * r, cz = Math.cos(hoek) * r;
       const n = 3 + Math.floor(rng() * 4);
       for (let b = 0; b < n; b++) {
@@ -108,7 +148,7 @@ export default function Buitenwereld() {
     // Bergen in de verte: ruwe granieten bulten + sneeuw op de top.
     for (let i = 0; i < 10; i++) {
       const hoek = (i / 10) * Math.PI * 2 + rng() * 0.5;
-      const r = 210 + rng() * 55;
+      const r = 128 + rng() * 22;         // bergen aan de kust (256-300 m)
       const cx = Math.sin(hoek) * r, cz = Math.cos(hoek) * r;
       let topY = 0;
       const lagen = 2 + Math.floor(rng() * 2);
@@ -125,7 +165,7 @@ export default function Buitenwereld() {
     let pogingen = 0;
     while (stammen.length < 110 && pogingen++ < 800) {
       const hoek = rng() * Math.PI * 2;
-      const r = 87 + rng() * 85;
+      const r = 87 + rng() * 53;          // bos tot ~280 m
       const x = Math.sin(hoek) * r, z = Math.cos(hoek) * r;
       if (Math.abs(x) < 11 && z > 76) continue;
       const h = 2.6 + rng() * 2.2, kr = 1.9 + rng() * 1.1;
@@ -140,11 +180,16 @@ export default function Buitenwereld() {
   // ×2 — dan schuiven de horizon-ring, het meertje, het weggetje, de bushalte,
   // de heuvels en het bos vanzelf mee naar buiten, ruim om het grotere park heen.
   return (
+    <>
+      {/* 🏝️ het eiland: gras → strand → zeebodem (wereld-maten, niet geschaald) */}
+      <mesh geometry={LAND_GEO} material={LAND_MAT} receiveShadow />
+      {/* 🌊 de zee rondom, tot de horizon */}
+      {ZEE_STROKEN.map((s, i) => (
+        <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[s.x, ZEE_Y, s.z]} material={ZEE_MAT}>
+          <planeGeometry args={[s.w, s.h, s.sx, s.sz]} />
+        </mesh>
+      ))}
     <group scale={2}>
-      {/* Grasvlakte tot de horizon (ring om het vierkante park-terrein heen), met de echte grastextuur. */}
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.07, 0]} material={GRAS_MAT}>
-        <ringGeometry args={[79, 290, 48]} />
-      </mesh>
 
       <Instanties items={heuvels} geometry={HEUVEL_GEO} material={GRAS_MAT} receiveShadow />
       <Instanties items={bergen} geometry={BERG_GEO} material={BERG_MAT} />
@@ -197,5 +242,6 @@ export default function Buitenwereld() {
         ))}
       </group>
     </group>
+    </>
   );
 }

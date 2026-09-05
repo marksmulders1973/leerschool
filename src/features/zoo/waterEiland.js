@@ -113,7 +113,7 @@ uniform float tijd;
 uniform sampler2D ruis;
 uniform sampler2D dieptemap;
 uniform sampler2D luchtMap;
-uniform float terMaat, maxDiep, diepteVast;
+uniform float terMaat, maxDiep, diepteVast, eilandR, golfAmp;
 uniform vec3 zonRichting, kleurOndiep, kleurDiep, kleurAder;
 varying vec3 vWereld;
 varying vec3 vNormaal;
@@ -123,6 +123,11 @@ void main(){
   vec2 uv = vWereld.xz;
   float dv = texture2D(dieptemap, uv / terMaat + 0.5).r;
   float diepte = diepteVast >= 0.0 ? diepteVast : dv * dv * maxDiep;
+  // de zee rondom het eiland: ondiep bij de kust, steeds dieper naar buiten
+  if(eilandR > 0.0){
+    float dz = clamp((length(uv) - eilandR) / 90.0, 0.0, 1.0);
+    diepte = max(diepte, dz * dz * 9.0);
+  }
 
   // 2) rimpels: twee lagen ruis glijden langs elkaar → kabbelende normaal
   const float e = 1.0 / 256.0;
@@ -151,8 +156,8 @@ void main(){
   // 8) diep water: bijna zwart, met lichtende aders (zonlicht dat door de golven breekt)
   float diepF = smoothstep(1.5, 3.5, diepte);
   vec2 uvS = vec2(uv.x * 0.6 + uv.y * 0.8, uv.y * 0.6 - uv.x * 0.8);
-  float a1 = texture2D(ruis, uvS * vec2(0.14, 0.34) + tijd * vec2(0.012, 0.020)).b;
-  float a2 = texture2D(ruis, uvS * vec2(0.21, 0.50) - tijd * vec2(0.018, 0.011)).b;
+  float a1 = texture2D(ruis, uvS * vec2(0.045, 0.11) + tijd * vec2(0.012, 0.020)).b;
+  float a2 = texture2D(ruis, uvS * vec2(0.070, 0.16) - tijd * vec2(0.018, 0.011)).b;
   float ader = pow(min(a1, a2), 1.6) * 1.1 + a1 * a2 * 0.2;
   ader *= 0.55 + 0.9 * clamp(dot(n, zonRichting), 0.0, 1.0);
   water += kleurAder * ader * diepF;
@@ -179,12 +184,15 @@ void main(){
   float kust = smoothstep(0.9, 0.05, diepte) * step(0.0, -diepteVast);
   float schuimKust = kust * smoothstep(0.62, 0.96, band + ruisB * 0.30 - 0.12);
   schuimKust = max(schuimKust, smoothstep(0.22, 0.0, diepte) * step(0.0, -diepteVast) * (0.55 + 0.45 * ruisB));
-  float top = smoothstep(0.03, 0.06, vHoog) * smoothstep(0.40, 0.80, ruisB * 0.6 + ruisA * 0.6);
-  float schuim = clamp(schuimKust + top * 0.6, 0.0, 1.0);
+  // schuim op de golftoppen: alleen de hoogste toppen, in grote onregelmatige plukken
+  float hMax = 0.044 * golfAmp;
+  float ruisC = texture2D(ruis, uv * 0.045 + tijd * vec2(0.006, -0.004)).g;
+  float top = smoothstep(0.62 * hMax, 0.95 * hMax, vHoog) * smoothstep(0.55, 0.9, ruisC * 0.7 + ruisA * 0.5);
+  float schuim = clamp(schuimKust + top * 0.35, 0.0, 1.0);
   kleur = mix(kleur, vec3(0.93, 0.97, 0.98), schuim);
 
   // doorzichtig waar het ondiep is (je ziet de bodem), dicht waar het diep is
-  float alpha = mix(0.55, 0.95, clamp(diepte / 1.5, 0.0, 1.0));
+  float alpha = mix(0.55, 1.0, clamp(diepte / 1.5, 0.0, 1.0));
   alpha = mix(alpha, 1.0, fres * 0.6);
   alpha = max(alpha, schuim);
 
@@ -195,7 +203,7 @@ void main(){
 // Maak het eiland-water. opties: { diepteVast } = vaste diepte (voor het
 // buitenmeer, buiten de dieptekaart), anders leest hij de dieptekaart (zet die
 // via material.uniforms.dieptemap.value). golfAmp = grootte van de golfjes.
-export function eilandWaterMateriaal({ diepteVast = -1, golfAmp = 1 } = {}) {
+export function eilandWaterMateriaal({ diepteVast = -1, golfAmp = 1, eilandR = 0 } = {}) {
   const mat = new ShaderMaterial({
     transparent: true,
     side: DoubleSide,
@@ -210,6 +218,7 @@ export function eilandWaterMateriaal({ diepteVast = -1, golfAmp = 1 } = {}) {
       terMaat: { value: TER_SIZE },
       maxDiep: { value: WATER_MAX_DIEP },
       diepteVast: { value: diepteVast },
+      eilandR: { value: eilandR },
       zonRichting: { value: ZON_RICHTING.clone() },
       kleurOndiep: { value: new Color(0x3fcfc6) },
       kleurDiep: { value: new Color(0x0a2c48) },

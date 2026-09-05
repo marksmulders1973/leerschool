@@ -8,6 +8,7 @@ import { Html } from "@react-three/drei";
 import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, PlaneGeometry, BoxGeometry, MeshStandardMaterial, SRGBColorSpace, BufferGeometry, Float32BufferAttribute } from "three";
 import { steenGeometrie, steenMateriaal, schorsMateriaal, loofKroonGeometrie, loofMateriaal, palmStamGeometrie, palmKroonGeometrie, palmStamMateriaal, palmBladMateriaal, grasPolGeometrie, varenMateriaal, luchtTextuur, grondShader } from "./realisme";
 import { MeshBasicMaterial as HemelBasisMateriaal, BackSide as HemelBinnenkant, MeshStandardMaterial as HeuvelMateriaal } from "three";
+import { GRENS_R, ZEE_Y, inZee } from "./eilandVorm";
 import { CylinderGeometry, SphereGeometry } from "three";
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
@@ -19,7 +20,9 @@ import { PARTNER_LOGOS } from "../../components/CodeBalk.jsx";
 
 // Buitenrand waar de speler/vlieger tegen begrensd wordt (net binnen het raster).
 // Schaalt mee met de park-grootte (2× uitgezoomd 23 aug → ±160 i.p.v. ±80).
-const PARK_RAND = HALF * CELL - 2;
+// 🏝️ Het park ligt op een eiland (Mark 5 sep): je mag van het park-terrein af,
+// over het gras en het strand, en 20 m de zee in — dan houdt de zee je tegen.
+const PARK_RAND = GRENS_R;
 // Vlieg-hoogte-grenzen (m boven de grond) voor de zweefmodus.
 const VLIEG_MIN = 3, VLIEG_MAX = 150, VLIEG_START = 4.5;
 
@@ -538,6 +541,9 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     // en sta je na het uitstappen ineens ergens anders (26 aug).
     if (verborgen) { moving.current = false; return; }
     const dts = Math.min(dt, 0.05); // tijdstap begrenzen (geen sprong na tab-wissel)
+    // 🏊 In zee? Dan zwem je: langzamer, en je zakt tot je borst in het water.
+    const zwemt = !zweef && inZee(pos.current.x, pos.current.z);
+    const zwemY = (h) => Math.max(h, ZEE_Y - 1.05) + Math.sin(state.clock.elapsedTime * 2.1) * 0.05;
 
     // ── Eerstepersoons: links/rechts draait je blik, vooruit/achteruit loopt waar
     //    je kijkt. De camera zit in het hoofd (model verborgen). ──
@@ -554,11 +560,12 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       const fx = Math.sin(yaw.current), fz = Math.cos(yaw.current);
       moving.current = Math.abs(walk) > 0.12 || Math.abs(turn) > 0.05;
       if (Math.abs(walk) > 0.12) {
-        const step = 3.0 * dts * walk;
+        const step = (zwemt ? 1.7 : 3.0) * dts * walk;
         verplaats(pos.current.x + fx * step, pos.current.z + fz * step);
       }
       node.rotation.y = yaw.current;
-      const tyFP = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+      const tyFP0 = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+      const tyFP = zwemt ? zwemY(tyFP0) : tyFP0;
       if (yGlad.current == null) yGlad.current = tyFP;
       yGlad.current += (tyFP - yGlad.current) * Math.min(1, 12 * dts);
       const ty = yGlad.current;
@@ -585,7 +592,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       dir.current.addScaledVector(right.current, mx);
       if (dir.current.lengthSq() > 0.0001) dir.current.normalize();
       // 🪽 Zweven (Mark 2 jul, Minecraft-fly): 2× zo snel door het park.
-      doelV.current.copy(dir.current).multiplyScalar((zweef ? 9 : 4.2) * Math.min(1, mag));
+      doelV.current.copy(dir.current).multiplyScalar((zweef ? 9 : zwemt ? 2.3 : 4.2) * Math.min(1, mag));
     } else {
       doelV.current.set(0, 0, 0);
     }
@@ -620,7 +627,8 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     } else {
       vliegY.current = VLIEG_START;
     }
-    const tyDoel = (heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0) + (zweef ? vliegY.current : 0);
+    const grondH = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+    const tyDoel = zwemt ? zwemY(grondH) : grondH + (zweef ? vliegY.current : 0);
     if (yGlad.current == null) yGlad.current = tyDoel;
     yGlad.current += (tyDoel - yGlad.current) * Math.min(1, 12 * dts);
     const ty = yGlad.current;
@@ -1695,7 +1703,7 @@ function Hemel() {
   });
   return (
     <mesh ref={ref} material={HEMEL_MAT} renderOrder={-10} frustumCulled={false}>
-      <sphereGeometry args={[520, 48, 32]} />
+      <sphereGeometry args={[950, 48, 32]} />
     </mesh>
   );
 }

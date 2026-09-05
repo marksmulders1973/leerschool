@@ -8,6 +8,7 @@ import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide, InstancedBufferAttribute, MeshStandardMaterial } from "three";
 import { grondShader, grasPolGeometrie, grasPolMateriaal, windTik } from "./realisme";
 import { eilandWaterMateriaal, eilandWaterTik, waterDieptekaart } from "./waterEiland";
+import { buitenHoogte } from "./eilandVorm";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -1396,6 +1397,8 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   // Blok-wereld: hoogte per VAKJE (vlakke bloktop), niet glad geïnterpoleerd —
   // zo staat alles (speler, dieren, items) netjes óp de blokken.
   heightFnRef.current = (x, z) => {
+    // 🏝️ buiten het park-terrein: het eiland (gras → strand → zeebodem)
+    if (Math.abs(x) > TER_EXT || Math.abs(z) > TER_EXT) return buitenHoogte(x, z);
     const [gx, gz] = snapToCell(x, z, 1);
     const [cx, cz] = cellToWorld(gx, gz);
     return blokHoogte(heightAt(terrain, cx, cz));
@@ -1704,7 +1707,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
       shadows={!LOW_END}
       dpr={LOW_END ? 1 : [1, 2]}
       performance={{ min: 0.55 }}
-      camera={{ position: [40, 30, 54], fov: 42, near: 0.1, far: 600 }}
+      camera={{ position: [40, 30, 54], fov: 42, near: 0.1, far: 1000 }}
       style={{ width: "100%", height: "100%", display: "block", touchAction: "none", cursor: paintCursor || "default" }}
       onCreated={({ gl }) => {
         // Context-loss (veel op goedkope Androids onder geheugendruk): zonder
@@ -1720,7 +1723,8 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
           zwakke hardware; staat de speler stil, dan weer scherp. */}
       <AdaptiveDpr />
       <color attach="background" args={["#aaddff"]} />
-      <fog attach="fog" args={["#aaddff", 150, 290]} />
+      {/* mist begint pas ver weg: je moet vanaf het park de zee en de kust kunnen zien */}
+      <fog attach="fog" args={["#aaddff", 220, 700]} />
 
       {/* Dag-nacht-cyclus stuurt zon, omgevingslicht en luchtkleur. */}
       <DayNight />
