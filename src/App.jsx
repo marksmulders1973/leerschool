@@ -108,6 +108,7 @@ const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 const MijnPagina = lazy(() => import("./features/account/MijnPagina.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { levelsCompatible } from "./learnPaths/utils.js";
+import { padVoorToetsVraag } from "./learnPaths/padVoorToetsVraag.js";
 import pathManifest from "./learnPaths/pathManifest.generated.json";
 import { gameVisibleForUser, urlHasGameDeepLink, teacherFeaturesVisibleForUser, oefenboekjePreviewVisible, familiePreviewVisible } from "./shared/featureFlags.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
@@ -128,12 +129,14 @@ import { loadLeaderboardForPlayer, insertLeaderboardEntry, bouwToetsDetail } fro
 function quizDetail(result) {
   if (!Array.isArray(result?.answers) || !Array.isArray(result?.questions)) return null;
   const idxArr = new Array(result.questions.length).fill(null);
-  const extra = new Array(result.questions.length).fill(null);
+  // Elke vraag krijgt een leerpad-advies (v588, Mark 5 sep: "oefen dit deel"
+  // moet bij fout én bij 'weet ik niet' altijd ergens heen kunnen).
+  const extra = result.questions.map((q) => ({ pad: padVoorToetsVraag(q, result.subject, result.level)?.id || null }));
   result.answers.forEach((a) => {
     if (!a || a.questionIndex == null) return;
     idxArr[a.questionIndex] = a.selected;
-    // "Ik weet het niet" (Mark 5 sep 2026): eerlijk apart van tijd-om, mét pad-advies.
-    if (a.weetNiet) extra[a.questionIndex] = { wn: true, pad: a.pad || null };
+    // "Ik weet het niet" (Mark 5 sep 2026): eerlijk apart van tijd-om.
+    if (a.weetNiet) extra[a.questionIndex] = { wn: true, pad: a.pad || extra[a.questionIndex]?.pad || null };
   });
   return bouwToetsDetail(result.questions, idxArr, extra);
 }

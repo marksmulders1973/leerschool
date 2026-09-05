@@ -2,7 +2,7 @@ import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS } from "../../constants.js";
 import { SoundEngine, track } from "../../utils.js";
-import { findLearnPathForQuestion } from "../../learnPaths/utils.js";
+import { padVoorToetsVraag } from "../../learnPaths/padVoorToetsVraag.js";
 import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
 import { recordAnswer as recordMasteryAnswer, recordRefAnswer } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
@@ -653,9 +653,10 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             onClick={() => {
               const subject = gameState?.quiz?.subject;
               const quizLevel = gameState?.quiz?.level;
-              const allowedSubjects = subject ? categoryToLearnSubjects(subject) : null;
-              const matched = findLearnPathForQuestion(question?.q, allowedSubjects, quizLevel);
-              track("dont_know_clicked", { subject, has_match: !!matched, at_question: gameState.currentQ + 1 });
+              // Altijd een leerpad bij de vraag (v588): exact/trefwoord-match,
+              // anders onderwerp-regel, anders standaardpad per vak × groep.
+              const matched = padVoorToetsVraag(question, subject, quizLevel);
+              track("dont_know_clicked", { subject, has_match: !!matched, via: matched?.via || null, at_question: gameState.currentQ + 1 });
               clearInterval(timerRef.current);
               clearTimeout(wrongOverlayTimerRef.current);
               clearTimeout(advanceTimerRef.current);
