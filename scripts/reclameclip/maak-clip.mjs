@@ -31,7 +31,7 @@ mkdirSync(WERK, { recursive: true });
 // "fout-antwoord" haalt de dagvraag-opties uit /api/actuele-vraag en klikt
 // bewust een fout antwoord (zodat de uitleg-flow in beeld komt).
 const STANDAARD_SCENES = [
-  { type: "titel", duur: 3, kop: "Leerkwartier", sub: "Een kwartier per dag — écht begrijpen wat je leert." },
+  { type: "titel", duur: 3, kop: "Leerkwartier", sub: "Een kwartier per dag leren, een leven lang slimmer." },
   // 3D-kubus-opening (Mark 5 aug): de kubus als bewegend clipje — echte animatie
   // opgenomen van /kubus.html (groeit 1→2→3→4 en krimpt terug).
   { type: "kubusvideo", duur: 9, caption: "Zie het vóór je: 2×2×2 → 3×3×3 → 4×4×4" },

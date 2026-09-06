@@ -22,7 +22,7 @@ export default function DeelTrotsKnop({ onShared }) {
 
   const url = `https://${BRAND.domain}/?ref=${getMyRefCode()}&utm_source=trots`;
   const streakDeel = streak > 1 ? ` (dag ${streak} op rij! 🔥)` : "";
-  const tekst = `Mijn kind oefende vandaag 15 minuten voor de Doorstroomtoets${streakDeel} met ${BRAND.name} 🎯 Gratis, een kwartier per dag — écht begrijpen wat je leert:`;
+  const tekst = `Mijn kind oefende vandaag 15 minuten voor de Doorstroomtoets${streakDeel} met ${BRAND.name} 🎯 Gratis, een kwartier per dag leren, een leven lang slimmer:`;
 
   const deel = async () => {
     const heeftNative = typeof navigator !== "undefined" && typeof navigator.share === "function";

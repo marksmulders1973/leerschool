@@ -4,7 +4,7 @@
 
 ## Visie
 
-**Leerkwartier** = "een kwartier per dag, écht begrijpen wat je leert." Voorheen Studiebol.
+**Leerkwartier** = "een kwartier per dag leren, een leven lang slimmer." Voorheen Studiebol.
 
 - **ICP (primair)**: bezorgde **Doorstroomtoets-ouder** groep 6-8 (voorheen "Cito-ouder" — sinds 2024 heet de toets officieel Doorstroomtoets). Alle product/content/marketing-keuzes hier op richten.
 - **Secundair / persoonlijk**: VMBO-dochter — geen marketing-doelgroep.
@@ -435,7 +435,7 @@ Dit is wat Leerkwartier uniek maakt. **Onthoud dit voor elke content-keuze:**
 - **Game ↔ leer strikt scheiden** in design-system.
 
 ### Slogan / brand
-- Slogan: "Een kwartier per dag — écht begrijpen wat je leert."
+- Slogan: "Een kwartier per dag leren, een leven lang slimmer."
 - Payoff: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag is genoeg."
 - Configuratie in `src/brand.js`.
 

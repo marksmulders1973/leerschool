@@ -93,7 +93,7 @@ export default async function handler(req, res) {
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:560px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;">Leerkwartier</div>
-    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:18px;">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:18px;">Een kwartier per dag leren, een leven lang slimmer.</div>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;">Welkom bij het <strong>Weekpakket</strong>! Elke week krijg je per mail een nieuwe code voor een vers printpakket: rekenen, taal en begrijpend lezen richting de Doorstroomtoets — plus een berichtje van de maker.</p>
     <div style="background:#f4f7fb;border-radius:14px;padding:20px;text-align:center;margin:18px 0;">
       <div style="font-size:12px;font-weight:800;color:#56627a;text-transform:uppercase;letter-spacing:0.06em;">Jouw code voor deze week</div>

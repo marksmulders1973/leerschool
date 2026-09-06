@@ -228,7 +228,7 @@ bèta
               </div>
             </div>
 
-            <div style={{ marginTop: 18, fontSize: 11.5, color: "#a08a55" }}>leerkwartier.app · een kwartier per dag, écht begrijpen wat je leert</div>
+            <div style={{ marginTop: 18, fontSize: 11.5, color: "#a08a55" }}>leerkwartier.app · een kwartier per dag leren, een leven lang slimmer</div>
           </div>
         </div>
       </div>

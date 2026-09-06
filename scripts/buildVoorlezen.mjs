@@ -151,7 +151,7 @@ const html = `<!DOCTYPE html>
   <img src="/logo.jpg" alt="Leerkwartier">
   <div>
     <div class="naam">Leerkwartier</div>
-    <div class="slogan">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    <div class="slogan">Een kwartier per dag leren, een leven lang slimmer.</div>
   </div>
 </header>
 

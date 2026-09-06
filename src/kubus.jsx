@@ -17,7 +17,7 @@ function KubusLanding() {
     <>
       <KubusGroeiAnimatie height={320} linkHref={APP_URL} vastZ={vastZ} cameraRef={cameraRef} />
       <p className="lk-intro">
-        Een kwartier per dag — écht begrijpen wat je leert.{" "}
+        Een kwartier per dag leren, een leven lang slimmer.{" "}
         <a href={APP_URL}>Leerkwartier.app →</a>
       </p>
     </>

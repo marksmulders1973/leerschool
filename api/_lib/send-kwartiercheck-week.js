@@ -111,7 +111,7 @@ function bouwWeekmail(rij, weekNr, items) {
       return `- ${c.label} (${c.vak}): ${SITE}/?pad=${encodeURIComponent(c.leerpadId)}` +
         (tip ? `\n  Op papier: ${tip.url}` : "");
     }).join("\n") +
-    `\n\nAfmelden: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
+    `\n\nAfmelden: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 
   return { onderwerp, html, text };
 }

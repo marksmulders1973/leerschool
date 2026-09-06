@@ -71,7 +71,7 @@ export async function handlePartnerUitnodiging(req, res) {
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:520px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
-    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag leren, een leven lang slimmer.</div>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 14px;"><strong>${esc(ouderEmail)}</strong> gebruikt Leerkwartier om ${esc(namen)} te helpen oefenen voor school, en wil dat jij het wekelijkse rapport ook krijgt.</p>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">Elke maandag één mail: wat er geoefend is, wat al goed gaat en wat aandacht verdient. Wil je meelezen? Tik dan op de knop. Doe je niets, dan krijg je verder geen mail van ons.</p>
     <a href="${esc(bevestig)}" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:16px;padding:14px;border-radius:12px;margin-bottom:22px;">✅ Ja, ik lees mee</a>

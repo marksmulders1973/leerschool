@@ -93,7 +93,7 @@ const TICKER_ITEMS = [
 // (showOnboarding default false). Examen/scorebord-jargon paste niet bij Toets-ouder ICP.
 // Stappen behouden voor mogelijke toekomstige rondleiding-knop.
 const ONBOARDING_STEPS = [
-  { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag, écht begrijpen wat je leert." },
+  { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag leren, een leven lang slimmer." },
 ];
 
 // Probeer-meteen-een-vraag-kaart op de home (Mark 2026-06-14, voorstel 3 uit

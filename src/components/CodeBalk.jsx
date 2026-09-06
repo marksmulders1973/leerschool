@@ -63,7 +63,7 @@ function EerScherm({ code, onVerder }) {
           <div style={{ flex: 1, minWidth: 0 }}>
             <div style={{ font: "800 18px/1.25 system-ui", color: donker ? "#fff" : "#14283c" }}>Leerkwartier</div>
             <div style={{ font: "600 12px/1.35 system-ui", color: donker ? "#b9c6d4" : "#5a6775", marginTop: 2 }}>
-              {isEN ? "Fifteen minutes a day — truly understand what you learn." : "Een kwartier per dag — écht begrijpen wat je leert."}
+              {isEN ? "Fifteen minutes a day — truly understand what you learn." : "Een kwartier per dag leren, een leven lang slimmer."}
             </div>
           </div>
           {logo && (isOP ? (

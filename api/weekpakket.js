@@ -92,11 +92,11 @@ export default async function handler(req, res) {
       <div class="knoppen"><a class="licht" href="/api/weekpakket?code=${codeParam}${weekParam}">← Naar de vragen</a> <a href="javascript:window.print()">🖨️ Print het antwoordblad</a></div>
       <h2>✅ Antwoordblad — voor de ouder of verzorger</h2>
       ${editie.html_antwoorden}
-      <div class="voet">Leerkwartier — een kwartier per dag, écht begrijpen wat je leert. Oefenen in de app blijft gratis; dit pakket is extra post voor mail-abonnees.</div>`));
+      <div class="voet">Leerkwartier — een kwartier per dag leren, een leven lang slimmer. Oefenen in de app blijft gratis; dit pakket is extra post voor mail-abonnees.</div>`));
   }
 
   return res.status(200).send(pagina(editie.titel, `${kop}
     <div class="knoppen"><a href="javascript:window.print()">🖨️ Print dit pakket</a> <a class="licht" href="/api/weekpakket?code=${codeParam}${weekParam}&deel=antwoorden">Antwoordblad (voor de ouder/verzorger) →</a></div>
     ${editie.html_vragen}
-    <div class="voet">Leerkwartier — een kwartier per dag, écht begrijpen wat je leert. Oefenen in de app blijft gratis; dit pakket is extra post voor mail-abonnees. Volgende week: nieuwe code in de mail.</div>`));
+    <div class="voet">Leerkwartier — een kwartier per dag leren, een leven lang slimmer. Oefenen in de app blijft gratis; dit pakket is extra post voor mail-abonnees. Volgende week: nieuwe code in de mail.</div>`));
 }
