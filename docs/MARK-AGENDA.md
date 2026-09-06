@@ -18,6 +18,17 @@
 
 ## 🔴 Nu doen (deze week)
 
+- **⚠️ VACATURE Gemeente Den Haag — AI Usecasemanager (Digilab70), sluit do 11 SEPTEMBER 2026.**
+  Inhoudelijk sterke match (AI-usecase van probleem → experiment → productie, publieke waarden,
+  design thinking, politiek-bestuurlijke omgeving) én je hebt een getekende Ooievaarspas-overeenkomst
+  mét déze gemeente. Schaal 11 (€4.520-6.422) of 12, 32-36 u, 12 mnd bepaalde tijd.
+  **Vóór besluit afwegen:** (a) universitair werk-/denkniveau = harde eis op papier;
+  (b) belangenverstrengeling met `docs/GEMEENTE-BETAALT-PLAN.md` (Leerkwartier verkopen áán gemeenten)
+  → nevenwerkzaamheden mélden, ook de Sonac-CAO-check die al openstaat; (c) 32-36 u + reistijd
+  Den Haag naast ~30 u/wk Leerkwartier past niet — Leerkwartier zakt dan naar hobby-tempo.
+  Zelfs bij afwijzing: Digilab70 is precies het gremium waar Leerkwartier binnen wil komen.
+  Zeg "brief" → Claude zet een concept-motivatie klaar.
+
 - **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend; Claude stuurt batch 2 e.v. (~45/dag). Reacties komen op hallo@ → Gmail.**
 - **wo 2 sep: uren loggen** (Claude zette een voorstel-regel in URENLOGBOEK; corrigeer als het anders was) · **do 3 sep: ✅ Tiffany accepteerde LinkedIn-connectie (1 sep) · Nicole: ✅ 5 sep zelf gereageerd (vriendelijke afsluiting) — geen nudge meer, spoor loopt via Froukje · (was: check Nicole + Tiffany, LinkedIn-connectie 1 sep geaccepteerd = haakje voor een kort berichtje)** · ✅ Spark Fest/Inez: nudge verstuurd 2 sep (Claude, na Mark-akkoord).
 - **💡 Besluit: partner-code-pakket** (Mark-ideeën 28 aug, drie delen die
