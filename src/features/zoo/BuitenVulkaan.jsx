@@ -17,14 +17,14 @@
 import { useMemo, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { BufferGeometry, Float32BufferAttribute, Color, CanvasTexture, ShaderMaterial, AdditiveBlending, SpriteMaterial, MeshStandardMaterial, DoubleSide } from "three";
-import { VULKAAN, vulkaanInfo, eilandBasis, buitenHoogte, KRATER_BODEM_Y } from "./eilandVorm";
+import { VULKAAN, vulkaanInfo, eilandBasis, buitenHoogte, KRATER_BODEM_Y, SNEEUW_Y } from "./eilandVorm";
 import { granietTextuur } from "./realisme";
 import { LOW_END } from "./grid";
 
 // ── de kegel: polair rooster (ringen × spaken), dichter bij de krater ──
 const RINGEN = LOW_END ? 56 : 88, SPAKEN = LOW_END ? 96 : 160;
 const V_STRUIK = new Color("#5f8f45"), V_STRUIK2 = new Color("#6f9a4c"), V_ROTS = new Color("#7d6e60"), V_ROTS2 = new Color("#8a7c6e");
-const V_AS = new Color("#a89f95"), V_GEUL = new Color("#4a3f38"), V_KRATER = new Color("#1e1916");
+const V_AS = new Color("#a89f95"), V_GEUL = new Color("#4a3f38"), V_KRATER = new Color("#1e1916"), V_SNEEUW = new Color("#f2f5f7");
 const zacht = (a, b, x) => { const t = Math.max(0, Math.min(1, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
 function kegelGeometrie() {
   const pos = [], kleur = [], uv = [], idx = [];
@@ -50,6 +50,9 @@ function kegelGeometrie() {
       c.lerp(V_AS, zacht(0.55, 0.92, t));
       c.lerp(V_GEUL, vi.geul * 0.7 * zacht(0.08, 0.4, t));
       if (vi.r < VULKAAN.kraterR * 1.6) c.lerp(V_KRATER, zacht(VULKAAN.kraterR * 1.6, VULKAAN.kraterR * 1.05, vi.r) * 0.92);
+      // ❄️ sneeuw boven de sneeuwgrens (Mark 6 sep: "sneeuw op de berg") — maar niet
+      // vlak bij de hete krater: daar smelt het, dus de top blijft as en zwart
+      c.lerp(V_SNEEUW, zacht(SNEEUW_Y - 3, SNEEUW_Y + 3, y) * zacht(VULKAAN.kraterR * 1.8, VULKAAN.kraterR * 2.6, vi.r) * (1 - 0.5 * vi.geul));
       kleur.push(c.r, c.g, c.b);
     }
   }

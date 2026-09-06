@@ -13,8 +13,9 @@
 // gebleven, dus de wereld ligt nog precies waar hij lag.
 import { useEffect, useMemo, useRef } from "react";
 import { Color, Object3D, IcosahedronGeometry, CylinderGeometry, MeshStandardMaterial, InstancedBufferAttribute, PlaneGeometry, Float32BufferAttribute } from "three";
-import { eilandBasis, ZEE_Y, KUST_R, LAND_R, VULKAAN } from "./eilandVorm";
+import { eilandBasis, ZEE_Y, KUST_R, LAND_R, VULKAAN, BERGEN } from "./eilandVorm";
 import BuitenVulkaan from "./BuitenVulkaan";
+import EchteBergen from "./EchteBergen";
 import { TER_EXT } from "./terrain";
 import { grondShader, granietTextuur, schorsMateriaal, loofKroonGeometrie, loofMateriaal } from "./realisme";
 import { eilandWaterMateriaal } from "./waterEiland";
@@ -156,6 +157,8 @@ export default function Buitenwereld() {
       // 🌋 Mark 6 sep: op deze plek staat nu Brian's vulkaan (BuitenVulkaan) —
       // de berg die daar stond vervalt. (×2 = de schaal van deze groep.)
       if (Math.hypot(cx * 2 - VULKAAN.x, cz * 2 - VULKAAN.z) < VULKAAN.R + 30) continue;
+      // 🏔️ Mark 6 sep: de twee buren van de vulkaan zijn nu ÉCHTE bergen (EchteBergen) — decor weg.
+      if (BERGEN.some((b) => Math.hypot(cx * 2 - b.x, cz * 2 - b.z) < b.R + 20)) continue;
       let topY = 0;
       const lagen = 2 + Math.floor(rng() * 2);
       let s = 30 + rng() * 18;
@@ -191,6 +194,8 @@ export default function Buitenwereld() {
       <mesh geometry={LAND_GEO} material={LAND_MAT} receiveShadow />
       {/* 🌋 Brian's vulkaan (wereld-maten: je kunt hem beklimmen) */}
       <BuitenVulkaan />
+      {/* 🏔️ de twee echte bergen naast de vulkaan (beloopbaar, sneeuw op de top) */}
+      <EchteBergen />
       {/* 🌊 de zee rondom, tot de horizon */}
       {ZEE_STROKEN.map((s, i) => (
         <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[s.x, ZEE_Y, s.z]} material={ZEE_MAT}>

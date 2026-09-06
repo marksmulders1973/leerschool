@@ -499,7 +499,7 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false, climbRef = null }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false, climbRef = null, teleportRef = null }) {
   const g = useRef();
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
@@ -536,6 +536,16 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     const mag = Math.hypot(mx, my);
     const node = g.current;
     if (!node) return;
+    // 🚠 Teleport (kabelbaan/slee, 6 sep): bij het uitstappen zet de rit je op het
+    // perron van het andere station — vóór de verborgen-check, zodat het ook werkt
+    // in het frame waarin de rit eindigt.
+    if (teleportRef?.current) {
+      const tp = teleportRef.current; teleportRef.current = null;
+      pos.current.x = tp.x; pos.current.z = tp.z; yGlad.current = null;
+      const ty0 = heightRef?.current ? heightRef.current(tp.x, tp.z) : 0;
+      node.position.set(tp.x, ty0, tp.z);
+      if (posRef) posRef.current.set(tp.x, ty0, tp.z);
+    }
     // Verborgen (in attractie/trein/zeppelin): bevries het poppetje — anders
     // loopt het onzichtbaar mee met de joystick terwijl jij iets anders bestuurt,
     // en sta je na het uitstappen ineens ergens anders (26 aug).

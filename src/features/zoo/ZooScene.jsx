@@ -8,7 +8,10 @@ import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@
 import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide, InstancedBufferAttribute, MeshStandardMaterial } from "three";
 import { grondShader, grasPolGeometrie, grasPolMateriaal, windTik } from "./realisme";
 import { eilandWaterMateriaal, eilandWaterTik, waterDieptekaart } from "./waterEiland";
-import { buitenHoogte, VULKAAN } from "./eilandVorm";
+import { buitenHoogte, VULKAAN, brugLeuning, BRUG } from "./eilandVorm";
+import Hangbrug from "./Hangbrug";
+import Kabelbaan, { KABEL_DAL, KABEL_BERG } from "./Kabelbaan";
+import Sleebaan, { SLEE_START } from "./Sleebaan";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -820,6 +823,14 @@ function Laden() {
 // maatje dan hardop vertellen. Remmen tegen gezeur: per object 4 min stilte,
 // en na élk praatje 25 s globale pauze. Puur rekenwerk op refs — geen state,
 // geen re-renders, dus gratis voor de framerate.
+// 📍 Vaste leerplekken buiten het park-raster (vulkaanpoort, kabelbaan, slee, brug) —
+// de gids en het "hier sta je"-wolkje kennen ze net als de geplaatste objecten.
+const VASTE_PLEKKEN = [
+  { id: "kabelbaan", x: KABEL_DAL.x, z: KABEL_DAL.z },
+  { id: "sneeuwgrens", x: KABEL_BERG.x, z: KABEL_BERG.z },
+  { id: "slee", x: SLEE_START.x, z: SLEE_START.z },
+  { id: "hangbrug", x: (BRUG.ax + BRUG.bx) / 2, z: (BRUG.az + BRUG.bz) / 2, straal: BRUG.L / 2 + 4 },
+];
 function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief, onGids, hierRef = null, factsRef = null }) {
   const dwell = useRef({ id: null, t: 0 });
   const perObject = useRef(new Map()); // leermoment-id → laatste spreek-tijd
@@ -841,6 +852,12 @@ function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief,
       const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
       if (d2 < bestD2) { bestD2 = d2; best = lm; bx = x; bz = z; }
+    }
+    for (const vp of VASTE_PLEKKEN) {
+      const d2 = (vp.x - p.x) * (vp.x - p.x) + (vp.z - p.z) * (vp.z - p.z);
+      // de brug is lang: overal op het dek telt als "bij de brug"
+      const binnen = vp.straal ? d2 < vp.straal * vp.straal : d2 < bestD2;
+      if (binnen && (!best || d2 < bestD2 || vp.straal)) { bestD2 = Math.min(d2, 48); best = vp.id; bx = vp.x; bz = vp.z; }
     }
     const kop = trainHeadRef?.current;
     if (kop?.p) {
@@ -958,6 +975,7 @@ const VULKAAN_POORT = (() => {
   return { assetId: "vulkaan", x: VULKAAN.x + ux * r, z: VULKAAN.z + uz * r, rot: Math.atan2(ux, uz) };
 })();
 const VASTE_POORTEN = [VULKAAN_POORT];
+VASTE_PLEKKEN.push({ id: "vulkaan", x: VULKAAN_POORT.x, z: VULKAAN_POORT.z });
 function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   const acc = useRef(0);
   const binnen = useRef(null); // assetId waar je nu "in" staat
@@ -1345,6 +1363,8 @@ function SnackInHand({ playerPos, playerFace, snack, verborgen, onOp }) {
 export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null, draagSnack = null, onSnackOp = null, onZeppelinRit = null, hierRef = null }) {
   const [ghost, setGhost] = useState(null);
   const [zeppelinRit, setZeppelinRit] = useState(false); // 🛩️ aan boord van de instap-zeppelin
+  const [bergRit, setBergRit] = useState(false);         // 🚠🛷 aan boord van kabelbaan of slee (6 sep)
+  const teleportRef = useRef(null);                       // { x, z } → Player zet je daar neer (uitstappen)
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -1636,6 +1656,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
     return s;
   }, [placedItems]);
   const isSolid = useCallback((x, z) => {
+    if (brugLeuning(x, z)) return true; // 🌉 de leuningen van de hangbrug
     if (kubVast.has(`${Math.floor(x)},${Math.floor(z)}`)) return true;
     const [gx, gz] = snapToCell(x, z, 1);
     return vasteCellen.has(cellKey(gx, gz));
@@ -1789,9 +1810,9 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* Spawn op het starter-plein (z≈64, bij de start van het leerpad-lint),
             niet aan de verre rand — anders begint elke speler in niemandsland. */}
         {/* Tijdens een attractie-rit is je poppetje "ingestapt" → verborgen. */}
-        <Player inputRef={inputRef} start={spawn || [0, 0, 64]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain || zeppelinRit} zweef={zweef} climbRef={climbRef} />
+        <Player inputRef={inputRef} start={spawn || [0, 0, 64]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain || zeppelinRit || bergRit} zweef={zweef} climbRef={climbRef} teleportRef={teleportRef} />
         {/* 🍟 Je gekochte snack loopt mee in je hand en gaat vanzelf op. */}
-        {draagSnack && <SnackInHand playerPos={playerPos} playerFace={playerFace} snack={draagSnack} verborgen={rideIdx != null || rideTrain || zeppelinRit} onOp={onSnackOp} />}
+        {draagSnack && <SnackInHand playerPos={playerPos} playerFace={playerFace} snack={draagSnack} verborgen={rideIdx != null || rideTrain || zeppelinRit || bergRit} onOp={onSnackOp} />}
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam && rideIdx == null} />
         {/* 🎠 In een attractie: camera draait mee op het zitje. */}
@@ -1821,14 +1842,20 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* 🛩️ De bestuurbare Leerkwartier-zeppelin + landingsveld. NÁ de andere
             camera's gemount: tijdens de vlucht wint zijn cockpit-camera. */}
         <InstapZeppelin inputRef={inputRef} onRit={(v) => { setZeppelinRit(v); if (onZeppelinRit) onZeppelinRit(v); }} heightRef={heightFnRef} halteRef={zeppelinHalteRef} />
+        {/* 🏔️ Bergen-plan (Mark 6 sep, WhatsApp met Brian): hangbrug vulkaan↔Oostberg met
+            wandelende maatjes, kabelbaan naar de sneeuwgrens, slee terug het dal in.
+            De rit-camera's winnen omdat ze ná de andere camera's gemount staan. */}
+        <Hangbrug onOefenen={onOefenen} />
+        <Kabelbaan playerRef={playerPos} teleportRef={teleportRef} inputRef={inputRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
+        <Sleebaan playerRef={playerPos} teleportRef={teleportRef} inputRef={inputRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         {/* Samenhang-plan 2 sep 2026: gids en poorten óók aan in bouw-modus —
             een vers park start in bouw-modus, dus stonden ze voor nieuwe kinderen
             altijd uit (developer-review: dé reden van 1 poort-doorloop in 30 dagen). */}
-        <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && !zeppelinRit} onGids={onGidsMoment} hierRef={hierRef} factsRef={factsRef} />
+        <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && !zeppelinRit && !bergRit} onGids={onGidsMoment} hierRef={hierRef} factsRef={factsRef} />
         <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
-        <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain && !zeppelinRit} onDoor={onPoortDoor} />
+        <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain && !zeppelinRit && !bergRit} onDoor={onPoortDoor} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinHalteRef} />
 
         {placing && (
