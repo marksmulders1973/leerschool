@@ -10,7 +10,11 @@ import Card from "../../shared/ui/Card.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { recordAnswerForPath } from "../mastery/mastery.js";
-import { track } from "../../utils.js";
+import { track, getIncomingRef } from "../../utils.js";
+import supabase from "../../supabase.js";
+import { telAntwoordVoorVriend } from "../referral/referral.js";
+import { actievePartnerCode, partnerFamilieTot } from "../referral/partnerCode.js";
+import { PARTNER_NAMEN } from "../../components/PartnerWelkom.jsx";
 import { bouwStartVragen, markeerStartKwartierGedaan, parseGroep } from "./startKwartier.js";
 
 // Three.js pas laden als het park-kaartje in beeld komt (zelfde patroon als BuddyPicker).
@@ -214,8 +218,103 @@ function ShowcaseKaart({ id, groep, onGa, onVerder }) {
   );
 }
 
+// ── Partner-strook (QR-flyer, Mark 7 sep) ─────────────────────────
+// Wie via ?partner=CODE binnenkwam ziet hier dat de code écht actief is.
+// OOIEVAAR-codes blijven neutraal (afspraak bureau Ooievaarspas).
+function PartnerStrook() {
+  const code = actievePartnerCode();
+  if (!code) return null;
+  const naam = code.startsWith("OOIEVAAR") ? null : PARTNER_NAMEN[code];
+  const tot = partnerFamilieTot();
+  return (
+    <div style={{ display: "flex", gap: 10, alignItems: "center", padding: "10px 12px", borderRadius: 12, marginBottom: 12, background: "rgba(0,200,83,0.12)", border: "1px solid rgba(0,200,83,0.4)", fontSize: 14, lineHeight: 1.4 }}>
+      <span style={{ fontSize: 20 }}>🎟️</span>
+      <span>
+        <strong>Code {code} is actief</strong>{naam ? " via " + naam : ""}. De Familie-extra's zijn voor jullie gratis{tot ? " tot en met " + new Date(tot).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" }) : ", blijvend"}.
+      </span>
+    </div>
+  );
+}
+
+// ── Ouder-e-mail op het eindscherm (Mark 7 sep: "punt 3") ─────────
+// Bijna alle nieuwe accounts zijn gasten zonder e-mail → geen weekpakket,
+// geen terugkeer. Eén veld + ouder-toestemming, zelfde tabel/consent als
+// GratisLesmateriaal. Eén keer per apparaat.
+const MAIL_KEY = "lk_startkwartier_mail";
+const geldigEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s);
+
+function OuderMail({ userName, groep }) {
+  const [email, setEmail] = useState("");
+  const [consent, setConsent] = useState(false);
+  const [fout, setFout] = useState("");
+  const [status, setStatus] = useState(() => { try { return localStorage.getItem(MAIL_KEY) ? "klaar" : "idle"; } catch { return "idle"; } });
+  if (status === "klaar") {
+    return (
+      <div style={{ padding: "10px 12px", borderRadius: 12, marginBottom: 12, background: "var(--color-success-soft)", fontSize: 14 }}>
+        📬 Het weekpakket komt eraan. Dank je wel!
+      </div>
+    );
+  }
+  const verstuur = async (e) => {
+    e.preventDefault();
+    const adres = email.trim().toLowerCase();
+    if (!geldigEmail(adres)) { setFout("Dat e-mailadres klopt nog niet helemaal."); return; }
+    if (!consent) { setFout("Vink even aan dat je de ouder of verzorger bent."); return; }
+    setFout(""); setStatus("busy");
+    try {
+      let nieuwId = null;
+      try { nieuwId = crypto.randomUUID(); } catch { /* */ }
+      const { error } = await supabase.from("upgrade_waitlist").insert({
+        ...(nieuwId ? { id: nieuwId } : {}),
+        email: adres,
+        // plan MOET in de check-constraint van upgrade_waitlist staan
+        // ('weekrapport' zit daar niet in → 400; KwartierVangnet heeft dat lek ook).
+        plan: "gratis-lesmateriaal",
+        source: "startkwartier",
+        consent_at: new Date().toISOString(),
+        kind_voornaam: (userName || "").trim().slice(0, 40) || null,
+        kind_groep: "groep" + groep,
+        ref: getIncomingRef(),
+      });
+      if (error && !/duplicate|unique/i.test(error.message || "")) throw error;
+      try { localStorage.setItem(MAIL_KEY, "1"); } catch { /* */ }
+      track("startkwartier_mail", { groep });
+      setStatus("klaar");
+    } catch {
+      setStatus("idle");
+      setFout("Even geen verbinding. Probeer het zo nog eens.");
+    }
+  };
+  return (
+    <form onSubmit={verstuur} style={{ padding: "12px", borderRadius: 12, marginBottom: 12, background: "var(--color-bg-surface)", border: "1px solid var(--color-border-soft)" }}>
+      <div style={{ fontWeight: 700, marginBottom: 4 }}>📬 Elke week een gratis oefenpakket in de mail?</div>
+      <div style={{ fontSize: 13.5, color: "var(--color-text-muted)", marginBottom: 8, lineHeight: 1.4 }}>
+        Vul het e-mailadres van je ouder of verzorger in. Dan komt er elke week een pakketje voor groep {groep}, met antwoorden.
+      </div>
+      <input
+        type="email"
+        inputMode="email"
+        autoComplete="email"
+        value={email}
+        onChange={(e) => { setEmail(e.target.value); if (fout) setFout(""); }}
+        placeholder="naam@voorbeeld.nl"
+        style={{ width: "100%", boxSizing: "border-box", padding: "10px 12px", borderRadius: 10, border: "1px solid var(--color-border-soft)", background: "var(--color-bg-elevated)", color: "var(--color-text)", fontSize: 15, marginBottom: 8, fontFamily: "var(--font-body)" }}
+      />
+      <label style={{ display: "flex", gap: 8, alignItems: "flex-start", marginBottom: 8, cursor: "pointer" }}>
+        <input type="checkbox" checked={consent} onChange={(e) => { setConsent(e.target.checked); if (fout) setFout(""); }} style={{ marginTop: 3, width: 18, height: 18, flexShrink: 0, accentColor: "#00C853" }} />
+        <span style={{ fontSize: 12, color: "var(--color-text-muted)", lineHeight: 1.45 }}>
+          Ik ben de ouder/verzorger en geef toestemming om wekelijks een gratis oefenpakket op dit adres te ontvangen.{" "}
+          <a href="/privacy.html" target="_blank" rel="noreferrer" style={{ color: "#69f0ae" }}>Privacybeleid</a>.
+        </span>
+      </label>
+      {fout && <div style={{ color: "var(--color-danger)", fontSize: 13, marginBottom: 6 }}>{fout}</div>}
+      <Button type="submit" variant="secondary" fullWidth disabled={status === "busy"}>{status === "busy" ? "Even geduld…" : "Stuur het weekpakket"}</Button>
+    </form>
+  );
+}
+
 // ── Klaar ─────────────────────────────────────────────────────────
-function KlaarKaart({ goed, totaal, groep, onGa }) {
+function KlaarKaart({ goed, totaal, groep, userName, onGa }) {
   const tegels = [
     { page: "learn-paths-hub", icoon: "📚", tekst: "Leerpaden voor groep " + groep },
     { page: "zoo", icoon: "🌋", tekst: "Het 3D-park" },
@@ -235,6 +334,7 @@ function KlaarKaart({ goed, totaal, groep, onGa }) {
       <h3 style={{ ...S.showKop, fontSize: 24 }}>{totaal === 0 ? "Klaar! 🎉" : "Klaar! " + goed + " van " + totaal + " goed 🎉"}</h3>
       <p style={S.showTekst}>{tekst} Je oefentijd telt al mee voor je kwartier van vandaag.</p>
       <Button fullWidth size="lg" onClick={() => onGa("mijn-pagina", "mijn")} style={{ marginBottom: 12 }}>Naar mijn pagina →</Button>
+      <OuderMail userName={userName} groep={groep} />
       <div style={{ display: "grid", gap: 8 }}>
         {tegels.map((t) => (
           <button key={t.page} type="button" style={S.tegel} onClick={() => { track("startkwartier_showcase_klik", { kaart: "klaar", naar: t.page }); onGa(t.page, t.tekst); }}>
@@ -300,6 +400,9 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
     try {
       recordAnswerForPath({ playerName: userName || "Speler", pathId: vraag.pathId, isCorrect: isGoed, userId: authUser?.id || null });
     } catch { /* */ }
+    // Partner-/vriendcode: na 3 antwoorden wordt de gezins-plek geclaimd
+    // (zelfde aanroep als PlayQuiz) — zo telt een QR-scanner hier al mee.
+    try { telAntwoordVoorVriend(); } catch { /* */ }
   };
 
   useEffect(() => {
@@ -325,6 +428,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
           {stappen.map((st, i) => <div key={i} style={S.dot(dotStatus(st, i))} />)}
         </div>
       )}
+      {stapIdx === 0 && <PartnerStrook />}
       {stapIdx === 0 && (
         <p style={{ ...S.showTekst, marginTop: 0 }}>
           {totaalVragen > 0 ? totaalVragen + " vragen voor groep " + groep : "Even kijken wat Leerkwartier kan"}, en tussendoor zie je wat hier allemaal kan. Stoppen mag altijd.
@@ -345,7 +449,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
         />
       )}
       {stap?.type === "show" && <ShowcaseKaart key={stapIdx} id={stap.id} groep={groep} onGa={ga} onVerder={verder} />}
-      {stap?.type === "klaar" && <KlaarKaart goed={score.goed} totaal={score.totaal} groep={groep} onGa={ga} />}
+      {stap?.type === "klaar" && <KlaarKaart goed={score.goed} totaal={score.totaal} groep={groep} userName={userName} onGa={ga} />}
     </div>
   );
 }

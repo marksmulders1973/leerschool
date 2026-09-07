@@ -524,7 +524,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {step === "role" && (
           <PartnerWelkom
             onOuder={onOuderDashboard}
-            onOefenen={onDagvraag || (() => handleFeatureClick("cito"))}
+            // Mark 7 sep 2026 (QR-lek: 21 flyer-sessies, 0 kwartier): ná de
+            // proef-vraagjes niet naar de losse dagvraag, maar de gewone
+            // leerling-route in — naam + groep → start-kwartier (nieuw) of
+            // eigen pagina (terugkerend). De code blijft gewoon actief.
+            onOefenen={handleOefenenClick}
           />
         )}
 
