@@ -413,7 +413,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     try { localStorage.setItem("ls_user", JSON.stringify({ name: effectiveName, level, role: pendingRole, schoolType })); } catch {}
     try { onSaveProfile?.({ name: effectiveName, level, role: pendingRole, schoolType }); } catch {}
     track("name_entered", { name_length: effectiveName.length, level, role: pendingRole, school_type: schoolType || "", guest: asGuest });
-    onSelectRole(pendingRole, pendingFeature);
+    onSelectRole(pendingRole, pendingFeature, { nieuw: true });
   };
 
   return (

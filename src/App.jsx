@@ -33,6 +33,7 @@ const CitoLeerpadToets = lazy(() => import("./components/CitoLeerpadToets.jsx"))
 const ExamensPage = lazy(() => import("./components/ExamensPage.jsx"));
 const HerkansingPage = lazy(() => import("./components/HerkansingPage.jsx"));
 const PlayQuiz = lazy(() => import("./features/practice/PlayQuiz.jsx"));
+const StartKwartier = lazy(() => import("./features/onboarding/StartKwartier.jsx"));
 const ResultsPage = lazy(() => import("./features/practice/ResultsPage.jsx"));
 const TafelsPage = lazy(() => import("./components/TafelsPage.jsx"));
 const RedactiesommenPage = lazy(() => import("./components/RedactiesommenPage.jsx"));
@@ -151,6 +152,7 @@ import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
 import { BRAND } from "./brand.js";
 import { startTracking as startDailyTracking } from "./shared/dailyGoal.js";
+import { isStartKwartierGedaan } from "./features/onboarding/startKwartier.js";
 import { bewaarKoppeling, linkIdVoor, TERUG_NAAR_OUDER_KEY } from "./shared/koppeling.js";
 
 // SUBJECT_LABELS_FOR_HUB: legacy alias — gebruik shared/subjects.js (LEARN_PATH_SUBJECTS).
@@ -1722,10 +1724,10 @@ export default function App() {
             setLearnPathReturnPage("home");
             setPage("learn-path");
           }}
-          onSelectRole={(r, feature) => {
+          onSelectRole={(r, feature, opts) => {
             onboardingActiveRef.current = false;
             setRole(r);
-            track("role_selected", { role: r, feature: feature || null });
+            track("role_selected", { role: r, feature: feature || null, nieuw: !!opts?.nieuw });
             if (currentQuiz) { startGame(currentQuiz, "self"); return; }
             if (feature === "schoolboeken") { setPendingTextbookSubject(null); setPendingTextbookBook(null); setPage("textbook"); return; }
             if (feature === "scorebord") { setPage("leaderboard"); return; }
@@ -1742,6 +1744,11 @@ export default function App() {
               setPage("self-study");
               return;
             }
+            // Start-kwartier (Mark 7 sep): een NIEUWE leerling (net naam +
+            // groep ingevuld) krijgt eerst 5 vragen op niveau + 4 kaartjes
+            // met wat hier kan. Nulmeting sep 2026: 65 van 80 Google-
+            // bezoekers zagen op /mijn nooit één vraag. Eén keer per apparaat.
+            if (r === "leerling" && opts?.nieuw && !isStartKwartierGedaan()) { setPage("start-kwartier"); return; }
             // Mark 13 aug: de landing ná inloggen/onboarding is voortaan de
             // persoonlijke pagina — dat is je thuisbasis (vandaag-kaart,
             // lijstje, vakken van jouw groep). "Alle vakken" (StudentHome)
@@ -2513,6 +2520,20 @@ export default function App() {
           authUser={authUser}
           onBack={() => setPage("home")}
           onHome={goHome}
+        />
+      )}
+      {page === "start-kwartier" && (
+        <StartKwartier
+          userName={userName}
+          userLevel={userLevel}
+          authUser={authUser}
+          onStop={() => setPage("mijn-pagina")}
+          onGa={(p) => {
+            if (p === "learn-paths-hub") { setLearnInitialSearch(""); setEntryContext("leren"); }
+            if (p === "cito") setEntryContext("cito");
+            setPage(p);
+            try { window.scrollTo({ top: 0 }); } catch { /* */ }
+          }}
         />
       )}
       {page === "kwartiercheck" && (
