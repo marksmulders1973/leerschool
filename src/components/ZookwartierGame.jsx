@@ -4,7 +4,7 @@
 // bewaard in Supabase. Muntjes verdien je met dagelijks inloggen + kwartier leren.
 //
 // De zware three.js-scene laadt lazy, zodat de leer-app snel blijft.
-import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useMemo, useRef, useState, useCallback } from "react";
 import DiplomaKast from "../shared/ui/DiplomaKast.jsx";
 import { getDailyGoal } from "../shared/dailyGoal";
 import { loadZooState, saveZooState, defaultState, STARTER_LAYOUT, getShareCode, saneerLayout } from "../features/zoo/zooState";
@@ -28,8 +28,10 @@ import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamV
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad, hierContextVoor } from "../features/zoo/parkLeermomenten";
 import { VULKAAN, BRUG } from "../features/zoo/eilandVorm";
-import { KABEL_DAL } from "../features/zoo/Kabelbaan";
+import { KABEL_DAL, KABEL_CENTRUM } from "../features/zoo/Kabelbaan";
 import { SLEE_START } from "../features/zoo/Sleebaan";
+import { AUTO_PLEK } from "../features/zoo/Autos";
+import { maakParkRoom, haalParkRoom, stuurOps, verbindParkRoom, zorgIds, diffLayout, pasOpsToe, normaliseerCode, CODE_REGEX, POS_INTERVAL_MS, MAX_LIVE_POS } from "../features/zoo/parkRoom";
 // spawn-plek voor ?scene=vulkaan: 30 m vóór de voet (je ziet de hele berg), op de lijn parkmidden → vulkaan
 const VULKAAN_SPAWN = (() => { const d = Math.hypot(VULKAAN.x, VULKAAN.z), r = VULKAAN.R + 30; return [VULKAAN.x - (VULKAAN.x / d) * r, 0, VULKAAN.z - (VULKAAN.z / d) * r]; })();
 // camera-yaw die vanaf die plek naar de vulkaan kijkt (de camera staat aan de
@@ -40,13 +42,16 @@ const VULKAAN_KIJK_YAW = Math.atan2(VULKAAN.x, VULKAAN.z);
 const naarDoel = (sx, sz, dx, dz, afstand) => { const l = Math.hypot(dx - sx, dz - sz) || 1; return [sx - ((dx - sx) / l) * afstand, 0, sz - ((dz - sz) / l) * afstand]; };
 // Camera-regel (SpringArmCamera): de camera staat aan de yaw-kant van het poppetje,
 // dus kies yaw zó dat de camera aan de LAGE kant van de helling staat (anders kijk je
-// ín de berg). Op de vulkaanflank = van het vulkaanmidden af.
-const yawVanafVulkaan = (sx, sz) => Math.atan2(VULKAAN.x - sx, VULKAAN.z - sz);
+// ín de berg). Op een flank = van het bergmidden af (kabelbaan + slee staan sinds
+// 8 sep op de Oostberg, KABEL_CENTRUM).
+const yawVanafBerg = (sx, sz) => Math.atan2(KABEL_CENTRUM.x - sx, KABEL_CENTRUM.z - sz);
 const BERG_SPAWNS = {
-  kabelbaan: { spawn: naarDoel(KABEL_DAL.x, KABEL_DAL.z, VULKAAN.x, VULKAAN.z, 9), yaw: null, doel: [KABEL_DAL.x, KABEL_DAL.z], pitch: 0.08 },
-  slee: (() => { const sp = naarDoel(SLEE_START.x, SLEE_START.z, VULKAAN.x, VULKAAN.z, 5); return { spawn: sp, yaw: yawVanafVulkaan(sp[0], sp[2]), pitch: 0.16 }; })(),
+  kabelbaan: { spawn: naarDoel(KABEL_DAL.x, KABEL_DAL.z, KABEL_CENTRUM.x, KABEL_CENTRUM.z, 9), yaw: null, doel: [KABEL_DAL.x, KABEL_DAL.z], pitch: 0.08 },
+  slee: (() => { const sp = naarDoel(SLEE_START.x, SLEE_START.z, KABEL_CENTRUM.x, KABEL_CENTRUM.z, 5); return { spawn: sp, yaw: yawVanafBerg(sp[0], sp[2]), pitch: 0.16 }; })(),
   // op het brugdek (30% vanaf de vulkaankant), camera aan de vulkaankant → je kijkt de brug op
   hangbrug: { spawn: [BRUG.ax + BRUG.ux * BRUG.L * 0.3, 0, BRUG.az + BRUG.uz * BRUG.L * 0.3], yaw: Math.atan2(BRUG.ux, BRUG.uz), pitch: 0.12 },
+  // 🚗 naast de rode auto bij de bushalte, camera kijkt naar de auto
+  auto: { spawn: [AUTO_PLEK.x + 3.5, 0, AUTO_PLEK.z + 3], yaw: null, doel: [AUTO_PLEK.x, AUTO_PLEK.z], pitch: 0.1 },
 };
 import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark, herstelWandeling } from "../features/zoo/wandelRoutes";
 import { LINT_BANDEN } from "../features/zoo/leerpadLint";
@@ -421,10 +426,29 @@ function maakBouwplannen() {
   }));
 }
 
-export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje, onOpenGalerij }) {
+export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje, onOpenGalerij, roomCode = null }) {
   const naam = (userName || "").trim();
-  const parkNaam = naam ? `${naam}'s Park` : "Mijn Park";
   const userId = authUser?.id || null;
+
+  // 🏫 Gedeeld park / samen bouwen (Mark 8 sep 2026): met ?samen=CODE zit je niet in
+  // je eigen park maar in het park van die parkcode. Layout + terrein komen uit
+  // park_rooms; je eigen munten/streak blijven van jou. Wijzigingen gaan als ops
+  // naar de server (diff-effect hieronder) en komen via Realtime bij de anderen.
+  const samen = !!roomCode;
+  const [room, setRoom] = useState(null);          // { code, naam, eigenaar, versie }
+  const [roomFout, setRoomFout] = useState(null);
+  const [peerCount, setPeerCount] = useState(1);
+  const [samenCodeInvoer, setSamenCodeInvoer] = useState("");
+  const [samenBezig, setSamenBezig] = useState(false);
+  const roomConnRef = useRef(null);
+  const roomSyncRef = useRef(null);                // laatst gesynchroniseerde layout (voor de diff)
+  const roomVersieRef = useRef(0);                 // laatst bekende server-versie van het gedeelde park
+  const pendingOpsRef = useRef([]);                // ops die nog naar de server moeten
+  const eigenOwnedRef = useRef(null);              // je eigen water/grondverf (niet overschrijven met die van het gedeelde park)
+  const peersRef = useRef(new Map());              // clientId → {name, avatar, x, z, yaw, m, t}
+  const spelerPosRef = useRef(null);               // gedeelde Vector3 uit ZooScene (posRefOut)
+  const spelerFaceRef = useRef(null);
+  const parkNaam = samen && room ? room.naam : naam ? `${naam}'s Park` : "Mijn Park";
 
   // Easter egg (Mark 2026-07-25): OBLITERATOR is overal uit het zicht — wie
   // 7× snel op de parknaam in het menu tikt (of /obliterator kent) vindt het
@@ -804,6 +828,29 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     (async () => {
       const { row, loadError } = await loadZooState(userId, naam);
       if (cancel) return;
+      if (samen) {
+        // 🏫 gedeeld park: munten/streak van jezelf, layout/terrein van de parkcode
+        if (loadError) { setLaadFout(true); return; }
+        let r = null;
+        try { r = await haalParkRoom(roomCode); } catch { r = null; }
+        if (cancel) return;
+        if (!r) { setRoomFout("Deze parkcode bestaat niet (meer). Controleer de code of vraag een nieuwe."); return; }
+        const d0 = defaultState();
+        const eigenOwned = row && row.owned && !Array.isArray(row.owned) ? row.owned : d0.owned;
+        eigenOwnedRef.current = eigenOwned;
+        const roomOwned = r.owned && !Array.isArray(r.owned) ? r.owned : {};
+        const metaRoom = row
+          ? { coins: row.coins, streak: row.streak, last_login: row.last_login, last_kwartier_date: row.last_kwartier_date, owned: { ...eigenOwned, water: roomOwned.water || [], ground: roomOwned.ground || {} } }
+          : { coins: d0.coins, streak: d0.streak, last_login: d0.last_login, last_kwartier_date: d0.last_kwartier_date, owned: { ...d0.owned, water: roomOwned.water || [], ground: roomOwned.ground || {} } };
+        const lay = zorgIds(saneerLayout(Array.isArray(r.layout) && r.layout.length ? r.layout : STARTER_LAYOUT));
+        roomSyncRef.current = lay; roomVersieRef.current = r.versie || 0;
+        setRoom({ code: r.code, naam: r.naam, eigenaar: r.eigenaar, versie: r.versie });
+        setMeta(metaRoom);
+        setPlacedItems(lay);
+        setTerrain(deserTerrain(r.terrain));
+        setLoaded(true);
+        return;
+      }
       // Bug-jacht 7/7 (HOOG): bij een laad-fout NIET doorgaan — anders zou een
       // bestaand park met het starter-park overschreven worden (autosave blijft
       // ook uit doordat `loaded` false blijft). Kind kan het opnieuw proberen.
@@ -888,12 +935,140 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const pendingSaveRef = useRef(null);
   useEffect(() => {
     if (!loaded || !userId || !meta) return;
-    const bewaar = () => { pendingSaveRef.current = null; saveZooState(userId, naam, { ...meta, layout: placedItems, terrain: serTerrain(terrain) }); };
+    const bewaar = () => {
+      pendingSaveRef.current = null;
+      if (samen) {
+        // 🏫 in een gedeeld park: alleen je eigen munten/streak/unlocks — nooit de layout,
+        // en je eigen water/grondverf blijven zoals ze waren
+        const eo = eigenOwnedRef.current || {};
+        saveZooState(userId, naam, { ...meta, owned: { ...meta.owned, water: eo.water || [], ground: eo.ground || {} } });
+        return;
+      }
+      saveZooState(userId, naam, { ...meta, layout: placedItems, terrain: serTerrain(terrain) });
+    };
     pendingSaveRef.current = bewaar;
     const t = setTimeout(bewaar, 2000);
     return () => clearTimeout(t);
   }, [placedItems, meta, terrain, loaded, userId]);
   useEffect(() => () => { pendingSaveRef.current?.(); }, []);
+
+  // 🏫 Gedeeld park — laatste stand opnieuw ophalen (na een geweigerde op of een fout)
+  const herlaadRoom = useCallback(async () => {
+    if (!samen) return;
+    try {
+      const r = await haalParkRoom(roomCode);
+      if (!r) return;
+      const lay = zorgIds(saneerLayout(Array.isArray(r.layout) ? r.layout : []));
+      roomSyncRef.current = lay; roomVersieRef.current = r.versie || 0;
+      pendingOpsRef.current = [];
+      setPlacedItems(lay);
+      setRoom((o) => (o ? { ...o, versie: r.versie } : o));
+    } catch { /* volgende keer beter */ }
+  }, [samen, roomCode]);
+
+  // 🏫 Gedeeld park — lokale wijzigingen → ops (diff t.o.v. de laatst gesynchroniseerde
+  // layout), gebundeld verstuurd. Items zonder id krijgen er eerst één.
+  useEffect(() => {
+    if (!samen || !loaded || !room) return;
+    const prev = roomSyncRef.current || [];
+    if (placedItems !== prev) {
+      const metIds = zorgIds(placedItems);
+      if (metIds !== placedItems) { setPlacedItems(metIds); return; }
+      const ops = diffLayout(prev, placedItems);
+      roomSyncRef.current = placedItems;
+      if (ops.length) pendingOpsRef.current.push(...ops);
+    }
+    if (!pendingOpsRef.current.length) return;
+    const t = setTimeout(async () => {
+      const ops = pendingOpsRef.current; pendingOpsRef.current = [];
+      if (!ops.length) return;
+      try {
+        const res = await stuurOps(room.code, ops);
+        if (res?.versie != null) roomVersieRef.current = res.versie;
+        // alleen wat de server accepteerde naar de anderen (een geweigerde weghaal-actie
+        // mag bij hen niets doen — les uit de test van 8 sep)
+        const geaccepteerd = Array.isArray(res?.geaccepteerd) ? res.geaccepteerd : ops.filter((o) => !(res?.rejected || []).includes(o.t === "remove" ? o.id : o.item?.id));
+        if (geaccepteerd.length) roomConnRef.current?.sendOps(geaccepteerd, res?.versie ?? null);
+        if (res?.rejected?.length) { flits("Dat is niet van jou — je kunt alleen je eigen bouwsels veranderen"); await herlaadRoom(); }
+      } catch {
+        flits("Opslaan in het gedeelde park lukte niet — even opnieuw laden");
+        await herlaadRoom();
+      }
+    }, 150);
+    return () => clearTimeout(t);
+  }, [placedItems, samen, loaded, room, herlaadRoom]);
+
+  // 🏫 Gedeeld park — realtime: ops van anderen, wie er is, waar ze lopen
+  useEffect(() => {
+    if (!samen || !loaded || !room) return;
+    const conn = verbindParkRoom({
+      code: room.code,
+      me: { name: naam, avatar: avatarUrl, uid: userId },
+      handlers: {
+        onOps: (ops, info) => {
+          if (info?.versie != null) roomVersieRef.current = Math.max(roomVersieRef.current || 0, info.versie);
+          setPlacedItems((items) => { const nieuw = pasOpsToe(items, ops, info?.uid || undefined); roomSyncRef.current = nieuw; return nieuw; });
+        },
+        onPeers: (m) => {
+          const cur = peersRef.current;
+          for (const k of [...cur.keys()]) if (!m.has(k)) cur.delete(k);
+          for (const [k, v] of m) cur.set(k, { ...(cur.get(k) || {}), ...v });
+          setPeerCount(m.size + 1);
+        },
+        onPos: (c, p) => {
+          const cur = peersRef.current; const e = cur.get(c) || {};
+          cur.set(c, { ...e, x: p.x, z: p.z, yaw: p.yaw, m: p.m, t: Date.now() });
+        },
+      },
+    });
+    roomConnRef.current = conn;
+    // vangnet: elke 20 s de versie vergelijken — loop je achter (gemist bericht), haal dan alles opnieuw
+    const tv = setInterval(async () => {
+      try {
+        const r = await haalParkRoom(room.code);
+        if (r && r.versie != null && r.versie !== roomVersieRef.current && !pendingOpsRef.current.length) {
+          const lay = zorgIds(saneerLayout(Array.isArray(r.layout) ? r.layout : []));
+          roomSyncRef.current = lay; roomVersieRef.current = r.versie;
+          setPlacedItems(lay);
+        }
+      } catch { /* volgende ronde */ }
+    }, 20000);
+    const t = setInterval(() => {
+      const p = spelerPosRef.current; if (!p) return;
+      const f = spelerFaceRef.current;
+      conn.sendPos({ x: p.x, z: p.z, yaw: f ? Math.atan2(f.x, f.z) : 0 });
+    }, POS_INTERVAL_MS);
+    return () => { clearInterval(t); clearInterval(tv); conn.unsub(); roomConnRef.current = null; peersRef.current.clear(); };
+  }, [samen, loaded, room?.code]);
+
+  // 🏫 parkcode maken (kopie van je eigen park) / meedoen met een code
+  const maakSamenCode = async () => {
+    if (!userId || samenBezig) return;
+    setSamenBezig(true);
+    try {
+      const code = await maakParkRoom({ naam: naam ? `${naam}'s park` : "Ons park", layout: placedItems, terrain: serTerrain(terrain), owned: { water: meta?.owned?.water || [], ground: meta?.owned?.ground || {} } });
+      window.location.href = `/dierentuin?samen=${code}`;
+    } catch { flits("Parkcode maken lukte niet — probeer het nog eens"); setSamenBezig(false); }
+  };
+  const gaSamen = () => {
+    const c = normaliseerCode(samenCodeInvoer);
+    if (!CODE_REGEX.test(c)) { flits("Een parkcode heeft 6 letters/cijfers"); return; }
+    window.location.href = `/dierentuin?samen=${c}`;
+  };
+  const samenUrl = room ? `${window.location.origin}/dierentuin?samen=${room.code}` : null;
+  // 🔧 test-haakje (alleen in een gedeeld park): window.__parkDebug → medespelers + aantal items
+  useEffect(() => {
+    if (!samen) return;
+    window.__parkDebug = {
+      peers: () => [...peersRef.current.entries()].map(([k, v]) => ({ k, ...v })),
+      items: () => placedItems.length, heeft: (id) => placedItems.some((it) => it.id === id), pending: () => pendingOpsRef.current.length,
+      versie: () => roomVersieRef.current,
+      pos: () => (spelerPosRef.current ? { x: spelerPosRef.current.x, z: spelerPosRef.current.z } : null),
+      voegToe: (item) => setPlacedItems((items) => [...items, item]),
+      verwijder: (id) => setPlacedItems((items) => items.filter((it) => it.id !== id)),
+    };
+    return () => { delete window.__parkDebug; };
+  }, [samen, placedItems]);
 
   const coins = meta?.coins ?? 0;
   const streak = meta?.streak ?? 0;
@@ -1346,7 +1521,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     // meta nog null is — weghalen crashte dan de hele app (m.coins op null).
     if (selectedIdx == null || !meta) return;
     const it = placedItems[selectedIdx];
-    const terug = it.price ?? prijsVan(it.assetId);
+    // gedeeld park: alleen je eigen bouwsels (of alles als je het park maakte); nooit
+    // muntjes terug voor iets dat een ander kocht
+    if (samen && it.by && it.by !== userId && room?.eigenaar !== userId) { flits("Dat is niet van jou - je kunt alleen je eigen bouwsels weghalen"); return; }
+    const terug = samen && it.by && it.by !== userId ? 0 : (it.price ?? prijsVan(it.assetId));
     setMeta((m) => (m ? { ...m, coins: m.coins + terug } : m));
     setPlacedItems((items) => items.filter((_, i) => i !== selectedIdx));
     setSelectedIdx(null);
@@ -2118,9 +2296,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
             <div style={menuKop}>🛠️ Landschap</div>
             <div style={menuGrid}>
-              <MenuTegel emoji="⛰️" label="Heuvels boetseren" fn={() => { setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} actief={sculptMode} />
-              <MenuTegel emoji="💧" label="Water / meertjes" fn={() => { setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} actief={waterMode} />
-              <MenuTegel emoji="🏖️" label="Grond schilderen" fn={() => { setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); }} actief={groundMode} />
+              <MenuTegel emoji="⛰️" label="Heuvels boetseren" fn={() => { if (samen) { flits("Heuvels boetseren kan alleen in je eigen park"); return; } setSculptMode((v) => !v); setWaterMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} actief={sculptMode} />
+              <MenuTegel emoji="💧" label="Water / meertjes" fn={() => { if (samen) { flits("Water aanleggen kan alleen in je eigen park"); return; } setWaterMode((v) => !v); setSculptMode(false); setGroundMode(false); setPlacing(null); setSelectedIdx(null); }} actief={waterMode} />
+              <MenuTegel emoji="🏖️" label="Grond schilderen" fn={() => { if (samen) { flits("Grond schilderen kan alleen in je eigen park"); return; } setGroundMode((v) => !v); setSculptMode(false); setWaterMode(false); setPlacing(null); setSelectedIdx(null); }} actief={groundMode} />
               <MenuTegel emoji="🏗️" label="Auto-bouw (kies een bouwplan)" fn={() => { setBouwPlannen(maakBouwplannen()); setPanel("autobouw"); }} />
             </div>
 
@@ -2131,7 +2309,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <MenuTegel emoji="🫧" label="Maatje-weetjes wissen" fn={() => { wisBuddyWeetjes(); setMenuOpen(false); flits("Je maatje is alles weer vergeten — hij stelt zijn vraagjes gewoon opnieuw. 🐾"); }} />
               {onOpenMaatje && <MenuTegel emoji="📱" label="Mijn maatje (altijd bij je)" fn={onOpenMaatje} />}
               <MenuTegel emoji="💾" label="Park opslaan" fn={opslaan} />
-              <MenuTegel emoji="📤" label="Delen met een vriend" fn={openDelen} />
+              <MenuTegel emoji="📤" label={samen ? "Parkcode & meespelers" : "Delen & samen bouwen"} fn={openDelen} />
               {onOpenGalerij && <MenuTegel emoji="🌍" label="Park-galerij bekijken" fn={onOpenGalerij} />}
               <MenuTegel emoji="♻️" label="Opnieuw beginnen" fn={() => setPanel("reset")} />
             </div>
@@ -2321,6 +2499,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onNearPiramide={setNabijePiramide}
           onPoortDoor={onPoortDoor}
           hierRef={hierRef}
+          posRefOut={spelerPosRef}
+          faceRefOut={spelerFaceRef}
+          peersRef={samen ? peersRef : null}
           studiePiramideIdx={pyrIdx}
           leerStappenPerPad={leerStappenPerPad}
           dinoHint={dinoHint}
@@ -3420,15 +3601,61 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         </div>
       )}
 
-      {/* Deel-modal: link om je park te laten bekijken (alleen kijken). */}
+      {/* 🏫 Gedeeld park: pil met code + aantal spelers (Mark 8 sep) */}
+      {samen && room && (
+        <button onClick={openDelen} style={{ position: "absolute", top: 54, left: 12, zIndex: 6, border: "2px solid #fff", borderRadius: 999, padding: "6px 12px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3fd6,#4a2aa8)", boxShadow: "0 3px 10px rgba(0,0,0,.3)", cursor: "pointer" }}>
+          🏫 {room.code} · 👥 {peerCount}
+        </button>
+      )}
+      {roomFout && (
+        <div style={{ position: "absolute", inset: 0, zIndex: 30, background: "rgba(10,20,10,0.7)", display: "grid", placeItems: "center", padding: 16 }}>
+          <div style={{ width: "min(420px, 94vw)", background: "#fffef8", borderRadius: 18, padding: "20px 22px", boxShadow: "0 12px 40px rgba(0,0,0,.35)", font: "500 15px/1.5 system-ui", color: "#333" }}>
+            <h2 style={{ margin: "0 0 8px", font: "800 20px system-ui", color: "#234" }}>🏫 Parkcode niet gevonden</h2>
+            <p style={{ marginTop: 0 }}>{roomFout}</p>
+            <a href="/dierentuin" style={{ display: "block", textAlign: "center", textDecoration: "none", borderRadius: 999, padding: "11px 14px", font: "800 14.5px system-ui", color: "#fff", background: "#2e7d32" }}>Naar mijn eigen park</a>
+          </div>
+        </div>
+      )}
+
+      {/* Deel-modal: link om je park te laten bekijken (alleen kijken) + samen bouwen. */}
       {panel === "delen" && (
         <div onClick={() => setPanel(null)} style={{ position: "absolute", inset: 0, zIndex: 20, background: "rgba(10,20,10,0.55)", display: "grid", placeItems: "center", padding: 16 }}>
           <div onClick={(e) => e.stopPropagation()} style={{ width: "min(460px, 96vw)", background: "#fffef8", borderRadius: 18, boxShadow: "0 12px 40px rgba(0,0,0,.35)", padding: "18px 20px" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
-              <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>📤 Deel je park</h2>
+              <h2 style={{ margin: 0, font: "800 20px system-ui", color: "#234" }}>{samen ? "🏫 Samen bouwen" : "📤 Deel je park"}</h2>
               <button onClick={() => setPanel(null)} style={{ border: "none", borderRadius: 999, width: 34, height: 34, font: "700 16px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
             </div>
-            {!userId ? (
+            {/* 🏫 Samen bouwen (Mark 8 sep 2026): één parkcode, iedereen bouwt mee */}
+            <div style={{ background: "#f3efff", border: "1.5px solid #cbbcf5", borderRadius: 12, padding: "12px 14px", margin: "0 0 14px", font: "500 14px/1.5 system-ui", color: "#333" }}>
+              {samen && room ? (
+                <>
+                  <div style={{ font: "800 14px system-ui", color: "#4a2aa8", marginBottom: 4 }}>Jullie parkcode</div>
+                  <div style={{ font: "900 30px/1 ui-monospace, monospace", letterSpacing: 4, color: "#2a1a60", margin: "4px 0 8px" }}>{room.code}</div>
+                  <p style={{ margin: "0 0 8px" }}>👥 <b>{peerCount}</b> in dit park{peerCount > MAX_LIVE_POS ? " — met zoveel spelers zie je wél alles wat gebouwd wordt, maar niet meer elk poppetje lopen" : ""}. Wie de code invult komt in dit park en kan meebouwen. Je kunt alleen je eigen bouwsels weghalen; wie het park maakte mag alles.</p>
+                  <div style={{ display: "flex", gap: 6, alignItems: "center", background: "#fff", borderRadius: 10, padding: "8px 10px", margin: "6px 0" }}>
+                    <input readOnly value={samenUrl || ""} onFocus={(e) => e.target.select()} style={{ flex: 1, border: "none", background: "transparent", font: "600 13px system-ui", color: "#234", outline: "none", minWidth: 0 }} />
+                    <button onClick={async () => { try { await navigator.clipboard.writeText(samenUrl); flits("Link gekopieerd ✓"); } catch { flits("Kopiëren lukte niet"); } }} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "7px 12px", font: "800 12.5px system-ui", color: "#fff", background: "#6a3fd6", cursor: "pointer" }}>Kopieer</button>
+                  </div>
+                  <a href={`https://wa.me/?text=${encodeURIComponent(`Kom in ons park bouwen! Parkcode ${room.code} — ${samenUrl}`)}`} target="_blank" rel="noopener noreferrer" style={{ display: "block", textAlign: "center", textDecoration: "none", borderRadius: 999, padding: "10px 14px", font: "800 14px system-ui", color: "#fff", background: "#25d366", margin: "6px 0" }}>💬 Code delen via WhatsApp</a>
+                  <a href="/dierentuin" style={{ display: "block", textAlign: "center", textDecoration: "none", borderRadius: 999, padding: "9px 14px", font: "800 13.5px system-ui", color: "#4a2aa8", background: "#fff", border: "1.5px solid #cbbcf5" }}>🏠 Terug naar mijn eigen park</a>
+                </>
+              ) : (
+                <>
+                  <div style={{ font: "800 14px system-ui", color: "#4a2aa8", marginBottom: 4 }}>🏫 Samen bouwen — met vrienden of de hele klas</div>
+                  <p style={{ margin: "0 0 8px" }}>Maak een <b>parkcode</b>: iedereen die 'm invult komt in hetzelfde park en bouwt mee, tot 100 spelers. Je eigen park blijft gewoon van jou; het gedeelde park begint als kopie ervan.</p>
+                  {userId ? (
+                    <button onClick={maakSamenCode} disabled={samenBezig} style={{ width: "100%", border: "none", borderRadius: 999, padding: "11px 14px", font: "800 14px system-ui", color: "#fff", background: samenBezig ? "#9a8cc9" : "linear-gradient(135deg,#6a3fd6,#4a2aa8)", cursor: samenBezig ? "default" : "pointer" }}>{samenBezig ? "Parkcode maken…" : "🏫 Maak een parkcode"}</button>
+                  ) : (
+                    <p style={{ margin: 0, color: "#555" }}>Log eerst in om een parkcode te maken.</p>
+                  )}
+                  <div style={{ display: "flex", gap: 6, alignItems: "center", marginTop: 10 }}>
+                    <input value={samenCodeInvoer} onChange={(e) => setSamenCodeInvoer(normaliseerCode(e.target.value))} onKeyDown={(e) => { if (e.key === "Enter") gaSamen(); }} placeholder="Ik heb een parkcode…" maxLength={6} style={{ flex: 1, border: "1.5px solid #cbbcf5", borderRadius: 10, padding: "9px 10px", font: "800 15px ui-monospace, monospace", letterSpacing: 2, color: "#2a1a60", textTransform: "uppercase", minWidth: 0 }} />
+                    <button onClick={gaSamen} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "10px 14px", font: "800 13.5px system-ui", color: "#fff", background: "#6a3fd6", cursor: "pointer" }}>Meedoen →</button>
+                  </div>
+                </>
+              )}
+            </div>
+            {samen ? null : !userId ? (
               <p style={{ font: "500 14.5px/1.5 system-ui", color: "#555", marginTop: 0 }}>Log eerst in om je eigen park te kunnen delen.</p>
             ) : !shareUrl ? (
               <p style={{ font: "500 14.5px/1.5 system-ui", color: "#555", marginTop: 0 }}>Link maken…</p>

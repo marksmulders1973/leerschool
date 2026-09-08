@@ -14,15 +14,23 @@ import { useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { Vector3, CatmullRomCurve3, TubeGeometry, MeshStandardMaterial } from "three";
-import { VULKAAN, buitenHoogte } from "./eilandVorm";
+import { BERGEN, SNEEUW_Y, buitenHoogte } from "./eilandVorm";
 import { LeerBord } from "./ParkLeerobjecten";
 import { track } from "../../utils.js";
 
 // ── ligging ──
-const PHI0 = Math.atan2(-VULKAAN.z, -VULKAAN.x);   // richting vulkaan → parkmidden
+// Mark 8 sep 2026: "skiën doe je van zo'n berg, niet van een vulkaan" → de
+// kabelbaan (en de sleebaan die erop aansluit) staan op de OOSTBERG, niet meer
+// op de vulkaanflank. Alles wordt vanuit het bergmidden in poolcoördinaten gezet.
+export const KABEL_CENTRUM = BERGEN[0];               // de Oostberg
+const PHI0 = Math.atan2(-KABEL_CENTRUM.z, -KABEL_CENTRUM.x);   // richting berg → parkmidden
 export const KABEL_PHI = PHI0 - 0.5;                 // de kabelbaan-straal
-const opStraal = (r) => ({ x: VULKAAN.x + Math.cos(KABEL_PHI) * r, z: VULKAAN.z + Math.sin(KABEL_PHI) * r });
-const R_DAL = 98, R_BERG = 26, R_MASTEN = [74, 50];
+const opStraal = (r) => ({ x: KABEL_CENTRUM.x + Math.cos(KABEL_PHI) * r, z: KABEL_CENTRUM.z + Math.sin(KABEL_PHI) * r });
+// dalstation net buiten de voet; bergstation = de eerste plek op de straal die
+// ruim boven de sneeuwgrens ligt (numeriek gezocht, zodat het altijd in de sneeuw staat)
+const R_DAL = Math.round(KABEL_CENTRUM.R * 1.3);
+export const KABEL_R_BERG = (() => { for (let r = 40; r > 6; r -= 0.5) { const p = opStraal(r); if (buitenHoogte(p.x, p.z) >= SNEEUW_Y + 7) return r; } return 10; })();
+const R_BERG = KABEL_R_BERG, R_MASTEN = [Math.round(R_DAL * 0.74), Math.round(R_DAL * 0.5)];
 const KABEL_HOOG = 6.6;                              // kabel hangt zo hoog boven het perron
 export const KABEL_DAL = (() => { const p = opStraal(R_DAL); return { ...p, y: buitenHoogte(p.x, p.z) }; })();
 export const KABEL_BERG = (() => { const p = opStraal(R_BERG); return { ...p, y: buitenHoogte(p.x, p.z) }; })();
@@ -125,8 +133,8 @@ export default function Kabelbaan({ playerRef, onRit, teleportRef, onOefenen, in
           const st = aangekomen === "berg" ? KABEL_BERG : KABEL_DAL;
           const ux = st.x + DWARS.x * 2.6, uz = st.z + DWARS.z * 2.6;
           if (teleportRef) teleportRef.current = { x: ux, z: uz };
-          // camera aan de dal-kant (van de vulkaan af): op de steile flank kijk je anders ín de berg
-          if (inputRef?.current?.cam) { inputRef.current.cam.yaw = Math.atan2(VULKAAN.x - ux, VULKAAN.z - uz); inputRef.current.cam.pitch = 0.14; inputRef.current.cam.dist = 12; }
+          // camera aan de dal-kant (van het bergmidden af): op de steile flank kijk je anders ín de berg
+          if (inputRef?.current?.cam) { inputRef.current.cam.yaw = Math.atan2(KABEL_CENTRUM.x - ux, KABEL_CENTRUM.z - uz); inputRef.current.cam.pitch = 0.14; inputRef.current.cam.dist = 12; }
           aanBoord.current = false;
           onRit && onRit(false);
         }

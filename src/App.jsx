@@ -1600,7 +1600,7 @@ export default function App() {
           {new URLSearchParams(window.location.search).get("bezoek") ? (
             <ParkBezoek code={new URLSearchParams(window.location.search).get("bezoek")} onHome={() => { window.location.href = "/dierentuin"; }} />
           ) : (
-            <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} onPlayObliterator={() => setPage("obliteratorPlay")}
+            <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} roomCode={new URLSearchParams(window.location.search).get("samen") || null} onPlayObliterator={() => setPage("obliteratorPlay")}
               onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setLearnPathReturnPage("zoo"); setPage("learn-path"); }}
               onOpenLeerpaden={() => { setLearnHubReturnPage("zoo"); setPage("learn-paths-hub"); }} onOpenMaatje={() => setPage("maatje")} onOpenGalerij={() => setPage("galerij")} />
           )}

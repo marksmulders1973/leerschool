@@ -365,9 +365,17 @@ export const PARK_LEERMOMENTEN = {
     leerpadId: "tijd-snelheid-afstand-po", leerLabel: "Tijd, snelheid en afstand",
     leerpadId2: "krachten-natuurkunde", leerLabel2: "Krachten en bewegen (klas 2-3)",
   },
+  // 🚗 Auto's bij de bushalte (Mark 8 sep 2026): instapbaar en berijdbaar.
+  auto: {
+    id: "auto", emoji: "🚗", titel: "De auto's bij de bushalte",
+    praatje: "Stap maar in! Met de joystick geef je gas en stuur je. Let op de snelheidsmeter: 50 kilometer per uur betekent dat je in één uur 50 kilometer ver komt. Hoe harder je rijdt, hoe langer je remweg — daarom mag je in een woonwijk maar 30.",
+    weetje: "Bij 50 kilometer per uur rijd je bijna 14 meter per seconde. In de tijd dat je 'één-twee' zegt, ben je al een heel huis verder.",
+    leerpadId: "tijd-snelheid-afstand-po", leerLabel: "Tijd, snelheid en afstand",
+    leerpadId2: "krachten-natuurkunde", leerLabel2: "Krachten en bewegen (klas 2-3)",
+  },
   hangbrug: {
     id: "hangbrug", emoji: "🌉", titel: "De hangbrug",
-    praatje: "Deze brug hangt aan twee dikke kabels tussen de vulkaan en de Oostberg. De planken hangen met touwen aan die kabels. Daarom zakt hij in het midden een beetje door en wiegt hij zacht als je loopt — dat hoort zo.",
+    praatje: "Deze brug hangt aan twee dikke kabels tussen de Oostberg en de Kaapberg, hoog in de sneeuw. De planken hangen met touwen aan die kabels. Daarom zakt hij in het midden een beetje door en wiegt hij zacht als je loopt — dat hoort zo.",
     weetje: "De langste hangbrug voor voetgangers ter wereld hangt in Tsjechië en is 721 meter lang. Deze brug is 50 meter: precies 100 stappen van een halve meter.",
     leerpadId: "verhoudingen-po", leerLabel: "Verhoudingen",
     leerpadId2: "krachten-natuurkunde", leerLabel2: "Krachten en bewegen (klas 2-3)",
@@ -518,6 +526,7 @@ const VRAAG_PER_MOMENT = {
   sneeuwgrens: "Waarom ligt er boven op de berg sneeuw en beneden in het dal niet?",
   slee: "Waarom gaat de slee steeds sneller, terwijl niemand duwt?",
   hangbrug: "Je doet 100 stappen van een halve meter over de brug. Hoe lang is de brug?",
+  auto: "Je rijdt 50 kilometer per uur. Hoeveel kilometer kom je dan in een half uur?",
   kas: "Waarom groeit sla in een kas ook in de winter?",
   weerstation: "Als de luchtdruk daalt, komt er dan mooi weer of regen?",
   spaarpot: "Je spaart 2 euro per week. Hoeveel heb je na 10 weken?",

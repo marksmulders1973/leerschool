@@ -1,6 +1,7 @@
 // 🌉 Hangbrug (Mark 6 sep 2026, WhatsApp: "tussen de bergen wil ik een loopbrug
 // en dan moeten er bots over lopen" + foto van de hangbrug bij Cunca Wulang).
-// Van de vulkaanflank naar de Oostberg, 50 m over de kloof. De maten en de
+// Van de Oostberg naar de Kaapberg, hoog in de sneeuw over de kloof (Mark 8 sep:
+// "tussen die twee besneeuwde bergen"). De maten en de
 // dek-hoogte komen uit eilandVorm.js (BRUG / brugDekY) — daar leest ook de
 // speler ze, dus je loopt écht over de planken en de leuning houdt je tegen.
 //
@@ -26,7 +27,7 @@ const PLANK_GEO = new BoxGeometry(BRUG.BREED, 0.08, 0.36);
 const STAANDER_GEO = new CylinderGeometry(0.035, 0.04, 1.15, 6);
 const HANGER_GEO = new CylinderGeometry(0.02, 0.02, 1, 5);
 
-// punt op het dek bij parameter t (0 = vulkaan-anker, 1 = berg-anker), zij = links/rechts (m)
+// punt op het dek bij parameter t (0 = Oostberg-anker, 1 = Kaapberg-anker), zij = links/rechts (m)
 function dekPunt(t, zij = 0, extraY = 0) {
   return new Vector3(
     BRUG.ax + BRUG.ux * BRUG.L * t + BRUG.uz * zij,
@@ -153,7 +154,7 @@ export default function Hangbrug({ onOefenen }) {
       {/* 🚶 de bots */}
       <Brugwandelaar url="blocky:blokJoep" start={0.15} snelheid={1.15} zij={-0.45} />
       <Brugwandelaar url="blocky:blokNora" start={0.8} snelheid={1.0} zij={0.45} />
-      {/* 🎓 leerbord aan de vulkaan-kant (daar kom je aan) */}
+      {/* 🎓 leerbord aan de Oostberg-kant (daar kom je met de kabelbaan aan) */}
       {onOefenen ? <LeerBord moment="hangbrug" onOefenen={onOefenen} position={[bordP.x, buitenHoogte(bordP.x, bordP.z), bordP.z]} /> : null}
     </group>
   );
