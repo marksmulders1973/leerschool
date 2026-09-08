@@ -43,10 +43,17 @@
 | za 29 aug | | (geen sessie gelogd) |
 | zo 30 aug | ~1 | 💻📋 Weekend-dagrapport (cijfers + Froukje-radar + Meesterplan-PDF) |
 | vr 4 sep | ~6,0 (voorstel) | 💻 Dagrapport 4 sep (Supabase-cijfers, volledige mail-check + hallo@, flyer-teller, code-radar, Meesterplan-PDF) · Kompas-trendlog bijgewerkt · park: route-stippen over het midden van het pad + gekleurde inritten per groep-band met genummerde opdracht-bordjes (v570-571) · **7 partner-mails**: bijpraat-mail Froukje (Buurtgezinnen) + wachtlijst-sweep → 6 vervolgmails (Nicole Burgers/Buurtgezinnen landelijk, Anthropic DPA-ZDR, Saba, VB Dongen, VB Zaanstreek, VoorleesExpress landelijk bureau) · tutor-fix v572-573 (Charley vroeg om een som terwijl de gedichten-uitleg gewoon in zijn context zat) · avond: ouder+leerkracht-overzicht toont échte leerpad-voortgang + per vraag (v574-579, 2 RLS-policies, check_fouten-kolom), events-bewaartermijn (pg_cron), koppelcode-bij-voordeur-fix, E2E-test op productie (ving de hooks-crash v576) · review-ronde leerkracht-kant E2E + v580 vinkje-tekst · toets-kant per vraag goed/fout/overgeslagen (v581-583, E2E ouder+leerkracht). **Voorstel-schatting — corrigeer als het anders was.** Avond 3 sep ging naar Brian (deluxeedition EILAND, geen Leerkwartier-uren). |
-| zo 6 sep | ~2,5 (voorstel) | 💻 Slogan-wissel overal (v599) · Deel-knop van home (v600) · dagrapport 6 sep (Supabase, mail-check, terugkeer-lek-analyse, Meesterplan-PDF). Avond 5 sep→00:45: Brian's vulkaan in het park (v597) + vulkanen-leerpad (v598) — zie za. NB: de Eiland/Kraken-uren op deluxeedition.nl zijn Brian's project, niet gelogd. |
+| zo 6 sep | ~5,5 (voorstel: middag 2,5 + avond 3) | 💻 Slogan-wissel overal (v599) · Deel-knop van home (v600) · dagrapport 6 sep (Supabase, mail-check, terugkeer-lek-analyse, Meesterplan-PDF). Avond 5 sep→00:45: Brian's vulkaan in het park (v597) + vulkanen-leerpad (v598) — zie za. NB: de Eiland/Kraken-uren op deluxeedition.nl zijn Brian's project, niet gelogd. |
 | za 5 sep | ~7 (ochtend 3 + avond/nacht 4, voorstel) | 💻🤔 Rooktest productie (v585) · "Ik weet het niet" breekt toets niet af + leerpad bij elke toetsvraag + oefen-Doorstroomtoets + leerkracht-kant (v586-591, incl. hotfix Stop-crash) · dagrapport. |
 | do 3 sep | ~2,5 (ochtend, voorstel) | 💻📱 KvK-slots bekeken (laten staan) · kliktocht 2 agents + 10 P1-fixes v567 · wereldbol-video gemaakt + gepost FB/IG (LinkedIn zelf) · dagrapport. Avond 2 sep (park samenhang 3 sprints, F15/F20/F23, spoor/wereldbol-fixes, ~4 u) zit in de wo-regel als dat klopt — anders splitsen. |
 | **Offline (15%-vuistregel)** | ~3,5 | 📞 gesprekken over de app met collega's/familie/winkels/school (15% van ~24,5 sessie-uren ma-vr; regel ingesteld 28 aug) |
+
+## Week 37 (ma 7 sep – zo 13 sep)
+
+| Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
+|---|---|---|
+| di 8 sep | ~2,5 (voorstel) | 💻📧 Mail-check incl. hallo@ (Kinderhulp: september-nieuwsbrief bevestigd) · Kinderhulp-keten live getest (erescherm/scan/flyer/Supabase) · Ooievaarspas-communicatie voorbereid + bedankt.html-sectie live (commit a46c79f6) + LinkedIn-concept · db-fix weekrapport-vangnet · dagrapport 8 sep + PDF |
+| ma 7 sep | ~4 (voorstel) | 💻 Activatie-nulmeting (docs/ACTIVATIE-NULMETING-SEP2026.md) · Start-kwartier v602 (08:10) + QR→start-kwartier + ouder-mail v603 (10:40) · stadspas-inventarisatie in GEMEENTE-BETAALT-PLAN |
 
 ## Week 36 (ma 31 aug – zo 6 sep)
 

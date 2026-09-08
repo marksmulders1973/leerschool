@@ -18,7 +18,9 @@
 
 ## 🔴 Nu doen (deze week)
 
-- **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend; Claude stuurt batch 2 e.v. (~45/dag). Reacties komen op hallo@ → Gmail.**
+- **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend. ⚠️ Batch 2 is 7 sep NIET gegaan (stond ten onrechte als 'automatisch' in het dagrapport) → staat klaar, gaat na Mark-'ga' (~45/werkdag). Reacties komen op hallo@ → Gmail; stand 8 sep: 0 reacties, 0 bounces.**
+- **Vercel-login in Chrome-voor-Claude verlopen (8 sep)** → Mark logt één keer in op vercel.com in dat venster; tot dan geen bezoekers/referrers in het dagrapport.
+- **LinkedIn-post Ooievaarspas plakken** (versie A in `Desktop\linkedin-ooievaarspas-post.md`, klaargezet 8 sep).
 - **wo 2 sep: uren loggen** (Claude zette een voorstel-regel in URENLOGBOEK; corrigeer als het anders was) · **do 3 sep: ✅ Tiffany accepteerde LinkedIn-connectie (1 sep) · Nicole: ✅ 5 sep zelf gereageerd (vriendelijke afsluiting) — geen nudge meer, spoor loopt via Froukje · (was: check Nicole + Tiffany, LinkedIn-connectie 1 sep geaccepteerd = haakje voor een kort berichtje)** · ✅ Spark Fest/Inez: nudge verstuurd 2 sep (Claude, na Mark-akkoord).
 - **💡 Besluit: partner-code-pakket** (Mark-ideeën 28 aug, drie delen die
   samen één systeem vormen — één go volstaat):
@@ -67,12 +69,12 @@
 |---|---|---|
 | ✅ 26 aug | Goedkeuring per mail (Esther) + **vriend-overeenkomst getekend** (beide partijen) + bedank-reply verstuurd | klaar |
 | ✅ 1 sep | Getekende PDF's gedownload door Claude (ValidSign, beide transacties: overeenkomst + aanvraagformulier) → `Desktop\Ooievaarspas\getekend\` + OneDrive-backup | klaar |
-| ≤ ~16 sep | **Tekst-formulier van Esther** (voor hun website/socials) → Claude maakt concept; stil na 16 sep → vriendelijke nudge | afwachten |
+| ✅ 3 sep | **Tekst-formulier van Esther ontvangen** (docx in Gmail-thread) → invullen begin okt mét KvK-nr, datum 1 januari 2027 | klaar (wacht op KvK) |
 | **ma 28 sep 11:45** | 🏢 **KvK-inschrijving** (Utrecht; zie kalender hieronder). 💡 Eerder kan vaak: geannuleerde slots komen élke ochtend vrij via "Wijzig afspraak" in Mijn KVK | Mark |
 | direct na KvK | KvK-nummer aan Esther mailen (informatieplicht art. 5; concept ligt klaar) | Claude concept → Mark-go |
 | ✅ 26 aug | 🎨 **Landingspagina-concept AF & VASTGELEGD** (samen met Mark geredigeerd, 8 rondes): `Desktop\Ooievaarspas\landingspagina-concept-DEFINITIEF-2026-08-26.html` (+ werkkopie `landingspagina-PREVIEW-alleen-Mark.html`, logo.jpg en op-ooievaar.svg ernaast; dubbelklik = bekijken in browser). Bewust OFFLINE tot na de KvK. Bij live-gang: bestand → `public/ooievaarspas.html`, noindex weg, sitemap + llms.txt, én eerst ooievaar-logo-toestemming vragen (via Esthers tekst-formulier) | klaar (wacht op go) |
 | na KvK, alles rond (~begin okt) | 🚀 **Communicatie-start** (samen moment kiezen): landingspagina live + LinkedIn-post + bedankt.html + zeppelin-doek + **stadspassen-batch** naar andere gemeenten ("Den Haag doet al mee"; concepten + adressenlijst liggen dan klaar) | Mark-go |
-| ⏸️ tot die tijd | **Géén** publieke communicatie over de vriendschap — ook al mag het van Esther al | vast besluit |
+| ✅ 8 sep | **Mark koos eerder te communiceren** (mag van Esther sinds 26 aug): sectie "Gemeenten & stadspassen" met Ooievaarspas-blok LIVE op bedankt.html (datum 1-1-2027, drie gemeenten, geen beeldmerk) + LinkedIn-concept klaar. Landingspagina + zeppelin + stadspassen-batch blijven ná KvK. Esther krijgt de links in de KvK-mail (begin okt), geen aparte mail. | deels klaar |
 
 ## 🟠 Kalender — vaste datums
 
