@@ -75,9 +75,11 @@ export const KRATER_RAND_Y = eilandBasis(VULKAAN.x, VULKAAN.z) + vulkaanHoogte(V
 // net als de vulkaan, zodat je erop kunt lopen en de hangbrug er aan vast kan.
 // Posities = waar de decorbergen stonden (Buitenwereld, seed 20260702, ×2).
 export const SNEEUW_Y = 50;        // de sneeuwgrens: hierboven ligt sneeuw (m boven zee)
+// Mark 8 sep 2026: "de bergen zijn te spits, meer afgeplat" → koepelprofiel
+// (smoothstep: zachte voet, brede ronde top) en iets lager; richels subtieler.
 export const BERGEN = [
-  { id: "oostberg", x: 238, z: 145, R: 60, H: 88, seed: 1.3 },
-  { id: "kaapberg", x: 284, z: 47, R: 68, H: 104, seed: 2.9 },
+  { id: "oostberg", x: 238, z: 145, R: 60, H: 78, seed: 1.3 },
+  { id: "kaapberg", x: 284, z: 47, R: 68, H: 94, seed: 2.9 },
 ];
 export function bergInfo(x, z) {
   let best = null;
@@ -88,34 +90,39 @@ export function bergInfo(x, z) {
     const hoek = Math.atan2(dz, dx);
     const rond = 1 + 0.08 * Math.sin(hoek * 3 + b.seed) + 0.05 * Math.sin(hoek * 5 + 2 * b.seed);
     const u = Math.max(0, 1 - r / (b.R * rond));                 // 0 = voet, 1 = top
-    let h = b.H * Math.pow(u, 1.35);
+    // koepel i.p.v. kegel: smoothstep heeft helling 0 aan de voet én op de top,
+    // dus een zachte aanloop en een brede, afgeronde kruin (geen spits)
+    const sm = u * u * (3 - 2 * u);
+    let h = b.H * Math.pow(sm, 0.85);
     // ribbels: richels die van de top naar beneden lopen (graniet, geen gladde bult)
     const ribbel = 0.5 + 0.5 * Math.sin(hoek * 9 + b.seed * 3 + Math.sin(hoek * 2) * 1.5);
-    h += b.H * 0.05 * ribbel * Math.sin(Math.PI * Math.min(1, u * 1.1));
+    h += b.H * 0.035 * ribbel * Math.sin(Math.PI * Math.min(1, u * 1.1));
     if (!best || h > best.h) best = { h: Math.max(0, h), u, r, berg: b, ribbel };
   }
   return best;
 }
 export function bergHoogte(x, z) { const bi = bergInfo(x, z); return bi ? bi.h : 0; }
 
-// 🌉 DE HANGBRUG: van de vulkaanflank naar de Oostberg, over de kloof ertussen.
-// Beide ankers liggen op dezelfde hoogte (BRUG.H boven zee) op de lijn tussen de
-// twee toppen; het dek hangt er licht doorzakkend tussen. De dek-hoogte zit in
+// 🌉 DE HANGBRUG: van de Oostberg naar de Kaapberg, hoog over de kloof ertussen
+// (Mark 8 sep 2026: "de loopbrug tussen die twee besneeuwde bergen"). Beide
+// ankers liggen op dezelfde hoogte (BRUG.H boven zee, boven de sneeuwgrens) op
+// de lijn tussen de twee toppen; het dek hangt er licht doorzakkend tussen. De dek-hoogte zit in
 // buitenHoogte zodat je er écht over kunt lopen; de leuningen zijn een muur
 // (brugLeuning → isSolid) zodat je er niet vanaf loopt.
 export const BRUG = (() => {
-  const H = 34, ZAK = 2.2, BREED = 2.2;
-  const b = BERGEN[0];
-  const dx = b.x - VULKAAN.x, dz = b.z - VULKAAN.z, L0 = Math.hypot(dx, dz), ux = dx / L0, uz = dz / L0;
-  // vanaf elke top naar buiten lopen tot de flank onder H duikt (numeriek)
-  const zoek = (cx, cz, sx, sz, hoogte) => {
-    let lo = 0, hi = L0;
-    for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2; if (eilandBasis(cx + sx * m, cz + sz * m) + hoogte(cx + sx * m, cz + sz * m) > H) lo = m; else hi = m; }
+  const H = SNEEUW_Y + 6, ZAK = 2.2, BREED = 2.2;   // 56 m: in de sneeuw, op beide bergen
+  const a = BERGEN[0], b = BERGEN[1];                   // Oostberg → Kaapberg
+  const dx = b.x - a.x, dz = b.z - a.z, L0 = Math.hypot(dx, dz), ux = dx / L0, uz = dz / L0;
+  // vanaf elke top naar de andere toe lopen tot de flank onder H duikt (numeriek,
+  // alleen de eigen helft van de lijn zodat we niet op de overkant uitkomen)
+  const zoek = (cx, cz, sx, sz) => {
+    let lo = 0, hi = L0 / 2;
+    for (let i = 0; i < 40; i++) { const m = (lo + hi) / 2; if (eilandBasis(cx + sx * m, cz + sz * m) + bergHoogte(cx + sx * m, cz + sz * m) > H) lo = m; else hi = m; }
     return (lo + hi) / 2;
   };
-  const tA = zoek(VULKAAN.x, VULKAAN.z, ux, uz, vulkaanHoogte);
-  const tB = zoek(b.x, b.z, -ux, -uz, bergHoogte);
-  const ax = VULKAAN.x + ux * tA, az = VULKAAN.z + uz * tA;
+  const tA = zoek(a.x, a.z, ux, uz);
+  const tB = zoek(b.x, b.z, -ux, -uz);
+  const ax = a.x + ux * tA, az = a.z + uz * tA;
   const bx = b.x - ux * tB, bz = b.z - uz * tB;
   const L = Math.hypot(bx - ax, bz - az);
   return { H, ZAK, BREED, ax, az, bx, bz, ux, uz, L, rot: Math.atan2(ux, uz) };

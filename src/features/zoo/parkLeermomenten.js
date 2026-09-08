@@ -367,7 +367,7 @@ export const PARK_LEERMOMENTEN = {
   },
   hangbrug: {
     id: "hangbrug", emoji: "🌉", titel: "De hangbrug",
-    praatje: "Deze brug hangt aan twee dikke kabels tussen de vulkaan en de Oostberg. De planken hangen met touwen aan die kabels. Daarom zakt hij in het midden een beetje door en wiegt hij zacht als je loopt — dat hoort zo.",
+    praatje: "Deze brug hangt aan twee dikke kabels tussen de Oostberg en de Kaapberg, hoog in de sneeuw. De planken hangen met touwen aan die kabels. Daarom zakt hij in het midden een beetje door en wiegt hij zacht als je loopt — dat hoort zo.",
     weetje: "De langste hangbrug voor voetgangers ter wereld hangt in Tsjechië en is 721 meter lang. Deze brug is 50 meter: precies 100 stappen van een halve meter.",
     leerpadId: "verhoudingen-po", leerLabel: "Verhoudingen",
     leerpadId2: "krachten-natuurkunde", leerLabel2: "Krachten en bewegen (klas 2-3)",

@@ -10,14 +10,18 @@ import { useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { Vector3, Object3D, CatmullRomCurve3, BoxGeometry, MeshStandardMaterial } from "three";
-import { VULKAAN, buitenHoogte } from "./eilandVorm";
-import { KABEL_PHI } from "./Kabelbaan";
+import { buitenHoogte } from "./eilandVorm";
+import { KABEL_PHI, KABEL_CENTRUM, KABEL_R_BERG } from "./Kabelbaan";
 import { LeerBord } from "./ParkLeerobjecten";
 import { track } from "../../utils.js";
 
-const PHI0 = Math.atan2(-VULKAAN.z, -VULKAAN.x);
-const PHI_START = KABEL_PHI + 0.35, PHI_EIND = PHI0 + 0.6;
-const R_START = 27, R_EIND = 100;
+// Mark 8 sep 2026: sleeën doe je van een besneeuwde berg, niet van een vulkaan →
+// de baan start naast het bergstation op de Oostberg en slingert de flank af
+// richting het park. Alles in poolcoördinaten rond het bergmidden (KABEL_CENTRUM).
+const C = KABEL_CENTRUM;
+const PHI0 = Math.atan2(-C.z, -C.x);                 // richting berg → parkmidden
+const PHI_START = KABEL_PHI + 0.35, PHI_EIND = PHI0 + 0.3;
+const R_START = KABEL_R_BERG + 1, R_EIND = Math.round(C.R * 1.47);
 
 // de geul: 13 steunpunten van boven naar beneden, slingerend (3 bochten)
 const BAAN = (() => {
@@ -26,7 +30,7 @@ const BAAN = (() => {
     const t = i / 13;
     const r = R_START + (R_EIND - R_START) * t;
     const phi = PHI_START + (PHI_EIND - PHI_START) * t + 0.33 * Math.sin(t * Math.PI * 3) * (1 - 0.2 * t);
-    const x = VULKAAN.x + Math.cos(phi) * r, z = VULKAAN.z + Math.sin(phi) * r;
+    const x = C.x + Math.cos(phi) * r, z = C.z + Math.sin(phi) * r;
     pts.push(new Vector3(x, buitenHoogte(x, z) + 0.32, z));
   }
   const curve = new CatmullRomCurve3(pts, false, "centripetal", 0.5);
@@ -106,8 +110,8 @@ export default function Sleebaan({ playerRef, onRit, teleportRef, onOefenen, inp
           BAAN.curve.getTangentAt(1, tmp.tg);
           const ux = e.x - tmp.tg.z * 2.2, uz = e.z + tmp.tg.x * 2.2;
           if (teleportRef) teleportRef.current = { x: ux, z: uz };
-          // camera aan de dal-kant (van de vulkaan af), zodat je niet ín de helling kijkt
-          if (inputRef?.current?.cam) { inputRef.current.cam.yaw = Math.atan2(VULKAAN.x - ux, VULKAAN.z - uz); inputRef.current.cam.pitch = 0.14; }
+          // camera aan de dal-kant (van het bergmidden af), zodat je niet ín de helling kijkt
+          if (inputRef?.current?.cam) { inputRef.current.cam.yaw = Math.atan2(C.x - ux, C.z - uz); inputRef.current.cam.pitch = 0.14; }
           o.aanBoord = false;
           onRit && onRit(false);
         }

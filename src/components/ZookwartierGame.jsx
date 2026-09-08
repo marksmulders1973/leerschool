@@ -28,7 +28,7 @@ import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamV
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad, hierContextVoor } from "../features/zoo/parkLeermomenten";
 import { VULKAAN, BRUG } from "../features/zoo/eilandVorm";
-import { KABEL_DAL } from "../features/zoo/Kabelbaan";
+import { KABEL_DAL, KABEL_CENTRUM } from "../features/zoo/Kabelbaan";
 import { SLEE_START } from "../features/zoo/Sleebaan";
 // spawn-plek voor ?scene=vulkaan: 30 m vóór de voet (je ziet de hele berg), op de lijn parkmidden → vulkaan
 const VULKAAN_SPAWN = (() => { const d = Math.hypot(VULKAAN.x, VULKAAN.z), r = VULKAAN.R + 30; return [VULKAAN.x - (VULKAAN.x / d) * r, 0, VULKAAN.z - (VULKAAN.z / d) * r]; })();
@@ -40,11 +40,12 @@ const VULKAAN_KIJK_YAW = Math.atan2(VULKAAN.x, VULKAAN.z);
 const naarDoel = (sx, sz, dx, dz, afstand) => { const l = Math.hypot(dx - sx, dz - sz) || 1; return [sx - ((dx - sx) / l) * afstand, 0, sz - ((dz - sz) / l) * afstand]; };
 // Camera-regel (SpringArmCamera): de camera staat aan de yaw-kant van het poppetje,
 // dus kies yaw zó dat de camera aan de LAGE kant van de helling staat (anders kijk je
-// ín de berg). Op de vulkaanflank = van het vulkaanmidden af.
-const yawVanafVulkaan = (sx, sz) => Math.atan2(VULKAAN.x - sx, VULKAAN.z - sz);
+// ín de berg). Op een flank = van het bergmidden af (kabelbaan + slee staan sinds
+// 8 sep op de Oostberg, KABEL_CENTRUM).
+const yawVanafBerg = (sx, sz) => Math.atan2(KABEL_CENTRUM.x - sx, KABEL_CENTRUM.z - sz);
 const BERG_SPAWNS = {
-  kabelbaan: { spawn: naarDoel(KABEL_DAL.x, KABEL_DAL.z, VULKAAN.x, VULKAAN.z, 9), yaw: null, doel: [KABEL_DAL.x, KABEL_DAL.z], pitch: 0.08 },
-  slee: (() => { const sp = naarDoel(SLEE_START.x, SLEE_START.z, VULKAAN.x, VULKAAN.z, 5); return { spawn: sp, yaw: yawVanafVulkaan(sp[0], sp[2]), pitch: 0.16 }; })(),
+  kabelbaan: { spawn: naarDoel(KABEL_DAL.x, KABEL_DAL.z, KABEL_CENTRUM.x, KABEL_CENTRUM.z, 9), yaw: null, doel: [KABEL_DAL.x, KABEL_DAL.z], pitch: 0.08 },
+  slee: (() => { const sp = naarDoel(SLEE_START.x, SLEE_START.z, KABEL_CENTRUM.x, KABEL_CENTRUM.z, 5); return { spawn: sp, yaw: yawVanafBerg(sp[0], sp[2]), pitch: 0.16 }; })(),
   // op het brugdek (30% vanaf de vulkaankant), camera aan de vulkaankant → je kijkt de brug op
   hangbrug: { spawn: [BRUG.ax + BRUG.ux * BRUG.L * 0.3, 0, BRUG.az + BRUG.uz * BRUG.L * 0.3], yaw: Math.atan2(BRUG.ux, BRUG.uz), pitch: 0.12 },
 };
