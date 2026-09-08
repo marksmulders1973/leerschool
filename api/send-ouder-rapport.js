@@ -244,6 +244,16 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
   const deelText = deelLink
     ? `Geef een ander gezin Familie gratis — en krijg het zelf ook. Deel jouw persoonlijke link; zodra iemand via jouw link oefent, krijgen jullie allebei Familie gratis tot augustus 2027: ${deelLink}`
     : `Ken je een ouder uit de klas die dit ook zou willen? Leerkwartier is gratis: https://leerkwartier.app`;
+  // ✉️ Reageer-knop (Mark 8 sep 2026): wie liever iets anders of persoonlijker
+  // wil, laat het per mail weten — antwoorden komen op hallo@ binnen (reply_to)
+  // en Mark leest ze zelf. Zo wordt het rapport een gesprek, geen eenrichtingsmail.
+  const reageerMailto = `mailto:hallo@leerkwartier.app?subject=${encodeURIComponent("Over het weekrapport")}&body=${encodeURIComponent("Hoi Mark,\n\nOver het weekrapport wil ik graag het volgende kwijt:\n\n")}`;
+  const reageerHtml = `<div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:12px;padding:14px 16px;margin:0 0 22px;">
+        <div style="font-size:14px;font-weight:800;color:#fff;margin-bottom:6px;">✉️ Liever iets anders of persoonlijker?</div>
+        <p style="font-size:13px;line-height:1.6;color:#cdd6e5;margin:0 0 10px;">Dit rapport wordt gemaakt door één maker, geen marketingmachine. Mis je iets, wil je het korter, uitgebreider of anders? Beantwoord deze mail — ik lees elk bericht zelf en pas het aan waar dat kan.</p>
+        <a href="${reageerMailto}" style="display:block;text-align:center;background:rgba(255,255,255,0.06);border:1.5px solid #9fb0c6;color:#e8edf5;text-decoration:none;font-weight:800;font-size:14px;padding:10px;border-radius:10px;">✉️ Reageer op dit rapport</a>
+        <p style="font-size:11.5px;line-height:1.5;color:#7d8aa0;margin:8px 0 0;">Of stuur gewoon een antwoord op deze mail; die komt aan bij hallo@leerkwartier.app.</p>
+      </div>`;
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:520px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
@@ -252,11 +262,12 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
     ${kindSecties.map((s) => s.html).join("")}
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:20px;">${niveauSectie}</div>` : ""}
     <a href="${dashboard}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:22px;">📈 Bekijk alles in het ouder-dashboard →</a>
+    ${reageerHtml}
     ${deelHtml}
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Zet in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> de weekmail per kind uit (📩-knopje bij je kind) — de koppeling en je inzicht blijven gewoon bestaan.</p>
   </div></body></html>`;
-  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\n${deelText}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
+  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever iets anders of persoonlijker? Beantwoord deze mail (hallo@leerkwartier.app), Mark leest elk bericht zelf.\n\n${deelText}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
   return { onderwerp, html, text };
 }
 
@@ -318,7 +329,7 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ from: FROM, to: [adres], subject: onderwerp, html, text }),
+        body: JSON.stringify({ from: FROM, reply_to: "hallo@leerkwartier.app", to: [adres], subject: onderwerp, html, text }),
       });
       if (!r.ok) { fouten.push(adres.slice(0, 6) + ":" + r.status); continue; }
       gelukt++;
@@ -338,7 +349,7 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
           const pr = await fetch("https://api.resend.com/emails", {
             method: "POST",
             headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-            body: JSON.stringify({ from: FROM, to: [partner], subject: onderwerp, html: phtml, text: ptext }),
+            body: JSON.stringify({ from: FROM, reply_to: "hallo@leerkwartier.app", to: [partner], subject: onderwerp, html: phtml, text: ptext }),
           });
           if (!pr.ok) fouten.push("partner-" + adres.slice(0, 6) + ":" + pr.status);
         } catch (e) {
