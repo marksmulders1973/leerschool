@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import supabase from "../../supabase.js";
-import { haalScoresVoorKind } from "./kindData.js";
+import { haalScoresVoorKind, haalLeerpadVoortgangVoorKind } from "./kindData.js";
+import LesVoortgang, { PATHS_BY_ID } from "../../shared/ui/LesVoortgang.jsx";
+import LesDetail from "../../shared/ui/LesDetail.jsx";
+import ToetsDetail from "../../shared/ui/ToetsDetail.jsx";
 import { isLaunchPromoActive } from "../../constants.js";
 import { BRAND } from "../../brand.js";
 import { clearAll as clearAdaptive } from "../../shared/adaptiveStore.js";
@@ -14,6 +17,7 @@ import VriendenWerven from "../referral/VriendenWerven.jsx";
 import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import KindOverzicht from "./KindOverzicht.jsx";
 import CharleyTip from "../../components/CharleyTip.jsx";
+
 
 // Gedeeld ouder-inzicht-blok (Mark 14 aug): dezelfde ouder-functionaliteit —
 // kind koppelen (code via WhatsApp/e-mail/kopiëren), partner-mail, betalen en
@@ -76,6 +80,7 @@ function generateCode() {
   crypto.getRandomValues(bytes);
   return Array.from(bytes, (b) => alphabet[b % alphabet.length]).join("");
 }
+
 
 export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogin, onRondleiding, onKlaarzetten, onHierOefenen, onOpenLes, embedded = false }) {
   // Welkom-paneel — toont ouders de voordelen + gratis-USP vs Squla/Junior Einstein.
@@ -229,15 +234,42 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // map óók op de ouder-pagina zien — dan kunnen ze samen de vragen bekijken
   // en helpen"). Ouder leest z'n eigen koppeling via RLS.
   const [klaarLijst, setKlaarLijst] = useState([]);
+  // 📚 Leerpad-voortgang (Mark 4 sep 2026: "ik zie niet wat hij gedaan heeft").
+  // `gedaan` in ouder_klaargezet is een handmatig vinkje van het kind, en dat
+  // zet een kind zelden aan. De échte voortgang staat in learn_progress; die
+  // lezen we er nu naast, zodat een klaargezette les vanzelf meegroeit.
+  const [padVoortgang, setPadVoortgang] = useState({});
+  // Welke les staat opengeklapt met het "wat is er precies gemaakt"-detail?
+  const [openDetail, setOpenDetail] = useState(null);
+  // 📝 Welke toets staat opengeklapt met het per-vraag-detail (Mark 4 sep 2026)?
+  const [openToets, setOpenToets] = useState(null);
   useEffect(() => {
-    const linkId = selectedChildVerified?.id;
-    if (!linkId) { setKlaarLijst([]); return; }
+    const link = selectedChildVerified;
+    if (!link?.id) { setKlaarLijst([]); setPadVoortgang({}); return; }
     let cancel = false;
-    const laad = () => haalKlaargezetVoorLink(linkId).then((r) => { if (!cancel) setKlaarLijst(r); });
+    const laad = () => {
+      haalKlaargezetVoorLink(link.id).then((r) => { if (!cancel) setKlaarLijst(r); });
+      haalLeerpadVoortgangVoorKind(link).then((r) => { if (!cancel) setPadVoortgang(r); });
+    };
     laad();
     window.addEventListener(KLAARGEZET_EVENT, laad);
     return () => { cancel = true; window.removeEventListener(KLAARGEZET_EVENT, laad); };
   }, [selectedChildVerified?.id]);
+  // Wat het kind zélf koos = alle leerpaden met voortgang die niet in de
+  // klaargezet-lijst staan. Nieuwste bovenaan, hooguit 6 zodat het overzicht
+  // een overzicht blijft.
+  const klaarIds = new Set(klaarLijst.map((k) => k.path_id));
+  const zelfGedaan = Object.entries(padVoortgang)
+    .filter(([pathId]) => !klaarIds.has(pathId))
+    .map(([pathId, voortgang]) => ({
+      pathId,
+      voortgang,
+      titel: PATHS_BY_ID[pathId]?.title || pathId,
+      emoji: PATHS_BY_ID[pathId]?.emoji || "📘",
+    }))
+    .sort((a, b) => (b.voortgang?.laatste || 0) - (a.voortgang?.laatste || 0))
+    .slice(0, 6);
+
   const verwijderKlaar = async (pathId) => {
     if (!selectedChildVerified?.id) return;
     await haalWeg(selectedChildVerified.id, pathId);
@@ -262,7 +294,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     // + naam(+uid) voor rijen van vóór de koppeling — zie kindData.js.
     haalScoresVoorKind(
       { id: selectedChildVerified?.id, child_name: selectedChild, child_user_id: selectedChildVerified?.child_user_id },
-      { select: "id, subject, level, score, total, percentage, time_taken, completed_at", limit: 50 }
+      { select: "id, subject, level, score, total, percentage, time_taken, completed_at, detail", limit: 50 }
     ).then((rows) => {
       setChildScores(rows || []);
       setScoresLoading(false);
@@ -282,7 +314,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     }
     haalScoresVoorKind(
       { id: selectedChildVerified.id, child_name: selectedChild, child_user_id: selectedChildVerified.child_user_id },
-      { select: "id, subject, level, percentage, completed_at", subject: "cito", limit: 100 }
+      { select: "id, subject, level, score, total, percentage, completed_at, detail", subject: "cito", limit: 100 }
     ).then((rows) => setCitoScores(rows || []));
     // Zelfde deps-verfijning als het scores-effect hierboven (6s-poll-flits).
   }, [selectedChild, selectedChildVerified?.id, selectedChildVerified?.child_user_id]);
@@ -957,14 +989,22 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
             </div>
             <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
               {klaarLijst.map((it) => (
-                <div key={it.id} style={{ display: "flex", alignItems: "center", gap: 8, padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div key={it.id} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
                   <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
                   <div style={{ flex: 1, minWidth: 0 }}>
                     <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
-                    <div style={{ fontSize: 11, color: it.gedaan ? "#69f0ae" : "rgba(255,255,255,0.45)", fontWeight: 700 }}>
-                      {it.gedaan ? "✓ je kind heeft dit gedaan" : "nog te doen"}
-                    </div>
+                    <LesVoortgang item={it} voortgang={padVoortgang[it.path_id]} watNu="je kind" />
                   </div>
+                  {/* 🔍 Mark 4 sep: "inzien wat er exact gemaakt is en wat niet" */}
+                  <button
+                    onClick={() => setOpenDetail(openDetail === it.path_id ? null : it.path_id)}
+                    aria-expanded={openDetail === it.path_id}
+                    title="Bekijk per vraag hoe het ging"
+                    style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
+                  >
+                    {openDetail === it.path_id ? "Verberg" : "Wat precies?"}
+                  </button>
                   {onOpenLes && (
                     <button
                       onClick={() => onOpenLes(it.path_id)}
@@ -983,6 +1023,10 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                     ×
                   </button>
                 </div>
+                {openDetail === it.path_id && (
+                  <LesDetail pathId={it.path_id} voortgang={padVoortgang[it.path_id]} naam={selectedChild} />
+                )}
+                </div>
               ))}
             </div>
             {onKlaarzetten && (
@@ -993,6 +1037,55 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 + Meer lessen klaarzetten
               </button>
             )}
+          </div>
+        )}
+
+        {/* 📚 Zelf gekozen leerpaden (Mark 4 sep 2026). Het overzicht las tot nu
+            toe alleen de quiz-scores uit `leaderboard`; een kind dat leerpad-
+            stappen doet schrijft naar `learn_progress` en was dus onzichtbaar.
+            Hier staat wat je kind uit zichzelf heeft opgepakt — alles wat jij
+            hebt klaargezet staat hierboven al. */}
+        {selectedChildVerified && zelfGedaan.length > 0 && (
+          <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.28)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", margin: "4px 0 10px" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#69f0ae", marginBottom: 2 }}>
+              📚 {selectedChild} pakte dit zelf op
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>
+              Lessen die {selectedChild} zonder jouw hulp heeft gekozen.
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {zelfGedaan.map((p) => (
+                <div key={p.pathId} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{p.emoji}</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{p.titel}</div>
+                    <LesVoortgang item={{ path_id: p.pathId, gedaan: false }} voortgang={p.voortgang} watNu="je kind" />
+                  </div>
+                  <button
+                    onClick={() => setOpenDetail(openDetail === p.pathId ? null : p.pathId)}
+                    aria-expanded={openDetail === p.pathId}
+                    title="Bekijk per vraag hoe het ging"
+                    style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
+                  >
+                    {openDetail === p.pathId ? "Verberg" : "Wat precies?"}
+                  </button>
+                  {onOpenLes && (
+                    <button
+                      onClick={() => onOpenLes(p.pathId)}
+                      title="Open de les om mee te kijken"
+                      style={{ flexShrink: 0, padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(105,240,174,0.4)", background: "rgba(105,240,174,0.12)", color: "#69f0ae", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12, cursor: "pointer" }}
+                    >
+                      Bekijk
+                    </button>
+                  )}
+                </div>
+                {openDetail === p.pathId && (
+                  <LesDetail pathId={p.pathId} voortgang={p.voortgang} naam={selectedChild} />
+                )}
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
@@ -1229,11 +1322,30 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                 <div style={{ borderRadius: 16, border: "1px solid rgba(255,107,53,0.25)", background: "rgba(255,107,53,0.06)", padding: "14px 16px" }}>
                   <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ff8c42", marginBottom: 10, display: "flex", alignItems: "center", gap: 6 }}><DoorstroomtoetsLogo size={18} /> Doorstroomtoets voortgang</div>
                   {citoScores.slice(0, 5).map((s, i) => (
-                    <div key={i} style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 6 }}>
-                      <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)" }}>
-                        {s.level} — {fmtDatum(s.completed_at, { day: "numeric", month: "short" })}
-                      </span>
-                      <ScoreBadge pct={s.percentage} />
+                    <div key={s.id || i} style={{ marginBottom: 6 }}>
+                      <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", gap: 8 }}>
+                        <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", flex: 1, minWidth: 0 }}>
+                          {s.level} — {fmtDatum(s.completed_at, { day: "numeric", month: "short" })}
+                          {s.total ? <span style={{ color: "rgba(255,255,255,0.35)" }}> · {s.score}/{s.total}</span> : null}
+                        </span>
+                        {/* 📝 Per vraag goed/fout/overgeslagen (Mark 4 sep). Alleen als
+                            er detail is — toetsen van vóór 1 sep hebben dat niet, en een
+                            knop die op "niets" uitkomt is erger dan geen knop. */}
+                        {Array.isArray(s.detail) && s.detail.length > 0 && (
+                          <button
+                            onClick={() => setOpenToets(openToets === s.id ? null : s.id)}
+                            aria-expanded={openToets === s.id}
+                            title="Bekijk per vraag wat er goed, fout of overgeslagen was"
+                            style={{ flexShrink: 0, padding: "4px 9px", borderRadius: 7, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11, cursor: "pointer" }}
+                          >
+                            {openToets === s.id ? "Verberg" : "Wat precies?"}
+                          </button>
+                        )}
+                        <ScoreBadge pct={s.percentage} />
+                      </div>
+                      {openToets === s.id && (
+                        <ToetsDetail detail={s.detail} naam={selectedChild} onOefen={onOpenLes} vak={s.subject} niveau={s.level} />
+                      )}
                     </div>
                   ))}
                 </div>
@@ -1245,7 +1357,8 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                   🕐 Recente activiteit
                 </div>
                 {recentScores.map((s, i) => (
-                  <div key={i} style={{ display: "flex", alignItems: "center", padding: "9px 16px", borderBottom: "1px solid rgba(255,255,255,0.04)", gap: 12 }}>
+                  <div key={s.id || i} style={{ padding: "9px 16px", borderBottom: "1px solid rgba(255,255,255,0.04)" }}>
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
                     <div style={{ flex: 1 }}>
                       <div style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "rgba(255,255,255,0.75)" }}>
                         {SUBJECT_LABELS[s.subject] || s.subject} · {s.level}
@@ -1255,10 +1368,24 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
                         {s.time_taken ? ` · ⏱ ${s.time_taken < 60 ? `${s.time_taken}s` : `${Math.floor(s.time_taken / 60)}m ${s.time_taken % 60}s`}` : ""}
                       </div>
                     </div>
+                    {Array.isArray(s.detail) && s.detail.length > 0 && (
+                      <button
+                        onClick={() => setOpenToets(openToets === s.id ? null : s.id)}
+                        aria-expanded={openToets === s.id}
+                        title="Bekijk per vraag wat er goed, fout of overgeslagen was"
+                        style={{ flexShrink: 0, padding: "4px 9px", borderRadius: 7, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11, cursor: "pointer" }}
+                      >
+                        {openToets === s.id ? "Verberg" : "Wat precies?"}
+                      </button>
+                    )}
                     <div style={{ textAlign: "right" }}>
                       <ScoreBadge pct={s.percentage} />
                       <div style={{ fontFamily: "var(--font-body)", fontSize: 10, color: "rgba(255,255,255,0.25)", marginTop: 2 }}>{s.score}/{s.total}</div>
                     </div>
+                  </div>
+                  {openToets === s.id && (
+                    <ToetsDetail detail={s.detail} naam={selectedChild} onOefen={onOpenLes} vak={s.subject} niveau={s.level} />
+                  )}
                   </div>
                 ))}
               </div>

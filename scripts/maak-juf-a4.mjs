@@ -32,7 +32,7 @@ const html = `<!DOCTYPE html>
 <body>
   <div class="vel">
     <div class="kop">
-      <div class="merk">${logoImg}<div class="naam">Leerkwartier<br /><span style="font-size:15px;color:#5a6775;font-weight:400">Een kwartier per dag — écht begrijpen wat je leert.</span></div></div>
+      <div class="merk">${logoImg}<div class="naam">Leerkwartier<br /><span style="font-size:15px;color:#5a6775;font-weight:400">Een kwartier per dag leren, een leven lang slimmer.</span></div></div>
       <span class="feest" style="background:linear-gradient(90deg,#0a7d43,#00a852)">Voor de leerkracht</span>
     </div>
 

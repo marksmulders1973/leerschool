@@ -5,7 +5,13 @@
 import { Suspense, useState, useMemo, useCallback, useRef, memo } from "react";
 import { Canvas, useFrame } from "@react-three/fiber";
 import { OrbitControls, ContactShadows, Html, AdaptiveDpr, useProgress } from "@react-three/drei";
-import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide } from "three";
+import { Vector3, PlaneGeometry, BufferAttribute, Color, Object3D, BoxGeometry, DoubleSide, InstancedBufferAttribute, MeshStandardMaterial } from "three";
+import { grondShader, grasPolGeometrie, grasPolMateriaal, windTik } from "./realisme";
+import { eilandWaterMateriaal, eilandWaterTik, waterDieptekaart } from "./waterEiland";
+import { buitenHoogte, VULKAAN, brugLeuning, BRUG } from "./eilandVorm";
+import Hangbrug from "./Hangbrug";
+import Kabelbaan, { KABEL_DAL, KABEL_BERG } from "./Kabelbaan";
+import Sleebaan, { SLEE_START } from "./Sleebaan";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -290,7 +296,7 @@ function BlokFontein({ x, y, z }) {
       {rand.map(([bx, bz], i) => (
         <mesh key={i} castShadow receiveShadow position={[bx, 0.35, bz]}><boxGeometry args={[1, 0.7, 1]} /><meshStandardMaterial map={grijsMaps.muur()} color="#a3a8ae" roughness={1} /></mesh>
       ))}
-      <mesh position={[0, 0.42, 0]} rotation={[-Math.PI / 2, 0, 0]}><planeGeometry args={[3, 3]} /><meshStandardMaterial color="#4fa8d8" transparent opacity={0.85} roughness={0.3} /></mesh>
+      <mesh position={[0, 0.42, 0]} rotation={[-Math.PI / 2, 0, 0]} material={WATER_MAT}><planeGeometry args={[3, 3, 4, 4]} /></mesh>
       <mesh castShadow position={[0, 0.9, 0]}><boxGeometry args={[0.6, 1.1, 0.6]} /><meshStandardMaterial map={grijsMaps.buiten()} color="#8f959c" roughness={1} /></mesh>
       <mesh position={[0, 1.55, 0]}><boxGeometry args={[0.35, 0.35, 0.35]} /><meshStandardMaterial color="#bfe3f2" transparent opacity={0.7} roughness={0.3} /></mesh>
     </group>
@@ -495,6 +501,12 @@ function grasKleur(i, j, out) {
 // Alles via 2 InstancedMeshes (1681 vakjes) → maar 2 draw-calls.
 const KL_AARDE = new Color("#8a6a44");
 const KL_STEENLAAG = new Color("#7d7568");
+// het grondmateriaal één keer, op module-niveau: overleeft park verlaten/terugkomen
+const GROND_MAT = grondShader(new MeshStandardMaterial({ roughness: 1, metalness: 0 }));
+// 💧 Water = het water van Brian's eiland (Mark 5 sep): golfjes, rimpels, spiegeling
+// van de lucht, zon-glinstering, kleur/doorzichtigheid op diepte (uit de dieptekaart
+// van het terrein), lichtvlekken op de bodem en schuim langs de oever.
+const WATER_MAT = eilandWaterMateriaal();
 function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGround, onHover, onPlace, onMissTap, onSculpt, onWater, onGround }) {
   const refTop = useRef(), refKol = useRef();
   const AANTAL = TER_N * TER_N;
@@ -504,6 +516,12 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
     const dummy = new Object3D();
     const c = new Color();
     const BODEM = -4.8;
+    // 🌱 grasMix per vakje: 1 = sprietjes-textuur, 0 = korrel (zand/rots/verf)
+    let grasMixAttr = top.geometry.getAttribute("grasMix");
+    if (!grasMixAttr || grasMixAttr.count !== AANTAL) {
+      grasMixAttr = new InstancedBufferAttribute(new Float32Array(AANTAL), 1);
+      top.geometry.setAttribute("grasMix", grasMixAttr);
+    }
     let k = 0;
     for (let i = 0; i < TER_N; i++) {
       const wx = -TER_EXT + i * TER_STEP;
@@ -518,15 +536,18 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
         const gk = `${Math.round(wx / CELL)},${Math.round(wz / CELL)}`;
         const verf = ground[gk] ? GROUND_COLOR[ground[gk]] : null;
         if (verf) {
-          // geschilderde grond (zand/rots/...): vaste kleur + subtiele korrel
+          // geschilderde grond (zand/rots/...): vaste kleur + zandkorrel-textuur
           c.set(verf).multiplyScalar(0.94 + 0.06 * (((i * 7 + j * 13) % 5) / 4));
+          grasMixAttr.setX(k, 0);
         } else if (h <= 0.6) {
           // vlak gras: natuurlijke, vlekkerige groentinten (grasKleur varieert al)
           grasKleur(i, j, c);
+          grasMixAttr.setX(k, 1);
         } else {
-          // hellingen/toppen: rots/steen/sneeuw-look + subtiele korrel
+          // hellingen/toppen: rots/steen/sneeuw-look; gras loopt nog even door
           hoogteKleur(h, c);
           c.multiplyScalar(0.94 + 0.06 * (((i * 7 + j * 13) % 5) / 4));
+          grasMixAttr.setX(k, Math.max(0, 1 - (h - 0.6) / 2.2));
         }
         top.setColorAt(k, c);
         // Kolom eronder (aarde, hoger = steen) tot de bodem.
@@ -545,6 +566,7 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
     }
     top.instanceMatrix.needsUpdate = true;
     kol.instanceMatrix.needsUpdate = true;
+    grasMixAttr.needsUpdate = true;
     if (top.instanceColor) top.instanceColor.needsUpdate = true;
     if (kol.instanceColor) kol.instanceColor.needsUpdate = true;
     top.computeBoundingSphere();
@@ -561,9 +583,12 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
       {/* Blokgrootte = TER_STEP (de raster-stap), niet CELL: sinds de ruimte-
           verdubbeling (23 aug) is TER_STEP 4 m terwijl CELL 2 m bleef, dus met
           CELL zouden de vloer-blokken losse vlakken worden met gaten ertussen. */}
-      <instancedMesh ref={refTop} args={[undefined, undefined, AANTAL]} receiveShadow {...handlers}>
+      {/* 🌱 Echte grastextuur (Mark 5 sep, van Brian's eiland): sprietje voor
+          sprietje geschilderd, op WERELD-positie geplakt zodat hij naadloos over
+          alle blokken doorloopt, twee tegel-maten gemengd tegen herhaling en
+          vervagend in de verte. De vlekkerige instance-kleuren blijven eronder. */}
+      <instancedMesh ref={refTop} args={[undefined, undefined, AANTAL]} receiveShadow material={GROND_MAT} {...handlers}>
         <boxGeometry args={[TER_STEP, 0.4, TER_STEP]} />
-        <meshStandardMaterial map={grijsMaps.terreinTop()} roughness={1} metalness={0} />
       </instancedMesh>
       <instancedMesh ref={refKol} args={[undefined, undefined, AANTAL]} receiveShadow {...handlers}>
         <boxGeometry args={[TER_STEP, 1, TER_STEP]} />
@@ -579,10 +604,14 @@ function Terrain({ field, ground = {}, placing, cells, sculpt, water, paintGroun
 // gras. Uit op zwakke toestellen (LOW_END) en 1 instanced draw-call.
 // NB: geometrie/materiaal als r3f-children (niet via `args`), anders ruimt r3f
 // ze bij het verlaten van het park op → crash bij terugkomst (park-fix 16 aug).
-const SPRIET_H = 0.9; // hoogte van het graspolletje (plane staat rechtop, midden op pivot)
+// 🌿 Graspollen (Mark 5 sep, van Brian's eiland): 3D-pollen van 5 sprietjes,
+// donker onderin en licht aan de punt, wuivend in de wind (in de shader, kost
+// de processor niets). Twee pollen per gras-vakje, op ~60% van de vakjes,
+// alleen op laag, onbeschilderd gras en niet op de paden. Eén draw-call.
+const POL_PER_VAKJE = 2;
+const GRAS_POL_GEO = grasPolGeometrie();
 function GrasSprieten({ field, ground = {}, padCellen = null }) {
   const ref = useRef();
-  const tex = useMemo(() => grasSprietTex(), []);
   const pollen = useMemo(() => {
     const out = [];
     for (let i = 0; i < TER_N; i++) {
@@ -594,15 +623,18 @@ function GrasSprieten({ field, ground = {}, padCellen = null }) {
         const h = blokHoogte(heightAt(field, wx, wz));
         if (h > 0.6) continue; // alleen laag/vlak gras
         const seed = ((i * 73856093) ^ (j * 19349663)) >>> 0;
-        if (((seed >>> 8) & 0xff) / 255 > 0.4) continue; // ~40% van de vakjes
-        const jx = (((seed >>> 3) & 0xff) / 255 - 0.5) * 1.4;
-        const jz = (((seed >>> 11) & 0xff) / 255 - 0.5) * 1.4;
-        // Geen gras óp de paden (Brian 20 aug: "planten in het looppad") —
-        // check de cel van de uitgewaaierde eindpositie tegen de pad-tegels.
-        if (padCellen && padCellen.has(`${Math.round((wx + jx) / CELL)},${Math.round((wz + jz) / CELL)}`)) continue;
-        const rot = (((seed >>> 17) & 0xff) / 255) * Math.PI;
-        const sc = 0.75 + (((seed >>> 23) & 0xff) / 255) * 0.5;
-        out.push([wx + jx, h, wz + jz, rot, sc]);
+        if (((seed >>> 8) & 0xff) / 255 > 0.6) continue; // ~60% van de vakjes
+        for (let p = 0; p < POL_PER_VAKJE; p++) {
+          const s2 = (seed + p * 2654435761) >>> 0;
+          const jx = (((s2 >>> 3) & 0xff) / 255 - 0.5) * (TER_STEP - 0.6);
+          const jz = (((s2 >>> 11) & 0xff) / 255 - 0.5) * (TER_STEP - 0.6);
+          // Geen gras óp de paden (Brian 20 aug: "planten in het looppad")
+          if (padCellen && padCellen.has(`${Math.round((wx + jx) / CELL)},${Math.round((wz + jz) / CELL)}`)) continue;
+          const rot = (((s2 >>> 17) & 0xff) / 255) * Math.PI * 2;
+          const sc = 1.7 + (((s2 >>> 23) & 0xff) / 255) * 1.2;
+          const tint = ((s2 >>> 27) & 0x1f) / 31;
+          out.push([wx + jx, h, wz + jz, rot, sc, tint]);
+        }
       }
     }
     return out;
@@ -610,26 +642,36 @@ function GrasSprieten({ field, ground = {}, padCellen = null }) {
   useEffect(() => {
     const m = ref.current;
     if (!m) return;
-    const d = new Object3D();
-    pollen.forEach(([x, y, z, rot, sc], n) => {
-      // plane is gecentreerd → onderkant op de grond = midden op y + halve hoogte
-      d.position.set(x, y + (SPRIET_H * sc) / 2, z);
+    if (!m.instanceColor || m.instanceColor.count < pollen.length) {
+      m.instanceColor = new InstancedBufferAttribute(new Float32Array(Math.max(1, pollen.length) * 3), 3);
+    }
+    const d = new Object3D(), c = new Color();
+    pollen.forEach(([x, y, z, rot, sc, tint], n) => {
+      d.position.set(x, y, z);
       d.rotation.set(0, rot, 0);
       d.scale.set(sc, sc, sc);
       d.updateMatrix();
       m.setMatrixAt(n, d.matrix);
+      // gewoon groen, af en toe een geel-dorre pol
+      if (tint > 0.93) c.setHSL(0.16 + tint * 0.03, 0.30, 0.44);
+      else c.setHSL(0.25 + tint * 0.07, 0.50, 0.30 + tint * 0.14);
+      m.setColorAt(n, c);
     });
     m.count = pollen.length;
     m.instanceMatrix.needsUpdate = true;
+    m.instanceColor.needsUpdate = true;
     m.computeBoundingSphere();
   }, [pollen]);
   if (!pollen.length) return null;
   return (
-    <instancedMesh ref={ref} args={[undefined, undefined, pollen.length]} frustumCulled={false}>
-      <planeGeometry args={[1.5, SPRIET_H]} />
-      <meshStandardMaterial map={tex} transparent alphaTest={0.5} side={DoubleSide} roughness={1} metalness={0} />
-    </instancedMesh>
+    <instancedMesh ref={ref} args={[undefined, undefined, pollen.length]} geometry={GRAS_POL_GEO} material={grasPolMateriaal()} frustumCulled={false} />
   );
+}
+
+// 🌬️ Eén klokje voor alle wind-shaders (graspollen, bladeren): elk beeldje de tijd doorgeven.
+function Wind() {
+  useFrame((st) => { windTik(st.clock.elapsedTime); eilandWaterTik(st.clock.elapsedTime); });
+  return null;
 }
 
 // Meertjes: doorzichtige blauwe wateroppervlakken op de ondergelopen vakjes, met
@@ -643,9 +685,8 @@ function WaterPools({ cells }) {
       {cells.map(([gx, gz]) => {
         const [x, z] = cellToWorld(gx, gz);
         return (
-          <mesh key={`${gx},${gz}`} rotation={[-Math.PI / 2, 0, 0]} position={[x, WATER_SURFACE_Y, z]} receiveShadow>
-            <planeGeometry args={[CELL + 0.02, CELL + 0.02]} />
-            <meshStandardMaterial color="#3aa6d8" transparent opacity={0.62} roughness={0.2} metalness={0.1} />
+          <mesh key={`${gx},${gz}`} rotation={[-Math.PI / 2, 0, 0]} position={[x, WATER_SURFACE_Y, z]} receiveShadow material={WATER_MAT}>
+            <planeGeometry args={[CELL + 0.02, CELL + 0.02, 4, 4]} />
           </mesh>
         );
       })}
@@ -699,9 +740,8 @@ function Stream({ path, terrain }) {
       {path.map(([gx, gz], i) => {
         const p = points[i];
         return (
-          <mesh key={`${gx},${gz}`} rotation={[-Math.PI / 2, 0, 0]} position={[p.x, p.y - 0.08, p.z]}>
-            <planeGeometry args={[1.5, 1.5]} />
-            <meshStandardMaterial color="#3f9fd6" transparent opacity={0.72} roughness={0.15} metalness={0.1} />
+          <mesh key={`${gx},${gz}`} rotation={[-Math.PI / 2, 0, 0]} position={[p.x, p.y - 0.08, p.z]} material={WATER_MAT}>
+            <planeGeometry args={[1.5, 1.5, 3, 3]} />
           </mesh>
         );
       })}
@@ -783,6 +823,14 @@ function Laden() {
 // maatje dan hardop vertellen. Remmen tegen gezeur: per object 4 min stilte,
 // en na élk praatje 25 s globale pauze. Puur rekenwerk op refs — geen state,
 // geen re-renders, dus gratis voor de framerate.
+// 📍 Vaste leerplekken buiten het park-raster (vulkaanpoort, kabelbaan, slee, brug) —
+// de gids en het "hier sta je"-wolkje kennen ze net als de geplaatste objecten.
+const VASTE_PLEKKEN = [
+  { id: "kabelbaan", x: KABEL_DAL.x, z: KABEL_DAL.z },
+  { id: "sneeuwgrens", x: KABEL_BERG.x, z: KABEL_BERG.z },
+  { id: "slee", x: SLEE_START.x, z: SLEE_START.z },
+  { id: "hangbrug", x: (BRUG.ax + BRUG.bx) / 2, z: (BRUG.az + BRUG.bz) / 2, straal: BRUG.L / 2 + 4 },
+];
 function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief, onGids, hierRef = null, factsRef = null }) {
   const dwell = useRef({ id: null, t: 0 });
   const perObject = useRef(new Map()); // leermoment-id → laatste spreek-tijd
@@ -804,6 +852,12 @@ function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief,
       const [x, z] = cellToWorld(it.cell[0], it.cell[1]);
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
       if (d2 < bestD2) { bestD2 = d2; best = lm; bx = x; bz = z; }
+    }
+    for (const vp of VASTE_PLEKKEN) {
+      const d2 = (vp.x - p.x) * (vp.x - p.x) + (vp.z - p.z) * (vp.z - p.z);
+      // de brug is lang: overal op het dek telt als "bij de brug"
+      const binnen = vp.straal ? d2 < vp.straal * vp.straal : d2 < bestD2;
+      if (binnen && (!best || d2 < bestD2 || vp.straal)) { bestD2 = Math.min(d2, 48); best = vp.id; bx = vp.x; bz = vp.z; }
     }
     const kop = trainHeadRef?.current;
     if (kop?.p) {
@@ -912,6 +966,16 @@ const POORT_KLEIN_AFSTAND = 2.4;
 const POORT_AFSTAND = { tempel: 9.6, wereldbol: 4.6, ...Object.fromEntries(POORT_KLEIN_ASSETS.map((id) => [id, POORT_KLEIN_AFSTAND])) };
 // Emoji van het leermoment voor de kleine poort (zonder ZooScene aan de hele tabel te koppelen).
 const PARK_LEERMOMENTEN_EMOJI = (momentId) => hierContextVoor(momentId)?.emoji || "✨";
+// 🌋 Vaste poort aan de voet van Brian's vulkaan (Mark 6 sep): de vulkaan is geen
+// geplaatst item maar decor buiten het hek; de poort staat aan de parkkant van
+// de voet en opent het leerpad van het 'vulkaan'-leermoment (aardrijkskunde).
+const VULKAAN_POORT = (() => {
+  // aan de voet (0,98 R) op de lijn vulkaan → parkmidden, met de doorgang naar het park gericht
+  const d = Math.hypot(VULKAAN.x, VULKAAN.z), ux = -VULKAAN.x / d, uz = -VULKAAN.z / d, r = VULKAAN.R * 0.98;
+  return { assetId: "vulkaan", x: VULKAAN.x + ux * r, z: VULKAAN.z + uz * r, rot: Math.atan2(ux, uz) };
+})();
+const VASTE_POORTEN = [VULKAAN_POORT];
+VASTE_PLEKKEN.push({ id: "vulkaan", x: VULKAAN_POORT.x, z: VULKAAN_POORT.z });
 function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
   const acc = useRef(0);
   const binnen = useRef(null); // assetId waar je nu "in" staat
@@ -939,6 +1003,10 @@ function PoortWatcher({ playerPos, placedItems, actief, onDoor }) {
       const lim = straal * straal;
       const d2 = (x - p.x) * (x - p.x) + (z - p.z) * (z - p.z);
       if (d2 < lim && d2 < bestD2) { bestD2 = d2; dichtst = it.assetId; }
+    }
+    for (const vp of VASTE_POORTEN) {
+      const d2 = (vp.x - p.x) * (vp.x - p.x) + (vp.z - p.z) * (vp.z - p.z);
+      if (d2 < 2.4 * 2.4 && d2 < bestD2) { bestD2 = d2; dichtst = vp.assetId; }
     }
     if (dichtst !== binnen.current) {
       const wasLeeg = binnen.current == null;
@@ -1295,6 +1363,8 @@ function SnackInHand({ playerPos, playerFace, snack, verborgen, onOp }) {
 export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null, draagSnack = null, onSnackOp = null, onZeppelinRit = null, hierRef = null }) {
   const [ghost, setGhost] = useState(null);
   const [zeppelinRit, setZeppelinRit] = useState(false); // 🛩️ aan boord van de instap-zeppelin
+  const [bergRit, setBergRit] = useState(false);         // 🚠🛷 aan boord van kabelbaan of slee (6 sep)
+  const teleportRef = useRef(null);                       // { x, z } → Player zet je daar neer (uitstappen)
   const attractieZitje = useRef(new Vector3()); // wereldpos van je zitje in de attractie
   const playerPos = useRef(new Vector3());
   const playerLook = useRef(new Vector3()); // mikpunt voor de eerstepersoons-camera
@@ -1360,6 +1430,8 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   // Blok-wereld: hoogte per VAKJE (vlakke bloktop), niet glad geïnterpoleerd —
   // zo staat alles (speler, dieren, items) netjes óp de blokken.
   heightFnRef.current = (x, z) => {
+    // 🏝️ buiten het park-terrein: het eiland (gras → strand → zeebodem)
+    if (Math.abs(x) > TER_EXT || Math.abs(z) > TER_EXT) return buitenHoogte(x, z);
     const [gx, gz] = snapToCell(x, z, 1);
     const [cx, cz] = cellToWorld(gx, gz);
     return blokHoogte(heightAt(terrain, cx, cz));
@@ -1367,6 +1439,9 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
   const onSculpt = (x, z) => { if (onTerrainChange) onTerrainChange(applyBrush(terrain || flatField(), x, z, sculptDir * 0.9)); };
   // Beken (stroompaden) + meertjes op basis van het terrein + de water-bronnen.
   const water = useMemo(() => computeWater(terrain, waterSeeds), [terrain, waterSeeds]);
+  // dieptekaart voor de water-shader: hoe diep is elke kuil (oppervlak − terrein)
+  const waterDiepte = useMemo(() => waterDieptekaart(terrain, WATER_SURFACE_Y), [terrain]);
+  useEffect(() => { const oud = WATER_MAT.uniforms.dieptemap.value; WATER_MAT.uniforms.dieptemap.value = waterDiepte; return () => { if (oud && oud !== waterDiepte) oud.dispose(); }; }, [waterDiepte]);
   const placing = !!placingAsset;
   const placingCells = placing ? cellsVan(placingAsset) : 3;
 
@@ -1581,6 +1656,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
     return s;
   }, [placedItems]);
   const isSolid = useCallback((x, z) => {
+    if (brugLeuning(x, z)) return true; // 🌉 de leuningen van de hangbrug
     if (kubVast.has(`${Math.floor(x)},${Math.floor(z)}`)) return true;
     const [gx, gz] = snapToCell(x, z, 1);
     return vasteCellen.has(cellKey(gx, gz));
@@ -1665,7 +1741,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
       shadows={!LOW_END}
       dpr={LOW_END ? 1 : [1, 2]}
       performance={{ min: 0.55 }}
-      camera={{ position: [40, 30, 54], fov: 42, near: 0.1, far: 600 }}
+      camera={{ position: [40, 30, 54], fov: 42, near: 0.1, far: 1000 }}
       style={{ width: "100%", height: "100%", display: "block", touchAction: "none", cursor: paintCursor || "default" }}
       onCreated={({ gl }) => {
         // Context-loss (veel op goedkope Androids onder geheugendruk): zonder
@@ -1681,10 +1757,12 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
           zwakke hardware; staat de speler stil, dan weer scherp. */}
       <AdaptiveDpr />
       <color attach="background" args={["#aaddff"]} />
-      <fog attach="fog" args={["#aaddff", 150, 290]} />
+      {/* mist begint pas ver weg: je moet vanaf het park de zee en de kust kunnen zien */}
+      <fog attach="fog" args={["#aaddff", 220, 700]} />
 
       {/* Dag-nacht-cyclus stuurt zon, omgevingslicht en luchtkleur. */}
       <DayNight />
+      <Wind />
       {/* Drijvende wolken + rondcirkelende vogeltjes vullen de lucht. */}
       <SkyClouds />
       {/* 🛩️ Witte zeppelins hoog boven het park — later reclame-doek voor partners. */}
@@ -1699,6 +1777,11 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* De wereld buiten het hek: grasvlakte, blok-heuvels, bos, bergen,
             meertje en het weggetje met bushalte — geen "einde van de wereld". */}
         <Buitenwereld />
+        {/* 🌋 poort + leerbord aan de voet van de vulkaan → "Aardlagen en vulkanen" */}
+        <group position={[VULKAAN_POORT.x, buitenHoogte(VULKAAN_POORT.x, VULKAAN_POORT.z), VULKAAN_POORT.z]} rotation={[0, VULKAAN_POORT.rot, 0]}>
+          <MagischePoort kleur="#ffb0a0" emoji="🌋" label="Vulkanen" breedte={3.0} hoogte={3.2} />
+          {onOefenen ? <LeerBord moment="vulkaan" onOefenen={onOefenen} position={[2.6, 0, 0.4]} /> : null}
+        </group>
         {/* 🚶 Wandelroute (Mark-go 20 aug "bouw maar in de echte app"): de
             voetstappen staan altijd aan; de gele bouwbordjes alleen met ?wandel=1. */}
         {/* 🎓 Het doorlopende leerpad-lint = het hoofdpad van het park (Mark 22
@@ -1727,9 +1810,9 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* Spawn op het starter-plein (z≈64, bij de start van het leerpad-lint),
             niet aan de verre rand — anders begint elke speler in niemandsland. */}
         {/* Tijdens een attractie-rit is je poppetje "ingestapt" → verborgen. */}
-        <Player inputRef={inputRef} start={spawn || [0, 0, 64]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain || zeppelinRit} zweef={zweef} climbRef={climbRef} />
+        <Player inputRef={inputRef} start={spawn || [0, 0, 64]} isSolid={isSolid} posRef={playerPos} heightRef={heightFnRef} avatarUrl={avatarUrl} firstPerson={firstPerson} lookRef={playerLook} faceRef={playerFace} bouwt={plaatstBlok || bouwModus} verborgen={rideIdx != null || rideTrain || zeppelinRit || bergRit} zweef={zweef} climbRef={climbRef} teleportRef={teleportRef} />
         {/* 🍟 Je gekochte snack loopt mee in je hand en gaat vanzelf op. */}
-        {draagSnack && <SnackInHand playerPos={playerPos} playerFace={playerFace} snack={draagSnack} verborgen={rideIdx != null || rideTrain || zeppelinRit} onOp={onSnackOp} />}
+        {draagSnack && <SnackInHand playerPos={playerPos} playerFace={playerFace} snack={draagSnack} verborgen={rideIdx != null || rideTrain || zeppelinRit || bergRit} onOp={onSnackOp} />}
         {/* Standaard: spring-arm achter de speler — zelf draaien/zoomen, botst nergens doorheen. */}
         <SpringArmCamera posRef={playerPos} inputRef={inputRef} topAt={camTopAt} heightRef={heightFnRef} active={!firstPerson && !buddyEye && !rideTrain && !followCam && rideIdx == null} />
         {/* 🎠 In een attractie: camera draait mee op het zitje. */}
@@ -1759,14 +1842,20 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* 🛩️ De bestuurbare Leerkwartier-zeppelin + landingsveld. NÁ de andere
             camera's gemount: tijdens de vlucht wint zijn cockpit-camera. */}
         <InstapZeppelin inputRef={inputRef} onRit={(v) => { setZeppelinRit(v); if (onZeppelinRit) onZeppelinRit(v); }} heightRef={heightFnRef} halteRef={zeppelinHalteRef} />
+        {/* 🏔️ Bergen-plan (Mark 6 sep, WhatsApp met Brian): hangbrug vulkaan↔Oostberg met
+            wandelende maatjes, kabelbaan naar de sneeuwgrens, slee terug het dal in.
+            De rit-camera's winnen omdat ze ná de andere camera's gemount staan. */}
+        <Hangbrug onOefenen={onOefenen} />
+        <Kabelbaan playerRef={playerPos} teleportRef={teleportRef} inputRef={inputRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
+        <Sleebaan playerRef={playerPos} teleportRef={teleportRef} inputRef={inputRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         {/* Samenhang-plan 2 sep 2026: gids en poorten óók aan in bouw-modus —
             een vers park start in bouw-modus, dus stonden ze voor nieuwe kinderen
             altijd uit (developer-review: dé reden van 1 poort-doorloop in 30 dagen). */}
-        <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && !zeppelinRit} onGids={onGidsMoment} hierRef={hierRef} factsRef={factsRef} />
+        <GidsWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} trainHeadRef={trainHeadRef} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && !zeppelinRit && !bergRit} onGids={onGidsMoment} hierRef={hierRef} factsRef={factsRef} />
         <NabijPiramideWatcher playerPos={playerPos} playerFace={playerFace} placedItems={placedItems} onNear={placingAsset ? undefined : onNearPiramide} />
-        <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain && !zeppelinRit} onDoor={onPoortDoor} />
+        <PoortWatcher playerPos={playerPos} placedItems={placedItems} actief={!placingAsset && !sculptMode && !waterMode && !groundMode && rideIdx == null && !rideTrain && !zeppelinRit && !bergRit} onDoor={onPoortDoor} />
         <Visitors count={bezoekers} standsRef={standsRef} kraamRef={kraamRef} onBuy={onBuy} heightRef={heightFnRef} playerRef={playerPos} factsRef={factsRef} onTap={onTapBezoeker} isSolid={isSolidBots} padsRef={padsRef} dierenRef={dierenRef} pretRef={pretRef} bankjesRef={bankjesRef} zeppelinRef={zeppelinHalteRef} />
 
         {placing && (

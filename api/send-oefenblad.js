@@ -86,7 +86,7 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:560px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:4px;">Leerkwartier</div>
-    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:18px;">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:18px;">Een kwartier per dag leren, een leven lang slimmer.</div>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 6px;">Hoi,</p>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 16px;">
       Je kind deed zojuist de <strong>${vakLabel}-check</strong> en scoorde <strong style="color:#69f0ae;">${score} van de ${totaal} goed</strong>.
@@ -117,7 +117,7 @@ function bouwMail({ vakLabel, score, totaal, vragen, token }) {
     `\n\nANTWOORDEN + UITLEG (voor de ouder):\n` +
     vragen.map((v, i) => `${i + 1}. ${v.goed}${v.uitleg ? " — " + v.uitleg : ""}`).join("\n") +
     `\n\nElke week een nieuwe oefenset? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}` +
-    `\n\nDoe de check opnieuw: ${opnieuw}\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
+    `\n\nDoe de check opnieuw: ${opnieuw}\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 
   return { onderwerp, html, text };
 }

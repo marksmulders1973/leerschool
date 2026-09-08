@@ -19,6 +19,7 @@ export const GO_PARAM_TO_PAGE = {
   leerkracht: "teacher-home",
   scorebord: "leaderboard",
   kwartiercheck: "kwartiercheck",
+  startkwartier: "start-kwartier",
 };
 
 export function parsePvpJoinCode(pathname) {

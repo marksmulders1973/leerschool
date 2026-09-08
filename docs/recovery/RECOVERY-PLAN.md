@@ -113,7 +113,7 @@ zie `memory/feedback_playwright_split_screen.md` — script staat in die memory.
 
 **Leerkwartier** (was: Studiebol) — NL leer-app voor groep 1-8 PO + VMBO/HAVO/VWO VO.
 **ICP**: bezorgde Doorstroomtoets-ouder groep 6-8.
-**Slogan**: "Een kwartier per dag — écht begrijpen wat je leert."
+**Slogan**: "Een kwartier per dag leren, een leven lang slimmer."
 **Tech**: Vite + React + Supabase + Vercel + Anthropic Claude API + optioneel Gemini fallback.
 **Status 2026-05-18**: 220 leerpaden, Doorstroomtoets-trio compleet (147+/150), 25 VMBO-examen-paden, MVP Cito-piek-ready jan 2027.
 

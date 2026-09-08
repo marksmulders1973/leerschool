@@ -108,7 +108,7 @@ function pakketHtml(token) {
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#f4f6fa;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#1c2840;">
   <div style="max-width:600px;margin:0 auto;padding:26px 20px;background:#ffffff;">
     <div style="font-size:22px;font-weight:800;color:#0a0f1e;margin-bottom:4px;">Leerkwartier</div>
-    <div style="font-size:13px;color:#0a7d3c;font-weight:700;margin-bottom:18px;">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    <div style="font-size:13px;color:#0a7d3c;font-weight:700;margin-bottom:18px;">Een kwartier per dag leren, een leven lang slimmer.</div>
     <p style="font-size:15px;line-height:1.6;margin:0 0 10px;">Hoi,</p>
     <p style="font-size:15px;line-height:1.6;margin:0 0 16px;">
       Vindt je kind de teksten bij begrijpend lezen soms <strong>te lang</strong>? Hieronder staat een
@@ -146,7 +146,7 @@ function pakketHtml(token) {
     ).join("\n\n") +
     `\n\n--- ANTWOORDBLAD (voor de ouder) ---\n` +
     tredes.map((t) => t.teksten.map((tx) => tx.vragen.map((v) => `${v.nr}. ${LETTERS[v.answer]} (${v.options[v.answer]}) — truc: ${v.type} — ${v.uitleg}`).join("\n")).join("\n")).join("\n") +
-    `\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
+    `\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 
   return { html, text };
 }

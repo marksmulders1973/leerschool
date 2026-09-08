@@ -146,7 +146,7 @@ function maakMail(rij, fase) {
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:520px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
-    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag leren, een leven lang slimmer.</div>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 14px;">${hoi}</p>
     <div style="font-size:18px;font-weight:800;color:#fff;margin:0 0 10px;">${esc(fase.kop)}</div>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 16px;">${esc(fase.intro)}</p>
@@ -157,7 +157,7 @@ function maakMail(rij, fase) {
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `${hoi}\n\n${fase.kop}\n\n${fase.intro}\n\n- ${fase.punten.join("\n- ")}\n\n${fase.cta}: ${link}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
+  const text = `${hoi}\n\n${fase.kop}\n\n${fase.intro}\n\n- ${fase.punten.join("\n- ")}\n\n${fase.cta}: ${link}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 
   return { onderwerp: fase.onderwerp, html, text };
 }

@@ -293,7 +293,7 @@ export default function WeekschemaPagina({ setPage }) {
             )}
           </div>
           <div style={{ marginTop: 12, fontSize: 11.5, color: "#a08a55", textAlign: "center" }}>
-            Gemaakt met Leerkwartier · leerkwartier.app — een kwartier per dag, écht begrijpen wat je leert
+            Gemaakt met Leerkwartier · leerkwartier.app — een kwartier per dag leren, een leven lang slimmer
           </div>
         </div>
       </div>

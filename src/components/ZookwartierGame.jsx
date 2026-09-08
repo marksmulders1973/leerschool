@@ -27,7 +27,29 @@ import BuddyChat from "../features/zoo/BuddyChat";
 import { gekozenBuddy, heeftGekozen, telGeleerdeStappen, buddyNaam as buddyNaamVan, BUDDY_BY_ID, volgendeBuddyVraag, beantwoordBuddyVraag, stelBuddyVraagUit, wisBuddyWeetjes } from "../features/zoo/buddies";
 import { TAFEREEL_BY_ID } from "../features/zoo/uitvindersData";
 import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLeerpad, hierContextVoor } from "../features/zoo/parkLeermomenten";
+import { VULKAAN, BRUG } from "../features/zoo/eilandVorm";
+import { KABEL_DAL } from "../features/zoo/Kabelbaan";
+import { SLEE_START } from "../features/zoo/Sleebaan";
+// spawn-plek voor ?scene=vulkaan: 30 m vóór de voet (je ziet de hele berg), op de lijn parkmidden → vulkaan
+const VULKAAN_SPAWN = (() => { const d = Math.hypot(VULKAAN.x, VULKAAN.z), r = VULKAAN.R + 30; return [VULKAAN.x - (VULKAAN.x / d) * r, 0, VULKAAN.z - (VULKAAN.z / d) * r]; })();
+// camera-yaw die vanaf die plek naar de vulkaan kijkt (de camera staat aan de
+// yaw-kant van het poppetje: yaw π = camera op +z, kijkt naar -z)
+const VULKAAN_KIJK_YAW = Math.atan2(VULKAAN.x, VULKAAN.z);
+// 🏔️ Bergen-plan (6 sep): deel-links ?scene=kabelbaan / slee / hangbrug spawnen je
+// er vlak bij, met de camera erop gericht (yaw = richting spawn → doel).
+const naarDoel = (sx, sz, dx, dz, afstand) => { const l = Math.hypot(dx - sx, dz - sz) || 1; return [sx - ((dx - sx) / l) * afstand, 0, sz - ((dz - sz) / l) * afstand]; };
+// Camera-regel (SpringArmCamera): de camera staat aan de yaw-kant van het poppetje,
+// dus kies yaw zó dat de camera aan de LAGE kant van de helling staat (anders kijk je
+// ín de berg). Op de vulkaanflank = van het vulkaanmidden af.
+const yawVanafVulkaan = (sx, sz) => Math.atan2(VULKAAN.x - sx, VULKAAN.z - sz);
+const BERG_SPAWNS = {
+  kabelbaan: { spawn: naarDoel(KABEL_DAL.x, KABEL_DAL.z, VULKAAN.x, VULKAAN.z, 9), yaw: null, doel: [KABEL_DAL.x, KABEL_DAL.z], pitch: 0.08 },
+  slee: (() => { const sp = naarDoel(SLEE_START.x, SLEE_START.z, VULKAAN.x, VULKAAN.z, 5); return { spawn: sp, yaw: yawVanafVulkaan(sp[0], sp[2]), pitch: 0.16 }; })(),
+  // op het brugdek (30% vanaf de vulkaankant), camera aan de vulkaankant → je kijkt de brug op
+  hangbrug: { spawn: [BRUG.ax + BRUG.ux * BRUG.L * 0.3, 0, BRUG.az + BRUG.uz * BRUG.L * 0.3], yaw: Math.atan2(BRUG.ux, BRUG.uz), pitch: 0.12 },
+};
 import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark, herstelWandeling } from "../features/zoo/wandelRoutes";
+import { LINT_BANDEN } from "../features/zoo/leerpadLint";
 import { WANDEL_REWARD } from "../features/zoo/zooEconomy";
 import { spreek, stopSpreken, gidsIsStil, zetGidsStil } from "../features/zoo/parkGids";
 import { parkAudioStart, parkAudioStil, parkAudioStop } from "../features/zoo/parkAudio";
@@ -1680,9 +1702,20 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       return (TAFEREEL_BY_ID[id] || PARK_LEERMOMENTEN[id]) ? id : null;
     } catch { return null; }
   });
-  const deeplinkSpawn = deeplinkScene && TAFEREEL_BY_ID[deeplinkScene]
-    ? [TAFEREEL_BY_ID[deeplinkScene].pos[0], 0, TAFEREEL_BY_ID[deeplinkScene].pos[1] + 4]
-    : null;
+  // 🌋 ?scene=vulkaan (Mark 6 sep): de vulkaan staat buiten het hek op een vaste
+  // plek — spawn aan de voet, aan de parkkant, met de camera erop gericht.
+  const deeplinkSpawn = deeplinkScene === "vulkaan"
+    ? VULKAAN_SPAWN
+    : BERG_SPAWNS[deeplinkScene]
+      ? BERG_SPAWNS[deeplinkScene].spawn
+    : deeplinkScene && TAFEREEL_BY_ID[deeplinkScene]
+      ? [TAFEREEL_BY_ID[deeplinkScene].pos[0], 0, TAFEREEL_BY_ID[deeplinkScene].pos[1] + 4]
+      : null;
+  useEffect(() => {
+    if (deeplinkScene === "vulkaan") { inputRef.current.cam.yaw = VULKAAN_KIJK_YAW; inputRef.current.cam.pitch = 0.02; inputRef.current.cam.dist = 14; }
+    const b = BERG_SPAWNS[deeplinkScene];
+    if (b) { inputRef.current.cam.yaw = b.yaw != null ? b.yaw : Math.atan2(b.doel[0] - b.spawn[0], b.doel[1] - b.spawn[2]); inputRef.current.cam.pitch = b.pitch; inputRef.current.cam.dist = 12; }
+  }, [deeplinkScene]);
   const deeplinkKlaar = useRef(false);
   useEffect(() => {
     if (!deeplinkScene || !loaded || deeplinkKlaar.current) return;
@@ -3036,6 +3069,19 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div style={{ position: "absolute", left: 10, bottom: COARSE_POINTER ? 208 : 104, zIndex: 12, maxWidth: "min(320px, 80vw)", background: "rgba(255,254,248,0.96)", borderLeft: `6px solid ${wandelRoute.kleur}`, borderRadius: 12, padding: "8px 34px 8px 12px", font: "700 12.5px/1.4 system-ui", color: "#234", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }}>
           🥾 {wandelRoute.naam} · stop {wandeling.stopIdx + 1} van {stopsVan(wandeling).length}
           <div style={{ font: "800 13px system-ui", marginTop: 2 }}>Loop naar {wandelStop.emoji} {wandelStop.label}!</div>
+          {/* 📚 Voor welke groep is deze stop? (Mark 4 sep: "kan hierbij gezet
+              worden welke groep, bv groep 8"). De band van het leermoment is
+              precies; valt terug op de groep van de route. */}
+          {(() => {
+            const m = PARK_LEERMOMENTEN[wandelStop.moment];
+            const band = typeof m?.band === "number" ? LINT_BANDEN[m.band] : null;
+            const groep = band?.groep || wandelRoute.groep;
+            return groep ? (
+              <div style={{ font: "700 11.5px system-ui", color: "#3b5568", marginTop: 3 }}>
+                📚 {groep}
+              </div>
+            ) : null;
+          })()}
           {wandelStop.reden === "klaargezet-juf" && (
             <div style={{ font: "700 11.5px system-ui", color: "#8a4a8a", marginTop: 2 }}>💛 Voor jou klaargezet door je juf of meester!</div>
           )}

@@ -77,7 +77,7 @@ for (const code of codes) {
       <img src="data:image/png;base64,${logo64}" alt="Leerkwartier-logo" />
       <span class="naam">Leerkwartier</span>
     </div>
-    <div class="payoff">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    <div class="payoff">Een kwartier per dag leren, een leven lang slimmer.</div>
     <div class="pill">Voor kinderen in groep 6, 7 en 8</div>
     <h1>Gratis oefenen voor de Doorstroomtoets</h1>
     <ul>

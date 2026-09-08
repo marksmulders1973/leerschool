@@ -207,7 +207,7 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:520px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
-    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag — écht begrijpen wat je leert.</div>
+    <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">Een kwartier per dag leren, een leven lang slimmer.</div>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 14px;">${hoi}</p>
     <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;">${esc(intro)}</p>
     ${vraagBlok.html}
@@ -226,7 +226,7 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag, écht begrijpen wat je leert.`;
+  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 
   return { onderwerp, html, text };
 }

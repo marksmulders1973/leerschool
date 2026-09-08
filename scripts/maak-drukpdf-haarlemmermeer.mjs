@@ -53,7 +53,7 @@ html = html.replace(/<body>/, '<body><div class="drukpagina"><div class="velwrap
 html = html.replace(/<\/body>/, `</div></div>
 <div class="drukpagina"><div class="achterkant">
   <img class="logo" src="${logoSrc}" alt="Leerkwartier" />
-  <div class="slogan">Een kwartier per dag —<br/>écht begrijpen wat je leert.</div>
+  <div class="slogan">Een kwartier per dag leren,<br/>een leven lang slimmer.</div>
   <img class="qr" src="${qrSrc}" alt="QR-code" />
   <div class="code">HAARLEMMERMEER2027</div>
   <div class="url">leerkwartier.app</div>

@@ -26,8 +26,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — controleer decimaal.", "Te weinig.", "Te veel."],
         uitlegPad: {
-          stappen: [{ titel: "× 1000", tekst: "1 km = 1000 m → 3,5 km × 1000 = **3500 m**. De komma schuift 3 plaatsen naar rechts." }],
-          niveaus: { basis: "3,5 × 1000 = 3500.", simpeler: "Vermenigvuldig met 1000.", nogSimpeler: "3500" },
+          stappen: [
+            { titel: "Van kilometer naar meter", tekst: "Een kilometer is een grotere eenheid dan een meter. Ga je van een grote naar een kleinere eenheid, dan vermenigvuldig je." },
+            { titel: "Met hoeveel vermenigvuldig je?", tekst: "Bedenk hoeveel meter er in één kilometer gaan, en vermenigvuldig 3,5 daarmee. Let op waar de komma dan komt te staan." },
+          ],
+          woorden: [{ woord: "kilometer", uitleg: "Een lengte-eenheid voor grote afstanden, zoals tussen twee steden. Veel groter dan een meter." }],
+          theorie: "Lengte-eenheden zoals **kilometer**, **meter**, **centimeter** en **millimeter** vormen een reeks die per stap tien keer groter of kleiner wordt. Reken je van een grote naar een kleine eenheid, dan **vermenigvuldig** je; van klein naar groot **deel** je. Tussen kilometer en meter is de stap keer duizend.",
+          voorbeelden: [{ type: "sport", tekst: "Een hardloopwedstrijd van 2,3 kilometer reken je om naar meter om te weten hoeveel ronden van 400 meter dat ongeveer is." }],
+          basiskennis: [{ onderwerp: "Groot naar klein = keer", uitleg: "Ga je van een grotere naar een kleinere lengte-eenheid, dan wordt het getal groter — dus vermenigvuldig je." }],
+          niveaus: { basis: "3,5 × 1000 = 3500.", simpeler: "Vermenigvuldig met 1000.", nogSimpeler: "Hoeveel meter gaan er in één kilometer? Vermenigvuldig daarmee." },
         },
       },
       {
@@ -36,8 +43,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te veel — verwarring met mm.", "Te weinig.", "Onmogelijk."],
         uitlegPad: {
-          stappen: [{ titel: "÷ 100", tekst: "1 m = 100 cm → 450 cm / 100 = **4,5 m**. De komma schuift 2 plaatsen naar links." }],
-          niveaus: { basis: "450/100=4,5.", simpeler: "Deel door 100.", nogSimpeler: "4,5" },
+          stappen: [
+            { titel: "Van centimeter naar meter", tekst: "Centimeter is een kleinere eenheid dan meter. Ga je van klein naar groot, dan deel je." },
+            { titel: "Met hoeveel deel je?", tekst: "Bedenk hoeveel centimeter er in één meter gaan, en deel 450 daardoor." },
+          ],
+          woorden: [{ woord: "centimeter", uitleg: "Een kleine lengte-eenheid; een vinger is ongeveer 1 cm breed." }],
+          theorie: "Bij het omrekenen tussen lengte-eenheden geldt: elke stap van een grotere naar een kleinere eenheid is **keer 10**, en andersom **deel door 10**. Tussen centimeter en meter zit een stap van honderd.",
+          voorbeelden: [{ type: "thuis", tekst: "Een tafel van 120 cm reken je om naar meter om te checken of hij in de auto past." }],
+          basiskennis: [{ onderwerp: "Klein naar groot = delen", uitleg: "Ga je van een kleinere naar een grotere eenheid, dan wordt het getal kleiner — dus deel je." }],
+          niveaus: { basis: "450/100=4,5.", simpeler: "Deel door 100.", nogSimpeler: "Hoeveel centimeter gaan er in één meter? Deel daardoor." },
         },
       },
       {
@@ -46,8 +60,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — × niet ÷.", "Te klein.", "Veel te klein."],
         uitlegPad: {
-          stappen: [{ titel: "÷ 10", tekst: "1 cm = 10 mm → 75 mm / 10 = **7,5 cm**. Klein voorbeeld: 1 cm-streepje is 10 mm-streepjes." }],
-          niveaus: { basis: "75/10=7,5.", simpeler: "Deel door 10.", nogSimpeler: "7,5" },
+          stappen: [
+            { titel: "Millimeter naar centimeter", tekst: "Millimeter is nog kleiner dan centimeter. Ga je naar een grotere eenheid, dan deel je." },
+            { titel: "Reken uit", tekst: "Bedenk hoeveel millimeter er in één centimeter gaan, en deel 75 daardoor." },
+          ],
+          woorden: [{ woord: "millimeter", uitleg: "De kleinste lengte-eenheid die je op een liniaal ziet — de kleine streepjes tussen de centimeters." }],
+          theorie: "Tussen millimeter en centimeter zit een stap van tien: 1 centimeter bestaat uit tien millimeter. Dat is dezelfde soort stap als tussen andere buur-eenheden in de lengtereeks.",
+          voorbeelden: [{ type: "school", tekst: "Op je liniaal tel je 30 streepjes millimeter — dat reken je om naar centimeter om de lengte van je potlood op te schrijven." }],
+          basiskennis: [{ onderwerp: "Liniaal", uitleg: "Op een liniaal staan de kleine streepjes voor millimeter, de grote cijfers voor centimeter." }],
+          niveaus: { basis: "75/10=7,5.", simpeler: "Deel door 10.", nogSimpeler: "Hoeveel millimeter gaan er in één centimeter? Deel daardoor." },
         },
       },
       {
@@ -57,9 +78,14 @@ const steps = [
         wrongHints: [null, "Niet — cm wordt klein bedrag.", "Niet — geen 5 m.", "Idem."],
         uitlegPad: {
           stappen: [
-            { titel: "Alles naar m", tekst: "1 km = 1000 m.\n250 m blijft.\n50 cm = 0,5 m.\nSom: 1000 + 250 + 0,5 = **1250,5 m**." },
+            { titel: "Alles naar dezelfde eenheid", tekst: "Voor je kunt optellen, moeten alle maten in dezelfde eenheid staan. Reken de kilometer en de centimeter allebei om naar meter." },
+            { titel: "Tel op", tekst: "Zet de drie omgerekende getallen onder elkaar en tel ze bij elkaar op." },
           ],
-          niveaus: { basis: "1000+250+0,5=1250,5.", simpeler: "Alles m → optellen.", nogSimpeler: "1250,5" },
+          woorden: [{ woord: "optellen met eenheden", uitleg: "Je mag afstanden in verschillende eenheden pas optellen nadat je ze allemaal naar dezelfde eenheid hebt omgerekend." }],
+          theorie: "Bij een som met meerdere lengte-eenheden (zoals kilometer, meter en centimeter door elkaar) reken je **eerst alles om naar één eenheid**, en tel je pas daarna op. Doe je dat niet, dan tel je eigenlijk appels en peren bij elkaar op.",
+          voorbeelden: [{ type: "thuis", tekst: "Je legt een route van 2 km, dan nog 400 m, en tot slot 25 cm tot de deur — voor de totale afstand zet je alles eerst om naar meter." }],
+          basiskennis: [{ onderwerp: "Niet zomaar optellen", uitleg: "1 km en 1 cm zijn geen 'gelijke stukken' — eerst allebei omzetten naar dezelfde eenheid, dan pas optellen." }],
+          niveaus: { basis: "1000+250+0,5=1250,5.", simpeler: "Alles m → optellen.", nogSimpeler: "Zet kilometer en centimeter allebei om naar meter — wat krijg je als je alles optelt?" },
         },
       },
       {
@@ -69,9 +95,14 @@ const steps = [
         wrongHints: [null, "Niet — × schaal.", "Niet — controleer.", "Te ver."],
         uitlegPad: {
           stappen: [
-            { titel: "4 cm × 50 000 = 200 000 cm", tekst: "200 000 cm = 2000 m = **2 km**. Werkwijze: cm-op-kaart × schaalfactor = cm-echt → omzetten naar km." },
+            { titel: "Wat betekent de schaal?", tekst: "Bij schaal 1:50 000 betekent elke centimeter op de kaart 50 000 centimeter in het echt." },
+            { titel: "Reken de echte afstand uit", tekst: "Vermenigvuldig de 4 centimeter op de kaart met de schaalfactor, en zet de uitkomst om naar kilometer." },
           ],
-          niveaus: { basis: "2 km.", simpeler: "4 × 50 000 cm = 2 km.", nogSimpeler: "2" },
+          woorden: [{ woord: "schaal", uitleg: "Het getal dat aangeeft hoeveel keer kleiner een kaart is dan de werkelijkheid, bijvoorbeeld 1:50 000." }],
+          theorie: "Een **schaal** zoals 1:50 000 vertelt hoeveel keer de werkelijkheid is verkleind op een kaart. Om een echte afstand te vinden, vermenigvuldig je de gemeten afstand op de kaart met het tweede getal van de schaal, en reken je daarna om naar een handige eenheid zoals kilometer.",
+          voorbeelden: [{ type: "school", tekst: "Bij een schoolreisje bekijk je een wandelkaart met schaal 1:25 000 om te zien hoe ver de picknickplek écht is." }],
+          basiskennis: [{ onderwerp: "Schaal-getal", uitleg: "Bij 1:50 000 is elke centimeter op de kaart in werkelijkheid 50 000 centimeter." }],
+          niveaus: { basis: "2 km.", simpeler: "4 × 50 000 cm = 2 km.", nogSimpeler: "Vermenigvuldig 4 met de schaalfactor — hoeveel kilometer is dat?" },
         },
       },
     ],
@@ -89,8 +120,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — vergeet niet × 2.", "Niet — dat is oppervlakte (m²).", "Niet — controleer."],
         uitlegPad: {
-          stappen: [{ titel: "2(L+B)", tekst: "2(6+4) = 2 × 10 = **20 m**. Stel je het rond-lopen voor: 6 + 4 + 6 + 4 = 20 m." }],
-          niveaus: { basis: "2(6+4)=20.", simpeler: "6+4+6+4=20.", nogSimpeler: "20" },
+          stappen: [
+            { titel: "Wat is omtrek?", tekst: "Omtrek is de afstand als je helemaal om de rechthoek heen loopt — alle vier de zijden samen." },
+            { titel: "Gebruik de formule", tekst: "Tel lengte en breedte bij elkaar op en verdubbel dat — zo bereken je de omtrek van een rechthoek." },
+          ],
+          woorden: [{ woord: "omtrek", uitleg: "De totale lengte van de rand van een figuur, als je er helemaal omheen loopt." }],
+          theorie: "Bij een **rechthoek** met lengte L en breedte B bereken je de omtrek met **2 × (L + B)**, omdat een rechthoek twee lange en twee korte zijden heeft. Een vierkant is een bijzondere rechthoek waarbij alle zijden even lang zijn.",
+          voorbeelden: [{ type: "thuis", tekst: "Om te weten hoeveel plint je nodig hebt langs de rand van een kamer van 5 bij 3 meter, bereken je eerst de omtrek." }],
+          basiskennis: [{ onderwerp: "Vier zijden", uitleg: "Een rechthoek heeft twee lange en twee korte zijden — bij de omtrek tel je ze allemaal mee." }],
+          niveaus: { basis: "2(6+4)=20.", simpeler: "6+4+6+4=20.", nogSimpeler: "Tel lengte en breedte op en verdubbel dat — wat kom je uit?" },
         },
       },
       {
@@ -99,8 +137,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is omtrek.", "Niet — niet 2×.", "Niet — eenheid moet cm²."],
         uitlegPad: {
-          stappen: [{ titel: "z²", tekst: "7 × 7 = **49 cm²**. Eenheid OPPERVLAKTE = cm² (vierkante cm), niet cm." }],
-          niveaus: { basis: "7²=49 cm².", simpeler: "Zijde keer zijde = 49.", nogSimpeler: "49" },
+          stappen: [
+            { titel: "Wat is oppervlakte?", tekst: "Oppervlakte is hoeveel ruimte er binnen het figuur past — niet de rand, maar het vlak zelf." },
+            { titel: "Formule voor een vierkant", tekst: "Bij een vierkant vermenigvuldig je de zijde met zichzelf." },
+          ],
+          woorden: [{ woord: "vierkant", uitleg: "Een figuur met vier gelijke zijden en vier rechte hoeken." }],
+          theorie: "De oppervlakte van een **vierkant** met zijde z bereken je met **z × z**. De uitkomst staat altijd in vierkante eenheden, zoals cm², omdat je een lengte met een lengte vermenigvuldigt.",
+          voorbeelden: [{ type: "school", tekst: "Een vierkant tegeltje van 10 cm bij 10 cm gebruik je om te berekenen hoeveel ruimte het inneemt op tafel." }],
+          basiskennis: [{ onderwerp: "Vierkante eenheid", uitleg: "Oppervlakte reken je altijd in vierkante eenheden zoals cm² of m², niet in gewone cm of m." }],
+          niveaus: { basis: "7²=49 cm².", simpeler: "Zijde keer zijde = 49.", nogSimpeler: "Vermenigvuldig de zijde met zichzelf — wat kom je uit?" },
         },
       },
       {
@@ -110,9 +155,14 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [
-            { titel: "× 10 000 per m² → cm²", tekst: "1 m² = 10 000 cm² (= 100×100). 2,5 × 10 000 = **25 000 cm²**. Veelgemaakte fout: alleen ×100 gebruiken (lengte-truc) → vergeet 2D-effect." },
+            { titel: "Oppervlakte werkt anders dan lengte", tekst: "Bij oppervlakte-eenheden is de stap tussen buur-eenheden keer honderd, niet keer tien zoals bij lengte." },
+            { titel: "Reken om", tekst: "Bedenk hoeveel vierkante centimeter er in één vierkante meter gaan, en vermenigvuldig dat met 2,5." },
           ],
-          niveaus: { basis: "2,5 × 10000 = 25000.", simpeler: "Per m² is 10000 cm².", nogSimpeler: "25000" },
+          woorden: [{ woord: "vierkante meter (m²)", uitleg: "De oppervlakte van een vierkant van 1 meter bij 1 meter." }],
+          theorie: "Omdat oppervlakte **twee richtingen** tegelijk heeft (lengte én breedte), is de stap tussen twee oppervlakte-eenheden **honderd** keer zo groot, in plaats van tien zoals bij lengte. Dit is een veelgemaakte fout op de toets.",
+          voorbeelden: [{ type: "thuis", tekst: "Een woonkamer van 20 m² reken je om naar cm² om te zien hoeveel kleine tegeltjes van 1 cm² er theoretisch in zouden passen." }],
+          basiskennis: [{ onderwerp: "Factor honderd", uitleg: "Tussen twee opeenvolgende oppervlakte-eenheden (zoals cm² en dm²) zit altijd een factor honderd." }],
+          niveaus: { basis: "2,5 × 10000 = 25000.", simpeler: "Per m² is 10000 cm².", nogSimpeler: "Hoeveel cm² gaan er in 1 m²? Vermenigvuldig dat met 2,5." },
         },
       },
       {
@@ -122,10 +172,14 @@ const steps = [
         wrongHints: [null, "Niet — vergeet hoekje.", "Niet — te veel afgetrokken.", "Niet — niet bijvoegen."],
         uitlegPad: {
           stappen: [
-            { titel: "Geheel min stuk", tekst: "Volledig rechthoek: 10 × 6 = 60 m². Min hoekje: 3 × 2 = 6 m². Resultaat: 60 − 6 = **54 m²**." },
+            { titel: "Denk in twee stukken", tekst: "Bereken eerst de oppervlakte van de hele rechthoek, alsof het hoekje er nog in zit." },
+            { titel: "Haal het hoekje eraf", tekst: "Bereken de oppervlakte van het weggehaalde hoekje apart en trek die af van de hele rechthoek." },
           ],
-          theorie: "Andere aanpak: opdelen in twee rechthoeken + optellen. Komt op zelfde antwoord.",
-          niveaus: { basis: "60−6=54.", simpeler: "Heel min hoekje.", nogSimpeler: "54" },
+          woorden: [{ woord: "samengestelde figuur", uitleg: "Een figuur dat is opgebouwd uit meerdere rechthoeken, of een rechthoek met een stuk eraf." }],
+          theorie: "Bij een **samengestelde figuur** (geen gewone rechthoek) splits je de vorm op in eenvoudige rechthoeken. Je telt de oppervlaktes bij elkaar op, of trekt een ontbrekend stuk af van een groter geheel — beide manieren geven hetzelfde antwoord.",
+          voorbeelden: [{ type: "thuis", tekst: "Een L-vormige woonkamer bereken je door 'm op te delen in twee rechthoeken en de oppervlaktes op te tellen." }],
+          basiskennis: [{ onderwerp: "Twee manieren", uitleg: "Je kunt optellen (twee rechthoeken samen) of aftrekken (groot geheel min een hoekje) — kies wat handiger uitrekent." }],
+          niveaus: { basis: "60−6=54.", simpeler: "Heel min hoekje.", nogSimpeler: "Bereken de hele rechthoek, en trek daar het hoekje van af — wat kom je uit?" },
         },
       },
       {
@@ -134,9 +188,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
         uitlegPad: {
-          stappen: [{ titel: "1 ha = 10 000 m²", tekst: "2 × 10 000 = **20 000 m²**. Een hectare is dus 100 × 100 m (vierkant)." }],
-          theorie: "Voetbalveld ~7140 m² (105×68). 1 ha ≈ 1,4 voetbalveld.",
-          niveaus: { basis: "2 × 10 000 = 20 000.", simpeler: "1 ha = 10 000 m².", nogSimpeler: "20000" },
+          stappen: [
+            { titel: "Wat is een hectare?", tekst: "Een hectare is een oppervlakte-eenheid die je vaak ziet bij velden, parken en boerderijen." },
+            { titel: "Reken om naar m²", tekst: "Bedenk hoeveel vierkante meter er in één hectare gaan, en vermenigvuldig dat met 2." },
+          ],
+          woorden: [{ woord: "hectare", uitleg: "Een grote oppervlakte-eenheid, ongeveer zo groot als anderhalf voetbalveld." }],
+          theorie: "De **hectare** (ha) is een handige eenheid voor grote oppervlaktes zoals velden en parken. Eén hectare komt overeen met een vierkant van honderd meter bij honderd meter. Een voetbalveld (~7140 m²) is ongeveer 1,4 hectare.",
+          voorbeelden: [{ type: "buiten", tekst: "Een boer met 5 hectare land rekent dat om naar vierkante meter om te weten hoeveel gewas erop past." }],
+          basiskennis: [{ onderwerp: "Vierkant van 100 bij 100", uitleg: "Eén hectare is de oppervlakte van een vierkant van 100 meter bij 100 meter." }],
+          niveaus: { basis: "2 × 10 000 = 20 000.", simpeler: "1 ha = 10 000 m².", nogSimpeler: "Hoeveel m² gaan er in 1 hectare? Vermenigvuldig dat met 2." },
         },
       },
     ],
@@ -154,8 +214,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — vergeet ½ niet.", "Niet — geen omtrek.", "Niet — eenheid cm² nodig."],
         uitlegPad: {
-          stappen: [{ titel: "½ × b × h", tekst: "½ × 10 × 6 = **30 cm²**. Tip: één manier om 't te onthouden: rechthoek-helft. Driehoek = halve rechthoek met zelfde basis + hoogte." }],
-          niveaus: { basis: "½·10·6=30 cm².", simpeler: "Half van b×h = 30.", nogSimpeler: "30" },
+          stappen: [
+            { titel: "Formule driehoek", tekst: "De oppervlakte van een driehoek is de helft van basis keer hoogte." },
+            { titel: "Reken uit", tekst: "Vermenigvuldig basis en hoogte met elkaar, en neem daar de helft van." },
+          ],
+          woorden: [{ woord: "hoogte (bij driehoek)", uitleg: "De loodrechte lijn van de basis naar de tegenoverliggende hoek — niet de schuine zijde." }],
+          theorie: "De oppervlakte van een **driehoek** is altijd **de helft** van basis keer hoogte, omdat een driehoek precies de helft is van een rechthoek met dezelfde basis en hoogte. Let op: de hoogte staat loodrecht op de basis, niet schuin.",
+          voorbeelden: [{ type: "school", tekst: "Een driehoekige vlag van 20 cm basis en 8 cm hoogte bereken je met dezelfde formule." }],
+          basiskennis: [{ onderwerp: "Halve rechthoek", uitleg: "Een driehoek is de helft van een rechthoek met dezelfde basis en hoogte." }],
+          niveaus: { basis: "½·10·6=30 cm².", simpeler: "Half van b×h = 30.", nogSimpeler: "Vermenigvuldig basis en hoogte, en neem daar de helft van — wat kom je uit?" },
         },
       },
       {
@@ -165,9 +232,14 @@ const steps = [
         wrongHints: [null, "Niet — vergeet diameter (× 2 straal).", "Te groot.", "Niet — dat is oppervlakte-orde."],
         uitlegPad: {
           stappen: [
-            { titel: "Omtrek = π · d", tekst: "Met diameter direct: π × d = 3,14 × 14 = **43,96 cm**. Of via straal: r = 7, 2 × 3,14 × 7 = 43,96." },
+            { titel: "Omtrek-formule cirkel", tekst: "De omtrek van een cirkel bereken je met π keer de diameter." },
+            { titel: "Vul in", tekst: "Vermenigvuldig 3,14 met de diameter van deze cirkel." },
           ],
-          niveaus: { basis: "π·d=43,96.", simpeler: "π × 14 = 44.", nogSimpeler: "~44" },
+          woorden: [{ woord: "diameter", uitleg: "De lijn dwars door het midden van de cirkel, van rand tot rand — twee keer de straal." }],
+          theorie: "De omtrek van een **cirkel** bereken je met **π × diameter** (of hetzelfde: 2 × π × straal). Op de toets gebruik je meestal π ≈ 3,14.",
+          voorbeelden: [{ type: "sport", tekst: "Een rond zwembad met een diameter van 6 meter — de omtrek daarvan reken je uit met dezelfde formule." }],
+          basiskennis: [{ onderwerp: "Diameter versus straal", uitleg: "De diameter is twee keer zo lang als de straal — let op welke van de twee gegeven is." }],
+          niveaus: { basis: "π·d=43,96.", simpeler: "π × 14 = 44.", nogSimpeler: "Vermenigvuldig 3,14 met de diameter — wat kom je uit?" },
         },
       },
       {
@@ -177,9 +249,14 @@ const steps = [
         wrongHints: [null, "Te klein.", "Niet — dat is omtrek-formule.", "Niet — vergeet π."],
         uitlegPad: {
           stappen: [
-            { titel: "π · r²", tekst: "π × 10² = 3,14 × 100 = **314 m²**. Belangrijk: r² = 100, niet 10×2." },
+            { titel: "Oppervlakte-formule cirkel", tekst: "De oppervlakte van een cirkel bereken je met π keer de straal in het kwadraat." },
+            { titel: "Vul in", tekst: "Vermenigvuldig de straal met zichzelf, en vermenigvuldig dat met 3,14." },
           ],
-          niveaus: { basis: "π·100=314.", simpeler: "π × straal² = 314 m².", nogSimpeler: "314" },
+          woorden: [{ woord: "straal (radius)", uitleg: "De afstand van het midden van de cirkel tot de rand." }],
+          theorie: "De oppervlakte van een **cirkel** bereken je met **π × straal²**. Vergeet niet eerst de straal te kwadrateren (met zichzelf te vermenigvuldigen) vóórdat je met π vermenigvuldigt.",
+          voorbeelden: [{ type: "buiten", tekst: "Een rond terras met een straal van 3 meter — de oppervlakte daarvan bereken je met dezelfde formule." }],
+          basiskennis: [{ onderwerp: "Kwadraat", uitleg: "Straal² betekent de straal keer zichzelf, niet de straal keer 2." }],
+          niveaus: { basis: "π·100=314.", simpeler: "π × straal² = 314 m².", nogSimpeler: "Vermenigvuldig de straal met zichzelf, en dan met 3,14 — wat kom je uit?" },
         },
       },
       {
@@ -188,9 +265,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — vergeet ½.", "Niet — niet schuine × basis.", "Niet — onmogelijk groot."],
         uitlegPad: {
-          stappen: [{ titel: "½ × 4 × 3", tekst: "Schuine zijde 5 niet nodig voor oppervlakte. Alleen basis (4) + hoogte (3) tellen: ½ × 4 × 3 = **6**. Schuine zijde is voor controle (Pythagoras: 3²+4²=25=5²)." }],
-          theorie: "Bij rechthoekige driehoek vallen rechthoek-zijden samen met basis + hoogte.",
-          niveaus: { basis: "½·4·3=6.", simpeler: "Half van basis×hoogte = 6.", nogSimpeler: "6" },
+          stappen: [
+            { titel: "Welke maten heb je nodig?", tekst: "Voor de oppervlakte van een driehoek gebruik je alleen de basis en de hoogte — de schuine zijde is hier niet nodig." },
+            { titel: "Reken uit", tekst: "Vermenigvuldig basis en hoogte, en neem daar de helft van." },
+          ],
+          woorden: [{ woord: "schuine zijde", uitleg: "De langste zijde van een rechthoekige driehoek, tegenover de rechte hoek — telt niet mee bij de oppervlakte-formule." }],
+          theorie: "Bij een driehoek gebruik je voor de oppervlakte altijd **basis en hoogte** — extra gegeven zijden, zoals een schuine zijde, zijn voor deze berekening niet nodig. Ze kunnen wel gebruikt worden om iets anders te controleren, zoals met de stelling van Pythagoras.",
+          voorbeelden: [{ type: "school", tekst: "Bij een driehoekig dak krijg je soms ook de lengte van de dakrand (schuine zijde) erbij, terwijl je voor de oppervlakte alleen basis en hoogte nodig hebt." }],
+          basiskennis: [{ onderwerp: "Niet alle info is nodig", uitleg: "Een som kan meer maten geven dan je nodig hebt — kies alleen wat bij de formule hoort." }],
+          niveaus: { basis: "½·4·3=6.", simpeler: "Half van basis×hoogte = 6.", nogSimpeler: "Vermenigvuldig basis en hoogte, en neem daar de helft van — wat kom je uit?" },
         },
       },
       {
@@ -200,9 +283,14 @@ const steps = [
         wrongHints: [null, "Niet — dat is hele cirkel.", "Te klein.", "Te klein, vergeet π."],
         uitlegPad: {
           stappen: [
-            { titel: "½ × π × r²", tekst: "Hele cirkel: π × 4² = 3,14 × 16 = 50,24 cm². Half: 50,24 / 2 = **25,12 cm²**." },
+            { titel: "Eerst de hele cirkel", tekst: "Bereken eerst de oppervlakte van de hele cirkel met π keer straal in het kwadraat." },
+            { titel: "Dan de helft", tekst: "Omdat het om een halve cirkel gaat, deel je die oppervlakte door twee." },
           ],
-          niveaus: { basis: "½ · π · 16 = 25,12.", simpeler: "Hele cirkel ÷ 2.", nogSimpeler: "25,12" },
+          woorden: [{ woord: "halve cirkel", uitleg: "Een cirkel die precies doormidden is gedeeld, bijvoorbeeld een regenboog-vorm." }],
+          theorie: "Voor een **halve cirkel** bereken je eerst de oppervlakte van de hele cirkel, en deel je die uitkomst door twee. Dit werkt ook voor een kwart cirkel — dan deel je door vier.",
+          voorbeelden: [{ type: "thuis", tekst: "Een halfrond raam boven de voordeur met een straal van 50 cm bereken je op dezelfde manier." }],
+          basiskennis: [{ onderwerp: "Deel-cirkels", uitleg: "Bij een deel van een cirkel bereken je eerst de hele cirkel, en deel je daarna door het juiste aantal delen." }],
+          niveaus: { basis: "½ · π · 16 = 25,12.", simpeler: "Hele cirkel ÷ 2.", nogSimpeler: "Bereken eerst de hele cirkel, en deel dat door twee — wat kom je uit?" },
         },
       },
     ],
@@ -220,8 +308,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is opp van één vlak.", "Niet — dat is 3 × z.", "Onjuist."],
         uitlegPad: {
-          stappen: [{ titel: "z³", tekst: "5 × 5 × 5 = **125 cm³**. Eenheid INHOUD = cm³ (kubieke cm). Of in liter: 125 mL." }],
-          niveaus: { basis: "5³=125 cm³.", simpeler: "z×z×z = 125.", nogSimpeler: "125" },
+          stappen: [
+            { titel: "Wat is inhoud?", tekst: "Inhoud is hoeveel ruimte een 3D-figuur inneemt, zoals hoeveel water er in past." },
+            { titel: "Formule kubus", tekst: "Bij een kubus vermenigvuldig je de zijde drie keer met zichzelf." },
+          ],
+          woorden: [{ woord: "kubus", uitleg: "Een 3D-figuur waarbij alle zijden even lang zijn, zoals een dobbelsteen." }],
+          theorie: "De inhoud van een **kubus** met zijde z bereken je met **z × z × z**. De uitkomst staat in kubieke eenheden, zoals cm³, omdat je drie lengtes met elkaar vermenigvuldigt.",
+          voorbeelden: [{ type: "thuis", tekst: "Een kubusvormige opbergdoos met een zijde van 20 cm — de inhoud daarvan bereken je met dezelfde formule." }],
+          basiskennis: [{ onderwerp: "Kubieke eenheid", uitleg: "Inhoud reken je altijd in kubieke eenheden zoals cm³ of m³, omdat het om drie dimensies gaat." }],
+          niveaus: { basis: "5³=125 cm³.", simpeler: "z×z×z = 125.", nogSimpeler: "Vermenigvuldig de zijde drie keer met zichzelf — wat kom je uit?" },
         },
       },
       {
@@ -230,8 +325,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — vermenigvuldigen alle drie.", "Niet.", "Niet."],
         uitlegPad: {
-          stappen: [{ titel: "L × B × H", tekst: "8 × 4 × 3 = **96 cm³**. Volgorde maakt niet uit." }],
-          niveaus: { basis: "8·4·3=96.", simpeler: "Drie maten vermenigvuldigen.", nogSimpeler: "96" },
+          stappen: [
+            { titel: "Formule balk", tekst: "Bij een balk vermenigvuldig je lengte, breedte en hoogte met elkaar." },
+            { titel: "Reken uit", tekst: "Vermenigvuldig de drie gegeven maten stap voor stap met elkaar." },
+          ],
+          woorden: [{ woord: "balk", uitleg: "Een 3D-figuur zoals een schoenendoos, met lengte, breedte en hoogte die niet allemaal gelijk hoeven te zijn." }],
+          theorie: "De inhoud van een **balk** bereken je met **lengte × breedte × hoogte**. In tegenstelling tot een kubus hoeven deze drie maten niet gelijk te zijn.",
+          voorbeelden: [{ type: "thuis", tekst: "Een verhuisdoos van 50 cm bij 30 cm bij 40 cm — de inhoud daarvan bereken je met dezelfde formule." }],
+          basiskennis: [{ onderwerp: "Volgorde maakt niet uit", uitleg: "Bij vermenigvuldigen mag je de drie maten in elke volgorde met elkaar vermenigvuldigen — de uitkomst blijft gelijk." }],
+          niveaus: { basis: "8·4·3=96.", simpeler: "Drie maten vermenigvuldigen.", nogSimpeler: "Vermenigvuldig de drie maten met elkaar — wat kom je uit?" },
         },
       },
       {
@@ -241,9 +343,14 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Te veel.", "Niet — eenheid L gevraagd."],
         uitlegPad: {
           stappen: [
-            { titel: "cm³ → liter", tekst: "Volume = 60 × 30 × 25 = 45 000 cm³. 1 L = 1000 cm³ → 45 000 / 1000 = **45 L**." },
+            { titel: "Eerst de inhoud in cm³", tekst: "Bereken eerst de inhoud van het aquarium in kubieke centimeter, zoals bij elke balk." },
+            { titel: "Dan omzetten naar liter", tekst: "Bedenk hoeveel kubieke centimeter er in één liter gaan, en deel je uitkomst daardoor." },
           ],
-          niveaus: { basis: "45 000/1000=45 L.", simpeler: "Cm³ delen door 1000 voor L.", nogSimpeler: "45 L" },
+          woorden: [{ woord: "liter", uitleg: "Een inhoudsmaat die je kent van pakken melk of flessen water." }],
+          theorie: "Er geldt een handige regel: **1 liter is precies 1000 kubieke centimeter**. Bereken je de inhoud van iets in cm³, dan hoef je alleen door duizend te delen om liters te krijgen.",
+          voorbeelden: [{ type: "thuis", tekst: "Een emmer van 20 cm bij 20 cm bij 25 cm — hoeveel liter water past daarin?" }],
+          basiskennis: [{ onderwerp: "1 L = 1000 cm³", uitleg: "Deze omrekening gebruik je vaak bij aquaria, emmers en badjes." }],
+          niveaus: { basis: "45 000/1000=45 L.", simpeler: "Cm³ delen door 1000 voor L.", nogSimpeler: "Deel de inhoud in cm³ door duizend — wat kom je uit in liter?" },
         },
       },
       {
@@ -253,9 +360,14 @@ const steps = [
         wrongHints: [null, "Te klein — vergeet r² niet.", "Niet — controleer.", "Niet — alleen omtrek."],
         uitlegPad: {
           stappen: [
-            { titel: "π · r² · h", tekst: "π × 5² × 10 = 3,14 × 25 × 10 = **785 cm³**. (Of 785 mL — een groot glas water.)" },
+            { titel: "Formule cilinder", tekst: "De inhoud van een cilinder is de oppervlakte van het ronde grondvlak, vermenigvuldigd met de hoogte." },
+            { titel: "Reken in twee stappen", tekst: "Bereken eerst de oppervlakte van de cirkel (π keer straal in het kwadraat), en vermenigvuldig die daarna met de hoogte." },
           ],
-          niveaus: { basis: "π·25·10=785.", simpeler: "Cirkel-opp × hoogte.", nogSimpeler: "785" },
+          woorden: [{ woord: "cilinder", uitleg: "Een 3D-figuur met een ronde bodem en rechte zijkanten, zoals een blikje of een pot." }],
+          theorie: "De inhoud van een **cilinder** bereken je met **π × straal² × hoogte** — eigenlijk grondvlak-oppervlakte keer hoogte, net zoals bij een balk.",
+          voorbeelden: [{ type: "thuis", tekst: "Een blikje soep met een straal van 4 cm en een hoogte van 12 cm — de inhoud daarvan bereken je met dezelfde formule." }],
+          basiskennis: [{ onderwerp: "Grondvlak keer hoogte", uitleg: "Zowel bij een balk als bij een cilinder geldt: inhoud = oppervlakte van het grondvlak keer de hoogte." }],
+          niveaus: { basis: "π·25·10=785.", simpeler: "Cirkel-opp × hoogte.", nogSimpeler: "Bereken eerst de cirkel-oppervlakte, en vermenigvuldig die met de hoogte — wat kom je uit?" },
         },
       },
       {
@@ -264,8 +376,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."],
         uitlegPad: {
-          stappen: [{ titel: "1 m³ = 1000 L", tekst: "2500 / 1000 = **2,5 m³**. Vuistregel: groot bad ~150-200 L; klein zwembad ~5000 L = 5 m³." }],
-          niveaus: { basis: "2500/1000=2,5.", simpeler: "L delen door 1000 voor m³.", nogSimpeler: "2,5" },
+          stappen: [
+            { titel: "Ken de omrekening", tekst: "Er geldt een vaste regel tussen liter en kubieke meter." },
+            { titel: "Reken om", tekst: "Bedenk hoeveel liter er in één kubieke meter gaan, en deel 2500 daardoor." },
+          ],
+          woorden: [{ woord: "kubieke meter (m³)", uitleg: "De inhoud van een kubus van 1 meter bij 1 meter bij 1 meter." }],
+          theorie: "Er geldt: **1 kubieke meter is 1000 liter**. Deze omrekening gebruik je bijvoorbeeld bij zwembaden, regentonnen en watertanks.",
+          voorbeelden: [{ type: "buiten", tekst: "Een regenton van 200 liter — hoeveel kubieke meter is dat?" }],
+          basiskennis: [{ onderwerp: "1 m³ = 1000 L", uitleg: "Handig om te onthouden bij grote hoeveelheden water." }],
+          niveaus: { basis: "2500/1000=2,5.", simpeler: "L delen door 1000 voor m³.", nogSimpeler: "Hoeveel liter gaan er in 1 m³? Deel 2500 daardoor." },
         },
       },
     ],
@@ -284,9 +403,14 @@ const steps = [
         wrongHints: [null, "Niet — dat is omtrek.", "Te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [
-            { titel: "Omtrek → zijde → oppervlakte", tekst: "Vierkant: 4 zijden gelijk. Omtrek 32 → zijde = 32/4 = 8 m. Oppervlakte = 8 × 8 = **64 m²**." },
+            { titel: "Van omtrek naar zijde", tekst: "Een vierkant heeft vier gelijke zijden. Deel de omtrek door vier om de lengte van één zijde te vinden." },
+            { titel: "Van zijde naar oppervlakte", tekst: "Vermenigvuldig de gevonden zijde met zichzelf om de oppervlakte te krijgen." },
           ],
-          niveaus: { basis: "Zijde=8, opp=64.", simpeler: "Omtrek/4=zijde=8; 8·8=64.", nogSimpeler: "64" },
+          woorden: [{ woord: "omtrek en oppervlakte", uitleg: "Omtrek is de rand-lengte, oppervlakte is de ruimte binnenin — twee verschillende dingen die je niet mag verwarren." }],
+          theorie: "Bij een vierkant kun je van de **omtrek** terugrekenen naar de **zijde** door door vier te delen (want een vierkant heeft vier gelijke zijden). Met die zijde bereken je vervolgens de oppervlakte.",
+          voorbeelden: [{ type: "thuis", tekst: "Een vierkant tapijt met een omtrek van 12 meter — hoe groot is de oppervlakte daarvan?" }],
+          basiskennis: [{ onderwerp: "Terugrekenen", uitleg: "Soms geeft een som niet de zijde zelf, maar de omtrek — dan reken je eerst terug naar de zijde." }],
+          niveaus: { basis: "Zijde=8, opp=64.", simpeler: "Omtrek/4=zijde=8; 8·8=64.", nogSimpeler: "Deel de omtrek door vier voor de zijde, en vermenigvuldig die zijde met zichzelf — wat kom je uit?" },
         },
       },
       {
@@ -296,9 +420,14 @@ const steps = [
         wrongHints: [null, "Niet — bereken de oppervlakte van de muur, deel door wat een blik dekt, en denk aan afronden.", "Te weinig.", "Niet — onmogelijk."],
         uitlegPad: {
           stappen: [
-            { titel: "Altijd naar boven afronden", tekst: "Muur: 3 × 5 = 15 m². Blikken: 15 / 6 = 2,5 → afronden naar **3 blikken** (anders deel-muur ongedekt)." },
+            { titel: "Bereken eerst de oppervlakte", tekst: "Vermenigvuldig hoogte en breedte van de muur om de oppervlakte te vinden." },
+            { titel: "Deel door de dekking, en rond naar boven af", tekst: "Deel de oppervlakte van de muur door wat één blik dekt. Kom je op iets meer dan een heel getal uit, dan heb je toch een extra blik nodig." },
           ],
-          niveaus: { basis: "15/6=2,5 → 3.", simpeler: "Naar boven afronden.", nogSimpeler: "3" },
+          woorden: [{ woord: "naar boven afronden", uitleg: "Bij hoeveelheden zoals verfblikken kun je nooit een half blik kopen — je rondt daarom altijd naar boven af." }],
+          theorie: "Bij praktijksommen over **hoeveel verpakkingen** je nodig hebt (verf, tegels, dozen), bereken je eerst hoeveel je in totaal nodig hebt, deel je dat door de inhoud van één verpakking, en **rond je altijd naar boven af** — ook al is de uitkomst maar net iets boven een heel getal.",
+          voorbeelden: [{ type: "school", tekst: "Voor een schoolfeest heb je 50 bekertjes nodig en zitten er 12 in een pak — hoeveel pakken koop je?" }],
+          basiskennis: [{ onderwerp: "Altijd naar boven", uitleg: "Bij verpakkingen rond je nooit naar beneden af, ook al is de rest maar klein." }],
+          niveaus: { basis: "15/6=2,5 → 3.", simpeler: "Naar boven afronden.", nogSimpeler: "Deel de oppervlakte van de muur door wat één blik dekt, en rond naar boven af — wat kom je uit?" },
         },
       },
       {
@@ -308,10 +437,14 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],
         uitlegPad: {
           stappen: [
-            { titel: "m³ × 1000 = L", tekst: "Inhoud: 5 × 3 × 1 = 15 m³. 1 m³ = 1000 L → **15 000 L**." },
+            { titel: "Bereken eerst de inhoud in m³", tekst: "Vermenigvuldig de drie afmetingen van het zwembad met elkaar." },
+            { titel: "Zet om naar liter", tekst: "Bedenk hoeveel liter er in één kubieke meter gaan, en vermenigvuldig je uitkomst daarmee." },
           ],
-          theorie: "Vergelijking: standaard badkuip ~250 L. Dit zwembad = 60 baden water.",
-          niveaus: { basis: "15 × 1000 = 15 000.", simpeler: "15 m³ = 15 000 L.", nogSimpeler: "15 000" },
+          woorden: [{ woord: "volgieten", uitleg: "Helemaal vullen met water — hier gevraagd in liters in plaats van kubieke meter." }],
+          theorie: "Bij inhoud-sommen met water is het handig om eerst de inhoud in **kubieke meter** te berekenen, en die daarna om te zetten naar **liter** met de vaste regel: 1 kubieke meter is duizend liter. Ter vergelijking: een gewone badkuip is ongeveer 250 liter.",
+          voorbeelden: [{ type: "buiten", tekst: "Een vijver van 2 bij 1 bij 0,5 meter — hoeveel liter water past daarin?" }],
+          basiskennis: [{ onderwerp: "Grote hoeveelheden water", uitleg: "Zwembaden en vijvers reken je meestal eerst uit in m³, en pas daarna om naar liter." }],
+          niveaus: { basis: "15 × 1000 = 15 000.", simpeler: "15 m³ = 15 000 L.", nogSimpeler: "Bereken eerst de inhoud in m³, en vermenigvuldig dat met duizend voor liters — wat kom je uit?" },
         },
       },
       {
@@ -321,22 +454,32 @@ const steps = [
         wrongHints: [null, "Niet — dat is omtrek.", "Niet — verwarring formule.", "Te veel."],
         uitlegPad: {
           stappen: [
-            { titel: "π · r²", tekst: "3,14 × 4² = 3,14 × 16 = **50,24 m²**." },
+            { titel: "Formule cirkel-oppervlakte", tekst: "Gebruik dezelfde formule als bij elke cirkel: π keer de straal in het kwadraat." },
+            { titel: "Reken uit", tekst: "Vermenigvuldig de straal met zichzelf, en vermenigvuldig dat met 3,14." },
           ],
-          niveaus: { basis: "π·16=50,24.", simpeler: "π · 16 = 50,24 m².", nogSimpeler: "50,24" },
+          woorden: [{ woord: "vijver", uitleg: "Een klein rond of ovaal stukje water, vaak in een tuin of park." }],
+          theorie: "Een ronde vijver reken je op dezelfde manier als elke andere **cirkel**: oppervlakte = π × straal². Het maakt voor de formule niet uit of het om een vijver, een bord of een wiel gaat.",
+          voorbeelden: [{ type: "buiten", tekst: "Een rond terras met straal 3 meter bereken je met dezelfde cirkel-formule als een vijver." }],
+          basiskennis: [{ onderwerp: "Cirkel-vorm herkennen", uitleg: "Zodra iets rond is, gebruik je de cirkel-formules — of het nu een vijver, wiel of bord is." }],
+          niveaus: { basis: "π·16=50,24.", simpeler: "π · 16 = 50,24 m².", nogSimpeler: "Vermenigvuldig de straal met zichzelf, en dan met 3,14 — wat kom je uit?" },
         },
       },
       {
         q: "Een **kaart-schaal 1:10 000**. Op kaart is een veld 5 cm × 4 cm. Werkelijke oppervlakte in m²?",
-        options: ["20 000 m²", "200 m²", "2 000 m²", "2 m²"],
+        // 5 sep 2026: antwoord was een factor 10 te klein (5 cm × 10 000 = 500 m; 4 cm = 400 m; 500 × 400 = 200 000 m²).
+        options: ["200 000 m²", "20 000 m²", "2 000 m²", "200 m²"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Niet — controleer.", "Veel te weinig."],
+        wrongHints: [null, "Factor 10 te weinig — reken eerst élke zijde om naar meters (5 cm op de kaart = 500 m).", "Nee — 5 cm op de kaart is in het echt 500 m, niet 50 m.", "Veel te weinig — de schaal telt in beide richtingen mee."],
         uitlegPad: {
           stappen: [
-            { titel: "Werkelijke maten eerst", tekst: "5 cm × 10 000 = 50 000 cm = 500 m. 4 cm × 10 000 = 40 000 cm = 400 m.\nOppervlakte: 500 × 400 = **200 000 m²**.\n\nHmmm, antwoord-optie is 20 000 m² maar werkelijk = 200 000.\n\nWacht — laat me herchecken. 5 cm op kaart * 10000 = 50 000 cm = 500 m. 4 cm * 10000 = 400 m. Opp = 500*400 = 200 000 m².\n\nLet op: bij schaal-vragen kun je ook eerst opp op kaart × schaal²:\n5×4 = 20 cm² × 10 000² = 20 × 10⁸ cm² = 2·10⁹ cm² = 200 000 m².\n\nDus 200 000 m². Optie hierboven 20 000 is fout in onze tekst. **Correctie**: het juiste antwoord is 200 000 m²." },
+            { titel: "Reken eerst de echte lengtes uit", tekst: "Vermenigvuldig beide kaart-lengtes met de schaalfactor om de werkelijke lengte en breedte in centimeter te krijgen, en zet die om naar meter." },
+            { titel: "Vermenigvuldig voor de oppervlakte", tekst: "Vermenigvuldig de twee werkelijke afmetingen met elkaar om de oppervlakte te krijgen." },
           ],
-          theorie: "Bij schaal voor oppervlakte: eerst lineaire maten omrekenen, dan oppervlakte berekenen. Of: opp op kaart × schaal².",
-          niveaus: { basis: "200 000 m².", simpeler: "500m × 400m = 200 000 m².", nogSimpeler: "200k" },
+          woorden: [{ woord: "schaal bij oppervlakte", uitleg: "Bij oppervlakte werkt een schaal net iets anders dan bij lengte — je vermenigvuldigt de lengte-schaal twee keer (voor lengte én breedte)." }],
+          theorie: "Bij een **schaal-vraag over oppervlakte** reken je eerst de losse lengtes om naar de werkelijkheid, en vermenigvuldig je die pas daarna met elkaar. Let op: de oppervlakte wordt hierdoor véél groter dan bij een gewone lengte-omrekening, omdat de schaal-vergroting twee keer meetelt (voor beide richtingen).",
+          voorbeelden: [{ type: "school", tekst: "Op een plattegrond van school met schaal 1:500 is het schoolplein 6 bij 4 cm — om de echte oppervlakte te krijgen, reken je eerst beide lengtes om en vermenigvuldig je ze daarna." }],
+          basiskennis: [{ onderwerp: "Twee keer schaal-effect", uitleg: "Bij oppervlakte tel je de schaal-vergroting in beide richtingen mee — dat maakt het verschil met een gewone lengte-vraag veel groter dan je zou denken." }],
+          niveaus: { basis: "Reken beide lengtes om naar de werkelijkheid, vermenigvuldig ze dan.", simpeler: "Eerst lengte × schaal, dan de twee uitkomsten vermenigvuldigen.", nogSimpeler: "Reken beide kaart-lengtes eerst om naar de werkelijkheid — welke twee getallen vermenigvuldig je daarna?" },
         },
       },
     ],

@@ -8440,6 +8440,35 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "vulkanen-po",
+    "file": "./vulkanenPo.js",
+    "title": "Vulkanen (groep 6-8)",
+    "subject": "aardrijkskunde",
+    "level": "groep6-8",
+    "emoji": "🌋",
+    "referentieNiveau": "1F",
+    "sloThema": "Wereldoriëntatie — aardrijkskunde: de aarde, natuurverschijnselen",
+    "triggerKeywords": [
+      "vulkaan",
+      "vulkanen",
+      "vulkaanuitbarsting",
+      "uitbarsting",
+      "lava",
+      "magma",
+      "krater",
+      "as",
+      "aswolk",
+      "aardplaat",
+      "aardplaten",
+      "platentektoniek"
+    ],
+    "intro": "Vulkanen voor groep 6-8 — wat is een vulkaan (magma, lava, krater), waarom barst hij uit (aardplaten, Ring van Vuur, gas als de prik in cola), wat komt eruit (lava, as, gassen; de aswolk van 2010) en ",
+    "stepCount": 5,
+    "checkCount": 21,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "vvn-verkeersexamen-po",
     "file": "./vvnVerkeersexamenPo.js",
     "title": "VVN Verkeersexamen (groep 7-8)",

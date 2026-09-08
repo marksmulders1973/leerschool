@@ -6,6 +6,10 @@ import { useRef, useState, useMemo, useEffect } from "react";
 import { useFrame, useThree } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import { Vector3, Color, CanvasTexture, CatmullRomCurve3, Object3D, Euler, PlaneGeometry, BoxGeometry, MeshStandardMaterial, SRGBColorSpace, BufferGeometry, Float32BufferAttribute } from "three";
+import { steenGeometrie, steenMateriaal, schorsMateriaal, loofKroonGeometrie, loofMateriaal, palmStamGeometrie, palmKroonGeometrie, palmStamMateriaal, palmBladMateriaal, grasPolGeometrie, varenMateriaal, luchtTextuur, grondShader } from "./realisme";
+import { MeshBasicMaterial as HemelBasisMateriaal, BackSide as HemelBinnenkant, MeshStandardMaterial as HeuvelMateriaal } from "three";
+import { GRENS_R, ZEE_Y, inZee } from "./eilandVorm";
+import { CylinderGeometry, SphereGeometry } from "three";
 import ZooModel from "./ZooModel";
 import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
@@ -16,7 +20,9 @@ import { PARTNER_LOGOS } from "../../components/CodeBalk.jsx";
 
 // Buitenrand waar de speler/vlieger tegen begrensd wordt (net binnen het raster).
 // Schaalt mee met de park-grootte (2× uitgezoomd 23 aug → ±160 i.p.v. ±80).
-const PARK_RAND = HALF * CELL - 2;
+// 🏝️ Het park ligt op een eiland (Mark 5 sep): je mag van het park-terrein af,
+// over het gras en het strand, en 20 m de zee in — dan houdt de zee je tegen.
+const PARK_RAND = GRENS_R;
 // Vlieg-hoogte-grenzen (m boven de grond) voor de zweefmodus.
 const VLIEG_MIN = 3, VLIEG_MAX = 150, VLIEG_START = 4.5;
 
@@ -24,7 +30,7 @@ const VLIEG_MIN = 3, VLIEG_MAX = 150, VLIEG_START = 4.5;
 // tijd (één dag ≈ 5 min). Vervangt de vaste belichting. Niet te donker 's nachts
 // (schoolapp, kinderen moeten hun park blijven zien).
 const CYCLE = 600; // seconden per dag (langere dag → kind speelt vrijwel altijd in het licht)
-const KLEUR_DAG = new Color("#aaddff");
+const KLEUR_DAG = new Color("#cfe3f0");   // = horizon-kleur van het lucht-panorama, zodat de mist er naadloos in overloopt
 const KLEUR_NACHT = new Color("#1b2a4a");
 const KLEUR_ZONSOP = new Color("#ffb27a");
 const ZON_DAG = new Color("#fff4e0");
@@ -493,7 +499,7 @@ export function CameraFollow({ posRef, controlsRef, active }) {
   return null;
 }
 
-export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false, climbRef = null }) {
+export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRef, avatarUrl, firstPerson = false, lookRef, faceRef, bouwt = false, verborgen = false, zweef = false, climbRef = null, teleportRef = null }) {
   const g = useRef();
   const moving = useRef(false);
   const pos = useRef(new Vector3(start[0], 0, start[2]));
@@ -530,11 +536,24 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     const mag = Math.hypot(mx, my);
     const node = g.current;
     if (!node) return;
+    // 🚠 Teleport (kabelbaan/slee, 6 sep): bij het uitstappen zet de rit je op het
+    // perron van het andere station — vóór de verborgen-check, zodat het ook werkt
+    // in het frame waarin de rit eindigt.
+    if (teleportRef?.current) {
+      const tp = teleportRef.current; teleportRef.current = null;
+      pos.current.x = tp.x; pos.current.z = tp.z; yGlad.current = null;
+      const ty0 = heightRef?.current ? heightRef.current(tp.x, tp.z) : 0;
+      node.position.set(tp.x, ty0, tp.z);
+      if (posRef) posRef.current.set(tp.x, ty0, tp.z);
+    }
     // Verborgen (in attractie/trein/zeppelin): bevries het poppetje — anders
     // loopt het onzichtbaar mee met de joystick terwijl jij iets anders bestuurt,
     // en sta je na het uitstappen ineens ergens anders (26 aug).
     if (verborgen) { moving.current = false; return; }
     const dts = Math.min(dt, 0.05); // tijdstap begrenzen (geen sprong na tab-wissel)
+    // 🏊 In zee? Dan zwem je: langzamer, en je zakt tot je borst in het water.
+    const zwemt = !zweef && inZee(pos.current.x, pos.current.z);
+    const zwemY = (h) => Math.max(h, ZEE_Y - 1.05) + Math.sin(state.clock.elapsedTime * 2.1) * 0.05;
 
     // ── Eerstepersoons: links/rechts draait je blik, vooruit/achteruit loopt waar
     //    je kijkt. De camera zit in het hoofd (model verborgen). ──
@@ -551,11 +570,12 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       const fx = Math.sin(yaw.current), fz = Math.cos(yaw.current);
       moving.current = Math.abs(walk) > 0.12 || Math.abs(turn) > 0.05;
       if (Math.abs(walk) > 0.12) {
-        const step = 3.0 * dts * walk;
+        const step = (zwemt ? 1.7 : 3.0) * dts * walk;
         verplaats(pos.current.x + fx * step, pos.current.z + fz * step);
       }
       node.rotation.y = yaw.current;
-      const tyFP = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+      const tyFP0 = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+      const tyFP = zwemt ? zwemY(tyFP0) : tyFP0;
       if (yGlad.current == null) yGlad.current = tyFP;
       yGlad.current += (tyFP - yGlad.current) * Math.min(1, 12 * dts);
       const ty = yGlad.current;
@@ -582,7 +602,7 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
       dir.current.addScaledVector(right.current, mx);
       if (dir.current.lengthSq() > 0.0001) dir.current.normalize();
       // 🪽 Zweven (Mark 2 jul, Minecraft-fly): 2× zo snel door het park.
-      doelV.current.copy(dir.current).multiplyScalar((zweef ? 9 : 4.2) * Math.min(1, mag));
+      doelV.current.copy(dir.current).multiplyScalar((zweef ? 9 : zwemt ? 2.3 : 4.2) * Math.min(1, mag));
     } else {
       doelV.current.set(0, 0, 0);
     }
@@ -617,7 +637,8 @@ export function Player({ inputRef, start = [0, 0, 13], isSolid, posRef, heightRe
     } else {
       vliegY.current = VLIEG_START;
     }
-    const tyDoel = (heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0) + (zweef ? vliegY.current : 0);
+    const grondH = heightRef?.current ? heightRef.current(pos.current.x, pos.current.z) : 0;
+    const tyDoel = zwemt ? zwemY(grondH) : grondH + (zweef ? vliegY.current : 0);
     if (yGlad.current == null) yGlad.current = tyDoel;
     yGlad.current += (tyDoel - yGlad.current) * Math.min(1, 12 * dts);
     const ty = yGlad.current;
@@ -1471,24 +1492,27 @@ export function FenceCorner({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
-// Rotsen/keien (procedureel) — low-poly grijze stenen die bij de rotsige bergen
-// passen. `variant` "single" = één grotere kei, "group" = een clustertje keien.
+// Rotsen/keien — ECHTE rotsen (Mark 5 sep: "net zo realistisch als Brian's
+// eiland"): meerdere gebroken brokken door elkaar, graniet-textuur met reliëf,
+// sedimentlagen, verwering en mos op de bovenkant. De geometrie wordt één keer
+// per soort gebouwd en gedeeld door alle rotsen in het park.
+const ROTS_GEO = {};
+function rotsGeo(k, zaadje, mos, uv) { return (ROTS_GEO[k] ||= steenGeometrie(zaadje, mos, 1, uv)); }
 export function Rock({ position = [0, 0, 0], rotation = 0, variant = "single" }) {
-  // Blok-rotsen: grijze kubussen in de maat-taal van de bouwkubussen.
-  const grijs = "#8f8c87", grijs2 = "#7b7874", grijs3 = "#9b9893";
+  const mat = steenMateriaal();
   if (variant === "group") {
     return (
       <group position={position} rotation={[0, rotation, 0]}>
-        <mesh castShadow receiveShadow position={[-0.4, 0.3, 0.1]}><boxGeometry args={[0.7, 0.6, 0.7]} /><meshStandardMaterial color={grijs} roughness={1} /></mesh>
-        <mesh castShadow receiveShadow position={[0.4, 0.22, -0.2]}><boxGeometry args={[0.5, 0.45, 0.5]} /><meshStandardMaterial color={grijs2} roughness={1} /></mesh>
-        <mesh castShadow receiveShadow position={[0.15, 0.16, 0.45]}><boxGeometry args={[0.35, 0.32, 0.35]} /><meshStandardMaterial color={grijs3} roughness={1} /></mesh>
+        <mesh castShadow receiveShadow geometry={rotsGeo("g1", 3.6, 1.15, 2.2)} material={mat} position={[-0.4, 0.22, 0.1]} scale={[0.55, 0.45, 0.55]} rotation={[0, 0.7, 0]} />
+        <mesh castShadow receiveShadow geometry={rotsGeo("g2", 6.3, 0.45, 1.8)} material={mat} position={[0.4, 0.17, -0.2]} scale={[0.42, 0.36, 0.42]} rotation={[0, 2.1, 0]} />
+        <mesh castShadow receiveShadow geometry={rotsGeo("g3", 11.7, 0.65, 2.0)} material={mat} position={[0.15, 0.12, 0.45]} scale={[0.3, 0.26, 0.3]} rotation={[0, 4.0, 0]} />
       </group>
     );
   }
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <mesh castShadow receiveShadow position={[0, 0.5, 0]}><boxGeometry args={[1.3, 1, 1.3]} /><meshStandardMaterial color={grijs} roughness={1} /></mesh>
-      <mesh castShadow receiveShadow position={[0.75, 0.25, 0.3]}><boxGeometry args={[0.5, 0.5, 0.5]} /><meshStandardMaterial color={grijs2} roughness={1} /></mesh>
+      <mesh castShadow receiveShadow geometry={rotsGeo("s1", 0.9, 0.8, 3.4)} material={mat} position={[0, 0.38, 0]} scale={[0.85, 0.62, 0.85]} />
+      <mesh castShadow receiveShadow geometry={rotsGeo("s2", 2.3, 0.45, 2.8)} material={mat} position={[0.75, 0.18, 0.3]} scale={[0.38, 0.32, 0.38]} rotation={[0, 1.3, 0]} />
     </group>
   );
 }
@@ -1533,24 +1557,26 @@ export function DonationBox({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
-// Struik (procedureel) — een clustertje low-poly groene bollen.
+// Struik — ECHT: een bol van blaadjes-plaatjes (zelfde blad-textuur als de
+// boomkronen), van dichtbij losse blaadjes, van ver een volle struik.
+const KROON_GEO = {};
+function kroonGeo(k, n, seed) { return (KROON_GEO[k] ||= loofKroonGeometrie(n, seed)); }
 export function Bush({ position = [0, 0, 0], rotation = 0 }) {
-  // Blok-struik: bladerkubus + half kubusje (maat-taal van de bouwkubussen).
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <mesh castShadow receiveShadow position={[-0.15, 0.45, 0]}><boxGeometry args={[0.95, 0.9, 0.95]} /><meshStandardMaterial color="#4e8a3a" roughness={1} /></mesh>
-      <mesh castShadow position={[0.45, 0.3, 0.2]}><boxGeometry args={[0.55, 0.6, 0.55]} /><meshStandardMaterial color="#6fb053" roughness={1} /></mesh>
+      <mesh castShadow receiveShadow geometry={kroonGeo("struik", 12, 7)} material={loofMateriaal("#cfe0b8")} position={[-0.1, 0.55, 0]} scale={[0.78, 0.62, 0.78]} />
+      <mesh castShadow geometry={kroonGeo("struik2", 8, 11)} material={loofMateriaal("#e2f0cc")} position={[0.45, 0.38, 0.2]} scale={[0.5, 0.42, 0.5]} />
     </group>
   );
 }
 
-// Varen/graspol (procedureel) — een paar smalle bladeren die naar buiten waaieren.
+// Varen/graspol — een grote pol van 3D-sprietjes die meewuift in de wind.
+const VAREN_GEO = grasPolGeometrie(7);
 export function Fern({ position = [0, 0, 0], rotation = 0 }) {
-  // Blok-plantje: twee groene mini-kubussen.
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      <mesh castShadow position={[0, 0.3, 0]}><boxGeometry args={[0.55, 0.6, 0.55]} /><meshStandardMaterial color="#5a9c3f" roughness={1} /></mesh>
-      <mesh castShadow position={[0.05, 0.75, 0.05]}><boxGeometry args={[0.32, 0.35, 0.32]} /><meshStandardMaterial color="#6fb24a" roughness={1} /></mesh>
+      <mesh castShadow geometry={VAREN_GEO} material={varenMateriaal()} scale={[2.6, 2.4, 2.6]} />
+      <mesh castShadow geometry={VAREN_GEO} material={varenMateriaal()} position={[0.35, 0, -0.25]} rotation={[0, 2.1, 0]} scale={[1.8, 1.7, 1.8]} />
     </group>
   );
 }
@@ -1566,77 +1592,49 @@ export function Stump({ position = [0, 0, 0], rotation = 0 }) {
   );
 }
 
-// Boom (procedureel, Mark 2026-06-29: "maak de bomen mooier"). Volle, ronde
-// low-poly kroon met diepte — donkere blobs onderaan, lichtere bovenop — in
-// dezelfde flatShading-stijl als Bush/Fern. Varianten: round (standaard),
-// oak (groter + warmer groen), palm. Mooier én lichter dan een glTF-model.
-// Blok-stijl (Mark 2 jul, "Minecraft-idee heeft prio"): bomen in dezelfde
-// maat-taal als de 1 m-bouwkubussen — stam van blok-kolommen, kroon van
-// bladerkubussen. Varianten: round, oak (hoger/warmer), palm (blader-kruis).
+// Boom — ECHT (Mark 5 sep, van Brian's eiland): stam met schors-textuur en
+// reliëf, een paar takken, en een kroon van blaadjes-plaatjes die in de wind
+// beweegt. Varianten: round (standaard), oak (groter, donkerder), palm (de
+// kokospalm van het eiland: gebogen stam, doorzichtige bladeren, kokosnoten).
+const STAM_GEO = (() => {
+  const g = new CylinderGeometry(0.15, 0.26, 1, 9, 1, false);
+  g.translate(0, 0.5, 0);
+  const uv = g.attributes.uv; for (let i = 0; i < uv.count; i++) uv.setY(i, uv.getY(i) * 1.6);
+  return g;
+})();
+const TAK_GEO = (() => { const g = new CylinderGeometry(0.05, 0.11, 1, 6, 1, false); g.translate(0, 0.5, 0); return g; })();
 export function Tree({ position = [0, 0, 0], rotation = 0, variant = "round" }) {
   const oak = variant === "oak";
   const palm = variant === "palm";
-  const blad1 = palm ? "#418f34" : oak ? "#4d8736" : "#4e8a3a";
-  const blad2 = palm ? "#56a544" : oak ? "#74b552" : "#6fb053";
-  const stamKleur = palm ? "#9b7a45" : "#6b4a2b";
-  const stamH = palm ? 4 : oak ? 3 : 2;
+  if (palm) return <PalmTree position={position} rotation={rotation} />;
+  const stamH = oak ? 3.0 : 2.2, dik = oak ? 1.35 : 1.0, R = oak ? 2.3 : 1.75;
+  const takken = [[0.5, 0.35, 0.9], [-0.55, -0.2, 1.0], [0.1, -0.6, 0.85]];
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      {[...Array(stamH)].map((_, i) => (
-        <mesh key={i} castShadow receiveShadow position={[0, i + 0.5, 0]}>
-          <boxGeometry args={[0.9, 1, 0.9]} />
-          <meshStandardMaterial color={stamKleur} roughness={1} />
-        </mesh>
+      <mesh castShadow receiveShadow geometry={STAM_GEO} material={schorsMateriaal()} scale={[dik, stamH, dik]} />
+      {takken.map(([tx, tz, l], i) => (
+        <mesh key={i} castShadow geometry={TAK_GEO} material={schorsMateriaal()} position={[0, stamH * 0.85, 0]}
+          rotation={[Math.atan2(tz, 1) * 0.9, 0, -Math.atan2(tx, 1) * 0.9]} scale={[dik, l * R, dik]} />
       ))}
-      {palm ? (
-        <>
-          {[[1.4, 0], [-1.4, 0], [0, 1.4], [0, -1.4]].map(([bx, bz], i) => (
-            <mesh key={i} castShadow position={[bx, stamH + 0.15, bz]}>
-              <boxGeometry args={[bx ? 1.9 : 0.95, 0.35, bz ? 1.9 : 0.95]} />
-              <meshStandardMaterial color={i % 2 ? blad2 : blad1} roughness={1} />
-            </mesh>
-          ))}
-          <mesh castShadow position={[0, stamH + 0.3, 0]}><boxGeometry args={[1, 0.7, 1]} /><meshStandardMaterial color={blad1} roughness={1} /></mesh>
-        </>
-      ) : (
-        <>
-          <mesh castShadow position={[0, stamH + 1, 0]}>
-            <boxGeometry args={[2.9, 2, 2.9]} />
-            <meshStandardMaterial color={blad1} roughness={1} />
-          </mesh>
-          <mesh castShadow position={[0, stamH + 2.5, 0]}>
-            <boxGeometry args={[1.9, 1, 1.9]} />
-            <meshStandardMaterial color={blad2} roughness={1} />
-          </mesh>
-        </>
-      )}
+      <mesh castShadow geometry={kroonGeo(oak ? "eik" : "boom", oak ? 22 : 16, oak ? 3 : 1)} material={loofMateriaal(oak ? "#c9d6b0" : "#dfeccc")}
+        position={[0, stamH + R * 0.72, 0]} scale={[R, R * 0.9, R]} />
     </group>
   );
 }
 
-// Palmboom (procedureel) — licht gebogen stam in segmenten + een waaier van
-// bladeren bovenop, met kokosnoten.
+// Kokospalm van het eiland: stam kromt naar +X, kroon van 14 doorzichtige bladeren.
+const PALM_KROON = palmKroonGeometrie(14, 6);
+const NOOT_GEO = new SphereGeometry(0.14, 8, 6);
 function PalmTree({ position = [0, 0, 0], rotation = 0 }) {
-  const stam = "#9b7a45", stam2 = "#876837", blad = "#56a544", blad2 = "#418f34";
-  const segs = [[0, 0.4, 0, 0], [0.05, 1.12, 0.02, 0.06], [0.15, 1.82, 0.05, 0.12], [0.3, 2.46, 0.08, 0.18]];
-  const fronds = Array.from({ length: 7 }, (_, i) => (i / 7) * Math.PI * 2);
+  const s = 1.15; // palm van ~5,7 m
   return (
     <group position={position} rotation={[0, rotation, 0]}>
-      {segs.map(([x, y, z, tilt], i) => (
-        <mesh key={i} castShadow receiveShadow position={[x, y, z]} rotation={[0, 0, tilt]}>
-          <cylinderGeometry args={[0.13 - i * 0.015, 0.16 - i * 0.015, 0.78, 8]} />
-          <meshStandardMaterial color={i % 2 ? stam : stam2} flatShading roughness={1} />
-        </mesh>
-      ))}
-      <group position={[0.34, 2.78, 0.1]}>
-        {fronds.map((a, i) => (
-          <mesh key={i} castShadow rotation={[1.15, a, 0]} position={[Math.cos(a) * 0.18, -0.05, Math.sin(a) * 0.18]}>
-            <coneGeometry args={[0.17, 1.2, 4]} />
-            <meshStandardMaterial color={i % 2 ? blad : blad2} flatShading roughness={1} />
-          </mesh>
+      <mesh castShadow receiveShadow geometry={palmStamGeometrie()} material={palmStamMateriaal()} scale={[s, s, s]} />
+      <group position={[1.05 * s, 5 * s, 0]}>
+        <mesh castShadow geometry={PALM_KROON} material={palmBladMateriaal()} scale={[s, s, s]} />
+        {[[0.16, -0.12, 0.1], [-0.1, -0.16, -0.12], [0.05, -0.22, 0.18]].map(([x, y, z], i) => (
+          <mesh key={i} castShadow geometry={NOOT_GEO} position={[x, y, z]}><meshStandardMaterial color={i ? "#6b4a26" : "#7a5a30"} roughness={1} /></mesh>
         ))}
-        <mesh castShadow position={[0.05, -0.04, 0.05]}><icosahedronGeometry args={[0.13, 0]} /><meshStandardMaterial color="#6b4a2b" flatShading roughness={1} /></mesh>
-        <mesh castShadow position={[-0.1, -0.06, -0.02]}><icosahedronGeometry args={[0.12, 0]} /><meshStandardMaterial color="#5a3f24" flatShading roughness={1} /></mesh>
       </group>
     </group>
   );
@@ -1695,20 +1693,32 @@ function Vogel({ radius, height, speed, phase, color }) {
   );
 }
 
+// 🌤️ De lucht (Mark 5 sep, van Brian's eiland): geen bolletjes-wolken meer maar
+// een rondom-panorama — geschilderd verloop, ruis-wolken met zonkant en schaduw,
+// zon-gloed en nevel bij de horizon — op een bol die met de camera meereist.
+// De dag-nacht-cyclus kleurt de bol mee (nacht = donkerblauw, zonsop = warm).
+const HEMEL_MAT = new HemelBasisMateriaal({ map: luchtTextuur(), side: HemelBinnenkant, fog: false, depthWrite: false, toneMapped: false });
+const T_DAG = new Color("#ffffff"), T_NACHT = new Color("#26365e"), T_ZONSOP = new Color("#ffcfa8");
+function Hemel() {
+  const ref = useRef();
+  const tmp = useRef(new Color());
+  useFrame((state) => {
+    const m = ref.current; if (!m) return;
+    m.position.copy(state.camera.position);
+    const phase = (state.clock.elapsedTime % CYCLE) / CYCLE;
+    const e = Math.sin(phase * Math.PI * 2);
+    const daglicht = Math.max(0, Math.min(1, (e + 0.2) / 1.0));
+    const horizon = Math.max(0, 1 - Math.abs(e) / 0.35);
+    HEMEL_MAT.color.copy(tmp.current.copy(T_NACHT).lerp(T_DAG, daglicht).lerp(T_ZONSOP, horizon * 0.35));
+  });
+  return (
+    <mesh ref={ref} material={HEMEL_MAT} renderOrder={-10} frustumCulled={false}>
+      <sphereGeometry args={[950, 48, 32]} />
+    </mesh>
+  );
+}
+
 export function SkyClouds() {
-  // Bouw één keer een set wolk-clusters: elk een handvol overlappende blobs.
-  const wolken = useMemo(() => {
-    const maakBlobs = (n) => Array.from({ length: n }, () => [
-      (Math.random() - 0.5) * 3.4, (Math.random() - 0.5) * 0.7, (Math.random() - 0.5) * 1.6,
-      0.8 + Math.random() * 0.7,
-    ]);
-    return Array.from({ length: 6 }, (_, i) => ({
-      pos: [-50 + (i * 104) / 6 + Math.random() * 8, 21 + Math.random() * 9, -34 + Math.random() * 64],
-      scale: 1.1 + Math.random() * 1.1,
-      speed: 0.35 + Math.random() * 0.4,
-      blobs: maakBlobs(4 + Math.floor(Math.random() * 3)),
-    }));
-  }, []);
   const vogels = useMemo(() => (
     [
       { radius: 20, height: 13, speed: 0.18, phase: 0, color: "#3a3f48" },
@@ -1718,7 +1728,7 @@ export function SkyClouds() {
   ), []);
   return (
     <group>
-      {wolken.map((w, i) => <Wolk key={i} data={w} />)}
+      <Hemel />
       {vogels.map((v, i) => <Vogel key={i} {...v} />)}
     </group>
   );
@@ -2175,10 +2185,11 @@ export function PopcornKraam({ position = [0, 0, 0], kraam = null }) {
 // neerzetten zodat je park niet vlak is.
 export function HillMound({ position = [0, 0, 0], size = 1.2, color = "#82bb55" }) {
   const w = 1.45 * size, h = 0.62 * size;
+  // dezelfde grastextuur als de parkvloer (op wereldpositie → loopt naadloos door)
+  const mat = useMemo(() => grondShader(new HeuvelMateriaal({ color, roughness: 1, metalness: 0 }), { grasMixVast: 1 }), [color]);
   return (
-    <mesh position={[position[0], 0, position[2]]} scale={[w, h, w]} castShadow receiveShadow>
+    <mesh position={[position[0], 0, position[2]]} scale={[w, h, w]} castShadow receiveShadow material={mat}>
       <sphereGeometry args={[1, 22, 12, 0, Math.PI * 2, 0, Math.PI / 2]} />
-      <meshStandardMaterial color={color} roughness={1} />
     </mesh>
   );
 }

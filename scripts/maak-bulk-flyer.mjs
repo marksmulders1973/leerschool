@@ -68,7 +68,7 @@ const html = `<!DOCTYPE html>
     <img src="data:image/png;base64,${logo64}" alt="Leerkwartier-logo" />
     <span class="naam">Leerkwartier</span>
   </div>
-  <div class="payoff">Een kwartier per dag — écht begrijpen wat je leert.</div>
+  <div class="payoff">Een kwartier per dag leren, een leven lang slimmer.</div>
 
   <h1>Gratis oefenen voor de Doorstroomtoets — voor élk gezin</h1>
   <p>Oefenboeken kosten €27 tot €40. Bijles kost €37 per uur. Zo vergroot betaalde toetstraining de kansenongelijkheid rond de Doorstroomtoets. <strong>Leerkwartier is het gratis alternatief:</strong> een Nederlandse leer-app waar kinderen uit groep 6, 7 en 8 élke dag kunnen oefenen voor de Doorstroomtoets — zonder kosten, zonder account, zonder reclame.</p>

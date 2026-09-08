@@ -93,7 +93,7 @@ const TICKER_ITEMS = [
 // (showOnboarding default false). Examen/scorebord-jargon paste niet bij Toets-ouder ICP.
 // Stappen behouden voor mogelijke toekomstige rondleiding-knop.
 const ONBOARDING_STEPS = [
-  { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag, écht begrijpen wat je leert." },
+  { emoji: "📚", title: "Welkom bij Leerkwartier", desc: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag leren, een leven lang slimmer." },
 ];
 
 // Probeer-meteen-een-vraag-kaart op de home (Mark 2026-06-14, voorstel 3 uit
@@ -101,42 +101,7 @@ const ONBOARDING_STEPS = [
 // ervaart direct een Doorstroomtoets-vraag i.p.v. eerst een keuzescherm; na het
 // antwoord een nudge de gratis-trechter in. Rol/niveau + leeftijdscheck blijven
 // gewoon bestaan (gebeuren bij Start gratis / account).
-// 🤝 Deel-actie-knop (Mark 29 jul 2026): "win" → weggeven. Toont live hoeveel
-// van de 50 Deel-actie-plekken (Familie gratis tot aug 2027) nog vrij zijn.
-// Teller onbereikbaar → tekst zonder aantal; alle plekken vergeven → terug
-// naar de loterij-tekst (die actie loopt door t/m 31 dec, zie /actie).
-function DeelActieKnop({ onClick }) {
-  const [resterend, setResterend] = useState(null);
-  useEffect(() => {
-    let actief = true;
-    supabase.rpc("deel_actie_stand")
-      .then(({ data }) => { if (actief && typeof data === "number") setResterend(data); })
-      .catch(() => {});
-    return () => { actief = false; };
-  }, []);
-
-  const op = resterend !== null && resterend <= 0;
-  const tekst = op
-    ? "📣 Deel & win een gratis Familie-jaar 2027"
-    : resterend !== null
-      ? `🤝 Deel — nog ${resterend} van 50 plekken: Familie gratis tot 2027`
-      : "🤝 Deel — geef Familie gratis weg (50 plekken)";
-
-  return (
-    <button
-      type="button"
-      style={{
-        background: "linear-gradient(135deg, #ffd54f, #ffb300)", border: "none",
-        color: "#3a2a00", cursor: "pointer", padding: "6px 12px", borderRadius: 999,
-        fontWeight: 800, display: "inline-flex", alignItems: "center", gap: 5,
-        justifyContent: "center", maxWidth: 320, fontSize: 12.5,
-      }}
-      onClick={onClick}
-    >
-      {tekst}
-    </button>
-  );
-}
+// (De gele Deel-actie-knop "nog X van 50 plekken" stond hier tot 6 sep 2026 — Mark: "dat kan ook wel weg".)
 
 export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina }) {
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
@@ -448,7 +413,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     try { localStorage.setItem("ls_user", JSON.stringify({ name: effectiveName, level, role: pendingRole, schoolType })); } catch {}
     try { onSaveProfile?.({ name: effectiveName, level, role: pendingRole, schoolType }); } catch {}
     track("name_entered", { name_length: effectiveName.length, level, role: pendingRole, school_type: schoolType || "", guest: asGuest });
-    onSelectRole(pendingRole, pendingFeature);
+    onSelectRole(pendingRole, pendingFeature, { nieuw: true });
   };
 
   return (
@@ -559,7 +524,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {step === "role" && (
           <PartnerWelkom
             onOuder={onOuderDashboard}
-            onOefenen={onDagvraag || (() => handleFeatureClick("cito"))}
+            // Mark 7 sep 2026 (QR-lek: 21 flyer-sessies, 0 kwartier): ná de
+            // proef-vraagjes niet naar de losse dagvraag, maar de gewone
+            // leerling-route in — naam + groep → start-kwartier (nieuw) of
+            // eigen pagina (terugkerend). De code blijft gewoon actief.
+            onOefenen={handleOefenenClick}
           />
         )}
 
@@ -1446,9 +1415,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             display: "flex", flexDirection: "column", alignItems: "center", gap: 10,
             fontFamily: "var(--font-body)", fontSize: 12,
           }}>
-            {onActie && (
-              <DeelActieKnop onClick={() => { trackShare("deel_win_cta"); onActie(); }} />
-            )}
             <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", gap: 7 }}>
             <span style={{ color: "rgba(255,255,255,0.55)", marginRight: 3 }}>Deel of volg ons</span>
             <button

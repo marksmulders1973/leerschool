@@ -2,8 +2,7 @@ import { useState, useEffect, useRef, lazy, Suspense } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS } from "../../constants.js";
 import { SoundEngine, track } from "../../utils.js";
-import { findLearnPathForQuestion } from "../../learnPaths/utils.js";
-import { categoryToLearnSubjects } from "../../learnPaths/subjectMapping.js";
+import { padVoorToetsVraag } from "../../learnPaths/padVoorToetsVraag.js";
 import { recordAnswer as recordMasteryAnswer, recordRefAnswer } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { checkOpenAnswer } from "./openAnswerCheck.js";
@@ -70,7 +69,8 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
   const [showQuitConfirm, setShowQuitConfirm] = useState(false);
   const [waitingForUser, setWaitingForUser] = useState(false);
   const [timedOut, setTimedOut] = useState(false);
-  const [gaveUp, setGaveUp] = useState(false); // F28: "Ik weet het niet" zonder pad-match
+  const [gaveUp, setGaveUp] = useState(false); // "Ik weet het niet" — toets loopt door (Mark 5 sep 2026)
+  const [gaveUpPadTitel, setGaveUpPadTitel] = useState(null); // gevonden leerpad = tip voor ná de toets
   const [showWrongOverlay, setShowWrongOverlay] = useState(false);
   // M4 audit-3: wrong-overlay default ingeklapt — uitleg/tip/yt/fout-melden
   // achter 'Meer uitleg ▼'-toggle. 10jr-leerling-feedback: 6+ vakken muur was
@@ -331,7 +331,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     if (!canAnswer && idx !== -1) return;
     clearInterval(timerRef.current);
     if (idx === -1 && !opts.gaveUp) setTimedOut(true);
-    if (opts.gaveUp) setGaveUp(true);
+    if (opts.gaveUp) { setGaveUp(true); setGaveUpPadTitel(opts.padTitel || null); }
     setSelected(idx);
     setShowResult(true);
 
@@ -363,7 +363,9 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
     const newState = {
       ...gameState,
       score: gameState.score + (isCorrect ? 1 : 0),
-      answers: [...gameState.answers, { questionIndex: gameState.currentQ, selected: idx, correct: question.answer, isCorrect, timeLeft }],
+      // weetNiet + pad (Mark 5 sep 2026): "Ik weet het niet" eerlijk bewaren,
+      // apart van tijd-om, mét het leerpad-advies → ouder ziet "oefen dit deel".
+      answers: [...gameState.answers, { questionIndex: gameState.currentQ, selected: idx, correct: question.answer, isCorrect, timeLeft, ...(opts.gaveUp ? { weetNiet: true, pad: opts.pad || null } : {}) }],
     };
     setGameState(newState);
     nextStateRef.current = newState;
@@ -650,24 +652,19 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             onClick={() => {
               const subject = gameState?.quiz?.subject;
               const quizLevel = gameState?.quiz?.level;
-              const allowedSubjects = subject ? categoryToLearnSubjects(subject) : null;
-              const matched = findLearnPathForQuestion(question?.q, allowedSubjects, quizLevel);
-              track("dont_know_clicked", { subject, has_match: !!matched, at_question: gameState.currentQ + 1 });
+              // Altijd een leerpad bij de vraag (v588): exact/trefwoord-match,
+              // anders onderwerp-regel, anders standaardpad per vak × groep.
+              const matched = padVoorToetsVraag(question, subject, quizLevel);
+              track("dont_know_clicked", { subject, has_match: !!matched, via: matched?.via || null, at_question: gameState.currentQ + 1 });
               clearInterval(timerRef.current);
               clearTimeout(wrongOverlayTimerRef.current);
               clearTimeout(advanceTimerRef.current);
-              if (matched) {
-                onLearnPathRequest(matched);
-              } else if (question?.explanation) {
-                // F28 (Fable-review 2 sep 2026): geen pad-match → NIET meer
-                // wegnavigeren naar "komt eraan" (kind raakte de quiz kwijt),
-                // maar de uitleg van deze vraag zelf tonen, mét Charley en
-                // "Meer uitleg". Telt als niet-geweten (fout), net als tijd-om.
-                handleAnswer(-1, { gaveUp: true });
-              } else {
-                // Geen uitleg én geen pad → "Mee bezig"-pagina met hub-knop
-                onLearnPathRequest({ noMatch: true, fallbackCategory: subject });
-              }
+              // Mark 5 sep 2026: "tijdens een toets moet het doorgaan". Vroeger
+              // sprong een pad-match hier de toets uit naar het leerpad → toets
+              // afgebroken, geen rij, ouder zag de toets nooit. Nu: de vraag telt
+              // eerlijk als "weet ik niet", de toets loopt door, en het gevonden
+              // leerpad reist mee als advies ("oefen dit deel") voor kind én ouder.
+              handleAnswer(-1, { gaveUp: true, pad: matched?.id || null, padTitel: matched?.title || null });
             }}
             style={{
               width: "100%",
@@ -688,7 +685,7 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
             }}
           >
             <span style={{ fontSize: 18 }}>🤔</span>
-            <span>Ik weet het niet — leg het uit</span>
+            <span>Ik weet het niet</span>
           </button>
         )}
 
@@ -699,7 +696,12 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
         )}
         {gaveUp && showResult && (
           <div style={{ marginTop: 12, textAlign: "center", padding: "10px 12px", background: "rgba(255,213,79,0.10)", border: "1px solid rgba(255,213,79,0.35)", borderRadius: 12, animation: "popIn 0.3s ease" }}>
-            <span style={{ fontSize: 15, fontWeight: 800, color: "#ffd54f", fontFamily: "var(--font-display)" }}>🤔 Geen probleem — kijk hieronder hoe het zit. Dit telt niet als goed, wel als geleerd.</span>
+            <span style={{ fontSize: 15, fontWeight: 800, color: "#ffd54f", fontFamily: "var(--font-display)" }}>🤔 Eerlijk gezegd: weet ik niet. Dat is prima — de toets gaat gewoon door.</span>
+            {gaveUpPadTitel && (
+              <div style={{ marginTop: 4, fontSize: 12.5, fontWeight: 700, color: "rgba(255,213,79,0.85)", fontFamily: "var(--font-body)" }}>
+                Tip voor na de toets: oefen "{gaveUpPadTitel}".
+              </div>
+            )}
           </div>
         )}
 
@@ -949,10 +951,11 @@ export default function PlayQuiz({ gameState, setGameState, onFinish, onQuit, on
 
       {/* Quit confirmation overlay */}
       {showQuitConfirm && (() => {
-        const stopSubject = gameState?.quiz?.subject;
-        const stopLevel = gameState?.quiz?.level;
-        const stopAllowed = stopSubject ? categoryToLearnSubjects(stopSubject) : null;
-        const matched = onLearnPathRequest ? findLearnPathForQuestion(question?.q, stopAllowed, stopLevel) : null;
+        // v591: zelfde pad-zoeker als "Ik weet het niet" (v588 verwijderde de
+        // oude import maar liet dit blok staan → ReferenceError bij élke Stop,
+        // ~40 min live; les: na een import-wissel álle gebruikers grep'en).
+        const gevonden = onLearnPathRequest ? padVoorToetsVraag(question, gameState?.quiz?.subject, gameState?.quiz?.level) : null;
+        const matched = gevonden ? { pathId: gevonden.id, stepIdx: gevonden.stepIdx || 0 } : null;
         return (
         <div
           ref={quitConfirmRef}

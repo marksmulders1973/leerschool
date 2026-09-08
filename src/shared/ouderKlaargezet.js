@@ -16,6 +16,10 @@
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { linkIdVoor } from "./koppeling.js";
+import pathManifest from "../learnPaths/pathManifest.generated.json";
+
+// stepCount per leerpad — nodig om te bepalen of een klaargezette les af is.
+const PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
 export const KLAARGEZET_EVENT = "lk-klaargezet-changed";
 const TABEL = { ouder: "ouder_klaargezet", leraar: "leraar_klaargezet" };
@@ -157,20 +161,34 @@ export async function haalGekoppeldeLeerlingen(teacherId) {
 
 /** Overzicht per bevestigde leerling: hoeveel klaargezet en hoeveel gedaan.
  * → [{ id, student_name, totaal, gedaan }]. Voor het leerkracht-overzicht +
- * een deelbaar rapportje (Mark 15 aug: "alle kinderen + voortgang doorsturen"). */
+ * een deelbaar rapportje (Mark 15 aug: "alle kinderen + voortgang doorsturen").
+ *
+ * 4 sep 2026: "gedaan" telde alleen het handmatige vinkje van de leerling. Een
+ * leerling die een leerpad écht afmaakte maar niets aanvinkte, stond op 0 — het
+ * overzicht bleef leeg terwijl er gewerkt was. Nu telt een les ook als gedaan
+ * wanneer alle stappen ervan in learn_progress staan. Zelfde correctie als aan
+ * de ouder-kant. */
 export async function haalLeerlingOverzicht(teacherId) {
   const leerlingen = (await haalGekoppeldeLeerlingen(teacherId)).filter((l) => l.verified);
   if (leerlingen.length === 0) return [];
   const ids = leerlingen.map((l) => l.id);
-  const { data } = await supabase
-    .from("leraar_klaargezet")
-    .select("link_id, gedaan")
-    .in("link_id", ids);
+  const [klaarRes, progRes] = await Promise.all([
+    supabase.from("leraar_klaargezet").select("link_id, path_id, gedaan").in("link_id", ids),
+    supabase.from("learn_progress").select("link_id, learn_path_id, step_idx").in("link_id", ids),
+  ]);
+  // stappen per (link_id, pad) → hoeveel unieke stappen zijn er gedaan
+  const stappen = {};
+  (progRes.data || []).forEach((r) => {
+    const k = r.link_id + "|" + r.learn_path_id;
+    (stappen[k] ||= new Set()).add(r.step_idx);
+  });
   const per = {};
-  (data || []).forEach((r) => {
-    if (!per[r.link_id]) per[r.link_id] = { totaal: 0, gedaan: 0 };
-    per[r.link_id].totaal += 1;
-    if (r.gedaan) per[r.link_id].gedaan += 1;
+  (klaarRes.data || []).forEach((r) => {
+    const p = (per[r.link_id] ||= { totaal: 0, gedaan: 0 });
+    p.totaal += 1;
+    const nodig = PATHS_BY_ID[r.path_id]?.stepCount || 0;
+    const heeft = stappen[r.link_id + "|" + r.path_id]?.size || 0;
+    if (r.gedaan || (nodig > 0 && heeft >= nodig)) p.gedaan += 1;
   });
   return leerlingen.map((l) => ({
     id: l.id, student_name: l.student_name,

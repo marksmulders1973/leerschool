@@ -111,7 +111,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
       const q = latest.questions?.[a.questionIndex];
       if (!q) return null;
       const opts = Array.isArray(q.options) ? q.options : [];
-      const gave = a.selected != null && a.selected >= 0 && opts[a.selected] != null ? stripHtml(opts[a.selected]) : "(geen antwoord)";
+      const gave = a.selected != null && a.selected >= 0 && opts[a.selected] != null ? stripHtml(opts[a.selected]) : (a.weetNiet ? "(weet ik niet)" : "(geen antwoord)");
       const right = opts[a.correct] != null ? stripHtml(opts[a.correct]) : "";
       return { question: stripHtml(q.q), userAnswer: gave, correctAnswer: right, explanation: stripHtml(q.explanation) };
     })
@@ -334,6 +334,7 @@ export default function ResultsPage({ results, quiz, userName, authUser, onLogin
                     <div style={{ marginLeft: 32, fontSize: 12, color: "var(--color-brand-primary-100)" }}>
                       ✔ Goed antwoord: <strong>{q.options?.[q.answer]}</strong>
                       {a.selected >= 0 && <span style={{ color: "#ff7070" }}> · Jij: {q.options?.[a.selected]}</span>}
+                      {a.weetNiet && <span style={{ color: "#ffd54f" }}> · Jij: weet ik niet 🤔</span>}
                     </div>
                   )}
                 </div>

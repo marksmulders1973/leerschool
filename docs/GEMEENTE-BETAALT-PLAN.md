@@ -54,3 +54,29 @@ rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 kinderen × €25 
 ## Open (Fable, na token-reset)
 - Per stadspas: actuele aanmeldpagina + bedrag per kind + voorwaarden opzoeken en hier invullen.
 - Sonac-CAO nevenwerkzaamheden checken vóór 28 sep (staat ook in MARK-AGENDA).
+
+## Stadspas-inventarisatie (research 7 sep 2026, bronnen gecheckt op de site zelf)
+
+**Hoofdconclusie:** geen enkel kindtegoed (Rotterdam, Amsterdam, U-pas) noemt software/apps/abonnementen als toegestane productgroep. Het realistische betaalspoor voor een app is het **Squla-model**: lokale Leergeld-stichtingen, Meedoen in Rotterdam en het Jeugdeducatiefonds kopen codes in tegen kostprijs (Squla: €43,52/kind/jaar, min. 10 codes, 60+ stichtingen). Ons €25/kind/jaar zit daar comfortabel onder. Stadspassen zijn vooral **vindbaarheid** (gratis vermelding als partner), geen omzet.
+
+| Regeling | Route | KvK/IBAN nodig | App mogelijk? | Geld | Contact |
+|---|---|---|---|---|---|
+| Rotterdampas | partners.rotterdampas.nl, actie ≥25% korting indienen | niet genoemd | niet uitgesloten; Jeugdtegoed alleen bij aangewezen winkels (3 webshops) | kortingspartner = €0 | projecten@rotterdampas.nl, 010-4533773 |
+| U-pas (Utrecht) | upas.passcloud.nl partnerregistratie | **ja: KvK + IBAN + ID via KYC** | pas "niet voor online aankopen"; kortingspartner wel | tegoedpartner = uitbetaling 5e vd maand | partners@upasbureau.nl, 088-6006333 |
+| Meedoen Tilburg | e-mailformulier gemeente, ze bellen terug | niet gevonden | niet geadresseerd | €153 p.p./jaar, aanbieder meldt gebruik | 013-5428979 |
+| Stadjerspas (Groningen) | mail naar stadjerspas@groningen.nl | niet genoemd | niet geadresseerd; ≥20% korting op "normale prijs" | maandelijkse verwerking | stadjerspas@groningen.nl, 14 050 |
+| Stadspas Amsterdam | stadspas.passcloud.nl partnerregistratie, antwoord ≤5 werkdagen | portaal niet leesbaar | Kindtegoed: elektronica/games uit, software niet genoemd | "vergoeding op maat" via relatiemanager; kindtegoed €241-475/jaar | stadspas@amsterdam.nl |
+| Leergeld (114 lokaal) | geen landelijke route; per stichting | n.v.t. | **ja, bewezen (Squla)** | stichting koopt codes in | w.tjemmes@leergeld.nl (partners), 085-0664000 |
+| Jeugdfonds Sport & Cultuur | per regiofonds | KvK ≥1 jr, VOG, vaste leslocatie | **nee** (sport/cultuur, vaste locatie) | | |
+| Nijmegen Meedoen | organisatie-aanmelding | KvK ja | educatief mag | max €150 p.p., Me Forus-app | **gesloten: max organisaties bereikt** |
+| Eindhoven / Almere | geen aanbiederroute (geldbedrag aan gezin / via Leergeld) | | | | |
+
+**Wat klaar kan liggen voor 29 sep (dag ná KvK):**
+1. U-pas tegoed-/kortingspartner: KvK + IBAN + ID → registreren, KYC.
+2. Stadspas Amsterdam: partnervoorstel indienen (100%-korting-actie + vraag of app onder Kindtegoed kan; relatiemanager beslist).
+3. Rotterdampas: partneraccount + jaaractie (gratis app), plus mail aan Stichting Meedoen in Rotterdam (vergoedt Squla én StudyGo → wij passen in hun rijtje).
+4. Stadjerspas: mailtje volstaat, ook zonder KvK. **Kan nu al.**
+5. Tilburg: e-mailformulier, kan nu al.
+6. Leergeld-prijsmail (€25/kind/jaar, codes per stichting, Squla-vergelijking) → oktober, met partner-rapport v1.
+
+**Open/niet gevonden:** Rotterdam webshop-aansluiting Jeugdtegoed; U-pas kindbedragen (alleen afbeelding); Tilburg-voorwaarden; Groningen kindbedrag; Amsterdam Aanbiedersgids-PDF; hoe je op een lokale Leergeld-leverancierslijst komt (bel Leergeld landelijk: 085-0664000).

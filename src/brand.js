@@ -11,7 +11,7 @@ export const BRAND = {
   publisher: "Smulsoft",
   // Maand 1 snoei (visie-bewaker 2026-05-10): identiteits-tekst aangescherpt.
   // ICP = Toets-ouder. "Spelen" weg uit payoff (game-impliciet, niet ICP).
-  // Slogan benadrukt "écht begrijpen" als didactische belofte.
-  slogan: "Een kwartier per dag — écht begrijpen wat je leert.",
+  // Slogan (Mark 6 sep 2026): "Een kwartier per dag leren, een leven lang slimmer."
+  slogan: "Een kwartier per dag leren, een leven lang slimmer.",
   payoff: "Een rustige bijlesdocent in je broekzak. 15 minuten per dag is genoeg.",
 };

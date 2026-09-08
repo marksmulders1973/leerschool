@@ -33,6 +33,7 @@ const CitoLeerpadToets = lazy(() => import("./components/CitoLeerpadToets.jsx"))
 const ExamensPage = lazy(() => import("./components/ExamensPage.jsx"));
 const HerkansingPage = lazy(() => import("./components/HerkansingPage.jsx"));
 const PlayQuiz = lazy(() => import("./features/practice/PlayQuiz.jsx"));
+const StartKwartier = lazy(() => import("./features/onboarding/StartKwartier.jsx"));
 const ResultsPage = lazy(() => import("./features/practice/ResultsPage.jsx"));
 const TafelsPage = lazy(() => import("./components/TafelsPage.jsx"));
 const RedactiesommenPage = lazy(() => import("./components/RedactiesommenPage.jsx"));
@@ -108,6 +109,7 @@ const MyMastery = lazy(() => import("./features/mastery/MyMastery.jsx"));
 const MijnPagina = lazy(() => import("./features/account/MijnPagina.jsx"));
 import { categoryToLearnSubjects, hasLearnPathsForCategory } from "./learnPaths/subjectMapping.js";
 import { levelsCompatible } from "./learnPaths/utils.js";
+import { padVoorToetsVraag } from "./learnPaths/padVoorToetsVraag.js";
 import pathManifest from "./learnPaths/pathManifest.generated.json";
 import { gameVisibleForUser, urlHasGameDeepLink, teacherFeaturesVisibleForUser, oefenboekjePreviewVisible, familiePreviewVisible } from "./shared/featureFlags.js";
 import { TEXTBOOK_CATEGORIES_VO, TEXTBOOK_CATEGORIES_PO } from "./constants.js";
@@ -128,8 +130,16 @@ import { loadLeaderboardForPlayer, insertLeaderboardEntry, bouwToetsDetail } fro
 function quizDetail(result) {
   if (!Array.isArray(result?.answers) || !Array.isArray(result?.questions)) return null;
   const idxArr = new Array(result.questions.length).fill(null);
-  result.answers.forEach((a) => { if (a && a.questionIndex != null) idxArr[a.questionIndex] = a.selected; });
-  return bouwToetsDetail(result.questions, idxArr);
+  // Elke vraag krijgt een leerpad-advies (v588, Mark 5 sep: "oefen dit deel"
+  // moet bij fout én bij 'weet ik niet' altijd ergens heen kunnen).
+  const extra = result.questions.map((q) => ({ pad: padVoorToetsVraag(q, result.subject, result.level)?.id || null }));
+  result.answers.forEach((a) => {
+    if (!a || a.questionIndex == null) return;
+    idxArr[a.questionIndex] = a.selected;
+    // "Ik weet het niet" (Mark 5 sep 2026): eerlijk apart van tijd-om.
+    if (a.weetNiet) extra[a.questionIndex] = { wn: true, pad: a.pad || extra[a.questionIndex]?.pad || null };
+  });
+  return bouwToetsDetail(result.questions, idxArr, extra);
 }
 import { recordPerfectScore } from "./data/repos/hallOfFameRepo.js";
 import { insertProgress } from "./data/repos/progressRepo.js";
@@ -142,6 +152,7 @@ import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
 import { BRAND } from "./brand.js";
 import { startTracking as startDailyTracking } from "./shared/dailyGoal.js";
+import { isStartKwartierGedaan } from "./features/onboarding/startKwartier.js";
 import { bewaarKoppeling, linkIdVoor, TERUG_NAAR_OUDER_KEY } from "./shared/koppeling.js";
 
 // SUBJECT_LABELS_FOR_HUB: legacy alias — gebruik shared/subjects.js (LEARN_PATH_SUBJECTS).
@@ -1713,10 +1724,10 @@ export default function App() {
             setLearnPathReturnPage("home");
             setPage("learn-path");
           }}
-          onSelectRole={(r, feature) => {
+          onSelectRole={(r, feature, opts) => {
             onboardingActiveRef.current = false;
             setRole(r);
-            track("role_selected", { role: r, feature: feature || null });
+            track("role_selected", { role: r, feature: feature || null, nieuw: !!opts?.nieuw });
             if (currentQuiz) { startGame(currentQuiz, "self"); return; }
             if (feature === "schoolboeken") { setPendingTextbookSubject(null); setPendingTextbookBook(null); setPage("textbook"); return; }
             if (feature === "scorebord") { setPage("leaderboard"); return; }
@@ -1733,6 +1744,11 @@ export default function App() {
               setPage("self-study");
               return;
             }
+            // Start-kwartier (Mark 7 sep): een NIEUWE leerling (net naam +
+            // groep ingevuld) krijgt eerst 5 vragen op niveau + 4 kaartjes
+            // met wat hier kan. Nulmeting sep 2026: 65 van 80 Google-
+            // bezoekers zagen op /mijn nooit één vraag. Eén keer per apparaat.
+            if (r === "leerling" && opts?.nieuw && !isStartKwartierGedaan()) { setPage("start-kwartier"); return; }
             // Mark 13 aug: de landing ná inloggen/onboarding is voortaan de
             // persoonlijke pagina — dat is je thuisbasis (vandaag-kaart,
             // lijstje, vakken van jouw groep). "Alle vakken" (StudentHome)
@@ -2504,6 +2520,20 @@ export default function App() {
           authUser={authUser}
           onBack={() => setPage("home")}
           onHome={goHome}
+        />
+      )}
+      {page === "start-kwartier" && (
+        <StartKwartier
+          userName={userName}
+          userLevel={userLevel}
+          authUser={authUser}
+          onStop={() => setPage("mijn-pagina")}
+          onGa={(p) => {
+            if (p === "learn-paths-hub") { setLearnInitialSearch(""); setEntryContext("leren"); }
+            if (p === "cito") setEntryContext("cito");
+            setPage(p);
+            try { window.scrollTo({ top: 0 }); } catch { /* */ }
+          }}
         />
       )}
       {page === "kwartiercheck" && (

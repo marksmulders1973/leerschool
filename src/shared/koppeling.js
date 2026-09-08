@@ -86,11 +86,22 @@ export function vergeetKoppeling(naam, rol = null) {
   schrijf(alles);
 }
 
-/** Hulpje voor schrijfpaden: voeg link_id toe aan een rij als die naam gekoppeld is. */
+/** Hulpje voor schrijfpaden: voeg link_id toe aan een rij als die naam gekoppeld is.
+ *
+ * Ouder gaat vóór leraar (4 sep 2026). Een rij draagt één link_id, en de
+ * ouder-koppeling is de persoonlijkste: die hoort bij één kind in één gezin.
+ * Was er geen ouder-koppeling, dan valt hij terug op de leraar-koppeling —
+ * zonder die fallback schreef een schoolleerling helemaal geen link_id en bleef
+ * het leerkracht-overzicht per definitie leeg.
+ *
+ * Bekende grens: is een kind zowel thuis als op school gekoppeld, dan wint de
+ * ouder en ziet de leerkracht dit werk niet via link_id. Zie
+ * docs/KOPPELING-GRENZEN.md.
+ */
 export function metLinkId(row) {
   try {
     if (!row || row.link_id) return row;
-    const id = linkIdVoor(row.player_name);
+    const id = linkIdVoor(row.player_name) || linkIdVoor(row.player_name, "leraar");
     return id ? { ...row, link_id: id } : row;
   } catch { return row; }
 }
