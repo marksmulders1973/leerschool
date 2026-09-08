@@ -221,14 +221,15 @@ export default function Buitenwereld() {
         </mesh>
       </group>
 
-      {/* Weggetje van de ingang de wereld in + bushalte + autootjes. */}
+      {/* Weggetje van de ingang de wereld in + bushalte (auto's: Autos.jsx). */}
       <group>
-        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.04, 104]}>
+        {/* het asfalt ligt nét boven het gras (8 sep: lag eronder sinds het eiland echt terrein kreeg) */}
+        <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.02, 104]}>
           <planeGeometry args={[7, 52]} />
           <meshStandardMaterial color="#5c6066" roughness={1} />
         </mesh>
         {[...Array(6)].map((_, i) => (
-          <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.02, 84 + i * 8]}>
+          <mesh key={i} rotation={[-Math.PI / 2, 0, 0]} position={[0, 0.03, 84 + i * 8]}>
             <planeGeometry args={[0.5, 3]} />
             <meshStandardMaterial color="#e8e6da" roughness={1} />
           </mesh>
@@ -243,16 +244,8 @@ export default function Buitenwereld() {
           <mesh position={[3.4, 2.6, 0.9]}><boxGeometry args={[0.9, 0.9, 0.12]} /><meshStandardMaterial color="#ffd54a" roughness={0.8} /></mesh>
           <mesh position={[3.4, 1.05, 0.9]}><boxGeometry args={[0.14, 2.2, 0.14]} /><meshStandardMaterial color="#666" roughness={1} /></mesh>
         </group>
-        {/* Autootjes op weg naar het park. */}
-        {[{ x: -1.8, z: 114, k: "#e2574c" }, { x: 1.8, z: 98, k: "#4a90d9", r: Math.PI }, { x: -1.8, z: 126, k: "#f2b134" }].map((a, i) => (
-          <group key={i} position={[a.x, 0, a.z]} rotation={[0, a.r || 0, 0]}>
-            <mesh position={[0, 0.75, 0]} castShadow><boxGeometry args={[2.1, 0.8, 3.4]} /><meshStandardMaterial color={a.k} roughness={0.8} /></mesh>
-            <mesh position={[0, 1.45, -0.2]} castShadow><boxGeometry args={[1.8, 0.7, 1.8]} /><meshStandardMaterial color="#dfe8ee" roughness={0.6} /></mesh>
-            {[[-0.95, 1.1], [0.95, 1.1], [-0.95, -1.1], [0.95, -1.1]].map(([wx, wz], j) => (
-              <mesh key={j} position={[wx, 0.35, wz]}><boxGeometry args={[0.35, 0.7, 0.7]} /><meshStandardMaterial color="#22262a" roughness={1} /></mesh>
-            ))}
-          </group>
-        ))}
+        {/* 🚗 De autootjes staan hier niet meer als decor: sinds 8 sep zijn het echte,
+            berijdbare auto's (Autos.jsx, in wereld-maten gemount vanuit ZooScene). */}
       </group>
     </group>
     </>

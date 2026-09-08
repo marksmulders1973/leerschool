@@ -12,6 +12,7 @@ import { buitenHoogte, VULKAAN, brugLeuning, BRUG } from "./eilandVorm";
 import Hangbrug from "./Hangbrug";
 import Kabelbaan, { KABEL_DAL, KABEL_BERG } from "./Kabelbaan";
 import Sleebaan, { SLEE_START } from "./Sleebaan";
+import Autos, { AUTO_PLEK } from "./Autos";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -830,6 +831,7 @@ const VASTE_PLEKKEN = [
   { id: "sneeuwgrens", x: KABEL_BERG.x, z: KABEL_BERG.z },
   { id: "slee", x: SLEE_START.x, z: SLEE_START.z },
   { id: "hangbrug", x: (BRUG.ax + BRUG.bx) / 2, z: (BRUG.az + BRUG.bz) / 2, straal: BRUG.L / 2 + 4 },
+  { id: "auto", x: AUTO_PLEK.x, z: AUTO_PLEK.z, straal: 30 },
 ];
 function GidsWatcher({ playerPos, playerFace, placedItems, trainHeadRef, actief, onGids, hierRef = null, factsRef = null }) {
   const dwell = useRef({ id: null, t: 0 });
@@ -1848,6 +1850,9 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <Hangbrug onOefenen={onOefenen} />
         <Kabelbaan playerRef={playerPos} teleportRef={teleportRef} inputRef={inputRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
         <Sleebaan playerRef={playerPos} teleportRef={teleportRef} inputRef={inputRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
+        {/* 🚗 Berijdbare auto's op het weggetje bij de bushalte (Mark 8 sep). Zelfde
+            rit-status als kabelbaan/slee (poppetje verborgen, gids uit). */}
+        <Autos playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} inputRef={inputRef} teleportRef={teleportRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         {/* Samenhang-plan 2 sep 2026: gids en poorten óók aan in bouw-modus —

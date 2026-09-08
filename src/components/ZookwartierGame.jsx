@@ -30,6 +30,7 @@ import { PARK_LEERMOMENTEN, LEERMOMENT_BY_ASSET, POORT_ASSETS, niveauLabelVoorLe
 import { VULKAAN, BRUG } from "../features/zoo/eilandVorm";
 import { KABEL_DAL, KABEL_CENTRUM } from "../features/zoo/Kabelbaan";
 import { SLEE_START } from "../features/zoo/Sleebaan";
+import { AUTO_PLEK } from "../features/zoo/Autos";
 // spawn-plek voor ?scene=vulkaan: 30 m vóór de voet (je ziet de hele berg), op de lijn parkmidden → vulkaan
 const VULKAAN_SPAWN = (() => { const d = Math.hypot(VULKAAN.x, VULKAAN.z), r = VULKAAN.R + 30; return [VULKAAN.x - (VULKAAN.x / d) * r, 0, VULKAAN.z - (VULKAAN.z / d) * r]; })();
 // camera-yaw die vanaf die plek naar de vulkaan kijkt (de camera staat aan de
@@ -48,6 +49,8 @@ const BERG_SPAWNS = {
   slee: (() => { const sp = naarDoel(SLEE_START.x, SLEE_START.z, KABEL_CENTRUM.x, KABEL_CENTRUM.z, 5); return { spawn: sp, yaw: yawVanafBerg(sp[0], sp[2]), pitch: 0.16 }; })(),
   // op het brugdek (30% vanaf de vulkaankant), camera aan de vulkaankant → je kijkt de brug op
   hangbrug: { spawn: [BRUG.ax + BRUG.ux * BRUG.L * 0.3, 0, BRUG.az + BRUG.uz * BRUG.L * 0.3], yaw: Math.atan2(BRUG.ux, BRUG.uz), pitch: 0.12 },
+  // 🚗 naast de rode auto bij de bushalte, camera kijkt naar de auto
+  auto: { spawn: [AUTO_PLEK.x + 3.5, 0, AUTO_PLEK.z + 3], yaw: null, doel: [AUTO_PLEK.x, AUTO_PLEK.z], pitch: 0.1 },
 };
 import { WANDEL_ROUTES, ROUTE_BY_ID, leesWandeling, startWandeling, volgendeStop, stopWandeling, stopsVan, kiesStopsVoorPark, herstelWandeling } from "../features/zoo/wandelRoutes";
 import { LINT_BANDEN } from "../features/zoo/leerpadLint";
