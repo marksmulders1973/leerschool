@@ -18,7 +18,7 @@
 
 ## 🔴 Nu doen (deze week)
 
-- **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend. ⚠️ Batch 2 is 7 sep NIET gegaan (stond ten onrechte als 'automatisch' in het dagrapport) → staat klaar, gaat na Mark-'ga' (~45/werkdag). Reacties komen op hallo@ → Gmail; stand 8 sep: 0 reacties, 0 bounces.**
+- **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend. ✅ Batch 2 (45) verzonden 8 sep 14:45 na Mark-'ga'. Batch 3 e.v. (~274 over) à ~45/werkdag, telkens na 'ga'. Reacties komen op hallo@ → Gmail; stand 8 sep: 0 reacties, 0 bounces.**
 - **Vercel-login in Chrome-voor-Claude verlopen (8 sep)** → Mark logt één keer in op vercel.com in dat venster; tot dan geen bezoekers/referrers in het dagrapport.
 - **LinkedIn-post Ooievaarspas plakken** (versie A in `Desktop\linkedin-ooievaarspas-post.md`, klaargezet 8 sep).
 - **wo 2 sep: uren loggen** (Claude zette een voorstel-regel in URENLOGBOEK; corrigeer als het anders was) · **do 3 sep: ✅ Tiffany accepteerde LinkedIn-connectie (1 sep) · Nicole: ✅ 5 sep zelf gereageerd (vriendelijke afsluiting) — geen nudge meer, spoor loopt via Froukje · (was: check Nicole + Tiffany, LinkedIn-connectie 1 sep geaccepteerd = haakje voor een kort berichtje)** · ✅ Spark Fest/Inez: nudge verstuurd 2 sep (Claude, na Mark-akkoord).

@@ -2,8 +2,9 @@ import fs from "node:fs";
 const env = fs.readFileSync("C:/Users/mark-/.claude/resend-lokaal.env","utf8");
 const KEY = (env.match(/RESEND_API_KEY\s*=\s*"?([^"\r\n]+)/)||[])[1];
 if (!KEY) { console.error("geen key"); process.exit(1); }
-const doc = fs.readFileSync("docs/outreach/LOWAN-BATCH-1-CONCEPT.md","utf8");
-const body = doc.split("## Tekst (per school: [school] en [plaats] invullen)")[1].split("## Batch 1")[0].trim();
+const DOC = process.argv[3] || "docs/outreach/LOWAN-BATCH-1-CONCEPT.md";
+const doc = fs.readFileSync(DOC,"utf8");
+const body = doc.split("## Tekst (per school: [school] en [plaats] invullen)")[1].split(/## Batch \d/)[0].trim();
 const rows = [...doc.matchAll(/^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([\w.+-]+@[\w.-]+)\s*\|/gm)].map(m=>({n:+m[1],school:m[2],plaats:m[3],email:m[4]}));
 const MAX = +(process.argv[2]||60); // Mark 2 sep: 60/dag, geen akkoord per batch
 const todo = rows.slice(0, MAX);
@@ -21,5 +22,5 @@ for (const r of todo) {
 }
 const ok = log.filter(l=>l.includes("\tOK\t")).length;
 const stamp = new Date().toLocaleString("nl-NL",{timeZone:"Europe/Amsterdam"});
-fs.appendFileSync("docs/outreach/LOWAN-BATCH-1-CONCEPT.md", `\n- **${stamp}** — via Resend (hallo@leerkwartier.app), ${ok}/${todo.length} verstuurd (rij 1-${todo[todo.length-1].n}).\n` + log.map(l=>"  - "+l.replace(/\t/g," · ")).join("\n") + "\n");
+fs.appendFileSync(DOC, `\n- **${stamp}** — via Resend (hallo@leerkwartier.app), ${ok}/${todo.length} verstuurd (rij 1-${todo[todo.length-1].n}).\n` + log.map(l=>"  - "+l.replace(/\t/g," · ")).join("\n") + "\n");
 console.log("KLAAR", ok, "/", todo.length);
