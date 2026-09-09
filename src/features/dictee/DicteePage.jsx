@@ -13,6 +13,7 @@
 // "🔊 Nog een keer" tikken. Zonder stem (geen speechSynthesis) valt het terug
 // op "lees-dictee": de zin verschijnt kort mét het woord, verdwijnt, en dan typ je.
 import { useEffect, useMemo, useRef, useState } from "react";
+import supabase from "../../supabase";
 import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import { track } from "../../utils.js";
 import { recordAnswerForPath, recordRefAnswer } from "../mastery/mastery.js";
@@ -26,6 +27,35 @@ const PAD_ID = "dictee-spelling";
 // de pagina erfde kleuren van de app-schil (donker thema / dark mode van de telefoon).
 // Daarom hier alles expliciet: lichte achtergrond, donkere tekst, lichte kleurstelling
 // voor invoervelden (colorScheme light zodat dark mode ze niet zwart maakt).
+// 📬 E-mailhaakje op het eindscherm (Mark 18 jun 2026: elke reclame/landing vraagt om e-mail;
+// 9 sep: "hiermee kunnen we reclame maken"). Ouder laat adres achter → weekrapport (plan 'dictee').
+function DicteeMailHaakje({ groep, score, totaal }) {
+  const [email, setEmail] = useState("");
+  const [stand, setStand] = useState("");
+  const stuur = async (e) => {
+    e.preventDefault();
+    const m = email.trim(); if (!m.includes("@")) { setStand("Vul een geldig e-mailadres in."); return; }
+    setStand("Even bezig…");
+    try {
+      const { error } = await supabase.from("upgrade_waitlist").insert({ email: m, plan: "dictee", source: "dictee-eindscherm", kind_groep: String(groep || ""), consent_at: new Date().toISOString() });
+      if (error) throw error;
+      setStand("✓ Gelukt! Het eerste weekrapport komt maandag."); setEmail("");
+      try { track("dictee_email", { groep, score, totaal }); } catch { /* */ }
+    } catch { setStand("Ging niet door — probeer het later nog eens."); }
+  };
+  return (
+    <form onSubmit={stuur} style={{ background: "#fff8e1", border: "1px solid #f3d27a", borderRadius: 14, padding: "12px 14px", margin: "12px 0", color: "#1c2840" }}>
+      <div style={{ font: "800 14px system-ui" }}>📬 Elke maandag dit resultaat in de mail van je ouder of verzorger?</div>
+      <div style={{ fontSize: 13, color: "#556", margin: "4px 0 8px" }}>Gratis weekrapport: welke woorden goed gingen en welke regel nog oefenen vraagt. Uitschrijven kan altijd.</div>
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="e-mail van ouder of verzorger" style={{ flex: "1 1 180px", padding: "10px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", colorScheme: "light", fontSize: 15, minWidth: 0 }} />
+        <button type="submit" style={{ border: "none", borderRadius: 10, padding: "10px 14px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>Ja, graag</button>
+      </div>
+      {stand && <div style={{ fontSize: 13, marginTop: 6, color: stand.startsWith("✓") ? "#146c43" : "#7a5a00" }}>{stand}</div>}
+    </form>
+  );
+}
+
 const W = { maxWidth: 560, margin: "0 auto", padding: "16px 16px 40px", fontFamily: "system-ui, Segoe UI, sans-serif", color: "#1c2840", background: "#f6f9fc", minHeight: "100vh", colorScheme: "light", boxSizing: "border-box" };
 const KNOP = { border: "none", borderRadius: 999, padding: "12px 20px", font: "800 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" };
 const KNOP2 = { ...KNOP, color: "#1c2840", background: "#eef2f7" };
@@ -172,6 +202,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
           <button onClick={() => start(groep)} style={fouten.length ? KNOP2 : KNOP}>✍️ Nieuw dictee</button>
           <button onClick={onTerug} style={KNOP2}>Klaar</button>
         </div>
+        <DicteeMailHaakje groep={groep} score={score} totaal={items.length} />
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Je score telt mee in het weekrapport voor thuis (spelling).</p>
       </div>
     );
