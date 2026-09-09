@@ -50,7 +50,8 @@ export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, sp
   // Mark 9 sep 2026: echte spelers gaan vóór bots bij het kiezen van de imposter(s);
   // bots worden pas imposter als er niet genoeg echte spelers zijn.
   const schud = (a) => a.slice().sort(() => Math.random() - 0.5);
-  const echtEerst = (kandidaten) => [...schud(kandidaten.filter((i) => !botIds.has(i))), ...schud(kandidaten.filter((i) => botIds.has(i)))];
+  // Solo (1 echte speler) met "laat het lot beslissen" blijft echt loten — anders ben je altijd de imposter.
+  const echtEerst = (kandidaten) => (ids.length - botIds.size < 2 ? schud(kandidaten) : [...schud(kandidaten.filter((i) => !botIds.has(i))), ...schud(kandidaten.filter((i) => botIds.has(i)))]);
   let imposters;
   if (spelerRolKeuze === "imposter") imposters = [spelerId, ...echtEerst(ids.filter((i) => i !== spelerId)).slice(0, nImp - 1)];
   else if (spelerRolKeuze === "bouwer") imposters = echtEerst(ids.filter((i) => i !== spelerId)).slice(0, nImp);
