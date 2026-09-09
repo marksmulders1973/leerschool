@@ -44,6 +44,11 @@ Mark wil de maand-slag zien, niet alleen de dag. Voortaan in élk dagrapport een
 - Accounts/QR/Google/ChatGPT **altijd zelf uit Supabase rekenen** zodat het blok niet afhankelijk is van of de browser gekoppeld is.
 - **Aug 2026 (seed-cijfer, Mark 30 aug):** ~840 unieke bezoekers (+86% vs juli) · 72 nieuwe accounts · QR + Google + ChatGPT begonnen alle drie te druppelen = sterkste maand tot nu toe.
 
+## 💳 Betaal-spoor (vast blok — Mark 9 sep 2026: "bouwen kan al, live zetten niet")
+Bron: `docs/BETALING-PLAN.md`. In élk dagrapport de checklist tonen + wat sinds gisteren bewoog:
+☐ KvK 28 sep ☐ KOR ☐ Knab ☐ Stripe-account (test-modus, kan vóór KvK) ☐ test-keten groen (checkout → webhook → subscriptions/payments → factuurmail) ☐ Invoice-template KvK+KOR ☐ 3 prijzen ☐ live-verificatie ☐ webhook live ☐ 1e testbetaling PRO2027 ☐ factuur ontvangen ☐ paywall aan (jan 2027).
+Gebouwd 9 sep: api (checkout/portal/webhook in één functie, fetch + Web Crypto), DB (subscriptions-kolommen + payments), facturen-eisen (KvK, KOR-voettekst, invoice_creation bij Seizoenspas).
+
 ## 📋 Vast dagrapport-format (voortaan; volgorde = belang)
 0. **🧭 Kompas** — Noord-ster (terugkerende apparaten 7d) + 1 regel gezondheid.
 1. **🏛️ Kernpijlers** — bovenste tabel, alleen wat bewoog sinds gisteren uitlichten.
