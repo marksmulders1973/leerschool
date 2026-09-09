@@ -52,7 +52,8 @@
 
 | Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
 |---|---|---|
-| di 8 sep | ~2,5 (voorstel) | 💻📧 Mail-check incl. hallo@ (Kinderhulp: september-nieuwsbrief bevestigd) · Kinderhulp-keten live getest (erescherm/scan/flyer/Supabase) · Ooievaarspas-communicatie voorbereid + bedankt.html-sectie live (commit a46c79f6) + LinkedIn-concept · db-fix weekrapport-vangnet · dagrapport 8 sep + PDF |
+| di 8 sep | ~8 (voorstel: ochtend 2,5 + middag/avond 5,5) | 💻📧 Mail-check incl. hallo@ (Kinderhulp: september-nieuwsbrief) · Kinderhulp-keten getest · Ooievaarspas op bedankt.html + LinkedIn-concept · db-fix weekrapport-vangnet · dagrapport + PDF · testaccount-filter (profiles_echt) · LOWAN batch 2 (45) · park: koepelbergen/hangbrug/kabelbaan v604, berijdbare auto's v605 · weekmail reageer-blok · samen bouwen v606 (park_rooms, Realtime, tests) — tot ~00:00 |
+| wo 9 sep | ~2 (ochtend 06:20-08:00, voorstel) | ☁️ Cloudflare-account + wrangler-OAuth · park-relay (Durable Object) gebouwd/getest/live v607 · laad-overlay + leerkracht-parkcode v608 · dagrapport 9 sep |
 | ma 7 sep | ~4 (voorstel) | 💻 Activatie-nulmeting (docs/ACTIVATIE-NULMETING-SEP2026.md) · Start-kwartier v602 (08:10) + QR→start-kwartier + ouder-mail v603 (10:40) · stadspas-inventarisatie in GEMEENTE-BETAALT-PLAN |
 
 ## Week 36 (ma 31 aug – zo 6 sep)
