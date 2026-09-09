@@ -105,6 +105,20 @@ export async function haalParkRoom(code) {
   if (error) throw error;
   return Array.isArray(data) ? data[0] || null : data || null;
 }
+/** 🎮 klassement van een parkcode (laatste 60 dagen, beste totaal per naam) */
+export async function haalKlassement(code) {
+  const { data, error } = await supabase.rpc("park_room_klassement", { p_code: normaliseerCode(code) });
+  if (error) throw error;
+  return data || [];
+}
+/** 🎮 scores van een ronde bewaren (door de spelleider, één rij per echte speler) */
+export async function bewaarScores(code, rijen) {
+  const { data: { user } = {} } = await supabase.auth.getUser();
+  if (!user || !rijen?.length) return false;
+  const { error } = await supabase.from("park_room_scores").insert(rijen.map((r) => ({ code: normaliseerCode(code), naam: String(r.naam || "Speler").slice(0, 30), punten: r.punten | 0, gewonnen: !!r.gewonnen, rol: r.rol || null, vak: r.vak || null, door: user.id })));
+  if (error) throw error;
+  return true;
+}
 /** parkcodes die deze gebruiker aanmaakte (leerkracht-pagina) — RLS: select staat open, code = sleutel */
 export async function mijnParkRooms(uid) {
   if (!uid) return [];

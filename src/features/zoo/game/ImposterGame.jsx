@@ -13,6 +13,8 @@ import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import CharacterModel from "../CharacterModel";
 import { bouwStartVragen } from "../../onboarding/startKwartier.js";
+import { bouwGameVragen, VAKKEN, GROEPEN, groepLabel } from "./vragenBron.js";
+import { haalKlassement, bewaarScores } from "../parkRoom.js";
 import { track } from "../../../utils.js";
 import { maakStations, maakSpel, tick, speler, actieveSpelers, magTikken, tik, dichtstbijStation, magTaak, taakKlaar, startVergadering, stem, sluitVergadering, scoreVan, alleGestemd, maakSnapshot, pasSnapshotToe, SPEL_DUUR, VERGADERING_S } from "./imposterEngine.js";
 
@@ -77,6 +79,12 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   const [rolKeuze, setRolKeuze] = useState(multi ? "random" : null);
   const [lobby, setLobby] = useState([]);            // host: wie deed mee [{id,naam,avatar}]
   const [hostNaam, setHostNaam] = useState("");      // client: wie is de spelleider
+  // fase 3: keuzes van de spelleider + klassement per parkcode
+  const [vak, setVak] = useState("alles");
+  const [groep, setGroep] = useState("eigen");
+  const [nImp, setNImp] = useState(1);
+  const [klassement, setKlassement] = useState(null);
+  const scoresBewaard = useRef(false);
   const bevrorenPos = useRef(null);
   const laatsteSnap = useRef(0);
   const uitkomstGezien = useRef(null);
@@ -91,6 +99,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   const mij = st ? speler(st, mijnId) : null;
 
   useEffect(() => { const t = setInterval(() => setN((n) => n + 1), 250); return () => clearInterval(t); }, []);
+  // klassement van deze parkcode (alleen in een gedeeld park)
+  useEffect(() => { if (!multi || !net.code) return; haalKlassement(net.code).then(setKlassement).catch(() => setKlassement([])); }, [multi]); // eslint-disable-line
   useEffect(() => { try { track("game_start", { groep: level, multi: multi ? 1 : 0, host: host ? 1 : 0 }); } catch { /* */ } }, []); // eslint-disable-line
 
   // ── netwerk ──
@@ -138,7 +148,14 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
       tick(st, dt, p ? { x: p.x, z: p.z } : null, vrijPlek, multi ? net.peers() : null);
       if (multi && st.fase === "vergadering" && alleGestemd(st)) sluitVergadering(st);
       if (vorigeFase === "vergadering" && st.fase !== "vergadering" && st.vergadering?.uitkomst) { setLaatsteUitkomst(st.vergadering.uitkomst); setTimeout(() => setLaatsteUitkomst(null), 4500); try { track("game_vergadering", { imposter: st.vergadering.uitkomst.imposter ? 1 : 0 }); } catch { /* */ } }
-      if (vorigeFase !== "einde" && st.fase === "einde") { try { const sc = scoreVan(st); track("game_einde", { gewonnen: sc.gewonnen ? 1 : 0, rol: sc.rol, punten: sc.punten, duur: sc.duur, multi: multi ? 1 : 0 }); } catch { /* */ } }
+      if (vorigeFase !== "einde" && st.fase === "einde") {
+        try { const sc = scoreVan(st); track("game_einde", { gewonnen: sc.gewonnen ? 1 : 0, rol: sc.rol, punten: sc.punten, duur: sc.duur, multi: multi ? 1 : 0, vak: st.vak, imposters: st.nImp }); } catch { /* */ }
+        if (multi && net.code && !scoresBewaard.current) {
+          scoresBewaard.current = true;
+          const rijen = st.spelers.filter((s) => !s.bot).map((s) => ({ naam: s.naam, punten: s.punten, gewonnen: (st.uitkomst.gewonnen === "bouwers") === (s.rol === "bouwer"), rol: s.rol, vak: st.vak }));
+          bewaarScores(net.code, rijen).then(() => haalKlassement(net.code)).then((k) => { if (k) setKlassement(k); }).catch(() => {});
+        }
+      }
       // snapshot naar medespelers
       if (multi && st.fase !== "intro") { const nu = performance.now(); if (nu - laatsteSnap.current > SNAP_MS) { laatsteSnap.current = nu; net.send({ t: "snap", st: maakSnapshot(st) }); } }
     } else if (st.fase === "vergadering" && st.vergadering) { st.vergadering.t += dt; }
@@ -155,7 +172,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
     const stations = maakStations(32, 6, vrijPlek);
     const extra = multi ? lobby.map((l) => ({ id: l.id, naam: l.naam, avatar: l.avatar })) : [];
     const nBots = Math.max(1, 5 - extra.length);
-    stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rolKeuze === "random" ? null : rolKeuze, extraSpelers: extra });
+    stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rolKeuze === "random" ? null : rolKeuze, extraSpelers: extra, nImposters: nImp, vak, groep });
+    scoresBewaard.current = false;
     stRef.current.fase = "spel";
     if (multi) { for (const sp of stRef.current.spelers) if (!sp.bot && sp.id !== mijnId) net.send({ t: "rol", voor: sp.id, rol: sp.rol }); net.send({ t: "snap", st: maakSnapshot(stRef.current) }); }
     setN((n) => n + 1);
@@ -166,7 +184,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   const openTaak = async () => {
     if (!station || !mij || !magTaak(st, mij, station) || taak) return;
     setTaak({ stationId: station.id, vragen: null, idx: 0, goed: 0, gekozen: null });
-    try { const v = await bouwStartVragen(level, 3); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 3) } : t)); }
+    try { const v = await bouwGameVragen({ vak: st.vak, groep: st.groep, level, n: 3 }); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 3) } : t)); }
     catch { setTaak((t) => (t ? { ...t, vragen: [] } : t)); }
   };
   const kiesOptie = (i) => {
@@ -196,12 +214,13 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   useEffect(() => {
     window.__imposter = {
       st: () => stRef.current, host, mijnId,
-      taak: async (stationId) => { const sid = stationId || stRef.current.stations[0].id; setTaak({ stationId: sid, vragen: null, idx: 0, goed: 0, gekozen: null }); try { const v = await bouwStartVragen(level, 3); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 3) } : t)); } catch { setTaak((t) => (t ? { ...t, vragen: [] } : t)); } },
+      taak: async (stationId) => { const sid = stationId || stRef.current.stations[0].id; setTaak({ stationId: sid, vragen: null, idx: 0, goed: 0, gekozen: null }); try { const v = await bouwGameVragen({ vak: stRef.current.vak, groep: stRef.current.groep, level, n: 3 }); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 3) } : t)); } catch { setTaak((t) => (t ? { ...t, vragen: [] } : t)); } },
+      kies: (v, g, n) => { if (v) setVak(v); if (g) setGroep(g); if (n) setNImp(n); },
       winBouwers: () => { if (host && stRef.current) { stRef.current.takenKlaar = stRef.current.takenTotaal; setN((n) => n + 1); } },
       start: () => startSpel(),
     };
     return () => { delete window.__imposter; };
-  }, [level, host, lobby]); // eslint-disable-line
+  }, [level, host, lobby, vak, groep, nImp, rolKeuze]); // eslint-disable-line
 
   // ── wachtscherm voor medespelers zonder spelstand ──
   if (!st || !mij) {
@@ -248,6 +267,25 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                   <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Imposter uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = imposter wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
                 </>
               )}
+              <div style={{ font: "800 14px system-ui", margin: "10px 0 4px" }}>Vragen uit</div>
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8 }}>
+                {VAKKEN.map((v) => <button key={v.id} onClick={() => { setVak(v.id); if (v.id === "examens") setGroep("vo"); else if (groep === "vo") setGroep("eigen"); }} style={{ ...KNOP_GRIJS, padding: "7px 11px", font: "800 13px system-ui", background: vak === v.id ? "linear-gradient(135deg,#6a3fd6,#4a2aa8)" : "#3a4754" }}>{v.emoji} {v.label}</button>)}
+              </div>
+              <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8, alignItems: "center" }}>
+                <span style={{ font: "800 13px system-ui", color: "#556" }}>Niveau:</span>
+                {GROEPEN.filter((g) => (vak === "examens" ? g === "vo" : g !== "vo")).map((g) => <button key={g} onClick={() => setGroep(g)} style={{ ...KNOP_GRIJS, padding: "6px 10px", font: "800 12.5px system-ui", background: groep === g ? "linear-gradient(135deg,#2f6fd6,#1f4fa8)" : "#3a4754" }}>{groepLabel(g)}</button>)}
+              </div>
+              {(multi ? 1 + lobby.length + Math.max(1, 5 - lobby.length) : 6) >= 6 && (
+                <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8, alignItems: "center" }}>
+                  <span style={{ font: "800 13px system-ui", color: "#556" }}>Imposters:</span>
+                  {[1, 2].map((n) => <button key={n} onClick={() => setNImp(n)} style={{ ...KNOP_GRIJS, padding: "6px 12px", font: "800 12.5px system-ui", background: nImp === n ? "linear-gradient(135deg,#e2574c,#b0332a)" : "#3a4754" }}>{n}</button>)}
+                </div>
+              )}
+              {multi && klassement && klassement.length > 0 && (
+                <div style={{ background: "#fff8e1", border: "1px solid #f3d27a", borderRadius: 12, padding: "8px 12px", margin: "4px 0 8px", font: "700 13px system-ui" }}>
+                  🏆 Klassement van dit park: {klassement.slice(0, 5).map((k, ix) => `${ix + 1}. ${k.naam} ${k.punten}`).join(" · ")}
+                </div>
+              )}
               <div style={{ font: "800 14px system-ui", margin: "10px 0 4px" }}>{multi ? "Jouw rol" : "Wie wil je zijn?"}</div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
                 {[["random", "🎲 Verras me"], ["bouwer", "🔧 Bouwer"], ["imposter", "🕵️ Imposter"]].map(([k, l]) => (
@@ -275,6 +313,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
               <span style={{ opacity: .7 }}>·</span><span>🧩 {st.takenKlaar}/{st.takenTotaal}</span>
               <span style={{ opacity: .7 }}>·</span><span>⭐ {mij.punten}</span>
               {multi && <><span style={{ opacity: .7 }}>·</span><span>👥 {echteSpelers}</span></>}
+              {st.vak && st.vak !== "alles" && <><span style={{ opacity: .7 }}>·</span><span>{(VAKKEN.find((v) => v.id === st.vak) || {}).emoji} {groepLabel(st.groep)}</span></>}
             </div>
             <div style={{ position: "absolute", left: "50%", top: 84, transform: "translateX(-50%)", width: 220, height: 6, borderRadius: 3, background: "rgba(255,255,255,.25)" }}><div style={{ width: `${Math.round((st.takenKlaar / Math.max(1, st.takenTotaal)) * 100)}%`, height: "100%", borderRadius: 3, background: "#69f0ae" }} /></div>
             <div style={{ position: "absolute", left: 12, top: 100, font: "700 12px system-ui", color: "#fff", textShadow: "0 1px 3px rgba(0,0,0,.7)" }}>{(st.log || []).slice(0, 2).map((l, i) => <div key={i} style={{ opacity: 1 - i * 0.35 }}>{l.tekst}</div>)}</div>
@@ -344,7 +383,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
               <div style={{ fontSize: 50 }}>{sc.gewonnen ? "🏆" : "💪"}</div>
               <div style={{ font: "900 24px system-ui" }}>{sc.gewonnen ? "Gewonnen!" : "Verloren…"}</div>
               <div style={{ color: "#556", margin: "4px 0 10px" }}>{st.uitkomst.reden} De imposter was: <b>{st.spelers.filter((s) => s.rol === "imposter").map((s) => s.naam).join(" en ") || "…"}</b>.</div>
-              {multi && <div style={{ fontSize: 13, color: "#556", marginBottom: 8 }}>{st.spelers.filter((s) => !s.bot).map((s) => `${s.naam}: ⭐ ${s.punten}`).join(" · ")}</div>}
+              {multi && <div style={{ fontSize: 13, color: "#556", marginBottom: 8 }}>Deze ronde: {st.spelers.filter((s) => !s.bot).slice().sort((a, b) => b.punten - a.punten).map((s, ix) => `${ix + 1}. ${s.naam} ⭐ ${s.punten}`).join(" · ")}</div>}
+              {multi && klassement && klassement.length > 0 && <div style={{ fontSize: 13, color: "#7a5a00", background: "#fff8e1", borderRadius: 10, padding: "6px 10px", marginBottom: 8 }}>🏆 Klassement park: {klassement.slice(0, 3).map((k, ix) => `${ix + 1}. ${k.naam} ${k.punten}`).join(" · ")}</div>}
               <div style={{ background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 12, padding: "10px 12px", font: "800 16px system-ui" }}>⭐ {sc.punten} punten → 🪙 +{sc.munten} munten voor je park</div>
               <div style={{ color: "#556", fontSize: 13, marginTop: 4 }}>{sc.rol === "imposter" ? `${sc.tiks}× getikt` : `${sc.taken} taken gedaan`} · {sc.duur} s gespeeld</div>
               <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 12, flexWrap: "wrap" }}>

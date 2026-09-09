@@ -36,7 +36,7 @@ export function maakStations(r = 32, n = 6, vrij = null) {
   return uit;
 }
 
-export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, spelerRolKeuze = null, extraSpelers = [] }) {
+export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, spelerRolKeuze = null, extraSpelers = [], nImposters = null, vak = "alles", groep = "eigen" }) {
   const spelers = [{ id: spelerId, naam: spelerNaam || "Jij", avatar: avatar || "blocky:blokJoep", bot: false, x: 0, z: 8 }];
   for (const e of extraSpelers) spelers.push({ id: e.id, naam: e.naam, avatar: e.avatar, bot: false, x: e.x || 0, z: e.z || 8 });
   const namen = BOT_NAMEN.slice().sort(() => Math.random() - 0.5);
@@ -44,7 +44,7 @@ export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, sp
     const st = stations[i % stations.length];
     spelers.push({ id: `bot${i}`, naam: namen[i], avatar: BOT_AVATARS[i % BOT_AVATARS.length], bot: true, x: st.x + rnd(-3, 3), z: st.z + rnd(-3, 3) });
   }
-  const nImp = spelers.length >= 8 ? 2 : 1;
+  const nImp = Math.max(1, Math.min(nImposters || (spelers.length >= 8 ? 2 : 1), Math.floor((spelers.length - 1) / 2)));
   const ids = spelers.map((s) => s.id);
   let imposters;
   if (spelerRolKeuze === "imposter") imposters = [spelerId, ...ids.filter((i) => i !== spelerId).sort(() => Math.random() - 0.5).slice(0, nImp - 1)];
@@ -60,7 +60,7 @@ export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, sp
   return {
     fase: "intro",                 // intro | spel | vergadering | einde
     tijd: 0, spelTijd: 0, sindsVergadering: 0,
-    spelers, stations, spelerId,
+    spelers, stations, spelerId, vak, groep, nImp,
     takenTotaal: bouwers * TAKEN_PER_BOUWER, takenKlaar: 0,
     vergadering: null,             // { door, t, stemmen: {vanId: opId|null}, redenen: {} }
     fouteStemrondes: 0,
@@ -236,7 +236,7 @@ export function maakSnapshot(st) {
   return {
     fase: st.fase, spelTijd: Math.round(st.spelTijd * 10) / 10, sindsVergadering: Math.round(st.sindsVergadering),
     takenKlaar: st.takenKlaar, takenTotaal: st.takenTotaal, fouteStemrondes: st.fouteStemrondes,
-    stations: st.stations, uitkomst: st.uitkomst, log: st.log.slice(0, 3),
+    stations: st.stations, uitkomst: st.uitkomst, log: st.log.slice(0, 3), vak: st.vak, groep: st.groep, nImp: st.nImp,
     vergadering: st.vergadering ? { t: Math.round(st.vergadering.t * 10) / 10, stemmen: st.vergadering.stemmen, uitkomst: st.vergadering.uitkomst || null } : null,
     spelers: st.spelers.map((s) => ({ id: s.id, naam: s.naam, avatar: s.avatar, bot: s.bot, x: +s.x.toFixed(2), z: +s.z.toFixed(2), yaw: +(s.yaw || 0).toFixed(2), moving: !!s.moving, bezig: s.bezig > 0,
       bevroren: Math.round(s.bevroren * 10) / 10, uitgestemd: s.uitgestemd, punten: s.punten, taken: s.taken, tiks: s.tiks, stemmen: s.stemmen, laatstePost: s.laatstePost,
@@ -250,7 +250,7 @@ export function pasSnapshotToe(lokaal, snap, mijnId) {
   st.spelerId = mijnId;
   st.fase = snap.fase; st.spelTijd = snap.spelTijd; st.sindsVergadering = snap.sindsVergadering;
   st.takenKlaar = snap.takenKlaar; st.takenTotaal = snap.takenTotaal; st.fouteStemrondes = snap.fouteStemrondes;
-  st.stations = snap.stations; st.uitkomst = snap.uitkomst; st.log = snap.log || [];
+  st.stations = snap.stations; st.uitkomst = snap.uitkomst; st.log = snap.log || []; st.vak = snap.vak || "alles"; st.groep = snap.groep || "eigen"; st.nImp = snap.nImp || 1;
   st.vergadering = snap.vergadering ? { door: null, t: snap.vergadering.t, stemmen: snap.vergadering.stemmen || {}, redenen: {}, uitkomst: snap.vergadering.uitkomst } : null;
   st.spelers = snap.spelers.map((s) => ({ ...s, rol: s.rol || rollen.get(s.id) || (s.id === mijnId ? st.mijnRol : undefined) || "bouwer", zagTik: null, doel: null, bezig: s.bezig ? 1 : 0 }));
   return st;

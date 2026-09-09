@@ -448,11 +448,12 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const gameNet = useMemo(() => ({
     get actief() { return samen && !!roomConnRef.current; },
     get mijnId() { return roomConnRef.current?.mijnClient || "ik"; },
+    get code() { return room?.code || null; },
     naam, avatar: null,
     send: (d) => roomConnRef.current?.sendGame(d),
     luister: (f) => { gameListeners.current.add(f); return () => gameListeners.current.delete(f); },
     peers: () => peersRef.current,
-  }), [samen, naam]);
+  }), [samen, naam, room?.code]);
   const gameGroep = (() => { try { const u = JSON.parse(localStorage.getItem("ls_user") || "{}"); const m = String(u.level || "").match(/(\d)/); return m ? m[1] : "6"; } catch { return "6"; } })();
   const gameModusRef = useRef(false);
   useEffect(() => { gameModusRef.current = gameModus; }, [gameModus]);
