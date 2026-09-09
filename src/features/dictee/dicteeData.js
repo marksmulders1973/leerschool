@@ -24,9 +24,9 @@ export const DICTEE = {
     { zin: "De kat slaapt op de bank.", woord: "bank", regel: "Een nk-woord: je hoort 'ngk', je schrijft n-k.", cat: "-nk" },
     { zin: "Ik zwaai naar de trein.", woord: "trein", regel: "Korte ei: een e en een i. Onthoud: t-r-e-i-n.", cat: "ei/ij" },
     { zin: "Het is koud buiten.", woord: "koud", regel: "Je hoort een t, maar je schrijft een d. Maak langer: kou-de.", cat: "d of t" },
-    { zin: "De boot vaart over het water.", woord: "boot", regel: "Lange oo: twee o's, want er komt maar één medeklinker achter.", cat: "lange klank" },
+    { zin: "De boot vaart over het water.", woord: "boot", regel: "Je hoort een lange oo en het woord eindigt op een medeklinker: dan schrijf je twee o's: b-oo-t.", cat: "lange klank" },
     { zin: "Oma bakt een appel.", woord: "appel", regel: "Korte a, daarna twee p's: anders lees je 'apel'.", cat: "dubbele medeklinker" },
-    { zin: "De schaap staat in de wei.", woord: "schaap", regel: "Sch-woord: s-c-h aan het begin.", cat: "sch" },
+    { zin: "Het schaap staat in de wei.", woord: "schaap", regel: "Sch-woord: s-c-h aan het begin.", cat: "sch" },
     { zin: "Ik lees een mooi boek.", woord: "boek", regel: "De oe-klank schrijf je als o-e.", cat: "tweetekenklank" },
     { zin: "De vogel zingt.", woord: "vogel", regel: "Open lettergreep: vo-gel, dus maar één o.", cat: "open lettergreep" },
     { zin: "Wij spelen op straat.", woord: "straat", regel: "Lange aa: twee a's, met s-t-r vooraan.", cat: "lange klank" },
@@ -35,7 +35,7 @@ export const DICTEE = {
     { zin: "De zon schijnt fel.", woord: "schijnt", regel: "Sch aan het begin, lange ij, en een t op het eind.", cat: "sch + ij" },
     { zin: "Het kind lacht.", woord: "lacht", regel: "Je hoort 'lagt', je schrijft ch-t.", cat: "cht" },
     { zin: "Ik zie een muis.", woord: "muis", regel: "De ui-klank schrijf je als u-i.", cat: "tweetekenklank" },
-    { zin: "De bloem is geel.", woord: "geel", regel: "Lange ee: twee e's, want er komt maar één medeklinker achter.", cat: "lange klank" },
+    { zin: "De bloem is geel.", woord: "geel", regel: "Je hoort een lange ee en het woord eindigt op een medeklinker: dan schrijf je twee e's: g-ee-l.", cat: "lange klank" },
   ],
   5: [
     { zin: "De bakker verkoopt brood.", woord: "bakker", regel: "Korte a, dan twee k's: bak-ker.", cat: "dubbele medeklinker" },
@@ -49,7 +49,7 @@ export const DICTEE = {
     { zin: "Ik lees een spannend verhaal.", woord: "spannend", regel: "Twee n's na de korte a, en een d op het eind: span-nen-de.", cat: "dubbele medeklinker" },
     { zin: "Het meisje lacht vrolijk.", woord: "vrolijk", regel: "Je hoort 'vrolluk', je schrijft -lijk.", cat: "-lijk" },
     { zin: "De trein rijdt langs de rivier.", woord: "rivier", regel: "Ri-vier: één i in de open lettergreep, dan ie.", cat: "open lettergreep" },
-    { zin: "Wij gaan naar de bioscoop.", woord: "bioscoop", regel: "Bi-os-coop: twee o's op het eind, want de klank is lang.", cat: "lange klank" },
+    { zin: "Wij gaan naar de bioscoop.", woord: "bioscoop", regel: "Bi-o-scoop: je hoort kop, maar je schrijft een c. En de laatste klank is lang, dus twee o's.", cat: "leenwoord" },
     { zin: "De kapper knipt mijn haar.", woord: "kapper", regel: "Korte a, dus twee p's: kap-per.", cat: "dubbele medeklinker" },
     { zin: "Het is een grappig verhaal.", woord: "grappig", regel: "Twee p's na de korte a, en -ig op het eind.", cat: "-ig" },
     { zin: "De auto staat in de garage.", woord: "garage", regel: "Een leenwoord uit het Frans: de g klinkt als 'zj', maar je schrijft g.", cat: "leenwoord" },
@@ -69,7 +69,7 @@ export const DICTEE = {
     { zin: "Mijn oma is heel gelukkig.", woord: "gelukkig", regel: "Twee k's na de korte u, en -ig op het eind.", cat: "-ig" },
     { zin: "Ik speel graag in het zwembad.", woord: "zwembad", regel: "Samenstelling zwem + bad. Je hoort t, je schrijft d: ba-den.", cat: "samenstelling" },
     { zin: "Het feest was fantastisch.", woord: "fantastisch", regel: "Hoor je 'ies'? Schrijf -isch. Drie letters: s-c-h.", cat: "-isch" },
-    { zin: "De bloemetjes staan in de vaas.", woord: "bloemetjes", regel: "Verkleinwoord met -etjes na bloem.", cat: "verkleinwoord" },
+    { zin: "De bloemetjes staan in de vaas.", woord: "bloemetjes", ook: ["bloempjes"], regel: "Verkleinwoord: bloem + etjes. Bloempjes mag ook.", cat: "verkleinwoord" },
     { zin: "Wij gaan op vakantie naar Frankrijk.", woord: "vakantie", regel: "Leenwoord: -tie klinkt als 'tsie', je schrijft t-i-e.", cat: "leenwoord" },
     { zin: "De computer staat aan.", woord: "computer", regel: "Engels leenwoord: c-o-m, ook al hoor je 'kom'.", cat: "leenwoord" },
     { zin: "De bibliotheek is vandaag open.", woord: "bibliotheek", regel: "Bi-bli-o-theek: met th in het midden en twee e's op het eind.", cat: "leenwoord" },
@@ -79,13 +79,13 @@ export const DICTEE = {
     { zin: "De politie helpt mensen.", woord: "politie", regel: "Leenwoord: -tie op het eind, je hoort 'tsie'.", cat: "leenwoord" },
     { zin: "Wij zingen liedjes in de klas.", woord: "liedjes", regel: "Verkleinwoord: lied + jes. De d blijft.", cat: "verkleinwoord" },
     { zin: "Ik ben een beetje moe.", woord: "beetje", regel: "Vaste schrijfwijze: b-e-e-t-j-e.", cat: "verkleinwoord" },
-    { zin: "De aardappels zijn gaar.", woord: "aardappels", regel: "Samenstelling aard + appels, met -s als meervoud.", cat: "meervoud" },
+    { zin: "De aardappels zijn gaar.", woord: "aardappels", ook: ["aardappelen"], regel: "Je hoort aart, maar je schrijft aard: maak het langer, aar-de. Aardappelen mag ook.", cat: "meervoud" },
   ],
   7: [
     { zin: "Hij wordt morgen tien jaar.", woord: "wordt", regel: "Hij/zij nu: stam + t. Word + t = wordt.", cat: "werkwoord tt" },
     { zin: "Zij antwoordt altijd snel.", woord: "antwoordt", regel: "Stam antwoord + t: hij/zij nu krijgt -t, ook na een d.", cat: "werkwoord tt" },
     { zin: "Ik vind dit boek leuk.", woord: "vind", regel: "Ik-vorm = alleen de stam: vind, zonder t.", cat: "werkwoord tt" },
-    { zin: "Mama's fiets staat buiten.", woord: "Mama's", regel: "Bezit na een lange klinker aan het eind: apostrof + s.", cat: "apostrof" },
+    { zin: "Ik zag mama's fiets buiten staan.", woord: "mama's", regel: "Van wie? Van mama. Na een lange klinker aan het eind komt apostrof + s.", cat: "apostrof" },
     { zin: "De pannenkoek smaakt heerlijk.", woord: "pannenkoek", regel: "Tussen-n: het meervoud is pannen, dus pannen-koek.", cat: "tussen-n" },
     { zin: "Het is bijna zomervakantie.", woord: "zomervakantie", regel: "Samenstelling zomer + vakantie, aan elkaar.", cat: "samenstelling" },
     { zin: "De auto's staan in de rij.", woord: "auto's", regel: "Meervoud na o, a, u, i, y: apostrof + s.", cat: "apostrof" },
@@ -94,7 +94,7 @@ export const DICTEE = {
     { zin: "De kinderen verheugen zich op het feest.", woord: "verheugen", regel: "Eu-klank in het midden, -en op het eind.", cat: "klank" },
     { zin: "Zij vindt het spannend.", woord: "vindt", regel: "Zij nu: vind + t = vindt.", cat: "werkwoord tt" },
     { zin: "Het interview duurde een uur.", woord: "interview", regel: "Engels leenwoord: schrijf het zoals in het Engels.", cat: "leenwoord" },
-    { zin: "De zonnebloem groeit hard.", woord: "zonnebloem", regel: "Tussen-e: de zon is er maar één, dus zonne-bloem.", cat: "tussen-n" },
+    { zin: "De zonnebloem groeit hard.", woord: "zonnebloem", regel: "Zonnebloem is een onthoudwoord: je schrijft zonne, zonder n. Net als zonneschijn en zonnestraal.", cat: "tussen-e" },
     { zin: "Ik heb een cadeau gekregen.", woord: "cadeau", regel: "Frans leenwoord: -eau klinkt als 'oo'.", cat: "leenwoord" },
     { zin: "Hij verhuist volgende week.", woord: "verhuist", regel: "Hij nu: verhuis + t.", cat: "werkwoord tt" },
     { zin: "De boekenkast is vol.", woord: "boekenkast", regel: "Tussen-n: het meervoud is boeken, dus boeken-kast.", cat: "tussen-n" },
@@ -119,7 +119,7 @@ export const DICTEE = {
     { zin: "Ik heb de hele dag gefietst.", woord: "gefietst", regel: "Voltooid deelwoord: ge + fiets + t (s staat in 't kofschip).", cat: "voltooid deelwoord" },
     { zin: "Zij heeft een interessant idee.", woord: "interessant", regel: "Leenwoord: dubbele s, en -ant op het eind.", cat: "leenwoord" },
     { zin: "De minister-president sprak op tv.", woord: "minister-president", regel: "Samenstelling van twee gelijke delen: met een streepje.", cat: "streepje" },
-    { zin: "Het onderzoek is afgerond.", woord: "afgerond", regel: "Voltooid deelwoord: af + ge + rond + d.", cat: "voltooid deelwoord" },
+    { zin: "Het onderzoek is afgerond.", woord: "afgerond", regel: "Voltooid deelwoord: af + ge + rond. De stam eindigt al op een d, dus er komt geen tweede d bij.", cat: "voltooid deelwoord" },
     { zin: "Zij heeft de brief al beantwoord.", woord: "beantwoord", regel: "Voltooid deelwoord zonder ge- (be-): stam beantwoord, geen extra d of t.", cat: "voltooid deelwoord" },
     { zin: "De Tweede Kamer vergadert vandaag.", woord: "vergadert", regel: "Hij/zij nu: vergader + t.", cat: "werkwoord tt" },
     { zin: "De toets was moeilijker dan gedacht.", woord: "moeilijker", regel: "Moei-lij-ker: -lijk + er.", cat: "-lijk" },
@@ -144,10 +144,12 @@ export function kiesDictee(groep, n = 10) {
 }
 
 /** vergelijk het getypte woord met het doelwoord; geeft per letter goed/fout */
-export function vergelijk(getypt, doel) {
+export function vergelijk(getypt, doel, ook = []) {
   const a = String(getypt || "").trim();
   const norm = (s) => s.toLowerCase().replace(/[.,!?;:]+$/, "");
-  const goed = norm(a) === norm(doel) && (doel[0] !== doel[0].toUpperCase() || a[0] === doel[0]);
+  // tweede opinie 9 sep 2026: ook goede varianten goed rekenen (bloempjes, aardappelen)
+  const hoofdletterOk = doel[0] !== doel[0].toUpperCase() || a[0] === doel[0];
+  const goed = (norm(a) === norm(doel) && hoofdletterOk) || (ook || []).some((v) => norm(a) === norm(v));
   // letter-voor-letter (eenvoudig: op positie), voor het rood/groen maken
   const letters = [];
   const L = Math.max(a.length, doel.length);

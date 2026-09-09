@@ -160,7 +160,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
   const controleer = () => {
     if (!item || !invoer.trim() || status === "goed" || status === "fout") return;
     clearTimeout(wachtRef.current);
-    const r = vergelijk(invoer, item.woord);
+    const r = vergelijk(invoer, item.woord, item.ook);
     setStatus(r.goed ? "goed" : "fout");
     setUitkomst((u) => [...u.slice(0, idx), { goed: r.goed, getypt: invoer.trim(), letters: r.letters }]);
     try { track("dictee_woord", { groep, goed: r.goed ? 1 : 0, cat: item.cat, hint: hint ? 1 : 0 }); } catch { /* */ }
