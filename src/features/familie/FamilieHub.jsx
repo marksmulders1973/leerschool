@@ -21,6 +21,7 @@ const FEATURES = [
   { nr: 5, emoji: "📅", titel: "Koelkast-weekschema", tekst: "Afvinkbaar weekschema van een kwartier per dag — print en hang op de koelkast.", status: "klaar", page: "weekschema" },
   { nr: 6, emoji: "🎉", titel: "Trots-momenten", tekst: "Een positief seintje bij mijlpalen — verschijnt vanzelf tijdens het oefenen.", status: "klaar", page: "trots" },
   { nr: 7, emoji: "👨‍👩‍👧", titel: "Gezin — tot 3 kinderen", tekst: "Koppel tot 3 kinderen op één account — elk een eigen overzicht, samen oefenen.", status: "klaar", page: "ouder-dashboard" },
+  { nr: 9, emoji: "📋", titel: "Dictee met de woorden van school", tekst: "Plak de dicteewoorden van deze week erin; Charley leest ze voor en je kind oefent precies wat vrijdag op school komt.", status: "klaar", page: "dictee" },
   { nr: 8, emoji: "🏅", titel: "Printbaar diploma", tekst: "Een certificaat bij het afronden van een onderwerp — kind blij, en jij trots.", status: "klaar", page: "diploma" },
 ];
 
