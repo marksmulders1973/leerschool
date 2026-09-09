@@ -1,0 +1,16 @@
+# ☁️ park-relay — doorgeefstation voor live posities in gedeelde parken (Leerkwartier,
+# "samen bouwen" stap 2, 9 sep 2026). Cloudflare Worker + Durable Object (SQLite-klasse,
+# gratis plan). Eén DO-instantie per parkcode; WebSocket-hibernation zodat 100 spelers
+# per park niets kosten zolang ze stilstaan.
+name = "park-relay"
+main = "src/index.js"
+compatibility_date = "2026-09-01"
+workers_dev = true
+
+[[durable_objects.bindings]]
+name = "PARK_ROOM"
+class_name = "ParkRoom"
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["ParkRoom"]

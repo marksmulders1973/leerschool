@@ -438,6 +438,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [room, setRoom] = useState(null);          // { code, naam, eigenaar, versie }
   const [roomFout, setRoomFout] = useState(null);
   const [peerCount, setPeerCount] = useState(1);
+  const [relayOk, setRelayOk] = useState(false);   // ☁️ doorgeefstation verbonden → live poppetjes voor iedereen
   const [samenCodeInvoer, setSamenCodeInvoer] = useState("");
   const [samenBezig, setSamenBezig] = useState(false);
   const roomConnRef = useRef(null);
@@ -1019,6 +1020,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           const cur = peersRef.current; const e = cur.get(c) || {};
           cur.set(c, { ...e, x: p.x, z: p.z, yaw: p.yaw, m: p.m, t: Date.now() });
         },
+        // ☁️ via het doorgeefstation: naam/avatar van wie er is, en wie weggaat
+        onPeerInfo: (c, info) => { const cur = peersRef.current; cur.set(c, { ...(cur.get(c) || {}), name: info?.name || "", avatar: info?.avatar || "" }); },
+        onPeerWeg: (c) => { peersRef.current.delete(c); },
+        onRelay: (ok) => { setRelayOk(ok); },
       },
     });
     roomConnRef.current = conn;
@@ -3631,7 +3636,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
                 <>
                   <div style={{ font: "800 14px system-ui", color: "#4a2aa8", marginBottom: 4 }}>Jullie parkcode</div>
                   <div style={{ font: "900 30px/1 ui-monospace, monospace", letterSpacing: 4, color: "#2a1a60", margin: "4px 0 8px" }}>{room.code}</div>
-                  <p style={{ margin: "0 0 8px" }}>👥 <b>{peerCount}</b> in dit park{peerCount > MAX_LIVE_POS ? " — met zoveel spelers zie je wél alles wat gebouwd wordt, maar niet meer elk poppetje lopen" : ""}. Wie de code invult komt in dit park en kan meebouwen. Je kunt alleen je eigen bouwsels weghalen; wie het park maakte mag alles.</p>
+                  <p style={{ margin: "0 0 8px" }}>👥 <b>{peerCount}</b> in dit park{!relayOk && peerCount > MAX_LIVE_POS ? " — het doorgeefstation is even niet bereikbaar, dus je ziet wél alles wat gebouwd wordt maar niet elk poppetje lopen" : ""}. Wie de code invult komt in dit park en kan meebouwen. Je kunt alleen je eigen bouwsels weghalen; wie het park maakte mag alles.</p>
                   <div style={{ display: "flex", gap: 6, alignItems: "center", background: "#fff", borderRadius: 10, padding: "8px 10px", margin: "6px 0" }}>
                     <input readOnly value={samenUrl || ""} onFocus={(e) => e.target.select()} style={{ flex: 1, border: "none", background: "transparent", font: "600 13px system-ui", color: "#234", outline: "none", minWidth: 0 }} />
                     <button onClick={async () => { try { await navigator.clipboard.writeText(samenUrl); flits("Link gekopieerd ✓"); } catch { flits("Kopiëren lukte niet"); } }} style={{ flex: "0 0 auto", border: "none", borderRadius: 999, padding: "7px 12px", font: "800 12.5px system-ui", color: "#fff", background: "#6a3fd6", cursor: "pointer" }}>Kopieer</button>
