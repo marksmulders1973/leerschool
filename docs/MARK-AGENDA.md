@@ -37,6 +37,7 @@
   geclaimde gezinnen behouden altijd hun recht → een gelekte code is nooit
   meer eeuwig open. Details: memory `project_studiebol_partner_codes`.
 
+- **📮 KOR aanvragen, direct ná de KvK (28 sep):** formulier "Melding omzetbelasting kleineondernemersregeling" op belastingdienst.nl, met KvK-nummer + btw-id (komt per post na inschrijving). Minstens 4 weken vóór het kwartaal → ingang 1 jan 2027 = start paywall. Gevolg: geen btw op facturen, geen btw-aangifte; wel geen btw-teruggave op eigen kosten. Zie docs/BETALING-PLAN.md § facturen.
 - ~~KvK-afspraak boeken~~ ✅ **GEBOEKT 25 aug: ma 28 SEPTEMBER 11:45-12:15, KvK Utrecht
   (Sint Jacobsstraat 300)** — eerste beschikbare slot; formulier is volledig ingevuld
   (Claude + Mark samen, 25 aug): handelsnaam **Leerkwartier** (Smulsoft afgevallen —
