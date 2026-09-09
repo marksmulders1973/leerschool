@@ -251,7 +251,11 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.55)" }}>
           <div style={KAART}>
             <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
-            <p style={{ margin: "0 0 8px" }}>Je doet mee{hostNaam ? ` met het spel van ${hostNaam}` : ""}. Wachten tot de spelleider op Start drukt…</p>
+            <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", margin: "0 0 10px" }}>
+              <span style={{ background: "#fff3c4", border: "1px solid #e6c65a", borderRadius: 999, padding: "4px 12px", font: "800 13px system-ui" }}>👑 Spelleider: {hostNaam || "…"}</span>
+              <span style={{ background: "#e8f0ff", border: "1px solid #bcd6f5", borderRadius: 999, padding: "4px 12px", font: "800 13px system-ui" }}>🙋 Jij bent gast</span>
+            </div>
+            <p style={{ margin: "0 0 8px" }}>Wachten tot {hostNaam || "de spelleider"} op Start drukt. Je krijgt je rol dan op dit scherm; niemand anders ziet 'm.</p>
             {lobby.length > 0 && <p style={{ margin: "0 0 8px", color: "#556" }}>In de lobby: {lobby.map((l) => l.naam).join(", ")}</p>}
             <button onClick={stop} style={KNOP_GRIJS}>Terug naar het park</button>
           </div>
@@ -278,7 +282,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                 <>
                   <p style={{ margin: "0 0 6px" }}>Jij bent de <b>spelleider</b>. Iedereen in dit park kreeg een uitnodiging. Zodra je op Start drukt, spelen jullie samen; bots vullen aan tot zes.</p>
                   <div style={{ background: "#f3efff", border: "1.5px solid #cbbcf5", borderRadius: 12, padding: "10px 12px", margin: "6px 0 10px" }}>
-                    <div style={{ font: "800 13px system-ui", color: "#4a2aa8" }}>In de lobby ({1 + lobby.length})</div>
+                    <div style={{ font: "800 13px system-ui", color: "#4a2aa8" }}>👑 Jij bent de spelleider · in de lobby ({1 + lobby.length})</div>
                     <div>👑 {spelerNaam || "Jij"}{lobby.map((l) => `, ${l.naam}`).join("")}</div>
                     {lobby.length === 0 && <div style={{ color: "#556", fontSize: 13 }}>Nog niemand… anderen zien de uitnodiging bovenin hun scherm.</div>}
                   </div>
@@ -335,7 +339,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
               <span style={{ opacity: .7 }}>·</span><span>⏱ {mm}:{ss}</span>
               <span style={{ opacity: .7 }}>·</span><span>🧩 {st.takenKlaar}/{st.takenTotaal}</span>
               <span style={{ opacity: .7 }}>·</span><span>⭐ {mij.punten}</span>
-              {multi && <><span style={{ opacity: .7 }}>·</span><span>👥 {echteSpelers}</span></>}
+              {multi && <><span style={{ opacity: .7 }}>·</span><span>👥 {echteSpelers}</span><span style={{ opacity: .7 }}>·</span><span>👑 {host ? "jij" : (hostNaam || "spelleider")}</span></>}
               {st.vak && st.vak !== "alles" && <><span style={{ opacity: .7 }}>·</span><span>{(VAKKEN.find((v) => v.id === st.vak) || {}).emoji} {groepLabel(st.groep)}</span></>}
             </div>
             <div style={{ position: "absolute", left: "50%", top: 84, transform: "translateX(-50%)", width: 220, height: 6, borderRadius: 3, background: "rgba(255,255,255,.25)" }}><div style={{ width: `${Math.round((st.takenKlaar / Math.max(1, st.takenTotaal)) * 100)}%`, height: "100%", borderRadius: 3, background: "#69f0ae" }} /></div>

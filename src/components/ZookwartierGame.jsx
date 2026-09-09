@@ -2301,7 +2301,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* ☰-menu: volledig scherm, frosted-glass, alle extra functies gegroepeerd.
           Tik buiten de inhoud of op ✕ = terug het park in. */}
-      {menuOpen && (
+      {menuOpen && gameModus && (
+        <div style={{ position: "absolute", inset: 0, zIndex: 40, display: "grid", placeItems: "center", background: "rgba(10,20,40,.7)" }} onClick={sluitMenu}>
+          <div onClick={(e) => e.stopPropagation()} style={{ background: "#fff", borderRadius: 18, padding: "20px 22px", maxWidth: 360, textAlign: "center", font: "600 14px system-ui", color: "#1c2840", boxShadow: "0 10px 30px rgba(0,0,0,.4)" }}>
+            <div style={{ font: "900 20px system-ui", marginBottom: 8 }}>🎮 Game-modus aan</div>
+            <p style={{ margin: "0 0 12px" }}>Bouwen en de andere parkknoppen staan uit zolang "Wie is de imposter?" loopt. Wil je weer bouwen? Druk onderin het spel op <b>✕ Stop</b>.</p>
+            <button onClick={sluitMenu} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3fd6,#4a2aa8)", cursor: "pointer" }}>Terug naar het spel</button>
+          </div>
+        </div>
+      )}
+      {menuOpen && !gameModus && (
         <div onClick={sluitMenu} style={{ position: "absolute", inset: 0, zIndex: 14, background: "rgba(8,16,10,0.55)", backdropFilter: "blur(12px)", WebkitBackdropFilter: "blur(12px)", overflowY: "auto", animation: "zooMenuFade .18s ease-out" }}>
           <style>{`@keyframes zooMenuFade{from{opacity:0}to{opacity:1}}@keyframes zooMenuIn{from{opacity:0;transform:translateY(16px) scale(.98)}to{opacity:1;transform:none}}`}</style>
           <div onClick={(e) => e.stopPropagation()} style={{ maxWidth: 620, margin: "0 auto", padding: "16px 16px calc(28px + env(safe-area-inset-bottom))", animation: "zooMenuIn .22s ease-out" }}>
@@ -3643,6 +3652,10 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         </div>
       )}
 
+      {/* 🎮 Game-modus-pil: zo zie je in één oogopslag dat het park in spel-stand staat (Mark 9 sep) */}
+      {gameModus && (
+        <div style={{ position: "absolute", top: 62, left: "50%", transform: "translateX(-50%)", zIndex: 7, background: "linear-gradient(135deg,#6a3fd6,#4a2aa8)", color: "#fff", borderRadius: 999, padding: "4px 12px", font: "800 12px system-ui", boxShadow: "0 4px 12px rgba(0,0,0,.35)", whiteSpace: "nowrap", pointerEvents: "none" }}>🎮 Game-modus · bouwen staat uit</div>
+      )}
       {/* 🎮 Uitnodiging voor een spel in dit park (fase 2, 9 sep) */}
       {samen && gameInvite && !gameModus && (
         <div style={{ position: "absolute", top: 96, left: "50%", transform: "translateX(-50%)", zIndex: 7, display: "flex", gap: 8, alignItems: "center", background: "#fffef8", border: "2px solid #6a3fd6", borderRadius: 999, padding: "8px 10px 8px 14px", boxShadow: "0 6px 18px rgba(0,0,0,.35)", font: "800 13.5px system-ui", color: "#2a1a60", whiteSpace: "nowrap" }}>
