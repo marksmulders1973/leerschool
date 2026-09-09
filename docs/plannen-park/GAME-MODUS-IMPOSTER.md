@@ -23,7 +23,7 @@ De bevroren keuze "géén nieuwe spellen" ging over spelletjes die het leren ver
 
 ## Fasen
 1. **Fase 1 (nu):** solo met bots, in je eigen park of een gedeeld park. Volledige ronde: rolkaart → taken → tikken → vergadering → einde → munten. Engine los van React (`imposterEngine.js`, testbaar), presentatie in `ImposterGame.jsx` (in de 3D-scène, HUD via overlay).
-2. **Fase 2:** meerdere echte spelers via de parkcode (uitnodiging = code delen). Host is de baas over de spelstand en de bots; spelstand gaat via het Supabase-kanaal `park:<code>` (event `game`, ~1×/s), posities via het Cloudflare-doorgeefstation dat er al ligt. Rollen geheim per speler.
+2. ✅ **Fase 2 (LIVE v611, 9 sep):** meerdere echte spelers via de parkcode. Wie op 🎮 drukt is spelleider; iedereen in het park krijgt een uitnodigingsbanner (Meedoen). De spelleider draait engine en bots en stuurt 2×/s een compacte spelstand via het Cloudflare-doorgeefstation (terugval: Supabase-broadcast); medespelers sturen alleen acties. Rollen gaan als los bericht per speler en staan niet in de spelstand tot iemand uitgestemd is of het spel klaar is. Vergadering sluit zodra alle echte spelers stemden.
 3. **Fase 3:** klas-varianten: leerkracht kiest het vak van de taken (rekenen groep 6, spelling groep 7), scorebord per klas, meerdere imposters, taken met echte examenvragen (VO).
 
 ## Meten
