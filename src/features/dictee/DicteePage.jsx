@@ -75,6 +75,9 @@ export function spreekbaar(tekst) {
   // twee dezelfde letters: "twee a's" → "twee keer de letter a"
   t = t.replace(/twee ([a-z])'s/g, "twee keer de letter $1");
   t = t.replace(/de letter de letter/g, "de letter");
+  // "een e", "korte a", "lange aa" en gespelde reeksen "t, r, e" blijven kaal
+  t = t.replace(/(een|korte|lange) de letter /gi, "$1 ");
+  t = t.replace(/, de letter ([a-zA-Z])/g, ", $1");
   return t.replace(/\s+/g, " ").trim();
 }
 
