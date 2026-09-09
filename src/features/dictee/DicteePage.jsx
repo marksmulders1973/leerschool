@@ -71,13 +71,13 @@ export function spreekbaar(tekst) {
   // suffix met streepje vooraan: -isch, -lijk, -ig, -en, -eau → zonder streepje
   t = t.replace(/(^|\s)-([a-zA-Z])/g, "$1$2");
   // losse enkele letter (niet "u"/"n"/"o" als woord in gewone zinnen — die komen in regels niet voor)
-  t = t.replace(/(?<![a-zA-Z'\-,])(?<!(?:een|korte|lange|Korte|Lange|letter) )([a-zA-Z])(?=[\s.:;!?]|$)/g, (m, l) => (["u"].includes(l.toLowerCase()) ? m : `de letter ${l}`));
+  t = t.replace(/(?<![a-zA-Z'\-,])(?<!\b(?:een|korte|lange|Korte|Lange|letter) )([a-zA-Z])(?=[\s.:;!?]|$)/g, (m, l) => (["u"].includes(l.toLowerCase()) ? m : `de letter ${l}`));
   // twee dezelfde letters: "twee a's" → "twee keer de letter a"
   t = t.replace(/twee ([a-z])'s/g, "twee keer de letter $1");
   t = t.replace(/de letter de letter/g, "de letter");
   // "een e", "korte a", "lange aa" en gespelde reeksen "t, r, e" blijven kaal
-  t = t.replace(/(een|korte|lange) de letter /gi, "$1 ");
-  t = t.replace(/, de letter ([a-zA-Z])/g, ", $1");
+  t = t.replace(/\b(een|korte|lange) de letter /gi, "$1 ");
+  t = t.replace(/, de letter ([a-zA-Z])\b/g, ", $1");
   return t.replace(/\s+/g, " ").trim();
 }
 
