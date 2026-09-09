@@ -1,4 +1,5 @@
 import { useMemo, useState, useEffect } from "react";
+import { zoekSnelkoppelingen } from "./snelkoppelingen.js";
 import { subjectsForQuery } from "./subjectSynonyms.js";
 import AITutor from "./AITutor.jsx";
 import { actieveBuddyPersona } from "../zoo/buddies.js";
@@ -125,6 +126,10 @@ export default function LeerpadBot({ paths, onPickPath, subject = null, levelFil
     return scored;
   }, [query, candidates]);
 
+  // 🔎 Losse pagina's (dictee, park, game, toetsen, printbladen…) — Mark 9 sep 2026
+  const snel = useMemo(() => zoekSnelkoppelingen(query), [query]);
+  const gaNaar = (s) => { try { window.location.assign(s.pad); } catch { /* */ } };
+
   // Bij geen-matches na een 'echte' zoekpoging (>=4 chars, ~1s sinds laatste type):
   // log de query als gemist. Triggert via debounce in useEffect.
   useEffect(() => {
@@ -132,7 +137,7 @@ export default function LeerpadBot({ paths, onPickPath, subject = null, levelFil
     if (q.length < 4) return;
     setHasSearched(true);
     const t = setTimeout(() => {
-      if (results.length === 0) logMiss(q);
+      if (results.length === 0 && snel.length === 0) logMiss(q);
     }, 1200);
     return () => clearTimeout(t);
   }, [query, results.length]);
@@ -180,6 +185,21 @@ export default function LeerpadBot({ paths, onPickPath, subject = null, levelFil
         }}
       />
 
+      {snel.length > 0 && (
+        <div style={{ marginTop: 12, display: "flex", flexDirection: "column", gap: 8 }}>
+          <div style={{ fontSize: 11, color: C.muted, textTransform: "uppercase", letterSpacing: 0.5 }}>Ook in Leerkwartier</div>
+          {snel.map((s) => (
+            <button key={s.id} onClick={() => gaNaar(s)} style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 12px", background: "rgba(255,213,79,0.10)", border: `1px solid ${C.warm}`, borderRadius: 10, color: C.text, cursor: "pointer", textAlign: "left", width: "100%" }}>
+              <span style={{ fontSize: 22 }}>{s.emoji}</span>
+              <span style={{ flex: 1, minWidth: 0 }}>
+                <span style={{ display: "block", fontWeight: 700 }}>{s.label}</span>
+                <span style={{ display: "block", fontSize: 12, color: C.muted }}>{s.uitleg}</span>
+              </span>
+              <span style={{ color: C.warm, fontWeight: 700 }}>→</span>
+            </button>
+          ))}
+        </div>
+      )}
       {results.length > 0 && (
         <div style={{ marginTop: 12, display: "flex", flexDirection: "column", gap: 8 }}>
           <div style={{ fontSize: 11, color: C.muted, textTransform: "uppercase", letterSpacing: 0.5 }}>
@@ -234,7 +254,7 @@ export default function LeerpadBot({ paths, onPickPath, subject = null, levelFil
         </div>
       )}
 
-      {hasSearched && query.trim().length >= 4 && results.length === 0 && (
+      {hasSearched && query.trim().length >= 4 && results.length === 0 && snel.length === 0 && (
         <div style={{
           marginTop: 12,
           padding: "10px 12px",
