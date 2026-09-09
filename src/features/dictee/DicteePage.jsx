@@ -81,6 +81,66 @@ export function spreekbaar(tekst) {
   return t.replace(/\s+/g, " ").trim();
 }
 
+// 📋 Woorden van school (Familie-haak, Mark 9 sep 2026: "bouw de schoolwoordenlijst").
+// Een ouder plakt of typt de dicteewoorden van deze week; Charley leest ze voor
+// ("Schrijf op het woord: …"), bij een fout spelt hij het woord. Lijst blijft op
+// dit apparaat staan (localStorage), max 30 woorden. Hoort straks bij Familie,
+// nu gratis (paywall UIT tot 2027). Foto-import = latere stap (tekstherkenning).
+function parseWoorden(tekst) {
+  const uit = [];
+  for (let r of String(tekst || "").split(/[\n,;]+/)) {
+    r = r.replace(/^\s*(\d+[.)]|[-•*])\s*/, "").trim();
+    if (!r || r.length > 30 || /\s.*\s.*\s/.test(r)) continue; // geen hele zinnen
+    if (!uit.some((w) => w.toLowerCase() === r.toLowerCase())) uit.push(r);
+  }
+  return uit.slice(0, 30);
+}
+function schoolItems(woorden) {
+  return woorden.map((w) => ({ zin: w, woord: w, los: true, cat: "school", regel: `Zo schrijf je het: ${w.split("").join("-")}.` }));
+}
+function SchoolWoorden({ groep, onStart }) {
+  const [bewaard, setBewaard] = useState(() => { try { return JSON.parse(localStorage.getItem("lk_dictee_school") || "null"); } catch { return null; } });
+  const [open, setOpen] = useState(!bewaard);
+  const [tekst, setTekst] = useState(bewaard ? bewaard.woorden.join("\n") : "");
+  const [naam, setNaam] = useState(bewaard?.naam || "");
+  const woorden = parseWoorden(tekst);
+  const bewaar = () => {
+    if (woorden.length < 3) return;
+    const lijst = { naam: naam.trim() || "Woorden van school", woorden, datum: new Date().toISOString().slice(0, 10) };
+    try { localStorage.setItem("lk_dictee_school", JSON.stringify(lijst)); } catch { /* */ }
+    setBewaard(lijst); setOpen(false);
+    try { track("dictee_school_bewaard", { n: woorden.length, groep }); } catch { /* */ }
+  };
+  const pil = <span style={{ display: "inline-block", padding: "2px 9px", borderRadius: 20, background: "#fff3c4", border: "1px solid #e6c65a", color: "#7a5a00", font: "800 11px system-ui", marginLeft: 6, verticalAlign: "middle" }}>Familie · nu gratis</span>;
+  return (
+    <div style={{ background: "#fff", border: "2px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "14px 0", color: "#1c2840" }}>
+      <div style={{ font: "900 16px system-ui" }}>📋 Woorden van school {pil}</div>
+      <div style={{ fontSize: 13.5, color: "#556", margin: "4px 0 10px" }}>Plak of typ de dicteewoorden van deze week (uit Parro, de mail of het papiertje). Charley leest ze voor en je kind oefent precies wat op school komt.</div>
+      {bewaard && !open && (
+        <div>
+          <div style={{ fontSize: 14 }}><b>{bewaard.naam}</b> · {bewaard.woorden.length} woorden · bewaard {bewaard.datum}</div>
+          <div style={{ fontSize: 13, color: "#556", margin: "4px 0 10px" }}>{bewaard.woorden.join(" · ")}</div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <button onClick={() => { try { track("dictee_school_start", { n: bewaard.woorden.length, groep }); } catch { /* */ } onStart(schoolItems(bewaard.woorden)); }} style={KNOP}>▶ Dictee met deze woorden</button>
+            <button onClick={() => setOpen(true)} style={KNOP2}>✏️ Wijzigen</button>
+          </div>
+        </div>
+      )}
+      {open && (
+        <div>
+          <input value={naam} onChange={(e) => setNaam(e.target.value)} placeholder="naam van de lijst, bv. week 37 of thema herfst" style={{ width: "100%", boxSizing: "border-box", padding: "9px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", colorScheme: "light", fontSize: 14, marginBottom: 8 }} />
+          <textarea value={tekst} onChange={(e) => setTekst(e.target.value)} rows={6} placeholder={"één woord per regel, of met komma's:\nvriendinnen, pannenkoek, zonnebloem, …"} style={{ width: "100%", boxSizing: "border-box", padding: "10px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", colorScheme: "light", font: "600 15px system-ui", lineHeight: 1.5 }} />
+          <div style={{ fontSize: 12.5, color: woorden.length >= 3 ? "#146c43" : "#7a5a00", margin: "6px 0 10px" }}>{woorden.length} {woorden.length === 1 ? "woord" : "woorden"} herkend{woorden.length < 3 ? " · minstens 3 nodig" : ""}{woorden.length >= 30 ? " · maximaal 30" : ""}</div>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <button onClick={bewaar} disabled={woorden.length < 3} style={{ ...KNOP, opacity: woorden.length < 3 ? .5 : 1 }}>Bewaar de lijst</button>
+            {bewaard && <button onClick={() => setOpen(false)} style={KNOP2}>Annuleer</button>}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+
 const W = { maxWidth: 560, margin: "0 auto", padding: "16px 16px 40px", fontFamily: "system-ui, Segoe UI, sans-serif", color: "#1c2840", background: "#f6f9fc", minHeight: "100vh", colorScheme: "light", boxSizing: "border-box" };
 const KNOP = { border: "none", borderRadius: 999, padding: "12px 20px", font: "800 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" };
 const KNOP2 = { ...KNOP, color: "#1c2840", background: "#eef2f7" };
@@ -144,7 +204,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
       const t = setTimeout(() => { setToonZin(false); setStatus("typen"); setTimeout(() => inputRef.current?.focus(), 50); }, 3500);
       return () => clearTimeout(t);
     }
-    const t = setTimeout(() => zeg(`${item.zin} Schrijf op het woord: ${item.woord}.`, () => { setStatus("typen"); setTimeout(() => inputRef.current?.focus(), 50); wachtOpTypen(); }), 300);
+    const t = setTimeout(() => zeg(item.los ? `Schrijf op het woord: ${item.woord}.` : `${item.zin} Schrijf op het woord: ${item.woord}.`, () => { setStatus("typen"); setTimeout(() => inputRef.current?.focus(), 50); wachtOpTypen(); }), 300);
     return () => { clearTimeout(t); stopAlles(); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fase, idx, item, leesModus]);
@@ -153,9 +213,9 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
     const gekozen = lijst || kiesDictee(g, 10);
     try { localStorage.setItem("lk_dictee_groep", String(g)); } catch { /* */ }
     setGroep(g); setItems(gekozen); setIdx(0); setUitkomst([]); setFase("dictee");
-    try { track("dictee_start", { groep: g, n: gekozen.length, stem: kanSpreken() ? 1 : 0 }); } catch { /* */ }
+    try { track("dictee_start", { groep: g, n: gekozen.length, stem: kanSpreken() ? 1 : 0, bron: lijst ? "school" : "lijst" }); } catch { /* */ }
   };
-  const nogEenKeer = () => { if (!item) return; herhaalRef.current = 0; zeg(status === "luister" ? `${item.zin} Schrijf op het woord: ${item.woord}.` : `Schrijf het woord: ${item.woord}.`, () => { if (status !== "goed" && status !== "fout") { setStatus("typen"); wachtOpTypen(); } }); };
+  const nogEenKeer = () => { if (!item) return; herhaalRef.current = 0; zeg(status === "luister" && !item.los ? `${item.zin} Schrijf op het woord: ${item.woord}.` : `Schrijf het woord: ${item.woord}.`, () => { if (status !== "goed" && status !== "fout") { setStatus("typen"); wachtOpTypen(); } }); };
 
   const controleer = () => {
     if (!item || !invoer.trim() || status === "goed" || status === "fout") return;
@@ -197,6 +257,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
             <button key={g} onClick={() => start(g)} style={{ ...KNOP, background: g === groep ? "linear-gradient(135deg,#2e9e4f,#1f7a3a)" : "#3a4754", minWidth: 84 }}>Groep {g}</button>
           ))}
         </div>
+        <SchoolWoorden groep={groep} onStart={(lijst) => start(groep, lijst)} />
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Tip: zet het geluid aan. Tik op 🔊 als je Charley niet goed verstaat. {DICTEE[groep || 6].length} woorden per groep; elke keer een andere mix.</p>
       </div>
     );
@@ -239,7 +300,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
     <div style={W}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
         <button onClick={() => { stopAlles(); setFase("kies"); }} style={{ ...KNOP2, padding: "8px 14px", font: "700 14px system-ui" }}>← Stop</button>
-        <div style={{ font: "800 14px system-ui", color: "#556" }}>Woord {idx + 1} van {items.length} · groep {groep}</div>
+        <div style={{ font: "800 14px system-ui", color: "#556" }}>Woord {idx + 1} van {items.length} · {item.los ? "woorden van school" : `groep ${groep}`}</div>
       </div>
       <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 12 }}>
         <div style={{ fontSize: 40, lineHeight: 1 }}>🐕</div>
