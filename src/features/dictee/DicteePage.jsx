@@ -56,6 +56,28 @@ function DicteeMailHaakje({ groep, score, totaal }) {
   );
 }
 
+// 🔊 Spreekbare versie van een spellingregel (Mark 9 sep 2026: "Hij/zij nu: vergader + t."
+// klonk raar — de schuine streep en de losse t sprak Charley slecht uit). Op het scherm
+// blijft de regel zoals hij is; alleen wat Charley zégt wordt omgezet:
+//   "/" → " of "  ·  "+" → " plus "  ·  "=" → " is "  ·  losse letters → "de letter t"
+//   gespelde reeksen "s-c-h" → "s, c, h" (letternamen)  ·  suffix "-isch" → "isch"
+export function spreekbaar(tekst) {
+  let t = String(tekst || "");
+  t = t.replace(/\s*\/\s*/g, " of ");
+  t = t.replace(/\s*\+\s*/g, " plus ");
+  t = t.replace(/\s*=\s*/g, " is ");
+  // gespelde reeksen van 1-2 letters met streepjes: s-c-h, t-r-e-i-n, n-g, i-e, ch-t
+  t = t.replace(/(?<![a-zA-Z])([a-zA-Z]{1,2})((?:-[a-zA-Z]{1,2})+)(?![a-zA-Z])/g, (m) => m.split("-").join(", "));
+  // suffix met streepje vooraan: -isch, -lijk, -ig, -en, -eau → zonder streepje
+  t = t.replace(/(^|\s)-([a-zA-Z])/g, "$1$2");
+  // losse enkele letter (niet "u"/"n"/"o" als woord in gewone zinnen — die komen in regels niet voor)
+  t = t.replace(/(?<![a-zA-Z'\-,])(?<!(?:een|korte|lange|Korte|Lange|letter) )([a-zA-Z])(?=[\s.:;!?]|$)/g, (m, l) => (["u"].includes(l.toLowerCase()) ? m : `de letter ${l}`));
+  // twee dezelfde letters: "twee a's" → "twee keer de letter a"
+  t = t.replace(/twee ([a-z])'s/g, "twee keer de letter $1");
+  t = t.replace(/de letter de letter/g, "de letter");
+  return t.replace(/\s+/g, " ").trim();
+}
+
 const W = { maxWidth: 560, margin: "0 auto", padding: "16px 16px 40px", fontFamily: "system-ui, Segoe UI, sans-serif", color: "#1c2840", background: "#f6f9fc", minHeight: "100vh", colorScheme: "light", boxSizing: "border-box" };
 const KNOP = { border: "none", borderRadius: 999, padding: "12px 20px", font: "800 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" };
 const KNOP2 = { ...KNOP, color: "#1c2840", background: "#eef2f7" };
@@ -140,7 +162,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
     setUitkomst((u) => [...u.slice(0, idx), { goed: r.goed, getypt: invoer.trim(), letters: r.letters }]);
     try { track("dictee_woord", { groep, goed: r.goed ? 1 : 0, cat: item.cat, hint: hint ? 1 : 0 }); } catch { /* */ }
     try { if (userName) recordAnswerForPath({ playerName: userName, pathId: PAD_ID, isCorrect: r.goed }); } catch { /* */ }
-    zeg(r.goed ? "Goed zo!" : `Bijna. Het is: ${item.woord}. ${item.regel}`);
+    zeg(r.goed ? "Goed zo!" : `Bijna. Het is: ${item.woord}. ${spreekbaar(item.regel)}`);
   };
   const volgende = () => {
     stopAlles();
