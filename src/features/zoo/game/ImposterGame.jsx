@@ -1,16 +1,23 @@
-// 🎮 Wie is de imposter? — presentatie in de 3D-scène + HUD (fase 1: solo met bots).
+// 🎮 Wie is de imposter? — presentatie in de 3D-scène + HUD.
+// Fase 1 (solo met bots) én fase 2 (meerdere spelers via de parkcode, 9 sep 2026).
 // Logica: imposterEngine.js. Regels: docs/plannen-park/GAME-MODUS-IMPOSTER.md.
-// Taken = 3 vragen op je eigen groep-niveau (bouwStartVragen, zelfde bron als het
-// start-kwartier). Zonder chat: stemmen met snelle redenen-knoppen.
+//
+// Multiplayer is host-autoritair: wie het spel start (de spelleider) draait de
+// engine en de bots, en stuurt 2×/s een compacte spelstand (snapshot) naar de
+// anderen via `net.send` (doorgeefstation, anders Supabase). Medespelers sturen
+// alleen acties (taak klaar, tik, vergadering, stem) naar de spelleider. Rollen
+// gaan als los bericht per speler; in de snapshot staat alleen de rol van wie al
+// uitgestemd is of als het spel klaar is.
 import { useEffect, useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import CharacterModel from "../CharacterModel";
 import { bouwStartVragen } from "../../onboarding/startKwartier.js";
 import { track } from "../../../utils.js";
-import { maakStations, maakSpel, tick, ik, speler, actieveSpelers, magTikken, tik, dichtstbijStation, magTaak, taakKlaar, startVergadering, stem, sluitVergadering, scoreVan, SPEL_DUUR, VERGADERING_S } from "./imposterEngine.js";
+import { maakStations, maakSpel, tick, speler, actieveSpelers, magTikken, tik, dichtstbijStation, magTaak, taakKlaar, startVergadering, stem, sluitVergadering, scoreVan, alleGestemd, maakSnapshot, pasSnapshotToe, SPEL_DUUR, VERGADERING_S } from "./imposterEngine.js";
 
 const PARK_R = 70;
+const SNAP_MS = 500;
 const HUD_POS = (_e, _c, size) => [size.width / 2, size.height / 2];
 const KNOP = { pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "12px 20px", font: "900 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2f6fd6,#1f4fa8)", boxShadow: "0 5px 18px rgba(0,0,0,.45)", cursor: "pointer", whiteSpace: "nowrap" };
 const KNOP_ROOD = { ...KNOP, background: "linear-gradient(135deg,#e2574c,#b0332a)" };
@@ -18,13 +25,16 @@ const KNOP_GRIJS = { ...KNOP, background: "#3a4754", border: "2px solid #6b7785"
 const KAART = { pointerEvents: "auto", background: "#fffef8", color: "#1c2840", borderRadius: 18, padding: "18px 20px", width: "min(460px, 94vw)", boxShadow: "0 12px 40px rgba(0,0,0,.45)", font: "500 15px/1.5 system-ui" };
 const schoon = (s) => String(s || "").replace(/\*\*/g, "").replace(/`/g, "");
 
-function Bot({ sp, stRef, heightRef }) {
+function Bot({ sp, stRef, heightRef, soepel }) {
   const g = useRef(); const moving = useRef(0);
+  const cur = useRef({ x: sp.x, z: sp.z, yaw: 0 });
   const [label, setLabel] = useState("");
-  useFrame(() => {
+  useFrame((_, dtRaw) => {
     const s = stRef.current && speler(stRef.current, sp.id); const n = g.current; if (!s || !n) return;
-    const y = heightRef?.current ? heightRef.current(s.x, s.z) : 0;
-    n.position.set(s.x, y, s.z); n.rotation.y = s.yaw || 0;
+    if (soepel) { const k = Math.min(1, Math.min(0.05, dtRaw) * 6); cur.current.x += (s.x - cur.current.x) * k; cur.current.z += (s.z - cur.current.z) * k; let dy = (s.yaw || 0) - cur.current.yaw; while (dy > Math.PI) dy -= Math.PI * 2; while (dy < -Math.PI) dy += Math.PI * 2; cur.current.yaw += dy * k; }
+    else { cur.current.x = s.x; cur.current.z = s.z; cur.current.yaw = s.yaw || 0; }
+    const y = heightRef?.current ? heightRef.current(cur.current.x, cur.current.z) : 0;
+    n.position.set(cur.current.x, y, cur.current.z); n.rotation.y = cur.current.yaw;
     moving.current = s.moving ? 1 : 0;
     const l = s.uitgestemd ? `🪑 ${s.naam}` : s.bevroren > 0 ? `❄️ ${s.naam}` : s.bezig > 0 ? `🔧 ${s.naam}` : s.naam;
     if (l !== label) setLabel(l);
@@ -53,47 +63,108 @@ function Station({ s, heightRef, gedaan }) {
   );
 }
 
-export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRef, spelerNaam = "", avatarUrl = "", level = "6", onKlaar, onStop }) {
+/**
+ * net (optioneel, gedeeld park): { actief, mijnId, naam, avatar, send(d), luister(fn)→unsub, peers()→Map }
+ * host: true = ik ben de spelleider (start het spel, draait bots en engine)
+ */
+export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRef, spelerNaam = "", avatarUrl = "", level = "6", onKlaar, onStop, net = null, host = true }) {
+  const multi = !!(net && net.actief);
+  const mijnId = multi ? net.mijnId : "ik";
   const stRef = useRef(null);
-  const [, setN] = useState(0);              // HUD-herrender 4×/s
-  const [taak, setTaak] = useState(null);    // { stationId, vragen, idx, goed, gekozen }
+  const [, setN] = useState(0);
+  const [taak, setTaak] = useState(null);
   const [laatsteUitkomst, setLaatsteUitkomst] = useState(null);
-  const [rolKeuze, setRolKeuze] = useState(null);
+  const [rolKeuze, setRolKeuze] = useState(multi ? "random" : null);
+  const [lobby, setLobby] = useState([]);            // host: wie deed mee [{id,naam,avatar}]
+  const [hostNaam, setHostNaam] = useState("");      // client: wie is de spelleider
   const bevrorenPos = useRef(null);
+  const laatsteSnap = useRef(0);
+  const uitkomstGezien = useRef(null);
   const vrijPlek = useMemo(() => (x, z) => Math.hypot(x, z) < PARK_R && !(isSolid && isSolid(x, z)), [isSolid]);
 
-  if (!stRef.current) {
+  // host (of solo): lokale spelstand
+  if (host && !stRef.current) {
     const stations = maakStations(32, 6, vrijPlek);
-    stRef.current = maakSpel({ spelerId: "ik", spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots: 5, stations });
+    stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots: 5, stations });
   }
   const st = stRef.current;
-  const mij = ik(st);
+  const mij = st ? speler(st, mijnId) : null;
 
   useEffect(() => { const t = setInterval(() => setN((n) => n + 1), 250); return () => clearInterval(t); }, []);
-  useEffect(() => { try { track("game_start", { groep: level, spelers: st.spelers.length, bots: st.spelers.filter((s) => s.bot).length }); } catch { /* */ } }, []); // eslint-disable-line
+  useEffect(() => { try { track("game_start", { groep: level, multi: multi ? 1 : 0, host: host ? 1 : 0 }); } catch { /* */ } }, []); // eslint-disable-line
+
+  // ── netwerk ──
+  useEffect(() => {
+    if (!multi) return undefined;
+    if (!host) net.send({ t: "join", naam: spelerNaam || "Speler", avatar: avatarUrl });
+    const unsub = net.luister((van, d) => {
+      if (!d) return;
+      if (host) {
+        const s = stRef.current;
+        if (d.t === "join") { setLobby((l) => (l.some((x) => x.id === van) ? l : [...l, { id: van, naam: d.naam || "Speler", avatar: d.avatar || "" }])); if (s && s.fase !== "intro") { /* laatkomer: alleen kijken */ } return; }
+        if (d.t === "leave") { setLobby((l) => l.filter((x) => x.id !== van)); return; }
+        if (!s || s.fase === "intro") return;
+        if (d.t === "taak") { taakKlaar(s, van, d.stationId, d.goed, d.totaal); }
+        else if (d.t === "tik") { const dader = speler(s, van); if (dader) tik(s, van, d.doelId); }
+        else if (d.t === "verg") { startVergadering(s, van); }
+        else if (d.t === "stem") { stem(s, van, d.opId || null, d.reden || null); if (alleGestemd(s)) sluitVergadering(s); }
+        setN((n) => n + 1);
+      } else {
+        if (d.t === "invite" || d.t === "lobby") { setHostNaam(d.naam || ""); if (d.spelers) setLobby(d.spelers); return; }
+        if (d.t === "rol" && d.voor === mijnId) { stRef.current = stRef.current || { spelerId: mijnId, spelers: [], log: [] }; stRef.current.mijnRol = d.rol; const m = stRef.current.spelers?.find((x) => x.id === mijnId); if (m) m.rol = d.rol; return; }
+        if (d.t === "snap") { const vorige = stRef.current?.fase; stRef.current = pasSnapshotToe(stRef.current, d.st, mijnId); const m = speler(stRef.current, mijnId); if (m && stRef.current.mijnRol) m.rol = stRef.current.mijnRol; if (vorige === "vergadering" && stRef.current.fase !== "vergadering" && stRef.current.vergadering?.uitkomst) { const u = stRef.current.vergadering.uitkomst; if (uitkomstGezien.current !== u.tekst) { uitkomstGezien.current = u.tekst; setLaatsteUitkomst(u); setTimeout(() => setLaatsteUitkomst(null), 4500); } } setN((n) => n + 1); return; }
+        if (d.t === "stop") { onStop && onStop(); return; }
+      }
+    });
+    return () => { unsub && unsub(); if (!host) { try { net.send({ t: "leave" }); } catch { /* */ } } };
+  }, [multi, host]); // eslint-disable-line
+
+  // host: uitnodiging + lobby-stand uitzenden
+  useEffect(() => {
+    if (!multi || !host) return undefined;
+    const zend = () => net.send({ t: "lobby", naam: spelerNaam || "Speler", spelers: [{ id: mijnId, naam: spelerNaam || "Speler" }, ...lobby] });
+    zend();
+    const t = setInterval(() => { if (stRef.current?.fase === "intro") zend(); }, 3000);
+    return () => clearInterval(t);
+  }, [multi, host, lobby]); // eslint-disable-line
 
   useFrame((s, dtRaw) => {
     const dt = Math.min(0.05, dtRaw);
     const st = stRef.current; if (!st) return;
     const p = playerRef?.current;
-    const vorigeFase = st.fase;
-    tick(st, dt, p ? { x: p.x, z: p.z } : null, vrijPlek);
-    // bevroren = niet kunnen lopen: elke frame terugzetten
-    const m = ik(st);
-    if (m.bevroren > 0 && p) {
+    const m = speler(st, mijnId);
+    if (host) {
+      const vorigeFase = st.fase;
+      tick(st, dt, p ? { x: p.x, z: p.z } : null, vrijPlek, multi ? net.peers() : null);
+      if (multi && st.fase === "vergadering" && alleGestemd(st)) sluitVergadering(st);
+      if (vorigeFase === "vergadering" && st.fase !== "vergadering" && st.vergadering?.uitkomst) { setLaatsteUitkomst(st.vergadering.uitkomst); setTimeout(() => setLaatsteUitkomst(null), 4500); try { track("game_vergadering", { imposter: st.vergadering.uitkomst.imposter ? 1 : 0 }); } catch { /* */ } }
+      if (vorigeFase !== "einde" && st.fase === "einde") { try { const sc = scoreVan(st); track("game_einde", { gewonnen: sc.gewonnen ? 1 : 0, rol: sc.rol, punten: sc.punten, duur: sc.duur, multi: multi ? 1 : 0 }); } catch { /* */ } }
+      // snapshot naar medespelers
+      if (multi && st.fase !== "intro") { const nu = performance.now(); if (nu - laatsteSnap.current > SNAP_MS) { laatsteSnap.current = nu; net.send({ t: "snap", st: maakSnapshot(st) }); } }
+    } else if (st.fase === "vergadering" && st.vergadering) { st.vergadering.t += dt; }
+    // bevroren = niet kunnen lopen
+    if (m && m.bevroren > 0 && p) {
       if (!bevrorenPos.current) bevrorenPos.current = { x: p.x, z: p.z };
       if (teleportRef && Math.hypot(p.x - bevrorenPos.current.x, p.z - bevrorenPos.current.z) > 0.3) teleportRef.current = { ...bevrorenPos.current };
     } else bevrorenPos.current = null;
-    if (vorigeFase === "vergadering" && st.fase !== "vergadering" && st.vergadering?.uitkomst) { setLaatsteUitkomst(st.vergadering.uitkomst); setTimeout(() => setLaatsteUitkomst(null), 4500); try { track("game_vergadering", { imposter: st.vergadering.uitkomst.imposter ? 1 : 0 }); } catch { /* */ } }
-    if (vorigeFase !== "einde" && st.fase === "einde") { try { const sc = scoreVan(st); track("game_einde", { gewonnen: sc.gewonnen ? 1 : 0, rol: sc.rol, punten: sc.punten, duur: sc.duur }); } catch { /* */ } }
   });
 
   // ── acties ──
-  const startSpel = () => { if (rolKeuze) { stRef.current = null; const stations = maakStations(32, 6, vrijPlek); stRef.current = maakSpel({ spelerId: "ik", spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots: 5, stations, spelerRolKeuze: rolKeuze === "random" ? null : rolKeuze }); } stRef.current.fase = "spel"; setN((n) => n + 1); };
-  const station = playerRef?.current ? dichtstbijStation(st, { x: playerRef.current.x, z: playerRef.current.z }) : null;
-  const doelTik = mij.rol === "imposter" ? actieveSpelers(st).find((s) => magTikken(st, mij, s)) : null;
+  const startSpel = () => {
+    if (!host) return;
+    const stations = maakStations(32, 6, vrijPlek);
+    const extra = multi ? lobby.map((l) => ({ id: l.id, naam: l.naam, avatar: l.avatar })) : [];
+    const nBots = Math.max(1, 5 - extra.length);
+    stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rolKeuze === "random" ? null : rolKeuze, extraSpelers: extra });
+    stRef.current.fase = "spel";
+    if (multi) { for (const sp of stRef.current.spelers) if (!sp.bot && sp.id !== mijnId) net.send({ t: "rol", voor: sp.id, rol: sp.rol }); net.send({ t: "snap", st: maakSnapshot(stRef.current) }); }
+    setN((n) => n + 1);
+  };
+  const station = st && playerRef?.current ? dichtstbijStation(st, { x: playerRef.current.x, z: playerRef.current.z }) : null;
+  const mijMetPos = mij && playerRef?.current ? { ...mij, x: playerRef.current.x, z: playerRef.current.z } : mij;
+  const doelTik = st && mij && mij.rol === "imposter" ? actieveSpelers(st).find((s) => magTikken(st, mijMetPos, s)) : null;
   const openTaak = async () => {
-    if (!station || !magTaak(st, mij, station) || taak) return;
+    if (!station || !mij || !magTaak(st, mij, station) || taak) return;
     setTaak({ stationId: station.id, vragen: null, idx: 0, goed: 0, gekozen: null });
     try { const v = await bouwStartVragen(level, 3); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 3) } : t)); }
     catch { setTaak((t) => (t ? { ...t, vragen: [] } : t)); }
@@ -110,49 +181,82 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
     setTaak((t) => {
       if (!t) return t;
       if (t.idx + 1 < t.vragen.length) return { ...t, idx: t.idx + 1, gekozen: null };
-      taakKlaar(stRef.current, "ik", t.stationId, t.goed, t.vragen.length);
+      if (host) taakKlaar(stRef.current, mijnId, t.stationId, t.goed, t.vragen.length);
+      else { net.send({ t: "taak", stationId: t.stationId, goed: t.goed, totaal: t.vragen.length }); const m = speler(stRef.current, mijnId); if (m) m.laatstePost = t.stationId; }
       return null;
     });
   };
-  const roep = () => { if (startVergadering(st, "ik")) setN((n) => n + 1); };
-  const doeTik = () => { if (doelTik && tik(st, "ik", doelTik.id)) { try { track("game_tik", {}); } catch { /* */ } setN((n) => n + 1); } };
-  const klaar = () => { onKlaar && onKlaar(scoreVan(st)); };
-  // 🔧 test-haakje (Playwright): spelstand lezen, taak forceren, spel-einde forceren
+  const roep = () => { if (host) { if (startVergadering(st, mijnId)) setN((n) => n + 1); } else net.send({ t: "verg" }); };
+  const doeTik = () => { if (!doelTik) return; if (host) { if (tik(st, mijnId, doelTik.id)) setN((n) => n + 1); } else net.send({ t: "tik", doelId: doelTik.id }); try { track("game_tik", {}); } catch { /* */ } };
+  const stemOp = (opId, reden) => { if (host) { stem(st, mijnId, opId, reden); if (multi && alleGestemd(st)) sluitVergadering(st); } else { stem(st, mijnId, opId, reden); net.send({ t: "stem", opId, reden }); } setN((n) => n + 1); };
+  const klaar = () => { onKlaar && onKlaar(scoreVan({ ...st, spelerId: mijnId })); };
+  const stop = () => { if (multi && host) { try { net.send({ t: "stop" }); } catch { /* */ } } onStop && onStop(); };
+
+  // 🔧 test-haakje (Playwright)
   useEffect(() => {
     window.__imposter = {
-      st: () => stRef.current,
+      st: () => stRef.current, host, mijnId,
       taak: async (stationId) => { const sid = stationId || stRef.current.stations[0].id; setTaak({ stationId: sid, vragen: null, idx: 0, goed: 0, gekozen: null }); try { const v = await bouwStartVragen(level, 3); setTaak((t) => (t ? { ...t, vragen: v.slice(0, 3) } : t)); } catch { setTaak((t) => (t ? { ...t, vragen: [] } : t)); } },
-      winBouwers: () => { stRef.current.takenKlaar = stRef.current.takenTotaal; setN((n) => n + 1); },
+      winBouwers: () => { if (host && stRef.current) { stRef.current.takenKlaar = stRef.current.takenTotaal; setN((n) => n + 1); } },
+      start: () => startSpel(),
     };
     return () => { delete window.__imposter; };
-  }, [level]);
+  }, [level, host, lobby]); // eslint-disable-line
+
+  // ── wachtscherm voor medespelers zonder spelstand ──
+  if (!st || !mij) {
+    return (
+      <Html fullscreen zIndexRange={[12, 0]} style={{ pointerEvents: "none" }} calculatePosition={HUD_POS}>
+        <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.55)" }}>
+          <div style={KAART}>
+            <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
+            <p style={{ margin: "0 0 8px" }}>Je doet mee{hostNaam ? ` met het spel van ${hostNaam}` : ""}. Wachten tot de spelleider op Start drukt…</p>
+            {lobby.length > 0 && <p style={{ margin: "0 0 8px", color: "#556" }}>In de lobby: {lobby.map((l) => l.naam).join(", ")}</p>}
+            <button onClick={stop} style={KNOP_GRIJS}>Terug naar het park</button>
+          </div>
+        </div>
+      </Html>
+    );
+  }
 
   const resterend = Math.max(0, SPEL_DUUR - st.spelTijd);
   const mm = Math.floor(resterend / 60), ss = String(Math.floor(resterend % 60)).padStart(2, "0");
+  const echteSpelers = st.spelers.filter((s) => !s.bot).length;
 
   return (
     <>
-      {/* 3D: taakposten + bots */}
       {st.stations.map((s) => <Station key={s.id} s={s} heightRef={heightRef} gedaan={mij.laatstePost === s.id} />)}
-      {st.spelers.filter((s) => s.bot).map((sp) => <Bot key={sp.id} sp={sp} stRef={stRef} heightRef={heightRef} />)}
+      {st.spelers.filter((s) => s.bot).map((sp) => <Bot key={sp.id} sp={sp} stRef={stRef} heightRef={heightRef} soepel={!host} />)}
 
-      {/* HUD */}
       <Html fullscreen zIndexRange={[12, 0]} style={{ pointerEvents: "none" }} calculatePosition={HUD_POS}>
-        {st.fase === "intro" && (
+        {st.fase === "intro" && host && (
           <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.55)" }}>
             <div style={KAART}>
               <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
-              <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>imposter</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De imposter doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is 15 seconden bevroren.</p>
-              <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Imposter uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = imposter wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
-              <div style={{ font: "800 14px system-ui", margin: "10px 0 4px" }}>Wie wil je zijn?</div>
+              {multi ? (
+                <>
+                  <p style={{ margin: "0 0 6px" }}>Jij bent de <b>spelleider</b>. Iedereen in dit park kreeg een uitnodiging. Zodra je op Start drukt, spelen jullie samen; bots vullen aan tot zes.</p>
+                  <div style={{ background: "#f3efff", border: "1.5px solid #cbbcf5", borderRadius: 12, padding: "10px 12px", margin: "6px 0 10px" }}>
+                    <div style={{ font: "800 13px system-ui", color: "#4a2aa8" }}>In de lobby ({1 + lobby.length})</div>
+                    <div>👑 {spelerNaam || "Jij"}{lobby.map((l) => `, ${l.naam}`).join("")}</div>
+                    {lobby.length === 0 && <div style={{ color: "#556", fontSize: 13 }}>Nog niemand… anderen zien de uitnodiging bovenin hun scherm.</div>}
+                  </div>
+                </>
+              ) : (
+                <>
+                  <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>imposter</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De imposter doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is 15 seconden bevroren.</p>
+                  <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Imposter uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = imposter wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
+                </>
+              )}
+              <div style={{ font: "800 14px system-ui", margin: "10px 0 4px" }}>{multi ? "Jouw rol" : "Wie wil je zijn?"}</div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
                 {[["random", "🎲 Verras me"], ["bouwer", "🔧 Bouwer"], ["imposter", "🕵️ Imposter"]].map(([k, l]) => (
                   <button key={k} onClick={() => setRolKeuze(k)} style={{ ...KNOP_GRIJS, background: rolKeuze === k ? "linear-gradient(135deg,#2f6fd6,#1f4fa8)" : "#3a4754" }}>{l}</button>
                 ))}
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                <button onClick={startSpel} disabled={!rolKeuze} style={{ ...KNOP, opacity: rolKeuze ? 1 : .5 }}>▶ Start</button>
-                <button onClick={() => onStop && onStop()} style={KNOP_GRIJS}>Terug naar het park</button>
+                <button onClick={startSpel} disabled={!rolKeuze} style={{ ...KNOP, opacity: rolKeuze ? 1 : .5 }}>▶ Start{multi ? ` (${1 + lobby.length} speler${lobby.length ? "s" : ""})` : ""}</button>
+                <button onClick={stop} style={KNOP_GRIJS}>Terug naar het park</button>
               </div>
             </div>
           </div>
@@ -160,37 +264,33 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
 
         {st.fase === "spel" && !taak && (
           <>
-            {/* rolkaart na start (3 s) */}
             {st.spelTijd < 4 && (
               <div style={{ position: "absolute", left: "50%", top: 70, transform: "translateX(-50%)", pointerEvents: "none", background: mij.rol === "imposter" ? "#b0332a" : "#1f7a3a", color: "#fff", borderRadius: 16, padding: "12px 18px", font: "900 20px system-ui", boxShadow: "0 8px 24px rgba(0,0,0,.4)", textAlign: "center" }}>
                 {mij.rol === "imposter" ? "🕵️ Jij bent de IMPOSTER" : "🔧 Jij bent BOUWER"}<div style={{ font: "700 13px system-ui", opacity: .9 }}>{mij.rol === "imposter" ? "Doe alsof. Tik bouwers als niemand kijkt." : "Doe taken bij de gele posten. Let op wie er vreemd doet."}</div>
               </div>
             )}
-            {/* bovenbalk */}
             <div style={{ position: "absolute", left: "50%", top: 54, transform: "translateX(-50%)", display: "flex", gap: 8, alignItems: "center", background: "rgba(20,28,40,.85)", color: "#fff", borderRadius: 999, padding: "6px 12px", font: "800 13px system-ui", whiteSpace: "nowrap" }}>
               <span>{mij.rol === "imposter" ? "🕵️" : "🔧"} {mij.naam}</span>
               <span style={{ opacity: .7 }}>·</span><span>⏱ {mm}:{ss}</span>
               <span style={{ opacity: .7 }}>·</span><span>🧩 {st.takenKlaar}/{st.takenTotaal}</span>
               <span style={{ opacity: .7 }}>·</span><span>⭐ {mij.punten}</span>
+              {multi && <><span style={{ opacity: .7 }}>·</span><span>👥 {echteSpelers}</span></>}
             </div>
             <div style={{ position: "absolute", left: "50%", top: 84, transform: "translateX(-50%)", width: 220, height: 6, borderRadius: 3, background: "rgba(255,255,255,.25)" }}><div style={{ width: `${Math.round((st.takenKlaar / Math.max(1, st.takenTotaal)) * 100)}%`, height: "100%", borderRadius: 3, background: "#69f0ae" }} /></div>
-            {/* log */}
-            <div style={{ position: "absolute", left: 12, top: 100, font: "700 12px system-ui", color: "#fff", textShadow: "0 1px 3px rgba(0,0,0,.7)" }}>{st.log.slice(0, 2).map((l, i) => <div key={i} style={{ opacity: 1 - i * 0.35 }}>{l.tekst}</div>)}</div>
-            {/* bevroren */}
+            <div style={{ position: "absolute", left: 12, top: 100, font: "700 12px system-ui", color: "#fff", textShadow: "0 1px 3px rgba(0,0,0,.7)" }}>{(st.log || []).slice(0, 2).map((l, i) => <div key={i} style={{ opacity: 1 - i * 0.35 }}>{l.tekst}</div>)}</div>
             {mij.bevroren > 0 && <div style={{ position: "absolute", inset: 0, background: "rgba(150,210,255,.25)", display: "grid", placeItems: "center", font: "900 26px system-ui", color: "#fff", textShadow: "0 2px 8px rgba(0,0,0,.6)" }}>❄️ Bevroren… {Math.ceil(mij.bevroren)} s</div>}
+            {mij.uitgestemd && <div style={{ position: "absolute", left: "50%", top: 120, transform: "translateX(-50%)", background: "rgba(20,28,40,.85)", color: "#fff", borderRadius: 12, padding: "8px 14px", font: "800 13px system-ui" }}>🪑 Je bent uitgestemd. Je speelt mee, maar stemt niet meer.</div>}
             {laatsteUitkomst && <div style={{ position: "absolute", left: "50%", top: "40%", transform: "translate(-50%,-50%)", background: "#fffef8", color: "#1c2840", borderRadius: 16, padding: "14px 20px", font: "900 18px system-ui", boxShadow: "0 8px 24px rgba(0,0,0,.4)" }}>{laatsteUitkomst.tekst}</div>}
-            {/* knoppen onder */}
             <div style={{ position: "absolute", left: "50%", bottom: "calc(86px + env(safe-area-inset-bottom))", transform: "translateX(-50%)", display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center", pointerEvents: "auto" }}>
               {station && magTaak(st, mij, station) && <button onClick={openTaak} style={KNOP}>{station.emoji} Taak doen</button>}
               {station && !magTaak(st, mij, station) && mij.bevroren <= 0 && mij.laatstePost === station.id && <span style={{ ...KNOP_GRIJS, opacity: .8 }}>✓ Hier al gedaan — volgende post</span>}
               {doelTik && <button onClick={doeTik} style={KNOP_ROOD}>👉 Tik {doelTik.naam}</button>}
-              {mij.stemmen > 0 && mij.bevroren <= 0 && <button onClick={roep} style={KNOP_ROOD}>🚨 Vergadering ({mij.stemmen})</button>}
-              <button onClick={() => onStop && onStop()} style={KNOP_GRIJS}>✖ Stop</button>
+              {mij.stemmen > 0 && mij.bevroren <= 0 && !mij.uitgestemd && <button onClick={roep} style={KNOP_ROOD}>🚨 Vergadering ({mij.stemmen})</button>}
+              <button onClick={stop} style={KNOP_GRIJS}>✖ Stop</button>
             </div>
           </>
         )}
 
-        {/* taak: 3 vragen */}
         {taak && (
           <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.55)" }}>
             <div style={KAART}>
@@ -220,36 +320,35 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
           </div>
         )}
 
-        {/* vergadering */}
         {st.fase === "vergadering" && st.vergadering && (
           <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(40,10,10,.6)" }}>
             <div style={KAART}>
               <div style={{ font: "900 20px system-ui" }}>🚨 Vergadering · nog {Math.max(0, Math.ceil(VERGADERING_S - st.vergadering.t))} s</div>
               <p style={{ margin: "4px 0 10px", color: "#556" }}>Wie is de imposter? Kies iemand, of onthoud je.</p>
               <div style={{ display: "grid", gap: 6 }}>
-                {actieveSpelers(st).filter((s) => s.id !== "ik").map((s) => (
-                  <button key={s.id} disabled={mij.uitgestemd || st.vergadering.stemmen.ik !== undefined} onClick={() => { stem(st, "ik", s.id, "👀"); setN((n) => n + 1); }} style={{ pointerEvents: "auto", textAlign: "left", border: "2px solid " + (st.vergadering.stemmen.ik === s.id ? "#b0332a" : "#d7dee8"), borderRadius: 12, padding: "9px 12px", font: "700 15px system-ui", background: st.vergadering.stemmen.ik === s.id ? "#f8cfcf" : "#fff", color: "#1c2840", cursor: "pointer" }}>
-                    {s.naam}{s.bevroren > 0 ? " ❄️" : ""}{s.id === mij.zagTik ? " · ❄️ was bij mij toen ik bevroor" : ""}
+                {actieveSpelers(st).filter((s) => s.id !== mijnId).map((s) => (
+                  <button key={s.id} disabled={mij.uitgestemd || st.vergadering.stemmen[mijnId] !== undefined} onClick={() => stemOp(s.id, "👀")} style={{ pointerEvents: "auto", textAlign: "left", border: "2px solid " + (st.vergadering.stemmen[mijnId] === s.id ? "#b0332a" : "#d7dee8"), borderRadius: 12, padding: "9px 12px", font: "700 15px system-ui", background: st.vergadering.stemmen[mijnId] === s.id ? "#f8cfcf" : "#fff", color: "#1c2840", cursor: "pointer" }}>
+                    {s.bot ? "" : "👤 "}{s.naam}{s.bevroren > 0 ? " ❄️" : ""}{s.id === mij.zagTik ? " · ❄️ was bij mij toen ik bevroor" : ""}
                   </button>
                 ))}
-                <button disabled={mij.uitgestemd || st.vergadering.stemmen.ik !== undefined} onClick={() => { stem(st, "ik", null, "🤷"); setN((n) => n + 1); }} style={{ ...KNOP_GRIJS, justifySelf: "start" }}>🤷 Geen idee, onthouden</button>
+                <button disabled={mij.uitgestemd || st.vergadering.stemmen[mijnId] !== undefined} onClick={() => stemOp(null, "🤷")} style={{ ...KNOP_GRIJS, justifySelf: "start" }}>🤷 Geen idee, onthouden</button>
               </div>
-              {st.vergadering.stemmen.ik !== undefined && <p style={{ margin: "10px 0 0", color: "#556" }}>Gestemd. De anderen stemmen ook… <button onClick={() => { sluitVergadering(st); setN((n) => n + 1); }} style={{ ...KNOP_GRIJS, marginLeft: 6 }}>Meteen tellen</button></p>}
+              {st.vergadering.stemmen[mijnId] !== undefined && <p style={{ margin: "10px 0 0", color: "#556" }}>Gestemd. De anderen stemmen ook… {host && <button onClick={() => { sluitVergadering(st); setN((n) => n + 1); }} style={{ ...KNOP_GRIJS, marginLeft: 6 }}>Meteen tellen</button>}</p>}
             </div>
           </div>
         )}
 
-        {/* einde */}
-        {st.fase === "einde" && st.uitkomst && (() => { const sc = scoreVan(st); return (
+        {st.fase === "einde" && st.uitkomst && (() => { const sc = scoreVan({ ...st, spelerId: mijnId }); return (
           <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.6)" }}>
             <div style={{ ...KAART, textAlign: "center" }}>
               <div style={{ fontSize: 50 }}>{sc.gewonnen ? "🏆" : "💪"}</div>
               <div style={{ font: "900 24px system-ui" }}>{sc.gewonnen ? "Gewonnen!" : "Verloren…"}</div>
-              <div style={{ color: "#556", margin: "4px 0 10px" }}>{st.uitkomst.reden} De imposter was: <b>{st.spelers.filter((s) => s.rol === "imposter").map((s) => s.naam).join(" en ")}</b>.</div>
+              <div style={{ color: "#556", margin: "4px 0 10px" }}>{st.uitkomst.reden} De imposter was: <b>{st.spelers.filter((s) => s.rol === "imposter").map((s) => s.naam).join(" en ") || "…"}</b>.</div>
+              {multi && <div style={{ fontSize: 13, color: "#556", marginBottom: 8 }}>{st.spelers.filter((s) => !s.bot).map((s) => `${s.naam}: ⭐ ${s.punten}`).join(" · ")}</div>}
               <div style={{ background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 12, padding: "10px 12px", font: "800 16px system-ui" }}>⭐ {sc.punten} punten → 🪙 +{sc.munten} munten voor je park</div>
               <div style={{ color: "#556", fontSize: 13, marginTop: 4 }}>{sc.rol === "imposter" ? `${sc.tiks}× getikt` : `${sc.taken} taken gedaan`} · {sc.duur} s gespeeld</div>
               <div style={{ display: "flex", gap: 8, justifyContent: "center", marginTop: 12, flexWrap: "wrap" }}>
-                <button onClick={() => { onKlaar && onKlaar({ ...sc, nogEenKeer: true }); }} style={KNOP}>🔁 Nog een keer</button>
+                {host && <button onClick={() => { onKlaar && onKlaar({ ...sc, nogEenKeer: true }); }} style={KNOP}>🔁 Nog een keer</button>}
                 <button onClick={klaar} style={KNOP_GRIJS}>Terug naar het park</button>
               </div>
             </div>

@@ -7,6 +7,7 @@
 //
 // Protocol (JSON per bericht, alles klein):
 //   client → relay:  {t:"hallo", c:<clientId>, name, avatar}   (meteen na verbinden)
+//                    {t:"game", d:{...}}                       (spelstand/acties, ≤6 kB, ≤20/s)
 //                    {t:"pos", x, z, yaw, m}                     (max ~5×/s, alleen bij beweging)
 //   relay → client:  {t:"welkom", peers:[{c,name,avatar,x,z,yaw}], n}
 //                    {t:"pos", c, x, z, yaw, m}                  (van een ander)
@@ -54,9 +55,19 @@ export class ParkRoom extends DurableObject {
   }
 
   async webSocketMessage(ws, bericht) {
-    if (typeof bericht !== "string" || bericht.length > 400) return;
+    if (typeof bericht !== "string" || bericht.length > 6000) return;
     let m; try { m = JSON.parse(bericht); } catch { return; }
     const a = ws.deserializeAttachment?.() || {};
+    // 🎮 game-berichten (fase 2, 9 sep): spelstand van de spelleider + acties van spelers,
+    // ongewijzigd doorgeven aan alle anderen; max ~20/s per socket
+    if (m.t === "game") {
+      if (!a.c) return;
+      const nu = Date.now();
+      if (nu - (a.laatstGame || 0) < 50) return;
+      ws.serializeAttachment({ ...a, laatstGame: nu });
+      this._zend(ws, { t: "game", c: a.c, d: m.d });
+      return;
+    }
     if (m.t === "hallo") {
       const c = String(m.c || "").slice(0, 40); if (!c) return;
       const naam = String(m.name || "").replace(/[^\p{L}\p{N} .'-]/gu, "").slice(0, 20);

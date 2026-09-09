@@ -185,11 +185,13 @@ export function checkEinde(st) {
 }
 
 /** per frame: bots bewegen + taken doen + bot-imposter tikt; bevroren aftellen; auto-vergadering; tijd */
-export function tick(st, dt, spelerPos, vrijPlek = null) {
+export function tick(st, dt, spelerPos, vrijPlek = null, posities = null) {
   if (st.fase === "intro" || st.fase === "einde") return;
   st.tijd += dt;
   const mij = ik(st);
   if (spelerPos) { mij.x = spelerPos.x; mij.z = spelerPos.z; }
+  // fase 2: posities van de andere echte spelers (van het doorgeefstation) — voor tik-afstand en 'ogen'
+  if (posities) for (const s of st.spelers) { if (!s.bot && s.id !== st.spelerId) { const p = posities.get ? posities.get(s.id) : posities[s.id]; if (p && p.x != null) { s.x = p.x; s.z = p.z; s.yaw = p.yaw || 0; } } }
   if (st.fase === "vergadering") { st.vergadering.t += dt; if (st.vergadering.t >= VERGADERING_S) sluitVergadering(st); return; }
   st.spelTijd += dt; st.sindsVergadering += dt;
   for (const s of st.spelers) if (s.bevroren > 0) s.bevroren = Math.max(0, s.bevroren - dt);
@@ -220,4 +222,36 @@ export function scoreVan(st) {
   const gewonnen = st.uitkomst ? (st.uitkomst.gewonnen === "bouwers") === (mij.rol === "bouwer") : false;
   const munten = Math.round(mij.punten / 5);
   return { punten: mij.punten, munten, gewonnen, rol: mij.rol, taken: mij.taken, tiks: mij.tiks, duur: Math.round(st.spelTijd) };
+}
+
+// ── fase 2: multiplayer via parkcode (host-autoritair) ──
+/** hebben alle echte, actieve spelers gestemd? → vergadering eerder sluiten */
+export function alleGestemd(st) {
+  if (st.fase !== "vergadering") return false;
+  return actieveSpelers(st).filter((s) => !s.bot).every((s) => st.vergadering.stemmen[s.id] !== undefined);
+}
+/** compacte spelstand voor medespelers; rollen alleen van uitgestemde spelers of aan het eind */
+export function maakSnapshot(st) {
+  const klaar = st.fase === "einde";
+  return {
+    fase: st.fase, spelTijd: Math.round(st.spelTijd * 10) / 10, sindsVergadering: Math.round(st.sindsVergadering),
+    takenKlaar: st.takenKlaar, takenTotaal: st.takenTotaal, fouteStemrondes: st.fouteStemrondes,
+    stations: st.stations, uitkomst: st.uitkomst, log: st.log.slice(0, 3),
+    vergadering: st.vergadering ? { t: Math.round(st.vergadering.t * 10) / 10, stemmen: st.vergadering.stemmen, uitkomst: st.vergadering.uitkomst || null } : null,
+    spelers: st.spelers.map((s) => ({ id: s.id, naam: s.naam, avatar: s.avatar, bot: s.bot, x: +s.x.toFixed(2), z: +s.z.toFixed(2), yaw: +(s.yaw || 0).toFixed(2), moving: !!s.moving, bezig: s.bezig > 0,
+      bevroren: Math.round(s.bevroren * 10) / 10, uitgestemd: s.uitgestemd, punten: s.punten, taken: s.taken, tiks: s.tiks, stemmen: s.stemmen, laatstePost: s.laatstePost,
+      rol: klaar || s.uitgestemd ? s.rol : undefined })),
+  };
+}
+/** snapshot van de host toepassen op een lokale (client-)stand; eigen rol blijft staan */
+export function pasSnapshotToe(lokaal, snap, mijnId) {
+  const st = lokaal || { spelerId: mijnId, spelers: [], log: [] };
+  const rollen = new Map((st.spelers || []).map((s) => [s.id, s.rol]));
+  st.spelerId = mijnId;
+  st.fase = snap.fase; st.spelTijd = snap.spelTijd; st.sindsVergadering = snap.sindsVergadering;
+  st.takenKlaar = snap.takenKlaar; st.takenTotaal = snap.takenTotaal; st.fouteStemrondes = snap.fouteStemrondes;
+  st.stations = snap.stations; st.uitkomst = snap.uitkomst; st.log = snap.log || [];
+  st.vergadering = snap.vergadering ? { door: null, t: snap.vergadering.t, stemmen: snap.vergadering.stemmen || {}, redenen: {}, uitkomst: snap.vergadering.uitkomst } : null;
+  st.spelers = snap.spelers.map((s) => ({ ...s, rol: s.rol || rollen.get(s.id) || (s.id === mijnId ? st.mijnRol : undefined) || "bouwer", zagTik: null, doel: null, bezig: s.bezig ? 1 : 0 }));
+  return st;
 }

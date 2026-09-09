@@ -147,6 +147,7 @@ export function verbindParkRoom({ code, me, handlers = {} }) {
       ws.onmessage = (e) => {
         let m; try { m = JSON.parse(e.data); } catch { return; }
         if (m.t === "pos" && m.c && m.c !== mijnClient) handlers.onPos?.(m.c, m);
+        else if (m.t === "game" && m.c && m.c !== mijnClient) handlers.onGame?.(m.c, m.d);
         else if (m.t === "welkom") { for (const q of m.peers || []) { if (q.c && q.c !== mijnClient) { handlers.onPeerInfo?.(q.c, { name: q.name, avatar: q.avatar }); if (q.x != null) handlers.onPos?.(q.c, q); } } }
         else if (m.t === "join" && m.c && m.c !== mijnClient) handlers.onPeerInfo?.(m.c, { name: m.name, avatar: m.avatar });
         else if (m.t === "leave" && m.c) handlers.onPeerWeg?.(m.c);
@@ -170,6 +171,10 @@ export function verbindParkRoom({ code, me, handlers = {} }) {
   channel.on("broadcast", { event: "ops" }, ({ payload }) => {
     if (!payload || payload.c === mijnClient) return;
     handlers.onOps?.(Array.isArray(payload.ops) ? payload.ops : [], { client: payload.c, uid: payload.uid || null, versie: payload.versie ?? null });
+  });
+  channel.on("broadcast", { event: "game" }, ({ payload }) => {
+    if (!payload || payload.c === mijnClient) return;
+    handlers.onGame?.(payload.c, payload.d);
   });
   channel.on("broadcast", { event: "pos" }, ({ payload }) => {
     if (!payload || payload.c === mijnClient) return;
@@ -221,6 +226,12 @@ export function verbindParkRoom({ code, me, handlers = {} }) {
       return true;
     },
     relayActief() { return relayOk; },
+    /** 🎮 game-bericht naar alle medespelers (spelstand van de spelleider of een actie) */
+    sendGame(d) {
+      if (relayOk && relay && relay.readyState === 1) { try { relay.send(JSON.stringify({ t: "game", d })); return true; } catch { /* */ } }
+      try { channel.send({ type: "broadcast", event: "game", payload: { c: mijnClient, d } }); return true; } catch { return false; }
+    },
+    mijnClient,
     unsub() { gesloten = true; clearTimeout(relayTimer); try { relay?.close(); } catch { /* */ } try { supabase.removeChannel(channel); } catch { /* */ } },
   };
 }
