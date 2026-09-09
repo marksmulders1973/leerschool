@@ -10,9 +10,9 @@ De bevroren keuze "géén nieuwe spellen" ging over spelletjes die het leren ver
 - **Game-modus**: ☰ → 🎮 *Wie is de imposter?* Het park wordt een speelveld met taakposten. Bouwen staat uit tijdens een ronde; daarna gewoon verder.
 
 ## Regels (kindveilig, zonder chat)
-- 6 tot 8 spelers per ronde: echte spelers (via de parkcode, fase 2) aangevuld met **bots** (blok-maatjes met eigen naam). Eén **imposter** (twee bij 8 spelers); de rest zijn **bouwers**.
+- 6 tot 10 spelers per ronde (Mark 9 sep: max 10): echte spelers (via de parkcode, fase 2) aangevuld met **bots** (blok-maatjes met eigen naam). Eén **imposter** (twee bij 8 spelers); de rest zijn **bouwers**.
 - **Bouwers** doen taken: bij een **taakpost** (leerbord in het park) 3 vragen op je eigen groep-niveau. Goed = taak klaar + punten; fout = uitleg, taak blijft open. Alle taken klaar = bouwers winnen.
-- **De imposter** doet alsof, en kan een bouwer **tikken** als niemand anders dichtbij is: die is 15 seconden **bevroren** en raakt zijn lopende taak kwijt. Geen doden, geen bloed: bevroren = ijsblokje, en je doet daarna gewoon weer mee.
+- **De imposter** doet alsof, en kan een bouwer **tikken** als niemand anders dichtbij is: die is **af** en kijkt de rest van de ronde mee vanuit de **zeppelin** boven het park (Mark 9 sep; eerst was het 15 s bevroren). Wie uitgestemd wordt gaat ook naar de zeppelin. De resterende taken van een af-bouwer vervallen, zodat de bouwers nog kunnen winnen. Geen doden, geen bloed.
 - **Vergadering**: wie iets verdachts zag drukt op 🚨 (max 2 per speler), of automatisch elke 2 minuten. Iedereen stemt binnen 20 seconden: wie is de imposter? Geen chat — wel snelle redenen-knoppen ("👀 stond bij een post zonder taak te doen", "❄️ was bij mij toen ik bevroor", "🤷 geen idee"). Meeste stemmen = uitgestemd. Imposter uitgestemd → bouwers winnen. Bouwer uitgestemd → die speelt door maar mag niet meer stemmen; imposter wint bij 2 foute stemrondes of als de tijd om is (5 min).
 - **Punten** = 10 per goed antwoord + 50 winstbonus; punten worden **munten** voor het park. De imposter verdient punten met elke bouwer die hij bevriest én met taken die hij "doet" (ook echte vragen — hij moet immers doen alsof, en leert dus mee).
 
@@ -33,4 +33,6 @@ Events `game_start {groep, spelers, bots}`, `game_taak {goed}`, `game_tik`, `gam
 - Taakposten: 6 vaste plekken in een ring rond het parkmidden (r≈32 m), op de grond gezet met `heightRef`; botsing vermeden via `isSolid`.
 - Vragen: `bouwStartVragen(level, n)` uit het start-kwartier (paden per groep) — zelfde bron, zelfde uitleg.
 - Bots: `CharacterModel` blok-maatjes; positie uit de engine per frame.
-- Tikken: afstand ≤ 2,5 m, en geen andere niet-bevroren speler binnen 8 m (anders "te veel ogen").
+- Tikken: afstand ≤ 2,5 m, en geen andere actieve speler binnen 8 m (anders "te veel ogen"). Af-spelers (zeppelin) tellen niet als ogen.
+- Zeppelin: géén eigen schip — af-spelers varen mee op het gondeldek van de **bedank-zeppelins** van de partners (Mark 9 sep: "de dank/ere-zeppelins die we al hadden"). `game/Zeppelin.jsx` rekent de plek uit via `zeppelinVlootActief()`/`zeppelinPositie()` uit ParkProps (max 3 per schip, dan het volgende schip); de eigen camera hangt achter dat dek met blik op het park (`onRit` verbergt het poppetje op de grond en zet gids/poort stil).
+- Rolverdeling: echte spelers gaan vóór bots bij de imposter-loting (solo blijft echt loten).

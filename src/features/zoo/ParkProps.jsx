@@ -1866,17 +1866,27 @@ function Zeppelin({ data }) {
   });
   return <group ref={g}><ZeppelinRomp doekTex={doekTex} /></group>;
 }
+/** de vloot die nú echt in de lucht hangt (zwakke apparaten: wit + 2 bedank-zeppelins die per dag rouleren) */
+export function zeppelinVlootActief() {
+  if (!LOW_END) return ZEPPELIN_VLOOT;
+  const dag = Math.floor(Date.now() / 86400000);
+  const partners = ZEPPELIN_VLOOT.slice(1);
+  const a = partners[dag % partners.length];
+  const b = partners[(dag + 1) % partners.length];
+  return [ZEPPELIN_VLOOT[0], a, b].filter(Boolean);
+}
+/** wereldpositie + koers van een vloot-zeppelin op tijd t (zelfde formule als het useFrame hieronder);
+ *  lokaal = punt in het schip (x = neusrichting), bv. het gondeldek [1.2, -1.65, 0] — 🎮 game: af-spelers varen mee */
+export function zeppelinPositie(data, t, lokaal = null) {
+  const a = data.fase + t * data.snelheid;
+  const px = Math.sin(a) * data.r, py = data.h + Math.sin(t * 0.32 + data.fase) * 0.9, pz = Math.cos(a) * data.r;
+  const ry = a + (data.snelheid >= 0 ? 0 : Math.PI);
+  if (!lokaal) return { x: px, y: py, z: pz, ry };
+  const [lx, ly, lz] = lokaal;
+  return { x: px + lx * Math.cos(ry) + lz * Math.sin(ry), y: py + ly, z: pz - lx * Math.sin(ry) + lz * Math.cos(ry), ry };
+}
 export function Zeppelins() {
-  // Op zwakke apparaten een mini-vloot (wit + 2 bedank-zeppelins die per dag
-  // rouleren zodat elke partner tóch aan de beurt komt), anders de hele vloot.
-  const vloot = useMemo(() => {
-    if (!LOW_END) return ZEPPELIN_VLOOT;
-    const dag = Math.floor(Date.now() / 86400000);
-    const partners = ZEPPELIN_VLOOT.slice(1);
-    const a = partners[dag % partners.length];
-    const b = partners[(dag + 1) % partners.length];
-    return [ZEPPELIN_VLOOT[0], a, b].filter(Boolean);
-  }, []);
+  const vloot = useMemo(() => zeppelinVlootActief(), []);
   return <group>{vloot.map((z, i) => <Zeppelin key={i} data={z} />)}</group>;
 }
 

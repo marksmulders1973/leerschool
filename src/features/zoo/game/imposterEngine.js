@@ -4,7 +4,8 @@
 // met de positie van de echte speler; bots bewegen hier.
 
 export const SPEL_DUUR = 300;          // 5 min
-export const BEVROREN_S = 15;
+export const BEVROREN_S = 15;         // (niet meer gebruikt sinds 9 sep: getikt = af, naar de zeppelin)
+export const MAX_SPELERS = 10;
 export const TIK_AFSTAND = 2.5;
 export const OGEN_AFSTAND = 8;         // iemand anders zo dichtbij = te veel ogen om te tikken
 export const TAAK_AFSTAND = 3.2;       // zo dicht bij een post = taak doen mag
@@ -79,17 +80,26 @@ export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, sp
 function meld(st, tekst) { st.log = [{ t: st.tijd, tekst }, ...st.log].slice(0, 6); }
 export function speler(st, id) { return st.spelers.find((s) => s.id === id); }
 export function ik(st) { return speler(st, st.spelerId); }
-export function actieveSpelers(st) { return st.spelers.filter((s) => !s.uitgestemd); }
+export function actieveSpelers(st) { return st.spelers.filter((s) => !s.uitgestemd && !s.af); }
+/** speler is af (getikt of uitgestemd): kijkt mee vanuit de zeppelin */
+export function isAf(s) { return !!(s && (s.af || s.uitgestemd)); }
+/** af-speler afvoeren: taken van een bouwer tellen niet meer mee (anders wordt het onhaalbaar) */
+function zetAf(st, s, reden) {
+  if (s.af) return;
+  s.af = true; s.bezig = 0; s.doel = null; s.moving = false;
+  if (s.rol === "bouwer") st.takenTotaal = Math.max(st.takenKlaar, st.takenTotaal - Math.max(0, TAKEN_PER_BOUWER - (s.taken || 0)));
+  meld(st, reden);
+}
 export function imposters(st) { return st.spelers.filter((s) => s.rol === "imposter"); }
 
 /** mag `dader` `doel` tikken? afstand + geen andere ogen */
 export function magTikken(st, dader, doel) {
-  if (st.fase !== "spel" || dader.rol !== "imposter" || dader.uitgestemd || dader.bevroren > 0) return false;
-  if (!doel || doel.id === dader.id || doel.rol === "imposter" || doel.bevroren > 0 || doel.uitgestemd) return false;
+  if (st.fase !== "spel" || dader.rol !== "imposter" || isAf(dader) || dader.bevroren > 0) return false;
+  if (!doel || doel.id === dader.id || doel.rol === "imposter" || doel.bevroren > 0 || isAf(doel)) return false;
   if (dist(dader, doel) > TIK_AFSTAND) return false;
   if (dader.laatstDoel === doel.id) return false;
   for (const a of st.spelers) {
-    if (a.id === dader.id || a.id === doel.id || a.uitgestemd || a.bevroren > 0) continue;
+    if (a.id === dader.id || a.id === doel.id || isAf(a) || a.bevroren > 0) continue;
     if (dist(a, doel) < OGEN_AFSTAND) return false;
   }
   return true;
@@ -97,12 +107,12 @@ export function magTikken(st, dader, doel) {
 export function tik(st, daderId, doelId) {
   const d = speler(st, daderId), t = speler(st, doelId);
   if (!magTikken(st, d, t)) return false;
-  t.bevroren = BEVROREN_S; t.bezig = 0; t.doel = null;
   d.laatstDoel = t.id; d.tiks += 1; d.punten += PUNT_TIK;
   // wie stond in de buurt (8-16 m) heeft het misschien gezien
   for (const a of st.spelers) { if (a.id !== d.id && a.id !== t.id && dist(a, t) < 16 && Math.random() < 0.6) a.zagTik = d.id; }
   t.zagTik = Math.random() < 0.5 ? d.id : t.zagTik; // het slachtoffer zag de dader half zo vaak
-  meld(st, `❄️ ${t.naam} is bevroren`);
+  zetAf(st, t, `🎈 ${t.naam} ${t.naam === "Jij" ? "bent" : "is"} getikt en kijkt mee vanuit de zeppelin`);
+  checkEinde(st);
   return true;
 }
 
@@ -112,7 +122,7 @@ export function dichtstbijStation(st, p) {
   return best && bd <= TAAK_AFSTAND ? best : null;
 }
 export function magTaak(st, sp, station) {
-  return st.fase === "spel" && !sp.uitgestemd && sp.bevroren <= 0 && !!station && sp.laatstePost !== station.id;
+  return st.fase === "spel" && !isAf(sp) && sp.bevroren <= 0 && !!station && sp.laatstePost !== station.id;
 }
 /** taak afgerond (na de vragen): goed = alle vragen goed genoeg */
 export function taakKlaar(st, spId, stationId, goedAantal, totaal) {
@@ -129,7 +139,7 @@ export function taakKlaar(st, spId, stationId, goedAantal, totaal) {
 export function startVergadering(st, doorId, auto = false) {
   if (st.fase !== "spel") return false;
   const d = speler(st, doorId);
-  if (!auto) { if (!d || d.uitgestemd || d.stemmen <= 0) return false; d.stemmen -= 1; }
+  if (!auto) { if (!d || isAf(d) || d.stemmen <= 0) return false; d.stemmen -= 1; }
   st.fase = "vergadering"; st.sindsVergadering = 0;
   st.vergadering = { door: auto ? null : doorId, t: 0, stemmen: {}, redenen: {} };
   for (const s of st.spelers) { s.bezig = 0; s.doel = null; }
@@ -138,13 +148,13 @@ export function startVergadering(st, doorId, auto = false) {
 }
 export function stem(st, vanId, opId, reden = null) {
   if (st.fase !== "vergadering") return;
-  const v = speler(st, vanId); if (!v || v.uitgestemd) return;
+  const v = speler(st, vanId); if (!v || isAf(v)) return;
   st.vergadering.stemmen[vanId] = opId; // null = onthouden
   if (reden) st.vergadering.redenen[vanId] = reden;
 }
 export function botsStemmen(st) {
   for (const b of st.spelers) {
-    if (!b.bot || b.uitgestemd || st.vergadering.stemmen[b.id] !== undefined) continue;
+    if (!b.bot || isAf(b) || st.vergadering.stemmen[b.id] !== undefined) continue;
     const kandidaten = actieveSpelers(st).filter((s) => s.id !== b.id);
     if (b.rol === "imposter") { stem(st, b.id, kies(kandidaten.filter((s) => s.rol === "bouwer")).id, "🤔"); continue; }
     if (b.zagTik && Math.random() < 0.6 && kandidaten.some((s) => s.id === b.zagTik)) { stem(st, b.id, b.zagTik, "❄️"); continue; }
@@ -162,7 +172,7 @@ export function sluitVergadering(st) {
   let uitkomst;
   if (!top || gelijk) { uitkomst = { uitgestemd: null, tekst: "Geen meerderheid — niemand uitgestemd." }; }
   else {
-    const u = speler(st, top); u.uitgestemd = true;
+    const u = speler(st, top); u.uitgestemd = true; zetAf(st, u, `🪑 ${u.naam} ${u.naam === "Jij" ? "bent" : "is"} uitgestemd en kijkt mee vanuit de zeppelin`);
     if (u.rol === "imposter") uitkomst = { uitgestemd: u, imposter: true, tekst: `${u.naam} was de imposter!` };
     else { st.fouteStemrondes += 1; uitkomst = { uitgestemd: u, imposter: false, tekst: `${u.naam} was géén imposter…` }; }
   }
@@ -202,7 +212,7 @@ export function tick(st, dt, spelerPos, vrijPlek = null, posities = null) {
   st.spelTijd += dt; st.sindsVergadering += dt;
   for (const s of st.spelers) if (s.bevroren > 0) s.bevroren = Math.max(0, s.bevroren - dt);
   for (const b of st.spelers) {
-    if (!b.bot || b.uitgestemd) continue;
+    if (!b.bot || isAf(b)) { if (b.bot) b.moving = false; continue; }
     if (b.bevroren > 0) { b.moving = false; continue; }
     // bot-imposter: kans om te tikken als het mag
     if (b.rol === "imposter" && Math.random() < dt * 0.5) {
@@ -245,7 +255,7 @@ export function maakSnapshot(st) {
     stations: st.stations, uitkomst: st.uitkomst, log: st.log.slice(0, 3), vak: st.vak, groep: st.groep, nImp: st.nImp,
     vergadering: st.vergadering ? { t: Math.round(st.vergadering.t * 10) / 10, stemmen: st.vergadering.stemmen, uitkomst: st.vergadering.uitkomst || null } : null,
     spelers: st.spelers.map((s) => ({ id: s.id, naam: s.naam, avatar: s.avatar, bot: s.bot, x: +s.x.toFixed(2), z: +s.z.toFixed(2), yaw: +(s.yaw || 0).toFixed(2), moving: !!s.moving, bezig: s.bezig > 0,
-      bevroren: Math.round(s.bevroren * 10) / 10, uitgestemd: s.uitgestemd, punten: s.punten, taken: s.taken, tiks: s.tiks, stemmen: s.stemmen, laatstePost: s.laatstePost,
+      bevroren: Math.round(s.bevroren * 10) / 10, uitgestemd: s.uitgestemd, af: !!s.af, punten: s.punten, taken: s.taken, tiks: s.tiks, stemmen: s.stemmen, laatstePost: s.laatstePost,
       rol: klaar || s.uitgestemd ? s.rol : undefined })),
   };
 }

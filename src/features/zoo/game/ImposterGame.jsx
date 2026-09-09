@@ -12,11 +12,12 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
 import CharacterModel from "../CharacterModel";
+import { zepPositie, zepCamera } from "./Zeppelin.jsx";
 import { bouwStartVragen } from "../../onboarding/startKwartier.js";
 import { bouwGameVragen, VAKKEN, GROEPEN, groepLabel } from "./vragenBron.js";
 import { haalKlassement, bewaarScores } from "../parkRoom.js";
 import { track } from "../../../utils.js";
-import { maakStations, maakSpel, tick, speler, actieveSpelers, magTikken, tik, dichtstbijStation, magTaak, taakKlaar, startVergadering, stem, sluitVergadering, scoreVan, alleGestemd, maakSnapshot, pasSnapshotToe, SPEL_DUUR, VERGADERING_S } from "./imposterEngine.js";
+import { MAX_SPELERS, isAf, maakStations, maakSpel, tick, speler, actieveSpelers, magTikken, tik, dichtstbijStation, magTaak, taakKlaar, startVergadering, stem, sluitVergadering, scoreVan, alleGestemd, maakSnapshot, pasSnapshotToe, SPEL_DUUR, VERGADERING_S } from "./imposterEngine.js";
 
 const PARK_R = 70;
 const SNAP_MS = 500;
@@ -35,6 +36,15 @@ function Bot({ sp, stRef, heightRef, soepel }) {
     const s = stRef.current && speler(stRef.current, sp.id); const n = g.current; if (!s || !n) return;
     if (soepel) { const k = Math.min(1, Math.min(0.05, dtRaw) * 6); cur.current.x += (s.x - cur.current.x) * k; cur.current.z += (s.z - cur.current.z) * k; let dy = (s.yaw || 0) - cur.current.yaw; while (dy > Math.PI) dy -= Math.PI * 2; while (dy < -Math.PI) dy += Math.PI * 2; cur.current.yaw += dy * k; }
     else { cur.current.x = s.x; cur.current.z = s.z; cur.current.yaw = s.yaw || 0; }
+    if (s.af || s.uitgestemd) {
+      // 🎈 af = in de gondel van de zeppelin (plekje op volgorde van het spelers-lijstje)
+      const idx = stRef.current.spelers.filter((x) => x.af || x.uitgestemd).findIndex((x) => x.id === s.id);
+      const zp = zepPositie(_.clock.elapsedTime, idx);
+      n.position.set(zp.x, zp.y, zp.z); n.rotation.y = zp.yaw;
+      moving.current = 0;
+      const l = `🎈 ${s.naam}`; if (l !== label) setLabel(l);
+      return;
+    }
     const y = heightRef?.current ? heightRef.current(cur.current.x, cur.current.z) : 0;
     n.position.set(cur.current.x, y, cur.current.z); n.rotation.y = cur.current.yaw;
     moving.current = s.moving ? 1 : 0;
@@ -69,7 +79,7 @@ function Station({ s, heightRef, gedaan }) {
  * net (optioneel, gedeeld park): { actief, mijnId, naam, avatar, send(d), luister(fn)→unsub, peers()→Map }
  * host: true = ik ben de spelleider (start het spel, draait bots en engine)
  */
-export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRef, spelerNaam = "", avatarUrl = "", level = "6", onKlaar, onStop, net = null, host = true }) {
+export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRef, spelerNaam = "", avatarUrl = "", level = "6", onKlaar, onStop, net = null, host = true, onRit = null }) {
   const multi = !!(net && net.actief);
   const mijnId = multi ? net.mijnId : "ik";
   const stRef = useRef(null);
@@ -86,6 +96,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   const [klassement, setKlassement] = useState(null);
   const scoresBewaard = useRef(false);
   const bevrorenPos = useRef(null);
+  const inZeppelin = useRef(false);   // 🎈 ik ben af en kijk mee vanuit de zeppelin
+  useEffect(() => () => { if (inZeppelin.current) { inZeppelin.current = false; onRit && onRit(false); } }, []); // eslint-disable-line
   const laatsteSnap = useRef(0);
   const uitkomstGezien = useRef(null);
   const vrijPlek = useMemo(() => (x, z) => Math.hypot(x, z) < PARK_R && !(isSolid && isSolid(x, z)), [isSolid]);
@@ -111,7 +123,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
       if (!d) return;
       if (host) {
         const s = stRef.current;
-        if (d.t === "join") { setLobby((l) => (l.some((x) => x.id === van) ? l : [...l, { id: van, naam: d.naam || "Speler", avatar: d.avatar || "" }])); if (s && s.fase !== "intro") { /* laatkomer: alleen kijken */ } return; }
+        if (d.t === "join") { setLobby((l) => (l.some((x) => x.id === van) || l.length >= MAX_SPELERS - 1 ? l : [...l, { id: van, naam: d.naam || "Speler", avatar: d.avatar || "" }])); if (s && s.fase !== "intro") { /* laatkomer: alleen kijken */ } return; }
         if (d.t === "leave") { setLobby((l) => l.filter((x) => x.id !== van)); return; }
         if (!s || s.fase === "intro") return;
         if (d.t === "taak") { taakKlaar(s, van, d.stationId, d.goed, d.totaal); }
@@ -159,6 +171,16 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
       // snapshot naar medespelers
       if (multi && st.fase !== "intro") { const nu = performance.now(); if (nu - laatsteSnap.current > SNAP_MS) { laatsteSnap.current = nu; net.send({ t: "snap", st: maakSnapshot(st) }); } }
     } else if (st.fase === "vergadering" && st.vergadering) { st.vergadering.t += dt; }
+    // 🎈 af (getikt/uitgestemd) = meekijken vanuit de zeppelin: camera in de gondel, poppetje verborgen
+    const af = m && isAf(m) && st.fase !== "einde";
+    if (af !== inZeppelin.current) { inZeppelin.current = af; onRit && onRit(af); }
+    if (af) {
+      // 🎈 meevaren in een bedank-zeppelin: camera achter het gondeldek, blik op het park
+      const idx = Math.max(0, st.spelers.filter(isAf).findIndex((x) => x.id === mijnId));
+      const c = zepCamera(s.clock.elapsedTime, idx);
+      s.camera.position.set(c.pos.x, c.pos.y, c.pos.z);
+      s.camera.lookAt(c.kijk.x, c.kijk.y, c.kijk.z);
+    }
     // bevroren = niet kunnen lopen
     if (m && m.bevroren > 0 && p) {
       if (!bevrorenPos.current) bevrorenPos.current = { x: p.x, z: p.z };
@@ -171,7 +193,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
     if (!host) return;
     const stations = maakStations(32, 6, vrijPlek);
     const extra = multi ? lobby.map((l) => ({ id: l.id, naam: l.naam, avatar: l.avatar })) : [];
-    const nBots = Math.max(1, 5 - extra.length);
+    const nBots = Math.max(0, Math.min(Math.max(1, 5 - extra.length), MAX_SPELERS - 1 - extra.length));
     stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rolKeuze === "random" ? null : rolKeuze, extraSpelers: extra, nImposters: nImp, vak, groep });
     scoresBewaard.current = false;
     stRef.current.fase = "spel";
@@ -263,7 +285,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                 </>
               ) : (
                 <>
-                  <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>imposter</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De imposter doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is 15 seconden bevroren.</p>
+                  <p style={{ margin: "0 0 8px", background: "#eef6ff", border: "1px solid #bcd6f5", borderRadius: 10, padding: "8px 12px", fontSize: 13 }}>👥 <b>Met vrienden of je klas spelen?</b> Dat kan alleen in een gedeeld park: sluit dit spel, kies ☰ → 🏫 Samen bouwen voor een parkcode, en start het spel dáár. Iedereen in dat park krijgt dan een uitnodiging (tot {MAX_SPELERS} spelers).</p>
+                  <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>imposter</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De imposter doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt ook.</p>
                   <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Imposter uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = imposter wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
                 </>
               )}
@@ -318,13 +341,14 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
             <div style={{ position: "absolute", left: "50%", top: 84, transform: "translateX(-50%)", width: 220, height: 6, borderRadius: 3, background: "rgba(255,255,255,.25)" }}><div style={{ width: `${Math.round((st.takenKlaar / Math.max(1, st.takenTotaal)) * 100)}%`, height: "100%", borderRadius: 3, background: "#69f0ae" }} /></div>
             <div style={{ position: "absolute", left: 12, top: 100, font: "700 12px system-ui", color: "#fff", textShadow: "0 1px 3px rgba(0,0,0,.7)" }}>{(st.log || []).slice(0, 2).map((l, i) => <div key={i} style={{ opacity: 1 - i * 0.35 }}>{l.tekst}</div>)}</div>
             {mij.bevroren > 0 && <div style={{ position: "absolute", inset: 0, background: "rgba(150,210,255,.25)", display: "grid", placeItems: "center", font: "900 26px system-ui", color: "#fff", textShadow: "0 2px 8px rgba(0,0,0,.6)" }}>❄️ Bevroren… {Math.ceil(mij.bevroren)} s</div>}
-            {mij.uitgestemd && <div style={{ position: "absolute", left: "50%", top: 120, transform: "translateX(-50%)", background: "rgba(20,28,40,.85)", color: "#fff", borderRadius: 12, padding: "8px 14px", font: "800 13px system-ui" }}>🪑 Je bent uitgestemd. Je speelt mee, maar stemt niet meer.</div>}
+            {isAf(mij) && <div style={{ position: "absolute", left: "50%", top: 120, transform: "translateX(-50%)", background: "rgba(20,28,40,.85)", color: "#fff", borderRadius: 12, padding: "8px 14px", font: "800 13px system-ui", whiteSpace: "nowrap" }}>🎈 Je bent {mij.uitgestemd ? "uitgestemd" : "getikt"} — je kijkt mee vanuit de zeppelin tot de ronde klaar is</div>}
+            {false && <div style={{ position: "absolute", left: "50%", top: 120, transform: "translateX(-50%)", background: "rgba(20,28,40,.85)", color: "#fff", borderRadius: 12, padding: "8px 14px", font: "800 13px system-ui" }}>🪑 Je bent uitgestemd. Je speelt mee, maar stemt niet meer.</div>}
             {laatsteUitkomst && <div style={{ position: "absolute", left: "50%", top: "40%", transform: "translate(-50%,-50%)", background: "#fffef8", color: "#1c2840", borderRadius: 16, padding: "14px 20px", font: "900 18px system-ui", boxShadow: "0 8px 24px rgba(0,0,0,.4)" }}>{laatsteUitkomst.tekst}</div>}
             <div style={{ position: "absolute", left: "50%", bottom: "calc(86px + env(safe-area-inset-bottom))", transform: "translateX(-50%)", display: "flex", gap: 8, flexWrap: "wrap", justifyContent: "center", pointerEvents: "auto" }}>
               {station && magTaak(st, mij, station) && <button onClick={openTaak} style={KNOP}>{station.emoji} Taak doen</button>}
               {station && !magTaak(st, mij, station) && mij.bevroren <= 0 && mij.laatstePost === station.id && <span style={{ ...KNOP_GRIJS, opacity: .8 }}>✓ Hier al gedaan — volgende post</span>}
               {doelTik && <button onClick={doeTik} style={KNOP_ROOD}>👉 Tik {doelTik.naam}</button>}
-              {mij.stemmen > 0 && mij.bevroren <= 0 && !mij.uitgestemd && <button onClick={roep} style={KNOP_ROOD}>🚨 Vergadering ({mij.stemmen})</button>}
+              {mij.stemmen > 0 && mij.bevroren <= 0 && !isAf(mij) && <button onClick={roep} style={KNOP_ROOD}>🚨 Vergadering ({mij.stemmen})</button>}
               <button onClick={stop} style={KNOP_GRIJS}>✖ Stop</button>
             </div>
           </>

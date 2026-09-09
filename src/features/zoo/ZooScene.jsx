@@ -1861,7 +1861,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         {/* 👥 medespelers in een gedeeld park (posities via Realtime, zie parkRoom.js) */}
         {peersRef ? <MedeSpelers peersRef={peersRef} heightRef={heightFnRef} /> : null}
         {/* 🎮 Game-modus: Wie is de imposter? (Mark 9 sep) — bots, taakposten en HUD in de scène */}
-        {gameModus ? <ImposterGame key={gameKey} playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} teleportRef={teleportRef} spelerNaam={spelerNaam} avatarUrl={avatarUrl} level={gameGroep} onKlaar={onGameKlaar} onStop={onGameStop} net={gameNet} host={gameHost} /> : null}
+        {gameModus ? <ImposterGame key={gameKey} playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} teleportRef={teleportRef} spelerNaam={spelerNaam} avatarUrl={avatarUrl} level={gameGroep} onKlaar={onGameKlaar} onStop={onGameStop} net={gameNet} host={gameHost} onRit={(v) => { setZeppelinRit(v); if (onZeppelinRit) onZeppelinRit(v); }} /> : null}
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         {/* Samenhang-plan 2 sep 2026: gids en poorten óók aan in bouw-modus —
