@@ -18,9 +18,15 @@
 // mag altijd; die van een ander alleen als je het park aanmaakte (eigenaar).
 import supabase from "../../supabase";
 
-export const MAX_LIVE_POS = 8;       // tot zoveel spelers zie je elkaars poppetje live
-export const POS_INTERVAL_MS = 500;  // positie hooguit 2×/s
+export const MAX_LIVE_POS = 8;       // zónder doorgeefstation: tot zoveel spelers via Supabase-broadcast
+export const POS_INTERVAL_MS = 500;  // positie hooguit 2×/s (via Supabase) …
+export const POS_INTERVAL_RELAY_MS = 250; // … of 4×/s via het doorgeefstation (gratis)
 export const POS_MIN_AFSTAND = 0.25; // en alleen als je écht bewoog (m)
+// ☁️ Stap 2 (9 sep 2026): Cloudflare Worker + Durable Object als doorgeefstation voor
+// posities — één WebSocket per speler, fan-out gratis, tot 100 spelers per park.
+// Valt het station weg (geen verbinding), dan blijft Supabase-broadcast het pad
+// (met de MAX_LIVE_POS-grens). Code: park-relay/src/index.js in deze repo.
+export const RELAY_URL = import.meta.env?.VITE_PARK_RELAY_URL || "wss://park-relay.park-relay.workers.dev";
 
 export const CODE_REGEX = /^[A-Z2-9]{6}$/;
 export function normaliseerCode(s) {
@@ -99,6 +105,13 @@ export async function haalParkRoom(code) {
   if (error) throw error;
   return Array.isArray(data) ? data[0] || null : data || null;
 }
+/** parkcodes die deze gebruiker aanmaakte (leerkracht-pagina) — RLS: select staat open, code = sleutel */
+export async function mijnParkRooms(uid) {
+  if (!uid) return [];
+  const { data, error } = await supabase.from("park_rooms").select("code,naam,created_at").eq("eigenaar", uid).order("created_at", { ascending: false }).limit(20);
+  if (error) throw error;
+  return data || [];
+}
 export async function stuurOps(code, ops) {
   if (!ops || !ops.length) return { id: null, rejected: [] };
   const { data, error } = await supabase.rpc("park_room_apply", { p_code: normaliseerCode(code), p_client: clientId(), p_ops: ops });
@@ -118,6 +131,34 @@ export function verbindParkRoom({ code, me, handlers = {} }) {
   const channel = supabase.channel(`park:${c}`, { config: { broadcast: { self: false }, presence: { key: mijnClient } } });
   let peers = new Map();
   let laatstePos = null, laatsteT = 0;
+
+  // ☁️ doorgeefstation (posities). Verbindt meteen; bij mislukken → Supabase-pad.
+  let relay = null, relayOk = false, relayPogingen = 0, relayTimer = null, gesloten = false;
+  const relayVerbind = () => {
+    if (gesloten || !RELAY_URL || typeof WebSocket === "undefined") return;
+    try {
+      const ws = new WebSocket(`${RELAY_URL.replace(/\/$/, "")}/room/${c}`);
+      relay = ws;
+      ws.onopen = () => {
+        relayOk = true; relayPogingen = 0;
+        try { ws.send(JSON.stringify({ t: "hallo", c: mijnClient, name: me?.name || "", avatar: me?.avatar || "" })); } catch { /* */ }
+        handlers.onRelay?.(true);
+      };
+      ws.onmessage = (e) => {
+        let m; try { m = JSON.parse(e.data); } catch { return; }
+        if (m.t === "pos" && m.c && m.c !== mijnClient) handlers.onPos?.(m.c, m);
+        else if (m.t === "welkom") { for (const q of m.peers || []) { if (q.c && q.c !== mijnClient) { handlers.onPeerInfo?.(q.c, { name: q.name, avatar: q.avatar }); if (q.x != null) handlers.onPos?.(q.c, q); } } }
+        else if (m.t === "join" && m.c && m.c !== mijnClient) handlers.onPeerInfo?.(m.c, { name: m.name, avatar: m.avatar });
+        else if (m.t === "leave" && m.c) handlers.onPeerWeg?.(m.c);
+      };
+      ws.onclose = () => {
+        relayOk = false; relay = null; handlers.onRelay?.(false);
+        if (!gesloten && relayPogingen < 6) { relayPogingen += 1; relayTimer = setTimeout(relayVerbind, Math.min(15000, 1000 * 2 ** relayPogingen)); }
+      };
+      ws.onerror = () => { try { ws.close(); } catch { /* */ } };
+    } catch { relayOk = false; }
+  };
+  relayVerbind();
 
   channel.on("postgres_changes", { event: "INSERT", schema: "public", table: "park_room_ops", filter: `code=eq.${c}` }, (payload) => {
     try { if (typeof window !== "undefined") window.__parkRoomLaatsteOp = Date.now(); } catch { /* */ }
@@ -165,14 +206,21 @@ export function verbindParkRoom({ code, me, handlers = {} }) {
     },
     /** stuur je positie; throttled + alleen bij beweging + alleen bij kleine groepen */
     sendPos(pos) {
-      if (peers.size + 1 > MAX_LIVE_POS) return false;
       const now = Date.now();
-      if (now - laatsteT < POS_INTERVAL_MS) return false;
+      if (now - laatsteT < (relayOk ? POS_INTERVAL_RELAY_MS : POS_INTERVAL_MS)) return false;
       if (laatstePos && Math.hypot(pos.x - laatstePos.x, pos.z - laatstePos.z) < POS_MIN_AFSTAND && Math.abs((pos.yaw || 0) - (laatstePos.yaw || 0)) < 0.2) return false;
+      const payload = { c: mijnClient, x: +pos.x.toFixed(2), z: +pos.z.toFixed(2), yaw: +(pos.yaw || 0).toFixed(2), m: pos.m ? 1 : 0 };
+      if (relayOk && relay && relay.readyState === 1) {
+        laatsteT = now; laatstePos = { x: pos.x, z: pos.z, yaw: pos.yaw || 0 };
+        try { relay.send(JSON.stringify({ t: "pos", x: payload.x, z: payload.z, yaw: payload.yaw, m: payload.m })); } catch { /* */ }
+        return true;
+      }
+      if (peers.size + 1 > MAX_LIVE_POS) return false; // zonder station: alleen kleine groepen
       laatsteT = now; laatstePos = { x: pos.x, z: pos.z, yaw: pos.yaw || 0 };
-      channel.send({ type: "broadcast", event: "pos", payload: { c: mijnClient, x: +pos.x.toFixed(2), z: +pos.z.toFixed(2), yaw: +(pos.yaw || 0).toFixed(2), m: pos.m ? 1 : 0 } });
+      channel.send({ type: "broadcast", event: "pos", payload });
       return true;
     },
-    unsub() { try { supabase.removeChannel(channel); } catch { /* */ } },
+    relayActief() { return relayOk; },
+    unsub() { gesloten = true; clearTimeout(relayTimer); try { relay?.close(); } catch { /* */ } try { supabase.removeChannel(channel); } catch { /* */ } },
   };
 }

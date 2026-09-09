@@ -40,6 +40,7 @@ export const PAGE_TO_PATH = {
   // Leesladder — printbaar begrijpend-lezen-pakket dat klein begint (5 zinnen)
   // en opbouwt naar toets-lengte (Mark 2026-07-02, idee via Brian).
   leesladder: "/leesladder",
+  dictee: "/dictee",
   // Print-hub + tafel-werkbladen (Mark 2026-07-02: "maak duidelijk wat printbaar is")
   printen: "/printen",
   tafelbladen: "/tafelbladen",

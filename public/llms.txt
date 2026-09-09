@@ -461,3 +461,6 @@ tafel-werkbladen, een oefenboekje op maat en printbare diploma's — gratis.
 - Web: https://leerkwartier.app
 - Uitgever: Smulsoft
 - E-mail: info@smulsoft.nl
+
+## Dictee oefenen (groep 4-8)
+- https://leerkwartier.app/dictee-oefenen.html — gratis online dictee met voorleesstem: Charley zegt de zin en het woord, het kind typt het woord in het gat; bij een fout meteen de spellingregel. Start: https://leerkwartier.app/dictee

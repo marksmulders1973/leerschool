@@ -1,0 +1,13 @@
+{
+  "name": "park-relay",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Leerkwartier park-relay: doorgeefstation voor live posities in gedeelde parken (Cloudflare Worker + Durable Object)",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^4.30.0"
+  }
+}
