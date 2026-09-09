@@ -636,7 +636,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               {/* Overzichts-snoei 12 aug (Mark: "home overzichtelijk"): de
                   tweede regel ("ook ná 2026…") weg — dat verhaal staat op
                   Wat kost het?; één rustige vertrouwensregel is genoeg. */}
-              ✓ Geen account nodig &nbsp;·&nbsp; ✓ In 2026 helemaal gratis &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
+              ✓ Geen account nodig &nbsp;·&nbsp; ✓ De basis blijft gratis, gegarandeerd t/m 2031 &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
             </div>
           </div>
         )}
@@ -1326,6 +1326,8 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               {[
                 { emoji: "🎓", titel: "Oefenen met uitleg", sub: "op 3 niveaus, tot je kind het snapt", klik: () => { track("home_strip_klik", { item: "oefenen" }); handleFeatureClick("cito"); } },
                 { emoji: "🖨️", titel: "6 gratis printbare pakketten", sub: "werkboek · Leesladder · tafels · sommen · dictees · brugklas", klik: () => { track("home_strip_klik", { item: "printen" }); handlePrintenClick(); } },
+                // Mark 9 sep 2026: eigen blok voor het dictee met Charley (breed, derde rij).
+                { emoji: "✍️", titel: "Dictee met Charley", sub: "hij zegt de zin, je kind typt het woord · groep 4 t/m 8", breed: true, klik: () => { track("home_strip_klik", { item: "dictee" }); try { window.location.assign("/dictee"); } catch { /* */ } } },
                 // WhatsApp 13 aug 18:57: dagvraag- en park-kaart weg van home
                 // ("dat park vinden ze wel; de dagvraag wil ik niet op home").
               ].map((it, i) => {
@@ -1340,6 +1342,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.14)",
                   borderRadius: 14, padding: "12px 12px", textAlign: "center", color: "#fff",
                 };
+                if (it.breed) stijl.gridColumn = "1 / -1";
                 return it.klik ? (
                   <button key={i} onClick={it.klik} style={{ ...stijl, cursor: "pointer" }}>{inhoud}</button>
                 ) : (

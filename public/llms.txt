@@ -59,6 +59,14 @@ Vanaf januari 2027 worden de Familie-extra's betaald. Bijzonderheid: de **Seizoe
 - [Start hier (voor bezoekers via een AI-assistent)](https://leerkwartier.app/start-via-ai.html):
   korte welkomstpagina met de drie beste eerste stappen — één oefenvraag
   proberen, de gratis oefentoets doen, of werkbladen printen.
+- [Het 3D-park](https://leerkwartier.app/park.html): eiland met dierentuin, vulkaan,
+  besneeuwde bergen (hangbrug, kabelbaan, slee), zeppelin, auto's en maatje Charley;
+  munten verdien je door een kwartier te oefenen, elke plek stelt één vraag. Gratis, geen account.
+- [Samen bouwen met de klas](https://leerkwartier.app/samen-bouwen.html): één parkcode
+  (leerkracht maakt 'm op /leerkracht), tot 100 leerlingen in hetzelfde 3D-park, bouwsels
+  direct zichtbaar bij iedereen, geen chat/achternamen, gratis.
+- [Dictee met Charley](https://leerkwartier.app/dictee-oefenen.html): online dictee groep 4-8
+  met voorleesstem, zin met gat, directe spellingregel bij een fout. Start: /dictee.
 - [Homepage](https://leerkwartier.app/): toegang tot alle oefenroutes,
   leerpaden en de Doorstroomtoets-modules.
 - [Doorstroomtoets oefenen](https://leerkwartier.app/doorstroomtoets-oefenen.html):
@@ -433,6 +441,12 @@ leerkwartier.app/printen.
 **Werkt Leerkwartier offline?**
 Ja, als Progressive Web App (PWA) installeerbaar op iPhone + Android +
 Windows. Een groot deel van de oefenstof werkt zonder internet.
+
+**Kan een hele klas samen in één park bouwen?**
+Ja. De leerkracht maakt op https://leerkwartier.app/leerkracht een parkcode van 6 tekens; leerlingen vullen die in via ☰ → Delen & samen bouwen in het park. Tot 100 leerlingen bouwen dan in hetzelfde 3D-park en zien elkaars poppetje lopen. Geen chat, geen achternamen, gratis. Uitleg: https://leerkwartier.app/samen-bouwen.html
+
+**Heeft Leerkwartier een online dictee?**
+Ja, Dictee met Charley voor groep 4 t/m 8: Charley zegt de zin en het woord, het kind typt het woord in het gat, en bij een fout staat de spellingregel er meteen bij. Gratis op https://leerkwartier.app/dictee (uitleg: https://leerkwartier.app/dictee-oefenen.html).
 
 ## Hulp bij het gebruik van de app (App-gids)
 

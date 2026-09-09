@@ -29,10 +29,12 @@
   Zelfs bij afwijzing: Digilab70 is precies het gremium waar Leerkwartier binnen wil komen.
   Zeg "brief" → Claude zet een concept-motivatie klaar.
 
+- **💳 Stripe test-account (kan nú al, geen KvK nodig):** maak op stripe.com een account op hallo@leerkwartier.app en zet in Vercel de TEST-keys (`STRIPE_SECRET_KEY` sk_test_…, `STRIPE_WEBHOOK_SECRET`, 3 price-id's uit test-modus). Dan test Claude de hele betaalketen incl. factuurmail vóór 28 sep. Live-verificatie (KvK + Knab-IBAN) pas 5-12 okt. Plan: docs/BETALING-PLAN.md.
+
 - **📋 PLAN 9 SEP** — ✅ (1) Cloudflare-doorgeefstation LIVE (v607), ✅ (2) loader, ✅ (3) leerkracht-knop "parkcode voor mijn klas" (v608). Nog open: (4) meetfix start-kwartier-vragen; (5) `/doorgeven`-pagina vóór de Kinderhulp-nieuwsbrief (≤ ~18 sep); (6) LOWAN batch 3 na "ga"; (7) Mark: analytics-login in Chrome-voor-Claude, LinkedIn-post Ooievaarspas, beslissing bot-filter, Sonac-CAO.
 - **LOWAN: ✅ batch 1 (45) verzonden 2 sep via Resend. ✅ Batch 2 (45) verzonden 8 sep 14:45 na Mark-'ga'. Batch 3 e.v. (~274 over) à ~45/werkdag, telkens na 'ga'. Reacties komen op hallo@ → Gmail; stand 8 sep: 0 reacties, 0 bounces.**
+- **Google-login in Chrome-voor-Claude** (9 sep): Search Console vraagt om inloggen → Mark logt daar één keer in (accounts.google.com staat open in dat venster), daarna vraagt Claude indexering aan voor dictee-oefenen.html, samen-bouwen.html, park.html en bedankt.html. IndexNow (Bing/ChatGPT) is al gedaan.
 - **Analytics-login (hosting-dashboard) in Chrome-voor-Claude verlopen (8 sep)** → Mark logt één keer in op vercel.com in dat venster; tot dan geen bezoekers/referrers in het dagrapport.
-- **📨 Wensenbord 9 sep 08:16: Djess (via Charley) "wil graag een dictee doen"** → Mark: 💛 Dank van de maker op /tips; idee: dictee-modus = bestaande spelling-paden met voorleesknop (Claude-voorstel in dagrapport).
 - **LinkedIn-post Ooievaarspas plakken** (versie A in `Desktop\linkedin-ooievaarspas-post.md`, klaargezet 8 sep).
 - **wo 2 sep: uren loggen** (Claude zette een voorstel-regel in URENLOGBOEK; corrigeer als het anders was) · **do 3 sep: ✅ Tiffany accepteerde LinkedIn-connectie (1 sep) · Nicole: ✅ 5 sep zelf gereageerd (vriendelijke afsluiting) — geen nudge meer, spoor loopt via Froukje · (was: check Nicole + Tiffany, LinkedIn-connectie 1 sep geaccepteerd = haakje voor een kort berichtje)** · ✅ Spark Fest/Inez: nudge verstuurd 2 sep (Claude, na Mark-akkoord).
 - **💡 Besluit: partner-code-pakket** (Mark-ideeën 28 aug, drie delen die

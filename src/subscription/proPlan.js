@@ -158,6 +158,17 @@ export const PRO_FEATURES = {
       "weekplan van kwartiertjes en houden bij hoe het gaat.",
     status: "binnenkort",
   },
+  "dictee-school": {
+    id: "dictee-school",
+    icon: "📋",
+    label: "Dictee met de woorden van school",
+    laag: "familie",
+    blurb:
+      "Plak de dicteewoorden van deze week erin (uit Parro, de mail of het " +
+      "papiertje). Charley leest ze voor en je kind oefent precies wat vrijdag " +
+      "op school komt. (Het dictee met onze eigen woorden blijft gratis.)",
+    status: "live",
+  },
   // ── Gate-only ids (config.js FEATURE_GATES) — entries hier zorgen dat de
   //    LockedPreview straks de júiste laag-kleur toont (9 aug id-sync). ──
   "unlimited-paths": {

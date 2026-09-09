@@ -1,6 +1,7 @@
 import { useState, useEffect, useMemo } from "react";
 import supabase from "../../supabase";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
+import { zoekSnelkoppelingen } from "./snelkoppelingen.js";
 import { CURRICULA, curriculumTotalSteps } from "../../curricula";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { TEXTBOOKS } from "../../data/textbooks.js";
@@ -789,6 +790,18 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
               {hasNiveau && ` · ${NIVEAU_BUCKETS[niveauFilter].label}`}
               {hasSearch && ` · "${entrySearch}"`}
             </div>
+            {/* 🔎 Losse pagina's (dictee, park, game, toetsen, printbladen…) — Mark 9 sep 2026: "maak alles vindbaar" */}
+            {hasSearch && zoekSnelkoppelingen(entrySearch).map((s) => (
+              <button key={s.id} onClick={() => { try { window.location.assign(s.pad); } catch { /* */ } }}
+                style={{ width: "100%", textAlign: "left", cursor: "pointer", display: "flex", alignItems: "center", gap: 12, background: "rgba(255,213,79,0.12)", border: "1px solid rgba(255,213,79,0.6)", borderRadius: 12, padding: "10px 14px", marginBottom: 10, color: "inherit" }}>
+                <span style={{ fontSize: 24 }}>{s.emoji}</span>
+                <span style={{ flex: 1, minWidth: 0 }}>
+                  <span style={{ display: "block", fontWeight: 800 }}>{s.label}</span>
+                  <span style={{ display: "block", fontSize: 12, opacity: .8 }}>{s.uitleg}</span>
+                </span>
+                <span style={{ fontWeight: 800 }}>→</span>
+              </button>
+            ))}
             {hiddenOtherLevel > 0 && (
               <button
                 onClick={() => setShowAllLevels(true)}

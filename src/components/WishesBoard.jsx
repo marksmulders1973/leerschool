@@ -26,22 +26,22 @@ function bevatScheldwoord(tekst) {
 // kan zo direct naar de nieuwe feature linken, zodat melders zien dat hun tip
 // echt is opgepakt). Splitst de tekst op URL's en rendert die als <a>.
 function Linkify({ text }) {
-  const parts = String(text || "").split(/(https?:\/\/[^\s]+)/g);
-  return parts.map((part, i) =>
-    /^https?:\/\//.test(part) ? (
-      <a
-        key={i}
-        href={part}
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{ color: "#69f0ae", textDecoration: "underline", wordBreak: "break-all" }}
-      >
-        {part}
-      </a>
-    ) : (
-      part
-    )
-  );
+  // Mark 9 sep 2026: ook kale adressen zoals leerkwartier.app/dictee klikbaar (niet alleen http://).
+  // Leestekens aan het eind (punt, komma) horen niet bij de link.
+  const parts = String(text || "").split(/(https?:\/\/[^\s]+|(?:www\.)?leerkwartier\.app(?:\/[^\s]*)?)/g);
+  return parts.map((part, i) => {
+    const isLink = /^https?:\/\//.test(part) || /^(?:www\.)?leerkwartier\.app/.test(part);
+    if (!isLink) return part;
+    const m = part.match(/^(.*?)([.,;:!?)]*)$/);
+    const kern = m ? m[1] : part, staart = m ? m[2] : "";
+    const href = /^https?:\/\//.test(kern) ? kern : `https://${kern.replace(/^www\./, "")}`;
+    const eigen = /leerkwartier\.app/.test(href);
+    return (
+      <span key={i}>
+        <a href={href} target={eigen ? "_self" : "_blank"} rel={eigen ? undefined : "noopener noreferrer"} style={{ color: "#69f0ae", textDecoration: "underline", wordBreak: "break-all" }}>{kern}</a>{staart}
+      </span>
+    );
+  });
 }
 
 const VOORBEELDEN = [

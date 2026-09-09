@@ -14,6 +14,7 @@ import Kabelbaan, { KABEL_DAL, KABEL_BERG } from "./Kabelbaan";
 import Sleebaan, { SLEE_START } from "./Sleebaan";
 import Autos, { AUTO_PLEK } from "./Autos";
 import MedeSpelers from "./MedeSpelers";
+import ImposterGame from "./game/ImposterGame";
 import { ParkBase, LosDier, Player, Carousel, FerrisWheel, SwingRide, Coaster, TrainRide, PathTile, Visitors, HillMound, PatatKraam, DrankKraam, IJsKraam, PopcornKraam, FencePanel, FenceGate, FenceCorner, EntranceGate, Rock, Bench, TrashCan, DonationBox, Bush, Fern, Stump, Tree, DayNight, CameraFollow, FirstPersonCamera, SpringArmCamera, BuddyEyeCamera, AttractieCamera, RailTile, Station, RouteTrain, RideCamera, SkyClouds, Zeppelins, ZeppelinRomp, useZeppelinDoek, Balloons, GeinstanceerdeParkProps, PropHitbox } from "./ParkProps";
 import { track } from "../../utils.js";
 import ZooModel from "./ZooModel";
@@ -1363,7 +1364,7 @@ function SnackInHand({ playerPos, playerFace, snack, verborgen, onOp }) {
   );
 }
 
-export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null, draagSnack = null, onSnackOp = null, onZeppelinRit = null, hierRef = null, posRefOut = null, faceRefOut = null, peersRef = null }) {
+export default function ZooScene({ wandelToon = null, wandelDoel = null, onWandelBereikt = null, placingAsset = null, placingRot = 0, placedItems = [], onPlace, onPlaceBlok, onHakBlok, bouwCursorRef, bouwModus = false, rideIdx = null, zweef = false, onSelectPlaced, onClearSelection, onBuy, kramen = {}, onPickPart, onHouseParts, paintCursor = null, colorEditIdx = -1, followCam = false, terrain = null, onTerrainChange, sculptMode = false, sculptDir = 1, selectedIdx = null, moveIdx = -1, inputRef = null, parkNaam = "Mijn Park", waterMode = false, waterSeeds = [], onWater, ground = {}, groundMode = false, onGround, avatarUrl, firstPerson = false, spelerNaam = "", zwakVak = "", goedeScore = null, onTapBezoeker, rideTrain = false, buddyId = "", buddyGroei = 0, buddyNaam = "", onBuddyPraat, buddyEye = false, onTafereel, onLeermoment, onGidsMoment, spawn = null, onContextLost, onMaat, onOefenen, onNearPiramide, onPoortDoor, studiePiramideIdx = null, leerStappenPerPad = {}, dinoHint = null, climbRef = null, draagSnack = null, onSnackOp = null, onZeppelinRit = null, hierRef = null, posRefOut = null, faceRefOut = null, peersRef = null, gameModus = false, gameGroep = "6", gameKey = 0, onGameKlaar = null, onGameStop = null, gameNet = null, gameHost = true }) {
   const [ghost, setGhost] = useState(null);
   const [zeppelinRit, setZeppelinRit] = useState(false); // 🛩️ aan boord van de instap-zeppelin
   const [bergRit, setBergRit] = useState(false);         // 🚠🛷 aan boord van kabelbaan of slee (6 sep)
@@ -1859,6 +1860,8 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <Autos playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} inputRef={inputRef} teleportRef={teleportRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
         {/* 👥 medespelers in een gedeeld park (posities via Realtime, zie parkRoom.js) */}
         {peersRef ? <MedeSpelers peersRef={peersRef} heightRef={heightFnRef} /> : null}
+        {/* 🎮 Game-modus: Wie is de imposter? (Mark 9 sep) — bots, taakposten en HUD in de scène */}
+        {gameModus ? <ImposterGame key={gameKey} playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} teleportRef={teleportRef} spelerNaam={spelerNaam} avatarUrl={avatarUrl} level={gameGroep} onKlaar={onGameKlaar} onStop={onGameStop} net={gameNet} host={gameHost} onRit={(v) => { setZeppelinRit(v); if (onZeppelinRit) onZeppelinRit(v); }} /> : null}
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
         {/* Samenhang-plan 2 sep 2026: gids en poorten óók aan in bouw-modus —

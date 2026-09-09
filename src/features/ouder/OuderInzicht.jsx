@@ -683,7 +683,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
               <ul style={{ listStyle: "none", padding: 0, margin: 0, fontSize: 13, lineHeight: 1.8, color: "rgba(255,255,255,0.85)" }}>
                 <li>🔑 Koppel je kind met één korte code</li>
                 <li>📊 Voortgang in één oogopslag</li>
-                <li>🆓 In 2026 helemaal gratis · daarna basis-functies vrij</li>
+                <li>🆓 De basis blijft gratis, gegarandeerd t/m 2031 · extra’s later in Familie</li>
                 <li>🔒 Geen reclame, AVG-veilig</li>
                 <li>📵 Werkt ook offline (PWA)</li>
               </ul>

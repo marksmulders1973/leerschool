@@ -1,4 +1,6 @@
+import { useState } from "react";
 import { track } from "../utils.js";
+import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.js";
 
 // Bottom-tabs nav (Duolingo-style). Maand 1 snoei (visie-bewaker 2026-05-10):
@@ -31,15 +33,27 @@ function maakTabs(isTeacher) {
     { id: "leren",       label: "Leren", emoji: "📚", target: "learn-paths-hub" },
     isTeacher
       ? { id: "toets-maken", label: "Toets maken", emoji: "📝", target: "teacher-home" }
-      : { id: "toets-maken", label: "Toets",       emoji: "📝", target: "cito" },
+      : { id: "toets-maken", label: "Toets",       emoji: "📝", iconNode: <DoorstroomtoetsLogo size={24} />, target: "cito" },
     // 2026-05-17 review: gameRelated:true zodat tab verbergt voor anon-bezoeker
     // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
     // 2026-07-25: parkKeuze-keuzescherm weg — OBLITERATOR is easter egg, tab gaat direct naar het park.
     { id: "park",        label: "Park",  emoji: "🐾", target: "zoo", gameRelated: true },
-    // Mark wens 2026-06-05: "Tip aan de maker" als vaste ingang in de bottom-nav.
-    { id: "tips",        label: "Tips",  emoji: "💬", target: "wishes" },
+    // Mark 9 sep 2026: "kan daarbij printbaar en dictee?" — vijf knoppen is het
+    // maximum op een telefoon, dus de vijfde is "Meer": een paneel met Dictee,
+    // Printbaar, Tips (het wensenbord, sinds 5 jun een vaste ingang), Thuis,
+    // Leerkracht en Zoeken. Tips blijft zo één tik verder bereikbaar.
+    { id: "meer",        label: "Meer",  emoji: "➕", target: "_meer" },
   ];
 }
+
+const MEER_TEGELS = [
+  { id: "dictee",     label: "Dictee",     emoji: "✍️", sub: "Charley zegt de zin, jij typt het woord", target: "dictee" },
+  { id: "printen",    label: "Printbaar",  emoji: "🖨️", sub: "werkbladen, tafels, dictees, leesladder", target: "printen" },
+  { id: "tips",       label: "Tips",       emoji: "💬", sub: "wens of tip voor de maker", target: "wishes" },
+  { id: "ouder",      label: "Thuis",      emoji: "👪", sub: "voor ouder of verzorger", target: "ouder-dashboard" },
+  { id: "leerkracht", label: "Leerkracht", emoji: "🧑‍🏫", sub: "klas, toets maken, parkcode", target: "teacher-home" },
+  { id: "zoeken",     label: "Zoeken",     emoji: "🔎", sub: "vind een onderwerp of pagina", target: "learn-paths-hub" },
+];
 
 function bepaalActieveTab(page) {
   // student-home telt NIET als "Home" (Mark 7 aug 2026): de Home-tab lichtte
@@ -49,12 +63,19 @@ function bepaalActieveTab(page) {
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview" || page === "cito") return "toets-maken";
   if (page === "zoo" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
-  if (page === "wishes") return "tips";
+  if (["wishes", "dictee", "printen", "tafelbladen", "redactiebladen", "dictees", "ouder-dashboard"].includes(page)) return "meer";
   return null;
 }
 
 export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
   const actief = bepaalActieveTab(currentPage);
+  const [meerOpen, setMeerOpen] = useState(false);
+  const kies = (tab) => {
+    track("bottomnav_click", { tab: tab.id });
+    if (tab.target === "_meer") { setMeerOpen((v) => !v); return; }
+    setMeerOpen(false);
+    onNavigate(tab.target);
+  };
   // Rol-bewuste tabs: alleen leerkracht ziet "Toets maken" (→ teacher-home).
   const isTeacher = role === "teacher" || role === "leerkracht";
   const ALL_TABS = maakTabs(isTeacher);
@@ -62,6 +83,23 @@ export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
   const gameZichtbaar = gameVisibleForUser(authUser, urlHasGameDeepLink());
   const TABS = gameZichtbaar ? ALL_TABS : ALL_TABS.filter((t) => !t.gameRelated);
   return (
+    <>
+    {meerOpen && (
+      <div onClick={() => setMeerOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 99, background: "rgba(0,0,0,.45)" }}>
+        <div onClick={(e) => e.stopPropagation()} className="app-shell" style={{ position: "absolute", left: 0, right: 0, bottom: "calc(var(--bottom-nav-height) + env(safe-area-inset-bottom))", margin: "0 auto", background: "rgba(11, 18, 36, 0.97)", borderTop: "1px solid var(--color-border-soft)", borderRadius: "18px 18px 0 0", padding: "14px 14px 16px", boxShadow: "0 -8px 24px rgba(0,0,0,.4)" }}>
+          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
+            {MEER_TEGELS.map((t) => (
+              <button key={t.id} type="button" onClick={() => { track("bottomnav_meer", { tegel: t.id }); setMeerOpen(false); onNavigate(t.target); }}
+                style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.06)", borderRadius: 14, padding: "12px 6px 10px", color: "#fff", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 4, minHeight: 84 }}>
+                <span aria-hidden="true" style={{ fontSize: 26, lineHeight: 1 }}>{t.emoji}</span>
+                <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800 }}>{t.label}</span>
+                <span style={{ fontFamily: "var(--font-body)", fontSize: 10.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.25, textAlign: "center" }}>{t.sub}</span>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
+    )}
     <nav
       aria-label="Hoofdnavigatie"
       style={{
@@ -93,7 +131,7 @@ export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
               key={tab.id}
               type="button"
               aria-current={isActief ? "page" : undefined}
-              onClick={() => { track("bottomnav_click", { tab: tab.id }); onNavigate(tab.target); }}
+              onClick={() => kies(tab)}
               style={{
                 flex: 1,
                 minWidth: 0,
@@ -150,5 +188,6 @@ export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
         })}
       </div>
     </nav>
+    </>
   );
 }

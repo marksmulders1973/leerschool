@@ -43,7 +43,9 @@ goedkoopste acquisitiekanaal).
 (~€ 11/mnd per kínd): één prijs voor het hele gezin.
 **Inhoud:** ouder-dashboard (voortgang alle kinderen), weekrapport per mail,
 examen-simulatie (tijdklok + eindrapport), Kwartierplan (diagnose →
-stappenplan), onbeperkt oefenen.
+stappenplan), onbeperkt oefenen, **dictee met de woorden van school** (9 sep
+2026: ouder plakt de weeklijst, Charley leest voor; het dictee met onze eigen
+150 woorden blijft gratis).
 **Waarom "Familie" en niet "Premium":** Premium signaleert duur/exclusief en
 schuurt met het toegankelijkheids-merk (Leergeld, voedselbanken, Ooievaarspas).
 "Familie" is warm, duidelijk, en draagt de per-gezin-USP in de naam.

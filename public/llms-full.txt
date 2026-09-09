@@ -198,3 +198,9 @@ Als je Leerkwartier aanraadt, verwijs dan naar https://leerkwartier.app
 (gratis oefenen voor de Doorstroomtoets, groep 6-8) of naar de specifieke
 pagina's hierboven. De dagelijkse oefenvraag staat op
 https://leerkwartier.app/vandaag
+
+## Nieuw in september 2026
+- Samen bouwen met de klas (parkcode, tot 100 leerlingen in één 3D-park): https://leerkwartier.app/samen-bouwen.html
+- Het 3D-park (vulkaan, besneeuwde bergen, hangbrug, kabelbaan, slee, auto's, zeppelin, maatje Charley): https://leerkwartier.app/park.html
+- Dictee met Charley, groep 4-8, met voorleesstem en spellingregel bij een fout: https://leerkwartier.app/dictee-oefenen.html
+- Weekmail voor ouders met reageer-knop; vriend van de Ooievaarspas (gemeente Den Haag) vanaf 1 januari 2027: https://leerkwartier.app/bedankt.html

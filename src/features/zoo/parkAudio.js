@@ -72,7 +72,7 @@ function startWind() {
 /* ---------- laag 2: vogels ---------- */
 function zingVogel() {
   const ctx = S.ctx;
-  if (!ctx || S.stil || S.vogelsStil) return;
+  if (!ctx || S.stil || S.vogelsStil || true) return; // vogels uit (Mark 9 sep 2026)
   const t0 = ctx.currentTime + 0.05;
   const n = 2 + Math.floor(Math.random() * 3); // 2-4 piepjes
   const p = pan(ctx, (Math.random() * 2 - 1) * 0.8); // hele burst uit één hoek
@@ -95,10 +95,10 @@ function zingVogel() {
   }
 }
 function planVogel() {
-  // de wachttijd (≥25 s) is meteen de minimum-stilte tussen twee vogels
-  // (was 10-25 s — te vaak, Mark 27 aug)
-  const wacht = 25000 + Math.random() * 25000;
-  S.vogelTimer = setTimeout(() => { zingVogel(); planVogel(); }, wacht);
+  // 🚫 Vogels UIT (Mark 9 sep 2026: "je hoort het park steeds tussendoor, dat
+  // vogelgeluid moet eruit"). Eerder al zachter en zeldzamer (27 aug), nu weg.
+  // De functie blijft bestaan zodat start/stop niets hoeft te weten.
+  S.vogelTimer = null;
 }
 
 // Vogels tijdelijk stil (bv. tijdens het arena-gevecht — dan wil je klangs en

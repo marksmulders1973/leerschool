@@ -34,10 +34,40 @@
   <div class="kader"><b>Zo werkt het</b><br>1. Kies je groep (4 t/m 8).<br>2. Luister: "Wij lopen naar het park. Schrijf op het woord: park."<br>3. Typ het woord in het gat en tik op Controleer.<br>4. Goed = groen. Fout = het goede woord met de regel: "je hoort een t, je schrijft een d: hon-den".</div>
   <h2>Wat oefent je kind per groep?</h2>
   <p><b>Groep 4:</b> d of t, ei/ij, au/ou, dubbele medeklinker · <b>Groep 5:</b> open en gesloten lettergreep, -ng/-nk, sch, -ig/-lijk · <b>Groep 6:</b> meervoud, -isch, verkleinwoorden, leenwoorden · <b>Groep 7:</b> werkwoorden in de tegenwoordige tijd, tussen-n, apostrof · <b>Groep 8:</b> verleden tijd, voltooid deelwoord, 't kofschip, hoofdletters.</p>
+  <h2>De dicteewoorden van school oefenen</h2>
+  <p>Krijgt je kind elke week een woordenlijst mee (via Parro, Social Schools, de mail of een papiertje)? Plak of typ die woorden in het dictee onder <b>Woorden van school</b>. Charley leest ze voor en je kind oefent precies de woorden die vrijdag op school komen. Bij een fout spelt Charley het woord. De lijst blijft op je apparaat bewaard tot je een nieuwe invoert. Dit hoort straks bij het Familie-pakket en is nu gratis.</p>
   <h2>Versta je de stem niet goed?</h2>
   <p>De zin staat op het scherm, dus alleen het ene woord telt. Tik op 🔊 om het woord nog eens te horen. Werkt de stem niet op jouw apparaat, dan wordt het een lees-dictee: de zin verschijnt even, verdwijnt, en dan typ je het woord.</p>
+  <div class="kader" id="dictee-mail">
+    <b>📬 Elke maandag het dictee-resultaat van je kind in je mail?</b><br>
+    <span style="opacity:.85">Het gratis weekrapport voor thuis: welke woorden goed gingen, welke regel nog oefenen vraagt. Geen reclame, uitschrijven kan altijd.</span>
+    <form id="dictee-form" style="display:flex;gap:8px;flex-wrap:wrap;margin-top:10px">
+      <input name="email" type="email" required placeholder="e-mail van ouder of verzorger" style="flex:1 1 200px;padding:11px 12px;border-radius:10px;border:1px solid rgba(255,255,255,.25);background:#fff;color:#1c2840;font-size:15px">
+      <button type="submit" style="padding:11px 16px;border-radius:10px;border:none;background:linear-gradient(135deg,#2e9e4f,#1f7a3a);color:#fff;font-weight:800;font-size:15px;cursor:pointer">Ja, graag</button>
+    </form>
+    <div id="dictee-msg" style="margin-top:6px;font-size:13px;opacity:.9"></div>
+  </div>
   <p>De score telt mee in het gratis <a href="/ouder">weekrapport voor thuis</a>. Meer oefenen? Kijk bij <a href="/">Doorstroomtoets oefenen</a> of de <a href="/leesladder">Leesladder</a>.</p>
   <div class="voet">Leerkwartier is gemaakt door één vader, gratis, zonder reclame en zonder doorverkoop van gegevens. Het dictee kwam er op verzoek van een kind via het wensenbord in het park.</div>
 </div>
+<script>
+  // E-mailhaakje (Mark 18 jun 2026: elke reclame vraagt om e-mail). Zelfde REST-route als abonnement.html.
+  document.getElementById("dictee-form").addEventListener("submit", async function (e) {
+    e.preventDefault();
+    var form = e.target, msg = document.getElementById("dictee-msg");
+    var email = form.email.value.trim();
+    if (!email.includes("@")) { msg.textContent = "Vul een geldig e-mailadres in."; return; }
+    msg.textContent = "Even bezig…";
+    try {
+      var resp = await fetch("https://uxqnzrymyjbcpuzqktdm.supabase.co/rest/v1/upgrade_waitlist", {
+        method: "POST",
+        headers: { "apikey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4cW56cnlteWpiY3B1enFrdGRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzODAyNTMsImV4cCI6MjA5MDk1NjI1M30._7eQMG3QV4lqOn_M02hFjsRQ3JfH0xAn5ylNTmBKEP8", "Content-Type": "application/json", "Prefer": "return=minimal" },
+        body: JSON.stringify({ email: email, plan: "dictee", source: "dictee-landing", consent_at: new Date().toISOString() })
+      });
+      if (resp.ok) { msg.textContent = "✓ Gelukt! Het eerste rapport komt maandag."; form.reset(); }
+      else { msg.textContent = "Ging niet door — probeer het later nog eens."; }
+    } catch (err) { msg.textContent = "Ging niet door — probeer het later nog eens."; }
+  });
+</script>
 </body>
 </html>
