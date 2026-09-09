@@ -244,6 +244,7 @@ export default function MijnPagina({
   onVak,
   onGoLeren,
   onGoCito,
+  onDictee,
   onGoVoortgang,
   onOuderDashboard,
   onHernoem,
@@ -443,6 +444,7 @@ export default function MijnPagina({
     return [
       onGoLeren && { emoji: "🚀", label: "Ga oefenen", doe: onGoLeren },
       onGoCito && { emoji: "🎯", label: "Oefen in doorstroomtoets-stijl", doe: () => onGoCito() },
+      onDictee && { emoji: "✍️", label: "Dictee met Charley", doe: () => onDictee() },
       onGoVoortgang && { emoji: "📊", label: "Bekijk je eigen voortgang", doe: onGoVoortgang },
     ].filter(Boolean);
   })();
