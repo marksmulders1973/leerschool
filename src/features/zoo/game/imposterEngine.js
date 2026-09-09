@@ -46,10 +46,15 @@ export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, sp
   }
   const nImp = Math.max(1, Math.min(nImposters || (spelers.length >= 8 ? 2 : 1), Math.floor((spelers.length - 1) / 2)));
   const ids = spelers.map((s) => s.id);
+  const botIds = new Set(spelers.filter((s) => s.bot).map((s) => s.id));
+  // Mark 9 sep 2026: echte spelers gaan vóór bots bij het kiezen van de imposter(s);
+  // bots worden pas imposter als er niet genoeg echte spelers zijn.
+  const schud = (a) => a.slice().sort(() => Math.random() - 0.5);
+  const echtEerst = (kandidaten) => [...schud(kandidaten.filter((i) => !botIds.has(i))), ...schud(kandidaten.filter((i) => botIds.has(i)))];
   let imposters;
-  if (spelerRolKeuze === "imposter") imposters = [spelerId, ...ids.filter((i) => i !== spelerId).sort(() => Math.random() - 0.5).slice(0, nImp - 1)];
-  else if (spelerRolKeuze === "bouwer") imposters = ids.filter((i) => i !== spelerId).sort(() => Math.random() - 0.5).slice(0, nImp);
-  else imposters = ids.slice().sort(() => Math.random() - 0.5).slice(0, nImp);
+  if (spelerRolKeuze === "imposter") imposters = [spelerId, ...echtEerst(ids.filter((i) => i !== spelerId)).slice(0, nImp - 1)];
+  else if (spelerRolKeuze === "bouwer") imposters = echtEerst(ids.filter((i) => i !== spelerId)).slice(0, nImp);
+  else imposters = echtEerst(ids).slice(0, nImp);
   for (const s of spelers) {
     s.rol = imposters.includes(s.id) ? "imposter" : "bouwer";
     s.bevroren = 0; s.uitgestemd = false; s.taken = 0; s.punten = 0; s.tiks = 0;
