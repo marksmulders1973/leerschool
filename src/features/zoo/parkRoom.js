@@ -105,6 +105,13 @@ export async function haalParkRoom(code) {
   if (error) throw error;
   return Array.isArray(data) ? data[0] || null : data || null;
 }
+/** parkcodes die deze gebruiker aanmaakte (leerkracht-pagina) — RLS: select staat open, code = sleutel */
+export async function mijnParkRooms(uid) {
+  if (!uid) return [];
+  const { data, error } = await supabase.from("park_rooms").select("code,naam,created_at").eq("eigenaar", uid).order("created_at", { ascending: false }).limit(20);
+  if (error) throw error;
+  return data || [];
+}
 export async function stuurOps(code, ops) {
   if (!ops || !ops.length) return { id: null, rejected: [] };
   const { data, error } = await supabase.rpc("park_room_apply", { p_code: normaliseerCode(code), p_client: clientId(), p_ops: ops });

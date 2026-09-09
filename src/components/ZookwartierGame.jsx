@@ -3612,6 +3612,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           🏫 {room.code} · 👥 {peerCount}
         </button>
       )}
+      {/* 🏫 gedeeld park laden: overlay tot de parkcode binnen is (anders zie je even je eigen startpark) */}
+      {samen && !room && !roomFout && (
+        <div style={{ position: "absolute", inset: 0, zIndex: 25, background: "linear-gradient(180deg,#1b1240,#3b2a7a)", display: "grid", placeItems: "center", color: "#fff", font: "800 18px system-ui", textAlign: "center", padding: 20 }}>
+          <div>
+            <div style={{ fontSize: 46, marginBottom: 10 }}>🏫</div>
+            <div>Gedeeld park laden…</div>
+            <div style={{ font: "600 13px system-ui", opacity: .8, marginTop: 8 }}>Parkcode {normaliseerCode(roomCode)} · even geduld</div>
+          </div>
+        </div>
+      )}
       {roomFout && (
         <div style={{ position: "absolute", inset: 0, zIndex: 30, background: "rgba(10,20,10,0.7)", display: "grid", placeItems: "center", padding: 16 }}>
           <div style={{ width: "min(420px, 94vw)", background: "#fffef8", borderRadius: 18, padding: "20px 22px", boxShadow: "0 12px 40px rgba(0,0,0,.35)", font: "500 15px/1.5 system-ui", color: "#333" }}>

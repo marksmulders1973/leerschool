@@ -8,6 +8,7 @@ import supabase from "../../supabase.js";
 import ProBadge, { GratisBadge } from "../../subscription/ProBadge.jsx";
 import { shuffleOpties } from "../../shared/shuffleOpties.js";
 import LeraarKlaarzet from "./LeraarKlaarzet.jsx";
+import KlasParkcode from "./KlasParkcode.jsx";
 
 export default function TeacherHome({ userName, authUser, onLogin, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onKlaarzetten, onOpenLes, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
@@ -486,6 +487,9 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
             <span style={{ fontWeight: 700 }}>Werkblad printen</span>
           </button>
         )}
+
+        {/* 🏫 Parkcode voor de klas (Mark 9 sep 2026): samen bouwen in één 3D-park, tot 100 leerlingen */}
+        <KlasParkcode authUser={authUser} />
 
         {/* ── QR code sectie ── */}
         <div style={{ marginBottom: 20, padding: "16px", background: "#0d1b2a", borderRadius: 16, border: "1px solid #2a3f5f", textAlign: "center" }}>
