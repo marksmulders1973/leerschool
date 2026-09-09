@@ -22,7 +22,11 @@ const WACHT_MS = 3200;      // zo lang wacht Charley op de eerste letter
 const MAX_HERHAAL = 2;
 const PAD_ID = "dictee-spelling";
 
-const W = { maxWidth: 560, margin: "0 auto", padding: "16px 16px 40px", fontFamily: "system-ui, Segoe UI, sans-serif", color: "#1c2840" };
+// Mark 9 sep 2026: "bij dictee staan de letters in het wit tegen een witte achtergrond" —
+// de pagina erfde kleuren van de app-schil (donker thema / dark mode van de telefoon).
+// Daarom hier alles expliciet: lichte achtergrond, donkere tekst, lichte kleurstelling
+// voor invoervelden (colorScheme light zodat dark mode ze niet zwart maakt).
+const W = { maxWidth: 560, margin: "0 auto", padding: "16px 16px 40px", fontFamily: "system-ui, Segoe UI, sans-serif", color: "#1c2840", background: "#f6f9fc", minHeight: "100vh", colorScheme: "light", boxSizing: "border-box" };
 const KNOP = { border: "none", borderRadius: 999, padding: "12px 20px", font: "800 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" };
 const KNOP2 = { ...KNOP, color: "#1c2840", background: "#eef2f7" };
 
@@ -128,7 +132,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
           <div style={{ fontSize: 44 }}>🐕</div>
           <div><div style={{ font: "900 24px system-ui" }}>Dictee met Charley</div><div style={{ color: "#556", fontSize: 14 }}>Charley zegt een zin en dan één woord. Jij typt dat woord.</div></div>
         </div>
-        <div style={{ background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "12px 0", fontSize: 15, lineHeight: 1.5 }}>
+        <div style={{ background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "12px 0", fontSize: 15, lineHeight: 1.5, color: "#1c2840" }}>
           <b>Zo werkt het:</b> 10 woorden. Je hoort de zin, je ziet de zin met een gat, en je typt het woord dat Charley zegt. Fout? Dan zie je meteen hoe het wél moet, en waarom.
           {!kanSpreken() && <div style={{ marginTop: 8, color: "#7a5a00" }}>Op dit apparaat kan Charley niet praten. Dan wordt het een <b>lees-dictee</b>: de zin verschijnt even mét het woord, verdwijnt, en dan typ je het.</div>}
         </div>
@@ -183,7 +187,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
       </div>
       <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 12 }}>
         <div style={{ fontSize: 40, lineHeight: 1 }}>🐕</div>
-        <div style={{ flex: 1, background: "#fff", border: "2px solid #cde3d6", borderRadius: 16, padding: "12px 14px", fontSize: 15, lineHeight: 1.5 }}>
+        <div style={{ flex: 1, background: "#fff", border: "2px solid #cde3d6", borderRadius: 16, padding: "12px 14px", fontSize: 15, lineHeight: 1.5, color: "#1c2840" }}>
           {status === "luister" && !leesModus && <span>{spreekt ? "🔊 Luister goed…" : "Charley komt eraan…"}</span>}
           {leesModus && toonZin && <span><b>Lees goed:</b> {item.zin}</span>}
           {(status === "typen" || (leesModus && !toonZin && status !== "goed" && status !== "fout")) && <span>Schrijf op het woord dat je hoorde.{hint ? <> Het begint met een <b style={{ fontSize: 18 }}>{item.woord[0]}</b>.</> : null}</span>}
@@ -193,7 +197,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
       </div>
 
       {/* de zin met het gat */}
-      <div style={{ font: "700 22px/1.5 system-ui", background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "6px 0 12px", minHeight: 64 }}>
+      <div style={{ font: "700 22px/1.5 system-ui", background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "6px 0 12px", minHeight: 64, color: "#1c2840" }}>
         {gat.voor}
         {status === "goed" || status === "fout" ? (
           <span style={{ display: "inline-block", borderBottom: "3px solid", borderColor: status === "goed" ? "#146c43" : "#b42318", padding: "0 4px" }}>
@@ -209,7 +213,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
       <form onSubmit={(e) => { e.preventDefault(); controleer(); }} style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
         <input ref={inputRef} value={invoer} onChange={(e) => { setInvoer(e.target.value); clearTimeout(wachtRef.current); }} disabled={status === "goed" || status === "fout" || (status === "luister" && !leesModus)}
           placeholder="typ het woord" autoComplete="off" autoCapitalize="none" spellCheck={false}
-          style={{ flex: "1 1 200px", border: "2px solid #9fb0c6", borderRadius: 12, padding: "12px 14px", font: "800 20px system-ui", color: "#1c2840", minWidth: 0 }} />
+          style={{ flex: "1 1 200px", border: "2px solid #9fb0c6", borderRadius: 12, padding: "12px 14px", font: "800 20px system-ui", color: "#1c2840", background: "#fff", colorScheme: "light", minWidth: 0 }} />
         {status === "goed" || status === "fout" ? (
           <button type="button" onClick={volgende} style={KNOP}>{idx + 1 < items.length ? "Volgende →" : "Klaar →"}</button>
         ) : (
