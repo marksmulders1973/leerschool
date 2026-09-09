@@ -439,6 +439,15 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const [roomFout, setRoomFout] = useState(null);
   const [peerCount, setPeerCount] = useState(1);
   const [relayOk, setRelayOk] = useState(false);   // ☁️ doorgeefstation verbonden → live poppetjes voor iedereen
+  // 🎮 Game-modus (Mark 9 sep 2026): "Wie is de imposter?" — park als speelveld, taken = sommen
+  const [gameModus, setGameModus] = useState(false);
+  const [gameKey, setGameKey] = useState(0);
+  const gameGroep = (() => { try { const u = JSON.parse(localStorage.getItem("ls_user") || "{}"); const m = String(u.level || "").match(/(\d)/); return m ? m[1] : "6"; } catch { return "6"; } })();
+  const onGameKlaar = (sc) => {
+    if (sc?.munten > 0) { setMeta((m) => (m ? { ...m, coins: (m.coins || 0) + sc.munten } : m)); flits(`🎮 ${sc.gewonnen ? "Gewonnen!" : "Goed gespeeld!"} +${sc.munten} 🪙`); }
+    if (sc?.nogEenKeer) { setGameKey((k) => k + 1); return; }
+    setGameModus(false);
+  };
   const [samenCodeInvoer, setSamenCodeInvoer] = useState("");
   const [samenBezig, setSamenBezig] = useState(false);
   const roomConnRef = useRef(null);
@@ -2314,6 +2323,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <MenuTegel emoji="🫧" label="Maatje-weetjes wissen" fn={() => { wisBuddyWeetjes(); setMenuOpen(false); flits("Je maatje is alles weer vergeten — hij stelt zijn vraagjes gewoon opnieuw. 🐾"); }} />
               {onOpenMaatje && <MenuTegel emoji="📱" label="Mijn maatje (altijd bij je)" fn={onOpenMaatje} />}
               <MenuTegel emoji="💾" label="Park opslaan" fn={opslaan} />
+              <MenuTegel emoji="🎮" label="Wie is de imposter?" fn={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); setGameKey((k) => k + 1); setGameModus(true); }} actief={gameModus} />
               <MenuTegel emoji="📤" label={samen ? "Parkcode & meespelers" : "Delen & samen bouwen"} fn={openDelen} />
               {onOpenGalerij && <MenuTegel emoji="🌍" label="Park-galerij bekijken" fn={onOpenGalerij} />}
               <MenuTegel emoji="♻️" label="Opnieuw beginnen" fn={() => setPanel("reset")} />
@@ -2507,6 +2517,11 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           posRefOut={spelerPosRef}
           faceRefOut={spelerFaceRef}
           peersRef={samen ? peersRef : null}
+          gameModus={gameModus}
+          gameGroep={gameGroep}
+          gameKey={gameKey}
+          onGameKlaar={onGameKlaar}
+          onGameStop={() => setGameModus(false)}
           studiePiramideIdx={pyrIdx}
           leerStappenPerPad={leerStappenPerPad}
           dinoHint={dinoHint}
