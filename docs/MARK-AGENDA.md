@@ -18,6 +18,8 @@
 
 ## 🔴 Nu doen (deze week)
 
+- **📋 PLAN 10 SEP** (Claude uit zichzelf): dagrapport met dictee-/game-/betaal-blokken · FB-bio bijwerken · meetfix start-kwartier · concept /doorgeven · welkompagina mobiel. **Mark:** "ga" LOWAN 3 · dashboard-login · game op 2 telefoons · "pagina's"/"alles" (game aankondigen) · LinkedIn Ooievaarspas + dictee · Stripe test-account · offline uren wk 37.
+
 - **💳 Stripe test-account (kan nú al, geen KvK nodig):** maak op stripe.com een account op hallo@leerkwartier.app en zet in Vercel de TEST-keys (`STRIPE_SECRET_KEY` sk_test_…, `STRIPE_WEBHOOK_SECRET`, 3 price-id's uit test-modus). Dan test Claude de hele betaalketen incl. factuurmail vóór 28 sep. Live-verificatie (KvK + Knab-IBAN) pas 5-12 okt. Plan: docs/BETALING-PLAN.md.
 
 - **📋 PLAN 9 SEP** — ✅ (1) Cloudflare-doorgeefstation LIVE (v607), ✅ (2) loader, ✅ (3) leerkracht-knop "parkcode voor mijn klas" (v608). Nog open: (4) meetfix start-kwartier-vragen; (5) `/doorgeven`-pagina vóór de Kinderhulp-nieuwsbrief (≤ ~18 sep); (6) LOWAN batch 3 na "ga"; (7) Mark: analytics-login in Chrome-voor-Claude, LinkedIn-post Ooievaarspas, beslissing bot-filter, Sonac-CAO.
