@@ -86,7 +86,7 @@ export default function HerkansingPage({ onBack, onHome, onPickPath, onGoExamens
             Pak alleen het vak dat net niet lukte. Hier oefen je met{" "}
             <strong>echte examenvragen van de afgelopen jaren</strong> — en bij elke
             fout krijg je uitleg in drie niveaus, net zolang tot je het snapt.
-            In 2026 helemaal gratis, zonder account.
+            De basis blijft gratis (gegarandeerd t/m 2031), zonder account.
           </p>
         </div>
 

@@ -11791,7 +11791,7 @@ export default function ObliteratorGame({ userName, authUser, wrongQuestions, va
               <div>📚 Doorstroomtoets · spelling · rekenen · wiskunde · talen</div>
               <div>🎓 Voor groep 3-8, MAVO, HAVO, VWO en gymnasium</div>
               <div>🏆 Verdien medailles, kom in de Hall of Fame</div>
-              <div>💯 In 2026 helemaal gratis · geen advertenties</div>
+              <div>💯 De basis blijft gratis (t/m 2031) · geen advertenties</div>
             </div>
             <button onClick={() => onNaarStudiebol?.()} style={{
               width: "100%", padding: "14px 20px",

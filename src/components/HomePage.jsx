@@ -636,7 +636,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
               {/* Overzichts-snoei 12 aug (Mark: "home overzichtelijk"): de
                   tweede regel ("ook ná 2026…") weg — dat verhaal staat op
                   Wat kost het?; één rustige vertrouwensregel is genoeg. */}
-              ✓ Geen account nodig &nbsp;·&nbsp; ✓ In 2026 helemaal gratis &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
+              ✓ Geen account nodig &nbsp;·&nbsp; ✓ De basis blijft gratis, gegarandeerd t/m 2031 &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
             </div>
           </div>
         )}
