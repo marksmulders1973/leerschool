@@ -19,6 +19,8 @@
 
 ## 🔴 Nu doen (deze week)
 
+- ✅ **v645 (10 sep, 22:00): ⭐ Vandaag-motor** — op /mijn één knop "Start je kwartier van vandaag" die uit alle blokjes kiest (klaargezet → toets <8 wk → weekschema-regel op je zwakste plek → mix), 2-3 blokjes van 5 (vragen/werkwoorden/dictee) achter elkaar, eindscherm. Test zelf: leerkwartier.app/mijn → groene knop. **Regel voortaan: nieuwe functie = blokje voor de motor, geen nieuwe tegel/menu.** Meten: vandaag_*-events in het dagrapport.
+
 - ✅ **v644 (10 sep avond): 🔤 Werkwoordspellingtest** zoals het schoolblad van Brian — leerkwartier.app/werkwoorden (+ landingspagina werkwoordspelling-oefenen.html, zoekbalk, Meer-menu, Mijn-pagina, dictee-scherm). Test zelf: 20 zinnen, en plak 'informeren, bewijzen, proeven' bij Werkwoorden van school → vormen-tabel → klaarzetten met code. Reclame-post: nog niet (twee-weken-plan), tekst/beeld kan à la dictee-post.
 
 - ✅ **v643 (10 sep avond):** game-lobby/uitleg scrollbaar op de telefoon (Mark-melding; overlay was gecentreerde grid zonder overflow). Test zelf: park → 🎮 Imposter → scroll in de kaart.
