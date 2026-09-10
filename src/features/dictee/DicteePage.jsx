@@ -236,7 +236,12 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
   const start = (g, lijst = null) => {
     const gekozen = lijst || kiesDictee(g, 10);
     try { localStorage.setItem("lk_dictee_groep", String(g)); } catch { /* */ }
-    setGroep(g); setItems(gekozen); setIdx(0); setUitkomst([]); setFase("dictee");
+    setGroep(g); setItems(gekozen); setIdx(0); setUitkomst([]);
+    // 10 sep 2026 (dagrapport: 8 starts, 0 afgemaakt, meesten stopten vóór het eerste woord):
+    // eerst een geluidscheck. Charley praat meteen in de tik zelf — telefoons staan spraak
+    // pas toe na een tik — en het kind start pas als het hem hoort. Anders lees-dictee.
+    setFase("check");
+    if (kanSpreken()) zeg("Hoi, ik ben Charley! Hoor je mij? Tik dan op de groene knop, dan beginnen we.");
     try { track("dictee_start", { groep: g, n: gekozen.length, stem: kanSpreken() ? 1 : 0, bron: lijst ? "school" : "lijst" }); } catch { /* */ }
   };
   const nogEenKeer = () => { if (!item) return; herhaalRef.current = 0; zeg(status === "luister" && !item.los ? `${item.zin} Schrijf op het woord: ${item.woord}.` : `Schrijf het woord: ${item.woord}.`, () => { if (status !== "goed" && status !== "fout") { setStatus("typen"); wachtOpTypen(); } }); };
@@ -247,7 +252,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
     const r = vergelijk(invoer, item.woord, item.ook);
     setStatus(r.goed ? "goed" : "fout");
     setUitkomst((u) => [...u.slice(0, idx), { goed: r.goed, getypt: invoer.trim(), letters: r.letters }]);
-    try { track("dictee_woord", { groep, goed: r.goed ? 1 : 0, cat: item.cat, hint: hint ? 1 : 0 }); } catch { /* */ }
+    try { track("dictee_woord", { groep, goed: r.goed ? 1 : 0, cat: item.cat, hint: hint ? 1 : 0 }); track("question_answered", { bron: "dictee", subject: "spelling", level: String(groep), is_correct: r.goed }); } catch { /* */ }
     try { if (userName) recordAnswerForPath({ playerName: userName, pathId: PAD_ID, isCorrect: r.goed }); } catch { /* */ }
     zeg(r.goed ? "Goed zo!" : `Bijna. Het is: ${item.woord}. ${spreekbaar(item.regel)}`);
   };
@@ -284,6 +289,29 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
         <AutocorrectieTip />
         <SchoolWoorden groep={groep} onStart={(lijst) => start(groep, lijst)} />
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Tip: zet het geluid aan. Tik op 🔊 als je Charley niet goed verstaat. {DICTEE[groep || 6].length} woorden per groep; elke keer een andere mix.</p>
+      </div>
+    );
+  }
+
+  if (fase === "check") {
+    return (
+      <div style={W}>
+        <button onClick={() => { stopAlles(); setFase("kies"); }} style={{ ...KNOP2, padding: "8px 14px", font: "700 14px system-ui", marginBottom: 12 }}>← Terug</button>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+          <div style={{ fontSize: 44 }}>🐕</div>
+          <div style={{ flex: 1, background: "#fff", border: "2px solid #cde3d6", borderRadius: 16, padding: "12px 14px", fontSize: 16, lineHeight: 1.5, color: "#1c2840" }}>
+            {kanSpreken() ? <>Hoi, ik ben Charley! <b>Hoor je mij?</b> {spreekt ? "🔊" : ""}</> : <>Op dit apparaat kan ik niet praten. Dan doen we een <b>lees-dictee</b>.</>}
+          </div>
+        </div>
+        <div style={{ background: "#fff8e1", border: "1px solid #f3d27a", borderRadius: 14, padding: "12px 14px", margin: "10px 0 14px", color: "#1c2840", fontSize: 14 }}>
+          🔊 <b>Zet je geluid aan</b> en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven.
+        </div>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+          {kanSpreken() && <button onClick={() => { stopAlles(); try { track("dictee_check", { hoort: 1, groep }); } catch { /* */ } setFase("dictee"); }} style={{ ...KNOP, fontSize: 18, padding: "14px 22px" }}>✅ Ik hoor Charley, start!</button>}
+          {kanSpreken() && <button onClick={() => { herhaalRef.current = 0; zeg("Hoi, ik ben Charley! Hoor je mij nu?"); }} style={KNOP2}>🔊 Nog een keer</button>}
+          <button onClick={() => { stopAlles(); setLeesModus(true); try { track("dictee_check", { hoort: 0, groep }); } catch { /* */ } setFase("dictee"); }} style={KNOP2}>{kanSpreken() ? "Ik hoor niets → lees-dictee" : "▶ Start het lees-dictee"}</button>
+        </div>
+        <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Bij een lees-dictee zie je de zin 3 seconden mét het woord; daarna typ je het uit je hoofd.</p>
       </div>
     );
   }
