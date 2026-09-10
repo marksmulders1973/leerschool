@@ -48,6 +48,7 @@ function maakTabs(isTeacher) {
 
 const MEER_TEGELS = [
   { id: "dictee",     label: "Dictee",     emoji: "✍️", sub: "Charley zegt de zin, jij typt het woord", target: "dictee" },
+  { id: "werkwoorden", label: "Werkwoorden", emoji: "🔤", sub: "werkwoordspellingtest zoals op school", target: "werkwoorden" },
   { id: "printen",    label: "Printbaar",  emoji: "🖨️", sub: "werkbladen, tafels, dictees, leesladder", target: "printen" },
   { id: "tips",       label: "Tips",       emoji: "💬", sub: "wens of tip voor de maker", target: "wishes" },
   { id: "ouder",      label: "Thuis",      emoji: "👪", sub: "voor ouder of verzorger", target: "ouder-dashboard" },
@@ -63,7 +64,7 @@ function bepaalActieveTab(page) {
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview" || page === "cito") return "toets-maken";
   if (page === "zoo" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
-  if (["wishes", "dictee", "printen", "tafelbladen", "redactiebladen", "dictees", "ouder-dashboard"].includes(page)) return "meer";
+  if (["wishes", "dictee", "werkwoorden", "vandaag-kwartier", "printen", "tafelbladen", "redactiebladen", "dictees", "ouder-dashboard"].includes(page)) return "meer";
   return null;
 }
 

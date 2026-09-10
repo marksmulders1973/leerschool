@@ -30,6 +30,10 @@
   Zelfs bij afwijzing: Digilab70 is precies het gremium waar Leerkwartier binnen wil komen.
   Zeg "brief" → Claude zet een concept-motivatie klaar.
 
+- ✅ **v645 (10 sep, 22:00): ⭐ Vandaag-motor** — op /mijn één knop "Start je kwartier van vandaag" die uit alle blokjes kiest (klaargezet → toets <8 wk → weekschema-regel op je zwakste plek → mix), 2-3 blokjes van 5 (vragen/werkwoorden/dictee) achter elkaar, eindscherm. Test zelf: leerkwartier.app/mijn → groene knop. **Regel voortaan: nieuwe functie = blokje voor de motor, geen nieuwe tegel/menu.** Meten: vandaag_*-events in het dagrapport.
+
+- ✅ **v644 (10 sep avond): 🔤 Werkwoordspellingtest** zoals het schoolblad van Brian — leerkwartier.app/werkwoorden (+ landingspagina werkwoordspelling-oefenen.html, zoekbalk, Meer-menu, Mijn-pagina, dictee-scherm). Test zelf: 20 zinnen, en plak 'informeren, bewijzen, proeven' bij Werkwoorden van school → vormen-tabel → klaarzetten met code. Reclame-post: nog niet (twee-weken-plan), tekst/beeld kan à la dictee-post.
+
 - ✅ **v643 (10 sep avond):** game-lobby/uitleg scrollbaar op de telefoon (Mark-melding; overlay was gecentreerde grid zonder overflow). Test zelf: park → 🎮 Imposter → scroll in de kaart.
 
 - ✅ **3 mails VERSTUURD 10 sep ±17:15-17:20 (Mark 'stuur maar'):** Marion/Kinderhulp (bedankje + 2 vragen), Leergeld Leudal (LEUDAL2027), VPCBO Ichthus (ICHTHUS2027). Nu wachten; reacties in het dagrapport. Was: `Desktop\dagrapport\concepten-2026-09-10-avond.md` — (1) **Marion/Kinderhulp** bedankje dag 1 + vraag /doorgeven.html in de november-editie (versturen vr 11 sep ná dag-2-cijfers); (2) **Leergeld Leudal** (leergeldleudal@gmail.com) met code LEUDAL2027 + flyer `drukwerk/flyer-LEUDAL2027.pdf`; (3) **VPCBO Ichthus Huizen** (maputters@ichthushuizen.nl, bestuur van 5 basisscholen) met code ICHTHUS2027 + flyer + leerkracht-route. Codes staan in partner_codes + PARTNER_NAMEN (v642). Flyers = Leergeld-template (previews naar Mark gestuurd). Plus LinkedIn-tekst Kinderhulp voor Mark persoonlijk in hetzelfde bestand.

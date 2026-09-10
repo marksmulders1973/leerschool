@@ -17,6 +17,8 @@ import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
+import { bepaalPlan, planSamenvatting } from "../vandaag/vandaagPlan.js";
+import { startKwartierPlan, kwartierGedaanVandaag, kwartierActief, kwartierStand } from "../vandaag/kwartier.js";
 import { haalKlaargezetVoorKind, markeerGedaan, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import { buddyWeetjes, BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy } from "../zoo/buddies.js";
 import { THEMAS, themaVan, kiesThema, goudVerdiend, THEMA_EVENT, TOP_BLOKKEN, leesTopBlok, kiesTopBlok } from "../../shared/mijnThema.js";
@@ -245,6 +247,8 @@ export default function MijnPagina({
   onGoLeren,
   onGoCito,
   onDictee,
+  onWerkwoorden,
+  onVandaagKwartier,
   onGoVoortgang,
   onOuderDashboard,
   onHernoem,
@@ -445,6 +449,7 @@ export default function MijnPagina({
       onGoLeren && { emoji: "🚀", label: "Ga oefenen", doe: onGoLeren },
       onGoCito && { emoji: "🎯", label: "Oefen in doorstroomtoets-stijl", doe: () => onGoCito() },
       onDictee && { emoji: "✍️", label: "Dictee met Charley", doe: () => onDictee() },
+      onWerkwoorden && { emoji: "🔤", label: "Werkwoordspellingtest", doe: () => onWerkwoorden() },
       onGoVoortgang && { emoji: "📊", label: "Bekijk je eigen voortgang", doe: onGoVoortgang },
     ].filter(Boolean);
   })();
@@ -1638,17 +1643,48 @@ export default function MijnPagina({
                         Je was bezig met: <strong style={{ color: "var(--color-text)" }}>{resume.path.emoji ? `${resume.path.emoji} ` : ""}{resume.path.title}</strong>
                       </div>
                     )}
-                    <button
-                      onClick={() => resume ? (onResumePath && onResumePath(resume.pathId, resume.stepIdx)) : onGoLeren && onGoLeren()}
-                      style={{
-                        padding: "13px 20px", borderRadius: 11, border: "none", cursor: "pointer",
-                        background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#003a15",
-                        fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, width: "100%",
-                        boxShadow: "0 3px 0 rgba(0,0,0,0.25)",
-                      }}
-                    >
-                      {resume ? "▶ Verder oefenen" : "📚 Kies een onderwerp"}
-                    </button>
+                    {/* ⭐ Vandaag-motor (Mark 10 sep 2026, "bouw de motor"): één knop die het
+                        kwartier van vandaag kiest uit alle blokjes (klaargezet → toets → weekschema
+                        → zwakste plek → mix). "Zelf kiezen" blijft als tweede weg. */}
+                    {(() => {
+                      const motorAan = !!onVandaagKwartier && (niveau?.soort !== "klas" || true);
+                      if (!motorAan) return null;
+                      const bezig = kwartierActief();
+                      const gedaan = kwartierGedaanVandaag();
+                      const plan = bepaalPlan({
+                        level: userLevel, klaargezet: thuisKlaargezet, mastery: records,
+                        dicteeSchool: (() => { try { return !!localStorage.getItem("lk_dictee_school"); } catch { return false; } })(),
+                        wwSchool: (() => { try { return !!localStorage.getItem("lk_ww_school"); } catch { return false; } })(),
+                        metSchoolvakken: niveau?.soort === "klas",
+                      });
+                      const stand = bezig ? kwartierStand() : null;
+                      return (
+                        <>
+                          <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 8, lineHeight: 1.4 }}>
+                            {bezig && stand
+                              ? <>Je bent bezig: blokje {stand.idx + 1} van {stand.blokjes.length} · <strong style={{ color: "var(--color-text)" }}>{stand.blokjes[stand.idx]?.titel}</strong></>
+                              : <>{gedaan ? "Nog een rondje? " : "Vandaag: "}<strong style={{ color: "var(--color-text)" }}>{planSamenvatting(plan)}</strong>{plan.reden === "klaargezet" ? "" : ` · ${plan.uitleg}`}</>}
+                          </div>
+                          <button
+                            onClick={() => { if (!bezig) startKwartierPlan(plan); try { track("vandaag_knop", { reden: plan.reden, bezig: bezig ? 1 : 0, gedaan: gedaan ? 1 : 0 }); } catch { /* */ } onVandaagKwartier(); }}
+                            style={{
+                              padding: "13px 20px", borderRadius: 11, border: "none", cursor: "pointer",
+                              background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#003a15",
+                              fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, width: "100%",
+                              boxShadow: "0 3px 0 rgba(0,0,0,0.25)",
+                            }}
+                          >
+                            {bezig ? "▶ Verder met je kwartier" : gedaan ? "▶ Nog een kwartier" : "▶ Start je kwartier van vandaag"}
+                          </button>
+                          <button
+                            onClick={() => resume ? (onResumePath && onResumePath(resume.pathId, resume.stepIdx)) : onGoLeren && onGoLeren()}
+                            style={{ marginTop: 8, padding: "9px 14px", borderRadius: 10, border: "1px solid var(--color-border-soft)", background: "transparent", color: "var(--color-text)", cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, width: "100%" }}
+                          >
+                            {resume ? "of: verder waar je was" : "of: zelf een onderwerp kiezen"}
+                          </button>
+                        </>
+                      );
+                    })()}
                   </>
                 );
               })()}

@@ -9,6 +9,8 @@
 export const SNELKOPPELINGEN = [
   { id: "dictee", emoji: "✍️", label: "Dictee met Charley", uitleg: "Charley zegt een zin, jij schrijft het woord. Spelling oefenen met je oren.", pad: "/dictee",
     woorden: ["dictee", "dictees", "dictée", "diktee", "dikte", "charley", "luisteren en schrijven", "woorden schrijven", "spellingdictee", "woordjes"] },
+  { id: "werkwoorden", emoji: "🔤", label: "Werkwoordspellingtest", uitleg: "Zoals op school: zin met een gat, jij typt de goede werkwoordsvorm (t.t., v.t., voltooid deelwoord).", pad: "/werkwoorden",
+    woorden: ["werkwoorden", "werkwoordspelling", "werkwoordspellingtest", "werkwoordentest", "d of t", "dt", "kofschip", "voltooid deelwoord", "verleden tijd", "tegenwoordige tijd", "vervoegen", "stam"] },
   { id: "dictees-print", emoji: "🖨️", label: "Dictees om te printen", uitleg: "Voorleesblad voor thuis + invulblad voor het kind, per spellingregel.", pad: "/dictees",
     woorden: ["dictee printen", "dictees", "voorleesblad", "dictee thuis", "printdictee"] },
   { id: "park", emoji: "🐾", label: "Mijn Park", uitleg: "Je eigen 3D-park: bouwen, dieren, leren bij elke plek.", pad: "/dierentuin",
