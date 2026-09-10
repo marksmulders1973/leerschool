@@ -117,7 +117,11 @@ export function bepaalPlan({ level, vandaag = new Date(), klaargezet = [], maste
       ? `Vrijdag: afsluiten met iets dat al goed gaat (${titelVan(gekozen.id)}).`
       : weekdag === 4 ? `Donderdag: je lastigste onderwerp nog een keer, herhalen werkt.`
         : `${dagNaam.charAt(0).toUpperCase() + dagNaam.slice(1)}: eerst je lastigste onderwerp, dan taal.`;
-    return { reden: "weekschema", uitleg, blokjes: [vragenBlok(gekozen.id), taalBlok(), tweedeTaalBlok()].filter(Boolean) };
+    // Is het lastigste onderwerp zélf werkwoordspelling? Dan geen tweede werkwoorden-blok, maar dictee.
+    const overWerkwoorden = /werkwoord/i.test(gekozen.id);
+    const taal = overWerkwoorden ? (groep >= 4 && !metSchoolvakken ? dicteeBlok(groep, ITEMS_PER_BLOK, dicteeSchool) : null) : taalBlok();
+    const taal2 = overWerkwoorden ? null : tweedeTaalBlok();
+    return { reden: "weekschema", uitleg, blokjes: [vragenBlok(gekozen.id), taal, taal2].filter(Boolean) };
   }
 
   // 5. gezonde mix per groep (zelfde paden als het start-kwartier)
