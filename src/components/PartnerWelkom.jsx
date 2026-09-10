@@ -15,7 +15,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
-import { actievePartnerCode, partnerFamilieTot, partnerCodeBekend } from "../features/referral/partnerCode.js";
+import { actievePartnerCode, partnerFamilieTot, partnerCodeBekend, codeUitUrl } from "../features/referral/partnerCode.js";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import { track } from "../utils.js";
 
@@ -64,6 +64,8 @@ export const PARTNER_NAMEN = {
   GORINCHEM2027: "Voedselbank Gorinchem",
   HEUVELLAND2027: "Leergeld Maastricht en Heuvelland",
   HUMANITAS2027: "Humanitas",
+  ICHTHUS2027: "VPCBO Ichthus (basisscholen in Huizen)", // 10 sep 2026: vroeg zelf het oefenpakket aan (bestuur van 5 scholen)
+  LEUDAL2027: "Stichting Leergeld Leudal", // 10 sep 2026: vroeg zelf het oefenpakket aan
   IMC2027: "IMC Weekendschool",
   JEF2027: "het Jeugdeducatiefonds",
   JINC2027: "JINC",
@@ -97,8 +99,8 @@ function bepaalVariant() {
     viaQrFlyer = params.get("utm_source") === "qr-flyer";
     // Eerst de URL zelf lezen: vangPartnerCode() (App-effect) draait pas ná
     // de eerste render, dus localStorage kan hier nog leeg zijn.
-    const uitUrl = (params.get("partner") || "").trim().toUpperCase();
-    code = (/^[A-Z0-9-]{1,20}$/.test(uitUrl) ? uitUrl : null) || actievePartnerCode();
+    // ?partner=CODE óf een nieuwsbrief-utm (idee 1, 10 sep) — zie codeUitUrl.
+    code = codeUitUrl(params).code || actievePartnerCode();
   } catch { /* geen URL-toegang = geen banner */ }
 
   if (code === "DEELACTIE2027") return null;

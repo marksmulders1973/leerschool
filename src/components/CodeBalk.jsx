@@ -13,7 +13,7 @@
 import { useMemo, useState } from "react";
 import supabase from "../supabase.js";
 import { bewaarKoppeling } from "../shared/koppeling.js";
-import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
+import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig, codeUitUrl } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
 
@@ -138,7 +138,9 @@ export default function CodeBalk() {
       // QR-binnenkomst (?partner=CODE): de URL zelf lezen — de opslag wordt pas
       // ná de eerste render gevuld (App-effect), en juist bij de állereerste
       // scan moet het ere-scherm verschijnen (QR-test 27 aug: deed hij niet).
-      const p = (params.get("partner") || "").trim().toUpperCase();
+      // Ook een nieuwsbrief-utm (utm_source=clang → KINDERHULP2027) telt als
+      // binnenkomst-met-code (Mark 10 sep, idee 1) — zelfde ere-scherm.
+      const p = codeUitUrl(params).code || "";
       return {
         previewCode: /^[A-Z0-9-]{3,20}$/.test(c) ? c : null,
         urlPartner: /^[A-Z0-9-]{3,20}$/.test(p) && p !== "DEELACTIE2027" ? p : null,

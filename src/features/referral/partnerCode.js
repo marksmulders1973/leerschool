@@ -15,6 +15,64 @@
 
 import supabase from "../../supabase.js";
 import { track } from "../../utils.js";
+import { getBron } from "../tracking/bron.js";
+
+// 📬 Nieuwsbrief-codes (Mark 10 sep 2026, "ja idee 1"): een partner die ons
+// aanbod in een nieuwsbrief zet linkt naar de kale homepage met een utm-tag,
+// niet naar ?partner=CODE. Op dag 1 van de Kinderhulp-nieuwsbrief tikten 7
+// mensen de code handmatig over en haakten er 5 af. Daarom: utm_source →
+// partner-code, zodat de nieuwsbrief-lezer hetzelfde ere-scherm en dezelfde
+// gratis-belofte krijgt als een QR-scanner, zonder overtypen. Mark: "niemand
+// gebruikt die code zomaar, kan geen kwaad" — de code is toch ongelimiteerd.
+// De bron blijft `deel:<utm>` (bron.js), zodat nieuwsbrief en flyer apart
+// telbaar blijven; het event partner_bezoek krijgt via:'nieuwsbrief'.
+// Regels: utm_source (verplicht) + optioneel een woord dat in utm_campaign
+// moet staan. Elke partner houdt zijn EIGEN code (Mark 10 sep: "kan er
+// variatie in?") — nieuwe nieuwsbrief-partner = nieuwe regel met zijn code.
+// Partners die ons tekstblokje gebruiken linken sowieso al naar
+// ?partner=EIGENCODE; deze tabel vangt alleen partners die met de tag van
+// hun eigen mailprogramma naar de kale homepage linken.
+const NIEUWSBRIEF_REGELS = [
+  { source: "clang", campaign: "intermediairs", code: "KINDERHULP2027" }, // Nationaal Fonds Kinderhulp, sep + nov 2026
+  { source: "clang", campaign: "kinderhulp", code: "KINDERHULP2027" },
+  { source: "kinderhulp", code: "KINDERHULP2027" },
+];
+
+function nieuwsbriefCode(source, campaign) {
+  const src = String(source || "").trim().toLowerCase();
+  const camp = String(campaign || "").trim().toLowerCase();
+  if (!src) return null;
+  for (const r of NIEUWSBRIEF_REGELS) {
+    if (r.source !== src) continue;
+    if (r.campaign && !camp.includes(r.campaign)) continue;
+    return r.code;
+  }
+  return null;
+}
+
+// Welke partner-code zit er in deze URL? Eerst ?partner=CODE (QR-flyer),
+// anders een bekende nieuwsbrief-utm. Gedeeld door vangPartnerCode, CodeBalk
+// en PartnerWelkom, zodat de allereerste render hetzelfde ziet als de opslag.
+export function codeUitUrl(params) {
+  try {
+    const p = (params.get("partner") || "").trim().toUpperCase();
+    if (p && p.length <= 20 && /^[A-Z0-9-]+$/.test(p)) return { code: p, via: "partner" };
+    const code = nieuwsbriefCode(params.get("utm_source"), params.get("utm_campaign"));
+    if (code) return { code, via: "nieuwsbrief" };
+  } catch { /* */ }
+  return { code: null, via: null };
+}
+
+// Kwam dit apparaat eerder (first touch) via een nieuwsbrief binnen, zonder
+// dat de code toen werd gezet? Dan alsnog — dekt de bezoekers van dag 1.
+function nieuwsbriefCodeUitBron() {
+  const b = getBron();
+  const bron = b && typeof b.bron === "string" ? b.bron : "";
+  if (!bron.startsWith("deel:")) return null;
+  let camp = "";
+  try { camp = new URLSearchParams((b.landing || "").split("?")[1] || "").get("utm_campaign") || ""; } catch { /* */ }
+  return nieuwsbriefCode(bron.slice(5), camp);
+}
 
 const KEY_CODE = "lk_partner_code";
 const KEY_TELLER = "lk_partner_antwoorden";
@@ -97,13 +155,17 @@ function uid() {
 export function vangPartnerCode() {
   try {
     const params = new URLSearchParams(window.location.search);
-    const code = (params.get("partner") || "").trim().toUpperCase();
-    if (!code || code.length > 20 || !/^[A-Z0-9-]+$/.test(code)) return;
+    let { code, via } = codeUitUrl(params);
+    if (!code && !ls.get(KEY_CODE)) {
+      const terug = nieuwsbriefCodeUitBron();
+      if (terug) { code = terug; via = "nieuwsbrief-terug"; }
+    }
+    if (!code) return;
     const nieuw = !ls.get(KEY_CODE);
     if (nieuw) ls.set(KEY_CODE, code);
     // Elk bezoek via de link telt als scan — ook herhaalbezoek (props.uid
     // maakt unieke mensen telbaar in het dagrapport).
-    track("partner_bezoek", { code: ls.get(KEY_CODE) || code, nieuw });
+    track("partner_bezoek", { code: ls.get(KEY_CODE) || code, nieuw, via });
     // F3 (Fable-review 2 sep 2026): een verzonnen code (?partner=TEST123)
     // bleef anders voor altijd staan mét gratis-belofte. Achteraf checken;
     // onbekend → weer weghalen (alleen als er nog geen plek geclaimd is).

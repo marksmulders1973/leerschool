@@ -307,6 +307,29 @@ const W = { maxWidth: 560, margin: "0 auto", padding: "16px 16px 40px", fontFami
 const KNOP = { border: "none", borderRadius: 999, padding: "12px 20px", font: "800 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" };
 const KNOP2 = { ...KNOP, color: "#1c2840", background: "#eef2f7" };
 
+// 🌉 "Nog één woord"-brug (dagrapport 10 sep 2026, idee 1 ochtend): een fout
+// woord krijgt een knop naar het leerpad van die spellingregel, zodat een
+// dictee-bezoeker een oefenaar wordt. Categorie (dicteeData.cat) → pad-id.
+const CAT_NAAR_PAD = [
+  [/werkwoord|d of t|voltooid deelwoord|verleden tijd|gebeurd|vd /i, "werkwoordsspelling-dt", "werkwoorden en d/t"],
+  [/ei\/ij|au\/ou/i, "spelling-ei-ij-au-ou", "ei/ij en au/ou"],
+  [/hoofdletter|apostrof|leesteken/i, "leestekens-hoofdletters-po", "hoofdletters en leestekens"],
+];
+function padVoorCat(cat) {
+  for (const [re, pad, naam] of CAT_NAAR_PAD) if (re.test(cat || "")) return { pad, naam };
+  return { pad: "spelling-overige-po", naam: "spellingregels" };
+}
+function OefenRegelKnop({ cat, groep }) {
+  const { pad, naam } = padVoorCat(cat);
+  const href = `/leren/pad?id=${encodeURIComponent(pad)}&utm_source=dictee&utm_campaign=brug`;
+  return (
+    <a href={href} onClick={() => { try { track("dictee_naar_pad", { pad, cat, groep }); } catch { /* */ } }}
+      style={{ display: "inline-block", marginTop: 4, padding: "5px 11px", borderRadius: 999, background: "#e6f4ea", color: "#146c43", font: "800 12.5px system-ui", textDecoration: "none" }}>
+      ✏️ Oefen: {naam} →
+    </a>
+  );
+}
+
 const kanSpreken = () => typeof window !== "undefined" && !!window.speechSynthesis;
 function groepUit(level) {
   const m = String(level || "").match(/(\d)/); const g = m ? +m[1] : null;
@@ -470,7 +493,8 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
             {fouten.map((f, i) => (
               <div key={i} style={{ padding: "6px 0", borderTop: i ? "1px solid #f0dcdc" : "none", fontSize: 14.5, lineHeight: 1.45 }}>
                 <b style={{ color: "#146c43" }}>{f.woord}</b> <span style={{ color: "#888" }}>(jij schreef: {uitkomst[items.indexOf(f)]?.getypt})</span><br />
-                <span style={{ color: "#445" }}>{f.regel}</span>
+                <span style={{ color: "#445" }}>{f.regel}</span><br />
+                <OefenRegelKnop cat={f.cat} groep={groep} />
               </div>
             ))}
           </div>

@@ -61,18 +61,26 @@ export function verweefVragen(perPad, aantal = AANTAL_VRAGEN) {
   }
 }
 
-export async function bouwStartVragen(level, aantal = AANTAL_VRAGEN) {
+// Idee 4 (dagrapport 10 sep 2026): 6 van de 10 starters zagen géén vraag —
+// de vragen van alle 4-5 paden werden eerst allemaal geladen (20-70 s op een
+// telefoon). Nu: het eerste pad apart laden en meteen via `onEerste` teruggeven,
+// zodat vraag 1 er binnen een paar seconden staat; de rest komt erachteraan.
+// Vraag 1 blijft dezelfde (verweefVragen begint altijd met perPad[0][0]).
+export async function bouwStartVragen(level, aantal = AANTAL_VRAGEN, { onEerste } = {}) {
   const paden = kiesStartPaden(level);
-  const perPad = await Promise.all(
-    paden.map(async (pathId) => {
-      try {
-        const { quiz, questions } = await buildTopicQuiz({ pathId, aantal: 2 });
-        return questions.map((q) => ({ ...q, pathId, padTitel: quiz.title }));
-      } catch {
-        return [];
-      }
-    })
-  );
+  const laad = async (pathId) => {
+    try {
+      const { quiz, questions } = await buildTopicQuiz({ pathId, aantal: 2 });
+      return questions.map((q) => ({ ...q, pathId, padTitel: quiz.title }));
+    } catch {
+      return [];
+    }
+  };
+  const eerste = laad(paden[0]);
+  if (onEerste) {
+    eerste.then((lijst) => { if (lijst.length) onEerste(verweefVragen([lijst], aantal)); }).catch(() => {});
+  }
+  const perPad = await Promise.all([eerste, ...paden.slice(1).map(laad)]);
   return verweefVragen(perPad, aantal);
 }
 
