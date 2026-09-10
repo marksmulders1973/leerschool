@@ -43,6 +43,8 @@ export const PAGE_TO_PATH = {
   dictee: "/dictee",
   // Werkwoordspellingtest zoals op school (Mark 10 sep 2026, schoolblad van Brian)
   werkwoorden: "/werkwoorden",
+  // Kwartier van vandaag — de Vandaag-motor (Mark 10 sep 2026, 'bouw de motor')
+  "vandaag-kwartier": "/vandaag-kwartier",
   // Print-hub + tafel-werkbladen (Mark 2026-07-02: "maak duidelijk wat printbaar is")
   printen: "/printen",
   tafelbladen: "/tafelbladen",

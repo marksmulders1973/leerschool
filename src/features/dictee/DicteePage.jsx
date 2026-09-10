@@ -18,6 +18,7 @@ import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import { track } from "../../utils.js";
 import { recordAnswerForPath, recordRefAnswer } from "../mastery/mastery.js";
 import { DICTEE, GROEPEN, kiesDictee, vergelijk } from "./dicteeData.js";
+import { kwartierBlokVan, blokKlaar } from "../vandaag/kwartier.js";
 
 const WACHT_MS = 3200;      // zo lang wacht Charley op de eerste letter
 const MAX_HERHAAL = 2;
@@ -341,7 +342,10 @@ function metGat(zin, woord) {
   return { voor: zin.slice(0, i), na: zin.slice(i + woord.length) };
 }
 
-export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
+export default function DicteePage({ userName = "", userLevel = "", onTerug, onVolgendBlok }) {
+  // ⭐ Kwartier-modus (Vandaag-motor, 10 sep 2026): is het dictee het blokje van nu, start dan
+  // meteen met 5 woorden (schoolwoorden als die er zijn) en toon na afloop "Volgende blokje".
+  const kwartierBlok = useMemo(() => kwartierBlokVan("dictee"), []);
   const [groep, setGroep] = useState(() => { try { return +localStorage.getItem("lk_dictee_groep") || groepUit(userLevel); } catch { return groepUit(userLevel); } });
   const [fase, setFase] = useState("kies");          // kies | dictee | klaar
   const [items, setItems] = useState([]);
@@ -394,8 +398,8 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fase, idx, item, leesModus]);
 
-  const start = (g, lijst = null) => {
-    const gekozen = lijst || kiesDictee(g, 10);
+  const start = (g, lijst = null, n = 10) => {
+    const gekozen = lijst || kiesDictee(g, n);
     try { localStorage.setItem("lk_dictee_groep", String(g)); } catch { /* */ }
     setGroep(g); setItems(gekozen); setIdx(0); setUitkomst([]);
     // 10 sep 2026 (dagrapport: 8 starts, 0 afgemaakt, meesten stopten vóór het eerste woord):
@@ -427,6 +431,15 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
     zeg(score === items.length ? "Alles goed. Wat een kanjer!" : score >= items.length / 2 ? `${score} van de ${items.length} goed. Goed gedaan!` : `${score} goed. Oefenen helpt, kom morgen nog eens.`);
   };
   const fouten = items.filter((_, i) => uitkomst[i] && !uitkomst[i].goed);
+  useEffect(() => {
+    if (!kwartierBlok || fase !== "kies" || items.length) return;
+    const g = groep || kwartierBlok.groep || groepUit(userLevel) || 6;
+    let lijst = null;
+    if (kwartierBlok.school) { try { const b = JSON.parse(localStorage.getItem("lk_dictee_school") || "null"); if (b?.woorden?.length) lijst = schoolItems(parseWoorden(b.woorden.join("\n"))).slice(0, kwartierBlok.n || 5); } catch { /* */ } }
+    try { track("dictee_kwartier_start", { n: kwartierBlok.n || 5, school: lijst ? 1 : 0 }); } catch { /* */ }
+    start(g, lijst, kwartierBlok.n || 5);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [kwartierBlok]);
 
   // ── schermen ──
   if (fase === "kies") {
@@ -504,11 +517,18 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
             ))}
           </div>
         )}
+        {kwartierBlok && onVolgendBlok ? (
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
+            <button onClick={() => { blokKlaar({ goed: score, totaal: items.length }); onVolgendBlok(); }} style={{ ...KNOP, fontSize: 18, padding: "14px 22px" }}>Volgende blokje →</button>
+            {fouten.length > 0 && <button onClick={() => start(groep, fouten)} style={KNOP2}>🔁 Fouten nog een keer</button>}
+          </div>
+        ) : (
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
           {fouten.length > 0 && <button onClick={() => start(groep, fouten)} style={KNOP}>🔁 Fouten nog een keer</button>}
           <button onClick={() => start(groep)} style={fouten.length ? KNOP2 : KNOP}>✍️ Nieuw dictee</button>
           <button onClick={onTerug} style={KNOP2}>Klaar</button>
         </div>
+        )}
         <DicteeMailHaakje groep={groep} score={score} totaal={items.length} />
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Je score telt mee in het weekrapport voor thuis (spelling).</p>
       </div>

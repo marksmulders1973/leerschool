@@ -143,7 +143,7 @@ function schud(a) { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) 
 export function kiesTest(n = 20, vormen = ["tt", "vt", "vd", "bvd"]) {
   let recent = [];
   try { recent = JSON.parse(localStorage.getItem(KEY_RECENT) || "[]"); } catch { /* */ }
-  const perVorm = Math.max(1, Math.round(n / vormen.length));
+  const perVorm = Math.max(1, Math.ceil(n / vormen.length)); // ceil: 5 zinnen over 4 vormen = 2+2+2+2 → daarna tot n geknipt
   let uit = [];
   for (const v of vormen) {
     const alle = ZINNEN.filter((z) => z.tijd === v);

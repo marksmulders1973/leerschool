@@ -64,7 +64,7 @@ function uitlegVan(v) {
 }
 
 // ── Vraag ─────────────────────────────────────────────────────────
-function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder }) {
+export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder }) {
   const [gekozen, setGekozen] = useState(null);
   const goed = gekozen != null && gekozen === vraag.answer;
   const uitleg = uitlegVan(vraag);

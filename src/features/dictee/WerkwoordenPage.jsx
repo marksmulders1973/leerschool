@@ -12,6 +12,7 @@ import { track } from "../../utils.js";
 import { recordAnswerForPath, recordRefAnswer } from "../mastery/mastery.js";
 import { vergelijk } from "./dicteeData.js";
 import { VORMEN, REGELS, kiesTest, vervoeg, parseWerkwoorden } from "./werkwoordenData.js";
+import { kwartierBlokVan, blokKlaar } from "../vandaag/kwartier.js";
 
 const PAD_ID = "werkwoordspelling-test";
 const W = { maxWidth: 560, margin: "0 auto", padding: "16px 16px 40px", fontFamily: "system-ui, Segoe UI, sans-serif", color: "#1c2840", background: "#f6f9fc", minHeight: "100vh", colorScheme: "light", boxSizing: "border-box" };
@@ -227,7 +228,9 @@ function SchoolWerkwoorden({ onStart }) {
   );
 }
 
-export default function WerkwoordenPage({ userName = "", userLevel = "", onTerug }) {
+export default function WerkwoordenPage({ userName = "", userLevel = "", onTerug, onVolgendBlok }) {
+  // ⭐ Kwartier-modus (Vandaag-motor, 10 sep 2026): 5 zinnen (werkwoorden van school als die er zijn), daarna "Volgende blokje".
+  const kwartierBlok = useMemo(() => kwartierBlokVan("werkwoorden"), []);
   const [fase, setFase] = useState("kies");
   const [items, setItems] = useState([]);
   const [idx, setIdx] = useState(0);
@@ -273,6 +276,13 @@ export default function WerkwoordenPage({ userName = "", userLevel = "", onTerug
     try { if (userName) recordRefAnswer({ playerName: userName, onderdeel: "taalverzorging", ref: "1F", isCorrect: false, attemptsDelta: items.length, correctDelta: score }); } catch { /* */ }
   };
   const fouten = items.filter((_, i) => uitkomst[i] && !uitkomst[i].goed);
+  useEffect(() => {
+    if (!kwartierBlok || fase !== "kies" || items.length) return;
+    let lijst = null;
+    if (kwartierBlok.school) { try { const b = JSON.parse(localStorage.getItem("lk_ww_school") || "null"); if (b?.vormen?.length) lijst = itemsUitVormen(b.vormen).slice(0, kwartierBlok.n || 5); } catch { /* */ } }
+    start(lijst || kiesTest(kwartierBlok.n || 5, ALLE_VORMEN), lijst ? "school" : "kwartier");
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [kwartierBlok]);
 
   if (fase === "kies") {
     const toggle = (v) => setVormenKeuze((k) => (k.includes(v) ? (k.length > 1 ? k.filter((x) => x !== v) : k) : [...k, v]));
@@ -347,11 +357,18 @@ export default function WerkwoordenPage({ userName = "", userLevel = "", onTerug
             <a href={`/leren/pad?id=werkwoordsspelling-dt&utm_source=werkwoorden&utm_campaign=brug`} onClick={() => { try { track("ww_naar_pad", { fouten: fouten.length }); } catch { /* */ } }} style={{ display: "inline-block", marginTop: 8, padding: "6px 12px", borderRadius: 999, background: "#e6f4ea", color: "#146c43", font: "800 13px system-ui", textDecoration: "none" }}>✏️ Oefen de regels: werkwoorden en d/t →</a>
           </div>
         )}
+        {kwartierBlok && onVolgendBlok ? (
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
+            <button onClick={() => { blokKlaar({ goed: score, totaal: items.length }); onVolgendBlok(); }} style={{ ...KNOP, fontSize: 18, padding: "14px 22px" }}>Volgende blokje →</button>
+            {fouten.length > 0 && <button onClick={() => start(fouten, bron)} style={KNOP2}>🔁 Fouten nog een keer</button>}
+          </div>
+        ) : (
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
           {fouten.length > 0 && <button onClick={() => start(fouten, bron)} style={KNOP}>🔁 Fouten nog een keer</button>}
           <button onClick={() => { setFase("kies"); }} style={fouten.length ? KNOP2 : KNOP}>🔤 Nieuwe test</button>
           <button onClick={onTerug} style={KNOP2}>Klaar</button>
         </div>
+        )}
         <MailHaakje score={score} totaal={items.length} />
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Je score telt mee in het weekrapport voor thuis (spelling).</p>
       </div>

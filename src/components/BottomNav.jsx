@@ -64,7 +64,7 @@ function bepaalActieveTab(page) {
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview" || page === "cito") return "toets-maken";
   if (page === "zoo" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
-  if (["wishes", "dictee", "werkwoorden", "printen", "tafelbladen", "redactiebladen", "dictees", "ouder-dashboard"].includes(page)) return "meer";
+  if (["wishes", "dictee", "werkwoorden", "vandaag-kwartier", "printen", "tafelbladen", "redactiebladen", "dictees", "ouder-dashboard"].includes(page)) return "meer";
   return null;
 }
 
