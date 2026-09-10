@@ -19,6 +19,8 @@
 
 ## 🔴 Nu doen (deze week)
 
+- ✅ **v643 (10 sep avond):** game-lobby/uitleg scrollbaar op de telefoon (Mark-melding; overlay was gecentreerde grid zonder overflow). Test zelf: park → 🎮 Imposter → scroll in de kaart.
+
 - ✅ **3 mails VERSTUURD 10 sep ±17:15-17:20 (Mark 'stuur maar'):** Marion/Kinderhulp (bedankje + 2 vragen), Leergeld Leudal (LEUDAL2027), VPCBO Ichthus (ICHTHUS2027). Nu wachten; reacties in het dagrapport. Was: `Desktop\dagrapport\concepten-2026-09-10-avond.md` — (1) **Marion/Kinderhulp** bedankje dag 1 + vraag /doorgeven.html in de november-editie (versturen vr 11 sep ná dag-2-cijfers); (2) **Leergeld Leudal** (leergeldleudal@gmail.com) met code LEUDAL2027 + flyer `drukwerk/flyer-LEUDAL2027.pdf`; (3) **VPCBO Ichthus Huizen** (maputters@ichthushuizen.nl, bestuur van 5 basisscholen) met code ICHTHUS2027 + flyer + leerkracht-route. Codes staan in partner_codes + PARTNER_NAMEN (v642). Flyers = Leergeld-template (previews naar Mark gestuurd). Plus LinkedIn-tekst Kinderhulp voor Mark persoonlijk in hetzelfde bestand.
 - **✅ Idee 4 gebouwd v642:** start-kwartier toont vraag 1 zodra het eerste pad binnen is (was: wachten op alle 4-5 paden, 20-70 s → 6 van 10 starters zagen geen vraag) + meting `startkwartier_laad` (fase eerste/alles, ms) + vangnet bij lege lijst. **✅ Dictee-brug gebouwd v642:** eindscherm toont per fout woord "✏️ Oefen: <regel> →" naar het spelling-leerpad (event `dictee_naar_pad`).
 - ✅ **Dictee-reclame 2 GEPOST 10 sep ±17:45** (FB+IG, Threads DdHFr17CnTB, LinkedIn-bedrijfspagina; Mark plakt de persoonlijke LinkedIn-tekst zelf). Was: beeld `Desktop\social-dictee\dictee-post-2.png`, teksten `dictee-posts-2.md` (FB/IG/Threads/LinkedIn-bedrijfspagina door Claude; LinkedIn persoonlijk door Mark).
