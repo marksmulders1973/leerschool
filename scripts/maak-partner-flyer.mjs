@@ -30,9 +30,16 @@ const ORGS = [
   // 14 aug 2026: Voedselbank Dongen (voorzitter Monique Balemans) vroeg zelf
   // per mail wat ze nodig heeft om mee te doen — digitale flyer met eigen code.
   { code: "DONGEN2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" },
+  // 10 sep 2026: beide vroegen zelf het oefenpakket aan (dag van de Kinderhulp-nieuwsbrief).
+  { code: "LEUDAL2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" },
+  { code: "ICHTHUS2027", kaderKop: "Voor de gezinnen op uw vijf scholen betekent dat:" },
 ];
+// Alleen de codes op de commandoregel (bv. `node scripts/maak-partner-flyer.mjs LEUDAL2027`),
+// zodat eerder met de hand bijgewerkte flyers niet worden overschreven.
+const ALLEEN = process.argv.slice(2).map((c) => c.trim().toUpperCase());
 
 for (const { code, kaderKop } of ORGS) {
+  if (ALLEEN.length && !ALLEEN.includes(code)) continue;
   const qrPng = readFileSync(join(root, "public", "qr", `${code}.png`));
   const qrData = `data:image/png;base64,${qrPng.toString("base64")}`;
   const url = `leerkwartier.app/?partner=${code}`;

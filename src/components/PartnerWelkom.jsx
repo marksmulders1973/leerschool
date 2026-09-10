@@ -64,6 +64,8 @@ export const PARTNER_NAMEN = {
   GORINCHEM2027: "Voedselbank Gorinchem",
   HEUVELLAND2027: "Leergeld Maastricht en Heuvelland",
   HUMANITAS2027: "Humanitas",
+  ICHTHUS2027: "VPCBO Ichthus (basisscholen in Huizen)", // 10 sep 2026: vroeg zelf het oefenpakket aan (bestuur van 5 scholen)
+  LEUDAL2027: "Stichting Leergeld Leudal", // 10 sep 2026: vroeg zelf het oefenpakket aan
   IMC2027: "IMC Weekendschool",
   JEF2027: "het Jeugdeducatiefonds",
   JINC2027: "JINC",

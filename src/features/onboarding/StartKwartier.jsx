@@ -351,6 +351,8 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   const groep = parseGroep(userLevel) ?? 6;
   const [vragen, setVragen] = useState(null);
   const [stapIdx, setStapIdx] = useState(0);
+  const stapIdxRef = useRef(0);
+  useEffect(() => { stapIdxRef.current = stapIdx; }, [stapIdx]);
   const [score, setScore] = useState({ goed: 0, totaal: 0 });
   const startRef = useRef(Date.now());
   const afgemeldRef = useRef(false);
@@ -358,7 +360,30 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   useEffect(() => {
     let dood = false;
     track("startkwartier_start", { groep, level: String(userLevel || "") });
-    bouwStartVragen(userLevel).then((v) => { if (!dood) setVragen(v); }).catch(() => { if (!dood) setVragen([]); });
+    const t0 = Date.now();
+    let eersteGezet = false;
+    // Idee 4 (10 sep 2026): vraag 1 zodra het eerste pad binnen is; meting
+    // startkwartier_laad (ms tot de eerste vraag / tot alles) voor het dagrapport.
+    bouwStartVragen(userLevel, undefined, {
+      onEerste: (v) => {
+        if (dood || eersteGezet) return;
+        eersteGezet = true;
+        setVragen(v);
+        track("startkwartier_laad", { fase: "eerste", ms: Date.now() - t0, groep });
+      },
+    }).then((v) => {
+      if (dood) return;
+      track("startkwartier_laad", { fase: "alles", ms: Date.now() - t0, groep, n: v.length });
+      // Zit het kind nog op vraag 1 (of het kaartje erna), dan de volledige
+      // om-en-om-lijst nemen; anders de resterende vragen erachter plakken
+      // zodat de vraag onder de neus nooit wisselt.
+      setVragen((huidig) => {
+        if (!huidig || !huidig.length) return v;
+        if (stapIdxRef.current <= 1) return v;
+        const bekend = new Set(huidig.map((q) => q.id || q.question || JSON.stringify(q)));
+        return huidig.concat(v.filter((q) => !bekend.has(q.id || q.question || JSON.stringify(q)))).slice(0, Math.max(huidig.length, v.length));
+      });
+    }).catch(() => { if (!dood && !eersteGezet) setVragen([]); });
     return () => { dood = true; };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -438,7 +463,13 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
       )}
 
       {!vragen && (
-        <Card variant="study" padding="md"><p style={{ margin: 0 }}>Vragen voor groep {groep} ophalen…</p></Card>
+        <Card variant="study" padding="md"><p style={{ margin: 0 }}>⏳ Je eerste vraag voor groep {groep} komt eraan… (een paar tellen)</p></Card>
+      )}
+      {vragen && vragen.length === 0 && (
+        <Card variant="study" padding="md">
+          <p style={{ margin: "0 0 10px" }}>De vragen laden nu even niet. Je kunt wel meteen een leerpad kiezen.</p>
+          <Button onClick={() => ga("learn-paths-hub", "leren")}>📚 Kies een leerpad</Button>
+        </Card>
       )}
       {stap?.type === "vraag" && (
         <VraagKaart
