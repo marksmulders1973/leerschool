@@ -141,6 +141,30 @@ function SchoolWoorden({ groep, onStart }) {
   );
 }
 
+// 📱 Autocorrectie-waarschuwing (Mark 10 sep 2026: "met dictee heb ik autocorrectie
+// op de telefoon"). De app kan het toetsenbord niet dwingen; het invoerveld vraagt
+// erom (autoCorrect/autoCapitalize/spellCheck uit — werkt op iPhone, op Android
+// deels). Daarom op een telefoon één keer deze tip, weg te klikken.
+function AutocorrectieTip() {
+  const isTelefoon = typeof navigator !== "undefined" && /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const isApple = typeof navigator !== "undefined" && /iPhone|iPad|iPod/i.test(navigator.userAgent);
+  const [weg, setWeg] = useState(() => { try { return localStorage.getItem("lk_dictee_autocorrectie_tip") === "1"; } catch { return false; } });
+  if (!isTelefoon || weg) return null;
+  const sluit = () => { setWeg(true); try { localStorage.setItem("lk_dictee_autocorrectie_tip", "1"); } catch { /* */ } };
+  return (
+    <div style={{ background: "#fff8e1", border: "1px solid #f3d27a", borderRadius: 14, padding: "12px 14px", margin: "12px 0", color: "#1c2840" }}>
+      <div style={{ font: "800 14.5px system-ui" }}>📱 Zet autocorrectie even uit</div>
+      <div style={{ fontSize: 13.5, color: "#556", margin: "4px 0 8px", lineHeight: 1.45 }}>
+        Anders verbetert je telefoon het woord vóór je het controleert, en dan oefen je niets.{" "}
+        {isApple
+          ? <>Op een iPhone: <b>Instellingen → Algemeen → Toetsenbord → Autocorrectie</b> uit.</>
+          : <>Op Android (Gboard): houd de <b>komma-toets</b> ingedrukt → tandwiel → <b>Tekstcorrectie → Autocorrectie</b> uit. Of typ langzaam en kijk vóór je op Controleer tikt of het woord nog is wat jij typte.</>}
+      </div>
+      <button onClick={sluit} style={{ border: "none", borderRadius: 999, padding: "8px 14px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" }}>Begrepen</button>
+    </div>
+  );
+}
+
 const W = { maxWidth: 560, margin: "0 auto", padding: "16px 16px 40px", fontFamily: "system-ui, Segoe UI, sans-serif", color: "#1c2840", background: "#f6f9fc", minHeight: "100vh", colorScheme: "light", boxSizing: "border-box" };
 const KNOP = { border: "none", borderRadius: 999, padding: "12px 20px", font: "800 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2e9e4f,#1f7a3a)", cursor: "pointer" };
 const KNOP2 = { ...KNOP, color: "#1c2840", background: "#eef2f7" };
@@ -212,7 +236,12 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
   const start = (g, lijst = null) => {
     const gekozen = lijst || kiesDictee(g, 10);
     try { localStorage.setItem("lk_dictee_groep", String(g)); } catch { /* */ }
-    setGroep(g); setItems(gekozen); setIdx(0); setUitkomst([]); setFase("dictee");
+    setGroep(g); setItems(gekozen); setIdx(0); setUitkomst([]);
+    // 10 sep 2026 (dagrapport: 8 starts, 0 afgemaakt, meesten stopten vóór het eerste woord):
+    // eerst een geluidscheck. Charley praat meteen in de tik zelf — telefoons staan spraak
+    // pas toe na een tik — en het kind start pas als het hem hoort. Anders lees-dictee.
+    setFase("check");
+    if (kanSpreken()) zeg("Hoi, ik ben Charley! Hoor je mij? Tik dan op de groene knop, dan beginnen we.");
     try { track("dictee_start", { groep: g, n: gekozen.length, stem: kanSpreken() ? 1 : 0, bron: lijst ? "school" : "lijst" }); } catch { /* */ }
   };
   const nogEenKeer = () => { if (!item) return; herhaalRef.current = 0; zeg(status === "luister" && !item.los ? `${item.zin} Schrijf op het woord: ${item.woord}.` : `Schrijf het woord: ${item.woord}.`, () => { if (status !== "goed" && status !== "fout") { setStatus("typen"); wachtOpTypen(); } }); };
@@ -223,7 +252,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
     const r = vergelijk(invoer, item.woord, item.ook);
     setStatus(r.goed ? "goed" : "fout");
     setUitkomst((u) => [...u.slice(0, idx), { goed: r.goed, getypt: invoer.trim(), letters: r.letters }]);
-    try { track("dictee_woord", { groep, goed: r.goed ? 1 : 0, cat: item.cat, hint: hint ? 1 : 0 }); } catch { /* */ }
+    try { track("dictee_woord", { groep, goed: r.goed ? 1 : 0, cat: item.cat, hint: hint ? 1 : 0 }); track("question_answered", { bron: "dictee", subject: "spelling", level: String(groep), is_correct: r.goed }); } catch { /* */ }
     try { if (userName) recordAnswerForPath({ playerName: userName, pathId: PAD_ID, isCorrect: r.goed }); } catch { /* */ }
     zeg(r.goed ? "Goed zo!" : `Bijna. Het is: ${item.woord}. ${spreekbaar(item.regel)}`);
   };
@@ -257,8 +286,32 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
             <button key={g} onClick={() => start(g)} style={{ ...KNOP, background: g === groep ? "linear-gradient(135deg,#2e9e4f,#1f7a3a)" : "#3a4754", minWidth: 84 }}>Groep {g}</button>
           ))}
         </div>
+        <AutocorrectieTip />
         <SchoolWoorden groep={groep} onStart={(lijst) => start(groep, lijst)} />
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Tip: zet het geluid aan. Tik op 🔊 als je Charley niet goed verstaat. {DICTEE[groep || 6].length} woorden per groep; elke keer een andere mix.</p>
+      </div>
+    );
+  }
+
+  if (fase === "check") {
+    return (
+      <div style={W}>
+        <button onClick={() => { stopAlles(); setFase("kies"); }} style={{ ...KNOP2, padding: "8px 14px", font: "700 14px system-ui", marginBottom: 12 }}>← Terug</button>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+          <div style={{ fontSize: 44 }}>🐕</div>
+          <div style={{ flex: 1, background: "#fff", border: "2px solid #cde3d6", borderRadius: 16, padding: "12px 14px", fontSize: 16, lineHeight: 1.5, color: "#1c2840" }}>
+            {kanSpreken() ? <>Hoi, ik ben Charley! <b>Hoor je mij?</b> {spreekt ? "🔊" : ""}</> : <>Op dit apparaat kan ik niet praten. Dan doen we een <b>lees-dictee</b>.</>}
+          </div>
+        </div>
+        <div style={{ background: "#fff8e1", border: "1px solid #f3d27a", borderRadius: 14, padding: "12px 14px", margin: "10px 0 14px", color: "#1c2840", fontSize: 14 }}>
+          🔊 <b>Zet je geluid aan</b> en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven.
+        </div>
+        <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
+          {kanSpreken() && <button onClick={() => { stopAlles(); try { track("dictee_check", { hoort: 1, groep }); } catch { /* */ } setFase("dictee"); }} style={{ ...KNOP, fontSize: 18, padding: "14px 22px" }}>✅ Ik hoor Charley, start!</button>}
+          {kanSpreken() && <button onClick={() => { herhaalRef.current = 0; zeg("Hoi, ik ben Charley! Hoor je mij nu?"); }} style={KNOP2}>🔊 Nog een keer</button>}
+          <button onClick={() => { stopAlles(); setLeesModus(true); try { track("dictee_check", { hoort: 0, groep }); } catch { /* */ } setFase("dictee"); }} style={KNOP2}>{kanSpreken() ? "Ik hoor niets → lees-dictee" : "▶ Start het lees-dictee"}</button>
+        </div>
+        <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Bij een lees-dictee zie je de zin 3 seconden mét het woord; daarna typ je het uit je hoofd.</p>
       </div>
     );
   }
@@ -329,7 +382,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
 
       <form onSubmit={(e) => { e.preventDefault(); controleer(); }} style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
         <input ref={inputRef} value={invoer} onChange={(e) => { setInvoer(e.target.value); clearTimeout(wachtRef.current); }} disabled={status === "goed" || status === "fout" || (status === "luister" && !leesModus)}
-          placeholder="typ het woord" autoComplete="off" autoCapitalize="none" spellCheck={false}
+          placeholder="typ het woord" autoComplete="off" autoCapitalize="none" autoCorrect="off" spellCheck={false} inputMode="text" enterKeyHint="done" name="lk_dictee_woord_zonder_correctie" data-gramm="false"
           style={{ flex: "1 1 200px", border: "2px solid #9fb0c6", borderRadius: 12, padding: "12px 14px", font: "800 20px system-ui", color: "#1c2840", background: "#fff", colorScheme: "light", minWidth: 0 }} />
         {status === "goed" || status === "fout" ? (
           <button type="button" onClick={volgende} style={KNOP}>{idx + 1 < items.length ? "Volgende →" : "Klaar →"}</button>

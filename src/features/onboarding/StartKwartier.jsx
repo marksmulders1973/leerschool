@@ -397,6 +397,8 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   const beantwoord = (vraag, isGoed) => {
     setScore((s) => ({ goed: s.goed + (isGoed ? 1 : 0), totaal: s.totaal + 1 }));
     track("startkwartier_vraag", { nummer: stap?.nummer, pad: vraag.pathId, goed: isGoed });
+    // meetfix 10 sep 2026: start-kwartier-vragen tellen mee als beantwoorde vragen (dagrapport/Noord-ster)
+    track("question_answered", { bron: "startkwartier", pad: vraag.pathId, is_correct: isGoed });
     try {
       recordAnswerForPath({ playerName: userName || "Speler", pathId: vraag.pathId, isCorrect: isGoed, userId: authUser?.id || null });
     } catch { /* */ }
