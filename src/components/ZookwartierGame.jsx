@@ -471,8 +471,17 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
     if (!samen || !room) return;
     let game = false; try { game = new URLSearchParams(window.location.search).get("game") === "1"; } catch { /* */ }
     if (!game || gameModusRef.current) return;
-    const t = setTimeout(() => { const inv = gameInviteRef.current; setGameHost(!inv); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); try { track("game_via_link", { gast: inv ? 1 : 0 }); } catch { /* */ } }, 2500);
-    return () => clearTimeout(t);
+    // tot 8 s wachten op een uitnodiging (de spelleider zendt elke 3 s; de relay moet eerst verbinden) — zodra die er is: gast, anders spelleider
+    const start = Date.now();
+    const t = setInterval(() => {
+      const inv = gameInviteRef.current;
+      if (!inv && Date.now() - start < 8000) return;
+      clearInterval(t);
+      if (gameModusRef.current) return;
+      setGameHost(!inv); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true);
+      try { track("game_via_link", { gast: inv ? 1 : 0, wacht_ms: Date.now() - start }); } catch { /* */ }
+    }, 500);
+    return () => clearInterval(t);
   }, [samen, room?.code]); // eslint-disable-line
   const onGameKlaar = (sc) => {
     if (sc?.munten > 0) { setMeta((m) => (m ? { ...m, coins: (m.coins || 0) + sc.munten } : m)); flits(`🎮 ${sc.gewonnen ? "Gewonnen!" : "Goed gespeeld!"} +${sc.munten} 🪙`); }
