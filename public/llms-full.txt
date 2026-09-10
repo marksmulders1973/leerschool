@@ -206,3 +206,5 @@ https://leerkwartier.app/vandaag
 - Weekmail voor ouders met reageer-knop; vriend van de Ooievaarspas (gemeente Den Haag) vanaf 1 januari 2027: https://leerkwartier.app/bedankt.html
 
 - [Wie is de imposter?](https://leerkwartier.app/wie-is-de-imposter.html): gratis klas-game in het 3D-park; taken zijn sommen/taalvragen op eigen niveau, 6-10 spelers (bots vullen aan), parkcode voor de klas, leerkracht kiest vak/niveau, klassement per parkcode, geen chat.
+
+- [Voorlopig schooladvies groep 7/8](https://leerkwartier.app/voorlopig-schooladvies.html): kijkmoment in groep 7, tl/havo/vwo uitgelegd, vaste data (voorlopig advies 10-31 jan, Doorstroomtoets eerste helft feb, definitief uiterlijk 24 mrt, bijstellen omhoog), wat een ouder kan doen; Kwartiercheck.
