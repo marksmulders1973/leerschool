@@ -54,7 +54,7 @@
 |---|---|---|
 | di 8 sep | ~8 (voorstel: ochtend 2,5 + middag/avond 5,5) | 💻📧 Mail-check incl. hallo@ (Kinderhulp: september-nieuwsbrief) · Kinderhulp-keten getest · Ooievaarspas op bedankt.html + LinkedIn-concept · db-fix weekrapport-vangnet · dagrapport + PDF · testaccount-filter (profiles_echt) · LOWAN batch 2 (45) · park: koepelbergen/hangbrug/kabelbaan v604, berijdbare auto's v605 · weekmail reageer-blok · samen bouwen v606 (park_rooms, Realtime, tests) — tot ~00:00 |
 | wo 9 sep | ~11 (06:20-08:00 + 13:00-16:55 + 19:00-23:30, voorstel) | ☁️ Cloudflare-account + wrangler-OAuth · park-relay (Durable Object) gebouwd/getest/live v607 · laad-overlay + leerkracht-parkcode v608 · game fase 3 (vak/niveau/2 imposters, klassement) v612 · rol-loting echt-eerst v613 · getikt=af naar bedank-zeppelin + max 10 v614 · dagrapport 9 sep |
-| do 10 sep | ~1 (07:00-08:00, voorstel) | dagrapport (mail, cijfers, Meta via CDP, controle-agent, Meesterplan-PDF) · autocorrectie-tip dictee v631 |
+| do 10 sep | ~9 (07:00-08:00, 08:00-14:10, 15:30-16:30; voorstel) | dagrapport ochtend + avond (Kinderhulp-nieuwsbrief ontleed) · game v633-640 (online, WhatsApp-uitnodiging, fixes) · dictee v638 (homofonen, klaarzetten) · /doorgeven.html · kijkmoment-groep-7-pagina · outreach LOWAN 3 (45) + scholen batch 2 (15) · twee-weken-plan · concept Frieda |
 | ma 7 sep | ~4 (voorstel) | 💻 Activatie-nulmeting (docs/ACTIVATIE-NULMETING-SEP2026.md) · Start-kwartier v602 (08:10) + QR→start-kwartier + ouder-mail v603 (10:40) · stadspas-inventarisatie in GEMEENTE-BETAALT-PLAN |
 
 ## Week 36 (ma 31 aug – zo 6 sep)
