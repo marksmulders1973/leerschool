@@ -133,7 +133,8 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         setN((n) => n + 1);
       } else {
         if (d.t === "invite" || d.t === "lobby") { setHostNaam(d.naam || ""); if (d.spelers) setLobby(d.spelers); return; }
-        if (d.t === "rol" && d.voor === mijnId) { stRef.current = stRef.current || { spelerId: mijnId, spelers: [], stations: [], log: [], fase: "intro", takenKlaar: 0, takenTotaal: 0, spelTijd: 0 }; stRef.current.mijnRol = d.rol; // 10 sep: placeholder mét stations (rol kwam vóór de eerste snapshot → "stations is not iterable") const m = stRef.current.spelers?.find((x) => x.id === mijnId); if (m) m.rol = d.rol; return; }
+        // 10 sep 2026: placeholder mét stations — de rolkaart kwam soms vóór de eerste snapshot ("stations is not iterable" → park van de gast viel om)
+        if (d.t === "rol" && d.voor === mijnId) { stRef.current = stRef.current || { spelerId: mijnId, spelers: [], stations: [], log: [], fase: "intro", takenKlaar: 0, takenTotaal: 0, spelTijd: 0 }; stRef.current.mijnRol = d.rol; const m = stRef.current.spelers?.find((x) => x.id === mijnId); if (m) m.rol = d.rol; return; }
         if (d.t === "snap") { const vorige = stRef.current?.fase; stRef.current = pasSnapshotToe(stRef.current, d.st, mijnId); const m = speler(stRef.current, mijnId); if (m && stRef.current.mijnRol) m.rol = stRef.current.mijnRol; if (vorige === "vergadering" && stRef.current.fase !== "vergadering" && stRef.current.vergadering?.uitkomst) { const u = stRef.current.vergadering.uitkomst; if (uitkomstGezien.current !== u.tekst) { uitkomstGezien.current = u.tekst; setLaatsteUitkomst(u); setTimeout(() => setLaatsteUitkomst(null), 4500); } } setN((n) => n + 1); return; }
         if (d.t === "stop") { onStop && onStop(); return; }
       }
