@@ -1665,6 +1665,27 @@ export default function MijnPagina({
                               ? <>Je bent bezig: blokje {stand.idx + 1} van {stand.blokjes.length} · <strong style={{ color: "var(--color-text)" }}>{stand.blokjes[stand.idx]?.titel}</strong></>
                               : <>{gedaan ? "Nog een rondje? " : "Vandaag: "}<strong style={{ color: "var(--color-text)" }}>{planSamenvatting(plan)}</strong>{plan.reden === "klaargezet" ? "" : ` · ${plan.uitleg}`}</>}
                           </div>
+                          {/* Mark 10 sep 2026: "kan het kind ook zijn eerste keuze kiezen?" — de blokjes zijn
+                              tikbaar: tik er één en het kwartier begint dáármee, de rest volgt. */}
+                          {!bezig && plan.blokjes.length > 1 && (
+                            <div style={{ marginBottom: 10 }}>
+                              <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 5 }}>Waar wil je mee beginnen?</div>
+                              <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                                {plan.blokjes.map((b, i) => (
+                                  <button key={i} type="button"
+                                    onClick={() => {
+                                      const eerst = [b, ...plan.blokjes.filter((x) => x !== b)];
+                                      startKwartierPlan({ ...plan, blokjes: eerst });
+                                      try { track("vandaag_knop", { reden: plan.reden, bezig: 0, gedaan: gedaan ? 1 : 0, eerste: b.soort, gekozen: 1 }); } catch { /* */ }
+                                      onVandaagKwartier();
+                                    }}
+                                    style={{ padding: "7px 11px", borderRadius: 999, border: "1px solid rgba(105,240,174,0.45)", background: "rgba(0,200,83,0.10)", color: "var(--color-text)", cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700 }}>
+                                    {b.soort === "klaargezet" ? "💛 klaargezet" : b.titel}
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          )}
                           <button
                             onClick={() => { if (!bezig) startKwartierPlan(plan); try { track("vandaag_knop", { reden: plan.reden, bezig: bezig ? 1 : 0, gedaan: gedaan ? 1 : 0 }); } catch { /* */ } onVandaagKwartier(); }}
                             style={{
