@@ -18,6 +18,8 @@
 
 ## 🔴 Nu doen (deze week)
 
+- **🏫 Scholen batch 2 loopt (akkoord 10 sep):** 15 verstuurd 10 sep · **vr 11 sep 60** (Claude, ~08:00, rij 16-75) · **ma 14 sep 36** (rij 76-111). Daarna LOWAN batch 4 (139 over) na 'ga'.
+
 - **📋 PLAN 10 SEP** (Claude uit zichzelf): dagrapport met dictee-/game-/betaal-blokken · FB-bio bijwerken · meetfix start-kwartier · concept /doorgeven · welkompagina mobiel. **Mark:** "ga" LOWAN 3 · dashboard-login · game op 2 telefoons · "pagina's"/"alles" (game aankondigen) · LinkedIn Ooievaarspas + dictee · Stripe test-account · offline uren wk 37.
 
 - **💳 Stripe test-account (kan nú al, geen KvK nodig):** maak op stripe.com een account op hallo@leerkwartier.app en zet in Vercel de TEST-keys (`STRIPE_SECRET_KEY` sk_test_…, `STRIPE_WEBHOOK_SECRET`, 3 price-id's uit test-modus). Dan test Claude de hele betaalketen incl. factuurmail vóór 28 sep. Live-verificatie (KvK + Knab-IBAN) pas 5-12 okt. Plan: docs/BETALING-PLAN.md.
