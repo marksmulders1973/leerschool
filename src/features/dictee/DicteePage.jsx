@@ -86,17 +86,115 @@ export function spreekbaar(tekst) {
 // ("Schrijf op het woord: …"), bij een fout spelt hij het woord. Lijst blijft op
 // dit apparaat staan (localStorage), max 30 woorden. Hoort straks bij Familie,
 // nu gratis (paywall UIT tot 2027). Foto-import = latere stap (tekstherkenning).
+// 🔊 Klinkt-hetzelfde-woorden (Mark 10 sep 2026: "ik zei mail, spelde expres meel — klinkt hetzelfde,
+// schrijf je anders"). Bij een los schoolwoord zonder zin zegt Charley er een zin bij, zodat het
+// kind weet welk woord bedoeld is. Sleutel = het woord zoals het in de lijst staat (kleine letters).
+const HOMOFONEN = {
+  mail: "Ik stuur je een mail op de computer.", meel: "Van meel bak je brood.",
+  hart: "Mijn hart klopt snel.", hard: "De steen is hard.",
+  wij: "Wij gaan naar school.", wei: "De koe staat in de wei.",
+  zij: "Zij is mijn zus.", zei: "Hij zei dat het goed was.",
+  eis: "De eis was streng.", ijs: "Ik eet een ijsje van ijs.",
+  peil: "Het water staat op peil.", pijl: "Hij schiet een pijl.",
+  steil: "De berg is steil.", stijl: "Dat is een mooie stijl van schrijven.",
+  reizen: "Wij reizen naar Spanje.", rijzen: "Het brood moet rijzen.",
+  leiden: "Wij leiden de hond aan de riem.", lijden: "Hij moet veel pijn lijden.",
+  rauw: "Het vlees is nog rauw.", rouw: "Zij is in de rouw na het verlies.",
+  nog: "Ik wil nog een koekje.", noch: "Hij wil noch thee noch koffie.",
+  moet: "Ik moet naar huis.", moed: "Hij heeft veel moed.",
+  wil: "Ik wil spelen.", wild: "Het dier is wild.",
+  bos: "Wij lopen in het bos.", bosch: "Den Bosch is een stad.",
+  hei: "De hei is paars.", hij: "Hij is mijn broer.",
+  lei: "Zij schreef op een lei.", lij: "De boot ligt aan lij.",
+  vlijt: "Met vlijt kom je ver.", vleit: "Hij vleit haar met mooie woorden.",
+  weiden: "De schapen weiden in het gras.", wijden: "Zij wijden een kerk in.",
+  bei: "De bei is een bes.", bij: "De bij zoemt om de bloem.",
+  rei: "De rei van dansers.", rij: "Ga in de rij staan.",
+  kou: "Ik heb het koud van de kou.", kauw: "Een kauw is een zwarte vogel.",
+  gauw: "Kom gauw!", gouw: "De gouw is een streek.",
+  raad: "Ik weet geen raad.", raat: "Bijen maken een honingraat.",
+  graat: "Er zit een graat in de vis.", graad: "Het is twintig graden, één graad warmer.",
+  wand: "De wand is wit.", want: "Ik ga naar bed, want ik ben moe.",
+  wat: "Wat is dat?", wad: "Het wad valt droog bij eb.",
+  hout: "De tafel is van hout.", houdt: "Zij houdt van paarden.",
+  wordt: "Hij wordt tien.", word: "Ik word moe.",
+  vind: "Ik vind dit leuk.", vindt: "Zij vindt dit leuk.",
+  bestuur: "Het bestuur vergadert.", bestuurt: "Hij bestuurt de auto.",
+  weet: "Ik weet het antwoord.", weed: "Weed is een drug.",
+  nacht: "In de nacht is het donker.", dacht: "Ik dacht aan jou.",
+};
 function parseWoorden(tekst) {
   const uit = [];
   for (let r of String(tekst || "").split(/[\n,;]+/)) {
     r = r.replace(/^\s*(\d+[.)]|[-•*])\s*/, "").trim();
-    if (!r || r.length > 30 || /\s.*\s.*\s/.test(r)) continue; // geen hele zinnen
-    if (!uit.some((w) => w.toLowerCase() === r.toLowerCase())) uit.push(r);
+    if (!r) continue;
+    // "mail (computer)" of "mail - ik stuur je een mail": woord + eigen context (Mark 10 sep)
+    let context = "";
+    const m = r.match(/^([^\s(–:-][^(–:-]*?)\s*(?:\(([^)]+)\)|[–:-]\s*(.+))\s*$/);
+    if (m) { r = m[1].trim(); context = (m[2] || m[3] || "").trim(); }
+    if (r.length > 30 || /\s.*\s.*\s/.test(r)) continue; // geen hele zinnen als woord
+    if (!uit.some((w) => w.woord.toLowerCase() === r.toLowerCase())) uit.push({ woord: r, context });
   }
   return uit.slice(0, 30);
 }
+/** context-zin die Charley erbij zegt: eigen context uit de lijst, anders de ingebouwde klinkt-hetzelfde-zin */
+function contextVoor(w, eigen) {
+  if (eigen) return /\s/.test(eigen) ? eigen : `zoals in: ${eigen}`;
+  return HOMOFONEN[String(w).toLowerCase()] || "";
+}
 function schoolItems(woorden) {
-  return woorden.map((w) => ({ zin: w, woord: w, los: true, cat: "school", regel: `Zo schrijf je het: ${w.split("").join("-")}.` }));
+  return woorden.map((o) => {
+    const w = typeof o === "string" ? o : o.woord;
+    const ctx = contextVoor(w, typeof o === "string" ? "" : o.context);
+    return { zin: w, woord: w, los: true, cat: "school", context: ctx, regel: `Zo schrijf je het: ${w.split("").join("-")}.` };
+  });
+}
+// 📬 Klaarzetten voor je kind of je klas (Mark 10 sep 2026: "als ouder wil ik die woorden als dictee
+// kunnen klaarzetten voor je kind, of als leraar voor de klas"). De lijst gaat naar Supabase
+// (dictee_lijsten) onder een code van 6 tekens; het kind opent /dictee?lijst=CODE en de lijst
+// staat klaar op zijn apparaat. Zelfde patroon als parkcode en klaargezette oefeningen.
+// 🔑 Code invullen (kind/leerling) — en ?lijst=CODE in de link opent de lijst vanzelf
+function LijstCode({ onGeladen }) {
+  const [code, setCode] = useState("");
+  const [stand, setStand] = useState("");
+  const laad = async (c) => {
+    setStand("Even zoeken…");
+    try { const l = await haalLijst(c); if (!l) { setStand("Geen lijst met deze code."); return; } setStand(""); onGeladen(l); }
+    catch { setStand("Ophalen lukte niet. Probeer het nog eens."); }
+  };
+  useEffect(() => {
+    try { const c = new URLSearchParams(window.location.search).get("lijst"); if (c) { setCode(c.toUpperCase()); laad(c); } } catch { /* */ }
+  }, []); // eslint-disable-line
+  return (
+    <div style={{ background: "#fff", border: "2px solid #cde3d6", borderRadius: 14, padding: "12px 16px", margin: "14px 0 0", color: "#1c2840" }}>
+      <div style={{ font: "900 15px system-ui" }}>🔑 Code gekregen van je ouder of juf?</div>
+      <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
+        <input value={code} onChange={(e) => setCode(e.target.value.toUpperCase())} placeholder="bijv. K7PX2M" maxLength={6} autoCapitalize="characters" autoCorrect="off" spellCheck={false} style={{ flex: "1 1 120px", padding: "10px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", colorScheme: "light", font: "800 18px system-ui", letterSpacing: 3, minWidth: 0 }} />
+        <button onClick={() => laad(code)} disabled={code.length !== 6} style={{ ...KNOP, opacity: code.length !== 6 ? .5 : 1 }}>▶ Start</button>
+      </div>
+      {stand && <div style={{ fontSize: 13, marginTop: 6, color: "#7a5a00" }}>{stand}</div>}
+    </div>
+  );
+}
+const CODE_TEKENS = "ABCDEFGHJKLMNPQRSTUVWXYZ23456789";
+function maakCode() { let c = ""; for (let i = 0; i < 6; i++) c += CODE_TEKENS[Math.floor(Math.random() * CODE_TEKENS.length)]; return c; }
+async function zetLijstKlaar({ naam, woorden, rol }) {
+  const { data: { user } = {} } = await supabase.auth.getUser();
+  if (!user) throw new Error("geen sessie");
+  for (let poging = 0; poging < 4; poging++) {
+    const code = maakCode();
+    const { error } = await supabase.from("dictee_lijsten").insert({ code, naam, woorden, door: user.id, rol });
+    if (!error) return code;
+    if (!/duplicate|unique/i.test(error.message)) throw error;
+  }
+  throw new Error("code maken lukte niet");
+}
+async function haalLijst(code) {
+  const c = String(code || "").trim().toUpperCase();
+  if (!/^[A-Z0-9]{6}$/.test(c)) return null;
+  const { data } = await supabase.from("dictee_lijsten").select("code,naam,woorden").eq("code", c).maybeSingle();
+  if (data) { try { supabase.rpc("dictee_lijst_geopend", { p_code: c }); } catch { /* */ } }
+  return data || null;
 }
 function SchoolWoorden({ groep, onStart }) {
   const [bewaard, setBewaard] = useState(() => { try { return JSON.parse(localStorage.getItem("lk_dictee_school") || "null"); } catch { return null; } });
@@ -106,11 +204,29 @@ function SchoolWoorden({ groep, onStart }) {
   const woorden = parseWoorden(tekst);
   const bewaar = () => {
     if (woorden.length < 3) return;
-    const lijst = { naam: naam.trim() || "Woorden van school", woorden, datum: new Date().toISOString().slice(0, 10) };
+    const lijst = { naam: naam.trim() || "Woorden van school", woorden: woorden.map((w) => (w.context ? `${w.woord} (${w.context})` : w.woord)), datum: new Date().toISOString().slice(0, 10) };
     try { localStorage.setItem("lk_dictee_school", JSON.stringify(lijst)); } catch { /* */ }
     setBewaard(lijst); setOpen(false);
     try { track("dictee_school_bewaard", { n: woorden.length, groep }); } catch { /* */ }
   };
+  const [klaar, setKlaar] = useState(() => { try { return JSON.parse(localStorage.getItem("lk_dictee_school_code") || "null"); } catch { return null; } });
+  const [bezig, setBezig] = useState(false);
+  const [melding, setMelding] = useState("");
+  const zetKlaar = async (rol) => {
+    if (!bewaard || bezig) return;
+    setBezig(true); setMelding("");
+    try {
+      const code = await zetLijstKlaar({ naam: bewaard.naam, woorden: bewaard.woorden, rol });
+      const info = { code, rol, naam: bewaard.naam, n: bewaard.woorden.length, datum: bewaard.datum };
+      setKlaar(info); try { localStorage.setItem("lk_dictee_school_code", JSON.stringify(info)); } catch { /* */ }
+      try { track("dictee_klaargezet", { rol, n: bewaard.woorden.length }); } catch { /* */ }
+    } catch (e) { setMelding("Klaarzetten lukte niet. Probeer het nog eens."); }
+    setBezig(false);
+  };
+  const link = klaar ? `https://leerkwartier.app/dictee?lijst=${klaar.code}` : "";
+  const waTekst = klaar ? (klaar.rol === "leerkracht"
+    ? `Dictee-woorden van deze week staan klaar in Leerkwartier. Open deze link, of typ code ${klaar.code} op leerkwartier.app/dictee: ${link}`
+    : `Je dictee-woorden staan klaar! Open deze link en Charley leest ze voor: ${link}`) : "";
   const pil = <span style={{ display: "inline-block", padding: "2px 9px", borderRadius: 20, background: "#fff3c4", border: "1px solid #e6c65a", color: "#7a5a00", font: "800 11px system-ui", marginLeft: 6, verticalAlign: "middle" }}>Familie · nu gratis</span>;
   return (
     <div style={{ background: "#fff", border: "2px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "14px 0", color: "#1c2840" }}>
@@ -121,15 +237,37 @@ function SchoolWoorden({ groep, onStart }) {
           <div style={{ fontSize: 14 }}><b>{bewaard.naam}</b> · {bewaard.woorden.length} woorden · bewaard {bewaard.datum}</div>
           <div style={{ fontSize: 13, color: "#556", margin: "4px 0 10px" }}>{bewaard.woorden.join(" · ")}</div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-            <button onClick={() => { try { track("dictee_school_start", { n: bewaard.woorden.length, groep }); } catch { /* */ } onStart(schoolItems(bewaard.woorden)); }} style={KNOP}>▶ Dictee met deze woorden</button>
+            <button onClick={() => { try { track("dictee_school_start", { n: bewaard.woorden.length, groep }); } catch { /* */ } onStart(schoolItems(parseWoorden(bewaard.woorden.join("\n")))); }} style={KNOP}>▶ Dictee met deze woorden</button>
             <button onClick={() => setOpen(true)} style={KNOP2}>✏️ Wijzigen</button>
+          </div>
+          <div style={{ marginTop: 12, paddingTop: 10, borderTop: "1px dashed #cde3d6" }}>
+            <div style={{ font: "800 14px system-ui" }}>📬 Klaarzetten voor je kind of je klas</div>
+            <div style={{ fontSize: 13, color: "#556", margin: "4px 0 8px" }}>Je krijgt een code en een link. Op het apparaat van je kind (of op het bord) staat de lijst dan klaar, en Charley leest hem daar voor.</div>
+            {!klaar || klaar.naam !== bewaard.naam || klaar.n !== bewaard.woorden.length ? (
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                <button onClick={() => zetKlaar("ouder")} disabled={bezig} style={{ ...KNOP, padding: "9px 14px", font: "800 13.5px system-ui", opacity: bezig ? .6 : 1 }}>👪 Zet klaar voor mijn kind</button>
+                <button onClick={() => zetKlaar("leerkracht")} disabled={bezig} style={{ ...KNOP2, padding: "9px 14px", font: "800 13.5px system-ui" }}>🧑‍🏫 Zet klaar voor mijn klas</button>
+              </div>
+            ) : (
+              <div style={{ background: "#eef6ff", border: "1px solid #bcd6f5", borderRadius: 12, padding: "10px 12px" }}>
+                <div style={{ font: "900 22px system-ui", letterSpacing: 3, color: "#1f4fa8" }}>{klaar.code}</div>
+                <div style={{ fontSize: 13, color: "#556", margin: "2px 0 8px" }}>{klaar.rol === "leerkracht" ? "Zet deze code op het bord: leerlingen typen hem op leerkwartier.app/dictee. Of deel de link." : "Deel de link met je kind, of laat het de code typen op leerkwartier.app/dictee."}</div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <a href={`https://wa.me/?text=${encodeURIComponent(waTekst)}`} target="_blank" rel="noopener noreferrer" onClick={() => { try { track("dictee_klaargezet_deel", { via: "whatsapp" }); } catch { /* */ } }} style={{ ...KNOP, background: "linear-gradient(135deg,#25d366,#128c7e)", textDecoration: "none", padding: "9px 14px", font: "800 13.5px system-ui" }}>📲 Deel via WhatsApp</a>
+                  <button onClick={async () => { try { await navigator.clipboard.writeText(link); setMelding("Link gekopieerd ✓"); } catch { setMelding("Kopiëren lukte niet"); } setTimeout(() => setMelding(""), 2500); }} style={{ ...KNOP2, padding: "9px 14px", font: "800 13.5px system-ui" }}>🔗 Kopieer link</button>
+                  <button onClick={() => { setKlaar(null); try { localStorage.removeItem("lk_dictee_school_code"); } catch { /* */ } }} style={{ ...KNOP2, padding: "9px 14px", font: "800 13.5px system-ui" }}>Nieuwe code</button>
+                </div>
+              </div>
+            )}
+            {melding && <div style={{ fontSize: 13, marginTop: 6, color: melding.includes("✓") ? "#146c43" : "#b42318" }}>{melding}</div>}
           </div>
         </div>
       )}
       {open && (
         <div>
           <input value={naam} onChange={(e) => setNaam(e.target.value)} placeholder="naam van de lijst, bv. week 37 of thema herfst" style={{ width: "100%", boxSizing: "border-box", padding: "9px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", colorScheme: "light", fontSize: 14, marginBottom: 8 }} />
-          <textarea value={tekst} onChange={(e) => setTekst(e.target.value)} rows={6} placeholder={"één woord per regel, of met komma's:\nvriendinnen, pannenkoek, zonnebloem, …"} style={{ width: "100%", boxSizing: "border-box", padding: "10px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", colorScheme: "light", font: "600 15px system-ui", lineHeight: 1.5 }} />
+          <div style={{ fontSize: 12.5, color: "#556", margin: "0 0 6px" }}>Klinkt een woord als een ander woord (mail/meel, hart/hard)? Zet erachter tussen haakjes waar het over gaat: <b>mail (computer)</b>. Charley zegt dat er dan bij. Bekende twijfelwoorden krijgen vanzelf een zin.</div>
+          <textarea value={tekst} onChange={(e) => setTekst(e.target.value)} rows={6} placeholder={"één woord per regel, of met komma's:\nvriendinnen, pannenkoek, mail (computer), …"} style={{ width: "100%", boxSizing: "border-box", padding: "10px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", colorScheme: "light", font: "600 15px system-ui", lineHeight: 1.5 }} />
           <div style={{ fontSize: 12.5, color: woorden.length >= 3 ? "#146c43" : "#7a5a00", margin: "6px 0 10px" }}>{woorden.length} {woorden.length === 1 ? "woord" : "woorden"} herkend{woorden.length < 3 ? " · minstens 3 nodig" : ""}{woorden.length >= 30 ? " · maximaal 30" : ""}</div>
           <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
             <button onClick={bewaar} disabled={woorden.length < 3} style={{ ...KNOP, opacity: woorden.length < 3 ? .5 : 1 }}>Bewaar de lijst</button>
@@ -228,7 +366,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
       const t = setTimeout(() => { setToonZin(false); setStatus("typen"); setTimeout(() => inputRef.current?.focus(), 50); }, 3500);
       return () => clearTimeout(t);
     }
-    const t = setTimeout(() => zeg(item.los ? `Schrijf op het woord: ${item.woord}.` : `${item.zin} Schrijf op het woord: ${item.woord}.`, () => { setStatus("typen"); setTimeout(() => inputRef.current?.focus(), 50); wachtOpTypen(); }), 300);
+    const t = setTimeout(() => zeg(item.los ? `Schrijf op het woord: ${item.woord}.${item.context ? ` ${item.context}` : ""}` : `${item.zin} Schrijf op het woord: ${item.woord}.`, () => { setStatus("typen"); setTimeout(() => inputRef.current?.focus(), 50); wachtOpTypen(); }), 300);
     return () => { clearTimeout(t); stopAlles(); };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [fase, idx, item, leesModus]);
@@ -244,7 +382,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
     if (kanSpreken()) zeg("Hoi, ik ben Charley! Hoor je mij? Tik dan op de groene knop, dan beginnen we.");
     try { track("dictee_start", { groep: g, n: gekozen.length, stem: kanSpreken() ? 1 : 0, bron: lijst ? "school" : "lijst" }); } catch { /* */ }
   };
-  const nogEenKeer = () => { if (!item) return; herhaalRef.current = 0; zeg(status === "luister" && !item.los ? `${item.zin} Schrijf op het woord: ${item.woord}.` : `Schrijf het woord: ${item.woord}.`, () => { if (status !== "goed" && status !== "fout") { setStatus("typen"); wachtOpTypen(); } }); };
+  const nogEenKeer = () => { if (!item) return; herhaalRef.current = 0; zeg(status === "luister" && !item.los ? `${item.zin} Schrijf op het woord: ${item.woord}.` : `Schrijf het woord: ${item.woord}.${item.los && item.context ? ` ${item.context}` : ""}`, () => { if (status !== "goed" && status !== "fout") { setStatus("typen"); wachtOpTypen(); } }); };
 
   const controleer = () => {
     if (!item || !invoer.trim() || status === "goed" || status === "fout") return;
@@ -287,6 +425,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
           ))}
         </div>
         <AutocorrectieTip />
+        <LijstCode onGeladen={(lijst) => { const items = schoolItems(parseWoorden((lijst.woorden || []).join("\n"))); try { localStorage.setItem("lk_dictee_school", JSON.stringify({ naam: lijst.naam, woorden: lijst.woorden, datum: new Date().toISOString().slice(0, 10), code: lijst.code })); } catch { /* */ } try { track("dictee_lijst_geopend", { code: lijst.code, n: items.length }); } catch { /* */ } start(groep, items); }} />
         <SchoolWoorden groep={groep} onStart={(lijst) => start(groep, lijst)} />
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Tip: zet het geluid aan. Tik op 🔊 als je Charley niet goed verstaat. {DICTEE[groep || 6].length} woorden per groep; elke keer een andere mix.</p>
       </div>
