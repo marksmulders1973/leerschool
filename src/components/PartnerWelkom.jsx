@@ -15,7 +15,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
-import { actievePartnerCode, partnerFamilieTot, partnerCodeBekend } from "../features/referral/partnerCode.js";
+import { actievePartnerCode, partnerFamilieTot, partnerCodeBekend, codeUitUrl } from "../features/referral/partnerCode.js";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import { track } from "../utils.js";
 
@@ -97,8 +97,8 @@ function bepaalVariant() {
     viaQrFlyer = params.get("utm_source") === "qr-flyer";
     // Eerst de URL zelf lezen: vangPartnerCode() (App-effect) draait pas ná
     // de eerste render, dus localStorage kan hier nog leeg zijn.
-    const uitUrl = (params.get("partner") || "").trim().toUpperCase();
-    code = (/^[A-Z0-9-]{1,20}$/.test(uitUrl) ? uitUrl : null) || actievePartnerCode();
+    // ?partner=CODE óf een nieuwsbrief-utm (idee 1, 10 sep) — zie codeUitUrl.
+    code = codeUitUrl(params).code || actievePartnerCode();
   } catch { /* geen URL-toegang = geen banner */ }
 
   if (code === "DEELACTIE2027") return null;
