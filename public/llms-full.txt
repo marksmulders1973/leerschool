@@ -8,7 +8,7 @@
 > Dit bestand is bedoeld voor taalmodellen en AI-zoekmachines; een korter
 > overzicht met links staat in https://leerkwartier.app/llms.txt
 
-Laatst bijgewerkt: 16 augustus 2026.
+Laatst bijgewerkt: 10 september 2026.
 
 ## Wat is Leerkwartier?
 
@@ -204,3 +204,5 @@ https://leerkwartier.app/vandaag
 - Het 3D-park (vulkaan, besneeuwde bergen, hangbrug, kabelbaan, slee, auto's, zeppelin, maatje Charley): https://leerkwartier.app/park.html
 - Dictee met Charley, groep 4-8, met voorleesstem en spellingregel bij een fout: https://leerkwartier.app/dictee-oefenen.html
 - Weekmail voor ouders met reageer-knop; vriend van de Ooievaarspas (gemeente Den Haag) vanaf 1 januari 2027: https://leerkwartier.app/bedankt.html
+
+- [Wie is de imposter?](https://leerkwartier.app/wie-is-de-imposter.html): gratis klas-game in het 3D-park; taken zijn sommen/taalvragen op eigen niveau, 6-10 spelers (bots vullen aan), parkcode voor de klas, leerkracht kiest vak/niveau, klassement per parkcode, geen chat.
