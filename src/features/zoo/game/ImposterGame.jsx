@@ -25,7 +25,12 @@ const HUD_POS = (_e, _c, size) => [size.width / 2, size.height / 2];
 const KNOP = { pointerEvents: "auto", border: "3px solid #fff", borderRadius: 999, padding: "12px 20px", font: "900 16px system-ui", color: "#fff", background: "linear-gradient(135deg,#2f6fd6,#1f4fa8)", boxShadow: "0 5px 18px rgba(0,0,0,.45)", cursor: "pointer", whiteSpace: "nowrap" };
 const KNOP_ROOD = { ...KNOP, background: "linear-gradient(135deg,#e2574c,#b0332a)" };
 const KNOP_GRIJS = { ...KNOP, background: "#3a4754", border: "2px solid #6b7785", font: "800 14px system-ui", padding: "9px 14px" };
-const KAART = { pointerEvents: "auto", background: "#fffef8", color: "#1c2840", borderRadius: 18, padding: "18px 20px", width: "min(460px, 94vw)", boxShadow: "0 12px 40px rgba(0,0,0,.45)", font: "500 15px/1.5 system-ui" };
+// Mark 10 sep 2026: "de uitleg van hoe imposter werkt is niet scrollbaar op de telefoon" —
+// de lobbykaart is hoger dan een telefoonscherm (1021 px op 390x700); een gecentreerde
+// grid zonder overflow sneed de bovenkant af. Nu: overlay = scrollbare flex-kolom, kaart
+// met margin:auto (gecentreerd als hij past, scrollbaar als hij niet past).
+const OVERLAY = (kleur) => ({ position: "absolute", inset: 0, display: "flex", flexDirection: "column", alignItems: "center", overflowY: "auto", WebkitOverflowScrolling: "touch", overscrollBehavior: "contain", touchAction: "pan-y", pointerEvents: "auto", padding: "12px 0", boxSizing: "border-box", background: kleur });
+const KAART = { pointerEvents: "auto", background: "#fffef8", color: "#1c2840", borderRadius: 18, padding: "18px 20px", width: "min(460px, 94vw)", boxShadow: "0 12px 40px rgba(0,0,0,.45)", font: "500 15px/1.5 system-ui", margin: "auto", flexShrink: 0 };
 const schoon = (s) => String(s || "").replace(/\*\*/g, "").replace(/`/g, "");
 
 function Bot({ sp, stRef, heightRef, soepel }) {
@@ -250,7 +255,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   if (!st || !mij) {
     return (
       <Html fullscreen zIndexRange={[12, 0]} style={{ pointerEvents: "none" }} calculatePosition={HUD_POS}>
-        <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.88)" }}>
+        <div style={OVERLAY("rgba(10,20,40,.88)")}>
           <div style={KAART}>
             <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
             <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", margin: "0 0 10px" }}>
@@ -277,7 +282,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
 
       <Html fullscreen zIndexRange={[12, 0]} style={{ pointerEvents: "none" }} calculatePosition={HUD_POS}>
         {st.fase === "intro" && host && (
-          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.88)" }}>
+          <div style={OVERLAY("rgba(10,20,40,.88)")}>
             <div style={KAART}>
               <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
               {multi ? (
@@ -372,7 +377,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         )}
 
         {taak && (
-          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.88)" }}>
+          <div style={OVERLAY("rgba(10,20,40,.88)")}>
             <div style={KAART}>
               {!taak.vragen ? <div>Vragen laden…</div> : taak.vragen.length === 0 ? <><div>Geen vragen gevonden voor dit niveau.</div><button onClick={() => setTaak(null)} style={{ ...KNOP_GRIJS, marginTop: 10 }}>Sluiten</button></> : (() => {
                 const v = taak.vragen[taak.idx];
@@ -401,7 +406,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         )}
 
         {st.fase === "vergadering" && st.vergadering && (
-          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(40,10,10,.6)" }}>
+          <div style={OVERLAY("rgba(40,10,10,.6)")}>
             <div style={KAART}>
               <div style={{ font: "900 20px system-ui" }}>🚨 Vergadering · nog {Math.max(0, Math.ceil(VERGADERING_S - st.vergadering.t))} s</div>
               <p style={{ margin: "4px 0 10px", color: "#556" }}>Wie is de imposter? Kies iemand, of onthoud je.</p>
@@ -419,7 +424,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         )}
 
         {st.fase === "einde" && st.uitkomst && (() => { const sc = scoreVan({ ...st, spelerId: mijnId }); return (
-          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.6)" }}>
+          <div style={OVERLAY("rgba(10,20,40,.6)")}>
             <div style={{ ...KAART, textAlign: "center" }}>
               <div style={{ fontSize: 50 }}>{sc.gewonnen ? "🏆" : "💪"}</div>
               <div style={{ font: "900 24px system-ui" }}>{sc.gewonnen ? "Gewonnen!" : "Verloren…"}</div>
