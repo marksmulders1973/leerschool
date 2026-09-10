@@ -118,7 +118,7 @@ export function tik(st, daderId, doelId) {
 
 export function dichtstbijStation(st, p) {
   let best = null, bd = 1e9;
-  for (const s of st.stations) { const d = dist(s, p); if (d < bd) { bd = d; best = s; } }
+  for (const s of st.stations || []) { const d = dist(s, p); if (d < bd) { bd = d; best = s; } }
   return best && bd <= TAAK_AFSTAND ? best : null;
 }
 export function magTaak(st, sp, station) {
