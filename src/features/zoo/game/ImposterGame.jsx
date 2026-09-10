@@ -165,7 +165,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         try { const sc = scoreVan(st); track("game_einde", { gewonnen: sc.gewonnen ? 1 : 0, rol: sc.rol, punten: sc.punten, duur: sc.duur, multi: multi ? 1 : 0, vak: st.vak, imposters: st.nImp }); } catch { /* */ }
         if (multi && net.code && !scoresBewaard.current) {
           scoresBewaard.current = true;
-          const rijen = st.spelers.filter((s) => !s.bot).map((s) => ({ naam: s.naam, punten: s.punten, gewonnen: (st.uitkomst.gewonnen === "bouwers") === (s.rol === "bouwer"), rol: s.rol, vak: st.vak }));
+          const rijen = st.spelers.filter((s) => !s.bot).map((s) => ({ naam: s.naam === "Jij" ? "Speler" : s.naam, punten: s.punten, gewonnen: (st.uitkomst.gewonnen === "bouwers") === (s.rol === "bouwer"), rol: s.rol, vak: st.vak }));
           bewaarScores(net.code, rijen).then(() => haalKlassement(net.code)).then((k) => { if (k) setKlassement(k); }).catch(() => {});
         }
       }
