@@ -47,6 +47,7 @@ function esc(s) {
 const MANIFEST_BY_ID = new Map(pathManifest.map((p) => [p.id, p]));
 function padLabel(pathId) {
   if (pathId === "dictee-spelling") return "✍️ Dictee met Charley (spelling)";
+  if (pathId === "werkwoordspelling-test") return "🔤 Werkwoordspellingtest (t.t., v.t., voltooid deelwoord)";
   const p = MANIFEST_BY_ID.get(pathId);
   if (!p) return pathId;
   return `${p.emoji ? p.emoji + " " : ""}${p.title}`;

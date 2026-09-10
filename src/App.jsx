@@ -71,6 +71,7 @@ const RondleidingPage = lazy(() => import("./components/RondleidingPage.jsx"));
 const OefenpakketPage = lazy(() => import("./components/OefenpakketPage.jsx"));
 const LeesladderPage = lazy(() => import("./components/LeesladderPage.jsx"));
 const DicteePage = lazy(() => import("./features/dictee/DicteePage.jsx"));
+const WerkwoordenPage = lazy(() => import("./features/dictee/WerkwoordenPage.jsx"));
 const PrintHubPage = lazy(() => import("./components/PrintHubPage.jsx"));
 const TafelbladenPage = lazy(() => import("./components/TafelbladenPage.jsx"));
 const RedactiebladenPage = lazy(() => import("./components/RedactiebladenPage.jsx"));
@@ -1506,6 +1507,7 @@ export default function App() {
           }}
           onGoLeren={() => { setLearnHubReturnPage("mijn-pagina"); setPage("learn-paths-hub"); }}
           onDictee={() => setPage("dictee")}
+          onWerkwoorden={() => setPage("werkwoorden")}
           onGoCito={() => setPage("cito")}
           onGoVoortgang={() => setPage("my-mastery")}
           onVak={(subject) => {
@@ -2484,6 +2486,7 @@ export default function App() {
       {page === "leesladder" && <LeesladderPage setPage={setPage} />}
       {/* Dictee met Charley (9 sep 2026, wens van Djess via het wensenbord) */}
       {page === "dictee" && <DicteePage userName={userName || ""} userLevel={userLevel || ""} onTerug={() => setPage("mijn-pagina")} />}
+      {page === "werkwoorden" && <WerkwoordenPage userName={userName || ""} userLevel={userLevel || ""} onTerug={() => setPage("mijn-pagina")} />}
       {page === "printen" && <PrintHubPage setPage={setPage} />}
       {page === "tafelbladen" && <TafelbladenPage setPage={setPage} />}
       {page === "redactiebladen" && <RedactiebladenPage setPage={setPage} />}

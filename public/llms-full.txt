@@ -203,6 +203,7 @@ https://leerkwartier.app/vandaag
 - Samen bouwen met de klas (parkcode, tot 100 leerlingen in één 3D-park): https://leerkwartier.app/samen-bouwen.html
 - Het 3D-park (vulkaan, besneeuwde bergen, hangbrug, kabelbaan, slee, auto's, zeppelin, maatje Charley): https://leerkwartier.app/park.html
 - Dictee met Charley, groep 4-8, met voorleesstem en spellingregel bij een fout: https://leerkwartier.app/dictee-oefenen.html
+- Werkwoordspellingtest zoals op school (groep 6-8): zin met een gat, hele werkwoord + tijd tussen haakjes, kind typt de vorm, score per vorm, werkwoorden van school plakken en klaarzetten met een code: https://leerkwartier.app/werkwoordspelling-oefenen.html
 - Weekmail voor ouders met reageer-knop; vriend van de Ooievaarspas (gemeente Den Haag) vanaf 1 januari 2027: https://leerkwartier.app/bedankt.html
 
 - [Wie is de imposter?](https://leerkwartier.app/wie-is-de-imposter.html): gratis klas-game in het 3D-park; taken zijn sommen/taalvragen op eigen niveau, 6-10 spelers (bots vullen aan), parkcode voor de klas, leerkracht kiest vak/niveau, klassement per parkcode, geen chat.

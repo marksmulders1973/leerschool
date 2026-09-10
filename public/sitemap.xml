@@ -2185,6 +2185,7 @@
     <priority>0.6</priority>
   </url>
   <url><loc>https://leerkwartier.app/dictee-oefenen.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://leerkwartier.app/werkwoordspelling-oefenen.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://leerkwartier.app/samen-bouwen.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://leerkwartier.app/voorlopig-schooladvies.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://leerkwartier.app/doorgeven.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>

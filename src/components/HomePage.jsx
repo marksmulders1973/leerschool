@@ -1327,7 +1327,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 { emoji: "🎓", titel: "Oefenen met uitleg", sub: "op 3 niveaus, tot je kind het snapt", klik: () => { track("home_strip_klik", { item: "oefenen" }); handleFeatureClick("cito"); } },
                 { emoji: "🖨️", titel: "6 gratis printbare pakketten", sub: "werkboek · Leesladder · tafels · sommen · dictees · brugklas", klik: () => { track("home_strip_klik", { item: "printen" }); handlePrintenClick(); } },
                 // Mark 9 sep 2026: eigen blok voor het dictee met Charley (breed, derde rij).
-                { emoji: "✍️", titel: "Dictee met Charley", sub: "hij zegt de zin, je kind typt het woord · groep 4 t/m 8", breed: true, klik: () => { track("home_strip_klik", { item: "dictee" }); try { window.location.assign("/dictee"); } catch { /* */ } } },
+                { emoji: "✍️", titel: "Dictee met Charley", sub: "hij zegt de zin, je kind typt het woord · ook de werkwoordspellingtest · groep 4 t/m 8", breed: true, klik: () => { track("home_strip_klik", { item: "dictee" }); try { window.location.assign("/dictee"); } catch { /* */ } } },
                 // WhatsApp 13 aug 18:57: dagvraag- en park-kaart weg van home
                 // ("dat park vinden ze wel; de dagvraag wil ik niet op home").
               ].map((it, i) => {

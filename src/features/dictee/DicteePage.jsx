@@ -450,6 +450,11 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug }) {
         <AutocorrectieTip />
         <LijstCode onGeladen={(lijst) => { const items = schoolItems(parseWoorden((lijst.woorden || []).join("\n"))); try { localStorage.setItem("lk_dictee_school", JSON.stringify({ naam: lijst.naam, woorden: lijst.woorden, datum: new Date().toISOString().slice(0, 10), code: lijst.code })); } catch { /* */ } try { track("dictee_lijst_geopend", { code: lijst.code, n: items.length }); } catch { /* */ } start(groep, items); }} />
         <SchoolWoorden groep={groep} onStart={(lijst) => start(groep, lijst)} />
+        {/* 🔤 Werkwoordspellingtest (10 sep 2026): zusje van het dictee, zelfde motor */}
+        <a href="/werkwoorden" onClick={() => { try { track("dictee_naar_werkwoorden", {}); } catch { /* */ } }} style={{ display: "block", background: "#eef6ff", border: "2px solid #bcd6f5", borderRadius: 14, padding: "12px 16px", margin: "14px 0", color: "#1c2840", textDecoration: "none" }}>
+          <div style={{ font: "900 16px system-ui" }}>🔤 Werkwoordspellingtest →</div>
+          <div style={{ fontSize: 13.5, color: "#556", marginTop: 3 }}>Zoals de test op school: zin met een gat, tussen haakjes het werkwoord en de tijd, jij typt de vorm. Score per vorm (○ □ △ ▢).</div>
+        </a>
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Tip: zet het geluid aan. Tik op 🔊 als je Charley niet goed verstaat. {DICTEE[groep || 6].length} woorden per groep; elke keer een andere mix.</p>
       </div>
     );

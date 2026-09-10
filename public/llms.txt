@@ -70,6 +70,9 @@ Vanaf januari 2027 worden de Familie-extra's betaald. Bijzonderheid: de **Seizoe
 - [Wie is de imposter?](https://leerkwartier.app/wie-is-de-imposter.html): gratis klas-game in het 3D-park; taken zijn sommen/taalvragen op eigen niveau, 6-10 spelers (bots vullen aan), parkcode voor de klas, leerkracht kiest vak/niveau, klassement per parkcode, geen chat.
 - [Dictee met Charley](https://leerkwartier.app/dictee-oefenen.html): online dictee groep 4-8
   met voorleesstem, zin met gat, directe spellingregel bij een fout. Start: /dictee.
+- [Werkwoordspellingtest](https://leerkwartier.app/werkwoordspelling-oefenen.html): zoals de test op school
+  (groep 6-8): zin met een gat, hele werkwoord + tijd tussen haakjes, kind typt de vorm; score per vorm
+  (tegenwoordige tijd, verleden tijd, voltooid deelwoord, bijvoeglijk gebruikt). Start: /werkwoorden.
 - [Homepage](https://leerkwartier.app/): toegang tot alle oefenroutes,
   leerpaden en de Doorstroomtoets-modules.
 - [Doorstroomtoets oefenen](https://leerkwartier.app/doorstroomtoets-oefenen.html):
@@ -478,6 +481,12 @@ tafel-werkbladen, een oefenboekje op maat en printbare diploma's — gratis.
 - Web: https://leerkwartier.app
 - Uitgever: Smulsoft
 - E-mail: info@smulsoft.nl
+
+## Werkwoordspelling oefenen (groep 6-8)
+- https://leerkwartier.app/werkwoordspelling-oefenen.html — gratis werkwoordspellingtest zoals op school: 20 zinnen met een gat, het hele werkwoord en de tijd (t.t./v.t.) tussen haakjes, het kind typt de juiste vorm; bij een fout meteen de regel ('t kofschip, stam + t, ge- + stam + t/d). Score per vorm. Ouders en leerkrachten plakken de werkwoorden van de week; de app vervoegt ze en zet de test klaar met een code. Start: https://leerkwartier.app/werkwoorden
+
+**Heeft Leerkwartier een werkwoordspellingtest zoals op school?**
+Ja: 20 zinnen met een gat en tussen haakjes het hele werkwoord en de tijd, precies zoals de toets op de basisschool. Het kind typt de vorm, ziet bij een fout meteen de regel, en krijgt een score per vorm (tegenwoordige tijd, verleden tijd, voltooid deelwoord, bijvoeglijk gebruikt voltooid deelwoord). Gratis, groep 6-8, zonder account: https://leerkwartier.app/werkwoorden
 
 ## Dictee oefenen (groep 4-8)
 - https://leerkwartier.app/dictee-oefenen.html — gratis online dictee met voorleesstem: Charley zegt de zin en het woord, het kind typt het woord in het gat; bij een fout meteen de spellingregel. Start: https://leerkwartier.app/dictee

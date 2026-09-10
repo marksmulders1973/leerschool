@@ -41,6 +41,8 @@ export const PAGE_TO_PATH = {
   // en opbouwt naar toets-lengte (Mark 2026-07-02, idee via Brian).
   leesladder: "/leesladder",
   dictee: "/dictee",
+  // Werkwoordspellingtest zoals op school (Mark 10 sep 2026, schoolblad van Brian)
+  werkwoorden: "/werkwoorden",
   // Print-hub + tafel-werkbladen (Mark 2026-07-02: "maak duidelijk wat printbaar is")
   printen: "/printen",
   tafelbladen: "/tafelbladen",

@@ -245,6 +245,7 @@ export default function MijnPagina({
   onGoLeren,
   onGoCito,
   onDictee,
+  onWerkwoorden,
   onGoVoortgang,
   onOuderDashboard,
   onHernoem,
@@ -445,6 +446,7 @@ export default function MijnPagina({
       onGoLeren && { emoji: "🚀", label: "Ga oefenen", doe: onGoLeren },
       onGoCito && { emoji: "🎯", label: "Oefen in doorstroomtoets-stijl", doe: () => onGoCito() },
       onDictee && { emoji: "✍️", label: "Dictee met Charley", doe: () => onDictee() },
+      onWerkwoorden && { emoji: "🔤", label: "Werkwoordspellingtest", doe: () => onWerkwoorden() },
       onGoVoortgang && { emoji: "📊", label: "Bekijk je eigen voortgang", doe: onGoVoortgang },
     ].filter(Boolean);
   })();
