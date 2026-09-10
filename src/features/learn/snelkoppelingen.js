@@ -17,6 +17,8 @@ export const SNELKOPPELINGEN = [
     woorden: ["samen", "samen bouwen", "parkcode", "vrienden", "klas park", "samen spelen", "multiplayer", "code park"] },
   { id: "imposter", emoji: "🎮", label: "Wie is de imposter?", uitleg: "Game in het park: taken zijn sommen, één speler doet alsof. ☰ → 🎮.", pad: "/dierentuin",
     woorden: ["imposter", "impostor", "wie is de imposter", "game", "among us", "verrader", "bots", "spelleider"] },
+  { id: "schooladvies", emoji: "🎓", label: "Voorlopig schooladvies", uitleg: "kijkmoment groep 7, tl/havo/vwo, data en wat je kunt doen", pad: "/voorlopig-schooladvies.html",
+    woorden: ["schooladvies", "advies", "voorlopig advies", "kijkmoment", "tl", "havo", "vwo", "mavo", "niveau groep 7", "brugklas advies"] },
   { id: "doorstroomtoets", emoji: "🎯", label: "Doorstroomtoets oefentoets", uitleg: "Oefentoets in de stijl van de Doorstroomtoets, met uitleg bij elke fout.", pad: "/doorstroomtoets-oefentoets",
     woorden: ["doorstroomtoets", "cito", "citotoets", "eindtoets", "oefentoets", "toets", "groep 8", "iep", "route 8", "schooladvies"] },
   { id: "examens", emoji: "🎓", label: "Echte examens", uitleg: "Authentieke VMBO-examens: oefenen met uitleg of inzien als PDF.", pad: "/examens",

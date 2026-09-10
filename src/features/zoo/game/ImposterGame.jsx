@@ -94,6 +94,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   const [groep, setGroep] = useState("eigen");
   const [nImp, setNImp] = useState(1);
   const [klassement, setKlassement] = useState(null);
+  const [kopie, setKopie] = useState("");
   const scoresBewaard = useRef(false);
   const bevrorenPos = useRef(null);
   const inZeppelin = useRef(false);   // 🎈 ik ben af en kijk mee vanuit de zeppelin
@@ -284,13 +285,23 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                   <p style={{ margin: "0 0 6px" }}>Jij bent de <b>spelleider</b>. Iedereen in dit park kreeg een uitnodiging. Zodra je op Start drukt, spelen jullie samen; bots vullen aan tot zes.</p>
                   <div style={{ background: "#f3efff", border: "1.5px solid #cbbcf5", borderRadius: 12, padding: "10px 12px", margin: "6px 0 10px" }}>
                     <div style={{ font: "800 13px system-ui", color: "#4a2aa8" }}>👑 Jij bent de spelleider · in de lobby ({1 + lobby.length})</div>
+                    {net.code && (
+                      <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "8px 0 4px" }}>
+                        <a href={`https://wa.me/?text=${encodeURIComponent(`Speel met mij "Wie is de imposter?" in Leerkwartier! Open deze link en tik op Meedoen: https://leerkwartier.app/dierentuin?samen=${net.code}&game=1`)}`} target="_blank" rel="noopener noreferrer" onClick={() => { try { track("game_uitnodiging", { via: "whatsapp" }); } catch { /* */ } }} style={{ ...KNOP, background: "linear-gradient(135deg,#25d366,#128c7e)", textDecoration: "none", padding: "9px 14px", font: "800 13.5px system-ui" }}>📲 Nodig uit via WhatsApp</a>
+                        <button onClick={async () => { try { await navigator.clipboard.writeText(`https://leerkwartier.app/dierentuin?samen=${net.code}&game=1`); setKopie("Link gekopieerd ✓"); } catch { setKopie("Kopiëren lukte niet"); } setTimeout(() => setKopie(""), 2500); }} style={{ ...KNOP_GRIJS, padding: "9px 14px", font: "800 13.5px system-ui" }}>🔗 Kopieer link</button>
+                        {kopie && <span style={{ font: "700 13px system-ui", color: "#146c43", alignSelf: "center" }}>{kopie}</span>}
+                      </div>
+                    )}
                     <div>👑 {spelerNaam || "Jij"}{lobby.map((l) => `, ${l.naam}`).join("")}</div>
                     {lobby.length === 0 && <div style={{ color: "#556", fontSize: 13 }}>Nog niemand… anderen zien de uitnodiging bovenin hun scherm.</div>}
                   </div>
                 </>
               ) : (
                 <>
-                  <p style={{ margin: "0 0 8px", background: "#eef6ff", border: "1px solid #bcd6f5", borderRadius: 10, padding: "8px 12px", fontSize: 13 }}>👥 <b>Met vrienden of je klas spelen?</b> Dat kan alleen in een gedeeld park: sluit dit spel, kies ☰ → 🏫 Samen bouwen voor een parkcode, en start het spel dáár. Iedereen in dat park krijgt dan een uitnodiging (tot {MAX_SPELERS} spelers).</p>
+                  <div style={{ margin: "0 0 8px", background: "#eef6ff", border: "1px solid #bcd6f5", borderRadius: 10, padding: "8px 12px", fontSize: 13 }}>
+                    👥 <b>Met vrienden of je klas spelen?</b> Eén tik: je krijgt een parkcode en een WhatsApp-uitnodiging; wie de link opent, zit meteen in jouw lobby (tot {MAX_SPELERS} spelers).
+                    <div style={{ marginTop: 8 }}><button onClick={() => { try { track("game_samen_knop", {}); } catch { /* */ } window.dispatchEvent(new CustomEvent("lk-samen-spelen")); }} style={{ ...KNOP, background: "linear-gradient(135deg,#25d366,#128c7e)", padding: "9px 14px", font: "800 13.5px system-ui" }}>📲 Met vrienden spelen</button></div>
+                  </div>
                   <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>imposter</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De imposter doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt ook.</p>
                   <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Imposter uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = imposter wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
                 </>

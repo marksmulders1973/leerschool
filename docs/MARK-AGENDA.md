@@ -11,6 +11,7 @@
 > Bron: `docs/GEMEENTE-BETAALT-PLAN.md` (2 sep 2026). Ooievaarspas = voor altijd gratis (referentie, geen omzet).
 - **sep**: KvK ma 28 sep → meteen KOR aanvragen · tekst "partner-aanbod 2028: €25/kind/jaar, gemeente betaalt" (Mark-akkoord)
 - **🗓️ Tijdlijn geld-spoor (Mark-akkoord 3 sep, aan Esther gemeld):** 28 sep KvK → 29 sep–5 okt zakelijke rekening (Knab) + KvK-nr aan Esther → 5–12 okt Stripe-account + verificatie + Ooievaarspas-formulier (datum **1 januari 2027**) → okt webhook/betaalflow bouwen + test PRO2027 → nov Stripe live (stil) + Ooievaarspas plaatst aanbieding → **dec voorverkoop Seizoenspas** (belofte "in 2026 helemaal gratis" blijft heel; Mark 3 sep: zónder kerstpakketten) → **1 jan 2027 Familie betaald voor niet-pashouders**.
+- **okt**: SUN Middelburg herbenaderen mét Ooievaarspas-keurmerk; opener: "hoe was de startbijeenkomst van 10 september?" (Mark reageerde die dag op hun LinkedIn-post)
 - **okt**: Leergeld-mail mét prijs · leveranciers-aanmelding 4-6 stadspassen/kindpakketten · partner-rapport v1
 - **vóór nov**: gemeentegesprekken (begroting 2027 wordt in nov vastgesteld)
 - **najaar 2027**: verleng-ronde bestaande codes met 2028-prijs
@@ -28,6 +29,8 @@
   Den Haag naast ~30 u/wk Leerkwartier past niet — Leerkwartier zakt dan naar hobby-tempo.
   Zelfs bij afwijzing: Digilab70 is precies het gremium waar Leerkwartier binnen wil komen.
   Zeg "brief" → Claude zet een concept-motivatie klaar.
+
+- **Facebook-bio bijwerken (Mark, 1 min):** facebook.com/leerkwartier → Info → potlood naast Bio → tekst: "Leerkwartier — gratis oefenen voor de Doorstroomtoets (voorheen Cito) en alle schoolvakken. De basis blijft gratis, gegarandeerd t/m 2031. Met échte examenvragen en uitleg op jouw niveau. Eén kwartier per dag, een leven lang slimmer. 🎓 leerkwartier.app". Claude's script raakte de doelgroep-knop i.p.v. het potlood (10 sep).
 
 - **🏫 Scholen batch 2 loopt (akkoord 10 sep):** 15 verstuurd 10 sep · **vr 11 sep 60** (Claude, ~08:00, rij 16-75) · **ma 14 sep 36** (rij 76-111). Daarna LOWAN batch 4 (139 over) na 'ga'.
 

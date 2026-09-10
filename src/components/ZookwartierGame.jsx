@@ -457,6 +457,32 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const gameGroep = (() => { try { const u = JSON.parse(localStorage.getItem("ls_user") || "{}"); const m = String(u.level || "").match(/(\d)/); return m ? m[1] : "6"; } catch { return "6"; } })();
   const gameModusRef = useRef(false);
   useEffect(() => { gameModusRef.current = gameModus; }, [gameModus]);
+  const gameInviteRef = useRef(null);
+  useEffect(() => { gameInviteRef.current = gameInvite; }, [gameInvite]);
+  // 📲 Solo-lobby → "met vrienden spelen": parkcode maken en herladen mét game=1 (Mark 10 sep 2026)
+  useEffect(() => {
+    const f = () => { if (samen) return; maakSamenCode({ game: true }); };
+    window.addEventListener("lk-samen-spelen", f);
+    return () => window.removeEventListener("lk-samen-spelen", f);
+  }); // eslint-disable-line
+  // 📲 Binnenkomen via een uitnodigingslink (?samen=CODE&game=1): lobby vanzelf openen —
+  // als er al een uitnodiging binnen is → als gast, anders als spelleider.
+  useEffect(() => {
+    if (!samen || !room) return;
+    let game = false; try { game = new URLSearchParams(window.location.search).get("game") === "1"; } catch { /* */ }
+    if (!game || gameModusRef.current) return;
+    // tot 8 s wachten op een uitnodiging (de spelleider zendt elke 3 s; de relay moet eerst verbinden) — zodra die er is: gast, anders spelleider
+    const start = Date.now();
+    const t = setInterval(() => {
+      const inv = gameInviteRef.current;
+      if (!inv && Date.now() - start < 8000) return;
+      clearInterval(t);
+      if (gameModusRef.current) return;
+      setGameHost(!inv); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true);
+      try { track("game_via_link", { gast: inv ? 1 : 0, wacht_ms: Date.now() - start }); } catch { /* */ }
+    }, 500);
+    return () => clearInterval(t);
+  }, [samen, room?.code]); // eslint-disable-line
   const onGameKlaar = (sc) => {
     if (sc?.munten > 0) { setMeta((m) => (m ? { ...m, coins: (m.coins || 0) + sc.munten } : m)); flits(`🎮 ${sc.gewonnen ? "Gewonnen!" : "Goed gespeeld!"} +${sc.munten} 🪙`); }
     if (sc?.nogEenKeer) { setGameKey((k) => k + 1); return; }
@@ -1076,12 +1102,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   }, [samen, loaded, room?.code]);
 
   // 🏫 parkcode maken (kopie van je eigen park) / meedoen met een code
-  const maakSamenCode = async () => {
+  const maakSamenCode = async (opties = {}) => {
     if (!userId || samenBezig) return;
     setSamenBezig(true);
     try {
       const code = await maakParkRoom({ naam: naam ? `${naam}'s park` : "Ons park", layout: placedItems, terrain: serTerrain(terrain), owned: { water: meta?.owned?.water || [], ground: meta?.owned?.ground || {} } });
-      window.location.href = `/dierentuin?samen=${code}`;
+      // game=1 (10 sep): het gedeelde park opent meteen de imposter-lobby, met de WhatsApp-uitnodiging
+      window.location.href = `/dierentuin?samen=${code}${opties.game ? "&game=1" : ""}`;
     } catch { flits("Parkcode maken lukte niet — probeer het nog eens"); setSamenBezig(false); }
   };
   const gaSamen = () => {
@@ -3292,6 +3319,13 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           <button onClick={() => setWandelKies(true)} style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "rgba(255,254,248,0.95)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
             🥾 Wandeling
           </button>
+          {/* 🎮 Mark 10 sep 2026: "als ik het park open zie ik niet speel imposter" — de tegel zat alleen in ☰ (op een smalle telefoon zelfs buiten beeld). */}
+          {!gameModus && (
+            <button onClick={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); setGameHost(!gameInvite); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); try { track("game_knop_park", { invite: gameInvite ? 1 : 0 }); } catch { /* */ } }}
+              style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#fff", background: gameInvite ? "linear-gradient(135deg,#e2574c,#b0332a)" : "linear-gradient(135deg,#6a3fd6,#4a2aa8)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
+              {gameInvite ? `🎮 Meedoen: ${gameInvite.naam}` : "🎮 Imposter"}
+            </button>
+          )}
           {/* (De geel/groen/blauwe filter-stipjes zijn weg — Mark 26 aug: sinds
               het zwarte leerpad-lint het hoofdpad is, is dat spoor-filter
               overbodig. Tijdens een wandeling zie je je route nog gewoon.) */}

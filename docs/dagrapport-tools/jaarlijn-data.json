@@ -1,18 +1,127 @@
 {
   "_uitleg": "Jaarlijn in het Meesterplan (Mark 10 sep 2026). bezoekers = unieke bezoekers per maand (bron hosting-dashboard waar bekend; anders unieke apparaten uit events_echt, gemarkeerd met bron 'app'). accounts = echte nieuwe accounts (profiles_echt). doel = voorstel-doel voor komende maanden (bezoekers). seizoen: top | aanloop | middel | rustig.",
   "maanden": [
-    { "m": "2026-01", "label": "jan", "seizoen": "top",     "bezoekers": null, "bron": null,  "accounts": 0,  "noot": "nog geen app" },
-    { "m": "2026-02", "label": "feb", "seizoen": "top",     "bezoekers": null, "bron": null,  "accounts": 0,  "noot": "nog geen app" },
-    { "m": "2026-03", "label": "mrt", "seizoen": "rustig",  "bezoekers": null, "bron": null,  "accounts": 0,  "noot": "bouwfase" },
-    { "m": "2026-04", "label": "apr", "seizoen": "rustig",  "bezoekers": null, "bron": null,  "accounts": 6,  "noot": "eerste accounts" },
-    { "m": "2026-05", "label": "mei", "seizoen": "middel",  "bezoekers": null, "bron": null,  "accounts": 56, "noot": "lancering" },
-    { "m": "2026-06", "label": "jun", "seizoen": "rustig",  "bezoekers": null, "bron": null,  "accounts": 22, "noot": "meting start 4 jun" },
-    { "m": "2026-07", "label": "jul", "seizoen": "rustig",  "bezoekers": 452,  "bron": "host", "accounts": 32, "noot": "zomervakantie" },
-    { "m": "2026-08", "label": "aug", "seizoen": "rustig",  "bezoekers": 840,  "bron": "host", "accounts": 60, "noot": "outreach-piek" },
-    { "m": "2026-09", "label": "sep", "seizoen": "middel",  "bezoekers": 164,  "bron": "app",  "accounts": 9,  "noot": "t/m 10 sep", "doel": 1000 },
-    { "m": "2026-10", "label": "okt", "seizoen": "middel",  "bezoekers": null, "bron": null,  "accounts": null, "doel": 1300, "noot": "Spark Fest 18 okt" },
-    { "m": "2026-11", "label": "nov", "seizoen": "aanloop", "bezoekers": null, "bron": null,  "accounts": null, "doel": 1800, "noot": "Stripe stil live" },
-    { "m": "2026-12", "label": "dec", "seizoen": "aanloop", "bezoekers": null, "bron": null,  "accounts": null, "doel": 2500, "noot": "cadeau-codes" },
-    { "m": "2027-01", "label": "jan", "seizoen": "top",     "bezoekers": null, "bron": null,  "accounts": null, "doel": 4000, "noot": "toets 25 jan–12 feb" }
+    {
+      "m": "2026-01",
+      "label": "jan",
+      "seizoen": "top",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": 0,
+      "noot": "nog geen app"
+    },
+    {
+      "m": "2026-02",
+      "label": "feb",
+      "seizoen": "top",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": 0,
+      "noot": "nog geen app"
+    },
+    {
+      "m": "2026-03",
+      "label": "mrt",
+      "seizoen": "rustig",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": 0,
+      "noot": "bouwfase"
+    },
+    {
+      "m": "2026-04",
+      "label": "apr",
+      "seizoen": "rustig",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": 6,
+      "noot": "eerste accounts"
+    },
+    {
+      "m": "2026-05",
+      "label": "mei",
+      "seizoen": "middel",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": 56,
+      "noot": "examens · voorlopig advies g7"
+    },
+    {
+      "m": "2026-06",
+      "label": "jun",
+      "seizoen": "middel",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": 22,
+      "noot": "kijkmoment groep 7"
+    },
+    {
+      "m": "2026-07",
+      "label": "jul",
+      "seizoen": "rustig",
+      "bezoekers": 452,
+      "bron": "host",
+      "accounts": 32,
+      "noot": "zomervakantie"
+    },
+    {
+      "m": "2026-08",
+      "label": "aug",
+      "seizoen": "rustig",
+      "bezoekers": 840,
+      "bron": "host",
+      "accounts": 60,
+      "noot": "outreach-piek"
+    },
+    {
+      "m": "2026-09",
+      "label": "sep",
+      "seizoen": "middel",
+      "bezoekers": 164,
+      "bron": "app",
+      "accounts": 9,
+      "noot": "t/m 10 sep",
+      "doel": 1000
+    },
+    {
+      "m": "2026-10",
+      "label": "okt",
+      "seizoen": "middel",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": null,
+      "doel": 1300,
+      "noot": "Spark Fest 18 okt"
+    },
+    {
+      "m": "2026-11",
+      "label": "nov",
+      "seizoen": "aanloop",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": null,
+      "doel": 1800,
+      "noot": "Stripe stil live"
+    },
+    {
+      "m": "2026-12",
+      "label": "dec",
+      "seizoen": "aanloop",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": null,
+      "doel": 2500,
+      "noot": "cadeau-codes"
+    },
+    {
+      "m": "2027-01",
+      "label": "jan",
+      "seizoen": "top",
+      "bezoekers": null,
+      "bron": null,
+      "accounts": null,
+      "doel": 4000,
+      "noot": "toets 25 jan–12 feb"
+    }
   ]
 }
