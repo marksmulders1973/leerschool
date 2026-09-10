@@ -67,6 +67,8 @@ Alleen verzameld, niets verstuurd. Adressen zijn overgenomen zoals vermeld op de
 | Zuid | Vlissingen | Bossenburgh | Archipelschool De Omnibus | omnibus@archipelscholen.nl | https://archipelscholen.nl/omnibus/contact/ |
 | Randstad-rest | Dordrecht | Wielwijk | Parkwijck (Openbare Basisschool) | info.parkwijck@nestas-scholengroep.nl | https://parkwijck.nestas-scholengroep.nl/ |
 | Randstad-rest | Dordrecht | Crabbehof | John F. Kennedyschool | info.jfkbosstraat@nestas-scholengroep.nl | https://kennedyschool.nestas-scholengroep.nl/contact/j-f-kennedyschool-locatie-crabbenhof |
+| Randstad-rest | Dordrecht | Wielwijk | Albatros | info.albatros@nestas-scholengroep.nl | https://albatros.nestas-scholengroep.nl/ |
+| Randstad-rest | Dordrecht | Crabbehof | Don Bosco | info.donbosco@nestas-scholengroep.nl | https://donbosco.nestas-scholengroep.nl/ |
 | Randstad-rest | Rotterdam | Oude Noorden | Hildegardisschool | hildegardis.dir@rvko.nl | https://www.hildegardisschool.nl/basisschool-rotterdam-noord/ |
 | Randstad-rest | Rotterdam | Oude Noorden | Basisschool De Fontein | fontein.dir@kindenonderwijsrotterdam.nl | https://de-fontein.net/contactgegevens/ |
 | Randstad-rest | Rotterdam | Oude Noorden | Kindcentrum de Klimop | directie@klimoprotterdam.nl | https://basisschooldeklimop.nl/ |
