@@ -19,6 +19,8 @@
 
 ## 🔴 Nu doen (deze week)
 
+- **Facebook-bio bijwerken (Mark, 1 min):** facebook.com/leerkwartier → Info → potlood naast Bio → tekst: "Leerkwartier — gratis oefenen voor de Doorstroomtoets (voorheen Cito) en alle schoolvakken. De basis blijft gratis, gegarandeerd t/m 2031. Met échte examenvragen en uitleg op jouw niveau. Eén kwartier per dag, een leven lang slimmer. 🎓 leerkwartier.app". Claude's script raakte de doelgroep-knop i.p.v. het potlood (10 sep).
+
 - **🏫 Scholen batch 2 loopt (akkoord 10 sep):** 15 verstuurd 10 sep · **vr 11 sep 60** (Claude, ~08:00, rij 16-75) · **ma 14 sep 36** (rij 76-111). Daarna LOWAN batch 4 (139 over) na 'ga'.
 
 - **📋 PLAN 10 SEP** (Claude uit zichzelf): dagrapport met dictee-/game-/betaal-blokken · FB-bio bijwerken · meetfix start-kwartier · concept /doorgeven · welkompagina mobiel. **Mark:** "ga" LOWAN 3 · dashboard-login · game op 2 telefoons · "pagina's"/"alles" (game aankondigen) · LinkedIn Ooievaarspas + dictee · Stripe test-account · offline uren wk 37.
