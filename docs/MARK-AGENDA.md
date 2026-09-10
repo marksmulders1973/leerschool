@@ -19,6 +19,8 @@
 
 ## 🔴 Nu doen (deze week)
 
+- ✅ **v644 (10 sep avond): 🔤 Werkwoordspellingtest** zoals het schoolblad van Brian — leerkwartier.app/werkwoorden (+ landingspagina werkwoordspelling-oefenen.html, zoekbalk, Meer-menu, Mijn-pagina, dictee-scherm). Test zelf: 20 zinnen, en plak 'informeren, bewijzen, proeven' bij Werkwoorden van school → vormen-tabel → klaarzetten met code. Reclame-post: nog niet (twee-weken-plan), tekst/beeld kan à la dictee-post.
+
 - ✅ **v643 (10 sep avond):** game-lobby/uitleg scrollbaar op de telefoon (Mark-melding; overlay was gecentreerde grid zonder overflow). Test zelf: park → 🎮 Imposter → scroll in de kaart.
 
 - ✅ **3 mails VERSTUURD 10 sep ±17:15-17:20 (Mark 'stuur maar'):** Marion/Kinderhulp (bedankje + 2 vragen), Leergeld Leudal (LEUDAL2027), VPCBO Ichthus (ICHTHUS2027). Nu wachten; reacties in het dagrapport. Was: `Desktop\dagrapport\concepten-2026-09-10-avond.md` — (1) **Marion/Kinderhulp** bedankje dag 1 + vraag /doorgeven.html in de november-editie (versturen vr 11 sep ná dag-2-cijfers); (2) **Leergeld Leudal** (leergeldleudal@gmail.com) met code LEUDAL2027 + flyer `drukwerk/flyer-LEUDAL2027.pdf`; (3) **VPCBO Ichthus Huizen** (maputters@ichthushuizen.nl, bestuur van 5 basisscholen) met code ICHTHUS2027 + flyer + leerkracht-route. Codes staan in partner_codes + PARTNER_NAMEN (v642). Flyers = Leergeld-template (previews naar Mark gestuurd). Plus LinkedIn-tekst Kinderhulp voor Mark persoonlijk in hetzelfde bestand.
