@@ -250,7 +250,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   if (!st || !mij) {
     return (
       <Html fullscreen zIndexRange={[12, 0]} style={{ pointerEvents: "none" }} calculatePosition={HUD_POS}>
-        <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.55)" }}>
+        <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.88)" }}>
           <div style={KAART}>
             <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
             <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", margin: "0 0 10px" }}>
@@ -277,7 +277,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
 
       <Html fullscreen zIndexRange={[12, 0]} style={{ pointerEvents: "none" }} calculatePosition={HUD_POS}>
         {st.fase === "intro" && host && (
-          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.55)" }}>
+          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.88)" }}>
             <div style={KAART}>
               <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
               {multi ? (
@@ -302,6 +302,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                     👥 <b>Met vrienden of je klas spelen?</b> Eén tik: je krijgt een parkcode en een WhatsApp-uitnodiging; wie de link opent, zit meteen in jouw lobby (tot {MAX_SPELERS} spelers).
                     <div style={{ marginTop: 8 }}><button onClick={() => { try { track("game_samen_knop", {}); } catch { /* */ } window.dispatchEvent(new CustomEvent("lk-samen-spelen")); }} style={{ ...KNOP, background: "linear-gradient(135deg,#25d366,#128c7e)", padding: "9px 14px", font: "800 13.5px system-ui" }}>📲 Met vrienden spelen</button></div>
                   </div>
+                  <p style={{ margin: "0 0 8px", background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 10, padding: "8px 12px", fontSize: 13.5 }}>🤖 <b>Alleen spelen kan ook</b>, gewoon nu: vijf bots doen mee, en bij "Verras me" kan één van hen de imposter zijn. Je hebt niemand anders nodig.</p>
                   <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>imposter</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De imposter doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt ook.</p>
                   <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Imposter uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = imposter wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
                 </>
@@ -371,7 +372,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         )}
 
         {taak && (
-          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.55)" }}>
+          <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", background: "rgba(10,20,40,.88)" }}>
             <div style={KAART}>
               {!taak.vragen ? <div>Vragen laden…</div> : taak.vragen.length === 0 ? <><div>Geen vragen gevonden voor dit niveau.</div><button onClick={() => setTaak(null)} style={{ ...KNOP_GRIJS, marginTop: 10 }}>Sluiten</button></> : (() => {
                 const v = taak.vragen[taak.idx];

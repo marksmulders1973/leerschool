@@ -3314,7 +3314,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           Op touch (COARSE_POINTER) staat linksonder de loop-joystick (bottom 92,
           104 hoog) → knop/chips daar bóven zetten, anders dekt het bord het
           stuur af (Mark-screenshot 27 aug). */}
-      {!wandeling && (
+      {!wandeling && !(gameModus && !gameInvite) && (
         <div style={{ position: "absolute", left: 10, bottom: COARSE_POINTER ? 208 : 104, zIndex: 12, display: "flex", alignItems: "center", gap: 6 }}>
           <button onClick={() => setWandelKies(true)} style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#234", background: "rgba(255,254,248,0.95)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
             🥾 Wandeling
