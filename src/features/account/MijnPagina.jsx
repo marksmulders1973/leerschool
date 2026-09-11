@@ -2,6 +2,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Header from "../../components/Header.jsx";
 import styles from "../../styles.js";
 import Card from "../../shared/ui/Card.jsx";
+import Button from "../../shared/ui/Button.jsx";
 import supabase from "../../supabase.js";
 import { updateTeacherClasses } from "../../data/repos/profilesRepo.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery/mastery.js";
@@ -236,6 +237,93 @@ const TIER_PITCH = {
   teacher: { naam: "Pro", punten: ["onbeperkt toetsen klaarzetten", "klasrapportage", "je eigen logo op de toetsen"] },
 };
 
+// ── Lege staat: bezoeker zonder naam (Mark 11 sep 2026) ──────────────────────
+// Wás: één zin "Vul eerst je naam in op de startpagina" — zonder veld, zonder
+// knop, zonder link. Een doodlopende weg: in september openden 34 sessies deze
+// pagina, 30 zonder ook maar één beantwoorde vraag en 16 zonder naam. Mark:
+// "ik zie dit als fout wat hersteld moet worden."
+// Nu: de pagina laat zien wát hier komt te staan en je kunt er meteen beginnen.
+// Oefenen staat vóór de naam — 28 sessies vulden in september wél een naam in
+// en beantwoordden daarna geen enkele vraag, dus naam-eerst is een drempel,
+// geen start. Eigen component (dus eigen useState) zodat de hook-volgorde van
+// MijnPagina onaangeroerd blijft — een hook ná een early return = wit scherm.
+const LEGE_VOORPROEFJE = [
+  { emoji: "⏱️", titel: "Jouw kwartier van vandaag", sub: "wat je nu gaat doen, in blokjes van vijf minuten" },
+  { emoji: "📊", titel: "Waar je staat", sub: "per vak, opgebouwd terwijl je oefent" },
+  { emoji: "💛", titel: "Voor jou klaargezet", sub: "wat je juf, meester of ouder voor je klaarzet" },
+  { emoji: "🏆", titel: "Je diploma's", sub: "alles wat je al af hebt" },
+];
+
+function LegeMijnPagina({ onStartKwartier, onNaamInvullen }) {
+  const [naam, setNaam] = useState("");
+  const start = () => {
+    try { track("mijn_leeg_start", {}); } catch { /* */ }
+    onStartKwartier?.();
+  };
+  const openMet = (e) => {
+    e.preventDefault();
+    const n = naam.trim();
+    if (!n) return;
+    try { track("mijn_leeg_naam", { name_length: n.length }); } catch { /* */ }
+    onNaamInvullen?.(n);
+  };
+  return (
+    <>
+      <Card padding="lg" style={{ marginBottom: "var(--space-4)", textAlign: "center" }}>
+        <div aria-hidden="true" style={{ fontSize: 40, lineHeight: 1 }}>🌱</div>
+        <h2 style={{ fontFamily: "var(--font-display)", fontSize: 20, fontWeight: 800, margin: "10px 0 6px" }}>
+          Hier komt jouw eigen pagina
+        </h2>
+        <p style={{ fontFamily: "var(--font-body)", fontSize: 14.5, lineHeight: 1.5, color: "var(--color-text-muted, #8899aa)", margin: "0 auto 16px", maxWidth: 420 }}>
+          Zodra je begint met oefenen, staat hier wat jij vandaag gaat doen en hoe je ervoor staat.
+          Je hoeft geen account te maken.
+        </p>
+        <Button variant="primary" size="lg" onClick={start} style={{ width: "100%", maxWidth: 340 }}>
+          ▶️ Begin met een kwartier
+        </Button>
+      </Card>
+
+      <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+        <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: 0.6, color: "var(--color-text-muted, #8899aa)", marginBottom: 10 }}>
+          Dit komt hier te staan
+        </div>
+        <div style={{ display: "grid", gap: 10 }}>
+          {LEGE_VOORPROEFJE.map((v) => (
+            <div key={v.titel} style={{ display: "flex", alignItems: "flex-start", gap: 12, opacity: 0.55 }}>
+              <span aria-hidden="true" style={{ fontSize: 22, lineHeight: 1.2, flexShrink: 0 }}>{v.emoji}</span>
+              <div>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 700 }}>{v.titel}</div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.4, color: "var(--color-text-muted, #8899aa)" }}>{v.sub}</div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+        <form onSubmit={openMet}>
+          <label htmlFor="mijn-leeg-naam" style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
+            Heb je hier al eerder geoefend? Vul je naam in, dan halen we jouw voortgang erbij.
+          </label>
+          <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+            <input
+              id="mijn-leeg-naam"
+              value={naam}
+              onChange={(e) => setNaam(e.target.value)}
+              placeholder="je voornaam"
+              autoComplete="given-name"
+              style={{ flex: "1 1 160px", minWidth: 0, padding: "11px 12px", borderRadius: 12, border: "1px solid var(--color-border-soft)", background: "var(--color-bg-elevated)", color: "inherit", font: "600 15px var(--font-body)" }}
+            />
+            <Button type="submit" variant="secondary" size="md" disabled={!naam.trim()}>
+              Mijn pagina openen
+            </Button>
+          </div>
+        </form>
+      </Card>
+    </>
+  );
+}
+
 export default function MijnPagina({
   userName,
   userLevel,
@@ -268,6 +356,8 @@ export default function MijnPagina({
   onOpenHub,
   onBack,
   onHome,
+  onStartKwartier,
+  onNaamInvullen,
 }) {
   const player = (userName || "").trim();
   const niveau = useMemo(() => parseNiveau(userLevel), [userLevel]);
@@ -860,9 +950,7 @@ export default function MijnPagina({
       <Header title={player ? `${player}’s Leerkwartier` : "Mijn Leerkwartier"} subtitle="" onBack={onBack} onHome={onHome} />
       <div style={styles.content}>
         {!player && (
-          <Card padding="md" style={{ textAlign: "center", marginBottom: "var(--space-4)" }}>
-            Vul eerst je naam in op de startpagina — dan bouwen we hier jouw eigen pagina op.
-          </Card>
+          <LegeMijnPagina onStartKwartier={onStartKwartier} onNaamInvullen={onNaamInvullen} />
         )}
 
         {player && (

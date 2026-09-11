@@ -1447,6 +1447,9 @@ export default function App() {
           />
         );
       })()}
+      {/* Lege staat /mijn (Mark 11 sep 2026): de pagina stuurde een bezoeker
+          zónder naam weg naar de startpagina, zonder knop of link. Nu kan hij
+          hier zelf starten — oefenen eerst, naam pas als hij die heeft. */}
       {page === "mijn-pagina" && (
         <MijnPagina
           key={userName || "geen-naam"}
@@ -1461,6 +1464,15 @@ export default function App() {
           userRole={role}
           authUser={authUser}
           onOuderDashboard={() => setPage("ouder-dashboard")}
+          onStartKwartier={() => setPage("start-kwartier")}
+          onNaamInvullen={(n) => {
+            const naam = (n || "").trim();
+            if (!naam) return;
+            setUserName(naam);
+            try {
+              localStorage.setItem("ls_user", JSON.stringify({ name: naam, level: userLevel || "", role: role || "leerling", schoolType: userSchoolType || "" }));
+            } catch { /* lokaal opslaan is best-effort */ }
+          }}
           onKlaarzetten={startKlaarzetten}
           onHierOefenen={hierOefenen}
           onUpgrade={() => setPage("pro")}
