@@ -26,6 +26,22 @@ import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.j
 // leerkracht ziet "Toets maken" (→ teacher-home); leerling/ouder/onbekend krijgt
 // "Toets" → de Doorstroomtoets-ingang (USP + ICP). Zelfde tab-id zodat de
 // actief-markering simpel blijft.
+// Icoon voor de Mijn-tab: het Leerkwartier-logo (Mark 11 sep 2026 — *"nooit een
+// emoticon gebruiken, zo goedkoop"*, en na het zien van de alternatieven:
+// *"doe het leerkwartier logo"*). Bewust hetzelfde beeldmerk als in de kopbalk
+// en op het laadscherm, dus geen los icoontje om te onderhouden.
+function MijnIcoon() {
+  return (
+    <img
+      src="/logo.jpg"
+      alt=""
+      width={24}
+      height={24}
+      style={{ width: 24, height: 24, borderRadius: 7, objectFit: "contain", background: "#fff" }}
+    />
+  );
+}
+
 function maakTabs(isTeacher) {
   return [
     { id: "home",        label: "Home",  emoji: "🏠", target: "_home" },
@@ -45,7 +61,7 @@ function maakTabs(isTeacher) {
     // 109 voor Leren en 104 voor Park. De zeven bestemmingen zijn niet weg:
     // ze staan nu als rij ónderaan Mijn pagina (shared/meerTegels.js), zichtbaar
     // mét én zonder naam, en blijven vindbaar via de zoekbalk.
-    { id: "mijn",        label: "Mijn",  emoji: "🙂", target: "mijn-pagina" },
+    { id: "mijn",        label: "Mijn",  iconNode: <MijnIcoon />, target: "mijn-pagina" },
   ];
 }
 
