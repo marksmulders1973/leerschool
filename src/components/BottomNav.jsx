@@ -61,7 +61,7 @@ function maakTabs(isTeacher) {
     // 109 voor Leren en 104 voor Park. De zeven bestemmingen zijn niet weg:
     // ze staan nu als rij ónderaan Mijn pagina (shared/meerTegels.js), zichtbaar
     // mét én zonder naam, en blijven vindbaar via de zoekbalk.
-    { id: "mijn",        label: "Mijn",  iconNode: <MijnIcoon />, target: "mijn-pagina" },
+    { id: "mijn",        label: "Mijn pagina", iconNode: <MijnIcoon />, target: "mijn-pagina" },
   ];
 }
 
