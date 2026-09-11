@@ -77,9 +77,15 @@ out.append('## Eerstvolgende opvolgingen (specifieke afspraken vóór de cadans)
 out.append('')
 out.append('| Datum | Organisatie | Status | Reden |')
 out.append('|---|---|---|---|')
+bulk = Counter()
 for r in rows:
     if r.get('volgende_opvolging') and r['volgende_opvolging'] < '2026-12-01':
+        if r.get('status') == 'koud' and (r.get('opvolg_reden') or '').startswith('batch'):
+            bulk[(r['volgende_opvolging'], r.get('opvolg_reden'))] += 1
+            continue
         out.append('| %s | %s | %s | %s |' % (s(r['volgende_opvolging']), s(r['organisatie']), s(r['status']), s(r.get('opvolg_reden'))))
+for (d, reden), n in sorted(bulk.items()):
+    out.append('| %s | *%d organisaties (bulk-batch)* | koud | %s |' % (d, n, s(reden)))
 out.append('')
 out.append('## Volledige lijst (gesorteerd op volgende opvolging)')
 out.append('')

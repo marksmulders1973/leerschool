@@ -65,101 +65,6 @@ Drie vaste opvolgmomenten per jaar, altijd mét nieuws (nooit een kale herinneri
 
 | Datum | Organisatie | Status | Reden |
 |---|---|---|---|
-| 2026-09-14 | A.S. Talmaschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Albatros | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Archipelschool De Omnibus | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool 't Heuvelke | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool 't Tuselant | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool Bleijerheide | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Blinkerd | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Fontein | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Goede Herder | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Kasteeltuin | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Leilinde | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Opstap | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Regenboog | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Schakel | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Spoorzoeker | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool De Teugelaar | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool Het Noorderlicht | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool Mikado | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool Reuzepas | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Basisschool Vincent van Gogh | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | BS Steltloper | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | CBS de Kern | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | CBS de Maarsborg | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | CBS Groen van Prinsterer | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | CBS Het Carillon | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Christelijke Basisschool De Grebbe | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | De Goudakker | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | De Harlekijn | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | De Jacobsvlinder | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | De Maasoever | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | De Oostwijzer Orion | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | De Schatgraver | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Don Bosco | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | EBS De Fontein | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Fatimaschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | GBS De Driesprong | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Hertogin Johanna (locatie A) | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Hildegardisschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | IBS De Steenuil | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | IKC Berflo | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | IKC WereldWijs | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Jenaplanschool Kristalla | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | John F. Kennedyschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kardinaal Alfrinkschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | KBS De Contrabas | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | KBS de Wegwijzer | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | KC De Kleine Dollard | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | KC De Ontdekkingsreizigers | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum de Klimop | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum De Marskramer | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum De Vlieberg | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum De Wisselaar | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum Het Groeikwartier | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum Manjefiek | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum Noord | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum OBS Hendrik Wester | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum Rivierenwijk | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum Sittard | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum Valkenhorst | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Kindcentrum Westwijzer | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | KKC De Loper (incl. locatie Regenboog) | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Mgr. Bekkersschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS Angelslo | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS Bargeres | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Bolder | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Braskörf | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Broekheurne | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Catamaran | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Duizendpoot (locatie Geleen-Zuid) | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Kubus | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Oleander | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Ommewending | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Schuthoek | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Tille | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Toonladder | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Trampoline | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Uitvinding | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Viermaster | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Viersprong | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Vuurvlinder | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS De Waterlelie | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS Het Palet | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS Het Spectrum | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS Jan Ligthart | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS Noorderbreedte | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS Wereldwijs | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | OBS Woutertje Pieterse | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Openbaar Kindcentrum De Stroom | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Parkwijck (Openbare Basisschool) | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | PCB Sjalomschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | PCBO De Spreng | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | RK Basisschool De Wegwijzer | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Sint Willibrordusschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Stephanusschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
-| 2026-09-14 | Titus Brandsmaschool | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
 | 2026-09-14 | VluchtelingenWerk (medewerker) | wacht | concept-mail versturen na Mark stuur maar (intermediair-radar) |
 | 2026-09-21 | Leergeld Twenterand | wacht | zachte check als het stil blijft |
 | 2026-09-21 | Queen Wilhelmina Library (Saba) | wacht | adres voor flyers + poster per post |
@@ -188,6 +93,7 @@ Drie vaste opvolgmomenten per jaar, altijd mét nieuws (nooit een kale herinneri
 | 2026-10-15 | Voedselbank Rotterdam | partner | checken of Leerkwartier in hun nieuwsbrief stond; succes-update schermen |
 | 2026-10-26 | Leergeld Haarlemmermeer (Spark Fest) | partner | na Spark Fest 18 okt: cijfers + bedankje + foto; goodybag-model als referentie |
 | 2026-11-15 | Nationaal Fonds Kinderhulp | partner | januari-editie aanvragen: ander item (Kwartiercheck), pas na KvK + Stripe |
+| 2026-09-14 | *95 organisaties (bulk-batch)* | koud | batch 2 versturen (ma 14 sep 60, di 15 sep 36) |
 
 ## Volledige lijst (gesorteerd op volgende opvolging)
 
