@@ -70,6 +70,7 @@ export const PARTNER_NAMEN = {
   JEF2027: "het Jeugdeducatiefonds",
   JINC2027: "JINC",
   KINDERHULP2027: "Nationaal Fonds Kinderhulp",
+  KINDERZWERFBOEK2027: "Kinderzwerfboek", // 11 sep 2026: Kinderzwerfboekdag 7 okt, flyers per post
   LELYSTAD2027: "Voedselbank Lelystad",
   MAASTRICHT2027: "Voedselbank Maastricht",
   NIJMEGEN2027: "Voedselbank Nijmegen-Overbetuwe",
@@ -78,6 +79,7 @@ export const PARTNER_NAMEN = {
   PRO2027: "Mark, de maker van Leerkwartier",
   PURMEREND2027: "Voedselbank Purmerend",
   ROTTERDAM2027: "Bibliotheek Rotterdam",
+  VLUCHTELINGENWERK2027: "VluchtelingenWerk", // 11 sep 2026: medewerker vroeg zelf het oefenpakket aan
   ROTTERDAMPAS2027: "de Rotterdampas",
   SABA2027: "Queen Wilhelmina Library (Saba)",
   SAM2027: "Sam& voor alle kinderen",
