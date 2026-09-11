@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { track } from "../utils.js";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import { gameVisibleForUser, urlHasGameDeepLink } from "../shared/featureFlags.js";
@@ -38,23 +37,18 @@ function maakTabs(isTeacher) {
     // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
     // 2026-07-25: parkKeuze-keuzescherm weg — OBLITERATOR is easter egg, tab gaat direct naar het park.
     { id: "park",        label: "Park",  emoji: "🐾", target: "zoo", gameRelated: true },
-    // Mark 9 sep 2026: "kan daarbij printbaar en dictee?" — vijf knoppen is het
-    // maximum op een telefoon, dus de vijfde is "Meer": een paneel met Dictee,
-    // Printbaar, Tips (het wensenbord, sinds 5 jun een vaste ingang), Thuis,
-    // Leerkracht en Zoeken. Tips blijft zo één tik verder bereikbaar.
-    { id: "meer",        label: "Meer",  emoji: "➕", target: "_meer" },
+    // Mark 11 sep 2026: "Mijn pagina" stond hélemaal niet in de balk, terwijl het
+    // onze USP is — een bezoeker kwam er alleen via een chip op de startpagina
+    // die pas verscheen als er al een naam bekend was. Vijf knoppen blijft het
+    // maximum op een telefoon, dus "Meer" ruimt het veld: die knop werd sinds
+    // 1 aug door 7 sessies geopend en zijn paneel kreeg 4 tikken, tegenover
+    // 109 voor Leren en 104 voor Park. De zeven bestemmingen zijn niet weg:
+    // ze staan nu als rij ónderaan Mijn pagina (shared/meerTegels.js), zichtbaar
+    // mét én zonder naam, en blijven vindbaar via de zoekbalk.
+    { id: "mijn",        label: "Mijn",  emoji: "🙂", target: "mijn-pagina" },
   ];
 }
 
-const MEER_TEGELS = [
-  { id: "dictee",     label: "Dictee",     emoji: "✍️", sub: "Charley zegt de zin, jij typt het woord", target: "dictee" },
-  { id: "werkwoorden", label: "Werkwoorden", emoji: "🔤", sub: "werkwoordspellingtest zoals op school", target: "werkwoorden" },
-  { id: "printen",    label: "Printbaar",  emoji: "🖨️", sub: "werkbladen, tafels, dictees, leesladder", target: "printen" },
-  { id: "tips",       label: "Tips",       emoji: "💬", sub: "wens of tip voor de maker", target: "wishes" },
-  { id: "ouder",      label: "Thuis",      emoji: "👪", sub: "voor ouder of verzorger", target: "ouder-dashboard" },
-  { id: "leerkracht", label: "Leerkracht", emoji: "🧑‍🏫", sub: "klas, toets maken, parkcode", target: "teacher-home" },
-  { id: "zoeken",     label: "Zoeken",     emoji: "🔎", sub: "vind een onderwerp of pagina", target: "learn-paths-hub" },
-];
 
 function bepaalActieveTab(page) {
   // student-home telt NIET als "Home" (Mark 7 aug 2026): de Home-tab lichtte
@@ -64,17 +58,17 @@ function bepaalActieveTab(page) {
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview" || page === "cito") return "toets-maken";
   if (page === "zoo" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
-  if (["wishes", "dictee", "werkwoorden", "vandaag-kwartier", "printen", "tafelbladen", "redactiebladen", "dictees", "ouder-dashboard"].includes(page)) return "meer";
+  // De oud-"Meer"-bestemmingen hangen nu onder Mijn pagina, dus daar licht de
+  // Mijn-tab op (Mark 11 sep 2026).
+  if (page === "mijn-pagina") return "mijn";
+  if (["wishes", "dictee", "werkwoorden", "vandaag-kwartier", "printen", "tafelbladen", "redactiebladen", "dictees", "ouder-dashboard"].includes(page)) return "mijn";
   return null;
 }
 
 export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
   const actief = bepaalActieveTab(currentPage);
-  const [meerOpen, setMeerOpen] = useState(false);
   const kies = (tab) => {
     track("bottomnav_click", { tab: tab.id });
-    if (tab.target === "_meer") { setMeerOpen((v) => !v); return; }
-    setMeerOpen(false);
     onNavigate(tab.target);
   };
   // Rol-bewuste tabs: alleen leerkracht ziet "Toets maken" (→ teacher-home).
@@ -85,22 +79,6 @@ export default function BottomNav({ currentPage, onNavigate, authUser, role }) {
   const TABS = gameZichtbaar ? ALL_TABS : ALL_TABS.filter((t) => !t.gameRelated);
   return (
     <>
-    {meerOpen && (
-      <div onClick={() => setMeerOpen(false)} style={{ position: "fixed", inset: 0, zIndex: 99, background: "rgba(0,0,0,.45)" }}>
-        <div onClick={(e) => e.stopPropagation()} className="app-shell" style={{ position: "absolute", left: 0, right: 0, bottom: "calc(var(--bottom-nav-height) + env(safe-area-inset-bottom))", margin: "0 auto", background: "rgba(11, 18, 36, 0.97)", borderTop: "1px solid var(--color-border-soft)", borderRadius: "18px 18px 0 0", padding: "14px 14px 16px", boxShadow: "0 -8px 24px rgba(0,0,0,.4)" }}>
-          <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr", gap: 10 }}>
-            {MEER_TEGELS.map((t) => (
-              <button key={t.id} type="button" onClick={() => { track("bottomnav_meer", { tegel: t.id }); setMeerOpen(false); onNavigate(t.target); }}
-                style={{ border: "1px solid rgba(255,255,255,0.14)", background: "rgba(255,255,255,0.06)", borderRadius: 14, padding: "12px 6px 10px", color: "#fff", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 4, minHeight: 84 }}>
-                <span aria-hidden="true" style={{ fontSize: 26, lineHeight: 1 }}>{t.emoji}</span>
-                <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800 }}>{t.label}</span>
-                <span style={{ fontFamily: "var(--font-body)", fontSize: 10.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.25, textAlign: "center" }}>{t.sub}</span>
-              </button>
-            ))}
-          </div>
-        </div>
-      </div>
-    )}
     <nav
       aria-label="Hoofdnavigatie"
       style={{

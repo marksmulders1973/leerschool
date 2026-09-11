@@ -3,6 +3,7 @@ import Header from "../../components/Header.jsx";
 import styles from "../../styles.js";
 import Card from "../../shared/ui/Card.jsx";
 import Button from "../../shared/ui/Button.jsx";
+import { MEER_TEGELS } from "../../shared/meerTegels.js";
 import supabase from "../../supabase.js";
 import { updateTeacherClasses } from "../../data/repos/profilesRepo.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery/mastery.js";
@@ -253,6 +254,34 @@ const LEGE_VOORPROEFJE = [
   { emoji: "💛", titel: "Voor jou klaargezet", sub: "wat je juf, meester of ouder voor je klaarzet" },
   { emoji: "🏆", titel: "Je diploma's", sub: "alles wat je al af hebt" },
 ];
+
+// De rij die de oude "Meer"-knop uit de onderste balk vervangt (Mark 11 sep
+// 2026, "leren en toets kunnen onder meer vallen" → omgekeerd opgelost: Meer
+// werd Mijn, en de bestemmingen staan nu hier). Bewust BUITEN de {player}-tak:
+// ook een bezoeker zonder naam moet bij dictee, printbaar en tips kunnen.
+function MeerTegels({ onGa }) {
+  return (
+    <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+      <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 800, textTransform: "uppercase", letterSpacing: 0.6, color: "var(--color-text-muted, #8899aa)", marginBottom: 10 }}>
+        Meer in Leerkwartier
+      </div>
+      <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(96px, 1fr))", gap: 10 }}>
+        {MEER_TEGELS.map((t) => (
+          <button
+            key={t.id}
+            type="button"
+            onClick={() => { try { track("mijn_tegel", { tegel: t.id }); } catch { /* */ } onGa?.(t.target); }}
+            style={{ border: "1px solid var(--color-border-soft)", background: "rgba(255,255,255,0.05)", borderRadius: 14, padding: "12px 8px 10px", color: "inherit", cursor: "pointer", display: "flex", flexDirection: "column", alignItems: "center", gap: 4, minHeight: 92, textAlign: "center" }}
+          >
+            <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>{t.emoji}</span>
+            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800 }}>{t.label}</span>
+            <span style={{ fontFamily: "var(--font-body)", fontSize: 10.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.25 }}>{t.sub}</span>
+          </button>
+        ))}
+      </div>
+    </Card>
+  );
+}
 
 function LegeMijnPagina({ onStartKwartier, onNaamInvullen }) {
   const [naam, setNaam] = useState("");
@@ -2580,6 +2609,8 @@ export default function MijnPagina({
             </>)}
           </>
         )}
+
+        <MeerTegels onGa={(doel) => onOpenHub?.(doel)} />
       </div>
     </div>
   );
