@@ -33,6 +33,9 @@ const ORGS = [
   // 10 sep 2026: beide vroegen zelf het oefenpakket aan (dag van de Kinderhulp-nieuwsbrief).
   { code: "LEUDAL2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" },
   { code: "ICHTHUS2027", kaderKop: "Voor de gezinnen op uw vijf scholen betekent dat:" },
+  // 11 sep 2026 (dagrapport-ideeën 1 en 3): Kinderzwerfboekdag 7 okt + VluchtelingenWerk-medewerker die zelf het oefenpakket aanvroeg.
+  { code: "KINDERZWERFBOEK2027", kaderKop: "Voor de gezinnen op Kinderzwerfboekdag betekent dat:" },
+  { code: "VLUCHTELINGEN2027", kaderKop: "Voor de gezinnen die u begeleidt betekent dat:" },
 ];
 // Alleen de codes op de commandoregel (bv. `node scripts/maak-partner-flyer.mjs LEUDAL2027`),
 // zodat eerder met de hand bijgewerkte flyers niet worden overschreven.
