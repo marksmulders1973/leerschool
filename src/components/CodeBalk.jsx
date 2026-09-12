@@ -195,6 +195,23 @@ export default function CodeBalk() {
       setInvoer("");
       return;
     }
+    // 📬 Is dit een weekpakket-code uit de wekelijkse mail? Die is 6 tekens en
+    // valt daarmee in hetzelfde patroon als een koppelcode — vóór 12 sep 2026
+    // kreeg een ouder die zijn weekpakket-code intypte daarom de melding
+    // "Deze koppelcode klopt niet of is verlopen. Vraag om een nieuwe code."
+    // De code rotteert wekelijks (HMAC), dus alleen de server kan hem kennen.
+    const probeerWeekpakket = async (code) => {
+      try {
+        const r = await fetch(`/api/weekpakket?check=1&code=${encodeURIComponent(code)}`);
+        if (!r.ok) return false;
+        const j = await r.json();
+        if (!j?.ok) return false;
+        try { track("code_balk_weekpakket"); } catch { /* */ }
+        window.location.href = `/api/weekpakket?code=${encodeURIComponent(code)}`;
+        return true;
+      } catch { return false; }
+    };
+
     if (/^[A-Z0-9]{4,8}$/.test(kaal) && !kaal.includes("2027")) {
       // 🔐 Koppelcode (thuis/school). Fix 27 aug: een harde sprong naar
       // /leerling kaatst bij een koude landing bewust terug naar home
@@ -214,11 +231,13 @@ export default function CodeBalk() {
             return;
           }
           if (!error && data?.error === "code_invalid_or_expired") {
-            setFout("Deze koppelcode klopt niet of is verlopen. Vraag om een nieuwe code.");
+            if (await probeerWeekpakket(kaal)) return;
+            setFout("Deze code herkennen we niet. Kijk de spelling even na. Let op: de code uit de wekelijkse mail wisselt elke week.");
             return;
           }
         } catch { /* val terug op de uitleg-route hieronder */ }
       }
+      if (await probeerWeekpakket(kaal)) return;
       try { sessionStorage.setItem("lk_koppelcode_voorstel", kaal); } catch { /* */ }
       setKoppelTip({ klaar: false });
       return;

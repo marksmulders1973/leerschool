@@ -52,11 +52,27 @@ async function haalEditie(weekKey) {
 
 export default async function handler(req, res) {
   if (req.method !== "GET") return res.status(405).send("method");
+
+  // ?check=1 — lichte JSON-controle voor de codebalk op de homepagina (12 sep
+  // 2026). Die balk moet kunnen vaststellen OF een ingetypte code een
+  // weekpakket-code is, zonder de bezoeker eerst naar een foutpagina te sturen.
+  // Geeft niets prijs over de inhoud: alleen of de code van deze of vorige week
+  // is. Zonder deze controle belandde een weekpakket-code in de koppelcode-tak
+  // en kreeg de ouder "Deze koppelcode klopt niet of is verlopen".
+  const wilCheck = String(req.query.check || "") === "1";
+
   if (!process.env.WEEKPAKKET_SECRET) {
+    if (wilCheck) return res.status(200).json({ ok: false });
     return res.status(503).send(pagina("Nog even geduld", `<h1>Het Weekpakket start binnenkort</h1><p>Deze functie wordt nog ingericht. Kijk het later nog eens!</p>`));
   }
 
   const check = checkCode(req.query.code);
+
+  if (wilCheck) {
+    res.setHeader("Cache-Control", "no-store");
+    return res.status(200).json({ ok: !!check.ok });
+  }
+
   if (!check.ok) {
     res.setHeader("Content-Type", "text/html; charset=utf-8");
     return res.status(403).send(pagina("Code klopt niet", `
