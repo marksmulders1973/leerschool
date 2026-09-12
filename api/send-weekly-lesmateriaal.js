@@ -235,7 +235,31 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
 // Dagrapport naar Mark: hoeveel content-mails zijn er deze run (= vandaag) verstuurd.
 // Draait ook op dagen met 0 (niemand 'due') — Mark wil het elke dag in zijn inbox zien.
 // Faalt nooit hard: een fout in het rapport mag de hoofdtaak niet blokkeren.
-async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden, perPlan }) {
+// Welke plannen krijgen de wekelijkse mail? Elk formulier dat een adres
+// opslaat kiest zelf een `plan`, en als die hier niet bij staat krijgt die
+// persoon NOOIT iets — zonder dat iemand het merkt. Dat is nu drie keer
+// misgegaan: 'weekpakket' (3 sep), en 'dictee' + 'weekrapport' (gevonden
+// 12 sep; twee mensen die om een weekrapport vroegen kregen niets).
+// Nieuw formulier erbij? Zet het plan HIER ook neer.
+const PLANNEN = ["gratis-lesmateriaal", "oefenpakket", "wereldbol", "leesladder",
+                 "redactiebladen", "weekpakket", "dictee", "weekrapport"];
+
+// Wachter: zoek adressen met een plan dat NIET in de lijst staat en die nog
+// nooit iets kregen. Die zijn onbereikbaar. Komt in het interne dagrapport,
+// zodat een vergeten plan meteen opvalt in plaats van na weken.
+async function zoekVergetenPlannen(base, key) {
+  try {
+    const q = await sb(
+      `upgrade_waitlist?plan=not.in.(${PLANNEN.join(",")})&sent_count=eq.0` +
+      `&unsubscribed_at=is.null&select=email,plan,source&limit=20`,
+      { method: "GET" }, base, key);
+    if (!q.ok) return [];
+    const r = await q.json();
+    return Array.isArray(r) ? r : [];
+  } catch { return []; }
+}
+
+async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden, perPlan, vergeten }) {
   if (!RESEND) return;
   let datum;
   try {
@@ -258,6 +282,12 @@ async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden, 
     <p style="margin:0 0 4px;">Kandidaten (due vandaag): ${kandidaten ?? 0}</p>
     <p style="margin:0 0 4px;">Fouten: ${foutTekst}</p>
     ${reden ? `<p style="margin:0 0 4px;">Notitie: ${reden}</p>` : ""}
+    ${vergeten && vergeten.length ? `<div style="background:#fff4f4;border:1px solid #f0b4b4;border-radius:10px;padding:10px 14px;margin:12px 0;">
+      <strong>&#9888;&#65039; ${vergeten.length} adres${vergeten.length === 1 ? "" : "sen"} onbereikbaar</strong><br>
+      Deze mensen lieten hun adres achter met een <em>plan</em> dat niet in de weekmail-lijst staat, en krijgen dus nooit iets:<br>
+      ${vergeten.map((v) => `&bull; ${v.plan} (via ${v.source || "?"})`).join("<br>")}<br>
+      <span style="font-size:13px;color:#8a4a4a;">Los op door het plan toe te voegen aan PLANNEN in api/send-weekly-lesmateriaal.js.</span>
+    </div>` : ""}
     <p style="font-size:12px;color:#7d8aa0;margin-top:16px;">Welkomst- + wekelijkse oefenmails. 0 is normaal op dagen dat niemand 'due' is.</p>
   </div>`;
   const text = `Dagrapport e-mailmachine — ${datum}\n\n${n} mails verstuurd vandaag.${perPlanTekst ? `\nType: ${perPlanTekst}` : ""}\nKandidaten: ${kandidaten ?? 0}\nFouten: ${foutTekst}${reden ? `\nNotitie: ${reden}` : ""}`;
@@ -349,7 +379,7 @@ export default async function handler(req, res) {
   const filter =
     // Kliktocht 3 sep: 'weekpakket' (voordeur-code-mail) hoorde er niet bij →
     // een bevestigde lead kreeg nooit de beloofde wekelijkse code.
-    `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol,leesladder,redactiebladen,weekpakket)` +
+    `plan=in.(${PLANNEN.join(",")})` +
     `&unsubscribed_at=is.null` +
     `&or=(last_sent_at.is.null,last_sent_at.lt.${drempel})` +
     // F15 (2 sep 2026): de eerste mail (het gevraagde ding + bevestig-link) mag
@@ -364,7 +394,7 @@ export default async function handler(req, res) {
     rijen = await q.json();
     if (!Array.isArray(rijen)) throw new Error("lijst-leesfout: " + JSON.stringify(rijen).slice(0, 200));
   } catch (e) {
-    await stuurDagrapport(RESEND, FROM, { sent: ouderRapport?.sent || 0, kandidaten: 0, fouten: [], reden: "lijst-lezen-fout: " + String(e).slice(0, 80) });
+    await stuurDagrapport(RESEND, FROM, { sent: ouderRapport?.sent || 0, kandidaten: 0, fouten: [], reden: "lijst-lezen-fout: " + String(e).slice(0, 80), vergeten: await zoekVergetenPlannen(base, key) });
     return res.status(500).json({ error: "lijst-lezen-fout", ouderRapport, detail: String(e).slice(0, 200) });
   }
   if (rijen.length === 0) {
@@ -373,7 +403,7 @@ export default async function handler(req, res) {
     if (doorstroomCountdown?.sent > 0) rapportPlan[`🎓 aftelreeks (fase ${doorstroomCountdown.fase})`] = doorstroomCountdown.sent;
     const extraSent = (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0) + (doorstroomCountdown?.sent || 0);
     const extraFouten = [...(kwartiercheckWeek?.fouten || []), ...(doorstroomCountdown?.fouten || [])];
-    await stuurDagrapport(RESEND, FROM, { sent: extraSent, kandidaten: 0, fouten: extraFouten, reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : "") + (kwartiercheckWeek?.reden ? ` · ${kwartiercheckWeek.reden}` : "") + (doorstroomCountdown?.reden ? ` · aftelreeks: ${doorstroomCountdown.reden}` : ""), perPlan: rapportPlan });
+    await stuurDagrapport(RESEND, FROM, { sent: extraSent, kandidaten: 0, fouten: extraFouten, reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : "") + (kwartiercheckWeek?.reden ? ` · ${kwartiercheckWeek.reden}` : "") + (doorstroomCountdown?.reden ? ` · aftelreeks: ${doorstroomCountdown.reden}` : ""), perPlan: rapportPlan, vergeten: await zoekVergetenPlannen(base, key) });
     return res.status(200).json({ ok: true, sent: 0, ouderRapport, kwartiercheckWeek, doorstroomCountdown, reason: "niemand-due" });
   }
 
@@ -454,6 +484,7 @@ export default async function handler(req, res) {
     fouten,
     perPlan,
     reden: redenDelen.length ? redenDelen.join(" · ") : undefined,
+      vergeten: await zoekVergetenPlannen(base, key),
   });
   return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, doorstroomCountdown, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }
