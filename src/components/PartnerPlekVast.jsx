@@ -69,7 +69,9 @@ export default function PartnerPlekVast({ page, userName }) {
         plan: "gratis-lesmateriaal",
         source: "partner-claim",
         ref: code,
-        consent_at: new Date().toISOString(),
+        // Geen consent_at: hier staat geen vinkje "ik ben de ouder of
+        // verzorger" (StartKwartier heeft dat wél en zet het pas dán). De
+        // echte toestemming is de tik in de eerste mail — F15.
         kind_voornaam: (userName || "").trim().slice(0, 40) || null,
       });
       if (error && !/duplicate|unique/i.test(error.message || "")) throw error;

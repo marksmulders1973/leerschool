@@ -527,7 +527,8 @@ export default async function handler(req, res) {
     fouten,
     perPlan,
     reden: redenDelen.length ? redenDelen.join(" · ") : undefined,
-      vergeten: await zoekVergetenPlannen(base, key), bevestiging: await zoekBevestigingsStand(base, key),
+    vergeten: await zoekVergetenPlannen(base, key),
+    bevestiging: await zoekBevestigingsStand(base, key),
   });
   return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, doorstroomCountdown, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }
