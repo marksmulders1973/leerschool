@@ -19,6 +19,16 @@
 
 ## 🔴 Nu doen (deze week)
 
+- **⚠️ VACATURE Gemeente Den Haag — AI Usecasemanager (Digilab70), sluit do 11 SEPTEMBER 2026.**
+  Inhoudelijk sterke match (AI-usecase van probleem → experiment → productie, publieke waarden,
+  design thinking, politiek-bestuurlijke omgeving) én je hebt een getekende Ooievaarspas-overeenkomst
+  mét déze gemeente. Schaal 11 (€4.520-6.422) of 12, 32-36 u, 12 mnd bepaalde tijd.
+  **Vóór besluit afwegen:** (a) universitair werk-/denkniveau = harde eis op papier;
+  (b) belangenverstrengeling met `docs/GEMEENTE-BETAALT-PLAN.md` (Leerkwartier verkopen áán gemeenten)
+  → nevenwerkzaamheden mélden, ook de Sonac-CAO-check die al openstaat; (c) 32-36 u + reistijd
+  Den Haag naast ~30 u/wk Leerkwartier past niet — Leerkwartier zakt dan naar hobby-tempo.
+  Zelfs bij afwijzing: Digilab70 is precies het gremium waar Leerkwartier binnen wil komen.
+  Zeg "brief" → Claude zet een concept-motivatie klaar.
 - **📬 11 sep — Marion/Kinderhulp antwoordde (09:17): GEEN november-herhaling, "zet het zelf op je eigen site"; nieuwsbrief doorgestuurd.** ✅ 15:15 toestemmingsvraag ere-pagina verstuurd (logo + blokje zonder code, voorbeeld-kinderhulp.html). **Wachten, niet nudgen.** Bij ja: Claude zet de sectie live + LinkedIn-tekst voor jou. Stand: 13 claims KINDERHULP2027 in 2 dagen.
 - **✅ 11 sep: bedankt.html nieuwe volgorde live** (Gemeenten → Voedselbanken → lege kopjes onderaan; Kinderhulp op plek 2 na ja) · **✅ Search Console-fout gefixt** (FAQ-JSON dictee-oefenen/samen-bouwen/park, commit 0e5b812c) · 🔴 **regel: links in mails altijd mét .html** (leerkwartier.app/bedankt zonder .html = app-startpagina).
 - **❓ Mark ja/nee — idee 1 (11 sep): 50 flyers per post naar Kinderzwerfboek voor Kinderzwerfboekdag wo 7 okt (Openluchtmuseum Arnhem, 14-16 u).** Goodybag-model, geen bezoek. Concept pas ná Marions antwoord; flyers moeten vóór ~1 okt bij hen liggen.
