@@ -22,7 +22,16 @@ import { adresvraagOpen, adresvraagAfronden, actievePartnerCode, partnerFamilieT
 
 const geldigEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s);
 
-export default function PartnerPlekVast({ userName }) {
+// Alleen op rustpagina's. De claim valt midden in een vraag, en dit kaartje
+// staat onderaan het scherm — precies waar de antwoordknoppen zitten. Het
+// wacht dus tot het kind klaar is. "results" staat er met opzet NIET bij: dat
+// is het moment van KwartierVangnet, en twee kaartjes tegelijk is geen keuze
+// maar een blokkade.
+const RUSTPAGINAS = new Set([
+  "student-home", "home", "vandaag", "learn-paths-hub", "my-mastery", "familie",
+]);
+
+export default function PartnerPlekVast({ page, userName }) {
   const [open, setOpen] = useState(false);
   const [stap, setStap] = useState("vraag"); // vraag | klaar
   const [email, setEmail] = useState("");
@@ -30,16 +39,15 @@ export default function PartnerPlekVast({ userName }) {
   const [foutje, setFoutje] = useState("");
 
   useEffect(() => {
-    // Even wachten: de claim valt midden in een vraag. Het kind maakt eerst af.
-    if (!adresvraagOpen()) return;
+    if (open || !adresvraagOpen() || !RUSTPAGINAS.has(page)) return;
+    // Kort wachten zodat het kaartje niet tegelijk met de paginawissel opspringt.
     const t = setTimeout(() => {
-      if (adresvraagOpen()) {
-        setOpen(true);
-        try { track("partner_adresvraag_zichtbaar", { code: actievePartnerCode() || "?" }); } catch { /* */ }
-      }
-    }, 6000);
+      if (!adresvraagOpen()) return;
+      setOpen(true);
+      try { track("partner_adresvraag_zichtbaar", { code: actievePartnerCode() || "?" }); } catch { /* */ }
+    }, 1200);
     return () => clearTimeout(t);
-  }, []);
+  }, [page, open]);
 
   if (!open) return null;
 

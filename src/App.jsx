@@ -2700,7 +2700,7 @@ export default function App() {
         keer vrijblijvend om het adres van de ouder/verzorger. Zonder dit
         blijft elk gezin dat via een voedselbank, Leergeld of een nieuwsbrief
         binnenkomt anoniem — en dus onbereikbaar voor alles wat daarna komt. */}
-    <PartnerPlekVast userName={userName} />
+    <PartnerPlekVast page={page} userName={userName} />
     {/* KwartierVangnet (idee #16, 2026-08-08): vangt anonieme oefenaars op
         het warmste moment — kwartier gehaald of score-zonder-naam — met een
         naam-vraag + optioneel ouder/verzorger-mail. Niet tonen zolang de
