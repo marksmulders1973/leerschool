@@ -34,6 +34,24 @@ function pagina(titel, tekst, ok = true) {
 
 const schoon = (v) => String(v || "").replace(/[^A-Za-z0-9-]/g, "").slice(0, 80);
 
+// 🚪 `door` = waar de lezer heen wilde (12 sep 2026). De welkomstmail gaf het
+// Weekpakket wég vlak onder de bevestig-knop, dus er was geen enkele reden om
+// die knop nog aan te tikken: in de tien dagen dat F15 live stond tikte
+// niemand hem aan en kreeg dus ook niemand de wekelijkse reeks. Nu lopen de
+// inhoudsknoppen van de welkomstmail hier langs: wie op "Open het Weekpakket"
+// tikt zegt net zo goed ja, en gaat daarna gewoon door naar het pakket.
+//
+// Veiligheid: alleen een pad op onze eigen site. Geen "//host", geen
+// backslash, geen schema — anders is dit een open redirect en kan iemand de
+// link uit een vertrouwde mail naar een eigen pagina laten wijzen.
+function veiligPad(v) {
+  const p = String(v || "").slice(0, 300);
+  if (!p.startsWith("/") || p.startsWith("//")) return null;
+  if (p.includes("\\") || /\s|[<>"']/.test(p)) return null;
+  if (!/^\/[A-Za-z0-9\-._~!$&()*+,;=:@/?%#]*$/.test(p)) return null;
+  return p;
+}
+
 export async function handleBevestig(req, res) {
   res.setHeader("Cache-Control", "no-store");
   res.setHeader("Content-Type", "text/html; charset=utf-8");
@@ -65,7 +83,13 @@ export async function handleBevestig(req, res) {
       const q = await sb(`upgrade_waitlist?unsubscribe_token=eq.${encodeURIComponent(token)}&select=email&limit=1`, { method: "GET" }, base, key);
       const rows = q.ok ? await q.json().catch(() => []) : [];
       const email = Array.isArray(rows) && rows[0]?.email ? String(rows[0].email).toLowerCase() : null;
-      if (!email) return res.status(200).send(pagina("Deze link is niet (meer) geldig", "Vraag het materiaal gewoon opnieuw aan op leerkwartier.app, dan krijg je een verse link.", false));
+      if (!email) {
+        // Onbekende token maar wel een bestemming: de lezer wilde ergens heen.
+        // Die krijgt zijn pagina, niet onze foutmelding.
+        const doorAlsnog = veiligPad(req.query?.door);
+        if (doorAlsnog) return res.redirect(302, SITE + doorAlsnog);
+        return res.status(200).send(pagina("Deze link is niet (meer) geldig", "Vraag het materiaal gewoon opnieuw aan op leerkwartier.app, dan krijg je een verse link.", false));
+      }
       // Kliktocht 3 sep: ilike zonder joker = hoofdletter-ongevoelig (een lead
       // die "Mark@…" typte kreeg anders "Gelukt" maar bleef onbevestigd).
       const patroon = email.replace(/[\\%_]/g, "\\$&");
@@ -74,6 +98,8 @@ export async function handleBevestig(req, res) {
         { method: "PATCH", body: JSON.stringify({ confirmed_at: new Date().toISOString() }) },
         base, key
       );
+      const door = veiligPad(req.query?.door);
+      if (door) return res.redirect(302, SITE + door);
       return res.status(200).send(pagina("Gelukt, je staat op de lijst", "Je krijgt voortaan elke week het gratis oefenkwartiertje en de Weekpakket-code in je mail. Onderaan elke mail staat een afmeld-link — direct geregeld."));
     }
   } catch {

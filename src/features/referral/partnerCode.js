@@ -79,6 +79,14 @@ const KEY_TELLER = "lk_partner_antwoorden";
 const KEY_ACTIEF = "lk_partner_actief";
 const KEY_STATUS = "lk_partner_status"; // 'pro2027' (plek geclaimd) of 'vol' — alleen nog UI-hint
 const KEY_RECHT = "lk_partner_recht"; // server-bevestigd recht {ts, data} (F2, 2 sep 2026)
+// 📮 Vers geclaimd, nog geen adres gevraagd (12 sep 2026). De claim gebeurt
+// stil na 3 antwoorden en vraagt nergens om een e-mailadres — daarom staan
+// alle 27 Kinderhulp-gezinnen van deze week als anoniem apparaat in de
+// database en is er geen enkele manier om ze iets terug te sturen. Dat
+// verklaart de terugkeer van 11% beter dan onze eigen vergeetachtigheid.
+// Deze vlag zet één keer een vriendelijk kaartje aan: je plek is vast, wil je
+// een berichtje als er nieuw materiaal is? PartnerPlekVast.jsx leest hem.
+const KEY_ADRESVRAAG = "lk_partner_adresvraag"; // "" | "open" | "klaar"
 const RECHT_TTL_MS = 10 * 60 * 1000;
 
 // F2 (Fable-review 2 sep 2026): het Familie-recht komt van de server
@@ -217,6 +225,9 @@ export function telAntwoordVoorPartner() {
         if (data === "geclaimd" || data === "al_geclaimd") {
           ls.set(KEY_STATUS, "pro2027");
           ls.set(KEY_RECHT, ""); // server-cache verversen
+          // Alleen bij een verse claim, en alleen als er nog nooit iets is
+          // gevraagd of ingevuld — nooit twee keer zeuren om hetzelfde.
+          if (data === "geclaimd" && !ls.get(KEY_ADRESVRAAG)) ls.set(KEY_ADRESVRAAG, "open");
         } else if (data === "vol") {
           ls.set(KEY_STATUS, "vol");
           track("partner_vol", { code }); // sein voor Mark: limiet bereikt
@@ -258,4 +269,13 @@ export async function zetPartnerCodeHandmatig(invoer) {
 // 'vol' = code was op — gezin valt dan terug op het gewone gratis aanbod.
 export function partnerProStatus() {
   return ls.get(KEY_STATUS) || null;
+}
+
+// 📮 Adresvraag na een verse partner-claim — zie KEY_ADRESVRAAG hierboven.
+export function adresvraagOpen() {
+  return ls.get(KEY_ADRESVRAAG) === "open";
+}
+// Ook bij "niet nu" op "klaar" — één keer vragen is genoeg, twee keer is zeuren.
+export function adresvraagAfronden() {
+  ls.set(KEY_ADRESVRAAG, "klaar");
 }

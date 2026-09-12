@@ -11,6 +11,7 @@ import HomePage from "./components/HomePage.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import DeelTrotsKnop from "./components/DeelTrotsKnop.jsx";
 import KwartierVangnet from "./components/KwartierVangnet.jsx";
+import PartnerPlekVast from "./components/PartnerPlekVast.jsx";
 import TakenlijstView from "./components/TakenlijstView.jsx";
 import { isTakenlijst } from "./data/takenlijst.js";
 import UpdateBanner from "./components/UpdateBanner.jsx";
@@ -2695,6 +2696,11 @@ export default function App() {
         </div>
       </div>
     )}
+    {/* PartnerPlekVast (12 sep 2026): vraagt ná een verse partner-claim één
+        keer vrijblijvend om het adres van de ouder/verzorger. Zonder dit
+        blijft elk gezin dat via een voedselbank, Leergeld of een nieuwsbrief
+        binnenkomt anoniem — en dus onbereikbaar voor alles wat daarna komt. */}
+    <PartnerPlekVast userName={userName} />
     {/* KwartierVangnet (idee #16, 2026-08-08): vangt anonieme oefenaars op
         het warmste moment — kwartier gehaald of score-zonder-naam — met een
         naam-vraag + optioneel ouder/verzorger-mail. Niet tonen zolang de
