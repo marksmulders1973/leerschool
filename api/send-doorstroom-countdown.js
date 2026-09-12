@@ -17,6 +17,7 @@
 
 import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
+import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 const SITE = "https://leerkwartier.app";
 
 // De 6 fases. `from` = [maand, dag]: niet vóór deze datum versturen (jaar-agnostisch).
@@ -167,7 +168,7 @@ async function verstuur(rij, fase, RESEND, FROM) {
   const r = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-    body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text }),
+    body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text, headers: afmeldKoppen(rij.unsubscribe_token) }),
   });
   return r.ok;
 }

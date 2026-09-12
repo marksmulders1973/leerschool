@@ -13,6 +13,7 @@
 import { TOPO_VRAGEN, bouwOefenbladVragen } from "../src/data/topografieVragen.js";
 import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
+import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 const SITE = "https://leerkwartier.app";
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 
@@ -184,7 +185,7 @@ export default async function handler(req, res) {
     const r = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ from: FROM, to: [email], subject: onderwerp, html, text }),
+      body: JSON.stringify({ from: FROM, to: [email], subject: onderwerp, html, text, headers: afmeldKoppen(token) }),
     });
     if (!r.ok) {
       const det = await r.text().catch(() => "");

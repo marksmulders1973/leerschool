@@ -20,6 +20,7 @@ import { createRequire } from "module";
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
 import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
+import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 // JSON via createRequire: een kale ESM-JSON-import vereist import-attributes
 // in nieuwere Node-versies en breekt dan pas op runtime in de Vercel-functie.
 const require = createRequire(import.meta.url);
@@ -351,7 +352,7 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
           const pr = await fetch("https://api.resend.com/emails", {
             method: "POST",
             headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-            body: JSON.stringify({ from: FROM, reply_to: "hallo@leerkwartier.app", to: [partner], subject: onderwerp, html: phtml, text: ptext }),
+            body: JSON.stringify({ from: FROM, reply_to: "hallo@leerkwartier.app", to: [partner], subject: onderwerp, html: phtml, text: ptext, headers: afmeldKoppen(ptoken, { partner: true }) }),
           });
           if (!pr.ok) fouten.push("partner-" + adres.slice(0, 6) + ":" + pr.status);
         } catch (e) {

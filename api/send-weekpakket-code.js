@@ -4,6 +4,7 @@
 import { isoWeekKey, weekCode } from "./_lib/weekcode.js";
 import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
+import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 const SITE = "https://leerkwartier.app";
 
 function esc(s) {
@@ -116,7 +117,7 @@ export default async function handler(req, res) {
     const r = await fetch("https://api.resend.com/emails", {
       method: "POST",
       headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-      body: JSON.stringify({ from: FROM, to: [email], subject: "📬 Jouw Weekpakket-code voor deze week", html, text }),
+      body: JSON.stringify({ from: FROM, to: [email], subject: "📬 Jouw Weekpakket-code voor deze week", html, text, headers: afmeldKoppen(token) }),
     });
     if (!r.ok) {
       const det = await r.text().catch(() => "");

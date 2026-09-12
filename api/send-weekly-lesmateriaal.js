@@ -27,6 +27,7 @@ import rekenenPad from "../src/learnPaths/doorstroomtoetsRekenenG8.js";
 import taalPad from "../src/learnPaths/doorstroomtoetsTaalG8.js";
 import studiePad from "../src/learnPaths/doorstroomtoetsStudievaardighedenG8.js";
 
+import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 const BATCH = 90;
 const DAGEN_TUSSEN = 6; // minimaal aantal dagen tussen twee mails
@@ -409,7 +410,7 @@ export default async function handler(req, res) {
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text }),
+        body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text, headers: afmeldKoppen(rij.unsubscribe_token) }),
       });
       if (!r.ok) { fouten.push(String(rij.id).slice(0, 8) + ":" + r.status); continue; }
       await sb(
