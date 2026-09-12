@@ -75,8 +75,14 @@ export default function PartnerPlekVast({ userName }) {
     setBezig(false);
   };
 
+  // partnerFamilieTot() geeft een kale ISO-datum ("2027-12-31") terug; die hoort
+  // niet in een zin voor ouders. null = geen einddatum bekend — dan zeggen we
+  // er niets over, want een gratis-belofte zonder datum mogen we niet doen.
   const tot = partnerFamilieTot();
-  const totTekst = tot ? `tot ${tot}` : "";
+  const MAANDEN = ["januari", "februari", "maart", "april", "mei", "juni",
+                   "juli", "augustus", "september", "oktober", "november", "december"];
+  const m = /^(\d{4})-(\d{2})-(\d{2})$/.exec(tot || "");
+  const totTekst = m ? `tot en met ${Number(m[3])} ${MAANDEN[Number(m[2]) - 1]} ${m[1]}` : "";
 
   return (
     <div style={{
