@@ -15,6 +15,14 @@ import supabase from "../supabase.js";
 const KEY = "lk_daily_goal_v1";
 const STREAK_KEY = "lk_day_streak_v1";
 export const DEFAULT_TARGET_SECONDS = 15 * 60; // 15 min = handelsmerk
+// 🪜 Drie treden, één kwartier (15 sep 2026): 5 · 10 · 15 minuten. De teller telde
+// al per dag op; nu is elk deel zichtbaar en meetbaar (event `kwartier_deel`).
+export const DEEL_SECONDS = 5 * 60;
+const luisteraars = new Set();
+/** UI-hook: wordt aangeroepen na elke telling; `deelNieuw` = 1|2|3 op het moment dat een deel net is gehaald. */
+export function onKwartierUpdate(cb) { luisteraars.add(cb); return () => luisteraars.delete(cb); }
+function meldLuisteraars(g, deelNieuw) { for (const cb of luisteraars) { try { cb(g, deelNieuw); } catch { /* UI mag de telling nooit breken */ } } }
+export function deelVan(seconds) { return Math.min(3, Math.floor((seconds || 0) / DEEL_SECONDS)); }
 const TICK_INTERVAL_MS = 30_000;
 
 function todayStr() {
@@ -68,8 +76,13 @@ export function getDailyGoal() {
 export function addSeconds(deltaSeconds) {
   if (!Number.isFinite(deltaSeconds) || deltaSeconds <= 0) return getDailyGoal();
   const cur = getDailyGoal();
+  const deelVoor = deelVan(cur.seconds);
   cur.seconds = (cur.seconds || 0) + deltaSeconds;
   let netVoltooid = false;
+  // 🪜 deel 1 of 2 net gehaald → event voor de trechter (deel 3 = kwartier_reached hieronder)
+  const deelNa = deelVan(cur.seconds);
+  let deelNieuw = null;
+  if (deelNa > deelVoor && deelNa < 3) { deelNieuw = deelNa; try { track("kwartier_deel", { deel: deelNa }); } catch { /* */ } }
   if (!cur.completed && cur.seconds >= cur.target) {
     cur.completed = true;
     netVoltooid = true;
@@ -87,6 +100,7 @@ export function addSeconds(deltaSeconds) {
   write(cur);
   // A8.3: naar Supabase (bij voltooien direct, anders max 1×/minuut)
   pushCloud(netVoltooid);
+  meldLuisteraars(cur, netVoltooid ? 3 : deelNieuw);
   return cur;
 }
 
@@ -169,6 +183,28 @@ export function minutesDone(g = getDailyGoal()) {
 
 export function minutesLeft(g = getDailyGoal()) {
   return Math.max(0, Math.ceil((g.target - g.seconds) / 60));
+}
+
+/** Seconden van vandaag inclusief de nog niet getikte tijd (de tick loopt per 30 s) — voor een soepel balkje. */
+export function liveSeconds() {
+  const g = getDailyGoal();
+  let extra = 0;
+  if (lastTickAt != null && typeof document !== "undefined" && document.visibilityState === "visible") {
+    extra = Math.min(TICK_INTERVAL_MS / 1000 + 5, Math.max(0, (Date.now() - lastTickAt) / 1000));
+  }
+  return (g.seconds || 0) + extra;
+}
+/** 🪜 stand van de drie treden: { deel 0-3, pct binnen het huidige deel, nogSec tot het volgende deel, klaar } */
+export function treden(seconds = liveSeconds()) {
+  const deel = deelVan(seconds);
+  const inDeel = deel >= 3 ? DEEL_SECONDS : seconds - deel * DEEL_SECONDS;
+  return {
+    deel,
+    pct: deel >= 3 ? 100 : Math.round((100 * inDeel) / DEEL_SECONDS),
+    nogSec: deel >= 3 ? 0 : Math.max(0, Math.ceil(DEEL_SECONDS - inDeel)),
+    klaar: deel >= 3,
+    seconden: seconds,
+  };
 }
 
 // Tracking-tick: roep dit op bij paginabewegingen, route-changes of een

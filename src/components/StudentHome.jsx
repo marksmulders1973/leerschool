@@ -19,6 +19,7 @@ import { TIERS } from "../subscription/config.js";
 import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 import { AvatarSvg, loadAvatarConfig } from "../features/account/avatar.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
+import KwartierTreden from "../shared/ui/KwartierTreden.jsx";
 
 // Vakken-set per modus (audit 2 M2 — Mark's screenshot 2):
 // 8 PO-vakken (groep 1-8) en ~10 VO-vakken (klas 1-6) als eerste landing
@@ -424,6 +425,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
           };
           return (
             <div style={containerStyle} aria-label="Dagelijkse leerkwartier-voortgang">
+              <KwartierTreden compact />
               <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, marginBottom: 6 }}>
                 <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: completed ? "#00e676" : "#ffd54f" }}>
                   {completed ? "🎉 Leerkwartier behaald!" : "🕒 Jouw leerkwartier vandaag"}
