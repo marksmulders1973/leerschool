@@ -209,8 +209,14 @@ Tik je hierboven op het Weekpakket of de vraag van vandaag, dan telt dat ook als
     };
   }
 
+  // De welkomstmail sluit aan op wat iemand gisteren deed. Wie het printbare
+  // oefenwerkboek ophaalde (plan 'oefenpakket') kreeg tot 15 sep 2026 een mail
+  // die daar niets over zei — "hier is je eerste oefenkwartiertje" — alsof het
+  // werkboek nooit gebeurd was. Eén openingszin lost dat op.
   const intro = welkom
-    ? "Leuk dat je erbij bent! Elke week sturen we je een gratis oefenkwartiertje voor de Doorstroomtoets — één korte vraag mét uitleg op 3 niveaus, zodat je kind écht begrijpt waaróm."
+    ? (rij.plan === "oefenpakket"
+        ? "Je haalde gisteren het printbare oefenwerkboek op — hier komt de eerste wekelijkse vraag erbij. Elke week één korte Doorstroomtoets-vraag mét uitleg op 3 niveaus, zodat je kind écht begrijpt waaróm."
+        : "Leuk dat je erbij bent! Elke week sturen we je een gratis oefenkwartiertje voor de Doorstroomtoets — één korte vraag mét uitleg op 3 niveaus, zodat je kind écht begrijpt waaróm.")
     : "Hier is je gratis oefenkwartiertje voor deze week. Eén korte Doorstroomtoets-vraag mét uitleg — in een kwartiertje weer een stukje verder.";
 
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
