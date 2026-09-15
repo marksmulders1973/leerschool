@@ -156,6 +156,9 @@ import { useAuth } from "./auth/useAuth.js";
 import { useOnline } from "./shared/hooks/useOnline.js";
 import { BRAND } from "./brand.js";
 import { startTracking as startDailyTracking } from "./shared/dailyGoal.js";
+import KwartierTreden, { KwartierTredenToast } from "./shared/ui/KwartierTreden.jsx";
+// 🪜 Op deze pagina's telt de dagteller en staat het treden-balkje (15 sep 2026).
+const OEFENPAGINAS = new Set(["play", "learn-path", "start-kwartier", "vandaag-kwartier", "dictee", "werkwoorden", "spelling", "tafels", "woordenschat", "redactiesommen", "results", "cito", "examens", "textbook", "self-study"]);
 import { isStartKwartierGedaan } from "./features/onboarding/startKwartier.js";
 import { bewaarKoppeling, linkIdVoor, TERUG_NAAR_OUDER_KEY } from "./shared/koppeling.js";
 
@@ -1354,6 +1357,7 @@ export default function App() {
           elke korte chunk-fetch.
           <main> + tabIndex=-1 voor skip-link landing (a11y-audit). */}
       <main id="main-content" tabIndex={-1} style={{ outline: "none" }}>
+      {OEFENPAGINAS.has(page) && <div style={{ padding: "0 12px" }}><KwartierTreden /></div>}
       <Suspense fallback={<PageLoader />}>
       {/* Social-deep-link /v/<id> → directe vraag-landing (Mark's trechter). */}
       {page === "vraag" && (
@@ -2594,6 +2598,7 @@ export default function App() {
     </footer>
     </Suspense>
     </main>
+    <KwartierTredenToast />
     {BOTTOMNAV_PAGES.has(page) && (
       <BottomNav currentPage={page} onNavigate={handleBottomNavNavigate} authUser={authUser} role={role} />
     )}

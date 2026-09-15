@@ -290,10 +290,10 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
       ) : (
         <div style={{ background: "rgba(0,230,118,0.10)", border: "1.5px solid rgba(0,230,118,0.4)", borderRadius: 12, padding: "12px 14px", marginBottom: 10 }}>
           <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#69f0ae", marginBottom: 4 }}>
-            🎉 Drie vragen gedaan — zo werkt Leerkwartier!
+            🎉 Drie vragen gedaan — deel 1 van je eerste kwartier is bijna binnen!
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.55, color: "rgba(255,255,255,0.9)" }}>
-            Bij elke fout krijg je uitleg tot je het snapt — geen &quot;fout, volgende&quot;.
+            Een kwartier heeft drie delen van vijf minuten. Nog een paar vragen en deel 1 is van jou — de rest mag ook later vandaag. Bij elke fout krijg je uitleg tot je het snapt.
             {variant.code ? " En jullie gratis gezins-plek is nu meteen actief. 💛" : ""}
           </div>
         </div>
@@ -314,7 +314,7 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
               fontSize: 13.5, fontWeight: 700, cursor: "pointer",
             }}
           >
-            🚀 {proefKlaar ? "Verder oefenen — gratis" : "Liever meteen het hele overzicht"}
+            🚀 {proefKlaar ? "Nog even door — maak deel 1 af" : "Liever meteen het hele overzicht"}
           </button>
         )}
         {onOuder && (
