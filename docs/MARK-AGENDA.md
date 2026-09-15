@@ -19,6 +19,12 @@
 
 ## 🔴 Nu doen (deze week)
 
+- ⭐ **15 sep — Stichting Ommeriek (Appingedam), schoolbestuur Noord-Groningen ~3.500 leerlingen, vroeg ma 14 sep 09:21 ZELF het oefenpakket aan** via zoekverkeer (rolfzwart@ommeriek.nl). Code **OMMERIEK2027** aangemaakt (ongelimiteerd, Familie gratis t/m 31-12-2027); concept-mail in `Desktop\dagrapport\concepten-2026-09-15.md` en integraal in het dagrapport. **Wacht op Marks 'stuur maar'** → daarna ere-scherm-naam + flyer (eerst tonen). Grootste zelf-aanvrager tot nu toe.
+- 🔴 **15 sep — scholen batch 2 ligt stil.** Laatste verzendregistratie 10 sep (15 van 111). De 60 van maandag + 36 van dinsdag = **96 mails wachten op Marks 'ga'** (`scripts/outreach-send-scholen.mjs`, rij 16-111).
+- 🔴 **15 sep — KERNVONDST: het kwartier is de terugkeer-voorspeller.** Wie in bezoek 1 het kwartier haalt komt in 46% terug; wie niets doet in 6%. Slechts 7% van alle nieuwe apparaten haalt het kwartier. Hoofdthema oktober wordt 'van bezoek naar kwartier' (doel 15%); idee 5 blijft, maar met de nieuwe meetlat. Besluit bij de evaluatie do 24 sep.
+- 📡 **15 sep — OKT Amsterdam (kick.oktamsterdam.nl) is even groot als Google** (9 om 9 in 33u, 12/7d). Géén centraal mailadres gevonden, alleen contactpersonen per school → niet koud benaderen; bewaren als bewijsstuk voor het gemeentegesprek Amsterdam ná de KvK.
+- ⏰ **do 17 sep 09:00 — Voedselbank Alkmaar deelt de flyers uit.** ALKMAAR2027-teller start op 0; Claude zet die ochtend het Alkmaar-blok live op bedankt.html.
+
 - **📬 11 sep — Marion/Kinderhulp antwoordde (09:17): GEEN november-herhaling, "zet het zelf op je eigen site"; nieuwsbrief doorgestuurd.** ✅ 15:15 toestemmingsvraag ere-pagina verstuurd (logo + blokje zonder code, voorbeeld-kinderhulp.html). **Wachten, niet nudgen.** Bij ja: Claude zet de sectie live + LinkedIn-tekst voor jou. Stand: 13 claims KINDERHULP2027 in 2 dagen.
 - **✅ 11 sep: bedankt.html nieuwe volgorde live** (Gemeenten → Voedselbanken → lege kopjes onderaan; Kinderhulp op plek 2 na ja) · **✅ Search Console-fout gefixt** (FAQ-JSON dictee-oefenen/samen-bouwen/park, commit 0e5b812c) · 🔴 **regel: links in mails altijd mét .html** (leerkwartier.app/bedankt zonder .html = app-startpagina).
 - **❓ Mark ja/nee — idee 1 (11 sep): 50 flyers per post naar Kinderzwerfboek voor Kinderzwerfboekdag wo 7 okt (Openluchtmuseum Arnhem, 14-16 u).** Goodybag-model, geen bezoek. Concept pas ná Marions antwoord; flyers moeten vóór ~1 okt bij hen liggen.

@@ -68,19 +68,19 @@
       "m": "2026-08",
       "label": "aug",
       "seizoen": "rustig",
-      "bezoekers": 840,
+      "bezoekers": 523,
       "bron": "host",
       "accounts": 60,
-      "noot": "outreach-piek"
+      "noot": "outreach-piek · dashboard-hermeting 15 sep (stond op 840)"
     },
     {
       "m": "2026-09",
       "label": "sep",
       "seizoen": "middel",
-      "bezoekers": 370,
-      "bron": "app",
-      "accounts": 35,
-      "noot": "t/m 11 sep · eigen meting · Kinderhulp 10-11 sep",
+      "bezoekers": 661,
+      "bron": "host",
+      "accounts": 61,
+      "noot": "t/m 15 sep · dashboard · Kinderhulp 10-14 sep",
       "doel": 1000
     },
     {
