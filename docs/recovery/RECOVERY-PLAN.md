@@ -21,7 +21,7 @@ Laatst geüpdatet: 2026-08-25.
 |---|---|---|
 | **Hele codebase** | GitHub `marksmulders1973/leerschool` | `git clone https://github.com/marksmulders1973/leerschool.git` |
 | **Memory (Claude context)** | Recovery-mail in Mark's mailbox (zip-bijlage) + `OneDrive\AI-Overdracht\` + `Desktop\AI-Overdracht\` | Zip uitpakken, `geheugen\` kopiëren naar `~/.claude/projects/C--Users-<naam>-/memory/` |
-| **Productie-database** | Supabase project `uxqnzrymyjbcpuzqktdm` | dashboard.supabase.com/project/uxqnzrymyjbcpuzqktdm |
+| **Productie-database** | Supabase project `uxqnzrymyjbcpuzqktdm` (gratis plan = géén automatische back-up) + **wekelijkse export per mail** (sinds 15 sep 2026: elke zondag ~08:30 een json.gz-bijlage "💾 Database-back-up Leerkwartier" in hotmail + gmail; alle tabellen behalve events, plus de login-lijst) | dashboard.supabase.com/project/uxqnzrymyjbcpuzqktdm · terugzetten: bijlage uitpakken → per tabel `insert` via de SQL-editor of PostgREST, volgorde profiles → partner_codes → rest; wachtwoorden bestaan niet als export (gezinnen loggen opnieuw in via e-mail/Google) |
 | **Productie-app** | Vercel (auto-deploy van `main`-branch) | dashboard.vercel.com |
 | **Domein** | `leerkwartier.app` (.com + .nl bezet door Leatherbox) | DNS via Vercel-domain-config |
 | **Examen-PDFs** | `tmp/` lokaal | NIET gebackupt — opnieuw downloaden via examenblad.nl |
