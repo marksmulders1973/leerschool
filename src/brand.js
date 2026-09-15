@@ -7,7 +7,7 @@ export const BRAND = {
   name: "Leerkwartier",
   shortName: "leerkwartier",
   domain: "leerkwartier.app",
-  email: "info@smulsoft.nl",
+  email: "hallo@leerkwartier.app",
   publisher: "Leerkwartier",
   // Maand 1 snoei (visie-bewaker 2026-05-10): identiteits-tekst aangescherpt.
   // ICP = Toets-ouder. "Spelen" weg uit payoff (game-impliciet, niet ICP).
