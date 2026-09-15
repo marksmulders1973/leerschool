@@ -456,7 +456,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   }), [samen, naam, room?.code]);
   const gameGroep = (() => { try { const u = JSON.parse(localStorage.getItem("ls_user") || "{}"); const m = String(u.level || "").match(/(\d)/); return m ? m[1] : "6"; } catch { return "6"; } })();
   const gameModusRef = useRef(false);
-  useEffect(() => { gameModusRef.current = gameModus; }, [gameModus]);
+  useEffect(() => { gameModusRef.current = gameModus; if (gameModus) setZweef(false); }, [gameModus]); // eslint-disable-line
   const gameInviteRef = useRef(null);
   useEffect(() => { gameInviteRef.current = gameInvite; }, [gameInvite]);
   // 📲 Solo-lobby → "met vrienden spelen": parkcode maken en herladen mét game=1 (Mark 10 sep 2026)
@@ -1075,7 +1075,8 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         onRelay: (ok) => { setRelayOk(ok); },
         // 🎮 game-berichten: uitnodiging voor iedereen in het park; de rest naar het spel zelf
         onGame: (van, d) => {
-          if (d?.t === "lobby" && !gameModusRef.current) setGameInvite({ van, naam: d.naam || "Iemand" });
+          // "bezig" = de ronde loopt al: óók een uitnodiging, zodat wie later via de link komt gast wordt en niet zelf spelleider
+          if ((d?.t === "lobby" || d?.t === "bezig") && !gameModusRef.current) setGameInvite({ van, naam: d.naam || "Iemand" });
           if (d?.t === "stop") setGameInvite(null);
           for (const f of gameListeners.current) { try { f(van, d); } catch { /* */ } }
         },
@@ -2379,7 +2380,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <MenuTegel emoji="🫧" label="Maatje-weetjes wissen" fn={() => { wisBuddyWeetjes(); setMenuOpen(false); flits("Je maatje is alles weer vergeten — hij stelt zijn vraagjes gewoon opnieuw. 🐾"); }} />
               {onOpenMaatje && <MenuTegel emoji="📱" label="Mijn maatje (altijd bij je)" fn={onOpenMaatje} />}
               <MenuTegel emoji="💾" label="Park opslaan" fn={opslaan} />
-              <MenuTegel emoji="🎮" label={gameInvite ? `Meedoen: spel van ${gameInvite.naam}` : samen ? "Wie is de bedrieger? (samen)" : "Wie is de bedrieger?"} fn={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); setGameHost(!gameInvite); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); }} actief={gameModus} />
+              <MenuTegel emoji="🎮" label={gameInvite ? `Meedoen: spel van ${gameInvite.naam}` : samen ? "Wie is de bedrieger? (samen)" : "Wie is de bedrieger?"} fn={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); if (samen && !roomConnRef.current) { flits("Even wachten — het park verbindt nog…"); return; } setGameHost(!gameInvite); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); }} actief={gameModus} />
               <MenuTegel emoji="📤" label={samen ? "Parkcode & meespelers" : "Delen & samen bouwen"} fn={openDelen} />
               {onOpenGalerij && <MenuTegel emoji="🌍" label="Park-galerij bekijken" fn={onOpenGalerij} />}
               <MenuTegel emoji="♻️" label="Opnieuw beginnen" fn={() => setPanel("reset")} />
@@ -2723,7 +2724,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* 🪽 Zweef-knop (Minecraft-fly): snel door je park, over alles heen.
           Op laptop ook met de spatiebalk aan/uit. */}
-      {!firstPerson && rideIdx == null && !rideTrain && (
+      {!firstPerson && rideIdx == null && !rideTrain && !gameModus && (
         <button
           onClick={() => setZweef((v) => !v)}
           title={zweef ? "Weer lopen (of druk spatie)" : "Zweven — snel door je park (of druk spatie)"}
@@ -3321,7 +3322,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           </button>
           {/* 🎮 Mark 10 sep 2026: "als ik het park open zie ik niet speel imposter" — de tegel zat alleen in ☰ (op een smalle telefoon zelfs buiten beeld). */}
           {!gameModus && (
-            <button onClick={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); setGameHost(!gameInvite); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); try { track("game_knop_park", { invite: gameInvite ? 1 : 0 }); } catch { /* */ } }}
+            <button onClick={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); if (samen && !roomConnRef.current) { flits("Even wachten — het park verbindt nog…"); return; } setGameHost(!gameInvite); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); try { track("game_knop_park", { invite: gameInvite ? 1 : 0 }); } catch { /* */ } }}
               style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#fff", background: gameInvite ? "linear-gradient(135deg,#e2574c,#b0332a)" : "linear-gradient(135deg,#6a3fd6,#4a2aa8)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
               {gameInvite ? `🎮 Meedoen: ${gameInvite.naam}` : "🎮 Bedrieger"}
             </button>
@@ -3688,7 +3689,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
 
       {/* 🎮 Game-modus-pil: zo zie je in één oogopslag dat het park in spel-stand staat (Mark 9 sep) */}
       {gameModus && (
-        <div style={{ position: "absolute", top: 62, left: "50%", transform: "translateX(-50%)", zIndex: 7, background: "linear-gradient(135deg,#6a3fd6,#4a2aa8)", color: "#fff", borderRadius: 999, padding: "4px 12px", font: "800 12px system-ui", boxShadow: "0 4px 12px rgba(0,0,0,.35)", whiteSpace: "nowrap", pointerEvents: "none" }}>🎮 Game-modus · bouwen staat uit</div>
+        <div style={{ position: "absolute", bottom: "calc(206px + env(safe-area-inset-bottom))", left: 16, zIndex: 7, background: "linear-gradient(135deg,#6a3fd6,#4a2aa8)", color: "#fff", borderRadius: 999, padding: "4px 12px", font: "800 12px system-ui", boxShadow: "0 4px 12px rgba(0,0,0,.35)", whiteSpace: "nowrap", pointerEvents: "none" }}>🎮 Game-modus · bouwen staat uit</div>
       )}
       {/* 🎮 Uitnodiging voor een spel in dit park (fase 2, 9 sep) */}
       {samen && gameInvite && !gameModus && (

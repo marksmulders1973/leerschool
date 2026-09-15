@@ -6,8 +6,10 @@
 export const SPEL_DUUR = 300;          // 5 min
 export const BEVROREN_S = 15;         // (niet meer gebruikt sinds 9 sep: getikt = af, naar de zeppelin)
 export const MAX_SPELERS = 10;
-export const TIK_AFSTAND = 2.5;
-export const OGEN_AFSTAND = 8;         // iemand anders zo dichtbij = te veel ogen om te tikken
+export const TIK_AFSTAND = 3.5;        // 15 sep 2026: was 2.5 — je moest er praktisch tegenaan staan
+export const OGEN_AFSTAND = 5;         // iemand anders zo dichtbij = te veel ogen om te tikken (was 8: bij een post stond altijd wel iemand)
+export const TIK_MARGE_GAST = 1.5;     // gasten (gedeeld park): hun positie loopt bij de spelleider tot ~1,5 m achter
+export const HINT_AFSTAND = 10;        // binnen deze afstand krijgt de bedrieger een hint (loop dichterbij / iemand kijkt)
 export const TAAK_AFSTAND = 3.2;       // zo dicht bij een post = taak doen mag
 export const VERGADERING_S = 20;
 export const AUTO_VERGADERING_S = 120;
@@ -38,12 +40,13 @@ export function maakStations(r = 32, n = 6, vrij = null) {
 }
 
 export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, spelerRolKeuze = null, extraSpelers = [], nImposters = null, vak = "alles", groep = "eigen" }) {
-  const spelers = [{ id: spelerId, naam: spelerNaam || "Jij", avatar: avatar || "blocky:blokJoep", bot: false, x: 0, z: 8 }];
-  for (const e of extraSpelers) spelers.push({ id: e.id, naam: e.naam, avatar: e.avatar, bot: false, x: e.x || 0, z: e.z || 8 });
+  const spelers = [{ id: spelerId, naam: spelerNaam || "Jij", avatar: avatar || "blocky:blokJoep", bot: false, x: 0, z: 8, posBekend: true }];
+  // medespelers zonder ontvangen positie staan nog op de standaardplek: die tellen niet als ogen en zijn geen doel (posBekend)
+  for (const e of extraSpelers) spelers.push({ id: e.id, naam: e.naam, avatar: e.avatar, bot: false, x: e.x || 0, z: e.z || 8, posBekend: e.x != null });
   const namen = BOT_NAMEN.slice().sort(() => Math.random() - 0.5);
   for (let i = 0; i < nBots; i++) {
     const st = stations[i % stations.length];
-    spelers.push({ id: `bot${i}`, naam: namen[i], avatar: BOT_AVATARS[i % BOT_AVATARS.length], bot: true, x: st.x + rnd(-3, 3), z: st.z + rnd(-3, 3) });
+    spelers.push({ id: `bot${i}`, naam: namen[i], avatar: BOT_AVATARS[i % BOT_AVATARS.length], bot: true, x: st.x + rnd(-3, 3), z: st.z + rnd(-3, 3), posBekend: true });
   }
   const nImp = Math.max(1, Math.min(nImposters || (spelers.length >= 8 ? 2 : 1), Math.floor((spelers.length - 1) / 2)));
   const ids = spelers.map((s) => s.id);
@@ -87,27 +90,61 @@ export function isAf(s) { return !!(s && (s.af || s.uitgestemd)); }
 function zetAf(st, s, reden) {
   if (s.af) return;
   s.af = true; s.bezig = 0; s.doel = null; s.moving = false;
-  if (s.rol === "bouwer") st.takenTotaal = Math.max(st.takenKlaar, st.takenTotaal - Math.max(0, TAKEN_PER_BOUWER - (s.taken || 0)));
+  if (s.rol === "bouwer") {
+    st.takenTotaal = Math.max(st.takenKlaar, st.takenTotaal - Math.max(0, TAKEN_PER_BOUWER - (s.taken || 0)));
+    // een tik mag de bouwers niet laten winnen: zolang er nog een bouwer actief is, blijft er minstens één taak open
+    if (st.spelers.some((p) => p.rol === "bouwer" && p.id !== s.id && !isAf(p))) st.takenTotaal = Math.max(st.takenTotaal, st.takenKlaar + 1);
+  }
   meld(st, reden);
 }
 export function imposters(st) { return st.spelers.filter((s) => s.rol === "imposter"); }
 
-/** mag `dader` `doel` tikken? afstand + geen andere ogen */
-export function magTikken(st, dader, doel) {
-  if (st.fase !== "spel" || dader.rol !== "imposter" || isAf(dader) || dader.bevroren > 0) return false;
-  if (!doel || doel.id === dader.id || doel.rol === "imposter" || doel.bevroren > 0 || isAf(doel)) return false;
-  if (dist(dader, doel) > TIK_AFSTAND) return false;
-  if (dader.laatstDoel === doel.id) return false;
+/** waarom mag `dader` `doel` (nog) niet tikken? null = mag. Redenen: rol | doel | ver | dichterbij | zelfde | ogen
+ *  (15 sep 2026: de regels waren onzichtbaar — "ik kon niemand tikken" — nu kan de HUD zeggen waarom niet) */
+export function waaromNietTikken(st, dader, doel) {
+  if (!st || st.fase !== "spel" || !dader || dader.rol !== "imposter" || isAf(dader) || dader.bevroren > 0) return "rol";
+  if (!doel || doel.id === dader.id || doel.rol === "imposter" || doel.bevroren > 0 || isAf(doel) || doel.posBekend === false) return "doel";
+  // gast in een gedeeld park: de spelleider kent zijn positie met vertraging → wat ruimer meten
+  const marge = (!dader.bot && dader.id !== st.spelerId) ? TIK_MARGE_GAST : 0;
+  const d = dist(dader, doel);
+  if (d > TIK_AFSTAND + marge) return d <= HINT_AFSTAND ? "dichterbij" : "ver";
+  if (dader.laatstDoel === doel.id) return "zelfde";
+  if (kijker(st, dader, doel)) return "ogen";
+  return null;
+}
+/** wie staat er te dicht bij het doel en telt als ogen? een bot die bezig is bij zijn post kijkt naar het bord en telt niet */
+export function kijker(st, dader, doel) {
   for (const a of st.spelers) {
-    if (a.id === dader.id || a.id === doel.id || isAf(a) || a.bevroren > 0) continue;
-    if (dist(a, doel) < OGEN_AFSTAND) return false;
+    if (a.id === dader.id || a.id === doel.id || isAf(a) || a.bevroren > 0 || a.posBekend === false) continue;
+    if (a.bot && a.bezig > 0) continue;
+    if (dist(a, doel) < OGEN_AFSTAND) return a;
   }
+  return null;
+}
+/** mag `dader` `doel` tikken? afstand + geen andere ogen */
+export function magTikken(st, dader, doel) { return waaromNietTikken(st, dader, doel) === null; }
+/** HUD-hulp voor de bedrieger: dichtstbijzijnde bouwer, en waarom die (nog) niet te tikken is */
+export function tikStatus(st, dader) {
+  if (!st || !dader || dader.rol !== "imposter" || st.fase !== "spel" || isAf(dader)) return null;
+  let best = null, bd = 1e9;
+  for (const s of actieveSpelers(st)) {
+    if (s.id === dader.id || s.rol === "imposter" || s.posBekend === false) continue;
+    const d = dist(dader, s); if (d < bd) { bd = d; best = s; }
+  }
+  if (!best || bd > HINT_AFSTAND) return { doel: null, reden: "ver", kijker: null, afstand: bd };
+  const reden = waaromNietTikken(st, dader, best);
+  return { doel: best, reden, kijker: reden === "ogen" ? kijker(st, dader, best) : null, afstand: bd };
+}
+/** medespeler viel weg (tab dicht, wifi) → af, zodat hij niet als ogen, doel of stemmer blijft hangen */
+export function spelerWeg(st, id) {
+  const s = speler(st, id); if (!s || s.bot || isAf(s)) return false;
+  zetAf(st, s, `👋 ${s.naam} is weggegaan`);
   return true;
 }
 export function tik(st, daderId, doelId) {
   const d = speler(st, daderId), t = speler(st, doelId);
   if (!magTikken(st, d, t)) return false;
-  d.laatstDoel = t.id; d.tiks += 1; d.punten += PUNT_TIK;
+  d.laatstDoel = t.id; d.tiks += 1; d.punten += PUNT_TIK; d.laatsteTik = st.spelTijd;
   // wie stond in de buurt (8-16 m) heeft het misschien gezien
   for (const a of st.spelers) { if (a.id !== d.id && a.id !== t.id && dist(a, t) < 16 && Math.random() < 0.6) a.zagTik = d.id; }
   t.zagTik = Math.random() < 0.5 ? d.id : t.zagTik; // het slachtoffer zag de dader half zo vaak
@@ -126,9 +163,10 @@ export function magTaak(st, sp, station) {
 }
 /** taak afgerond (na de vragen): goed = alle vragen goed genoeg */
 export function taakKlaar(st, spId, stationId, goedAantal, totaal) {
-  const sp = speler(st, spId); if (!sp) return;
+  const sp = speler(st, spId); if (!sp || st.fase !== "spel") return;
   sp.punten += goedAantal * PUNT_GOED;
   sp.laatstePost = stationId;
+  sp.laatstePostGelukt = goedAantal >= Math.ceil(totaal / 2);
   if (goedAantal >= Math.ceil(totaal / 2)) {
     if (sp.rol === "bouwer") { sp.taken += 1; st.takenKlaar = Math.min(st.takenTotaal, st.takenKlaar + 1); meld(st, `✅ ${sp.naam} deed een taak`); }
     else meld(st, `✅ ${sp.naam} deed een taak`);
@@ -207,7 +245,7 @@ export function tick(st, dt, spelerPos, vrijPlek = null, posities = null) {
   const mij = ik(st);
   if (spelerPos) { mij.x = spelerPos.x; mij.z = spelerPos.z; }
   // fase 2: posities van de andere echte spelers (van het doorgeefstation) — voor tik-afstand en 'ogen'
-  if (posities) for (const s of st.spelers) { if (!s.bot && s.id !== st.spelerId) { const p = posities.get ? posities.get(s.id) : posities[s.id]; if (p && p.x != null) { s.x = p.x; s.z = p.z; s.yaw = p.yaw || 0; } } }
+  if (posities) for (const s of st.spelers) { if (!s.bot && s.id !== st.spelerId) { const p = posities.get ? posities.get(s.id) : posities[s.id]; if (p && p.x != null) { s.x = p.x; s.z = p.z; s.yaw = p.yaw || 0; s.posBekend = true; } } }
   if (st.fase === "vergadering") { st.vergadering.t += dt; if (st.vergadering.t >= VERGADERING_S) sluitVergadering(st); return; }
   st.spelTijd += dt; st.sindsVergadering += dt;
   for (const s of st.spelers) if (s.bevroren > 0) s.bevroren = Math.max(0, s.bevroren - dt);
@@ -215,7 +253,7 @@ export function tick(st, dt, spelerPos, vrijPlek = null, posities = null) {
     if (!b.bot || isAf(b)) { if (b.bot) b.moving = false; continue; }
     if (b.bevroren > 0) { b.moving = false; continue; }
     // bot-imposter: kans om te tikken als het mag
-    if (b.rol === "imposter" && Math.random() < dt * 0.5) {
+    if (b.rol === "imposter" && st.spelTijd > 15 && st.spelTijd - (b.laatsteTik || -99) > 20 && Math.random() < dt * 0.25) {
       const doel = actieveSpelers(st).find((s) => s.rol === "bouwer" && magTikken(st, b, s));
       if (doel) { tik(st, b.id, doel.id); b.doel = kies(st.stations); b.bezig = 0; continue; }
     }
@@ -255,7 +293,7 @@ export function maakSnapshot(st) {
     stations: st.stations, uitkomst: st.uitkomst, log: st.log.slice(0, 3), vak: st.vak, groep: st.groep, nImp: st.nImp,
     vergadering: st.vergadering ? { t: Math.round(st.vergadering.t * 10) / 10, stemmen: st.vergadering.stemmen, uitkomst: st.vergadering.uitkomst || null } : null,
     spelers: st.spelers.map((s) => ({ id: s.id, naam: s.naam, avatar: s.avatar, bot: s.bot, x: +s.x.toFixed(2), z: +s.z.toFixed(2), yaw: +(s.yaw || 0).toFixed(2), moving: !!s.moving, bezig: s.bezig > 0,
-      bevroren: Math.round(s.bevroren * 10) / 10, uitgestemd: s.uitgestemd, af: !!s.af, punten: s.punten, taken: s.taken, tiks: s.tiks, stemmen: s.stemmen, laatstePost: s.laatstePost,
+      bevroren: Math.round(s.bevroren * 10) / 10, uitgestemd: s.uitgestemd, af: !!s.af, punten: s.punten, taken: s.taken, tiks: s.tiks, stemmen: s.stemmen, laatstePost: s.laatstePost, laatstePostGelukt: s.laatstePostGelukt, posBekend: s.posBekend !== false,
       rol: klaar || s.uitgestemd ? s.rol : undefined })),
   };
 }
@@ -263,11 +301,14 @@ export function maakSnapshot(st) {
 export function pasSnapshotToe(lokaal, snap, mijnId) {
   const st = lokaal || { spelerId: mijnId, spelers: [], log: [] };
   const rollen = new Map((st.spelers || []).map((s) => [s.id, s.rol]));
+  // eigen stem vasthouden tot de spelleider hem bevestigt (anders flikkert "Gestemd" weg en stem je dubbel)
+  const mijnStem = st.vergadering && st.vergadering.stemmen ? st.vergadering.stemmen[mijnId] : undefined;
+  const maten = new Set(st.mijnMaten || []);
   st.spelerId = mijnId;
   st.fase = snap.fase; st.spelTijd = snap.spelTijd; st.sindsVergadering = snap.sindsVergadering;
   st.takenKlaar = snap.takenKlaar; st.takenTotaal = snap.takenTotaal; st.fouteStemrondes = snap.fouteStemrondes;
   st.stations = snap.stations; st.uitkomst = snap.uitkomst; st.log = snap.log || []; st.vak = snap.vak || "alles"; st.groep = snap.groep || "eigen"; st.nImp = snap.nImp || 1;
-  st.vergadering = snap.vergadering ? { door: null, t: snap.vergadering.t, stemmen: snap.vergadering.stemmen || {}, redenen: {}, uitkomst: snap.vergadering.uitkomst } : null;
-  st.spelers = snap.spelers.map((s) => ({ ...s, rol: s.rol || rollen.get(s.id) || (s.id === mijnId ? st.mijnRol : undefined) || "bouwer", zagTik: null, doel: null, bezig: s.bezig ? 1 : 0 }));
+  st.vergadering = snap.vergadering ? { door: null, t: snap.vergadering.t, stemmen: { ...(mijnStem !== undefined ? { [mijnId]: mijnStem } : {}), ...(snap.vergadering.stemmen || {}) }, redenen: {}, uitkomst: snap.vergadering.uitkomst } : null;
+  st.spelers = snap.spelers.map((s) => ({ ...s, rol: s.rol || rollen.get(s.id) || (s.id === mijnId ? st.mijnRol : undefined) || (maten.has(s.id) ? "imposter" : undefined) || "bouwer", zagTik: null, doel: null, bezig: s.bezig ? 1 : 0 }));
   return st;
 }
