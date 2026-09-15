@@ -17,6 +17,17 @@
 - **najaar 2027**: verleng-ronde bestaande codes met 2028-prijs
 - Stand: ☐ KvK ☐ KOR ☐ 1e kindpakket-aanmelding ☐ partner-rapport ☐ 1e betaald kind
 
+## 🛡️ Beveiliging & continuïteit — vast blok in elk dagrapport (sinds 15 sep 2026)
+
+> Mark 15 sep: "zet alles ergens in het dagrapport als todo". Blijft staan tot alles ✅ is. Details: memory `reference_leerkwartier_accounts_beveiliging` + `reference_leerkwartier_backup_en_herstel`.
+
+- ✅ Supabase Pro (dagelijkse back-ups, spend cap aan) · ✅ main-branch beschermd · ✅ Google/GitHub/hosting-account met wachtwoord/passkey + herstelcodes op papier · ✅ recovery-mail 15 sep naar Mark + Deianera (stappenplan + wachtwoordblad + pakket)
+- ☐ **ma 21 sep (Claude):** eerste zondag-export controleren (mail "💾 Database-back-up Leerkwartier"; interne dagrapport-mail toont 💾 database-back-up: 1)
+- ☐ **Mark, deze week:** hotmail-wachtwoord op het wachtwoordblad · TransIP-wachtwoord op het blad · **bewaarplek van het blad doorgeven** (→ Claude zet het in het stappenplan voor Deianera) · **vervaldatum ICS-kaart doorgeven** (→ 2 mnd vooraf in agenda; Claude, Anthropic, Supabase, TransIP lopen erop)
+- ☐ **Claude, deze week:** uptime-bewaking (gratis, elke 5 min, melding bij storing) · concept **verwerkingsregister** (A4) vóór KvK 28 sep
+- ☐ **Beslissingen Mark:** hosting naar Pro-plan ($20/mnd) **vóór de eerste betaling** (Hobby = niet-commercieel; hoort in het betaalspoor, dec 2026) · merknaam "Leerkwartier" deponeren als Benelux-woordmerk (±€250, 10 jaar) kort na de KvK · 2FA op TransIP en Microsoft
+- ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
+
 ## 🔴 Nu doen (deze week)
 
 - ⏰ **3 mei 2027 — leerkwartier.app verloopt** (geregistreerd 3 mei 2026, TransIP). Vóór 1 april 2027 checken: automatisch verlengen AAN + geldige kaart bij TransIP. Zonder domein: website én hallo@-mail dood. (Gevonden 15 sep via RDAP-lookup.)
