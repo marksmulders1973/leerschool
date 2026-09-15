@@ -2332,7 +2332,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
         <div style={{ position: "absolute", inset: 0, zIndex: 40, display: "grid", placeItems: "center", background: "rgba(10,20,40,.7)" }} onClick={sluitMenu}>
           <div onClick={(e) => e.stopPropagation()} style={{ background: "#fff", borderRadius: 18, padding: "20px 22px", maxWidth: 360, textAlign: "center", font: "600 14px system-ui", color: "#1c2840", boxShadow: "0 10px 30px rgba(0,0,0,.4)" }}>
             <div style={{ font: "900 20px system-ui", marginBottom: 8 }}>🎮 Game-modus aan</div>
-            <p style={{ margin: "0 0 12px" }}>Bouwen en de andere parkknoppen staan uit zolang "Wie is de imposter?" loopt. Wil je weer bouwen? Druk onderin het spel op <b>✕ Stop</b>.</p>
+            <p style={{ margin: "0 0 12px" }}>Bouwen en de andere parkknoppen staan uit zolang "Wie doet alsof?" loopt. Wil je weer bouwen? Druk onderin het spel op <b>✕ Stop</b>.</p>
             <button onClick={sluitMenu} style={{ border: "none", borderRadius: 999, padding: "10px 18px", font: "800 14px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3fd6,#4a2aa8)", cursor: "pointer" }}>Terug naar het spel</button>
           </div>
         </div>
@@ -2379,7 +2379,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
               <MenuTegel emoji="🫧" label="Maatje-weetjes wissen" fn={() => { wisBuddyWeetjes(); setMenuOpen(false); flits("Je maatje is alles weer vergeten — hij stelt zijn vraagjes gewoon opnieuw. 🐾"); }} />
               {onOpenMaatje && <MenuTegel emoji="📱" label="Mijn maatje (altijd bij je)" fn={onOpenMaatje} />}
               <MenuTegel emoji="💾" label="Park opslaan" fn={opslaan} />
-              <MenuTegel emoji="🎮" label={gameInvite ? `Meedoen: spel van ${gameInvite.naam}` : samen ? "Wie is de imposter? (samen)" : "Wie is de imposter?"} fn={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); setGameHost(!gameInvite); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); }} actief={gameModus} />
+              <MenuTegel emoji="🎮" label={gameInvite ? `Meedoen: spel van ${gameInvite.naam}` : samen ? "Wie doet alsof? (samen)" : "Wie doet alsof?"} fn={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); setGameHost(!gameInvite); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); }} actief={gameModus} />
               <MenuTegel emoji="📤" label={samen ? "Parkcode & meespelers" : "Delen & samen bouwen"} fn={openDelen} />
               {onOpenGalerij && <MenuTegel emoji="🌍" label="Park-galerij bekijken" fn={onOpenGalerij} />}
               <MenuTegel emoji="♻️" label="Opnieuw beginnen" fn={() => setPanel("reset")} />
@@ -3323,7 +3323,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           {!gameModus && (
             <button onClick={() => { setPlacing(null); setSelectedIdx(null); setSculptMode(false); setWaterMode(false); setGroundMode(false); setPanel(null); setGameHost(!gameInvite); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); try { track("game_knop_park", { invite: gameInvite ? 1 : 0 }); } catch { /* */ } }}
               style={{ border: "none", borderRadius: 999, padding: "9px 14px", font: "800 13px system-ui", color: "#fff", background: gameInvite ? "linear-gradient(135deg,#e2574c,#b0332a)" : "linear-gradient(135deg,#6a3fd6,#4a2aa8)", boxShadow: "0 4px 14px rgba(0,0,0,.25)", cursor: "pointer" }}>
-              {gameInvite ? `🎮 Meedoen: ${gameInvite.naam}` : "🎮 Imposter"}
+              {gameInvite ? `🎮 Meedoen: ${gameInvite.naam}` : "🎮 Doet alsof?"}
             </button>
           )}
           {/* (De geel/groen/blauwe filter-stipjes zijn weg — Mark 26 aug: sinds
@@ -3693,7 +3693,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {/* 🎮 Uitnodiging voor een spel in dit park (fase 2, 9 sep) */}
       {samen && gameInvite && !gameModus && (
         <div style={{ position: "absolute", top: 96, left: "50%", transform: "translateX(-50%)", zIndex: 7, display: "flex", gap: 8, alignItems: "center", background: "#fffef8", border: "2px solid #6a3fd6", borderRadius: 999, padding: "8px 10px 8px 14px", boxShadow: "0 6px 18px rgba(0,0,0,.35)", font: "800 13.5px system-ui", color: "#2a1a60", whiteSpace: "nowrap" }}>
-          🎮 {gameInvite.naam} start "Wie is de imposter?"
+          🎮 {gameInvite.naam} start "Wie doet alsof?"
           <button onClick={() => { setPlacing(null); setSelectedIdx(null); setPanel(null); setGameHost(false); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); }} style={{ border: "none", borderRadius: 999, padding: "7px 12px", font: "800 13px system-ui", color: "#fff", background: "linear-gradient(135deg,#6a3fd6,#4a2aa8)", cursor: "pointer" }}>Meedoen</button>
           <button onClick={() => setGameInvite(null)} style={{ border: "none", borderRadius: 999, width: 28, height: 28, font: "800 13px system-ui", background: "#eee", cursor: "pointer" }}>✕</button>
         </div>
