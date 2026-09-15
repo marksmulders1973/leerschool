@@ -523,6 +523,19 @@ export default async function handler(req, res) {
     if (doorstroomCountdown.sent > 0) perPlan[`🎓 aftelreeks (fase ${doorstroomCountdown.fase})`] = doorstroomCountdown.sent;
     if (Array.isArray(doorstroomCountdown.fouten)) fouten.push(...doorstroomCountdown.fouten);
   }
+  // 💾 Wekelijkse database-export naar buiten Supabase (Mark 15 sep 2026: "stel dat
+  // Claude per ongeluk alles wist"). Zondag, of handmatig ?backup=1. Lift mee op deze
+  // cron omdat Hobby maar 2 crons toestaat en api/ aan de bundel-limiet zit.
+  let backup = null;
+  const wilBackup = (req.query && req.query.backup === "1") || new Date().getUTCDay() === 0;
+  if (wilBackup) {
+    try {
+      const { maakDatabaseBackup } = await import("./_lib/backup-export.js");
+      backup = await maakDatabaseBackup({ base, key, resend: RESEND, from: FROM, naar: ADMIN_EMAIL, cc: ["marksmulders1973@gmail.com"] });
+    } catch (e) { backup = { ok: false, fouten: [String((e && e.message) || e)] }; }
+    if (backup && backup.ok) perPlan["💾 database-back-up"] = 1;
+    else fouten.push("backup: " + ((backup && backup.fouten) || []).join(" · "));
+  }
   const redenDelen = [
     ouderRapport?.reden ? `ouder-rapport: ${ouderRapport.reden}` : null,
     kwartiercheckWeek?.reden || null,
@@ -537,5 +550,5 @@ export default async function handler(req, res) {
     vergeten: await zoekVergetenPlannen(base, key),
     bevestiging: await zoekBevestigingsStand(base, key),
   });
-  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, doorstroomCountdown, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
+  return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, doorstroomCountdown, backup, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }
