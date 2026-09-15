@@ -1702,7 +1702,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         )}
 
         {/* Footer-blokje verwijderd 2026-05-15 — App.jsx heeft al een globale
-            <footer> onderaan met "Over Leerkwartier · Privacybeleid · © Smulsoft".
+            <footer> onderaan met "Over Leerkwartier · Privacybeleid · © Leerkwartier".
             HomePage rendert die dus niet meer apart om dubbeling te voorkomen. */}
       </div>
 

@@ -15,6 +15,7 @@
 import { VERSIES } from "../src/components/leesladderData.js";
 import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
+import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 const SITE = "https://leerkwartier.app";
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 const ADMIN_EMAIL = process.env.EMAIL_ADMIN || "Mark-smulders@hotmail.com";
@@ -218,7 +219,7 @@ export default async function handler(req, res) {
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text }),
+        body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text, headers: afmeldKoppen(rij.unsubscribe_token) }),
       });
       if (!r.ok) { fouten.push(String(rij.email).slice(0, 16) + ":" + r.status); continue; }
       // Bij de echte blast last_sent_at bijwerken zodat de weekmail niet

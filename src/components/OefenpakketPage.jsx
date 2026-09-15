@@ -422,7 +422,7 @@ export default function OefenpakketPage({ setPage } = {}) {
                     cursor: mailStatus === "busy" ? "wait" : "pointer",
                   }}
                 >
-                  {mailStatus === "busy" ? "Even bezig…" : "Stuur de antwoordsleutel →"}
+                  {mailStatus === "busy" ? "Even bezig…" : "Ontgrendel de antwoordsleutel →"}
                 </button>
               </div>
               {mailStatus === "error" && (
@@ -466,6 +466,15 @@ export default function OefenpakketPage({ setPage } = {}) {
           stapjes. Begint bij teksten van 5 zinnen, bouwt op naar toets-lengte. Ook
           gratis printbaar →
         </button>
+        {/* Eén neutrale regel voor wie hier beroepshalve komt (school, wijkteam,
+            fonds). Geen aparte trechter, geen herkenning — gewoon een open deur
+            (Mark 15 sep 2026: opvolging moet natuurlijk voelen, niet gevolgd). */}
+        <p style={{ margin: "12px 0 0", fontSize: 13, lineHeight: 1.5, color: "var(--color-muted, #9fb0c6)" }}>
+          🏫 Werk je op een school of bij een organisatie en wil je dit doorgeven?{" "}
+          <a href="/doorgeven.html" style={{ color: "var(--color-accent, #69f0ae)", fontWeight: 700, textDecoration: "none" }}>
+            Alles daarvoor staat op één pagina →
+          </a>
+        </p>
       </div>
 
       {/* ── Het printbare werkboek (WYSIWYG witte vellen) ─────── */}
@@ -513,7 +522,7 @@ export default function OefenpakketPage({ setPage } = {}) {
         <Sheet>
           <SectieKop emoji="👪" label="Voor de ouder — zo gebruik je dit werkboek" />
           <Alinea titel="Wat is de Doorstroomtoets?">
-            De Doorstroomtoets (sinds 2024 — vroeger de Doorstroomtoets) wordt
+            De Doorstroomtoets (sinds 2024 — vroeger de Eindtoets) wordt
             gemaakt in groep 8, van eind januari tot half februari (in 2027:
             25 januari t/m 12 februari). Hij test
             rekenen, taal en studievaardigheden. Dit werkboek oefent precies die

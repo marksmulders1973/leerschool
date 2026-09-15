@@ -27,6 +27,7 @@ import rekenenPad from "../src/learnPaths/doorstroomtoetsRekenenG8.js";
 import taalPad from "../src/learnPaths/doorstroomtoetsTaalG8.js";
 import studiePad from "../src/learnPaths/doorstroomtoetsStudievaardighedenG8.js";
 
+import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 const BATCH = 90;
 const DAGEN_TUSSEN = 6; // minimaal aantal dagen tussen twee mails
@@ -160,8 +161,15 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
   const hoi = naam ? `Hoi ${naam}-ouder,` : "Hoi,";
   const ref = encodeURIComponent(rij.unsubscribe_token || "");
   const utm = `utm_source=email&utm_campaign=${welkom ? "welkom" : "weekmail"}`;
-  const vandaag = `${SITE}/vandaag?${utm}`;
-  const toets = `${SITE}/doorstroomtoets-oefentoets?${utm}`;
+  // 🚪 In de welkomstmail loopt elke inhoudsknop langs /api/bevestig met een
+  // `door`-pad: wie ergens op tikt zegt daarmee ja tegen de wekelijkse reeks
+  // en komt gewoon uit waar hij heen wilde. Reden (12 sep 2026): in de tien
+  // dagen dat F15 live stond tikte NIEMAND de losse bevestig-knop aan — 0 van
+  // de 10 aanmelders — want het Weekpakket stond er gratis onder. De vraag
+  // kwam dus ná de beloning. In de week-mail blijven de links kaal.
+  const viaJa = (pad) => (welkom && ref ? `${SITE}/api/bevestig?token=${ref}&door=${encodeURIComponent(pad)}` : SITE + pad);
+  const vandaag = viaJa(`/vandaag?${utm}`);
+  const toets = viaJa(`/doorstroomtoets-oefentoets?${utm}`);
   const uit = `${SITE}/api/unsubscribe?token=${ref}`;
   const tip = `${SITE}/tips?utm_source=email&utm_campaign=tip`;
   // F15 (2 sep 2026): de welkomstmail is de enige mail zonder bevestiging;
@@ -171,10 +179,11 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
     html: `
     <div style="background:rgba(105,240,174,0.08);border:1.5px solid #00C853;border-radius:12px;padding:14px 16px;margin:0 0 18px;">
       <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:6px;">Wil je dit élke week?</div>
-      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;margin-bottom:10px;">Tik één keer op de knop — zo weten we zeker dat jij dit adres bent. Zonder tik krijg je verder geen mail.</div>
+      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;margin-bottom:10px;">Tik één keer op de knop — zo weten we zeker dat jij dit adres bent. Open je hieronder het Weekpakket of de vraag van vandaag, dan rekenen we dát ook als ja. Zonder tik krijg je verder geen mail.</div>
       <a href="${bevestig}" style="display:inline-block;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:14px;padding:11px 18px;border-radius:10px;">✅ Ja, elke week een oefenkwartiertje</a>
     </div>`,
-    text: `\nWil je dit elke week? Bevestig hier (zonder tik krijg je geen mail meer): ${bevestig}\n`,
+    text: `\nWil je dit elke week? Bevestig hier: ${bevestig}
+Tik je hierboven op het Weekpakket of de vraag van vandaag, dan telt dat ook als ja. Zonder tik krijg je geen mail meer.\n`,
   } : { html: "", text: "" };
 
   const onderwerp = welkom
@@ -187,7 +196,7 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
   let weekpakketBlok = { html: "", text: "" };
   if (process.env.WEEKPAKKET_SECRET) {
     const wpCode = weekCode(isoWeekKey());
-    const wpLink = `${SITE}/api/weekpakket?code=${encodeURIComponent(wpCode)}`;
+    const wpLink = viaJa(`/api/weekpakket?code=${encodeURIComponent(wpCode)}`);
     weekpakketBlok = {
       html: `
     <div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:16px 18px;margin-bottom:22px;text-align:center;">
@@ -200,8 +209,14 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
     };
   }
 
+  // De welkomstmail sluit aan op wat iemand gisteren deed. Wie het printbare
+  // oefenwerkboek ophaalde (plan 'oefenpakket') kreeg tot 15 sep 2026 een mail
+  // die daar niets over zei — "hier is je eerste oefenkwartiertje" — alsof het
+  // werkboek nooit gebeurd was. Eén openingszin lost dat op.
   const intro = welkom
-    ? "Leuk dat je erbij bent! Elke week sturen we je een gratis oefenkwartiertje voor de Doorstroomtoets — één korte vraag mét uitleg op 3 niveaus, zodat je kind écht begrijpt waaróm."
+    ? (rij.plan === "oefenpakket"
+        ? "Je haalde gisteren het printbare oefenwerkboek op — hier komt de eerste wekelijkse vraag erbij. Elke week één korte Doorstroomtoets-vraag mét uitleg op 3 niveaus, zodat je kind écht begrijpt waaróm."
+        : "Leuk dat je erbij bent! Elke week sturen we je een gratis oefenkwartiertje voor de Doorstroomtoets — één korte vraag mét uitleg op 3 niveaus, zodat je kind écht begrijpt waaróm.")
     : "Hier is je gratis oefenkwartiertje voor deze week. Eén korte Doorstroomtoets-vraag mét uitleg — in een kwartiertje weer een stukje verder.";
 
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
@@ -220,13 +235,14 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
       <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;">Elke maandag in je mail: wat je kind oefende, wat al goed gaat en wat aandacht verdient — zoals betaalde apps dat doen, bij ons gratis. <a href="${SITE}/ouder?utm_source=email&utm_campaign=koppel-cta" style="color:#69f0ae;font-weight:700;text-decoration:none;">Koppel je kind in 1 minuut →</a></div>
     </div>`}
     ${bevestigBlok.html}
-    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 20px;text-align:center;">💡 Heb je een idee om Leerkwartier beter te maken? <a href="${tip}" style="color:#69f0ae;font-weight:700;text-decoration:none;">Vertel het de maker →</a></p>
+    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 10px;text-align:center;">💡 Heb je een idee om Leerkwartier beter te maken? <a href="${tip}" style="color:#69f0ae;font-weight:700;text-decoration:none;">Vertel het de maker →</a></p>
+    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 20px;text-align:center;">🏫 Wil je Leerkwartier doorgeven aan een klas, school of organisatie? <a href="${SITE}/doorgeven.html?utm_source=email&utm_campaign=doorgeven" style="color:#69f0ae;font-weight:700;text-decoration:none;">Alles daarvoor staat hier →</a></p>
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
+  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\nWil je Leerkwartier doorgeven aan een klas, school of organisatie? ${SITE}/doorgeven.html\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 
   return { onderwerp, html, text };
 }
@@ -234,7 +250,62 @@ function maakMail(rij, welkom, niveauSectie = null, oefenvraag = null) {
 // Dagrapport naar Mark: hoeveel content-mails zijn er deze run (= vandaag) verstuurd.
 // Draait ook op dagen met 0 (niemand 'due') — Mark wil het elke dag in zijn inbox zien.
 // Faalt nooit hard: een fout in het rapport mag de hoofdtaak niet blokkeren.
-async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden, perPlan }) {
+// Welke plannen krijgen de wekelijkse mail? Elk formulier dat een adres
+// opslaat kiest zelf een `plan`, en als die hier niet bij staat krijgt die
+// persoon NOOIT iets — zonder dat iemand het merkt. Dat is nu drie keer
+// misgegaan: 'weekpakket' (3 sep), en 'dictee' + 'weekrapport' (gevonden
+// 12 sep; twee mensen die om een weekrapport vroegen kregen niets).
+// Nieuw formulier erbij? Zet het plan HIER ook neer.
+const PLANNEN = ["gratis-lesmateriaal", "oefenpakket", "wereldbol", "leesladder",
+                 "redactiebladen", "weekpakket", "dictee", "weekrapport"];
+
+// Wachter: zoek adressen met een plan dat NIET in de lijst staat en die nog
+// nooit iets kregen. Die zijn onbereikbaar. Komt in het interne dagrapport,
+// zodat een vergeten plan meteen opvalt in plaats van na weken.
+// Plannen die met opzet géén wekelijkse les-mail krijgen — anders roept de
+// wachter hieronder elke dag "wolf" over post die nooit bedoeld was. De
+// intermediair-lijst (doorgeven.html) gaat over organisaties, niet gezinnen;
+// teacher_pro/parent_pro zijn de oude wachtlijst van vóór het gratis-besluit.
+const PLANNEN_ZONDER_WEEKMAIL = ["intermediair", "teacher_pro", "parent_pro", "startkwartier"];
+
+async function zoekVergetenPlannen(base, key) {
+  try {
+    const buiten = [...PLANNEN, ...PLANNEN_ZONDER_WEEKMAIL];
+    const q = await sb(
+      `upgrade_waitlist?plan=not.in.(${buiten.join(",")})&sent_count=eq.0` +
+      `&unsubscribed_at=is.null&select=email,plan,source&limit=20`,
+      { method: "GET" }, base, key);
+    if (!q.ok) return [];
+    const r = await q.json();
+    return Array.isArray(r) ? r : [];
+  } catch { return []; }
+}
+
+// 🚦 Bevestigings-stand (12 sep 2026). F15 zette de wekelijkse reeks achter een
+// tik op /api/bevestig. Tien dagen lang tikte niemand: 10 aanmeldingen, 0
+// bevestigingen, dus nul nieuwe abonnees terwijl er niets faalde. Zo'n stille
+// nul mag nooit meer tien dagen onopgemerkt blijven — hij staat vanaf nu elke
+// ochtend in dit rapport.
+async function zoekBevestigingsStand(base, key) {
+  try {
+    const sinds = new Date(Date.now() - 14 * 86400000).toISOString();
+    const tel = async (extra) => {
+      const q = await sb(
+        `upgrade_waitlist?created_at=gte.${sinds}&plan=in.(${PLANNEN.join(",")})&select=id${extra}`,
+        { method: "GET", headers: { Prefer: "count=exact", Range: "0-0" } }, base, key);
+      if (!q.ok) return null;
+      const bereik = q.headers.get("content-range") || "";
+      const n = parseInt(bereik.split("/")[1], 10);
+      return Number.isFinite(n) ? n : null;
+    };
+    const nieuw = await tel("");
+    const bevestigd = await tel("&confirmed_at=not.is.null");
+    if (nieuw === null || bevestigd === null) return null;
+    return { nieuw, bevestigd };
+  } catch { return null; }
+}
+
+async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden, perPlan, vergeten, bevestiging }) {
   if (!RESEND) return;
   let datum;
   try {
@@ -257,9 +328,19 @@ async function stuurDagrapport(RESEND, FROM, { sent, kandidaten, fouten, reden, 
     <p style="margin:0 0 4px;">Kandidaten (due vandaag): ${kandidaten ?? 0}</p>
     <p style="margin:0 0 4px;">Fouten: ${foutTekst}</p>
     ${reden ? `<p style="margin:0 0 4px;">Notitie: ${reden}</p>` : ""}
+    ${vergeten && vergeten.length ? `<div style="background:#fff4f4;border:1px solid #f0b4b4;border-radius:10px;padding:10px 14px;margin:12px 0;">
+      <strong>&#9888;&#65039; ${vergeten.length} adres${vergeten.length === 1 ? "" : "sen"} onbereikbaar</strong><br>
+      Deze mensen lieten hun adres achter met een <em>plan</em> dat niet in de weekmail-lijst staat, en krijgen dus nooit iets:<br>
+      ${vergeten.map((v) => `&bull; ${v.plan} (via ${v.source || "?"})`).join("<br>")}<br>
+      <span style="font-size:13px;color:#8a4a4a;">Los op door het plan toe te voegen aan PLANNEN in api/send-weekly-lesmateriaal.js.</span>
+    </div>` : ""}
+    ${bevestiging ? `<div style="background:${bevestiging.nieuw >= 4 && bevestiging.bevestigd === 0 ? "#fff4f4;border:1px solid #f0b4b4" : "#f4f7fb;border:1px solid #d6dfea"};border-radius:10px;padding:10px 14px;margin:12px 0;">
+      <strong>&#128276; Bevestigingen, 14 dagen:</strong> ${bevestiging.bevestigd} van ${bevestiging.nieuw} nieuwe aanmeldingen.<br>
+      <span style="font-size:13px;color:#56627a;">Alleen wie bevestigt krijgt de wekelijkse reeks. Blijft dit op 0 staan terwijl er wel aanmeldingen zijn, dan is die reeks in de praktijk uit.</span>
+    </div>` : ""}
     <p style="font-size:12px;color:#7d8aa0;margin-top:16px;">Welkomst- + wekelijkse oefenmails. 0 is normaal op dagen dat niemand 'due' is.</p>
   </div>`;
-  const text = `Dagrapport e-mailmachine — ${datum}\n\n${n} mails verstuurd vandaag.${perPlanTekst ? `\nType: ${perPlanTekst}` : ""}\nKandidaten: ${kandidaten ?? 0}\nFouten: ${foutTekst}${reden ? `\nNotitie: ${reden}` : ""}`;
+  const text = `Dagrapport e-mailmachine — ${datum}\n\n${n} mails verstuurd vandaag.${perPlanTekst ? `\nType: ${perPlanTekst}` : ""}\nKandidaten: ${kandidaten ?? 0}\nFouten: ${foutTekst}${reden ? `\nNotitie: ${reden}` : ""}${bevestiging ? `\nBevestigingen (14 dgn): ${bevestiging.bevestigd} van ${bevestiging.nieuw}` : ""}`;
   try {
     await fetch("https://api.resend.com/emails", {
       method: "POST",
@@ -348,7 +429,7 @@ export default async function handler(req, res) {
   const filter =
     // Kliktocht 3 sep: 'weekpakket' (voordeur-code-mail) hoorde er niet bij →
     // een bevestigde lead kreeg nooit de beloofde wekelijkse code.
-    `plan=in.(gratis-lesmateriaal,oefenpakket,wereldbol,leesladder,redactiebladen,weekpakket)` +
+    `plan=in.(${PLANNEN.join(",")})` +
     `&unsubscribed_at=is.null` +
     `&or=(last_sent_at.is.null,last_sent_at.lt.${drempel})` +
     // F15 (2 sep 2026): de eerste mail (het gevraagde ding + bevestig-link) mag
@@ -363,7 +444,7 @@ export default async function handler(req, res) {
     rijen = await q.json();
     if (!Array.isArray(rijen)) throw new Error("lijst-leesfout: " + JSON.stringify(rijen).slice(0, 200));
   } catch (e) {
-    await stuurDagrapport(RESEND, FROM, { sent: ouderRapport?.sent || 0, kandidaten: 0, fouten: [], reden: "lijst-lezen-fout: " + String(e).slice(0, 80) });
+    await stuurDagrapport(RESEND, FROM, { sent: ouderRapport?.sent || 0, kandidaten: 0, fouten: [], reden: "lijst-lezen-fout: " + String(e).slice(0, 80), vergeten: await zoekVergetenPlannen(base, key), bevestiging: await zoekBevestigingsStand(base, key) });
     return res.status(500).json({ error: "lijst-lezen-fout", ouderRapport, detail: String(e).slice(0, 200) });
   }
   if (rijen.length === 0) {
@@ -372,7 +453,7 @@ export default async function handler(req, res) {
     if (doorstroomCountdown?.sent > 0) rapportPlan[`🎓 aftelreeks (fase ${doorstroomCountdown.fase})`] = doorstroomCountdown.sent;
     const extraSent = (ouderRapport?.sent || 0) + (kwartiercheckWeek?.sent || 0) + (doorstroomCountdown?.sent || 0);
     const extraFouten = [...(kwartiercheckWeek?.fouten || []), ...(doorstroomCountdown?.fouten || [])];
-    await stuurDagrapport(RESEND, FROM, { sent: extraSent, kandidaten: 0, fouten: extraFouten, reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : "") + (kwartiercheckWeek?.reden ? ` · ${kwartiercheckWeek.reden}` : "") + (doorstroomCountdown?.reden ? ` · aftelreeks: ${doorstroomCountdown.reden}` : ""), perPlan: rapportPlan });
+    await stuurDagrapport(RESEND, FROM, { sent: extraSent, kandidaten: 0, fouten: extraFouten, reden: "niemand-due" + (ouderRapport?.reden ? ` · ouder-rapport: ${ouderRapport.reden}` : "") + (kwartiercheckWeek?.reden ? ` · ${kwartiercheckWeek.reden}` : "") + (doorstroomCountdown?.reden ? ` · aftelreeks: ${doorstroomCountdown.reden}` : ""), perPlan: rapportPlan, vergeten: await zoekVergetenPlannen(base, key), bevestiging: await zoekBevestigingsStand(base, key) });
     return res.status(200).json({ ok: true, sent: 0, ouderRapport, kwartiercheckWeek, doorstroomCountdown, reason: "niemand-due" });
   }
 
@@ -409,7 +490,7 @@ export default async function handler(req, res) {
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text }),
+        body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text, headers: afmeldKoppen(rij.unsubscribe_token) }),
       });
       if (!r.ok) { fouten.push(String(rij.id).slice(0, 8) + ":" + r.status); continue; }
       await sb(
@@ -453,6 +534,8 @@ export default async function handler(req, res) {
     fouten,
     perPlan,
     reden: redenDelen.length ? redenDelen.join(" · ") : undefined,
+    vergeten: await zoekVergetenPlannen(base, key),
+    bevestiging: await zoekBevestigingsStand(base, key),
   });
   return res.status(200).json({ ok: true, sent: gelukt, ouderRapport, kwartiercheckWeek, doorstroomCountdown, kandidaten: rijen.length, fouten: fouten.slice(0, 10) });
 }

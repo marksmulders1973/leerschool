@@ -11,6 +11,7 @@ import HomePage from "./components/HomePage.jsx";
 import BottomNav from "./components/BottomNav.jsx";
 import DeelTrotsKnop from "./components/DeelTrotsKnop.jsx";
 import KwartierVangnet from "./components/KwartierVangnet.jsx";
+import PartnerPlekVast from "./components/PartnerPlekVast.jsx";
 import TakenlijstView from "./components/TakenlijstView.jsx";
 import { isTakenlijst } from "./data/takenlijst.js";
 import UpdateBanner from "./components/UpdateBanner.jsx";
@@ -1447,6 +1448,9 @@ export default function App() {
           />
         );
       })()}
+      {/* Lege staat /mijn (Mark 11 sep 2026): de pagina stuurde een bezoeker
+          zónder naam weg naar de startpagina, zonder knop of link. Nu kan hij
+          hier zelf starten — oefenen eerst, naam pas als hij die heeft. */}
       {page === "mijn-pagina" && (
         <MijnPagina
           key={userName || "geen-naam"}
@@ -1461,6 +1465,15 @@ export default function App() {
           userRole={role}
           authUser={authUser}
           onOuderDashboard={() => setPage("ouder-dashboard")}
+          onStartKwartier={() => setPage("start-kwartier")}
+          onNaamInvullen={(n) => {
+            const naam = (n || "").trim();
+            if (!naam) return;
+            setUserName(naam);
+            try {
+              localStorage.setItem("ls_user", JSON.stringify({ name: naam, level: userLevel || "", role: role || "leerling", schoolType: userSchoolType || "" }));
+            } catch { /* lokaal opslaan is best-effort */ }
+          }}
           onKlaarzetten={startKlaarzetten}
           onHierOefenen={hierOefenen}
           onUpgrade={() => setPage("pro")}
@@ -2577,7 +2590,7 @@ export default function App() {
       <a href="/weekpakket.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>📬 Weekpakket</a>
       ·
       <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Privacybeleid</a>
-      · © Smulsoft
+      · © Leerkwartier
     </footer>
     </Suspense>
     </main>
@@ -2683,6 +2696,11 @@ export default function App() {
         </div>
       </div>
     )}
+    {/* PartnerPlekVast (12 sep 2026): vraagt ná een verse partner-claim één
+        keer vrijblijvend om het adres van de ouder/verzorger. Zonder dit
+        blijft elk gezin dat via een voedselbank, Leergeld of een nieuwsbrief
+        binnenkomt anoniem — en dus onbereikbaar voor alles wat daarna komt. */}
+    <PartnerPlekVast page={page} userName={userName} />
     {/* KwartierVangnet (idee #16, 2026-08-08): vangt anonieme oefenaars op
         het warmste moment — kwartier gehaald of score-zonder-naam — met een
         naam-vraag + optioneel ouder/verzorger-mail. Niet tonen zolang de

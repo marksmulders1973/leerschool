@@ -55,6 +55,39 @@
     Nog geen code voor uw organisatie? Mail <a href="mailto:hallo@leerkwartier.app">hallo@leerkwartier.app</a>. U krijgt binnen een dag een code en een flyer op maat, zonder kosten en zonder verplichtingen.
   </div>
 
+  <h2>4. Werkt u bij een organisatie? Blijf op de hoogte</h2>
+  <div class="kader">
+    <p>Laat uw e-mailadres achter. U krijgt dan de flyer als PDF en hooguit drie keer per jaar een korte update: bij de start van het schooljaar, vlak voor de Doorstroomtoets en rond het voorlopig schooladvies. Geen reclame, uitschrijven kan altijd.</p>
+    <form id="intermediair-form" style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;margin-top:8px">
+      <input id="intermediair-email" type="email" required placeholder="uw werk-e-mailadres" style="flex:1;min-width:220px;padding:10px 12px;border:1.5px solid #cdd6e0;border-radius:10px;font-size:15px">
+      <input id="intermediair-org" type="text" placeholder="naam organisatie (mag leeg)" style="flex:1;min-width:200px;padding:10px 12px;border:1.5px solid #cdd6e0;border-radius:10px;font-size:15px">
+      <button type="submit" style="padding:10px 16px;border:0;border-radius:10px;background:#0a7d43;color:#fff;font-weight:700;font-size:15px;cursor:pointer">Houd mij op de hoogte</button>
+    </form>
+    <p id="intermediair-status" style="font-size:13px;color:#5a6775;margin:8px 0 0"></p>
+  </div>
+  <script>
+  (function(){
+    var f=document.getElementById('intermediair-form'); if(!f) return;
+    f.addEventListener('submit', async function(ev){
+      ev.preventDefault();
+      var email=(document.getElementById('intermediair-email').value||'').trim();
+      var org=(document.getElementById('intermediair-org').value||'').trim();
+      var st=document.getElementById('intermediair-status');
+      if(!email){ st.textContent='Vul een e-mailadres in.'; return; }
+      st.textContent='Even geduld...';
+      try{
+        var resp=await fetch("https://uxqnzrymyjbcpuzqktdm.supabase.co/rest/v1/upgrade_waitlist",{
+          method:"POST",
+          headers:{"apikey":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InV4cW56cnlteWpiY3B1enFrdGRtIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzUzODAyNTMsImV4cCI6MjA5MDk1NjI1M30._7eQMG3QV4lqOn_M02hFjsRQ3JfH0xAn5ylNTmBKEP8","Content-Type":"application/json","Prefer":"return=minimal"},
+          body:JSON.stringify({ email:email, plan:"intermediair", source:"doorgeven"+(org?(":"+org.slice(0,80)):""), consent_at:new Date().toISOString() })
+        });
+        if(resp.ok||resp.status===409){ st.textContent='Dank u. De flyer en de updates komen naar '+email+'.'; f.reset(); }
+        else { st.textContent='Dat lukte niet. Mail ons gerust op hallo@leerkwartier.app.'; }
+      }catch(e){ st.textContent='Dat lukte niet. Mail ons gerust op hallo@leerkwartier.app.'; }
+    });
+  })();
+  </script>
+
   <h2>Veelgestelde vragen</h2>
   <ul>
     <li><b>Kost het iets?</b> Nee. De basis blijft gratis tot en met 2031. Het Familie-pakket wordt rond januari 2027 betaald (richtprijs € 24,95 per toetsjaar), maar is gratis met een partnercode.</li>

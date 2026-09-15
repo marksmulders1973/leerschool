@@ -82,3 +82,107 @@ vertrouwen bij fondsen). Dit is de échte drempel — de rest is gewoon werk.
 
 Bronnen: sidnfonds.nl/aanvragen · sidnfonds.nl/faq · oranjefonds.nl/aanvragen ·
 fondswervingonline.nl (kansengelijkheid/onderwijs).
+
+---
+
+# 🔄 HERIJKING 12 september 2026
+
+> Aanleiding: Mark vroeg "is er nog een mogelijkheid voor subsidie te bedenken?" en
+> daarna de kernvraag **"die fondsen worden toch door de gemeente betaald?"**. Dat laatste
+> bleek de belangrijkste vraag van het hele spoor. Alles hieronder is nagekeken, niet gegokt.
+
+## 1. Wat er veranderd is sinds augustus
+
+Bij de SIDN-aanvraag was Mark een privépersoon met een idee. Per **28 september 2026** is hij
+een ingeschreven onderneming met:
+
+- een landelijk fonds dat hem in september in de intermediairs-nieuwsbrief plaatste (Kinderhulp,
+  27 claims en 19 accounts in twee dagen);
+- een getekende vriend-overeenkomst met een gemeente (Ooievaarspas, ingang 1-1-2027);
+- een schoolbestuur van vijf basisscholen dat zélf om materiaal vroeg (VPCBO Ichthus Huizen);
+- meetbare cijfers (211 accounts, Noord-ster 17).
+
+Dat opent een categorie die in dit plan van 2 augustus **helemaal niet voorkwam**:
+**ondernemersregelingen**. Die vragen juist wél een KvK, en een stichting komt er vaak niet
+voor in aanmerking. De keuze voor de eenmanszaak (9 aug) sloot dus één deur en opende een andere.
+
+## 2. 🔴 De geldstromen — dit is de kern
+
+Niet alle "fondsen" zijn hetzelfde geld. Nagekeken 12 sep:
+
+| Fonds | Waar het geld vandaan komt | Is dat gemeentegeld? |
+|---|---|---|
+| **Leergeld** (lokale stichtingen) | grotendeels **gemeentelijke bijdragen** + donaties (bv. Leiden €400k, provincie Limburg structureel) | **Ja, grotendeels** |
+| **Kinderhulp** | donateurs, bedrijven, vermogensfondsen, nalatenschappen, Goede Doelen Loterijen, wat ministeriële subsidie | **Nee** |
+| **Sam&** (koepel van Leergeld, Jeugdfonds S&C, Kinderhulp, Jarige Job) | **rijkssubsidie**, verhoogd met €4,5 mln naar **€14,5 mln** | **Nee, rijksgeld** |
+
+**Gevolgen voor de strategie:**
+
+1. **Leergeld ≈ de gemeente.** Het Leergeld-spoor en het gemeente-betaalt-spoor zijn in
+   dezelfde gemeente **dezelfde euro**. Beide tegelijk bewandelen is riskant: de gemeente kan
+   zeggen "wij financieren Leergeld al, wees daar". ➜ **Regel: kies per gemeente één van de twee.**
+2. **Kinderhulp is de waardevolste relatie**, en om een andere reden dan gedacht: het is het
+   enige spoor waar het geld níét uit de gemeentekas komt. Dat is geld dat erbíj komt.
+   Hun eigen nieuwsbrief zegt letterlijk dat ze bijspringen "wanneer andere voorzieningen geen
+   oplossing bieden" — ze zijn expres het vangnet ná de gemeente.
+3. **Sam& is de onaangeraakte derde pot** (rijksgeld). Wij mailden ze koud op 13 jul met een
+   flyer; resultaat was alleen een doorzending naar het Jeugdeducatiefonds. Nu is er wél een
+   verhaal: hun eigen aangesloten fonds plaatste ons in september, mét cijfers.
+   ➜ **Sam& wordt de éérste van de fondsen-ronde in oktober, niet een van de vijf.**
+   (Doorgevoerd in `opvolgbronnen`, opvolgdatum 1 okt.)
+
+## 3. Ondernemersregelingen — nieuw, nog te verifiëren
+
+Kandidaten die passen bij softwareontwikkeling door een kleine ondernemer. **Nog niet uitgezocht;
+niet aannemen dat ze passen.**
+
+| Regeling | Kanttekening die eerst weg moet |
+|---|---|
+| **WBSO** (fiscale innovatieregeling) | Voor zelfstandigen hangt de aftrek aan het **urencriterium van 1.225 uur**. Naast Sonac haalt Mark dat waarschijnlijk niet → eerst uitzoeken. |
+| **MIT-haalbaarheidsproject** (MKB) | Valt onderwijs-AI onder een topsector? |
+| **Provinciale MKB-/innovatievouchers** | Mark woont in Herwijnen = **provincie Gelderland**. Lagere drempels dan rijksregelingen. |
+
+⚠️ **Eerlijke afweging:** deze regelingen gaan over *innovatie en R&D*. Leerkwartier is grotendeels
+slim toepassen van bestaande techniek. Het enige echt nieuwe stuk is de uitleg die zichzelf
+vereenvoudigt — en precies dát wees SIDN af. De slagingskans is dus niet vanzelf hoger.
+
+## 4. De consortium-route (fase 2) staat nu pas écht open
+
+In augustus theorie, want er was geen school. Nu is er een bestuur van vijf scholen. Maar:
+**de school vraagt aan, niet Mark.** Geen actie voor nu; wel een reden om die ene relatie warm
+te houden tot er een "ja" ligt.
+
+## 5. ⭐ De eigenlijke conclusie: in deze sector loopt geld niet als subsidie, maar als inkoop
+
+Kijk naar wat er in de week van 10 sep langskwam:
+
+- Kinderhulp betaalt via het aanvraagportaal **laptops, brillen en schoolspullen** voor kinderen
+  in armoede, en vanaf 1 okt **Actie Pepernoot** (cadeaucode €30 per kind).
+- DPG Media geeft **krantenabonnementen** weg — verdeeld via armoedeorganisaties.
+- Leergeld **koopt licenties** (o.a. bij een concurrent).
+
+Niemand van hen geeft subsidie aan een maker. **Ze kopen iets namens een kind.**
+
+De vraag is dus niet "welk fonds geeft mij geld", maar **"hoe word ik iets dat een fonds namens
+een kind kan betalen"**. Dat is: geen aanvraagformulier maar een prijs en een factuur; geen
+eenmalig projectgeld maar iets dat elk jaar terugkomt; en het past bij de eenmanszaak én bij het
+feit dat Mark eraan wil verdienen. De Seizoenspas van €24,95 is precies de orde van grootte die
+zo'n stichting per kind vergoedt.
+
+## 6. Advies en volgorde
+
+1. **Geen nieuwe subsidieaanvraag de komende weken.** Zorg dat je in november een **factuur**
+   kunt sturen. Dat is KvK 28 sep → KOR → zakelijke rekening → Stripe.
+2. **Behandel Leergeld en de gemeente als één spoor**; kies per gemeente welke van de twee.
+3. **Behandel Sam& en Kinderhulp als een apart spoor** — ander geld, dus het concurreert niet
+   met de gemeentebegroting. Begin daar, want daar is nu een verhaal.
+4. **Ondernemersregelingen**: alleen uitzoeken als Mark daar expliciet om vraagt (WBSO-urencriterium
+   als eerste horde).
+
+**Wat hiervan is doorgevoerd op 12 sep:** Sam& op 1 okt als eerste van de fondsen-ronde ·
+Armoedefonds-duplicaat opgeruimd en de bestaande rij aangevuld (ook DPG-distributiepartner) ·
+Quiet toegevoegd (1 okt).
+
+Bronnen (nagekeken 12 sep 2026): cbf.nl/organisaties/nationaal-fonds-kinderhulp ·
+leergeld.nl/effectiviteit · rijksoverheid.nl (voortgang aanpak geldzorgen, armoede en schulden) ·
+mkbservicedesk.nl (innovatiesubsidies).

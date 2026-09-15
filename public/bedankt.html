@@ -34,6 +34,21 @@
     .org h3 a{color:#0a7d43;text-decoration:underline;text-underline-offset:3px;text-decoration-thickness:1.5px}
     .org h3 a::after{content:" ↗";font-size:12px;font-weight:400}
     .org p{font-size:13px;color:#5a6775;margin:0;line-height:1.5}
+    .org .logo{height:34px;flex-shrink:0;margin-top:4px;max-width:100%;object-fit:contain}
+    /* Telefoon (Mark 13 sep): een breed partnerlogo duwde de tekst in een kolom
+       van drie woorden per regel — onleesbaar. Onder de 560px staat het logo
+       daarom bóven de tekst, zodat een zin een zin blijft. */
+    @media (max-width: 560px){
+      /* De pagina is opgemaakt als een vel papier met brede marges. Op een
+         telefoon van 390px bleef daardoor maar ~200px tekst over: bijna de
+         helft van het scherm ging op aan wit. Smallere marges geven ~310px. */
+      body{padding:10px}
+      .vel{padding:24px 18px;border-radius:12px}
+      .org{flex-direction:column;gap:10px;padding:14px}
+      .org .logo{margin-top:0}
+      .org .icoon{margin-top:0}
+      h1{font-size:22px}
+    }
     /* Feiten-badge i.p.v. sterren: warm en levendig, maar elk woord is waar. */
     .badge{display:inline-block;background:#e7f6ec;color:#0a7d43;border:1px solid #bfe3cd;border-radius:999px;padding:2px 10px;font-size:11.5px;font-weight:700;margin-top:6px}
     .leeg{background:#f6f8fa;border:1.5px dashed #cdd6e0;border-radius:12px;padding:14px 18px;margin-bottom:10px;font-size:13px;color:#8893a3;line-height:1.5}
@@ -44,6 +59,7 @@
     .url-sub{text-align:center;font-size:12.5px;color:#5a6775;margin-bottom:6px}
     .voet{margin-top:26px;padding-top:12px;border-top:1px solid #e3e8ee;font-size:11.5px;color:#8893a3;line-height:1.6}
   </style>
+  <link rel="canonical" href="https://leerkwartier.app/bedankt.html" />
 </head>
 <body>
   <div class="vel">
@@ -95,7 +111,7 @@
          LOGO-toestemming 27 aug 2026 (Amber): "je mag ons logo weergeven op de
          bedankpagina" — logo (van hun eigen site) vervangt het brood-emoji. -->
     <div class="org">
-      <img src="/drukwerk/logo-voedselbank-rotterdam.svg" alt="Logo Voedselbank Rotterdam" style="height:34px;flex-shrink:0;margin-top:4px">
+      <img class="logo" src="/drukwerk/logo-voedselbank-rotterdam.svg" alt="Logo Voedselbank Rotterdam">
       <div>
         <h3><a href="https://voedselbank.nl" rel="noopener">Voedselbank Rotterdam</a></h3>
         <p>Wijst gezinnen op Leerkwartier via de schermen in hun drie sociale supermarkten in Crooswijk, Rotterdam Zuid en Spangen.</p>
@@ -106,10 +122,30 @@
       </div>
     </div>
 
+    <!-- ═══ VOEDSELBANK ALKMAAR — TOESTEMMING BINNEN, PUBLICEREN VANAF DO 17 SEP 2026.
+         Teresa Hwan via WhatsApp, zo 13 sep: "Ik vertrouw inmiddels op je
+         intenties en kwaliteiten Mark dus een voorbeeld is niet nodig en je mag
+         ons zeker vermelden! Graag na donderdag. Dan krijgen klanten pas mee."
+         Donderdag 17 sep gaan de flyers mee in de voedselpakketten. Haal op die
+         dag deze twee commentaarregels weg — verder hoeft er niets te gebeuren.
+         NB: haar zin "Dankjewel voor je mooie initiatief!" is NIET als quote
+         vrijgegeven; zij gaf toestemming voor vermelding, niet voor een citaat.
+         Wil Mark de quote erbij, dan eerst apart vragen.
+
+    <div class="org">
+      <img class="logo" src="/drukwerk/logo-vb-alkmaar-vork.png" alt="Logo Voedselbank Alkmaar">
+      <div>
+        <h3><a href="https://voedselbankalkmaar.nl" rel="noopener">Voedselbank Alkmaar</a></h3>
+        <p>Geeft de flyer van Leerkwartier mee in de voedselpakketten, zodat gezinnen thuis gratis kunnen oefenen voor de Doorstroomtoets.</p>
+        <span class="badge">💚 In de voedselpakketten sinds september 2026</span>
+      </div>
+    </div>
+    ═══ -->
+
     <!-- ═══ KLAARGEZET, WACHT OP TOESTEMMING (25 aug 2026) — activeren zodra
          de betreffende voedselbank per mail "ja" zegt op de bedankt-vraag.
          Lelystad: toestemming gevraagd 18 aug (cijfers-reply aan Theo + bestuur).
-         Alkmaar: toestemming gevraagd 18 jul (reply aan Teresa) — nog geen ja.
+         (Alkmaar staat hierboven in een eigen blok: toestemming binnen 13 sep.)
          Zaanstreek + Dongen: vraag gaat mee bij het volgende contactmoment.
 
     <div class="org">
@@ -118,15 +154,6 @@
         <h3><a href="https://voedselbanklelystad.nl" rel="noopener">Voedselbank Lelystad</a></h3>
         <p>Wijst de gezinnen die zij helpen op Leerkwartier — zodat oefenen voor de Doorstroomtoets voor ieder kind bereikbaar is.</p>
         <span class="badge">💚 Doet mee sinds augustus 2026</span>
-      </div>
-    </div>
-
-    <div class="org">
-      <span class="icoon">🍞</span>
-      <div>
-        <h3><a href="https://voedselbankalkmaar.nl" rel="noopener">Voedselbank Alkmaar</a></h3>
-        <p>Deelt Leerkwartier in eenvoudige taal met hun klanten — met een eigen flyer en poster, zodat gezinnen thuis gratis kunnen oefenen.</p>
-        <span class="badge">💚 Verspreiding vanaf september 2026</span>
       </div>
     </div>
 

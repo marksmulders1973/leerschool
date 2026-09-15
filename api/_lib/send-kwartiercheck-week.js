@@ -7,6 +7,7 @@
 import { CONCEPTEN, bepaalGaps } from "../kwartiercheck-mail.js";
 import { mailTaglineHtml } from "./mail-tagline.js";
 
+import { afmeldKoppen } from "./afmeldkoppen.js";
 const SITE = "https://leerkwartier.app";
 const BATCH = 40;
 const MAX_VERVOLG = 3;          // resultaat-mail = week 1; daarna max week 2-4
@@ -176,7 +177,7 @@ export async function stuurKwartiercheckWeekmails({ base, key, RESEND, FROM, max
       const r = await fetch("https://api.resend.com/emails", {
         method: "POST",
         headers: { Authorization: `Bearer ${RESEND}`, "Content-Type": "application/json" },
-        body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text }),
+        body: JSON.stringify({ from: FROM, to: [rij.email], subject: onderwerp, html, text, headers: afmeldKoppen(rij.unsubscribe_token) }),
       });
       if (!r.ok) { fouten.push("kc-" + String(rij.id).slice(0, 8) + ":" + r.status); continue; }
       await patch({ weekmail_sent: (rij.weekmail_sent || 0) + 1, weekmail_last_at: new Date().toISOString() });

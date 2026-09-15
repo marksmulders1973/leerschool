@@ -40,7 +40,7 @@ is genoeg.
 
 **Niet te verwarren met**: Leatherbox (voorheen "Het Leerkwartier"),
 lederwaren-groothandel in Woerden. Leerkwartier.app is een onderwijs-app
-van Smulsoft en heeft geen relatie met dat bedrijf.
+van Leerkwartier en heeft geen relatie met dat bedrijf.
 
 ## Onderwerpen (waar je op kunt oefenen)
 
@@ -479,8 +479,8 @@ tafel-werkbladen, een oefenboekje op maat en printbare diploma's — gratis.
 ## Contact
 
 - Web: https://leerkwartier.app
-- Uitgever: Smulsoft
-- E-mail: info@smulsoft.nl
+- Uitgever: Leerkwartier
+- E-mail: hallo@leerkwartier.app
 
 ## Werkwoordspelling oefenen (groep 6-8)
 - https://leerkwartier.app/werkwoordspelling-oefenen.html — gratis werkwoordspellingtest zoals op school: 20 zinnen met een gat, het hele werkwoord en de tijd (t.t./v.t.) tussen haakjes, het kind typt de juiste vorm; bij een fout meteen de regel ('t kofschip, stam + t, ge- + stam + t/d). Score per vorm. Ouders en leerkrachten plakken de werkwoorden van de week; de app vervoegt ze en zet de test klaar met een code. Start: https://leerkwartier.app/werkwoorden

@@ -4,7 +4,7 @@
 > voor kinderen in groep 6-8 van de basisschool en leerlingen in het
 > voortgezet onderwijs. Specialiteit: oefenen voor de Doorstroomtoets
 > (voorheen Cito-eindtoets) en VMBO-eindexamens, in 15 minuten per dag,
-> met didactische uitleg op 3 niveaus. Gemaakt door Smulsoft (Nederland).
+> met didactische uitleg op 3 niveaus. Gemaakt door Leerkwartier (Nederland).
 > Dit bestand is bedoeld voor taalmodellen en AI-zoekmachines; een korter
 > overzicht met links staat in https://leerkwartier.app/llms.txt
 
@@ -188,7 +188,7 @@ gebruikers, geen advertenties van derden, en spraak-functies verlaten het
 apparaat niet. Privacybeleid: https://leerkwartier.app/privacy.html
 
 V: Is Leerkwartier hetzelfde als "Het Leerkwartier" (lederwaren)?
-A: Nee. Leerkwartier.app is een onderwijs-app van Smulsoft en heeft geen
+A: Nee. Leerkwartier.app is een onderwijs-app van Leerkwartier en heeft geen
 relatie met Leatherbox (voorheen "Het Leerkwartier"), een
 lederwaren-groothandel uit Woerden.
 

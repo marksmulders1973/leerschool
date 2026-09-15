@@ -76,7 +76,7 @@ function bouwMailHtml(naam, groep, scores, unsubToken) {
   const ctoUrl = `${SITE}/cito?utm_source=kwartiercheck&utm_medium=email`;
   const unsubUrl = unsubToken
     ? `${SITE}/api/unsubscribe?token=${encodeURIComponent(unsubToken)}`
-    : "mailto:info@smulsoft.nl?subject=Afmelden%20Kwartiercheck";
+    : "mailto:hallo@leerkwartier.app?subject=Afmelden%20Kwartiercheck";
   // Eerlijke aankondiging van de vervolgreeks (Mark 28 jul): max 3 maandag-mails.
   const reeksUitleg = gaps.length > 2
     ? `<p style='font-size:13px;color:rgba(255,255,255,0.5);margin:10px 0 0;line-height:1.5'>
