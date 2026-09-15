@@ -229,13 +229,14 @@ Tik je hierboven op het Weekpakket of de vraag van vandaag, dan telt dat ook als
       <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;">Elke maandag in je mail: wat je kind oefende, wat al goed gaat en wat aandacht verdient — zoals betaalde apps dat doen, bij ons gratis. <a href="${SITE}/ouder?utm_source=email&utm_campaign=koppel-cta" style="color:#69f0ae;font-weight:700;text-decoration:none;">Koppel je kind in 1 minuut →</a></div>
     </div>`}
     ${bevestigBlok.html}
-    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 20px;text-align:center;">💡 Heb je een idee om Leerkwartier beter te maken? <a href="${tip}" style="color:#69f0ae;font-weight:700;text-decoration:none;">Vertel het de maker →</a></p>
+    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 10px;text-align:center;">💡 Heb je een idee om Leerkwartier beter te maken? <a href="${tip}" style="color:#69f0ae;font-weight:700;text-decoration:none;">Vertel het de maker →</a></p>
+    <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 20px;text-align:center;">🏫 Wil je Leerkwartier doorgeven aan een klas, school of organisatie? <a href="${SITE}/doorgeven.html?utm_source=email&utm_campaign=doorgeven" style="color:#69f0ae;font-weight:700;text-decoration:none;">Alles daarvoor staat hier →</a></p>
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0 0 4px;">Je krijgt deze mail omdat je je aanmeldde voor gratis lesmateriaal op leerkwartier.app.</p>
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Geen mail meer? <a href="${uit}" style="color:#9fb0c6;">Uitschrijven</a> — direct geregeld.</p>
   </div></body></html>`;
 
-  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
+  const text = `${naam ? `Hoi ${naam}-ouder,` : "Hoi,"}\n\n${welkom ? "Leuk dat je erbij bent! " : ""}Je gratis oefenkwartiertje:\n\n${vraagBlok.text}${weekpakketBlok.text}Meer oefenen:\n- Vraag van vandaag: ${vandaag}\n- Gratis oefentoets: ${toets}\n${bevestigBlok.text}\nHeb je een idee om Leerkwartier beter te maken? Tip de maker: ${tip}\nWil je Leerkwartier doorgeven aan een klas, school of organisatie? ${SITE}/doorgeven.html\n\nUitschrijven: ${uit}\nLeerkwartier — een kwartier per dag leren, een leven lang slimmer.`;
 
   return { onderwerp, html, text };
 }
