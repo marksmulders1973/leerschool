@@ -17,6 +17,7 @@
 | 23 mrt | Anthropic API-tegoed ($5 + btw = $6,05) | ± €5,60 | PDF in Gmail (receipt 2582-4376-7067) | ✅ factuur binnen |
 | 31 mrt | Anthropic API-tegoed ($25 + btw = $30,25) | ± €28 | PDF in Gmail (receipt 2153-6754-5228) | ✅ factuur binnen |
 | v.a. 20 jun | **Claude-abonnement €108,90/mnd** (afschrijving rond de 20e; jun+jul+aug = 3× t/m aug) | €326,70 t/m aug | ICS-afschriften + claude.ai Billing | ✅ loopt maandelijks door |
+| v.a. 15 sep | **Supabase Pro $25/mnd** (≈ €23; dagelijkse back-ups 7 dgn, geen project-pauze, 8 GB db) — besluit Mark 15 sep na de back-up-vraag; maandelijks opzegbaar, spend cap AAN laten | ≈ €23/mnd | Supabase → Billing → Invoices (maandelijks) + welkomstmail 15 sep | 📥 eerste factuur volgt ~15 okt |
 | ~10 jul | Drukwerkdeal — 1.000 A4-flyers (order 15635719) | €72,60 | factuur in HOTMAIL + ICS | ✅ bedrag; 📥 factuur-PDF |
 | 18 jul | PostNL porto — 5 enveloppen flyer-zendingen | ± €22 | bon/Track&Trace | 📥 bon zoeken |
 | 23 jul | Anthropic API-tegoed ($20 + btw = $24,20) | ± €22,40 | PDF in Gmail (receipt 2891-3037-1600) | ✅ factuur binnen |
@@ -49,7 +50,7 @@ Drukwerkdeal-mails) erbij verzamelen maakt het dossier compleet.*
 
 ## Gratis (geen kosten, wél noteren dat het klopt)
 
-Vercel Hobby €0 · Supabase free tier €0 · Resend free tier €0 · GitHub €0.
+Vercel Hobby €0 · **Supabase Pro $25/mnd sinds 15 sep 2026** · Resend free tier €0 · GitHub €0.
 
 ## Werkwijze
 

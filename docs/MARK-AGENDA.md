@@ -17,6 +17,17 @@
 - **najaar 2027**: verleng-ronde bestaande codes met 2028-prijs
 - Stand: ☐ KvK ☐ KOR ☐ 1e kindpakket-aanmelding ☐ partner-rapport ☐ 1e betaald kind
 
+## 🛡️ Beveiliging & continuïteit — vast blok in elk dagrapport (sinds 15 sep 2026)
+
+> Mark 15 sep: "zet alles ergens in het dagrapport als todo". Blijft staan tot alles ✅ is. Details: memory `reference_leerkwartier_accounts_beveiliging` + `reference_leerkwartier_backup_en_herstel`.
+
+- ✅ Supabase Pro (dagelijkse back-ups, spend cap aan) · ✅ main-branch beschermd · ✅ Google/GitHub/hosting-account met wachtwoord/passkey + herstelcodes op papier · ✅ recovery-mail 15 sep naar Mark + Deianera (stappenplan + wachtwoordblad + pakket)
+- ☐ **ma 21 sep (Claude):** eerste zondag-export controleren (mail "💾 Database-back-up Leerkwartier"; interne dagrapport-mail toont 💾 database-back-up: 1)
+- ☐ **Mark, deze week:** hotmail-wachtwoord op het wachtwoordblad · TransIP-wachtwoord op het blad · **bewaarplek van het blad doorgeven** (→ Claude zet het in het stappenplan voor Deianera) · **vervaldatum ICS-kaart doorgeven** (→ 2 mnd vooraf in agenda; Claude, Anthropic, Supabase, TransIP lopen erop)
+- ☐ **Claude, deze week:** uptime-bewaking (gratis, elke 5 min, melding bij storing) · concept **verwerkingsregister** (A4) vóór KvK 28 sep
+- ☐ **Beslissingen Mark:** hosting naar Pro-plan ($20/mnd) **vóór de eerste betaling** (Hobby = niet-commercieel; hoort in het betaalspoor, dec 2026) · merknaam "Leerkwartier" deponeren als Benelux-woordmerk (±€250, 10 jaar) kort na de KvK · 2FA op TransIP en Microsoft
+- ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
+
 ## 🔴 Nu doen (deze week)
 
 - **⚠️ VACATURE Gemeente Den Haag — AI Usecasemanager (Digilab70), sluit do 11 SEPTEMBER 2026.**
@@ -29,6 +40,8 @@
   Den Haag naast ~30 u/wk Leerkwartier past niet — Leerkwartier zakt dan naar hobby-tempo.
   Zelfs bij afwijzing: Digilab70 is precies het gremium waar Leerkwartier binnen wil komen.
   Zeg "brief" → Claude zet een concept-motivatie klaar.
+- ⏰ **3 mei 2027 — leerkwartier.app verloopt** (geregistreerd 3 mei 2026, TransIP). Vóór 1 april 2027 checken: automatisch verlengen AAN + geldige kaart bij TransIP. Zonder domein: website én hallo@-mail dood. (Gevonden 15 sep via RDAP-lookup.)
+
 - ✅ **15 sep avond — 💾 Wekelijkse database-export + main-branch beschermd (v671).** Elke zondag ~08:30 komt "💾 Database-back-up Leerkwartier" (json.gz) in hotmail + gmail: alle tabellen behalve events, plus de login-lijst. **Eerste run zo 20 sep → Claude checkt ma 21 sep in het dagrapport** (interne mail toont "💾 database-back-up: 1" of een fout). GitHub main: geen force-push, niet te verwijderen, ook niet door beheerders. Nog te doen door Mark: 2FA op registrar/hosting/Supabase/Google + oranje regels in het noodplan. Bij succes (jan 2027 of ~1.000 accounts): Supabase Pro (€25/mnd, dagelijkse back-ups).
 
 - ✅ **15 sep avond — 🪜 Drie treden, één kwartier (v670, Marks idee).** 5·10·15 min zichtbaar als balkje op alle oefenpagina's en op /mijn, flits bij deel 1 en 2, event `kwartier_deel`; partner-welkomscherm loopt door naar deel 1 ("Nog even door — maak deel 1 af"). Meetlat kwartier_reached ongewijzigd. **Vanaf 16 sep in het dagrapport: trechter starters → deel 1 → deel 2 → kwartier** (nulmeting 7% kwartier); **do 17 sep Alkmaar** = eerste verse groep. Geen stopknop na deel 1 (bewust). **Test zelf:** leerkwartier.app/vandaag-kwartier → balkje bovenaan; na 5 min oefenen komt de flits.
