@@ -19,6 +19,8 @@
 
 ## 🔴 Nu doen (deze week)
 
+- ⏰ **3 mei 2027 — leerkwartier.app verloopt** (geregistreerd 3 mei 2026, TransIP). Vóór 1 april 2027 checken: automatisch verlengen AAN + geldige kaart bij TransIP. Zonder domein: website én hallo@-mail dood. (Gevonden 15 sep via RDAP-lookup.)
+
 - ✅ **15 sep avond — 💾 Wekelijkse database-export + main-branch beschermd (v671).** Elke zondag ~08:30 komt "💾 Database-back-up Leerkwartier" (json.gz) in hotmail + gmail: alle tabellen behalve events, plus de login-lijst. **Eerste run zo 20 sep → Claude checkt ma 21 sep in het dagrapport** (interne mail toont "💾 database-back-up: 1" of een fout). GitHub main: geen force-push, niet te verwijderen, ook niet door beheerders. Nog te doen door Mark: 2FA op registrar/hosting/Supabase/Google + oranje regels in het noodplan. Bij succes (jan 2027 of ~1.000 accounts): Supabase Pro (€25/mnd, dagelijkse back-ups).
 
 - ✅ **15 sep avond — 🪜 Drie treden, één kwartier (v670, Marks idee).** 5·10·15 min zichtbaar als balkje op alle oefenpagina's en op /mijn, flits bij deel 1 en 2, event `kwartier_deel`; partner-welkomscherm loopt door naar deel 1 ("Nog even door — maak deel 1 af"). Meetlat kwartier_reached ongewijzigd. **Vanaf 16 sep in het dagrapport: trechter starters → deel 1 → deel 2 → kwartier** (nulmeting 7% kwartier); **do 17 sep Alkmaar** = eerste verse groep. Geen stopknop na deel 1 (bewust). **Test zelf:** leerkwartier.app/vandaag-kwartier → balkje bovenaan; na 5 min oefenen komt de flits.
