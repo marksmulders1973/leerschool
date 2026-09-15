@@ -173,8 +173,8 @@ export function sluitVergadering(st) {
   if (!top || gelijk) { uitkomst = { uitgestemd: null, tekst: "Geen meerderheid — niemand uitgestemd." }; }
   else {
     const u = speler(st, top); u.uitgestemd = true; zetAf(st, u, `🪑 ${u.naam} ${u.naam === "Jij" ? "bent" : "is"} uitgestemd en kijkt mee vanuit de zeppelin`);
-    if (u.rol === "imposter") uitkomst = { uitgestemd: u, imposter: true, tekst: `${u.naam} was de imposter!` };
-    else { st.fouteStemrondes += 1; uitkomst = { uitgestemd: u, imposter: false, tekst: `${u.naam} was géén imposter…` }; }
+    if (u.rol === "imposter") uitkomst = { uitgestemd: u, imposter: true, tekst: `${u.naam} was de bedrieger!` };
+    else { st.fouteStemrondes += 1; uitkomst = { uitgestemd: u, imposter: false, tekst: `${u.naam} was géén bedrieger…` }; }
   }
   st.vergadering = { ...st.vergadering, uitkomst, telling };
   for (const s of st.spelers) s.zagTik = null;
@@ -188,11 +188,11 @@ export function checkEinde(st) {
   if (st.fase === "einde") return st.uitkomst;
   const impActief = imposters(st).filter((s) => !s.uitgestemd).length;
   let u = null;
-  if (impActief === 0) u = { gewonnen: "bouwers", reden: "De imposter is uitgestemd!" };
+  if (impActief === 0) u = { gewonnen: "bouwers", reden: "De bedrieger is uitgestemd!" };
   else if (st.takenKlaar >= st.takenTotaal) u = { gewonnen: "bouwers", reden: "Alle taken zijn klaar!" };
   else if (st.fouteStemrondes >= 2) u = { gewonnen: "imposters", reden: "Twee keer de verkeerde uitgestemd…" };
   else if (st.spelTijd >= SPEL_DUUR) u = { gewonnen: "imposters", reden: "De tijd is om!" };
-  else { const bouwersActief = actieveSpelers(st).filter((s) => s.rol === "bouwer").length; if (bouwersActief <= impActief) u = { gewonnen: "imposters", reden: "De imposters zijn in de meerderheid!" }; }
+  else { const bouwersActief = actieveSpelers(st).filter((s) => s.rol === "bouwer").length; if (bouwersActief <= impActief) u = { gewonnen: "imposters", reden: "De bedriegers zijn in de meerderheid!" }; }
   if (u) {
     st.fase = "einde"; st.uitkomst = u;
     for (const s of st.spelers) { const won = (u.gewonnen === "bouwers") === (s.rol === "bouwer"); if (won) s.punten += PUNT_WIN; }

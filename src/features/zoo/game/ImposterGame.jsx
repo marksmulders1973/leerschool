@@ -1,4 +1,4 @@
-// 🎮 Wie is de imposter? — presentatie in de 3D-scène + HUD.
+// 🎮 Wie is de bedrieger? — presentatie in de 3D-scène + HUD.
 // Fase 1 (solo met bots) én fase 2 (meerdere spelers via de parkcode, 9 sep 2026).
 // Logica: imposterEngine.js. Regels: docs/plannen-park/GAME-MODUS-IMPOSTER.md.
 //
@@ -257,7 +257,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
       <Html fullscreen zIndexRange={[12, 0]} style={{ pointerEvents: "none" }} calculatePosition={HUD_POS}>
         <div style={OVERLAY("rgba(10,20,40,.88)")}>
           <div style={KAART}>
-            <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
+            <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de bedrieger?</div>
             <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", margin: "0 0 10px" }}>
               <span style={{ background: "#fff3c4", border: "1px solid #e6c65a", borderRadius: 999, padding: "4px 12px", font: "800 13px system-ui" }}>👑 Spelleider: {hostNaam || "…"}</span>
               <span style={{ background: "#e8f0ff", border: "1px solid #bcd6f5", borderRadius: 999, padding: "4px 12px", font: "800 13px system-ui" }}>🙋 Jij bent gast</span>
@@ -284,7 +284,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         {st.fase === "intro" && host && (
           <div style={OVERLAY("rgba(10,20,40,.88)")}>
             <div style={KAART}>
-              <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de imposter?</div>
+              <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de bedrieger?</div>
               {multi ? (
                 <>
                   <p style={{ margin: "0 0 6px" }}>Jij bent de <b>spelleider</b>. Iedereen in dit park kreeg een uitnodiging. Zodra je op Start drukt, spelen jullie samen; bots vullen aan tot zes.</p>
@@ -292,7 +292,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                     <div style={{ font: "800 13px system-ui", color: "#4a2aa8" }}>👑 Jij bent de spelleider · in de lobby ({1 + lobby.length})</div>
                     {net.code && (
                       <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "8px 0 4px" }}>
-                        <a href={`https://wa.me/?text=${encodeURIComponent(`Speel met mij "Wie is de imposter?" in Leerkwartier! Open deze link en tik op Meedoen: https://leerkwartier.app/dierentuin?samen=${net.code}&game=1`)}`} target="_blank" rel="noopener noreferrer" onClick={() => { try { track("game_uitnodiging", { via: "whatsapp" }); } catch { /* */ } }} style={{ ...KNOP, background: "linear-gradient(135deg,#25d366,#128c7e)", textDecoration: "none", padding: "9px 14px", font: "800 13.5px system-ui" }}>📲 Nodig uit via WhatsApp</a>
+                        <a href={`https://wa.me/?text=${encodeURIComponent(`Speel met mij "Wie is de bedrieger?" in Leerkwartier! Open deze link en tik op Meedoen: https://leerkwartier.app/dierentuin?samen=${net.code}&game=1`)}`} target="_blank" rel="noopener noreferrer" onClick={() => { try { track("game_uitnodiging", { via: "whatsapp" }); } catch { /* */ } }} style={{ ...KNOP, background: "linear-gradient(135deg,#25d366,#128c7e)", textDecoration: "none", padding: "9px 14px", font: "800 13.5px system-ui" }}>📲 Nodig uit via WhatsApp</a>
                         <button onClick={async () => { try { await navigator.clipboard.writeText(`https://leerkwartier.app/dierentuin?samen=${net.code}&game=1`); setKopie("Link gekopieerd ✓"); } catch { setKopie("Kopiëren lukte niet"); } setTimeout(() => setKopie(""), 2500); }} style={{ ...KNOP_GRIJS, padding: "9px 14px", font: "800 13.5px system-ui" }}>🔗 Kopieer link</button>
                         {kopie && <span style={{ font: "700 13px system-ui", color: "#146c43", alignSelf: "center" }}>{kopie}</span>}
                       </div>
@@ -307,9 +307,9 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                     👥 <b>Met vrienden of je klas spelen?</b> Eén tik: je krijgt een parkcode en een WhatsApp-uitnodiging; wie de link opent, zit meteen in jouw lobby (tot {MAX_SPELERS} spelers).
                     <div style={{ marginTop: 8 }}><button onClick={() => { try { track("game_samen_knop", {}); } catch { /* */ } window.dispatchEvent(new CustomEvent("lk-samen-spelen")); }} style={{ ...KNOP, background: "linear-gradient(135deg,#25d366,#128c7e)", padding: "9px 14px", font: "800 13.5px system-ui" }}>📲 Met vrienden spelen</button></div>
                   </div>
-                  <p style={{ margin: "0 0 8px", background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 10, padding: "8px 12px", fontSize: 13.5 }}>🤖 <b>Alleen spelen kan ook</b>, gewoon nu: vijf bots doen mee, en bij "Verras me" kan één van hen de imposter zijn. Je hebt niemand anders nodig.</p>
-                  <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>imposter</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De imposter doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt ook.</p>
-                  <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Imposter uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = imposter wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
+                  <p style={{ margin: "0 0 8px", background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 10, padding: "8px 12px", fontSize: 13.5 }}>🤖 <b>Alleen spelen kan ook</b>, gewoon nu: vijf bots doen mee, en bij "Verras me" kan één van hen de bedrieger zijn. Je hebt niemand anders nodig.</p>
+                  <p style={{ margin: "0 0 8px" }}>Zes spelers in het park: jij en vijf maatjes. Eén is de <b>bedrieger</b>. <b>Bouwers</b> doen taken bij de gele posten: drie vragen op jouw niveau. De bedrieger doet alsof en kan een bouwer <b>tikken</b> als niemand kijkt: die is af en kijkt mee vanuit de zeppelin. Wie uitgestemd wordt ook.</p>
+                  <p style={{ margin: "0 0 8px" }}>Zie je iets verdachts? Druk op 🚨 en stem. Bedrieger uitgestemd of alle taken klaar = bouwers winnen. Tijd om of twee keer verkeerd gestemd = bedrieger wint. Elk goed antwoord = 10 punten, punten worden munten.</p>
                 </>
               )}
               <div style={{ font: "800 14px system-ui", margin: "10px 0 4px" }}>Vragen uit</div>
@@ -322,7 +322,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
               </div>
               {(multi ? 1 + lobby.length + Math.max(1, 5 - lobby.length) : 6) >= 6 && (
                 <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginBottom: 8, alignItems: "center" }}>
-                  <span style={{ font: "800 13px system-ui", color: "#556" }}>Imposters:</span>
+                  <span style={{ font: "800 13px system-ui", color: "#556" }}>Bedriegers:</span>
                   {[1, 2].map((n) => <button key={n} onClick={() => setNImp(n)} style={{ ...KNOP_GRIJS, padding: "6px 12px", font: "800 12.5px system-ui", background: nImp === n ? "linear-gradient(135deg,#e2574c,#b0332a)" : "#3a4754" }}>{n}</button>)}
                 </div>
               )}
@@ -333,7 +333,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
               )}
               <div style={{ font: "800 14px system-ui", margin: "10px 0 4px" }}>{multi ? "Jouw rol" : "Wie wil je zijn?"}</div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
-                {[["random", "🎲 Verras me"], ["bouwer", "🔧 Bouwer"], ["imposter", "🕵️ Imposter"]].map(([k, l]) => (
+                {[["random", "🎲 Verras me"], ["bouwer", "🔧 Bouwer"], ["imposter", "🕵️ Bedrieger"]].map(([k, l]) => (
                   <button key={k} onClick={() => setRolKeuze(k)} style={{ ...KNOP_GRIJS, background: rolKeuze === k ? "linear-gradient(135deg,#2f6fd6,#1f4fa8)" : "#3a4754" }}>{l}</button>
                 ))}
               </div>
@@ -349,7 +349,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
           <>
             {st.spelTijd < 4 && (
               <div style={{ position: "absolute", left: "50%", top: 70, transform: "translateX(-50%)", pointerEvents: "none", background: mij.rol === "imposter" ? "#b0332a" : "#1f7a3a", color: "#fff", borderRadius: 16, padding: "12px 18px", font: "900 20px system-ui", boxShadow: "0 8px 24px rgba(0,0,0,.4)", textAlign: "center" }}>
-                {mij.rol === "imposter" ? "🕵️ Jij bent de IMPOSTER" : "🔧 Jij bent BOUWER"}<div style={{ font: "700 13px system-ui", opacity: .9 }}>{mij.rol === "imposter" ? "Doe alsof. Tik bouwers als niemand kijkt." : "Doe taken bij de gele posten. Let op wie er vreemd doet."}</div>
+                {mij.rol === "imposter" ? "🕵️ Jij bent de BEDRIEGER" : "🔧 Jij bent BOUWER"}<div style={{ font: "700 13px system-ui", opacity: .9 }}>{mij.rol === "imposter" ? "Doe alsof. Tik bouwers als niemand kijkt." : "Doe taken bij de gele posten. Let op wie er vreemd doet."}</div>
               </div>
             )}
             <div style={{ position: "absolute", left: "50%", top: 54, transform: "translateX(-50%)", display: "flex", gap: 8, alignItems: "center", background: "rgba(20,28,40,.85)", color: "#fff", borderRadius: 999, padding: "6px 12px", font: "800 13px system-ui", whiteSpace: "nowrap" }}>
@@ -409,7 +409,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
           <div style={OVERLAY("rgba(40,10,10,.6)")}>
             <div style={KAART}>
               <div style={{ font: "900 20px system-ui" }}>🚨 Vergadering · nog {Math.max(0, Math.ceil(VERGADERING_S - st.vergadering.t))} s</div>
-              <p style={{ margin: "4px 0 10px", color: "#556" }}>Wie is de imposter? Kies iemand, of onthoud je.</p>
+              <p style={{ margin: "4px 0 10px", color: "#556" }}>Wie is de bedrieger? Kies iemand, of onthoud je.</p>
               <div style={{ display: "grid", gap: 6 }}>
                 {actieveSpelers(st).filter((s) => s.id !== mijnId).map((s) => (
                   <button key={s.id} disabled={mij.uitgestemd || st.vergadering.stemmen[mijnId] !== undefined} onClick={() => stemOp(s.id, "👀")} style={{ pointerEvents: "auto", textAlign: "left", border: "2px solid " + (st.vergadering.stemmen[mijnId] === s.id ? "#b0332a" : "#d7dee8"), borderRadius: 12, padding: "9px 12px", font: "700 15px system-ui", background: st.vergadering.stemmen[mijnId] === s.id ? "#f8cfcf" : "#fff", color: "#1c2840", cursor: "pointer" }}>
@@ -428,7 +428,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
             <div style={{ ...KAART, textAlign: "center" }}>
               <div style={{ fontSize: 50 }}>{sc.gewonnen ? "🏆" : "💪"}</div>
               <div style={{ font: "900 24px system-ui" }}>{sc.gewonnen ? "Gewonnen!" : "Verloren…"}</div>
-              <div style={{ color: "#556", margin: "4px 0 10px" }}>{st.uitkomst.reden} De imposter was: <b>{st.spelers.filter((s) => s.rol === "imposter").map((s) => s.naam).join(" en ") || "…"}</b>.</div>
+              <div style={{ color: "#556", margin: "4px 0 10px" }}>{st.uitkomst.reden} De bedrieger was: <b>{st.spelers.filter((s) => s.rol === "imposter").map((s) => s.naam).join(" en ") || "…"}</b>.</div>
               {multi && <div style={{ fontSize: 13, color: "#556", marginBottom: 8 }}>Deze ronde: {st.spelers.filter((s) => !s.bot).slice().sort((a, b) => b.punten - a.punten).map((s, ix) => `${ix + 1}. ${s.naam} ⭐ ${s.punten}`).join(" · ")}</div>}
               {multi && klassement && klassement.length > 0 && <div style={{ fontSize: 13, color: "#7a5a00", background: "#fff8e1", borderRadius: 10, padding: "6px 10px", marginBottom: 8 }}>🏆 Klassement park: {klassement.slice(0, 3).map((k, ix) => `${ix + 1}. ${k.naam} ${k.punten}`).join(" · ")}</div>}
               <div style={{ background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 12, padding: "10px 12px", font: "800 16px system-ui" }}>⭐ {sc.punten} punten → 🪙 +{sc.munten} munten voor je park</div>

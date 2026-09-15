@@ -1860,7 +1860,7 @@ export default function ZooScene({ wandelToon = null, wandelDoel = null, onWande
         <Autos playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} inputRef={inputRef} teleportRef={teleportRef} onOefenen={onOefenen} onRit={(v) => { setBergRit(v); if (onZeppelinRit) onZeppelinRit(v); }} />
         {/* 👥 medespelers in een gedeeld park (posities via Realtime, zie parkRoom.js) */}
         {peersRef ? <MedeSpelers peersRef={peersRef} heightRef={heightFnRef} /> : null}
-        {/* 🎮 Game-modus: Wie is de imposter? (Mark 9 sep) — bots, taakposten en HUD in de scène */}
+        {/* 🎮 Game-modus: Wie is de bedrieger? (Mark 9 sep) — bots, taakposten en HUD in de scène */}
         {gameModus ? <ImposterGame key={gameKey} playerRef={playerPos} heightRef={heightFnRef} isSolid={isSolid} teleportRef={teleportRef} spelerNaam={spelerNaam} avatarUrl={avatarUrl} level={gameGroep} onKlaar={onGameKlaar} onStop={onGameStop} net={gameNet} host={gameHost} onRit={(v) => { setZeppelinRit(v); if (onZeppelinRit) onZeppelinRit(v); }} /> : null}
         {/* 🔊 Rondloop-gids: ~2 s bij een benoembaar object blijven kijken →
             het maatje vertelt er ongevraagd (hardop) over. Uit tijdens bouwen. */}
