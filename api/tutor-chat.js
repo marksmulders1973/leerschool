@@ -9,7 +9,7 @@
 // - Leeftijds-adaptief: po-paden krijgen simpeler toon dan havo
 // - Gemini-fallback bij Anthropic-failure (kosten + uptime)
 
-import { guardRequest, dailyQuotaCheck } from "./_guard.js";
+import { guardRequest, dailyQuotaCheck, PER_UID_LIMIT_DAY } from "./_guard.js";
 
 export const config = { runtime: "edge", maxDuration: 30 };
 
@@ -193,6 +193,18 @@ function buildSystemPrompt(ctx = {}) {
       "kort in de woorden van de leerling]. Die regel ziet de leerling niet. " +
       "Alléén voor wensen/tips/klachten over de app — nooit voor gewone leervragen."
   );
+  // Charley-rem (idee F, 16 sep 2026): het kind stuurt al berichten zonder
+  // een vraag te beantwoorden → kort antwoorden en terug naar de som.
+  if (ctx.stuurTerug === true) {
+    const n = Math.min(parseInt(ctx.sindsVraag, 10) || 0, 99);
+    lines.push("");
+    lines.push(
+      `TERUG NAAR DE SOM: de leerling heeft al ${n || "meerdere"} berichten gestuurd zonder ` +
+        "een vraag te beantwoorden. Je bent hulp bij een vraag, geen kletsmaatje. " +
+        "Antwoord daarom in maximaal 2 korte zinnen (geen wedervraag vooraf) en " +
+        "eindig PRECIES met deze zin: Zullen we er samen één doen?"
+    );
+  }
   lines.push("");
   lines.push("HUIDIGE STAP-CONTEXT:");
   // F8 (2 sep 2026): elk client-veld afkappen — alleen stepExplanation was begrensd,
@@ -339,6 +351,18 @@ export default async function handler(req) {
   // het dagquotum leeg zonder één AI-call (tutor stond dan de rest van de dag uit).
   const quotaBlocked = await dailyQuotaCheck("tutor-chat");
   if (quotaBlocked) return quotaBlocked;
+  // Charley-rem server-backstop (16 sep 2026): per apparaat max 120/dag, voor
+  // als de client-teller (localStorage) gewist is. Alleen bij een geldige uid;
+  // zonder uid geldt het gewone dagplafond.
+  const uid = typeof context?.uid === "string" && /^u_[a-z0-9]{6,40}$/.test(context.uid) ? context.uid : null;
+  if (uid) {
+    const uidBlocked = await dailyQuotaCheck(`uid:${uid}`, {
+      limit: PER_UID_LIMIT_DAY,
+      rem: "daglimiet",
+      bericht: "Voor vandaag hebben we genoeg gekletst — morgen help ik je weer.",
+    });
+    if (uidBlocked) return uidBlocked;
+  }
   // Anthropic vereist dat het gesprek met een user-bericht begint — een
   // leidende begroeting (assistant) zou élke call naar de fallback duwen.
   // Bug-jacht 7/7: user-berichten in de history ook door isClean — de client

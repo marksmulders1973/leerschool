@@ -105,7 +105,12 @@ const DEFAULT_LIMITS = {
   "leg-uit": 2000,      // Haiku ~€0,005/call → max ~€10/dag ("leg het uit"-Feynman)
 };
 
-export async function dailyQuotaCheck(endpoint) {
+// Charley-rem (16 sep 2026): per-apparaat-backstop. Sleutel `uid:<lk_uid>`
+// in dezelfde tabel; 120 berichten/dag per apparaat, ongeacht account.
+// Rapportages die ai_call_quota optellen: `endpoint not like 'uid:%'`.
+export const PER_UID_LIMIT_DAY = 120;
+
+export async function dailyQuotaCheck(endpoint, opts = {}) {
   const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
   const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
   if (!SUPABASE_URL || !SERVICE_KEY) {
@@ -114,7 +119,7 @@ export async function dailyQuotaCheck(endpoint) {
   }
 
   const envKey = `MAX_${endpoint.toUpperCase().replace(/-/g, "_")}_CALLS_DAY`;
-  const limit = parseInt(process.env[envKey], 10) || DEFAULT_LIMITS[endpoint] || 1000;
+  const limit = opts.limit || parseInt(process.env[envKey], 10) || DEFAULT_LIMITS[endpoint] || 1000;
 
   try {
     const resp = await fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_ai_call_quota`, {
@@ -135,8 +140,9 @@ export async function dailyQuotaCheck(endpoint) {
       console.warn(`[quota] LIMIT HIT ${endpoint}: ${count}/${limit}`);
       return new Response(
         JSON.stringify({
-          error: "Daglimit AI-tutor bereikt — probeer morgen opnieuw of upgrade naar premium.",
+          error: opts.bericht || "Daglimit AI-tutor bereikt — probeer morgen opnieuw of upgrade naar premium.",
           retryAfterHours: 24,
+          ...(opts.rem ? { rem: opts.rem } : {}),
         }),
         {
           status: 503,
