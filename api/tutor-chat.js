@@ -94,6 +94,21 @@ function buildSystemPrompt(ctx = {}) {
       "De leerling werkt aan een specifieke uitleg-stap. Help met BEGRIP " +
       "— NOOIT door het antwoord weg te geven."
   );
+  // Charley-rem (idee F, 16 sep 2026): het kind stuurt al berichten zonder
+  // een vraag te beantwoorden → kort antwoorden en terug naar de som. Staat
+  // BOVEN de Socratische kernregel en gaat daar expliciet voor (live-test
+  // 16 sep: onderaan de prompt won de wedervraag het van de afsluitzin).
+  if (ctx.stuurTerug === true) {
+    const n = Math.min(parseInt(ctx.sindsVraag, 10) || 0, 99);
+    lines.push("");
+    lines.push(
+      `BELANGRIJKSTE REGEL VOOR DIT ANTWOORD (gaat vóór alle regels hieronder, ook vóór de KERNREGEL): ` +
+        `de leerling heeft al ${n || "meerdere"} berichten gestuurd zonder een vraag te beantwoorden. ` +
+        "Je bent hulp bij een vraag, geen kletsmaatje. Geef daarom GEEN wedervraag. " +
+        "Antwoord in maximaal 2 korte zinnen en eindig je antwoord LETTERLIJK met de zin: " +
+        "Zullen we er samen één doen?"
+    );
+  }
   lines.push("");
   lines.push("KERNREGEL (Socratisch):");
   lines.push(
@@ -193,18 +208,6 @@ function buildSystemPrompt(ctx = {}) {
       "kort in de woorden van de leerling]. Die regel ziet de leerling niet. " +
       "Alléén voor wensen/tips/klachten over de app — nooit voor gewone leervragen."
   );
-  // Charley-rem (idee F, 16 sep 2026): het kind stuurt al berichten zonder
-  // een vraag te beantwoorden → kort antwoorden en terug naar de som.
-  if (ctx.stuurTerug === true) {
-    const n = Math.min(parseInt(ctx.sindsVraag, 10) || 0, 99);
-    lines.push("");
-    lines.push(
-      `TERUG NAAR DE SOM: de leerling heeft al ${n || "meerdere"} berichten gestuurd zonder ` +
-        "een vraag te beantwoorden. Je bent hulp bij een vraag, geen kletsmaatje. " +
-        "Antwoord daarom in maximaal 2 korte zinnen (geen wedervraag vooraf) en " +
-        "eindig PRECIES met deze zin: Zullen we er samen één doen?"
-    );
-  }
   lines.push("");
   lines.push("HUIDIGE STAP-CONTEXT:");
   // F8 (2 sep 2026): elk client-veld afkappen — alleen stepExplanation was begrensd,
