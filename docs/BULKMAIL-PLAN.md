@@ -5,10 +5,10 @@
 | Datum | Wat | Aantal | Kanaal | Stand |
 |---|---|---|---|---|
 | ✅ wo 16 sep | LOWAN batch 4 | 45 | Resend hallo@ | verstuurd 09:05 |
-| ma 21 sep 08:00 | LOWAN batch 5 | 45 | Resend | wacht op "ga" |
+| ma 21 sep 08:00 | LOWAN batch 5 (`LOWAN-BATCH-5.md`, klaargezet 16 sep) | 45 | Resend | ✅ Mark-go 16 sep → **Windows-taak "Leerkwartier LOWAN batch 5"** draait ma 08:00 (pc moet aan of slapen; anders bij eerste start erna). Claude checkt ma in het dagrapport de log + commit het verzendlog |
 | ma 21 sep | Zachte checks: Voedselbank Lelystad (Dick Nauta), Leergeld Twenterand, Saba (adres flyers), School's cool Twente | 4 | Zapier-Gmail (reply in thread) | concepten eerst tonen |
-| di 22 sep 08:00 | LOWAN batch 6 | 45 | Resend | na "ga" |
-| wo 23 sep 08:00 | LOWAN batch 7 (rest) | 48 | Resend | na "ga" → LOWAN compleet (326) |
+| di 22 sep 08:00 | LOWAN batch 6 | 45 | Resend | na "ga" (92 over na batch 5) |
+| wo 23 sep 08:00 | LOWAN batch 7 (rest) | 47 | Resend | na "ga" → LOWAN compleet |
 | do 24 sep | Zachte checks Leergeld Leudal + VPCBO Ichthus (0 scans na 2 weken) · evaluatie twee-weken-plan | 2 | Zapier-Gmail | concepten eerst tonen |
 | vr 25 sep | Kinderzwerfboek nudgen als stil (adres voor 50 flyers, moeten vóór 1 okt op de post) · Voedselbank Enschede alleen als er nieuws is | 1 | Zapier-Gmail | concept eerst |
 | ma 28 sep 08:00 | **1 oktober-venster** (Actie Pepernoot): kort berichtje aan de vijf organisaties die zelf materiaal vroegen — Leudal, Ichthus, VluchtelingenWerk, Kinderzwerfboek, (Ommeriek niet: gewone lezer) — met eigen code + toetsdatum + tag | 4 | Resend | idee E, na "ga" |
