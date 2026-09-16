@@ -37,7 +37,7 @@
 |---|---|---|
 | ma 14 sep | ~0,5 (voorstel) | 💻📋 avondrapport + terugkommeting |
 | di 15 sep | ~4 (voorstel: dag 2,5 + avond 1,5) | 💻✉️ dagrapport, Ommeriek-besluit, oefenpakket-fixes (v663), Smulsoft→Leerkwartier (v664-667), bedrieger-hernoeming (v668) + tikken gerepareerd (v669), Facebook-reactie, Prinsjesdag-check; avond: drie treden (v670), database-export + branch-bescherming (v671), agenda |
-| wo 16 sep | ~3 (voorstel, tot 09:30) | 🗂️💻✉️ bureaublad-opruiming (78→33) · dagrapport + PDF · Charley-rem gebouwd en live getest (v672-673) · LOWAN batch 4 (45) verstuurd · verwerkingsregister-concept · urenreconstructie |
+| wo 16 sep | ~4 (voorstel, tot 10:45) | 🗂️💻✉️ bureaublad-opruiming (78→33) · dagrapport + PDF (08:30) · Charley-rem gebouwd en live getest (v672-673) · LOWAN batch 4 (45) verstuurd + batch 5 als Windows-taak · bulkmail-plan · verwerkingsregister-concept · urenreconstructie · dagrapport-editie 10:45 (alle cijfers vers, PDF + mail) |
 | **Offline (15%-vuistregel)** | | (invullen eind week; Marks offline uren wk 37 ontbreken ook nog) |
 
 ## Week 35 (ma 24 – zo 30 aug)
