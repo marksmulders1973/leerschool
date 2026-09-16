@@ -18,6 +18,9 @@ import MeeleesTekst from "../../shared/ui/MeeleesTekst.jsx";
 import { track } from "../../utils.js";
 import { verwerkMakerTip } from "../../shared/makerTip.js";
 import { makerAntwoordMelding } from "../../shared/makerAntwoord.js";
+import { noteerCharleyBericht, beoordeelCharley, remTekst } from "./charleyRem.js";
+import { isAnonymousSession } from "../../auth.js";
+import { useSubscription } from "../../subscription/useSubscription.js";
 
 // Maatje-portret (medaillon; Charley = geanimeerde 3D-kop) — lazy zodat
 // three.js pas laadt als het venster opent.
@@ -73,6 +76,14 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   // het écht "Vonk helpt je", geen anonieme AI. Eén keer lezen bij open.
   const [buddy] = useState(() => actieveBuddyPersona());
   const naam = buddy.naam || "Vonk";
+  // Charley-rem (idee F, 16 sep): account = 80 berichten/dag, gast 40,
+  // betaald Familie onbeperkt. Eén keer per open bepalen.
+  const [isAccount, setIsAccount] = useState(false);
+  const sub = useSubscription();
+  useEffect(() => {
+    if (!open) return;
+    isAnonymousSession().then((anon) => setIsAccount(anon === false)).catch(() => {});
+  }, [open]);
   const emoji = buddy.emoji || "🐉";
   const accent = buddy.kleur || "#5bbf5a";
   const groet = `Hoi! Ik ben ${naam} en ik weet aan welke vraag je werkt. Vertel wat je lastig vindt, of tik op een knopje hieronder — we komen er samen uit.`;
@@ -166,10 +177,28 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     setInput("");
     setBusy(true);
     setError(null);
+
+    // Charley-rem (idee F, 16 sep 2026): eerst tellen, dan beoordelen. Bij
+    // "pauze" of "daglimiet" géén AI-call en géén vonk_hulp_vraag-event —
+    // dat event blijft de teller van échte AI-calls.
+    const oordeel = beoordeelCharley(noteerCharleyBericht(), { isAccount, isBetaald: !!sub?.isPaid });
+    if (oordeel.soort === "pauze" || oordeel.soort === "daglimiet") {
+      const after = [...next, { role: "assistant", content: remTekst(oordeel.soort, naam), rem: oordeel.soort }];
+      setMessages(after);
+      persist(after);
+      try { track("charley_rem", { soort: oordeel.soort, pathId, berichten: oordeel.stand.berichten, sinds_vraag: oordeel.stand.sindsVraag }); } catch { /* */ }
+      setBusy(false);
+      return;
+    }
+    const stuurTerug = oordeel.soort === "terug";
+    if (stuurTerug) {
+      try { track("charley_rem", { soort: "terug", pathId, berichten: oordeel.stand.berichten, sinds_vraag: oordeel.stand.sindsVraag }); } catch { /* */ }
+    }
+
     // Pro-meting (Mark 2026-06-06): elke échte AI-vraag = 1 gebruik.
     trackProUse("ai-tutor", { pathId });
     // Buddy-tutor-meting (Mark 2026-07-01): hoe vaak roepen leerlingen Vonk op?
-    try { track("vonk_hulp_vraag", { pathId, buddy: buddy.id }); } catch { /* */ }
+    try { track("vonk_hulp_vraag", { pathId, buddy: buddy.id, sinds_vraag: oordeel.stand.sindsVraag }); } catch { /* */ }
 
     // Audit fix 2026-05-14: correctOption NIET meer in payload. AI moet uit
     // uitleg + opties zelf afleiden welke optie correct is, anders kan een
@@ -196,10 +225,24 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
             // niet wie hij was — persona meesturen zodat "ben jij Vonk?" klopt.
             buddyNaam: naam,
             buddySoort: buddy.soort,
+            // Charley-rem: na 5 berichten zonder vraag antwoordt het maatje
+            // kort en stuurt terug naar de som; uid voor de server-backstop.
+            stuurTerug,
+            sindsVraag: oordeel.stand.sindsVraag,
+            uid: (() => { try { return localStorage.getItem("lk_uid") || null; } catch { return null; } })(),
           },
         }),
       });
       const data = await resp.json().catch(() => ({}));
+      // Server-backstop van de Charley-rem (per apparaat per dag): als kind-
+      // tekst tonen, niet als foutmelding.
+      if (data && data.rem) {
+        const after = [...next, { role: "assistant", content: remTekst("daglimiet", naam), rem: "daglimiet" }];
+        setMessages(after);
+        persist(after);
+        try { track("charley_rem", { soort: "daglimiet_server", pathId }); } catch { /* */ }
+        return;
+      }
       if (!resp.ok || data.error) {
         throw new Error(data.error || `HTTP ${resp.status}`);
       }
@@ -210,7 +253,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
       // Wens/tip voor de maker in het antwoord? Eruit plukken vóór het kind het
       // ziet; belandt in Mark's /tips-wachtrij (Mark 12 aug).
       const reply = verwerkMakerTip(rauw, { kindNaam: buddyWeetjes()?.naam, buddyNaam: naam, bron: "tutor" });
-      const after = [...next, { role: "assistant", content: reply }];
+      const after = [...next, { role: "assistant", content: reply, ...(stuurTerug ? { rem: "terug" } : {}) }];
       setMessages(after);
       persist(after);
       // Niet voorlezen als het venster intussen gesloten is (late-antwoord-race).
@@ -405,6 +448,24 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               {m.role === "assistant" && i === leesMsg
                 ? <MeeleesTekst tekst={m.content} actief={leesWoord} accent={accent} />
                 : <MdInline text={m.content} />}
+              {/* Charley-rem: knop terug naar de som (sluit het venster; de
+                  vraag staat eronder). Bij de daglimiet alleen "Verder oefenen". */}
+              {m.role === "assistant" && m.rem && i === messages.length - 1 && (
+                <button
+                  onClick={() => {
+                    try { track("charley_rem_klik", { soort: m.rem, pathId }); } catch { /* */ }
+                    onClose();
+                  }}
+                  style={{
+                    display: "inline-flex", alignItems: "center", gap: 6, marginTop: 8,
+                    background: "#00C853", color: "#001218", border: "none",
+                    borderRadius: 999, padding: "7px 14px", cursor: "pointer",
+                    fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                  }}
+                >
+                  {m.rem === "daglimiet" ? "👉 Verder oefenen" : "👉 Ja, doe een som"}
+                </button>
+              )}
               {m.role === "assistant" && (
                 <button
                   onClick={() => leesVoor(m.content, i)}

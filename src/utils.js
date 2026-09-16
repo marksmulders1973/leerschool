@@ -10,6 +10,7 @@
 //  • geen IP-kolom (slaan we niet op).
 import supabase from "./supabase.js";
 import { BOUW_VERSIE } from "./versie.js";
+import { noteerVraagBeantwoord } from "./features/learn/charleyRem.js";
 
 function _sessionId() {
   try {
@@ -99,6 +100,10 @@ export function isInternalVisit() {
 }
 
 export function track(event, params = {}) {
+  // Charley-rem (16 sep): een beantwoorde vraag zet de "berichten sinds
+  // vraag"-teller van het maatje op nul — vóór de interne check, dit is
+  // apparaat-lokaal en geen meting.
+  if (event === "question_answered") { try { noteerVraagBeantwoord(); } catch { /* */ } }
   // Interne check (Claude/Mark) telt nergens mee — geen GA, geen events-insert.
   if (isInternalVisit()) return;
   // (1) optioneel Google Analytics (alleen als gtag ooit geladen is — blijft onschuldig)

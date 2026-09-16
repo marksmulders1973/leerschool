@@ -9,7 +9,7 @@
 // - Leeftijds-adaptief: po-paden krijgen simpeler toon dan havo
 // - Gemini-fallback bij Anthropic-failure (kosten + uptime)
 
-import { guardRequest, dailyQuotaCheck } from "./_guard.js";
+import { guardRequest, dailyQuotaCheck, PER_UID_LIMIT_DAY } from "./_guard.js";
 
 export const config = { runtime: "edge", maxDuration: 30 };
 
@@ -94,6 +94,21 @@ function buildSystemPrompt(ctx = {}) {
       "De leerling werkt aan een specifieke uitleg-stap. Help met BEGRIP " +
       "— NOOIT door het antwoord weg te geven."
   );
+  // Charley-rem (idee F, 16 sep 2026): het kind stuurt al berichten zonder
+  // een vraag te beantwoorden → kort antwoorden en terug naar de som. Staat
+  // BOVEN de Socratische kernregel en gaat daar expliciet voor (live-test
+  // 16 sep: onderaan de prompt won de wedervraag het van de afsluitzin).
+  if (ctx.stuurTerug === true) {
+    const n = Math.min(parseInt(ctx.sindsVraag, 10) || 0, 99);
+    lines.push("");
+    lines.push(
+      `BELANGRIJKSTE REGEL VOOR DIT ANTWOORD (gaat vóór alle regels hieronder, ook vóór de KERNREGEL): ` +
+        `de leerling heeft al ${n || "meerdere"} berichten gestuurd zonder een vraag te beantwoorden. ` +
+        "Je bent hulp bij een vraag, geen kletsmaatje. Geef daarom GEEN wedervraag. " +
+        "Antwoord in maximaal 2 korte zinnen en eindig je antwoord LETTERLIJK met de zin: " +
+        "Zullen we er samen één doen?"
+    );
+  }
   lines.push("");
   lines.push("KERNREGEL (Socratisch):");
   lines.push(
@@ -339,6 +354,18 @@ export default async function handler(req) {
   // het dagquotum leeg zonder één AI-call (tutor stond dan de rest van de dag uit).
   const quotaBlocked = await dailyQuotaCheck("tutor-chat");
   if (quotaBlocked) return quotaBlocked;
+  // Charley-rem server-backstop (16 sep 2026): per apparaat max 120/dag, voor
+  // als de client-teller (localStorage) gewist is. Alleen bij een geldige uid;
+  // zonder uid geldt het gewone dagplafond.
+  const uid = typeof context?.uid === "string" && /^u_[a-z0-9]{6,40}$/.test(context.uid) ? context.uid : null;
+  if (uid) {
+    const uidBlocked = await dailyQuotaCheck(`uid:${uid}`, {
+      limit: PER_UID_LIMIT_DAY,
+      rem: "daglimiet",
+      bericht: "Voor vandaag hebben we genoeg gekletst — morgen help ik je weer.",
+    });
+    if (uidBlocked) return uidBlocked;
+  }
   // Anthropic vereist dat het gesprek met een user-bericht begint — een
   // leidende begroeting (assistant) zou élke call naar de fallback duwen.
   // Bug-jacht 7/7: user-berichten in de history ook door isClean — de client
