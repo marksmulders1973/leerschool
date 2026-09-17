@@ -14,6 +14,7 @@ import { recordAnswerForPath } from "../mastery/mastery.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { VraagKaart } from "../onboarding/StartKwartier.jsx";
 import { kwartierStand, huidigBlok, blokKlaar, stopKwartier } from "./kwartier.js";
+import TrouweGastKaart from "../account/TrouweGastKaart.jsx";
 
 const S = {
   wrap: { maxWidth: 560, margin: "0 auto", padding: "12px 14px 96px", color: "var(--color-text)", fontFamily: "var(--font-body)" },
@@ -73,7 +74,7 @@ function KlaargezetBlok({ blok, onPickPath, onKlaar }) {
   );
 }
 
-export default function VandaagKwartier({ userName, userLevel, authUser, onDictee, onWerkwoorden, onPickPath, onKlaar, onMijn }) {
+export default function VandaagKwartier({ userName, userLevel, authUser, onDictee, onWerkwoorden, onPickPath, onKlaar, onMijn, onNaamInvullen }) {
   const [stand, setStand] = useState(() => kwartierStand());
   const blok = stand && !stand.klaar ? stand.blokjes[stand.idx] : null;
 
@@ -115,6 +116,11 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
             </div>
           ))}
         </Card>
+        {/* 🌟 Trouwe gast (idee H, 16 sep 2026): ná een gehaald kwartier, bij
+            ≥5 bezoekdagen zonder naam, één keer vragen om de voortgang te bewaren. */}
+        <div style={{ marginTop: 12 }}>
+          <TrouweGastKaart userName={userName} onNaamInvullen={onNaamInvullen} plek="kwartier" />
+        </div>
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 12 }}>
           <Button size="lg" onClick={onKlaar}>🏅 Naar mijn pagina</Button>
           <Button variant="ghost" onClick={() => { stopKwartier(); onMijn(); }}>Nog een rondje</Button>

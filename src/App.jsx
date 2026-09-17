@@ -4,6 +4,7 @@ import styles from "./styles.js";
 import { pathForPage, pageForPath } from "./app/routes.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
 import { track, SoundEngine, fetchAIQuestions, generateCode, shuffle, formatDate, daysUntil } from "./utils.js";
+import { noteerBezoekdag } from "./features/account/trouweGast.js";
 
 // Eager imports: alleen wat élke gebruiker direct ziet of nodig heeft.
 import LoadingOverlay from "./components/LoadingOverlay.jsx";
@@ -681,10 +682,30 @@ export default function App() {
     try { const c = localStorage.getItem("ls_classes"); if (c) setClasses(JSON.parse(c)); } catch {}
     try { const u = localStorage.getItem("ls_user"); if (u) { const d = JSON.parse(u); if (d.name) setUserName(d.name); if (d.level) setUserLevel(d.level); if (d.role) setRole(d.role); if (d.schoolType) setUserSchoolType(d.schoolType); } } catch {}
     try { const s = JSON.parse(localStorage.getItem("ls_streak") || '{"streak":0,"last":""}'); const today = new Date().toISOString().split("T")[0]; const yesterday = new Date(Date.now()-86400000).toISOString().split("T")[0]; if (s.last === today || s.last === yesterday) setStreak(s.streak); } catch {}
+    // 🌟 Trouwe gast (idee H, 16 sep 2026): vandaag als bezoekdag noteren.
+    try { noteerBezoekdag(); } catch { /* */ }
     // URL parameter ?code=XXXXX (alleen quiz-codes, niet Supabase OAuth codes)
     const urlCode = new URLSearchParams(window.location.search).get("code");
     if (urlCode && urlCode.length <= 8) setPendingCode(urlCode.toUpperCase());
   }, []);
+
+  // Naam kiezen buiten de startpagina om (lege Mijn pagina 11 sep, trouwe-gast-
+  // kaartje 16 sep): lokaal opslaan én meteen het profiel op de server zetten,
+  // zodat het account niet pas na een herlaad ontstaat (useAuth deed dat pas
+  // bij de volgende koude start).
+  const bewaarNaam = (n) => {
+    const naam = (n || "").trim();
+    if (!naam) return;
+    setUserName(naam);
+    const rolNu = role || "leerling";
+    try {
+      localStorage.setItem("ls_user", JSON.stringify({ name: naam, level: userLevel || "", role: rolNu, schoolType: userSchoolType || "" }));
+    } catch { /* lokaal opslaan is best-effort */ }
+    if (!role) setRole(rolNu);
+    if (authUser?.id) {
+      try { upsertProfile({ userId: authUser.id, displayName: naam, level: userLevel || "", role: rolNu, schoolType: userSchoolType || "" }); } catch { /* server is een extraatje */ }
+    }
+  };
 
   // Kliktocht 3 sep 2026: onthoud ook de vórige pagina, zodat schermen met
   // meerdere ingangen (voortgang, thuis-overzicht, maatje) terugkeren naar
@@ -1470,14 +1491,7 @@ export default function App() {
           authUser={authUser}
           onOuderDashboard={() => setPage("ouder-dashboard")}
           onStartKwartier={() => setPage("start-kwartier")}
-          onNaamInvullen={(n) => {
-            const naam = (n || "").trim();
-            if (!naam) return;
-            setUserName(naam);
-            try {
-              localStorage.setItem("ls_user", JSON.stringify({ name: naam, level: userLevel || "", role: role || "leerling", schoolType: userSchoolType || "" }));
-            } catch { /* lokaal opslaan is best-effort */ }
-          }}
+          onNaamInvullen={bewaarNaam}
           onKlaarzetten={startKlaarzetten}
           onHierOefenen={hierOefenen}
           onUpgrade={() => setPage("pro")}
@@ -2510,7 +2524,7 @@ export default function App() {
         <VandaagKwartier userName={userName || ""} userLevel={userLevel || ""} authUser={authUser}
           onDictee={() => setPage("dictee")} onWerkwoorden={() => setPage("werkwoorden")}
           onPickPath={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("mijn-pagina"); setPage("learn-path"); }}
-          onKlaar={() => setPage("mijn-pagina")} onMijn={() => setPage("mijn-pagina")} />
+          onKlaar={() => setPage("mijn-pagina")} onMijn={() => setPage("mijn-pagina")} onNaamInvullen={bewaarNaam} />
       )}
       {page === "printen" && <PrintHubPage setPage={setPage} />}
       {page === "tafelbladen" && <TafelbladenPage setPage={setPage} />}

@@ -31,6 +31,15 @@
 
 ---
 
+## Week 38 (ma 14 sep – zo 20 sep)
+
+| Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
+|---|---|---|
+| ma 14 sep | ~0,5 (voorstel) | 💻📋 avondrapport + terugkommeting |
+| di 15 sep | ~4 (voorstel: dag 2,5 + avond 1,5) | 💻✉️ dagrapport, Ommeriek-besluit, oefenpakket-fixes (v663), Smulsoft→Leerkwartier (v664-667), bedrieger-hernoeming (v668) + tikken gerepareerd (v669), Facebook-reactie, Prinsjesdag-check; avond: drie treden (v670), database-export + branch-bescherming (v671), agenda |
+| wo 16 sep | ~6 (voorstel) | 🗂️💻✉️ bureaublad-opruiming (78→33) · dagrapport + PDF (08:30) · Charley-rem gebouwd en live getest (v672-673) · LOWAN batch 4 (45) verstuurd + batch 5 als Windows-taak · bulkmail-plan · verwerkingsregister-concept · urenreconstructie · dagrapport-editie 10:45 (alle cijfers vers, PDF + mail) · trouwe gast gebouwd (v674, 11:15) · avondeditie 20:10 (rem-meting, trouwe-gasten-teller, dashboard/mail via browser, PDF + mail) |
+| **Offline (15%-vuistregel)** | | (invullen eind week; Marks offline uren wk 37 ontbreken ook nog) |
+
 ## Week 35 (ma 24 – zo 30 aug)
 
 | Dag | Uren | Wat |
@@ -71,21 +80,57 @@
 sessieduur en werk in de repo/mail — liever iets voorzichtig dan opgeblazen); offline uren pas
 invullen na antwoord van Mark, met zijn omschrijving erbij.*
 
-## Weken vóór 24 aug (reconstructie — nog te doen, PRIORITEIT OMHOOG 28 aug)
+## Weken vóór 24 aug — reconstructie-VOORSTEL (Claude, 16 sep 2026; Mark valideert)
 
 **Mark-verklaring 28 aug:** "Ik nam Claude in januari en elke maand heb ik eraan gewerkt,
-elke week zeker 10 uur." → De aanloopfase begint dus in **januari 2026**, niet in mei.
+elke week zeker 10 uur." → De aanloopfase begint in **januari 2026**, niet in mei.
 Aanloopuren tellen mee voor het urencriterium (Belastingdienst, geverifieerd 28 aug).
 
-**Harde ankers voor de reconstructie:**
-- Claude-abonnement loopt sinds **januari 2026** (facturen = bewijs van de werkomgeving).
-- Repo `leerschool` gestart **23 maart 2026**; commits per maand: mrt 135 · apr 543 ·
-  **mei 1.276** · jun 444 · jul 382 · aug 542 — daarnaast verzendlogs + maildata.
-- jan–feb = "op papier" (plan/leren/concept): zwakste bewijs, conservatief schatten (~10 u/wk).
+**Methode (conservatief, naast de git-geschiedenis te leggen):** per dag de tijd tussen de eerste en
+laatste commit, waarbij gaten van meer dan 1,5 uur níét meetellen (alleen een kwartier), plus een half
+uur opstart; per dag maximaal 10 uur. Dit onderschat bewust: nadenken, lezen, mails en testen zonder
+commit staan er niet in. Bron: 3.189 commits van 23 mrt t/m 23 aug (`git log`). Daarbovenop de
+15%-vuistregel voor offline uren (gesprekken over de app), zoals sinds 28 aug afgesproken.
 
-**Grove jaarprojectie (eerlijk, conservatief):** jan-feb ~90 · mrt-apr ~135-180 ·
-mei-aug ~440-525 · sep-dec ~490 (huidig ritme) = **~1.155-1.285 → de 1.225 is binnen bereik.**
-Relevantie: kabinetsplan schaft startersaftrek af per 2027 (besluit Prinsjesdag 15 sep) →
-2026 is mogelijk het enige startersaftrek-jaar (€3.323 aftrek ≈ €1.230 netto).
-Status: ⏳ Claude maakt een week-voor-week-voorstel uit git/verzendlogs; Mark valideert.
-Gouden regel blijft: alleen échte uren — het logboek moet naast de git-geschiedenis kunnen liggen.
+**Harde ankers:** Claude-abonnement sinds januari 2026 (facturen) · repo `leerschool` gestart 23 mrt 2026 ·
+commits per maand: mrt 135 · apr 543 · mei 1.276 · jun 444 · jul 382 · aug 409 (t/m 23 aug) · verzendlogs +
+maildata vanaf juni.
+
+| Week | Sessie-uren (git) | Dagen met commits | Opmerking |
+|---|---|---|---|
+| jan–feb (wk 1-9) | ~80 (verklaring: ≥10 u/wk, 8 wk) | — | plannen, leren, concept; zwakste bewijs → 10 u/wk, niet meer |
+| 1–22 mrt (wk 10-12) | ~30 (10 u/wk) | — | vóór de repo: opzet in Claude; alleen abonnement als bewijs |
+| wk 13 (23-29 mrt) | 16 | 6 | eerste uploads + eerste app-versie |
+| wk 14 | 14,5 | 4 | |
+| wk 15 | 16,5 | 6 | |
+| wk 16 | 14,5 | 6 | |
+| wk 17 | 31 | 7 | |
+| wk 18 | 51 | 7 | eerste accounts (apr) |
+| wk 19 | 46 | 7 | |
+| wk 20 | 59,5 | 7 | topweek: 685 commits (11-14 mei elk >100) |
+| wk 21 | 31,5 | 5 | |
+| wk 22 | 1 | 1 | vakantie/pauze (alleen 30 mei) |
+| wk 23 | 35 | 7 | |
+| wk 24 | 18 | 7 | |
+| wk 25 | 24 | 7 | |
+| wk 26 | 32 | 7 | |
+| wk 27 | 32 | 6 | |
+| wk 28 | 19 | 6 | |
+| wk 29 | 20,5 | 7 | flyers Drachten/Purmerend/Enschede per post (18 jul) → offline apart |
+| wk 30 | 8 | 6 | zomerdip |
+| wk 31 | 38,5 | 7 | dagrapport-ritueel start (2 aug) |
+| wk 32 | 21,5 | 7 | |
+| wk 33 | 34,5 | 7 | Leergeld-golven, Spark Fest-flyers bezorgd |
+| wk 34 (17-23 aug) | 27 | 7 | |
+| **Subtotaal git 23 mrt–23 aug** | **591,5** | 148 dagen | |
+| Offline 15% over die 591,5 | ~89 | | vuistregel Mark 28 aug; grote losse klussen (flyers posten, bellen) nog apart door Mark aan te vullen |
+| **Totaal t/m 23 aug (voorstel)** | **~790** | | 80 + 30 + 591,5 + 89 |
+
+**Doorrekening urencriterium 2026 (stand 16 sep):** ~790 t/m 23 aug + ~100 gelogd 24 aug–16 sep = **~890**.
+Nog 15 weken × ~25-28 u = ~375-420 → **~1.265-1.310 → de 1.225 wordt gehaald**, mits het huidige ritme
+doorloopt tot eind december. Marge is klein (~40-85 u): offline klussen wél blijven loggen.
+
+**Wat Mark moet doen:** (1) dit voorstel lezen en per week zeggen "klopt" of een ander getal;
+(2) grote offline klussen van mrt-aug noemen (flyers posten 18 jul, belafspraken, inkopen, Alkmaar/
+Rotterdam-contact) → apart erbij; (3) KvK-startdatum op de échte start zetten (maart/april 2026, niet 1 sep).
+Gouden regel blijft: alleen échte uren — dit logboek moet naast de git-geschiedenis kunnen liggen.
