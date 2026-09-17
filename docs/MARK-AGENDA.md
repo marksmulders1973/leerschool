@@ -30,6 +30,8 @@
 
 ## 🔴 Nu doen (deze week)
 
+- 📬 **17 sep — Voedselbank Dongen wil 50 flyers + 3 posters** (mail wo 23:40, Schubertstraat 30, 5102 BH Dongen). Concept + poster klaar; jij: poster bekijken → "stuur maar" → envelop uit voorraad op de post. Geen nieuw drukwerk.
+- ✅ **17 sep 06:50 — Alkmaar-blok live op bedankt.html (v675)**; flyers gaan vandaag mee in de pakketten; ALKMAAR2027-teller loopt vanaf 0, eigen blok in het dagrapport t/m ~1 okt.
 - ✅ **16 sep — 🤖 Charley-rem (idee F, v672, Mark: "nee, dat was ik niet").** Eén apparaat stuurde 134 berichten naar het maatje en deed 2 sommen. Nu per apparaat per dag: na 5 berichten zonder beantwoorde vraag antwoordt het maatje in 2 zinnen en eindigt met "Zullen we er samen één doen?" + knop; na 15 géén AI-call meer tot er een vraag is gedaan; gast 40 berichten/dag, account 80, betaald Familie onbeperkt; server-backstop 120/dag per uid (`ai_call_quota` rij `uid:<uid>` — bij optellen `endpoint not like 'uid:%'`). Meten: events `charley_rem` (soort terug/pauze/daglimiet) en `charley_rem_klik`; `vonk_hulp_vraag` telt alleen échte AI-calls. **Test zelf:** leerpad → maatje → 6 berichten zonder som → korte antwoorden + knop; 16e bericht → pauze-tekst.
 - ⏰ **3 mei 2027 — leerkwartier.app verloopt** (geregistreerd 3 mei 2026, TransIP). Vóór 1 april 2027 checken: automatisch verlengen AAN + geldige kaart bij TransIP. Zonder domein: website én hallo@-mail dood. (Gevonden 15 sep via RDAP-lookup.)
 
