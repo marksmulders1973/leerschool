@@ -11,6 +11,7 @@
 
 import { track } from "../utils.js";
 import supabase from "../supabase.js";
+import { leermomentVandaag, onLeermoment } from "./leermoment.js";
 
 const KEY = "lk_daily_goal_v1";
 const STREAK_KEY = "lk_day_streak_v1";
@@ -70,6 +71,24 @@ export function getDailyGoal() {
   return cur;
 }
 
+// Meldt `kwartier_reached` zodra het kwartier vol is én er die dag een
+// leermoment was — in welke volgorde die twee ook komen. Max één keer per dag
+// per apparaat, bewaakt door de vlag `gemeld` in de dag-entry.
+function probeerKwartierTeMelden(g) {
+  const cur = g || getDailyGoal();
+  if (!cur.completed || cur.gemeld) return;
+  if (!leermomentVandaag()) return;
+  cur.gemeld = true;
+  write(cur);
+  try { track("kwartier_reached", { min: Math.floor((cur.seconds || 0) / 60), via: "daily_goal" }); } catch { /* nooit de telling laten breken */ }
+}
+
+// Kwam het eerste leermoment pas ná de vijftien minuten, dan vuurt het event
+// alsnog op dat moment.
+if (typeof window !== "undefined") {
+  onLeermoment(() => { try { probeerKwartierTeMelden(); } catch { /* */ } });
+}
+
 // Voeg N seconden toe aan de teller. Wordt aangeroepen door de tracking-tick
 // (default: 30s per heartbeat). Markeert 'completed' zodra target bereikt is
 // — maar overschrijft nooit een al-gevierd vlag.
@@ -95,7 +114,12 @@ export function addSeconds(deltaSeconds) {
     // streak + felicitatie. Vroeger hing het event aan een aparte LEER-pagina-
     // teller in App.jsx, die zelden de 15 min haalde → event vuurde bijna nooit.
     // De completed-guard zorgt dat dit max. 1× per dag per device vuurt.
-    try { track("kwartier_reached", { min: Math.floor(cur.seconds / 60), via: "daily_goal" }); } catch { /* nooit de telling laten breken */ }
+    // 18 sep 2026 — soepel tellen (Mark): het kind ziet en viert het kwartier
+    // precies zoals eerst (completed/streak/toast blijven ongewijzigd), maar het
+    // meet-event vuurt alleen op een dag waarop er écht iets van leren gebeurde.
+    // Zoeken en navigeren telt mee als leertijd; vijftien minuten rondkijken
+    // zonder één vraag niet. Zie shared/leermoment.js.
+    probeerKwartierTeMelden(cur);
   }
   write(cur);
   // A8.3: naar Supabase (bij voltooien direct, anders max 1×/minuut)

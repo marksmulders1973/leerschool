@@ -11,6 +11,24 @@
 import supabase from "./supabase.js";
 import { BOUW_VERSIE } from "./versie.js";
 import { noteerVraagBeantwoord } from "./features/learn/charleyRem.js";
+import { meldLeermoment } from "./shared/leermoment.js";
+
+// Wat telt als "er is vandaag geleerd" voor de kwartier-telling (18 sep 2026).
+// Bewust ruim: wie een proefvraag doet of de Kwartiercheck start, is aan het
+// leren. Nieuwe oefenvorm erbij? Zet het event hier ook neer.
+const LEERMOMENT_EVENTS = new Set([
+  "question_answered",
+  "partner_welkom_vraag",
+  "startkwartier_vraag",
+  "vraag_vd_dag_answered",
+  "dictee_check",
+  "dictee_woord",
+  "kwartiercheck_gestart",
+  "park_rekenvraag",
+  "cito_toets_gestart",
+  "werkwoord_check",
+  "vandaag_blok_klaar",
+]);
 
 function _sessionId() {
   try {
@@ -104,6 +122,12 @@ export function track(event, params = {}) {
   // vraag"-teller van het maatje op nul — vóór de interne check, dit is
   // apparaat-lokaal en geen meting.
   if (event === "question_answered") { try { noteerVraagBeantwoord(); } catch { /* */ } }
+  // Soepele kwartier-telling (18 sep 2026): ruim opgevat wat als leren telt —
+  // een oefenvraag, een proefvraag op het welkomscherm, de vraag van de dag,
+  // een dictee-woord, de Kwartiercheck, een rekenvraag in het park of een toets.
+  // Zonder één van deze gebeurtenissen telt een dag niet als kwartier, ook al
+  // stond de site een kwartier open. Zie shared/leermoment.js.
+  if (LEERMOMENT_EVENTS.has(event)) { try { meldLeermoment(); } catch { /* */ } }
   // Interne check (Claude/Mark) telt nergens mee — geen GA, geen events-insert.
   if (isInternalVisit()) return;
   // (1) optioneel Google Analytics (alleen als gtag ooit geladen is — blijft onschuldig)
