@@ -24,7 +24,7 @@
 - ✅ Supabase Pro (dagelijkse back-ups, spend cap aan) · ✅ main-branch beschermd · ✅ Google/GitHub/hosting-account met wachtwoord/passkey + herstelcodes op papier · ✅ recovery-mail 15 sep naar Mark + Deianera (stappenplan + wachtwoordblad + pakket)
 - ☐ **ma 21 sep (Claude):** eerste zondag-export controleren (mail "💾 Database-back-up Leerkwartier"; interne dagrapport-mail toont 💾 database-back-up: 1)
 - ☐ **Mark, deze week:** hotmail-wachtwoord op het wachtwoordblad · TransIP-wachtwoord op het blad · **bewaarplek van het blad doorgeven** (→ Claude zet het in het stappenplan voor Deianera) · **vervaldatum ICS-kaart doorgeven** (→ 2 mnd vooraf in agenda; Claude, Anthropic, Supabase, TransIP lopen erop)
-- ☐ **Claude, deze week:** uptime-bewaking (gratis, elke 5 min, melding bij storing) · concept **verwerkingsregister** (A4) vóór KvK 28 sep
+- ✅ **18 sep 07:00 — uptime-bewaking LIVE** (GitHub Action `.github/workflows/uptime.yml`: elke 5 min startpagina + `/api/actuele-vraag`, 3 pogingen tegen vals alarm, opent/sluit automatisch een issue met label `storing`). 🔸 **Mark, 2 min:** zet in GitHub → Settings → Secrets → Actions het secret `RESEND_API_KEY` (staat in `~/.claude/resend-lokaal.env`); dan komt er bij storing óók een mail i.p.v. alleen een GitHub-melding. ☐ Claude deze week: concept **verwerkingsregister** (A4) vóór KvK 28 sep
 - ☐ **Beslissingen Mark:** hosting naar Pro-plan ($20/mnd) **vóór de eerste betaling** (Hobby = niet-commercieel; hoort in het betaalspoor, dec 2026) · merknaam "Leerkwartier" deponeren als Benelux-woordmerk (±€250, 10 jaar) kort na de KvK · 2FA op TransIP en Microsoft
 - ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
 
