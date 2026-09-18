@@ -30,7 +30,7 @@
 
 ## 🔴 Nu doen (deze week)
 
-- ✅ **17 sep 21:45 — Dongen: beide drukbestanden aangeleverd bij Drukwerkdeal** (posters + flyers "Gereed voor productie", levering di 22 sep bij Dongen). Nog te doen door Mark: "ja" op het regeltje aan Monique (`Desktop\dagrapport\concept-mail-monique-dongen-2026-09-17.md`); factuur €55,84 in KOSTEN-2026.md zodra de mail er is.
+- ✅ **17 sep 21:45 — Dongen: beide drukbestanden aangeleverd bij Drukwerkdeal** (posters + flyers "Gereed voor productie", levering di 22 sep bij Dongen). ✅ Regeltje aan Monique verstuurd vr 18 sep 06:17/06:18 (dubbel: Mark klikte zelf én het script). Factuur €55,84 staat in KOSTEN-2026.md (PDF nog ophalen bij Drukwerkdeal → Facturen). Di 22 sep: levering controleren.
 - 📝 **17 sep — Voedselbank Lelystad (Dick Nauta, 17:27): wil doorverwijzen zónder code en zonder vermelding van de voedselbank.** Concept-antwoord ligt klaar (`Desktop\dagrapport\concept-mail-dick-lelystad-2026-09-17.md`). Jouw keuze: akkoord met code-loos Lelystad? Dan "stuur maar".
 - ✅ **17 sep 17:25 — Sociale Kaart Nederland: AANGENOMEN**, zichtbaar vanaf vr 18 sep op álle kaarten van dat platform (ook Enschede, Rotterdam-Rijnmond). Claude controleert vrijdag de vermelding. Niets voor jou te doen.
 - 📬 **17 sep — Buurtgezinnen/Wendy Meerbeek (Communicatie) wil de flyer in hun huisstijl; antwoord VERSTUURD 11:48** met bewerkbare Word-versie. Wachten op haar versie of huisstijl. 🔴 **Google-koppelingen verlopen sinds je nieuwe wachtwoord (15 sep): Gmail-MCP én Zapier-Gmail** → Zapier opnieuw koppelen: https://mcp.zapier.com/api/v1/connect-auth/GoogleMailV2CLIAPI?accountId=27284403&connectionId=65049417 (1 min) + Claude Connectors → Gmail opnieuw inloggen.
