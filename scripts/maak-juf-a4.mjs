@@ -37,7 +37,7 @@ const html = `<!DOCTYPE html>
     </div>
 
     <h1>Probeer Leerkwartier met uw klas</h1>
-    <p>Leerkwartier is een <strong>gratis Nederlandse oefen-app</strong> voor groep 3 t/m 8, met de nadruk op de <em class="toets">Doorstroomtoets</em> (groep 6-8). Maakt een leerling een fout? Dan wordt de uitleg <strong>steeds simpeler, tot het kwartje valt</strong>. Elk stukje tekst heeft een voorleesknop.</p>
+    <p>Leerkwartier is een <strong>gratis Nederlandse oefen-app</strong> voor groep 3 t/m 8, met de nadruk op de <em class="toets">Doorstroomtoets</em> (groep 6-8). Maakt een leerling een fout? Dan wordt de uitleg <strong>steeds simpeler, tot je het echt begrijpt</strong>. Elk stukje tekst heeft een voorleesknop.</p>
 
     <h2>Klaarzetten in 3 stappen</h2>
     <ul>

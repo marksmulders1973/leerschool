@@ -197,7 +197,7 @@ export default function WerkbladPagina({ onClose, userId, authUser = null }) {
       <div style={{ fontSize: 12.5, color: "#333", lineHeight: 1.55 }}>
         <b>Thuis verder oefenen?</b> Scan de code met een telefoon,
         of ga naar <b>leerkwartier.app</b>.<br />
-        Gratis oefenen — geen account nodig. Voor ouders en verzorgers: de app legt elke som uit, steeds simpeler tot het kwartje valt.
+        Gratis oefenen — geen account nodig. Voor ouders en verzorgers: de app legt elke som uit, steeds simpeler tot je het echt begrijpt.
       </div>
     </div>
   );

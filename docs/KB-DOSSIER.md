@@ -12,7 +12,7 @@ een kwartier per dag oefenen voor de Doorstroomtoets — rekenen, taal, begrijpe
 en studievaardigheden. Gebouwd door één vader (Mark Smulders) in eigen tijd, zonder
 winstoogmerk in 2026.
 
-Het onderscheid: **uitleg die simpeler wordt tot het kwartje valt.** Bij elke fout kan
+Het onderscheid: **uitleg die simpeler wordt tot je het echt begrijpt.** Bij elke fout kan
 het kind kiezen voor uitleg op drie niveaus (basis → simpeler → nóg simpeler), met
 daarachter een compleet leerpad over het onderliggende concept — en daarna terug naar
 de oorspronkelijke vraag: "snap je 'm nu wel?". Oefenen is overal; *begrijpen* is het gat.

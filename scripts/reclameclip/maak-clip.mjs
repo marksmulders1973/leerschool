@@ -38,7 +38,7 @@ const STANDAARD_SCENES = [
   { type: "titel", duur: 4, kop: "De Doorstroomtoets komt eraan.", sub: "Veel kinderen oefenen — maar begrijpen het niet écht." },
   { type: "app", duur: 4, caption: "Elke dag een vraag van de dag — in Doorstroomtoets-stijl", url: "https://leerkwartier.app/vandaag", wachtMs: 6000 },
   { type: "app", duur: 5, caption: "Fout antwoord? Geen 'helaas!' …", url: "https://leerkwartier.app/vandaag", wachtMs: 6000, acties: ["fout-antwoord"] },
-  { type: "app", duur: 6, caption: "… maar uitleg die simpeler wordt tot het kwartje valt", url: "https://leerkwartier.app/vandaag", wachtMs: 6000, acties: ["fout-antwoord", { zoekTekst: "impeler" }] },
+  { type: "app", duur: 6, caption: "… maar uitleg die simpeler wordt tot je het echt begrijpt", url: "https://leerkwartier.app/vandaag", wachtMs: 6000, acties: ["fout-antwoord", { zoekTekst: "impeler" }] },
   { type: "app", duur: 5, caption: "Oefen de échte Doorstroomtoets-onderdelen: rekenen, taal en lezen", url: "https://leerkwartier.app/doorstroomtoets-oefentoets", wachtMs: 7000 },
   { type: "app", duur: 4, caption: "Honderden oefenpaden — van breuken tot begrijpend lezen", url: "https://leerkwartier.app/leren", wachtMs: 7000 },
   { type: "titel", duur: 4, kop: "Deze week: de vraag van de dag over de ooievaars 🦅", sub: "Elke dag een nieuwe vraag, uit het echte nieuws." },

@@ -109,7 +109,7 @@ export default function RondleidingPage({ setPage } = {}) {
         >
           Doorstroomtoets in januari — vijftien minuten per dag is genoeg, als
           ze écht begrijpen wat ze doen. Geen drilloefeningen. Geen reclame.
-          Drie uitleg-niveaus tot het kwartje valt.
+          Drie uitleg-niveaus tot je het echt begrijpt.
         </p>
         <div style={{ display: "flex", gap: "var(--space-3)", flexWrap: "wrap" }}>
           <Button onClick={() => go("learn-paths-hub")}>

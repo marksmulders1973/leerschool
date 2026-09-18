@@ -297,7 +297,7 @@ tegen die tijd ten minste één positieve reactie heeft — anders weglaten, eer
 > and in my free time I built Leerkwartier ("Quarter-hour of learning"): a free
 > Dutch-language practice app where children practise maths, Dutch language and
 > reading comprehension for fifteen minutes a day — with explanations that get
-> simpler until the penny drops (three levels), plus a read-aloud button.
+> simpler until you really understand it (three levels), plus a read-aloud button.
 >
 > For your students, the app can be especially useful for the subject of Dutch:
 > short sentences, simple Dutch, and audio support for children who don't speak

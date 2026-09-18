@@ -28,7 +28,7 @@ niet bij kosten-bewust. Alleen overwegen voor een eenmalige hero-clip.
 |---|---|---|---|
 | 0-5s | Intro | **3D-kubus draait** + logo, jingle start | "Leerkwartier" |
 | 5-15s | Probleem | kind + toets-sfeer (app-beeld dagvraag) | "De Doorstroomtoets komt eraan. Veel kinderen oefenen — maar begrijpen het niet écht." |
-| 15-32s | Kern-USP | schermopname: vraag → fout → **uitleg op 3 niveaus** → leerpad → terug | "Bij elke fout: uitleg die simpeler wordt tot het kwartje valt." |
+| 15-32s | Kern-USP | schermopname: vraag → fout → **uitleg op 3 niveaus** → leerpad → terug | "Bij elke fout: uitleg die simpeler wordt tot je het echt begrijpt." |
 | 32-42s | 🔄 **WEEK-SLOT** | wisselt per week: dagvraag van die week / ander vak / nieuwe feature | bv. "Deze week: breuken." |
 | 42-52s | Beloning + ouders | park-beelden + weekrapport/Kwartiercheck | "Een kwartier per dag is genoeg. Ouders en verzorgers kijken mee." |
 | 52-60s | CTA | logo + QR + jingle-slot | "Gratis oefenen — geen account nodig. **leerkwartier.app**" |
