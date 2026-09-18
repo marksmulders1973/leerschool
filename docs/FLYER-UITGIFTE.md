@@ -16,7 +16,7 @@
 | Partner | Code | Uitgegeven | Vorm | Datum | Plekken | Opmerking |
 |---|---|---|---|---|---|---|
 | Nationaal Fonds Kinderhulp | KINDERHULP2027 | ? | digitaal+flyer | 31 aug | 75 | plaatsing in intermediairs-nieuwsbrief (4.400+ orgs), sept/nov; 75-plekken-vraag uitstaand |
-| Voedselbank Lelystad | LELYSTAD2027 | ? | digitaal | 12 aug | 50 | bestuur akkoord, verspreiding via PR-commissie |
+| ~~Voedselbank Lelystad~~ | ~~LELYSTAD2027~~ | 0 | digitaal | 12 aug | — | **INGETROKKEN 18 sep 2026** (Dick Nauta wil doorverwijzen zonder code/naam; nooit door een gezin gebruikt: 0 claims, 0 sommen; code uit DB + app, flyerbestanden weg). Lelystad verwijst code-loos naar leerkwartier.app. |
 | Ooievaarspas Den Haag | OOIEVAAR2027 | ? | digitaal | 13 jul | ∞ | blijvend gratis; neutrale banner (naam van site) |
 | Voedselbank Rotterdam | VBROTTERDAM2027 | scherm | digitaal | 14 jul | 300 | draait op supermarkt-schermen |
 | Buurtgezinnen | BUURTGEZINNEN2027 | ? | digitaal | 21 aug | 100 | Froukje (belafspraak do 27 aug) |

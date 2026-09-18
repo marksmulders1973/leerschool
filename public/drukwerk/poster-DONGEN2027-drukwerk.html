@@ -23,6 +23,9 @@
     .vel{width:297mm;height:420mm;padding:20mm 22mm;display:flex;flex-direction:column;transform-origin:top left}
 
     .kop{display:flex;align-items:center;gap:16px;margin-bottom:10mm}
+    .kop .partner{margin-left:auto;text-align:right}
+    .kop .partner img{height:20mm;width:auto;display:block;margin:0 0 3mm auto}
+    .kop .partner .ptxt{font-size:16px;color:#5a6775;font-weight:600;line-height:1.3}
     .kop img.logo{height:46mm;border-radius:9mm;display:block}
     .kop .slogan{font-size:19px;color:#5a6775;line-height:1.4;font-weight:600}
 
@@ -64,12 +67,13 @@
   <div class="vel">
     <div class="kop">
       <img class="logo" src="../logo.jpg" alt="Leerkwartier" />
-      <div class="slogan">Een rustige bijlesdocent<br>in je broekzak.</div>
+      <div class="slogan">Een kwartier per dag leren,<br>een leven lang slimmer.</div>
+      <div class="partner"><img src="logo-voedselbank-dongen.png" alt="Voedselbank Dongen" /><div class="ptxt">Wij danken<br>Voedselbank Dongen</div></div>
     </div>
 
     <h1>Gratis oefenen voor de <span class="groen">Doorstroomtoets</span></h1>
     <div class="voorwie" id="voorwie">Voor kinderen in groep 6, 7 en 8 — en gratis oefenen voor de VMBO-examens.</div>
-    <div class="payoff">Een kwartier per dag leren, een leven lang slimmer.</div>
+    <div class="payoff">Gratis. Geen account. Geen reclame.</div>
 
     <ul>
       <li>Een <strong>oefen-toets</strong> die op de echte Doorstroomtoets lijkt.</li>
@@ -112,7 +116,7 @@
         voorwie:'Voor de brugklas én groep 6, 7 en 8 — basis bijspijkeren, en gratis oefenen voor de VMBO-examens.' }
     };
     var cfg = VAR[v] || VAR.neutraal;
-    if (v === 'vb-dongen') { cfg = { logo:null, dank:'<strong>Met dank aan Voedselbank Dongen</strong> — samen zorgen we dat meer kinderen gratis kunnen oefenen.' }; }
+    if (v === 'vb-dongen') { cfg = { logo:null }; }
     if (cfg.voorwie) document.getElementById('voorwie').textContent = cfg.voorwie;
     if (cfg.dank) {
       document.getElementById('partnerlogo').style.display='none';

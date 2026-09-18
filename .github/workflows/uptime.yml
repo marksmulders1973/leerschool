@@ -1,0 +1,121 @@
+name: Uptime-bewaking leerkwartier.app
+
+# Elke 5 minuten kijken of de site en de API nog leven (Mark-wens 15 sep 2026:
+# "uptime-bewaking, gratis, elke 5 min, melding bij storing"). Gratis omdat de
+# repo openbaar is; Vercel Hobby staat maar 2 crons van 1×/dag toe, vandaar
+# GitHub Actions.
+#
+# Melding bij storing: er wordt een issue geopend met label `storing` (mail via
+# GitHub-notificaties). Staat het secret RESEND_API_KEY ingesteld, dan gaat er
+# óók een mail naar Mark. Zodra de site weer werkt, sluit het issue zichzelf.
+
+on:
+  schedule:
+    - cron: "*/5 * * * *"
+  workflow_dispatch:
+
+permissions:
+  issues: write
+
+concurrency:
+  group: uptime
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - name: Site en API controleren (3 pogingen, pas daarna alarm)
+        id: check
+        run: |
+          set +e
+          fouten=""
+          probeer() {
+            naam="$1"; url="$2"; zoek="$3"
+            for poging in 1 2 3; do
+              body=$(curl -sS -m 20 -w '\n%{http_code}' "$url" 2>/dev/null)
+              code=$(printf '%s' "$body" | tail -n1)
+              inhoud=$(printf '%s' "$body" | sed '$d')
+              if [ "$code" = "200" ] && printf '%s' "$inhoud" | grep -qi "$zoek"; then
+                echo "$naam: ok (poging $poging)"
+                return 0
+              fi
+              echo "$naam: mislukt (poging $poging, status ${code:-geen})"
+              [ "$poging" -lt 3 ] && sleep 20
+            done
+            fouten="${fouten}${naam} (status ${code:-geen antwoord}) · "
+            return 1
+          }
+          probeer "Startpagina" "https://leerkwartier.app/" "leerkwartier"
+          probeer "API vraag-van-de-dag" "https://leerkwartier.app/api/actuele-vraag" "vraag"
+          if [ -n "$fouten" ]; then
+            echo "status=down" >> "$GITHUB_OUTPUT"
+            echo "detail=${fouten%· }" >> "$GITHUB_OUTPUT"
+            echo "❌ STORING: ${fouten%· }"
+          else
+            echo "status=up" >> "$GITHUB_OUTPUT"
+            echo "✅ Alles in de lucht"
+          fi
+
+      - name: Mail bij storing (alleen als het Resend-secret bestaat)
+        if: steps.check.outputs.status == 'down'
+        env:
+          RESEND_API_KEY: ${{ secrets.RESEND_API_KEY }}
+          DETAIL: ${{ steps.check.outputs.detail }}
+        run: |
+          if [ -z "$RESEND_API_KEY" ]; then
+            echo "Geen RESEND_API_KEY ingesteld — melding gaat alleen via het issue."
+            exit 0
+          fi
+          curl -sS -X POST https://api.resend.com/emails \
+            -H "Authorization: Bearer $RESEND_API_KEY" \
+            -H "Content-Type: application/json" \
+            -d "$(printf '{"from":"Leerkwartier <hallo@leerkwartier.app>","to":["Mark-smulders@hotmail.com"],"subject":"🔴 Leerkwartier is niet bereikbaar","text":"De uptime-bewaking kreeg drie keer achter elkaar geen goed antwoord.\\n\\nWat er misging: %s\\n\\nTijd: %s UTC\\n\\nControleer het hosting-dashboard. Zodra de site weer werkt, sluit de bewaking het GitHub-issue vanzelf."}' "$DETAIL" "$(date -u '+%Y-%m-%d %H:%M')")"
+
+      - name: Issue openen of bijwerken bij storing
+        if: steps.check.outputs.status == 'down'
+        uses: actions/github-script@v7
+        env:
+          DETAIL: ${{ steps.check.outputs.detail }}
+        with:
+          script: |
+            const detail = process.env.DETAIL || 'onbekend';
+            const tijd = new Date().toISOString().replace('T', ' ').slice(0, 16);
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'storing',
+            });
+            const tekst = `Uptime-bewaking kreeg drie keer achter elkaar geen goed antwoord.\n\n- **Wat er misging:** ${detail}\n- **Tijd:** ${tijd} UTC\n- **Run:** ${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}\n\nDit issue sluit zichzelf zodra de site weer bereikbaar is.`;
+            if (open.length) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: open[0].number, body: `Nog steeds onbereikbaar (${tijd} UTC): ${detail}`,
+              });
+            } else {
+              await github.rest.issues.create({
+                owner: context.repo.owner, repo: context.repo.repo,
+                title: '🔴 Leerkwartier is niet bereikbaar', body: tekst, labels: ['storing'],
+              });
+            }
+
+      - name: Issue sluiten zodra alles weer werkt
+        if: steps.check.outputs.status == 'up'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const { data: open } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner, repo: context.repo.repo,
+              state: 'open', labels: 'storing',
+            });
+            const tijd = new Date().toISOString().replace('T', ' ').slice(0, 16);
+            for (const issue of open) {
+              await github.rest.issues.createComment({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: issue.number, body: `✅ Weer bereikbaar om ${tijd} UTC. De bewaking sluit dit issue.`,
+              });
+              await github.rest.issues.update({
+                owner: context.repo.owner, repo: context.repo.repo,
+                issue_number: issue.number, state: 'closed',
+              });
+            }
