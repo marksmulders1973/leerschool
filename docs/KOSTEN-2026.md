@@ -17,11 +17,12 @@
 | 23 mrt | Anthropic API-tegoed ($5 + btw = $6,05) | ± €5,60 | PDF in Gmail (receipt 2582-4376-7067) | ✅ factuur binnen |
 | 31 mrt | Anthropic API-tegoed ($25 + btw = $30,25) | ± €28 | PDF in Gmail (receipt 2153-6754-5228) | ✅ factuur binnen |
 | v.a. 20 jun | **Claude-abonnement €108,90/mnd** (afschrijving rond de 20e; jun+jul+aug = 3× t/m aug) | €326,70 t/m aug | ICS-afschriften + claude.ai Billing | ✅ loopt maandelijks door |
-| v.a. 15 sep | **Supabase Pro $25/mnd** (≈ €23; dagelijkse back-ups 7 dgn, geen project-pauze, 8 GB db) — besluit Mark 15 sep na de back-up-vraag; maandelijks opzegbaar, spend cap AAN laten | ≈ €23/mnd | Supabase → Billing → Invoices (maandelijks) + welkomstmail 15 sep | 📥 eerste factuur volgt ~15 okt |
+| v.a. 15 sep | **Supabase Pro $25/mnd** (≈ €23; dagelijkse back-ups 7 dgn, geen project-pauze, 8 GB db) — besluit Mark 15 sep na de back-up-vraag; maandelijks opzegbaar, spend cap AAN laten | ≈ €23/mnd | Supabase → Billing → Invoices (maandelijks) + factuurmail in HOTMAIL | ✅ eerste factuur #XFMTIZ-00014 $25,00 (15 sep, hotmail 22:50, PDF-bijlage); volgende ~15 okt |
 | ~10 jul | Drukwerkdeal — 1.000 A4-flyers (order 15635719) | €72,60 | factuur in HOTMAIL + ICS | ✅ bedrag; 📥 factuur-PDF |
 | 18 jul | PostNL porto — 5 enveloppen flyer-zendingen | ± €22 | bon/Track&Trace | 📥 bon zoeken |
 | 23 jul | Anthropic API-tegoed ($20 + btw = $24,20) | ± €22,40 | PDF in Gmail (receipt 2891-3037-1600) | ✅ factuur binnen |
 | 29 jul | Drukwerkdeal — 1.000 A5 Spark Fest (order 15653885) | €43,56 | factuur in HOTMAIL + ICS | ✅ bedrag; 📥 factuur-PDF |
+| 17 sep | Drukwerkdeal — 3× A3-poster + 50× A4-flyer Voedselbank Dongen (order 15776792, gesatineerd 135 g, levering di 22 sep rechtstreeks bij Dongen) | €55,84 (€46,15 ex btw + €9,69 btw) | bevestiging in HOTMAIL 17 sep 12:57; factuur-PDF via Drukwerkdeal → Mijn account → Facturen | ✅ bedrag; 📥 factuur-PDF |
 | 1 sep | Anthropic API-tegoed ($20 + btw = $24,20) — **auto-reload aangezet** | ± €22,40 | Anthropic Console → Billing → Invoice history (1 sep) | ✅ door Mark bevestigd; 📥 factuur-PDF downloaden |
 
 **Totaal t/m augustus: ± €843.** Met het doorlopende abonnement (sep-dec = 4 × €108,90) en de
