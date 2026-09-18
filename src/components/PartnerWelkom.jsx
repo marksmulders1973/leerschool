@@ -48,6 +48,14 @@ const PROEF_VRAGEN = [
 // Nette weergavenamen per code (DB-org_naam bevat interne aantekeningen).
 // Nieuwe partner-code? Regel erbij — onbekende codes vallen terug op de
 // neutrale groet, dus vergeten is nooit kapot.
+// Korte weergavenaam voor smalle plekken (het bedank-spandoek op de park-
+// zeppelin schaalt tot minimaal 52px en kapt langere namen af). Alleen
+// invullen waar de volle naam niet past; anders valt alles terug op
+// PARTNER_NAMEN.
+export const PARTNER_NAMEN_KORT = {
+  ENSCHEDE2027: "Leergeld & Voedselbank Enschede",
+};
+
 export const PARTNER_NAMEN = {
   AANZET2027: "Bibliotheek AanZet",
   ALKMAAR2027: "Voedselbank Alkmaar",
@@ -59,7 +67,10 @@ export const PARTNER_NAMEN = {
   DONGEN2027: "Voedselbank Dongen",
   EINDHOVEN2027: "Bibliotheek Eindhoven",
   HAARLEMMERMEER2027: "Stichting Leergeld Haarlemmermeer (Spark Fest)",
-  ENSCHEDE2027: "Voedselbank Enschede-Haaksbergen",
+  // 18 sep 2026: Leergeld Enschede en de voedselbank delen het pand De Vlecht
+  // (Haaksbergerstraat 153) waar de folders van juli liggen; Leergeld deelt ze
+  // ook uit aan hun gezinnen, dus de code dekt beide organisaties.
+  ENSCHEDE2027: "Leergeld Enschede & Voedselbank Enschede-Haaksbergen",
   BEGELEIDING2027: "uw leerlingbegeleider",
   GORINCHEM2027: "Voedselbank Gorinchem",
   HEUVELLAND2027: "Leergeld Maastricht en Heuvelland",

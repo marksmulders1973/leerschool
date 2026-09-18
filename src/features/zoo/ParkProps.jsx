@@ -15,7 +15,7 @@ import CharacterModel from "./CharacterModel";
 import { KRAAM_SOORTEN, KRAAM_KEYS, CHARACTERS } from "./AssetRegistry";
 import { LOW_END, HALF, CELL } from "./grid";
 import { parkAudioTrein } from "./parkAudio";
-import { PARTNER_NAMEN } from "../../components/PartnerWelkom.jsx";
+import { PARTNER_NAMEN, PARTNER_NAMEN_KORT } from "../../components/PartnerWelkom.jsx";
 import { PARTNER_LOGOS } from "../../components/CodeBalk.jsx";
 
 // Buitenrand waar de speler/vlieger tegen begrensd wordt (net binnen het raster).
@@ -1764,7 +1764,7 @@ const ZEPPELIN_VLOOT = [
     h: 40 + (i % 4) * 7,
     snelheid: (i % 2 ? -1 : 1) * (0.008 + (i % 3) * 0.002),
     fase: (i * 2.399) % (Math.PI * 2), // gulden-hoek-spreiding: nooit een file
-    tekst: PARTNER_LOGOS[code] ? "Bedankt!" : `Bedankt, ${PARTNER_NAMEN[code] || code}!`,
+    tekst: PARTNER_LOGOS[code] ? "Bedankt!" : `Bedankt, ${PARTNER_NAMEN_KORT[code] || PARTNER_NAMEN[code] || code}!`,
     logo: PARTNER_LOGOS[code] || null,
   })),
 ];
