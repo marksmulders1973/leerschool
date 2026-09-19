@@ -16,24 +16,29 @@
 ## Drie routes naar €6.000/jaar
 | Route | Rekensom | Moeilijkheid |
 |---|---|---|
-| 1. Kindpakket / meedoen-budget (aanbieder worden) | 240 kinderen × €25/jaar | makkelijkst, geen politiek |
+| 1. Kindpakket / meedoen-budget (aanbieder worden) | 240 kinderen × €34,50/jaar | makkelijkst, geen politiek |
 | 2. Gemeente-licentie | 3 gemeenten × €2.000/jaar | middel, één beleidsmedewerker overtuigen |
 | 3. Scholen met achterstandsgeld (OAB / nieuwkomersbekostiging) | 20 scholen × €300/jaar | traag; lijst (achterstandsscore + LOWAN) bestaat al |
 
 **Route 1 eerst.** Kandidaten (uit Fable-kennis, nog te verifiëren): Rotterdampas kindtegoed,
 U-pas Utrecht, Meedoen-regeling Tilburg, Stadjerspas Groningen, Amsterdam Stadspas kindtegoed,
 Kindpakket Enschede/Almere. **Leergeld-stichtingen** werken hetzelfde (betalen leveranciers
-rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 kinderen × €25 = €5.000.
+rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 kinderen × €34,50 = €6.900.
 
 ## Bouwstenen
 1. **KvK 28 sep** (ma 11:45, Utrecht) → direct **KOR** aanvragen (btw-vrij < €20k) → factureren
    simpel. Zonder KvK+IBAN geen leveranciersbestand.
-2. **Eén prijs overal: €25 per kind per jaar via partner** (past in elk kindpakket; 240 kinderen
-   = doel). Nooit een ouderprijs in partner-context.
+2. **Eén prijs overal: €34,50 per kind per jaar via partner** (Mark-besluit 20 sep 2026; was €25).
+   Nooit een ouderprijs in partner-context. **Onderbouwing** (kostprijsanalyse 20 sep): bij €25 dekt
+   de prijs de AI-kosten niet bij gemiddeld gebruik — 240 kinderen leverde netto €182-374/mnd i.p.v.
+   €500. Bij €34,50 mét Charley-dagbundel (20) en prompt caching is netto/kind/jaar €22-32, en haalt
+   240 kinderen ~€500/mnd óók als het gebruik tegenvalt. Squla vraagt €43,52 aan dezelfde stichtingen,
+   dus we zitten 21% daaronder. Niet-rond bedrag = leest als berekende prijs bij een inkoper.
+   KOR-grens ligt bij 580 kinderen, ruim buiten het doelbereik.
 3. **Partner-rapport per gemeente/stichting** (de ene feature die WEL gebouwd moet worden):
    "X kinderen uit uw gemeente oefenden Y kwartier" — uit partner_codes + kwartier-data.
    Zonder dat getal verlengt niemand. Eerst voor Den Haag, dan generiek per code.
-4. **Nieuwe partner-deals vanaf nu mét prijs erin:** "gratis in 2027, vanaf 2028 €25 per kind,
+4. **Nieuwe partner-deals vanaf nu mét prijs erin:** "gratis in 2027, vanaf 2028 €34,50 per kind,
    betaald door gemeente/stichting, nooit door de ouder." Bestaande codes (t/m 31-12-2027
    gratis) in najaar 2027 met dit aanbod verlengen.
 
@@ -57,7 +62,7 @@ rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 kinderen × €25 
 
 ## Stadspas-inventarisatie (research 7 sep 2026, bronnen gecheckt op de site zelf)
 
-**Hoofdconclusie:** geen enkel kindtegoed (Rotterdam, Amsterdam, U-pas) noemt software/apps/abonnementen als toegestane productgroep. Het realistische betaalspoor voor een app is het **Squla-model**: lokale Leergeld-stichtingen, Meedoen in Rotterdam en het Jeugdeducatiefonds kopen codes in tegen kostprijs (Squla: €43,52/kind/jaar, min. 10 codes, 60+ stichtingen). Ons €25/kind/jaar zit daar comfortabel onder. Stadspassen zijn vooral **vindbaarheid** (gratis vermelding als partner), geen omzet.
+**Hoofdconclusie:** geen enkel kindtegoed (Rotterdam, Amsterdam, U-pas) noemt software/apps/abonnementen als toegestane productgroep. Het realistische betaalspoor voor een app is het **Squla-model**: lokale Leergeld-stichtingen, Meedoen in Rotterdam en het Jeugdeducatiefonds kopen codes in tegen kostprijs (Squla: €43,52/kind/jaar, min. 10 codes, 60+ stichtingen). Ons €34,50/kind/jaar zit daar 21% onder. Stadspassen zijn vooral **vindbaarheid** (gratis vermelding als partner), geen omzet.
 
 | Regeling | Route | KvK/IBAN nodig | App mogelijk? | Geld | Contact |
 |---|---|---|---|---|---|

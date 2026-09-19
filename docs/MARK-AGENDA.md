@@ -9,7 +9,7 @@
 ## 🧭 Langlopend plan — gemeente betaalt (doel €500/mnd) · vast blok in elk dagrapport
 
 > Bron: `docs/GEMEENTE-BETAALT-PLAN.md` (2 sep 2026). Ooievaarspas = voor altijd gratis (referentie, geen omzet).
-- **sep**: KvK ma 28 sep → meteen KOR aanvragen · tekst "partner-aanbod 2028: €25/kind/jaar, gemeente betaalt" (Mark-akkoord)
+- **sep**: KvK ma 28 sep → meteen KOR aanvragen · tekst "partner-aanbod 2028: **€34,50/kind/jaar**, gemeente betaalt" (prijs verhoogd van €25 → €34,50 op 20 sep na de kostprijsanalyse; onderbouwing in GEMEENTE-BETAALT-PLAN.md § bouwsteen 2). 🔴 **Deze prijs moet in de oktober-Leergeld-mail en in élke leveranciers-aanmelding staan — daarna ligt hij een jaar vast.**
 - **🗓️ Tijdlijn geld-spoor (Mark-akkoord 3 sep, aan Esther gemeld):** 28 sep KvK → 29 sep–5 okt zakelijke rekening (Knab) + KvK-nr aan Esther → 5–12 okt Stripe-account + verificatie + Ooievaarspas-formulier (datum **1 januari 2027**) → okt webhook/betaalflow bouwen + test PRO2027 → nov Stripe live (stil) + Ooievaarspas plaatst aanbieding → **dec voorverkoop Seizoenspas** (belofte "in 2026 helemaal gratis" blijft heel; Mark 3 sep: zónder kerstpakketten) → **1 jan 2027 Familie betaald voor niet-pashouders**.
 - **okt**: SUN Middelburg herbenaderen mét Ooievaarspas-keurmerk; opener: "hoe was de startbijeenkomst van 10 september?" (Mark reageerde die dag op hun LinkedIn-post)
 - **okt**: Leergeld-mail mét prijs · leveranciers-aanmelding 4-6 stadspassen/kindpakketten · partner-rapport v1
