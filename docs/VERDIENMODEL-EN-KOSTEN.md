@@ -159,6 +159,63 @@ Ter vergelijking: bij middengebruik **zónder** caching en **zónder** de gedrag
 🔧 *Gecorrigeerd 20 sep: eerder stond hier €835/€228; daarin ontbrak de marginale infra
 (€0,36/kind/jaar = €90/mnd bij 3.000 kinderen).*
 
+## 4c. Goedkoper model voor Charley? — ja, factor 24, en het staat half in je code
+
+Tarieven opgehaald 20 sep 2026 (ai.google.dev + api-docs.deepseek.com). Per Charley-bericht
+gerekend met 3.800 input / 200 output tokens.
+
+| Model | Input /1M | Output /1M | Per bericht | Index |
+|---|---|---|---|---|
+| **Claude Haiku 4.5** (nu) | $1,00 | $5,00 | €0,0044 | 100 |
+| Haiku 4.5 + prompt caching | $0,10 (cache read) | $5,00 | €0,0020 | 45 |
+| DeepSeek-Flash (piek) | $0,30 | $1,20 | €0,00127 | 29 |
+| DeepSeek-Flash (dal) | $0,15 | $0,60 | €0,00063 | 14 |
+| **Gemini 2.5 Flash-Lite** | **$0,10** | **$0,40** | **€0,00042** | **10** |
+| Gemini 2.5 Flash-Lite + caching | $0,01 | $0,40 | €0,00018 | **4** |
+
+✅ **Gemini 2.5 Flash-Lite is de goedkoopste optie — goedkoper dan DeepSeek**, ook tegen
+DeepSeeks daltarief. En de Gemini-route zit al in `tutor-chat.js` / `buddy-chat.js` als
+fallback, dus het is een volgorde-omdraaiing, geen nieuwe integratie.
+
+**Effect op de Ooievaarspas-post** (3.000 actieve pashouders, 5,5 calls/dag):
+
+| | per maand |
+|---|---|
+| Nu (Haiku, geen caching) | €3.195 |
+| Haiku + caching | €925 |
+| **Flash-Lite + caching** | **€243** |
+
+Pas met Flash-Lite blijft ook 10.000 actieve pashouders betaalbaar (€808/mnd tegen €3.083
+op Haiku+caching).
+
+### 🔴 Twee dingen die eerst moeten
+
+1. **`gemini-2.0-flash` staat niet meer op Googles prijslijst** (die begint bij de 2.5-serie).
+   De fallback in `tutor-chat.js`, `buddy-chat.js`, `charley-hulp.js` en `actuele-vraag.js`
+   wijst dus naar een model dat uitgefaseerd wordt — dat valt een keer stil zonder melding.
+   Bijwerken naar `gemini-2.5-flash-lite`, los van deze hele discussie.
+2. **Kwaliteit is hier een echte kostenpost, geen bijzaak.** Charley-gebruikers halen 2,4×
+   vaker het kwartier (§5). Zakt de didactische kwaliteit, de Nederlandse toon of Charleys
+   karakter, dan verlies je meer dan je bespaart. Dus: A/B op een deel van het verkeer met de
+   **kwartier-ratio als meetlat**, niet alleen een blik op de antwoorden.
+
+### DeepSeek — waarom niet
+
+Niet vanwege een boeterisico (solo-bouwer, eerste AP-stap is een brief), maar **commercieel**:
+DeepSeek draait in China. Het school-spoor vraagt om een verwerkersovereenkomst (staat al bij
+Ichthus in de agenda), we zijn Vriend van de gemeente Den Haag, en het gaat om gegevens van
+basisschoolkinderen. Een school die de DPA opvraagt en kindergegevens naar China ziet gaan,
+haakt af — dat kost meer dan de besparing. DeepSeek is open-weight en draait ook bij westerse
+hosts (Together/Fireworks/OpenRouter), maar dan betaal je hostingmarge en kom je op
+Gemini-niveau uit. Geen reden voor die omweg.
+
+### Aanbevolen volgorde
+
+1. **Caching op Haiku** — risicoloos, −55%, deze week.
+2. **Flash-Lite als A/B** op een deel van het chatverkeer, kwartier-ratio meten.
+3. **Splitsen naar taak**: Charleys chat naar Flash-Lite, maar `leg-uit` (uitleg ná een fout
+   antwoord) op Haiku houden — daar is precisie een halve cent waard.
+
 ## 5. Charley — inperken mag, wegsnijden niet
 
 - **Nergens beloofd.** Op `abonnement.html` staat alleen "Dictee met de woorden van school
@@ -260,9 +317,10 @@ ander bedrag. Dit moet uitgelijnd worden vóór er een schoolofferte uitgaat —
    (512–4096, modelafhankelijk)? Zo niet, valt de besparing weg. (b) Hoe vaak volgen calls
    elkaar binnen de 5-minuten-TTL op? Ik ga ervan uit dat een chatsessie dat doet.
 3. **Mollie-tarieven** (€0,29 iDEAL, ±€0,25 SEPA) komen uit mijn kennis, niet van mollie.com.
-4. **Gemini 2.0 Flash-tarieven** heb ik bewust *niet* ingevuld. Als Flash inderdaad ~10×
-   goedkoper is dan Haiku, verandert de hele som — dan is modelkeuze belangrijker dan de
-   bundel. Zoek de actuele prijs op en herbereken.
+4. ✅ **Opgelost 20 sep — zie §4c.** Gemini 2.5 Flash-Lite ($0,10/$0,40) is 10× goedkoper
+   dan Haiku en goedkoper dan DeepSeek; mét caching factor 24. Modelkeuze is inderdaad de
+   grootste hefboom, groter dan de bundel. Wel eerst kwaliteit A/B-testen, en
+   `gemini-2.0-flash` in de code is verouderd.
 5. **22 actieve dagen/maand.** Een kind dat écht dagelijks oefent zit op 30 → +36% AI-kosten.
 6. **Vercel Hobby mag niet commercieel** → Pro à €18,50 nodig vanaf de eerste betaling.
    Check of dat klopt voor dit gebruik (lees de huidige voorwaarden, ze wijzigen).
