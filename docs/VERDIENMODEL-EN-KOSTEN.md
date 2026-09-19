@@ -14,9 +14,9 @@
 | | Prijs | Netto per kind/jaar | Doel-aantal voor €500/mnd |
 |---|---|---|---|
 | **Partner (gemeente/stichting)** | €34,50/kind/jaar | €22 – €32 | **239** bij gemiddeld gebruik, 296 worst case |
-| Ouder (Familie) | €1,95/mnd | €6 – €16 | 414 – 1.062 (en btw-val bij 855) |
-| Leerkracht | €9,95/mnd | ⚠️ zie §5b | hangt op klasgebruik |
-| School M | €49/mnd | ⚠️ zie §5b | hangt op klasgebruik |
+| Familie (ouder) | €4,95/mnd · **€39/jaar per gezín** | €18 – €50 per gezin/jaar | 131 – 361 gezinnen |
+| Bijlesdocent (Pro) | €6,95/mnd · €59/jaar | **+€4,74 tot +€6,50/mnd** (94% marge) | docent-tool, zie §5b |
+| School | €99/klas/jaar ⚠️ eenheid onduidelijk | ~94% marge | zie §5b |
 | Ooievaarspas Den Haag | **€0, voor altijd** | −€4 tot −€87 | n.v.t. — referentie, geen omzet |
 
 **Stand van het doel (€500/mnd netto = €6.000/jaar):** 0 betalende kinderen. Eerste
@@ -68,8 +68,37 @@ AI-verbruik van een gratis gebruiker anders behandelt dan dat van een betalende.
 **Voorwaarde die bij elkaar hoort:** €34,50 zonder ingreep 3 is bij zwaar gebruik nog
 steeds verliesgevend (−€62,87/kind/jaar). De prijs alleen lost het niet op.
 
-**Bewust niet doen (nu):** ouderprijs €1,95 aanpassen. Te krap en er zit een btw-val bij
-855 klanten, maar het model leunt op partners en scholen. Eén prijswijziging tegelijk.
+**Bewust niet doen (nu):** Familie-prijs aanpassen. Die staat op €4,95/mnd · €39/jaar ·
+€24,95 Seizoenspas en is gezond: +€18 tot +€50 per gezin per jaar. Eén prijswijziging tegelijk.
+
+🔧 **Correctie 20 sep — ik rekende eerst met prijzen die niet bestaan.** De eerste analyse
+gebruikte €1,95/mnd (ouder), €9,95 (leerkracht) en School S/M/L €29/€49/€79, zoals Mark ze
+in de vraag noemde. Die staan **nergens** in `config.js`, `proPlan.js` of `PRIJSPLAN.md`. Ik
+had dat moeten signaleren vóór ik erop ging rekenen. De echte prijzen staan in §1 en zijn
+allemaal gezonder dan de getallen waar ik mee begon. De conclusie "€1,95 is te krap" ging
+over een prijs die niet bestaat — bij €39/jaar per gezin (één incasso, dus €0,29 Mollie in
+plaats van €3,48) klopt het oudermodel wél.
+
+### 4a. 🔴 Partner per kind vs. Familie per gezin — de eenheden botsen
+
+| | Eenheid | Prijs | Per kind bij 1,5 kind/gezin |
+|---|---|---|---|
+| Familie | per **gezin** | €39/jaar | €26 |
+| Partner | per **kind** | €34,50/jaar | €34,50 |
+
+Een gezin met twee kinderen kost een gemeente €69, terwijl datzelfde gezin zelf €39 betaalt —
+bijna het dubbele voor **exact hetzelfde product** (`useSubscription.js` geeft een partnercode
+gewoon `parent_pro`, het Familie-niveau).
+
+**Verdedigbaar, maar hebben we een antwoord klaar?** Vóór: Squla doet het ook per kind
+(€43,52) en Leergeld koopt dat al in; kindpakket-budgetten zíjn per kind toegekend, dus zo
+werkt hun administratie. Tegen: een inkoper kan `abonnement.html` openen en de vraag stellen,
+en dat is een ongemakkelijk gesprek als je het ter plekke moet bedenken.
+
+**Te beslissen vóór de oktober-mail:** (a) per kind houden en het verschil kunnen uitleggen
+("u financiert een kind, geen gezinsabonnement"), (b) een partner-gezinsprijs ernaast
+(bv. €34,50 eerste kind, €15 elk volgend kind uit hetzelfde gezin), of (c) accepteren dat een
+enkele inkoper het opmerkt. Mijn voorkeur: (a), met (b) als het gesprek erom vraagt.
 
 ## 5. Charley — inperken mag, wegsnijden niet
 
@@ -111,29 +140,44 @@ volgen. Nu is die ±0,3 (404 calls / 1.356 vragen in sep). Zakt die én blijft h
 kwartier-aandeel gelijk of stijgt het, dan is de wijziging puur winst. Zakt het
 kwartier-aandeel mee, dan was Charley belangrijker dan §5 suggereert — dan terugdraaien.
 
-### 5b. 🔴 Het gat: leerkracht en school hebben geen AI-dekking
+### 5b. Leerkracht en school: dócent-gereedschap, geen leerlingenlicentie
 
-Niet eerder doorgerekend, en het is het zwakste punt van het hele model. Gerekend mét
-caching (call = €0,0023), 22 dagen:
+🔧 **Gecorrigeerd 20 sep** (Mark: *"de leerkracht kosten waren alleen bedoeld voor de leeraar
+om eigen examens mee te maken, niet om alle kinderen gratis alles te laten gebruiken; en de
+scholen was om in een keer voor bv 30 leraren te betalen, ook niet voor de kinderen"*).
+Mijn eerste doorrekening sloeg 30 leerlingen × AI-kosten op het leerkrachtabonnement en
+concludeerde dat de tier verliesgevend was. Dat was een verkeerde aanname over wat er verkocht
+wordt, niet een bevinding.
 
-| Tier | Leerlingen | Laag gebruik | Midden gebruik |
-|---|---|---|---|
-| **Leerkracht €9,95/mnd** | 30 | +€5,16 ✅ | **−€7,14** ❌ |
-| **School M €49/mnd** | 120 | +€30,71 ✅ | **−€18,49** ❌ |
+**Wat de leerkracht-tier is:** gereedschap voor de dócent — eigen toetsen en examens maken
+(`generate-questions`), schooldashboard, eigen logo op toetsen, werkblad-print, rapportage.
+De leerlingen zitten in de gratis laag of hebben hun eigen Familie-/partnerplek.
 
-Bij middengebruik zijn beide tiers **verliesgevend**, en dieper dan de ouderprijs. Een
-leerkracht met 30 leerlingen die Charley normaal gebruiken kost €16,80 aan AI tegen €9,95
-omzet.
+**De echte kosten:** een docent die wekelijks één of twee toetsen maakt doet 4–8
+`generate-questions`-calls per maand à €0,012–€0,032 (10 vragen per call).
 
-**Waarom het misschien meevalt — maar we weten het niet:** in een klas-context zet de
-leerkracht stof klaar en oefent het kind gericht; het lage profiel is dan aannemelijker dan
-het middenprofiel. **Maar er is nul meting**: er is nog geen enkele school actief, dus het
-klasgebruikspatroon is volledig onbekend.
+| Tier | Omzet | AI-kosten | Netto | Marge |
+|---|---|---|---|---|
+| Bijlesdocent €6,95/mnd | €6,95 | €0,16 (8 calls) | **+€6,50/mnd** | 94% |
+| Bijlesdocent €59/jaar | €4,92/mnd | €0,16 | **+€4,74/mnd** | 96% |
+| Zware gebruiker, 20 calls/mnd | €6,95 | €0,64 | **+€6,02/mnd** | 87% |
+| School, 30 docenten à €79/mnd | €79 | €4,80 (240 calls) | **+€73,91/mnd** | 94% |
 
-**Wat dit betekent voor de volgorde:** de school-first-keuze uit het prijsplan staat of valt
-hiermee. Vóór er een schoolabonnement verkocht wordt, moet (a) ingreep 3 live zijn, en (b)
-één echte klas gemeten worden. Tot die meting er is: **geen schoolprijs naar buiten
-communiceren als vaste prijs.** Zie ook C4 hieronder.
+✅ **De docent-tiers zijn de gezondste marge in het hele model** — 87–96%, want een toets maken
+is een handvol calls, geen honderden chatberichten. Precies omgekeerd aan wat ik eerst schreef.
+
+**Wat wél blijft staan, maar ergens anders thuishoort:** een leerkracht die 30 kinderen
+binnenbrengt voegt 30 *gratis* gebruikers toe. Hun AI-kosten vallen in §3 (gratis schaal), niet
+in deze tier. Dat is een bewuste keuze — "leerpaden klaarzetten blijft gratis t/m zeker 2031"
+staat in CLAUDE.md — en het is de goede soort kostenpost: het is precies de groei die we willen,
+en klasgebruik leunt op vaste content. Maar reken die 30 kinderen mee in het gratis-scenario,
+niet in de schoolprijs.
+
+🔴 **Wel een echte inconsistentie: de school-eenheid klopt niet.** `proPlan.js` zegt
+*"school € 99 per klas p/jaar"*, maar Mark beschrijft het als *"in één keer voor bv 30 leraren
+betalen"*. Per klas en per docentenbundel zijn twee verschillende producten met een heel
+ander bedrag. Dit moet uitgelijnd worden vóór er een schoolofferte uitgaat — een school die
+€99 per klas leest en 30 docenten wil, rekent op €99, niet op €948.
 
 ---
 
@@ -178,12 +222,10 @@ communiceren als vaste prijs.** Zie ook C4 hieronder.
   100.000-scenario van €35.000 naar ~€130/mnd brengen. Wat kost dat aan retentie?
 - Is er een tussenvorm: AI-bijles als **los kwartier-tegoed** (staat al in PRIJSPLAN.md)
   in plaats van een dagbundel? Dan betaalt wie het gebruikt, en is de prijs lager te houden.
-- 🔴 **Leerkracht en school zijn bij middengebruik verliesgevend** (§5b: −€7,14 resp. −€18,49
-  per maand, mét caching). Dat is het grootste gat. De vraag die ik niet kan beantwoorden:
-  hóé gebruikt een klas de app? Als klasgebruik overwegend uit vaste content komt is het
-  lage profiel juist en klopt het; komt Charley er normaal bij, dan moet de leerkrachtprijs
-  omhoog of per leerling. **Er is nul meting — geen enkele school is actief.** Reken door
-  zodra de eerste klas draait, en bepaal of het per-leerling geprijsd moet worden.
+- 🔴 **School-eenheid: per klas (€99, staat in proPlan.js) of per docentenbundel (Marks model)?**
+  Twee verschillende producten, sterk verschillend bedrag. Moet uitgelijnd vóór de eerste
+  schoolofferte. De marge is in beide gevallen gezond (~94%), dus dit is een verkoop- en
+  copy-vraag, geen kostenvraag.
 - Werkt "Charley praat alleen indien nodig" (§5a) ook echt kostenverlagend, of verschuift het
   alleen naar meer korte berichten? Meet calls-per-oefenvraag vóór en ná.
 
