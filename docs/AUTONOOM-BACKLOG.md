@@ -14,6 +14,28 @@ Cito + examens versterken. Drie type werk:
 
 ---
 
+## 💰 SPRINT 0 — VERDIENMODEL (Mark 20 sep: "prio komende maand") — vóór al het andere
+
+> **Bij "ga verder" of een vage instructie: pak hier de bovenste ☐.** Volledige opdracht +
+> deadlines staan in `docs/MARK-AGENDA.md` § PRIORITEIT OKTOBER; onderbouwing in
+> `docs/VERDIENMODEL-EN-KOSTEN.md`.
+
+- [ ] **Prompt caching op `api/tutor-chat.js`** (+ buddy-chat, charley-hulp). System-prompt is
+      ±2.950 identieke tokens per call, nu volledig betaald. Verwacht −48% van de AI-rekening.
+      ⚠️ Ná het bouwen verifiëren dat `usage.cache_read_input_tokens` oploopt — blijft die 0,
+      dan zit de prompt onder Haiku's minimum cacheerbare prefix en moet hij anders geordend.
+- [ ] **Charley praat alleen indien nodig + pauzeknop** (Mark, week 22 sep). Gedrag is het
+      hoofdmechanisme, `PER_UID_LIMIT_DAY` (nu 120) als vangnet naar ~20/50. Meten:
+      AI-calls per beantwoorde oefenvraag (nu ±0,3) mag zakken, kwartier-aandeel niet.
+- [ ] **Eén prijslijst** — `config.js` / `proPlan.js` / `PRIJSPLAN.md` / `abonnement.html`
+      gelijktrekken. Partnerprijs €34,50/kind/jaar erin. Wacht op Marks besluit over de
+      school-eenheid (punt 2 in de agenda).
+- [ ] **Partner-rapport v1** — per code: hoeveel kinderen, hoeveel kwartieren, hoeveel
+      terugkomers. Uit `partner_codes` + kwartier-data. Voorwaarde onder de Leergeld-mail.
+- [ ] Fable-review van `docs/VERDIENMODEL-EN-KOSTEN.md` §6 inplannen zodra Mark het zegt.
+
+---
+
 ## 🔍 SPRINT — Fable 5.1-review 2 sep 2026 (6 agents: API / kernflow / accounts / leerpaden / live-browser / vragen-kwaliteit; ✓ = gefixt v540-541)
 
 > Gefixt v540-541: resultaat-knoppen (currentQuiz gewist in finishGame sinds 23 mrt), leeg scherm na terug-knop (/quiz zonder state),

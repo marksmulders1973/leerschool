@@ -6,6 +6,31 @@
 > MARK zelf moet doen of niet mag vergeten. Aangemaakt 5 aug 2026 (Mark:
 > "ik vergeet dat soort dingen, denk mee").
 
+## 🔴🔴 PRIORITEIT OKTOBER 2026 — "een kloppend verdienmodel"
+
+> **Mark, 20 sep 2026: "prio moet zijn komende maand: maak een passend kloppend verdienmodel."**
+> Dit is de hoofdopdracht van oktober en staat bovenaan élk dagrapport tot alles ✅ is.
+> Details + onderbouwing: `docs/VERDIENMODEL-EN-KOSTEN.md`. Harde deadline-ankers:
+> **KvK 28 sep** · **Leergeld-prijsmail 19 okt** · **gemeentebegrotingen 2027 worden in
+> november vastgesteld** — wie je in januari spreekt, verwijst naar 2028.
+
+**Af als deze acht punten ✅ zijn:**
+
+| # | Wat moet kloppen | Wie | Deadline | Stand |
+|---|---|---|---|---|
+| 1 | **Eén prijslijst die overal hetzelfde zegt** — `config.js`, `proPlan.js`, `PRIJSPLAN.md`, `abonnement.html`. Nu staan er prijzen in omloop die nergens in de code bestaan. | Claude | 1 okt | ☐ |
+| 2 | **School-eenheid oplossen**: `proPlan.js` zegt "€99 per klas", Mark bedoelt "bundel voor ~30 docenten". Twee producten, ~10× verschil. | Mark beslist, Claude verwerkt | 1 okt | ☐ |
+| 3 | **Partner per kind (€34,50) vs Familie per gezin (€39)** — zelfde product, bijna dubbele prijs voor een gemeente. Antwoord klaar hebben vóór het eerste inkopersgesprek. | Mark beslist | 10 okt | ☐ |
+| 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ☐ |
+| 5 | **Charley praat alleen indien nodig + pauzeknop** (dagbundel als vangnet). | Claude | week 22 sep | 🗓️ |
+| 6 | **Btw-vraag**: mag 21% bóvenop €34,50 bij gemeente/stichting (BTW-compensatiefonds)? | Mark, bij de KvK | 28 sep | ☐ |
+| 7 | **Partner-rapport v1** ("X kinderen uit uw gemeente oefenden Y kwartier") — zonder dat getal verlengt geen enkele partner. | Claude | 15 okt | ☐ |
+| 8 | **Vercel Pro** vóór de eerste betaling (Hobby = niet-commercieel). | Mark | vóór 1e euro | ☐ |
+
+**Wat "kloppend" betekent:** elke tier dekt zijn eigen AI-kosten óók in het slechtste geval,
+de eenheden (per kind / per gezin / per docent) zijn consistent, en het staat overal hetzelfde.
+Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaar vast.
+
 ## 🧭 Langlopend plan — gemeente betaalt (doel €500/mnd) · vast blok in elk dagrapport
 
 > Bron: `docs/GEMEENTE-BETAALT-PLAN.md` (2 sep 2026). Ooievaarspas = voor altijd gratis (referentie, geen omzet).
