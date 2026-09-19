@@ -62,3 +62,38 @@ over de samenwerking gebeurt in overleg met bureau Ooievaarspas.
 - **Regel:** deze logica NIET inkorten, van einddatum voorzien of limiteren zonder
   een nieuwe schriftelijke afspraak met bureau Ooievaarspas. Zie ook memory
   `project-studiebol-ooievaarspas`.
+
+
+## 🔎 Geverifieerd 20 sep 2026 — wat er feitelijk is toegezegd
+
+Uitgelezen uit de **getekende** stukken in `Desktop\Leerkwartier-dossiers\Ooievaarspas\getekend\`
+(Mark vroeg zich af of er €39,95 p/mnd was genoemd — dat is niet zo):
+
+| Veld in het aanvraagformulier (26-07-2026) | Ingevulde waarde |
+|---|---|
+| Activiteit | **Familie-abonnement leer-app** |
+| Prijs | **€ 39/jaar** |
+| Ooievaarspas-prijs / uw aanbod | **Gratis** |
+
+✅ De genoemde normale prijs (€39/jaar) is exact `familie_yearly` uit `src/subscription/config.js`.
+Er is **geen maandprijs** toegezegd en **geen prijsgarantie**.
+
+**Twee clausules uit de overeenkomst (26-08-2026) die ertoe doen:**
+1. *"De Vriend van de Ooievaarspas informeert de Ooievaarspas tijdig over relevante wijzigingen
+   in exploitatie, tenaamstelling, **aanbod** en contactgegevens."* → een prijswijziging mag,
+   maar moet **gemeld** worden aan Esther. Informatieplicht, geen toestemmingsplicht.
+2. *"De kwaliteit en/of de hoeveelheid van de aangeboden producten moeten minimaal gelijk
+   zijn..."* → wat een pashouder krijgt moet **minimaal gelijk** zijn aan het reguliere aanbod.
+
+### 🔴 Gevolg voor de Charley-bundel (bouwen week van 22 sep)
+
+Een Ooievaarspas-kind krijgt `parent_pro` — **Familie-niveau, niet gratis-niveau**
+(`useSubscription.js`: `OOIEVAAR`-codes → `familie_tot = null` = blijvend). Twee dingen volgen:
+
+- In `VERDIENMODEL-EN-KOSTEN.md` §3 zijn de Ooievaarspas-gezinnen als *gratis* gebruikers
+  gerekend. Dat is te laag: zij vallen in de Familie-bundel.
+- Een bundel die betalende Familie méér geeft dan een pashouder botst met clausule 2.
+
+➡️ **Regel vóór het bouwen: de dagbundel is gelijk voor iedereen met Familie-niveau**
+(betalend én pashouder); het verschil zit alleen tussen *gratis* en *Familie*. Die ene
+bundelhoogte bepaalt daarmee direct de Ooievaarspas-exposure — kies hem bewust.

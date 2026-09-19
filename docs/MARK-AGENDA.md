@@ -26,6 +26,8 @@
 | 6 | **Btw-vraag**: mag 21% bóvenop €34,50 bij gemeente/stichting (BTW-compensatiefonds)? | Mark, bij de KvK | 28 sep | ☐ |
 | 7 | **Partner-rapport v1** ("X kinderen uit uw gemeente oefenden Y kwartier") — zonder dat getal verlengt geen enkele partner. | Claude | 15 okt | ☐ |
 | 8 | **Vercel Pro** vóór de eerste betaling (Hobby = niet-commercieel). | Mark | vóór 1e euro | ☐ |
+| 9 | 🔴 **Charley-bundel gelijk voor álle Familie-niveaus** (betalend én Ooievaarspas) — anders botst het met de clausule "minimaal gelijke kwaliteit/hoeveelheid" uit de getekende Vriend-overeenkomst. Pashouders hebben `parent_pro`, géén gratis-niveau. | Claude | vóór het bouwen, week 22 sep | ☐ |
+| 10 | **Prijswijziging melden aan Esther** zodra Familie van prijs verandert (informatieplicht uit de overeenkomst; geen toestemming nodig). Toegezegd staat: normale prijs €39/jaar → gratis voor pashouders. | Mark | bij elke prijswijziging | ☐ |
 
 **Wat "kloppend" betekent:** elke tier dekt zijn eigen AI-kosten óók in het slechtste geval,
 de eenheden (per kind / per gezin / per docent) zijn consistent, en het staat overal hetzelfde.
