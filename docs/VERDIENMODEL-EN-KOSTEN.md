@@ -100,6 +100,43 @@ en dat is een ongemakkelijk gesprek als je het ter plekke moet bedenken.
 (bv. €34,50 eerste kind, €15 elk volgend kind uit hetzelfde gezin), of (c) accepteren dat een
 enkele inkoper het opmerkt. Mijn voorkeur: (a), met (b) als het gesprek erom vraagt.
 
+## 4b. Is €39 per gezin winstgevend met de juiste Charley-ingrepen? — ja
+
+Marks vraag, 20 sep. Gerekend met 264 actieve dagen/jaar, caching aan (call €0,0023) en
+"Charley praat alleen indien nodig" dat het gemiddelde ruwweg halveert. Niet meetbaar hoeveel
+kinderen een gezin heeft — er zijn pas **3 gekoppelde ouders, allemaal met één kind** — dus
+per gezinsgrootte doorgerekend.
+
+Per kind per jaar: **€3,34** bij normaal gebruik · **€12,14** als de bundel (20/dag) elke dag
+volloopt. Omzet €39, Mollie €0,29 (één jaarincasso), infra €0,36/kind.
+
+| Kinderen | Realistisch | Theoretisch maximum |
+|---|---|---|
+| 1 | **+€35,01** | +€26,21 |
+| 2 | **+€31,31** | +€13,71 |
+| 3 | **+€27,61** | +€1,21 |
+| 4 | **+€23,91** | −€11,29 |
+
+✅ **€39/gezin is winstgevend tot en met 3 kinderen, zelfs in het theoretische maximum** waarin
+elk kind 264 dagen lang de bundel volmaakt. Dat gebeurt nooit (de p95 van 74 calls is een
+piekdag, geen gewoonte), maar het is de garantie.
+
+🔑 **De bundel is de beslissende ingreep, niet de caching.** Zonder bundel kost één gezin met
+twee intensieve kinderen €51,87/jaar — ook mét caching. Caching verlaagt de rekening; de
+bundel bepaalt óf er een bovengrens is.
+
+**De bundelhoogte is één draaiknop met een duidelijke betekenis:**
+- **20/dag** → dekt gezinnen tot **3 kinderen**
+- **15/dag** → dekt gezinnen tot **4 kinderen**
+
+De afweging is dus niet "hoeveel heeft een kind nodig" (de mediaan doet er 3), maar hoeveel
+kinderen per gezin je gedekt wilt hebben.
+
+🔴 **Wat hiermee níét is opgelost:** dezelfde bundel geldt voor Ooievaarspas-houders (§5c —
+zij hebben Familie-niveau), en daar staat geen €39 tegenover. Bij 3.000 actieve pashouders is
+dat ±€835/mnd bij normaal gebruik, ±€228 bij licht gebruik. Dat blijft de grootste open post;
+het Familie-model zelf is met deze ingrepen gezond.
+
 ## 5. Charley — inperken mag, wegsnijden niet
 
 - **Nergens beloofd.** Op `abonnement.html` staat alleen "Dictee met de woorden van school
