@@ -226,3 +226,14 @@
   doorverwijzing naar Leergeld Emmen — bedank-reply aan Paul + opvolg-mail
   Leergeld Emmen beide verstuurd 6 aug ±18:05; wachten op antwoord.)
 - Outreach-reacties (~355 mails) komen v.a. eind aug binnen.
+- **Idee V (welkomscherm voor iedereen) — GEPARKEERD, Mark 19 sep: "laat maar even, we meten volgende week nog een keer".**
+  Reden: het verschil dat ik vanochtend meldde (11% vs 7% kwartier) bleek te stellig — het welkomscherm
+  zie je alleen ná het scannen van een partnercode, dus dat publiek is al gemotiveerder. Betere vergelijking
+  over 14 dagen: mét code + scherm **7,9%** (191 app) · mét code zonder scherm 4,0% (99) · zonder code en
+  zonder scherm 6,0% (266) · zonder code mét scherm 44% (18, handmatig ingetikte codes = meest gemotiveerd).
+  Alles wijst dezelfde kant op, niets bewijst het: wie het scherm zag, bleef óók langer.
+  **Actie Claude: dezelfde meting opnieuw draaien in week 39 (~vr 25 sep)** — met de Alkmaar- en
+  Dongen-instroom erbij zijn de groepen groter. Pas dán opnieuw voorleggen, en dan als 50/50-test
+  (halve dag werk, zelfde bouw, muntje erbij) in plaats van meteen voor iedereen.
+  Losstaand en sowieso waar: **twee van de drie die het scherm zien, doen niet eens de eerste proefvraag** —
+  dat lek mag ik meten en dichten zonder de rol-tegels te raken.
