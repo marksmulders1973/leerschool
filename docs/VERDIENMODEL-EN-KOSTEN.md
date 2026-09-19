@@ -132,10 +132,32 @@ bundel bepaalt óf er een bovengrens is.
 De afweging is dus niet "hoeveel heeft een kind nodig" (de mediaan doet er 3), maar hoeveel
 kinderen per gezin je gedekt wilt hebben.
 
-🔴 **Wat hiermee níét is opgelost:** dezelfde bundel geldt voor Ooievaarspas-houders (§5c —
-zij hebben Familie-niveau), en daar staat geen €39 tegenover. Bij 3.000 actieve pashouders is
-dat ±€835/mnd bij normaal gebruik, ±€228 bij licht gebruik. Dat blijft de grootste open post;
-het Familie-model zelf is met deze ingrepen gezond.
+🔴 **Wat hiermee níét is opgelost: Ooievaarspas.** Dezelfde bundel geldt voor pashouders (zij
+hebben Familie-niveau), en daar staat geen €39 tegenover.
+
+**Gevoeligheidstabel — 3.000 actieve pashouders, 264 dagen/jaar, caching aan (€0,0023/call),
+incl. €0,36/kind/jaar marginale infra:**
+
+| AI-calls per kind per dag | Per kind/jaar | 3.000 kinderen |
+|---|---|---|
+| 1,5 — mediaan (3), gehalveerd door de Charley-ingreep | €1,27 | **€318/mnd** |
+| 3 — mediaan, ingreep werkt niet | €2,18 | €545/mnd |
+| 5,5 — gemiddelde (11), gehalveerd | €3,70 | **€925/mnd** |
+| 11 — gemiddelde, ingreep werkt niet | €7,04 | €1.760/mnd |
+| 20 — bundel elke dag vol | €12,50 | €3.125/mnd |
+
+⚠️ **Twee aannames dragen dit hele bedrag, en geen van beide is gemeten:**
+1. **De halvering** door "Charley praat alleen indien nodig" is mijn schatting. Komt die niet
+   uit, dan verdubbelt de post (€925 → €1.760). Daarom ná de wijziging *calls per beantwoorde
+   oefenvraag* meten (nu 0,3) — dat zegt binnen twee weken of de halvering echt is.
+2. **3% activatie** van 100.000 pashouders. Vraag Esther naar hun ervaringscijfer met andere
+   digitale aanbieders; dat getal bepaalt de post net zo sterk als het gebruik.
+
+Ter vergelijking: bij middengebruik **zónder** caching en **zónder** de gedragsingreep is het
+€3.195/mnd. De twee ingrepen brengen het naar €925 — dat is wat ze waard zijn.
+
+🔧 *Gecorrigeerd 20 sep: eerder stond hier €835/€228; daarin ontbrak de marginale infra
+(€0,36/kind/jaar = €90/mnd bij 3.000 kinderen).*
 
 ## 5. Charley — inperken mag, wegsnijden niet
 
