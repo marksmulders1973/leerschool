@@ -17,6 +17,22 @@
 - **najaar 2027**: verleng-ronde bestaande codes met 2028-prijs
 - Stand: ☐ KvK ☐ KOR ☐ 1e kindpakket-aanmelding ☐ partner-rapport ☐ 1e betaald kind
 
+## 💰 Verdienmodel & kosten · vast blok in elk dagrapport (sinds 20 sep 2026)
+
+> Bron: `docs/VERDIENMODEL-EN-KOSTEN.md` (§6 = review-opdracht voor Fable). Mark 20 sep:
+> "maak er een plan van wat ik later door fable kan laten nalopen."
+
+- **Doel:** €500/mnd netto = **239 betalende kinderen** à €34,50/jaar. Stand: 0.
+- **Vier ingrepen:** ✅ prijs €25→€34,50 (20 sep) · ☐ prompt caching (~1u, −48% AI-rekening)
+  · 🗓️ **Charley praat alleen indien nodig + pauzeknop — week van 22 sep** (Marks keuze;
+  dagbundel 20/50 als vangnet eronder) · ☐ Vercel Pro vóór de eerste betaling (€18,50/mnd).
+- 🔴 **Prijs €34,50 moet in de oktober-Leergeld-mail** en in élke leveranciers-aanmelding.
+- 🔴 **Open risico 1 — Ooievaarspas:** 100.000 gezinnen gratis; bij 3% activatie €1.050-3.450/mnd
+  kosten, nul omzet. Vraag Den Haag naar hun activatiecijfer bij andere digitale aanbieders.
+- 🔴 **Open risico 2 — leerkracht/school verliesgevend** bij middengebruik (−€7,14 resp. −€18,49/mnd).
+  Nul meting, geen school actief. **Geen vaste schoolprijs naar buiten tot één klas gemeten is.**
+- **Vraag voor de KvK-afspraak 28 sep:** mag btw bóvenop €34,50 bij gemeente/stichting?
+
 ## 🛡️ Beveiliging & continuïteit — vast blok in elk dagrapport (sinds 15 sep 2026)
 
 > Mark 15 sep: "zet alles ergens in het dagrapport als todo". Blijft staan tot alles ✅ is. Details: memory `reference_leerkwartier_accounts_beveiliging` + `reference_leerkwartier_backup_en_herstel`.
