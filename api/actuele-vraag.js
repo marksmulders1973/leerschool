@@ -79,7 +79,7 @@ async function callAnthropic(apiKey, system, user, maxTokens = 700) {
 
 async function callGemini(apiKey, system, user, maxTokens = 700) {
   const resp = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`,
     {
       method: "POST",
       headers: { "content-type": "application/json" },
@@ -102,7 +102,7 @@ async function ai(system, user, maxTokens) {
     try { return { tekst: await callAnthropic(a, system, user, maxTokens), model: MODEL }; }
     catch (e) { console.warn("[actuele-vraag] Anthropic faalde:", e.message); }
   }
-  if (g) return { tekst: await callGemini(g, system, user, maxTokens), model: "gemini-2.0-flash" };
+  if (g) return { tekst: await callGemini(g, system, user, maxTokens), model: "gemini-2.5-flash-lite" };
   throw new Error("Geen AI-key geconfigureerd");
 }
 

@@ -57,8 +57,11 @@ async function callAnthropic(apiKey, system, vraag) {
     body: JSON.stringify({
       model: "claude-haiku-4-5-20251001",
       max_tokens: 220,
+      // Prompt caching (20 sep 2026): de APP-GIDS is voor iedereen identiek
+      // en verandert alleen bij een release — de beste cache-kandidaat die
+      // we hebben. Zie api/tutor-chat.js voor de toelichting.
       temperature: 0.3,
-      system,
+      system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
       messages: [{ role: "user", content: vraag }],
     }),
   });
@@ -71,7 +74,7 @@ async function callAnthropic(apiKey, system, vraag) {
 
 async function callGemini(apiKey, system, vraag) {
   const resp = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`,
     {
       method: "POST",
       headers: { "content-type": "application/json" },

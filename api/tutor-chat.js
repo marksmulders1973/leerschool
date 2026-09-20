@@ -273,7 +273,13 @@ async function callAnthropic(apiKey, system, messages) {
       model: "claude-haiku-4-5-20251001",
       max_tokens: 400,
       temperature: 0.4,
-      system,
+      // Prompt caching (20 sep 2026): de system-prompt is ~3.000 tokens en
+      // binnen één gesprek over dezelfde stap byte-identiek. Een cache-read
+      // kost 10% van een gewone input-token. Werkt dus vooral bij het kind
+      // dat veel berichten stuurt — precies het dure geval.
+      // ⚠️ Pakt alleen boven Haiku's minimum cacheerbare prefix; de
+      // usage-log hieronder laat zien of dat zo is.
+      system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
       messages: messages.map((m) => ({
         role: m.role === "assistant" ? "assistant" : "user",
         content: String(m.content || "").slice(0, 2000),
@@ -285,6 +291,16 @@ async function callAnthropic(apiKey, system, messages) {
     throw new Error(`Anthropic ${resp.status}: ${txt.slice(0, 200)}`);
   }
   const data = await resp.json();
+  // Cache-meting (20 sep 2026): zonder dit weten we niet of de caching pakt.
+  // cache_read > 0 = de cache werkt; blijft hij 0 terwijl cache_creation
+  // oploopt, dan zit de prompt onder Haiku's minimum cacheerbare prefix.
+  const u = data?.usage || {};
+  if (u.cache_read_input_tokens || u.cache_creation_input_tokens) {
+    console.log(
+      `[cache] tutor-chat read=${u.cache_read_input_tokens || 0} ` +
+      `write=${u.cache_creation_input_tokens || 0} vers=${u.input_tokens || 0}`
+    );
+  }
   const reply = data?.content?.[0]?.text?.trim() || "";
   if (!reply) throw new Error("Leeg Anthropic-antwoord");
   return reply;
@@ -302,7 +318,7 @@ async function callGemini(apiKey, system, messages) {
     parts: [{ text: String(m.content || "").slice(0, 2000) }],
   }));
   const resp = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`,
     {
       method: "POST",
       headers: { "content-type": "application/json" },

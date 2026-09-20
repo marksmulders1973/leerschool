@@ -178,7 +178,7 @@ async function callAnthropic(apiKey, system, messages) {
       model: "claude-haiku-4-5-20251001",
       max_tokens: 160,
       temperature: 0.8,
-      system,
+      system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
       messages: messages.map((m) => ({
         role: m.role === "assistant" ? "assistant" : "user",
         content: String(m.content || "").slice(0, 500),
@@ -201,7 +201,7 @@ async function callGemini(apiKey, system, messages) {
     parts: [{ text: String(m.content || "").slice(0, 500) }],
   }));
   const resp = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`,
+    `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-lite:generateContent?key=${apiKey}`,
     {
       method: "POST",
       headers: { "content-type": "application/json" },
