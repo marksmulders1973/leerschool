@@ -61,7 +61,7 @@ AI-verbruik van een gratis gebruiker anders behandelt dan dat van een betalende.
 | # | Wat | Wie | Wanneer | Effect | Stand |
 |---|---|---|---|---|---|
 | 1 | **Partnerprijs €25 → €34,50/kind/jaar** | Mark | vóór de oktober-Leergeld-mail | +€2.400/jaar bij 240 kinderen | ✅ besloten 20 sep, vastgelegd in GEMEENTE-BETAALT-PLAN.md |
-| 2 | **Prompt caching** op de tutor-system-prompt | Claude | ~1 uur, kan direct | −48% van de hele AI-rekening | ☐ open |
+| 2 | **Prompt caching** op tutor-chat, charley-hulp, buddy-chat | Claude | ✅ **v680, 20 sep** | −48% van de AI-rekening *als de cache pakt* | ✅ gebouwd, **meting loopt** |
 | 3 | **Charley praat alleen indien nodig** + pauzeknop; dagbundel als vangnet eronder | Claude | **week van 22 sep** (Mark 20 sep) | slechtste klant van −€62,87 → +€22,01/jaar | 🗓️ ingepland |
 | 4 | **Vercel Pro** activeren | Mark | vóór de eerste betaling | +€18,50/mnd kosten, maar Hobby mag niet commercieel | ☐ open |
 
@@ -190,10 +190,8 @@ op Haiku+caching).
 
 ### 🔴 Twee dingen die eerst moeten
 
-1. **`gemini-2.0-flash` staat niet meer op Googles prijslijst** (die begint bij de 2.5-serie).
-   De fallback in `tutor-chat.js`, `buddy-chat.js`, `charley-hulp.js` en `actuele-vraag.js`
-   wijst dus naar een model dat uitgefaseerd wordt — dat valt een keer stil zonder melding.
-   Bijwerken naar `gemini-2.5-flash-lite`, los van deze hele discussie.
+1. ✅ **Opgelost in v680 (20 sep):** `gemini-2.0-flash` → `gemini-2.5-flash-lite` in
+   `tutor-chat.js`, `buddy-chat.js`, `charley-hulp.js` en `actuele-vraag.js` (5 plekken).
 2. **Kwaliteit is hier een echte kostenpost, geen bijzaak.** Charley-gebruikers halen 2,4×
    vaker het kwartier (§5). Zakt de didactische kwaliteit, de Nederlandse toon of Charleys
    karakter, dan verlies je meer dan je bespaart. Dus: A/B op een deel van het verkeer met de
@@ -365,3 +363,30 @@ Kort blok, 4–6 regels, ná het gemeente-blok:
   hoog-scenario. Bij >40/dag melden.
 - **Open ingrepen:** welke van de vier uit §4 nog ☐ staan.
 - **Alleen bij verandering:** nieuwe prijs, nieuw tarief, of een partner die de prijs afwijst.
+
+
+## 8. 🔬 Openstaande verificatie — werkt de caching echt? (v680, 20 sep)
+
+Caching is gebouwd, **maar nog niet bewezen**. `api/tutor-chat.js` logt sinds v680 per call:
+`[cache] tutor-chat read=… write=… vers=…`.
+
+**Wat je wilt zien:** `read` loopt op zodra een kind een tweede bericht stuurt in hetzelfde
+gesprek. Dan kost dat deel van de prompt nog 10%.
+
+**Wat het kan betekenen als `read` 0 blijft:**
+- `write` loopt wél op → de prompt haalt Haiku's **minimum cacheerbare prefix** niet
+  (512–4096 tokens, modelafhankelijk; onze prompt is ±2.950). Oplossing: het stabiele deel
+  van `buildSystemPrompt` naar voren halen en apart cachen, of de prompt iets laten groeien.
+- Beide 0 → de calls staan te ver uit elkaar voor de 5-minuten-TTL, of `system` komt niet
+  als array aan.
+
+⚠️ **Belangrijke nuance die ik pas bij het bouwen zag:** de system-prompt van tutor-chat is
+**volledig variabel** — buddynaam, leeftijd, pad, stap, uitleg en check-vraag zitten erin
+verweven. Er is dus geen stabiel blok dat over álle gebruikers heen gedeeld wordt. De cache
+werkt alleen **binnen één gesprek over dezelfde stap**. Dat is precies het dure geval (het
+kind dat veel berichten stuurt), dus het blijft waardevol — maar de geraamde −48% op de
+totale rekening is daarmee een **bovengrens**, geen belofte. `charley-hulp` (APP-GIDS, voor
+iedereen identiek) is de schoonste kandidaat en zou als eerste effect moeten tonen.
+
+➡️ **Controleer dit in het dagrapport van ~23 sep**, als er een paar echte gesprekken door
+de nieuwe code zijn gegaan. Pas dan weten we wat de caching echt oplevert.
