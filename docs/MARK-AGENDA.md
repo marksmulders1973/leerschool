@@ -73,6 +73,16 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 
 ## 🔴 Nu doen (deze week)
 
+- **⚠️ VACATURE Gemeente Den Haag — AI Usecasemanager (Digilab70), sluit do 11 SEPTEMBER 2026.**
+  Inhoudelijk sterke match (AI-usecase van probleem → experiment → productie, publieke waarden,
+  design thinking, politiek-bestuurlijke omgeving) én je hebt een getekende Ooievaarspas-overeenkomst
+  mét déze gemeente. Schaal 11 (€4.520-6.422) of 12, 32-36 u, 12 mnd bepaalde tijd.
+  **Vóór besluit afwegen:** (a) universitair werk-/denkniveau = harde eis op papier;
+  (b) belangenverstrengeling met `docs/GEMEENTE-BETAALT-PLAN.md` (Leerkwartier verkopen áán gemeenten)
+  → nevenwerkzaamheden mélden, ook de Sonac-CAO-check die al openstaat; (c) 32-36 u + reistijd
+  Den Haag naast ~30 u/wk Leerkwartier past niet — Leerkwartier zakt dan naar hobby-tempo.
+  Zelfs bij afwijzing: Digilab70 is precies het gremium waar Leerkwartier binnen wil komen.
+  Zeg "brief" → Claude zet een concept-motivatie klaar.
 - ✅ **17 sep 21:45 — Dongen: beide drukbestanden aangeleverd bij Drukwerkdeal** (posters + flyers "Gereed voor productie", levering di 22 sep bij Dongen). ✅ Regeltje aan Monique verstuurd vr 18 sep 06:17/06:18 (dubbel: Mark klikte zelf én het script). Factuur €55,84 staat in KOSTEN-2026.md (PDF nog ophalen bij Drukwerkdeal → Facturen). Di 22 sep: levering controleren.
 - 📝 **17 sep — Voedselbank Lelystad (Dick Nauta, 17:27): wil doorverwijzen zónder code en zonder vermelding van de voedselbank.** Concept-antwoord ligt klaar (`Desktop\dagrapport\concept-mail-dick-lelystad-2026-09-17.md`). Jouw keuze: akkoord met code-loos Lelystad? Dan "stuur maar".
 - ✅ **17 sep 17:25 — Sociale Kaart Nederland: AANGENOMEN**, zichtbaar vanaf vr 18 sep op álle kaarten van dat platform (ook Enschede, Rotterdam-Rijnmond). Claude controleert vrijdag de vermelding. Niets voor jou te doen.
