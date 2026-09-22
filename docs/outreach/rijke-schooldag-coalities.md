@@ -27,7 +27,7 @@ Eén kwartier per schooldag = 1,25 klokuur per week ≈ €330 per leerling per 
 
 Beste team van School & Omgeving,
 
-Ik ben Mark Smulders, vader, en ik bouw in mijn vrije tijd Leerkwartier: een gratis leer-app waarmee kinderen uit groep 6, 7 en 8 elke dag een kwartier oefenen voor de Doorstroomtoets, met uitleg op drie niveaus en een voorleesknop voor kinderen die moeite hebben met lezen. Het is gratis voor scholen en leerkrachten, gegarandeerd tot en met 2031. We zijn een jong leermiddel, maar we maken gelukkig een vliegende start: de gemeente Den Haag zet Leerkwartier vanaf januari op de Ooievaarspas, en Voedselbank Rotterdam en Voedselbank Alkmaar wijzen hun gezinnen erop. Wie er nog meer meedoen, ziet u op leerkwartier.app/bedankt.html; daar staat elke organisatie met eigen toestemming.
+Ik ben Mark Smulders, vader, en ik bouw in mijn vrije tijd Leerkwartier: een gratis leer-app waarmee kinderen uit groep 6, 7 en 8 elke dag een kwartier oefenen voor de Doorstroomtoets, met uitleg op drie niveaus en een voorleesknop voor kinderen die moeite hebben met lezen. Voor scholen en leerkrachten is het oefenen gratis, gegarandeerd tot en met 2031. We zijn een jong leermiddel, maar we maken gelukkig een vliegende start: de gemeente Den Haag zet Leerkwartier vanaf januari op de Ooievaarspas, en Voedselbank Rotterdam en Voedselbank Alkmaar wijzen hun gezinnen erop. Wie er nog meer meedoen, ziet u op leerkwartier.app/bedankt.html; daar staat elke organisatie met eigen toestemming.
 
 Mijn vraag is praktisch. Een dagelijks oefenkwartier past bij "cognitieve ontwikkeling" en huiswerkbegeleiding buiten schooltijd. Hoe kan een kleine aanbieder zich netjes onder de aandacht brengen van coalities die hun programma voor 2027-2028 invullen? Is er een plek waar coalities voorbeelden van lokale partners vinden, of een netwerkbijeenkomst waar dat gepast is?
 
@@ -46,7 +46,7 @@ Beste [naam / bestuur],
 
 Jullie coalitie in [gemeente] doet mee aan School & Omgeving. Ik schrijf u omdat ik iets heb dat daar misschien in past, en omdat het de school niets kost.
 
-Ik ben Mark Smulders, vader, en ik bouw in mijn vrije tijd Leerkwartier: een leer-app waarmee kinderen uit groep 6, 7 en 8 elke dag een kwartier oefenen voor de Doorstroomtoets. Rekenen, taal en begrijpend lezen, met uitleg op drie niveaus als iets nog niet lukt, een voorleesknop, en een klas-ingang zonder accounts zodat een begeleider het na schooltijd op een digibord kan zetten. Voor scholen en begeleiders is het gratis, gegarandeerd tot en met 2031.
+Ik ben Mark Smulders, vader, en ik bouw in mijn vrije tijd Leerkwartier: een leer-app waarmee kinderen uit groep 6, 7 en 8 elke dag een kwartier oefenen voor de Doorstroomtoets. Rekenen, taal en begrijpend lezen, met uitleg op drie niveaus als iets nog niet lukt, een voorleesknop, en een klas-ingang zonder accounts zodat een begeleider het na schooltijd op een digibord kan zetten. Voor scholen en begeleiders is het oefenen gratis, gegarandeerd tot en met 2031.
 
 Waarom ik u mail: bij huiswerkbegeleiding buiten schooltijd is "wat doen we vandaag" vaak het lastigste. Een vast kwartier met een duidelijke startknop lost dat op, en de leerkracht ziet de volgende dag wat er geoefend is. We zijn een jong leermiddel, maar we maken gelukkig een vliegende start: de gemeente Den Haag zet Leerkwartier vanaf januari op de Ooievaarspas, en Voedselbank Rotterdam en Voedselbank Alkmaar wijzen hun gezinnen erop. Wie er nog meer meedoen, ziet u op leerkwartier.app/bedankt.html; daar staat elke organisatie met eigen toestemming.
 
