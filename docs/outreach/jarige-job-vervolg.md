@@ -27,7 +27,7 @@ Beste team van Stichting Jarige Job,
 
 Op 18 augustus stuurde ik u een mail over Leerkwartier, de gratis leer-app waarmee kinderen uit groep 6, 7 en 8 elke dag een kwartier oefenen voor de Doorstroomtoets. Ik begrijp dat de zomer en het jubileumjaar druk zijn, dus ik houd het kort en concreet.
 
-Wat mij opviel: in elke box zit een leesboek, omdat lezen kinderen verder helpt. Daar sluit ik graag bij aan. Een kwartier per dag oefenen doet voor rekenen en begrijpend lezen wat dat boek doet voor leesplezier. En het is voor deze gezinnen echt gratis: geen proefperiode, geen betaalgegevens, geen reclame, gegarandeerd tot en met 2031.
+Wat mij opviel: in elke box zit een leesboek, omdat lezen kinderen verder helpt. Daar sluit ik graag bij aan. Een kwartier per dag oefenen doet voor rekenen en begrijpend lezen wat dat boek doet voor leesplezier. En het is voor deze gezinnen echt gratis: het oefenen blijft gratis, gegarandeerd tot en met 2031. Gezinnen die via uw box komen, krijgen daarbovenop de extra's van het Familie-pakket gratis tot eind 2027. Geen proefperiode, geen betaalgegevens, geen reclame.
 
 Mijn vraag: zou er in de box voor kinderen van 9 tot en met 12 jaar ruimte zijn voor een klein kaartje, of een regel op een kaart die er al in zit? Met een QR-code en de tekst "Gefeliciteerd! Vanaf vandaag mag je gratis oefenen op leerkwartier.app". Het kaartje is bewust vrolijk en zonder logo's van sponsors, zodat het bij de box past. Hoe we dat praktisch regelen, overleg ik graag met u; ik wil u geen werk bezorgen.
 
