@@ -40,31 +40,12 @@ const PLANS = [
     ],
   },
   {
-    id: "teacher_pro",
-    tier: "teacher_pro",
-    icon: "🧑‍🏫",
-    label: "Pro",
-    price: "€6,95",
-    period: "/maand · €59/jaar",
-    color: LAAG_KLEUREN.leerkracht.dot,
-    bg: LAAG_KLEUREN.leerkracht.vlak,
-    border: LAAG_KLEUREN.leerkracht.rand,
-    tag: "Bijlesdocent",
-    features: [
-      { text: "Eigen logo op toetsen en oefenbladen" },
-      { text: "Onbeperkt toetsen aanmaken" },
-      { text: "Voortgang per leerling + rapportage" },
-      { text: "Resultaten exporteren" },
-      { text: "Verdient zichzelf in één lesuur terug — aftrekbaar" },
-    ],
-  },
-  {
     id: "school",
     tier: "teacher_pro",
     icon: "🏫",
     label: "School",
-    price: "€99",
-    period: "per klas /jaar",
+    price: "op aanvraag",
+    period: "factuur · verwerkersovereenkomst",
     color: LAAG_KLEUREN.leerkracht.dot,
     bg: LAAG_KLEUREN.leerkracht.vlak,
     border: LAAG_KLEUREN.leerkracht.rand,
@@ -135,7 +116,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
             {/* Elk laag-woord in z'n eigen tier-kleur — hier leert de bezoeker de kleurtaal */}
             De basis blijft gratis t/m zeker 2031. Daarnaast komen er twee extra's: <strong style={{ color: LAAG_KLEUREN.familie.tekst }}>Familie</strong> (één
-            klein bedrag per gezín) en <strong style={{ color: LAAG_KLEUREN.leerkracht.tekst }}>Pro</strong> voor scholen en bijlesdocenten.
+            klein bedrag per gezín). Bent u een school? Dan is er een <strong style={{ color: LAAG_KLEUREN.leerkracht.tekst }}>schoollicentie</strong> op aanvraag.
           </div>
         </div>
 
@@ -188,7 +169,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             Nu (per-kwartier-model, paywall uit) verbergen we de oude
             maand/jaar-prijzen om geen tegenstrijdige belofte te doen. */}
         {PAYWALL_ACTIVE && (<>
-        {/* Plan selector — één rij: Familie / Pro (bijlesdocent) / School */}
+        {/* Plan selector — één rij: Familie / School (Pro-bijlesdocent geschrapt 22 sep 2026) */}
         <div style={{ display: "flex", gap: 6, marginBottom: 8 }}>
           {PLANS.map(p => (
             <button key={p.id} onClick={() => setSelected(p.id)} style={{
@@ -207,7 +188,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
         </div>
         {/* School-first-regel (PRIJSPLAN §3): de juf zelf betaalt nooit. */}
         <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 16, lineHeight: 1.5 }}>
-          Leerkracht met je eigen klas? Lesgeven met {BRAND.name} blijft gratis t/m zeker 2031 — Pro is voor bijlesdocenten, de schoollicentie voor scholen.
+          Leerkracht met je eigen klas? Lesgeven met {BRAND.name} blijft gratis t/m zeker 2031. De schoollicentie is voor scholen die meer willen (dashboard over alle groepen, logo, rapportage) — prijs op aanvraag.
         </div>
 
         {/* Plan detail kaart */}
@@ -316,7 +297,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
               🔔 Ontvang een berichtje bij lancering
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 12 }}>
-              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis; daarnaast komt er een Familie-abonnement per gezín (met een Seizoenspas die vanzelf stopt — nooit stiekem doorlopen) en Pro voor scholen en bijlesdocenten. We sturen je één berichtje als het zover is.
+              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis; daarnaast komt er een Familie-abonnement per gezín (met een Seizoenspas die vanzelf stopt — nooit stiekem doorlopen) en een schoollicentie voor scholen (op aanvraag). We sturen je één berichtje als het zover is.
             </div>
             <input
               type="email"

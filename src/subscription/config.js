@@ -70,9 +70,12 @@ export const PRICING = {
   // elk schooljaar de nieuwe einddatum instellen.
   familie_seizoenspas: { price: 24.95, currency: "EUR", interval: "eenmalig", validUntil: "2027-07-31", label: "Familie Seizoenspas — het hele toetsjaar, stopt vanzelf" },
   familie_yearly: { price: 39, currency: "EUR", interval: "jaar", label: "Familie — per gezin/jaar" },
-  teacher_monthly: { price: 6.95, currency: "EUR", interval: "maand", label: "Pro (leerkracht) — per maand" },
-  teacher_yearly: { price: 59, currency: "EUR", interval: "jaar", label: "Pro (leerkracht) — per jaar" },
-  teacher_school: { price: 99, currency: "EUR", interval: "klas/jaar", label: "Schoollicentie" },
+  // 22 sep 2026 (Mark): Pro voor bijlesdocenten GESCHRAPT uit de etalage (0 klanten).
+  // De twee constanten blijven staan voor de paywall-infra, maar worden nergens meer getoond.
+  teacher_monthly: { price: 6.95, currency: "EUR", interval: "maand", label: "(niet aangeboden) Pro bijlesdocent — per maand" },
+  teacher_yearly: { price: 59, currency: "EUR", interval: "jaar", label: "(niet aangeboden) Pro bijlesdocent — per jaar" },
+  // Schoollicentie: prijs OP AANVRAAG, komt uit de eerste schoolgesprekken (was €99/klas).
+  teacher_school: { price: null, currency: "EUR", interval: "school/jaar", label: "Schoollicentie — op aanvraag" },
   // Partner: gemeente of stichting betaalt per kind, het kind krijgt het Familie-niveau.
   // Besloten 20 sep 2026 (was €25); bron docs/GEMEENTE-BETAALT-PLAN.md. Prijs staat op
   // zichzelf — geen vergelijking met andere aanbieders in copy (Mark 22 sep).

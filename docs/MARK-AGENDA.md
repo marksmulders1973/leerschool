@@ -19,7 +19,7 @@
 | # | Wat moet kloppen | Wie | Deadline | Stand |
 |---|---|---|---|---|
 | 1 | **Eén prijslijst die overal hetzelfde zegt** — `config.js`, `proPlan.js`, `PRIJSPLAN.md`, `abonnement.html`. Nu staan er prijzen in omloop die nergens in de code bestaan. | Claude | 1 okt | ☐ |
-| 2 | **School-eenheid oplossen**: `proPlan.js` zegt "€99 per klas", Mark bedoelt "bundel voor ~30 docenten". Twee producten, ~10× verschil. | Mark beslist, Claude verwerkt | 1 okt | ☐ |
+| 2 | **School-eenheid oplossen**: `proPlan.js` zegt "€99 per klas", Mark bedoelt "bundel voor ~30 docenten". Twee producten, ~10× verschil. | Mark beslist, Claude verwerkt | 1 okt || ✅ 22 sep — Pro geschrapt, schoollicentie **op aanvraag**, €99/klas uit code en copy (v683); prijs komt uit de eerste schoolgesprekken |
 | 3 | **Partner per kind (€34,50) vs Familie per gezin (€39)** — zelfde product, bijna dubbele prijs voor een gemeente. Antwoord klaar hebben vóór het eerste inkopersgesprek. | Mark beslist | 10 okt | ☐ |
 | 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ☐ |
 | 5 | **Charley praat alleen indien nodig + pauzeknop** (dagbundel als vangnet). | Claude | week 22 sep | 🟡 **bundel ✅ v681 (22 sep, 120→20/dag, raakt niemand)**; pauzeknop + terughoudendheid nog open |

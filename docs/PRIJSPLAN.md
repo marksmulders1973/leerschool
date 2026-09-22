@@ -120,7 +120,13 @@ is geen bewezen vraag voor een verbruiks-product. Besluit-gate: **niet
 bouwen in de Stripe-scope van jan 2027**; alleen heroverwegen als de
 najaar-meting échte vraag laat zien. Cadeaukaart-flow idem on-hold.
 
-### 3. Leerkwartier Pro — de school is de koper (herijkt 7 aug 2026)
+### 3. Schoollicentie — de school is de koper (herijkt 7 aug 2026, Pro geschrapt 22 sep 2026)
+> **🔴 Besluit Mark 22 sep 2026:** "Pro" als consumentenlaag is **geschrapt**. Naar buiten
+> zijn er twee lagen: **Gratis** en **Familie**. De school krijgt op de prijzenpagina één
+> regel ("Bent u een school?") en een **schoollicentie op aanvraag** — de prijs komt uit de
+> eerste twee schoolgesprekken, niet uit een kaartje. "€ 99 per klas" is uit alle copy en
+> code (`config.js` `teacher_school.price = null`). Bijlesdocent-Pro (€ 6,95/€ 59) vervalt:
+> nul klanten, alleen complexiteit. Rollen 1 en 2 hieronder blijven gelden; rol 3 vervalt.
 **Mark-inzicht 7 aug:** een leerkracht in loondienst koopt vrijwel nooit privé
 een abonnement voor het werk — zo werkt de hele NL-edtech-markt (Gynzy,
 Junior Einstein, LessonUp verdienen aan schoollicenties). Pro is daarom
@@ -131,7 +137,7 @@ Junior Einstein, LessonUp verdienen aan schoollicenties). Pro is daarom
    ons acquisitiekanaal (1 juf = 25 gezinnen). Eigen account, leerpaden
    klaarzetten, deelcode, klas laten oefenen: gratis. Elke drempel voor een
    juf kost gezinnen.
-2. **School = de Pro-koper.** Schoollicentie € 99/klas/jaar. Wat de school
+2. **School = de koper.** Schoollicentie **op aanvraag** (was € 99/klas/jaar tot 22 sep 2026). Wat de school
    koopt (en de gratis juf mist): schooldashboard over álle groepen
    (directie/IB'er), meerdere leerkrachten onder één beheer (continuïteit —
    niet afhankelijk van één enthousiaste juf), school-logo op toetsen en
@@ -140,9 +146,8 @@ Junior Einstein, LessonUp verdienen aan schoollicenties). Pro is daarom
    zodra een school leerlinggegevens structureel via ons laat lopen is een
    DPA wettelijk verplicht — de licentie is dus geen extraatje maar de
    voorwaarde om het als school te mógen gebruiken.
-3. **Bijlesdocent/zzp = individueel Pro** — € 6,95/mnd of € 59/jaar. Die
-   betaalt wél privé (aftrekbaar, verdient zichzelf in één lesuur terug).
-   Framing in copy: "voor bijlesdocenten", niet "voor leerkrachten".
+3. ~~Bijlesdocent/zzp = individueel Pro — € 6,95/mnd of € 59/jaar~~ **vervallen
+   22 sep 2026** (0 klanten). Een bijlesdocent gebruikt de gratis laag of Familie.
 
 **🤝 Gezins-plekken thuis cadeau (Mark 15 aug 2026) — de verkoophaak.** Bij een
 school-abonnement horen **5 Familie-plekken per klas** die de school thúís mag

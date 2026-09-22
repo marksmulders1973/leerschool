@@ -42,8 +42,9 @@ bèta
           </span>
         </div>
         <p style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 14, lineHeight: 1.6, marginTop: 6 }}>
-          De Familie-laag voor ouders en verzorgers — nu gratis om uit te proberen. Alles wat vandaag gratis is, blijft gratis t/m zeker 2031; dit komt er als
-          extra bovenop. Prijsanker: <i>oefenboek €30, bijles €37/uur → Familie €39 per jaar voor het hele gezin.</i>
+          Familie is het pakket voor thuis. Je mag het nu gratis uitproberen.
+          Alles wat vandaag gratis is, blijft gratis — tot en met 2031. Familie komt daar bovenop:
+          <b>€39 per jaar voor het hele gezin.</b>
         </p>
         <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 14 }}>
           {klaar} van {FEATURES.length} onderdelen klaar.{klaar < FEATURES.length ? " De rest komt binnenkort." : " Alles staat live om uit te proberen."}

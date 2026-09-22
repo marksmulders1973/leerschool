@@ -507,7 +507,7 @@ Dat is ook wat ChatGPT niet kon zien.
 ### Antwoorden op §9c
 
 1. ~~Anker = openbare €131,88~~ → **Mark, 22 sep: "Squla wil ik gewoon niet benoemen. Klinkt voor mij een beetje vals en zo wil ik niet zijn."** Besluit: **geen prijsanker, geen vergelijking** in partner-copy of mails; €34,50 staat op zichzelf ("dit is de prijs, voor iedereen"). €43,52 is uit GEMEENTE-BETAALT-PLAN.md gehaald. §9a blijft staan als interne analyse; niet naar buiten gebruiken.
-2. **Twee lagen naar buiten** (Gratis / Familie); schoollicentie blijft als apart zakelijk product achter "Bent u een school?" (DPA = werk + aansprakelijkheid, niet gratis te geven); zzp-Pro schrappen (0 klanten).
+2. ✅ **BESLOTEN 22 sep (Mark: "doe maar"), v683:** twee lagen naar buiten (Gratis / Familie); schoollicentie als apart zakelijk product achter "Bent u een school?", **prijs op aanvraag** (€99/klas uit code en copy); bijlesdocent-Pro geschrapt.
 3. **€39/gezin dekt 3 kinderen** — ja, ook in §4b's maximum; op gemeten gedrag met enorme marge. Kindlimiet 3 houden.
 4. **Twee Familie-smaken**: jaar €39 + Seizoenspas €24,95; maand schrappen. Marks keuze; Esther één regel bij wijziging.
 

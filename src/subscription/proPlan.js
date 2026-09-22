@@ -8,7 +8,7 @@
 //
 // Het principe (2026-07-25): DE BETAALVORM VOLGT DE WAARDEVORM.
 //  - Doorlopende waarde (voortgang volgen, rapporten, logo op toetsen)
-//    → een klein abonnement: FAMILIE (per gezin) of PRO (leerkrachten).
+//    → een klein abonnement: FAMILIE (per gezin) of een SCHOOLLICENTIE (school).
 //  - Verbruikswaarde (extra AI-bijles-tijd) → los KWARTIER-TEGOED.
 //    ⛔ ON-HOLD (Mark 8 aug: "waarschijnlijk een slecht idee"; herbevestigd
 //    13 aug "geen losse eindjes") — uit ALLE gebruikers-teksten; alleen terug
@@ -18,7 +18,7 @@
 //    Ooievaarspas, voedselbanken) geven het Familie-niveau gratis.
 //    ⚖️ Ooievaarspas = BLIJVEND gratis Familie, zonder plekken-limiet —
 //    schriftelijk toegezegd aan gemeente Den Haag (getekend formulier
-//    26 jul 2026). Pro (leerkracht) valt buiten die toezegging.
+//    26 jul 2026). De schoollicentie valt buiten die toezegging.
 //    Zie partnerCode.js (partnerFamilieTot) + useSubscription.js (partnerGrant).
 //
 // Nu (2026) staat ALLES gratis open. We labelen de betaalde extra's alvast met
@@ -45,15 +45,20 @@ export const LAGEN = {
   },
   // School-first (Mark 7 aug 2026, zie docs/PRIJSPLAN.md §3): een leerkracht
   // in loondienst koopt niet privé — de school is de koper (licentie, factuur,
-  // verwerkersovereenkomst); alleen de zzp-bijlesdocent koopt individueel.
-  // Voor de juf zelf blijft alles wat zij met haar klas doet gratis.
+  // verwerkersovereenkomst). Voor de juf zelf blijft alles wat zij met haar
+  // klas doet gratis.
+  // 22 sep 2026 (Mark): "Pro" als consumentenlaag geschrapt. Naar buiten zijn
+  // er twee lagen, Gratis en Familie; de school krijgt één regel ("Bent u een
+  // school?") en een licentie OP AANVRAAG — de prijs komt uit de eerste
+  // schoolgesprekken, niet uit een kaartje. Bijlesdocent-Pro (€ 6,95) vervalt:
+  // nul klanten, alleen complexiteit.
   leerkracht: {
     id: "leerkracht",
-    naam: "Pro",
+    naam: "Schoollicentie",
     icon: "🏫",
-    wie: "voor scholen & bijlesdocenten",
-    prijs: "school € 99 per klas p/jaar · bijlesdocent richtprijs € 6,95 p/mnd of € 59 p/jaar",
-    kort: "Schooldashboard, eigen logo op toetsen en rapportage — voor leerkrachten blijft lesgeven met Leerkwartier gratis",
+    wie: "voor scholen",
+    prijs: "op aanvraag — factuur en verwerkersovereenkomst; de prijs bepalen we samen met de school",
+    kort: "Schooldashboard over alle groepen, eigen schoollogo op toetsen en klasrapportage — voor leerkrachten blijft lesgeven met Leerkwartier gratis",
   },
   // (Kwartier-tegoed verwijderd uit de etalage — ON-HOLD, zie kop van dit
   // bestand. LAAG_KLEUREN.tegoed blijft staan voor als hij ooit terugkomt.)
@@ -89,8 +94,8 @@ export const PRO_MODEL = {
     "leerkrachten die met hun klas oefenen. " +
     "Vanaf 2027 zijn er twee extra's: Familie (één klein bedrag per gezín — " +
     "voortgang volgen, weekrapport, hele toets oefenen met de klok; ook als " +
-    "Seizoenspas: één keer betalen voor het hele toetsjaar, stopt vanzelf) en Pro voor scholen " +
-    "en bijlesdocenten (schooldashboard, eigen logo op toetsen, klasrapportage).",
+    "Seizoenspas: één keer betalen voor het hele toetsjaar, stopt vanzelf) en voor scholen " +
+    "een schoollicentie op aanvraag (schooldashboard, eigen logo op toetsen, klasrapportage).",
 };
 
 // De betaalde extra's. `laag`: 'familie' | 'leerkracht' | 'tegoed'.

@@ -216,14 +216,14 @@ export default function PakketUitleg({ open, onClose }) {
             kleur={LAAG_KLEUREN.familie}
           />
           <TierKaart
-            emoji="🏫" naam="Pro" voorWie="voor scholen & bijlesdocenten"
-            prijs="school € 99 per klas p/jaar (factuur) · bijlesdocent ± € 6,95 p/mnd of € 59 p/jaar"
+            emoji="🏫" naam="Schoollicentie" voorWie="voor scholen"
+            prijs="op aanvraag — factuur en verwerkersovereenkomst; de prijs bepalen we samen met de school"
             items={[
               "Lesgeven met je klas blijft gratis t/m zeker 2031 (deelcode)",
               "Schooldashboard: overzicht per klas + export",
               "Je eigen (school)logo op toetsen en werkbladen",
               "Onbeperkt toetsen maken en werkbladen printen",
-              "Voor scholen: licentie per klas met factuur en verwerkersovereenkomst",
+              "Licentie op maat voor de school, met factuur en verwerkersovereenkomst",
             ]}
             kleur={LAAG_KLEUREN.leerkracht}
           />

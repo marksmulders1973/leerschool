@@ -1,3 +1,5 @@
+> **⚠️ 22 sep 2026:** "Pro" als betaalde consumentenlaag is geschrapt (Mark). Wat hier staat is nu de inhoud van de **schoollicentie op aanvraag**; bijlesdocent-Pro bestaat niet meer. Zie PRIJSPLAN.md §3.
+
 # Wat wordt Pro (betaald) — en wat blijft gratis
 
 > Gratis-beloftes altijd max 5 jaar vooruit (nu t/m 2031) + doorrol — nooit 'voor altijd'.
