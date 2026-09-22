@@ -22,7 +22,7 @@
 | 2 | **School-eenheid oplossen**: `proPlan.js` zegt "€99 per klas", Mark bedoelt "bundel voor ~30 docenten". Twee producten, ~10× verschil. | Mark beslist, Claude verwerkt | 1 okt | ☐ |
 | 3 | **Partner per kind (€34,50) vs Familie per gezin (€39)** — zelfde product, bijna dubbele prijs voor een gemeente. Antwoord klaar hebben vóór het eerste inkopersgesprek. | Mark beslist | 10 okt | ☐ |
 | 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ☐ |
-| 5 | **Charley praat alleen indien nodig + pauzeknop** (dagbundel als vangnet). | Claude | week 22 sep | 🗓️ |
+| 5 | **Charley praat alleen indien nodig + pauzeknop** (dagbundel als vangnet). | Claude | week 22 sep | 🟡 **bundel ✅ v681 (22 sep, 120→20/dag, raakt niemand)**; pauzeknop + terughoudendheid nog open |
 | 6 | **Btw-vraag**: mag 21% bóvenop €34,50 bij gemeente/stichting (BTW-compensatiefonds)? | Mark, bij de KvK | 28 sep | ☐ |
 | 7 | **Partner-rapport v1** ("X kinderen uit uw gemeente oefenden Y kwartier") — zonder dat getal verlengt geen enkele partner. | Claude | 15 okt | ☐ |
 | 8 | **Vercel Pro** vóór de eerste betaling (Hobby = niet-commercieel). | Mark | vóór 1e euro | ☐ |
