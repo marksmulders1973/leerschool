@@ -23,7 +23,7 @@
 | 3 | **Partner per kind (€34,50) vs Familie per gezin (€39)** — zelfde product, bijna dubbele prijs voor een gemeente. Antwoord klaar hebben vóór het eerste inkopersgesprek. | Mark beslist | 10 okt || ✅ 22 sep — **partner koopt per gezin** (tot 3 kinderen), staffel 10–99 €34,50 · 100–249 €24,95 · 250+ in overleg |
 | 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ☐ |
 | 5 | **Charley praat alleen indien nodig + pauzeknop** (dagbundel als vangnet). | Claude | week 22 sep | 🟡 **bundel ✅ v681 (22 sep, 120→20/dag, raakt niemand)**; pauzeknop + terughoudendheid nog open |
-| 6 | **Btw-vraag**: mag 21% bóvenop €34,50 bij gemeente/stichting (BTW-compensatiefonds)? | Mark, bij de KvK | 28 sep | ☐ |
+| 6 | **Btw — besluit 22 sep: één bedrag, alles erin (zoals de markt doet), en de KOR aanvragen.** Op de 28e: (a) KvK-inschrijving; (b) **btw-id opvragen**; (c) daarna zelf via belastingdienst.nl **"Melding omzetbelasting kleineondernemersregeling"** insturen met ingang **1 januari 2027** (min. 4 weken vooraf, 3 jaar vast, grens €20.000 omzet); (d) laten bevestigen dat verlegde btw op Supabase/AI geen probleem is. Zin in het betaalplan ("geen btw bovenop") klopt zodra (c) is gedaan. Boven €20k ooit: 21% erin houden, prijs blijft €34,50 incl. | Mark | 28 sep | ☐ |
 | 7 | **Partner-rapport v1** ("X kinderen uit uw gemeente oefenden Y kwartier") — zonder dat getal verlengt geen enkele partner. | Claude | 15 okt | ☐ |
 | 8 | **Vercel Pro** vóór de eerste betaling (Hobby = niet-commercieel). | Mark | vóór 1e euro | ☐ |
 | 9 | 🔴 **Charley-bundel gelijk voor álle Familie-niveaus** (betalend én Ooievaarspas) — anders botst het met de clausule "minimaal gelijke kwaliteit/hoeveelheid" uit de getekende Vriend-overeenkomst. Pashouders hebben `parent_pro`, géén gratis-niveau. | Claude | vóór het bouwen, week 22 sep | ☐ |
@@ -58,7 +58,7 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
   kosten, nul omzet. Vraag Den Haag naar hun activatiecijfer bij andere digitale aanbieders.
 - 🔴 **Open risico 2 — leerkracht/school verliesgevend** bij middengebruik (−€7,14 resp. −€18,49/mnd).
   Nul meting, geen school actief. **Geen vaste schoolprijs naar buiten tot één klas gemeten is.**
-- **Vraag voor de KvK-afspraak 28 sep:** mag btw bóvenop €34,50 bij gemeente/stichting?
+- **KvK-afspraak 28 sep — meenemen (besluit 22 sep):** btw-id opvragen · KOR aanmelden met ingang 1-1-2027 (via belastingdienst.nl, niet aan het KvK-loket) · prijzen blijven één bedrag inclusief, zoals de markt doet · KvK-nr daarna naar Esther (Ooievaarspas) en Knab-rekening openen.
 
 ## 🛡️ Beveiliging & continuïteit — vast blok in elk dagrapport (sinds 15 sep 2026)
 
