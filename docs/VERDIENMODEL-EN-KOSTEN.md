@@ -390,3 +390,137 @@ iedereen identiek) is de schoonste kandidaat en zou als eerste effect moeten ton
 
 ➡️ **Controleer dit in het dagrapport van ~23 sep**, als er een paar echte gesprekken door
 de nieuwe code zijn gegaan. Pas dan weten we wat de caching echt oplevert.
+
+
+## 9. 🔴 UIT TE WERKEN MET FABLE (week van 21 sep) — prijsanker + aantal lagen
+
+Opgekomen in het gesprek van 20 sep. Mark heeft **nog niets besloten**; alles hieronder is
+materiaal voor de sessie, geen keuze.
+
+### 9a. Het Squla-anker klopt niet overal
+
+Er lopen drie getallen door de docs, bij verschillende kopers:
+
+| Waar | Getal | Status |
+|---|---|---|
+| `GEMEENTE-BETAALT-PLAN.md:35,65` · hier §6C | **€43,52/kind/jaar** (stichtingstarief) | ⚠️ **onbevestigd** — staat nergens openbaar, geen bron in het doc |
+| `CONCURRENTIE.md:17` · `GROEI-MASTERPLAN-24MND.md:167,315` | **~€132/jaar** (consument) | ✅ klopt |
+
+Openbare Squla-prijzen, gecheckt 20 sep 2026 (squla.nl/shop-bovenbouw), **per kind**:
+- jaarabonnement € 10,99/mnd → **€ 131,88/jaar**
+- kwartaalabonnement € 16,99/mnd → € 203,88/jaar
+- hele basisschoolperiode **€ 389,99** eenmalig
+- gezinskorting € 1/mnd per extra kind
+
+**Waarom dit telt:** onze €34,50 wordt nu onderbouwd met "21% onder Squla's €43,52" — een
+krappe marge op een getal dat we niet hard kunnen maken. Tegen de openbare €131,88 zitten we
+**74% eronder**, en dat is wél controleerbaar.
+
+**Valkuil bij dat sterkere verhaal:** een Leergeld-inkoper weet waarschijnlijk wat zíj
+betalen. "74% onder Squla" roepen terwijl zij al een inkoopkorting hebben leest als
+opgeklopt (vgl. regel: eerlijke getallen naar buiten). Nette formulering: consumentenprijs
+noemen, erbij zetten dat stichtingen korting krijgen, en dat €34,50 bij ons voor iedereen
+geldt.
+
+**Actie die het oplost:** vraag één warme stichting (Leergeld Enschede zit al in gesprek)
+wat zij per kind per jaar voor Squla-codes betalen. Eén zin, en de aanname wordt een feit.
+Deze vraag staat al sinds eerder in §6C open en is nooit beantwoord — ondertussen is €43,52
+wél als vaststaand in het gemeenteplan beland.
+
+### 9b. Richting "gratis of Familie" — twee lagen i.p.v. drie?
+
+Marks gedachte 20 sep: alleen Gratis + Familie houden, Pro gratis maken, om het simpel te
+maken. Niet besloten. Wat de analyse opleverde:
+
+**Wat er in Pro zit (`PRIJSPLAN.md` §3):**
+- leerkracht in loondienst — **is al gratis**, verandert niets
+- bijlesdocent/zzp (€6,95/mnd · €59/jaar) — nul klanten, vooral complexiteit
+- school (€99/klas/jaar) — dashboard, logo, klasrapportage **én de verwerkersovereenkomst**
+
+🔴 **Het scharnierpunt: de DPA.** `PRIJSPLAN.md:135` stelt dat een DPA wettelijk verplicht is
+zodra een school leerlinggegevens structureel via ons laat lopen — de licentie is dus geen
+extraatje maar de voorwaarde om het als school te mógen gebruiken. Pro gratis maken geeft
+niet €99 weg maar **onbetaald juridisch werk plus aansprakelijkheid**, voor een solo-bouwer.
+
+**Omzet-impact vóór 2027: nul.** Schoolomzet was al pas realistisch sep 2027, Familie start
+bij de paywall jan 2027. Dit is puur een besluit over hoe 2027 eruitziet — geen haast, wél
+vóór de eerste schoolofferte.
+
+⚠️ **Gat dat de sessie moet oplossen:** wordt Familie het enige betaalde product, dan rust
+alles op één prijs die wringt met de kostprijsanalyse van 20 sep. Familie is **per gezin**
+(max 3 kinderen) voor €39/jaar → bij 3 kinderen **€13 per kind per jaar**, terwijl
+`GEMEENTE-BETAALT-PLAN.md:33` stelt dat zelfs €25 per kind de AI-kosten niet dekt bij
+gemiddeld gebruik. Nu vangen de partnerprijs (€34,50/kind) en Pro dat deels op.
+
+**Tussenvorm die op tafel lag (niet gekozen):** naar buiten "Gratis of Familie", achter de
+schermen de schoollicentie houden — zzp-Pro schrappen, "Pro" hernoemen naar
+"Schoollicentie" en van de ouder-prijzenpagina halen (één regel: "Bent u een school?"),
+partnerprijs uitleggen als "Familie, betaald door een stichting". En apart bekijken of de
+**drie Familie-smaken** (maand · Seizoenspas · jaar) terug moeten naar één of twee — dáár
+zit de complexiteit die een ouder echt ziet, niet in Pro.
+
+### 9c. Wat Fable concreet moet beantwoorden
+1. Welk Squla-getal wordt het anker in partner-copy — en hoe formuleren we het eerlijk?
+2. Twee lagen of drie? En zo ja, wat gebeurt er met de DPA-verplichting?
+3. Dekt €39/gezin/jaar de kosten bij 2-3 kinderen? Zo niet: prijs omhoog, kindlimiet omlaag,
+   of AI-gebruik begrenzen?
+4. Blijven de drie Familie-smaken, of terug naar één?
+
+## 10. 🔍 Fable-review 22 sep 2026 — gemeten tegen aangenomen
+
+> Uitgevoerd door Fable 5.1 op Marks verzoek ("ChatGPT twijfelt aan het verdienmodel,
+> met name de Charley-kosten"). Alles hieronder is gemeten op `events_echt` (apparaat-id
+> `props->>'uid'`, nooit `session`) en `ai_call_quota`, stand 22 sep 15:05.
+
+### Wat het document verkeerd aannam
+
+| | Aangenomen (§2/§3) | Gemeten |
+|---|---|---|
+| Aandeel kinderen dat Charley gebruikt | impliciet 100% (elk kind als AI-gebruiker) | **1,7%** opent Charley (17 van 1.025 apparaten, 28d); 11 apparaten in het AI-grootboek sinds 16 sep |
+| Berichten per gebruiker per dag | mediaan 3, p95 74 | mediaan 5, **max 15** (na de rem v672) |
+| AI-kosten per actief kind per jaar | €3,34 realistisch · €12,14 worst case | **≈ €0,30** (€2,56 september ÷ 104 terugkomers, × 12) |
+| 1.000 gratis kinderen per maand | €350 – €1.192 | **€6 – €20** bij gemeten gedrag |
+| 3.000 Ooievaarspas-kinderen per maand | €925 (midden) | **≈ €75** bij gemeten gedrag; ≈ €375 als Charley 5× populairder wordt; ≈ €40 op Flash-Lite |
+
+De fout: §2 rekende de mediaan van de *Charley-gebruikers* door alsof élk kind zo'n
+gebruiker is. Charley is een hulpje dat 1 op de 60 kinderen aanraakt; de 1.589 sommen van
+september kostten €0. **Leerkwartier is een content-app met een AI-hulpje, geen AI-app.**
+Dat is ook wat ChatGPT niet kon zien.
+
+### Wat overeind blijft (en waar ChatGPT gelijk heeft)
+
+1. **De belofte is open** (gratis t/m 2031, Den Haag voor altijd, codes ongelimiteerd) en de
+   bovengrens zit nog niet in de techniek: `PER_UID_LIMIT_DAY = 120` is een noodrem, geen bundel.
+2. **De roadmap maakt Charley steeds meer de voordeur** (buddy-eerst, Feynman, dictee, Charley-hulp).
+   Wordt 1,7% ooit 30%, dan kloppen de sommen van §3 ineens wél (1.000 actief × 30% × 5 × 22 × €0,0044 ≈ €145/mnd op Haiku).
+3. **Omzet is €0.** Dat is het echte gat. Vaste infra (€23 nu, €41,50 mét Vercel Pro) is 10× de AI-rekening.
+4. Caching (v680) is **nog niet bewezen** — reken de −48% als 0 tot `[cache] read=` in de logs staat.
+
+### Aanbeveling (volgorde)
+
+1. Geen oktober-uren meer aan kostenoptimalisatie van een rekening van €2,56.
+2. **Bundel 20/dag nu** (`PER_UID_LIMIT_DAY` 120 → 20): raakt niemand (max 15), sluit het €3.125-scenario af. Pauzeknop + "praat alleen indien nodig" daarna, om didactische redenen.
+3. **Charley-penetratie (28d) als vast cockpitcijfer, alarm op 10%.** Onder 10% is dit vraagstuk gesloten; erboven A/B Haiku vs Flash-Lite op kwartier-ratio.
+4. **Kostenregel per partnercode** (calls per uid × code) zodat "Ooievaarspas kostte deze maand €X" een getal is.
+5. Verkoop: KvK 28 sep, Leergeld-mail 19 okt, Vercel Pro vóór de eerste euro. 15 partnerkinderen dekken de infra; 239 is het doel.
+
+### Antwoorden op §9c
+
+1. **Anker = openbare €131,88**, eerlijk: "Squla kost een gezin €131,88 per kind per jaar; stichtingen krijgen korting; bij ons is €34,50 de prijs voor iedereen." **€43,52 uit GEMEENTE-BETAALT-PLAN.md halen** tot een stichting het bevestigt.
+2. **Twee lagen naar buiten** (Gratis / Familie); schoollicentie blijft als apart zakelijk product achter "Bent u een school?" (DPA = werk + aansprakelijkheid, niet gratis te geven); zzp-Pro schrappen (0 klanten).
+3. **€39/gezin dekt 3 kinderen** — ja, ook in §4b's maximum; op gemeten gedrag met enorme marge. Kindlimiet 3 houden.
+4. **Twee Familie-smaken**: jaar €39 + Seizoenspas €24,95; maand schrappen. Marks keuze; Esther één regel bij wijziging.
+
+**Partner per kind vs Familie per gezin (§4a):** per kind houden, met de zin: *"Een gemeente
+financiert een kind, een gezin koopt een gezinsabonnement. Kindpakketten worden per kind
+toegekend, dus zo sluit het aan op uw administratie."* Geen partner-gezinsprijs bouwen tot
+een inkoper erom vraagt.
+
+**School-eenheid (oktober punt 2):** Marks model (bundel per school), "€99 per klas" uit
+`proPlan.js`/`abonnement.html`, prijs uit de eerste twee schoolgesprekken laten komen.
+Aanleiding om dat gesprek te zoeken: 21 sep zaten er ~68 nieuwe leerling-apparaten in twee
+schooluren op de site, bron "direct", zonder code — een klas.
+
+### Dagrapport-blok (§7) — aanvulling
+- **Charley-penetratie 28d** (apparaten met `buddy_chat_open` ÷ alle apparaten) — alarm ≥10%.
+- **Kosten per partnercode** zodra idee AO gebouwd is.
