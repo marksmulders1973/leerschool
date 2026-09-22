@@ -103,7 +103,29 @@ stopt vanzelf. Geen abonnement, geen kleine lettertjes."*
 1. Maand € 4,95 — flexibel, opzegbaar
 2. **Seizoenspas — "meest gekozen"** (het anker in het midden)
 3. Jaar € 39 — voor gezinnen met meerdere/jongere kinderen (goedkoopst op
-   lange termijn; blijft bestaan als retentie-optie)
+   lange termijn; blijft bestaan als retentie-optie). **Eénmalig, stopt
+   vanzelf** (Mark 22 sep 2026: "daar heb ik zelf ook een hekel aan") — zie
+   "Verlengen" hieronder.
+
+**Verlengen van het jaar (besluit Mark 22 sep 2026):** géén stilzwijgende
+verlenging, ook niet met vooraankondiging. Het jaar is een eenmalige betaling
+(Stripe mode `payment`, 365 dagen), valt daarna terug op Gratis. Verlengen
+doet het gezin zelf, met één knop (iDEAL), tegen **€ 31 (20% korting)**:
+- mail 30 dagen vóór afloop ("nog een jaar? € 31 i.p.v. € 39"),
+- mail 7 dagen vóór afloop, alleen als er nog niet verlengd is,
+- één mail ná afloop ("alles blijft gratis werken; terugkomen kan altijd"),
+  korting blijft 30 dagen na afloop geldig zodat wie de mail miste niet
+  gestraft wordt.
+- Vroeg verlengen plakt het nieuwe jaar achter het lopende (geen dubbele
+  maanden). Verlengprijs is altijd € 31, ook na een pauze — geen regels die
+  je moet uitleggen.
+- Bewust geaccepteerd: minder "stilzwijgend doorlopende" omzet dan grote
+  partijen; bij onze doelgroep is "geen stiekeme incasso" juist het argument.
+- Open: maandplan (€ 4,95) is per definitie doorlopend en botst hiermee →
+  voorstel schrappen, één prijs is makkelijker te vertellen. Nog niet besloten.
+- Te bouwen vóór live (jan 2027): Stripe-prijs € 31 (`STRIPE_PRICE_JAAR_VERLENG`),
+  cron-mailtjes op `subscriptions.valid_until` (Resend), verlengknop op
+  abonnement.html met plan `jaar_verleng`.
 
 **Retentie na de pas (het churn-antwoord):** einde-pas-flow in maart/juli →
 aanbod voor broertje/zusje (zit al in Familie: max 3 kinderen) en early-bird

@@ -10,7 +10,13 @@
 //
 // Plannen (docs/PRIJSPLAN.md, Mark 9 aug 2026): Familie Seizoenspas € 24,95
 // éénmalig (geldig t/m 31 juli van het toetsjaar, stopt vanzelf), Familie
-// € 4,95 p/mnd, Familie € 39 p/jaar. School € 99/klas/jaar gaat via factuur.
+// € 4,95 p/mnd, Familie € 39 p/jaar. School: licentie op aanvraag, via factuur.
+//
+// Jaar = ÉÉNMALIG (Mark 22 sep 2026): geen stille verlenging, nooit. 365 dagen
+// geldig, stopt vanzelf, valt terug op Gratis. Verlengen doet het gezin zelf
+// na een mail (30 + 7 dagen vooraf, 1 mail erna) tegen € 31 (20% korting);
+// die korting blijft 30 dagen ná afloop geldig. Vroeg verlengen plakt het
+// nieuwe jaar achter het oude. Alleen "maand" is nog een Stripe-abonnement.
 //
 // Facturen (Mark-eis 28 aug 2026): élke betaling levert een echte factuur op.
 // Abonnementen: Stripe maakt per periode een factuur. Eénmalig (Seizoenspas):
@@ -35,7 +41,9 @@ const SEIZOEN_EIND = process.env.SEIZOENSPAS_EIND || "2027-07-31T21:59:59Z"; // 
 const PLANNEN = {
   seizoenspas: { mode: "payment", price: () => process.env.STRIPE_PRICE_SEIZOENSPAS, tier: "parent_pro" },
   maand:       { mode: "subscription", price: () => process.env.STRIPE_PRICE_MAAND, tier: "parent_pro" },
-  jaar:        { mode: "subscription", price: () => process.env.STRIPE_PRICE_JAAR, tier: "parent_pro" },
+  jaar:        { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR, tier: "parent_pro", dagen: 365 },
+  // verlengen na een jaar: apart Stripe-prijsobject van € 31 (STRIPE_PRICE_JAAR_VERLENG), zelfde looptijd
+  jaar_verleng: { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR_VERLENG, tier: "parent_pro", dagen: 365 },
 };
 
 // ── Stripe REST (form-encoded) ──
@@ -170,7 +178,16 @@ export default async function handler(req) {
         const userId = obj.client_reference_id || obj.metadata?.userId;
         const plan = obj.metadata?.plan;
         const p = PLANNEN[plan] || PLANNEN.seizoenspas;
-        const validUntil = p.mode === "payment" ? SEIZOEN_EIND : null; // abonnementen: via invoice.paid
+        // Eénmalig: seizoenspas tot de vaste einddatum; jaar 365 dagen — en wie vroeg
+        // verlengt, krijgt het nieuwe jaar achter het lopende geplakt. Abonnementen: via invoice.paid.
+        let validUntil = null;
+        if (p.mode === "payment") {
+          if (p.dagen) {
+            const lopend = userId ? await db.subscriptionByUser(userId) : null;
+            const start = Math.max(Date.now(), lopend?.valid_until ? new Date(lopend.valid_until).getTime() : 0);
+            validUntil = new Date(start + p.dagen * 86400e3).toISOString();
+          } else validUntil = SEIZOEN_EIND;
+        }
         const nieuw = await db.payment({ user_id: userId, stripe_event_id: event.id, stripe_customer_id: obj.customer, stripe_payment_intent: obj.payment_intent, stripe_invoice_id: obj.invoice, type: "checkout", plan, amount_cents: obj.amount_total, currency: obj.currency, email: obj.customer_details?.email, raw: { session: obj.id } });
         if (nieuw && userId) await db.upsertSubscription({ user_id: userId, tier: p.tier, plan, status: "active", bron: "stripe", stripe_customer_id: obj.customer, stripe_subscription_id: obj.subscription || null, valid_until: validUntil });
       }

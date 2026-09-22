@@ -28,7 +28,7 @@ const PLANS = [
     smaken: [
       { label: "Per maand", prijs: "€ 4,95", sub: "flexibel, elk moment opzegbaar" },
       { label: "🎟️ Seizoenspas", prijs: "€ 24,95", sub: "één keer betalen · het hele toetsjaar (t/m 31 juli 2027) · stopt vanzelf", tag: "Meest gekozen" },
-      { label: "Per jaar", prijs: "€ 39", sub: "goedkoopst op lange termijn — ook voor jongere kinderen" },
+      { label: "Per jaar", prijs: "€ 39", sub: "één keer betalen · stopt vanzelf · verlengen kies je zelf (20% korting)" },
     ],
     features: [
       { text: "Eén prijs voor het hele gezin (max 3 kinderen) — niet per kind" },
