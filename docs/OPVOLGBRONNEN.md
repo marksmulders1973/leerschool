@@ -80,7 +80,7 @@ Drie vaste opvolgmomenten per jaar, altijd mét nieuws (nooit een kale herinneri
 | 2026-10-01 | Ouder- en Kindteams Amsterdam (OKT) | koud | adres zoeken; meenemen via koepel-ronde |
 | 2026-10-01 | Sam& voor alle kinderen | benaderd | fondsen-ronde (vervolgmail met nieuw nieuws) na toestemming Marion |
 | 2026-10-01 | School's cool Nijmegen | reageerde | quote-ja checken; bij ja op bedankt.html |
-| 2026-10-01 | Stichting Jarige Job | benaderd | fondsen-ronde na toestemming Marion (concept klaar, code-voorstel JARIGEJOB2027) |
+| 2026-10-06 | Stichting Jarige Job | wacht | vervolgmail 22 sep verstuurd (kaartje in de box); stil → contactformulier |
 | 2026-10-01 | VluchtelingenWerk Nederland (landelijk) | koud | fondsen-ronde na toestemming Marion (concept klaar, code-voorstel VWN2027) |
 | 2026-10-01 | Voedselbank Alkmaar e.o. | partner | check: flyer gedrukt en verspreid in september? + quote-vraag |
 | 2026-10-05 | Ooievaarspas Den Haag (gemeente Den Haag) | partner | KvK-nummer nasturen + tekst-formulier (na 28 sep); communicatie vanaf 1 jan 2027 |
@@ -209,7 +209,7 @@ Drie vaste opvolgmomenten per jaar, altijd mét nieuws (nooit een kale herinneri
 | 2026-10-01 | Ouder- en Kindteams Amsterdam (OKT) | wijkteam | Amsterdam |  |  |  | intranet | koud |  | adres zoeken; meenemen via koepel-ronde | intranet-verwijzer kick.oktamsterdam.nl gezien 11 sep (na Kinderhulp-nieuwsbrief) |
 | 2026-10-01 | Sam& voor alle kinderen | fonds | Leusden |  | info@samenvoorallekinderen.nl | SAM2027 | outreach | benaderd | 2026-07-13 | fondsen-ronde (vervolgmail met nieuw nieuws) na toestemming Marion | koepel van Leergeld/Jeugdfonds/Kinderhulp/Jarige Job; Tier 1-mail 13 jul zonder antwoord |
 | 2026-10-01 | School's cool Nijmegen | huiswerk | Nijmegen |  |  |  | outreach | reageerde | 2026-08-25 | quote-ja checken; bij ja op bedankt.html | warme ja 24 aug (Elsemiek: delen met thuismentoren); bedank-reply 25 aug + quote-vraag |
-| 2026-10-01 | Stichting Jarige Job | fonds | Rotterdam |  | info@stichtingjarigejob.nl |  | outreach | benaderd | 2026-08-18 | fondsen-ronde na toestemming Marion (concept klaar, code-voorstel JARIGEJOB2027) | fondsen-batch 18 aug zonder antwoord |
+| 2026-10-06 | Stichting Jarige Job | fonds | Rotterdam |  | info@stichtingjarigejob.nl | JARIGEJOB2027 (nog niet actief) | outreach | wacht | 2026-09-22 | vervolgmail 22 sep (kaartje in de box, digitaal); stil t/m 6 okt → contactformulier | fondsen-batch 18 aug zonder antwoord; vervolg 22 sep via Gmail |
 | 2026-10-01 | VluchtelingenWerk Nederland (landelijk) | fonds | Amsterdam |  | info@vluchtelingenwerk.nl |  | outreach | koud |  | fondsen-ronde na toestemming Marion (concept klaar, code-voorstel VWN2027) | concepten-2026-09-11-fondsen.md; nieuwsbrief voor begeleiders |
 | 2026-10-01 | Voedselbank Alkmaar e.o. | voedselbank | Alkmaar | Teresa Hwan |  | ALKMAAR2027 | outreach | partner | 2026-08-31 | check: flyer gedrukt en verspreid in september? + quote-vraag | drukt + verspreidt zelf (B1-flyer met vork-logo, 31 aug) |
 | 2026-10-05 | Ooievaarspas Den Haag (gemeente Den Haag) | stadspas | Den Haag | Esther Versluis (bureau Ooievaarspas) | ooievaarspas.szw@denhaag.nl | OOIEVAAR2027 | outreach | partner | 2026-09-01 | KvK-nummer nasturen + tekst-formulier (na 28 sep); communicatie vanaf 1 jan 2027 | vriend-overeenkomst getekend 26 aug 2026; plaatsing 1 jan 2027; op bedankt.html |
