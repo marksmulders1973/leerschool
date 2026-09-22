@@ -7,7 +7,7 @@
 // Gemini-fallback, _guard (rate-limit + dagelijkse kosten-cap). Goedkoop model
 // (Haiku) + kleine max_tokens, want dit is sfeer/aanmoediging, geen lange uitleg.
 
-import { guardRequest, dailyQuotaCheck } from "./_guard.js";
+import { guardRequest, dailyQuotaCheck, telPartnerCall } from "./_guard.js";
 
 export const config = { runtime: "edge", maxDuration: 30 };
 
@@ -247,6 +247,7 @@ export default async function handler(req) {
   // F8 (2 sep 2026): quotum pas ná validatie (lege POSTs telden anders mee).
   const quotaBlocked = await dailyQuotaCheck("buddy-chat");
   if (quotaBlocked) return quotaBlocked;
+  await telPartnerCall(req, "buddy-chat"); // idee AO: kosten per partnercode
 
   const lastUser = [...messages].reverse().find((m) => m.role === "user");
   // ZORG-signaal (kind uit iets ernstigs over zichzelf) → warm, serieus

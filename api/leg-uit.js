@@ -6,7 +6,7 @@
 //
 // Kosten-veilig: guardRequest (origin + rate-limit) + dailyQuotaCheck('leg-uit').
 // Client rendert dit alleen achter de Familie-preview-poort — dus dubbel gedekt.
-import { guardRequest, dailyQuotaCheck } from './_guard.js';
+import { guardRequest, dailyQuotaCheck, telPartnerCall } from './_guard.js';
 
 export const config = { runtime: 'edge', maxDuration: 30 };
 
@@ -29,6 +29,7 @@ export default async function handler(req) {
   // F8 (2 sep 2026): quotum pas ná het parsen van de body.
   const quotaBlocked = await dailyQuotaCheck('leg-uit');
   if (quotaBlocked) return quotaBlocked;
+  await telPartnerCall(req, 'leg-uit'); // idee AO: kosten per partnercode
   const onderwerp = String(body?.onderwerp || '').trim().slice(0, 120);
   const kernpunten = String(body?.kernpunten || '').trim().slice(0, 800);
   const uitleg = String(body?.uitleg || '').trim().slice(0, 1200);

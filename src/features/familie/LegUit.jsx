@@ -12,6 +12,7 @@
 // begrensd door het dag-quota op api/leg-uit (2000/dag, _guard.js).
 // ══════════════════════════════════════════════════════════════════════
 import { useState } from "react";
+import { partnerHeader } from "../referral/partnerCode.js";
 import { track } from "../../utils.js";
 
 export default function LegUit({ conceptTitel, kernpunten = "", authUser = null }) {
@@ -34,7 +35,7 @@ function LegUitInner({ conceptTitel, kernpunten }) {
     try {
       const r = await fetch("/api/leg-uit", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...partnerHeader() },
         body: JSON.stringify({ onderwerp: conceptTitel, kernpunten, uitleg: tekst.slice(0, 1200) }),
       });
       const data = await r.json();

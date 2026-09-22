@@ -242,6 +242,14 @@ export function actievePartnerCode() {
   return ls.get(KEY_CODE) || null;
 }
 
+// Idee AO (22 sep 2026): AI-calls meesturen met de actieve partnercode, zodat
+// de server per partner kan boekhouden ("Ooievaarspas kostte deze maand €X").
+// Geen code → geen header. Spread'en in de fetch-headers.
+export function partnerHeader() {
+  const code = actievePartnerCode();
+  return code ? { "x-lk-partner": code } : {};
+}
+
 // Handmatige invoer "Ik heb een code" (WhatsApp-feedback Mark 11 aug 15:23) —
 // zelfde effect als via de QR-link ?partner=CODE, maar dan getypt in het
 // Familie/Pro-blok. Best-effort-validatie tegen de partner_codes-tabel; kan

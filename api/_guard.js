@@ -113,6 +113,28 @@ const DEFAULT_LIMITS = {
 // Rapportages die ai_call_quota optellen: `endpoint not like 'uid:%'`.
 export const PER_UID_LIMIT_DAY = 20;
 
+// Idee AO (Mark 22 sep 2026: "klinkt goed"): AI-kosten per partnercode.
+// De client stuurt header `x-lk-partner: <CODE>` mee (actieve partnercode
+// op het apparaat); wij tellen dan óók op sleutel `partner:<CODE>:<endpoint>`
+// in ai_call_quota — puur boekhouding, geen limiet. Zo kan het dagrapport
+// zeggen "Ooievaarspas kostte deze maand €X" (docs/sql/partner-kosten.sql).
+// Rapportages die het totaal optellen: `endpoint not like 'uid:%' and
+// endpoint not like 'partner:%'` (anders dubbel geteld).
+export async function telPartnerCall(req, endpoint) {
+  try {
+    const code = (req.headers.get("x-lk-partner") || "").trim().toUpperCase();
+    if (!/^[A-Z0-9-]{3,20}$/.test(code)) return;
+    const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+    const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (!SUPABASE_URL || !SERVICE_KEY) return;
+    await fetch(`${SUPABASE_URL}/rest/v1/rpc/increment_ai_call_quota`, {
+      method: "POST",
+      headers: { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}`, "Content-Type": "application/json" },
+      body: JSON.stringify({ p_endpoint: `partner:${code}:${endpoint}` }),
+    });
+  } catch { /* boekhouding mag nooit een antwoord blokkeren */ }
+}
+
 export async function dailyQuotaCheck(endpoint, opts = {}) {
   const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
   const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;

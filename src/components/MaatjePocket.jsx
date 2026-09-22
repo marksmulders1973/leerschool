@@ -11,6 +11,7 @@
 // - AI-kosten: korte groet lokaal, dagcap op AI-calls, daarna lieve canned-zin.
 // Push-notificaties = stap 2 (vereisen VAPID-setup + ouder-toestemming).
 import { useState, useEffect, useRef } from "react";
+import { partnerHeader } from "../features/referral/partnerCode.js";
 import { BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy, telGeleerdeStappen } from "../features/zoo/buddies";
 import { track } from "../utils.js";
 import { verwerkMakerTip } from "../shared/makerTip.js";
@@ -222,7 +223,7 @@ export default function MaatjePocket({ onHome, onOpenLeren, onOpenPark, userName
     try {
       aiCapTel();
       const res = await fetch("/api/buddy-chat", {
-        method: "POST", headers: { "Content-Type": "application/json" },
+        method: "POST", headers: { "Content-Type": "application/json", ...partnerHeader() },
         body: JSON.stringify({
           messages: next.slice(-8).map((m) => ({ role: m.role, content: m.content })),
           context: { buddyNaam: naam, soort: buddy.soort, kindNaam: kind, zwakVak: "" },

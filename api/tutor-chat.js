@@ -9,7 +9,7 @@
 // - Leeftijds-adaptief: po-paden krijgen simpeler toon dan havo
 // - Gemini-fallback bij Anthropic-failure (kosten + uptime)
 
-import { guardRequest, dailyQuotaCheck, PER_UID_LIMIT_DAY } from "./_guard.js";
+import { guardRequest, dailyQuotaCheck, PER_UID_LIMIT_DAY, telPartnerCall } from "./_guard.js";
 
 export const config = { runtime: "edge", maxDuration: 30 };
 
@@ -370,6 +370,7 @@ export default async function handler(req) {
   // het dagquotum leeg zonder één AI-call (tutor stond dan de rest van de dag uit).
   const quotaBlocked = await dailyQuotaCheck("tutor-chat");
   if (quotaBlocked) return quotaBlocked;
+  await telPartnerCall(req, "tutor-chat"); // idee AO: kosten per partnercode
   // Charley-rem server-backstop (16 sep 2026): per apparaat max 120/dag, voor
   // als de client-teller (localStorage) gewist is. Alleen bij een geldige uid;
   // zonder uid geldt het gewone dagplafond.

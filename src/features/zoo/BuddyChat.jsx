@@ -6,6 +6,7 @@
 // Veilig: gesprek wordt NIET opgeslagen (alleen in beeld), invoer is begrensd,
 // en de server doet het echte contentfilter + de kindveilige system-prompt.
 import { useState, useRef, useEffect } from "react";
+import { partnerHeader } from "../referral/partnerCode.js";
 import { BUDDY_BY_ID, buddyWeetjes } from "./buddies";
 import { track } from "../../utils.js";
 import { verwerkMakerTip } from "../../shared/makerTip.js";
@@ -84,7 +85,7 @@ export default function BuddyChat({ open, onClose, buddyId, buddyNaam, facts = {
     try {
       const res = await fetch("/api/buddy-chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...partnerHeader() },
         body: JSON.stringify({
           messages: next.slice(-8).map((m) => ({ role: m.role, content: m.content })),
           context: {

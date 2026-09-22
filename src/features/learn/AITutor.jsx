@@ -8,6 +8,7 @@
 // MVP scope: niet meer dan ~150 regels, geen dependencies buiten React.
 
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
+import { partnerHeader } from "../referral/partnerCode.js";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
@@ -207,7 +208,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     try {
       const resp = await fetch("/api/tutor-chat", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", ...partnerHeader() },
         body: JSON.stringify({
           messages: next.slice(-12),
           context: {
