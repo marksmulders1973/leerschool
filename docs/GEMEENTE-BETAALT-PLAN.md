@@ -19,6 +19,18 @@
 | 1. Kindpakket / meedoen-budget (aanbieder worden) | 240 gezinnen × €34,50/jaar (staffel: v.a. 100 gezinnen €24,95) | makkelijkst, geen politiek |
 | 2. Gemeente-licentie | 3 gemeenten × €2.000/jaar | middel, één beleidsmedewerker overtuigen |
 | 3. Scholen met achterstandsgeld (OAB / nieuwkomersbekostiging) | 20 scholen × €300/jaar | traag; lijst (achterstandsscore + LOWAN) bestaat al |
+| 4. **Buurtgezinnen landelijk als koper** (idee Mark 22 sep 2026) | ~1.000-1.200 koppelingen/jaar × €24,95 = **€25.000-30.000/jaar** | één gesprek i.p.v. 145 gemeenten; besluit ligt bij hun directie (Nicole 5 sep: "kan ik niet beïnvloeden") → 2027 |
+
+**Route 4 — Buurtgezinnen (spoor geopend 22 sep 2026).** Buurtgezinnen is actief in ~145
+gemeenten (bijna 10.000 koppelingen sinds 2014; factsheet begin 2026). Gemeenten kopen
+Buurtgezinnen al in, dus de contracten en relaties liggen daar. Per gemeente zijn het maar
+7-8 vraaggezinnen/jaar (onder ons minimum van 10) → landelijk bundelen is de enige logische
+vorm. Volgorde: (1) golf op BUURTGEZINNEN2027 meten na hun interne nieuwsbrief wo 23 sep;
+(2) half nov, ná KvK + Stripe, gesprek vragen met Wendy/Nicole: "vanaf 2028 kost Familie
+geld — regelen jullie dat voor jullie vraaggezinnen?" (tot eind 2027 blijft het voor hun
+gezinnen gratis, geen druk); (3) gemeenten NOOIT los benaderen met Buurtgezinnen als
+kruiwagen zonder hun toestemming. Steungezinnen = tweede vijver (eigen kinderen), pas vragen
+na de eerste meting.
 
 **Route 1 eerst.** Kandidaten (uit Fable-kennis, nog te verifiëren): Rotterdampas kindtegoed,
 U-pas Utrecht, Meedoen-regeling Tilburg, Stadjerspas Groningen, Amsterdam Stadspas kindtegoed,
