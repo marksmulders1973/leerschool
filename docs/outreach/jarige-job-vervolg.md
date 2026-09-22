@@ -31,7 +31,7 @@ Wat mij opviel: in elke box zit een leesboek, omdat lezen kinderen verder helpt.
 
 Mijn vraag: zou er in de box voor kinderen van 9 tot en met 12 jaar ruimte zijn voor een klein kaartje, of een regel op een kaart die er al in zit? Met een QR-code en de tekst "Gefeliciteerd! Vanaf vandaag mag je gratis oefenen op leerkwartier.app". Het kaartje is bewust vrolijk en zonder logo's van sponsors, zodat het bij de box past. Hoe we dat praktisch regelen, overleg ik graag met u; ik wil u geen werk bezorgen.
 
-Er zijn gelukkig al organisaties die meedoen: de gemeente Den Haag zet Leerkwartier vanaf januari op de Ooievaarspas, en Voedselbank Rotterdam en Voedselbank Alkmaar wijzen hun gezinnen erop. Wie er nog meer meedoen, ziet u op leerkwartier.app/bedankt.html; daar staat elke organisatie met eigen toestemming. De eerste gezinnen via die weg vinden ons inmiddels, en dat is precies de doelgroep van uw box.
+We zijn een jong leermiddel, maar we maken gelukkig een vliegende start: de gemeente Den Haag zet Leerkwartier vanaf januari op de Ooievaarspas, en Voedselbank Rotterdam en Voedselbank Alkmaar wijzen hun gezinnen erop. Wie er nog meer meedoen, ziet u op leerkwartier.app/bedankt.html; daar staat elke organisatie met eigen toestemming. De eerste gezinnen via die weg vinden ons inmiddels, en dat is precies de doelgroep van uw box.
 
 Een voorbeeld van zo'n kaartje laat ik graag zien voordat er iets gedrukt wordt, in uw huisstijl of in de onze, wat u prettiger vindt.
 
