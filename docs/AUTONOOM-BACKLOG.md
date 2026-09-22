@@ -15,6 +15,7 @@ Cito + examens versterken. Drie type werk:
 ---
 
 ## 💰 SPRINT 0 — VERDIENMODEL (Mark 20 sep: "prio komende maand") — vóór al het andere
+- [ ] **22 sep — 3 nieuwe partnermails afmaken (Mark: "volgende sessie")**: Jarige Job vervolg + School & Omgeving-coalities (concepten klaar in docs/outreach/) + woningcorporaties (concept schrijven); alle drie volledig in de chat tonen, versturen pas na "stuur maar" per mail. Daarna: code JARIGEJOB2027 + coalitie-codes in PartnerWelkom/CodeBalk/partner_codes.
 
 > **Bij "ga verder" of een vage instructie: pak hier de bovenste ☐.** Volledige opdracht +
 > deadlines staan in `docs/MARK-AGENDA.md` § PRIORITEIT OKTOBER; onderbouwing in

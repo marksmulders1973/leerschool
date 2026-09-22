@@ -72,6 +72,7 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 - ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
 
 ## 🔴 Nu doen (deze week)
+- ✉️ **3 partnermails afmaken (Mark 22 sep: "volgende sessie")** — concepten staan in `docs/outreach/`: (1) Jarige Job vervolg (`jarige-job-vervolg.md`; jouw keuze: fysiek kaartje ~35.000/jaar ≈ €400-700 óf digitaal); (2) School & Omgeving-coalities (`rijke-schooldag-coalities.md`; jouw keuze: eerste 10 coalities); (3) woningcorporaties — concept nog schrijven (onderzoek liep). Werkwijze: Claude toont elke tekst volledig in de chat → jij zegt per mail "stuur maar". Sociaal bewijs alleen met de 3 live-namen van bedankt.html (Den Haag/Ooievaarspas, VB Rotterdam, VB Alkmaar).
 
 - ✅ **17 sep 21:45 — Dongen: beide drukbestanden aangeleverd bij Drukwerkdeal** (posters + flyers "Gereed voor productie", levering di 22 sep bij Dongen). ✅ Regeltje aan Monique verstuurd vr 18 sep 06:17/06:18 (dubbel: Mark klikte zelf én het script). Factuur €55,84 staat in KOSTEN-2026.md (PDF nog ophalen bij Drukwerkdeal → Facturen). Di 22 sep: levering controleren.
 - 📝 **17 sep — Voedselbank Lelystad (Dick Nauta, 17:27): wil doorverwijzen zónder code en zonder vermelding van de voedselbank.** Concept-antwoord ligt klaar (`Desktop\dagrapport\concept-mail-dick-lelystad-2026-09-17.md`). Jouw keuze: akkoord met code-loos Lelystad? Dan "stuur maar".
