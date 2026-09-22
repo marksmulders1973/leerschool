@@ -7,8 +7,8 @@ Status-blok hiervan hoort in élk dagrapport (zie DAGRAPPORT-KOMPAS.md § 💳).
 | Product | Prijs | Stripe-vorm | Geldig |
 |---|---|---|---|
 | Familie **Seizoenspas** (anker) | € 24,95 éénmalig | Checkout `mode=payment` + `invoice_creation` | t/m 31 juli 2027, stopt vanzelf, géén verlenging |
-| Familie maand | € 4,95 p/mnd | Checkout `mode=subscription` | tot opzegging (Customer Portal) |
-| Familie jaar | € 39 p/jaar | Checkout `mode=subscription` | tot opzegging |
+| ~~Familie maand~~ | ~~€ 4,95 p/mnd~~ | **geschrapt 22 sep 2026** (Mark) | — |
+| Familie jaar | € 39 éénmalig | Checkout `mode=payment` + `invoice_creation` | 365 dagen, stopt vanzelf; verlengen zelf via mail, € 31 (plan `jaar_verleng`) |
 | Pro school | € 99 per klas p/jaar | **Factuur** (Stripe Invoicing vanuit dashboard, 30 dagen) | schooljaar |
 | Pro bijlesdocent | ± € 6,95 p/mnd / € 59 p/jaar | Checkout subscription (later, tier `teacher_pro`) | tot opzegging |
 | Partner-codes (Ooievaarspas e.a.) | gratis | géén Stripe: `mijn_partner_recht` (bestaand) | 31-12-2027 / blijvend |

@@ -204,7 +204,7 @@ export default function PakketUitleg({ open, onClose }) {
         <div style={{ display: "flex", flexWrap: "wrap", gap: 10, marginBottom: 12 }}>
           <TierKaart
             emoji="💛" naam="Familie" voorWie="voor thuis"
-            prijs="± € 4,95 p/mnd · 🎟️ Seizoenspas € 24,95 éénmalig (hele toetsjaar, stopt vanzelf) · € 39 p/jaar — per gezín, niet per kind"
+            prijs="🎟️ Seizoenspas € 24,95 éénmalig (hele toetsjaar) · of € 39 voor een jaar — allebei één keer betalen, stopt vanzelf · per gezín, niet per kind"
             items={[
               "AI-bijles Vonk onbeperkt (gratis = kleine dagportie)",
               "Ouder-overzicht: voortgang per vak + toets-verwachting",

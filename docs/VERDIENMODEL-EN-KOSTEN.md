@@ -14,7 +14,7 @@
 | | Prijs | Netto per kind/jaar | Doel-aantal voor €500/mnd |
 |---|---|---|---|
 | **Partner (gemeente/stichting)** | **per gezin** (tot 3 kinderen): €34,50 · v.a. 100 gezinnen €24,95 (22 sep) | ≈ €24 – €34 per gezin (kosten ≈ €0,45/gezin gemeten) | **~175 gezinnen** à €34,50 |
-| Familie (ouder) | €4,95/mnd · **€39/jaar per gezín** | €18 – €50 per gezin/jaar | 131 – 361 gezinnen |
+| Familie (ouder) | €24,95 Seizoenspas · **€39/jaar per gezín** (allebei eenmalig, maandplan geschrapt 22 sep) | €18 – €50 per gezin/jaar | 131 – 361 gezinnen |
 | Bijlesdocent (Pro) | €6,95/mnd · €59/jaar | **+€4,74 tot +€6,50/mnd** (94% marge) | docent-tool, zie §5b |
 | School | €99/klas/jaar ⚠️ eenheid onduidelijk | ~94% marge | zie §5b |
 | Ooievaarspas Den Haag | **€0, voor altijd** | −€4 tot −€87 | n.v.t. — referentie, geen omzet |
@@ -68,8 +68,8 @@ AI-verbruik van een gratis gebruiker anders behandelt dan dat van een betalende.
 **Voorwaarde die bij elkaar hoort:** €34,50 zonder ingreep 3 is bij zwaar gebruik nog
 steeds verliesgevend (−€62,87/kind/jaar). De prijs alleen lost het niet op.
 
-**Bewust niet doen (nu):** Familie-prijs aanpassen. Die staat op €4,95/mnd · €39/jaar ·
-€24,95 Seizoenspas en is gezond: +€18 tot +€50 per gezin per jaar. Eén prijswijziging tegelijk.
+**Bewust niet doen (nu):** Familie-prijs aanpassen. Die staat op €39/jaar ·
+€24,95 Seizoenspas (maandplan geschrapt 22 sep 2026; jaar verlengt nooit stilzwijgend) en is gezond: +€18 tot +€50 per gezin per jaar. Eén prijswijziging tegelijk.
 
 🔧 **Correctie 20 sep — ik rekende eerst met prijzen die niet bestaan.** De eerste analyse
 gebruikte €1,95/mnd (ouder), €9,95 (leerkracht) en School S/M/L €29/€49/€79, zoals Mark ze

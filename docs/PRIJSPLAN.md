@@ -99,9 +99,11 @@ sluit naadloos aan op de eerlijkheids-belofte (geen creditcard-valkuil).
 Marketing-zin: *"Eén keer betalen, het hele toetsjaar geholpen — en hij
 stopt vanzelf. Geen abonnement, geen kleine lettertjes."*
 
-**Plek op de prijzenpagina (anker-opbouw, drie smaken Familie):**
-1. Maand € 4,95 — flexibel, opzegbaar
-2. **Seizoenspas — "meest gekozen"** (het anker in het midden)
+**Plek op de prijzenpagina (twee smaken Familie, allebei eenmalig):**
+1. ~~Maand € 4,95 — flexibel, opzegbaar~~ **GESCHRAPT 22 sep 2026** (Mark:
+   "schrappen") — doorlopend botst met "stopt vanzelf"; één verhaal is
+   makkelijker te vertellen aan Leergeld en gemeenten.
+2. **Seizoenspas — "meest gekozen"** (het anker)
 3. Jaar € 39 — voor gezinnen met meerdere/jongere kinderen (goedkoopst op
    lange termijn; blijft bestaan als retentie-optie). **Eénmalig, stopt
    vanzelf** (Mark 22 sep 2026: "daar heb ik zelf ook een hekel aan") — zie
@@ -121,8 +123,8 @@ doet het gezin zelf, met één knop (iDEAL), tegen **€ 31 (20% korting)**:
   je moet uitleggen.
 - Bewust geaccepteerd: minder "stilzwijgend doorlopende" omzet dan grote
   partijen; bij onze doelgroep is "geen stiekeme incasso" juist het argument.
-- Open: maandplan (€ 4,95) is per definitie doorlopend en botst hiermee →
-  voorstel schrappen, één prijs is makkelijker te vertellen. Nog niet besloten.
+- ✅ Maandplan (€ 4,95) geschrapt (Mark 22 sep 2026): er is nu géén enkel
+  doorlopend abonnement meer bij Leerkwartier.
 - Te bouwen vóór live (jan 2027): Stripe-prijs € 31 (`STRIPE_PRICE_JAAR_VERLENG`),
   cron-mailtjes op `subscriptions.valid_until` (Resend), verlengknop op
   abonnement.html met plan `jaar_verleng`.

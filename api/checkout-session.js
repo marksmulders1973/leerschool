@@ -8,15 +8,17 @@
 // Geen npm-pakket: Stripe's REST-API via fetch + handtekening-check via Web
 // Crypto, zodat dit op de edge-runtime draait zonder extra dependency.
 //
-// Plannen (docs/PRIJSPLAN.md, Mark 9 aug 2026): Familie Seizoenspas € 24,95
-// éénmalig (geldig t/m 31 juli van het toetsjaar, stopt vanzelf), Familie
-// € 4,95 p/mnd, Familie € 39 p/jaar. School: licentie op aanvraag, via factuur.
+// Plannen (docs/PRIJSPLAN.md): Familie Seizoenspas € 24,95 éénmalig (geldig
+// t/m 31 juli van het toetsjaar, stopt vanzelf) en Familie € 39 per jaar.
+// School: licentie op aanvraag, via factuur. Maandplan GESCHRAPT (Mark 22 sep
+// 2026): twee smaken, allebei eenmalig — er is geen Stripe-abonnement meer.
 //
 // Jaar = ÉÉNMALIG (Mark 22 sep 2026): geen stille verlenging, nooit. 365 dagen
 // geldig, stopt vanzelf, valt terug op Gratis. Verlengen doet het gezin zelf
 // na een mail (30 + 7 dagen vooraf, 1 mail erna) tegen € 31 (20% korting);
 // die korting blijft 30 dagen ná afloop geldig. Vroeg verlengen plakt het
-// nieuwe jaar achter het oude. Alleen "maand" is nog een Stripe-abonnement.
+// nieuwe jaar achter het oude. De abonnement-webhooks (invoice.paid,
+// customer.subscription.*) staan er nog als vangnet, maar worden niet gebruikt.
 //
 // Facturen (Mark-eis 28 aug 2026): élke betaling levert een echte factuur op.
 // Abonnementen: Stripe maakt per periode een factuur. Eénmalig (Seizoenspas):
@@ -40,7 +42,6 @@ const SEIZOEN_EIND = process.env.SEIZOENSPAS_EIND || "2027-07-31T21:59:59Z"; // 
 
 const PLANNEN = {
   seizoenspas: { mode: "payment", price: () => process.env.STRIPE_PRICE_SEIZOENSPAS, tier: "parent_pro" },
-  maand:       { mode: "subscription", price: () => process.env.STRIPE_PRICE_MAAND, tier: "parent_pro" },
   jaar:        { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR, tier: "parent_pro", dagen: 365 },
   // verlengen na een jaar: apart Stripe-prijsobject van € 31 (STRIPE_PRICE_JAAR_VERLENG), zelfde looptijd
   jaar_verleng: { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR_VERLENG, tier: "parent_pro", dagen: 365 },

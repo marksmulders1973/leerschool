@@ -63,13 +63,14 @@ export const FREE_QUOTA = {
 // tonen — proPlan.js (LAGEN) is de bron van waarheid voor prijs-copy.
 // Mapping op TIERS: familie = parent_pro, leerkracht (Pro) = teacher_pro.
 export const PRICING = {
-  familie_monthly: { price: 4.95, currency: "EUR", interval: "maand", label: "Familie — per gezin/maand" },
+  // Maandplan € 4,95 GESCHRAPT (Mark 22 sep 2026): doorlopend botst met "stopt vanzelf".
   // Seizoenspas (Mark 9 aug 2026, PRIJSPLAN §2b): eenmalige betaling, geldig
   // t/m validUntil, GEEN automatische verlenging (merkbelofte "stopt vanzelf").
   // Stripe straks: mode "payment" + subscriptions.valid_until = validUntil;
   // elk schooljaar de nieuwe einddatum instellen.
   familie_seizoenspas: { price: 24.95, currency: "EUR", interval: "eenmalig", validUntil: "2027-07-31", label: "Familie Seizoenspas — het hele toetsjaar, stopt vanzelf" },
-  familie_yearly: { price: 39, currency: "EUR", interval: "jaar", label: "Familie — per gezin/jaar" },
+  // Jaar = eenmalig, 365 dagen, stopt vanzelf; verlengen kiest het gezin zelf (€ 31, 20% korting).
+  familie_yearly: { price: 39, currency: "EUR", interval: "eenmalig", dagen: 365, verlengPrijs: 31, label: "Familie — per gezin, één jaar, stopt vanzelf" },
   // 22 sep 2026 (Mark): Pro voor bijlesdocenten GESCHRAPT uit de etalage (0 klanten).
   // De twee constanten blijven staan voor de paywall-infra, maar worden nergens meer getoond.
   teacher_monthly: { price: 6.95, currency: "EUR", interval: "maand", label: "(niet aangeboden) Pro bijlesdocent — per maand" },
