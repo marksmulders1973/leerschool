@@ -20,7 +20,7 @@ Eén kwartier per schooldag = 1,25 klokuur per week ≈ €330 per leerling per 
 3. **Twee mails, één spoor.** (a) Eén informatieve mail aan rijkeschooldag@minocw.nl (mag altijd, geen verkoop). (b) De coalitie-mail hieronder aan regievoerders. Geen demo-aanbod, geen bezoeken, geen drukwerk beloofd.
 4. Verzenden via hallo@ (Resend) na jouw "stuur maar" op de lijst én de tekst.
 
-## Mail A — programmabureau (informatief)
+## Mail A — programmabureau — ✅ VERSTUURD 22 sep ~21:00 (Gmail-id 1a0ca7aa4ab6f437, tekst zoals hieronder, mét namen)
 
 **Aan:** rijkeschooldag@minocw.nl
 **Onderwerp:** Vraag van een kleine aanbieder: hoe vinden coalities lokale partners?
@@ -48,7 +48,7 @@ Jullie coalitie in [gemeente] doet mee aan School & Omgeving. Ik schrijf u omdat
 
 Ik ben Mark Smulders, vader, en ik bouw in mijn vrije tijd Leerkwartier: een leer-app waarmee kinderen uit groep 6, 7 en 8 elke dag een kwartier oefenen voor de Doorstroomtoets. Rekenen, taal en begrijpend lezen, met uitleg op drie niveaus als iets nog niet lukt, een voorleesknop, en een klas-ingang zonder accounts zodat een begeleider het na schooltijd op een digibord kan zetten. Voor scholen en begeleiders is het oefenen gratis, gegarandeerd tot en met 2031.
 
-Waarom ik u mail: bij huiswerkbegeleiding buiten schooltijd is "wat doen we vandaag" vaak het lastigste. Een vast kwartier met een duidelijke startknop lost dat op, en de leerkracht ziet de volgende dag wat er geoefend is. We zijn een jong leermiddel, maar we maken gelukkig een vliegende start: de gemeente Den Haag zet Leerkwartier vanaf januari op de Ooievaarspas, en Voedselbank Rotterdam en Voedselbank Alkmaar wijzen hun gezinnen erop. Wie er nog meer meedoen, ziet u op leerkwartier.app/bedankt.html; daar staat elke organisatie met eigen toestemming.
+Waarom ik u mail: bij huiswerkbegeleiding buiten schooltijd is "wat doen we vandaag" vaak het lastigste. Een vast kwartier met een duidelijke startknop lost dat op, en de leerkracht ziet de volgende dag wat er geoefend is. We zijn een jong leermiddel, maar we maken gelukkig een vliegende start.
 
 Wat ik u vraag: zou u dit willen bekijken met degene die het programma voor 2027-2028 invult? Op leerkwartier.app/klas ziet u in één minuut hoe de klas-ingang werkt. Als jullie de gezinnen thuis ook willen laten oefenen met alle extra's, kan de coalitie dat per gezin inkopen; die prijs staat open op de site en ik stuur hem graag op.
 
@@ -60,7 +60,7 @@ Leerkwartier — leerkwartier.app
 Een kwartier per dag leren, een leven lang slimmer.
 
 ## Sociaal bewijs — regel
-Zie jarige-job-vervolg.md § Sociaal bewijs: alleen namen die live op bedankt.html staan; nooit wát een partner doet; geen klassen/scholen bij naam zonder hun ja.
+**Mark 22 sep ~21:10: partnernamen + bedankt.html-verwijzing UIT mail B gehaald** ("haal dit eruit"). Alleen nog de zin "vliegende start". Geen namen in coalitie-mails.
 
 ## Na een ja
 - Coalitie krijgt een eigen partnercode (bijv. [GEMEENTE]RSO2027) zodat de golf meetbaar is; klas-ingang /klas per school.
