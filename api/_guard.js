@@ -106,9 +106,12 @@ const DEFAULT_LIMITS = {
 };
 
 // Charley-rem (16 sep 2026): per-apparaat-backstop. Sleutel `uid:<lk_uid>`
-// in dezelfde tabel; 120 berichten/dag per apparaat, ongeacht account.
+// in dezelfde tabel; 20 berichten/dag per apparaat, ongeacht account.
+// 22 sep 2026 (Mark: "doe maar"): 120 → 20 = de dagbundel uit het verdienmodel.
+// Raakt niemand (max gemeten die week: 15/dag, mediaan 5); sluit het
+// Ooievaarspas-worst-case af. Zie docs/VERDIENMODEL-EN-KOSTEN.md §10.
 // Rapportages die ai_call_quota optellen: `endpoint not like 'uid:%'`.
-export const PER_UID_LIMIT_DAY = 120;
+export const PER_UID_LIMIT_DAY = 20;
 
 export async function dailyQuotaCheck(endpoint, opts = {}) {
   const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;

@@ -11,7 +11,7 @@
 //   3. DAG_*     — gast-apparaat 40 berichten/dag, account 80, betaald
 //                  Familie onbeperkt. Daarboven een vriendelijke pauze tot morgen.
 // De teller "sinds vraag" gaat op 0 bij élk question_answered-event (utils.track).
-// Server-backstop: api/tutor-chat.js telt per uid (120/dag) via ai_call_quota,
+// Server-backstop: api/tutor-chat.js telt per uid (20/dag, was 120 tot 22 sep) via ai_call_quota,
 // voor het geval localStorage gewist wordt.
 //
 // Geen imports: utils.js importeert dit bestand (geen kringverwijzing).
