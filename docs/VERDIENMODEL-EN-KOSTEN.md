@@ -398,6 +398,7 @@ Opgekomen in het gesprek van 20 sep. Mark heeft **nog niets besloten**; alles hi
 materiaal voor de sessie, geen keuze.
 
 ### 9a. Het Squla-anker klopt niet overal
+> **✅ 22 sep 2026 — BEVESTIGD via squla.nl/samenwerken (Fable):** *"Speciaal voor stichtingen en goede doelen bieden we Squla tegen kostprijs aan. Dit betekent € 43,52 voor een jaarlidmaatschap (normale prijs € 131,88)."* Verder: **minimale afname 10 stuks**, codes "onbeperkt houdbaar", geen staffel/volumekorting genoemd, "ruim 90 stichtingen en andere goede doelen". Leergeld Den Haag alleen al: 2.731 kinderen met Squla/WoordExtra in 2021 (jaarverslag; 3.223 in 2020) ≈ €119k/jaar. Ooievaarspas noemt het gratis Squla-abonnement (groep 3-8, via Leergeld Den Haag) als regeling. **Gebruik: alleen intern** (Mark 22 sep: concurrenten niet bij naam naar buiten).
 
 Er lopen drie getallen door de docs, bij verschillende kopers:
 
