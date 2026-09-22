@@ -30,7 +30,7 @@ NB: bijna geen corporatie publiceert een algemeen e-mailadres; het is formulier 
 3. Batch van 8 in één keer of eerst 2 als test (Staedion + Woonstad, beide in een stad waar we al een partner hebben)?
 
 ## Sociaal bewijs
-Alleen de live-namen van bedankt.html (Den Haag/Ooievaarspas, VB Rotterdam, VB Alkmaar); nooit wát een partner doet. Zie jarige-job-vervolg.md § Sociaal bewijs.
+**Geen namen, geen bedankt.html-link (Mark 22 sep).** Alleen: "We zijn een jong leermiddel, maar we maken gelukkig een vliegende start."
 
 ## Bronnen (selectie)
 - Woningwet art. 45: https://maxius.nl/woningwet/artikel45 · BTIV art. 51: https://maxius.nl/besluit-toegelaten-instellingen-volkshuisvesting-2015/artikel51

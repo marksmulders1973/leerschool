@@ -40,8 +40,8 @@ Mark Smulders
 Leerkwartier — leerkwartier.app
 Een kwartier per dag leren, een leven lang slimmer.
 
-## Sociaal bewijs — regel (Mark 22 sep + 13 aug)
-Alleen partners die LIVE op bedankt.html staan mogen bij naam (= toestemming): nu Ooievaarspas/Den Haag, Voedselbank Rotterdam, Voedselbank Alkmaar. Nooit vertellen wát een partner doet (flyers/nieuwsbrief/schermen), nooit apparaat-cijfers, geen klassen of scholen bij naam zonder hun ja. Wil je meer namen kunnen noemen: eerst toestemming vragen (Kinderhulp-mail loopt; Alkmaar/Dongen/Lelystad/Spark Fest/Studiezalen staan klaargezet in bedankt.html).
+## Sociaal bewijs — regel
+**Mark 22 sep ~21:10 (ná verzending van deze mail): voortaan NIEMAND benoemen in outreach, ook geen bedankt.html-link.** Deze mail ging nog mét namen (verstuurd 20:50). Alleen nog: "We zijn een jong leermiddel, maar we maken gelukkig een vliegende start."
 
 ## Na een ja
 - Kaartje ontwerpen (A6, B1-taal, QR naar leerkwartier.app/?partner=JARIGEJOB2027, Leerkwartier-logo + slogan) → eerst aan Mark tonen → naar Jarige Job.

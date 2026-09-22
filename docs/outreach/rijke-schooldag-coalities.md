@@ -60,7 +60,7 @@ Leerkwartier — leerkwartier.app
 Een kwartier per dag leren, een leven lang slimmer.
 
 ## Sociaal bewijs — regel
-**Mark 22 sep ~21:10: partnernamen + bedankt.html-verwijzing UIT mail B gehaald** ("haal dit eruit"). Alleen nog de zin "vliegende start". Geen namen in coalitie-mails.
+**Mark 22 sep ~21:10: partnernamen + bedankt.html-verwijzing UIT mail B gehaald** ("haal dit eruit"). Alleen nog de zin "vliegende start". **Mark 22 sep: voortaan in GEEN enkele outreach-mail namen of een bedankt.html-link** ("zeker omdat we naar de gemeentes mailen").
 
 ## Na een ja
 - Coalitie krijgt een eigen partnercode (bijv. [GEMEENTE]RSO2027) zodat de golf meetbaar is; klas-ingang /klas per school.
