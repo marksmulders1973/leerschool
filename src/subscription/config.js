@@ -76,9 +76,13 @@ export const PRICING = {
   teacher_yearly: { price: 59, currency: "EUR", interval: "jaar", label: "(niet aangeboden) Pro bijlesdocent — per jaar" },
   // Schoollicentie: prijs OP AANVRAAG, komt uit de eerste schoolgesprekken (was €99/klas).
   teacher_school: { price: null, currency: "EUR", interval: "school/jaar", label: "Schoollicentie — op aanvraag" },
-  // Partner: gemeente of stichting betaalt per kind, het kind krijgt het Familie-niveau.
-  // Besloten 20 sep 2026 (was €25); bron docs/GEMEENTE-BETAALT-PLAN.md. Prijs staat op
-  // zichzelf — geen vergelijking met andere aanbieders in copy (Mark 22 sep).
-  partner_kind: { price: 34.5, currency: "EUR", interval: "kind/jaar", label: "Partner (gemeente/stichting) — per kind/jaar" },
+  // Partner: gemeente of stichting koopt het Familie-pakket PER GEZIN (tot 3 kinderen),
+  // niet per kind — zelfde eenheid als thuis (Mark 22 sep 2026: "klinkt ook beter").
+  // Staffel: 10-99 gezinnen €34,50 · 100-249 €24,95 · 250+ in overleg; minimaal 10;
+  // codes verlopen niet. Bron docs/GEMEENTE-BETAALT-PLAN.md. Prijs staat op zichzelf —
+  // geen vergelijking met andere aanbieders in copy.
+  partner_gezin: { price: 34.5, currency: "EUR", interval: "gezin/jaar", label: "Partner (gemeente/stichting) — per gezin/jaar, 10-99 gezinnen" },
+  partner_gezin_100: { price: 24.95, currency: "EUR", interval: "gezin/jaar", label: "Partner — per gezin/jaar vanaf 100 gezinnen" },
+  partner_min_gezinnen: 10,
   kwartier_tegoed: { price: null, currency: "EUR", interval: "los", label: "Kwartier-tegoed — prijs per kwartier vóór lancering bekend" },
 };

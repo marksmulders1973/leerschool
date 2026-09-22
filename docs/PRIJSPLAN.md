@@ -41,9 +41,12 @@ goedkoopste acquisitiekanaal).
 **Richtprijs (drie smaken, per gezin):** € 4,95/mnd · 🎟️ Seizoenspas € 24,95
 éénmalig (t/m 31 juli 2027, zie §2b) · € 39/jaar. USP: één prijs voor het
 hele gezin, niet per kind (max 3 kinderen).
-**Partner — gemeente of stichting betaalt: € 34,50 per kind per jaar** (besloten
-20 sep 2026, was € 25); het kind krijgt het Familie-niveau. Bron:
-`GEMEENTE-BETAALT-PLAN.md`, code `PRICES.partner_kind` in `config.js`.
+**Partner — gemeente of stichting koopt het Familie-pakket per gezín** (tot 3
+kinderen), **niet per kind** — besloten 22 sep 2026 (Mark: zelfde eenheid als thuis,
+"klinkt ook beter"; was € 34,50 per kind sinds 20 sep). **Staffel:** 10–99 gezinnen
+€ 34,50 · 100–249 gezinnen € 24,95 · 250+ in overleg · minimaal 10 · codes verlopen
+niet. Bron: `GEMEENTE-BETAALT-PLAN.md`, code `PRICES.partner_gezin` in `config.js`.
+Intern ijkpunt (niet naar buiten): stichtingen betalen elders € 43,52 per kínd.
 🔴 **Geen vergelijking met andere aanbieders in copy of mails** (Mark 22 sep 2026:
 "klinkt vals, zo wil ik niet zijn") — de prijs staat op zichzelf.
 **Inhoud:** ouder-dashboard (voortgang alle kinderen), weekrapport per mail,

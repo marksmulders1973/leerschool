@@ -20,7 +20,7 @@
 |---|---|---|---|---|
 | 1 | **Eén prijslijst die overal hetzelfde zegt** — `config.js`, `proPlan.js`, `PRIJSPLAN.md`, `abonnement.html`. Nu staan er prijzen in omloop die nergens in de code bestaan. | Claude | 1 okt | ☐ |
 | 2 | **School-eenheid oplossen**: `proPlan.js` zegt "€99 per klas", Mark bedoelt "bundel voor ~30 docenten". Twee producten, ~10× verschil. | Mark beslist, Claude verwerkt | 1 okt || ✅ 22 sep — Pro geschrapt, schoollicentie **op aanvraag**, €99/klas uit code en copy (v683); prijs komt uit de eerste schoolgesprekken |
-| 3 | **Partner per kind (€34,50) vs Familie per gezin (€39)** — zelfde product, bijna dubbele prijs voor een gemeente. Antwoord klaar hebben vóór het eerste inkopersgesprek. | Mark beslist | 10 okt | ☐ |
+| 3 | **Partner per kind (€34,50) vs Familie per gezin (€39)** — zelfde product, bijna dubbele prijs voor een gemeente. Antwoord klaar hebben vóór het eerste inkopersgesprek. | Mark beslist | 10 okt || ✅ 22 sep — **partner koopt per gezin** (tot 3 kinderen), staffel 10–99 €34,50 · 100–249 €24,95 · 250+ in overleg |
 | 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ☐ |
 | 5 | **Charley praat alleen indien nodig + pauzeknop** (dagbundel als vangnet). | Claude | week 22 sep | 🟡 **bundel ✅ v681 (22 sep, 120→20/dag, raakt niemand)**; pauzeknop + terughoudendheid nog open |
 | 6 | **Btw-vraag**: mag 21% bóvenop €34,50 bij gemeente/stichting (BTW-compensatiefonds)? | Mark, bij de KvK | 28 sep | ☐ |
@@ -36,7 +36,7 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 ## 🧭 Langlopend plan — gemeente betaalt (doel €500/mnd) · vast blok in elk dagrapport
 
 > Bron: `docs/GEMEENTE-BETAALT-PLAN.md` (2 sep 2026). Ooievaarspas = voor altijd gratis (referentie, geen omzet).
-- **sep**: KvK ma 28 sep → meteen KOR aanvragen · tekst "partner-aanbod 2028: **€34,50/kind/jaar**, gemeente betaalt" (prijs verhoogd van €25 → €34,50 op 20 sep na de kostprijsanalyse; onderbouwing in GEMEENTE-BETAALT-PLAN.md § bouwsteen 2). 🔴 **Deze prijs moet in de oktober-Leergeld-mail en in élke leveranciers-aanmelding staan — daarna ligt hij een jaar vast.**
+- **sep**: KvK ma 28 sep → meteen KOR aanvragen · tekst "partner-aanbod 2028: **Familie-pakket per gezin, €34,50 (v.a. 100 gezinnen €24,95)**, gemeente betaalt" (prijs verhoogd van €25 → €34,50 op 20 sep na de kostprijsanalyse; onderbouwing in GEMEENTE-BETAALT-PLAN.md § bouwsteen 2). 🔴 **Deze prijs moet in de oktober-Leergeld-mail en in élke leveranciers-aanmelding staan — daarna ligt hij een jaar vast.**
 - **🗓️ Tijdlijn geld-spoor (Mark-akkoord 3 sep, aan Esther gemeld):** 28 sep KvK → 29 sep–5 okt zakelijke rekening (Knab) + KvK-nr aan Esther → 5–12 okt Stripe-account + verificatie + Ooievaarspas-formulier (datum **1 januari 2027**) → okt webhook/betaalflow bouwen + test PRO2027 → nov Stripe live (stil) + Ooievaarspas plaatst aanbieding → **dec voorverkoop Seizoenspas** (belofte "in 2026 helemaal gratis" blijft heel; Mark 3 sep: zónder kerstpakketten) → **1 jan 2027 Familie betaald voor niet-pashouders**.
 - **okt**: SUN Middelburg herbenaderen mét Ooievaarspas-keurmerk; opener: "hoe was de startbijeenkomst van 10 september?" (Mark reageerde die dag op hun LinkedIn-post)
 - **okt**: Leergeld-mail mét prijs · leveranciers-aanmelding 4-6 stadspassen/kindpakketten · partner-rapport v1
@@ -49,11 +49,11 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 > Bron: `docs/VERDIENMODEL-EN-KOSTEN.md` (§6 = review-opdracht voor Fable). Mark 20 sep:
 > "maak er een plan van wat ik later door fable kan laten nalopen."
 
-- **Doel:** €500/mnd netto = **239 betalende kinderen** à €34,50/jaar. Stand: 0.
+- **Doel:** €500/mnd netto ≈ **175 betalende gezinnen** à €34,50/jaar (of 240 à €24,95). Stand: 0.
 - **Vier ingrepen:** ✅ prijs €25→€34,50 (20 sep) · ☐ prompt caching (~1u, −48% AI-rekening)
   · 🗓️ **Charley praat alleen indien nodig + pauzeknop — week van 22 sep** (Marks keuze;
   dagbundel 20/50 als vangnet eronder) · ☐ Vercel Pro vóór de eerste betaling (€18,50/mnd).
-- 🔴 **Prijs €34,50 moet in de oktober-Leergeld-mail** en in élke leveranciers-aanmelding.
+- 🔴 **De gezinsprijs (€34,50, v.a. 100 gezinnen €24,95) moet in de oktober-Leergeld-mail** en in élke leveranciers-aanmelding.
 - 🔴 **Open risico 1 — Ooievaarspas:** 100.000 gezinnen gratis; bij 3% activatie €1.050-3.450/mnd
   kosten, nul omzet. Vraag Den Haag naar hun activatiecijfer bij andere digitale aanbieders.
 - 🔴 **Open risico 2 — leerkracht/school verliesgevend** bij middengebruik (−€7,14 resp. −€18,49/mnd).

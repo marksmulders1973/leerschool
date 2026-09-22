@@ -13,7 +13,7 @@
 
 | | Prijs | Netto per kind/jaar | Doel-aantal voor €500/mnd |
 |---|---|---|---|
-| **Partner (gemeente/stichting)** | €34,50/kind/jaar | €22 – €32 | **239** bij gemiddeld gebruik, 296 worst case |
+| **Partner (gemeente/stichting)** | **per gezin** (tot 3 kinderen): €34,50 · v.a. 100 gezinnen €24,95 (22 sep) | ≈ €24 – €34 per gezin (kosten ≈ €0,45/gezin gemeten) | **~175 gezinnen** à €34,50 |
 | Familie (ouder) | €4,95/mnd · **€39/jaar per gezín** | €18 – €50 per gezin/jaar | 131 – 361 gezinnen |
 | Bijlesdocent (Pro) | €6,95/mnd · €59/jaar | **+€4,74 tot +€6,50/mnd** (94% marge) | docent-tool, zie §5b |
 | School | €99/klas/jaar ⚠️ eenheid onduidelijk | ~94% marge | zie §5b |
@@ -79,7 +79,8 @@ allemaal gezonder dan de getallen waar ik mee begon. De conclusie "€1,95 is te
 over een prijs die niet bestaat — bij €39/jaar per gezin (één incasso, dus €0,29 Mollie in
 plaats van €3,48) klopt het oudermodel wél.
 
-### 4a. 🔴 Partner per kind vs. Familie per gezin — de eenheden botsen
+### 4a. ~~🔴 Partner per kind vs. Familie per gezin — de eenheden botsen~~ ✅ OPGELOST 22 sep: partner koopt per gezin
+> **Besluit Mark 22 sep 2026:** de partner koopt hetzelfde als thuis — het Familie-pakket per gezín (tot 3 kinderen). Staffel 10–99 gezinnen €34,50 · 100–249 €24,95 · 250+ in overleg · minimaal 10 · codes verlopen niet. Daarmee is de botsing hieronder weg; de tekst blijft staan als geschiedenis.
 
 | | Eenheid | Prijs | Per kind bij 1,5 kind/gezin |
 |---|---|---|---|
@@ -512,7 +513,7 @@ Dat is ook wat ChatGPT niet kon zien.
 3. **€39/gezin dekt 3 kinderen** — ja, ook in §4b's maximum; op gemeten gedrag met enorme marge. Kindlimiet 3 houden.
 4. **Twee Familie-smaken**: jaar €39 + Seizoenspas €24,95; maand schrappen. Marks keuze; Esther één regel bij wijziging.
 
-**Partner per kind vs Familie per gezin (§4a):** per kind houden, met de zin: *"Een gemeente
+**Partner per kind vs Familie per gezin (§4a):** ~~per kind houden~~ → **22 sep besloten: per gezin** (zie §4a-kop). De oude zin hieronder vervalt: *"Een gemeente
 financiert een kind, een gezin koopt een gezinsabonnement. Kindpakketten worden per kind
 toegekend, dus zo sluit het aan op uw administratie."* Geen partner-gezinsprijs bouwen tot
 een inkoper erom vraagt.

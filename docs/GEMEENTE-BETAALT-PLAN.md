@@ -16,19 +16,19 @@
 ## Drie routes naar €6.000/jaar
 | Route | Rekensom | Moeilijkheid |
 |---|---|---|
-| 1. Kindpakket / meedoen-budget (aanbieder worden) | 240 kinderen × €34,50/jaar | makkelijkst, geen politiek |
+| 1. Kindpakket / meedoen-budget (aanbieder worden) | 240 gezinnen × €34,50/jaar (staffel: v.a. 100 gezinnen €24,95) | makkelijkst, geen politiek |
 | 2. Gemeente-licentie | 3 gemeenten × €2.000/jaar | middel, één beleidsmedewerker overtuigen |
 | 3. Scholen met achterstandsgeld (OAB / nieuwkomersbekostiging) | 20 scholen × €300/jaar | traag; lijst (achterstandsscore + LOWAN) bestaat al |
 
 **Route 1 eerst.** Kandidaten (uit Fable-kennis, nog te verifiëren): Rotterdampas kindtegoed,
 U-pas Utrecht, Meedoen-regeling Tilburg, Stadjerspas Groningen, Amsterdam Stadspas kindtegoed,
 Kindpakket Enschede/Almere. **Leergeld-stichtingen** werken hetzelfde (betalen leveranciers
-rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 kinderen × €34,50 = €6.900.
+rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 gezinnen × €34,50 = €6.900.
 
 ## Bouwstenen
 1. **KvK 28 sep** (ma 11:45, Utrecht) → direct **KOR** aanvragen (btw-vrij < €20k) → factureren
    simpel. Zonder KvK+IBAN geen leveranciersbestand.
-2. **Eén prijs overal: €34,50 per kind per jaar via partner** (Mark-besluit 20 sep 2026; was €25).
+2. **Eén eenheid overal: het Familie-pakket per gezín** (tot 3 kinderen) — óók voor partners (Mark-besluit 22 sep 2026; was per kind). **Staffel: 10–99 gezinnen €34,50 · 100–249 €24,95 · 250+ in overleg · minimaal 10 · codes verlopen niet.** Intern ijkpunt: elders betalen stichtingen €43,52 per kínd (bevestigd 22 sep, squla.nl/samenwerken) — niet naar buiten noemen.
    Nooit een ouderprijs in partner-context. **Onderbouwing** (kostprijsanalyse 20 sep): bij €25 dekt
    de prijs de AI-kosten niet bij gemiddeld gebruik — 240 kinderen leverde netto €182-374/mnd i.p.v.
    €500. Bij €34,50 mét Charley-dagbundel (20) en prompt caching is netto/kind/jaar €22-32, en haalt
@@ -82,6 +82,6 @@ rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 kinderen × €34,
 3. Rotterdampas: partneraccount + jaaractie (gratis app), plus mail aan Stichting Meedoen in Rotterdam (vergoedt Squla én StudyGo → wij passen in hun rijtje).
 4. Stadjerspas: mailtje volstaat, ook zonder KvK. **Kan nu al.**
 5. Tilburg: e-mailformulier, kan nu al.
-6. Leergeld-prijsmail (**€34,50/kind/jaar**, codes per stichting, géén vergelijking met andere aanbieders) → oktober, met partner-rapport v1.
+6. Leergeld-prijsmail (**per gezin: €34,50, v.a. 100 gezinnen €24,95**, codes per stichting, géén vergelijking met andere aanbieders) → oktober, met partner-rapport v1.
 
 **Open/niet gevonden:** Rotterdam webshop-aansluiting Jeugdtegoed; U-pas kindbedragen (alleen afbeelding); Tilburg-voorwaarden; Groningen kindbedrag; Amsterdam Aanbiedersgids-PDF; hoe je op een lokale Leergeld-leverancierslijst komt (bel Leergeld landelijk: 085-0664000).
