@@ -110,6 +110,9 @@ export const PAGE_TO_PATH = {
   vandaag: "/vandaag",
   kwartiercheck: "/kwartiercheck",
   "start-kwartier": "/start",
+  // Voor de klas (idee AM, 22 sep 2026): één adres voor op het digibord.
+  // Landt zonder rolkeuze of account meteen in 5 vragen op groepsniveau.
+  klas: "/klas",
 };
 
 // Path-aliassen: extra URL → bestaande page-key. Voor leesvriendelijke deep-links

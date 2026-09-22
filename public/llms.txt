@@ -68,6 +68,7 @@ Vanaf januari 2027 worden de Familie-extra's betaald. Bijzonderheid: de **Seizoe
 - [Voorlopig schooladvies groep 7/8](https://leerkwartier.app/voorlopig-schooladvies.html): kijkmoment in groep 7, tl/havo/vwo uitgelegd, vaste data (voorlopig advies 10-31 jan, Doorstroomtoets eerste helft feb, definitief uiterlijk 24 mrt, bijstellen omhoog), wat een ouder kan doen; Kwartiercheck.
 - [Leerkwartier doorgeven aan een gezin](https://leerkwartier.app/doorgeven.html): voor hulpverleners, scholen, fondsen en gemeenten — WhatsApp-tekst, flyer met QR, partnercode (Familie gratis t/m 31-12-2027).
 - [Wie is de bedrieger?](https://leerkwartier.app/wie-is-de-imposter.html): gratis klas-game in het 3D-park; taken zijn sommen/taalvragen op eigen niveau, 6-10 spelers (bots vullen aan), parkcode voor de klas, leerkracht kiest vak/niveau, klassement per parkcode, geen chat.
+- [Voor de klas](https://leerkwartier.app/klas): één adres voor op het digibord (met ?g=6, ?g=7 of ?g=8 voor de groep). Leerlingen krijgen meteen 5 vragen op groepsniveau, zonder account of rolkeuze, met uitleg bij elke fout; onderaan een knop waarmee de leerkracht op /leerkracht een klascode maakt en ziet hoe de klas het deed. Gratis.
 - [Dictee met Charley](https://leerkwartier.app/dictee-oefenen.html): online dictee groep 4-8
   met voorleesstem, zin met gat, directe spellingregel bij een fout. Start: /dictee.
 - [Werkwoordspellingtest](https://leerkwartier.app/werkwoordspelling-oefenen.html): zoals de test op school

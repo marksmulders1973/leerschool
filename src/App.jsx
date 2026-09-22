@@ -278,6 +278,12 @@ export default function App() {
     return p;
   })();
   const [page, setPage] = useState(initialPage);
+  // /klas (idee AM, 22 sep 2026): groep uit ?g=6|7|8 (juf zet die in de link),
+  // anders 7; 'ronde' dwingt een verse set vragen af bij "Nog een rondje".
+  const [klasGroep, setKlasGroep] = useState(() => {
+    try { const g = parseInt(new URLSearchParams(window.location.search).get("g"), 10); return [6, 7, 8].includes(g) ? g : 7; } catch { return 7; }
+  });
+  const [klasRonde, setKlasRonde] = useState(0);
   // F12 (Fable-review 2 sep 2026): een onbekend pad (/dit-bestaat-niet) landde
   // stil op de homepage mét de foute URL in de adresbalk. Nu: URL naar "/" en
   // één keer een vriendelijke melding. Statische .html-pagina's en de
@@ -2575,6 +2581,25 @@ export default function App() {
           authUser={authUser}
           onStop={() => setPage("mijn-pagina")}
           onGa={(p) => {
+            if (p === "learn-paths-hub") { setLearnInitialSearch(""); setEntryContext("leren"); }
+            if (p === "cito") setEntryContext("cito");
+            setPage(p);
+            try { window.scrollTo({ top: 0 }); } catch { /* */ }
+          }}
+        />
+      )}
+      {page === "klas" && (
+        <StartKwartier
+          key={"klas-" + klasGroep + "-" + klasRonde}
+          klas
+          klasGroep={klasGroep}
+          onKlasGroep={(g) => { setKlasGroep(g); setKlasRonde((r) => r + 1); }}
+          userName={userName}
+          userLevel={"groep" + klasGroep}
+          authUser={authUser}
+          onStop={goHome}
+          onGa={(p) => {
+            if (p === "klas-opnieuw") { setKlasRonde((r) => r + 1); try { window.scrollTo({ top: 0 }); } catch { /* */ } return; }
             if (p === "learn-paths-hub") { setLearnInitialSearch(""); setEntryContext("leren"); }
             if (p === "cito") setEntryContext("cito");
             setPage(p);

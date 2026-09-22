@@ -236,6 +236,21 @@ function PartnerStrook() {
   );
 }
 
+// ── Juf-strook (/klas, idee AM) ───────────────────────────────────
+// Onderaan, gedempt: stoort de leerling niet, maar de leerkracht die
+// meekijkt ziet meteen de vervolgstap. Eerste lead voor de schoollicentie.
+function JufStrook({ groep, stap, onGa }) {
+  return (
+    <div style={{ marginTop: 18, padding: "12px 14px", borderRadius: 12, background: "var(--color-bg-surface)", border: "1px dashed var(--color-border-soft)", fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text-muted)" }}>
+      <strong style={{ color: "var(--color-text)" }}>👩‍🏫 Juf of meester?</strong> Wil je zien hoe je klas het deed? Zet een klascode: dan oefent iedereen dezelfde lijst en zie jij per leerling wat goed ging.{" "}
+      <button type="button" onClick={() => { track("klas_naar_juf", { groep, stap }); onGa("teacher-home", "juf"); }}
+        style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--color-brand-primary)", fontWeight: 700, fontSize: 13.5, fontFamily: "inherit" }}>
+        Klascode maken →
+      </button>
+    </div>
+  );
+}
+
 // ── Ouder-e-mail op het eindscherm (Mark 7 sep: "punt 3") ─────────
 // Bijna alle nieuwe accounts zijn gasten zonder e-mail → geen weekpakket,
 // geen terugkeer. Eén veld + ouder-toestemming, zelfde tabel/consent als
@@ -314,7 +329,24 @@ function OuderMail({ userName, groep }) {
 }
 
 // ── Klaar ─────────────────────────────────────────────────────────
-function KlaarKaart({ goed, totaal, groep, userName, onGa }) {
+function KlaarKaart({ goed, totaal, groep, userName, onGa, klas = false }) {
+  if (klas) {
+    const tekstKlas = totaal === 0
+      ? "Klaar!"
+      : goed === totaal ? "Alles goed. Pak nog een rondje?" : goed >= totaal / 2 ? "Lekker bezig. Nog een rondje?" : "Wat fout ging, komt terug met uitleg. Nog een rondje?";
+    return (
+      <Card variant="exercise" padding="md">
+        <h3 style={{ ...S.showKop, fontSize: 24 }}>{totaal === 0 ? "Klaar! 🎉" : "Klaar! " + goed + " van " + totaal + " goed 🎉"}</h3>
+        <p style={S.showTekst}>{tekstKlas}</p>
+        <Button fullWidth size="lg" onClick={() => onGa("klas-opnieuw", "opnieuw")} style={{ marginBottom: 12 }}>Nog een rondje →</Button>
+        <div style={{ display: "grid", gap: 8 }}>
+          <button type="button" style={S.tegel} onClick={() => onGa("learn-paths-hub", "leerpaden")}><span style={{ fontSize: 22 }}>📚</span><span>Meer oefenen voor groep {groep}</span></button>
+          {groep >= 7 && <button type="button" style={S.tegel} onClick={() => onGa("cito", "doorstroomtoets")}><span style={{ fontSize: 22 }}>📝</span><span>Doorstroomtoets oefenen</span></button>}
+          <button type="button" style={S.tegel} onClick={() => onGa("zoo", "park")}><span style={{ fontSize: 22 }}>🌋</span><span>Het 3D-park</span></button>
+        </div>
+      </Card>
+    );
+  }
   const tegels = [
     { page: "learn-paths-hub", icoon: "📚", tekst: "Leerpaden voor groep " + groep },
     { page: "zoo", icoon: "🌋", tekst: "Het 3D-park" },
@@ -347,8 +379,12 @@ function KlaarKaart({ goed, totaal, groep, userName, onGa }) {
 }
 
 // ── Hoofdcomponent ────────────────────────────────────────────────
-export default function StartKwartier({ userName, userLevel, authUser, onStop, onGa }) {
-  const groep = parseGroep(userLevel) ?? 6;
+// klas-modus (idee AM, 22 sep 2026 — /klas): geen kaartjes, geen ouder-mail,
+// geen 'start-kwartier gedaan'-vlag; groep uit de URL of de groepskiezer;
+// eigen events klas_open / klas_vraag / klas_klaar / klas_naar_juf zodat het
+// dagrapport klasgebruik los van het start-kwartier kan tellen (klasgolf.sql).
+export default function StartKwartier({ userName, userLevel, authUser, onStop, onGa, klas = false, klasGroep, onKlasGroep }) {
+  const groep = klas ? (klasGroep || 7) : (parseGroep(userLevel) ?? 6);
   const [vragen, setVragen] = useState(null);
   const [stapIdx, setStapIdx] = useState(0);
   const stapIdxRef = useRef(0);
@@ -359,7 +395,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
 
   useEffect(() => {
     let dood = false;
-    track("startkwartier_start", { groep, level: String(userLevel || "") });
+    track(klas ? "klas_open" : "startkwartier_start", { groep, level: String(userLevel || "") });
     const t0 = Date.now();
     let eersteGezet = false;
     // Idee 4 (10 sep 2026): vraag 1 zodra het eerste pad binnen is; meting
@@ -392,7 +428,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   const stappen = useMemo(() => {
     if (!vragen) return [];
     const s = [];
-    const shows = SHOWCASES.slice();
+    const shows = klas ? [] : SHOWCASES.slice();
     vragen.forEach((v, i) => {
       s.push({ type: "vraag", vraag: v, nummer: i + 1 });
       if (shows.length && i < vragen.length - 1) s.push({ type: "show", id: shows.shift() });
@@ -406,10 +442,10 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   const totaalVragen = vragen?.length || 0;
 
   const klaarMelden = (hoe) => {
-    markeerStartKwartierGedaan(hoe);
+    if (!klas) markeerStartKwartierGedaan(hoe);
     if (afgemeldRef.current) return;
     afgemeldRef.current = true;
-    track("startkwartier_einde", { hoe, stap: stapIdx, goed: score.goed, beantwoord: score.totaal, sec: Math.round((Date.now() - startRef.current) / 1000) });
+    track(klas ? "klas_klaar" : "startkwartier_einde", { hoe, stap: stapIdx, goed: score.goed, beantwoord: score.totaal, sec: Math.round((Date.now() - startRef.current) / 1000) });
   };
   const stop = () => { klaarMelden("stop"); onStop(); };
   const ga = (page, label) => { klaarMelden("naar:" + (label || page)); onGa(page); };
@@ -421,9 +457,9 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   };
   const beantwoord = (vraag, isGoed) => {
     setScore((s) => ({ goed: s.goed + (isGoed ? 1 : 0), totaal: s.totaal + 1 }));
-    track("startkwartier_vraag", { nummer: stap?.nummer, pad: vraag.pathId, goed: isGoed });
+    track(klas ? "klas_vraag" : "startkwartier_vraag", { nummer: stap?.nummer, pad: vraag.pathId, goed: isGoed });
     // meetfix 10 sep 2026: start-kwartier-vragen tellen mee als beantwoorde vragen (dagrapport/Noord-ster)
-    track("question_answered", { bron: "startkwartier", pad: vraag.pathId, is_correct: isGoed });
+    track("question_answered", { bron: klas ? "klas" : "startkwartier", pad: vraag.pathId, is_correct: isGoed });
     try {
       recordAnswerForPath({ playerName: userName || "Speler", pathId: vraag.pathId, isCorrect: isGoed, userId: authUser?.id || null });
     } catch { /* */ }
@@ -447,7 +483,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   return (
     <div style={S.wrap}>
       <div style={S.top}>
-        <h2 style={S.titel}>🚀 Start-kwartier{naam ? " van " + naam : ""}</h2>
+        <h2 style={S.titel}>{klas ? "🏫 Voor de klas · groep " + groep : "🚀 Start-kwartier" + (naam ? " van " + naam : "")}</h2>
         <Button variant="ghost" size="sm" onClick={stop} aria-label="Stop het start-kwartier">Stop ✕</Button>
       </div>
       {stappen.length > 0 && (
@@ -456,9 +492,24 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
         </div>
       )}
       {stapIdx === 0 && <PartnerStrook />}
+      {stapIdx === 0 && klas && (
+        <div style={{ display: "flex", gap: 8, alignItems: "center", flexWrap: "wrap", marginBottom: 12 }}>
+          <span style={{ fontSize: 14, color: "var(--color-text-muted)" }}>Welke groep?</span>
+          {[6, 7, 8].map((g) => (
+            <button key={g} type="button" onClick={() => onKlasGroep && onKlasGroep(g)} aria-pressed={g === groep}
+              style={{ padding: "8px 14px", borderRadius: 999, fontSize: 15, fontWeight: 700, cursor: "pointer", fontFamily: "var(--font-body)",
+                color: g === groep ? "#0b1224" : "var(--color-text)", background: g === groep ? "var(--color-brand-primary)" : "var(--color-bg-surface)",
+                border: "2px solid " + (g === groep ? "var(--color-brand-primary)" : "var(--color-border-soft)") }}>
+              groep {g}
+            </button>
+          ))}
+        </div>
+      )}
       {stapIdx === 0 && (
         <p style={{ ...S.showTekst, marginTop: 0 }}>
-          {totaalVragen > 0 ? totaalVragen + " vragen voor groep " + groep : "Even kijken wat Leerkwartier kan"}, en tussendoor zie je wat hier allemaal kan. Stoppen mag altijd.
+          {klas
+            ? (totaalVragen > 0 ? totaalVragen + " vragen voor groep " + groep + ". Tik je antwoord. Fout? Dan krijg je uitleg." : "Even wachten op de eerste vraag…")
+            : (totaalVragen > 0 ? totaalVragen + " vragen voor groep " + groep : "Even kijken wat Leerkwartier kan") + ", en tussendoor zie je wat hier allemaal kan. Stoppen mag altijd."}
         </p>
       )}
 
@@ -482,7 +533,8 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
         />
       )}
       {stap?.type === "show" && <ShowcaseKaart key={stapIdx} id={stap.id} groep={groep} onGa={ga} onVerder={verder} />}
-      {stap?.type === "klaar" && <KlaarKaart goed={score.goed} totaal={score.totaal} groep={groep} userName={userName} onGa={ga} />}
+      {stap?.type === "klaar" && <KlaarKaart klas={klas} goed={score.goed} totaal={score.totaal} groep={groep} userName={userName} onGa={ga} />}
+      {klas && <JufStrook groep={groep} stap={stapIdx} onGa={onGa} />}
     </div>
   );
 }
