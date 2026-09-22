@@ -216,7 +216,16 @@ function verwerk(code) {
   }
   const m = dom.match(/PAKKETJSON(\{[\s\S]*?\})<\/pre>/);
   if (!m) { console.log(`❌ ${code}: inhoud niet uit te lezen`); return; }
-  const data = JSON.parse(m[1].replaceAll("&amp;", "&"));
+  // --dump-dom escapet de textContent van de <pre>, dus alle entiteiten terugdraaien.
+  // &amp; MOET als laatste, anders wordt "&amp;lt;" dubbel gedecodeerd.
+  const data = JSON.parse(
+    m[1]
+      .replaceAll("&lt;", "<")
+      .replaceAll("&gt;", ">")
+      .replaceAll("&quot;", '"')
+      .replaceAll("&#39;", "'")
+      .replaceAll("&amp;", "&"),
+  );
 
   // 3. Word-vriendelijke HTML klaarzetten (PS1-stap maakt er een .docx van)
   bouwWordHtml(data, code, mapje);
