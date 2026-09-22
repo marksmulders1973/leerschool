@@ -73,5 +73,9 @@ export const PRICING = {
   teacher_monthly: { price: 6.95, currency: "EUR", interval: "maand", label: "Pro (leerkracht) — per maand" },
   teacher_yearly: { price: 59, currency: "EUR", interval: "jaar", label: "Pro (leerkracht) — per jaar" },
   teacher_school: { price: 99, currency: "EUR", interval: "klas/jaar", label: "Schoollicentie" },
+  // Partner: gemeente of stichting betaalt per kind, het kind krijgt het Familie-niveau.
+  // Besloten 20 sep 2026 (was €25); bron docs/GEMEENTE-BETAALT-PLAN.md. Prijs staat op
+  // zichzelf — geen vergelijking met andere aanbieders in copy (Mark 22 sep).
+  partner_kind: { price: 34.5, currency: "EUR", interval: "kind/jaar", label: "Partner (gemeente/stichting) — per kind/jaar" },
   kwartier_tegoed: { price: null, currency: "EUR", interval: "los", label: "Kwartier-tegoed — prijs per kwartier vóór lancering bekend" },
 };

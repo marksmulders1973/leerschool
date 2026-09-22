@@ -39,8 +39,13 @@ goedkoopste acquisitiekanaal).
 ### 2. Leerkwartier Familie — abonnement per gezín (niet per kind)
 **Voor:** de bezorgde Doorstroomtoets-ouder (primaire ICP-koper).
 **Richtprijs (drie smaken, per gezin):** € 4,95/mnd · 🎟️ Seizoenspas € 24,95
-éénmalig (t/m 31 juli 2027, zie §2b) · € 39/jaar. USP tegenover Squla
-(~€ 11/mnd per kínd): één prijs voor het hele gezin.
+éénmalig (t/m 31 juli 2027, zie §2b) · € 39/jaar. USP: één prijs voor het
+hele gezin, niet per kind (max 3 kinderen).
+**Partner — gemeente of stichting betaalt: € 34,50 per kind per jaar** (besloten
+20 sep 2026, was € 25); het kind krijgt het Familie-niveau. Bron:
+`GEMEENTE-BETAALT-PLAN.md`, code `PRICES.partner_kind` in `config.js`.
+🔴 **Geen vergelijking met andere aanbieders in copy of mails** (Mark 22 sep 2026:
+"klinkt vals, zo wil ik niet zijn") — de prijs staat op zichzelf.
 **Inhoud:** ouder-dashboard (voortgang alle kinderen), weekrapport per mail,
 examen-simulatie (tijdklok + eindrapport), Kwartierplan (diagnose →
 stappenplan), onbeperkt oefenen, **dictee met de woorden van school** (9 sep
@@ -86,7 +91,7 @@ toetsjaar goed doorkomen.*
 
 **Waarom dit bij het merk past (de stiekeme superkracht):** geen
 auto-verlenging — de pas stopt gewoon vanzelf. Dat is precies het
-tegenovergestelde van Squla-achtige abonnementen die stiekem doorlopen, en
+tegenovergestelde van abonnementen die stiekem doorlopen, en
 sluit naadloos aan op de eerlijkheids-belofte (geen creditcard-valkuil).
 Marketing-zin: *"Eén keer betalen, het hele toetsjaar geholpen — en hij
 stopt vanzelf. Geen abonnement, geen kleine lettertjes."*

@@ -32,8 +32,8 @@ rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 kinderen × €34,
    Nooit een ouderprijs in partner-context. **Onderbouwing** (kostprijsanalyse 20 sep): bij €25 dekt
    de prijs de AI-kosten niet bij gemiddeld gebruik — 240 kinderen leverde netto €182-374/mnd i.p.v.
    €500. Bij €34,50 mét Charley-dagbundel (20) en prompt caching is netto/kind/jaar €22-32, en haalt
-   240 kinderen ~€500/mnd óók als het gebruik tegenvalt. Squla vraagt €43,52 aan dezelfde stichtingen,
-   dus we zitten 21% daaronder. Niet-rond bedrag = leest als berekende prijs bij een inkoper.
+   240 kinderen ~€500/mnd óók als het gebruik tegenvalt. De prijs staat op zichzelf: **geen vergelijking met andere aanbieders** in mails of copy
+   (Mark 22 sep 2026: "klinkt vals, zo wil ik niet zijn"). Niet-rond bedrag = leest als berekende prijs bij een inkoper.
    KOR-grens ligt bij 580 kinderen, ruim buiten het doelbereik.
 3. **Partner-rapport per gemeente/stichting** (de ene feature die WEL gebouwd moet worden):
    "X kinderen uit uw gemeente oefenden Y kwartier" — uit partner_codes + kwartier-data.
@@ -82,6 +82,6 @@ rechtstreeks per kind) én kennen ons al: 5 stichtingen × 40 kinderen × €34,
 3. Rotterdampas: partneraccount + jaaractie (gratis app), plus mail aan Stichting Meedoen in Rotterdam (vergoedt Squla én StudyGo → wij passen in hun rijtje).
 4. Stadjerspas: mailtje volstaat, ook zonder KvK. **Kan nu al.**
 5. Tilburg: e-mailformulier, kan nu al.
-6. Leergeld-prijsmail (€25/kind/jaar, codes per stichting, Squla-vergelijking) → oktober, met partner-rapport v1.
+6. Leergeld-prijsmail (**€34,50/kind/jaar**, codes per stichting, géén vergelijking met andere aanbieders) → oktober, met partner-rapport v1.
 
 **Open/niet gevonden:** Rotterdam webshop-aansluiting Jeugdtegoed; U-pas kindbedragen (alleen afbeelding); Tilburg-voorwaarden; Groningen kindbedrag; Amsterdam Aanbiedersgids-PDF; hoe je op een lokale Leergeld-leverancierslijst komt (bel Leergeld landelijk: 085-0664000).
