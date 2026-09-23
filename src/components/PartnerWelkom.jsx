@@ -82,6 +82,7 @@ export const PARTNER_NAMEN = {
   JINC2027: "JINC",
   KINDERHULP2027: "Nationaal Fonds Kinderhulp",
   KINDERZWERFBOEK2027: "Kinderzwerfboek", // 11 sep 2026: Kinderzwerfboekdag 7 okt, flyers per post
+  MAATJE2027: "SchuldHulpMaatje", // 23 sep 2026: benaderd (Anne Meint Bouma), code klaargezet
   MAASTRICHT2027: "Voedselbank Maastricht",
   NIJMEGEN2027: "Voedselbank Nijmegen-Overbetuwe",
   // 🧪 Mark's persoonlijke demo-/testcode (28 aug 2026): alleen voor Mark zelf
