@@ -52,7 +52,7 @@ function maakTabs(isTeacher) {
     // 2026-05-17 review: gameRelated:true zodat tab verbergt voor anon-bezoeker
     // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
     // 2026-07-25: parkKeuze-keuzescherm weg — OBLITERATOR is easter egg, tab gaat direct naar het park.
-    { id: "park",        label: "Park",  emoji: "🐾", target: "zoo", gameRelated: true },
+    { id: "park",        label: "Spelletje", emoji: "🐾", target: "zoo", gameRelated: true }, // Brian 23 sep 2026 (papa akkoord): "Park" → "Spelletje"
     // Mark 11 sep 2026: "Mijn pagina" stond hélemaal niet in de balk, terwijl het
     // onze USP is — een bezoeker kwam er alleen via een chip op de startpagina
     // die pas verscheen als er al een naam bekend was. Vijf knoppen blijft het
