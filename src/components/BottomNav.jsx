@@ -52,7 +52,7 @@ function maakTabs(isTeacher) {
     // 2026-05-17 review: gameRelated:true zodat tab verbergt voor anon-bezoeker
     // wanneer VITE_HIDE_GAME_FOR_GUESTS=true. Ingelogde leerling ziet 'm altijd.
     // 2026-07-25: parkKeuze-keuzescherm weg — OBLITERATOR is easter egg, tab gaat direct naar het park.
-    { id: "park",        label: "Spelletje", emoji: "🐾", target: "zoo", gameRelated: true }, // Brian 23 sep 2026 (papa akkoord): "Park" → "Spelletje"
+    { id: "park",        label: "Spelletje", emoji: "🎮", target: "spelletje", gameRelated: true }, // Brian 23 sep 2026 (papa akkoord): "Park" → "Spelletje", opent keuzescherm Park/Imposter
     // Mark 11 sep 2026: "Mijn pagina" stond hélemaal niet in de balk, terwijl het
     // onze USP is — een bezoeker kwam er alleen via een chip op de startpagina
     // die pas verscheen als er al een naam bekend was. Vijf knoppen blijft het
@@ -73,7 +73,7 @@ function bepaalActieveTab(page) {
   if (page === "home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview" || page === "cito") return "toets-maken";
-  if (page === "zoo" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
+  if (page === "zoo" || page === "spelletje" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
   // De oud-"Meer"-bestemmingen hangen nu onder Mijn pagina, dus daar licht de
   // Mijn-tab op (Mark 11 sep 2026).
   if (page === "mijn-pagina") return "mijn";

@@ -24,6 +24,7 @@ import { vangPartnerCode } from "./features/referral/partnerCode.js";
 // Lazy imports (P1.4): pas downloaden bij navigatie naar de bijbehorende
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
 const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
+const SpelletjeKeuze = lazy(() => import("./components/SpelletjeKeuze.jsx"));
 const HomeV3 = lazy(() => import("./components/HomeV3.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
 const WishesBoard = lazy(() => import("./components/WishesBoard.jsx"));
@@ -1638,6 +1639,11 @@ export default function App() {
       {/* parkKeuze-keuzescherm verwijderd (Mark 2026-07-25): OBLITERATOR past
           niet meer bij de app en is een easter egg geworden — 7× tikken op de
           parknaam in het park-menu, of de deeplink /obliterator (Brian). */}
+      {page === "spelletje" && (
+        <Suspense fallback={<PageLoader />}>
+          <SpelletjeKeuze onPark={() => setPage("zoo")} onHome={goHome} />
+        </Suspense>
+      )}
       {page === "zoo" && (
         <Suspense fallback={<PageLoader />}>
           {new URLSearchParams(window.location.search).get("bezoek") ? (
