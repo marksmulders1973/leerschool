@@ -1,17 +1,19 @@
-# 📬 Bulkmail-plan op datum (stand wo 16 sep 2026)
+# 📬 Bulkmail-plan op datum (stand wo 23 sep 2026)
 
 > Spelregels: max 60 per werkdag (Resend-dagbudget 95) · organisaties op **maandagochtend 08:00-09:30** (idee B, 15 sep) · elke batch pas na Marks woord · warme leads nooit nudgen vóór de zachte-check-datum · Mark 16 sep: scholen batch 2 en het Enschede-bedankje blijven liggen tot hij het zelf zegt.
 
 | Datum | Wat | Aantal | Kanaal | Stand |
 |---|---|---|---|---|
 | ✅ wo 16 sep | LOWAN batch 4 | 45 | Resend hallo@ | verstuurd 09:05 |
-| ma 21 sep 08:00 | LOWAN batch 5 (`LOWAN-BATCH-5.md`, klaargezet 16 sep) | 45 | Resend | ✅ Mark-go 16 sep → **Windows-taak "Leerkwartier LOWAN batch 5"** draait ma 08:00 (pc moet aan of slapen; anders bij eerste start erna). Claude checkt ma in het dagrapport de log + commit het verzendlog |
+| ✅ ma 21 sep | LOWAN batch 5 | 45 | Resend | verstuurd 14:49 (Windows-taak liep pas bij de eerste start; log in LOWAN-BATCH-5.md) |
 | ma 21 sep | Zachte checks: Voedselbank Lelystad (Dick Nauta), Leergeld Twenterand, Saba (adres flyers), School's cool Twente | 4 | Zapier-Gmail (reply in thread) | concepten eerst tonen |
-| di 22 sep 08:00 | LOWAN batch 6 | 45 | Resend | na "ga" (92 over na batch 5) |
-| wo 23 sep 08:00 | LOWAN batch 7 (rest) | 47 | Resend | na "ga" → LOWAN compleet |
-| do 24 sep | Zachte checks Leergeld Leudal + VPCBO Ichthus (0 scans na 2 weken) · evaluatie twee-weken-plan | 2 | Zapier-Gmail | concepten eerst tonen |
-| vr 25 sep | Kinderzwerfboek nudgen als stil (adres voor 50 flyers, moeten vóór 1 okt op de post) · Voedselbank Enschede alleen als er nieuws is | 1 | Zapier-Gmail | concept eerst |
-| ma 28 sep 08:00 | **1 oktober-venster** (Actie Pepernoot): kort berichtje aan de vijf organisaties die zelf materiaal vroegen — Leudal, Ichthus, VluchtelingenWerk, Kinderzwerfboek, (Ommeriek niet: gewone lezer) — met eigen code + toetsdatum + tag | 4 | Resend | idee E, na "ga" |
+| **wacht op "ga"** | LOWAN batch 6 (`LOWAN-BATCH-6.md`, klaargezet 23 sep, ontdubbeld t.o.v. 1-5) | 45 | Resend | `node scripts/outreach-send-lowan.mjs 45 docs/outreach/LOWAN-BATCH-6.md` — één woord van Mark |
+| dag ná batch 6 | LOWAN batch 7 (`LOWAN-BATCH-7.md`, laatste 44; 4 scholen met kapotte namen overgeslagen) | 44 | Resend | na batch 6 → LOWAN compleet (325 in de lijst, 224+89 benaderd) |
+| do 24 sep → ma 28 sep | Zachte checks Leudal + Ichthus gaan op in het 1 oktober-venster (één bericht i.p.v. twee) · evaluatie twee-weken-plan | 0 | — | concepten staan in `docs/outreach/1-oktober-venster.md` |
+| vr 25 sep | Kinderzwerfboek zachte herinnering als nog stil (adres voor 50 flyers, vóór 1 okt op de post) | 1 | Gmail (reply in thread) | ✅ concept klaar (`1-oktober-venster.md` #4), na "ga" |
+| ma 28 sep 08:00 | **1 oktober-venster** (Actie Pepernoot): kort berichtje aan de vijf organisaties die zelf materiaal vroegen — Leudal, Ichthus, VluchtelingenWerk, Kinderzwerfboek, (Ommeriek niet: gewone lezer) — met eigen code + toetsdatum + tag | 3 | Gmail (reply in thread) | ✅ concepten klaar (`docs/outreach/1-oktober-venster.md` #1-3: Leudal, Ichthus, VluchtelingenWerk), na "ga" |
+| 23 sep ✅ / wacht | **S&O lokale aanbod-platforms** (OCW-tip 23 sep): Zoetermeer ✅ aangemeld 23 sep · Den Haag (andersomdenhaag.nl) antwoorden klaar, wacht op "doe maar" · daarna Amsterdam · Gouda via vrije mail | 3 | webformulier | één per keer, tekst eerst tonen |
+| na Marks 3 keuzes | **Woningcorporaties ingang 1 (bewonersblad)** — concept klaar in `docs/outreach/woningcorporaties.md`; test met 2 (Staedion, Woonstad) of batch 8 | 2-8 | Resend/Gmail | codes + flyer-PDF per corporatie ná keuze |
 | ma 28 sep (na 12:15) | KvK-nummer aan Esther (Ooievaarspas), informatieplicht | 1 | Zapier-Gmail | concept ligt klaar |
 | ma 28 sep – vr 2 okt | **Scholen batch 2** (96, rij 16-111) — alléén als Mark het zelf weer wil; dan 60 op maandag + 36 op dinsdag | 96 | Resend | ⏸️ Mark 16 sep: niet |
 | ma 5 okt 08:00 | **Fondsen-ronde** met het Kinderhulp-bewijs: Sam& (eerst), Stichting Armoedefonds, Quiet, SUN Nederland, Jeugdfonds Sport & Cultuur, Stichting Jarige Job, Leergeld Nederland, VluchtelingenWerk landelijk — per fonds eigen code + nieuwsbrief-tag | 8 | Resend/Gmail | concepten 5 klaar, 3 nog; na "stuur maar" |

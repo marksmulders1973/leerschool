@@ -1,6 +1,6 @@
 # School & Omgeving (Rijke Schooldag) — concept (22 sep 2026)
 
-**Status:** CONCEPT, niets verstuurd. Nieuw spoor, nog nooit benaderd.
+**Status 23 sep 2026:** mail A verstuurd 22 sep, antwoord OCW 23 sep: route loopt via lokale aanbod-platforms (zie docs/WACHT-OP.md, rij School & Omgeving). **Mail B (regievoerders) is daarmee ACHTERHAALD — niet versturen**; coalitie-lijst niet ophalen. Zoetermeer aangemeld 23 sep; Den Haag-formulier wacht op Marks go.
 
 ## Feiten (gecheckt 22 sep 2026, bronnen in de onderzoeksnotitie hieronder)
 - Subsidieregeling School & Omgeving 2025-2028: €709 mln, bijna 1.200 scholen, 139.000-180.000 leerlingen. Vanaf 2027 structureel ~€121 mln/jaar; vanaf 2029 via de wet Gelijke Leer- en Ontwikkelvoorwaarden (GLO).

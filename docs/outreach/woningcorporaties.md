@@ -41,3 +41,28 @@ NB: bijna geen corporatie publiceert een algemeen e-mailadres; het is formulier 
 - Woonin budget: https://www.woonin.nl/kennisbank/betere-buurt-budget/ · Woonbedrijf Buurtfonds: https://www.woonbedrijf.com/buurtfonds · Woonbron-euro: https://www.woonbron.nl/woonbroneuro
 - Stadgenoot/Studiezalen: https://www.stadgenoot.nl/over-ons/nieuws-publicaties/stadleven/artikel/studiezalen-ondersteunt-gezinnen-in-kwetsbare-buurten
 - Aedes contact: https://aedes.nl/contact · armoede-gereedschapskist: https://aedes.nl/schulden-en-huisuitzettingen/gereedschapskist-aanpak-schulden-en-armoede
+
+## Concept-mail — ingang 1 (bewonersblad), geschreven wo 23 sep 2026 — NIETS VERSTUURD
+
+**Aan:** communicatie-adres per corporatie (zie tabel; bij "pers@" alleen deze korte vraag). **Van:** hallo@leerkwartier.app (Resend) of Gmail bij één-op-één.
+**Per corporatie invullen:** [Corporatie], [blad] (bijv. "Eigen Haard Magazine", "Post van Portaal", "Buurten"), [CODE] (voorstel per corporatie: STAEDION2027, WOONSTAD2027, …).
+
+**Onderwerp:** Gratis oefen-app voor kinderen van jullie huurders — iets voor [blad]?
+
+Beste communicatieteam van [Corporatie],
+
+Mijn naam is Mark Smulders. Ik ben vader en bouw in mijn vrije tijd Leerkwartier: een gratis oefen-app waarmee kinderen uit groep 6, 7 en 8 elke dag een kwartier oefenen voor de Doorstroomtoets. Elke uitleg is er in drie stappen: gewoon, simpeler en nog simpeler. Er is een voorleesknop voor kinderen die nog niet vlot lezen. Geen account, geen reclame. Oefenen is gratis, gegarandeerd tot en met 2031.
+
+Ik mail jullie omdat veel gezinnen die hier het meest aan hebben, huren bij een corporatie. Bijles kost al snel tientallen euro's per uur; dit kost niets. We zijn een jong leermiddel, maar we maken gelukkig een vliegende start.
+
+Mijn vraag: past een korte vermelding in [blad]? Ik lever een kant-en-klaar stukje van vier zinnen met beeld en QR-code aan, en pas het aan op jullie huisstijl als jullie dat willen. Met een eigen code voor [Corporatie] ([CODE]) krijgen jullie huurders er alle extra's van het Familiepakket bij, heel 2027 gratis, en kan ik jullie later laten weten hoeveel gezinnen ermee zijn gestart.
+
+Is dit niet bij jullie belegd, dan hoor ik graag wie ik beter kan mailen.
+
+Hartelijke groet,
+Mark Smulders
+Leerkwartier — leerkwartier.app · 06-84581000
+Een kwartier per dag leren, een leven lang slimmer.
+
+**Checks:** geen partnernamen, geen bedankt.html-link, niets fysieks beloofd (stukje + beeld + QR = digitaal), geen demo, geen bezoek. Gratis-claim: oefenen is afgebakend tot en met 2031; de extra's via de code lopen tot eind 2027.
+**Wat Mark moet beslissen (zie ⚠️ hierboven):** ingang 1 alleen (advies ja) · code per corporatie (advies ja) · test met 2 (Staedion + Woonstad) of batch 8. Daarna: codes aanmaken + flyer-PDF per code + ere-scherm, dan versturen.

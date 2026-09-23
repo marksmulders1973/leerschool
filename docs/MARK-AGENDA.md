@@ -71,6 +71,12 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 - ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
 
 ## 🔴 Nu doen (deze week)
+- 📬 **23 sep — outreach-halfuur, vier dingen liggen klaar voor één woord van jou:**
+  1. **LOWAN batch 6** (45 nieuwkomersscholen, zelfde goedgekeurde tekst, `docs/outreach/LOWAN-BATCH-6.md`) → zeg "ga lowan" en hij gaat de deur uit; batch 7 (laatste 44) de dag erna.
+  2. **Andersom Den Haag** (aanbod-platform, OCW-tip): mijn antwoorden op de formuliervragen staan in de chat van 23 sep → "doe maar".
+  3. **Woningcorporaties**: concept-mail klaar in `docs/outreach/woningcorporaties.md`; jij kiest: alleen bewonersblad (advies ja) · code per corporatie (advies ja) · test met 2 of batch 8.
+  4. **1 oktober-venster** (ma 28 sep): drie korte vervolgjes (Leudal, Ichthus, VluchtelingenWerk) + Kinderzwerfboek-herinnering (vr 25 sep) in `docs/outreach/1-oktober-venster.md` → "ga".
+  ✅ Vandaag al gedaan: bedankje OCW verstuurd, S&O-nieuwsupdate aangemeld, Zoetermeer-platform aangemeld (wacht). Mail B aan coalitie-regievoerders is achterhaald en gaat niet uit.
 - ✉️ **Nog 2 partnermails afmaken (Mark 22 sep)** — ✅ (1) Jarige Job VERSTUURD 22 sep 20:50 (digitaal, geen drukwerk beloofd). Open: (2) School & Omgeving-coalities (`rijke-schooldag-coalities.md`; jouw keuze: eerste 10 coalities); (3) woningcorporaties — concept nog schrijven (onderzoek liep). Werkwijze: Claude toont elke tekst volledig in de chat → jij zegt per mail "stuur maar". Sociaal bewijs alleen met de 3 live-namen van bedankt.html (Den Haag/Ooievaarspas, VB Rotterdam, VB Alkmaar).
 
 - ✅ **17 sep 21:45 — Dongen: beide drukbestanden aangeleverd bij Drukwerkdeal** (posters + flyers "Gereed voor productie", levering di 22 sep bij Dongen). ✅ Regeltje aan Monique verstuurd vr 18 sep 06:17/06:18 (dubbel: Mark klikte zelf én het script). Factuur €55,84 staat in KOSTEN-2026.md (PDF nog ophalen bij Drukwerkdeal → Facturen). Di 22 sep: levering controleren.
