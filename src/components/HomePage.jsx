@@ -103,7 +103,24 @@ const ONBOARDING_STEPS = [
 // gewoon bestaan (gebeuren bij Start gratis / account).
 // (De gele Deel-actie-knop "nog X van 50 plekken" stond hier tot 6 sep 2026 — Mark: "dat kan ook wel weg".)
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina, onKlas }) {
+  // Idee AR (23 sep 2026): klasgolf-schakelaar. Ziet de server ≥15 nieuwe apparaten
+  // binnen 10 minuten op een schooldag (RPC klasgolf_actief), dan toont home het
+  // volgende uur bovenaan de klas-strook → /klas. Geen nieuwe voordeur; het blokje
+  // verschijnt als er een klas is en verdwijnt daarna vanzelf.
+  const [klasgolf, setKlasgolf] = useState(false);
+  useEffect(() => {
+    let stop = false;
+    const check = async () => {
+      try {
+        const { data } = await supabase.rpc("klasgolf_actief");
+        if (!stop && data && typeof data === "object") { setKlasgolf(!!data.actief); if (data.actief) track("klasgolf_strook_getoond", { max_blok: data.max_blok }); }
+      } catch { /* stil */ }
+    };
+    check();
+    const t = setInterval(check, 5 * 60 * 1000);
+    return () => { stop = true; clearInterval(t); };
+  }, []);
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
@@ -420,6 +437,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     <div style={{ ...styles.page, background: "linear-gradient(160deg, #1a2a4a 0%, #1e3458 50%, #243e6a 100%)" }}>
       {/* Vraag-van-de-dag leeft op /vandaag (Mark 11 aug: home rustig);
           ProefVraagKaart-dode-code opgeruimd 12 aug (agent-restpunt). */}
+      {klasgolf && onKlas && (
+        <button type="button" onClick={() => { track("klasgolf_strook_klik"); onKlas(); }} style={{
+          display: "flex", alignItems: "center", justifyContent: "center", gap: 10, width: "calc(100% - 24px)", margin: "10px 12px 0",
+          padding: "12px 14px", borderRadius: 14, border: "2px solid #ffd700", cursor: "pointer",
+          background: "linear-gradient(135deg, rgba(255,215,0,0.18), rgba(255,170,0,0.10))", color: "#fff",
+          fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 800, textAlign: "left",
+        }}>
+          <span style={{ fontSize: 24 }}>🏫</span>
+          <span>Zit je in de klas? Start hier<br /><span style={{ fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 600, opacity: .85 }}>5 vragen · geen account · samen op het digibord</span></span>
+        </button>
+      )}
       {/* Bedankt-toast na delen */}
       {shareToast && (
         <div style={{

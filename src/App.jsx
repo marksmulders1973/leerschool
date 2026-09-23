@@ -1764,6 +1764,7 @@ export default function App() {
           onActie={() => setPage("actie")}
           onOefenpakket={() => setPage("oefenpakket")} onPrinten={() => setPage("printen")}
           onKwartiercheck={() => setPage("kwartiercheck")}
+          onKlas={() => setPage("klas")} /* idee AR: klasgolf-strook */
           onDagvraag={() => setPage("vandaag")}
           onPlayObliterator={() => setPage("zoo")}
           onPro={() => setPage("pro")}
