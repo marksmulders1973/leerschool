@@ -55,7 +55,7 @@ Mijn naam is Mark Smulders. Ik ben vader en bouw in mijn vrije tijd Leerkwartier
 
 Ik mail jullie omdat veel gezinnen die hier het meest aan hebben, huren bij een corporatie. Bijles kost al snel tientallen euro's per uur; dit kost niets. We zijn een jong leermiddel, maar we maken gelukkig een vliegende start.
 
-Mijn vraag: past een korte vermelding in [blad]? Ik lever een kant-en-klaar stukje van vier zinnen met beeld en QR-code aan, en pas het aan op jullie huisstijl als jullie dat willen. Met een eigen code voor [Corporatie] ([CODE]) krijgen jullie huurders er alle extra's van het Familiepakket bij, heel 2027 gratis, en kan ik jullie later laten weten hoeveel gezinnen ermee zijn gestart.
+Mijn vraag: past een korte vermelding in [blad]? Ik lever een kant-en-klaar stukje van vier zinnen met beeld en QR-code aan, en pas het aan op jullie huisstijl als jullie dat willen. Met een eigen code voor [Corporatie] ([CODE]) krijgen jullie huurders er alle extra's van het Familiepakket bij, heel 2027 én 2028 gratis omdat jullie er vroeg bij zijn, en kan ik jullie later laten weten hoeveel gezinnen ermee zijn gestart.
 
 Is dit niet bij jullie belegd, dan hoor ik graag wie ik beter kan mailen.
 
@@ -64,5 +64,5 @@ Mark Smulders
 Leerkwartier — leerkwartier.app · 06-84581000
 Een kwartier per dag leren, een leven lang slimmer.
 
-**Checks:** geen partnernamen, geen bedankt.html-link, niets fysieks beloofd (stukje + beeld + QR = digitaal), geen demo, geen bezoek. Gratis-claim: oefenen is afgebakend tot en met 2031; de extra's via de code lopen tot eind 2027.
+**Checks:** geen partnernamen, geen bedankt.html-link, niets fysieks beloofd (stukje + beeld + QR = digitaal), geen demo, geen bezoek. Gratis-claim: oefenen is afgebakend tot en met 2031; de extra's via de code lopen tot eind 2028 (besluit 23 sep: codes van vóór 1-1-2027).
 **Wat Mark moet beslissen (zie ⚠️ hierboven):** ingang 1 alleen (advies ja) · code per corporatie (advies ja) · test met 2 (Staedion + Woonstad) of batch 8. Daarna: codes aanmaken + flyer-PDF per code + ere-scherm, dan versturen.

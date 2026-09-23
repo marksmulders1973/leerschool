@@ -15,7 +15,7 @@
 
 import { useMemo, useState, useEffect } from "react";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
-import { actievePartnerCode, partnerFamilieTot, partnerCodeBekend, codeUitUrl } from "../features/referral/partnerCode.js";
+import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, partnerCodeBekend, codeUitUrl } from "../features/referral/partnerCode.js";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import { track } from "../utils.js";
 
@@ -180,12 +180,12 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
   const blijvend = variant.code ? partnerFamilieTot() === null : false;
   const extrasZin = blijvend
     ? "Jouw gezin kan hier blijvend gratis oefenen."
-    : "Jouw gezin krijgt straks ook alle gezins-extra's gratis, heel 2027 (tot en met 31 december 2027).";
+    : `Jouw gezin krijgt straks ook alle gezins-extra's gratis, ${partnerFamilieTotLabel(partnerFamilieTot())}.`;
 
   let titel, tekst;
   if (variant.soort === "sparkfest") {
     titel = "Welkom, Spark Fest-bezoeker! 🎉";
-    tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. En omdat jouw flyer uit de Spark Fest-goodybag komt, krijgt jouw hele gezin ook alle gezins-extra's gratis — heel 2027 (tot en met 31 december 2027).`;
+    tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. En omdat jouw flyer uit de Spark Fest-goodybag komt, krijgt jouw hele gezin ook alle gezins-extra's gratis — ${partnerFamilieTotLabel(partnerFamilieTot())}.`;
   } else if (variant.soort === "partner") {
     titel = `Welkom via ${variant.naam}! 💛`;
     tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. ${extrasZin}`;

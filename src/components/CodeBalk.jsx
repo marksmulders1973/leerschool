@@ -13,7 +13,7 @@
 import { useMemo, useState } from "react";
 import supabase from "../supabase.js";
 import { bewaarKoppeling } from "../shared/koppeling.js";
-import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig, codeUitUrl } from "../features/referral/partnerCode.js";
+import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig, codeUitUrl } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
 
@@ -96,10 +96,10 @@ function EerScherm({ code, onVerder }) {
             {isOP
               ? <>Onze afspraak met de gemeente Den Haag: heeft uw gezin een Ooievaarspas? Dan is het Familie-pakket van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
               : isEN
-                ? <>Thanks to them, the Family package is <strong style={{ color: "#3f7015" }}>free for your family all of 2027</strong> — through December 31, 2027.</>
+                ? <>Thanks to them, the Family package is <strong style={{ color: "#3f7015" }}>free for your family {partnerFamilieTotLabel(partnerFamilieTot(), true)}</strong>.</>
                 : blijvend
                   ? <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
-                  : <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>gratis in heel 2027</strong> — tot en met 31 december 2027.</>}
+                  : <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>gratis, {partnerFamilieTotLabel(partnerFamilieTot())}</strong>.</>}
           </p>
         </div>
         <button
@@ -280,7 +280,7 @@ export default function CodeBalk() {
         <div style={{ font: "600 12.5px/1.45 system-ui", color: "#2e5a41", marginTop: 3 }}>
           {blijvend
             ? "Alle gezins-extra's zijn blijvend gratis voor jouw gezin."
-            : "Alle gezins-extra's zijn gratis voor jouw gezin, heel 2027 (tot en met 31 december 2027)."}
+            : `Alle gezins-extra's zijn gratis voor jouw gezin, ${partnerFamilieTotLabel(partnerFamilieTot())}.`}
           {netGezet ? " Veel oefenplezier! 🎉" : ""}
         </div>
         {/* 🔄 Reset-knopje BLIJFT (Mark 27 aug: "kan denk ik geen kwaad"):

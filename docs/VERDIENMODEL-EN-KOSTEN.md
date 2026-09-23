@@ -526,3 +526,6 @@ schooluren op de site, bron "direct", zonder code — een klas.
 ### Dagrapport-blok (§7) — aanvulling
 - **Charley-penetratie 28d** (apparaten met `buddy_chat_open` ÷ alle apparaten) — alarm ≥10%.
 - **Kosten per partnercode** zodra idee AO gebouwd is.
+
+## §11 — 23 sep 2026: Familie via code t/m 2028 voor vroege partners
+Zie docs/PRIJSPLAN.md "Besluit 23 sep 2026". Effect op §1-§6: de 239-kinderen-som (€500/mnd) blijft, maar de partner-route levert pas vanaf 2029 uit de vroege codes; 2027-2028 = Familie-verkoop aan gezinnen zonder code + nieuwe partners (12-maandsregel). Kostenkant ongewijzigd klein (AI ≈ €2,80/maand bij 955 apparaten). Fable-review: klopt de aanname dat "12 maanden vanaf claim" voor nieuwe codes voldoende omzet in 2028 openlaat?

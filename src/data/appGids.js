@@ -47,7 +47,7 @@ export const APP_GIDS = [
     id: "partner-code",
     rol: "ouder",
     vraag: "Ik heb een code van een organisatie (flyer/QR) — wat krijg ik daarmee?",
-    antwoord: "Met zo'n code krijgt je gezin alle Familie-extra's gratis, heel 2027 lang. Scan de QR of typ de code in de balk op de beginpagina. Oefenen zelf is sowieso voor iedereen gratis — de code geeft de extra's, zoals het ouder-dashboard en de examen-simulatie.",
+    antwoord: "Met zo'n code krijgt je gezin alle Familie-extra's gratis, heel 2027 én 2028 lang (codes van de eerste partners). Scan de QR of typ de code in de balk op de beginpagina. Oefenen zelf is sowieso voor iedereen gratis — de code geeft de extra's, zoals het ouder-dashboard en de examen-simulatie.",
   },
   {
     id: "doorstroomtoets",

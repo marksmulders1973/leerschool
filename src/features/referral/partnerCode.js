@@ -121,7 +121,23 @@ export const PARTNER_ACTIVATIE_DREMPEL = 3;
 // (was 1 aug) — de verspreide flyers beloven "gratis heel 2027", dus de
 // einddatum is gelijkgetrokken met die belofte (eerlijke-claim-regel).
 // (Sleutelwaarde 'pro2027' blijft technisch ongewijzigd voor bestaande apparaten.)
-export const PARTNER_PRO_TOT = "2027-12-31";
+// Mark-besluit 23 sep 2026: codes van vóór 1-1-2027 lopen t/m 31-12-2028 ("heel
+// 2027 én 2028, omdat jullie er vroeg bij zijn"); de DB (partner_codes.familie_tot)
+// is bijgewerkt en heeft voorrang. Nieuwe codes vanaf 2027: 12 maanden vanaf
+// claim (te bouwen in de paywall-sprint jan 2027). Deze fallback dekt de
+// bestaande codes als de server-waarde nog niet bekend is.
+export const PARTNER_PRO_TOT = "2028-12-31";
+
+// Leesbare tekst bij een einddatum, voor welkomscherm/codebalk/gids.
+// null → "blijvend"; 2028-12-31 → "heel 2027 én 2028 (tot en met 31 december 2028)".
+export function partnerFamilieTotLabel(tot, en = false) {
+  if (!tot) return en ? "permanently" : "blijvend";
+  const jaar = String(tot).slice(0, 4);
+  const einde = en ? `through December 31, ${jaar}` : `tot en met 31 december ${jaar}`;
+  if (jaar === "2028") return en ? `all of 2027 and 2028 (${einde})` : `heel 2027 én 2028 (${einde})`;
+  if (jaar === "2027") return en ? `all of 2027 (${einde})` : `heel 2027 (${einde})`;
+  return en ? `until ${einde.replace("through ", "")}` : `tot ${einde.replace("tot en met ", "en met ")}`;
+}
 
 // ⚖️ BLIJVENDE codes — CONTRACTUEEL vastgelegd, niet zomaar wijzigen.
 // Hard toegezegd in het getekende "Aanvraagformulier vriend OP" aan de gemeente
