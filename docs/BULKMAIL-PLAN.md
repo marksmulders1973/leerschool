@@ -7,8 +7,8 @@
 | ✅ wo 16 sep | LOWAN batch 4 | 45 | Resend hallo@ | verstuurd 09:05 |
 | ✅ ma 21 sep | LOWAN batch 5 | 45 | Resend | verstuurd 14:49 (Windows-taak liep pas bij de eerste start; log in LOWAN-BATCH-5.md) |
 | ma 21 sep | Zachte checks: Voedselbank Lelystad (Dick Nauta), Leergeld Twenterand, Saba (adres flyers), School's cool Twente | 4 | Zapier-Gmail (reply in thread) | concepten eerst tonen |
-| **wacht op "ga"** | LOWAN batch 6 (`LOWAN-BATCH-6.md`, klaargezet 23 sep, ontdubbeld t.o.v. 1-5) | 45 | Resend | `node scripts/outreach-send-lowan.mjs 45 docs/outreach/LOWAN-BATCH-6.md` — één woord van Mark |
-| dag ná batch 6 | LOWAN batch 7 (`LOWAN-BATCH-7.md`, laatste 44; 4 scholen met kapotte namen overgeslagen) | 44 | Resend | na batch 6 → LOWAN compleet (325 in de lijst, 224+89 benaderd) |
+| ✅ wo 23 sep 19:55 | LOWAN batch 6 (`LOWAN-BATCH-6.md`) | 45 | Resend | verstuurd 45/45 (Mark "ga lowan"); NB: 1 schoolnaam met HTML-entiteit in de platte tekst (Hobbitstee) — batch 7 opgeschoond |
+| do 24 sep ~08:30 | LOWAN batch 7 (`LOWAN-BATCH-7.md`, laatste 44; 4 scholen met kapotte namen overgeslagen) | 44 | Resend | "ga lowan" van 23 sep dekt de reeks (2-sep-regel: één akkoord per golf) → morgenochtend versturen, dan LOWAN compleet (269/325 benaderd na batch 6) |
 | do 24 sep → ma 28 sep | Zachte checks Leudal + Ichthus gaan op in het 1 oktober-venster (één bericht i.p.v. twee) · evaluatie twee-weken-plan | 0 | — | concepten staan in `docs/outreach/1-oktober-venster.md` |
 | vr 25 sep | Kinderzwerfboek zachte herinnering als nog stil (adres voor 50 flyers, vóór 1 okt op de post) | 1 | Gmail (reply in thread) | ✅ concept klaar (`1-oktober-venster.md` #4), na "ga" |
 | ma 28 sep 08:00 | **1 oktober-venster** (Actie Pepernoot): kort berichtje aan de vijf organisaties die zelf materiaal vroegen — Leudal, Ichthus, VluchtelingenWerk, Kinderzwerfboek, (Ommeriek niet: gewone lezer) — met eigen code + toetsdatum + tag | 3 | Gmail (reply in thread) | ✅ concepten klaar (`docs/outreach/1-oktober-venster.md` #1-3: Leudal, Ichthus, VluchtelingenWerk), na "ga" |

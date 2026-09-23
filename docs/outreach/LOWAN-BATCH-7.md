@@ -81,4 +81,4 @@ Mark Smulders — leerkwartier.app · linkedin.com/company/leerkwartier
 | 41 | Wereldschool De Vlinder | Apeldoorn | obevers@leerplein055.nl |
 | 42 | Wereldschool Taalrijk | Boxtel | taalrijk@stichtingtalentis.nl |
 | 43 | Wereldwijs | Bergen Op Zoom | yolanda.groen@lpsnet.nl |
-| 44 | Wereldwijzer &#8211; Taalklassen | Hoogland | willemien.velsink@meerkring.nl |
+| 44 | Wereldwijzer – Taalklassen | Hoogland | willemien.velsink@meerkring.nl |
