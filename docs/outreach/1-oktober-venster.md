@@ -1,6 +1,6 @@
 # 1 oktober-venster — korte berichtjes aan organisaties die zelf materiaal vroegen (idee E)
 
-**Geschreven:** wo 23 sep 2026. **Status:** CONCEPTEN, niets verstuurd. Geplande verzenddatum: ma 28 sep 08:00 (BULKMAIL-PLAN), pas na Marks "ga". Kanaal: reply in de bestaande Gmail-thread (Zapier/Gmail-MCP), níet Resend — het zijn persoonlijke vervolgjes.
+**Geschreven:** wo 23 sep 2026. **Status:** ✅ ALLE VIER VERSTUURD wo 23 sep ~22:05 (Mark: 'ga 1 oktober-venster'), als reply in de bestaande Gmail-threads (ids Leudal 1a0cf6aa36ad0238 · Ichthus 1a0cf6ab20cc4c45 · VluchtelingenWerk 1a0cf6abe5954d90 · Kinderzwerfboek 1a0cf6ac82953d83). Vooraf gecheckt: in geen van de vier threads was een antwoord binnen. Eerder gepland: ma 28 sep. Kanaal: reply in de bestaande Gmail-thread (Zapier/Gmail-MCP), níet Resend — het zijn persoonlijke vervolgjes.
 **Waarom nu:** de Doorstroomtoets is begin februari; vanaf 1 oktober beginnen scholen en hulporganisaties aan het najaarsprogramma (Kinderhulp start Actie Pepernoot). Eén zachte herinnering met de eigen code, geen tweede pitch. De zachte checks van do 24 sep (Leudal, Ichthus) gaan hierin op: één bericht in plaats van twee.
 **Regels:** geen partnernamen, geen bedankt.html-link, geen cijfers over anderen, niets fysieks beloven, gratis-claim afgebakend.
 

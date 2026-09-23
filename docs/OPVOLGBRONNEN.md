@@ -70,10 +70,10 @@ Drie vaste opvolgmomenten per jaar, altijd mét nieuws (nooit een kale herinneri
 | 2026-09-21 | Queen Wilhelmina Library (Saba) | wacht | adres voor flyers + poster per post |
 | 2026-09-21 | School's cool Twente | wacht | zachte check teambespreking (zij komen terug) |
 | 2026-09-21 | Voedselbank Lelystad | wacht | zachte check PR-commissie (zij nemen contact op) |
-| 2026-09-24 | Stichting Leergeld Leudal | benaderd | zachte check bij stilte (0 scans) |
+| 2026-10-19 | Stichting Leergeld Leudal | benaderd | vervolgje 23 sep verstuurd; volgende contact = Leergeld-prijsmail 19 okt |
 | 2026-09-24 | VoorleesExpress Almere (De Nieuwe Bibliotheek) | reageerde | zachte check; bij ja code ALMERE2027 + flyer met logo (eerst tonen) |
-| 2026-09-24 | VPCBO Ichthus (Huizen) | benaderd | zachte check bij stilte; leerkracht-route + DPA-aanbod |
-| 2026-09-25 | Kinderzwerfboek | benaderd | adres voor 50 flyers per post (Kinderzwerfboekdag 7 okt Arnhem); flyers uiterlijk 1 okt versturen |
+| 2026-10-14 | VPCBO Ichthus (Huizen) | benaderd | vervolgje 23 sep verstuurd (/klas + proefweek); stil → laten liggen tot de Doorstroomtoets-mail |
+| 2026-10-01 | Kinderzwerfboek | benaderd | herinnering 23 sep verstuurd; adres binnen → 50 flyers op de post; na 1 okt niets meer sturen |
 | 2026-10-01 | Bureau Jeugdzorg Limburg | koud | adres zoeken; meenemen via koepel-ronde |
 | 2026-10-01 | Jeugdfonds Sport & Cultuur (landelijk) | koud | fondsen-ronde na toestemming Marion (concept klaar, code-voorstel JEUGDFONDS2027) |
 | 2026-10-01 | Leergeld Nederland (landelijk bureau) | benaderd | fondsen-ronde na toestemming Marion (concept klaar, code-voorstel LEERGELDNL2027); nieuwsbrief aan 115 stichtingen |
