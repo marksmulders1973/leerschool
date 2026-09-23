@@ -2,10 +2,14 @@
 // "Spelletje" opent eerst dit scherm. Twee grote knoppen: 🐾 Park (= het
 // bestaande 3D-park) en 🕵️ Imposter (stap 2, 23 sep: opent de witte kamer,
 // ImposterKamer.jsx). Brians nieuwe spel.
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { track } from "../utils.js";
 
 export default function SpelletjeKeuze({ onPark, onImposter, onHome }) {
   const [tikje, setTikje] = useState(false);
+  // Idee AT (23 sep): meten hoeveel kinderen de nieuwe knop zien en wat ze kiezen.
+  useEffect(() => { try { track("spelletje_keuze", { keuze: "open" }); } catch { /* */ } }, []);
+  const kies = (keuze, fn) => { try { track("spelletje_keuze", { keuze }); } catch { /* */ } fn && fn(); };
   const knop = {
     display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10,
     width: "min(44vw, 220px)", aspectRatio: "1 / 1", borderRadius: 28, border: "3px solid #1f2a44",
@@ -19,12 +23,12 @@ export default function SpelletjeKeuze({ onPark, onImposter, onHome }) {
         <div style={{ opacity: 0.8, marginTop: 6, fontWeight: 600 }}>Wat wil je spelen?</div>
       </div>
       <div style={{ display: "flex", gap: 18, flexWrap: "wrap", justifyContent: "center" }}>
-        <button type="button" onClick={onPark} style={{ ...knop, background: "linear-gradient(135deg,#22c55e,#15803d)" }}
+        <button type="button" onClick={() => kies("park", onPark)} style={{ ...knop, background: "linear-gradient(135deg,#22c55e,#15803d)" }}
           onPointerDown={(e) => { e.currentTarget.style.transform = "scale(.96)"; }} onPointerUp={(e) => { e.currentTarget.style.transform = ""; }}>
           <span style={{ fontSize: "clamp(44px, 11vw, 64px)" }}>🐾</span>Park
         </button>
         <button type="button" aria-label="Imposter"
-          onClick={() => { if (onImposter) onImposter(); else { setTikje(true); setTimeout(() => setTikje(false), 1600); } }}
+          onClick={() => kies("imposter", () => { if (onImposter) onImposter(); else { setTikje(true); setTimeout(() => setTikje(false), 1600); } })}
           style={{ ...knop, background: "linear-gradient(135deg,#ef4444,#7f1d1d)", transform: tikje ? "rotate(-3deg)" : "" }}>
           <span style={{ fontSize: "clamp(44px, 11vw, 64px)" }}>🕵️</span>Imposter
         </button>

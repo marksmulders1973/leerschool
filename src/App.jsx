@@ -2172,6 +2172,7 @@ export default function App() {
       )}
       {page === "cito" && (
         <CitoPage
+          onStartKwartier={() => { setPage("start-kwartier"); try { window.scrollTo({ top: 0 }); } catch { /* */ } }} /* idee AQ 23 sep */
           userRole={role}
           userLevel={userLevel}
           userSchoolType={userSchoolType}

@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import styles from "../styles.js";
-import { SoundEngine } from "../utils.js";
+import { SoundEngine, track } from "../utils.js";
 import Header from "./Header.jsx";
 import DoorstroomtoetsLogo from "./DoorstroomtoetsLogo.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
@@ -96,7 +96,7 @@ const ONDERDELEN = [
   },
 ];
 
-export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets, onPlayObliterator, onPrintPakket, userRole, userLevel, userSchoolType, onGoExamens }) {
+export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], onPickPath, onStartLeerpadToets, onStartProefToets, onPlayObliterator, onPrintPakket, userRole, userLevel, userSchoolType, onGoExamens, onStartKwartier }) {
   // QW-C (4-agent-audit 2026-05-18): bij directe deeplink (/cito zonder
   // role-flow) was groep hard "8" — een groep-6-kind kreeg groep-8-stof.
   // Default nu op userLevel (groep 7/8) of "8" als ouder/gast.
@@ -216,6 +216,23 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
       />
 
       <div style={{ padding: "16px 20px 40px", display: "flex", flexDirection: "column", gap: 16 }}>
+        {/* Idee AQ (23 sep 2026): /cito is de tweede voordeur (162 apparaten/week via Google),
+            maar landde op een lijst i.p.v. een som. Eén knop bovenaan opent het
+            startkwartier (57% beantwoordt daar vraag 1). Raakt de SEO-tekst niet. */}
+        {onStartKwartier && (
+          <button
+            type="button"
+            onClick={() => { try { track("cito_startkwartier_klik", { groep }); } catch { /* */ } onStartKwartier(); }}
+            style={{
+              display: "flex", alignItems: "center", justifyContent: "center", gap: 10, width: "100%",
+              padding: "14px 16px", borderRadius: 14, border: "none", cursor: "pointer",
+              background: "linear-gradient(135deg,#ff6b35,#ff8f5e)", color: "#fff",
+              fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 800, boxShadow: "0 6px 18px rgba(255,107,53,.35)",
+            }}
+          >
+            ▶ Doe nu de eerste som <span style={{ fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 600, opacity: .9 }}>5 vragen · geen account</span>
+          </button>
+        )}
         {/* Groep selector */}
         <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
           <div style={{ display: "flex", alignItems: "center", gap: 10 }}>

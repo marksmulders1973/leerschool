@@ -17,6 +17,7 @@
 // aangeraakt (last_seen in de weekvenster), geen verzonnen week-tellingen.
 
 import { createRequire } from "module";
+import { createHash } from "node:crypto";
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
 import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
@@ -158,7 +159,7 @@ function maakKindSectie(childName, rows) {
       <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:18px;margin:0 0 18px;">
         <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;">👤 ${naam}</div>
         <p style="font-size:14px;line-height:1.6;color:#cdd6e5;margin:0 0 12px;">We konden de oefen-gegevens op dit moment niet ophalen (tijdelijke storing bij ons). De actuele stand vind je altijd in het ouder-dashboard:</p>
-        <a href="${SITE}/ouder?utm_source=email&utm_campaign=ouder-rapport" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;">📈 Bekijk de actuele stand →</a>
+        <a href="${SITE}/ouder?utm_source=email&utm_campaign=ouder-rapport-stand" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;">📈 Bekijk de actuele stand →</a>
       </div>`;
     const text = `${childName}\nWe konden de oefen-gegevens nu niet ophalen (tijdelijke storing). Actuele stand: ${SITE}/ouder\n`;
     return { html, text };
@@ -172,7 +173,7 @@ function maakKindSectie(childName, rows) {
       <div style="background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.12);border-radius:14px;padding:18px;margin:0 0 18px;">
         <div style="font-size:16px;font-weight:800;color:#fff;margin-bottom:8px;">👤 ${naam}</div>
         <p style="font-size:14px;line-height:1.6;color:#cdd6e5;margin:0 0 12px;">Deze week nog niet geoefend. Geen zorgen — een kwartier is genoeg om er weer in te komen. De vraag van vandaag is een makkelijk startpunt:</p>
-        <a href="${SITE}/vandaag?utm_source=email&utm_campaign=ouder-rapport" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;">🎯 Doe samen de vraag van vandaag →</a>
+        <a href="${SITE}/vandaag?utm_source=email&utm_campaign=ouder-rapport-vraag" style="display:block;text-align:center;background:linear-gradient(135deg,#00C853,#00a846);color:#fff;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;">🎯 Doe samen de vraag van vandaag →</a>
       </div>`;
     const text = `${childName}\nDeze week nog niet geoefend. Een kwartier is genoeg — begin met de vraag van vandaag: ${SITE}/vandaag\n`;
     return { html, text };
@@ -207,9 +208,9 @@ function maakKindSectie(childName, rows) {
         <div style="font-size:10.5px;font-weight:700;color:#ffd54f;letter-spacing:.5px;text-transform:uppercase;margin-bottom:6px;">● Familie · nu gratis</div>
         <div style="font-size:14px;font-weight:800;color:#ffd54f;margin-bottom:4px;">🎯 Focus deze week: ${esc(padLabel(focusId))}</div>
         <p style="font-size:13px;line-height:1.55;color:#cdd6e5;margin:0 0 8px;">Niet alleen een cijfer — dit kun je deze week samen doen (${pctVan(zwakste)}% goed tot nu toe):</p>
-        <a href="${SITE}/ouderkaart?kaart=${focusEnc}&utm_source=email&utm_campaign=ouder-rapport" style="${focusLink}">📄 Zo leg je 't uit — kaart voor thuis →</a>
-        <a href="${SITE}/?pad=${focusEnc}&utm_source=email&utm_campaign=ouder-rapport" style="${focusLink}">✏️ Oefen dit onderwerp samen →</a>
-        <a href="${SITE}/weekschema?utm_source=email&utm_campaign=ouder-rapport" style="${focusLink}">📅 Zet een weekschema klaar →</a>
+        <a href="${SITE}/ouderkaart?kaart=${focusEnc}&utm_source=email&utm_campaign=ouder-rapport-kaart" style="${focusLink}">📄 Zo leg je 't uit — kaart voor thuis →</a>
+        <a href="${SITE}/?pad=${focusEnc}&utm_source=email&utm_campaign=ouder-rapport-oefen" style="${focusLink}">✏️ Oefen dit onderwerp samen →</a>
+        <a href="${SITE}/weekschema?utm_source=email&utm_campaign=ouder-rapport-schema" style="${focusLink}">📅 Zet een weekschema klaar →</a>
       </div>`
     : "";
 
@@ -231,7 +232,7 @@ function maakKindSectie(childName, rows) {
 }
 
 function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
-  const dashboard = `${SITE}/ouder?utm_source=email&utm_campaign=ouder-rapport`;
+  const dashboard = `${SITE}/ouder?utm_source=email&utm_campaign=ouder-rapport-stand`;
   const onderwerp = "📊 Weekrapport: zo ging het leren deze week";
 
   // 🤝 Deel-actie 2027 — vast blok in elke weekmail (Mark 29 jul 2026).
@@ -336,6 +337,14 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
       });
       if (!r.ok) { fouten.push(adres.slice(0, 6) + ":" + r.status); continue; }
       gelukt++;
+      // Idee AP (23 sep 2026): logboek per verstuurd rapport (gehasht adres, geen
+      // e-mail in de tabel) → cockpit-regel "weekrapport: verstuurd → geklikt"
+      // naast de utm_campaign per knop (stand / vraag / kaart / oefen / schema).
+      try {
+        const rid = await r.json().then((j) => j?.id || null).catch(() => null);
+        await sb(`mail_log`, { method: "POST", headers: { Prefer: "return=minimal" },
+          body: JSON.stringify({ soort: "ouder-rapport", ontvanger_hash: createHash("sha256").update(adres).digest("hex").slice(0, 16), campagne: "ouder-rapport", resend_id: rid }) }, base, key);
+      } catch { /* logboek-fout is niet fataal */ }
       // 👥 Partner-meelezer: eigen mail mét eigen afmeld-link (kliktocht 3 sep
       // 2026 — de partner heeft geen account en kon zich nergens afmelden).
       // Alleen ná bevestiging (de RPC geeft het adres anders niet door).
