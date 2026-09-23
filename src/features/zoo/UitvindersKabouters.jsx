@@ -14,7 +14,7 @@
 import { useRef, useState, useEffect, useMemo } from "react";
 import { useFrame } from "@react-three/fiber";
 import { Html } from "@react-three/drei";
-import { CanvasTexture, RepeatWrapping } from "three";
+import { CanvasTexture, RepeatWrapping, Vector3 } from "three";
 // Config (posities, praatjes, leerpad-links) staat in uitvindersData.js —
 // licht bestand zonder three.js, zodat de game-wrapper het ook kan lezen.
 // Posities liggen langs de ingangslaan (x ±3 = pad, z 35..77): statisch
@@ -449,26 +449,81 @@ export function ZwevendeMaten({ regels, y = 4 }) {
 // ik goed moet hebben?"). Toont het doel zichtbaar bij het object zelf: nog X
 // lesjes → goud, of "goud verdiend!". Zo weet het kind precies wat te doen én
 // dat leren het park gouder maakt. pointerEvents uit → je tikt dwars erdoorheen.
+//
+// v687 (Mark 23 sep: "blijft in beeld en ik kan het niet wegklikken"):
+//  1) alleen zichtbaar als je DICHTBIJ staat (camera binnen ~15 m, met een
+//     hysterese-band zodat het niet flikkert op de rand);
+//  2) een ✕ rechtsboven verbergt ALLE goud-doel-kaartjes voor dit parkbezoek
+//     (sessionStorage — volgende bezoek staan ze gewoon weer aan).
+const GOUDDOEL_KEY = "lk_gouddoel_verborgen";
+let goudDoelVerborgen = (() => { try { return sessionStorage.getItem(GOUDDOEL_KEY) === "1"; } catch { return false; } })();
+const goudDoelLuisteraars = new Set();
+function verbergGoudDoel() {
+  goudDoelVerborgen = true;
+  try { sessionStorage.setItem(GOUDDOEL_KEY, "1"); } catch {}
+  goudDoelLuisteraars.forEach((fn) => fn(true));
+}
+function useGoudDoelVerborgen() {
+  const [v, setV] = useState(goudDoelVerborgen);
+  useEffect(() => { goudDoelLuisteraars.add(setV); return () => { goudDoelLuisteraars.delete(setV); }; }, []);
+  return v;
+}
+const GOUDDOEL_AAN2 = 15 * 15;  // camera binnen 15 m → kaartje aan
+const GOUDDOEL_UIT2 = 20 * 20;  // pas voorbij 20 m weer uit (geen geflikker)
+
 export function GoudDoel({ goud = false, rest = 0, y = 0.7 }) {
+  const verborgen = useGoudDoelVerborgen();
+  const ref = useRef();
+  const [dichtbij, setDichtbij] = useState(false);
+  const tel = useRef(0);
+  const wp = useMemo(() => new Vector3(), []);
+  useFrame(({ camera }) => {
+    tel.current += 1;
+    if (tel.current < 10) return; // ~6×/sec
+    tel.current = 0;
+    if (!ref.current) return;
+    ref.current.getWorldPosition(wp);
+    const d2 = wp.distanceToSquared(camera.position);
+    setDichtbij((was) => (was ? d2 <= GOUDDOEL_UIT2 : d2 <= GOUDDOEL_AAN2));
+  });
   if (!goud && rest <= 0) return null;
   return (
-    <Html position={[0, y, 0]} center distanceFactor={13} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
-      <div style={{
-        whiteSpace: "nowrap", padding: "7px 13px", borderRadius: 14, textAlign: "center",
-        background: goud ? "linear-gradient(135deg,#ffe25a,#a9760b)" : "rgba(18,26,42,0.9)",
-        color: "#fff", fontFamily: "system-ui", boxShadow: "0 3px 12px rgba(0,0,0,.35)",
-        border: "2px solid #ffe25a", lineHeight: 1.4,
-      }}>
-        {goud ? (
-          <div style={{ fontWeight: 900, fontSize: 15, color: "#3a2600" }}>🥇 Goud verdiend!</div>
-        ) : (
-          <>
-            <div style={{ fontWeight: 800, fontSize: 14 }}>🥇 Nog {rest} {rest === 1 ? "lesje" : "lesjes"} → goud</div>
-            <div style={{ fontWeight: 700, fontSize: 11, color: "#ffe25a" }}>wil je alles goud? leer verder ✨</div>
-          </>
-        )}
-      </div>
-    </Html>
+    <group ref={ref} position={[0, y, 0]}>
+      {!verborgen && dichtbij && (
+        <Html center distanceFactor={13} zIndexRange={[8, 0]} style={{ pointerEvents: "none" }}>
+          <div style={{
+            position: "relative",
+            whiteSpace: "nowrap", padding: "7px 13px", borderRadius: 14, textAlign: "center",
+            background: goud ? "linear-gradient(135deg,#ffe25a,#a9760b)" : "rgba(18,26,42,0.9)",
+            color: "#fff", fontFamily: "system-ui", boxShadow: "0 3px 12px rgba(0,0,0,.35)",
+            border: "2px solid #ffe25a", lineHeight: 1.4,
+          }}>
+            {goud ? (
+              <div style={{ fontWeight: 900, fontSize: 15, color: "#3a2600" }}>🥇 Goud verdiend!</div>
+            ) : (
+              <>
+                <div style={{ fontWeight: 800, fontSize: 14 }}>🥇 Nog {rest} {rest === 1 ? "lesje" : "lesjes"} → goud</div>
+                <div style={{ fontWeight: 700, fontSize: 11, color: "#ffe25a" }}>wil je alles goud? leer verder ✨</div>
+              </>
+            )}
+            {/* ✕ = alle goud-kaartjes weg voor dit bezoek. Alleen dít knopje vangt
+                tikken; de rest van het kaartje laat je er dwars doorheen tikken. */}
+            <button
+              type="button"
+              aria-label="Kaartje sluiten"
+              onPointerDown={(e) => e.stopPropagation()}
+              onClick={(e) => { e.stopPropagation(); verbergGoudDoel(); }}
+              style={{
+                pointerEvents: "auto", position: "absolute", top: -10, right: -10,
+                width: 22, height: 22, borderRadius: "50%", border: "2px solid #ffe25a",
+                background: "#1b2437", color: "#ffe25a", fontWeight: 900, fontSize: 13,
+                lineHeight: "18px", padding: 0, cursor: "pointer", boxShadow: "0 2px 6px rgba(0,0,0,.4)",
+              }}
+            >✕</button>
+          </div>
+        </Html>
+      )}
+    </group>
   );
 }
 
