@@ -13,7 +13,7 @@ export const SNELKOPPELINGEN = [
     woorden: ["werkwoorden", "werkwoordspelling", "werkwoordspellingtest", "werkwoordentest", "d of t", "dt", "kofschip", "voltooid deelwoord", "verleden tijd", "tegenwoordige tijd", "vervoegen", "stam"] },
   { id: "dictees-print", emoji: "🖨️", label: "Dictees om te printen", uitleg: "Voorleesblad voor thuis + invulblad voor het kind, per spellingregel.", pad: "/dictees",
     woorden: ["dictee printen", "dictees", "voorleesblad", "dictee thuis", "printdictee"] },
-  { id: "spelletje", emoji: "🎮", label: "Spelletje", uitleg: "Kies: het Park of Imposter (in aanbouw).", pad: "/spelletje",
+  { id: "spelletje", emoji: "🎮", label: "Spelletje", uitleg: "Kies: het Park of Imposter (de witte kamer, in aanbouw).", pad: "/spelletje",
     woorden: ["spelletje", "spelletjes", "imposter", "bedrieger", "game"] },
   { id: "park", emoji: "🐾", label: "Mijn Park", uitleg: "Je eigen 3D-park: bouwen, dieren, leren bij elke plek.", pad: "/dierentuin",
     woorden: ["park", "mijn park", "dierentuin", "zoo", "bouwen", "dieren", "spel", "spelen", "munten", "zeppelin", "vulkaan", "auto", "kabelbaan"] },

@@ -1,10 +1,10 @@
 // 🎮 Spelletje-keuzescherm (Brian, 23 sep 2026, papa akkoord): de onderbalk-knop
 // "Spelletje" opent eerst dit scherm. Twee grote knoppen: 🐾 Park (= het
-// bestaande 3D-park) en 🕵️ Imposter (Brian bouwt dit nog — knop doet nog niets
-// behalve een berichtje). Stap 1 van Brians nieuwe spel.
+// bestaande 3D-park) en 🕵️ Imposter (stap 2, 23 sep: opent de witte kamer,
+// ImposterKamer.jsx). Brians nieuwe spel.
 import { useState } from "react";
 
-export default function SpelletjeKeuze({ onPark, onHome }) {
+export default function SpelletjeKeuze({ onPark, onImposter, onHome }) {
   const [tikje, setTikje] = useState(false);
   const knop = {
     display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 10,
@@ -23,8 +23,8 @@ export default function SpelletjeKeuze({ onPark, onHome }) {
           onPointerDown={(e) => { e.currentTarget.style.transform = "scale(.96)"; }} onPointerUp={(e) => { e.currentTarget.style.transform = ""; }}>
           <span style={{ fontSize: "clamp(44px, 11vw, 64px)" }}>🐾</span>Park
         </button>
-        <button type="button" aria-label="Imposter (nog niet klaar)"
-          onClick={() => { setTikje(true); setTimeout(() => setTikje(false), 1600); }}
+        <button type="button" aria-label="Imposter"
+          onClick={() => { if (onImposter) onImposter(); else { setTikje(true); setTimeout(() => setTikje(false), 1600); } }}
           style={{ ...knop, background: "linear-gradient(135deg,#ef4444,#7f1d1d)", transform: tikje ? "rotate(-3deg)" : "" }}>
           <span style={{ fontSize: "clamp(44px, 11vw, 64px)" }}>🕵️</span>Imposter
         </button>

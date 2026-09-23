@@ -73,7 +73,7 @@ function bepaalActieveTab(page) {
   if (page === "home") return "home";
   if (page === "learn-paths-hub" || page === "learn-path" || page === "curriculum") return "leren";
   if (page === "teacher-home" || page === "create-quiz" || page === "quiz-preview" || page === "cito") return "toets-maken";
-  if (page === "zoo" || page === "spelletje" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
+  if (page === "zoo" || page === "spelletje" || page === "imposter" || page === "spellen" || page === "supporterGame" || page === "obliteratorPlay" || page === "obliteratorDirect" || page === "pvp-lobby") return "park";
   // De oud-"Meer"-bestemmingen hangen nu onder Mijn pagina, dus daar licht de
   // Mijn-tab op (Mark 11 sep 2026).
   if (page === "mijn-pagina") return "mijn";

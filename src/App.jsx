@@ -25,6 +25,7 @@ import { vangPartnerCode } from "./features/referral/partnerCode.js";
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
 const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
 const SpelletjeKeuze = lazy(() => import("./components/SpelletjeKeuze.jsx"));
+const ImposterKamer = lazy(() => import("./components/ImposterKamer.jsx"));
 const HomeV3 = lazy(() => import("./components/HomeV3.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
 const WishesBoard = lazy(() => import("./components/WishesBoard.jsx"));
@@ -185,6 +186,7 @@ const BOTTOMNAV_PAGES = new Set([
   "redactiesommen", "spelling", "woordenschat", "begrijpend-lezen",
   "create-quiz", "quiz-preview", "class-manager", "lobby",
   "ouder-dashboard",
+  "spelletje", // Brian 23 sep: keuzescherm Park/Imposter (de kamer zelf is fullscreen, zonder balk)
 ]);
 
 // Pagina's waar de 15-min sessie-timer telt. Niet op home (wachtruimte)
@@ -1641,7 +1643,12 @@ export default function App() {
           parknaam in het park-menu, of de deeplink /obliterator (Brian). */}
       {page === "spelletje" && (
         <Suspense fallback={<PageLoader />}>
-          <SpelletjeKeuze onPark={() => setPage("zoo")} onHome={goHome} />
+          <SpelletjeKeuze onPark={() => setPage("zoo")} onImposter={() => setPage("imposter")} onHome={goHome} />
+        </Suspense>
+      )}
+      {page === "imposter" && (
+        <Suspense fallback={<PageLoader />}>
+          <ImposterKamer onTerug={() => setPage("spelletje")} />
         </Suspense>
       )}
       {page === "zoo" && (

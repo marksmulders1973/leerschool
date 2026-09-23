@@ -87,6 +87,7 @@ export const PAGE_TO_PATH = {
   zoo: "/dierentuin",
   // Brian 23 sep 2026: keuzescherm Park / Imposter achter de onderbalk-knop "Spelletje".
   spelletje: "/spelletje",
+  imposter: "/spelletje/imposter",
   // 🌍 Park-galerij — openbare (gemodereerde) showcase van kinder-parken (17 aug).
   galerij: "/parken",
   // "Maatje in je broekzak" — je droom-maatje altijd bij je: praten, groeit
