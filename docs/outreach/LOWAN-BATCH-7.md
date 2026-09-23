@@ -1,4 +1,4 @@
-# LOWAN nieuwkomersscholen — batch 7 (JSON-lijst, de laatste 44; klaargezet wo 23 sep 2026 — wacht op Marks 'ga')
+# LOWAN nieuwkomersscholen — batch 7 (JSON-lijst, de laatste 44; klaargezet wo 23 sep 2026 — ✅ rij 1-15 VERZONDEN wo 23 sep ~20:00 (Mark 'doe maar'; dagmax 60 bereikt) → rij 16-44 staan in LOWAN-BATCH-7B.md voor do 24 sep)
 
 Zelfde tekst en onderwerp als batch 1 (tekst-akkoord Mark 2 sep). Verzendroute: Resend vanaf hallo@leerkwartier.app, reply-to hallo@. Tempo ~45/werkdag (Resend-dagbudget 95). Dedupe op school én e-mail t.o.v. batch 1-5; namen met kapotte tekens overgeslagen: 
 
@@ -82,3 +82,20 @@ Mark Smulders — leerkwartier.app · linkedin.com/company/leerkwartier
 | 42 | Wereldschool Taalrijk | Boxtel | taalrijk@stichtingtalentis.nl |
 | 43 | Wereldwijs | Bergen Op Zoom | yolanda.groen@lpsnet.nl |
 | 44 | Wereldwijzer – Taalklassen | Hoogland | willemien.velsink@meerkring.nl |
+
+- **23-9-2026, 19:50:18** — via Resend (hallo@leerkwartier.app), 15/15 verstuurd (rij 1-15).
+  - 1 · SBO De Lings · cindy.debie@kerobei.nl · OK · 01a0cf63-736d-72c1-b30b-b1beec185d2b
+  - 2 · Schakelklas Beverwaard · j.havinga@schakelklasbeverwaard.nl · OK · 01a0cf63-792b-7644-a1d4-40d807299fa8
+  - 3 · Schakelklas Woerden (locatie basisschool De Achtsprong) · r.devisser@stichtingklasse.nl · OK · 01a0cf63-7eec-76bc-9cbf-57f4b12c2f7d
+  - 4 · Schakelklassen KC de Rietpluim · ansdevries@ommeriek.nl · OK · 01a0cf63-84b3-744a-8b52-d07f18707854
+  - 5 · Schakelvoorziening Emmeloord · s.vd.tempel@aves.nl · OK · 01a0cf63-8a88-72fb-a4a5-556210e841e1
+  - 6 · Scola · m.laar@stichtingproo.nl · OK · 01a0cf63-905a-71ad-8bd1-132e8b567d91
+  - 7 · Silvester-Bernadette · m.vanekert@sil-ber.nl · OK · 01a0cf63-9635-7038-ae93-f7d32fe1128c
+  - 8 · Sint Bavoschool · marloesdekrijger@elevantio.nl · OK · 01a0cf63-9bfe-7666-a9f7-2882b5ef122b
+  - 9 · Sint Bavoschool · c.dejong@st-bavoschool.nl · OK · 01a0cf63-a1db-7258-a8f9-3d12bacec4fc
+  - 10 · Stephanusschool · stephanus.dir@rvko.nl · OK · 01a0cf63-a797-77d1-bda9-07c5dd11ab95
+  - 11 · Stichting Groeisaam NT2 · y.vanhouten@groeisaampo.nl · OK · 01a0cf63-ad64-700b-b5f1-ffd08c64a5ca
+  - 12 · Taalatelier Houten · Caroline.boumans@basisschoolaventurijn.nl · OK · 01a0cf63-b347-728e-ad97-0c845513b7ce
+  - 13 · Taalcentrum Almere · n.vanlier@taalcentrumalmere.nl · OK · 01a0cf63-b918-736d-b26d-1fd02c4a0e0e
+  - 14 · Taalklas Boekel · taalklas@stichtinggoo.nl · OK · 01a0cf63-bed4-76cd-88fd-d8846a45ddd5
+  - 15 · Taalklas De Hoeksteen · y.verweij@csgdewaard.nl · OK · 01a0cf63-c49d-714a-bee9-1bdd221e6d59
