@@ -71,6 +71,7 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 - ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
 
 ## 🔴 Nu doen (deze week)
+- ⏰ **do 24 sep — twee geplande Windows-taken** (pc moet aan of slapend zijn, anders lopen ze bij de eerste start erna): 08:30 LOWAN batch 7B (29, laatste) · 14:00 Bonaire ronde 2 (13, code BONAIRE2027). Claude checkt de logs in het dagrapport.
 - 📬 **23 sep — outreach-halfuur, vier dingen liggen klaar voor één woord van jou:**
   1. **LOWAN batch 6** (45 nieuwkomersscholen, zelfde goedgekeurde tekst, `docs/outreach/LOWAN-BATCH-6.md`) → zeg "ga lowan" en hij gaat de deur uit; batch 7 (laatste 44) de dag erna.
   2. **Andersom Den Haag** (aanbod-platform, OCW-tip): mijn antwoorden op de formuliervragen staan in de chat van 23 sep → "doe maar".
