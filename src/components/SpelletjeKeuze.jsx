@@ -27,13 +27,13 @@ export default function SpelletjeKeuze({ onPark, onImposter, onHome }) {
           onPointerDown={(e) => { e.currentTarget.style.transform = "scale(.96)"; }} onPointerUp={(e) => { e.currentTarget.style.transform = ""; }}>
           <span style={{ fontSize: "clamp(44px, 11vw, 64px)" }}>🐾</span>Park
         </button>
-        <button type="button" aria-label="Imposter"
+        <button type="button" aria-label="Bedrieger"
           onClick={() => kies("imposter", () => { if (onImposter) onImposter(); else { setTikje(true); setTimeout(() => setTikje(false), 1600); } })}
           style={{ ...knop, background: "linear-gradient(135deg,#ef4444,#7f1d1d)", transform: tikje ? "rotate(-3deg)" : "" }}>
-          <span style={{ fontSize: "clamp(44px, 11vw, 64px)" }}>🕵️</span>Imposter
+          <span style={{ fontSize: "clamp(44px, 11vw, 64px)" }}>🕵️</span>Bedrieger
         </button>
       </div>
-      <div style={{ minHeight: 24, fontWeight: 700, color: "#fca5a5" }}>{tikje ? "Nog niet klaar — Brian bouwt eraan! 🔧" : ""}</div>
+      <div style={{ minHeight: 24, fontWeight: 700, color: "#fca5a5" }}>{tikje ? "Nog niet klaar, Brian bouwt eraan! 🔧" : ""}</div>
       {onHome && <button type="button" onClick={onHome} style={{ background: "transparent", border: "2px solid rgba(255,255,255,.35)", color: "#fff", borderRadius: 999, padding: "8px 18px", fontWeight: 700, cursor: "pointer" }}>← Terug naar Home</button>}
     </div>
   );

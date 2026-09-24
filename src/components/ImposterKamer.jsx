@@ -129,7 +129,7 @@ export default function ImposterKamer({ onTerug }) {
       </Canvas>
       {/* HUD */}
       <button type="button" onClick={onTerug} style={{ position: "absolute", top: 12, left: 12, zIndex: 3, background: "rgba(15,23,42,.85)", color: "#fff", border: "none", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui", cursor: "pointer" }}>← Terug</button>
-      <div style={{ position: "absolute", top: 12, right: 12, zIndex: 3, background: "rgba(15,23,42,.85)", color: "#fff", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui" }}>🕵️ Imposter</div>
+      <div style={{ position: "absolute", top: 12, right: 12, zIndex: 3, background: "rgba(15,23,42,.85)", color: "#fff", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui" }}>🕵️ Bedrieger</div>
       {!isTouch && !gelockt && (
         <div style={{ position: "absolute", inset: 0, display: "grid", placeItems: "center", zIndex: 2, pointerEvents: "none" }}>
           <div style={{ background: "rgba(15,23,42,.85)", color: "#fff", borderRadius: 18, padding: "16px 22px", fontFamily: "system-ui", textAlign: "center", fontWeight: 700 }}>
