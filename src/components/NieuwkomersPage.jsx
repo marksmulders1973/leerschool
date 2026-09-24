@@ -38,10 +38,11 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, taal = "n
     <div style={{ minHeight: "100dvh", background: "linear-gradient(160deg,#0f2a44,#173a5e 60%,#1e4a73)", color: "#fff", fontFamily: "system-ui", padding: "18px 16px 40px" }}>
       <div style={{ maxWidth: 640, margin: "0 auto" }}>
         <button type="button" onClick={onHome} style={{ background: "rgba(255,255,255,.12)", color: "#fff", border: "none", borderRadius: 999, padding: "8px 14px", fontWeight: 800, cursor: "pointer" }}>{t.terug}</button>
-        <h1 style={{ fontSize: "clamp(28px, 7vw, 40px)", margin: "18px 0 4px", fontWeight: 900 }}>🌍 {t.kop}</h1>
+        <h1 style={{ fontSize: "clamp(28px, 7vw, 40px)", margin: "18px 0 4px", fontWeight: 900 }}>{t.kop}</h1>
         <div style={{ fontSize: 15, opacity: .85, fontWeight: 600 }}>{t.sub}</div>
         <div style={{ margin: "14px 0 18px", fontSize: "clamp(18px, 4.5vw, 22px)", lineHeight: 1.45, fontWeight: 700 }}>
-          <VoorleesBlok tekst={`${t.kop}. ${t.sub} ${t.intro}`}>{t.intro}</VoorleesBlok>
+          <div style={{ marginBottom: 8 }}>{t.intro}</div>
+          <div style={{ fontSize: 14, fontWeight: 600 }}><VoorleesBlok tekst={`${t.kop}. ${t.sub} ${t.intro}`} /></div>
         </div>
 
         <div style={{ display: "grid", gap: 12 }}>
@@ -53,7 +54,7 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, taal = "n
             }}>
               <div style={{ width: 44, height: 44, borderRadius: 12, background: "#0f2a44", color: "#fff", display: "grid", placeItems: "center", fontWeight: 900, fontSize: 20, flex: "none" }}>{i + 1}</div>
               <div style={{ flex: 1 }}>
-                <div style={{ fontSize: "clamp(20px, 5vw, 24px)", fontWeight: 900 }}>{tegel.emoji} {tegel.titel}</div>
+                <div style={{ fontSize: "clamp(20px, 5vw, 24px)", fontWeight: 900 }}>{tegel.titel}</div>
                 <div style={{ fontSize: 15, fontWeight: 600, opacity: .8, marginTop: 2 }}>{tegel.uitleg}</div>
               </div>
               <div style={{ fontSize: 26, fontWeight: 900, opacity: .5 }}>›</div>
@@ -61,7 +62,7 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, taal = "n
           ))}
         </div>
 
-        <div style={{ marginTop: 20, background: "rgba(255,255,255,.1)", borderRadius: 14, padding: "12px 14px", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>🔊 {t.voorlees}</div>
+        <div style={{ marginTop: 20, background: "rgba(255,255,255,.1)", borderRadius: 14, padding: "12px 14px", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{t.voorlees}</div>
         <div style={{ marginTop: 12, fontSize: 13.5, opacity: .75, lineHeight: 1.5 }}>{t.juf}</div>
       </div>
     </div>
