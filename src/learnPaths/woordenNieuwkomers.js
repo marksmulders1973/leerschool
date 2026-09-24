@@ -18,7 +18,7 @@ const schud = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0
 const w = (goed, fout, steun, extra = {}) => {
   const opts = schud([goed, ...fout]);
   const answer = opts.indexOf(goed);
-  return { q: "Welk Nederlands woord is dit?", options: opts, answer, wrongHints: opts.map((_, i) => (i === answer ? null : "Kijk naar het woord in jouw taal. Welk Nederlands woord past?")), steun, ...extra };
+  return { q: "Welk Nederlands woord is dit?", options: opts, answer, wrongHints: opts.map((_, i) => (i === answer ? null : "Kijk naar het woord in jouw taal. Welk Nederlands woord past?")), steun, steunAltijd: true, ...extra };
 };
 
 const school = [

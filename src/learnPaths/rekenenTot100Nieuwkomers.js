@@ -33,11 +33,11 @@ for (let i = 0; i < 5; i++) {
   if (i % 2 === 0) {
     const t = tussen(2, 9); const e = tussen(1, 9); const n = t * 10 + e;
     const o = opties(n, [t + e, e * 10 + t, n + 10]);
-    tientallen.push({ q: `**${t} tientallen** en **${e} eenheden**. Welk getal is dat?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `${t} tientallen = ${t * 10}. Dan ${e} erbij.`) });
+    tientallen.push({ q: `**${t} tientallen** en **${e} eenheden**. Welk getal is dat?`, steun: { en: `${t} tens and ${e} ones. Which number is that?`, ar: `${t} عشرات و ${e} آحاد. ما هو العدد؟`, uk: `${t} десятків і ${e} одиниць. Яке це число?`, tr: `${t} onluk ve ${e} birlik. Bu hangi sayı?` }, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `${t} tientallen = ${t * 10}. Dan ${e} erbij.`) });
   } else {
     const t = tussen(1, 9); const n = t * 10;
     const o = opties(n + 10, [n, n + 1, n + 20]);
-    tientallen.push({ q: `Tel met **tien** verder. Wat komt na **${n}**?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Tien erbij: ${n} + 10.`) });
+    tientallen.push({ q: `Tel met **tien** verder. Wat komt na **${n}**?`, steun: { en: `Count on in tens. What comes after ${n}?`, ar: `عُدّ بالعشرات. ماذا يأتي بعد ${n}؟`, uk: `Рахуй десятками. Що йде після ${n}?`, tr: `Onar onar say. ${n} sayısından sonra ne gelir?` }, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Tien erbij: ${n} + 10.`) });
   }
 }
 tientallen[0].uitlegPad = {
@@ -123,15 +123,15 @@ overTiental[0].uitlegPad = {
 
 // STAP 5 — sommen uit de winkel (geld in hele euro's, korte zinnen)
 const winkel = [
-  { q: "Een bal kost **12 euro**. Een pet kost **15 euro**. Hoeveel euro samen?", goed: 27, fout: [26, 28, 3] },
-  { q: "Je hebt **50 euro**. Je koopt schoenen van **35 euro**. Hoeveel euro heb je nog?", goed: 15, fout: [25, 85, 14] },
-  { q: "Er zijn **40 stoelen**. Er komen **25 stoelen** bij. Hoeveel stoelen zijn er nu?", goed: 65, fout: [55, 15, 75] },
-  { q: "In de bus zitten **48 mensen**. **19 mensen** stappen uit. Hoeveel mensen zitten er nog?", goed: 29, fout: [39, 67, 31] },
-  { q: "Een boek kost **23 euro**. Een pen kost **8 euro**. Hoeveel euro samen?", goed: 31, fout: [21, 15, 30] },
+  { q: "Een bal kost **12 euro**. Een pet kost **15 euro**. Hoeveel euro samen?", goed: 27, fout: [26, 28, 3] , steun: {"en": "A ball costs 12 euros. A cap costs 15 euros. How many euros together?", "ar": "الكرة ثمنها 12 يورو. القبعة ثمنها 15 يورو. كم يورو معًا؟", "uk": "М'яч коштує 12 євро. Кепка коштує 15 євро. Скільки євро разом?", "tr": "Bir top 12 euro. Bir şapka 15 euro. Toplam kaç euro?"} },
+  { q: "Je hebt **50 euro**. Je koopt schoenen van **35 euro**. Hoeveel euro heb je nog?", goed: 15, fout: [25, 85, 14] , steun: {"en": "You have 50 euros. You buy shoes for 35 euros. How many euros do you have left?", "ar": "عندك 50 يورو. تشتري حذاءً بـ 35 يورو. كم يورو بقي معك؟", "uk": "У тебе 50 євро. Ти купуєш взуття за 35 євро. Скільки євро в тебе залишилось?", "tr": "50 euron var. 35 euroya ayakkabı alıyorsun. Kaç euron kaldı?"} },
+  { q: "Er zijn **40 stoelen**. Er komen **25 stoelen** bij. Hoeveel stoelen zijn er nu?", goed: 65, fout: [55, 15, 75] , steun: {"en": "There are 40 chairs. 25 more chairs are added. How many chairs are there now?", "ar": "هناك 40 كرسيًا. يُضاف 25 كرسيًا. كم كرسيًا هناك الآن؟", "uk": "Є 40 стільців. Додають ще 25 стільців. Скільки стільців тепер?", "tr": "40 sandalye var. 25 sandalye daha geliyor. Şimdi kaç sandalye var?"} },
+  { q: "In de bus zitten **48 mensen**. **19 mensen** stappen uit. Hoeveel mensen zitten er nog?", goed: 29, fout: [39, 67, 31] , steun: {"en": "There are 48 people on the bus. 19 people get off. How many people are still on the bus?", "ar": "في الحافلة 48 شخصًا. ينزل 19 شخصًا. كم شخصًا بقي؟", "uk": "В автобусі 48 людей. 19 людей виходять. Скільки людей залишилось?", "tr": "Otobüste 48 kişi var. 19 kişi iniyor. Kaç kişi kaldı?"} },
+  { q: "Een boek kost **23 euro**. Een pen kost **8 euro**. Hoeveel euro samen?", goed: 31, fout: [21, 15, 30] , steun: {"en": "A book costs 23 euros. A pen costs 8 euros. How many euros together?", "ar": "الكتاب ثمنه 23 يورو. القلم ثمنه 8 يورو. كم يورو معًا؟", "uk": "Книжка коштує 23 євро. Ручка коштує 8 євро. Скільки євро разом?", "tr": "Bir kitap 23 euro. Bir kalem 8 euro. Toplam kaç euro?"} },
   { q: "Er liggen **100 appels**. De klas eet er **36**. Hoeveel appels blijven over?", goed: 64, fout: [74, 54, 136] },
   { q: "Op maandag lees je **27 bladzijden**. Op dinsdag **27**. Hoeveel bladzijden samen?", goed: 54, fout: [44, 0, 55] },
   { q: "Je hebt **75 euro**. Je geeft **28 euro** uit. Hoeveel euro heb je nog?", goed: 47, fout: [57, 103, 53] },
-].slice(0, 5).map((s) => { const o = opties(s.goed, s.fout); return { q: s.q, options: o.options, answer: o.answer, wrongHints: hints(o.answer, "Lees de som nog een keer. Samen = plus. Weg, uit, over = min.") }; });
+].slice(0, 5).map((s) => { const o = opties(s.goed, s.fout); return { q: s.q, steun: s.steun, options: o.options, answer: o.answer, wrongHints: hints(o.answer, "Lees de som nog een keer. Samen = plus. Weg, uit, over = min.") }; });
 winkel[0].uitlegPad = {
   stappen: [
     { titel: "Plus of min?", tekst: "**Samen** betekent **plus**. 12 euro en 15 euro samen: 12 + 15." },

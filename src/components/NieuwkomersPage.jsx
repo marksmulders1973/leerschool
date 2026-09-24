@@ -4,8 +4,8 @@
 // "minder maar beter passend", iedereen die de code WELKOMNIEUWKOMER intikt komt hier.
 // Steuntaal (24 sep, Marks idee "vier talen laten kiezen"): het kind kiest zijn
 // thuistaal (Engels, Arabisch, Oekraïens, Turks); de vragen blijven Nederlands, maar
-// onder elke vraag met een `steun`-veld staat dezelfde vraag in de eigen taal
-// (MiniQuiz leest localStorage `lk_steuntaal`). Geen vertaling van de app: steun.
+// een tik op een vraag (of het knopje bij een antwoord) toont dezelfde zin in de eigen
+// taal (SteunTik.jsx leest localStorage `lk_steuntaal`). Geen vertaling van de app: steun.
 import { useEffect, useState } from "react";
 import { track } from "../utils.js";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
@@ -24,7 +24,7 @@ const T = {
     kop: "Nieuwkomer-pakket",
     sub: "Gratis. Geen account. Korte zinnen. Elke som met uitleg.",
     taalvraag: "Welke taal spreek je thuis?",
-    taaluitleg: "Alles blijft Nederlands. Onder een vraag zie je dan ook jouw taal.",
+    taaluitleg: "Alles blijft Nederlands. Tik op een zin of op het knopje bij een antwoord. Dan zie je jouw taal.",
     intro: "Dit is voor kinderen die nog Nederlands leren. Begin bij 1. Doe elke dag een beetje.",
     tegels: [
       { id: "in-de-klas-nieuwkomers", soort: "pad", titel: "In de klas", uitleg: "Wat zeg je tegen de juf? Hoe maak je vrienden?" },
@@ -38,10 +38,10 @@ const T = {
     juf: "Voor de leerkracht: alles op deze pagina is gratis, ook op het digibord. Zet de code WELKOMNIEUWKOMER op het bord; ieder kind komt dan hier.",
     terug: "← Terug",
   },
-  en: { taalvraag: "Which language do you speak at home?", taaluitleg: "Everything stays in Dutch. Under a question you also see your language.", intro: "This is for children who are still learning Dutch. Start at 1. Do a little every day.", voorlees: "Everywhere there is a button 'Lees voor' (read aloud). Press it to hear the text." },
-  ar: { taalvraag: "ما هي اللغة التي تتكلمها في البيت؟", taaluitleg: "كل شيء يبقى بالهولندية. تحت السؤال ترى لغتك أيضًا.", intro: "هذا للأطفال الذين ما زالوا يتعلمون الهولندية. ابدأ من 1. تعلّم قليلًا كل يوم.", voorlees: "في كل مكان يوجد زر 'Lees voor' (اقرأ بصوت عالٍ). اضغط عليه لتسمع النص." },
-  uk: { taalvraag: "Якою мовою ти розмовляєш удома?", taaluitleg: "Усе залишається нідерландською. Під запитанням ти бачиш і свою мову.", intro: "Це для дітей, які ще вчать нідерландську. Почни з 1. Займайся потроху щодня.", voorlees: "Скрізь є кнопка 'Lees voor' (прочитати вголос). Натисни її, щоб почути текст." },
-  tr: { taalvraag: "Evde hangi dili konuşuyorsun?", taaluitleg: "Her şey Hollandaca kalır. Sorunun altında kendi dilini de görürsün.", intro: "Bu, hâlâ Hollandaca öğrenen çocuklar için. 1'den başla. Her gün biraz yap.", voorlees: "Her yerde 'Lees voor' (sesli oku) düğmesi var. Metni duymak için bas." },
+  en: { taalvraag: "Which language do you speak at home?", taaluitleg: "Everything stays in Dutch. Tap a sentence, or the small button next to an answer, to see your language.", intro: "This is for children who are still learning Dutch. Start at 1. Do a little every day.", voorlees: "Everywhere there is a button 'Lees voor' (read aloud). Press it to hear the text." },
+  ar: { taalvraag: "ما هي اللغة التي تتكلمها في البيت؟", taaluitleg: "كل شيء يبقى بالهولندية. اضغط على الجملة أو على الزر الصغير بجانب الجواب لترى لغتك.", intro: "هذا للأطفال الذين ما زالوا يتعلمون الهولندية. ابدأ من 1. تعلّم قليلًا كل يوم.", voorlees: "في كل مكان يوجد زر 'Lees voor' (اقرأ بصوت عالٍ). اضغط عليه لتسمع النص." },
+  uk: { taalvraag: "Якою мовою ти розмовляєш удома?", taaluitleg: "Усе залишається нідерландською. Натисни на речення або на кнопочку біля відповіді, щоб побачити свою мову.", intro: "Це для дітей, які ще вчать нідерландську. Почни з 1. Займайся потроху щодня.", voorlees: "Скрізь є кнопка 'Lees voor' (прочитати вголос). Натисни її, щоб почути текст." },
+  tr: { taalvraag: "Evde hangi dili konuşuyorsun?", taaluitleg: "Her şey Hollandaca kalır. Bir cümleye ya da cevabın yanındaki küçük düğmeye dokun, kendi dilini görürsün.", intro: "Bu, hâlâ Hollandaca öğrenen çocuklar için. 1'den başla. Her gün biraz yap.", voorlees: "Her yerde 'Lees voor' (sesli oku) düğmesi var. Metni duymak için bas." },
 };
 
 export function leesSteuntaal() { try { return localStorage.getItem(STEUNTAAL_KEY) || "nl"; } catch { return "nl"; } }

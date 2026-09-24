@@ -88,6 +88,31 @@ const deel3 = [
     { en: "School is over. What do you say to the teacher?", ar: "انتهت المدرسة. ماذا تقول للمعلّمة؟", uk: "Уроки закінчилися. Що ти скажеш учительці?", tr: "Okul bitti. Öğretmene ne dersin?" }),
 ];
 
+// 🌍 Steun-tik (Mark 24 sep 2026): ook elk ANTWOORD is tikbaar → eigen taal.
+// Volgorde = deel1 + deel2 + deel3 (15 vragen × 4 opties × 4 talen).
+const OPTIES_STEUN = [
+  {"en": ["May I go to the toilet?", "I am done.", "Where is my coat?", "I am hungry."], "ar": ["هل يمكنني الذهاب إلى الحمّام؟", "لقد انتهيت.", "أين معطفي؟", "أنا جائع."], "uk": ["Можна мені в туалет?", "Я закінчив.", "Де моя куртка?", "Я хочу їсти."], "tr": ["Tuvalete gidebilir miyim?", "Bitirdim.", "Montum nerede?", "Açım."]},
+  {"en": ["I don't understand.", "Thank you.", "See you tomorrow!", "I am here."], "ar": ["لا أفهم.", "شكرًا.", "إلى الغد!", "أنا هنا."], "uk": ["Я не розумію.", "Дякую.", "До завтра!", "Я тут."], "tr": ["Anlamıyorum.", "Teşekkür ederim.", "Yarın görüşürüz!", "Buradayım."]},
+  {"en": ["Can you say it again?", "May I go outside?", "Where is the ball?", "I am going home."], "ar": ["هل يمكنك أن تقولها مرة أخرى؟", "هل يمكنني الخروج؟", "أين الكرة؟", "سأذهب إلى البيت."], "uk": ["Можете повторити ще раз?", "Можна мені вийти надвір?", "Де м'яч?", "Я йду додому."], "tr": ["Bir daha söyler misiniz?", "Dışarı çıkabilir miyim?", "Top nerede?", "Eve gidiyorum."]},
+  {"en": ["What does this word mean?", "What time is it?", "May I play?", "Is it break time?"], "ar": ["ماذا تعني هذه الكلمة؟", "كم الساعة؟", "هل يمكنني اللعب؟", "هل هي الاستراحة؟"], "uk": ["Що означає це слово?", "Котра година?", "Можна мені погратися?", "Це перерва?"], "tr": ["Bu kelime ne demek?", "Saat kaç?", "Oynayabilir miyim?", "Teneffüs mü?"]},
+  {"en": ["I am done.", "I don't understand.", "May I go to the toilet?", "Where do you live?"], "ar": ["لقد انتهيت.", "لا أفهم.", "هل يمكنني الذهاب إلى الحمّام؟", "أين تسكن؟"], "uk": ["Я закінчив.", "Я не розумію.", "Можна мені в туалет?", "Де ти живеш?"], "tr": ["Bitirdim.", "Anlamıyorum.", "Tuvalete gidebilir miyim?", "Nerede oturuyorsun?"]},
+  {"en": ["To the gym hall.", "To the toilet.", "Home.", "To the shop."], "ar": ["إلى صالة الرياضة.", "إلى الحمّام.", "إلى البيت.", "إلى المتجر."], "uk": ["До спортзалу.", "До туалету.", "Додому.", "До магазину."], "tr": ["Spor salonuna.", "Tuvalete.", "Eve.", "Dükkâna."]},
+  {"en": ["The break starts or ends.", "You must go home.", "There is a fire.", "You get food."], "ar": ["تبدأ الاستراحة أو تنتهي.", "يجب أن تذهب إلى البيت.", "هناك حريق.", "ستحصل على طعام."], "uk": ["Перерва починається або закінчується.", "Ти маєш іти додому.", "Пожежа.", "Ти отримаєш їжу."], "tr": ["Teneffüs başlıyor ya da bitiyor.", "Eve gitmen gerekiyor.", "Yangın var.", "Yemek alıyorsun."]},
+  {"en": ["coat rack", "table", "door", "chair"], "ar": ["علّاقة المعاطف", "الطاولة", "الباب", "الكرسي"], "uk": ["вішалка", "стіл", "двері", "стілець"], "tr": ["askı", "masa", "kapı", "sandalye"]},
+  {"en": ["In the playground.", "In the gym hall.", "In the toilet.", "In the car."], "ar": ["في ساحة المدرسة.", "في صالة الرياضة.", "في الحمّام.", "في السيارة."], "uk": ["На шкільному майданчику.", "У спортзалі.", "У туалеті.", "У машині."], "tr": ["Okul bahçesinde.", "Spor salonunda.", "Tuvalette.", "Arabada."]},
+  {"en": ["I forgot my book.", "I have a dog.", "The weather is nice.", "I am eight years old."], "ar": ["نسيت كتابي.", "عندي كلب.", "الطقس جميل.", "عمري ثماني سنوات."], "uk": ["Я забув свою книжку.", "У мене є собака.", "Гарна погода.", "Мені вісім років."], "tr": ["Kitabımı unuttum.", "Bir köpeğim var.", "Hava güzel.", "Sekiz yaşındayım."]},
+  {"en": ["My name is … (your name).", "Thank you.", "Goodbye.", "I don't understand."], "ar": ["اسمي … (اسمك).", "شكرًا.", "إلى اللقاء.", "لا أفهم."], "uk": ["Мене звати … (твоє ім'я).", "Дякую.", "До побачення.", "Я не розумію."], "tr": ["Benim adım … (senin adın).", "Teşekkür ederim.", "Hoşça kal.", "Anlamıyorum."]},
+  {"en": ["May I join?", "I am done.", "Where is the teacher?", "It is cold."], "ar": ["هل يمكنني المشاركة؟", "لقد انتهيت.", "أين المعلّمة؟", "الجو بارد."], "uk": ["Можна мені приєднатися?", "Я закінчив.", "Де вчителька?", "Холодно."], "tr": ["Ben de katılabilir miyim?", "Bitirdim.", "Öğretmen nerede?", "Hava soğuk."]},
+  {"en": ["Thank you.", "My name is Ali.", "May I go to the toilet?", "No."], "ar": ["شكرًا.", "اسمي علي.", "هل يمكنني الذهاب إلى الحمّام؟", "لا."], "uk": ["Дякую.", "Мене звати Алі.", "Можна мені в туалет?", "Ні."], "tr": ["Teşekkür ederim.", "Benim adım Ali.", "Tuvalete gidebilir miyim?", "Hayır."]},
+  {"en": ["No, I don't want that.", "Yes, okay.", "Thank you.", "See you tomorrow."], "ar": ["لا، لا أريد ذلك.", "نعم، حسنًا.", "شكرًا.", "إلى الغد."], "uk": ["Ні, я цього не хочу.", "Так, добре.", "Дякую.", "До завтра."], "tr": ["Hayır, bunu istemiyorum.", "Evet, tamam.", "Teşekkür ederim.", "Yarın görüşürüz."]},
+  {"en": ["See you tomorrow!", "Good morning!", "May I join?", "I don't understand."], "ar": ["إلى الغد!", "صباح الخير!", "هل يمكنني المشاركة؟", "لا أفهم."], "uk": ["До завтра!", "Доброго ранку!", "Можна мені приєднатися?", "Я не розумію."], "tr": ["Yarın görüşürüz!", "Günaydın!", "Ben de katılabilir miyim?", "Anlamıyorum."]},
+];
+[...deel1, ...deel2, ...deel3].forEach((c, i) => {
+  const o = OPTIES_STEUN[i]; if (!o) return;
+  // Map op optie-TEKST (niet positie): de app schudt de antwoorden.
+  c.steunOpties = Object.fromEntries(c.options.map((tekst, k) => [tekst, { en: o.en[k], ar: o.ar[k], uk: o.uk[k], tr: o.tr[k] }]));
+});
+
 const steps = [
   { title: "Vragen aan de juf of meester", explanation: "Op school mag je **altijd** iets vragen.\n\nBegin met **Mag ik…?** of **Kunt u…?**\n\nSteek je hand op. Wacht. Zeg de zin. Dat is genoeg.", checks: deel1 },
   { title: "Op school", explanation: "Op school zijn plekken en regels.\n\nDe **klas**: leren. De **gymzaal**: sport. Het **plein**: buiten spelen.\n\nDe **bel** zegt: nu begint iets, of nu is iets klaar.", checks: deel2 },

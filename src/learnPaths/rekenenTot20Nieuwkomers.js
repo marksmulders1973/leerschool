@@ -41,7 +41,7 @@ const telVragen = [];
 for (let i = 0; i < 5; i++) {
   const n = tussen(3, 19);
   const o = opties(n + 1, [n, n + 2, n - 1]);
-  telVragen.push({ q: `Tel verder. Wat komt **na ${n}**?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Tel: ${n}, en dan één erbij.`) });
+  telVragen.push({ q: `Tel verder. Wat komt **na ${n}**?`, steun: { en: `Count on. What comes after ${n}?`, ar: `عُدّ. ماذا يأتي بعد ${n}؟`, uk: `Рахуй далі. Що йде після ${n}?`, tr: `Saymaya devam et. ${n} sayısından sonra ne gelir?` }, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Tel: ${n}, en dan één erbij.`) });
 }
 telVragen[0].uitlegPad = {
   stappen: [
@@ -125,15 +125,15 @@ over10[0].uitlegPad = {
 
 // STAP 5 — sommen uit de klas (korte verhaaltjes, eenvoudige woorden)
 const klasSommen = [
-  { q: "Er zijn **6 kinderen** in de klas. Er komen **3 kinderen** bij. Hoeveel kinderen zijn er nu?", goed: 9, fout: [8, 10, 3] },
-  { q: "Je hebt **10 potloden**. Je geeft er **4** weg. Hoeveel potloden heb je nog?", goed: 6, fout: [5, 7, 14] },
-  { q: "In de tas zitten **7 boeken**. Je doet er **5** bij. Hoeveel boeken zijn er nu?", goed: 12, fout: [11, 13, 2] },
-  { q: "Er staan **15 stoelen**. **8 stoelen** zijn bezet. Hoeveel stoelen zijn leeg?", goed: 7, fout: [6, 8, 23] },
-  { q: "Sara heeft **9 knikkers**. Ali heeft **9 knikkers**. Hoeveel knikkers samen?", goed: 18, fout: [17, 19, 0] },
+  { q: "Er zijn **6 kinderen** in de klas. Er komen **3 kinderen** bij. Hoeveel kinderen zijn er nu?", goed: 9, fout: [8, 10, 3] , steun: {"en": "There are 6 children in the class. 3 more children come. How many children are there now?", "ar": "في الصف 6 أطفال. يأتي 3 أطفال آخرون. كم طفلًا هناك الآن؟", "uk": "У класі 6 дітей. Приходять ще 3 дитини. Скільки дітей тепер?", "tr": "Sınıfta 6 çocuk var. 3 çocuk daha geliyor. Şimdi kaç çocuk var?"} },
+  { q: "Je hebt **10 potloden**. Je geeft er **4** weg. Hoeveel potloden heb je nog?", goed: 6, fout: [5, 7, 14] , steun: {"en": "You have 10 pencils. You give 4 away. How many pencils do you have left?", "ar": "عندك 10 أقلام رصاص. تعطي 4 منها. كم قلمًا بقي معك؟", "uk": "У тебе 10 олівців. Ти віддаєш 4. Скільки олівців у тебе залишилось?", "tr": "10 kalemin var. 4 tanesini veriyorsun. Kaç kalemin kaldı?"} },
+  { q: "In de tas zitten **7 boeken**. Je doet er **5** bij. Hoeveel boeken zijn er nu?", goed: 12, fout: [11, 13, 2] , steun: {"en": "There are 7 books in the bag. You add 5. How many books are there now?", "ar": "في الحقيبة 7 كتب. تضيف 5. كم كتابًا هناك الآن؟", "uk": "У сумці 7 книжок. Ти додаєш 5. Скільки книжок тепер?", "tr": "Çantada 7 kitap var. 5 tane daha koyuyorsun. Şimdi kaç kitap var?"} },
+  { q: "Er staan **15 stoelen**. **8 stoelen** zijn bezet. Hoeveel stoelen zijn leeg?", goed: 7, fout: [6, 8, 23] , steun: {"en": "There are 15 chairs. 8 chairs are taken. How many chairs are empty?", "ar": "هناك 15 كرسيًا. 8 كراسٍ مشغولة. كم كرسيًا فارغًا؟", "uk": "Є 15 стільців. 8 стільців зайняті. Скільки стільців вільних?", "tr": "15 sandalye var. 8 sandalye dolu. Kaç sandalye boş?"} },
+  { q: "Sara heeft **9 knikkers**. Ali heeft **9 knikkers**. Hoeveel knikkers samen?", goed: 18, fout: [17, 19, 0] , steun: {"en": "Sara has 9 marbles. Ali has 9 marbles. How many marbles together?", "ar": "عند سارة 9 كرات زجاجية. عند علي 9 كرات زجاجية. كم كرة معًا؟", "uk": "У Сари 9 кульок. В Алі 9 кульок. Скільки кульок разом?", "tr": "Sara'nın 9 misketi var. Ali'nin 9 misketi var. Toplam kaç misket?"} },
   { q: "Er zijn **20 appels**. De kinderen eten er **12**. Hoeveel appels zijn er nog?", goed: 8, fout: [9, 7, 32] },
   { q: "Op de tafel liggen **4 rode** en **8 blauwe** blokken. Hoeveel blokken zijn het samen?", goed: 12, fout: [11, 13, 4] },
   { q: "De juf heeft **16 stickers**. Ze geeft **9 stickers** weg. Hoeveel stickers heeft ze nog?", goed: 7, fout: [6, 8, 25] },
-].slice(0, 5).map((s) => { const o = opties(s.goed, s.fout); return { q: s.q, options: o.options, answer: o.answer, wrongHints: hints(o.answer, "Lees de som nog een keer. Is het erbij of eraf?") }; });
+].slice(0, 5).map((s) => { const o = opties(s.goed, s.fout); return { q: s.q, steun: s.steun, options: o.options, answer: o.answer, wrongHints: hints(o.answer, "Lees de som nog een keer. Is het erbij of eraf?") }; });
 klasSommen[0].uitlegPad = {
   stappen: [
     { titel: "Erbij of eraf?", tekst: "Lees de som. **Komen er kinderen bij?** Dan is het **plus**. **Gaan er weg?** Dan is het **min**." },

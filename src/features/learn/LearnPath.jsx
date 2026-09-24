@@ -43,6 +43,7 @@ import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
+import { SteunVraag, SteunOptie } from "../../shared/ui/SteunTik.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import PushAanbodKaart from "../../shared/PushAanbodKaart.jsx";
 
@@ -1456,18 +1457,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 <SvgFigure svg={currentCheck.svg} />
               </div>
             )}
+            {/* 🌍 Steun-tik (24 sep 2026): vraag tikbaar → eigen taal eronder (SteunTik.jsx). */}
+            <SteunVraag steun={currentCheck.steun} altijd={currentCheck.steunAltijd}>
             <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
               <MdInline text={currentCheck.q} />
-              {/* 🌍 Steuntaal (Nieuwkomer-pakket, 24 sep 2026): dezelfde vraag in de thuistaal
-                  als de vraag een `steun`-veld heeft en er een taal is gekozen (localStorage
-                  lk_steuntaal); zonder keuze Engels. Arabisch van rechts naar links. */}
-              {currentCheck.steun && (() => {
-                let taal = "en"; try { taal = localStorage.getItem("lk_steuntaal") || "en"; } catch { /* */ }
-                if (taal === "nl") return null;
-                const tekst = currentCheck.steun[taal] || currentCheck.steun.en; if (!tekst) return null;
-                return <div dir={taal === "ar" ? "rtl" : "ltr"} style={{ fontSize: 14.5, fontWeight: 600, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>{tekst}</div>;
-              })()}
             </div>
+            </SteunVraag>
             {selected === null && (currentCheck.uitlegPad || currentCheck.leerpadLink) && (
               <div style={{ marginBottom: 14 }}>
                 {!showUitlegPad && (
@@ -1549,8 +1544,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               const letter = String.fromCharCode(65 + i);
               const isWrongPick = isSelected && selected !== currentCheck.answer;
               return (
+                <SteunOptie key={i} steun={currentCheck.steunOpties} opt={opt}>
                 <button
-                  key={i}
                   className="lk-answer-btn"
                   onClick={() => handlePick(i)}
                   disabled={selected !== null}
@@ -1583,6 +1578,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     <MdInline text={opt} />
                   )}
                 </button>
+                </SteunOptie>
               );
             })}
             {selected !== null && selected === currentCheck.answer && (
