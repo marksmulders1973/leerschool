@@ -11,6 +11,51 @@ const chapters = [
   { letter: "C", title: "Lichaam en kleuren", emoji: "🧍", from: 2, to: 2 },
 ];
 
+// 🌍 Woordenboekje voor het vertaalknopje bij elk ANTWOORD (Mark 24 sep 2026: hij tikte op
+// 'de stoel' om te vertalen en dat telde als fout antwoord → dus een knopje ernaast).
+// Bewuste keuze: dit verklapt het antwoord als je alle vier tikt, maar het kind leest dan
+// wél vier Nederlandse woorden mét de/het naast de eigen taal — leren, geen toets.
+const WOORDENBOEK = {
+  "de tafel": { en: "the table", ar: "الطاولة", uk: "стіл", tr: "masa" },
+  "de stoel": { en: "the chair", ar: "الكرسي", uk: "стілець", tr: "sandalye" },
+  "de deur": { en: "the door", ar: "الباب", uk: "двері", tr: "kapı" },
+  "het raam": { en: "the window", ar: "النافذة", uk: "вікно", tr: "pencere" },
+  "de tas": { en: "the bag", ar: "الحقيبة", uk: "сумка", tr: "çanta" },
+  "de pen": { en: "the pen", ar: "القلم", uk: "ручка", tr: "kalem" },
+  "het boek": { en: "the book", ar: "الكتاب", uk: "книжка", tr: "kitap" },
+  "het bord": { en: "the board (in class)", ar: "السبّورة", uk: "дошка", tr: "tahta" },
+  "de jas": { en: "the coat", ar: "المعطف", uk: "куртка", tr: "mont" },
+  "de juf": { en: "the (female) teacher", ar: "المعلّمة", uk: "вчителька", tr: "kadın öğretmen" },
+  "de meester": { en: "the (male) teacher", ar: "المعلّم", uk: "вчитель", tr: "erkek öğretmen" },
+  "het kind": { en: "the child", ar: "الطفل", uk: "дитина", tr: "çocuk" },
+  "de moeder": { en: "the mother", ar: "الأم", uk: "мама", tr: "anne" },
+  "het huis": { en: "the house", ar: "البيت", uk: "будинок", tr: "ev" },
+  "de school": { en: "the school", ar: "المدرسة", uk: "школа", tr: "okul" },
+  "de auto": { en: "the car", ar: "السيارة", uk: "машина", tr: "araba" },
+  "de tuin": { en: "the garden", ar: "الحديقة", uk: "сад", tr: "bahçe" },
+  "de melk": { en: "the milk", ar: "الحليب", uk: "молоко", tr: "süt" },
+  "de appel": { en: "the apple", ar: "التفاحة", uk: "яблуко", tr: "elma" },
+  "het water": { en: "the water", ar: "الماء", uk: "вода", tr: "su" },
+  "het brood": { en: "the bread", ar: "الخبز", uk: "хліб", tr: "ekmek" },
+  "de kaas": { en: "the cheese", ar: "الجبن", uk: "сир", tr: "peynir" },
+  "de banaan": { en: "the banana", ar: "الموزة", uk: "банан", tr: "muz" },
+  "de vader": { en: "the father", ar: "الأب", uk: "тато", tr: "baba" },
+  "de zus": { en: "the sister", ar: "الأخت", uk: "сестра", tr: "kız kardeş" },
+  "het hoofd": { en: "the head", ar: "الرأس", uk: "голова", tr: "baş" },
+  "de hand": { en: "the hand", ar: "اليد", uk: "рука (кисть)", tr: "el" },
+  "de voet": { en: "the foot", ar: "القدم", uk: "стопа", tr: "ayak" },
+  "de buik": { en: "the belly", ar: "البطن", uk: "живіт", tr: "karın" },
+  "het oog": { en: "the eye", ar: "العين", uk: "око", tr: "göz" },
+  "het oor": { en: "the ear", ar: "الأذن", uk: "вухо", tr: "kulak" },
+  "de neus": { en: "the nose", ar: "الأنف", uk: "ніс", tr: "burun" },
+  "de mond": { en: "the mouth", ar: "الفم", uk: "рот", tr: "ağız" },
+  "rood": { en: "red", ar: "أحمر", uk: "червоний", tr: "kırmızı" },
+  "blauw": { en: "blue", ar: "أزرق", uk: "синій", tr: "mavi" },
+  "geel": { en: "yellow", ar: "أصفر", uk: "жовтий", tr: "sarı" },
+  "groen": { en: "green", ar: "أخضر", uk: "зелений", tr: "yeşil" },
+  "wit": { en: "white", ar: "أبيض", uk: "білий", tr: "beyaz" },
+};
+
 // Woord-vraag: "Welk woord is dit?" + steun in eigen taal; opties = Nederlandse woorden (goed = index 0 vóór schudden).
 let zaad = 7;
 const rnd = () => { zaad = (zaad * 9301 + 49297) % 233280; return zaad / 233280; };
@@ -18,7 +63,7 @@ const schud = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0
 const w = (goed, fout, steun, extra = {}) => {
   const opts = schud([goed, ...fout]);
   const answer = opts.indexOf(goed);
-  return { q: "Welk Nederlands woord is dit?", options: opts, answer, wrongHints: opts.map((_, i) => (i === answer ? null : "Kijk naar het woord in jouw taal. Welk Nederlands woord past?")), steun, steunAltijd: true, ...extra };
+  return { q: "Welk Nederlands woord is dit?", options: opts, answer, wrongHints: opts.map((_, i) => (i === answer ? null : "Kijk naar het woord in jouw taal. Welk Nederlands woord past?")), steun, steunAltijd: true, steunOpties: Object.fromEntries(opts.map((o) => [o, WOORDENBOEK[o]]).filter(([, v]) => v)), ...extra };
 };
 
 const school = [

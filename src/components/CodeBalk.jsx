@@ -214,7 +214,7 @@ export default function CodeBalk() {
 
     // 🌍 WELKOMNIEUWKOMER (Mark 24 sep 2026; NIEUWKOMER blijft werken): geen partnercode, geen Familie — de code is de
     // deur naar het losse Nieuwkomer-pakket (/nieuwkomers). Iedereen die hem intikt komt daar.
-    if (kaal === "WELKOMNIEUWKOMER" || kaal === "NIEUWKOMER" || kaal === "NIEUWKOMERS") {
+    if (["WELKOMNIEUWKOMER", "WELKOMNIEUWKOMERS", "NIEUWKOMER", "NIEUWKOMERS"].includes(kaal.replace(/s+/g, ""))) {
       try { track("code_balk_nieuwkomer"); } catch { /* */ }
       window.location.href = "/nieuwkomers";
       return;
