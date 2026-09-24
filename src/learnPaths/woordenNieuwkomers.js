@@ -4,6 +4,7 @@
 // steuntaal (`steun`: en/ar/uk/tr) en het kind kiest het Nederlandse woord.
 // Zonder gekozen taal staat Engels erbij. Elke stap begint met uitleg in drie stappen.
 
+import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
 const stepEmojis = ["🏫", "🏠", "🧍"];
 const chapters = [
   { letter: "A", title: "Op school", emoji: "🏫", from: 0, to: 0 },
@@ -143,6 +144,7 @@ const woordenNieuwkomers = {
   triggerKeywords: ["nieuwkomers", "woorden", "woordenschat", "nt2", "eerste woorden", "nederlands leren", "de het"],
   chapters,
   steps,
+  steunTeksten: NIEUWKOMERS_STEUN, // alles tikbaar in de eigen taal (SteunTik.jsx)
 };
 
 export default woordenNieuwkomers;

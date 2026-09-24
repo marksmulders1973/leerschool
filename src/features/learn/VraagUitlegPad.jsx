@@ -14,6 +14,7 @@
 import { useEffect, useMemo, useState } from "react";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
+import { SteunTekst } from "../../shared/ui/SteunTik.jsx";
 
 const STORE_KEY = "lk_vraag_fouten_v1";
 
@@ -88,9 +89,9 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
       }}
     >
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
-        <div style={{ fontSize: 16, fontWeight: 700, color: "#5db3ff", fontFamily: "var(--font-display)" }}>
+        <SteunTekst nl="Hulp bij deze vraag"><div style={{ fontSize: 16, fontWeight: 700, color: "#5db3ff", fontFamily: "var(--font-display)" }}>
           💡 Hulp bij deze vraag
-        </div>
+        </div></SteunTekst>
         {onClose && (
           <button
             onClick={onClose}
@@ -131,7 +132,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
           paden (bijna) het antwoord en zou opzoekbaar zijn vóór de leerling zelf
           heeft nagedacht. Dan alleen concept-hulp (stappen/woorden/theorie). */}
       {verbergNiveaus && (
-        <div style={{
+        <SteunTekst nl="Probeer het straks eerst zelf."><div style={{
           marginBottom: 12,
           padding: "8px 12px",
           background: "rgba(66,165,245,0.10)",
@@ -143,7 +144,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         }}>
           💪 Probeer het straks eerst zelf. Hieronder staat hulp om de vraag te
           begrijpen — de korte uitleg met het antwoord verschijnt pas ná je eerste poging.
-        </div>
+        </div></SteunTekst>
       )}
 
       {/* DENK-HINT vóór de eerste poging: één vraag die je op weg helpt, geen antwoord. */}
@@ -160,7 +161,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         }}>
           <div style={{ fontSize: 11, fontWeight: 800, letterSpacing: 0.5, textTransform: "uppercase", color: "#ffd54f", marginBottom: 4 }}>🤔 Denk eerst hierover</div>
           <VoorleesBlok tekst={denkHint}>
-            <MdInline text={denkHint} />
+            <SteunTekst nl={denkHint}><MdInline text={denkHint} /></SteunTekst>
           </VoorleesBlok>
         </div>
       )}
@@ -169,20 +170,20 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
       {(onBuddy || onNaarUitleg) && (
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 12 }}>
           {onBuddy && (
-            <button
+            <SteunTekst nl="Vraag hulp" knop><button
               onClick={onBuddy}
               style={{ flex: 1, minWidth: 150, minHeight: 44, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(255,213,79,0.45)", background: "rgba(255,213,79,0.08)", color: "#ffd54f", fontWeight: 700, fontSize: 13, fontFamily: "var(--font-display)", cursor: "pointer" }}
             >
               🐶 Vraag het aan {buddyNaam}
-            </button>
+            </button></SteunTekst>
           )}
           {onNaarUitleg && (
-            <button
+            <SteunTekst nl="Lees de uitleg van deze stap nog eens" knop><button
               onClick={onNaarUitleg}
               style={{ flex: 1, minWidth: 150, minHeight: 44, padding: "10px 12px", borderRadius: 10, border: "1px solid rgba(66,165,245,0.45)", background: "rgba(66,165,245,0.08)", color: "#5db3ff", fontWeight: 700, fontSize: 13, fontFamily: "var(--font-display)", cursor: "pointer" }}
             >
               📖 Lees de uitleg van deze stap nog eens
-            </button>
+            </button></SteunTekst>
           )}
         </div>
       )}
@@ -194,7 +195,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         <Section title="💡 Korte uitleg" defaultOpen={openStandaard}>
           <VoorleesBlok tekst={niveauTekst}>
             <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
-              <MdInline text={niveauTekst} />
+              <SteunTekst nl={niveauTekst}><MdInline text={niveauTekst} /></SteunTekst>
             </div>
           </VoorleesBlok>
           <div style={{ marginTop: 10, display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -217,8 +218,10 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
           <ol style={{ paddingLeft: 20, margin: 0, lineHeight: 1.6 }}>
             {stappen.map((s, i) => (
               <li key={i} style={{ marginBottom: 10 }}>
+                <SteunTekst nl={[s.titel, s.tekst]}>
                 {s.titel && <strong>{s.titel}: </strong>}
-                {s.tekst}
+                <MdInline text={s.tekst} />
+                </SteunTekst>
               </li>
             ))}
           </ol>
@@ -231,7 +234,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
         <Section title="🔤 Moeilijke woorden" defaultOpen={openStandaard}>
           <dl style={{ margin: 0, lineHeight: 1.55 }}>
             {uitlegPad.woorden.map((w, i) => (
-              <div key={i} style={{ marginBottom: 8 }}>
+              <SteunTekst key={i} nl={[w.woord, w.uitleg]} knop><div style={{ marginBottom: 8 }}>
                 <dt style={{ fontWeight: 700, color: "var(--color-text-strong)", display: "inline" }}>
                   {onWoordHulp ? (
                     <button
@@ -247,7 +250,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
                   ) : w.woord}:
                 </dt>
                 <dd style={{ display: "inline", margin: "0 0 0 6px" }}>{w.uitleg}</dd>
-              </div>
+              </div></SteunTekst>
             ))}
           </dl>
         </Section>
@@ -257,7 +260,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
       {uitlegPad.theorie && (
         <Section title="📘 Theorie achter de vraag" defaultOpen={openStandaard}>
           <div style={{ lineHeight: 1.6, whiteSpace: "pre-wrap" }}>
-            <MdInline text={uitlegPad.theorie} />
+            <SteunTekst nl={uitlegPad.theorie}><MdInline text={uitlegPad.theorie} /></SteunTekst>
           </div>
         </Section>
       )}
@@ -283,7 +286,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
                     {v.type}
                   </span>
                 )}
-                {v.tekst}
+                <SteunTekst nl={v.tekst}><span>{v.tekst}</span></SteunTekst>
               </li>
             ))}
           </ul>
@@ -294,10 +297,10 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
       {uitlegPad.basiskennis?.length > 0 && (
         <Section title="🧱 Basiskennis die je hierbij nodig hebt" defaultOpen={openStandaard}>
           {uitlegPad.basiskennis.map((b, i) => (
-            <div key={i} style={{ marginBottom: 8 }}>
+            <SteunTekst key={i} nl={[b.onderwerp, b.uitleg]}><div style={{ marginBottom: 8 }}>
               <div style={{ fontWeight: 700, color: "var(--color-text-strong)" }}>{b.onderwerp}</div>
               <div style={{ lineHeight: 1.55 }}>{b.uitleg}</div>
-            </div>
+            </div></SteunTekst>
           ))}
         </Section>
       )}
@@ -331,7 +334,7 @@ function Section({ title, children, defaultOpen = false }) {
         alignItems: "center",
         minHeight: 32,
       }}>
-        <span>{title}</span>
+        <SteunTekst nl={String(title).replace(/^S+s/, "")} inline><span>{title}</span></SteunTekst>
         <span style={{ fontSize: 11, color: "var(--color-text-soft)", marginLeft: 8 }}>{defaultOpen ? "" : "tik om te openen"}</span>
       </summary>
       <div style={{ fontSize: 14, marginTop: 10 }}>{children}</div>

@@ -6,6 +6,7 @@
 // De sommen worden bij het laden gemaakt met een vaste volgorde (geen toeval),
 // zodat een kind bij herhalen dezelfde sommen ziet en de leerkracht weet wat er staat.
 
+import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
 const stepEmojis = ["🔢", "➕", "➖", "🔟", "🎒"];
 
 const chapters = [
@@ -169,6 +170,7 @@ const rekenenTot20Nieuwkomers = {
   triggerKeywords: ["tellen", "tot 20", "erbij", "eraf", "plus", "min", "nieuwkomers", "groep 3", "groep 4", "beginners", "eerste sommen"],
   chapters,
   steps,
+  steunTeksten: NIEUWKOMERS_STEUN, // alles tikbaar in de eigen taal (SteunTik.jsx)
 };
 
 export default rekenenTot20Nieuwkomers;

@@ -4,6 +4,7 @@
 // uitleg-stappen en leesteksten — extra steun voor zwakkere lezers.
 // Geen browser-stem beschikbaar? Dan alleen de gewone tekst, geen knop.
 import { useEffect, useRef, useState } from "react";
+import { SteunTekst } from "./SteunTik.jsx";
 import { spreekMetMeelezen, nlStemmen, gekozenStemNaam, zetGekozenStem } from "../spraakTekst.js";
 import MeeleesTekst from "./MeeleesTekst.jsx";
 
@@ -56,7 +57,7 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
 
   return (
     <div>
-      <button
+      <SteunTekst nl="Lees voor" inline><button
         type="button"
         onClick={() => (leest ? stop() : start())}
         aria-label={leest ? "Stop met voorlezen" : "Lees deze tekst voor"}
@@ -74,11 +75,11 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
         }}
       >
         {leest ? "⏹ Stop" : "🔊 Lees voor"}
-      </button>
+      </button></SteunTekst>
       {/* Stem-kiezer (Mark 18 jul: standaardstem klinkt robotachtig).
           Alleen tonen bij ≥2 NL-stemmen; keuze geldt app-breed (localStorage). */}
       {!leest && stemmen.length > 1 && (
-        <button
+        <SteunTekst nl="Stem" inline><button
           type="button"
           onClick={() => setKiesOpen((v) => !v)}
           aria-label="Kies een andere voorleesstem"
@@ -96,7 +97,7 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
           }}
         >
           🎙️ Stem
-        </button>
+        </button></SteunTekst>
       )}
       {kiesOpen && !leest && (
         <div style={{ marginBottom: 10 }}>

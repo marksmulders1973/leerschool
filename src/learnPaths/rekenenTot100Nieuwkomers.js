@@ -3,6 +3,7 @@
 // erbij en eraf zonder en met tientalovergang, en sommen met woorden. Korte
 // zinnen, elke stap begint met uitleg in drie stappen. Vaste sommen (geen toeval).
 
+import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
 const stepEmojis = ["🔟", "➕", "➖", "🧮", "🛒"];
 
 const chapters = [
@@ -167,6 +168,7 @@ const rekenenTot100Nieuwkomers = {
   triggerKeywords: ["tot 100", "tientallen", "eenheden", "erbij", "eraf", "nieuwkomers", "groep 4", "sprongen", "getallenlijn"],
   chapters,
   steps,
+  steunTeksten: NIEUWKOMERS_STEUN, // alles tikbaar in de eigen taal (SteunTik.jsx)
 };
 
 export default rekenenTot100Nieuwkomers;

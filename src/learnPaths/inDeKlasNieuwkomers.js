@@ -4,6 +4,7 @@
 // zodat het kind snapt wát er gevraagd wordt; de antwoorden blijven Nederlands.
 // Korte zinnen, geen uitdrukkingen, elke stap begint met uitleg in drie stappen.
 
+import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
 const stepEmojis = ["🙋", "🏫", "🤝"];
 const chapters = [
   { letter: "A", title: "Vragen aan de juf of meester", emoji: "🙋", from: 0, to: 0 },
@@ -133,6 +134,7 @@ const inDeKlasNieuwkomers = {
   triggerKeywords: ["nieuwkomers", "in de klas", "schooltaal", "mag ik", "nt2", "eerste woorden", "nederlands leren"],
   chapters,
   steps,
+  steunTeksten: NIEUWKOMERS_STEUN, // alles tikbaar in de eigen taal (SteunTik.jsx)
 };
 
 export default inDeKlasNieuwkomers;

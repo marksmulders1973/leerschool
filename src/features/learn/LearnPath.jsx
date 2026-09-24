@@ -43,7 +43,7 @@ import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
-import { SteunVraag, SteunOptie } from "../../shared/ui/SteunTik.jsx";
+import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, maakSteunMap, steunGoed, useSteun } from "../../shared/ui/SteunTik.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import PushAanbodKaart from "../../shared/PushAanbodKaart.jsx";
 
@@ -569,6 +569,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const rawCheck = checks[realCheckIdx];
 
   // Voortgangs-badge per stap voor Overview (vol = geheel beheerst).
+  // 🌍 Nieuwkomerpaden (`steunTeksten`): álle teksten tikbaar in de eigen taal (Mark 24 sep).
+  const steunMap = useMemo(() => (path?.steunTeksten ? maakSteunMap(UI_STEUN, path.steunTeksten) : null), [path]);
   const wrongPerStep = useMemo(() => adaptPathWrongMap(pathId), [pathId, stepIdx, mode, attempts]);
 
   // Veel leerpaden hebben de juiste optie op index 0 staan; door per check
@@ -819,6 +821,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // ─── Render ────────────────────────────
   if (mode === "overview") {
     return (
+      <SteunCtx.Provider value={steunMap}>
       <Overview
         path={path}
         completedSteps={completedSteps}
@@ -830,6 +833,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         loaded={loaded}
         wrongPerStep={wrongPerStep}
       />
+      </SteunCtx.Provider>
     );
   }
 
@@ -849,6 +853,32 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     })();
     // A9: voor Pincode/leer-paden — toon examen-vragen die hiernaar verwijzen.
     const examRefs = (path.id || "").startsWith("examen-") ? [] : getExamRefsForPath(path.id);
+    if (steunMap) {
+      // Nieuwkomer-eindscherm: kort, alles tikbaar, terug naar /nieuwkomers (geen ouder-/e-mailkaarten).
+      return (
+        <SteunCtx.Provider value={steunMap}>
+          <div style={pageStyle()}>
+            <Header onBack={goOverview} onHome={onHome} title={path.title} emoji={path.emoji} />
+            <div style={{ padding: "10px 18px 28px", display: "grid", gap: 12 }}>
+              <SteunTekst nl="Goed gedaan! Je bent klaar.">
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, color: C.good }}>🏁 Goed gedaan! Je bent klaar.</div>
+              </SteunTekst>
+              {sess.tries > 0 && (
+                <SteunTekst nl={steunGoed(sess.correct, sess.tries)}>
+                  <div style={{ fontSize: 16, color: C.text }}>{sess.correct} van de {sess.tries} goed</div>
+                </SteunTekst>
+              )}
+              <SteunTekst nl="Terug naar het Nieuwkomer-pakket" knop>
+                <button onClick={() => { window.location.href = "/nieuwkomers"; }} style={btnPrimary()}>Terug naar het Nieuwkomer-pakket</button>
+              </SteunTekst>
+              <SteunTekst nl="Nog een keer" knop>
+                <button onClick={goOverview} style={btnSecondary()}>Nog een keer</button>
+              </SteunTekst>
+            </div>
+          </div>
+        </SteunCtx.Provider>
+      );
+    }
     return (
       <div style={pageStyle()}>
         <Header onBack={goOverview} onHome={onHome} title={path.title} emoji={path.emoji} />
@@ -903,6 +933,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   }
 
   return (
+    <SteunCtx.Provider value={steunMap}>
     <div style={pageStyle()}>
       <KwartierPauze
         player={player}
@@ -1065,13 +1096,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             </span>
           )}
         </div>
-        <h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
+        <SteunTekst nl={step.title}><h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
           {/* Mark UX 2026-05-18: bij examen-paden begint step.title vaak met
               "Vraag N — " (origineel examenblad-nummer). Strippen, want de
               stap-positie is "1." in dit leerpad. Bron-vermelding staat al
               in examenBron-banner eronder. */}
           {stepIdx + 1}. {stripExamenVraagPrefix(step.title)}
-        </h2>
+        </h2></SteunTekst>
 
         {/* Begripscheck-na-uitlegPad-banner (Roediger-Karpicke, 2026-05-16):
             verschijnt als er een check uit een vorige stap "due" is voor
@@ -1219,11 +1250,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {/* Voorlezen mét meelezen (Mark 15 jul): extra steun voor
                 zwakkere lezers — het gesproken woord licht op. */}
             <VoorleesBlok tekst={step.explanation} accent="#00C853">
-              <Explanation text={step.explanation} />
+              <SteunTekst nl={step.explanation}><Explanation text={step.explanation} /></SteunTekst>
             </VoorleesBlok>
             <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }}>
-              <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />
-              <button
+              {!steunMap && <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />}
+              <SteunTekst nl="Vraag hulp" knop><button
                 type="button"
                 onClick={() => setShowTutor(true)}
                 style={tutorButtonStyle()}
@@ -1231,15 +1262,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               >
                 <span style={{ fontSize: 16 }}>{tutorBuddy.emoji}</span>
                 Vraag hulp aan {tutorBuddy.naam}
-              </button>
+              </button></SteunTekst>
             </div>
           </>
         )}
 
         {mode === "reading" && (
-          <button onClick={startCheck} style={btnPrimary()}>
+          <SteunTekst nl={checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"} knop><button onClick={startCheck} style={btnPrimary()}>
             {checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"}
-          </button>
+          </button></SteunTekst>
         )}
 
         {mode === "checking" && step.interactiveComponent && interactive3DEnabled() && (
@@ -1411,7 +1442,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             )}
             {step.explanation && (
               <div style={{ marginBottom: 12 }}>
-                <button
+                <SteunTekst nl={showTekstHerlees ? "Verberg tekst" : "Terug naar de tekst"} knop><button
                   onClick={() => setShowTekstHerlees((v) => !v)}
                   style={{
                     padding: "8px 12px",
@@ -1428,7 +1459,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   aria-expanded={showTekstHerlees}
                 >
                   {showTekstHerlees ? "▼ Verberg tekst" : "📖 Terug naar de tekst"}
-                </button>
+                </button></SteunTekst>
                 {showTekstHerlees && (
                   <div
                     style={{
@@ -1466,7 +1497,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {selected === null && (currentCheck.uitlegPad || currentCheck.leerpadLink) && (
               <div style={{ marginBottom: 14 }}>
                 {!showUitlegPad && (
-                  <button
+                  <SteunTekst nl="Ik begrijp de vraag niet — help mij" knop><button
                     onClick={() => setShowUitlegPad(true)}
                     style={{
                       padding: "10px 14px",
@@ -1483,7 +1514,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     }}
                   >
                     ❓ Ik begrijp de vraag niet — help mij
-                  </button>
+                  </button></SteunTekst>
                 )}
                 {showUitlegPad && currentCheck.uitlegPad && (
                   <VraagUitlegPad
@@ -1598,7 +1629,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 animation: "slideUp 0.2s ease, lk-celebrate-pulse 0.55s ease-out",
               }}>
                 <span aria-hidden="true">✅</span>
-                <span>Dat is juist!</span>
+                <SteunTekst nl="Dat is juist!" inline><span>Dat is juist!</span></SteunTekst>
                 {correctStreak >= 2 && (
                   <span style={{
                     marginLeft: "auto",
@@ -1652,12 +1683,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         {mode === "wrong" && currentCheck && (
           // B5.2: role=status zodat een screenreader "Nog niet helemaal" + hint voorleest
           <div role="status" aria-live="polite" style={{ ...cardStyle(C.bad), animation: "slideUp 0.25s ease-out" }}>
-            <div style={{ fontSize: 18, fontWeight: 700, color: C.bad, marginBottom: 8 }}>
+            <SteunTekst nl="Nog niet helemaal"><div style={{ fontSize: 18, fontWeight: 700, color: C.bad, marginBottom: 8 }}>
               ❌ Nog niet helemaal
-            </div>
-            <div style={{ fontSize: 14, color: C.text, marginBottom: 6, lineHeight: 1.5 }}>
+            </div></SteunTekst>
+            <SteunTekst nl={currentCheck.wrongHints?.[selected] || "Probeer het nog eens, kijk goed naar de uitleg hierboven."}><div style={{ fontSize: 14, color: C.text, marginBottom: 6, lineHeight: 1.5 }}>
               {currentCheck.wrongHints?.[selected] || "Probeer het nog eens, kijk goed naar de uitleg hierboven."}
-            </div>
+            </div></SteunTekst>
             {/* Reveal-video óók bij een fout antwoord (Mark 2026-06-14): laat zien
                 hoe het hoort — wie er voorrang heeft en wat je had moeten doen. */}
             {currentCheck.bronVideo && (
@@ -1729,12 +1760,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               </details>
             )}
             {currentCheck.uitlegPad && !showUitlegPad && (
-              <button
+              <SteunTekst nl="Hier is de uitleg" knop><button
                 onClick={() => setShowUitlegPad(true)}
                 style={{ ...btnPrimary(), marginTop: 14 }}
               >
                 📚 Hier is de uitleg
-              </button>
+              </button></SteunTekst>
             )}
             {currentCheck.uitlegPad && showUitlegPad && (
               <VraagUitlegPad
@@ -1747,22 +1778,22 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 onNaarUitleg={() => setMode("reading")}
               />
             )}
-            <button onClick={() => setMode("reading")} style={{ ...btnSecondary(), marginTop: 14 }}>
+            <SteunTekst nl="Lees uitleg opnieuw" knop><button onClick={() => setMode("reading")} style={{ ...btnSecondary(), marginTop: 14 }}>
               📖 Lees uitleg opnieuw
-            </button>
-            <button
+            </button></SteunTekst>
+            <SteunTekst nl="Vraag hulp" knop><button
               onClick={() => setShowTutor(true)}
               style={{ ...btnSecondary(), marginTop: 8 }}
             >
               {tutorBuddy.emoji} Vraag hulp aan {tutorBuddy.naam}
-            </button>
+            </button></SteunTekst>
             {/* Chrome-Claude V2 review 2026-05-15: twee primaire groene CTA's
                 concurreerden ("Hier is de uitleg" + "Probeer opnieuw"). Bij
                 uitlegPad-vragen is de uitleg het didactische primary —
                 "Probeer opnieuw" wordt secondary zodat de leerling EERST leest.
                 Bij vragen zonder uitlegPad blijft "Probeer opnieuw" wel
                 primary (anders is er geen CTA). */}
-            <button
+            <SteunTekst nl="Probeer opnieuw" knop><button
               onClick={tryAgain}
               style={{
                 ...(currentCheck.uitlegPad ? btnSecondary() : btnPrimary()),
@@ -1770,7 +1801,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               }}
             >
               🔁 Probeer opnieuw
-            </button>
+            </button></SteunTekst>
             {/* A3 (10-agent circulariteit 2026-05-10): leerpadLink altijd zichtbaar
                 in wrong-mode — niet verstopt achter "Ik begrijp niet"-knop. */}
             {currentCheck.leerpadLink && onPickPath && (
@@ -1808,13 +1839,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             }}>
               <span style={{ fontSize: 18 }}>✅</span>
               <div>
-                <div style={{ fontSize: 15, fontWeight: 700, color: C.good }}>
+                <SteunTekst nl="Stap voltooid!"><div style={{ fontSize: 15, fontWeight: 700, color: C.good }}>
                   Stap {stepIdx + 1} voltooid!
-                </div>
+                </div></SteunTekst>
                 <div style={{ fontSize: 13, color: C.text, marginTop: 2 }}>
-                  {stepIdx + 1 < totalSteps
+                  <SteunTekst nl={stepIdx + 1 < totalSteps ? "Goed bezig. Wat wil je nu?" : "Helemaal klaar — laatste stap geweest!"}>{stepIdx + 1 < totalSteps
                     ? "Goed bezig. Wat wil je nu?"
-                    : "Helemaal klaar — laatste stap geweest!"}
+                    : "Helemaal klaar — laatste stap geweest!"}</SteunTekst>
                 </div>
               </div>
             </div>
@@ -1838,6 +1869,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   eyebrow="Volgend deel"
                   title={`${stepIdx + 2}. ${stripExamenVraagPrefix(path.steps[stepIdx + 1]?.title || "Verder")}`}
                   hint="Doorgaan met dit onderwerp"
+                  steunTitel={path.steps[stepIdx + 1]?.title}
                   accent={C.good}
                   primary
                   onClick={goNext}
@@ -1851,6 +1883,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 <NextStepCard
                   eyebrow="Afronden"
                   title="🏁 Klaar — bekijk je resultaat"
+                  steunTitel="Klaar — bekijk je resultaat"
                   hint="Je score + wat je hierna kunt doen"
                   accent={C.good}
                   primary
@@ -1918,6 +1951,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         )}
       </div>
     </div>
+    </SteunCtx.Provider>
   );
 }
 
@@ -1942,9 +1976,9 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             {path.id && path.id.startsWith("examen-") ? (
               <ExamenPadBanner intro={path.intro} padTitle={path.title} />
             ) : (
-              <p style={{ color: C.text, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
+              <SteunTekst nl={path.intro}><p style={{ color: C.text, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
                 {path.intro}
-              </p>
+              </p></SteunTekst>
             )}
           </VoorleesBlok>
         )}
@@ -1999,7 +2033,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
         )}
 
         {loaded && firstUnfinishedIdx !== null && (
-          <button
+          <SteunTekst nl={completedSteps.size === 0 ? "Begin bij deel 1" : "Doorgaan"} knop><button
             onClick={() => onPickStep(firstUnfinishedIdx)}
             style={{
               ...btnPrimary(),
@@ -2012,7 +2046,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             {completedSteps.size === 0
               ? `🚀 Begin bij deel 1`
               : `▶ Doorgaan: deel ${firstUnfinishedIdx + 1} — ${path.steps[firstUnfinishedIdx].title}`}
-          </button>
+          </button></SteunTekst>
         )}
         {loaded && firstUnfinishedIdx === null && (
           <div style={{ ...cardStyle(C.good), marginTop: 0, marginBottom: 18, textAlign: "center" }}>
@@ -2076,9 +2110,9 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                   {ch.letter}
                 </div>
                 <div style={{ flex: 1 }}>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)" }}>
+                  <SteunTekst nl={ch.title}><div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)" }}>
                     {ch.emoji} {stripInternalCodes(ch.title)}
-                  </div>
+                  </div></SteunTekst>
                   <div style={{ fontSize: 12, color: C.muted }}>
                     {doneCount}/{stepsInCh.length} delen{allDone ? " — voltooid" : ""}
                   </div>
@@ -2399,8 +2433,11 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
 /** Kaart voor het "Stof begrepen?"-eindblok na een voltooide stap. Drie
  *  varianten worden naast elkaar getoond met eyebrow-tags zodat de
  *  rolverdeling (testen / doorgaan / overzicht) meteen zichtbaar is. */
-function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick }) {
-  return (
+function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick, steunTitel }) {
+  // 🌍 Nieuwkomerpaden: taalknopje naast de kaart met eyebrow — titel — hint vertaald.
+  const se = useSteun(eyebrow), st = useSteun(steunTitel ?? title), sh = useSteun(hint);
+  const combi = st || sh ? Object.fromEntries(["en", "ar", "uk", "tr"].map((k) => [k, [se?.[k], st?.[k], sh?.[k]].filter(Boolean).join(" — ")])) : null;
+  const kaart = (
     <button
       onClick={onClick}
       style={{
@@ -2462,6 +2499,7 @@ function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick }
       </span>
     </button>
   );
+  return combi ? <SteunTekst nl={combi} knop>{kaart}</SteunTekst> : kaart;
 }
 
 function Header({ onBack, onHome, title, emoji, backLabel }) {
