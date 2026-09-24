@@ -1,0 +1,15 @@
+import { chromium } from "playwright";
+const b = await chromium.launch({ headless: true });
+const c = await b.newContext({ viewport: { width: 420, height: 900 }, locale: "nl-NL" });
+const p = await c.newPage();
+await p.goto("https://leerkwartier.app/nieuwkomers", { waitUntil: "networkidle" });
+await p.evaluate(() => localStorage.setItem("lk_steuntaal", "ar"));
+await p.goto("https://leerkwartier.app/leren/pad?id=in-de-klas-nieuwkomers", { waitUntil: "networkidle" });
+await p.waitForTimeout(1500);
+console.log(await p.evaluate(() => document.body.innerText.match(/versie \d+/)?.[0]));
+await p.evaluate(() => [...document.querySelectorAll("button")].find(x => /Begin bij deel 1/.test(x.innerText))?.click());
+await p.waitForTimeout(800);
+await p.evaluate(() => [...document.querySelectorAll("button")].find(x => x.innerText.includes("Naar de vragen"))?.click());
+await p.waitForTimeout(1200);
+console.log("vraag tikbaar:", await p.locator('[role="button"][title="Tik voor jouw taal"]').count(), "optieknopjes:", await p.locator('button[aria-label="Vertaal dit antwoord"]').count());
+await b.close();
