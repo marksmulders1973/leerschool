@@ -68,7 +68,7 @@ De losse verplichte onderdelen hieronder (meldingen-check, trechters, e-maillijs
 
 **📮 Flyer/code-teller in élk dagrapport (Mark-wens 2026-08-24 — "ik wil zien of het werkt en waar niet"; verbreed 2026-08-27: "overzicht van álle codes + waar ze recht op geven").** Toon per partner-code: **naam · code · max plekken · gescand → geclaimd → oefende · recht (blijvend of t/m 1-8-2027) · laatste scan**. Basis = de volledige `partner_codes`-tabel (zo zie je óók codes met 0 scans); in het dagrapport de actieve rijen tonen + één verzamelregel "X codes nog zonder scans". Bronnen: (1) **uitgifte** uit `docs/FLYER-UITGIFTE.md` (handmatig, wat we verspreidden + plekken); (2) LIVE uit Supabase (project `studiebol` = `uxqnzrymyjbcpuzqktdm`), via `events_echt` (huishoud-gefilterd). SQL:
 ```sql
-SELECT pc.code, pc.max_uses,
+SELECT pc.code, pc.max_uses, pc.slapend,
   COALESCE(cl.geclaimd,0) AS geclaimd,
   COALESCE(s.gescand,0)  AS gescand_uniek,
   COALESCE(s.oefende,0)  AS oefende,
@@ -83,8 +83,9 @@ LEFT JOIN (
     MAX(created_at) FILTER (WHERE name='partner_bezoek')::date AS laatste_scan
   FROM events_echt WHERE name IN ('partner_bezoek','partner_actief') GROUP BY 1
 ) s ON s.code = pc.code
-ORDER BY gescand_uniek DESC, pc.code;
+ORDER BY pc.slapend, gescand_uniek DESC, pc.code;
 ```
+**💤 Slapende codes (Mark 24 sep 2026):** kolom `partner_codes.slapend` (21 juli-codes, 2+ maanden 0 scans). In het dagrapport NIET meetellen als "uitgegeven"; toon ze onderaan in één verzamelregel "💤 slapend: N codes". Code blijft werken. Krijgt een slapende code een scan → melden en `slapend=false` zetten. Nieuwe code die 2 maanden 0 scans heeft → voorstellen om slapend te zetten.
 (Weergavenamen per code: `PARTNER_NAMEN` in `src/components/PartnerWelkom.jsx` — codes die dáár of in `partner_codes` ontbreken direct aanvullen; les 27 aug: SCHOOLSCOOL2027 was wél uitgegeven maar ontbrak in de tabel → elke uitgegeven code MOET in beide staan.) Neem óók de landing-meting mee: `partner_welkom_toon` (banner gezien) · `partner_welkom_oefenen`/`partner_welkom_ouder` (CTA-kliks) · `partner_code_handmatig` — via `events`. **Signalen benoemen:** 🔴 uitgegeven maar 0 scans = flyer ligt stil / niet verspreid → nudge partner; 🟡 wel scans maar 0 oefende = landing lekt (verbeter de scan→oefen-stap); 🟢 scans + oefenaars groeien = werkt. **Stand 24 aug (nulmeting):** ~23 unieke scanners (Lelystad 8, Ooievaarspas 7, VB Rotterdam 4, Buurtgezinnen 3, Alkmaar 1), banner 37× getoond, **maar 0 CTA-kliks en 0 `partner_actief`** → conversie scan→oefenen ≈ 0%; grootste hefboom = die stap (zie punt-1-verbetering: partner-scan landt direct in een vraag). Werk `docs/FLYER-UITGIFTE.md` bij bij elke nieuwe uitgifte.
 
 **🧪 Zelf-testen-blokje in élk dagrapport (Mark-wens 28 aug 2026 — "ik wil alles zelf kunnen testen").** Vast kort blokje met Mark's eigen testgereedschap, elke keer opnieuw afdrukken (hij hoeft niets te onthouden):
