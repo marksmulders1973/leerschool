@@ -84,7 +84,7 @@ function Station({ s, heightRef, gedaan }) {
  * net (optioneel, gedeeld park): { actief, mijnId, naam, avatar, send(d), luister(fn)→unsub, peers()→Map }
  * host: true = ik ben de spelleider (start het spel, draait bots en engine)
  */
-export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRef, spelerNaam = "", avatarUrl = "", level = "6", onKlaar, onStop, net = null, host = true, onRit = null }) {
+export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRef, spelerNaam = "", avatarUrl = "", level = "6", onKlaar, onStop, net = null, host = true, onRit = null, autoStart = null }) {
   const multi = !!(net && net.actief);
   const mijnId = multi ? net.mijnId : "ik";
   const stRef = useRef(null);
@@ -249,17 +249,21 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   });
 
   // ── acties ──
-  const startSpel = () => {
+  const startSpel = (auto = null) => {
     if (!host) return;
     const stations = maakStations(32, 6, vrijPlek);
     const extra = multi ? lobby.map((l) => ({ id: l.id, naam: l.naam, avatar: l.avatar })) : [];
-    const nBots = Math.max(0, Math.min(Math.max(1, 5 - extra.length), MAX_SPELERS - 1 - extra.length));
-    stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rolKeuze === "random" ? null : rolKeuze, extraSpelers: extra, nImposters: nImp, vak, groep });
+    // 🕵️ auto = loting uit de witte kamer (Bedrieger-lobby, 24 sep 2026): rol en aantal bots liggen al vast, één bedrieger
+    const nBots = auto ? Math.max(1, Math.min(auto.nBots || 5, MAX_SPELERS - 1)) : Math.max(0, Math.min(Math.max(1, 5 - extra.length), MAX_SPELERS - 1 - extra.length));
+    const rk = auto ? auto.rol : (rolKeuze === "random" ? null : rolKeuze);
+    stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rk, extraSpelers: extra, nImposters: auto ? 1 : nImp, vak, groep });
     scoresBewaard.current = false;
     stRef.current.fase = "spel";
     if (multi) { const n = stuurRollen(); setTimeout(() => { if (stRef.current) net.send({ t: "snap", st: maakSnapshot(stRef.current) }); }, 100 + n * 80); }
     setN((n) => n + 1);
   };
+  // 🕵️ Uit de witte kamer: geen lobby, meteen spelen met de geloot rol.
+  useEffect(() => { if (autoStart && host && stRef.current && stRef.current.fase !== "spel") { setRolKeuze(autoStart.rol); setNImp(1); startSpel(autoStart); } }, []); // eslint-disable-line
   const station = st && playerRef?.current ? dichtstbijStation(st, { x: playerRef.current.x, z: playerRef.current.z }) : null;
   const mijMetPos = mij && playerRef?.current ? { ...mij, x: playerRef.current.x, z: playerRef.current.z } : mij;
   const doelTik = st && mij && mij.rol === "imposter" ? actieveSpelers(st).find((s) => magTikken(st, mijMetPos, s)) : null;
@@ -420,7 +424,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
                 ))}
               </div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                <button onClick={startSpel} disabled={!rolKeuze} style={{ ...KNOP, opacity: rolKeuze ? 1 : .5 }}>▶ Start{multi ? ` (${1 + lobby.length} speler${lobby.length ? "s" : ""})` : ""}</button>
+                <button onClick={() => startSpel()} disabled={!rolKeuze} style={{ ...KNOP, opacity: rolKeuze ? 1 : .5 }}>▶ Start{multi ? ` (${1 + lobby.length} speler${lobby.length ? "s" : ""})` : ""}</button>
                 <button onClick={stop} style={KNOP_GRIJS}>Terug naar het park</button>
               </div>
             </div>

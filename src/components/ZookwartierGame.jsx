@@ -426,7 +426,7 @@ function maakBouwplannen() {
   }));
 }
 
-export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje, onOpenGalerij, roomCode = null }) {
+export default function ZookwartierGame({ onHome, userName, authUser, onPlayObliterator, onOpenLeerpad, onOpenLeerpaden, onOpenMaatje, onOpenGalerij, roomCode = null, autoBedrieger = null }) {
   const naam = (userName || "").trim();
   const userId = authUser?.id || null;
 
@@ -457,6 +457,14 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   const gameGroep = (() => { try { const u = JSON.parse(localStorage.getItem("ls_user") || "{}"); const m = String(u.level || "").match(/(\d)/); return m ? m[1] : "6"; } catch { return "6"; } })();
   const gameModusRef = useRef(false);
   useEffect(() => { gameModusRef.current = gameModus; if (gameModus) setZweef(false); }, [gameModus]); // eslint-disable-line
+  // 🕵️ Uit de witte kamer (Bedrieger-lobby): direct het parkspel starten met de geloot rol en dezelfde bots.
+  const [gameAuto, setGameAuto] = useState(null);
+  useEffect(() => {
+    const o = autoBedrieger && autoBedrieger.current;
+    if (!o) return;
+    autoBedrieger.current = null;
+    setGameAuto(o); setGameHost(true); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true);
+  }, []); // eslint-disable-line
   const gameInviteRef = useRef(null);
   useEffect(() => { gameInviteRef.current = gameInvite; }, [gameInvite]);
   // 📲 Solo-lobby → "met vrienden spelen": parkcode maken en herladen mét game=1 (Mark 10 sep 2026)
@@ -2581,6 +2589,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
           onGameStop={() => setGameModus(false)}
           gameNet={gameNet}
           gameHost={gameHost}
+          gameAuto={gameAuto}
           studiePiramideIdx={pyrIdx}
           leerStappenPerPad={leerStappenPerPad}
           dinoHint={dinoHint}

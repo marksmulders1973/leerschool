@@ -26,6 +26,9 @@ import { vangPartnerCode } from "./features/referral/partnerCode.js";
 const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
 const SpelletjeKeuze = lazy(() => import("./components/SpelletjeKeuze.jsx"));
 const ImposterKamer = lazy(() => import("./components/ImposterKamer.jsx"));
+// 🕵️ Bedrieger-kamer → park: de loting uit de witte kamer (rol, aantal bots) reist mee
+// naar het parkspel via deze ref (Marks ontwerp 24 sep 2026). ZookwartierGame leest en wist hem.
+const bedriegerAutoRef = { current: null };
 const HomeV3 = lazy(() => import("./components/HomeV3.jsx"));
 const StudentHome = lazy(() => import("./components/StudentHome.jsx"));
 const WishesBoard = lazy(() => import("./components/WishesBoard.jsx"));
@@ -1648,7 +1651,8 @@ export default function App() {
       )}
       {page === "imposter" && (
         <Suspense fallback={<PageLoader />}>
-          <ImposterKamer onTerug={() => setPage("spelletje")} />
+          <ImposterKamer onTerug={() => setPage("spelletje")} spelerNaam={userName || ""} userLevel={userLevel}
+            onNaarPark={(opties) => { bedriegerAutoRef.current = opties; setPage("zoo"); }} />
         </Suspense>
       )}
       {page === "zoo" && (
@@ -1656,7 +1660,7 @@ export default function App() {
           {new URLSearchParams(window.location.search).get("bezoek") ? (
             <ParkBezoek code={new URLSearchParams(window.location.search).get("bezoek")} onHome={() => { window.location.href = "/dierentuin"; }} />
           ) : (
-            <ZookwartierGame onHome={goHome} userName={userName || ""} authUser={authUser} roomCode={new URLSearchParams(window.location.search).get("samen") || null} onPlayObliterator={() => setPage("obliteratorPlay")}
+            <ZookwartierGame autoBedrieger={bedriegerAutoRef} onHome={goHome} userName={userName || ""} authUser={authUser} roomCode={new URLSearchParams(window.location.search).get("samen") || null} onPlayObliterator={() => setPage("obliteratorPlay")}
               onOpenLeerpad={(pid) => { setActiveLearnPathId(pid); setActiveLearnStepIdx(0); setLearnPathReturnPage("zoo"); setPage("learn-path"); }}
               onOpenLeerpaden={() => { setLearnHubReturnPage("zoo"); setPage("learn-paths-hub"); }} onOpenMaatje={() => setPage("maatje")} onOpenGalerij={() => setPage("galerij")} />
           )}
