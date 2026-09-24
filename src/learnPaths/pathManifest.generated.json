@@ -6671,11 +6671,11 @@
       "sprongen",
       "getallenlijn"
     ],
-    "intro": "Tientallen en eenheden, erbij en eraf in sprongen, over het tiental heen, en sommen met geld. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~15 min.",
+    "intro": "Tientallen en eenheden, erbij en eraf in sprongen, over het tiental heen, en sommen met geld. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "rekenen-tot-20-nieuwkomers",
@@ -6699,11 +6699,11 @@
       "beginners",
       "eerste sommen"
     ],
-    "intro": "Tellen tot 20, erbij en eraf tot 10, over de 10 heen, en sommen met woorden. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~15 min.",
+    "intro": "Tellen tot 20, erbij en eraf tot 10, over de 10 heen, en sommen met woorden. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
     "stepCount": 5,
-    "checkCount": 40,
+    "checkCount": 25,
     "chapterCount": 5,
-    "estimatedMinutes": 20
+    "estimatedMinutes": 15
   },
   {
     "id": "rijmen-letters-kleuters-po",

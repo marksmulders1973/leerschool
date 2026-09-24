@@ -29,7 +29,7 @@ const hints = (answerIdx, tekst) => [0, 1, 2, 3].map((i) => (i === answerIdx ? n
 
 // STAP 1 — tientallen en eenheden
 const tientallen = [];
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 5; i++) {
   if (i % 2 === 0) {
     const t = tussen(2, 9); const e = tussen(1, 9); const n = t * 10 + e;
     const o = opties(n, [t + e, e * 10 + t, n + 10]);
@@ -55,7 +55,7 @@ tientallen[0].uitlegPad = {
 
 // STAP 2 — erbij zonder overgang
 const erbij100 = [];
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 5; i++) {
   const a = tussen(11, 80); const e = a % 10; const b = i % 2 === 0 ? tussen(10, 90 - a - (a % 10 === 0 ? 0 : 0)) - (tussen(10, 90 - a) % 10) : tussen(1, Math.max(1, 9 - e));
   const bb = Math.max(1, b);
   const o = opties(a + bb, [a + bb + 10, a + bb - 10, a + bb + 1]);
@@ -76,7 +76,7 @@ erbij100[0].uitlegPad = {
 
 // STAP 3 — eraf zonder overgang
 const eraf100 = [];
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 5; i++) {
   const a = tussen(21, 99); const e = a % 10;
   const b = i % 2 === 0 ? tussen(1, Math.floor((a - 10) / 10)) * 10 : tussen(1, Math.max(1, e));
   const o = opties(a - b, [a - b - 10, a - b + 10, a - b - 1]);
@@ -97,7 +97,7 @@ eraf100[0].uitlegPad = {
 
 // STAP 4 — over het tiental heen
 const overTiental = [];
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 5; i++) {
   if (i % 2 === 0) {
     const a = tussen(15, 85); const e = a % 10; const b = tussen(10 - e + (e === 0 ? 1 : 0), 9); const goed = a + b;
     const o = opties(goed, [goed - 10, goed + 10, goed - 1]);
@@ -131,7 +131,7 @@ const winkel = [
   { q: "Er liggen **100 appels**. De klas eet er **36**. Hoeveel appels blijven over?", goed: 64, fout: [74, 54, 136] },
   { q: "Op maandag lees je **27 bladzijden**. Op dinsdag **27**. Hoeveel bladzijden samen?", goed: 54, fout: [44, 0, 55] },
   { q: "Je hebt **75 euro**. Je geeft **28 euro** uit. Hoeveel euro heb je nog?", goed: 47, fout: [57, 103, 53] },
-].map((s) => { const o = opties(s.goed, s.fout); return { q: s.q, options: o.options, answer: o.answer, wrongHints: hints(o.answer, "Lees de som nog een keer. Samen = plus. Weg, uit, over = min.") }; });
+].slice(0, 5).map((s) => { const o = opties(s.goed, s.fout); return { q: s.q, options: o.options, answer: o.answer, wrongHints: hints(o.answer, "Lees de som nog een keer. Samen = plus. Weg, uit, over = min.") }; });
 winkel[0].uitlegPad = {
   stappen: [
     { titel: "Plus of min?", tekst: "**Samen** betekent **plus**. 12 euro en 15 euro samen: 12 + 15." },
@@ -163,7 +163,7 @@ const rekenenTot100Nieuwkomers = {
   referentieNiveau: "voor 1F",
   sloThema: "Getallen — optellen en aftrekken tot 100",
   prerequisites: [{ id: "rekenen-tot-20-nieuwkomers", title: "Rekenen tot 20 (nieuwkomers)", niveau: "groep3-4" }],
-  intro: "Tientallen en eenheden, erbij en eraf in sprongen, over het tiental heen, en sommen met geld. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~15 min.",
+  intro: "Tientallen en eenheden, erbij en eraf in sprongen, over het tiental heen, en sommen met geld. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
   triggerKeywords: ["tot 100", "tientallen", "eenheden", "erbij", "eraf", "nieuwkomers", "groep 4", "sprongen", "getallenlijn"],
   chapters,
   steps,

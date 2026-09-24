@@ -38,7 +38,7 @@ function hints(answerIdx, tekstFout) {
 
 // STAP 1 — tellen
 const telVragen = [];
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 5; i++) {
   const n = tussen(3, 19);
   const o = opties(n + 1, [n, n + 2, n - 1]);
   telVragen.push({ q: `Tel verder. Wat komt **na ${n}**?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Tel: ${n}, en dan één erbij.`) });
@@ -58,7 +58,7 @@ telVragen[0].uitlegPad = {
 
 // STAP 2 — erbij tot 10
 const erbij10 = [];
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 5; i++) {
   const a = tussen(1, 8); const b = tussen(1, 10 - a);
   const o = opties(a + b, [a + b + 1, a + b - 1, a + b + 2]);
   erbij10.push({ q: `**${a} + ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Begin bij ${a}. Tel er ${b} bij.`) });
@@ -78,7 +78,7 @@ erbij10[0].uitlegPad = {
 
 // STAP 3 — eraf tot 10
 const eraf10 = [];
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 5; i++) {
   const a = tussen(2, 10); const b = tussen(1, a);
   const o = opties(a - b, [a - b + 1, a - b - 1, a + b]);
   eraf10.push({ q: `**${a} − ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Begin bij ${a}. Tel ${b} terug.`) });
@@ -98,7 +98,7 @@ eraf10[0].uitlegPad = {
 
 // STAP 4 — over de 10 heen
 const over10 = [];
-for (let i = 0; i < 8; i++) {
+for (let i = 0; i < 5; i++) {
   const erbijSom = i % 2 === 0;
   if (erbijSom) {
     const a = tussen(5, 9); const b = tussen(11 - a, 9);
@@ -133,7 +133,7 @@ const klasSommen = [
   { q: "Er zijn **20 appels**. De kinderen eten er **12**. Hoeveel appels zijn er nog?", goed: 8, fout: [9, 7, 32] },
   { q: "Op de tafel liggen **4 rode** en **8 blauwe** blokken. Hoeveel blokken zijn het samen?", goed: 12, fout: [11, 13, 4] },
   { q: "De juf heeft **16 stickers**. Ze geeft **9 stickers** weg. Hoeveel stickers heeft ze nog?", goed: 7, fout: [6, 8, 25] },
-].map((s) => { const o = opties(s.goed, s.fout); return { q: s.q, options: o.options, answer: o.answer, wrongHints: hints(o.answer, "Lees de som nog een keer. Is het erbij of eraf?") }; });
+].slice(0, 5).map((s) => { const o = opties(s.goed, s.fout); return { q: s.q, options: o.options, answer: o.answer, wrongHints: hints(o.answer, "Lees de som nog een keer. Is het erbij of eraf?") }; });
 klasSommen[0].uitlegPad = {
   stappen: [
     { titel: "Erbij of eraf?", tekst: "Lees de som. **Komen er kinderen bij?** Dan is het **plus**. **Gaan er weg?** Dan is het **min**." },
@@ -165,7 +165,7 @@ const rekenenTot20Nieuwkomers = {
   referentieNiveau: "voor 1F",
   sloThema: "Getallen — tellen, optellen en aftrekken tot 20",
   prerequisites: [],
-  intro: "Tellen tot 20, erbij en eraf tot 10, over de 10 heen, en sommen met woorden. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~15 min.",
+  intro: "Tellen tot 20, erbij en eraf tot 10, over de 10 heen, en sommen met woorden. Korte zinnen, elke som met uitleg. Ook voor kinderen die nog Nederlands leren. ~10 min.",
   triggerKeywords: ["tellen", "tot 20", "erbij", "eraf", "plus", "min", "nieuwkomers", "groep 3", "groep 4", "beginners", "eerste sommen"],
   chapters,
   steps,
