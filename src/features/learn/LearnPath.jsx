@@ -1,4 +1,4 @@
-import { useState, useEffect, useMemo, useRef, useCallback } from "react";
+import { useState, useEffect, useMemo, useRef, useCallback, useContext } from "react";
 import supabase from "../../supabase";
 import { metLinkId } from "../../shared/koppeling.js";
 import { getLearnPath as lazyGetLearnPath } from "../../learnPaths/pathLoaders.js";
@@ -2519,7 +2519,10 @@ function Header({ onBack, onHome, title, emoji, backLabel }) {
       <button onClick={onBack || onHome} style={iconBtn()} title={backLabel || "Terug"}>
         ←{backLabel ? <span style={{ fontSize: 12, marginLeft: 4 }}>{backLabel}</span> : null}
       </button>
-      <div style={{ fontSize: 22 }}>{emoji}</div>
+      {/* Nieuwkomerpaden: het echte Leerkwartier-logo i.p.v. de emoji (Mark 24 sep). */}
+      {useContext(SteunCtx)
+        ? <img src="/logo.jpg" alt="Leerkwartier" width={40} height={40} style={{ width: 40, height: 40, borderRadius: 10, background: "#fff", objectFit: "contain", flexShrink: 0 }} />
+        : <div style={{ fontSize: 22 }}>{emoji}</div>}
       <div style={{ flex: 1, fontFamily: "var(--font-display)", fontSize: 18, color: "var(--color-text-strong)" }}>{title}</div>
       <button onClick={onHome} style={iconBtn()}>🏠</button>
     </div>

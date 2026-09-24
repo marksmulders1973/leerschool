@@ -76,8 +76,12 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
   return (
     <div style={{ minHeight: "100dvh", background: "linear-gradient(160deg,#0f2a44,#173a5e 60%,#1e4a73)", color: "#fff", fontFamily: "system-ui", padding: "18px 16px 40px" }}>
       <div style={{ maxWidth: 640, margin: "0 auto" }}>
-        <button type="button" onClick={onHome} style={{ background: "rgba(255,255,255,.12)", color: "#fff", border: "none", borderRadius: 999, padding: "8px 14px", fontWeight: 800, cursor: "pointer" }}>{t.terug}</button>
-        <h1 style={{ fontSize: "clamp(28px, 7vw, 40px)", margin: "18px 0 4px", fontWeight: 900 }}>{t.kop}</h1>
+        <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 12, paddingTop: 14 }}>
+          <button type="button" onClick={onHome} style={{ background: "rgba(255,255,255,.12)", color: "#fff", border: "none", borderRadius: 999, padding: "8px 14px", fontWeight: 800, cursor: "pointer" }}>{t.terug}</button>
+          {/* Echte Leerkwartier-logo (Mark 24 sep: "op de nieuwe pagina's mis ik het logo"). */}
+          <img src="/logo.jpg" alt="Leerkwartier" width={64} height={64} style={{ width: 64, height: 64, borderRadius: 15, background: "#fff", objectFit: "contain", boxShadow: "0 4px 14px rgba(0,0,0,.25)" }} />
+        </div>
+        <h1 style={{ fontSize: "clamp(28px, 7vw, 40px)", margin: "14px 0 4px", fontWeight: 900 }}>{t.kop}</h1>
         <div style={{ fontSize: 15, opacity: .85, fontWeight: 600 }}>{t.sub}<Steun veld="sub" klein /></div>
 
         <div style={{ margin: "16px 0 6px", fontWeight: 800, fontSize: 16 }}>{t.taalvraag}<Steun veld="taalvraag" /></div>
