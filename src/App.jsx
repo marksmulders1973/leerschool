@@ -25,6 +25,7 @@ import { vangPartnerCode } from "./features/referral/partnerCode.js";
 // pagina. Drukt de eerste-route-bundle flink omlaag, vooral op mobiel.
 const HomeV2 = lazy(() => import("./components/HomeV2.jsx"));
 const SpelletjeKeuze = lazy(() => import("./components/SpelletjeKeuze.jsx"));
+const NieuwkomersPage = lazy(() => import("./components/NieuwkomersPage.jsx"));
 const ImposterKamer = lazy(() => import("./components/ImposterKamer.jsx"));
 // 🕵️ Bedrieger-kamer → park: de loting uit de witte kamer (rol, aantal bots) reist mee
 // naar het parkspel via deze ref (Marks ontwerp 24 sep 2026). ZookwartierGame leest en wist hem.
@@ -1644,6 +1645,13 @@ export default function App() {
       {/* parkKeuze-keuzescherm verwijderd (Mark 2026-07-25): OBLITERATOR past
           niet meer bij de app en is een easter egg geworden — 7× tikken op de
           parknaam in het park-menu, of de deeplink /obliterator (Brian). */}
+      {page === "nieuwkomers" && (
+        <Suspense fallback={<PageLoader />}>
+          <NieuwkomersPage onHome={goHome}
+            onLeerpad={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("nieuwkomers"); setPage("learn-path"); }}
+            onPagina={(p) => setPage(p)} />
+        </Suspense>
+      )}
       {page === "spelletje" && (
         <Suspense fallback={<PageLoader />}>
           <SpelletjeKeuze onPark={() => setPage("zoo")} onImposter={() => setPage("imposter")} onHome={goHome} />

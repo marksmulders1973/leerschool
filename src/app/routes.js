@@ -87,6 +87,8 @@ export const PAGE_TO_PATH = {
   zoo: "/dierentuin",
   // Brian 23 sep 2026: keuzescherm Park / Imposter achter de onderbalk-knop "Spelletje".
   spelletje: "/spelletje",
+  // Nieuwkomer-pakket (24 sep 2026): losse pagina, code NIEUWKOMER in de codebalk landt hier.
+  nieuwkomers: "/nieuwkomers",
   imposter: "/spelletje/imposter",
   // 🌍 Park-galerij — openbare (gemodereerde) showcase van kinder-parken (17 aug).
   galerij: "/parken",

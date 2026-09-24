@@ -212,6 +212,13 @@ export default function CodeBalk() {
       } catch { return false; }
     };
 
+    // 🌍 NIEUWKOMER (Mark 24 sep 2026): geen partnercode, geen Familie — de code is de
+    // deur naar het losse Nieuwkomer-pakket (/nieuwkomers). Iedereen die hem intikt komt daar.
+    if (kaal === "NIEUWKOMER" || kaal === "NIEUWKOMERS") {
+      try { track("code_balk_nieuwkomer"); } catch { /* */ }
+      window.location.href = "/nieuwkomers";
+      return;
+    }
     if (/^[A-Z0-9]{4,8}$/.test(kaal) && !kaal.includes("2027")) {
       // 🔐 Koppelcode (thuis/school). Fix 27 aug: een harde sprong naar
       // /leerling kaatst bij een koude landing bewust terug naar home
