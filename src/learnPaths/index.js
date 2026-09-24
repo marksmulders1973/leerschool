@@ -248,6 +248,8 @@ import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import rekenenTot20Nieuwkomers from "./rekenenTot20Nieuwkomers.js";
 import rekenenTot100Nieuwkomers from "./rekenenTot100Nieuwkomers.js";
+import inDeKlasNieuwkomers from "./inDeKlasNieuwkomers.js";
+import woordenNieuwkomers from "./woordenNieuwkomers.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
 import synoniemenTegenstellingenPo from "./synoniemenTegenstellingenPo.js";
@@ -456,6 +458,8 @@ export const ALL_LEARN_PATHS = {
   "kalender-rekenen-po": kalenderRekenenPo,
   "rekenen-tot-20-nieuwkomers": rekenenTot20Nieuwkomers,
   "rekenen-tot-100-nieuwkomers": rekenenTot100Nieuwkomers,
+  "in-de-klas-nieuwkomers": inDeKlasNieuwkomers,
+  "woorden-nieuwkomers": woordenNieuwkomers,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,
   "synoniemen-tegenstellingen-po": synoniemenTegenstellingenPo,

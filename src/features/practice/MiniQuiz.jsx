@@ -171,6 +171,15 @@ export default function MiniQuiz({
           >
             {current.q}
           </div>
+          {/* 🌍 Steuntaal (Nieuwkomer-pakket, 24 sep 2026): dezelfde vraag in de thuistaal
+              van het kind, alleen als de vraag een `steun`-veld heeft en er een taal gekozen is
+              (localStorage lk_steuntaal). Zonder keuze: Engels. Arabisch van rechts naar links. */}
+          {current.steun && (() => {
+            let taal = "en"; try { taal = localStorage.getItem("lk_steuntaal") || "en"; } catch { /* */ }
+            if (taal === "nl") return null;
+            const tekst = current.steun[taal] || current.steun.en; if (!tekst) return null;
+            return <div dir={taal === "ar" ? "rtl" : "ltr"} style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text-muted, #667)", marginTop: "-6px", marginBottom: "var(--space-3)", fontWeight: 600 }}>{tekst}</div>;
+          })()}
           {current.options.map((opt, i) => {
             const isSelected = selected === i;
             const isCorrect = i === current.answer;

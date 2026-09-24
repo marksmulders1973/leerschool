@@ -1458,6 +1458,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             )}
             <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
               <MdInline text={currentCheck.q} />
+              {/* 🌍 Steuntaal (Nieuwkomer-pakket, 24 sep 2026): dezelfde vraag in de thuistaal
+                  als de vraag een `steun`-veld heeft en er een taal is gekozen (localStorage
+                  lk_steuntaal); zonder keuze Engels. Arabisch van rechts naar links. */}
+              {currentCheck.steun && (() => {
+                let taal = "en"; try { taal = localStorage.getItem("lk_steuntaal") || "en"; } catch { /* */ }
+                if (taal === "nl") return null;
+                const tekst = currentCheck.steun[taal] || currentCheck.steun.en; if (!tekst) return null;
+                return <div dir={taal === "ar" ? "rtl" : "ltr"} style={{ fontSize: 14.5, fontWeight: 600, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>{tekst}</div>;
+              })()}
             </div>
             {selected === null && (currentCheck.uitlegPad || currentCheck.leerpadLink) && (
               <div style={{ marginBottom: 14 }}>

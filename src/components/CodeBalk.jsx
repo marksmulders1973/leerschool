@@ -212,9 +212,9 @@ export default function CodeBalk() {
       } catch { return false; }
     };
 
-    // 🌍 NIEUWKOMER (Mark 24 sep 2026): geen partnercode, geen Familie — de code is de
+    // 🌍 WELKOMNIEUWKOMER (Mark 24 sep 2026; NIEUWKOMER blijft werken): geen partnercode, geen Familie — de code is de
     // deur naar het losse Nieuwkomer-pakket (/nieuwkomers). Iedereen die hem intikt komt daar.
-    if (kaal === "NIEUWKOMER" || kaal === "NIEUWKOMERS") {
+    if (kaal === "WELKOMNIEUWKOMER" || kaal === "NIEUWKOMER" || kaal === "NIEUWKOMERS") {
       try { track("code_balk_nieuwkomer"); } catch { /* */ }
       window.location.href = "/nieuwkomers";
       return;

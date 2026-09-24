@@ -3973,6 +3973,30 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "in-de-klas-nieuwkomers",
+    "file": "./inDeKlasNieuwkomers.js",
+    "title": "In de klas — Nederlands voor de eerste weken (nieuwkomers)",
+    "subject": "taal",
+    "level": "groep3-4",
+    "emoji": "🙋",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Mondelinge taalvaardigheid — schooltaal",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "in de klas",
+      "schooltaal",
+      "mag ik",
+      "nt2",
+      "eerste woorden",
+      "nederlands leren"
+    ],
+    "intro": "De zinnen die je de eerste weken op school nodig hebt: vragen, plekken, vrienden maken. Met steun in je eigen taal. ~10 min.",
+    "stepCount": 3,
+    "checkCount": 15,
+    "chapterCount": 3,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "industriele-revolutie-havo-vwo",
     "file": "./industrieleRevolutieHavoVwo.js",
     "title": "Industriële Revolutie (HAVO/VWO Geschiedenis)",
@@ -9063,6 +9087,30 @@
     "checkCount": 26,
     "chapterCount": 4,
     "estimatedMinutes": 15
+  },
+  {
+    "id": "woorden-nieuwkomers",
+    "file": "./woordenNieuwkomers.js",
+    "title": "Woorden — je eerste Nederlandse woorden (nieuwkomers)",
+    "subject": "taal",
+    "level": "groep3-4",
+    "emoji": "🔤",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Woordenschat — basiswoorden",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "woorden",
+      "woordenschat",
+      "nt2",
+      "eerste woorden",
+      "nederlands leren",
+      "de het"
+    ],
+    "intro": "Vijftien woorden voor school, thuis, eten, lichaam en kleuren. Het woord staat in jouw taal; jij kiest het Nederlandse woord. ~10 min.",
+    "stepCount": 3,
+    "checkCount": 15,
+    "chapterCount": 3,
+    "estimatedMinutes": 10
   },
   {
     "id": "woordenschat-engels",
