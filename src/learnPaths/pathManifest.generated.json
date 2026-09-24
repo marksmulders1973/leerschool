@@ -3991,9 +3991,9 @@
       "nederlands leren"
     ],
     "intro": "De zinnen die je de eerste weken op school nodig hebt: vragen, plekken, vrienden maken. Met steun in je eigen taal. ~10 min.",
-    "stepCount": 3,
-    "checkCount": 15,
-    "chapterCount": 3,
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
     "estimatedMinutes": 10
   },
   {
@@ -6706,6 +6706,29 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "rekentaal-nieuwkomers",
+    "file": "./rekentaalNieuwkomers.js",
+    "title": "Rekentaal — de woorden achter de sommen (nieuwkomers)",
+    "subject": "rekenen",
+    "level": "groep3-4",
+    "emoji": "⚖️",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Rekentaal — schooltaal bij rekenen",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "rekentaal",
+      "rekenwoorden",
+      "meer minder",
+      "verdelen",
+      "nt2"
+    ],
+    "intro": "Meer, minder, samen, weg, over, keer en verdelen: de woorden die in elke rekenles terugkomen. Met steun in je eigen taal. ~10 min.",
+    "stepCount": 3,
+    "checkCount": 15,
+    "chapterCount": 3,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "rijmen-letters-kleuters-po",
     "file": "./rijmenLettersKleutersPo.js",
     "title": "Rijmen en letters (groep 1-2)",
@@ -9107,9 +9130,9 @@
       "de het"
     ],
     "intro": "Vijftien woorden voor school, thuis, eten, lichaam en kleuren. Het woord staat in jouw taal; jij kiest het Nederlandse woord. ~10 min.",
-    "stepCount": 3,
-    "checkCount": 15,
-    "chapterCount": 3,
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
     "estimatedMinutes": 10
   },
   {

@@ -6,9 +6,12 @@
 // thuistaal (Engels, Arabisch, Oekraïens, Turks); de vragen blijven Nederlands, maar
 // een tik op een vraag (of het knopje bij een antwoord) toont dezelfde zin in de eigen
 // taal (SteunTik.jsx leest localStorage `lk_steuntaal`). Geen vertaling van de app: steun.
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { track } from "../utils.js";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
+import { aantalTeHerhalen } from "../shared/herhaalNieuwkomers.js";
+
+const NieuwkomersHerhaal = lazy(() => import("./NieuwkomersHerhaal.jsx"));
 
 export const STEUNTAAL_KEY = "lk_steuntaal";
 export const STEUNTALEN = [
@@ -29,6 +32,7 @@ const T = {
     tegels: [
       { id: "in-de-klas-nieuwkomers", soort: "pad", titel: "In de klas", uitleg: "Wat zeg je tegen de juf? Hoe maak je vrienden?" },
       { id: "woorden-nieuwkomers", soort: "pad", titel: "Woorden", uitleg: "Je eerste Nederlandse woorden. Het woord staat ook in jouw taal." },
+      { id: "rekentaal-nieuwkomers", soort: "pad", titel: "Rekentaal", uitleg: "Meer, minder, samen, weg, verdelen: de woorden in elke rekenles." },
       { id: "rekenen-tot-20-nieuwkomers", soort: "pad", titel: "Rekenen tot 20", uitleg: "Tellen, erbij en eraf. Met je vingers mag." },
       { id: "rekenen-tot-100-nieuwkomers", soort: "pad", titel: "Rekenen tot 100", uitleg: "Tientallen en eenheden. Sprongen van 10." },
       { id: "leesladder", soort: "pagina", titel: "Lezen", uitleg: "Begin met vijf korte zinnen. De knop leest voor." },
@@ -37,17 +41,21 @@ const T = {
     voorlees: "Overal staat een knop 'Lees voor'. Druk erop. Dan hoor je de tekst.",
     juf: "Voor de leerkracht: alles op deze pagina is gratis, ook op het digibord. Zet de code WELKOMNIEUWKOMER op het bord; ieder kind komt dan hier.",
     terug: "← Terug",
+    herhaalKop: "Vandaag herhalen",
+    herhaalUitleg: "Woorden en zinnen van eerder. Zo onthoud je ze.",
   },
-  en: { sub: "Free. No account. Short sentences. Every sum with an explanation.", juf: "For the teacher: everything on this page is free, also on the classroom board. Write the code WELKOMNIEUWKOMER on the board; every child will come here.", tegels: [["In class","What do you say to the teacher? How do you make friends?"],["Words","Your first Dutch words. The word is also in your language."],["Counting to 20","Counting, adding and taking away. You may use your fingers."],["Counting to 100","Tens and ones. Jumps of 10."],["Reading","Start with five short sentences. The button reads them aloud."],["Times tables","A little bit at a time."]], taalvraag: "Which language do you speak at home?", taaluitleg: "Everything stays in Dutch. Tap a sentence, or the small button next to an answer, to see your language.", intro: "This is for children who are still learning Dutch. Start at 1. Do a little every day.", voorlees: "Everywhere there is a button 'Lees voor' (read aloud). Press it to hear the text." },
-  ar: { sub: "مجاني. بدون حساب. جمل قصيرة. كل عملية حسابية مع شرح.", juf: "للمعلّم: كل شيء في هذه الصفحة مجاني، أيضًا على السبّورة الذكية. اكتب الرمز WELKOMNIEUWKOMER على السبّورة؛ وسيصل كل طفل إلى هنا.", tegels: [["في الصف","ماذا تقول للمعلّمة؟ كيف تكوّن أصدقاء؟"],["كلمات","أول كلماتك الهولندية. الكلمة مكتوبة أيضًا بلغتك."],["الحساب حتى 20","العدّ والجمع والطرح. يمكنك استخدام أصابعك."],["الحساب حتى 100","العشرات والآحاد. قفزات من 10."],["القراءة","ابدأ بخمس جمل قصيرة. الزر يقرأها بصوت عالٍ."],["جداول الضرب","قليلًا في كل مرة."]], taalvraag: "ما هي اللغة التي تتكلمها في البيت؟", taaluitleg: "كل شيء يبقى بالهولندية. اضغط على الجملة أو على الزر الصغير بجانب الجواب لترى لغتك.", intro: "هذا للأطفال الذين ما زالوا يتعلمون الهولندية. ابدأ من 1. تعلّم قليلًا كل يوم.", voorlees: "في كل مكان يوجد زر 'Lees voor' (اقرأ بصوت عالٍ). اضغط عليه لتسمع النص." },
-  uk: { sub: "Безкоштовно. Без акаунта. Короткі речення. Кожен приклад із поясненням.", juf: "Для вчителя: усе на цій сторінці безкоштовне, також на інтерактивній дошці. Напишіть на дошці код WELKOMNIEUWKOMER — і кожна дитина потрапить сюди.", tegels: [["У класі","Що ти кажеш учительці? Як знайти друзів?"],["Слова","Твої перші нідерландські слова. Слово є і твоєю мовою."],["Рахуємо до 20","Лічба, додавання і віднімання. Можна на пальцях."],["Рахуємо до 100","Десятки й одиниці. Стрибки по 10."],["Читання","Почни з п'яти коротких речень. Кнопка читає вголос."],["Таблиця множення","Потроху."]], taalvraag: "Якою мовою ти розмовляєш удома?", taaluitleg: "Усе залишається нідерландською. Натисни на речення або на кнопочку біля відповіді, щоб побачити свою мову.", intro: "Це для дітей, які ще вчать нідерландську. Почни з 1. Займайся потроху щодня.", voorlees: "Скрізь є кнопка 'Lees voor' (прочитати вголос). Натисни її, щоб почути текст." },
-  tr: { sub: "Ücretsiz. Hesap yok. Kısa cümleler. Her işlem açıklamalı.", juf: "Öğretmen için: bu sayfadaki her şey ücretsizdir, akıllı tahtada da. WELKOMNIEUWKOMER kodunu tahtaya yazın; her çocuk buraya gelir.", tegels: [["Sınıfta","Öğretmene ne dersin? Nasıl arkadaş edinirsin?"],["Kelimeler","İlk Hollandaca kelimelerin. Kelime kendi dilinde de yazıyor."],["20'ye kadar sayılar","Saymak, toplamak ve çıkarmak. Parmaklarını kullanabilirsin."],["100'e kadar sayılar","Onluklar ve birlikler. 10'ar atlamalar."],["Okuma","Beş kısa cümleyle başla. Düğme sesli okur."],["Çarpım tablosu","Her seferinde biraz."]], taalvraag: "Evde hangi dili konuşuyorsun?", taaluitleg: "Her şey Hollandaca kalır. Bir cümleye ya da cevabın yanındaki küçük düğmeye dokun, kendi dilini görürsün.", intro: "Bu, hâlâ Hollandaca öğrenen çocuklar için. 1'den başla. Her gün biraz yap.", voorlees: "Her yerde 'Lees voor' (sesli oku) düğmesi var. Metni duymak için bas." },
+  en: { herhaalKop: "Practise again today", herhaalUitleg: "Words and sentences from before. This way you remember them.", sub: "Free. No account. Short sentences. Every sum with an explanation.", juf: "For the teacher: everything on this page is free, also on the classroom board. Write the code WELKOMNIEUWKOMER on the board; every child will come here.", tegels: [["In class","What do you say to the teacher? How do you make friends?"],["Words","Your first Dutch words. The word is also in your language."],["Maths words","More, less, together, away, sharing: the words in every maths lesson."],["Counting to 20","Counting, adding and taking away. You may use your fingers."],["Counting to 100","Tens and ones. Jumps of 10."],["Reading","Start with five short sentences. The button reads them aloud."],["Times tables","A little bit at a time."]], taalvraag: "Which language do you speak at home?", taaluitleg: "Everything stays in Dutch. Tap a sentence, or the small button next to an answer, to see your language.", intro: "This is for children who are still learning Dutch. Start at 1. Do a little every day.", voorlees: "Everywhere there is a button 'Lees voor' (read aloud). Press it to hear the text." },
+  ar: { herhaalKop: "مراجعة اليوم", herhaalUitleg: "كلمات وجمل من قبل. هكذا تتذكّرها.", sub: "مجاني. بدون حساب. جمل قصيرة. كل عملية حسابية مع شرح.", juf: "للمعلّم: كل شيء في هذه الصفحة مجاني، أيضًا على السبّورة الذكية. اكتب الرمز WELKOMNIEUWKOMER على السبّورة؛ وسيصل كل طفل إلى هنا.", tegels: [["في الصف","ماذا تقول للمعلّمة؟ كيف تكوّن أصدقاء؟"],["كلمات","أول كلماتك الهولندية. الكلمة مكتوبة أيضًا بلغتك."],["كلمات الحساب","أكثر، أقل، معًا، ذهب، التوزيع: الكلمات في كل درس حساب."],["الحساب حتى 20","العدّ والجمع والطرح. يمكنك استخدام أصابعك."],["الحساب حتى 100","العشرات والآحاد. قفزات من 10."],["القراءة","ابدأ بخمس جمل قصيرة. الزر يقرأها بصوت عالٍ."],["جداول الضرب","قليلًا في كل مرة."]], taalvraag: "ما هي اللغة التي تتكلمها في البيت؟", taaluitleg: "كل شيء يبقى بالهولندية. اضغط على الجملة أو على الزر الصغير بجانب الجواب لترى لغتك.", intro: "هذا للأطفال الذين ما زالوا يتعلمون الهولندية. ابدأ من 1. تعلّم قليلًا كل يوم.", voorlees: "في كل مكان يوجد زر 'Lees voor' (اقرأ بصوت عالٍ). اضغط عليه لتسمع النص." },
+  uk: { herhaalKop: "Повторити сьогодні", herhaalUitleg: "Слова і речення, які ти вже вчив. Так ти їх запам'ятаєш.", sub: "Безкоштовно. Без акаунта. Короткі речення. Кожен приклад із поясненням.", juf: "Для вчителя: усе на цій сторінці безкоштовне, також на інтерактивній дошці. Напишіть на дошці код WELKOMNIEUWKOMER — і кожна дитина потрапить сюди.", tegels: [["У класі","Що ти кажеш учительці? Як знайти друзів?"],["Слова","Твої перші нідерландські слова. Слово є і твоєю мовою."],["Слова для математики","Більше, менше, разом, забрали, поділити: слова з кожного уроку математики."],["Рахуємо до 20","Лічба, додавання і віднімання. Можна на пальцях."],["Рахуємо до 100","Десятки й одиниці. Стрибки по 10."],["Читання","Почни з п'яти коротких речень. Кнопка читає вголос."],["Таблиця множення","Потроху."]], taalvraag: "Якою мовою ти розмовляєш удома?", taaluitleg: "Усе залишається нідерландською. Натисни на речення або на кнопочку біля відповіді, щоб побачити свою мову.", intro: "Це для дітей, які ще вчать нідерландську. Почни з 1. Займайся потроху щодня.", voorlees: "Скрізь є кнопка 'Lees voor' (прочитати вголос). Натисни її, щоб почути текст." },
+  tr: { herhaalKop: "Bugün tekrar et", herhaalUitleg: "Daha önceki kelimeler ve cümleler. Böylece onları hatırlarsın.", sub: "Ücretsiz. Hesap yok. Kısa cümleler. Her işlem açıklamalı.", juf: "Öğretmen için: bu sayfadaki her şey ücretsizdir, akıllı tahtada da. WELKOMNIEUWKOMER kodunu tahtaya yazın; her çocuk buraya gelir.", tegels: [["Sınıfta","Öğretmene ne dersin? Nasıl arkadaş edinirsin?"],["Kelimeler","İlk Hollandaca kelimelerin. Kelime kendi dilinde de yazıyor."],["Matematik kelimeleri","Daha çok, daha az, birlikte, gitti, paylaştırmak: her matematik dersindeki kelimeler."],["20'ye kadar sayılar","Saymak, toplamak ve çıkarmak. Parmaklarını kullanabilirsin."],["100'e kadar sayılar","Onluklar ve birlikler. 10'ar atlamalar."],["Okuma","Beş kısa cümleyle başla. Düğme sesli okur."],["Çarpım tablosu","Her seferinde biraz."]], taalvraag: "Evde hangi dili konuşuyorsun?", taaluitleg: "Her şey Hollandaca kalır. Bir cümleye ya da cevabın yanındaki küçük düğmeye dokun, kendi dilini görürsün.", intro: "Bu, hâlâ Hollandaca öğrenen çocuklar için. 1'den başla. Her gün biraz yap.", voorlees: "Her yerde 'Lees voor' (sesli oku) düğmesi var. Metni duymak için bas." },
 };
 
 export function leesSteuntaal() { try { return localStorage.getItem(STEUNTAAL_KEY) || "nl"; } catch { return "nl"; } }
 
 export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
   const [taal, setTaal] = useState(leesSteuntaal);
+  const [herhaal, setHerhaal] = useState(false);
+  const [teHerhalen, setTeHerhalen] = useState(aantalTeHerhalen);
   const t = T.nl;
   const s = { ...T.nl, ...(T[taal] || {}) };
   const rtl = !!STEUNTALEN.find((x) => x.id === taal)?.rtl;
@@ -89,7 +97,31 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
           <div style={{ marginTop: 8, fontSize: 14, fontWeight: 600 }}><VoorleesBlok tekst={`${t.kop}. ${t.sub} ${t.intro}`} /></div>
         </div>
 
-        <div style={{ display: "grid", gap: 12 }}>
+        {herhaal ? (
+          <Suspense fallback={null}>
+            <NieuwkomersHerhaal onKlaar={() => { setHerhaal(false); setTeHerhalen(aantalTeHerhalen()); }} />
+          </Suspense>
+        ) : teHerhalen > 0 && (
+          // 🔁 Herhalen over dagen: vragen van eerder komen na 1, 2, 4 en 8 dagen terug.
+          <button type="button" onClick={() => { setHerhaal(true); try { track("nieuwkomers_herhaal_open", { aantal: teHerhalen, taal }); } catch { /* */ } }} style={{
+            display: "flex", alignItems: "center", gap: 16, textAlign: "left", width: "100%", marginBottom: 12,
+            background: "#ffd166", color: "#3a2600", border: "none", borderRadius: 18, padding: "16px 18px", cursor: "pointer", boxShadow: "0 8px 22px rgba(0,0,0,.25)",
+          }}>
+            <div style={{ width: 44, height: 44, borderRadius: 12, background: "#3a2600", color: "#ffd166", display: "grid", placeItems: "center", fontWeight: 900, fontSize: 20, flex: "none" }}>{teHerhalen}</div>
+            <div style={{ flex: 1 }}>
+              <div style={{ fontSize: "clamp(20px, 5vw, 24px)", fontWeight: 900 }}>{t.herhaalKop}</div>
+              <div style={{ fontSize: 15, fontWeight: 600, marginTop: 2 }}>{t.herhaalUitleg}</div>
+              {taal !== "nl" && s.herhaalKop && (
+                <div dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ fontSize: 14, fontWeight: 700, background: "rgba(255,255,255,.6)", borderRadius: 8, padding: "4px 8px", marginTop: 6 }}>
+                  {s.herhaalKop} — {s.herhaalUitleg}
+                </div>
+              )}
+            </div>
+            <div style={{ fontSize: 26, fontWeight: 900, opacity: .6 }}>›</div>
+          </button>
+        )}
+
+        {!herhaal && <div style={{ display: "grid", gap: 12 }}>
           {t.tegels.map((tegel, i) => (
             <button key={tegel.id} type="button" onClick={() => open(tegel)} style={{
               display: "flex", alignItems: "center", gap: 16, textAlign: "left", width: "100%",
@@ -109,7 +141,7 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
               <div style={{ fontSize: 26, fontWeight: 900, opacity: .5 }}>›</div>
             </button>
           ))}
-        </div>
+        </div>}
 
         <div style={{ marginTop: 20, background: "rgba(255,255,255,.1)", borderRadius: 14, padding: "12px 14px", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{t.voorlees}<Steun veld="voorlees" klein /></div>
         <div style={{ marginTop: 12, fontSize: 13.5, opacity: .75, lineHeight: 1.5 }}>{t.juf}<Steun veld="juf" klein /></div>

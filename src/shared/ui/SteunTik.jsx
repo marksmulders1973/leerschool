@@ -65,6 +65,12 @@ export const UI_STEUN = {
   "Basiskennis die je hierbij nodig hebt": { en: "What you need to know first", ar: "ما تحتاج أن تعرفه أولًا", uk: "Що треба знати спочатку", tr: "Önce bilmen gerekenler" },
   "Lees de uitleg van deze stap nog eens": { en: "Read the explanation of this part again", ar: "اقرأ شرح هذا الجزء مرة أخرى", uk: "Прочитай пояснення цієї частини ще раз", tr: "Bu bölümün açıklamasını tekrar oku" },
   "Probeer het straks eerst zelf.": { en: "First try it yourself. Below is help to understand the question. The short explanation with the answer comes after your first try.", ar: "جرّب بنفسك أولًا. في الأسفل مساعدة لفهم السؤال. الشرح القصير مع الجواب يظهر بعد محاولتك الأولى.", uk: "Спочатку спробуй сам. Нижче є допомога, щоб зрозуміти запитання. Коротке пояснення з відповіддю з'явиться після першої спроби.", tr: "Önce kendin dene. Aşağıda soruyu anlamak için yardım var. Cevaplı kısa açıklama ilk denemenden sonra gelir." },
+  "Vandaag herhalen": { en: "Practise again today", ar: "مراجعة اليوم", uk: "Повторити сьогодні", tr: "Bugün tekrar et" },
+  "Woorden en zinnen van eerder. Zo onthoud je ze.": { en: "Words and sentences from before. This way you remember them.", ar: "كلمات وجمل من قبل. هكذا تتذكّرها.", uk: "Слова і речення, які ти вже вчив. Так ти їх запам'ятаєш.", tr: "Daha önceki kelimeler ve cümleler. Böylece onları hatırlarsın." },
+  "Klaar met herhalen!": { en: "Done practising!", ar: "انتهيت من المراجعة!", uk: "Повторення закінчено!", tr: "Tekrar bitti!" },
+  "Morgen komen er weer een paar terug.": { en: "Tomorrow a few will come back again.", ar: "غدًا ستعود بعضها مرة أخرى.", uk: "Завтра кілька повернуться знову.", tr: "Yarın birkaçı tekrar gelecek." },
+  "Volgende": { en: "Next", ar: "التالي", uk: "Далі", tr: "Sonraki" },
+  "Terug": { en: "Back", ar: "رجوع", uk: "Назад", tr: "Geri" },
   "Sluit": { en: "Close", ar: "إغلاق", uk: "Закрити", tr: "Kapat" },
 };
 

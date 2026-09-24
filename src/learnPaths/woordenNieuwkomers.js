@@ -5,11 +5,12 @@
 // Zonder gekozen taal staat Engels erbij. Elke stap begint met uitleg in drie stappen.
 
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
-const stepEmojis = ["🏫", "🏠", "🧍"];
+const stepEmojis = ["🏫", "🏠", "🧍", "✋"];
 const chapters = [
   { letter: "A", title: "Op school", emoji: "🏫", from: 0, to: 0 },
   { letter: "B", title: "Thuis en eten", emoji: "🏠", from: 1, to: 1 },
   { letter: "C", title: "Lichaam en kleuren", emoji: "🧍", from: 2, to: 2 },
+  { letter: "D", title: "Doe-woorden in de klas", emoji: "✋", from: 3, to: 3 },
 ];
 
 // 🌍 Woordenboekje voor het vertaalknopje bij elk ANTWOORD (Mark 24 sep 2026: hij tikte op
@@ -55,6 +56,17 @@ const WOORDENBOEK = {
   "geel": { en: "yellow", ar: "أصفر", uk: "жовтий", tr: "sarı" },
   "groen": { en: "green", ar: "أخضر", uk: "зелений", tr: "yeşil" },
   "wit": { en: "white", ar: "أبيض", uk: "білий", tr: "beyaz" },
+  // Deel D — doe-woorden uit de LOWAN-schooltaalwoordenlijst (instructiewoorden).
+  "schrijven": { en: "to write", ar: "يكتب", uk: "писати", tr: "yazmak" },
+  "lezen": { en: "to read", ar: "يقرأ", uk: "читати", tr: "okumak" },
+  "knippen": { en: "to cut (with scissors)", ar: "يقصّ", uk: "вирізати ножицями", tr: "makasla kesmek" },
+  "plakken": { en: "to glue / to stick", ar: "يلصق", uk: "клеїти", tr: "yapıştırmak" },
+  "luisteren": { en: "to listen", ar: "يستمع", uk: "слухати", tr: "dinlemek" },
+  "kijken": { en: "to look", ar: "ينظر", uk: "дивитися", tr: "bakmak" },
+  "opruimen": { en: "to tidy up", ar: "يرتّب", uk: "прибирати", tr: "toplamak (ortalığı)" },
+  "tekenen": { en: "to draw", ar: "يرسم", uk: "малювати", tr: "resim çizmek" },
+  "kleuren": { en: "to colour", ar: "يلوّن", uk: "розфарбовувати", tr: "boyamak" },
+  "tellen": { en: "to count", ar: "يعدّ", uk: "рахувати", tr: "saymak" },
 };
 
 // Woord-vraag: "Welk woord is dit?" + steun in eigen taal; opties = Nederlandse woorden (goed = index 0 vóór schudden).
@@ -124,10 +136,33 @@ const lichaam = [
   w("blauw", ["rood", "geel", "wit"], { en: "blue", ar: "أزرق", uk: "синій", tr: "mavi" }),
 ];
 
+// Deel D (24 sep 2026): doe-woorden uit de LOWAN-schooltaalwoordenlijst — de woorden
+// die een kind moet kennen om een opdracht in de klas te begrijpen. Geen plaatjes:
+// het woord staat in de eigen taal + "doe het na" (wijs-en-doe, zoals TPR).
+const doen = [
+  w("schrijven", ["lezen", "tekenen", "tellen"], { en: "to write", ar: "يكتب", uk: "писати", tr: "yazmak" }, { uitlegPad: {
+    stappen: [
+      { titel: "Doe-woorden", tekst: "Een **doe-woord** zegt wat je **doet**: schrijven, knippen, luisteren." },
+      { titel: "Doe het na", tekst: "Hoor je **schrijven**? Pak je pen. Hoor je **luisteren**? Wees stil en kijk naar de juf." },
+      { titel: "In de klas", tekst: "De juf zegt vaak: **Schrijf** je naam. **Knip** het uit. **Ruim** je tafel **op**." },
+    ],
+    woorden: [{ woord: "schrijven", uitleg: "Letters maken met een pen of potlood." }, { woord: "opruimen", uitleg: "Alles terugleggen op zijn plek." }],
+    theorie: "Doe-woord = wat je doet.",
+    voorbeelden: [{ type: "stap", tekst: "Schrijf je naam." }, { type: "stap", tekst: "Knip het uit." }],
+    basiskennis: [{ onderwerp: "Truc", uitleg: "Doe het woord meteen na met je handen." }],
+    niveaus: { basis: "Kies het Nederlandse woord.", simpeler: "Letters maken met een pen = schrijven.", nogSimpeler: "schrijven" },
+  } }),
+  w("knippen", ["plakken", "kleuren", "kijken"], { en: "to cut (with scissors)", ar: "يقصّ", uk: "вирізати ножицями", tr: "makasla kesmek" }),
+  w("luisteren", ["kijken", "lezen", "schrijven"], { en: "to listen", ar: "يستمع", uk: "слухати", tr: "dinlemek" }),
+  w("opruimen", ["tekenen", "tellen", "plakken"], { en: "to tidy up", ar: "يرتّب", uk: "прибирати", tr: "toplamak (ortalığı)" }),
+  w("kleuren", ["knippen", "lezen", "luisteren"], { en: "to colour", ar: "يلوّن", uk: "розфарбовувати", tr: "boyamak" }),
+];
+
 const steps = [
   { title: "Op school", explanation: "Je ziet een woord in **jouw taal**. Kies het **Nederlandse** woord.\n\nLeer elk woord met **de** of **het** ervoor: de tafel, het boek.", checks: school },
   { title: "Thuis en eten", explanation: "Woorden voor **thuis** en **eten**.\n\nZeg ze hardop. Wijs ze aan in huis.", checks: thuis },
   { title: "Lichaam en kleuren", explanation: "Woorden voor je **lichaam** en voor **kleuren**.\n\nWijs aan wat je zegt. Zo onthoud je het.", checks: lichaam },
+  { title: "Doe-woorden in de klas", explanation: "De juf of meester zegt vaak wat je moet **doen**.\n\n**Schrijf**, **knip**, **luister**, **ruim op**, **kleur**.\n\nDoe het woord meteen na: pak een pen als je **schrijven** hoort. Zo onthoud je het.", checks: doen },
 ];
 steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 

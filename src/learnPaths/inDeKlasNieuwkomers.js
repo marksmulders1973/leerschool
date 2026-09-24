@@ -5,11 +5,13 @@
 // Korte zinnen, geen uitdrukkingen, elke stap begint met uitleg in drie stappen.
 
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
-const stepEmojis = ["🙋", "🏫", "🤝"];
+import { vulSteun } from "./nieuwkomersHelpers.js";
+const stepEmojis = ["🙋", "🏫", "🤝", "💬"];
 const chapters = [
   { letter: "A", title: "Vragen aan de juf of meester", emoji: "🙋", from: 0, to: 0 },
   { letter: "B", title: "Op school", emoji: "🏫", from: 1, to: 1 },
   { letter: "C", title: "Met andere kinderen", emoji: "🤝", from: 2, to: 2 },
+  { letter: "D", title: "Hoe voel je je?", emoji: "💬", from: 3, to: 3 },
 ];
 
 const v = (q, options, answer, hint, steun, extra = {}) => ({ q, options, answer, wrongHints: options.map((_, i) => (i === answer ? null : hint)), steun, ...extra });
@@ -114,11 +116,36 @@ const OPTIES_STEUN = [
   c.steunOpties = Object.fromEntries(c.options.map((tekst, k) => [tekst, { en: o.en[k], ar: o.ar[k], uk: o.uk[k], tr: o.tr[k] }]));
 });
 
+// Deel 4 (24 sep 2026): emotiewoorden uit de LOWAN-schooltaalwoordenlijst (bang, blij, boos,
+// verdrietig, moe, ziek, pijn). Traumasensitief: zeggen hoe je je voelt mag altijd.
+// Vertalingen komen uit nieuwkomersSteun.js (vulSteun).
+const vg = (q, options, hint, extra = {}) => ({ q, options, answer: 0, wrongHints: options.map((_, i) => (i === 0 ? null : hint)), ...extra });
+const deel4 = [
+  vg("Je hoofd doet zeer. Wat zeg je tegen de juf?", ["Ik heb pijn.", "Ik ben blij.", "Ik heb honger.", "Ik ben klaar."], "Zeer doen = pijn. Zeg dat tegen de juf.", { uitlegPad: {
+    stappen: [
+      { titel: "Het mag altijd", tekst: "Zeggen hoe je je **voelt** mag altijd. De juf of meester wil het weten en helpt je." },
+      { titel: "Zo zeg je het", tekst: "**Ik heb pijn.** **Ik voel me niet goed.** **Ik ben bang.** **Ik ben moe.**" },
+      { titel: "Wijs het aan", tekst: "Weet je het woord niet? **Wijs** aan waar het zeer doet. Of tik op de zin voor jouw taal." },
+    ],
+    woorden: [{ woord: "pijn", uitleg: "Het doet zeer." }, { woord: "bang", uitleg: "Je bent ergens van geschrokken of je vindt iets eng." }, { woord: "verdrietig", uitleg: "Je bent niet blij; misschien moet je huilen." }],
+    theorie: "Ik ben + gevoel. Ik heb + pijn of honger.",
+    voorbeelden: [{ type: "stap", tekst: "Ik ben blij." }, { type: "stap", tekst: "Ik heb pijn in mijn buik." }],
+    basiskennis: [{ onderwerp: "Truc", uitleg: "Ik ben bang, blij, boos, moe. Ik heb pijn, honger." }],
+    niveaus: { basis: "Zeg: Ik heb pijn.", simpeler: "Zeer = pijn.", nogSimpeler: "Ik heb pijn." },
+  } }),
+  vg("Je bent ziek. Wat zeg je tegen de juf?", ["Ik voel me niet goed.", "Ik ben blij.", "Mag ik meedoen?", "Tot morgen!"], "Ziek zijn = je voelt je niet goed."),
+  vg("Een hond blaft heel hard. Je schrikt. Hoe voel je je?", ["Ik ben bang.", "Ik ben blij.", "Ik heb honger.", "Ik ben klaar."], "Schrikken van iets engs = bang."),
+  vg("Iemand pakt steeds je bal af. Hoe voel je je?", ["Ik ben boos.", "Ik ben blij.", "Ik ben moe.", "Ik heb honger."], "Iemand doet iets wat niet mag. Dan ben je niet blij, maar…"),
+  vg("Je hebt slecht geslapen. Hoe voel je je?", ["Ik ben moe.", "Ik ben boos.", "Ik heb pijn.", "Ik ben blij."], "Weinig slaap = je wilt graag slapen."),
+];
+
 const steps = [
   { title: "Vragen aan de juf of meester", explanation: "Op school mag je **altijd** iets vragen.\n\nBegin met **Mag ik…?** of **Kunt u…?**\n\nSteek je hand op. Wacht. Zeg de zin. Dat is genoeg.", checks: deel1 },
   { title: "Op school", explanation: "Op school zijn plekken en regels.\n\nDe **klas**: leren. De **gymzaal**: sport. Het **plein**: buiten spelen.\n\nDe **bel** zegt: nu begint iets, of nu is iets klaar.", checks: deel2 },
   { title: "Met andere kinderen", explanation: "Zo maak je vrienden.\n\n**Hoe heet je?** → **Ik heet …**\n**Mag ik meedoen?** → dan speel je mee.\n**Dank je wel** als iemand je helpt.\n\nEn: **nee** zeggen mag altijd.", checks: deel3 },
+  { title: "Hoe voel je je?", explanation: "Zeggen hoe je je **voelt** mag **altijd**.\n\n**Ik ben** blij · bang · boos · moe · verdrietig.\n**Ik heb** pijn · honger.\n**Ik voel me niet goed.**\n\nDe juf of meester wil het weten en helpt je.", checks: deel4 },
 ];
+vulSteun(steps);
 steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const inDeKlasNieuwkomers = {

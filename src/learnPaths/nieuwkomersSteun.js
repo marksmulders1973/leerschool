@@ -2001,6 +2001,954 @@ const NIEUWKOMERS_STEUN = {
   "ar": "زائد.",
   "uk": "Плюс.",
   "tr": "Artı."
+ },
+ "Hoe voel je je?": {
+  "en": "How do you feel?",
+  "ar": "كيف تشعر؟",
+  "uk": "Як ти почуваєшся?",
+  "tr": "Nasıl hissediyorsun?"
+ },
+ "Zeggen hoe je je **voelt** mag **altijd**.\n\n**Ik ben** blij · bang · boos · moe · verdrietig.\n**Ik heb** pijn · honger.\n**Ik voel me niet goed.**\n\nDe juf of meester wil het weten en helpt je.": {
+  "en": "Saying how you **voelt** (feel) is **altijd** (always) okay.\n\n**Ik ben** (I am) happy · scared · angry · tired · sad.\n**Ik heb** (I have) pain · hunger.\n**Ik voel me niet goed.** (I don't feel good.)\n\nThe teacher wants to know and helps you.",
+  "ar": "يمكنك **دائمًا** أن تقول كيف **تشعر**.\n\n**أنا** (Ik ben) سعيد (blij) · خائف (bang) · غاضب (boos) · متعب (moe) · حزين (verdrietig).\n**عندي** (Ik heb) ألم (pijn) · جوع (honger).\n**لا أشعر أنني بخير (Ik voel me niet goed).**\n\nالمعلمة أو المعلم يريد أن يعرف ويساعدك.",
+  "uk": "Казати, як ти себе **почуваєш**, можна **завжди**.\n\n**Я** (Ik ben) радий · наляканий · сердитий · втомлений · сумний.\n**У мене** (Ik heb) біль · голод.\n**Мені погано.** (Ik voel me niet goed.)\n\nВчителька або вчитель хоче це знати і допоможе тобі.",
+  "tr": "Nasıl **hissettiğini** söylemek **her zaman** serbest.\n\n**Ben** (Ik ben) mutluyum · korkuyorum · kızgınım · yorgunum · üzgünüm.\n**Benim** (Ik heb) ağrım var · karnım aç.\n**Kendimi iyi hissetmiyorum.** (Ik voel me niet goed.)\n\nÖğretmen bunu bilmek ister ve sana yardım eder."
+ },
+ "Je hoofd doet zeer. Wat zeg je tegen de juf?": {
+  "en": "Your head hurts. What do you say to the teacher?",
+  "ar": "رأسك يؤلمك. ماذا تقول للمعلمة؟",
+  "uk": "У тебе болить голова. Що ти скажеш учительці?",
+  "tr": "Başın ağrıyor. Öğretmene ne dersin?"
+ },
+ "Zeer doen = pijn. Zeg dat tegen de juf.": {
+  "en": "Hurts = pain. Tell that to the teacher.",
+  "ar": "يؤلم (zeer doen) = ألم (pijn). قل ذلك للمعلمة.",
+  "uk": "Боліти (zeer doen) = біль (pijn). Скажи це вчительці.",
+  "tr": "Acımak (zeer doen) = ağrı (pijn). Bunu öğretmene söyle."
+ },
+ "Het mag altijd": {
+  "en": "It's always okay",
+  "ar": "يمكنك ذلك دائمًا",
+  "uk": "Це можна завжди",
+  "tr": "Her zaman serbest"
+ },
+ "Zeggen hoe je je **voelt** mag altijd. De juf of meester wil het weten en helpt je.": {
+  "en": "Saying how you **voelt** (feel) is always okay. The teacher wants to know and helps you.",
+  "ar": "يمكنك دائمًا أن تقول كيف **تشعر**. المعلمة أو المعلم يريد أن يعرف ويساعدك.",
+  "uk": "Казати, як ти себе **почуваєш**, можна завжди. Вчителька або вчитель хоче це знати і допоможе тобі.",
+  "tr": "Nasıl **hissettiğini** söylemek her zaman serbest. Öğretmen bunu bilmek ister ve sana yardım eder."
+ },
+ "Zo zeg je het": {
+  "en": "This is how you say it",
+  "ar": "هكذا تقولها",
+  "uk": "Так це кажуть",
+  "tr": "Böyle söylersin"
+ },
+ "**Ik heb pijn.** **Ik voel me niet goed.** **Ik ben bang.** **Ik ben moe.**": {
+  "en": "**Ik heb pijn.** (I have pain.) **Ik voel me niet goed.** (I don't feel good.) **Ik ben bang.** (I am scared.) **Ik ben moe.** (I am tired.)",
+  "ar": "**عندي ألم (Ik heb pijn).** **لا أشعر أنني بخير (Ik voel me niet goed).** **أنا خائف (Ik ben bang).** **أنا متعب (Ik ben moe).**",
+  "uk": "**У мене болить.** (Ik heb pijn.) **Мені погано.** (Ik voel me niet goed.) **Мені страшно.** (Ik ben bang.) **Я втомився.** (Ik ben moe.)",
+  "tr": "**Ağrım var.** (Ik heb pijn.) **Kendimi iyi hissetmiyorum.** (Ik voel me niet goed.) **Korkuyorum.** (Ik ben bang.) **Yorgunum.** (Ik ben moe.)"
+ },
+ "Wijs het aan": {
+  "en": "Point at it",
+  "ar": "أشِر إليه",
+  "uk": "Покажи пальцем",
+  "tr": "Göster"
+ },
+ "Weet je het woord niet? **Wijs** aan waar het zeer doet. Of tik op de zin voor jouw taal.": {
+  "en": "Don't know the word? **Wijs** (Point) at where it hurts. Or tap the sentence for your language.",
+  "ar": "لا تعرف الكلمة؟ **أشِر** إلى المكان الذي يؤلمك. أو اضغط على الجملة لترى لغتك.",
+  "uk": "Не знаєш слова? **Покажи**, де болить. Або натисни на речення, щоб почути свою мову.",
+  "tr": "Kelimeyi bilmiyor musun? Nerenin acıdığını **göster**. Ya da kendi dilin için cümleye dokun."
+ },
+ "pijn": {
+  "en": "pain",
+  "ar": "ألم",
+  "uk": "біль",
+  "tr": "ağrı"
+ },
+ "Het doet zeer.": {
+  "en": "It hurts.",
+  "ar": "إنه يؤلم.",
+  "uk": "Болить.",
+  "tr": "Acıyor."
+ },
+ "bang": {
+  "en": "scared",
+  "ar": "خائف",
+  "uk": "наляканий, страшно",
+  "tr": "korkmuş"
+ },
+ "Je bent ergens van geschrokken of je vindt iets eng.": {
+  "en": "You got scared of something, or you think something is scary.",
+  "ar": "شيء ما أفزعك، أو تجد شيئًا مخيفًا.",
+  "uk": "Ти чогось злякався, або щось тобі страшне.",
+  "tr": "Bir şeyden irkildin ya da bir şeyi korkutucu buluyorsun."
+ },
+ "verdrietig": {
+  "en": "sad",
+  "ar": "حزين",
+  "uk": "сумний",
+  "tr": "üzgün"
+ },
+ "Je bent niet blij; misschien moet je huilen.": {
+  "en": "You are not happy; maybe you want to cry.",
+  "ar": "لست سعيدًا؛ ربما تريد أن تبكي.",
+  "uk": "Ти не радий; можливо, тобі хочеться плакати.",
+  "tr": "Mutlu değilsin; belki ağlaman geliyor."
+ },
+ "Ik ben + gevoel. Ik heb + pijn of honger.": {
+  "en": "I am + feeling. I have + pain or hunger.",
+  "ar": "أنا (Ik ben) + شعور. عندي (Ik heb) + ألم أو جوع.",
+  "uk": "Ik ben (я) + почуття. Ik heb (у мене) + біль або голод.",
+  "tr": "Ik ben (ben …im) + duygu. Ik heb (benim … var) + ağrı ya da açlık."
+ },
+ "Ik ben blij.": {
+  "en": "I am happy.",
+  "ar": "أنا سعيد.",
+  "uk": "Я радий.",
+  "tr": "Mutluyum. (Ik ben blij.)"
+ },
+ "Ik heb pijn in mijn buik.": {
+  "en": "I have pain in my tummy.",
+  "ar": "عندي ألم في بطني.",
+  "uk": "У мене болить живіт.",
+  "tr": "Karnım ağrıyor. (Ik heb pijn in mijn buik.)"
+ },
+ "Ik ben bang, blij, boos, moe. Ik heb pijn, honger.": {
+  "en": "I am scared, happy, angry, tired. I have pain, hunger.",
+  "ar": "أنا (Ik ben) خائف، سعيد، غاضب، متعب. عندي (Ik heb) ألم، جوع.",
+  "uk": "Ik ben (я): наляканий, радий, сердитий, втомлений. Ik heb (у мене): біль, голод.",
+  "tr": "Korkuyorum, mutluyum, kızgınım, yorgunum. (Ik ben bang, blij, boos, moe.) Ağrım var, karnım aç. (Ik heb pijn, honger.)"
+ },
+ "Zeg: Ik heb pijn.": {
+  "en": "Say: Ik heb pijn (I have pain).",
+  "ar": "قل: عندي ألم (Ik heb pijn).",
+  "uk": "Скажи: У мене болить. (Ik heb pijn.)",
+  "tr": "Söyle: Ağrım var. (Ik heb pijn.)"
+ },
+ "Zeer = pijn.": {
+  "en": "Hurts = pain.",
+  "ar": "يؤلم (zeer) = ألم (pijn).",
+  "uk": "Zeer (боляче) = pijn (біль).",
+  "tr": "Acı (zeer) = ağrı (pijn)."
+ },
+ "Ik heb pijn.": {
+  "en": "I have pain.",
+  "ar": "عندي ألم.",
+  "uk": "У мене болить.",
+  "tr": "Ağrım var. (Ik heb pijn.)"
+ },
+ "Ik heb honger.": {
+  "en": "I have hunger.",
+  "ar": "أنا جائع.",
+  "uk": "Я голодний.",
+  "tr": "Karnım aç. (Ik heb honger.)"
+ },
+ "Ik ben klaar.": {
+  "en": "I am done.",
+  "ar": "انتهيت.",
+  "uk": "Я закінчив.",
+  "tr": "Bitirdim. (Ik ben klaar.)"
+ },
+ "Je bent ziek. Wat zeg je tegen de juf?": {
+  "en": "You are sick. What do you say to the teacher?",
+  "ar": "أنت مريض. ماذا تقول للمعلمة؟",
+  "uk": "Ти хворий. Що ти скажеш учительці?",
+  "tr": "Hastasın. Öğretmene ne dersin?"
+ },
+ "Ziek zijn = je voelt je niet goed.": {
+  "en": "Being sick = you don't feel good.",
+  "ar": "مريض (ziek zijn) = لا تشعر أنك بخير.",
+  "uk": "Бути хворим (ziek zijn) = тобі погано.",
+  "tr": "Hasta olmak (ziek zijn) = kendini iyi hissetmemek."
+ },
+ "Ik voel me niet goed.": {
+  "en": "I don't feel good.",
+  "ar": "لا أشعر أنني بخير.",
+  "uk": "Мені погано.",
+  "tr": "Kendimi iyi hissetmiyorum. (Ik voel me niet goed.)"
+ },
+ "Mag ik meedoen?": {
+  "en": "Can I join in?",
+  "ar": "هل يمكنني أن ألعب معكم؟",
+  "uk": "Можна мені з вами?",
+  "tr": "Ben de oynayabilir miyim? (Mag ik meedoen?)"
+ },
+ "Tot morgen!": {
+  "en": "See you tomorrow!",
+  "ar": "إلى اللقاء غدًا!",
+  "uk": "До завтра!",
+  "tr": "Yarın görüşürüz! (Tot morgen!)"
+ },
+ "Een hond blaft heel hard. Je schrikt. Hoe voel je je?": {
+  "en": "A dog barks very loud. You get scared. How do you feel?",
+  "ar": "كلب ينبح بصوت عالٍ جدًا. أنت تفزع. كيف تشعر؟",
+  "uk": "Собака дуже голосно гавкає. Ти лякаєшся. Як ти почуваєшся?",
+  "tr": "Bir köpek çok yüksek sesle havlıyor. İrkiliyorsun. Nasıl hissediyorsun?"
+ },
+ "Schrikken van iets engs = bang.": {
+  "en": "Getting scared of something scary = scared.",
+  "ar": "الفزع من شيء مخيف = خائف (bang).",
+  "uk": "Злякатися чогось страшного = страшно (bang).",
+  "tr": "Korkutucu bir şeyden irkilmek = korkmuş (bang)."
+ },
+ "Ik ben bang.": {
+  "en": "I am scared.",
+  "ar": "أنا خائف.",
+  "uk": "Мені страшно.",
+  "tr": "Korkuyorum. (Ik ben bang.)"
+ },
+ "Iemand pakt steeds je bal af. Hoe voel je je?": {
+  "en": "Someone keeps taking your ball. How do you feel?",
+  "ar": "شخص يأخذ كرتك كل مرة. كيف تشعر؟",
+  "uk": "Хтось весь час забирає в тебе м'яч. Як ти почуваєшся?",
+  "tr": "Biri sürekli topunu alıyor. Nasıl hissediyorsun?"
+ },
+ "Iemand doet iets wat niet mag. Dan ben je niet blij, maar…": {
+  "en": "Someone does something that's not allowed. Then you are not happy, but…",
+  "ar": "شخص يفعل شيئًا غير مسموح. عندها لست سعيدًا، بل…",
+  "uk": "Хтось робить те, що не можна. Тоді ти не радий, а…",
+  "tr": "Biri yasak bir şey yapıyor. O zaman mutlu değilsin, ama…"
+ },
+ "Ik ben boos.": {
+  "en": "I am angry.",
+  "ar": "أنا غاضب.",
+  "uk": "Я сердитий.",
+  "tr": "Kızgınım. (Ik ben boos.)"
+ },
+ "Ik ben moe.": {
+  "en": "I am tired.",
+  "ar": "أنا متعب.",
+  "uk": "Я втомився.",
+  "tr": "Yorgunum. (Ik ben moe.)"
+ },
+ "Je hebt slecht geslapen. Hoe voel je je?": {
+  "en": "You slept badly. How do you feel?",
+  "ar": "نمت نومًا سيئًا. كيف تشعر؟",
+  "uk": "Ти погано спав. Як ти почуваєшся?",
+  "tr": "Kötü uyudun. Nasıl hissediyorsun?"
+ },
+ "Weinig slaap = je wilt graag slapen.": {
+  "en": "Little sleep = you really want to sleep.",
+  "ar": "نوم قليل = تريد أن تنام.",
+  "uk": "Мало сну = тобі дуже хочеться спати.",
+  "tr": "Az uyku = uyumak istiyorsun."
+ },
+ "Doe-woorden in de klas": {
+  "en": "Action words in class",
+  "ar": "كلمات الفعل في الصف",
+  "uk": "Слова-дії в класі",
+  "tr": "Sınıfta eylem kelimeleri"
+ },
+ "De juf of meester zegt vaak wat je moet **doen**.\n\n**Schrijf**, **knip**, **luister**, **ruim op**, **kleur**.\n\nDoe het woord meteen na: pak een pen als je **schrijven** hoort. Zo onthoud je het.": {
+  "en": "The teacher often says what you need to **doen** (do).\n\n**Schrijf** (Write), **knip** (Cut), **luister** (Listen), **ruim op** (Tidy up), **kleur** (Colour).\n\nDo the word right away: pick up a pen when you hear **schrijven** (write). That way you remember it.",
+  "ar": "المعلمة أو المعلم يقول لك كثيرًا ماذا **تفعل**.\n\n**اكتب** (Schrijf)، **قُصّ** (knip)، **استمع** (luister)، **رتّب** (ruim op)، **لوّن** (kleur).\n\nقلّد الكلمة فورًا: خذ قلمًا عندما تسمع **يكتب** (schrijven). هكذا تتذكرها.",
+  "uk": "Вчителька або вчитель часто каже, що тобі треба **робити**.\n\n**Пиши** (schrijf), **виріж** (knip), **слухай** (luister), **прибери** (ruim op), **розфарбуй** (kleur).\n\nОдразу зроби цю дію: візьми ручку, коли чуєш **писати** (schrijven). Так ти це запам'ятаєш.",
+  "tr": "Öğretmen sık sık ne **yapman** gerektiğini söyler.\n\n**Yaz** (schrijf), **kes** (knip), **dinle** (luister), **topla** (ruim op), **boya** (kleur).\n\nKelimeyi hemen yap: **yazmak** (schrijven) kelimesini duyunca bir kalem al. Böyle aklında kalır."
+ },
+ "Doe-woorden": {
+  "en": "Action words",
+  "ar": "كلمات الفعل",
+  "uk": "Слова-дії",
+  "tr": "Eylem kelimeleri"
+ },
+ "Een **doe-woord** zegt wat je **doet**: schrijven, knippen, luisteren.": {
+  "en": "A **doe-woord** (action word) says what you **doet** (do): write, cut, listen.",
+  "ar": "**كلمة الفعل** (doe-woord) تقول ماذا **تفعل**: يكتب (schrijven)، يقصّ (knippen)، يستمع (luisteren).",
+  "uk": "**Слово-дія** (doe-woord) каже, що ти **робиш**: писати, вирізати, слухати.",
+  "tr": "Bir **eylem kelimesi** (doe-woord) ne **yaptığını** söyler: yazmak (schrijven), kesmek (knippen), dinlemek (luisteren)."
+ },
+ "Doe het na": {
+  "en": "Do it too",
+  "ar": "قلّده",
+  "uk": "Зроби так само",
+  "tr": "Sen de yap"
+ },
+ "Hoor je **schrijven**? Pak je pen. Hoor je **luisteren**? Wees stil en kijk naar de juf.": {
+  "en": "Do you hear **schrijven** (write)? Pick up your pen. Do you hear **luisteren** (listen)? Be quiet and look at the teacher.",
+  "ar": "هل تسمع **يكتب** (schrijven)؟ خذ قلمك. هل تسمع **يستمع** (luisteren)؟ اسكت وانظر إلى المعلمة.",
+  "uk": "Чуєш **писати** (schrijven)? Візьми ручку. Чуєш **слухати** (luisteren)? Будь тихо і дивись на вчительку.",
+  "tr": "**Yazmak** (schrijven) mı duydun? Kalemini al. **Dinlemek** (luisteren) mi duydun? Sessiz ol ve öğretmene bak."
+ },
+ "In de klas": {
+  "en": "In class",
+  "ar": "في الصف",
+  "uk": "У класі",
+  "tr": "Sınıfta"
+ },
+ "De juf zegt vaak: **Schrijf** je naam. **Knip** het uit. **Ruim** je tafel **op**.": {
+  "en": "The teacher often says: **Schrijf** (Write) your name. **Knip** (Cut) it out. **Ruim** your table **op** (tidy up).",
+  "ar": "المعلمة تقول كثيرًا: **اكتب** اسمك (Schrijf je naam). **قُصّه** (Knip het uit). **رتّب** طاولتك (**Ruim** je tafel **op**).",
+  "uk": "Вчителька часто каже: **Напиши** (schrijf) своє ім'я. **Виріж** (knip) це. **Прибери** (ruim op) свою парту.",
+  "tr": "Öğretmen sık sık der: Adını **yaz** (schrijf). Onu **kes** (knip). **Masanı** **topla** (ruim op)."
+ },
+ "schrijven": {
+  "en": "to write",
+  "ar": "يكتب",
+  "uk": "писати",
+  "tr": "yazmak"
+ },
+ "Letters maken met een pen of potlood.": {
+  "en": "Making letters with a pen or pencil.",
+  "ar": "رسم الحروف بقلم حبر أو قلم رصاص.",
+  "uk": "Робити букви ручкою або олівцем.",
+  "tr": "Kalemle ya da kurşun kalemle harf yapmak."
+ },
+ "opruimen": {
+  "en": "to tidy up",
+  "ar": "يرتّب",
+  "uk": "прибирати",
+  "tr": "toplamak, toparlamak"
+ },
+ "Alles terugleggen op zijn plek.": {
+  "en": "Putting everything back in its place.",
+  "ar": "إرجاع كل شيء إلى مكانه.",
+  "uk": "Класти все назад на своє місце.",
+  "tr": "Her şeyi yerine geri koymak."
+ },
+ "Doe-woord = wat je doet.": {
+  "en": "Action word = what you do.",
+  "ar": "كلمة الفعل (doe-woord) = ما تفعله.",
+  "uk": "Слово-дія (doe-woord) = те, що ти робиш.",
+  "tr": "Eylem kelimesi (doe-woord) = ne yaptığın."
+ },
+ "Schrijf je naam.": {
+  "en": "Write your name.",
+  "ar": "اكتب اسمك.",
+  "uk": "Напиши своє ім'я.",
+  "tr": "Adını yaz. (Schrijf je naam.)"
+ },
+ "Knip het uit.": {
+  "en": "Cut it out.",
+  "ar": "قُصّه.",
+  "uk": "Виріж це.",
+  "tr": "Onu kes. (Knip het uit.)"
+ },
+ "Doe het woord meteen na met je handen.": {
+  "en": "Do the word right away with your hands.",
+  "ar": "قلّد الكلمة فورًا بيديك.",
+  "uk": "Одразу покажи це слово руками.",
+  "tr": "Kelimeyi hemen ellerinle yap."
+ },
+ "Letters maken met een pen = schrijven.": {
+  "en": "Making letters with a pen = to write.",
+  "ar": "رسم الحروف بالقلم = يكتب (schrijven).",
+  "uk": "Робити букви ручкою = писати (schrijven).",
+  "tr": "Kalemle harf yapmak = yazmak (schrijven)."
+ },
+ "Rekentaal — de woorden achter de sommen (nieuwkomers)": {
+  "en": "Math words — the words behind the sums (newcomers)",
+  "ar": "لغة الحساب — الكلمات وراء المسائل (للقادمين الجدد)",
+  "uk": "Мова математики — слова в прикладах (для новеньких)",
+  "tr": "Matematik dili — işlemlerin arkasındaki kelimeler (yeni gelenler)"
+ },
+ "Meer, minder, samen, weg, over, keer en verdelen: de woorden die in elke rekenles terugkomen. Met steun in je eigen taal. ~10 min.": {
+  "en": "More, less, together, away, left over, times, and share: the words that come back in every math lesson. With help in your own language. ~10 min.",
+  "ar": "أكثر (meer)، أقل (minder)، معًا (samen)، ذهب (weg)، باقٍ (over)، ضرب (keer) وتقسيم (verdelen): كلمات تأتي في كل درس حساب. مع مساعدة بلغتك. ~10 دقائق.",
+  "uk": "Більше, менше, разом, геть, залишилось, рази і ділити: слова, які є на кожному уроці математики. З допомогою твоєю мовою. ~10 хв.",
+  "tr": "Daha çok (meer), daha az (minder), toplam (samen), gitti (weg), kalan (over), kere (keer) ve paylaştırmak (verdelen): her matematik dersinde geçen kelimeler. Kendi dilinde yardımla. ~10 dk."
+ },
+ "Meer, minder, evenveel": {
+  "en": "More, less, the same",
+  "ar": "أكثر، أقل، متساوٍ",
+  "uk": "Більше, менше, порівну",
+  "tr": "Daha çok, daha az, eşit (meer, minder, evenveel)"
+ },
+ "Samen, weg, over": {
+  "en": "Together, away, left over",
+  "ar": "معًا، ذهب، باقٍ",
+  "uk": "Разом, геть, залишилось",
+  "tr": "Toplam, gitti, kalan (samen, weg, over)"
+ },
+ "Keer en verdelen": {
+  "en": "Times and share",
+  "ar": "الضرب والتقسيم",
+  "uk": "Рази і ділити",
+  "tr": "Kere ve paylaştırmak (keer, verdelen)"
+ },
+ "Welke groep is groter?\n\n**Meer**: een groter aantal. **Minder**: een kleiner aantal. **Evenveel**: hetzelfde aantal.\n\n**De meeste** = het allergrootste. **De minste** = het allerkleinste.": {
+  "en": "Which group is bigger?\n\n**Meer** (More): a bigger number. **Minder** (Less): a smaller number. **Evenveel** (The same): the same number.\n\n**De meeste** (The most) = the biggest of all. **De minste** (The least) = the smallest of all.",
+  "ar": "أي مجموعة أكبر؟\n\n**أكثر** (Meer): عدد أكبر. **أقل** (Minder): عدد أصغر. **متساوٍ** (Evenveel): نفس العدد.\n\n**الأكثر** (De meeste) = الأكبر من الكل. **الأقل** (De minste) = الأصغر من الكل.",
+  "uk": "Яка група більша?\n\n**Більше** (meer): більша кількість. **Менше** (minder): менша кількість. **Порівну** (evenveel): однакова кількість.\n\n**Найбільше** (de meeste) = більше за всіх. **Найменше** (de minste) = менше за всіх.",
+  "tr": "Hangi grup daha büyük?\n\n**Daha çok** (meer): daha büyük bir sayı. **Daha az** (minder): daha küçük bir sayı. **Eşit** (evenveel): aynı sayı.\n\n**En çok** (de meeste) = en büyüğü. **En az** (de minste) = en küçüğü."
+ },
+ "Ali heeft 5 knikkers. Sam heeft 3 knikkers. Wie heeft meer?": {
+  "en": "Ali has 5 marbles. Sam has 3 marbles. Who has more?",
+  "ar": "علي عنده 5 كرات زجاجية. سام عنده 3 كرات زجاجية. من عنده أكثر؟",
+  "uk": "В Алі 5 кульок. У Сема 3 кульки. У кого більше?",
+  "tr": "Ali'nin 5 bilyesi var. Sam'in 3 bilyesi var. Kimde daha çok var?"
+ },
+ "Meer = het grootste getal. Welk getal is groter: 5 of 3?": {
+  "en": "More = the biggest number. Which number is bigger: 5 or 3?",
+  "ar": "أكثر (meer) = العدد الأكبر. أي عدد أكبر: 5 أو 3؟",
+  "uk": "Більше = більше число. Яке число більше: 5 чи 3?",
+  "tr": "Daha çok (meer) = en büyük sayı. Hangi sayı daha büyük: 5 mi 3 mü?"
+ },
+ "Meer": {
+  "en": "More",
+  "ar": "أكثر",
+  "uk": "Більше",
+  "tr": "Daha çok"
+ },
+ "**Meer** betekent: een groter aantal. 5 is **meer** dan 3.": {
+  "en": "**Meer** (More) means: a bigger number. 5 is **meer** (more) than 3.",
+  "ar": "**أكثر** (Meer) يعني: عدد أكبر. 5 **أكثر** من 3.",
+  "uk": "**Більше** (meer) означає: більша кількість. 5 — це **більше**, ніж 3.",
+  "tr": "**Daha çok** (meer) demek: daha büyük bir sayı. 5, 3'ten **daha çok**."
+ },
+ "Minder": {
+  "en": "Less",
+  "ar": "أقل",
+  "uk": "Менше",
+  "tr": "Daha az"
+ },
+ "**Minder** betekent: een kleiner aantal. 3 is **minder** dan 5.": {
+  "en": "**Minder** (Less) means: a smaller number. 3 is **minder** (less) than 5.",
+  "ar": "**أقل** (Minder) يعني: عدد أصغر. 3 **أقل** من 5.",
+  "uk": "**Менше** (minder) означає: менша кількість. 3 — це **менше**, ніж 5.",
+  "tr": "**Daha az** (minder) demek: daha küçük bir sayı. 3, 5'ten **daha az**."
+ },
+ "Evenveel": {
+  "en": "The same",
+  "ar": "متساوٍ",
+  "uk": "Порівну",
+  "tr": "Eşit"
+ },
+ "**Evenveel** betekent: hetzelfde aantal. 4 en 4 is **evenveel**.": {
+  "en": "**Evenveel** (The same) means: the same number. 4 and 4 is **evenveel** (the same).",
+  "ar": "**متساوٍ** (Evenveel) يعني: نفس العدد. 4 و 4 **متساويان**.",
+  "uk": "**Порівну** (evenveel) означає: однакова кількість. 4 і 4 — це **порівну**.",
+  "tr": "**Eşit** (evenveel) demek: aynı sayı. 4 ve 4 **eşit**."
+ },
+ "meer": {
+  "en": "more",
+  "ar": "أكثر",
+  "uk": "більше",
+  "tr": "daha çok"
+ },
+ "Een groter aantal.": {
+  "en": "A bigger number.",
+  "ar": "عدد أكبر.",
+  "uk": "Більша кількість.",
+  "tr": "Daha büyük bir sayı."
+ },
+ "minder": {
+  "en": "less",
+  "ar": "أقل",
+  "uk": "менше",
+  "tr": "daha az"
+ },
+ "Een kleiner aantal.": {
+  "en": "A smaller number.",
+  "ar": "عدد أصغر.",
+  "uk": "Менша кількість.",
+  "tr": "Daha küçük bir sayı."
+ },
+ "evenveel": {
+  "en": "the same amount",
+  "ar": "متساوٍ",
+  "uk": "порівну",
+  "tr": "eşit"
+ },
+ "Hetzelfde aantal.": {
+  "en": "The same number.",
+  "ar": "نفس العدد.",
+  "uk": "Однакова кількість.",
+  "tr": "Aynı sayı."
+ },
+ "Meer = groter getal. Minder = kleiner getal. Evenveel = hetzelfde getal.": {
+  "en": "More = bigger number. Less = smaller number. The same = the same number.",
+  "ar": "أكثر (meer) = عدد أكبر. أقل (minder) = عدد أصغر. متساوٍ (evenveel) = نفس العدد.",
+  "uk": "Більше (meer) = більше число. Менше (minder) = менше число. Порівну (evenveel) = однакове число.",
+  "tr": "Daha çok (meer) = daha büyük sayı. Daha az (minder) = daha küçük sayı. Eşit (evenveel) = aynı sayı."
+ },
+ "7 is meer dan 2.": {
+  "en": "7 is more than 2.",
+  "ar": "7 أكثر من 2.",
+  "uk": "7 — це більше, ніж 2.",
+  "tr": "7, 2'den daha çok."
+ },
+ "1 is minder dan 6.": {
+  "en": "1 is less than 6.",
+  "ar": "1 أقل من 6.",
+  "uk": "1 — це менше, ніж 6.",
+  "tr": "1, 6'dan daha az."
+ },
+ "Tel allebei. Welk getal komt later bij het tellen? Dat is meer.": {
+  "en": "Count both. Which number comes later when counting? That is more.",
+  "ar": "عُدّ الاثنين. أي عدد يأتي بعد الآخر عند العدّ؟ هذا هو الأكثر (meer).",
+  "uk": "Порахуй обидва. Яке число йде далі, коли рахуєш? Це більше.",
+  "tr": "İkisini de say. Sayarken hangi sayı daha sonra gelir? O daha çok."
+ },
+ "Kijk welk getal groter is.": {
+  "en": "Look at which number is bigger.",
+  "ar": "انظر أي عدد أكبر.",
+  "uk": "Подивись, яке число більше.",
+  "tr": "Hangi sayının daha büyük olduğuna bak."
+ },
+ "5 of 3: welk getal is groter?": {
+  "en": "5 or 3: which number is bigger?",
+  "ar": "5 أو 3: أي عدد أكبر؟",
+  "uk": "5 чи 3: яке число більше?",
+  "tr": "5 mi 3 mü: hangi sayı daha büyük?"
+ },
+ "5 is meer dan 3.": {
+  "en": "5 is more than 3.",
+  "ar": "5 أكثر من 3.",
+  "uk": "5 — це більше, ніж 3.",
+  "tr": "5, 3'ten daha çok."
+ },
+ "Ali": {
+  "en": "Ali",
+  "ar": "علي",
+  "uk": "Алі",
+  "tr": "Ali"
+ },
+ "Sam": {
+  "en": "Sam",
+  "ar": "سام",
+  "uk": "Сем",
+  "tr": "Sam"
+ },
+ "Ze hebben evenveel.": {
+  "en": "They have the same.",
+  "ar": "عندهما نفس العدد.",
+  "uk": "У них порівну.",
+  "tr": "İkisinde eşit var."
+ },
+ "Lina heeft 2 appels. Tom heeft 6 appels. Wie heeft minder?": {
+  "en": "Lina has 2 apples. Tom has 6 apples. Who has less?",
+  "ar": "لينا عندها 2 من التفاح. توم عنده 6 من التفاح. من عنده أقل؟",
+  "uk": "У Ліни 2 яблука. У Тома 6 яблук. У кого менше?",
+  "tr": "Lina'nın 2 elması var. Tom'un 6 elması var. Kimde daha az var?"
+ },
+ "Minder = het kleinste getal. Welk getal is kleiner: 2 of 6?": {
+  "en": "Less = the smallest number. Which number is smaller: 2 or 6?",
+  "ar": "أقل (minder) = العدد الأصغر. أي عدد أصغر: 2 أو 6؟",
+  "uk": "Менше = менше число. Яке число менше: 2 чи 6?",
+  "tr": "Daha az (minder) = en küçük sayı. Hangi sayı daha küçük: 2 mi 6 mı?"
+ },
+ "Lina": {
+  "en": "Lina",
+  "ar": "لينا",
+  "uk": "Ліна",
+  "tr": "Lina"
+ },
+ "Tom": {
+  "en": "Tom",
+  "ar": "توم",
+  "uk": "Том",
+  "tr": "Tom"
+ },
+ "Noor heeft 4 pennen. Adam heeft 4 pennen. Wat is waar?": {
+  "en": "Noor has 4 pens. Adam has 4 pens. What is true?",
+  "ar": "نور عندها 4 أقلام. آدم عنده 4 أقلام. ما الصحيح؟",
+  "uk": "У Нур 4 ручки. В Адама 4 ручки. Що правда?",
+  "tr": "Noor'un 4 kalemi var. Adam'ın 4 kalemi var. Hangisi doğru?"
+ },
+ "Kijk naar de twee getallen. Zijn ze hetzelfde?": {
+  "en": "Look at the two numbers. Are they the same?",
+  "ar": "انظر إلى العددين. هل هما نفس العدد؟",
+  "uk": "Подивись на два числа. Вони однакові?",
+  "tr": "İki sayıya bak. Aynılar mı?"
+ },
+ "Noor heeft meer.": {
+  "en": "Noor has more.",
+  "ar": "نور عندها أكثر.",
+  "uk": "У Нур більше.",
+  "tr": "Noor'da daha çok var."
+ },
+ "Adam heeft meer.": {
+  "en": "Adam has more.",
+  "ar": "آدم عنده أكثر.",
+  "uk": "В Адама більше.",
+  "tr": "Adam'da daha çok var."
+ },
+ "Wie heeft de meeste boeken? Eva 3, Omar 8, Mila 5.": {
+  "en": "Who has the most books? Eva 3, Omar 8, Mila 5.",
+  "ar": "من عنده أكثر الكتب؟ إيفا 3، عمر 8، ميلا 5.",
+  "uk": "У кого найбільше книжок? Єва 3, Омар 8, Міла 5.",
+  "tr": "En çok kitap kimde? Eva 3, Omar 8, Mila 5."
+ },
+ "De meeste = het allergrootste getal van de drie.": {
+  "en": "The most = the biggest number of the three.",
+  "ar": "الأكثر (de meeste) = أكبر عدد من الثلاثة.",
+  "uk": "Найбільше (de meeste) = найбільше число з трьох.",
+  "tr": "En çok (de meeste) = üçünün en büyük sayısı."
+ },
+ "Omar": {
+  "en": "Omar",
+  "ar": "عمر",
+  "uk": "Омар",
+  "tr": "Omar"
+ },
+ "Eva": {
+  "en": "Eva",
+  "ar": "إيفا",
+  "uk": "Єва",
+  "tr": "Eva"
+ },
+ "Mila": {
+  "en": "Mila",
+  "ar": "ميلا",
+  "uk": "Міла",
+  "tr": "Mila"
+ },
+ "Wie heeft de minste stickers? Jan 7, Sara 2, Yusuf 4.": {
+  "en": "Who has the fewest stickers? Jan 7, Sara 2, Yusuf 4.",
+  "ar": "من عنده أقل الملصقات؟ يان 7، سارة 2، يوسف 4.",
+  "uk": "У кого найменше наліпок? Ян 7, Сара 2, Юсуф 4.",
+  "tr": "En az çıkartma kimde? Jan 7, Sara 2, Yusuf 4."
+ },
+ "De minste = het allerkleinste getal van de drie.": {
+  "en": "The fewest = the smallest number of the three.",
+  "ar": "الأقل (de minste) = أصغر عدد من الثلاثة.",
+  "uk": "Найменше (de minste) = найменше число з трьох.",
+  "tr": "En az (de minste) = üçünün en küçük sayısı."
+ },
+ "Sara": {
+  "en": "Sara",
+  "ar": "سارة",
+  "uk": "Сара",
+  "tr": "Sara"
+ },
+ "Jan": {
+  "en": "Jan",
+  "ar": "يان",
+  "uk": "Ян",
+  "tr": "Jan"
+ },
+ "Yusuf": {
+  "en": "Yusuf",
+  "ar": "يوسف",
+  "uk": "Юсуф",
+  "tr": "Yusuf"
+ },
+ "Rekenwoorden zeggen welke som je maakt.\n\n**Samen** en **erbij** = plus (+).\n**Weg**, **eraf** en **over** = min (−).\n\nZoek eerst het rekenwoord. Dan weet je de som.": {
+  "en": "Math words tell you which sum to make.\n\n**Samen** (together) and **erbij** (added) = plus (+).\n**Weg** (away), **eraf** (taken off) and **over** (left) = minus (−).\n\nFirst find the math word. Then you know the sum.",
+  "ar": "كلمات الحساب تقول لك أي مسألة تحل.\n\n**معًا** (Samen) و**زيادة** (erbij) = جمع (+).\n**ذهب** (Weg) و**نقص** (eraf) و**باقٍ** (over) = طرح (−).\n\nابحث أولًا عن كلمة الحساب. عندها تعرف المسألة.",
+  "uk": "Слова з математики кажуть, який приклад ти робиш.\n\n**Разом** (samen) і **ще** (erbij) = плюс (+).\n**Геть** (weg), **забрати** (eraf) і **залишилось** (over) = мінус (−).\n\nСпочатку знайди це слово. Тоді ти знаєш приклад.",
+  "tr": "Matematik kelimeleri hangi işlemi yapacağını söyler.\n\n**Toplam** (samen) ve **eklenince** (erbij) = artı (+).\n**Gitti** (weg), **çıkınca** (eraf) ve **kalan** (over) = eksi (−).\n\nÖnce matematik kelimesini bul. Sonra işlemi bilirsin."
+ },
+ "Je hebt 3 ballen. Je krijgt er 2 bij. Hoeveel ballen heb je samen?": {
+  "en": "You have 3 balls. You get 2 more. How many balls do you have together?",
+  "ar": "عندك 3 كرات. تأخذ 2 زيادة. كم كرة عندك معًا؟",
+  "uk": "У тебе 3 м'ячі. Тобі дають ще 2. Скільки м'ячів у тебе разом?",
+  "tr": "3 topun var. 2 tane daha alıyorsun. Toplam kaç topun var?"
+ },
+ "Erbij en samen = plus. 3 + 2.": {
+  "en": "Added and together = plus. 3 + 2.",
+  "ar": "زيادة (erbij) ومعًا (samen) = جمع. 3 + 2.",
+  "uk": "Ще (erbij) і разом (samen) = плюс. 3 + 2.",
+  "tr": "Eklenince (erbij) ve toplam (samen) = artı. 3 + 2."
+ },
+ "Samen": {
+  "en": "Together",
+  "ar": "معًا",
+  "uk": "Разом",
+  "tr": "Toplam"
+ },
+ "**Samen** en **erbij** betekenen: **plus** (+). Alles bij elkaar.": {
+  "en": "**Samen** (together) and **erbij** (added) mean: **plus** (+). Everything combined.",
+  "ar": "**معًا** (Samen) و**زيادة** (erbij) تعنيان: **جمع** (plus) (+). كل شيء مع بعضه.",
+  "uk": "**Разом** (samen) і **ще** (erbij) означають: **плюс** (+). Усе докупи.",
+  "tr": "**Toplam** (samen) ve **eklenince** (erbij) demek: **artı** (plus) (+). Hepsi bir arada."
+ },
+ "Weg": {
+  "en": "Away",
+  "ar": "ذهب",
+  "uk": "Геть",
+  "tr": "Gitti"
+ },
+ "**Weg**, **eraf** en **opeten** betekenen: **min** (−). Er gaat iets af.": {
+  "en": "**Weg** (away), **eraf** (taken off) and **opeten** (eaten up) mean: **min** (minus) (−). Something goes away.",
+  "ar": "**ذهب** (Weg) و**نقص** (eraf) و**أكل** (opeten) تعني: **طرح** (min) (−). شيء ما ينقص.",
+  "uk": "**Геть** (weg), **забрати** (eraf) і **з'їсти** (opeten) означають: **мінус** (−). Щось забирають.",
+  "tr": "**Gitti** (weg), **çıkınca** (eraf) ve **yemek** (opeten) demek: **eksi** (min) (−). Bir şey eksilir."
+ },
+ "Over": {
+  "en": "Left",
+  "ar": "باقٍ",
+  "uk": "Залишилось",
+  "tr": "Kalan"
+ },
+ "**Over** betekent: wat je nog hebt, als er iets weg is. Dat is ook **min**.": {
+  "en": "**Over** (Left) means: what you still have, when something is gone. That is also **min** (minus).",
+  "ar": "**باقٍ** (Over) يعني: ما بقي عندك بعد أن ذهب شيء. هذا أيضًا **طرح** (min).",
+  "uk": "**Залишилось** (over) означає: що в тебе ще є, коли щось забрали. Це теж **мінус**.",
+  "tr": "**Kalan** (over) demek: bir şey gidince hâlâ elinde olan. Bu da **eksi** (min)."
+ },
+ "Het is er niet meer. Min.": {
+  "en": "It is not there anymore. Minus.",
+  "ar": "لم يعد موجودًا. طرح.",
+  "uk": "Цього вже немає. Мінус.",
+  "tr": "Artık yok. Eksi."
+ },
+ "Samen, erbij = plus. Weg, eraf, over = min.": {
+  "en": "Together, added = plus. Away, taken off, left = minus.",
+  "ar": "معًا (samen)، زيادة (erbij) = جمع. ذهب (weg)، نقص (eraf)، باقٍ (over) = طرح.",
+  "uk": "Разом (samen), ще (erbij) = плюс. Геть (weg), забрати (eraf), залишилось (over) = мінус.",
+  "tr": "Toplam (samen), eklenince (erbij) = artı. Gitti (weg), çıkınca (eraf), kalan (over) = eksi."
+ },
+ "3 en 2 samen: 3 + 2 = 5.": {
+  "en": "3 and 2 together: 3 + 2 = 5.",
+  "ar": "3 و 2 معًا: 3 + 2 = 5.",
+  "uk": "3 і 2 разом: 3 + 2 = 5.",
+  "tr": "3 ve 2 toplam: 3 + 2 = 5."
+ },
+ "6 appels, 2 weg: 6 − 2 = 4 over.": {
+  "en": "6 apples, 2 away: 6 − 2 = 4 left.",
+  "ar": "6 تفاحات، 2 ذهبت: 6 − 2 = 4 باقية.",
+  "uk": "6 яблук, 2 геть: 6 − 2 = 4 залишилось.",
+  "tr": "6 elma, 2 gitti: 6 − 2 = 4 kalan."
+ },
+ "Zoek het rekenwoord in de zin. Dat zegt: plus of min.": {
+  "en": "Find the math word in the sentence. That tells you: plus or minus.",
+  "ar": "ابحث عن كلمة الحساب في الجملة. هي تقول: جمع أو طرح.",
+  "uk": "Знайди слово з математики в реченні. Воно каже: плюс чи мінус.",
+  "tr": "Cümlede matematik kelimesini bul. O sana söyler: artı mı eksi mi."
+ },
+ "Je krijgt er 2 bij. Tel 2 verder vanaf 3.": {
+  "en": "You get 2 more. Count 2 further from 3.",
+  "ar": "تأخذ 2 زيادة. عُدّ 2 بعد 3.",
+  "uk": "Тобі дають ще 2. Рахуй далі на 2 від 3.",
+  "tr": "2 tane daha alıyorsun. 3'ten 2 ileri say."
+ },
+ "Je hebt 6 appels. Je eet er 2 op. Hoeveel appels heb je over?": {
+  "en": "You have 6 apples. You eat 2 of them. How many apples do you have left?",
+  "ar": "عندك 6 تفاحات. تأكل 2 منها. كم تفاحة بقيت عندك؟",
+  "uk": "У тебе 6 яблук. Ти з'їдаєш 2. Скільки яблук у тебе залишилось?",
+  "tr": "6 elman var. 2 tanesini yiyorsun. Kaç elman kaldı?"
+ },
+ "Opeten = weg = min. Over = wat je nog hebt. 6 − 2.": {
+  "en": "Eaten up = away = minus. Left = what you still have. 6 − 2.",
+  "ar": "أكل (opeten) = ذهب (weg) = طرح. باقٍ (over) = ما بقي عندك. 6 − 2.",
+  "uk": "З'їсти (opeten) = геть (weg) = мінус. Залишилось (over) = що в тебе ще є. 6 − 2.",
+  "tr": "Yemek (opeten) = gitti (weg) = eksi. Kalan (over) = hâlâ elinde olan. 6 − 2."
+ },
+ "Wat betekent het woord 'samen' bij een som?": {
+  "en": "What does the word 'together' mean in a sum?",
+  "ar": "ماذا تعني كلمة 'samen' (معًا) في المسألة؟",
+  "uk": "Що означає слово 'samen' (разом) у прикладі?",
+  "tr": "İşlemde 'samen' (toplam) kelimesi ne demek?"
+ },
+ "Samen = alles bij elkaar.": {
+  "en": "Together = everything combined.",
+  "ar": "معًا (samen) = كل شيء مع بعضه.",
+  "uk": "Разом (samen) = усе докупи.",
+  "tr": "Toplam (samen) = hepsi bir arada."
+ },
+ "plus (+)": {
+  "en": "plus (+)",
+  "ar": "جمع (+)",
+  "uk": "плюс (+)",
+  "tr": "artı (+)"
+ },
+ "min (−)": {
+  "en": "minus (−)",
+  "ar": "طرح (−)",
+  "uk": "мінус (−)",
+  "tr": "eksi (−)"
+ },
+ "keer (×)": {
+  "en": "times (×)",
+  "ar": "ضرب (×)",
+  "uk": "помножити (×)",
+  "tr": "kere (×)"
+ },
+ "Wat betekent het woord 'weg' bij een som?": {
+  "en": "What does the word 'away' mean in a sum?",
+  "ar": "ماذا تعني كلمة 'weg' (ذهب) في المسألة؟",
+  "uk": "Що означає слово 'weg' (геть) у прикладі?",
+  "tr": "İşlemde 'weg' (gitti) kelimesi ne demek?"
+ },
+ "Weg = er gaat iets af.": {
+  "en": "Away = something goes away.",
+  "ar": "ذهب (weg) = شيء ما ينقص.",
+  "uk": "Геть (weg) = щось забирають.",
+  "tr": "Gitti (weg) = bir şey eksilir."
+ },
+ "Er zitten 8 vogels in een boom. Er vliegen 3 vogels weg. Hoeveel vogels zijn er over?": {
+  "en": "There are 8 birds in a tree. 3 birds fly away. How many birds are left?",
+  "ar": "على الشجرة 8 عصافير. طارت 3 عصافير. كم عصفورًا بقي؟",
+  "uk": "На дереві сидять 8 пташок. 3 пташки відлітають. Скільки пташок залишилось?",
+  "tr": "Bir ağaçta 8 kuş var. 3 kuş uçup gidiyor. Kaç kuş kaldı?"
+ },
+ "Wegvliegen = weg = min. 8 − 3.": {
+  "en": "Flying away = away = minus. 8 − 3.",
+  "ar": "طار (wegvliegen) = ذهب (weg) = طرح. 8 − 3.",
+  "uk": "Відлітати (wegvliegen) = геть (weg) = мінус. 8 − 3.",
+  "tr": "Uçup gitmek (wegvliegen) = gitti (weg) = eksi. 8 − 3."
+ },
+ "**Keer** (×) = groepjes van hetzelfde. 3 keer 2 = 2 + 2 + 2.\n\n**Eerlijk verdelen** = iedereen krijgt evenveel.\n\n**De helft** = in twee gelijke stukken.": {
+  "en": "**Keer** (Times) (×) = groups of the same thing. 3 times 2 = 2 + 2 + 2.\n\n**Eerlijk verdelen** (Sharing fairly) = everyone gets the same.\n\n**De helft** (Half) = in two equal parts.",
+  "ar": "**ضرب** (Keer) (×) = مجموعات متشابهة. 3 مرات 2 = 2 + 2 + 2.\n\n**التقسيم بالعدل** (Eerlijk verdelen) = كل واحد يأخذ نفس العدد.\n\n**النصف** (De helft) = قطعتان متساويتان.",
+  "uk": "**Рази** (keer) (×) = однакові групи. 3 рази по 2 = 2 + 2 + 2.\n\n**Чесно поділити** (eerlijk verdelen) = кожен отримує порівну.\n\n**Половина** (de helft) = на дві однакові частини.",
+  "tr": "**Kere** (keer) (×) = aynı sayıda gruplar. 3 kere 2 = 2 + 2 + 2.\n\n**Eşit paylaştırmak** (eerlijk verdelen) = herkes eşit alır.\n\n**Yarım** (de helft) = iki eşit parçaya."
+ },
+ "3 groepjes van 2 kinderen. Hoeveel kinderen zijn het samen?": {
+  "en": "3 groups of 2 children. How many children is that together?",
+  "ar": "3 مجموعات من 2 أطفال. كم طفلًا معًا؟",
+  "uk": "3 групи по 2 дитини. Скільки всього дітей разом?",
+  "tr": "2 çocuklu 3 grup. Toplam kaç çocuk var?"
+ },
+ "3 groepjes van 2 = 2 + 2 + 2.": {
+  "en": "3 groups of 2 = 2 + 2 + 2.",
+  "ar": "3 مجموعات من 2 = 2 + 2 + 2.",
+  "uk": "3 групи по 2 = 2 + 2 + 2.",
+  "tr": "2'li 3 grup = 2 + 2 + 2."
+ },
+ "Groepjes": {
+  "en": "Groups",
+  "ar": "مجموعات",
+  "uk": "Групи",
+  "tr": "Gruplar"
+ },
+ "**3 groepjes van 2** = 2 + 2 + 2 = 6. Dat is ook **3 keer 2** (3 × 2).": {
+  "en": "**3 groepjes van 2** (3 groups of 2) = 2 + 2 + 2 = 6. That is also **3 keer 2** (3 times 2) (3 × 2).",
+  "ar": "**3 مجموعات من 2** = 2 + 2 + 2 = 6. هذا أيضًا **3 مرات 2** (3 × 2).",
+  "uk": "**3 групи по 2** = 2 + 2 + 2 = 6. Це теж **3 рази по 2** (3 × 2).",
+  "tr": "**2'li 3 grup** = 2 + 2 + 2 = 6. Bu da **3 kere 2** (3 keer 2) (3 × 2)."
+ },
+ "Verdelen": {
+  "en": "Sharing",
+  "ar": "التقسيم",
+  "uk": "Ділити",
+  "tr": "Paylaştırmak"
+ },
+ "**Eerlijk verdelen**: iedereen krijgt **evenveel**. 8 snoepjes voor 2 kinderen: ieder 4.": {
+  "en": "**Eerlijk verdelen** (Sharing fairly): everyone gets **evenveel** (the same). 8 candies for 2 children: each gets 4.",
+  "ar": "**التقسيم بالعدل** (Eerlijk verdelen): كل واحد يأخذ **نفس العدد** (evenveel). 8 حلويات لـ 2 أطفال: كل واحد 4.",
+  "uk": "**Чесно поділити** (eerlijk verdelen): кожен отримує **порівну**. 8 цукерок для 2 дітей: кожному 4.",
+  "tr": "**Eşit paylaştırmak** (eerlijk verdelen): herkes **eşit** (evenveel) alır. 2 çocuk için 8 şeker: her birine 4."
+ },
+ "De helft": {
+  "en": "Half",
+  "ar": "النصف",
+  "uk": "Половина",
+  "tr": "Yarım"
+ },
+ "**De helft** = in twee gelijke stukken. De helft van 10 is 5.": {
+  "en": "**De helft** (Half) = in two equal parts. Half of 10 is 5.",
+  "ar": "**النصف** (De helft) = قطعتان متساويتان. نصف 10 هو 5.",
+  "uk": "**Половина** (de helft) = на дві однакові частини. Половина від 10 — це 5.",
+  "tr": "**Yarım** (de helft) = iki eşit parçaya. 10'un yarısı 5."
+ },
+ "keer": {
+  "en": "times",
+  "ar": "ضرب",
+  "uk": "рази",
+  "tr": "kere"
+ },
+ "Steeds hetzelfde getal erbij. 3 keer 2 = 2 + 2 + 2.": {
+  "en": "Adding the same number each time. 3 times 2 = 2 + 2 + 2.",
+  "ar": "نزيد نفس العدد كل مرة. 3 مرات 2 = 2 + 2 + 2.",
+  "uk": "Щоразу додаєш те саме число. 3 рази по 2 = 2 + 2 + 2.",
+  "tr": "Hep aynı sayıyı eklemek. 3 kere 2 = 2 + 2 + 2."
+ },
+ "verdelen": {
+  "en": "to share out",
+  "ar": "يقسّم",
+  "uk": "ділити",
+  "tr": "paylaştırmak"
+ },
+ "Uitdelen, zodat iedereen evenveel krijgt.": {
+  "en": "Handing out, so everyone gets the same.",
+  "ar": "نوزّع، حتى يأخذ كل واحد نفس العدد.",
+  "uk": "Роздати так, щоб кожен отримав порівну.",
+  "tr": "Herkes eşit alsın diye dağıtmak."
+ },
+ "de helft": {
+  "en": "half",
+  "ar": "النصف",
+  "uk": "половина",
+  "tr": "yarım, yarısı"
+ },
+ "Een van de twee gelijke stukken.": {
+  "en": "One of the two equal parts.",
+  "ar": "واحدة من قطعتين متساويتين.",
+  "uk": "Одна з двох однакових частин.",
+  "tr": "İki eşit parçadan biri."
+ },
+ "Keer = groepjes van hetzelfde. Verdelen = eerlijk uitdelen.": {
+  "en": "Times = groups of the same thing. Sharing = handing out fairly.",
+  "ar": "ضرب (keer) = مجموعات متشابهة. تقسيم (verdelen) = توزيع بالعدل.",
+  "uk": "Рази (keer) = однакові групи. Ділити (verdelen) = чесно роздати.",
+  "tr": "Kere (keer) = aynı sayıda gruplar. Paylaştırmak (verdelen) = eşit dağıtmak."
+ },
+ "2 keer 5 = 5 + 5 = 10.": {
+  "en": "2 times 5 = 5 + 5 = 10.",
+  "ar": "2 مرات 5 = 5 + 5 = 10.",
+  "uk": "2 рази по 5 = 5 + 5 = 10.",
+  "tr": "2 kere 5 = 5 + 5 = 10."
+ },
+ "6 koekjes voor 3 kinderen: ieder 2.": {
+  "en": "6 cookies for 3 children: each gets 2.",
+  "ar": "6 بسكويتات لـ 3 أطفال: كل واحد 2.",
+  "uk": "6 печивок для 3 дітей: кожному 2.",
+  "tr": "3 çocuk için 6 kurabiye: her birine 2."
+ },
+ "Verdelen? Deel één voor één uit, zoals kaarten bij een spel.": {
+  "en": "Sharing? Hand them out one by one, like cards in a game.",
+  "ar": "تقسيم؟ وزّع واحدًا واحدًا، مثل الأوراق في اللعبة.",
+  "uk": "Ділиш? Роздавай по одному, як карти в грі.",
+  "tr": "Paylaştırmak mı? Bir oyunda kart dağıtır gibi tek tek dağıt."
+ },
+ "Tel de groepjes bij elkaar op.": {
+  "en": "Add the groups together.",
+  "ar": "اجمع المجموعات معًا.",
+  "uk": "Додай групи разом.",
+  "tr": "Grupları topla."
+ },
+ "Wat betekent '2 keer 4'?": {
+  "en": "What does '2 times 4' mean?",
+  "ar": "ماذا تعني '2 keer 4' (2 مرات 4)؟",
+  "uk": "Що означає '2 keer 4' (2 рази по 4)?",
+  "tr": "'2 keer 4' (2 kere 4) ne demek?"
+ },
+ "Keer = hetzelfde getal steeds erbij. 2 keer = twee keer het getal 4.": {
+  "en": "Times = adding the same number each time. 2 times = the number 4, two times.",
+  "ar": "ضرب (keer) = نزيد نفس العدد كل مرة. 2 مرات = العدد 4 مرتين.",
+  "uk": "Рази (keer) = щоразу додаєш те саме число. 2 keer = два рази число 4.",
+  "tr": "Kere (keer) = hep aynı sayıyı eklemek. 2 kere = 4 sayısı iki kere."
+ },
+ "Je verdeelt 8 snoepjes eerlijk over 2 kinderen. Hoeveel krijgt ieder kind?": {
+  "en": "You share 8 candies fairly between 2 children. How many does each child get?",
+  "ar": "تقسم 8 حلويات بالعدل على 2 أطفال. كم يأخذ كل طفل؟",
+  "uk": "Ти чесно ділиш 8 цукерок між 2 дітьми. Скільки отримає кожна дитина?",
+  "tr": "8 şekeri 2 çocuğa eşit paylaştırıyorsun. Her çocuk kaç tane alır?"
+ },
+ "Eerlijk = iedereen krijgt evenveel. Deel één voor één uit.": {
+  "en": "Fair = everyone gets the same. Hand them out one by one.",
+  "ar": "بالعدل (eerlijk) = كل واحد يأخذ نفس العدد. وزّع واحدًا واحدًا.",
+  "uk": "Чесно (eerlijk) = кожен отримує порівну. Роздавай по одному.",
+  "tr": "Eşit (eerlijk) = herkes eşit alır. Tek tek dağıt."
+ },
+ "Wat is de helft van 10?": {
+  "en": "What is half of 10?",
+  "ar": "ما هو نصف 10؟",
+  "uk": "Скільки буде половина від 10?",
+  "tr": "10'un yarısı kaç?"
+ },
+ "De helft = in twee gelijke stukken.": {
+  "en": "Half = in two equal parts.",
+  "ar": "النصف (de helft) = قطعتان متساويتان.",
+  "uk": "Половина (de helft) = на дві однакові частини.",
+  "tr": "Yarım (de helft) = iki eşit parçaya."
+ },
+ "Je verdeelt 6 koekjes eerlijk over 3 kinderen. Hoeveel krijgt ieder kind?": {
+  "en": "You share 6 cookies fairly between 3 children. How many does each child get?",
+  "ar": "تقسم 6 بسكويتات بالعدل على 3 أطفال. كم يأخذ كل طفل؟",
+  "uk": "Ти чесно ділиш 6 печивок між 3 дітьми. Скільки отримає кожна дитина?",
+  "tr": "6 kurabiyeyi 3 çocuğa eşit paylaştırıyorsun. Her çocuk kaç tane alır?"
+ },
+ "Deel uit: één voor jou, één voor jou, één voor jou… tot alles op is.": {
+  "en": "Hand them out: one for you, one for you, one for you… until it's all gone.",
+  "ar": "وزّع: واحدة لك، واحدة لك، واحدة لك… حتى ينتهي كل شيء.",
+  "uk": "Роздавай: одне тобі, одне тобі, одне тобі… поки все не закінчиться.",
+  "tr": "Dağıt: biri sana, biri sana, biri sana… hepsi bitene kadar."
  }
 };
 

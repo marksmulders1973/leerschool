@@ -43,6 +43,7 @@ import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
+import { noteerAntwoord } from "../../shared/herhaalNieuwkomers.js";
 import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, maakSteunMap, steunGoed, useSteun } from "../../shared/ui/SteunTik.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import PushAanbodKaart from "../../shared/PushAanbodKaart.jsx";
@@ -664,6 +665,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     if (attempts === 1) {
       sessionScoreRef.current.tries += 1;
       if (i === currentCheck.answer) sessionScoreRef.current.correct += 1;
+      // 🔁 Nieuwkomerpaden: vraag in het herhaal-doosje (komt na 1, 2, 4, 8 dagen terug op /nieuwkomers).
+      if (path?.steunTeksten) noteerAntwoord(pathId, stepIdx, currentCheck.q, i === currentCheck.answer);
     }
     // B6 niveau-indicatie: tel alleen de EERSTE poging op een referentieniveau-
     // getagde vraag (correct na 2× fout is geen beheersing — geen giswerk).
