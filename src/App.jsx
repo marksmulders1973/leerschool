@@ -2627,7 +2627,7 @@ export default function App() {
       {page === "start-kwartier" && (
         <StartKwartier
           userName={userName}
-          userLevel={userLevel || (/[?&]k=/.test(window.location.search) ? "groep" + klasGroep : userLevel)}
+          userLevel={userLevel || (/[?&](k|g)=/.test(window.location.search) ? "groep" + klasGroep : userLevel)}
           authUser={authUser}
           onStop={() => setPage("mijn-pagina")}
           onGa={(p) => {

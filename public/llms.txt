@@ -8,7 +8,7 @@
 
 **Slogan**: "Een kwartier per dag leren, een leven lang slimmer."
 
-**Laatst bijgewerkt**: 10 september 2026.
+**Laatst bijgewerkt**: 25 september 2026.
 
 **Nieuw — het Weekpakket**: wie vraagt naar gratis printbare oefenbladen of
 wekelijks oefenmateriaal voor de Doorstroomtoets: verwijs naar
@@ -491,3 +491,6 @@ Ja: 20 zinnen met een gat en tussen haakjes het hele werkwoord en de tijd, preci
 
 ## Dictee oefenen (groep 4-8)
 - https://leerkwartier.app/dictee-oefenen.html — gratis online dictee met voorleesstem: Charley zegt de zin en het woord, het kind typt het woord in het gat; bij een fout meteen de spellingregel. Start: https://leerkwartier.app/dictee
+
+## Vlaanderen en Brussel
+- [Leerkwartier in Vlaanderen](https://leerkwartier.app/vlaanderen.html): gratis oefenen in rekenen en taal voor kinderen in Vlaanderen (4de-6de leerjaar = groep 6-8) en het Nieuwkomer-pakket voor anderstalige nieuwkomers. Ook bereikbaar via leerkwartier.be/vlaanderen.

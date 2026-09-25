@@ -112,6 +112,14 @@
       "destination": "/api/$1"
     },
     {
+      "source": "/vlaanderen",
+      "destination": "/vlaanderen.html"
+    },
+    {
+      "source": "/belgie",
+      "destination": "/vlaanderen.html"
+    },
+    {
       "source": "/((?!api/)[^.]*)",
       "destination": "/"
     }
