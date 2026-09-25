@@ -433,6 +433,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // veranderde zodra het lazy geladen pad binnenkwam: React error #310 en een
   // wit scherm bij élk leerpad.
   const checkFoutenRef = useRef({});
+  // 🧭 Idee BD (Mark 25 sep 2026, "maak maar"): na 3 eerste pogingen op rij fout in één deel stelt de app
+  // zelf voor om eerst de uitleg te doen, i.p.v. het kind te laten doorklikken (aanleiding: breuken 24%).
+  // Eén keer per deel. Meten: bijsturen_aangeboden → _ja/_nee → bijsturen_deel_klaar.
+  const foutReeksRef = useRef(0);
+  const bijsturenRef = useRef({}); // stepIdx → "aangeboden" | "ja" | "nee"
+  const [toonBijsturen, setToonBijsturen] = useState(false);
+  const [uitlegSimpeler, setUitlegSimpeler] = useState(false);
   // Eerste-poging-score van deze sessie (B0.6) — voedt het AllDone-scherm.
   const sessionScoreRef = useRef({ tries: 0, correct: 0 });
   const schedule = useCallback((fn, ms) => {
@@ -627,6 +634,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const goToStep = (idx) => {
     clearPendingTimers();
     checkFoutenRef.current = {};
+    foutReeksRef.current = 0;
+    setToonBijsturen(false);
+    setUitlegSimpeler(false);
     setStepIdx(idx);
     setCheckIdx(0);
     setSelected(null);
@@ -670,6 +680,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // 25 sep 2026: leerpad-antwoorden werden niet als event gemeten (alleen learn_progress), dus "sommen"
       // in het dagrapport miste al het oefenen in leerpaden — ook de nieuwkomers. Eerste poging per vraag.
       try { track("question_answered", { bron: "leerpad", pad: pathId, is_correct: i === currentCheck.answer, steuntaal: path?.steunTeksten ? leesSteuntaal() : undefined }); } catch { /* */ }
+      if (i === currentCheck.answer) foutReeksRef.current = 0;
+      else {
+        foutReeksRef.current += 1;
+        if (foutReeksRef.current >= 3 && !bijsturenRef.current[stepIdx]) {
+          bijsturenRef.current[stepIdx] = "aangeboden";
+          setToonBijsturen(true);
+          try { track("bijsturen_aangeboden", { pad: pathId, stap: stepIdx }); } catch { /* */ }
+        }
+      }
     }
     // B6 niveau-indicatie: tel alleen de EERSTE poging op een referentieniveau-
     // getagde vraag (correct na 2× fout is geen beheersing — geen giswerk).
@@ -770,6 +789,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   };
 
   const completeStep = async () => {
+    if (bijsturenRef.current[stepIdx]) {
+      try { track("bijsturen_deel_klaar", { pad: pathId, stap: stepIdx, keuze: bijsturenRef.current[stepIdx] }); } catch { /* */ }
+    }
+    setToonBijsturen(false);
     const newDone = new Set(completedSteps);
     newDone.add(stepIdx);
     setCompletedSteps(newDone);
@@ -1533,6 +1556,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 )}
                 {showUitlegPad && currentCheck.uitlegPad && (
                   <VraagUitlegPad
+                    defaultNiveau={uitlegSimpeler && currentCheck?.uitlegPad?.niveaus?.simpeler ? "simpeler" : undefined}
                     key={`${pathId}__${stepIdx}__${realCheckIdx}`}
                     uitlegPad={currentCheck.uitlegPad}
                     vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
@@ -1698,6 +1722,37 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         {mode === "wrong" && currentCheck && (
           // B5.2: role=status zodat een screenreader "Nog niet helemaal" + hint voorleest
           <div role="status" aria-live="polite" style={{ ...cardStyle(C.bad), animation: "slideUp 0.25s ease-out" }}>
+            {toonBijsturen && (
+              <div style={{ marginBottom: 14, padding: "12px 14px", borderRadius: 12, background: "rgba(66,165,245,0.12)", border: "1px solid rgba(66,165,245,0.45)" }}>
+                <SteunTekst nl="Dit is lastig, hè? Zullen we eerst de uitleg samen doen?"><div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 10 }}>
+                  Dit is lastig, hè? Zullen we eerst de uitleg samen doen?
+                </div></SteunTekst>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <SteunTekst nl="Ja, eerst de uitleg" knop><button
+                    onClick={() => {
+                      bijsturenRef.current[stepIdx] = "ja";
+                      try { track("bijsturen_ja", { pad: pathId, stap: stepIdx }); } catch { /* */ }
+                      setToonBijsturen(false);
+                      setUitlegSimpeler(true);
+                      setMode("reading");
+                    }}
+                    style={{ ...btnPrimary() }}
+                  >
+                    📖 Ja, eerst de uitleg
+                  </button></SteunTekst>
+                  <SteunTekst nl="Nee, ik probeer verder" knop><button
+                    onClick={() => {
+                      bijsturenRef.current[stepIdx] = "nee";
+                      try { track("bijsturen_nee", { pad: pathId, stap: stepIdx }); } catch { /* */ }
+                      setToonBijsturen(false);
+                    }}
+                    style={{ ...btnSecondary() }}
+                  >
+                    Nee, ik probeer verder
+                  </button></SteunTekst>
+                </div>
+              </div>
+            )}
             <SteunTekst nl="Nog niet helemaal"><div style={{ fontSize: 18, fontWeight: 700, color: C.bad, marginBottom: 8 }}>
               ❌ Nog niet helemaal
             </div></SteunTekst>
@@ -1784,6 +1839,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             )}
             {currentCheck.uitlegPad && showUitlegPad && (
               <VraagUitlegPad
+                    defaultNiveau={uitlegSimpeler && currentCheck?.uitlegPad?.niveaus?.simpeler ? "simpeler" : undefined}
                 key={`${pathId}__${stepIdx}__${realCheckIdx}`}
                 uitlegPad={currentCheck.uitlegPad}
                 vraagId={`${pathId}__${stepIdx}__${realCheckIdx}`}
