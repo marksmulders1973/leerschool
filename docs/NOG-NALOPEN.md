@@ -26,12 +26,13 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | D3 | **Kaartenvel** echt printen: passen de letters, knipt het makkelijk? | Mark | ⏳ |
 | D4 | **Promotie**: niemand weet dat /klas + digibord bestaan (Mark zelf ook niet). Zin + schermafbeelding in de volgende scholenmail; leerkrachtflyer juf-start-A4 bijwerken | Claude concept → Mark go | ⏳ |
 | D5 | **Stichting OOB Bonaire** probeert /klas met één klas — wachten op hun ervaring (antwoord verstuurd 25 sep) | wachten | ⏳ |
-| D6 | **Cijfers**: `docs/sql/klasgolf.sql` query (3) QR per klas + events `digibord_*` in het dagrapport meenemen | Claude, dagelijks | ⏳ |
+| D8 | **Kant-en-klare setjes** op leerkwartier.app/klassikaal (v718): groep 6/7/8 mix, rekenen, taal + 3 taalklas-setjes; ook via /klas "Klassikaal met kaartjes". Eén setje echt in de klas proberen | Mark | ⏳ |
+| D6 | **Cijfers**: `docs/sql/klasgolf.sql` query (3) QR per klas + events `digibord_*` (incl. `digibord_setje`, `klas_naar_klassikaal`) in het dagrapport meenemen | Claude, dagelijks | ⏳ |
 | D7 | ✅ Link `leerkwartier.app/klas.` (punt uit mail) stuurt door — getest 25 sep (v712) | — | ✅ |
 
 ## C. Ideeën van Claude (niets gebouwd — go nodig)
 
-1. **Klassikaal zonder zelf een toets te maken**: op /klas een knop "Klassikaal met kaartjes" met kant-en-klare setjes (Doorstroomtoets-mix groep 6/7/8, en Woorden voor de taalklas). Nu moet de juf eerst een toets bouwen — dat is de grootste drempel.
+1. ✅ GEBOUWD v718 (zie D8) — **Klassikaal zonder zelf een toets te maken**: op /klas een knop "Klassikaal met kaartjes" met kant-en-klare setjes (Doorstroomtoets-mix groep 6/7/8, en Woorden voor de taalklas). Nu moet de juf eerst een toets bouwen — dat is de grootste drempel.
 2. **3-2-1 "Kaartjes omhoog!"**: een aftel-knop op het digibord zodat iedereen tegelijk opsteekt (minder afkijken, sneller tellen).
 3. **QR op het eindoverzicht**: "Oefen de moeilijke vragen thuis" — QR met precies de vragen onder 60%, zodat de klas thuis verder gaat met wat misging.
 4. **Taalklas-modus**: Woorden/In de klas klassikaal op het digibord met de voorleesknop — past bij de 176 LOWAN-scholen die we al mailden.

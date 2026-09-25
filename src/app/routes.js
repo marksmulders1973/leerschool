@@ -118,6 +118,8 @@ export const PAGE_TO_PATH = {
   // Voor de klas (idee AM, 22 sep 2026): één adres voor op het digibord.
   // Landt zonder rolkeuze of account meteen in 5 vragen op groepsniveau.
   klas: "/klas",
+  // Kant-en-klare setjes voor klassikaal op het digibord met A-B-C-D-kaartjes (25 sep 2026).
+  klassikaal: "/klassikaal",
 };
 
 // Path-aliassen: extra URL → bestaande page-key. Voor leesvriendelijke deep-links

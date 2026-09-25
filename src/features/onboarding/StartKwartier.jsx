@@ -243,6 +243,13 @@ function PartnerStrook() {
 function JufStrook({ groep, stap, onGa }) {
   return (
     <div style={{ marginTop: 18, padding: "12px 14px", borderRadius: 12, background: "var(--color-bg-surface)", border: "1px dashed var(--color-border-soft)", fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text-muted)" }}>
+      <div style={{ marginBottom: 8 }}>
+        <strong style={{ color: "var(--color-text)" }}>🙋 Met de hele klas tegelijk?</strong> Kinderen houden een A-, B-, C- of D-kaartje omhoog, jij telt, en je ziet meteen hoeveel procent het goed had.{" "}
+        <button type="button" onClick={() => { track("klas_naar_klassikaal", { groep, stap }); onGa("klassikaal"); }}
+          style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--color-brand-primary)", fontWeight: 700, fontSize: 13.5, fontFamily: "inherit" }}>
+          Klassikaal met kaartjes →
+        </button>
+      </div>
       <strong style={{ color: "var(--color-text)" }}>👩‍🏫 Juf of meester?</strong> Wil je zien hoe je klas het deed? Zet een klascode: dan oefent iedereen dezelfde lijst en zie jij per leerling wat goed ging.{" "}
       <button type="button" onClick={() => { track("klas_naar_juf", { groep, stap }); onGa("teacher-home", "juf"); }}
         style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--color-brand-primary)", fontWeight: 700, fontSize: 13.5, fontFamily: "inherit" }}>

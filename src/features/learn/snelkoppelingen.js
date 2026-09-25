@@ -23,7 +23,7 @@ export const SNELKOPPELINGEN = [
     woorden: ["samen", "samen bouwen", "parkcode", "vrienden", "klas park", "samen spelen", "multiplayer", "code park"] },
   { id: "klas", emoji: "🏫", label: "Voor de klas", uitleg: "Zet leerkwartier.app/klas op het bord: meteen 5 vragen op groepsniveau, zonder inloggen. Leerkracht maakt daarna een klascode.", pad: "/klas",
     woorden: ["klas", "voor de klas", "digibord", "bord", "schoolbord", "juf", "meester", "klassikaal", "les", "klascode"] },
-  { id: "digibord-klassikaal", emoji: "🙋", label: "Klassikaal op het digibord (handen tellen)", uitleg: "Maak een toets, zet hem op het digibord en tel per antwoord de handen of A-B-C-D-kaartjes: je ziet meteen hoeveel procent van de klas het goed had.", pad: "/leerkracht",
+  { id: "digibord-klassikaal", emoji: "🙋", label: "Klassikaal op het digibord (handen tellen)", uitleg: "Kies een kant-en-klaar setje (of je eigen toets), zet het op het digibord en tel per antwoord de A-B-C-D-kaartjes: je ziet meteen hoeveel procent van de klas het goed had.", pad: "/klassikaal",
     woorden: ["handen", "handen opsteken", "abcd", "a b c d", "kaartjes", "stemkaarten", "klassikaal", "digibord toets", "procent goed", "hele klas"] },
   { id: "imposter", emoji: "🎮", label: "Wie is de bedrieger?", uitleg: "Game in het park: taken zijn sommen, één speler doet alsof. ☰ → 🎮.", pad: "/dierentuin",
     woorden: ["bedrieger", "wie is de bedrieger", "imposter", "impostor", "wie is de imposter", "game", "among us", "verrader", "bots", "spelleider"] },

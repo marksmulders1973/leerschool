@@ -6,6 +6,7 @@
 // Uitslagen blijven op dit apparaat (localStorage lk_digibord_uitslagen) voor vergelijken later.
 import { useMemo, useState } from "react";
 import { track } from "../../utils.js";
+import MdInline from "../../shared/ui/MdInline.jsx";
 
 const LETTERS = ["A", "B", "C", "D", "E", "F"];
 const MAX_KLAS = 40;
@@ -14,7 +15,7 @@ const KLEUR_GOED = "#00c853";
 const KLEUR_FOUT = "#ff7043";
 
 const pct = (goed, totaal) => (totaal > 0 ? Math.round((goed / totaal) * 100) : 0);
-const esc = (s) => String(s ?? "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const esc = (s) => String(s ?? "").replace(/\*\*?/g, "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 
 function bewaarUitslag(quiz, rijen) {
   try {
@@ -163,7 +164,7 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
         {vragen.map((vr, i) => (
           <div key={i + vr.q} style={{ ...S.kaart, padding: "10px 12px", marginBottom: 8, display: "flex", gap: 10, alignItems: "center" }}>
             <span style={{ fontWeight: 800, width: 28 }}>{i + 1}.</span>
-            <span style={{ flex: 1, fontSize: 15 }}>{vr.q}</span>
+            <span style={{ flex: 1, fontSize: 15 }}><MdInline text={vr.q} /></span>
             <button style={S.mini} aria-label="Omhoog" disabled={i === 0} onClick={() => verplaats(i, -1)}>▲</button>
             <button style={S.mini} aria-label="Omlaag" disabled={i === vragen.length - 1} onClick={() => verplaats(i, 1)}>▼</button>
             <button style={S.mini} aria-label="Weghalen" onClick={() => haalWeg(i)}>✕</button>
@@ -195,7 +196,7 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
         {[...beantwoord].sort((a, b) => a.pct - b.pct).map((r) => (
           <div key={r.nr} style={{ ...S.kaart, padding: "12px 14px", marginBottom: 8, display: "flex", gap: 14, alignItems: "center" }}>
             <span style={{ fontWeight: 900, fontSize: 22, minWidth: 64, color: r.pct >= 60 ? KLEUR_GOED : KLEUR_FOUT }}>{r.pct}%</span>
-            <span style={{ flex: 1, fontSize: 15.5 }}>{r.nr}. {r.q}</span>
+            <span style={{ flex: 1, fontSize: 15.5 }}>{r.nr}. <MdInline text={r.q} /></span>
             <span style={{ fontSize: 13, color: "var(--color-text-muted)" }}>{r.counts.map((c, i) => `${LETTERS[i]} ${c}`).join(" · ")}</span>
           </div>
         ))}
@@ -213,7 +214,7 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
         <button style={S.knopLicht} onClick={() => setFase("klaarzetten")}>Stop</button>
       </div>
       <div style={{ ...S.kaart, marginBottom: 14 }}>
-        <div style={{ fontSize: 30, fontWeight: 800, lineHeight: 1.3 }}>{v.q}</div>
+        <div style={{ fontSize: 30, fontWeight: 800, lineHeight: 1.3 }}><MdInline text={v.q} /></div>
       </div>
       {v.options.map((opt, i) => {
         const n = tel[i] || 0;
@@ -224,7 +225,7 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
             borderColor: toon && isGoed ? KLEUR_GOED : "var(--color-border-soft)", borderWidth: toon && isGoed ? 3 : 1 }}>
             {toon && <div aria-hidden style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: breedte + "%", background: isGoed ? "rgba(0,200,83,0.22)" : "rgba(255,112,67,0.16)" }} />}
             <span style={{ position: "relative", width: 48, height: 48, borderRadius: 12, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 26, fontWeight: 900, background: "var(--color-brand-primary)", color: "#0b1224", flexShrink: 0 }}>{LETTERS[i]}</span>
-            <span style={{ position: "relative", flex: 1, fontSize: 24, fontWeight: 600 }}>{opt}{toon && isGoed ? "  ✓" : ""}</span>
+            <span style={{ position: "relative", flex: 1, fontSize: 24, fontWeight: 600 }}><MdInline text={opt} />{toon && isGoed ? "  ✓" : ""}</span>
             {toon ? (
               <span style={{ position: "relative", fontSize: 22, fontWeight: 800, minWidth: 110, textAlign: "right" }}>{n} {n === 1 ? "hand" : "handen"}</span>
             ) : (
@@ -250,11 +251,13 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
       {toon && (
         <div style={{ ...S.kaart, marginTop: 6, borderColor: goedPct >= 60 ? KLEUR_GOED : KLEUR_FOUT }}>
           <div style={{ fontSize: 34, fontWeight: 900, color: goedPct >= 60 ? KLEUR_GOED : KLEUR_FOUT }}>{goedPct}% van de klas had deze goed</div>
-          <div style={{ fontSize: 18, marginTop: 4 }}>Het goede antwoord is <strong>{LETTERS[v.answer]}: {v.options[v.answer]}</strong>.</div>
+          <div style={{ fontSize: 18, marginTop: 4 }}>Het goede antwoord is <strong>{LETTERS[v.answer]}: <MdInline text={v.options[v.answer]} /></strong>.</div>
           {meestFout && meestFout.c > 0 && goedPct < 80 && (
             <div style={{ fontSize: 16, marginTop: 6, color: "var(--color-text-muted)" }}>{meestFout.c} {meestFout.c === 1 ? "kind koos" : "kinderen kozen"} {LETTERS[meestFout.i]}. Vraag eens hoe ze daarop kwamen.</div>
           )}
-          {v.explanation && <div style={{ fontSize: 17, marginTop: 10, lineHeight: 1.5 }}>💡 {v.explanation}</div>}
+          {v.explanation
+            ? <div style={{ fontSize: 17, marginTop: 10, lineHeight: 1.5 }}>💡 <MdInline text={v.explanation} /></div>
+            : meestFout && meestFout.c > 0 && v.wrongHints?.[meestFout.i] && <div style={{ fontSize: 17, marginTop: 10, lineHeight: 1.5 }}>💡 Bij {LETTERS[meestFout.i]}: {String(v.wrongHints[meestFout.i]).replace(/\*\*/g, "").replace(/\s*Probeer het nog eens\.?/, "")}</div>}
           <button style={{ ...S.knop, marginTop: 14 }} onClick={volgende}>{idx + 1 < vragen.length ? "Volgende vraag ▶" : "Bekijk het overzicht ▶"}</button>
         </div>
       )}

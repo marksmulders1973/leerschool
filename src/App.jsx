@@ -54,6 +54,7 @@ const ClassManager = lazy(() =>
   import("./features/teacher/TeacherComponents.jsx").then((m) => ({ default: m.ClassManager }))
 );
 const DigibordKlassikaal = lazy(() => import("./features/teacher/DigibordKlassikaal.jsx"));
+const KlasSetjes = lazy(() => import("./features/teacher/KlasSetjes.jsx"));
 const CreateQuiz = lazy(() =>
   import("./features/teacher/TeacherComponents.jsx").then((m) => ({ default: m.CreateQuiz }))
 );
@@ -1846,7 +1847,7 @@ export default function App() {
           onLogin={loginWithConsent}
           quizzes={quizzes}
           classes={classes}
-          onDigibord={(q, vragen) => { setDigibordToets({ quiz: q, vragen }); setPage("digibord"); try { window.scrollTo({ top: 0 }); } catch { /* */ } }}
+          onDigibord={(q, vragen) => { setDigibordToets({ quiz: q, vragen, terug: "teacher-home" }); setPage("digibord"); try { window.scrollTo({ top: 0 }); } catch { /* */ } }}
           onKlaarzetten={(linkId, studentName) => startKlaarzetten(linkId, studentName, "leraar")}
           onOpenLes={(id) => {
             setActiveLearnPathId(id);
@@ -1887,9 +1888,19 @@ export default function App() {
           }}
         />
       )}
+      {page === "klassikaal" && (
+        <Suspense fallback={null}>
+          <KlasSetjes
+            groep={klasGroep}
+            onStart={(quiz, vragen) => { setDigibordToets({ quiz, vragen, terug: "klassikaal" }); setPage("digibord"); try { window.scrollTo({ top: 0 }); } catch { /* */ } }}
+            onEigenToets={() => setPage("teacher-home")}
+            onTerug={() => setPage("klas")}
+          />
+        </Suspense>
+      )}
       {page === "digibord" && digibordToets && (
         <Suspense fallback={null}>
-          <DigibordKlassikaal quiz={digibordToets.quiz} vragen={digibordToets.vragen} onStop={() => setPage("teacher-home")} />
+          <DigibordKlassikaal quiz={digibordToets.quiz} vragen={digibordToets.vragen} onStop={() => setPage(digibordToets.terug || "teacher-home")} />
         </Suspense>
       )}
       {page === "class-manager" && (
