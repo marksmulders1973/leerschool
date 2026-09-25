@@ -44,7 +44,7 @@ import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
 import { noteerAntwoord } from "../../shared/herhaalNieuwkomers.js";
-import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, maakSteunMap, steunGoed, useSteun } from "../../shared/ui/SteunTik.jsx";
+import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, maakSteunMap, steunGoed, useSteun, leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import PushAanbodKaart from "../../shared/PushAanbodKaart.jsx";
 
@@ -667,6 +667,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       if (i === currentCheck.answer) sessionScoreRef.current.correct += 1;
       // 🔁 Nieuwkomerpaden: vraag in het herhaal-doosje (komt na 1, 2, 4, 8 dagen terug op /nieuwkomers).
       if (path?.steunTeksten) noteerAntwoord(pathId, stepIdx, currentCheck.q, i === currentCheck.answer, currentCheck.options?.[currentCheck.answer]);
+      // 25 sep 2026: leerpad-antwoorden werden niet als event gemeten (alleen learn_progress), dus "sommen"
+      // in het dagrapport miste al het oefenen in leerpaden — ook de nieuwkomers. Eerste poging per vraag.
+      try { track("question_answered", { bron: "leerpad", pad: pathId, is_correct: i === currentCheck.answer, steuntaal: path?.steunTeksten ? leesSteuntaal() : undefined }); } catch { /* */ }
     }
     // B6 niveau-indicatie: tel alleen de EERSTE poging op een referentieniveau-
     // getagde vraag (correct na 2× fout is geen beheersing — geen giswerk).

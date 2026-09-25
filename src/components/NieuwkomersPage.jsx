@@ -59,7 +59,12 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
   const t = T.nl;
   const s = { ...T.nl, ...(T[taal] || {}) };
   const rtl = !!STEUNTALEN.find((x) => x.id === taal)?.rtl;
-  useEffect(() => { try { track("nieuwkomers_open", { taal }); } catch { /* */ } }, []); // eslint-disable-line
+  // via = de ingetikte code (CodeBalk zet ?via=…), anders "link" (mail, digibord, doorverteld) — Mark 25 sep 2026.
+  useEffect(() => {
+    let via = "link";
+    try { via = new URLSearchParams(window.location.search).get("via") || "link"; } catch { /* */ }
+    try { track("nieuwkomers_open", { taal, via }); } catch { /* */ }
+  }, []); // eslint-disable-line
 
   const kiesTaal = (id) => {
     setTaal(id);
