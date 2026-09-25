@@ -93,8 +93,8 @@
       "permanent": false
     },
     {
-      "source": "/:pad([^.]+)\\.html\\.",
-      "destination": "/:pad.html",
+      "source": "/:pad([^.]+)\\.:ext(html|pdf|txt|png|jpg|jpeg|docx)\\.",
+      "destination": "/:pad.:ext",
       "permanent": false
     }
   ],
