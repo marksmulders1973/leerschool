@@ -34,3 +34,4 @@
 
 **Wat elke batch nodig heeft:** tekst-akkoord (één keer per reeks) → adressen ontdubbeld tegen `opvolgbronnen` en eerdere batches → verzendlog in het batch-doc → WACHT-OP + agenda bijgewerkt → reacties in het dagrapport (mail-check via browser zolang de Gmail-koppeling verlopen is).
 | ✅ do 24 sep ~16:30 | LOWAN vervolgmail Nieuwkomer-pakket (`LOWAN-NIEUWKOMERPAKKET-VERVOLG.md`, batch 1-4) | **180/180** | Resend | Mark 'stuur alle 180'; bij #177 Resend-limiet → 4 over; ✅ vr 25 sep ~12:30 de laatste 4 (Mark 'stuur de laatste 4') |
+| ⏰ ma 28 · di 29 · wo 30 sep 08:30 | **LOWAN Nieuwkomer-pakket ronde 2** (`LOWAN-NIEUWKOMERPAKKET-RONDE-2.md`, batch 5-7C zonder De Piramide) | 130 (45/45/40) | Resend via Windows-taken `Leerkwartier LOWAN nieuwkomers ronde2 <datum>` (StartWhenAvailable) | Mark 'stuur maar' 25 sep; tekst mét klassikaal-link, 4 codes, talen-vraag; droogloop OK |
