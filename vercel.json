@@ -88,13 +88,13 @@
   ],
   "redirects": [
     {
-      "source": "/((?!api/)[a-zA-Z0-9/_-]+)\\.+",
-      "destination": "/$1",
+      "source": "/:pad([^.]+)\\.",
+      "destination": "/:pad",
       "permanent": false
     },
     {
-      "source": "/((?!api/)[a-zA-Z0-9/_-]+\\.html)\\.+",
-      "destination": "/$1",
+      "source": "/:pad([^.]+)\\.html\\.",
+      "destination": "/:pad.html",
       "permanent": false
     }
   ],
