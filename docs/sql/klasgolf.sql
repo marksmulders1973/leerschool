@@ -1,3 +1,4 @@
+-- 25 sep 2026: events_mens = events_echt zonder mailscanner-golven (idee AX, view scanner_uids).
 -- ============================================================
 --  KLASGOLF-RADAR — ziet een klas die het adres van het bord overtypt
 --  Aangelegd 22 sep 2026 (idee AM, Mark: "maak maar").
@@ -24,7 +25,7 @@ with e as (
          coalesce(source, '(leeg)') as bron,
          name, path, created_at,
          (created_at at time zone 'Europe/Amsterdam') as lokaal
-  from events_echt
+  from events_mens
   where props->>'uid' is not null
 ),
 eerste as (
@@ -77,7 +78,7 @@ select date_trunc('day', created_at at time zone 'Europe/Amsterdam')::date as da
        count(distinct props->>'uid') filter (where name = 'klas_vraag')       as beantwoordde,
        count(distinct props->>'uid') filter (where name = 'klas_klaar')       as rondde_af,
        count(distinct props->>'uid') filter (where name = 'klas_naar_juf')    as juf_klik
-from events_echt
+from events_mens
 where name like 'klas_%' and created_at > now() - interval '28 days'
 group by 1 order by 1 desc;
 
@@ -87,6 +88,6 @@ SELECT props->>'k' AS klas,
   COUNT(*) FILTER (WHERE name = 'klas_qr_getoond') AS keer_getoond,
   COUNT(DISTINCT props->>'uid') FILTER (WHERE name = 'klas_qr_thuis') AS thuis_apparaten,
   to_char(MAX(created_at) AT TIME ZONE 'Europe/Amsterdam', 'DD-MM HH24:MI') AS laatst
-FROM events_echt
+FROM events_mens
 WHERE name IN ('klas_qr_getoond', 'klas_qr_thuis') AND created_at >= now() - interval '30 days'
 GROUP BY 1 ORDER BY thuis_apparaten DESC, keer_getoond DESC;

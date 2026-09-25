@@ -1,3 +1,4 @@
+-- 25 sep 2026: events_mens = events_echt zonder mailscanner-golven (idee AX, view scanner_uids).
 -- ============================================================
 --  NOORD-STER — de officiele tellingen van Leerkwartier
 --  Aangelegd 22 sep 2026 (idee AL uit het Meesterplan van 21 sep).
@@ -17,7 +18,7 @@
 --  Tellen op session maakt van elke terugkomer een nieuwe gebruiker
 --  en laat de groei er veel mooier uitzien dan hij is.
 --
---  Gebruik altijd `events_echt` (testaccounts zijn er al uit gefilterd).
+--  Gebruik altijd `events_mens` (testaccounts zijn er al uit gefilterd).
 -- ============================================================
 
 
@@ -36,7 +37,7 @@
 select count(*) as noordster_7d
 from (
   select props->>'uid' as uid
-  from events_echt
+  from events_mens
   where created_at > now() - interval '7 days'
     and props->>'uid' is not null
   group by 1
@@ -54,7 +55,7 @@ from (
 select count(*) as terugkomers_28d
 from (
   select props->>'uid' as uid
-  from events_echt
+  from events_mens
   where created_at > now() - interval '28 days'
     and props->>'uid' is not null
   group by 1
@@ -76,7 +77,7 @@ from (
 select
   count(distinct props->>'uid') as kwartier_apparaten,
   count(*)                      as kwartier_dagen
-from events_echt
+from events_mens
 where name = 'kwartier_reached'
   and created_at >= date_trunc('month', now());
 
@@ -89,7 +90,7 @@ where name = 'kwartier_reached'
 with d as (
   select props->>'uid' as uid,
          date_trunc('day', created_at at time zone 'Europe/Amsterdam')::date as dag
-  from events_echt
+  from events_mens
   where props->>'uid' is not null
 ),
 weken as (select generate_series(0, 7) as n)

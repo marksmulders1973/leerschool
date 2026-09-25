@@ -1,3 +1,4 @@
+-- 25 sep 2026: events_mens = events_echt zonder mailscanner-golven (idee AX, view scanner_uids).
 -- ============================================================
 --  GOLVEN — wat levert één partner-actie blijvend op?
 --  Aangelegd 22 sep 2026 op verzoek van Mark ("meet die drie golven apart").
@@ -27,7 +28,7 @@ with e as (
          coalesce(props->>'code', props->>'partner', props->>'bron') as code,
          name, created_at,
          date_trunc('day', created_at at time zone 'Europe/Amsterdam')::date as dag
-  from events_echt where props->>'uid' is not null
+  from events_mens where props->>'uid' is not null
 ),
 toewijzing as (
   select distinct on (uid) uid, code, dag as eerste_dag
@@ -65,7 +66,7 @@ with e as (
          coalesce(props->>'code', props->>'partner', props->>'bron') as code,
          name, created_at,
          date_trunc('day', created_at at time zone 'Europe/Amsterdam')::date as dag
-  from events_echt where props->>'uid' is not null
+  from events_mens where props->>'uid' is not null
 ),
 golf as (
   select distinct on (uid) uid, dag as eerste_dag
