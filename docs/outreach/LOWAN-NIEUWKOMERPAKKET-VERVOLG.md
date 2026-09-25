@@ -399,3 +399,9 @@ Mark Smulders — leerkwartier.app · linkedin.com/company/leerkwartier
   - 174 · Kamperfoelieschool · mvdwoude@kamperfoelieschool.nl · OK · 01a0d4ad-8fdd-7498-8a8a-83f3215bea13
   - 175 · KC de Duizendpoot · karin.vandeklundert@signumonderwijs.nl · OK · 01a0d4ad-959b-7118-86d2-c2afec52b853
   - 176 · KC de Horizon, Doesburg · karinvandermeulen@horizondoesburg.nl · OK · 01a0d4ad-9b7f-7588-b535-db5ff1f511c7
+
+- **25-9-2026, 12:29:37** — via Resend (hallo@leerkwartier.app), 4/4 verstuurd.
+  - 177 · KC De Leertuin · hanife.sak@askoscholen.nl · OK · 01a0d81c-f3fb-73b8-a6e8-ef94e14c1116
+  - 178 · KC de Pionier · charlottelubbes@ato-scholenkring.nl · OK · 01a0d81c-f9c9-7649-96d7-a87252a3ae70
+  - 179 · KC de Wilgen · rkuiper@obsdewilgen.nl · OK · 01a0d81c-ff8c-75fd-845e-d2ebb3266041
+  - 180 · KC Moerschans · moerschans@elevantio.nl · OK · 01a0d81d-0544-725b-aab4-a072c6fe1a33

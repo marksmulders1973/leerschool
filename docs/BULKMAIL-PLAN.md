@@ -33,4 +33,4 @@
 **Niet mailen (bewust):** Marion/Kinderhulp (ere-blokje, tot 15 nov) · VluchtelingenWerk (wacht, dag 3) · Buurtgezinnen/Froukje · DPG/Tubantia · OKT Amsterdam (geen centraal adres; bewijsstuk voor het gemeentegesprek) · Rolf Zwart/Ommeriek (gewone lezer) · regionale pers vóór de KvK.
 
 **Wat elke batch nodig heeft:** tekst-akkoord (één keer per reeks) → adressen ontdubbeld tegen `opvolgbronnen` en eerdere batches → verzendlog in het batch-doc → WACHT-OP + agenda bijgewerkt → reacties in het dagrapport (mail-check via browser zolang de Gmail-koppeling verlopen is).
-| ✅ do 24 sep ~16:30 | LOWAN vervolgmail Nieuwkomer-pakket (`LOWAN-NIEUWKOMERPAKKET-VERVOLG.md`, batch 1-4) | 176/180 | Resend | Mark 'stuur alle 180'; bij #177 Resend-limiet 100% → 4 over (vervolg-run slaat verstuurde over) |
+| ✅ do 24 sep ~16:30 | LOWAN vervolgmail Nieuwkomer-pakket (`LOWAN-NIEUWKOMERPAKKET-VERVOLG.md`, batch 1-4) | **180/180** | Resend | Mark 'stuur alle 180'; bij #177 Resend-limiet → 4 over; ✅ vr 25 sep ~12:30 de laatste 4 (Mark 'stuur de laatste 4') |
