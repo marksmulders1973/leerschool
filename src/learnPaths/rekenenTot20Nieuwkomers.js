@@ -11,11 +11,11 @@ import { voegFoutUitlegToe, rekenReden } from "./nieuwkomersFoutUitleg.js";
 const stepEmojis = ["🔢", "➕", "➖", "🔟", "🎒"];
 
 const chapters = [
-  { letter: "A", title: "Tellen tot 20", emoji: "🔢", from: 0, to: 0 },
-  { letter: "B", title: "Erbij tot 10", emoji: "➕", from: 1, to: 1 },
-  { letter: "C", title: "Eraf tot 10", emoji: "➖", from: 2, to: 2 },
-  { letter: "D", title: "Over de 10 heen", emoji: "🔟", from: 3, to: 3 },
-  { letter: "E", title: "Sommen uit de klas", emoji: "🎒", from: 4, to: 4 },
+  { letter: "A", title: "Hoe tel ik tot 20?", emoji: "🔢", from: 0, to: 0 },
+  { letter: "B", title: "Hoe doe ik erbij tot 10?", emoji: "➕", from: 1, to: 1 },
+  { letter: "C", title: "Hoe doe ik eraf tot 10?", emoji: "➖", from: 2, to: 2 },
+  { letter: "D", title: "Hoe reken ik over de 10 heen?", emoji: "🔟", from: 3, to: 3 },
+  { letter: "E", title: "Hoe maak ik een som uit de klas?", emoji: "🎒", from: 4, to: 4 },
 ];
 
 // Vaste "willekeur": zelfde sommen bij elke keer laden.

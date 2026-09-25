@@ -8,11 +8,11 @@ import { voegFoutUitlegToe, rekenReden } from "./nieuwkomersFoutUitleg.js";
 const stepEmojis = ["🔟", "➕", "➖", "🧮", "🛒"];
 
 const chapters = [
-  { letter: "A", title: "Tientallen en eenheden", emoji: "🔟", from: 0, to: 0 },
-  { letter: "B", title: "Erbij tot 100", emoji: "➕", from: 1, to: 1 },
-  { letter: "C", title: "Eraf tot 100", emoji: "➖", from: 2, to: 2 },
-  { letter: "D", title: "Over het tiental heen", emoji: "🧮", from: 3, to: 3 },
-  { letter: "E", title: "Sommen uit de winkel", emoji: "🛒", from: 4, to: 4 },
+  { letter: "A", title: "Wat zijn tientallen en eenheden?", emoji: "🔟", from: 0, to: 0 },
+  { letter: "B", title: "Hoe doe ik erbij tot 100?", emoji: "➕", from: 1, to: 1 },
+  { letter: "C", title: "Hoe doe ik eraf tot 100?", emoji: "➖", from: 2, to: 2 },
+  { letter: "D", title: "Hoe reken ik over het tiental heen?", emoji: "🧮", from: 3, to: 3 },
+  { letter: "E", title: "Hoe reken ik in de winkel?", emoji: "🛒", from: 4, to: 4 },
 ];
 
 let zaad = 100;

@@ -9,10 +9,10 @@ import { vulSteun } from "./nieuwkomersHelpers.js";
 import { voegFoutUitlegToe, zinReden } from "./nieuwkomersFoutUitleg.js";
 const stepEmojis = ["🙋", "🏫", "🤝", "💬"];
 const chapters = [
-  { letter: "A", title: "Vragen aan de juf of meester", emoji: "🙋", from: 0, to: 0 },
-  { letter: "B", title: "Op school", emoji: "🏫", from: 1, to: 1 },
-  { letter: "C", title: "Met andere kinderen", emoji: "🤝", from: 2, to: 2 },
-  { letter: "D", title: "Hoe voel je je?", emoji: "💬", from: 3, to: 3 },
+  { letter: "A", title: "Hoe vraag ik iets aan de juf of meester?", emoji: "🙋", from: 0, to: 0 },
+  { letter: "B", title: "Waar is alles op school?", emoji: "🏫", from: 1, to: 1 },
+  { letter: "C", title: "Hoe speel ik mee met andere kinderen?", emoji: "🤝", from: 2, to: 2 },
+  { letter: "D", title: "Hoe zeg ik hoe ik me voel?", emoji: "💬", from: 3, to: 3 },
 ];
 
 const v = (q, options, answer, hint, steun, extra = {}) => ({ q, options, answer, wrongHints: options.map((_, i) => (i === answer ? null : hint)), steun, ...extra });

@@ -7,10 +7,10 @@
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
 const stepEmojis = ["🏫", "🏠", "🧍", "✋"];
 const chapters = [
-  { letter: "A", title: "Op school", emoji: "🏫", from: 0, to: 0 },
-  { letter: "B", title: "Thuis en eten", emoji: "🏠", from: 1, to: 1 },
-  { letter: "C", title: "Lichaam en kleuren", emoji: "🧍", from: 2, to: 2 },
-  { letter: "D", title: "Doe-woorden in de klas", emoji: "✋", from: 3, to: 3 },
+  { letter: "A", title: "Welke woorden hoor ik op school?", emoji: "🏫", from: 0, to: 0 },
+  { letter: "B", title: "Welke woorden hoor ik thuis en bij het eten?", emoji: "🏠", from: 1, to: 1 },
+  { letter: "C", title: "Hoe heten mijn lichaam en de kleuren?", emoji: "🧍", from: 2, to: 2 },
+  { letter: "D", title: "Wat moet ik doen in de klas?", emoji: "✋", from: 3, to: 3 },
 ];
 
 // 🌍 Woordenboekje voor het vertaalknopje bij elk ANTWOORD (Mark 24 sep 2026: hij tikte op

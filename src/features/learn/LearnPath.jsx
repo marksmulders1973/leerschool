@@ -2072,7 +2072,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
       </div>
 
       <div style={{ padding: "0 14px 32px" }}>
-        {path.chapters.map((ch) => {
+        {path.chapters.map((ch, chIdx) => {
           // Defensief: sommige paden hebben hoofdstuk-indexen die voorbij de
           // laatste stap wijzen (stappen ooit gesnoeid zonder chapters bij te
           // werken) — 12 paden gevonden in audit 2026-06-12. Clamp op de
@@ -2104,30 +2104,26 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                   background: allDone ? "rgba(0,200,83,0.06)" : "rgba(255,255,255,0.02)",
                 }}
               >
-                <div
-                  style={{
-                    width: 32,
-                    height: 32,
-                    borderRadius: 8,
-                    background: allDone ? C.good : C.accent,
-                    color: "var(--color-text-strong)",
-                    display: "flex",
-                    alignItems: "center",
-                    justifyContent: "center",
-                    fontFamily: "var(--font-display)",
-                    fontWeight: 700,
-                    fontSize: 16,
-                  }}
-                >
-                  {ch.letter}
-                </div>
+                {/* Mark 25 sep 2026: "A · 🙋 Vragen aan de juf · 0/1 delen" zei een kind niets.
+                    Nu: "Hoofdstuk 1", de titel (zonder emoji), en wat je gaat doen: aantal vragen,
+                    minuten (zelfde schatting als de deel-balk) en of het klaar is. */}
                 <div style={{ flex: 1 }}>
-                  <SteunTekst nl={ch.title}><div style={{ fontFamily: "var(--font-display)", fontSize: 16, color: "var(--color-text-strong)" }}>
-                    {ch.emoji} {stripInternalCodes(ch.title)}
-                  </div></SteunTekst>
-                  <div style={{ fontSize: 12, color: C.muted }}>
-                    {doneCount}/{stepsInCh.length} delen{allDone ? " — voltooid" : ""}
+                  <div style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: 0.3, color: allDone ? C.good : C.accent, textTransform: "uppercase", marginBottom: 2 }}>
+                    Hoofdstuk {chIdx + 1}
                   </div>
+                  <SteunTekst nl={ch.title}><div style={{ fontFamily: "var(--font-display)", fontSize: 17, lineHeight: 1.3, color: "var(--color-text-strong)" }}>
+                    {stripInternalCodes(ch.title)}
+                  </div></SteunTekst>
+                  {(() => {
+                    const aantalVragen = stepsInCh.reduce((n, i) => n + (path.steps[i]?.checks?.length || 0), 0);
+                    const minuten = stepsInCh.reduce((n, i) => n + Math.max(1, Math.round(0.7 + (path.steps[i]?.checks?.length || 1) * 0.5)), 0);
+                    const stand = allDone ? "✓ klaar" : doneCount > 0 ? "bezig" : "nog niet gedaan";
+                    return (
+                      <div style={{ fontSize: 12.5, color: allDone ? C.good : C.muted, marginTop: 2 }}>
+                        {aantalVragen > 0 ? `${aantalVragen} ${aantalVragen === 1 ? "vraag" : "vragen"} · ` : ""}± {minuten} {minuten === 1 ? "minuut" : "minuten"} · {stand}
+                      </div>
+                    );
+                  })()}
                 </div>
               </div>
               {(() => {
@@ -2184,6 +2180,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                   const done = completedSteps.has(idx);
                   const isNext = idx === firstUnfinishedIdx;
                   const wrongCount = wrongPerStep?.[idx] || 0;
+                  const enkelDeel = stepsInCh.length === 1;
                   return (
                     <button
                       key={idx}
@@ -2210,11 +2207,15 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                       <span style={{ fontSize: 16, width: 20, textAlign: "center" }}>
                         {done ? "✅" : isNext ? "🔵" : "⚪"}
                       </span>
-                      <span style={{ color: C.muted, minWidth: 22, fontSize: 12, fontWeight: 700 }}>
-                        {idx + 1}.
-                      </span>
-                      <span style={{ flex: 1, color: done ? C.muted : "var(--color-text-strong)", fontWeight: isNext ? 700 : 500 }}>
-                        {s.title}
+                      {/* Eén deel in dit hoofdstuk? Dan herhaalt de deel-titel de hoofdstuktitel —
+                          toon een duidelijke knop i.p.v. "1. <zelfde titel>" (Mark 25 sep 2026). */}
+                      {!enkelDeel && (
+                        <span style={{ color: C.muted, minWidth: 22, fontSize: 12, fontWeight: 700 }}>
+                          {idx + 1}.
+                        </span>
+                      )}
+                      <span style={{ flex: 1, color: done ? C.muted : "var(--color-text-strong)", fontWeight: isNext || enkelDeel ? 700 : 500 }}>
+                        {enkelDeel ? (done ? "Nog een keer" : "Begin") : s.title}
                       </span>
                       {wrongCount > 0 && (
                         <span
@@ -2233,7 +2234,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                           🔁 {wrongCount}
                         </span>
                       )}
-                      {s.emoji && (
+                      {s.emoji && !enkelDeel && (
                         <span style={{ fontSize: 16, marginLeft: 4, opacity: done ? 0.55 : 0.95 }}>
                           {s.emoji}
                         </span>

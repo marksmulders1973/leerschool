@@ -11,9 +11,9 @@ import { voegFoutUitlegToe, rekentaalReden } from "./nieuwkomersFoutUitleg.js";
 
 const stepEmojis = ["⚖️", "➕", "✂️"];
 const chapters = [
-  { letter: "A", title: "Meer, minder, evenveel", emoji: "⚖️", from: 0, to: 0 },
-  { letter: "B", title: "Samen, weg, over", emoji: "➕", from: 1, to: 1 },
-  { letter: "C", title: "Keer en verdelen", emoji: "✂️", from: 2, to: 2 },
+  { letter: "A", title: "Wat betekent meer, minder en evenveel?", emoji: "⚖️", from: 0, to: 0 },
+  { letter: "B", title: "Wat betekent samen, weg en over?", emoji: "➕", from: 1, to: 1 },
+  { letter: "C", title: "Wat betekent keer en verdelen?", emoji: "✂️", from: 2, to: 2 },
 ];
 
 const v = (q, options, answer, hint, extra = {}) => ({ q, options, answer, wrongHints: options.map((_, i) => (i === answer ? null : hint)), ...extra });

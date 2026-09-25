@@ -2949,7 +2949,29 @@ const NIEUWKOMERS_STEUN = {
   "ar": "وزّع: واحدة لك، واحدة لك، واحدة لك… حتى ينتهي كل شيء.",
   "uk": "Роздавай: одне тобі, одне тобі, одне тобі… поки все не закінчиться.",
   "tr": "Dağıt: biri sana, biri sana, biri sana… hepsi bitene kadar."
- }
+ },
+ // Hoofdstuktitels als vraag (Mark 25 sep 2026: "Hoofdstuk 1 — hoe stel ik vragen aan de juf of meester").
+ "Hoe vraag ik iets aan de juf of meester?": {"en": "How do I ask the teacher something?", "ar": "كيف أسأل المعلّم أو المعلّمة عن شيء؟", "uk": "Як мені щось запитати в учителя чи вчительки?", "tr": "Öğretmene nasıl bir şey sorarım?"},
+ "Waar is alles op school?": {"en": "Where is everything at school?", "ar": "أين يوجد كل شيء في المدرسة؟", "uk": "Де що є в школі?", "tr": "Okulda her şey nerede?"},
+ "Hoe speel ik mee met andere kinderen?": {"en": "How do I join in with other children?", "ar": "كيف ألعب مع الأطفال الآخرين؟", "uk": "Як мені гратися з іншими дітьми?", "tr": "Diğer çocuklarla nasıl oynarım?"},
+ "Hoe zeg ik hoe ik me voel?": {"en": "How do I say how I feel?", "ar": "كيف أقول ما أشعر به؟", "uk": "Як мені сказати, що я відчуваю?", "tr": "Nasıl hissettiğimi nasıl söylerim?"},
+ "Welke woorden hoor ik op school?": {"en": "Which words do I hear at school?", "ar": "ما الكلمات التي أسمعها في المدرسة؟", "uk": "Які слова я чую в школі?", "tr": "Okulda hangi kelimeleri duyarım?"},
+ "Welke woorden hoor ik thuis en bij het eten?": {"en": "Which words do I hear at home and at meals?", "ar": "ما الكلمات التي أسمعها في البيت وعند الأكل؟", "uk": "Які слова я чую вдома і під час їжі?", "tr": "Evde ve yemekte hangi kelimeleri duyarım?"},
+ "Hoe heten mijn lichaam en de kleuren?": {"en": "What are the names of my body parts and the colours?", "ar": "ما أسماء أجزاء جسمي والألوان؟", "uk": "Як називаються частини тіла і кольори?", "tr": "Vücudumun ve renklerin adları ne?"},
+ "Wat moet ik doen in de klas?": {"en": "What do I have to do in class?", "ar": "ماذا يجب أن أفعل في الصف؟", "uk": "Що мені треба робити в класі?", "tr": "Sınıfta ne yapmam gerekiyor?"},
+ "Wat betekent meer, minder en evenveel?": {"en": "What do more, less and the same mean?", "ar": "ماذا تعني أكثر وأقل ومتساوٍ؟", "uk": "Що означає більше, менше й однаково?", "tr": "Daha çok, daha az ve eşit ne demek?"},
+ "Wat betekent samen, weg en over?": {"en": "What do together, away and left over mean?", "ar": "ماذا تعني معًا وذهب وبقي؟", "uk": "Що означає разом, забрали й залишилося?", "tr": "Toplam, gitti ve kalan ne demek?"},
+ "Wat betekent keer en verdelen?": {"en": "What do times and sharing mean?", "ar": "ماذا يعني الضرب والتقسيم؟", "uk": "Що означає помножити й поділити?", "tr": "Çarpı ve paylaştırmak ne demek?"},
+ "Hoe tel ik tot 20?": {"en": "How do I count to 20?", "ar": "كيف أعدّ حتى 20؟", "uk": "Як мені рахувати до 20?", "tr": "20'ye kadar nasıl sayarım?"},
+ "Hoe doe ik erbij tot 10?": {"en": "How do I add up to 10?", "ar": "كيف أجمع حتى 10؟", "uk": "Як мені додавати до 10?", "tr": "10'a kadar nasıl toplarım?"},
+ "Hoe doe ik eraf tot 10?": {"en": "How do I take away up to 10?", "ar": "كيف أطرح حتى 10؟", "uk": "Як мені віднімати до 10?", "tr": "10'a kadar nasıl çıkarırım?"},
+ "Hoe reken ik over de 10 heen?": {"en": "How do I calculate past 10?", "ar": "كيف أحسب بعد العدد 10؟", "uk": "Як мені рахувати через 10?", "tr": "10'u geçerek nasıl hesaplarım?"},
+ "Hoe maak ik een som uit de klas?": {"en": "How do I solve a sum from class?", "ar": "كيف أحلّ مسألة من الصف؟", "uk": "Як мені розв'язати задачу з класу?", "tr": "Sınıftan bir işlemi nasıl yaparım?"},
+ "Wat zijn tientallen en eenheden?": {"en": "What are tens and ones?", "ar": "ما العشرات والآحاد؟", "uk": "Що таке десятки й одиниці?", "tr": "Onluklar ve birlikler nedir?"},
+ "Hoe doe ik erbij tot 100?": {"en": "How do I add up to 100?", "ar": "كيف أجمع حتى 100؟", "uk": "Як мені додавати до 100?", "tr": "100'e kadar nasıl toplarım?"},
+ "Hoe doe ik eraf tot 100?": {"en": "How do I take away up to 100?", "ar": "كيف أطرح حتى 100؟", "uk": "Як мені віднімати до 100?", "tr": "100'e kadar nasıl çıkarırım?"},
+ "Hoe reken ik over het tiental heen?": {"en": "How do I calculate past a ten?", "ar": "كيف أحسب بعد العشرة؟", "uk": "Як мені рахувати через десяток?", "tr": "Onluğu geçerek nasıl hesaplarım?"},
+ "Hoe reken ik in de winkel?": {"en": "How do I calculate in the shop?", "ar": "كيف أحسب في المتجر؟", "uk": "Як мені рахувати в магазині?", "tr": "Markette nasıl hesap yaparım?"}
 };
 
 export default NIEUWKOMERS_STEUN;
