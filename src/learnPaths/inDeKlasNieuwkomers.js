@@ -6,6 +6,7 @@
 
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
 import { vulSteun } from "./nieuwkomersHelpers.js";
+import { voegFoutUitlegToe, zinReden } from "./nieuwkomersFoutUitleg.js";
 const stepEmojis = ["🙋", "🏫", "🤝", "💬"];
 const chapters = [
   { letter: "A", title: "Vragen aan de juf of meester", emoji: "🙋", from: 0, to: 0 },
@@ -146,6 +147,7 @@ const steps = [
   { title: "Hoe voel je je?", explanation: "Zeggen hoe je je **voelt** mag **altijd**.\n\n**Ik ben** blij · bang · boos · moe · verdrietig.\n**Ik heb** pijn · honger.\n**Ik voel me niet goed.**\n\nDe juf of meester wil het weten en helpt je.", checks: deel4 },
 ];
 vulSteun(steps);
+voegFoutUitlegToe(steps, zinReden); // fout antwoord: wanneer zeg je die zin wél (Mark 25 sep)
 steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const inDeKlasNieuwkomers = {

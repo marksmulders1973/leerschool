@@ -4,6 +4,7 @@
 // zinnen, elke stap begint met uitleg in drie stappen. Vaste sommen (geen toeval).
 
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
+import { voegFoutUitlegToe, rekenReden } from "./nieuwkomersFoutUitleg.js";
 const stepEmojis = ["🔟", "➕", "➖", "🧮", "🛒"];
 
 const chapters = [
@@ -153,6 +154,7 @@ const steps = [
   { title: "Over het tiental heen", explanation: "38 + 5 gaat over de 40 heen. Dat doen we in **twee stapjes**.\n\nStap 1: maak het tiental vol. 38 + 2 = 40.\nStap 2: de rest erbij. 40 + 3 = **43**.\n\nBij eraf: ga eerst naar het ronde getal, dan de rest eraf.", checks: overTiental },
   { title: "Sommen uit de winkel", explanation: "Sommen met **woorden** en **geld**.\n\n**Samen** = plus. **Uitgeven, weg, over** = min.\n\nSchrijf de som op. Reken in stapjes.", checks: winkel },
 ];
+voegFoutUitlegToe(steps, rekenReden); // fout antwoord: waarom klopt het niet (Mark 25 sep)
 steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const rekenenTot100Nieuwkomers = {

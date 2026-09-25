@@ -7,6 +7,7 @@
 // zodat een kind bij herhalen dezelfde sommen ziet en de leerkracht weet wat er staat.
 
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
+import { voegFoutUitlegToe, rekenReden } from "./nieuwkomersFoutUitleg.js";
 const stepEmojis = ["🔢", "➕", "➖", "🔟", "🎒"];
 
 const chapters = [
@@ -155,6 +156,7 @@ const steps = [
   { title: "Over de 10 heen", explanation: "8 + 5 is meer dan 10. Dat doen we in **twee stapjes**.\n\nStap 1: maak 10 vol. 8 + 2 = 10.\nStap 2: de rest erbij. 10 + 3 = **13**.\n\nBij eraf: ga eerst naar 10, dan de rest eraf.", checks: over10 },
   { title: "Sommen uit de klas", explanation: "Nu sommen met **woorden**.\n\nLees goed. **Komen er dingen bij?** Dan plus. **Gaan er dingen weg?** Dan min.\n\nSchrijf de som op. Reken uit.", checks: klasSommen },
 ];
+voegFoutUitlegToe(steps, rekenReden); // fout antwoord: waarom klopt het niet (Mark 25 sep)
 steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const rekenenTot20Nieuwkomers = {

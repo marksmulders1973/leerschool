@@ -7,6 +7,7 @@
 
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
 import { vulSteun } from "./nieuwkomersHelpers.js";
+import { voegFoutUitlegToe, rekentaalReden } from "./nieuwkomersFoutUitleg.js";
 
 const stepEmojis = ["⚖️", "➕", "✂️"];
 const chapters = [
@@ -79,6 +80,7 @@ const steps = vulSteun([
   { title: "Samen, weg, over", explanation: "Rekenwoorden zeggen welke som je maakt.\n\n**Samen** en **erbij** = plus (+).\n**Weg**, **eraf** en **over** = min (−).\n\nZoek eerst het rekenwoord. Dan weet je de som.", checks: samenWegOver },
   { title: "Keer en verdelen", explanation: "**Keer** (×) = groepjes van hetzelfde. 3 keer 2 = 2 + 2 + 2.\n\n**Eerlijk verdelen** = iedereen krijgt evenveel.\n\n**De helft** = in twee gelijke stukken.", checks: keerVerdelen },
 ]);
+voegFoutUitlegToe(steps, rekentaalReden); // fout antwoord: waarom klopt het niet (Mark 25 sep)
 steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const rekentaalNieuwkomers = {
