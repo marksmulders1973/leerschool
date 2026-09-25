@@ -23,6 +23,8 @@ export const SNELKOPPELINGEN = [
     woorden: ["samen", "samen bouwen", "parkcode", "vrienden", "klas park", "samen spelen", "multiplayer", "code park"] },
   { id: "klas", emoji: "🏫", label: "Voor de klas", uitleg: "Zet leerkwartier.app/klas op het bord: meteen 5 vragen op groepsniveau, zonder inloggen. Leerkracht maakt daarna een klascode.", pad: "/klas",
     woorden: ["klas", "voor de klas", "digibord", "bord", "schoolbord", "juf", "meester", "klassikaal", "les", "klascode"] },
+  { id: "digibord-klassikaal", emoji: "🙋", label: "Klassikaal op het digibord (handen tellen)", uitleg: "Maak een toets, zet hem op het digibord en tel per antwoord de handen of A-B-C-D-kaartjes: je ziet meteen hoeveel procent van de klas het goed had.", pad: "/leerkracht",
+    woorden: ["handen", "handen opsteken", "abcd", "a b c d", "kaartjes", "stemkaarten", "klassikaal", "digibord toets", "procent goed", "hele klas"] },
   { id: "imposter", emoji: "🎮", label: "Wie is de bedrieger?", uitleg: "Game in het park: taken zijn sommen, één speler doet alsof. ☰ → 🎮.", pad: "/dierentuin",
     woorden: ["bedrieger", "wie is de bedrieger", "imposter", "impostor", "wie is de imposter", "game", "among us", "verrader", "bots", "spelleider"] },
   { id: "schooladvies", emoji: "🎓", label: "Voorlopig schooladvies", uitleg: "kijkmoment groep 7, tl/havo/vwo, data en wat je kunt doen", pad: "/voorlopig-schooladvies.html",

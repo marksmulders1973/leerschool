@@ -53,6 +53,7 @@ const TeacherHome = lazy(() => import("./features/teacher/TeacherHome.jsx"));
 const ClassManager = lazy(() =>
   import("./features/teacher/TeacherComponents.jsx").then((m) => ({ default: m.ClassManager }))
 );
+const DigibordKlassikaal = lazy(() => import("./features/teacher/DigibordKlassikaal.jsx"));
 const CreateQuiz = lazy(() =>
   import("./features/teacher/TeacherComponents.jsx").then((m) => ({ default: m.CreateQuiz }))
 );
@@ -292,6 +293,8 @@ export default function App() {
     try { const g = parseInt(new URLSearchParams(window.location.search).get("g"), 10); return [6, 7, 8].includes(g) ? g : 7; } catch { return 7; }
   });
   const [klasRonde, setKlasRonde] = useState(0);
+  // 🙋 Klassikaal op het digibord (25 sep 2026): welke toets + vragen staan klaar.
+  const [digibordToets, setDigibordToets] = useState(null);
   // F12 (Fable-review 2 sep 2026): een onbekend pad (/dit-bestaat-niet) landde
   // stil op de homepage mét de foute URL in de adresbalk. Nu: URL naar "/" en
   // één keer een vriendelijke melding. Statische .html-pagina's en de
@@ -1843,6 +1846,7 @@ export default function App() {
           onLogin={loginWithConsent}
           quizzes={quizzes}
           classes={classes}
+          onDigibord={(q, vragen) => { setDigibordToets({ quiz: q, vragen }); setPage("digibord"); try { window.scrollTo({ top: 0 }); } catch { /* */ } }}
           onKlaarzetten={(linkId, studentName) => startKlaarzetten(linkId, studentName, "leraar")}
           onOpenLes={(id) => {
             setActiveLearnPathId(id);
@@ -1882,6 +1886,11 @@ export default function App() {
             saveQuiz({ id: copy.id, code: copy.code, quiz: copy, userId: authUser?.id });
           }}
         />
+      )}
+      {page === "digibord" && digibordToets && (
+        <Suspense fallback={null}>
+          <DigibordKlassikaal quiz={digibordToets.quiz} vragen={digibordToets.vragen} onStop={() => setPage("teacher-home")} />
+        </Suspense>
       )}
       {page === "class-manager" && (
         <ClassManager

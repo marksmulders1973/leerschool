@@ -10,7 +10,7 @@ import { shuffleOpties } from "../../shared/shuffleOpties.js";
 import LeraarKlaarzet from "./LeraarKlaarzet.jsx";
 import KlasParkcode from "./KlasParkcode.jsx";
 
-export default function TeacherHome({ userName, authUser, onLogin, quizzes, classes, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onKlaarzetten, onOpenLes, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
+export default function TeacherHome({ userName, authUser, onLogin, quizzes, classes, onDigibord, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onKlaarzetten, onOpenLes, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
   const [expandedQuiz, setExpandedQuiz] = useState(null);
   // Welkom-paneel — toont nieuwe leerkrachten wat de app voor hun klas kan.
@@ -554,6 +554,14 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
                     })()}
                     <div style={{ ...styles.quizCardActions, flexWrap: "wrap" }}>
                       <button style={styles.smallButton} onClick={() => onStartQuiz(q)}>▶️ Start</button>
+                      {onDigibord && (
+                        <button style={{ ...styles.smallButton, background: "#00897b", boxShadow: "0 2px 8px rgba(0,137,123,0.3)" }}
+                          title="Op het digibord: tel per antwoord de handen, zie hoeveel procent van de klas het goed had"
+                          onClick={() => onDigibord(q, ((q.preGeneratedQuestions?.length > 0)
+                            ? q.preGeneratedQuestions.slice(0, q.questionCount || 10)
+                            : shuffle(SAMPLE_QUESTIONS[q.subject]?.[q.level] || []).slice(0, q.questionCount || 10)
+                          ).map((v) => shuffleOpties(v)))}>🙋 Klassikaal op het digibord</button>
+                      )}
                       <button style={styles.smallButtonAlt} onClick={() => navigator.clipboard?.writeText(q.code)}>📋 Code</button>
                       <button style={{ ...styles.smallButton, background: "#5c6bc0", boxShadow: "0 2px 8px rgba(92,107,192,0.3)" }} onClick={() => printToets(q)}>🖨️ Print</button>
                       <button style={{
