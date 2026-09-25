@@ -11,13 +11,13 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | N1 | **Woordenpad op telefoon doorlopen**: 20 Nederlandse vragen, fout antwoord → "Nee, een tas is iets om je spullen in te doen." (v716) | Mark | ⏳ |
 | N2 | **In de klas / Rekentaal / Rekenen tot 20 en 100**: nieuwe "Nee, …"-uitleg bij elk fout antwoord (247 stuks, v717) — steekproef van ~10 | Mark | ⏳ |
 | N3 | **Herhaalkaart op /nieuwkomers** (morgen = eerste echte dag): toont hij verschillende woorden i.p.v. steeds "tafel"? (fix v707) | Claude checkt 26 sep | ⏳ |
-| N4 | **Vraagscherm "Onderwerp: …" klein + vraag groot** (v715) geldt voor ÁLLE leerpaden → steekproef in een gewoon Doorstroomtoets-pad | Claude | ⏳ |
+| N4 | ✅ 25 sep live gecheckt (Breuken): "Onderwerp: …" klein, vraag groot | — | ✅ |
 | N5 | **Vertaalfouten die bewust bleven staan** ("alleen Nederlands"): Arabisch "2 kinderen" (tweevoud), Engels "I have hunger/pain", Turkse kapstok-hint verklapt het antwoord. Fixen of laten? | Mark beslist | ❓ |
 | N6 | **Twijfelvragen In de klas**: "De bel gaat" (bel = ook naar huis), "Je jas hangt aan de…" (deur kan ook) | Mark beslist | ❓ |
-| N7 | **Twee "Deel"-tellers boven elkaar**: kwartierbalk "Deel 1 van 3" en pad "Deel 1 / 4" — verwarrend | Claude voorstel | ⏳ |
+| N7 | ✅ v722: kwartier-balk zegt minuten ("Jouw kwartier · nog 5 min", "⭐ 5 minuten gehaald") i.p.v. "Deel 1 van 3" | — | ✅ |
 | N10 | **Meten nieuwkomers (v720)**: `docs/sql/nieuwkomers.sql` elke dag in het rapport — welke code, via code of link, taalkeuze, vertaal-tikken per taal (vraag/antwoord), onderdelen, oefenen per pad + steuntaal. Leerpad-antwoorden zijn nu ook een event → "sommen" stijgt vanaf 25 sep (breuk in de reeks) | Claude, dagelijks | ⏳ |
 | N9 | **Overzicht "Hoofdstuk 1 · Hoe vraag ik iets aan de juf of meester?"** + "5 vragen · ± 3 minuten" + Begin-knop (v719, alle leerpaden) — op je telefoon bekijken | Mark | ⏳ |
-| N8 | **Rekentaal-hint verklapt**: "2 keer = twee keer het getal 4" noemt bijna het antwoord | Claude | ⏳ |
+| N8 | ✅ v722: rekentaal-hint "2 keer = twee keer het getal 4" → "Kijk: welk getal, en hoe vaak?" | — | ✅ |
 
 ## B. Klas & digibord (v684, v712-v714)
 
@@ -29,6 +29,8 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | D4 | **Promotie**: niemand weet dat /klas + digibord bestaan (Mark zelf ook niet). Zin + schermafbeelding in de volgende scholenmail; leerkrachtflyer juf-start-A4 bijwerken | Claude concept → Mark go | ⏳ |
 | D5 | **Stichting OOB Bonaire** probeert /klas met één klas — wachten op hun ervaring (antwoord verstuurd 25 sep) | wachten | ⏳ |
 | D8 | **Kant-en-klare setjes** op leerkwartier.app/klassikaal (v718): groep 6/7/8 mix, rekenen, taal + 3 taalklas-setjes; ook via /klas "Klassikaal met kaartjes". Eén setje echt in de klas proberen | Mark | ⏳ |
+| D9 | **België** (25 sep): leerkwartier.be/vlaanderen live (v721); 3 verzendklare mails in docs/outreach/BELGIE-*.md — 62 scholen met taalheldklas, 7 voedselbanken, 50 Huizen van het Kind. Wacht op tekst-akkoord Mark; voorstel eerst test 20 scholen + 7 voedselbanken | Mark go | ⏳ |
+| D10 | ✅ Verzendscript: dagrem 80 bulkmails over alle docs samen (v722, getest) | — | ✅ |
 | D6 | **Cijfers**: `docs/sql/klasgolf.sql` query (3) QR per klas + events `digibord_*` (incl. `digibord_setje`, `klas_naar_klassikaal`) in het dagrapport meenemen | Claude, dagelijks | ⏳ |
 | D7 | ✅ Link `leerkwartier.app/klas.` (punt uit mail) stuurt door — getest 25 sep (v712) | — | ✅ |
 
@@ -41,5 +43,6 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 5. **Uitslagen per klas bewaren in het account** (nu alleen op dat ene apparaat): dan ziet de juf de groei over weken — en is het een argument voor de schoollicentie.
 
 ## Klaar
+- 25 sep: N4, N7, N8, D10 ✅
 - 25 sep: D7 doorverwijzing /klas. ✅
 - 25 sep: D1 QR-hoek in productie getest ✅
