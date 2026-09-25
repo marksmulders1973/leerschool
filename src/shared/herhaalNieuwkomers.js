@@ -22,11 +22,14 @@ function schrijf(data) {
 }
 
 // Vanuit LearnPath, bij de eerste poging op een vraag in een nieuwkomerpad.
-export function noteerAntwoord(padId, stap, q, goed) {
+// `antwoord` (tekst van het goede antwoord) hoort bij de sleutel: in het Woordenpad hebben
+// alle 20 vragen dezelfde vraagtekst ("Welk Nederlands woord is dit?"), zonder antwoord
+// vielen ze samen tot één doosje dat steeds de tafel-vraag toonde (fix 25 sep 2026).
+export function noteerAntwoord(padId, stap, q, goed, antwoord) {
   if (!padId || typeof q !== "string") return;
   const data = lees();
-  const k = `${padId}|${q}`;
-  if (!data[k]) data[k] = { pad: padId, stap, q, doos: 1, due: vandaag(1) };
+  const k = antwoord ? `${padId}|${q}|${antwoord}` : `${padId}|${q}`;
+  if (!data[k]) data[k] = { pad: padId, stap, q, antwoord, doos: 1, due: vandaag(1) };
   else if (!goed) Object.assign(data[k], { doos: 1, due: vandaag(1) });
   schrijf(data);
 }

@@ -28,14 +28,15 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
       for (const it of items) {
         const p = paden[it.pad];
         const alle = (p?.steps || []).flatMap((s) => s.checks || []);
-        const c = alle.find((x) => x.q === it.q && Array.isArray(x.options));
+        const c = alle.find((x) => x.q === it.q && Array.isArray(x.options) && (!it.antwoord || x.options[x.answer] === it.antwoord));
         if (!c) continue;
         const volgorde = schud(c.options.map((_, i) => i));
         lijst.push({ key: it.key, check: { ...c, options: volgorde.map((i) => c.options[i]), answer: volgorde.indexOf(c.answer), wrongHints: volgorde.map((i) => c.wrongHints?.[i]) } });
       }
-      const steun = Object.values(paden).find((p) => p?.steunTeksten)?.steunTeksten;
+      // Vertalingen van álle geladen paden (niet alleen de eerste): elk pad heeft eigen teksten.
+      const steun = Object.values(paden).map((p) => p?.steunTeksten).filter(Boolean);
       if (weg) return;
-      setMap(maakSteunMap(UI_STEUN, steun));
+      setMap(maakSteunMap(UI_STEUN, ...steun));
       setVragen(lijst);
       try { track("nk_herhaal_start", { aantal: lijst.length }); } catch { /* */ }
     })();
@@ -95,7 +96,7 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
               <div style={{ fontWeight: 900, fontSize: 17, color: isGoed ? "#1b7f3b" : "#b3261e" }}>{isGoed ? "✅ Dat is juist!" : "❌ Nog niet helemaal"}</div>
             </SteunTekst>
             {!isGoed && c.wrongHints?.[gekozen] && (
-              <SteunTekst nl={c.wrongHints[gekozen]}><div style={{ fontSize: 15 }}>{c.wrongHints[gekozen]}</div></SteunTekst>
+              <SteunTekst nl={c.wrongHints[gekozen]}><div style={{ fontSize: 15 }}><MdInline text={c.wrongHints[gekozen]} /></div></SteunTekst>
             )}
             <SteunTekst nl="Volgende" knop><button type="button" onClick={volgende} style={knop(true)}>Volgende ▶</button></SteunTekst>
           </>

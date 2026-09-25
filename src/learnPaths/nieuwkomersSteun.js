@@ -166,7 +166,7 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Ти хочеш почути це ще раз.",
   "tr": "Bir kez daha duymak istiyorsun."
  },
- "Je wilt weten wat het woord is.": {
+ "Je wilt weten wat het woord betekent.": {
   "en": "You want to know what the word is.",
   "ar": "تريد أن تعرف ما هي الكلمة.",
   "uk": "Ти хочеш знати, що це за слово.",
@@ -448,11 +448,11 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Слова — твої перші нідерландські слова (новенькі)",
   "tr": "Kelimeler — ilk Felemenkçe kelimelerin (yeni gelenler)"
  },
- "Vijftien woorden voor school, thuis, eten, lichaam en kleuren. Het woord staat in jouw taal; jij kiest het Nederlandse woord. ~10 min.": {
-  "en": "Fifteen words for school, home, food, body and colours. The word is in your language; you pick the Dutch word. ~10 min.",
-  "ar": "خمس عشرة كلمة للمدرسة والبيت والطعام والجسم والألوان. الكلمة مكتوبة بلغتك؛ وأنت تختار الكلمة الهولندية. ~10 دقائق.",
-  "uk": "П'ятнадцять слів про школу, дім, їжу, тіло і кольори. Слово написане твоєю мовою; ти вибираєш нідерландське слово. ~10 хв.",
-  "tr": "Okul, ev, yemek, vücut ve renkler için on beş kelime. Kelime senin dilinde yazar; sen Felemenkçe kelimeyi seçersin. ~10 dk."
+ "Twintig woorden voor school, thuis, eten, lichaam, kleuren en doe-woorden. Het woord staat in jouw taal; jij kiest het Nederlandse woord. ~12 min.": {
+  "en": "Twenty words for school, home, food, body, colours and action words. The word is in your language; you pick the Dutch word. ~12 min.",
+  "ar": "عشرون كلمة للمدرسة والبيت والطعام والجسم والألوان وكلمات الأفعال. الكلمة مكتوبة بلغتك؛ وأنت تختار الكلمة الهولندية. ~12 دقيقة.",
+  "uk": "Двадцять слів про школу, дім, їжу, тіло, кольори і дії. Слово написане твоєю мовою; ти вибираєш нідерландське слово. ~12 хв.",
+  "tr": "Okul, ev, yemek, vücut, renkler ve eylemler için yirmi kelime. Kelime senin dilinde yazar; sen Felemenkçe kelimeyi seçersin. ~12 dk."
  },
  "Thuis en eten": {
   "en": "Home and food",
@@ -2380,7 +2380,7 @@ const NIEUWKOMERS_STEUN = {
   "uk": "В Алі 5 кульок. У Сема 3 кульки. У кого більше?",
   "tr": "Ali'nin 5 bilyesi var. Sam'in 3 bilyesi var. Kimde daha çok var?"
  },
- "Meer = het grootste getal. Welk getal is groter: 5 of 3?": {
+ "Meer = het grotere getal. Welk getal is groter: 5 of 3?": {
   "en": "More = the biggest number. Which number is bigger: 5 or 3?",
   "ar": "أكثر (meer) = العدد الأكبر. أي عدد أكبر: 5 أو 3؟",
   "uk": "Більше = більше число. Яке число більше: 5 чи 3?",
@@ -2524,7 +2524,7 @@ const NIEUWKOMERS_STEUN = {
   "uk": "У Ліни 2 яблука. У Тома 6 яблук. У кого менше?",
   "tr": "Lina'nın 2 elması var. Tom'un 6 elması var. Kimde daha az var?"
  },
- "Minder = het kleinste getal. Welk getal is kleiner: 2 of 6?": {
+ "Minder = het kleinere getal. Welk getal is kleiner: 2 of 6?": {
   "en": "Less = the smallest number. Which number is smaller: 2 or 6?",
   "ar": "أقل (minder) = العدد الأصغر. أي عدد أصغر: 2 أو 6؟",
   "uk": "Менше = менше число. Яке число менше: 2 чи 6?",

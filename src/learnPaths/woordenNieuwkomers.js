@@ -1,6 +1,6 @@
 // Leerpad: Woorden — de eerste woorden in het Nederlands (nieuwkomers).
-// Gebouwd 24 sep 2026 voor het Nieuwkomer-pakket. 15 vragen in 3 delen (school,
-// thuis en eten, lichaam en kleuren). Geen plaatjes: het woord staat in de eigen
+// Gebouwd 24 sep 2026 voor het Nieuwkomer-pakket. 20 vragen in 4 delen (school,
+// thuis en eten, lichaam en kleuren, doe-woorden). Geen plaatjes: het woord staat in de eigen
 // steuntaal (`steun`: en/ar/uk/tr) en het kind kiest het Nederlandse woord.
 // Zonder gekozen taal staat Engels erbij. Elke stap begint met uitleg in drie stappen.
 
@@ -73,10 +73,26 @@ const WOORDENBOEK = {
 let zaad = 7;
 const rnd = () => { zaad = (zaad * 9301 + 49297) % 233280; return zaad / 233280; };
 const schud = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(rnd() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; } return a; };
+// Foutscherm-hint (Mark 25 sep 2026: "wat betekent dit, kijk naar het woord in jouw taal?" —
+// de oude hint herhaalde alleen de opdracht). Nu: welk woord je koos en wat dát betekent in
+// je eigen taal, zodat je ziet waaróm het niet past. Tekst hangt alleen af van het gekozen
+// woord (niet van de vraag), dus één vertaling per woord klopt in elke vraag.
+const HINT_STEUN = {};
+const foutHint = (o) => {
+  const t = WOORDENBOEK[o];
+  const nl = `Jij koos **${o}**. Dat is een ander woord. Probeer het nog eens.`;
+  if (t && !HINT_STEUN[nl]) HINT_STEUN[nl] = {
+    en: `You chose **${o}**. That means: ${t.en}. Try again.`,
+    ar: `اخترت **${o}**. معناها: ${t.ar}. حاول مرة أخرى.`,
+    uk: `Ти вибрав(-ла) **${o}**. Це означає: ${t.uk}. Спробуй ще раз.`,
+    tr: `**${o}** seçtin. Anlamı: ${t.tr}. Tekrar dene.`,
+  };
+  return nl;
+};
 const w = (goed, fout, steun, extra = {}) => {
   const opts = schud([goed, ...fout]);
   const answer = opts.indexOf(goed);
-  return { q: "Welk Nederlands woord is dit?", options: opts, answer, wrongHints: opts.map((_, i) => (i === answer ? null : "Kijk naar het woord in jouw taal. Welk Nederlands woord past?")), steun, steunAltijd: true, steunOpties: Object.fromEntries(opts.map((o) => [o, WOORDENBOEK[o]]).filter(([, v]) => v)), ...extra };
+  return { q: "Welk Nederlands woord is dit?", options: opts, answer, wrongHints: opts.map((o, i) => (i === answer ? null : foutHint(o))), steun, steunAltijd: true, steunOpties: Object.fromEntries(opts.map((o) => [o, WOORDENBOEK[o]]).filter(([, v]) => v)), ...extra };
 };
 
 const school = [
@@ -175,11 +191,11 @@ const woordenNieuwkomers = {
   referentieNiveau: "voor 1F",
   sloThema: "Woordenschat — basiswoorden",
   prerequisites: [],
-  intro: "Vijftien woorden voor school, thuis, eten, lichaam en kleuren. Het woord staat in jouw taal; jij kiest het Nederlandse woord. ~10 min.",
+  intro: "Twintig woorden voor school, thuis, eten, lichaam, kleuren en doe-woorden. Het woord staat in jouw taal; jij kiest het Nederlandse woord. ~12 min.",
   triggerKeywords: ["nieuwkomers", "woorden", "woordenschat", "nt2", "eerste woorden", "nederlands leren", "de het"],
   chapters,
   steps,
-  steunTeksten: NIEUWKOMERS_STEUN, // alles tikbaar in de eigen taal (SteunTik.jsx)
+  steunTeksten: { ...NIEUWKOMERS_STEUN, ...HINT_STEUN }, // alles tikbaar in de eigen taal (SteunTik.jsx)
 };
 
 export default woordenNieuwkomers;

@@ -666,7 +666,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       sessionScoreRef.current.tries += 1;
       if (i === currentCheck.answer) sessionScoreRef.current.correct += 1;
       // 🔁 Nieuwkomerpaden: vraag in het herhaal-doosje (komt na 1, 2, 4, 8 dagen terug op /nieuwkomers).
-      if (path?.steunTeksten) noteerAntwoord(pathId, stepIdx, currentCheck.q, i === currentCheck.answer);
+      if (path?.steunTeksten) noteerAntwoord(pathId, stepIdx, currentCheck.q, i === currentCheck.answer, currentCheck.options?.[currentCheck.answer]);
     }
     // B6 niveau-indicatie: tel alleen de EERSTE poging op een referentieniveau-
     // getagde vraag (correct na 2× fout is geen beheersing — geen giswerk).

@@ -18,7 +18,7 @@ const chapters = [
 const v = (q, options, answer, hint, extra = {}) => ({ q, options, answer, wrongHints: options.map((_, i) => (i === answer ? null : hint)), ...extra });
 
 const vergelijken = [
-  v("Ali heeft 5 knikkers. Sam heeft 3 knikkers. Wie heeft meer?", ["Ali", "Sam", "Ze hebben evenveel."], 0, "Meer = het grootste getal. Welk getal is groter: 5 of 3?", { uitlegPad: {
+  v("Ali heeft 5 knikkers. Sam heeft 3 knikkers. Wie heeft meer?", ["Ali", "Sam", "Ze hebben evenveel."], 0, "Meer = het grotere getal. Welk getal is groter: 5 of 3?", { uitlegPad: {
     stappen: [
       { titel: "Meer", tekst: "**Meer** betekent: een groter aantal. 5 is **meer** dan 3." },
       { titel: "Minder", tekst: "**Minder** betekent: een kleiner aantal. 3 is **minder** dan 5." },
@@ -30,7 +30,7 @@ const vergelijken = [
     basiskennis: [{ onderwerp: "Truc", uitleg: "Tel allebei. Welk getal komt later bij het tellen? Dat is meer." }],
     niveaus: { basis: "Kijk welk getal groter is.", simpeler: "5 of 3: welk getal is groter?", nogSimpeler: "5 is meer dan 3." },
   } }),
-  v("Lina heeft 2 appels. Tom heeft 6 appels. Wie heeft minder?", ["Lina", "Tom", "Ze hebben evenveel."], 0, "Minder = het kleinste getal. Welk getal is kleiner: 2 of 6?"),
+  v("Lina heeft 2 appels. Tom heeft 6 appels. Wie heeft minder?", ["Lina", "Tom", "Ze hebben evenveel."], 0, "Minder = het kleinere getal. Welk getal is kleiner: 2 of 6?"),
   v("Noor heeft 4 pennen. Adam heeft 4 pennen. Wat is waar?", ["Ze hebben evenveel.", "Noor heeft meer.", "Adam heeft meer."], 0, "Kijk naar de twee getallen. Zijn ze hetzelfde?"),
   v("Wie heeft de meeste boeken? Eva 3, Omar 8, Mila 5.", ["Omar", "Eva", "Mila"], 0, "De meeste = het allergrootste getal van de drie."),
   v("Wie heeft de minste stickers? Jan 7, Sara 2, Yusuf 4.", ["Sara", "Jan", "Yusuf"], 0, "De minste = het allerkleinste getal van de drie."),

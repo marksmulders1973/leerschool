@@ -1,5 +1,5 @@
 // Leerpad: In de klas — Nederlands voor de eerste weken (nieuwkomers).
-// Gebouwd 24 sep 2026 voor het Nieuwkomer-pakket. 15 vragen in 3 delen.
+// Gebouwd 24 sep 2026 voor het Nieuwkomer-pakket. 20 vragen in 4 delen.
 // Elke vraag heeft `steun`: dezelfde situatie in vier steuntalen (en/ar/uk/tr),
 // zodat het kind snapt wát er gevraagd wordt; de antwoorden blijven Nederlands.
 // Korte zinnen, geen uitdrukkingen, elke stap begint met uitleg in drie stappen.
@@ -35,7 +35,7 @@ const deel1 = [
     { en: "You don't understand the explanation. What do you say?", ar: "لم تفهم الشرح. ماذا تقول؟", uk: "Ти не зрозумів пояснення. Що ти скажеш?", tr: "Açıklamayı anlamadın. Ne dersin?" }),
   v("De juf praat te snel. Wat vraag je?", ["Kunt u het nog een keer zeggen?", "Mag ik naar buiten?", "Waar is de bal?", "Ik ga naar huis."], 0, "Je wilt het nog een keer horen.",
     { en: "The teacher speaks too fast. What do you ask?", ar: "المعلّمة تتكلّم بسرعة. ماذا تسأل؟", uk: "Учителька говорить надто швидко. Що ти запитаєш?", tr: "Öğretmen çok hızlı konuşuyor. Ne sorarsın?" }),
-  v("Je weet een woord niet. Wat vraag je?", ["Wat betekent dit woord?", "Hoe laat is het?", "Mag ik spelen?", "Is het pauze?"], 0, "Je wilt weten wat het woord is.",
+  v("Je weet een woord niet. Wat vraag je?", ["Wat betekent dit woord?", "Hoe laat is het?", "Mag ik spelen?", "Is het pauze?"], 0, "Je wilt weten wat het woord betekent.",
     { en: "You don't know a word. What do you ask?", ar: "لا تعرف كلمة. ماذا تسأل؟", uk: "Ти не знаєш слово. Що ти запитаєш?", tr: "Bir kelimeyi bilmiyorsun. Ne sorarsın?" }),
   v("Je bent klaar met je werk. Wat zeg je?", ["Ik ben klaar.", "Ik snap het niet.", "Mag ik naar de wc?", "Waar woon je?"], 0, "Je werk is af.",
     { en: "You finished your work. What do you say?", ar: "أنهيت عملك. ماذا تقول؟", uk: "Ти закінчив роботу. Що ти скажеш?", tr: "İşini bitirdin. Ne dersin?" }),
@@ -67,7 +67,7 @@ const deel2 = [
 ];
 
 const deel3 = [
-  v("Een kind zegt: 'Hoe heet je?' Wat zeg je?", ["Ik heet … (je naam).", "Dank je wel.", "Tot ziens.", "Ik snap het niet."], 0, "Zeg je naam.",
+  v("Een kind vraagt: 'Hoe heet je?' Wat zeg je?", ["Ik heet … (je naam).", "Dank je wel.", "Tot ziens.", "Ik snap het niet."], 0, "Zeg je naam.",
     { en: "A child says: 'What is your name?' What do you say?", ar: "يقول طفل: 'ما اسمك؟' ماذا تقول؟", uk: "Дитина каже: «Як тебе звати?» Що ти скажеш?", tr: "Bir çocuk 'Adın ne?' diyor. Ne dersin?" },
     { uitlegPad: {
       stappen: [
@@ -87,7 +87,7 @@ const deel3 = [
     { en: "Someone helps you. What do you say?", ar: "شخص يساعدك. ماذا تقول؟", uk: "Хтось тобі допомагає. Що ти скажеш?", tr: "Biri sana yardım ediyor. Ne dersin?" }),
   v("Je wilt iets niet. Wat mag je zeggen?", ["Nee, dat wil ik niet.", "Ja, goed.", "Dank je wel.", "Tot morgen."], 0, "Je mag altijd nee zeggen.",
     { en: "You don't want something. What may you say?", ar: "لا تريد شيئًا. ماذا يمكنك أن تقول؟", uk: "Ти чогось не хочеш. Що ти можеш сказати?", tr: "Bir şeyi istemiyorsun. Ne diyebilirsin?" }),
-  v("De school is klaar. Wat zeg je tegen de juf?", ["Tot morgen!", "Goedemorgen!", "Mag ik meedoen?", "Ik snap het niet."], 0, "Aan het eind van de dag zeg je dag.",
+  v("De school is uit. Wat zeg je tegen de juf?", ["Tot morgen!", "Goedemorgen!", "Mag ik meedoen?", "Ik snap het niet."], 0, "Aan het eind van de dag zeg je dag.",
     { en: "School is over. What do you say to the teacher?", ar: "انتهت المدرسة. ماذا تقول للمعلّمة؟", uk: "Уроки закінчилися. Що ти скажеш учительці?", tr: "Okul bitti. Öğretmene ne dersin?" }),
 ];
 
