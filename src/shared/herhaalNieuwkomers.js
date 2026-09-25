@@ -14,8 +14,13 @@ function vandaag(plusDagen = 0) {
   return d.toLocaleDateString("sv-SE"); // YYYY-MM-DD, lokale tijd
 }
 
+// Oude Woorden-vragen (tot v707: eigen-taalwoord als vraag) bestaan niet meer → weg uit het doosje.
+const VERVALLEN_Q = "Welk Nederlands woord is dit?";
 function lees() {
-  try { return JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch { return {}; }
+  let data;
+  try { data = JSON.parse(localStorage.getItem(KEY) || "{}") || {}; } catch { return {}; }
+  for (const [k, v] of Object.entries(data)) if (v?.q === VERVALLEN_Q) delete data[k];
+  return data;
 }
 function schrijf(data) {
   try { localStorage.setItem(KEY, JSON.stringify(data)); } catch { /* */ }
