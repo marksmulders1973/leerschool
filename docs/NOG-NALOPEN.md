@@ -29,7 +29,7 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | D4 | **Promotie**: niemand weet dat /klas + digibord bestaan (Mark zelf ook niet). Zin + schermafbeelding in de volgende scholenmail; leerkrachtflyer juf-start-A4 bijwerken | Claude concept → Mark go | ⏳ |
 | D5 | **Stichting OOB Bonaire** probeert /klas met één klas — wachten op hun ervaring (antwoord verstuurd 25 sep) | wachten | ⏳ |
 | D8 | **Kant-en-klare setjes** op leerkwartier.app/klassikaal (v718): groep 6/7/8 mix, rekenen, taal + 3 taalklas-setjes; ook via /klas "Klassikaal met kaartjes". Eén setje echt in de klas proberen | Mark | ⏳ |
-| D9 | **België** (25 sep): leerkwartier.be/vlaanderen live (v721); 3 verzendklare mails in docs/outreach/BELGIE-*.md — 62 scholen met taalheldklas, 7 voedselbanken, 50 Huizen van het Kind. Wacht op tekst-akkoord Mark; voorstel eerst test 20 scholen + 7 voedselbanken | Mark go | ⏳ |
+| D9 | **België** (25 sep): leerkwartier.be/vlaanderen live (v721); 3 verzendklare mails in docs/outreach/BELGIE-*.md — 62 scholen met taalheldklas, 7 voedselbanken, 50 Huizen van het Kind. ✅ tekst-akkoord 25 sep; test do 1 okt 08:30 (7 voedselbanken + 20 scholen); Huizen van het Kind na eerste reacties | Claude volgt | ⏳ |
 | D10 | ✅ Verzendscript: dagrem 80 bulkmails over alle docs samen (v722, getest) | — | ✅ |
 | D6 | **Cijfers**: `docs/sql/klasgolf.sql` query (3) QR per klas + events `digibord_*` (incl. `digibord_setje`, `klas_naar_klassikaal`) in het dagrapport meenemen | Claude, dagelijks | ⏳ |
 | D7 | ✅ Link `leerkwartier.app/klas.` (punt uit mail) stuurt door — getest 25 sep (v712) | — | ✅ |

@@ -1,6 +1,6 @@
 # België — voedselbanken + Sociale Kruideniers (7 adressen)
 
-Bron: BELGIE-ORGANISATIES-LIJST.md lijst A (25 sep 2026). **NIETS VERSTUURD — wacht op "stuur maar" van Mark.** Voedselbanken leveren aan ±670 lokale uitdeelposten; de vraag is doorgeven via hun nieuwsbrief. Brussel-Brabant is tweetalig (Franse versie later, alleen op vraag).
+Bron: BELGIE-ORGANISATIES-LIJST.md lijst A (25 sep 2026). **Tekst-akkoord Mark 25 sep ("stuur maar") — test gepland do 1 okt 08:30 (Windows-taak).** Voedselbanken leveren aan ±670 lokale uitdeelposten; de vraag is doorgeven via hun nieuwsbrief. Brussel-Brabant is tweetalig (Franse versie later, alleen op vraag).
 
 ## Onderwerp
 Gratis oefen-app voor de kinderen van de gezinnen die u helpt — ook in Vlaanderen

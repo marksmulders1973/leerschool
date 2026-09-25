@@ -1,6 +1,6 @@
 # België — basisscholen met taalheldklas (62 adressen)
 
-Bron: BELGIE-NIEUWKOMERS-LIJST.md (25 sep 2026). **NIETS VERSTUURD — wacht op "stuur maar" van Mark.** Volgorde: sterke treffers eerst, "(zwak)" onderaan. Voorstel: eerst een test van 20 (`node scripts/outreach-send-doc.mjs 20 …`), dan kijken wie reageert. Dagrem 80 geldt over álle bulk samen — niet op 28-30 sep (NL ronde 2, 45/dag) meer dan 35 extra.
+Bron: BELGIE-NIEUWKOMERS-LIJST.md (25 sep 2026). **Tekst-akkoord Mark 25 sep ("stuur maar") — test gepland do 1 okt 08:30 (Windows-taak).** Volgorde: sterke treffers eerst, "(zwak)" onderaan. Voorstel: eerst een test van 20 (`node scripts/outreach-send-doc.mjs 20 …`), dan kijken wie reageert. Dagrem 80 geldt over álle bulk samen — niet op 28-30 sep (NL ronde 2, 45/dag) meer dan 35 extra.
 
 ## Onderwerp
 Gratis oefen-app voor uw taalheldklas: Nederlands leren, met steun in de eigen taal
