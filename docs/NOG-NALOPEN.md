@@ -21,7 +21,7 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 
 | # | Wat | Wie | Status |
 |---|-----|-----|--------|
-| D1 | **QR-hoek op /klas** op een groot scherm + scannen met telefoon → komt kind in 5 vragen van dezelfde groep? (v713) | Mark | ⏳ |
+| D1 | **QR-hoek op /klas** — ✅ 25 sep 07:38→07:39 keten werkt in productie (klas K7G4S, groep 7) | — | ✅ |
 | D2 | **Klassikaal op het digibord**: toets maken → "🙋 Klassikaal op het digibord" → kaartjes printen → 3 vragen met handen tellen (v714) | Mark | ⏳ |
 | D3 | **Kaartenvel** echt printen: passen de letters, knipt het makkelijk? | Mark | ⏳ |
 | D4 | **Promotie**: niemand weet dat /klas + digibord bestaan (Mark zelf ook niet). Zin + schermafbeelding in de volgende scholenmail; leerkrachtflyer juf-start-A4 bijwerken | Claude concept → Mark go | ⏳ |
@@ -40,3 +40,4 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 
 ## Klaar
 - 25 sep: D7 doorverwijzing /klas. ✅
+- 25 sep: D1 QR-hoek in productie getest ✅
