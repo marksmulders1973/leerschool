@@ -15,6 +15,7 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | N5 | **Vertaalfouten die bewust bleven staan** ("alleen Nederlands"): Arabisch "2 kinderen" (tweevoud), Engels "I have hunger/pain", Turkse kapstok-hint verklapt het antwoord. Fixen of laten? | Mark beslist | ❓ |
 | N6 | **Twijfelvragen In de klas**: "De bel gaat" (bel = ook naar huis), "Je jas hangt aan de…" (deur kan ook) | Mark beslist | ❓ |
 | N7 | **Twee "Deel"-tellers boven elkaar**: kwartierbalk "Deel 1 van 3" en pad "Deel 1 / 4" — verwarrend | Claude voorstel | ⏳ |
+| N9 | **Overzicht "Hoofdstuk 1 · Hoe vraag ik iets aan de juf of meester?"** + "5 vragen · ± 3 minuten" + Begin-knop (v719, alle leerpaden) — op je telefoon bekijken | Mark | ⏳ |
 | N8 | **Rekentaal-hint verklapt**: "2 keer = twee keer het getal 4" noemt bijna het antwoord | Claude | ⏳ |
 
 ## B. Klas & digibord (v684, v712-v714)
