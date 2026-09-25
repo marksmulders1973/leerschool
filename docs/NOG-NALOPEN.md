@@ -15,6 +15,7 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | N5 | **Vertaalfouten die bewust bleven staan** ("alleen Nederlands"): Arabisch "2 kinderen" (tweevoud), Engels "I have hunger/pain", Turkse kapstok-hint verklapt het antwoord. Fixen of laten? | Mark beslist | ❓ |
 | N6 | **Twijfelvragen In de klas**: "De bel gaat" (bel = ook naar huis), "Je jas hangt aan de…" (deur kan ook) | Mark beslist | ❓ |
 | N7 | **Twee "Deel"-tellers boven elkaar**: kwartierbalk "Deel 1 van 3" en pad "Deel 1 / 4" — verwarrend | Claude voorstel | ⏳ |
+| N10 | **Meten nieuwkomers (v720)**: `docs/sql/nieuwkomers.sql` elke dag in het rapport — welke code, via code of link, taalkeuze, vertaal-tikken per taal (vraag/antwoord), onderdelen, oefenen per pad + steuntaal. Leerpad-antwoorden zijn nu ook een event → "sommen" stijgt vanaf 25 sep (breuk in de reeks) | Claude, dagelijks | ⏳ |
 | N9 | **Overzicht "Hoofdstuk 1 · Hoe vraag ik iets aan de juf of meester?"** + "5 vragen · ± 3 minuten" + Begin-knop (v719, alle leerpaden) — op je telefoon bekijken | Mark | ⏳ |
 | N8 | **Rekentaal-hint verklapt**: "2 keer = twee keer het getal 4" noemt bijna het antwoord | Claude | ⏳ |
 
