@@ -88,12 +88,12 @@
   ],
   "redirects": [
     {
-      "source": "/((?!api/)[^.,)]+)[.,)]+",
+      "source": "/((?!api/)[a-zA-Z0-9/_-]+)\\.+",
       "destination": "/$1",
       "permanent": false
     },
     {
-      "source": "/((?!api/).+.html)[.,)]+",
+      "source": "/((?!api/)[a-zA-Z0-9/_-]+\\.html)\\.+",
       "destination": "/$1",
       "permanent": false
     }
