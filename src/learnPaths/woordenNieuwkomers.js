@@ -111,14 +111,68 @@ const schud = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0
 // je eigen taal, zodat je ziet waaróm het niet past. Tekst hangt alleen af van het gekozen
 // woord (niet van de vraag), dus één vertaling per woord klopt in elke vraag.
 const HINT_STEUN = {};
+// Mark 25 sep 2026: "waar zit je op? Ik zeg 'de tas', maar bij de uitleg zie ik niet: nee, een
+// tas is iets om je spullen in te doen." Dus: bij een fout antwoord zeggen wat het gekozen woord
+// wél is, in eenvoudig Nederlands. Tik = hetzelfde woord in de eigen taal.
+const BETEKENIS = {
+  "de deur": "een deur doe je open en dicht om een kamer in of uit te gaan",
+  "de tafel": "aan een tafel zit je om te eten of te werken",
+  "het raam": "door een raam kijk je naar buiten",
+  "de stoel": "op een stoel zit je",
+  "de pen": "met een pen schrijf je",
+  "de tas": "een tas is iets om je spullen in te doen",
+  "het bord": "op het bord schrijft de juf, of van een bord eet je",
+  "het boek": "in een boek lees je",
+  "de jas": "een jas trek je aan als het buiten koud is",
+  "de meester": "een meester is een man die les geeft",
+  "de moeder": "je moeder is je mama",
+  "de juf": "een juf is een vrouw die les geeft",
+  "het kind": "een kind is een jongen of meisje, zoals jij",
+  "de school": "op school leer je",
+  "de tuin": "een tuin is buiten bij het huis, met gras en bloemen",
+  "de auto": "in een auto rijd je over de weg",
+  "het huis": "in een huis woon je",
+  "het water": "water drink je, het komt uit de kraan",
+  "het brood": "van brood maak je een boterham",
+  "de melk": "melk is wit en komt van de koe",
+  "de appel": "een appel is rond fruit, rood of groen",
+  "de kaas": "kaas is geel en leg je op je brood",
+  "de banaan": "een banaan is lang, geel fruit",
+  "de zus": "je zus is een meisje in jouw familie",
+  "de vader": "je vader is je papa",
+  "de hand": "met je hand pak je iets",
+  "de buik": "je buik zit in het midden van je lichaam",
+  "het hoofd": "je hoofd zit bovenaan je lichaam",
+  "de voet": "op je voeten sta en loop je",
+  "het oog": "met je ogen kijk je",
+  "het oor": "met je oren hoor je",
+  "de mond": "met je mond eet en praat je",
+  "de neus": "met je neus ruik je",
+  "geel": "geel is de kleur van een banaan",
+  "rood": "rood is de kleur van een aardbei",
+  "blauw": "blauw is de kleur van de lucht",
+  "groen": "groen is de kleur van gras",
+  "wit": "wit is de kleur van melk",
+  "tekenen": "tekenen is een plaatje maken met een potlood",
+  "schrijven": "schrijven is letters maken",
+  "lezen": "lezen doe je met een boek",
+  "tellen": "tellen is 1, 2, 3, 4 zeggen",
+  "knippen": "knippen doe je met een schaar",
+  "kijken": "kijken doe je met je ogen",
+  "plakken": "plakken doe je met lijm",
+  "kleuren": "kleuren is een tekening vol maken met kleur",
+  "luisteren": "luisteren doe je met je oren",
+  "opruimen": "opruimen is alles terugleggen op zijn plek",
+};
 const foutHint = (o) => {
   const t = WOORDENBOEK[o];
-  const nl = `Jij koos '${o}'. Dat is een ander woord. Probeer het nog eens.`;
+  const zin = BETEKENIS[o];
+  const nl = zin ? `Nee, ${zin}. Probeer het nog eens.` : `Nee, dat is een ander woord. Probeer het nog eens.`;
   if (t && !HINT_STEUN[nl]) HINT_STEUN[nl] = {
-    en: `You chose '${o}'. That means: ${t.en}. Try again.`,
-    ar: `اخترت «${o}». معناها: ${t.ar}. حاول مرة أخرى.`,
-    uk: `Ти вибрав(-ла) «${o}». Це означає: ${t.uk}. Спробуй ще раз.`,
-    tr: `'${o}' seçtin. Anlamı: ${t.tr}. Tekrar dene.`,
+    en: `No, '${o}' means: ${t.en}. Try again.`,
+    ar: `لا، «${o}» معناها: ${t.ar}. حاول مرة أخرى.`,
+    uk: `Ні, «${o}» означає: ${t.uk}. Спробуй ще раз.`,
+    tr: `Hayır, '${o}' demek: ${t.tr}. Tekrar dene.`,
   };
   return nl;
 };
