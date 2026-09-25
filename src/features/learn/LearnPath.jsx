@@ -1099,6 +1099,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             </span>
           )}
         </div>
+        {/* Mark 25 sep 2026: bij de vragen stond "1. Op school" heel dik, alsof dát de vraag
+            was, en de echte vraag dun. Bij de vragen is de stap-titel nu een klein label
+            "Onderwerp: …" en is de vraag zelf groot; op het uitlegscherm blijft de kop. */}
+        {mode !== "reading" && mode !== "stepDone" ? (
+          <SteunTekst nl={step.title}><div style={{ fontSize: 14, fontWeight: 600, color: "var(--color-text-muted)", margin: "2px 0 6px" }}>
+            Onderwerp: {stripExamenVraagPrefix(step.title)}
+          </div></SteunTekst>
+        ) : (
         <SteunTekst nl={step.title}><h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
           {/* Mark UX 2026-05-18: bij examen-paden begint step.title vaak met
               "Vraag N — " (origineel examenblad-nummer). Strippen, want de
@@ -1106,6 +1114,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               in examenBron-banner eronder. */}
           {stepIdx + 1}. {stripExamenVraagPrefix(step.title)}
         </h2></SteunTekst>
+        )}
 
         {/* Begripscheck-na-uitlegPad-banner (Roediger-Karpicke, 2026-05-16):
             verschijnt als er een check uit een vorige stap "due" is voor
@@ -1493,7 +1502,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             )}
             {/* 🌍 Steun-tik (24 sep 2026): vraag tikbaar → eigen taal eronder (SteunTik.jsx). */}
             <SteunVraag steun={currentCheck.steun} altijd={currentCheck.steunAltijd}>
-            <div style={{ fontSize: 16, fontWeight: 700, color: "var(--color-text-strong)", marginBottom: 14 }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, lineHeight: 1.3, color: "var(--color-text-strong)", marginBottom: 14 }}>
               <MdInline text={currentCheck.q} />
             </div>
             </SteunVraag>
