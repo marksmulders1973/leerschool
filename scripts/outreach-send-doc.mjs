@@ -17,7 +17,17 @@ const body = doc.split("## Tekst")[1].split(/\n## /)[0].replace(/^[^\n]*\n/, "")
 const rows = [...doc.matchAll(/^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([\w.+-]+@[\w.-]+)\s*\|/gm)].map(m => ({ n: +m[1], org: m[2], soort: m[3], email: m[4] }));
 // Al verstuurd (OK in het log van dit doc) → overslaan, zodat een vervolg-run verder gaat.
 const alVerstuurd = new Set([...doc.matchAll(/^\s*- \d+ · .+? · ([\w.+-]+@[\w.-]+) · OK/gm)].map(m => m[1].toLowerCase()));
-const todo = rows.filter(r => !alVerstuurd.has(r.email.toLowerCase())).slice(0, MAX);
+// 🛑 Dagrem (idee BC, 25 sep 2026): nooit meer dan 80 bulkmails per dag, over álle docs samen, zodat
+// Resend ruimte houdt voor makersmail, alarm-mails en het dagrapport (24 sep ging de limiet naar 200%).
+// Teller per dag in logs/bulk-teller-<datum>.txt; BULK_DAGMAX=… overschrijft (alleen na overleg).
+const DAGMAX = +(process.env.BULK_DAGMAX || 80);
+const dagSleutel = new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Amsterdam" });
+fs.mkdirSync("logs", { recursive: true });
+const TELLER = `logs/bulk-teller-${dagSleutel}.txt`;
+const alVandaag = fs.existsSync(TELLER) ? +fs.readFileSync(TELLER, "utf8") || 0 : 0;
+const ruimte = Math.max(0, DAGMAX - alVandaag);
+if (!DRY && ruimte === 0) { console.log(`Dagrem: vandaag al ${alVandaag} bulkmails (max ${DAGMAX}) — niets verstuurd; morgen verder.`); process.exit(0); }
+const todo = rows.filter(r => !alVerstuurd.has(r.email.toLowerCase())).slice(0, DRY ? MAX : Math.min(MAX, ruimte));
 if (!subject || !body || !todo.length) { console.error("doc onvolledig", { subject: !!subject, body: body.length, rows: rows.length }); process.exit(1); }
 console.log("onderwerp:", subject, "| tekst:", body.length, "tekens | adressen:", todo.length, DRY ? "| DRY" : "");
 const log = [];
@@ -29,6 +39,7 @@ for (const r of todo) {
     body: JSON.stringify({ from: "Mark Smulders — Leerkwartier <hallo@leerkwartier.app>", reply_to: "hallo@leerkwartier.app", to: [r.email], subject, text, html }) });
   const ok = resp.ok; let id = ""; try { id = (await resp.json()).id || ""; } catch {}
   log.push(`${r.n}\t${r.org}\t${r.email}\t${ok ? "OK" : "FOUT " + resp.status}\t${id}`);
+  if (ok) { const nu = (fs.existsSync(TELLER) ? +fs.readFileSync(TELLER, "utf8") || 0 : 0) + 1; fs.writeFileSync(TELLER, String(nu)); }
   console.log(log[log.length - 1]);
   if (resp.status === 429) { console.log("Resend-limiet bereikt — stoppen; volgende run gaat verder."); log.pop(); break; }
   await new Promise(res => setTimeout(res, 1300));

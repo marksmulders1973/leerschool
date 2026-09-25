@@ -2908,11 +2908,11 @@ const NIEUWKOMERS_STEUN = {
   "uk": "Що означає '2 keer 4' (2 рази по 4)?",
   "tr": "'2 keer 4' (2 kere 4) ne demek?"
  },
- "Keer = hetzelfde getal steeds erbij. 2 keer = twee keer het getal 4.": {
-  "en": "Times = adding the same number each time. 2 times = the number 4, two times.",
-  "ar": "ضرب (keer) = نزيد نفس العدد كل مرة. 2 مرات = العدد 4 مرتين.",
-  "uk": "Рази (keer) = щоразу додаєш те саме число. 2 keer = два рази число 4.",
-  "tr": "Kere (keer) = hep aynı sayıyı eklemek. 2 kere = 4 sayısı iki kere."
+ "Keer = hetzelfde getal een paar keer bij elkaar. Kijk: welk getal, en hoe vaak?": {
+  "en": "Times = the same number added together a few times. Look: which number, and how many times?",
+  "ar": "الضرب (keer) = نفس العدد يُجمع عدة مرات. انظر: أي عدد، وكم مرة؟",
+  "uk": "Множення (keer) = те саме число кілька разів разом. Подивись: яке число і скільки разів?",
+  "tr": "Kere (keer) = aynı sayıyı birkaç kez toplamak. Bak: hangi sayı ve kaç kere?"
  },
  "Je verdeelt 8 snoepjes eerlijk over 2 kinderen. Hoeveel krijgt ieder kind?": {
   "en": "You share 8 candies fairly between 2 children. How many does each child get?",

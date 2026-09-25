@@ -69,7 +69,7 @@ const keerVerdelen = [
     basiskennis: [{ onderwerp: "Truc", uitleg: "Verdelen? Deel één voor één uit, zoals kaarten bij een spel." }],
     niveaus: { basis: "Tel de groepjes bij elkaar op.", simpeler: "2 + 2 + 2", nogSimpeler: "6" },
   } }),
-  v("Wat betekent '2 keer 4'?", ["4 + 4", "2 + 4", "4 − 2"], 0, "Keer = hetzelfde getal steeds erbij. 2 keer = twee keer het getal 4."),
+  v("Wat betekent '2 keer 4'?", ["4 + 4", "2 + 4", "4 − 2"], 0, "Keer = hetzelfde getal een paar keer bij elkaar. Kijk: welk getal, en hoe vaak?"),
   v("Je verdeelt 8 snoepjes eerlijk over 2 kinderen. Hoeveel krijgt ieder kind?", ["4", "6", "2", "10"], 0, "Eerlijk = iedereen krijgt evenveel. Deel één voor één uit."),
   v("Wat is de helft van 10?", ["5", "2", "10", "20"], 0, "De helft = in twee gelijke stukken."),
   v("Je verdeelt 6 koekjes eerlijk over 3 kinderen. Hoeveel krijgt ieder kind?", ["2", "3", "9", "18"], 0, "Deel uit: één voor jou, één voor jou, één voor jou… tot alles op is."),

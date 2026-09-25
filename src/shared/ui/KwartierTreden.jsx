@@ -26,13 +26,15 @@ export default function KwartierTreden({ compact = false }) {
   const min = Math.max(1, Math.ceil(t.nogSec / 60));
   const tekst = t.klaar
     ? "🏆 Kwartier gehaald — de rest is extra"
-    : t.deel === 0 ? `Deel 1 van 3 · nog ${min} min`
-    : t.deel === 1 ? `⭐ Deel 1 is binnen · deel 2: nog ${min} min`
-    : `⭐⭐ Nog één deel · nog ${min} min`;
+    // 25 sep 2026 (N7): geen "Deel 1 van 3" meer — dat botste met "Deel 1 / 4" van het leerpad eronder.
+    // De balk gaat over tijd, dus zeggen we het in minuten.
+    : t.deel === 0 ? `Jouw kwartier · nog ${min} min`
+    : t.deel === 1 ? `⭐ 5 minuten gehaald · nog ${min} min`
+    : `⭐⭐ 10 minuten gehaald · nog ${min} min`;
   const kleur = t.klaar ? GROEN : GEEL;
   return (
     <div
-      aria-label="Jouw kwartier in drie delen"
+      aria-label="Jouw kwartier: drie stappen van 5 minuten"
       title="Een kwartier heeft drie delen van 5 minuten. De rest mag ook later vandaag."
       style={{
         display: "flex", alignItems: "center", gap: 8,
