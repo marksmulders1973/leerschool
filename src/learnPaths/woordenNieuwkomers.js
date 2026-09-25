@@ -113,12 +113,12 @@ const schud = (arr) => { const a = arr.slice(); for (let i = a.length - 1; i > 0
 const HINT_STEUN = {};
 const foutHint = (o) => {
   const t = WOORDENBOEK[o];
-  const nl = `Jij koos **${o}**. Dat is een ander woord. Probeer het nog eens.`;
+  const nl = `Jij koos '${o}'. Dat is een ander woord. Probeer het nog eens.`;
   if (t && !HINT_STEUN[nl]) HINT_STEUN[nl] = {
-    en: `You chose **${o}**. That means: ${t.en}. Try again.`,
-    ar: `اخترت **${o}**. معناها: ${t.ar}. حاول مرة أخرى.`,
-    uk: `Ти вибрав(-ла) **${o}**. Це означає: ${t.uk}. Спробуй ще раз.`,
-    tr: `**${o}** seçtin. Anlamı: ${t.tr}. Tekrar dene.`,
+    en: `You chose '${o}'. That means: ${t.en}. Try again.`,
+    ar: `اخترت «${o}». معناها: ${t.ar}. حاول مرة أخرى.`,
+    uk: `Ти вибрав(-ла) «${o}». Це означає: ${t.uk}. Спробуй ще раз.`,
+    tr: `'${o}' seçtin. Anlamı: ${t.tr}. Tekrar dene.`,
   };
   return nl;
 };
