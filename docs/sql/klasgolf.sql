@@ -80,3 +80,13 @@ select date_trunc('day', created_at at time zone 'Europe/Amsterdam')::date as da
 from events_echt
 where name like 'klas_%' and created_at > now() - interval '28 days'
 group by 1 order by 1 desc;
+
+-- (3) QR-hoek per klas (v713, 25 sep 2026): per digibord (k) hoe vaak de QR stond
+--     en hoeveel apparaten thuis via die QR binnenkwamen. Thuis > 0 = klas → thuis werkt.
+SELECT props->>'k' AS klas,
+  COUNT(*) FILTER (WHERE name = 'klas_qr_getoond') AS keer_getoond,
+  COUNT(DISTINCT props->>'uid') FILTER (WHERE name = 'klas_qr_thuis') AS thuis_apparaten,
+  to_char(MAX(created_at) AT TIME ZONE 'Europe/Amsterdam', 'DD-MM HH24:MI') AS laatst
+FROM events_echt
+WHERE name IN ('klas_qr_getoond', 'klas_qr_thuis') AND created_at >= now() - interval '30 days'
+GROUP BY 1 ORDER BY thuis_apparaten DESC, keer_getoond DESC;

@@ -4,6 +4,7 @@ import styles from "./styles.js";
 import { pathForPage, pageForPath } from "./app/routes.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS, TOPIC_QUESTIONS, isLaunchPromoActive } from "./constants.js";
 import { track, SoundEngine, fetchAIQuestions, generateCode, shuffle, formatDate, daysUntil } from "./utils.js";
+import { noteerKlasQrBezoek } from "./shared/klasQr.js";
 import { noteerBezoekdag } from "./features/account/trouweGast.js";
 
 // Eager imports: alleen wat élke gebruiker direct ziet of nodig heeft.
@@ -700,6 +701,8 @@ export default function App() {
     // URL parameter ?code=XXXXX (alleen quiz-codes, niet Supabase OAuth codes)
     const urlCode = new URLSearchParams(window.location.search).get("code");
     if (urlCode && urlCode.length <= 8) setPendingCode(urlCode.toUpperCase());
+    // 📱 Kwam dit apparaat binnen via de QR-hoek op /klas? Tellen per klas (klasQr.js).
+    try { noteerKlasQrBezoek(track); } catch { /* */ }
   }, []);
 
   // Naam kiezen buiten de startpagina om (lege Mijn pagina 11 sep, trouwe-gast-
@@ -2604,7 +2607,7 @@ export default function App() {
       {page === "start-kwartier" && (
         <StartKwartier
           userName={userName}
-          userLevel={userLevel}
+          userLevel={userLevel || (/[?&]k=/.test(window.location.search) ? "groep" + klasGroep : userLevel)}
           authUser={authUser}
           onStop={() => setPage("mijn-pagina")}
           onGa={(p) => {

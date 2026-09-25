@@ -16,6 +16,7 @@ import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { actievePartnerCode, partnerFamilieTot } from "../referral/partnerCode.js";
 import { PARTNER_NAMEN } from "../../components/PartnerWelkom.jsx";
 import { bouwStartVragen, markeerStartKwartierGedaan, parseGroep } from "./startKwartier.js";
+import { klasId, thuisLink } from "../../shared/klasQr.js";
 
 // Three.js pas laden als het park-kaartje in beeld komt (zelfde patroon als BuddyPicker).
 const MaatjeMini3D = lazy(() => import("../zoo/MaatjeMini3D.jsx"));
@@ -247,6 +248,45 @@ function JufStrook({ groep, stap, onGa }) {
         style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--color-brand-primary)", fontWeight: 700, fontSize: 13.5, fontFamily: "inherit" }}>
         Klascode maken →
       </button>
+    </div>
+  );
+}
+
+// ── QR-hoek (/klas, Mark 25 sep 2026) ─────────────────────────────
+// Rechtsonder op het digibord: "Thuis verder oefenen? Scan mij." De QR bevat de groep
+// en het klas-nummer van dit digibord (klasQr.js), zodat we per klas zien wie thuis
+// verder ging. Alleen op brede schermen: op een telefoon heeft een QR geen zin.
+function KlasQrHoek({ groep }) {
+  const [qr, setQr] = useState("");
+  const [breed, setBreed] = useState(() => { try { return window.innerWidth >= 900; } catch { return false; } });
+  const link = thuisLink(groep);
+  useEffect(() => {
+    const kijk = () => { try { setBreed(window.innerWidth >= 900); } catch { /* */ } };
+    window.addEventListener("resize", kijk);
+    return () => window.removeEventListener("resize", kijk);
+  }, []);
+  useEffect(() => {
+    if (!breed) return;
+    let levend = true;
+    import("qrcode")
+      .then((QR) => QR.toDataURL(link, { margin: 1, width: 220, color: { dark: "#111111", light: "#ffffff" } }))
+      .then((url) => { if (levend) setQr(url); })
+      .catch(() => { /* geen QR = geen hoek */ });
+    return () => { levend = false; };
+  }, [link, breed]);
+  const getoond = useRef(false);
+  useEffect(() => {
+    if (!breed || !qr || getoond.current) return;
+    getoond.current = true;
+    track("klas_qr_getoond", { k: klasId(), groep });
+  }, [breed, qr, groep]);
+  if (!breed || !qr) return null;
+  return (
+    <div aria-label="QR-code om thuis verder te oefenen" style={{ position: "fixed", right: 16, bottom: 16, zIndex: 40, width: 150, padding: "10px 10px 8px", borderRadius: 14, background: "#ffffff", boxShadow: "0 4px 18px rgba(0,0,0,0.25)", textAlign: "center", color: "#111111", fontFamily: "var(--font-body)" }}>
+      <div style={{ fontWeight: 800, fontSize: 14, lineHeight: 1.25, marginBottom: 6 }}>Thuis verder oefenen?</div>
+      <img src={qr} alt="" width={130} height={130} style={{ display: "block", margin: "0 auto" }} />
+      <div style={{ fontSize: 13, fontWeight: 700, marginTop: 4 }}>Scan mij</div>
+      <div style={{ fontSize: 11, color: "#555555", marginTop: 2 }}>leerkwartier.app · groep {groep}</div>
     </div>
   );
 }
@@ -535,6 +575,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
       {stap?.type === "show" && <ShowcaseKaart key={stapIdx} id={stap.id} groep={groep} onGa={ga} onVerder={verder} />}
       {stap?.type === "klaar" && <KlaarKaart klas={klas} goed={score.goed} totaal={score.totaal} groep={groep} userName={userName} onGa={ga} />}
       {klas && <JufStrook groep={groep} stap={stapIdx} onGa={onGa} />}
+      {klas && <KlasQrHoek groep={groep} />}
     </div>
   );
 }
