@@ -34,7 +34,7 @@ export default function FamilieHub({ setPage }) {
 
         <div style={{ marginTop: 10, display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
           <h1 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 900, margin: 0 }}>
-            👨‍👩‍👧 Familie-abonnement
+            👨‍👩‍👧 Familie-pakket
           </h1>
           <FamiliePill />
           <span style={{ fontSize: 12, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "3px 8px", borderRadius: 8 }}>
@@ -99,7 +99,7 @@ bèta
         </div>
 
         <div style={{ marginTop: 20, fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
-          ✨ Bèta — gratis om uit te proberen. We verbeteren dit nog; straks onderdeel van het Familie-abonnement.
+          ✨ Bèta — gratis om uit te proberen. We verbeteren dit nog; straks onderdeel van het Familie-pakket.
         </div>
       </div>
     </div>

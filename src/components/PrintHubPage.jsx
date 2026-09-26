@@ -197,21 +197,21 @@ export default function PrintHubPage({ setPage } = {}) {
       </div>
 
       {/* ── Laag 3: Pro ────────────────────────────────────────── */}
-      <SlotKop kleur="#26c6da" titel="Voor de klas — met Pro" chip="Pro" />
+      <SlotKop kleur="#26c6da" titel="Voor de klas — met een schoollicentie" chip="Schoollicentie" />
       <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 12px", fontSize: 13, lineHeight: 1.55 }}>
-        Voor leerkrachten. Losse werkbladen zijn gratis; <strong style={{ color: "#4dd0e1" }}>Pro</strong> voegt je eigen logo
+        Voor leerkrachten. Losse werkbladen zijn gratis; een <strong style={{ color: "#4dd0e1" }}>schoollicentie</strong> voegt je eigen logo
         en een hele klassenset toe (vanaf 2027).
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
         {PRO.map((p) => (
-          <Tegel key={p.page} p={p} slot chip="Pro" onClick={() => kies(p.page)} />
+          <Tegel key={p.page} p={p} slot chip="Schoollicentie" onClick={() => kies(p.page)} />
         ))}
       </div>
 
       <div style={{ textAlign: "center", marginBottom: 22 }}>
         <a href="/abonnement.html" onClick={() => track("printhub_naar_abonnement")}
           style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13, textDecoration: "underline" }}>
-          Wat zit er in Familie &amp; Pro? →
+          Wat zit er in Familie en de schoollicentie? →
         </a>
       </div>
 

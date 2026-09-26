@@ -280,7 +280,7 @@ export default function WerkbladPagina({ onClose, userId, authUser = null }) {
             <PaywallGate feature="werkblad-print" authUser={authUser}>
               <PrintKnoppen trackPrefix="werkblad" trackProps={{ pad: pathId }} />
               <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>
-                {PRO_MODEL.kort} (Pro voor leerkrachten) · de deelcode hieronder blijft gratis t/m zeker 2031
+                {PRO_MODEL.kort} (schoollicentie) · de deelcode hieronder blijft gratis t/m zeker 2031
               </div>
             </PaywallGate>
           ) : (

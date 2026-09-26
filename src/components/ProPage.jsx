@@ -296,7 +296,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
               🔔 Ontvang een berichtje bij lancering
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 12 }}>
-              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis; daarnaast komt er een Familie-abonnement per gezín (met een Seizoenspas die vanzelf stopt — nooit stiekem doorlopen) en een schoollicentie voor scholen (op aanvraag). We sturen je één berichtje als het zover is.
+              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis; daarnaast komt er een Familie-pakket per gezín (eenmalig betalen, het stopt vanzelf — nooit stiekem doorlopen) en een schoollicentie voor scholen (op aanvraag). We sturen je één berichtje als het zover is.
             </div>
             <input
               type="email"

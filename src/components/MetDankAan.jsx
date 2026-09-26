@@ -126,7 +126,7 @@ export default function MetDankAan({ onBack, onHome, authUser }) {
           </div>
           <p style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.7)", marginTop: 4 }}>
             Deel je Leerkwartier met anderen? Dan verdien je een plekje hier — gegarandeerd,
-            bovenop je kans op een gratis Pro-jaar. Vul je voornaam in (we plaatsen 'm na een korte check).
+            bovenop je kans op een gratis Familie-jaar. Vul je voornaam in (we plaatsen 'm na een korte check).
           </p>
           {status === "done" ? (
             <div style={{ fontFamily: "var(--font-body)", fontSize: 14, color: "#69f0ae" }}>

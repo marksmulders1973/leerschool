@@ -385,11 +385,11 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
                 {quizLimitReached ? "⚠️ Limiet bereikt" : `📝 ${quizCount}/${quizLimit} toetsen`}
                 <ProBadge feature="teacher-tools" showFree={false} onInfo={onUpgrade} />
               </span>
-              {!quizLimitReached && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>Onbeperkt toetsen is straks Pro — nu gratis tot {quizLimit}</div>}
+              {!quizLimitReached && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>Onbeperkt toetsen hoort straks bij de schoollicentie — nu gratis tot {quizLimit}</div>}
             </div>
             {/* Pro = blauw in de tier-kleurtaal (9 aug; was oranje) */}
             <button onClick={onUpgrade} style={{ padding: "6px 12px", borderRadius: 8, border: "none", background: quizLimitReached ? "#1e88e5" : "rgba(66,165,245,0.2)", color: quizLimitReached ? "#fff" : "#8ec9ff", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
-              {quizLimitReached ? "Upgrade →" : "Pro: onbeperkt"}
+              {quizLimitReached ? "Upgrade →" : "Onbeperkt met schoollicentie"}
             </button>
           </div>
         )}
@@ -409,7 +409,7 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
         {isTeacherPro && (trialDaysLeft === null || trialDaysLeft === 0) && (
           <div style={{ marginBottom: 12, padding: "8px 14px", borderRadius: 10, background: "rgba(66,165,245,0.08)", border: "1px solid rgba(66,165,245,0.25)", display: "flex", alignItems: "center", gap: 8 }}>
             <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#64b5f6", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "#8ec9ff", fontWeight: 700 }}>Pro — onbeperkt toetsen</span>
+            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "#8ec9ff", fontWeight: 700 }}>Schoollicentie — onbeperkt toetsen</span>
           </div>
         )}
 
@@ -441,7 +441,7 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
           <div style={{ marginBottom: 16, padding: "10px 14px", borderRadius: 12, background: "rgba(66,165,245,0.05)", border: "1px dashed rgba(66,165,245,0.2)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
             <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.35)", display: "inline-flex", alignItems: "center", gap: 6 }}>
               <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#64b5f6", display: "inline-block", flexShrink: 0 }} />
-              🏫 Eigen schoollogo op toetsen — Pro
+              🏫 Eigen schoollogo op toetsen — schoollicentie
             </span>
             <button onClick={onUpgrade} style={{ padding: "5px 10px", borderRadius: 8, border: "none", background: "rgba(66,165,245,0.2)", color: "#8ec9ff", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>Upgrade →</button>
           </div>

@@ -49,7 +49,7 @@ export default function VonkPagina({ setPage }) {
 
         <div style={{ marginTop: 20, fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.55 }}>
           ✨ Bèta — Vonk is nu gratis te gebruiken. AI-bijles kost ons wél geld, dus straks hoort onbeperkt gebruik bij
-          het Familie-abonnement; een klein gratis-tegoed blijft voor iedereen.
+          het Familie-pakket; een klein gratis deel blijft voor iedereen.
         </div>
       </div>
       <FamilieMeer setPage={setPage} huidig="vonk" />

@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
 import { LAAG_KLEUREN } from "../subscription/proPlan.js";
-import { actievePartnerCode, partnerFamilieTot, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
+import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
 
 // Pakket-uitleg (Mark 31 jul, na 5-agent-panel): kraakhelder + eerlijk laten
 // zien wat gratis is en wat de betaalde extra's zijn. Kernbesluiten:
@@ -52,7 +52,8 @@ function CodeInvoer() {
   const [bezig, setBezig] = useState(false);
   const actief = actievePartnerCode();
 
-  const totTekst = (tot) => tot === null ? "blijvend" : "t/m de zomer van 2027";
+  // 26 sep 2026: zelfde tekst als het welkomstscherm (codes van vóór 2027 → t/m 2028).
+  const totTekst = (tot) => partnerFamilieTotLabel(tot);
 
   if (actief && !status?.ok) {
     return (

@@ -39,8 +39,8 @@ export const LAGEN = {
     // is het anker: één keer betalen, stopt vanzelf op 31 juli — bewust GEEN
     // automatische verlenging (merkbelofte, nooit stiekem doorlopen).
     prijs:
-      "richtprijs € 4,95 p/mnd · 🎟️ Seizoenspas € 24,95 éénmalig (het hele " +
-      "toetsjaar, stopt vanzelf) · € 39 p/jaar — per gezín, niet per kind",
+      "richtprijs: 🎟️ Seizoenspas € 24,95 éénmalig (het hele toetsjaar, stopt " +
+      "vanzelf) · of € 39 voor een jaar, ook éénmalig — per gezín, niet per kind",
     kort: "Volg en help al je kinderen — één prijs per gezin",
   },
   // School-first (Mark 7 aug 2026, zie docs/PRIJSPLAN.md §3): een leerkracht
@@ -211,7 +211,7 @@ export const PRO_FEATURES = {
     label: "Gezins-plekken thuis cadeau",
     laag: "leerkracht",
     blurb:
-      "Bij een school-abonnement horen 5 Familie-plekken per klas die de school " +
+      "Bij een schoollicentie horen 5 Familie-plekken per klas die de school " +
       "thuis kan weggeven — bedoeld voor gezinnen die een steuntje kunnen " +
       "gebruiken. Zo oefent elk kind ook thuis mee.",
     status: "binnenkort",

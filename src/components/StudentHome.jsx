@@ -87,7 +87,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   const pakketLabel = !sub.paywallActive
     ? "Gratis"
     : sub.tier === TIERS.TEACHER_PRO
-    ? "Pro"
+    ? "Schoollicentie"
     : sub.tier === TIERS.PARENT_PRO
     ? "Familie"
     : "Gratis";

@@ -78,7 +78,7 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
         <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.85)", marginTop: 0 }}>
           De basis van Leerkwartier is gratis — gegarandeerd t/m 2031. Help je het verder verspreiden? Delen wordt
           dubbel beloond: jullie krijgen <strong>allebei <a href="/abonnement.html#familie" style={{ color: "#ffd54f", textDecorationColor: "rgba(255,213,79,0.5)" }}>Familie</a> gratis tot 2027</strong> (straks
-          ± € 39 per jaar), én je loot mee voor een <strong>gratis Familie-jaar 2027 met 10 uur AI-bijles-tegoed</strong>.
+          ± € 39 per jaar), én je loot mee voor een <strong>gratis Familie-jaar in 2027</strong>.
         </p>
 
         {/* 🤝 Weggeef-actie: beide gezinnen Familie gratis tot aug 2027 */}
@@ -110,7 +110,7 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
         <p style={{ fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,0.75)", marginTop: 0 }}>
           📣 <strong>Ook zonder account meedoen?</strong> Deel de link hieronder. Voor elke vriend of
           ouder die zich via jouw link aanmeldt voor de gratis wekelijkse oefenmail, maak je kans op
-          een <strong>gratis Familie-jaar in 2027</strong> (mét extra AI-bijles-tegoed).
+          een <strong>gratis Familie-jaar in 2027</strong>.
         </p>
 
         <div style={card}>
@@ -163,7 +163,7 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
             <li><strong>Deelname is gratis</strong> en zonder aankoopverplichting.</li>
             <li><strong>Hoe meedoen:</strong> deel je persoonlijke link. Elke nieuwe aanmelding voor de gratis oefenmail via jouw link = één lot.</li>
             <li><strong>Actieperiode:</strong> tot en met 31 december 2026.</li>
-            <li><strong>Prijs:</strong> één gratis Leerkwartier Familie-jaar 2027 + 10 uur AI-bijles-kwartier-tegoed (totale waarde onder € 100).</li>
+            <li><strong>Prijs:</strong> één gratis Leerkwartier Familie-jaar 2027 (waarde onder € 100).</li>
             <li><strong>Trekking:</strong> de winnaar wordt na afloop willekeurig geloot uit alle loten en persoonlijk via e-mail bericht.</li>
             <li><strong>Privacy:</strong> we bewaren alleen een anonieme deel-code en de aanmeldingen — geen extra persoonsgegevens van wie deelt.</li>
             <li>Deelname betekent akkoord met deze voorwaarden. Vragen? Via de tips-pagina in de app.</li>

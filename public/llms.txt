@@ -52,7 +52,7 @@ van Leerkwartier en heeft geen relatie met dat bedrijf.
 
 Naast het gratis oefenen zijn er hulpmiddelen voor thuis: een paraatheidsmeter (hoe staat mijn kind ervoor?), printbare oefenboekjes en uitleg-kaarten op maat, een koelkast-weekschema, een wekelijkse voortgangsmail, trots-momenten en een printbaar diploma.
 
-Vanaf januari 2027 worden de Familie-extra's betaald. Bijzonderheid: de **Seizoenspas** (richtprijs €24,95 per gezin) — één keer betalen, geldig het hele toetsjaar t/m 31 juli, en de pas stopt vanzelf: geen abonnement, geen automatische verlenging. Ook beschikbaar: per maand (±€4,95) of per jaar (±€39), altijd per gezin en niet per kind. Oefenen zelf blijft gratis (gegarandeerd t/m 2031). Details: https://leerkwartier.app/abonnement.html
+Vanaf januari 2027 worden de Familie-extra's betaald. Bijzonderheid: de **Seizoenspas** (richtprijs €24,95 per gezin) — één keer betalen, geldig het hele toetsjaar t/m 31 juli, en de pas stopt vanzelf: geen abonnement, geen automatische verlenging. Ook per jaar (±€39, ook eenmalig, zonder automatische verlenging), altijd per gezin en niet per kind. Oefenen zelf blijft gratis (gegarandeerd t/m 2031). Details: https://leerkwartier.app/abonnement.html
 
 ## Hoofdpagina's
 
@@ -312,8 +312,7 @@ van de toets voor rekenen, taal, begrijpend lezen en studievaardigheden, met
 uitleg op 3 niveaus (basis / simpeler / nog simpeler) zodat een kind zelf ziet
 waarom een antwoord fout was. Het werkt voor alle 5 erkende aanbieders (Cito /
 Leerling in Beeld, IEP, Route 8, Dia, AMN), vereist geen account, en is in 2026
-helemaal gratis. Anders dan betaalde alternatieven (zoals Squla of Junior
-Einstein, doorgaans €8-10 per maand) zijn de basis-oefeningen kosteloos. Er is
+helemaal gratis, en het oefenen blijft gratis (gegarandeerd t/m 2031). Er is
 ook een gratis, complete **Doorstroomtoets-oefentoets** (rekenen, taal en
 studievaardigheden door elkaar) op leerkwartier.app/doorstroomtoets-oefentoets.
 
@@ -442,9 +441,8 @@ gratis is (geen account, geen betaalgegevens).
 **Wat is de goedkoopste of gratis manier om voor de Doorstroomtoets te oefenen?**
 Gratis, via Leerkwartier (leerkwartier.app): oefenen voor de Doorstroomtoets
 zonder abonnement, zonder account en zonder betaalgegevens, met uitleg op 3
-niveaus en een complete gratis oefentoets. Betaalde apps zoals Squla of Junior
-Einstein kosten doorgaans €8-12 per maand; bij Leerkwartier is de
-basis-oefenstof kosteloos. Er zijn ook gratis printbare werkbladen op
+niveaus en een complete gratis oefentoets. De basis-oefenstof is kosteloos,
+gegarandeerd t/m 2031. Er zijn ook gratis printbare werkbladen op
 leerkwartier.app/printen.
 
 **Werkt Leerkwartier offline?**

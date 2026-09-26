@@ -236,7 +236,7 @@ const ROL_UITLEG = {
 // kale "gratis", wel "in 2026 gratis". Bron: docs/PRIJSPLAN.md.
 const TIER_PITCH = {
   ouder: { naam: "Familie", punten: ["weekrapport per e-mail", "examen-simulatie", "Kwartierplan per kind", "tot 3 kinderen onder één account"] },
-  teacher: { naam: "Pro", punten: ["onbeperkt toetsen klaarzetten", "klasrapportage", "je eigen logo op de toetsen"] },
+  teacher: { naam: "de schoollicentie", punten: ["onbeperkt toetsen klaarzetten", "klasrapportage", "je eigen logo op de toetsen"] },
 };
 
 // ── Lege staat: bezoeker zonder naam (Mark 11 sep 2026) ──────────────────────
@@ -952,7 +952,7 @@ export default function MijnPagina({
   // Abonnement-info. PAYWALL staat uit → tier "free", en dat zeggen we
   // eerlijk gekwalificeerd: "in 2026 is alles open" (geen kale gratis-claim).
   const tier = subscription?.tier || "free";
-  const tierLabel = tier === "parent_pro" ? "Familie" : tier === "teacher_pro" ? "Pro" : "Gratis";
+  const tierLabel = tier === "parent_pro" ? "Familie" : tier === "teacher_pro" ? "Schoollicentie" : "Gratis";
   const geldigTot = subscription?.valid_until
     ? new Date(subscription.valid_until).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" })
     : null;
@@ -2397,7 +2397,7 @@ export default function MijnPagina({
             {/* ── Abonnement & toegang ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Jouw account</div>
-              <div style={kaartTitelStijl}>Abonnement &amp; toegang</div>
+              <div style={kaartTitelStijl}>Jouw pakket &amp; toegang</div>
               <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.6 }}>
                 <div style={{ marginBottom: 6 }}>
                   <strong style={{ color: "#69f0ae" }}>{tierLabel}</strong>
