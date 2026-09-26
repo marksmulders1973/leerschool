@@ -57,8 +57,54 @@ function injectSwVersion() {
   }
 }
 
+// Deel-voorbeelden per route (26 sep 2026). Een leerkracht die leerkwartier.app/nieuwkomers in
+// WhatsApp of een mail plakt, kreeg het voorbeeld van de homepage ("Doorstroomtoets oefenen").
+// WhatsApp/Facebook/Google lezen geen JavaScript, dus: na de build een kopie van index.html per
+// route met eigen titel/omschrijving (dist/_shell-<route>.html). De hosting-config stuurt de route
+// daarheen; de app zelf start precies hetzelfde (zelfde scripts, de router leest het pad).
+const ROUTE_SHELLS = {
+  nieuwkomers: {
+    titel: 'Nieuwkomer-pakket — gratis Nederlands leren, met vertaling in je eigen taal | Leerkwartier',
+    omschrijving: 'Voor kinderen die net Nederlands leren: zinnen voor in de klas, eerste woorden, gevoelens, rekentaal en rekenen tot 100. Tik op een zin voor de vertaling in Engels, Arabisch, Oekraïens of Turks. Gratis, geen account.',
+  },
+  klassikaal: {
+    titel: 'Klassikaal op het digibord — quiz met A-B-C-D-kaartjes, zonder accounts | Leerkwartier',
+    omschrijving: 'Kant-en-klare setjes voor groep 6, 7 en 8 en de taalklas. Leerlingen houden een A-, B-, C- of D-kaartje omhoog; u ziet meteen hoeveel procent het goed had. Gratis, geen accounts.',
+  },
+  klas: {
+    titel: 'Voor de klas — 5 vragen meteen op het digibord | Leerkwartier',
+    omschrijving: 'Zet leerkwartier.app/klas op het bord: meteen vijf vragen op groepsniveau, zonder inloggen, met uitleg bij elke fout. Gratis.',
+  },
+}
+function routeShells() {
+  const esc = (t) => t.replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;')
+  return {
+    name: 'route-shells',
+    apply: 'build',
+    closeBundle() {
+      let html
+      try { html = readFileSync(resolve('dist/index.html'), 'utf8') } catch { return }
+      for (const [route, { titel, omschrijving }] of Object.entries(ROUTE_SHELLS)) {
+        const t = esc(titel), o = esc(omschrijving), url = `https://leerkwartier.app/${route}`
+        const out = html
+          .replace(/<title>[^<]*<\/title>/, `<title>${t}</title>`)
+          .replace(/(<meta name="description" content=")[^"]*(")/, `$1${o}$2`)
+          .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${t}$2`)
+          .replace(/(<meta property="og:description" content=")[^"]*(")/, `$1${o}$2`)
+          .replace(/(<meta property="og:url" content=")[^"]*(")/, `$1${url}$2`)
+          .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${t}$2`)
+          .replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${o}$2`)
+          .replace(/(<link rel="canonical" href=")[^"]*(")/, `$1${url}$2`)
+        writeFileSync(resolve(`dist/_shell-${route}.html`), out)
+      }
+      // eslint-disable-next-line no-console
+      console.log(`[route-shells] ${Object.keys(ROUTE_SHELLS).length} deel-voorbeelden geschreven`)
+    },
+  }
+}
+
 export default defineConfig({
-  plugins: [react(), injectSwVersion()],
+  plugins: [react(), injectSwVersion(), routeShells()],
   // Tijdelijk build-stempel (Mark 2 jul, tijdens de park-bouwfase): kleine
   // datum/tijd rechtsboven in de app zodat je ziet of je naar de laatste
   // versie kijkt. Weghalen = deze define + het blokje in main.jsx.

@@ -111,6 +111,9 @@
       "source": "/api/(.*)",
       "destination": "/api/$1"
     },
+    { "source": "/nieuwkomers", "destination": "/_shell-nieuwkomers.html" },
+    { "source": "/klassikaal", "destination": "/_shell-klassikaal.html" },
+    { "source": "/klas", "destination": "/_shell-klas.html" },
     {
       "source": "/vlaanderen",
       "destination": "/vlaanderen.html"
