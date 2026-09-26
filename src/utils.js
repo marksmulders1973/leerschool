@@ -129,7 +129,9 @@ export function track(event, params = {}) {
   // stond de site een kwartier open. Zie shared/leermoment.js.
   if (LEERMOMENT_EVENTS.has(event)) { try { meldLeermoment(); } catch { /* */ } }
   // Interne check (Claude/Mark) telt nergens mee — geen GA, geen events-insert.
-  if (isInternalVisit()) return;
+  // Geeft een promise terug (true = de database heeft het event ontvangen), voor
+  // wie wil weten of een eenmalige meting echt aankwam (bron_bezoek, idee BI).
+  if (isInternalVisit()) return Promise.resolve(false);
   // (1) optioneel Google Analytics (alleen als gtag ooit geladen is — blijft onschuldig)
   try { window.gtag?.("event", event, params); } catch (e) {}
   // (2) eigen, anonieme eerstepartij-log in Supabase (fire-and-forget, blokkeert niets)
@@ -143,14 +145,14 @@ export function track(event, params = {}) {
     // events uit verouderde code (het quiz_id-raadsel van 7 aug) — met dit
     // stempel is "welke bundle stuurde dit?" voortaan één query.
     cleaned.app_v = BOUW_VERSIE;
-    supabase.from("events").insert({
+    return supabase.from("events").insert({
       name: String(event).slice(0, 60),
       props: Object.keys(cleaned).length ? cleaned : null,
       path: typeof location !== "undefined" ? location.pathname.slice(0, 120) : null,
       source: _source(),
       session: _sessionId(),
-    }).then(() => {}).catch(() => {});
-  } catch (e) {}
+    }).then(({ error }) => !error).catch(() => false);
+  } catch (e) { return Promise.resolve(false); }
 }
 
 // ─── Referral "deel & win" ───────────────────────────────────────

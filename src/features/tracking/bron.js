@@ -60,9 +60,32 @@ function bepaalBron(params, referrer) {
 
 // Bij app-start aanroepen (main.jsx, vóór render). First touch wint: een
 // apparaat dat al een bron heeft houdt die — de eerste kennismaking telt.
+// Idee BI (26 sep 2026): bij het allereerste bezoek neemt de service worker de
+// pagina over en herlaadt hem binnen ~0,5 s — precies dan ging bron_bezoek de
+// deur uit en werd afgebroken, zonder tweede kans (KEY_BRON stond al). Nu krijgt
+// een nieuw record `wacht: 1` tot de database het event bevestigt; staat dat er
+// bij de volgende start nog, dan sturen we het opnieuw (max 3 pogingen).
+// Oude records hebben geen `wacht` en worden dus nooit dubbel gemeld.
+function meldBron(record) {
+  const poging = (record.wacht || 0) + 1;
+  if (poging > 3) return;
+  ls.set(KEY_BRON, JSON.stringify({ ...record, wacht: poging }));
+  Promise.resolve(track("bron_bezoek", { bron: record.bron, ...(poging > 1 ? { poging } : {}) }))
+    .then((ok) => {
+      if (!ok) return;
+      const { wacht: _weg, ...rest } = record; // eslint-disable-line no-unused-vars
+      ls.set(KEY_BRON, JSON.stringify(rest));
+    })
+    .catch(() => {});
+}
+
 export function vangBron() {
   try {
-    if (ls.get(KEY_BRON)) return;
+    const bestaand = ls.get(KEY_BRON);
+    if (bestaand) {
+      try { const r = JSON.parse(bestaand); if (r && r.wacht) meldBron(r); } catch { /* */ }
+      return;
+    }
     const params = new URLSearchParams(window.location.search);
     const referrer = document.referrer || "";
     const bron = bepaalBron(params, referrer);
@@ -72,10 +95,10 @@ export function vangBron() {
       referrer: referrer.slice(0, 200),
       ts: new Date().toISOString(),
     };
-    ls.set(KEY_BRON, JSON.stringify(record));
     // Eenmalig event zodat óók anonieme bezoekers (geen account) per bron
-    // telbaar zijn in het dagrapport. Vuurt alleen bij de allereerste capture.
-    track("bron_bezoek", { bron });
+    // telbaar zijn in het dagrapport. Vuurt bij de allereerste capture, en
+    // opnieuw als die eerste poging niet aankwam (zie meldBron).
+    meldBron(record);
   } catch { /* nooit de app-start breken */ }
 }
 
