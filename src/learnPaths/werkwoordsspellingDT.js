@@ -437,7 +437,7 @@ const steps = [
     ]),
     checks: [
       {
-        q: "**'Hij ____ vroeg op'** — kies juiste van **staan** (tegenwoordige tijd):",
+        q: "**'Hij ____ vroeg op'** — kies de juiste vorm van **staan** (tegenwoordige tijd):",
         options: ["staat","stat","stant","staan"],
         answer: 0,
         wrongHints: [null,"Stam = sta, niet stat.","Dubbel-n is fout.","Meervoud."],

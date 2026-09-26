@@ -2821,8 +2821,8 @@ const steps = [
         ref: "1F",
         options: ["verbrandt", "verbrand", "verbrandd", "verbranden"],
         answer: 0,
-        wrongHints: [null, "Het onderwerp is 'je huid' (= zij/het), niet 'je'. Wat komt er dan achter de stam?", "Dubbel-d als werkwoordsuitgang bestaat in het Nederlands niet.", "'Je huid' is enkelvoud — geen meervoudsvorm."],
-        explanation: "Let op: het onderwerp is '**je huid**' (= het), niet 'je'! Dus stam + t: je huid **verbrandt**.",
+        wrongHints: [null, "Het onderwerp is 'je huid' (= hij), niet 'je'. Wat komt er dan achter de stam?", "Dubbel-d als werkwoordsuitgang bestaat in het Nederlands niet.", "'Je huid' is enkelvoud — geen meervoudsvorm."],
+        explanation: "Let op: het onderwerp is '**je huid**' (= hij), niet 'je'! Dus stam + t: je huid **verbrandt**.",
       },
       {
         q: "Welke zin is **goed gespeld**?",

@@ -8,7 +8,11 @@ import { buildTopicQuiz } from "../practice/buildTopicQuiz.js";
 import { kiesStartPaden, verweefVragen } from "../onboarding/startKwartier.js";
 
 const AANTAL = 10;
-const bordbaar = (v) => v && !v.svg && !v.bronTekst && !v.tekst && !v.passage && !v.image;
+// Alleen vragen die zonder plaatje of leestekst te beantwoorden zijn (ook niet een tekst in de
+// stap-uitleg of in de vraag genoemd — kliktest 26 sep 2026).
+const VERWIJST_NAAR_TEKST = /\b(alinea|volgens de tekst|in de tekst|uit de tekst|in het verhaal|de tekst hierboven|lees (nog eens|nogmaals))\b/i;
+const bordbaar = (v) => v && !v.svg && !v.bronTekst && !v.tekst && !v.passage && !v.image && !v.stapTekst && !v.evidence
+  && !VERWIJST_NAAR_TEKST.test(`${v.q || ""} ${v.explanation || ""}`);
 
 const laadPad = async (pathId, aantal) => {
   try {

@@ -29,6 +29,8 @@ function shuffle(arr) {
 // "Werk jij hard?" een tabel met "jij → werkt" die juist naar het foute antwoord wees. En op het digibord
 // viel het hele taalsetje van groep 6-7 weg, omdat elke vraag een (stap)plaatje had.
 const VERWIJST_NAAR_PLAATJE = /tabel|kaart|grafiek|plaatje|tekening|figuur|afbeelding|hieronder|hierboven|diagram|klok|getallenlijn|schema|staaf|cirkel/i;
+const STAP_MET_TEKST = /(op basis van (de|het) (tekst|verhaal)|lees (eerst |nog eens |nogmaals )?(de|het) (tekst|verhaal)|beantwoord de \d+ vragen)/i;
+
 export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null, stapPlaatje = "altijd" }) {
   const pad = await getLearnPath(pathId);
   if (!pad) {
@@ -38,7 +40,10 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
   const alle = pad.steps || [];
   const stappen = stapIndexen ? alle.filter((_, i) => stapIndexen.includes(i)) : alleenEersteStappen ? alle.slice(0, alleenEersteStappen) : alle;
   const alleChecks = stappen.flatMap((s) =>
-    (s.checks || []).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || VERWIJST_NAAR_PLAATJE.test(String(c.q || ""))) ? s.svg : null) || null }))
+    (s.checks || []).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || VERWIJST_NAAR_PLAATJE.test(String(c.q || ""))) ? s.svg : null) || null,
+      // Vraag hoort bij een leestekst in de stap-uitleg (kliktest 26 sep 2026: "Wat heb je nodig om de
+      // armband te maken?" stond zonder tekst op het digibord). Klassikaal slaat zulke vragen over.
+      stapTekst: STAP_MET_TEKST.test(String(s.explanation || "")) || undefined }))
   );
   const valide = alleChecks.filter(
     (c) => !c.disabled

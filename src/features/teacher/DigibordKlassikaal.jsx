@@ -4,7 +4,7 @@
 // zetten en evt. uitprinten." Geen accounts voor kinderen: de juf telt handen (of A-B-C-D-kaarten).
 // Werkt op een toets uit "Mijn toetsen" (vragen: { q, options, answer, explanation }).
 // Uitslagen blijven op dit apparaat (localStorage lk_digibord_uitslagen) voor vergelijken later.
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { track } from "../../utils.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 
@@ -13,6 +13,15 @@ const MAX_KLAS = 40;
 const UITSLAG_KEY = "lk_digibord_uitslagen";
 const KLEUR_GOED = "#00c853";
 const KLEUR_FOUT = "#ff7043";
+// Zelfde kleuren als de geprinte A-B-C-D-kaartjes: dan telt de juf per kleur (kliktest 26 sep 2026).
+const LETTER_KLEUR = ["#1e88e5", "#43a047", "#fb8c00", "#8e24aa", "#00897b", "#6d4c41"];
+// Lopend setje bewaren (kliktest 26 sep 2026): herladen of per ongeluk terug midden in een
+// setje gooide alle tellingen weg. sessionStorage = alleen dit tabblad, verdwijnt vanzelf.
+export const LOPEND_KEY = "lk_digibord_lopend";
+export function leesLopend() {
+  try { return JSON.parse(sessionStorage.getItem(LOPEND_KEY) || "null"); } catch { return null; }
+}
+const wisLopend = () => { try { sessionStorage.removeItem(LOPEND_KEY); } catch { /* */ } };
 
 const pct = (goed, totaal) => (totaal > 0 ? Math.round((goed / totaal) * 100) : 0);
 const esc = (s) => String(s ?? "").replace(/\*\*?/g, "").replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
@@ -41,15 +50,15 @@ function printKaarten(aantal) {
   const n = Math.max(1, Math.min(MAX_KLAS, aantal || 1));
   const kleur = ["#1e88e5", "#43a047", "#fb8c00", "#8e24aa"];
   const vel = `<div class="vel">${["A", "B", "C", "D"].map((l, i) =>
-    `<div class="kaart" style="border-color:${kleur[i]};color:${kleur[i]}"><span>${l}</span><small>Leerkwartier</small></div>`).join("")}</div>`;
+    `<div class="knip"><div class="kaart" style="border-color:${kleur[i]};color:${kleur[i]}"><span>${l}</span><small>Leerkwartier · Een kwartier per dag leren, een leven lang slimmer.</small></div></div>`).join("")}</div>`;
   w.document.write(`<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>A-B-C-D-kaartjes (${n}×)</title>
   <style>@page{size:A4 portrait;margin:8mm}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif}
-  .vel{width:194mm;height:279mm;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;page-break-after:always;border:1px dashed #999}
+  .vel{width:194mm;height:279mm;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;page-break-after:always}
+  .knip{border:1px dashed #888;display:flex}
   .vel:last-child{page-break-after:auto}
-  .kaart{position:relative;margin:5mm;border:6mm solid;border-radius:8mm;display:flex;align-items:center;justify-content:center;background:#fff}
+  .kaart{position:relative;flex:1;margin:5mm;border:6mm solid;border-radius:8mm;display:flex;align-items:center;justify-content:center;background:#fff}
   .kaart span{font-size:78mm;font-weight:900;line-height:1}
-  .kaart small{position:absolute;bottom:3mm;font-size:9pt;color:#777}
-  .vel{background-image:linear-gradient(#999,#999),linear-gradient(#999,#999);background-size:100% 1px,1px 100%;background-position:center,center;background-repeat:no-repeat}</style></head><body>
+  .kaart small{position:absolute;bottom:3mm;left:0;right:0;text-align:center;font-size:8pt;color:#777}</style></head><body>
   ${Array.from({ length: n }, () => vel).join("")}
   <script>setTimeout(function(){window.print()},300)</script></body></html>`);
   w.document.close();
@@ -81,13 +90,18 @@ const S = {
   mini: { width: 38, height: 38, borderRadius: 10, border: "1px solid var(--color-border-soft)", background: "var(--color-bg-elevated, #1b2440)", color: "var(--color-text)", fontSize: 18, fontWeight: 800, cursor: "pointer" },
 };
 
-export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }) {
-  const [vragen, setVragen] = useState(() => (startVragen || []).filter((v) => v && Array.isArray(v.options) && v.options.length >= 2));
-  const [fase, setFase] = useState("klaarzetten"); // klaarzetten → vraag → klaar
-  const [idx, setIdx] = useState(0);
-  const [tellingen, setTellingen] = useState({}); // idx → [aantallen per antwoord]
-  const [toon, setToon] = useState(false);
+export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop, terug }) {
+  const hervat = useMemo(() => { const l = leesLopend(); return l && quiz?.id && l.quiz?.id === quiz.id ? l : null; }, []); // eslint-disable-line react-hooks/exhaustive-deps
+  const [vragen, setVragen] = useState(() => hervat?.vragen || (startVragen || []).filter((v) => v && Array.isArray(v.options) && v.options.length >= 2));
+  const [fase, setFase] = useState(hervat?.fase || "klaarzetten"); // klaarzetten → vraag → klaar
+  const [idx, setIdx] = useState(hervat?.idx || 0);
+  const [tellingen, setTellingen] = useState(hervat?.tellingen || {}); // idx → [aantallen per antwoord]
+  const [toon, setToon] = useState(!!hervat?.toon);
   const [aantalKinderen, setAantalKinderen] = useState(28);
+  useEffect(() => {
+    if (fase !== "vraag") return;
+    try { sessionStorage.setItem(LOPEND_KEY, JSON.stringify({ quiz: { id: quiz?.id, title: quiz?.title, topic: quiz?.topic }, vragen, fase, idx, tellingen, toon, terug })); } catch { /* */ }
+  }, [fase, idx, tellingen, toon, vragen]); // eslint-disable-line react-hooks/exhaustive-deps
   const titel = quiz?.title || quiz?.topic || "Toets";
   const vorige = useMemo(() => vorigeUitslag(quiz), [quiz]);
 
@@ -122,8 +136,36 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
     const beantwoord = rijen.filter((r) => r.totaal > 0);
     bewaarUitslag(quiz, beantwoord);
     track("digibord_klaar", { vragen: vragen.length, gemiddeld: beantwoord.length ? Math.round(beantwoord.reduce((a, r) => a + r.pct, 0) / beantwoord.length) : 0 });
+    wisLopend();
     setFase("klaar");
   };
+  const stop = () => {
+    const geteld = Object.values(tellingen).some((r) => r.some((n) => n > 0));
+    if (geteld && !window.confirm("Stoppen? De getelde handen van dit setje gaan dan verloren.")) return;
+    wisLopend(); setFase("klaarzetten");
+  };
+
+  // Toetsenbord / presenter (kliktest 26 sep 2026): A-D of 1-4 = +1 bij die letter,
+  // Enter/spatie/pijl-rechts/PageDown = uitslag tonen, daarna volgende vraag.
+  useEffect(() => {
+    if (fase !== "vraag") return undefined;
+    const opToets = (e) => {
+      const t = e.target;
+      const k = e.key;
+      if (t && (t.tagName === "INPUT" || t.tagName === "TEXTAREA")) return;
+      // Op een knop met focus doen Enter/spatie al zelf een klik — niet dubbel uitvoeren.
+      if (t && t.tagName === "BUTTON" && (k === "Enter" || k === " ")) return;
+      const letter = "abcdef".indexOf(String(k).toLowerCase());
+      const nr = letter >= 0 && String(k).length === 1 ? letter : "123456".indexOf(k);
+      if (!toon && nr >= 0 && v && nr < v.options.length) { e.preventDefault(); pas(nr, (x) => x + 1); return; }
+      if (k === "Enter" || k === " " || k === "ArrowRight" || k === "PageDown") {
+        e.preventDefault();
+        if (!toon) { if (totaal > 0) toonUitslag(); } else volgende();
+      }
+    };
+    window.addEventListener("keydown", opToets);
+    return () => window.removeEventListener("keydown", opToets);
+  });
 
   // ── 1. Klaarzetten: volgorde, weghalen, kaarten printen ──
   if (fase === "klaarzetten") {
@@ -145,15 +187,17 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
           </ol>
           <div style={{ display: "flex", gap: 10, alignItems: "center", flexWrap: "wrap" }}>
             <label style={{ fontSize: 15 }}>Aantal kinderen:{" "}
-              <input type="number" min={1} max={MAX_KLAS} value={aantalKinderen} onChange={(e) => setAantalKinderen(Math.max(1, Math.min(MAX_KLAS, parseInt(e.target.value, 10) || 1)))}
+              <input type="number" min={1} max={MAX_KLAS} value={aantalKinderen} onChange={(e) => setAantalKinderen(e.target.value === "" ? "" : Math.min(MAX_KLAS, parseInt(e.target.value, 10) || 0))}
+                onBlur={() => setAantalKinderen((n) => Math.max(1, Math.min(MAX_KLAS, parseInt(n, 10) || 1)))}
                 style={{ width: 70, padding: "6px 8px", fontSize: 16, borderRadius: 8, border: "1px solid var(--color-border-soft)", background: "var(--color-bg-base, #0f1729)", color: "var(--color-text)" }} />
             </label>
-            <button style={S.knopLicht} onClick={() => printKaarten(aantalKinderen)}>🖨️ Print {aantalKinderen} kaartenvellen</button>
+            <button style={S.knopLicht} onClick={() => printKaarten(parseInt(aantalKinderen, 10) || 1)}>🖨️ Print kaartenvellen ({parseInt(aantalKinderen, 10) || 1} {(parseInt(aantalKinderen, 10) || 1) === 1 ? "kind" : "kinderen"})</button>
           </div>
           <div style={{ marginTop: 6, fontSize: 13.5, color: "var(--color-text-muted)" }}>Tip: plastificeer ze of print op dik papier, dan gaan ze het hele jaar mee.</div>
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 16 }}>
           <button style={S.knop} disabled={!vragen.length} onClick={() => start()}>▶ Start op het digibord ({vragen.length} vragen)</button>
+          <span style={{ alignSelf: "center", fontSize: 14, color: "var(--color-text-muted)" }}>Tip: met een toetsenbord of presenter tel je met A, B, C, D en ga je verder met Enter of →.</span>
         </div>
         {vorige && (
           <p style={{ margin: "0 0 12px", fontSize: 14, color: "var(--color-text-muted)" }}>
@@ -184,7 +228,7 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
       <div style={S.wrap}>
         <div style={S.kop}>
           <h2 style={S.titel}>🎉 Klaar · gemiddeld {gem}% goed</h2>
-          <button style={S.knopLicht} onClick={onStop}>← Terug naar mijn toetsen</button>
+          <button style={S.knopLicht} onClick={onStop}>← Terug</button>
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 16 }}>
           {moeilijk.length > 0 && (
@@ -194,7 +238,7 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
           <button style={S.knopLicht} onClick={() => setFase("klaarzetten")}>Opnieuw met deze vragen</button>
         </div>
         {[...beantwoord].sort((a, b) => a.pct - b.pct).map((r) => (
-          <div key={r.nr} style={{ ...S.kaart, padding: "12px 14px", marginBottom: 8, display: "flex", gap: 14, alignItems: "center" }}>
+          <div key={"r" + r.nr} style={{ ...S.kaart, padding: "12px 14px", marginBottom: 8, display: "flex", gap: 14, alignItems: "center" }}>
             <span style={{ fontWeight: 900, fontSize: 22, minWidth: 64, color: r.pct >= 60 ? KLEUR_GOED : KLEUR_FOUT }}>{r.pct}%</span>
             <span style={{ flex: 1, fontSize: 15.5 }}>{r.nr}. <MdInline text={r.q} /></span>
             <span style={{ fontSize: 13, color: "var(--color-text-muted)" }}>{r.counts.map((c, i) => `${LETTERS[i]} ${c}`).join(" · ")}</span>
@@ -207,25 +251,26 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
   // ── 2. Eén vraag op het digibord ──
   const goedPct = pct(tel[v.answer] || 0, totaal);
   const meestFout = toon && totaal > 0 ? tel.map((c, i) => ({ c, i })).filter((x) => x.i !== v.answer).sort((a, b) => b.c - a.c)[0] : null;
+  // Leesbaar op 3-5 meter (kliktest 26 sep 2026): op een breed digibord schalen kolom en letters mee.
   return (
-    <div style={S.wrap}>
+    <div style={{ ...S.wrap, maxWidth: "min(1600px, 96vw)" }}>
       <div style={S.kop}>
-        <span style={{ fontSize: 16, color: "var(--color-text-muted)", fontWeight: 700 }}>🙋 Klassikaal · vraag {idx + 1} van {vragen.length}</span>
-        <button style={S.knopLicht} onClick={() => setFase("klaarzetten")}>Stop</button>
+        <span style={{ fontSize: "clamp(16px, 1.3vw, 24px)", color: "var(--color-text-muted)", fontWeight: 700 }}>🙋 Klassikaal · vraag {idx + 1} van {vragen.length}</span>
+        <button style={S.knopLicht} onClick={stop}>Stop</button>
       </div>
       <div style={{ ...S.kaart, marginBottom: 14 }}>
-        <div style={{ fontSize: 30, fontWeight: 800, lineHeight: 1.3 }}><MdInline text={v.q} /></div>
+        <div style={{ fontSize: "clamp(26px, 3.2vw, 60px)", fontWeight: 800, lineHeight: 1.3 }}><MdInline text={v.q} /></div>
       </div>
       {v.options.map((opt, i) => {
         const n = tel[i] || 0;
         const isGoed = i === v.answer;
         const breedte = totaal > 0 ? Math.round((n / totaal) * 100) : 0;
         return (
-          <div key={i} style={{ ...S.kaart, padding: "12px 14px", marginBottom: 10, display: "flex", alignItems: "center", gap: 14, position: "relative", overflow: "hidden",
-            borderColor: toon && isGoed ? KLEUR_GOED : "var(--color-border-soft)", borderWidth: toon && isGoed ? 3 : 1 }}>
+          <div key={"o" + i} style={{ ...S.kaart, padding: "12px 14px", marginBottom: 10, display: "flex", alignItems: "center", gap: 14, position: "relative", overflow: "hidden", flexWrap: "wrap",
+            border: toon && isGoed ? `3px solid ${KLEUR_GOED}` : "1px solid var(--color-border-soft)" }}>
             {toon && <div aria-hidden style={{ position: "absolute", left: 0, top: 0, bottom: 0, width: breedte + "%", background: isGoed ? "rgba(0,200,83,0.22)" : "rgba(255,112,67,0.16)" }} />}
-            <span style={{ position: "relative", width: 48, height: 48, borderRadius: 12, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 26, fontWeight: 900, background: "var(--color-brand-primary)", color: "#0b1224", flexShrink: 0 }}>{LETTERS[i]}</span>
-            <span style={{ position: "relative", flex: 1, fontSize: 24, fontWeight: 600 }}><MdInline text={opt} />{toon && isGoed ? "  ✓" : ""}</span>
+            <span style={{ position: "relative", width: 48, height: 48, borderRadius: 12, display: "inline-flex", alignItems: "center", justifyContent: "center", fontSize: 26, fontWeight: 900, background: LETTER_KLEUR[i] || "var(--color-brand-primary)", color: "#fff", flexShrink: 0 }}>{LETTERS[i]}</span>
+            <span style={{ position: "relative", flex: "1 1 200px", fontSize: "clamp(22px, 2.4vw, 44px)", fontWeight: 600 }}><MdInline text={opt} />{toon && isGoed ? "  ✓" : ""}</span>
             {toon ? (
               <span style={{ position: "relative", fontSize: 22, fontWeight: 800, minWidth: 110, textAlign: "right" }}>{n} {n === 1 ? "hand" : "handen"}</span>
             ) : (
@@ -251,13 +296,13 @@ export default function DigibordKlassikaal({ quiz, vragen: startVragen, onStop }
       {toon && (
         <div style={{ ...S.kaart, marginTop: 6, borderColor: goedPct >= 60 ? KLEUR_GOED : KLEUR_FOUT }}>
           <div style={{ fontSize: 34, fontWeight: 900, color: goedPct >= 60 ? KLEUR_GOED : KLEUR_FOUT }}>{goedPct}% van de klas had deze goed</div>
-          <div style={{ fontSize: 18, marginTop: 4 }}>Het goede antwoord is <strong>{LETTERS[v.answer]}: <MdInline text={v.options[v.answer]} /></strong>.</div>
+          <div style={{ fontSize: "clamp(18px, 1.6vw, 30px)", marginTop: 4 }}>Het goede antwoord is <strong>{LETTERS[v.answer]}: <MdInline text={String(v.options[v.answer]).replace(/[.!?]$/, "")} /></strong>{/[!?]$/.test(String(v.options[v.answer])) ? String(v.options[v.answer]).slice(-1) : "."}</div>
           {meestFout && meestFout.c > 0 && goedPct < 80 && (
             <div style={{ fontSize: 16, marginTop: 6, color: "var(--color-text-muted)" }}>{meestFout.c} {meestFout.c === 1 ? "kind koos" : "kinderen kozen"} {LETTERS[meestFout.i]}. Vraag eens hoe ze daarop kwamen.</div>
           )}
           {v.explanation
             ? <div style={{ fontSize: 17, marginTop: 10, lineHeight: 1.5 }}>💡 <MdInline text={v.explanation} /></div>
-            : meestFout && meestFout.c > 0 && v.wrongHints?.[meestFout.i] && <div style={{ fontSize: 17, marginTop: 10, lineHeight: 1.5 }}>💡 Bij {LETTERS[meestFout.i]}: {String(v.wrongHints[meestFout.i]).replace(/\*\*/g, "").replace(/\s*Probeer het nog eens\.?/, "")}</div>}
+            : meestFout && meestFout.c > 0 && String(v.wrongHints?.[meestFout.i] || "").replace(/\*\*/g, "").replace(/\s*Probeer het nog eens\.?/, "").trim().length >= 15 && <div style={{ fontSize: 17, marginTop: 10, lineHeight: 1.5 }}>💡 Bij {LETTERS[meestFout.i]}: {String(v.wrongHints[meestFout.i]).replace(/\*\*/g, "").replace(/\s*Probeer het nog eens\.?/, "")}</div>}
           <button style={{ ...S.knop, marginTop: 14 }} onClick={volgende}>{idx + 1 < vragen.length ? "Volgende vraag ▶" : "Bekijk het overzicht ▶"}</button>
         </div>
       )}

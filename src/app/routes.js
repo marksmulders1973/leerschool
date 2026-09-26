@@ -120,6 +120,9 @@ export const PAGE_TO_PATH = {
   klas: "/klas",
   // Kant-en-klare setjes voor klassikaal op het digibord met A-B-C-D-kaartjes (25 sep 2026).
   klassikaal: "/klassikaal",
+  // Het bord zelf (kliktest 26 sep 2026): eigen adres, zodat browser-terug midden in een
+  // setje naar het overzicht gaat i.p.v. de site uit, en herladen het setje hervat.
+  digibord: "/klassikaal/bord",
 };
 
 // Path-aliassen: extra URL → bestaande page-key. Voor leesvriendelijke deep-links

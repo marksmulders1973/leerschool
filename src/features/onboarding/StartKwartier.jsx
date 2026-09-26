@@ -432,6 +432,16 @@ function KlaarKaart({ goed, totaal, groep, userName, onGa, klas = false }) {
 // dagrapport klasgebruik los van het start-kwartier kan tellen (klasgolf.sql).
 export default function StartKwartier({ userName, userLevel, authUser, onStop, onGa, klas = false, klasGroep, onKlasGroep }) {
   const groep = klas ? (klasGroep || 7) : (parseGroep(userLevel) ?? 6);
+  // /klas op een breed digibord (kliktest 26 sep 2026): de smalle telefoonkolom was op 3-5 meter
+  // onleesbaar (vraag ~20px). Op brede schermen alles evenredig vergroten, telefoon blijft gelijk.
+  const [bordZoom, setBordZoom] = useState(1);
+  useEffect(() => {
+    if (!klas) return undefined;
+    const meet = () => { const w = window.innerWidth || 0; setBordZoom(w >= 1200 ? Math.min(1.9, Math.max(1, w / 1000)) : 1); };
+    meet();
+    window.addEventListener("resize", meet);
+    return () => window.removeEventListener("resize", meet);
+  }, [klas]);
   const [vragen, setVragen] = useState(null);
   const [stapIdx, setStapIdx] = useState(0);
   const stapIdxRef = useRef(0);
@@ -528,7 +538,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
   };
 
   return (
-    <div style={S.wrap}>
+    <div style={bordZoom > 1 ? { ...S.wrap, zoom: bordZoom } : S.wrap}>
       <div style={S.top}>
         <h2 style={S.titel}>{klas ? "🏫 Voor de klas · groep " + groep : "🚀 Start-kwartier" + (naam ? " van " + naam : "")}</h2>
         <Button variant="ghost" size="sm" onClick={stop} aria-label="Stop het start-kwartier">Stop ✕</Button>
