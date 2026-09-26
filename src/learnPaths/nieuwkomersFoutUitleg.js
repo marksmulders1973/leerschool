@@ -118,6 +118,8 @@ const ZIN = {
   "tafel": "aan een tafel zit je. Daar hang je geen jas aan.",
   "deur": "een deur gaat open en dicht.",
   "stoel": "op een stoel zit je.",
+  "raam": "door een raam kijk je naar buiten.",
+  "bord": "op het bord schrijft de juf.",
   "In de gymzaal.": "in de gymzaal heb je gym, geen pauze.",
   "Op de wc.": "op de wc speel je niet.",
   "In de auto.": "met de auto ga je ergens heen. Daar speel je niet.",

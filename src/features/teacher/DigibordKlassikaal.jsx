@@ -50,7 +50,7 @@ function printKaarten(aantal) {
   const n = Math.max(1, Math.min(MAX_KLAS, aantal || 1));
   const kleur = ["#1e88e5", "#43a047", "#fb8c00", "#8e24aa"];
   const vel = `<div class="vel">${["A", "B", "C", "D"].map((l, i) =>
-    `<div class="knip"><div class="kaart" style="border-color:${kleur[i]};color:${kleur[i]}"><span>${l}</span><small>Leerkwartier · Een kwartier per dag leren, een leven lang slimmer.</small></div></div>`).join("")}</div>`;
+    `<div class="knip"><div class="kaart" style="border-color:${kleur[i]};color:${kleur[i]}"><span>${l}</span><small><img src="${location.origin}/logo.jpg" alt="">Leerkwartier · Een kwartier per dag leren, een leven lang slimmer.</small></div></div>`).join("")}</div>`;
   w.document.write(`<!doctype html><html lang="nl"><head><meta charset="utf-8"><title>A-B-C-D-kaartjes (${n}×)</title>
   <style>@page{size:A4 portrait;margin:8mm}*{box-sizing:border-box}body{margin:0;font-family:Arial,sans-serif}
   .vel{width:194mm;height:279mm;display:grid;grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr;page-break-after:always}
@@ -58,7 +58,8 @@ function printKaarten(aantal) {
   .vel:last-child{page-break-after:auto}
   .kaart{position:relative;flex:1;margin:5mm;border:6mm solid;border-radius:8mm;display:flex;align-items:center;justify-content:center;background:#fff}
   .kaart span{font-size:78mm;font-weight:900;line-height:1}
-  .kaart small{position:absolute;bottom:3mm;left:0;right:0;text-align:center;font-size:8pt;color:#777}</style></head><body>
+  .kaart small{position:absolute;bottom:3mm;left:0;right:0;display:flex;align-items:center;justify-content:center;gap:2mm;font-size:8pt;color:#777}
+  .kaart small img{width:7mm;height:7mm;border-radius:1.5mm;object-fit:contain}</style></head><body>
   ${Array.from({ length: n }, () => vel).join("")}
   <script>setTimeout(function(){window.print()},300)</script></body></html>`);
   w.document.close();

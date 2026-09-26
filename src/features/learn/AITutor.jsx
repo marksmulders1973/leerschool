@@ -7,7 +7,8 @@
 //
 // MVP scope: niet meer dan ~150 regels, geen dependencies buiten React.
 
-import { useState, useEffect, useRef, lazy, Suspense } from "react";
+import { useState, useEffect, useRef, useContext, lazy, Suspense } from "react";
+import { SteunCtx, SteunTekst } from "../../shared/ui/SteunTik.jsx";
 import { partnerHeader, actievePartnerCode } from "../referral/partnerCode.js";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
@@ -37,6 +38,12 @@ const SUGGESTIES = [
   "Leg het anders uit",
   "Geef een voorbeeld",
   "Waarom is dit belangrijk?",
+];
+// Nieuwkomerpaden (kliktest 26 sep 2026): korte zinnen die een beginner kan lezen, mét vertaling.
+const SUGGESTIES_NK = [
+  ["Wat betekent dit woord?", { en: "What does this word mean?", ar: "ماذا تعني هذه الكلمة؟", uk: "Що означає це слово?", tr: "Bu kelime ne demek?" }],
+  ["Zeg het makkelijker", { en: "Say it more simply", ar: "قلها بشكل أسهل", uk: "Скажи простіше", tr: "Daha kolay söyle" }],
+  ["Geef een voorbeeld", { en: "Give an example", ar: "أعطني مثالًا", uk: "Дай приклад", tr: "Bir örnek ver" }],
 ];
 
 // Hardop voorlezen met de gratis browserstem (Nederlands), iets hoger = liever
@@ -87,7 +94,11 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   }, [open]);
   const emoji = buddy.emoji || "🐉";
   const accent = buddy.kleur || "#5bbf5a";
-  const groet = `Hoi! Ik ben ${naam} en ik weet aan welke vraag je werkt. Vertel wat je lastig vindt, of tik op een knopje hieronder — we komen er samen uit.`;
+  const nk = !!useContext(SteunCtx); // binnen een nieuwkomerpad
+  const groet = nk
+    ? `Hoi! Ik ben ${naam}. Ik help je. Wat snap je niet?`
+    : `Hoi! Ik ben ${naam} en ik weet aan welke vraag je werkt. Vertel wat je lastig vindt, of tik op een knopje hieronder — we komen er samen uit.`;
+  const groetSteun = { en: `Hi! I am ${naam}. I will help you. What don't you understand?`, ar: `مرحبًا! أنا ${naam}. سأساعدك. ما الذي لا تفهمه؟`, uk: `Привіт! Я ${naam}. Я тобі допоможу. Що тобі незрозуміло?`, tr: `Merhaba! Ben ${naam}. Sana yardım ederim. Neyi anlamadın?` };
 
   // Meten of leerlingen Vonk leuk vinden: open-event (venster geopend) los van
   // het vraag-event (echt iets gevraagd) → trechter open→vraag. Stop met praten
@@ -345,7 +356,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               <div style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#fff" }}>
                 {naam} helpt je
                 {/* kind-modus: dit scherm is van het kind — geen prijzen/koopdruk */}
-                <ProBadge feature="ai-tutor" kind />
+                {!nk && <ProBadge feature="ai-tutor" kind />}
               </div>
               <div style={{
                 fontSize: 11,
@@ -410,9 +421,9 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
               padding: "8px 4px 4px",
               lineHeight: 1.55,
             }}>
-              <div style={{ marginBottom: 8 }}>
-                {emoji} {groet}
-              </div>
+              {nk
+                ? <SteunTekst nl={groetSteun}><div style={{ marginBottom: 8 }}>{emoji} {groet}</div></SteunTekst>
+                : <div style={{ marginBottom: 8 }}>{emoji} {groet}</div>}
               <button
                 onClick={() => leesVoor(groet, -2)}
                 aria-label={leesMsg === -2 ? "Stop met voorlezen" : `${naam} dit laten voorlezen`}
@@ -519,9 +530,8 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
             gap: 6,
             flexWrap: "wrap",
           }}>
-            {SUGGESTIES.map((s) => (
-              <button
-                key={s}
+            {(nk ? SUGGESTIES_NK : SUGGESTIES.map((x) => [x, null])).map(([s, vert]) => (
+              <SteunTekst key={s} nl={vert} knop><button
                 onClick={() => send(s)}
                 disabled={busy}
                 style={{
@@ -536,7 +546,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
                 }}
               >
                 {s}
-              </button>
+              </button></SteunTekst>
             ))}
           </div>
         )}
@@ -561,7 +571,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
                 send();
               }
             }}
-            placeholder={`Typ je antwoord of vraag aan ${naam}…`}
+            placeholder={nk ? "Typ je vraag…" : `Typ je antwoord of vraag aan ${naam}…`}
             rows={1}
             disabled={busy}
             style={{

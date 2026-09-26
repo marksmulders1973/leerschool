@@ -106,7 +106,7 @@ const VRAAG = {
   "luisteren": { nl: "De juf praat. Je bent stil en hoort wat ze zegt. Wat doe je?", en: "The teacher talks. You are quiet and hear what she says. What are you doing?", ar: "المعلّمة تتكلّم. أنت هادئ وتسمع ما تقوله. ماذا تفعل؟", uk: "Учителька говорить. Ти тихо сидиш і чуєш, що вона каже. Що ти робиш?", tr: "Öğretmen konuşuyor. Sessizsin ve söylediğini duyuyorsun. Ne yapıyorsun?" },
   "opruimen": { nl: "Je legt alles terug op zijn plek. Wat doe je?", en: "You put everything back in its place. What are you doing?", ar: "تعيد كل شيء إلى مكانه. ماذا تفعل؟", uk: "Ти кладеш усе на своє місце. Що ти робиш?", tr: "Her şeyi yerine koyuyorsun. Ne yapıyorsun?" },
   "blij": { nl: "Je lacht. Je hebt een fijne dag. Hoe voel je je?", en: "You laugh. You are having a nice day. How do you feel?", ar: "أنت تضحك. يومك جميل. كيف تشعر؟", uk: "Ти смієшся. У тебе гарний день. Як ти почуваєшся?", tr: "Gülüyorsun. Güzel bir gün geçiriyorsun. Nasıl hissediyorsun?" },
-  "verdrietig": { nl: "Er komen tranen uit je ogen. Je huilt. Hoe voel je je?", en: "Tears come out of your eyes. You cry. How do you feel?", ar: "تنزل الدموع من عينيك. أنت تبكي. كيف تشعر؟", uk: "З очей течуть сльози. Ти плачеш. Як ти почуваєшся?", tr: "Gözlerinden yaşlar geliyor. Ağlıyorsun. Nasıl hissediyorsun?" },
+  "verdrietig": { nl: "Je beste vriend gaat verhuizen. Je moet huilen. Hoe voel je je?", en: "Your best friend is moving away. You have to cry. How do you feel?", ar: "صديقك المفضّل سينتقل إلى مكان آخر. أنت تبكي. كيف تشعر؟", uk: "Твій найкращий друг переїжджає. Ти плачеш. Як ти почуваєшся?", tr: "En iyi arkadaşın taşınıyor. Ağlıyorsun. Nasıl hissediyorsun?" },
   "boos": { nl: "Iemand duwt je in de rij. Je stampt met je voet. Hoe voel je je?", en: "Someone pushes you in the line. You stamp your foot. How do you feel?", ar: "أحدهم يدفعك في الطابور. تضرب الأرض بقدمك. كيف تشعر؟", uk: "Хтось штовхає тебе в черзі. Ти тупаєш ногою. Як ти почуваєшся?", tr: "Sırada biri seni itiyor. Ayağını yere vuruyorsun. Nasıl hissediyorsun?" },
   "bang": { nl: "Er zit een grote spin op je arm. Je wilt weglopen. Hoe voel je je?", en: "There is a big spider on your arm. You want to run away. How do you feel?", ar: "على ذراعك عنكبوت كبير. تريد أن تهرب. كيف تشعر؟", uk: "На твоїй руці великий павук. Ти хочеш утекти. Як ти почуваєшся?", tr: "Kolunda büyük bir örümcek var. Kaçmak istiyorsun. Nasıl hissediyorsun?" },
   "moe": { nl: "Je gaapt. Je ogen vallen dicht. Hoe voel je je?", en: "You yawn. Your eyes are closing. How do you feel?", ar: "أنت تتثاءب. عيناك تنغلقان. كيف تشعر؟", uk: "Ти позіхаєш. Очі заплющуються. Як ти почуваєшся?", tr: "Esniyorsun. Gözlerin kapanıyor. Nasıl hissediyorsun?" },
@@ -318,7 +318,7 @@ const gevoel = [
     basiskennis: [{ onderwerp: "Truc", uitleg: "Wijs naar je gezicht en zeg het gevoel hardop." }],
     niveaus: { basis: "Kies het Nederlandse woord.", simpeler: "Je lacht = je bent blij.", nogSimpeler: "blij" },
   } }),
-  w("verdrietig", ["blij", "bang", "ziek"]),
+  w("verdrietig", ["blij", "moe", "boos"]), // kliktest 26 sep 2026: bang/ziek konden ook bij huilen
   w("boos", ["blij", "moe", "bang"]),
   w("bang", ["boos", "blij", "moe"]),
   w("moe", ["ziek", "blij", "boos"]),

@@ -59,7 +59,8 @@ const deel2 = [
     } }),
   v("De bel gaat. Wat betekent dat?", ["De pauze begint of is klaar.", "Je moet naar huis.", "Er is brand.", "Je krijgt eten."], 0, "De bel zegt: nu begint of eindigt iets.",
     { en: "The bell rings. What does that mean?", ar: "يرنّ الجرس. ماذا يعني ذلك؟", uk: "Дзвонить дзвінок. Що це означає?", tr: "Zil çalıyor. Bu ne anlama gelir?" }),
-  v("Je jas hangt aan de…", ["kapstok", "tafel", "deur", "stoel"], 0, "Jassen hangen aan een haak.",
+  // Kliktest 26 sep 2026: "deur" en "stoel" konden ook kloppen → raam en bord.
+  v("Je jas hangt aan de…", ["kapstok", "tafel", "raam", "bord"], 0, "Jassen hangen aan een haak.",
     { en: "Your coat hangs on the…", ar: "معطفك معلّق على…", uk: "Твоя куртка висить на…", tr: "Montun … asılı." }),
   v("Het is pauze. Waar speel je?", ["Op het plein.", "In de gymzaal.", "Op de wc.", "In de auto."], 0, "In de pauze ga je naar buiten.",
     { en: "It is break time. Where do you play?", ar: "حان وقت الاستراحة. أين تلعب؟", uk: "Перерва. Де ти граєшся?", tr: "Teneffüs zamanı. Nerede oynarsın?" }),
@@ -102,7 +103,7 @@ const OPTIES_STEUN = [
   {"en": ["I am done.", "I don't understand.", "May I go to the toilet?", "Where do you live?"], "ar": ["لقد انتهيت.", "لا أفهم.", "هل يمكنني الذهاب إلى الحمّام؟", "أين تسكن؟"], "uk": ["Я закінчив.", "Я не розумію.", "Можна мені в туалет?", "Де ти живеш?"], "tr": ["Bitirdim.", "Anlamıyorum.", "Tuvalete gidebilir miyim?", "Nerede oturuyorsun?"]},
   {"en": ["To the gym hall.", "To the toilet.", "Home.", "To the shop."], "ar": ["إلى صالة الرياضة.", "إلى الحمّام.", "إلى البيت.", "إلى المتجر."], "uk": ["До спортзалу.", "До туалету.", "Додому.", "До магазину."], "tr": ["Spor salonuna.", "Tuvalete.", "Eve.", "Dükkâna."]},
   {"en": ["The break starts or ends.", "You must go home.", "There is a fire.", "You get food."], "ar": ["تبدأ الاستراحة أو تنتهي.", "يجب أن تذهب إلى البيت.", "هناك حريق.", "ستحصل على طعام."], "uk": ["Перерва починається або закінчується.", "Ти маєш іти додому.", "Пожежа.", "Ти отримаєш їжу."], "tr": ["Teneffüs başlıyor ya da bitiyor.", "Eve gitmen gerekiyor.", "Yangın var.", "Yemek alıyorsun."]},
-  {"en": ["coat rack", "table", "door", "chair"], "ar": ["علّاقة المعاطف", "الطاولة", "الباب", "الكرسي"], "uk": ["вішалка", "стіл", "двері", "стілець"], "tr": ["askı", "masa", "kapı", "sandalye"]},
+  {"en": ["coat rack", "table", "window", "board"], "ar": ["علّاقة المعاطف", "الطاولة", "النافذة", "السبّورة"], "uk": ["вішалка", "стіл", "вікно", "дошка"], "tr": ["askı", "masa", "pencere", "tahta"]},
   {"en": ["In the playground.", "In the gym hall.", "In the toilet.", "In the car."], "ar": ["في ساحة المدرسة.", "في صالة الرياضة.", "في الحمّام.", "في السيارة."], "uk": ["На шкільному майданчику.", "У спортзалі.", "У туалеті.", "У машині."], "tr": ["Okul bahçesinde.", "Spor salonunda.", "Tuvalette.", "Arabada."]},
   {"en": ["I forgot my book.", "I have a dog.", "The weather is nice.", "I am eight years old."], "ar": ["نسيت كتابي.", "عندي كلب.", "الطقس جميل.", "عمري ثماني سنوات."], "uk": ["Я забув свою книжку.", "У мене є собака.", "Гарна погода.", "Мені вісім років."], "tr": ["Kitabımı unuttum.", "Bir köpeğim var.", "Hava güzel.", "Sekiz yaşındayım."]},
   {"en": ["My name is … (your name).", "Thank you.", "Goodbye.", "I don't understand."], "ar": ["اسمي … (اسمك).", "شكرًا.", "إلى اللقاء.", "لا أفهم."], "uk": ["Мене звати … (твоє ім'я).", "Дякую.", "До побачення.", "Я не розумію."], "tr": ["Benim adım … (senin adın).", "Teşekkür ederim.", "Hoşça kal.", "Anlamıyorum."]},

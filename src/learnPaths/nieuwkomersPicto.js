@@ -21,7 +21,8 @@ const PICTO = {
   schrijven: P("schrijven"), lezen: P("lezen"), tekenen: P("tekenen"), tellen: P("tellen"),
   knippen: P("knippen"), plakken: P("plakken"), kleuren: P("kleuren"), kijken: P("kijken"),
   luisteren: P("luisteren"), opruimen: P("opruimen"),
-  blij: P("blij"), verdrietig: P("verdrietig"), boos: P("boos"), bang: P("bang"), moe: P("moe"), ziek: P("ziek"),
+  // Gevoelens bewust zonder plaatje (kliktest 26 sep 2026): de vier gezichten (blij/boos/bang/
+  // verdrietig) waren op telefoonformaat niet uit elkaar te houden en "verdrietig" had geen tranen.
   // kleurvlakken
   rood: "#e53935", blauw: "#1e88e5", geel: "#fdd835", groen: "#43a047", wit: "#ffffff",
 };
