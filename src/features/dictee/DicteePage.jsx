@@ -346,7 +346,14 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
   // ⭐ Kwartier-modus (Vandaag-motor, 10 sep 2026): is het dictee het blokje van nu, start dan
   // meteen met 5 woorden (schoolwoorden als die er zijn) en toon na afloop "Volgende blokje".
   const kwartierBlok = useMemo(() => kwartierBlokVan("dictee"), []);
-  const [groep, setGroep] = useState(() => { try { return +localStorage.getItem("lk_dictee_groep") || groepUit(userLevel); } catch { return groepUit(userLevel); } });
+  // ?groep=6 (26 sep 2026): de pagina's dictee-groep-<n>.html linken rechtstreeks naar hun groep.
+  const [groep, setGroep] = useState(() => {
+    try {
+      const g = +new URLSearchParams(window.location.search).get("groep");
+      if (g >= 4 && g <= 8) return g;
+      return +localStorage.getItem("lk_dictee_groep") || groepUit(userLevel);
+    } catch { return groepUit(userLevel); }
+  });
   const [fase, setFase] = useState("kies");          // kies | dictee | klaar
   const [items, setItems] = useState([]);
   const [idx, setIdx] = useState(0);

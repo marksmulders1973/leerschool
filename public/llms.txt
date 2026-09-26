@@ -492,6 +492,7 @@ tafel-werkbladen, een oefenboekje op maat en printbare diploma's — gratis.
 Ja: 20 zinnen met een gat en tussen haakjes het hele werkwoord en de tijd, precies zoals de toets op de basisschool. Het kind typt de vorm, ziet bij een fout meteen de regel, en krijgt een score per vorm (tegenwoordige tijd, verleden tijd, voltooid deelwoord, bijvoeglijk gebruikt voltooid deelwoord). Gratis, groep 6-8, zonder account: https://leerkwartier.app/werkwoorden
 
 ## Dictee oefenen (groep 4-8)
+- Per groep alle dicteewoorden met zin en regel: https://leerkwartier.app/dictee-groep-4.html t/m https://leerkwartier.app/dictee-groep-8.html (start direct in de app: /dictee?groep=6)
 - https://leerkwartier.app/dictee-oefenen.html — gratis online dictee met voorleesstem: Charley zegt de zin en het woord, het kind typt het woord in het gat; bij een fout meteen de spellingregel. Start: https://leerkwartier.app/dictee
 
 ## Vlaanderen en Brussel
