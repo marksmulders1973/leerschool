@@ -110,6 +110,10 @@ export function isInternalVisit() {
     // nachttests op de dev-server bliezen het dagrapport op omdat ze meetelden).
     const host = location.hostname;
     if (host === "localhost" || host === "127.0.0.1" || host.endsWith(".local")) return true;
+    // Geautomatiseerde browsers (Playwright/headless-controles na een deploy)
+    // telden als nieuwe bezoekers — elke run een verse uid (26 sep: 4 "bezoekers"
+    // op /nieuwkomers). navigator.webdriver staat bij echte ouders nooit aan.
+    if (navigator.webdriver) return true;
     const v = new URLSearchParams(location.search).get("ic");
     if (v === "1") localStorage.setItem("lk_internal", "1");
     else if (v === "0") localStorage.removeItem("lk_internal");
