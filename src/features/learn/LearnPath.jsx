@@ -1527,11 +1527,21 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               </div>
             )}
             {/* 🌍 Steun-tik (24 sep 2026): vraag tikbaar → eigen taal eronder (SteunTik.jsx). */}
-            <SteunVraag steun={currentCheck.steun} altijd={currentCheck.steunAltijd}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, lineHeight: 1.3, color: "var(--color-text-strong)", marginBottom: 14 }}>
-              <MdInline text={currentCheck.q} />
-            </div>
-            </SteunVraag>
+            {/* 🔊 Voorleesknop ook bij de vraag (26 sep 2026, regel "voorlees-knop overal"): een
+                nieuwkomer of zwakke lezer die de uitleg liet voorlezen, bleef bij de vraag zelf steken. */}
+            {(() => {
+              const vraagBlok = (
+                <SteunVraag steun={currentCheck.steun} altijd={currentCheck.steunAltijd}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, lineHeight: 1.3, color: "var(--color-text-strong)", marginBottom: 14 }}>
+                  <MdInline text={currentCheck.q} />
+                </div>
+                </SteunVraag>
+              );
+              const q = String(currentCheck.q || "");
+              // Formules ($…$, \frac) laten we niet voorlezen: de stem leest dan de code op.
+              if (!q || q.includes("$") || q.includes("\\")) return vraagBlok;
+              return <VoorleesBlok tekst={q.replace(/\*+/g, "")} accent="#42a5f5">{vraagBlok}</VoorleesBlok>;
+            })()}
             {selected === null && (currentCheck.uitlegPad || currentCheck.leerpadLink) && (
               <div style={{ marginBottom: 14 }}>
                 {!showUitlegPad && (
