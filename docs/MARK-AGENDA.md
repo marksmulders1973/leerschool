@@ -18,7 +18,7 @@
 
 | # | Wat moet kloppen | Wie | Deadline | Stand |
 |---|---|---|---|---|
-| 1 | **Eén prijslijst die overal hetzelfde zegt** — `config.js`, `proPlan.js`, `PRIJSPLAN.md`, `abonnement.html`. Nu staan er prijzen in omloop die nergens in de code bestaan. | Claude | 1 okt | ☐ |
+| 1 | **Eén prijslijst die overal hetzelfde zegt** — `config.js`, `proPlan.js`, `PRIJSPLAN.md`, `abonnement.html`. ✅ **26 sep (v744)**: 14 publieke + 6 kleine plekken gelijkgetrokken (maandprijs weg, Pro → schoollicentie, Familie-pakket, t/m 2028, geen concurrent-prijzen in llms). | Claude | 1 okt | ✅ |
 | 2 | **School-eenheid oplossen**: `proPlan.js` zegt "€99 per klas", Mark bedoelt "bundel voor ~30 docenten". Twee producten, ~10× verschil. | Mark beslist, Claude verwerkt | 1 okt || ✅ 22 sep — Pro geschrapt, schoollicentie **op aanvraag**, €99/klas uit code en copy (v683); prijs komt uit de eerste schoolgesprekken |
 | 3 | **Partner per kind (€34,50) vs Familie per gezin (€39)** — zelfde product, bijna dubbele prijs voor een gemeente. Antwoord klaar hebben vóór het eerste inkopersgesprek. | Mark beslist | 10 okt || ✅ 22 sep — **partner koopt per gezin** (tot 3 kinderen), staffel 10–99 €34,50 · 100–249 €24,95 · 250+ in overleg |
 | 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ☐ |

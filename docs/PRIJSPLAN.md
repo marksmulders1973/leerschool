@@ -36,10 +36,10 @@ goedkoopste acquisitiekanaal).
 > examen-*simulatie mét klok + eindrapport* = Familie. Gewoon leren blijft altijd
 > gratis; je betaalt alleen voor het inzicht/rapport eromheen.
 
-### 2. Leerkwartier Familie — abonnement per gezín (niet per kind)
+### 2. Leerkwartier Familie — pakket per gezín (niet per kind), eenmalig betalen
 **Voor:** de bezorgde Doorstroomtoets-ouder (primaire ICP-koper).
-**Richtprijs (drie smaken, per gezin):** € 4,95/mnd · 🎟️ Seizoenspas € 24,95
-éénmalig (t/m 31 juli 2027, zie §2b) · € 39/jaar. USP: één prijs voor het
+**Richtprijs (twee smaken, per gezin, allebei eenmalig — maandplan geschrapt 22 sep 2026):**
+🎟️ Seizoenspas € 24,95 (t/m 31 juli 2027, zie §2b) · € 39 voor een jaar (geen stille verlenging). USP: één prijs voor het
 hele gezin, niet per kind (max 3 kinderen).
 **Partner — gemeente of stichting koopt het Familie-pakket per gezín** (tot 3
 kinderen), **niet per kind** — besloten 22 sep 2026 (Mark: zelfde eenheid als thuis,

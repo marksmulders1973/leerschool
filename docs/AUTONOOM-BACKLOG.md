@@ -28,7 +28,7 @@ Cito + examens versterken. Drie type werk:
 - [ ] **Charley praat alleen indien nodig + pauzeknop** (Mark, week 22 sep). Gedrag is het
       hoofdmechanisme, `PER_UID_LIMIT_DAY` (nu 120) als vangnet naar ~20/50. Meten:
       AI-calls per beantwoorde oefenvraag (nu ±0,3) mag zakken, kwartier-aandeel niet.
-- [ ] **Eén prijslijst** — `config.js` / `proPlan.js` / `PRIJSPLAN.md` / `abonnement.html`
+- [x] **Eén prijslijst** — `config.js` / `proPlan.js` / `PRIJSPLAN.md` / `abonnement.html` ✅ 26 sep v744 (audit 20 plekken)
       gelijktrekken. Partnerprijs €34,50/kind/jaar erin. Wacht op Marks besluit over de
       school-eenheid (punt 2 in de agenda).
 - [ ] **Partner-rapport v1** — per code: hoeveel kinderen, hoeveel kwartieren, hoeveel
