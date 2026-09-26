@@ -2,7 +2,23 @@
 
 Mark 26 sep: "kunnen de nieuwkomers een doorgroeimodel krijgen, dat je testjes afneemt en dan doorgroeit
 naar de gewone app, dictee … denk mee of dit een extra inkomstenbron kan worden. Gratis moet ook vervangen
-worden: gratis minimaal 2028." **Status: plan, niets gebouwd, niets verstuurd.**
+worden: gratis minimaal 2028." **Status: in uitvoering — zie § 0 Voortgang.** Mark 26 sep: "alle tekst ok" (gratis t/m 31-12-2028 goedgekeurd).
+
+## 0. Voortgang (bijwerken na elke stap — staat ook in docs/NOG-NALOPEN.md → dagrapport)
+
+**Nu: stap 2 van 7 klaar → volgende = stap 3 (nieuwkomer-dictee).**
+
+| Stap | Wat | Status |
+|---|---|---|
+| 1 | Gratis-tekst "t/m 31-12-2028" in LOWAN ronde 2 (ma 28 sep), België (1 okt), /nieuwkomers, landingspagina, llms | ✅ v751 (26 sep) |
+| 2 | Trede-indeling op /nieuwkomers + trede-testje trede 1 + diploma | ✅ v752 (26 sep) — lokaal getest (zakt 5/20, slaagt 20/20, diploma, UK/AR-tik); Mark: op telefoon doen |
+| 3 | Dictee op nieuwkomer-niveau (klankzuivere woordjes, steuntaal) | ⏳ volgende |
+| 4 | Letters en klanken = trede 2 "Letters en woorden" + trede-testje 2 | ⏳ |
+| 5 | Instap-testje (bepaalt start-trede) | ⏳ |
+| 6 | Overstap-knop naar de gewone app (trede 4) | ⏳ |
+| 7 | Klasoverzicht juf (betaalde kant) | 🔒 pas na KvK + verwerkersovereenkomst + 5-10 echte taalklassen |
+
+Meten: `docs/sql/nieuwkomers.sql` blok 8 (trede-testje: geopend → gestart → klaar → geslaagd → geprint).
 
 ## 1. Wat heeft een nieuwkomer nodig? (uit LOWAN-onderzoek 24 sep + concurrentie-onderzoek)
 
@@ -90,8 +106,8 @@ digitale methode kost per leerling € 60-75 per jaar, een woordenschatmethode �
 
 | # | Wat | Waarom eerst | Omvang |
 |---|---|---|---|
-| 1 | Gratis-tekst vervangen (na go) | Maandag gaan 130 mails uit | 15 min |
-| 2 | Trede-indeling zichtbaar op /nieuwkomers + trede-testje voor trede 1 | Laat nu al "doorgroeien" zien | 1 sessie |
+| 1 | ✅ Gratis-tekst vervangen | Maandag gaan 130 mails uit | 15 min |
+| 2 | ✅ Trede-indeling zichtbaar op /nieuwkomers + trede-testje voor trede 1 | Laat nu al "doorgroeien" zien | 1 sessie |
 | 3 | Dictee op nieuwkomer-niveau (klankzuivere woordjes, steuntaal) | Bestaande dictee hergebruiken | 1 sessie |
 | 4 | Letters en klanken (trede 2) | Grootste inhoudelijke gat | 2-3 sessies |
 | 5 | Instap-testje | Pas zinvol als er 2+ treden zijn | 1 sessie |
