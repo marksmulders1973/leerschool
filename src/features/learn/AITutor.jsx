@@ -231,6 +231,8 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
             stuurTerug,
             sindsVraag: oordeel.stand.sindsVraag,
             uid: (() => { try { return localStorage.getItem("lk_uid") || null; } catch { return null; } })(),
+            // Nieuwkomers: thuistaal voor de vertaling onder elke zin (gekozen op /nieuwkomers).
+            steunTaal: (() => { try { return localStorage.getItem("lk_steuntaal") || null; } catch { return null; } })(),
           },
         }),
       });
