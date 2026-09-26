@@ -1,6 +1,7 @@
 // Generieke outreach-verzender op basis van een markdown-doc (23 sep 2026).
 // Doc-opbouw: "## Onderwerp" (1 regel) · "## Tekst" (t/m de volgende "## ") met
 // [ORGANISATIE] als plaatshouder · een tabel "| # | Organisatie | Soort | E-mail |".
+// [CODE] (26 sep 2026) = partnercode uit de Soort-kolom ("voedselbank · ANTWERPEN2027"); ontbreekt die → rij overgeslagen.
 // Gebruik: node scripts/outreach-send-doc.mjs <max> <doc.md>   (DRY=1 = niet versturen)
 import fs from "node:fs";
 const env = fs.readFileSync("C:/Users/mark-/.claude/resend-lokaal.env", "utf8");
@@ -32,8 +33,10 @@ if (!subject || !body || !todo.length) { console.error("doc onvolledig", { subje
 console.log("onderwerp:", subject, "| tekst:", body.length, "tekens | adressen:", todo.length, DRY ? "| DRY" : "");
 const log = [];
 for (const r of todo) {
-  const text = body.replace(/\[ORGANISATIE\]|\[SCHOOL\]/g, r.org);
-  const html = "<div style=\"font-family:Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1a2233\">" + text.split(/\n\n/).map(p => "<p>" + (/(^|\n)- /.test(p) ? p.replace(/\n/g, "<br>") : p.replace(/\n/g, " ")).replace(/(leerkwartier\.app(?:[\w\/.\-]*[\w\/])?)/g, '<a href="https://$1">$1</a>') + "</p>").join("") + "</div>";
+  const code = (r.soort.match(/\b[A-Z][A-Z0-9]{3,}20\d\d\b/) || [])[0];
+  if (body.includes("[CODE]") && !code) { console.log(`${r.n}\t${r.org}\t${r.email}\tOVERGESLAGEN: geen code`); continue; }
+  const text = body.replace(/\[ORGANISATIE\]|\[SCHOOL\]/g, r.org).replace(/\[CODE\]/g, code || "");
+  const html = "<div style=\"font-family:Segoe UI,Arial,sans-serif;font-size:15px;line-height:1.55;color:#1a2233\">" + text.split(/\n\n/).map(p => "<p>" + (/(^|\n)- /.test(p) ? p.replace(/\n/g, "<br>") : p.replace(/\n/g, " ")).replace(/(leerkwartier\.(?:app|be)(?:[\w\/.\-?=]*[\w\/])?)/g, '<a href="https://$1">$1</a>') + "</p>").join("") + "</div>";
   if (DRY) { console.log(`${r.n}\t${r.org}\t${r.email}\tDRY`); continue; }
   const resp = await fetch("https://api.resend.com/emails", { method: "POST", headers: { Authorization: `Bearer ${KEY}`, "Content-Type": "application/json" },
     body: JSON.stringify({ from: "Mark Smulders — Leerkwartier <hallo@leerkwartier.app>", reply_to: "hallo@leerkwartier.app", to: [r.email], subject, text, html }) });

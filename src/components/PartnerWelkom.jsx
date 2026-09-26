@@ -101,6 +101,14 @@ export const PARTNER_NAMEN = {
   VBROTTERDAM2027: "Voedselbank Rotterdam",
   WESTFRIES2027: "Westfriese Bibliotheken",
   ZAANSTREEK2027: "Voedselbank Zaanstreek",
+  // 26 sep 2026: België-test (mail do 1 okt) — één code per voedselbank, Familie t/m 2028.
+  VOEDSELBANKBE2027: "de Belgische Federatie van Voedselbanken",
+  ANTWERPEN2027: "Voedselbank Antwerpen-Mechelen-Turnhout",
+  LIMBURGBE2027: "Voedselbank Limburg",
+  OOSTVLAANDEREN2027: "Voedselbank Oost-Vlaanderen",
+  WESTVLAANDEREN2027: "Voedselbank West-Vlaanderen",
+  BRUSSEL2027: "Voedselbank Brussel-Brabant",
+  KRUIDENIER2027: "Sociale Kruideniers Vlaanderen",
 };
 
 const KEY_DICHT = "lk_partner_welkom_dicht";
