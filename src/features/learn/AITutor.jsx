@@ -8,7 +8,7 @@
 // MVP scope: niet meer dan ~150 regels, geen dependencies buiten React.
 
 import { useState, useEffect, useRef, lazy, Suspense } from "react";
-import { partnerHeader } from "../referral/partnerCode.js";
+import { partnerHeader, actievePartnerCode } from "../referral/partnerCode.js";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
@@ -182,7 +182,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
     // Charley-rem (idee F, 16 sep 2026): eerst tellen, dan beoordelen. Bij
     // "pauze" of "daglimiet" géén AI-call en géén vonk_hulp_vraag-event —
     // dat event blijft de teller van échte AI-calls.
-    const oordeel = beoordeelCharley(noteerCharleyBericht(), { isAccount, isBetaald: !!sub?.isPaid });
+    const oordeel = beoordeelCharley(noteerCharleyBericht(), { isBetaald: !!sub?.isPaid || !!actievePartnerCode() }); // Familie via code = ruim (trapje 26 sep)
     if (oordeel.soort === "pauze" || oordeel.soort === "daglimiet") {
       const after = [...next, { role: "assistant", content: remTekst(oordeel.soort, naam), rem: oordeel.soort }];
       setMessages(after);

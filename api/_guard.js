@@ -111,7 +111,39 @@ const DEFAULT_LIMITS = {
 // Raakt niemand (max gemeten die week: 15/dag, mediaan 5); sluit het
 // Ooievaarspas-worst-case af. Zie docs/VERDIENMODEL-EN-KOSTEN.md §10.
 // Rapportages die ai_call_quota optellen: `endpoint not like 'uid:%'`.
-export const PER_UID_LIMIT_DAY = 20;
+export const PER_UID_LIMIT_DAY = 20; // oud vast plafond; sinds 26 sep alleen nog terugval (zie hieronder)
+
+// 🪜 Charley-trapje (Mark 26 sep 2026: "eerst het kind leren kennen en maximaal helpen,
+// daarna steeds iets afbouwen"). Zelfde trapje als src/features/learn/charleyRem.js:
+// dag 1 met Charley 75, dag 2 65, 3 55, 4 45, 5 35, 6 25, daarna 30 als server-plafond
+// (de app zelf geeft vanaf dag 7: 10 + 1 per gemaakte som, max 30). Familie via een
+// bestaande partnercode: 75. De server telt de Charley-dagen zelf uit ai_call_quota
+// (rijen `uid:<uid>`), dus browser-opslag wissen omzeilt het trapje niet.
+// Fail-safe: lukt het tellen niet, dan het oude plafond (20).
+const TRAPJE = [75, 65, 55, 45, 35, 25];
+const LATER_MAX = 30;
+const FAMILIE_MAX = 75;
+export async function charleyServerLimiet(uid, req) {
+  const SUPABASE_URL = process.env.SUPABASE_URL || process.env.VITE_SUPABASE_URL;
+  const SERVICE_KEY = process.env.SUPABASE_SERVICE_ROLE_KEY;
+  if (!SUPABASE_URL || !SERVICE_KEY) return PER_UID_LIMIT_DAY;
+  const h = { apikey: SERVICE_KEY, Authorization: `Bearer ${SERVICE_KEY}` };
+  try {
+    const code = (req?.headers?.get?.("x-lk-partner") || "").trim().toUpperCase();
+    if (/^[A-Z0-9-]{3,20}$/.test(code)) {
+      const r = await fetch(`${SUPABASE_URL}/rest/v1/partner_codes?code=eq.${encodeURIComponent(code)}&select=code`, { headers: h });
+      if (r.ok && (await r.json()).length) return FAMILIE_MAX;
+    }
+    const vandaag = new Date().toISOString().slice(0, 10);
+    const r = await fetch(`${SUPABASE_URL}/rest/v1/ai_call_quota?endpoint=eq.${encodeURIComponent("uid:" + uid)}&date=lt.${vandaag}&select=date`, { headers: h });
+    if (!r.ok) return PER_UID_LIMIT_DAY;
+    const eerdereDagen = new Set((await r.json()).map((x) => x.date)).size;
+    const dagNr = eerdereDagen + 1;
+    return dagNr <= TRAPJE.length ? TRAPJE[dagNr - 1] : LATER_MAX;
+  } catch {
+    return PER_UID_LIMIT_DAY;
+  }
+}
 
 // Idee AO (Mark 22 sep 2026: "klinkt goed"): AI-kosten per partnercode.
 // De client stuurt header `x-lk-partner: <CODE>` mee (actieve partnercode

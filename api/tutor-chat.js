@@ -9,7 +9,7 @@
 // - Leeftijds-adaptief: po-paden krijgen simpeler toon dan havo
 // - Gemini-fallback bij Anthropic-failure (kosten + uptime)
 
-import { guardRequest, dailyQuotaCheck, PER_UID_LIMIT_DAY, telPartnerCall } from "./_guard.js";
+import { guardRequest, dailyQuotaCheck, charleyServerLimiet, telPartnerCall } from "./_guard.js";
 
 export const config = { runtime: "edge", maxDuration: 30 };
 
@@ -401,7 +401,7 @@ export default async function handler(req) {
   const uid = typeof context?.uid === "string" && /^u_[a-z0-9]{6,40}$/.test(context.uid) ? context.uid : null;
   if (uid) {
     const uidBlocked = await dailyQuotaCheck(`uid:${uid}`, {
-      limit: PER_UID_LIMIT_DAY,
+      limit: await charleyServerLimiet(uid, req), // 🪜 trapje 26 sep 2026
       rem: "daglimiet",
       bericht: "Voor vandaag hebben we genoeg gekletst — morgen help ik je weer.",
     });

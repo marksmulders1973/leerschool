@@ -25,7 +25,7 @@ Cito + examens versterken. Drie type werk:
       ±2.950 identieke tokens per call, nu volledig betaald. Verwacht −48% van de AI-rekening.
       ⚠️ Ná het bouwen verifiëren dat `usage.cache_read_input_tokens` oploopt — blijft die 0,
       dan zit de prompt onder Haiku's minimum cacheerbare prefix en moet hij anders geordend.
-- [ ] **Charley praat alleen indien nodig + pauzeknop** (Mark, week 22 sep). Gedrag is het
+- [x] **Charley praat alleen indien nodig + pauzeknop** (Mark, week 22 sep). ✅ 26 sep v745: trapje 75→25, daarna 10+1/som (max 30); Familie 75; pauzeknop vervallen. Gedrag is het
       hoofdmechanisme, `PER_UID_LIMIT_DAY` (nu 120) als vangnet naar ~20/50. Meten:
       AI-calls per beantwoorde oefenvraag (nu ±0,3) mag zakken, kwartier-aandeel niet.
 - [x] **Eén prijslijst** — `config.js` / `proPlan.js` / `PRIJSPLAN.md` / `abonnement.html` ✅ 26 sep v744 (audit 20 plekken)
