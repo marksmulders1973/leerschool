@@ -115,6 +115,17 @@
   .partners-blok h2 { color: #00e676; margin-top: 0; }
   .partners-blok p { font-size: .93em; color: rgba(255,255,255,.75); margin: .5em 0; }
 
+
+  /* Familie-inhoud uitklappen (26 sep 2026 — zelfde lijst als in de app, src/components/FamilieUitleg.jsx) */
+  .fam-uitleg { margin: .8em 0 .2em; background: rgba(255,213,79,.08); border: 1.5px solid rgba(255,213,79,.4); border-radius: 12px; padding: 10px 14px; }
+  .fam-uitleg summary { cursor: pointer; font-weight: 800; color: #ffd54f; list-style: none; }
+  .fam-uitleg summary::-webkit-details-marker { display: none; }
+  .fam-uitleg summary::after { content: " ▾"; }
+  .fam-uitleg[open] summary::after { content: " ▴"; }
+  .fam-uitleg ul { list-style: none; padding: 0; margin: .7em 0 .3em; display: grid; gap: 6px; }
+  .fam-uitleg li { font-size: .92em; color: rgba(255,255,255,.85); line-height: 1.45; }
+  .fam-uitleg a { color: #ffd54f; font-weight: 800; font-size: .9em; }
+
   /* CTA */
   .cta-rij { text-align: center; margin: 2.5em 0; }
   .cta-knop {
@@ -194,14 +205,15 @@
   <div class="tier-card familie">
     <div class="tier-label familie-lbl">Familie</div>
     <div class="tier-prijs">± € 39<small> / jaar per gezin</small></div>
-    <div class="tier-wie">voor ouders — niet per kind, per gezin</div>
+    <div class="tier-wie">voor thuis — niet per kind, per gezin</div>
     <ul class="tier-feats">
       <li class="ja">Alles uit Gratis</li>
-      <li class="ja">Voortgang van je kind volgen</li>
-      <li class="ja">Wekelijks ouder-rapport per mail</li>
-      <li class="ja">Examen-simulatie met tijdklok</li>
-      <li class="ja">Kwartierplan — persoonlijk stappenplan</li>
-      <li class="ja">Meerdere kinderen, één abonnement</li>
+      <li class="ja">Komt het goed? — groen, oranje of rood per onderdeel</li>
+      <li class="ja">Weekmail op maandag voor ouder of verzorger</li>
+      <li class="ja">Oefenboekje op maat en weekschema om te printen</li>
+      <li class="ja">AI-bijlesdocent onbeperkt</li>
+      <li class="ja">Tot 3 kinderen, één betaling per gezin</li>
+      <li class="ja"><a href="#familie-inhoud" onclick="document.getElementById('familie-inhoud').open=true" style="color:#ffd54f">Alles wat erin zit ↓</a></li>
     </ul>
   </div>
 
@@ -254,6 +266,21 @@
     Gezinnen die via een deelnemende organisatie binnenkomen,
     krijgen het Familie-pakket gratis, tot en met 31 december 2028.
   </p>
+  <details class="fam-uitleg" id="familie-inhoud">
+    <summary>Wat zit er in het Familie-pakket?</summary>
+    <ul>
+      <li><span aria-hidden="true">🚦</span> <strong>Komt het goed?</strong>: in één blik groen, oranje of rood per onderdeel van de Doorstroomtoets</li>
+      <li><span aria-hidden="true">📄</span> <strong>Oefenboekje op maat</strong>: printbaar, met precies waar je kind moeite mee heeft</li>
+      <li><span aria-hidden="true">👪</span> <strong>Kaart voor thuis</strong>: zo leg je een onderwerp uit in gewone woorden</li>
+      <li><span aria-hidden="true">✉️</span> <strong>Weekmail op maandag</strong>: wat je kind deed en waar je deze week op let</li>
+      <li><span aria-hidden="true">📅</span> <strong>Weekschema voor de koelkast</strong>: een kwartier per dag, om af te vinken</li>
+      <li><span aria-hidden="true">📋</span> <strong>Dictee met de woorden van school</strong>: Charley leest ze voor</li>
+      <li><span aria-hidden="true">🐉</span> <strong>AI-bijlesdocent onbeperkt</strong>: uitleg op jouw manier, zo vaak als je wilt</li>
+      <li><span aria-hidden="true">👨‍👩‍👧</span> <strong>Tot 3 kinderen</strong>: op één gezins-account, elk een eigen overzicht</li>
+      <li><span aria-hidden="true">🏅</span> <strong>Printbaar diploma</strong>: bij elk afgerond onderwerp</li>
+    </ul>
+    <a href="/familie">Alles bekijken →</a>
+  </details>
   <p>
     Ben je bij zo'n organisatie aangesloten? Vraag naar de Leerkwartier-code of kijk op de pagina van je pas.
   </p>
