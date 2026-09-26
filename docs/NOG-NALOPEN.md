@@ -18,6 +18,8 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | N10 | **Meten nieuwkomers (v720)**: `docs/sql/nieuwkomers.sql` elke dag in het rapport — welke code, via code of link, taalkeuze, vertaal-tikken per taal (vraag/antwoord), onderdelen, oefenen per pad + steuntaal. Leerpad-antwoorden zijn nu ook een event → "sommen" stijgt vanaf 25 sep (breuk in de reeks) | Claude, dagelijks | ⏳ |
 | N9 | **Overzicht "Hoofdstuk 1 · Hoe vraag ik iets aan de juf of meester?"** + "5 vragen · ± 3 minuten" + Begin-knop (v719, alle leerpaden) — op je telefoon bekijken | Mark | ⏳ |
 | N8 | ✅ v722: rekentaal-hint "2 keer = twee keer het getal 4" → "Kijk: welk getal, en hoe vaak?" | — | ✅ |
+| N11 | **Woorden deel 5 "Hoe voel je je?"** (v728, 26 sep nacht): blij, verdrietig, boos, bang, moe, ziek + "Ben je verdrietig of bang? Zeg het. Dat mag altijd." Alles tikbaar in EN/AR/UK/TR. Even op telefoon doorlopen | Mark | ⏳ |
+| N12 | **Charley in nieuwkomerpaden** (v731-732): heel eenvoudig Nederlands + onder elke zin de thuistaal (live getest AR/UK). Bij woordvragen verklapt hij de betekenis — bewust (zelfde keuze als de tik-vertaling: leren, geen toets). Akkoord? | Mark | ❓ |
 
 ## B. Klas & digibord (v684, v712-v714)
 
@@ -31,6 +33,7 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | D8 | **Kant-en-klare setjes** op leerkwartier.app/klassikaal (v718): groep 6/7/8 mix, rekenen, taal + 3 taalklas-setjes; ook via /klas "Klassikaal met kaartjes". Eén setje echt in de klas proberen | Mark | ⏳ |
 | D9 | **België** (25 sep): leerkwartier.be/vlaanderen live (v721); 3 verzendklare mails in docs/outreach/BELGIE-*.md — 62 scholen met taalheldklas, 7 voedselbanken, 50 Huizen van het Kind. ✅ tekst-akkoord 25 sep; ✅ VERSTUURD za 26 sep (7 voedselbanken + 20 scholen, 27/27 OK); Huizen van het Kind na eerste reacties | Claude volgt | ⏳ |
 | D10 | ✅ Verzendscript: dagrem 80 bulkmails over alle docs samen (v722, getest) | — | ✅ |
+| D11 | **Nieuw Taalklas-setje "Hoe voel je je?"** op /klassikaal (v730) + setjes Rekenen/Taal kiezen weer op vak (brak kort door de nieuwe start-kwartier-volgorde, v726-729) | Claude ✅ · Mark kijkt | ⏳ |
 | D6 | **Cijfers**: `docs/sql/klasgolf.sql` query (3) QR per klas + events `digibord_*` (incl. `digibord_setje`, `klas_naar_klassikaal`) in het dagrapport meenemen | Claude, dagelijks | ⏳ |
 | D7 | ✅ Link `leerkwartier.app/klas.` (punt uit mail) stuurt door — getest 25 sep (v712) | — | ✅ |
 
