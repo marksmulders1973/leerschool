@@ -35,7 +35,7 @@ We zitten nog in de testfase, en aanpassen kan nog. Daarom drie vragen, een kort
 
 Mist u een onderwerp of een manier van oefenen die in uw klas werkt? Mail het mij, dan kijk ik of ik het kan bouwen.
 
-Het Nieuwkomer-pakket is gratis te gebruiken zolang we testen. Verandert dat ooit, dan hoort u het ruim op tijd.
+Oefenen in het Nieuwkomer-pakket is gratis voor kinderen en leerkrachten, gegarandeerd tot en met 31 december 2028. Komen er daarna extra's voor scholen die geld kosten, dan hoort u dat ruim op tijd.
 
 Hartelijke groet,
 Mark Smulders — leerkwartier.app

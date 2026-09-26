@@ -34,7 +34,7 @@ We zitten nog in de testfase, en aanpassen kan nog. Daarom drie vragen, een kort
 - Welke talen spreken uw leerlingen thuis? Mist u een taal, bijvoorbeeld Tigrinya, Dari, Pools of Roemeens? Nieuwe talen kunnen erbij; laat me weten welke u het meest helpt.
 - Merkt u woorden of zinnen die in Vlaanderen anders gezegd worden? Dan pas ik ze aan.
 
-Het Nieuwkomer-pakket is gratis te gebruiken zolang we testen. Verandert dat ooit, dan hoort u het ruim op tijd.
+Oefenen in het Nieuwkomer-pakket is gratis voor kinderen en leerkrachten, gegarandeerd tot en met 31 december 2028. Komen er daarna extra's voor scholen die geld kosten, dan hoort u dat ruim op tijd.
 
 Hartelijke groet,
 Mark Smulders — leerkwartier.be
