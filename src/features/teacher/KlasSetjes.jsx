@@ -21,19 +21,29 @@ const laadPad = async (pathId, aantal) => {
 
 function setjes(groep) {
   const paden = kiesStartPaden("groep" + groep);
+  // Op vak zoeken, niet op positie: sinds 26 sep (idee BF) opent het start-kwartier in groep 6-8 met taal.
+  const rekenPad = paden.find((p) => /breuken|procenten|rekenen|tafels|getallen|tellen|delen/.test(p)) || paden[0];
+  const taalPad = paden.find((p) => /werkwoord|taal|spelling/.test(p)) || paden[1];
   return [
     { id: "mix", titel: `Doorstroomtoets-mix groep ${groep}`, uitleg: "Rekenen, taal, lezen en wereld door elkaar.", laad: async () => {
       const perPad = await Promise.all(paden.map(async (p) => (await laadPad(p, 3)).vragen));
       return verweefVragen(perPad.map((l) => l.filter(bordbaar)), AANTAL);
     } },
-    { id: "rekenen", titel: `Rekenen groep ${groep}`, uitleg: "Tien rekenvragen op groepsniveau.", laad: async () => (await laadPad(paden[0], AANTAL)).vragen.filter(bordbaar).slice(0, AANTAL) },
-    { id: "taal", titel: `Taal groep ${groep}`, uitleg: "Tien taalvragen op groepsniveau.", laad: async () => (await laadPad(paden[1], AANTAL)).vragen.filter(bordbaar).slice(0, AANTAL) },
+    { id: "rekenen", titel: `Rekenen groep ${groep}`, uitleg: "Tien rekenvragen op groepsniveau.", laad: async () => (await laadPad(rekenPad, AANTAL)).vragen.filter(bordbaar).slice(0, AANTAL) },
+    { id: "taal", titel: `Taal groep ${groep}`, uitleg: "Tien taalvragen op groepsniveau.", laad: async () => (await laadPad(taalPad, AANTAL)).vragen.filter(bordbaar).slice(0, AANTAL) },
   ];
 }
 
 const TAALKLAS = [
   { id: "woorden", titel: "Taalklas: eerste woorden", uitleg: "Waar zit je op? Waarmee schrijf je? Voor nieuwkomers.", laad: async () => (await laadPad("woorden-nieuwkomers", AANTAL)).vragen.slice(0, AANTAL) },
   { id: "indeklas", titel: "Taalklas: zinnen in de klas", uitleg: "Mag ik naar de wc? Ik snap het niet. Voor nieuwkomers.", laad: async () => (await laadPad("in-de-klas-nieuwkomers", AANTAL)).vragen.slice(0, AANTAL) },
+  // 26 sep 2026: gevoelens (Woorden deel E + In de klas deel 4). Samen oefenen op het bord is veilig:
+  // niemand hoeft over zichzelf te vertellen, de klas leert de woorden om het later wél te kunnen zeggen.
+  { id: "gevoelens", titel: "Taalklas: hoe voel je je?", uitleg: "Blij, verdrietig, boos, bang, moe. Ik voel me niet goed. Voor nieuwkomers.", laad: async () => {
+    const stuk = async (pathId, stap) => { try { return (await buildTopicQuiz({ pathId, stapIndexen: [stap] })).questions; } catch { return []; } };
+    const [w, z] = await Promise.all([stuk("woorden-nieuwkomers", 4), stuk("in-de-klas-nieuwkomers", 3)]);
+    return verweefVragen([w, z], AANTAL);
+  } },
   { id: "rekentaal", titel: "Taalklas: rekentaal", uitleg: "Meer, minder, samen, weg, verdelen. Voor nieuwkomers.", laad: async () => (await laadPad("rekentaal-nieuwkomers", AANTAL)).vragen.slice(0, AANTAL) },
 ];
 

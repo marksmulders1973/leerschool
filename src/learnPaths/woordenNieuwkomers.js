@@ -105,8 +105,8 @@ const VRAAG = {
   "opruimen": { nl: "Je legt alles terug op zijn plek. Wat doe je?", en: "You put everything back in its place. What are you doing?", ar: "تعيد كل شيء إلى مكانه. ماذا تفعل؟", uk: "Ти кладеш усе на своє місце. Що ти робиш?", tr: "Her şeyi yerine koyuyorsun. Ne yapıyorsun?" },
   "blij": { nl: "Je lacht. Je hebt een fijne dag. Hoe voel je je?", en: "You laugh. You are having a nice day. How do you feel?", ar: "أنت تضحك. يومك جميل. كيف تشعر؟", uk: "Ти смієшся. У тебе гарний день. Як ти почуваєшся?", tr: "Gülüyorsun. Güzel bir gün geçiriyorsun. Nasıl hissediyorsun?" },
   "verdrietig": { nl: "Er komen tranen uit je ogen. Je huilt. Hoe voel je je?", en: "Tears come out of your eyes. You cry. How do you feel?", ar: "تنزل الدموع من عينيك. أنت تبكي. كيف تشعر؟", uk: "З очей течуть сльози. Ти плачеш. Як ти почуваєшся?", tr: "Gözlerinden yaşlar geliyor. Ağlıyorsun. Nasıl hissediyorsun?" },
-  "boos": { nl: "Iemand pakt je bal af. Je stampt met je voet. Hoe voel je je?", en: "Someone takes your ball. You stamp your foot. How do you feel?", ar: "أحدهم يأخذ كرتك. تضرب الأرض بقدمك. كيف تشعر؟", uk: "Хтось забирає твій м’яч. Ти тупаєш ногою. Як ти почуваєшся?", tr: "Biri topunu alıyor. Ayağını yere vuruyorsun. Nasıl hissediyorsun?" },
-  "bang": { nl: "Er komt een grote hond naar je toe. Je wilt weglopen. Hoe voel je je?", en: "A big dog comes towards you. You want to run away. How do you feel?", ar: "كلب كبير يقترب منك. تريد أن تهرب. كيف تشعر؟", uk: "До тебе біжить великий пес. Ти хочеш утекти. Як ти почуваєшся?", tr: "Büyük bir köpek sana doğru geliyor. Kaçmak istiyorsun. Nasıl hissediyorsun?" },
+  "boos": { nl: "Iemand duwt je in de rij. Je stampt met je voet. Hoe voel je je?", en: "Someone pushes you in the line. You stamp your foot. How do you feel?", ar: "أحدهم يدفعك في الطابور. تضرب الأرض بقدمك. كيف تشعر؟", uk: "Хтось штовхає тебе в черзі. Ти тупаєш ногою. Як ти почуваєшся?", tr: "Sırada biri seni itiyor. Ayağını yere vuruyorsun. Nasıl hissediyorsun?" },
+  "bang": { nl: "Er zit een grote spin op je arm. Je wilt weglopen. Hoe voel je je?", en: "There is a big spider on your arm. You want to run away. How do you feel?", ar: "على ذراعك عنكبوت كبير. تريد أن تهرب. كيف تشعر؟", uk: "На твоїй руці великий павук. Ти хочеш утекти. Як ти почуваєшся?", tr: "Kolunda büyük bir örümcek var. Kaçmak istiyorsun. Nasıl hissediyorsun?" },
   "moe": { nl: "Je gaapt. Je ogen vallen dicht. Hoe voel je je?", en: "You yawn. Your eyes are closing. How do you feel?", ar: "أنت تتثاءب. عيناك تنغلقان. كيف تشعر؟", uk: "Ти позіхаєш. Очі заплющуються. Як ти почуваєшся?", tr: "Esniyorsun. Gözlerin kapanıyor. Nasıl hissediyorsun?" },
   "kleuren": { nl: "Je maakt een tekening vol met rood, blauw en geel. Wat doe je?", en: "You fill a drawing with red, blue and yellow. What are you doing?", ar: "تملأ رسمة بالأحمر والأزرق والأصفر. ماذا تفعل؟", uk: "Ти заповнюєш малюнок червоним, синім і жовтим. Що ти робиш?", tr: "Bir resmi kırmızı, mavi ve sarıyla dolduruyorsun. Ne yapıyorsun?" },
 };
@@ -286,6 +286,7 @@ const doen = [
 // Deel E (26 sep 2026): gevoelswoorden. Veel nieuwkomers hebben iets zwaars meegemaakt; "ik ben bang"
 // of "ik voel me niet lekker" kunnen zeggen is dan misschien wel het belangrijkste woord van de week.
 // Geen enge situaties in de vragen (geen oorlog, geen harde knallen) — alledaags en veilig.
+// Andere situaties dan In de klas deel 4 (bal afpakken, blaffende hond): die twee komen samen in het klassikaal-setje.
 const gevoel = [
   w("blij", ["verdrietig", "boos", "moe"], { uitlegPad: {
     stappen: [
