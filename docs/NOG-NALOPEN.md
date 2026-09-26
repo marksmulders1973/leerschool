@@ -10,7 +10,7 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 |---|-----|-----|--------|
 | N1 | **Woordenpad op telefoon doorlopen**: 20 Nederlandse vragen, fout antwoord → "Nee, een tas is iets om je spullen in te doen." (v716) | Mark | ⏳ |
 | N2 | **In de klas / Rekentaal / Rekenen tot 20 en 100**: nieuwe "Nee, …"-uitleg bij elk fout antwoord (247 stuks, v717) — steekproef van ~10 | Mark | ⏳ |
-| N3 | **Herhaalkaart op /nieuwkomers** (morgen = eerste echte dag): toont hij verschillende woorden i.p.v. steeds "tafel"? (fix v707) | Claude checkt 26 sep | ⏳ |
+| N3 | **Herhaalkaart op /nieuwkomers**: code nagespeeld 26 sep ✅ (5 woorden → 5 verschillende herhaalvragen); in productie nog 0× geopend — afvinken bij eerste echte gebruik | Claude volgt | 🟡 |
 | N4 | ✅ 25 sep live gecheckt (Breuken): "Onderwerp: …" klein, vraag groot | — | ✅ |
 | N5 | **Vertaalfouten die bewust bleven staan** ("alleen Nederlands"): Arabisch "2 kinderen" (tweevoud), Engels "I have hunger/pain", Turkse kapstok-hint verklapt het antwoord. Fixen of laten? | Mark beslist | ❓ |
 | N6 | **Twijfelvragen In de klas**: "De bel gaat" (bel = ook naar huis), "Je jas hangt aan de…" (deur kan ook) | Mark beslist | ❓ |
