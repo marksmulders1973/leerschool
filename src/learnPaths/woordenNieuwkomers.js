@@ -5,12 +5,13 @@
 // Zonder gekozen taal staat Engels erbij. Elke stap begint met uitleg in drie stappen.
 
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
-const stepEmojis = ["🏫", "🏠", "🧍", "✋"];
+const stepEmojis = ["🏫", "🏠", "🧍", "✋", "💬"];
 const chapters = [
   { letter: "A", title: "Welke woorden hoor ik op school?", emoji: "🏫", from: 0, to: 0 },
   { letter: "B", title: "Welke woorden hoor ik thuis en bij het eten?", emoji: "🏠", from: 1, to: 1 },
   { letter: "C", title: "Hoe heten mijn lichaam en de kleuren?", emoji: "🧍", from: 2, to: 2 },
   { letter: "D", title: "Wat moet ik doen in de klas?", emoji: "✋", from: 3, to: 3 },
+  { letter: "E", title: "Hoe zeg ik hoe ik me voel?", emoji: "💬", from: 4, to: 4 },
 ];
 
 // 🌍 Woordenboekje voor het vertaalknopje bij elk ANTWOORD (Mark 24 sep 2026: hij tikte op
@@ -67,6 +68,14 @@ const WOORDENBOEK = {
   "tekenen": { en: "to draw", ar: "يرسم", uk: "малювати", tr: "resim çizmek" },
   "kleuren": { en: "to colour", ar: "يلوّن", uk: "розфарбовувати", tr: "boyamak" },
   "tellen": { en: "to count", ar: "يعدّ", uk: "рахувати", tr: "saymak" },
+  // Deel E (26 sep 2026) — gevoelswoorden (LOWAN-schooltaalwoordenlijst noemt emotiewoorden apart):
+  // een kind dat net in een nieuw land is, moet kunnen zeggen dat het bang, moe of ziek is.
+  "blij": { en: "happy", ar: "سعيد", uk: "радий", tr: "mutlu" },
+  "verdrietig": { en: "sad", ar: "حزين", uk: "сумний", tr: "üzgün" },
+  "boos": { en: "angry", ar: "غاضب", uk: "сердитий", tr: "kızgın" },
+  "bang": { en: "scared", ar: "خائف", uk: "наляканий", tr: "korkmuş" },
+  "moe": { en: "tired", ar: "متعب", uk: "втомлений", tr: "yorgun" },
+  "ziek": { en: "ill / sick", ar: "مريض", uk: "хворий", tr: "hasta" },
 };
 
 // Woord-vraag (Mark 25 sep 2026: "we gaan niet iets in het Arabisch schrijven en dan vragen wat dat
@@ -94,6 +103,11 @@ const VRAAG = {
   "knippen": { nl: "Je hebt een schaar en papier in je hand. Wat doe je?", en: "You have scissors and paper in your hand. What do you do?", ar: "في يدك مقصّ وورقة. ماذا تفعل؟", uk: "У тебе в руці ножиці й папір. Що ти робиш?", tr: "Elinde makas ve kâğıt var. Ne yaparsın?" },
   "luisteren": { nl: "De juf praat. Je bent stil en hoort wat ze zegt. Wat doe je?", en: "The teacher talks. You are quiet and hear what she says. What are you doing?", ar: "المعلّمة تتكلّم. أنت هادئ وتسمع ما تقوله. ماذا تفعل؟", uk: "Учителька говорить. Ти тихо сидиш і чуєш, що вона каже. Що ти робиш?", tr: "Öğretmen konuşuyor. Sessizsin ve söylediğini duyuyorsun. Ne yapıyorsun?" },
   "opruimen": { nl: "Je legt alles terug op zijn plek. Wat doe je?", en: "You put everything back in its place. What are you doing?", ar: "تعيد كل شيء إلى مكانه. ماذا تفعل؟", uk: "Ти кладеш усе на своє місце. Що ти робиш?", tr: "Her şeyi yerine koyuyorsun. Ne yapıyorsun?" },
+  "blij": { nl: "Je lacht. Je hebt een fijne dag. Hoe voel je je?", en: "You laugh. You are having a nice day. How do you feel?", ar: "أنت تضحك. يومك جميل. كيف تشعر؟", uk: "Ти смієшся. У тебе гарний день. Як ти почуваєшся?", tr: "Gülüyorsun. Güzel bir gün geçiriyorsun. Nasıl hissediyorsun?" },
+  "verdrietig": { nl: "Er komen tranen uit je ogen. Je huilt. Hoe voel je je?", en: "Tears come out of your eyes. You cry. How do you feel?", ar: "تنزل الدموع من عينيك. أنت تبكي. كيف تشعر؟", uk: "З очей течуть сльози. Ти плачеш. Як ти почуваєшся?", tr: "Gözlerinden yaşlar geliyor. Ağlıyorsun. Nasıl hissediyorsun?" },
+  "boos": { nl: "Iemand pakt je bal af. Je stampt met je voet. Hoe voel je je?", en: "Someone takes your ball. You stamp your foot. How do you feel?", ar: "أحدهم يأخذ كرتك. تضرب الأرض بقدمك. كيف تشعر؟", uk: "Хтось забирає твій м’яч. Ти тупаєш ногою. Як ти почуваєшся?", tr: "Biri topunu alıyor. Ayağını yere vuruyorsun. Nasıl hissediyorsun?" },
+  "bang": { nl: "Er komt een grote hond naar je toe. Je wilt weglopen. Hoe voel je je?", en: "A big dog comes towards you. You want to run away. How do you feel?", ar: "كلب كبير يقترب منك. تريد أن تهرب. كيف تشعر؟", uk: "До тебе біжить великий пес. Ти хочеш утекти. Як ти почуваєшся?", tr: "Büyük bir köpek sana doğru geliyor. Kaçmak istiyorsun. Nasıl hissediyorsun?" },
+  "moe": { nl: "Je gaapt. Je ogen vallen dicht. Hoe voel je je?", en: "You yawn. Your eyes are closing. How do you feel?", ar: "أنت تتثاءب. عيناك تنغلقان. كيف تشعر؟", uk: "Ти позіхаєш. Очі заплющуються. Як ти почуваєшся?", tr: "Esniyorsun. Gözlerin kapanıyor. Nasıl hissediyorsun?" },
   "kleuren": { nl: "Je maakt een tekening vol met rood, blauw en geel. Wat doe je?", en: "You fill a drawing with red, blue and yellow. What are you doing?", ar: "تملأ رسمة بالأحمر والأزرق والأصفر. ماذا تفعل؟", uk: "Ти заповнюєш малюнок червоним, синім і жовтим. Що ти робиш?", tr: "Bir resmi kırmızı, mavi ve sarıyla dolduruyorsun. Ne yapıyorsun?" },
 };
 // Herschreven padteksten (uitleg, intro) met hun vertaling voor de tik.
@@ -101,7 +115,8 @@ const TEKST_STEUN = {
   "Lees de vraag. Kies het **Nederlandse** woord dat past. Ken je een woord niet? **Tik** erop: dan zie je het in jouw taal.": { en: "Read the question. Choose the **Dutch** word that fits. Don't know a word? **Tap** it: then you see it in your language.", ar: "اقرأ السؤال. اختر الكلمة **الهولندية** المناسبة. لا تعرف كلمة؟ **اضغط** عليها: فتراها بلغتك.", uk: "Прочитай запитання. Вибери **нідерландське** слово, яке підходить. Не знаєш слова? **Натисни** на нього: і побачиш його своєю мовою.", tr: "Soruyu oku. Uyan **Felemenkçe** kelimeyi seç. Bir kelimeyi bilmiyor musun? Ona **dokun**: kendi dilinde görürsün." },
   "Aan de tafel eet je. Op de stoel zit je.": { en: "You eat at the table. You sit on the chair.", ar: "على الطاولة تأكل. على الكرسي تجلس.", uk: "За столом ти їси. На стільці ти сидиш.", tr: "Masada yemek yersin. Sandalyede oturursun." },
   "Lees de vraag en kies het **Nederlandse** woord dat past.\n\nLeer elk woord met **de** of **het** ervoor: de tafel, het boek.\n\nKen je een woord niet? Tik erop, dan zie je het in jouw taal.": { en: "Read the question and choose the **Dutch** word that fits.\n\nLearn every word with **de** or **het** in front: de tafel, het boek.\n\nDon't know a word? Tap it to see it in your language.", ar: "اقرأ السؤال واختر الكلمة **الهولندية** المناسبة.\n\nتعلّم كل كلمة مع **de** أو **het** قبلها: de tafel، het boek.\n\nلا تعرف كلمة؟ اضغط عليها لتراها بلغتك.", uk: "Прочитай запитання і вибери **нідерландське** слово, яке підходить.\n\nВчи кожне слово з **de** або **het** перед ним: de tafel, het boek.\n\nНе знаєш слова? Натисни на нього, і побачиш його своєю мовою.", tr: "Soruyu oku ve uyan **Felemenkçe** kelimeyi seç.\n\nHer kelimeyi önündeki **de** ya da **het** ile öğren: de tafel, het boek.\n\nBir kelimeyi bilmiyor musun? Ona dokun, kendi dilinde gör." },
-  "Twintig woorden voor school, thuis, eten, lichaam, kleuren en doe-woorden. Lees de vraag en kies het goede woord. Tik op een woord als je het niet kent. ~12 min.": { en: "Twenty words for school, home, food, body, colours and action words. Read the question and choose the right word. Tap a word if you don't know it. ~12 min.", ar: "عشرون كلمة للمدرسة والبيت والطعام والجسم والألوان وكلمات الأفعال. اقرأ السؤال واختر الكلمة الصحيحة. اضغط على كلمة إذا كنت لا تعرفها. ~12 دقيقة.", uk: "Двадцять слів про школу, дім, їжу, тіло, кольори і дії. Прочитай запитання і вибери правильне слово. Натисни на слово, якщо не знаєш його. ~12 хв.", tr: "Okul, ev, yemek, vücut, renkler ve eylemler için yirmi kelime. Soruyu oku ve doğru kelimeyi seç. Bilmediğin bir kelimeye dokun. ~12 dk." },
+  "Vijfentwintig woorden voor school, thuis, eten, lichaam, kleuren, doe-woorden en gevoelens. Lees de vraag en kies het goede woord. Tik op een woord als je het niet kent. ~15 min.": { en: "Twenty-five words for school, home, food, body, colours, action words and feelings. Read the question and choose the right word. Tap a word if you don't know it. ~15 min.", ar: "خمس وعشرون كلمة للمدرسة والبيت والطعام والجسم والألوان وكلمات الأفعال والمشاعر. اقرأ السؤال واختر الكلمة الصحيحة. اضغط على كلمة إذا كنت لا تعرفها. ~15 دقيقة.", uk: "Двадцять п’ять слів про школу, дім, їжу, тіло, кольори, дії та почуття. Прочитай запитання і вибери правильне слово. Натисни на слово, якщо не знаєш його. ~15 хв.", tr: "Okul, ev, yemek, vücut, renkler, eylemler ve duygular için yirmi beş kelime. Soruyu oku ve doğru kelimeyi seç. Bilmediğin bir kelimeye dokun. ~15 dk." },
+  "Woorden voor hoe je je **voelt**: **blij**, **verdrietig**, **boos**, **bang**, **moe**, **ziek**.\n\nZeg het tegen de juf of meester: **Ik ben moe.** **Ik voel me niet lekker.**\n\nBen je verdrietig of bang? Zeg het. Dat mag altijd.": { en: "Words for how you **feel**: **blij** (happy), **verdrietig** (sad), **boos** (angry), **bang** (scared), **moe** (tired), **ziek** (ill).\n\nTell the teacher: **Ik ben moe.** (I am tired.) **Ik voel me niet lekker.** (I don't feel well.)\n\nAre you sad or scared? Say it. That is always allowed.", ar: "كلمات تقول كيف **تشعر**: **blij** (سعيد)، **verdrietig** (حزين)، **boos** (غاضب)، **bang** (خائف)، **moe** (متعب)، **ziek** (مريض).\n\nقل للمعلّم أو المعلّمة: **Ik ben moe.** (أنا متعب.) **Ik voel me niet lekker.** (لا أشعر أنني بخير.)\n\nهل أنت حزين أو خائف؟ قل ذلك. هذا مسموح دائمًا.", uk: "Слова про те, як ти **почуваєшся**: **blij** (радий), **verdrietig** (сумний), **boos** (сердитий), **bang** (наляканий), **moe** (втомлений), **ziek** (хворий).\n\nСкажи вчительці або вчителю: **Ik ben moe.** (Я втомився.) **Ik voel me niet lekker.** (Мені погано.)\n\nТобі сумно або страшно? Скажи про це. Це можна завжди.", tr: "Nasıl **hissettiğini** anlatan kelimeler: **blij** (mutlu), **verdrietig** (üzgün), **boos** (kızgın), **bang** (korkmuş), **moe** (yorgun), **ziek** (hasta).\n\nÖğretmene söyle: **Ik ben moe.** (Yorgunum.) **Ik voel me niet lekker.** (Kendimi iyi hissetmiyorum.)\n\nÜzgün ya da korkmuş musun? Söyle. Bu her zaman serbest." },
 };
 let zaad = 7;
 const rnd = () => { zaad = (zaad * 9301 + 49297) % 233280; return zaad / 233280; };
@@ -163,6 +178,12 @@ const BETEKENIS = {
   "kleuren": "kleuren is een tekening vol maken met kleur",
   "luisteren": "luisteren doe je met je oren",
   "opruimen": "opruimen is alles terugleggen op zijn plek",
+  "blij": "blij ben je als je lacht en het fijn hebt",
+  "verdrietig": "verdrietig ben je als je moet huilen",
+  "boos": "boos ben je als iets niet eerlijk is",
+  "bang": "bang ben je als je wilt weglopen of je wilt verstoppen",
+  "moe": "moe ben je als je wilt slapen",
+  "ziek": "ziek ben je als je je niet lekker voelt",
 };
 const foutHint = (o) => {
   const t = WOORDENBOEK[o];
@@ -262,11 +283,34 @@ const doen = [
   w("kleuren", ["knippen", "lezen", "luisteren"]),
 ];
 
+// Deel E (26 sep 2026): gevoelswoorden. Veel nieuwkomers hebben iets zwaars meegemaakt; "ik ben bang"
+// of "ik voel me niet lekker" kunnen zeggen is dan misschien wel het belangrijkste woord van de week.
+// Geen enge situaties in de vragen (geen oorlog, geen harde knallen) — alledaags en veilig.
+const gevoel = [
+  w("blij", ["verdrietig", "boos", "moe"], { uitlegPad: {
+    stappen: [
+      { titel: "Gevoelens", tekst: "Hoe voel je je? **Blij**, **verdrietig**, **boos**, **bang**, **moe** of **ziek**." },
+      { titel: "Zeg het", tekst: "Zeg het tegen de juf of meester: **Ik ben blij.** **Ik ben moe.** **Ik voel me niet lekker.**" },
+      { titel: "Dat mag altijd", tekst: "Ben je **verdrietig** of **bang**? Zeg het. De juf of meester wil het weten." },
+    ],
+    woorden: [{ woord: "blij", uitleg: "Je lacht, je hebt het fijn." }, { woord: "verdrietig", uitleg: "Je moet huilen." }],
+    theorie: "Ik ben … + het gevoel. Ik voel me niet lekker = ik ben een beetje ziek.",
+    voorbeelden: [{ type: "stap", tekst: "Ik ben blij." }, { type: "stap", tekst: "Ik ben bang." }],
+    basiskennis: [{ onderwerp: "Truc", uitleg: "Wijs naar je gezicht en zeg het gevoel hardop." }],
+    niveaus: { basis: "Kies het Nederlandse woord.", simpeler: "Je lacht = je bent blij.", nogSimpeler: "blij" },
+  } }),
+  w("verdrietig", ["blij", "bang", "ziek"]),
+  w("boos", ["blij", "moe", "bang"]),
+  w("bang", ["boos", "blij", "moe"]),
+  w("moe", ["ziek", "blij", "boos"]),
+];
+
 const steps = [
   { title: "Op school", explanation: "Lees de vraag en kies het **Nederlandse** woord dat past.\n\nLeer elk woord met **de** of **het** ervoor: de tafel, het boek.\n\nKen je een woord niet? Tik erop, dan zie je het in jouw taal.", checks: school },
   { title: "Thuis en eten", explanation: "Woorden voor **thuis** en **eten**.\n\nZeg ze hardop. Wijs ze aan in huis.", checks: thuis },
   { title: "Lichaam en kleuren", explanation: "Woorden voor je **lichaam** en voor **kleuren**.\n\nWijs aan wat je zegt. Zo onthoud je het.", checks: lichaam },
   { title: "Doe-woorden in de klas", explanation: "De juf of meester zegt vaak wat je moet **doen**.\n\n**Schrijf**, **knip**, **luister**, **ruim op**, **kleur**.\n\nDoe het woord meteen na: pak een pen als je **schrijven** hoort. Zo onthoud je het.", checks: doen },
+  { title: "Hoe voel je je?", explanation: "Woorden voor hoe je je **voelt**: **blij**, **verdrietig**, **boos**, **bang**, **moe**, **ziek**.\n\nZeg het tegen de juf of meester: **Ik ben moe.** **Ik voel me niet lekker.**\n\nBen je verdrietig of bang? Zeg het. Dat mag altijd.", checks: gevoel },
 ];
 steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
@@ -279,7 +323,7 @@ const woordenNieuwkomers = {
   referentieNiveau: "voor 1F",
   sloThema: "Woordenschat — basiswoorden",
   prerequisites: [],
-  intro: "Twintig woorden voor school, thuis, eten, lichaam, kleuren en doe-woorden. Lees de vraag en kies het goede woord. Tik op een woord als je het niet kent. ~12 min.",
+  intro: "Vijfentwintig woorden voor school, thuis, eten, lichaam, kleuren, doe-woorden en gevoelens. Lees de vraag en kies het goede woord. Tik op een woord als je het niet kent. ~15 min.",
   triggerKeywords: ["nieuwkomers", "woorden", "woordenschat", "nt2", "eerste woorden", "nederlands leren", "de het"],
   chapters,
   steps,
