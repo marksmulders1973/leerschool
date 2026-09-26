@@ -8,7 +8,8 @@ import { SteunTekst } from "./SteunTik.jsx";
 import { spreekMetMeelezen, nlStemmen, gekozenStemNaam, zetGekozenStem } from "../spraakTekst.js";
 import MeeleesTekst from "./MeeleesTekst.jsx";
 
-export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
+// `licht` (26 sep 2026): knoppen leesbaar op een lichte achtergrond (ere-scherm partnercode).
+export default function VoorleesBlok({ tekst, accent = "#00C853", children, licht = false }) {
   const [leest, setLeest] = useState(false);
   const [woord, setWoord] = useState(-1);
   const [faalt, setFaalt] = useState(false); // speech-engine weigert (bv. browser zonder voorleesstem)
@@ -62,9 +63,9 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
         onClick={() => (leest ? stop() : start())}
         aria-label={leest ? "Stop met voorlezen" : "Lees deze tekst voor"}
         style={{
-          background: leest ? "rgba(226,75,74,0.12)" : "rgba(255,255,255,0.05)",
-          border: `1px solid ${leest ? "rgba(226,75,74,0.45)" : "rgba(255,255,255,0.14)"}`,
-          color: leest ? "#ff9a9a" : "rgba(230,235,245,0.85)",
+          background: leest ? "rgba(226,75,74,0.12)" : licht ? "#ffffff" : "rgba(255,255,255,0.05)",
+          border: `1px solid ${leest ? "rgba(226,75,74,0.45)" : licht ? "#d9c28a" : "rgba(255,255,255,0.14)"}`,
+          color: leest ? (licht ? "#b3261e" : "#ff9a9a") : licht ? "#5a4300" : "rgba(230,235,245,0.85)",
           borderRadius: 999,
           padding: "5px 12px",
           fontSize: 12,
@@ -84,9 +85,9 @@ export default function VoorleesBlok({ tekst, accent = "#00C853", children }) {
           onClick={() => setKiesOpen((v) => !v)}
           aria-label="Kies een andere voorleesstem"
           style={{
-            background: "rgba(255,255,255,0.05)",
-            border: "1px solid rgba(255,255,255,0.14)",
-            color: "rgba(230,235,245,0.7)",
+            background: licht ? "#ffffff" : "rgba(255,255,255,0.05)",
+            border: `1px solid ${licht ? "#d9c28a" : "rgba(255,255,255,0.14)"}`,
+            color: licht ? "#5a4300" : "rgba(230,235,245,0.7)",
             borderRadius: 999,
             padding: "5px 10px",
             fontSize: 12,

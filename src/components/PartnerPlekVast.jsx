@@ -18,6 +18,7 @@
 import { useEffect, useState } from "react";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import { FamilieKnop, FamilieLijst } from "./FamilieUitleg.jsx";
 import { adresvraagOpen, adresvraagAfronden, actievePartnerCode, partnerFamilieTot } from "../features/referral/partnerCode.js";
 
 const geldigEmail = (s) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(s);
@@ -37,6 +38,7 @@ export default function PartnerPlekVast({ page, userName }) {
   const [email, setEmail] = useState("");
   const [bezig, setBezig] = useState(false);
   const [foutje, setFoutje] = useState("");
+  const [famOpen, setFamOpen] = useState(false);
 
   useEffect(() => {
     if (open || !adresvraagOpen() || !RUSTPAGINAS.has(page)) return;
@@ -114,8 +116,9 @@ export default function PartnerPlekVast({ page, userName }) {
         <>
           <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 4 }}>🎟️ Je plek is vast</div>
           <div style={{ fontSize: 13.5, lineHeight: 1.45, color: "var(--color-text-muted)", marginBottom: 10 }}>
-            Het Familie-pakket is voor jullie gratis{totTekst ? ` ${totTekst}` : ""}. Daar hoef je niets meer voor te doen,
+            Het <FamilieKnop open={famOpen} onToggle={() => setFamOpen((o) => !o)} plek="plek-vast" kleur="var(--color-text)" /> is voor jullie gratis{totTekst ? ` ${totTekst}` : ""}. Daar hoef je niets meer voor te doen,
             ook niet als je hieronder niets invult.
+            <FamilieLijst open={famOpen} donker />
             <br /><br />
             <strong>Helemaal vrijblijvend:</strong> wil je een berichtje als er nieuw oefenmateriaal klaarstaat?
             Vul dan het e-mailadres van je ouder of verzorger in.

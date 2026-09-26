@@ -18,6 +18,7 @@ import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
 import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, partnerCodeBekend, codeUitUrl } from "../features/referral/partnerCode.js";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import { track } from "../utils.js";
+import { FamilieKnop, FamilieLijst } from "./FamilieUitleg.jsx";
 
 // 🎯 Scan → meteen dóén (Mark-go 28 aug 2026, na nulmeting 37 banner-shows /
 // 0 kliks): de scanner landt direct in drie échte vraagjes ín de banner.
@@ -152,6 +153,7 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
   // (soort "neutraal") checken we tegen de DB. Onbekend → geen gratis-belofte
   // maar een vriendelijke "code onbekend"-kaart. null = check kon niet.
   const [bekend, setBekend] = useState(null);
+  const [famOpen, setFamOpen] = useState(false);
   useEffect(() => {
     if (!variant?.code || variant.soort !== "neutraal" || variant.code.startsWith("OOIEVAAR")) return;
     let actief = true;
@@ -191,13 +193,13 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
 
   const blijvend = variant.code ? partnerFamilieTot() === null : false;
   const extrasZin = blijvend
-    ? "Jouw gezin kan hier blijvend gratis oefenen."
-    : `Jouw gezin krijgt straks ook alle gezins-extra's gratis, ${partnerFamilieTotLabel(partnerFamilieTot())}.`;
+    ? "Jouw gezin krijgt het Familie-pakket blijvend gratis."
+    : `Jouw gezin krijgt ook het Familie-pakket gratis, ${partnerFamilieTotLabel(partnerFamilieTot())}.`;
 
   let titel, tekst;
   if (variant.soort === "sparkfest") {
     titel = "Welkom, Spark Fest-bezoeker! 🎉";
-    tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. En omdat jouw flyer uit de Spark Fest-goodybag komt, krijgt jouw hele gezin ook alle gezins-extra's gratis — ${partnerFamilieTotLabel(partnerFamilieTot())}.`;
+    tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. En omdat jouw flyer uit de Spark Fest-goodybag komt, krijgt jouw hele gezin ook het Familie-pakket gratis — ${partnerFamilieTotLabel(partnerFamilieTot())}.`;
   } else if (variant.soort === "partner") {
     titel = `Welkom via ${variant.naam}! 💛`;
     tekst = `Je zit hier goed. Oefenen voor de Doorstroomtoets is gratis. ${extrasZin}`;
@@ -249,8 +251,16 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
         color: "rgba(255,255,255,0.88)", marginBottom: 12,
       }}>
         <VoorleesBlok tekst={`${titel.replace(/[🎉💛]/g, "")}. ${tekst}`} accent={accent}>
-          {tekst}
+          {/* 26 sep 2026: "Familie-pakket" aantikbaar → lijstje van wat erin zit */}
+          {tekst.includes("Familie-pakket") ? (
+            <>
+              {tekst.split("Familie-pakket")[0]}
+              <FamilieKnop open={famOpen} onToggle={() => setFamOpen((o) => !o)} plek="welkomstblok" kleur="#fff" />
+              {tekst.split("Familie-pakket").slice(1).join("Familie-pakket")}
+            </>
+          ) : tekst}
         </VoorleesBlok>
+        <FamilieLijst open={famOpen} donker />
       </div>
       {/* 🎯 Scan → meteen dóén (28 aug 2026): drie proef-vraagjes ín de banner.
           Geen klik nodig — vraag 1 staat er al. Elk antwoord telt mee voor de

@@ -16,6 +16,7 @@ import { bewaarKoppeling } from "../shared/koppeling.js";
 import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig, codeUitUrl } from "../features/referral/partnerCode.js";
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
+import { FamilieKnop, FamilieLijst } from "./FamilieUitleg.jsx";
 
 function naamVoor(code) {
   if (!code) return null;
@@ -54,6 +55,8 @@ function EerScherm({ code, onVerder }) {
   const blijvend = isOP; // uit de code zelf, zodat óók de preview-weergave klopt
   const donker = isOP;
   const tekstKleur = donker ? "#dce5ee" : "#3a4658";
+  const [famOpen, setFamOpen] = useState(false);
+  const famKnop = (label) => <FamilieKnop open={famOpen} onToggle={() => setFamOpen((o) => !o)} plek="erescherm">{label}</FamilieKnop>;
   return (
     <div style={{ position: "fixed", inset: 0, zIndex: 60, background: donker ? "#14283c" : "linear-gradient(160deg,#f6faf2,#e7f6ec)", overflowY: "auto" }}>
       <div style={{ maxWidth: 620, margin: "0 auto", padding: "30px 22px 44px" }}>
@@ -92,15 +95,16 @@ function EerScherm({ code, onVerder }) {
             : <>Wat fijn dat u ons heeft gevonden via <strong style={{ color: donker ? "#fff" : "#0a7d43" }}>{naam || "een van onze partners"}</strong>.</>}
         </p>
         <div style={{ background: donker ? "rgba(122,181,45,0.16)" : "#f2f8ec", border: "2px solid " + (donker ? "rgba(122,181,45,0.55)" : "#bcd99a"), borderRadius: 14, padding: "16px 18px", margin: "18px 0 0" }}>
-          <p style={{ font: "600 14.5px/1.55 system-ui", color: donker ? "#eaf3dc" : "#3a4658", margin: 0 }}>
+          <div style={{ font: "600 14.5px/1.55 system-ui", color: donker ? "#eaf3dc" : "#3a4658", margin: 0 }}>
             {isOP
-              ? <>Onze afspraak met de gemeente Den Haag: heeft uw gezin een Ooievaarspas? Dan is het Familie-pakket van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
+              ? <>Onze afspraak met de gemeente Den Haag: heeft uw gezin een Ooievaarspas? Dan is het {famKnop("Familie-pakket")} van Leerkwartier <strong style={{ color: donker ? "#b8e07a" : "#3f7015" }}>blijvend gratis</strong>.</>
               : isEN
-                ? <>Thanks to them, the Family package is <strong style={{ color: "#3f7015" }}>free for your family {partnerFamilieTotLabel(partnerFamilieTot(), true)}</strong>.</>
+                ? <>Thanks to them, the {famKnop("Family package")} is <strong style={{ color: "#3f7015" }}>free for your family {partnerFamilieTotLabel(partnerFamilieTot(), true)}</strong>.</>
                 : blijvend
-                  ? <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
-                  : <>Dankzij hen is het Familie-pakket voor uw gezin <strong style={{ color: "#3f7015" }}>gratis, {partnerFamilieTotLabel(partnerFamilieTot())}</strong>.</>}
-          </p>
+                  ? <>Dankzij hen is het {famKnop("Familie-pakket")} voor uw gezin <strong style={{ color: "#3f7015" }}>blijvend gratis</strong>.</>
+                  : <>Dankzij hen is het {famKnop("Familie-pakket")} voor uw gezin <strong style={{ color: "#3f7015" }}>gratis, {partnerFamilieTotLabel(partnerFamilieTot())}</strong>.</>}
+          </div>
+          <FamilieLijst open={famOpen} en={isEN} donker={donker} voorNavigeren={() => { try { sessionStorage.setItem(KEY_EER, "1"); } catch { /* */ } }} />
         </div>
         <button
           onClick={onVerder}
