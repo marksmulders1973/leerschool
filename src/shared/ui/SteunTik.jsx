@@ -75,6 +75,40 @@ export const UI_STEUN = {
   "Volgende": { en: "Next", ar: "التالي", uk: "Далі", tr: "Sonraki" },
   "Terug": { en: "Back", ar: "رجوع", uk: "Назад", tr: "Geri" },
   "Sluit": { en: "Close", ar: "إغلاق", uk: "Закрити", tr: "Kapat" },
+  // Kliktest 26 sep 2026: navigatie rond de vragen was nog alleen Nederlands.
+  "← Vorig deel": { en: "← Previous part", ar: "→ الجزء السابق", uk: "← Попередня частина", tr: "← Önceki bölüm" },
+  "Volgend deel →": { en: "Next part →", ar: "الجزء التالي ←", uk: "Наступна частина →", tr: "Sonraki bölüm →" },
+  "⏸ stop": { en: "⏸ pause (your place is saved)", ar: "⏸ توقّف (يُحفظ مكانك)", uk: "⏸ пауза (твоє місце збережено)", tr: "⏸ dur (yerin kaydedilir)" },
+  "Begin": { en: "Start", ar: "ابدأ", uk: "Почати", tr: "Başla" },
+  "Overzicht": { en: "Overview", ar: "نظرة عامة", uk: "Огляд", tr: "Genel bakış" },
+  "Terug naar het overzicht": { en: "Back to the overview", ar: "العودة إلى النظرة العامة", uk: "Назад до огляду", tr: "Genel bakışa dön" },
+  "Kies een ander deel": { en: "Choose another part", ar: "اختر جزءًا آخر", uk: "Вибери іншу частину", tr: "Başka bir bölüm seç" },
+  "Je plek is bewaard!": { en: "Your place is saved!", ar: "تم حفظ مكانك!", uk: "Твоє місце збережено!", tr: "Yerin kaydedildi!" },
+  "Tot straks — je gaat verder waar je nu bent.": { en: "See you soon — you will continue where you are now.", ar: "إلى اللقاء — ستكمل من حيث أنت الآن.", uk: "До зустрічі — ти продовжиш там, де ти зараз.", tr: "Görüşürüz — şimdi kaldığın yerden devam edeceksin." },
+  // Korte titels van de nieuwkomer-onderdelen (zelfde woorden als de tegels op /nieuwkomers).
+  "In de klas": { en: "In class", ar: "في الصف", uk: "У класі", tr: "Sınıfta" },
+  "Woorden": { en: "Words", ar: "كلمات", uk: "Слова", tr: "Kelimeler" },
+  "Rekentaal": { en: "Maths words", ar: "كلمات الحساب", uk: "Слова для математики", tr: "Matematik kelimeleri" },
+  "Rekenen tot 20": { en: "Counting to 20", ar: "الحساب حتى 20", uk: "Рахуємо до 20", tr: "20'ye kadar sayılar" },
+  "Rekenen tot 100": { en: "Counting to 100", ar: "الحساب حتى 100", uk: "Рахуємо до 100", tr: "100'e kadar sayılar" },
+};
+
+// Teksten met een getal erin (kliktest 26 sep 2026) — als {en,ar,uk,tr}-object voor <SteunTekst nl={…}>.
+export const UI_GETAL = {
+  deel: (a, b) => ({ en: `Part ${a} / ${b}`, ar: `الجزء ${a} / ${b}`, uk: `Частина ${a} / ${b}`, tr: `Bölüm ${a} / ${b}` }),
+  delenKlaar: (x, y) => ({ en: `${x} of ${y} parts done`, ar: `أنهيت ${x} من ${y} أجزاء`, uk: `Завершено ${x} з ${y} частин`, tr: `${y} bölümden ${x} tanesi bitti` }),
+  hoofdstuk: (n) => ({ en: `Chapter ${n}`, ar: `الفصل ${n}`, uk: `Розділ ${n}`, tr: `Ünite ${n}` }),
+  deelKlaar: (n) => ({ en: `Part ${n} done!`, ar: `انتهى الجزء ${n}!`, uk: `Частину ${n} завершено!`, tr: `${n}. bölüm bitti!` }),
+  vragenMinuten: (v, m, stand) => {
+    const S = { klaar: ["done", "مكتمل", "готово", "bitti"], bezig: ["in progress", "قيد التقدّم", "в процесі", "devam ediyor"], niet: ["not done yet", "لم يُنجز بعد", "ще не зроблено", "henüz yapılmadı"] }[stand];
+    const v1 = v === 1;
+    return {
+      en: `${v ? `${v} ${v1 ? "question" : "questions"} · ` : ""}about ${m} ${m === 1 ? "minute" : "minutes"} · ${S[0]}`,
+      ar: `${v ? `${v} ${v1 ? "سؤال" : "أسئلة"} · ` : ""}حوالي ${m} ${m === 1 ? "دقيقة" : "دقائق"} · ${S[1]}`,
+      uk: `${v ? `${v} ${v1 ? "запитання" : "запитань"} · ` : ""}приблизно ${m} хв · ${S[2]}`,
+      tr: `${v ? `${v} soru · ` : ""}yaklaşık ${m} dakika · ${S[3]}`,
+    };
+  },
 };
 
 // "N van de M goed" en "Stap N voltooid!" hebben een getal: los opbouwen.

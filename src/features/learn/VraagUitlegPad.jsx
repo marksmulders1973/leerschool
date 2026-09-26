@@ -11,10 +11,10 @@
 // Bij ≥2 fouten op zelfde vraag start uitleg automatisch op niveau "simpeler".
 // Knop "Nog simpeler" toont niveau "nogSimpeler".
 
-import { useEffect, useMemo, useState } from "react";
+import { useContext, useEffect, useMemo, useState } from "react";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
-import { SteunTekst } from "../../shared/ui/SteunTik.jsx";
+import { SteunTekst, SteunCtx } from "../../shared/ui/SteunTik.jsx";
 
 const STORE_KEY = "lk_vraag_fouten_v1";
 
@@ -47,6 +47,7 @@ export function bumpVraagFouten(vraagId) {
 // eens", i.p.v. een leeg paneel; stappen die het antwoord verklappen blijven
 // dan dicht; (3) onderdelen staan open als er maar één of twee zijn.
 export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiveau = "basis", verbergNiveaus = false, onWoordHulp = null, onBuddy = null, onNaarUitleg = null, antwoordTekst = null, buddyNaam = "Charley" }) {
+  const steunActief = !!useContext(SteunCtx); // nieuwkomers: taal-neutrale knoppen (kliktest 26 sep 2026)
   if (!uitlegPad) return null;
 
   const fouten = useMemo(() => (vraagId ? getVraagFouten(vraagId) : 0), [vraagId]);
@@ -107,7 +108,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
               minWidth: 60,
             }}
           >
-            sluit
+            {steunActief ? "✕" : "sluit"}
           </button>
         )}
       </div>
@@ -309,6 +310,7 @@ export default function VraagUitlegPad({ uitlegPad, vraagId, onClose, defaultNiv
 }
 
 function Section({ title, children, defaultOpen = false }) {
+  const steunActief = !!useContext(SteunCtx);
   // A4 (10-agent mobile 2026-05-10): elke sectie collapsible. Bespaart ~70%
   // scroll op mobile zonder inhoud te verliezen.
   return (
@@ -334,8 +336,9 @@ function Section({ title, children, defaultOpen = false }) {
         alignItems: "center",
         minHeight: 32,
       }}>
-        <SteunTekst nl={String(title).replace(/^S+s/, "")} inline><span>{title}</span></SteunTekst>
-        <span style={{ fontSize: 11, color: "var(--color-text-soft)", marginLeft: 8 }}>{defaultOpen ? "" : "tik om te openen"}</span>
+        {/* Kliktest 26 sep 2026: /^S+s/ moest /^\S+\s/ zijn (emoji eraf) — koppen kregen nooit een taalknopje. */}
+        <SteunTekst nl={String(title).replace(/^\S+\s/, "")} inline><span>{title}</span></SteunTekst>
+        <span style={{ fontSize: 11, color: "var(--color-text-soft)", marginLeft: 8 }}>{defaultOpen ? "" : (steunActief ? "▾" : "tik om te openen")}</span>
       </summary>
       <div style={{ fontSize: 14, marginTop: 10 }}>{children}</div>
     </details>

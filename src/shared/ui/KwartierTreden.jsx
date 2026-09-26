@@ -32,6 +32,22 @@ export default function KwartierTreden({ compact = false }) {
     : t.deel === 1 ? `⭐ 5 minuten gehaald · nog ${min} min`
     : `⭐⭐ 10 minuten gehaald · nog ${min} min`;
   const kleur = t.klaar ? GROEN : GEEL;
+  // Nieuwkomerpad (kliktest 26 sep 2026): de balk hangt buiten het leerpad, dus hier zelf de
+  // thuistaal erachter zetten (zelfde taalkeuze als op /nieuwkomers).
+  const vert = (() => {
+    try {
+      if (!/-nieuwkomers$/.test(new URLSearchParams(window.location.search).get("id") || "")) return null;
+      const taal = localStorage.getItem("lk_steuntaal") || "en";
+      const T = {
+        en: [`Your quarter hour · ${min} min left`, `⭐ 5 minutes done · ${min} min left`, `⭐⭐ 10 minutes done · ${min} min left`, "🏆 Quarter hour done — the rest is extra"],
+        ar: [`ربع ساعتك · بقي ${min} د`, `⭐ أنهيت 5 دقائق · بقي ${min} د`, `⭐⭐ أنهيت 10 دقائق · بقي ${min} د`, "🏆 أنهيت ربع الساعة — الباقي إضافي"],
+        uk: [`Твоя чверть години · ще ${min} хв`, `⭐ 5 хвилин є · ще ${min} хв`, `⭐⭐ 10 хвилин є · ще ${min} хв`, "🏆 Чверть години є — решта понад план"],
+        tr: [`Çeyrek saatin · ${min} dk kaldı`, `⭐ 5 dakika tamam · ${min} dk kaldı`, `⭐⭐ 10 dakika tamam · ${min} dk kaldı`, "🏆 Çeyrek saat tamam — gerisi ekstra"],
+      }[taal];
+      if (!T) return null;
+      return t.klaar ? T[3] : T[Math.min(2, t.deel)];
+    } catch { return null; }
+  })();
   return (
     <div
       aria-label="Jouw kwartier: drie stappen van 5 minuten"
@@ -56,7 +72,7 @@ export default function KwartierTreden({ compact = false }) {
           );
         })}
       </div>
-      <span>{tekst}</span>
+      <span>{tekst}{vert && <span dir="auto" style={{ opacity: 0.85, fontWeight: 600 }}> · {vert}</span>}</span>
     </div>
   );
 }

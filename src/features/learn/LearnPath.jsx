@@ -44,7 +44,11 @@ import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
 import { noteerAntwoord } from "../../shared/herhaalNieuwkomers.js";
-import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, maakSteunMap, steunGoed, useSteun, leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
+import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, UI_GETAL, maakSteunMap, steunGoed, useSteun, leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
+
+// Nieuwkomerpaden: korte titel ("Woorden" i.p.v. "Woorden — je eerste … (nieuwkomers)"), zodat hij
+// vertaalbaar is en niet over twee regels loopt (kliktest 26 sep 2026).
+const korteTitel = (path) => (path?.steunTeksten ? String(path.title).split(" — ")[0].replace(/\s*\((nieuwkomers)[^)]*\)\s*$/, "") : path?.title);
 import Picto from "../../shared/ui/Picto.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import PushAanbodKaart from "../../shared/PushAanbodKaart.jsx";
@@ -971,15 +975,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         stepIdx={stepIdx}
         onStopForToday={() => { if (onHome) onHome(); }}
       />
-      <Header onBack={goOverview} onHome={onHome} title={path.title} emoji={path.emoji} backLabel="Overzicht" />
+      <Header onBack={goOverview} onHome={onHome} title={korteTitel(path)} emoji={path.emoji} backLabel="Overzicht" />
 
       {/* SH2 — bevestiging na "even stoppen": geruststelling in kindtaal. */}
       {stopBevestigd && (
         <div style={{ position: "fixed", inset: 0, zIndex: 9500, display: "flex", alignItems: "center", justifyContent: "center", background: "rgba(0,0,0,0.55)" }}>
           <div style={{ background: "linear-gradient(135deg, #1a2744, #0f1729)", border: "1px solid rgba(0,200,83,0.4)", borderRadius: 16, padding: "22px 28px", textAlign: "center", color: "#e0e6f0" }}>
             <div style={{ fontSize: 36, lineHeight: 1 }}>👍</div>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 800, color: "#00e676", marginTop: 8 }}>Je plek is bewaard!</div>
-            <div style={{ fontSize: 13.5, color: "#cdd6e2", marginTop: 4 }}>Tot straks — je gaat verder waar je nu bent.</div>
+            <SteunTekst nl="Je plek is bewaard!"><div style={{ fontFamily: "var(--font-display)", fontSize: 18, fontWeight: 800, color: "#00e676", marginTop: 8 }}>Je plek is bewaard!</div></SteunTekst>
+            <SteunTekst nl="Tot straks — je gaat verder waar je nu bent."><div style={{ fontSize: 13.5, color: "#cdd6e2", marginTop: 4 }}>Tot straks — je gaat verder waar je nu bent.</div></SteunTekst>
           </div>
         </div>
       )}
@@ -988,14 +992,17 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       <div style={{ padding: "12px 18px 6px" }}>
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
           <span>
-            Deel {stepIdx + 1} / {totalSteps}
+            <SteunTekst nl={UI_GETAL.deel(stepIdx + 1, totalSteps)} inline><span>Deel {stepIdx + 1} / {totalSteps}</span></SteunTekst>
+            {/* Nieuwkomers: minder cijfers rond de vraag (kliktest 26 sep 2026). */}
+            {!path.steunTeksten && (
             <span style={{ marginLeft: 8, color: C.warm, fontWeight: 700 }}>
               ≈ {Math.max(1, Math.round(0.7 + (path.steps[stepIdx]?.checks?.length || 1) * 0.5))} min
             </span>
+            )}
           </span>
           <span style={{ display: "inline-flex", alignItems: "center", gap: 10 }}>
-            {progressPct}% voltooid
-            <button
+            {!path.steunTeksten && <>{progressPct}% voltooid</>}
+            <SteunTekst nl="⏸ stop" knop><button
               type="button"
               onClick={stopEnBewaar}
               title="Even stoppen — je plek wordt bewaard"
@@ -1003,7 +1010,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               style={{ background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.2)", color: C.muted, borderRadius: 8, padding: "3px 9px", fontSize: 12, fontWeight: 700, cursor: "pointer" }}
             >
               ⏸ stop
-            </button>
+            </button></SteunTekst>
           </span>
         </div>
         <div style={{ height: 8, background: "#1a2744", borderRadius: 999, overflow: "hidden" }}>
@@ -1019,7 +1026,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         {/* Vrije navigatie tussen stappen — werkt alleen in reading/stepDone, niet midden in een check */}
         {(mode === "reading" || mode === "stepDone") && (
           <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 10 }}>
-            <button
+            <SteunTekst nl="← Vorig deel" knop><button
               onClick={() => stepIdx > 0 && goToStep(stepIdx - 1)}
               disabled={stepIdx === 0}
               style={{
@@ -1034,8 +1041,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               }}
             >
               ← Vorig deel
-            </button>
-            <button
+            </button></SteunTekst>
+            <SteunTekst nl="Volgend deel →" knop><button
               onClick={() => stepIdx + 1 < totalSteps && goToStep(stepIdx + 1)}
               disabled={stepIdx + 1 >= totalSteps}
               style={{
@@ -1050,7 +1057,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               }}
             >
               Volgend deel →
-            </button>
+            </button></SteunTekst>
           </div>
         )}
       </div>
@@ -1074,12 +1081,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             letterSpacing: 1.6,
             textTransform: "uppercase",
           }}>
-            {(SUBJECTS[path.subject]?.title || path.subject || BRAND.name)} · deel {stepIdx + 1} / {totalSteps}
+            {path.steunTeksten ? null : <>{(SUBJECTS[path.subject]?.title || path.subject || BRAND.name)} · deel {stepIdx + 1} / {totalSteps}</>}
           </div>
           {/* Markeer voltooid — agency voor leerling (les leersnel). Alleen
               tijdens lezen, niet midden in een check. Stap blijft natuurlijk
               ook automatisch voltooid bij correct antwoord. */}
-          {mode === "reading" && !completedSteps.has(stepIdx) && (
+          {mode === "reading" && !completedSteps.has(stepIdx) && !path.steunTeksten && (
             <button
               onClick={completeStep}
               style={{
@@ -1131,7 +1138,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             "Onderwerp: …" en is de vraag zelf groot; op het uitlegscherm blijft de kop. */}
         {mode !== "reading" && mode !== "stepDone" ? (
           <SteunTekst nl={step.title}><div style={{ fontSize: 14, fontWeight: 600, color: "var(--color-text-muted)", margin: "2px 0 6px" }}>
-            Onderwerp: {stripExamenVraagPrefix(step.title)}
+            {path.steunTeksten ? "" : "Onderwerp: "}{stripExamenVraagPrefix(step.title)}
           </div></SteunTekst>
         ) : (
         <SteunTekst nl={step.title}><h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
@@ -1937,8 +1944,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             }}>
               <span style={{ fontSize: 18 }}>✅</span>
               <div>
-                <SteunTekst nl="Stap voltooid!"><div style={{ fontSize: 15, fontWeight: 700, color: C.good }}>
-                  Stap {stepIdx + 1} voltooid!
+                <SteunTekst nl={path.steunTeksten ? UI_GETAL.deelKlaar(stepIdx + 1) : "Stap voltooid!"}><div style={{ fontSize: 15, fontWeight: 700, color: C.good }}>
+                  {path.steunTeksten ? `Deel ${stepIdx + 1} klaar!` : `Stap ${stepIdx + 1} voltooid!`}
                 </div></SteunTekst>
                 <div style={{ fontSize: 13, color: C.text, marginTop: 2 }}>
                   <SteunTekst nl={stepIdx + 1 < totalSteps ? "Goed bezig. Wat wil je nu?" : "Helemaal klaar — laatste stap geweest!"}>{stepIdx + 1 < totalSteps
@@ -1994,8 +2001,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               )}
               <NextStepCard
                 eyebrow="Overzicht"
-                title="Terug naar paden"
-                hint="Andere stap kiezen"
+                title={path.steunTeksten ? "Terug naar het overzicht" : "Terug naar paden"}
+                hint={path.steunTeksten ? "Kies een ander deel" : "Andere stap kiezen"}
                 accent={C.muted}
                 onClick={goOverview}
               />
@@ -2067,7 +2074,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
 
   return (
     <div style={pageStyle()}>
-      <Header onBack={onBack} onHome={onHome} title={path.title} emoji={path.emoji} />
+      <Header onBack={onBack} onHome={onHome} title={korteTitel(path)} emoji={path.emoji} />
 
       <div style={{ padding: "16px 18px 8px" }}>
         {/* Mark feedback 2026-05-12: pad-intro bij examen-paden moet
@@ -2086,7 +2093,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
         )}
 
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
-          <span>{completedSteps.size} van {path.steps.length} delen voltooid</span>
+          <SteunTekst nl={UI_GETAL.delenKlaar(completedSteps.size, path.steps.length)} inline><span>{completedSteps.size} van {path.steps.length} delen voltooid</span></SteunTekst>
           <span>{progressPct}%</span>
         </div>
         <div style={{ height: 10, background: "#1a2744", borderRadius: 999, overflow: "hidden", marginBottom: 16 }}>
@@ -2199,7 +2206,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                     minuten (zelfde schatting als de deel-balk) en of het klaar is. */}
                 <div style={{ flex: 1 }}>
                   <div style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: 0.3, color: allDone ? C.good : C.accent, textTransform: "uppercase", marginBottom: 2 }}>
-                    Hoofdstuk {chIdx + 1}
+                    <SteunTekst nl={UI_GETAL.hoofdstuk(chIdx + 1)} inline><span>Hoofdstuk {chIdx + 1}</span></SteunTekst>
                   </div>
                   <SteunTekst nl={ch.title}><div style={{ fontFamily: "var(--font-display)", fontSize: 17, lineHeight: 1.3, color: "var(--color-text-strong)" }}>
                     {stripInternalCodes(ch.title)}
@@ -2209,9 +2216,9 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                     const minuten = stepsInCh.reduce((n, i) => n + Math.max(1, Math.round(0.7 + (path.steps[i]?.checks?.length || 1) * 0.5)), 0);
                     const stand = allDone ? "✓ klaar" : doneCount > 0 ? "bezig" : "nog niet gedaan";
                     return (
-                      <div style={{ fontSize: 12.5, color: allDone ? C.good : C.muted, marginTop: 2 }}>
+                      <SteunTekst nl={UI_GETAL.vragenMinuten(aantalVragen, minuten, allDone ? "klaar" : doneCount > 0 ? "bezig" : "niet")} inline><div style={{ fontSize: 12.5, color: allDone ? C.good : C.muted, marginTop: 2 }}>
                         {aantalVragen > 0 ? `${aantalVragen} ${aantalVragen === 1 ? "vraag" : "vragen"} · ` : ""}± {minuten} {minuten === 1 ? "minuut" : "minuten"} · {stand}
-                      </div>
+                      </div></SteunTekst>
                     );
                   })()}
                 </div>
@@ -2305,7 +2312,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                         </span>
                       )}
                       <span style={{ flex: 1, color: done ? C.muted : "var(--color-text-strong)", fontWeight: isNext || enkelDeel ? 700 : 500 }}>
-                        {enkelDeel ? (done ? "Nog een keer" : "Begin") : s.title}
+                        {enkelDeel ? <SteunTekst nl={done ? "Nog een keer" : "Begin"} inline><span>{done ? "Nog een keer" : "Begin"}</span></SteunTekst> : s.title}
                       </span>
                       {wrongCount > 0 && (
                         <span
@@ -2619,11 +2626,12 @@ function Header({ onBack, onHome, title, emoji, backLabel }) {
       <button onClick={onBack || onHome} style={iconBtn()} title={backLabel || "Terug"}>
         ←{backLabel ? <span style={{ fontSize: 12, marginLeft: 4 }}>{backLabel}</span> : null}
       </button>
+      {backLabel && <SteunTekst nl={backLabel} knop><span /></SteunTekst>}
       {/* Nieuwkomerpaden: het echte Leerkwartier-logo i.p.v. de emoji (Mark 24 sep). */}
       {useContext(SteunCtx)
         ? <img src="/logo.jpg" alt="Leerkwartier" width={40} height={40} style={{ width: 40, height: 40, borderRadius: 10, background: "#fff", objectFit: "contain", flexShrink: 0 }} />
         : <div style={{ fontSize: 22 }}>{emoji}</div>}
-      <div style={{ flex: 1, fontFamily: "var(--font-display)", fontSize: 18, color: "var(--color-text-strong)" }}>{title}</div>
+      <div style={{ flex: 1, fontFamily: "var(--font-display)", fontSize: 18, color: "var(--color-text-strong)" }}><SteunTekst nl={title} inline><span>{title}</span></SteunTekst></div>
       <button onClick={onHome} style={iconBtn()}>🏠</button>
     </div>
   );
