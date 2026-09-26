@@ -1645,7 +1645,19 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     // Woord-hulp zit alleen in de vraagtekst (kindertest 12 jul:
                     // klikbaar woord ín de knop kaapte de antwoordkeuze — "knop-
                     // in-knop"). MdInline houdt **vet**/formules heel.
-                    <MdInline text={opt} />
+                    // Nieuwkomers (26 sep 2026, les uit het concurrentie-onderzoek): het lidwoord
+                    // krijgt een vaste kleur — de = blauw, het = oranje — zodat het kind de/het
+                    // als deel van het woord onthoudt.
+                    /-nieuwkomers$/.test(String(pathId || "")) && /^(de|het) \S/.test(String(opt)) ? (
+                      <span>
+                        <span style={{ color: String(opt).startsWith("het ") ? "#ffab40" : "#4fc3f7", fontWeight: 800 }}>
+                          {String(opt).startsWith("het ") ? "het" : "de"}
+                        </span>{" "}
+                        <MdInline text={String(opt).replace(/^(de|het) /, "")} />
+                      </span>
+                    ) : (
+                      <MdInline text={opt} />
+                    )
                   )}
                 </button>
                 </SteunOptie>
