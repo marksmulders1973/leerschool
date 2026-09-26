@@ -1,6 +1,6 @@
-# Levvel (Amsterdam) — concept, NIET verstuurd
+# Levvel (Amsterdam) — mail na "ga" 26 sep
 
-Status 26 sep 2026: **concept, wacht op Marks "ga"** (idee AW). Er is nog **geen code** aangemaakt.
+Status 26 sep 2026: **Mark zei "ga"** — code LEVVEL2027 aangemaakt (partner_codes + PartnerWelkom, v739).
 
 ## Waarom
 Het Levvel-intranet (lev.levvel.nl) stuurde bezoekers naar Leerkwartier zonder dat wij iets deden:
@@ -39,3 +39,14 @@ Hartelijke groet,
 Mark Smulders
 Leerkwartier — leerkwartier.app
 06-84581000
+
+## Adressen
+
+| # | Organisatie | Soort | E-mail |
+|---|---|---|---|
+| 1 | Levvel | jeugdhulp · LEVVEL2027 | steljevraag@levvel.nl |
+
+## Log
+
+- **26-9-2026, 11:57:17** — via Resend (hallo@leerkwartier.app), 1/1 verstuurd.
+  - 1 · Levvel · steljevraag@levvel.nl · OK · 01a0dd25-c84a-7649-a738-12910845ee59

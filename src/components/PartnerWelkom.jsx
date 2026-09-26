@@ -109,6 +109,8 @@ export const PARTNER_NAMEN = {
   WESTVLAANDEREN2027: "Voedselbank West-Vlaanderen",
   BRUSSEL2027: "Voedselbank Brussel-Brabant",
   KRUIDENIER2027: "Sociale Kruideniers Vlaanderen",
+  // 26 sep 2026: Levvel (jeugdhulp Amsterdam) — mail na Marks "ga", Familie t/m 2028.
+  LEVVEL2027: "Levvel",
 };
 
 const KEY_DICHT = "lk_partner_welkom_dicht";
