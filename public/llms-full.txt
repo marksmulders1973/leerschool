@@ -14,8 +14,8 @@ Laatst bijgewerkt: 26 september 2026.
 
 - Slogan: "Een kwartier per dag leren, een leven lang slimmer."
 - Gratis te gebruiken in 2026, geen account nodig om te oefenen.
-- Vanaf 2027 komen er optionele Pro-extra's (betalen per kwartier, géén
-  abonnement). Oefenen voor de Doorstroomtoets blijft óók daarna gratis.
+- Vanaf 2027 is er een optioneel Familie-pakket voor thuis (per gezin, geen
+  stille verlenging). Oefenen voor de Doorstroomtoets blijft óók daarna gratis.
 - Kernprincipe: bij een fout antwoord krijgt het kind niet alleen het goede
   antwoord, maar uitleg op drie niveaus (basis → simpeler → nog simpeler) en
   een doorverwijzing naar een kort leerpad over het onderliggende concept —
@@ -127,9 +127,10 @@ vragen. Wie meer wil doet de volledige simulatie (50 vragen, 60 minuten)
 met niveau-indicatie richting VMBO/HAVO/VWO.
 
 V: Is Leerkwartier echt gratis?
-A: Ja, in 2026 volledig. Daarna blijven Doorstroomtoets-oefenen en de
-basis gratis; alleen optionele Pro-extra's kosten dan geld — per gebruikt
-kwartier, nooit een abonnement. Je hebt geen account nodig en hoeft geen
+A: Ja, in 2026 volledig. Daarna blijft het oefenen gratis; alleen het
+optionele Familie-pakket voor thuis (onder meer weekrapport en voortgang)
+kost dan geld, per gezin en zonder stille verlenging. Gezinnen die via een
+partnercode (Leergeld, voedselbank, fonds) binnenkomen krijgen Familie gratis. Je hebt geen account nodig en hoeft geen
 betaalgegevens in te vullen om te oefenen.
 
 V: Is Duolingo goed om de Doorstroomtoets mee te oefenen?

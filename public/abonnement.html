@@ -58,7 +58,7 @@
   .lk-price { font-family: var(--font-display, system-ui); font-size: 1.8em; font-weight: 800; color: #fff; margin: 6px 0 2px; }
   .lk-price small { font-size: .55em; opacity: .7; }
   /* Tier-kleurtaal (T2, 10 aug 2026 — zelfde als LAAG_KLEUREN in de app):
-     groen = Gratis · goud = Familie · blauw = Pro.
+     groen = Gratis · goud = Familie.
      Stip vóór de naam; kleur altijd mét het woord erbij (kleurenblind-proof). */
   .lk-tier { font-size: .85em; font-weight: 700; text-transform: uppercase; letter-spacing: .5px; }
   .lk-tier::before { content: "●"; margin-right: 6px; font-size: .8em; vertical-align: 1px; }
@@ -199,7 +199,7 @@
     <input type="email" name="email" placeholder="je@email.nl" required aria-label="E-mailadres">
     <select name="plan" aria-label="Interesse">
       <option value="parent_pro">Ouder — Familie (per gezin)</option>
-      <option value="teacher_pro">Leerkracht — Pro</option>
+      <option value="teacher_pro">Leerkracht of school</option>
     </select>
     <button type="submit">Aanmelden voor wachtlijst</button>
     <p id="waitlist-msg" style="margin: 10px 0 0; font-size: .9em; min-height: 1.2em" aria-live="polite"></p>
