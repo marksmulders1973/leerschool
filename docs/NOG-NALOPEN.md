@@ -19,7 +19,8 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 | N9 | **Overzicht "Hoofdstuk 1 · Hoe vraag ik iets aan de juf of meester?"** + "5 vragen · ± 3 minuten" + Begin-knop (v719, alle leerpaden) — op je telefoon bekijken | Mark | ⏳ |
 | N8 | ✅ v722: rekentaal-hint "2 keer = twee keer het getal 4" → "Kijk: welk getal, en hoe vaak?" | — | ✅ |
 | N11 | **Woorden deel 5 "Hoe voel je je?"** (v728, 26 sep nacht): blij, verdrietig, boos, bang, moe, ziek + "Ben je verdrietig of bang? Zeg het. Dat mag altijd." Alles tikbaar in EN/AR/UK/TR. Even op telefoon doorlopen | Mark | ⏳ |
-| N12 | **Charley in nieuwkomerpaden** (v731-732): heel eenvoudig Nederlands + onder elke zin de thuistaal (live getest AR/UK). Bij woordvragen verklapt hij de betekenis — bewust (zelfde keuze als de tik-vertaling: leren, geen toets). Akkoord? | Mark | ❓ |
+| N12 | **Charley in nieuwkomerpaden** (v731-732): heel eenvoudig Nederlands + onder elke zin de thuistaal (live getest AR/UK). Bij woordvragen verklapt hij de betekenis — bewust (zelfde keuze als de tik-vertaling: leren, geen toets). ✅ **Mark akkoord 26 sep** | Mark | ✅ |
+| N13 | **Plaatjes bij de eerste woorden** (v743, Mark "doe maar" 26 sep): Mulberry Symbols (CC BY-SA 4.0, commercieel toegestaan; ARASAAC viel af = niet-commercieel), alleen bij vragen waar álle 4 antwoorden een duidelijk plaatje hebben; kleuren = kleurvlak; naamsvermelding onderaan /nieuwkomers. Zonder plaatje: boek, kind, neus, familie-rijtjes. Even op telefoon bekijken | Mark | ⏳ |
 
 ## B. Klas & digibord (v684, v712-v714)
 

@@ -1,10 +1,12 @@
 // Leerpad: Woorden — de eerste woorden in het Nederlands (nieuwkomers).
 // Gebouwd 24 sep 2026 voor het Nieuwkomer-pakket. 20 vragen in 4 delen (school,
-// thuis en eten, lichaam en kleuren, doe-woorden). Geen plaatjes: een korte Nederlandse vraag,
+// thuis en eten, lichaam en kleuren, doe-woorden). Een korte Nederlandse vraag (sinds 26 sep met
+// plaatjes bij de antwoorden waar de set er een heeft, zie nieuwkomersPicto.js),
 // het kind kiest het Nederlandse woord; de eigen taal (en/ar/uk/tr) alleen na een tik.
 // Zonder gekozen taal staat Engels erbij. Elke stap begint met uitleg in drie stappen.
 
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
+import { pictoVoor } from "./nieuwkomersPicto.js";
 const stepEmojis = ["🏫", "🏠", "🧍", "✋", "💬"];
 const chapters = [
   { letter: "A", title: "Welke woorden hoor ik op school?", emoji: "🏫", from: 0, to: 0 },
@@ -201,7 +203,7 @@ const w = (goed, fout, extra = {}) => {
   const { nl: q, ...steun } = VRAAG[goed];
   const opts = schud([goed, ...fout]);
   const answer = opts.indexOf(goed);
-  return { q, options: opts, answer, wrongHints: opts.map((o, i) => (i === answer ? null : foutHint(o))), steun, steunOpties: Object.fromEntries(opts.map((o) => [o, WOORDENBOEK[o]]).filter(([, v]) => v)), ...extra };
+  return { q, options: opts, answer, wrongHints: opts.map((o, i) => (i === answer ? null : foutHint(o))), steun, steunOpties: Object.fromEntries(opts.map((o) => [o, WOORDENBOEK[o]]).filter(([, v]) => v)), picto: pictoVoor(opts), ...extra };
 };
 
 const school = [

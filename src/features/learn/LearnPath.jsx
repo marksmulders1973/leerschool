@@ -45,6 +45,7 @@ import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
 import { noteerAntwoord } from "../../shared/herhaalNieuwkomers.js";
 import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, maakSteunMap, steunGoed, useSteun, leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
+import Picto from "../../shared/ui/Picto.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
 import PushAanbodKaart from "../../shared/PushAanbodKaart.jsx";
 
@@ -1658,7 +1659,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     // Nieuwkomers (26 sep 2026, les uit het concurrentie-onderzoek): het lidwoord
                     // krijgt een vaste kleur — de = blauw, het = oranje — zodat het kind de/het
                     // als deel van het woord onthoudt.
-                    /-nieuwkomers$/.test(String(pathId || "")) && /^(de|het) \S/.test(String(opt)) ? (
+                    // Plaatje vóór het woord (26 sep 2026, learnPaths/nieuwkomersPicto.js) — alleen als de vraag er een heeft.
+                    <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
+                    <Picto bron={currentCheck.picto?.[opt]} />
+                    {/-nieuwkomers$/.test(String(pathId || "")) && /^(de|het) \S/.test(String(opt)) ? (
                       <span>
                         <span style={{ color: String(opt).startsWith("het ") ? "#ffab40" : "#4fc3f7", fontWeight: 800 }}>
                           {String(opt).startsWith("het ") ? "het" : "de"}
@@ -1667,7 +1671,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                       </span>
                     ) : (
                       <MdInline text={opt} />
-                    )
+                    )}
+                    </span>
                   )}
                 </button>
                 </SteunOptie>

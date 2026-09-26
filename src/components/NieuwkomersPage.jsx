@@ -6,6 +6,7 @@
 // thuistaal (Engels, Arabisch, Oekraïens, Turks); de vragen blijven Nederlands, maar
 // een tik op een vraag (of het knopje bij een antwoord) toont dezelfde zin in de eigen
 // taal (SteunTik.jsx leest localStorage `lk_steuntaal`). Geen vertaling van de app: steun.
+import { PICTO_BRON } from "../learnPaths/nieuwkomersPicto.js";
 import { lazy, Suspense, useEffect, useState } from "react";
 import { track } from "../utils.js";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
@@ -154,6 +155,10 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
 
         <div style={{ marginTop: 20, background: "rgba(255,255,255,.1)", borderRadius: 14, padding: "12px 14px", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{t.voorlees}<Steun veld="voorlees" klein /></div>
         <div style={{ marginTop: 12, fontSize: 13.5, opacity: .75, lineHeight: 1.5 }}>{t.juf}<Steun veld="juf" klein /></div>
+        {/* Naamsvermelding plaatjes (CC BY-SA 4.0 vraagt dat) — zie learnPaths/nieuwkomersPicto.js */}
+        <div style={{ marginTop: 10, fontSize: 12, opacity: .6 }}>
+          {PICTO_BRON} — <a href="https://mulberrysymbols.org" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}>mulberrysymbols.org</a>
+        </div>
       </div>
     </div>
   );

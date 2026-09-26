@@ -7,6 +7,7 @@ import { track } from "../utils.js";
 import { getLearnPath } from "../learnPaths/pathLoaders.js";
 import { teHerhalen, herhaalResultaat } from "../shared/herhaalNieuwkomers.js";
 import { SteunCtx, SteunTekst, SteunVraag, SteunOptie, UI_STEUN, maakSteunMap } from "../shared/ui/SteunTik.jsx";
+import Picto from "../shared/ui/Picto.jsx";
 import MdInline from "../shared/ui/MdInline.jsx";
 
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
@@ -85,7 +86,7 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
           return (
             <SteunOptie key={o} steun={c.steunOpties} opt={o}>
               <button type="button" onClick={() => kies(i)} style={{ width: "100%", textAlign: "left", padding: "12px 14px", borderRadius: 12, border: "2px solid #c9d6e3", background: kleur, color: "#0f2a44", fontWeight: 700, fontSize: 16, cursor: gekozen === null ? "pointer" : "default" }}>
-                <MdInline text={o} />
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}><Picto bron={c.picto?.[o]} /><MdInline text={o} /></span>
               </button>
             </SteunOptie>
           );
