@@ -23,7 +23,13 @@ function shuffle(arr) {
 // `alleenEersteStappen` (26 sep 2026, start-kwartier): kies alleen uit de eerste N stappen van
 // het pad — daar staan de makkelijkste vragen. Zo is vraag 1 van een nieuwe leerling een opwarmer.
 // `stapIndexen` (26 sep 2026, klassikaal-setje "gevoelens"): alleen deze stappen (0-based).
-export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null }) {
+// `stapPlaatje` (26 sep 2026): "altijd" (standaard) hangt het plaatje van de stap aan elke vraag;
+// "bij-verwijzing" alleen als de vraag er zelf naar verwijst (tabel, kaart, grafiek …). Kliktocht 26 sep:
+// in het start-kwartier stond bij "Wat is de stam van werken?" de vervoegingstabel van lopen, en bij
+// "Werk jij hard?" een tabel met "jij → werkt" die juist naar het foute antwoord wees. En op het digibord
+// viel het hele taalsetje van groep 6-7 weg, omdat elke vraag een (stap)plaatje had.
+const VERWIJST_NAAR_PLAATJE = /tabel|kaart|grafiek|plaatje|tekening|figuur|afbeelding|hieronder|hierboven|diagram|klok|getallenlijn|schema|staaf|cirkel/i;
+export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null, stapIndexen = null, stapPlaatje = "altijd" }) {
   const pad = await getLearnPath(pathId);
   if (!pad) {
     throw new Error(`buildTopicQuiz: leerpad '${pathId}' niet gevonden`);
@@ -32,7 +38,7 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
   const alle = pad.steps || [];
   const stappen = stapIndexen ? alle.filter((_, i) => stapIndexen.includes(i)) : alleenEersteStappen ? alle.slice(0, alleenEersteStappen) : alle;
   const alleChecks = stappen.flatMap((s) =>
-    (s.checks || []).map((c) => ({ ...c, svg: c.svg || s.svg || null }))
+    (s.checks || []).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || VERWIJST_NAAR_PLAATJE.test(String(c.q || ""))) ? s.svg : null) || null }))
   );
   const valide = alleChecks.filter(
     (c) => !c.disabled

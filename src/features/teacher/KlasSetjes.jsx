@@ -12,7 +12,7 @@ const bordbaar = (v) => v && !v.svg && !v.bronTekst && !v.tekst && !v.passage &&
 
 const laadPad = async (pathId, aantal) => {
   try {
-    const { quiz, questions } = await buildTopicQuiz({ pathId, aantal: aantal + 6 }); // ruimte voor weggefilterde vragen
+    const { quiz, questions } = await buildTopicQuiz({ pathId, aantal: aantal + 6, stapPlaatje: "bij-verwijzing" }); // ruimte voor weggefilterde vragen
     return { titel: quiz.title, vragen: questions };
   } catch {
     return { titel: "", vragen: [] };

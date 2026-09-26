@@ -75,7 +75,7 @@ export async function bouwStartVragen(level, aantal = AANTAL_VRAGEN, { onEerste 
   // leerling met een succesje begint (idee BF, 26 sep 2026). De andere paden blijven willekeurig.
   const laad = async (pathId, eerstePad = false) => {
     try {
-      const { quiz, questions } = await buildTopicQuiz({ pathId, aantal: 2, alleenEersteStappen: eerstePad ? 2 : null });
+      const { quiz, questions } = await buildTopicQuiz({ pathId, aantal: 2, alleenEersteStappen: eerstePad ? 2 : null, stapPlaatje: "bij-verwijzing" });
       return questions.map((q) => ({ ...q, pathId, padTitel: quiz.title }));
     } catch {
       return [];

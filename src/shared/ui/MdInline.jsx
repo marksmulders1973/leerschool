@@ -10,6 +10,8 @@ import KatexSpan, { splitMath } from "./KatexSpan.jsx";
 
 // Match eerst dubbele **...**, dan enkele *...* met niet-spatie-grenzen.
 const BOLD_RX = /\*\*([^*]+)\*\*|\*(\S(?:[^*]*\S)?)\*/g;
+// *'…'* of *"…"* — een citaat (mag **vet** bevatten).
+const CITAAT_RX = /\*(['‘"“][^\n]*?['’"”])\*(?!\*)/g;
 
 export default function MdInline({ text }) {
   if (text == null) return null;
@@ -26,6 +28,23 @@ export default function MdInline({ text }) {
     }
   }
   if (!s.includes("*")) return s;
+
+  // Citaat tussen enkele sterretjes met vet erin: *'Hij is **geniaal**.'* (Doorstroomtoets-taal).
+  // De vet-parser hieronder liet dan de buitenste sterretjes zichtbaar staan (kliktocht 26 sep).
+  // Nu: zo'n citaat cursief, met de binnenkant gewoon door deze parser.
+  CITAAT_RX.lastIndex = 0;
+  if (CITAAT_RX.test(s)) {
+    CITAAT_RX.lastIndex = 0;
+    const out = [];
+    let vorige = 0, k = 0, m;
+    while ((m = CITAAT_RX.exec(s)) !== null) {
+      if (m.index > vorige) out.push(<MdInline key={`c${k++}`} text={s.slice(vorige, m.index)} />);
+      out.push(<em key={`c${k++}`}><MdInline text={m[1]} /></em>);
+      vorige = m.index + m[0].length;
+    }
+    if (vorige < s.length) out.push(<MdInline key={`c${k++}`} text={s.slice(vorige)} />);
+    return <>{out}</>;
+  }
 
   const parts = [];
   let lastIdx = 0;
