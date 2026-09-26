@@ -66,6 +66,9 @@ function bepaalBron(params, referrer) {
 // een nieuw record `wacht: 1` tot de database het event bevestigt; staat dat er
 // bij de volgende start nog, dan sturen we het opnieuw (max 3 pogingen).
 // Oude records hebben geen `wacht` en worden dus nooit dubbel gemeld.
+// Let op (live test 26 sep): soms komt de afgebroken eerste poging tóch aan → dan staat
+// bron_bezoek er twee keer (tweede met poging=2). Tel bron_bezoek daarom altijd per apparaat
+// (count distinct props->>'uid'), nooit per rij.
 function meldBron(record) {
   const poging = (record.wacht || 0) + 1;
   if (poging > 3) return;
