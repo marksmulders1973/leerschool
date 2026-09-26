@@ -32,9 +32,12 @@ const PADEN_PER_GROEP = {
   3: ["getallen-tot-20-po", "taal-leren-lezen-g3", "spelling-eerste-woorden-g3", "klokkijken"],
   4: ["tafels-po", "taal-woorden-zinnen-g4", "korte-teksten-snappen-g4", "klokkijken"],
   5: ["tafels-po", "spelling-ei-ij-au-ou", "korte-teksten-snappen-g4", "delen-po", "dieren-seizoenen-natuur"],
-  6: ["breuken-po", "werkwoordsspelling-dt", "begrijpend-lezen-teksten-po", "topografie-nederland"],
-  7: ["procenten-po", "werkwoordsspelling-dt", "samenvatten-hoofdgedachte-po", "kaartlezen-po"],
-  8: ["doorstroomtoets-rekenen-g8", "doorstroomtoets-taal-g8", "cito-strategieen-groep8", "lange-toets-teksten-g8-po"],
+  // 26 sep 2026 (idee BF): groep 6-8 openen met taal i.p.v. rekenen. Meting 30 dgn, vraag 1 goed:
+  // procenten 14%, breuken 52% — tegen werkwoordspelling 73% en Doorstroomtoets-taal 82%. En de helft
+  // van de starters vertrok binnen ~10 s zonder één antwoord. Eerst een succesje, dan het rekenwerk.
+  6: ["werkwoordsspelling-dt", "breuken-po", "begrijpend-lezen-teksten-po", "topografie-nederland"],
+  7: ["werkwoordsspelling-dt", "procenten-po", "samenvatten-hoofdgedachte-po", "kaartlezen-po"],
+  8: ["doorstroomtoets-taal-g8", "doorstroomtoets-rekenen-g8", "cito-strategieen-groep8", "lange-toets-teksten-g8-po"],
 };
 
 export function kiesStartPaden(level) {
@@ -68,19 +71,21 @@ export function verweefVragen(perPad, aantal = AANTAL_VRAGEN) {
 // Vraag 1 blijft dezelfde (verweefVragen begint altijd met perPad[0][0]).
 export async function bouwStartVragen(level, aantal = AANTAL_VRAGEN, { onEerste } = {}) {
   const paden = kiesStartPaden(level);
-  const laad = async (pathId) => {
+  // Het eerste pad levert vraag 1: alleen uit de eerste 2 stappen (de makkelijkste), zodat een nieuwe
+  // leerling met een succesje begint (idee BF, 26 sep 2026). De andere paden blijven willekeurig.
+  const laad = async (pathId, eerstePad = false) => {
     try {
-      const { quiz, questions } = await buildTopicQuiz({ pathId, aantal: 2 });
+      const { quiz, questions } = await buildTopicQuiz({ pathId, aantal: 2, alleenEersteStappen: eerstePad ? 2 : null });
       return questions.map((q) => ({ ...q, pathId, padTitel: quiz.title }));
     } catch {
       return [];
     }
   };
-  const eerste = laad(paden[0]);
+  const eerste = laad(paden[0], true);
   if (onEerste) {
     eerste.then((lijst) => { if (lijst.length) onEerste(verweefVragen([lijst], aantal)); }).catch(() => {});
   }
-  const perPad = await Promise.all([eerste, ...paden.slice(1).map(laad)]);
+  const perPad = await Promise.all([eerste, ...paden.slice(1).map((p) => laad(p))]);
   return verweefVragen(perPad, aantal);
 }
 

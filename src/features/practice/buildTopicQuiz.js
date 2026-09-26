@@ -20,13 +20,16 @@ function shuffle(arr) {
   return a;
 }
 
-export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true }) {
+// `alleenEersteStappen` (26 sep 2026, start-kwartier): kies alleen uit de eerste N stappen van
+// het pad — daar staan de makkelijkste vragen. Zo is vraag 1 van een nieuwe leerling een opwarmer.
+export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions = true, alleenEersteStappen = null }) {
   const pad = await getLearnPath(pathId);
   if (!pad) {
     throw new Error(`buildTopicQuiz: leerpad '${pathId}' niet gevonden`);
   }
   // Neem step.svg mee per check (zelfde infra-fix als sample-flows 2026-05-18).
-  const alleChecks = (pad.steps || []).flatMap((s) =>
+  const stappen = alleenEersteStappen ? (pad.steps || []).slice(0, alleenEersteStappen) : (pad.steps || []);
+  const alleChecks = stappen.flatMap((s) =>
     (s.checks || []).map((c) => ({ ...c, svg: c.svg || s.svg || null }))
   );
   const valide = alleChecks.filter(
