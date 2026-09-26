@@ -41,3 +41,13 @@ select props->>'pad' pad, coalesce(props->>'steuntaal','?') steuntaal, count(*) 
   count(distinct props->>'uid') apparaten, round(100.0*avg(case when props->>'is_correct'='true' then 1 else 0 end)) pct_goed
 from events_mens where name = 'question_answered' and props->>'bron' = 'leerpad' and props->>'pad' like '%nieuwkomers%'
 group by 1,2 order by 3 desc;
+
+-- 8) Doorgroeien: trede-testje (vanaf v752, 26 sep 2026) — geopend → gestart → klaar → geslaagd → diploma geprint
+select props->>'trede' trede,
+  count(distinct props->>'uid') filter (where name='nk_tredetest_open') geopend,
+  count(distinct props->>'uid') filter (where name='nk_tredetest_start') gestart,
+  count(distinct props->>'uid') filter (where name='nk_tredetest_klaar') klaar,
+  count(distinct props->>'uid') filter (where name='nk_tredetest_klaar' and props->>'geslaagd'='true') geslaagd,
+  count(distinct props->>'uid') filter (where name='nk_tredetest_print') geprint,
+  round(avg((props->>'goed')::int) filter (where name='nk_tredetest_klaar'),1) gem_goed
+from events_mens where name like 'nk_tredetest_%' group by 1 order by 1;
