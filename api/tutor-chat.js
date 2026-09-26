@@ -109,25 +109,6 @@ function buildSystemPrompt(ctx = {}) {
         "Zullen we er samen één doen?"
     );
   }
-  // Nieuwkomers (26 sep 2026): een kind dat net Nederlands leert kan een gewone uitleg niet lezen.
-  // Heel korte zinnen, basiswoorden, en onder elke zin de vertaling in de thuistaal die het kind
-  // op /nieuwkomers koos (lk_steuntaal). Nederlands blijft de hoofdtaal — de vertaling is steun.
-  if (/-nieuwkomers$/.test(String(ctx.pathId || ""))) {
-    const TALEN = { en: "Engels", ar: "Arabisch", uk: "Oekraïens", tr: "Turks" };
-    const taal = TALEN[String(ctx.steunTaal || "")] || null;
-    lines.push("");
-    lines.push(
-      "NIEUWKOMER (gaat vóór de regels over lengte en toon hieronder): deze leerling is net in Nederland " +
-        "en leert pas Nederlands (beginner, NT2). Schrijf in heel eenvoudig Nederlands: zinnen van hooguit " +
-        "6 woorden, alleen alledaagse woorden, zelfstandige naamwoorden altijd met de of het. Maximaal 3 zinnen. " +
-        (taal
-          ? `Zet onder elke Nederlandse zin tussen haakjes dezelfde zin in het ${taal}. `
-          : "Zet onder elke Nederlandse zin tussen haakjes dezelfde zin in eenvoudig Engels. ") +
-        "Geef geen wedervraag als de leerling het woord of de zin niet begrijpt: leg het dan direct uit. " +
-        "Zegt de leerling dat hij bang, verdrietig of ziek is? Wees lief, zeg dat het goed is dat hij het zegt, " +
-        "en dat hij het ook tegen de juf of meester mag zeggen. Geef geen medisch of ander advies."
-    );
-  }
   lines.push("");
   lines.push("KERNREGEL (Socratisch):");
   lines.push(
@@ -275,6 +256,30 @@ function buildSystemPrompt(ctx = {}) {
       lines.push("");
       lines.push(`OVER DE LEERLING (zelf verteld aan het park-maatje — gebruik af en toe warm en terloops, bv. de roepnaam of een voorbeeld met het lievelingseten/-dier; niet opsommen, niet elke beurt): ${items.join("; ")}.`);
     }
+  }
+  // Nieuwkomers (26 sep 2026): een kind dat net Nederlands leert kan een gewone uitleg niet lezen.
+  // Heel korte zinnen, basiswoorden, en onder elke zin de vertaling in de thuistaal die het kind
+  // op /nieuwkomers koos (lk_steuntaal). Staat ONDERAAN met een voorbeeld: bovenin werd hij door
+  // de lengte- en Socratische regels overstemd (live-test 26 sep: geen vertaling, wel wedervraag).
+  if (/-nieuwkomers$/.test(String(ctx.pathId || ""))) {
+    const TALEN = {
+      en: ["Engels", "(the bed = you sleep in it.)"],
+      ar: ["Arabisch", "(السرير = تنام فيه.)"],
+      uk: ["Oekraïens", "(ліжко = ти в ньому спиш.)"],
+      tr: ["Turks", "(yatak = içinde uyursun.)"],
+    };
+    const [taal, vb] = TALEN[String(ctx.steunTaal || "")] || TALEN.en;
+    lines.push("");
+    lines.push(
+      "LAATSTE EN BELANGRIJKSTE REGEL — NIEUWKOMER (gaat vóór ALLE regels hierboven, ook de KERNREGEL): " +
+        "deze leerling is net in Nederland en leert pas Nederlands (beginner). " +
+        "Schrijf heel eenvoudig Nederlands: hooguit 3 zinnen van hooguit 6 woorden, alleen alledaagse woorden. " +
+        `Zet DIRECT onder ELKE Nederlandse zin dezelfde zin in het ${taal}, tussen haakjes. Dat is verplicht. ` +
+        "Snapt de leerling een woord niet? Leg het direct uit, zonder wedervraag. Noem geen plaatjes; die zijn er niet. " +
+        "Zegt de leerling dat hij bang, verdrietig of ziek is? Wees lief, zeg dat het goed is dat hij het zegt " +
+        "en dat hij het ook tegen de juf of meester mag zeggen. Geen medisch of ander advies."
+    );
+    lines.push(`Voorbeeld van de vorm (niet het antwoord op deze vraag):\nHet bed = daar slaap je in.\n${vb}`);
   }
   return lines.join("\n");
 }
