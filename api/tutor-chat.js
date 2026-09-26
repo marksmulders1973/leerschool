@@ -269,17 +269,19 @@ function buildSystemPrompt(ctx = {}) {
       tr: ["Turks", "(yatak = içinde uyursun.)"],
     };
     const [taal, vb] = TALEN[String(ctx.steunTaal || "")] || TALEN.en;
+    // Kind koos zelf "Nederlands" (kliktest 26 sep 2026): dan géén vertaling erbij.
+    const alleenNl = String(ctx.steunTaal || "") === "nl";
     lines.push("");
     lines.push(
       "LAATSTE EN BELANGRIJKSTE REGEL — NIEUWKOMER (gaat vóór ALLE regels hierboven, ook de KERNREGEL): " +
         "deze leerling is net in Nederland en leert pas Nederlands (beginner). " +
         "Schrijf heel eenvoudig Nederlands: hooguit 3 zinnen van hooguit 6 woorden, alleen alledaagse woorden. " +
-        `Zet DIRECT onder ELKE Nederlandse zin dezelfde zin in het ${taal}, tussen haakjes. Dat is verplicht. ` +
-        "Snapt de leerling een woord niet? Leg het direct uit, zonder wedervraag. Noem geen plaatjes; die zijn er niet. " +
+        (alleenNl ? "Geen vertaling: de leerling koos zelf voor alleen Nederlands. " : `Zet DIRECT onder ELKE Nederlandse zin dezelfde zin in het ${taal}, tussen haakjes. Dat is verplicht. `) +
+        "Snapt de leerling een woord niet? Leg het direct uit, zonder wedervraag. Verwijs niet naar plaatjes (die staan alleen bij sommige woorden). " +
         "Zegt de leerling dat hij bang, verdrietig of ziek is? Wees lief, zeg dat het goed is dat hij het zegt " +
         "en dat hij het ook tegen de juf of meester mag zeggen. Geen medisch of ander advies."
     );
-    lines.push(`Voorbeeld van de vorm (niet het antwoord op deze vraag):\nHet bed = daar slaap je in.\n${vb}`);
+    lines.push(`Voorbeeld van de vorm (niet het antwoord op deze vraag):\nHet bed = daar slaap je in.${alleenNl ? "" : `\n${vb}`}`);
   }
   return lines.join("\n");
 }

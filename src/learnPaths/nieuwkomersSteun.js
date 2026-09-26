@@ -2381,7 +2381,7 @@ const NIEUWKOMERS_STEUN = {
   "tr": "Ali'nin 5 bilyesi var. Sam'in 3 bilyesi var. Kimde daha çok var?"
  },
  "Meer = het grotere getal. Welk getal is groter: 5 of 3?": {
-  "en": "More = the biggest number. Which number is bigger: 5 or 3?",
+  "en": "More = the bigger number. Which number is bigger: 5 or 3?",
   "ar": "أكثر (meer) = العدد الأكبر. أي عدد أكبر: 5 أو 3؟",
   "uk": "Більше = більше число. Яке число більше: 5 чи 3?",
   "tr": "Daha çok (meer) = en büyük sayı. Hangi sayı daha büyük: 5 mi 3 mü?"

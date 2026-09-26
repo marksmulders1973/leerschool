@@ -1347,7 +1347,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           // lk-q-in (korte cross-fade) — geen harde swap meer (2026-06-13).
           <div key={`q-${stepIdx}-${checkIdx}`} style={{ ...cardStyle(), animation: "lk-q-in 0.25s ease-out" }}>
             <div style={{ fontSize: 13, color: C.muted, marginBottom: 6 }}>
-              Check {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
+              Vraag {checkIdx + 1} van {checks.length} {attempts > 1 ? `· poging ${attempts}` : ""}
             </div>
             <ExamenBronBanner examenBron={currentCheck.examenBron} />
             {/* VoorkennisKeten POC (Mark 2026-05-14): toont leerlijn naar examenvraag.
@@ -1955,6 +1955,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               gridTemplateColumns: "repeat(auto-fit, minmax(150px, 1fr))",
               gap: 10,
             }}>
+              {/* Nieuwkomers (kliktest 26 sep 2026): de mini-toets maakt vragen met AI — onvertaald,
+                  niet op beginnersniveau en kost geld. Bij paden met steunteksten dus niet tonen. */}
+              {!path.steunTeksten && (
               <NextStepCard
                 eyebrow="Zelf testen"
                 title="Mini-toets"
@@ -1962,6 +1965,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 accent={C.warm}
                 onClick={() => setShowMiniQuiz(true)}
               />
+              )}
               {stepIdx + 1 < totalSteps ? (
                 <NextStepCard
                   eyebrow="Volgend deel"

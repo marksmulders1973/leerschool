@@ -424,7 +424,8 @@ export default function App() {
   // leerling via een code opende. Hergebruikt de quizzes-tabel (type-discriminator).
   const [activeTakenlijst, setActiveTakenlijst] = useState(null);
   const [activeLearnStepIdx, setActiveLearnStepIdx] = useState(null);
-  const [learnPathReturnPage, setLearnPathReturnPage] = useState("home");
+  // Na herladen van een nieuwkomerpad terug naar /nieuwkomers i.p.v. de gewone home (kliktest 26 sep 2026).
+  const [learnPathReturnPage, setLearnPathReturnPage] = useState(() => (/-nieuwkomers$/.test(String(getInitialLeerpadId() || "")) ? "nieuwkomers" : "home"));
 
   // Vangnet: beland je op het leerpad-scherm zónder pad-id (bv. een kale
   // /leren/pad-URL of een verlopen deeplink), toon dan de leerpaden-overzicht

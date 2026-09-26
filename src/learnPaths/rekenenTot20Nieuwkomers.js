@@ -40,8 +40,11 @@ function hints(answerIdx, tekstFout) {
 
 // STAP 1 — tellen
 const telVragen = [];
+const telGehad = new Set(); // kliktest 26 sep 2026: "Wat komt na 3?" stond er twee keer in
 for (let i = 0; i < 5; i++) {
-  const n = tussen(3, 19);
+  let n = tussen(3, 19);
+  for (let p = 0; p < 20 && telGehad.has(n); p++) n = tussen(3, 19);
+  telGehad.add(n);
   const o = opties(n + 1, [n, n + 2, n - 1]);
   telVragen.push({ q: `Tel verder. Wat komt **na ${n}**?`, steun: { en: `Count on. What comes after ${n}?`, ar: `عُدّ. ماذا يأتي بعد ${n}؟`, uk: `Рахуй далі. Що йде після ${n}?`, tr: `Saymaya devam et. ${n} sayısından sonra ne gelir?` }, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Tel: ${n}, en dan één erbij.`) });
 }

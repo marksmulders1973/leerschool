@@ -48,15 +48,20 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
   const klaar = vragen && idx >= vragen.length;
   useEffect(() => { if (klaar) { try { track("nk_herhaal_klaar", { goed, aantal: vragen.length }); } catch { /* */ } } }, [klaar]); // eslint-disable-line
 
+  // Kliktest 26 sep 2026: na een fout zegt de hint "Probeer het nog eens" — dan moet dat ook kunnen.
+  // De EERSTE keuze telt voor het herhaalschema; daarna mag het kind door tot het goed is.
+  const [eersteGedaan, setEersteGedaan] = useState(false);
   const kies = (i) => {
-    if (gekozen !== null) return;
+    if (gekozen !== null && gekozen === huidige.answer) return;
     setGekozen(i);
     const ok = i === huidige.answer;
+    if (eersteGedaan) return;
+    setEersteGedaan(true);
     if (ok) setGoed((g) => g + 1);
     herhaalResultaat(vragen[idx].key, ok);
     try { track("nk_herhaal_antwoord", { goed: ok }); } catch { /* */ }
   };
-  const volgende = () => { setGekozen(null); setIdx((n) => n + 1); };
+  const volgende = () => { setGekozen(null); setEersteGedaan(false); setIdx((n) => n + 1); };
 
   const kaart = { background: "rgba(255,255,255,.96)", color: "#0f2a44", borderRadius: 18, padding: "16px 18px", boxShadow: "0 8px 22px rgba(0,0,0,.25)" };
   const knop = (primair) => ({ width: "100%", padding: "12px 16px", borderRadius: 12, border: primair ? "none" : "2px solid #0f2a44", background: primair ? "#0f2a44" : "#fff", color: primair ? "#fff" : "#0f2a44", fontWeight: 800, fontSize: 16, cursor: "pointer" });
@@ -82,11 +87,14 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
           <div style={{ fontSize: 18, fontWeight: 800 }}><MdInline text={c.q} /></div>
         </SteunVraag>
         {c.options.map((o, i) => {
-          const kleur = gekozen === null ? "#fff" : i === c.answer ? "#d7f5df" : i === gekozen ? "#fde0dd" : "#fff";
+          const kleur = gekozen === null ? "#fff" : i === gekozen ? (i === c.answer ? "#d7f5df" : "#fde0dd") : "#fff";
+          const lidwoord = /^(de|het) \S/.test(String(o)) ? (String(o).startsWith("het ") ? "het" : "de") : null;
           return (
             <SteunOptie key={o} steun={c.steunOpties} opt={o}>
-              <button type="button" onClick={() => kies(i)} style={{ width: "100%", textAlign: "left", padding: "12px 14px", borderRadius: 12, border: "2px solid #c9d6e3", background: kleur, color: "#0f2a44", fontWeight: 700, fontSize: 16, cursor: gekozen === null ? "pointer" : "default" }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}><Picto bron={c.picto?.[o]} /><MdInline text={o} /></span>
+              <button type="button" onClick={() => kies(i)} style={{ width: "100%", textAlign: "left", padding: "12px 14px", borderRadius: 12, border: "2px solid #c9d6e3", background: kleur, color: "#0f2a44", fontWeight: 700, fontSize: 16, cursor: isGoed ? "default" : "pointer" }}>
+                <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}><Picto bron={c.picto?.[o]} />
+                  {lidwoord ? (<span><span style={{ color: lidwoord === "het" ? "#e65100" : "#1565c0", fontWeight: 900 }}>{lidwoord}</span> <MdInline text={String(o).replace(/^(de|het) /, "")} /></span>) : <MdInline text={o} />}
+                </span>
               </button>
             </SteunOptie>
           );
@@ -99,7 +107,7 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
             {!isGoed && c.wrongHints?.[gekozen] && (
               <SteunTekst nl={c.wrongHints[gekozen]}><div style={{ fontSize: 15 }}><MdInline text={c.wrongHints[gekozen]} /></div></SteunTekst>
             )}
-            <SteunTekst nl="Volgende" knop><button type="button" onClick={volgende} style={knop(true)}>Volgende ▶</button></SteunTekst>
+            {isGoed && <SteunTekst nl="Volgende" knop><button type="button" onClick={volgende} style={knop(true)}>Volgende ▶</button></SteunTekst>}
           </>
         )}
       </div>

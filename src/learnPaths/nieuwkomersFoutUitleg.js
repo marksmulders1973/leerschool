@@ -142,7 +142,10 @@ export function zinReden(check, optie) {
   if (!nl) return null;
   const t = check.steunOpties?.[optie] || NIEUWKOMERS_STEUN[optie];
   const r = { nl };
-  for (const l of TALEN) r[l] = t?.[l] ? `«${optie}» = ${t[l]}.` : `«${optie}».`;
+  // Kliktest 26 sep 2026: geen dubbele punt (vertaling eindigt al op . ! ?) en de Nederlandse zin
+  // isoleren (U+2068/U+2069) zodat hij in Arabisch (rechts-naar-links) niet door elkaar komt.
+  const nlZin = `⁨${optie}⁩`;
+  for (const l of TALEN) r[l] = t?.[l] ? `«${nlZin}» = ${t[l]}${/[.!?…]$/.test(t[l]) ? "" : "."}` : `«${nlZin}».`;
   return r;
 }
 

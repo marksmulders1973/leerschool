@@ -58,8 +58,12 @@ tientallen[0].uitlegPad = {
 // STAP 2 — erbij zonder overgang
 const erbij100 = [];
 for (let i = 0; i < 5; i++) {
-  const a = tussen(11, 80); const e = a % 10; const b = i % 2 === 0 ? tussen(10, 90 - a - (a % 10 === 0 ? 0 : 0)) - (tussen(10, 90 - a) % 10) : tussen(1, Math.max(1, 9 - e));
-  const bb = Math.max(1, b);
+  // Kliktest 26 sep 2026: gaf soms 46 + 35 (mét tiental-overgang) in het deel "zonder overgang".
+  // Nu: tientallen erbij + eenheden die samen met die van a nooit boven de 9 komen.
+  const a = tussen(11, 80); const e = a % 10;
+  const t = tussen(1, Math.max(1, Math.floor((99 - a) / 10)));
+  const u = e >= 9 ? 0 : tussen(0, 9 - e);
+  const bb = i % 2 === 0 ? 10 * t + u : (u || 10 * t);
   const o = opties(a + bb, [a + bb + 10, a + bb - 10, a + bb + 1]);
   erbij100.push({ q: `**${a} + ${bb} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Eerst de tientallen, dan de eenheden.`) });
 }

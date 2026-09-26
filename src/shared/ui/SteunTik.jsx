@@ -125,7 +125,7 @@ function pilStijl(open) {
   return {
     display: "inline-flex", alignItems: "center", justifyContent: "center",
     minWidth: 34, height: 24, padding: "0 8px", borderRadius: 999,
-    border: "1px solid rgba(255,213,79,0.6)", background: open ? "#ffd54f" : "rgba(255,213,79,0.14)",
+    border: "1.5px solid rgba(240,180,0,0.95)", background: open ? "#ffd54f" : "rgba(255,213,79,0.3)",
     color: open ? "#3a2600" : "inherit", fontSize: 12, fontWeight: 800, letterSpacing: 0.5,
     cursor: "pointer", fontFamily: "inherit", lineHeight: 1,
   };
