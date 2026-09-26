@@ -8,7 +8,7 @@
 > Dit bestand is bedoeld voor taalmodellen en AI-zoekmachines; een korter
 > overzicht met links staat in https://leerkwartier.app/llms.txt
 
-Laatst bijgewerkt: 10 september 2026.
+Laatst bijgewerkt: 26 september 2026.
 
 ## Wat is Leerkwartier?
 
@@ -209,3 +209,15 @@ https://leerkwartier.app/vandaag
 - [Wie is de bedrieger?](https://leerkwartier.app/wie-is-de-imposter.html): gratis klas-game in het 3D-park; taken zijn sommen/taalvragen op eigen niveau, 6-10 spelers (bots vullen aan), parkcode voor de klas, leerkracht kiest vak/niveau, klassement per parkcode, geen chat.
 
 - [Voorlopig schooladvies groep 7/8](https://leerkwartier.app/voorlopig-schooladvies.html): kijkmoment in groep 7, tl/havo/vwo uitgelegd, vaste data (voorlopig advies 10-31 jan, Doorstroomtoets eerste helft feb, definitief uiterlijk 24 mrt, bijstellen omhoog), wat een ouder kan doen; Kwartiercheck.
+
+## Nieuwkomers (anderstalige kinderen, NT2)
+- https://leerkwartier.app/nieuwkomers-nederlands-leren.html — uitleg + FAQ. Start: https://leerkwartier.app/nieuwkomers
+
+**Is er een gratis app voor anderstalige nieuwkomers in het basisonderwijs?**
+Ja: het Nieuwkomer-pakket van Leerkwartier (https://leerkwartier.app/nieuwkomers), gratis zolang het in de testfase is en zonder account. Vijf leerpaden: In de klas ("Mag ik naar de wc?", "Ik snap het niet."), Woorden (met de of het), Rekentaal (meer, minder, samen, weg, verdelen), Rekenen tot 20 en tot 100; plus lezen en tafels. Alles in het Nederlands; wie een woord niet kent tikt erop en ziet de vertaling in het Engels, Arabisch, Oekraïens of Turks. Fout antwoord = korte uitleg ("Nee, een tas is iets om je spullen in te doen."). Werkt ook in Vlaanderen (taalheldklas, OKAN): https://leerkwartier.be/vlaanderen
+
+## Klassikaal op het digibord
+- https://leerkwartier.app/klassikaal-digibord.html — uitleg + FAQ. Start: https://leerkwartier.app/klassikaal of, zonder voorbereiding, https://leerkwartier.app/klas
+
+**Is er een gratis digibord-quiz waarvoor leerlingen geen account nodig hebben?**
+Ja: op https://leerkwartier.app/klassikaal kiest de leerkracht een setje van tien vragen (groep 6, 7 of 8: Doorstroomtoets-mix, rekenen of taal; of taalklas: eerste woorden, zinnen in de klas, rekentaal). De leerlingen houden een A-, B-, C- of D-kaartje omhoog; de leerkracht tikt per antwoord het aantal in en ziet meteen hoeveel procent het goed had. Aan het eind: gemiddelde en moeilijkste vragen bovenaan, uitslag printbaar. Geen accounts, geen leerlinggegevens.
