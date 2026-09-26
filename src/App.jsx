@@ -2592,7 +2592,7 @@ export default function App() {
       {page === "oefenpakket" && <OefenpakketPage setPage={setPage} />}
       {page === "leesladder" && <LeesladderPage setPage={setPage} />}
       {/* Dictee met Charley (9 sep 2026, wens van Djess via het wensenbord) */}
-      {page === "dictee" && <DicteePage userName={userName || ""} userLevel={userLevel || ""} onTerug={() => setPage("mijn-pagina")} onVolgendBlok={() => setPage("vandaag-kwartier")} />}
+      {page === "dictee" && <DicteePage userName={userName || ""} userLevel={userLevel || ""} onTerug={() => { let nk = false; try { nk = sessionStorage.getItem("lk_dictee_nk") === "1"; sessionStorage.removeItem("lk_dictee_nk"); } catch { /* */ } setPage(nk ? "nieuwkomers" : "mijn-pagina"); }} onVolgendBlok={() => setPage("vandaag-kwartier")} />}
       {page === "werkwoorden" && <WerkwoordenPage userName={userName || ""} userLevel={userLevel || ""} onTerug={() => setPage("mijn-pagina")} onVolgendBlok={() => setPage("vandaag-kwartier")} />}
       {page === "vandaag-kwartier" && (
         <VandaagKwartier userName={userName || ""} userLevel={userLevel || ""} authUser={authUser}

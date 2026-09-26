@@ -189,6 +189,37 @@ export const DICTEE = {
   ],
 };
 
+// 🌍 Nieuwkomers (doorgroeiplan stap 3, 26 sep 2026): "groep 3" = eerste dictee voor kinderen
+// die net Nederlands leren. Klankzuivere woordjes (elke letter = één klank: t-a-s) en een paar
+// lange klanken (oo, aa, oe), in zinnen van max. 5 woorden uit de klas. `steun` = de hele zin in
+// de thuistaal (tik = zien, zoals in de nieuwkomerpaden). Niet in de groepknoppen: alleen via
+// /nieuwkomers (sessionStorage lk_dictee_nk) of /dictee?groep=3.
+// ⚠️ AR/UK/TR door Claude, kort en simpel — moedertaalcheck staat open (zie NOG-NALOPEN N5).
+export const NK_GROEP = 3;
+const k = (w) => `Luister naar elke klank: ${w.split("").join("-")}.`;
+DICTEE[NK_GROEP] = [
+  { zin: "Ik heb een tas.", woord: "tas", regel: k("tas"), cat: "klanken", steun: { en: "I have a bag.", ar: "عندي حقيبة.", uk: "У мене є сумка.", tr: "Bir çantam var." } },
+  { zin: "De pen is blauw.", woord: "pen", regel: k("pen"), cat: "klanken", steun: { en: "The pen is blue.", ar: "القلم أزرق.", uk: "Ручка синя.", tr: "Kalem mavi." } },
+  { zin: "Wij spelen met de bal.", woord: "bal", regel: k("bal"), cat: "klanken", steun: { en: "We play with the ball.", ar: "نلعب بالكرة.", uk: "Ми граємо з м'ячем.", tr: "Topla oynuyoruz." } },
+  { zin: "De vis zwemt.", woord: "vis", regel: k("vis"), cat: "klanken", steun: { en: "The fish swims.", ar: "السمكة تسبح.", uk: "Риба пливе.", tr: "Balık yüzüyor." } },
+  { zin: "De kip is wit.", woord: "kip", regel: k("kip"), cat: "klanken", steun: { en: "The chicken is white.", ar: "الدجاجة بيضاء.", uk: "Курка біла.", tr: "Tavuk beyaz." } },
+  { zin: "Ik ga met de bus.", woord: "bus", regel: k("bus"), cat: "klanken", steun: { en: "I go by bus.", ar: "أذهب بالحافلة.", uk: "Я їду автобусом.", tr: "Otobüsle gidiyorum." } },
+  { zin: "De zon schijnt.", woord: "zon", regel: k("zon"), cat: "klanken", steun: { en: "The sun is shining.", ar: "الشمس مشرقة.", uk: "Світить сонце.", tr: "Güneş parlıyor." } },
+  { zin: "Mijn jas is rood.", woord: "jas", regel: k("jas"), cat: "klanken", steun: { en: "My coat is red.", ar: "معطفي أحمر.", uk: "Моя куртка червона.", tr: "Montum kırmızı." } },
+  { zin: "De juf is lief.", woord: "juf", regel: k("juf"), cat: "klanken", steun: { en: "The teacher is kind.", ar: "المعلّمة لطيفة.", uk: "Учителька добра.", tr: "Öğretmen iyi kalpli." } },
+  { zin: "Ik heb een map.", woord: "map", regel: k("map"), cat: "klanken", steun: { en: "I have a folder.", ar: "عندي ملف.", uk: "У мене є папка.", tr: "Bir dosyam var." } },
+  { zin: "De kat slaapt.", woord: "kat", regel: k("kat"), cat: "klanken", steun: { en: "The cat is sleeping.", ar: "القطة نائمة.", uk: "Кішка спить.", tr: "Kedi uyuyor." } },
+  { zin: "Mijn sok is nat.", woord: "sok", regel: k("sok"), cat: "klanken", steun: { en: "My sock is wet.", ar: "جوربي مبلّل.", uk: "Моя шкарпетка мокра.", tr: "Çorabım ıslak." } },
+  { zin: "De kat zit op het dak.", woord: "dak", regel: k("dak"), cat: "klanken", steun: { en: "The cat sits on the roof.", ar: "القطة على السطح.", uk: "Кішка сидить на даху.", tr: "Kedi çatıda oturuyor." } },
+  { zin: "Wij hebben les.", woord: "les", regel: k("les"), cat: "klanken", steun: { en: "We have a lesson.", ar: "عندنا درس.", uk: "У нас урок.", tr: "Dersimiz var." } },
+  { zin: "Ik drink melk.", woord: "melk", regel: k("melk"), cat: "klanken", steun: { en: "I drink milk.", ar: "أشرب الحليب.", uk: "Я п'ю молоко.", tr: "Süt içiyorum." } },
+  { zin: "De boom is groot.", woord: "boom", regel: "Twee letters, één klank: b-oo-m. Je hoort oo, je schrijft oo.", cat: "lange klank", steun: { en: "The tree is big.", ar: "الشجرة كبيرة.", uk: "Дерево велике.", tr: "Ağaç büyük." } },
+  { zin: "De maan is geel.", woord: "maan", regel: "Twee letters, één klank: m-aa-n. Je hoort aa, je schrijft aa.", cat: "lange klank", steun: { en: "The moon is yellow.", ar: "القمر أصفر.", uk: "Місяць жовтий.", tr: "Ay sarı." } },
+  { zin: "Het raam is open.", woord: "raam", regel: "Twee letters, één klank: r-aa-m. Je hoort aa, je schrijft aa.", cat: "lange klank", steun: { en: "The window is open.", ar: "النافذة مفتوحة.", uk: "Вікно відчинене.", tr: "Pencere açık." } },
+  { zin: "Ik lees een boek.", woord: "boek", regel: "Twee letters, één klank: b-oe-k. Je hoort oe, je schrijft o en e.", cat: "oe", steun: { en: "I am reading a book.", ar: "أقرأ كتابًا.", uk: "Я читаю книжку.", tr: "Kitap okuyorum." } },
+  { zin: "Mijn voet doet pijn.", woord: "voet", regel: "Twee letters, één klank: v-oe-t. Je hoort oe, je schrijft o en e.", cat: "oe", steun: { en: "My foot hurts.", ar: "قدمي تؤلمني.", uk: "Мені болить нога.", tr: "Ayağım ağrıyor." } },
+];
+
 export const GROEPEN = [4, 5, 6, 7, 8];
 
 /** kies n items voor een groep; recente woorden (localStorage) eerst mijden */

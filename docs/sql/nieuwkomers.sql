@@ -51,3 +51,9 @@ select props->>'trede' trede,
   count(distinct props->>'uid') filter (where name='nk_tredetest_print') geprint,
   round(avg((props->>'goed')::int) filter (where name='nk_tredetest_klaar'),1) gem_goed
 from events_mens where name like 'nk_tredetest_%' group by 1 order by 1;
+
+-- 9) Nieuwkomer-dictee (v753): groep 3 = nieuwkomer-stand
+select count(distinct props->>'uid') filter (where name='dictee_start') gestart,
+  count(distinct props->>'uid') filter (where name='dictee_klaar') klaar,
+  round(avg((props->>'score')::numeric) filter (where name='dictee_klaar'),1) gem_score
+from events_mens where name in ('dictee_start','dictee_klaar') and props->>'groep' = '3';

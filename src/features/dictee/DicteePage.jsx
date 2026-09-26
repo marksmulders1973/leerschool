@@ -13,11 +13,12 @@
 // "🔊 Nog een keer" tikken. Zonder stem (geen speechSynthesis) valt het terug
 // op "lees-dictee": de zin verschijnt kort mét het woord, verdwijnt, en dan typ je.
 import { useEffect, useMemo, useRef, useState } from "react";
+import { SteunVraag } from "../../shared/ui/SteunTik.jsx";
 import supabase from "../../supabase";
 import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import { track } from "../../utils.js";
 import { recordAnswerForPath, recordRefAnswer } from "../mastery/mastery.js";
-import { DICTEE, GROEPEN, kiesDictee, vergelijk } from "./dicteeData.js";
+import { DICTEE, GROEPEN, kiesDictee, vergelijk, NK_GROEP } from "./dicteeData.js";
 import { kwartierBlokVan, blokKlaar } from "../vandaag/kwartier.js";
 
 const WACHT_MS = 3200;      // zo lang wacht Charley op de eerste letter
@@ -350,10 +351,14 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
   const [groep, setGroep] = useState(() => {
     try {
       const g = +new URLSearchParams(window.location.search).get("groep");
-      if (g >= 4 && g <= 8) return g;
-      return +localStorage.getItem("lk_dictee_groep") || groepUit(userLevel);
+      if (g >= NK_GROEP && g <= 8) return g;
+      // Nieuwkomers (doorgroeiplan stap 3): /nieuwkomers zet deze vlag vóór het openen.
+      if (sessionStorage.getItem("lk_dictee_nk") === "1") return NK_GROEP;
+      const b = +localStorage.getItem("lk_dictee_groep");
+      return b >= 4 && b <= 8 ? b : groepUit(userLevel);
     } catch { return groepUit(userLevel); }
   });
+  const nk = groep === NK_GROEP;                      // nieuwkomer-dictee: langzamer, zin tikbaar in eigen taal
   const [fase, setFase] = useState("kies");          // kies | dictee | klaar
   const [items, setItems] = useState([]);
   const [idx, setIdx] = useState(0);
@@ -380,7 +385,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
     stopAlles();
     if (!kanSpreken()) { onEnd && onEnd(); return; }
     setSpreekt(true);
-    stopRef.current = spreekMetMeelezen(tekst, { rate: 0.92, onEnd: () => { setSpreekt(false); onEnd && onEnd(); } });
+    stopRef.current = spreekMetMeelezen(tekst, { rate: nk ? 0.8 : 0.92, onEnd: () => { setSpreekt(false); onEnd && onEnd(); } });
   };
   const wachtOpTypen = () => {
     clearTimeout(wachtRef.current);
@@ -407,7 +412,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
 
   const start = (g, lijst = null, n = 10) => {
     const gekozen = lijst || kiesDictee(g, n);
-    try { localStorage.setItem("lk_dictee_groep", String(g)); } catch { /* */ }
+    if (g !== NK_GROEP) { try { localStorage.setItem("lk_dictee_groep", String(g)); } catch { /* */ } }
     setGroep(g); setItems(gekozen); setIdx(0); setUitkomst([]);
     // 10 sep 2026 (dagrapport: 8 starts, 0 afgemaakt, meesten stopten vóór het eerste woord):
     // eerst een geluidscheck. Charley praat meteen in de tik zelf — telefoons staan spraak
@@ -449,6 +454,22 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
   }, [kwartierBlok]);
 
   // ── schermen ──
+  if (fase === "kies" && nk) {
+    return (
+      <div style={W}>
+        <button onClick={onTerug} style={{ ...KNOP2, padding: "8px 14px", font: "700 14px system-ui", marginBottom: 12 }}>← Terug</button>
+        <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
+          <div style={{ fontSize: 44 }}>🐕</div>
+          <div><div style={{ font: "900 24px system-ui" }}>Dictee</div><div style={{ color: "#556", fontSize: 15 }}>Charley zegt een zin. Dan zegt hij één woord. Jij schrijft dat woord.</div></div>
+        </div>
+        <div style={{ background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "12px 0", fontSize: 16, lineHeight: 1.5, color: "#1c2840" }}>
+          10 korte woorden. Luister goed. Elke letter is een klank: <b>t-a-s</b>.<br />Tik op de zin: dan zie je hem in jouw taal.
+        </div>
+        <button onClick={() => start(NK_GROEP)} style={{ ...KNOP, fontSize: 18, padding: "14px 24px" }}>▶ Start</button>
+      </div>
+    );
+  }
+
   if (fase === "kies") {
     return (
       <div style={W}>
@@ -510,7 +531,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
         <div style={{ textAlign: "center", padding: "10px 0" }}>
           <div style={{ fontSize: 54 }}>{score === items.length ? "🏆" : score >= items.length / 2 ? "🎉" : "💪"}</div>
           <div style={{ font: "900 28px system-ui" }}>{score} van de {items.length} goed</div>
-          <div style={{ color: "#556", marginTop: 4 }}>Groep {groep} · Charley: {score === items.length ? "wat een kanjer!" : score >= items.length / 2 ? "goed gedaan!" : "oefenen helpt, morgen weer?"}</div>
+          <div style={{ color: "#556", marginTop: 4 }}>{nk ? "Dictee" : `Groep ${groep}`} · Charley: {score === items.length ? "wat een kanjer!" : score >= items.length / 2 ? "goed gedaan!" : "oefenen helpt, morgen weer?"}</div>
         </div>
         {fouten.length > 0 && (
           <div style={{ background: "#fff5f5", border: "1px solid #f3c9c9", borderRadius: 14, padding: "12px 14px", margin: "12px 0" }}>
@@ -519,7 +540,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
               <div key={i} style={{ padding: "6px 0", borderTop: i ? "1px solid #f0dcdc" : "none", fontSize: 14.5, lineHeight: 1.45 }}>
                 <b style={{ color: "#146c43" }}>{f.woord}</b> <span style={{ color: "#888" }}>(jij schreef: {uitkomst[items.indexOf(f)]?.getypt})</span><br />
                 <span style={{ color: "#445" }}>{f.regel}</span><br />
-                <OefenRegelKnop cat={f.cat} groep={groep} />
+                {!nk && <OefenRegelKnop cat={f.cat} groep={groep} />}
               </div>
             ))}
           </div>
@@ -536,8 +557,8 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
           <button onClick={onTerug} style={KNOP2}>Klaar</button>
         </div>
         )}
-        <DicteeMailHaakje groep={groep} score={score} totaal={items.length} />
-        <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Je score telt mee in het weekrapport voor thuis (spelling).</p>
+        {!nk && <DicteeMailHaakje groep={groep} score={score} totaal={items.length} />}
+        {!nk && <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Je score telt mee in het weekrapport voor thuis (spelling).</p>}
       </div>
     );
   }
@@ -548,7 +569,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
     <div style={W}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
         <button onClick={() => { stopAlles(); setFase("kies"); }} style={{ ...KNOP2, padding: "8px 14px", font: "700 14px system-ui" }}>← Stop</button>
-        <div style={{ font: "800 14px system-ui", color: "#556" }}>Woord {idx + 1} van {items.length} · {item.los ? "woorden van school" : `groep ${groep}`}</div>
+        <div style={{ font: "800 14px system-ui", color: "#556" }}>Woord {idx + 1} van {items.length} · {item.los ? "woorden van school" : nk ? "dictee" : `groep ${groep}`}</div>
       </div>
       <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 12 }}>
         <div style={{ fontSize: 40, lineHeight: 1 }}>🐕</div>
@@ -561,7 +582,8 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
         </div>
       </div>
 
-      {/* de zin met het gat */}
+      {/* de zin met het gat (nieuwkomers: tik = de zin in de eigen taal) */}
+      <SteunVraag steun={item.steun}>
       <div style={{ font: "700 22px/1.5 system-ui", background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "6px 0 12px", minHeight: 64, color: "#1c2840" }}>
         {gat.voor}
         {status === "goed" || status === "fout" ? (
@@ -573,6 +595,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
         )}
         {gat.na}
       </div>
+      </SteunVraag>
       {status === "fout" && <div style={{ fontSize: 13.5, color: "#556", margin: "-6px 0 10px" }}>Jij schreef: <span style={{ textDecoration: "line-through" }}>{u?.getypt}</span></div>}
 
       <form onSubmit={(e) => { e.preventDefault(); controleer(); }} style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
