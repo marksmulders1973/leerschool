@@ -41,3 +41,12 @@ Mark Smulders — leerkwartier.be
 | 7 | Sociale Kruideniers Vlaanderen | voedselbank · KRUIDENIER2027 | info@socialekruideniersvlaanderen.be |
 
 ## Verzendlog
+
+- **26-9-2026, 06:36:39** — via Resend (hallo@leerkwartier.app), 7/7 verstuurd.
+  - 1 · Belgische Federatie van Voedselbanken · info@foodbanks.be · OK · 01a0dc00-1c66-73aa-9d6c-9e0ec6e7a56e
+  - 2 · Voedselbank Antwerpen-Mechelen-Turnhout · antwerpen@foodbanks.be · OK · 01a0dc00-224b-77ec-b376-89c2db9296d7
+  - 3 · Voedselbank Limburg · info@vbl-dm.be · OK · 01a0dc00-2805-71ee-8947-5d10e9d663cd
+  - 4 · Voedselbank Oost-Vlaanderen · oostvlaanderen@foodbanks.be · OK · 01a0dc00-2db7-75da-a2bc-c516a4a69a6e
+  - 5 · Voedselbank West-Vlaanderen · info@foodbankswvl.be · OK · 01a0dc00-3371-7048-8408-8c312368c5d4
+  - 6 · Voedselbank Brussel-Brabant · secretariat@foodbank-brabant.be · OK · 01a0dc00-392d-716e-a8cc-ade1e39ae815
+  - 7 · Sociale Kruideniers Vlaanderen · info@socialekruideniersvlaanderen.be · OK · 01a0dc00-3ee4-7243-b34f-fb0953d97481

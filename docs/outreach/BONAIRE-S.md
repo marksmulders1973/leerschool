@@ -35,3 +35,14 @@ Een kwartier per dag leren, een leven lang slimmer.
 | 7 | Skol Amplio Papa Cornes | basisschool | adm.sapc@birgenmaria.org |
 | 8 | Basisschool De Pelikaan | basisschool | info@bsdepelikaan.com |
 | 9 | Basisschool Aquamarin | basisschool | basisschoolaquamarin@hotmail.com |
+
+- **24-9-2026, 14:00:27** — via Resend (hallo@leerkwartier.app), 9/9 verstuurd.
+  - 1 · Stichting Openbaar Onderwijs Bonaire · info@stichtingoob.com · OK · 01a0d349-7355-7164-bd50-3843878b3271
+  - 2 · Kolegio Rayo di Solo · rayodisolo@stichtingoob.com · OK · 01a0d349-79f3-770e-a865-902180a77d8c
+  - 3 · Kolegio Strea Briante · streabriante@stichtingoob.com · OK · 01a0d349-8826-71b8-a919-c6478255b0ff
+  - 4 · IKC San Bernardo · adm.ksb@birgenmaria.org · OK · 01a0d349-9ba2-73a3-8418-89dc08197743
+  - 5 · IKC San Luis Bertran · adm.kslb@birgenmaria.org · OK · 01a0d349-a93f-7b34-a0e4-8aeb5918cf1d
+  - 6 · IKC Kristu Bon Wardador · adm.kkbw@birgenmaria.org · OK · 01a0d349-b98b-7bc3-b52d-09517c0fdd7f
+  - 7 · Skol Amplio Papa Cornes · adm.sapc@birgenmaria.org · OK · 01a0d349-c5bb-7292-afbd-7722253fdbb8
+  - 8 · Basisschool De Pelikaan · info@bsdepelikaan.com · OK · 01a0d349-cbf0-715b-ba19-a90c21ab5200
+  - 9 · Basisschool Aquamarin · basisschoolaquamarin@hotmail.com · OK · 01a0d349-d207-74a9-bb60-86ba859cc5db

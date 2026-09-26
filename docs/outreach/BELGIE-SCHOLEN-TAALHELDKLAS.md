@@ -60,7 +60,7 @@ Mark Smulders — leerkwartier.be
 | 15 | Basisschool Pullaar | taalheldklas · Lier | directie@pullaar.be |
 | 16 | Basisschool De Wilg | taalheldklas · Lint | directeur@bsdewilg.be |
 | 17 | VKS Zilverenhoek | taalheldklas · Kapellen | info@basisschoolzilverenhoek.be |
-| 18 | Stedelijke basisschool De Droomballon) | taalheldklas · Sint-Niklaas (Nieuwkerken | secretariaat@droomballon.be |
+| 18 | Stedelijke basisschool De Droomballon | taalheldklas · Sint-Niklaas (Nieuwkerken | secretariaat@droomballon.be |
 | 19 | GO! Basisschool De Tovertuin | taalheldklas · Sint-Niklaas | secretariaat@detovertuin.be |
 | 20 | VBS Sint-Camillus | taalheldklas · Sint-Niklaas | info@sintcamillus.be |
 | 21 | VBS Sint-Lutgart | taalheldklas · Sint-Niklaas | info@sintlutgart.be |
@@ -107,3 +107,25 @@ Mark Smulders — leerkwartier.be
 | 62 | Basisschool Schuttershof | zwak · Sint-Truiden | secretariaat@bsschuttershof.be |
 
 ## Verzendlog
+
+- **26-9-2026, 06:37:09** — via Resend (hallo@leerkwartier.app), 20/20 verstuurd.
+  - 1 · Stedelijke basisschool De Gele Ballon · de.gele.ballon@stedelijkonderwijs.be · OK · 01a0dc00-4554-70e4-b8a6-1560d6c084a5
+  - 2 · Stedelijke basisschool De Kleine Stad · de.kleine.stad@stedelijkonderwijs.be · OK · 01a0dc00-4b16-775b-a3b8-d6d4f5402f0d
+  - 3 · Stedelijke basisschool De Wereldreiziger · de.wereldreiziger@stedelijkonderwijs.be · OK · 01a0dc00-50cb-760e-8955-b51e5750df40
+  - 4 · Stedelijke basisschool De Evenaar · de.evenaar@stedelijkonderwijs.be · OK · 01a0dc00-568b-7378-ba93-dae2acf002a5
+  - 5 · Stedelijke basisschool De Vlinders · de.vlinders@stedelijkonderwijs.be · OK · 01a0dc00-5c4a-7216-9fa5-80e6040e01b4
+  - 6 · Stedelijke basisschool De Esdoorn · de.esdoorn@stedelijkonderwijs.be · OK · 01a0dc00-6221-7078-8366-43059c6d61d1
+  - 7 · Stedelijke basisschool Edison · edison@stedelijkonderwijs.be · OK · 01a0dc00-67eb-715a-876d-b73c512fc769
+  - 8 · VBS Dromenvanger · directie.dromenvanger@sgkod.be · OK · 01a0dc00-6d9f-7234-9f2b-b11956740049
+  - 9 · VBS Mariagaarde · directie.mariagaarde@sgkod.be · OK · 01a0dc00-7355-727f-a548-441219630076
+  - 10 · VBS Franciscusschool · info@franciscusschool.be · OK · 01a0dc00-794d-730d-b4ea-335c13fd94f6
+  - 11 · VBS Johannesschool · info@johannes-valaar.be · OK · 01a0dc00-7f05-77ce-8075-3eb029b3d513
+  - 12 · Vrije Basisschool 't Spoor · directie@basisschooltspoor.be · OK · 01a0dc00-84c0-757d-9467-80f9334500fd
+  - 13 · VBS Het Spoor · directie@hetspoorbasisschool.be · OK · 01a0dc00-8a7f-77c6-85fe-702e19da0cc9
+  - 14 · VBS Heilig Hartschool · secretariaat@heilig-hart.be · OK · 01a0dc00-903e-73d5-967b-9d7f9e2b28db
+  - 15 · Basisschool Pullaar · directie@pullaar.be · OK · 01a0dc00-9605-7167-a4c5-57e55856d536
+  - 16 · Basisschool De Wilg · directeur@bsdewilg.be · OK · 01a0dc00-9bb1-752d-8c7d-bb476689168b
+  - 17 · VKS Zilverenhoek · info@basisschoolzilverenhoek.be · OK · 01a0dc00-a16e-7340-88c9-84188418352c
+  - 18 · Stedelijke basisschool De Droomballon · secretariaat@droomballon.be · OK · 01a0dc00-a726-737e-9369-a289442b9bbe
+  - 19 · GO! Basisschool De Tovertuin · secretariaat@detovertuin.be · OK · 01a0dc00-acdb-7018-90f6-025979ea0609
+  - 20 · VBS Sint-Camillus · info@sintcamillus.be · OK · 01a0dc00-b294-728a-aa21-aa87dad0b819
