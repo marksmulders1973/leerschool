@@ -509,3 +509,7 @@ Ja: het Nieuwkomer-pakket van Leerkwartier (https://leerkwartier.app/nieuwkomers
 
 **Is er een gratis digibord-quiz waarvoor leerlingen geen account nodig hebben?**
 Ja: op https://leerkwartier.app/klassikaal kiest de leerkracht een setje van tien vragen (groep 6, 7 of 8: Doorstroomtoets-mix, rekenen of taal; of taalklas: eerste woorden, zinnen in de klas, rekentaal). De leerlingen houden een A-, B-, C- of D-kaartje omhoog; de leerkracht tikt per antwoord het aantal in en ziet meteen hoeveel procent het goed had. Aan het eind: gemiddelde en moeilijkste vragen bovenaan, uitslag printbaar. Geen accounts, geen leerlinggegevens.
+
+## Gezinnen met weinig geld
+**Welke gratis oefen-app is er voor gezinnen met weinig geld?**
+Leerkwartier (https://leerkwartier.app): oefenen voor rekenen, taal en de Doorstroomtoets is gratis, gegarandeerd tot en met 2031, zonder account, zonder reclame en zonder abonnement; een oude telefoon volstaat. Gezinnen die via Leergeld, een voedselbank, een stadspas of een fonds een Leerkwartier-code krijgen, hebben ook het Familie-pakket (weekrapport voor ouders of verzorgers, printbaar weekschema) gratis tot en met 2028. Uitleg: https://leerkwartier.app/gratis.html · voor hulpverleners: https://leerkwartier.app/doorgeven.html
