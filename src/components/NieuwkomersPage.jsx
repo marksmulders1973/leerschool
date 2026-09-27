@@ -75,6 +75,7 @@ const T = {
     overGroep: "In welke groep zit je?",
     instapUitleg: "Een paar vragen. Dan weet je waar je begint.",
     hierBegin: "Hier begin je",
+    thuisbrief: "Voor de leerkracht: print het briefje voor thuis (5 talen)",
     testGehaald2: "Trede 2 gehaald! Je mag het testje altijd opnieuw doen.",
   },
   en: { overKop: "Ready for the normal Leerkwartier?", overUitleg: "Maths and language for your class. There everything is in Dutch, without the translate button. You can always come back to this page.", overGroep: "Which class (groep) are you in?", instapKop: "New here? Do the starting test", instapUitleg: "A few questions. Then you know where to start.", hierBegin: "Start here", testUitleg2: "Done with 5 to 7? Do the test and get your certificate.", testGehaald2: "Step 2 passed! You can always do the test again.", trede1: "Step 1 · Welcome", trede2: "Step 2 · Letters and words", verder: "Keep practising", testKop: "Step test", testUitleg: "Done with 1 to 4? Do the test and get your certificate.", testGehaald: "Step 1 passed! You can always do the test again.", herhaalKop: "Practise again today", herhaalUitleg: "Words and sentences from before. This way you remember them.", sub: "Free. No account. Short sentences. Every sum with an explanation.", juf: "For the teacher: everything on this page is free, also on the classroom board, guaranteed until 31 December 2028. Write the code WELKOMNIEUWKOMER on the board; every child will come here.", tegels: [["In class","What do you say to the teacher? How do you make friends?"],["Words","Your first Dutch words. Tap the small button next to a word to see it in your language."],["Maths words","More, less, together, away, sharing: the words in every maths lesson."],["Counting to 20","Counting, adding and taking away. You may use your fingers."],["Letters and sounds","Which sound do you hear? t-a-s becomes tas."],["More words","Clothes, food, home, outside and your body."],["Dictation","Charley says a word. You write it. Every letter is a sound."],["Counting to 100","Tens and ones. Jumps of 10."],["Reading","Start with five short sentences. The button reads them aloud."],["Times tables","A little bit at a time."]], taalvraag: "Which language do you speak at home?", taaluitleg: "Everything stays in Dutch. Tap a sentence, or the small button next to an answer, to see your language.", intro: "This is for children who are still learning Dutch. Start at 1. Do a little every day.", voorlees: "Everywhere there is a button 'Lees voor' (read aloud). Press it to hear the text." },
@@ -277,6 +278,11 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOversta
 
         <div style={{ marginTop: 20, background: "rgba(255,255,255,.1)", borderRadius: 14, padding: "12px 14px", fontSize: 15, fontWeight: 600, lineHeight: 1.5 }}>{t.voorlees}<Steun veld="voorlees" klein /></div>
         <div style={{ marginTop: 12, fontSize: 13.5, opacity: .75, lineHeight: 1.5 }}>{t.juf}<Steun veld="juf" klein /></div>
+        {/* Briefje voor thuis (Mark "ga" 27 sep 2026): één A4 in 5 talen met QR → /nieuwkomers?utm_source=thuisbrief. */}
+        <a href="/drukwerk/nieuwkomers-thuisbrief.html" target="_blank" rel="noopener" onClick={() => { try { track("nk_thuisbrief_open", { taal }); } catch { /* */ } }}
+          style={{ display: "inline-block", marginTop: 10, background: "rgba(255,255,255,.14)", color: "#fff", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontSize: 14, textDecoration: "none" }}>
+          🖨️ {t.thuisbrief}
+        </a>
         {/* Naamsvermelding plaatjes (CC BY-SA 4.0 vraagt dat) — zie learnPaths/nieuwkomersPicto.js */}
         <div style={{ marginTop: 10, fontSize: 12, opacity: .6 }}>
           {PICTO_BRON} — <a href="https://mulberrysymbols.org" target="_blank" rel="noopener noreferrer" style={{ color: "inherit" }}>mulberrysymbols.org</a>

@@ -69,3 +69,9 @@ from events_mens where name like 'nk_instap_%';
 -- 11) Overstap naar de gewone app (v757, stap 6): welke groep, na welke tredes
 select props->>'groep' groep, props->>'tredes' tredes, count(distinct props->>'uid') apparaten
 from events_mens where name = 'nk_overstap' group by 1,2 order by 3 desc;
+
+-- 12) Briefje voor thuis (v763): hoe vaak geopend door de juf, en hoeveel kinderen komen thuis binnen via de QR
+select
+  (select count(distinct props->>'uid') from events_mens where name = 'nk_thuisbrief_open') juf_opende_briefje,
+  (select count(distinct props->>'uid') from events_mens where source = 'thuisbrief') via_qr_thuis,
+  (select min(created_at at time zone 'Europe/Amsterdam') from events_mens where source = 'thuisbrief') eerste_qr;
