@@ -1,6 +1,6 @@
 # LOWAN nieuwkomersscholen — Nieuwkomer-pakket, ronde 2 (batch 5-7C = 130 scholen)
 
-Tekst-akkoord Mark 25 sep 2026 ("stuur maar"). Zonder De Piramide (tipgever, kreeg 2 persoonlijke mails). Planning: ma 28 / di 29 / wo 30 sep 08:30, max 45 per dag (Windows-taak `run-lowan-nk2.cmd`); het script slaat verstuurde rijen over.
+Tekst-akkoord Mark 25 sep 2026 (+ 27 sep: nieuwe onderdelen en testjes-alinea, Mark 'ja, zet het in beide mails') ("stuur maar"). Zonder De Piramide (tipgever, kreeg 2 persoonlijke mails). Planning: ma 28 / di 29 / wo 30 sep 08:30, max 45 per dag (Windows-taak `run-lowan-nk2.cmd`); het script slaat verstuurde rijen over.
 
 ## Onderwerp
 Speciaal voor uw nieuwkomers: oefenen op groep 3-4-niveau, met steun in de eigen taal
@@ -14,11 +14,15 @@ Daarom bouw ik nu speciaal voor nieuwkomersgroepen: het Nieuwkomer-pakket. En om
 
 Wat erin zit:
 - In de klas: de zinnen die een kind de eerste weken nodig heeft ("Mag ik naar de wc?", "Ik snap het niet.", "Mag ik meedoen?")
-- Woorden: de eerste Nederlandse woorden, altijd met de of het
+- Woorden: de eerste Nederlandse woorden, altijd met de of het, en daarna woorden over kleding, eten, thuis, buiten en het lichaam
+- Letters en klanken: hakken en plakken (t-a-s wordt tas), voor kinderen die een ander schrift gewend zijn
+- Dictee: de app zegt een kort woord, het kind typt het
 - Rekentaal: meer, minder, samen, weg en verdelen
 - Rekenen tot 20 en tot 100, elke som met uitleg
 
 Alles is in het Nederlands. Kent een kind een woord niet, dan tikt het erop en ziet het de vertaling in het Engels, Arabisch, Oekraïens of Turks. Kiest een kind een fout antwoord, dan zegt de app waarom, bijvoorbeeld: "Nee, een tas is iets om je spullen in te doen." Overal zit een voorleesknop, en een kind heeft geen account of e-mailadres nodig.
+
+Een nieuw kind kan beginnen met een kort instap-testje. Dat laat zien waar het het beste kan starten. Na elk onderdeel volgt een testje met een diploma om te printen. Is een kind eraan toe, dan gaat het verder met de gewone oefenstof van zijn groep.
 
 Zo komt een kind binnen: tik op leerkwartier.app één van deze codes in de balk. Hoofdletters maken niet uit.
 NIEUWKOMER · NIEUWKOMERS · WELKOMNIEUWKOMER · WELKOMNIEUWKOMERS

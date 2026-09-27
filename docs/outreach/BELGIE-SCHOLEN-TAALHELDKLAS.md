@@ -1,6 +1,6 @@
 # België — basisscholen met taalheldklas (62 adressen)
 
-Bron: BELGIE-NIEUWKOMERS-LIJST.md (25 sep 2026). **Tekst-akkoord Mark 25 sep ("stuur maar") — test gepland do 1 okt 08:30 (Windows-taak).** Volgorde: sterke treffers eerst, "(zwak)" onderaan. Voorstel: eerst een test van 20 (`node scripts/outreach-send-doc.mjs 20 …`), dan kijken wie reageert. Dagrem 80 geldt over álle bulk samen — niet op 28-30 sep (NL ronde 2, 45/dag) meer dan 35 extra.
+Bron: BELGIE-NIEUWKOMERS-LIJST.md (25 sep 2026). **Tekst-akkoord Mark 25 sep ("stuur maar") + 27 sep aanvulling onderdelen/testjes ("ja, zet het in beide mails") — test gepland do 1 okt 08:30 (Windows-taak).** Volgorde: sterke treffers eerst, "(zwak)" onderaan. Voorstel: eerst een test van 20 (`node scripts/outreach-send-doc.mjs 20 …`), dan kijken wie reageert. Dagrem 80 geldt over álle bulk samen — niet op 28-30 sep (NL ronde 2, 45/dag) meer dan 35 extra.
 
 ## Onderwerp
 Gratis oefen-app voor uw taalheldklas: Nederlands leren, met steun in de eigen taal
@@ -14,11 +14,15 @@ Daarom bouw ik nu speciaal voor anderstalige nieuwkomers: het Nieuwkomer-pakket.
 
 Wat erin zit:
 - In de klas: de zinnen die een kind de eerste weken nodig heeft ("Mag ik naar de wc?", "Ik snap het niet.", "Mag ik meedoen?")
-- Woorden: de eerste Nederlandse woorden, altijd met de of het
+- Woorden: de eerste Nederlandse woorden, altijd met de of het, en daarna woorden over kleding, eten, thuis, buiten en het lichaam
+- Letters en klanken: hakken en plakken (t-a-s wordt tas), voor kinderen die een ander schrift gewend zijn
+- Dictee: de app zegt een kort woord, het kind typt het
 - Rekentaal: meer, minder, samen, weg en verdelen
 - Rekenen tot 20 en tot 100, elke som met uitleg
 
 Alles is in het Nederlands. Kent een kind een woord niet, dan tikt het erop en ziet het de vertaling in het Engels, Arabisch, Oekraïens of Turks. Kiest een kind een fout antwoord, dan zegt de app waarom, bijvoorbeeld: "Nee, een tas is iets om je spullen in te doen." Overal zit een voorleesknop, en een kind heeft geen account of e-mailadres nodig.
+
+Een nieuw kind kan beginnen met een kort instap-testje. Dat laat zien waar het het beste kan starten. Na elk onderdeel volgt een testje met een diploma om te printen. Is een kind eraan toe, dan gaat het verder met de gewone oefenstof van zijn groep.
 
 Zo komt een kind binnen:
 leerkwartier.be/nieuwkomers
