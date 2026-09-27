@@ -75,3 +75,8 @@ select
   (select count(distinct props->>'uid') from events_mens where name = 'nk_thuisbrief_open') juf_opende_briefje,
   (select count(distinct props->>'uid') from events_mens where source = 'thuisbrief') via_qr_thuis,
   (select min(created_at at time zone 'Europe/Amsterdam') from events_mens where source = 'thuisbrief') eerste_qr;
+
+-- 13) Delen vanaf /nieuwkomers (v766) + wie binnenkomt via een deellink
+select
+  (select json_object_agg(k, n) from (select props->>'kanaal' k, count(distinct props->>'uid') n from events_mens where name = 'nk_deel' group by 1) x) deelknop_per_kanaal,
+  (select json_object_agg(s, n) from (select source s, count(distinct props->>'uid') n from events_mens where source in ('whatsapp','linkedin','deellink') and path like '/nieuwkomers%' group by 1) y) binnen_via_deellink;
