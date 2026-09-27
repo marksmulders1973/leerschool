@@ -13,7 +13,7 @@
 // "🔊 Nog een keer" tikken. Zonder stem (geen speechSynthesis) valt het terug
 // op "lees-dictee": de zin verschijnt kort mét het woord, verdwijnt, en dan typ je.
 import { useEffect, useMemo, useRef, useState } from "react";
-import { SteunVraag } from "../../shared/ui/SteunTik.jsx";
+import { SteunVraag, SteunTekst, SteunCtx, UI_STEUN, maakSteunMap } from "../../shared/ui/SteunTik.jsx";
 import supabase from "../../supabase";
 import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import { track } from "../../utils.js";
@@ -343,7 +343,68 @@ function metGat(zin, woord) {
   return { voor: zin.slice(0, i), na: zin.slice(i + woord.length) };
 }
 
-export default function DicteePage({ userName = "", userLevel = "", onTerug, onVolgendBlok }) {
+// 🌍 Nieuwkomer-dictee tikbaar (doorgroeiplan § 8, 27 sep 2026): alle schermtekst in de stand
+// voor nieuwkomers krijgt een vertaling op tik, net als in de nieuwkomerpaden. Buiten die stand
+// is er geen map → SteunTekst toont gewoon de Nederlandse tekst.
+const S4 = (en, ar, uk, tr) => ({ en, ar, uk, tr });
+const DICTEE_UI = {
+  "Charley zegt een zin. Dan zegt hij één woord. Jij schrijft dat woord.": S4("Charley says a sentence. Then he says one word. You write that word.", "تشارلي يقول جملة. ثم يقول كلمة واحدة. أنت تكتب تلك الكلمة.", "Чарлі каже речення. Потім він каже одне слово. Ти пишеш це слово.", "Charley bir cümle söyler. Sonra bir kelime söyler. Sen o kelimeyi yazarsın."),
+  "10 korte woorden. Luister goed. Elke letter is een klank: t-a-s. Tik op de zin: dan zie je hem in jouw taal.": S4("10 short words. Listen carefully. Every letter is a sound: t-a-s. Tap the sentence to see it in your language.", "10 كلمات قصيرة. استمع جيدًا. كل حرف هو صوت: t-a-s. اضغط على الجملة لتراها بلغتك.", "10 коротких слів. Слухай уважно. Кожна літера — це звук: t-a-s. Натисни на речення, щоб побачити його своєю мовою.", "10 kısa kelime. İyi dinle. Her harf bir sestir: t-a-s. Cümleye dokun, kendi dilinde gör."),
+  "Start": S4("Start", "ابدأ", "Почати", "Başla"),
+  "Terug": S4("Back", "رجوع", "Назад", "Geri"),
+  "Stop": S4("Stop", "توقّف", "Стоп", "Dur"),
+  "Hoi, ik ben Charley! Hoor je mij?": S4("Hi, I am Charley! Can you hear me?", "مرحبًا، أنا تشارلي! هل تسمعني؟", "Привіт, я Чарлі! Ти мене чуєш?", "Merhaba, ben Charley! Beni duyuyor musun?"),
+  "Zet je geluid aan en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven.": S4("Turn on the sound and take the phone off silent. Charley will say a sentence and then the word you must write.", "شغّل الصوت وأوقف الوضع الصامت. سيقول تشارلي جملة ثم الكلمة التي يجب أن تكتبها.", "Увімкни звук і вимкни беззвучний режим. Чарлі скаже речення, а потім слово, яке треба написати.", "Sesi aç ve telefonu sessizden çıkar. Charley bir cümle ve sonra yazman gereken kelimeyi söyleyecek."),
+  "Ik hoor Charley, start!": S4("I can hear Charley, start!", "أسمع تشارلي، ابدأ!", "Я чую Чарлі, почнімо!", "Charley'i duyuyorum, başla!"),
+  "Nog een keer": S4("Once more", "مرة أخرى", "Ще раз", "Bir kez daha"),
+  "Ik hoor niets → lees-dictee": S4("I hear nothing → reading dictation", "لا أسمع شيئًا ← إملاء بالقراءة", "Я нічого не чую → диктант для читання", "Hiçbir şey duymuyorum → okuma diktesi"),
+  "Luister goed…": S4("Listen carefully…", "استمع جيدًا…", "Слухай уважно…", "İyi dinle…"),
+  "Charley komt eraan…": S4("Charley is coming…", "تشارلي قادم…", "Чарлі вже йде…", "Charley geliyor…"),
+  "Schrijf op het woord dat je hoorde.": S4("Write the word you heard.", "اكتب الكلمة التي سمعتها.", "Напиши слово, яке ти почув.", "Duyduğun kelimeyi yaz."),
+  "Goed zo!": S4("Well done!", "أحسنت!", "Молодець!", "Aferin!"),
+  "Controleer": S4("Check", "تحقّق", "Перевірити", "Kontrol et"),
+  "Volgende": S4("Next", "التالي", "Далі", "Sonraki"),
+  "Klaar": S4("Done", "انتهيت", "Готово", "Bitti"),
+  "Nieuw dictee": S4("New dictation", "إملاء جديد", "Новий диктант", "Yeni dikte"),
+  "Fouten nog een keer": S4("Mistakes once more", "الأخطاء مرة أخرى", "Помилки ще раз", "Hataları bir kez daha"),
+  "Nog even kijken:": S4("Let's look again:", "لننظر مرة أخرى:", "Подивімося ще раз:", "Bir daha bakalım:"),
+};
+function klankVertaling(regel, w) {
+  const m1 = regel.match(/^Luister naar elke klank: (\S+)\.$/);
+  if (m1) return S4(`Listen to each sound: ${m1[1]}.`, `استمع إلى كل صوت: ${m1[1]}.`, `Слухай кожен звук: ${m1[1]}.`, `Her sesi dinle: ${m1[1]}.`);
+  const m2 = regel.match(/^Twee letters, één klank: (\S+)\. Je hoort (\w+), je schrijft (.+)\.$/);
+  if (m2) return S4(`Two letters, one sound: ${m2[1]}. You hear ${m2[2]}, you write ${m2[3].replace(" en ", " and ")}.`, `حرفان، صوت واحد: ${m2[1]}. تسمع ${m2[2]}، وتكتب ${m2[3].replace(" en ", " و ")}.`, `Дві літери — один звук: ${m2[1]}. Ти чуєш ${m2[2]}, пишеш ${m2[3].replace(" en ", " і ")}.`, `İki harf, bir ses: ${m2[1]}. ${m2[2]} duyarsın, ${m2[3].replace(" en ", " ve ")} yazarsın.`);
+  return null;
+}
+// NL → vertaling voor alle schermteksten + per woord "Bijna! Het is tas. Luister naar elke klank: t-a-s."
+function dicteeSteunMap() {
+  const extra = {};
+  for (const it of DICTEE[NK_GROEP] || []) {
+    const r = klankVertaling(it.regel, it.woord);
+    if (!r) continue;
+    extra[it.regel] = r;
+    extra[`Bijna! Het is ${it.woord}. ${it.regel}`] = S4(`Almost! It is ${it.woord}. ${r.en}`, `تقريبًا! إنها ${it.woord}. ${r.ar}`, `Майже! Це ${it.woord}. ${r.uk}`, `Neredeyse! ${it.woord}. ${r.tr}`);
+  }
+  return maakSteunMap(UI_STEUN, DICTEE_UI, extra);
+}
+function isNkStart() {
+  try {
+    if (+new URLSearchParams(window.location.search).get("groep") === NK_GROEP) return true;
+    return sessionStorage.getItem("lk_dictee_nk") === "1";
+  } catch { return false; }
+}
+
+// Tikbaar stukje tekst: alleen actief als er een vertaalmap is (nieuwkomer-stand), anders gewoon NL.
+function Tik({ nl, knop, children }) {
+  return <SteunTekst nl={nl} knop={knop} inline={!knop}>{children}</SteunTekst>;
+}
+
+export default function DicteePage(props) {
+  const map = useMemo(() => (isNkStart() ? dicteeSteunMap() : null), []);
+  return <SteunCtx.Provider value={map}><DicteeInhoud {...props} /></SteunCtx.Provider>;
+}
+
+function DicteeInhoud({ userName = "", userLevel = "", onTerug, onVolgendBlok }) {
   // ⭐ Kwartier-modus (Vandaag-motor, 10 sep 2026): is het dictee het blokje van nu, start dan
   // meteen met 5 woorden (schoolwoorden als die er zijn) en toon na afloop "Volgende blokje".
   const kwartierBlok = useMemo(() => kwartierBlokVan("dictee"), []);
@@ -460,12 +521,14 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
         <button onClick={onTerug} style={{ ...KNOP2, padding: "8px 14px", font: "700 14px system-ui", marginBottom: 12 }}>← Terug</button>
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
           <div style={{ fontSize: 44 }}>🐕</div>
-          <div><div style={{ font: "900 24px system-ui" }}>Dictee</div><div style={{ color: "#556", fontSize: 15 }}>Charley zegt een zin. Dan zegt hij één woord. Jij schrijft dat woord.</div></div>
+          <div><div style={{ font: "900 24px system-ui" }}>Dictee</div><Tik nl="Charley zegt een zin. Dan zegt hij één woord. Jij schrijft dat woord."><div style={{ color: "#556", fontSize: 15 }}>Charley zegt een zin. Dan zegt hij één woord. Jij schrijft dat woord.</div></Tik></div>
         </div>
+        <Tik nl="10 korte woorden. Luister goed. Elke letter is een klank: t-a-s. Tik op de zin: dan zie je hem in jouw taal.">
         <div style={{ background: "#f4faf6", border: "1px solid #cde3d6", borderRadius: 14, padding: "14px 16px", margin: "12px 0", fontSize: 16, lineHeight: 1.5, color: "#1c2840" }}>
           10 korte woorden. Luister goed. Elke letter is een klank: <b>t-a-s</b>.<br />Tik op de zin: dan zie je hem in jouw taal.
         </div>
-        <button onClick={() => start(NK_GROEP)} style={{ ...KNOP, fontSize: 18, padding: "14px 24px" }}>▶ Start</button>
+        </Tik>
+        <Tik nl="Start" knop><button onClick={() => start(NK_GROEP)} style={{ ...KNOP, fontSize: 18, padding: "14px 24px" }}>▶ Start</button></Tik>
       </div>
     );
   }
@@ -508,16 +571,16 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
         <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 8 }}>
           <div style={{ fontSize: 44 }}>🐕</div>
           <div style={{ flex: 1, background: "#fff", border: "2px solid #cde3d6", borderRadius: 16, padding: "12px 14px", fontSize: 16, lineHeight: 1.5, color: "#1c2840" }}>
-            {kanSpreken() ? <>Hoi, ik ben Charley! <b>Hoor je mij?</b> {spreekt ? "🔊" : ""}</> : <>Op dit apparaat kan ik niet praten. Dan doen we een <b>lees-dictee</b>.</>}
+            {kanSpreken() ? <Tik nl="Hoi, ik ben Charley! Hoor je mij?"><span>Hoi, ik ben Charley! <b>Hoor je mij?</b> {spreekt ? "🔊" : ""}</span></Tik> : <>Op dit apparaat kan ik niet praten. Dan doen we een <b>lees-dictee</b>.</>}
           </div>
         </div>
         <div style={{ background: "#fff8e1", border: "1px solid #f3d27a", borderRadius: 14, padding: "12px 14px", margin: "10px 0 14px", color: "#1c2840", fontSize: 14 }}>
-          🔊 <b>Zet je geluid aan</b> en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven.
+          <Tik nl="Zet je geluid aan en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven."><span>🔊 <b>Zet je geluid aan</b> en haal de telefoon van stil. Charley zegt straks een zin en dan het woord dat je moet schrijven.</span></Tik>
         </div>
         <div style={{ display: "flex", gap: 10, flexWrap: "wrap" }}>
-          {kanSpreken() && <button onClick={() => { stopAlles(); try { track("dictee_check", { hoort: 1, groep }); } catch { /* */ } setFase("dictee"); }} style={{ ...KNOP, fontSize: 18, padding: "14px 22px" }}>✅ Ik hoor Charley, start!</button>}
+          {kanSpreken() && <Tik nl="Ik hoor Charley, start!" knop><button onClick={() => { stopAlles(); try { track("dictee_check", { hoort: 1, groep }); } catch { /* */ } setFase("dictee"); }} style={{ ...KNOP, fontSize: 18, padding: "14px 22px" }}>✅ Ik hoor Charley, start!</button></Tik>}
           {kanSpreken() && <button onClick={() => { herhaalRef.current = 0; zeg("Hoi, ik ben Charley! Hoor je mij nu?"); }} style={KNOP2}>🔊 Nog een keer</button>}
-          <button onClick={() => { stopAlles(); setLeesModus(true); try { track("dictee_check", { hoort: 0, groep }); } catch { /* */ } setFase("dictee"); }} style={KNOP2}>{kanSpreken() ? "Ik hoor niets → lees-dictee" : "▶ Start het lees-dictee"}</button>
+          <Tik nl="Ik hoor niets → lees-dictee" knop><button onClick={() => { stopAlles(); setLeesModus(true); try { track("dictee_check", { hoort: 0, groep }); } catch { /* */ } setFase("dictee"); }} style={KNOP2}>{kanSpreken() ? "Ik hoor niets → lees-dictee" : "▶ Start het lees-dictee"}</button></Tik>
         </div>
         <p style={{ color: "#778", fontSize: 12.5, marginTop: 14 }}>Bij een lees-dictee zie je de zin 3 seconden mét het woord; daarna typ je het uit je hoofd.</p>
       </div>
@@ -535,7 +598,7 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
         </div>
         {fouten.length > 0 && (
           <div style={{ background: "#fff5f5", border: "1px solid #f3c9c9", borderRadius: 14, padding: "12px 14px", margin: "12px 0" }}>
-            <div style={{ font: "800 15px system-ui", marginBottom: 6 }}>Nog even kijken:</div>
+            <Tik nl="Nog even kijken:"><div style={{ font: "800 15px system-ui", marginBottom: 6 }}>Nog even kijken:</div></Tik>
             {fouten.map((f, i) => (
               <div key={i} style={{ padding: "6px 0", borderTop: i ? "1px solid #f0dcdc" : "none", fontSize: 14.5, lineHeight: 1.45 }}>
                 <b style={{ color: "#146c43" }}>{f.woord}</b> <span style={{ color: "#888" }}>(jij schreef: {uitkomst[items.indexOf(f)]?.getypt})</span><br />
@@ -552,9 +615,9 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
           </div>
         ) : (
         <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginTop: 10 }}>
-          {fouten.length > 0 && <button onClick={() => start(groep, fouten)} style={KNOP}>🔁 Fouten nog een keer</button>}
-          <button onClick={() => start(groep)} style={fouten.length ? KNOP2 : KNOP}>✍️ Nieuw dictee</button>
-          <button onClick={onTerug} style={KNOP2}>Klaar</button>
+          {fouten.length > 0 && <Tik nl="Fouten nog een keer" knop><button onClick={() => start(groep, fouten)} style={KNOP}>🔁 Fouten nog een keer</button></Tik>}
+          <Tik nl="Nieuw dictee" knop><button onClick={() => start(groep)} style={fouten.length ? KNOP2 : KNOP}>✍️ Nieuw dictee</button></Tik>
+          <Tik nl="Klaar" knop><button onClick={onTerug} style={KNOP2}>Klaar</button></Tik>
         </div>
         )}
         {!nk && <DicteeMailHaakje groep={groep} score={score} totaal={items.length} />}
@@ -574,11 +637,11 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
       <div style={{ display: "flex", gap: 10, alignItems: "flex-start", marginBottom: 12 }}>
         <div style={{ fontSize: 40, lineHeight: 1 }}>🐕</div>
         <div style={{ flex: 1, background: "#fff", border: "2px solid #cde3d6", borderRadius: 16, padding: "12px 14px", fontSize: 15, lineHeight: 1.5, color: "#1c2840" }}>
-          {status === "luister" && !leesModus && <span>{spreekt ? "🔊 Luister goed…" : "Charley komt eraan…"}</span>}
+          {status === "luister" && !leesModus && <Tik nl={spreekt ? "Luister goed…" : "Charley komt eraan…"}><span>{spreekt ? "🔊 Luister goed…" : "Charley komt eraan…"}</span></Tik>}
           {leesModus && toonZin && <span><b>Lees goed:</b> {item.zin}</span>}
-          {(status === "typen" || (leesModus && !toonZin && status !== "goed" && status !== "fout")) && <span>Schrijf op het woord dat je hoorde.{hint ? <> Het begint met een <b style={{ fontSize: 18 }}>{item.woord[0]}</b>.</> : null}</span>}
-          {status === "goed" && <span style={{ color: "#146c43", fontWeight: 800 }}>✅ Goed zo!</span>}
-          {status === "fout" && <span><span style={{ color: "#b42318", fontWeight: 800 }}>Bijna!</span> Het is <b>{item.woord}</b>. {item.regel}</span>}
+          {(status === "typen" || (leesModus && !toonZin && status !== "goed" && status !== "fout")) && <Tik nl="Schrijf op het woord dat je hoorde."><span>Schrijf op het woord dat je hoorde.{hint ? <> Het begint met een <b style={{ fontSize: 18 }}>{item.woord[0]}</b>.</> : null}</span></Tik>}
+          {status === "goed" && <Tik nl="Goed zo!"><span style={{ color: "#146c43", fontWeight: 800 }}>✅ Goed zo!</span></Tik>}
+          {status === "fout" && <Tik nl={`Bijna! Het is ${item.woord}. ${item.regel}`}><span><span style={{ color: "#b42318", fontWeight: 800 }}>Bijna!</span> Het is <b>{item.woord}</b>. {item.regel}</span></Tik>}
         </div>
       </div>
 
@@ -603,11 +666,11 @@ export default function DicteePage({ userName = "", userLevel = "", onTerug, onV
           placeholder="typ het woord" autoComplete="off" autoCapitalize="none" autoCorrect="off" spellCheck={false} inputMode="text" enterKeyHint="done" name="lk_dictee_woord_zonder_correctie" data-gramm="false"
           style={{ flex: "1 1 200px", border: "2px solid #9fb0c6", borderRadius: 12, padding: "12px 14px", font: "800 20px system-ui", color: "#1c2840", background: "#fff", colorScheme: "light", minWidth: 0 }} />
         {status === "goed" || status === "fout" ? (
-          <button type="button" onClick={volgende} style={KNOP}>{idx + 1 < items.length ? "Volgende →" : "Klaar →"}</button>
+          <Tik nl={idx + 1 < items.length ? "Volgende" : "Klaar"} knop><button type="button" onClick={volgende} style={KNOP}>{idx + 1 < items.length ? "Volgende →" : "Klaar →"}</button></Tik>
         ) : (
-          <button type="submit" disabled={!invoer.trim()} style={{ ...KNOP, opacity: invoer.trim() ? 1 : .5 }}>✓ Controleer</button>
+          <Tik nl="Controleer" knop><button type="submit" disabled={!invoer.trim()} style={{ ...KNOP, opacity: invoer.trim() ? 1 : .5 }}>✓ Controleer</button></Tik>
         )}
-        {!leesModus && <button type="button" onClick={nogEenKeer} style={KNOP2}>🔊 Nog een keer</button>}
+        {!leesModus && <Tik nl="Nog een keer" knop><button type="button" onClick={nogEenKeer} style={KNOP2}>🔊 Nog een keer</button></Tik>}
         {leesModus && status !== "goed" && status !== "fout" && <button type="button" onClick={() => { setToonZin(true); setTimeout(() => setToonZin(false), 2500); }} style={KNOP2}>👀 Laat nog eens zien</button>}
       </form>
       <div style={{ display: "flex", gap: 4, marginTop: 14 }}>

@@ -12,7 +12,7 @@ worden: gratis minimaal 2028." **Status: in uitvoering — zie § 0 Voortgang.**
 |---|---|---|
 | 1 | Gratis-tekst "t/m 31-12-2028" in LOWAN ronde 2 (ma 28 sep), België (1 okt), /nieuwkomers, landingspagina, llms | ✅ v751 (26 sep) |
 | 2 | Trede-indeling op /nieuwkomers + trede-testje trede 1 + diploma | ✅ v752 (26 sep) — lokaal getest (zakt 5/20, slaagt 20/20, diploma, UK/AR-tik); Mark: op telefoon doen |
-| 3 | Dictee op nieuwkomer-niveau (klankzuivere woordjes, steuntaal) | ✅ v753 (26 sep) — tegel "Dictee" op /nieuwkomers → /dictee in nieuwkomer-stand (20 woorden t-a-s/oo/aa/oe, zin tikbaar EN/AR/UK/TR, Charley langzamer, terug = /nieuwkomers); lokaal getest. Open: dictee-knoppen/Charley-tekst nog niet tikbaar |
+| 3 | Dictee op nieuwkomer-niveau (klankzuivere woordjes, steuntaal) | ✅ v753 (26 sep) — tegel "Dictee" op /nieuwkomers → /dictee in nieuwkomer-stand (20 woorden t-a-s/oo/aa/oe, zin tikbaar EN/AR/UK/TR, Charley langzamer, terug = /nieuwkomers); v758: hele scherm tikbaar |
 | 4 | Letters en klanken = trede 2 "Letters en woorden" + trede-testje 2 | ✅ v754-755 (27 sep): pad `letters-klanken-nieuwkomers` (klank vooraan · hakken/plakken · aa/oo/oe) + kopje Trede 2 (Letters en klanken + Dictee) + trede-testje 2 (12 vragen uit het pad + 8 "welk woord is goed geschreven?" uit het dictee, afleiders zijn géén echte woorden: tsa/tass). Gehaalde tredes per trede in `lk_nk_tredes` |
 | 5 | Instap-testje (bepaalt start-trede) | ✅ v756 (27 sep): blauwe kaart "Nieuw hier?" bovenaan (alleen zolang geen instap/trede gedaan); blok 1 = 6 vragen trede 1 (<5 goed → trede 1), blok 2 = 6 vragen trede 2 (<5 → trede 2, anders Verder oefenen); label "← Hier begin je" + pagina scrollt erheen; niets afgevinkt. `lk_nk_instap`, events nk_instap_*, nieuwkomers.sql blok 10. 3 scenario's lokaal getest |
 | 6 | Overstap-knop naar de gewone app (trede 4) | ✅ v757 (27 sep): kaart "Klaar voor de gewone Leerkwartier?" onderaan /nieuwkomers, groep 3-8 kiezen → groep vastgezet (zoals Mijn pagina) → start-kwartier; groen omrand na trede 2 of instap "Verder"; eerlijk: daar geen vertaalknop. Event nk_overstap |
@@ -120,7 +120,7 @@ digitale methode kost per leerling € 60-75 per jaar, een woordenschatmethode �
 - Start met bouwstap 2 (treden + trede-testje) of eerst 3 (nieuwkomer-dictee)?
 
 ## 8. Verfijnen terwijl stap 7 wacht (Claude, zonder Mark)
-- Dictee-scherm (knoppen, Charley-tekst) tikbaar maken in de 4 talen.
+- ✅ v758 (27 sep): dictee-scherm in nieuwkomer-stand tikbaar (start, geluidscheck, Charley-tekst, Bijna-uitleg per woord, knoppen, eindscherm); gewoon dictee ongewijzigd.
 - Vertaalknop in de gewone app na de overstap (steuntaal blijft bewaard in `lk_steuntaal`) — ontwerp eerst, is architectuur.
 - Moedertaalcheck AR/UK/TR van alle teksten van 26-27 sep (N5) — wacht op een moedertaalspreker.
 - Meten: nieuwkomers.sql blok 8-10 + event nk_overstap in het dagrapport; na de eerste echte klas: bijsturen.
