@@ -48,6 +48,23 @@ import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, UI_GETAL, maakS
 
 // Nieuwkomerpaden: korte titel ("Woorden" i.p.v. "Woorden — je eerste … (nieuwkomers)"), zodat hij
 // vertaalbaar is en niet over twee regels loopt (kliktest 26 sep 2026).
+// Voortgang op het apparaat zelf voor kinderen zonder naam (Mark "ga", 27 sep 2026). Sinds de
+// lek-fix (v760) bewaart de server voor naamloze kinderen zonder werkende login niets meer; dan
+// onthoudt dit apparaat de afgeronde delen, zodat het kind na herladen niet weer bij deel 1 begint.
+// Alleen voor naamloos: kinderen met een naam of account gebruiken de server.
+const LOKAAL_KEY = "lk_lp_klaar";
+function leesLokaal(pathId) {
+  try { const a = JSON.parse(localStorage.getItem(LOKAAL_KEY) || "{}")[pathId]; return Array.isArray(a) ? a : []; } catch { return []; }
+}
+function bewaarLokaal(pathId, stepIdx) {
+  try {
+    const alle = JSON.parse(localStorage.getItem(LOKAAL_KEY) || "{}");
+    const set = new Set(alle[pathId] || []); set.add(stepIdx);
+    alle[pathId] = [...set];
+    localStorage.setItem(LOKAAL_KEY, JSON.stringify(alle));
+  } catch { /* opslag is een extraatje */ }
+}
+
 const korteTitel = (path) => (path?.steunTeksten ? String(path.title).split(" — ")[0].replace(/\s*\((nieuwkomers)[^)]*\)\s*$/, "") : path?.title);
 import Picto from "../../shared/ui/Picto.jsx";
 import GratisLesmateriaal from "../../components/GratisLesmateriaal.jsx";
@@ -546,9 +563,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       try {
         // Eigen rijen ophalen: met account op user_id; met een echte naam ook de oude
         // naam-rijen zonder account. Naamloos zonder account: niets ophalen (niet te
-        // onderscheiden van andere naamloze kinderen) — voortgang blijft deze sessie in state.
+        // onderscheiden van andere naamloze kinderen) — dan alleen wat dit apparaat onthield (lk_lp_klaar).
         const uid = authUser?.id || null;
-        if (naamloos && !uid) return;
+        if (naamloos && !uid) { const lok = leesLokaal(pathId); if (!cancelled && lok.length) setCompletedSteps(new Set(lok)); return; }
         let q = supabase.from("learn_progress").select("step_idx").eq("learn_path_id", pathId);
         if (naamloos) q = q.eq("user_id", uid);
         else q = q.eq("player_name", player).or(uid ? `user_id.eq.${uid},user_id.is.null` : "user_id.is.null");
@@ -556,9 +573,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         if (cancelled) return;
         // supabase-js v2 throwt niet — error-veld expliciet checken (B0.4)
         if (error) console.warn("[LearnPath] voortgang laden faalde:", error.message);
-        if (Array.isArray(data) && data.length > 0) {
-          setCompletedSteps(new Set(data.map((r) => r.step_idx)));
-        }
+        const gedaan = [...(Array.isArray(data) ? data.map((r) => r.step_idx) : []), ...(naamloos ? leesLokaal(pathId) : [])];
+        if (gedaan.length > 0) setCompletedSteps(new Set(gedaan));
       } catch (e) {
         // stil falen
       } finally {
@@ -837,6 +853,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // tóch bewaard wordt in plaats van geruisloos te verdwijnen.
     const isRlsError = (e) => e && (e.code === "42501" || /row-level security|permission denied/i.test(e.message || ""));
     // Naamloos zonder account: niet opslaan als gedeelde "Speler"-rij (zie laden hierboven).
+    if (naamloos) bewaarLokaal(pathId, stepIdx);
     if (naamloos && !row.user_id) return;
     try {
       const { error } = await supabase.from("learn_progress").upsert(row, opts);
