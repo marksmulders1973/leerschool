@@ -49,6 +49,9 @@ const TAALKLAS = [
     return verweefVragen([w, z], AANTAL);
   } },
   { id: "rekentaal", titel: "Taalklas: rekentaal", uitleg: "Meer, minder, samen, weg, verdelen. Voor nieuwkomers.", laad: async () => (await laadPad("rekentaal-nieuwkomers", AANTAL)).vragen.slice(0, AANTAL) },
+  // 27 sep 2026 (doorgroeiplan trede 2): klanken hardop met de hele klas — hakken en plakken werkt
+  // juist goed klassikaal (samen t-a-s zeggen).
+  { id: "letters", titel: "Taalklas: letters en klanken", uitleg: "Welke klank hoor je? t-a-s wordt tas. aa, oo, oe. Voor nieuwkomers.", laad: async () => (await laadPad("letters-klanken-nieuwkomers", AANTAL)).vragen.slice(0, AANTAL) },
 ];
 
 const S = {

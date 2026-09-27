@@ -372,6 +372,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     return () => { cancelled = true; };
   }, [pathId, pathLoadPoging]);
   const player = (userName || "Speler").trim() || "Speler";
+  // Kind zonder naam (27 sep 2026, kliktocht): allemaal "Speler". Zonder eigen account-id mogen
+  // die NIET via de naam voortgang delen — anders ziet elk naamloos kind elkaars afgeronde delen.
+  const naamloos = player === "Speler";
 
   // Als initialStepIdx meegegeven is (vanuit toets-vraag), spring direct naar die stap.
   // Mark UX 2026-05-18: voor examen-paden (id begint met "examen-") skippen we
@@ -541,11 +544,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     let cancelled = false;
     (async () => {
       try {
-        const { data, error } = await supabase
-          .from("learn_progress")
-          .select("step_idx")
-          .eq("player_name", player)
-          .eq("learn_path_id", pathId);
+        // Eigen rijen ophalen: met account op user_id; met een echte naam ook de oude
+        // naam-rijen zonder account. Naamloos zonder account: niets ophalen (niet te
+        // onderscheiden van andere naamloze kinderen) — voortgang blijft deze sessie in state.
+        const uid = authUser?.id || null;
+        if (naamloos && !uid) return;
+        let q = supabase.from("learn_progress").select("step_idx").eq("learn_path_id", pathId);
+        if (naamloos) q = q.eq("user_id", uid);
+        else q = q.eq("player_name", player).or(uid ? `user_id.eq.${uid},user_id.is.null` : "user_id.is.null");
+        const { data, error } = await q;
         if (cancelled) return;
         // supabase-js v2 throwt niet — error-veld expliciet checken (B0.4)
         if (error) console.warn("[LearnPath] voortgang laden faalde:", error.message);
@@ -561,7 +568,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     return () => {
       cancelled = true;
     };
-  }, [pathId, player]);
+  }, [pathId, player, authUser?.id]); // eslint-disable-line react-hooks/exhaustive-deps
 
   // Hooks (incl. useMemo) MOETEN vóór elke conditional early-return staan,
   // anders breekt de rules-of-hooks zodra `path` van null naar geladen gaat.
@@ -829,10 +836,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // fout terug te vallen op user_id=null (legacy naamloos) zodat de voortgang
     // tóch bewaard wordt in plaats van geruisloos te verdwijnen.
     const isRlsError = (e) => e && (e.code === "42501" || /row-level security|permission denied/i.test(e.message || ""));
+    // Naamloos zonder account: niet opslaan als gedeelde "Speler"-rij (zie laden hierboven).
+    if (naamloos && !row.user_id) return;
     try {
       const { error } = await supabase.from("learn_progress").upsert(row, opts);
       if (error) {
-        const fallbackRow = isRlsError(error) && row.user_id != null ? { ...row, user_id: null } : row;
+        const fallbackRow = isRlsError(error) && row.user_id != null && !naamloos ? { ...row, user_id: null } : row;
         await new Promise((r) => setTimeout(r, 1500));
         const { error: retryError } = await supabase.from("learn_progress").upsert(fallbackRow, opts);
         if (retryError) console.warn("[LearnPath] voortgang NIET opgeslagen:", retryError.message);

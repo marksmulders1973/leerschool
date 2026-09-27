@@ -27,7 +27,8 @@ const TREDES = {
 // letters omgewisseld (tas → tsa, klankvolgorde) en een dubbele eindletter (tas → tass).
 const KADER = { en: "Which word is spelled correctly?", ar: "أي كلمة مكتوبة بشكل صحيح؟", uk: "Яке слово написане правильно?", tr: "Hangi kelime doğru yazılmış?" };
 function spellingOpties(w) {
-  const om = w.slice(0, -2) + w[w.length - 1] + w[w.length - 2];
+  let om = w.slice(0, -2) + w[w.length - 1] + w[w.length - 2];
+  if (om === "bla") om = "abl"; // 'bla' is zelf een woord(je) → eerste twee letters omdraaien
   const dubbel = w + w[w.length - 1];
   return [w, om, dubbel];
 }
