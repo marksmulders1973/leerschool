@@ -65,3 +65,7 @@ select count(distinct props->>'uid') filter (where name='nk_instap_open') geopen
   count(*) filter (where name='nk_instap_klaar' and props->>'start'='2') start_trede2,
   count(*) filter (where name='nk_instap_klaar' and props->>'start'='3') start_verder
 from events_mens where name like 'nk_instap_%';
+
+-- 11) Overstap naar de gewone app (v757, stap 6): welke groep, na welke tredes
+select props->>'groep' groep, props->>'tredes' tredes, count(distinct props->>'uid') apparaten
+from events_mens where name = 'nk_overstap' group by 1,2 order by 3 desc;

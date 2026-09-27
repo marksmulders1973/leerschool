@@ -6,7 +6,7 @@ worden: gratis minimaal 2028." **Status: in uitvoering — zie § 0 Voortgang.**
 
 ## 0. Voortgang (bijwerken na elke stap — staat ook in docs/NOG-NALOPEN.md → dagrapport)
 
-**Nu: stap 5 van 7 klaar → volgende = stap 6 (overstap-knop naar de gewone app).**
+**Nu: stap 6 van 7 klaar → stap 7 (klasoverzicht juf, betaald) is 🔒 geblokkeerd tot KvK + verwerkersovereenkomst + 5-10 echte taalklassen. Tussendoor: verfijnen (zie § 8).**
 
 | Stap | Wat | Status |
 |---|---|---|
@@ -15,7 +15,7 @@ worden: gratis minimaal 2028." **Status: in uitvoering — zie § 0 Voortgang.**
 | 3 | Dictee op nieuwkomer-niveau (klankzuivere woordjes, steuntaal) | ✅ v753 (26 sep) — tegel "Dictee" op /nieuwkomers → /dictee in nieuwkomer-stand (20 woorden t-a-s/oo/aa/oe, zin tikbaar EN/AR/UK/TR, Charley langzamer, terug = /nieuwkomers); lokaal getest. Open: dictee-knoppen/Charley-tekst nog niet tikbaar |
 | 4 | Letters en klanken = trede 2 "Letters en woorden" + trede-testje 2 | ✅ v754-755 (27 sep): pad `letters-klanken-nieuwkomers` (klank vooraan · hakken/plakken · aa/oo/oe) + kopje Trede 2 (Letters en klanken + Dictee) + trede-testje 2 (12 vragen uit het pad + 8 "welk woord is goed geschreven?" uit het dictee, afleiders zijn géén echte woorden: tsa/tass). Gehaalde tredes per trede in `lk_nk_tredes` |
 | 5 | Instap-testje (bepaalt start-trede) | ✅ v756 (27 sep): blauwe kaart "Nieuw hier?" bovenaan (alleen zolang geen instap/trede gedaan); blok 1 = 6 vragen trede 1 (<5 goed → trede 1), blok 2 = 6 vragen trede 2 (<5 → trede 2, anders Verder oefenen); label "← Hier begin je" + pagina scrollt erheen; niets afgevinkt. `lk_nk_instap`, events nk_instap_*, nieuwkomers.sql blok 10. 3 scenario's lokaal getest |
-| 6 | Overstap-knop naar de gewone app (trede 4) | ⏳ volgende |
+| 6 | Overstap-knop naar de gewone app (trede 4) | ✅ v757 (27 sep): kaart "Klaar voor de gewone Leerkwartier?" onderaan /nieuwkomers, groep 3-8 kiezen → groep vastgezet (zoals Mijn pagina) → start-kwartier; groen omrand na trede 2 of instap "Verder"; eerlijk: daar geen vertaalknop. Event nk_overstap |
 | 7 | Klasoverzicht juf (betaalde kant) | 🔒 pas na KvK + verwerkersovereenkomst + 5-10 echte taalklassen |
 
 Meten: `docs/sql/nieuwkomers.sql` blok 8 (trede-testje: geopend → gestart → klaar → geslaagd → geprint).
@@ -118,3 +118,9 @@ digitale methode kost per leerling € 60-75 per jaar, een woordenschatmethode �
 - Gratis-belofte kind-kant: t/m 31-12-2028 (jouw voorstel) of meteen gelijk met oefenen t/m 2031?
 - Mogen de vroege scholen het klasoverzicht ook gratis t/m 2028 (zoals partnercodes)?
 - Start met bouwstap 2 (treden + trede-testje) of eerst 3 (nieuwkomer-dictee)?
+
+## 8. Verfijnen terwijl stap 7 wacht (Claude, zonder Mark)
+- Dictee-scherm (knoppen, Charley-tekst) tikbaar maken in de 4 talen.
+- Vertaalknop in de gewone app na de overstap (steuntaal blijft bewaard in `lk_steuntaal`) — ontwerp eerst, is architectuur.
+- Moedertaalcheck AR/UK/TR van alle teksten van 26-27 sep (N5) — wacht op een moedertaalspreker.
+- Meten: nieuwkomers.sql blok 8-10 + event nk_overstap in het dagrapport; na de eerste echte klas: bijsturen.

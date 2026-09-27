@@ -1660,7 +1660,16 @@ export default function App() {
         <Suspense fallback={<PageLoader />}>
           <NieuwkomersPage onHome={goHome}
             onLeerpad={(id) => { setActiveLearnPathId(id); setActiveLearnStepIdx(null); setLearnPathReturnPage("nieuwkomers"); setPage("learn-path"); }}
-            onPagina={(p) => setPage(p)} />
+            onPagina={(p) => setPage(p)}
+            onOverstap={(g) => {
+              // Doorgroeiplan stap 6: nieuwkomer → gewone app. Groep vastzetten zoals op Mijn pagina.
+              const lvl = String(g);
+              setUserLevel(lvl);
+              try { localStorage.setItem("ls_user", JSON.stringify({ name: userName, level: lvl, role, schoolType: userSchoolType || "" })); } catch { /* */ }
+              if (authUser) upsertProfile({ userId: authUser.id, displayName: userName, level: lvl, role, schoolType: userSchoolType || "" });
+              setPage("start-kwartier");
+              try { window.scrollTo({ top: 0 }); } catch { /* */ }
+            }} />
         </Suspense>
       )}
       {page === "spelletje" && (
