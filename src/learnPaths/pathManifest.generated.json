@@ -4779,6 +4779,29 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "letters-klanken-nieuwkomers",
+    "file": "./lettersKlankenNieuwkomers.js",
+    "title": "Letters en klanken — lezen en schrijven in het Nederlands (nieuwkomers)",
+    "subject": "taal",
+    "level": "groep3-4",
+    "emoji": "🔤",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Beginnende geletterdheid — klanken en letters",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "letters",
+      "klanken",
+      "hakken en plakken",
+      "leren lezen",
+      "nt2"
+    ],
+    "intro": "Welke klank hoor je? Hakken en plakken: t-a-s wordt tas. En twee letters die samen één klank maken: aa, oo, oe. Met steun in je eigen taal. ~10 min.",
+    "stepCount": 3,
+    "checkCount": 15,
+    "chapterCount": 3,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "lichaam-gezondheid-po",
     "file": "./lichaamGezondheidPo.js",
     "title": "Het lichaam + gezondheid (groep 6-8)",
@@ -9129,7 +9152,7 @@
       "nederlands leren",
       "de het"
     ],
-    "intro": "Vijfentwintig woorden voor school, thuis, eten, lichaam, kleuren, doe-woorden en gevoelens. Lees de vraag en kies het goede woord. Tik op een woord als je het niet kent. ~15 min.",
+    "intro": "Vijfentwintig woorden voor school, thuis, eten, lichaam, kleuren, doe-woorden en gevoelens. Lees de vraag en kies het goede woord. Ken je een woord niet? Tik op het knopje ernaast. ~15 min.",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
