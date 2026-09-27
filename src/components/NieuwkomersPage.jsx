@@ -16,7 +16,14 @@ const NieuwkomersHerhaal = lazy(() => import("./NieuwkomersHerhaal.jsx"));
 // Doorgroeiplan stap 2 (26 sep 2026): trede-testje na tegels 1-4.
 const NieuwkomersTredeTest = lazy(() => import("./NieuwkomersTredeTest.jsx"));
 const TREDE_KEY = "lk_nk_trede";
-const leesTrede = () => { try { return Number(localStorage.getItem(TREDE_KEY)) || 0; } catch { return 0; } };
+// Welke tredes zijn gehaald (lk_nk_tredes, sinds v755); oudere apparaten hebben alleen lk_nk_trede = 1.
+const leesTrede = () => {
+  try {
+    const g = JSON.parse(localStorage.getItem("lk_nk_tredes") || "null");
+    if (Array.isArray(g)) return g;
+    return Number(localStorage.getItem(TREDE_KEY)) >= 1 ? [1] : [];
+  } catch { return []; }
+};
 const TREDE_1_AANTAL = 4; // tegels 1-4 = trede 1 "Welkom"
 const TREDE_2_AANTAL = 2; // tegels 5-6 = trede 2 "Letters en woorden" (doorgroeiplan stap 4)
 
@@ -58,11 +65,13 @@ const T = {
     testKop: "Trede-testje",
     testUitleg: "Klaar met 1 tot en met 4? Doe het testje en haal je diploma.",
     testGehaald: "Trede 1 gehaald! Je mag het testje altijd opnieuw doen.",
+    testUitleg2: "Klaar met 5 en 6? Doe het testje en haal je diploma.",
+    testGehaald2: "Trede 2 gehaald! Je mag het testje altijd opnieuw doen.",
   },
-  en: { trede1: "Step 1 · Welcome", trede2: "Step 2 · Letters and words", verder: "Keep practising", testKop: "Step test", testUitleg: "Done with 1 to 4? Do the test and get your certificate.", testGehaald: "Step 1 passed! You can always do the test again.", herhaalKop: "Practise again today", herhaalUitleg: "Words and sentences from before. This way you remember them.", sub: "Free. No account. Short sentences. Every sum with an explanation.", juf: "For the teacher: everything on this page is free, also on the classroom board, guaranteed until 31 December 2028. Write the code WELKOMNIEUWKOMER on the board; every child will come here.", tegels: [["In class","What do you say to the teacher? How do you make friends?"],["Words","Your first Dutch words. Tap the small button next to a word to see it in your language."],["Maths words","More, less, together, away, sharing: the words in every maths lesson."],["Counting to 20","Counting, adding and taking away. You may use your fingers."],["Letters and sounds","Which sound do you hear? t-a-s becomes tas."],["Dictation","Charley says a word. You write it. Every letter is a sound."],["Counting to 100","Tens and ones. Jumps of 10."],["Reading","Start with five short sentences. The button reads them aloud."],["Times tables","A little bit at a time."]], taalvraag: "Which language do you speak at home?", taaluitleg: "Everything stays in Dutch. Tap a sentence, or the small button next to an answer, to see your language.", intro: "This is for children who are still learning Dutch. Start at 1. Do a little every day.", voorlees: "Everywhere there is a button 'Lees voor' (read aloud). Press it to hear the text." },
-  ar: { trede1: "الدرجة 1 · أهلًا", trede2: "الدرجة 2 · الحروف والكلمات", verder: "تابع التدريب", testKop: "اختبار الدرجة", testUitleg: "انتهيت من 1 إلى 4؟ قم بالاختبار واحصل على شهادتك.", testGehaald: "نجحت في الدرجة 1! يمكنك إعادة الاختبار دائمًا.", herhaalKop: "مراجعة اليوم", herhaalUitleg: "كلمات وجمل من قبل. هكذا تتذكّرها.", sub: "مجاني. بدون حساب. جمل قصيرة. كل عملية حسابية مع شرح.", juf: "للمعلّم: كل شيء في هذه الصفحة مجاني، أيضًا على السبّورة الذكية، ومضمون حتى 31 ديسمبر 2028. اكتب الرمز WELKOMNIEUWKOMER على السبّورة؛ وسيصل كل طفل إلى هنا.", tegels: [["في الصف","ماذا تقول للمعلّمة؟ كيف تكوّن أصدقاء؟"],["كلمات","أول كلماتك الهولندية. اضغط على الزر الصغير بجانب الكلمة لتراها بلغتك."],["كلمات الحساب","أكثر، أقل، معًا، ذهب، التوزيع: الكلمات في كل درس حساب."],["الحساب حتى 20","العدّ والجمع والطرح. يمكنك استخدام أصابعك."],["الحروف والأصوات","أي صوت تسمع؟ t-a-s تصبح tas."],["إملاء","تشارلي يقول كلمة. أنت تكتبها. كل حرف هو صوت."],["الحساب حتى 100","العشرات والآحاد. قفزات من 10."],["القراءة","ابدأ بخمس جمل قصيرة. الزر يقرأها بصوت عالٍ."],["جداول الضرب","قليلًا في كل مرة."]], taalvraag: "ما هي اللغة التي تتكلمها في البيت؟", taaluitleg: "كل شيء يبقى بالهولندية. اضغط على الجملة أو على الزر الصغير بجانب الجواب لترى لغتك.", intro: "هذا للأطفال الذين ما زالوا يتعلمون الهولندية. ابدأ من 1. تعلّم قليلًا كل يوم.", voorlees: "في كل مكان يوجد زر 'Lees voor' (اقرأ بصوت عالٍ). اضغط عليه لتسمع النص." },
-  uk: { trede1: "Сходинка 1 · Ласкаво просимо", trede2: "Сходинка 2 · Літери й слова", verder: "Тренуйся далі", testKop: "Тест сходинки", testUitleg: "Закінчив 1–4? Пройди тест і отримай диплом.", testGehaald: "Сходинку 1 пройдено! Тест можна пройти ще раз будь-коли.", herhaalKop: "Повторити сьогодні", herhaalUitleg: "Слова і речення, які ти вже вчив. Так ти їх запам'ятаєш.", sub: "Безкоштовно. Без акаунта. Короткі речення. Кожен приклад із поясненням.", juf: "Для вчителя: усе на цій сторінці безкоштовне, також на інтерактивній дошці, гарантовано до 31 грудня 2028 року. Напишіть на дошці код WELKOMNIEUWKOMER — і кожна дитина потрапить сюди.", tegels: [["У класі","Що ти кажеш учительці? Як знайти друзів?"],["Слова","Твої перші нідерландські слова. Натисни на кнопочку біля слова, щоб побачити його своєю мовою."],["Слова для математики","Більше, менше, разом, забрали, поділити: слова з кожного уроку математики."],["Рахуємо до 20","Лічба, додавання і віднімання. Можна на пальцях."],["Літери й звуки","Який звук ти чуєш? t-a-s стає tas."],["Диктант","Чарлі каже слово. Ти його пишеш. Кожна літера — це звук."],["Рахуємо до 100","Десятки й одиниці. Стрибки по 10."],["Читання","Почни з п'яти коротких речень. Кнопка читає вголос."],["Таблиця множення","Потроху."]], taalvraag: "Якою мовою ти розмовляєш удома?", taaluitleg: "Усе залишається нідерландською. Натисни на речення або на кнопочку біля відповіді, щоб побачити свою мову.", intro: "Це для дітей, які ще вчать нідерландську. Почни з 1. Займайся потроху щодня.", voorlees: "Скрізь є кнопка 'Lees voor' (прочитати вголос). Натисни її, щоб почути текст." },
-  tr: { trede1: "1. basamak · Hoş geldin", trede2: "2. basamak · Harfler ve kelimeler", verder: "Çalışmaya devam", testKop: "Basamak testi", testUitleg: "1-4 bitti mi? Testi yap ve diplomanı al.", testGehaald: "1. basamak geçildi! Testi istediğin zaman tekrar yapabilirsin.", herhaalKop: "Bugün tekrar et", herhaalUitleg: "Daha önceki kelimeler ve cümleler. Böylece onları hatırlarsın.", sub: "Ücretsiz. Hesap yok. Kısa cümleler. Her işlem açıklamalı.", juf: "Öğretmen için: bu sayfadaki her şey ücretsizdir, akıllı tahtada da; 31 Aralık 2028'e kadar garantili. WELKOMNIEUWKOMER kodunu tahtaya yazın; her çocuk buraya gelir.", tegels: [["Sınıfta","Öğretmene ne dersin? Nasıl arkadaş edinirsin?"],["Kelimeler","İlk Hollandaca kelimelerin. Kelimenin yanındaki küçük düğmeye dokun, kendi dilinde gör."],["Matematik kelimeleri","Daha çok, daha az, birlikte, gitti, paylaştırmak: her matematik dersindeki kelimeler."],["20'ye kadar sayılar","Saymak, toplamak ve çıkarmak. Parmaklarını kullanabilirsin."],["Harfler ve sesler","Hangi sesi duyuyorsun? t-a-s, tas olur."],["Dikte","Charley bir kelime söyler. Sen yazarsın. Her harf bir sestir."],["100'e kadar sayılar","Onluklar ve birlikler. 10'ar atlamalar."],["Okuma","Beş kısa cümleyle başla. Düğme sesli okur."],["Çarpım tablosu","Her seferinde biraz."]], taalvraag: "Evde hangi dili konuşuyorsun?", taaluitleg: "Her şey Hollandaca kalır. Bir cümleye ya da cevabın yanındaki küçük düğmeye dokun, kendi dilini görürsün.", intro: "Bu, hâlâ Hollandaca öğrenen çocuklar için. 1'den başla. Her gün biraz yap.", voorlees: "Her yerde 'Lees voor' (sesli oku) düğmesi var. Metni duymak için bas." },
+  en: { testUitleg2: "Done with 5 and 6? Do the test and get your certificate.", testGehaald2: "Step 2 passed! You can always do the test again.", trede1: "Step 1 · Welcome", trede2: "Step 2 · Letters and words", verder: "Keep practising", testKop: "Step test", testUitleg: "Done with 1 to 4? Do the test and get your certificate.", testGehaald: "Step 1 passed! You can always do the test again.", herhaalKop: "Practise again today", herhaalUitleg: "Words and sentences from before. This way you remember them.", sub: "Free. No account. Short sentences. Every sum with an explanation.", juf: "For the teacher: everything on this page is free, also on the classroom board, guaranteed until 31 December 2028. Write the code WELKOMNIEUWKOMER on the board; every child will come here.", tegels: [["In class","What do you say to the teacher? How do you make friends?"],["Words","Your first Dutch words. Tap the small button next to a word to see it in your language."],["Maths words","More, less, together, away, sharing: the words in every maths lesson."],["Counting to 20","Counting, adding and taking away. You may use your fingers."],["Letters and sounds","Which sound do you hear? t-a-s becomes tas."],["Dictation","Charley says a word. You write it. Every letter is a sound."],["Counting to 100","Tens and ones. Jumps of 10."],["Reading","Start with five short sentences. The button reads them aloud."],["Times tables","A little bit at a time."]], taalvraag: "Which language do you speak at home?", taaluitleg: "Everything stays in Dutch. Tap a sentence, or the small button next to an answer, to see your language.", intro: "This is for children who are still learning Dutch. Start at 1. Do a little every day.", voorlees: "Everywhere there is a button 'Lees voor' (read aloud). Press it to hear the text." },
+  ar: { testUitleg2: "انتهيت من 5 و 6؟ قم بالاختبار واحصل على شهادتك.", testGehaald2: "نجحت في الدرجة 2! يمكنك إعادة الاختبار دائمًا.", trede1: "الدرجة 1 · أهلًا", trede2: "الدرجة 2 · الحروف والكلمات", verder: "تابع التدريب", testKop: "اختبار الدرجة", testUitleg: "انتهيت من 1 إلى 4؟ قم بالاختبار واحصل على شهادتك.", testGehaald: "نجحت في الدرجة 1! يمكنك إعادة الاختبار دائمًا.", herhaalKop: "مراجعة اليوم", herhaalUitleg: "كلمات وجمل من قبل. هكذا تتذكّرها.", sub: "مجاني. بدون حساب. جمل قصيرة. كل عملية حسابية مع شرح.", juf: "للمعلّم: كل شيء في هذه الصفحة مجاني، أيضًا على السبّورة الذكية، ومضمون حتى 31 ديسمبر 2028. اكتب الرمز WELKOMNIEUWKOMER على السبّورة؛ وسيصل كل طفل إلى هنا.", tegels: [["في الصف","ماذا تقول للمعلّمة؟ كيف تكوّن أصدقاء؟"],["كلمات","أول كلماتك الهولندية. اضغط على الزر الصغير بجانب الكلمة لتراها بلغتك."],["كلمات الحساب","أكثر، أقل، معًا، ذهب، التوزيع: الكلمات في كل درس حساب."],["الحساب حتى 20","العدّ والجمع والطرح. يمكنك استخدام أصابعك."],["الحروف والأصوات","أي صوت تسمع؟ t-a-s تصبح tas."],["إملاء","تشارلي يقول كلمة. أنت تكتبها. كل حرف هو صوت."],["الحساب حتى 100","العشرات والآحاد. قفزات من 10."],["القراءة","ابدأ بخمس جمل قصيرة. الزر يقرأها بصوت عالٍ."],["جداول الضرب","قليلًا في كل مرة."]], taalvraag: "ما هي اللغة التي تتكلمها في البيت؟", taaluitleg: "كل شيء يبقى بالهولندية. اضغط على الجملة أو على الزر الصغير بجانب الجواب لترى لغتك.", intro: "هذا للأطفال الذين ما زالوا يتعلمون الهولندية. ابدأ من 1. تعلّم قليلًا كل يوم.", voorlees: "في كل مكان يوجد زر 'Lees voor' (اقرأ بصوت عالٍ). اضغط عليه لتسمع النص." },
+  uk: { testUitleg2: "Закінчив 5 і 6? Пройди тест і отримай диплом.", testGehaald2: "Сходинку 2 пройдено! Тест можна пройти ще раз будь-коли.", trede1: "Сходинка 1 · Ласкаво просимо", trede2: "Сходинка 2 · Літери й слова", verder: "Тренуйся далі", testKop: "Тест сходинки", testUitleg: "Закінчив 1–4? Пройди тест і отримай диплом.", testGehaald: "Сходинку 1 пройдено! Тест можна пройти ще раз будь-коли.", herhaalKop: "Повторити сьогодні", herhaalUitleg: "Слова і речення, які ти вже вчив. Так ти їх запам'ятаєш.", sub: "Безкоштовно. Без акаунта. Короткі речення. Кожен приклад із поясненням.", juf: "Для вчителя: усе на цій сторінці безкоштовне, також на інтерактивній дошці, гарантовано до 31 грудня 2028 року. Напишіть на дошці код WELKOMNIEUWKOMER — і кожна дитина потрапить сюди.", tegels: [["У класі","Що ти кажеш учительці? Як знайти друзів?"],["Слова","Твої перші нідерландські слова. Натисни на кнопочку біля слова, щоб побачити його своєю мовою."],["Слова для математики","Більше, менше, разом, забрали, поділити: слова з кожного уроку математики."],["Рахуємо до 20","Лічба, додавання і віднімання. Можна на пальцях."],["Літери й звуки","Який звук ти чуєш? t-a-s стає tas."],["Диктант","Чарлі каже слово. Ти його пишеш. Кожна літера — це звук."],["Рахуємо до 100","Десятки й одиниці. Стрибки по 10."],["Читання","Почни з п'яти коротких речень. Кнопка читає вголос."],["Таблиця множення","Потроху."]], taalvraag: "Якою мовою ти розмовляєш удома?", taaluitleg: "Усе залишається нідерландською. Натисни на речення або на кнопочку біля відповіді, щоб побачити свою мову.", intro: "Це для дітей, які ще вчать нідерландську. Почни з 1. Займайся потроху щодня.", voorlees: "Скрізь є кнопка 'Lees voor' (прочитати вголос). Натисни її, щоб почути текст." },
+  tr: { testUitleg2: "5 ve 6 bitti mi? Testi yap ve diplomanı al.", testGehaald2: "2. basamak geçildi! Testi istediğin zaman tekrar yapabilirsin.", trede1: "1. basamak · Hoş geldin", trede2: "2. basamak · Harfler ve kelimeler", verder: "Çalışmaya devam", testKop: "Basamak testi", testUitleg: "1-4 bitti mi? Testi yap ve diplomanı al.", testGehaald: "1. basamak geçildi! Testi istediğin zaman tekrar yapabilirsin.", herhaalKop: "Bugün tekrar et", herhaalUitleg: "Daha önceki kelimeler ve cümleler. Böylece onları hatırlarsın.", sub: "Ücretsiz. Hesap yok. Kısa cümleler. Her işlem açıklamalı.", juf: "Öğretmen için: bu sayfadaki her şey ücretsizdir, akıllı tahtada da; 31 Aralık 2028'e kadar garantili. WELKOMNIEUWKOMER kodunu tahtaya yazın; her çocuk buraya gelir.", tegels: [["Sınıfta","Öğretmene ne dersin? Nasıl arkadaş edinirsin?"],["Kelimeler","İlk Hollandaca kelimelerin. Kelimenin yanındaki küçük düğmeye dokun, kendi dilinde gör."],["Matematik kelimeleri","Daha çok, daha az, birlikte, gitti, paylaştırmak: her matematik dersindeki kelimeler."],["20'ye kadar sayılar","Saymak, toplamak ve çıkarmak. Parmaklarını kullanabilirsin."],["Harfler ve sesler","Hangi sesi duyuyorsun? t-a-s, tas olur."],["Dikte","Charley bir kelime söyler. Sen yazarsın. Her harf bir sestir."],["100'e kadar sayılar","Onluklar ve birlikler. 10'ar atlamalar."],["Okuma","Beş kısa cümleyle başla. Düğme sesli okur."],["Çarpım tablosu","Her seferinde biraz."]], taalvraag: "Evde hangi dili konuşuyorsun?", taaluitleg: "Her şey Hollandaca kalır. Bir cümleye ya da cevabın yanındaki küçük düğmeye dokun, kendi dilini görürsün.", intro: "Bu, hâlâ Hollandaca öğrenen çocuklar için. 1'den başla. Her gün biraz yap.", voorlees: "Her yerde 'Lees voor' (sesli oku) düğmesi var. Metni duymak için bas." },
 };
 
 export function leesSteuntaal() { try { return localStorage.getItem(STEUNTAAL_KEY) || "nl"; } catch { return "nl"; } }
@@ -93,6 +102,29 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
     if (tegel.nk) { try { sessionStorage.setItem("lk_dictee_nk", "1"); } catch { /* */ } }
     if (tegel.soort === "pad") onLeerpad && onLeerpad(tegel.id);
     else onPagina && onPagina(tegel.id);
+  };
+  // Trede-testje-kaart onder de tegels van trede n (doorgroeiplan stap 2 en 4).
+  const testKaart = (n) => {
+    const ok = trede.includes(n);
+    const uitleg = (x) => (ok ? x[`testGehaald${n === 1 ? "" : n}`] : x[`testUitleg${n === 1 ? "" : n}`]);
+    return (
+      <button type="button" onClick={() => { setTredeTest(n); try { track("nk_tredetest_open", { trede: n, gehaald: ok, taal }); } catch { /* */ } }} style={{
+        display: "flex", alignItems: "center", gap: 16, textAlign: "left", width: "100%",
+        background: ok ? "#d7f5df" : "#fff4cc", color: "#0f2a44", border: "3px dashed " + (ok ? "#1b7f3b" : "#e0a800"), borderRadius: 18, padding: "14px 18px", cursor: "pointer",
+      }}>
+        <div style={{ width: 44, height: 44, borderRadius: 12, background: ok ? "#1b7f3b" : "#e0a800", color: "#fff", display: "grid", placeItems: "center", fontWeight: 900, fontSize: 22, flex: "none" }}>{ok ? "✓" : "?"}</div>
+        <div style={{ flex: 1 }}>
+          <div style={{ fontSize: "clamp(19px, 5vw, 22px)", fontWeight: 900 }}>{t.testKop}</div>
+          <div style={{ fontSize: 15, fontWeight: 600, marginTop: 2 }}>{uitleg(t)}</div>
+          {taal !== "nl" && uitleg(s) && (
+            <div dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ fontSize: 14, fontWeight: 700, color: "#6b4a00", background: "rgba(255,255,255,.7)", borderRadius: 8, padding: "4px 8px", marginTop: 6 }}>
+              {s.testKop} — {uitleg(s)}
+            </div>
+          )}
+        </div>
+        <div style={{ fontSize: 26, fontWeight: 900, opacity: .5 }}>›</div>
+      </button>
+    );
   };
   const Steun = ({ veld, klein }) => (taal === "nl" ? null : <span dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ display: "block", fontWeight: 600, opacity: .85, fontSize: klein ? 13.5 : 16, marginTop: 4 }}>{s[veld]}</span>);
 
@@ -126,7 +158,7 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
 
         {tredeTest ? (
           <Suspense fallback={null}>
-            <NieuwkomersTredeTest onKlaar={() => { setTredeTest(false); setTrede(leesTrede()); setTeHerhalen(aantalTeHerhalen()); }} />
+            <NieuwkomersTredeTest trede={tredeTest} onKlaar={() => { setTredeTest(false); setTrede(leesTrede()); setTeHerhalen(aantalTeHerhalen()); }} />
           </Suspense>
         ) : herhaal ? (
           <Suspense fallback={null}>
@@ -178,24 +210,8 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome }) {
               </div>
               <div style={{ fontSize: 26, fontWeight: 900, opacity: .5 }}>›</div>
             </button>
-            {i === TREDE_1_AANTAL - 1 && (
-              <button type="button" onClick={() => { setTredeTest(true); try { track("nk_tredetest_open", { trede: 1, gehaald: trede >= 1, taal }); } catch { /* */ } }} style={{
-                display: "flex", alignItems: "center", gap: 16, textAlign: "left", width: "100%",
-                background: trede >= 1 ? "#d7f5df" : "#fff4cc", color: "#0f2a44", border: "3px dashed " + (trede >= 1 ? "#1b7f3b" : "#e0a800"), borderRadius: 18, padding: "14px 18px", cursor: "pointer",
-              }}>
-                <div style={{ width: 44, height: 44, borderRadius: 12, background: trede >= 1 ? "#1b7f3b" : "#e0a800", color: "#fff", display: "grid", placeItems: "center", fontWeight: 900, fontSize: 22, flex: "none" }}>{trede >= 1 ? "✓" : "?"}</div>
-                <div style={{ flex: 1 }}>
-                  <div style={{ fontSize: "clamp(19px, 5vw, 22px)", fontWeight: 900 }}>{t.testKop}</div>
-                  <div style={{ fontSize: 15, fontWeight: 600, marginTop: 2 }}>{trede >= 1 ? t.testGehaald : t.testUitleg}</div>
-                  {taal !== "nl" && (
-                    <div dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ fontSize: 14, fontWeight: 700, color: "#6b4a00", background: "rgba(255,255,255,.7)", borderRadius: 8, padding: "4px 8px", marginTop: 6 }}>
-                      {s.testKop} — {trede >= 1 ? s.testGehaald : s.testUitleg}
-                    </div>
-                  )}
-                </div>
-                <div style={{ fontSize: 26, fontWeight: 900, opacity: .5 }}>›</div>
-              </button>
-            )}
+            {i === TREDE_1_AANTAL - 1 && testKaart(1)}
+            {i === TREDE_1_AANTAL + TREDE_2_AANTAL - 1 && testKaart(2)}
             </Fragment>
           ))}
         </div>}

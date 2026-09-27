@@ -14,8 +14,33 @@ import MdInline from "../shared/ui/MdInline.jsx";
 
 export const TREDE_KEY = "lk_nk_trede";
 export const TREDE_1_PADEN = ["in-de-klas-nieuwkomers", "woorden-nieuwkomers", "rekentaal-nieuwkomers", "rekenen-tot-20-nieuwkomers"];
-const PER_PAD = 5;
 const GRENS = 0.8;
+// Per trede: welke paden (en hoeveel vragen per pad) + extra vragen. Trede 2 (stap 4, 27 sep):
+// 12 vragen uit Letters en klanken + 8 "welk woord is goed geschreven?" uit het nieuwkomer-dictee.
+const TREDES = {
+  1: { paden: TREDE_1_PADEN, perPad: 5, naam: "Trede 1 · Welkom", onderdelen: "In de klas · Woorden · Rekentaal · Rekenen tot 20" },
+  2: { paden: ["letters-klanken-nieuwkomers"], perPad: 12, spelling: 8, naam: "Trede 2 · Letters en woorden", onderdelen: "Letters en klanken · Dictee" },
+};
+
+// "Welk woord is goed geschreven?" — uit de dicteezinnen (DICTEE[NK_GROEP]). Foute opties zijn
+// bewust géén echte woorden (anders is 'pen/pan' allebei goed geschreven): de laatste twee
+// letters omgewisseld (tas → tsa, klankvolgorde) en een dubbele eindletter (tas → tass).
+const KADER = { en: "Which word is spelled correctly?", ar: "أي كلمة مكتوبة بشكل صحيح؟", uk: "Яке слово написане правильно?", tr: "Hangi kelime doğru yazılmış?" };
+function spellingOpties(w) {
+  const om = w.slice(0, -2) + w[w.length - 1] + w[w.length - 2];
+  const dubbel = w + w[w.length - 1];
+  return [w, om, dubbel];
+}
+async function spellingVragen(n) {
+  const { DICTEE, NK_GROEP } = await import("../features/dictee/dicteeData.js");
+  return schud(DICTEE[NK_GROEP] || []).slice(0, n).map((it) => {
+    const zin = it.zin.replace(it.woord, "___");
+    return {
+      pad: "dictee-nieuwkomers", stap: 0, origAntwoord: it.woord,
+      check: { q: `Welk woord is goed geschreven? ${zin}`, steun: Object.fromEntries(Object.entries(it.steun || {}).map(([t, z]) => [t, `${KADER[t] || ""} ${z}`])), options: spellingOpties(it.woord), answer: 0 },
+    };
+  });
+}
 
 // Hoogste gehaalde trede op dit apparaat (0 = nog geen).
 export function gehaaldeTrede() {
@@ -29,6 +54,7 @@ const TEST_STEUN = {
   "Niet goed": { en: "Not correct", ar: "غير صحيح", uk: "Неправильно", tr: "Doğru değil" },
   "Volgende": { en: "Next", ar: "التالي", uk: "Далі", tr: "Sonraki" },
   "Gehaald! Trede 1 is klaar.": { en: "Passed! Step 1 is done.", ar: "نجحت! الدرجة 1 انتهت.", uk: "Склав! Сходинка 1 пройдена.", tr: "Geçtin! 1. basamak bitti." },
+  "Gehaald! Trede 2 is klaar.": { en: "Passed! Step 2 is done.", ar: "نجحت! الدرجة 2 انتهت.", uk: "Склав! Сходинка 2 пройдена.", tr: "Geçtin! 2. basamak bitti." },
   "Bijna! Oefen nog even en probeer het over een paar dagen opnieuw.": { en: "Almost! Practise a bit more and try again in a few days.", ar: "تقريبًا! تدرّب قليلًا وحاول مرة أخرى بعد بضعة أيام.", uk: "Майже! Потренуйся ще трохи й спробуй знову через кілька днів.", tr: "Neredeyse! Biraz daha çalış ve birkaç gün sonra tekrar dene." },
   "De vragen die je miste, komen morgen terug bij herhalen.": { en: "The questions you missed come back tomorrow in practice again.", ar: "الأسئلة التي أخطأت فيها تعود غدًا في المراجعة.", uk: "Запитання, які ти пропустив, повернуться завтра в повторенні.", tr: "Kaçırdığın sorular yarın tekrarda geri gelir." },
   "Print je diploma": { en: "Print your certificate", ar: "اطبع شهادتك", uk: "Надрукуй свій диплом", tr: "Diplomanı yazdır" },
@@ -37,7 +63,8 @@ const TEST_STEUN = {
 
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
-export default function NieuwkomersTredeTest({ onKlaar }) {
+export default function NieuwkomersTredeTest({ trede = 1, onKlaar }) {
+  const cfg = TREDES[trede] || TREDES[1];
   const [vragen, setVragen] = useState(null);
   const [map, setMap] = useState(null);
   const [idx, setIdx] = useState(0);
@@ -49,21 +76,27 @@ export default function NieuwkomersTredeTest({ onKlaar }) {
     (async () => {
       const lijst = [];
       const steun = [];
-      for (const id of TREDE_1_PADEN) {
+      for (const id of cfg.paden) {
         let p = null;
         try { p = await getLearnPath(id); } catch { /* */ }
         if (!p) continue;
         if (p.steunTeksten) steun.push(p.steunTeksten);
         const alle = (p.steps || []).flatMap((s, stap) => (s.checks || []).filter((c) => Array.isArray(c.options) && c.options.length > 1).map((c) => ({ c, stap })));
-        for (const { c, stap } of schud(alle).slice(0, PER_PAD)) {
+        for (const { c, stap } of schud(alle).slice(0, cfg.perPad)) {
           const volgorde = schud(c.options.map((_, i) => i));
           lijst.push({ pad: id, stap, origAntwoord: c.options[c.answer], check: { ...c, options: volgorde.map((i) => c.options[i]), answer: volgorde.indexOf(c.answer) } });
+        }
+      }
+      if (cfg.spelling) {
+        for (const x of await spellingVragen(cfg.spelling)) {
+          const volgorde = schud([0, 1, 2]);
+          lijst.push({ ...x, check: { ...x.check, options: volgorde.map((i) => x.check.options[i]), answer: volgorde.indexOf(0) } });
         }
       }
       if (weg) return;
       setMap(maakSteunMap(UI_STEUN, TEST_STEUN, ...steun));
       setVragen(schud(lijst));
-      try { track("nk_tredetest_start", { trede: 1, aantal: lijst.length }); } catch { /* */ }
+      try { track("nk_tredetest_start", { trede, aantal: lijst.length }); } catch { /* */ }
     })();
     return () => { weg = true; };
   }, []);
@@ -74,8 +107,12 @@ export default function NieuwkomersTredeTest({ onKlaar }) {
 
   useEffect(() => {
     if (!klaar) return;
-    if (geslaagd) { try { if (gehaaldeTrede() < 1) localStorage.setItem(TREDE_KEY, "1"); } catch { /* */ } }
-    try { track("nk_tredetest_klaar", { trede: 1, goed, aantal: vragen.length, geslaagd }); } catch { /* */ }
+    // lk_nk_trede = hoogste gehaalde trede; lk_nk_tredes = welke tredes precies (kaart per trede groen).
+    if (geslaagd) {
+      try { if (gehaaldeTrede() < trede) localStorage.setItem(TREDE_KEY, String(trede)); } catch { /* */ }
+      try { const g = JSON.parse(localStorage.getItem("lk_nk_tredes") || "[]"); if (!g.includes(trede)) localStorage.setItem("lk_nk_tredes", JSON.stringify([...g, trede])); } catch { /* */ }
+    }
+    try { track("nk_tredetest_klaar", { trede, goed, aantal: vragen.length, geslaagd }); } catch { /* */ }
   }, [klaar]); // eslint-disable-line
 
   const kies = (i) => {
@@ -84,8 +121,8 @@ export default function NieuwkomersTredeTest({ onKlaar }) {
     const v = vragen[idx];
     const ok = i === huidige.answer;
     if (ok) setGoed((g) => g + 1);
-    else noteerAntwoord(v.pad, v.stap, v.check.q, false, v.origAntwoord);
-    try { track("nk_tredetest_antwoord", { trede: 1, pad: v.pad, goed: ok }); } catch { /* */ }
+    else if (v.pad !== "dictee-nieuwkomers") noteerAntwoord(v.pad, v.stap, v.check.q, false, v.origAntwoord);
+    try { track("nk_tredetest_antwoord", { trede, pad: v.pad, goed: ok }); } catch { /* */ }
   };
   const volgende = () => { setGekozen(null); setIdx((n) => n + 1); };
 
@@ -104,16 +141,16 @@ export default function NieuwkomersTredeTest({ onKlaar }) {
               <div className="nk-diploma" style={{ border: "4px solid #ffd166", borderRadius: 16, padding: "18px 16px", textAlign: "center", background: "#fffbea" }}>
                 <img src="/logo.jpg" alt="Leerkwartier" width={56} height={56} style={{ borderRadius: 12 }} />
                 <div style={{ fontSize: 26, fontWeight: 900, marginTop: 6 }}>Diploma</div>
-                <div style={{ fontSize: 18, fontWeight: 800, marginTop: 4 }}>Trede 1 · Welkom</div>
-                <div style={{ fontSize: 15, marginTop: 6 }}>In de klas · Woorden · Rekentaal · Rekenen tot 20</div>
+                <div style={{ fontSize: 18, fontWeight: 800, marginTop: 4 }}>{cfg.naam}</div>
+                <div style={{ fontSize: 15, marginTop: 6 }}>{cfg.onderdelen}</div>
                 <div style={{ fontSize: 22, fontWeight: 900, marginTop: 8 }}>{goed} / {vragen.length} ✓</div>
                 <div style={{ marginTop: 14, borderBottom: "2px dotted #0f2a44", height: 28 }} />
                 <div style={{ fontSize: 12, opacity: .7, marginTop: 4 }}>naam</div>
                 <div style={{ fontSize: 13, marginTop: 10 }}>{datum} · leerkwartier.app</div>
                 <div style={{ fontSize: 12, fontStyle: "italic", marginTop: 4 }}>Een kwartier per dag leren, een leven lang slimmer.</div>
               </div>
-              <SteunTekst nl="Gehaald! Trede 1 is klaar."><div style={{ fontSize: 20, fontWeight: 900, color: "#1b7f3b" }}>🎉 Gehaald! Trede 1 is klaar.</div></SteunTekst>
-              <SteunTekst nl="Print je diploma" knop><button type="button" onClick={() => { try { track("nk_tredetest_print", { trede: 1 }); } catch { /* */ } window.print(); }} style={knop(false)}>🖨️ Print je diploma</button></SteunTekst>
+              <SteunTekst nl={`Gehaald! Trede ${trede} is klaar.`}><div style={{ fontSize: 20, fontWeight: 900, color: "#1b7f3b" }}>🎉 Gehaald! Trede {trede} is klaar.</div></SteunTekst>
+              <SteunTekst nl="Print je diploma" knop><button type="button" onClick={() => { try { track("nk_tredetest_print", { trede }); } catch { /* */ } window.print(); }} style={knop(false)}>🖨️ Print je diploma</button></SteunTekst>
             </>
           ) : (
             <>
@@ -164,7 +201,7 @@ export default function NieuwkomersTredeTest({ onKlaar }) {
         )}
       </div>
     );
-  }, [vragen, idx, gekozen, klaar, goed]); // eslint-disable-line
+  }, [vragen, idx, gekozen, klaar, goed, trede]); // eslint-disable-line
 
   return <SteunCtx.Provider value={map}>{inhoud}</SteunCtx.Provider>;
 }
