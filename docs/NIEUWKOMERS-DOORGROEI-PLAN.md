@@ -6,14 +6,14 @@ worden: gratis minimaal 2028." **Status: in uitvoering — zie § 0 Voortgang.**
 
 ## 0. Voortgang (bijwerken na elke stap — staat ook in docs/NOG-NALOPEN.md → dagrapport)
 
-**Nu: stap 3 van 7 klaar → volgende = stap 4 (letters en klanken, trede 2).**
+**Nu: stap 4 van 7 half klaar (pad live, trede-testje 2 volgt) → daarna stap 5 (instap-testje).**
 
 | Stap | Wat | Status |
 |---|---|---|
 | 1 | Gratis-tekst "t/m 31-12-2028" in LOWAN ronde 2 (ma 28 sep), België (1 okt), /nieuwkomers, landingspagina, llms | ✅ v751 (26 sep) |
 | 2 | Trede-indeling op /nieuwkomers + trede-testje trede 1 + diploma | ✅ v752 (26 sep) — lokaal getest (zakt 5/20, slaagt 20/20, diploma, UK/AR-tik); Mark: op telefoon doen |
 | 3 | Dictee op nieuwkomer-niveau (klankzuivere woordjes, steuntaal) | ✅ v753 (26 sep) — tegel "Dictee" op /nieuwkomers → /dictee in nieuwkomer-stand (20 woorden t-a-s/oo/aa/oe, zin tikbaar EN/AR/UK/TR, Charley langzamer, terug = /nieuwkomers); lokaal getest. Open: dictee-knoppen/Charley-tekst nog niet tikbaar |
-| 4 | Letters en klanken = trede 2 "Letters en woorden" + trede-testje 2 | ⏳ volgende |
+| 4 | Letters en klanken = trede 2 "Letters en woorden" + trede-testje 2 | 🟡 v754 (27 sep): pad `letters-klanken-nieuwkomers` (klank vooraan · hakken/plakken · aa/oo/oe, 15 vragen, alles tikbaar) + kopje Trede 2 op /nieuwkomers (Letters en klanken + Dictee). Open: trede-testje 2 (NieuwkomersTredeTest generiek maken per trede) |
 | 5 | Instap-testje (bepaalt start-trede) | ⏳ |
 | 6 | Overstap-knop naar de gewone app (trede 4) | ⏳ |
 | 7 | Klasoverzicht juf (betaalde kant) | 🔒 pas na KvK + verwerkersovereenkomst + 5-10 echte taalklassen |

@@ -248,6 +248,7 @@ import voorrangBasisPo from "./voorrangBasisPo.js";
 import kalenderRekenenPo from "./kalenderRekenenPo.js";
 import rekenenTot20Nieuwkomers from "./rekenenTot20Nieuwkomers.js";
 import rekentaalNieuwkomers from "./rekentaalNieuwkomers.js";
+import lettersKlankenNieuwkomers from "./lettersKlankenNieuwkomers.js";
 import rekenenTot100Nieuwkomers from "./rekenenTot100Nieuwkomers.js";
 import inDeKlasNieuwkomers from "./inDeKlasNieuwkomers.js";
 import woordenNieuwkomers from "./woordenNieuwkomers.js";
@@ -459,6 +460,7 @@ export const ALL_LEARN_PATHS = {
   "kalender-rekenen-po": kalenderRekenenPo,
   "rekenen-tot-20-nieuwkomers": rekenenTot20Nieuwkomers,
   "rekentaal-nieuwkomers": rekentaalNieuwkomers,
+  "letters-klanken-nieuwkomers": lettersKlankenNieuwkomers,
   "rekenen-tot-100-nieuwkomers": rekenenTot100Nieuwkomers,
   "in-de-klas-nieuwkomers": inDeKlasNieuwkomers,
   "woorden-nieuwkomers": woordenNieuwkomers,
