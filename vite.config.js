@@ -65,7 +65,9 @@ function injectSwVersion() {
 const ROUTE_SHELLS = {
   nieuwkomers: {
     titel: 'Nieuwkomer-pakket — gratis Nederlands leren, met vertaling in je eigen taal | Leerkwartier',
-    omschrijving: 'Voor kinderen die net Nederlands leren: zinnen voor in de klas, eerste woorden, gevoelens, rekentaal en rekenen tot 100. Tik op een zin voor de vertaling in Engels, Arabisch, Oekraïens of Turks. Gratis, geen account.',
+    omschrijving: 'Voor kinderen die net Nederlands leren: zinnen voor in de klas, woorden, letters en klanken, dictee, rekentaal en rekenen. Met testjes en een diploma. Tik op een zin voor de vertaling in Engels, Arabisch, Oekraïens of Turks. Gratis t/m 31 december 2028, geen account.',
+    // Eigen deelafbeelding (27 sep 2026, Mark: "een nieuwkomer-link die ik via WhatsApp en LinkedIn kan sturen").
+    beeld: { url: 'https://leerkwartier.app/social/nieuwkomers-deel.png', b: 1200, h: 630, alt: 'Nieuwkomer-pakket van Leerkwartier: Nederlands leren met hulp in je eigen taal' },
   },
   klassikaal: {
     titel: 'Klassikaal op het digibord — quiz met A-B-C-D-kaartjes, zonder accounts | Leerkwartier',
@@ -84,9 +86,9 @@ function routeShells() {
     closeBundle() {
       let html
       try { html = readFileSync(resolve('dist/index.html'), 'utf8') } catch { return }
-      for (const [route, { titel, omschrijving }] of Object.entries(ROUTE_SHELLS)) {
+      for (const [route, { titel, omschrijving, beeld }] of Object.entries(ROUTE_SHELLS)) {
         const t = esc(titel), o = esc(omschrijving), url = `https://leerkwartier.app/${route}`
-        const out = html
+        let out = html
           .replace(/<title>[^<]*<\/title>/, `<title>${t}</title>`)
           .replace(/(<meta name="description" content=")[^"]*(")/, `$1${o}$2`)
           .replace(/(<meta property="og:title" content=")[^"]*(")/, `$1${t}$2`)
@@ -95,6 +97,16 @@ function routeShells() {
           .replace(/(<meta name="twitter:title" content=")[^"]*(")/, `$1${t}$2`)
           .replace(/(<meta name="twitter:description" content=")[^"]*(")/, `$1${o}$2`)
           .replace(/(<link rel="canonical" href=")[^"]*(")/, `$1${url}$2`)
+        if (beeld) {
+          out = out
+            .replace(/(<meta property="og:image" content=")[^"]*(")/, `$1${beeld.url}$2`)
+            .replace(/(<meta property="og:image:secure_url" content=")[^"]*(")/, `$1${beeld.url}$2`)
+            .replace(/(<meta property="og:image:type" content=")[^"]*(")/, `$1image/png$2`)
+            .replace(/(<meta property="og:image:width" content=")[^"]*(")/, `$1${beeld.b}$2`)
+            .replace(/(<meta property="og:image:height" content=")[^"]*(")/, `$1${beeld.h}$2`)
+            .replace(/(<meta property="og:image:alt" content=")[^"]*(")/, `$1${esc(beeld.alt)}$2`)
+            .replace(/(<meta name="twitter:image" content=")[^"]*(")/, `$1${beeld.url}$2`)
+        }
         writeFileSync(resolve(`dist/_shell-${route}.html`), out)
       }
       // eslint-disable-next-line no-console
