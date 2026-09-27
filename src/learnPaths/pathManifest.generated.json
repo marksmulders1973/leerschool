@@ -9135,6 +9135,31 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "woorden-2-nieuwkomers",
+    "file": "./woorden2Nieuwkomers.js",
+    "title": "Meer woorden — kleding, eten, huis, buiten, lichaam (nieuwkomers)",
+    "subject": "taal",
+    "level": "groep3-4",
+    "emoji": "🧺",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Woordenschat — basiswoorden per thema",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "woorden",
+      "woordenschat",
+      "nt2",
+      "kleding",
+      "eten",
+      "lichaam",
+      "de het"
+    ],
+    "intro": "Meer woorden: kleding, eten en drinken, in huis, buiten en je lichaam. Vijfentwintig nieuwe woorden. Lees de vraag en kies het goede woord. Ken je een woord niet? Tik op het knopje ernaast. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 25,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "woorden-nieuwkomers",
     "file": "./woordenNieuwkomers.js",
     "title": "Woorden — je eerste Nederlandse woorden (nieuwkomers)",

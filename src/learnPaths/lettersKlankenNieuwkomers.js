@@ -94,6 +94,7 @@ const TEKST_STEUN = {
   "Welke klank hoor je vooraan?": S("Which sound do you hear at the start?", "ما الصوت الذي تسمعه في البداية؟", "Який звук ти чуєш на початку?", "Başta hangi sesi duyuyorsun?"),
   "Hoe hak en plak ik een woord?": S("How do I chop and glue a word?", "كيف أقسّم الكلمة وأجمعها؟", "Як розбити й склеїти слово?", "Bir kelimeyi nasıl ayırır ve birleştiririm?"),
   "Welke twee letters maken één klank?": S("Which two letters make one sound?", "أي حرفين يصنعان صوتًا واحدًا؟", "Які дві літери дають один звук?", "Hangi iki harf tek bir ses yapar?"),
+  "Letters en klanken": S("Letters and sounds", "الحروف والأصوات", "Літери й звуки", "Harfler ve sesler"),
   "Klanken vooraan": S("Sounds at the start", "الأصوات في البداية", "Звуки на початку", "Baştaki sesler"),
   "Hakken en plakken": S("Chopping and gluing", "التقسيم والجمع", "Розбивати й склеювати", "Ayırmak ve birleştirmek"),
   "Twee letters, één klank": S("Two letters, one sound", "حرفان، صوت واحد", "Дві літери — один звук", "İki harf, bir ses"),

@@ -16,10 +16,10 @@ export const TREDE_KEY = "lk_nk_trede";
 export const TREDE_1_PADEN = ["in-de-klas-nieuwkomers", "woorden-nieuwkomers", "rekentaal-nieuwkomers", "rekenen-tot-20-nieuwkomers"];
 const GRENS = 0.8;
 // Per trede: welke paden (en hoeveel vragen per pad) + extra vragen. Trede 2 (stap 4, 27 sep):
-// 12 vragen uit Letters en klanken + 8 "welk woord is goed geschreven?" uit het nieuwkomer-dictee.
+// 7 vragen uit Letters en klanken + 7 uit Meer woorden + 6 "welk woord is goed geschreven?" uit het dictee.
 const TREDES = {
   1: { paden: TREDE_1_PADEN, perPad: 5, naam: "Trede 1 · Welkom", onderdelen: "In de klas · Woorden · Rekentaal · Rekenen tot 20" },
-  2: { paden: ["letters-klanken-nieuwkomers"], perPad: 12, spelling: 8, naam: "Trede 2 · Letters en woorden", onderdelen: "Letters en klanken · Dictee" },
+  2: { paden: ["letters-klanken-nieuwkomers", "woorden-2-nieuwkomers"], perPad: 7, spelling: 6, naam: "Trede 2 · Letters en woorden", onderdelen: "Letters en klanken · Meer woorden · Dictee" },
 };
 
 // "Welk woord is goed geschreven?" — uit de dicteezinnen (DICTEE[NK_GROEP]). Foute opties zijn

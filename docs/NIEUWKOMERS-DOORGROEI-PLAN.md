@@ -120,6 +120,8 @@ digitale methode kost per leerling € 60-75 per jaar, een woordenschatmethode �
 - Start met bouwstap 2 (treden + trede-testje) of eerst 3 (nieuwkomer-dictee)?
 
 ## 8. Verfijnen terwijl stap 7 wacht (Claude, zonder Mark)
+- ✅ v761 (27 sep): pad **Meer woorden** (`woorden-2-nieuwkomers`, 25 woorden: kleding, eten, huis, buiten, lichaam) als 3e tegel van trede 2 + in trede-testje 2 + digibordsetje. Woordenschat nu ±75 woorden (was ±50). Digiwak-500 is niet openbaar → géén koppeling claimen.
+- ✅ v760 (27 sep): voortgangslek naamloze kinderen gedicht (LearnPath laadde op player_name "Speler").
 - ✅ v758 (27 sep): dictee-scherm in nieuwkomer-stand tikbaar (start, geluidscheck, Charley-tekst, Bijna-uitleg per woord, knoppen, eindscherm); gewoon dictee ongewijzigd.
 - Vertaalknop in de gewone app na de overstap (steuntaal blijft bewaard in `lk_steuntaal`) — ontwerp eerst, is architectuur.
 - Moedertaalcheck AR/UK/TR van alle teksten van 26-27 sep (N5) — wacht op een moedertaalspreker.
