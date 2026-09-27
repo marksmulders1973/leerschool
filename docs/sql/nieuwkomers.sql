@@ -57,3 +57,11 @@ select count(distinct props->>'uid') filter (where name='dictee_start') gestart,
   count(distinct props->>'uid') filter (where name='dictee_klaar') klaar,
   round(avg((props->>'score')::numeric) filter (where name='dictee_klaar'),1) gem_score
 from events_mens where name in ('dictee_start','dictee_klaar') and props->>'groep' = '3';
+
+-- 10) Instap-testje (v756, stap 5): geopend → klaar, en waar beginnen ze?
+select count(distinct props->>'uid') filter (where name='nk_instap_open') geopend,
+  count(distinct props->>'uid') filter (where name='nk_instap_klaar') klaar,
+  count(*) filter (where name='nk_instap_klaar' and props->>'start'='1') start_trede1,
+  count(*) filter (where name='nk_instap_klaar' and props->>'start'='2') start_trede2,
+  count(*) filter (where name='nk_instap_klaar' and props->>'start'='3') start_verder
+from events_mens where name like 'nk_instap_%';

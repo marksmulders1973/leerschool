@@ -42,6 +42,19 @@ async function spellingVragen(n) {
   });
 }
 
+// 🚪 Instap-testje (doorgroeiplan stap 5, 27 sep 2026): een nieuw kind hoeft niet bij 1 te
+// beginnen als het al meer kan. Blok 1 = 6 vragen trede 1; minder dan 5 goed → start trede 1.
+// Anders blok 2 = 6 vragen trede 2; minder dan 5 goed → start trede 2, anders "Verder oefenen".
+// Géén diploma en geen tredes afvinken: het is een wegwijzer. Uitkomst in lk_nk_instap.
+export const INSTAP_KEY = "lk_nk_instap";
+const INSTAP_BLOK = 6;
+const INSTAP_GOED = 5;
+const INSTAP_START = {
+  1: "Trede 1 · Welkom",
+  2: "Trede 2 · Letters en woorden",
+  3: "Verder oefenen",
+};
+
 // Hoogste gehaalde trede op dit apparaat (0 = nog geen).
 export function gehaaldeTrede() {
   try { return Number(localStorage.getItem(TREDE_KEY)) || 0; } catch { return 0; }
@@ -59,12 +72,20 @@ const TEST_STEUN = {
   "De vragen die je miste, komen morgen terug bij herhalen.": { en: "The questions you missed come back tomorrow in practice again.", ar: "الأسئلة التي أخطأت فيها تعود غدًا في المراجعة.", uk: "Запитання, які ти пропустив, повернуться завтра в повторенні.", tr: "Kaçırdığın sorular yarın tekrarda geri gelir." },
   "Print je diploma": { en: "Print your certificate", ar: "اطبع شهادتك", uk: "Надрукуй свій диплом", tr: "Diplomanı yazdır" },
   "Terug": { en: "Back", ar: "رجوع", uk: "Назад", tr: "Geri" },
+  "Instap-testje": { en: "Starting test", ar: "اختبار البداية", uk: "Вступний тест", tr: "Başlangıç testi" },
+  "Dit is geen toets. Zo weet je waar je begint.": { en: "This is not an exam. This way you know where to start.", ar: "هذا ليس امتحانًا. هكذا تعرف من أين تبدأ.", uk: "Це не контрольна. Так ти знаєш, з чого почати.", tr: "Bu bir sınav değil. Böylece nereden başlayacağını bilirsin." },
+  "Jij begint bij:": { en: "You start at:", ar: "تبدأ من:", uk: "Ти починаєш із:", tr: "Buradan başlıyorsun:" },
+  "Trede 1 · Welkom": { en: "Step 1 · Welcome", ar: "الدرجة 1 · أهلًا", uk: "Сходинка 1 · Ласкаво просимо", tr: "1. basamak · Hoş geldin" },
+  "Trede 2 · Letters en woorden": { en: "Step 2 · Letters and words", ar: "الدرجة 2 · الحروف والكلمات", uk: "Сходинка 2 · Літери й слова", tr: "2. basamak · Harfler ve kelimeler" },
+  "Verder oefenen": { en: "Keep practising", ar: "تابع التدريب", uk: "Тренуйся далі", tr: "Çalışmaya devam" },
+  "Deze plek is groen gemaakt op de pagina.": { en: "This place is now marked green on the page.", ar: "هذا المكان أصبح باللون الأخضر في الصفحة.", uk: "Це місце тепер позначене зеленим на сторінці.", tr: "Bu yer sayfada yeşil işaretlendi." },
 };
 
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
-export default function NieuwkomersTredeTest({ trede = 1, onKlaar }) {
+export default function NieuwkomersTredeTest({ trede = 1, instap = false, onKlaar }) {
   const cfg = TREDES[trede] || TREDES[1];
+  const [uit, setUit] = useState([]); // per vraag goed/fout (instap: goed per blok)
   const [vragen, setVragen] = useState(null);
   const [map, setMap] = useState(null);
   const [idx, setIdx] = useState(0);
@@ -74,39 +95,54 @@ export default function NieuwkomersTredeTest({ trede = 1, onKlaar }) {
   useEffect(() => {
     let weg = false;
     (async () => {
-      const lijst = [];
       const steun = [];
-      for (const id of cfg.paden) {
+      // Laad vragen uit de paden van een trede (+ spellingvragen), door elkaar, max `max`.
+      const blok = async (c, perPad, spelling, max) => {
+      const lijst = [];
+      for (const id of c.paden) {
         let p = null;
         try { p = await getLearnPath(id); } catch { /* */ }
         if (!p) continue;
         if (p.steunTeksten) steun.push(p.steunTeksten);
         const alle = (p.steps || []).flatMap((s, stap) => (s.checks || []).filter((c) => Array.isArray(c.options) && c.options.length > 1).map((c) => ({ c, stap })));
-        for (const { c, stap } of schud(alle).slice(0, cfg.perPad)) {
+        for (const { c, stap } of schud(alle).slice(0, perPad)) {
           const volgorde = schud(c.options.map((_, i) => i));
           lijst.push({ pad: id, stap, origAntwoord: c.options[c.answer], check: { ...c, options: volgorde.map((i) => c.options[i]), answer: volgorde.indexOf(c.answer) } });
         }
       }
-      if (cfg.spelling) {
-        for (const x of await spellingVragen(cfg.spelling)) {
+      if (spelling) {
+        for (const x of await spellingVragen(spelling)) {
           const volgorde = schud([0, 1, 2]);
           lijst.push({ ...x, check: { ...x.check, options: volgorde.map((i) => x.check.options[i]), answer: volgorde.indexOf(0) } });
         }
       }
+      return schud(lijst).slice(0, max);
+      };
+      const lijst = instap
+        ? [...await blok(TREDES[1], 2, 0, INSTAP_BLOK), ...await blok(TREDES[2], 4, 2, INSTAP_BLOK)]
+        : await blok(cfg, cfg.perPad, cfg.spelling, 99);
       if (weg) return;
       setMap(maakSteunMap(UI_STEUN, TEST_STEUN, ...steun));
-      setVragen(schud(lijst));
-      try { track("nk_tredetest_start", { trede, aantal: lijst.length }); } catch { /* */ }
+      setVragen(lijst);
+      try { track(instap ? "nk_instap_start" : "nk_tredetest_start", { trede: instap ? 0 : trede, aantal: lijst.length }); } catch { /* */ }
     })();
     return () => { weg = true; };
   }, []);
 
   const huidige = vragen?.[idx]?.check;
-  const klaar = vragen && vragen.length > 0 && idx >= vragen.length;
-  const geslaagd = klaar && goed >= Math.ceil(vragen.length * GRENS);
+  const goed1 = uit.slice(0, INSTAP_BLOK).filter(Boolean).length;
+  const goed2 = uit.slice(INSTAP_BLOK).filter(Boolean).length;
+  const klaar = vragen && vragen.length > 0 && (idx >= vragen.length || (instap && idx === INSTAP_BLOK && goed1 < INSTAP_GOED));
+  const geslaagd = !instap && klaar && goed >= Math.ceil(vragen.length * GRENS);
+  const startTrede = goed1 < INSTAP_GOED ? 1 : goed2 < INSTAP_GOED ? 2 : 3;
 
   useEffect(() => {
     if (!klaar) return;
+    if (instap) {
+      try { localStorage.setItem(INSTAP_KEY, String(startTrede)); } catch { /* */ }
+      try { track("nk_instap_klaar", { start: startTrede, goed1, goed2 }); } catch { /* */ }
+      return;
+    }
     // lk_nk_trede = hoogste gehaalde trede; lk_nk_tredes = welke tredes precies (kaart per trede groen).
     if (geslaagd) {
       try { if (gehaaldeTrede() < trede) localStorage.setItem(TREDE_KEY, String(trede)); } catch { /* */ }
@@ -120,9 +156,10 @@ export default function NieuwkomersTredeTest({ trede = 1, onKlaar }) {
     setGekozen(i);
     const v = vragen[idx];
     const ok = i === huidige.answer;
+    setUit((u) => { const n = u.slice(); n[idx] = ok; return n; });
     if (ok) setGoed((g) => g + 1);
     else if (v.pad !== "dictee-nieuwkomers") noteerAntwoord(v.pad, v.stap, v.check.q, false, v.origAntwoord);
-    try { track("nk_tredetest_antwoord", { trede, pad: v.pad, goed: ok }); } catch { /* */ }
+    try { track(instap ? "nk_instap_antwoord" : "nk_tredetest_antwoord", { trede: instap ? 0 : trede, pad: v.pad, goed: ok }); } catch { /* */ }
   };
   const volgende = () => { setGekozen(null); setIdx((n) => n + 1); };
 
@@ -131,6 +168,16 @@ export default function NieuwkomersTredeTest({ trede = 1, onKlaar }) {
 
   const inhoud = useMemo(() => {
     if (!vragen) return <div style={kaart}>…</div>;
+    if (klaar && instap) {
+      return (
+        <div style={{ ...kaart, display: "grid", gap: 12 }}>
+          <SteunTekst nl="Jij begint bij:"><div style={{ fontSize: 17, fontWeight: 800 }}>Jij begint bij:</div></SteunTekst>
+          <SteunTekst nl={INSTAP_START[startTrede]}><div style={{ fontSize: 26, fontWeight: 900, color: "#1b7f3b" }}>🪜 {INSTAP_START[startTrede]}</div></SteunTekst>
+          <SteunTekst nl="Deze plek is groen gemaakt op de pagina."><div style={{ fontSize: 15 }}>Deze plek is groen gemaakt op de pagina.</div></SteunTekst>
+          <SteunTekst nl="Terug" knop><button type="button" onClick={onKlaar} style={knop(true)}>Terug</button></SteunTekst>
+        </div>
+      );
+    }
     if (klaar) {
       const datum = new Date().toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" });
       return (
@@ -169,10 +216,15 @@ export default function NieuwkomersTredeTest({ trede = 1, onKlaar }) {
     return (
       <div style={{ ...kaart, display: "grid", gap: 10 }}>
         <div style={{ display: "flex", justifyContent: "space-between", fontSize: 13, fontWeight: 800, opacity: .7 }}>
-          <SteunTekst nl="Trede-testje" inline><span>🪜 Trede-testje</span></SteunTekst>
-          <span>{idx + 1} / {vragen.length}</span>
+          {instap
+            ? <SteunTekst nl="Instap-testje" inline><span>🚪 Instap-testje</span></SteunTekst>
+            : <SteunTekst nl="Trede-testje" inline><span>🪜 Trede-testje</span></SteunTekst>}
+          <span>{idx + 1} / {instap && idx < INSTAP_BLOK ? INSTAP_BLOK : vragen.length}</span>
         </div>
-        {idx === 0 && gekozen === null && (
+        {idx === 0 && gekozen === null && instap && (
+          <SteunTekst nl="Dit is geen toets. Zo weet je waar je begint."><div style={{ fontSize: 14, fontWeight: 700, background: "#eef4fa", borderRadius: 10, padding: "6px 10px" }}>Dit is geen toets. Zo weet je waar je begint.</div></SteunTekst>
+        )}
+        {idx === 0 && gekozen === null && !instap && (
           <SteunTekst nl="Geen hulp, één keer kiezen. Doe je best!"><div style={{ fontSize: 14, fontWeight: 700, background: "#eef4fa", borderRadius: 10, padding: "6px 10px" }}>Geen hulp, één keer kiezen. Doe je best!</div></SteunTekst>
         )}
         <SteunVraag steun={c.steun} altijd={c.steunAltijd}>
@@ -201,7 +253,7 @@ export default function NieuwkomersTredeTest({ trede = 1, onKlaar }) {
         )}
       </div>
     );
-  }, [vragen, idx, gekozen, klaar, goed, trede]); // eslint-disable-line
+  }, [vragen, idx, gekozen, klaar, goed, trede, uit]); // eslint-disable-line
 
   return <SteunCtx.Provider value={map}>{inhoud}</SteunCtx.Provider>;
 }
