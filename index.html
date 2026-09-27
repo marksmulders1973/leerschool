@@ -613,6 +613,14 @@
         const SW_OPTS = { updateViaCache: "none" };
         let regRef = null;
         let initialLoad = true;
+        // Mark 27 sep 2026: "eerste tik op 'Code gekregen?' opent en sluit meteen". Oorzaak: bij het
+        // openen staat er een nieuwe versie klaar en de app herlaadde binnen 45 s — ook als je al aan
+        // het tikken was. Nu: laatste tik/toets onthouden; niet herladen tijdens gebruik.
+        window.__lkLaatsteTik = 0;
+        const markeerTik = () => { window.__lkLaatsteTik = Date.now(); };
+        window.addEventListener("pointerdown", markeerTik, { capture: true, passive: true });
+        window.addEventListener("keydown", markeerTik, { capture: true, passive: true });
+        const bezig = () => window.__lkLaatsteTik && Date.now() - window.__lkLaatsteTik < 20000;
 
         const triggerUpdate = (waitingSw, { silent } = { silent: false }) => {
           if (!waitingSw) return;
@@ -692,11 +700,13 @@
             // CitoLeerpadToets/PlayQuiz zetten window.__toetsActief.
             const safeReload = () => {
               if (window.__toetsActief) { setTimeout(safeReload, 60 * 1000); return; }
+              if (bezig()) { setTimeout(safeReload, 15 * 1000); return; } // net getikt/getypt: even wachten
               doReload();
             };
             // F13 (2 sep 2026): ook in het 45s-startvenster niet herladen als een
             // toets al loopt (precache duurde soms 20-30 s; kind zat al op vraag 3).
-            if ((initialLoad || document.hidden) && !window.__toetsActief) { doReload(); return; }
+            // Direct herladen alleen als er nog niet getikt is (anders sluit bv. net geopende codebalk).
+            if ((document.hidden || (initialLoad && !window.__lkLaatsteTik)) && !window.__toetsActief) { doReload(); return; }
             const onHide = () => { if (document.hidden && !window.__toetsActief) doReload(); };
             document.addEventListener("visibilitychange", onHide);
             // Vangnet 90s (was 5 min): snel genoeg om "hij pakt de nieuwe
