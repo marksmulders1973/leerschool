@@ -31,6 +31,13 @@
 
 ---
 
+## Week 40 (ma 28 sep – zo 4 okt)
+
+| Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
+|---|---|---|
+| ma 28 sep | 6 (offline, Mark) | 📋 KvK-inschrijving Utrecht incl. reis (afspraak 11:45; welkomstmail KvK 11:59, KvK 42176244, startdatum 1 okt) |
+| ma 28 sep | (sessie-uren nog invullen) | 💻✉️ dagrapport + gedragspagina, LOWAN ronde 2 (45, 09:04), start-kwartier opwarmvraag (v767), KvK-nummer op site (v768), Dongen-check verstuurd |
+
 ## Week 38 (ma 14 sep – zo 20 sep)
 
 | Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
