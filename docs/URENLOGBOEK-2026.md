@@ -36,9 +36,9 @@
 | Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
 |---|---|---|
 | ma 28 sep | 6 (offline, Mark) | 📋 KvK-inschrijving Utrecht incl. reis (afspraak 11:45; welkomstmail KvK 11:59, KvK 42176244, startdatum 1 okt) |
-| ma 28 sep | 1 (voorstel, git 09:15–16:12) | 💻✉️ dagrapport + gedragspagina, LOWAN ronde 2 (45, 09:04), start-kwartier opwarmvraag (v767), KvK-nummer op site (v768), Dongen-check verstuurd |
+| ma 28 sep | 1 (git 09:15–16:12) | 💻✉️ dagrapport + gedragspagina, LOWAN ronde 2 (45, 09:04), start-kwartier opwarmvraag (v767), KvK-nummer op site (v768), Dongen-check verstuurd |
 
-## Week 39 (ma 21 sep – zo 27 sep) — VOORSTEL (Claude 28 sep, uit git; Mark valideert)
+## Week 39 (ma 21 sep – zo 27 sep) — ✅ GOEDGEKEURD door Mark 28 sep 2026 (uit git, 35 u)
 
 Methode als bij de reconstructie: per dag eerste→laatste commit, gaten > 1,5 u tellen als 0,25 u, + 0,5 u opstart, max 10 u/dag. Onderschat bewust (mails/testen/lezen zonder commit).
 
