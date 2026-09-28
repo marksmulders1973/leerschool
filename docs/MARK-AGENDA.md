@@ -150,6 +150,8 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
   meer eeuwig open. Details: memory `project_studiebol_partner_codes`.
 
 - **📮 KOR aanvragen, direct ná de KvK (28 sep):** formulier "Melding omzetbelasting kleineondernemersregeling" op belastingdienst.nl, met KvK-nummer + btw-id (komt per post na inschrijving). Minstens 4 weken vóór het kwartaal → ingang 1 jan 2027 = start paywall. Gevolg: geen btw op facturen, geen btw-aangifte; wel geen btw-teruggave op eigen kosten. Zie docs/BETALING-PLAN.md § facturen.
+- ✅ **KvK AFGEROND ma 28 sep 2026 — KvK-nummer 42176244, startdatum vestiging 1 oktober 2026** (advies KvK-medewerker: eerste aangifte later). KvK-nummer staat op de site (footer, Over, Privacy, v768).
+- 🗓️ **Eerste btw-aangifte: 4e kwartaal 2026 (okt-dec), uiterlijk 31 januari 2027** — vooral €0 + verlegde btw op buitenlandse diensten (Anthropic/Vercel/Supabase). Claude zet hem half januari klaar. Géén aangifte over het 3e kwartaal.
 - ~~KvK-afspraak boeken~~ ✅ **GEBOEKT 25 aug: ma 28 SEPTEMBER 11:45-12:15, KvK Utrecht
   (Sint Jacobsstraat 300)** — eerste beschikbare slot; formulier is volledig ingevuld
   (Claude + Mark samen, 25 aug): handelsnaam **Leerkwartier** (Smulsoft afgevallen —
