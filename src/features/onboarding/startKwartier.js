@@ -13,6 +13,42 @@ import { buildTopicQuiz } from "../practice/buildTopicQuiz.js";
 export const STARTKWARTIER_KEY = "lk_startkwartier_gedaan";
 export const AANTAL_VRAGEN = 5;
 
+// Opwarmvraag (Mark 28 sep 2026, "ja, doe het zo"): de helft van de starters beantwoordde vraag 1
+// niet (vraag gezien, weg). Vraag 1 is nu altijd een vaste, korte vraag per groep zonder
+// schoolwoorden ("stam", "persoonsvorm"), die bijna iedereen goed heeft — eerst een succesje.
+// Zelf geschreven, niet uit een toets overgenomen. Vragen 2-5 blijven uit de leerpaden komen.
+// Meten: question_answered { pad: "opwarm-g<n>" } + startkwartier-trechter in gedrag.sql.
+const OPWARM = {
+  1: { onderwerp: "Rekenen", q: "Welk getal komt na 4?", options: ["3", "5", "6", "8"], answer: 1, hint: "Tel maar hardop: 1, 2, 3, 4, …", uitleg: "Na 4 komt 5." },
+  2: { onderwerp: "Rekenen", q: "Welk getal komt na 4?", options: ["3", "5", "6", "8"], answer: 1, hint: "Tel maar hardop: 1, 2, 3, 4, …", uitleg: "Na 4 komt 5." },
+  3: { onderwerp: "Rekenen", q: "Hoeveel is 3 + 4?", options: ["6", "7", "8", "5"], answer: 1, hint: "Begin bij 3 en tel er 4 bij: 4, 5, 6, …", uitleg: "3 + 4 = 7." },
+  4: { onderwerp: "Rekenen", q: "Hoeveel is 3 + 4?", options: ["6", "7", "8", "5"], answer: 1, hint: "Begin bij 3 en tel er 4 bij: 4, 5, 6, …", uitleg: "3 + 4 = 7." },
+  5: { onderwerp: "Taal", q: "Welk woord hoort er niet bij?", options: ["appel", "peer", "stoel", "banaan"], answer: 2, hint: "Drie woorden kun je eten. Welke niet?", uitleg: "Appel, peer en banaan zijn fruit. Een stoel niet." },
+  6: { onderwerp: "Taal", q: "Hij ___ elke dag naar school.", options: ["fiets", "fietst", "fietsd", "fietsen"], answer: 1, hint: "Zeg het hardop: hij … Wat hoor je aan het eind?", uitleg: "Hij fietst: bij 'hij' komt er een t achter." },
+  7: { onderwerp: "Rekenen", q: "Welk getal is het grootst?", options: ["0,45", "0,5", "0,09", "0,4"], answer: 1, hint: "Maak ze even lang: 0,45 · 0,50 · 0,09 · 0,40.", uitleg: "0,5 is hetzelfde als 0,50, en dat is het meest." },
+  8: { onderwerp: "Taal", q: "Wat betekent 'gehaast'?", options: ["heel rustig", "met veel haast", "verveeld", "trots"], answer: 1, hint: "Welk kleiner woord zit erin?", uitleg: "Gehaast = je hebt haast, je doet alles snel." },
+};
+export function opwarmVraag(groep) {
+  const o = OPWARM[groep] || OPWARM[6];
+  return {
+    q: o.q, options: o.options, answer: o.answer,
+    wrongHints: o.options.map((_, i) => (i === o.answer ? null : o.hint)),
+    uitleg: o.uitleg, onderwerp: o.onderwerp, pathId: "opwarm-g" + (OPWARM[groep] ? groep : 6), opwarm: true,
+  };
+}
+
+// Label boven een vraag: één gewoon woord i.p.v. de padtitel ("Werkwoordsspelling — d/t en
+// 't kofschip", "(pilot)"). Op pad-id, want die zeggen genoeg.
+export function onderwerpVan(v) {
+  if (v?.onderwerp) return v.onderwerp;
+  const id = String(v?.pathId || "");
+  if (/lezen|tekst|samenvat|hoofdgedachte|strategie/.test(id)) return "Lezen";
+  if (/reken|breuk|procent|tafel|getal|delen|klok|meten|geld|kommagetal|wiskunde/.test(id)) return "Rekenen";
+  if (/topo|kaart|dieren|natuur|seizoen|geschied|aardrijk|wereld/.test(id)) return "Wereld";
+  if (/taal|spelling|werkwoord|woord|zin|leesteken|rijm|letter/.test(id)) return "Taal";
+  return null;
+}
+
 // "5" | "groep5" | "groep 5" → 5. VO ("klas2", "havo3") → null.
 export function parseGroep(level) {
   if (level == null) return null;
@@ -81,12 +117,15 @@ export async function bouwStartVragen(level, aantal = AANTAL_VRAGEN, { onEerste 
       return [];
     }
   };
+  // Vraag 1 = de vaste opwarmvraag (staat er meteen, zonder laden); daarna aantal-1 uit de paden.
+  const opwarm = opwarmVraag(parseGroep(level) ?? 6);
   const eerste = laad(paden[0], true);
   if (onEerste) {
-    eerste.then((lijst) => { if (lijst.length) onEerste(verweefVragen([lijst], aantal)); }).catch(() => {});
+    onEerste([opwarm]);
+    eerste.then((lijst) => { if (lijst.length) onEerste([opwarm, ...verweefVragen([lijst], aantal - 1)]); }).catch(() => {});
   }
   const perPad = await Promise.all([eerste, ...paden.slice(1).map((p) => laad(p))]);
-  return verweefVragen(perPad, aantal);
+  return [opwarm, ...verweefVragen(perPad, aantal - 1)];
 }
 
 export function isStartKwartierGedaan() {

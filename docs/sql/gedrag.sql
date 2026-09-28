@@ -114,3 +114,15 @@ select
   count(distinct props->>'uid') filter (where name = 'quiz_quit') gestopt_midden_in_toets,
   count(distinct props->>'uid') filter (where name = 'leerpad_stop_bewaard') leerpad_gepauzeerd
 from events_mens where created_at > now() - interval '7 days';
+
+-- 6) START-KWARTIER: beantwoordt het kind vraag 1? (opwarmvraag sinds v767, 28 sep 2026; doel 70%)
+with s as (
+  select session, min(created_at) filter (where name = 'startkwartier_start') t0,
+    count(*) filter (where name = 'question_answered' and props->>'bron' = 'startkwartier') antw
+  from events_mens where created_at > now() - interval '28 days' and (name = 'startkwartier_start' or name = 'question_answered') group by 1
+)
+select case when t0 < '2026-09-26 12:00+00' then '1 oud (vraag 1 uit leerpad)'
+            when t0 < '2026-09-28 12:00+00' then '2 makkelijke taalvraag (26-28 sep)'
+            else '3 opwarmvraag (v767+)' end periode,
+  count(*) starts, round(100.0 * count(*) filter (where antw >= 1) / nullif(count(*), 0)) pct_vraag1, count(*) filter (where antw >= 5) alle_5
+from s where t0 is not null group by 1 order by 1;

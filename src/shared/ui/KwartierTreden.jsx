@@ -13,6 +13,7 @@
 // vandaag" is al waar (dagteller), dus dat zeggen we gewoon.
 import { useEffect, useState } from "react";
 import { treden, onKwartierUpdate } from "../dailyGoal.js";
+import { leermomentVandaag, onLeermoment } from "../leermoment.js";
 
 const GEEL = "#ffd54f", GROEN = "#00e676";
 
@@ -23,6 +24,10 @@ export default function KwartierTreden({ compact = false }) {
     const off = onKwartierUpdate(() => setT(treden()));
     return () => { clearInterval(id); off(); };
   }, []);
+  // Mark 28 sep 2026: het balkje "Jouw kwartier · nog 5 min" stond er al vóór het kind iets deed
+  // (voelt als druk bij vraag 1). Nu pas zichtbaar na het eerste leermoment van vandaag.
+  const [begonnen, setBegonnen] = useState(leermomentVandaag);
+  useEffect(() => onLeermoment(() => setBegonnen(true)), []);
   const min = Math.max(1, Math.ceil(t.nogSec / 60));
   const tekst = t.klaar
     ? "🏆 Kwartier gehaald — de rest is extra"
@@ -48,6 +53,7 @@ export default function KwartierTreden({ compact = false }) {
       return t.klaar ? T[3] : T[Math.min(2, t.deel)];
     } catch { return null; }
   })();
+  if (!begonnen && !t.klaar && t.deel === 0) return null;
   return (
     <div
       aria-label="Jouw kwartier: drie stappen van 5 minuten"

@@ -15,7 +15,7 @@ import supabase from "../../supabase.js";
 import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { actievePartnerCode, partnerFamilieTot } from "../referral/partnerCode.js";
 import { PARTNER_NAMEN } from "../../components/PartnerWelkom.jsx";
-import { bouwStartVragen, markeerStartKwartierGedaan, parseGroep } from "./startKwartier.js";
+import { bouwStartVragen, markeerStartKwartierGedaan, parseGroep, onderwerpVan } from "./startKwartier.js";
 import { klasId, thuisLink } from "../../shared/klasQr.js";
 
 // Three.js pas laden als het park-kaartje in beeld komt (zelfde patroon als BuddyPicker).
@@ -73,7 +73,7 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder }) {
   return (
     <Card variant="exercise" padding="md">
       <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 6 }}>
-        Vraag {nummer} van {totaal}{vraag.padTitel ? " · " + vraag.padTitel : ""}
+        Vraag {nummer} van {totaal}{onderwerpVan(vraag) ? " · " + onderwerpVan(vraag) : ""}
       </div>
       <p style={S.vraag}><MdInline text={vraag.q} /></p>
       {vraag.svg && (
@@ -517,9 +517,12 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
     track(klas ? "klas_vraag" : "startkwartier_vraag", { nummer: stap?.nummer, pad: vraag.pathId, goed: isGoed });
     // meetfix 10 sep 2026: start-kwartier-vragen tellen mee als beantwoorde vragen (dagrapport/Noord-ster)
     track("question_answered", { bron: klas ? "klas" : "startkwartier", pad: vraag.pathId, is_correct: isGoed });
-    try {
-      recordAnswerForPath({ playerName: userName || "Speler", pathId: vraag.pathId, isCorrect: isGoed, userId: authUser?.id || null });
-    } catch { /* */ }
+    // De opwarmvraag hoort bij geen leerpad → niet als padvoortgang opslaan.
+    if (!vraag.opwarm) {
+      try {
+        recordAnswerForPath({ playerName: userName || "Speler", pathId: vraag.pathId, isCorrect: isGoed, userId: authUser?.id || null });
+      } catch { /* */ }
+    }
     // Partner-/vriendcode: na 3 antwoorden wordt de gezins-plek geclaimd
     // (zelfde aanroep als PlayQuiz) — zo telt een QR-scanner hier al mee.
     try { telAntwoordVoorVriend(); } catch { /* */ }
@@ -566,7 +569,7 @@ export default function StartKwartier({ userName, userLevel, authUser, onStop, o
         <p style={{ ...S.showTekst, marginTop: 0 }}>
           {klas
             ? (totaalVragen > 0 ? totaalVragen + " vragen voor groep " + groep + ". Tik je antwoord. Fout? Dan krijg je uitleg." : "Even wachten op de eerste vraag…")
-            : (totaalVragen > 0 ? totaalVragen + " vragen voor groep " + groep : "Even kijken wat Leerkwartier kan") + ", en tussendoor zie je wat hier allemaal kan. Stoppen mag altijd."}
+            : (totaalVragen > 0 ? totaalVragen + " korte vragen" : "Even kijken wat Leerkwartier kan") + ". Tussendoor zie je wat je hier kunt doen. Stoppen mag altijd."}
         </p>
       )}
 

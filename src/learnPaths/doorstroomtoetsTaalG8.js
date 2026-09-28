@@ -228,7 +228,7 @@ const steps = [
       },
       {
         q: "Welk woord betekent **hetzelfde als** **'gehaast'**?",
-        options: ["Snel + gestrest", "Rustig", "Verveeld", "Voldoening"],
+        options: ["Druk en snel", "Rustig", "Verveeld", "Voldoening"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Geen verband."],
         uitlegPad: {
@@ -240,8 +240,8 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "'Hij liep gehaast naar de tram' = hij rende bijna omdat hij laat was." }],
           basiskennis: [{ onderwerp: "Tegenstellingen", uitleg: "Gehaast ↔ rustig / kalm / op je gemak." }],
           niveaus: {
-            basis: "Snel + gestrest.",
-            simpeler: "Gehaast = haast hebben = snel + gestrest.",
+            basis: "Druk en snel.",
+            simpeler: "Gehaast = haast hebben = druk en snel.",
             nogSimpeler: "Snel",
           },
         },
