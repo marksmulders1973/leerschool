@@ -54,7 +54,7 @@ Methode als bij de reconstructie: per dag eerste→laatste commit, gaten > 1,5 u
 | **Offline (15%-regel)** | 4,5 | 📞 gesprekken over de app, telefoon-tests (15% van 30,5) |
 | **Totaal week 39** | **35** | |
 
-## Week 38 (ma 14 sep – zo 20 sep) — VOORSTEL aangevuld uit git (Claude 28 sep; Mark valideert)
+## Week 38 (ma 14 sep – zo 20 sep) — ✅ GOEDGEKEURD door Mark 28 sep 2026 (aangevuld uit git, 23 u)
 
 Per dag het hoogste van (dagschatting destijds, git-telling).
 
@@ -96,7 +96,7 @@ Per dag het hoogste van (dagschatting destijds, git-telling).
 | do 10 sep | ~9 (07:00-08:00, 08:00-14:10, 15:30-16:30; voorstel) | dagrapport ochtend + avond (Kinderhulp-nieuwsbrief ontleed) · game v633-640 (online, WhatsApp-uitnodiging, fixes) · dictee v638 (homofonen, klaarzetten) · /doorgeven.html · kijkmoment-groep-7-pagina · outreach LOWAN 3 (45) + scholen batch 2 (15) · twee-weken-plan · concept Frieda |
 | ma 7 sep | ~4 (voorstel) | 💻 Activatie-nulmeting (docs/ACTIVATIE-NULMETING-SEP2026.md) · Start-kwartier v602 (08:10) + QR→start-kwartier + ouder-mail v603 (10:40) · stadspas-inventarisatie in GEMEENTE-BETAALT-PLAN |
 
-## Week 36 (ma 31 aug – zo 6 sep) — VOORSTEL aangevuld uit git (Claude 28 sep; Mark valideert)
+## Week 36 (ma 31 aug – zo 6 sep) — ✅ GOEDGEKEURD door Mark 28 sep 2026 (aangevuld uit git, 36 u)
 
 Per dag het hoogste van (dagschatting destijds, git-telling: eerste→laatste commit, gaten > 1,5 u = 0,25 u, + 0,5 u opstart).
 
