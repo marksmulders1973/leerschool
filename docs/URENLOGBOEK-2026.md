@@ -36,7 +36,23 @@
 | Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
 |---|---|---|
 | ma 28 sep | 6 (offline, Mark) | 📋 KvK-inschrijving Utrecht incl. reis (afspraak 11:45; welkomstmail KvK 11:59, KvK 42176244, startdatum 1 okt) |
-| ma 28 sep | (sessie-uren nog invullen) | 💻✉️ dagrapport + gedragspagina, LOWAN ronde 2 (45, 09:04), start-kwartier opwarmvraag (v767), KvK-nummer op site (v768), Dongen-check verstuurd |
+| ma 28 sep | 1 (voorstel, git 09:15–16:12) | 💻✉️ dagrapport + gedragspagina, LOWAN ronde 2 (45, 09:04), start-kwartier opwarmvraag (v767), KvK-nummer op site (v768), Dongen-check verstuurd |
+
+## Week 39 (ma 21 sep – zo 27 sep) — VOORSTEL (Claude 28 sep, uit git; Mark valideert)
+
+Methode als bij de reconstructie: per dag eerste→laatste commit, gaten > 1,5 u tellen als 0,25 u, + 0,5 u opstart, max 10 u/dag. Onderschat bewust (mails/testen/lezen zonder commit).
+
+| Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
+|---|---|---|
+| ma 21 sep | 0,5 | 💻 1 commit (14:49) |
+| di 22 sep | 7 | 💻✉️ 34 commits (14:49–21:08) · prijsbesluiten (partner per gezin), Jarige Job-mail, /klas digibord (v684) |
+| wo 23 sep | 5 | 💻✉️ 21 commits (09:05–21:26) · 1-oktober-vervolgmails, S&O-platforms, groeipost alle kanalen |
+| do 24 sep | 4 | 💻✉️ 21 commits (06:30–21:15) · mail leerkracht nieuwkomersgroep → Nieuwkomer-pakket gebouwd + LOWAN-vervolgmail 176/180 |
+| vr 25 sep | 5 | 💻✉️ 34 commits (06:18–21:09) · nieuwkomers-meting, België klaargezet, vervolg LOWAN 180/180 |
+| za 26 sep | 5,5 | 💻 46 commits (06:18–23:53) · nieuwkomers-uitbreiding, digibord, dagrapport; avond: doorgroeiplan stap 1-2 |
+| zo 27 sep | 3,5 | 💻✉️ 15 commits (10:19–21:05) · doorgroeiplan stap 3-6, briefje voor thuis, LinkedIn-post + netwerk |
+| **Offline (15%-regel)** | 4,5 | 📞 gesprekken over de app, telefoon-tests (15% van 30,5) |
+| **Totaal week 39** | **35** | |
 
 ## Week 38 (ma 14 sep – zo 20 sep)
 
