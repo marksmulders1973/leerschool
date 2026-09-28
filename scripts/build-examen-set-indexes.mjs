@@ -183,7 +183,7 @@ ${ctaUrl ? `<a class="lk-cta" href="${escapeHtml(ctaUrl)}">Oefen dit examen inte
 
 <footer>
   Leerkwartier is een gratis examen-oefenplatform voor VMBO, HAVO, VWO en de Doorstroomtoets.
-  <a href="/">Naar de homepage</a> · <a href="/over.html">Over Leerkwartier</a>
+  <a href="/">Naar de homepage</a> · <a href="/over.html">Over Leerkwartier</a> · KvK 42176244
 </footer>
 </body>
 </html>
