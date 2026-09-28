@@ -91,6 +91,8 @@ select case when bron like 'partner:%' then 'partnercode' when bron like 'zoek:%
 from eerste left join vr using (uid) group by 1 order by 2 desc;
 
 -- 4b) Wie géén enkele vraag beantwoordde: wat was hun laatste stap? (= waar haken ze af)
+--     ⚠️ Duiden (les 28 sep): "startkwartier_laad" als laatste stap = de vraag stond al in beeld
+--     (laden duurt mediaan 0,08 s, p90 0,3 s) → dat is "vraag 1 gezien, niet beantwoord", GEEN wachttijd.
 with sessies as (
   select session, props->>'uid' uid, bool_or(name = 'question_answered') vroeg
   from events_mens where created_at > now() - interval '7 days' group by 1, 2
