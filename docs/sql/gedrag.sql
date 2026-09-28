@@ -135,3 +135,12 @@ select
   count(distinct props->>'uid') filter (where name = 'partner_eer_bewaar') link_bewaard,
   count(distinct props->>'uid') filter (where source = 'zelf-bewaard') later_teruggekomen_via_bewaarde_link
 from events_mens where created_at > '2026-09-28 16:00+00';
+
+-- 8. 🚩 "Klopt er iets niet?" onder leerpadvragen (v774, 28 sep 2026)
+--    Meldingen zelf staan in wishes (status pending, display_name 'Melding leerpad').
+SELECT props->>'pad' AS pad,
+  COUNT(*) FILTER (WHERE name='leerpad_melding_open') AS geopend,
+  COUNT(*) FILTER (WHERE name='leerpad_melding') AS verstuurd
+FROM events_mens
+WHERE name IN ('leerpad_melding_open','leerpad_melding') AND created_at >= now()-interval '7 days'
+GROUP BY 1 ORDER BY verstuurd DESC, geopend DESC;

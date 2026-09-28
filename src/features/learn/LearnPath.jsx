@@ -43,6 +43,7 @@ import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
+import MeldFout from "../../shared/ui/MeldFout.jsx";
 import { noteerAntwoord } from "../../shared/herhaalNieuwkomers.js";
 import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, UI_GETAL, maakSteunMap, steunGoed, useSteun, leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
 
@@ -1776,6 +1777,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 </div>
               </details>
             )}
+            {/* 🚩 Klopt er iets niet? — key reset het paneel bij elke nieuwe vraag */}
+            <MeldFout key={`${pathId}-${stepIdx}-${currentCheck.q}`} pathId={pathId} stepIdx={stepIdx} check={currentCheck}
+              vertaling={!!path?.steunTeksten} taal={path?.steunTeksten ? leesSteuntaal() : null} />
           </div>
         )}
 
