@@ -54,14 +54,21 @@ Methode als bij de reconstructie: per dag eerste→laatste commit, gaten > 1,5 u
 | **Offline (15%-regel)** | 4,5 | 📞 gesprekken over de app, telefoon-tests (15% van 30,5) |
 | **Totaal week 39** | **35** | |
 
-## Week 38 (ma 14 sep – zo 20 sep)
+## Week 38 (ma 14 sep – zo 20 sep) — VOORSTEL aangevuld uit git (Claude 28 sep; Mark valideert)
+
+Per dag het hoogste van (dagschatting destijds, git-telling).
 
 | Dag | Uren | Wat (bewijs: git/verzendlog/mail) |
 |---|---|---|
-| ma 14 sep | ~0,5 (voorstel) | 💻📋 avondrapport + terugkommeting |
-| di 15 sep | ~4 (voorstel: dag 2,5 + avond 1,5) | 💻✉️ dagrapport, Ommeriek-besluit, oefenpakket-fixes (v663), Smulsoft→Leerkwartier (v664-667), bedrieger-hernoeming (v668) + tikken gerepareerd (v669), Facebook-reactie, Prinsjesdag-check; avond: drie treden (v670), database-export + branch-bescherming (v671), agenda |
-| wo 16 sep | ~6 (voorstel) | 🗂️💻✉️ bureaublad-opruiming (78→33) · dagrapport + PDF (08:30) · Charley-rem gebouwd en live getest (v672-673) · LOWAN batch 4 (45) verstuurd + batch 5 als Windows-taak · bulkmail-plan · verwerkingsregister-concept · urenreconstructie · dagrapport-editie 10:45 (alle cijfers vers, PDF + mail) · trouwe gast gebouwd (v674, 11:15) · avondeditie 20:10 (rem-meting, trouwe-gasten-teller, dashboard/mail via browser, PDF + mail) |
-| **Offline (15%-vuistregel)** | | (invullen eind week; Marks offline uren wk 37 ontbreken ook nog) |
+| ma 14 sep | 1 (git; dagschatting 0,5) | 💻📋 kompas + jaarlijn, avondrapport + terugkommeting |
+| di 15 sep | 5 (git; dagschatting 4) | 💻✉️ dagrapport, beveiligingsblok, Supabase Pro, Smulsoft→Leerkwartier (v664-667), Prinsjesdag-check (22 commits) |
+| wo 16 sep | 6 (dagschatting; git 2) | 🗂️💻✉️ bureaublad-opruiming (78→33), Charley-rem (v672-673), LOWAN batch 4 (45) verstuurd, trouwe gast (v674) |
+| do 17 sep | 3,5 (git) | 💻✉️ Dongen: antwoord + drukwerk besteld en aangeleverd, Sociale Kaart, drie dagrapport-edities (16 commits) |
+| vr 18 sep | 2,5 (git) | 💻✉️ Alkmaar dag 2, antwoord Leergeld Enschede, Lelystad-antwoord (17 commits) |
+| za 19 sep | 1 (git) | 📋 jaarlijn, dagrapport (3 commits) |
+| zo 20 sep | 1 (git) | 💻 prompt caching (v680), verdienmodel-blok (11 commits 00:55–10:46) |
+| **Offline (15%-vuistregel)** | 3 | 📞 15% van 20 |
+| **Weektotaal** | **23** | |
 
 ## Week 35 (ma 24 – zo 30 aug)
 
@@ -89,15 +96,21 @@ Methode als bij de reconstructie: per dag eerste→laatste commit, gaten > 1,5 u
 | do 10 sep | ~9 (07:00-08:00, 08:00-14:10, 15:30-16:30; voorstel) | dagrapport ochtend + avond (Kinderhulp-nieuwsbrief ontleed) · game v633-640 (online, WhatsApp-uitnodiging, fixes) · dictee v638 (homofonen, klaarzetten) · /doorgeven.html · kijkmoment-groep-7-pagina · outreach LOWAN 3 (45) + scholen batch 2 (15) · twee-weken-plan · concept Frieda |
 | ma 7 sep | ~4 (voorstel) | 💻 Activatie-nulmeting (docs/ACTIVATIE-NULMETING-SEP2026.md) · Start-kwartier v602 (08:10) + QR→start-kwartier + ouder-mail v603 (10:40) · stadspas-inventarisatie in GEMEENTE-BETAALT-PLAN |
 
-## Week 36 (ma 31 aug – zo 6 sep)
+## Week 36 (ma 31 aug – zo 6 sep) — VOORSTEL aangevuld uit git (Claude 28 sep; Mark valideert)
+
+Per dag het hoogste van (dagschatting destijds, git-telling: eerste→laatste commit, gaten > 1,5 u = 0,25 u, + 0,5 u opstart).
 
 | Dag | Uren | Wat |
 |---|---|---|
-| ma 31 aug | ~5 | 💻✉️ Dag: maand-afsluiting-dagrapport + Alkmaar-flyer versimpeld/geleverd (Teresa drukt) + Kinderhulp-reply (nieuwsbrief 4.400+ orgs). Avond: Charley-stem (euro-uitspraak + verkleinwoorden, v526), klaarzet-uitleg + Deianera-accountverwarring opgelost, ouder-ziet-toets-fix (v527), koppeling-herstel-knop (v528), Fable-naloop-pakket klaargezet |
-| di 1 sep | ~3,5 | 💻📋 Fable-naloop uitgevoerd (build+250 tests, E2E-recovery-test met 2 accounts, 2 opruim-fixes v529-530) · mail-hercontrole 5 dagen (niets gemist; Steffy bedankt) · dagrapport + PDF naar telefoon · avond: dagrapport-avondeditie + Rotterdam-keten-verificatie + Vercel/Meta-uitlezing |
-| wo 2 sep | ~3,5 | 💻🔗 Fable 5.1-review begeleid (6-agent sweep, 13 fixes v540-546: resultaat-knoppen, leerpad-crash, 3 datalekken) · besluit + oplevering koppeling-identiteit ouder↔kind in 2 stappen (v547-548) · tokenwacht-instelling (stop bij 90%) · P1/P2-restjes F7-F19 (v549-554) · dagrapport (5 nieuwe blokken) · LOWAN-tekst akkoord + batch 1 (45) verstuurd. **Voorstel-schatting ~3,5 u — corrigeer als het anders was.** |
-| **Offline (15%-vuistregel)** | | (invullen eind week) |
-| **Weektotaal** | ~28 (t/m vr) | doel-orde: ~30 u — za/zo (o.a. VoorleesExpress deel 3) komt er nog bij |
+| ma 31 aug | 5 (dagschatting; git 4) | 💻✉️ maand-afsluiting-dagrapport + Alkmaar-flyer + Kinderhulp-reply · avond: ouder ziet Doorstroomtoets-uitslag, Charley-bedragen, ouder-dashboard (12 commits) |
+| di 1 sep | 4,5 (git; dagschatting 3,5) | 💻📋 Fable-naloop, DPIA vastgesteld, mail-hercontrole, Kinderhulp logo-mail (22 commits 00:03–22:20) |
+| wo 2 sep | 7 (git; dagschatting 3,5) | 💻🔗 Fable 5.1-review (13 fixes), park-wereldbol (41 commits 09:48–22:08) |
+| do 3 sep | 4 (git) | 💻 stoomtrein-bug, parkmaatje, agenda geld-spoor (10 commits 08:18–18:51) |
+| vr 4 sep | 5,5 (git) | 💻✉️ route-kaart park, Froukje/Buurtgezinnen-antwoord (27 commits 14:37–23:01) |
+| za 5 sep | 4 (git) | 💻 park op een eiland, water, realisme (14 commits 08:31–17:15) |
+| zo 6 sep | 1,5 (git) | 💻 bergen-plan, dagrapport (9 commits) |
+| **Offline (15%-vuistregel)** | 4,5 | 📞 15% van 31,5 |
+| **Weektotaal** | **36** | |
 
 *Claude: nieuwe week = nieuw blok erboven; sessie-uren dagelijks bijwerken (schatting op basis van
 sessieduur en werk in de repo/mail — liever iets voorzichtig dan opgeblazen); offline uren pas
