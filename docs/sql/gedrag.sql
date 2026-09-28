@@ -126,3 +126,12 @@ select case when t0 < '2026-09-26 12:00+00' then '1 oud (vraag 1 uit leerpad)'
             else '3 opwarmvraag (v767+)' end periode,
   count(*) starts, round(100.0 * count(*) filter (where antw >= 1) / nullif(count(*), 0)) pct_vraag1, count(*) filter (where antw >= 5) alle_5
 from s where t0 is not null group by 1 order by 1;
+
+-- 7) ERE-SCHERM na partnercode (v772, 28 sep 2026): doet men een vraag, of bewaart de ouder de link?
+--    Nulmeting 21-28 sep: 42 apparaten zagen het scherm, 1 deed daarna een vraag.
+select
+  count(distinct props->>'uid') filter (where name = 'partner_eer_vraag') vraag_op_erescherm,
+  count(distinct props->>'uid') filter (where name = 'partner_eer_vraag' and props->>'goed' = 'true') goed,
+  count(distinct props->>'uid') filter (where name = 'partner_eer_bewaar') link_bewaard,
+  count(distinct props->>'uid') filter (where source = 'zelf-bewaard') later_teruggekomen_via_bewaarde_link
+from events_mens where created_at > '2026-09-28 16:00+00';

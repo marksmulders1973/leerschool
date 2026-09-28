@@ -17,6 +17,79 @@ import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartn
 import { PARTNER_NAMEN } from "./PartnerWelkom.jsx";
 import { track } from "../utils.js";
 import { FamilieKnop, FamilieLijst } from "./FamilieUitleg.jsx";
+import { telAntwoordVoorVriend } from "../features/referral/referral.js";
+
+// 🙋 Twee wegen op het ere-scherm (Mark 28 sep 2026, "ja, bouw het zo"). Meting 7 dagen: 42 apparaten
+// zagen dit scherm, 1 deed daarna een vraag. Het scherm praatte tegen de ouder ("u"), maar de enige
+// knop was voor het kind. Nu: (1) kind erbij → meteen één opwarmvraag op het scherm; (2) ouder
+// zonder kind → de link (mét code) naar zichzelf sturen, zodat het gezinspakket later alsnog start.
+const EER_VRAAG = {
+  nl: { q: "Welk woord hoort er niet bij?", opties: ["appel", "peer", "stoel", "banaan"], goed: 2, hint: "Drie woorden kun je eten. Welke niet?", uitleg: "Appel, peer en banaan zijn fruit. Een stoel niet." },
+  en: { q: "Which word does not belong?", opties: ["apple", "pear", "chair", "banana"], goed: 2, hint: "You can eat three of them. Which one not?", uitleg: "Apple, pear and banana are fruit. A chair is not." },
+};
+
+function EerVraag({ code, en, donker, onVerder }) {
+  const v = en ? EER_VRAAG.en : EER_VRAAG.nl;
+  const [gekozen, setGekozen] = useState(null);
+  const goed = gekozen === v.goed;
+  const kies = (i) => {
+    if (gekozen === v.goed) return;
+    const eerste = gekozen === null;
+    setGekozen(i);
+    if (!eerste) return;
+    try { track("question_answered", { bron: "erescherm", pad: "opwarm-erescherm", is_correct: i === v.goed, code }); } catch { /* */ }
+    try { track("partner_eer_vraag", { code, goed: i === v.goed }); } catch { /* */ }
+    try { telAntwoordVoorVriend(); } catch { /* */ } // telt mee voor het activeren van de gezinsplek (na 3 antwoorden)
+  };
+  const kaart = { background: donker ? "rgba(255,255,255,0.08)" : "#fff", border: "2px solid " + (donker ? "rgba(255,255,255,0.18)" : "#d5e6c2"), borderRadius: 14, padding: "14px 16px", marginTop: 12 };
+  return (
+    <div style={kaart}>
+      <div style={{ font: "800 17px/1.35 system-ui", color: donker ? "#fff" : "#14283c", marginBottom: 10 }}>{v.q}</div>
+      <div style={{ display: "grid", gap: 8 }}>
+        {v.opties.map((o, i) => {
+          const kleur = gekozen === null ? (donker ? "rgba(255,255,255,0.1)" : "#f6faf2") : i === gekozen ? (i === v.goed ? "#d7f5df" : "#fde0dd") : (donker ? "rgba(255,255,255,0.1)" : "#f6faf2");
+          return (
+            <button key={o} type="button" onClick={() => kies(i)} style={{ textAlign: "left", border: "2px solid " + (donker ? "rgba(255,255,255,0.25)" : "#cfe0bb"), borderRadius: 12, padding: "11px 14px", font: "700 16px system-ui", color: gekozen !== null && i === gekozen ? "#14283c" : (donker ? "#fff" : "#14283c"), background: kleur, cursor: goed ? "default" : "pointer" }}>{o}</button>
+          );
+        })}
+      </div>
+      {gekozen !== null && (
+        <div style={{ marginTop: 10, font: "600 14.5px/1.5 system-ui", color: goed ? "#1b7f3b" : "#b3261e" }}>
+          {goed ? (en ? "Well done! ✅ " : "Goed zo! ✅ ") + v.uitleg : (en ? "Not quite. " : "Nog niet. ") + v.hint}
+        </div>
+      )}
+      {goed && (
+        <button type="button" onClick={onVerder} style={{ marginTop: 12, width: "100%", border: "none", borderRadius: 14, padding: "14px", font: "800 17px system-ui", color: "#fff", background: "linear-gradient(135deg,#7ab52d,#5c9420)", cursor: "pointer" }}>
+          {en ? "▶ Keep practising" : "▶ Verder oefenen"}
+        </button>
+      )}
+    </div>
+  );
+}
+
+function EerBewaar({ code, en, donker }) {
+  const [klaar, setKlaar] = useState(null);
+  const link = `https://leerkwartier.app/?partner=${encodeURIComponent(code)}&utm_source=zelf-bewaard`;
+  const tekst = en
+    ? `Leerkwartier: free practice for my child (code ${code}). Open this later together: ${link}`
+    : `Leerkwartier: gratis oefenen voor mijn kind (code ${code}). Straks samen openen: ${link}`;
+  const knop = { flex: "1 1 140px", textAlign: "center", borderRadius: 12, padding: "11px 12px", font: "800 14.5px system-ui", textDecoration: "none", cursor: "pointer", border: "2px solid " + (donker ? "rgba(255,255,255,0.35)" : "#bcd99a"), color: donker ? "#fff" : "#14283c", background: donker ? "rgba(255,255,255,0.08)" : "#fff" };
+  const meet = (kanaal) => { setKlaar(kanaal); try { track("partner_eer_bewaar", { code, kanaal }); } catch { /* */ } };
+  return (
+    <div style={{ marginTop: 22 }}>
+      <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c" }}>{en ? "Later, together with your child?" : "Straks samen met uw kind?"}</div>
+      <div style={{ font: "600 13.5px/1.5 system-ui", color: donker ? "#b9c6d4" : "#5a6775", margin: "4px 0 10px" }}>
+        {en ? "Send yourself the link. The code is in it, so the Family package starts as soon as your child practises."
+            : "Stuur uzelf de link. De code zit erin, dus het Familie-pakket start zodra uw kind gaat oefenen."}
+      </div>
+      <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+        <a href={"https://wa.me/?text=" + encodeURIComponent(tekst)} target="_blank" rel="noopener" onClick={() => meet("whatsapp")} style={knop}>📲 WhatsApp</a>
+        <a href={"mailto:?subject=" + encodeURIComponent(en ? "Leerkwartier — for later" : "Leerkwartier — voor straks") + "&body=" + encodeURIComponent(tekst)} onClick={() => meet("mail")} style={knop}>✉️ {en ? "E-mail" : "Mail"}</a>
+      </div>
+      {klaar && <div style={{ marginTop: 8, font: "600 13px system-ui", color: donker ? "#b8e07a" : "#3f7015" }}>{en ? "Saved — see you later!" : "Bewaard — tot straks!"}</div>}
+    </div>
+  );
+}
 
 function naamVoor(code) {
   if (!code) return null;
@@ -106,11 +179,13 @@ function EerScherm({ code, onVerder }) {
           </div>
           <FamilieLijst open={famOpen} en={isEN} donker={donker} voorNavigeren={() => { try { sessionStorage.setItem(KEY_EER, "1"); } catch { /* */ } }} />
         </div>
-        <button
-          onClick={onVerder}
-          style={{ marginTop: 24, width: "100%", border: "none", borderRadius: 14, padding: "16px", font: "800 18px system-ui", color: "#fff", background: "linear-gradient(135deg,#7ab52d,#5c9420)", boxShadow: "0 6px 18px rgba(122,181,45,0.35)", cursor: "pointer" }}
-        >
-          {isEN ? "▶ Start practicing — free" : "▶ Begin met oefenen — gratis"}
+        {/* Weg 1: kind erbij → meteen één vraag (i.p.v. eerst een knop). */}
+        <div style={{ font: "800 16px system-ui", color: donker ? "#fff" : "#14283c", marginTop: 24 }}>{isEN ? "Is your child with you? Try one question:" : "Is uw kind erbij? Probeer meteen één vraag:"}</div>
+        <EerVraag code={code} en={isEN} donker={donker} onVerder={onVerder} />
+        {/* Weg 2: ouder zonder kind → link met code bewaren. */}
+        <EerBewaar code={code} en={isEN} donker={donker} />
+        <button type="button" onClick={onVerder} style={{ marginTop: 20, width: "100%", border: "none", background: "transparent", font: "700 14px system-ui", color: donker ? "#b9c6d4" : "#5a6775", textDecoration: "underline", cursor: "pointer" }}>
+          {isEN ? "Or go straight to the app →" : "Of ga meteen naar de app →"}
         </button>
         {/* "Ook zonder code gratis" bewust weggelaten (Mark 27 aug): waar, maar
             op dít moment haalt het de waarde van de code onderuit. */}
