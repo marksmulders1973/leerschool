@@ -116,7 +116,7 @@ Per dag het hoogste van (dagschatting destijds, git-telling: eerste→laatste co
 sessieduur en werk in de repo/mail — liever iets voorzichtig dan opgeblazen); offline uren pas
 invullen na antwoord van Mark, met zijn omschrijving erbij.*
 
-## Weken vóór 24 aug — reconstructie-VOORSTEL (Claude, 16 sep 2026; Mark valideert)
+## Weken vóór 24 aug — reconstructie ✅ VOORLOPIG GOEDGEKEURD door Mark 28 sep 2026 ("ik keur voorlopig alle maanden goed"; januari expliciet "klopt"). Aanvullen met offline klussen en bewijs (claude.ai-gespreksgeschiedenis jan-mrt) blijft mogelijk.
 
 **Mark-verklaring 28 aug:** "Ik nam Claude in januari en elke maand heb ik eraan gewerkt,
 elke week zeker 10 uur." → De aanloopfase begint in **januari 2026**, niet in mei.
