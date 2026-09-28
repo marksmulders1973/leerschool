@@ -180,3 +180,87 @@ Mark Smulders — leerkwartier.app
 | 130 | Wereldwijzer – Taalklassen | lowan | willemien.velsink@meerkring.nl |
 
 ## Verzendlog
+
+- **28-9-2026, 09:04:24** — via Resend (hallo@leerkwartier.app), 45/45 verstuurd.
+  - 1 · KC Oda en KC Loper · i.lammerschop@mosalira.nl · OK · 01a0e6d3-3c3f-794f-83b4-bb6343ffc37f
+  - 2 · Kindcentrum 't Loont (SKOV) · m.verhoeven@skov-onderwijs.nl · OK · 01a0e6d3-41f5-74a9-84d0-7108c06c1eba
+  - 3 · Kindcentrum De Lichtbaak · delichtbaak@ckcdrenthe.nl · OK · 01a0e6d3-47a5-793c-99a4-1c1fea02d99e
+  - 4 · Kindcentrum De Linde · lennevantilburg@skobos.nl · OK · 01a0e6d3-4d59-762c-a393-d3f47c98363a
+  - 5 · Kindcentrum De Linge · a.minnaard@alberoscholen.nl · OK · 01a0e6d3-537f-7454-93c1-2765b33cc860
+  - 6 · Kindcentrum De Vindplaats · h.oerlemans@vindplaats.amsterdam · OK · 01a0e6d3-5958-7bcd-a18b-66146556340f
+  - 7 · Kindcentrum De Waaier · mariekenijhof@archipelprimair.nl · OK · 01a0e6d3-5f12-706d-8bfb-eb5fc120a5df
+  - 8 · Kindcentrum De Wentelwiek · jose.vanhugte@eenbes.nl · OK · 01a0e6d3-64c8-7289-ac18-0a646aec0c00
+  - 9 · Kindcentrum LEEF · wendybk@kcleef.nl · OK · 01a0e6d3-6a7f-7243-b459-88e9f4b7ade6
+  - 10 · Kindcentrum Paulus · patty.vanthoofd@innovo.nl · OK · 01a0e6d3-702b-7930-a85f-b5a0b4e56ee8
+  - 11 · Kindcentrum Sterrebos · hannieuijtdewilligen@saamscholen.nl · OK · 01a0e6d3-75e4-7c84-b4fc-a4a34895044c
+  - 12 · Kindcentrum Universum · a.boon@talenthoorn.nl · OK · 01a0e6d3-7b96-7a63-936a-fc443844069d
+  - 13 · Kindcentrum Wijngaard · kindcentrumwijngaard@accrete.nl · OK · 01a0e6d3-8162-7d51-bc84-03155a007d48
+  - 14 · Kindercampus Mondriaan · natasha.retel@nestas-scholengroep.nl · OK · 01a0e6d3-871d-77ca-85a7-fed9ac17029e
+  - 15 · Kinderstad · nicole.clemens@bijkinderstad.nl · OK · 01a0e6d3-8cd5-7553-8f15-41f336643c98
+  - 16 · Koepelschool NMB · cbruijnis@vhsede.nl · OK · 01a0e6d3-928e-7e9f-adc3-a8588590a4de
+  - 17 · Koningin Beatrixschool · contact@beatrixschool.info · OK · 01a0e6d3-9850-7638-92b7-74a9ecfa20ef
+  - 18 · Kuna Mondo · m.sanders@cpow.nl · OK · 01a0e6d3-9e11-747b-abb2-bf0361edb378
+  - 19 · Leimundo · petrakennis@leimundo.nl · OK · 01a0e6d3-a3c7-7c8b-bfea-e0ab44271478
+  - 20 · Louis Bouwmeester · info@louisbouwmeesterschool.nl · OK · 01a0e6d3-a972-719d-9e5e-0f477830706e
+  - 21 · Master Amiko · marieke.postma@kykscholen.nl · OK · 01a0e6d3-af34-74db-9e66-dca1de60a598
+  - 22 · Meerwerf Basisschool Villa Kakelbont · directie@villakakelbont.meerwerf.nl · OK · 01a0e6d3-b4f2-719a-95ab-071b3fcde879
+  - 23 · Meester Schabergschool · mmaartense@scoh.nl · OK · 01a0e6d3-baac-7963-bfe8-30d5cc9c2505
+  - 24 · MiMundo · a.bos@sooog.nl · OK · 01a0e6d3-c082-744e-93d9-15761db2415a
+  - 25 · MKC Anne Frankschool · heleenpeterse@ijsselgraaf.nl · OK · 01a0e6d3-c638-725b-9aaf-00fcf026693a
+  - 26 · Neuteboomschool locatie Obs. Wereldwijs · teamleider.wereldwijs@opron.nl · OK · 01a0e6d3-cbf5-725e-8506-2097330becf9
+  - 27 · Nieuwkomersklas Tiel · onderwijs@opo-r.nl · OK · 01a0e6d3-d1ad-742a-aa32-2f2c844bacf2
+  - 28 · Nieuwkomersschool de Globe · l.dagelet@wijzer.nu · OK · 01a0e6d3-d770-75ee-8eb1-43c988e7ad3a
+  - 29 · Nieuwkomersschool De Schakel · garcia@nksdeschakel.nl · OK · 01a0e6d3-dd35-76d9-bd78-0c51b6a78412
+  - 30 · Nieuwkomersschool De Wereld · directie.dewereld@sophiascholen.nl · OK · 01a0e6d3-e2fa-73fd-a172-91016a5117b3
+  - 31 · Nieuwkomersschool Het Pyriet · hetpyriet@sopow.nl · OK · 01a0e6d3-e8bb-764e-9a04-278779bf64b0
+  - 32 · Nieuwkomersschool West Betuwe · d.koelink@fluvium.nl · OK · 01a0e6d3-ee7e-7098-b954-a89665b15b35
+  - 33 · Nieuwkomersschool Zwolle · directie.nieuwkomersschool@catent.nl · OK · 01a0e6d3-f465-73e4-ac28-c586f24488b1
+  - 34 · Nieuwkomersvoorziening West-Friesland, locatie Palet · lianne.broersen@palet-stedebroec.nl · OK · 01a0e6d3-fa1b-7179-bb84-243e26516ebb
+  - 35 · NT2-basisschool Het Palet · e.mermer@viadere.nl · OK · 01a0e6d3-ffda-7a65-8682-0564cb6587a1
+  - 36 · o.b.s. De Voshaar · directie@devoshaar.nl · OK · 01a0e6d4-05a4-7329-9ead-9c6acee732df
+  - 37 · OBS 't Montferland · simone.tenklooster@paraatscholen.nl · OK · 01a0e6d4-0b5e-738a-a62f-dca33dc656b4
+  - 38 · Obs Dakpark · jeannette.devos@obsdakpark.nl · OK · 01a0e6d4-1119-7327-a921-3d028d932ab3
+  - 39 · OBS de Bloemberg · directie.bloemberg@conexus.nu · OK · 01a0e6d4-16d2-7421-be0a-f97cbf131899
+  - 40 · Obs de Dennenkamp · g.willems@ooz.nl · OK · 01a0e6d4-1c8e-763d-8a52-d3ec9872b687
+  - 41 · OBS De Dolfijn · mike.mastwijk@ozhw.nl · OK · 01a0e6d4-2243-7078-a0f6-d07818ede877
+  - 42 · OBS De Draaimolen · corina.kranendonk@ozhw.nl · OK · 01a0e6d4-2807-7542-b62e-216655c1388b
+  - 43 · OBS De Driepas · l.bakkes@kindante.nl · OK · 01a0e6d4-2dc7-72c0-b6ec-f9877b87a3f4
+  - 44 · OBS de Duizendpoot · l.schreurs@kindante.nl · OK · 01a0e6d4-337f-70fd-8fde-d11d11483707
+  - 45 · Obs De Egelantier · relinda.m@bredeschoolsoest.nl · OK · 01a0e6d4-3957-729e-9f43-8626e3d3b39c
+
+- **28-9-2026, 09:08:51** — via Resend (hallo@leerkwartier.app), 35/35 verstuurd.
+  - 46 · OBS De Lijster · nettie@obs-delijster.nl · OK · 01a0e6d7-8655-771d-abae-026fbcb4c236
+  - 47 · OBS de Meridiaan · directie@obsdemeridiaan.nl · OK · 01a0e6d7-8c2f-70d9-8619-d37aafed0e77
+  - 48 · Obs de Negen Wieken · h.sakey@goudonderwijs.nl · OK · 01a0e6d7-91f7-731b-ae83-492ef52eaeda
+  - 49 · OBS de Poolster · a.pilon@stichtingschool.nl · OK · 01a0e6d7-97ac-72cd-ba89-be64e1688559
+  - 50 · OBS De Smeltkroes · directie@desmeltkroes.nl · OK · 01a0e6d7-9d75-7152-924a-8f1ac5a0ed76
+  - 51 · Obs de Springplank · directie.obsdespringplank@saamscholen.nl · OK · 01a0e6d7-a338-709a-9dad-9a3ba663b3bb
+  - 52 · OBS De Straap · mariettemennen@obsh.nl · OK · 01a0e6d7-a91a-74ce-85c0-55d73ba36ede
+  - 53 · OBS de Tarthorst · info@obsdetarthorst.nl · OK · 01a0e6d7-aef6-7685-a9cc-c5cb4d71e258
+  - 54 · OBS De Toverbal · detoverbal@elanowg.nl · OK · 01a0e6d7-b4bd-77be-b81f-1d70b2a37e2f
+  - 55 · Obs De Veenvlinder · veenvlinder@stichtingbaasis.nl · OK · 01a0e6d7-ba81-70ff-8778-4aae80d146cf
+  - 56 · OBS De Verrekijker · directie@obsdeverrekijker.nl · OK · 01a0e6d7-c048-726b-bdfb-ba763bb85b36
+  - 57 · OBS De Vlinderboom (NT2 onderwijs) · eva.visser@adenium.nl · OK · 01a0e6d7-c601-71ba-a4e9-8cf77ec96daf
+  - 58 · OBS De Vlonder · c.wencker@ooz.nl · OK · 01a0e6d7-cbd4-705f-9f4f-c623d0fd1296
+  - 59 · OBS de Wereld · annettemartens@obsdewereld.eu · OK · 01a0e6d7-d18f-740e-a112-677eed5d5492
+  - 60 · OBS De Wissel · vliej01@dehaagsescholen.nl · OK · 01a0e6d7-d74c-7dfe-b3c8-1515369b4a33
+  - 61 · OBS Hagen · michelraddatz@ijsselgraaf.nl · OK · 01a0e6d7-dcfe-7944-bae6-839106f443bc
+  - 62 · OBS Harlekijn · m.leenen@harlekijn-venlo.nl · OK · 01a0e6d7-e2bc-767e-9f5e-cf9cb78b9be6
+  - 63 · OBS Jan Ligthart · c.leenders@janligthartschool.nl · OK · 01a0e6d7-e87b-794b-be06-7d11e9fa0446
+  - 64 · OBS Matheness · hans.goedegebuur@stichtingboor.nl · OK · 01a0e6d7-ee30-7ad2-a98e-4693435395c2
+  - 65 · OBS Over de Slinge · info@overdeslinge.nl · OK · 01a0e6d7-f405-737d-b014-247fe38e413b
+  - 66 · OBS Papilio · e.visser@opo-furore.nl · OK · 01a0e6d7-f9df-74de-abc9-319e3cf684c8
+  - 67 · OJBS De Omnibus, Baarlo · y.sijben@omnibusbaarlo.nl · OK · 01a0e6d7-ffc8-793b-969b-8b4b5701d6da
+  - 68 · OKC de Toermalijn · a.schmitz@toermalijntegelen.nl · OK · 01a0e6d8-0585-72ff-900b-d496c4a3b6e4
+  - 69 · Olympiaschool · m.desmit@olympiaschool.nl · OK · 01a0e6d8-0b56-7719-8be7-744b0bde30d8
+  - 70 · Ondersteuningsteam De Stipe · r.degroot@destipe.nl · OK · 01a0e6d8-1120-75bf-8bb2-c9609133b435
+  - 71 · Onze Wereld · mbroek@onzewereld.net · OK · 01a0e6d8-16ee-7d72-8c0c-fc8522db85c9
+  - 72 · Opstap · nicole.vaneert@atalenta.nl · OK · 01a0e6d8-1cb0-757f-9077-bed659d1add9
+  - 73 · Pastoor Galamaschool · m.vanwesterop@pro8.nu · OK · 01a0e6d8-227a-770f-9c7e-315c6d66ee6e
+  - 74 · Paulusschool · m.goosens@st-paulusschool.nl · OK · 01a0e6d8-283e-7758-8712-ff8736e75995
+  - 75 · Pieter Bas · marina.deblois@rvko.nl · OK · 01a0e6d8-2df7-72b4-bba9-a879de18a4d5
+  - 76 · POL de Bosrand · basisschool@poldebosrand.nl · OK · 01a0e6d8-33b2-7c04-b9eb-d2cd2f7f2260
+  - 77 · Prinses Beatrixschool · s.dejonge@alberoscholen.nl · OK · 01a0e6d8-3970-7389-bb9b-52e127e0ccff
+  - 78 · Prisma · c.drost@sokampen.nl · OK · 01a0e6d8-3f32-770f-9a30-ac84fb847669
+  - 79 · R. de Jagerschool · rdejager@spco.nl · OK · 01a0e6d8-44e3-7812-a525-dad16020644b
+  - 80 · Regionale taalschool · e.ruesink@pro8.nu · OK · 01a0e6d8-4a99-77d7-8d94-65db24aa05df
