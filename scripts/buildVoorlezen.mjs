@@ -198,6 +198,7 @@ ${FAQ.map((f) => `<details class="faq"><summary>${esc(f.q)}</summary><p>${esc(f.
 <footer>
   <strong>Leerkwartier</strong> (leerkwartier.app) is een gratis Nederlandse leer-app, gebouwd door één vader. Oefenen is gratis — gegarandeerd t/m 2031. Geen reclame, geen account nodig, werkt op telefoon, tablet en computer.<br>
   <a href="/">Home</a> · <a href="/leesladder">Leesladder</a> · <a href="/begrijpend-lezen-oefenen.html">Begrijpend lezen oefenen</a> · <a href="/voor-organisaties.html">Voor organisaties</a> · <a href="/over.html">Over Leerkwartier</a> · <a href="/privacy.html">Privacy</a>
+<p style="font-size:12px;opacity:.7;margin:6px 0 0">Leerkwartier · eenmanszaak van Mark Smulders · KvK 42176244</p>
 </footer>
 
 </div>
