@@ -2710,7 +2710,7 @@ export default function App() {
       <a href="/weekpakket.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>📬 Weekpakket</a>
       ·
       <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Privacybeleid</a>
-      · © Leerkwartier
+      · © Leerkwartier · KvK 42176244
     </footer>
     </Suspense>
     </main>
