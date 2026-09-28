@@ -80,3 +80,8 @@ select
 select
   (select json_object_agg(k, n) from (select props->>'kanaal' k, count(distinct props->>'uid') n from events_mens where name = 'nk_deel' group by 1) x) deelknop_per_kanaal,
   (select json_object_agg(s, n) from (select source s, count(distinct props->>'uid') n from events_mens where source in ('whatsapp','linkedin','deellink') and path like '/nieuwkomers%' group by 1) y) binnen_via_deellink;
+
+-- 14) Tips/wensen vanaf /nieuwkomers (v773): geopend → verstuurd, en de berichten zelf (wensenbord, pending)
+select (select count(distinct props->>'uid') from events_mens where name = 'nk_tip_open') tipvak_geopend,
+       (select count(*) from events_mens where name = 'nk_tip' and props->>'ok' = 'true') tips_verstuurd;
+select created_at at time zone 'Europe/Amsterdam' t, display_name, message from wishes where message like '[nieuwkomers%' order by created_at desc limit 10;
