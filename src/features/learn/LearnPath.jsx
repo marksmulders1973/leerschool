@@ -46,6 +46,9 @@ import { track } from "../../utils.js";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
 import { noteerAntwoord } from "../../shared/herhaalNieuwkomers.js";
 import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, UI_GETAL, maakSteunMap, steunGoed, useSteun, leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
+import LuisterKnop from "../../shared/ui/LuisterKnop.jsx";
+import VoorleesSchakelaar from "../../shared/ui/VoorleesSchakelaar.jsx";
+import { useVoorleesAltijd, useVanzelfZeggen, zeg, stopZeggen, ZEG } from "../../shared/voorleesModus.js";
 
 // Nieuwkomerpaden: korte titel ("Woorden" i.p.v. "Woorden — je eerste … (nieuwkomers)"), zodat hij
 // vertaalbaar is en niet over twee regels loopt (kliktest 26 sep 2026).
@@ -105,6 +108,25 @@ function stripInternalCodes(s) {
 function stripExamenVraagPrefix(s) {
   if (!s) return s;
   return String(s).replace(/^\s*Vraag\s*\d+\s*[—\-·:]\s*/i, "").trim();
+}
+
+// 🔊 Tekst om uit te spreken (Mark 29 sep 2026): **vet** eruit; formules ($…$, \frac) niet — de
+// stem leest dan de code op. Leeg = niets zeggen (geen luisterknop, niet vanzelf voorlezen).
+function spreekTekst(t) {
+  const s = String(t ?? "");
+  return !s.trim() || s.includes("$") || s.includes("\\") ? "" : s.replace(/\*+/g, "");
+}
+
+// Knoptekst + luisterknopje erin (Mark 29 sep 2026, nieuwkomers die nog niet lezen): het kind hoort
+// wat de knop doet. Het knopje zelf kiest niets (LuisterKnop stopt de klik). `licht` op een groene knop.
+function MetLuister({ aan, tekst, licht = true, children }) {
+  if (!aan || !spreekTekst(tekst)) return children;
+  return (
+    <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 10, maxWidth: "100%" }}>
+      <span style={{ minWidth: 0 }}>{children}</span>
+      <LuisterKnop tekst={spreekTekst(tekst)} maat={34} licht={licht} />
+    </span>
+  );
 }
 
 function renderInline(text) {
@@ -630,6 +652,37 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId, stepIdx, checkIdx, rawCheck]);
 
+  // 🔊 Luisteren i.p.v. lezen (Mark 29 sep 2026, mail nieuwkomers-directeur: "het merendeel van onze
+  // leerlingen is ongeletterd"). `voorleesAan` = de "alles voorlezen"-stand: vraag en uitleg klinken
+  // vanzelf, de reactie na een antwoord wordt uitgesproken. `luisterStand` = die stand óf een
+  // nieuwkomerpad: luisterknopjes bij de antwoorden, de titels en de hoofdknop.
+  const voorleesAan = useVoorleesAltijd();
+  const isNieuwkomerPad = /-nieuwkomers$/.test(String(pathId || ""));
+  const luisterStand = voorleesAan || isNieuwkomerPad;
+  // Eén sleutel per scherm: een vraag (ook na fout/goed/deel-klaar) of de uitleg van een deel.
+  const vraagFase = mode === "checking" || mode === "wrong" || mode === "correctEvidence" || mode === "stepDone";
+  const schermSleutel = mode === "reading" ? `u${stepIdx}` : vraagFase ? `v${stepIdx}-${checkIdx}` : mode;
+  // Stand net aangezet met de schakelaar? Dan dít scherm niet vanzelf voorlezen — anders breekt het
+  // de zin van de schakelaar ("Ik lees alles voor…") na 350 ms af. Vanaf het volgende scherm wel.
+  const vorigAanRef = useRef(voorleesAan);
+  const aanGezetOpRef = useRef(null);
+  if (vorigAanRef.current !== voorleesAan) {
+    vorigAanRef.current = voorleesAan;
+    aanGezetOpRef.current = voorleesAan ? schermSleutel : null;
+  }
+  const vanzelf = voorleesAan && aanGezetOpRef.current !== schermSleutel;
+  // Alleen bij een nieuwe vraag / nieuw uitlegscherm (de tekst of de fase wisselt), niet bij elke render.
+  // Na een fout blijft de vraag-fase actief, zodat de uitgesproken hint niet wordt afgebroken.
+  useVanzelfZeggen(spreekTekst(currentCheck?.q), vanzelf && vraagFase && !!currentCheck && !step?.interactiveComponent);
+  const uitlegSpraak = spreekTekst(step?.explanation);
+  useVanzelfZeggen(uitlegSpraak ? [spreekTekst(stripExamenVraagPrefix(step.title)), uitlegSpraak].filter(Boolean).join(". ") : "", vanzelf && mode === "reading");
+  useVanzelfZeggen(ZEG.klaar, vanzelf && mode === "allDone");
+  // VoorleesBlok ("🔊 Lees voor") spreekt buiten zeg() om. Tikt het kind erop terwijl de vanzelf-stem
+  // nog praat, dan die eerst netjes stoppen — anders start die na de onderbreking opnieuw en praten ze door elkaar.
+  const stopVanzelfBijLeesVoor = (e) => {
+    if (e.target?.closest?.('button[aria-label="Lees deze tekst voor"]')) stopZeggen();
+  };
+
   // Uitleg openen vanuit een vraag: onthoud de vraag, zodat "Terug naar de vraag" hier verdergaat
   // (en niet bij vraag 1). Meten: leerpad_uitleg_open {na: vooraf | fout | hulp | bijsturen}.
   const naarUitleg = (na) => {
@@ -754,6 +807,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         isCorrect: i === currentCheck.answer,
       }).catch(() => {});
     }
+    // 🔊 Voorlees-stand: reactie uitspreken (synchroon in de tik — Android weigert spraak na een timeout).
+    // Fout → "Nog niet…" + de denkprikkel van dít antwoord. De zichtbare teksten blijven zoals ze zijn.
+    if (voorleesAan) {
+      zeg(i === currentCheck.answer ? ZEG.goed : [ZEG.fout, spreekTekst(currentCheck.wrongHints?.[i])].filter(Boolean).join(" "));
+    }
     if (i === currentCheck.answer) {
       setLastWrongAnswer(null);
       setCorrectStreak((s) => s + 1);
@@ -786,7 +844,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         }
         // Bij een check met reveal-video (Mark 2026-06-14): geef de video de tijd
         // om af te spelen vóór we doorschakelen, zodat de leerling de afloop ziet.
-      }, currentCheck.bronVideo ? 6200 : 1100);
+        // Voorlees-stand: iets langer, zodat "Goed zo!" niet door de volgende vraag wordt afgekapt.
+      }, currentCheck.bronVideo ? 6200 : voorleesAan ? 1700 : 1100);
     } else {
       // Onthoud welke optie de leerling fout koos zodat de AI-tutor erop
       // kan reageren als de leerling om hulp vraagt.
@@ -929,6 +988,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         onHome={onHome}
         loaded={loaded}
         wrongPerStep={wrongPerStep}
+        luisterStand={luisterStand}
       />
       </SteunCtx.Provider>
     );
@@ -957,16 +1017,23 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           <div style={pageStyle()}>
             <Header onBack={goOverview} onHome={onHome} title={path.title} emoji={path.emoji} />
             <div style={{ padding: "10px 18px 28px", display: "grid", gap: 12 }}>
-              <SteunTekst nl="Goed gedaan! Je bent klaar.">
-                <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, color: C.good }}>🏁 Goed gedaan! Je bent klaar.</div>
-              </SteunTekst>
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <div style={{ flex: 1, minWidth: 0 }}>
+                  <SteunTekst nl="Goed gedaan! Je bent klaar.">
+                    <div style={{ fontFamily: "var(--font-display)", fontSize: 22, fontWeight: 800, color: C.good }}>🏁 Goed gedaan! Je bent klaar.</div>
+                  </SteunTekst>
+                </div>
+                {luisterStand && <LuisterKnop tekst={`Goed gedaan! Je bent klaar.${sess.tries > 0 ? ` ${sess.correct} van de ${sess.tries} goed.` : ""}`} maat={40} />}
+              </div>
               {sess.tries > 0 && (
                 <SteunTekst nl={steunGoed(sess.correct, sess.tries)}>
                   <div style={{ fontSize: 16, color: C.text }}>{sess.correct} van de {sess.tries} goed</div>
                 </SteunTekst>
               )}
               <SteunTekst nl="Terug naar het Nieuwkomer-pakket" knop>
-                <button onClick={() => { window.location.href = "/nieuwkomers"; }} style={btnPrimary()}>Terug naar het Nieuwkomer-pakket</button>
+                <button onClick={() => { window.location.href = "/nieuwkomers"; }} style={btnPrimary()}>
+                  <MetLuister aan={luisterStand} tekst="Terug naar het Nieuwkomer-pakket">Terug naar het Nieuwkomer-pakket</MetLuister>
+                </button>
               </SteunTekst>
               <SteunTekst nl="Nog een keer" knop>
                 <button onClick={goOverview} style={btnSecondary()}>Nog een keer</button>
@@ -989,6 +1056,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             onPickPath={onPickPath}
             examRefs={examRefs}
             authUser={authUser}
+            luister={luisterStand}
           />
           {/* Familie (bèta): trots-moment bij een mijlpaal (foutloos in één keer). */}
           {(() => {
@@ -1088,7 +1156,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         </div>
       </div>
 
-      <div style={{ padding: "10px 18px 28px" }}>
+      <div style={{ padding: "10px 18px 28px" }} onClickCapture={stopVanzelfBijLeesVoor}>
+        {/* 🔊 Aan/uit voor "alles voorlezen" (Mark 29 sep 2026): op nieuwkomerpaden hier, zodat ook
+            de juf het in de les kan aanzetten voor een kind dat nog niet leest. */}
+        {isNieuwkomerPad && (
+          <div style={{ marginTop: 4, marginBottom: 6 }}><VoorleesSchakelaar compact /></div>
+        )}
         {/* Eyebrow — geeft context (vak · stap-info) zonder lawaai. Patroon
             geleerd van Khan/BBC Bitesize/Brilliant: kleine caps boven titel. */}
         <div style={{
@@ -1133,6 +1206,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             {path.steunTeksten ? "" : "Onderwerp: "}{stripExamenVraagPrefix(step.title)}
           </div></SteunTekst>
         ) : (
+        <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+        <div style={{ flex: 1, minWidth: 0 }}>
         <SteunTekst nl={step.title}><h2 style={{ fontFamily: "var(--font-display)", fontSize: 22, color: "var(--color-text-strong)", margin: "4px 0 6px" }}>
           {/* Mark UX 2026-05-18: bij examen-paden begint step.title vaak met
               "Vraag N — " (origineel examenblad-nummer). Strippen, want de
@@ -1140,6 +1215,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               in examenBron-banner eronder. */}
           {stepIdx + 1}. {stripExamenVraagPrefix(step.title)}
         </h2></SteunTekst>
+        </div>
+        {luisterStand && spreekTekst(step.title) && <LuisterKnop tekst={`Deel ${stepIdx + 1}. ${spreekTekst(stripExamenVraagPrefix(step.title))}`} maat={40} />}
+        </div>
         )}
 
         {/* Begripscheck-na-uitlegPad-banner (Roediger-Karpicke, 2026-05-16):
@@ -1314,11 +1392,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           </>
         )}
 
-        {mode === "reading" && (
-          <SteunTekst nl={resumeCheckIdxRef.current !== null ? "Terug naar de vraag ▶" : checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"} knop><button onClick={startCheck} style={btnPrimary()}>
-            {resumeCheckIdxRef.current !== null ? "Terug naar de vraag ▶" : checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"}
-          </button></SteunTekst>
-        )}
+        {mode === "reading" && (() => {
+          const knopTekst = resumeCheckIdxRef.current !== null ? "Terug naar de vraag ▶" : checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶";
+          return (
+            <SteunTekst nl={knopTekst} knop><button onClick={startCheck} style={btnPrimary()}>
+              <MetLuister aan={luisterStand} tekst={knopTekst.replace(" ▶", "")}>{knopTekst}</MetLuister>
+            </button></SteunTekst>
+          );
+        })()}
         {/* Vrije navigatie tussen delen (29 sep 2026: van boven naar onder verplaatst — stond vóór de uitleg) */}
         {mode === "reading" && (
           <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 18 }}>
@@ -1684,18 +1765,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               const isExamen = !!currentCheck.examenBron;
               const letter = String.fromCharCode(65 + i);
               const isWrongPick = isSelected && selected !== currentCheck.answer;
-              return (
-                <SteunOptie key={i} steun={currentCheck.steunOpties} opt={opt}>
-                <button
-                  className="lk-answer-btn"
-                  onClick={() => handlePick(i)}
-                  disabled={selected !== null}
-                  style={{
-                    ...optionStyle(isSelected, isCorrect, selected !== null),
-                    ...(isWrongPick ? { animation: "lk-wrong-shake 0.4s ease" } : {}),
-                  }}
-                >
-                  {isExamen ? (
+              // 🔊 Luisterknop vóór het antwoord (Mark 29 sep 2026): een kind dat niet leest hoort
+              // eerst elk antwoord en kiest dan. Tik op de luidspreker = alleen horen, niet kiezen.
+              const optSpraak = luisterStand ? spreekTekst(opt) : "";
+              const inhoud = isExamen ? (
                     <span style={{ display: "inline-flex", alignItems: "center", gap: 12, width: "100%" }}>
                       <span style={{
                         flexShrink: 0,
@@ -1722,7 +1795,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     // Plaatje vóór het woord (26 sep 2026, learnPaths/nieuwkomersPicto.js) — alleen als de vraag er een heeft.
                     <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}>
                     <Picto bron={currentCheck.picto?.[opt]} />
-                    {/-nieuwkomers$/.test(String(pathId || "")) && /^(de|het) \S/.test(String(opt)) ? (
+                    {isNieuwkomerPad && /^(de|het) \S/.test(String(opt)) ? (
                       <span>
                         <span style={{ color: String(opt).startsWith("het ") ? "#ffab40" : "#4fc3f7", fontWeight: 800 }}>
                           {String(opt).startsWith("het ") ? "het" : "de"}
@@ -1733,7 +1806,24 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                       <MdInline text={opt} />
                     )}
                     </span>
-                  )}
+                  );
+              return (
+                <SteunOptie key={i} steun={currentCheck.steunOpties} opt={opt}>
+                <button
+                  className="lk-answer-btn"
+                  onClick={() => handlePick(i)}
+                  disabled={selected !== null}
+                  style={{
+                    ...optionStyle(isSelected, isCorrect, selected !== null),
+                    ...(isWrongPick ? { animation: "lk-wrong-shake 0.4s ease" } : {}),
+                  }}
+                >
+                  {optSpraak ? (
+                    <span style={{ display: "flex", alignItems: "center", gap: 10, width: "100%" }}>
+                      <LuisterKnop tekst={optSpraak} maat={40} label={`Luister naar dit antwoord: ${optSpraak}`} />
+                      <span style={{ flex: 1, minWidth: 0, overflowWrap: "anywhere" }}>{inhoud}</span>
+                    </span>
+                  ) : inhoud}
                 </button>
                 </SteunOptie>
               );
@@ -1843,9 +1933,17 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 </div>
               </div>
             )}
-            <SteunTekst nl="Nog niet helemaal"><div style={{ fontSize: 18, fontWeight: 700, color: C.bad, marginBottom: 8 }}>
-              ❌ Nog niet helemaal
-            </div></SteunTekst>
+            <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <SteunTekst nl="Nog niet helemaal"><div style={{ fontSize: 18, fontWeight: 700, color: C.bad }}>
+                  ❌ Nog niet helemaal
+                </div></SteunTekst>
+              </div>
+              {/* 🔊 Luisterstand: de denkprikkel opnieuw horen (Mark 29 sep 2026). */}
+              {luisterStand && (
+                <LuisterKnop maat={40} tekst={["Nog niet helemaal.", spreekTekst(currentCheck.wrongHints?.[selected] || "Probeer het nog eens, kijk goed naar de uitleg hierboven.")].filter(Boolean).join(" ")} />
+              )}
+            </div>
             <SteunTekst nl={currentCheck.wrongHints?.[selected] || "Probeer het nog eens, kijk goed naar de uitleg hierboven."}><div style={{ fontSize: 14, color: C.text, marginBottom: 6, lineHeight: 1.5 }}>
               {currentCheck.wrongHints?.[selected] || "Probeer het nog eens, kijk goed naar de uitleg hierboven."}
             </div></SteunTekst>
@@ -1924,7 +2022,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 onClick={() => setShowUitlegPad(true)}
                 style={{ ...btnPrimary(), marginTop: 14 }}
               >
-                📚 Hier is de uitleg
+                <MetLuister aan={luisterStand} tekst="Hier is de uitleg">📚 Hier is de uitleg</MetLuister>
               </button></SteunTekst>
             )}
             {currentCheck.uitlegPad && showUitlegPad && (
@@ -1961,7 +2059,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 marginTop: 8,
               }}
             >
-              🔁 Probeer opnieuw
+              <MetLuister aan={luisterStand} tekst="Probeer opnieuw" licht={!currentCheck.uitlegPad}>🔁 Probeer opnieuw</MetLuister>
             </button></SteunTekst>
             {/* A3 (10-agent circulariteit 2026-05-10): leerpadLink altijd zichtbaar
                 in wrong-mode — niet verstopt achter "Ik begrijp niet"-knop. */}
@@ -1999,7 +2097,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               marginBottom: 14,
             }}>
               <span style={{ fontSize: 18 }}>✅</span>
-              <div>
+              <div style={{ flex: 1, minWidth: 0 }}>
                 <SteunTekst nl={path.steunTeksten ? UI_GETAL.deelKlaar(stepIdx + 1) : "Stap voltooid!"}><div style={{ fontSize: 15, fontWeight: 700, color: C.good }}>
                   {path.steunTeksten ? `Deel ${stepIdx + 1} klaar!` : `Stap ${stepIdx + 1} voltooid!`}
                 </div></SteunTekst>
@@ -2009,6 +2107,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     : "Helemaal klaar — laatste stap geweest!"}</SteunTekst>
                 </div>
               </div>
+              {luisterStand && (
+                <LuisterKnop maat={40} tekst={`${path.steunTeksten ? `Deel ${stepIdx + 1} klaar!` : `Stap ${stepIdx + 1} voltooid!`} ${stepIdx + 1 < totalSteps ? "Goed bezig." : "Helemaal klaar."}`} />
+              )}
             </div>
 
             {/* Stof begrepen?-eindblok (les van Leersnel) — 3 kaarten met
@@ -2038,6 +2139,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   accent={C.good}
                   primary
                   onClick={goNext}
+                  luister={luisterStand ? `Volgend deel: ${stripExamenVraagPrefix(path.steps[stepIdx + 1]?.title || "")}` : null}
                 />
               ) : (
                 // Zonder deze kaart is het afrond-scherm (score + vervolg-
@@ -2053,6 +2155,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   accent={C.good}
                   primary
                   onClick={goNext}
+                  luister={luisterStand ? "Klaar. Bekijk je resultaat." : null}
                 />
               )}
               <NextStepCard
@@ -2120,7 +2223,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   );
 }
 
-function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded, wrongPerStep, hervat = null }) {
+function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded, wrongPerStep, hervat = null, luisterStand = false }) {
   // Sneltrack: detecteer een examenstijl-stap zodat leerlingen die morgen
   // toets hebben direct naar de kern kunnen springen (audit 2026-05-06,
   // 14-jr-havo-feedback "ik scroll, ik wil niet lezen, ik heb morgen toets").
@@ -2208,11 +2311,15 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
               fontSize: 15,
             }}
           >
+            <MetLuister aan={luisterStand} tekst={hervat
+              ? `Doorgaan: deel ${hervat.stepIdx + 1}${hervat.checkIdx > 0 ? `, vraag ${hervat.checkIdx + 1}` : ""}`
+              : completedSteps.size === 0 ? "Begin bij deel 1" : `Doorgaan: deel ${firstUnfinishedIdx + 1}`}>
             {hervat
               ? `▶ Doorgaan: deel ${hervat.stepIdx + 1}${hervat.checkIdx > 0 ? `, vraag ${hervat.checkIdx + 1}` : ""} — ${stripExamenVraagPrefix(path.steps[hervat.stepIdx]?.title || "")}`
               : completedSteps.size === 0
               ? `🚀 Begin bij deel 1`
               : `▶ Doorgaan: deel ${firstUnfinishedIdx + 1} — ${path.steps[firstUnfinishedIdx].title}`}
+            </MetLuister>
           </button></SteunTekst>
         )}
         {loaded && firstUnfinishedIdx === null && (
@@ -2280,6 +2387,10 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                     );
                   })()}
                 </div>
+                {/* 🔊 Luisterstand (29 sep 2026): hoofdstuktitel horen. */}
+                {luisterStand && spreekTekst(ch.title) && (
+                  <LuisterKnop tekst={`Hoofdstuk ${chIdx + 1}. ${spreekTekst(stripInternalCodes(ch.title))}`} maat={40} />
+                )}
               </div>
               {(() => {
                 const repSvg = stepsInCh.map((i) => path.steps[i]?.svg).find((s) => s);
@@ -2444,7 +2555,7 @@ function ConfettiBurst() {
   );
 }
 
-function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, examRefs, authUser = null }) {
+function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, examRefs, authUser = null, luister = false }) {
   // A6: toon score + suggestie volgend examen-/leerpad.
   const pct = score?.total > 0 ? Math.round((score.correct / score.total) * 100) : null;
   const isExamen = (path.id || "").startsWith("examen-");
@@ -2454,7 +2565,7 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
       <ConfettiBurst />
       <div style={{ fontSize: 64, marginBottom: 12, animation: "lk-streak-pop 0.5s ease-out" }}>🎉</div>
       <h2 style={{ fontFamily: "var(--font-display)", fontSize: 26, color: "var(--color-text-strong)", marginBottom: 8 }}>
-        Knap gedaan!
+        <MetLuister aan={luister} tekst={`Knap gedaan! Je hebt het hele onderwerp ${path.title} doorlopen.`} licht={false}>Knap gedaan!</MetLuister>
       </h2>
       <div style={{ color: C.text, fontSize: 16, marginBottom: 16, lineHeight: 1.5 }}>
         Je hebt het hele onderwerp <strong>{path.title}</strong> doorlopen.
@@ -2545,7 +2656,9 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
           onClick={() => onPickPath(nextPath.id)}
           style={{ ...btnPrimary(), marginBottom: 8, width: "100%" }}
         >
-          {isExamen ? "🎓 Volgend examen ▶" : "📚 Volgend onderwerp ▶"} {nextPath.title}
+          <MetLuister aan={luister} tekst={`${isExamen ? "Volgend examen" : "Volgend onderwerp"}: ${nextPath.title}`}>
+            {isExamen ? "🎓 Volgend examen ▶" : "📚 Volgend onderwerp ▶"} {nextPath.title}
+          </MetLuister>
         </button>
       )}
       {/* A9: voor Pincode/leer-paden — toon examen-vragen die naar dit pad linken. */}
@@ -2601,7 +2714,8 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
 /** Kaart voor het "Stof begrepen?"-eindblok na een voltooide stap. Drie
  *  varianten worden naast elkaar getoond met eyebrow-tags zodat de
  *  rolverdeling (testen / doorgaan / overzicht) meteen zichtbaar is. */
-function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick, steunTitel }) {
+// `luister` (29 sep 2026): tekst voor een luisterknopje rechtsboven in de kaart (luisterstand).
+function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick, steunTitel, luister = null }) {
   // 🌍 Nieuwkomerpaden: taalknopje naast de kaart met eyebrow — titel — hint vertaald.
   const se = useSteun(eyebrow), st = useSteun(steunTitel ?? title), sh = useSteun(hint);
   const combi = st || sh ? Object.fromEntries(["en", "ar", "uk", "tr"].map((k) => [k, [se?.[k], st?.[k], sh?.[k]].filter(Boolean).join(" — ")])) : null;
@@ -2634,15 +2748,18 @@ function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick, 
         if (!primary) e.currentTarget.style.background = "rgba(255,255,255,0.03)";
       }}
     >
-      <span style={{
-        fontFamily: "var(--font-display)",
-        fontSize: 10,
-        fontWeight: 700,
-        color: accent,
-        letterSpacing: 1.4,
-        textTransform: "uppercase",
-      }}>
-        {eyebrow}
+      <span style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 6 }}>
+        <span style={{
+          fontFamily: "var(--font-display)",
+          fontSize: 10,
+          fontWeight: 700,
+          color: accent,
+          letterSpacing: 1.4,
+          textTransform: "uppercase",
+        }}>
+          {eyebrow}
+        </span>
+        {luister && <LuisterKnop tekst={spreekTekst(luister)} maat={34} />}
       </span>
       <span style={{
         fontFamily: "var(--font-display)",

@@ -10,6 +10,11 @@ import { SteunCtx, SteunTekst, SteunVraag, SteunOptie, UI_STEUN, maakSteunMap, l
 import Picto from "../shared/ui/Picto.jsx";
 import MdInline from "../shared/ui/MdInline.jsx";
 import MeldFout from "../shared/ui/MeldFout.jsx";
+import LuisterKnop from "../shared/ui/LuisterKnop.jsx";
+import { useVoorleesAltijd, useVanzelfZeggen, zeg, ZEG } from "../shared/voorleesModus.js";
+
+// 🔊 Wat de stem zegt (29 sep 2026): "8 − 3 = ?" → "8 min 3 is hoeveel?", "___" als korte pauze.
+const alsSpraak = (t) => String(t ?? "").replace(/_{2,}/g, "…").replace(/\s*=\s*\?/g, " is hoeveel?").replace(/−/g, " min ").replace(/\s*·\s*/g, ", ");
 
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
@@ -52,9 +57,11 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
   // Kliktest 26 sep 2026: na een fout zegt de hint "Probeer het nog eens" — dan moet dat ook kunnen.
   // De EERSTE keuze telt voor het herhaalschema; daarna mag het kind door tot het goed is.
   const [eersteGedaan, setEersteGedaan] = useState(false);
+  const [poging, setPoging] = useState(0); // telt elke keuze: ook een tweede fout met dezelfde hint klinkt opnieuw
   const kies = (i) => {
     if (gekozen !== null && gekozen === huidige.answer) return;
     setGekozen(i);
+    setPoging((n) => n + 1);
     const ok = i === huidige.answer;
     if (eersteGedaan) return;
     setEersteGedaan(true);
@@ -62,7 +69,21 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
     herhaalResultaat(vragen[idx].key, ok);
     try { track("nk_herhaal_antwoord", { goed: ok }); } catch { /* */ }
   };
-  const volgende = () => { setGekozen(null); setEersteGedaan(false); setIdx((n) => n + 1); };
+  const volgende = () => { setGekozen(null); setEersteGedaan(false); setPoging(0); setIdx((n) => n + 1); };
+
+  // 🔊 Alles-voorlezen-stand: vraag vanzelf; na elke keuze goed/fout + de hint; aan het eind de uitslag.
+  const voorlees = useVoorleesAltijd();
+  const vraagSpraak = huidige ? alsSpraak(huidige.q) : "";
+  useVanzelfZeggen(vraagSpraak, voorlees && !klaar);
+  const reactie = gekozen === null || !huidige ? "" : gekozen === huidige.answer ? ZEG.goed
+    : `${ZEG.fout}${huidige.wrongHints?.[gekozen] ? " " + alsSpraak(huidige.wrongHints[gekozen]) : ""}`;
+  useEffect(() => {
+    if (!voorlees || !reactie) return undefined;
+    const t = setTimeout(() => zeg(reactie), 350);
+    return () => clearTimeout(t);
+  }, [reactie, poging, voorlees]);
+  const uitslagSpraak = !klaar ? "" : `Klaar met herhalen!${vragen.length > 0 ? ` Je had ${goed} van de ${vragen.length} goed.` : ""} Morgen komen er weer een paar terug.`;
+  useVanzelfZeggen(uitslagSpraak, voorlees);
 
   const kaart = { background: "rgba(255,255,255,.96)", color: "#0f2a44", borderRadius: 18, padding: "16px 18px", boxShadow: "0 8px 22px rgba(0,0,0,.25)" };
   const knop = (primair) => ({ width: "100%", padding: "12px 16px", borderRadius: 12, border: primair ? "none" : "2px solid #0f2a44", background: primair ? "#0f2a44" : "#fff", color: primair ? "#fff" : "#0f2a44", fontWeight: 800, fontSize: 16, cursor: "pointer" });
@@ -72,7 +93,10 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
     if (klaar) {
       return (
         <div style={{ ...kaart, display: "grid", gap: 12 }}>
-          <SteunTekst nl="Klaar met herhalen!"><div style={{ fontSize: 22, fontWeight: 900 }}>🏁 Klaar met herhalen!</div></SteunTekst>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ flex: 1, minWidth: 0 }}><SteunTekst nl="Klaar met herhalen!"><div style={{ fontSize: 22, fontWeight: 900 }}>🏁 Klaar met herhalen!</div></SteunTekst></div>
+            <LuisterKnop tekst={uitslagSpraak} maat={48} licht label="Luister naar de uitslag" />
+          </div>
           {vragen.length > 0 && <div style={{ fontSize: 16, fontWeight: 700 }}>{goed} / {vragen.length} ✓</div>}
           <SteunTekst nl="Morgen komen er weer een paar terug." ><div style={{ fontSize: 15 }}>Morgen komen er weer een paar terug.</div></SteunTekst>
           <SteunTekst nl="Terug" knop><button type="button" onClick={onKlaar} style={knop(true)}>Terug</button></SteunTekst>
@@ -84,17 +108,24 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
     return (
       <div style={{ ...kaart, display: "grid", gap: 10 }}>
         <div style={{ fontSize: 13, fontWeight: 800, opacity: .6 }}>🔁 {idx + 1} / {vragen.length}</div>
-        <SteunVraag steun={c.steun} altijd={c.steunAltijd}>
-          <div style={{ fontSize: 18, fontWeight: 800 }}><MdInline text={c.q} /></div>
-        </SteunVraag>
+        <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <SteunVraag steun={c.steun} altijd={c.steunAltijd}>
+              <div style={{ fontSize: 18, fontWeight: 800 }}><MdInline text={c.q} /></div>
+            </SteunVraag>
+          </div>
+          <LuisterKnop tekst={vraagSpraak} maat={48} licht label="Luister naar de vraag" />
+        </div>
         {c.options.map((o, i) => {
           const kleur = gekozen === null ? "#fff" : i === gekozen ? (i === c.answer ? "#d7f5df" : "#fde0dd") : "#fff";
           const lidwoord = /^(de|het) \S/.test(String(o)) ? (String(o).startsWith("het ") ? "het" : "de") : null;
           return (
             <SteunOptie key={o} steun={c.steunOpties} opt={o}>
               <button type="button" onClick={() => kies(i)} style={{ width: "100%", textAlign: "left", padding: "12px 14px", borderRadius: 12, border: "2px solid #c9d6e3", background: kleur, color: "#0f2a44", fontWeight: 700, fontSize: 16, cursor: isGoed ? "default" : "pointer" }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}><Picto bron={c.picto?.[o]} />
-                  {lidwoord ? (<span><span style={{ color: lidwoord === "het" ? "#e65100" : "#1565c0", fontWeight: 900 }}>{lidwoord}</span> <MdInline text={String(o).replace(/^(de|het) /, "")} /></span>) : <MdInline text={o} />}
+                <span style={{ display: "flex", alignItems: "center", gap: 12 }}><Picto bron={c.picto?.[o]} />
+                  <span style={{ flex: 1, minWidth: 0 }}>{lidwoord ? (<><span style={{ color: lidwoord === "het" ? "#e65100" : "#1565c0", fontWeight: 900 }}>{lidwoord}</span> <MdInline text={String(o).replace(/^(de|het) /, "")} /></>) : <MdInline text={o} />}</span>
+                  {/* 🔊 alleen horen, niet kiezen (LuisterKnop stopt de klik) */}
+                  <LuisterKnop tekst={alsSpraak(o)} maat={40} licht />
                 </span>
               </button>
             </SteunOptie>

@@ -12,6 +12,8 @@ import { SteunCtx, SteunTekst, SteunVraag, SteunOptie, UI_STEUN, maakSteunMap, l
 import Picto from "../shared/ui/Picto.jsx";
 import MdInline from "../shared/ui/MdInline.jsx";
 import MeldFout from "../shared/ui/MeldFout.jsx";
+import LuisterKnop from "../shared/ui/LuisterKnop.jsx";
+import { useVoorleesAltijd, useVanzelfZeggen, ZEG } from "../shared/voorleesModus.js";
 
 export const TREDE_KEY = "lk_nk_trede";
 export const TREDE_1_PADEN = ["in-de-klas-nieuwkomers", "woorden-nieuwkomers", "rekentaal-nieuwkomers", "rekenen-tot-20-nieuwkomers"];
@@ -83,6 +85,10 @@ const TEST_STEUN = {
   "Deze plek is groen gemaakt op de pagina.": { en: "This place is now marked green on the page.", ar: "هذا المكان أصبح باللون الأخضر في الصفحة.", uk: "Це місце тепер позначене зеленим на сторінці.", tr: "Bu yer sayfada yeşil işaretlendi." },
 };
 
+// 🔊 Wat de stem zegt (29 sep 2026, voor kinderen die nog niet lezen): "8 − 3 = ?" → "8 min 3 is
+// hoeveel?", "Trede 1 · Welkom" zonder puntje, "___" als korte pauze.
+const alsSpraak = (t) => String(t ?? "").replace(/_{2,}/g, "…").replace(/\s*=\s*\?/g, " is hoeveel?").replace(/−/g, " min ").replace(/\s*·\s*/g, ", ");
+
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
 export default function NieuwkomersTredeTest({ trede = 1, instap = false, onKlaar }) {
@@ -138,6 +144,20 @@ export default function NieuwkomersTredeTest({ trede = 1, instap = false, onKlaa
   const geslaagd = !instap && klaar && goed >= Math.ceil(vragen.length * GRENS);
   const startTrede = goed1 < INSTAP_GOED ? 1 : goed2 < INSTAP_GOED ? 2 : 3;
 
+  // 🔊 Alles-voorlezen-stand: vraag vanzelf, na het antwoord goed/niet goed, en de uitslag.
+  // Dictee-vraag: het woord wordt in de zin gezegd (zoals bij een dictee) — kiezen blijft lezen.
+  const voorlees = useVoorleesAltijd();
+  const v0 = vragen?.[idx];
+  const vraagSpraak = !huidige ? "" : alsSpraak(v0.pad === "dictee-nieuwkomers" ? huidige.q.replace("___", v0.origAntwoord) : huidige.q);
+  const introSpraak = idx === 0 ? (instap ? "Dit is geen toets. Zo weet je waar je begint. " : "Geen hulp, één keer kiezen. Doe je best! ") : "";
+  useVanzelfZeggen(vraagSpraak && introSpraak + vraagSpraak, voorlees && !klaar);
+  // Eén keer kiezen, geen tweede kans → "Niet goed." i.p.v. ZEG.fout ("luister nog eens").
+  useVanzelfZeggen(klaar || gekozen === null || !huidige ? "" : gekozen === huidige.answer ? ZEG.goed : "Niet goed.", voorlees);
+  const uitslagSpraak = !klaar ? "" : instap
+    ? alsSpraak(`Jij begint bij: ${INSTAP_START[startTrede]}. Deze plek is groen gemaakt op de pagina.`)
+    : `${geslaagd ? `Gehaald! Trede ${trede} is klaar.` : "Bijna! Oefen nog even en probeer het over een paar dagen opnieuw."} Je had ${goed} van de ${vragen.length} goed.${goed < vragen.length ? " De vragen die je miste, komen morgen terug bij herhalen." : ""}`;
+  useVanzelfZeggen(uitslagSpraak, voorlees);
+
   useEffect(() => {
     if (!klaar) return;
     if (instap) {
@@ -173,7 +193,10 @@ export default function NieuwkomersTredeTest({ trede = 1, instap = false, onKlaa
     if (klaar && instap) {
       return (
         <div style={{ ...kaart, display: "grid", gap: 12 }}>
-          <SteunTekst nl="Jij begint bij:"><div style={{ fontSize: 17, fontWeight: 800 }}>Jij begint bij:</div></SteunTekst>
+          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+            <div style={{ flex: 1, minWidth: 0 }}><SteunTekst nl="Jij begint bij:"><div style={{ fontSize: 17, fontWeight: 800 }}>Jij begint bij:</div></SteunTekst></div>
+            <LuisterKnop tekst={uitslagSpraak} maat={48} licht label="Luister naar de uitslag" />
+          </div>
           <SteunTekst nl={INSTAP_START[startTrede]}><div style={{ fontSize: 26, fontWeight: 900, color: "#1b7f3b" }}>🪜 {INSTAP_START[startTrede]}</div></SteunTekst>
           <SteunTekst nl="Deze plek is groen gemaakt op de pagina."><div style={{ fontSize: 15 }}>Deze plek is groen gemaakt op de pagina.</div></SteunTekst>
           <SteunTekst nl="Terug" knop><button type="button" onClick={onKlaar} style={knop(true)}>Terug</button></SteunTekst>
@@ -198,12 +221,18 @@ export default function NieuwkomersTredeTest({ trede = 1, instap = false, onKlaa
                 <div style={{ fontSize: 13, marginTop: 10 }}>{datum} · leerkwartier.app</div>
                 <div style={{ fontSize: 12, fontStyle: "italic", marginTop: 4 }}>Een kwartier per dag leren, een leven lang slimmer.</div>
               </div>
-              <SteunTekst nl={`Gehaald! Trede ${trede} is klaar.`}><div style={{ fontSize: 20, fontWeight: 900, color: "#1b7f3b" }}>🎉 Gehaald! Trede {trede} is klaar.</div></SteunTekst>
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <div style={{ flex: 1, minWidth: 0 }}><SteunTekst nl={`Gehaald! Trede ${trede} is klaar.`}><div style={{ fontSize: 20, fontWeight: 900, color: "#1b7f3b" }}>🎉 Gehaald! Trede {trede} is klaar.</div></SteunTekst></div>
+                <LuisterKnop tekst={uitslagSpraak} maat={48} licht label="Luister naar de uitslag" />
+              </div>
               <SteunTekst nl="Print je diploma" knop><button type="button" onClick={() => { try { track("nk_tredetest_print", { trede }); } catch { /* */ } window.print(); }} style={knop(false)}>🖨️ Print je diploma</button></SteunTekst>
             </>
           ) : (
             <>
-              <div style={{ fontSize: 22, fontWeight: 900 }}>{goed} / {vragen.length} ✓</div>
+              <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
+                <div style={{ flex: 1, fontSize: 22, fontWeight: 900 }}>{goed} / {vragen.length} ✓</div>
+                <LuisterKnop tekst={uitslagSpraak} maat={48} licht label="Luister naar de uitslag" />
+              </div>
               <SteunTekst nl="Bijna! Oefen nog even en probeer het over een paar dagen opnieuw."><div style={{ fontSize: 17, fontWeight: 800 }}>Bijna! Oefen nog even en probeer het over een paar dagen opnieuw.</div></SteunTekst>
             </>
           )}
@@ -229,17 +258,24 @@ export default function NieuwkomersTredeTest({ trede = 1, instap = false, onKlaa
         {idx === 0 && gekozen === null && !instap && (
           <SteunTekst nl="Geen hulp, één keer kiezen. Doe je best!"><div style={{ fontSize: 14, fontWeight: 700, background: "#eef4fa", borderRadius: 10, padding: "6px 10px" }}>Geen hulp, één keer kiezen. Doe je best!</div></SteunTekst>
         )}
-        <SteunVraag steun={c.steun} altijd={c.steunAltijd}>
-          <div style={{ fontSize: 18, fontWeight: 800 }}><MdInline text={c.q} /></div>
-        </SteunVraag>
+        <div style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
+          <div style={{ flex: 1, minWidth: 0 }}>
+            <SteunVraag steun={c.steun} altijd={c.steunAltijd}>
+              <div style={{ fontSize: 18, fontWeight: 800 }}><MdInline text={c.q} /></div>
+            </SteunVraag>
+          </div>
+          <LuisterKnop tekst={vraagSpraak} maat={48} licht label="Luister naar de vraag" />
+        </div>
         {c.options.map((o, i) => {
           const kleur = gekozen === null ? "#fff" : i === c.answer ? "#d7f5df" : i === gekozen ? "#fde0dd" : "#fff";
           const lidwoord = /^(de|het) \S/.test(String(o)) ? (String(o).startsWith("het ") ? "het" : "de") : null;
           return (
             <SteunOptie key={o} steun={c.steunOpties} opt={o}>
               <button type="button" onClick={() => kies(i)} style={{ width: "100%", textAlign: "left", padding: "12px 14px", borderRadius: 12, border: "2px solid #c9d6e3", background: kleur, color: "#0f2a44", fontWeight: 700, fontSize: 16, cursor: gekozen === null ? "pointer" : "default" }}>
-                <span style={{ display: "inline-flex", alignItems: "center", gap: 12 }}><Picto bron={c.picto?.[o]} />
-                  {lidwoord ? (<span><span style={{ color: lidwoord === "het" ? "#e65100" : "#1565c0", fontWeight: 900 }}>{lidwoord}</span> <MdInline text={String(o).replace(/^(de|het) /, "")} /></span>) : <MdInline text={o} />}
+                <span style={{ display: "flex", alignItems: "center", gap: 12 }}><Picto bron={c.picto?.[o]} />
+                  <span style={{ flex: 1, minWidth: 0 }}>{lidwoord ? (<><span style={{ color: lidwoord === "het" ? "#e65100" : "#1565c0", fontWeight: 900 }}>{lidwoord}</span> <MdInline text={String(o).replace(/^(de|het) /, "")} /></>) : <MdInline text={o} />}</span>
+                  {/* 🔊 alleen horen, niet kiezen (LuisterKnop stopt de klik) */}
+                  <LuisterKnop tekst={alsSpraak(o)} maat={40} licht />
                 </span>
               </button>
             </SteunOptie>

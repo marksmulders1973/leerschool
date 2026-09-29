@@ -24,6 +24,9 @@ const OORDEEL_LABELS = {
 //     (te snel om de vraag echt te lezen), dan zeggen we eerlijk "Bijna daar"
 //     in plaats van "Beheerst".
 const GOK_MS = 3000;
+// "Dit weet ik (nog) niet" (Mark 29 sep 2026: Brian wist een antwoord niet en moest gokken). Telt als
+// niet-beheerst — eerlijker dan een gok, want een geluksgok zou het kind een stap te hoog inschatten.
+const WEET_NIET = -1;
 
 // Adaptive scoring per concept:
 //  - Niveau 1 fout → nogniet (stop meteen)
@@ -225,8 +228,10 @@ function QuizScherm({ naam, groep, onDone }) {
   const bevestigAntwoord = () => {
     if (gekozenOptie === null || !vraag) return;
     const goed = gekozenOptie === vraag.correct;
+    const weetNiet = gekozenOptie === WEET_NIET;
     const ms = Date.now() - vraagStartRef.current;
-    const nieuw = [...antwoorden, { niveau: vraag.niveau, goed, idx: vraagIdx, ms }];
+    const nieuw = [...antwoorden, { niveau: vraag.niveau, goed, idx: vraagIdx, ms, ...(weetNiet ? { weetNiet: true } : {}) }];
+    if (weetNiet) { try { track("kwartiercheck_weetniet", { concept: concept.id, niveau: vraag.niveau }); } catch { /* */ } }
     const bijgewerkt = { ...antwoordenPerConcept, [concept.id]: nieuw };
     setAntwoordenPerConcept(bijgewerkt);
     setBevestigd(true);
@@ -253,7 +258,7 @@ function QuizScherm({ naam, groep, onDone }) {
           onDone(scores);
         }
       }
-    }, goed ? 600 : 900);
+    }, goed ? 600 : weetNiet ? 1800 : 900); // bij "weet ik niet" iets langer: het goede antwoord even laten zien
   };
 
   if (!vraag) return null; // edge case
@@ -324,6 +329,25 @@ function QuizScherm({ naam, groep, onDone }) {
         })}
       </div>
 
+      {/* "Dit weet ik (nog) niet" — liever eerlijk dan gokken */}
+      <button
+        type="button"
+        disabled={bevestigd}
+        onClick={() => !bevestigd && setGekozenOptie(WEET_NIET)}
+        style={{
+          ...S.btn,
+          width: "100%", textAlign: "left", fontSize: 14, fontWeight: 600, padding: "12px 16px", marginTop: -6, marginBottom: 16,
+          background: gekozenOptie === WEET_NIET ? "rgba(255,193,7,0.14)" : "transparent",
+          border: gekozenOptie === WEET_NIET ? "1.5px solid #ffc107" : "1px dashed rgba(255,255,255,0.28)",
+          color: gekozenOptie === WEET_NIET ? "#ffc107" : "rgba(224,230,240,0.8)",
+        }}
+      >
+        Dit weet ik (nog) niet
+        <span style={{ display: "block", fontSize: 12, fontWeight: 500, opacity: 0.75, marginTop: 2 }}>
+          {bevestigd && gekozenOptie === WEET_NIET ? "Prima! Het goede antwoord staat nu in het groen." : "Niet gokken — dan klopt je uitslag beter."}
+        </span>
+      </button>
+
       {/* Bevestig-knop */}
       <button
         type="button"
@@ -344,6 +368,61 @@ function QuizScherm({ naam, groep, onDone }) {
       <div style={{ textAlign: "center", marginTop: 12, fontSize: 12, color: "rgba(255,255,255,0.3)" }}>
         {naam} · Groep {groep}
       </div>
+    </div>
+  );
+}
+
+// ═══════════════════════════════════════════════════════════════════
+// "Hoe vond je de vragen?" (Mark 29 sep 2026: "ik vond de vragen goed, te makkelijk of te moeilijk —
+// en dat dat wordt meegenomen"). Het kind kiest; we bewaren het (event + dit toestel) naast de
+// uitslag, zodat we zien of de vragen per groep passen, en geven meteen een passend vervolg.
+// ═══════════════════════════════════════════════════════════════════
+const GEVOEL = [
+  { id: "makkelijk", label: "Te makkelijk", kleur: "#29b6f6" },
+  { id: "goed", label: "Precies goed", kleur: "#00c853" },
+  { id: "moeilijk", label: "Te moeilijk", kleur: "#ff7043" },
+];
+function GevoelVraag({ groep, scores }) {
+  const [keuze, setKeuze] = useState(null);
+  const kies = (id) => {
+    if (keuze) return;
+    setKeuze(id);
+    const telling = { beheerst: 0, gedeeltelijk: 0, nogniet: 0 };
+    Object.values(scores || {}).forEach((s) => { if (s?.oordeel === OORDELEN.beheerst) telling.beheerst += 1; else if (s?.oordeel === OORDELEN.gedeeltelijk) telling.gedeeltelijk += 1; else telling.nogniet += 1; });
+    try { track("kwartiercheck_gevoel", { gevoel: id, groep, ...telling }); } catch { /* */ }
+    try { localStorage.setItem("lk_kwartiercheck_gevoel", JSON.stringify({ gevoel: id, groep, datum: new Date().toISOString().slice(0, 10) })); } catch { /* */ }
+  };
+  const g = parseInt(groep, 10) || 8;
+  const vervolg = {
+    makkelijk: { tekst: "Knap! Dan mag je een stapje hoger: oefen met echte Doorstroomtoets-vragen.", knop: "Moeilijker oefenen", naar: "/cito" },
+    goed: { tekst: "Mooi, dan past dit niveau bij jou. Oefen elke dag een kwartier met de onderwerpen hieronder.", knop: null, naar: null },
+    moeilijk: { tekst: g > 3 ? `Geen probleem! Begin rustig bij de basis: kies een onderwerp van groep ${g - 1}.` : "Geen probleem! Begin rustig bij de basis.", knop: "Makkelijker oefenen", naar: "/leren" },
+  }[keuze];
+  return (
+    <div style={{ ...S.card, marginBottom: 18, textAlign: "center" }}>
+      <div style={{ fontWeight: 700, color: "#fff", marginBottom: 10, fontSize: 15 }}>Hoe vond je de vragen?</div>
+      <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" }}>
+        {GEVOEL.map((o) => (
+          <button key={o.id} type="button" onClick={() => kies(o.id)} disabled={!!keuze && keuze !== o.id} aria-pressed={keuze === o.id}
+            style={{ ...S.btn, flex: "1 1 30%", fontSize: 14, padding: "10px 8px",
+              background: keuze === o.id ? o.kleur : "rgba(255,255,255,0.06)",
+              border: `1.5px solid ${keuze === o.id || !keuze ? o.kleur : "rgba(255,255,255,0.1)"}`,
+              color: keuze === o.id ? "#0b1320" : keuze ? "rgba(255,255,255,0.3)" : "#fff" }}>
+            {o.label}
+          </button>
+        ))}
+      </div>
+      {vervolg && (
+        <div style={{ marginTop: 12, fontSize: 14, color: "rgba(255,255,255,0.8)", lineHeight: 1.5 }}>
+          {vervolg.tekst}
+          {vervolg.knop && (
+            <div style={{ marginTop: 10 }}>
+              <button type="button" onClick={() => { try { track("kwartiercheck_gevoel_vervolg", { gevoel: keuze, groep }); } catch { /* */ } window.location.href = vervolg.naar; }}
+                style={{ ...S.btn, background: "linear-gradient(135deg, #ff6b35, #ff8c42)", color: "#fff" }}>{vervolg.knop} →</button>
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }
@@ -397,6 +476,8 @@ function ResultaatScherm({ naam, groep, email, scores, onHome }) {
           onderwerp in de app te oefenen.
         </p>
       </div>
+
+      <GevoelVraag groep={groep} scores={scores} />
 
       {/* Scores per vak */}
       {VAK_VOLGORDE.map((vak) => {
