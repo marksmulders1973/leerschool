@@ -15,6 +15,7 @@ import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { buildStartfoto, aanbevolenPaden, PIJLERS } from "./startfotoBuilder.js";
 import { saveStartfoto } from "./kwartierplanRepo.js";
+import MeldFout from "../../shared/ui/MeldFout.jsx";
 
 const PIJLER_BY_ID = Object.fromEntries(PIJLERS.map((p) => [p.id, p]));
 
@@ -204,6 +205,7 @@ export default function Startfoto({ parentUserId, childName, heeftBaseline, onCl
                 </button>
               ))}
             </div>
+            <MeldFout key={vraag.q} check={vraag} bron="startfoto" />
           </div>
         )}
 

@@ -4,6 +4,7 @@ import { track, bronDatumTijd } from "../utils.js";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
 import DeelDagUitslag from "./DeelDagUitslag.jsx";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
+import MeldFout from "../shared/ui/MeldFout.jsx";
 
 // "Doorstroomtoets-vraag van de dag" — een dagelijkse, lichte reden om de app te
 // openen. Twee bronnen (Mark 2026-07-02):
@@ -258,6 +259,10 @@ export default function VraagVanDeDag() {
           {!vraag.actueel && <DeelVraagKnop id={vraag.id} variant="outline" />}
         </div>
       )}
+
+      {/* 🚩 melden (Mark 29 sep 2026) */}
+      <MeldFout key={vraag.vraag} check={vraag} pathId={vraag.id != null ? String(vraag.id) : null}
+        bron={vraag.actueel ? "vraag-van-de-dag-actueel" : "vraag-van-de-dag"} />
     </div>
   );
 }

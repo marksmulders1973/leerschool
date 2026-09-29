@@ -5,6 +5,7 @@ import { BRAND } from "../brand.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import DeelVraagKnop from "./DeelVraagKnop.jsx";
 import DeelDagUitslag from "./DeelDagUitslag.jsx";
+import MeldFout from "../shared/ui/MeldFout.jsx";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 
 /**
@@ -286,6 +287,12 @@ export default function DeepVraag({ id, setPage, onOpenLeerpad, actueelEerst = f
           </div>
         </div>
       )}
+
+      {/* 🚩 melden (Mark 29 sep 2026) — vóór het antwoord direct onder de opties, daarna onder de uitleg */}
+      <div style={{ marginBottom: beantwoord ? 14 : 0 }}>
+        <MeldFout key={vraag.vraag} check={vraag} pathId={String(vraag.id || id || "") || null}
+          bron={vraag.actueel ? "vandaag-actueel" : actueelEerst ? "vandaag" : "deeplink-vraag"} />
+      </div>
 
       {/* E-mail-opt-in op het moment van hoogste interesse: net na de uitleg,
           vóór de CTA. De USP is nu bewezen (3-niveau-uitleg werkte), dus dít is

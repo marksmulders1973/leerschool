@@ -1,6 +1,7 @@
 import { useState, useMemo } from "react";
 import Header from "./Header.jsx";
 import MdInline from "../shared/ui/MdInline.jsx";
+import MeldFout from "../shared/ui/MeldFout.jsx";
 import { track } from "../utils.js";
 import { LADDER_THEMES, LADDER_NIVEAUS, LADDER_CONTENT } from "../data/begrijpendLezenOpbouwend.js";
 
@@ -249,6 +250,9 @@ export default function BegrijpendLezenLadder({ onBack, onHome, onNaarTeksten })
             </button>
           </div>
         )}
+
+        {/* 🚩 melden (Mark 29 sep 2026) */}
+        <MeldFout key={vraag.vraag} bron="begrijpend-lezen-ladder" check={{ q: vraag.vraag, options: vraag.opties, answer: vraag.antwoord }} />
       </div>
     </div>
   );

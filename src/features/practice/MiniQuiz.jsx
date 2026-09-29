@@ -3,6 +3,7 @@ import { recordAnswerForPath } from "../mastery/mastery.js";
 import { fetchPoolQuestions, poolRowToQuestion } from "./aiPool.js";
 import Button from "../../shared/ui/Button.jsx";
 import { SteunVraag, SteunOptie } from "../../shared/ui/SteunTik.jsx";
+import MeldFout from "../../shared/ui/MeldFout.jsx";
 
 // Drempel voor "voldoende beheersing" — 2/3 of meer → mag verder.
 // Dit is bewust niet 100%: één foutje moet niet verlammend werken.
@@ -238,6 +239,7 @@ export default function MiniQuiz({
               </Button>
             </div>
           )}
+          <MeldFout key={current.q} pathId={pathId} check={current} bron="miniquiz" />
         </>
       )}
 

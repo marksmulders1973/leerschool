@@ -8,6 +8,7 @@
 import React, { useState } from "react";
 import { track } from "../utils.js";
 import { TOPO_VRAGEN, kiesToetsVragen } from "../data/topografieVragen.js";
+import MeldFout from "../shared/ui/MeldFout.jsx";
 
 const VAK = "topografie";
 const AANTAL = 10;
@@ -130,6 +131,7 @@ export default function TopografieCheck() {
             );
           })}
         </div>
+        <MeldFout key={v.vraag} check={{ q: v.vraag, options: v.opties, answer: v.antwoord }} bron="topografie-check" />
       </Kaart>
     );
   }

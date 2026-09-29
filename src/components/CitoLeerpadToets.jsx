@@ -10,6 +10,7 @@ import MdInline from "../shared/ui/MdInline.jsx";
 import { formatTime, scoreColor as fmtScoreColor } from "../shared/format.js";
 import VraagUitlegPad from "../features/learn/VraagUitlegPad.jsx";
 import ExamenBronBanner from "../shared/ui/ExamenBronBanner.jsx";
+import MeldFout from "../shared/ui/MeldFout.jsx";
 import AITutor from "../features/learn/AITutor.jsx";
 import { actieveBuddyPersona } from "../features/zoo/buddies.js";
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
@@ -681,6 +682,8 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
                       )}
                     </div>
                   )}
+                  {/* 🚩 Pas in de nabespreking — nooit tijdens de lopende toets. */}
+                  <MeldFout key={q.question} pathId={q.pathId || null} stepIdx={q.stepIdx ?? null} check={q} bron={simulatieMode ? "doorstroomtoets-simulatie" : "oefen-doorstroomtoets"} />
                 </div>
               );
             })}

@@ -42,6 +42,7 @@ function VragenBlok({ blok, userName, authUser, onKlaar }) {
   return (
     <VraagKaart
       key={i}
+      bron="vandaag"
       vraag={v}
       nummer={i + 1}
       totaal={vragen.length}

@@ -8,9 +8,10 @@ import { useEffect, useMemo, useState } from "react";
 import { track } from "../utils.js";
 import { getLearnPath } from "../learnPaths/pathLoaders.js";
 import { noteerAntwoord } from "../shared/herhaalNieuwkomers.js";
-import { SteunCtx, SteunTekst, SteunVraag, SteunOptie, UI_STEUN, maakSteunMap } from "../shared/ui/SteunTik.jsx";
+import { SteunCtx, SteunTekst, SteunVraag, SteunOptie, UI_STEUN, maakSteunMap, leesSteuntaal } from "../shared/ui/SteunTik.jsx";
 import Picto from "../shared/ui/Picto.jsx";
 import MdInline from "../shared/ui/MdInline.jsx";
+import MeldFout from "../shared/ui/MeldFout.jsx";
 
 export const TREDE_KEY = "lk_nk_trede";
 export const TREDE_1_PADEN = ["in-de-klas-nieuwkomers", "woorden-nieuwkomers", "rekentaal-nieuwkomers", "rekenen-tot-20-nieuwkomers"];
@@ -252,6 +253,9 @@ export default function NieuwkomersTredeTest({ trede = 1, instap = false, onKlaa
             <SteunTekst nl="Volgende" knop><button type="button" onClick={volgende} style={knop(true)}>Volgende ▶</button></SteunTekst>
           </>
         )}
+        {/* 🚩 melden (Mark 29 sep 2026) */}
+        <MeldFout licht key={c.q} check={c} pathId={vragen[idx]?.pad || null} stepIdx={vragen[idx]?.stap ?? null}
+          bron={instap ? "nieuwkomers-instaptest" : "nieuwkomers-tredetest"} vertaling taal={leesSteuntaal()} />
       </div>
     );
   }, [vragen, idx, gekozen, klaar, goed, trede, uit]); // eslint-disable-line

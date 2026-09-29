@@ -19,6 +19,7 @@ import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, partnerC
 import { telAntwoordVoorVriend } from "../features/referral/referral.js";
 import { track } from "../utils.js";
 import { FamilieKnop, FamilieLijst } from "./FamilieUitleg.jsx";
+import MeldFout from "../shared/ui/MeldFout.jsx";
 
 // 🎯 Scan → meteen dóén (Mark-go 28 aug 2026, na nulmeting 37 banner-shows /
 // 0 kliks): de scanner landt direct in drie échte vraagjes ín de banner.
@@ -319,6 +320,7 @@ export default function PartnerWelkom({ onOuder, onOefenen }) {
               </button>
             </div>
           )}
+          <MeldFout key={PROEF_VRAGEN[vraagIdx].q} check={PROEF_VRAGEN[vraagIdx]} bron="partner-welkom" />
         </div>
       ) : (
         <div style={{ background: "rgba(0,230,118,0.10)", border: "1.5px solid rgba(0,230,118,0.4)", borderRadius: 12, padding: "12px 14px", marginBottom: 10 }}>

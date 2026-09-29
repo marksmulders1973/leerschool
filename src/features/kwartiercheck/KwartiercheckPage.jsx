@@ -4,6 +4,7 @@ import { CONCEPTEN, VAK_VOLGORDE, VAK_LABELS } from "./conceptMapping.js";
 import { getVragenVoorConcept } from "./questions.js";
 import { track } from "../../utils.js";
 import { GratisBadge } from "../../subscription/ProBadge.jsx";
+import MeldFout from "../../shared/ui/MeldFout.jsx";
 
 // ── Constanten ────────────────────────────────────────────────────
 const OORDELEN = { beheerst: "beheerst", gedeeltelijk: "gedeeltelijk", nogniet: "nogniet" };
@@ -337,6 +338,8 @@ function QuizScherm({ naam, groep, onDone }) {
       >
         Bevestig antwoord
       </button>
+
+      <MeldFout key={vraag.vraag} check={vraag} bron="kwartiercheck" />
 
       <div style={{ textAlign: "center", marginTop: 12, fontSize: 12, color: "rgba(255,255,255,0.3)" }}>
         {naam} · Groep {groep}

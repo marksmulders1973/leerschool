@@ -6,9 +6,10 @@ import { useEffect, useMemo, useState } from "react";
 import { track } from "../utils.js";
 import { getLearnPath } from "../learnPaths/pathLoaders.js";
 import { teHerhalen, herhaalResultaat } from "../shared/herhaalNieuwkomers.js";
-import { SteunCtx, SteunTekst, SteunVraag, SteunOptie, UI_STEUN, maakSteunMap } from "../shared/ui/SteunTik.jsx";
+import { SteunCtx, SteunTekst, SteunVraag, SteunOptie, UI_STEUN, maakSteunMap, leesSteuntaal } from "../shared/ui/SteunTik.jsx";
 import Picto from "../shared/ui/Picto.jsx";
 import MdInline from "../shared/ui/MdInline.jsx";
+import MeldFout from "../shared/ui/MeldFout.jsx";
 
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 
@@ -110,6 +111,8 @@ export default function NieuwkomersHerhaal({ onKlaar }) {
             {isGoed && <SteunTekst nl="Volgende" knop><button type="button" onClick={volgende} style={knop(true)}>Volgende ▶</button></SteunTekst>}
           </>
         )}
+        {/* 🚩 melden (Mark 29 sep 2026) */}
+        <MeldFout licht key={c.q} check={c} bron="nieuwkomers-herhaal" vertaling taal={leesSteuntaal()} />
       </div>
     );
   }, [vragen, idx, gekozen, klaar, goed]); // eslint-disable-line

@@ -8,6 +8,7 @@ import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import Button from "../../shared/ui/Button.jsx";
 import Card from "../../shared/ui/Card.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
+import MeldFout from "../../shared/ui/MeldFout.jsx";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { recordAnswerForPath } from "../mastery/mastery.js";
 import { track, getIncomingRef } from "../../utils.js";
@@ -65,7 +66,7 @@ function uitlegVan(v) {
 }
 
 // ── Vraag ─────────────────────────────────────────────────────────
-export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder }) {
+export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron = "start-kwartier" }) {
   const [gekozen, setGekozen] = useState(null);
   const goed = gekozen != null && gekozen === vraag.answer;
   const uitleg = uitlegVan(vraag);
@@ -75,6 +76,13 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder }) {
       <div style={{ fontSize: 13, color: "var(--color-text-muted)", marginBottom: 6 }}>
         Vraag {nummer} van {totaal}{onderwerpVan(vraag) ? " · " + onderwerpVan(vraag) : ""}
       </div>
+      {vraag.leesTekst && (
+        // Leesvraag uit een leerpad: de tekst hoort erbij (Mark 29 sep 2026, "ik zie geen tekst").
+        <div style={{ maxHeight: "45vh", overflowY: "auto", padding: "10px 12px", marginBottom: 12, borderRadius: 12, background: "rgba(255,255,255,0.05)", border: "1px solid var(--color-border-soft)", fontSize: 15, lineHeight: 1.55 }}>
+          <div style={{ fontSize: 12.5, fontWeight: 800, color: "var(--color-text-muted)", marginBottom: 6 }}>📖 Lees eerst de tekst</div>
+          {String(vraag.leesTekst).split(/\n\s*\n/).map((p, k) => <p key={k} style={{ margin: "0 0 8px" }}><MdInline text={p} /></p>)}
+        </div>
+      )}
       <p style={S.vraag}><MdInline text={vraag.q} /></p>
       {vraag.svg && (
         <div
@@ -107,6 +115,7 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder }) {
           <Button fullWidth size="lg" onClick={onVerder}>Verder →</Button>
         </>
       )}
+      <MeldFout key={vraag.q} pathId={vraag.pathId || null} stepIdx={vraag.stapIdx ?? null} check={vraag} bron={bron} />
     </Card>
   );
 }
