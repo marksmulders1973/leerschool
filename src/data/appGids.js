@@ -79,6 +79,19 @@ export const APP_GIDS = [
     vraag: "Wat is het park?",
     antwoord: "Het park is je eigen plek die meegroeit als je oefent: maatjes zoals Charley, kramen, gebouwen en verrassingen. Leren verdient het park — en vanuit het park kun je zo weer een les in.",
   },
+  // 29 sep 2026: Charley wist bij "hoe deel ik mijn park met een vriend?" het antwoord niet.
+  {
+    id: "park-delen",
+    rol: "kind",
+    vraag: "Hoe deel ik mijn park met een vriend, of bouwen we samen?",
+    antwoord: "Open in het park het menu (☰) en tik op \"Delen & samen bouwen\". Je kunt een link sturen (bijvoorbeeld via WhatsApp) waarmee een vriend je park kan bekijken, of een parkcode maken: wie die code invult, bouwt samen met jou in hetzelfde park.",
+  },
+  {
+    id: "bedrieger",
+    rol: "kind",
+    vraag: "Hoe speel ik \"Wie is de bedrieger?\" met vrienden?",
+    antwoord: "Tik onderin op \"Spelletje\" en kies \"Bedrieger\". Je komt in een kamer met bots. Tik rechts op het tandwiel: onderaan staat een code van 4 cijfers. Je vriend tikt in zijn eigen kamer op het tandwiel, vult jouw code in en tikt op \"Meedoen\". Wie de som het snelst goed heeft, wordt de bedrieger — daarna spelen jullie samen in het park.",
+  },
 ];
 
 export default APP_GIDS;
