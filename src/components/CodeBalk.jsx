@@ -131,7 +131,7 @@ function EerScherm({ code, onVerder }) {
   const [famOpen, setFamOpen] = useState(false);
   const famKnop = (label) => <FamilieKnop open={famOpen} onToggle={() => setFamOpen((o) => !o)} plek="erescherm">{label}</FamilieKnop>;
   return (
-    <div style={{ position: "fixed", inset: 0, zIndex: 60, background: donker ? "#14283c" : "linear-gradient(160deg,#f6faf2,#e7f6ec)", overflowY: "auto" }}>
+    <div style={{ position: "fixed", inset: 0, zIndex: 150, /* 29 sep 2026 (kliktocht): boven de onderbalk (z 100), die anders over de WhatsApp/mail-knoppen viel */ background: donker ? "#14283c" : "linear-gradient(160deg,#f6faf2,#e7f6ec)", overflowY: "auto" }}>
       <div style={{ maxWidth: 620, margin: "0 auto", padding: "30px 22px 44px" }}>
         {/* kop: Leerkwartier links · partner-beeldmerk rechts in de hoek */}
         <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
