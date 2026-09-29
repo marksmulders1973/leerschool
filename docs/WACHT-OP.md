@@ -112,3 +112,4 @@
 - 26 jul: Ooievaarspas-formulier getekend én geverifieerd voltooid.
 - 23 jul: Spark Fest JA + flyer klaar en goedgekeurd.
 - Supermarkt-schermen: Leerkwartier draait op 3 schermen.
+| **Knab zakelijke rekening** | ⏳ 29 sep 14:54 aangevraagd via de Knab-app (eenmanszaak, e-mail hallo@leerkwartier.app, roepnaam Mark). Knab: bericht binnen 5 werkdagen. | 29 sep | Goedkeuring → IBAN doorgeven aan Claude → Stripe-verificatie + facturen. Nudge: geen bericht op **wo 7 okt** → Knab bellen/chatten. €7/mnd, eerste 12 mnd gratis (+€100 starterstegoed) → kostenlog vanaf okt 2027. |

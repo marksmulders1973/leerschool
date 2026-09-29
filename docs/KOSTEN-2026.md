@@ -62,3 +62,5 @@ Vercel Hobby €0 · **Supabase Pro $25/mnd sinds 15 sep 2026** · Resend free t
    in het dagrapport-kopje "💼 KvK & belasting", inclusief de vraag om aanvullingen zolang er 📥-rijen zijn.
 3. **Zakelijk deel:** vrijwel alles is 100% Leerkwartier; bij gemengd gebruik (bv. printer ook privé)
    noteren we een verdeling bij de aangifte.
+
+- ⏳ **Knab zakelijke rekening** (aangevraagd 29 sep 2026): €0 in 2026 en t/m sep 2027 (12 mnd gratis, +€100 starterstegoed = opbrengst, niet kosten); daarna €7/mnd vanaf okt 2027.
