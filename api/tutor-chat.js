@@ -310,7 +310,9 @@ async function callAnthropic(apiKey, system, messages) {
       // "mag evt meer kosten"). Vergelijkingstest: Sonnet 5 schreef kloppend, natuurlijk Nederlands.
       // Met denken UIT verbeterde hij zichzelf hardop ("…nee wacht") → denken aan op effort "low".
       // Sonnet 5 weigert temperature; max_tokens telt het denken mee, de lengte regelt de prompt.
-      model: "claude-sonnet-5",
+      // 🗣️ Opus 5 (Mark 29 sep 2026, v788: "de eerste indruk moet perfect zijn"; bij te hoog gebruik
+      // stelt hij bij). Opus 5 low was in de test nog net fijner; ~€0,017 per bericht. Geen temperature.
+      model: "claude-opus-5",
       thinking: { type: "adaptive" },
       output_config: { effort: "low" },
       max_tokens: 1500,
