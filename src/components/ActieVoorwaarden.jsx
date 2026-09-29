@@ -14,8 +14,6 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
   const [code] = useState(getMyRefCode);
   const [aantal, setAantal] = useState(null);
   const [gekopieerd, setGekopieerd] = useState(false);
-  // 🤝 Deel-actie 2027 (Mark 29 jul): resterende weggeef-plekken live tonen.
-  const [plekken, setPlekken] = useState(null);
 
   const deelLink = `https://leerkwartier.app/?ref=${code}`;
   const deelTekst = `Ik oefen met Leerkwartier voor de Doorstroomtoets — gratis, met uitleg op 3 niveaus. Probeer het ook: ${deelLink}`;
@@ -25,9 +23,6 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
     let actief = true;
     supabase.rpc("get_ref_count", { code }).then(({ data }) => {
       if (actief && typeof data === "number") setAantal(data);
-    }).catch(() => {});
-    supabase.rpc("deel_actie_stand").then(({ data }) => {
-      if (actief && typeof data === "number") setPlekken(data);
     }).catch(() => {});
     return () => { actief = false; };
   }, [code]);
@@ -73,39 +68,12 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
         >← Terug</button>
 
         <h1 style={{ fontFamily: "var(--font-display)", fontSize: 26, fontWeight: 800, margin: "0 0 6px", lineHeight: 1.15 }}>
-          🤝 Deel Leerkwartier — geef Familie gratis weg
+          🤝 Deel Leerkwartier
         </h1>
         <p style={{ fontFamily: "var(--font-body)", fontSize: 15, lineHeight: 1.55, color: "rgba(255,255,255,0.85)", marginTop: 0 }}>
-          De basis van Leerkwartier is gratis — gegarandeerd t/m 2031. Help je het verder verspreiden? Delen wordt
-          dubbel beloond: jullie krijgen <strong>allebei <a href="/abonnement.html#familie" style={{ color: "#ffd54f", textDecorationColor: "rgba(255,213,79,0.5)" }}>Familie</a> gratis tot 2027</strong> (straks
-          ± € 39 per jaar), én je loot mee voor een <strong>gratis Familie-jaar in 2027</strong>.
+          De basis van Leerkwartier is gratis — gegarandeerd t/m 2031. Help je het verder verspreiden? Wie deelt,
+          loot mee voor een <strong>gratis <a href="/abonnement.html#familie" style={{ color: "#ffd54f", textDecorationColor: "rgba(255,213,79,0.5)" }}>Familie</a>-jaar in 2027</strong>.
         </p>
-
-        {/* 🤝 Weggeef-actie: beide gezinnen Familie gratis tot aug 2027 */}
-        <div style={{ ...card, border: "1px solid rgba(0,200,83,0.35)", background: "rgba(0,200,83,0.07)" }}>
-          <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 16, marginBottom: 6, color: "#69f0ae" }}>
-            {plekken !== null && plekken > 0
-              ? `Nog ${plekken} van 50 plekken: Familie gratis tot 2027`
-              : plekken !== null
-                ? "Alle 50 weggeef-plekken zijn vergeven"
-                : "50 plekken: Familie gratis tot 2027"}
-          </div>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.6, color: "rgba(255,255,255,0.8)", margin: 0 }}>
-            Ben je ingelogd als ouder of verzorger? Dan heb je een persoonlijke gezins-link. Zodra iemand
-            via die link écht oefent (3 vragen), krijgen <strong style={{ color: "#fff" }}>jullie allebei</strong> Leerkwartier
-            Familie gratis tot augustus 2027.{" "}
-            <a href="/ouder" style={{ color: "#69f0ae", fontWeight: 700 }}>Haal je gezins-link op in het ouder-dashboard →</a>
-          </p>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.6)", margin: "10px 0 0" }}>
-            Familie is de gezins-laag bovenop gratis: ouder-dashboard, weekrapport per mail,
-            examen-simulatie en het Kwartierplan.{" "}
-            <a href="/abonnement.html#familie" style={{ color: "#ffd54f", fontWeight: 700 }}>Bekijk alle verschillen met gratis →</a>
-          </p>
-          <p style={{ fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.6)", margin: "8px 0 0" }}>
-            Kom je via een organisatie (stadspas, Leergeld, voedselbank)? Dan heb je geen plek
-            nodig — met hun partner-code is Familie sowieso gratis, zonder limiet.
-          </p>
-        </div>
 
         <p style={{ fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.55, color: "rgba(255,255,255,0.75)", marginTop: 0 }}>
           📣 <strong>Ook zonder account meedoen?</strong> Deel de link hieronder. Voor elke vriend of

@@ -13,7 +13,6 @@ import { trackProUse } from "../../subscription/proPlan.js";
 import { track } from "../../utils.js";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import KwartierplanSectie from "../kwartierplan/KwartierplanSectie.jsx";
-import VriendenWerven from "../referral/VriendenWerven.jsx";
 import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import KindOverzicht from "./KindOverzicht.jsx";
 import CharleyTip from "../../components/CharleyTip.jsx";
@@ -1216,10 +1215,8 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           </div>
         </div>
       )}
-      {/* 🤝 Vrienden werven (Mark 8 jul): volwassenen-programma — 5 geworven
-          gezinnen = 6 maanden Pro. Bewust hier (ouder-context) en nergens
-          in kinder-schermen. */}
-      <VriendenWerven authUser={authUser} />
+      {/* 🤝 De kaart "Geef Familie gratis weg" (deel-actie 2027) is 29 sep 2026 verwijderd (Mark:
+          "kan er wel uit"; teller toonde "1000000 van de 50"). Oude ?vriend=CODE-links blijven werken. */}
 
       {selectedChild && selectedChildVerified && (
         <>
