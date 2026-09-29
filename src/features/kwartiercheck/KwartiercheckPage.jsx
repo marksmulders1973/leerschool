@@ -202,7 +202,7 @@ function IntroScherm({ email, naam, groep, onStart }) {
       </div>
 
       <p style={{ textAlign: "center", fontSize: 12, color: "rgba(255,255,255,0.35)", marginTop: 16 }}>
-        12 onderwerpen · max 3 vragen per onderwerp · geen account nodig
+        {getConceptenVoorGroep(localGroep).length} onderwerpen · max 3 vragen per onderwerp · geen account nodig
       </p>
     </div>
   );

@@ -8,6 +8,7 @@
 // taal (SteunTik.jsx leest localStorage `lk_steuntaal`). Geen vertaling van de app: steun.
 import { PICTO_BRON } from "../learnPaths/nieuwkomersPicto.js";
 import { Fragment, lazy, Suspense, useEffect, useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import { track } from "../utils.js";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
 import LuisterKnop from "../shared/ui/LuisterKnop.jsx";
@@ -116,7 +117,18 @@ export function leesSteuntaal() { try { return localStorage.getItem(STEUNTAAL_KE
 export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOverstap }) {
   const [taal, setTaal] = useState(leesSteuntaal);
   const [herhaal, setHerhaal] = useState(false);
-  const [luister, setLuister] = useState(null); // null | "kaarten" | "kies" | "dictee"
+  // Kijken en luisteren heeft een eigen adres (/nieuwkomers?kijken=kies): de terugknop van de telefoon
+  // brengt je dan terug naar /nieuwkomers i.p.v. van de pagina af (kliktocht 30 sep 2026), en een juf
+  // kan het scherm direct delen.
+  const location = useLocation();
+  const navigate = useNavigate();
+  const kijkParam = new URLSearchParams(location.search).get("kijken");
+  const luister = ["kaarten", "kies", "dictee"].includes(kijkParam) ? kijkParam : null;
+  const setLuister = (soort) => {
+    if (soort) navigate(`/nieuwkomers?kijken=${soort}`);
+    else if ((window.history.state?.idx ?? 0) > 0) navigate(-1);
+    else navigate("/nieuwkomers", { replace: true });
+  };
   const [tredeTest, setTredeTest] = useState(false);
   const [trede, setTrede] = useState(leesTrede);
   const [instap, setInstap] = useState(leesInstap);
