@@ -220,6 +220,8 @@ function QuizScherm({ naam, groep, onDone }) {
   const [antwoordenPerConcept, setAntwoordenPerConcept] = useState({});
   const [gekozenOptie, setGekozenOptie] = useState(null);
   const [bevestigd, setBevestigd] = useState(false);
+  // Vraag + concept vasthouden tijdens de korte pauze na 'Bevestig': anders werd het scherm leeg (29 sep 2026).
+  const [vast, setVast] = useState(null);
 
   const concept = CONCEPTEN[conceptIdx];
   const vragen = getVragenVoorConcept(concept.id);
@@ -242,11 +244,13 @@ function QuizScherm({ naam, groep, onDone }) {
     const bijgewerkt = { ...antwoordenPerConcept, [concept.id]: nieuw };
     setAntwoordenPerConcept(bijgewerkt);
     setBevestigd(true);
+    setVast({ vraag, concept, nr: antwoorden.length + 1 });
 
     // Na korte vertraging: volgende vraag of volgend concept
     setTimeout(() => {
       setGekozenOptie(null);
       setBevestigd(false);
+      setVast(null);
       vraagStartRef.current = Date.now();
       const volgende = volgendeVraagIdx(vragen, nieuw);
       if (volgende !== null) {
@@ -265,10 +269,13 @@ function QuizScherm({ naam, groep, onDone }) {
           onDone(scores);
         }
       }
-    }, goed ? 600 : weetNiet ? 1800 : 900); // bij "weet ik niet" iets langer: het goede antwoord even laten zien
+    }, goed ? 700 : weetNiet ? 1800 : 1500); // bij "weet ik niet" iets langer: het goede antwoord even laten zien
   };
 
-  if (!vraag) return null; // edge case
+  const toon = (bevestigd && vast) ? vast.vraag : vraag;
+  const toonConcept = (bevestigd && vast) ? vast.concept : concept;
+  const toonNr = (bevestigd && vast) ? vast.nr : antwoorden.length + 1;
+  if (!toon) return null; // edge case
 
   return (
     <div style={{ maxWidth: 580, margin: "0 auto", padding: "20px 18px" }}>
@@ -286,10 +293,10 @@ function QuizScherm({ naam, groep, onDone }) {
       {/* Concept-label */}
       <div style={{ marginBottom: 14 }}>
         <div style={{ fontSize: 11, fontWeight: 700, textTransform: "uppercase", letterSpacing: 0.6, color: "rgba(255,255,255,0.4)" }}>
-          {VAK_LABELS[concept.vak]} — {concept.label}
+          {VAK_LABELS[toonConcept.vak]} — {toonConcept.label}
         </div>
         <div style={{ fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 2 }}>
-          Vraag {antwoorden.length + 1}
+          Vraag {toonNr}
         </div>
       </div>
 
@@ -297,27 +304,27 @@ function QuizScherm({ naam, groep, onDone }) {
       <div style={{ ...S.card, marginBottom: 14 }}>
         <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
           <p style={{ margin: 0, fontSize: 16, fontWeight: 600, color: "#fff", lineHeight: 1.55, flex: 1 }}>
-            {vraag.vraag}
+            {toon.vraag}
           </p>
-          {luister && <LuisterKnop tekst={vraag.vraag} maat={40} />}
+          {luister && <LuisterKnop tekst={toon.vraag} maat={40} />}
         </div>
       </div>
 
       {/* Opties */}
       <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 16 }}>
-        {vraag.opties.map((opt, i) => {
+        {toon.opties.map((opt, i) => {
           let bg = "rgba(255,255,255,0.04)";
           let border = "1px solid rgba(255,255,255,0.1)";
           let color = "#e0e6f0";
           if (gekozenOptie === i) {
             if (!bevestigd) {
               bg = "rgba(255,107,53,0.15)"; border = "1.5px solid #ff6b35"; color = "#ff6b35";
-            } else if (i === vraag.correct) {
+            } else if (i === toon.correct) {
               bg = "rgba(0,200,83,0.15)"; border = "1.5px solid #00c853"; color = "#00c853";
             } else {
               bg = "rgba(255,82,82,0.15)"; border = "1.5px solid #ff5252"; color = "#ff5252";
             }
-          } else if (bevestigd && i === vraag.correct) {
+          } else if (bevestigd && i === toon.correct) {
             bg = "rgba(0,200,83,0.1)"; border = "1px solid rgba(0,200,83,0.4)"; color = "#00c853";
           }
           return (
@@ -375,7 +382,7 @@ function QuizScherm({ naam, groep, onDone }) {
         Bevestig antwoord
       </button>
 
-      <MeldFout key={vraag.vraag} check={vraag} bron="kwartiercheck" />
+      <MeldFout key={toon.vraag} check={toon} bron="kwartiercheck" />
 
       <div style={{ textAlign: "center", marginTop: 12, fontSize: 12, color: "rgba(255,255,255,0.3)" }}>
         {naam} · Groep {groep}
