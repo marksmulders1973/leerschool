@@ -2412,7 +2412,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       )}
 
       {/* Onboarding: vers park → wijs het kind naar de winkelbalk. */}
-      {versPark && !welkomWeg && bouwen && !shopCat && !placing && !dialoog && !menuOpen && (
+      {versPark && !welkomWeg && !gameModus && bouwen && !shopCat && !placing && !dialoog && !menuOpen && (
         <div style={{ position: "absolute", left: "50%", bottom: 150, transform: "translateX(-50%)", zIndex: 9, display: "flex", flexDirection: "column", alignItems: "center", gap: 2, pointerEvents: "none", maxWidth: "92%" }}>
           <div style={{ pointerEvents: "auto", display: "flex", alignItems: "center", gap: 10, background: "#fffef8", color: "#234", borderRadius: 14, padding: "10px 12px 10px 14px", boxShadow: "0 6px 20px rgba(0,0,0,.28)", font: "800 13.5px system-ui" }}>
             <span style={{ fontSize: 20 }}>👋</span>
@@ -2685,7 +2685,7 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       {COARSE_POINTER && !firstPerson && !placing && !sculptMode && !waterMode && !groundMode && selectedIdx == null && <Joystick inputRef={inputRef} />}
 
       {/* 🐾 Eenmalige maatje-tip: "je kunt hier zélf bouwen!" met snelknop. */}
-      {bouwTip && !menuOpen && !placing && !dialoog && pyrIdx == null && (
+      {bouwTip && !gameModus && !menuOpen && !placing && !dialoog && pyrIdx == null && (
         <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(420px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
           <div style={{ flex: 1, font: "700 13.5px/1.4 system-ui", color: "#234" }}>
@@ -2697,8 +2697,9 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
       )}
 
       {/* 📚 Leer-invite: het maatje maakt van het park actief een brug naar
-          leren — met muntjes-beloning als motief (P1 dagrapport 18 jul). */}
-      {leerTip && !bouwTip && !menuOpen && !placing && !dialoog && !buddyChatOpen && pyrIdx == null && (
+          leren — met muntjes-beloning als motief (P1 dagrapport 18 jul).
+          Niet tijdens "Wie is de bedrieger?" (Mark 29 sep 2026: ballon stond midden in het spel). */}
+      {leerTip && !bouwTip && !gameModus && !menuOpen && !placing && !dialoog && !buddyChatOpen && pyrIdx == null && (
         <div style={{ position: "absolute", left: "50%", bottom: bouwen ? 170 : 24, transform: "translateX(-50%)", zIndex: 13, width: "min(440px, 94vw)", background: "#fffef8", borderRadius: 16, boxShadow: "0 10px 32px rgba(0,0,0,.35)", padding: "12px 14px", display: "flex", alignItems: "center", gap: 10 }}>
           <span style={{ fontSize: 28, flex: "0 0 auto" }}>{BUDDY_BY_ID[buddyId]?.emoji || "🐾"}</span>
           <div style={{ flex: 1, font: "700 13.5px/1.4 system-ui", color: "#234" }}>
