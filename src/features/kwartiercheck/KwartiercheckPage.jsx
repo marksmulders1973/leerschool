@@ -5,7 +5,7 @@ import { GROEP_SETS } from "./groepen/index.js";
 // Groep 6-8 kan met de vaste set; lagere groepen pas zodra ze een eigen set hebben (anders breuken in groep 3).
 const GROEPEN = ["3", "4", "5", "6", "7", "8"].filter((g) => GROEP_SETS[g] || ["6", "7", "8"].includes(g));
 import LuisterKnop from "../../shared/ui/LuisterKnop.jsx";
-import { getVragenVoorConcept } from "./questions.js";
+import { getVragenVoorConcept, nieuweVolgorde } from "./questions.js";
 import { track } from "../../utils.js";
 import { GratisBadge } from "../../subscription/ProBadge.jsx";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
@@ -306,7 +306,7 @@ function QuizScherm({ naam, groep, onDone }) {
           <p style={{ margin: 0, fontSize: 16, fontWeight: 600, color: "#fff", lineHeight: 1.55, flex: 1 }}>
             {toon.vraag}
           </p>
-          {luister && <LuisterKnop tekst={toon.vraag} maat={40} />}
+          {luister && !toon.nietVoorlezen && <LuisterKnop tekst={toon.vraag} maat={40} />}
         </div>
       </div>
 
@@ -341,7 +341,7 @@ function QuizScherm({ naam, groep, onDone }) {
                 ...(luister ? { display: "flex", alignItems: "center", gap: 10 } : {}),
               }}
             >
-              {luister && <LuisterKnop tekst={String(opt)} maat={36} />}
+              {luister && !toon.nietVoorlezen && <LuisterKnop tekst={String(opt)} maat={36} />}
               {opt}
             </button>
           );
@@ -495,6 +495,14 @@ function ResultaatScherm({ naam, groep, email, scores, onHome }) {
           "Beheerst" verschijnt pas na drie goede antwoorden op rij; zeker weten doe je door het
           onderwerp in de app te oefenen.
         </p>
+        {/* De vragen meten wat halverwege het schooljaar verwacht wordt (docs/kwartiercheck/CONCEPTEN-PER-GROEP.md);
+            in de eerste maanden is "bijna daar" dus heel gewoon — dat eerlijk zeggen (29 sep 2026). */}
+        {[7, 8, 9, 10, 11].includes(new Date().getMonth()) && (
+          <p style={{ fontSize: 12, color: "rgba(255,255,255,0.4)", margin: "6px auto 0", maxWidth: 440, lineHeight: 1.5 }}>
+            De vragen gaan over wat een kind halverwege groep {groep} kent. In het begin van het schooljaar is
+            "bijna daar" dus heel normaal.
+          </p>
+        )}
       </div>
 
       <GevoelVraag groep={groep} scores={scores} />
@@ -614,6 +622,7 @@ export default function KwartiercheckPage({ emailVanIntro, onHome }) {
   const handleStart = (n, g) => {
     setNaam(n);
     setGroep(g);
+    nieuweVolgorde(); // elke check andere vragen (binnen hetzelfde niveau)
     track("kwartiercheck_gestart", { groep: g });
     setStap("quiz");
   };

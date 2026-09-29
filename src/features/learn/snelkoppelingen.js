@@ -35,7 +35,7 @@ export const SNELKOPPELINGEN = [
     woorden: ["examen", "examens", "eindexamen", "vmbo", "havo", "vwo", "examenbundel", "pdf", "oude examens"] },
   { id: "vandaag", emoji: "📅", label: "Vraag van de dag", uitleg: "Elke dag één vraag, in een minuut klaar.", pad: "/vandaag",
     woorden: ["vandaag", "vraag van de dag", "dagvraag", "dagelijkse vraag"] },
-  { id: "kwartiercheck", emoji: "🧭", label: "Kwartiercheck · waar sta ik nu?", uitleg: "In een kwartier zien waar je staat, per onderdeel.", pad: "/kwartiercheck",
+  { id: "kwartiercheck", emoji: "🧭", label: "Kwartiercheck · waar sta ik nu?", uitleg: "In een kwartier zien waar je staat, per onderdeel — voor groep 3 t/m 8.", pad: "/kwartiercheck",
     woorden: ["kwartiercheck", "niveau", "waar sta ik", "niveautest", "check", "hoe goed ben ik"] },
   { id: "start", emoji: "🚀", label: "Start-kwartier", uitleg: "Nieuw hier? Begin met een kort kwartier op je eigen niveau.", pad: "/start",
     woorden: ["start", "beginnen", "nieuw", "eerste keer", "hoe begin ik", "starten"] },

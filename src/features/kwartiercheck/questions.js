@@ -464,8 +464,17 @@ export const KWARTIERCHECK_VRAGEN = [
 
 // Helper: geef vragen voor een concept, gesorteerd op niveau (vaste set + de sets per groep)
 const ALLE_VRAGEN = [...KWARTIERCHECK_VRAGEN, ...Object.values(GROEP_SETS).flatMap((s) => s.vragen || [])];
+// Binnen een niveau schudden, één keer per check (29 sep 2026): de check nam altijd de eerste vraag
+// per niveau, dus wie hem twee keer deed kreeg precies dezelfde vragen en de rest werd nooit gebruikt.
+// De volgorde blijft vast tijdens één check (de antwoorden verwijzen naar de index in deze lijst).
+let volgorde = new Map();
+export function nieuweVolgorde() { volgorde = new Map(); }
+const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
 export function getVragenVoorConcept(conceptId) {
-  return ALLE_VRAGEN
-    .filter((v) => v.concept === conceptId)
-    .sort((a, b) => a.niveau - b.niveau);
+  if (!volgorde.has(conceptId)) {
+    const eigen = ALLE_VRAGEN.filter((v) => v.concept === conceptId);
+    const niveaus = [...new Set(eigen.map((v) => v.niveau))].sort((a, b) => a - b);
+    volgorde.set(conceptId, niveaus.flatMap((n) => schud(eigen.filter((v) => v.niveau === n))));
+  }
+  return volgorde.get(conceptId);
 }

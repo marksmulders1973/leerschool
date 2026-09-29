@@ -45,7 +45,7 @@ export const CONCEPTEN = [
   // ─── TAAL ──────────────────────────────────────────────────────
   {
     id: "spelling",
-    label: "Spelling & werkwoorden",
+    label: "Spelling (woorden)",
     vak: "taal",
     leerpadId: "spelling-overige-po",
     leerpadTitel: "Spelling",
