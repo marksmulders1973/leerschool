@@ -1,6 +1,30 @@
 import { describe, it, expect } from "vitest";
 import { schoonVoorSpraak, maakMeeleesPlan, woordIndexBijChar, normaliseerBedragen } from "./spraakTekst.js";
 
+describe("de ziekte ALS wordt gespeld, het woordje als niet (Mark 29 sep 2026)", () => {
+  it("ziekte ALS → aa el es", () => {
+    expect(schoonVoorSpraak("Hij heeft de ziekte ALS.")).toBe("Hij heeft de ziekte aa el es.");
+  });
+  it("(ALS) en ALS-patiënt", () => {
+    expect(schoonVoorSpraak("amyotrofische laterale sclerose (ALS)")).toBe("amyotrofische laterale sclerose (aa el es)");
+    expect(schoonVoorSpraak("Een ALS-patiënt kan steeds minder bewegen.")).toBe("Een aa el es-patiënt kan steeds minder bewegen.");
+  });
+  it("ALS is een spierziekte / mensen met ALS", () => {
+    expect(schoonVoorSpraak("ALS is een spierziekte.")).toBe("aa el es is een spierziekte.");
+    expect(schoonVoorSpraak("Mensen met ALS worden steeds zwakker.")).toBe("Mensen met aa el es worden steeds zwakker.");
+  });
+  it("nadruk en programmeercode blijven 'als'", () => {
+    expect(schoonVoorSpraak("Het klinkt ALS twee wekkers.")).toBe("Het klinkt ALS twee wekkers.");
+    expect(schoonVoorSpraak("ALS leeftijd 18 is: stemmen")).toBe("ALS leeftijd 18 is: stemmen");
+    expect(schoonVoorSpraak("Als het regent, blijf ik thuis.")).toBe("Als het regent, blijf ik thuis.");
+  });
+  it("meelezen: één getoond woord, gespeld uitgesproken", () => {
+    const plan = maakMeeleesPlan("Hij kreeg ALS toen hij vijftig was.");
+    expect(plan.gesproken).toBe("Hij kreeg aa el es toen hij vijftig was.");
+    expect(plan.grenzen.map((g) => g.woordIdx)).toEqual([0, 1, 2, 3, 4, 5, 6]);
+  });
+});
+
 describe("normaliseerBedragen (euro-bedragen menselijk uitspreken)", () => {
   it("€1,50 → één euro vijftig", () => {
     expect(normaliseerBedragen("Dat kost €1,50.")).toBe("Dat kost één euro vijftig.");

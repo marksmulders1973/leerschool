@@ -66,8 +66,25 @@ export function normaliseerBedragen(tekst) {
       (_, euro, cent) => bedragNaarWoord(euro, cent));
 }
 
+// ── De ziekte ALS letter voor letter (Mark 29 sep 2026) ──────────────
+// De stem las de spierziekte ALS voor als het woordje "als". Alleen de ziekte
+// wordt gespeld; "ALS" in hoofdletters staat in de app óók als nadruk ("het
+// klinkt ALS twee wekkers") en in programmeerlessen ("ALS leeftijd >= 18") —
+// die blijven "als". Daarom herkennen we de ziekte aan de woorden eromheen, en
+// zetten we een onzichtbaar merkteken achter het woord. Zo werkt het ook bij
+// het meelezen, waar de tekst per woord wordt schoongemaakt.
+const ALS_MERK = "\u2063";
+const ALS_ERVOOR = /\b((?:spier|zenuw|hersen)?ziekte|heeft|had|hebben|hadden|kreeg|kregen|krijgt|krijgen|met|aan|tegen|diagnose|patiënten?|lijdt|leed|Stichting|onderzoek naar|genezing van|over)(\s+(?:de\s+)?)ALS\b(?!\u2063)/g;
+const ALS_ERNA = /\bALS\b(?!\u2063)(?=\s*(?:-|\)|\(amyotrofische|\s+(?:is|was)\s+een\s+(?:\w+\s+)?(?:spier|zenuw)?ziekte|\s+Nederland|\s+Liga|\s+Ice\s+Bucket))/g;
+export function markeerZiekteAls(tekst) {
+  return String(tekst ?? "")
+    .replace(ALS_ERVOOR, (_, woord, tussen) => `${woord}${tussen}ALS${ALS_MERK}`)
+    .replace(/\(ALS\)/g, `(ALS${ALS_MERK})`)
+    .replace(ALS_ERNA, `ALS${ALS_MERK}`);
+}
+
 export function maakMeeleesPlan(tekst) {
-  const tokens = String(tekst ?? "").split(/(\s+)/);
+  const tokens = markeerZiekteAls(tekst).split(/(\s+)/);
   let gesproken = "";
   const grenzen = []; // per gesproken woord: { start, eind, woordIdx }
   let woordIdx = -1;
@@ -309,7 +326,9 @@ export function woordIndexBijChar(plan, charIndex) {
 }
 
 export function schoonVoorSpraak(tekst) {
-  return normaliseerBedragen(String(tekst ?? ""))
+  return normaliseerBedragen(markeerZiekteAls(tekst))
+    // de ziekte ALS: letter voor letter ("aa el es"), zie markeerZiekteAls
+    .replace(/ALS\u2063/g, "aa el es")
     // markdown-tekens (bestond al in de losse speak()-functies)
     .replace(/[*_#`>]/g, "")
     // "vs"/"vs." klinkt als gebrabbel → spreek uit als "of" (reis vs rijst).
