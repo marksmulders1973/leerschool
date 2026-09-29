@@ -18,6 +18,9 @@ const body = doc.split("## Tekst")[1].split(/\n## /)[0].replace(/^[^\n]*\n/, "")
 const rows = [...doc.matchAll(/^\|\s*(\d+)\s*\|\s*([^|]+?)\s*\|\s*([^|]*?)\s*\|\s*([\w.+-]+@[\w.-]+)\s*\|/gm)].map(m => ({ n: +m[1], org: m[2], soort: m[3], email: m[4] }));
 // Al verstuurd (OK in het log van dit doc) → overslaan, zodat een vervolg-run verder gaat.
 const alVerstuurd = new Set([...doc.matchAll(/^\s*- \d+ · .+? · ([\w.+-]+@[\w.-]+) · OK/gm)].map(m => m[1].toLowerCase()));
+// 🚫 Afmeldingen (29 sep 2026): adressen in docs/outreach/NIET-MEER-MAILEN.md altijd overslaan, in elk doc.
+const NIET_MEER = "docs/outreach/NIET-MEER-MAILEN.md";
+const nietMeer = new Set(((fs.existsSync(NIET_MEER) ? fs.readFileSync(NIET_MEER, "utf8") : "").match(/[\w.+-]+@[\w.-]+\.\w+/g) || []).map(e => e.toLowerCase()));
 // 🛑 Dagrem (idee BC, 25 sep 2026): nooit meer dan 80 bulkmails per dag, over álle docs samen, zodat
 // Resend ruimte houdt voor makersmail, alarm-mails en het dagrapport (24 sep ging de limiet naar 200%).
 // Teller per dag in logs/bulk-teller-<datum>.txt; BULK_DAGMAX=… overschrijft (alleen na overleg).
@@ -28,7 +31,7 @@ const TELLER = `logs/bulk-teller-${dagSleutel}.txt`;
 const alVandaag = fs.existsSync(TELLER) ? +fs.readFileSync(TELLER, "utf8") || 0 : 0;
 const ruimte = Math.max(0, DAGMAX - alVandaag);
 if (!DRY && ruimte === 0) { console.log(`Dagrem: vandaag al ${alVandaag} bulkmails (max ${DAGMAX}) — niets verstuurd; morgen verder.`); process.exit(0); }
-const todo = rows.filter(r => !alVerstuurd.has(r.email.toLowerCase())).slice(0, DRY ? MAX : Math.min(MAX, ruimte));
+const todo = rows.filter(r => !alVerstuurd.has(r.email.toLowerCase()) && !nietMeer.has(r.email.toLowerCase())).slice(0, DRY ? MAX : Math.min(MAX, ruimte));
 if (!subject || !body || !todo.length) { console.error("doc onvolledig", { subject: !!subject, body: body.length, rows: rows.length }); process.exit(1); }
 console.log("onderwerp:", subject, "| tekst:", body.length, "tekens | adressen:", todo.length, DRY ? "| DRY" : "");
 const log = [];

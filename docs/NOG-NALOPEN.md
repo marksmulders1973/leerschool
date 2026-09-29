@@ -51,3 +51,5 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 - 25 sep: N4, N7, N8, D10 ✅
 - 25 sep: D7 doorverwijzing /klas. ✅
 - 25 sep: D1 QR-hoek in productie getest ✅
+
+- **N15 (29 sep, uit mail WereldKidz Albatros):** "merendeel ongeletterd, niet alles kan worden voorgelezen" → nalopen waar in het Nieuwkomer-pakket de voorleesknop ontbreekt (antwoordopties? testjes? /nieuwkomers-pagina zelf? knoppen?) en een plaatjes-eerst-ingang overwegen. Eerst Hanneke vragen wáár ze het miste (concept bij Mark).

@@ -37,6 +37,9 @@
 |---|---|---|
 | ma 28 sep | 6 (offline, Mark) | 📋 KvK-inschrijving Utrecht incl. reis (afspraak 11:45; welkomstmail KvK 11:59, KvK 42176244, startdatum 1 okt) |
 | ma 28 sep | 1 (git 09:15–16:12) | 💻✉️ dagrapport + gedragspagina, LOWAN ronde 2 (45, 09:04), start-kwartier opwarmvraag (v767), KvK-nummer op site (v768), Dongen-check verstuurd |
+| ma 28 sep | 1 (git 17:00–17:50) | 💻✉️ ere-scherm twee wegen (v772), tip-knop nieuwkomers (v773), "klopt er iets niet?" (v774), KvK-nummer aan Esther gemaild |
+| di 29 sep | 2,5 (chat/git 13:00–15:30) | 💻📊 analyse zwakste schakel (data + metingen), leerpad "Probeer eerst" + opschonen + meetpunten (v775), ARKEL2027 (v776), Arkel-plan, dagrapport |
+| di 29 sep | 0,5 (offline, Mark) | 🏦 Knab zakelijke rekening aangevraagd (app, 14:54) |
 
 ## Week 39 (ma 21 sep – zo 27 sep) — ✅ GOEDGEKEURD door Mark 28 sep 2026 (uit git, 35 u)
 
