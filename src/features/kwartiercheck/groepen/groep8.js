@@ -4,8 +4,8 @@
 // De concept-objecten staan hier letterlijk gekopieerd (NIET importeren uit ../conceptMapping.js:
 // die importeert groepen/index.js → import-cyclus).
 // Nieuw: g8-tabellen-grafieken voor het Doorstroomtoets-domein "verbanden" (twijfel 8 in het doc).
-// `vragen` bevat alleen de vragen voor het nieuwe concept; de hergebruikte ids hebben al
-// genoeg vragen in questions.js (elk 2 × niveau 1 + 2 × niveau 2 + 1 × niveau 3).
+// `vragen` bevat alleen de vragen voor het nieuwe concept; de hergebruikte ids hebben hun vragen
+// in questions.js (29 sep 2026 op groep-8-niveau gebracht: per concept ≥3 × niveau 1 + ≥2 × niveau 2 + 1 × niveau 3).
 
 const concepten = [
   // ─── REKENEN ───────────────────────────────────────────────────
