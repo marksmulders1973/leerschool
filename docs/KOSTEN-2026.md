@@ -65,3 +65,4 @@ Vercel Hobby €0 · **Supabase Pro $25/mnd sinds 15 sep 2026** · Resend free t
 
 - ⏳ **Knab zakelijke rekening** (aangevraagd 29 sep 2026): €0 in 2026 en t/m sep 2027 (12 mnd gratis, +€100 starterstegoed = opbrengst, niet kosten); daarna €7/mnd vanaf okt 2027.
 - 📥 **29 sep 2026 — modeltrein voor reclame (Holland Scale, bestelling CAVR02325): €122,00** — verzonden 29 sep, bon volgt van Mark; doel: reclame-opstelling "Arkel Christmas Station" dec 2026 (etalage-diorama met Leerkwartier-wagon + QR-poster; zie MARK-AGENDA). Aanloopkosten vóór de startdatum 1 okt → aftrekbaar als zakelijke kosten.
+- ✅ **28 sep 2026 — KvK inschrijfvergoeding eenmanszaak: €85,00** (betaald aan het loket, pin; geen btw). Aanloopkosten, volledig aftrekbaar. 📥 Betaalbewijs/factuur: staat in Mijn KvK (of kwam per mail) → bewaren in Desktop\Leerkwartier-dossiers\KvK.
