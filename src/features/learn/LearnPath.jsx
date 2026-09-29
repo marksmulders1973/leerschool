@@ -678,19 +678,21 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     return null;
   })();
 
-  const goToStep = (idx) => {
+  const goToStep = (idx, vanafVraag = 0) => {
     clearPendingTimers();
     checkFoutenRef.current = {};
     foutReeksRef.current = 0;
     setToonBijsturen(false);
     setUitlegSimpeler(false);
     setStepIdx(idx);
-    setCheckIdx(0);
+    setCheckIdx(vanafVraag);
     setSelected(null);
     setAttempts(1);
     setShowUitlegPad(false);
     setShowTekstHerlees(false);
-    resumeCheckIdxRef.current = null;
+    // Hervatten bij een latere vraag (kliktocht 29 sep 2026): in vraag-eerst-modus staat checkIdx
+    // meteen goed; bij uitleg-eerst pakt "Naar de vragen" 'm op via resumeCheckIdxRef.
+    resumeCheckIdxRef.current = vanafVraag > 0 ? vanafVraag : null;
     const vragen = mcChecks(path.steps[idx]);
     setMode(vraagEerst && vragen.length > 0 ? "checking" : "reading");
     try { track("leerpad_deel_open", { pad: pathId, stap: idx, start: vraagEerst && vragen.length > 0 ? "vraag" : "uitleg" }); } catch { /* */ }
@@ -911,6 +913,18 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
         firstUnfinishedIdx={firstUnfinishedIdx}
         progressPct={progressPct}
         onPickStep={goToStep}
+        hervat={(() => {
+          // Bewaarde plek (⏸ stop / weggeklikt): toon "Doorgaan: deel X, vraag Y" i.p.v. "Begin bij deel 1".
+          try {
+            const r = loadResume(player);
+            if (r && r.pathId === pathId && typeof r.stepIdx === "number" && r.stepIdx < path.steps.length && !completedSteps.has(r.stepIdx)) {
+              const n = mcChecks(path.steps[r.stepIdx]).length;
+              const v = typeof r.checkIdx === "number" && r.checkIdx > 0 && r.checkIdx < n ? r.checkIdx : 0;
+              if (r.stepIdx > 0 || v > 0) return { stepIdx: r.stepIdx, checkIdx: v };
+            }
+          } catch { /* */ }
+          return null;
+        })()}
         onBack={onBack}
         onHome={onHome}
         loaded={loaded}
@@ -1380,7 +1394,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           </div>
         )}
 
-        {mode === "checking" && vraagEerst && currentCheck && attempts === 1 && (
+        {mode === "checking" && vraagEerst && currentCheck && (
           <div style={{ textAlign: "right", margin: "0 0 2px" }}>
             <button type="button" onClick={() => naarUitleg("vooraf")}
               style={{ background: "transparent", border: "none", color: C.muted, fontSize: 13, fontWeight: 700, cursor: "pointer", padding: "6px 0", textDecoration: "underline", fontFamily: "inherit" }}>
@@ -1926,7 +1940,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               />
             )}
             <SteunTekst nl="Lees uitleg opnieuw" knop><button onClick={() => naarUitleg("fout")} style={{ ...btnSecondary(), marginTop: 14 }}>
-              {vraagEerst ? "📖 Lees de uitleg van dit deel" : "📖 Lees uitleg opnieuw"}
+              {vraagEerst ? "📖 Uitleg van het hele deel" : "📖 Lees uitleg opnieuw"}
             </button></SteunTekst>
             <SteunTekst nl="Vraag hulp" knop><button
               onClick={() => setShowTutor(true)}
@@ -2106,7 +2120,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   );
 }
 
-function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded, wrongPerStep }) {
+function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded, wrongPerStep, hervat = null }) {
   // Sneltrack: detecteer een examenstijl-stap zodat leerlingen die morgen
   // toets hebben direct naar de kern kunnen springen (audit 2026-05-06,
   // 14-jr-havo-feedback "ik scroll, ik wil niet lezen, ik heb morgen toets").
@@ -2184,8 +2198,8 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
         )}
 
         {loaded && firstUnfinishedIdx !== null && (
-          <SteunTekst nl={completedSteps.size === 0 ? "Begin bij deel 1" : "Doorgaan"} knop><button
-            onClick={() => onPickStep(firstUnfinishedIdx)}
+          <SteunTekst nl={hervat || completedSteps.size > 0 ? "Doorgaan" : "Begin bij deel 1"} knop><button
+            onClick={() => (hervat ? onPickStep(hervat.stepIdx, hervat.checkIdx) : onPickStep(firstUnfinishedIdx))}
             style={{
               ...btnPrimary(),
               marginTop: 0,
@@ -2194,7 +2208,9 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
               fontSize: 15,
             }}
           >
-            {completedSteps.size === 0
+            {hervat
+              ? `▶ Doorgaan: deel ${hervat.stepIdx + 1}${hervat.checkIdx > 0 ? `, vraag ${hervat.checkIdx + 1}` : ""} — ${stripExamenVraagPrefix(path.steps[hervat.stepIdx]?.title || "")}`
+              : completedSteps.size === 0
               ? `🚀 Begin bij deel 1`
               : `▶ Doorgaan: deel ${firstUnfinishedIdx + 1} — ${path.steps[firstUnfinishedIdx].title}`}
           </button></SteunTekst>
