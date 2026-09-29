@@ -5,7 +5,7 @@
 //
 // Hergebruikt dezelfde infra als tutor-chat: ANTHROPIC_API_KEY (Mark's credits),
 // Gemini-fallback, _guard (rate-limit + dagelijkse kosten-cap). Goedkoop model
-// (Haiku) + kleine max_tokens, want dit is sfeer/aanmoediging, geen lange uitleg.
+// (Sonnet 5 sinds 29 sep 2026, effort low) + kleine max_tokens, want dit is sfeer/aanmoediging, geen lange uitleg.
 
 import { guardRequest, dailyQuotaCheck, telPartnerCall } from "./_guard.js";
 
@@ -175,9 +175,14 @@ async function callAnthropic(apiKey, system, messages) {
       "content-type": "application/json",
     },
     body: JSON.stringify({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 160,
-      temperature: 0.8,
+      // 🗣️ Sonnet 5 i.p.v. Haiku 4.5 (Mark 29 sep 2026: "in elke klas zitten 5 tafels" en de/het-fouten;
+      // "mag evt meer kosten"). Vergelijkingstest: Sonnet 5 schreef kloppend, natuurlijk Nederlands.
+      // Met denken UIT verbeterde hij zichzelf hardop ("…nee wacht") → denken aan op effort "low".
+      // Sonnet 5 weigert temperature; max_tokens telt het denken mee, de lengte regelt de prompt.
+      model: "claude-sonnet-5",
+      thinking: { type: "adaptive" },
+      output_config: { effort: "low" },
+      max_tokens: 800,
       system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
       messages: messages.map((m) => ({
         role: m.role === "assistant" ? "assistant" : "user",
@@ -190,7 +195,8 @@ async function callAnthropic(apiKey, system, messages) {
     throw new Error(`Anthropic ${resp.status}: ${txt.slice(0, 200)}`);
   }
   const data = await resp.json();
-  const reply = data?.content?.[0]?.text?.trim() || "";
+  // Eerste blok is bij Sonnet 5 het denk-blok → alleen de tekst-blokken nemen.
+  const reply = (data?.content || []).filter((b) => b.type === "text").map((b) => b.text).join("").trim();
   if (!reply) throw new Error("Leeg Anthropic-antwoord");
   return reply;
 }

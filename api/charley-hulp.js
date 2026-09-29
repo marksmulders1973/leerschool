@@ -1,6 +1,6 @@
 // ❓ Charley-hulp — vrije vragen over de app (Mark 1 sep 2026, Charley-plan
 // laag 3). Zelfde veiligheids-opzet als buddy-chat (kindveilig filter, guard,
-// dagelijkse kosten-cap, Haiku + Gemini-fallback), maar met de APP-GIDS als
+// dagelijkse kosten-cap, Sonnet 5 + Gemini-fallback), maar met de APP-GIDS als
 // kennisbron. Gouden regel: bij twijfel EERLIJK "weet ik niet" + verwijzen —
 // nooit functies verzinnen die niet bestaan.
 
@@ -55,19 +55,25 @@ async function callAnthropic(apiKey, system, vraag) {
     method: "POST",
     headers: { "x-api-key": apiKey, "anthropic-version": "2023-06-01", "content-type": "application/json" },
     body: JSON.stringify({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 220,
+      // 🗣️ Sonnet 5 i.p.v. Haiku 4.5 (Mark 29 sep 2026: "in elke klas zitten 5 tafels" en de/het-fouten;
+      // "mag evt meer kosten"). Vergelijkingstest: Sonnet 5 schreef kloppend, natuurlijk Nederlands.
+      // Met denken UIT verbeterde hij zichzelf hardop ("…nee wacht") → denken aan op effort "low".
+      // Sonnet 5 weigert temperature; max_tokens telt het denken mee, de lengte regelt de prompt.
+      model: "claude-sonnet-5",
+      thinking: { type: "adaptive" },
+      output_config: { effort: "low" },
+      max_tokens: 1000,
       // Prompt caching (20 sep 2026): de APP-GIDS is voor iedereen identiek
       // en verandert alleen bij een release — de beste cache-kandidaat die
       // we hebben. Zie api/tutor-chat.js voor de toelichting.
-      temperature: 0.3,
       system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
       messages: [{ role: "user", content: vraag }],
     }),
   });
   if (!resp.ok) throw new Error(`Anthropic ${resp.status}`);
   const data = await resp.json();
-  const reply = data?.content?.[0]?.text?.trim() || "";
+  // Eerste blok is bij Sonnet 5 het denk-blok → alleen de tekst-blokken nemen.
+  const reply = (data?.content || []).filter((b) => b.type === "text").map((b) => b.text).join("").trim();
   if (!reply) throw new Error("Leeg antwoord");
   return reply;
 }

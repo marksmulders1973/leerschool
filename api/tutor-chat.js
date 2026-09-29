@@ -306,14 +306,19 @@ async function callAnthropic(apiKey, system, messages) {
       "content-type": "application/json",
     },
     body: JSON.stringify({
-      model: "claude-haiku-4-5-20251001",
-      max_tokens: 400,
-      temperature: 0.4,
+      // 🗣️ Sonnet 5 i.p.v. Haiku 4.5 (Mark 29 sep 2026: "in elke klas zitten 5 tafels" en de/het-fouten;
+      // "mag evt meer kosten"). Vergelijkingstest: Sonnet 5 schreef kloppend, natuurlijk Nederlands.
+      // Met denken UIT verbeterde hij zichzelf hardop ("…nee wacht") → denken aan op effort "low".
+      // Sonnet 5 weigert temperature; max_tokens telt het denken mee, de lengte regelt de prompt.
+      model: "claude-sonnet-5",
+      thinking: { type: "adaptive" },
+      output_config: { effort: "low" },
+      max_tokens: 1500,
       // Prompt caching (20 sep 2026): de system-prompt is ~3.000 tokens en
       // binnen één gesprek over dezelfde stap byte-identiek. Een cache-read
       // kost 10% van een gewone input-token. Werkt dus vooral bij het kind
       // dat veel berichten stuurt — precies het dure geval.
-      // ⚠️ Pakt alleen boven Haiku's minimum cacheerbare prefix; de
+      // ⚠️ Pakt alleen boven het minimum cacheerbare prefix van het model; de
       // usage-log hieronder laat zien of dat zo is.
       system: [{ type: "text", text: system, cache_control: { type: "ephemeral" } }],
       messages: messages.map((m) => ({
@@ -329,7 +334,7 @@ async function callAnthropic(apiKey, system, messages) {
   const data = await resp.json();
   // Cache-meting (20 sep 2026): zonder dit weten we niet of de caching pakt.
   // cache_read > 0 = de cache werkt; blijft hij 0 terwijl cache_creation
-  // oploopt, dan zit de prompt onder Haiku's minimum cacheerbare prefix.
+  // oploopt, dan zit de prompt onder het minimum cacheerbare prefix van het model.
   const u = data?.usage || {};
   if (u.cache_read_input_tokens || u.cache_creation_input_tokens) {
     console.log(
@@ -337,7 +342,8 @@ async function callAnthropic(apiKey, system, messages) {
       `write=${u.cache_creation_input_tokens || 0} vers=${u.input_tokens || 0}`
     );
   }
-  const reply = data?.content?.[0]?.text?.trim() || "";
+  // Eerste blok is bij Sonnet 5 het denk-blok → alleen de tekst-blokken nemen.
+  const reply = (data?.content || []).filter((b) => b.type === "text").map((b) => b.text).join("").trim();
   if (!reply) throw new Error("Leeg Anthropic-antwoord");
   return reply;
 }
