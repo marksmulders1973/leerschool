@@ -409,6 +409,12 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [mode, setMode] = useState(startMode);
   const [stepIdx, setStepIdx] = useState(startStep);
   const [checkIdx, setCheckIdx] = useState(0);
+  // 🎯 "Probeer eerst" (Mark 29 sep 2026, analyse zwakste schakel): het uitleg-scherm had gemiddeld
+  // 220 woorden tekst en de knop "Naar de vragen" stond ~1.500 px diep (telefoon = 844 px). Nu opent
+  // elk deel met de eerste vraag: goed → meteen door (die vraag telt), fout of "weet ik nog niet" →
+  // de uitleg verschijnt mét die vraag als kop, en de vraag komt daarna terug. Meten: leerpad_proef.
+  const [proef, setProef] = useState(null); // { stap, gekozen, uitkomst: "goed" | "fout" | "weetniet" }
+  const [uitlegOpen, setUitlegOpen] = useState(false);
   const [selected, setSelected] = useState(null);
   const [attempts, setAttempts] = useState(1);
   // 2026-05-18 (12-agent-audit, A3 finding #3): micro-celebrate per correct
@@ -543,6 +549,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // mount. Verzamel volledige seen-set in state voor mastery-detectie.
   useEffect(() => {
     if (pathId) markPathSeen(pathId);
+    // Meting trechter (29 sep 2026): openen → deel begonnen → proef → naar vragen → antwoord. Er was
+    // vóór deze datum géén meetpunt op het openen van een leerpad, alleen op het antwoord.
+    if (pathId) { try { track("leerpad_open", { pad: pathId, start: startMode }); } catch { /* */ } }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId]);
   const seenIds = useMemo(() => getSeenPaths(), [pathId, stepIdx]);
 
@@ -620,6 +630,40 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId, stepIdx, checkIdx, rawCheck]);
 
+  // Proefvraag = de eerste vraag van dit deel (adaptieve volgorde). Niet bij nieuwkomerpaden (uitleg
+  // is daar al kort en tikbaar), niet bij examens (authentieke volgorde), niet als je vanuit een
+  // toetsvraag speciaal voor de uitleg komt, en niet bij een deel dat al af is.
+  const proefCheck = useMemo(() => {
+    if (!step || steunMap || isExamenPad || !checks.length) return null;
+    if (typeof initialStepIdx === "number" && initialStepIdx === stepIdx) return null;
+    if (completedSteps.has(stepIdx)) return null;
+    return shuffleOptions(checks[checkOrder[0] ?? 0]);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [pathId, stepIdx, step, checks.length, steunMap, isExamenPad, completedSteps]);
+  const proefActief = !!proefCheck && mode === "reading" && checkIdx === 0;
+  const proefStand = proefActief && proef && proef.stap === stepIdx ? proef.uitkomst : null;
+  const uitlegZichtbaar = !proefActief || uitlegOpen || proefStand === "fout" || proefStand === "weetniet";
+  const proefKies = (i) => {
+    if (!proefCheck || proefStand) return;
+    const goed = i === proefCheck.answer;
+    setProef({ stap: stepIdx, gekozen: i, uitkomst: goed ? "goed" : "fout" });
+    telAntwoordVoorVriend();
+    if (goed) {
+      // Telt als beantwoorde vraag; fout telt pas bij de echte poging ná de uitleg (geen dubbeltelling).
+      sessionScoreRef.current.tries += 1;
+      sessionScoreRef.current.correct += 1;
+      adaptRecordRight(pathId, stepIdx, checkOrder[0] ?? 0);
+      try { track("question_answered", { bron: "leerpad", pad: pathId, is_correct: true, proef: true }); } catch { /* */ }
+    }
+    try { track("leerpad_proef", { pad: pathId, stap: stepIdx, uitkomst: goed ? "goed" : "fout" }); } catch { /* */ }
+  };
+  const proefWeetNiet = () => {
+    if (proefStand) return;
+    setProef({ stap: stepIdx, gekozen: null, uitkomst: "weetniet" });
+    try { track("leerpad_proef", { pad: pathId, stap: stepIdx, uitkomst: "weetniet" }); } catch { /* */ }
+  };
+  const openUitleg = (na) => { setUitlegOpen(true); try { track("leerpad_uitleg_open", { pad: pathId, stap: stepIdx, na }); } catch { /* */ } };
+
   if (!path) {
     // Onderscheid loading (pad bestaat, nog niet geladen) van niet-gevonden.
     const existsInManifest = pathManifest.some((p) => p.id === pathId);
@@ -672,7 +716,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setAttempts(1);
     setShowUitlegPad(false);
     setShowTekstHerlees(false);
+    setProef(null);
+    setUitlegOpen(false);
     setMode("reading");
+    try { track("leerpad_deel_open", { pad: pathId, stap: idx }); } catch { /* */ }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -686,7 +733,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // Exact hervatten (F10): eenmalig bij de bewaarde vraag verdergaan.
     const hervat = resumeCheckIdxRef.current;
     resumeCheckIdxRef.current = null;
-    setCheckIdx(typeof hervat === "number" ? hervat : 0);
+    // Proefvraag goed → die (eerste) vraag niet nog eens stellen.
+    const proefGoed = proef && proef.stap === stepIdx && proef.uitkomst === "goed";
+    try { track("leerpad_naar_vragen", { pad: pathId, stap: stepIdx, proef: proef && proef.stap === stepIdx ? proef.uitkomst : "geen" }); } catch { /* */ }
+    setCheckIdx(typeof hervat === "number" ? hervat : proefGoed && checks.length > 1 ? 1 : 0);
     setSelected(null);
     setAttempts(1);
   };
@@ -1050,43 +1100,6 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
             }}
           />
         </div>
-        {/* Vrije navigatie tussen stappen — werkt alleen in reading/stepDone, niet midden in een check */}
-        {(mode === "reading" || mode === "stepDone") && (
-          <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 10 }}>
-            <SteunTekst nl="← Vorig deel" knop><button
-              onClick={() => stepIdx > 0 && goToStep(stepIdx - 1)}
-              disabled={stepIdx === 0}
-              style={{
-                flex: 1, padding: "8px 12px",
-                background: stepIdx === 0 ? "rgba(255,255,255,0.04)" : "rgba(91,134,184,0.18)",
-                border: `1px solid ${stepIdx === 0 ? "rgba(255,255,255,0.06)" : "rgba(91,134,184,0.4)"}`,
-                borderRadius: 10,
-                color: stepIdx === 0 ? "rgba(255,255,255,0.25)" : C.text,
-                fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
-                cursor: stepIdx === 0 ? "not-allowed" : "pointer",
-                transition: "background 0.15s",
-              }}
-            >
-              ← Vorig deel
-            </button></SteunTekst>
-            <SteunTekst nl="Volgend deel →" knop><button
-              onClick={() => stepIdx + 1 < totalSteps && goToStep(stepIdx + 1)}
-              disabled={stepIdx + 1 >= totalSteps}
-              style={{
-                flex: 1, padding: "8px 12px",
-                background: stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.04)" : "rgba(91,134,184,0.18)",
-                border: `1px solid ${stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.06)" : "rgba(91,134,184,0.4)"}`,
-                borderRadius: 10,
-                color: stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.25)" : C.text,
-                fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
-                cursor: stepIdx + 1 >= totalSteps ? "not-allowed" : "pointer",
-                transition: "background 0.15s",
-              }}
-            >
-              Volgend deel →
-            </button></SteunTekst>
-          </div>
-        )}
       </div>
 
       <div style={{ padding: "10px 18px 28px" }}>
@@ -1110,40 +1123,6 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           }}>
             {path.steunTeksten ? null : <>{(SUBJECTS[path.subject]?.title || path.subject || BRAND.name)} · deel {stepIdx + 1} / {totalSteps}</>}
           </div>
-          {/* Markeer voltooid — agency voor leerling (les leersnel). Alleen
-              tijdens lezen, niet midden in een check. Stap blijft natuurlijk
-              ook automatisch voltooid bij correct antwoord. */}
-          {mode === "reading" && !completedSteps.has(stepIdx) && !path.steunTeksten && (
-            <button
-              onClick={completeStep}
-              style={{
-                background: "transparent",
-                border: `1px solid ${C.border}`,
-                color: C.muted,
-                fontFamily: "var(--font-body)",
-                fontSize: 11,
-                fontWeight: 600,
-                padding: "4px 12px",
-                // B5.5 (7-bots-review a11y): was 23px hoog — te klein tap-target.
-                minHeight: "var(--tap-target-min, 44px)",
-                borderRadius: 999,
-                cursor: "pointer",
-                whiteSpace: "nowrap",
-                transition: "color 150ms ease, border-color 150ms ease",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.color = C.good;
-                e.currentTarget.style.borderColor = C.good;
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.color = C.muted;
-                e.currentTarget.style.borderColor = C.border;
-              }}
-              aria-label="Markeer deze stap als voltooid"
-            >
-              ✓ Markeer voltooid
-            </button>
-          )}
           {mode === "reading" && completedSteps.has(stepIdx) && (
             <span style={{
               fontFamily: "var(--font-body)",
@@ -1317,33 +1296,107 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
         {(mode === "reading" || mode === "stepDone") && (
           <>
-            {step.illustrationComponent
-              ? <step.illustrationComponent />
-              : <SvgFigure svg={step.svg} />}
-            {/* Voorlezen mét meelezen (Mark 15 jul): extra steun voor
-                zwakkere lezers — het gesproken woord licht op. */}
-            <VoorleesBlok tekst={step.explanation} accent="#00C853">
-              <SteunTekst nl={step.explanation}><Explanation text={step.explanation} /></SteunTekst>
-            </VoorleesBlok>
-            <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }}>
-              {!steunMap && <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />}
-              <SteunTekst nl="Vraag hulp" knop><button
-                type="button"
-                onClick={() => setShowTutor(true)}
-                style={tutorButtonStyle()}
-                aria-label={`Vraag hulp aan ${tutorBuddy.naam}`}
-              >
-                <span style={{ fontSize: 16 }}>{tutorBuddy.emoji}</span>
-                Vraag hulp aan {tutorBuddy.naam}
-              </button></SteunTekst>
-            </div>
+            {proefActief && (
+              <ProefKaart check={proefCheck} stand={proefStand} gekozen={proef && proef.stap === stepIdx ? proef.gekozen : null} onKies={proefKies} onWeetNiet={proefWeetNiet} />
+            )}
+            {uitlegZichtbaar ? (
+              <>
+                {proefActief && (proefStand === "fout" || proefStand === "weetniet") && (
+                  <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800, color: C.warm, margin: "16px 0 -2px" }}>
+                    📖 Dit heb je nodig voor die vraag:
+                  </div>
+                )}
+                {step.illustrationComponent
+                  ? <step.illustrationComponent />
+                  : <SvgFigure svg={step.svg} />}
+                {/* Voorlezen mét meelezen (Mark 15 jul): extra steun voor
+                    zwakkere lezers — het gesproken woord licht op. */}
+                <VoorleesBlok tekst={step.explanation} accent="#00C853">
+                  <SteunTekst nl={step.explanation}><Explanation text={step.explanation} /></SteunTekst>
+                </VoorleesBlok>
+                {/* Hulp-knoppen (YouTube, buddy) ingeklapt (29 sep 2026): ze stonden tussen de uitleg en
+                    "Naar de vragen" en duwden die knop van het scherm. Nieuwkomers: onveranderd, tikbaar. */}
+                {steunMap ? (
+                  <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 4 }}>
+                    <SteunTekst nl="Vraag hulp" knop><button type="button" onClick={() => setShowTutor(true)} style={tutorButtonStyle()} aria-label={`Vraag hulp aan ${tutorBuddy.naam}`}>
+                      <span style={{ fontSize: 16 }}>{tutorBuddy.emoji}</span>
+                      Vraag hulp aan {tutorBuddy.naam}
+                    </button></SteunTekst>
+                  </div>
+                ) : (
+                  <details style={{ marginTop: 4 }}>
+                    <summary style={{ cursor: "pointer", fontSize: 13, fontWeight: 700, color: C.muted, padding: "6px 0", listStyle: "none" }}>💡 Meer hulp bij dit deel</summary>
+                    <div style={{ display: "flex", flexWrap: "wrap", gap: 8, marginTop: 6 }}>
+                      <YoutubeZoekKnop pathTitle={path.title} stepTitle={step.title} subject={path.subject} />
+                      <button type="button" onClick={() => setShowTutor(true)} style={tutorButtonStyle()} aria-label={`Vraag hulp aan ${tutorBuddy.naam}`}>
+                        <span style={{ fontSize: 16 }}>{tutorBuddy.emoji}</span>
+                        Vraag hulp aan {tutorBuddy.naam}
+                      </button>
+                    </div>
+                  </details>
+                )}
+              </>
+            ) : (
+              <button type="button" onClick={() => openUitleg(proefStand === "goed" ? "goed" : "vooraf")}
+                style={{ background: "transparent", border: "none", color: C.muted, fontSize: 13.5, fontWeight: 700, cursor: "pointer", padding: "8px 0", textDecoration: "underline", fontFamily: "inherit" }}>
+                {proefStand === "goed" ? "📖 Lees de uitleg toch even" : "📖 Eerst de uitleg lezen"}
+              </button>
+            )}
           </>
         )}
 
-        {mode === "reading" && (
+        {mode === "reading" && (!proefActief || proefStand) && (
+          proefStand === "goed" && checks.length === 1 ? (
+            <button onClick={completeStep} style={btnPrimary()}>Klaar met dit deel ✓</button>
+          ) : (
           <SteunTekst nl={checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"} knop><button onClick={startCheck} style={btnPrimary()}>
-            {checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"}
+            {proefStand === "goed" && checks.length > 1 ? "Naar de volgende vragen ▶" : checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"}
           </button></SteunTekst>
+          )
+        )}
+        {/* Vrije navigatie tussen delen (29 sep 2026: van boven naar onder verplaatst — stond vóór de uitleg) */}
+        {mode === "reading" && (
+          <div style={{ display: "flex", justifyContent: "space-between", gap: 10, marginTop: 18 }}>
+            <SteunTekst nl="← Vorig deel" knop><button
+              onClick={() => stepIdx > 0 && goToStep(stepIdx - 1)}
+              disabled={stepIdx === 0}
+              style={{
+                flex: 1, padding: "8px 12px",
+                background: stepIdx === 0 ? "rgba(255,255,255,0.04)" : "rgba(91,134,184,0.18)",
+                border: `1px solid ${stepIdx === 0 ? "rgba(255,255,255,0.06)" : "rgba(91,134,184,0.4)"}`,
+                borderRadius: 10,
+                color: stepIdx === 0 ? "rgba(255,255,255,0.25)" : C.text,
+                fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                cursor: stepIdx === 0 ? "not-allowed" : "pointer",
+                transition: "background 0.15s",
+              }}
+            >
+              ← Vorig deel
+            </button></SteunTekst>
+            <SteunTekst nl="Volgend deel →" knop><button
+              onClick={() => stepIdx + 1 < totalSteps && goToStep(stepIdx + 1)}
+              disabled={stepIdx + 1 >= totalSteps}
+              style={{
+                flex: 1, padding: "8px 12px",
+                background: stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.04)" : "rgba(91,134,184,0.18)",
+                border: `1px solid ${stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.06)" : "rgba(91,134,184,0.4)"}`,
+                borderRadius: 10,
+                color: stepIdx + 1 >= totalSteps ? "rgba(255,255,255,0.25)" : C.text,
+                fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700,
+                cursor: stepIdx + 1 >= totalSteps ? "not-allowed" : "pointer",
+                transition: "background 0.15s",
+              }}
+            >
+              Volgend deel →
+            </button></SteunTekst>
+          </div>
+        )}
+        {mode === "reading" && !completedSteps.has(stepIdx) && !path.steunTeksten && (
+          <div style={{ textAlign: "right", marginTop: 6 }}>
+            <button type="button" onClick={() => { try { track("leerpad_markeer_voltooid", { pad: pathId, stap: stepIdx }); } catch { /* */ } completeStep(); }}
+              style={{ background: "transparent", border: "none", color: C.muted, fontSize: 12, fontWeight: 600, cursor: "pointer", padding: "6px 0", textDecoration: "underline", fontFamily: "inherit" }}
+              aria-label="Markeer deze stap als voltooid">✓ Markeer voltooid</button>
+          </div>
         )}
 
         {mode === "checking" && step.interactiveComponent && interactive3DEnabled() && (
@@ -2793,4 +2846,44 @@ function optionStyle(selected, isCorrectChoice, locked) {
     opacity: locked && !selected ? 0.55 : 1,
     transition: "all 0.2s",
   };
+}
+
+// 🎯 Proefvraag bovenaan een deel (zie toelichting bij `proef`-state). Klein, zonder score-gevoel.
+function ProefKaart({ check, stand, gekozen, onKies, onWeetNiet }) {
+  if (!check) return null;
+  const klaar = !!stand;
+  return (
+    <div style={{ ...cardStyle(stand === "goed" ? C.good : stand ? C.warm : "#5b86b8"), marginTop: 10 }}>
+      <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 800, letterSpacing: 1.2, textTransform: "uppercase", color: stand === "goed" ? C.good : stand ? C.warm : "#8fb4e0", marginBottom: 6 }}>
+        {stand === "goed" ? "✅ Goed! Dit wist je al" : stand ? "Nog niet — lees hieronder hoe het zit" : "🎯 Probeer eerst"}
+      </div>
+      <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.45, color: "var(--color-text-strong)", marginBottom: 10 }}>
+        <MdInline text={check.q || check.question} />
+      </div>
+      <div style={{ display: "grid", gap: 6 }}>
+        {(check.options || []).map((opt, i) => {
+          // Bij fout géén groen: het kind leest eerst de uitleg en krijgt de vraag daarna echt.
+          const goed = stand === "goed" && i === check.answer;
+          const fout = klaar && gekozen === i && i !== check.answer;
+          return (
+            <button key={i} type="button" disabled={klaar} onClick={() => onKies(i)}
+              style={{ textAlign: "left", padding: "10px 14px", borderRadius: 10, minHeight: 44, fontFamily: "var(--font-body)", fontSize: 15, color: C.text, cursor: klaar ? "default" : "pointer",
+                background: goed ? "rgba(0,200,83,0.18)" : fout ? "rgba(255,82,82,0.18)" : "rgba(255,255,255,0.04)",
+                border: `1px solid ${goed ? "rgba(0,200,83,0.55)" : fout ? "rgba(255,82,82,0.55)" : "var(--color-border)"}`,
+                opacity: klaar && !goed && !fout ? 0.6 : 1 }}>
+              <MdInline text={opt} />
+            </button>
+          );
+        })}
+      </div>
+      {!klaar && (
+        <button type="button" onClick={onWeetNiet} style={{ marginTop: 8, background: "transparent", border: "none", color: C.muted, fontSize: 13, fontWeight: 600, cursor: "pointer", padding: "6px 0", textDecoration: "underline", fontFamily: "inherit" }}>
+          Weet ik nog niet — laat de uitleg zien
+        </button>
+      )}
+      {stand === "goed" && check.explanation && (
+        <div style={{ marginTop: 8, fontSize: 13.5, color: C.muted, lineHeight: 1.5 }}><MdInline text={String(check.explanation).slice(0, 220)} /></div>
+      )}
+    </div>
+  );
 }

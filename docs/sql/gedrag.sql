@@ -144,3 +144,23 @@ SELECT props->>'pad' AS pad,
 FROM events_mens
 WHERE name IN ('leerpad_melding_open','leerpad_melding') AND created_at >= now()-interval '7 days'
 GROUP BY 1 ORDER BY verstuurd DESC, geopend DESC;
+
+-- 9. 🎯 LEERPAD-TRECHTER + "Probeer eerst" (v775, 29 sep 2026). Vóór v775 was er geen meetpunt op
+--    het openen van een leerpad — alleen op het antwoord. Doel: van "deel open" naar "antwoord" ≥ 60%.
+with s as (
+  select session,
+    bool_or(name='leerpad_open') open_, bool_or(name='leerpad_deel_open') deel,
+    bool_or(name='leerpad_proef') proef,
+    bool_or(name='leerpad_proef' and props->>'uitkomst'='goed') proef_goed,
+    bool_or(name='leerpad_proef' and props->>'uitkomst'='weetniet') weet_niet,
+    bool_or(name='leerpad_uitleg_open') uitleg_zelf_geopend,
+    bool_or(name='leerpad_naar_vragen') naar_vragen,
+    bool_or(name='question_answered' and props->>'bron'='leerpad') antwoord,
+    bool_or(name='leerpad_markeer_voltooid') markeer
+  from events_mens where created_at > now() - interval '7 days' and (name like 'leerpad_%' or name='question_answered') group by 1)
+select count(*) filter (where open_) pad_geopend, count(*) filter (where deel) deel_begonnen,
+  count(*) filter (where proef) proef_gedaan, count(*) filter (where proef_goed) proef_goed, count(*) filter (where weet_niet) weet_niet,
+  count(*) filter (where uitleg_zelf_geopend) uitleg_zelf, count(*) filter (where naar_vragen) naar_vragen,
+  count(*) filter (where antwoord) antwoord, count(*) filter (where markeer) markeer_voltooid,
+  round(100.0*count(*) filter (where antwoord)/nullif(count(*) filter (where deel),0)) pct_deel_naar_antwoord
+from s where open_;
