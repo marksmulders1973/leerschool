@@ -16,8 +16,9 @@ import { zepPositie, zepCamera } from "./Zeppelin.jsx";
 import { bouwStartVragen } from "../../onboarding/startKwartier.js";
 import { bouwGameVragen, VAKKEN, GROEPEN, groepLabel } from "./vragenBron.js";
 import { haalKlassement, bewaarScores } from "../parkRoom.js";
+import { kamerSpelerId } from "./kamerNet.js";
 import { track } from "../../../utils.js";
-import { MAX_SPELERS, isAf, maakStations, maakSpel, tick, speler, actieveSpelers, magTikken, waaromNietTikken, kijker, tikStatus, spelerWeg, tik, dichtstbijStation, magTaak, taakKlaar, startVergadering, stem, sluitVergadering, scoreVan, alleGestemd, maakSnapshot, pasSnapshotToe, SPEL_DUUR, VERGADERING_S } from "./imposterEngine.js";
+import { MAX_SPELERS, isAf, maakStations, maakSpel, tick, speler, actieveSpelers, magTikken, waaromNietTikken, kijker, tikStatus, spelerWeg, tik, dichtstbijStation, magTaak, taakKlaar, startVergadering, stem, sluitVergadering, scoreVan, alleGestemd, maakSnapshot, pasSnapshotToe, SPEL_DUUR, VERGADERING_S, zetRollen } from "./imposterEngine.js";
 
 const PARK_R = 70;
 const SNAP_MS = 500;
@@ -144,7 +145,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
   // ── netwerk ──
   useEffect(() => {
     if (!multi) return undefined;
-    if (!host) net.send({ t: "join", naam: spelerNaam || "Speler", avatar: avatarUrl });
+    if (!host) net.send({ t: "join", naam: spelerNaam || "Speler", avatar: avatarUrl, kamer: kamerSpelerId() });
     const unsub = net.luister((van, d) => {
       if (!d) return;
       if (host) {
@@ -152,7 +153,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         if (d.t === "join") {
           const al = lobbyRef.current.some((x) => x.id === van);
           if (!al && lobbyRef.current.length >= MAX_SPELERS - 1) { net.send({ t: "vol", voor: van }); return; }
-          setLobby((l) => (l.some((x) => x.id === van) || l.length >= MAX_SPELERS - 1 ? l : [...l, { id: van, naam: d.naam || "Speler", avatar: d.avatar || "" }]));
+          setLobby((l) => (l.some((x) => x.id === van) || l.length >= MAX_SPELERS - 1 ? l : [...l, { id: van, naam: d.naam || "Speler", avatar: d.avatar || "", kamer: d.kamer || null }]));
           // laatkomer: laten weten dat de ronde loopt (hij doet de volgende mee), niet stil laten wachten
           if (s && s.fase !== "intro" && !speler(s, van)) net.send({ t: "bezig", voor: van, naam: spelerNaam || "Speler", rest: Math.max(0, Math.round(SPEL_DUUR - s.spelTijd)) });
           return;
@@ -183,7 +184,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
         if (d.t === "vol") { if (d.voor === mijnId) setLaat({ vol: true }); return; }
         if (d.t === "tikOk") { if (d.voor === mijnId) { flits(`👉 ${d.naam || "Bouwer"} is af! +15`); tril(); try { track("game_tik", {}); } catch { /* */ } } return; }
         if (d.t === "tikNee") { if (d.voor === mijnId) flits(redenTekst(d.reden, d.kijker)); return; }
-        if (d.t === "opnieuw") { stRef.current = null; setLaat(null); setLobby([]); setHostWeg(false); try { net.send({ t: "join", naam: spelerNaam || "Speler", avatar: avatarUrl }); } catch { /* */ } setN((n) => n + 1); return; }
+        if (d.t === "opnieuw") { stRef.current = null; setLaat(null); setLobby([]); setHostWeg(false); try { net.send({ t: "join", naam: spelerNaam || "Speler", avatar: avatarUrl, kamer: kamerSpelerId() }); } catch { /* */ } setN((n) => n + 1); return; }
         // 10 sep 2026: placeholder mét stations — de rolkaart kwam soms vóór de eerste snapshot ("stations is not iterable" → park van de gast viel om)
         if (d.t === "rol" && d.voor === mijnId) { stRef.current = stRef.current || { spelerId: mijnId, spelers: [], stations: [], log: [], fase: "intro", takenKlaar: 0, takenTotaal: 0, spelTijd: 0 }; stRef.current.mijnRol = d.rol; stRef.current.mijnMaten = d.maten || []; const m = stRef.current.spelers?.find((x) => x.id === mijnId); if (m) m.rol = d.rol; setLaat(null); return; }
         if (d.t === "snap") { laatsteSnapOntvangen.current = performance.now(); if (hostWeg) setHostWeg(false); const vorige = stRef.current?.fase; stRef.current = pasSnapshotToe(stRef.current, d.st, mijnId); const m = speler(stRef.current, mijnId); if (m && stRef.current.mijnRol) m.rol = stRef.current.mijnRol; if (vorige === "vergadering" && stRef.current.fase !== "vergadering" && stRef.current.vergadering?.uitkomst) { const u = stRef.current.vergadering.uitkomst; if (uitkomstGezien.current !== u.tekst) { uitkomstGezien.current = u.tekst; setLaatsteUitkomst(u); setTimeout(() => setLaatsteUitkomst(null), 4500); } } setN((n) => n + 1); return; }
@@ -191,7 +192,7 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
       }
     });
     // gast: join herhalen tot er een spelstand is (één join ging verloren als de relay nog verbond → gast werd per ongeluk zelf spelleider)
-    const tj = !host ? setInterval(() => { if (!stRef.current) { try { net.send({ t: "join", naam: spelerNaam || "Speler", avatar: avatarUrl }); } catch { /* */ } } }, 3000) : null;
+    const tj = !host ? setInterval(() => { if (!stRef.current) { try { net.send({ t: "join", naam: spelerNaam || "Speler", avatar: avatarUrl, kamer: kamerSpelerId() }); } catch { /* */ } } }, 3000) : null;
     // spelleider: rollen herhalen en "bezig" uitzenden zolang de ronde loopt (laatkomers, gemiste berichten)
     const th = host ? setInterval(() => {
       const s = stRef.current; if (!s || s.fase === "intro" || s.fase === "einde") return;
@@ -254,16 +255,36 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
     const stations = maakStations(32, 6, vrijPlek);
     const extra = multi ? lobby.map((l) => ({ id: l.id, naam: l.naam, avatar: l.avatar })) : [];
     // 🕵️ auto = loting uit de witte kamer (Bedrieger-lobby, 24 sep 2026): rol en aantal bots liggen al vast, één bedrieger
-    const nBots = auto ? Math.max(1, Math.min(auto.nBots || 5, MAX_SPELERS - 1)) : Math.max(0, Math.min(Math.max(1, 5 - extra.length), MAX_SPELERS - 1 - extra.length));
-    const rk = auto ? auto.rol : (rolKeuze === "random" ? null : rolKeuze);
+    // 🕵️ kamer met vrienden (29 sep 2026): auto.rollen = rol per kamer-id; bots vullen aan zoals in de kamer
+    const uitKamer = !!(auto && auto.rollen);
+    const nBots = auto ? Math.max(uitKamer ? 0 : 1, Math.min(auto.nBots ?? 5, MAX_SPELERS - 1 - extra.length)) : Math.max(0, Math.min(Math.max(1, 5 - extra.length), MAX_SPELERS - 1 - extra.length));
+    const rk = auto ? (uitKamer ? null : auto.rol) : (rolKeuze === "random" ? null : rolKeuze);
     stRef.current = maakSpel({ spelerId: mijnId, spelerNaam: spelerNaam || "Jij", avatar: avatarUrl, nBots, stations, spelerRolKeuze: rk, extraSpelers: extra, nImposters: auto ? 1 : nImp, vak, groep });
+    if (uitKamer) {
+      const rolVan = {}; const mijnK = kamerSpelerId();
+      if (auto.rollen[mijnK]) rolVan[mijnId] = auto.rollen[mijnK];
+      for (const l of extra) { const lk = lobby.find((x) => x.id === l.id)?.kamer; if (lk && auto.rollen[lk]) rolVan[l.id] = auto.rollen[lk]; }
+      zetRollen(stRef.current, rolVan, !!auto.botBedrieger);
+      try { track("game_start_kamer", { gasten: extra.length, bots: nBots }); } catch { /* */ }
+    }
     scoresBewaard.current = false;
     stRef.current.fase = "spel";
     if (multi) { const n = stuurRollen(); setTimeout(() => { if (stRef.current) net.send({ t: "snap", st: maakSnapshot(stRef.current) }); }, 100 + n * 80); }
     setN((n) => n + 1);
   };
   // 🕵️ Uit de witte kamer: geen lobby, meteen spelen met de geloot rol.
-  useEffect(() => { if (autoStart && host && stRef.current && stRef.current.fase !== "spel") { setRolKeuze(autoStart.rol); setNImp(1); startSpel(autoStart); } }, []); // eslint-disable-line
+  useEffect(() => { if (autoStart && !autoStart.rollen && host && stRef.current && stRef.current.fase !== "spel") { setRolKeuze(autoStart.rol); setNImp(1); startSpel(autoStart); } }, []); // eslint-disable-line
+  // 🕵️ Uit de kamer mét vrienden: eerst wachten tot de gasten in dit park zijn aangemeld (of 15 s), dan starten met de geloot rollen.
+  const kamerGestart = useRef(false);
+  useEffect(() => {
+    if (!autoStart || !autoStart.rollen || !host || kamerGestart.current) return undefined;
+    const klaar = lobby.length >= (autoStart.gasten || 0);
+    const t = setTimeout(() => {
+      if (kamerGestart.current || !stRef.current || stRef.current.fase === "spel") return;
+      kamerGestart.current = true; startSpel(autoStart);
+    }, klaar ? 800 : 15000);
+    return () => clearTimeout(t);
+  }, [lobby, autoStart, host]); // eslint-disable-line
   const station = st && playerRef?.current ? dichtstbijStation(st, { x: playerRef.current.x, z: playerRef.current.z }) : null;
   const mijMetPos = mij && playerRef?.current ? { ...mij, x: playerRef.current.x, z: playerRef.current.z } : mij;
   const doelTik = st && mij && mij.rol === "imposter" ? actieveSpelers(st).find((s) => magTikken(st, mijMetPos, s)) : null;
@@ -367,7 +388,17 @@ export default function ImposterGame({ playerRef, heightRef, isSolid, teleportRe
             </div>
           </div>
         )}
-        {st.fase === "intro" && host && (
+        {st.fase === "intro" && host && autoStart?.rollen && (
+          <div style={OVERLAY("rgba(10,20,40,.88)")}>
+            <div style={KAART}>
+              <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de bedrieger?</div>
+              <p style={{ margin: "0 0 8px" }}>Wachten tot je vrienden uit de kamer in het park zijn… <b>{lobby.length} van {autoStart.gasten || 0}</b></p>
+              {lobby.length > 0 && <p style={{ margin: "0 0 8px", color: "#556" }}>Al binnen: {lobby.map((l) => l.naam).join(", ")}</p>}
+              <button onClick={() => { kamerGestart.current = true; startSpel(autoStart); }} style={KNOP}>▶ Start nu</button>
+            </div>
+          </div>
+        )}
+        {st.fase === "intro" && host && !autoStart?.rollen && (
           <div style={OVERLAY("rgba(10,20,40,.88)")}>
             <div style={KAART}>
               <div style={{ font: "900 22px system-ui", marginBottom: 6 }}>🎮 Wie is de bedrieger?</div>

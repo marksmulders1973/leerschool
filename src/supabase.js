@@ -1,4 +1,5 @@
 import { createClient } from "@supabase/supabase-js";
+import { processLock } from "@supabase/auth-js";
 
 const url = import.meta.env.VITE_SUPABASE_URL;
 const key = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -21,7 +22,10 @@ const _stubQuery = () => {
   return q;
 };
 const supabase = (url && key)
-  ? createClient(url, key)
+  // Auth-slot per tabblad i.p.v. het browser-brede navigator-slot (29 sep 2026): dat bleef na een
+  // paginawissel/herlaad telkens 5 s "orphaned" hangen ("Lock … was not released within 5000ms"),
+  // waardoor o.a. een gedeeld park (?samen=) pas na 20–45 s laadde.
+  ? createClient(url, key, { auth: { lock: processLock } })
   : {
       from: _stubQuery,
       rpc: () => Promise.resolve(_stubErr()),

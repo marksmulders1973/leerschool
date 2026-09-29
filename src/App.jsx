@@ -373,6 +373,9 @@ export default function App() {
     // redirecten, anders verliezen we de vraag-id.
     if (page === "vraag") return;
     const expected = pathForPage(page);
+    // Staat de echte URL al goed (navigate(url) vlak vóór setPage, bv. de Bedrieger-kamer → /dierentuin?samen=…),
+    // dan niet opnieuw navigeren: de router-locatie loopt soms één render achter en zou ?samen= wegschrijven.
+    if (expected && expected === window.location.pathname) return;
     if (expected && expected !== location.pathname) {
       navigate(expected);
     }
@@ -1680,7 +1683,7 @@ export default function App() {
       {page === "imposter" && (
         <Suspense fallback={<PageLoader />}>
           <ImposterKamer onTerug={() => setPage("spelletje")} spelerNaam={userName || ""} userLevel={userLevel}
-            onNaarPark={(opties) => { bedriegerAutoRef.current = opties; setPage("zoo"); }} />
+            onNaarPark={(opties, url) => { bedriegerAutoRef.current = opties; if (url) navigate(url); setPage("zoo"); }} />
         </Suspense>
       )}
       {page === "zoo" && (

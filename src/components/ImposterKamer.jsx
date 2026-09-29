@@ -13,6 +13,9 @@ import { PointerLockControls, Html } from "@react-three/drei";
 import { CanvasTexture, RepeatWrapping, Vector3, Euler } from "three";
 import { bouwGameVragen } from "../features/zoo/game/vragenBron.js";
 import { track } from "../utils.js";
+import { verbindKamer, kamerSpelerId } from "../features/zoo/game/kamerNet.js";
+import { maakParkRoom } from "../features/zoo/parkRoom.js";
+import { ensureSession } from "../auth.js";
 
 const KAMER = 20;      // meter, breed en diep
 const HOOGTE = 5;      // meter
@@ -144,10 +147,33 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
   const [tijd, setTijd] = useState(SOM_TIJD);
   const [gekozen, setGekozen] = useState(null);
   const [winnaar, setWinnaar] = useState(null);          // { id, naam, mens, ms }
-  // ⚙️ Menu achter het tandwiel (Mark 29 sep 2026): onderaan een code van 4 cijfers voor deze kamer.
-  // Voorlopig alleen tonen; koppelen aan meespelen (stap 4 multiplayer) komt later.
+  // ⚙️ Menu achter het tandwiel (Mark 29 sep 2026): onderaan de code van 4 cijfers van deze kamer.
+  // 🤝 Meedoen (Mark 29 sep): een vriend tikt die code in bij zíjn tandwiel en zit dan in jouw kamer;
+  // elke echte speler vervangt een bot. De leider (kamer-eigenaar) stuurt start/uitslag/park, gasten
+  // sturen hun antwoord. Kanaal: kamerNet.js (Supabase Realtime, geen database).
   const [menuOpen, setMenuOpen] = useState(false);
-  const [kamerCode] = useState(() => String(1000 + Math.floor(Math.random() * 9000)));
+  const [code, setCode] = useState(() => String(1000 + Math.floor(Math.random() * 9000)));
+  const mijnId = useMemo(() => kamerSpelerId(), []);
+  const naam = (spelerNaam || "").trim() || "Speler";
+  const [rolKamer, setRolKamer] = useState("leider");   // leider | gast
+  const [spelers, setSpelers] = useState([]);           // presence: [{ id, naam, host }]
+  const [hostNaam, setHostNaam] = useState("");
+  const [joinCode, setJoinCode] = useState("");
+  const [joinStand, setJoinStand] = useState(null);     // null | "zoeken" | "fout"
+  const [statusMens, setStatusMens] = useState({});     // gast-id → 'goed' | 'fout'
+  const [parkBezig, setParkBezig] = useState(false);
+  const [parkFout, setParkFout] = useState("");
+  const netRef = useRef(null);
+  const ontvangRef = useRef(() => {});
+  const verbind = (c, host) => {
+    netRef.current?.close();
+    setSpelers([]);
+    netRef.current = verbindKamer({ code: c, id: mijnId, naam, host, on: { spelers: (l) => setSpelers(l), bericht: (van, d) => ontvangRef.current(van, d) } });
+  };
+  const stuur = (d) => netRef.current?.send(d);
+  useEffect(() => { verbind(code, true); return () => netRef.current?.close(); }, []); // eslint-disable-line
+  const gasten = spelers.filter((s) => s.id !== mijnId);
+  const leider = spelers.find((s) => s.host) || null;
   const [laden, setLaden] = useState(false);
   const timers = useRef([]);
   const startMs = useRef(0);
@@ -155,43 +181,90 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
   const wis = () => { timers.current.forEach(clearTimeout); timers.current = []; };
   useEffect(() => () => wis(), []);
 
-  const beslis = (id, naam, mens) => {
+  // Alleen de leider beslist; gasten krijgen de uitslag via het kanaal.
+  const beslis = (id, wieNaam, bot) => {
     if (beslist.current) return;
     beslist.current = true; wis();
     const ms = Date.now() - startMs.current;
-    setWinnaar({ id, naam, mens, ms });
+    setWinnaar({ id, naam: wieNaam, bot, ik: id === mijnId, ms });
     setFase("uitslag");
     try { document.exitPointerLock && document.exitPointerLock(); } catch { /* */ }
-    try { track("bedrieger_loting", { winnaar: mens ? "mens" : "bot", ms, groep }); } catch { /* */ }
+    try { track("bedrieger_loting", { winnaar: bot ? "bot" : (id === mijnId ? "mens" : "gast"), ms, groep, spelers: 1 + gasten.length }); } catch { /* */ }
+    stuur({ t: "uitslag", id, naam: wieNaam, bot, ms });
   };
-
-  const startSom = async () => {
-    setLaden(true);
-    let v = null;
-    try { const vs = await bouwGameVragen({ vak: "alles", groep: "eigen", level: groep, n: 1 }); v = vs && vs[0]; } catch { /* */ }
-    if (!v || !v.options) v = { q: "Wat is 7 × 8?", options: ["54", "56", "64", "48"], answer: 1 };
-    setLaden(false);
-    setVraag(v); setGekozen(null); setBotStatus({}); setTijd(SOM_TIJD); beslist.current = false;
+  const toonSom = (v) => {
+    setVraag(v); setGekozen(null); setBotStatus({}); setStatusMens({}); setTijd(SOM_TIJD); beslist.current = false;
     setFase("aftellen"); setAftel(3);
     timers.current.push(setTimeout(() => setAftel(2), 1000));
     timers.current.push(setTimeout(() => setAftel(1), 2000));
     timers.current.push(setTimeout(() => {
       setFase("som"); startMs.current = Date.now();
       try { document.exitPointerLock && document.exitPointerLock(); } catch { /* */ }
-      // bots: langzame rekenaars — 8 tot 15 s, 7 op de 10 goed; de eerste goede bot wint als de mens niet sneller was
-      bots.forEach((b) => {
+      for (let s = 1; s <= SOM_TIJD; s++) timers.current.push(setTimeout(() => setTijd(SOM_TIJD - s), s * 1000));
+    }, 3000));
+  };
+  // Berichten van de anderen (leider ↔ gasten). Elke render opnieuw gezet, zodat de closures vers zijn.
+  ontvangRef.current = (van, d) => {
+    if (!d || !d.t) return;
+    if (rolKamer === "gast") {
+      if (d.t === "start" && d.vraag) { wis(); toonSom(d.vraag); return; }
+      if (d.t === "bot") { setBotStatus((s) => ({ ...s, [d.id]: d.goed ? "goed" : "fout" })); return; }
+      if (d.t === "antw") { setStatusMens((s) => ({ ...s, [van]: d.goed ? "goed" : "fout" })); return; }
+      if (d.t === "uitslag") { beslist.current = true; wis(); setWinnaar({ id: d.id, naam: d.naam, bot: !!d.bot, ik: d.id === mijnId, ms: d.ms || 0 }); setFase("uitslag"); try { document.exitPointerLock && document.exitPointerLock(); } catch { /* */ } return; }
+      if (d.t === "opnieuw") { wis(); setFase("opnieuw"); return; }
+      if (d.t === "park" && d.code) { try { track("bedrieger_naar_park", { gast: 1 }); } catch { /* */ } naarGedeeldPark(`/dierentuin?samen=${encodeURIComponent(d.code)}&game=1&gast=1`); return; }
+    } else {
+      if (d.t === "antw") {
+        setStatusMens((s) => ({ ...s, [van]: d.goed ? "goed" : "fout" }));
+        if (d.goed && fase === "som") beslis(van, d.naam || spelers.find((s) => s.id === van)?.naam || "Speler", false);
+      }
+    }
+  };
+  // Gast: meedoen-poging afronden zodra de leider in de presence-lijst staat (max 6 s)
+  useEffect(() => {
+    if (joinStand !== "zoeken") return undefined;
+    const h = spelers.find((s) => s.host && s.id !== mijnId);
+    if (h) { setRolKamer("gast"); setHostNaam(h.naam); setJoinStand(null); setMenuOpen(false); try { track("bedrieger_meedoen", { ok: 1 }); } catch { /* */ } return undefined; }
+    const t = setTimeout(() => { setJoinStand("fout"); try { track("bedrieger_meedoen", { ok: 0 }); } catch { /* */ } verbind(code, true); }, 6000);
+    return () => clearTimeout(t);
+  }, [joinStand, spelers]); // eslint-disable-line
+  const doeMee = () => {
+    const c = joinCode.replace(/\D/g, "");
+    if (c.length !== 4 || c === code) { setJoinStand("fout"); return; }
+    setJoinStand("zoeken"); verbind(c, false);
+  };
+  const verlaatKamer = () => {
+    setRolKamer("leider"); setHostNaam(""); setFase("lobby"); setWinnaar(null); setVraag(null); wis();
+    const nieuw = String(1000 + Math.floor(Math.random() * 9000)); setCode(nieuw); verbind(nieuw, true);
+  };
+  // Zit de leider er niet meer (tabblad dicht)? Dan terug naar je eigen kamer.
+  const leiderWeg = rolKamer === "gast" && spelers.length > 0 && !spelers.some((s) => s.host);
+
+  const startSom = async () => {
+    if (rolKamer !== "leider") return;
+    setLaden(true);
+    let v = null;
+    try { const vs = await bouwGameVragen({ vak: "alles", groep: "eigen", level: groep, n: 1 }); v = vs && vs[0]; } catch { /* */ }
+    if (!v || !v.options) v = { q: "Wat is 7 × 8?", options: ["54", "56", "64", "48"], answer: 1 };
+    setLaden(false);
+    wis();
+    stuur({ t: "start", vraag: v });
+    toonSom(v);
+    const actief = botsActief;
+    timers.current.push(setTimeout(() => {
+      // bots: langzame rekenaars — 8 tot 15 s, 7 op de 10 goed; de eerste goede bot wint als geen mens sneller was
+      actief.forEach((b) => {
         const na = 8000 + Math.random() * 7000;
         const goed = Math.random() < 0.7;
-        timers.current.push(setTimeout(() => { setBotStatus((s) => ({ ...s, [b.id]: goed ? "goed" : "fout" })); if (goed) beslis(b.id, b.naam, false); }, na));
+        timers.current.push(setTimeout(() => { setBotStatus((s) => ({ ...s, [b.id]: goed ? "goed" : "fout" })); stuur({ t: "bot", id: b.id, goed }); if (goed) beslis(b.id, b.naam, true); }, na));
       });
-      // klok
-      for (let s = 1; s <= SOM_TIJD; s++) timers.current.push(setTimeout(() => setTijd(SOM_TIJD - s), s * 1000));
-      timers.current.push(setTimeout(() => { if (!beslist.current) { wis(); setFase("opnieuw"); } }, SOM_TIJD * 1000 + 50));
+      timers.current.push(setTimeout(() => { if (!beslist.current) { wis(); setFase("opnieuw"); stuur({ t: "opnieuw" }); } }, SOM_TIJD * 1000 + 50));
     }, 3000));
   };
 
   const startSpel = () => {
-    try { track("bedrieger_lobby_start", { echt: 1, bots: bots.length, groep }); } catch { /* */ }
+    if (rolKamer !== "leider") return;
+    try { track("bedrieger_lobby_start", { echt: 1 + gasten.length, bots: botsActief.length, groep }); } catch { /* */ }
     startSom();
   };
 
@@ -200,12 +273,34 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
     setGekozen(i);
     const goed = i === vraag.answer;
     try { track("question_answered", { bron: "bedrieger-kamer", correct: goed ? 1 : 0, groep }); } catch { /* */ }
-    if (goed) beslis("ik", spelerNaam || "Jij", true);
+    if (rolKamer === "gast") { stuur({ t: "antw", goed, naam, ms: Date.now() - startMs.current }); return; }
+    if (goed) beslis(mijnId, naam, false);
   };
 
-  const naarPark = () => {
-    if (!winnaar) return;
-    onNaarPark && onNaarPark({ rol: winnaar.mens ? "imposter" : "bouwer", nBots: bots.length, groep, vak: "alles" });
+  // Zonder herladen naar het gedeelde park (URL bijwerken + pagina wisselen). Een harde navigatie
+  // (window.location) liet de Supabase-auth-lock hangen ("Lock … was not released within 5000ms"),
+  // waardoor het park bij de leider niet laadde (test 29 sep 2026).
+  // Via de router (niet los pushState): anders ziet de router nog het oude pad en schrijft hij
+  // "/dierentuin" zónder ?samen= terug, en opent iedereen zijn eigen park.
+  const naarGedeeldPark = (url) => { onNaarPark && onNaarPark(null, url); };
+  const naarPark = async () => {
+    if (!winnaar || rolKamer !== "leider" || parkBezig) return;
+    const mijnRol = winnaar.id === mijnId ? "imposter" : "bouwer";
+    if (!gasten.length) { onNaarPark && onNaarPark({ rol: mijnRol, nBots: botsActief.length, groep, vak: "alles" }); return; }
+    // Met vrienden: een gedeeld park (parkcode) aanmaken, rollen bewaren voor het park, iedereen erheen sturen.
+    setParkBezig(true); setParkFout("");
+    try {
+      await ensureSession();
+      const roomCode = await maakParkRoom({ naam: `${naam} · bedrieger`, layout: [], terrain: null, owned: {} });
+      const rollen = {}; for (const s of spelers) rollen[s.id] = s.id === winnaar.id ? "imposter" : "bouwer";
+      sessionStorage.setItem("lk_bedrieger_auto", JSON.stringify({ rol: mijnRol, rollen, gasten: gasten.length, nBots: botsActief.length, botBedrieger: !!winnaar.bot, groep, vak: "alles" }));
+      stuur({ t: "park", code: roomCode });
+      try { track("bedrieger_naar_park", { gast: 0, gasten: gasten.length }); } catch { /* */ }
+      setTimeout(() => naarGedeeldPark(`/dierentuin?samen=${roomCode}&game=1&kamer=1`), 700);
+    } catch (e) {
+      setParkBezig(false); setParkFout("Het park aanmaken lukte niet. Probeer het nog eens.");
+      console.warn("[bedrieger] park", e?.message || e);
+    }
   };
 
   useEffect(() => {
@@ -228,11 +323,17 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
   const onTouchEnd = (e) => { for (const t of e.changedTouches) { const v = vingers.current[t.identifier]; if (v && v.links) touchLoop.current = { x: 0, y: 0 }; delete vingers.current[t.identifier]; } };
 
   const magLopen = fase === "lobby";
+  // Wie staat er in de boog: eerst de echte spelers (donker; de leider goud), dan bots tot het maximum.
+  const botsActief = bots.slice(0, Math.max(0, MAX_SPELERS - 1 - gasten.length));
+  const figuren = [
+    ...gasten.map((g) => ({ id: g.id, naam: g.naam, kleur: g.host ? "#eab308" : "#111827", status: statusMens[g.id] || null })),
+    ...botsActief.map((b) => ({ ...b, status: botStatus[b.id] || null })),
+  ];
   const muur = fase === "aftellen" ? { tekst: String(aftel) }
     : fase === "som" && vraag ? { tekst: schoon(vraag.q), klein: `Nog ${tijd} seconden` }
-    : fase === "uitslag" && winnaar ? { tekst: winnaar.mens ? "Jij bent de bedrieger!" : "Het spel begint…", klein: winnaar.mens ? "Ssst, dat weet alleen jij." : "Wie de bedrieger is, blijft geheim.", kleur: winnaar.mens ? "#b42318" : "#111" }
+    : fase === "uitslag" && winnaar ? { tekst: winnaar.ik ? "Jij bent de bedrieger!" : "Het spel begint…", klein: winnaar.ik ? "Ssst, dat weet alleen jij." : "Wie de bedrieger is, blijft geheim.", kleur: winnaar.ik ? "#b42318" : "#111" }
     : fase === "opnieuw" ? { tekst: "Niemand goed…", klein: "Nog een som!" }
-    : fase === "lobby" ? { tekst: "Wie is de bedrieger?", klein: `${1 + bots.length} in de kamer · wacht op de leider` }
+    : fase === "lobby" ? { tekst: "Wie is de bedrieger?", klein: `${1 + figuren.length} in de kamer · wacht op ${rolKamer === "gast" ? (hostNaam || "de leider") : "de leider"}` }
     : null;
 
   return (
@@ -241,7 +342,7 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
         <color attach="background" args={["#f4f4f4"]} />
         <Suspense fallback={null}>
           <Kamer />
-          {bots.map((b, i) => { const hoek = ((i + 1) / (bots.length + 1)) * Math.PI - Math.PI / 2; return <Bot key={b.id} bot={{ ...b, status: botStatus[b.id] || null }} x={Math.sin(hoek) * 6} z={-Math.cos(hoek) * 6 - 1} hoek={Math.PI + hoek} />; })}
+          {figuren.map((b, i) => { const hoek = ((i + 1) / (figuren.length + 1)) * Math.PI - Math.PI / 2; return <Bot key={b.id} bot={b} x={Math.sin(hoek) * 6} z={-Math.cos(hoek) * 6 - 1} hoek={Math.PI + hoek} />; })}
           <Muurtekst {...(muur || {})} />
           <Speler toetsen={toetsen} touchLoop={touchLoop} touchKijk={touchKijk} mag={magLopen} />
           {!isTouch && magLopen && <PointerLockControls onLock={() => setGelockt(true)} onUnlock={() => setGelockt(false)} />}
@@ -250,16 +351,42 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
 
       {/* HUD */}
       <button type="button" onClick={onTerug} style={{ position: "absolute", top: 12, left: 12, zIndex: 3, background: "rgba(15,23,42,.85)", color: "#fff", border: "none", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui", cursor: "pointer" }}>← Terug</button>
-      <div style={{ position: "absolute", top: 12, right: 12, zIndex: 3, background: "rgba(15,23,42,.85)", color: "#fff", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui" }}>🕵️ Bedrieger · {1 + bots.length} spelers</div>
+      <div style={{ position: "absolute", top: 12, right: 12, zIndex: 3, background: "rgba(15,23,42,.85)", color: "#fff", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui" }}>🕵️ Bedrieger · {1 + figuren.length} spelers{gasten.length ? ` · ${1 + gasten.length} echt` : ""}</div>
       {/* ⚙️ Tandwiel rechts (Mark 29 sep 2026) → menu met onderaan de kamercode (4 cijfers). Echt icoon, geen emoji. */}
       {menuOpen && (
         <div role="dialog" aria-label="Instellingen" onPointerDown={(e) => e.stopPropagation()} onClick={(e) => e.stopPropagation()}
           style={{ position: "absolute", top: "50%", transform: "translateY(-50%)", right: 72, maxHeight: "60vh", width: "min(260px, calc(100vw - 96px))", zIndex: 4, background: "rgba(15,23,42,.94)", color: "#fff", borderRadius: 18, padding: "16px 16px 14px", display: "flex", flexDirection: "column", fontFamily: "system-ui", boxShadow: "0 10px 30px rgba(0,0,0,.35)" }}>
           <div style={{ fontWeight: 900, fontSize: 17 }}>Instellingen</div>
-          <div style={{ marginTop: 8, marginBottom: 18, color: "rgba(255,255,255,.55)", fontSize: 13.5, lineHeight: 1.5 }}>Hier komen straks de spelinstellingen.</div>
+          {rolKamer === "gast" ? (
+            <div style={{ marginTop: 8, marginBottom: 14, fontSize: 13.5, lineHeight: 1.5 }}>
+              <div>Je zit in de kamer van <b>{hostNaam || "de leider"}</b>.</div>
+              <button type="button" onClick={verlaatKamer} style={{ marginTop: 10, background: "rgba(255,255,255,.12)", color: "#fff", border: "none", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui", cursor: "pointer" }}>Kamer verlaten</button>
+            </div>
+          ) : (
+            <div style={{ marginTop: 8, marginBottom: 14, fontSize: 13.5, lineHeight: 1.5 }}>
+              {gasten.length > 0
+                ? <div><b>{gasten.length}</b> {gasten.length === 1 ? "vriend doet mee" : "vrienden doen mee"}: {gasten.map((g) => g.naam).join(", ")}</div>
+                : <div style={{ color: "rgba(255,255,255,.7)" }}>Vrienden laten meedoen? Zij tikken de code hieronder in bij hún tandwiel.</div>}
+              {gasten.length === 0 && (
+                <div style={{ marginTop: 12 }}>
+                  <div style={{ fontSize: 12.5, fontWeight: 700, color: "rgba(255,255,255,.7)" }}>Zelf meedoen bij een vriend?</div>
+                  <div style={{ display: "flex", gap: 8, marginTop: 6 }}>
+                    <input value={joinCode} onChange={(e) => { setJoinCode(e.target.value.replace(/\D/g, "").slice(0, 4)); setJoinStand(null); }} onKeyDown={(e) => { e.stopPropagation(); if (e.key === "Enter") doeMee(); }}
+                      inputMode="numeric" pattern="[0-9]*" maxLength={4} placeholder="code" aria-label="Code van een vriend"
+                      style={{ flex: 1, minWidth: 0, borderRadius: 10, border: "none", padding: "9px 10px", fontSize: 20, fontWeight: 900, letterSpacing: 4, textAlign: "center", fontFamily: "system-ui", color: "#0f172a", background: "#fff" }} />
+                    <button type="button" onClick={doeMee} disabled={joinStand === "zoeken" || joinCode.length !== 4}
+                      style={{ background: "#22c55e", color: "#fff", border: "none", borderRadius: 10, padding: "0 14px", fontWeight: 900, fontFamily: "system-ui", cursor: "pointer", opacity: joinStand === "zoeken" || joinCode.length !== 4 ? .5 : 1 }}>
+                      {joinStand === "zoeken" ? "…" : "Meedoen"}
+                    </button>
+                  </div>
+                  {joinStand === "fout" && <div style={{ marginTop: 6, fontSize: 12.5, color: "#fca5a5", fontWeight: 700 }}>Geen kamer met die code gevonden. Zit de leider nog in de kamer?</div>}
+                </div>
+              )}
+            </div>
+          )}
           <div style={{ borderTop: "1px solid rgba(255,255,255,.15)", paddingTop: 12, textAlign: "center" }}>
             <div style={{ fontSize: 12.5, fontWeight: 700, color: "rgba(255,255,255,.7)", letterSpacing: .5, textTransform: "uppercase" }}>Code van deze kamer</div>
-            <div style={{ fontSize: 40, fontWeight: 900, letterSpacing: 8, marginTop: 2, fontVariantNumeric: "tabular-nums" }} aria-label={`Code ${kamerCode.split("").join(" ")}`}>{kamerCode}</div>
+            <div style={{ fontSize: 40, fontWeight: 900, letterSpacing: 8, marginTop: 2, fontVariantNumeric: "tabular-nums" }} aria-label={`Code ${code.split("").join(" ")}`}>{code}</div>
           </div>
         </div>
       )}
@@ -276,11 +403,22 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
       {fase === "lobby" && (
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 22, display: "flex", flexDirection: "column", alignItems: "center", gap: 10, zIndex: 3 }}>
           <div style={{ ...HUD_PANEEL, textAlign: "center", maxWidth: 520 }}>
-            <div style={{ fontWeight: 900, fontSize: 18 }}>Jij bent de leider</div>
-            <div style={{ fontSize: 13.5, opacity: .85, marginTop: 4 }}>{bots.length} bots doen mee. Straks komt er één som op de muur: wie hem het snelst goed heeft, is de bedrieger. Bots rekenen langzaam.</div>
+            {rolKamer === "gast" ? (
+              <>
+                <div style={{ fontWeight: 900, fontSize: 18 }}>{leiderWeg ? "De leider is weg" : `Je zit in de kamer van ${hostNaam || "de leider"}`}</div>
+                <div style={{ fontSize: 13.5, opacity: .85, marginTop: 4 }}>{leiderWeg ? "Het tabblad van de leider is dicht of de verbinding is weg." : `Wacht tot ${hostNaam || "de leider"} op Start drukt. Dan komt er één som op de muur: wie hem het snelst goed heeft, is de bedrieger.`}</div>
+              </>
+            ) : (
+              <>
+                <div style={{ fontWeight: 900, fontSize: 18 }}>Jij bent de leider</div>
+                <div style={{ fontSize: 13.5, opacity: .85, marginTop: 4 }}>{gasten.length ? `${gasten.length} ${gasten.length === 1 ? "vriend" : "vrienden"} en ${botsActief.length} bots doen mee.` : `${botsActief.length} bots doen mee. Vrienden erbij? Tandwiel → code.`} Straks komt er één som op de muur: wie hem het snelst goed heeft, is de bedrieger. Bots rekenen langzaam.</div>
+              </>
+            )}
             {!isTouch && !gelockt && <div style={{ fontSize: 12.5, opacity: .7, marginTop: 6 }}>Klik in beeld om rond te lopen · WASD of pijltjes · Esc = muis vrij</div>}
           </div>
-          <button type="button" onClick={startSpel} disabled={laden} style={{ ...HUD_KNOP, opacity: laden ? .6 : 1 }}>{laden ? "Som laden…" : "▶ Start spel"}</button>
+          {rolKamer === "gast"
+            ? (leiderWeg && <button type="button" onClick={verlaatKamer} style={HUD_KNOP}>Terug naar mijn eigen kamer</button>)
+            : <button type="button" onClick={startSpel} disabled={laden} style={{ ...HUD_KNOP, opacity: laden ? .6 : 1 }}>{laden ? "Som laden…" : "▶ Start spel"}</button>}
         </div>
       )}
 
@@ -297,25 +435,28 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
                 return <button key={i} type="button" onClick={() => kies(i)} disabled={gekozen != null} style={{ background: bg, color: "#fff", border: "2px solid rgba(255,255,255,.25)", borderRadius: 12, padding: "12px 10px", fontFamily: "system-ui", fontWeight: 800, fontSize: 16, cursor: gekozen == null ? "pointer" : "default", textAlign: "left" }}>{schoon(o)}</button>;
               })}
             </div>
-            {gekozen != null && gekozen !== vraag.answer && <div style={{ marginTop: 8, fontSize: 13.5, color: "#fca5a5", fontWeight: 700 }}>Helaas… wacht af wie van de bots het goed heeft.</div>}
-            {gekozen != null && gekozen === vraag.answer && <div style={{ marginTop: 8, fontSize: 13.5, color: "#86efac", fontWeight: 700 }}>Goed! En sneller dan alle bots.</div>}
+            {gekozen != null && gekozen !== vraag.answer && <div style={{ marginTop: 8, fontSize: 13.5, color: "#fca5a5", fontWeight: 700 }}>Helaas… wacht af wie het goed heeft.</div>}
+            {gekozen != null && gekozen === vraag.answer && <div style={{ marginTop: 8, fontSize: 13.5, color: "#86efac", fontWeight: 700 }}>{rolKamer === "gast" ? "Goed! Even kijken of jij de snelste was…" : "Goed! En sneller dan iedereen."}</div>}
           </div>
         </div>
       )}
 
       {fase === "opnieuw" && (
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 22, display: "flex", justifyContent: "center", zIndex: 3 }}>
-          <button type="button" onClick={startSom} style={HUD_KNOP}>🔁 Nog een som</button>
+          {rolKamer === "gast" ? <div style={HUD_PANEEL}>Wacht op {hostNaam || "de leider"} voor een nieuwe som…</div> : <button type="button" onClick={startSom} style={HUD_KNOP}>🔁 Nog een som</button>}
         </div>
       )}
 
       {fase === "uitslag" && winnaar && (
         <div style={{ position: "absolute", left: 0, right: 0, bottom: 22, display: "flex", flexDirection: "column", alignItems: "center", gap: 10, zIndex: 3 }}>
           <div style={{ ...HUD_PANEEL, textAlign: "center", maxWidth: 520 }}>
-            <div style={{ fontWeight: 900, fontSize: 18 }}>{winnaar.mens ? `Jij was de snelste (${(winnaar.ms / 1000).toFixed(1)} s)` : "Iemand anders was sneller…"}</div>
-            <div style={{ fontSize: 13.5, opacity: .85, marginTop: 4 }}>{winnaar.mens ? "Straks in het park: tik de bouwers één voor één af, zonder dat iemand het ziet." : "Straks in het park: doe je taken en ontmasker de bedrieger in de vergadering."}</div>
+            <div style={{ fontWeight: 900, fontSize: 18 }}>{winnaar.ik ? `Jij was de snelste (${(winnaar.ms / 1000).toFixed(1)} s)` : "Iemand anders was sneller…"}</div>
+            <div style={{ fontSize: 13.5, opacity: .85, marginTop: 4 }}>{winnaar.ik ? "Straks in het park: tik de bouwers één voor één af, zonder dat iemand het ziet." : "Straks in het park: doe je taken en ontmasker de bedrieger in de vergadering."}</div>
+            {parkFout && <div style={{ marginTop: 6, fontSize: 13, color: "#fca5a5", fontWeight: 700 }}>{parkFout}</div>}
           </div>
-          <button type="button" onClick={naarPark} style={HUD_KNOP}>🐾 Naar het park ▶</button>
+          {rolKamer === "gast"
+            ? <div style={HUD_PANEEL}>Wacht op {hostNaam || "de leider"}: die opent het park voor iedereen…</div>
+            : <button type="button" onClick={naarPark} disabled={parkBezig} style={{ ...HUD_KNOP, opacity: parkBezig ? .6 : 1 }}>{parkBezig ? "Park maken…" : "🐾 Naar het park ▶"}</button>}
         </div>
       )}
 

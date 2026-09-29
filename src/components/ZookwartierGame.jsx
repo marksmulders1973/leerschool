@@ -477,8 +477,16 @@ export default function ZookwartierGame({ onHome, userName, authUser, onPlayObli
   // als er al een uitnodiging binnen is → als gast, anders als spelleider.
   useEffect(() => {
     if (!samen || !room) return;
-    let game = false; try { game = new URLSearchParams(window.location.search).get("game") === "1"; } catch { /* */ }
+    let game = false, kamer = false, gast = false;
+    try { const q = new URLSearchParams(window.location.search); game = q.get("game") === "1"; kamer = q.get("kamer") === "1"; gast = q.get("gast") === "1"; } catch { /* */ }
     if (!game || gameModusRef.current) return;
+    // 🕵️ Uit de Bedrieger-kamer mét vrienden (29 sep 2026): de leider heeft de rollen in sessionStorage,
+    // gasten weten alleen dat ze gast zijn — allebei meteen de spelmodus in, zonder 8 s wachten.
+    if (kamer) {
+      let o = null; try { o = JSON.parse(sessionStorage.getItem("lk_bedrieger_auto") || "null"); sessionStorage.removeItem("lk_bedrieger_auto"); } catch { /* */ }
+      if (o) { setGameAuto(o); setGameHost(true); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); try { track("game_via_kamer", { host: 1, gasten: o.gasten || 0 }); } catch { /* */ } return; }
+    }
+    if (gast) { setGameHost(false); setGameInvite(null); setGameKey((k) => k + 1); setGameModus(true); try { track("game_via_kamer", { host: 0 }); } catch { /* */ } return; }
     // tot 8 s wachten op een uitnodiging (de spelleider zendt elke 3 s; de relay moet eerst verbinden) — zodra die er is: gast, anders spelleider
     const start = Date.now();
     const t = setInterval(() => {

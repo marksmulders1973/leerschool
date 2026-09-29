@@ -80,6 +80,19 @@ export function maakSpel({ spelerId, spelerNaam, avatar, nBots = 5, stations, sp
   };
 }
 
+/** 🕵️ Rollen uit de Bedrieger-kamer (29 sep 2026): per speler-id een rol; de rest bouwer. Won een bot de
+ *  loting → één willekeurige bot wordt bedrieger. Nooit nul bedriegers. Taken-totaal opnieuw uitrekenen. */
+export function zetRollen(st, rolVan = {}, botBedrieger = false) {
+  for (const s of st.spelers) s.rol = (!s.bot && rolVan[s.id]) || "bouwer";
+  const bots = st.spelers.filter((s) => s.bot);
+  if (botBedrieger && bots.length) bots[Math.floor(Math.random() * bots.length)].rol = "imposter";
+  if (!st.spelers.some((s) => s.rol === "imposter")) { const kand = bots.length ? bots : st.spelers; kand[Math.floor(Math.random() * kand.length)].rol = "imposter"; }
+  st.nImp = st.spelers.filter((s) => s.rol === "imposter").length;
+  st.takenTotaal = st.spelers.filter((s) => s.rol === "bouwer").length * TAKEN_PER_BOUWER;
+  st.takenKlaar = 0;
+  return st;
+}
+
 function meld(st, tekst) { st.log = [{ t: st.tijd, tekst }, ...st.log].slice(0, 6); }
 export function speler(st, id) { return st.spelers.find((s) => s.id === id); }
 export function ik(st) { return speler(st, st.spelerId); }
