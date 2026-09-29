@@ -45,14 +45,14 @@ const concepten = [
   {
     id: "g3-letters-klanken",
     label: "Letters en klanken",
-    vak: "begrijpend-lezen",
+    vak: "lezen",
     leerpadId: "taal-leren-lezen-g3",
     leerpadTitel: "Leren lezen",
   },
   {
     id: "g3-woordjes-zinnen-lezen",
     label: "Woordjes en zinnetjes lezen",
-    vak: "begrijpend-lezen",
+    vak: "lezen",
     leerpadId: "taal-leren-lezen-g3",
     leerpadTitel: "Leren lezen",
   },

@@ -97,11 +97,12 @@ export const CONCEPTEN = [
 ];
 
 // Volgorde per vak voor de rapportage
-export const VAK_VOLGORDE = ["rekenen", "taal", "begrijpend-lezen"];
+export const VAK_VOLGORDE = ["rekenen", "taal", "lezen", "begrijpend-lezen"]; // "lezen" = technisch lezen (groep 3)
 
 export const VAK_LABELS = {
   "rekenen": "Rekenen & Wiskunde",
   "taal": "Taal",
+  "lezen": "Lezen",
   "begrijpend-lezen": "Begrijpend Lezen",
 };
 
