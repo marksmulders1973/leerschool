@@ -4,6 +4,7 @@
 
 import { mailTaglineHtml } from "./_lib/mail-tagline.js";
 
+import { ALLE_CONCEPTEN, conceptVan, VAK_LABELS } from "../src/features/kwartiercheck/conceptMapping.js";
 const SITE = "https://leerkwartier.app";
 
 const OORDEEL_LABELS = {
@@ -13,20 +14,11 @@ const OORDEEL_LABELS = {
 };
 
 // Ook gebruikt door send-kwartiercheck-week.js (de wekelijkse vervolgreeks).
-export const CONCEPTEN = [
-  { id: "tafels",          label: "Tafels & vermenigvuldigen", vak: "Rekenen", leerpadId: "tafels-po" },
-  { id: "breuken",         label: "Breuken begrijpen",         vak: "Rekenen", leerpadId: "breuken-po" },
-  { id: "procenten",       label: "Procenten & kortingen",     vak: "Rekenen", leerpadId: "procenten-po" },
-  { id: "maten",           label: "Maten & eenheden omzetten", vak: "Rekenen", leerpadId: "maten-eenheden" },
-  { id: "verhoudingen",    label: "Verhoudingen & schaal",     vak: "Rekenen", leerpadId: "verhoudingen-po" },
-  { id: "spelling",        label: "Spelling & werkwoorden",    vak: "Taal",    leerpadId: "spelling-overige-po" },
-  { id: "woordsoorten",    label: "Woordsoorten herkennen",    vak: "Taal",    leerpadId: "woordsoorten-po" },
-  { id: "werkwoordtijden", label: "Werkwoordtijden",           vak: "Taal",    leerpadId: "werkwoord-tijden-po" },
-  { id: "woordenschat",    label: "Woordenschat & betekenis",  vak: "Taal",    leerpadId: "woordenschat-po" },
-  { id: "hoofdgedachte",   label: "Hoofdgedachte & samenvatten", vak: "Begrijpend Lezen", leerpadId: "samenvatten-hoofdgedachte-po" },
-  { id: "tekstbegrip",     label: "Informatie opzoeken",       vak: "Begrijpend Lezen", leerpadId: "begrijpend-lezen-strategie" },
-  { id: "oorzaakgevolg",   label: "Oorzaak en gevolg",         vak: "Begrijpend Lezen", leerpadId: "tekstverbanden-oorzaak-gevolg-po" },
-];
+// Onderwerpen komen uit de app zelf (29 sep 2026: Kwartiercheck per groep 3-8 — elke groep eigen
+// onderwerpen). De mail krijgt alleen ids + oordelen binnen; conceptVan() zoekt label, vak en leerpad op.
+export const CONCEPTEN = ALLE_CONCEPTEN;
+const vakLabel = (vak) => VAK_LABELS[vak] || vak;
+const conceptenIn = (scores) => Object.keys(scores || {}).map((id) => conceptVan(id)).filter(Boolean);
 
 function esc(s) {
   return String(s || "").replace(/[&<>"]/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -54,17 +46,18 @@ function bouwWeekschema(gaps) {
 
 // Gedeeld met send-kwartiercheck-week.js: zwakste onderwerpen eerst.
 export function bepaalGaps(scores) {
-  return CONCEPTEN
+  const lijst = conceptenIn(scores);
+  return lijst
     .filter((c) => (scores[c.id]?.oordeel || "nogniet") === "nogniet")
-    .concat(CONCEPTEN.filter((c) => (scores[c.id]?.oordeel || "nogniet") === "gedeeltelijk"));
+    .concat(lijst.filter((c) => (scores[c.id]?.oordeel || "nogniet") === "gedeeltelijk"));
 }
 
 function bouwMailHtml(naam, groep, scores, unsubToken) {
-  const conceptRows = CONCEPTEN.map((c) => {
+  const conceptRows = conceptenIn(scores).map((c) => {
     const o = scores[c.id]?.oordeel || "nogniet";
     const lbl = OORDEEL_LABELS[o] || OORDEEL_LABELS.nogniet;
     return `<tr>
-      <td style='padding:7px 12px;border-bottom:1px solid #1e2d44;color:#cdd5e0;font-size:13px'>${esc(c.vak)}</td>
+      <td style='padding:7px 12px;border-bottom:1px solid #1e2d44;color:#cdd5e0;font-size:13px'>${esc(vakLabel(c.vak))}</td>
       <td style='padding:7px 12px;border-bottom:1px solid #1e2d44;color:#e0e6f0;font-size:13px'>${esc(c.label)}</td>
       <td style='padding:7px 12px;border-bottom:1px solid #1e2d44;font-size:13px;font-weight:700;color:${lbl.kleur}'>${lbl.emoji} ${lbl.tekst}</td>
     </tr>`;

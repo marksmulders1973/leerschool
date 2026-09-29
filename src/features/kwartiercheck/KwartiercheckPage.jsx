@@ -1,6 +1,10 @@
 import { useState, useRef } from "react";
 import supabase from "../../supabase";
-import { CONCEPTEN, VAK_VOLGORDE, VAK_LABELS } from "./conceptMapping.js";
+import { getConceptenVoorGroep, VAK_VOLGORDE, VAK_LABELS } from "./conceptMapping.js";
+import { GROEP_SETS } from "./groepen/index.js";
+// Groep 6-8 kan met de vaste set; lagere groepen pas zodra ze een eigen set hebben (anders breuken in groep 3).
+const GROEPEN = ["3", "4", "5", "6", "7", "8"].filter((g) => GROEP_SETS[g] || ["6", "7", "8"].includes(g));
+import LuisterKnop from "../../shared/ui/LuisterKnop.jsx";
 import { getVragenVoorConcept } from "./questions.js";
 import { track } from "../../utils.js";
 import { GratisBadge } from "../../subscription/ProBadge.jsx";
@@ -162,8 +166,8 @@ function IntroScherm({ email, naam, groep, onStart }) {
           <label style={{ fontSize: 13, color: "rgba(255,255,255,0.5)", marginBottom: 4, display: "block" }}>
             Groep
           </label>
-          <div style={{ display: "flex", gap: 8 }}>
-            {["6", "7", "8"].map((g) => (
+          <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
+            {GROEPEN.map((g) => (
               <button
                 key={g}
                 type="button"
@@ -208,6 +212,9 @@ function IntroScherm({ email, naam, groep, onStart }) {
 // Scherm 2: Quiz-flow per concept
 // ═══════════════════════════════════════════════════════════════════
 function QuizScherm({ naam, groep, onDone }) {
+  // Per groep een eigen set onderwerpen (29 sep 2026); groep 3-4: alles ook te beluisteren.
+  const CONCEPTEN = getConceptenVoorGroep(groep);
+  const luister = parseInt(groep, 10) <= 4;
   const totaal = CONCEPTEN.length;
   const [conceptIdx, setConceptIdx] = useState(0);
   const [antwoordenPerConcept, setAntwoordenPerConcept] = useState({});
@@ -288,9 +295,12 @@ function QuizScherm({ naam, groep, onDone }) {
 
       {/* Vraag */}
       <div style={{ ...S.card, marginBottom: 14 }}>
-        <p style={{ margin: 0, fontSize: 16, fontWeight: 600, color: "#fff", lineHeight: 1.55 }}>
-          {vraag.vraag}
-        </p>
+        <div style={{ display: "flex", gap: 10, alignItems: "flex-start" }}>
+          <p style={{ margin: 0, fontSize: 16, fontWeight: 600, color: "#fff", lineHeight: 1.55, flex: 1 }}>
+            {vraag.vraag}
+          </p>
+          {luister && <LuisterKnop tekst={vraag.vraag} maat={40} />}
+        </div>
       </div>
 
       {/* Opties */}
@@ -321,8 +331,10 @@ function QuizScherm({ naam, groep, onDone }) {
                 textAlign: "left", fontSize: 14, fontWeight: 500,
                 background: bg, border, color,
                 padding: "12px 16px",
+                ...(luister ? { display: "flex", alignItems: "center", gap: 10 } : {}),
               }}
             >
+              {luister && <LuisterKnop tekst={String(opt)} maat={36} />}
               {opt}
             </button>
           );
@@ -431,6 +443,7 @@ function GevoelVraag({ groep, scores }) {
 // Scherm 3: Resultaten + e-mailcapture
 // ═══════════════════════════════════════════════════════════════════
 function ResultaatScherm({ naam, groep, email, scores, onHome }) {
+  const CONCEPTEN = getConceptenVoorGroep(groep);
   const [localEmail, setLocalEmail] = useState(email || "");
   const [verzonden, setVerzonden] = useState(false);
   const [bezig, setBezig] = useState(false);
@@ -615,6 +628,8 @@ export default function KwartiercheckPage({ emailVanIntro, onHome }) {
         >←</button>
         <div style={{ fontFamily: "var(--font-display, system-ui)", fontSize: 16, fontWeight: 700 }}>
           Kwartiercheck
+          {/* Mark 29 sep 2026: "in kleine letters erachter waar hij voor staat" */}
+          <span style={{ fontSize: 12, fontWeight: 500, color: "rgba(255,255,255,0.55)", marginLeft: 6 }}>· waar sta ik nu?</span>
         </div>
         <div style={{ flex: 1 }} />
         <div style={{ fontSize: 12, color: "rgba(255,255,255,0.35)" }}>Leerkwartier</div>

@@ -1,3 +1,5 @@
+import { GROEP_SETS } from "./groepen/index.js";
+
 // Concept-naar-leerpad mapping voor de Kwartiercheck.
 // Elk concept heeft een ID, label (ouder-friendly), vak, en een leerpad-deeplink.
 // Bij oordeel "gedeeltelijk" of "nog niet" → stuur naar dit pad.
@@ -102,3 +104,18 @@ export const VAK_LABELS = {
   "taal": "Taal",
   "begrijpend-lezen": "Begrijpend Lezen",
 };
+
+// ── Per groep (29 sep 2026) ─────────────────────────────────────────
+// De vaste set hierboven past bij groep 7-8; groep 3 t/m 8 kunnen een eigen set krijgen (groepen/).
+export function getConceptenVoorGroep(groep) {
+  return GROEP_SETS[String(groep)]?.concepten || CONCEPTEN;
+}
+// Alle concepten van alle groepen (voor de mail en de wekelijkse vervolgmails: die krijgen alleen ids).
+export const ALLE_CONCEPTEN = (() => {
+  const gezien = new Set(); const uit = [];
+  for (const c of [...CONCEPTEN, ...Object.values(GROEP_SETS).flatMap((s) => s.concepten || [])]) {
+    if (!gezien.has(c.id)) { gezien.add(c.id); uit.push(c); }
+  }
+  return uit;
+})();
+export function conceptVan(id) { return ALLE_CONCEPTEN.find((c) => c.id === id) || null; }

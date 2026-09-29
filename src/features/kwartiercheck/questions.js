@@ -1,3 +1,5 @@
+import { GROEP_SETS } from "./groepen/index.js";
+
 // Diagnostische vragen voor de Kwartiercheck.
 // Elke vraag heeft: concept (uit conceptMapping), niveau (1=makkelijk, 2=midden, 3=moeilijk),
 // vraag, opties (4 stuks), correct (0-based index).
@@ -460,9 +462,10 @@ export const KWARTIERCHECK_VRAGEN = [
   },
 ];
 
-// Helper: geef vragen voor een concept, gesorteerd op niveau
+// Helper: geef vragen voor een concept, gesorteerd op niveau (vaste set + de sets per groep)
+const ALLE_VRAGEN = [...KWARTIERCHECK_VRAGEN, ...Object.values(GROEP_SETS).flatMap((s) => s.vragen || [])];
 export function getVragenVoorConcept(conceptId) {
-  return KWARTIERCHECK_VRAGEN
+  return ALLE_VRAGEN
     .filter((v) => v.concept === conceptId)
     .sort((a, b) => a.niveau - b.niveau);
 }
