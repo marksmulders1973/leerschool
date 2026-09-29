@@ -144,6 +144,10 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
   const [tijd, setTijd] = useState(SOM_TIJD);
   const [gekozen, setGekozen] = useState(null);
   const [winnaar, setWinnaar] = useState(null);          // { id, naam, mens, ms }
+  // ⚙️ Menu achter het tandwiel (Mark 29 sep 2026): onderaan een code van 4 cijfers voor deze kamer.
+  // Voorlopig alleen tonen; koppelen aan meespelen (stap 4 multiplayer) komt later.
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [kamerCode] = useState(() => String(1000 + Math.floor(Math.random() * 9000)));
   const [laden, setLaden] = useState(false);
   const timers = useRef([]);
   const startMs = useRef(0);
@@ -247,9 +251,22 @@ export default function ImposterKamer({ onTerug, onNaarPark, spelerNaam = "", us
       {/* HUD */}
       <button type="button" onClick={onTerug} style={{ position: "absolute", top: 12, left: 12, zIndex: 3, background: "rgba(15,23,42,.85)", color: "#fff", border: "none", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui", cursor: "pointer" }}>← Terug</button>
       <div style={{ position: "absolute", top: 12, right: 12, zIndex: 3, background: "rgba(15,23,42,.85)", color: "#fff", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontFamily: "system-ui" }}>🕵️ Bedrieger · {1 + bots.length} spelers</div>
-      {/* ⚙️ Tandwiel rechts (Mark 29 sep 2026): plek voor instellingen; doet bewust nog niets. Echt icoon, geen emoji. */}
-      <button type="button" aria-label="Instellingen (binnenkort)" title="Instellingen — binnenkort"
-        style={{ position: "absolute", top: "50%", right: 12, transform: "translateY(-50%)", zIndex: 3, width: 48, height: 48, borderRadius: 999, border: "none", background: "rgba(15,23,42,.85)", color: "#fff", display: "flex", alignItems: "center", justifyContent: "center", cursor: "default", padding: 0 }}>
+      {/* ⚙️ Tandwiel rechts (Mark 29 sep 2026) → menu met onderaan de kamercode (4 cijfers). Echt icoon, geen emoji. */}
+      {menuOpen && (
+        <div role="dialog" aria-label="Instellingen" onPointerDown={(e) => e.stopPropagation()} onClick={(e) => e.stopPropagation()}
+          style={{ position: "absolute", top: "50%", transform: "translateY(-50%)", right: 72, maxHeight: "60vh", width: "min(260px, calc(100vw - 96px))", zIndex: 4, background: "rgba(15,23,42,.94)", color: "#fff", borderRadius: 18, padding: "16px 16px 14px", display: "flex", flexDirection: "column", fontFamily: "system-ui", boxShadow: "0 10px 30px rgba(0,0,0,.35)" }}>
+          <div style={{ fontWeight: 900, fontSize: 17 }}>Instellingen</div>
+          <div style={{ marginTop: 8, marginBottom: 18, color: "rgba(255,255,255,.55)", fontSize: 13.5, lineHeight: 1.5 }}>Hier komen straks de spelinstellingen.</div>
+          <div style={{ borderTop: "1px solid rgba(255,255,255,.15)", paddingTop: 12, textAlign: "center" }}>
+            <div style={{ fontSize: 12.5, fontWeight: 700, color: "rgba(255,255,255,.7)", letterSpacing: .5, textTransform: "uppercase" }}>Code van deze kamer</div>
+            <div style={{ fontSize: 40, fontWeight: 900, letterSpacing: 8, marginTop: 2, fontVariantNumeric: "tabular-nums" }} aria-label={`Code ${kamerCode.split("").join(" ")}`}>{kamerCode}</div>
+          </div>
+        </div>
+      )}
+      <button type="button" aria-label="Instellingen" aria-expanded={menuOpen} title="Instellingen"
+        onPointerDown={(e) => e.stopPropagation()}
+        onClick={(e) => { e.stopPropagation(); /* niet naar document: PointerLockControls luistert daar en zou de muis vangen */ setMenuOpen((o) => !o); if (!menuOpen) { try { track("bedrieger_menu_open", {}); } catch { /* */ } } }}
+        style={{ position: "absolute", top: "50%", right: 12, transform: "translateY(-50%)", zIndex: 5, width: 48, height: 48, borderRadius: 999, border: "none", background: menuOpen ? "#fff" : "rgba(15,23,42,.85)", color: menuOpen ? "#0f172a" : "#fff", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", padding: 0 }}>
         <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
           <circle cx="12" cy="12" r="3.2" />
           <path d="M19.4 15a1.7 1.7 0 0 0 .34 1.87l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.7 1.7 0 0 0-1.87-.34 1.7 1.7 0 0 0-1.03 1.56V21a2 2 0 1 1-4 0v-.09a1.7 1.7 0 0 0-1.11-1.56 1.7 1.7 0 0 0-1.87.34l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06A1.7 1.7 0 0 0 4.6 15a1.7 1.7 0 0 0-1.56-1.03H3a2 2 0 1 1 0-4h.09A1.7 1.7 0 0 0 4.6 8.9a1.7 1.7 0 0 0-.34-1.87l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06A1.7 1.7 0 0 0 9 4.6a1.7 1.7 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.7 1.7 0 0 0 1.03 1.56 1.7 1.7 0 0 0 1.87-.34l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06A1.7 1.7 0 0 0 19.4 9a1.7 1.7 0 0 0 1.56 1H21a2 2 0 1 1 0 4h-.09a1.7 1.7 0 0 0-1.51 1z" />
