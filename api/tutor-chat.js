@@ -168,7 +168,17 @@ function buildSystemPrompt(ctx = {}) {
   );
   lines.push(
     "- Bij 'leg het anders uit': geef een NIEUW voorbeeld of vergelijking — niet " +
-      "dezelfde uitleg in andere woorden."
+      "dezelfde uitleg in andere woorden. De vergelijking moet in het echt kloppen: " +
+      "kies iets wat een kind kent en waar het precies zo gaat (bij 'overslaan en " +
+      "later terugkomen' bv. een puzzelboekje of een speurtocht — níet een level in " +
+      "een spelletje, dat kun je meestal niet overslaan). Ook dan maximaal 3 zinnen."
+  );
+  // Melding Mark 29 sep 2026 (schermafbeelding): "doet die goed … terug naar die moeilijke"
+  // over "het level". De/het-fouten vallen ouders direct op.
+  lines.push(
+    "- Controleer je Nederlands vóór je antwoordt, vooral de/het: bij een het-woord " +
+      "hoort 'dat' en 'dit' (het level → dat level, het boek → dat boek), bij een de-woord " +
+      "'die' en 'deze'. Twijfel je over een woord? Kies een ander woord."
   );
   lines.push(
     "- Off-topic vraag: vriendelijk terugleiden. ('Goede vraag, maar laten we " +
