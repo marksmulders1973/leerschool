@@ -47,6 +47,7 @@
 | Voedselbank Nijmegen-Overbetuwe | NIJMEGEN2027 | ? | digitaal | 10 jul | 50 | |
 | Leergeld Maastricht en Heuvelland | HEUVELLAND2027 | ? | digitaal | 10 jul | 50 | |
 | Voedselbank Enschede-Haaksbergen | ENSCHEDE2027 | ? | digitaal | 10 jul | 50 | |
+| Arkel Christmas Village — kerstetalage (eigen actie Mark) | ARKEL2027 | 1 poster + 1 QR-bordje (gepland) | print, etalage | code klaar 29 sep; plaatsen ~14 dec | onbeperkt | Familie t/m 31-12-2028; verwacht duizenden passanten (op de lichtjesroute) |
 
 > **Deel-actie 2027** (DEELACTIE2027) = vrienden-werven, geen partner — buiten deze teller.
 

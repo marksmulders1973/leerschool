@@ -63,6 +63,7 @@ export const PARTNER_NAMEN = {
   ALMERE2027: "de nieuwe bibliotheek in Almere",
   AMSTELLAND2027: "Bibliotheek Amstelland",
   APELDOORN2027: "Leergeld Apeldoorn-Voorst",
+  ARKEL2027: "de kerstetalage in Arkel", // 29 sep 2026: eigen actie Mark, Arkel Christmas Village dec 2026 (QR-poster in etalage); geen adres/namen naar buiten
   BONAIRE2027: "de scholen en organisaties op Bonaire", // 23 sep 2026: eilandcode ronde 2
   BREDA2027: "Voedselbank Breda",
   BUURTGEZINNEN2027: "Buurtgezinnen",
