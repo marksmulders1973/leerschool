@@ -409,12 +409,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [mode, setMode] = useState(startMode);
   const [stepIdx, setStepIdx] = useState(startStep);
   const [checkIdx, setCheckIdx] = useState(0);
-  // 🎯 "Probeer eerst" (Mark 29 sep 2026, analyse zwakste schakel): het uitleg-scherm had gemiddeld
-  // 220 woorden tekst en de knop "Naar de vragen" stond ~1.500 px diep (telefoon = 844 px). Nu opent
-  // elk deel met de eerste vraag: goed → meteen door (die vraag telt), fout of "weet ik nog niet" →
-  // de uitleg verschijnt mét die vraag als kop, en de vraag komt daarna terug. Meten: leerpad_proef.
-  const [proef, setProef] = useState(null); // { stap, gekozen, uitkomst: "goed" | "fout" | "weetniet" }
-  const [uitlegOpen, setUitlegOpen] = useState(false);
+  // 🎯 Vraag eerst (Mark 29 sep 2026, "ga"): het uitleg-scherm had gemiddeld 220 woorden tekst en de
+  // knop "Naar de vragen" stond ~1.500 px diep. Nu opent een deel meteen met vraag 1; de uitleg is een
+  // knop ("Eerst de uitleg lezen" boven de vraag, "Lees de uitleg van dit deel" na een fout). Goed →
+  // meteen de volgende vraag. Niet bij nieuwkomerpaden (uitleg kort + tikbaar; expert-feedback 29 sep:
+  // eerder méér steun nodig) en niet bij examens (brontekst hoort vóór de vraag). Zie `vraagEerst`.
   const [selected, setSelected] = useState(null);
   const [attempts, setAttempts] = useState(1);
   // 2026-05-18 (12-agent-audit, A3 finding #3): micro-celebrate per correct
@@ -549,7 +548,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // mount. Verzamel volledige seen-set in state voor mastery-detectie.
   useEffect(() => {
     if (pathId) markPathSeen(pathId);
-    // Meting trechter (29 sep 2026): openen → deel begonnen → proef → naar vragen → antwoord. Er was
+    // Meting trechter (29 sep 2026): openen → deel begonnen → (uitleg) → antwoord. Er was
     // vóór deze datum géén meetpunt op het openen van een leerpad, alleen op het antwoord.
     if (pathId) { try { track("leerpad_open", { pad: pathId, start: startMode }); } catch { /* */ } }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -618,6 +617,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // Voortgangs-badge per stap voor Overview (vol = geheel beheerst).
   // 🌍 Nieuwkomerpaden (`steunTeksten`): álle teksten tikbaar in de eigen taal (Mark 24 sep).
   const steunMap = useMemo(() => (path?.steunTeksten ? maakSteunMap(UI_STEUN, path.steunTeksten) : null), [path]);
+  const vraagEerst = !steunMap && !isExamenPad;
   const wrongPerStep = useMemo(() => adaptPathWrongMap(pathId), [pathId, stepIdx, mode, attempts]);
 
   // Veel leerpaden hebben de juiste optie op index 0 staan; door per check
@@ -630,39 +630,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathId, stepIdx, checkIdx, rawCheck]);
 
-  // Proefvraag = de eerste vraag van dit deel (adaptieve volgorde). Niet bij nieuwkomerpaden (uitleg
-  // is daar al kort en tikbaar), niet bij examens (authentieke volgorde), niet als je vanuit een
-  // toetsvraag speciaal voor de uitleg komt, en niet bij een deel dat al af is.
-  const proefCheck = useMemo(() => {
-    if (!step || steunMap || isExamenPad || !checks.length) return null;
-    if (typeof initialStepIdx === "number" && initialStepIdx === stepIdx) return null;
-    if (completedSteps.has(stepIdx)) return null;
-    return shuffleOptions(checks[checkOrder[0] ?? 0]);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathId, stepIdx, step, checks.length, steunMap, isExamenPad, completedSteps]);
-  const proefActief = !!proefCheck && mode === "reading" && checkIdx === 0;
-  const proefStand = proefActief && proef && proef.stap === stepIdx ? proef.uitkomst : null;
-  const uitlegZichtbaar = !proefActief || uitlegOpen || proefStand === "fout" || proefStand === "weetniet";
-  const proefKies = (i) => {
-    if (!proefCheck || proefStand) return;
-    const goed = i === proefCheck.answer;
-    setProef({ stap: stepIdx, gekozen: i, uitkomst: goed ? "goed" : "fout" });
-    telAntwoordVoorVriend();
-    if (goed) {
-      // Telt als beantwoorde vraag; fout telt pas bij de echte poging ná de uitleg (geen dubbeltelling).
-      sessionScoreRef.current.tries += 1;
-      sessionScoreRef.current.correct += 1;
-      adaptRecordRight(pathId, stepIdx, checkOrder[0] ?? 0);
-      try { track("question_answered", { bron: "leerpad", pad: pathId, is_correct: true, proef: true }); } catch { /* */ }
-    }
-    try { track("leerpad_proef", { pad: pathId, stap: stepIdx, uitkomst: goed ? "goed" : "fout" }); } catch { /* */ }
+  // Uitleg openen vanuit een vraag: onthoud de vraag, zodat "Terug naar de vraag" hier verdergaat
+  // (en niet bij vraag 1). Meten: leerpad_uitleg_open {na: vooraf | fout | hulp | bijsturen}.
+  const naarUitleg = (na) => {
+    resumeCheckIdxRef.current = checkIdx;
+    try { track("leerpad_uitleg_open", { pad: pathId, stap: stepIdx, vraag: checkIdx, na }); } catch { /* */ }
+    setMode("reading");
   };
-  const proefWeetNiet = () => {
-    if (proefStand) return;
-    setProef({ stap: stepIdx, gekozen: null, uitkomst: "weetniet" });
-    try { track("leerpad_proef", { pad: pathId, stap: stepIdx, uitkomst: "weetniet" }); } catch { /* */ }
-  };
-  const openUitleg = (na) => { setUitlegOpen(true); try { track("leerpad_uitleg_open", { pad: pathId, stap: stepIdx, na }); } catch { /* */ } };
 
   if (!path) {
     // Onderscheid loading (pad bestaat, nog niet geladen) van niet-gevonden.
@@ -716,10 +690,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setAttempts(1);
     setShowUitlegPad(false);
     setShowTekstHerlees(false);
-    setProef(null);
-    setUitlegOpen(false);
-    setMode("reading");
-    try { track("leerpad_deel_open", { pad: pathId, stap: idx }); } catch { /* */ }
+    resumeCheckIdxRef.current = null;
+    const vragen = mcChecks(path.steps[idx]);
+    setMode(vraagEerst && vragen.length > 0 ? "checking" : "reading");
+    try { track("leerpad_deel_open", { pad: pathId, stap: idx, start: vraagEerst && vragen.length > 0 ? "vraag" : "uitleg" }); } catch { /* */ }
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
@@ -733,10 +707,8 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     // Exact hervatten (F10): eenmalig bij de bewaarde vraag verdergaan.
     const hervat = resumeCheckIdxRef.current;
     resumeCheckIdxRef.current = null;
-    // Proefvraag goed → die (eerste) vraag niet nog eens stellen.
-    const proefGoed = proef && proef.stap === stepIdx && proef.uitkomst === "goed";
-    try { track("leerpad_naar_vragen", { pad: pathId, stap: stepIdx, proef: proef && proef.stap === stepIdx ? proef.uitkomst : "geen" }); } catch { /* */ }
-    setCheckIdx(typeof hervat === "number" ? hervat : proefGoed && checks.length > 1 ? 1 : 0);
+    try { track("leerpad_naar_vragen", { pad: pathId, stap: stepIdx, terug_naar_vraag: typeof hervat === "number" ? hervat : null }); } catch { /* */ }
+    setCheckIdx(typeof hervat === "number" ? hervat : 0);
     setSelected(null);
     setAttempts(1);
   };
@@ -1296,16 +1268,6 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 
         {(mode === "reading" || mode === "stepDone") && (
           <>
-            {proefActief && (
-              <ProefKaart check={proefCheck} stand={proefStand} gekozen={proef && proef.stap === stepIdx ? proef.gekozen : null} onKies={proefKies} onWeetNiet={proefWeetNiet} />
-            )}
-            {uitlegZichtbaar ? (
-              <>
-                {proefActief && (proefStand === "fout" || proefStand === "weetniet") && (
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800, color: C.warm, margin: "16px 0 -2px" }}>
-                    📖 Dit heb je nodig voor die vraag:
-                  </div>
-                )}
                 {step.illustrationComponent
                   ? <step.illustrationComponent />
                   : <SvgFigure svg={step.svg} />}
@@ -1335,24 +1297,13 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     </div>
                   </details>
                 )}
-              </>
-            ) : (
-              <button type="button" onClick={() => openUitleg(proefStand === "goed" ? "goed" : "vooraf")}
-                style={{ background: "transparent", border: "none", color: C.muted, fontSize: 13.5, fontWeight: 700, cursor: "pointer", padding: "8px 0", textDecoration: "underline", fontFamily: "inherit" }}>
-                {proefStand === "goed" ? "📖 Lees de uitleg toch even" : "📖 Eerst de uitleg lezen"}
-              </button>
-            )}
           </>
         )}
 
-        {mode === "reading" && (!proefActief || proefStand) && (
-          proefStand === "goed" && checks.length === 1 ? (
-            <button onClick={completeStep} style={btnPrimary()}>Klaar met dit deel ✓</button>
-          ) : (
-          <SteunTekst nl={checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"} knop><button onClick={startCheck} style={btnPrimary()}>
-            {proefStand === "goed" && checks.length > 1 ? "Naar de volgende vragen ▶" : checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"}
+        {mode === "reading" && (
+          <SteunTekst nl={resumeCheckIdxRef.current !== null ? "Terug naar de vraag ▶" : checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"} knop><button onClick={startCheck} style={btnPrimary()}>
+            {resumeCheckIdxRef.current !== null ? "Terug naar de vraag ▶" : checks.length > 1 ? "Naar de vragen ▶" : checks.length === 1 ? "Naar de vraag ▶" : "Volgend deel ▶"}
           </button></SteunTekst>
-          )
         )}
         {/* Vrije navigatie tussen delen (29 sep 2026: van boven naar onder verplaatst — stond vóór de uitleg) */}
         {mode === "reading" && (
@@ -1429,6 +1380,14 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           </div>
         )}
 
+        {mode === "checking" && vraagEerst && currentCheck && attempts === 1 && (
+          <div style={{ textAlign: "right", margin: "0 0 2px" }}>
+            <button type="button" onClick={() => naarUitleg("vooraf")}
+              style={{ background: "transparent", border: "none", color: C.muted, fontSize: 13, fontWeight: 700, cursor: "pointer", padding: "6px 0", textDecoration: "underline", fontFamily: "inherit" }}>
+              📖 Eerst de uitleg lezen
+            </button>
+          </div>
+        )}
         {mode === "checking" && !step.interactiveComponent && currentCheck && (
           // key op vraag-index: bij vraagwissel remount de kaart en speelt
           // lk-q-in (korte cross-fade) — geen harde swap meer (2026-06-13).
@@ -1662,7 +1621,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                     verbergNiveaus={attempts === 1}
                     onWoordHulp={openWoordHulp}
                     onBuddy={() => setShowTutor(true)}
-                    onNaarUitleg={() => setMode("reading")}
+                    onNaarUitleg={() => naarUitleg("hulp")}
                     antwoordTekst={Array.isArray(currentCheck.options) ? currentCheck.options[currentCheck.answer] : null}
                   />
                 )}
@@ -1851,7 +1810,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                       try { track("bijsturen_ja", { pad: pathId, stap: stepIdx }); } catch { /* */ }
                       setToonBijsturen(false);
                       setUitlegSimpeler(true);
-                      setMode("reading");
+                      naarUitleg("bijsturen");
                     }}
                     style={{ ...btnPrimary() }}
                   >
@@ -1963,11 +1922,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                 onClose={() => setShowUitlegPad(false)}
                 onWoordHulp={openWoordHulp}
                 onBuddy={() => setShowTutor(true)}
-                onNaarUitleg={() => setMode("reading")}
+                onNaarUitleg={() => naarUitleg("hulp")}
               />
             )}
-            <SteunTekst nl="Lees uitleg opnieuw" knop><button onClick={() => setMode("reading")} style={{ ...btnSecondary(), marginTop: 14 }}>
-              📖 Lees uitleg opnieuw
+            <SteunTekst nl="Lees uitleg opnieuw" knop><button onClick={() => naarUitleg("fout")} style={{ ...btnSecondary(), marginTop: 14 }}>
+              {vraagEerst ? "📖 Lees de uitleg van dit deel" : "📖 Lees uitleg opnieuw"}
             </button></SteunTekst>
             <SteunTekst nl="Vraag hulp" knop><button
               onClick={() => setShowTutor(true)}
@@ -2846,44 +2805,4 @@ function optionStyle(selected, isCorrectChoice, locked) {
     opacity: locked && !selected ? 0.55 : 1,
     transition: "all 0.2s",
   };
-}
-
-// 🎯 Proefvraag bovenaan een deel (zie toelichting bij `proef`-state). Klein, zonder score-gevoel.
-function ProefKaart({ check, stand, gekozen, onKies, onWeetNiet }) {
-  if (!check) return null;
-  const klaar = !!stand;
-  return (
-    <div style={{ ...cardStyle(stand === "goed" ? C.good : stand ? C.warm : "#5b86b8"), marginTop: 10 }}>
-      <div style={{ fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 800, letterSpacing: 1.2, textTransform: "uppercase", color: stand === "goed" ? C.good : stand ? C.warm : "#8fb4e0", marginBottom: 6 }}>
-        {stand === "goed" ? "✅ Goed! Dit wist je al" : stand ? "Nog niet — lees hieronder hoe het zit" : "🎯 Probeer eerst"}
-      </div>
-      <div style={{ fontSize: 17, fontWeight: 700, lineHeight: 1.45, color: "var(--color-text-strong)", marginBottom: 10 }}>
-        <MdInline text={check.q || check.question} />
-      </div>
-      <div style={{ display: "grid", gap: 6 }}>
-        {(check.options || []).map((opt, i) => {
-          // Bij fout géén groen: het kind leest eerst de uitleg en krijgt de vraag daarna echt.
-          const goed = stand === "goed" && i === check.answer;
-          const fout = klaar && gekozen === i && i !== check.answer;
-          return (
-            <button key={i} type="button" disabled={klaar} onClick={() => onKies(i)}
-              style={{ textAlign: "left", padding: "10px 14px", borderRadius: 10, minHeight: 44, fontFamily: "var(--font-body)", fontSize: 15, color: C.text, cursor: klaar ? "default" : "pointer",
-                background: goed ? "rgba(0,200,83,0.18)" : fout ? "rgba(255,82,82,0.18)" : "rgba(255,255,255,0.04)",
-                border: `1px solid ${goed ? "rgba(0,200,83,0.55)" : fout ? "rgba(255,82,82,0.55)" : "var(--color-border)"}`,
-                opacity: klaar && !goed && !fout ? 0.6 : 1 }}>
-              <MdInline text={opt} />
-            </button>
-          );
-        })}
-      </div>
-      {!klaar && (
-        <button type="button" onClick={onWeetNiet} style={{ marginTop: 8, background: "transparent", border: "none", color: C.muted, fontSize: 13, fontWeight: 600, cursor: "pointer", padding: "6px 0", textDecoration: "underline", fontFamily: "inherit" }}>
-          Weet ik nog niet — laat de uitleg zien
-        </button>
-      )}
-      {stand === "goed" && check.explanation && (
-        <div style={{ marginTop: 8, fontSize: 13.5, color: C.muted, lineHeight: 1.5 }}><MdInline text={String(check.explanation).slice(0, 220)} /></div>
-      )}
-    </div>
-  );
 }
