@@ -37,6 +37,7 @@ const PLANS = [
       { text: "Hele toets oefenen met de klok + eindrapport" },
       { text: "Kwartierplan: diagnose → stappenplan" },
       { text: "AI-bijles onbeperkt" },
+      { text: "Nooit reclame" },
     ],
   },
   {
@@ -56,6 +57,7 @@ const PLANS = [
       { text: "School-logo op toetsen en oefenbladen" },
       { text: "Klasrapportage + export" },
       { text: "Verwerkersovereenkomst, factuur-betaling en support" },
+      { text: "Nooit reclame" },
     ],
   },
 ];

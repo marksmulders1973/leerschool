@@ -189,7 +189,7 @@ export default function PakketUitleg({ open, onClose }) {
             <span style={{ marginLeft: "auto", background: G, color: "#06211a", fontWeight: 800, fontSize: 11, letterSpacing: 0.5, borderRadius: 999, padding: "3px 10px" }}>GRATIS T/M ZEKER 2031</span>
           </div>
           <ul style={{ listStyle: "none", margin: 0, padding: 0 }}>
-            {["Oefenen met alle onderwerpen", "Uitleg op 3 niveaus: makkelijk, gewoon en uitgebreid", "Echte examens oefenen én inzien als PDF", "Printbare oefenbladen mee naar huis", "Geen account nodig, geen creditcard"].map((t) => (
+            {["Oefenen met alle onderwerpen", "Uitleg op 3 niveaus: makkelijk, gewoon en uitgebreid", "Echte examens oefenen én inzien als PDF", "Printbare oefenbladen mee naar huis", "Geen account nodig, geen creditcard", "Nooit reclame"].map((t) => (
               <li key={t} style={{ fontSize: 13.5, color: "rgba(255,255,255,0.88)", padding: "3px 0 3px 20px", position: "relative", lineHeight: 1.45 }}>
                 <span style={{ position: "absolute", left: 0, color: G }}>✓</span>{t}
               </li>
@@ -215,6 +215,7 @@ export default function PakketUitleg({ open, onClose }) {
               "Hele toets oefenen met de klok + eindrapport",
               "Persoonlijk Kwartierplan (waar staan we, wat nu?)",
               "Eén prijs voor het hele gezin",
+              "Nooit reclame",
             ]}
             kleur={LAAG_KLEUREN.familie}
           >
@@ -229,6 +230,7 @@ export default function PakketUitleg({ open, onClose }) {
               "Je eigen (school)logo op toetsen en werkbladen",
               "Onbeperkt toetsen maken en werkbladen printen",
               "Licentie op maat voor de school, met factuur en verwerkersovereenkomst",
+              "Nooit reclame",
             ]}
             kleur={LAAG_KLEUREN.leerkracht}
           />
