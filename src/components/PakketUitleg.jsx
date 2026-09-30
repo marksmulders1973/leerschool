@@ -214,7 +214,7 @@ export default function PakketUitleg({ open, onClose }) {
               "Elke week een weekrapport in je mail",
               "Hele toets oefenen met de klok + eindrapport",
               "Persoonlijk Kwartierplan (waar staan we, wat nu?)",
-              "Eén prijs voor het hele gezin",
+              "Eén prijs voor het hele gezin, tot 3 kinderen (meer? mail ons, zonder meerprijs)",
               "Nooit reclame",
             ]}
             kleur={LAAG_KLEUREN.familie}

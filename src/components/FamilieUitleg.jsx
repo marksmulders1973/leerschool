@@ -16,7 +16,7 @@ export const FAMILIE_ONDERDELEN = [
   { emoji: "📅", nl: ["Weekschema voor de koelkast", "een kwartier per dag, om af te vinken"], en: ["Fridge schedule", "fifteen minutes a day, to tick off"] },
   { emoji: "📋", nl: ["Dictee met de woorden van school", "Charley leest ze voor"], en: ["Spelling test with the school words", "Charley reads them aloud"] },
   { emoji: "🐉", nl: ["AI-bijlesdocent onbeperkt", "uitleg op jouw manier, zo vaak als je wilt"], en: ["Unlimited AI tutor", "explanations your way, as often as you like"] },
-  { emoji: "👨‍👩‍👧", nl: ["Tot 3 kinderen", "op één gezins-account, elk een eigen overzicht"], en: ["Up to 3 children", "on one family account, each with their own overview"] },
+  { emoji: "👨‍👩‍👧", nl: ["Tot 3 kinderen", "op één gezins-account, elk een eigen overzicht. Meer kinderen? Mail ons, zonder meerprijs"], en: ["Up to 3 children", "on one family account, each with their own overview. More children? Email us, no extra cost"] },
   { emoji: "🏅", nl: ["Printbaar diploma", "bij elk afgerond onderwerp"], en: ["Printable certificate", "for every finished topic"] },
 ];
 

@@ -237,7 +237,7 @@ const ROL_UITLEG = {
 // nu puur informeren + waitlist, Mark-keuze 13 aug). Eerlijk afgebakend: geen
 // kale "gratis", wel "in 2026 gratis". Bron: docs/PRIJSPLAN.md.
 const TIER_PITCH = {
-  ouder: { naam: "Familie", punten: ["weekrapport per e-mail", "examen-simulatie", "Kwartierplan per kind", "tot 3 kinderen onder één account"] },
+  ouder: { naam: "Familie", punten: ["weekrapport per e-mail", "examen-simulatie", "Kwartierplan per kind", "tot 3 kinderen onder één account (meer? mail ons, zonder meerprijs)"] },
   teacher: { naam: "de schoollicentie", punten: ["onbeperkt toetsen klaarzetten", "klasrapportage", "je eigen logo op de toetsen"] },
 };
 

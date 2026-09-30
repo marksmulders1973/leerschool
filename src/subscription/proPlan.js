@@ -39,7 +39,7 @@ export const LAGEN = {
     // betalen, stopt vanzelf — bewust GEEN automatische verlenging (merkbelofte).
     // Verlengen kiest het gezin zelf (€ 31). Seizoenspas geschrapt.
     prijs: "€ 39 voor 12 maanden — één keer betalen, stopt vanzelf · per gezín, niet per kind",
-    kort: "Volg en help al je kinderen — één prijs per gezin",
+    kort: "Volg en help je kinderen (tot 3) — één prijs per gezin",
   },
   // School-first (Mark 7 aug 2026, zie docs/PRIJSPLAN.md §3): een leerkracht
   // in loondienst koopt niet privé — de school is de koper (licentie, factuur,

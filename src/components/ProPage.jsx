@@ -31,7 +31,7 @@ const PLANS = [
       { label: "12 maanden", prijs: "€ 39", sub: "één keer betalen · 12 maanden vanaf de dag dat je betaalt · stopt vanzelf · nog een jaar erbij kies je zelf (€ 31)" },
     ],
     features: [
-      { text: "Eén prijs voor het hele gezin (max 3 kinderen) — niet per kind" },
+      { text: "Eén prijs voor het hele gezin, tot 3 kinderen — niet per kind. Meer kinderen? Mail ons, dan regelen we het zonder meerprijs." },
       { text: "Ouder-dashboard: scores en voortgang per vak" },
       { text: "Wekelijks rapport per e-mail" },
       { text: "Hele toets oefenen met de klok + eindrapport" },
