@@ -199,7 +199,10 @@ export default async function handler(req) {
         payment_method_types: ["ideal", "card"],
         allow_promotion_codes: true,
         // Factuur óók bij een eenmalige betaling (Mark-eis 28 aug 2026).
-        invoice_creation: p.mode === "payment" ? { enabled: true } : undefined,
+        invoice_creation: p.mode === "payment" ? { enabled: true, invoice_data: {
+          // KOR (Mark 30 sep 2026): geen btw; dat staat op elke factuur, met voorwaarden-link.
+          footer: "Btw vrijgesteld op grond van de kleineondernemersregeling (KOR). Leerkwartier · KvK 42176244 · Lijsterbeslaan 7, 4171 AS Herwijnen · 14 dagen bedenktijd, voorwaarden: leerkwartier.app/voorwaarden.html",
+        } } : undefined,
         metadata: { userId, plan },
         subscription_data: p.mode === "subscription" ? { metadata: { userId, plan } } : undefined,
       });
