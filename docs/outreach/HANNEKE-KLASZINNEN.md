@@ -1,6 +1,6 @@
 # Concept — antwoord aan Hanneke (WereldKidz/WEN) over de klas-zinnen
 
-> ⏸️ Niet verstuurd. Mark 30 sep: "eerst bouwen dan antwoorden … kan morgen ook"; vorm "ik heb je gehoord, er wat mee gedaan, hier is het". Reply in thread 1a0ec3e534fb319a (haar bericht 30 sep 12:54). Gebouwd in v811.
+> ✅ VERSTUURD 30 sep 2026 (reply 1a0f2b744d8ffb90, Mark "stuur maar"). Mark 30 sep: "eerst bouwen dan antwoorden … kan morgen ook"; vorm "ik heb je gehoord, er wat mee gedaan, hier is het". Reply in thread 1a0ec3e534fb319a (haar bericht 30 sep 12:54). Gebouwd in v811.
 
 Beste Hanneke,
 
