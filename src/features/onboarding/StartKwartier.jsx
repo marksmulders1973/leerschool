@@ -91,7 +91,8 @@ function uitlegVan(v) {
 export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron = "start-kwartier" }) {
   const [gekozen, setGekozen] = useState(null);
   const startRef = useRef(Date.now()); // 📈 niveaulijn: tijd per vraag
-  const taal = leesSteuntaal();
+  // alleen als het kind op /nieuwkomers écht een thuistaal koos (leesSteuntaal geeft anders standaard "en")
+  const taal = (() => { try { return localStorage.getItem("lk_steuntaal") ? leesSteuntaal() : null; } catch { return null; } })();
   const [vert, setVert] = useState(null);     // { q, options } in de thuistaal
   const [vertBezig, setVertBezig] = useState(false);
   const rtl = taal === "ar";
