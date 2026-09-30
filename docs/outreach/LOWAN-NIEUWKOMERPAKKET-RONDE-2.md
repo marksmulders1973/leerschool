@@ -311,3 +311,10 @@ Mark Smulders — leerkwartier.app
   - 123 · Wereldkidz de Hoogstraat · beavandergarde@wereldkidz.nl · OK · 01a0ec18-5802-7634-9404-e998b4892aba
   - 124 · Wereldkidz Op Dreef · mirnaroosma@wereldkidz.nl · OK · 01a0ec18-5dbf-7642-97d1-e34fd1350039
   - 125 · WereldKidz Vlieger · miekevisser@wereldkidz.nl · OK · 01a0ec18-637b-77ab-baea-3cac5395c9d6
+
+- **30-9-2026, 08:30:08** — via Resend (hallo@leerkwartier.app), 5/5 verstuurd.
+  - 126 · Wereldschool Amstelveen · g.vanderzon@ogamstelland.nl · OK · 01a0f101-7b7a-77a5-995e-337b1f7207ef
+  - 127 · Wereldschool De Vlinder · obevers@leerplein055.nl · OK · 01a0f101-8148-77ff-b23e-927f43ba130e
+  - 128 · Wereldschool Taalrijk · taalrijk@stichtingtalentis.nl · OK · 01a0f101-875f-7762-a8f8-14674a844b4e
+  - 129 · Wereldwijs · yolanda.groen@lpsnet.nl · OK · 01a0f101-8d1f-7195-936a-7c9bfcfa9bb6
+  - 130 · Wereldwijzer – Taalklassen · willemien.velsink@meerkring.nl · OK · 01a0f101-92e4-7b74-866e-dc21fa7b95bd
