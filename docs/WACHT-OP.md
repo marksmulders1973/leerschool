@@ -3,6 +3,7 @@
 *Alle open lussen: waar wachten we op een "ja", een antwoord of een levering. Dit is de single source of truth voor het prio-blok in elk dagrapport. Bijwerken bij elke mail-check: antwoord binnen → regel afvoeren + vervolgactie erbij zetten.*
 
 ## 🔴 Prio 1 — actie zodra antwoord binnenkomt
+- **WereldKidz Albatros / WEN (Hanneke, nieuwkomers-expertisecentrum)** — 30 sep update gestuurd (voorleesstand + Kijken en luisteren, vraag: werkt het / native check vertalingen). Zachte check ~14 okt als er niets komt.
 | Wat | Wacht op | Sinds | Daarna |
 |---|---|---|---|
 | **🇧🇪 België-test — VERSTUURD za 26 sep 06:35** (Mark "stuur de mail nu maar"): 7 voedselbanken, elk een eigen code (VOEDSELBANKBE/ANTWERPEN/LIMBURGBE/OOSTVLAANDEREN/WESTVLAANDEREN/BRUSSEL/KRUIDENIER + 2027, Familie t/m 2028) + 20 scholen met taalheldklas (Nieuwkomer-pakket). 27/27 OK; Windows-taak do 1 okt uitgezet. Eén aanhef met typfout: "De Droomballon)". | antwoorden (vanaf ma 28 sep) | 26 sep | antwoord → eerst tekst aan Mark; bij eerste ja/vraag → Huizen van het Kind (50) voorstellen |

@@ -72,7 +72,6 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 - ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
 
 ## 🔴 Nu doen (deze week)
-- 📨 **30 sep — Hanneke (WereldKidz/WEN, nieuwkomers-expertisecentrum)**: "laat het weten als het aangepast is" → het staat er (v792: alles voorlezen, Kijken en luisteren, Plaatjesdictee). Concept in `docs/outreach/HANNEKE-NIEUWKOMERS-UPDATE.md` — eerst zelf /nieuwkomers op je telefoon proberen, dan "stuur maar".
 - 📈 **Beslissen: niveaulijn fase 1** (plan in de chat van 29 sep / memory) → "ga fase 1".
 - ⏰ **do 24 sep — twee geplande Windows-taken** (pc moet aan of slapend zijn, anders lopen ze bij de eerste start erna): 08:30 LOWAN batch 7B (29, laatste) · 14:00 Bonaire ronde 2 (13, code BONAIRE2027). Claude checkt de logs in het dagrapport.
 - 📬 **23 sep — outreach-halfuur, vier dingen liggen klaar voor één woord van jou:**

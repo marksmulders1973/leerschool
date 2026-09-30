@@ -1,6 +1,6 @@
 # Concept — bericht aan Hanneke van Nieuwenhuyzen (WereldKidz Albatros / WEN)
 
-> ⏸️ **Niet verstuurd.** Wacht op Marks "stuur maar". Antwoord in de bestaande Gmail-thread
+> ✅ **VERSTUURD wo 30 sep 2026** (Gmail-reply 1a0f0219d7615ef3, Mark "stuur maar"). Wacht op haar reactie (werkt het / native check WEN). Antwoord in de bestaande Gmail-thread
 > (1a0ec3e534fb319a, "Re: Speciaal voor uw nieuwkomers…"). Zij schreef 29 sep 16:52:
 > "Je mag het me zeker laten weten wanneer het aangepast is."
 
