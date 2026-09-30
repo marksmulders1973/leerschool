@@ -16,3 +16,4 @@ tmp-*.mjs
 .env.vercel-check
 
 logs/
+docs/rapporten/*.pdf
