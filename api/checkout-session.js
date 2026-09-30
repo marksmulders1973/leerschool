@@ -94,6 +94,12 @@ function sb() {
       const u = await r.json();
       return u && u.email && !u.is_anonymous ? { email: u.email } : null;
     },
+    async heeftPartnerCode(userId) {
+      const r = await fetch(`${base}/rest/v1/partner_claims?user_id=eq.${encodeURIComponent(userId)}&select=code&limit=1`, { headers: h });
+      if (!r.ok) return false;
+      const rows = await r.json();
+      return Array.isArray(rows) && rows.length > 0;
+    },
     async upsertSubscription(row) {
       const r = await fetch(`${base}/rest/v1/subscriptions?on_conflict=user_id`, { method: "POST", headers: { ...h, Prefer: "resolution=merge-duplicates,return=minimal" }, body: JSON.stringify({ ...row, updated_at: new Date().toISOString() }) });
       if (!r.ok) throw new Error(`subscriptions ${r.status}: ${await r.text()}`);
@@ -167,6 +173,16 @@ export default async function handler(req) {
       const account = await db.echtAccount(userId);
       if (!account) return json(inlogMelding, 400);
       const bestaand = await db.subscriptionByUser(userId);
+      // Niet twee keer afsluiten (Mark 30 sep 2026). Heeft het gezin Familie al (betaald, >30 dagen over)
+      // of via een partnercode, dan geen nieuwe betaling. Verlengen kan vanaf 30 dagen voor het einde.
+      const tot = bestaand?.valid_until ? Date.parse(bestaand.valid_until) : 0;
+      if (bestaand?.status === "active" && tot - Date.now() > 30 * 86400e3) {
+        const d = new Date(tot).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Amsterdam" });
+        return json({ error: `Je hebt het Familie-pakket al, tot en met ${d}. Je hoeft niets te doen. Verlengen kan vanaf 30 dagen voor het einde; je krijgt dan vanzelf een mailtje.`, alActief: true }, 409);
+      }
+      if (await db.heeftPartnerCode(userId)) {
+        return json({ error: "Je hebt het Familie-pakket al, gratis via je partnercode. Je hoeft niets te betalen.", alActief: true }, 409);
+      }
       const session = await stripe("checkout/sessions", {
         mode: p.mode,
         line_items: [{ price: p.price(), quantity: 1 }],

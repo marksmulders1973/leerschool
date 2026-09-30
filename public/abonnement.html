@@ -283,10 +283,29 @@
   // niet actief is, antwoordt de server 503 met de wachtlijst-uitleg.
   (function () {
     var q = new URLSearchParams(location.search), msg = document.getElementById("koop-msg");
-    if (q.get("betaald") === "1") msg.textContent = (Date.now() < Date.parse("2027-01-01T00:00:00+01:00") && q.get("plan") !== "test1")
-      ? "✓ Gelukt! Tot 1 januari is alles gratis; je 12 maanden Familie gaan in op 1 januari 2027. De factuur staat in je mail."
-      : "✓ Gelukt! Je Familie-pakket staat aan en de factuur staat in je mail.";
-    if (q.get("betaald") === "1" || location.hash === "#familie") { var fk = document.getElementById("familie"); if (fk) setTimeout(function(){ fk.scrollIntoView({ behavior: "smooth", block: "start" }); }, 150); }
+    // 💛 Bedankt-melding na betalen (Mark 30 sep 2026): een echt "bedankt", niet alleen een regeltje.
+    if (q.get("betaald") === "1") {
+      var proef = q.get("plan") === "test1";
+      var vroeg = !proef && Date.now() < Date.parse("2027-01-01T00:00:00+01:00");
+      var duur = proef ? "Je proef-Familie staat aan: 30 dagen."
+        : vroeg ? "Tot 1 januari is alles nog gratis. Jouw 12 maanden Familie lopen daarna van 1 januari 2027 tot 1 januari 2028."
+        : "Je Familie-pakket staat aan: 12 maanden, en het stopt vanzelf.";
+      var kaart = document.createElement("div");
+      kaart.setAttribute("role", "status");
+      kaart.style.cssText = "max-width:560px;margin:18px auto;padding:22px 20px;border-radius:18px;border:2px solid #ffd54f;background:linear-gradient(135deg,rgba(255,213,79,.18),rgba(30,45,70,.85));color:#fff;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.35)";
+      kaart.innerHTML = '<div style="font-size:22px;font-weight:800;line-height:1.3;margin-bottom:8px">Bedankt dat je voor het Familie-pakket hebt gekozen!</div>'
+        + '<p style="margin:0 0 8px;font-size:15px;line-height:1.5">' + duur + '</p>'
+        + '<p style="margin:0 0 14px;font-size:14px;line-height:1.5;opacity:.85">De factuur staat in je mail. Het pakket hoort bij je account, dus het werkt op al je apparaten zodra je inlogt.</p>'
+        + '<div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap">'
+        + '<a href="/ouder" style="padding:11px 18px;border-radius:12px;background:#ffd54f;color:#0b1224;font-weight:800;text-decoration:none">Naar je ouderpagina</a>'
+        + '<a href="/mijn" style="padding:11px 18px;border-radius:12px;border:1px solid rgba(255,255,255,.35);color:#fff;font-weight:800;text-decoration:none">Naar Mijn pagina</a></div>'
+        + '<p style="margin:14px 0 0;font-size:12.5px;opacity:.7">Vragen of een wens? Mail <a href="mailto:hallo@leerkwartier.app" style="color:inherit">hallo@leerkwartier.app</a>. Mark leest elk bericht zelf.</p>';
+      var h1 = document.querySelector("h1");
+      if (h1 && h1.parentNode) h1.parentNode.insertBefore(kaart, h1.nextSibling); else document.body.insertBefore(kaart, document.body.firstElementChild);
+      setTimeout(function () { kaart.scrollIntoView({ behavior: "smooth", block: "center" }); }, 200);
+      var kb = document.getElementById("koop-blok"); if (kb) kb.style.display = "none";
+    }
+    if (q.get("betaald") !== "1" && location.hash === "#familie") { var fk = document.getElementById("familie"); if (fk) setTimeout(function(){ fk.scrollIntoView({ behavior: "smooth", block: "start" }); }, 150); }
     if (q.get("geannuleerd") === "1") msg.textContent = "Betaling afgebroken. Niets gebeurd.";
     document.querySelectorAll("button.koop").forEach(function (b) {
       b.addEventListener("click", async function () {
