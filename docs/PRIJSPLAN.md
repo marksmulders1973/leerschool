@@ -1,5 +1,8 @@
 # Prijsplan Leerkwartier — drie lagen + tegoed
 
+> ✅ **BESLUIT 30 sep 2026 (Mark): één product — Familie € 39 per gezin, 12 maanden vanaf de dag van betalen, één keer betalen, stopt vanzelf; verlengen € 31 (zelf kiezen na mail). De Seizoenspas (€ 24,95, vaste einddatum 31 juli) is GESCHRAPT.** Reden: 12 maanden vanaf afsluiten is eerlijker (geen €24,95 voor 2 maanden in mei), twee producten van 12 maanden kannibaliseren elkaar, € 39 houdt marge bij AI-kosten (Charley op Opus) en past bij partnerprijs € 34,50/kind. Lagere instap = kortingscode (kassa ondersteunt het). Alles hieronder over de Seizoenspas is historie.
+
+
 > Besloten door Mark op 2026-07-25 (vervangt "alleen per kwartier, geen
 > abonnement" van 2026-06-06). Bron-van-waarheid voor prijs-copy in de app:
 > `src/subscription/proPlan.js` (LAGEN). Richtprijzen — definitief vóór de

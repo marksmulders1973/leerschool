@@ -1262,7 +1262,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 12, lineHeight: 1.5 }}>
             Volg de voortgang van je kind, zie scores per vak en bereid de Doorstroomtoets voor.
-            Eén prijs per gezín, niet per kind — of een Seizoenspas die vanzelf stopt.
+            Eén prijs per gezín, niet per kind: € 39 voor 12 maanden, en het stopt vanzelf.
           </div>
           <button onClick={onUpgrade} style={{ padding: "10px 18px", borderRadius: 10, border: "none", background: "#ffd54f", color: "#0b1224", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
             Meer info & aanmelden →

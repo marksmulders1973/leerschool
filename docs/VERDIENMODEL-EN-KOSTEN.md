@@ -1,5 +1,8 @@
 # 💰 Verdienmodel & kosten — bron voor het dagrapport-blok
 
+> ✅ **BESLUIT 30 sep 2026 (Mark): één product — Familie € 39 per gezin, 12 maanden vanaf de dag van betalen, één keer betalen, stopt vanzelf; verlengen € 31 (zelf kiezen na mail). De Seizoenspas (€ 24,95, vaste einddatum 31 juli) is GESCHRAPT.** Reden: 12 maanden vanaf afsluiten is eerlijker (geen €24,95 voor 2 maanden in mei), twee producten van 12 maanden kannibaliseren elkaar, € 39 houdt marge bij AI-kosten (Charley op Opus) en past bij partnerprijs € 34,50/kind. Lagere instap = kortingscode (kassa ondersteunt het). Alles hieronder over de Seizoenspas is historie.
+
+
 > Aangemaakt 20 sep 2026 na de kostprijsanalyse (artifact "Kostprijs per kind":
 > https://claude.ai/code/artifact/053c4044-f777-4baf-94b6-1dc469925aed).
 > Dit bestand is de **single source of truth** voor het vaste dagrapport-blok

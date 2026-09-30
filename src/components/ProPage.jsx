@@ -19,15 +19,15 @@ const PLANS = [
     tier: "parent_pro",
     icon: "👨‍👩‍👧",
     label: "Familie",
-    price: "v.a. €24,95",
+    price: "€39",
     period: "per gezín",
     color: LAAG_KLEUREN.familie.dot,
     bg: LAAG_KLEUREN.familie.vlak,
     border: LAAG_KLEUREN.familie.rand,
     tag: "Voor thuis",
     smaken: [
-      { label: "🎟️ Seizoenspas", prijs: "€ 24,95", sub: "één keer betalen · het hele toetsjaar (t/m 31 juli 2027) · stopt vanzelf", tag: "Meest gekozen" },
-      { label: "Per jaar", prijs: "€ 39", sub: "één keer betalen · stopt vanzelf · verlengen kies je zelf (20% korting)" },
+      // Eén product (Mark 30 sep 2026): 12 maanden vanaf betalen, € 39; Seizoenspas geschrapt.
+      { label: "12 maanden", prijs: "€ 39", sub: "één keer betalen · 12 maanden vanaf de dag dat je betaalt · stopt vanzelf · nog een jaar erbij kies je zelf (€ 31)" },
     ],
     features: [
       { text: "Eén prijs voor het hele gezin (max 3 kinderen) — niet per kind" },
@@ -194,7 +194,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
         {plan && (
           <div style={{ borderRadius: 20, border: `2px solid ${plan.color}`, background: plan.bg, padding: "20px 18px", marginBottom: 20, boxShadow: `0 8px 32px ${plan.bg}` }}>
             {plan.smaken ? (
-              /* Familie: drie smaken — Seizoenspas als anker in het midden */
+              /* Familie: één product, 12 maanden € 39 */
               <div style={{ display: "flex", flexDirection: "column", gap: 8, marginBottom: 16 }}>
                 {plan.smaken.map((s, i) => (
                   <div key={i} style={{

@@ -8,7 +8,7 @@
 // Geen npm-pakket: Stripe's REST-API via fetch + handtekening-check via Web
 // Crypto, zodat dit op de edge-runtime draait zonder extra dependency.
 //
-// Plannen (docs/PRIJSPLAN.md): Familie Seizoenspas € 24,95 éénmalig (geldig
+// Plannen (docs/PRIJSPLAN.md; 30 sep 2026: Seizoenspas geschrapt → één product Familie € 39, 12 maanden). Oud: Seizoenspas € 24,95 éénmalig (geldig
 // t/m 31 juli van het toetsjaar, stopt vanzelf) en Familie € 39 per jaar.
 // School: licentie op aanvraag, via factuur. Maandplan GESCHRAPT (Mark 22 sep
 // 2026): twee smaken, allebei eenmalig — er is geen Stripe-abonnement meer.
@@ -44,7 +44,8 @@ const SITE = process.env.SITE_URL || "https://leerkwartier.app";
 const SEIZOEN_EIND = process.env.SEIZOENSPAS_EIND || "2027-07-31T21:59:59Z"; // t/m 31 juli (NL zomertijd)
 
 const PLANNEN = {
-  seizoenspas: { mode: "payment", price: () => process.env.STRIPE_PRICE_SEIZOENSPAS, tier: "parent_pro" },
+  // Seizoenspas GESCHRAPT (Mark 30 sep 2026) → oude links/knoppen krijgen gewoon Familie 12 maanden € 39.
+  seizoenspas: { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR, tier: "parent_pro", dagen: 365 },
   jaar:        { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR, tier: "parent_pro", dagen: 365 },
   // verlengen na een jaar: apart Stripe-prijsobject van € 31 (STRIPE_PRICE_JAAR_VERLENG), zelfde looptijd
   jaar_verleng: { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR_VERLENG, tier: "parent_pro", dagen: 365 },

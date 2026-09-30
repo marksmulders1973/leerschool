@@ -35,12 +35,10 @@ export const LAGEN = {
     naam: "Familie",
     icon: "👨‍👩‍👧",
     wie: "voor thuis",
-    // Drie smaken (Mark 9 aug 2026, zie docs/PRIJSPLAN.md §2b). De Seizoenspas
-    // is het anker: één keer betalen, stopt vanzelf op 31 juli — bewust GEEN
-    // automatische verlenging (merkbelofte, nooit stiekem doorlopen).
-    prijs:
-      "richtprijs: 🎟️ Seizoenspas € 24,95 éénmalig (het hele toetsjaar, stopt " +
-      "vanzelf) · of € 39 voor een jaar, ook éénmalig — per gezín, niet per kind",
+    // Eén product (Mark 30 sep 2026): € 39 voor 12 maanden vanaf betalen, één keer
+    // betalen, stopt vanzelf — bewust GEEN automatische verlenging (merkbelofte).
+    // Verlengen kiest het gezin zelf (€ 31). Seizoenspas geschrapt.
+    prijs: "€ 39 voor 12 maanden — één keer betalen, stopt vanzelf · per gezín, niet per kind",
     kort: "Volg en help al je kinderen — één prijs per gezin",
   },
   // School-first (Mark 7 aug 2026, zie docs/PRIJSPLAN.md §3): een leerkracht
@@ -93,8 +91,8 @@ export const PRO_MODEL = {
     "t/m 2031, en die belofte verlengen we telkens — ook voor " +
     "leerkrachten die met hun klas oefenen. " +
     "Vanaf 2027 zijn er twee extra's: Familie (één klein bedrag per gezín — " +
-    "voortgang volgen, weekrapport, hele toets oefenen met de klok; ook als " +
-    "Seizoenspas: één keer betalen voor het hele toetsjaar, stopt vanzelf) en voor scholen " +
+    "voortgang volgen, weekrapport, hele toets oefenen met de klok; € 39 voor " +
+    "12 maanden, één keer betalen, stopt vanzelf) en voor scholen " +
     "een schoollicentie op aanvraag (schooldashboard, eigen logo op toetsen, klasrapportage).",
 };
 
