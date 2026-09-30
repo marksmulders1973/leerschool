@@ -45,6 +45,8 @@ const PLANNEN = {
   jaar:        { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR, tier: "parent_pro", dagen: 365 },
   // verlengen na een jaar: apart Stripe-prijsobject van € 31 (STRIPE_PRICE_JAAR_VERLENG), zelfde looptijd
   jaar_verleng: { mode: "payment", price: () => process.env.STRIPE_PRICE_JAAR_VERLENG, tier: "parent_pro", dagen: 365 },
+  // 🧪 Proefbetaling €1 (Mark 30 sep 2026): alleen via een eigen Stripe-betaallink (metadata plan=test1), 30 dagen Familie.
+  test1:       { mode: "payment", price: () => process.env.STRIPE_PRICE_TEST1, tier: "parent_pro", dagen: 30 },
 };
 
 // ── Stripe REST (form-encoded) ──
@@ -127,7 +129,8 @@ export default async function handler(req) {
   // x-lk-stripe-test = env STRIPE_TEST_TOKEN. Webhooks (door Stripe ondertekend) mogen in testmodus door.
   const testSleutel = String(process.env.STRIPE_SECRET_KEY || "").startsWith("sk_test_");
   const testToken = process.env.STRIPE_TEST_TOKEN;
-  const testDeur = testSleutel && (action === "webhook" || (!!testToken && req.headers.get("x-lk-stripe-test") === testToken));
+  // Webhooks altijd door (ondertekend door Stripe, hieronder gecontroleerd) — ook live, bv. de €1-proefbetaallink.
+  const testDeur = action === "webhook" || (testSleutel && !!testToken && req.headers.get("x-lk-stripe-test") === testToken);
   if (!STRIPE_ACTIVE && !testDeur) {
     return json({
       error: "Betalen is nog niet beschikbaar. De basis blijft gratis (gegarandeerd t/m 2031); het Familie-pakket komt rond januari 2027. Schrijf je in op de wachtlijst via /abonnement.html.",
@@ -154,8 +157,10 @@ export default async function handler(req) {
         customer_email: bestaand?.stripe_customer_id ? undefined : (email || undefined),
         customer_creation: p.mode === "payment" && !bestaand?.stripe_customer_id ? "always" : undefined,
         locale: "nl",
-        // Geen payment_method_types (30 sep 2026): het account heeft Stripe "Managed Payments" aan; dan kiest
-        // Stripe zelf de betaalmethodes (iDEAL, kaart …) en weigert het deze parameter.
+        // Managed Payments UIT per betaling (30 sep 2026): anders wordt Stripe de verkoper (+3,5%, Stripe rekent
+        // zelf btw). Leerkwartier is zelf de verkoper (eenmanszaak, KOR, eigen factuur).
+        managed_payments: { enabled: false },
+        payment_method_types: ["ideal", "card"],
         allow_promotion_codes: true,
         // Factuur óók bij een eenmalige betaling (Mark-eis 28 aug 2026).
         invoice_creation: p.mode === "payment" ? { enabled: true } : undefined,
