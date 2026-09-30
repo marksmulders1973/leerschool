@@ -137,7 +137,7 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron
             style={S.optie(state)}
           >
             <MdInline text={String(opt)} />
-            {vert?.options?.[i] && <span dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ display: "block", fontSize: 13.5, fontWeight: 600, opacity: .85, marginTop: 2 }}>{vert.options[i]}</span>}
+            {vert?.options?.[i] && String(vert.options[i]).trim().toLowerCase() !== String(opt).trim().toLowerCase() && <span dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ display: "block", fontSize: 13.5, fontWeight: 600, opacity: .85, marginTop: 2 }}>{vert.options[i]}</span>}
           </button>
         );
       })}
