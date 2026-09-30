@@ -626,7 +626,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         <ul style={{ listStyle: "none", padding: "12px 16px", margin: 0, maxWidth: 300, textAlign: "left", background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.09)", borderRadius: 12, fontFamily: "var(--font-body)", fontSize: 13, lineHeight: 1.9, color: "rgba(255,255,255,0.8)" }}>
           <li>🔑 Koppel je kind met één korte code</li>
           <li>📊 Voortgang in één oogopslag</li>
-          <li>📬 Elke maandag een weekrapport per mail</li>
+          <li>📬 Elke vrijdag om 16:00 een weekrapport per mail</li>
           <li>💛 Zet oefeningen voor je kind klaar</li>
         </ul>
         <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.45)", maxWidth: 290, lineHeight: 1.6 }}>
