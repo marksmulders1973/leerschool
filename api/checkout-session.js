@@ -40,6 +40,9 @@ const STRIPE_ACTIVE = process.env.STRIPE_ACTIVE === "true";
 // 🧪 Proef-euro (Mark 30 sep 2026: "hou het even op 1 euro"): zolang deze env-var "1" is, rekent élke
 // koopknop de proefbetaling van €1 (plan test1 = 30 dagen Familie) — nooit een heel jaar voor €1.
 const PROEF_EURO = process.env.STRIPE_PROEF_EURO === "1";
+// 🐦 Vroege vogel (Mark 30 sep 2026): tot de lancering is Familie voor iedereen gratis. Wie vóór de lancering
+// afsluit, betaalt niet voor gratis maanden: de 12 maanden gaan pas in op FAMILIE_START. De €1-proef (test1) niet.
+const FAMILIE_START = Date.parse(process.env.FAMILIE_START || "2027-01-01T00:00:00+01:00");
 const SITE = process.env.SITE_URL || "https://leerkwartier.app";
 const SEIZOEN_EIND = process.env.SEIZOENSPAS_EIND || "2027-07-31T21:59:59Z"; // t/m 31 juli (NL zomertijd)
 
@@ -203,7 +206,7 @@ export default async function handler(req) {
         if (p.mode === "payment") {
           if (p.dagen) {
             const lopend = userId ? await db.subscriptionByUser(userId) : null;
-            const start = Math.max(Date.now(), lopend?.valid_until ? new Date(lopend.valid_until).getTime() : 0);
+            const start = Math.max(Date.now(), plan === "test1" ? 0 : FAMILIE_START, lopend?.valid_until ? new Date(lopend.valid_until).getTime() : 0);
             validUntil = new Date(start + p.dagen * 86400e3).toISOString();
           } else validUntil = SEIZOEN_EIND;
         }

@@ -143,6 +143,11 @@
       Eén prijs per gezín, niet per kind. Nog een jaar erbij? Dat kies je zelf,
       voor €31.
     </p>
+    <p style="margin: 6px 0; font-size: .85em; padding: 8px 10px; border-radius: 10px; background: rgba(255,213,79,.12); border: 1px solid rgba(255,213,79,.35)">
+      🐦 <strong>Vroege vogel:</strong> tot 1 januari 2027 is alles nog gratis. Sluit je nu al af,
+      dan gaan je 12 maanden pas in op <strong>1 januari 2027</strong>, zodat je hele 2027 gedekt bent.
+      Je betaalt dus nooit voor maanden die toch al gratis zijn.
+    </p>
     <ul class="lk-features">
       <li>Ouder-dashboard met voortgang van al je kinderen</li>
       <li>Weekrapport per mail</li>
@@ -276,7 +281,10 @@
   // niet actief is, antwoordt de server 503 met de wachtlijst-uitleg.
   (function () {
     var q = new URLSearchParams(location.search), msg = document.getElementById("koop-msg");
-    if (q.get("betaald") === "1") msg.textContent = "✓ Gelukt! Je Familie-pakket staat aan en de factuur staat in je mail.";
+    if (q.get("betaald") === "1") msg.textContent = (Date.now() < Date.parse("2027-01-01T00:00:00+01:00") && q.get("plan") !== "test1")
+      ? "✓ Gelukt! Tot 1 januari is alles gratis; je 12 maanden Familie gaan in op 1 januari 2027. De factuur staat in je mail."
+      : "✓ Gelukt! Je Familie-pakket staat aan en de factuur staat in je mail.";
+    if (q.get("betaald") === "1" || location.hash === "#familie") { var fk = document.getElementById("familie"); if (fk) setTimeout(function(){ fk.scrollIntoView({ behavior: "smooth", block: "start" }); }, 150); }
     if (q.get("geannuleerd") === "1") msg.textContent = "Betaling afgebroken. Niets gebeurd.";
     document.querySelectorAll("button.koop").forEach(function (b) {
       b.addEventListener("click", async function () {
