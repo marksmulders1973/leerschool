@@ -28,7 +28,7 @@ const TREDES = {
 // "Welk woord is goed geschreven?" — uit de dicteezinnen (DICTEE[NK_GROEP]). Foute opties zijn
 // bewust géén echte woorden (anders is 'pen/pan' allebei goed geschreven): de laatste twee
 // letters omgewisseld (tas → tsa, klankvolgorde) en een dubbele eindletter (tas → tass).
-const KADER = { en: "Which word is spelled correctly?", ar: "أي كلمة مكتوبة بشكل صحيح؟", uk: "Яке слово написане правильно?", tr: "Hangi kelime doğru yazılmış?" };
+const KADER = { en: "Which word is spelled correctly?", ar: "أي كلمة مكتوبة بشكل صحيح؟", uk: "Яке слово написане правильно?", tr: "Hangi kelime doğru yazılmış?", ro: "Ce cuvânt este scris corect?", bg: "Коя дума е написана правилно?" };
 function spellingOpties(w) {
   let om = w.slice(0, -2) + w[w.length - 1] + w[w.length - 2];
   if (om === "bla") om = "abl"; // 'bla' is zelf een woord(je) → eerste twee letters omdraaien
@@ -65,24 +65,24 @@ export function gehaaldeTrede() {
 }
 
 const TEST_STEUN = {
-  "Trede-testje": { en: "Step test", ar: "اختبار الدرجة", uk: "Тест сходинки", tr: "Basamak testi" },
-  "Geen hulp, één keer kiezen. Doe je best!": { en: "No help, choose once. Do your best!", ar: "بدون مساعدة، اختر مرة واحدة. ابذل جهدك!", uk: "Без підказок, обирай один раз. Старайся!", tr: "Yardım yok, bir kez seç. Elinden geleni yap!" },
-  "Goed": { en: "Correct", ar: "صحيح", uk: "Правильно", tr: "Doğru" },
-  "Niet goed": { en: "Not correct", ar: "غير صحيح", uk: "Неправильно", tr: "Doğru değil" },
-  "Volgende": { en: "Next", ar: "التالي", uk: "Далі", tr: "Sonraki" },
-  "Gehaald! Trede 1 is klaar.": { en: "Passed! Step 1 is done.", ar: "نجحت! الدرجة 1 انتهت.", uk: "Склав! Сходинка 1 пройдена.", tr: "Geçtin! 1. basamak bitti." },
-  "Gehaald! Trede 2 is klaar.": { en: "Passed! Step 2 is done.", ar: "نجحت! الدرجة 2 انتهت.", uk: "Склав! Сходинка 2 пройдена.", tr: "Geçtin! 2. basamak bitti." },
-  "Bijna! Oefen nog even en probeer het over een paar dagen opnieuw.": { en: "Almost! Practise a bit more and try again in a few days.", ar: "تقريبًا! تدرّب قليلًا وحاول مرة أخرى بعد بضعة أيام.", uk: "Майже! Потренуйся ще трохи й спробуй знову через кілька днів.", tr: "Neredeyse! Biraz daha çalış ve birkaç gün sonra tekrar dene." },
-  "De vragen die je miste, komen morgen terug bij herhalen.": { en: "The questions you missed come back tomorrow in practice again.", ar: "الأسئلة التي أخطأت فيها تعود غدًا في المراجعة.", uk: "Запитання, які ти пропустив, повернуться завтра в повторенні.", tr: "Kaçırdığın sorular yarın tekrarda geri gelir." },
-  "Print je diploma": { en: "Print your certificate", ar: "اطبع شهادتك", uk: "Надрукуй свій диплом", tr: "Diplomanı yazdır" },
-  "Terug": { en: "Back", ar: "رجوع", uk: "Назад", tr: "Geri" },
-  "Instap-testje": { en: "Starting test", ar: "اختبار البداية", uk: "Вступний тест", tr: "Başlangıç testi" },
-  "Dit is geen toets. Zo weet je waar je begint.": { en: "This is not an exam. This way you know where to start.", ar: "هذا ليس امتحانًا. هكذا تعرف من أين تبدأ.", uk: "Це не контрольна. Так ти знаєш, з чого почати.", tr: "Bu bir sınav değil. Böylece nereden başlayacağını bilirsin." },
-  "Jij begint bij:": { en: "You start at:", ar: "تبدأ من:", uk: "Ти починаєш із:", tr: "Buradan başlıyorsun:" },
-  "Trede 1 · Welkom": { en: "Step 1 · Welcome", ar: "الدرجة 1 · أهلًا", uk: "Сходинка 1 · Ласкаво просимо", tr: "1. basamak · Hoş geldin" },
-  "Trede 2 · Letters en woorden": { en: "Step 2 · Letters and words", ar: "الدرجة 2 · الحروف والكلمات", uk: "Сходинка 2 · Літери й слова", tr: "2. basamak · Harfler ve kelimeler" },
-  "Verder oefenen": { en: "Keep practising", ar: "تابع التدريب", uk: "Тренуйся далі", tr: "Çalışmaya devam" },
-  "Deze plek is groen gemaakt op de pagina.": { en: "This place is now marked green on the page.", ar: "هذا المكان أصبح باللون الأخضر في الصفحة.", uk: "Це місце тепер позначене зеленим на сторінці.", tr: "Bu yer sayfada yeşil işaretlendi." },
+  "Trede-testje": { en: "Step test", ar: "اختبار الدرجة", uk: "Тест сходинки", tr: "Basamak testi", ro: "Testul treptei", bg: "Тест за стъпалото" },
+  "Geen hulp, één keer kiezen. Doe je best!": { en: "No help, choose once. Do your best!", ar: "بدون مساعدة، اختر مرة واحدة. ابذل جهدك!", uk: "Без підказок, обирай один раз. Старайся!", tr: "Yardım yok, bir kez seç. Elinden geleni yap!", ro: "Fără ajutor, alegi o singură dată. Dă tot ce poți!", bg: "Без помощ, избираш само веднъж. Постарай се!" },
+  "Goed": { en: "Correct", ar: "صحيح", uk: "Правильно", tr: "Doğru", ro: "Corect", bg: "Правилно" },
+  "Niet goed": { en: "Not correct", ar: "غير صحيح", uk: "Неправильно", tr: "Doğru değil", ro: "Greșit", bg: "Грешно" },
+  "Volgende": { en: "Next", ar: "التالي", uk: "Далі", tr: "Sonraki", ro: "Următoarea", bg: "Напред" },
+  "Gehaald! Trede 1 is klaar.": { en: "Passed! Step 1 is done.", ar: "نجحت! الدرجة 1 انتهت.", uk: "Склав! Сходинка 1 пройдена.", tr: "Geçtin! 1. basamak bitti.", ro: "Ai reușit! Treapta 1 e gata.", bg: "Успя! Стъпало 1 е готово." },
+  "Gehaald! Trede 2 is klaar.": { en: "Passed! Step 2 is done.", ar: "نجحت! الدرجة 2 انتهت.", uk: "Склав! Сходинка 2 пройдена.", tr: "Geçtin! 2. basamak bitti.", ro: "Ai reușit! Treapta 2 e gata.", bg: "Успя! Стъпало 2 е готово." },
+  "Bijna! Oefen nog even en probeer het over een paar dagen opnieuw.": { en: "Almost! Practise a bit more and try again in a few days.", ar: "تقريبًا! تدرّب قليلًا وحاول مرة أخرى بعد بضعة أيام.", uk: "Майже! Потренуйся ще трохи й спробуй знову через кілька днів.", tr: "Neredeyse! Biraz daha çalış ve birkaç gün sonra tekrar dene.", ro: "Aproape! Mai exersează puțin și încearcă din nou peste câteva zile.", bg: "Почти! Поупражнявай се още малко и опитай пак след няколко дни." },
+  "De vragen die je miste, komen morgen terug bij herhalen.": { en: "The questions you missed come back tomorrow in practice again.", ar: "الأسئلة التي أخطأت فيها تعود غدًا في المراجعة.", uk: "Запитання, які ти пропустив, повернуться завтра в повторенні.", tr: "Kaçırdığın sorular yarın tekrarda geri gelir.", ro: "Întrebările greșite revin mâine la repetare.", bg: "Въпросите, които сбърка, се връщат утре при повторението." },
+  "Print je diploma": { en: "Print your certificate", ar: "اطبع شهادتك", uk: "Надрукуй свій диплом", tr: "Diplomanı yazdır", ro: "Printează-ți diploma", bg: "Разпечатай дипломата си" },
+  "Terug": { en: "Back", ar: "رجوع", uk: "Назад", tr: "Geri", ro: "Înapoi", bg: "Назад" },
+  "Instap-testje": { en: "Starting test", ar: "اختبار البداية", uk: "Вступний тест", tr: "Başlangıç testi", ro: "Testul de început", bg: "Начален тест" },
+  "Dit is geen toets. Zo weet je waar je begint.": { en: "This is not an exam. This way you know where to start.", ar: "هذا ليس امتحانًا. هكذا تعرف من أين تبدأ.", uk: "Це не контрольна. Так ти знаєш, з чого почати.", tr: "Bu bir sınav değil. Böylece nereden başlayacağını bilirsin.", ro: "Nu e un test cu notă. Așa știi de unde să începi.", bg: "Това не е изпит. Така знаеш откъде да започнеш." },
+  "Jij begint bij:": { en: "You start at:", ar: "تبدأ من:", uk: "Ти починаєш із:", tr: "Buradan başlıyorsun:", ro: "Tu începi la:", bg: "Започваш от:" },
+  "Trede 1 · Welkom": { en: "Step 1 · Welcome", ar: "الدرجة 1 · أهلًا", uk: "Сходинка 1 · Ласкаво просимо", tr: "1. basamak · Hoş geldin", ro: "Treapta 1 · Bun venit", bg: "Стъпало 1 · Добре дошъл" },
+  "Trede 2 · Letters en woorden": { en: "Step 2 · Letters and words", ar: "الدرجة 2 · الحروف والكلمات", uk: "Сходинка 2 · Літери й слова", tr: "2. basamak · Harfler ve kelimeler", ro: "Treapta 2 · Litere și cuvinte", bg: "Стъпало 2 · Букви и думи" },
+  "Verder oefenen": { en: "Keep practising", ar: "تابع التدريب", uk: "Тренуйся далі", tr: "Çalışmaya devam", ro: "Exersează mai departe", bg: "Продължавай да се упражняваш" },
+  "Deze plek is groen gemaakt op de pagina.": { en: "This place is now marked green on the page.", ar: "هذا المكان أصبح باللون الأخضر في الصفحة.", uk: "Це місце тепер позначене зеленим на сторінці.", tr: "Bu yer sayfada yeşil işaretlendi.", ro: "Locul acesta e acum verde pe pagină.", bg: "Това място вече е зелено на страницата." },
 };
 
 // 🔊 Wat de stem zegt (29 sep 2026, voor kinderen die nog niet lezen): "8 − 3 = ?" → "8 min 3 is

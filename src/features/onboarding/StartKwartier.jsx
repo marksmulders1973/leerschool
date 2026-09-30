@@ -16,7 +16,7 @@ import { leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
 // overstappen misten een vertaalknop. De vragen komen uit honderden paden zonder vaste vertaling, dus
 // Charley vertaalt vraag + antwoorden ter plekke (klein model, alleen JSON terug); per vraag één keer,
 // daarna uit sessionStorage.
-const VERTAAL_TAAL = { en: "English", ar: "العربية", uk: "Українська", tr: "Türkçe" };
+const VERTAAL_TAAL = { en: "English", ar: "العربية", uk: "Українська", tr: "Türkçe", ro: "Română", bg: "Български" };
 async function vertaalVraag(vraag, taal) {
   const sleutel = "lk_vert:" + taal + ":" + String(vraag.q).slice(0, 80) + "|" + (vraag.options || []).join("|").slice(0, 120);
   try { const c = sessionStorage.getItem(sleutel); if (c) return JSON.parse(c); } catch { /* */ }

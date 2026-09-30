@@ -2725,7 +2725,7 @@ function AllDone({ path, onHome, onBackToOverview, score, nextPath, onPickPath, 
 function NextStepCard({ eyebrow, title, hint, accent, primary = false, onClick, steunTitel, luister = null }) {
   // 🌍 Nieuwkomerpaden: taalknopje naast de kaart met eyebrow — titel — hint vertaald.
   const se = useSteun(eyebrow), st = useSteun(steunTitel ?? title), sh = useSteun(hint);
-  const combi = st || sh ? Object.fromEntries(["en", "ar", "uk", "tr"].map((k) => [k, [se?.[k], st?.[k], sh?.[k]].filter(Boolean).join(" — ")])) : null;
+  const combi = st || sh ? Object.fromEntries(["en", "ar", "uk", "tr", "ro", "bg"].map((k) => [k, [se?.[k], st?.[k], sh?.[k]].filter(Boolean).join(" — ")])) : null;
   const kaart = (
     <button
       onClick={onClick}

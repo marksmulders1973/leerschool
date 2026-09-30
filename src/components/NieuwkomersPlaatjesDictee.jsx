@@ -20,7 +20,7 @@ const ABC = "abdefgijklmnoprstuvwz";
 // Alleen gewone kleine letters (geen "T-shirt": hoofdletter en streepje zijn met tegels onhandig).
 const splits = (woord) => { const m = String(woord).match(/^(de|het)\s+([a-z]+)$/); return m ? { lidwoord: m[1], kaal: m[2] } : null; };
 
-// Vertalingen: vaste lijst per plaatjeswoord (nieuwkomersVertalingen.js: "de appel" → { en, ar, uk, tr }).
+// Vertalingen: vaste lijst per plaatjeswoord (nieuwkomersVertalingen.js: "de appel" → { en, ar, uk, tr, ro, bg }).
 // Ontbreekt een woord of taal, dan is er geen eigen-taal-stand voor dat woord.
 
 const KOP = {
@@ -29,6 +29,8 @@ const KOP = {
   ar: { nl: "الهولندية", eigen: "لغتي", typen: "اكتب بنفسك", tegels: "حروف", welk: "de أو het؟", nogEens: "مرة أخرى", klaar: "انتهيت!", check: "تمّ" },
   uk: { nl: "Нідерландська", eigen: "Моя мова", typen: "Набрати самому", tegels: "Літери", welk: "de чи het?", nogEens: "Ще раз", klaar: "Готово!", check: "Готово" },
   tr: { nl: "Hollandaca", eigen: "Benim dilim", typen: "Kendin yaz", tegels: "Harfler", welk: "de mi het mi?", nogEens: "Bir daha", klaar: "Bitti!", check: "Tamam" },
+  ro: { nl: "Olandeză", eigen: "Limba mea", typen: "Scrie singur", tegels: "Litere", welk: "de sau het?", nogEens: "Încă o dată", klaar: "Gata!", check: "Gata" },
+  bg: { nl: "Нидерландски", eigen: "Моят език", typen: "Напиши сам", tegels: "Букви", welk: "de или het?", nogEens: "Още веднъж", klaar: "Готово!", check: "Готово" },
 };
 
 const S = {

@@ -1,6 +1,6 @@
 // Leerpad: In de klas — Nederlands voor de eerste weken (nieuwkomers).
 // Gebouwd 24 sep 2026 voor het Nieuwkomer-pakket. 20 vragen in 4 delen.
-// Elke vraag heeft `steun`: dezelfde situatie in vier steuntalen (en/ar/uk/tr),
+// Elke vraag heeft `steun`: dezelfde situatie in zes steuntalen (en/ar/uk/tr/ro/bg),
 // zodat het kind snapt wát er gevraagd wordt; de antwoorden blijven Nederlands.
 // Korte zinnen, geen uitdrukkingen, elke stap begint met uitleg in drie stappen.
 
@@ -19,7 +19,7 @@ const v = (q, options, answer, hint, steun, extra = {}) => ({ q, options, answer
 
 const deel1 = [
   v("Je moet naar de wc. Wat zeg je?", ["Mag ik naar de wc?", "Ik ben klaar.", "Waar is mijn jas?", "Ik heb honger."], 0, "Je wilt naar de wc. Vraag het.",
-    { en: "You need the toilet. What do you say?", ar: "تحتاج إلى الحمّام. ماذا تقول؟", uk: "Тобі треба в туалет. Що ти скажеш?", tr: "Tuvalete gitmen gerekiyor. Ne dersin?" },
+    { en: "You need the toilet. What do you say?", ar: "تحتاج إلى الحمّام. ماذا تقول؟", uk: "Тобі треба в туалет. Що ти скажеш?", tr: "Tuvalete gitmen gerekiyor. Ne dersin?", ro: "Trebuie să mergi la toaletă. Ce spui?", bg: "Трябва да отидеш до тоалетната. Какво казваш?" },
     { uitlegPad: {
       stappen: [
         { titel: "Vragen mag altijd", tekst: "Op school mag je altijd iets **vragen**. Je begint met: **Mag ik…?**" },
@@ -33,18 +33,18 @@ const deel1 = [
       niveaus: { basis: "Zeg: Mag ik naar de wc?", simpeler: "Begin met 'Mag ik'. Dan wat je wilt.", nogSimpeler: "Mag ik naar de wc?" },
     } }),
   v("Je snapt de uitleg niet. Wat zeg je?", ["Ik snap het niet.", "Dank je wel.", "Tot morgen!", "Ik ben er."], 0, "Je begrijpt het niet. Zeg dat eerlijk.",
-    { en: "You don't understand the explanation. What do you say?", ar: "لم تفهم الشرح. ماذا تقول؟", uk: "Ти не зрозумів пояснення. Що ти скажеш?", tr: "Açıklamayı anlamadın. Ne dersin?" }),
+    { en: "You don't understand the explanation. What do you say?", ar: "لم تفهم الشرح. ماذا تقول؟", uk: "Ти не зрозумів пояснення. Що ти скажеш?", tr: "Açıklamayı anlamadın. Ne dersin?", ro: "Nu înțelegi explicația. Ce spui?", bg: "Не разбираш обяснението. Какво казваш?" }),
   v("De juf praat te snel. Wat vraag je?", ["Kunt u het nog een keer zeggen?", "Mag ik naar buiten?", "Waar is de bal?", "Ik ga naar huis."], 0, "Je wilt het nog een keer horen.",
-    { en: "The teacher speaks too fast. What do you ask?", ar: "المعلّمة تتكلّم بسرعة. ماذا تسأل؟", uk: "Учителька говорить надто швидко. Що ти запитаєш?", tr: "Öğretmen çok hızlı konuşuyor. Ne sorarsın?" }),
+    { en: "The teacher speaks too fast. What do you ask?", ar: "المعلّمة تتكلّم بسرعة. ماذا تسأل؟", uk: "Учителька говорить надто швидко. Що ти запитаєш?", tr: "Öğretmen çok hızlı konuşuyor. Ne sorarsın?", ro: "Învățătoarea vorbește prea repede. Ce întrebi?", bg: "Учителката говори много бързо. Какво питаш?" }),
   v("Je weet een woord niet. Wat vraag je?", ["Wat betekent dit woord?", "Hoe laat is het?", "Mag ik spelen?", "Is het pauze?"], 0, "Je wilt weten wat het woord betekent.",
-    { en: "You don't know a word. What do you ask?", ar: "لا تعرف كلمة. ماذا تسأل؟", uk: "Ти не знаєш слово. Що ти запитаєш?", tr: "Bir kelimeyi bilmiyorsun. Ne sorarsın?" }),
+    { en: "You don't know a word. What do you ask?", ar: "لا تعرف كلمة. ماذا تسأل؟", uk: "Ти не знаєш слово. Що ти запитаєш?", tr: "Bir kelimeyi bilmiyorsun. Ne sorarsın?", ro: "Nu știi un cuvânt. Ce întrebi?", bg: "Не знаеш една дума. Какво питаш?" }),
   v("Je bent klaar met je werk. Wat zeg je?", ["Ik ben klaar.", "Ik snap het niet.", "Mag ik naar de wc?", "Waar woon je?"], 0, "Je werk is af.",
-    { en: "You finished your work. What do you say?", ar: "أنهيت عملك. ماذا تقول؟", uk: "Ти закінчив роботу. Що ти скажеш?", tr: "İşini bitirdin. Ne dersin?" }),
+    { en: "You finished your work. What do you say?", ar: "أنهيت عملك. ماذا تقول؟", uk: "Ти закінчив роботу. Що ти скажеш?", tr: "İşini bitirdin. Ne dersin?", ro: "Ai terminat lucrul. Ce spui?", bg: "Свърши си работата. Какво казваш?" }),
 ];
 
 const deel2 = [
   v("Het is tijd voor gym. Waar ga je heen?", ["Naar de gymzaal.", "Naar de wc.", "Naar huis.", "Naar de winkel."], 0, "Gym doe je in de gymzaal.",
-    { en: "It is time for PE (gym). Where do you go?", ar: "حان وقت الرياضة. إلى أين تذهب؟", uk: "Час фізкультури. Куди ти йдеш?", tr: "Beden eğitimi zamanı. Nereye gidersin?" },
+    { en: "It is time for PE (gym). Where do you go?", ar: "حان وقت الرياضة. إلى أين تذهب؟", uk: "Час фізкультури. Куди ти йдеш?", tr: "Beden eğitimi zamanı. Nereye gidersin?", ro: "E ora de sport. Unde te duci?", bg: "Време е за физическо. Къде отиваш?" },
     { uitlegPad: {
       stappen: [
         { titel: "Plekken op school", tekst: "De **klas** is waar je leert. De **gymzaal** is waar je sport. Het **plein** is buiten." },
@@ -58,19 +58,19 @@ const deel2 = [
       niveaus: { basis: "Gym is in de gymzaal.", simpeler: "Sport op school = gymzaal.", nogSimpeler: "Gymzaal." },
     } }),
   v("De bel gaat. Wat betekent dat?", ["De pauze begint of is klaar.", "Je moet naar huis.", "Er is brand.", "Je krijgt eten."], 0, "De bel zegt: nu begint of eindigt iets.",
-    { en: "The bell rings. What does that mean?", ar: "يرنّ الجرس. ماذا يعني ذلك؟", uk: "Дзвонить дзвінок. Що це означає?", tr: "Zil çalıyor. Bu ne anlama gelir?" }),
+    { en: "The bell rings. What does that mean?", ar: "يرنّ الجرس. ماذا يعني ذلك؟", uk: "Дзвонить дзвінок. Що це означає?", tr: "Zil çalıyor. Bu ne anlama gelir?", ro: "Sună clopoțelul. Ce înseamnă asta?", bg: "Звънецът бие. Какво означава това?" }),
   // Kliktest 26 sep 2026: "deur" en "stoel" konden ook kloppen → raam en bord.
   v("Je jas hangt aan de…", ["kapstok", "tafel", "raam", "bord"], 0, "Jassen hangen aan een haak.",
-    { en: "Your coat hangs on the…", ar: "معطفك معلّق على…", uk: "Твоя куртка висить на…", tr: "Montun … asılı." }),
+    { en: "Your coat hangs on the…", ar: "معطفك معلّق على…", uk: "Твоя куртка висить на…", tr: "Montun … asılı.", ro: "Geaca ta atârnă pe…", bg: "Якето ти виси на…" }),
   v("Het is pauze. Waar speel je?", ["Op het plein.", "In de gymzaal.", "Op de wc.", "In de auto."], 0, "In de pauze ga je naar buiten.",
-    { en: "It is break time. Where do you play?", ar: "حان وقت الاستراحة. أين تلعب؟", uk: "Перерва. Де ти граєшся?", tr: "Teneffüs zamanı. Nerede oynarsın?" }),
+    { en: "It is break time. Where do you play?", ar: "حان وقت الاستراحة. أين تلعب؟", uk: "Перерва. Де ти граєшся?", tr: "Teneffüs zamanı. Nerede oynarsın?", ro: "E pauză. Unde te joci?", bg: "Междучасие е. Къде играеш?" }),
   v("Je hebt je boek vergeten. Wat zeg je?", ["Ik ben mijn boek vergeten.", "Ik heb een hond.", "Het is mooi weer.", "Ik ben acht jaar."], 0, "Zeg wat je vergeten bent.",
-    { en: "You forgot your book. What do you say?", ar: "نسيت كتابك. ماذا تقول؟", uk: "Ти забув книжку. Що ти скажеш?", tr: "Kitabını unuttun. Ne dersin?" }),
+    { en: "You forgot your book. What do you say?", ar: "نسيت كتابك. ماذا تقول؟", uk: "Ти забув книжку. Що ти скажеш?", tr: "Kitabını unuttun. Ne dersin?", ro: "Ți-ai uitat cartea. Ce spui?", bg: "Забравил си книгата си. Какво казваш?" }),
 ];
 
 const deel3 = [
   v("Een kind vraagt: 'Hoe heet je?' Wat zeg je?", ["Ik heet … (je naam).", "Dank je wel.", "Tot ziens.", "Ik snap het niet."], 0, "Zeg je naam.",
-    { en: "A child says: 'What is your name?' What do you say?", ar: "يقول طفل: 'ما اسمك؟' ماذا تقول؟", uk: "Дитина каже: «Як тебе звати?» Що ти скажеш?", tr: "Bir çocuk 'Adın ne?' diyor. Ne dersin?" },
+    { en: "A child says: 'What is your name?' What do you say?", ar: "يقول طفل: 'ما اسمك؟' ماذا تقول؟", uk: "Дитина каже: «Як тебе звати?» Що ти скажеш?", tr: "Bir çocuk 'Adın ne?' diyor. Ne dersin?", ro: "Un copil spune: „Cum te cheamă?” Ce spui?", bg: "Едно дете казва: „Как се казваш?“ Какво казваш?" },
     { uitlegPad: {
       stappen: [
         { titel: "Jezelf voorstellen", tekst: "**Hoe heet je?** = wat is je naam. Je zegt: **Ik heet …** en dan je naam." },
@@ -84,38 +84,38 @@ const deel3 = [
       niveaus: { basis: "Zeg: Ik heet … en je naam.", simpeler: "Ik heet Sam.", nogSimpeler: "Ik heet …" },
     } }),
   v("Je wilt meespelen. Wat vraag je?", ["Mag ik meedoen?", "Ik ben klaar.", "Waar is de juf?", "Het is koud."], 0, "Vraag of je mee mag doen.",
-    { en: "You want to join the game. What do you ask?", ar: "تريد أن تلعب معهم. ماذا تسأل؟", uk: "Ти хочеш приєднатися до гри. Що ти запитаєш?", tr: "Oyuna katılmak istiyorsun. Ne sorarsın?" }),
+    { en: "You want to join the game. What do you ask?", ar: "تريد أن تلعب معهم. ماذا تسأل؟", uk: "Ти хочеш приєднатися до гри. Що ти запитаєш?", tr: "Oyuna katılmak istiyorsun. Ne sorarsın?", ro: "Vrei să te joci și tu. Ce întrebi?", bg: "Искаш да играеш с тях. Какво питаш?" }),
   v("Iemand helpt je. Wat zeg je?", ["Dank je wel.", "Ik heet Ali.", "Mag ik naar de wc?", "Nee."], 0, "Je bedankt iemand.",
-    { en: "Someone helps you. What do you say?", ar: "شخص يساعدك. ماذا تقول؟", uk: "Хтось тобі допомагає. Що ти скажеш?", tr: "Biri sana yardım ediyor. Ne dersin?" }),
+    { en: "Someone helps you. What do you say?", ar: "شخص يساعدك. ماذا تقول؟", uk: "Хтось тобі допомагає. Що ти скажеш?", tr: "Biri sana yardım ediyor. Ne dersin?", ro: "Cineva te ajută. Ce spui?", bg: "Някой ти помага. Какво казваш?" }),
   v("Je wilt iets niet. Wat mag je zeggen?", ["Nee, dat wil ik niet.", "Ja, goed.", "Dank je wel.", "Tot morgen."], 0, "Je mag altijd nee zeggen.",
-    { en: "You don't want something. What may you say?", ar: "لا تريد شيئًا. ماذا يمكنك أن تقول؟", uk: "Ти чогось не хочеш. Що ти можеш сказати?", tr: "Bir şeyi istemiyorsun. Ne diyebilirsin?" }),
+    { en: "You don't want something. What may you say?", ar: "لا تريد شيئًا. ماذا يمكنك أن تقول؟", uk: "Ти чогось не хочеш. Що ти можеш сказати?", tr: "Bir şeyi istemiyorsun. Ne diyebilirsin?", ro: "Nu vrei ceva. Ce poți să spui?", bg: "Не искаш нещо. Какво може да кажеш?" }),
   v("De school is uit. Wat zeg je tegen de juf?", ["Tot morgen!", "Goedemorgen!", "Mag ik meedoen?", "Ik snap het niet."], 0, "Aan het eind van de dag zeg je dag.",
-    { en: "School is over. What do you say to the teacher?", ar: "انتهت المدرسة. ماذا تقول للمعلّمة؟", uk: "Уроки закінчилися. Що ти скажеш учительці?", tr: "Okul bitti. Öğretmene ne dersin?" }),
+    { en: "School is over. What do you say to the teacher?", ar: "انتهت المدرسة. ماذا تقول للمعلّمة؟", uk: "Уроки закінчилися. Що ти скажеш учительці?", tr: "Okul bitti. Öğretmene ne dersin?", ro: "S-a terminat școala. Ce îi spui învățătoarei?", bg: "Училището свърши. Какво казваш на учителката?" }),
 ];
 
 // 🌍 Steun-tik (Mark 24 sep 2026): ook elk ANTWOORD is tikbaar → eigen taal.
-// Volgorde = deel1 + deel2 + deel3 (15 vragen × 4 opties × 4 talen).
+// Volgorde = deel1 + deel2 + deel3 (15 vragen × 4 opties × 6 talen).
 const OPTIES_STEUN = [
-  {"en": ["May I go to the toilet?", "I am done.", "Where is my coat?", "I am hungry."], "ar": ["هل يمكنني الذهاب إلى الحمّام؟", "لقد انتهيت.", "أين معطفي؟", "أنا جائع."], "uk": ["Можна мені в туалет?", "Я закінчив.", "Де моя куртка?", "Я хочу їсти."], "tr": ["Tuvalete gidebilir miyim?", "Bitirdim.", "Montum nerede?", "Açım."]},
-  {"en": ["I don't understand.", "Thank you.", "See you tomorrow!", "I am here."], "ar": ["لا أفهم.", "شكرًا.", "إلى الغد!", "أنا هنا."], "uk": ["Я не розумію.", "Дякую.", "До завтра!", "Я тут."], "tr": ["Anlamıyorum.", "Teşekkür ederim.", "Yarın görüşürüz!", "Buradayım."]},
-  {"en": ["Can you say it again?", "May I go outside?", "Where is the ball?", "I am going home."], "ar": ["هل يمكنك أن تقولها مرة أخرى؟", "هل يمكنني الخروج؟", "أين الكرة؟", "سأذهب إلى البيت."], "uk": ["Можете повторити ще раз?", "Можна мені вийти надвір?", "Де м'яч?", "Я йду додому."], "tr": ["Bir daha söyler misiniz?", "Dışarı çıkabilir miyim?", "Top nerede?", "Eve gidiyorum."]},
-  {"en": ["What does this word mean?", "What time is it?", "May I play?", "Is it break time?"], "ar": ["ماذا تعني هذه الكلمة؟", "كم الساعة؟", "هل يمكنني اللعب؟", "هل هي الاستراحة؟"], "uk": ["Що означає це слово?", "Котра година?", "Можна мені погратися?", "Це перерва?"], "tr": ["Bu kelime ne demek?", "Saat kaç?", "Oynayabilir miyim?", "Teneffüs mü?"]},
-  {"en": ["I am done.", "I don't understand.", "May I go to the toilet?", "Where do you live?"], "ar": ["لقد انتهيت.", "لا أفهم.", "هل يمكنني الذهاب إلى الحمّام؟", "أين تسكن؟"], "uk": ["Я закінчив.", "Я не розумію.", "Можна мені в туалет?", "Де ти живеш?"], "tr": ["Bitirdim.", "Anlamıyorum.", "Tuvalete gidebilir miyim?", "Nerede oturuyorsun?"]},
-  {"en": ["To the gym hall.", "To the toilet.", "Home.", "To the shop."], "ar": ["إلى صالة الرياضة.", "إلى الحمّام.", "إلى البيت.", "إلى المتجر."], "uk": ["До спортзалу.", "До туалету.", "Додому.", "До магазину."], "tr": ["Spor salonuna.", "Tuvalete.", "Eve.", "Dükkâna."]},
-  {"en": ["The break starts or ends.", "You must go home.", "There is a fire.", "You get food."], "ar": ["تبدأ الاستراحة أو تنتهي.", "يجب أن تذهب إلى البيت.", "هناك حريق.", "ستحصل على طعام."], "uk": ["Перерва починається або закінчується.", "Ти маєш іти додому.", "Пожежа.", "Ти отримаєш їжу."], "tr": ["Teneffüs başlıyor ya da bitiyor.", "Eve gitmen gerekiyor.", "Yangın var.", "Yemek alıyorsun."]},
-  {"en": ["coat rack", "table", "window", "board"], "ar": ["علّاقة المعاطف", "الطاولة", "النافذة", "السبّورة"], "uk": ["вішалка", "стіл", "вікно", "дошка"], "tr": ["askı", "masa", "pencere", "tahta"]},
-  {"en": ["In the playground.", "In the gym hall.", "In the toilet.", "In the car."], "ar": ["في ساحة المدرسة.", "في صالة الرياضة.", "في الحمّام.", "في السيارة."], "uk": ["На шкільному майданчику.", "У спортзалі.", "У туалеті.", "У машині."], "tr": ["Okul bahçesinde.", "Spor salonunda.", "Tuvalette.", "Arabada."]},
-  {"en": ["I forgot my book.", "I have a dog.", "The weather is nice.", "I am eight years old."], "ar": ["نسيت كتابي.", "عندي كلب.", "الطقس جميل.", "عمري ثماني سنوات."], "uk": ["Я забув свою книжку.", "У мене є собака.", "Гарна погода.", "Мені вісім років."], "tr": ["Kitabımı unuttum.", "Bir köpeğim var.", "Hava güzel.", "Sekiz yaşındayım."]},
-  {"en": ["My name is … (your name).", "Thank you.", "Goodbye.", "I don't understand."], "ar": ["اسمي … (اسمك).", "شكرًا.", "إلى اللقاء.", "لا أفهم."], "uk": ["Мене звати … (твоє ім'я).", "Дякую.", "До побачення.", "Я не розумію."], "tr": ["Benim adım … (senin adın).", "Teşekkür ederim.", "Hoşça kal.", "Anlamıyorum."]},
-  {"en": ["May I join?", "I am done.", "Where is the teacher?", "It is cold."], "ar": ["هل يمكنني المشاركة؟", "لقد انتهيت.", "أين المعلّمة؟", "الجو بارد."], "uk": ["Можна мені приєднатися?", "Я закінчив.", "Де вчителька?", "Холодно."], "tr": ["Ben de katılabilir miyim?", "Bitirdim.", "Öğretmen nerede?", "Hava soğuk."]},
-  {"en": ["Thank you.", "My name is Ali.", "May I go to the toilet?", "No."], "ar": ["شكرًا.", "اسمي علي.", "هل يمكنني الذهاب إلى الحمّام؟", "لا."], "uk": ["Дякую.", "Мене звати Алі.", "Можна мені в туалет?", "Ні."], "tr": ["Teşekkür ederim.", "Benim adım Ali.", "Tuvalete gidebilir miyim?", "Hayır."]},
-  {"en": ["No, I don't want that.", "Yes, okay.", "Thank you.", "See you tomorrow."], "ar": ["لا، لا أريد ذلك.", "نعم، حسنًا.", "شكرًا.", "إلى الغد."], "uk": ["Ні, я цього не хочу.", "Так, добре.", "Дякую.", "До завтра."], "tr": ["Hayır, bunu istemiyorum.", "Evet, tamam.", "Teşekkür ederim.", "Yarın görüşürüz."]},
-  {"en": ["See you tomorrow!", "Good morning!", "May I join?", "I don't understand."], "ar": ["إلى الغد!", "صباح الخير!", "هل يمكنني المشاركة؟", "لا أفهم."], "uk": ["До завтра!", "Доброго ранку!", "Можна мені приєднатися?", "Я не розумію."], "tr": ["Yarın görüşürüz!", "Günaydın!", "Ben de katılabilir miyim?", "Anlamıyorum."]},
+  {"en": ["May I go to the toilet?", "I am done.", "Where is my coat?", "I am hungry."], "ar": ["هل يمكنني الذهاب إلى الحمّام؟", "لقد انتهيت.", "أين معطفي؟", "أنا جائع."], "uk": ["Можна мені в туалет?", "Я закінчив.", "Де моя куртка?", "Я хочу їсти."], "tr": ["Tuvalete gidebilir miyim?", "Bitirdim.", "Montum nerede?", "Açım."], "ro": ["Pot să merg la toaletă?", "Am terminat.", "Unde este geaca mea?", "Mi-e foame."], "bg": ["Може ли да отида до тоалетната?", "Готов съм.", "Къде е якето ми?", "Гладен съм."]},
+  {"en": ["I don't understand.", "Thank you.", "See you tomorrow!", "I am here."], "ar": ["لا أفهم.", "شكرًا.", "إلى الغد!", "أنا هنا."], "uk": ["Я не розумію.", "Дякую.", "До завтра!", "Я тут."], "tr": ["Anlamıyorum.", "Teşekkür ederim.", "Yarın görüşürüz!", "Buradayım."], "ro": ["Nu înțeleg.", "Mulțumesc.", "Pe mâine!", "Sunt aici."], "bg": ["Не разбирам.", "Благодаря.", "До утре!", "Тук съм."]},
+  {"en": ["Can you say it again?", "May I go outside?", "Where is the ball?", "I am going home."], "ar": ["هل يمكنك أن تقولها مرة أخرى؟", "هل يمكنني الخروج؟", "أين الكرة؟", "سأذهب إلى البيت."], "uk": ["Можете повторити ще раз?", "Можна мені вийти надвір?", "Де м'яч?", "Я йду додому."], "tr": ["Bir daha söyler misiniz?", "Dışarı çıkabilir miyim?", "Top nerede?", "Eve gidiyorum."], "ro": ["Puteți să repetați?", "Pot să ies afară?", "Unde este mingea?", "Mă duc acasă."], "bg": ["Може ли да го кажете пак?", "Може ли да изляза навън?", "Къде е топката?", "Отивам си вкъщи."]},
+  {"en": ["What does this word mean?", "What time is it?", "May I play?", "Is it break time?"], "ar": ["ماذا تعني هذه الكلمة؟", "كم الساعة؟", "هل يمكنني اللعب؟", "هل هي الاستراحة؟"], "uk": ["Що означає це слово?", "Котра година?", "Можна мені погратися?", "Це перерва?"], "tr": ["Bu kelime ne demek?", "Saat kaç?", "Oynayabilir miyim?", "Teneffüs mü?"], "ro": ["Ce înseamnă acest cuvânt?", "Cât e ceasul?", "Pot să mă joc?", "E pauză?"], "bg": ["Какво означава тази дума?", "Колко е часът?", "Може ли да играя?", "Междучасие ли е?"]},
+  {"en": ["I am done.", "I don't understand.", "May I go to the toilet?", "Where do you live?"], "ar": ["لقد انتهيت.", "لا أفهم.", "هل يمكنني الذهاب إلى الحمّام؟", "أين تسكن؟"], "uk": ["Я закінчив.", "Я не розумію.", "Можна мені в туалет?", "Де ти живеш?"], "tr": ["Bitirdim.", "Anlamıyorum.", "Tuvalete gidebilir miyim?", "Nerede oturuyorsun?"], "ro": ["Am terminat.", "Nu înțeleg.", "Pot să merg la toaletă?", "Unde locuiești?"], "bg": ["Готов съм.", "Не разбирам.", "Може ли да отида до тоалетната?", "Къде живееш?"]},
+  {"en": ["To the gym hall.", "To the toilet.", "Home.", "To the shop."], "ar": ["إلى صالة الرياضة.", "إلى الحمّام.", "إلى البيت.", "إلى المتجر."], "uk": ["До спортзалу.", "До туалету.", "Додому.", "До магазину."], "tr": ["Spor salonuna.", "Tuvalete.", "Eve.", "Dükkâna."], "ro": ["La sala de sport.", "La toaletă.", "Acasă.", "La magazin."], "bg": ["Във физкултурния салон.", "В тоалетната.", "Вкъщи.", "В магазина."]},
+  {"en": ["The break starts or ends.", "You must go home.", "There is a fire.", "You get food."], "ar": ["تبدأ الاستراحة أو تنتهي.", "يجب أن تذهب إلى البيت.", "هناك حريق.", "ستحصل على طعام."], "uk": ["Перерва починається або закінчується.", "Ти маєш іти додому.", "Пожежа.", "Ти отримаєш їжу."], "tr": ["Teneffüs başlıyor ya da bitiyor.", "Eve gitmen gerekiyor.", "Yangın var.", "Yemek alıyorsun."], "ro": ["Începe sau se termină pauza.", "Trebuie să mergi acasă.", "E un incendiu.", "Primești mâncare."], "bg": ["Междучасието започва или свършва.", "Трябва да си отидеш вкъщи.", "Има пожар.", "Получаваш храна."]},
+  {"en": ["coat rack", "table", "window", "board"], "ar": ["علّاقة المعاطف", "الطاولة", "النافذة", "السبّورة"], "uk": ["вішалка", "стіл", "вікно", "дошка"], "tr": ["askı", "masa", "pencere", "tahta"], "ro": ["cuier", "masă", "fereastră", "tablă"], "bg": ["закачалка", "маса", "прозорец", "дъска"]},
+  {"en": ["In the playground.", "In the gym hall.", "In the toilet.", "In the car."], "ar": ["في ساحة المدرسة.", "في صالة الرياضة.", "في الحمّام.", "في السيارة."], "uk": ["На шкільному майданчику.", "У спортзалі.", "У туалеті.", "У машині."], "tr": ["Okul bahçesinde.", "Spor salonunda.", "Tuvalette.", "Arabada."], "ro": ["În curtea școlii.", "În sala de sport.", "La toaletă.", "În mașină."], "bg": ["На училищния двор.", "Във физкултурния салон.", "В тоалетната.", "В колата."]},
+  {"en": ["I forgot my book.", "I have a dog.", "The weather is nice.", "I am eight years old."], "ar": ["نسيت كتابي.", "عندي كلب.", "الطقس جميل.", "عمري ثماني سنوات."], "uk": ["Я забув свою книжку.", "У мене є собака.", "Гарна погода.", "Мені вісім років."], "tr": ["Kitabımı unuttum.", "Bir köpeğim var.", "Hava güzel.", "Sekiz yaşındayım."], "ro": ["Mi-am uitat cartea.", "Am un câine.", "E vreme frumoasă.", "Am opt ani."], "bg": ["Забравих си книгата.", "Имам куче.", "Времето е хубаво.", "На осем години съм."]},
+  {"en": ["My name is … (your name).", "Thank you.", "Goodbye.", "I don't understand."], "ar": ["اسمي … (اسمك).", "شكرًا.", "إلى اللقاء.", "لا أفهم."], "uk": ["Мене звати … (твоє ім'я).", "Дякую.", "До побачення.", "Я не розумію."], "tr": ["Benim adım … (senin adın).", "Teşekkür ederim.", "Hoşça kal.", "Anlamıyorum."], "ro": ["Mă cheamă … (numele tău).", "Mulțumesc.", "La revedere.", "Nu înțeleg."], "bg": ["Казвам се … (твоето име).", "Благодаря.", "Довиждане.", "Не разбирам."]},
+  {"en": ["May I join?", "I am done.", "Where is the teacher?", "It is cold."], "ar": ["هل يمكنني المشاركة؟", "لقد انتهيت.", "أين المعلّمة؟", "الجو بارد."], "uk": ["Можна мені приєднатися?", "Я закінчив.", "Де вчителька?", "Холодно."], "tr": ["Ben de katılabilir miyim?", "Bitirdim.", "Öğretmen nerede?", "Hava soğuk."], "ro": ["Pot să mă joc și eu?", "Am terminat.", "Unde este învățătoarea?", "E frig."], "bg": ["Може ли и аз да играя?", "Готов съм.", "Къде е учителката?", "Студено е."]},
+  {"en": ["Thank you.", "My name is Ali.", "May I go to the toilet?", "No."], "ar": ["شكرًا.", "اسمي علي.", "هل يمكنني الذهاب إلى الحمّام؟", "لا."], "uk": ["Дякую.", "Мене звати Алі.", "Можна мені в туалет?", "Ні."], "tr": ["Teşekkür ederim.", "Benim adım Ali.", "Tuvalete gidebilir miyim?", "Hayır."], "ro": ["Mulțumesc.", "Mă cheamă Ali.", "Pot să merg la toaletă?", "Nu."], "bg": ["Благодаря.", "Казвам се Али.", "Може ли да отида до тоалетната?", "Не."]},
+  {"en": ["No, I don't want that.", "Yes, okay.", "Thank you.", "See you tomorrow."], "ar": ["لا، لا أريد ذلك.", "نعم، حسنًا.", "شكرًا.", "إلى الغد."], "uk": ["Ні, я цього не хочу.", "Так, добре.", "Дякую.", "До завтра."], "tr": ["Hayır, bunu istemiyorum.", "Evet, tamam.", "Teşekkür ederim.", "Yarın görüşürüz."], "ro": ["Nu, nu vreau asta.", "Da, bine.", "Mulțumesc.", "Pe mâine."], "bg": ["Не, не искам това.", "Да, добре.", "Благодаря.", "До утре."]},
+  {"en": ["See you tomorrow!", "Good morning!", "May I join?", "I don't understand."], "ar": ["إلى الغد!", "صباح الخير!", "هل يمكنني المشاركة؟", "لا أفهم."], "uk": ["До завтра!", "Доброго ранку!", "Можна мені приєднатися?", "Я не розумію."], "tr": ["Yarın görüşürüz!", "Günaydın!", "Ben de katılabilir miyim?", "Anlamıyorum."], "ro": ["Pe mâine!", "Bună dimineața!", "Pot să mă joc și eu?", "Nu înțeleg."], "bg": ["До утре!", "Добро утро!", "Може ли и аз да играя?", "Не разбирам."]},
 ];
 [...deel1, ...deel2, ...deel3].forEach((c, i) => {
   const o = OPTIES_STEUN[i]; if (!o) return;
   // Map op optie-TEKST (niet positie): de app schudt de antwoorden.
-  c.steunOpties = Object.fromEntries(c.options.map((tekst, k) => [tekst, { en: o.en[k], ar: o.ar[k], uk: o.uk[k], tr: o.tr[k] }]));
+  c.steunOpties = Object.fromEntries(c.options.map((tekst, k) => [tekst, { en: o.en[k], ar: o.ar[k], uk: o.uk[k], tr: o.tr[k], ro: o.ro[k], bg: o.bg[k] }]));
 });
 
 // Deel 4 (24 sep 2026): emotiewoorden uit de LOWAN-schooltaalwoordenlijst (bang, blij, boos,

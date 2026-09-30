@@ -23,6 +23,8 @@ const KOP = {
   ar: { dictee: "إملاء بالصور", kaarten: "بطاقات الكلمات", kies: "استمع واختر", onderwerp: "اختر موضوعًا", terug: "رجوع", nogEens: "مرة أخرى", klaar: "انتهيت!" },
   uk: { dictee: "Диктант з картинками", kaarten: "Картки зі словами", kies: "Слухай і вибирай", onderwerp: "Вибери тему", terug: "Назад", nogEens: "Ще раз", klaar: "Готово!" },
   tr: { dictee: "Resimli dikte", kaarten: "Kelime kartları", kies: "Dinle ve seç", onderwerp: "Bir konu seç", terug: "Geri", nogEens: "Bir daha", klaar: "Bitti!" },
+  ro: { dictee: "Dictare cu imagini", kaarten: "Cartonașe cu cuvinte", kies: "Ascultă și alege", onderwerp: "Alege o temă", terug: "Înapoi", nogEens: "Încă o dată", klaar: "Gata!" },
+  bg: { dictee: "Диктовка с картинки", kaarten: "Карти с думи", kies: "Слушай и избери", onderwerp: "Избери тема", terug: "Назад", nogEens: "Още веднъж", klaar: "Готово!" },
 };
 
 const S = {

@@ -16,7 +16,7 @@ const chapters = [
   { letter: "C", title: "Welke twee letters maken één klank?", emoji: "👯", from: 2, to: 2 },
 ];
 
-const S = (en, ar, uk, tr) => ({ en, ar, uk, tr });
+const S = (en, ar, uk, tr, ro, bg) => ({ en, ar, uk, tr, ro, bg });
 const v = (q, steun, options, answer, hint, extra = {}) => ({ q, steun, options, answer, wrongHints: options.map((_, i) => (i === answer ? null : hint)), ...extra });
 
 const H_VOORAAN = "Zeg het woord heel langzaam. Wat hoor je als eerste?";
@@ -25,7 +25,7 @@ const H_HAK = "Zeg het woord langzaam. Elke klank is één stukje.";
 const H_TWEE = "Twee letters, één klank. Zeg het woord langzaam en luister naar het midden.";
 
 const vooraan = [
-  v("Welke klank hoor je vooraan in 'maan'?", S("Which sound do you hear at the start of 'maan'?", "ما الصوت الذي تسمعه في بداية 'maan'؟", "Який звук ти чуєш на початку 'maan'?", "'maan' kelimesinin başında hangi sesi duyuyorsun?"),
+  v("Welke klank hoor je vooraan in 'maan'?", S("Which sound do you hear at the start of 'maan'?", "ما الصوت الذي تسمعه في بداية 'maan'؟", "Який звук ти чуєш на початку 'maan'?", "'maan' kelimesinin başında hangi sesi duyuyorsun?", "Ce sunet auzi la începutul lui 'maan'?", "Кой звук чуваш в началото на 'maan'?"),
     ["m", "n", "a"], 0, H_VOORAAN, { uitlegPad: {
       stappen: [
         { titel: "Luister", tekst: "Zeg **maan** heel langzaam: **mmm**-aa-n. De eerste klank is **m**." },
@@ -38,14 +38,14 @@ const vooraan = [
       basiskennis: [{ onderwerp: "Truc", uitleg: "Druk op 'Lees voor' en luister naar het begin." }],
       niveaus: { basis: "Luister naar de eerste klank.", simpeler: "mmm… aan. Wat hoor je eerst?", nogSimpeler: "m" },
     } }),
-  v("Welke klank hoor je vooraan in 'vis'?", S("Which sound do you hear at the start of 'vis'?", "ما الصوت الذي تسمعه في بداية 'vis'؟", "Який звук ти чуєш на початку 'vis'?", "'vis' kelimesinin başında hangi sesi duyuyorsun?"), ["v", "s", "i"], 0, H_VOORAAN),
-  v("Welke klank hoor je vooraan in 'bus'?", S("Which sound do you hear at the start of 'bus'?", "ما الصوت الذي تسمعه في بداية 'bus'؟", "Який звук ти чуєш на початку 'bus'?", "'bus' kelimesinin başında hangi sesi duyuyorsun?"), ["b", "d", "p"], 0, H_VOORAAN),
-  v("Welk woord begint met de klank 'k'?", S("Which word starts with the sound 'k'?", "أي كلمة تبدأ بالصوت 'k'؟", "Яке слово починається зі звуку 'k'?", "Hangi kelime 'k' sesiyle başlar?"), ["kip", "pen", "tas"], 0, H_VOORAAN),
-  v("Welk woord begint met de klank 'z'?", S("Which word starts with the sound 'z'?", "أي كلمة تبدأ بالصوت 'z'؟", "Яке слово починається зі звуку 'z'?", "Hangi kelime 'z' sesiyle başlar?"), ["zon", "sok", "jas"], 0, H_VOORAAN),
+  v("Welke klank hoor je vooraan in 'vis'?", S("Which sound do you hear at the start of 'vis'?", "ما الصوت الذي تسمعه في بداية 'vis'؟", "Який звук ти чуєш на початку 'vis'?", "'vis' kelimesinin başında hangi sesi duyuyorsun?", "Ce sunet auzi la începutul lui 'vis'?", "Кой звук чуваш в началото на 'vis'?"), ["v", "s", "i"], 0, H_VOORAAN),
+  v("Welke klank hoor je vooraan in 'bus'?", S("Which sound do you hear at the start of 'bus'?", "ما الصوت الذي تسمعه في بداية 'bus'؟", "Який звук ти чуєш на початку 'bus'?", "'bus' kelimesinin başında hangi sesi duyuyorsun?", "Ce sunet auzi la începutul lui 'bus'?", "Кой звук чуваш в началото на 'bus'?"), ["b", "d", "p"], 0, H_VOORAAN),
+  v("Welk woord begint met de klank 'k'?", S("Which word starts with the sound 'k'?", "أي كلمة تبدأ بالصوت 'k'؟", "Яке слово починається зі звуку 'k'?", "Hangi kelime 'k' sesiyle başlar?", "Ce cuvânt începe cu sunetul 'k'?", "Коя дума започва със звука 'k'?"), ["kip", "pen", "tas"], 0, H_VOORAAN),
+  v("Welk woord begint met de klank 'z'?", S("Which word starts with the sound 'z'?", "أي كلمة تبدأ بالصوت 'z'؟", "Яке слово починається зі звуку 'z'?", "Hangi kelime 'z' sesiyle başlar?", "Ce cuvânt începe cu sunetul 'z'?", "Коя дума започва със звука 'z'?"), ["zon", "sok", "jas"], 0, H_VOORAAN),
 ];
 
 const hakPlak = [
-  v("Plak de klanken: t - a - s. Welk woord is het?", S("Glue the sounds together: t - a - s. Which word is it?", "اجمع الأصوات: t - a - s. ما هي الكلمة؟", "Склей звуки: t - a - s. Яке це слово?", "Sesleri birleştir: t - a - s. Hangi kelime?"),
+  v("Plak de klanken: t - a - s. Welk woord is het?", S("Glue the sounds together: t - a - s. Which word is it?", "اجمع الأصوات: t - a - s. ما هي الكلمة؟", "Склей звуки: t - a - s. Яке це слово?", "Sesleri birleştir: t - a - s. Hangi kelime?", "Lipește sunetele: t - a - s. Ce cuvânt este?", "Слепи звуковете: t - a - s. Коя дума е това?"),
     ["tas", "tak", "kas"], 0, H_PLAK, { uitlegPad: {
       stappen: [
         { titel: "Hakken", tekst: "**Hakken**: je zegt een woord in stukjes. **tas** → **t - a - s**." },
@@ -58,14 +58,14 @@ const hakPlak = [
       basiskennis: [{ onderwerp: "Truc", uitleg: "Tik bij elke klank met je vinger op tafel." }],
       niveaus: { basis: "Zeg t, a, s steeds sneller.", simpeler: "t-a-s … ta-s … tas", nogSimpeler: "tas" },
     } }),
-  v("Plak de klanken: p - e - n. Welk woord is het?", S("Glue the sounds together: p - e - n. Which word is it?", "اجمع الأصوات: p - e - n. ما هي الكلمة؟", "Склей звуки: p - e - n. Яке це слово?", "Sesleri birleştir: p - e - n. Hangi kelime?"), ["pen", "pan", "ben"], 0, H_PLAK),
-  v("Plak de klanken: m - e - l - k. Welk woord is het?", S("Glue the sounds together: m - e - l - k. Which word is it?", "اجمع الأصوات: m - e - l - k. ما هي الكلمة؟", "Склей звуки: m - e - l - k. Яке це слово?", "Sesleri birleştir: m - e - l - k. Hangi kelime?"), ["melk", "mel", "elk"], 0, H_PLAK),
-  v("Hak het woord 'kat' in klanken.", S("Chop the word 'kat' into sounds.", "قسّم كلمة 'kat' إلى أصوات.", "Розбий слово 'kat' на звуки.", "'kat' kelimesini seslere ayır."), ["k - a - t", "ka - t", "k - at"], 0, H_HAK),
-  v("Hoeveel klanken hoor je in 'jas'?", S("How many sounds do you hear in 'jas'?", "كم صوتًا تسمع في 'jas'؟", "Скільки звуків ти чуєш у 'jas'?", "'jas' kelimesinde kaç ses duyuyorsun?"), ["3", "2", "4"], 0, H_HAK),
+  v("Plak de klanken: p - e - n. Welk woord is het?", S("Glue the sounds together: p - e - n. Which word is it?", "اجمع الأصوات: p - e - n. ما هي الكلمة؟", "Склей звуки: p - e - n. Яке це слово?", "Sesleri birleştir: p - e - n. Hangi kelime?", "Lipește sunetele: p - e - n. Ce cuvânt este?", "Слепи звуковете: p - e - n. Коя дума е това?"), ["pen", "pan", "ben"], 0, H_PLAK),
+  v("Plak de klanken: m - e - l - k. Welk woord is het?", S("Glue the sounds together: m - e - l - k. Which word is it?", "اجمع الأصوات: m - e - l - k. ما هي الكلمة؟", "Склей звуки: m - e - l - k. Яке це слово?", "Sesleri birleştir: m - e - l - k. Hangi kelime?", "Lipește sunetele: m - e - l - k. Ce cuvânt este?", "Слепи звуковете: m - e - l - k. Коя дума е това?"), ["melk", "mel", "elk"], 0, H_PLAK),
+  v("Hak het woord 'kat' in klanken.", S("Chop the word 'kat' into sounds.", "قسّم كلمة 'kat' إلى أصوات.", "Розбий слово 'kat' на звуки.", "'kat' kelimesini seslere ayır.", "Împarte cuvântul 'kat' în sunete.", "Раздели думата 'kat' на звукове."), ["k - a - t", "ka - t", "k - at"], 0, H_HAK),
+  v("Hoeveel klanken hoor je in 'jas'?", S("How many sounds do you hear in 'jas'?", "كم صوتًا تسمع في 'jas'؟", "Скільки звуків ти чуєш у 'jas'?", "'jas' kelimesinde kaç ses duyuyorsun?", "Câte sunete auzi în 'jas'?", "Колко звука чуваш в 'jas'?"), ["3", "2", "4"], 0, H_HAK),
 ];
 
 const tweeLetters = [
-  v("Welk woord heeft de klank 'oo'?", S("Which word has the sound 'oo'?", "أي كلمة فيها الصوت 'oo'؟", "У якому слові є звук 'oo'?", "Hangi kelimede 'oo' sesi var?"),
+  v("Welk woord heeft de klank 'oo'?", S("Which word has the sound 'oo'?", "أي كلمة فيها الصوت 'oo'؟", "У якому слові є звук 'oo'?", "Hangi kelimede 'oo' sesi var?", "Ce cuvânt are sunetul 'oo'?", "Коя дума има звука 'oo'?"),
     ["boom", "bos", "bal"], 0, H_TWEE, { uitlegPad: {
       stappen: [
         { titel: "Twee letters", tekst: "Soms maken **twee letters samen één klank**: **aa**, **oo**, **ee**, **oe**." },
@@ -78,33 +78,33 @@ const tweeLetters = [
       basiskennis: [{ onderwerp: "Truc", uitleg: "Hoor je een lange klank? Dan schrijf je vaak twee letters." }],
       niveaus: { basis: "Zoek de lange oo.", simpeler: "b - oo - m", nogSimpeler: "boom" },
     } }),
-  v("Welk woord heeft de klank 'aa'?", S("Which word has the sound 'aa'?", "أي كلمة فيها الصوت 'aa'؟", "У якому слові є звук 'aa'?", "Hangi kelimede 'aa' sesi var?"), ["raam", "ram", "rok"], 0, H_TWEE),
-  v("Welk woord heeft de klank 'oe'?", S("Which word has the sound 'oe'?", "أي كلمة فيها الصوت 'oe'؟", "У якому слові є звук 'oe'?", "Hangi kelimede 'oe' sesi var?"), ["boek", "bok", "bel"], 0, H_TWEE),
-  v("Hoeveel klanken hoor je in 'boom'?", S("How many sounds do you hear in 'boom'?", "كم صوتًا تسمع في 'boom'؟", "Скільки звуків ти чуєш у 'boom'?", "'boom' kelimesinde kaç ses duyuyorsun?"), ["3", "4", "2"], 0, "b - oo - m. De twee o's zijn samen één klank."),
-  v("Plak de klanken: v - oe - t. Welk woord is het?", S("Glue the sounds together: v - oe - t. Which word is it?", "اجمع الأصوات: v - oe - t. ما هي الكلمة؟", "Склей звуки: v - oe - t. Яке це слово?", "Sesleri birleştir: v - oe - t. Hangi kelime?"), ["voet", "vot", "vet"], 0, H_PLAK),
+  v("Welk woord heeft de klank 'aa'?", S("Which word has the sound 'aa'?", "أي كلمة فيها الصوت 'aa'؟", "У якому слові є звук 'aa'?", "Hangi kelimede 'aa' sesi var?", "Ce cuvânt are sunetul 'aa'?", "Коя дума има звука 'aa'?"), ["raam", "ram", "rok"], 0, H_TWEE),
+  v("Welk woord heeft de klank 'oe'?", S("Which word has the sound 'oe'?", "أي كلمة فيها الصوت 'oe'؟", "У якому слові є звук 'oe'?", "Hangi kelimede 'oe' sesi var?", "Ce cuvânt are sunetul 'oe'?", "Коя дума има звука 'oe'?"), ["boek", "bok", "bel"], 0, H_TWEE),
+  v("Hoeveel klanken hoor je in 'boom'?", S("How many sounds do you hear in 'boom'?", "كم صوتًا تسمع في 'boom'؟", "Скільки звуків ти чуєш у 'boom'?", "'boom' kelimesinde kaç ses duyuyorsun?", "Câte sunete auzi în 'boom'?", "Колко звука чуваш в 'boom'?"), ["3", "4", "2"], 0, "b - oo - m. De twee o's zijn samen één klank."),
+  v("Plak de klanken: v - oe - t. Welk woord is het?", S("Glue the sounds together: v - oe - t. Which word is it?", "اجمع الأصوات: v - oe - t. ما هي الكلمة؟", "Склей звуки: v - oe - t. Яке це слово?", "Sesleri birleştir: v - oe - t. Hangi kelime?", "Lipește sunetele: v - oe - t. Ce cuvânt este?", "Слепи звуковете: v - oe - t. Коя дума е това?"), ["voet", "vot", "vet"], 0, H_PLAK),
 ];
 
 // Tikbare teksten (titels, uitleg, hints, uitlegPad) — NL → EN/AR/UK/TR.
 const TEKST_STEUN = {
-  [H_VOORAAN]: S("Say the word very slowly. What do you hear first?", "قل الكلمة ببطء شديد. ماذا تسمع أولًا؟", "Скажи слово дуже повільно. Що ти чуєш першим?", "Kelimeyi çok yavaş söyle. İlk ne duyuyorsun?"),
-  [H_PLAK]: S("Say the sounds quickly one after the other. Which word do you hear?", "قل الأصوات بسرعة واحدًا بعد الآخر. أي كلمة تسمع؟", "Скажи звуки швидко один за одним. Яке слово ти чуєш?", "Sesleri hızlıca arka arkaya söyle. Hangi kelimeyi duyuyorsun?"),
-  [H_HAK]: S("Say the word slowly. Each sound is one piece.", "قل الكلمة ببطء. كل صوت هو قطعة واحدة.", "Скажи слово повільно. Кожен звук — це один шматочок.", "Kelimeyi yavaşça söyle. Her ses bir parçadır."),
-  [H_TWEE]: S("Two letters, one sound. Say the word slowly and listen to the middle.", "حرفان، صوت واحد. قل الكلمة ببطء واستمع إلى الوسط.", "Дві літери — один звук. Скажи слово повільно й послухай середину.", "İki harf, bir ses. Kelimeyi yavaşça söyle ve ortasını dinle."),
-  "b - oo - m. De twee o's zijn samen één klank.": S("b - oo - m. The two o's together are one sound.", "b - oo - m. حرفا o معًا صوت واحد.", "b - oo - m. Дві o разом — це один звук.", "b - oo - m. İki o birlikte tek bir sestir."),
-  "Welke klank hoor je vooraan?": S("Which sound do you hear at the start?", "ما الصوت الذي تسمعه في البداية؟", "Який звук ти чуєш на початку?", "Başta hangi sesi duyuyorsun?"),
-  "Hoe hak en plak ik een woord?": S("How do I chop and glue a word?", "كيف أقسّم الكلمة وأجمعها؟", "Як розбити й склеїти слово?", "Bir kelimeyi nasıl ayırır ve birleştiririm?"),
-  "Welke twee letters maken één klank?": S("Which two letters make one sound?", "أي حرفين يصنعان صوتًا واحدًا؟", "Які дві літери дають один звук?", "Hangi iki harf tek bir ses yapar?"),
-  "Letters en klanken": S("Letters and sounds", "الحروف والأصوات", "Літери й звуки", "Harfler ve sesler"),
-  "Klanken vooraan": S("Sounds at the start", "الأصوات في البداية", "Звуки на початку", "Baştaki sesler"),
-  "Hakken en plakken": S("Chopping and gluing", "التقسيم والجمع", "Розбивати й склеювати", "Ayırmak ve birleştirmek"),
-  "Twee letters, één klank": S("Two letters, one sound", "حرفان، صوت واحد", "Дві літери — один звук", "İki harf, bir ses"),
+  [H_VOORAAN]: S("Say the word very slowly. What do you hear first?", "قل الكلمة ببطء شديد. ماذا تسمع أولًا؟", "Скажи слово дуже повільно. Що ти чуєш першим?", "Kelimeyi çok yavaş söyle. İlk ne duyuyorsun?", "Spune cuvântul foarte încet. Ce auzi primul?", "Кажи думата много бавно. Какво чуваш първо?"),
+  [H_PLAK]: S("Say the sounds quickly one after the other. Which word do you hear?", "قل الأصوات بسرعة واحدًا بعد الآخر. أي كلمة تسمع؟", "Скажи звуки швидко один за одним. Яке слово ти чуєш?", "Sesleri hızlıca arka arkaya söyle. Hangi kelimeyi duyuyorsun?", "Spune sunetele repede, unul după altul. Ce cuvânt auzi?", "Кажи звуковете бързо един след друг. Коя дума чуваш?"),
+  [H_HAK]: S("Say the word slowly. Each sound is one piece.", "قل الكلمة ببطء. كل صوت هو قطعة واحدة.", "Скажи слово повільно. Кожен звук — це один шматочок.", "Kelimeyi yavaşça söyle. Her ses bir parçadır.", "Spune cuvântul încet. Fiecare sunet este o bucățică.", "Кажи думата бавно. Всеки звук е едно парченце."),
+  [H_TWEE]: S("Two letters, one sound. Say the word slowly and listen to the middle.", "حرفان، صوت واحد. قل الكلمة ببطء واستمع إلى الوسط.", "Дві літери — один звук. Скажи слово повільно й послухай середину.", "İki harf, bir ses. Kelimeyi yavaşça söyle ve ortasını dinle.", "Două litere, un sunet. Spune cuvântul încet și ascultă mijlocul.", "Две букви, един звук. Кажи думата бавно и слушай средата."),
+  "b - oo - m. De twee o's zijn samen één klank.": S("b - oo - m. The two o's together are one sound.", "b - oo - m. حرفا o معًا صوت واحد.", "b - oo - m. Дві o разом — це один звук.", "b - oo - m. İki o birlikte tek bir sestir.", "b - oo - m. Cei doi o împreună sunt un singur sunet.", "b - oo - m. Двете o заедно са един звук."),
+  "Welke klank hoor je vooraan?": S("Which sound do you hear at the start?", "ما الصوت الذي تسمعه في البداية؟", "Який звук ти чуєш на початку?", "Başta hangi sesi duyuyorsun?", "Ce sunet auzi la început?", "Кой звук чуваш в началото?"),
+  "Hoe hak en plak ik een woord?": S("How do I chop and glue a word?", "كيف أقسّم الكلمة وأجمعها؟", "Як розбити й склеїти слово?", "Bir kelimeyi nasıl ayırır ve birleştiririm?", "Cum împart și lipesc un cuvânt?", "Как разделям и слепвам дума?"),
+  "Welke twee letters maken één klank?": S("Which two letters make one sound?", "أي حرفين يصنعان صوتًا واحدًا؟", "Які дві літери дають один звук?", "Hangi iki harf tek bir ses yapar?", "Care două litere fac un singur sunet?", "Кои две букви правят един звук?"),
+  "Letters en klanken": S("Letters and sounds", "الحروف والأصوات", "Літери й звуки", "Harfler ve sesler", "Litere și sunete", "Букви и звукове"),
+  "Klanken vooraan": S("Sounds at the start", "الأصوات في البداية", "Звуки на початку", "Baştaki sesler", "Sunete la început", "Звукове в началото"),
+  "Hakken en plakken": S("Chopping and gluing", "التقسيم والجمع", "Розбивати й склеювати", "Ayırmak ve birleştirmek", "Împărțit și lipit", "Разделяне и слепване"),
+  "Twee letters, één klank": S("Two letters, one sound", "حرفان، صوت واحد", "Дві літери — один звук", "İki harf, bir ses", "Două litere, un sunet", "Две букви, един звук"),
   "Elk woord bestaat uit **klanken**. Zeg een woord heel langzaam: **mmm-aa-n**.\n\nDe eerste klank hoor je vooraan. Elke klank heeft een **letter**.\n\nDruk op **Lees voor** om het woord te horen.":
-    S("Every word is made of sounds. Say a word very slowly: mmm-aa-n.\n\nYou hear the first sound at the start. Every sound has a letter.\n\nPress 'Lees voor' to hear the word.", "كل كلمة مكوّنة من أصوات. قل الكلمة ببطء شديد: mmm-aa-n.\n\nالصوت الأول تسمعه في البداية. لكل صوت حرف.\n\nاضغط 'Lees voor' لتسمع الكلمة.", "Кожне слово складається зі звуків. Скажи слово дуже повільно: mmm-aa-n.\n\nПерший звук ти чуєш на початку. Кожен звук має літеру.\n\nНатисни 'Lees voor', щоб почути слово.", "Her kelime seslerden oluşur. Bir kelimeyi çok yavaş söyle: mmm-aa-n.\n\nİlk sesi başta duyarsın. Her sesin bir harfi vardır.\n\nKelimeyi duymak için 'Lees voor'a bas."),
+    S("Every word is made of sounds. Say a word very slowly: mmm-aa-n.\n\nYou hear the first sound at the start. Every sound has a letter.\n\nPress 'Lees voor' to hear the word.", "كل كلمة مكوّنة من أصوات. قل الكلمة ببطء شديد: mmm-aa-n.\n\nالصوت الأول تسمعه في البداية. لكل صوت حرف.\n\nاضغط 'Lees voor' لتسمع الكلمة.", "Кожне слово складається зі звуків. Скажи слово дуже повільно: mmm-aa-n.\n\nПерший звук ти чуєш на початку. Кожен звук має літеру.\n\nНатисни 'Lees voor', щоб почути слово.", "Her kelime seslerden oluşur. Bir kelimeyi çok yavaş söyle: mmm-aa-n.\n\nİlk sesi başta duyarsın. Her sesin bir harfi vardır.\n\nKelimeyi duymak için 'Lees voor'a bas.", "Fiecare cuvânt este făcut din sunete. Spune un cuvânt foarte încet: mmm-aa-n.\n\nPrimul sunet îl auzi la început. Fiecare sunet are o literă.\n\nApasă pe 'Lees voor' ca să auzi cuvântul.", "Всяка дума е направена от звукове. Кажи една дума много бавно: mmm-aa-n.\n\nПървия звук чуваш в началото. Всеки звук има буква.\n\nНатисни 'Lees voor', за да чуеш думата."),
   "**Hakken**: een woord in klanken zeggen. **tas** → **t - a - s**.\n\n**Plakken**: de klanken snel achter elkaar zeggen. **t - a - s** → **tas**.\n\nZo lees je een nieuw woord.":
-    S("Chopping: saying a word in sounds. tas → t - a - s.\n\nGluing: saying the sounds quickly one after the other. t - a - s → tas.\n\nThis is how you read a new word.", "التقسيم: قول الكلمة أصواتًا. tas ← t - a - s.\n\nالجمع: قول الأصوات بسرعة واحدًا بعد الآخر. t - a - s ← tas.\n\nهكذا تقرأ كلمة جديدة.", "Розбивати: казати слово по звуках. tas → t - a - s.\n\nСклеювати: казати звуки швидко один за одним. t - a - s → tas.\n\nТак ти читаєш нове слово.", "Ayırmak: kelimeyi seslerle söylemek. tas → t - a - s.\n\nBirleştirmek: sesleri hızlıca arka arkaya söylemek. t - a - s → tas.\n\nYeni bir kelimeyi böyle okursun."),
+    S("Chopping: saying a word in sounds. tas → t - a - s.\n\nGluing: saying the sounds quickly one after the other. t - a - s → tas.\n\nThis is how you read a new word.", "التقسيم: قول الكلمة أصواتًا. tas ← t - a - s.\n\nالجمع: قول الأصوات بسرعة واحدًا بعد الآخر. t - a - s ← tas.\n\nهكذا تقرأ كلمة جديدة.", "Розбивати: казати слово по звуках. tas → t - a - s.\n\nСклеювати: казати звуки швидко один за одним. t - a - s → tas.\n\nТак ти читаєш нове слово.", "Ayırmak: kelimeyi seslerle söylemek. tas → t - a - s.\n\nBirleştirmek: sesleri hızlıca arka arkaya söylemek. t - a - s → tas.\n\nYeni bir kelimeyi böyle okursun.", "Împărțit: spui un cuvânt pe sunete. tas → t - a - s.\n\nLipit: spui sunetele repede, unul după altul. t - a - s → tas.\n\nAșa citești un cuvânt nou.", "Разделяне: казваш думата на звукове. tas → t - a - s.\n\nСлепване: казваш звуковете бързо един след друг. t - a - s → tas.\n\nТака четеш нова дума."),
   "Soms maken **twee letters samen één klank**: **aa**, **oo**, **ee** en **oe**.\n\n**boom** = b - **oo** - m: drie klanken.\n**boek** = b - **oe** - k: ook drie klanken.":
-    S("Sometimes two letters together make one sound: aa, oo, ee and oe.\n\nboom = b - oo - m: three sounds.\nboek = b - oe - k: also three sounds.", "أحيانًا يصنع حرفان معًا صوتًا واحدًا: aa و oo و ee و oe.\n\nboom = b - oo - m: ثلاثة أصوات.\nboek = b - oe - k: أيضًا ثلاثة أصوات.", "Іноді дві літери разом дають один звук: aa, oo, ee і oe.\n\nboom = b - oo - m: три звуки.\nboek = b - oe - k: теж три звуки.", "Bazen iki harf birlikte tek bir ses yapar: aa, oo, ee ve oe.\n\nboom = b - oo - m: üç ses.\nboek = b - oe - k: yine üç ses."),
-  "Letters en klanken — lezen en schrijven in het Nederlands (nieuwkomers)": S("Letters and sounds — reading and writing in Dutch (newcomers)", "الحروف والأصوات — القراءة والكتابة بالهولندية (للقادمين الجدد)", "Літери й звуки — читати й писати нідерландською (для новоприбулих)", "Harfler ve sesler — Hollandaca okuma ve yazma (yeni gelenler)"),
+    S("Sometimes two letters together make one sound: aa, oo, ee and oe.\n\nboom = b - oo - m: three sounds.\nboek = b - oe - k: also three sounds.", "أحيانًا يصنع حرفان معًا صوتًا واحدًا: aa و oo و ee و oe.\n\nboom = b - oo - m: ثلاثة أصوات.\nboek = b - oe - k: أيضًا ثلاثة أصوات.", "Іноді дві літери разом дають один звук: aa, oo, ee і oe.\n\nboom = b - oo - m: три звуки.\nboek = b - oe - k: теж три звуки.", "Bazen iki harf birlikte tek bir ses yapar: aa, oo, ee ve oe.\n\nboom = b - oo - m: üç ses.\nboek = b - oe - k: yine üç ses.", "Uneori două litere împreună fac un singur sunet: aa, oo, ee și oe.\n\nboom = b - oo - m: trei sunete.\nboek = b - oe - k: tot trei sunete.", "Понякога две букви заедно правят един звук: aa, oo, ee и oe.\n\nboom = b - oo - m: три звука.\nboek = b - oe - k: също три звука."),
+  "Letters en klanken — lezen en schrijven in het Nederlands (nieuwkomers)": S("Letters and sounds — reading and writing in Dutch (newcomers)", "الحروف والأصوات — القراءة والكتابة بالهولندية (للقادمين الجدد)", "Літери й звуки — читати й писати нідерландською (для новоприбулих)", "Harfler ve sesler — Hollandaca okuma ve yazma (yeni gelenler)", "Litere și sunete — citit și scris în olandeză (nou-veniți)", "Букви и звукове — четене и писане на нидерландски (новодошли)"),
 };
 
 const steps = [

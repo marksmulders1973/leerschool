@@ -3,13 +3,13 @@
 // bij de andere nieuwkomerpaden"). Elk fout antwoord krijgt "Nee, <waarom niet>." vóór de
 // bestaande hint. Rekenfouten worden herkend (plus i.p.v. min, cijfers omgedraaid, één te
 // veel…); zinnen krijgen een korte uitleg wanneer je ze wél zegt. De vertaling voor het
-// taalknopje wordt meteen in NIEUWKOMERS_STEUN gezet (NL-tekst → en/ar/uk/tr).
+// taalknopje wordt meteen in NIEUWKOMERS_STEUN gezet (NL-tekst → en/ar/uk/tr/ro/bg).
 import NIEUWKOMERS_STEUN from "./nieuwkomersSteun.js";
 
-const TALEN = ["en", "ar", "uk", "tr"];
-const NEE = { nl: "Nee,", en: "No,", ar: "لا،", uk: "Ні,", tr: "Hayır," };
+const TALEN = ["en", "ar", "uk", "tr", "ro", "bg"];
+const NEE = { nl: "Nee,", en: "No,", ar: "لا،", uk: "Ні,", tr: "Hayır,", ro: "Nu,", bg: "Не," };
 const kaal = (s) => String(s || "").replace(/\*\*/g, "").replace(/…/g, " ");
-const r5 = (nl, en, ar, uk, tr) => ({ nl, en, ar, uk, tr });
+const r5 = (nl, en, ar, uk, tr, ro, bg) => ({ nl, en, ar, uk, tr, ro, bg });
 
 // ── Rekenen: waarom is dit getal fout? ──────────────────────────────
 export function rekenReden(check, optie) {
@@ -22,50 +22,50 @@ export function rekenReden(check, optie) {
   if (/Wat komt na/i.test(q)) {
     const N = nums[nums.length - 1];
     const tien = /tien/i.test(q);
-    if (X === N) return r5(`${X} staat al in de vraag. Wat komt erna?`, `${X} is already in the question. What comes after it?`, `${X} موجود في السؤال. ماذا يأتي بعده؟`, `${X} вже є в запитанні. Що йде після нього?`, `${X} zaten soruda var. Ondan sonra ne gelir?`);
-    if (X < N) return r5(`${X} komt vóór ${N}, niet erna.`, `${X} comes before ${N}, not after.`, `${X} يأتي قبل ${N}، لا بعده.`, `${X} іде перед ${N}, а не після.`, `${X}, ${N} sayısından önce gelir, sonra değil.`);
-    if (tien && X === N + 1) return r5(`${X} is er één bij. Je moet er tien bij doen.`, `${X} is one more. You need ten more.`, `${X} هو واحد زيادة. تحتاج عشرة زيادة.`, `${X} — це на один більше. Треба на десять більше.`, `${X} bir fazlası. On fazlası lazım.`);
+    if (X === N) return r5(`${X} staat al in de vraag. Wat komt erna?`, `${X} is already in the question. What comes after it?`, `${X} موجود في السؤال. ماذا يأتي بعده؟`, `${X} вже є в запитанні. Що йде після нього?`, `${X} zaten soruda var. Ondan sonra ne gelir?`, `${X} este deja în întrebare. Ce vine după?`, `${X} вече е във въпроса. Какво идва след него?`);
+    if (X < N) return r5(`${X} komt vóór ${N}, niet erna.`, `${X} comes before ${N}, not after.`, `${X} يأتي قبل ${N}، لا بعده.`, `${X} іде перед ${N}, а не після.`, `${X}, ${N} sayısından önce gelir, sonra değil.`, `${X} vine înainte de ${N}, nu după.`, `${X} идва преди ${N}, а не след.`);
+    if (tien && X === N + 1) return r5(`${X} is er één bij. Je moet er tien bij doen.`, `${X} is one more. You need ten more.`, `${X} هو واحد زيادة. تحتاج عشرة زيادة.`, `${X} — це на один більше. Треба на десять більше.`, `${X} bir fazlası. On fazlası lazım.`, `${X} este cu unu mai mult. Trebuie să adaugi zece.`, `${X} е с едно повече. Трябва да добавиш десет.`);
   }
 
   if (/tientallen/i.test(q) && nums.length >= 2) {
     const [t, e] = nums;
-    if (X === t + e) return r5(`je telde ${t} + ${e}. Maar ${t} tientallen is ${t * 10}.`, `you added ${t} + ${e}. But ${t} tens is ${t * 10}.`, `جمعت ${t} + ${e}. لكن ${t} عشرات = ${t * 10}.`, `ти додав ${t} + ${e}. Але ${t} десятків — це ${t * 10}.`, `${t} + ${e} topladın. Ama ${t} onluk = ${t * 10}.`);
-    if (X === e * 10 + t) return r5(`je draaide de cijfers om. Eerst de tientallen: ${t * 10}.`, `you swapped the digits. Tens first: ${t * 10}.`, `قلبت الرقمين. العشرات أولًا: ${t * 10}.`, `ти переставив цифри. Спочатку десятки: ${t * 10}.`, `rakamların yerini değiştirdin. Önce onluklar: ${t * 10}.`);
+    if (X === t + e) return r5(`je telde ${t} + ${e}. Maar ${t} tientallen is ${t * 10}.`, `you added ${t} + ${e}. But ${t} tens is ${t * 10}.`, `جمعت ${t} + ${e}. لكن ${t} عشرات = ${t * 10}.`, `ти додав ${t} + ${e}. Але ${t} десятків — це ${t * 10}.`, `${t} + ${e} topladın. Ama ${t} onluk = ${t * 10}.`, `ai adunat ${t} + ${e}. Dar ${t} zeci înseamnă ${t * 10}.`, `събра ${t} + ${e}. Но ${t} десетици са ${t * 10}.`);
+    if (X === e * 10 + t) return r5(`je draaide de cijfers om. Eerst de tientallen: ${t * 10}.`, `you swapped the digits. Tens first: ${t * 10}.`, `قلبت الرقمين. العشرات أولًا: ${t * 10}.`, `ти переставив цифри. Спочатку десятки: ${t * 10}.`, `rakamların yerini değiştirdin. Önce onluklar: ${t * 10}.`, `ai inversat cifrele. Mai întâi zecile: ${t * 10}.`, `размени цифрите. Първо десетиците: ${t * 10}.`);
   }
 
   if (nums.length >= 2) {
     const [a, b] = nums;
     const soort = /groepjes van/i.test(q) ? "keer" : /verdeel/i.test(q) ? "delen" : q.includes("+") ? "plus" : q.includes("−") ? "min" : G === a + b ? "plus" : G === a - b ? "min" : null;
     const groot = Math.max(a, b), klein = Math.min(a, b);
-    if (soort === "plus" && X === groot - klein) return r5(`${X} is ${groot} − ${klein}. Maar hier komt er iets bij (+).`, `${X} is ${groot} − ${klein}. But here something is added (+).`, `${X} هو ${groot} − ${klein}. لكن هنا نضيف (+).`, `${X} — це ${groot} − ${klein}. Але тут треба додати (+).`, `${X}, ${groot} − ${klein} demek. Ama burada ekleme var (+).`);
-    if (soort === "min" && X === a + b) return r5(`${X} is ${a} + ${b}. Maar hier gaat er iets af (−).`, `${X} is ${a} + ${b}. But here something is taken away (−).`, `${X} هو ${a} + ${b}. لكن هنا نطرح (−).`, `${X} — це ${a} + ${b}. Але тут треба відняти (−).`, `${X}, ${a} + ${b} demek. Ama burada çıkarma var (−).`);
-    if (soort === "keer" && X === a + b) return r5(`${X} is ${a} + ${b}. Maar het zijn ${a} groepjes van ${b}.`, `${X} is ${a} + ${b}. But it is ${a} groups of ${b}.`, `${X} هو ${a} + ${b}. لكنها ${a} مجموعات من ${b}.`, `${X} — це ${a} + ${b}. Але це ${a} групи по ${b}.`, `${X}, ${a} + ${b} demek. Ama ${b} kişilik ${a} grup var.`);
+    if (soort === "plus" && X === groot - klein) return r5(`${X} is ${groot} − ${klein}. Maar hier komt er iets bij (+).`, `${X} is ${groot} − ${klein}. But here something is added (+).`, `${X} هو ${groot} − ${klein}. لكن هنا نضيف (+).`, `${X} — це ${groot} − ${klein}. Але тут треба додати (+).`, `${X}, ${groot} − ${klein} demek. Ama burada ekleme var (+).`, `${X} este ${groot} − ${klein}. Dar aici se adaugă ceva (+).`, `${X} е ${groot} − ${klein}. Но тук се добавя нещо (+).`);
+    if (soort === "min" && X === a + b) return r5(`${X} is ${a} + ${b}. Maar hier gaat er iets af (−).`, `${X} is ${a} + ${b}. But here something is taken away (−).`, `${X} هو ${a} + ${b}. لكن هنا نطرح (−).`, `${X} — це ${a} + ${b}. Але тут треба відняти (−).`, `${X}, ${a} + ${b} demek. Ama burada çıkarma var (−).`, `${X} este ${a} + ${b}. Dar aici se ia ceva (−).`, `${X} е ${a} + ${b}. Но тук се отнема нещо (−).`);
+    if (soort === "keer" && X === a + b) return r5(`${X} is ${a} + ${b}. Maar het zijn ${a} groepjes van ${b}.`, `${X} is ${a} + ${b}. But it is ${a} groups of ${b}.`, `${X} هو ${a} + ${b}. لكنها ${a} مجموعات من ${b}.`, `${X} — це ${a} + ${b}. Але це ${a} групи по ${b}.`, `${X}, ${a} + ${b} demek. Ama ${b} kişilik ${a} grup var.`, `${X} este ${a} + ${b}. Dar sunt ${a} grupe de câte ${b}.`, `${X} е ${a} + ${b}. Но това са ${a} групи по ${b}.`);
     if (soort === "delen") {
       const som = X === a - b ? `${a} − ${b}` : X === a + b ? `${a} + ${b}` : X === a * b ? `${a} × ${b}` : null;
-      if (som) return r5(`${X} is ${som}. Maar je deelt ${a} eerlijk uit.`, `${X} is ${som}. But you share ${a} fairly.`, `${X} هو ${som}. لكنك تقسم ${a} بالعدل.`, `${X} — це ${som}. Але ти ділиш ${a} порівну.`, `${X}, ${som} demek. Ama ${a} tanesini eşit paylaştırıyorsun.`);
+      if (som) return r5(`${X} is ${som}. Maar je deelt ${a} eerlijk uit.`, `${X} is ${som}. But you share ${a} fairly.`, `${X} هو ${som}. لكنك تقسم ${a} بالعدل.`, `${X} — це ${som}. Але ти ділиш ${a} порівну.`, `${X}, ${som} demek. Ama ${a} tanesini eşit paylaştırıyorsun.`, `${X} este ${som}. Dar tu împarți ${a} în mod egal.`, `${X} е ${som}. Но ти разделяш ${a} поравно.`);
     }
   }
-  if (/helft/i.test(q) && nums.length && X === nums[0] * 2) return r5(`${X} is het dubbele van ${nums[0]}. De helft is kleiner.`, `${X} is double ${nums[0]}. Half is smaller.`, `${X} هو ضعف ${nums[0]}. النصف أصغر.`, `${X} — це вдвічі більше за ${nums[0]}. Половина менша.`, `${X}, ${nums[0]} sayısının iki katı. Yarısı daha küçük.`);
-  if (nums.includes(X)) return r5(`${X} staat al in de vraag. Je moet nog rekenen.`, `${X} is already in the question. You still need to calculate.`, `${X} موجود في السؤال. ما زلت تحتاج أن تحسب.`, `${X} вже є в запитанні. Треба ще порахувати.`, `${X} zaten soruda var. Hâlâ hesaplaman gerekiyor.`);
+  if (/helft/i.test(q) && nums.length && X === nums[0] * 2) return r5(`${X} is het dubbele van ${nums[0]}. De helft is kleiner.`, `${X} is double ${nums[0]}. Half is smaller.`, `${X} هو ضعف ${nums[0]}. النصف أصغر.`, `${X} — це вдвічі більше за ${nums[0]}. Половина менша.`, `${X}, ${nums[0]} sayısının iki katı. Yarısı daha küçük.`, `${X} este dublul lui ${nums[0]}. Jumătatea este mai mică.`, `${X} е двойно повече от ${nums[0]}. Половината е по-малка.`);
+  if (nums.includes(X)) return r5(`${X} staat al in de vraag. Je moet nog rekenen.`, `${X} is already in the question. You still need to calculate.`, `${X} موجود في السؤال. ما زلت تحتاج أن تحسب.`, `${X} вже є в запитанні. Треба ще порахувати.`, `${X} zaten soruda var. Hâlâ hesaplaman gerekiyor.`, `${X} este deja în întrebare. Mai trebuie să calculezi.`, `${X} вече е във въпроса. Трябва още да сметнеш.`);
   const d = X - G;
   if (Math.abs(d) === 10) return d > 0
-    ? r5(`${X} is tien te veel. Kijk goed naar de tientallen.`, `${X} is ten too many. Look carefully at the tens.`, `${X} أكثر بعشرة. انظر جيدًا إلى العشرات.`, `${X} — на десять більше. Уважно подивись на десятки.`, `${X} on fazla. Onluklara iyi bak.`)
-    : r5(`${X} is tien te weinig. Kijk goed naar de tientallen.`, `${X} is ten too few. Look carefully at the tens.`, `${X} أقل بعشرة. انظر جيدًا إلى العشرات.`, `${X} — на десять менше. Уважно подивись на десятки.`, `${X} on eksik. Onluklara iyi bak.`);
+    ? r5(`${X} is tien te veel. Kijk goed naar de tientallen.`, `${X} is ten too many. Look carefully at the tens.`, `${X} أكثر بعشرة. انظر جيدًا إلى العشرات.`, `${X} — на десять більше. Уважно подивись на десятки.`, `${X} on fazla. Onluklara iyi bak.`, `${X} este cu zece prea mult. Uită-te bine la zeci.`, `${X} е с десет повече. Погледни добре десетиците.`)
+    : r5(`${X} is tien te weinig. Kijk goed naar de tientallen.`, `${X} is ten too few. Look carefully at the tens.`, `${X} أقل بعشرة. انظر جيدًا إلى العشرات.`, `${X} — на десять менше. Уважно подивись на десятки.`, `${X} on eksik. Onluklara iyi bak.`, `${X} este cu zece prea puțin. Uită-te bine la zeci.`, `${X} е с десет по-малко. Погледни добре десетиците.`);
   if (Math.abs(d) === 1) return d > 0
-    ? r5(`${X} is één te veel. Tel nog eens precies.`, `${X} is one too many. Count again carefully.`, `${X} أكثر بواحد. عُدّ مرة أخرى بدقة.`, `${X} — на один більше. Порахуй ще раз уважно.`, `${X} bir fazla. Tekrar dikkatle say.`)
-    : r5(`${X} is één te weinig. Tel nog eens precies.`, `${X} is one too few. Count again carefully.`, `${X} أقل بواحد. عُدّ مرة أخرى بدقة.`, `${X} — на один менше. Порахуй ще раз уважно.`, `${X} bir eksik. Tekrar dikkatle say.`);
+    ? r5(`${X} is één te veel. Tel nog eens precies.`, `${X} is one too many. Count again carefully.`, `${X} أكثر بواحد. عُدّ مرة أخرى بدقة.`, `${X} — на один більше. Порахуй ще раз уважно.`, `${X} bir fazla. Tekrar dikkatle say.`, `${X} este cu unu prea mult. Numără din nou cu atenție.`, `${X} е с едно повече. Преброй пак внимателно.`)
+    : r5(`${X} is één te weinig. Tel nog eens precies.`, `${X} is one too few. Count again carefully.`, `${X} أقل بواحد. عُدّ مرة أخرى بدقة.`, `${X} — на один менше. Порахуй ще раз уважно.`, `${X} bir eksik. Tekrar dikkatle say.`, `${X} este cu unu prea puțin. Numără din nou cu atenție.`, `${X} е с едно по-малко. Преброй пак внимателно.`);
   return d > 0
-    ? r5(`${X} is te veel.`, `${X} is too many.`, `${X} أكثر من اللازم.`, `${X} — забагато.`, `${X} fazla.`)
-    : r5(`${X} is te weinig.`, `${X} is too few.`, `${X} أقل من اللازم.`, `${X} — замало.`, `${X} az.`);
+    ? r5(`${X} is te veel.`, `${X} is too many.`, `${X} أكثر من اللازم.`, `${X} — забагато.`, `${X} fazla.`, `${X} este prea mult.`, `${X} е твърде много.`)
+    : r5(`${X} is te weinig.`, `${X} is too few.`, `${X} أقل من اللازم.`, `${X} — замало.`, `${X} az.`, `${X} este prea puțin.`, `${X} е твърде малко.`);
 }
 
 // ── Rekentaal: namen vergelijken en rekenwoorden ─────────────────────
 const REKENWOORD = {
-  "plus (+)": r5("plus is als er iets bij komt.", "plus is when something is added.", "الجمع عندما يُضاف شيء.", "плюс — це коли щось додається.", "artı, bir şey eklenince."),
-  "min (−)": r5("min is als er iets weggaat.", "minus is when something goes away.", "الطرح عندما يذهب شيء.", "мінус — це коли щось забирають.", "eksi, bir şey gidince."),
-  "keer (×)": r5("keer is hetzelfde getal een paar keer.", "times is the same number a few times.", "الضرب هو نفس العدد عدة مرات.", "помножити — це те саме число кілька разів.", "çarpı, aynı sayının birkaç kez olması."),
-  "2 + 4": r5("2 + 4 is plus, geen keer.", "2 + 4 is plus, not times.", "2 + 4 جمع، وليس ضربًا.", "2 + 4 — це плюс, а не множення.", "2 + 4 artı, çarpı değil."),
-  "4 − 2": r5("4 − 2 is min, geen keer.", "4 − 2 is minus, not times.", "4 − 2 طرح، وليس ضربًا.", "4 − 2 — це мінус, а не множення.", "4 − 2 eksi, çarpı değil."),
+  "plus (+)": r5("plus is als er iets bij komt.", "plus is when something is added.", "الجمع عندما يُضاف شيء.", "плюс — це коли щось додається.", "artı, bir şey eklenince.", "plus este când se adaugă ceva.", "плюс е, когато се добавя нещо."),
+  "min (−)": r5("min is als er iets weggaat.", "minus is when something goes away.", "الطرح عندما يذهب شيء.", "мінус — це коли щось забирають.", "eksi, bir şey gidince.", "minus este când se ia ceva.", "минус е, когато нещо си отива."),
+  "keer (×)": r5("keer is hetzelfde getal een paar keer.", "times is the same number a few times.", "الضرب هو نفس العدد عدة مرات.", "помножити — це те саме число кілька разів.", "çarpı, aynı sayının birkaç kez olması.", "ori este același număr de câteva ori.", "по е същото число няколко пъти."),
+  "2 + 4": r5("2 + 4 is plus, geen keer.", "2 + 4 is plus, not times.", "2 + 4 جمع، وليس ضربًا.", "2 + 4 — це плюс, а не множення.", "2 + 4 artı, çarpı değil.", "2 + 4 este plus, nu ori.", "2 + 4 е плюс, а не по."),
+  "4 − 2": r5("4 − 2 is min, geen keer.", "4 − 2 is minus, not times.", "4 − 2 طرح، وليس ضربًا.", "4 − 2 — це мінус, а не множення.", "4 − 2 eksi, çarpı değil.", "4 − 2 este minus, nu ori.", "4 − 2 е минус, а не по."),
 };
 export function rekentaalReden(check, optie) {
   if (REKENWOORD[optie]) return REKENWOORD[optie];
@@ -78,16 +78,16 @@ export function rekentaalReden(check, optie) {
   const allemaalGelijk = getallen.every((n) => n === getallen[0]);
   if (/evenveel/i.test(optie) && !allemaalGelijk) {
     const [a, b] = getallen;
-    return r5(`${a} en ${b} is niet evenveel.`, `${a} and ${b} are not the same.`, `${a} و ${b} ليسا متساويين.`, `${a} і ${b} — не однаково.`, `${a} ve ${b} eşit değil.`);
+    return r5(`${a} en ${b} is niet evenveel.`, `${a} and ${b} are not the same.`, `${a} و ${b} ليسا متساويين.`, `${a} і ${b} — не однаково.`, `${a} ve ${b} eşit değil.`, `${a} și ${b} nu sunt la fel de mult.`, `${a} и ${b} не са еднакво.`);
   }
   if (/heeft meer/i.test(optie) && allemaalGelijk) {
     const n = getallen[0];
-    return r5(`ze hebben allebei ${n}.`, `they both have ${n}.`, `لدى كلٍّ منهما ${n}.`, `в обох по ${n}.`, `ikisinde de ${n} var.`);
+    return r5(`ze hebben allebei ${n}.`, `they both have ${n}.`, `لدى كلٍّ منهما ${n}.`, `в обох по ${n}.`, `ikisinde de ${n} var.`, `amândoi au ${n}.`, `и двамата имат ${n}.`);
   }
   const p = paren.find((x) => x.naam === optie);
   if (p) return wilMin
-    ? r5(`${p.naam} heeft ${p.n}. Dat is meer dan ${doel}.`, `${p.naam} has ${p.n}. That is more than ${doel}.`, `عند ${p.naam} ${p.n}. هذا أكثر من ${doel}.`, `У ${p.naam} — ${p.n}. Це більше, ніж ${doel}.`, `${p.naam}: ${p.n}. Bu, ${doel} sayısından fazla.`)
-    : r5(`${p.naam} heeft ${p.n}. Dat is minder dan ${doel}.`, `${p.naam} has ${p.n}. That is less than ${doel}.`, `عند ${p.naam} ${p.n}. هذا أقل من ${doel}.`, `У ${p.naam} — ${p.n}. Це менше, ніж ${doel}.`, `${p.naam}: ${p.n}. Bu, ${doel} sayısından az.`);
+    ? r5(`${p.naam} heeft ${p.n}. Dat is meer dan ${doel}.`, `${p.naam} has ${p.n}. That is more than ${doel}.`, `عند ${p.naam} ${p.n}. هذا أكثر من ${doel}.`, `У ${p.naam} — ${p.n}. Це більше, ніж ${doel}.`, `${p.naam}: ${p.n}. Bu, ${doel} sayısından fazla.`, `${p.naam} are ${p.n}. Asta e mai mult decât ${doel}.`, `${p.naam} има ${p.n}. Това е повече от ${doel}.`)
+    : r5(`${p.naam} heeft ${p.n}. Dat is minder dan ${doel}.`, `${p.naam} has ${p.n}. That is less than ${doel}.`, `عند ${p.naam} ${p.n}. هذا أقل من ${doel}.`, `У ${p.naam} — ${p.n}. Це менше, ніж ${doel}.`, `${p.naam}: ${p.n}. Bu, ${doel} sayısından az.`, `${p.naam} are ${p.n}. Asta e mai puțin decât ${doel}.`, `${p.naam} има ${p.n}. Това е по-малко от ${doel}.`);
   return rekenReden(check, optie);
 }
 

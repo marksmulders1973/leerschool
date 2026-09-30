@@ -64,9 +64,9 @@ export function useVanzelfZeggen(tekst, actief, sleutel = null) {
 }
 
 // ── Spreken in de thuistaal (Plaatjesdictee, Mark 29 sep 2026: "spell home" — de vraag in de eigen
-// taal verklapt de Nederlandse spelling niet). Niet elk toestel heeft een Arabische/Oekraïense/Turkse
+// taal verklapt de Nederlandse spelling niet). Niet elk toestel heeft een Arabische/Oekraïense/Turkse/Roemeense/Bulgaarse
 // stem: heeftStem() zegt of het kan; zo niet, dan toont het scherm het woord in de thuistaal.
-const TAAL_CODE = { en: "en", ar: "ar", uk: "uk", tr: "tr", nl: "nl" };
+const TAAL_CODE = { en: "en", ar: "ar", uk: "uk", tr: "tr", ro: "ro", bg: "bg", nl: "nl" };
 export function stemVoor(taal) {
   try {
     const code = TAAL_CODE[taal] || taal;

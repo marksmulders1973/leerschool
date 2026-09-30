@@ -41,9 +41,9 @@ const SUGGESTIES = [
 ];
 // Nieuwkomerpaden (kliktest 26 sep 2026): korte zinnen die een beginner kan lezen, mét vertaling.
 const SUGGESTIES_NK = [
-  ["Wat betekent dit woord?", { en: "What does this word mean?", ar: "ماذا تعني هذه الكلمة؟", uk: "Що означає це слово?", tr: "Bu kelime ne demek?" }],
-  ["Zeg het makkelijker", { en: "Say it more simply", ar: "قلها بشكل أسهل", uk: "Скажи простіше", tr: "Daha kolay söyle" }],
-  ["Geef een voorbeeld", { en: "Give an example", ar: "أعطني مثالًا", uk: "Дай приклад", tr: "Bir örnek ver" }],
+  ["Wat betekent dit woord?", { en: "What does this word mean?", ar: "ماذا تعني هذه الكلمة؟", uk: "Що означає це слово?", tr: "Bu kelime ne demek?", ro: "Ce înseamnă acest cuvânt?", bg: "Какво означава тази дума?" }],
+  ["Zeg het makkelijker", { en: "Say it more simply", ar: "قلها بشكل أسهل", uk: "Скажи простіше", tr: "Daha kolay söyle", ro: "Spune mai simplu", bg: "Кажи го по-просто" }],
+  ["Geef een voorbeeld", { en: "Give an example", ar: "أعطني مثالًا", uk: "Дай приклад", tr: "Bir örnek ver", ro: "Dă un exemplu", bg: "Дай пример" }],
 ];
 
 // Hardop voorlezen met de gratis browserstem (Nederlands), iets hoger = liever
@@ -98,7 +98,7 @@ export default function AITutor({ open, onClose, pathTitle, pathId, stepTitle, s
   const groet = nk
     ? `Hoi! Ik ben ${naam}. Ik help je. Wat snap je niet?`
     : `Hoi! Ik ben ${naam} en ik weet aan welke vraag je werkt. Vertel wat je lastig vindt, of tik op een knopje hieronder — we komen er samen uit.`;
-  const groetSteun = { en: `Hi! I am ${naam}. I will help you. What don't you understand?`, ar: `مرحبًا! أنا ${naam}. سأساعدك. ما الذي لا تفهمه؟`, uk: `Привіт! Я ${naam}. Я тобі допоможу. Що тобі незрозуміло?`, tr: `Merhaba! Ben ${naam}. Sana yardım ederim. Neyi anlamadın?` };
+  const groetSteun = { en: `Hi! I am ${naam}. I will help you. What don't you understand?`, ar: `مرحبًا! أنا ${naam}. سأساعدك. ما الذي لا تفهمه؟`, uk: `Привіт! Я ${naam}. Я тобі допоможу. Що тобі незрозуміло?`, tr: `Merhaba! Ben ${naam}. Sana yardım ederim. Neyi anlamadın?`, ro: `Salut! Eu sunt ${naam}. Te ajut eu. Ce nu înțelegi?`, bg: `Здравей! Аз съм ${naam}. Ще ти помогна. Какво не разбираш?` };
 
   // Meten of leerlingen Vonk leuk vinden: open-event (venster geopend) los van
   // het vraag-event (echt iets gevraagd) → trechter open→vraag. Stop met praten
