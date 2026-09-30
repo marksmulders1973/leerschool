@@ -43,6 +43,7 @@ import { actieveBuddyPersona } from "../zoo/buddies.js";
 import { TAFEREEL_BY_LEERPAD } from "../zoo/uitvindersData.js";
 import { LEERMOMENT_BY_LEERPAD } from "../zoo/parkLeermomenten.js";
 import { track } from "../../utils.js";
+import { meldAntwoord } from "../niveau/signalen.js";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
 import { noteerAntwoord } from "../../shared/herhaalNieuwkomers.js";
 import { SteunVraag, SteunOptie, SteunTekst, SteunCtx, UI_STEUN, UI_GETAL, maakSteunMap, steunGoed, useSteun, leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
@@ -495,6 +496,10 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const [uitlegSimpeler, setUitlegSimpeler] = useState(false);
   // Eerste-poging-score van deze sessie (B0.6) — voedt het AllDone-scherm.
   const sessionScoreRef = useRef({ tries: 0, correct: 0 });
+  // 📈 Niveaulijn fase 1: wanneer kwam deze vraag in beeld, hoe vaak hulp gebruikt (signalen.js)
+  const vraagStartRef = useRef(Date.now());
+  const hintsRef = useRef(0);
+  useEffect(() => { vraagStartRef.current = Date.now(); hintsRef.current = 0; }, [stepIdx, checkIdx]);
   const schedule = useCallback((fn, ms) => {
     const id = setTimeout(fn, ms);
     pendingTimersRef.current.push(id);
@@ -688,6 +693,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const naarUitleg = (na) => {
     resumeCheckIdxRef.current = checkIdx;
     try { track("leerpad_uitleg_open", { pad: pathId, stap: stepIdx, vraag: checkIdx, na }); } catch { /* */ }
+    if (na !== "vooraf") hintsRef.current += 1;
     setMode("reading");
   };
 
@@ -786,6 +792,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       // 25 sep 2026: leerpad-antwoorden werden niet als event gemeten (alleen learn_progress), dus "sommen"
       // in het dagrapport miste al het oefenen in leerpaden — ook de nieuwkomers. Eerste poging per vraag.
       try { track("question_answered", { bron: "leerpad", pad: pathId, is_correct: i === currentCheck.answer, steuntaal: path?.steunTeksten ? leesSteuntaal() : undefined }); } catch { /* */ }
+      try { meldAntwoord({ pathId, correct: i === currentCheck.answer, ms: Date.now() - vraagStartRef.current, hints: hintsRef.current, bron: "leerpad" }); } catch { /* */ }
       if (i === currentCheck.answer) foutReeksRef.current = 0;
       else {
         foutReeksRef.current += 1;

@@ -9,6 +9,7 @@ import Button from "../../shared/ui/Button.jsx";
 import Card from "../../shared/ui/Card.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
+import { meldAntwoord, vakVanLabel } from "../niveau/signalen.js";
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { recordAnswerForPath } from "../mastery/mastery.js";
 import { track, getIncomingRef } from "../../utils.js";
@@ -68,6 +69,7 @@ function uitlegVan(v) {
 // ── Vraag ─────────────────────────────────────────────────────────
 export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron = "start-kwartier" }) {
   const [gekozen, setGekozen] = useState(null);
+  const startRef = useRef(Date.now()); // 📈 niveaulijn: tijd per vraag
   const goed = gekozen != null && gekozen === vraag.answer;
   const uitleg = uitlegVan(vraag);
   const hint = gekozen != null && !goed ? vraag.wrongHints?.[gekozen] : null;
@@ -97,7 +99,7 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron
             key={i}
             type="button"
             disabled={gekozen != null}
-            onClick={() => { setGekozen(i); onBeantwoord(i === vraag.answer); }}
+            onClick={() => { setGekozen(i); onBeantwoord(i === vraag.answer); try { meldAntwoord({ pathId: vraag.pathId || null, vak: vakVanLabel(onderwerpVan(vraag)) || undefined, correct: i === vraag.answer, ms: Date.now() - startRef.current, bron }); } catch { /* */ } }}
             style={S.optie(state)}
           >
             <MdInline text={String(opt)} />

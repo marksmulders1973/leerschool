@@ -15,6 +15,7 @@ import { telAntwoordVoorVriend } from "../referral/referral.js";
 import { VraagKaart } from "../onboarding/StartKwartier.jsx";
 import { kwartierStand, huidigBlok, blokKlaar, stopKwartier } from "./kwartier.js";
 import TrouweGastKaart from "../account/TrouweGastKaart.jsx";
+import { meldKwartierKlaar, meldGevoel } from "../niveau/signalen.js";
 
 const S = {
   wrap: { maxWidth: 560, margin: "0 auto", padding: "12px 14px 96px", color: "var(--color-text)", fontFamily: "var(--font-body)" },
@@ -86,7 +87,10 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
     if (blok.soort === "werkwoorden" && onWerkwoorden) onWerkwoorden();
   }, [blok?.soort, stand?.idx]); // eslint-disable-line react-hooks/exhaustive-deps
 
-  const klaar = (res) => { const k = blokKlaar(res); setStand(k ? { ...k } : kwartierStand()); try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* */ } };
+  // 📈 Niveaulijn fase 1: elk 3e kwartier vragen we het kind hoe het was (signalen.js).
+  const [vraagGevoel, setVraagGevoel] = useState(false);
+  const [gevoel, setGevoel] = useState(null);
+  const klaar = (res) => { const k = blokKlaar(res); setStand(k ? { ...k } : kwartierStand()); if (k?.klaar) { try { if (meldKwartierKlaar()) setVraagGevoel(true); } catch { /* */ } } try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* */ } };
 
   if (!stand) {
     return (
@@ -109,6 +113,18 @@ export default function VandaagKwartier({ userName, userLevel, authUser, onDicte
           <h2 style={{ ...S.titel, fontSize: 24 }}>Je kwartier van vandaag zit erop!</h2>
           {totaal > 0 && <div style={{ color: "var(--color-text-muted)", marginTop: 4 }}>{goed} van de {totaal} goed</div>}
         </div>
+        {vraagGevoel && (
+          <Card variant="study" padding="md">
+            <div style={{ fontWeight: 800, marginBottom: 8 }}>{gevoel ? "Dank je! Daar leert de app van." : "Hoe waren de vragen vandaag?"}</div>
+            {!gevoel && (
+              <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                {["te makkelijk", "goed", "te moeilijk"].map((g) => (
+                  <Button key={g} size="sm" variant="ghost" onClick={() => { setGevoel(g); try { meldGevoel(g, { bron: "vandaag" }); } catch { /* */ } }}>{g[0].toUpperCase() + g.slice(1)}</Button>
+                ))}
+              </div>
+            )}
+          </Card>
+        )}
         <Card variant="study" padding="md">
           {stand.resultaten.map((r, i) => (
             <div key={i} style={{ display: "flex", justifyContent: "space-between", padding: "6px 0", borderTop: i ? "1px solid var(--color-border-soft)" : "none", fontSize: 14.5 }}>

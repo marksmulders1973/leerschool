@@ -5,6 +5,7 @@ import { GROEP_SETS } from "./groepen/index.js";
 // Groep 6-8 kan met de vaste set; lagere groepen pas zodra ze een eigen set hebben (anders breuken in groep 3).
 const GROEPEN = ["3", "4", "5", "6", "7", "8"].filter((g) => GROEP_SETS[g] || ["6", "7", "8"].includes(g));
 import LuisterKnop from "../../shared/ui/LuisterKnop.jsx";
+import { meldAntwoord, meldGevoel } from "../niveau/signalen.js";
 import { getVragenVoorConcept, nieuweVolgorde } from "./questions.js";
 import { track } from "../../utils.js";
 import { GratisBadge } from "../../subscription/ProBadge.jsx";
@@ -241,6 +242,8 @@ function QuizScherm({ naam, groep, onDone }) {
     const ms = Date.now() - vraagStartRef.current;
     const nieuw = [...antwoorden, { niveau: vraag.niveau, goed, idx: vraagIdx, ms, ...(weetNiet ? { weetNiet: true } : {}) }];
     if (weetNiet) { try { track("kwartiercheck_weetniet", { concept: concept.id, niveau: vraag.niveau }); } catch { /* */ } }
+    // 📈 niveaulijn: moeilijkheid = de groep van de check (+0,5 voor een niveau-2-vraag)
+    try { meldAntwoord({ correct: goed, ms, weetNiet, bron: "kwartiercheck", vak: concept.vak === "begrijpend-lezen" ? "lezen" : concept.vak, moeilijkheid: (parseInt(groep, 10) || 8) + (vraag.niveau >= 2 ? 0.5 : 0) }); } catch { /* */ }
     const bijgewerkt = { ...antwoordenPerConcept, [concept.id]: nieuw };
     setAntwoordenPerConcept(bijgewerkt);
     setBevestigd(true);
@@ -409,6 +412,7 @@ function GevoelVraag({ groep, scores }) {
     const telling = { beheerst: 0, gedeeltelijk: 0, nogniet: 0 };
     Object.values(scores || {}).forEach((s) => { if (s?.oordeel === OORDELEN.beheerst) telling.beheerst += 1; else if (s?.oordeel === OORDELEN.gedeeltelijk) telling.gedeeltelijk += 1; else telling.nogniet += 1; });
     try { track("kwartiercheck_gevoel", { gevoel: id, groep, ...telling }); } catch { /* */ }
+    try { meldGevoel(id === "makkelijk" ? "te makkelijk" : id === "moeilijk" ? "te moeilijk" : "goed", { bron: "kwartiercheck" }); } catch { /* */ }
     try { localStorage.setItem("lk_kwartiercheck_gevoel", JSON.stringify({ gevoel: id, groep, datum: new Date().toISOString().slice(0, 10) })); } catch { /* */ }
   };
   const g = parseInt(groep, 10) || 8;
