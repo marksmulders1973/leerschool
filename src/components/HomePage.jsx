@@ -124,20 +124,21 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
   const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
-  // Park tokens (de muntjes uit Mijn Park) als haak op de home: laat je saldo
-  // zien zodat je wilt terugkomen en wilt leren om meer te verdienen.
-  const [parkTokens, setParkTokens] = useState(null);
-  useEffect(() => {
-    if (!authUser?.id) return;
-    let cancel = false;
-    supabase.from("zoo_state").select("coins").eq("user_id", authUser.id).maybeSingle()
-      .then(({ data }) => { if (!cancel && data) setParkTokens(data.coins); })
-      .catch(() => {});
-    return () => { cancel = true; };
-  }, [authUser?.id]);
+  // (Park-tokens-haak in de voet weg 30 sep 2026 — zie de voet-links onderaan.)
   const [shake, setShake] = useState(false);
   const [nameError, setNameError] = useState("");
   const [homeSearch, setHomeSearch] = useState("");
+  // Rol al bekend op dit apparaat? (naam in de app óf naam+rol in ls_user) →
+  // dan geen "Ik ben: leerling · student · …"-regel meer (home-herschikking 30 sep 2026).
+  const [opgeslagenRol] = useState(() => {
+    try { const d = JSON.parse(localStorage.getItem("ls_user") || "{}"); return d.name && d.role ? d.role : null; } catch { return null; }
+  });
+  const rolBekend = !!(userName || "").trim() || !!opgeslagenRol;
+  const rolLinkStijl = {
+    background: "none", border: "none", padding: "2px 3px", cursor: "pointer",
+    fontFamily: "inherit", fontSize: "inherit", color: "rgba(255,255,255,0.85)",
+    textDecoration: "underline", textUnderlineOffset: 3, textDecorationColor: "rgba(255,255,255,0.35)",
+  };
   const [step, setStep] = useState(pendingCode ? "name" : "role");
   const [pendingRole, setPendingRole] = useState(pendingCode ? "leerling" : null);
   const [pendingFeature, setPendingFeature] = useState(null);
@@ -560,426 +561,180 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           />
         )}
 
-        {/* 🎟️ Code-balk (Mark 27 aug): de handmatige code-ingang — afspraak met
-            Den Haag — direct zichtbaar bovenaan home. Voor iedereen dezelfde
-            neutrale uitnodiging; pas ná invullen het welkom + "code actief". */}
-        {step === "role" && <CodeBalk />}
-
-        {/* Welkom-terug-strook (Mark 11 aug: "zet mijn persoonlijke pagina
-            zichtbaar op de homepagina"). Alleen voor terugkerende bezoekers
-            mét naam — een nieuwe bezoeker heeft nog geen eigen pagina en
-            ziet gewoon de hero. Eén tik naar de thuisbasis = terugkom-lus. */}
-        {step === "role" && (userName || "").trim() && onMijnPagina && (
-          <button
-            onClick={onMijnPagina}
-            style={{
-              display: "flex", alignItems: "center", gap: 12,
-              width: "100%", maxWidth: 560, margin: "6px auto 4px",
-              padding: "12px 16px", borderRadius: 14, cursor: "pointer",
-              background: "linear-gradient(120deg, rgba(0,200,83,0.14), rgba(30,136,229,0.12))",
-              border: "1px solid rgba(0,200,83,0.4)",
-              color: "#fff", textAlign: "left", fontFamily: "var(--font-body)",
-            }}
-          >
-            <AvatarSvg config={loadAvatarConfig(userName)} size={40} />
-            <span style={{ flex: 1, minWidth: 0 }}>
-              <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 15 }}>
-                Welkom terug, {(userName || "").trim()}!
-              </span>
-              <span style={{ display: "block", fontSize: 12.5, color: "rgba(255,255,255,0.65)", marginTop: 1 }}>
-                Jouw pagina staat klaar — verder waar je was.
-              </span>
-            </span>
-            <span style={{
-              flexShrink: 0, padding: "8px 14px", borderRadius: 10,
-              background: "rgba(0,200,83,0.9)", color: "#00320f",
-              fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 13,
-            }}>
-              🏠 Mijn pagina
-            </span>
-          </button>
-        )}
-
-        {/* HERO (herbouwd 2026-06-10, verbeterplan spoor A): merk groot en
-            gecentreerd, ÉÉN slogan (BRAND.slogan — A4-fix dubbele slogan), één
-            ouder-zin, één primaire CTA, en de gratis/geen-abonnement-belofte
-            als rustige vertrouwensregel i.p.v. losse banner-dozen. */}
+        {/* ─── RUSTIGE KOP (Mark 30 sep 2026: "home schreeuwt, ~7 voordeuren
+            naar oefenen"). Nieuwe volgorde op het eerste scherm (390px):
+            1. logo + naam + één slogan + korte intro (voorleesbaar)
+            2. code-regel (één gedempte regel, klapt open — flyers rekenen erop)
+            3. zoekbalk (van onderaan naar boven verplaatst)
+            4. ÉÉN primaire knop: Mijn pagina (terug: "welkom terug", nieuw:
+               "begin je eerste kwartier" → /mijn heeft een lege staat met startknop)
+            5. rol-regel als tekstlinks, alleen zolang de rol onbekend is.
+            Weg: "Start gratis met oefenen", de twee foto-rol-tegels + examen-CTA,
+            "Meer dan een toets"-banner, "Dit vind je allemaal"-tegels, ouder-kaart. */}
         {step === "role" && (
           <div style={{
-            alignSelf: "center", textAlign: "center", maxWidth: 560,
-            margin: "8px auto 22px", padding: "0 12px",
+            alignSelf: "center", textAlign: "center", width: "100%", maxWidth: 560,
+            margin: "0 auto 4px", padding: "0 12px", boxSizing: "border-box",
           }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 8 }}>
+            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 10, marginBottom: 4 }}>
               <svg viewBox="0 0 100 100" style={{
-                width: 42, height: 42, flexShrink: 0, opacity: 0,
+                width: 36, height: 36, flexShrink: 0, opacity: 0,
                 transformOrigin: "50% 50%",
                 animation: "lk-mark-circle 0.9s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s forwards",
               }} aria-hidden="true">
                 <path d="M50,8 A42,42 0 0,1 92,50 L50,50 Z" fill="#00C853" />
               </svg>
-              <span style={{
+              <h1 style={{
+                margin: 0,
                 fontFamily: "var(--font-display, -apple-system, sans-serif)",
-                fontSize: 34, fontWeight: 800, color: "#fff",
+                fontSize: 30, fontWeight: 800, color: "#fff",
                 letterSpacing: "-0.01em", opacity: 0,
                 animation: "lk-mark-word 0.7s ease-out 0.55s forwards",
               }}>
                 {BRAND.name}
-              </span>
+              </h1>
             </div>
             <div style={{
-              fontFamily: "var(--font-display)", fontSize: 17.5, fontWeight: 700,
-              color: "#ffd54f", marginBottom: 10, opacity: 0,
+              fontFamily: "var(--font-display)", fontSize: 15.5, fontWeight: 700,
+              color: "#ffd54f", marginBottom: 6, opacity: 0,
               animation: "lk-mark-slogan 0.7s ease-out 0.9s forwards",
             }}>
               {BRAND.slogan}
             </div>
             {/* Voorlees-oortje (Mark 25 jul): ook de ouder die moeite heeft met
-                lezen (voedselbank-/Leergeld-gezinnen) moet de belofte kunnen
-                hóren in plaats van lezen. */}
+                lezen moet de belofte kunnen hóren. Leest nu alleen slogan + intro. */}
             <div style={{
-              fontFamily: "var(--font-body)", fontSize: 14.5, lineHeight: 1.55,
-              color: "rgba(255,255,255,0.85)", marginBottom: 18,
+              fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.5,
+              color: "rgba(255,255,255,0.8)", marginBottom: 6,
             }}>
-              <VoorleesBlok tekst={`${BRAND.slogan}. Gratis oefenen voor de Doorstroomtoets, groep 6 tot en met 8, en voor de VMBO-examens. Snapt je kind het niet? Dan leggen we het makkelijker uit. Je hebt geen account nodig. Druk op de gele knop om te beginnen.`} accent="#ffd54f">
-                Gratis oefenen voor de <strong style={{ color: "#fff" }}>Doorstroomtoets (groep 6-8)</strong> en{" "}
-                <strong style={{ color: "#fff" }}>VMBO-examens</strong> — met uitleg op drie niveaus, tot je kind het écht snapt.
-              </VoorleesBlok>
-            </div>
-            <button
-              onClick={() => handleFeatureClick("cito")}
-              style={{
-                display: "inline-block", cursor: "pointer", border: "none",
-                background: "linear-gradient(135deg, #ffd54f, #ffb300)",
-                color: "#1a1a00", borderRadius: 999, padding: "15px 34px",
-                fontFamily: "var(--font-display)", fontSize: 17, fontWeight: 800,
-                letterSpacing: 0.2, boxShadow: "0 6px 24px rgba(255,213,79,0.35)",
-              }}
-            >
-              Start gratis met oefenen →
-            </button>
-            <div style={{
-              fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.7,
-              color: "rgba(255,255,255,0.72)", marginTop: 14,
-            }}>
-              {/* Overzichts-snoei 12 aug (Mark: "home overzichtelijk"): de
-                  tweede regel ("ook ná 2026…") weg — dat verhaal staat op
-                  Wat kost het?; één rustige vertrouwensregel is genoeg. */}
-              ✓ Geen account nodig &nbsp;·&nbsp; ✓ De basis blijft gratis, gegarandeerd t/m 2031 &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
+              {/* Alleen het oortje; de uitleg staat lager bij "Wat is Leerkwartier?" (Mark 30 sep: logo, slogan, code, zoekbalk, Mijn pagina). */}
+              <VoorleesBlok tekst={`${BRAND.slogan}. Gratis oefenen voor de Doorstroomtoets en de VMBO-examens, met uitleg op drie niveaus. Vul een code in, zoek wat je wilt oefenen, of ga naar Mijn pagina.`} accent="#ffd54f" />
             </div>
           </div>
         )}
 
-        {/* Herschikking 2026-07-03 (Mark: "app is gegroeid, home moet duidelijker"):
-            de rol-tegels — aantoonbaar dé actie op deze pagina (role_selected =
-            veruit het grootste event) — staan nu direct onder de hero i.p.v.
-            1,5 scherm diep. Direct eronder: een eigen ingang voor de OUDER
-            (primaire doelgroep), die eerst alleen als footer-linkje bestond. */}
-        {/* Hero — 4 even grote vierkante tegels in responsive grid: 3D-teaser
-            als blikvanger en 3 rol-tegels (Leerling / Student / Leerkracht).
-            Bewust géén "Leren" / "Test" tegels: die concurreerden met de rol-
-            keuze en gaven first-time-users keuze-paralyse (audit 2026-05-06).
-            Na rolkeuze verschijnen Leren + Test vanzelf in de bottom-nav. */}
+        {/* 🎟️ Code-balk (Mark 27 aug): de handmatige code-ingang — afspraak met
+            Den Haag — blijft op home. Sinds 30 sep als één rustige regel (`rustig`);
+            ná invullen blijft de dikke "code actief"-bevestiging. */}
+        {step === "role" && <CodeBalk rustig />}
+
+        {/* Zoekbalk — bovenaan (30 sep): "wat wil je oefenen?" is dé vraag;
+            groep-zoekopdrachten ("groep 6") vinden nu ook paden op groep-bereik
+            (LearnPathsHub) + de losse pagina's (snelkoppelingen). */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ margin: "6px auto 0", maxWidth: 560 }}>
+            <div style={{
+              display: "flex", gap: 8, alignItems: "center",
+              background: "rgba(255,255,255,0.06)",
+              border: "1px solid rgba(255,255,255,0.16)",
+              borderRadius: 999, padding: "6px 6px 6px 16px",
+            }}>
+              <span aria-hidden="true" style={{ fontSize: 16, opacity: 0.7 }}>🔍</span>
+              <input
+                type="search"
+                value={homeSearch}
+                onChange={(e) => setHomeSearch(e.target.value)}
+                onKeyDown={(e) => { if (e.key === "Enter") { const q = homeSearch.trim(); if (q.length >= 2) { track("home_zoek", { q: q.slice(0, 40) }); onSearchPaths?.(q); } } }}
+                placeholder="Wat wil je oefenen? bv. breuken, werkwoorden, groep 6"
+                aria-label="Zoek een onderwerp"
+                style={{
+                  flex: 1, minWidth: 0, border: "none", outline: "none",
+                  background: "transparent", color: "#fff",
+                  fontFamily: "var(--font-body)", fontSize: 14,
+                }}
+              />
+              <button
+                onClick={() => { const q = homeSearch.trim(); if (q.length >= 2) { track("home_zoek", { q: q.slice(0, 40) }); onSearchPaths?.(q); } }}
+                aria-label="Zoeken"
+                style={{
+                  flexShrink: 0, cursor: "pointer", border: "none", borderRadius: 999,
+                  background: "rgba(255,255,255,0.12)", color: "#fff",
+                  fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
+                  padding: "9px 16px",
+                }}
+              >
+                Zoek
+              </button>
+            </div>
+          </div>
+        )}
+
+        {/* ÉÉN primaire knop (30 sep): Mijn pagina. Terugkerend = welkom terug
+            (Mark 11 aug: "zet mijn persoonlijke pagina zichtbaar op de home");
+            nieuw = eerste kwartier — /mijn toont dan de lege staat met startknop
+            (v648). Alleen als onMijnPagina ontbreekt: de oude oefen-route. */}
         {step === "role" && (() => {
-          const tiles = [
-            // ⚠️ Was LOCKED-CONFIG: oranje Cito-CTA onder de Leerling-tegel
-            // (Mark akkoord 2026-05-07, ICP-rationale). VERWIJDERD 12 aug 2026
-            // bij Mark's "home overzichtelijk"-opdracht: de gele hero-knop
-            // "Start gratis met oefenen" doet sindsdien exact hetzelfde
-            // (handleFeatureClick("cito")) op hetzelfde scherm — twee knoppen
-            // naar één doel was de door de agent gemelde dubbeling. Terugzetten
-            // = cta-object teruggeven zoals bij de student-tegel (die houdt
-            // zijn examen-CTA, dat is een ánder doel).
-            //
-            // Iconen + copy upgrade 2026-05-07 (4-agents review, optie B):
-            //   - Lucide line-icons ipv emoji's (OS-onafhankelijk, brand-consistent)
-            //   - "Leerling" → "Basisschool" (parallel met "Student / vmbo · havo · vwo")
-            //   - "groep 1–8" → "groep 1 t/m 8" (geen en-dash-ambiguïteit)
-            //   - sub fontSize 10→11, opacity 0.55→0.7 (leesbaarheid)
-            {
-              key: "leerling",
-              // Brand-foto (jongen + meisje met Leerkwartier-shirt) ipv line-icon —
-              // Mark's wens 2026-05-07: "menselijke poot" voor de Basisschool-tegel.
-              // Vervangen 2026-05-07 (avond): nieuwe brand-foto in klaslokaal-setting.
-              // objectFit cover + center crop houdt gezichten + shirt-logo zichtbaar.
-              icon: (
-                <img
-                  src="/model-leerling.png"
-                  alt=""
-                  aria-hidden="true"
-                  loading="lazy"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "center 22%",
-                    borderRadius: 10,
-                    display: "block",
-                  }}
-                />
-              ),
-              label: (<>Ik ben <span style={{ color: "#fff176", fontWeight: 800 }}>leerling</span></>),
-              sub: "basisschool · groep 3 t/m 8",
-              color: "#0072ff", onClick: () => handleRoleClick("leerling"),
-            },
-            // Student-tegel met brand-foto (Mark akkoord 2026-05-07).
-            // objectPosition "center 25%" houdt het gezicht + shirtlogo zichtbaar
-            // in de vierkante tegel. Label/sub naar first-person op 2026-05-07
-            // (avond) — parallel met Leerling/Leerkracht.
-            {
-              key: "student",
-              icon: (
-                <img
-                  src="/model-student.jpg"
-                  alt=""
-                  aria-hidden="true"
-                  loading="lazy"
-                  style={{
-                    width: "100%",
-                    height: "100%",
-                    objectFit: "cover",
-                    objectPosition: "center 25%",
-                    borderRadius: 10,
-                    display: "block",
-                  }}
-                />
-              ),
-              label: (<>Ik ben <span style={{ color: "#fff176", fontWeight: 800 }}>student</span></>),
-              sub: "vmbo · havo · vwo",
-              color: "#7c3aed", onClick: () => handleRoleClick("student"),
-              cta: {
-                label: (
-                  <span style={{ display: "inline-flex", alignItems: "center", justifyContent: "center", gap: 5, flexWrap: "wrap" }}>
-                    <span style={{ fontSize: 20, lineHeight: 1 }}>🎓</span> Of direct naar{" "}
-                    <span style={{ color: "#fff176", fontWeight: 800 }}>examen</span> oefenen
-                  </span>
-                ),
-                onClick: () => handleFeatureClick("examens"),
-              },
-            },
-            // Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-tegel UIT hero.
-            // Niet ICP. Code/route bestaat nog — link nu in footer-section onderaan.
-            // Origineel object-blok behouden in git history voor toekomstige rollback.
-          ];
+          const naam = (userName || "").trim();
+          const ga = () => {
+            track(naam ? "home_cta_mijn_pagina" : "home_cta_eerste_kwartier");
+            if (onMijnPagina) onMijnPagina(); else handleOefenenClick();
+          };
           return (
-            <>
-              <div className="lk-hero-tiles">
-                {/* Maand 1 snoei (visie-bewaker 2026-05-10): 3D-kubus teaser
-                    UIT hero. Reden: flits-feature, geen direct begripsdoel.
-                    Past niet bij identiteit "rustige bijlesdocent". 3D-modellen
-                    blijven beschikbaar BINNEN wiskunde-leerpaden waar het
-                    didactisch past (Ruimtemeetkunde stap 6 etc.) — alleen
-                    geen marketing-teaser meer op homepage.
-                    Mini3DTeaser-import + TeaserErrorBoundary blijven bestaan
-                    voor in-pad gebruik. */}
-                {/* 5 reguliere tegels. Tegels met `icon` (SVG) gebruiken een
-                    layout waarbij de illustratie de bovenkant vult en de tekst
-                    eronder zit; tegels met emoji houden de compacte centrale layout.
-                    Tegels met `cta` worden gerenderd als <div> met embedded CTA-knop
-                    onderaan (button-in-button is invalid HTML). */}
-                {tiles.map(({ key, emoji, icon, label, sub, color, onClick, cta }) => {
-                  const tileBackground = `${color}14`;
-                  const tileBackgroundHover = `${color}28`;
-                  // "Alle vakken →"-hint alleen bij tegels mét cta-knop (= rol-tegels).
-                  // Zonder hint zien bezoekers de oranje cta als enige actie en
-                  // klikken nooit op de foto/label-zone die juist naar het
-                  // rol-overzicht (alle vakken) leidt. Mark UX-feedback 2026-05-13.
-                  const innerContent = (
-                    <>
-                      {icon ? (
-                        <div style={{
-                          width: "100%",
-                          flex: "1 1 0",
-                          minHeight: 0,
-                          display: "flex",
-                          alignItems: "center",
-                          justifyContent: "center",
-                          marginBottom: 4,
-                        }}>{icon}</div>
-                      ) : (
-                        <span style={{ fontSize: cta ? 26 : 30, lineHeight: 1 }}>{emoji}</span>
-                      )}
-                      <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color }}>{label}</div>
-                      <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.7)" }}>{sub}</div>
-                    </>
-                  );
-                  if (cta) {
-                    // Mark UX 2026-05-18: rol-keuze ("Ik ben leerling/student")
-                    // was verstopt onder de foto + verschilde van pad bij klik
-                    // op de oranje CTA. Beide acties krijgen nu een eigen
-                    // duidelijke blok-knop. Tile-container is niet meer zelf
-                    // klikbaar — alleen de twee knoppen zijn.
-                    return (
-                      <div
-                        key={key}
-                        className="lk-tile"
-                        style={{
-                          background: tileBackground,
-                          border: `1.5px solid ${color}55`,
-                          color: "#fff",
-                          paddingBottom: 8,
-                          justifyContent: "flex-start",
-                          paddingTop: 12,
-                          gap: 6,
-                          cursor: "default",
-                        }}
-                        onMouseEnter={e => {
-                          e.currentTarget.style.background = tileBackgroundHover;
-                        }}
-                        onMouseLeave={e => {
-                          e.currentTarget.style.background = tileBackground;
-                        }}
-                      >
-                        {/* Visuele foto-zone (niet klikbaar — knop hieronder doet de actie). */}
-                        {icon ? (
-                          <div style={{
-                            width: "100%",
-                            flex: "1 1 0",
-                            minHeight: 0,
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            marginBottom: 2,
-                          }}>{icon}</div>
-                        ) : (
-                          <span style={{ fontSize: 30, lineHeight: 1 }}>{emoji}</span>
-                        )}
-
-                        {/* Knop A — rol-keuze (secundair, donker blok). Leidt
-                            naar het rol-overzicht (alle vakken voor die rol). */}
-                        <button
-                          onClick={onClick}
-                          style={{
-                            width: "100%",
-                            minHeight: 38,
-                            padding: "6px 8px",
-                            display: "flex",
-                            flexDirection: "column",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            borderRadius: 8,
-                            border: `1.5px solid ${color}`,
-                            background: `${color}22`,
-                            color: "#fff",
-                            fontFamily: "var(--font-display)",
-                            cursor: "pointer",
-                            lineHeight: 1.1,
-                            transition: "background 150ms ease, transform 150ms ease",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.background = `${color}44`;
-                            e.currentTarget.style.transform = "translateY(-1px)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.background = `${color}22`;
-                            e.currentTarget.style.transform = "translateY(0)";
-                          }}
-                        >
-                          <span style={{ fontSize: 13, fontWeight: 700 }}>{label}</span>
-                          <span style={{ fontSize: 10, fontWeight: 500, opacity: 0.85, marginTop: 2 }}>{sub}</span>
-                        </button>
-
-                        {/* Knop B — directe CTA (oranje primair). Doorstroomtoets/Examen oefenen.
-                            Mark feedback 2026-05-20: tekst viel buiten knop op smal scherm.
-                            whiteSpace nowrap weg + lineHeight + kleinere font → wrap toestaan. */}
-                        <button
-                          onClick={cta.onClick}
-                          style={{
-                            width: "100%",
-                            minHeight: 34,
-                            padding: "5px 6px",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            textAlign: "center",
-                            borderRadius: 8,
-                            border: "none",
-                            background: "linear-gradient(135deg, #ff6b35, #ff8c42)",
-                            color: "#fff",
-                            fontFamily: "var(--font-display)",
-                            fontSize: 12.5,
-                            fontWeight: 700,
-                            cursor: "pointer",
-                            lineHeight: 1.2,
-                            wordBreak: "normal",
-                            overflowWrap: "anywhere",
-                          }}
-                        >
-                          {cta.label}
-                        </button>
-                      </div>
-                    );
-                  }
-                  return (
-                    <button
-                      key={key}
-                      onClick={onClick}
-                      className="lk-tile"
-                      style={{
-                        background: tileBackground,
-                        border: `1.5px solid ${color}55`,
-                        color: "#fff",
-                        ...(icon ? { justifyContent: "flex-start", paddingTop: 8 } : {}),
-                      }}
-                      onMouseEnter={e => {
-                        e.currentTarget.style.transform = "translateY(-2px)";
-                        e.currentTarget.style.background = tileBackgroundHover;
-                      }}
-                      onMouseLeave={e => {
-                        e.currentTarget.style.transform = "translateY(0)";
-                        e.currentTarget.style.background = tileBackground;
-                      }}
-                    >
-                      {innerContent}
-                    </button>
-                  );
-                })}
-              </div>
-
-              {/* Breedte-sectie (Mark 2026-06-03): koude bezoekers uit social
-                  zagen alleen de rol-tegels en dachten "is dit alles?". Deze
-                  rustige info-strip laat zien dat er een héél platform achter
-                  zit. Klikbaar als stille ingang (comment gecorrigeerd 2026-06-10) — visueel ondergeschikt aan de
-                  rol-tegels (Mark verwijderde 2026-05-20 een losse tekstbalk om
-                  precies die reden). Pure geruststelling + breedte. Doorstroom-
-                  toets-pijler gebruikt <DoorstroomtoetsLogo> ipv emoji (huisstijl). */}
-              <div className="lk-content-wide" style={{ marginTop: 10, marginBottom: 4 }}>
-                <div style={{
-                  textAlign: "center",
-                  fontFamily: "var(--font-display)",
-                  fontSize: 15,
-                  fontWeight: 700,
-                  color: "rgba(255,255,255,0.92)",
-                  marginBottom: 3,
-                }}>
-                  Meer dan een toets — een hele leeromgeving
-                </div>
-                <div style={{
-                  textAlign: "center",
-                  fontFamily: "var(--font-body)",
-                  fontSize: 12,
-                  color: "rgba(255,255,255,0.6)",
-                  marginBottom: 14,
-                }}>
-                  {/* "gratis" stond hier voor de 3e keer op één scherm — snoei 12 aug */}
-                  Alles voor groep 3 t/m 8 op één plek
-                </div>
-                {/* Titan-declutter 2026-06-28: de 4-knops feature-grid (Eindtoets/
-                    Leerpaden/Echte examens/Uitleg) is verwijderd. Reden: 3 van de 4
-                    knoppen dupliceerden exact de rol-tegels er direct bóven én de
-                    bottom-nav (Toets/Leren) — een derde navigatie-zone die het eerste
-                    scherm overlaadde (Robert-tip 18 jun + data: lage activatie in
-                    leren). De waarde-boodschap "meer dan een toets" blijft als rustige
-                    tekstregel; alle bestemmingen blijven bereikbaar via rol-tegels +
-                    bottom-nav. */}
-              </div>
-              {/* 5-agents review 2026-05-15: "Nieuw hier?"-link, "Voor ouders"-knop,
-                  EchteCijfers (verplaatst naar boven tegels) en TickerBanner weg.
-                  Zes elementen tussen tegels en de fold-vouw verdunden de focus
-                  en concurreerden met de rol-tegel-CTR. Privacy + uitleg blijven
-                  toegankelijk via footer-links onderaan. */}
-            </>
+            <button
+              onClick={ga}
+              style={{
+                display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
+                width: "100%", maxWidth: 560, margin: `12px auto ${rolBekend ? 22 : 8}px`,
+                padding: "14px 18px", borderRadius: 999, border: "none", cursor: "pointer",
+                background: "linear-gradient(135deg, #ffd54f, #ffb300)", color: "#1a1a00",
+                fontFamily: "var(--font-display)", fontSize: 16.5, fontWeight: 800, lineHeight: 1.25,
+                boxShadow: "0 6px 24px rgba(255,213,79,0.35)", textAlign: "center",
+              }}
+            >
+              {naam ? (
+                <>
+                  <AvatarSvg config={loadAvatarConfig(userName)} size={30} />
+                  <span>Welkom terug, {naam} — jouw kwartier staat klaar →</span>
+                </>
+              ) : (
+                <span>Mijn pagina — begin je eerste kwartier →</span>
+              )}
+            </button>
           );
         })()}
+
+        {/* Rol-regel als tekstlinks (30 sep): de oude foto-tegels + ouder-kaart +
+            footer-leerkracht-knop, nu één gedempte regel. Alleen zolang de rol
+            onbekend is (geen naam op dit apparaat / geen opgeslagen rol). */}
+        {step === "role" && !rolBekend && (
+          <div style={{
+            fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.9, whiteSpace: "nowrap", overflowX: "auto",
+            color: "rgba(255,255,255,0.55)", textAlign: "center",
+            margin: "0 auto 22px", maxWidth: 560, padding: "0 12px",
+          }}>
+            Ik ben:{" "}
+            <button type="button" style={rolLinkStijl} onClick={() => { track("home_rol_link", { rol: "leerling" }); handleRoleClick("leerling"); }}>leerling</button>
+            <span aria-hidden="true"> · </span>
+            <button type="button" style={rolLinkStijl} onClick={() => { track("home_rol_link", { rol: "student" }); handleRoleClick("student"); }}>student</button>
+            {onOuderDashboard && (
+              <>
+                <span aria-hidden="true"> · </span>
+                <button type="button" style={rolLinkStijl} onClick={() => { track("home_cta_ouder"); onOuderDashboard(); }}>ouder of verzorger</button>
+              </>
+            )}
+            <span aria-hidden="true"> · </span>
+            <button type="button" style={rolLinkStijl} onClick={() => { track("home_rol_link", { rol: "leerkracht" }); handleFeatureClick("leerkrachten"); }}>leerkracht</button>
+          </div>
+        )}
+
+        {/* Wat is Leerkwartier — het ouder-/SEO-verhaal, ná het eerste scherm. */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520, textAlign: "center" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "rgba(255,255,255,0.92)", marginBottom: 6 }}>
+              Wat is {BRAND.name}?
+            </div>
+            <p style={{ margin: 0, fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.6, color: "rgba(255,255,255,0.82)" }}>
+              Gratis oefenen voor de <strong style={{ color: "#fff" }}>Doorstroomtoets (groep 6-8)</strong> en de{" "}
+              <strong style={{ color: "#fff" }}>VMBO-examens</strong>. Snapt je kind iets niet? Dan leggen we het uit op drie niveaus, tot het écht snapt. Een kwartier per dag is genoeg.
+            </p>
+            <div style={{
+              fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.7,
+              color: "rgba(255,255,255,0.72)", marginTop: 10,
+            }}>
+              ✓ Geen account nodig &nbsp;·&nbsp; ✓ De basis blijft gratis, gegarandeerd t/m 2031 &nbsp;·&nbsp; ✓ Geen abonnement — niks op te zeggen
+            </div>
+          </div>
+        )}
 
         {/* 5-agents review 2026-05-15: launch-promo bar + install-knop weg uit
             first-visit-flow. Reden: concurreerden met rol-tegel-CTR. PWA-best
@@ -1233,25 +988,12 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         )}
 
 
-        {step === "role" && onOuderDashboard && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
-            <button
-              onClick={() => { track("home_cta_ouder"); onOuderDashboard(); }}
-              style={{
-                width: "100%", display: "flex", alignItems: "center", justifyContent: "center", gap: 10,
-                background: "rgba(167,139,250,0.10)", border: "1.5px solid rgba(167,139,250,0.45)",
-                borderRadius: 14, padding: "12px 16px", cursor: "pointer",
-                color: "#c4b5fd", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700,
-              }}
-            >
-              👨‍👩‍👧 Ik ben ouder of verzorger — zo help je thuis <span aria-hidden="true">→</span>
-            </button>
-          </div>
-        )}
+        {/* Ouder-kaart ("Ik ben ouder of verzorger — zo help je thuis") weg
+            30 sep 2026: zit nu als tekstlink in de rol-regel bovenaan. */}
 
         {/* Kwartiercheck-kaart (Fable-review 28 jul, restpunt 1): de check was
             alleen via directe URL vindbaar — grootste conversielek van de
-            lead-magnet. Direct onder de ouder-knop: dit is een ouder-actie. */}
+            lead-magnet. Ouder-actie, direct onder "Wat is Leerkwartier". */}
         {step === "role" && onKwartiercheck && (
           <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
             <button
@@ -1334,92 +1076,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                   marginTop: 8, fontFamily: "var(--font-display)", fontSize: 12,
                   fontWeight: 700, color: "#ffd54f",
                 }}>
-                  — {q.naam}{q.rol ? <span style={{ color: "rgba(255,255,255,0.6)", fontWeight: 500 }}> · {q.rol}</span> : null}
+                  {/* 30 sep 2026: alleen de organisatie, geen persoonsnaam (privacy-regel). */}
+                  — {q.rol || q.naam}
                 </figcaption>
               </figure>
             ))}
           </div>
         )}
 
-        {/* "Dit vind je hier"-strip (herschikking 2026-07-03): de app is sinds
-            juni verdubbeld (park+maatjes, print-lijn, actuele dagvraag) maar de
-            home vertelde het oude verhaal. Eén compacte 2×2-strip vervangt de
-            losse print-kaart; oefenen + printen zijn klikbaar. */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "rgba(255,255,255,0.85)", marginBottom: 8, textAlign: "center" }}>
-              Dit vind je allemaal bij {BRAND.name} — gratis
-            </div>
-            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 10 }}>
-              {[
-                { emoji: "🎓", titel: "Oefenen met uitleg", sub: "op 3 niveaus, tot je kind het snapt", klik: () => { track("home_strip_klik", { item: "oefenen" }); handleFeatureClick("cito"); } },
-                { emoji: "🖨️", titel: "6 gratis printbare pakketten", sub: "werkboek · Leesladder · tafels · sommen · dictees · brugklas", klik: () => { track("home_strip_klik", { item: "printen" }); handlePrintenClick(); } },
-                // Mark 9 sep 2026: eigen blok voor het dictee met Charley (breed, derde rij).
-                { emoji: "✍️", titel: "Dictee met Charley", sub: "hij zegt de zin, je kind typt het woord · ook de werkwoordspellingtest · groep 4 t/m 8", breed: true, klik: () => { track("home_strip_klik", { item: "dictee" }); try { window.location.assign("/dictee"); } catch { /* */ } } },
-                // WhatsApp 13 aug 18:57: dagvraag- en park-kaart weg van home
-                // ("dat park vinden ze wel; de dagvraag wil ik niet op home").
-              ].map((it, i) => {
-                const inhoud = (
-                  <>
-                    <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>{it.emoji}</span>
-                    <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 800, color: "#fff", margin: "6px 0 2px" }}>{it.titel}</span>
-                    <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.4 }}>{it.sub}</span>
-                  </>
-                );
-                const stijl = {
-                  background: "rgba(255,255,255,0.05)", border: "1px solid rgba(255,255,255,0.14)",
-                  borderRadius: 14, padding: "12px 12px", textAlign: "center", color: "#fff",
-                };
-                if (it.breed) stijl.gridColumn = "1 / -1";
-                return it.klik ? (
-                  <button key={i} onClick={it.klik} style={{ ...stijl, cursor: "pointer" }}>{inhoud}</button>
-                ) : (
-                  <div key={i} style={stijl}>{inhoud}</div>
-                );
-              })}
-            </div>
-          </div>
-        )}
-
-        {/* Zoekbalk — power-functie voor wie al weet wat hij zoekt. Bewust ONDER
-            de hero/oefenpakket (Robert-tip 18 jun: minder keuzes in het eerste scherm). */}
-        {step === "role" && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 16px", maxWidth: 520 }}>
-            <div style={{
-              display: "flex", gap: 8, alignItems: "center",
-              background: "rgba(255,255,255,0.06)",
-              border: "1px solid rgba(255,255,255,0.16)",
-              borderRadius: 999, padding: "6px 6px 6px 16px",
-            }}>
-              <span aria-hidden="true" style={{ fontSize: 16, opacity: 0.7 }}>🔍</span>
-              <input
-                type="search"
-                value={homeSearch}
-                onChange={(e) => setHomeSearch(e.target.value)}
-                onKeyDown={(e) => { if (e.key === "Enter") { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); } }}
-                placeholder="Zoek een onderwerp… bv. begrijpend lezen, breuken"
-                aria-label="Zoek een onderwerp"
-                style={{
-                  flex: 1, minWidth: 0, border: "none", outline: "none",
-                  background: "transparent", color: "#fff",
-                  fontFamily: "var(--font-body)", fontSize: 14,
-                }}
-              />
-              <button
-                onClick={() => { const q = homeSearch.trim(); if (q.length >= 2) onSearchPaths?.(q); }}
-                aria-label="Zoeken"
-                style={{
-                  flexShrink: 0, cursor: "pointer", border: "none", borderRadius: 999,
-                  background: "linear-gradient(135deg, #4fc3f7, #2196f3)", color: "#fff",
-                  fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14,
-                  padding: "9px 18px",
-                }}
-              >
-                Zoek
-              </button>
-            </div>
-          </div>
-        )}
+        {/* "Dit vind je allemaal bij Leerkwartier"-tegels (oefenen/printen/dictee)
+            + de zoekbalk-onderaan zijn 30 sep 2026 weg: de zoekbalk staat nu
+            bovenaan en vindt dictee/printen/werkwoorden via de snelkoppelingen. */}
 
         {/* USP-demo (2026-06-04): toont de 3-niveau-uitleg LIVE op de entree —
             show-don't-tell. Alleen op het eerste scherm (rolkeuze), zodat een
@@ -1556,36 +1223,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 Wat kost het?
               </button>
             )}
-            {/* Familie-extra's (bèta) — vindbare ingang naar de Familie-hub
-                (Mark 1 aug: deel-voor-deel live, niet meer geheim). */}
-            {onFamilie && (
-              <button
-                type="button"
-                style={{ background: "none", border: "none", color: "#ffb300", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
-                onClick={() => { track("home_cta_familie"); onFamilie(); }}
-              >
-                <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#ffd54f", display: "inline-block", flexShrink: 0 }} />
-                Familie-extra's (bèta)
-              </button>
-            )}
-            {/* 2026-06-20: oude spellen vervangen door "Mijn Park" (3D-dierentuin,
-                in opbouw). Ingang op home zodat het zichtbaar meegroeit. */}
-            {onPlayObliterator && (
-              <button
-                type="button"
-                title="Verdien park tokens door 15 min te leren!"
-                style={{ background: "none", border: "none", color: "#ff8c42", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 6, fontWeight: 700 }}
-                onClick={onPlayObliterator}
-              >
-                <span>🐾</span>
-                {parkTokens != null ? "Mijn Park" : "Ga naar je park 🚧"}
-                {parkTokens != null && (
-                  <span style={{ display: "inline-flex", alignItems: "center", gap: 4, background: "#ffe08a", color: "#5b3d00", borderRadius: 999, padding: "2px 8px", fontSize: 12.5, fontWeight: 800 }}>
-                    🪙 {parkTokens} park tokens
-                  </span>
-                )}
-              </button>
-            )}
+            {/* "Familie-extra's (bèta)" + "Mijn Park / Ga naar je park" weg uit de
+                voet (30 sep 2026, rust): bereikbaar via Mijn pagina, de balk
+                (Spelletje) en de zoekbalk (snelkoppelingen "park", "familie"). */}
             {/* Bedank-pagina (Mark 16 jul 2026): organisaties die gezinnen op
                 Leerkwartier wijzen — eerste vermelding (VB Rotterdam) live,
                 dus nu vindbaar vanaf de home. Statische pagina → gewone <a>. */}

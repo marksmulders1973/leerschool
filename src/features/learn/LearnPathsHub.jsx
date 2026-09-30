@@ -515,6 +515,10 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
       if (hasNiveau && !niveauBuckets.has(parseLevel(p.level).bucketKey)) return false;
       return true;
     };
+    // Kale groep-zoekopdracht ("groep 6", "groep8") van de home-zoekbalk (30 sep
+    // 2026): het `level`-veld ("groep5-8") staat niet in de tekst-hooiberg, dus
+    // "groep 5" vond niets. Nu telt een pad mee als de groep in zijn bereik valt.
+    const groepQ = qRaw.match(/^groep\s*(\d)$/);
     const hayMatch = (p) => {
       const hay = [
         p.title,
@@ -523,7 +527,13 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
         p.sloThema,
         ...(Array.isArray(p.triggerKeywords) ? p.triggerKeywords : []),
       ].filter(Boolean).join(" ").toLowerCase();
-      return hay.includes(qRaw);
+      if (hay.includes(qRaw)) return true;
+      if (groepQ) {
+        const r = poGroupRange(p.level);
+        const g = Number(groepQ[1]);
+        return !!r && g >= r[0] && g <= r[1];
+      }
+      return false;
     };
     const matchesFilter = (p) => {
       if (!passesBase(p)) return false;

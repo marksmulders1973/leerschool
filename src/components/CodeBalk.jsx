@@ -199,7 +199,10 @@ function EerScherm({ code, onVerder }) {
   );
 }
 
-export default function CodeBalk() {
+// `rustig` (30 sep 2026, home-herschikking): zolang er geen code is, één gedempte
+// tekstregel i.p.v. de gele balk — opent op een tik naar hetzelfde invulveld.
+// Stand 2 (code actief) blijft ongewijzigd: die bevestiging moet dik blijven.
+export default function CodeBalk({ rustig = false }) {
   // 👀 Preview-modus (Mark 27 aug: "ik wil alle ere-pagina's persoonlijk zien
   // en goedkeuren"): /?erescherm=CODE toont het ere-scherm van die code ALTIJD,
   // puur als kijk-versie — er wordt niets op het apparaat gezet en niets gemeten.
@@ -396,12 +399,17 @@ export default function CodeBalk() {
   }
 
   // Stand 1/3 — nog geen code: uitnodiging + invulveld.
+  const rustigDicht = rustig && !open;
   return (
-    <div className="lk-content-wide" style={{ maxWidth: 560, margin: "10px auto 4px", background: "#fffaf0", border: "1.5px solid #e6c65a", borderRadius: 14, padding: open ? "12px 16px" : "9px 14px" }}>
+    <div className="lk-content-wide" style={rustigDicht
+      ? { maxWidth: 560, margin: "2px auto 2px", padding: 0 }
+      : { maxWidth: 560, margin: "10px auto 4px", background: "#fffaf0", border: "1.5px solid #e6c65a", borderRadius: 14, padding: open ? "12px 16px" : "9px 14px" }}>
       {!open ? (
         <button
           onClick={() => { setOpen(true); try { track("code_balk_open", {}); } catch { /* */ } }}
-          style={{ width: "100%", border: "none", background: "transparent", cursor: "pointer", font: "700 13.5px system-ui", color: "#7a5b00", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
+          style={rustigDicht
+            ? { width: "100%", border: "none", background: "transparent", cursor: "pointer", font: "600 12.5px system-ui", color: "rgba(255,255,255,0.6)", display: "flex", alignItems: "center", justifyContent: "center", gap: 5, padding: "6px 4px" }
+            : { width: "100%", border: "none", background: "transparent", cursor: "pointer", font: "700 13.5px system-ui", color: "#7a5b00", display: "flex", alignItems: "center", justifyContent: "center", gap: 6 }}
         >
           🎟️ Code gekregen?&nbsp;<span style={{ textDecoration: "underline", textUnderlineOffset: 3 }}>Vul hem hier in</span>
         </button>
