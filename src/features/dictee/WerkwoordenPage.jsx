@@ -49,7 +49,7 @@ function MailHaakje({ score, totaal }) {
   };
   return (
     <form onSubmit={stuur} style={{ background: "#fff8e1", border: "1px solid #f3d27a", borderRadius: 14, padding: "12px 14px", margin: "12px 0", color: "#1c2840" }}>
-      <div style={{ font: "800 14px system-ui" }}>📬 Elke maandag dit resultaat in de mail van je ouder of verzorger?</div>
+      <div style={{ font: "800 14px system-ui" }}>📬 Elke vrijdag dit resultaat in de mail van je ouder of verzorger?</div>
       <div style={{ fontSize: 13, color: "#556", margin: "4px 0 8px" }}>Gratis weekrapport: welke werkwoordsvormen goed gaan en welke nog oefenen vragen. Uitschrijven kan altijd.</div>
       <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
         <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="e-mail van ouder of verzorger" style={{ flex: "1 1 180px", padding: "10px 12px", borderRadius: 10, border: "1px solid #cbd5e1", background: "#fff", color: "#1c2840", font: "500 15px system-ui" }} />
