@@ -3,6 +3,7 @@
 *Alle open lussen: waar wachten we op een "ja", een antwoord of een levering. Dit is de single source of truth voor het prio-blok in elk dagrapport. Bijwerken bij elke mail-check: antwoord binnen → regel afvoeren + vervolgactie erbij zetten.*
 
 ## 🔴 Prio 1 — actie zodra antwoord binnenkomt
+| **Wereldschool Taalrijk (Boxtel) — Heidi Schel, coördinator/IB** | 30 sep 10:15 antwoord op LOWAN ronde 2: app staat al in de taalklas; talen Roemeens, Bulgaars, Oekraïens, Arabisch; vragen doorgezet naar docenten (thread 1a0f1625d3a03f26). | 30 sep | ✅ 30 sep ro+bg toegevoegd (v810) + antwoord verstuurd (reply 1a0f19b83f153925, Mark "stuur maar"): versienummer rechtsboven uitgelegd, wensenblok in eigen taal genoemd, drie vragen herhaald. Wacht op docenten; niet nudgen vóór ~14 okt. |
 | Wat | Wacht op | Sinds | Daarna |
 |---|---|---|---|
 | **🇧🇪 België-test — VERSTUURD za 26 sep 06:35** (Mark "stuur de mail nu maar"): 7 voedselbanken, elk een eigen code (VOEDSELBANKBE/ANTWERPEN/LIMBURGBE/OOSTVLAANDEREN/WESTVLAANDEREN/BRUSSEL/KRUIDENIER + 2027, Familie t/m 2028) + 20 scholen met taalheldklas (Nieuwkomer-pakket). 27/27 OK; Windows-taak do 1 okt uitgezet. Eén aanhef met typfout: "De Droomballon)". | antwoorden (vanaf ma 28 sep) | 26 sep | antwoord → eerst tekst aan Mark; bij eerste ja/vraag → Huizen van het Kind (50) voorstellen |
