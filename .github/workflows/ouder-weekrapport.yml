@@ -13,6 +13,11 @@ on:
     - cron: "0 14 * * 5"
     - cron: "0 15 * * 5"
   workflow_dispatch:
+    inputs:
+      echt:
+        description: "Echt versturen? (standaard nee = droge test: sleutel + kandidaten, geen mail)"
+        type: boolean
+        default: false
 
 concurrency:
   group: ouder-weekrapport
@@ -35,6 +40,8 @@ jobs:
           CRON_SECRET: ${{ secrets.CRON_SECRET }}
         run: |
           if [ -z "$CRON_SECRET" ]; then echo "::error::GitHub-secret CRON_SECRET ontbreekt"; exit 1; fi
-          code=$(curl -s -o /tmp/uit.json -w "%{http_code}" -H "Authorization: Bearer $CRON_SECRET" "https://leerkwartier.app/api/send-ouder-rapport")
+          URL="https://leerkwartier.app/api/send-ouder-rapport"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] && [ "${{ inputs.echt }}" != "true" ]; then URL="$URL?droog=1"; echo "Droge test — er wordt niets verstuurd"; fi
+          code=$(curl -s -o /tmp/uit.json -w "%{http_code}" -H "Authorization: Bearer $CRON_SECRET" "$URL")
           echo "HTTP $code"; cat /tmp/uit.json; echo
           [ "$code" = "200" ]

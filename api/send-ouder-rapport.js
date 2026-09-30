@@ -403,6 +403,14 @@ export default async function handler(req, res) {
   const FROM = process.env.EMAIL_FROM || "Leerkwartier <hallo@leerkwartier.app>";
   if (!RESEND) return res.status(200).json({ ok: true, sent: 0, reason: "resend-uit" });
 
+  // Droge run (30 sep 2026): sleutel + kandidaten controleren zonder iets te versturen (test van de GitHub Action).
+  if (req.query?.droog === "1") {
+    try {
+      const r = await sb("rpc/ouder_weekrapport_kandidaten", { method: "POST", body: "{}" }, base, key);
+      const paren = await r.json();
+      return res.status(200).json({ droog: true, kandidaten: Array.isArray(paren) ? paren.length : null, resend: !!RESEND });
+    } catch (e) { return res.status(500).json({ droog: true, fout: String(e).slice(0, 120) }); }
+  }
   const uitslag = await stuurOuderRapporten({ base, key, RESEND, FROM, force: req.query?.force === "1" });
   return res.status(200).json({ ok: true, ...uitslag });
 }
