@@ -122,7 +122,13 @@ export default async function handler(req) {
   // De webhook komt van Stripe, niet van een browser: geen bezoekers-guard.
   if (action !== "webhook") { const blocked = guardRequest(req); if (blocked) return blocked; }
 
-  if (!STRIPE_ACTIVE) {
+  // 🧪 Testdeur (30 sep 2026): zolang STRIPE_ACTIVE uit staat, mag de keten tóch getest worden — maar
+  // alleen met Stripe-TESTsleutels (sk_test_), en checkout/portal alleen met de geheime header
+  // x-lk-stripe-test = env STRIPE_TEST_TOKEN. Webhooks (door Stripe ondertekend) mogen in testmodus door.
+  const testSleutel = String(process.env.STRIPE_SECRET_KEY || "").startsWith("sk_test_");
+  const testToken = process.env.STRIPE_TEST_TOKEN;
+  const testDeur = testSleutel && (action === "webhook" || (!!testToken && req.headers.get("x-lk-stripe-test") === testToken));
+  if (!STRIPE_ACTIVE && !testDeur) {
     return json({
       error: "Betalen is nog niet beschikbaar. De basis blijft gratis (gegarandeerd t/m 2031); het Familie-pakket komt rond januari 2027. Schrijf je in op de wachtlijst via /abonnement.html.",
       waitlistUrl: "/abonnement.html#waitlist",
