@@ -717,6 +717,23 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           </div>
         )}
 
+        {/* 📸 De twee kinderen (Mark 30 sep 2026: "die kinderfoto's zijn een beetje de identiteit van de app
+            geworden") — terug als rustig beeld, niet als schreeuwende knop. Tikken kiest nog wel de rol. */}
+        {step === "role" && (
+          <div className="lk-content-wide" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12, maxWidth: 520, margin: "0 auto 22px" }}>
+            {[["leerling", "/model-leerling.png", "Leerling", "basisschool · groep 3 t/m 8"], ["student", "/model-student.jpg", "Student", "vmbo · havo · vwo"]].map(([rol, src, kop, sub]) => (
+              <button key={rol} type="button" onClick={() => { track("home_rol_foto", { rol }); handleRoleClick(rol); }} aria-label={`Ik ben ${kop.toLowerCase()} — ${sub}`}
+                style={{ padding: 0, border: "1px solid rgba(255,255,255,0.14)", borderRadius: 18, overflow: "hidden", background: "rgba(255,255,255,0.05)", cursor: "pointer", textAlign: "left", fontFamily: "inherit", color: "inherit" }}>
+                <img src={src} alt="" loading="lazy" style={{ display: "block", width: "100%", aspectRatio: "4 / 3", objectFit: "cover" }} />
+                <div style={{ padding: "8px 10px 10px" }}>
+                  <div style={{ fontFamily: "var(--font-display)", fontWeight: 800, fontSize: 14, color: "#ffd54f" }}>{kop}</div>
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.65)", marginTop: 2 }}>{sub}</div>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+
         {/* Wat is Leerkwartier — het ouder-/SEO-verhaal, ná het eerste scherm. */}
         {step === "role" && (
           <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520, textAlign: "center" }}>
@@ -1058,28 +1075,14 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             pas zodra er quotes MET schriftelijke toestemming in
             src/data/ouderQuotes.js staan. Nooit verzonnen quotes — een
             onzichtbare sectie is beter dan een nep-quote. */}
+        {/* Partner-uitspraken — klein (Mark 30 sep 2026: "kunnen weg of kleiner"); alleen de organisatie. */}
         {step === "role" && OUDER_QUOTES.length > 0 && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520, display: "grid", gap: 10 }}>
-            {OUDER_QUOTES.map((q, i) => (
-              <figure key={i} style={{
-                margin: 0, background: "rgba(255,213,79,0.07)",
-                border: "1px solid rgba(255,213,79,0.30)", borderRadius: 16,
-                padding: "14px 18px",
-              }}>
-                <blockquote style={{
-                  margin: 0, fontFamily: "var(--font-body)", fontSize: 13.5,
-                  color: "rgba(255,255,255,0.9)", lineHeight: 1.55, fontStyle: "italic",
-                }}>
-                  “{q.tekst}”
-                </blockquote>
-                <figcaption style={{
-                  marginTop: 8, fontFamily: "var(--font-display)", fontSize: 12,
-                  fontWeight: 700, color: "#ffd54f",
-                }}>
-                  {/* 30 sep 2026: alleen de organisatie, geen persoonsnaam (privacy-regel). */}
-                  — {q.rol || q.naam}
-                </figcaption>
-              </figure>
+          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520, fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.62)" }}>
+            {OUDER_QUOTES.slice(0, 3).map((q, i) => (
+              <div key={i} style={{ marginBottom: 6 }}>
+                <span style={{ fontStyle: "italic" }}>“{q.tekst}”</span>{" "}
+                <span style={{ color: "#ffd54f", fontWeight: 700 }}>— {q.rol || q.naam}</span>
+              </div>
             ))}
           </div>
         )}
