@@ -297,7 +297,8 @@ function buildSystemPrompt(ctx = {}) {
 }
 
 // ─── Anthropic-call ────────────────────────────────────────────────
-async function callAnthropic(apiKey, system, messages) {
+// `licht`: korte vertaal-opdracht (nieuwkomers "In mijn taal", 30 sep 2026) → Haiku zonder denken, goedkoop.
+async function callAnthropic(apiKey, system, messages, licht = false) {
   const resp = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
     headers: {
@@ -312,10 +313,9 @@ async function callAnthropic(apiKey, system, messages) {
       // Sonnet 5 weigert temperature; max_tokens telt het denken mee, de lengte regelt de prompt.
       // 🗣️ Opus 5 (Mark 29 sep 2026, v788: "de eerste indruk moet perfect zijn"; bij te hoog gebruik
       // stelt hij bij). Opus 5 low was in de test nog net fijner; ~€0,017 per bericht. Geen temperature.
-      model: "claude-opus-5",
-      thinking: { type: "adaptive" },
-      output_config: { effort: "low" },
-      max_tokens: 1500,
+      ...(licht
+        ? { model: "claude-haiku-4-5-20251001", max_tokens: 400, temperature: 0.2 }
+        : { model: "claude-opus-5", thinking: { type: "adaptive" }, output_config: { effort: "low" }, max_tokens: 1500 }),
       // Prompt caching (20 sep 2026): de system-prompt is ~3.000 tokens en
       // binnen één gesprek over dezelfde stap byte-identiek. Een cache-read
       // kost 10% van een gewone input-token. Werkt dus vooral bij het kind
@@ -445,13 +445,19 @@ export default async function handler(req) {
     });
   }
 
-  const system = buildSystemPrompt(context);
+  // 🌐 "In mijn taal" (Mark 30 sep 2026: het gewone start-kwartier had geen vertaalknop voor nieuwkomers):
+  // alleen de vraag + antwoorden vertalen, niets uitleggen. Kort systeem, klein model.
+  const TALEN_VERTAAL = { en: "Engels", ar: "Arabisch", uk: "Oekraïens", tr: "Turks" };
+  const vertaalNaar = TALEN_VERTAAL[String(context?.vertaalNaar || "")] ? String(context.vertaalNaar) : null;
+  const system = vertaalNaar
+    ? `Je vertaalt een oefenvraag voor een kind dat net Nederlands leert. Vertaal de tekst die de gebruiker stuurt (JSON met "q" en "options") woordelijk naar het ${TALEN_VERTAAL[vertaalNaar]}. Getallen, sommen en namen blijven staan. Geef ALLEEN geldige JSON terug in exact dezelfde vorm: {"q": "...", "options": ["...", ...]}. Geen uitleg, geen antwoord, geen andere tekst.`
+    : buildSystemPrompt(context);
 
   // Eerst Anthropic (primair), Gemini als fallback bij failure.
   let lastError = null;
   if (anthropicKey) {
     try {
-      const reply = await callAnthropic(anthropicKey, system, trimmed);
+      const reply = await callAnthropic(anthropicKey, system, trimmed, !!vertaalNaar);
       return json({ reply, provider: "anthropic" });
     } catch (e) {
       lastError = e;

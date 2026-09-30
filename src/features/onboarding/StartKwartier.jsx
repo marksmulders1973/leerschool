@@ -10,6 +10,27 @@ import Card from "../../shared/ui/Card.jsx";
 import MdInline from "../../shared/ui/MdInline.jsx";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
 import { meldAntwoord, vakVanLabel } from "../niveau/signalen.js";
+import { leesSteuntaal } from "../../shared/ui/SteunTik.jsx";
+
+// 🌐 "In mijn taal" (Mark 30 sep 2026): nieuwkomers die vanaf /nieuwkomers naar het gewone start-kwartier
+// overstappen misten een vertaalknop. De vragen komen uit honderden paden zonder vaste vertaling, dus
+// Charley vertaalt vraag + antwoorden ter plekke (klein model, alleen JSON terug); per vraag één keer,
+// daarna uit sessionStorage.
+const VERTAAL_TAAL = { en: "English", ar: "العربية", uk: "Українська", tr: "Türkçe" };
+async function vertaalVraag(vraag, taal) {
+  const sleutel = "lk_vert:" + taal + ":" + String(vraag.q).slice(0, 80) + "|" + (vraag.options || []).join("|").slice(0, 120);
+  try { const c = sessionStorage.getItem(sleutel); if (c) return JSON.parse(c); } catch { /* */ }
+  let uid = null; try { uid = localStorage.getItem("lk_uid"); } catch { /* */ }
+  const r = await fetch("/api/tutor-chat", { method: "POST", headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ messages: [{ role: "user", content: JSON.stringify({ q: vraag.q, options: vraag.options }) }], context: { vertaalNaar: taal, uid } }) });
+  if (!r.ok) throw new Error("vertalen mislukt");
+  const j = await r.json();
+  const m = String(j.reply || "").match(/\{[\s\S]*\}/);
+  const uit = JSON.parse(m ? m[0] : "{}");
+  if (!uit.q || !Array.isArray(uit.options)) throw new Error("geen vertaling");
+  try { sessionStorage.setItem(sleutel, JSON.stringify(uit)); } catch { /* */ }
+  return uit;
+}
 import { sanitizeSvg } from "../../shared/sanitizeSvg.js";
 import { recordAnswerForPath } from "../mastery/mastery.js";
 import { track, getIncomingRef } from "../../utils.js";
@@ -70,6 +91,10 @@ function uitlegVan(v) {
 export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron = "start-kwartier" }) {
   const [gekozen, setGekozen] = useState(null);
   const startRef = useRef(Date.now()); // 📈 niveaulijn: tijd per vraag
+  const taal = leesSteuntaal();
+  const [vert, setVert] = useState(null);     // { q, options } in de thuistaal
+  const [vertBezig, setVertBezig] = useState(false);
+  const rtl = taal === "ar";
   const goed = gekozen != null && gekozen === vraag.answer;
   const uitleg = uitlegVan(vraag);
   const hint = gekozen != null && !goed ? vraag.wrongHints?.[gekozen] : null;
@@ -86,6 +111,14 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron
         </div>
       )}
       <p style={S.vraag}><MdInline text={vraag.q} /></p>
+      {taal && taal !== "nl" && VERTAAL_TAAL[taal] && (
+        vert
+          ? <p dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ margin: "-6px 0 12px", fontSize: 15, fontWeight: 700, color: "#ffd166" }}>{vert.q}</p>
+          : <button type="button" disabled={vertBezig} onClick={async () => { setVertBezig(true); try { setVert(await vertaalVraag(vraag, taal)); try { track("startkwartier_vertaal", { taal }); } catch { /* */ } } catch { setVert({ q: "Vertalen lukte even niet.", options: [] }); } setVertBezig(false); }}
+              style={{ margin: "-4px 0 12px", background: "rgba(255,209,102,0.14)", border: "1px solid rgba(255,209,102,0.5)", color: "#ffd166", borderRadius: 999, padding: "6px 12px", fontSize: 13, fontWeight: 700, cursor: "pointer", fontFamily: "inherit" }}>
+              {vertBezig ? "…" : `🌐 ${VERTAAL_TAAL[taal]}`}
+            </button>
+      )}
       {vraag.svg && (
         <div
           style={{ display: "flex", justifyContent: "center", padding: 12, background: "#162033", borderRadius: 12, marginBottom: 14 }}
@@ -103,6 +136,7 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron
             style={S.optie(state)}
           >
             <MdInline text={String(opt)} />
+            {vert?.options?.[i] && <span dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ display: "block", fontSize: 13.5, fontWeight: 600, opacity: .85, marginTop: 2 }}>{vert.options[i]}</span>}
           </button>
         );
       })}
