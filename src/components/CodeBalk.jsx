@@ -300,6 +300,7 @@ export default function CodeBalk({ rustig = false }) {
       // Mark 25 sep 2026: meten wélke code (NIEUWKOMER/…S/WELKOM…) en dat het kind via een code kwam.
       const nkCode = kaal.replace(/\s+/g, "");
       try { track("code_balk_nieuwkomer", { code: nkCode }); } catch { /* */ }
+      try { localStorage.setItem("lk_nieuwkomer", "1"); } catch { /* */ } // binnengekomen als nieuwkomer
       window.location.href = "/nieuwkomers?via=" + encodeURIComponent(nkCode);
       return;
     }

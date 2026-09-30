@@ -171,6 +171,8 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOversta
   const kiesTaal = (id) => {
     setTaal(id);
     try { localStorage.setItem(STEUNTAAL_KEY, id); } catch { /* */ }
+    // Mark 30 sep 2026: de vertaalknop in het gewone start-kwartier is alleen voor wie als nieuwkomer binnenkwam.
+    try { if (id !== "nl") localStorage.setItem("lk_nieuwkomer", "1"); } catch { /* */ }
     try { track("nieuwkomers_taal", { taal: id }); } catch { /* */ }
   };
   const open = (tegel) => {
