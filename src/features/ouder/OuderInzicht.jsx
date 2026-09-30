@@ -9,6 +9,7 @@ import { BRAND } from "../../brand.js";
 import { clearAll as clearAdaptive } from "../../shared/adaptiveStore.js";
 import DoorstroomtoetsLogo from "../../components/DoorstroomtoetsLogo.jsx";
 import ProBadge from "../../subscription/ProBadge.jsx";
+import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
 import { trackProUse } from "../../subscription/proPlan.js";
 import { track } from "../../utils.js";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
@@ -722,6 +723,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         <ProBadge feature="parent-dashboard" size="md" onInfo={onUpgrade} />
         <span style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>
           Dit ouder-inzicht hoort straks bij het Familie-pakket — <strong style={{ color: "#69f0ae" }}>nu nog helemaal gratis</strong>.
+          {" "}<FamilieAfsluiten plek="ouderlabel" variant="link" />
         </span>
       </div>
 
@@ -1267,6 +1269,9 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           <button onClick={onUpgrade} style={{ padding: "10px 18px", borderRadius: 10, border: "none", background: "#ffd54f", color: "#0b1224", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, cursor: "pointer" }}>
             Meer info & aanmelden →
           </button>
+          <div style={{ marginTop: 10 }}>
+            <FamilieAfsluiten plek="ouderpagina" variant="knop" />
+          </div>
         </div>
       )}
 

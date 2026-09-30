@@ -17,6 +17,7 @@ import { useState, useEffect, useRef } from "react";
 import { getProFeature, getLaag, PRO_MODEL, LAAG_KLEUREN, trackProSeen, trackProUse } from "./proPlan.js";
 import supabase from "../supabase.js";
 import { track } from "../utils.js";
+import FamilieAfsluiten from "./FamilieAfsluiten.jsx";
 
 // Kleine groene "● Gratis"-tegenhanger: zet 'm naast gratis onderdelen die in
 // hetzelfde scherm staan als betaalde extra's, zodat het verschil zichtbaar is.
@@ -140,6 +141,11 @@ export default function ProBadge({ feature, showFree = true, size = "sm", kind =
               <span style={{ display: "block", fontSize: 11.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.5, marginBottom: 10 }}>
                 {PRO_MODEL.uitleg}
               </span>
+              {f.laag === "familie" && (
+                <span style={{ display: "block", fontSize: 12.5, marginBottom: 10 }}>
+                  <FamilieAfsluiten plek="probadge" variant="link" />
+                </span>
+              )}
               {mailStatus === "done" ? (
                 <span style={{ display: "block", fontSize: 12, fontWeight: 700, color: "#69f0ae", marginBottom: onInfo ? 10 : 0 }}>
                   ✓ Gelukt — je hoort van ons vóór er iets verandert.

@@ -13,6 +13,7 @@ import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import { track } from "../utils.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { FamiliePill } from "../features/familie/familieUi.jsx";
+import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
 
 // Print-CSS — zelfde recept als Leesladder/Oefenpakket, inclusief de
 // overflow-fix (zonder die kapte Chrome het printwerk af op 1 pagina).
@@ -200,6 +201,7 @@ export default function TafelbladenPage({ setPage } = {}) {
             <FamiliePill />
             <span style={{ fontSize: 11, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "2px 8px", borderRadius: 8 }}>bèta — nu gratis proberen</span>
             <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>Zwaardere bladen — horen straks bij het Familie-pakket.</span>
+            <FamilieAfsluiten plek="tafelbladen" variant="link" style={{ fontSize: 12.5 }} />
           </div>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 14 }}>
             <label style={{ display: "flex", alignItems: "center", gap: 7, color: "var(--color-text, #e8edf5)", fontSize: 14, cursor: "pointer" }}>

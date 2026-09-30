@@ -19,7 +19,7 @@
 import { createRequire } from "module";
 import { createHash } from "node:crypto";
 import { maakOuderMailSectie } from "../src/shared/niveauIndicatie.js";
-import { mailTaglineHtml } from "./_lib/mail-tagline.js";
+import { mailTaglineHtml, familieRegelHtml, familieRegelText } from "./_lib/mail-tagline.js";
 
 import { afmeldKoppen } from "./_lib/afmeldkoppen.js";
 // JSON via createRequire: een kale ESM-JSON-import vereist import-attributes
@@ -95,6 +95,39 @@ async function haalVriendencode(email, base, key) {
     return typeof code === "string" && code.length >= 4 ? code : null;
   } catch {
     return null;
+  }
+}
+
+// 👪 Heeft dit gezin Familie al? (Mark 30 sep 2026) — dan géén koop-regel.
+// Gezin = ouder-account (parent_user_id via link_id) + gekoppelde kind-accounts.
+// Familie al = partnercode geclaimd (partner_claims) óf een lopend parent_pro-
+// recht (subscriptions, bv. Stripe-betaling of vriend-actie). Bij twijfel
+// (storing) → true: liever géén koopregel dan een partnergezin laten kopen.
+async function heeftFamilieAl(kinderen, base, key) {
+  try {
+    const uids = new Set();
+    const linkIds = [];
+    for (const k of kinderen.values()) {
+      if (k?.uid) uids.add(k.uid);
+      if (k?.linkId) linkIds.push(k.linkId);
+    }
+    if (linkIds.length) {
+      const r = await sb(`parent_child_links?id=in.(${linkIds.map(encodeURIComponent).join(",")})&select=parent_user_id`, { method: "GET" }, base, key);
+      if (!r.ok) return true;
+      const rows = await r.json();
+      for (const row of Array.isArray(rows) ? rows : []) if (row.parent_user_id) uids.add(row.parent_user_id);
+    }
+    if (uids.size === 0) return false;
+    const lijst = [...uids].map(encodeURIComponent).join(",");
+    const [pc, sub] = await Promise.all([
+      sb(`partner_claims?user_id=in.(${lijst})&select=code&limit=1`, { method: "GET" }, base, key),
+      sb(`subscriptions?user_id=in.(${lijst})&tier=eq.parent_pro&valid_until=gt.${encodeURIComponent(new Date().toISOString())}&select=user_id&limit=1`, { method: "GET" }, base, key),
+    ]);
+    if (!pc.ok || !sub.ok) return true;
+    const [pcRows, subRows] = await Promise.all([pc.json(), sub.json()]);
+    return (Array.isArray(pcRows) && pcRows.length > 0) || (Array.isArray(subRows) && subRows.length > 0);
+  } catch {
+    return true;
   }
 }
 
@@ -231,7 +264,7 @@ function maakKindSectie(childName, rows) {
   return { html, text };
 }
 
-function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
+function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, toonFamilie = false) {
   const dashboard = `${SITE}/ouder?utm_source=email&utm_campaign=ouder-rapport-stand`;
   const onderwerp = "📊 Weekrapport: zo ging het leren deze week";
 
@@ -268,10 +301,11 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
     <a href="${dashboard}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:22px;">📈 Bekijk alles in het ouder-dashboard →</a>
     ${reageerHtml}
     ${deelHtml}
+    ${toonFamilie ? familieRegelHtml("ouder-rapport") : ""}
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Zet in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> de weekmail per kind uit (📩-knopje bij je kind) — de koppeling en je inzicht blijven gewoon bestaan.</p>
   </div></body></html>`;
-  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever iets anders of persoonlijker? Beantwoord deze mail (hallo@leerkwartier.app), Mark leest elk bericht zelf.\n\n${deelText}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
+  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever iets anders of persoonlijker? Beantwoord deze mail (hallo@leerkwartier.app), Mark leest elk bericht zelf.\n\n${deelText}${toonFamilie ? `\n\n${familieRegelText("ouder-rapport")}` : ""}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
   return { onderwerp, html, text };
 }
 
@@ -327,7 +361,8 @@ export async function stuurOuderRapporten({ base, key, RESEND, FROM, force = fal
       }
       const niveauSectie = await haalNiveauSectie(adres, base, key);
       const vriendCode = await haalVriendencode(adres, base, key);
-      const { onderwerp, html, text } = maakRapportMail(adres, secties, niveauSectie, vriendCode);
+      const toonFamilie = !(await heeftFamilieAl(kinderen, base, key));
+      const { onderwerp, html, text } = maakRapportMail(adres, secties, niveauSectie, vriendCode, toonFamilie);
       // Partner-mail: kopie naar het tweede adres als het geldig is en niet
       // gelijk aan het ouder-adres (geen dubbele bezorging).
       const r = await fetch("https://api.resend.com/emails", {

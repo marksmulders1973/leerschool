@@ -14,6 +14,7 @@ import supabase from "../supabase.js";
 import { track } from "../utils.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
 import { FamiliePill } from "../features/familie/familieUi.jsx";
+import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
 import redactiePad from "../learnPaths/redactiesommen.js";
 import { shuffleOptiesSeeded } from "../shared/shuffleOpties.js";
 import { REDACTIE_VERSIES, VERSIE_VOLGORDE } from "./redactiebladen/versies.js";
@@ -263,6 +264,7 @@ export default function RedactiebladenPage({ setPage } = {}) {
               <FamiliePill />
               <span style={{ fontSize: 11, fontWeight: 700, color: "#0b1224", background: "#ffd54f", padding: "2px 8px", borderRadius: 8 }}>bèta — nu gratis proberen</span>
               <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>Deze versie hoort straks bij het Familie-pakket.</span>
+              <FamilieAfsluiten plek="redactiebladen" variant="link" style={{ fontSize: 12.5 }} />
             </div>
           )}
           {versie === "C" && (

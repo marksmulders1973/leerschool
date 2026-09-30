@@ -8,6 +8,8 @@
 // losse eilandjes te zijn. Zie memory project_studiebol_familie_tier_features.
 // ══════════════════════════════════════════════════════════════════════
 
+import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
+
 // Tier-stip (Mark 9 aug: overal de juiste stip): goud = Familie, met de
 // eerlijke "nu gratis"-toevoeging. Zelfde kleurtaal als ProBadge/LAAG_KLEUREN.
 export function FamiliePill({ style }) {
@@ -56,10 +58,15 @@ const MEER_ITEMS = [
   { page: "vonk", label: "🐉 Vonk" },
 ];
 
+// Meet-plek per onderdeel voor de Familie-afsluitkaart (event familie_klik).
+const AFSLUIT_PLEK = { trots: "trotsmoment" };
+
 export function FamilieMeer({ setPage, huidig }) {
   const items = MEER_ITEMS.filter((i) => i.page !== huidig);
   return (
     <div style={{ maxWidth: 760, margin: "0 auto", padding: "6px 16px 40px" }}>
+      {/* Mark 30 sep 2026: Familie overal klikbaar om af te sluiten. */}
+      <FamilieAfsluiten plek={AFSLUIT_PLEK[huidig] || huidig || "familie-extra"} variant="regel" style={{ marginBottom: 16 }} />
       <div style={{ height: 1, background: "rgba(255,255,255,0.08)", margin: "4px 0 14px" }} />
       <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
         ✨ Meer Familie-extra's

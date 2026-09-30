@@ -18,6 +18,7 @@ import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
+import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
 import { bepaalPlan, planSamenvatting } from "../vandaag/vandaagPlan.js";
@@ -2418,6 +2419,12 @@ export default function MijnPagina({
                   {tier === "free" && <> — in 2026 is alles vrij te gebruiken.</>}
                   {geldigTot && <> — geldig tot {geldigTot}.</>}
                 </div>
+                {/* Mark 30 sep 2026: Familie afsluiten — alleen voor ouder of verzorger, nooit voor het kind. */}
+                {userRole === "ouder" && (
+                  <div style={{ marginBottom: 6, fontSize: 13 }}>
+                    <FamilieAfsluiten plek="mijnpagina" variant="link" />
+                  </div>
+                )}
                 {/* Koppelcode-regel is kind-taal — leerkracht én ouder zien
                     hem niet (agent-test 12 aug; Mark 27 aug: ouder-rol krijgt
                     geen kind-teksten). */}

@@ -20,3 +20,26 @@ export function mailTaglineHtml({ site = "https://leerkwartier.app", kleur = "#7
     `<a href="${site}/?utm_source=mail_tagline" style="color:${link};text-decoration:none;">leerkwartier.app</a>` +
     `</p>`;
 }
+
+// 👪 Familie-regel (Mark 30 sep 2026): één rustige regel met een link naar de
+// koopkaart (/abonnement.html#familie). Alleen in mails aan ouders/verzorgers
+// die Familie NIET al hebben (partnercode of betaald) — dat filter doet de
+// aanroeper. Vóór 1 jan 2027 met de vroege-vogel-zin; daarna vanzelf zonder.
+// Links in mails altijd mét .html (zonder .html = SPA-startpagina).
+const FAMILIE_START_MS = Date.parse("2027-01-01T00:00:00+01:00");
+
+export function familieUrl(plek) {
+  return `https://leerkwartier.app/abonnement.html?van=${encodeURIComponent(plek)}#familie`;
+}
+
+export function familieRegelText(plek, nu = Date.now()) {
+  const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
+  return `Meer uit Leerkwartier halen? Familie: € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.${vroeg} ${familieUrl(plek)}`;
+}
+
+export function familieRegelHtml(plek, { kleur = "#9fb0c6", link = "#ffd54f", nu = Date.now() } = {}) {
+  const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
+  return `<p style="font-size:12.5px;line-height:1.6;color:${kleur};margin:0 0 12px;text-align:center;">` +
+    `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Familie: € 39 voor 12 maanden, per gezin</a> — geen abonnement, stopt vanzelf.${vroeg}` +
+    `</p>`;
+}

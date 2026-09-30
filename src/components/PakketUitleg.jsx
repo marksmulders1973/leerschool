@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
 import { LAAG_KLEUREN } from "../subscription/proPlan.js";
+import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
 import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartnerCodeHandmatig } from "../features/referral/partnerCode.js";
 
 // Pakket-uitleg (Mark 31 jul, na 5-agent-panel): kraakhelder + eerlijk laten
@@ -18,7 +19,7 @@ import { actievePartnerCode, partnerFamilieTot, partnerFamilieTotLabel, zetPartn
 
 const G = "#00c853"; // gratis-groen — in dit blok exclusief voor de basis
 
-function TierKaart({ emoji, naam, voorWie, prijs, items, huidig, kleur }) {
+function TierKaart({ emoji, naam, voorWie, prijs, items, huidig, kleur, children }) {
   return (
     <div style={{
       flex: "1 1 200px", background: kleur ? kleur.vlak : "rgba(255,255,255,0.03)",
@@ -39,6 +40,7 @@ function TierKaart({ emoji, naam, voorWie, prijs, items, huidig, kleur }) {
           </li>
         ))}
       </ul>
+      {children}
     </div>
   );
 }
@@ -215,7 +217,9 @@ export default function PakketUitleg({ open, onClose }) {
               "Eén prijs voor het hele gezin",
             ]}
             kleur={LAAG_KLEUREN.familie}
-          />
+          >
+            <FamilieAfsluiten plek="pakketuitleg" variant="knop" style={{ marginTop: 10 }} />
+          </TierKaart>
           <TierKaart
             emoji="🏫" naam="Schoollicentie" voorWie="voor scholen"
             prijs="op aanvraag — factuur en verwerkersovereenkomst; de prijs bepalen we samen met de school"

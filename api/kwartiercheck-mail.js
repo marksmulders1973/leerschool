@@ -2,7 +2,9 @@
 // POST { email, naam_kind, groep, scores }
 // scores = { [conceptId]: { oordeel: "beheerst" | "gedeeltelijk" | "nogniet" } }
 
-import { mailTaglineHtml } from "./_lib/mail-tagline.js";
+// Familie-regel: deze mail gaat naar een los opgegeven adres zonder account-
+// koppeling, dus partner-/betaalde gezinnen zijn hier niet goedkoop te herkennen.
+import { mailTaglineHtml, familieRegelHtml } from "./_lib/mail-tagline.js";
 
 import { ALLE_CONCEPTEN, conceptVan, VAK_LABELS } from "../src/features/kwartiercheck/conceptMapping.js";
 const SITE = "https://leerkwartier.app";
@@ -140,6 +142,7 @@ function bouwMailHtml(naam, groep, scores, unsubToken) {
 
   <!-- Footer -->
   <div style='padding:16px 28px 0;border-top:1px solid rgba(255,255,255,0.07);background:#0a0f1e;text-align:center'>
+    ${familieRegelHtml("kwartiercheck-mail", { kleur: "rgba(255,255,255,0.55)" })}
     ${mailTaglineHtml({ kleur: "rgba(255,255,255,0.4)", link: "#69b2ff" })}
     <p style='font-size:11px;color:rgba(255,255,255,0.3);margin:0'>
       <a href='https://leerkwartier.app' style='color:#69b2ff'>Leerkwartier</a> · Kwartiercheck ·
@@ -220,7 +223,7 @@ export default async function handler(req, res) {
     return res.status(400).json({ error: "ontbrekende velden" });
   }
   if (!/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) return res.status(400).json({ error: "email" });
-  if (!["6", "7", "8"].includes(groep)) return res.status(400).json({ error: "groep" });
+  if (!["3", "4", "5", "6", "7", "8"].includes(groep)) return res.status(400).json({ error: "groep" });
 
   try {
     // Eerst opslaan: zo krijgt de mail een werkend afmeld-token en start de

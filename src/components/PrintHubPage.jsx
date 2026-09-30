@@ -14,6 +14,7 @@ import { track } from "../utils.js";
 import { GratisBadge } from "../subscription/ProBadge.jsx";
 import HubSter from "../shared/ui/HubSter.jsx";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
+import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
 
 // ── Laag 1: gratis, blijft gratis ─────────────────────────────────────
 const GRATIS = [
@@ -188,7 +189,8 @@ export default function PrintHubPage({ setPage } = {}) {
       <SlotKop kleur="#ffb300" titel="Op maat — met Familie" chip="Familie" />
       <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 12px", fontSize: 13, lineHeight: 1.55 }}>
         Persoonlijk, afgestemd op jóuw kind. Deze horen bij <strong style={{ color: "#ffd54f" }}>Familie</strong> (vanaf 2027).
-        Tijdens de bèta kun je ze nu al gratis proberen.
+        Tijdens de bèta kun je ze nu al gratis proberen.{" "}
+        <FamilieAfsluiten plek="printhub" variant="link" />
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 26 }}>
         {FAMILIE.map((p) => (

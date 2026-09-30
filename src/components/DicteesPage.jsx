@@ -13,6 +13,7 @@ import PrintFooter from "../shared/ui/PrintFooter.jsx";
 import { track } from "../utils.js";
 import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import { FamiliePill } from "../features/familie/familieUi.jsx";
+import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
 
 const PRINT_CSS = `
 @media print {
@@ -269,6 +270,7 @@ export default function DicteesPage({ setPage } = {}) {
           <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>
             De 💛-dictees (werkwoordspelling, groep 7-8) horen straks bij het Familie-pakket.
           </span>
+          <FamilieAfsluiten plek="dictees" variant="link" style={{ fontSize: 12.5 }} />
         </div>
 
         <div style={{ display: "flex", alignItems: "center", gap: 16, flexWrap: "wrap" }}>

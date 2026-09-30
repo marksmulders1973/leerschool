@@ -5,6 +5,7 @@ import { isLaunchPromoActive } from "../constants.js";
 import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
+import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
 import { PRO_FEATURES, PRO_GRATIS_BASIS, PRO_MODEL, LAGEN, LAAG_KLEUREN } from "../subscription/proPlan.js";
 
 // T1-sync 10 aug 2026: dit (dormant, achter PAYWALL_ACTIVE) blok toonde nog
@@ -158,6 +159,9 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
                 </div>
               ))}
             </div>
+            {laag.id === "familie" && (
+              <FamilieAfsluiten plek="propagina" variant="knop" style={{ marginTop: 10 }} />
+            )}
           </div>
         ); })}
 

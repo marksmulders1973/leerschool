@@ -10,6 +10,7 @@
 
 import { PRO_GRATIS_BASIS } from "../../subscription/proPlan.js";
 import { FamiliePill } from "./familieUi.jsx";
+import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
 
 // De 8 gekozen Familie-haken (Mark 31 jul). status: 'klaar' | 'bouw'.
 const FEATURES = [
@@ -46,6 +47,9 @@ bèta
           Alles wat vandaag gratis is, blijft gratis — tot en met 2031. Familie komt daar bovenop:
           <b>€39 per jaar voor het hele gezin.</b>
         </p>
+        <div style={{ marginBottom: 12 }}>
+          <FamilieAfsluiten plek="familiehub" variant="knop" />
+        </div>
         <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 14 }}>
           {klaar} van {FEATURES.length} onderdelen klaar.{klaar < FEATURES.length ? " De rest komt binnenkort." : " Alles staat live om uit te proberen."}
         </div>
@@ -101,6 +105,7 @@ bèta
         <div style={{ marginTop: 20, fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
           ✨ Bèta — gratis om uit te proberen. We verbeteren dit nog; straks onderdeel van het Familie-pakket.
         </div>
+        <FamilieAfsluiten plek="familiehub-onder" variant="regel" style={{ marginTop: 14 }} />
       </div>
     </div>
   );

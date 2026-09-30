@@ -58,8 +58,16 @@ export function useFamilieStatus() {
   return status;
 }
 
+// Nooit mee afdrukken (Weekschema/Diploma e.d. zijn printpagina's).
+const GEEN_PRINT = <style>{"@media print{[data-lk-familie]{display:none!important}}"}</style>;
+
+export default function FamilieAfsluiten(props) {
+  const inhoud = <FamilieAfsluitenInhoud {...props} />;
+  return <span data-lk-familie="" style={{ display: "contents" }}>{GEEN_PRINT}{inhoud}</span>;
+}
+
 // variant: "link" (inline tekstlink) · "knop" (opvallende knop) · "regel" (kaartje met uitleg)
-export default function FamilieAfsluiten({ plek, variant = "link", kind = false, tekst, style }) {
+function FamilieAfsluitenInhoud({ plek, variant = "link", kind = false, tekst, style }) {
   const status = useFamilieStatus();
   if (kind) return null;
 
