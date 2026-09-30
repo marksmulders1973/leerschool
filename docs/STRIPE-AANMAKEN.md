@@ -1,5 +1,8 @@
 # 💳 Stripe aanmaken — alle gegevens op één plek (29 sep 2026)
 
+> ✅ **Deel 1 klaar (30 sep 2026 avond):** account "leerkwartier" (hallo@leerkwartier.app, NL) aangemaakt door Mark; sandbox (testmodus) actief; "Create subscriptions" bewust uit. Claude heeft via de Stripe-API in de sandbox aangemaakt: product "Leerkwartier Familie — 1 jaar" met prijzen **€39** (jaar) en **€31** (verlenging), product "Leerkwartier Seizoenspas" met placeholder-prijs **€39 (nog te bevestigen)**, en een webhook naar `https://leerkwartier.app/api/checkout-session?action=webhook` (checkout.session.completed, async_payment_succeeded, charge.refunded). Hosting-env (production): STRIPE_SECRET_KEY (sk_test), STRIPE_PRICE_JAAR, STRIPE_PRICE_JAAR_VERLENG, STRIPE_PRICE_SEIZOENSPAS, STRIPE_WEBHOOK_SECRET. **STRIPE_ACTIVE staat NIET aan** → betaalknop blijft uit.
+> ⏳ **Deel 2 (Mark):** "Verify your business" in Stripe: ID + geboortedatum + adres + IBAN (Knab nog in behandeling). Daarna live-sleutels → Claude vervangt de env-vars.
+
 > Voor het moment dat Mark het Stripe-account aanmaakt (gepland 5–12 okt, mag eerder).
 > Alles wat Stripe vraagt staat hieronder, behalve persoonsgegevens (BSN, ID-scan, geboortedatum,
 > privéadres): die vult Mark zelf in, die schrijven we nergens op. Techniek: docs/BETALING-PLAN.md.
