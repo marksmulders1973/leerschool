@@ -232,7 +232,7 @@ Tik je hierboven op het Weekpakket of de vraag van vandaag, dan telt dat ook als
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:24px;">${niveauSectie}</div>` : `
     <div style="background:rgba(105,240,174,0.07);border:1px dashed rgba(105,240,174,0.4);border-radius:12px;padding:14px 16px;margin-bottom:24px;">
       <div style="font-size:14px;font-weight:800;color:#69f0ae;margin-bottom:4px;">📊 Nieuw: gratis wekelijks ouder-rapport</div>
-      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;">Elke maandag in je mail: wat je kind oefende, wat al goed gaat en wat aandacht verdient — zoals betaalde apps dat doen, bij ons gratis. <a href="${SITE}/ouder?utm_source=email&utm_campaign=koppel-cta" style="color:#69f0ae;font-weight:700;text-decoration:none;">Koppel je kind in 1 minuut →</a></div>
+      <div style="font-size:13.5px;line-height:1.55;color:#cdd6e5;">Elke vrijdag om 16:00 in je mail: wat je kind oefende, wat al goed gaat en wat aandacht verdient — zoals betaalde apps dat doen, bij ons gratis. <a href="${SITE}/ouder?utm_source=email&utm_campaign=koppel-cta" style="color:#69f0ae;font-weight:700;text-decoration:none;">Koppel je kind in 1 minuut →</a></div>
     </div>`}
     ${bevestigBlok.html}
     <p style="font-size:13px;line-height:1.6;color:#9fb0c6;margin:0 0 10px;text-align:center;">💡 Heb je een idee om Leerkwartier beter te maken? <a href="${tip}" style="color:#69f0ae;font-weight:700;text-decoration:none;">Vertel het de maker →</a></p>
@@ -390,7 +390,9 @@ export default async function handler(req, res) {
   let kwartiercheckWeek = null;
   try {
     const weekdag = new Date().toLocaleDateString("nl-NL", { weekday: "long", timeZone: "Europe/Amsterdam" });
-    if (weekdag === "maandag") {
+    // 30 sep 2026: het ouder-rapport gaat niet meer op maandag mee, maar op VRIJDAG 16:00 via
+    // .github/workflows/ouder-weekrapport.yml → GET /api/send-ouder-rapport (Mark: "elke vrijdagmiddag").
+    if (weekdag === "maandag" && process.env.OUDER_RAPPORT_OP_MAANDAG === "1") {
       const { stuurOuderRapporten } = await import("./send-ouder-rapport.js");
       ouderRapport = await stuurOuderRapporten({ base, key, RESEND, FROM });
       budget -= ouderRapport?.sent || 0;

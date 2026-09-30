@@ -21,6 +21,7 @@ import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import { VAK_INFO, vakkenVoorGroep, vakNotitie, VAK_INFO_KLAS, vakkenVoorKlas, klasNotitie } from "./vakkenPerGroep.js";
 import { leesLijstje, toggleLijstje, LIJSTJE_EVENT } from "../../shared/mijnLijstje.js";
 import { bepaalPlan, planSamenvatting } from "../vandaag/vandaagPlan.js";
+import { leesVoorkeur, ververseVoorkeur, VOORKEUR_EVENT } from "../vandaag/voorkeur.js";
 import { startKwartierPlan, kwartierGedaanVandaag, kwartierActief, kwartierStand } from "../vandaag/kwartier.js";
 import { haalKlaargezetVoorKind, markeerGedaan, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import { buddyWeetjes, BUDDY_BY_ID, buddyNaam as buddyNaamVan, gekozenBuddy } from "../zoo/buddies.js";
@@ -420,6 +421,18 @@ export default function MijnPagina({
     laad();
     window.addEventListener(KLAARGEZET_EVENT, laad);
     return () => { cancel = true; window.removeEventListener(KLAARGEZET_EVENT, laad); };
+  }, [player]);
+  // 🏠 Gezinsstart-voorkeur (30 sep 2026): waar thuis de nadruk op ligt. Van
+  // het toestel (lk_voorkeur) en, bij een ouder-koppeling, vers van de server.
+  const [gezinVoorkeur, setGezinVoorkeur] = useState(() => leesVoorkeur(player)?.voorkeur || null);
+  useEffect(() => {
+    if (!player) { setGezinVoorkeur(null); return; }
+    let cancel = false;
+    const sync = () => setGezinVoorkeur(leesVoorkeur(player)?.voorkeur || null);
+    sync();
+    ververseVoorkeur(player).then(() => { if (!cancel) sync(); });
+    window.addEventListener(VOORKEUR_EVENT, sync);
+    return () => { cancel = true; window.removeEventListener(VOORKEUR_EVENT, sync); };
   }, [player]);
   // 🎨 Eigen achtergrond (Mark 13 aug): thema per speler + goud-ontgrendeling.
   const [themaTeller, setThemaTeller] = useState(0);
@@ -1774,6 +1787,7 @@ export default function MijnPagina({
                         dicteeSchool: (() => { try { return !!localStorage.getItem("lk_dictee_school"); } catch { return false; } })(),
                         wwSchool: (() => { try { return !!localStorage.getItem("lk_ww_school"); } catch { return false; } })(),
                         metSchoolvakken: niveau?.soort === "klas",
+                        voorkeur: gezinVoorkeur,
                       });
                       const stand = bezig ? kwartierStand() : null;
                       return (
@@ -1794,7 +1808,7 @@ export default function MijnPagina({
                                     onClick={() => {
                                       const eerst = [b, ...plan.blokjes.filter((x) => x !== b)];
                                       startKwartierPlan({ ...plan, blokjes: eerst });
-                                      try { track("vandaag_knop", { reden: plan.reden, bezig: 0, gedaan: gedaan ? 1 : 0, eerste: b.soort, gekozen: 1 }); } catch { /* */ }
+                                      try { track("vandaag_knop", { reden: plan.reden, bezig: 0, gedaan: gedaan ? 1 : 0, eerste: b.soort, gekozen: 1, voorkeur: plan.voorkeur ? 1 : 0 }); if (plan.voorkeur) track("vandaag_voorkeur", { reden: plan.reden }); } catch { /* */ }
                                       onVandaagKwartier();
                                     }}
                                     style={{ padding: "7px 11px", borderRadius: 999, border: "1px solid rgba(105,240,174,0.45)", background: "rgba(0,200,83,0.10)", color: "var(--color-text)", cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700 }}>
@@ -1805,7 +1819,7 @@ export default function MijnPagina({
                             </div>
                           )}
                           <button
-                            onClick={() => { if (!bezig) startKwartierPlan(plan); try { track("vandaag_knop", { reden: plan.reden, bezig: bezig ? 1 : 0, gedaan: gedaan ? 1 : 0 }); } catch { /* */ } onVandaagKwartier(); }}
+                            onClick={() => { if (!bezig) startKwartierPlan(plan); try { track("vandaag_knop", { reden: plan.reden, bezig: bezig ? 1 : 0, gedaan: gedaan ? 1 : 0, voorkeur: plan.voorkeur ? 1 : 0 }); if (plan.voorkeur && !bezig) track("vandaag_voorkeur", { reden: plan.reden }); } catch { /* */ } onVandaagKwartier(); }}
                             style={{
                               padding: "13px 20px", borderRadius: 11, border: "none", cursor: "pointer",
                               background: "linear-gradient(135deg, #00c853, #69f0ae)", color: "#003a15",

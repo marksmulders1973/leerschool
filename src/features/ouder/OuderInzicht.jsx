@@ -16,6 +16,17 @@ import KwartierplanSectie from "../kwartierplan/KwartierplanSectie.jsx";
 import { haalKlaargezetVoorLink, haalWeg, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
 import KindOverzicht from "./KindOverzicht.jsx";
 import CharleyTip from "../../components/CharleyTip.jsx";
+import Gezinsstart, { VoorkeurEditor, MAX_KINDEREN } from "./Gezinsstart.jsx";
+import { bewaarVoorkeur, voorkeurSamenvatting } from "../vandaag/voorkeur.js";
+import { koppelingVoor } from "../../shared/koppeling.js";
+import EmailLogin from "../../auth/EmailLogin.jsx";
+
+// 🏠 Gezinsstart (30 sep 2026): het moment waarop het weekrapport de deur uit
+// gaat, op één plek — staat in de blokken "Weekrapport" en in de wizard.
+// ⚠️ api/send-ouder-rapport.js verstuurt op dit moment op MAANDAGochtend
+// (vanuit de lesmateriaal-cron); Mark wil vrijdag 16:00 — cron nog verzetten.
+const WEEKRAPPORT_MOMENT = "Elke vrijdag om 16:00";
+const GROEP_OPTIES = ["3", "4", "5", "6", "7", "8", "brugklas"];
 
 
 // Gedeeld ouder-inzicht-blok (Mark 14 aug): dezelfde ouder-functionaliteit —
@@ -33,10 +44,22 @@ const SUBJECT_LABELS = {
 };
 
 // Familie feature 7 (Mark 1 aug): een gezin koppelt tot 3 kinderen op één
-// account. Datamodel (parent_child_links) ondersteunt al meerdere; deze cap +
-// het "wij oefenen samen"-gevoel maken het een Familie-troef zonder broer/zus-
-// vergelijking (ongezond). Geen schema-wijziging.
-const MAX_KINDEREN = 3;
+// account (MAX_KINDEREN komt uit Gezinsstart.jsx). Datamodel
+// (parent_child_links) ondersteunt al meerdere; deze cap + het "wij oefenen
+// samen"-gevoel maken het een Familie-troef zonder broer/zus-vergelijking.
+
+// Vinkje/pijl als SVG (geen emoticon als icoon, Mark 11 sep).
+function Bolletje({ kleur, size = 14 }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" fill="none" aria-hidden="true" style={{ flexShrink: 0 }}>
+      <circle cx="12" cy="12" r="10" stroke={kleur} strokeWidth="2" />
+      <path d="M7.5 12.5l3 3 6-6" stroke={kleur} strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+function BlokKop({ children, kleur = "rgba(255,255,255,0.85)" }) {
+  return <div style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: kleur, marginBottom: 8 }}>{children}</div>;
+}
 
 function ScoreBadge({ pct }) {
   // Robuust bij een nullable/corrupte scorebord-rij: toon "—" i.p.v. "null%".
@@ -48,18 +71,6 @@ function ScoreBadge({ pct }) {
     <span style={{ padding: "2px 8px", borderRadius: 8, background: bg, color, fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700 }}>
       {geldig ? `${n}%` : "—"}
     </span>
-  );
-}
-
-// Voortgangsbalk voor de koppel-kaarten: 3 segmenten, gevuld t/m `stap`
-// (1-3). Zo ziet ouder én kind in één blik "stap x van 3".
-function ProgressBar({ stap, kleur }) {
-  return (
-    <div style={{ display: "flex", gap: 4, marginTop: 6 }} aria-hidden="true">
-      {[1, 2, 3].map((n) => (
-        <div key={n} style={{ flex: 1, height: 5, borderRadius: 3, background: n <= stap ? kleur : "rgba(255,255,255,0.12)", transition: "background 0.3s" }} />
-      ))}
-    </div>
   );
 }
 
@@ -104,9 +115,17 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // "wacht op je kind"-kaarten. Samen met `children` vormen ze de plek-status
   // per kind: leeg → wacht → (evt. bevestigen) → ✓ gekoppeld.
   const [openInvites, setOpenInvites] = useState([]);
-  // Welke lege plek staat open in "voeg kind toe"-modus (index), en welke code
-  // is net gekopieerd (voor de ✓-feedback per wacht-kaart).
-  const [addingSlot, setAddingSlot] = useState(false);
+  // 🏠 Gezinsstart (30 sep 2026): wizard open? null = automatisch (bij 0
+  // kinderen), true = via "Nog een kind", false = door de ouder gesloten.
+  const [gezinsstartOpen, setGezinsstartOpen] = useState(null);
+  // Per kind uit gezin_overzicht(): laatst geoefend (max over mastery/leerpad/
+  // toets-rijen op link_id). { [link_id]: iso|null }
+  const [laatstActief, setLaatstActief] = useState({});
+  const [overzichtGeladen, setOverzichtGeladen] = useState(false);
+  // Inline bewerken op de kind-kaart: nadruk (voorkeur) en groep.
+  const [voorkeurEditId, setVoorkeurEditId] = useState(null);
+  const [voorkeurSaving, setVoorkeurSaving] = useState(false);
+  // Welke code is net gekopieerd (voor de feedback per kaart).
   const [copiedCode, setCopiedCode] = useState("");
   const [selectedChild, setSelectedChild] = useState(null);
   // 🔒 Opslag-uitleg (Mark 27 aug: "zet er netjes bij wat wél wordt
@@ -114,7 +133,6 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // kinderen-kaart, in gewone taal.
   const [opslagInfoOpen, setOpslagInfoOpen] = useState(false);
   const koppelFlowRef = useRef(null); // scroll-target = de koppel-kaarten
-  const inviteNaamRef = useRef(null); // focus bij "voeg kind toe"
   const [childScores, setChildScores] = useState([]);
   const [citoScores, setCitoScores] = useState([]);
   const [loading, setLoading] = useState(false);
@@ -124,12 +142,6 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // eerste query nog níét "geladen". De Charley-tips keken daar 1 sep één
   // render-frame te vroeg naar en de geen-resultaten-tip stal de sessie-slot.
   const [scoresGeladen, setScoresGeladen] = useState(false);
-  // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Ouder moet
-  // naam-in-app van kind opgeven vóór code-generatie.
-  const [inviteChildName, setInviteChildName] = useState("");
-  // Optioneel "van wie" (Mark 30 aug): het label dat het kind ziet bij een
-  // geslaagde koppeling ("gekoppeld met mama"). Leeg = "gekoppeld met thuis".
-  const [inviteVanWie, setInviteVanWie] = useState("");
   // Koppeling-herstel (Mark 1 sep 2026): nieuw toestel / kind op verkeerd
   // account → één verse code her-koppelt automatisch (claim_link_code verhangt
   // child_user_id naar het account dat de code invoert). We tonen die code
@@ -156,7 +168,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
   // kind de code op zijn eigen toestel invoert — zonder dat de ouder ververst.
   const laadKoppelStatus = useCallback(async (isPoll = false) => {
     if (!authUser) return;
-    const [linksRes, codesRes] = await Promise.all([
+    const [linksRes, codesRes, overzichtRes] = await Promise.all([
       supabase.from("parent_child_links")
         .select("*")
         .eq("parent_user_id", authUser.id)
@@ -166,9 +178,16 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         .eq("parent_user_id", authUser.id)
         .is("used_at", null)
         .order("created_at", { ascending: true }),
+      // Gezinsstart: "laatst geoefend" per kind (gezin_overzicht leest op link_id).
+      supabase.rpc("gezin_overzicht").then((r) => r).catch(() => ({ data: null })),
     ]);
     const links = linksRes.data || [];
     setChildren(links);
+    try {
+      const kinderen = overzichtRes?.data?.kinderen || [];
+      setLaatstActief(Object.fromEntries(kinderen.map((k) => [k.link_id, k.laatst_actief || null])));
+    } catch { /* overzicht is een extraatje */ }
+    setOverzichtGeladen(true);
     // Partner-mail: adres staat op elke koppeling gelijk — pak de eerste die
     // 'm heeft. Alléén bij de eerste load: de 6s-poll (isPoll) zou anders het
     // veld elke tik overschrijven terwijl de ouder er net in typt
@@ -446,44 +465,59 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
     }, 2500);
   };
 
-  const generateInvite = async () => {
-    if (!authUser) return;
-    if (children.length >= MAX_KINDEREN) return; // cap: max 3 kinderen per gezin
-    const childName = inviteChildName.trim();
-    // 27 aug: zonder naam deed de knop stilletjes niets — Mark liep er bij het
-    // testen tegenaan. Nu een duidelijke melding.
-    if (!childName) { alert("Vul eerst de naam van je kind in (zoals in de app), dan maken we de code."); return; }
+  // Koppelcode voor een kind op een ánder apparaat (Gezinsstart stap 3 "Nee",
+  // en de kaart "Nog niet gekoppeld"). Geeft de code terug of null. De
+  // koppeling zelf bestaat al (gezin_koppel_zelfde_apparaat, verified=false)
+  // mét groep/voorkeur; claim_link_code vindt die op ouder + naam en zet 'm
+  // op gekoppeld zodra het kind de code invoert.
+  const maakCodeVoor = async (childName) => {
+    if (!authUser || !childName?.trim()) return null;
     setLoading(true);
     const code = generateCode();
     const expires = new Date(Date.now() + 48 * 3600 * 1000).toISOString();
     // Bug-fix 2026-05-18: link_codes.child_name is NOT NULL. Silent .catch
     // verving door explicit-log zodat insert-fails niet meer onzichtbaar zijn.
     const { error } = await supabase.from("link_codes").insert({
-      code, parent_user_id: authUser.id, child_name: childName, expires_at: expires,
-      van_wie: inviteVanWie.trim() || null,
+      code, parent_user_id: authUser.id, child_name: childName.trim(), expires_at: expires, van_wie: null,
     });
+    setLoading(false);
     if (error) {
       // eslint-disable-next-line no-console
-      console.error("[OuderInzicht] generateInvite failed:", error.message);
-      alert("Kon code niet opslaan. Probeer later opnieuw.");
-      setLoading(false);
-      return;
+      console.error("[OuderInzicht] maakCodeVoor failed:", error.message);
+      return null;
     }
-    setLoading(false);
-    // Sluit de "voeg kind toe"-modus en herlaad — de verse code verschijnt nu
-    // als "wacht op je kind"-kaart met deelknoppen + teller.
-    setAddingSlot(false);
-    setInviteChildName("");
-    setInviteVanWie("");
     laadKoppelStatus();
-    try { track("ouder_koppelcode_gemaakt", { met_naam: !!inviteVanWie.trim() }); } catch { /* */ }
+    try { track("ouder_koppelcode_gemaakt", { via: "gezinsstart" }); } catch { /* */ }
+    return code;
+  };
+
+  // Groep en nadruk (voorkeur) op de kind-kaart bewerken. Staat het kind op dít
+  // toestel, dan gaat de nieuwe voorkeur ook meteen in lk_voorkeur, zodat het
+  // kwartier van vandaag 'm zonder herladen oppakt.
+  const bewaarGroep = async (c, groep) => {
+    const nieuw = groep || null;
+    setChildren((prev) => prev.map((k) => (k.id === c.id ? { ...k, groep: nieuw } : k)));
+    const { error } = await supabase.from("parent_child_links").update({ groep: nieuw }).eq("id", c.id);
+    if (error) { setChildren((prev) => prev.map((k) => (k.id === c.id ? { ...k, groep: c.groep } : k))); return; }
+    if (koppelingVoor(c.child_name)?.ouder?.link_id === c.id) bewaarVoorkeur(c.child_name, { groep: nieuw });
+    try { track("gezin_groep_gewijzigd", {}); } catch { /* */ }
+  };
+  const bewaarVoorkeurVan = async (c, voorkeur) => {
+    setVoorkeurSaving(true);
+    const { error } = await supabase.from("parent_child_links").update({ voorkeur }).eq("id", c.id);
+    setVoorkeurSaving(false);
+    if (error) { alert("Opslaan lukte niet. Probeer het zo nog eens."); return; }
+    setChildren((prev) => prev.map((k) => (k.id === c.id ? { ...k, voorkeur } : k)));
+    if (koppelingVoor(c.child_name)?.ouder?.link_id === c.id) bewaarVoorkeur(c.child_name, { groep: c.groep || null, voorkeur });
+    setVoorkeurEditId(null);
+    try { track("gezin_voorkeur_gewijzigd", { vakken: (voorkeur?.vakken || []).length, app_kiest: voorkeur?.app_kiest ? 1 : 0 }); } catch { /* */ }
   };
 
   // 🔗 Herstel-code voor een AL gekoppeld kind (Mark 1 sep 2026): nieuw toestel,
   // gewiste opslag of kind op een verkeerd account → één verse code lost het op.
   // claim_link_code vindt de bestaande koppeling (zelfde ouder + kindnaam) en
   // verhangt child_user_id naar het account dat de code invoert. We omzeilen de
-  // cap-check van generateInvite (het kind telt al mee) en tonen de code inline.
+  // cap-check van maakCodeVoor niet nodig (het kind telt al mee); code inline.
   const maakHerstelCode = async (childName) => {
     if (!authUser || !childName?.trim()) return;
     setLoading(true);
@@ -605,29 +639,78 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           <svg width="18" height="18" viewBox="0 0 24 24"><path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/><path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/><path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l3.66-2.84z"/><path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z"/></svg>
           Inloggen met Google
         </button>
+        {/* E-mail-login (30 sep 2026): voor een ouder of verzorger zonder Google-account. */}
+        <div style={{ width: "100%", maxWidth: 320 }}>
+          <EmailLogin compact />
+        </div>
       </div>
     );
   }
 
-  // 🔗 Slot-model: elke "plek" is óf een gekoppeld/te-bevestigen kind
-  // (parent_child_links) óf een openstaande code (link_codes = wacht op kind).
-  // Een openstaande code waarvan het kind inmiddels koppelde (zelfde naam in
-  // children) tonen we niet dubbel. Rest = lege plekken tot MAX_KINDEREN.
+  // 🔗 Kind-kaarten: elk kind = een parent_child_links-rij (gekoppeld of nog
+  // niet) plus, als die er is, de nieuwste openstaande code op die naam. Een
+  // code zonder rij (oude flow) wordt ook een kaart "Nog niet gekoppeld".
   const gekoppeldeNamen = new Set(children.map((c) => (c.child_name || "").trim().toLowerCase()));
-  // Per kindnaam maximaal één wacht-kaart: klikte de ouder 2× genereren voor
-  // hetzelfde kind, toon dan alleen de nieuwste code (lijst is oplopend op
-  // created_at, dus de latere overschrijft de eerdere in de map).
   const wachtPerNaam = new Map();
-  for (const iv of openInvites) {
-    const naam = (iv.child_name || "").trim().toLowerCase();
-    if (!gekoppeldeNamen.has(naam)) wachtPerNaam.set(naam, iv);
-  }
-  const wachtInvites = [...wachtPerNaam.values()];
-  const slots = [
-    ...children.map((c) => ({ key: `k-${c.id}`, type: c.verified ? "gekoppeld" : "bevestigen", kind: c })),
-    ...wachtInvites.map((iv) => ({ key: `w-${iv.id}`, type: "wacht", invite: iv })),
+  for (const iv of openInvites) wachtPerNaam.set((iv.child_name || "").trim().toLowerCase(), iv); // oplopend → nieuwste wint
+  const kindKaarten = [
+    ...children.map((c) => ({ key: `k-${c.id}`, naam: c.child_name, kind: c, invite: c.verified ? null : wachtPerNaam.get((c.child_name || "").trim().toLowerCase()) || null })),
+    ...[...wachtPerNaam.entries()].filter(([naam]) => !gekoppeldeNamen.has(naam)).map(([, iv]) => ({ key: `w-${iv.id}`, naam: iv.child_name, kind: null, invite: iv })),
   ];
-  const vrijePlekken = Math.max(0, MAX_KINDEREN - slots.length);
+  // Gezinsstart: vanzelf open zolang er nog niets in het gezin staat (na de
+  // eerste load), of expliciet via "Nog een kind".
+  const toonGezinsstart = gezinsstartOpen === true || (gezinsstartOpen === null && overzichtGeladen && kindKaarten.length === 0);
+
+  // Partner-invoer (Mark 14 aug, F15 double opt-in): één adres per gezin.
+  // Staat in het blok "Ouders" én in stap 4 van de Gezinsstart.
+  const partnerInvoer = (
+    <div>
+      <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        <input
+          type="email"
+          value={partnerEmail}
+          onChange={(e) => { setPartnerEmail(e.target.value); setPartnerSaved(false); setPartnerError(""); }}
+          placeholder="partner@voorbeeld.nl"
+          style={{
+            flex: "1 1 180px",
+            padding: "10px 12px",
+            borderRadius: 10,
+            border: `1px solid ${partnerError ? "rgba(255,112,67,0.7)" : "rgba(255,255,255,0.18)"}`,
+            background: "rgba(255,255,255,0.06)",
+            color: "var(--color-text-strong)",
+            fontFamily: "var(--font-body)",
+            fontSize: 14,
+            outline: "none",
+          }}
+        />
+        <button
+          onClick={savePartnerEmail}
+          disabled={partnerSaving}
+          style={{
+            padding: "10px 16px",
+            borderRadius: 10,
+            border: "none",
+            background: partnerSaving ? "rgba(0,176,255,0.3)" : "#00b0ff",
+            color: "#08121f",
+            fontFamily: "var(--font-display)",
+            fontSize: 14,
+            fontWeight: 700,
+            cursor: partnerSaving ? "default" : "pointer",
+          }}
+        >
+          {partnerSaving ? "Opslaan…" : "Opslaan"}
+        </button>
+      </div>
+      {partnerError && (
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ff8a65", marginTop: 8 }}>{partnerError}</div>
+      )}
+      {partnerSaved && !partnerError && (
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#69f0ae", marginTop: 8 }}>
+          {partnerEmail ? `✓ Uitnodiging gestuurd naar ${partnerEmail} — zodra die op "Ja, ik lees mee" tikt, komt het rapport ook daar aan.` : "✓ Uitgezet — het rapport gaat weer alleen naar jou."}
+        </div>
+      )}
+    </div>
+  );
 
   return (
     <div style={{ padding: embedded ? 0 : "16px 20px 48px", maxWidth: embedded ? "none" : 480, margin: embedded ? 0 : "0 auto", display: "flex", flexDirection: "column", gap: 16 }}>
@@ -640,6 +723,433 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
         <span style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", lineHeight: 1.4 }}>
           Dit ouder-inzicht hoort straks bij het Familie-pakket — <strong style={{ color: "#69f0ae" }}>nu nog helemaal gratis</strong>.
         </span>
+      </div>
+
+      {/* 🏠 Gezinsstart-wizard (30 sep 2026): vanzelf bij een gezin zonder
+          kinderen, en via "Nog een kind". Het kind ziet hier niets van. */}
+      {toonGezinsstart && (
+        <Gezinsstart
+          authUser={authUser}
+          bestaandAantal={children.length}
+          bestaandeNamen={[...gekoppeldeNamen]}
+          maakCode={maakCodeVoor}
+          sendWhatsApp={sendWhatsApp}
+          onHierOefenen={onHierOefenen}
+          onLater={() => setGezinsstartOpen(false)}
+          onKlaar={() => laadKoppelStatus()}
+          partnerSlot={partnerInvoer}
+          weekrapportMoment={WEEKRAPPORT_MOMENT}
+        />
+      )}
+
+      {/* ── Ouders ─────────────────────────────────────────────────────── */}
+      <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
+        <BlokKop>Ouders</BlokKop>
+        <div style={{ display: "flex", alignItems: "flex-start", gap: 10, padding: "10px 12px", borderRadius: 12, background: "rgba(105,240,174,0.06)", border: "1px solid rgba(105,240,174,0.25)" }}>
+          <Bolletje kleur="#69f0ae" size={16} />
+          <div style={{ minWidth: 0 }}>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 14, fontWeight: 700, color: "var(--color-text-strong)", overflowWrap: "anywhere" }}>{authUser.email || "je account"}</div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 2 }}>Hier komen het weekrapport en de rekening.</div>
+          </div>
+        </div>
+        <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 12, background: "rgba(0,176,255,0.05)", border: "1px solid rgba(0,176,255,0.22)" }}>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.85)", marginBottom: 2 }}>Tweede ouder of verzorger</div>
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginBottom: 8, lineHeight: 1.5 }}>
+            {partnerStatus === "bevestigd" && !partnerSaved
+              ? <span style={{ color: "#69f0ae" }}>{partnerEmail} leest mee met het weekrapport.</span>
+              : partnerStatus === "wacht" && !partnerSaved
+                ? <span style={{ color: "#ffd54f" }}>Uitnodiging verstuurd naar {partnerEmail} — wacht op "Ja, ik lees mee". Opnieuw opslaan = opnieuw versturen.</span>
+                : children.length === 0
+                  ? "Koppel eerst een kind; daarna kun je iemand laten meelezen."
+                  : "Die krijgt één uitnodiging en zegt zelf \"ja\". Laat leeg om het weer uit te zetten."}
+          </div>
+          {children.length > 0 && partnerInvoer}
+        </div>
+      </div>
+
+      {/* ── Kinderen ───────────────────────────────────────────────────── */}
+      <div ref={koppelFlowRef} style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
+        <BlokKop>Kinderen{children.length ? ` (${children.length}/${MAX_KINDEREN})` : ""}</BlokKop>
+
+        {/* 📊 Fullscreen kind-overzicht (fixed overlay — alleen voor gekoppelde kinderen bereikbaar). */}
+        {overzichtKind && (
+          <KindOverzicht child={overzichtKind} onBack={() => setOverzichtKind(null)} onKlaarzetten={onKlaarzetten} />
+        )}
+
+        <div style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 12 }}>
+          {kindKaarten.map((kaart) => {
+            const c = kaart.kind; // parent_child_links-rij of null (alleen een openstaande code)
+            const naam = kaart.naam;
+            const iv = kaart.invite; // openstaande code of null
+            const gekoppeld = !!c?.verified;
+            const isSel = !!c && selectedChild === c.child_name;
+            const laatst = c ? laatstActief[c.id] : null;
+            const mailAan = c ? c.weekmail !== false : true;
+            const pill = (extra) => ({ borderRadius: 999, padding: "4px 10px", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, ...extra });
+            const statusKleur = gekoppeld ? "#69f0ae" : "#00b0ff";
+            const statusTekst = gekoppeld
+              ? (laatst ? `Gekoppeld · laatst geoefend ${fmtDatum(laatst, { day: "numeric", month: "short" })}` : "Gekoppeld · nog niet geoefend")
+              : "Nog niet gekoppeld";
+            const deelKnop = (extra) => ({ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 5, ...extra });
+            return (
+              <div key={kaart.key} onClick={() => { if (gekoppeld) setSelectedChild(c.child_name); }} style={{
+                borderRadius: 14, padding: "13px 15px", cursor: gekoppeld ? "pointer" : "default",
+                border: isSel ? `1px solid ${statusKleur}99` : `1px solid ${statusKleur}47`,
+                background: isSel ? "rgba(105,240,174,0.12)" : gekoppeld ? "rgba(105,240,174,0.05)" : "rgba(0,176,255,0.06)",
+              }}>
+                {/* Naam + groep + verwijderen */}
+                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
+                  <span
+                    onClick={(e) => { if (!gekoppeld) return; e.stopPropagation(); setOverzichtKind(c); }}
+                    title={gekoppeld ? `Open het totaaloverzicht van ${naam}` : undefined}
+                    style={{ fontFamily: "var(--font-display)", fontSize: 16, fontWeight: 700, color: statusKleur, display: "flex", alignItems: "center", gap: 8, cursor: gekoppeld ? "pointer" : "default", textDecoration: gekoppeld ? "underline" : "none", textDecorationColor: "rgba(105,240,174,0.35)", textUnderlineOffset: 3 }}
+                  >
+                    {naam}
+                  </span>
+                  <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
+                    {c && (
+                      <select
+                        value={c.groep || ""}
+                        onClick={(e) => e.stopPropagation()}
+                        onChange={(e) => bewaarGroep(c, e.target.value)}
+                        aria-label={`Groep van ${naam}`}
+                        style={{ padding: "4px 8px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 700 }}
+                      >
+                        <option value="">Groep?</option>
+                        {GROEP_OPTIES.map((g) => <option key={g} value={g}>{g === "brugklas" ? "Brugklas" : `Groep ${g}`}</option>)}
+                      </select>
+                    )}
+                    {c ? (
+                      <button onClick={(e) => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${naam}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 18, padding: 2 }}>×</button>
+                    ) : (
+                      <button onClick={() => trekCodeIn(iv.id)} title="Code intrekken" aria-label="Code intrekken" style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 18, padding: 2 }}>×</button>
+                    )}
+                  </div>
+                </div>
+
+                {/* Status-pill */}
+                <div style={{ display: "inline-flex", alignItems: "center", gap: 6, marginTop: 8, padding: "4px 10px", borderRadius: 999, background: `${statusKleur}1f`, border: `1px solid ${statusKleur}59`, fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700, color: statusKleur }}>
+                  {gekoppeld && <Bolletje kleur={statusKleur} size={13} />}
+                  {statusTekst}
+                </div>
+
+                {/* Nadruk (voorkeur) */}
+                {c && (
+                  <div style={{ marginTop: 8, fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
+                    {c.voorkeur ? voorkeurSamenvatting(c.voorkeur) : "Nog geen nadruk gekozen — de app kiest zelf."}{" "}
+                    <button onClick={(e) => { e.stopPropagation(); setVoorkeurEditId(voorkeurEditId === c.id ? null : c.id); }} style={{ background: "none", border: "none", padding: 0, color: "#69f0ae", fontFamily: "var(--font-body)", fontSize: 12.5, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>
+                      {voorkeurEditId === c.id ? "sluit" : "aanpassen"}
+                    </button>
+                  </div>
+                )}
+                {c && voorkeurEditId === c.id && (
+                  <VoorkeurEditor groep={c.groep} voorkeur={c.voorkeur} bezig={voorkeurSaving} onOpslaan={(v) => bewaarVoorkeurVan(c, v)} onAnnuleer={() => setVoorkeurEditId(null)} />
+                )}
+
+                {/* Nog niet gekoppeld: code + delen */}
+                {!gekoppeld && (
+                  <div onClick={(e) => e.stopPropagation()} style={{ marginTop: 10 }}>
+                    {iv ? (
+                      <>
+                        <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
+                          Stuur deze code naar {naam}. In de app: <strong>Koppel met ouder</strong>, code invoeren, klaar.{geldigheidsTekst(iv.expires_at) ? ` De code is ${geldigheidsTekst(iv.expires_at)}.` : ""}
+                        </div>
+                        <div style={{ textAlign: "center", padding: "6px 0 8px" }}>
+                          <div style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{iv.code}</div>
+                        </div>
+                        <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                          <button onClick={() => sendWhatsApp(iv.code, naam)} style={deelKnop({ border: "none", background: "#25D366", color: "#08121f" })}>WhatsApp</button>
+                          <button onClick={() => sendEmailCode(iv.code)} style={deelKnop({ border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.10)", color: "#00b0ff" })}>E-mail</button>
+                          <button onClick={() => copyCode(iv.code)} style={deelKnop({ border: "1px solid rgba(255,255,255,0.2)", background: copiedCode === iv.code ? "rgba(105,240,174,0.14)" : "rgba(255,255,255,0.05)", color: copiedCode === iv.code ? "#69f0ae" : "rgba(255,255,255,0.75)" })}>{copiedCode === iv.code ? "Gekopieerd" : "Kopieer"}</button>
+                        </div>
+                        <div style={{ marginTop: 8, fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.5 }}>
+                          Deze kaart springt vanzelf op "Gekoppeld" zodra {naam} de code invoert.{" "}
+                          <button onClick={() => stuurHerinnering(iv.code, naam)} style={{ background: "none", border: "none", padding: 0, color: "#00b0ff", fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>Nog eens sturen</button>
+                        </div>
+                      </>
+                    ) : (
+                      <>
+                        <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5, marginBottom: 8 }}>
+                          Oefent {naam} op een ander apparaat? Maak een code en stuur die door. Op dit apparaat? Dan is geen code nodig.
+                        </div>
+                        <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                          <button onClick={() => maakCodeVoor(naam)} disabled={loading} style={deelKnop({ border: "none", background: "#00b0ff", color: "#08121f" })}>{loading ? "Even…" : "Maak een koppelcode"}</button>
+                          {onHierOefenen && c && (
+                            <button onClick={async () => { const { data } = await supabase.rpc("gezin_koppel_zelfde_apparaat", { p_child_name: naam, p_groep: c.groep || null, p_voorkeur: c.voorkeur || null, p_verified: true }); if (data) { bewaarVoorkeur(naam, { groep: c.groep || null, voorkeur: c.voorkeur || null }); onHierOefenen(data, naam); } }} style={deelKnop({ border: "1px solid rgba(255,213,79,0.5)", background: "rgba(255,213,79,0.12)", color: "#ffd54f" })}>Oefent hier</button>
+                          )}
+                        </div>
+                      </>
+                    )}
+                  </div>
+                )}
+
+                {/* Gekoppeld: bestaande acties */}
+                {gekoppeld && (
+                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap", marginTop: 10 }}>
+                    <button onClick={(e) => { e.stopPropagation(); setOverzichtKind(c); }} title={`Totaaloverzicht van ${naam}: resultaten per vak, elke toets tot op de vraag, en wat de volgende stap is`} style={pill({ border: "1px solid rgba(105,240,174,0.5)", background: "rgba(105,240,174,0.12)", color: "#69f0ae" })}>
+                      overzicht
+                    </button>
+                    {onKlaarzetten && (
+                      <button onClick={(e) => { e.stopPropagation(); onKlaarzetten(c.id, c.child_name); }} title={`Blader door de app en zet lessen klaar voor ${naam}`} style={pill({ border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2" })}>
+                        zet lessen klaar
+                      </button>
+                    )}
+                    {/* 🧒 Kind oefent op dít toestel (Mark 2 sep): geen code nodig —
+                        de ouder is hier al ingelogd en eigenaar van de koppeling.
+                        App.jsx bewaart het link_id onder de kindnaam + wisselt profiel. */}
+                    {onHierOefenen && (
+                      <button onClick={(e) => { e.stopPropagation(); bewaarVoorkeur(naam, { groep: c.groep || null, voorkeur: c.voorkeur || null }); onHierOefenen(c.id, c.child_name); }} title={`Wissel dit toestel naar ${naam} — alles wat ${naam} hier oefent telt mee in jouw overzicht, zonder code`} style={pill({ border: "1px solid rgba(255,213,79,0.5)", background: "rgba(255,213,79,0.12)", color: "#ffd54f" })}>
+                        laat {naam} hier oefenen
+                      </button>
+                    )}
+                    <button onClick={(e) => { e.stopPropagation(); toggleWeekmail(c); }} aria-pressed={mailAan} title={mailAan ? "Weekrapport voor dit kind staat aan — klik om uit te zetten" : "Weekrapport staat uit — klik om aan te zetten"} style={pill(mailAan ? { border: "1px solid rgba(105,240,174,0.5)", background: "rgba(0,200,83,0.14)", color: "#69f0ae" } : { border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.45)" })}>
+                      weekrapport {mailAan ? "aan" : "uit"}
+                    </button>
+                    <button onClick={(e) => { e.stopPropagation(); herstelCode?.childName === c.child_name ? setHerstelCode(null) : maakHerstelCode(c.child_name); }} title={`Nieuw toestel of ziet ${naam} niks van jou? Maak een verse koppelcode`} style={pill({ border: "1px solid rgba(0,176,255,0.5)", background: "rgba(0,176,255,0.12)", color: "#00b0ff" })}>
+                      koppeling werkt niet?
+                    </button>
+                  </div>
+                )}
+                {gekoppeld && herstelCode?.childName === c.child_name && (
+                  <div onClick={(e) => e.stopPropagation()} style={{ marginTop: 10, padding: "11px 13px", borderRadius: 11, border: "1px solid rgba(0,176,255,0.35)", background: "rgba(0,176,255,0.07)" }}>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5, marginBottom: 8 }}>
+                      Nieuw toestel, of ziet {naam} niks van jou? Laat {naam} deze verse code invoeren op het toestel dat hij/zij <strong>nu</strong> gebruikt (bij <strong>Koppel met ouder</strong>). De koppeling schuift dan vanzelf mee naar dat account — je hoeft niets te verwijderen.
+                    </div>
+                    <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.5, marginBottom: 8 }}>
+                      Oefent {naam} op <strong>meer</strong> toestellen (eigen telefoon én de tablet)? Elk toestel heeft één keer zo'n code nodig; daarna telt alles bij elkaar op. Op <strong>dit</strong> toestel hoeft dat niet: gebruik "laat {naam} hier oefenen".
+                    </div>
+                    <div style={{ textAlign: "center", padding: "2px 0 8px" }}>
+                      <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{herstelCode.code}</div>
+                      <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>48 uur geldig</div>
+                    </div>
+                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
+                      <button onClick={() => sendWhatsApp(herstelCode.code, naam)} style={deelKnop({ border: "none", background: "#25D366", color: "#08121f" })}>WhatsApp</button>
+                      <button onClick={() => sendEmailCode(herstelCode.code)} style={deelKnop({ border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.10)", color: "#00b0ff" })}>E-mail</button>
+                      <button onClick={() => copyCode(herstelCode.code)} style={deelKnop({ border: "1px solid rgba(255,255,255,0.2)", background: copiedCode === herstelCode.code ? "rgba(105,240,174,0.14)" : "rgba(255,255,255,0.05)", color: copiedCode === herstelCode.code ? "#69f0ae" : "rgba(255,255,255,0.75)" })}>{copiedCode === herstelCode.code ? "Gekopieerd" : "Kopieer"}</button>
+                    </div>
+                    <div style={{ marginTop: 8, fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", lineHeight: 1.5 }}>
+                      Tip: laat je kind inloggen met Google — dan werkt de koppeling op elk toestel vanzelf en heb je nooit meer een nieuwe code nodig.
+                    </div>
+                  </div>
+                )}
+              </div>
+            );
+          })}
+
+          {/* Nog een kind → Gezinsstart-wizard (naam, groep, nadruk, apparaat). */}
+          {kindKaarten.length < MAX_KINDEREN && !toonGezinsstart && (
+            <button onClick={() => { setGezinsstartOpen(true); try { window.scrollTo({ top: 0, behavior: "smooth" }); } catch { /* */ } }} style={{ borderRadius: 14, padding: "14px 15px", cursor: "pointer", textAlign: "left", border: "1px dashed rgba(105,240,174,0.4)", background: "rgba(0,200,83,0.05)", color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700 }}>
+              {kindKaarten.length ? "Nog een kind" : "Eerste kind toevoegen"}
+              <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 400, color: "rgba(255,255,255,0.45)", marginTop: 3 }}>Voornaam, groep en waar de nadruk op ligt — duurt een minuut.</div>
+            </button>
+          )}
+
+          {kindKaarten.length >= MAX_KINDEREN && (
+            <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
+              Je hebt het maximum van {MAX_KINDEREN} kinderen — genoeg voor de meeste gezinnen. Meer nodig? Laat het weten via <em>Tips aan maker</em>.
+            </div>
+          )}
+        </div>
+
+        {/* 🐕 Charley-tips (laag 1, 1 sep): advies op twijfel-momenten die de
+            data liet zien. Max één per sessie (engine), altijd uitzetbaar.
+            Tip A: kind gekoppeld maar 0 resultaten → account-uitleg (de
+            Deianera-verwarring van 31 aug). Tip B: kind oefent wél maar er is
+            nog nooit iets klaargezet → klaarzetten + printen ontdekken. */}
+        {selectedChildVerified && scoresGeladen && childScores.length === 0 && (
+          <CharleyTip
+            id="ouder-kind-geen-resultaten"
+            tekst={`${selectedChild} is gekoppeld, maar op dit account staan nog geen resultaten. Laat ${selectedChild} op het eigen toestel inloggen met hetzelfde account — dan verschijnt hier alles vanzelf. Lukt dat niet? Met een verse koppelcode schuift de koppeling automatisch mee naar het juiste account.`}
+            actieLabel="🔗 maak een verse koppelcode"
+            onActie={() => maakHerstelCode(selectedChild)}
+          />
+        )}
+        {selectedChildVerified && scoresGeladen && childScores.length > 0 && klaarLijst.length === 0 && onKlaarzetten && (
+          <CharleyTip
+            id="ouder-nog-niets-klaargezet"
+            tekst={`Wist je dat je lessen voor ${selectedChild} kunt klaarzetten? Jij kiest een les, ${selectedChild} ziet 'm thuis onder "💛 voor jou klaargezet". En veel oefeningen kun je ook printen voor aan de keukentafel.`}
+            actieLabel={`💛 zet een les klaar voor ${selectedChild}`}
+            onActie={() => onKlaarzetten(selectedChildVerified.id, selectedChild)}
+          />
+        )}
+
+        {/* 💛 Klaargezet voor het geselecteerde kind (Mark 15 aug): dezelfde
+            "map" als op de pagina van het kind, nu ook hier — zo zien jullie
+            allebei de lessen en kan de ouder ze openen om mee te kijken of te
+            helpen bij een vraag. */}
+        {selectedChildVerified && klaarLijst.length > 0 && (
+          <div style={{ borderRadius: 12, border: "1px solid rgba(255,105,135,0.35)", background: "rgba(255,105,135,0.07)", padding: "12px 14px", margin: "4px 0 10px" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#ff9fb2", marginBottom: 8 }}>
+              💛 Klaargezet voor {selectedChild}
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {klaarLijst.map((it) => (
+                <div key={it.id} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
+                    <LesVoortgang item={it} voortgang={padVoortgang[it.path_id]} watNu="je kind" />
+                  </div>
+                  {/* 🔍 Mark 4 sep: "inzien wat er exact gemaakt is en wat niet" */}
+                  <button
+                    onClick={() => setOpenDetail(openDetail === it.path_id ? null : it.path_id)}
+                    aria-expanded={openDetail === it.path_id}
+                    title="Bekijk per vraag hoe het ging"
+                    style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
+                  >
+                    {openDetail === it.path_id ? "Verberg" : "Wat precies?"}
+                  </button>
+                  {onOpenLes && (
+                    <button
+                      onClick={() => onOpenLes(it.path_id)}
+                      title="Open de les om mee te kijken of samen te maken"
+                      style={{ flexShrink: 0, padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12, cursor: "pointer" }}
+                    >
+                      Bekijk / help
+                    </button>
+                  )}
+                  <button
+                    onClick={() => verwijderKlaar(it.path_id)}
+                    aria-label={`Haal ${it.titel || "les"} weg`}
+                    title="Haal deze les weer weg"
+                    style={{ flexShrink: 0, background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}
+                  >
+                    ×
+                  </button>
+                </div>
+                {openDetail === it.path_id && (
+                  <LesDetail pathId={it.path_id} voortgang={padVoortgang[it.path_id]} naam={selectedChild} />
+                )}
+                </div>
+              ))}
+            </div>
+            {onKlaarzetten && (
+              <button
+                onClick={() => onKlaarzetten(selectedChildVerified.id, selectedChild)}
+                style={{ marginTop: 8, background: "none", border: "none", color: "#ff9fb2", cursor: "pointer", fontSize: 12, fontWeight: 700, padding: 0, textDecoration: "underline" }}
+              >
+                + Meer lessen klaarzetten
+              </button>
+            )}
+          </div>
+        )}
+
+        {/* 📚 Zelf gekozen leerpaden (Mark 4 sep 2026). Het overzicht las tot nu
+            toe alleen de quiz-scores uit `leaderboard`; een kind dat leerpad-
+            stappen doet schrijft naar `learn_progress` en was dus onzichtbaar.
+            Hier staat wat je kind uit zichzelf heeft opgepakt — alles wat jij
+            hebt klaargezet staat hierboven al. */}
+        {selectedChildVerified && zelfGedaan.length > 0 && (
+          <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.28)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", margin: "4px 0 10px" }}>
+            <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#69f0ae", marginBottom: 2 }}>
+              📚 {selectedChild} pakte dit zelf op
+            </div>
+            <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>
+              Lessen die {selectedChild} zonder jouw hulp heeft gekozen.
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
+              {zelfGedaan.map((p) => (
+                <div key={p.pathId} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{p.emoji}</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{p.titel}</div>
+                    <LesVoortgang item={{ path_id: p.pathId, gedaan: false }} voortgang={p.voortgang} watNu="je kind" />
+                  </div>
+                  <button
+                    onClick={() => setOpenDetail(openDetail === p.pathId ? null : p.pathId)}
+                    aria-expanded={openDetail === p.pathId}
+                    title="Bekijk per vraag hoe het ging"
+                    style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
+                  >
+                    {openDetail === p.pathId ? "Verberg" : "Wat precies?"}
+                  </button>
+                  {onOpenLes && (
+                    <button
+                      onClick={() => onOpenLes(p.pathId)}
+                      title="Open de les om mee te kijken"
+                      style={{ flexShrink: 0, padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(105,240,174,0.4)", background: "rgba(105,240,174,0.12)", color: "#69f0ae", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12, cursor: "pointer" }}
+                    >
+                      Bekijk
+                    </button>
+                  )}
+                </div>
+                {openDetail === p.pathId && (
+                  <LesDetail pathId={p.pathId} voortgang={p.voortgang} naam={selectedChild} />
+                )}
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Gezins-gevoel (feature 7): warm "wij oefenen samen" bij ≥2 kinderen,
+            bewust ZONDER scores naast elkaar (geen broer/zus-vergelijking). */}
+        {children.length >= 2 && (
+          <div style={{ borderRadius: 12, border: "1px solid rgba(0,176,255,0.25)", background: "rgba(0,176,255,0.06)", padding: "11px 13px", marginTop: 4, marginBottom: 8, fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5 }}>
+            👨‍👩‍👧 <strong style={{ color: "#00b0ff" }}>Jullie oefenen samen</strong> — {children.map((c) => c.child_name).join(", ")}. Elk in z'n eigen tempo; geen wedstrijdje tussen broers of zussen.
+          </div>
+        )}
+
+        {/* 🔒 Wat slaan we op + hoe beveiligd (Mark 27 aug). Feiten
+            geverifieerd: Supabase-project eu-central-1 (Frankfurt), RLS op
+            parent_child_links (auth.uid() = parent_user_id), kind bevestigt
+            koppeling, codes crypto-random + 48u. Volledige tekst: /privacy.html. */}
+        <div style={{ marginTop: 12 }}>
+          <button
+            onClick={() => { setOpslagInfoOpen(!opslagInfoOpen); if (!opslagInfoOpen) { try { track("ouder_opslag_uitleg_open", {}); } catch { /* */ } } }}
+            aria-expanded={opslagInfoOpen}
+            style={{
+              display: "inline-flex", alignItems: "center", gap: 6, padding: 0,
+              border: "none", background: "none", cursor: "pointer",
+              fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700,
+              color: "rgba(255,255,255,0.55)",
+            }}
+          >
+            🔒 Wat slaan we op — en hoe is dat beveiligd? {opslagInfoOpen ? "▴" : "▾"}
+          </button>
+          {opslagInfoOpen && (
+            <div style={{
+              marginTop: 8, padding: "12px 14px", borderRadius: 12,
+              border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.04)",
+              fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.6,
+            }}>
+              <div style={{ fontWeight: 700, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>Wat we opslaan (in onze databank, Supabase):</div>
+              <ul style={{ margin: "0 0 10px 18px", padding: 0 }}>
+                <li>de <strong>voornaam</strong> van je kind (die jij hier invult), de <strong>groep</strong> en de <strong>oefenresultaten</strong></li>
+                <li>jouw <strong>e-mailadres</strong> — en het adres van je partner als je dat invult (allebei van volwassenen)</li>
+                <li><strong>níét:</strong> achternaam, e-mailadres van je kind, adres of foto's</li>
+              </ul>
+              <div style={{ fontWeight: 700, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>Hoe dat beveiligd is:</div>
+              <ul style={{ margin: "0 0 10px 18px", padding: 0 }}>
+                <li>de databank staat op servers <strong>in de EU</strong> (Frankfurt) en de opslag is <strong>versleuteld</strong></li>
+                <li>alles gaat over een <strong>versleutelde verbinding</strong> (het slotje in je browser)</li>
+                <li><strong>toegangsregels per account:</strong> alleen jij kunt de gegevens van jouw gezin zien — en je kind moet de koppeling eerst zelf in de app bevestigen</li>
+                <li>koppelcodes zijn willekeurig en maar <strong>48 uur geldig</strong>; we tonen geen reclame en verkopen niets door</li>
+              </ul>
+              <a href="/privacy.html" style={{ color: "#69f0ae", fontWeight: 700, fontSize: 12 }}>Lees het volledige privacybeleid →</a>
+            </div>
+          )}
+        </div>
+      </div>
+
+      {/* ── Weekrapport ────────────────────────────────────────────────── */}
+      <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
+        <BlokKop>Weekrapport</BlokKop>
+        <div style={{ fontFamily: "var(--font-body)", fontSize: 13.5, color: "rgba(255,255,255,0.85)", lineHeight: 1.6 }}>
+          {WEEKRAPPORT_MOMENT} naar <strong style={{ overflowWrap: "anywhere" }}>{authUser.email || "je e-mailadres"}</strong>
+          {partnerStatus === "bevestigd" && partnerEmail ? <> en naar <strong style={{ overflowWrap: "anywhere" }}>{partnerEmail}</strong></> : null}
+          {children.length ? <>: per kind kort en eerlijk hoe het ging.</> : <>, zodra je een kind hebt gekoppeld.</>}
+        </div>
+        {children.length > 0 && (
+          <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", marginTop: 6, lineHeight: 1.5 }}>
+            {children.filter((c) => c.weekmail === false).length
+              ? `Uit voor: ${children.filter((c) => c.weekmail === false).map((c) => c.child_name).join(", ")} — zet het per kind aan of uit op de kaart hierboven.`
+              : "Staat aan voor al je kinderen — per kind aan of uit te zetten op de kaart hierboven."}
+            {partnerStatus === "wacht" ? " De tweede ouder of verzorger ontvangt het pas na bevestiging." : ""}
+          </div>
+        )}
       </div>
 
       {/* Welkom-paneel — voordelen voor ouder + kind. Alleen op het volledige
@@ -759,447 +1269,6 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           </button>
         </div>
       )}
-
-      {/* Kinderen koppelen */}
-      <div style={{ borderRadius: 16, border: "1px solid rgba(255,255,255,0.1)", background: "rgba(255,255,255,0.03)", padding: "16px" }}>
-        {/* 👶 Kop + korte uitleg. De plekken hieronder zijn elk een
-            mini-stappenplan dat meebeweegt met de status: leeg → wacht op je
-            kind → ✓ gekoppeld (Mark 29 aug — koppelen als ruggengraat). De
-            per-kind-acties (weekmail/klaarzetten/verwijderen) zitten nu ín de
-            gekoppelde kaart; dit verving de dropdown-lijst van 27 aug. */}
-        <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4, fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "rgba(255,255,255,0.85)" }}>
-          👶 Mijn kinderen{slots.length ? ` (${children.length}/${MAX_KINDEREN})` : ""}
-        </div>
-        <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.45)", marginBottom: 12, lineHeight: 1.5 }}>
-          Koppel tot {MAX_KINDEREN} kinderen — elk met een eigen code. Je volgt zo per kind hoe het gaat richting de Doorstroomtoets.
-        </div>
-
-        {/* 📊 Fullscreen kind-overzicht (fixed overlay — plek in de boom is
-            niet belangrijk; alleen voor geverifieerde koppelingen bereikbaar
-            omdat de knop alleen op de ✓-gekoppelde kaart staat). */}
-        {overzichtKind && (
-          <KindOverzicht child={overzichtKind} onBack={() => setOverzichtKind(null)} onKlaarzetten={onKlaarzetten} />
-        )}
-
-        <div ref={koppelFlowRef} style={{ display: "flex", flexDirection: "column", gap: 10, marginBottom: 12 }}>
-          {slots.map((slot) => {
-            // ── ✓ GEKOPPELD ──────────────────────────────────────────────
-            if (slot.type === "gekoppeld") {
-              const c = slot.kind;
-              const isSel = selectedChild === c.child_name;
-              const mailAan = c.weekmail !== false;
-              const pill = (extra) => ({ borderRadius: 999, padding: "4px 10px", cursor: "pointer", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, ...extra });
-              return (
-                <div key={slot.key} onClick={() => setSelectedChild(c.child_name)} style={{
-                  borderRadius: 14, padding: "13px 15px", cursor: "pointer",
-                  border: isSel ? "1px solid rgba(105,240,174,0.6)" : "1px solid rgba(105,240,174,0.28)",
-                  background: isSel ? "rgba(105,240,174,0.12)" : "rgba(105,240,174,0.05)",
-                }}>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8, flexWrap: "wrap" }}>
-                    <span onClick={(e) => { e.stopPropagation(); setOverzichtKind(c); }} title={`Open het totaaloverzicht van ${c.child_name}`} style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#69f0ae", display: "flex", alignItems: "center", gap: 8, cursor: "pointer", textDecoration: "underline", textDecorationColor: "rgba(105,240,174,0.35)", textUnderlineOffset: 3 }}>
-                      👦 {c.child_name} <span style={{ fontSize: 12.5 }}>✓ gekoppeld</span>
-                    </span>
-                    <button onClick={(e) => { e.stopPropagation(); removeChild(c.id); }} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
-                  </div>
-                  <ProgressBar stap={3} kleur="#69f0ae" />
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.6)", margin: "8px 0 10px", lineHeight: 1.5 }}>
-                    {isSel ? "Je voortgang staat hieronder." : "Tik om de voortgang te bekijken."}
-                  </div>
-                  <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                    <button onClick={(e) => { e.stopPropagation(); setOverzichtKind(c); }} title={`Totaaloverzicht van ${c.child_name}: resultaten per vak, elke toets tot op de vraag, en wat de volgende stap is`} style={pill({ border: "1px solid rgba(105,240,174,0.5)", background: "rgba(105,240,174,0.12)", color: "#69f0ae" })}>
-                      📊 overzicht
-                    </button>
-                    {onKlaarzetten && (
-                      <button onClick={(e) => { e.stopPropagation(); onKlaarzetten(c.id, c.child_name); }} title={`Blader door de app en zet lessen klaar voor ${c.child_name}`} style={pill({ border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2" })}>
-                        💛 zet lessen klaar
-                      </button>
-                    )}
-                    {/* 🧒 Kind oefent op dít toestel (Mark 2 sep): geen code nodig —
-                        de ouder is hier al ingelogd en eigenaar van de koppeling.
-                        App.jsx bewaart het link_id onder de kindnaam + wisselt profiel. */}
-                    {onHierOefenen && (
-                      <button onClick={(e) => { e.stopPropagation(); onHierOefenen(c.id, c.child_name); }} title={`Wissel dit toestel naar ${c.child_name} — alles wat ${c.child_name} hier oefent telt mee in jouw overzicht, zonder code`} style={pill({ border: "1px solid rgba(255,213,79,0.5)", background: "rgba(255,213,79,0.12)", color: "#ffd54f" })}>
-                        🧒 laat {c.child_name} hier oefenen
-                      </button>
-                    )}
-                    <button onClick={(e) => { e.stopPropagation(); toggleWeekmail(c); }} aria-pressed={mailAan} title={mailAan ? "Elke maandag het weekrapport in je mail — klik om uit te zetten" : "Weekrapport staat uit — klik om aan te zetten"} style={pill(mailAan ? { border: "1px solid rgba(105,240,174,0.5)", background: "rgba(0,200,83,0.14)", color: "#69f0ae" } : { border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.45)" })}>
-                      📩 weekmail {mailAan ? "aan" : "uit"}
-                    </button>
-                    <button onClick={(e) => { e.stopPropagation(); herstelCode?.childName === c.child_name ? setHerstelCode(null) : maakHerstelCode(c.child_name); }} title={`Nieuw toestel of ziet ${c.child_name} niks van jou? Maak een verse koppelcode`} style={pill({ border: "1px solid rgba(0,176,255,0.5)", background: "rgba(0,176,255,0.12)", color: "#00b0ff" })}>
-                      🔗 koppeling werkt niet?
-                    </button>
-                  </div>
-                  {herstelCode?.childName === c.child_name && (
-                    <div onClick={(e) => e.stopPropagation()} style={{ marginTop: 10, padding: "11px 13px", borderRadius: 11, border: "1px solid rgba(0,176,255,0.35)", background: "rgba(0,176,255,0.07)" }}>
-                      <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5, marginBottom: 8 }}>
-                        Nieuw toestel, of ziet {c.child_name} niks van jou? Laat {c.child_name} deze verse code invoeren op het toestel dat hij/zij <strong>nu</strong> gebruikt (bij <strong>Koppel met ouder</strong>). De koppeling schuift dan vanzelf mee naar dat account — je hoeft niets te verwijderen.
-                      </div>
-                      <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.5, marginBottom: 8 }}>
-                        Oefent {c.child_name} op <strong>meer</strong> toestellen (eigen telefoon én de tablet)? Elk toestel heeft één keer zo'n code nodig; daarna telt alles bij elkaar op. Op <strong>dit</strong> toestel hoeft dat niet: gebruik "🧒 laat {c.child_name} hier oefenen".
-                      </div>
-                      <div style={{ textAlign: "center", padding: "2px 0 8px" }}>
-                        <div style={{ fontFamily: "var(--font-display)", fontSize: 28, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{herstelCode.code}</div>
-                        <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>48 uur geldig</div>
-                      </div>
-                      <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                        <button onClick={() => sendWhatsApp(herstelCode.code, c.child_name)} style={{ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, border: "none", background: "#25D366", color: "#08121f", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer" }}>💬 WhatsApp</button>
-                        <button onClick={() => sendEmailCode(herstelCode.code)} style={{ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.10)", color: "#00b0ff", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer" }}>✉️ E-mail</button>
-                        <button onClick={() => copyCode(herstelCode.code)} style={{ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, border: "1px solid rgba(255,255,255,0.2)", background: copiedCode === herstelCode.code ? "rgba(105,240,174,0.14)" : "rgba(255,255,255,0.05)", color: copiedCode === herstelCode.code ? "#69f0ae" : "rgba(255,255,255,0.75)", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer" }}>{copiedCode === herstelCode.code ? "✓ Gekopieerd" : "📋 Kopieer"}</button>
-                      </div>
-                      <div style={{ marginTop: 8, fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", lineHeight: 1.5 }}>
-                        💡 Tip: laat je kind inloggen met Google — dan werkt de koppeling op elk toestel vanzelf en heb je nooit meer een nieuwe code nodig.
-                      </div>
-                    </div>
-                  )}
-                </div>
-              );
-            }
-            // ── 🔐 BIJNA KLAAR (code ingevoerd, nog te bevestigen) ────────
-            if (slot.type === "bevestigen") {
-              const c = slot.kind;
-              return (
-                <div key={slot.key} style={{ borderRadius: 14, padding: "13px 15px", border: "1px solid rgba(255,183,77,0.4)", background: "rgba(255,183,77,0.07)" }}>
-                  <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-                    <span style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#ffb74d", display: "flex", alignItems: "center", gap: 8 }}>👦 {c.child_name} <span style={{ fontSize: 12.5 }}>bijna klaar</span></span>
-                    <button onClick={() => removeChild(c.id)} aria-label={`Verwijder ${c.child_name || "kind"}`} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
-                  </div>
-                  <ProgressBar stap={2} kleur="#ffb74d" />
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", marginTop: 8, lineHeight: 1.5 }}>
-                    {c.child_name} moet de koppeling nog even zelf bevestigen in de app — daar op <strong>"Ja, accepteren"</strong> tikken. Daarna zie je meteen de voortgang.
-                  </div>
-                </div>
-              );
-            }
-            // ── ⏳ WACHT OP JE KIND (openstaande code) ────────────────────
-            const iv = slot.invite;
-            const geldig = geldigheidsTekst(iv.expires_at);
-            const isCopied = copiedCode === iv.code;
-            const deelKnop = (extra) => ({ flex: "1 1 90px", padding: "9px 8px", borderRadius: 9, fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer", display: "flex", alignItems: "center", justifyContent: "center", gap: 5, ...extra });
-            return (
-              <div key={slot.key} style={{ borderRadius: 14, padding: "13px 15px", border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.06)" }}>
-                <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-                  <span style={{ fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 700, color: "#00b0ff", display: "flex", alignItems: "center", gap: 8 }}>👦 {iv.child_name} <span style={{ fontSize: 12.5 }}>koppelen loopt…</span></span>
-                  <button onClick={() => trekCodeIn(iv.id)} title="Code intrekken" aria-label="Code intrekken" style={{ background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}>×</button>
-                </div>
-                <ProgressBar stap={2} kleur="#00b0ff" />
-                <div style={{ marginTop: 10, display: "flex", flexDirection: "column", gap: 9 }}>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "#69f0ae", fontWeight: 700 }}>✓ Stap 1 — code gemaakt</div>
-                  <div>
-                    <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "var(--color-text-strong)", fontWeight: 700, marginBottom: 4 }}>➤ Stap 2 — stuur de code naar {iv.child_name}</div>
-                    <div style={{ textAlign: "center", padding: "4px 0 8px" }}>
-                      <div style={{ fontFamily: "var(--font-display)", fontSize: 30, fontWeight: 700, color: "#00b0ff", letterSpacing: 5 }}>{iv.code}</div>
-                      {geldig && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 2 }}>{geldig}</div>}
-                    </div>
-                    <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
-                      <button onClick={() => sendWhatsApp(iv.code, iv.child_name)} style={deelKnop({ border: "none", background: "#25D366", color: "#08121f" })}>💬 WhatsApp</button>
-                      <button onClick={() => sendEmailCode(iv.code)} style={deelKnop({ border: "1px solid rgba(0,176,255,0.45)", background: "rgba(0,176,255,0.10)", color: "#00b0ff" })}>✉️ E-mail</button>
-                      <button onClick={() => copyCode(iv.code)} style={deelKnop({ border: "1px solid rgba(255,255,255,0.2)", background: isCopied ? "rgba(105,240,174,0.14)" : "rgba(255,255,255,0.05)", color: isCopied ? "#69f0ae" : "rgba(255,255,255,0.75)" })}>{isCopied ? "✓ Gekopieerd" : "📋 Kopieer"}</button>
-                    </div>
-                  </div>
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>○ Stap 3 — {iv.child_name} opent de app en typt de code in bij <strong>Koppel met ouder</strong></div>
-                </div>
-                <div style={{ marginTop: 10, padding: "8px 10px", borderRadius: 9, background: "rgba(0,176,255,0.08)", border: "1px solid rgba(0,176,255,0.2)", fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
-                  ⏳ We wachten tot {iv.child_name} de code invoert — deze kaart springt <strong>vanzelf</strong> op ✓ zodra het gelukt is.
-                  <div style={{ marginTop: 6 }}>
-                    <button onClick={() => stuurHerinnering(iv.code, iv.child_name)} style={{ background: "none", border: "none", padding: 0, color: "#00b0ff", fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700, cursor: "pointer", textDecoration: "underline" }}>
-                      🔔 Nog niet gelukt? Stuur de code nog eens
-                    </button>
-                  </div>
-                </div>
-              </div>
-            );
-          })}
-
-          {/* Lege plekken → "voeg kind toe"; de eerste klapt open als stap-1-formulier. */}
-          {Array.from({ length: vrijePlekken }, (_, i) => {
-            const nr = slots.length + i + 1;
-            const woord = nr === 1 ? "eerste" : nr === 2 ? "tweede" : "derde";
-            if (i === 0 && addingSlot) {
-              return (
-                <div key={`add-${nr}`} style={{ borderRadius: 14, padding: "13px 15px", border: "1px solid rgba(0,176,255,0.4)", background: "rgba(0,176,255,0.06)" }}>
-                  <div style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, color: "#00b0ff" }}>➕ Kind toevoegen</div>
-                  <ProgressBar stap={1} kleur="#00b0ff" />
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", margin: "8px 0 10px", lineHeight: 1.5 }}>
-                    Stap 1 — vul de naam van je kind in zoals die in de app staat. Daarna maken we de code die je kunt delen.
-                  </div>
-                  <input ref={inviteNaamRef} value={inviteChildName} onChange={(e) => setInviteChildName(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && inviteChildName.trim()) generateInvite(); }} placeholder="Naam van je kind (zoals in de app)" style={{ width: "100%", padding: "10px 12px", marginBottom: 8, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
-                  <input value={inviteVanWie} onChange={(e) => setInviteVanWie(e.target.value)} onKeyDown={(e) => { if (e.key === "Enter" && inviteChildName.trim()) generateInvite(); }} placeholder="Van wie is de code? bv. mama (optioneel)" maxLength={20} style={{ width: "100%", padding: "10px 12px", marginBottom: 4, borderRadius: 10, border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.06)", color: "var(--color-text-strong)", fontFamily: "var(--font-body)", fontSize: 14, outline: "none", boxSizing: "border-box" }} />
-                  <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginBottom: 10, lineHeight: 1.4 }}>
-                    Je kind ziet dan “gekoppeld met {inviteVanWie.trim() || "mama"}”. Laat leeg → “gekoppeld met thuis”.
-                  </div>
-                  <div style={{ display: "flex", gap: 8 }}>
-                    <button onClick={generateInvite} disabled={loading || !inviteChildName.trim()} style={{ flex: 1, padding: "11px", borderRadius: 10, border: "none", background: loading || !inviteChildName.trim() ? "rgba(0,176,255,0.3)" : "#00b0ff", color: "#08121f", fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 700, cursor: loading || !inviteChildName.trim() ? "not-allowed" : "pointer" }}>{loading ? "Even…" : "Maak de code →"}</button>
-                    <button onClick={() => { setAddingSlot(false); setInviteChildName(""); setInviteVanWie(""); }} style={{ padding: "11px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.15)", background: "none", color: "rgba(255,255,255,0.5)", fontFamily: "var(--font-body)", fontSize: 13, cursor: "pointer" }}>Annuleer</button>
-                  </div>
-                </div>
-              );
-            }
-            return (
-              <button key={`vrij-${nr}`} onClick={() => { setAddingSlot(true); setInviteChildName(""); setTimeout(() => { try { inviteNaamRef.current?.focus(); } catch { /* */ } }, 50); }} disabled={addingSlot} style={{ borderRadius: 14, padding: "16px 15px", cursor: addingSlot ? "default" : "pointer", textAlign: "left", border: "1px dashed rgba(105,240,174,0.4)", background: "rgba(0,200,83,0.05)", color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, opacity: addingSlot ? 0.4 : 1 }}>
-                ➕ Voeg je {woord} kind toe
-                <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 400, color: "rgba(255,255,255,0.45)", marginTop: 3 }}>In 3 stappen — duurt een minuut.</div>
-              </button>
-            );
-          })}
-
-          {slots.length >= MAX_KINDEREN && (
-            <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.3)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.7)", lineHeight: 1.5 }}>
-              👨‍👩‍👧 Je hebt het maximum van {MAX_KINDEREN} kinderen — genoeg voor de meeste gezinnen. Meer nodig? Laat het weten via <em>Tips aan maker</em>.
-            </div>
-          )}
-        </div>
-
-        {/* 🐕 Charley-tips (laag 1, 1 sep): advies op twijfel-momenten die de
-            data liet zien. Max één per sessie (engine), altijd uitzetbaar.
-            Tip A: kind gekoppeld maar 0 resultaten → account-uitleg (de
-            Deianera-verwarring van 31 aug). Tip B: kind oefent wél maar er is
-            nog nooit iets klaargezet → klaarzetten + printen ontdekken. */}
-        {selectedChildVerified && scoresGeladen && childScores.length === 0 && (
-          <CharleyTip
-            id="ouder-kind-geen-resultaten"
-            tekst={`${selectedChild} is gekoppeld, maar op dit account staan nog geen resultaten. Laat ${selectedChild} op het eigen toestel inloggen met hetzelfde account — dan verschijnt hier alles vanzelf. Lukt dat niet? Met een verse koppelcode schuift de koppeling automatisch mee naar het juiste account.`}
-            actieLabel="🔗 maak een verse koppelcode"
-            onActie={() => maakHerstelCode(selectedChild)}
-          />
-        )}
-        {selectedChildVerified && scoresGeladen && childScores.length > 0 && klaarLijst.length === 0 && onKlaarzetten && (
-          <CharleyTip
-            id="ouder-nog-niets-klaargezet"
-            tekst={`Wist je dat je lessen voor ${selectedChild} kunt klaarzetten? Jij kiest een les, ${selectedChild} ziet 'm thuis onder "💛 voor jou klaargezet". En veel oefeningen kun je ook printen voor aan de keukentafel.`}
-            actieLabel={`💛 zet een les klaar voor ${selectedChild}`}
-            onActie={() => onKlaarzetten(selectedChildVerified.id, selectedChild)}
-          />
-        )}
-
-        {children.length > 0 && (
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.4)", margin: "0 2px 8px", lineHeight: 1.5 }}>
-            📩 Elke maandag krijg je per gekoppeld kind een weekrapport in je mail — zet 'm per kaart aan of uit.
-          </div>
-        )}
-
-        {/* 💛 Klaargezet voor het geselecteerde kind (Mark 15 aug): dezelfde
-            "map" als op de pagina van het kind, nu ook hier — zo zien jullie
-            allebei de lessen en kan de ouder ze openen om mee te kijken of te
-            helpen bij een vraag. */}
-        {selectedChildVerified && klaarLijst.length > 0 && (
-          <div style={{ borderRadius: 12, border: "1px solid rgba(255,105,135,0.35)", background: "rgba(255,105,135,0.07)", padding: "12px 14px", margin: "4px 0 10px" }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#ff9fb2", marginBottom: 8 }}>
-              💛 Klaargezet voor {selectedChild}
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-              {klaarLijst.map((it) => (
-                <div key={it.id} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{it.emoji || "📘"}</span>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{it.titel || "Een les"}</div>
-                    <LesVoortgang item={it} voortgang={padVoortgang[it.path_id]} watNu="je kind" />
-                  </div>
-                  {/* 🔍 Mark 4 sep: "inzien wat er exact gemaakt is en wat niet" */}
-                  <button
-                    onClick={() => setOpenDetail(openDetail === it.path_id ? null : it.path_id)}
-                    aria-expanded={openDetail === it.path_id}
-                    title="Bekijk per vraag hoe het ging"
-                    style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
-                  >
-                    {openDetail === it.path_id ? "Verberg" : "Wat precies?"}
-                  </button>
-                  {onOpenLes && (
-                    <button
-                      onClick={() => onOpenLes(it.path_id)}
-                      title="Open de les om mee te kijken of samen te maken"
-                      style={{ flexShrink: 0, padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(255,105,135,0.5)", background: "rgba(255,105,135,0.14)", color: "#ff9fb2", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12, cursor: "pointer" }}
-                    >
-                      Bekijk / help
-                    </button>
-                  )}
-                  <button
-                    onClick={() => verwijderKlaar(it.path_id)}
-                    aria-label={`Haal ${it.titel || "les"} weg`}
-                    title="Haal deze les weer weg"
-                    style={{ flexShrink: 0, background: "none", border: "none", color: "rgba(255,255,255,0.25)", cursor: "pointer", fontSize: 16, padding: 2 }}
-                  >
-                    ×
-                  </button>
-                </div>
-                {openDetail === it.path_id && (
-                  <LesDetail pathId={it.path_id} voortgang={padVoortgang[it.path_id]} naam={selectedChild} />
-                )}
-                </div>
-              ))}
-            </div>
-            {onKlaarzetten && (
-              <button
-                onClick={() => onKlaarzetten(selectedChildVerified.id, selectedChild)}
-                style={{ marginTop: 8, background: "none", border: "none", color: "#ff9fb2", cursor: "pointer", fontSize: 12, fontWeight: 700, padding: 0, textDecoration: "underline" }}
-              >
-                + Meer lessen klaarzetten
-              </button>
-            )}
-          </div>
-        )}
-
-        {/* 📚 Zelf gekozen leerpaden (Mark 4 sep 2026). Het overzicht las tot nu
-            toe alleen de quiz-scores uit `leaderboard`; een kind dat leerpad-
-            stappen doet schrijft naar `learn_progress` en was dus onzichtbaar.
-            Hier staat wat je kind uit zichzelf heeft opgepakt — alles wat jij
-            hebt klaargezet staat hierboven al. */}
-        {selectedChildVerified && zelfGedaan.length > 0 && (
-          <div style={{ borderRadius: 12, border: "1px solid rgba(105,240,174,0.28)", background: "rgba(105,240,174,0.06)", padding: "12px 14px", margin: "4px 0 10px" }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#69f0ae", marginBottom: 2 }}>
-              📚 {selectedChild} pakte dit zelf op
-            </div>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>
-              Lessen die {selectedChild} zonder jouw hulp heeft gekozen.
-            </div>
-            <div style={{ display: "flex", flexDirection: "column", gap: 6 }}>
-              {zelfGedaan.map((p) => (
-                <div key={p.pathId} style={{ padding: "7px 9px", borderRadius: 9, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.08)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-                  <span style={{ fontSize: 18, flexShrink: 0 }} aria-hidden="true">{p.emoji}</span>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: 13, fontWeight: 700, color: "var(--color-text-strong)" }}>{p.titel}</div>
-                    <LesVoortgang item={{ path_id: p.pathId, gedaan: false }} voortgang={p.voortgang} watNu="je kind" />
-                  </div>
-                  <button
-                    onClick={() => setOpenDetail(openDetail === p.pathId ? null : p.pathId)}
-                    aria-expanded={openDetail === p.pathId}
-                    title="Bekijk per vraag hoe het ging"
-                    style={{ flexShrink: 0, padding: "6px 10px", borderRadius: 8, border: "1px solid rgba(255,255,255,0.16)", background: "rgba(255,255,255,0.05)", color: "rgba(255,255,255,0.72)", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 11.5, cursor: "pointer" }}
-                  >
-                    {openDetail === p.pathId ? "Verberg" : "Wat precies?"}
-                  </button>
-                  {onOpenLes && (
-                    <button
-                      onClick={() => onOpenLes(p.pathId)}
-                      title="Open de les om mee te kijken"
-                      style={{ flexShrink: 0, padding: "6px 12px", borderRadius: 8, border: "1px solid rgba(105,240,174,0.4)", background: "rgba(105,240,174,0.12)", color: "#69f0ae", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 12, cursor: "pointer" }}
-                    >
-                      Bekijk
-                    </button>
-                  )}
-                </div>
-                {openDetail === p.pathId && (
-                  <LesDetail pathId={p.pathId} voortgang={p.voortgang} naam={selectedChild} />
-                )}
-                </div>
-              ))}
-            </div>
-          </div>
-        )}
-
-        {/* Partner-mail (Mark 14 aug): stuur het weekrapport ook naar een
-            tweede adres — bv. je partner of medeverzorger. Eén adres per gezin. */}
-        {children.length > 0 && (
-          <div style={{ borderRadius: 12, border: "1px solid rgba(0,176,255,0.22)", background: "rgba(0,176,255,0.05)", padding: "12px 14px", marginTop: 4, marginBottom: 4 }}>
-            <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "#00b0ff", marginBottom: 4 }}>
-              👥 Stuur het weekrapport ook naar je partner
-            </div>
-            <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", marginBottom: 10, lineHeight: 1.5 }}>
-              Vul het e-mailadres van je partner of medeverzorger in. Die krijgt één uitnodiging en zegt zelf "ja" — daarna krijgen jullie allebei elke maandag hetzelfde rapport. Laat leeg om het weer uit te zetten.
-            </div>
-            {partnerStatus === "wacht" && !partnerSaved && (
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ffd54f", marginBottom: 8 }}>⏳ Uitnodiging verstuurd — wacht tot je partner op "Ja, ik lees mee" tikt. Opnieuw opslaan = opnieuw versturen.</div>
-            )}
-            {partnerStatus === "bevestigd" && !partnerSaved && (
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#69f0ae", marginBottom: 8 }}>✓ Je partner leest mee met het weekrapport.</div>
-            )}
-            <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-              <input
-                type="email"
-                value={partnerEmail}
-                onChange={(e) => { setPartnerEmail(e.target.value); setPartnerSaved(false); setPartnerError(""); }}
-                placeholder="partner@voorbeeld.nl"
-                style={{
-                  flex: "1 1 180px",
-                  padding: "10px 12px",
-                  borderRadius: 10,
-                  border: `1px solid ${partnerError ? "rgba(255,112,67,0.7)" : "rgba(255,255,255,0.18)"}`,
-                  background: "rgba(255,255,255,0.06)",
-                  color: "var(--color-text-strong)",
-                  fontFamily: "var(--font-body)",
-                  fontSize: 14,
-                  outline: "none",
-                }}
-              />
-              <button
-                onClick={savePartnerEmail}
-                disabled={partnerSaving}
-                style={{
-                  padding: "10px 16px",
-                  borderRadius: 10,
-                  border: "none",
-                  background: partnerSaving ? "rgba(0,176,255,0.3)" : "#00b0ff",
-                  color: "#08121f",
-                  fontFamily: "var(--font-display)",
-                  fontSize: 14,
-                  fontWeight: 700,
-                  cursor: partnerSaving ? "default" : "pointer",
-                }}
-              >
-                {partnerSaving ? "Opslaan…" : "Opslaan"}
-              </button>
-            </div>
-            {partnerError && (
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#ff8a65", marginTop: 8 }}>{partnerError}</div>
-            )}
-            {partnerSaved && !partnerError && (
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "#69f0ae", marginTop: 8 }}>
-                {partnerEmail ? `✓ Uitnodiging gestuurd naar ${partnerEmail} — zodra die op "Ja, ik lees mee" tikt, komt het rapport ook daar aan.` : "✓ Uitgezet — het rapport gaat weer alleen naar jou."}
-              </div>
-            )}
-          </div>
-        )}
-
-        {/* Gezins-gevoel (feature 7): warm "wij oefenen samen" bij ≥2 kinderen,
-            bewust ZONDER scores naast elkaar (geen broer/zus-vergelijking). */}
-        {children.length >= 2 && (
-          <div style={{ borderRadius: 12, border: "1px solid rgba(0,176,255,0.25)", background: "rgba(0,176,255,0.06)", padding: "11px 13px", marginTop: 4, marginBottom: 8, fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.5 }}>
-            👨‍👩‍👧 <strong style={{ color: "#00b0ff" }}>Jullie oefenen samen</strong> — {children.map((c) => c.child_name).join(", ")}. Elk in z'n eigen tempo; geen wedstrijdje tussen broers of zussen.
-          </div>
-        )}
-
-        {/* 🔒 Wat slaan we op + hoe beveiligd (Mark 27 aug). Feiten
-            geverifieerd: Supabase-project eu-central-1 (Frankfurt), RLS op
-            parent_child_links (auth.uid() = parent_user_id), kind bevestigt
-            koppeling, codes crypto-random + 48u. Volledige tekst: /privacy.html. */}
-        <div style={{ marginTop: 12 }}>
-          <button
-            onClick={() => { setOpslagInfoOpen(!opslagInfoOpen); if (!opslagInfoOpen) { try { track("ouder_opslag_uitleg_open", {}); } catch { /* */ } } }}
-            aria-expanded={opslagInfoOpen}
-            style={{
-              display: "inline-flex", alignItems: "center", gap: 6, padding: 0,
-              border: "none", background: "none", cursor: "pointer",
-              fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 700,
-              color: "rgba(255,255,255,0.55)",
-            }}
-          >
-            🔒 Wat slaan we op — en hoe is dat beveiligd? {opslagInfoOpen ? "▴" : "▾"}
-          </button>
-          {opslagInfoOpen && (
-            <div style={{
-              marginTop: 8, padding: "12px 14px", borderRadius: 12,
-              border: "1px solid rgba(255,255,255,0.12)", background: "rgba(255,255,255,0.04)",
-              fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", lineHeight: 1.6,
-            }}>
-              <div style={{ fontWeight: 700, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>Wat we opslaan (in onze databank, Supabase):</div>
-              <ul style={{ margin: "0 0 10px 18px", padding: 0 }}>
-                <li>de <strong>voornaam</strong> van je kind (die jij hier invult), de <strong>groep</strong> en de <strong>oefenresultaten</strong></li>
-                <li>jouw <strong>e-mailadres</strong> — en het adres van je partner als je dat invult (allebei van volwassenen)</li>
-                <li><strong>níét:</strong> achternaam, e-mailadres van je kind, adres of foto's</li>
-              </ul>
-              <div style={{ fontWeight: 700, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>Hoe dat beveiligd is:</div>
-              <ul style={{ margin: "0 0 10px 18px", padding: 0 }}>
-                <li>de databank staat op servers <strong>in de EU</strong> (Frankfurt) en de opslag is <strong>versleuteld</strong></li>
-                <li>alles gaat over een <strong>versleutelde verbinding</strong> (het slotje in je browser)</li>
-                <li><strong>toegangsregels per account:</strong> alleen jij kunt de gegevens van jouw gezin zien — en je kind moet de koppeling eerst zelf in de app bevestigen</li>
-                <li>koppelcodes zijn willekeurig en maar <strong>48 uur geldig</strong>; we tonen geen reclame en verkopen niets door</li>
-              </ul>
-              <a href="/privacy.html" style={{ color: "#69f0ae", fontWeight: 700, fontSize: 12 }}>Lees het volledige privacybeleid →</a>
-            </div>
-          )}
-        </div>
-      </div>
 
       {/* Dashboard inhoud — alleen als kind geselecteerd */}
       {selectedChild && !selectedChildVerified && (

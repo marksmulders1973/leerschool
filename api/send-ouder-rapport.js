@@ -262,7 +262,7 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode) {
   <div style="max-width:520px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
     <div style="font-size:13px;color:#69f0ae;font-weight:700;margin-bottom:20px;">📊 Jouw wekelijkse ouder-rapport</div>
-    <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 20px;">Hoi! Dit is je maandag-rapport: zo ging het leren afgelopen week. Kort en eerlijk — zodat jij weet waar je kind staat, zonder mee te hoeven kijken over de schouder.</p>
+    <p style="font-size:15px;line-height:1.6;color:#cdd6e5;margin:0 0 20px;">Hoi! Dit is je weekrapport van vrijdag: zo ging het leren deze week. Kort en eerlijk — zodat jij weet waar je kind staat, zonder mee te hoeven kijken over de schouder.</p>
     ${kindSecties.map((s) => s.html).join("")}
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:20px;">${niveauSectie}</div>` : ""}
     <a href="${dashboard}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:22px;">📈 Bekijk alles in het ouder-dashboard →</a>

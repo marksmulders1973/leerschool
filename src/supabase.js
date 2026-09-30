@@ -35,6 +35,7 @@ const supabase = (url && key)
         onAuthStateChange: () => ({ data: { subscription: { unsubscribe: () => {} } } }),
         signOut: () => Promise.resolve({ error: null }),
         signInWithOAuth: () => Promise.resolve(_stubErr()),
+        signInWithOtp: () => Promise.resolve(_stubErr()),
       },
       storage: { from: () => ({ upload: () => Promise.resolve(_stubErr()), getPublicUrl: () => ({ data: { publicUrl: "" } }) }) },
       channel: () => ({ on: function () { return this; }, subscribe: () => ({ unsubscribe: () => {} }) }),

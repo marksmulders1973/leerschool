@@ -1,0 +1,40 @@
+name: Ouder-weekrapport (vrijdag 16:00)
+
+# Mark 30 sep 2026: het weekrapport voor ouders elke VRIJDAG om 16:00 Nederlandse tijd, "net als
+# mijn dagrapport maar dan over het kind". Vercel Hobby heeft maar 2 crons (allebei bezet), dus
+# GitHub Actions — zoals de uptime-bewaking. Cron loopt in UTC; we starten om 14:00 én 15:00 UTC
+# en sturen alleen als het in Amsterdam echt 16 uur is (zomer-/wintertijd). Het endpoint stempelt
+# admin_meta, dus dubbel versturen kan sowieso niet.
+#
+# Vereist GitHub-secret CRON_SECRET (dezelfde waarde als de Vercel env-var CRON_SECRET).
+
+on:
+  schedule:
+    - cron: "0 14 * * 5"
+    - cron: "0 15 * * 5"
+  workflow_dispatch:
+
+concurrency:
+  group: ouder-weekrapport
+  cancel-in-progress: false
+
+jobs:
+  stuur:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Alleen om 16:00 Amsterdam (of handmatig)
+        id: tijd
+        run: |
+          UUR=$(TZ=Europe/Amsterdam date +%H)
+          echo "Amsterdam-uur: $UUR"
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$UUR" = "16" ]; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
+      - name: Weekrapporten versturen
+        if: steps.tijd.outputs.go == '1'
+        env:
+          CRON_SECRET: ${{ secrets.CRON_SECRET }}
+        run: |
+          if [ -z "$CRON_SECRET" ]; then echo "::error::GitHub-secret CRON_SECRET ontbreekt"; exit 1; fi
+          code=$(curl -s -o /tmp/uit.json -w "%{http_code}" -H "Authorization: Bearer $CRON_SECRET" "https://leerkwartier.app/api/send-ouder-rapport")
+          echo "HTTP $code"; cat /tmp/uit.json; echo
+          [ "$code" = "200" ]
