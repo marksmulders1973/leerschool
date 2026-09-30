@@ -73,7 +73,7 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 - ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
 
 ## 🔴 Nu doen (deze week)
-- 🔐 **E-mail-login aanzetten (Supabase-dashboard, ~15 min, stappen in `docs/EMAIL-LOGIN.md`)**: Providers → Email aan + "Allow new users to sign up" aan · URL Configuration → https://leerkwartier.app/ouder, /leerkracht en /* · Emails → Templates → Magic Link in het Nederlands (tekst in het doc) · liefst SMTP via Resend (anders max 2 mails/uur). Claude kan meekijken via Chrome-voor-Claude.
+- ✅ **30 sep: e-mail-login staat aan** (site-adres gecorrigeerd, NL-inlogmail, verzenden via Resend, testmail in je inbox).
 - ✅ **30 sep: CRON_SECRET vernieuwd** (Vercel + GitHub-secret, oude waarde was niet uit te lezen); vrijdag-weekrapport 16:00 staat klaar, handmatige Action-run = droge test.
 - 👨‍👩‍👧 **Gezinsstart zelf proberen** op /ouder (na Google-login): kind + groep + nadruk → "oefent op dit apparaat: ja" → Brian of Olivia laten oefenen → vrijdag het rapport afwachten.
 - ✉️ **Hanneke (WEN) antwoordde 30 sep 12:54** ("vooral geïnteresseerd in de eerste zinnen"; kent niemand voor vertalingen; zij gebruiken HZS) → concept-antwoord staat in het avond-dagrapport 30 sep; jij zegt "stuur maar" of "niet sturen" (2 min). ⚠️ CRON_SECRET uiterlijk **vr 2 okt 15:30** zetten, anders gaat het eerste vrijdag-weekrapport niet uit.

@@ -1,5 +1,7 @@
 # Inloggen met e-mail (magic link) — wat Mark in Supabase moet nakijken
 
+> ✅ **AAN sinds 30 sep 2026** (ingesteld door Claude via Chrome-voor-Claude): Site URL leerkwartier.app (stond nog op studiebol.online), redirect-URL's `https://leerkwartier.app/**` + `http://localhost:5173/**` (+ oude studiebol.online), NL-template "Je inloglink voor Leerkwartier", custom SMTP via Resend (smtp.resend.com:465, user `resend`, aparte sleutel "Supabase inlogmails (SMTP)" met alleen verzendrecht op leerkwartier.app, afzender hallo@leerkwartier.app), limiet 60 mails/uur. Testmail kwam aan in de inbox.
+
 Sinds 30 sep 2026 staat naast "Inloggen met Google" een form **"Of log in met je
 e-mailadres"** (`src/auth/EmailLogin.jsx`): adres invullen → "Stuur mij een
 inloglink" → link in de mail → ingelogd, zonder wachtwoord. Wordt getoond op
