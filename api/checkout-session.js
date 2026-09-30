@@ -86,6 +86,14 @@ function sb() {
   if (!base || !key) throw new Error("supabase-config-missing");
   const h = { apikey: key, Authorization: `Bearer ${key}`, "Content-Type": "application/json" };
   return {
+    // Echt account? (30 sep 2026: een betaling kwam op een anoniem bezoekersaccount terecht → Familie
+    // zou verdwijnen bij een ander apparaat.) Alleen accounts mét e-mailadres mogen afrekenen.
+    async echtAccount(userId) {
+      const r = await fetch(`${base}/auth/v1/admin/users/${encodeURIComponent(userId)}`, { headers: h });
+      if (!r.ok) return null;
+      const u = await r.json();
+      return u && u.email && !u.is_anonymous ? { email: u.email } : null;
+    },
     async upsertSubscription(row) {
       const r = await fetch(`${base}/rest/v1/subscriptions?on_conflict=user_id`, { method: "POST", headers: { ...h, Prefer: "resolution=merge-duplicates,return=minimal" }, body: JSON.stringify({ ...row, updated_at: new Date().toISOString() }) });
       if (!r.ok) throw new Error(`subscriptions ${r.status}: ${await r.text()}`);
@@ -153,8 +161,11 @@ export default async function handler(req) {
       const plan = PROEF_EURO ? "test1" : gevraagd;
       const p = PLANNEN[plan];
       if (!p.price()) return json({ error: "onbekend plan" }, 400);
-      if (!userId) return json({ error: "Log eerst in via Mijn pagina, dan koppelen we het Familie-pakket aan jouw account.", login: "/mijn" }, 400);
+      const inlogMelding = { error: "Log eerst in met je e-mailadres (via Mijn pagina), dan koppelen we het Familie-pakket aan jouw account en werkt het op al je apparaten.", login: "/mijn" };
+      if (!userId) return json(inlogMelding, 400);
       const db = sb();
+      const account = await db.echtAccount(userId);
+      if (!account) return json(inlogMelding, 400);
       const bestaand = await db.subscriptionByUser(userId);
       const session = await stripe("checkout/sessions", {
         mode: p.mode,
@@ -163,7 +174,7 @@ export default async function handler(req) {
         cancel_url: `${SITE}/abonnement.html?geannuleerd=1`,
         client_reference_id: userId,
         customer: bestaand?.stripe_customer_id || undefined,
-        customer_email: bestaand?.stripe_customer_id ? undefined : (email || undefined),
+        customer_email: bestaand?.stripe_customer_id ? undefined : account.email,
         customer_creation: p.mode === "payment" && !bestaand?.stripe_customer_id ? "always" : undefined,
         locale: "nl",
         // Managed Payments UIT per betaling (30 sep 2026): anders wordt Stripe de verkoper (+3,5%, Stripe rekent
