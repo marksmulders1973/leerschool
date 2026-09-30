@@ -154,7 +154,8 @@ export default async function handler(req) {
         customer_email: bestaand?.stripe_customer_id ? undefined : (email || undefined),
         customer_creation: p.mode === "payment" && !bestaand?.stripe_customer_id ? "always" : undefined,
         locale: "nl",
-        payment_method_types: ["ideal", "card"],
+        // Geen payment_method_types (30 sep 2026): het account heeft Stripe "Managed Payments" aan; dan kiest
+        // Stripe zelf de betaalmethodes (iDEAL, kaart …) en weigert het deze parameter.
         allow_promotion_codes: true,
         // Factuur óók bij een eenmalige betaling (Mark-eis 28 aug 2026).
         invoice_creation: p.mode === "payment" ? { enabled: true } : undefined,
