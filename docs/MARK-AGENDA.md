@@ -74,6 +74,7 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 
 ## 🔴 Nu doen (deze week)
 - ✅ **30 sep: Stripe deel 1** (account + sandbox + testprijzen + webhook + hosting-sleutels). Deel 2 = "Verify your business" (ID, IBAN) zodra Knab goedkeurt. Beslis nog: prijs Seizoenspas (nu placeholder €39).
+- ⏰ **~3-4 okt: €1-teststand eraf** (betaalknop staat live op €1 proef = 30 dagen Familie; Mark test een paar dagen). Daarna: env STRIPE_PROEF_EURO weg → echte prijzen. Vooraf: Seizoenspas in Stripe gelijk aan de knop (€24,95) + besluit prijs (zie advies 30 sep).
 - ✅ **30 sep: e-mail-login staat aan** (site-adres gecorrigeerd, NL-inlogmail, verzenden via Resend, testmail in je inbox).
 - ✅ **30 sep: CRON_SECRET vernieuwd** (Vercel + GitHub-secret, oude waarde was niet uit te lezen); vrijdag-weekrapport 16:00 staat klaar, handmatige Action-run = droge test.
 - 👨‍👩‍👧 **Gezinsstart zelf proberen** op /ouder (na Google-login): kind + groep + nadruk → "oefent op dit apparaat: ja" → Brian of Olivia laten oefenen → vrijdag het rapport afwachten.
