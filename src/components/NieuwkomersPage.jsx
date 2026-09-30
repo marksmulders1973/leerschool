@@ -21,15 +21,15 @@ const NieuwkomersHerhaal = lazy(() => import("./NieuwkomersHerhaal.jsx"));
 const NieuwkomersLuisterKies = lazy(() => import("./NieuwkomersLuisterKies.jsx"));
 
 // 👂 Kijken en luisteren (29 sep 2026, mail nieuwkomers-directeur: "het merendeel is ongeletterd"):
-// drie ingangen zonder lezen. Kopjes in de thuistaal; de knoppen zelf spreken ook.
+// vier ingangen zonder lezen (30 sep: + Zinnen, "Mag ik naar de wc?"). Kopjes in de thuistaal; de knoppen zelf spreken ook.
 const LUISTER_KOP = {
-  nl: ["Kijken en luisteren", "Ook als je nog niet kunt lezen.", "Woordkaarten", "Luister en kies", "Plaatjesdictee"],
-  en: ["Look and listen", "Also if you cannot read yet.", "Word cards", "Listen and choose", "Picture dictation"],
-  ar: ["انظر واستمع", "حتى لو كنت لا تستطيع القراءة بعد.", "بطاقات الكلمات", "استمع واختر", "إملاء بالصور"],
-  uk: ["Дивись і слухай", "Навіть якщо ти ще не вмієш читати.", "Картки зі словами", "Слухай і вибирай", "Диктант з картинками"],
-  tr: ["Bak ve dinle", "Henüz okuyamasan da olur.", "Kelime kartları", "Dinle ve seç", "Resimli dikte"],
-  ro: ["Privește și ascultă", "Chiar dacă nu știi încă să citești.", "Cartonașe cu cuvinte", "Ascultă și alege", "Dictare cu imagini"],
-  bg: ["Гледай и слушай", "Дори ако още не можеш да четеш.", "Карти с думи", "Слушай и избери", "Диктовка с картинки"],
+  nl: ["Kijken en luisteren", "Ook als je nog niet kunt lezen.", "Woordkaarten", "Luister en kies", "Plaatjesdictee", "Zinnen"],
+  en: ["Look and listen", "Also if you cannot read yet.", "Word cards", "Listen and choose", "Picture dictation", "Sentences"],
+  ar: ["انظر واستمع", "حتى لو كنت لا تستطيع القراءة بعد.", "بطاقات الكلمات", "استمع واختر", "إملاء بالصور", "جمل"],
+  uk: ["Дивись і слухай", "Навіть якщо ти ще не вмієш читати.", "Картки зі словами", "Слухай і вибирай", "Диктант з картинками", "Речення"],
+  tr: ["Bak ve dinle", "Henüz okuyamasan da olur.", "Kelime kartları", "Dinle ve seç", "Resimli dikte", "Cümleler"],
+  ro: ["Privește și ascultă", "Chiar dacă nu știi încă să citești.", "Cartonașe cu cuvinte", "Ascultă și alege", "Dictare cu imagini", "Propoziții"],
+  bg: ["Гледай и слушай", "Дори ако още не можеш да четеш.", "Карти с думи", "Слушай и избери", "Диктовка с картинки", "Изречения"],
 };
 // Doorgroeiplan stap 2 (26 sep 2026): trede-testje na tegels 1-4.
 const NieuwkomersTredeTest = lazy(() => import("./NieuwkomersTredeTest.jsx"));
@@ -129,7 +129,7 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOversta
   const location = useLocation();
   const navigate = useNavigate();
   const kijkParam = new URLSearchParams(location.search).get("kijken");
-  const luister = ["kaarten", "kies", "dictee"].includes(kijkParam) ? kijkParam : null;
+  const luister = ["kaarten", "kies", "dictee", "zinnen"].includes(kijkParam) ? kijkParam : null;
   const setLuister = (soort) => {
     if (soort) navigate(`/nieuwkomers?kijken=${soort}`);
     else if ((window.history.state?.idx ?? 0) > 0) navigate(-1);
@@ -298,8 +298,8 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOversta
                 </div>
                 <LuisterKnop tekst="Kijken en luisteren. Ook als je nog niet kunt lezen." licht />
               </div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8, marginTop: 10 }}>
-                {[["kaarten", "/picto/huis.svg", lk[2], "Woordkaarten"], ["kies", "/picto/luisteren.svg", lk[3], "Luister en kies"], ["dictee", "/picto/schrijven.svg", lk[4], "Plaatjesdictee"]].map(([id, img, label, nlNaam]) => (
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 8, marginTop: 10 }}>
+                {[["kaarten", "/picto/huis.svg", lk[2], "Woordkaarten"], ["kies", "/picto/luisteren.svg", lk[3], "Luister en kies"], ["dictee", "/picto/schrijven.svg", lk[4], "Plaatjesdictee"], ["zinnen", "/picto/praten.svg", lk[5], "Zinnen"]].map(([id, img, label, nlNaam]) => (
                   <button key={id} type="button" onClick={() => open(id)} style={{ position: "relative", background: "#eef4ff", border: "2px solid #9db8e8", borderRadius: 14, padding: "10px 6px", cursor: "pointer", color: "#0f2a44", fontFamily: "inherit" }}>
                     <img src={img} alt="" style={{ width: 64, height: 64, objectFit: "contain", display: "block", margin: "0 auto", background: "#fff", borderRadius: 10 }} />
                     <div style={{ fontWeight: 800, fontSize: 13.5, marginTop: 6 }} dir="auto">{label}</div>
