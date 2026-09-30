@@ -40,6 +40,9 @@
 | ma 28 sep | 1 (git 17:00–17:50) | 💻✉️ ere-scherm twee wegen (v772), tip-knop nieuwkomers (v773), "klopt er iets niet?" (v774), KvK-nummer aan Esther gemaild |
 | di 29 sep | 2,5 (chat/git 13:00–15:30) | 💻📊 analyse zwakste schakel (data + metingen), leerpad "Probeer eerst" + opschonen + meetpunten (v775), ARKEL2027 (v776), Arkel-plan, dagrapport |
 | di 29 sep | 0,5 (offline, Mark) | 🏦 Knab zakelijke rekening aangevraagd (app, 14:54) |
+| di 29 sep | 6 (git 15:40–21:50) | 💻✉️ leerpad "vraag eerst" + hervatten (v777-778), Bedrieger-kamer met code (v781-784), Charley de/het + Opus 5 (v786-788), 🚩 op 13 vraagschermen (v790), nieuwkomers zonder lezen (v792), Kwartiercheck per groep 3-8 (v793-799), STRIPE-AANMAKEN.md, antwoorden WereldKidz + De Linge (23 commits) |
+| wo 30 sep | 2 (git 03:30–05:15) | 💻✉️ niveaulijn fase 1 (v800), startpagina herschikt (v801-803), partner-rapport v1, vertaalknop start-kwartier (v804-807), update aan Hanneke, LinkedIn-post nieuwkomers (16 commits) |
+| wo 30 sep | 0,5 (chat 09:00–09:40) | 📋 dagrapport 30 sep (Supabase, mail-check, Meesterplan-PDF, docs) |
 
 ## Week 39 (ma 21 sep – zo 27 sep) — ✅ GOEDGEKEURD door Mark 28 sep 2026 (uit git, 35 u)
 
@@ -165,7 +168,7 @@ maildata vanaf juni.
 | Offline 15% over die 591,5 | ~89 | | vuistregel Mark 28 aug; grote losse klussen (flyers posten, bellen) nog apart door Mark aan te vullen |
 | **Totaal t/m 23 aug (voorstel)** | **~790** | | 80 + 30 + 591,5 + 89 |
 
-**Doorrekening urencriterium 2026 (stand 16 sep):** ~790 t/m 23 aug + ~100 gelogd 24 aug–16 sep = **~890**.
+**Doorrekening urencriterium 2026 (stand 30 sep):** ~790 t/m 23 aug + wk 35-39 goedgekeurd + wk 40 t/m wo ≈ **~978** (29 sep-stand 970 + 8 u sessie 29/30 sep). Nog ±247 u = ±19 u/week tot 31 dec. (Oude stand 16 sep: ~890.)
 Nog 15 weken × ~25-28 u = ~375-420 → **~1.265-1.310 → de 1.225 wordt gehaald**, mits het huidige ritme
 doorloopt tot eind december. Marge is klein (~40-85 u): offline klussen wél blijven loggen.
 

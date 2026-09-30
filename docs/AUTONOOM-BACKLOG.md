@@ -31,7 +31,7 @@ Cito + examens versterken. Drie type werk:
 - [x] **Eén prijslijst** — `config.js` / `proPlan.js` / `PRIJSPLAN.md` / `abonnement.html` ✅ 26 sep v744 (audit 20 plekken)
       gelijktrekken. Partnerprijs €34,50/kind/jaar erin. Wacht op Marks besluit over de
       school-eenheid (punt 2 in de agenda).
-- [ ] **Partner-rapport v1** — per code: hoeveel kinderen, hoeveel kwartieren, hoeveel
+- [x] **Partner-rapport v1** ✅ 30 sep (`scripts/partner-rapport.mjs` → docs/rapporten, RPC partner_rapport) — per code: hoeveel kinderen, hoeveel kwartieren, hoeveel
       terugkomers. Uit `partner_codes` + kwartier-data. Voorwaarde onder de Leergeld-mail.
 - [ ] Fable-review van `docs/VERDIENMODEL-EN-KOSTEN.md` §6 inplannen zodra Mark het zegt.
 

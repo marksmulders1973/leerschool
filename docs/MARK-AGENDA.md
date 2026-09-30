@@ -24,7 +24,7 @@
 | 4 | **Prompt caching** — −48% van de AI-rekening, ~1 uur werk, niemand merkt het. | Claude | direct | ☐ |
 | 5 | **Charley praat alleen indien nodig + pauzeknop** (dagbundel als vangnet). | Claude | week 22 sep | ✅ **26 sep (v745) — trapje i.p.v. pauzeknop (Mark):** gratis versie dag 1 met Charley 75 berichten → 65 → 55 → 45 → 35 → 25, vanaf dag 7: 10 + 1 per gemaakte som (max 30); Familie (ook via partnercode) blijft 75/dag. Server telt de dagen zelf (ai_call_quota), terugval 20. Rem bij kletsen zonder sommen (5/15) blijft. Pauzeknop niet nodig: Charley praat nooit uit zichzelf. |
 | 6 | **Btw — besluit 22 sep: één bedrag, alles erin (zoals de markt doet), en de KOR aanvragen.** Op de 28e: (a) KvK-inschrijving; (b) **btw-id opvragen**; (c) daarna zelf via belastingdienst.nl **"Melding omzetbelasting kleineondernemersregeling"** insturen met ingang **1 januari 2027** (min. 4 weken vooraf, 3 jaar vast, grens €20.000 omzet); (d) laten bevestigen dat verlegde btw op Supabase/AI geen probleem is. Zin in het betaalplan ("geen btw bovenop") klopt zodra (c) is gedaan. Boven €20k ooit: 21% erin houden, prijs blijft €34,50 incl. | Mark | 28 sep | ☐ |
-| 7 | **Partner-rapport v1** ("X kinderen uit uw gemeente oefenden Y kwartier") — zonder dat getal verlengt geen enkele partner. | Claude | 15 okt | ☐ |
+| 7 | **Partner-rapport v1** ("X kinderen uit uw gemeente oefenden Y kwartier") — zonder dat getal verlengt geen enkele partner. | Claude | 15 okt | ✅ **30 sep** — `scripts/partner-rapport.mjs` → docs/rapporten (RPC partner_rapport): Kinderhulp 348 app/1.277 vragen/42 kwartieren · Buurtgezinnen 27/181/4 · Alkmaar 10/97/3 · Ooievaarspas 7/0 · VB Rotterdam 5 · Haarlemmermeer 1 |
 | 8 | **Vercel Pro** vóór de eerste betaling (Hobby = niet-commercieel). | Mark | vóór 1e euro | ☐ |
 | 9 | 🔴 **Charley-bundel gelijk voor álle Familie-niveaus** (betalend én Ooievaarspas) — anders botst het met de clausule "minimaal gelijke kwaliteit/hoeveelheid" uit de getekende Vriend-overeenkomst. Pashouders hebben `parent_pro`, géén gratis-niveau. | Claude | vóór het bouwen, week 22 sep | ☐ |
 | 10 | **Prijswijziging melden aan Esther** zodra Familie van prijs verandert (informatieplicht uit de overeenkomst; geen toestemming nodig). Toegezegd staat: normale prijs €39/jaar → gratis voor pashouders. | Mark | bij elke prijswijziging | ☐ |
@@ -43,7 +43,8 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 - **okt**: Leergeld-mail mét prijs · leveranciers-aanmelding 4-6 stadspassen/kindpakketten · partner-rapport v1
 - **vóór nov**: gemeentegesprekken (begroting 2027 wordt in nov vastgesteld)
 - **najaar 2027**: verleng-ronde bestaande codes met 2028-prijs
-- Stand: ☐ KvK ☐ KOR ☐ 1e kindpakket-aanmelding ☐ partner-rapport ☐ 1e betaald kind
+- **Besluit 29 sep 2026:** één aanbod = **licentie €2.000/gemeente** (Familie-pakketten voor de gezinnen van die gemeente); deur = beleidsmedewerker armoede/onderwijs; oktober vóór de begroting; 10 warme gemeenten (Den Haag, Amsterdam/OKT, Alkmaar, Enschede, Haarlemmermeer, Dongen, Rotterdam, Groningen/Stadjerspas, Zoetermeer, Lelystad); meetlat **3 gesprekken vóór 1 dec**. Volgende stap: "ga gemeenten" (10 mails, tekst eerst tonen). Partner-rapport per gemeente (scripts/partner-rapport.mjs → docs/rapporten) gaat mee.
+- Stand: ✅ KvK (28 sep) ☐ KOR (na btw-id) ☐ 1e kindpakket-aanmelding ✅ partner-rapport v1 (30 sep) ☐ 10 gemeentemails ☐ 1e gesprek ☐ 1e betaald kind
 
 ## 💰 Verdienmodel & kosten · vast blok in elk dagrapport (sinds 20 sep 2026)
 
@@ -72,7 +73,12 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 - ⏰ **3 mei 2027: domein leerkwartier.app verloopt** — vóór 1 april auto-verlengen + geldige kaart checken
 
 ## 🔴 Nu doen (deze week)
-- 📈 **Beslissen: niveaulijn fase 1** (plan in de chat van 29 sep / memory) → "ga fase 1".
+- 💳 **Stripe-account aanmaken op hallo@** (30 sep, week 1-5 okt): alle gegevens staan in `docs/STRIPE-AANMAKEN.md` (KvK 42176244, Knab …009). Knab-goedkeuring loopt (max 5 werkdagen, stil op wo 7 okt → bellen); zodra binnen: IBAN in de chat → Stripe-verificatie + facturen. Week 6-12 okt: live-sleutels + proefaankoop PRO2027 · 13-19 okt: schoolprijs + Leergeld-prijsmail + gemeentemails · jan 2027 paywall aan.
+- 🏛️ **Gemeenteplan (besluit 29 sep):** één aanbod = licentie €2.000/gemeente · deur = beleidsmedewerker armoede/onderwijs · oktober vóór de begroting · 10 warme gemeenten · meetlat 3 gesprekken vóór 1 dec. **Twee knopen eerst:** (a) btw bóvenop €34,50 bij gemeente/stichting, ja/nee? (b) wat bedoelde je met "gebruik users limited voor de post"? Daarna "ga gemeenten" → 10 teksten eerst in de chat.
+- 💛 **Wensenbord (1 min):** melding "Doorstroomtoets Doorstroomtoets" (29 sep 18:34, via 🚩) is gefixt in v785 → op /tips "Dank van de maker" tikken.
+- 📱 **Telefoon-test:** /nieuwkomers zonder lezen (voorleesstand, Woordkaarten, Luister en kies, Plaatjesdictee) · Kwartiercheck groep 3 en 8 · nieuwe startpagina · Bedrieger-kamer met 4-cijfercode.
+- ✅ ~~Beslissen: niveaulijn fase 1~~ → **fase 1 LIVE 30 sep (v800)**; fase 2 wacht op go. Bekend gat: groep is leeg bij gasten, gevoelvraag vuurde nog 0× (Claude lost op).
+- 🔏 ✅ **Anthropic DPA/ZDR (antwoord 30 sep):** DPA + SCC's zitten automatisch in de Commercial Terms; ZDR alleen via sales (niet nodig, geen namen in payloads). Lus dicht; Claude zet de verwijzing in de DPIA.
 - ⏰ **do 24 sep — twee geplande Windows-taken** (pc moet aan of slapend zijn, anders lopen ze bij de eerste start erna): 08:30 LOWAN batch 7B (29, laatste) · 14:00 Bonaire ronde 2 (13, code BONAIRE2027). Claude checkt de logs in het dagrapport.
 - 📬 **23 sep — outreach-halfuur, vier dingen liggen klaar voor één woord van jou:**
   1. **LOWAN batch 6** (45 nieuwkomersscholen, zelfde goedgekeurde tekst, `docs/outreach/LOWAN-BATCH-6.md`) → zeg "ga lowan" en hij gaat de deur uit; batch 7 (laatste 44) de dag erna.

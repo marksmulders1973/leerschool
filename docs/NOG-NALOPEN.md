@@ -52,4 +52,4 @@ wie (Mark = zelf testen/beslissen, Claude = bouwen/checken). Afgevinkt → regel
 - 25 sep: D7 doorverwijzing /klas. ✅
 - 25 sep: D1 QR-hoek in productie getest ✅
 
-- **N15 (29 sep, uit mail WereldKidz Albatros):** "merendeel ongeletterd, niet alles kan worden voorgelezen" → nalopen waar in het Nieuwkomer-pakket de voorleesknop ontbreekt (antwoordopties? testjes? /nieuwkomers-pagina zelf? knoppen?) en een plaatjes-eerst-ingang overwegen. Eerst Hanneke vragen wáár ze het miste (concept bij Mark).
+- **N15 (29 sep, uit mail WereldKidz Albatros):** "merendeel ongeletterd, niet alles kan worden voorgelezen" → ✅ **GEBOUWD v792 (29 sep avond): nieuwkomers zonder lezen** — voorleesstand, luisterknoppen overal, Woordkaarten / Luister en kies / Plaatjesdictee (190 Mulberry-plaatjes), vertalingen EN/AR/UK/TR (134 nog na te kijken door Claude). Update aan Hanneke verstuurd 30 sep 02:25 (wacht op oordeel + native check via WEN; niet nudgen vóór ~14 okt). **Mark: op telefoon doorlopen** (privévenster, 🔊 voorleesstand).
