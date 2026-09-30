@@ -286,11 +286,12 @@
       b.addEventListener("click", async function () {
         msg.textContent = "Even bezig…";
         try {
-          var uid = null; try { var raw = localStorage.getItem("sb-uxqnzrymyjbcpuzqktdm-auth-token"); uid = raw ? (JSON.parse(raw).user || {}).id : null; } catch (e) {}
-          var r = await fetch("/api/checkout-session?action=checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ plan: b.dataset.plan, userId: uid }) });
+          var uid = null, mail = null; try { var raw = localStorage.getItem("sb-uxqnzrymyjbcpuzqktdm-auth-token"); var u = raw ? (JSON.parse(raw).user || {}) : {}; uid = u.id || null; mail = u.email || null; } catch (e) {}
+          var r = await fetch("/api/checkout-session?action=checkout", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ plan: b.dataset.plan, userId: uid, email: mail }) });
           var d = await r.json();
           if (d.url) { location.href = d.url; return; }
           msg.textContent = d.error || "Nog niet beschikbaar.";
+          if (d.login) { var a = document.createElement("a"); a.href = d.login; a.textContent = " Naar Mijn pagina →"; a.style.color = "inherit"; a.style.fontWeight = "800"; msg.appendChild(a); }
         } catch (e) { msg.textContent = "Ging niet door — probeer het later nog eens."; }
       });
     });

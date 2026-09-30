@@ -37,6 +37,9 @@ const json = (data, status = 200) =>
   new Response(JSON.stringify(data), { status, headers: { "Content-Type": "application/json" } });
 
 const STRIPE_ACTIVE = process.env.STRIPE_ACTIVE === "true";
+// 🧪 Proef-euro (Mark 30 sep 2026: "hou het even op 1 euro"): zolang deze env-var "1" is, rekent élke
+// koopknop de proefbetaling van €1 (plan test1 = 30 dagen Familie) — nooit een heel jaar voor €1.
+const PROEF_EURO = process.env.STRIPE_PROEF_EURO === "1";
 const SITE = process.env.SITE_URL || "https://leerkwartier.app";
 const SEIZOEN_EIND = process.env.SEIZOENSPAS_EIND || "2027-07-31T21:59:59Z"; // t/m 31 juli (NL zomertijd)
 
@@ -141,10 +144,12 @@ export default async function handler(req) {
 
   try {
     if (action === "checkout") {
-      const { plan, userId, email } = await req.json();
+      const { plan: gevraagd, userId, email } = await req.json();
+      if (!PLANNEN[gevraagd]) return json({ error: "onbekend plan" }, 400);
+      const plan = PROEF_EURO ? "test1" : gevraagd;
       const p = PLANNEN[plan];
-      if (!p || !p.price()) return json({ error: "onbekend plan" }, 400);
-      if (!userId) return json({ error: "userId ontbreekt" }, 400);
+      if (!p.price()) return json({ error: "onbekend plan" }, 400);
+      if (!userId) return json({ error: "Log eerst in via Mijn pagina, dan koppelen we het Familie-pakket aan jouw account.", login: "/mijn" }, 400);
       const db = sb();
       const bestaand = await db.subscriptionByUser(userId);
       const session = await stripe("checkout/sessions", {
