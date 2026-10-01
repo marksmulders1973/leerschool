@@ -694,6 +694,17 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
           );
         })()}
 
+        {/* Kwartiercheck als smalle regel onder Mijn pagina (Mark 1 okt 2026: startpagina rustig;
+            de kaart bracht ~6 van de 10 checks binnen, dus wel blijven, maar klein). */}
+        {step === "role" && onKwartiercheck && (
+          <div style={{ textAlign: "center", margin: "-4px auto 18px", maxWidth: 560 }}>
+            <button type="button" onClick={() => { track("home_cta_kwartiercheck"); onKwartiercheck(); }}
+              style={{ background: "none", border: "none", cursor: "pointer", color: "#ff8c42", fontFamily: "var(--font-display)", fontSize: 14.5, fontWeight: 800, textDecoration: "underline", textUnderlineOffset: 3 }}>
+              🧭 Gratis Kwartiercheck: waar staat je kind? →
+            </button>
+          </div>
+        )}
+
         {/* Rol-regel als tekstlinks (30 sep): de oude foto-tegels + ouder-kaart +
             footer-leerkracht-knop, nu één gedempte regel. Alleen zolang de rol
             onbekend is (geen naam op dit apparaat / geen opgeslagen rol). */}
@@ -1029,30 +1040,6 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {/* Kwartiercheck-kaart (Fable-review 28 jul, restpunt 1): de check was
             alleen via directe URL vindbaar — grootste conversielek van de
             lead-magnet. Ouder-actie, direct onder "Wat is Leerkwartier". */}
-        {step === "role" && onKwartiercheck && (
-          <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520 }}>
-            <button
-              onClick={() => { track("home_cta_kwartiercheck"); onKwartiercheck(); }}
-              style={{
-                width: "100%", textAlign: "left", cursor: "pointer",
-                background: "rgba(255,107,53,0.10)", border: "1.5px solid rgba(255,107,53,0.45)",
-                borderRadius: 14, padding: "14px 16px",
-                display: "flex", alignItems: "center", gap: 12,
-              }}
-            >
-              <span aria-hidden="true" style={{ fontSize: 26, lineHeight: 1 }}>🧭</span>
-              <span style={{ flex: 1 }}>
-                <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#ff8c42" }}>
-                  Gratis Kwartiercheck — waar staat jouw kind?
-                </span>
-                <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)", marginTop: 3, lineHeight: 1.45 }}>
-                  Korte check van rekenen, taal en lezen (± 1 kwartier). Je krijgt gratis het overzicht + een weekplan in je mail.
-                </span>
-              </span>
-              <span aria-hidden="true" style={{ color: "#ff8c42", fontWeight: 800 }}>→</span>
-            </button>
-          </div>
-        )}
 
         {/* Vraag-van-de-dag-kaart VAN HOME GEHAALD (Mark 11 aug 20:36: "de home
             wordt onoverzichtelijk; vraag van de dag alleen nog voor de socials").

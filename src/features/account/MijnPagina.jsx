@@ -370,6 +370,7 @@ export default function MijnPagina({
   onDictee,
   onWerkwoorden,
   onVandaagKwartier,
+  onKwartiercheck,
   onGoVoortgang,
   onOuderDashboard,
   onHernoem,
@@ -558,6 +559,9 @@ export default function MijnPagina({
   const [meerOpen, setMeerOpen] = useState(false);
   // Compact kwartierblok (Mark 1 okt 2026: "dit groene blok is nog enorm groot"): eerste keuze achter een linkje.
   const [zelfKiezenOpen, setZelfKiezenOpen] = useState(false);
+  // Kwartiercheck als aanbevolen eerste stap (Mark 1 okt 2026) zolang hij op dit apparaat niet gedaan is.
+  const kwartiercheckGedaan = (() => { try { return !!localStorage.getItem("lk_kwartiercheck_klaar"); } catch { return false; } })();
+  const naarKwartiercheck = (plek) => { try { track("mijn_kwartiercheck_tip", { plek }); } catch { /* */ } if (onKwartiercheck) onKwartiercheck(); };
   // Mark 1 okt 2026 (middag): "als je naar Mijn pagina gaat altijd hier beginnen". Alleen direct na
   // een keuze niet opnieuw (de pagina start opnieuw op bij een profielwissel): lk_wie_net = gekozen naam.
   const [wieOpen, setWieOpen] = useState(() => {
@@ -1780,6 +1784,11 @@ export default function MijnPagina({
                           >
                             {resume ? "of: verder waar je was" : "of: zelf een onderwerp kiezen"}
                           </button>
+                          {(rolKey === "leerling" || rolKey === "student") && !kwartiercheckGedaan && onKwartiercheck && !bezig && (
+                            <button type="button" onClick={() => naarKwartiercheck("kind")} style={{ display: "block", width: "100%", marginTop: 8, padding: "9px 12px", borderRadius: 10, cursor: "pointer", border: "1px dashed rgba(255,140,66,0.6)", background: "rgba(255,107,53,0.08)", color: "#ff8c42", fontSize: 13, fontWeight: 700 }}>
+                              Eerste keer? Doe eerst de Kwartiercheck, dan weten we waar je staat →
+                            </button>
+                          )}
                           {!bezig && plan.blokjes.length > 1 && (
                             <button type="button" onClick={() => setZelfKiezenOpen((o) => !o)} aria-expanded={zelfKiezenOpen}
                               style={{ display: "block", margin: "8px auto 0", background: "none", border: "none", color: "var(--color-text-muted, #8899aa)", textDecoration: "underline", cursor: "pointer", fontSize: 12.5 }}>
@@ -2549,6 +2558,15 @@ export default function MijnPagina({
             )}
 
             {rolKey === "ouder" && <div style={{ ...eyebrowStijl, margin: "4px 0 6px 2px" }}>Wat kun je doen?</div>}
+            {rolKey === "ouder" && !kwartiercheckGedaan && onKwartiercheck && (
+              <button type="button" onClick={() => naarKwartiercheck("ouder")} style={{
+                width: "100%", textAlign: "left", cursor: "pointer", marginBottom: "var(--space-4)",
+                background: "rgba(255,107,53,0.10)", border: "1.5px solid rgba(255,107,53,0.45)", borderRadius: 14, padding: "12px 14px",
+              }}>
+                <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 15, fontWeight: 800, color: "#ff8c42" }}>Begin met de gratis Kwartiercheck →</span>
+                <span style={{ display: "block", fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginTop: 3, lineHeight: 1.45 }}>Weet in een kwartier waar je kind staat met rekenen, taal en lezen, plus een weekplan in je mail.</span>
+              </button>
+            )}
             {/* ── Gedeeld ouder-inzicht (Mark 14 aug): exact hetzelfde blok als
                 op /ouder — kind koppelen (code via WhatsApp/e-mail/kopiëren),
                 partner-mail, betalen én de voortgang per kind. Bovenaan de

@@ -634,6 +634,8 @@ export default function KwartiercheckPage({ emailVanIntro, onHome }) {
   const handleQuizDone = (scoreData) => {
     setScores(scoreData);
     track("kwartiercheck_klaar", { groep });
+    // Mijn pagina toont de Kwartiercheck als eerste stap zolang hij niet gedaan is (1 okt 2026).
+    try { localStorage.setItem("lk_kwartiercheck_klaar", new Date().toISOString().slice(0, 10)); } catch { /* */ }
     setStap("resultaat");
   };
 

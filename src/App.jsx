@@ -1570,6 +1570,7 @@ export default function App() {
           onDictee={() => setPage("dictee")}
           onWerkwoorden={() => setPage("werkwoorden")}
           onVandaagKwartier={() => setPage("vandaag-kwartier")}
+          onKwartiercheck={() => setPage("kwartiercheck")}
           onGoCito={() => setPage("cito")}
           onGoVoortgang={() => setPage("my-mastery")}
           onVak={(subject) => {
