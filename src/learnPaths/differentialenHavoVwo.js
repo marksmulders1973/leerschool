@@ -18,13 +18,13 @@ const steps = [
   {
     title: "Limiet + helling — wat is een afgeleide?",
     explanation:
-      "**Afgeleide** = helling van een functie op een punt.\n\n**Helling op grafiek**:\n• Tussen twee punten (P1, P2): ΔY/ΔX = differentiequotiënt. Geeft **gemiddelde helling**.\n• Op één punt (P): laat ΔX → 0 → **limiet** = afgeleide = momentane helling.\n\n**Voorbeeld - constant tempo**:\nx(t) = 5t (positie als functie van tijd). Snelheid = afgeleide = constant 5.\n\n**Voorbeeld - vrije val**:\nx(t) = ½g·t² (verticale val). Snelheid v(t) = afgeleide = g·t. Versnelling = afgeleide v = g.\n\n**Notatie**:\n• y' (Lagrange): kort.\n• f'(x) (Lagrange functie-notatie).\n• dy/dx (Leibniz): expliciet over verandering.\n\n**Definitie via limiet** (officieel):\n**$f'(x) = \\lim_{h \\to 0} \\dfrac{f(x+h) - f(x)}{h}$**\n\nIntuïtie: kies klein interval h, bereken gemiddelde helling, kleiner maken h → helling op punt zelf.\n\n**Geometrisch**: afgeleide = helling van **raaklijn** in dat punt.\n\n**Voorbeeld berekening** voor f(x) = x²:\nf(x+h) = (x+h)² = x² + 2xh + h².\n[f(x+h) − f(x)] / h = (2xh + h²) / h = 2x + h.\nlim_{h→0} (2x + h) = 2x.\nDus f'(x) = 2x.\n\n**Algemeen voor x^n**: **$(x^n)' = n \\cdot x^{n-1}$** (machtsregel).\n\n**Snelheid + versnelling**:\n• Positie x(t) → afgeleide = v(t) snelheid.\n• Snelheid v(t) → afgeleide = a(t) versnelling.\n• Versnelling a(t) → afgeleide = ruk j(t) (HAVO/VWO: meestal niet beyond).\n\n**Wanneer is afgeleide nul?**\n• Toppen + dalen van grafiek (lokale extremen).\n• Stilstand (snelheid = 0).\n\n**Wanneer bestaat afgeleide NIET?**\n• Op een knik (bv. |x| heeft geen afgeleide in x=0).\n• Op een sprong/discontinuïteit.\n• Op verticale raaklijn.",
+      "**Afgeleide** = helling van een functie op een punt.\n\n**Helling op grafiek**:\n• Tussen twee punten (P1, P2): ΔY/ΔX = differentiequotiënt. Geeft **gemiddelde helling**.\n• Op één punt (P): laat ΔX → 0 → **limiet** = afgeleide = momentane helling.\n\n**Voorbeeld - constant tempo**:\nx(t) = 5t (positie als functie van tijd). Snelheid = afgeleide = constant 5.\n\n**Voorbeeld - vrije val**:\nx(t) = ½g·t² (verticale val). Snelheid v(t) = afgeleide = g·t. Versnelling = afgeleide v = g.\n\n**Notatie**:\n• y' (Lagrange): kort.\n• f'(x) (Lagrange functie-notatie).\n• dy/dx (Leibniz): expliciet over verandering.\n\n**Definitie via limiet** (officieel):\n**$f'(x) = \\lim_{h \\to 0} \\dfrac{f(x+h) - f(x)}{h}$**\n\nIntuïtie: kies klein interval h, bereken gemiddelde helling, kleiner maken h → helling op punt zelf.\n\n**Geometrisch**: afgeleide = helling van **raaklijn** in dat punt.\n\n**Voorbeeld berekening** voor f(x) = x²:\nf(x+h) = (x+h)² = x² + 2xh + h².\n[f(x+h) − f(x)] / h = (2xh + h²) / h = 2x + h.\nlim_{h→0} (2x + h) = 2x.\nDus f'(x) = 2x.\n\n**Algemeen voor x^n**: **$(x^n)' = n \\cdot x^{n-1}$** (machtsregel).\n\n**Snelheid + versnelling**:\n• Positie x(t) → afgeleide = v(t) snelheid.\n• Snelheid v(t) → afgeleide = a(t) versnelling.\n• Versnelling a(t) → afgeleide = ruk j(t) (HAVO/VWO: meestal niet behandeld).\n\n**Wanneer is afgeleide nul?**\n• Toppen + dalen van grafiek (lokale extremen).\n• Stilstand (snelheid = 0).\n\n**Wanneer bestaat afgeleide NIET?**\n• Op een knik (bv. |x| heeft geen afgeleide in x=0).\n• Op een sprong/discontinuïteit.\n• Op verticale raaklijn.",
     checks: [
       {
         q: "Afgeleide van **f(x) = x²** is:",
         options: ["f'(x) = 2x", "f'(x) = x", "f'(x) = 2", "f'(x) = x²/2"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet macht-regel.", "Niet — die macht klopt niet.", "Niet — dat zou integraal zijn."],
+        wrongHints: [null, "Niet — vergeet macht-regel.", "Niet — die macht klopt niet.", "Niet — de macht gaat juist als factor naar voren."],
         uitlegPad: {
           stappen: [{ titel: "Macht-regel n·x^(n-1)", tekst: "f(x) = x² → f'(x) = 2·x^(2-1) = **2x**. Standaard machtsregel: macht voorop + macht 1 lager." }],
           niveaus: { basis: "f'=2x.", simpeler: "x² wordt 2x.", nogSimpeler: "2x" },
@@ -41,7 +41,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — verwarring met functie-waarde.", "Niet — geen.", "Niet — context-onafhankelijk."],
         uitlegPad: {
-          stappen: [{ titel: "Afgeleide = lokale helling", tekst: "Op x=3 stijgt de grafiek met snelheid 5 (in y-richting per eenheid x). Op die plek is raaklijn 5× horizontaal omhoog." }],
+          stappen: [{ titel: "Afgeleide = lokale helling", tekst: "Op x=3 stijgt de grafiek met snelheid 5 (in y-richting per eenheid x). Op die plek heeft de raaklijn helling 5." }],
           niveaus: { basis: "Helling = 5 bij x=3.", simpeler: "Stijging 5 per eenheid x.", nogSimpeler: "Helling" },
         },
       },
@@ -83,7 +83,7 @@ const steps = [
   {
     title: "Rekenregels — machten + som + verschil",
     explanation:
-      "**Basis-regels**:\n\n**1. Macht-regel**:\n• (x^n)' = **n · x^(n-1)**.\n• (x³)' = 3x².\n• (x⁵)' = 5x⁴.\n• Werkt voor alle reële n (ook negatief + breuk):\n  - (x⁻¹)' = −1 · x⁻² = −1/x².\n  - (√x)' = (x^½)' = ½·x^(−½) = 1/(2√x).\n\n**2. Constante factor**:\n• (c · f(x))' = c · f'(x).\n• (5x³)' = 5 · 3x² = 15x².\n\n**3. Som- + verschil-regel**:\n• (f + g)' = f' + g'.\n• (f − g)' = f' − g'.\n• (x² + 3x − 7)' = 2x + 3 − 0 = 2x + 3.\n\n**4. Bijzondere functies**:\n• (e^x)' = e^x (= 'magische' eigenschap exponentiële functie).\n• (a^x)' = a^x · ln(a).\n• (ln x)' = 1/x.\n• (sin x)' = cos x.\n• (cos x)' = −sin x.\n• (tan x)' = 1/cos² x = sec² x.\n\n**Stap-voor-stap voor polynoom**:\nf(x) = 4x³ − 2x² + 5x − 1.\nf'(x) = 12x² − 4x + 5.\n\n**Niet differentiabel**:\n• |x| (absoluut waarde) — knik op x=0.\n• 1/x op x=0 (singulariteit, divergeert).\n• Stapfunctie op sprong-plek.\n\n**Hogere afgeleiden**:\n• f''(x) = afgeleide van f'(x) = tweede afgeleide.\n• f''(x) = krommingsmaat:\n  - f''(x) > 0: bolling naar boven (concaaf op).\n  - f''(x) < 0: bolling naar beneden (convex).\n  - f''(x) = 0: buigpunt (bolling wisselt).\n\n**Voorbeeld**:\nf(x) = x³ → f'(x) = 3x² → f''(x) = 6x.\nBij x=0: f'(0)=0 (horizontale raaklijn), f''(0)=0 (buigpunt → niet top of dal!).\n\n**Veelgemaakte fout**: f'(x) = 0 NIET altijd top/dal — kan ook buigpunt zijn met horizontale raaklijn (zoals x³).",
+      "**Basis-regels**:\n\n**1. Macht-regel**:\n• (x^n)' = **n · x^(n-1)**.\n• (x³)' = 3x².\n• (x⁵)' = 5x⁴.\n• Werkt voor alle reële n (ook negatief + breuk):\n  - (x⁻¹)' = −1 · x⁻² = −1/x².\n  - (√x)' = (x^½)' = ½·x^(−½) = 1/(2√x).\n\n**2. Constante factor**:\n• (c · f(x))' = c · f'(x).\n• (5x³)' = 5 · 3x² = 15x².\n\n**3. Som- + verschil-regel**:\n• (f + g)' = f' + g'.\n• (f − g)' = f' − g'.\n• (x² + 3x − 7)' = 2x + 3 − 0 = 2x + 3.\n\n**4. Bijzondere functies**:\n• (e^x)' = e^x (= 'magische' eigenschap exponentiële functie).\n• (a^x)' = a^x · ln(a).\n• (ln x)' = 1/x.\n• (sin x)' = cos x.\n• (cos x)' = −sin x.\n• (tan x)' = 1/cos² x = sec² x.\n\n**Stap-voor-stap voor polynoom**:\nf(x) = 4x³ − 2x² + 5x − 1.\nf'(x) = 12x² − 4x + 5.\n\n**Niet differentiabel**:\n• |x| (absolute waarde) — knik op x=0.\n• 1/x op x=0 (singulariteit, divergeert).\n• Stapfunctie op sprong-plek.\n\n**Hogere afgeleiden**:\n• f''(x) = afgeleide van f'(x) = tweede afgeleide.\n• f''(x) = krommingsmaat:\n  - f''(x) > 0: bolling naar boven (concaaf op).\n  - f''(x) < 0: bolling naar beneden (concaaf neer).\n  - f''(x) = 0: buigpunt (bolling wisselt).\n\n**Voorbeeld**:\nf(x) = x³ → f'(x) = 3x² → f''(x) = 6x.\nBij x=0: f'(0)=0 (horizontale raaklijn), f''(0)=0 (buigpunt → niet top of dal!).\n\n**Veelgemaakte fout**: f'(x) = 0 NIET altijd top/dal — kan ook buigpunt zijn met horizontale raaklijn (zoals x³).",
     checks: [
       {
         q: "**Afgeleide van f(x) = 3x⁴ − 2x²**:",
@@ -114,7 +114,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is f'.", "Niet — dat is f'''.", "Niet — integraal."],
         uitlegPad: {
           stappen: [
-            { titel: "Tweemaal differentieren", tekst: "f(x) = x⁴.\nf'(x) = 4x³.\nf''(x) = 12x².\n3e afgeleide = 24x. Etc." },
+            { titel: "Tweemaal differentiëren", tekst: "f(x) = x⁴.\nf'(x) = 4x³.\nf''(x) = 12x².\n3e afgeleide = 24x. Etc." },
           ],
           niveaus: { basis: "12x².", simpeler: "Twee keer afleiden.", nogSimpeler: "12x²" },
         },
@@ -138,7 +138,7 @@ const steps = [
           "Daalt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is f''<0.", "Niet — alleen daling = f'<0.", "Niet — verband met f', niet f''."],
+        wrongHints: [null, "Niet — dat is f''<0.", "Niet — constant betekent f' = 0.", "Niet — verband met f', niet f''."],
         uitlegPad: {
           stappen: [
             { titel: "Krommingsmaat", tekst: "f''(x) > 0: helling stijgt → grafiek 'lacht' (zoals x²). f''(x) < 0: helling daalt → 'frons' (zoals −x²). Buigpunt: f''=0 + wisselt teken." },
@@ -183,7 +183,7 @@ const steps = [
         q: "Afgeleide van **y = e^(2x)**:",
         options: ["2e^(2x)", "e^(2x)", "e^(2)", "2x·e^(2x)"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet ketting-faktor.", "Niet — geen functie.", "Niet — geen productregel."],
+        wrongHints: [null, "Niet — vergeet kettingfactor.", "Niet — geen functie.", "Niet — geen productregel."],
         uitlegPad: {
           stappen: [{ titel: "e^u-regel met u=2x", tekst: "y = e^(2x). u=2x, u'=2. y' = e^u · u' = **2·e^(2x)**." }],
           theorie: "Algemeen: (e^(kx))' = k·e^(kx).",
@@ -194,7 +194,7 @@ const steps = [
         q: "Afgeleide van **ln(x²)**:",
         options: ["2/x", "1/x²", "2x", "ln(2x)"],
         answer: 0,
-        wrongHints: [null, "Niet — verkeerd afgeleide.", "Niet — vergeet ketting.", "Onzin."],
+        wrongHints: [null, "Niet — verkeerde afgeleide.", "Niet — vergeet ketting.", "Onzin."],
         uitlegPad: {
           stappen: [
             { titel: "Kettingregel met ln", tekst: "u=x², u'=2x. y = ln(u). y' = (1/u) · u' = (1/x²) · 2x = **2/x**." },
@@ -220,7 +220,7 @@ const steps = [
   {
     title: "Raaklijn + extremen + optimalisatie",
     explanation:
-      "**Raaklijn** aan grafiek y = f(x) op punt (a, f(a)):\n**$y = f'(a) \\cdot (x - a) + f(a)$**\n\nIn woorden: lijn door (a, f(a)) met helling f'(a).\n\n**Voorbeeld**: raaklijn aan f(x) = x² op punt (3, 9).\nf'(x) = 2x, dus f'(3) = 6.\nRaaklijn: y = 6(x−3) + 9 = 6x − 18 + 9 = **6x − 9**.\n\n**Lokale extremen** (top/dal):\nVoorwaarde: **f'(x) = 0**.\nMaar f'(x)=0 is NIET voldoende — kan ook buigpunt zijn (zie eerder x³).\n\n**Test toppen/dalen**:\n• **1e-afgeleidetoets**: kijk teken van f' rondom x:\n  - f' wisselt + → − : top (maximum).\n  - f' wisselt − → + : dal (minimum).\n  - f' wisselt niet: buigpunt.\n• **2e-afgeleidetoets**:\n  - f''(x) > 0 in punt met f'(x)=0 → dal.\n  - f''(x) < 0 in punt met f'(x)=0 → top.\n  - f''(x) = 0 → onbeslist (gebruik 1e-afgeleidetoets).\n\n**Voorbeeld**: f(x) = x³ − 3x.\nf'(x) = 3x² − 3 = 3(x²−1) = 3(x−1)(x+1).\nf'(x) = 0 op x = 1 en x = −1.\nf''(x) = 6x.\nf''(1) = 6 > 0 → dal op (1, f(1)) = (1, −2).\nf''(−1) = −6 < 0 → top op (−1, f(−1)) = (−1, 2).\n\n**Globale extremen** op interval [a, b]:\n1. Vind alle x waar f'(x) = 0 in (a, b) → kandidaat-punten.\n2. Vergelijk f-waarden in kandidaat-punten + endpoints f(a) + f(b).\n3. Grootste = globaal max, kleinste = globaal min.\n\n**Optimalisatie-problemen** (CSE-classic):\nVoorbeeld: maximaal oppervlak van rechthoek met omtrek 20.\n• Omtrek 2L + 2W = 20 → L + W = 10 → W = 10 − L.\n• Oppervlak A(L) = L · W = L(10−L) = 10L − L².\n• dA/dL = 10 − 2L = 0 → L = 5.\n• d²A/dL² = −2 < 0 → max.\n• Conclusie: vierkant van 5×5 = 25 (= grootste oppervlak bij vaste omtrek).\n\n**Toepassingen**:\n• Economie: marginale opbrengst = marginale kosten voor max winst.\n• Natuurkunde: minimale tijd, max snelheid, optimale hoek.\n• Bouw: minimale materiaal voor gewenste sterkte.",
+      "**Raaklijn** aan grafiek y = f(x) op punt (a, f(a)):\n**$y = f'(a) \\cdot (x - a) + f(a)$**\n\nIn woorden: lijn door (a, f(a)) met helling f'(a).\n\n**Voorbeeld**: raaklijn aan f(x) = x² op punt (3, 9).\nf'(x) = 2x, dus f'(3) = 6.\nRaaklijn: y = 6(x−3) + 9 = 6x − 18 + 9 = **6x − 9**.\n\n**Lokale extremen** (top/dal):\nVoorwaarde: **f'(x) = 0**.\nMaar f'(x)=0 is NIET voldoende — kan ook buigpunt zijn (zie eerder x³).\n\n**Test toppen/dalen**:\n• **1e-afgeleidetoets**: kijk teken van f' rondom x:\n  - f' wisselt + → − : top (maximum).\n  - f' wisselt − → + : dal (minimum).\n  - f' wisselt niet: buigpunt.\n• **2e-afgeleidetoets**:\n  - f''(x) > 0 in punt met f'(x)=0 → dal.\n  - f''(x) < 0 in punt met f'(x)=0 → top.\n  - f''(x) = 0 → onbeslist (gebruik 1e-afgeleidetoets).\n\n**Voorbeeld**: f(x) = x³ − 3x.\nf'(x) = 3x² − 3 = 3(x²−1) = 3(x−1)(x+1).\nf'(x) = 0 op x = 1 en x = −1.\nf''(x) = 6x.\nf''(1) = 6 > 0 → dal op (1, f(1)) = (1, −2).\nf''(−1) = −6 < 0 → top op (−1, f(−1)) = (−1, 2).\n\n**Globale extremen** op interval [a, b]:\n1. Vind alle x waar f'(x) = 0 in (a, b) → kandidaat-punten.\n2. Vergelijk f-waarden in kandidaat-punten + eindpunten f(a) + f(b).\n3. Grootste = globaal max, kleinste = globaal min.\n\n**Optimalisatie-problemen** (CSE-klassieker):\nVoorbeeld: maximaal oppervlak van rechthoek met omtrek 20.\n• Omtrek 2L + 2W = 20 → L + W = 10 → W = 10 − L.\n• Oppervlak A(L) = L · W = L(10−L) = 10L − L².\n• dA/dL = 10 − 2L = 0 → L = 5.\n• d²A/dL² = −2 < 0 → max.\n• Conclusie: vierkant van 5×5 = 25 (= grootste oppervlak bij vaste omtrek).\n\n**Toepassingen**:\n• Economie: marginale opbrengst = marginale kosten voor max winst.\n• Natuurkunde: minimale tijd, max snelheid, optimale hoek.\n• Bouw: minimaal materiaal voor gewenste sterkte.",
     checks: [
       {
         q: "Raaklijn aan f(x) = x² in punt (2, 4). f'(x) = 2x.",
@@ -268,7 +268,7 @@ const steps = [
           stappen: [
             { titel: "Optimalisatie", tekst: "2L + 2W = 12 → W = 6 − L. A(L) = L(6−L) = 6L − L².\nA'(L) = 6 − 2L = 0 → L = **3**. Dus 3×3-vierkant = 9. Bij vaste omtrek is vierkant altijd optimaal." },
           ],
-          theorie: "Algemener: vierkant is rechthoek met max opp/omtrek-verhouding. Cirkel is nog beter (max area per perimeter).",
+          theorie: "Algemener: vierkant is rechthoek met max opp/omtrek-verhouding. Cirkel is nog beter (max oppervlakte per omtrek).",
           niveaus: { basis: "L=3.", simpeler: "Vierkant geeft max.", nogSimpeler: "3" },
         },
       },
@@ -289,7 +289,7 @@ const steps = [
   {
     title: "Eindopdracht — toepassingen + bijzondere functies",
     explanation:
-      "**Examen-typische toepassingen**:\n\n**1. Snelheid + versnelling** (natuurkunde):\n• x(t) = positie. v(t) = x'(t). a(t) = v'(t) = x''(t).\n• Vrije val: x(t) = ½g·t² → v(t) = g·t → a(t) = g (constant).\n• Harmonische trilling: x(t) = A·sin(ωt) → v(t) = Aω·cos(ωt) → a(t) = −Aω²·sin(ωt) = −ω²·x(t).\n\n**2. Marginale economie**:\n• Totale kosten K(q) → marginale kosten = K'(q).\n• Totale opbrengst R(q) → marginale opbrengst = R'(q).\n• **Maximale winst**: marginale opbrengst = marginale kosten → R'(q) = K'(q).\n\n**3. Bevolkings-groei + verval**:\n• N(t) = N₀ · e^(rt) (exponentieel).\n• N'(t) = r · N(t) → groeisnelheid evenredig met huidige populatie.\n• Radioactief verval: N(t) = N₀ · e^(−λt). N'(t) = −λ·N(t).\n\n**4. Bewegingsgrafieken interpreteren**:\n• Stijgen = stijgende functie.\n• Top/dal = punt van f'=0.\n• Buigpunt = punt waar bolling wisselt.\n• Concaaf op (lacht) = f''>0.\n\n**5. Newton-Raphson** (VWO, numerieke methode):\nVind nulpunt van f door iteratie: x_{n+1} = x_n − f(x_n)/f'(x_n).\nConvergeert snel als f' niet 0 in buurt.\n\n**Bijzondere functies** in toepassingen:\n• e^x (Euler-getal): groei + verval, normale verdeling.\n• ln x: tijds-schaal groei.\n• sin/cos: trillingen, golven, wisselstroom.\n• tan: hellingsmaat.\n\n**Logaritmische schalen**:\n• Geluid (decibel), aardbeving (Richter), pH, biljardsterkte (apparent magnitude) — allemaal logaritmisch want fenomenen overspannen vele orden van grootte.\n\n**VWO-onderwerp: differentiaalvergelijkingen**:\nVergelijking met onbekende functie + zijn afgeleide. Bv. y' = k·y → y = C·e^(kx) (groei/verval). Klassiek toepassing voor populatie + radioactief verval + opwarming koffie.",
+      "**Examen-typische toepassingen**:\n\n**1. Snelheid + versnelling** (natuurkunde):\n• x(t) = positie. v(t) = x'(t). a(t) = v'(t) = x''(t).\n• Vrije val: x(t) = ½g·t² → v(t) = g·t → a(t) = g (constant).\n• Harmonische trilling: x(t) = A·sin(ωt) → v(t) = Aω·cos(ωt) → a(t) = −Aω²·sin(ωt) = −ω²·x(t).\n\n**2. Marginale economie**:\n• Totale kosten K(q) → marginale kosten = K'(q).\n• Totale opbrengst R(q) → marginale opbrengst = R'(q).\n• **Maximale winst**: marginale opbrengst = marginale kosten → R'(q) = K'(q).\n\n**3. Bevolkings-groei + verval**:\n• N(t) = N₀ · e^(rt) (exponentieel).\n• N'(t) = r · N(t) → groeisnelheid evenredig met huidige populatie.\n• Radioactief verval: N(t) = N₀ · e^(−λt). N'(t) = −λ·N(t).\n\n**4. Bewegingsgrafieken interpreteren**:\n• Stijgen = stijgende functie.\n• Top/dal = punt van f'=0.\n• Buigpunt = punt waar bolling wisselt.\n• Concaaf op (lacht) = f''>0.\n\n**5. Newton-Raphson** (VWO, numerieke methode):\nVind nulpunt van f door iteratie: x_{n+1} = x_n − f(x_n)/f'(x_n).\nConvergeert snel als f' niet 0 in buurt.\n\n**Bijzondere functies** in toepassingen:\n• e^x (Euler-getal): groei + verval, normale verdeling.\n• ln x: tijds-schaal groei.\n• sin/cos: trillingen, golven, wisselstroom.\n• tan: hellingsmaat.\n\n**Logaritmische schalen**:\n• Geluid (decibel), aardbeving (Richter), pH, helderheid van sterren (magnitude) — allemaal logaritmisch want fenomenen overspannen vele orden van grootte.\n\n**VWO-onderwerp: differentiaalvergelijkingen**:\nVergelijking met onbekende functie + zijn afgeleide. Bv. y' = k·y → y = C·e^(kx) (groei/verval). Klassieke toepassing voor populatie + radioactief verval + opwarming koffie.",
     checks: [
       {
         q: "Een bal valt vrij met x(t) = 5t² (in meters, t in s). Snelheid bij t = 2 s?",
@@ -315,9 +315,9 @@ const steps = [
         wrongHints: [null, "Niet — winst niet nul, juist max.", "Niet — wel productie.", "Wel info."],
         uitlegPad: {
           stappen: [
-            { titel: "1e-orde voorwaarde", tekst: "Winst W(q) = R(q) − K(q). W'(q) = R'(q) − K'(q) = 0 voor max → R' = K'. Onder dat punt is R' > K' (meer produceren = winst), boven punt R' < K' (verlies). Vandaar 'maximale winst-punt'." },
+            { titel: "1e-orde voorwaarde", tekst: "Winst W(q) = R(q) − K(q). W'(q) = R'(q) − K'(q) = 0 voor max → R' = K'. Onder dat punt is R' > K' (meer produceren = winst), boven punt R' < K' (winst daalt). Vandaar 'maximale winst-punt'." },
           ],
-          niveaus: { basis: "R'=K' = optimum.", simpeler: "Extra eenheid = breakeven.", nogSimpeler: "R'=K'" },
+          niveaus: { basis: "R'=K' = optimum.", simpeler: "Extra eenheid levert evenveel op als ze kost.", nogSimpeler: "R'=K'" },
         },
       },
       {
@@ -332,7 +332,7 @@ const steps = [
         wrongHints: [null, "Niet — populatie zelf.", "Niet — relatieve groei.", "Niet — alleen factor."],
         uitlegPad: {
           stappen: [
-            { titel: "dN/dt bij t=0", tekst: "N'(t) = 1000 · 0,02 · e^(0,02t). Bij t=0: N'(0) = 1000 · 0,02 · 1 = **20** mensen/jaar. Per jaar groeit populatie initial met 2%." },
+            { titel: "dN/dt bij t=0", tekst: "N'(t) = 1000 · 0,02 · e^(0,02t). Bij t=0: N'(0) = 1000 · 0,02 · 1 = **20** mensen/jaar. Per jaar groeit populatie aanvankelijk met 2%." },
           ],
           niveaus: { basis: "20/jaar.", simpeler: "2% van 1000 = 20.", nogSimpeler: "20" },
         },

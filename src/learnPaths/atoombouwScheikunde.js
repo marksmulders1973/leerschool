@@ -89,9 +89,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Zuurstof staat op plek 8 in het periodiek systeem en heeft dus 8 protonen — klopt dat met 6?", "Waterstof is het allereerste, lichtste element met maar 1 proton — past dat bij 6?", "IJzer is een zwaar metaal met atoomnummer 26 — heeft dat er maar 6?"],
         uitlegPad: {
-          stappen: [{ titel: "6 protonen = koolstof", tekst: "Aantal protonen = atoomnummer = welk element. 6" }],
+          stappen: [{ titel: "6 protonen = koolstof", tekst: "Aantal protonen = atoomnummer = welk element. 6 protonen = koolstof." }],
           woorden: [{ woord: "atoomnummer Z", uitleg: "= aantal protonen" }],
-          theorie: "Elk element heeft unieke aantal protonen.",
+          theorie: "Elk element heeft een uniek aantal protonen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "H=1, O=8, Na=11, C=6, Fe=26" }],
           basiskennis: [{ onderwerp: "in periodiek systeem", uitleg: "elementen op Z geordend" }],
           niveaus: { basis: "Koolstof.", simpeler: "6", nogSimpeler: "6 = C. → C." },
@@ -115,7 +115,7 @@ const steps = [
   },
   {
     title: "Massagetal & isotopen",
-    explanation: "**Massagetal (A)** = aantal **protonen + neutronen** in de kern. Dit is bijna alle massa van het atoom (elektronen zijn 1800× lichter).\n\n• Atoomnummer (Z) = aantal protonen.\n• Massagetal (A) = protonen + neutronen.\n• Aantal neutronen = A − Z.\n\n**Voorbeeld**: koolstof-12 (¹²C):\n• Z = 6 (protonen, want koolstof)\n• A = 12\n• Neutronen = 12 − 6 = 6.\n\n**Isotopen**: atomen van hetzelfde element met **verschillend aantal neutronen**.\n• ¹²C (gewone koolstof, 6n) — meeste in de natuur.\n• ¹⁴C (radioactief, 8n) — wordt gebruikt voor C14-datering van fossielen.\n\nIsotopen hebben hetzelfde aantal protonen → zelfde element → bijna gelijk gedrag, alleen iets ander gewicht.",
+    explanation: "**Massagetal (A)** = aantal **protonen + neutronen** in de kern. Dit is bijna alle massa van het atoom (elektronen zijn 1800× lichter).\n\n• Atoomnummer (Z) = aantal protonen.\n• Massagetal (A) = protonen + neutronen.\n• Aantal neutronen = A − Z.\n\n**Voorbeeld**: koolstof-12 (¹²C):\n• Z = 6 (protonen, want koolstof)\n• A = 12\n• Neutronen = 12 − 6 = 6.\n\n**Isotopen**: atomen van hetzelfde element met **verschillend aantal neutronen**.\n• ¹²C (gewone koolstof, 6n) — meeste in de natuur.\n• ¹⁴C (radioactief, 8n) — wordt gebruikt voor C14-datering van oude resten van planten en dieren (tot ~50.000 jaar).\n\nIsotopen hebben hetzelfde aantal protonen → zelfde element → bijna gelijk gedrag, alleen iets ander gewicht.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="12" font-family="Arial" font-weight="bold">¹²C en ¹⁴C — beide koolstof</text>
 <circle cx="80" cy="100" r="35" fill="${COLORS.paper}" stroke="${COLORS.text}" stroke-width="1"/>
@@ -166,13 +166,13 @@ ${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].slice(0, 14).map((_, i) => {
           "Nieuwe stoffen",
         ],
         answer: 0,
-        wrongHints: [null, "Twee verschillende elementen = verschillend aantal protonen.", "Atomen zonder elektronen heten ionen (en dat geldt niet altijd voor isotopen).", "Geen nieuwe stof — zelfde element."],
+        wrongHints: [null, "Twee verschillende elementen = verschillend aantal protonen.", "Een atoom dat elektronen heeft afgegeven of opgenomen heet een ion — dat is iets anders dan een isotoop.", "Geen nieuwe stof — zelfde element."],
         uitlegPad: {
           stappen: [{ titel: "Zelfde Z, andere A", tekst: "Isotopen: hetzelfde element, ander aantal neutronen." }],
           woorden: [{ woord: "isotoop", uitleg: "= variant van element" }],
           theorie: "Zelfde aantal protonen = zelfde element, verschil zit in neutronen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "¹²C (6p+6n) vs ¹⁴C (6p+8n, radioactief)" }],
-          basiskennis: [{ onderwerp: "gebruik", uitleg: "¹⁴C-datering van fossielen" }],
+          basiskennis: [{ onderwerp: "gebruik", uitleg: "¹⁴C-datering van oude organische resten" }],
           niveaus: { basis: "Andere neutronen.", simpeler: "Zelfde Z, andere A.", nogSimpeler: "Isotopen." },
         },
       },
@@ -258,7 +258,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           "Aantal schillen",
         ],
         answer: 0,
-        wrongHints: [null, "Elementen hebben juist verschillende aantal protonen.", "Massa verschilt zeker.", "Aantal schillen = periode (rij), niet groep."],
+        wrongHints: [null, "Elementen hebben juist een verschillend aantal protonen.", "Massa verschilt zeker.", "Aantal schillen = periode (rij), niet groep."],
         uitlegPad: {
           stappen: [{ titel: "Groep = kolom = buitenste e-", tekst: "Elementen in dezelfde groep hebben hetzelfde aantal buitenste elektronen → vergelijkbaar gedrag." }],
           woorden: [{ woord: "groep", uitleg: "kolom in periodiek systeem" }],
@@ -272,7 +272,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Welke groep zijn de **edelgassen**?",
         options: ["Groep 18", "Groep 1", "Groep 7", "Groep 17"],
         answer: 0,
-        wrongHints: [null, "Groep 1 = alkalimetalen.", "In oude indeling stonden edelgassen wel in 'groep VIII A', maar nu groep 18.", "Groep 17 = halogenen."],
+        wrongHints: [null, "Groep 1 = alkalimetalen.", "In de oude indeling was groep 7 (VII A) de groep van de halogenen; edelgassen stonden in groep 8 (VIII A), nu groep 18.", "Groep 17 = halogenen."],
         uitlegPad: {
           stappen: [{ titel: "Edelgassen = groep 18", tekst: "Laatste kolom rechts: He, Ne, Ar, Kr, Xe, Rn." }],
           woorden: [{ woord: "groep 18", uitleg: "edelgassen, niet-reactief" }],
@@ -286,7 +286,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
   },
   {
     title: "Metalen vs niet-metalen",
-    explanation: "Het verschil is groot, en bepaalt veel van hoe een element gedraagt.\n\n**METALEN** (links + midden tabel)\n• Glanzend en stevig.\n• Geleiden warmte en elektriciteit.\n• Vaak vast bij kamertemperatuur (uitzondering: kwik = vloeibaar).\n• Geven gemakkelijk elektronen af → vormen positieve ionen.\n• Voorbeelden: ijzer (Fe), koper (Cu), goud (Au), aluminium (Al), natrium (Na).\n\n**NIET-METALEN** (rechts in tabel, rond zuurstof)\n• Vaak gas of zacht.\n• Geleiden geen elektriciteit (uitzondering: koolstof in grafiet).\n• Geven of nemen elektronen op → kunnen ook negatief geladen worden.\n• Voorbeelden: zuurstof (O), stikstof (N), koolstof (C), zwavel (S), chloor (Cl).\n\n**HALFMETALEN** zijn het tussending — silicium (Si) wordt in zonnepanelen + chips gebruikt.",
+    explanation: "Het verschil is groot, en bepaalt veel van hoe een element zich gedraagt.\n\n**METALEN** (links + midden tabel)\n• Glanzend en stevig.\n• Geleiden warmte en elektriciteit.\n• Vaak vast bij kamertemperatuur (uitzondering: kwik = vloeibaar).\n• Geven gemakkelijk elektronen af → vormen positieve ionen.\n• Voorbeelden: ijzer (Fe), koper (Cu), goud (Au), aluminium (Al), natrium (Na).\n\n**NIET-METALEN** (rechts in tabel, rond zuurstof)\n• Vaak gas of zacht.\n• Geleiden geen elektriciteit (uitzondering: koolstof in grafiet).\n• Nemen vaak elektronen op → kunnen negatief geladen worden.\n• Voorbeelden: zuurstof (O), stikstof (N), koolstof (C), zwavel (S), chloor (Cl).\n\n**HALFMETALEN** zijn het tussending — silicium (Si) wordt in zonnepanelen + chips gebruikt.",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="40" width="120" height="100" rx="10" fill="${COLORS.metal}" opacity="0.20" stroke="${COLORS.metal}" stroke-width="2"/>
 <text x="80" y="65" text-anchor="middle" fill="${COLORS.metal}" font-size="13" font-family="Arial" font-weight="bold">METALEN</text>
@@ -309,7 +309,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           "Geleidt geen warmte",
         ],
         answer: 0,
-        wrongHints: [null, "Metalen zijn meestal vast.", "Alleen kwik is vloeibaar.", "Metalen geleiden juist goed warmte."],
+        wrongHints: [null, "Metalen zijn meestal vast.", "Alleen kwik is vloeibaar.", "Metalen geleiden warmte juist goed."],
         uitlegPad: {
           stappen: [{ titel: "Metaal = geleider", tekst: "Metalen geleiden elektriciteit en warmte goed (vrije elektronen)." }],
           woorden: [{ woord: "metaal", uitleg: "glanzend, geleidend, vast (meestal)" }],
@@ -390,7 +390,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
   // C
   {
     title: "Moleculen — atomen die binden",
-    explanation: "Een **molecuul** is een groep atomen die met elkaar verbonden zijn door **chemische bindingen**.\n\nEnkele bekende moleculen:\n• **H₂O** — water (2 waterstof + 1 zuurstof).\n• **O₂** — zuurstofgas (2 zuurstof).\n• **CO₂** — koolstofdioxide (1 koolstof + 2 zuurstof).\n• **NH₃** — ammoniak (1 stikstof + 3 waterstof).\n• **CH₄** — methaan (1 koolstof + 4 waterstof).\n• **C₆H₁₂O₆** — glucose (suiker).\n\n**Hoe lees je een formule?**\n• De **letter** is het symbool van het element.\n• Het **kleine getal** rechts is het aantal atomen.\n• Geen getal = 1 atoom.\n\nVoorbeeld H₂SO₄ (zwavelzuur):\n• 2 waterstof (H)\n• 1 zwavel (S)\n• 4 zuurstof (O)\n\n**Belangrijk**: in een molecuul zitten atomen door middel van **gedeelde elektronen** (covalente binding) — meestal niet als ionen.",
+    explanation: "Een **molecuul** is een groep atomen die met elkaar verbonden zijn door **chemische bindingen**.\n\nEnkele bekende moleculen:\n• **H₂O** — water (2 waterstof + 1 zuurstof).\n• **O₂** — zuurstofgas (2 zuurstof).\n• **CO₂** — koolstofdioxide (1 koolstof + 2 zuurstof).\n• **NH₃** — ammoniak (1 stikstof + 3 waterstof).\n• **CH₄** — methaan (1 koolstof + 4 waterstof).\n• **C₆H₁₂O₆** — glucose (suiker).\n\n**Hoe lees je een formule?**\n• De **letter** is het symbool van het element.\n• Het **kleine getal** rechts is het aantal atomen.\n• Geen getal = 1 atoom.\n\nVoorbeeld H₂SO₄ (zwavelzuur):\n• 2 waterstof (H)\n• 1 zwavel (S)\n• 4 zuurstof (O)\n\n**Belangrijk**: in een molecuul zitten atomen aan elkaar vast door middel van **gedeelde elektronen** (covalente binding) — meestal niet als ionen.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">H₂O — water</text>
 <circle cx="150" cy="90" r="22" fill="${COLORS.alt}" opacity="0.6"/>
@@ -412,7 +412,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         uitlegPad: {
           stappen: [{ titel: "CO₂ = 1+2 = 3 atomen", tekst: "1 koolstof + 2 zuurstof = 3 atomen totaal." }],
           woorden: [{ woord: "molecuul-formule", uitleg: "klein getal = aantal atomen" }],
-          theorie: "Geen getal = 1. Klein getal achteraf = aantal atomen.",
+          theorie: "Geen getal = 1. Klein getal erachter = aantal atomen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "H₂O = 2H + 1O = 3 atomen" }],
           basiskennis: [{ onderwerp: "tellen", uitleg: "ga letter voor letter af" }],
           niveaus: { basis: "3.", simpeler: "1+2 = 3.", nogSimpeler: "1+2 = 3. → 3." },
@@ -474,7 +474,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           "Niets",
         ],
         answer: 0,
-        wrongHints: [null, "Rook bestaat uit deeltjes — bij volledig verbranding krijg je CO₂ + H₂O.", "Goud kan niet zomaar ontstaan.", "Er gebeurt zeker iets — verbranding."],
+        wrongHints: [null, "Rook bestaat uit deeltjes — bij volledige verbranding krijg je CO₂ + H₂O.", "Goud kan niet zomaar ontstaan.", "Er gebeurt zeker iets — verbranding."],
         uitlegPad: {
           stappen: [{ titel: "Verbranding methaan", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O + warmte." }],
           woorden: [{ woord: "verbranding", uitleg: "stof + O₂ + warmte" }],
@@ -568,15 +568,15 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         wrongHints: [null, "Niet — buitenste laag = elektronen-wolk.", "Niet — elektronen zitten BUITEN de kern.", "Niet — kern bestaat zeker."],
         uitlegPad: {
           stappen: [
-            { titel: "Atoom-structuur", tekst: "Een atoom bestaat uit **3 onderdelen**:\n• **Proton** (+) — in kern, positief geladen\n• **Neutron** (0) — in kern, geen lading\n• **Electron** (−) — buiten kern, negatief geladen\n\n**Kern** = centrum waarin protonen + neutronen zitten. Heel klein (1/10.000 van atoom-doorsnee) maar **99,9% van massa**." },
-            { titel: "Voorbeeld koolstof (C)", tekst: "Koolstof-atoom (C-12):\n• **6 protonen** in kern\n• **6 neutronen** in kern\n• **6 elektronen** in 2 schalen rond kern\n• Atoomnummer = 6 (aantal protonen)\n• Massagetal = 12 (protonen + neutronen)" },
+            { titel: "Atoom-structuur", tekst: "Een atoom bestaat uit **3 onderdelen**:\n• **Proton** (+) — in kern, positief geladen\n• **Neutron** (0) — in kern, geen lading\n• **Elektron** (−) — buiten kern, negatief geladen\n\n**Kern** = centrum waarin protonen + neutronen zitten. Heel klein (1/10.000 van atoom-doorsnee) maar **99,9% van massa**." },
+            { titel: "Voorbeeld koolstof (C)", tekst: "Koolstof-atoom (C-12):\n• **6 protonen** in kern\n• **6 neutronen** in kern\n• **6 elektronen** in 2 schillen rond kern\n• Atoomnummer = 6 (aantal protonen)\n• Massagetal = 12 (protonen + neutronen)" },
             { titel: "Toets-feit: Rutherford-experiment 1911", tekst: "**Ernest Rutherford** (1911) ontdekte de **kern** met beroemd experiment:\n• Schoot positieve deeltjes op dunne goudfolie\n• Verwachtte: rechtdoor (atoom = pudding)\n• Vond: meeste rechtdoor, MAAR enkele kaatsten terug\n• Conclusie: atoom heeft **dichte positieve kern** + lege ruimte\n\nDit gaf modern atoom-model. Voor Rutherford = pudding-model (Thomson). Na = planeet-model (Bohr)." },
           ],
           woorden: [
             { woord: "atoomkern", uitleg: "Centrum atoom met protonen + neutronen. Klein maar zwaar." },
             { woord: "proton", uitleg: "Positief geladen deeltje in kern." },
             { woord: "neutron", uitleg: "Ongeladen deeltje in kern." },
-            { woord: "elektron", uitleg: "Negatief geladen deeltje buiten kern (in schalen)." },
+            { woord: "elektron", uitleg: "Negatief geladen deeltje buiten kern (in schillen)." },
           ],
           theorie: "Atoom-structuur-feiten:\n• Kern = 99,9% massa\n• Doorsnee atoom: ~0,1 nanometer\n• Doorsnee kern: ~0,00001 nanometer (10⁻⁵ nm)\n• Vergelijking: als kern voetbal is, atoom = voetbalstadion\n• Lege ruimte: bijna 100% van atoom is leeg",
           voorbeelden: [
@@ -594,7 +594,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         uitlegPad: {
           stappen: [
             { titel: "Wat is periodiek systeem?", tekst: "Het **periodiek systeem der elementen** is een **tabel** met alle bekende **chemische elementen** (atomen) gerangschikt op:\n• **Rijen (periodes)** — toenemend atoomnummer\n• **Kolommen (groepen)** — gelijkende eigenschappen\n\nIn totaal ~**118 elementen** (2024). Eerste 92 in natuur, rest in lab gemaakt." },
-            { titel: "Geschiedenis: Mendeleev 1869", tekst: "**Dmitri Mendeleev** (Russisch chemist, 1834-1907) bedacht in **1869** het systeem. Geniaal aan zijn werk: hij **liet lege plekken open** voor onbekende elementen + voorspelde hun eigenschappen.\n\nVoorspellingen klopten later (Gallium 1875, Germanium 1886). Bewees dat de logica klopte." },
+            { titel: "Geschiedenis: Mendeleev 1869", tekst: "**Dmitri Mendeleev** (Russisch scheikundige, 1834-1907) bedacht in **1869** het systeem. Geniaal aan zijn werk: hij **liet lege plekken open** voor onbekende elementen + voorspelde hun eigenschappen.\n\nVoorspellingen klopten later (Gallium 1875, Germanium 1886). Bewees dat de logica klopte." },
             { titel: "Toets-feit: belangrijke groepen", tekst: "**Eerste kolom**: alkalimetalen (Na, K) — reactief, glanzend\n**Laatste kolom**: edelgassen (He, Ne, Ar) — niet reactief\n**Tussen**: metalen (Fe, Cu, Au, Ag)\n**Rechts**: niet-metalen (C, N, O, S)\n\nElk element heeft **symbool** (1-2 letters):\n• H = Waterstof\n• O = Zuurstof\n• C = Koolstof\n• Fe = IJzer (van 'ferrum')\n• Au = Goud (van 'aurum')" },
           ],
           woorden: [
@@ -604,7 +604,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           ],
           theorie: "Belangrijke elementen voor de toets:\n• H (1) - waterstof\n• C (6) - koolstof (basis leven)\n• N (7) - stikstof (78% lucht)\n• O (8) - zuurstof (21% lucht)\n• Na (11) - natrium (zout)\n• Cl (17) - chloor\n• Fe (26) - ijzer\n• Cu (29) - koper\n• Ag (47) - zilver\n• Au (79) - goud",
           voorbeelden: [
-            { type: "feit", tekst: "Element 117 (Tennessine) werd in 2010 gemaakt + bestond slechts ~50 milliseconden voor het vervalde. Moeilijker maken hoe verder je gaat." },
+            { type: "feit", tekst: "Element 117 (Tennessine) werd in 2010 gemaakt + bestond slechts ~50 milliseconden voordat het verviel. Hoe zwaarder het element, hoe moeilijker te maken." },
           ],
           basiskennis: [{ onderwerp: "VMBO-stof", uitleg: "Periodiek systeem inzicht = examen-stof VMBO scheikunde. Mendeleev + werking onthouden." }],
           niveaus: { basis: "Tabel elementen.", simpeler: "Periodiek systeem = tabel met alle ~118 chemische elementen, gerangschikt op atoomnummer + eigenschappen. Mendeleev 1869.", nogSimpeler: "Element-tabel" },
@@ -617,9 +617,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         wrongHints: [null, "Niet — isotopen ≠ groot/klein per se.", "Niet — neutronen zijn neutraal.", "Niet — wel echt fenomeen."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is een isotoop?", tekst: "**Isotopen** zijn atomen van **HETZELFDE element** met **DIFFERENT aantal neutronen**. Aantal protonen blijft gelijk (anders ander element).\n\nVoorbeeld koolstof:\n• **C-12** (6 p + 6 n) — meest voorkomend, stabiel\n• **C-13** (6 p + 7 n) — stabiel, ~1% van koolstof\n• **C-14** (6 p + 8 n) — radioactief, vervalt over tijd" },
-            { titel: "Waarom interessant?", tekst: "**Radioactieve isotopen** vervallen + zenden straling uit. Toepassingen:\n• **Koolstof-14-datering**: bepalen ouderdom van organisch materiaal (mummies, fossielen). Halveringstijd 5.730 jaar.\n• **Medische diagnose**: bv jodium-131 voor schildklier-test\n• **Kernreactoren**: uranium-235 (splijtbaar)\n• **Bestraling**: kanker-therapie met cobalt-60" },
-            { titel: "Toets-feit: ouderdom-bepalen", tekst: "**Koolstof-14-datering** werkt zo:\n1. Levende dieren/planten nemen C-14 op (kleine deel)\n2. Bij dood stopt opname\n3. C-14 vervalt naar N-14 (halveringstijd 5.730 jaar)\n4. Meet hoeveel C-14 over is → bereken ouderdom\n\nBerucht voorbeeld: **Tutankhamun mummie** ~3.300 jaar oud. **Otzi de IJsman** (Alpen) ~5.300 jaar. Werkt voor 50.000 jaar max." },
+            { titel: "Wat is een isotoop?", tekst: "**Isotopen** zijn atomen van **HETZELFDE element** met **VERSCHILLEND aantal neutronen**. Aantal protonen blijft gelijk (anders ander element).\n\nVoorbeeld koolstof:\n• **C-12** (6 p + 6 n) — meest voorkomend, stabiel\n• **C-13** (6 p + 7 n) — stabiel, ~1% van koolstof\n• **C-14** (6 p + 8 n) — radioactief, vervalt over tijd" },
+            { titel: "Waarom interessant?", tekst: "**Radioactieve isotopen** vervallen + zenden straling uit. Toepassingen:\n• **Koolstof-14-datering**: bepalen ouderdom van organisch materiaal (mummies, botten, hout). Halveringstijd 5.730 jaar.\n• **Medische diagnose**: bv jodium-131 voor schildklier-test\n• **Kernreactoren**: uranium-235 (splijtbaar)\n• **Bestraling**: kanker-therapie met kobalt-60" },
+            { titel: "Toets-feit: ouderdom-bepalen", tekst: "**Koolstof-14-datering** werkt zo:\n1. Levende dieren/planten nemen C-14 op (klein deel)\n2. Bij dood stopt opname\n3. C-14 vervalt naar N-14 (halveringstijd 5.730 jaar)\n4. Meet hoeveel C-14 over is → bereken ouderdom\n\nBekend voorbeeld: **Tutankhamun mummie** ~3.300 jaar oud. **Ötzi de IJsman** (Alpen) ~5.300 jaar. Werkt voor 50.000 jaar max." },
           ],
           woorden: [
             { woord: "isotoop", uitleg: "Variant van element met ander aantal neutronen." },
@@ -643,7 +643,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       { q: "Hoeveel **elektronen** passen in de **eerste schil** (K)?", options: ["2","8","18","32"], answer: 0, wrongHints: [null, "Tweede schil.", "Derde schil.", "Vierde schil."] },
       { q: "Hoeveel **elektronen** passen in de **tweede schil** (L)?", options: ["8","2","18","32"], answer: 0, wrongHints: [null, "Eerste.", "Derde.", "Vierde."] },
       { q: "**Open vraag**: hoeveel protonen heeft koolstof (C)?", kind: "open", acceptedAnswers: ["6"], numericTolerance: 0, explanation: "Koolstof = C = atoomnummer 6 = 6 protonen." },
-      { q: "**Open vraag**: wat is de chemische naam voor H?", kind: "open", acceptedAnswers: ["waterstof", "hydrogen"], explanation: "H = waterstof (hydrogen in Engels), atoomnummer 1." },
+      { q: "**Open vraag**: wat is de chemische naam voor H?", kind: "open", acceptedAnswers: ["waterstof", "hydrogen"], explanation: "H = waterstof (hydrogen in het Engels), atoomnummer 1." },
     ],
   },
 ];

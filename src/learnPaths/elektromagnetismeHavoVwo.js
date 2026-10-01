@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Magnetisch veld B — bron + richting",
     explanation:
-      "**Magnetisch veld B** (tesla, T) is een vectorveld rond magneten + stroomdraden.\n\n**Bronnen**:\n• **Permanente magneet** (ijzer, neodymium): N- en Z-pool, veldlijnen lopen buiten van N naar Z.\n• **Stroomvoerende draad**: veldlijnen vormen cirkels rondom de draad (rechterhandregel: duim langs stroom-richting, vingers wijzen veld-richting).\n• **Spoel** (solenoïde): veld lijkt op staafmagneet — vlak veld in de spoel, divergerend buiten.\n• **Aarde**: zwak veld (~50 μT), geografische N-pool is magnetisch Z-pool (daarom wijst kompas-N naar geografisch N).\n\n**Veldlijnen**:\n• Beginnen op N, eindigen op Z (buiten magneet).\n• Snijden elkaar nooit.\n• Hoge dichtheid = sterk veld.\n• Tangent aan een veldlijn = richting van B.\n\n**Eenheid**: B in tesla (T). 1 T is sterk; aarde-veld ≈ 50 μT = 50·10⁻⁶ T. MRI-scanner ~1-3 T.\n\n**Magnetische flux Φ**:\n• Φ = B · A · cos(α), met A = oppervlak en α = hoek tussen B en normaal van A.\n• Eenheid: weber (Wb) = T·m².\n• Belangrijk voor inductie (stap C).\n\n**Rechterhandregel voor spoel**:\n• Vingers wijzen stroom-richting (rondom).\n• Duim wijst noordpool van spoel.\n\n**Twee permanente magneten**:\n• Gelijke polen stoten elkaar af (N-N of Z-Z).\n• Ongelijke polen trekken elkaar aan (N-Z).",
+      "**Magnetisch veld B** (tesla, T) is een vectorveld rond magneten + stroomdraden.\n\n**Bronnen**:\n• **Permanente magneet** (ijzer, neodymium): N- en Z-pool, veldlijnen lopen buiten van N naar Z.\n• **Stroomvoerende draad**: veldlijnen vormen cirkels rondom de draad (rechterhandregel: duim langs stroom-richting, vingers wijzen veld-richting).\n• **Spoel** (solenoïde): veld lijkt op staafmagneet — homogeen veld in de spoel, divergerend buiten.\n• **Aarde**: zwak veld (~50 μT), geografische N-pool is magnetisch Z-pool (daarom wijst kompas-N naar geografisch N).\n\n**Veldlijnen**:\n• Beginnen op N, eindigen op Z (buiten magneet).\n• Snijden elkaar nooit.\n• Hoge dichtheid = sterk veld.\n• Raaklijn aan een veldlijn = richting van B.\n\n**Eenheid**: B in tesla (T). 1 T is sterk; aarde-veld ≈ 50 μT = 50·10⁻⁶ T. MRI-scanner ~1-3 T.\n\n**Magnetische flux Φ**:\n• Φ = B · A · cos(α), met A = oppervlak en α = hoek tussen B en normaal van A.\n• Eenheid: weber (Wb) = T·m².\n• Belangrijk voor inductie (stap C).\n\n**Rechterhandregel voor spoel**:\n• Vingers wijzen stroom-richting (rondom).\n• Duim wijst noordpool van spoel.\n\n**Twee permanente magneten**:\n• Gelijke polen stoten elkaar af (N-N of Z-Z).\n• Ongelijke polen trekken elkaar aan (N-Z).",
     checks: [
       {
         q: "Twee staafmagneten met **N-pool naar N-pool** doen elkaar:",
@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is binnen de magneet.", "Niet — veldlijnen hebben een eenduidige richting.", "Niet — ze hebben wel richting."],
         uitlegPad: {
           stappen: [{ titel: "Conventie: N → Z (buiten)", tekst: "Buiten een magneet lopen veldlijnen van N naar Z. Binnen lopen ze juist van Z naar N → samen sluiten ze tot een gesloten lus. Magnetische veldlijnen zijn altijd gesloten (geen 'monopolen')." }],
-          theorie: "Een kompas-naald oriëntatie is een mini-magneet: de NOORD-zoekende pool wijst de magnetische Z-pool van de aarde aan (= geografisch noord, jaja, verwarrend).",
+          theorie: "Een kompasnaald is een mini-magneet: de NOORD-zoekende pool wijst de magnetische Z-pool van de aarde aan (= geografisch noord, jaja, verwarrend).",
           niveaus: { basis: "Buiten: N → Z.", simpeler: "Veldlijnen buiten lopen van noord naar zuid.", nogSimpeler: "N → Z" },
         },
       },
@@ -52,7 +52,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — radiaal weg-veld is een elektrisch veld van punt-lading.", "Niet — veld is loodrecht op draad.", "Onjuist — stroom geeft altijd magnetisch veld."],
         uitlegPad: {
-          stappen: [{ titel: "Rechterhandregel — duim langs I", tekst: "Wijs je rechter duim in de stroom-richting; je gevouwen vingers wijzen de richting van B aan (cirkels rondom de draad). Dichter bij de draad = sterker veld (B ~ 1/r)." }],
+          stappen: [{ titel: "Rechterhandregel — duim langs I", tekst: "Wijs je rechter duim in de stroom-richting; je gekromde vingers wijzen de richting van B aan (cirkels rondom de draad). Dichter bij de draad = sterker veld (B ~ 1/r)." }],
           theorie: "Ontdekt door Oersted 1820 — kompas naast draad sloeg uit toen stroom werd ingeschakeld. Eerste link tussen elektriciteit + magnetisme.",
           niveaus: { basis: "Cirkels rond draad.", simpeler: "Veldlijnen lopen ringen rond de draad.", nogSimpeler: "Cirkels" },
         },
@@ -79,7 +79,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — bij vaste N: langer = veld zwakker (verdunde N/L).", "Niet — dunnere draad heeft hogere weerstand, lagere I.", "Niet — elektrisch veld doet niets voor B."],
         uitlegPad: {
-          stappen: [{ titel: "B_spoel = μ₀·n·I", tekst: "Met n = N/L (windingen per meter). Meer N (bij vaste L) → hogere n → sterker veld. Meer I → ook sterker. Toevoegen ijzer-kern multipliceert nog eens met μ_r (kan factor 1000)." }],
+          stappen: [{ titel: "B_spoel = μ₀·n·I", tekst: "Met n = N/L (windingen per meter). Meer N (bij vaste L) → hogere n → sterker veld. Meer I → ook sterker. Toevoegen ijzer-kern vermenigvuldigt nog eens met μ_r (kan factor 1000)." }],
           niveaus: { basis: "Meer N + meer I = sterker.", simpeler: "Veel windingen en veel stroom → sterk magneetveld.", nogSimpeler: "N + I op" },
         },
       },
@@ -90,7 +90,7 @@ const steps = [
   {
     title: "Lorentzkracht — F = q·v·B (puntlading) + F = B·I·L (draad)",
     explanation:
-      "Een **bewegende lading** in een magnetisch veld voelt een kracht — de **Lorentzkracht**.\n\n**Lorentz op puntlading**: **F = q · v · B · sin(α)**\n• α = hoek tussen v en B. Bij v // B: geen kracht. Bij v ⊥ B: maximale kracht.\n• Richting: rechterhandregel of FBI-regel — F (vingers), B (handvlak), I/v (duim) voor positieve lading.\n• Negatieve lading: tegenovergestelde richting.\n\n**Bijzonder gevolg**: een geladen deeltje loodrecht op B beweegt in een **cirkel** (Lorentzkracht = centripetaal). Straal: r = m·v / (q·B). Massaspectrometers + cyclotrons gebruiken dit.\n\n**Lorentz op stroomdraad**: **F = B · I · L · sin(α)**\n• I = stroom, L = lengte in veld.\n• Loodrecht (α = 90°): F = B·I·L.\n• Toepassing: elektromotor.\n\n**FBI- of rechterhandregel** voor stroomdraad:\n• B-veld richting (vingers), I-stroom (duim, langs stroom), F-richting (handvlak duwt).\n\n**Polariteit-omkeer**:\n• Omkeren stroom → kracht omgekeerd.\n• Omkeren veld → kracht omgekeerd.\n• Beide omkeren → kracht gelijk.\n\n**Praktijk**:\n• **Elektromotor**: spoel in B-veld, stroom → koppel → draaiing. Stroom omkeren elke halve omwenteling via commutator.\n• **CRT-monitor** (oud): kathodestraal afgebogen door B-veld voor scherm-positie.\n• **Massaspectrometer**: deeltjes met andere m/q maken andere cirkel-straal.",
+      "Een **bewegende lading** in een magnetisch veld voelt een kracht — de **Lorentzkracht**.\n\n**Lorentz op puntlading**: **F = q · v · B · sin(α)**\n• α = hoek tussen v en B. Bij v // B: geen kracht. Bij v ⊥ B: maximale kracht.\n• Richting: rechterhandregel — B (vingers), I/v (duim), F (handpalm duwt) voor positieve lading.\n• Negatieve lading: tegenovergestelde richting.\n\n**Bijzonder gevolg**: een geladen deeltje loodrecht op B beweegt in een **cirkel** (Lorentzkracht = centripetaal). Straal: r = m·v / (q·B). Massaspectrometers + cyclotrons gebruiken dit.\n\n**Lorentz op stroomdraad**: **F = B · I · L · sin(α)**\n• I = stroom, L = lengte in veld.\n• Loodrecht (α = 90°): F = B·I·L.\n• Toepassing: elektromotor.\n\n**FBI- of rechterhandregel** voor stroomdraad:\n• B-veld richting (vingers), I-stroom (duim, langs stroom), F-richting (handvlak duwt).\n\n**Polariteit-omkeer**:\n• Omkeren stroom → kracht omgekeerd.\n• Omkeren veld → kracht omgekeerd.\n• Beide omkeren → kracht gelijk.\n\n**Praktijk**:\n• **Elektromotor**: spoel in B-veld, stroom → koppel → draaiing. Stroom omkeren elke halve omwenteling via commutator.\n• **CRT-monitor** (oud): kathodestraal afgebogen door B-veld voor scherm-positie.\n• **Massaspectrometer**: deeltjes met andere m/q maken andere cirkel-straal.",
     checks: [
       {
         q: "Een **elektron** beweegt loodrecht door een B-veld. De Lorentzkracht is:",
@@ -114,7 +114,7 @@ const steps = [
         wrongHints: [null, "Niet — let op machten van 10.", "Niet — controleer formule.", "Wel genoeg info."],
         uitlegPad: {
           stappen: [
-            { titel: "F = q·v·B", tekst: "F = 1,6·10⁻¹⁹ · 2,0·10⁶ · 0,50 = 1,6·10⁻¹³ N. Klein in absoluut, maar enorm versnelt het 1,67·10⁻²⁷ kg proton: a = F/m ≈ 10¹⁴ m/s²." },
+            { titel: "F = q·v·B", tekst: "F = 1,6·10⁻¹⁹ · 2,0·10⁶ · 0,50 = 1,6·10⁻¹³ N. Klein in absolute zin, maar het versnelt het proton (1,67·10⁻²⁷ kg) enorm: a = F/m ≈ 10¹⁴ m/s²." },
           ],
           niveaus: { basis: "F = qvB = 1,6·10⁻¹³ N.", simpeler: "Vermenigvuldig: lading × snelheid × veld.", nogSimpeler: "1,6·10⁻¹³" },
         },
@@ -126,7 +126,7 @@ const steps = [
         wrongHints: [null, "Niet — controleer eenheden.", "Te klein.", "Niet — formule is F=BIL, geen optellen."],
         uitlegPad: {
           stappen: [{ titel: "F = B·I·L", tekst: "F = 0,20 · 3,0 · 0,40 = **0,24 N**. Vergeet sin(α) niet wanneer hoek niet 90° is — hier wel." }],
-          theorie: "Elektromotor-rotorprincipe: spoel in B-veld, F op zijdes geven koppel. Sterk veld + dikke draad (hoge I) + veel windingen = krachtige motor.",
+          theorie: "Elektromotor-rotorprincipe: spoel in B-veld, F op zijden geven koppel. Sterk veld + dikke draad (hoge I) + veel windingen = krachtige motor.",
           niveaus: { basis: "F = 0,2·3·0,4 = 0,24.", simpeler: "Vermenigvuldig BIL = 0,24 N.", nogSimpeler: "0,24" },
         },
       },
@@ -167,7 +167,7 @@ const steps = [
   {
     title: "Inductie — Faraday's wet",
     explanation:
-      "**Inductie**: een **veranderende magnetische flux** door een geleider wekt een **inductie-spanning** (EMK) op. Basis van bijna alle elektriciteits-opwekking ter wereld.\n\n**Faraday's wet**: U_ind = −N · dΦ/dt\n• N = aantal windingen.\n• dΦ/dt = snelheid-van-flux-verandering (Wb/s).\n• Minteken (Lenz): inductie-stroom werkt de oorzaak **tegen** (energiebehoud).\n\n**Drie manieren om Φ te veranderen**:\n1. **B verandert** (sterker/zwakker magneet).\n2. **A verandert** (spoel-oppervlak groter/kleiner).\n3. **Hoek α verandert** (spoel draaien in veld → wisselstroom-generator).\n\n**Lenz' wet**: inductie-stroom maakt een veld dat de oorspronkelijke flux-verandering **tegenwerkt**.\n• Magneet wordt in spoel geduwd → inductie-stroom maakt veld dat magneet afstoot → arbeid kost energie.\n• Magneet weggehaald → inductie-stroom maakt veld dat hem terugtrekt.\n\n**Wisselstroom-generator** (alternator):\n• Spoel draait met hoeksnelheid ω in vast B-veld.\n• U(t) = U_max · sin(ω·t), met U_max = N · B · A · ω.\n• Frequentie = ω/(2π). NL-net: 50 Hz.\n\n**Toepassingen**:\n• Elektriciteitscentrale (kolen/wind/water): turbine → spoel-rotatie → wisselstroom.\n• Inductie-kookplaat: hoog-frequentie wisselveld → wervelstromen in ijzeren pan → warmte.\n• Dynamo op fiets: wieldraait → magneet bij spoel → wisselstroom → lampje.\n• Transformator (volgende stap).\n\n**Examen-valkuilen**:\n• Niet veranderende flux = geen inductie (stilstaande magneet bij stilstaande spoel = niets).\n• Het is de **verandering**, niet de absolute B-waarde, die telt.",
+      "**Inductie**: een **veranderende magnetische flux** door een geleider wekt een **inductie-spanning** (EMK) op. Basis van bijna alle elektriciteits-opwekking ter wereld.\n\n**Faraday's wet**: U_ind = −N · dΦ/dt\n• N = aantal windingen.\n• dΦ/dt = snelheid-van-flux-verandering (Wb/s).\n• Minteken (Lenz): inductie-stroom werkt de oorzaak **tegen** (energiebehoud).\n\n**Drie manieren om Φ te veranderen**:\n1. **B verandert** (sterker/zwakker magneet).\n2. **A verandert** (spoel-oppervlak groter/kleiner).\n3. **Hoek α verandert** (spoel draaien in veld → wisselstroom-generator).\n\n**Lenz' wet**: inductie-stroom maakt een veld dat de oorspronkelijke flux-verandering **tegenwerkt**.\n• Magneet wordt in spoel geduwd → inductie-stroom maakt veld dat magneet afstoot → arbeid kost energie.\n• Magneet weggehaald → inductie-stroom maakt veld dat hem terugtrekt.\n\n**Wisselstroom-generator** (alternator):\n• Spoel draait met hoeksnelheid ω in vast B-veld.\n• U(t) = U_max · sin(ω·t), met U_max = N · B · A · ω.\n• Frequentie = ω/(2π). NL-net: 50 Hz.\n\n**Toepassingen**:\n• Elektriciteitscentrale (kolen/wind/water): turbine → spoel-rotatie → wisselstroom.\n• Inductie-kookplaat: hoog-frequentie wisselveld → wervelstromen in ijzeren pan → warmte.\n• Dynamo op fiets: wiel draait → magneet bij spoel → wisselstroom → lampje.\n• Transformator (volgende stap).\n\n**Examen-valkuilen**:\n• Niet veranderende flux = geen inductie (stilstaande magneet bij stilstaande spoel = niets).\n• Het is de **verandering**, niet de absolute B-waarde, die telt.",
     checks: [
       {
         q: "Een magneet ligt **stil** binnen een spoel. Inductie-stroom?",
@@ -176,7 +176,7 @@ const steps = [
         wrongHints: [null, "Niet — geen flux-verandering = geen spanning.", "Niet — nul = nul.", "Maakt niet uit zonder beweging."],
         uitlegPad: {
           stappen: [{ titel: "dΦ/dt = 0 → U = 0", tekst: "Inductie vereist VERANDERING van flux. Magneet stilhouden → flux constant → geen spanning. Begin de magneet te bewegen (of spoel) → er ontstaat spanning." }],
-          niveaus: { basis: "Geen verandering → nul.", simpeler: "Stilstaand magneet = niets gebeurt.", nogSimpeler: "Nul" },
+          niveaus: { basis: "Geen verandering → nul.", simpeler: "Stilstaande magneet = er gebeurt niets.", nogSimpeler: "Nul" },
         },
       },
       {
@@ -201,7 +201,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — vergeet N niet.", "Niet — controleer rekensom.", "Te groot."],
         uitlegPad: {
-          stappen: [{ titel: "U = N · dΦ/dt", tekst: "U = 100 · 0,020 = **2,0 V** (in absolute waarde — minteken aangeeft richting via Lenz)." }],
+          stappen: [{ titel: "U = N · dΦ/dt", tekst: "U = 100 · 0,020 = **2,0 V** (in absolute waarde — het minteken geeft de richting aan via Lenz)." }],
           niveaus: { basis: "100 × 0,02 = 2 V.", simpeler: "Aantal windingen × snelheid van flux-verandering.", nogSimpeler: "2,0 V" },
         },
       },
@@ -274,8 +274,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — hoog is gevaarlijker.", "Niet — elektriciteit reist altijd ~lichtsnelheid.", "Niet — apparaten gebruiken 230 V of lager."],
         uitlegPad: {
-          stappen: [{ titel: "P_verlies = I²·R", tekst: "Bij vast vermogen P=U·I: hoger U → lagere I. Verlies in draad ~ I² → verdubbel U + halveer I → verlies wordt 4× kleiner. Daarom transporteren we op honderd-duizenden volt." }],
-          theorie: "Vóór wissel-stroom + transformatoren (Edison vs Tesla, 1880s) was gelijkstroom standaard — maar GS kan NIET getransformeerd worden, dus dichte centrales nodig. Tesla's AC-systeem won.",
+          stappen: [{ titel: "P_verlies = I²·R", tekst: "Bij vast vermogen P=U·I: hoger U → lagere I. Verlies in draad ~ I² → verdubbel U + halveer I → verlies wordt 4× kleiner. Daarom transporteren we op honderdduizenden volt." }],
+          theorie: "Vóór wissel-stroom + transformatoren (Edison vs Tesla, jaren 1880) was gelijkstroom standaard — maar GS kan NIET getransformeerd worden, dus centrales dicht bij de gebruikers nodig. Tesla's AC-systeem won.",
           niveaus: { basis: "Hoog U → laag I → minder verlies.", simpeler: "Lage stroom = weinig warmte in draad = energiebesparing.", nogSimpeler: "P=I²R minimaliseren" },
         },
       },
@@ -371,7 +371,7 @@ const steps = [
         wrongHints: [null, "Niet — controleer machten.", "Niet — te groot.", "Niet — te klein."],
         uitlegPad: {
           stappen: [
-            { titel: "r = mv/(qB)", tekst: "r = (1,67·10⁻²⁷ · 4,0·10⁶) / (1,6·10⁻¹⁹ · 0,40) = 6,68·10⁻²¹ / 6,4·10⁻²⁰ ≈ **0,10 m**. Een cirkel van 10 cm diameter (20 cm cyclotron-orbit)." },
+            { titel: "r = mv/(qB)", tekst: "r = (1,67·10⁻²⁷ · 4,0·10⁶) / (1,6·10⁻¹⁹ · 0,40) = 6,68·10⁻²¹ / 6,4·10⁻²⁰ ≈ **0,10 m**. Een cirkel met een straal van 10 cm (diameter 20 cm)." },
           ],
           niveaus: { basis: "r = mv/(qB) ≈ 0,10 m.", simpeler: "Vier grootheden vermenigvuldigen + delen → ~10 cm.", nogSimpeler: "0,10 m" },
         },

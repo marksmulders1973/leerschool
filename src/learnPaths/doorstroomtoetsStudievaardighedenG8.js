@@ -56,11 +56,11 @@ function overzichtSvg() {
 <text x="232" y="157" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">stappenplan</text>
 <text x="232" y="169" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">stroomdiagram</text>
 
-<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte Voorbeelden uit de toets: zie externe PDF onder elke stap</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte voorbeelden uit de toets: zie externe PDF onder elke stap</text>
 </svg>`;
 }
 
-const examenLink = "De toets.s gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf";
+const examenLink = "Het gratis voorbeeldopgavenboekje van Cito: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf";
 
 const steps = [
   // STAP 1: Kaart + schaal
@@ -68,7 +68,7 @@ const steps = [
     title: "Kaart + schaal lezen — ~20 min",
     refOnderdeel: "geen",
     explanation:
-      "**Studievaardigheden bij de Doorstroomtoets** test of je informatie kunt **opzoeken en gebruiken**. Dat kan op een kaart, in een tabel, in een atlas, of via een schema.\n\n**Kaarten lezen — wat moet je kennen?**\n\n**1. Schaal**\n• **1 : 100.000** = 1 cm op kaart = 100.000 cm in het echt = 1 km.\n• **1 : 50.000** = 1 cm = 500 m = 0,5 km.\n• **1 : 25.000** = 1 cm = 250 m = 0,25 km.\n\n**Truc**: schaal omrekenen → deel door 100 *(cm → m)*. Dan door 1000 *(m → km)*.\n\n**Voorbeeld**:\n*'Schaal 1:50.000. Op de kaart is een weg 4 cm. Hoeveel km in werkelijkheid?'*\n• 4 × 50.000 = 200.000 cm = 2000 m = **2 km**.\n\n**2. Windrichting**\n• Op de **kompasroos** zie je N(oord), O(ost), Z(uid), W(est).\n• **NO** = noord-oost (tussen N en O).\n• Veel kaarten: noord boven, oost rechts, zuid onder, west links.\n\n**3. Legenda**\nElke kaart heeft een **legenda** *(tekst-box met symbolen-uitleg)*:\n• Blauwe lijn = rivier of weg met water.\n• Bruine vlek = berg of heuvel.\n• Groene vlek = bos of park.\n• Stippellijn = wandelpad of grens.\n• Driehoek met getal = hoogtepunt *(bv. 312 m boven NAP)*.\n\n**4. Coördinaten**\nKaarten in atlas hebben vakken zoals **A4** of **C2**:\n• Letter = horizontale kolom *(boven)*.\n• Cijfer = verticale rij *(opzij)*.\n\n**Voorbeeld toetsvraag**:\n*'In welk vak ligt de stad Groningen?'* → kijk in legend + tel kolommen/rijen.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
+      "**Studievaardigheden bij de Doorstroomtoets** test of je informatie kunt **opzoeken en gebruiken**. Dat kan op een kaart, in een tabel, in een atlas, of via een schema.\n\n**Kaarten lezen — wat moet je kennen?**\n\n**1. Schaal**\n• **1 : 100.000** = 1 cm op kaart = 100.000 cm in het echt = 1 km.\n• **1 : 50.000** = 1 cm = 500 m = 0,5 km.\n• **1 : 25.000** = 1 cm = 250 m = 0,25 km.\n\n**Truc**: schaal omrekenen → deel door 100 *(cm → m)*. Dan door 1000 *(m → km)*.\n\n**Voorbeeld**:\n*'Schaal 1:50.000. Op de kaart is een weg 4 cm. Hoeveel km in werkelijkheid?'*\n• 4 × 50.000 = 200.000 cm = 2000 m = **2 km**.\n\n**2. Windrichting**\n• Op de **kompasroos** zie je N(oord), O(ost), Z(uid), W(est).\n• **NO** = noord-oost (tussen N en O).\n• Veel kaarten: noord boven, oost rechts, zuid onder, west links.\n\n**3. Legenda**\nElke kaart heeft een **legenda** *(tekst-box met symbolen-uitleg)*:\n• Blauwe lijn = rivier of kanaal.\n• Bruine vlek = berg of heuvel.\n• Groene vlek = bos of park.\n• Stippellijn = wandelpad of grens.\n• Driehoek met getal = hoogtepunt *(bv. 312 m boven NAP)*.\n\n**4. Coördinaten**\nKaarten in atlas hebben vakken zoals **A4** of **C2**:\n• Letter = kolom *(de letters staan boven)*.\n• Cijfer = rij *(de cijfers staan opzij)*.\n\n**Voorbeeld toetsvraag**:\n*'In welk vak ligt de stad Groningen?'* → kijk in het register of tel kolommen/rijen.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     svg: overzichtSvg(),
     checks: [
       {
@@ -236,7 +236,7 @@ const steps = [
           ],
           woorden: [{ woord: "topografische kaart", uitleg: "Kaart die het landschap toont met hoogtelijnen, rivieren, bossen." }],
           theorie: "Standaard kaart-kleuren in NL/Europa: blauw=water, groen=bos/laagland, geel/oranje=heuvel, bruin=hooggebergte, wit=sneeuw.",
-          voorbeelden: [{ type: "stap", tekst: "Schweiz-kaart: veel bruine en witte vlekken = Alpen. NL-kaart: vrijwel alleen groen + blauw (plat land)." }],
+          voorbeelden: [{ type: "stap", tekst: "Zwitserland-kaart: veel bruine en witte vlekken = Alpen. NL-kaart: vrijwel alleen groen + blauw (plat land)." }],
           basiskennis: [{ onderwerp: "Legenda checken", uitleg: "Elke kaart heeft eigen kleurcodes — controleer altijd de legenda!" }],
           niveaus: {
             basis: "Berg of heuvel.",
@@ -274,7 +274,7 @@ const steps = [
             { titel: "Vergelijk", tekst: "1:100.000 = 1 cm = 1 km. Veel minder detail per cm — overzicht-kaart." },
           ],
           woorden: [
-            { woord: "grote schaal", uitleg: "Kleiner schaalgetal (bv 1:10.000) = kleine gebied, veel detail." },
+            { woord: "grote schaal", uitleg: "Kleiner schaalgetal (bv 1:10.000) = klein gebied, veel detail." },
             { woord: "kleine schaal", uitleg: "Groter schaalgetal (bv 1:1.000.000) = groot gebied, weinig detail." },
           ],
           theorie: "Verwarrend: 'grote schaal' = grootste detail-niveau = klein schaalgetal. 1:10.000 > 1:100.000 (qua detail)!",
@@ -389,7 +389,7 @@ const steps = [
             { titel: "Toets-check: realistisch?", tekst: "Een stadsplattegrond toont vaak een paar straten. 50 m = ongeveer een straat-lengte → realistisch! 50 cm of 2,5 km zouden raar zijn." },
           ],
           woorden: [
-            { woord: "stadsplattegrond", uitleg: "Kaart van een stad, hele kleine schaal voor detail." },
+            { woord: "stadsplattegrond", uitleg: "Kaart van een stad, grote schaal (klein schaalgetal) voor veel detail." },
             { woord: "schaal 1:2.500", uitleg: "1 cm op kaart = 25 m in werkelijkheid." },
           ],
           theorie: "Schaal-omrekenen: cm-op-kaart × schaal-getal = werkelijk in cm. Daarna delen door 100 (→ m) of 100.000 (→ km). Werkt voor elke schaal-vraag.",
@@ -409,7 +409,7 @@ const steps = [
         q: "Op een kaart van **schaal 1:10.000** is een park **5 cm**. **Werkelijk in meter**?",
         options: ["500 m", "50 m", "5 km", "50 km"],
         answer: 0,
-        wrongHints: [null, "10× te weinig.", "Verkeerde eenheid — wel goed getal voor km, maar gevraagd is meter.", "Veel te veel."],
+        wrongHints: [null, "10× te weinig.", "Reken nog eens om: 50.000 cm is geen 5 km.", "Veel te veel."],
       },
       {
         q: "Welk **windstreek-symbool** staat **bovenaan** op een kaart?",
@@ -451,10 +451,10 @@ const steps = [
         wrongHints: [null, "Onderaan.", "Links.", "Bovenaan."],
         uitlegPad: {
           stappen: [
-            { titel: "Windroos", tekst: "N boven, Z onder, O rechts, W links. Geheugentruc: 'Nooit Zonder Onze Werkboeken' (klok rond)." },
+            { titel: "Windroos", tekst: "N boven, Z onder, O rechts, W links. Geheugentruc: 'Nooit Oversteken Zonder Wachten' (met de klok mee)." },
           ],
           woorden: [{ woord: "windroos", uitleg: "Symbool met 4 (of 8) richtingen: N, O, Z, W." }],
-          theorie: "Toets-truc: in een echte kaart is N bijna altijd bovenaan. Onthoud: NOZW = klokswijze (N-O-Z-W). Of: O is naar de zon op (zon komt op in oost).",
+          theorie: "Toets-truc: in een echte kaart is N bijna altijd bovenaan. Onthoud: NOZW = met de klok mee (N-O-Z-W). Of: O is naar de zon op (zon komt op in oost).",
           voorbeelden: [{ type: "stap", tekst: "Vanuit Amsterdam ligt Duitsland in het oosten." }],
           basiskennis: [{ onderwerp: "Tussen-richtingen", uitleg: "NO = noord-oost (tussen N en O). ZW = zuid-west. Etc." }],
           niveaus: {
@@ -506,8 +506,8 @@ const steps = [
           ],
           woorden: [{ woord: "topografie", uitleg: "Plaats van bergen, rivieren, steden op een kaart." }],
           theorie: "Toets-truc: bij vraag 'welke schaal voor X gebied' — kies grootste schaalgetal voor groot gebied.",
-          voorbeelden: [{ type: "stap", tekst: "Wandelroute: 1:10.000 (kleine schaal). Atlas van Europa: 1:5.000.000." }],
-          basiskennis: [{ onderwerp: "Klein vs groot", uitleg: "Kleine schaal = klein getal (1:100) = klein gebied groot getekend. Grote schaal = groot getal = veel land in kleine ruimte." }],
+          voorbeelden: [{ type: "stap", tekst: "Wandelroute: 1:10.000 (grote schaal). Atlas van Europa: 1:5.000.000." }],
+          basiskennis: [{ onderwerp: "Klein vs groot", uitleg: "Grote schaal = klein getal (1:100) = klein gebied groot getekend. Kleine schaal = groot getal = veel land in kleine ruimte." }],
           niveaus: {
             basis: "Wereldkaart / land-overzicht.",
             simpeler: "1:1 miljoen = veel land op 1 kaart.",
@@ -643,7 +643,7 @@ const steps = [
     title: "Tabel + grafiek lezen — ~20 min",
     refOnderdeel: "geen",
     explanation:
-      "Bij studievaardigheden krijg je vaak een **tabel** of een **grafiek** en moet je daar informatie uit halen.\n\n**Toets-stappen**:\n1. **Lees titel + assen** — waar gaat het over?\n2. **Welke eenheid** — euro's, mensen, °C, mm?\n3. **Zoek de vraag-cel/balk** — onderaan staat meestal categorieën (dagen, klassen), zijkant staat hoeveelheid.\n4. **Lees af + schrijf met eenheid**.\n\n**Tabel-vraag-typen**:\n• **Aflezen**: 'Hoeveel kinderen op woensdag?'\n• **Verschil**: 'Hoeveel meer op vrijdag dan op maandag?'\n• **Totaal**: 'Totaal aantal kinderen in week?'\n• **Patroon**: 'Welke dag is een stijging te zien?'\n• **Gemiddelde**: 'Gemiddeld aantal per dag?'\n\n**Voorbeeld-tabel — Aantal ijsjes verkocht per dag**:\n\n| Dag | Aantal |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\n**toetsvragen**:\n*'Op welke dag het minst verkocht?'* → dinsdag (8).\n*'Hoeveel verschil tussen vrijdag en maandag?'* → 30 − 12 = **18 ijsjes**.\n*'Totaal in deze 5 dagen?'* → 12+8+18+22+30 = **90 ijsjes**.\n*'Gemiddeld per dag?'* → 90 ÷ 5 = **18 ijsjes**.\n\n**Grafiek-typen**:\n• **Staafdiagram** = vergelijken van groepen.\n• **Lijngrafiek** = verandering door tijd.\n• **Cirkeldiagram (taart)** = verdeling van geheel (100%).\n\n**Toets-truc — cirkeldiagram**:\nGroepen tellen samen op tot **100%**. Als 3 groepen 25%, 35% en x zijn, dan x = 100 − 25 − 35 = **40%**.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
+      "Bij studievaardigheden krijg je vaak een **tabel** of een **grafiek** en moet je daar informatie uit halen.\n\n**Toets-stappen**:\n1. **Lees titel + assen** — waar gaat het over?\n2. **Welke eenheid** — euro's, mensen, °C, mm?\n3. **Zoek de vraag-cel/balk** — onderaan staan meestal categorieën (dagen, klassen), aan de zijkant staat de hoeveelheid.\n4. **Lees af + schrijf met eenheid**.\n\n**Tabel-vraag-typen**:\n• **Aflezen**: 'Hoeveel kinderen op woensdag?'\n• **Verschil**: 'Hoeveel meer op vrijdag dan op maandag?'\n• **Totaal**: 'Totaal aantal kinderen in week?'\n• **Patroon**: 'Op welke dag is een stijging te zien?'\n• **Gemiddelde**: 'Gemiddeld aantal per dag?'\n\n**Voorbeeld-tabel — Aantal ijsjes verkocht per dag**:\n\n| Dag | Aantal |\n|---|---|\n| ma | 12 |\n| di | 8 |\n| wo | 18 |\n| do | 22 |\n| vr | 30 |\n\n**toetsvragen**:\n*'Op welke dag het minst verkocht?'* → dinsdag (8).\n*'Hoeveel verschil tussen vrijdag en maandag?'* → 30 − 12 = **18 ijsjes**.\n*'Totaal in deze 5 dagen?'* → 12+8+18+22+30 = **90 ijsjes**.\n*'Gemiddeld per dag?'* → 90 ÷ 5 = **18 ijsjes**.\n\n**Grafiek-typen**:\n• **Staafdiagram** = vergelijken van groepen.\n• **Lijngrafiek** = verandering door tijd.\n• **Cirkeldiagram (taart)** = verdeling van geheel (100%).\n\n**Toets-truc — cirkeldiagram**:\nGroepen tellen samen op tot **100%**. Als 3 groepen 25%, 35% en x zijn, dan x = 100 − 25 − 35 = **40%**.\n\n**Bron**: voor officiële voorbeelden zie " + examenLink + ".",
     checks: [
       {
         q: "Tabel: ma 10, di 12, wo 15, do 8, vr 20 kinderen. **Op welke dag minst**?",
@@ -785,7 +785,7 @@ const steps = [
         q: "Lijngrafiek: aantal lezers daalde van 80 naar 50 in 5 jaar. Hoeveel **% afname**?",
         options: ["37,5%", "30%", "50%", "60%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afname in aantal.", "Dat zou betekenen 40 lezers minder.", "Niet — dat is groter dan 100%."],
+        wrongHints: [null, "Niet — dat is afname in aantal.", "Dat zou betekenen 40 lezers minder.", "Niet — dan deel je door de eindwaarde (50) in plaats van de beginwaarde."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: bereken het verschil", tekst: "Van 80 lezers naar 50 lezers. Verschil = 80 − 50 = **30** lezers afname." },
@@ -1147,7 +1147,7 @@ const steps = [
         q: "Een **histogram** is een ___?",
         options: ["Staafdiagram zonder ruimte tussen staven", "Lijngrafiek", "Cirkeldiagram", "Tabel"],
         answer: 0,
-        wrongHints: [null, "Histogram zijn wel staven.", "Niet.", "Niet."],
+        wrongHints: [null, "Een histogram bestaat wel uit staven.", "Niet.", "Niet."],
       },
       {
         q: "Tabel toont temperaturen **per uur**. Tussen welke 2 uren is **grootste verandering**?",
@@ -1273,7 +1273,7 @@ const steps = [
             { titel: "Conclusie", tekst: "Dus 'appel' staat eerder in woordenboek dan 'auto'." },
           ],
           woorden: [{ woord: "alfabetisch sorteren", uitleg: "Woorden ordenen op letter-volgorde A→Z, eerst 1e letter, dan 2e, etc." }],
-          theorie: "Standaard woordenboek-volgorde: vergelijk letter voor letter van links naar rechts. Bij gelijke prefix: kortere woord eerst.",
+          theorie: "Standaard woordenboek-volgorde: vergelijk letter voor letter van links naar rechts. Bij gelijke prefix: het kortere woord eerst.",
           voorbeelden: [{ type: "stap", tekst: "boek → bos → brood (b-o-e vs b-o-s vs b-r-o, eerst o-e, dan o-s, dan r)." }],
           basiskennis: [{ onderwerp: "Alfabet-volgorde", uitleg: "A-B-C-D-...-P-Q-R-S-T-U-V-W-X-Y-Z. P komt vóór U." }],
           niveaus: {
@@ -1287,7 +1287,7 @@ const steps = [
         q: "Waar zoek je een **plaatsnaam** in een atlas?",
         options: ["In de index (achterin)", "In hoofdstuk 1", "Op de eerste kaart", "Bij plaatjes"],
         answer: 0,
-        wrongHints: [null, "Niet zeker waar plaats staat.", "Eerste kaart hoeft niet je plaats.", "Niet bij plaatjes."],
+        wrongHints: [null, "Niet zeker waar plaats staat.", "Op de eerste kaart hoeft je plaats niet te staan.", "Niet bij plaatjes."],
       },
       {
         q: "Wat staat **voorin** een boek?",
@@ -1328,7 +1328,7 @@ const steps = [
             { titel: "Regel: korter eerst", tekst: "Bij gelijk begin staat het kortere woord eerder. Dus 'kat' vóór 'kater'." },
           ],
           woorden: [{ woord: "alfabet", uitleg: "Volgorde A-B-C-D-...-Z gebruikt om dingen te ordenen." }],
-          theorie: "In een woordenboek: vergelijk eerste letter, daarna tweede, etc. Bij gelijke prefix: kortere woord eerst.",
+          theorie: "In een woordenboek: vergelijk eerste letter, daarna tweede, etc. Bij gelijke prefix: het kortere woord eerst.",
           voorbeelden: [{ type: "stap", tekst: "Boek vóór boeken. Tafel vóór tafels." }],
           basiskennis: [{ onderwerp: "Letter voor letter", uitleg: "Niet hele woord vergelijken — letter voor letter, links naar rechts." }],
           niveaus: {
@@ -1360,7 +1360,7 @@ const steps = [
           ],
           theorie: "Volgorde in atlas-index: plaatsnaam, dan pagina, dan vakcode. Eerste cijfer = bladzijde.",
           voorbeelden: [{ type: "stap", tekst: "'Rotterdam ... 14 B3' = blz 14, vak B3 (kolom B, rij 3)." }],
-          basiskennis: [{ onderwerp: "Letter vs cijfer", uitleg: "Letter is altijd kolom (horizontaal), cijfer is rij (verticaal)." }],
+          basiskennis: [{ onderwerp: "Letter vs cijfer", uitleg: "Letter = kolom (links-rechts), cijfer = rij (boven-onder)." }],
           niveaus: {
             basis: "Bladzijde 22, vak D5.",
             simpeler: "Eerste getal = bladzijde (22). Daarna staat de vakcode (D5).",
@@ -1399,7 +1399,7 @@ const steps = [
         q: "Waarvoor is een **register / index** achter in boek?",
         options: ["Onderwerpen op alfabet met paginanummers", "Inhoudsopgave", "Auteursnamen", "Plaatjes"],
         answer: 0,
-        wrongHints: [null, "Inhoud zit voorin.", "Auteurs op pakket of voorpagina.", "Niet primair."],
+        wrongHints: [null, "Inhoud zit voorin.", "Auteurs staan op de kaft of titelpagina.", "Niet primair."],
       },
       {
         q: "Welk woord staat **eerder** in woordenboek: 'school' of 'sport'?",
@@ -1414,7 +1414,7 @@ const steps = [
         wrongHints: [null, "Niet alle.", "Geen titel.", "Niet primair."],
         uitlegPad: {
           stappen: [
-            { titel: "Hoofdwoorden = navigatie-hulp", tekst: "Boven elke woordenboek-pagina staan 2 dikke woorden: het EERSTE en het LAATSTE woord van die pagina. Dat heten 'hoofdwoorden' of 'kopwoorden'." },
+            { titel: "Hoofdwoorden = navigatie-hulp", tekst: "Boven elke woordenboek-pagina staan 2 dikke woorden: het EERSTE en het LAATSTE woord van die pagina. Die heten 'hoofdwoorden' of 'kopwoorden'." },
             { titel: "Waarom? Snel zoeken", tekst: "Je hoeft niet hele pagina's te lezen. Kijk alleen naar de hoofdwoorden: ligt jouw woord (alfabetisch) tussen deze twee? Dan staat het op deze pagina." },
             { titel: "Voorbeeld", tekst: "Hoofdwoorden 'kat' en 'kop'. Zoek je 'klok'? K-L komt tussen K-A en K-O → ja, deze pagina!" },
           ],
@@ -1442,7 +1442,7 @@ const steps = [
         wrongHints: [null, "Tweede.", "Laatste.", "Wel volgorde."],
       },
       {
-        q: "Welk staat **eerder**: 'rood' of 'paars'?",
+        q: "Welk woord staat **eerder**: 'rood' of 'paars'?",
         options: ["paars", "rood", "Beide gelijk", "Niet alfabetisch"],
         answer: 0,
         wrongHints: [null, "Niet — r komt later.", "Niet gelijk.", "Wel."],
@@ -1511,7 +1511,7 @@ const steps = [
         q: "Bij een **uitgebreide index** achterin een boek staat **'water 12, 45, 89'**. Wat betekent dit?",
         options: ["Water staat op pagina's 12, 45 en 89", "Water heeft 12+45+89 = 146 betekenissen", "Eerste hoofdstuk over water op blz 12", "Water = 12,45 en 89 graden"],
         answer: 0,
-        wrongHints: [null, "Niet — losse paginanummers.", "Niet — meerdere paginas waar het besproken wordt.", "Geen relevant verband."],
+        wrongHints: [null, "Niet — losse paginanummers.", "Niet — meerdere pagina's waar het besproken wordt.", "Geen relevant verband."],
       },
       {
         q: "Je zoekt **'Spanje'** in een atlas. Waar **eerst** kijken?",
@@ -1541,7 +1541,7 @@ const steps = [
         wrongHints: [null, "Verhaal volgorde — niet alfabet.", "Niet alfabetisch.", "Niet alfabetisch."],
       },
       {
-        q: "Een **bibliotheek-catalogus** zoekt je in als je wilt weten...",
+        q: "In een **bibliotheek-catalogus** zoek je als je wilt weten...",
         options: ["Of een boek aanwezig is en waar", "Hoeveel pagina's het boek heeft", "Hoeveel het kost", "Wie het gelezen heeft"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet — bib heeft geen prijs.", "Niet — privacy."],
@@ -1566,7 +1566,7 @@ const steps = [
       },
       {
         q: "Bij **digitaal zoeken** in een PDF gebruik je vaak **Ctrl+F**. Dat doet ___?",
-        options: ["Zoekfunctie voor woorden", "Bestand opslaan", "Print", "Klein letter"],
+        options: ["Zoekfunctie voor woorden", "Bestand opslaan", "Print", "Kleine letters"],
         answer: 0,
         wrongHints: [null, "Daar is Ctrl+S voor.", "Daar is Ctrl+P voor.", "Geen menu-keuze."],
         uitlegPad: {
@@ -1716,7 +1716,7 @@ const steps = [
             { woord: "pijl", uitleg: "Geeft de richting/volgorde aan tussen stappen." },
           ],
           theorie: "Stroomdiagram = visueel stappenplan. Verschilt van tabel (rij/kolom), kaart (geografisch), grafiek (data-vergelijking).",
-          voorbeelden: [{ type: "stap", tekst: "Telefoonboom: 'Vraag X? ja → A / nee → B'. Met ruiten voor de vraag." }],
+          voorbeelden: [{ type: "stap", tekst: "Beslisboom: 'Vraag X? ja → A / nee → B'. Met ruiten voor de vraag." }],
           basiskennis: [{ onderwerp: "Vormen", uitleg: "Rechthoek = stap, ruit = keuze, ovaal/cirkel = start/eind, pijl = verbinding." }],
           niveaus: {
             basis: "Stappen met pijlen.",
@@ -1736,7 +1736,7 @@ const steps = [
             { titel: "Recept eerst", tekst: "Zonder recept weet je niet welke ingrediënten, hoeveelheden, of stappen nodig zijn." },
           ],
           woorden: [{ woord: "stappenplan", tekst: "Volgorde van handelingen om een doel te bereiken." }],
-          theorie: "Toets-tip: bij volgorde-vragen, denk 'wat is logisch ZONDER het volgende stap?' — kan je bakken zonder recept? Nee.",
+          theorie: "Toets-tip: bij volgorde-vragen, denk 'wat is logisch ZONDER de volgende stap?' — kan je bakken zonder recept? Nee.",
           voorbeelden: [{ type: "stap", tekst: "Volgorde taart: 1. Recept lezen → 2. Ingrediënten verzamelen → 3. Mengen → 4. Bakken → 5. Afkoelen → 6. Eten." }],
           basiskennis: [{ onderwerp: "Logica eerst", uitleg: "Stappen die NIETS weten over volgende = beginstappen." }],
           niveaus: {
@@ -1774,10 +1774,10 @@ const steps = [
         q: "Stappenplan: 1. Ingrediënten 2. Recept 3. Mengen 4. Bakken. **Welke stap is fout**?",
         options: ["Volgorde 1+2 omgedraaid (recept eerst)", "Stap 4 fout", "Niets fout", "Stap 3"],
         answer: 0,
-        wrongHints: [null, "Bakken hoort als laatste.", "Wel fout.", "Mengen logisch tussen ingredienten en bakken."],
+        wrongHints: [null, "Bakken hoort als laatste.", "Wel fout.", "Mengen logisch tussen ingrediënten en bakken."],
         uitlegPad: {
           stappen: [
-            { titel: "Logische volgorde", tekst: "Een stappenplan moet in logische volgorde. Stap 1 moet kunnen WAT MOGELIJK is zonder de andere stappen." },
+            { titel: "Logische volgorde", tekst: "Een stappenplan moet in logische volgorde. Stap 1 moet iets zijn wat kan zonder de andere stappen." },
             { titel: "Recept eerst lezen", tekst: "Hoe weet je WELKE ingrediënten je nodig hebt? Pas als je het RECEPT hebt gelezen. Dus: recept → ingrediënten → mengen → bakken." },
             { titel: "Toets-truc: doe het in je hoofd", tekst: "Loop het stappenplan in je hoofd na alsof je het zelf gaat doen. Bij elke stap: 'kan ik dit nu? Of moet er iets eerder?' Dan zie je de fout." },
           ],
@@ -1942,7 +1942,7 @@ const steps = [
           woorden: [{ woord: "voedselketen", uitleg: "Schema van wie wie eet in de natuur." }],
           theorie: "Toets-truc: pijl-richting in voedselketen wijst altijd OP naar wie het opeet. Vossen staan boven konijnen.",
           voorbeelden: [{ type: "stap", tekst: "Plant → rups → vogel → roofvogel." }],
-          basiskennis: [{ onderwerp: "Hoogste", uitleg: "Aan einde van keten staan vaak roofdieren met geen vijanden (top-predatoren)." }],
+          basiskennis: [{ onderwerp: "Hoogste", uitleg: "Aan einde van keten staan vaak roofdieren zonder natuurlijke vijanden (top-predatoren)." }],
           niveaus: {
             basis: "Konijn.",
             simpeler: "Pijl konijn → vos betekent: vos eet konijn.",
@@ -1995,7 +1995,7 @@ const steps = [
         explanation: "In een boomdiagram is alles wat eronder hangt een **onderdeel** van wat erboven staat: zoogdieren ⊂ gewervelden.",
       },
       {
-        q: "**Stroomschema bij de wasmachine:** 'Is de was witter dan 40°C-label? → ja: was op 60. → nee: was op 30.' Jouw shirt heeft een 30°C-label. Wat doe je?",
+        q: "**Stroomschema bij de wasmachine:** 'Staat er 60°C op het label? → ja: was op 60. → nee: was op 30.' Jouw shirt heeft een 30°C-label. Wat doe je?",
         options: ["Wassen op 30 graden", "Wassen op 60 graden", "Niet wassen", "Het schema opnieuw beginnen"],
         answer: 0,
         wrongHints: [null, "Volg de pijl: het antwoord op de vraag is 'nee' — welke tak hoort daarbij?", "Niet wassen staat nergens in het schema.", "Een stroomschema doorloop je één keer per beslissing."],
@@ -2181,7 +2181,7 @@ const steps = [
       },
       {
         q: "Wat doe je **eerst** als je een onderwerp in een dik boek wilt vinden?",
-        options: ["Index achterin checken op onderwerp", "Boek hele lezen", "Plaatjes bekijken", "Eerste hoofdstuk"],
+        options: ["Index achterin checken op onderwerp", "Hele boek lezen", "Plaatjes bekijken", "Eerste hoofdstuk"],
         answer: 0,
         wrongHints: [null, "Veel te lang.", "Niet effectief.", "Niet als je specifiek zoekt."],
       },
@@ -2195,11 +2195,11 @@ const steps = [
         q: "**Atlas**-vraag: in welk **werelddeel** ligt Egypte?",
         options: ["Afrika", "Azië", "Europa", "Amerika"],
         answer: 0,
-        wrongHints: [null, "Sinaï is grens-buur, maar daar ligt Egypte niet.", "Te ver naar het noorden.", "Verkeerd continent — andere kant van de wereld."],
+        wrongHints: [null, "Alleen het Sinaï-schiereiland ligt in Azië — de rest van Egypte niet.", "Te ver naar het noorden.", "Verkeerd continent — andere kant van de wereld."],
         uitlegPad: {
           stappen: [
             { titel: "Egypte op kaart", tekst: "Egypte ligt in het **noordoosten van Afrika**, met de Nijl-rivier en de Middellandse Zee als noordgrens." },
-            { titel: "Sinaï-misverstand", tekst: "Het kleine Sinaï-schiereiland van Egypte raakt geografisch aan Azië, maar Egypte als land wordt tot **Afrika** gerekend." },
+            { titel: "Sinaï-misverstand", tekst: "Het kleine Sinaï-schiereiland van Egypte ligt geografisch in Azië, maar Egypte als land wordt tot **Afrika** gerekend." },
           ],
           woorden: [
             { woord: "werelddeel", uitleg: "Een van de 7 grote continenten: Afrika/Azië/Europa/Noord-Amerika/Zuid-Amerika/Oceanië/Antarctica." },
@@ -2243,7 +2243,7 @@ const steps = [
         q: "Tabel **bezoekers museum**: ma=20, di=30, wo=50, do=40, vr=60. Wat is **gemiddeld** per dag?",
         options: ["40", "200", "50", "20"],
         answer: 0,
-        wrongHints: [null, "Dat is de som, niet het gemiddelde.", "Te hoog.", "Te laag — dat is de minimum."],
+        wrongHints: [null, "Dat is de som, niet het gemiddelde.", "Te hoog.", "Te laag — dat is het minimum."],
       },
       {
         q: "Bij een **cirkeldiagram** zijn alle delen samen altijd ___?",
@@ -2258,7 +2258,7 @@ const steps = [
         wrongHints: [null, "Kijk derde letter: ta**a** vs ta**b** vs ta**f** — a komt eerst.", "Idem — niet vooraan.", "Verschillende woorden."],
         uitlegPad: {
           stappen: [
-            { titel: "Alfabet bij gelijke begin", tekst: "Begin gelijk ('ta')? Kijk naar de volgende letter. 'a' komt eerst, dan 'b', dan 'f'." },
+            { titel: "Alfabet bij gelijk begin", tekst: "Begin gelijk ('ta')? Kijk naar de volgende letter. 'a' komt eerst, dan 'b', dan 'f'." },
           ],
           woorden: [{ woord: "alfabetische volgorde", uitleg: "A, B, C, D, ... Volgorde van letters in het alfabet." }],
           theorie: "Toets-truc: vergelijk letter voor letter tot je een verschil vindt.",
@@ -2318,7 +2318,7 @@ const steps = [
       },
       {
         q: "Schema toont: **'a → b → c'**. Welk **getalpatroon** past op a, b, c?",
-        options: ["1, 2, 3 (volgorde)", "5, 5, 5 (gelijk)", "3, 2, 1 (omgekeerd)", "Random"],
+        options: ["1, 2, 3 (volgorde)", "5, 5, 5 (gelijk)", "3, 2, 1 (omgekeerd)", "Willekeurig"],
         answer: 0,
         wrongHints: [null, "Geen — schema toont volgorde, dus stijgt of evolueert.", "Tegenovergesteld.", "Niet — schema is georganiseerd."],
       },
@@ -2356,7 +2356,7 @@ const steps = [
         q: "Een **kaart van de wereld** is geprojecteerd op een **platte vorm**. Welke **vertekening** zie je vaak?",
         options: ["Groenland lijkt veel te groot", "Amsterdam is verdwenen", "Oceanen zijn paars", "Alles is even groot"],
         answer: 0,
-        wrongHints: [null, "Niet — wel zichtbaar.", "Geen relevant.", "Tegenovergesteld — vertekening BESTAAT."],
+        wrongHints: [null, "Niet — wel zichtbaar.", "Niet relevant.", "Tegenovergesteld — vertekening BESTAAT."],
       },
       {
         q: "Je moet om **10:00 op school** zijn voor de toets. De fietstocht duurt 20 minuten en je wilt 10 minuten reserve. Hoe laat vertrek je uiterlijk?",
@@ -2754,7 +2754,7 @@ const steps = [
         ref: "S",
         options: ["Vanaf 9 keer", "Vanaf 8 keer", "Vanaf 10 keer", "Vanaf 5 keer"],
         answer: 0,
-        wrongHints: [null, "Bij 8 keer betaal je los precies évenveel als de kaart — nog niet goedkoper.", "Je hoeft de kaart niet vol te maken om al voordeel te hebben.", "Bij 5 keer los zit je pas op de helft van de kaartprijs."],
+        wrongHints: [null, "Bij 8 keer betaal je los precies évenveel als de kaart — nog niet goedkoper.", "Je hoeft de kaart niet vol te maken om al voordeel te hebben.", "Bij 5 keer los betaal je pas € 25 — dan is de kaart nog duurder."],
         explanation: "8 × € 5 = € 40: gelijkspel. Bij **9 keer** kost los € 45 en ben je met de kaart van € 40 dus goedkoper uit.",
       },
       {

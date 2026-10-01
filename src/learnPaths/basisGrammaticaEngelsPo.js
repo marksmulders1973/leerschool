@@ -56,7 +56,7 @@ const steps = [
   },
   {
     title: "This / That / These / Those",
-    explanation: "**Aanwijzen** in Engels:\n\n| Enkelvoud | Meervoud | Afstand |\n|-----------|----------|---------|\n| this (dit/deze) | these (deze) | dichtbij |\n| that (dat/die) | those (die) | ver weg |\n\n**Voorbeelden**:\n• This is my book. (dit boek dat ik vasthoud)\n• That is your car. (die auto daar verderop)\n• These are my friends. (deze vrienden dichtbij)\n• Those are big trees. (die bomen daar)\n\n**Truc**: this/these = HIER · that/those = DAAR.",
+    explanation: "**Aanwijzen** in het Engels:\n\n| Enkelvoud | Meervoud | Afstand |\n|-----------|----------|---------|\n| this (dit/deze) | these (deze) | dichtbij |\n| that (dat/die) | those (die) | ver weg |\n\n**Voorbeelden**:\n• This is my book. (dit boek dat ik vasthoud)\n• That is your car. (die auto daar verderop)\n• These are my friends. (deze vrienden dichtbij)\n• Those are big trees. (die bomen daar)\n\n**Truc**: this/these = HIER · that/those = DAAR.",
     checks: [
       { q: "*'__ is my book.'* — boek dat ik vasthoud", options: ["This", "That", "These", "Those"], answer: 0, wrongHints: [null, "Niet — that is ver weg.", "Niet — meervoud.", "Niet."] },
       { q: "*'Look at __ birds in the tree.'* — meerdere vogels ver weg", options: ["those", "that", "these", "this"], answer: 0, wrongHints: [null, "Niet — enkelvoud.", "Niet — dichtbij.", "Niet."] },
@@ -72,19 +72,19 @@ const steps = [
       { q: "Vul in: 'I __ a student.'", options: ["am", "is", "are", "be"], answer: 0, wrongHints: [null, "Niet — is = hij/zij/het.", "Niet — are = jij/wij/zij.", "Hele werkwoord, niet vervoegd."] },
       { q: "Vul in: 'She __ my sister.'", options: ["is", "am", "are", "be"], answer: 0, wrongHints: [null, "Niet — am = ik.", "Niet — are = jij/wij/zij.", "Hele werkwoord."] },
       { q: "Vul in: 'They __ in the park.'", options: ["are", "am", "is", "be"], answer: 0, wrongHints: [null, "Niet — am = ik.", "Niet — is = hij/zij/het.", "Hele werkwoord."] },
-      { q: "Wat is de korte vorm van **He is**?", options: ["He's", "Hes", "He're", "Heis"], answer: 0, wrongHints: [null, "Apostrof vergeten.", "Niet — that's 'are'.", "Niet samengetrokken."] },
+      { q: "Wat is de korte vorm van **He is**?", options: ["He's", "Hes", "He're", "Heis"], answer: 0, wrongHints: [null, "Apostrof vergeten.", "Niet — 're hoort bij 'are'.", "Niet samengetrokken."] },
       { q: "Vul in: 'We __ at school.'", options: ["are", "is", "am", "be"], answer: 0, wrongHints: [null, "Niet — is = enkelvoud.", "Niet — am = ik.", "Hele werkwoord."] },
     ],
   },
   {
     title: "Present simple — tegenwoordige tijd",
-    explanation: "Voor **gewoontes / feiten** gebruik je present simple.\n\n**Vorm**: onderwerp + werkwoord (+ s bij he/she/it)\n\n| Onderwerp | Werkwoord | Voorbeeld |\n|-----------|-----------|-----------|\n| I / You / We / They | play | I play football. |\n| He / She / It | play**s** | She plays piano. |\n\n**Signaalwoorden**: always, usually, often, sometimes, never, every day.\n\n**Voorbeelden**:\n• I read books. (Ik lees boeken.)\n• He plays football. (Hij speelt voetbal.)\n• We go to school. (Wij gaan naar school.)\n• She likes cats. (Zij houdt van katten.)\n\n**Let op -s**:\n• do → does (special)\n• go → goes\n• fly → flies (y na medeklinker → ies)\n• study → studies",
+    explanation: "Voor **gewoontes / feiten** gebruik je present simple.\n\n**Vorm**: onderwerp + werkwoord (+ s bij he/she/it)\n\n| Onderwerp | Werkwoord | Voorbeeld |\n|-----------|-----------|-----------|\n| I / You / We / They | play | I play football. |\n| He / She / It | play**s** | She plays piano. |\n\n**Signaalwoorden**: always, usually, often, sometimes, never, every day.\n\n**Voorbeelden**:\n• I read books. (Ik lees boeken.)\n• He plays football. (Hij speelt voetbal.)\n• We go to school. (Wij gaan naar school.)\n• She likes cats. (Zij houdt van katten.)\n\n**Let op -s**:\n• do → does (uitzondering)\n• go → goes\n• fly → flies (y na medeklinker → ies)\n• study → studies",
     checks: [
       { q: "Vul in: 'I __ books.' (read)", options: ["read", "reads", "reading", "readed"], answer: 0, wrongHints: [null, "Niet — alleen bij he/she/it.", "Continuous — niet hier.", "Bestaat niet."] },
       { q: "Vul in: 'She __ piano.' (play)", options: ["plays", "play", "playing", "played"], answer: 0, wrongHints: [null, "Niet — vergeet -s bij she.", "Continuous.", "Verleden tijd."] },
       { q: "Vul in: 'We __ to school.' (go)", options: ["go", "goes", "going", "gone"], answer: 0, wrongHints: [null, "Niet — alleen bij he/she/it.", "Continuous.", "Voltooid deelwoord."] },
       { q: "Vul in: 'He __ chess.' (play)", options: ["plays", "play", "playing", "played"], answer: 0, wrongHints: [null, "Niet — vergeet -s bij he.", "Continuous.", "Verleden."] },
-      { q: "Welk signaalwoord past bij present simple?", options: ["always", "now", "yesterday", "tomorrow"], answer: 0, wrongHints: [null, "Continuous of present.", "Verleden tijd.", "Toekomst."] },
+      { q: "Welk signaalwoord past bij present simple?", options: ["always", "now", "yesterday", "tomorrow"], answer: 0, wrongHints: [null, "Hoort bij present continuous.", "Verleden tijd.", "Toekomst."] },
     ],
   },
   {
@@ -100,7 +100,7 @@ const steps = [
   },
   {
     title: "Eindopdracht — alles samen",
-    explanation: "Mix-toets over a/an + meervoud + this/that + am-is-are + present simple + vragen.\n\n**Tip**: bij twijfel, vraag jezelf:\n1. Klinker of medeklinker? → a/an\n2. Enkelvoud of meervoud?\n3. Ik / jij/wij/zij / hij-zij-het? → am / are / is\n4. Gewone werkwoord + -s bij he/she/it? → play / plays",
+    explanation: "Mix-toets over a/an + meervoud + this/that + am-is-are + present simple + vragen.\n\n**Tip**: bij twijfel, vraag jezelf:\n1. Klinker of medeklinker? → a/an\n2. Enkelvoud of meervoud?\n3. Ik / jij/wij/zij / hij-zij-het? → am / are / is\n4. Gewoon werkwoord + -s bij he/she/it? → play / plays",
     checks: [
       { q: "Welke is **fout**?", options: ["She play piano.", "She plays piano.", "I play piano.", "They play piano."], answer: 0, wrongHints: [null, "Kijk naar het onderwerp + werkwoordvorm.", "Deze zin is juist — I/we/you/they krijgen géén -s. Zoek de zin met he/she/it + verkeerd werkwoord.", "Deze zin is juist — I/we/you/they krijgen géén -s. Zoek de zin met he/she/it + verkeerd werkwoord."] },
       { q: "Vul in: '__ apple a day keeps the doctor away.'", options: ["An", "A", "The", "Some"], answer: 0, wrongHints: [null, "Niet — klinkerklank.", "Niet — context vraagt om 'een'.", "Niet — niet 'wat appel'."] },
@@ -111,7 +111,7 @@ const steps = [
       { q: "Welk woord wijst aan op afstand: **die boom daar**?", options: ["that tree", "this tree", "those tree", "these tree"], answer: 0, wrongHints: [null, "Niet — dichtbij.", "Meervoud — fout.", "Meervoud — fout."] },
       { q: "Vertaal: *'Ik heb een hond.'*", options: ["I have a dog.", "I have an dog.", "I has a dog.", "I am a dog."], answer: 0, wrongHints: [null, "Niet — medeklinker → a.", "Niet — I have, niet I has.", "Niet — 'am' is 'ben'."] },
       { q: "Ontkenning: 'He __ eat meat.'", options: ["doesn't", "don't", "isn't", "aren't"], answer: 0, wrongHints: [null, "Niet — don't = I/you/we/they.", "Voor 'to be'.", "Voor 'to be'."] },
-      { q: "Welke 2 vormen kan **a/an** voor staan?", options: ["a + medeklinker / an + klinker", "an + alles", "a + alles", "a + meervoud"], answer: 0, wrongHints: [null, "Niet — a voor medeklinker.", "Niet — an voor klinker.", "Geen lidwoord vóór meervoud."] },
+      { q: "Wanneer gebruik je **a** en wanneer **an**?", options: ["a + medeklinker / an + klinker", "an + alles", "a + alles", "a + meervoud"], answer: 0, wrongHints: [null, "Niet — a voor medeklinker.", "Niet — an voor klinker.", "Geen lidwoord vóór meervoud."] },
     ],
   },
 ];

@@ -87,7 +87,7 @@ const steps = [
   },
   {
     title: "Helling van een kromme — verschilt per punt",
-    explanation: "Bij een **kromme** (zoals een parabool y = x²) is de helling **niet overal hetzelfde**.\n\n**Voorbeeld parabool y = x²**:\n• Bij x = -2: lijn helt steil omlaag.\n• Bij x = -1: minder steil.\n• Bij x = 0: helemaal vlak (top van de U).\n• Bij x = 1: weer stijgend.\n• Bij x = 2: steiler stijgend.\n\nDe helling **verandert** afhankelijk van waar je bent op de kromme.\n\n**Hoe meet je de helling in één specifiek punt?**\n\nOp het oog: teken een rechte lijn die de kromme **alleen in dat ene punt raakt** (= **raaklijn**). De helling van die raaklijn = de helling van de kromme in dat punt.\n\n**Voorbeeld** bij parabool y = x², punt (1, 1):\n• Teken een rechte lijn die de parabool alleen raakt bij (1, 1).\n• Die lijn heeft helling 2 (zo blijkt uit berekening).\n• Dus: helling van y = x² in het punt (1, 1) = **2**.\n\n**Notatie**: de helling in een punt heet ook **'instanteneous slope'** (Engels) of in NL **'helling op dat moment'**.\n\n**Differentiëren** is het proces waarmee je voor elke x de bijbehorende helling kunt berekenen — als formule. Voor y = x² blijkt de helling op punt x altijd **2x** te zijn.",
+    explanation: "Bij een **kromme** (zoals een parabool y = x²) is de helling **niet overal hetzelfde**.\n\n**Voorbeeld parabool y = x²**:\n• Bij x = -2: lijn helt steil omlaag.\n• Bij x = -1: minder steil.\n• Bij x = 0: helemaal vlak (top van de U).\n• Bij x = 1: weer stijgend.\n• Bij x = 2: steiler stijgend.\n\nDe helling **verandert** afhankelijk van waar je bent op de kromme.\n\n**Hoe meet je de helling in één specifiek punt?**\n\nOp het oog: teken een rechte lijn die de kromme **alleen in dat ene punt raakt** (= **raaklijn**). De helling van die raaklijn = de helling van de kromme in dat punt.\n\n**Voorbeeld** bij parabool y = x², punt (1, 1):\n• Teken een rechte lijn die de parabool alleen raakt bij (1, 1).\n• Die lijn heeft helling 2 (zo blijkt uit berekening).\n• Dus: helling van y = x² in het punt (1, 1) = **2**.\n\n**Notatie**: de helling in een punt heet ook **'instantaneous slope'** (Engels) of in NL **'helling op dat moment'**.\n\n**Differentiëren** is het proces waarmee je voor elke x de bijbehorende helling kunt berekenen — als formule. Voor y = x² blijkt de helling op punt x altijd **2x** te zijn.",
     svg: (() => {
       const { toX, toY } = baseAxes(-3, 4, -1, 9);
       // Parabool y = x²
@@ -108,7 +108,7 @@ const steps = [
     })(),
     checks: [
       {
-        q: "*Bij welke parabool y = x², in welk punt is de helling 0?*",
+        q: "*Bij de parabool y = x²: in welk punt is de helling 0?*",
         options: ["(0, 0) — de top", "(1, 1)", "(-1, 1)", "(2, 4)"],
         answer: 0,
         wrongHints: [
@@ -249,7 +249,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [{ titel: "Hoofdregel n·x^(n-1)", tekst: "x⁵ → 5·x⁴. Exponent voor, dan -1." }],
-          woorden: [{ woord: "hoofdregel", uitleg: "differentiëer-regel voor machten" }],
+          woorden: [{ woord: "hoofdregel", uitleg: "differentieer-regel voor machten" }],
           theorie: "x^n → n·x^(n-1). Verlaag exponent met 1.",
           voorbeelden: [{ type: "voorbeeld", tekst: "x³ → 3x², x⁴ → 4x³, x⁵ → 5x⁴" }],
           basiskennis: [{ onderwerp: "twee stappen", uitleg: "oude exponent voor + verlaag met 1" }],
@@ -317,7 +317,7 @@ const steps = [
   // ─── C. Regels van differentiëren ─────────────────────
   {
     title: "Som-regel — termen apart differentiëren",
-    explanation: "**Som-regel**: bij een functie met meerdere termen differentiëer je **elke term apart** en tel je de afgeleides bij elkaar op.\n\n**Algemeen**: $(f+g)' = f' + g'$\n\n**Voorbeeld**: f(x) = x³ + 5x² − 7x + 2\n\n• Differentieer x³: 3x²\n• Differentieer 5x²: 10x\n• Differentieer -7x: -7\n• Differentieer 2: 0\n\n**f'(x) = 3x² + 10x − 7**\n\nDe constante (2) verdwijnt — die heeft helling 0.\n\n**Andere voorbeelden**:\n\n**f(x) = 2x³ + x² − 4x + 9**\n• 2x³ → 6x²\n• x² → 2x\n• -4x → -4\n• 9 → 0\n• **f'(x) = 6x² + 2x − 4**\n\n**f(x) = x⁴ − 3x³ + 2x − 5**\n• x⁴ → 4x³\n• -3x³ → -9x²\n• 2x → 2\n• -5 → 0\n• **f'(x) = 4x³ − 9x² + 2**\n\n**Tip**: ga **van links naar rechts** door de termen, differentieer elke apart, en zet de uitkomsten netjes achter elkaar (met de juiste tekens).\n\n**Aftrek-regel** is hetzelfde als som met negatieve coëfficiënt — werkt automatisch via tekens.",
+    explanation: "**Som-regel**: bij een functie met meerdere termen differentieer je **elke term apart** en tel je de afgeleides bij elkaar op.\n\n**Algemeen**: $(f+g)' = f' + g'$\n\n**Voorbeeld**: f(x) = x³ + 5x² − 7x + 2\n\n• Differentieer x³: 3x²\n• Differentieer 5x²: 10x\n• Differentieer -7x: -7\n• Differentieer 2: 0\n\n**f'(x) = 3x² + 10x − 7**\n\nDe constante (2) verdwijnt — die heeft helling 0.\n\n**Andere voorbeelden**:\n\n**f(x) = 2x³ + x² − 4x + 9**\n• 2x³ → 6x²\n• x² → 2x\n• -4x → -4\n• 9 → 0\n• **f'(x) = 6x² + 2x − 4**\n\n**f(x) = x⁴ − 3x³ + 2x − 5**\n• x⁴ → 4x³\n• -3x³ → -9x²\n• 2x → 2\n• -5 → 0\n• **f'(x) = 4x³ − 9x² + 2**\n\n**Tip**: ga **van links naar rechts** door de termen, differentieer elke apart, en zet de uitkomsten netjes achter elkaar (met de juiste tekens).\n\n**Aftrek-regel** is hetzelfde als som met negatieve coëfficiënt — werkt automatisch via tekens.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">som-regel: (f + g)' = f' + g'</text>
@@ -337,7 +337,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Differentiëer elke term apart. Regel: bij xⁿ → n·xⁿ⁻¹. Vergeet de coëfficiënt 4 niet bij term 2.",
+          "Differentieer elke term apart. Regel: bij xⁿ → n·xⁿ⁻¹. Vergeet de coëfficiënt 4 niet bij term 2.",
           "Heb je de coëfficiënt 4 meegenomen bij term 2? Bij c·xⁿ → c·n·xⁿ⁻¹.",
           "Bij differentiëren *verlaag* je de exponent met 1 (niet verhogen).",
         ],
@@ -370,7 +370,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Differentiëer f(x) = 3x³ − 2x² + 7.*",
+        q: "*Differentieer f(x) = 3x³ − 2x² + 7.*",
         options: [
           "f'(x) = 9x² − 4x",
           "f'(x) = 9x² − 4x + 7",
@@ -435,7 +435,7 @@ const steps = [
   // ─── D. Toepassingen ──────────────────────────────────
   {
     title: "Extreme waarden — toppen en dalen vinden",
-    explanation: "Een **extreme waarde** is een **maximum** of **minimum** van een functie. Op zo'n punt is de **helling 0** (raaklijn is horizontaal).\n\n**Stappenplan om extreme waarden te vinden**:\n1. Bereken f'(x).\n2. Stel f'(x) = 0 → vergelijking oplossen.\n3. De x-waarde(s) zijn de mogelijke extreme punten.\n4. Vul terug in f(x) om de y-waarde te krijgen.\n5. Bepaal of het een maximum of minimum is (volgende stap).\n\n**Voorbeeld**: vind het maximum van f(x) = -x² + 6x − 5.\n\n**Stap 1**: f'(x) = -2x + 6.\n\n**Stap 2**: -2x + 6 = 0 → -2x = -6 → x = 3.\n\n**Stap 3**: x = 3 is mogelijk extreme.\n\n**Stap 4**: f(3) = -9 + 18 − 5 = 4. Dus het extreme punt is **(3, 4)**.\n\n**Stap 5**: dit is een maximum (parabool met negatieve a opent omlaag → top is max).\n\n**Voorbeeld 2**: vind toppen van f(x) = x³ − 3x.\n\n• f'(x) = 3x² − 3 = 0 → 3x² = 3 → x² = 1 → x = ±1.\n• Twee mogelijke extreme: x = 1 en x = -1.\n• f(1) = 1 − 3 = -2 → punt (1, -2).\n• f(-1) = -1 + 3 = 2 → punt (-1, 2).\n\nGrafiek: (-1, 2) is een **maximum** (locale top), (1, -2) is een **minimum** (locale dal).\n\n**Toepassing in echt leven**: optimaliseren — wanneer is iets het hoogst, het laagst, het meest efficiënt?\n• Maximum winst.\n• Minimum kosten.\n• Hoogste punt van een raket.\n• Diepste punt in een geluidsgolf.",
+    explanation: "Een **extreme waarde** is een **maximum** of **minimum** van een functie. Op zo'n punt is de **helling 0** (raaklijn is horizontaal).\n\n**Stappenplan om extreme waarden te vinden**:\n1. Bereken f'(x).\n2. Stel f'(x) = 0 → vergelijking oplossen.\n3. De x-waarde(s) zijn de mogelijke extreme punten.\n4. Vul terug in f(x) om de y-waarde te krijgen.\n5. Bepaal of het een maximum of minimum is (volgende stap).\n\n**Voorbeeld**: vind het maximum van f(x) = -x² + 6x − 5.\n\n**Stap 1**: f'(x) = -2x + 6.\n\n**Stap 2**: -2x + 6 = 0 → -2x = -6 → x = 3.\n\n**Stap 3**: x = 3 is mogelijk een extreem.\n\n**Stap 4**: f(3) = -9 + 18 − 5 = 4. Dus het extreme punt is **(3, 4)**.\n\n**Stap 5**: dit is een maximum (parabool met negatieve a opent omlaag → top is max).\n\n**Voorbeeld 2**: vind toppen van f(x) = x³ − 3x.\n\n• f'(x) = 3x² − 3 = 0 → 3x² = 3 → x² = 1 → x = ±1.\n• Twee mogelijke extremen: x = 1 en x = -1.\n• f(1) = 1 − 3 = -2 → punt (1, -2).\n• f(-1) = -1 + 3 = 2 → punt (-1, 2).\n\nGrafiek: (-1, 2) is een **maximum** (lokale top), (1, -2) is een **minimum** (lokaal dal).\n\n**Toepassing in echt leven**: optimaliseren — wanneer is iets het hoogst, het laagst, het meest efficiënt?\n• Maximum winst.\n• Minimum kosten.\n• Hoogste punt van een raket.\n• Diepste punt in een geluidsgolf.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">extreme waarden — f'(x) = 0</text>
@@ -450,7 +450,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Voor f(x) = x² − 6x + 8 — welk x heeft de minimum?*",
+        q: "*Voor f(x) = x² − 6x + 8 — bij welke x ligt het minimum?*",
         options: ["x = 3", "x = 6", "x = 8", "x = 0"],
         answer: 0,
         wrongHints: [
@@ -510,7 +510,7 @@ const steps = [
 
   // ─── E. Eindopdracht ──────────────────────────────────
   {
-    title: "Mixed — alle regels samen",
+    title: "Gemengd — alle regels samen",
     explanation: "Vier vragen die alle hoofdstukken combineren.\n\n**Examen-tip**: schrijf altijd:\n1. Eerst de afgeleide-formule f'(x).\n2. Dan vul je in waar nodig.\n3. Controleer het antwoord (logica-check: heeft de uitkomst zin?).",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="60" y="40" width="180" height="100" rx="14" fill="rgba(255,213,79,0.15)" stroke="${COLORS.warm}" stroke-width="3"/>
@@ -550,7 +550,7 @@ const steps = [
         wrongHints: [
           null,
           "Vergeet de +1 niet — wat is de afgeleide van de losse x-term?",
-          "Vergeet de +1 niet (afgeleide van x).",
+          "Dat is f(2), de y-waarde — niet de helling.",
           "Wat is de afgeleide van de term x alleen? Dat is niet 0.",
         ],
         uitlegPad: {
@@ -675,7 +675,7 @@ const steps = [
           woorden: [{ woord: "negatieve macht", uitleg: "x⁻² = 1/x²" }],
           theorie: "Regel werkt ook bij negatieve n: -2 - 1 = -3.",
           voorbeelden: [{ type: "voorbeeld", tekst: "x⁻¹ → -x⁻², x⁻² → -2x⁻³" }],
-          basiskennis: [{ onderwerp: "tekens", uitleg: "negatief × negatief = negatief in n·x^(n-1)" }],
+          basiskennis: [{ onderwerp: "tekens", uitleg: "positief × negatief = negatief: 5·(-2) = -10" }],
           niveaus: { basis: "5·(-2)x⁻³ = -10x⁻³.", simpeler: "Coëfficiënt -10, exponent -3.", nogSimpeler: "-10x⁻³." },
         },
       },
@@ -734,19 +734,19 @@ const steps = [
           niveaus: { basis: "f'(1) = 6.", simpeler: "Vul x = 1 in -6x + 12.", nogSimpeler: "-6 + 12 = 6." },
         },
       },
-      { q: "Wat is de afgeleide van f(x) = x²?", options: ["2x","x","x²/2","x³"], answer: 0, wrongHints: [null, "Niet — vergeet exponent te vermenigvuldigen.", "Dat is integraal.", "Niet — exponent ↓, niet ↑."] },
+      { q: "Wat is de afgeleide van f(x) = x²?", options: ["2x","x","x²/2","x³"], answer: 0, wrongHints: [null, "Niet — vergeet exponent te vermenigvuldigen.", "Niet — de exponent gaat juist als factor naar voren.", "Niet — exponent ↓, niet ↑."] },
       { q: "Wat is de afgeleide van f(x) = 3x?", options: ["3","3x","x","0"], answer: 0, wrongHints: [null, "Niet — x weg.", "Niet — coëfficiënt blijft.", "Niet — niet 0."] },
       { q: "Wat is de afgeleide van f(x) = 5?", options: ["0","5","5x","1"], answer: 0, wrongHints: [null, "Niet — constante is verdwenen.", "Niet.", "Niet."] },
       { q: "**Helling** in punt is gelijk aan?", options: ["Waarde van afgeleide in dat punt","Y-waarde in dat punt","X-waarde","Som x + y"], answer: 0, wrongHints: [null, "Niet — y zelf, geen helling.", "Niet.", "Niet."] },
       { q: "Afgeleide van f(x) = x³?", options: ["3x²","x²","3x","x⁴"], answer: 0, wrongHints: [null,"Exponent vergeten meenemen.","Coëfficiënt mist.","Verkeerde verandering exponent."] },
       { q: "Afgeleide van f(x) = 4x² + 7?", options: ["8x","8x + 7","8x²","4x"], answer: 0, wrongHints: [null,"Constante verdwijnt.","Niet — exponent ↓.","Coëfficiënt fout."] },
       { q: "Afgeleide van f(x) = x²+x?", options: ["2x + 1","2x","x + 1","2x²"], answer: 0, wrongHints: [null,"Mist afg van x.","Mist 2x.","Niet."] },
-      { q: "**f'(x) = 0** wijst op?", options: ["Extreme waarde (max of min)","Snijpunt y-as","Asymptoot","Geen relevant"], answer: 0, wrongHints: [null,"Niet primair.","Niet relevant.","Wel relevant."] },
+      { q: "**f'(x) = 0** wijst op?", options: ["Extreme waarde (max of min)","Snijpunt y-as","Asymptoot","Niets bijzonders"], answer: 0, wrongHints: [null,"Niet primair.","Niet relevant.","Wel relevant."] },
       { q: "Wat is de **afgeleide** van een **constante** (bv 7)?", options: ["0","7","1","x"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Niet.","Niet."] },
       { q: "Afgeleide van f(x) = 2x⁵?", options: ["10x⁴","2x⁴","10x⁵","5x⁴"], answer: 0, wrongHints: [null,"Coëfficiënt fout.","Niet — exponent ↓.","Coëfficiënt fout."] },
-      { q: "**Tangent** aan grafiek in punt heeft welke helling?", options: ["f'(x) in dat punt","y-waarde","x²","Constant"], answer: 0, wrongHints: [null,"De y-waarde is de hoogte van het punt, niet hoe steil de grafiek daar loopt. Welk begrip beschrijft de steilheid?","x² is de functie zelf, niet de steilheid ervan. Wat vertelt je juist iets over de helling in één punt?","Bij een kromme verandert de steilheid per punt — is de helling van een raaklijn dan wel overal hetzelfde?"] },
-      { q: "**Open vraag**: bereken f'(2) als f(x) = x². Typ alleen getal.", kind: "open", acceptedAnswers: ["4"], numericTolerance: 0, explanation: "f'(x) = 2x → f'(2) = 4." },
-      { q: "**Open vraag**: wat is afgeleide van f(x) = 6x? Typ alleen getal.", kind: "open", acceptedAnswers: ["6"], numericTolerance: 0, explanation: "Afgeleide van ax is a. Hier a=6." },
+      { q: "**Raaklijn** aan grafiek in punt heeft welke helling?", options: ["f'(x) in dat punt","y-waarde","x²","Constant"], answer: 0, wrongHints: [null,"De y-waarde is de hoogte van het punt, niet hoe steil de grafiek daar loopt. Welk begrip beschrijft de steilheid?","x² is de functie zelf, niet de steilheid ervan. Wat vertelt je juist iets over de helling in één punt?","Bij een kromme verandert de steilheid per punt — is de helling van een raaklijn dan wel overal hetzelfde?"] },
+      { q: "**Open vraag**: bereken f'(2) als f(x) = x². Typ alleen het getal.", kind: "open", acceptedAnswers: ["4"], numericTolerance: 0, explanation: "f'(x) = 2x → f'(2) = 4." },
+      { q: "**Open vraag**: wat is de afgeleide van f(x) = 6x? Typ alleen het getal.", kind: "open", acceptedAnswers: ["6"], numericTolerance: 0, explanation: "Afgeleide van ax is a. Hier a=6." },
     ],
   },
 ];

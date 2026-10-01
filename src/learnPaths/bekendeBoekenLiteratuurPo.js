@@ -14,7 +14,7 @@ const steps = [
   {
     title: "Annie M.G. Schmidt + klassieke kinderboeken",
     explanation:
-      "**Annie M.G. Schmidt** *(1911-1995)* = beroemdste **kinderboekenschrijfster** van NL.\n\n**Wie was zij?**\n• Voluit: **Anna Maria Geertruida Schmidt**.\n• Geboren in **Kapelle** *(Zeeland)*.\n• Werkte eerst als **bibliothecaris**.\n• Begon schrijven voor radio + tijdschriften.\n• Schreef ook **toneelstukken** + **musicals**.\n• Won veel prijzen, o.a. **Hans Christian Andersen Prijs** *(1988, hoogste internationale kinderboek-prijs)*.\n• Stierf 1995 *(suïcide door uitzichtloze gezondheid)*.\n\n**Beroemdste boeken**:\n\n**Jip en Janneke** *(1953-1960)*:\n• Korte verhaaltjes over kleuter-broer-en-zus.\n• Eerst in tijdschriften, later in boeken.\n• Tekeningen van **Fiep Westendorp**.\n• 6 delen — verkocht miljoenen.\n• Vertaald in 20+ talen.\n\n**Pluk van de Petteflet** *(1971)*:\n• Jongetje Pluk woont in de torenflat 'De Petteflet'.\n• Heeft brandweerauto-tje.\n• Maakt vrienden: torteltje, mevrouw Helderder, de Stampertjes.\n• Tekeningen Fiep Westendorp.\n\n**Otje** *(1980)*:\n• Meisje Otje en haar papa Tos *(kok)*.\n• Otje kan dieren verstaan.\n• Familieverhaal met avontuur.\n\n**Andere Schmidt-boeken**:\n• Floddertje *(meisje dat alles vies maakt)*.\n• Wiplala *(klein wezen)*.\n• Minoes *(kat die mens wordt — verfilmd in 2001 met Carice van Houten)*.\n• Abeltje *(kleine man maakt avonturen)*.\n\n**Liedjes + gedichten**:\n• Schreef ~200 liedjes, vele beroemd.\n• 'Dikkertje Dap' *(over giraffe)*.\n• 'De Lapjeskat'.\n• 'Sebastiaan de spin'.\n• Hele generaties NL-kinderen zingen ze nog.\n\n**Fiep Westendorp** *(1916-2004)*:\n• **Illustratrice** van Schmidts boeken.\n• Eenvoudige zwarte lijntjes.\n• Iconisch — niet verwarbaar.\n\n**Andere klassieke NL-kinderschrijvers**:\n\n**Paul Biegel** *(1925-2006)*:\n• Sprookjesachtige verhalen.\n• 'Koning van de Kopermijnberg'.\n• '12 Sloeg de Klok'.\n\n**Tonke Dragt** *(1930+)*:\n• Fantasy-jeugdboeken.\n• 'De Brief voor de Koning' *(1962)* — verfilmd op Netflix.\n• 'Geheimen van het Wilde Woud'.\n\n**Guus Kuijer** *(1942+)*:\n• Realistisch, herkenbaar.\n• 'Het Boek van Alle Dingen'.\n• 'Polleke' *(serie van 5)*.\n• Won Astrid Lindgren Award *(2012)*.\n\n**Joke van Leeuwen** *(1952+)*:\n• Humoristisch + filosofisch.\n• 'De Verhalen' *(Een Indiaan als jij en ik)*.\n\n**Internationaal beroemd**:\n• **Roald Dahl** *(Brits, 'Sjakie + chocoladefabriek', 'Matilda', 'BFG')*.\n• **J.K. Rowling** *(Brits, Harry Potter)*.\n• **Astrid Lindgren** *(Zweeds, Pippi Langkous)*.\n• **Tove Jansson** *(Fins, Moemins)*.\n\n**Toets-feitje**:\nDe **Gouden Griffel** is sinds 1971 jaarlijkse prijs voor beste NL-jeugdboek. **Annie M.G. Schmidt** won 'm meerdere keren — 'Pluk van de Petteflet' werd in 2007 verkozen tot **beste NL-jeugdboek van de 20e eeuw**.",
+      "**Annie M.G. Schmidt** *(1911-1995)* = beroemdste **kinderboekenschrijfster** van NL.\n\n**Wie was zij?**\n• Voluit: **Anna Maria Geertruida Schmidt**.\n• Geboren in **Kapelle** *(Zeeland)*.\n• Werkte eerst als **bibliothecaris**.\n• Begon met schrijven voor radio + tijdschriften.\n• Schreef ook **toneelstukken** + **musicals**.\n• Won veel prijzen, o.a. **Hans Christian Andersen Prijs** *(1988, hoogste internationale kinderboek-prijs)*.\n• Stierf 1995 *(suïcide door uitzichtloze gezondheid)*.\n\n**Beroemdste boeken**:\n\n**Jip en Janneke** *(1953-1960)*:\n• Korte verhaaltjes over twee kleuters: buurjongen en buurmeisje.\n• Eerst in tijdschriften, later in boeken.\n• Tekeningen van **Fiep Westendorp**.\n• 6 delen — verkocht miljoenen.\n• Vertaald in 20+ talen.\n\n**Pluk van de Petteflet** *(1971)*:\n• Jongetje Pluk woont in de torenflat 'De Petteflet'.\n• Heeft een rood kraanwagentje.\n• Maakt vrienden: het torteltje, de Stampertjes, meneer Penseel. Tegenstander: mevrouw Helderder.\n• Tekeningen Fiep Westendorp.\n\n**Otje** *(1980)*:\n• Meisje Otje en haar papa Tos *(kok)*.\n• Otje kan dieren verstaan.\n• Familieverhaal met avontuur.\n\n**Andere Schmidt-boeken**:\n• Floddertje *(meisje dat alles vies maakt)*.\n• Wiplala *(klein wezen)*.\n• Minoes *(kat die mens wordt — verfilmd in 2001 met Carice van Houten)*.\n• Abeltje *(liftjongen in een vliegende lift)*.\n\n**Liedjes + gedichten**:\n• Schreef ~200 liedjes, vele beroemd.\n• 'Dikkertje Dap' *(over giraffe)*.\n• 'De Lapjeskat'.\n• 'Sebastiaan de spin'.\n• Hele generaties NL-kinderen zingen ze nog.\n\n**Fiep Westendorp** *(1916-2004)*:\n• **Illustratrice** van Schmidts boeken.\n• Eenvoudige zwarte lijntjes.\n• Iconisch — niet te verwarren.\n\n**Andere klassieke NL-kinderschrijvers**:\n\n**Paul Biegel** *(1925-2006)*:\n• Sprookjesachtige verhalen.\n• 'De koning van de Kopermijnen'.\n• '12 Sloeg de Klok'.\n\n**Tonke Dragt** *(1930-2024)*:\n• Fantasy-jeugdboeken.\n• 'De Brief voor de Koning' *(1962)* — verfilmd op Netflix.\n• 'Geheimen van het Wilde Woud'.\n\n**Guus Kuijer** *(1942+)*:\n• Realistisch, herkenbaar.\n• 'Het Boek van Alle Dingen'.\n• 'Polleke' *(serie van 5)*.\n• Won Astrid Lindgren Award *(2012)*.\n\n**Joke van Leeuwen** *(1952+)*:\n• Humoristisch + filosofisch.\n• 'Iep!', 'Toen mijn vader een struik werd'.\n\n**Internationaal beroemd**:\n• **Roald Dahl** *(Brits, 'Sjakie + chocoladefabriek', 'Matilda', 'BFG')*.\n• **J.K. Rowling** *(Brits, Harry Potter)*.\n• **Astrid Lindgren** *(Zweeds, Pippi Langkous)*.\n• **Tove Jansson** *(Fins, Moemins)*.\n\n**Toets-feitje**:\nDe **Gouden Griffel** is sinds 1971 jaarlijkse prijs voor beste NL-jeugdboek. **Annie M.G. Schmidt** won 'm meerdere keren — 'Pluk van de Petteflet' werd in 2007 verkozen tot **beste NL-jeugdboek van de 20e eeuw**.",
     checks: [
       {
         q: "Wie schreef **Jip en Janneke**?",
@@ -24,7 +24,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wie was Annie M.G. Schmidt?", tekst: "**Annie M.G. Schmidt** (1911-1995) was de **beroemdste Nederlandse kinderboekenschrijfster** aller tijden. Ze schreef gedichten, verhalen, liedjes en musicals." },
-            { titel: "Bekende werken", tekst: "**Jip en Janneke** (verhalen over 2 buurkinderen), **Pluk van de Petteflet** (jongetje met rode kraanwagen), **Minoes** (kat die mens wordt), **Otje**, **Pippeloentje**, **Sebastiaan**." },
+            { titel: "Bekende werken", tekst: "**Jip en Janneke** (verhalen over 2 buurkinderen), **Pluk van de Petteflet** (jongetje met rood kraanwagentje), **Minoes** (kat die mens wordt), **Otje**, **Pippeloentje**, **Sebastiaan**." },
             { titel: "Stijl + onderscheidingen", tekst: "Eenvoudige taal, vrolijk, soms een beetje opstandig tegen autoriteit. Won in 1988 de **Hans Christian Andersen Prijs** — de 'Nobelprijs' van kinderboeken." },
           ],
           woorden: [
@@ -34,7 +34,7 @@ const steps = [
           theorie: "Toets-feit: NL-schrijvers onthouden — Schmidt (klassiek), Roald Dahl (Brits, 'BFG'), Tonke Dragt ('De brief voor de koning'), Paul van Loon ('Dolfje'), Carry Slee (realistisch).",
           voorbeelden: [
             { type: "stap", tekst: "Pluk woont in de Petteflet met meneer Penseel — Schmidt-boek uit 1971." },
-            { type: "stap", tekst: "Annie M.G. Schmidt staat op een postzegel + Annie M.G. Schmidt-prijs voor kinderboeken." },
+            { type: "stap", tekst: "Annie M.G. Schmidt staat op een postzegel + er is een Annie M.G. Schmidtprijs (voor het beste theaterlied)." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Annie M.G. Schmidt = klassieke NL-kinderboeken. Roald Dahl = Britse klassieke." }],
           niveaus: {
@@ -51,8 +51,8 @@ const steps = [
         wrongHints: [null, "Nijntje.", "Efteling.", "Veel ouder."],
         uitlegPad: {
           stappen: [
-            { titel: "Fiep Westendorp (1916-2004)", tekst: "**Fiep Westendorp** was de **tekenares** die de plaatjes maakte bij Annie M.G. Schmidt's boeken. Beroemde duo: zij tekende, Schmidt schreef." },
-            { titel: "Iconische stijl", tekst: "Eenvoudige, herkenbare lijnen. Jip en Janneke = silhouet-tekeningen. Pluk = kleine jongen met rode kraanwagen. Heel typisch Nederlandse kinderboek-stijl." },
+            { titel: "Fiep Westendorp (1916-2004)", tekst: "**Fiep Westendorp** was de **tekenares** die de plaatjes maakte bij Annie M.G. Schmidt's boeken. Beroemd duo: zij tekende, Schmidt schreef." },
+            { titel: "Iconische stijl", tekst: "Eenvoudige, herkenbare lijnen. Jip en Janneke = silhouet-tekeningen. Pluk = kleine jongen met rood kraanwagentje. Heel typisch Nederlandse kinderboek-stijl." },
             { titel: "Niet verwarren met andere illustratoren", tekst: "**Dick Bruna** = Nijntje (eenvoudige zwart-witte lijnen + kleurvlakken). **Anton Pieck** = Efteling (sprookjes-stijl). Verschillende beroemde Nederlandse illustratoren." },
           ],
           woorden: [
@@ -63,7 +63,7 @@ const steps = [
           theorie: "Toets-feit NL-illustratoren: Schmidt + Westendorp werkten 40+ jaar samen. Geweldig duo. Bekend zijn ook: Bruna (Nijntje wereldwijd), Pieck (Efteling), Marit Törnqvist.",
           voorbeelden: [
             { type: "stap", tekst: "Jip en Janneke = silhouet-figuurtjes van Fiep Westendorp. Nijntje = vlak konijntje van Dick Bruna." },
-            { type: "stap", tekst: "Schmidt schreef pas verhalen NADAT Westendorp eerst een tekening had — uniek werkproces." },
+            { type: "stap", tekst: "Jip en Janneke verscheen eerst als wekelijks verhaaltje mét tekening in de krant Het Parool." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schmidt + Westendorp = team. Bruna = Nijntje. Pieck = Efteling." }],
           niveaus: {
@@ -75,29 +75,29 @@ const steps = [
       },
       {
         q: "**Pluk van de Petteflet** — wat is dat?",
-        options: ["Jongetje in flat met brandweerauto", "Kat die mens wordt", "Spin", "Indiaan"],
+        options: ["Jongetje in flat met kraanwagentje", "Kat die mens wordt", "Spin", "Indiaan"],
         answer: 0,
         wrongHints: [null, "Minoes.", "Sebastiaan-liedje.", "Andere."],
         uitlegPad: {
           stappen: [
             { titel: "Wie is Pluk?", tekst: "**Pluk** is het hoofdpersoon van een klassiek NL-kinderboek van **Annie M.G. Schmidt** (1971). Een **jongetje** dat in z'n eentje gaat wonen in een grote flat genaamd 'de **Petteflet**'." },
-            { titel: "Zijn rode brandweerauto", tekst: "Pluk rijdt rond in z'n eigen kleine **rode brandweerauto-tje** (het 'Pluk-mobiel'). Hij helpt mensen + dieren in nood — een lieve jonge held." },
-            { titel: "Andere personages", tekst: "Pluk maakt vrienden:\n• **Mevrouw Helderder** — buurvrouw die schoonmaakt\n• **De Stampertjes** — drukke kinderen\n• Het **torteltje** dat hij redt\n• **Meneer Penseel** — schilder.\nVoorgelezen door generaties NL-ouders." },
+            { titel: "Zijn rode kraanwagentje", tekst: "Pluk rijdt rond in z'n eigen kleine **rode kraanwagentje**. Hij helpt mensen + dieren in nood — een lieve jonge held." },
+            { titel: "Andere personages", tekst: "Personages die Pluk tegenkomt:\n• **Mevrouw Helderder** — buurvrouw die alles schoon wil (tegenstander)\n• **De Stampertjes** — drukke kinderen\n• Het **torteltje** dat hij redt\n• **Meneer Penseel** — schilder.\nVoorgelezen door generaties NL-ouders." },
           ],
           woorden: [
             { woord: "Pluk", uitleg: "Jongetje hoofd-personage van Schmidt's boek." },
             { woord: "Petteflet", uitleg: "Verzonnen flat-naam waar Pluk woont." },
           ],
-          theorie: "Toets-feit: 'Pluk van de Petteflet' werd in **2007 verkozen tot beste NL-jeugdboek van de 20e eeuw**. Klassieker dus. Niet verwarren met andere Schmidt-boeken: Minoes = kat-die-mens-wordt, Otje = meisje-die-dieren-verstaat, Wiplala = klein wezentje.",
+          theorie: "Toets-feit: 'Pluk van de Petteflet' werd in **2007 verkozen tot beste NL-jeugdboek van de 20e eeuw**. Klassieker dus. Niet verwarren met andere Schmidt-boeken: Minoes = kat-die-mens-wordt, Otje = meisje-dat-dieren-verstaat, Wiplala = klein wezentje.",
           voorbeelden: [
             { type: "stap", tekst: "Het boek werd in 2004 verfilmd. Ook musical-versie." },
             { type: "stap", tekst: "'Petteflet' is een Schmidt-bedacht woord, geen echt Nederlands. Hoort bij haar speelse stijl." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Pluk = jongetje + brandweerauto + Petteflet-flat. Schmidt's beroemdste solo-personage." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Pluk = jongetje + kraanwagentje + Petteflet-flat. Schmidt's beroemdste solo-personage." }],
           niveaus: {
-            basis: "Jongetje in flat met rode brandweerauto.",
-            simpeler: "Pluk = hoofdpersoon Schmidt-boek (1971). Woont in Petteflet-flat + rijdt rond met klein brandweerauto-tje.",
-            nogSimpeler: "Jongetje met brandweerauto",
+            basis: "Jongetje in flat met rood kraanwagentje.",
+            simpeler: "Pluk = hoofdpersoon Schmidt-boek (1971). Woont in Petteflet-flat + rijdt rond met klein rood kraanwagentje.",
+            nogSimpeler: "Jongetje met kraanwagentje",
           },
         },
       },
@@ -105,14 +105,14 @@ const steps = [
         q: "**Hoogste internationale kinderboek-prijs** die Schmidt won?",
         options: ["Hans Christian Andersen Prijs", "Nobelprijs", "Oscar", "Gouden Pen"],
         answer: 0,
-        wrongHints: [null, "Geen kinder.", "Film.", "Niet."],
+        wrongHints: [null, "Geen kinderboekenprijs.", "Film.", "Niet."],
       },
     ],
   },
   {
     title: "Jeugdboeken + populaire series",
     explanation:
-      "Naast klassiek zijn er **moderne series** populair bij groep 6-8.\n\n**Carry Slee** *(1949+)*:\n• Realistische jeugdboeken voor 10+.\n• Onderwerpen: pesten, scheiding, drugs, vriendschap.\n• Boeken: 'Spijt!' *(over pesten + zelfmoord)*, 'Razend', 'Afblijven'.\n• Verkochte miljoenen.\n• Eerst zelf uitgegeven.\n\n**Francine Oomen** *(1958+)*:\n• 'Hoe overleef ik...'-serie *(13+ boeken)*.\n• Over Rosa en haar leven *(school, jongens, ouders)*.\n• Voor meiden 10-14.\n\n**Mirjam Mous** *(1963+)*:\n• Spannende boeken voor 12+.\n• 'Boy 7', 'Vigil 9'.\n\n**Jacques Vriens** *(1946+)*:\n• Realistische verhalen, vaak groep 8.\n• 'Achtste-groepers Huilen Niet' *(over groep 8-eindgevoel)* — beroemd verfilmd 2012.\n• 'Meester Jaap' *(serie)*.\n\n**Internationale series voor PO**:\n\n**Harry Potter** *(J.K. Rowling, 1997-2007)*:\n• 7 delen over jonge tovenaar.\n• Verkocht 600+ miljoen exemplaren.\n• 8 films.\n• Themaparken Orlando + Hollywood + Japan.\n\n**Hunger Games, Percy Jackson, Bouwer, Geronimo Stilton** etc.\n\n**Dolfje Weerwolfje** *(Paul van Loon)*:\n• Jongetje wordt 's nachts weerwolf.\n• 25+ delen.\n• Verfilmd.\n\n**Sammie + de Mannen** *(Dirk Nielandt)*.\n\n**Strips + comics**:\n• **Suske en Wiske** *(Willy Vandersteen, sinds 1945)*.\n• **Asterix** *(René Goscinny + Albert Uderzo, Frans)*.\n• **Tintin / Kuifje** *(Hergé, Belgisch)*.\n• **Donald Duck-weekblad** *(Disney)* — 200.000 NL-abonnees.\n• **Manga** *(Japans)* steeds populairder.\n\n**Bibliotheek**:\n• In NL ~700 bibliotheken.\n• **Gratis** voor jongeren onder 18 *(soms abonnement nodig)*.\n• Lenen 5-15 boeken tegelijk *(2-3 weken)*.\n• Niet teruggeven = boete *(€0,15-0,30 per dag)*.\n\n**E-readers + audio-boeken**:\n• Apps: Yindo, Onleihe.\n• Audio: Storytel, audible.\n\n**Lezen + brein**:\n• Lezen verbetert **woordenschat** + **concentratie** + **empathie**.\n• Studies: kinderen die ouders **dagelijks voorgelezen** krijgen, scoren beter op school.\n• Belangrijk: lees wat je leuk vindt — niet alleen 'echte boeken'.\n\n**Top-tips voor de toets**:\nLees veel verschillende dingen:\n• Tijdschrift, krant, strip, roman, gedicht.\n• Versterkt **leesvaardigheid + woordenschat** = goed voor de Doorstroomtoets.\n\n**Kinderboekenweek** 📚:\n• Jaarlijks in **oktober** *(2 weken)*.\n• Thema verschilt per jaar.\n• **Kinderboekenweek-geschenk**: gratis boek bij €15 boeken.\n• **Penseel** + **Griffel**-prijzen uitgereikt.\n• Sinds 1955.\n\n**Toets-feitje**:\nDe **'Kinderboekenweek 2024'** had als thema **'Tijdmachine'** *(geschiedenis-onderwerp)*. Het geschenk werd geschreven door **Bibi Dumon Tak**.",
+      "Naast klassiek zijn er **moderne series** populair bij groep 6-8.\n\n**Carry Slee** *(1949+)*:\n• Realistische jeugdboeken voor 10+.\n• Onderwerpen: pesten, scheiding, drugs, vriendschap.\n• Boeken: 'Spijt!' *(over pesten + zelfmoord)*, 'Razend', 'Afblijven'.\n• Verkocht miljoenen.\n• Eerst zelf uitgegeven.\n\n**Francine Oomen** *(1958+)*:\n• 'Hoe overleef ik...'-serie *(13+ boeken)*.\n• Over Rosa en haar leven *(school, jongens, ouders)*.\n• Voor meiden 10-14.\n\n**Mirjam Mous** *(1963+)*:\n• Spannende boeken voor 12+.\n• 'Boy 7', 'Vigil 9'.\n\n**Jacques Vriens** *(1946+)*:\n• Realistische verhalen, vaak groep 8.\n• 'Achtste-groepers Huilen Niet' *(over groep 8-eindgevoel)* — beroemd verfilmd 2012.\n• 'Meester Jaap' *(serie)*.\n\n**Internationale series voor PO**:\n\n**Harry Potter** *(J.K. Rowling, 1997-2007)*:\n• 7 delen over jonge tovenaar.\n• Verkocht 600+ miljoen exemplaren.\n• 8 films.\n• Themaparken Orlando + Hollywood + Japan.\n\n**Hunger Games, Percy Jackson, Geronimo Stilton** etc.\n\n**Dolfje Weerwolfje** *(Paul van Loon)*:\n• Jongetje wordt 's nachts weerwolf.\n• 25+ delen.\n• Verfilmd.\n\n**Sammie + de Mannen** *(Dirk Nielandt)*.\n\n**Strips + comics**:\n• **Suske en Wiske** *(Willy Vandersteen, sinds 1945)*.\n• **Asterix** *(René Goscinny + Albert Uderzo, Frans)*.\n• **Tintin / Kuifje** *(Hergé, Belgisch)*.\n• **Donald Duck-weekblad** *(Disney)* — 200.000 NL-abonnees.\n• **Manga** *(Japans)* steeds populairder.\n\n**Bibliotheek**:\n• In NL ~700 bibliotheken.\n• **Gratis** voor jongeren onder 18 *(soms abonnement nodig)*.\n• Lenen 5-15 boeken tegelijk *(3-4 weken)*.\n• Niet teruggeven = boete *(€0,15-0,30 per dag)*.\n\n**E-readers + audio-boeken**:\n• Apps: de online Bibliotheek, Yindo.\n• Audio: Storytel, Audible.\n\n**Lezen + brein**:\n• Lezen verbetert **woordenschat** + **concentratie** + **empathie**.\n• Studies: kinderen die thuis **dagelijks worden voorgelezen**, scoren beter op school.\n• Belangrijk: lees wat je leuk vindt — niet alleen 'echte boeken'.\n\n**Top-tips voor de toets**:\nLees veel verschillende dingen:\n• Tijdschrift, krant, strip, roman, gedicht.\n• Versterkt **leesvaardigheid + woordenschat** = goed voor de Doorstroomtoets.\n\n**Kinderboekenweek** 📚:\n• Jaarlijks in **oktober** *(2 weken)*.\n• Thema verschilt per jaar.\n• **Kinderboekenweek-geschenk**: gratis boek bij €15 boeken.\n• **Penseel** + **Griffel**-prijzen uitgereikt.\n• Sinds 1955.\n\n**Toets-feitje**:\nDe **'Kinderboekenweek 2024'** had als thema **'Lekker eigenwijs!'**.",
     checks: [
       {
         q: "Welke schrijfster: **'Hoe overleef ik...'-serie**?",
@@ -134,7 +134,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is de Kinderboekenweek?", tekst: "De **Kinderboekenweek** is een jaarlijks evenement in NL om kinderen aan het LEZEN te krijgen. Sinds 1955 elk jaar in oktober." },
-            { titel: "2 weken in oktober", tekst: "Loopt altijd ongeveer 2 weken in **oktober**. Elk jaar een ander thema (2024 was 'Tijdmachine'). Op scholen + in bibliotheken veel activiteiten." },
+            { titel: "2 weken in oktober", tekst: "Loopt altijd ongeveer 2 weken in **oktober**. Elk jaar een ander thema (2024 was 'Lekker eigenwijs!'). Op scholen + in bibliotheken veel activiteiten." },
             { titel: "Kinderboekenweekgeschenk", tekst: "Bij aankoop van €15 boeken krijg je GRATIS een speciaal boekje dat speciaal voor die week is geschreven. Ook prijzen: Gouden Griffel (beste tekst), Gouden Penseel (beste illustratie)." },
           ],
           woorden: [
@@ -144,7 +144,7 @@ const steps = [
           ],
           theorie: "Toets-feit: Kinderboekenweek is een vast NL-instituut. Hoort bij kennis over Nederlandse cultuur. Wordt georganiseerd door de **CPNB** (Stichting Collectieve Propaganda van het Nederlandse Boek).",
           voorbeelden: [
-            { type: "stap", tekst: "Kinderboekenweek 2024: 2-13 oktober, thema 'Tijdmachine'." },
+            { type: "stap", tekst: "Kinderboekenweek 2024: 2-13 oktober, thema 'Lekker eigenwijs!'." },
             { type: "stap", tekst: "Veel scholen hebben in deze week voorleeswedstrijden + auteursbezoeken." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: oktober + 2 weken + gratis boek bij €15 aankoop." }],
@@ -166,7 +166,7 @@ const steps = [
   {
     title: "Anne Frank + grote NL-literatuur",
     explanation:
-      "**Anne Frank** *(1929-1945)* = beroemdste NL-jonge schrijfster.\n\n**Wie was Anne?**\n• Geboren in Frankfurt, Duitsland *(joods gezin)*.\n• Vluchtte met familie naar **Amsterdam** *(1933)* — wegens **nazi's**.\n• Vader **Otto Frank** runde bedrijf 'Opekta'.\n• Toen Duitsers NL bezetten *(1940)* → joden vervolgd.\n\n**Onderduiken** *(1942-1944)*:\n• Familie verstopt in **achterhuis** *(Prinsengracht 263, Amsterdam)*.\n• Anne was **13 jaar**.\n• Met haar familie: ouders + zus **Margot** + 4 anderen *(familie Van Pels + tandarts Pfeffer)*.\n• 25 maanden in stilte + angst.\n\n**Dagboek**:\n• Anne kreeg **dagboek voor 13e verjaardag** *(juni 1942)*.\n• Schreef in over haar leven + emoties + dromen.\n• Wilde **schrijfster of journalist** worden.\n• 'Lieve Kitty' — schreef alsof aan vriendin.\n\n**Verraden + gepakt**:\n• Augustus 1944: nazi's vonden hen na **verraad** *(door wie? — onbekend tot vandaag)*.\n• Naar **kampen** in Duitsland + Polen.\n• Anne + Margot stierven in **Bergen-Belsen** in **februari/maart 1945** *(precieze datum onbekend — vlak voor bevrijding kamp in april)* aan **tyfus**.\n• Alleen **vader Otto** overleefde.\n\n**Dagboek gepubliceerd**:\n• Otto vond dagboek na oorlog.\n• Eerste editie 1947 *(NL)*.\n• Vertaald in **70+ talen**.\n• Verkocht **35+ miljoen** exemplaren.\n• Een van meest gelezen boeken ooit.\n\n**Anne Frank Huis** *(museum)*:\n• Amsterdam, Prinsengracht 263.\n• Originele achterhuis te bezichtigen.\n• Boekenkast voor verborgen ingang nog te zien.\n• 1,3 miljoen bezoekers per jaar *(2024)*.\n• Beste reservering ruim van te voren.\n\n**Anne's beroemde citaat**:\n*'Ondanks alles geloof ik nog steeds dat de mensen werkelijk goed zijn van hart.'*\n\nNu door **Anne Frank Stichting** wordt onderwijs gegeven aan jongeren over discriminatie + tolerantie.\n\n**Grote Nederlandse schrijvers** *(volwassen)*:\n\n**Multatuli** *(1820-1887)*:\n• Pseudoniem van **Eduard Douwes Dekker**.\n• Schreef **'Max Havelaar'** *(1860)*.\n• Beroemde aanklacht tegen NL-koloniaal beleid in **Nederlands-Indië**.\n• Geld + macht voor Europeanen, leed voor Javanen *(koffieboeren)*.\n• Boek leidde tot debat → langzaam beter beleid.\n• Multatuli = 'ik heb veel geleden' *(Latijn)*.\n• 'Max Havelaar' = nu ook **fair-trade** keurmerk voor eerlijke handel.\n\n**Harry Mulisch** *(1927-2010)*:\n• 'De Aanslag' *(WO2-trauma)* — verfilmd, Oscar.\n• 'De Ontdekking van de Hemel' *(filosofisch)*.\n\n**Cees Nooteboom** *(1933+)*:\n• Reisverhalen + romans.\n• 'Het volgende verhaal'.\n\n**Hella Haasse** *(1918-2011)*:\n• Historische romans.\n• 'Oeroeg' *(Indonesië)*.\n\n**Gerard Reve** *(1923-2006)*:\n• 'De Avonden' *(1947)* — naoorlogs gevoel.\n• 'Brieven' + religieuze + erotische schrijvers.\n\n**Hendrik Marsman, Martinus Nijhoff, Lucebert** — dichters.\n\n**Internationaal**:\n• **Etty Hillesum** *(joods, dagboek voor + tijdens WO2)*.\n• **Anne Frank**.\n• **Theo van Gogh** *(filmmaker, vermoord 2004)*.\n\n**Toets-feitje**:\n**Anne Frank's verjaardag** *(12 juni)* wordt soms herdacht. UNESCO heeft haar dagboek opgenomen in **Memory of the World Register** *(2009)* — een van de belangrijkste documenten ooit.",
+      "**Anne Frank** *(1929-1945)* = beroemdste NL-jonge schrijfster.\n\n**Wie was Anne?**\n• Geboren in Frankfurt, Duitsland *(joods gezin)*.\n• Vluchtte met familie naar **Amsterdam** *(1933)* — wegens **nazi's**.\n• Vader **Otto Frank** runde bedrijf 'Opekta'.\n• Toen Duitsers NL bezetten *(1940)* → joden vervolgd.\n\n**Onderduiken** *(1942-1944)*:\n• Familie verstopt in **achterhuis** *(Prinsengracht 263, Amsterdam)*.\n• Anne was **13 jaar**.\n• Met haar familie: ouders + zus **Margot** + 4 anderen *(familie Van Pels + tandarts Pfeffer)*.\n• 25 maanden in stilte + angst.\n\n**Dagboek**:\n• Anne kreeg **dagboek voor 13e verjaardag** *(juni 1942)*.\n• Schreef erin over haar leven + emoties + dromen.\n• Wilde **schrijfster of journalist** worden.\n• 'Lieve Kitty' — schreef alsof aan vriendin.\n\n**Verraden + gepakt**:\n• Augustus 1944: nazi's vonden hen na **verraad** *(door wie? — onbekend tot vandaag)*.\n• Naar **kampen** in Duitsland + Polen.\n• Anne + Margot stierven in **Bergen-Belsen** in **februari/maart 1945** *(precieze datum onbekend — vlak voor bevrijding kamp in april)* aan **tyfus**.\n• Alleen **vader Otto** overleefde.\n\n**Dagboek gepubliceerd**:\n• Otto vond dagboek na oorlog.\n• Eerste editie 1947 *(NL)*.\n• Vertaald in **70+ talen**.\n• Verkocht **35+ miljoen** exemplaren.\n• Een van meest gelezen boeken ooit.\n\n**Anne Frank Huis** *(museum)*:\n• Amsterdam, Prinsengracht 263.\n• Originele achterhuis te bezichtigen.\n• Boekenkast voor verborgen ingang nog te zien.\n• 1,3 miljoen bezoekers per jaar *(2024)*.\n• Reserveer het best ruim van tevoren.\n\n**Anne's beroemde citaat**:\n*'Ondanks alles geloof ik nog steeds dat de mensen werkelijk goed zijn van hart.'*\n\nDe **Anne Frank Stichting** geeft nu onderwijs aan jongeren over discriminatie + tolerantie.\n\n**Grote Nederlandse schrijvers** *(volwassen)*:\n\n**Multatuli** *(1820-1887)*:\n• Pseudoniem van **Eduard Douwes Dekker**.\n• Schreef **'Max Havelaar'** *(1860)*.\n• Beroemde aanklacht tegen NL-koloniaal beleid in **Nederlands-Indië**.\n• Geld + macht voor Europeanen, leed voor Javanen *(koffieboeren)*.\n• Boek leidde tot debat → langzaam beter beleid.\n• Multatuli = 'ik heb veel geleden' *(Latijn)*.\n• 'Max Havelaar' = nu ook **fair-trade** keurmerk voor eerlijke handel.\n\n**Harry Mulisch** *(1927-2010)*:\n• 'De Aanslag' *(WO2-trauma)* — verfilmd, Oscar.\n• 'De Ontdekking van de Hemel' *(filosofisch)*.\n\n**Cees Nooteboom** *(1933+)*:\n• Reisverhalen + romans.\n• 'Het volgende verhaal'.\n\n**Hella Haasse** *(1918-2011)*:\n• Historische romans.\n• 'Oeroeg' *(Indonesië)*.\n\n**Gerard Reve** *(1923-2006)*:\n• 'De Avonden' *(1947)* — naoorlogs gevoel.\n• Ook brievenboeken; religieuze + erotische thema's.\n\n**Hendrik Marsman, Martinus Nijhoff, Lucebert** — dichters.\n\n**Internationaal**:\n• **Etty Hillesum** *(joods, dagboek voor + tijdens WO2)*.\n• **Anne Frank**.\n• **Theo van Gogh** *(filmmaker, vermoord 2004)*.\n\n**Toets-feitje**:\n**Anne Frank's verjaardag** *(12 juni)* wordt soms herdacht. UNESCO heeft haar dagboek opgenomen in **Memory of the World Register** *(2009)* — een van de belangrijkste documenten ooit.",
     checks: [
       {
         q: "Wanneer **gestorven** Anne Frank?",
@@ -230,13 +230,13 @@ const steps = [
         q: "Waar is **Anne Frank Huis**?",
         options: ["Prinsengracht 263, Amsterdam", "Bergen-Belsen", "Den Haag", "Rotterdam"],
         answer: 0,
-        wrongHints: [null, "Waar overleed.", "Niet.", "Niet."],
+        wrongHints: [null, "Daar overleed ze.", "Niet.", "Niet."],
       },
       {
         q: "Hoeveel **talen** Anne Frank dagboek?",
         options: ["70+", "1", "5", "200"],
         answer: 0,
-        wrongHints: [null, "NL alleen niet waar.", "Veel meer.", "Te veel."],
+        wrongHints: [null, "Niet alleen in het Nederlands.", "Veel meer.", "Te veel."],
       },
     ],
   },
@@ -265,7 +265,7 @@ const steps = [
             { woord: "historische roman", uitleg: "Verzonnen verhaal in échte historische periode (Middeleeuwen, WO2, etc.)." },
             { woord: "Kinderkruistocht", uitleg: "1212: ~30.000 Europese kinderen liepen richting Jeruzalem. De meesten kwamen nooit aan." },
           ],
-          theorie: "Kinderboeken de toets kan vragen:\n• 'Jip en Janneke' — Annie M.G. Schmidt, illustraties Fiep Westendorp\n• 'Kruistocht in Spijkerbroek' — Thea Beckman, 1973\n• 'De brief voor de koning' — Tonke Dragt, 1962\n• 'Pluk van de Petteflet' — Annie M.G. Schmidt\n• 'Het sleutelkruid' — Paul Biegel\n• 'Oorlogswinter' — Jan Terlouw (WO2)",
+          theorie: "Kinderboeken waar de toets naar kan vragen:\n• 'Jip en Janneke' — Annie M.G. Schmidt, illustraties Fiep Westendorp\n• 'Kruistocht in Spijkerbroek' — Thea Beckman, 1973\n• 'De brief voor de koning' — Tonke Dragt, 1962\n• 'Pluk van de Petteflet' — Annie M.G. Schmidt\n• 'Het sleutelkruid' — Paul Biegel\n• 'Oorlogswinter' — Jan Terlouw (WO2)",
           voorbeelden: [
             { type: "feit", tekst: "'Kruistocht in Spijkerbroek' werd ook verfilmd (2006). Het boek wordt nog steeds op scholen gelezen — toetsstof." },
           ],
@@ -282,7 +282,7 @@ const steps = [
           stappen: [
             { titel: "Wie was Tonke Dragt?", tekst: "**Tonke Dragt** *(1930-2024)* was een Nederlandse schrijfster van avontuurlijke fantasy-romans voor jeugd. Geboren in Nederlands-Indië (Jakarta), kwam naar NL na WO2. Schreef vooral over **ridders, kastelen, geheime missies**." },
             { titel: "'De brief voor de koning' (1962)", tekst: "Hoofdpersoon **Tiuri** is een **page** (jongeling-ridder-in-opleiding). Op de nacht voor zijn ridderslag krijgt hij een geheime missie: een brief afleveren bij een koning ver weg. Het boek volgt zijn gevaarlijke reis met paard door bossen, bergen en vijandige steden." },
-            { titel: "Toets-feit: prijzen + film", tekst: "Het boek won de **Gouden Griffel** (belangrijke NL-kinderboek-prijs) in 1963. In **2020** maakte Netflix er een serie van. Veel Nederlandse leerlingen lezen het in groep 7-8. Een ECHTE klassieker." },
+            { titel: "Toets-feit: prijzen + film", tekst: "Het boek werd in 1963 **Kinderboek van het Jaar** en kreeg in 2004 de **Griffel der Griffels** (beste Griffel-boek ooit). In **2020** maakte Netflix er een serie van. Veel Nederlandse leerlingen lezen het in groep 7-8. Een ECHTE klassieker." },
           ],
           woorden: [
             { woord: "page", uitleg: "Jongeling die opgeleid wordt tot ridder in de Middeleeuwen." },
@@ -295,7 +295,7 @@ const steps = [
             { type: "feit", tekst: "Netflix-serie 'The Letter for the King' (2020): wereldwijd te zien. Diende als marketing voor het oorspronkelijke boek." },
           ],
           basiskennis: [{ onderwerp: "Niet Beckman", uitleg: "Beckman = 'Kruistocht in Spijkerbroek'. Dragt = 'De brief voor de koning'. Beide historische jeugdverhalen, maar verschillende schrijvers." }],
-          niveaus: { basis: "Tonke Dragt.", simpeler: "Tonke Dragt schreef 'De brief voor de koning' (1962). Won Gouden Griffel, verfilmd door Netflix 2020.", nogSimpeler: "Tonke Dragt" },
+          niveaus: { basis: "Tonke Dragt.", simpeler: "Tonke Dragt schreef 'De brief voor de koning' (1962). Werd Kinderboek van het Jaar, verfilmd door Netflix 2020.", nogSimpeler: "Tonke Dragt" },
         },
       },
       {
@@ -305,9 +305,9 @@ const steps = [
         wrongHints: [null, "Niet kopen — LENEN.", "Niet alleen school — ook publieke bibliotheek in dorp/stad.", "Niet video — boeken."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is een bibliotheek?", tekst: "Een **bibliotheek** (of 'biep') is een plek waar je **boeken kunt lenen** voor een paar weken. **Voor kinderen onder 18: GRATIS** in heel Nederland (sinds 2017 wet). Volwassenen betalen ~€50/jaar." },
+            { titel: "Wat is een bibliotheek?", tekst: "Een **bibliotheek** (of 'biep') is een plek waar je **boeken kunt lenen** voor een paar weken. **Voor kinderen onder 18: GRATIS** in heel Nederland (sinds 2015 wettelijk geregeld). Volwassenen betalen ~€50/jaar." },
             { titel: "Wat kun je doen in een bibliotheek?", tekst: "• **Boeken lenen** (4 weken meestal)\n• **Stripverhalen** lezen op locatie\n• **Huiswerk** maken (rustige werkplek + wifi)\n• **Tijdschriften** lezen\n• **DVD's, audioboeken, games** lenen\n• **Leesclubs**, voorleesuurtjes, workshops" },
-            { titel: "Toets-feit: openbare bibliotheek NL", tekst: "Nederland heeft **~1.300 openbare bibliotheek-vestigingen** (2024). Onderdeel van de **Koninklijke Bibliotheek**-systeem. Sommige bibliotheken hebben ook 3D-printers, escape rooms, en taalcafés voor nieuwkomers. **Veel meer dan alleen boeken!**" },
+            { titel: "Toets-feit: openbare bibliotheek NL", tekst: "Nederland heeft **~1.300 openbare bibliotheek-vestigingen** (2024). Ze werken samen in een netwerk met de **Koninklijke Bibliotheek**. Sommige bibliotheken hebben ook 3D-printers, escape rooms, en taalcafés voor nieuwkomers. **Veel meer dan alleen boeken!**" },
           ],
           woorden: [
             { woord: "bibliotheek", uitleg: "Plek waar boeken (en andere media) gratis te lenen zijn." },
@@ -317,7 +317,7 @@ const steps = [
           theorie: "Hoe werkt de bibliotheek:\n1. **Lid worden** (gratis <18, formulier ouders)\n2. Pasje krijgen + 5-15 boeken tegelijk lenen\n3. Boek **vier weken** thuis houden\n4. Op tijd terugbrengen of online verlengen\n5. **Niet vinden wat je zoekt?** Vraag aan bibliothecaris — die kan reserveren of bestellen van andere vestiging.",
           voorbeelden: [
             { type: "feit", tekst: "Veel scholen hebben hun eigen kleine bibliotheek + organiseren bezoeken aan grote openbare bibliotheek." },
-            { type: "feit", tekst: "Lezen in de bieb telt mee voor de **Schrijfwijzer-leesmeter**: hoe meer boeken hoe beter je leesvaardigheid voor Doorstroomtoets." },
+            { type: "feit", tekst: "Hoe meer boeken je leest, hoe beter je leesvaardigheid — handig voor de Doorstroomtoets." },
           ],
           basiskennis: [{ onderwerp: "Niet boekenwinkel", uitleg: "Verschil: bibliotheek = lenen (gratis). Boekenwinkel = kopen (kost geld)." }],
           niveaus: { basis: "Boeken lenen gratis kind.", simpeler: "Bibliotheek = plek om boeken gratis te lenen. Voor kinderen <18 is lidmaatschap gratis in heel NL.", nogSimpeler: "Gratis lenen" },
@@ -357,7 +357,7 @@ const bekendeBoekenLiteratuurPo = {
   referentieNiveau: "1F",
   sloThema: "Wereldoriëntatie — cultuur / literatuur",
   prerequisites: [
-    { id: "dichten-poezie-rijmen-po", title: "Dichten + poezie", niveau: "1F" },
+    { id: "dichten-poezie-rijmen-po", title: "Dichten + poëzie", niveau: "1F" },
   ],
   intro:
     "Bekende kinderboeken + literatuur voor Doorstroomtoets groep 6-8 — Annie M.G. Schmidt (Jip+Janneke, Pluk, Otje) + Fiep Westendorp + Tonke Dragt + Vriens + moderne (Slee, Oomen) + internationaal (Dahl, Rowling) + Anne Frank + Multatuli + Kinderboekenweek. ~15 min.",

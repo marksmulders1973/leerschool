@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Voedselweb + energiestroom",
     explanation:
-      "**Ecosysteem** = leefgemeenschap (alle planten/dieren/microben) + abiotisch milieu (lucht, water, bodem).\n\n**Trofische niveaus** (van zon naar top):\n• **Producenten (P)** — planten, algen: maken eigen voedsel via fotosynthese.\n• **Consumenten 1e orde (C1)** — herbivoren (haas, koe).\n• **Consumenten 2e orde (C2)** — carnivoren (vos eet haas).\n• **Consumenten 3e orde (C3)** — toppredatoren (havik eet vos).\n• **Reducenten (R)** — bacteriën + schimmels: breken dode stof af → nutriënten terug naar bodem.\n\n**Voedselketen** = lineair pad (gras → haas → vos → adelaar).\n**Voedselweb** = vervlochten netwerk van vele ketens.\n\n**Energiestroom — '10%-regel'**:\nVan elk trofisch niveau gaat ~**10% van energie** naar volgend niveau. 90% verloren als:\n• Ademhaling (warmte).\n• Niet-eetbare delen (botten, haren).\n• Uitwerpselen.\n\n**Gevolg**: piramide-vorm.\n• 10 000 kg planten →\n• 1 000 kg herbivoren →\n• 100 kg carnivoren →\n• 10 kg toppredatoren.\n\nDaarom zijn toppredatoren altijd zeldzaam + zijn vegetarisch eten energie-efficiënter dan vlees (cattle eet veel plant voor weinig vlees-energie).\n\n**Zelfde, voor stof (mineralen)**: KRINGLOOP — niet verloren maar circulerend (zie stap C).\n\n**Niche** = ecologische functie + plek van soort. Twee soorten kunnen niet exact dezelfde niche bezetten zonder concurrentie.\n\n**Voorbeelden ecosystemen**:\n• Bos: gelaagd (kruidlaag, struiklaag, boomlaag).\n• Vijver: thermische gelaagdheid, planktonbasis.\n• Tropisch koraalrif: hoogste biodiversiteit per m².\n• Toendra: laag, traag, weinig soorten.",
+      "**Ecosysteem** = leefgemeenschap (alle planten/dieren/microben) + abiotisch milieu (lucht, water, bodem).\n\n**Trofische niveaus** (van zon naar top):\n• **Producenten (P)** — planten, algen: maken eigen voedsel via fotosynthese.\n• **Consumenten 1e orde (C1)** — herbivoren (haas, koe).\n• **Consumenten 2e orde (C2)** — carnivoren (vos eet haas).\n• **Consumenten 3e orde (C3)** — toppredatoren (havik eet vos).\n• **Reducenten (R)** — bacteriën + schimmels: breken dode stof af → nutriënten terug naar bodem.\n\n**Voedselketen** = lineair pad (gras → haas → vos → adelaar).\n**Voedselweb** = vervlochten netwerk van vele ketens.\n\n**Energiestroom — '10%-regel'**:\nVan elk trofisch niveau gaat ~**10% van energie** naar volgend niveau. 90% verloren als:\n• Ademhaling (warmte).\n• Niet-eetbare delen (botten, haren).\n• Uitwerpselen.\n\n**Gevolg**: piramide-vorm.\n• 10 000 kg planten →\n• 1 000 kg herbivoren →\n• 100 kg carnivoren →\n• 10 kg toppredatoren.\n\nDaarom zijn toppredatoren altijd zeldzaam + is vegetarisch eten energie-efficiënter dan vlees eten (vee eet veel plant voor weinig vlees-energie).\n\n**Zelfde, voor stof (mineralen)**: KRINGLOOP — niet verloren maar circulerend (zie stap C).\n\n**Niche** = ecologische functie + plek van soort. Twee soorten kunnen niet exact dezelfde niche bezetten zonder concurrentie.\n\n**Voorbeelden ecosystemen**:\n• Bos: gelaagd (kruidlaag, struiklaag, boomlaag).\n• Vijver: thermische gelaagdheid, planktonbasis.\n• Tropisch koraalrif: hoogste biodiversiteit per m².\n• Toendra: laag, traag, weinig soorten.",
     checks: [
       {
         q: "Wat is een **producent** in een ecosysteem?",
@@ -39,7 +39,7 @@ const steps = [
         q: "Energie-verlies per trofische stap is ongeveer:",
         options: ["90% (slechts ~10% gaat door)", "10%", "50%", "99%"],
         answer: 0,
-        wrongHints: [null, "Niet — andersom.", "Niet — energie-stroom is veel zuiniger niet.", "Te veel."],
+        wrongHints: [null, "Niet — andersom.", "Niet — er gaat veel meer verloren.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "10%-regel", tekst: "Per niveau gaat ~10% over, 90% verloren (ademhaling, warmte, oneetbaar). Daarom zijn ecosysteem-piramides smal aan de top." }],
           theorie: "Daarom kunnen we max ~3-4 trofische niveaus hebben — daarna te weinig energie voor populatie.",
@@ -55,10 +55,10 @@ const steps = [
           "Reducent"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — eet alleen geen plant.", "Niet — eet vlees.", "Niet — vos is geen schimmel."],
+        wrongHints: [null, "Niet — een producent maakt zelf voedsel.", "Niet — eet vlees.", "Niet — vos is geen schimmel."],
         uitlegPad: {
           stappen: [{ titel: "Trofische niveau", tekst: "Gras → P. Haas (eet plant) → C1. Vos (eet haas = C1) → **C2**. Een havik die vossen eet zou C3 zijn." }],
-          niveaus: { basis: "C2.", simpeler: "Vos eet vleeseter → niveau 3 = C2.", nogSimpeler: "C2" },
+          niveaus: { basis: "C2.", simpeler: "Vos eet planteneter → niveau 3 = C2.", nogSimpeler: "C2" },
         },
       },
       {
@@ -114,7 +114,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — letterlijk fout.", "Niet — biomassa is gerelateerd maar K is anders.", "Niet — dat is biodiversiteit."],
         uitlegPad: {
-          stappen: [{ titel: "K = ceiling", tekst: "Boven K kan ecosysteem populatie niet meer voeden/herbergen → sterfte > geboorte → terugkeer naar K. Dynamische evenwichtswaarde." }],
+          stappen: [{ titel: "K = plafond", tekst: "Boven K kan ecosysteem populatie niet meer voeden/herbergen → sterfte > geboorte → terugkeer naar K. Dynamische evenwichtswaarde." }],
           niveaus: { basis: "Max duurzame populatie.", simpeler: "Plafond voor populatie-grootte.", nogSimpeler: "K" },
         },
       },
@@ -131,7 +131,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen rem = explosie", tekst: "Klassiek voorbeeld: bacteriën in vers medium verdubbelen elke 20 minuten — zou in 3 dagen massa-aarde overschrijden ZONDER beperking. In praktijk lopen ze tegen K aan." }],
           theorie: "Daarom zijn invasieve soorten zo'n probleem: nieuwe omgeving zonder co-geëvolueerde predatoren → exponentieel.",
-          niveaus: { basis: "Geen beperkingen → J-curve.", simpeler: "Vrij baan = explosie.", nogSimpeler: "Invasief" },
+          niveaus: { basis: "Geen beperkingen → J-curve.", simpeler: "Vrije baan = explosie.", nogSimpeler: "Invasief" },
         },
       },
       {
@@ -179,7 +179,7 @@ const steps = [
         wrongHints: [null, "Niet — orkaan werkt onafhankelijk van populatie-densiteit.", "Niet — geen predator.", "Niet — geen soort-conflict."],
         uitlegPad: {
           stappen: [{ titel: "Storm slaat blind toe", tekst: "Densiteit-onafhankelijk: effect onafhankelijk van hoe vol het bos is. Tegen-voorbeeld densiteit-afhankelijk: ziekte verspreidt sneller bij volle populatie (meer contact)." }],
-          niveaus: { basis: "Densiteit-onafh.", simpeler: "Storm slaat onafhankelijk van populatie.", nogSimpeler: "Onafh" },
+          niveaus: { basis: "Densiteit-onafh.", simpeler: "Storm slaat toe, onafhankelijk van populatie.", nogSimpeler: "Onafh" },
         },
       },
     ],
@@ -189,7 +189,7 @@ const steps = [
   {
     title: "Successie + kringlopen (C, N, water)",
     explanation:
-      "**Successie** = voorspelbare opeenvolging van soorten in een gebied over tijd.\n\n**Primaire successie**: kale rots/lava → pioniers → climaxgemeenschap.\n• Pionieren: korstmossen → mossen → kruiden → struiken → bomen → climax (bos).\n• Periode: eeuwen tot duizenden jaren.\n\n**Secundaire successie**: na verstoring (brand, kap) — sneller, want bodem bestaat al.\n• Periode: decennia.\n\n**Climaxgemeenschap**: stabiel eindstadium, in evenwicht met klimaat. NL: loofbos (eik, beuk).\n\n**Kringlopen** — stof gaat NIET verloren in ecosysteem (i.t.t. energie):\n\n**Koolstofkringloop**:\n• CO₂ + H₂O → glucose (fotosynthese, planten).\n• Glucose → CO₂ + H₂O (verbranding/ademhaling, alle organismen).\n• Dood materiaal → CO₂ (reducenten) of opgeslagen (turf, kolen, olie).\n• Mens verstoort: fossiele brandstoffen verbranden → extra CO₂ → klimaatverandering.\n\n**Stikstofkringloop**:\n• Atmosfeer 78% N₂ (luchtstikstof) — onbruikbaar voor meeste organismen.\n• **Stikstoffixatie**: bacteriën (rhizobia in vlinderbloemigen) + bliksem → NH₃/NO₃ in bodem.\n• Planten nemen NO₃ op → eiwitten.\n• Dieren eten planten → eiwitten.\n• Dood → ammonificatie → nitrificatie → terug naar NO₃.\n• Denitrificatie → terug naar N₂-lucht.\n• Mens: kunstmest (Haber-Bosch) verstoort balans → eutrofiëring.\n\n**Waterkringloop**:\n• Verdamping uit zee + meer → wolken → neerslag → afspoeling → zee.\n• Plant-transpiratie + dier-uitscheiding belangrijk in cyclus.\n• Bewuste menselijke ingrijpen: dammen, irrigatie, ontbossing → versnelt of vertraagt.\n\n**Fosforkringloop** (VWO): vooral lokaal, geen atmosferische fase. Vrijgegeven door verwering rotsen → planten → consumenten → dood → bodem. Mens: fosfaat-meststof uit eindige mijnen (over 50-100 jaar op).",
+      "**Successie** = voorspelbare opeenvolging van soorten in een gebied over tijd.\n\n**Primaire successie**: kale rots/lava → pioniers → climaxgemeenschap.\n• Pioniers: korstmossen → mossen → kruiden → struiken → bomen → climax (bos).\n• Periode: eeuwen tot duizenden jaren.\n\n**Secundaire successie**: na verstoring (brand, kap) — sneller, want bodem bestaat al.\n• Periode: decennia.\n\n**Climaxgemeenschap**: stabiel eindstadium, in evenwicht met klimaat. NL: loofbos (eik, beuk).\n\n**Kringlopen** — stof gaat NIET verloren in ecosysteem (i.t.t. energie):\n\n**Koolstofkringloop**:\n• CO₂ + H₂O → glucose (fotosynthese, planten).\n• Glucose → CO₂ + H₂O (verbranding/ademhaling, alle organismen).\n• Dood materiaal → CO₂ (reducenten) of opgeslagen (turf, kolen, olie).\n• Mens verstoort: fossiele brandstoffen verbranden → extra CO₂ → klimaatverandering.\n\n**Stikstofkringloop**:\n• Atmosfeer 78% N₂ (luchtstikstof) — onbruikbaar voor meeste organismen.\n• **Stikstoffixatie**: bacteriën (rhizobia in vlinderbloemigen) + bliksem → NH₃/NO₃ in bodem.\n• Planten nemen NO₃ op → eiwitten.\n• Dieren eten planten → eiwitten.\n• Dood → ammonificatie → nitrificatie → terug naar NO₃.\n• Denitrificatie → terug naar N₂-lucht.\n• Mens: kunstmest (Haber-Bosch) verstoort balans → eutrofiëring.\n\n**Waterkringloop**:\n• Verdamping uit zee + meer → wolken → neerslag → afspoeling → zee.\n• Plant-transpiratie + dier-uitscheiding belangrijk in cyclus.\n• Bewust menselijk ingrijpen: dammen, irrigatie, ontbossing → versnelt of vertraagt.\n\n**Fosforkringloop** (VWO): vooral lokaal, geen atmosferische fase. Vrijgegeven door verwering rotsen → planten → consumenten → dood → bodem. Mens: fosfaat-meststof uit eindige mijnen (over 50-100 jaar op).",
     checks: [
       {
         q: "Welke kringloop heeft GEEN belangrijke atmosferische fase?",
@@ -241,7 +241,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — verkeerd klimaat.", "Niet — te koud.", "Niet — te droog."],
         uitlegPad: {
-          stappen: [{ titel: "Klimaat bepaalt climax", tekst: "Gematigd zee-klimaat in NL → loofbos eind-stadium. Eik (langzaam, schaduwbestendig) + beuk overheersen. Zonder mens-intervention zou ~95% NL bos zijn." }],
+          stappen: [{ titel: "Klimaat bepaalt climax", tekst: "Gematigd zee-klimaat in NL → loofbos eind-stadium. Beuk (schaduwbestendig) + eik overheersen. Zonder menselijk ingrijpen zou ~95% NL bos zijn." }],
           niveaus: { basis: "Loofbos.", simpeler: "Eikenbos = NL-climax.", nogSimpeler: "Loofbos" },
         },
       },
@@ -270,7 +270,7 @@ const steps = [
   {
     title: "Biodiversiteit + bedreigingen",
     explanation:
-      "**Biodiversiteit** = verscheidenheid aan levens-vormen, op 3 niveaus:\n• **Genetisch** (variatie binnen soort).\n• **Soorten** (aantal verschillende soorten).\n• **Ecosystemen** (variatie aan habitats).\n\n**Waarom belangrijk?**\n• **Ecosysteem-diensten**: bestuiving, waterzuivering, klimaatregeling, CO₂-binding, voedselproductie.\n• **Veerkracht**: divers ecosysteem herstelt sneller na verstoring.\n• **Genetische bron**: voor toekomstige gewassen + medicijnen.\n• **Cultureel + ethisch**: intrinsieke waarde.\n\n**5 grote uitstervings-events** (geologische geschiedenis):\n• Krijt-Tertiair 66 mln j geleden: dinosauriërs (asteroïde).\n• Perm-Trias 252 mln j: 90% soorten weg (klimaat).\n• Nu: '**6e massa-uitsterving**' veroorzaakt door mens — verlies ~100-1000× natuurlijk tempo.\n\n**5 bedreigingen** ('HIPPO'):\n• **H**abitatverlies (ontbossing, landbouw, urbanisatie).\n• **I**nvasieve soorten.\n• **P**ollutie (chemicaliën, plastic, lucht).\n• **P**opulatie-druk (mens groeit).\n• **O**verexploitatie (overbevissing, jacht, ontbossing).\n\nPlus klimaatverandering (versnelt alle bovenstaande).\n\n**Specifieke voorbeelden NL**:\n• Insectensterfte: ~75% biomassa-afname sinds 1990 (Krefeld-studie).\n• Weidevogels: grutto, kievit halveren door intensieve landbouw.\n• Stikstof-overschot: heide verdringt door grassen + brandnetels.\n\n**Beheer + bescherming**:\n• Natura 2000-gebieden (EU-beschermd).\n• IUCN-rode-lijst-soorten.\n• Convention on Biological Diversity (CBD) — 2022 Kunming-Montréal: 30% land+zee beschermen tegen 2030.\n• Boeren-stewardship: 'natuurinclusieve landbouw'.\n\n**Genetische diversiteit + Cheetah's**:\n• Cheetah-populatie kromp ~10 000 jaar geleden tot ~7 dieren — genetische 'flessenhals'.\n• Vandaag: zeer lage genetische variatie → kwetsbaar voor ziekte.\n• Klassiek voorbeeld waarom genetische biodiversiteit telt.\n\n**Eilanden-biogeografie**: kleine eilanden = minder soorten + hoge endemiek (uniek). Maar bij habitat-fragmentatie krijg je 'eilanden' op vasteland → biodiversiteit-verlies.",
+      "**Biodiversiteit** = verscheidenheid aan levens-vormen, op 3 niveaus:\n• **Genetisch** (variatie binnen soort).\n• **Soorten** (aantal verschillende soorten).\n• **Ecosystemen** (variatie aan habitats).\n\n**Waarom belangrijk?**\n• **Ecosysteem-diensten**: bestuiving, waterzuivering, klimaatregeling, CO₂-binding, voedselproductie.\n• **Veerkracht**: divers ecosysteem herstelt sneller na verstoring.\n• **Genetische bron**: voor toekomstige gewassen + medicijnen.\n• **Cultureel + ethisch**: intrinsieke waarde.\n\n**5 grote uitstervings-events** (geologische geschiedenis):\n• Krijt-Tertiair 66 mln j geleden: dinosauriërs (asteroïde).\n• Perm-Trias 252 mln j: 90% soorten weg (klimaat).\n• Nu: '**6e massa-uitsterving**' veroorzaakt door mens — verlies ~100-1000× natuurlijk tempo.\n\n**5 bedreigingen** ('HIPPO'):\n• **H**abitatverlies (ontbossing, landbouw, urbanisatie).\n• **I**nvasieve soorten.\n• **P**ollutie (chemicaliën, plastic, lucht).\n• **P**opulatie-druk (mens groeit).\n• **O**verexploitatie (overbevissing, jacht, ontbossing).\n\nPlus klimaatverandering (versnelt alle bovenstaande).\n\n**Specifieke voorbeelden NL**:\n• Insectensterfte: ~75% biomassa-afname sinds 1990 (Krefeld-studie, Duitsland).\n• Weidevogels: grutto, kievit halveren door intensieve landbouw.\n• Stikstof-overschot: heide wordt verdrongen door grassen + brandnetels.\n\n**Beheer + bescherming**:\n• Natura 2000-gebieden (EU-beschermd).\n• IUCN-rode-lijst-soorten.\n• Convention on Biological Diversity (CBD) — 2022 Kunming-Montréal: 30% land+zee beschermen tegen 2030.\n• Boeren-stewardship: 'natuurinclusieve landbouw'.\n\n**Genetische diversiteit + Cheetah's**:\n• Cheetah-populatie kromp ~10 000 jaar geleden tot ~7 dieren — genetische 'flessenhals'.\n• Vandaag: zeer lage genetische variatie → kwetsbaar voor ziekte.\n• Klassiek voorbeeld waarom genetische biodiversiteit telt.\n\n**Eilanden-biogeografie**: kleine eilanden = minder soorten + hoge endemiek (uniek). Maar bij habitat-fragmentatie krijg je 'eilanden' op vasteland → biodiversiteit-verlies.",
     checks: [
       {
         q: "**HIPPO** is een ezelsbruggetje voor 5 bedreigingen voor biodiversiteit. H staat voor:",
@@ -294,7 +294,7 @@ const steps = [
         wrongHints: [null, "Onjuist concept.", "Onzin.", "Niet — natuurlijk proces."],
         uitlegPad: {
           stappen: [
-            { titel: "Vier categorieën (Millennium Ecosystem Assessment)", tekst: "1. **Productie**: voedsel, hout, water.\n2. **Regulering**: klimaat, water-zuivering, bestuiving.\n3. **Culturele**: recreatie, spirituele.\n4. **Ondersteunend**: bodemvorming, nutriënten-kringloop." },
+            { titel: "Vier categorieën (Millennium Ecosystem Assessment)", tekst: "1. **Productie**: voedsel, hout, water.\n2. **Regulering**: klimaat, water-zuivering, bestuiving.\n3. **Culturele**: recreatie, spiritualiteit.\n4. **Ondersteunend**: bodemvorming, nutriënten-kringloop." },
           ],
           theorie: "Bestuivers (bijen) leveren ~$235-577 miljard waarde wereldwijd per jaar — bijensterfte heeft enorme economische impact.",
           niveaus: { basis: "Natuur-functie voor mens.", simpeler: "Bv. bestuiving, water-zuivering.", nogSimpeler: "Functie" },
@@ -326,7 +326,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — vrijwel inert gas.", "N kan ook leiden tot zure regen maar dat is indirect.", "Geen relatie."],
         uitlegPad: {
-          stappen: [{ titel: "N-arme habitats lijden", tekst: "Heide, veen, kustduinen zijn van nature N-arm. Soorten daar aangepast aan armoede. Stikstof-depositie (uit veehouderij + verkeer) → vergrassing → biodiversiteit-verlies. Daarom: 'stikstof-crisis' in NL (boerprotesten 2019+)." }],
+          stappen: [{ titel: "N-arme habitats lijden", tekst: "Heide, veen, kustduinen zijn van nature N-arm. Soorten daar aangepast aan armoede. Stikstof-depositie (uit veehouderij + verkeer) → vergrassing → biodiversiteit-verlies. Daarom: 'stikstof-crisis' in NL (boerenprotesten 2019+)." }],
           niveaus: { basis: "N verstoort N-arme habitats.", simpeler: "Te veel mest → zeldzame planten verdwijnen.", nogSimpeler: "N-overschot" },
         },
       },
@@ -352,12 +352,12 @@ const steps = [
   {
     title: "Eindopdracht — mens, klimaat + ecosysteem",
     explanation:
-      "**Mens als 'ecologische game-changer'**:\n• Bevolking: 1 mld (1800) → 8 mld (2023) → ~10 mld (2050 prognose).\n• Land-gebruik: ~50% bewoonbaar land is landbouw, ~37% bos, ~14% urbanisatie/anders.\n• Resource-voetafdruk: gemiddelde Nederlander gebruikt ~5 'aardes' qua draagvlak.\n\n**Klimaatverandering + ecosystemen**:\n• Temperatuurstijging 1,1-1,5 °C sinds 1850. Doel: <1,5 °C totaal.\n• Verschuiving leefgebieden: noordwaarts/hogere altitude (~5-10 km/decennium).\n• Koraal-bleek: water boven 30 °C → algensymbiose verbroken → bleek + dood.\n• Permafrost ontdooit → extra methaan vrij → feedback-lus.\n\n**Biotechnologie + landbouw**:\n• Voedsel voor 8 mld zonder ecosysteem-vernietiging?\n• Verticale + binnen-landbouw, kweekvlees (cellulair), insecteneiwit.\n• GMO (genetisch gewijzigd): meer opbrengst per oppervlak.\n\n**Conservatie-strategieën**:\n• **In-situ**: bescherming op de plek (nationale parken, Natura 2000).\n• **Ex-situ**: dierentuinen, zaadbanken, fokprogramma's (Svalbard Global Seed Vault).\n• **Re-wilding**: terugbrengen wilde soorten (wolven in Yellowstone, bever in NL).\n\n**Belangrijk concept**: **trophische cascades**.\nVoorbeeld Yellowstone:\n• Wolven uitgeroeid 1920s → elanden over-grazen wilg + populier → erosie.\n• Wolven terug 1995 → elanden vermijden riviergebieden → wilg herstelt → bevers terug → ecosysteem herstelt.\n\nLes: één soort kan **hele ecosysteem** sturen ('keystone species').\n\n**Wat kun je zelf doen?**\n• Minder vlees eten (10×-energie-rule).\n• Lokaal + biologisch (minder pesticide).\n• Geen plastic wegwerp.\n• Tuin: inheemse planten, bijen-vriendelijk, geen pesticide.\n• Stem op partijen met klimaat-beleid.\n\n**Filosofische vraag**: hebben soorten 'recht' om te bestaan onafhankelijk van mens-utility? Anthropocentrisme vs. biocentrisme — examen-essay-onderwerp.",
+      "**Mens als 'ecologische game-changer'**:\n• Bevolking: 1 mld (1800) → 8 mld (2023) → ~10 mld (2050 prognose).\n• Land-gebruik: ~50% bewoonbaar land is landbouw, ~37% bos, ~14% urbanisatie/anders.\n• Resource-voetafdruk: gemiddelde Nederlander gebruikt ~5 'aardes' qua draagvlak.\n\n**Klimaatverandering + ecosystemen**:\n• Temperatuurstijging 1,1-1,5 °C sinds 1850. Doel: <1,5 °C totaal.\n• Verschuiving leefgebieden: noordwaarts/hoger gelegen gebieden (~5-10 km/decennium).\n• Koraal-bleek: water boven 30 °C → algensymbiose verbroken → bleek + dood.\n• Permafrost ontdooit → extra methaan vrij → feedback-lus.\n\n**Biotechnologie + landbouw**:\n• Voedsel voor 8 mld zonder ecosysteem-vernietiging?\n• Verticale + binnen-landbouw, kweekvlees (cellulair), insecteneiwit.\n• GMO (genetisch gewijzigd): meer opbrengst per oppervlak.\n\n**Conservatie-strategieën**:\n• **In-situ**: bescherming op de plek (nationale parken, Natura 2000).\n• **Ex-situ**: dierentuinen, zaadbanken, fokprogramma's (Svalbard Global Seed Vault).\n• **Re-wilding**: terugbrengen wilde soorten (wolven in Yellowstone, bever in NL).\n\n**Belangrijk concept**: **trofische cascades**.\nVoorbeeld Yellowstone:\n• Wolven uitgeroeid jaren 1920 → elanden over-grazen wilg + populier → erosie.\n• Wolven terug 1995 → elanden vermijden riviergebieden → wilg herstelt → bevers terug → ecosysteem herstelt.\n\nLes: één soort kan **hele ecosysteem** sturen ('keystone species').\n\n**Wat kun je zelf doen?**\n• Minder vlees eten (10%-regel).\n• Lokaal + biologisch (minder pesticide).\n• Geen plastic wegwerp.\n• Tuin: inheemse planten, bijen-vriendelijk, geen pesticide.\n• Stem op partijen met klimaat-beleid.\n\n**Filosofische vraag**: hebben soorten 'recht' om te bestaan onafhankelijk van hun nut voor de mens? Antropocentrisme vs. biocentrisme — examen-essay-onderwerp.",
     checks: [
       {
         q: "Wolven uit Yellowstone weg → elanden over-grazen wilg → erosie. Wolven terug → herstel. Voorbeeld van:",
         options: [
-          "Trophische cascade (keystone species)",
+          "Trofische cascade (keystone species)",
           "Successie",
           "Klimaatverandering",
           "Mutualisme"
@@ -365,8 +365,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — successie is langere termijn.", "Niet — geen klimaat-element.", "Niet — geen 'beiden-winnen'."],
         uitlegPad: {
-          stappen: [{ titel: "Eén soort, grote impact", tekst: "Sleutelsoort (keystone species) heeft impact die veel groter is dan hun aantal of biomassa zou suggereren. Wolven aantal: klein, maar effect op hele ecosysteem: groot. Andere keystones: zee-otters voor kelpbossen, olifanten voor savanne." }],
-          niveaus: { basis: "Trophische cascade.", simpeler: "Top-predator stuurt hele systeem.", nogSimpeler: "Cascade" },
+          stappen: [{ titel: "Eén soort, grote impact", tekst: "Sleutelsoort (keystone species) heeft impact die veel groter is dan zijn aantal of biomassa zou suggereren. Wolven aantal: klein, maar effect op hele ecosysteem: groot. Andere keystones: zee-otters voor kelpbossen, olifanten voor savanne." }],
+          niveaus: { basis: "Trofische cascade.", simpeler: "Top-predator stuurt hele systeem.", nogSimpeler: "Cascade" },
         },
       },
       {
@@ -408,23 +408,23 @@ const steps = [
           "Het is bedacht"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — sterfteopvolging zorg.", "Wetenschappelijk verifieerbaar."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet — het is juist zorgwekkend.", "Wetenschappelijk verifieerbaar."],
         uitlegPad: {
-          stappen: [{ titel: "Eerste antropogene massa-uitsterven", tekst: "Vorige 5 events door geologisch/astronomisch oorzaken (asteroïde Krijt-Tertiair, vulkanen Perm-Trias). Huidige door **mens-activiteiten**: ontbossing, jacht, klimaat-verandering, invasieve soorten. Tempo: 100-1000× natuurlijk basistempo." }],
-          theorie: "Schattingen: 1 mln soorten dreigen uit te sterven, ~25% van zoogdieren in directe gevaar.",
+          stappen: [{ titel: "Eerste antropogene massa-uitsterven", tekst: "Vorige 5 events door geologische/astronomische oorzaken (asteroïde Krijt-Tertiair, vulkanen Perm-Trias). Huidige door **mens-activiteiten**: ontbossing, jacht, klimaat-verandering, invasieve soorten. Tempo: 100-1000× natuurlijk basistempo." }],
+          theorie: "Schattingen: 1 mln soorten dreigen uit te sterven, ~25% van zoogdieren in direct gevaar.",
           niveaus: { basis: "Door mens veroorzaakt.", simpeler: "Eerste keer door één soort.", nogSimpeler: "Mens" },
         },
       },
       {
         q: "Wat is de **effectiefste** persoonlijke actie tegen klimaat- + biodiversiteit-crisis?",
         options: [
-          "Significant minder vlees + auto + vliegen + iets meer kinderen krijgen (de top 4)",
+          "Significant minder vlees + auto + vliegen + minder kinderen krijgen (de top 4)",
           "Recyclen flessen",
           "Plastic rietjes vermijden",
           "LED-lampen kopen"
         ],
         answer: 0,
-        wrongHints: [null, "Helpt iets maar relatief klein.", "Vrij triviale impact.", "Helpt maar marginal."],
+        wrongHints: [null, "Helpt iets maar relatief klein.", "Vrij triviale impact.", "Helpt maar marginaal."],
         uitlegPad: {
           stappen: [
             { titel: "Wynes & Nicholas 2017 review", tekst: "Onderzoek wetenschappelijke studies: top-4 grote impact:\n1. Eén kind minder krijgen (~58 ton CO₂/jaar).\n2. Auto-vrij leven (~2,4 ton).\n3. Vluchten vermijden (~1,6 ton/lange reis).\n4. Plantaardig dieet (~0,8 ton).\n\nKleine acties (recyclen, lampen) belangrijk maar relatief klein effect (<0,2 ton elk)." },

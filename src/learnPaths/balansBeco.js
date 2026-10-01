@@ -42,7 +42,7 @@ const steps = [
           "De overheid",
         ],
         answer: 0,
-        wrongHints: [null, "Bank is wel een soort onderneming, maar niet alle ondernemingen.", "Een privépersoon doet niet automatisch business.", "Overheid maakt geen winst — geen onderneming."],
+        wrongHints: [null, "Bank is wel een soort onderneming, maar niet alle ondernemingen.", "Een privépersoon doet niet automatisch zaken.", "Overheid maakt geen winst — geen onderneming."],
         uitlegPad: {
           stappen: [{ titel: "Onderneming = winst-doel", tekst: "Een onderneming is een organisatie die producten of diensten verkoopt om winst te maken. Privé-personen + overheid horen er niet bij." }],
           woorden: [{ woord: "winstdoel", uitleg: "doel om meer geld terug te krijgen dan uitgegeven" }],
@@ -116,7 +116,7 @@ const steps = [
           "Beide kunnen verschillen",
         ],
         answer: 0,
-        wrongHints: [null, "Niet logisch — bezit moet altijd komen ergens vandaan.", "Niet logisch.", "Een balans moet sluiten."],
+        wrongHints: [null, "Niet logisch — bezit moet altijd ergens vandaan komen.", "Niet logisch.", "Een balans moet sluiten."],
         uitlegPad: {
           stappen: [{ titel: "Debet = Credit altijd", tekst: "Elke euro bezit komt ergens vandaan (EV of VV). Daarom: bezittingen (links) = financiering (rechts). Een balans is per definitie sluitend." }],
           woorden: [{ woord: "sluitend", uitleg: "totaal links = totaal rechts" }],
@@ -143,7 +143,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Wat is een **vaste activa**?",
+        q: "Wat hoort bij de **vaste activa**?",
         options: [
           "Gebouw of machine",
           "Voorraad",
@@ -207,7 +207,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Lening = vreemd vermogen.", "Voorraad = activa.", "Kas/bank = activa."],
         uitlegPad: {
-          stappen: [{ titel: "EV = eigen ingelegde geld", tekst: "Eigen vermogen is geld van de eigenaar(s) zelf — inleg + ingehouden winst. Hoeft niet terugbetaald. Vreemd vermogen = schulden (wel terug)." }],
+          stappen: [{ titel: "EV = eigen ingelegd geld", tekst: "Eigen vermogen is geld van de eigenaar(s) zelf — inleg + ingehouden winst. Hoeft niet terugbetaald te worden. Vreemd vermogen = schulden (wel terug)." }],
           woorden: [{ woord: "ingehouden winst", uitleg: "winst die in het bedrijf blijft" }],
           theorie: "Bij faillissement betalen schuldeisers eerst — eigen vermogen-bezitters laatst.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Aandeelhouders bij beursgenoteerde bedrijven leveren EV" }],
@@ -229,7 +229,7 @@ const steps = [
           stappen: [{ titel: "Crediteur = leverancier met openstaande factuur", tekst: "Crediteuren zijn leveranciers die het bedrijf nog moet betalen. Schuld → vreemd vermogen (kort). Op de creditkant van de balans." }],
           woorden: [{ woord: "kort vreemd vermogen", uitleg: "schulden <1 jaar" }],
           theorie: "Tegenovergestelde van debiteuren.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Bestelling meel ontvangen, nog niet betaald → bakker = crediteur naar melders" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Bestelling meel ontvangen, nog niet betaald → de meelleverancier is crediteur van de bakker" }],
           basiskennis: [{ onderwerp: "C van Crediteur", uitleg: "C van betalen aan derden" }],
           niveaus: { basis: "Leverancier nog te betalen.", simpeler: "Wij moeten nog betalen.", nogSimpeler: "Schuld." },
         },
@@ -279,7 +279,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "A = EV + VV", tekst: "De fundamentele balansvergelijking: Activa (bezit) = Eigen Vermogen + Vreemd Vermogen. Komt uit het feit dat elke euro bezit financiering nodig heeft." }],
           woorden: [{ woord: "balansvergelijking", uitleg: "basis-formule boekhouding" }],
-          theorie: "Drie afgeleide vormen: EV = A − VV. VV = A − EV.",
+          theorie: "Twee afgeleide vormen: EV = A − VV. VV = A − EV.",
           voorbeelden: [{ type: "voorbeeld", tekst: "A=100k, EV=40k → VV=60k" }],
           basiskennis: [{ onderwerp: "optellen, niet aftrekken", uitleg: "+ tussen EV en VV" }],
           niveaus: { basis: "A = EV + VV.", simpeler: "Bezit = eigen + vreemd.", nogSimpeler: "Optellen." },
@@ -443,7 +443,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
   // D
   {
     title: "Toepassen — kostprijs en marge",
-    explanation: "Twee belangrijke begrippen voor elk bedrijf:\n\n**Kostprijs**: hoeveel het kost om 1 product te maken/inkopen.\n• Voor een handelsbedrijf: meestal de inkoopprijs + transport.\n• Voor een productiebedrijf: grondstoffen + arbeid + machine-uren + deel van vaste kosten.\n\n**Verkoopprijs**: wat de klant betaalt.\n\n**Brutowinst per product** = Verkoopprijs − Kostprijs.\n\n**Voorbeeld** — kledingwinkel:\n• T-shirt inkoopprijs: €5.\n• Verkoopprijs: €15.\n• Brutowinst: €10 per shirt.\n\nMaar: van die €10 moeten ook constante kosten (huur, salarissen) betaald worden. Daarom de **opslag-percentage**: hoeveel boven kostprijs zet je erop?\n\n**Brutomarge** = Brutowinst / Verkoopprijs × 100%.\n• In voorbeeld: 10 / 15 × 100% = 67%.\n\n**Btw** (omzetbelasting): wettelijk percentage bovenop de prijs (in NL meestal 21% of 9%). Niet de winst van het bedrijf — dat moeten ze afdragen aan de Belastingdienst.",
+    explanation: "Twee belangrijke begrippen voor elk bedrijf:\n\n**Kostprijs**: hoeveel het kost om 1 product te maken/inkopen.\n• Voor een handelsbedrijf: meestal de inkoopprijs + transport.\n• Voor een productiebedrijf: grondstoffen + arbeid + machine-uren + deel van vaste kosten.\n\n**Verkoopprijs**: wat de klant betaalt.\n\n**Brutowinst per product** = Verkoopprijs − Kostprijs.\n\n**Voorbeeld** — kledingwinkel:\n• T-shirt inkoopprijs: €5.\n• Verkoopprijs: €15.\n• Brutowinst: €10 per shirt.\n\nMaar: van die €10 moeten ook constante kosten (huur, salarissen) betaald worden. Daarom het **opslagpercentage**: hoeveel boven kostprijs zet je erop?\n\n**Brutomarge** = Brutowinst / Verkoopprijs × 100%.\n• In voorbeeld: 10 / 15 × 100% = 67%.\n\n**Btw** (omzetbelasting): wettelijk percentage bovenop de prijs (in NL meestal 21% of 9%). Niet de winst van het bedrijf — dat moeten ze afdragen aan de Belastingdienst.",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="40" y="40" width="220" height="40" rx="6" fill="${COLORS.alt}" opacity="0.4"/>
 <text x="150" y="65" text-anchor="middle" fill="#fff" font-size="11" font-family="Arial" font-weight="bold">verkoopprijs €15</text>
@@ -483,7 +483,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         uitlegPad: {
           stappen: [{ titel: "Btw = belasting voor de Staat", tekst: "Btw (omzetbelasting) wordt door het bedrijf bij de klant geheven (21% of 9% in NL) maar moet daarna worden afgedragen aan de Belastingdienst. Geen winst voor het bedrijf zelf." }],
           woorden: [{ woord: "21% / 9% / 0%", uitleg: "tarieven in NL" }],
-          theorie: "Hoog tarief (21%): luxe + diensten. Laag (9%): voedsel, boeken. Nul (0%): export.",
+          theorie: "Hoog tarief (21%): de meeste producten + diensten. Laag (9%): voedsel, boeken. Nul (0%): export.",
           voorbeelden: [{ type: "voorbeeld", tekst: "€100 product + 21% = €121 voor klant. €21 gaat naar Belastingdienst" }],
           basiskennis: [{ onderwerp: "doorgeven", uitleg: "bedrijf is inner, niet betaler" }],
           niveaus: { basis: "Belasting afdragen.", simpeler: "Voor Belastingdienst.", nogSimpeler: "Niet eigen geld." },
@@ -572,7 +572,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           stappen: [
             { titel: "Balans-structuur", tekst: "Een **balans** heeft 2 kanten:\n• **Debet (links)** = **bezittingen** (activa): gebouwen, voorraad, geld in kas, auto's, computers\n• **Credit (rechts)** = **eigen vermogen + schulden** (passiva): kapitaal eigenaar + leningen + crediteuren\n\n**Regel**: debet = credit (altijd in evenwicht). Vandaar 'balans'." },
             { titel: "Voorbeelden activa/passiva", tekst: "**Activa (debet)**:\n• Gebouw waarde €500.000\n• Voorraad waarde €50.000\n• Kasgeld €5.000\n• Bank-saldo €20.000\n• Auto's €30.000\n• Totaal: €605.000\n\n**Passiva (credit)** moet ook €605.000:\n• Eigen vermogen €200.000\n• Hypotheek €350.000\n• Leveranciers-schuld €55.000" },
-            { titel: "Toets-feit: ezelsbruggetje", tekst: "**'D-A en C-P'** = Debet-Activa + Credit-Passiva. Onthoud deze!\n\nIn boekhoud-software (Exact, AFAS): debet + credit altijd zichtbaar. Bij verkoop: debet kas, credit voorraad. Bij inkoop: debet voorraad, credit kas/schuld. Symmetrisch boekhouden = dubbel boekhouden, uitvinding 1494 door Luca Pacioli (Italiaans monnik)." },
+            { titel: "Toets-feit: ezelsbruggetje", tekst: "**'D-A en C-P'** = Debet-Activa + Credit-Passiva. Onthoud deze!\n\nIn boekhoud-software (Exact, AFAS): debet + credit altijd zichtbaar. Bij verkoop: debet kas, credit voorraad. Bij inkoop: debet voorraad, credit kas/schuld. Symmetrisch boekhouden = dubbel boekhouden, in 1494 voor het eerst beschreven door Luca Pacioli (Italiaans monnik)." },
           ],
           woorden: [
             { woord: "debet", uitleg: "Linker-kant balans: bezittingen + uitgaven." },
@@ -580,7 +580,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
             { woord: "activa", uitleg: "Bezittingen van bedrijf (debet)." },
             { woord: "passiva", uitleg: "Hoe activa zijn gefinancierd: eigen geld + schulden (credit)." },
           ],
-          theorie: "Balans-vergelijking:\nActiva = Eigen Vermogen + Schulden\nLinks (Debet) = Rechts (Credit)\n\nVerschillende balans-types:\n• Begin-balans (start jaar)\n• Eindbalans (einde jaar)\n• Tussenbalans (kwartaal)\n• Voortgangsbalans (controle)",
+          theorie: "Balans-vergelijking:\nActiva = Eigen Vermogen + Schulden\nLinks (Debet) = Rechts (Credit)\n\nVerschillende balans-types:\n• Begin-balans (start jaar)\n• Eindbalans (einde jaar)\n• Tussenbalans (kwartaal)\n• Proefbalans (controle)",
           voorbeelden: [
             { type: "stap", tekst: "Bakker koopt oven €10.000 contant. Debet: oven +€10.000 (activa). Credit: kas -€10.000 (ook activa, dus verschuiving binnen debet). Balans nog steeds in evenwicht." },
           ],
@@ -597,7 +597,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           stappen: [
             { titel: "Wat is liquiditeit?", tekst: "**Liquiditeit** = **mate waarin bezittingen snel naar geld omgezet kunnen worden**. Belangrijk voor bedrijven om rekeningen te betalen.\n\n**Liquide volgorde** (snelst naar langzaamst):\n• **Kas** (direct beschikbaar)\n• **Bank** (binnen 1 dag)\n• **Vorderingen** (klanten betalen binnen 30-60 dagen)\n• **Voorraad** (moet eerst verkocht)\n• **Gebouwen** (kost maanden om te verkopen)" },
             { titel: "Liquiditeitsratio's", tekst: "Bedrijven berekenen **liquiditeit-ratio's** om gezondheid te checken:\n• **Current Ratio** = vlottende activa ÷ kortlopende schulden. Streven: >1.0 (kan schulden betalen)\n• **Quick Ratio** = (vlottende activa - voorraad) ÷ kortlopende schulden. Strenger\n• **Kas-ratio** = kas + bank ÷ kortlopende schulden\n\nLage ratio = bedrijf kan rekeningen niet betalen = faillissement-risico." },
-            { titel: "Toets-feit: bedrijven failliet", tekst: "Veel bedrijven gaan **failliet** ondanks winst! Reden: te lage liquiditeit. Voorbeeld:\n• Winst van €100.000\n• Maar al je geld zit in voorraad\n• Geen geld om huur/lonen te betalen\n• Failliet\n\nLes voor de Doorstroomtoets: winst ≠ liquiditeit. **Cashflow is koning**." },
+            { titel: "Toets-feit: bedrijven failliet", tekst: "Veel bedrijven gaan **failliet** ondanks winst! Reden: te lage liquiditeit. Voorbeeld:\n• Winst van €100.000\n• Maar al je geld zit in voorraad\n• Geen geld om huur/lonen te betalen\n• Failliet\n\nLes voor de toets: winst ≠ liquiditeit. **Cashflow is koning**." },
           ],
           woorden: [
             { woord: "liquide", uitleg: "Snel naar geld om te zetten (kas, bank)." },
@@ -608,7 +608,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           voorbeelden: [
             { type: "stap", tekst: "Restaurant met €10k kas, €30k voorraad, €100k gebouw. Liquide = €10k. Bij plotselinge schuld €20k → ZIE direct probleem ondanks veel totale activa." },
           ],
-          basiskennis: [{ onderwerp: "Goud regel", uitleg: "Houd 3-6 maanden kosten in kas/bank. Voor noodgevallen." }],
+          basiskennis: [{ onderwerp: "Gouden regel", uitleg: "Houd 3-6 maanden kosten in kas/bank. Voor noodgevallen." }],
           niveaus: { basis: "Snel naar geld omzetten.", simpeler: "Liquiditeit = hoe snel kun je bezittingen naar geld omzetten. Kas = direct, gebouw = maanden.", nogSimpeler: "Snel geld" },
         },
       },
@@ -616,12 +616,12 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
         q: "Wat is **afschrijven** (boekhoudkundig)?",
         options: ["Waarde-vermindering vaste activa over levensduur","Iets weggooien","Korting","Belasting"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afvoeren, andere term.", "Niet — korting is iets anders.", "Niet — wel mag afschrijving belastbaar zijn."],
+        wrongHints: [null, "Niet — dat is afvoeren, andere term.", "Niet — korting is iets anders.", "Niet — wel verlaagt afschrijving de winst, en daardoor de belasting."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is afschrijven?", tekst: "**Afschrijven** = de **waarde van een vast actief (auto, machine, gebouw) over de jaren verlagen** op de balans. Reden: deze spullen slijten + verouderen.\n\nVoorbeeld: bedrijf koopt **vrachtwagen €60.000**, gebruikt 6 jaar:\n• Afschrijving: €60.000 ÷ 6 jaar = **€10.000/jaar**\n• Jaar 1 op balans: €50.000\n• Jaar 2: €40.000\n• ...\n• Jaar 6: €0 (boekwaarde)" },
-            { titel: "Waarom afschrijven?", tekst: "**Doelen**:\n• Reëel beeld van bedrijfswaarde\n• Verspreid kosten over gebruiksjaren\n• **Belasting-voordeel**: afschrijving = kosten = minder winst = minder belasting\n• Voorbereid op vervanging (sparen voor nieuwe machine)\n\nElke vaste activa heeft eigen **levensduur**:\n• Auto: 5 jaar\n• Computer: 3 jaar\n• Gebouw: 33 jaar\n• Machine: 10 jaar" },
-            { titel: "Toets-feit: methodes", tekst: "**Afschrijvingsmethoden**:\n• **Lineair**: gelijke € per jaar (simpelste)\n• **Degressief**: meer eerste jaren, minder later (versneld)\n• **Productie-eenheden**: op basis van gebruik (km of uren)\n\nKeuze afhankelijk van bedrijfsbeleid + belasting-regels. VMBO-examen: meestal lineair." },
+            { titel: "Waarom afschrijven?", tekst: "**Doelen**:\n• Reëel beeld van bedrijfswaarde\n• Verspreid kosten over gebruiksjaren\n• **Belasting-voordeel**: afschrijving = kosten = minder winst = minder belasting\n• Voorbereid op vervanging (sparen voor nieuwe machine)\n\nElk vast actief heeft een eigen **levensduur**:\n• Auto: 5 jaar\n• Computer: 3 jaar\n• Gebouw: 33 jaar\n• Machine: 10 jaar" },
+            { titel: "Toets-feit: methodes", tekst: "**Afschrijvingsmethoden**:\n• **Lineair**: gelijke € per jaar (simpelste)\n• **Degressief**: meer eerste jaren, minder later (versneld)\n• **Productie-eenheden**: op basis van gebruik (km of uren)\n\nKeuze afhankelijk van bedrijfsbeleid + belasting-regels. Op het examen: meestal lineair." },
           ],
           woorden: [
             { woord: "afschrijven", uitleg: "Waarde-vermindering van vast actief over levensduur." },
@@ -632,7 +632,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
           voorbeelden: [
             { type: "stap", tekst: "Bedrijfsauto €30.000, 5 jaar, restwaarde €0. → €6.000/jaar afschrijven. Na 3 jaar boekwaarde €12.000." },
           ],
-          basiskennis: [{ onderwerp: "Toets-economie-stof", uitleg: "Afschrijven = examen-VMBO-stof. Lineair-formule moeten kunnen toepassen." }],
+          basiskennis: [{ onderwerp: "Toets-economie-stof", uitleg: "Afschrijven = examenstof. Lineair-formule moeten kunnen toepassen." }],
           niveaus: { basis: "Waarde-vermindering vast actief.", simpeler: "Afschrijven = waarde van auto/machine over jaren verlagen op balans. Lineair: gelijke € per jaar.", nogSimpeler: "Waarde dalen" },
         },
       },

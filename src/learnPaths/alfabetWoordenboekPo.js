@@ -211,7 +211,7 @@ const steps = [
     explanation:
       "Beginnen woorden met **dezelfde letter**? Dan kijk je naar de **tweede** letter, en zo nodig de derde.\n\n" +
       "Voorbeeld: *bal* en *boom* beginnen allebei met b. Kijk naar de tweede letter: **a** (bal) komt vóór **o** (boom). Dus *bal* staat eerst.\n\n" +
-      "Zo zoek je steeds een letter dieper tot je verschil vindt: *school* (sc…) komt vóór *stoel* (st…), want **c** komt vóór **t**.",
+      "Zo zoek je steeds een letter dieper tot je een verschil vindt: *school* (sc…) komt vóór *stoel* (st…), want **c** komt vóór **t**.",
     checks: [
       {
         q: "Welk woord komt eerst: bal of boom?",
@@ -410,7 +410,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Een woordenboek zet werkwoorden onder het hele werkwoord, niet de verleden tijd.", "Dat is geen bestaand woord.", "De vorm met -t staat ook niet apart als trefwoord."],
         uitlegPad: {
-          stappen: [{ titel: "Hele werkwoord = trefwoord", tekst: "Werkwoorden staan in het woordenboek onder het hele werkwoord (de ik-vorm met -en). 'liep' zoek je dus onder 'lopen'." }],
+          stappen: [{ titel: "Hele werkwoord = trefwoord", tekst: "Werkwoorden staan in het woordenboek onder het hele werkwoord (de vorm met -en). 'liep' zoek je dus onder 'lopen'." }],
           niveaus: {
             basis: "Werkwoorden staan onder het hele werkwoord → 'lopen'.",
             simpeler: "Onder welke vorm staat een werkwoord: de verleden tijd of het hele werkwoord?",

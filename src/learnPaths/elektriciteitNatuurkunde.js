@@ -182,7 +182,7 @@ const steps = [
   // ─── A. Wat is elektriciteit ───────────────
   {
     title: "Wat is elektriciteit?",
-    explanation: "**Elektriciteit** is de stroom van **kleine geladen deeltjes** (meestal **elektronen**) door een geleider zoals een metalen draad.\n\n**Drie soorten lading**:\n• **Positief** (+) — protonen.\n• **Negatief** (−) — elektronen.\n• **Neutraal** — gelijke aantallen + en −.\n\n**Regel: gelijke ladingen stoten af, ongelijke trekken aan**.\n• Twee + : duwen elkaar weg.\n• Twee − : duwen elkaar weg.\n• + en − : trekken elkaar aan.\n\n**Elektronen lopen 'gemakkelijk' door metalen**\nIn metalen draden zijn elektronen los gebonden — ze kunnen vrij bewegen. Daarom zijn metalen **goede geleiders**.\n\n**Geleiders en isolatoren**:\n• **Geleiders**: laten stroom door — koper, aluminium, ijzer, water, je lichaam.\n• **Isolatoren**: laten geen stroom door — plastic, rubber, glas, droog hout.\n\n**Statische elektriciteit**\nAls je over een tapijt loopt en metaal aanraakt: schok. Dit is **statische elektriciteit** — door wrijving zijn elektronen overgesprongen tussen je voeten en het tapijt. Bij contact met metaal vloeien ze snel weg.\n\n**Bliksem** = enorme statische ontlading tussen wolk en grond, miljarden volt.\n\n**Stromend (lopend) elektriciteit**\nIn een stopcontact, batterij of accu: continue stroom van elektronen die je apparaten laat werken. Daar gaat dit hele leerpad over.",
+    explanation: "**Elektriciteit** is de stroom van **kleine geladen deeltjes** (meestal **elektronen**) door een geleider zoals een metalen draad.\n\n**Drie soorten lading**:\n• **Positief** (+) — protonen.\n• **Negatief** (−) — elektronen.\n• **Neutraal** — gelijke aantallen + en −.\n\n**Regel: gelijke ladingen stoten af, ongelijke trekken aan**.\n• Twee + : duwen elkaar weg.\n• Twee − : duwen elkaar weg.\n• + en − : trekken elkaar aan.\n\n**Elektronen lopen 'gemakkelijk' door metalen**\nIn metalen draden zijn elektronen los gebonden — ze kunnen vrij bewegen. Daarom zijn metalen **goede geleiders**.\n\n**Geleiders en isolatoren**:\n• **Geleiders**: laten stroom door — koper, aluminium, ijzer, water, je lichaam.\n• **Isolatoren**: laten geen stroom door — plastic, rubber, glas, droog hout.\n\n**Statische elektriciteit**\nAls je over een tapijt loopt en metaal aanraakt: schok. Dit is **statische elektriciteit** — door wrijving zijn elektronen overgesprongen tussen je voeten en het tapijt. Bij contact met metaal vloeien ze snel weg.\n\n**Bliksem** = enorme statische ontlading tussen wolk en grond, miljarden volt.\n\n**Stromende (lopende) elektriciteit**\nIn een stopcontact, batterij of accu: continue stroom van elektronen die je apparaten laat werken. Daar gaat dit hele leerpad over.",
     svg: basisSchakelingSvg(true),
     checks: [
       {
@@ -199,7 +199,7 @@ const steps = [
           stappen: [{ titel: "Elektronen lopen door draad", tekst: "In metalen zitten elektronen los gebonden — ze kunnen bewegen. Stroom = stroom van elektronen door een geleider." }],
           woorden: [{ woord: "elektron", uitleg: "negatief geladen deeltje" }],
           theorie: "Protonen en neutronen zitten vast in atoomkern, alleen elektronen kunnen vrij bewegen in metalen.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "In koperdraad: ~10²² elektronen per cm — bewegen bij spanning" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "In koperdraad: ~10²² vrije elektronen per cm³ — bewegen bij spanning" }],
           basiskennis: [{ onderwerp: "geleider = metaal", uitleg: "metalen hebben vrije elektronen" }],
           niveaus: { basis: "Elektronen.", simpeler: "Negatieve deeltjes.", nogSimpeler: "Mini-deeltjes." },
         },
@@ -217,7 +217,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Plastic = isolator", tekst: "Plastic, rubber, glas en droog hout zijn isolatoren — geen vrije elektronen, dus stroom kan er niet doorheen." }],
           woorden: [{ woord: "isolator", uitleg: "materiaal dat stroom NIET doorlaat" }],
-          theorie: "Geleider (metaal) vs isolator (plastic). Metalen omhulsels van kabels zitten in isolerend plastic.",
+          theorie: "Geleider (metaal) vs isolator (plastic). Metalen aders van kabels zitten in isolerend plastic.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Stekker: koperen pinnen (geleider) + plastic huis (isolator)" }],
           basiskennis: [{ onderwerp: "veiligheid", uitleg: "isolatie beschermt je tegen schokken" }],
           niveaus: { basis: "Plastic.", simpeler: "Plastic blokkeert stroom.", nogSimpeler: "Niet metaal." },
@@ -227,7 +227,7 @@ const steps = [
   },
   {
     title: "De stroomkring — gesloten kring nodig",
-    explanation: "Voor elektriciteit door een apparaat zoals een lamp moet de **stroomkring gesloten** zijn — een rondgaande baan voor de elektronen.\n\n**Een eenvoudige kring bevat**:\n• **Spanningsbron** (batterij, stopcontact) — duwt elektronen rond.\n• **Geleidende draden** — pad voor de elektronen.\n• **Verbruiker** (lamp, motor, weerstand) — gebruikt de energie.\n• **Schakelaar** — maakt of breekt de kring.\n\n**Schakelaar dicht (gesloten)** → kring rond → stroom loopt → lamp brandt.\n**Schakelaar open** → kring onderbroken → geen stroom → lamp uit.\n\n**Stroomrichting: een afspraak**\nIn schakelschema's tekenen we de stroomrichting **van + naar −** (de '**conventionele stroomrichting**'). \n\nIn werkelijkheid bewegen elektronen juist andersom (van − naar +) — maar in de 19e eeuw wisten geleerden dat nog niet, en ze hebben de afspraak nooit veranderd. We tekenen dus van + naar −.\n\n**Schakel-symbolen** (basics)\n• **Batterij**: lange streep (+) en korte streep (−).\n• **Lamp**: cirkel met kruis erin (⊗).\n• **Weerstand**: rechthoekig kastje (Europa) of zigzag (USA).\n• **Schakelaar**: hellend lijntje tussen twee puntjes.\n• **Draad**: rechte lijn.\n\n**Open vs kortsluiting**\n• **Open kring**: ergens onderbroken (bv. door open schakelaar of stuk gegane draad) → geen stroom.\n• **Kortsluiting**: stroom kan zonder verbruiker terug naar de bron — extra dunne weg, weinig weerstand → stroom wordt **enorm groot** → draden heet → brand-risico! Daarom hebben elektrische installaties **smeltveiligheden** of **stoppen**.",
+    explanation: "Voor elektriciteit door een apparaat zoals een lamp moet de **stroomkring gesloten** zijn — een rondgaande baan voor de elektronen.\n\n**Een eenvoudige kring bevat**:\n• **Spanningsbron** (batterij, stopcontact) — duwt elektronen rond.\n• **Geleidende draden** — pad voor de elektronen.\n• **Verbruiker** (lamp, motor, weerstand) — gebruikt de energie.\n• **Schakelaar** — maakt of breekt de kring.\n\n**Schakelaar dicht (gesloten)** → kring rond → stroom loopt → lamp brandt.\n**Schakelaar open** → kring onderbroken → geen stroom → lamp uit.\n\n**Stroomrichting: een afspraak**\nIn schakelschema's tekenen we de stroomrichting **van + naar −** (de '**conventionele stroomrichting**'). \n\nIn werkelijkheid bewegen elektronen juist andersom (van − naar +) — maar in de 19e eeuw wisten geleerden dat nog niet, en ze hebben de afspraak nooit veranderd. We tekenen dus van + naar −.\n\n**Schakel-symbolen** (basis)\n• **Batterij**: lange streep (+) en korte streep (−).\n• **Lamp**: cirkel met kruis erin (⊗).\n• **Weerstand**: rechthoekig kastje (Europa) of zigzag (VS).\n• **Schakelaar**: hellend lijntje tussen twee puntjes.\n• **Draad**: rechte lijn.\n\n**Open vs kortsluiting**\n• **Open kring**: ergens onderbroken (bv. door open schakelaar of stuk gegane draad) → geen stroom.\n• **Kortsluiting**: stroom kan zonder verbruiker terug naar de bron — extra korte weg, weinig weerstand → stroom wordt **enorm groot** → draden heet → brand-risico! Daarom hebben elektrische installaties **smeltveiligheden** of **stoppen**.",
     svg: basisSchakelingSvg(false),
     checks: [
       {
@@ -329,7 +329,7 @@ const steps = [
   },
   {
     title: "Stroomsterkte (I) — hoeveel elektronen per seconde",
-    explanation: "**Stroomsterkte** is hoeveel elektronen er **per seconde** door een doorsnede van de draad gaan. Symbool: **I** (van het Franse 'intensité'). Eenheid: **ampère (A)**.\n\n**Vergelijking met water**:\n• Water-stroming: liter per seconde (door een leiding).\n• Elektronen-stroming: coulomb per seconde (door een draad).\n\nElke 1 A = ongeveer **6 × 10¹⁸ elektronen** per seconde — een gigantisch aantal.\n\n**Voorbeelden van stroomsterktes**:\n• Zaklampje: ~0,1 A\n• Telefoonoplader: ~1 A\n• Kettingzaag: ~10 A\n• Wasmachine bij opwarmen: ~10 A\n• Aardlek-grens (stoppenkast NL): 16 A\n• Bliksem: 30.000 A (heel kortstondig!)\n\n**Hoe meet je stroomsterkte?**\nMet een **stroomsterktemeter** (ampèremeter), die je **in serie** plaatst — **in** de kring, alle stroom moet erdoor.\n\n**Belangrijk verschil met spanning**:\n• **Spanning** = verschil tussen 2 punten → meet je *parallel* (ernaast).\n• **Stroomsterkte** = doorvoer door 1 punt → meet je *in serie* (erin).\n\n**Vergelijkingstrucje**: parallel = paar (twee punten); in serie = één draadje door waar de stroom doorheen moet.\n\n**Wat bepaalt I?**\nDe stroomsterkte hangt af van:\n• De **spanning U** (hoe hoger, hoe meer stroom).\n• De **weerstand R** (hoe hoger, hoe minder stroom).\n• Verband: **I = U / R** (Wet van Ohm — komt straks).\n\n**Veiligheid: stroom kan dodelijk zijn**\nNiet de spanning maar de **stroom door je hart** doodt:\n• 1 mA: voelbaar.\n• 10 mA: spieren krimpen samen, kun je niet meer loslaten.\n• 100 mA (= 0,1 A): hartstilstand mogelijk.\n• Het stopcontact thuis kan tot 16 A leveren — meer dan genoeg om dodelijk te zijn.",
+    explanation: "**Stroomsterkte** is hoeveel elektronen er **per seconde** door een doorsnede van de draad gaan. Symbool: **I** (van het Franse 'intensité'). Eenheid: **ampère (A)**.\n\n**Vergelijking met water**:\n• Water-stroming: liter per seconde (door een leiding).\n• Elektronen-stroming: coulomb per seconde (door een draad).\n\nElke 1 A = ongeveer **6 × 10¹⁸ elektronen** per seconde — een gigantisch aantal.\n\n**Voorbeelden van stroomsterktes**:\n• Zaklampje: ~0,1 A\n• Telefoonoplader: ~1 A\n• Kettingzaag: ~10 A\n• Wasmachine bij opwarmen: ~10 A\n• Groepsautomaat (stoppenkast NL): 16 A\n• Bliksem: 30.000 A (heel kortstondig!)\n\n**Hoe meet je stroomsterkte?**\nMet een **stroomsterktemeter** (ampèremeter), die je **in serie** plaatst — **in** de kring, alle stroom moet erdoor.\n\n**Belangrijk verschil met spanning**:\n• **Spanning** = verschil tussen 2 punten → meet je *parallel* (ernaast).\n• **Stroomsterkte** = doorvoer door 1 punt → meet je *in serie* (erin).\n\n**Vergelijkingstrucje**: parallel = paar (twee punten); in serie = één draadje door waar de stroom doorheen moet.\n\n**Wat bepaalt I?**\nDe stroomsterkte hangt af van:\n• De **spanning U** (hoe hoger, hoe meer stroom).\n• De **weerstand R** (hoe hoger, hoe minder stroom).\n• Verband: **I = U / R** (Wet van Ohm — komt straks).\n\n**Veiligheid: stroom kan dodelijk zijn**\nNiet de spanning maar de **stroom door je hart** doodt:\n• 1 mA: voelbaar.\n• 10 mA: spieren krimpen samen, kun je niet meer loslaten.\n• 100 mA (= 0,1 A): hartstilstand mogelijk.\n• Het stopcontact thuis kan tot 16 A leveren — meer dan genoeg om dodelijk te zijn.",
     svg: basisSchakelingSvg(true),
     checks: [
       {
@@ -349,7 +349,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [{ titel: "Ampèremeter IN serie", tekst: "Stroomsterkte meten = de meter IN de kring zetten. Alle stroom moet door de ampèremeter — dat kan alleen in serie." }],
-          woorden: [{ woord: "in serie", uitleg: "in de stroom-pad zelf, niet ernaast" }],
+          woorden: [{ woord: "in serie", uitleg: "in het stroompad zelf, niet ernaast" }],
           theorie: "Spanning meet je ernaast (parallel). Stroom meet je erin (serie). Onthoud: A-meter in serie, V-meter parallel.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Multimeter op 'A' instellen + in serie schakelen voor I-meting" }],
           basiskennis: [{ onderwerp: "kring breken", uitleg: "voor A-meter draad onderbreken" }],
@@ -383,7 +383,7 @@ const steps = [
   },
   {
     title: "Weerstand (R) — wat tegenstand biedt",
-    explanation: "**Weerstand** is een maat voor hoe sterk een onderdeel **tegenwerkt** tegen elektrische stroom. Symbool: **R**. Eenheid: **ohm (Ω)**.\n\n**Hoe hoger de weerstand, hoe minder stroom er bij dezelfde spanning vloeit**.\n\n**Wat bepaalt de weerstand?**\nVan een draad of voorwerp hangt het af van:\n• **Materiaal**: zilver < koper < ijzer < grafiet < (vaste stoffen) < plastic. Zilver geeft minst weerstand.\n• **Lengte**: dubbele lengte → dubbele weerstand.\n• **Doorsnede**: dubbele doorsnede (dikker) → halve weerstand.\n• **Temperatuur**: warmere geleiders hebben meestal *meer* weerstand. Bij heel koude metalen kan weerstand wel naar 0 zakken (**supergeleiding**).\n\n**Onthoud**: lange dunne draad = hoge weerstand. Korte dikke draad = lage weerstand. Daarom zijn hoogspanningskabels **dik** — minder weerstand → minder energieverlies.\n\n**Verbruikers met weerstand**\n• **Gloeilamp**: het draadje binnenin heeft hoge weerstand → wordt heet → gaat licht uitstralen.\n• **Toaster**: zelfde principe — weerstandsdraad wordt heet, brood toast.\n• **Elektrische kachel, waterkoker**: ook weerstandsverwarming.\n\n**Speciale onderdelen**\n• **Vaste weerstand**: gewoon een rechthoekje met vaste waarde (bv. 100 Ω).\n• **Schuifweerstand / regelbare weerstand**: kun je varieren (bv. dimmer).\n• **NTC**: weerstand daalt als 'ie warmer wordt — voor temperatuur-sensoren.\n• **LDR**: weerstand daalt als er licht op valt — voor licht-sensoren (lantaarnpalen).\n\n**Hoe meet je weerstand?**\nMet een **ohmmeter** — je sluit 'm aan op de uiteinden van het onderdeel terwijl die NIET op spanning staat.\n\n**Voorbeelden van weerstand**:\n• Korte koperdraad: ~0,01 Ω (te verwaarlozen).\n• Lampje 6 V: ~50 Ω.\n• Mens (van vinger tot vinger): ~10.000-100.000 Ω (hoger als huid droog is).\n• Goede isolator: > 1.000.000.000 Ω.",
+    explanation: "**Weerstand** is een maat voor hoe sterk een onderdeel **tegenwerkt** tegen elektrische stroom. Symbool: **R**. Eenheid: **ohm (Ω)**.\n\n**Hoe hoger de weerstand, hoe minder stroom er bij dezelfde spanning vloeit**.\n\n**Wat bepaalt de weerstand?**\nVan een draad of voorwerp hangt het af van:\n• **Materiaal**: zilver < koper < ijzer < grafiet < (vaste stoffen) < plastic. Zilver geeft minst weerstand.\n• **Lengte**: dubbele lengte → dubbele weerstand.\n• **Doorsnede**: dubbele doorsnede (dikker) → halve weerstand.\n• **Temperatuur**: warmere geleiders hebben meestal *meer* weerstand. Bij heel koude metalen kan weerstand wel naar 0 zakken (**supergeleiding**).\n\n**Onthoud**: lange dunne draad = hoge weerstand. Korte dikke draad = lage weerstand. Daarom zijn hoogspanningskabels **dik** — minder weerstand → minder energieverlies.\n\n**Verbruikers met weerstand**\n• **Gloeilamp**: het draadje binnenin heeft hoge weerstand → wordt heet → gaat licht uitstralen.\n• **Toaster**: zelfde principe — weerstandsdraad wordt heet, brood toast.\n• **Elektrische kachel, waterkoker**: ook weerstandsverwarming.\n\n**Speciale onderdelen**\n• **Vaste weerstand**: gewoon een rechthoekje met vaste waarde (bv. 100 Ω).\n• **Schuifweerstand / regelbare weerstand**: kun je variëren (bv. dimmer).\n• **NTC**: weerstand daalt als 'ie warmer wordt — voor temperatuur-sensoren.\n• **LDR**: weerstand daalt als er licht op valt — voor licht-sensoren (lantaarnpalen).\n\n**Hoe meet je weerstand?**\nMet een **ohmmeter** — je sluit 'm aan op de uiteinden van het onderdeel terwijl die NIET op spanning staat.\n\n**Voorbeelden van weerstand**:\n• Korte koperdraad: ~0,01 Ω (te verwaarlozen).\n• Lampje 6 V: ~50 Ω.\n• Mens (van vinger tot vinger): ~10.000-100.000 Ω (hoger als huid droog is).\n• Goede isolator: > 1.000.000.000 Ω.",
     svg: ohmFormuleSvg(),
     checks: [
       {
@@ -617,7 +617,7 @@ const steps = [
   // ─── E. Veiligheid + energie ───────────────
   {
     title: "Veiligheid — aarding, smeltveiligheid, aardlek",
-    explanation: "Elektriciteit is handig maar ook **gevaarlijk**. Daarom hebben elektrische installaties veiligheidsmechanismen.\n\n**1. Smeltveiligheid (klassieke 'stop')**\n• Een dun draadje dat **smelt** als de stroom te hoog wordt.\n• Smelt → kring onderbroken → veilig.\n• Eenmaal door, **vervangen** met nieuwe smeltveiligheid.\n\n**2. Automaten (moderne stoppen)**\n• Elektrische schakelaar die zichzelf uitschakelt bij overstroom.\n• Na het probleem op te lossen kun je 'm gewoon **terug-zetten**.\n• Vervangt geleidelijk de oude smeltveiligheden.\n\n**3. Aardlekschakelaar (aardlek)**\n• Detecteert als stroom 'weglekt' naar buiten de kring (bv. door een persoon naar de aarde).\n• Schakelt binnen **30 milliseconden** uit als er ~30 mA verschil is.\n• Redt levens — verplicht in nieuwe NL-installaties sinds jaren '70.\n\n**4. Aarding (groene/gele draad)**\n• Verbindt de **metalen behuizing** van apparaten met de aarde via een aparte draad.\n• Als er binnenin een sluiting is en het metalen omhulsel onder spanning komt → de stroom gaat via de aarding direct weg → aardlek detecteert lekstroom → schakelt uit.\n• Bescherming tegen schokken.\n\n**Stopcontact NL**\nEen normaal stopcontact heeft 3 aansluitingen:\n• **Fase**: brengt de spanning (230 V).\n• **Nul**: retour-pad voor de stroom.\n• **Aarde**: veiligheidsverbinding.\n\n**Wat te doen bij een schok?**\n• **NIET** zelf de persoon aanraken zolang die nog onder spanning staat — anders krijg jij óók de stroom.\n• Eerst **stroom uitschakelen** (stop trekken, stekker eruit).\n• Daarna pas helpen + 112 bellen.\n\n**Vuistregels veiligheid**:\n• Geen elektrische apparaten in/bij water.\n• Geen kabels onder tapijten of meubelen (overhitting).\n• Stekkerdoos niet overbelasten (max ~3.680 W per groep).\n• Bij beschadigde kabel: niet gebruiken, vervangen.\n• Bij twijfel: een **erkende elektricien** inschakelen.",
+    explanation: "Elektriciteit is handig maar ook **gevaarlijk**. Daarom hebben elektrische installaties veiligheidsmechanismen.\n\n**1. Smeltveiligheid (klassieke 'stop')**\n• Een dun draadje dat **smelt** als de stroom te hoog wordt.\n• Smelt → kring onderbroken → veilig.\n• Eenmaal door, **vervangen** met nieuwe smeltveiligheid.\n\n**2. Automaten (moderne stoppen)**\n• Elektrische schakelaar die zichzelf uitschakelt bij overstroom.\n• Na het oplossen van het probleem kun je 'm gewoon **terug-zetten**.\n• Vervangt geleidelijk de oude smeltveiligheden.\n\n**3. Aardlekschakelaar (aardlek)**\n• Detecteert als stroom 'weglekt' naar buiten de kring (bv. door een persoon naar de aarde).\n• Schakelt binnen **30 milliseconden** uit als er ~30 mA verschil is.\n• Redt levens — verplicht in nieuwe NL-installaties sinds jaren '70.\n\n**4. Aarding (groene/gele draad)**\n• Verbindt de **metalen behuizing** van apparaten met de aarde via een aparte draad.\n• Als er binnenin een sluiting is en het metalen omhulsel onder spanning komt → de stroom gaat via de aarding direct weg → aardlek detecteert lekstroom → schakelt uit.\n• Bescherming tegen schokken.\n\n**Stopcontact NL**\nEen normaal stopcontact heeft 3 aansluitingen:\n• **Fase**: brengt de spanning (230 V).\n• **Nul**: retour-pad voor de stroom.\n• **Aarde**: veiligheidsverbinding.\n\n**Wat te doen bij een schok?**\n• **NIET** zelf de persoon aanraken zolang die nog onder spanning staat — anders krijg jij óók de stroom.\n• Eerst **stroom uitschakelen** (stop trekken, stekker eruit).\n• Daarna pas helpen + 112 bellen.\n\n**Vuistregels veiligheid**:\n• Geen elektrische apparaten in/bij water.\n• Geen kabels onder tapijten of meubelen (overhitting).\n• Stekkerdoos niet overbelasten (max ~3.680 W per groep).\n• Bij beschadigde kabel: niet gebruiken, vervangen.\n• Bij twijfel: een **erkende elektricien** inschakelen.",
     svg: basisSchakelingSvg(true),
     checks: [
       {
@@ -638,7 +638,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Aardlek schakelt uit bij lek", tekst: "Aardlekschakelaar detecteert verschil tussen ingaande en uitgaande stroom. Bij verschil ≥ 30 mA (= stroom 'lekt' weg, vaak via mens naar aarde) → schakelt binnen 30 ms uit. Redt levens." }],
           woorden: [{ woord: "ms", uitleg: "milliseconde, 1/1000 seconde" }],
-          theorie: "Sinds jaren 70 verplicht in NL-installaties. Ander dan smeltveiligheid (die werkt bij overstroom).",
+          theorie: "Sinds jaren 70 verplicht in NL-installaties. Anders dan smeltveiligheid (die werkt bij overstroom).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Föhn valt in bad → aardlek schakelt uit → levensreddend" }],
           basiskennis: [{ onderwerp: "lekstroom", uitleg: "stroom buiten kring" }],
           niveaus: { basis: "Schakelt razendsnel uit.", simpeler: "Schakelt af bij gevaar.", nogSimpeler: "Levensredder." },
@@ -662,7 +662,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Aarding leidt sluiting weg", tekst: "Als binnenin een apparaat een draad de metalen behuizing raakt → behuizing onder spanning. De aardingdraad leidt die stroom DIRECT weg naar de aarde → aardlek detecteert lek → schakelt uit. Zonder aarding zou JIJ de aarde-route zijn." }],
           woorden: [{ woord: "aardingdraad", uitleg: "groen-gele draad in stopcontact" }],
-          theorie: "Aarding alleen werkt samen met aardlekschakelaar voor maximale veiligheid.",
+          theorie: "Aarding werkt samen met de aardlekschakelaar voor maximale veiligheid.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Wasmachine met kapotte isolatie: aarding voorkomt schok" }],
           basiskennis: [{ onderwerp: "3 draden in stekker", uitleg: "fase, nul, aarde" }],
           niveaus: { basis: "Veiligheid bij sluiting.", simpeler: "Stroom naar aarde i.p.v. mens.", nogSimpeler: "Beschermt jou." },
@@ -706,7 +706,7 @@ const steps = [
         wrongHints: [
           null,
           "Veel te veel — vergeet niet 30 minuten om te rekenen naar uren, en daarna Wh naar kWh.",
-          "Te veel — dan zou de waterkoker 2u draaien.",
+          "Te veel — dan zou de waterkoker een heel uur aan staan.",
           "Te weinig — controleer met 2.000 × 0,5.",
         ],
         uitlegPad: {
@@ -773,7 +773,7 @@ const steps = [
           null,
           "Dat zou parallel geven (R-totaal lager dan elk).",
           "In serie tellen ze op.",
-          "Te veel — wel uitgebreid maar 100 + 100 is gewoon 200.",
+          "Te veel — in serie tel je op, je vermenigvuldigt niet.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Serie: R-totaal = som", tekst: "Bij serieschakeling tellen alle weerstanden op: R-tot = R₁ + R₂ + ... = 100 + 100 = 200 Ω." }],
@@ -805,7 +805,7 @@ const steps = [
           theorie: "Drie kern-formules: U = I·R, P = U·I, E = P·t. Allemaal vermenigvuldigingen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "230 V + 0,5 A = 230,5 (zinloos). 230 × 0,5 = 115 W ✓" }],
           basiskennis: [{ onderwerp: "eenheden controle", uitleg: "V × A = W (Volt-Ampère = Watt)" }],
-          niveaus: { basis: "P = U + I.", simpeler: "Plus is fout.", nogSimpeler: "Wrong." },
+          niveaus: { basis: "P = U + I.", simpeler: "Plus is fout.", nogSimpeler: "Fout." },
         },
       },
     ],

@@ -148,7 +148,7 @@ const steps = [
         wrongHints: [null, "Havik vliegt zeker.", "Mus vliegt.", "Ooievaar trekt — vliegt ver."],
         uitlegPad: {
           stappen: [{ titel: "Pinguïn = zwemt", tekst: "Pinguïn heeft vleugels die als 'flippers' werken — zwemmen, niet vliegen." }],
-          woorden: [{ woord: "pinguïn", uitleg: "Vogel die niet vliegt. Leeft op zuidpool, zwemt heel goed." }],
+          woorden: [{ woord: "pinguïn", uitleg: "Vogel die niet vliegt. Leeft op het zuidelijk halfrond, zwemt heel goed." }],
           theorie: "Niet alle vogels vliegen: pinguïn, struisvogel, kip, kiwi.",
           voorbeelden: [{ type: "feit", tekst: "Pinguïn-vleugels evolueerden tot flippers voor zwemmen." }],
           basiskennis: [{ onderwerp: "Wel vogel", uitleg: "Pinguïn heeft veren + snavel + legt eieren → echt vogel, ondanks niet-vliegen." }],
@@ -180,7 +180,7 @@ const steps = [
         q: "Hoeveel poten heeft een **insect**?",
         options: ["6", "4", "8", "10"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "8 = spin, geen insect!", "Geen dier heeft 10."],
+        wrongHints: [null, "Te weinig.", "8 = spin, geen insect!", "10 poten heeft een krab — geen insect."],
         uitlegPad: {
           stappen: [{ titel: "Insect = 6 poten", tekst: "Alle insecten hebben PRECIES 6 poten. Andere telling = geen insect." }],
           woorden: [{ woord: "insect", uitleg: "Dier met 6 poten + (vaak) vleugels + hard pantser." }],
@@ -256,7 +256,7 @@ const steps = [
           woorden: [{ woord: "schaaldier", uitleg: "Pantser, veel poten, vaak in water. Krab, kreeft, garnaal." }],
           theorie: "Schaaldieren: hard pantser om lichaam, veel poten, meestal water-bewoners.",
           voorbeelden: [{ type: "lijst", tekst: "Schaaldieren: krab, kreeft, garnaal, langoest." }],
-          basiskennis: [{ onderwerp: "Schelp vs pantser", uitleg: "Schelp (los, om wegtrekken): slak. Pantser (vast aan lichaam): krab." }],
+          basiskennis: [{ onderwerp: "Schelp vs pantser", uitleg: "Schelp (huisje om in weg te kruipen): slak. Pantser (hard omhulsel om het lichaam): krab." }],
           niveaus: { basis: "Schaaldier.", simpeler: "Krab heeft pantser + veel poten = schaaldier. (Slak=schelp=weekdier.)", nogSimpeler: "Schaaldier" },
         },
       },
@@ -305,7 +305,7 @@ const steps = [
           stappen: [{ titel: "Vorm-verandering", tekst: "Gedaante = vorm. Verwisseling = veranderen. Dier verandert volledig van vorm." }],
           woorden: [{ woord: "metamorfose", uitleg: "Wetenschappelijke naam voor gedaanteverwisseling." }],
           theorie: "Bekende voorbeelden: rups → vlinder. Kikkervisje → kikker. Volledig andere vorm.",
-          voorbeelden: [{ type: "tabel", tekst: "Vlinder en kikker zijn beroemd voor metamorfose." }],
+          voorbeelden: [{ type: "tabel", tekst: "Vlinder en kikker zijn beroemd om hun metamorfose." }],
           basiskennis: [{ onderwerp: "Niet kleur", uitleg: "Kleurverandering = camouflage, niet gedaanteverwisseling." }],
           niveaus: { basis: "Van vorm veranderen.", simpeler: "Gedaanteverwisseling = dier verandert tijdens leven van vorm (rups→vlinder, kikkervisje→kikker).", nogSimpeler: "Vorm" },
         },
@@ -359,7 +359,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Schuine as", tekst: "Aarde staat schuin op zijn as. Zomer = onze kant naar zon = meer zonkracht." }],
           woorden: [{ woord: "as-helling", uitleg: "Aarde-as staat 23,5° schuin. Daarom seizoenen op gematigde breedtes." }],
-          theorie: "Seizoenen NIET door afstand zon, MAAR door schuinte. Onze halfrond meer/minder naar zon gericht.",
+          theorie: "Seizoenen NIET door afstand zon, MAAR door schuinte. Ons halfrond meer/minder naar zon gericht.",
           voorbeelden: [{ type: "feit", tekst: "Wanneer NL zomer heeft, heeft Australië winter (andere kant)." }],
           basiskennis: [{ onderwerp: "Niet afstand", uitleg: "Aarde is in juli juist verst van zon — toch zomer NL." }],
           niveaus: { basis: "Onze kant naar zon.", simpeler: "Zomer = onze kant van aarde naar zon gedraaid → meer zonkracht → warmer.", nogSimpeler: "Naar zon" },
@@ -422,7 +422,7 @@ const steps = [
   },
   {
     title: "Planten en bomen",
-    explanation: "**Planten** zijn levende wezens die anders zijn dan dieren:\n• **Maken eigen voedsel** uit zonlicht (fotosynthese).\n• Geen organen zoals dieren.\n• Bewegen niet weg, blijven op één plek.\n• Hebben bladeren, stengels, wortels, bloemen.\n\n**Onderdelen van een plant**:\n• **Wortel**: in de grond — pakt water + voedingsstoffen op.\n• **Stengel/stam**: draagt de plant.\n• **Blad**: vangt zonlicht — fotosynthese.\n• **Bloem**: voor voortplanting.\n• **Vrucht/zaad**: nieuwe plant.\n\n**Twee soorten bomen**:\n• **Loofbomen** — bladeren in zomer, kaal in winter. Eik, beuk, esdoorn, berk.\n• **Naaldbomen** — naalden, blijven groen ('s winters ook). Den, spar, lariks.\n\n**Fotosynthese** (foto = licht, synthese = maken):\n• water + koolstofdioxide + zonlicht → suiker + zuurstof.\n• Daarom geven planten ons zuurstof om te ademen!\n\n**Bestuiving**: bijen, hommels en vlinders brengen stuifmeel van bloem naar bloem. Zonder hen geen vruchten en zaden — geen nieuwe planten.",
+    explanation: "**Planten** zijn levende wezens die anders zijn dan dieren:\n• **Maken eigen voedsel** uit zonlicht (fotosynthese).\n• Geen hart, maag of hersenen zoals dieren.\n• Bewegen niet weg, blijven op één plek.\n• Hebben bladeren, stengels, wortels, bloemen.\n\n**Onderdelen van een plant**:\n• **Wortel**: in de grond — pakt water + voedingsstoffen op.\n• **Stengel/stam**: draagt de plant.\n• **Blad**: vangt zonlicht — fotosynthese.\n• **Bloem**: voor voortplanting.\n• **Vrucht/zaad**: nieuwe plant.\n\n**Twee soorten bomen**:\n• **Loofbomen** — bladeren in zomer, kaal in winter. Eik, beuk, esdoorn, berk.\n• **Naaldbomen** — naalden, blijven groen ('s winters ook). Den, spar, taxus.\n\n**Fotosynthese** (foto = licht, synthese = maken):\n• water + koolstofdioxide + zonlicht → suiker + zuurstof.\n• Daarom geven planten ons zuurstof om te ademen!\n\n**Bestuiving**: bijen, hommels en vlinders brengen stuifmeel van bloem naar bloem. Zonder hen geen vruchten en zaden — geen nieuwe planten.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">plant 🌱</text>
 <line x1="150" y1="50" x2="150" y2="160" stroke="#5d4037" stroke-width="3"/>
@@ -445,7 +445,7 @@ const steps = [
           "Plant ademt water in",
         ],
         answer: 0,
-        wrongHints: [null, "Niets met fotograferen.", "Verbranden = mitochondriën in dieren.", "Niet zo eenvoudig."],
+        wrongHints: [null, "Niets met fotograferen.", "Suiker verbranden is juist het omgekeerde van fotosynthese.", "Niet zo eenvoudig."],
         uitlegPad: {
           stappen: [{ titel: "Foto + synthese", tekst: "Foto=licht. Synthese=maken. Plant maakt suiker uit zonlicht (+ water + CO2)." }],
           woorden: [{ woord: "fotosynthese", uitleg: "Plant maakt voedsel via zonlicht. Geeft zuurstof af." }],
@@ -464,7 +464,7 @@ const steps = [
           stappen: [{ titel: "Bloem = voortplanting", tekst: "Bloem heeft stuifmeel + stamper → bestoven → vrucht/zaad → nieuwe plant." }],
           woorden: [{ woord: "bloem", uitleg: "Voortplantingsorgaan plant. Maakt zaden/vruchten." }],
           theorie: "Plant-onderdelen + functie: wortel=water, stam=dragen, blad=fotosynthese, bloem=voortplanting.",
-          voorbeelden: [{ type: "stap", tekst: "Bij verstuift bloem → vrucht → zaad valt → nieuwe plant groeit." }],
+          voorbeelden: [{ type: "stap", tekst: "Bij bestuift bloem → vrucht → zaad valt → nieuwe plant groeit." }],
           basiskennis: [{ onderwerp: "Bestuiving", uitleg: "Bijen/hommels brengen stuifmeel van bloem naar bloem. Cruciale rol." }],
           niveaus: { basis: "bloem.", simpeler: "Bloem maakt zaden voor nieuwe planten = voortplantingsorgaan.", nogSimpeler: "Bloem" },
         },
@@ -476,9 +476,9 @@ const steps = [
         wrongHints: [null, "Eik = loofboom.", "Beuk = loofboom.", "Esdoorn = loofboom."],
         uitlegPad: {
           stappen: [{ titel: "Spar = naalden", tekst: "Spar heeft naalden (geen bladeren). Blijft 's winters groen → naaldboom." }],
-          woorden: [{ woord: "naaldboom", uitleg: "Boom met naalden (geen bladeren). Den, spar, lariks." }],
+          woorden: [{ woord: "naaldboom", uitleg: "Boom met naalden (geen bladeren). Den, spar, taxus." }],
           theorie: "2 boom-soorten: naaldbomen (groen 's winters) + loofbomen (kaal 's winters).",
-          voorbeelden: [{ type: "tabel", tekst: "Naald: spar, den, dennen, lariks. Loof: eik, beuk, esdoorn, berk." }],
+          voorbeelden: [{ type: "tabel", tekst: "Naald: spar, den, taxus. Loof: eik, beuk, esdoorn, berk." }],
           basiskennis: [{ onderwerp: "Kerstboom", uitleg: "Kerstboom is meestal spar of den — naaldbomen blijven groen." }],
           niveaus: { basis: "spar.", simpeler: "Spar heeft naalden + blijft 's winters groen = naaldboom. (Eik/beuk/esdoorn = loofboom).", nogSimpeler: "Spar" },
         },
@@ -487,7 +487,7 @@ const steps = [
   },
   {
     title: "Voedselketen — wie eet wat?",
-    explanation: "Een **voedselketen** laat zien wie wat eet. Energie stroomt van zon naar dier naar dier.\n\n**Voorbeeld voedselketen** (sloot):\n• zon → gras → konijn → vos\n• De zon geeft energie aan **gras** (planten).\n• Het **konijn** eet gras.\n• De **vos** eet konijnen.\n\n**Begrippen**:\n• **Producent**: maakt zelf voedsel = plant.\n• **Planteneter** (herbivoor): koe, konijn, schaap, hert, rups, ree.\n• **Vleeseter** (carnivoor): vos, leeuw, havik, krokodil.\n• **Alleseter** (omnivoor): mens, beer, varken, kraai.\n• **Aaseter**: eet dode dieren (kraai, gier).\n• **Afbreker**: schimmels, bacteriën, regenwormen — maken dode resten weer tot grond.\n\n**Voedselweb**: meerdere ketens die elkaar kruisen. In de natuur eet niet alleen één dier één ander — het is een netwerk.\n\n**Belangrijk**: als één schakel verdwijnt, raakt het hele netwerk uit balans. Daarom zijn ALLE dieren belangrijk, ook insecten en wormen.",
+    explanation: "Een **voedselketen** laat zien wie wat eet. Energie stroomt van zon naar dier naar dier.\n\n**Voorbeeld voedselketen** (weiland):\n• zon → gras → konijn → vos\n• De zon geeft energie aan **gras** (planten).\n• Het **konijn** eet gras.\n• De **vos** eet konijnen.\n\n**Begrippen**:\n• **Producent**: maakt zelf voedsel = plant.\n• **Planteneter** (herbivoor): koe, konijn, schaap, hert, rups, ree.\n• **Vleeseter** (carnivoor): vos, leeuw, havik, krokodil.\n• **Alleseter** (omnivoor): mens, beer, varken, kraai.\n• **Aaseter**: eet dode dieren (kraai, gier).\n• **Afbreker**: schimmels, bacteriën, regenwormen — maken dode resten weer tot grond.\n\n**Voedselweb**: meerdere ketens die elkaar kruisen. In de natuur eet niet alleen één dier één ander — het is een netwerk.\n\n**Belangrijk**: als één schakel verdwijnt, raakt het hele netwerk uit balans. Daarom zijn ALLE dieren belangrijk, ook insecten en wormen.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">voedselketen</text>
 <text x="40" y="65" fill="${COLORS.warm}" font-size="20" font-family="Arial">☀️</text>
@@ -638,7 +638,7 @@ const steps = [
       { q: "Welk seizoen heeft **bladval**?", options: ["Herfst","Lente","Zomer","Winter"], answer: 0, wrongHints: [null, "Bloesem.", "Volle bladeren.", "Geen bladeren meer."] },
       { q: "Wat doet een **trekvogel** in de winter?", options: ["Vliegt naar warmer land","Slaapt","Verandert kleur","Niets"], answer: 0, wrongHints: [null, "Niet vogel.", "Niet trekvogel.", "Wel migratie."] },
       { q: "Wat is **winterslaap**?", options: ["Langdurige rust met lage activiteit","Korte slaap","Wakker blijven","Vlucht"], answer: 0, wrongHints: [null, "Niet — lang.", "Tegengestelde.", "Trekvogels."] },
-      { q: "Welk dier houdt **winterslaap** in NL?", options: ["Egel","Vos","Konijn","Eekhoorn"], answer: 0, wrongHints: [null, "Blijft actief.", "Blijft actief.", "Half — torpor."] },
+      { q: "Welk dier houdt **winterslaap** in NL?", options: ["Egel","Vos","Konijn","Eekhoorn"], answer: 0, wrongHints: [null, "Blijft actief.", "Blijft actief.", "Blijft actief — eet van zijn wintervoorraad."] },
       { q: "Welk seizoen is meestal **droogst**?", options: ["Zomer","Winter","Lente","Herfst"], answer: 0, wrongHints: [null, "Vaak nat.", "Variabel.", "Vaak nat."] },
       { q: "Wat doet een **kikkervisje** in de lente?", options: ["Groeit uit tot kikker","Slaapt","Verstopt","Vliegt"], answer: 0, wrongHints: [null, "Het is juist actief: zwemmen + groeien.", "Het zwemt rond in het water, niet verborgen.", "Kikkers zijn geen vliegers."] },
       { q: "Welke vogel **trekt** in de herfst weg uit NL?", options: ["Ooievaar","Mus","Merel","Spreeuw"], answer: 0, wrongHints: [null, "Mussen blijven heel jaar in NL — standvogel.", "Merels blijven hier — bij voederplankjes zie je ze 's winters ook.", "Spreeuwen blijven grotendeels — standvogel."] },

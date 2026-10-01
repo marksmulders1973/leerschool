@@ -214,7 +214,7 @@ Op de Doorstroomtoets krijg je vragen als: *"Waar gaat de tweede alinea over?"* 
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Tel de punten", tekst: "Na elk punt begint een nieuwe zin. Tel: 1e punt na 'eeuwde', 2e punt na 'verbeterd', 3e punt na 'racemodellen', 4e punt na 'hetzelfde'. Vier punten = vier zinnen." },
+            { titel: "Tel de punten", tekst: "Na elk punt begint een nieuwe zin. Tel: 1e punt na 'eeuw', 2e punt na 'verbeterd', 3e punt na 'racemodellen', 4e punt na 'hetzelfde'. Vier punten = vier zinnen." },
             { titel: "Waarom is dit handig?", tekst: "Als je het aantal zinnen weet, kun je beter zien welke zin de paraplu-zin is en welke zinnen de details zijn." },
             { titel: "Onthoud", tekst: "Één zin eindigt met een punt. Eén alinea heeft meerdere zinnen. Eén tekst heeft meerdere alinea's." },
           ],
@@ -311,7 +311,7 @@ Elke alinea heeft een **taak** in de tekst. Dat noemen we de **functie** van de 
 
 **Zo vind je de functie:** lees de alinea en vraag jezelf af: wat **doet** de schrijver hier? Signaalwoorden helpen: *bijvoorbeeld* en *kijk maar* wijzen op een voorbeeld, *doordat* en *daardoor* op uitleg, *kortom* en *ik vind* op een mening of slot.
 
-Beantwoord nu de vier vragen over de egel-tekst hierboven.`,
+Beantwoord nu de vragen over de egel-tekst hierboven.`,
     checks: [
       {
         q: "Wat is de functie van **alinea 1** van de egel-tekst?",
@@ -545,7 +545,7 @@ Op de Doorstroomtoets krijg je heel vaak deze vraag: *"Welk tussenkopje past het
 
 **De pas-test:** een goed tussenkopje past bij **álle zinnen van de alinea** — en alléén bij deze alinea. Werkt net als de paraplu-test bij de kernzin! Sterker nog: de kernzin is vaak je beste hulp. Vind de kernzin, maak hem kort — en je hebt bijna altijd het goede kopje.
 
-Oefen nu met vier vragen. Let goed op de te-smalle en te-brede instinkers!`,
+Oefen nu met de vragen hieronder. Let goed op de te-smalle en te-brede instinkers!`,
     checks: [
       {
         q: "Wat doet een tussenkopje?",
@@ -749,7 +749,7 @@ Oefen nu met vier vragen. Let goed op de te-smalle en te-brede instinkers!`,
           ],
           theorie: "**De vraag kan twee kanten op**\n\nOp de Doorstroomtoets komt deze vraag in twee richtingen:\n\n1. **Alinea gegeven → kies het kopje** (zoals de vorige vragen).\n2. **Kopje gegeven → kies de alinea** (zoals deze vraag).\n\nDe aanpak blijft precies hetzelfde: kopje en alinea moeten volledig bij elkaar passen. Splits het kopje in stukjes ('eten' + 'voor de winter') en check of de alinea over állebei gaat. Eén stukje mist? Dan is het niet de goede combinatie.",
           voorbeelden: [
-            { type: "splitsen", tekst: "Kopje 'Spelen in de sneeuw': de alinea moet over spelen gaan én over sneeuw. Een alinea over sleeën past; een alinea over sneeuwschuivers ruimen niet." },
+            { type: "splitsen", tekst: "Kopje 'Spelen in de sneeuw': de alinea moet over spelen gaan én over sneeuw. Een alinea over sleeën past; een alinea over sneeuw ruimen niet." },
           ],
           basiskennis: [
             { onderwerp: "Kopje splitsen", uitleg: "Splits het kopje in zijn losse delen en check of de alinea over elk deel gaat. Half raak = fout antwoord." },

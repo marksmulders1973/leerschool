@@ -260,7 +260,7 @@ Sommige planeten staan dicht bij de zon en zijn heel heet, zoals Mercurius. Ande
     {
       tekst: `**Waarom valt een astronaut niet van de aarde?**
 
-Als je een foto van de ronde aarde ziet, kun je je afvragen waarom de mensen aan de onderkant er niet afvallen. Het antwoord is de zwaartekracht. Dat is een onzichtbare kracht die alles naar het midden van de aarde toe trekt. Voor ons voelt "naar beneden" daarom altijd richting de grond, of je nu in Nederland of in Australië woont. Aan de "onderkant" van de aarde bestaat eigenlijk niet.
+Als je een foto van de ronde aarde ziet, kun je je afvragen waarom de mensen aan de onderkant er niet afvallen. Het antwoord is de zwaartekracht. Dat is een onzichtbare kracht die alles naar het midden van de aarde toe trekt. Voor ons voelt "naar beneden" daarom altijd richting de grond, of je nu in Nederland of in Australië woont. Een "onderkant" van de aarde bestaat eigenlijk niet.
 
 In de ruimte werkt dat anders. Een astronaut in een ruimtestation lijkt te zweven, alsof de zwaartekracht weg is. Toch is dat niet zo: ook daar trekt de aarde nog aan hem. Het ruimtestation valt eigenlijk de hele tijd naar de aarde toe, maar het beweegt zó snel zijwaarts dat het steeds "naast" de aarde valt en in een baan blijft cirkelen. De astronaut valt mee, en daardoor voelt het alsof hij zweeft.
 
@@ -348,7 +348,7 @@ Toen Thomas Edison rond 1880 een goed werkende gloeilamp maakte, konden huizen e
     {
       tekst: `**Een uitvinding die de wereld kleiner maakte**
 
-Honderd jaar geleden duurde het soms weken voordat een bericht van het ene land het andere bereikte. Een brief moest met de boot of de trein worden vervoerd. Wie ver weg woonde, hoorde pas laat het laatste nieuws. Dat veranderde toen mensen leerden om berichten met elektrische signalen te versturen, eerst via de telegraaf en later via de telefoon.
+Tweehonderd jaar geleden duurde het soms weken voordat een bericht van het ene land het andere bereikte. Een brief moest met de boot of de trein worden vervoerd. Wie ver weg woonde, hoorde pas laat het laatste nieuws. Dat veranderde toen mensen leerden om berichten met elektrische signalen te versturen, eerst via de telegraaf en later via de telefoon.
 
 De grootste verandering kwam met het internet. Een e-mail of berichtje is nu in een paar seconden aan de andere kant van de wereld. Je kunt een filmpje bekijken dat iemand net heeft gemaakt in een land duizenden kilometers verderop. Daardoor zeggen mensen wel dat de wereld 'kleiner' is geworden: afstanden voelen niet meer zo groot, omdat informatie zo snel reist.
 

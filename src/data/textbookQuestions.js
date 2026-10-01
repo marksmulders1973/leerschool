@@ -73,11 +73,11 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is de oppervlakte van een vierkant met zijden van 5 cm?", options: ["25 cm²", "20 cm²", "10 cm²", "30 cm²"], answer: 0, explanation: "Oppervlakte vierkant = zijde × zijde = 5 × 5 = 25 cm²." },
       { q: "Hoeveel hoeken heeft een driehoek?", options: ["3", "4", "5", "6"], answer: 0, explanation: "Een driehoek heeft 3 hoeken (en 3 zijden) — vandaar de naam." },
       { q: "Een kubus heeft hoeveel ribben?", options: ["12", "6", "8", "4"], answer: 0, explanation: "Een kubus heeft 6 vlakken, 8 hoekpunten en 12 ribben (de lijnen waar twee vlakken samenkomen)." },
-      { q: "Welk figuur heeft GEEN rechte hoeken?", options: ["Cirkel", "Vierkant", "Rechthoek", "Kruis-figuur"], answer: 0, explanation: "Een cirkel heeft een ronde rand zonder hoeken. Vierkant en rechthoek hebben 4 rechte hoeken." },
+      { q: "Welke figuur heeft GEEN rechte hoeken?", options: ["Cirkel", "Vierkant", "Rechthoek", "Kruis-figuur"], answer: 0, explanation: "Een cirkel heeft een ronde rand zonder hoeken. Vierkant en rechthoek hebben 4 rechte hoeken." },
     ],
     7: [
       // Statistiek
-      { q: "In een klas van 24 leerlingen lust 18 ijs. Welk deel is dat?", options: ["¾", "½", "⅔", "⅗"], answer: 0, explanation: "18 van 24 = 18/24. Vereenvoudig: deel beide door 6 → 3/4 = ¾." },
+      { q: "In een klas van 24 leerlingen lusten er 18 ijs. Welk deel is dat?", options: ["¾", "½", "⅔", "⅗"], answer: 0, explanation: "18 van 24 = 18/24. Vereenvoudig: deel beide door 6 → 3/4 = ¾." },
       { q: "De cijfers van Sara zijn: 6, 7, 8, 9, 10. Wat is het gemiddelde?", options: ["8", "7,5", "9", "6"], answer: 0, explanation: "Gemiddelde = som / aantal = (6+7+8+9+10) / 5 = 40 / 5 = 8." },
       { q: "Een staafdiagram toont: maandag 5, dinsdag 8, woensdag 6. Hoeveel in totaal?", options: ["19", "18", "20", "17"], answer: 0, explanation: "5 + 8 + 6 = 19. Tel alle staven op." },
       { q: "Wat is de mediaan van 3, 5, 7, 9, 11?", options: ["7", "5", "9", "6"], answer: 0, explanation: "Mediaan = middelste waarde van een geordende rij. Hier: 3, 5, 7, 9, 11 → middelste is 7 (positie 3 van 5)." },
@@ -146,7 +146,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welke kans is het grootst bij dobbelsteen gooien?", options: ["Even getal", "Een 6", "Een getal kleiner dan 3", "Een 1 of 2"], answer: 0, explanation: "Even (2,4,6) = 3/6 = 1/2. Een 6 = 1/6. <3 (1,2) = 2/6. Een 1 of 2 = 2/6. Even getal heeft grootste kans." },
       { q: "Een staafdiagram: maandag 12, dinsdag 8, woensdag 15, donderdag 10. Op welke dag is de staaf het hoogst?", options: ["Woensdag", "Maandag", "Dinsdag", "Donderdag"], answer: 0, explanation: "Hoogste waarde = 15 op woensdag." },
       { q: "Wat is de modus van: 4, 5, 5, 6, 7, 5, 8?", options: ["5", "6", "4", "7"], answer: 0, explanation: "Modus = vaakst voorkomende waarde. 5 komt 3× voor, andere getallen 1×. Dus modus = 5." },
-      { q: "Bij 20 leerlingen lust 12 frietjes. Welk percentage is dat?", options: ["60%", "50%", "70%", "55%"], answer: 0, explanation: "12 / 20 = 60/100 = 60%. Of: 12/20 × 100% = 60%." },
+      { q: "Van de 20 leerlingen lusten er 12 frietjes. Welk percentage is dat?", options: ["60%", "50%", "70%", "55%"], answer: 0, explanation: "12 / 20 = 60/100 = 60%. Of: 12/20 × 100% = 60%." },
     ],
   },
 
@@ -159,7 +159,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat doe je vooral als je actief LUISTERT?", options: ["Aankijken, knikken en samenvatten", "Door de spreker heen praten", "Iets anders gaan doen op je telefoon", "Je eigen verhaal voorbereiden"], answer: 0, explanation: "Actief luisteren = aandacht geven, oogcontact maken, knikken, en de spreker tonen dat je hem volgt — bv. door af en toe samen te vatten." },
       { q: "Welke zin hoort bij een PRESENTATIE?", options: ["'Vandaag wil ik vertellen over honden.'", "'Ik weet het niet, doe maar wat.'", "'Wacht, ik moet even denken…'", "'Ja hoor, prima.'"], answer: 0, explanation: "Een presentatie heeft een duidelijk onderwerp en aankondiging. De andere zinnen horen bij een gesprek of aarzeling." },
       { q: "Wat is een GOED begin van een spreekbeurt?", options: ["Een vraag stellen aan de klas", "Direct alle feiten opsommen", "Excuses aanbieden voor je voorbereiding", "Heel zacht praten"], answer: 0, explanation: "Een vraag pakt de aandacht en betrekt de klas. Bv. 'Wie heeft er weleens een spin gezien?'" },
-      { q: "Welk woord helpt bij het ORDENEN van wat je vertelt?", options: ["Eerst", "Lekker", "Misschien", "Soort"], answer: 0, explanation: "'Eerst' (en 'daarna', 'tenslotte') zijn signaalwoorden die volgorde aangeven — handig in presentaties of uitleg." },
+      { q: "Welk woord helpt bij het ORDENEN van wat je vertelt?", options: ["Eerst", "Lekker", "Misschien", "Soort"], answer: 0, explanation: "'Eerst' (en 'daarna', 'ten slotte') zijn signaalwoorden die volgorde aangeven — handig in presentaties of uitleg." },
       { q: "Waarom kijk je het publiek aan tijdens een spreekbeurt?", options: ["Om te checken of ze meeluisteren", "Om je papier niet te zien", "Omdat de juf het zegt", "Het maakt niet uit"], answer: 0, explanation: "Oogcontact houdt de aandacht vast en geeft jou feedback (snappen ze het? lachen ze?). Het maakt je verhaal sterker." },
     ],
     1: [
@@ -181,10 +181,10 @@ export const TEXTBOOK_QUESTIONS = {
     3: [
       // Spelling
       { q: "Welke is GOED gespeld?", options: ["Wijze man", "Weize man", "Wyze man", "Waize man"], answer: 0, explanation: "'Wijze' krijgt 'ij' (lange ij). Truc: bij twijfel ei/ij — denk aan een ander woord met dezelfde klank in dezelfde stam ('wijsheid' → ij)." },
-      { q: "Hoe schrijf je het werkwoord 'hij ____' (voltooid: gefietst)?", options: ["fietst", "fietsd", "fietz", "fiest"], answer: 0, explanation: "Tegenwoordige tijd, hij/zij + werkwoord-stam (fiets) + t = 'fietst'. 't kofschip → werkwoorden eindigend op klank uit ' 't kof-(s)c-hip' krijgen -t in voltooid." },
+      { q: "Hoe schrijf je het werkwoord 'hij ____' (voltooid: gefietst)?", options: ["fietst", "fietsd", "fietz", "fiest"], answer: 0, explanation: "Tegenwoordige tijd, hij/zij + werkwoord-stam (fiets) + t = 'fietst'. Let op: 't kofschip gebruik je alleen voor de verleden tijd en het voltooid deelwoord (gefietst)." },
       { q: "Wanneer gebruik je een HOOFDLETTER?", options: ["Aan het begin van een zin en bij namen", "Alleen als het mooi staat", "Bij elk werkwoord", "Nooit aan het begin"], answer: 0, explanation: "Hoofdletters horen aan het begin van een zin, bij eigennamen (Sara, Amsterdam), en bij sommige titels." },
       { q: "Welk leesteken sluit een VRAAGZIN af?", options: ["?", ".", "!", ","], answer: 0, explanation: "Een vraag eindigt met een vraagteken (?). Punt = mededeling, uitroepteken = uitroep, komma = pauze in zin." },
-      { q: "Welke is GOED?", options: ["Hij wordt boos.", "Hij word boos.", "Hij wort boos.", "Hij wordd boos."], answer: 0, explanation: "Hij wordt — stam (word) + t (3e persoon enkelvoud), dus 'wordt'. Bij ik/jij staat na het ww + 't kofschip-regel." },
+      { q: "Welke is GOED?", options: ["Hij wordt boos.", "Hij word boos.", "Hij wort boos.", "Hij wordd boos."], answer: 0, explanation: "Hij wordt — stam (word) + t (3e persoon enkelvoud), dus 'wordt'. Bij 'ik' schrijf je alleen de stam: 'ik word'." },
     ],
     4: [
       // Woordenschat
@@ -212,7 +212,7 @@ export const TEXTBOOK_QUESTIONS = {
     0: [
       // Het menselijk lichaam
       { q: "Welk orgaan pompt het bloed door je lichaam?", options: ["Hart", "Longen", "Maag", "Lever"], answer: 0, explanation: "Het hart is een spier die bloed door je hele lichaam pompt — ongeveer 100.000 keer per dag." },
-      { q: "Wat doen je longen?", options: ["Zuurstof in je bloed brengen", "Voedsel verteren", "Bloed pompen", "Afval uit je lichaam halen"], answer: 0, explanation: "Longen halen zuurstof uit ingeademde lucht en geven dat aan het bloed. Maag = verteren, hart = pompen, nieren = afval." },
+      { q: "Wat doen je longen?", options: ["Zuurstof in je bloed brengen", "Voedsel verteren", "Bloed pompen", "Afval uit je lichaam halen"], answer: 0, explanation: "Longen halen zuurstof uit ingeademde lucht en geven die af aan het bloed. Maag = verteren, hart = pompen, nieren = afval." },
       { q: "Hoeveel botten heeft een volwassen mens ongeveer?", options: ["206", "100", "500", "50"], answer: 0, explanation: "Een volwassene heeft ongeveer 206 botten. Baby's hebben er meer (~270) — sommige groeien aan elkaar." },
       { q: "Welk deel van je lichaam vangt geluid op?", options: ["Oren", "Ogen", "Neus", "Huid"], answer: 0, explanation: "Oren vangen geluidsgolven op en zetten ze om in signalen voor je hersenen." },
     ],
@@ -232,14 +232,14 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     3: [
       // Weer en seizoenen
-      { q: "Welke seizoen is het in december in Nederland?", options: ["Winter", "Lente", "Zomer", "Herfst"], answer: 0, explanation: "December = winter (21 dec t/m 20 maart). Lente = mrt-jun, zomer = jun-sep, herfst = sep-dec." },
+      { q: "Welk seizoen is het in december in Nederland?", options: ["Winter", "Lente", "Zomer", "Herfst"], answer: 0, explanation: "In december begint de winter (bij het weerbericht op 1 december, volgens de sterrenkunde op 21 december). Lente = mrt-jun, zomer = jun-sep, herfst = sep-dec." },
       { q: "Wat veroorzaakt regen?", options: ["Waterdamp die afkoelt en condenseert", "Bomen die water afgeven", "Wolken die scheuren", "De zon"], answer: 0, explanation: "Water verdampt door zonnewarmte → stijgt op → koelt af op hoogte → condenseert tot druppels in wolken → wordt te zwaar → regent." },
-      { q: "Waarom zijn dagen korter in de winter?", options: ["De aarde staat scheef ten opzichte van de zon", "De zon is verder weg", "Wolken houden de zon tegen", "Het is gewoon zo"], answer: 0, explanation: "De aarde staat scheef. In de winter ligt het noordelijk halfrond verder van de zon → kortere dagen, lagere zon, kouder." },
-      { q: "Hoeveel graden Celsius is water bevroren?", options: ["0 °C", "10 °C", "100 °C", "−100 °C"], answer: 0, explanation: "Water bevriest bij 0 °C (vriespunt) en kookt bij 100 °C (kookpunt). Onder 0 → ijs, boven 100 → damp." },
+      { q: "Waarom zijn dagen korter in de winter?", options: ["De aarde staat scheef ten opzichte van de zon", "De zon is verder weg", "Wolken houden de zon tegen", "Het is gewoon zo"], answer: 0, explanation: "De aarde staat scheef. In de winter is het noordelijk halfrond van de zon af gekanteld → kortere dagen, lagere zon, kouder." },
+      { q: "Bij hoeveel graden Celsius bevriest water?", options: ["0 °C", "10 °C", "100 °C", "−100 °C"], answer: 0, explanation: "Water bevriest bij 0 °C (vriespunt) en kookt bij 100 °C (kookpunt). Onder 0 → ijs, boven 100 → damp." },
     ],
     4: [
       // Aarde en ruimte
-      { q: "Welke planeet is het dichtstbij de zon?", options: ["Mercurius", "Venus", "Aarde", "Mars"], answer: 0, explanation: "Volgorde vanaf de zon: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus." },
+      { q: "Welke planeet staat het dichtst bij de zon?", options: ["Mercurius", "Venus", "Aarde", "Mars"], answer: 0, explanation: "Volgorde vanaf de zon: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus." },
       { q: "Hoe lang doet de aarde over één rondje om de zon?", options: ["1 jaar", "1 dag", "1 maand", "10 jaar"], answer: 0, explanation: "Eén rondje om de zon = 1 jaar (365 dagen). Eén rondje om eigen as = 1 dag." },
       { q: "Wat is de maan?", options: ["Een natuurlijke satelliet van de aarde", "Een kleine planeet", "Een ster", "Een wolk"], answer: 0, explanation: "De maan is een satelliet — een hemellichaam dat om de aarde draait. Sterren maken eigen licht; de maan reflecteert zonlicht." },
       { q: "Wat is een melkweg?", options: ["Een verzameling van miljarden sterren", "Een soort wolk", "Een planeet", "Een ster"], answer: 0, explanation: "Onze Melkweg is een verzameling van ~200 miljard sterren, met onze zon erin. Er zijn miljarden andere melkwegstelsels in het heelal." },
@@ -273,7 +273,7 @@ export const TEXTBOOK_QUESTIONS = {
     1: [
       { q: "Hoeveel is 487 + 263?", options: ["750", "640", "740", "850"], answer: 0, explanation: "487 + 263: 7+3=10, 8+6+1=15, 4+2+1=7. Antwoord: 750." },
       { q: "Hoeveel is 832 − 359?", options: ["473", "483", "563", "463"], answer: 0, explanation: "832 − 359: 832−300=532, 532−59=473. Of cijferend: 2-9 leen, 12-9=3, 2-5 leen, 12-5=7, 7-3=4. → 473." },
-      { q: "Een schoolreis kost €18,50 per leerling. Voor 10 leerlingen?", options: ["€185", "€185,50", "€18,50", "€1850"], answer: 0, explanation: "10 × 18,50 = 185. Vermenigvuldigen met 10 = decimaal-punt 1 plek naar rechts." },
+      { q: "Een schoolreis kost €18,50 per leerling. Voor 10 leerlingen?", options: ["€185", "€185,50", "€18,50", "€1850"], answer: 0, explanation: "10 × 18,50 = 185. Vermenigvuldigen met 10 = komma 1 plek naar rechts." },
       { q: "Hoeveel is 3000 − 1750 + 250?", options: ["1500", "1000", "2000", "1250"], answer: 0, explanation: "3000 − 1750 = 1250. 1250 + 250 = 1500." },
     ],
     2: [
@@ -303,7 +303,7 @@ export const TEXTBOOK_QUESTIONS = {
     6: [
       { q: "Een vierkant heeft een omtrek van 24 cm. Hoe lang is één zijde?", options: ["6 cm", "4 cm", "8 cm", "12 cm"], answer: 0, explanation: "Vierkant: 4 gelijke zijden. 24 / 4 = 6 cm." },
       { q: "Hoeveel hoeken heeft een zeshoek?", options: ["6", "5", "8", "4"], answer: 0, explanation: "Zes-hoek heeft 6 hoeken (en 6 zijden)." },
-      { q: "Welk figuur heeft 4 zijden waarvan er 2 paar parallel zijn?", options: ["Parallellogram", "Driehoek", "Cirkel", "Trapezium"], answer: 0, explanation: "Parallellogram: 2 paren evenwijdige zijden. Trapezium heeft maar 1 paar." },
+      { q: "Welke figuur heeft 4 zijden waarvan er 2 paar parallel zijn?", options: ["Parallellogram", "Driehoek", "Cirkel", "Trapezium"], answer: 0, explanation: "Parallellogram: 2 paren evenwijdige zijden. Trapezium heeft maar 1 paar." },
       { q: "Een blokje is 3×4×2 cm. Wat is de inhoud?", options: ["24 cm³", "9 cm³", "12 cm³", "20 cm³"], answer: 0, explanation: "Inhoud balk = lengte × breedte × hoogte = 3 × 4 × 2 = 24 cm³." },
     ],
   },
@@ -344,7 +344,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     5: [
       { q: "Wat is de oppervlakte van een rechthoek 7 × 3 cm?", options: ["21 cm²", "10 cm²", "14 cm²", "20 cm²"], answer: 0, explanation: "Oppervlakte = lengte × breedte = 7 × 3 = 21 cm²." },
-      { q: "Welk figuur heeft 3 gelijke zijden?", options: ["Gelijkzijdige driehoek", "Vierkant", "Cirkel", "Rechthoek"], answer: 0, explanation: "Gelijkzijdige driehoek: 3 zijden gelijk lang. Vierkant heeft 4 gelijke zijden." },
+      { q: "Welke figuur heeft 3 gelijke zijden?", options: ["Gelijkzijdige driehoek", "Vierkant", "Cirkel", "Rechthoek"], answer: 0, explanation: "Gelijkzijdige driehoek: 3 zijden gelijk lang. Vierkant heeft 4 gelijke zijden." },
       { q: "Hoeveel ribben heeft een kubus?", options: ["12", "6", "8", "4"], answer: 0, explanation: "Kubus: 6 vlakken, 8 hoekpunten, 12 ribben." },
       { q: "Een lijn die EVENWIJDIG loopt aan een andere noem je?", options: ["Parallel", "Loodrecht", "Diagonaal", "Boog"], answer: 0, explanation: "Parallelle (evenwijdige) lijnen kruisen elkaar nooit. Loodrecht = haakse hoek." },
     ],
@@ -357,7 +357,7 @@ export const TEXTBOOK_QUESTIONS = {
     0: [
       { q: "Welk getal komt na 9999?", options: ["10000", "1000", "9990", "100000"], answer: 0, explanation: "Na 9999 komt 10000 (vier negens worden vier nullen + 1)." },
       { q: "Schrijf 'achtduizend negenhonderd zes' als getal.", options: ["8906", "8960", "8096", "89006"], answer: 0, explanation: "8000 + 900 + 6 = 8906. 'Zes' is eenheden, 'negenhonderd' is honderdtallen." },
-      { q: "Welk getal is afgerond op tientallen GROOTSTE?", options: ["189 → 190", "184 → 180", "175 → 180", "172 → 170"], answer: 0, explanation: "Afgerond: 190, 180, 180, 170. Grootste: 190." },
+      { q: "Welk getal is, afgerond op tientallen, het GROOTST?", options: ["189 → 190", "184 → 180", "175 → 180", "172 → 170"], answer: 0, explanation: "Afgerond: 190, 180, 180, 170. Grootste: 190." },
     ],
     1: [
       { q: "Hoeveel is 999 + 1?", options: ["1000", "1001", "9991", "100"], answer: 0, explanation: "999 + 1 = 1000. Drie negens worden drie nullen + 1 erbij." },
@@ -380,7 +380,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Hoeveel uur in 2 dagen?", options: ["48", "24", "72", "12"], answer: 0, explanation: "1 dag = 24 uur. 2 × 24 = 48." },
     ],
     5: [
-      { q: "Welk figuur is een 'kwart' van een cirkel?", options: ["Kwartcirkel", "Halve cirkel", "Driehoek", "Vierkant"], answer: 0, explanation: "Een kwart = 1/4. Een kwart van een cirkel = kwartcirkel (90° taartpunt)." },
+      { q: "Welke figuur is een 'kwart' van een cirkel?", options: ["Kwartcirkel", "Halve cirkel", "Driehoek", "Vierkant"], answer: 0, explanation: "Een kwart = 1/4. Een kwart van een cirkel = kwartcirkel (90° taartpunt)." },
       { q: "Hoe noem je een hoek van 90°?", options: ["Rechte hoek", "Scherpe hoek", "Stompe hoek", "Gestrekte hoek"], answer: 0, explanation: "90° = rechte hoek. <90° = scherp, >90° = stomp, 180° = gestrekt." },
       { q: "Een doos meet 5×5×5 cm. Welk soort doos?", options: ["Kubus", "Balk", "Cilinder", "Piramide"], answer: 0, explanation: "Kubus: alle ribben gelijk. Balk: niet alle gelijk. 5×5×5 = kubus." },
     ],
@@ -411,7 +411,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     2: [
       { q: "Welk onderdeel komt eerst in een betoog?", options: ["Inleiding met standpunt", "De conclusie", "Argumenten", "Verhalen"], answer: 0, explanation: "Eerst standpunt (waar je voor pleit), dan argumenten, dan conclusie." },
-      { q: "Hoe maak je een tekst LEESBAAR?", options: ["Met witregels en korte alinea's", "Heel veel cursief en vet", "Alle zinnen gelijk lang", "Zonder leestekens"], answer: 0, explanation: "Witregels en alinea's geven het oog rust. Vet/cursief in moderate dosering." },
+      { q: "Hoe maak je een tekst LEESBAAR?", options: ["Met witregels en korte alinea's", "Heel veel cursief en vet", "Alle zinnen gelijk lang", "Zonder leestekens"], answer: 0, explanation: "Witregels en alinea's geven het oog rust. Vet/cursief met mate." },
       { q: "Welk woord is een SIGNAAL voor VOORBEELD?", options: ["Bijvoorbeeld", "Echter", "Maar", "Toch"], answer: 0, explanation: "'Bijvoorbeeld' (of 'zoals', 'denk aan') leidt een illustratie in." },
       { q: "Welk type tekst probeert je te OVERTUIGEN?", options: ["Betogend", "Verhalend", "Instructief", "Informatief"], answer: 0, explanation: "Betogend = de schrijver pleit voor of tegen iets en geeft argumenten." },
       { q: "Welke zin werkt het beste als CONCLUSIE?", options: ["Daarom denk ik dat we minder plastic moeten gebruiken.", "Plastic is een soort kunststof.", "Tot snel!", "Ik weet het niet."], answer: 0, explanation: "Conclusie sluit af met de hoofdgedachte. 'Daarom denk ik...' rondt een betoog af." },
@@ -427,12 +427,12 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is een ANTONIEM?", options: ["Tegenovergesteld woord", "Hetzelfde woord", "Een grap", "Een werkwoord"], answer: 0, explanation: "Antoniem = woord met tegenovergestelde betekenis (zwart ↔ wit). Synoniem = (bijna) hetzelfde." },
       { q: "Wat betekent 'INTEGER'?", options: ["Eerlijk en betrouwbaar", "Vermoeid", "Boos", "Slim"], answer: 0, explanation: "Integer = eerlijk, betrouwbaar, met principes. Vaak gebruikt voor karakter ('integere politicus')." },
       { q: "Wat betekent 'BAGATELLISEREN'?", options: ["Iets onbelangrijk maken/doen lijken", "Belangrijk maken", "Vergeten", "Onthouden"], answer: 0, explanation: "Bagatel = klein onderdeel. Bagatelliseren = doen alsof iets onbelangrijk is — vaak negatief gebruikt." },
-      { q: "Welk woord past in 'Het ____ stortregende, dus we bleven thuis.'?", options: ["pijp-en", "uit-en", "in-en", "om-en"], answer: 0, explanation: "Uitdrukking 'het regent pijpenstelen'. 'Pijp-en' (op zoek naar 'pijpenstelen') past." },
+      { q: "Welk woorddeel past in 'Het regent ____stelen, dus we bleven thuis.'?", options: ["pijp-en", "uit-en", "in-en", "om-en"], answer: 0, explanation: "Uitdrukking 'het regent pijpenstelen'. 'Pijp-en' (op zoek naar 'pijpenstelen') past." },
       { q: "Een SAMENGESTELD WOORD bestaat uit?", options: ["Twee of meer woorden samen", "Eén lang woord", "Een werkwoord", "Een buitenlands woord"], answer: 0, explanation: "Bv. 'huis-deur' = huis + deur = samengesteld. 'Voetbalveld' = voetbal + veld + (extra: bal+veld)." },
     ],
     5: [
       { q: "Wat is een BIJVOEGLIJK NAAMWOORD?", options: ["Woord dat een eigenschap geeft (zoals 'rood', 'groot')", "Een werkwoord", "Een lidwoord", "Een uitroep"], answer: 0, explanation: "Bnw geeft een eigenschap of kenmerk: 'de RODE bal', 'een GROTE hond'." },
-      { q: "Welk is een PERSOONLIJK VOORNAAMWOORD?", options: ["Hij", "Boom", "Lopen", "Snel"], answer: 0, explanation: "Persoonlijke vnw: ik, jij, hij/zij/het, wij, jullie, zij. 'Hij' verwijst naar persoon." },
+      { q: "Welk woord is een PERSOONLIJK VOORNAAMWOORD?", options: ["Hij", "Boom", "Lopen", "Snel"], answer: 0, explanation: "Persoonlijke vnw: ik, jij, hij/zij/het, wij, jullie, zij. 'Hij' verwijst naar persoon." },
       { q: "Wat is het GEZEGDE in: 'Sara loopt naar school.'?", options: ["loopt", "Sara", "naar school", "school"], answer: 0, explanation: "Gezegde = wat het onderwerp doet/is. Hier: 'loopt' (werkwoord-deel)." },
       { q: "Welke zin staat in de TOEKOMENDE TIJD?", options: ["Morgen ga ik zwemmen.", "Gisteren zwom ik.", "Ik zwem nu.", "Ik kan zwemmen."], answer: 0, explanation: "Toekomende tijd: 'morgen ga ik' / 'ik zal'. 'Gisteren zwom' = verleden, 'ik zwem' = tegenwoordig, 'ik kan' = mogelijkheid." },
       { q: "Hoe heet de basis-vorm van een werkwoord (zoals 'lopen', 'eten', 'zien')?", options: ["Infinitief", "Voltooid deelwoord", "Gebiedende wijs", "Zelfstandig naamwoord"], answer: 0, explanation: "Infinitief = onbepaalde wijs: 'lopen', 'zien'. Eindigt vaak op -en in NL." },
@@ -445,7 +445,7 @@ export const TEXTBOOK_QUESTIONS = {
   "nieuw-nl-junior": {
     0: [
       { q: "Wat doe je goed bij LUISTEREN?", options: ["Stil zijn en aandacht geven", "Praten door de spreker heen", "Naar je telefoon kijken", "Ergens anders gaan zitten"], answer: 0, explanation: "Goed luisteren = stil + aandacht + de spreker aankijken." },
-      { q: "Welk geluid hoor je in een rijtje 'm-a-n'?", options: ["man", "mam", "mn", "ma"], answer: 0, explanation: "Plak de letters samen: m + a + n = man." },
+      { q: "Welk woord hoor je in het rijtje 'm-a-n'?", options: ["man", "mam", "mn", "ma"], answer: 0, explanation: "Plak de letters samen: m + a + n = man." },
       { q: "Welk woord rijmt op 'kat'?", options: ["mat", "boom", "tafel", "auto"], answer: 0, explanation: "Rijmen = zelfde eindklank. Kat-mat hebben dezelfde -at klank." },
     ],
     1: [
@@ -464,7 +464,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welke ZIN is goed?", options: ["Ik loop naar school.", "ik loop naar school", "Ik LOOP naar school.", "Ik loop naar school"], answer: 0, explanation: "Hoofdletter aan begin (✓ Ik) + punt aan eind (✓ school.). Dat is de juiste vorm." },
     ],
     4: [
-      { q: "Welk is GOED gespeld?", options: ["bal", "bahl", "ball", "bel"], answer: 0, explanation: "'Bal' = drie letters: b-a-l. Korte 'a' klank, korte 'l'." },
+      { q: "Welk woord is GOED gespeld?", options: ["bal", "bahl", "ball", "bel"], answer: 0, explanation: "'Bal' = drie letters: b-a-l. Korte 'a' klank, korte 'l'." },
       { q: "Welke is goed: 'huis' of 'huiz'?", options: ["huis", "huiz", "Beide", "Geen van beide"], answer: 0, explanation: "Eenvoud: 'huis' eindigt op -s (een woord met s). De z hoort bij 'huizen' (meervoud)." },
       { q: "Hoe schrijf je het meervoud van 'kat'?", options: ["katten", "katen", "katz", "kats"], answer: 0, explanation: "Korte klinker 'a' → de medeklinker erna verdubbelt: kat → katten." },
     ],
@@ -536,7 +536,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     4: [
       { q: "Hoe schrijf je een ZIN goed op?", options: ["Hoofdletter + spatie tussen woorden + punt", "Alles aan elkaar zonder spaties", "Alleen kleine letters", "Met cijfers"], answer: 0, explanation: "Hoofdletter (begin), spaties (tussen woorden), punt (einde). Bv. 'De auto rijdt.'" },
-      { q: "Welk woord schrijf je voluit met letters?", options: ["acht", "8", "VIII", "oochd"], answer: 0, explanation: "'Acht' = letterwoord voor het cijfer 8. Bij schrijven kun je beide gebruiken." },
+      { q: "Welk woord schrijf je voluit met letters?", options: ["acht", "8", "VIII", "oochd"], answer: 0, explanation: "'Acht' is het getal 8 in letters. Bij schrijven kun je beide gebruiken." },
       { q: "Welke letters in 'zon' zijn klinkers?", options: ["o", "z", "n", "z en n"], answer: 0, explanation: "Z en N zijn medeklinkers. O is de enige klinker in 'zon'." },
     ],
   },
@@ -568,11 +568,11 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat betekent BIODIVERSITEIT?", options: ["Variatie aan planten en dieren", "Soort milieu-camera", "Type huis", "Een ziekte"], answer: 0, explanation: "Biodiversiteit = hoeveel verschillende soorten leven er. Hoe meer biodiversiteit, hoe gezonder de natuur." },
       { q: "Wat is een NATUURGEBIED?", options: ["Beschermd stuk natuur waar planten en dieren leven", "Stadspark", "Camping", "Speeltuin"], answer: 0, explanation: "Natuurgebied = beschermd terrein waar mens niet alles mag (geen huizen, weinig wegen) — bv. Veluwe, Biesbosch." },
       { q: "Wat is RECYCLEN?", options: ["Materiaal hergebruiken (afval → nieuwe spullen)", "Iets weggooien", "Iets nieuws kopen", "Tellen"], answer: 0, explanation: "Recyclen: oud papier → nieuw papier; oude petfles → nieuwe petfles. Spaart grondstoffen." },
-      { q: "Welke energie is GROEN (duurzaam)?", options: ["Zonneenergie", "Aardgas", "Steenkool", "Aardolie"], answer: 0, explanation: "Zonneenergie raakt nooit op en geeft geen CO₂. Gas/kolen/olie zijn fossiel (raken op + opwarming)." },
+      { q: "Welke energie is GROEN (duurzaam)?", options: ["Zonne-energie", "Aardgas", "Steenkool", "Aardolie"], answer: 0, explanation: "Zonne-energie raakt nooit op en geeft geen CO₂. Gas/kolen/olie zijn fossiel (raken op + opwarming)." },
     ],
     4: [
-      { q: "Wat veroorzaakt WIND?", options: ["Verschillen in luchtdruk", "Bomen die bewegen", "Wolken die voorbij gaan", "Vogels die vliegen"], answer: 0, explanation: "Wind = lucht stroomt van hogedruk naar lagedruk. Onstaat door temperatuur-verschillen op aarde." },
-      { q: "Wat is HAGEL?", options: ["IJsbolletjes uit een wolk", "Sneeuwvlokken", "Vorst op gras", "Ijsbergen"], answer: 0, explanation: "Hagel = ijsbolletjes die in wolken steeds groter groeien tot ze te zwaar worden en vallen." },
+      { q: "Wat veroorzaakt WIND?", options: ["Verschillen in luchtdruk", "Bomen die bewegen", "Wolken die voorbij gaan", "Vogels die vliegen"], answer: 0, explanation: "Wind = lucht stroomt van hogedruk naar lagedruk. Ontstaat door temperatuur-verschillen op aarde." },
+      { q: "Wat is HAGEL?", options: ["IJsbolletjes uit een wolk", "Sneeuwvlokken", "Vorst op gras", "IJsbergen"], answer: 0, explanation: "Hagel = ijsbolletjes die in wolken steeds groter groeien tot ze te zwaar worden en vallen." },
       { q: "Welk klimaat heeft Nederland?", options: ["Gematigd zeeklimaat", "Tropisch", "Woestijn", "Poolgebied"], answer: 0, explanation: "Gematigd zeeklimaat: niet te heet, niet te koud, regelmatig regen door nabijheid Noordzee." },
       { q: "Wat doet een WEERSTATION?", options: ["Meet temperatuur, regen, wind", "Maakt het weer", "Vangt wolken", "Schiet bliksem"], answer: 0, explanation: "Weerstation = instrumenten die het weer meten. KNMI gebruikt die data voor de weersvoorspelling." },
     ],
@@ -586,7 +586,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is een EENVOUDIGE machine?", options: ["Hefboom of katrol", "Computer", "Auto", "Robot"], answer: 0, explanation: "Eenvoudige machines zijn basisuitvindingen: hefboom, katrol, hellend vlak, schroef, wig — versterken kracht." },
       { q: "Hoe wordt elektriciteit OPgewekt in een windmolen?", options: ["Wind draait wieken die een dynamo aandrijven", "Wind blaast op zonnepanelen", "Wind zelf is elektrisch", "Door warmte"], answer: 0, explanation: "Wieken draaien → as draait → dynamo zet draaibeweging om in elektriciteit." },
       { q: "Welk materiaal geleidt elektriciteit GOED?", options: ["Koper", "Hout", "Plastic", "Glas"], answer: 0, explanation: "Metalen (vooral koper) zijn goede geleiders. Hout, plastic, glas zijn isolatoren." },
-      { q: "Wat is een SOLAR PANEEL?", options: ["Vangt zonlicht en maakt er elektriciteit van", "Verwarmt water", "Beschermt tegen zon", "Reflecteert licht"], answer: 0, explanation: "Solar (= zon) paneel zet zonlicht direct om in elektriciteit. Op steeds meer Nederlandse daken te zien." },
+      { q: "Wat is een ZONNEPANEEL?", options: ["Vangt zonlicht en maakt er elektriciteit van", "Verwarmt water", "Beschermt tegen zon", "Reflecteert licht"], answer: 0, explanation: "Een zonnepaneel (Engels: solar panel) zet zonlicht direct om in elektriciteit. Op steeds meer Nederlandse daken te zien." },
     ],
   },
 
@@ -605,13 +605,13 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Hoeveel ribben heeft een kubus?", options: ["12", "6", "8", "4"], answer: 0, explanation: "6 vlakken, 8 hoekpunten, 12 ribben." },
     ],
     1: [
-      { q: "Vereenvoudig: 3 × (4 + 5)", options: ["27", "17", "21", "60"], answer: 0, explanation: "Eerst tussen haakjes: 4+5=9. Dan 3 × 9 = 27. Volgorde: haakjes → ×/÷ → +/−." },
+      { q: "Bereken: 3 × (4 + 5)", options: ["27", "17", "21", "60"], answer: 0, explanation: "Eerst tussen haakjes: 4+5=9. Dan 3 × 9 = 27. Volgorde: haakjes → ×/÷ → +/−." },
       { q: "Vul in: 7 × ___ = 56", options: ["8", "7", "9", "6"], answer: 0, explanation: "56 / 7 = 8. Tafel van 7: 7×8=56." },
       { q: "De formule p = 2 × a + 3. Wat is p als a = 5?", options: ["13", "10", "8", "16"], answer: 0, explanation: "p = 2 × 5 + 3 = 10 + 3 = 13." },
       { q: "Bereken: 100 − 3 × 20", options: ["40", "94", "1940", "60"], answer: 0, explanation: "Eerst ×: 3×20=60. Daarna −: 100−60=40." },
     ],
     2: [
-      { q: "Het punt (3, 5) ligt waar?", options: ["Rechts en boven het origineel", "Links en boven", "Rechts en onder", "In het origineel"], answer: 0, explanation: "Eerste coördinaat (x=3) → 3 naar rechts. Tweede (y=5) → 5 omhoog." },
+      { q: "Het punt (3, 5) ligt waar?", options: ["Rechts van en boven de oorsprong", "Links en boven", "Rechts en onder", "In de oorsprong"], answer: 0, explanation: "Eerste coördinaat (x=3) → 3 naar rechts. Tweede (y=5) → 5 omhoog." },
       { q: "Welke vormt een GRAFIEK?", options: ["Tabel met x en y omgezet naar punten", "Een tekening van een huis", "Een formule alleen", "Een getal"], answer: 0, explanation: "Grafiek = visuele weergave van paren (x, y) als punten of lijn in een assenstelsel." },
       { q: "Bij y = 2x: wat is y als x = 4?", options: ["8", "6", "2", "10"], answer: 0, explanation: "y = 2 × 4 = 8. Vervang x door 4 in de formule." },
       { q: "De x-as is meestal welke richting?", options: ["Horizontaal (links-rechts)", "Verticaal", "Diagonaal", "Cirkelvormig"], answer: 0, explanation: "x-as = horizontaal, y-as = verticaal. Snijpunt = oorsprong (0,0)." },
@@ -625,7 +625,7 @@ export const TEXTBOOK_QUESTIONS = {
     4: [
       { q: "Hoeveel is 25 % van 80?", options: ["20", "25", "16", "40"], answer: 0, explanation: "25 % = ¼. Eén vierde van 80 = 20." },
       { q: "Wat is 0,25 als breuk?", options: ["¼", "¾", "½", "⅕"], answer: 0, explanation: "0,25 = 25/100 = 1/4 (vereenvoudigd)." },
-      { q: "Reken uit: 12,5 + 7,75", options: ["20,25", "19,25", "20,75", "20"], answer: 0, explanation: "12,50 + 7,75 = 20,25 (decimaal kommas onder elkaar)." },
+      { q: "Reken uit: 12,5 + 7,75", options: ["20,25", "19,25", "20,75", "20"], answer: 0, explanation: "12,50 + 7,75 = 20,25 (komma's onder elkaar)." },
       { q: "Een trui kost €40 met 20% korting. Wat betaal je?", options: ["€32", "€20", "€8", "€48"], answer: 0, explanation: "20% van 40 = 8. Korting = 8. Prijs: 40 − 8 = €32." },
     ],
   },
@@ -684,7 +684,7 @@ export const TEXTBOOK_QUESTIONS = {
     1: [
       { q: "Welk woord beschrijft een GEZINSLID?", options: ["Broer", "Buurman", "Klasgenoot", "Vriend"], answer: 0, explanation: "Broer = familie/gezin. Buurman, klasgenoot, vriend = ander soort relatie." },
       { q: "Wat is een BIJVOEGLIJK NAAMWOORD bij 'mijn vriendin'?", options: ["aardige (mijn aardige vriendin)", "Sara", "lopen", "snel"], answer: 0, explanation: "Bnw geeft eigenschap aan het zelfstandig naamwoord. 'Aardige' beschrijft de vriendin." },
-      { q: "Welk persoonlijk voornaamwoord past: 'Hij belde naar ___ moeder.'", options: ["zijn", "zijn (bezittelijk)", "hij", "hem"], answer: 0, explanation: "'Zijn' is het bezittelijk voornaamwoord van 'hij' — verwijst naar wiens moeder. Hier is hij = bezitter." },
+      { q: "Welk voornaamwoord past: 'Hij belde naar ___ moeder.'", options: ["zijn", "jij", "hij", "hem"], answer: 0, explanation: "'Zijn' is het bezittelijk voornaamwoord van 'hij' — verwijst naar wiens moeder. Hier is hij = bezitter." },
     ],
     2: [
       { q: "Wat is een SCHOOLREGEL?", options: ["Afspraak hoe iedereen zich gedraagt", "Formule wiskunde", "Toets", "Rooster"], answer: 0, explanation: "Schoolregels zijn gedragsafspraken: niet rennen op de gang, telefoon weg, etc." },
@@ -734,7 +734,7 @@ export const TEXTBOOK_QUESTIONS = {
     11: [
       { q: "Wat is een ARGUMENT?", options: ["Reden om iets te onderbouwen", "Een ruzie", "Een mening zonder reden", "Een vraag"], answer: 0, explanation: "Argument = bewijs of reden waarom je standpunt klopt. Mening + onderbouwing = argument." },
       { q: "Welke is een SLECHTE argumentatie?", options: ["'Iedereen vindt het, dus is het waar'", "'Onderzoek toont aan dat...'", "'Volgens de wet geldt...'", "'Twee bronnen bevestigen...'"], answer: 0, explanation: "Drogreden 'argument ad populum' (iedereen vindt) is logische fout. Goede argumenten gebruiken bewijs/bron." },
-      { q: "Wat is een DEBAT?", options: ["Geordende discussie met regels en standpunten", "Schreeuw-ruzie", "Toespraak", "Toets"], answer: 0, explanation: "Debat: voor- en tegenstanders argumenteren beurtelings volgens regels. Vaak met jury die wint bepaalt." },
+      { q: "Wat is een DEBAT?", options: ["Geordende discussie met regels en standpunten", "Schreeuw-ruzie", "Toespraak", "Toets"], answer: 0, explanation: "Debat: voor- en tegenstanders argumenteren beurtelings volgens regels. Vaak met een jury die de winnaar bepaalt." },
     ],
   },
 
@@ -759,7 +759,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Hoe vraag je 'Wanneer begint de les?'", options: ["When does the lesson start?", "Where does the lesson start?", "Why does the lesson start?", "Who does the lesson start?"], answer: 0, explanation: "When = wanneer. Where = waar, why = waarom, who = wie." },
     ],
     3: [
-      { q: "Wat betekent 'hobby'?", options: ["Hobby / vrije tijdsbesteding", "Werk", "Vakantie", "Eten"], answer: 0, explanation: "Hobby = hobby. Engels en NL gebruiken hetzelfde leenwoord." },
+      { q: "Wat betekent 'hobby'?", options: ["Hobby / vrijetijdsbesteding", "Werk", "Vakantie", "Eten"], answer: 0, explanation: "Hobby = hobby. Engels en NL gebruiken hetzelfde leenwoord." },
       { q: "'I ___ playing football.' (ik vind het leuk)", options: ["like", "likes", "liking", "liked"], answer: 0, explanation: "I + like + ing-vorm. 'Likes' alleen voor he/she/it." },
       { q: "Welke sport is 'swimming'?", options: ["Zwemmen", "Lopen", "Springen", "Klimmen"], answer: 0, explanation: "Swimming = zwemmen (van 'swim'). Running = lopen, jumping = springen." },
     ],
@@ -796,7 +796,7 @@ export const TEXTBOOK_QUESTIONS = {
     1: [
       // Tijd van Grieken en Romeinen (3000 v.Chr. - 500 n.Chr.)
       { q: "In welke stad ontstond de eerste DEMOCRATIE?", options: ["Athene", "Rome", "Sparta", "Alexandrië"], answer: 0, explanation: "Athene rond 500 v.Chr. = eerste vorm van directe democratie (alleen voor vrije mannen). Rome had een republiek." },
-      { q: "Wie was Julius Caesar?", options: ["Romeinse veldheer en heerser", "Griekse filosoof", "Egyptische farao", "Bijbelse koning"], answer: 0, explanation: "Caesar (100-44 v.Chr.) was Romeins generaal die later dictator werd. Vermoord op de Ides van maart." },
+      { q: "Wie was Julius Caesar?", options: ["Romeinse veldheer en heerser", "Griekse filosoof", "Egyptische farao", "Bijbelse koning"], answer: 0, explanation: "Caesar (100-44 v.Chr.) was Romeins generaal die later dictator werd. Vermoord op de Iden van maart." },
       { q: "Welke taal kwam van de Romeinen?", options: ["Latijn", "Grieks", "Arabisch", "Hebreeuws"], answer: 0, explanation: "Latijn = taal van Romeinse Rijk. Tegenwoordige talen Italiaans/Spaans/Frans/Roemeens komen ervan af." },
     ],
     2: [
@@ -808,13 +808,13 @@ export const TEXTBOOK_QUESTIONS = {
     3: [
       // Tijd van steden en staten (1000-1500)
       { q: "Welke uitvinding versnelde verspreiding van kennis (~1450)?", options: ["Boekdrukkunst (Gutenberg)", "Stoommachine", "Telefoon", "Computer"], answer: 0, explanation: "Gutenberg ~1450 = boekdrukkunst met losse letters. Boeken werden goedkoper → meer geletterdheid → ideeën verspreiden." },
-      { q: "Wat is GILDEN?", options: ["Beroepsverenigingen in middeleeuwse steden", "Soort kerk", "Boerderij", "Stadsmuur"], answer: 0, explanation: "Gilden: verenigingen van bv. bakkers, smeden — bewaakten kwaliteit + opleiding (leerling-knecht-meester)." },
+      { q: "Wat zijn GILDEN?", options: ["Beroepsverenigingen in middeleeuwse steden", "Soort kerk", "Boerderij", "Stadsmuur"], answer: 0, explanation: "Gilden: verenigingen van bv. bakkers, smeden — bewaakten kwaliteit + opleiding (leerling-knecht-meester)." },
       { q: "Wat is de PEST (zwarte dood) in 1347-1352?", options: ["Plaag die ⅓ van Europa doodde", "Een godsdienstoorlog", "Een hongersnood", "Een vulkaanuitbarsting"], answer: 0, explanation: "Builenpest verspreid via vlooien op ratten. ~25 miljoen Europeanen overleden — diepe sociale gevolgen." },
     ],
     4: [
       // Tijd van ontdekkers en hervormers (1500-1600)
       { q: "Wie ontdekte Amerika in 1492?", options: ["Columbus", "Marco Polo", "Vasco da Gama", "Magellaan"], answer: 0, explanation: "Christoffel Columbus zeilde namens Spanje westwaarts om Indië te bereiken — kwam aan in Caribisch gebied." },
-      { q: "Wat startte Maarten Luther in 1517?", options: ["Protestantse Reformatie", "Eerste kruistocht", "Wetenschappelijke revolutie", "Honderdjarige Oorlog"], answer: 0, explanation: "Luther's 95 stellingen aan de kerkdeur in Wittenberg → splitste de Westerse christenheid (rooms vs protestants)." },
+      { q: "Wat startte Maarten Luther in 1517?", options: ["Protestantse Reformatie", "Eerste kruistocht", "Wetenschappelijke revolutie", "Honderdjarige Oorlog"], answer: 0, explanation: "Luthers 95 stellingen aan de kerkdeur in Wittenberg → splitste de Westerse christenheid (rooms vs protestants)." },
       { q: "Wie was Erasmus?", options: ["Nederlandse humanist + denker", "Spaanse koning", "Vlaamse schilder", "Duitse keizer"], answer: 0, explanation: "Desiderius Erasmus van Rotterdam = beroemd humanist. Schreef o.a. 'Lof der zotheid'. Voor verdraagzaamheid." },
     ],
     5: [
@@ -827,17 +827,17 @@ export const TEXTBOOK_QUESTIONS = {
       // Tijd van pruiken en revoluties (1700-1800)
       { q: "Wat begon in 1789?", options: ["Franse Revolutie", "Eerste Wereldoorlog", "Reformatie", "Industriële Revolutie"], answer: 0, explanation: "Bestorming Bastille 14 juli 1789 → einde absolute monarchie → 'vrijheid, gelijkheid, broederschap'." },
       { q: "Wat is VERLICHTING?", options: ["18e-eeuwse stroming: rede + vrijheid + gelijkheid", "Een vorm van religie", "Een soort kunst", "Stadsverlichting"], answer: 0, explanation: "Verlichting: filosofen (Voltaire, Rousseau, Kant) bepleiten redelijk denken, rechten van de mens, kritiek op kerk/koning." },
-      { q: "Wat ontstond na de Amerikaanse Revolutie (1776)?", options: ["Verenigde Staten van Amerika", "Canada", "Cuba", "Mexico"], answer: 0, explanation: "13 koloniën verklaarden zich onafhankelijk van Engeland → Verenigde Staten met grondwet (1789)." },
+      { q: "Wat ontstond na de Amerikaanse Revolutie (1776)?", options: ["Verenigde Staten van Amerika", "Canada", "Cuba", "Mexico"], answer: 0, explanation: "13 koloniën verklaarden zich onafhankelijk van Groot-Brittannië → Verenigde Staten met grondwet (1789)." },
     ],
     7: [
       // Tijd van burgers en stoommachines (1800-1900)
       { q: "Wat startte de INDUSTRIËLE Revolutie?", options: ["Stoommachines + fabrieken (~1750-1850)", "Vliegtuigen", "Computers", "Internet"], answer: 0, explanation: "Industriële revolutie begon in Engeland: stoomkracht → fabrieken → massaproductie → grote sociale veranderingen." },
       { q: "Wat is KOLONIALISME?", options: ["Europese landen bezetten gebieden buiten Europa", "Reizen voor plezier", "Boerderijen", "Stadsuitbreiding"], answer: 0, explanation: "19e eeuw: Engeland, Frankrijk, Nederland etc. bezetten Afrika, Azië voor grondstoffen + arbeidskracht. Vaak gedwongen (slavernij)." },
-      { q: "Wanneer werd slavernij in Nederlandse koloniën AFGESCHAFT?", options: ["1863", "1500", "1700", "1945"], answer: 0, explanation: "1 juli 1863 (in Suriname effectief 1873 na 10 jaar 'Staatstoezicht'). Veel later dan VS (1865 = einde Civil War)." },
+      { q: "Wanneer werd slavernij in Nederlandse koloniën AFGESCHAFT?", options: ["1863", "1500", "1700", "1945"], answer: 0, explanation: "1 juli 1863 (in Suriname effectief 1873 na 10 jaar 'Staatstoezicht'). Later dan Groot-Brittannië (1834); de VS volgden in 1865 (einde van de Burgeroorlog)." },
     ],
     8: [
       // Tijd van de wereldoorlogen (1900-1950)
-      { q: "Wanneer was de Eerste Wereldoorlog?", options: ["1914-1918", "1939-1945", "1900-1910", "1950-1953"], answer: 0, explanation: "WO1: 1914 (moord op Aartshertog Ferdinand) tot 1918 (wapenstilstand 11 november). 17 miljoen doden." },
+      { q: "Wanneer was de Eerste Wereldoorlog?", options: ["1914-1918", "1939-1945", "1900-1910", "1950-1953"], answer: 0, explanation: "WO1: 1914 (moord op aartshertog Frans Ferdinand) tot 1918 (wapenstilstand 11 november). 17 miljoen doden." },
       { q: "Wie was de leider van Nazi-Duitsland?", options: ["Hitler", "Stalin", "Roosevelt", "Churchill"], answer: 0, explanation: "Adolf Hitler werd Rijkskanselier in 1933 en bouwde een dictatuur. WO2 begon met inval Polen (1 sept 1939)." },
       { q: "Wat is de HOLOCAUST?", options: ["Massamoord op ~6 miljoen joden door Nazi's", "Een vorm van blitzkrieg", "Een wapen", "Een stad in Duitsland"], answer: 0, explanation: "Sjoa/holocaust: systematische moord op joden + Roma + andere minderheden door nazi-regime in concentratiekampen." },
     ],
@@ -854,7 +854,7 @@ export const TEXTBOOK_QUESTIONS = {
     0: [
       { q: "Iran ligt in welk werelddeel?", options: ["Azië", "Afrika", "Europa", "Amerika"], answer: 0, explanation: "Iran ligt in West-Azië (Midden-Oosten). Hoofdstad: Teheran." },
       { q: "Welk klimaat is typisch voor het binnenland van Iran?", options: ["Droog (woestijn/steppe)", "Tropisch", "Polair", "Gematigd zee"], answer: 0, explanation: "Iran heeft groot binnenland met droge woestijnen (Dasht-e Kavir) en steppen. Bergen rond. Weinig regen." },
-      { q: "Welke godsdienst is dominant in Iran?", options: ["Islam (sjiitisch)", "Christendom", "Hindoeïsme", "Boeddhisme"], answer: 0, explanation: "Iran is sjiitisch islamitisch (~90%). Verschilt van soennitische meerderheid in veel buurlanden (Irak, SA)." },
+      { q: "Welke godsdienst is dominant in Iran?", options: ["Islam (sjiitisch)", "Christendom", "Hindoeïsme", "Boeddhisme"], answer: 0, explanation: "Iran is sjiitisch islamitisch (~90%). Verschilt van de soennitische meerderheid in veel buurlanden (Turkije, Afghanistan, Pakistan)." },
     ],
     1: [
       { q: "Wat is een NATUURLANDSCHAP?", options: ["Gebied dat door natuurkrachten is gevormd", "Park in een stad", "Akker", "Tuin"], answer: 0, explanation: "Natuurlandschap = gevormd door erosie, tektoniek, klimaat — bv. Grand Canyon, regenwoud, gebergte." },
@@ -865,7 +865,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welke economische sector is GROOT in Gambia?", options: ["Landbouw + toerisme", "Auto-industrie", "Hightech", "Olie"], answer: 0, explanation: "Gambia is een ontwikkelingsland met landbouw (pinda's) en toerisme (stranden) als belangrijkste sectoren." },
     ],
     3: [
-      { q: "Welke natuurramp is COMMON in Japan?", options: ["Aardbevingen + tsunami's", "Sneeuwstormen", "Tornado's (zoals VS)", "Sahara-zandstormen"], answer: 0, explanation: "Japan ligt op de 'Ring of Fire': aardbevingsgordel rond Pacific. Plaatgrenzen → bevingen + tsunami's + vulkanen." },
+      { q: "Welke natuurramp komt VAAK voor in Japan?", options: ["Aardbevingen + tsunami's", "Sneeuwstormen", "Tornado's (zoals VS)", "Sahara-zandstormen"], answer: 0, explanation: "Japan ligt op de 'Ring van Vuur': aardbevingsgordel rond Pacific. Plaatgrenzen → bevingen + tsunami's + vulkanen." },
       { q: "Wat is een TSUNAMI?", options: ["Reusachtige golf na onderzeese aardbeving", "Een soort orkaan", "Vulkanische as", "Sneeuw-storm"], answer: 0, explanation: "Onderzeese aardbeving verplaatst water → golf reist met >700 km/u over oceaan, groeit nabij kust tot meters hoog." },
     ],
     4: [
@@ -891,18 +891,18 @@ export const TEXTBOOK_QUESTIONS = {
     0: [
       // Stoffen en materialen
       { q: "Wat is een STOF?", options: ["Materiaal met eigen kenmerken (zoals water, ijzer)", "Schoolvak", "Een gas alleen", "Een soort verf"], answer: 0, explanation: "In nask: stof = materie met eigen eigenschappen (smeltpunt, dichtheid). Water, koper, zuurstof zijn stoffen." },
-      { q: "Welke is een EDELE metaal?", options: ["Goud", "IJzer", "Aluminium", "Koper"], answer: 0, explanation: "Edele metalen (goud, zilver, platina) reageren weinig en roesten niet. IJzer roest wel." },
+      { q: "Welk metaal is een EDEL metaal?", options: ["Goud", "IJzer", "Aluminium", "Koper"], answer: 0, explanation: "Edele metalen (goud, zilver, platina) reageren weinig en roesten niet. IJzer roest wel." },
       { q: "Wat is de DICHTHEID van water?", options: ["1 g/cm³ (= 1 kg/liter)", "10 g/cm³", "0,1 g/cm³", "100 g/cm³"], answer: 0, explanation: "Bij 4°C: water heeft dichtheid precies 1 g/cm³. Voorwerp dichter dan water zinkt; minder dicht drijft." },
     ],
     1: [
-      { q: "Welk is GEEN kracht?", options: ["Snelheid", "Zwaartekracht", "Wrijving", "Veerkracht"], answer: 0, explanation: "Snelheid is een grootheid (m/s), géén kracht. Zwaartekracht/wrijving/veerkracht zijn krachten." },
+      { q: "Wat is GEEN kracht?", options: ["Snelheid", "Zwaartekracht", "Wrijving", "Veerkracht"], answer: 0, explanation: "Snelheid is een grootheid (m/s), géén kracht. Zwaartekracht/wrijving/veerkracht zijn krachten." },
       { q: "Wat is de eenheid van kracht?", options: ["Newton (N)", "Meter (m)", "Watt (W)", "Joule (J)"], answer: 0, explanation: "Kracht in Newton, vernoemd naar Isaac Newton. 1 N ≈ kracht om 100 g op te tillen." },
       { q: "Wat gebeurt bij STILSTAND?", options: ["Som van krachten = 0", "Geen wrijving", "Geen zwaartekracht", "Niets"], answer: 0, explanation: "Eerste wet van Newton: zonder netto kracht beweegt voorwerp niet (of door met constante snelheid)." },
     ],
     2: [
-      { q: "Welke vorm van energie heeft een opgeladen veer?", options: ["Veerenergie / elastische energie", "Kinetische energie", "Warmteenergie", "Chemische energie"], answer: 0, explanation: "Een opgespannen veer of strakgespannen elastiek heeft elastische (potentiële) energie." },
+      { q: "Welke vorm van energie heeft een opgespannen veer?", options: ["Veerenergie / elastische energie", "Kinetische energie", "Warmte-energie", "Chemische energie"], answer: 0, explanation: "Een opgespannen veer of strakgespannen elastiek heeft elastische (potentiële) energie." },
       { q: "Welke eenheid heeft energie?", options: ["Joule (J)", "Newton (N)", "Watt (W)", "Volt (V)"], answer: 0, explanation: "Energie wordt gemeten in joules. 1 J = 1 N·m = 1 W·s." },
-      { q: "Hoe stroomt warmte?", options: ["Van warm naar koud", "Van koud naar warm", "Niet, blijft staan", "Random"], answer: 0, explanation: "Warmte stroomt altijd van een warmer naar een kouder voorwerp tot ze even warm zijn." },
+      { q: "Hoe stroomt warmte?", options: ["Van warm naar koud", "Van koud naar warm", "Niet, blijft staan", "Willekeurig"], answer: 0, explanation: "Warmte stroomt altijd van een warmer naar een kouder voorwerp tot ze even warm zijn." },
     ],
     3: [
       { q: "Hoe snel beweegt LICHT in vacuüm?", options: ["~300.000 km/s", "300 km/s", "30 km/s", "3 km/s"], answer: 0, explanation: "Lichtsnelheid c ≈ 299.792 km/s. Niets in het universum kan sneller bewegen." },
@@ -911,7 +911,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     4: [
       { q: "Wat is geluid?", options: ["Trillingen die door lucht reizen", "Licht", "Warmte", "Magneetkracht"], answer: 0, explanation: "Geluid = drukgolven (trillingen) door lucht/water/vaste stof. Reist niet door vacuüm (geen lucht)." },
-      { q: "Welke eenheid is FREQUENTIE?", options: ["Hertz (Hz)", "Decibel (dB)", "Newton", "Volt"], answer: 0, explanation: "Frequentie (aantal trillingen per seconde) in Hertz. Mensen horen ~20 Hz tot 20.000 Hz." },
+      { q: "Welke eenheid heeft FREQUENTIE?", options: ["Hertz (Hz)", "Decibel (dB)", "Newton", "Volt"], answer: 0, explanation: "Frequentie (aantal trillingen per seconde) in Hertz. Mensen horen ~20 Hz tot 20.000 Hz." },
     ],
     5: [
       { q: "Welk apparaat meet ELEKTRISCHE STROOM?", options: ["Ampèremeter", "Voltmeter", "Ohm-meter", "Thermometer"], answer: 0, explanation: "Stroomsterkte (I) in ampère, gemeten met ampèremeter. Voltmeter = spanning (V), ohm-meter = weerstand (Ω)." },
@@ -932,7 +932,7 @@ export const TEXTBOOK_QUESTIONS = {
   "bvj-havo-vwo-1": {
     0: [
       { q: "Wat is BIOLOGIE?", options: ["Studie van leven (planten, dieren, mensen)", "Studie van rotsen", "Studie van sterren", "Studie van talen"], answer: 0, explanation: "Bio (leven) + logos (kennis) → wetenschap van levende organismen." },
-      { q: "Welke kenmerken hebben LEVENDE organismen?", options: ["Groei + ademhaling + voortplanting", "Alleen bewegen", "Alleen kleur", "Alleen geluid"], answer: 0, explanation: "Leven kenmerken: stofwisseling, groei, prikkelbaarheid, voortplanting, ontwikkeling." },
+      { q: "Welke kenmerken hebben LEVENDE organismen?", options: ["Groei + ademhaling + voortplanting", "Alleen bewegen", "Alleen kleur", "Alleen geluid"], answer: 0, explanation: "Kenmerken van leven: stofwisseling, groei, prikkelbaarheid, voortplanting, ontwikkeling." },
       { q: "Wat is een MICROSCOOP?", options: ["Apparaat dat kleine dingen vergroot", "Soort telescoop", "Computer", "Klok"], answer: 0, explanation: "Microscoop vergroot heel kleine objecten (cellen, bacteriën). Tele-scoop = grote afstanden." },
     ],
     1: [
@@ -951,7 +951,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     4: [
       { q: "Wat doet een SKELET?", options: ["Steun + bescherming + bewegingssteun", "Verteren", "Filteren", "Pompen"], answer: 0, explanation: "Skelet (botten) houdt lichaam stevig, beschermt organen (schedel ↔ hersenen, ribben ↔ hart), spieren hechten eraan." },
-      { q: "Welke spier-type werkt zonder dat je eraan denkt?", options: ["Hartspier (onwillekeurig)", "Bicep", "Knie-strekker", "Kuit"], answer: 0, explanation: "Hartspier + gladde spieren (darmen, bloedvaten) werken automatisch. Skeletspieren zijn willekeurig." },
+      { q: "Welk spiertype werkt zonder dat je eraan denkt?", options: ["Hartspier (onwillekeurig)", "Biceps", "Knie-strekker", "Kuit"], answer: 0, explanation: "Hartspier + gladde spieren (darmen, bloedvaten) werken automatisch. Skeletspieren zijn willekeurig." },
     ],
     5: [
       { q: "Welk zintuig zit in je TONG?", options: ["Smaak", "Reuk", "Tast", "Gehoor"], answer: 0, explanation: "Smaakpapillen op tong → zoet/zout/zuur/bitter/umami. Reuk = neus." },
@@ -959,7 +959,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     6: [
       { q: "Hoe planten BLOEMPLANTEN zich voort?", options: ["Bestuiving + bevruchting → zaad", "Door verdeling", "Via wortels", "Niet"], answer: 0, explanation: "Stuifmeel (man) → stempel (vrouw) → bevruchting van eicel → zaad → nieuwe plant." },
-      { q: "Wie produceert zaad-cellen bij dieren?", options: ["Mannetje", "Vrouwtje", "Beide gelijk", "Niemand"], answer: 0, explanation: "Mannetjes maken zaadcellen (ovary cellen → spermatozoa). Vrouwtjes maken eicellen. Bevruchting = samenkomen." },
+      { q: "Wie produceert zaad-cellen bij dieren?", options: ["Mannetje", "Vrouwtje", "Beide gelijk", "Niemand"], answer: 0, explanation: "Mannetjes maken zaadcellen (in de teelballen). Vrouwtjes maken eicellen. Bevruchting = samenkomen." },
     ],
   },
 
@@ -967,7 +967,7 @@ export const TEXTBOOK_QUESTIONS = {
   "geschiedeniswerkplaats": {
     0: [
       { q: "Wat aten jagers-verzamelaars vooral?", options: ["Wild + bessen + noten", "Brood", "Pasta", "Rijst"], answer: 0, explanation: "Vóór landbouw: wat in de natuur te vinden was. Wisselend per seizoen." },
-      { q: "Wat is een KENMERK van het neolithicum?", options: ["Vaste woonplek + landbouw + huisdieren", "Stoommachines", "Schepen", "Geld"], answer: 0, explanation: "Jong-steentijd: mens stopt rondtrekken, gaat boer worden, temt geiten/koeien." },
+      { q: "Wat is een KENMERK van het neolithicum?", options: ["Vaste woonplek + landbouw + huisdieren", "Stoommachines", "Schepen", "Geld"], answer: 0, explanation: "Jonge steentijd: mens stopt rondtrekken, gaat boer worden, temt geiten/koeien." },
     ],
     1: [
       { q: "In welk jaar VIEL het West-Romeinse Rijk?", options: ["476", "1066", "1492", "1500"], answer: 0, explanation: "476 n.Chr.: laatste keizer Romulus Augustulus afgezet door Germaan Odoaker." },
@@ -979,7 +979,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     3: [
       { q: "Wat is een HANZESTAD?", options: ["Lid van middeleeuws handelsverbond rond Noord-/Oostzee", "Hoofdstad", "Vissersdorp", "Hoofdstad van Hanze"], answer: 0, explanation: "Hanze = bond van handelssteden (Hamburg, Bremen, Lübeck, ook Deventer, Zwolle). Bloei 13e-15e eeuw." },
-      { q: "Welke ziekte trof Europa in 1347-1352?", options: ["Pest (zwarte dood)", "Pokken", "Cholera", "Tuberculose"], answer: 0, explanation: "Builenpest van Aziatische schepen → Italië → hele Europa. ~⅓ bevolking gestorven." },
+      { q: "Welke ziekte trof Europa in 1347-1352?", options: ["Pest (zwarte dood)", "Pokken", "Cholera", "Tuberculose"], answer: 0, explanation: "Builenpest van Aziatische schepen → Italië → heel Europa. ~⅓ bevolking gestorven." },
     ],
     4: [
       { q: "Wie spijkerde in 1517 95 STELLINGEN aan een kerkdeur?", options: ["Maarten Luther", "Calvijn", "Erasmus", "Hendrik VIII"], answer: 0, explanation: "Luther in Wittenberg → start Reformatie → splitsing Westerse kerk." },
@@ -987,7 +987,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     5: [
       { q: "Wat is een REGENT (17e eeuw NL)?", options: ["Lid van rijke koopmansfamilie die stad bestuurt", "Een ridder", "Een soldaat", "Een geestelijke"], answer: 0, explanation: "Regenten = patriciërs die schepenen, burgemeesters, VOC-bestuurders waren. Zelfbenoemd, niet gekozen." },
-      { q: "Wat was de bijnaam van NL in 17e eeuw?", options: ["Republiek der Zeven Verenigde Provinciën", "Koninkrijk", "Hertogdom", "Bondsstaat"], answer: 0, explanation: "Republiek (geen koning), 7 provincies (Holland, Zeeland, Utrecht, Gelderland, Overijssel, Friesland, Groningen)." },
+      { q: "Hoe heette NL in de 17e eeuw?", options: ["Republiek der Zeven Verenigde Provinciën", "Koninkrijk", "Hertogdom", "Bondsstaat"], answer: 0, explanation: "Republiek (geen koning), 7 provincies (Holland, Zeeland, Utrecht, Gelderland, Overijssel, Friesland, Groningen)." },
     ],
     6: [
       { q: "Wie schreef 'Du Contrat Social' (1762)?", options: ["Jean-Jacques Rousseau", "Voltaire", "Immanuel Kant", "Adam Smith"], answer: 0, explanation: "Rousseau: maatschappelijk verdrag tussen burgers en overheid. Inspireerde Franse Revolutie." },
@@ -1015,15 +1015,15 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     1: [
       { q: "Hoe schrijf je 'mijn vaders auto' (bezitsvorm)?", options: ["mijn vaders auto (zonder apostrof)", "mijn vader's auto", "mijn vaders' auto", "mijn vader auto"], answer: 0, explanation: "In NL géén apostrof bij bezitsvorm: 'mijn vaders auto'. Apostrof alleen bij namen op klinker (Sara's auto)." },
-      { q: "Welke is bezittelijk voornaamwoord?", options: ["mijn", "ik", "lopen", "snel"], answer: 0, explanation: "Bezittelijke vnw: mijn, jouw, zijn, haar, ons, jullie, hun." },
+      { q: "Welk woord is een bezittelijk voornaamwoord?", options: ["mijn", "ik", "lopen", "snel"], answer: 0, explanation: "Bezittelijke vnw: mijn, jouw, zijn, haar, ons, jullie, hun." },
     ],
     2: [
       { q: "Wat is een SCHOOLREGEL?", options: ["Afspraak hoe iedereen zich gedraagt", "Een vak", "Toets", "Pauze"], answer: 0, explanation: "Schoolregels = afspraken voor veiligheid + sfeer. Bv. 'niet rennen op gang', 'mobiel uit'." },
       { q: "Welk type tekst is een SCHOOLREGLEMENT?", options: ["Informatief / regulerend", "Verhalend", "Lyrisch", "Reclame"], answer: 0, explanation: "Reglement = lijst regels — informatief en bindend (regulerend)." },
     ],
     3: [
-      { q: "Welk hobby past bij MUZIEK?", options: ["Gitaar spelen", "Voetballen", "Lezen", "Schaken"], answer: 0, explanation: "Gitaar spelen = muziek-hobby. Andere passen bij sport / lezen / strategie." },
-      { q: "Wat is BLOG?", options: ["Persoonlijk dagboek of artikel online", "Een soort fiets", "Wifi-signaal", "Schoolboek"], answer: 0, explanation: "Blog = web-log: online dagboek of regelmatig artikel. Vaak persoonlijk geschreven." },
+      { q: "Welke hobby past bij MUZIEK?", options: ["Gitaar spelen", "Voetballen", "Lezen", "Schaken"], answer: 0, explanation: "Gitaar spelen = muziek-hobby. Andere passen bij sport / lezen / strategie." },
+      { q: "Wat is een BLOG?", options: ["Persoonlijk dagboek of artikel online", "Een soort fiets", "Wifi-signaal", "Schoolboek"], answer: 0, explanation: "Blog = web-log: online dagboek of regelmatig artikel. Vaak persoonlijk geschreven." },
     ],
     4: [
       { q: "Welke voedingsstof geeft snelle energie?", options: ["Koolhydraten (suiker, brood)", "Vetten alleen", "Eiwitten alleen", "Vitamines"], answer: 0, explanation: "Koolhydraten worden snel omgezet in glucose → directe energie. Eiwitten = bouwstof, vetten = reserve." },
@@ -1034,12 +1034,12 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welk werelddeel ligt onder Europa?", options: ["Afrika", "Azië", "Antarctica", "Amerika"], answer: 0, explanation: "Op de wereldkaart: Afrika ligt direct onder Europa, gescheiden door Middellandse Zee." },
     ],
     6: [
-      { q: "Wat is SOCIAL MEDIA?", options: ["Online platform om contacten en content te delen", "Een soort krant", "Een tv-zender", "Een radiostation"], answer: 0, explanation: "Bv. Instagram, TikTok, Snapchat, Facebook. Gebruikers delen + reageren onderling." },
-      { q: "Wat is een MEME?", options: ["Visueel grapje dat zich snel verspreid online", "Een type toets", "Wachtwoord", "Een app"], answer: 0, explanation: "Meme = idee/grap die viraal gaat. Vaak plaatje + tekst, kopiëren + variëren is essentieel." },
+      { q: "Wat zijn SOCIALE MEDIA?", options: ["Online platform om contacten en content te delen", "Een soort krant", "Een tv-zender", "Een radiostation"], answer: 0, explanation: "Bv. Instagram, TikTok, Snapchat, Facebook. Gebruikers delen + reageren onderling." },
+      { q: "Wat is een MEME?", options: ["Visueel grapje dat zich snel online verspreidt", "Een type toets", "Wachtwoord", "Een app"], answer: 0, explanation: "Meme = idee/grap die viraal gaat. Vaak plaatje + tekst, kopiëren + variëren is essentieel." },
     ],
     7: [
-      { q: "Wat is OPWARMING van de aarde?", options: ["Klimaatverandering door teveel CO₂", "Hete zomer", "Vulkaan", "Een zonnewende"], answer: 0, explanation: "Mensen stoten CO₂ uit → broeikaseffect → wereldwijd warmer worden. Gevolgen: ijs smelt, weer extremer." },
-      { q: "Wat doet een ZONNEPANEEL?", options: ["Zet zonlicht om in elektriciteit", "Verwarmt water", "Reflecteert zon", "Houdt zon tegen"], answer: 0, explanation: "Photovoltaïsch effect: licht raakt cel → elektronen verplaatsen → stroom. Duurzame energie!" },
+      { q: "Wat is OPWARMING van de aarde?", options: ["Klimaatverandering door te veel CO₂", "Hete zomer", "Vulkaan", "Een zonnewende"], answer: 0, explanation: "Mensen stoten CO₂ uit → broeikaseffect → wereldwijd warmer worden. Gevolgen: ijs smelt, weer extremer." },
+      { q: "Wat doet een ZONNEPANEEL?", options: ["Zet zonlicht om in elektriciteit", "Verwarmt water", "Reflecteert zon", "Houdt zon tegen"], answer: 0, explanation: "Fotovoltaïsch effect: licht raakt cel → elektronen verplaatsen → stroom. Duurzame energie!" },
     ],
   },
 
@@ -1047,7 +1047,7 @@ export const TEXTBOOK_QUESTIONS = {
   "newton-nask": {
     0: [
       { q: "Wat is NaSk?", options: ["Natuur- en scheikunde samen (onderbouw)", "Geschiedenis", "Talen", "Wiskunde"], answer: 0, explanation: "NaSk = combinatie van natuurkunde + scheikunde, samen onderwezen in de onderbouw van de middelbare school." },
-      { q: "Welk experiment is VEILIG?", options: ["Met veiligheidsbril en uit de buurt van anderen", "Met ogen dicht", "Zonder uitleg", "Bij open vlam zonder toezicht"], answer: 0, explanation: "Lab-veiligheid: bril, schort, weet wat je doet, brandblusser nabij. Geen kort haar in vlam." },
+      { q: "Welk experiment is VEILIG?", options: ["Met veiligheidsbril en uit de buurt van anderen", "Met ogen dicht", "Zonder uitleg", "Bij open vlam zonder toezicht"], answer: 0, explanation: "Lab-veiligheid: bril, schort, weet wat je doet, brandblusser nabij. Lang haar vastbinden." },
     ],
     1: [
       { q: "Welke kleur heeft langste GOLFLENGTE?", options: ["Rood", "Violet", "Blauw", "Groen"], answer: 0, explanation: "Zichtbaar licht: rood = lange golf (~700 nm), violet = korte (~400 nm)." },
@@ -1059,7 +1059,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     3: [
       { q: "Wat is WARMTE?", options: ["Energie die overgaat van warm naar koud", "Soort licht", "Een gas", "Geluid"], answer: 0, explanation: "Warmte = energie-overgang door temperatuurverschil. Stroomt altijd warm → koud." },
-      { q: "Welke eenheid is TEMPERATUUR?", options: ["Celsius (°C) of Kelvin (K)", "Joule", "Newton", "Volt"], answer: 0, explanation: "Temperatuur in °C (water bevriest 0, kookt 100) of K (absoluut nul = -273°C = 0 K)." },
+      { q: "Welke eenheid heeft TEMPERATUUR?", options: ["Celsius (°C) of Kelvin (K)", "Joule", "Newton", "Volt"], answer: 0, explanation: "Temperatuur in °C (water bevriest 0, kookt 100) of K (absoluut nul = -273°C = 0 K)." },
     ],
     4: [
       { q: "Wat is GRAVITATIE?", options: ["Aantrekkingskracht tussen massa's", "Magnetisme", "Wrijving", "Veerkracht"], answer: 0, explanation: "Newton: alle massa's trekken elkaar aan. Aarde trekt jou aan = jouw gewicht." },
@@ -1086,7 +1086,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is een ELEMENT?", options: ["Stof bestaande uit één atoomsoort", "Mengsel", "Soort vloeistof", "Een gas"], answer: 0, explanation: "Element = pure atoomsoort: zuurstof (O), goud (Au), waterstof (H)... 118 bekend." },
     ],
     2: [
-      { q: "Wat is een SCHEIKUNDIGE reactie?", options: ["Atomen herschikken → nieuwe stoffen", "Vorm verandert", "Beweging", "Hitte"], answer: 0, explanation: "Reactie: bindingen breken + nieuwe vormen. Bv. H₂ + O₂ → H₂O (verbranding waterstof)." },
+      { q: "Wat is een SCHEIKUNDIGE reactie?", options: ["Atomen herschikken → nieuwe stoffen", "Vorm verandert", "Beweging", "Hitte"], answer: 0, explanation: "Reactie: bindingen breken + nieuwe vormen. Bv. 2 H₂ + O₂ → 2 H₂O (verbranding waterstof)." },
       { q: "Welk teken in vergelijking betekent 'reageert tot'?", options: ["→ (pijl)", "= (gelijkteken)", "+ (plus)", "× (maal)"], answer: 0, explanation: "Pijl scheidt reactanten van producten. CH₄ + 2 O₂ → CO₂ + 2 H₂O." },
     ],
     3: [
@@ -1094,19 +1094,19 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welk molecuul is POLAIR?", options: ["H₂O (water)", "O₂", "N₂", "CO₂"], answer: 0, explanation: "Water heeft hoek-vorm + verschil tussen H en O → permanent dipool. Daarom zo'n goed oplosmiddel." },
     ],
     4: [
-      { q: "Wat is een ZOUT?", options: ["Verbinding van metaal-ion + zuurrest-ion", "Soort suiker", "Vetzuur", "Eiwit"], answer: 0, explanation: "Zout = ionverbinding. Bv. NaCl = Na⁺ + Cl⁻. Smelt op bij koken in water." },
+      { q: "Wat is een ZOUT?", options: ["Verbinding van metaal-ion + zuurrest-ion", "Soort suiker", "Vetzuur", "Eiwit"], answer: 0, explanation: "Zout = ionverbinding. Bv. NaCl = Na⁺ + Cl⁻. Lost goed op in water." },
       { q: "Wat gebeurt bij OPLOSSEN van zout in water?", options: ["Ionen verspreiden zich tussen watermoleculen", "Niets", "Het zout verdwijnt voor altijd", "Gas ontstaat"], answer: 0, explanation: "Water polair → trekt ionen los uit kristal. Bij indampen vormt kristal weer." },
     ],
     5: [
       { q: "Wat is OOK een naam voor KOOLSTOFCHEMIE?", options: ["Organische chemie", "Anorganische chemie", "Fysiek-chemie", "Bio-chemie alleen"], answer: 0, explanation: "Koolstofverbindingen = organische chemie. Levensbasis (eiwitten, suikers, vetten zijn allemaal koolstof-gebaseerd)." },
-      { q: "Welk is GEEN aardolie-product?", options: ["Water", "Benzine", "Plastic", "Diesel"], answer: 0, explanation: "Aardolie wordt geraffineerd tot brandstoffen (benzine, diesel) en grondstoffen (plastic). Water is geen aardolie-product." },
+      { q: "Wat is GEEN aardolie-product?", options: ["Water", "Benzine", "Plastic", "Diesel"], answer: 0, explanation: "Aardolie wordt geraffineerd tot brandstoffen (benzine, diesel) en grondstoffen (plastic). Water is geen aardolie-product." },
     ],
     6: [
       { q: "Wat is de pH van een ZUUR?", options: ["Lager dan 7", "Hoger dan 7", "Precies 7", "Maakt niet uit"], answer: 0, explanation: "pH-schaal 0-14. <7 = zuur (citroensap pH 2), 7 = neutraal (water), >7 = base (zeep pH 9)." },
       { q: "Wat is een voorbeeld van een ZUUR?", options: ["Azijn", "Soda", "Zout", "Water"], answer: 0, explanation: "Azijn (azijnzuur) = pH ~2-3. Soda + zeep = base. Zout = neutraal zout. Water = pH 7." },
     ],
     7: [
-      { q: "Wat is een base?", options: ["Stof met pH > 7 die zuren neutraliseert", "Stof met pH < 7", "Een metaal", "Gas"], answer: 0, explanation: "Bases (alkalisch): pH > 7. Bv. NaOH (natriumloog), ammonia. Neutraliseren zuren tot zout + water." },
+      { q: "Wat is een base?", options: ["Stof met pH > 7 die zuren neutraliseert", "Stof met pH < 7", "Een metaal", "Gas"], answer: 0, explanation: "Bases (alkalisch): pH > 7. Bv. NaOH (natronloog), ammoniak. Neutraliseren zuren tot zout + water." },
       { q: "Bij ZUUR + BASE ontstaat...", options: ["Zout + water", "Niets", "Vuur", "Gas alleen"], answer: 0, explanation: "Neutralisatie: HCl + NaOH → NaCl + H₂O. Klassiek scheikunde-experiment." },
     ],
   },
@@ -1115,15 +1115,15 @@ export const TEXTBOOK_QUESTIONS = {
   "talent-hv1": {
     0: [
       { q: "Wat hoort thuis bij FAMILIE?", options: ["Vader, moeder, broer, zus", "Klasgenoten", "Buurman", "Sportclub"], answer: 0, explanation: "Familie = directe gezins- en bloedverwanten. Klasgenoten/buurman/club zijn andere relaties." },
-      { q: "Welke is een KERNFAMILIE?", options: ["Ouders + kinderen samen", "Allen die jouw achternaam dragen", "Mensen die je kent", "Hele dorp"], answer: 0, explanation: "Kerngezin = ouders + minderjarige kinderen. Bredere familie = ooms, tantes, neven, nichten." },
+      { q: "Wat is een KERNFAMILIE?", options: ["Ouders + kinderen samen", "Allen die jouw achternaam dragen", "Mensen die je kent", "Hele dorp"], answer: 0, explanation: "Kerngezin = ouders + minderjarige kinderen. Bredere familie = ooms, tantes, neven, nichten." },
     ],
     1: [
       { q: "Wat hoort bij EEN GOEDE VRIEND?", options: ["Luisteren + eerlijk + behulpzaam", "Altijd gelijk hebben", "Stil zijn", "Ver weg blijven"], answer: 0, explanation: "Vriendschap: wederzijds vertrouwen, betrouwbaarheid, plezier, steun bij moeilijkheden." },
       { q: "Wat is een DAGBOEK?", options: ["Persoonlijke aantekeningen per dag", "Een schoolrooster", "Foto-album", "Receptenboek"], answer: 0, explanation: "Dagboek = log van eigen ervaringen, gevoelens, gedachten. Privé en persoonlijk." },
     ],
     2: [
-      { q: "Welk is een SPORT?", options: ["Hockey", "Lezen", "Tekenen", "Slapen"], answer: 0, explanation: "Sport = lichamelijke activiteit met regels (vaak competitief). Lezen/tekenen = kunst/cultuur, slapen = rust." },
-      { q: "Wat is een HOBBY?", options: ["Vrije-tijdsbesteding voor plezier", "Een baan", "Verplichting", "Schoolopdracht"], answer: 0, explanation: "Hobby = wat je in vrije tijd doet voor je plezier. Niet voor geld of verplicht." },
+      { q: "Wat is een SPORT?", options: ["Hockey", "Lezen", "Tekenen", "Slapen"], answer: 0, explanation: "Sport = lichamelijke activiteit met regels (vaak competitief). Lezen/tekenen = kunst/cultuur, slapen = rust." },
+      { q: "Wat is een HOBBY?", options: ["Vrijetijdsbesteding voor plezier", "Een baan", "Verplichting", "Schoolopdracht"], answer: 0, explanation: "Hobby = wat je in vrije tijd doet voor je plezier. Niet voor geld of verplicht." },
     ],
     3: [
       { q: "Welke voedingsstof is een EIWIT?", options: ["Vlees, vis, kaas, bonen", "Suiker", "Olie", "Water"], answer: 0, explanation: "Eiwitten zitten in vlees, vis, ei, zuivel, peulvruchten. Bouwstof voor spieren + organen." },
@@ -1131,7 +1131,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     4: [
       { q: "Wat is een ROADTRIP?", options: ["Reis met auto/camper langs verschillende plekken", "Reis met vliegtuig", "Wandeltocht", "Schoolreisje"], answer: 0, explanation: "Roadtrip: lange autoreis met meerdere stops. Populair in VS, Australië." },
-      { q: "Welk dagdeel is BEST om te reizen?", options: ["Vroeg in ochtend (minder druk)", "Spits-uur", "Middernacht in mist", "Zo laat mogelijk"], answer: 0, explanation: "'s Ochtends vroeg = minder verkeer, koeler in zomer, meer zonlicht." },
+      { q: "Welk dagdeel is het BEST om te reizen?", options: ["Vroeg in ochtend (minder druk)", "Spits-uur", "Middernacht in mist", "Zo laat mogelijk"], answer: 0, explanation: "'s Ochtends vroeg = minder verkeer, koeler in zomer, meer zonlicht." },
     ],
     5: [
       { q: "Wat is FAKE NEWS?", options: ["Misleidend of verzonnen 'nieuws'", "Echt nieuws", "Reclame", "Sportverslag"], answer: 0, explanation: "Onjuiste informatie gepresenteerd als nieuws — soms voor verkoop, politiek, of pesten." },
@@ -1179,15 +1179,15 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     2: [
       { q: "Wat is een KASTEEL?", options: ["Versterkt verblijf van een edelman", "Boerderij", "Stadhuis", "Kerk"], answer: 0, explanation: "Middeleeuws kasteel: woon + verdedigingscentrum. Met muur, gracht, donjon (toren)." },
-      { q: "Wat waren MONNIKEN?", options: ["Mannen die in klooster bidden, werken, schrijven", "Soldaten", "Boeren", "Handelaren"], answer: 0, explanation: "Monniken volgden kloosterregel (bv. Benedictijns). Cruciaal voor bewaren + kopiëren van kennis tijdens MA." },
+      { q: "Wat waren MONNIKEN?", options: ["Mannen die in klooster bidden, werken, schrijven", "Soldaten", "Boeren", "Handelaren"], answer: 0, explanation: "Monniken volgden kloosterregel (bv. Benedictijns). Cruciaal voor bewaren + kopiëren van kennis in de middeleeuwen." },
     ],
     3: [
       { q: "Wat was de RENAISSANCE?", options: ["Wedergeboorte van klassieke kunst en kennis (~1400-1600)", "Een veldslag", "Religieuze beweging alleen", "Italië-vakantie"], answer: 0, explanation: "Italiaanse oorsprong: hernieuwde belangstelling voor Grieks-Romeinse erfgoed + nieuwe wetenschap + kunst (Da Vinci, Michelangelo)." },
-      { q: "Wie was Christoffel COLUMBUS (1492)?", options: ["Italiaanse zeevaarder die Amerika 'ontdekte' voor Spanje", "Italiaanse koning", "Schrijver", "Schilder"], answer: 0, explanation: "Columbus zeilde westwaarts naar 'Indië', kwam aan in Bahama's. Begin Europese kolonisatie Amerika." },
+      { q: "Wie was Christoffel COLUMBUS (1492)?", options: ["Italiaanse zeevaarder die Amerika 'ontdekte' voor Spanje", "Italiaanse koning", "Schrijver", "Schilder"], answer: 0, explanation: "Columbus zeilde westwaarts naar 'Indië', kwam aan op de Bahama's. Begin Europese kolonisatie Amerika." },
     ],
     4: [
       { q: "Wat is een REVOLUTIE?", options: ["Snelle, ingrijpende verandering van politiek/maatschappij", "Slechte oogst", "Verkiezing", "Toetsing"], answer: 0, explanation: "Revolutie = omwenteling van het bestaande systeem. Vaak met geweld en grote sociale gevolgen." },
-      { q: "Wanneer was de FRANSE Revolutie?", options: ["1789-1799", "1870-1880", "1700", "1900"], answer: 0, explanation: "1789 (Bastille) → 1799 (Napoleon's coup). Mijlpaal voor democratie/rechten. Inspireerde wereldwijd." },
+      { q: "Wanneer was de FRANSE Revolutie?", options: ["1789-1799", "1870-1880", "1700", "1900"], answer: 0, explanation: "1789 (Bastille) → 1799 (staatsgreep van Napoleon). Mijlpaal voor democratie/rechten. Inspireerde wereldwijd." },
     ],
     5: [
       { q: "Wat veroorzaakte de INDUSTRIËLE Revolutie?", options: ["Stoommachine + fabrieken", "Vliegtuigen", "Computers", "Atoomenergie"], answer: 0, explanation: "Engeland ~1750: stoom → kolenmijnen → spoorwegen → fabrieken. Massaproductie + grote sociale verandering." },
@@ -1202,24 +1202,24 @@ export const TEXTBOOK_QUESTIONS = {
   // ── BuiteNLand — aardrijkskunde alt De Geo ──────────────────────────
   "buitenland": {
     0: [
-      { q: "Wat is PLATENTEKTONIEK?", options: ["Theorie dat aardkorst-platen bewegen", "Een soort steen", "Klimaat-fenomeen", "Vulkaan-soort"], answer: 0, explanation: "Aarde: ~12 grote platen drijven op vloeibare mantel. Botsen, schuiven, separeren → bevingen, vulkanen, gebergten." },
+      { q: "Wat is PLATENTEKTONIEK?", options: ["Theorie dat aardkorst-platen bewegen", "Een soort steen", "Klimaat-fenomeen", "Vulkaan-soort"], answer: 0, explanation: "Aarde: ~12 grote platen drijven op de taai-vloeibare mantel. Botsen, schuiven, uit elkaar gaan → bevingen, vulkanen, gebergten." },
       { q: "Wat veroorzaakt aardbevingen?", options: ["Schuiven van aardkorst-platen", "Vallen van meteorieten", "Donder", "Wind"], answer: 0, explanation: "Plaatgrenzen + breuken: wanneer spanning plotseling vrijkomt → schokgolven. Schaal van Richter meet zwaarte." },
     ],
     1: [
       { q: "Wat is BEVOLKINGSDICHTHEID?", options: ["Aantal mensen per km²", "Hoeveelheid mensen totaal", "Hoeveel voedsel per persoon", "Een statistiek over koeien"], answer: 0, explanation: "Bv. Nederland ~500 mensen/km² (zeer dicht). Australië ~3/km². Dichtheid = bewoonbaarheid + grootte." },
-      { q: "Wat is CULTUUR?", options: ["Manier van leven, taal, kunst, gebruiken van een groep", "Een museum", "Een ras", "Een tijdperk"], answer: 0, explanation: "Cultuur = alles dat mensen leren delen: taal, eten, religie, kunst, normen. Verandert in tijd." },
+      { q: "Wat is CULTUUR?", options: ["Manier van leven, taal, kunst, gebruiken van een groep", "Een museum", "Een ras", "Een tijdperk"], answer: 0, explanation: "Cultuur = alles wat mensen aanleren en met elkaar delen: taal, eten, religie, kunst, normen. Verandert in tijd." },
     ],
     2: [
       { q: "Welke factor bepaalt KLIMAAT vooral?", options: ["Breedtegraad (afstand tot evenaar)", "Tijd van de dag", "Aantal mensen", "Soort flora alleen"], answer: 0, explanation: "Verder van evenaar → kouder. Ook hoogte (bergen kouder) en zee-invloed (gematigder bij kust)." },
-      { q: "Wat is KOSMOSCH klimaat-effect (Coriolis)?", options: ["Aarde-rotatie buigt wind/water af", "Lichteffect", "Smelten van ijs", "Wolkvorming"], answer: 0, explanation: "Door rotatie aarde buigen luchtmassa's af (rechts op noordhalfrond). Verklaart heersende winden + zee-stromingen." },
+      { q: "Wat is het CORIOLIS-effect?", options: ["Aarde-rotatie buigt wind/water af", "Lichteffect", "Smelten van ijs", "Wolkvorming"], answer: 0, explanation: "Door rotatie aarde buigen luchtmassa's af (rechts op noordhalfrond). Verklaart heersende winden + zee-stromingen." },
     ],
     3: [
       { q: "Wat is een ONTWIKKELINGSLAND?", options: ["Land met lager inkomen + minder voorzieningen", "Onlangs gestichte staat", "Land in oorlog", "Land zonder regering"], answer: 0, explanation: "Ontwikkelingsland: groeiend BBP per hoofd, vaak landbouw-gericht, infrastructuur in ontwikkeling. Bv. Indonesië, Nigeria." },
       { q: "Wat doet de WERELDBANK?", options: ["Geeft leningen aan landen voor ontwikkeling", "Drukt geld", "Maakt valuta-koersen", "Beheert wereldmunten"], answer: 0, explanation: "Wereldbank (1944): leent geld aan armere landen voor projecten (wegen, scholen). Doel: armoede verminderen." },
     ],
     4: [
-      { q: "Welke is een EU-instelling?", options: ["Europees Parlement", "VN", "NAVO", "G20"], answer: 0, explanation: "Europees Parlement zit in Brussel/Straatsburg. EU-leden kiezen leden om EU-wetten te maken." },
-      { q: "Welke landen waren EERSTE EU-leden?", options: ["België, Duitsland, Frankrijk, Italië, Luxemburg, Nederland (1957)", "Alleen Frankrijk", "Alle Europese landen tegelijk", "UK + IE + DK"], answer: 0, explanation: "Verdrag van Rome 1957 (EEG → EU): 6 oprichters. Daarna 22 keer uitbreiding tot huidige 27 landen." },
+      { q: "Welke is een EU-instelling?", options: ["Europees Parlement", "VN", "NAVO", "G20"], answer: 0, explanation: "Europees Parlement zit in Brussel/Straatsburg. EU-burgers kiezen de leden, die meebeslissen over EU-wetten." },
+      { q: "Welke landen waren EERSTE EU-leden?", options: ["België, Duitsland, Frankrijk, Italië, Luxemburg, Nederland (1957)", "Alleen Frankrijk", "Alle Europese landen tegelijk", "UK + IE + DK"], answer: 0, explanation: "Verdrag van Rome 1957 (EEG → EU): 6 oprichters. Daarna kwamen er 22 landen bij in 7 uitbreidingsrondes; na het vertrek van het VK (2020) zijn het er nu 27." },
     ],
   },
 
@@ -1251,7 +1251,7 @@ export const TEXTBOOK_QUESTIONS = {
   "grandes-lignes": {
     0: [
       { q: "Wat betekent 'Bonjour'?", options: ["Goedendag", "Doei", "Bedankt", "Sorry"], answer: 0, explanation: "Bonjour = goedendag. Au revoir = tot ziens, merci = bedankt, pardon = sorry." },
-      { q: "'Je ___ Sara.' (mijn naam is)", options: ["m'appelle", "appelle", "suis appelle", "mes appelle"], answer: 0, explanation: "Je m'appelle = letterlijk 'ik noem mij'. Wederkerig werkwoord: je + me + appelle." },
+      { q: "'Je ___ Sara.' (mijn naam is)", options: ["m'appelle", "appelle", "suis appelle", "mes appelle"], answer: 0, explanation: "Je m'appelle = letterlijk 'ik noem mij'. Wederkerend werkwoord: je + me + appelle." },
     ],
     1: [
       { q: "Wat is 'frère' in Frans?", options: ["Broer", "Zus", "Moeder", "Oom"], answer: 0, explanation: "Frère = broer. Sœur = zus, mère = moeder, oncle = oom." },
@@ -1274,11 +1274,11 @@ export const TEXTBOOK_QUESTIONS = {
   // ── Pincode — economie klas 3+ ──────────────────────────────────────
   "pincode": {
     0: [
-      { q: "Wat is ECONOMIE?", options: ["Studie van schaarste + keuzes maken", "Wiskunde over geld alleen", "Boekhouden", "Reklame maken"], answer: 0, explanation: "Economie = hoe mensen + organisaties + landen omgaan met beperkte middelen (geld, tijd, grondstoffen)." },
+      { q: "Wat is ECONOMIE?", options: ["Studie van schaarste + keuzes maken", "Wiskunde over geld alleen", "Boekhouden", "Reclame maken"], answer: 0, explanation: "Economie = hoe mensen + organisaties + landen omgaan met beperkte middelen (geld, tijd, grondstoffen)." },
       { q: "Wat is BEHOEFTE?", options: ["Iets dat je nodig hebt of wilt", "Een baan", "Een product", "Geld"], answer: 0, explanation: "Behoefte = de wens om iets te hebben/doen. Schaars middel + behoefte → schaarste = economisch probleem." },
     ],
     1: [
-      { q: "Wat gebeurt bij hoge VRAAG en lage AANBOD?", options: ["Prijs stijgt", "Prijs daalt", "Niets", "Vraag verdwijnt"], answer: 0, explanation: "Wet van vraag/aanbod: schaarste → prijs stijgt. Bv. tijdens corona toiletpapier-tekort → hogere prijs." },
+      { q: "Wat gebeurt bij hoge VRAAG en laag AANBOD?", options: ["Prijs stijgt", "Prijs daalt", "Niets", "Vraag verdwijnt"], answer: 0, explanation: "Wet van vraag/aanbod: schaarste → prijs stijgt. Bv. tijdens corona toiletpapier-tekort → hogere prijs." },
       { q: "Wat is een MARKT?", options: ["Plek of mechanisme waar vraag en aanbod elkaar ontmoeten", "Alleen een plein in stad", "Een winkel", "Een bedrijf"], answer: 0, explanation: "Markt = ruil-mechanisme: kopers + verkopers ontmoeten (fysiek of online). Niet alleen marktplein." },
     ],
     2: [
@@ -1295,7 +1295,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     5: [
       { q: "Wat is INTERNATIONALE handel?", options: ["Goederen + diensten ruilen tussen landen", "Toerisme", "Diplomatie", "Migratie alleen"], answer: 0, explanation: "Import (in NL) + export (NL → buitenland). Specialisatie + ruil → meer welvaart voor allebei." },
-      { q: "Wat is de EURO?", options: ["Gezamenlijke munt van 20 EU-landen", "Engelse munt", "Wereldmunt", "Bitcoin-variant"], answer: 0, explanation: "Euro (€) sinds 2002 fysiek. Eurozone = NL, DE, FR, IT, etc. Vereenvoudigt handel binnen EU." },
+      { q: "Wat is de EURO?", options: ["Gezamenlijke munt van 21 EU-landen", "Engelse munt", "Wereldmunt", "Bitcoin-variant"], answer: 0, explanation: "Euro (€) sinds 2002 fysiek. Eurozone = NL, DE, FR, IT, etc. Vereenvoudigt handel binnen EU." },
     ],
   },
 
@@ -1303,7 +1303,7 @@ export const TEXTBOOK_QUESTIONS = {
   "themas-maatschappijleer": {
     0: [
       { q: "Wat is MAATSCHAPPIJLEER?", options: ["Studie van NL-samenleving + politiek + recht", "Sport-vak", "Wiskunde", "Geschiedenis alleen"], answer: 0, explanation: "Maatschappijleer behandelt: democratie, recht, media, multiculturele samenleving, verzorgingsstaat." },
-      { q: "Wat is een NORM?", options: ["Regel hoe mensen zich (zouden moeten) gedragen", "Maatstaf alleen", "Wet", "Mode"], answer: 0, explanation: "Norm = sociale verwachting (geen wet, geen straf). Bv. 'niet door rood lopen' = norm. 'Niet stelen' = norm én wet." },
+      { q: "Wat is een NORM?", options: ["Regel hoe mensen zich (zouden moeten) gedragen", "Maatstaf alleen", "Wet", "Mode"], answer: 0, explanation: "Norm = sociale verwachting (geen wet, geen straf). Bv. 'je plaats afstaan aan een oudere in de bus' = norm. 'Niet stelen' = norm én wet." },
     ],
     1: [
       { q: "Wat is een RECHTSSTAAT?", options: ["Land waar wet boven willekeur staat + onafhankelijke rechter", "Land met veel rechtbanken", "Land zonder regering", "Communistisch land"], answer: 0, explanation: "Rechtsstaat-principes: scheiding der machten, onafhankelijke rechter, gelijkheid voor wet, grondrechten." },
@@ -1314,11 +1314,11 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is COALITIE?", options: ["Samenwerking tussen partijen om regering te vormen", "Een politieke partij", "Een religie", "Een militair bondgenootschap"], answer: 0, explanation: "In NL nooit één partij meerderheid → onderhandelen over regeerakkoord (bv. PVV+VVD+NSC+BBB)." },
     ],
     3: [
-      { q: "Wat is PLURIFORME samenleving?", options: ["Samenleving met veel culturen, religies, leefstijlen", "Iedereen hetzelfde", "Eén religie alleen", "Een wijk"], answer: 0, explanation: "NL: ~17 mln inwoners met diverse achtergronden, religies, talen. Voordelen + uitdagingen (integratie, sociale cohesie)." },
+      { q: "Wat is PLURIFORME samenleving?", options: ["Samenleving met veel culturen, religies, leefstijlen", "Iedereen hetzelfde", "Eén religie alleen", "Een wijk"], answer: 0, explanation: "NL: ~18 mln inwoners met diverse achtergronden, religies, talen. Voordelen + uitdagingen (integratie, sociale cohesie)." },
       { q: "Wat is DISCRIMINATIE?", options: ["Iemand achterstellen op basis van afkomst, geslacht, etc.", "Een keuze", "Een opmerking", "Een protest"], answer: 0, explanation: "Discriminatie verboden in art. 1 Grondwet. Soms moeilijk aan te tonen, vaak structureel (institutionele discr.)." },
     ],
     4: [
-      { q: "Wat is de VERZORGINGSSTAAT?", options: ["Stelsel van sociale zekerheid (AOW, bijstand, zorg)", "Een soort verzekering", "Een ministerie", "Een gebouw"], answer: 0, explanation: "NL VZS sinds ~1950: collectieve voorzieningen voor wie kan niet (ziek, oud, werkloos). Gefinancierd via belasting + premies." },
+      { q: "Wat is de VERZORGINGSSTAAT?", options: ["Stelsel van sociale zekerheid (AOW, bijstand, zorg)", "Een soort verzekering", "Een ministerie", "Een gebouw"], answer: 0, explanation: "NL VZS sinds ~1950: collectieve voorzieningen voor wie niet (meer) kan werken (ziek, oud, werkloos). Gefinancierd via belasting + premies." },
       { q: "Wat doet de SOCIALE Verzekeringsbank (SVB)?", options: ["Beheert AOW, kinderbijslag, etc.", "Leent geld aan landen", "Maakt beleid", "Verzekert auto's"], answer: 0, explanation: "SVB voert sociale uitkeringen uit. Belastingdienst int belasting; SVB betaalt AOW etc." },
     ],
   },
@@ -1343,7 +1343,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     4: [
       { q: "Som van 3, 5, 7, 9?", options: ["24", "20", "26", "16"], answer: 0, explanation: "3+5+7+9 = 24. Slim: 3+9=12, 5+7=12, 12+12=24." },
-      { q: "Welke is mediaan van 1, 3, 5, 7, 9?", options: ["5", "1", "9", "3"], answer: 0, explanation: "Middelste van geordende rij van 5 → positie 3 = 5." },
+      { q: "Wat is de mediaan van 1, 3, 5, 7, 9?", options: ["5", "1", "9", "3"], answer: 0, explanation: "Middelste van geordende rij van 5 → positie 3 = 5." },
     ],
   },
 
@@ -1363,14 +1363,14 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     3: [
       { q: "Welke is GOED gespeld?", options: ["restaurant", "ristaurant", "restaurand", "restourant"], answer: 0, explanation: "Restaurant — Frans leenwoord met die exacte spelling. Onthouden of opzoeken." },
-      { q: "Hij ___ 't hard. (verleden tijd, regelmatig)", options: ["liep", "loop", "lopen", "lopend"], answer: 0, explanation: "Verleden tijd van 'lopen' = liep (onregelmatig sterk werkwoord)." },
+      { q: "Hij ___ 't hard. (verleden tijd)", options: ["liep", "loop", "lopen", "lopend"], answer: 0, explanation: "Verleden tijd van 'lopen' = liep (onregelmatig sterk werkwoord)." },
     ],
     4: [
       { q: "Wat betekent 'genereus'?", options: ["Vrijgevig", "Gierig", "Snel", "Slim"], answer: 0, explanation: "Genereus (uit Latijn 'genus' = adel) → mild, gul, ruimhartig. Tegenovergesteld: gierig." },
-      { q: "Welke is het ANTONIEM van 'optimistisch'?", options: ["Pessimistisch", "Realistisch", "Vrolijk", "Zorgeloos"], answer: 0, explanation: "Optimistisch (positief verwachten) ↔ pessimistisch (negatief). Realistisch is neutraal/middel." },
+      { q: "Wat is het ANTONIEM van 'optimistisch'?", options: ["Pessimistisch", "Realistisch", "Vrolijk", "Zorgeloos"], answer: 0, explanation: "Optimistisch (positief verwachten) ↔ pessimistisch (negatief). Realistisch is neutraal/middel." },
     ],
     5: [
-      { q: "Welke woord is een ZELFSTANDIG NAAMWOORD?", options: ["Tafel", "Lopen", "Snel", "Naar"], answer: 0, explanation: "Znw = ding, persoon, plaats, idee. Tafel = ding. Lopen = ww, snel = bnw, naar = vz." },
+      { q: "Welk woord is een ZELFSTANDIG NAAMWOORD?", options: ["Tafel", "Lopen", "Snel", "Naar"], answer: 0, explanation: "Znw = ding, persoon, plaats, idee. Tafel = ding. Lopen = ww, snel = bnw, naar = vz." },
       { q: "Welke zin staat in TEGENWOORDIGE tijd?", options: ["Ik loop naar school.", "Ik liep gisteren.", "Ik zal lopen.", "Ik heb gelopen."], answer: 0, explanation: "Tegenwoordig: nu/hier. Verleden: liep/heb gelopen. Toekomst: zal lopen." },
     ],
     6: [
@@ -1381,7 +1381,7 @@ export const TEXTBOOK_QUESTIONS = {
   // ── All Right! — Engels alt Stepping Stones ─────────────────────────
   "all-right": {
     0: [
-      { q: "How do you say 'hallo' in Engels?", options: ["Hello", "Hola", "Hallo", "Bonjour"], answer: 0, explanation: "Hello (UK/US). Hi is informeler. Hola = Spaans, Bonjour = Frans." },
+      { q: "How do you say 'hallo' in English?", options: ["Hello", "Hola", "Hallo", "Bonjour"], answer: 0, explanation: "Hello (UK/US). Hi is informeler. Hola = Spaans, Bonjour = Frans." },
       { q: "'I ___ a student.'", options: ["am", "is", "are", "be"], answer: 0, explanation: "I + am. He/she/it + is. You/we/they + are. 'Be' is infinitief." },
     ],
     1: [
@@ -1393,7 +1393,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "'I usually ___ at 7 am.'", options: ["wake up", "wakes up", "waking up", "woke up"], answer: 0, explanation: "I + werkwoord-stam. Voor he/she/it + 's' (wakes up). Verleden: woke up." },
     ],
     3: [
-      { q: "Wat betekent 'reading'?", options: ["Lezen (-ing vorm)", "Een stad in UK", "Beide!", "Kijken"], answer: 0, explanation: "Reading = lezen (verbgerundium). Ook stadje in Engeland. Hier: lezen-werkwoord." },
+      { q: "Wat betekent 'reading'?", options: ["Lezen (-ing vorm)", "Een stad in UK", "Beide!", "Kijken"], answer: 0, explanation: "Reading = lezen (-ing-vorm). Ook stadje in Engeland. Hier: lezen-werkwoord." },
       { q: "Welke hobby is 'gaming'?", options: ["Computerspelletjes", "Tuinieren", "Koken", "Fietsen"], answer: 0, explanation: "Gaming = video- of computerspelletjes spelen. Populaire moderne hobby." },
     ],
     4: [
@@ -1409,7 +1409,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is VERBRANDING in cellen?", options: ["Glucose + zuurstof → CO₂ + H₂O + energie (ATP)", "Vuur in de cel", "Vergiftiging", "Niets"], answer: 0, explanation: "Cel-ademhaling: brandstof (glucose) + O₂ → CO₂ + water + ATP (energie). In mitochondriën." },
     ],
     1: [
-      { q: "Welke voedingsstoffen verteren we het traagst?", options: ["Vetten", "Suikers", "Eiwitten", "Water"], answer: 0, explanation: "Vetten verteren langzaam (uren in dunne darm). Suikers binnen min. Eiwitten medium snelheid." },
+      { q: "Welke voedingsstoffen verteren we het traagst?", options: ["Vetten", "Suikers", "Eiwitten", "Water"], answer: 0, explanation: "Vetten verteren langzaam (uren in dunne darm). Suikers binnen minuten. Eiwitten medium snelheid." },
       { q: "Wat doet de TONG bij vertering?", options: ["Mengt voedsel met speeksel + smaakt", "Verteren", "Zuigen", "Slikken alleen"], answer: 0, explanation: "Tong: kneedt voedsel + speeksel (bevat enzymen). Smaakpapillen voor smaakwaarneming. Slikken = automatisch reflex." },
     ],
     2: [
@@ -1418,10 +1418,10 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     3: [
       { q: "Wat is een GEN?", options: ["Stuk DNA met code voor één eigenschap", "Hele DNA-streng", "Cel-soort", "Een vitamine"], answer: 0, explanation: "Gen = eenheid van erfelijkheid. Codeert voor eiwit dat eigenschap bepaalt (oogkleur, lengte, etc.)." },
-      { q: "Wie ontdekte de genetica wetten?", options: ["Gregor Mendel (~1865)", "Charles Darwin", "Isaac Newton", "Marie Curie"], answer: 0, explanation: "Mendel deed proeven met erwten → ontdekte basisregels van overerving (dominant/recessief)." },
+      { q: "Wie ontdekte de erfelijkheidswetten?", options: ["Gregor Mendel (~1865)", "Charles Darwin", "Isaac Newton", "Marie Curie"], answer: 0, explanation: "Mendel deed proeven met erwten → ontdekte basisregels van overerving (dominant/recessief)." },
     ],
     4: [
-      { q: "Wat is ECOLOGIE?", options: ["Studie van organismen + omgeving + interacties", "Studie van rotsen", "Studie van milieu-ramp", "Een soort vakantie"], answer: 0, explanation: "Eco-logie = leef-leer. Hoe planten/dieren samenleven in ecosystemen. Voedselketens, kringlopen." },
+      { q: "Wat is ECOLOGIE?", options: ["Studie van organismen + omgeving + interacties", "Studie van rotsen", "Studie van milieu-ramp", "Een soort vakantie"], answer: 0, explanation: "Eco-logie (Grieks oikos = huis) = leer van de leefomgeving. Hoe planten/dieren samenleven in ecosystemen. Voedselketens, kringlopen." },
       { q: "Wat is BIODIVERSITEIT?", options: ["Variatie aan soorten in een gebied", "Aantal mensen", "Soort vis", "Een ziekte"], answer: 0, explanation: "Biodiversiteit = aantal verschillende soorten + variatie binnen soorten + ecosystemen. Hoog = stabieler." },
     ],
   },
@@ -1472,7 +1472,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Bij gelijkvormige driehoeken: zijden 3,4,5 en 9,12,?", options: ["15", "10", "20", "12"], answer: 0, explanation: "Verhouding 3 (9/3=3, 12/4=3). Dus 5 × 3 = 15." },
     ],
     2: [
-      { q: "Wat is een PARABOOL?", options: ["Grafiek van y = ax² + bx + c", "Een rechte lijn", "Een cirkel", "Een sinusgolf"], answer: 0, explanation: "Parabool = symmetrische U-vorm. Komt uit kwadratische functie. Bovenkant = top, snijpunten met x-as = nulpunten." },
+      { q: "Wat is een PARABOOL?", options: ["Grafiek van y = ax² + bx + c", "Een rechte lijn", "Een cirkel", "Een sinusgolf"], answer: 0, explanation: "Parabool = symmetrische U-vorm. Komt uit kwadratische functie. Hoogste of laagste punt = top, snijpunten met x-as = nulpunten." },
       { q: "Bij y = x² − 4: nulpunten?", options: ["x = 2 en x = -2", "x = 4", "x = 0", "Geen"], answer: 0, explanation: "x² − 4 = 0 → x² = 4 → x = ±2. Verschil van kwadraten." },
     ],
     3: [
@@ -1487,14 +1487,14 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Los op: 2x² − 8 = 0", options: ["x = 2 of x = -2", "x = 4", "x = ±√8", "x = 8"], answer: 0, explanation: "2x² = 8. x² = 4. x = ±2." },
     ],
     6: [
-      { q: "Bij rechthoekige driehoek: tegenover = 3, naast = 4. Wat is tan(α)?", options: ["3/4 = 0,75", "4/3", "5/3", "5/4"], answer: 0, explanation: "tan = tegenover / naast = 3/4 = 0,75. SOSCASTOA: T(angent) = T(egen)/A(an)." },
+      { q: "Bij rechthoekige driehoek: tegenover = 3, naast = 4. Wat is tan(α)?", options: ["3/4 = 0,75", "4/3", "5/3", "5/4"], answer: 0, explanation: "tan = tegenover / naast = 3/4 = 0,75. SOS-CAS-TOA: tangens = overstaande / aanliggende rechthoekszijde." },
       { q: "sin(30°) = ?", options: ["½ = 0,5", "1", "0", "√2/2"], answer: 0, explanation: "Standaard waarde: sin 30° = 0,5. Onthouden voor examen!" },
     ],
     7: [
-      { q: "Welke verband bestaat ER tussen omtrek + diameter cirkel?", options: ["O = π × d", "O = π × r", "O = 2r", "O = r²"], answer: 0, explanation: "Omtrek = π × diameter, of 2π × straal. Diameter = 2r." },
+      { q: "Welk verband bestaat er tussen omtrek en diameter van een cirkel?", options: ["O = π × d", "O = π × r", "O = 2r", "O = r²"], answer: 0, explanation: "Omtrek = π × diameter, of 2π × straal. Diameter = 2r." },
     ],
     8: [
-      { q: "Hoeveel mogelijkheden heeft 3-cijferige PIN met 0-9?", options: ["1000 (10³)", "30", "100", "999"], answer: 0, explanation: "Per cijfer 10 keuzes, 3 cijfers → 10×10×10 = 10³ = 1000. Inclusief 000." },
+      { q: "Hoeveel mogelijkheden heeft een pincode van 3 cijfers (0-9)?", options: ["1000 (10³)", "30", "100", "999"], answer: 0, explanation: "Per cijfer 10 keuzes, 3 cijfers → 10×10×10 = 10³ = 1000. Inclusief 000." },
     ],
   },
 
@@ -1502,14 +1502,14 @@ export const TEXTBOOK_QUESTIONS = {
   "paso-adelante-1": {
     0: [
       { q: "Wat betekent 'Hola'?", options: ["Hallo", "Doei", "Bedankt", "Sorry"], answer: 0, explanation: "Hola = hallo. Adiós = doei, gracias = bedankt, perdón = sorry." },
-      { q: "'Yo me ___ Sara.' (mijn naam is)", options: ["llamo", "llama", "llamas", "llaman"], answer: 0, explanation: "Wederkerig werkwoord 'llamarse' (zich noemen). Yo + me + llamo. Tu + te + llamas." },
+      { q: "'Yo me ___ Sara.' (mijn naam is)", options: ["llamo", "llama", "llamas", "llaman"], answer: 0, explanation: "Wederkerend werkwoord 'llamarse' (zich noemen). Yo + me + llamo. Tú + te + llamas." },
     ],
     1: [
       { q: "Wat is 'casa' in Spaans?", options: ["Huis", "School", "Auto", "Familie"], answer: 0, explanation: "Casa = huis. Escuela = school, coche = auto, familia = familie." },
       { q: "Hoe zeg je 'mijn moeder' in Spaans?", options: ["mi madre", "tu madre", "su madre", "mio madre"], answer: 0, explanation: "Mi (mijn) + madre (moeder). 'Tu' = jouw, 'su' = zijn/haar/uw." },
     ],
     2: [
-      { q: "Wat is 'instituto'?", options: ["Middelbare school", "Boek", "Klas", "Lerar"], answer: 0, explanation: "Instituto = middelbare school in Spanje. Profesor = leraar, libro = boek, clase = klas." },
+      { q: "Wat is 'instituto'?", options: ["Middelbare school", "Boek", "Klas", "Leraar"], answer: 0, explanation: "Instituto = middelbare school in Spanje. Profesor = leraar, libro = boek, clase = klas." },
       { q: "'Estudio español.' (ik studeer ___)", options: ["Spaans", "Engels", "Frans", "Duits"], answer: 0, explanation: "Español = Spaans. Inglés = Engels, francés = Frans, alemán = Duits." },
     ],
     3: [
@@ -1529,18 +1529,18 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welke leesstrategie gebruik je voor SAMENVATTEN?", options: ["Studerend lezen + selectief noteren", "Skimmen", "Hardop voorlezen", "Negeren"], answer: 0, explanation: "Voor samenvatting: lees nauwkeurig, markeer kernzin per alinea, herschrijf in eigen woorden." },
     ],
     1: [
-      { q: "Welk soort is een ZAKELIJKE brief?", options: ["Formeel + duidelijk + zonder emoties", "Persoonlijk + verhalend", "Gedicht", "Sms"], answer: 0, explanation: "Zakelijke brief: aanhef, doel, kort, beleefd, slot. Bv. naar bedrijf, gemeente, school." },
-      { q: "Welke is GOED format?", options: ["Geachte heer/mevrouw,...Met vriendelijke groet,", "Hoi! ... Doei", "Beste, ... Tot straks", "Hé! ... Yo"], answer: 0, explanation: "Formele aanhef + slot. Bij naam bekend: 'Geachte mevrouw De Vries,'." },
+      { q: "Wat kenmerkt een ZAKELIJKE brief?", options: ["Formeel + duidelijk + zonder emoties", "Persoonlijk + verhalend", "Gedicht", "Sms"], answer: 0, explanation: "Zakelijke brief: aanhef, doel, kort, beleefd, slot. Bv. naar bedrijf, gemeente, school." },
+      { q: "Welke opbouw is GOED?", options: ["Geachte heer/mevrouw,...Met vriendelijke groet,", "Hoi! ... Doei", "Beste, ... Tot straks", "Hé! ... Yo"], answer: 0, explanation: "Formele aanhef + slot. Bij naam bekend: 'Geachte mevrouw De Vries,'." },
     ],
     2: [
-      { q: "Wat is een DEBAT?", options: ["Geordende discussie met regels en standpunten", "Schreeuwruzie", "Gepraat", "Toets"], answer: 0, explanation: "Debat: pro/contra, beurt-systeem, jury, tijdslimiet. Engels gebaseerd op Brits parlement." },
+      { q: "Wat is een DEBAT?", options: ["Geordende discussie met regels en standpunten", "Schreeuwruzie", "Gepraat", "Toets"], answer: 0, explanation: "Debat: pro/contra, beurt-systeem, jury, tijdslimiet. Vaak gebaseerd op het Britse parlement." },
     ],
     3: [
-      { q: "Wat is een ROMAN?", options: ["Lang verhalend prozawerk (fictie)", "Kort verhaal", "Gedicht", "Toneelstuk"], answer: 0, explanation: "Roman: 100+ pagina's, fictief verhaal met meerdere personages + plot. Vs. novelle (korter), short story." },
+      { q: "Wat is een ROMAN?", options: ["Lang verhalend prozawerk (fictie)", "Kort verhaal", "Gedicht", "Toneelstuk"], answer: 0, explanation: "Roman: 100+ pagina's, fictief verhaal met meerdere personages + plot. Vs. novelle (korter) en kort verhaal." },
       { q: "Welk literair element is een FLASHBACK?", options: ["Terugblik naar eerder moment in verhaal", "Vooruitblik", "Beschrijving", "Climax"], answer: 0, explanation: "Flashback (analepsis): scene uit verleden tussengevoegd. Verheldert achtergrond personage." },
     ],
     4: [
-      { q: "Welke spellingfout: 'Hij wordt boos.' is wel/niet correct?", options: ["Correct", "Moet 'word' zijn", "Moet 'wort' zijn", "Beide goed"], answer: 0, explanation: "Stam (word) + t voor 3e persoon enkelvoud → wordt. 't kofschip-regel: 'd' niet in 't kof-(s)c-hip dus +t." },
+      { q: "Is 'Hij wordt boos.' goed gespeld?", options: ["Correct", "Moet 'word' zijn", "Moet 'wort' zijn", "Beide goed"], answer: 0, explanation: "Stam (word) + t voor 3e persoon enkelvoud → wordt. ('t kofschip gaat alleen over de verleden tijd en het voltooid deelwoord.)" },
     ],
     5: [
       { q: "Wat is een DROGREDEN?", options: ["Schijn-argument dat logisch onjuist is", "Goede onderbouwing", "Bron-citaat", "Vraag"], answer: 0, explanation: "Drogredenen: ad hominem (op persoon), populum (iedereen vindt), stroman, etc. Vaak misleidend gebruikt." },
@@ -1553,8 +1553,8 @@ export const TEXTBOOK_QUESTIONS = {
   // ── M&O Havo — Bedrijfseconomie klas 3+ ─────────────────────────────
   "mo-havo": {
     0: [
-      { q: "Wat is BEDRIJFSECONOMIE?", options: ["Hoe een bedrijf efficient werkt + winst maakt", "Studie van banken alleen", "Wiskunde", "Boekhouden alleen"], answer: 0, explanation: "Bedrijfseconomie = strategie + financiën + marketing van een individueel bedrijf. Onderscheid: macroeconomie = land/wereld." },
-      { q: "Wat is een ONDERNEMING?", options: ["Bedrijf met als doel winst maken", "Vereniging zonder winst", "Overheidsinstelling", "Een wet"], answer: 0, explanation: "Onderneming/bedrijf: rechtspersoon (eenmanszaak, BV, NV) met commercieel doel." },
+      { q: "Wat is BEDRIJFSECONOMIE?", options: ["Hoe een bedrijf efficiënt werkt + winst maakt", "Studie van banken alleen", "Wiskunde", "Boekhouden alleen"], answer: 0, explanation: "Bedrijfseconomie = strategie + financiën + marketing van een individueel bedrijf. Onderscheid: macro-economie = land/wereld." },
+      { q: "Wat is een ONDERNEMING?", options: ["Bedrijf met als doel winst maken", "Vereniging zonder winst", "Overheidsinstelling", "Een wet"], answer: 0, explanation: "Onderneming/bedrijf: organisatie met een commercieel doel, bv. een eenmanszaak, bv of nv." },
     ],
     1: [
       { q: "Wat zijn VARIABELE kosten?", options: ["Veranderen met productieaantal (bv. grondstof per stuk)", "Vast (bv. huur)", "Eenmalig", "Niet bestaand"], answer: 0, explanation: "Variabel: per geproduceerde eenheid. Vast: per periode (huur, salaris). Beide samen = totale kosten." },
@@ -1575,7 +1575,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is een LENING?", options: ["Geld van bank/derden dat moet worden terugbetaald (met rente)", "Cadeau", "Subsidie", "Inkomen"], answer: 0, explanation: "Lening = vreemd vermogen. Te betalen volgens contract: rente + aflossing in termijnen." },
     ],
     6: [
-      { q: "Wat is LIQUIDITEIT?", options: ["Vermogen om kort-termijn-betalingen te kunnen doen", "Winst", "Omzet", "Activa"], answer: 0, explanation: "Heb je cash om rekeningen, salaris, huur te betalen? Slechte liquiditeit → faillissement-risico, ook al ben je winstgevend op papier." },
+      { q: "Wat is LIQUIDITEIT?", options: ["Vermogen om kortetermijnbetalingen te kunnen doen", "Winst", "Omzet", "Activa"], answer: 0, explanation: "Heb je cash om rekeningen, salaris, huur te betalen? Slechte liquiditeit → faillissement-risico, ook al ben je winstgevend op papier." },
     ],
   },
 
@@ -1606,10 +1606,10 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     1: [
       { q: "Wie was Sokrates?", options: ["Filosoof, leraar van Plato", "Veldheer", "Koning", "Schrijver"], answer: 0, explanation: "Sokrates (~470-399 v.Chr.): leerde via vragen ('socratische methode'). Veroordeeld tot drinken van scheerling." },
-      { q: "Hoe heet het hoogste Griekse berg?", options: ["Olympos", "Sinaï", "Etna", "Vesuvius"], answer: 0, explanation: "Olympos: woonplaats van de Griekse goden volgens mythologie. Hoogste berg in Griekenland." },
+      { q: "Hoe heet de hoogste Griekse berg?", options: ["Olympos", "Sinaï", "Etna", "Vesuvius"], answer: 0, explanation: "Olympos: woonplaats van de Griekse goden volgens mythologie. Hoogste berg in Griekenland." },
     ],
     2: [
-      { q: "Wat is 'agora' in oude Grieken?", options: ["Marktplein + politiek centrum", "Tempel", "Theater", "School"], answer: 0, explanation: "Agora = openbare plein van Griekse stad. Hier werd handel gedreven, gesproken, gestemd." },
+      { q: "Wat was de 'agora' bij de oude Grieken?", options: ["Marktplein + politiek centrum", "Tempel", "Theater", "School"], answer: 0, explanation: "Agora = het openbare plein van een Griekse stad. Hier werd handel gedreven, gesproken, gestemd." },
     ],
     3: [
       { q: "Wie schreef de Ilias en Odyssee?", options: ["Homerus", "Hesiodos", "Sophokles", "Plato"], answer: 0, explanation: "Homerus (~8e eeuw v.Chr., bestaan onzeker). Twee epische gedichten over Trojaanse oorlog en thuisreis Odysseus." },
@@ -1620,11 +1620,11 @@ export const TEXTBOOK_QUESTIONS = {
   "zingeving": {
     0: [
       { q: "Wat is een LEVENSVRAAG?", options: ["Vraag over zin van leven, dood, geluk, etc.", "Wiskundige vraag", "Sportvraag", "Toetsvraag"], answer: 0, explanation: "Levensvragen: 'waarom besta ik?', 'wat is goed?', 'wat na de dood?'. Religies + filosofie zoeken antwoorden." },
-      { q: "Welk is een WERELDGODSDIENST?", options: ["Christendom", "Voetbal", "Politiek", "Schaak"], answer: 0, explanation: "5 grote: christendom, islam, hindoeïsme, boeddhisme, jodendom. Plus traditionele/inheemse religies." },
+      { q: "Wat is een WERELDGODSDIENST?", options: ["Christendom", "Voetbal", "Politiek", "Schaak"], answer: 0, explanation: "5 grote: christendom, islam, hindoeïsme, boeddhisme, jodendom. Plus traditionele/inheemse religies." },
     ],
     1: [
-      { q: "Wat is ETHIEK?", options: ["Studie van goed en kwaad / morele keuzes", "Studie van planten", "Studie van kunst", "Studie van geld"], answer: 0, explanation: "Ethiek (van Grieks 'ethos'): wat is juist gedrag? Kant, Mill, Aristoteles. Ook in beroep: medische, business ethiek." },
-      { q: "Welke religie heeft de KORAN als heilig boek?", options: ["Islam", "Christendom", "Boeddhisme", "Hindoeïsme"], answer: 0, explanation: "Koran = heilig boek van moslims, geopenbaard aan profeet Mohammed (~610-632 n.Chr.). In Arabisch geschreven." },
+      { q: "Wat is ETHIEK?", options: ["Studie van goed en kwaad / morele keuzes", "Studie van planten", "Studie van kunst", "Studie van geld"], answer: 0, explanation: "Ethiek (van Grieks 'ethos'): wat is juist gedrag? Kant, Mill, Aristoteles. Ook in beroep: medische ethiek, bedrijfsethiek." },
+      { q: "Welke religie heeft de KORAN als heilig boek?", options: ["Islam", "Christendom", "Boeddhisme", "Hindoeïsme"], answer: 0, explanation: "Koran = heilig boek van moslims, geopenbaard aan profeet Mohammed (~610-632 n.Chr.). In het Arabisch geschreven." },
     ],
     2: [
       { q: "Wat is RESPECT?", options: ["Waardering en achting voor anderen", "Liefde", "Angst", "Bewondering alleen"], answer: 0, explanation: "Respect = erkenning + waardigheid voor andere mensen, ongeacht verschillen. Basis voor samenleven." },
@@ -1641,14 +1641,14 @@ export const TEXTBOOK_QUESTIONS = {
   // 5=Techniek, 6=Nederland en de wereld.
   "blink": {
     0: [
-      { q: "Welk orgaan beheert je beweging en denken?", options: ["Hersenen", "Hart", "Maag", "Lever"], answer: 0, explanation: "Hersenen sturen alle bewuste én onbewuste acties: bewegen, denken, zien, horen." },
+      { q: "Welk orgaan stuurt je bewegen en denken?", options: ["Hersenen", "Hart", "Maag", "Lever"], answer: 0, explanation: "Hersenen sturen alle bewuste én onbewuste acties: bewegen, denken, zien, horen." },
       { q: "Hoe heet het rode in je bloed?", options: ["Rode bloedcellen", "Witte bloedcellen", "Bloedplaatjes", "Lever"], answer: 0, explanation: "Rode bloedcellen zorgen voor zuurstof-transport. Witte = afweer (immuunsysteem). Bloedplaatjes = stollen bij wondje." },
       { q: "Welk zintuig zit in je TONG?", options: ["Smaak", "Reuk", "Gehoor", "Tast"], answer: 0, explanation: "Smaakpapillen op je tong proeven zoet, zout, zuur, bitter, umami." },
       { q: "Wat doet de huid VOORAL?", options: ["Beschermt tegen ziektekiemen + reguleert temperatuur", "Maakt voedsel", "Pompt bloed", "Filtreert lucht"], answer: 0, explanation: "Huid = grootste orgaan: barrière tegen bacteriën, regelt warmte (zweten = afkoelen), voelt aanraking." },
     ],
     1: [
       { q: "Wat doen INSECTEN voor planten?", options: ["Bestuiven (pollen verspreiden)", "Eten ze op", "Slapen erin", "Niets bijzonders"], answer: 0, explanation: "Bijen, vlinders dragen stuifmeel van bloem naar bloem → vrucht/zaad. Zonder bestuivers: geen appel, aardbei." },
-      { q: "Welk dier slaapt een WINTERSLAAP?", options: ["Egel", "Mens", "Olifant", "Vis"], answer: 0, explanation: "Egels (en eekhoorns, beren) overwinteren met lage stofwisseling. Spaart energie wanneer voedsel schaars is." },
+      { q: "Welk dier houdt een WINTERSLAAP?", options: ["Egel", "Mens", "Olifant", "Vis"], answer: 0, explanation: "Egels (en vleermuizen, zevenslapers) overwinteren met lage stofwisseling. Spaart energie wanneer voedsel schaars is." },
       { q: "Welke voedselketen klopt?", options: ["Gras → Konijn → Vos", "Vos → Konijn → Gras", "Vlees → Plant → Mens", "Mens → Vis → Boom"], answer: 0, explanation: "Plant (gras) wordt gegeten door planteneter (konijn), dat wordt gegeten door vleeseter (vos)." },
       { q: "Hoe noem je een dier dat ALLES eet (planten + vlees)?", options: ["Alleseter", "Vleeseter", "Planteneter", "Aaseter"], answer: 0, explanation: "Alleseter (omnivoor): mens, varken, beer. Eten zowel planten als dieren." },
     ],
@@ -1656,19 +1656,19 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is duurzaamheid?", options: ["Goed omgaan met de aarde voor de toekomst", "Lang houdbare houten meubels", "Snel iets nieuws kopen", "Een soort fiets"], answer: 0, explanation: "Duurzaam = zorgen dat we de aarde niet uitputten — gebruik niet meer dan we kunnen aanvullen." },
       { q: "Welke verpakking is HET MEEST duurzaam?", options: ["Glas (te hergebruiken)", "Plastic eenmalig", "Aluminium folie", "Karton met plastic erin"], answer: 0, explanation: "Glas kan oneindig hergebruikt worden zonder kwaliteitsverlies. Plastic vaak maar 1× recyclebaar." },
       { q: "Wat is FAIR TRADE?", options: ["Boeren krijgen eerlijke prijs", "Producten zijn gratis", "Producten worden snel geleverd", "Een merk koffie"], answer: 0, explanation: "Fair trade = eerlijke handel: boeren in arme landen krijgen genoeg betaald om goed te leven." },
-      { q: "Welke acties verlagen je CO₂-VOETAFDRUK?", options: ["Minder vlees + lokaal kopen + fiets", "Vaker vliegen + nieuwe spullen", "Lange auto-ritten", "Verwarming hoger zetten"], answer: 0, explanation: "Vliegen + auto + vlees + import-spullen geven veel CO₂. Fiets, plant-based, lokaal = lagere voetafdruk." },
+      { q: "Welke acties verlagen je CO₂-VOETAFDRUK?", options: ["Minder vlees + lokaal kopen + fiets", "Vaker vliegen + nieuwe spullen", "Lange auto-ritten", "Verwarming hoger zetten"], answer: 0, explanation: "Vliegen + auto + vlees + import-spullen geven veel CO₂. Fiets, plantaardig eten, lokaal = lagere voetafdruk." },
     ],
     3: [
       { q: "Wat is het verschil tussen WEER en KLIMAAT?", options: ["Weer = nu, klimaat = jaar/decennia", "Weer = lang, klimaat = kort", "Weer = warm, klimaat = koud", "Geen verschil"], answer: 0, explanation: "Weer = wat nu/vandaag gebeurt. Klimaat = gemiddelde over langere tijd (30+ jaar)." },
       { q: "Welk land heeft een TROPISCH klimaat?", options: ["Brazilië", "IJsland", "Groenland", "Noorwegen"], answer: 0, explanation: "Tropisch = dichtbij evenaar, warm jaar-rond. Brazilië, Indonesië, Centraal-Afrika. IJsland/Groenland = polair." },
-      { q: "Wat is een ORKAAN?", options: ["Een hele zware tropische storm", "Hele zware regen", "Een aardbeving", "Een vulkaan"], answer: 0, explanation: "Orkaan (cycloon, tyfoon) = tropische storm met windsnelheden >118 km/u. Verwoestende kracht." },
+      { q: "Wat is een ORKAAN?", options: ["Een heel zware tropische storm", "Heel zware regen", "Een aardbeving", "Een vulkaan"], answer: 0, explanation: "Orkaan (cycloon, tyfoon) = tropische storm met windsnelheden >118 km/u. Verwoestende kracht." },
       { q: "Waarom wordt de aarde STEEDS WARMER?", options: ["Mensen stoten meer CO₂ uit", "De zon brandt feller", "Bomen geven warmte", "Het is normaal"], answer: 0, explanation: "Verbranding van fossiele brandstoffen (auto's, fabrieken) → CO₂ in lucht → vasthouden warmte → opwarming." },
     ],
     4: [
-      { q: "Welke planeet heeft DE MEESTE manen?", options: ["Saturnus (~80+)", "Aarde (1)", "Mars (2)", "Mercurius (0)"], answer: 0, explanation: "Saturnus heeft 80+ ontdekte manen. Jupiter ook veel. Aarde maar 1, Mercurius 0." },
+      { q: "Welke planeet heeft DE MEESTE manen?", options: ["Saturnus (250+)", "Aarde (1)", "Mars (2)", "Mercurius (0)"], answer: 0, explanation: "Saturnus heeft meer dan 250 ontdekte manen (stand 2025). Jupiter ook veel. Aarde maar 1, Mercurius 0." },
       { q: "Hoe heet ons sterrenstelsel?", options: ["Melkweg", "Andromeda", "Plejaden", "Orion"], answer: 0, explanation: "Onze melkweg (Engels: Milky Way) — bestaat uit ~200 miljard sterren waaronder onze zon." },
       { q: "Wat is een KOMEET?", options: ["IJs- en stofbal in de ruimte met staart", "Een planeet", "Een ster", "Een raket"], answer: 0, explanation: "Komeet = bevroren bal van ijs+stof. Bij nadering van zon smelt iets → karakteristieke staart." },
-      { q: "Hoeveel jaar duurt het voor licht van de zon naar aarde te komen?", options: ["Ongeveer 8 minuten", "1 seconde", "1 jaar", "Direct"], answer: 0, explanation: "Lichtsnelheid = 300.000 km/sec. Zon-aarde = ~150 miljoen km. Reis = ~8 minuten." },
+      { q: "Hoelang doet licht erover om van de zon naar de aarde te komen?", options: ["Ongeveer 8 minuten", "1 seconde", "1 jaar", "Direct"], answer: 0, explanation: "Lichtsnelheid = 300.000 km/sec. Zon-aarde = ~150 miljoen km. Reis = ~8 minuten." },
     ],
     5: [
       { q: "Wat is INTERNET?", options: ["Wereldwijd computernetwerk", "Een soort tv", "Een tijdschrift", "Een telefoon-app"], answer: 0, explanation: "Internet = miljoenen computers wereldwijd verbonden. Apps en websites maken er gebruik van." },
@@ -1677,7 +1677,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is KUNSTMATIGE intelligentie (AI)?", options: ["Computer die zelf leert + beslist", "Een soort schilderij", "Een hele snelle computer", "Internet"], answer: 0, explanation: "AI = software die patronen leert uit data en daarmee beslissingen kan nemen. Bv. ChatGPT, vertaalsoftware." },
     ],
     6: [
-      { q: "Welk is GEEN provincie van Nederland?", options: ["Vlaanderen", "Limburg", "Zeeland", "Friesland"], answer: 0, explanation: "Vlaanderen is een regio in België. NL heeft 12 provincies — Limburg, Zeeland, Friesland horen erbij." },
+      { q: "Wat is GEEN provincie van Nederland?", options: ["Vlaanderen", "Limburg", "Zeeland", "Friesland"], answer: 0, explanation: "Vlaanderen is een regio in België. NL heeft 12 provincies — Limburg, Zeeland, Friesland horen erbij." },
       { q: "Welke zee ligt bij NEDERLAND?", options: ["Noordzee", "Middellandse Zee", "Zwarte Zee", "Oostzee"], answer: 0, explanation: "Noordzee ligt aan de westkant van NL — strand en haven (Rotterdam: grootste haven van Europa)." },
       { q: "Welk werelddeel ligt onder Europa?", options: ["Afrika", "Azië", "Amerika", "Antarctica"], answer: 0, explanation: "Op de wereldkaart: Europa boven, Afrika eronder (over de Middellandse Zee). Azië = oosten, Amerika = westen." },
       { q: "Welk continent heeft de MEESTE inwoners?", options: ["Azië", "Afrika", "Europa", "Amerika"], answer: 0, explanation: "Azië heeft ~4,7 miljard inwoners (China + India samen al 2,8 miljard). Wereldwijd 8 miljard mensen." },
