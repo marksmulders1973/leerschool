@@ -14,7 +14,8 @@ import { loadResume } from "./KwartierPauze.jsx";
 // QW7 lazy-load STAP 2 (2026-05-15): manifest-only render. Geen ALL_LEARN_PATHS-
 // import meer; stepCount/chapterCount/estimatedMinutes komen uit pathManifest
 // (~155 kB) ipv 5,8 MB full pad-data.
-const ALL_PATHS_MANIFEST = pathManifest;
+// Nieuwkomer-paden alleen via /nieuwkomers, niet in het gewone overzicht (Mark 1 okt 2026).
+const ALL_PATHS_MANIFEST = pathManifest.filter((p) => !/-nieuwkomers$/.test(p.id || ""));
 const ALL_PATHS_BY_ID = Object.fromEntries(pathManifest.map((p) => [p.id, p]));
 
 // Platte, doorzoekbare lijst van alle schoolboek-methodes (Mark 2026-06-14:

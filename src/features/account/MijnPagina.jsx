@@ -7,7 +7,7 @@ import { MEER_TEGELS } from "../../shared/meerTegels.js";
 import supabase from "../../supabase.js";
 import { updateTeacherClasses } from "../../data/repos/profilesRepo.js";
 import { loadMasteryForPlayer, recommendNextTopic, MASTERY_LABELS } from "../mastery/mastery.js";
-import { loadResume } from "../learn/KwartierPauze.jsx";
+import { loadResumeGewoon as loadResume } from "../learn/KwartierPauze.jsx";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { SUBJECTS as SUBJECT_LABELS } from "../../shared/subjects.js";
 import { track } from "../../utils.js";

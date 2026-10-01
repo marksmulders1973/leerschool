@@ -42,6 +42,14 @@ export function loadResume(player) {
   }
 }
 
+// Nieuwkomers apart (Mark 1 okt 2026: "nieuwkomers gemengd met de normale app, dat wil ik gewoon niet").
+// Nieuwkomer-paden (id eindigt op -nieuwkomers) horen alleen bij /nieuwkomers, niet in de gewone app.
+export const isNieuwkomersPad = (id) => /-nieuwkomers$/.test(String(id || ""));
+export function loadResumeGewoon(player) {
+  const r = loadResume(player);
+  return r && !isNieuwkomersPad(r.pathId) ? r : null;
+}
+
 export function clearResume(player) {
   try {
     localStorage.removeItem(resumeKey(player));

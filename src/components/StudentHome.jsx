@@ -16,7 +16,7 @@ import GratisLesmateriaal from "./GratisLesmateriaal.jsx";
 import PakketUitleg from "./PakketUitleg.jsx";
 import { useSubscription } from "../subscription/useSubscription.js";
 import { TIERS } from "../subscription/config.js";
-import { loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
+import { loadResumeGewoon as loadResume, clearResume } from "../features/learn/KwartierPauze.jsx";
 import { AvatarSvg, loadAvatarConfig } from "../features/account/avatar.jsx";
 import { getDailyGoal, percentDone as dailyPercent, minutesDone as dailyMinutesDone, minutesLeft as dailyMinutesLeft, markCelebrated, getDayStreak } from "../shared/dailyGoal.js";
 import KwartierTreden from "../shared/ui/KwartierTreden.jsx";
