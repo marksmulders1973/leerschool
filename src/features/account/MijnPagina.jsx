@@ -1086,8 +1086,8 @@ export default function MijnPagina({
                     </button>
                   )}
                 </div>
-                {rolKey === "ouder" && <div style={{ fontSize: 14, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", margin: "2px 0 4px" }}>Ouder of verzorger</div>}
-                {rolKey === "teacher" && (<>
+                {(rolKey === "ouder" || rolKey === "teacher") && <div style={{ fontSize: 14, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", margin: "2px 0 4px" }}>{rolKey === "teacher" ? "Leerkracht" : "Ouder of verzorger"}</div>}
+                {false && (<>
                 {/* 🪪 Rol-regel (Mark 27 aug: "mij is niet duidelijk of ik hier
                     als ouder ben ingelogd") — altijd in woorden zichtbaar wíé
                     dit profiel is. Tik = rol-menu (Mark 27 aug avond): wat kun
@@ -1595,8 +1595,8 @@ export default function MijnPagina({
         {userRole === "teacher" && onLeerkrachtHome && (
           <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(167,139,250,0.55)", background: kaartBg("rgba(124,58,237,0.13)") }}>
             <div style={{ fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text)", marginBottom: 10 }}>
-              🧑‍🏫 <strong>Jouw klas</strong> — alles wat je als leerkracht kunt, direct vanaf hier.
-              <span style={{ color: "var(--color-text-muted, #8899aa)" }}> Verderop staat je eigen oefenwerk.</span>
+              <div style={{ ...eyebrowStijl, marginBottom: 4 }}>Wat kun je doen?</div>
+              <strong>Jouw klas</strong> — alles wat je als leerkracht kunt, direct vanaf hier.
             </div>
             {/* Alle leerkracht-acties als snelkoppelingen (Mark 12 aug:
                 "staat alles waar een leraar iets mee kan op zijn pagina?") —
@@ -1639,7 +1639,7 @@ export default function MijnPagina({
 
         {/* ── Weergave-schakelaar: kind ↔ ouder/juf ── */}
             {/* Meekijk-schakelaar niet voor leerlingen (Mark 1 okt 2026: "maak het simpel"). */}
-            {rolKey === "teacher" && (<>
+            {false && (<>
             <div role="group" aria-label="Weergave kiezen" style={{
               display: "inline-flex", background: "rgba(255,255,255,0.05)",
               border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999,
@@ -1688,7 +1688,7 @@ export default function MijnPagina({
             )}
             </>)}
 
-            {weergave === "kind" && (<>
+            {weergave === "kind" && rolKey !== "teacher" && (<>
 
             {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
                 mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
@@ -2511,7 +2511,7 @@ export default function MijnPagina({
             </>)}
             </>)}
 
-            {weergave === "ouder" && (<>
+            {weergave === "ouder" && rolKey !== "teacher" && (<>
             {/* ── Wie oefent er op dit apparaat + login-uitnodiging (Mark 13 aug:
                 "als je ouder bent, wie zijn dan de kinderen?"). Zacht model —
                 anders dan Squla/Junior Einstein, die eerst een (betaald) account
