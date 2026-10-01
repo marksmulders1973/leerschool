@@ -67,3 +67,7 @@ Knop: **"Klaar"** (groot). Alles behalve Rol + Naam mag leeg blijven; de app vra
 - **Fase 2:** slotje ouderprofiel; profielen meenemen naar andere apparaten voor ingelogde ouders.
 - **Fase 3:** voorkeur per profiel sturen in vandaag-motor en weekrapport (voorkeur.js bestaat al deels).
 - **Meten:** profiel_aangemaakt (per rol, hoeveel velden ingevuld), profiel_wissel, setup afgebroken; kliktocht-agents na fase 1.
+
+## Stand 1 okt 2026 (v840-842)
+✅ Fase 1 live: "Wie oefent er?" + aanmaakkaart + beheren; thema's uit; leerlingpagina in drie blokken (kwartier, waar je staat, profiel) + "Meer op je pagina". Kliktocht: groep-formaat-bug gevonden en hersteld (v842).
+**Open (P2):** overlay verschijnt ook direct na naam invullen op home bij 2+ profielen; oude apparaten kunnen >5 namen hebben (tegels >5, toevoegen verborgen); namen van home/spel tellen niet mee in de 5-grens; browser-terug tijdens overlay → volgende keer weer overlay. Fase 2: slotje ouderprofiel, sync via account.
