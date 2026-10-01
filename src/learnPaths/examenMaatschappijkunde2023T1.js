@@ -30,7 +30,7 @@ const steps = [
           "Europese Commissie = dagelijks bestuur (uitvoeren wetten, toezicht op lidstaten). Geen crisis-overleg.",
           null,
           "Raad van de EU = ministers stemmen over wetten — specifiek beleidsterrein. Niet voor brede politieke crises.",
-          "Europees Parlement = wetgevende rol (samen met Raad). Crises worden niet hier hoofdzakelijk besproken.",
+          "Europees Parlement = wetgevende rol (samen met Raad). Crises worden hier niet hoofdzakelijk besproken.",
         ],
         explanation: "De **Europese Raad** = 27 regeringsleiders (premiers/presidenten) + vaste voorzitter. Komen ~4x per jaar samen + bij crises. Bepalen de strategische lijn van de EU + bespreken brede politieke onderwerpen (zoals Belarus-situatie, Oekraïne-oorlog, energie).",
         examenBron: BRON_LABEL(4),
@@ -41,7 +41,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Verwar de drie 'Raden' niet", tekst: "**Europese Raad** = 27 regeringsleiders bij elkaar. Politieke top.\n**Raad van de Europese Unie** = ministers per onderwerp (1 land per minister). Stemmen over wetten.\n**Raad van Europa** = aparte organisatie (47 landen!) over mensenrechten. Heeft NIETS met EU te maken." },
+            { titel: "Verwar de drie 'Raden' niet", tekst: "**Europese Raad** = 27 regeringsleiders bij elkaar. Politieke top.\n**Raad van de Europese Unie** = ministers per onderwerp (1 minister per land). Stemmen over wetten.\n**Raad van Europa** = aparte organisatie (46 landen!) over mensenrechten. Heeft NIETS met EU te maken." },
             { titel: "Wat doet Europese Raad?", tekst: "Strategische beslissingen, crisis-overleg, benoemingen van topfuncties. Bij crisis in een naburig land (Belarus, Oekraïne): regeringsleiders bespreken samen wat de EU moet doen." },
           ],
           woorden: [
@@ -81,7 +81,7 @@ const steps = [
           null,
           "EU-lidmaatschap = handel + open grenzen + euro. Geen direct verband met jongerenwerk.",
         ],
-        explanation: "**Verzorgingsstaat** = de overheid neemt verantwoordelijkheid voor het welzijn van burgers (onderwijs, zorg, jongerenwerk, uitkeringen). Jongerencentra bouwen om jongeren te ondersteunen past precies in dit kenmerk. NL is sterk uitgebouwde verzorgingsstaat (sinds Drees, jaren '50/60).",
+        explanation: "**Verzorgingsstaat** = de overheid neemt verantwoordelijkheid voor het welzijn van burgers (onderwijs, zorg, jongerenwerk, uitkeringen). Jongerencentra bouwen om jongeren te ondersteunen past precies in dit kenmerk. NL is een sterk uitgebouwde verzorgingsstaat (sinds Drees, jaren '50/60).",
         examenBron: BRON_LABEL(11),
         bronLink: PDF_LINK,
         leerpadLink: LEERPAD,
@@ -90,12 +90,12 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "4 kenmerken van NL als staat", tekst: "1. **Constitutionele monarchie** — koning met grondwet (geen absoluut vorst).\n2. **Drie bestuurslagen** — rijk, provincie, gemeente.\n3. **Verzorgingsstaat** — overheid zorgt voor welzijn burgers (onderwijs, zorg, uitkeringen).\n4. **EU-lidstaat** — onderdeel van de EU sinds 1957." },
+            { titel: "4 kenmerken van NL als staat", tekst: "1. **Constitutionele monarchie** — koning met grondwet (geen absoluut vorst).\n2. **Drie bestuurslagen** — rijk, provincie, gemeente.\n3. **Verzorgingsstaat** — overheid zorgt voor welzijn burgers (onderwijs, zorg, uitkeringen).\n4. **EU-lidstaat** — lid van de EU (en de voorlopers daarvan) sinds 1957." },
             { titel: "Verzorgingsstaat-uitingen", tekst: "AOW, kinderbijslag, bijstand, onderwijs gratis tot 18, zorgverzekering, jongerenwerk, ouderenzorg. Alles uit publieke kas + belastingen." },
           ],
           woorden: [
             { woord: "verzorgingsstaat", uitleg: "Staat die voor welzijn burgers zorgt (onderwijs, zorg, uitkeringen)." },
-            { woord: "constitutionele monarchie", uitleg: "Koning + grondwet beperken zijn macht." },
+            { woord: "constitutionele monarchie", uitleg: "Koning met een grondwet die zijn macht beperkt." },
           ],
           theorie: "Onthoud: voorzieningen door overheid (zoals jongerencentra) = uiting van VERZORGINGSstaat.",
           voorbeelden: [{ type: "stap", tekst: "Sociale werkplaats voor mensen met beperking = verzorgingsstaat. Koning op Prinsjesdag = constitutionele monarchie." }],
@@ -223,7 +223,7 @@ const steps = [
         wrongHints: [
           "Anomietheorie = criminaliteit door spanning tussen doelen + middelen (Merton). Niet hetzelfde als 'banden'.",
           null,
-          "Etikettentheorie = mensen worden crimineel doordat ze 'gestigmatiseerd' worden door samenleving. Andere richting.",
+          "Etikettentheorie = mensen worden crimineel doordat ze 'gestigmatiseerd' worden door de samenleving. Andere richting.",
           "Neutraliseringstheorie = daders praten hun gedrag goed ('iedereen doet het'). Niet over banden.",
         ],
         explanation: "**Bindingstheorie** (Hirschi) = mensen plegen MINDER criminaliteit naarmate ze sterkere banden hebben met familie, vrienden, school, werk en samenleving. Wie zulke banden mist = grotere kans op afglijden. Verklaring: 'Iemand met veel te verliezen pleegt minder snel misdaad.'",
@@ -241,7 +241,7 @@ const steps = [
           woorden: [
             { woord: "bindingstheorie", uitleg: "Theorie: zwakke sociale banden → meer criminaliteit." },
             { woord: "anomie", uitleg: "Spanning tussen doelen en middelen — Mertons theorie." },
-            { woord: "etikettering", uitleg: "Mensen krijgen label 'crimineel' → identificeren ermee." },
+            { woord: "etikettering", uitleg: "Mensen krijgen label 'crimineel' → identificeren zich ermee." },
           ],
           theorie: "Onthoud trefwoorden:\n• Anomie → DOELEN-MIDDELEN spanning\n• Binding → SOCIALE BANDEN\n• Etikettering → LABELING\n• Neutralisering → GOEDPRATEN",
           voorbeelden: [{ type: "stap", tekst: "Jongen zonder familie, geen werk, geen vrienden = weinig binding = volgens Hirschi hoger risico. Met goede school + vrienden + sport-club = sterke binding = lager risico." }],

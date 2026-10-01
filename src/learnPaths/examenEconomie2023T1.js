@@ -53,7 +53,7 @@ const steps = [
           theorie: "**Inkomen heeft 4 soorten:**\n• **Loon** = inkomen uit arbeid\n• **Rente** = inkomen uit vermogen (geld op bank)\n• **Huur, winst** = inkomen uit bezit/ondernemerschap\n• **Overdrachten** = inkomen ZONDER tegenprestatie, van overheid (subsidie, uitkering, toeslag)\n\nEen subsidie van de gemeente past bij categorie 4: je krijgt geld omdat de overheid iets wil stimuleren. Je hoeft er niet voor te werken.",
           voorbeelden: [
             { type: "loon", tekst: "Vakkenvuller bij AH krijgt €120 per week → inkomen uit arbeid." },
-            { type: "overdracht", tekst: "Ouders met laag inkomen krijgen kinderbijslag van overheid → overdrachtsinkomen." },
+            { type: "overdracht", tekst: "Ouders krijgen kinderbijslag van de overheid → overdrachtsinkomen." },
             { type: "overdracht", tekst: "Huishouden krijgt €1.000 zonnepaneel-subsidie van gemeente → óók overdrachtsinkomen." },
           ],
           basiskennis: [
@@ -191,7 +191,7 @@ const steps = [
           niveaus: {
             basis: "Influencers worden BETAALD door bedrijven (producenten) om producten aan te prijzen. Bedrijven willen meer verkopen = winst. Dus: het IS ook commerciële beïnvloeding (door producenten, met winstoogmerk) → antwoord B.",
             simpeler: "Stel: een YouTuber maakt een video over een blikje energy drink. Volgers vertrouwen die YouTuber (= sociaal). MAAR het merk heeft de YouTuber betaald om dat blikje te tonen (= commercieel). Allebei tegelijk! De YouTuber werkt voor het merk = doet PRODUCENT-werk. Het merk verdient eraan = WINSTOOGMERK. Antwoord B: 'Ja, beïnvloeding door producenten met winstoogmerk'.",
-            nogSimpeler: "Heel kort: bedrijf betaalt influencer → influencer = werkt voor bedrijf = producent-kant. Bedrijf wil verkoop = winst. Dus: JA + producenten + winstoogmerk =",
+            nogSimpeler: "Heel kort: bedrijf betaalt influencer → influencer = werkt voor bedrijf = producent-kant. Bedrijf wil verkoop = winst. Dus: JA + producenten + winstoogmerk = antwoord B.",
           },
         },
       },
@@ -216,7 +216,7 @@ const steps = [
           "Bij een monopolie is er maar één aanbieder — hoeveel aanbieders zijn er hier?",
           null,
           "Oligopolie = enkele grote spelers. Hier zijn er veel.",
-          "Volkomen concurrentie = veel aanbieders + HOMOGeen product. Hier zijn de producten heterogeen (verschillend).",
+          "Volkomen concurrentie = veel aanbieders + HOMOGEEN product. Hier zijn de producten heterogeen (verschillend).",
         ],
         explanation: "**Monopolistische concurrentie** = veel aanbieders + HETEROGENE producten (verschillende merken, kwaliteiten, design). Bv. kledingmerken, kappers, restaurants. Elke aanbieder heeft een 'klein monopolie' op zijn unieke product, maar concurreert met vele anderen. Past precies bij K2 bv.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 38",
@@ -238,9 +238,9 @@ const steps = [
             { woord: "monopolistische concurrentie", uitleg: "Veel aanbieders maar elke aanbieder heeft een uniek product. Bv. kledingmerken, kappers, restaurants." },
             { woord: "oligopolie", uitleg: "Een paar grote aanbieders. Bv. supermarkt-ketens, telecomproviders." },
           ],
-          theorie: "**4 marktvormen:**\n\n| | Veel aanbieders | Weinig | 1 |\n|---|---|---|---|\n| **Homogeen** | volkomen concurrentie | — | — |\n| **Heterogeen** | monopolistische concurrentie | oligopolie | monopolie |\n\nK2 bv: veel aanbieders + heterogeen → vak rechtsboven = monopolistische concurrentie.",
+          theorie: "**4 marktvormen:**\n\n| | Veel aanbieders | Weinig | 1 |\n|---|---|---|---|\n| **Homogeen** | volkomen concurrentie | — | — |\n| **Heterogeen** | monopolistische concurrentie | oligopolie | monopolie |\n\nK2 bv: veel aanbieders + heterogeen → vak linksonder = monopolistische concurrentie.",
           voorbeelden: [
-            { type: "monopolistisch", tekst: "Friettentenen in jouw stad: er zijn er 20, maar elke patatzaak heeft iets unieks (saus, type frietjes, sfeer)." },
+            { type: "monopolistisch", tekst: "Frietzaken in jouw stad: er zijn er 20, maar elke patatzaak heeft iets unieks (saus, type frietjes, sfeer)." },
             { type: "oligopolie", tekst: "Supermarktketens NL: AH, Jumbo, Lidl, Aldi, Plus — paar grote spelers." },
             { type: "monopolie", tekst: "ProRail beheert al het spoor in NL → 1 aanbieder = monopolie." },
           ],

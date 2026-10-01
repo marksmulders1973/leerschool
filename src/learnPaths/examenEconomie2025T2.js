@@ -166,10 +166,10 @@ const steps = [
             { woord: "denivellering", uitleg: "Inkomensverschillen worden GROTER. Rechtse politiek soms." },
             { woord: "inkomensverdeling", uitleg: "Hoe inkomens over de bevolking verdeeld zijn. Gemeten via Lorenz-curve / Gini." },
           ],
-          theorie: "**Nivellering vs denivellering:**\n\n• **Nivellering** = verschillen kleiner (vaak via belasting/uitkering)\n  - Voorbeeld: hogere belasting voor rijk + uitkering voor arm\n  - Heffingskorting hoger voor laag = nivellering\n\n• **Denivellering** = verschillen groter\n  - Voorbeeld: BTW verlagen (rijk profiteert meer in absolute zin)\n  - Vlaktaks (1 belastingpercentage voor iedereen)",
+          theorie: "**Nivellering vs denivellering:**\n\n• **Nivellering** = verschillen kleiner (vaak via belasting/uitkering)\n  - Voorbeeld: hogere belasting voor rijk + uitkering voor arm\n  - Heffingskorting hoger voor laag = nivellering\n\n• **Denivellering** = verschillen groter\n  - Voorbeeld: BTW verhogen (lage inkomens geven een groter deel van hun inkomen uit)\n  - Vlaktaks (1 belastingpercentage voor iedereen)",
           voorbeelden: [
             { type: "nivellering", tekst: "Lage inkomens krijgen €3.000 heffingskorting, hoge €2.000. Verschil arm-rijk wordt €1.000 kleiner = nivellerend." },
-            { type: "denivellering", tekst: "BTW van 21% naar 25% (op alles). Treft iedereen procentueel gelijk maar absoluut harder armen — denivellerend." },
+            { type: "denivellering", tekst: "BTW van 21% naar 25% (op alles). Treft armen relatief harder, want zij geven een groter deel van hun inkomen uit — denivellerend." },
           ],
           basiskennis: [
             { onderwerp: "Progressief belastingstelsel", uitleg: "Hoger inkomen = hoger belasting%. Werkt nivellerend." },
@@ -214,12 +214,12 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Wat betekent modaal?", tekst: "Modus = wat het MEESTE voorkomt. Modaal inkomen = inkomen dat het MEEST verdiend wordt in NL." },
-            { titel: "Niet hetzelfde als...", tekst: "Gemiddelde (alle inkomens opgeteld / aantal). Mediaan (middelste). Modaal = vaakst voorkomende, los van extreme rijk/arm." },
+            { titel: "Wat betekent modaal?", tekst: "Modus = wat het MEEST voorkomt. Modaal inkomen = inkomen dat het MEEST verdiend wordt in NL." },
+            { titel: "Niet hetzelfde als...", tekst: "Gemiddelde (alle inkomens opgeteld / aantal). Mediaan (middelste). Modaal = vaakst voorkomende, los van extreem rijk/arm." },
             { titel: "Loop opties langs", tekst: "A: minimumloon ✗. B: gemiddeld inkomen ✗ (verschilt). C: meest voorkomend ✓. D: netto inkomen loondienst (te vaag) ✗." },
           ],
           woorden: [
-            { woord: "modaal", uitleg: "Modus uit statistiek = wat het VAAKSTE voorkomt. NL ~€44.000 bruto/jaar (2024)." },
+            { woord: "modaal", uitleg: "Modus uit statistiek = wat het VAAKST voorkomt. NL ~€44.000 bruto/jaar (2024)." },
             { woord: "gemiddelde", uitleg: "Som van alle inkomens / aantal mensen. Wordt opgetrokken door enkele rijken. NL gemiddelde > modaal." },
             { woord: "mediaan", uitleg: "Het MIDDELSTE inkomen — helft verdient minder, helft meer. Niet beïnvloed door extremen." },
             { woord: "minimumloon", uitleg: "Wettelijk minimum dat werkgever moet betalen. ~€26.000 bruto/jaar (2024). Veel lager dan modaal." },
@@ -284,7 +284,7 @@ const steps = [
           ],
           theorie: "**Koopkracht-formule (vuistregel):**\n\nReële verandering = nominale loonverandering − inflatie\n\n• Loon +5%, inflatie +3% → koopkracht +2%\n• Loon +0%, inflatie +5% → koopkracht −5%\n\nVoor een NATIONAAL koopkracht-cijfer wordt het **modale** inkomen vergeleken met de **CPI** (prijsindex).",
           voorbeelden: [
-            { type: "Prinsjesdag", tekst: "Regering presenteert: 'modaal inkomen +4%, inflatie +6% → koopkracht modaal −2%' = modale gezin gaat erop achteruit." },
+            { type: "Prinsjesdag", tekst: "Regering presenteert: 'modaal inkomen +4%, inflatie +6% → koopkracht modaal −2%' = het modale gezin gaat erop achteruit." },
           ],
           basiskennis: [
             { onderwerp: "CPI", uitleg: "Consumentenprijsindex — meet gemiddelde prijsverandering van een mandje boodschappen + diensten dat een gemiddeld huishouden koopt." },

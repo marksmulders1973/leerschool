@@ -28,7 +28,7 @@ const steps = [
   {
     title: "Examen-format Engels HAVO/VWO — wat te verwachten",
     explanation:
-      "Het Engels-CSE op HAVO/VWO test alleen **leesvaardigheid** + **woordenschat-in-context**. Geen spreken, schrijven, luisteren (die zijn schoolexamen).\n\n**HAVO Engels CSE**:\n• Duur: **150 minuten** (eerder 120, sinds 2024 langer).\n• ~50 vragen over ~7-8 teksten.\n• Tekstlengte: 400-900 woorden per tekst.\n• Soorten: krantenartikel / opinie / wetenschappelijke samenvatting / interview / column.\n• Vraagstijl: meerkeuze + open + invul-vragen.\n\n**VWO Engels CSE**:\n• Duur: **150 minuten**.\n• ~50 vragen over ~7-8 teksten.\n• Eén tekst is een **literair fragment** (roman/short story) — extra nuance vereist.\n• Tekstlengte: 600-1500 woorden (langer dan HAVO).\n• Bredere woordenschat — academic English, archaïsche vormen.\n\n**Verschil met VMBO**:\n• VMBO: simpelere teksten, vooral feit-vragen, leesvaardigheid het hoofd-doel.\n• HAVO/VWO: nuance-vragen, intentie, register, ironie, literaire analyse (VWO).\n\n**Tijdsbudget HAVO/VWO** (150 min, 50 vragen):\n• ~3 min per vraag gemiddeld.\n• 1e tekst kost vaak 15-20 min (overzicht + vragen).\n• Reserveer **15 min eind** voor terugcheck.\n\n**Toegestane hulpmiddelen**:\n• Woordenboek Engels-Nederlands (papier).\n• **Geen elektronisch woordenboek**.\n• Geen vertaal-app.\n• Tip: gebruik woordenboek **spaarzaam** — kost veel tijd.\n\n**Cijfer-opbouw**:\n• Open vragen: scoring-model met deelpunten.\n• Meerkeuze: alleen-juist-of-fout.\n• Sufficiency-score HAVO ~5,5 (afhankelijk N-term).\n\n**Verschil tekst-soorten**:\n• **Krantenartikel**: feiten + duiding. Doel = informeren.\n• **Opinion column**: subjectief + provocatief. Doel = mening uiten/overtuigen.\n• **Feature-article**: lange achtergrondsessie. Doel = uitdiepen.\n• **Interview**: Q&A-vorm met expert/persoon.\n• **Literair fragment**: roman-snippet. Doel = vermaak + reflectie.\n• **Scientific summary**: onderzoek-vertaling voor leek. Doel = uitleg.",
+      "Het Engels-CSE op HAVO/VWO test alleen **leesvaardigheid** + **woordenschat-in-context**. Geen spreken, schrijven, luisteren (die zijn schoolexamen).\n\n**HAVO Engels CSE**:\n• Duur: **150 minuten** (eerder 120, sinds 2024 langer).\n• ~50 vragen over ~7-8 teksten.\n• Tekstlengte: 400-900 woorden per tekst.\n• Soorten: krantenartikel / opinie / wetenschappelijke samenvatting / interview / column.\n• Vraagstijl: meerkeuze + open + invul-vragen.\n\n**VWO Engels CSE**:\n• Duur: **150 minuten**.\n• ~50 vragen over ~7-8 teksten.\n• Eén tekst is een **literair fragment** (roman/short story) — extra nuance vereist.\n• Tekstlengte: 600-1500 woorden (langer dan HAVO).\n• Bredere woordenschat — academic English, archaïsche vormen.\n\n**Verschil met VMBO**:\n• VMBO: simpelere teksten, vooral feit-vragen, leesvaardigheid het hoofd-doel.\n• HAVO/VWO: nuance-vragen, intentie, register, ironie, literaire analyse (VWO).\n\n**Tijdsbudget HAVO/VWO** (150 min, 50 vragen):\n• ~3 min per vraag gemiddeld.\n• 1e tekst kost vaak 15-20 min (overzicht + vragen).\n• Reserveer **15 min eind** voor terugcheck.\n\n**Toegestane hulpmiddelen**:\n• Woordenboek Engels-Nederlands (papier).\n• **Geen elektronisch woordenboek**.\n• Geen vertaal-app.\n• Tip: gebruik woordenboek **spaarzaam** — kost veel tijd.\n\n**Cijfer-opbouw**:\n• Open vragen: scoring-model met deelpunten.\n• Meerkeuze: alleen-juist-of-fout.\n• Voldoende = 5,5 (benodigde punten afhankelijk van N-term).\n\n**Verschil tekst-soorten**:\n• **Krantenartikel**: feiten + duiding. Doel = informeren.\n• **Opinion column**: subjectief + provocatief. Doel = mening uiten/overtuigen.\n• **Feature-article**: lang achtergrondartikel. Doel = uitdiepen.\n• **Interview**: Q&A-vorm met expert/persoon.\n• **Literair fragment**: stuk uit een roman. Doel = vermaak + reflectie.\n• **Scientific summary**: onderzoek-vertaling voor leek. Doel = uitleg.",
     checks: [
       {
         q: "Hoe lang duurt het **VWO Engels CSE**?",
@@ -36,7 +36,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is VMBO.", "Te lang.", "Voorheen, sinds 2024 verlengd."],
         uitlegPad: {
-          stappen: [{ titel: "150 min sinds 2024", tekst: "Beide HAVO en VWO **150 min** sinds examen-jaar 2024 (eerder 120-150 min wisselend). ~50 vragen over 7-8 teksten." }],
+          stappen: [{ titel: "150 min sinds 2024", tekst: "Zowel HAVO als VWO **150 min** sinds examen-jaar 2024 (eerder 120-150 min wisselend). ~50 vragen over 7-8 teksten." }],
           theorie: "Examenblad.nl-info: officiële regelgeving per jaar. Check altijd actuele duur per examenjaar.",
           niveaus: { basis: "150 minuten.", simpeler: "VWO CSE = 150 min", nogSimpeler: "150" },
         },
@@ -92,7 +92,7 @@ const steps = [
   {
     title: "Vraagsoorten + register op HAVO/VWO",
     explanation:
-      "HAVO/VWO Engels CSE heeft **complexere vraagsoorten** dan VMBO. Plus: **register** (formeel/informeel) speelt grote rol.\n\n**Uitgebreide vraagsoorten** (boven VMBO-niveau):\n\n**1. Intentie/purpose** ('What is the author's purpose?'):\n• To inform / persuade / entertain / warn / criticise.\n• Strategie: kijk naar **toon** + **slot**. Vooral laatste alinea.\n\n**2. Argumentation** ('On which argument does the author rely?'):\n• Type argumenten herkennen (feit / voorbeeld / autoriteit).\n• Drogredenen identificeren.\n\n**3. Function** ('What is the function of paragraph 4?'):\n• Inleiden / toelichten / nuanceren / weerleggen / concluderen.\n• Strategie: vraag wat paragraaf **toevoegt** aan tekst.\n\n**4. Implication** ('What is implied/suggested?'):\n• Niet letterlijk gezegd maar gesuggereerd.\n• Strategie: lees **tussen de regels** + 'als-dan' afleiden.\n\n**5. Tone/mood**:\n• Sarcastic / cynical / nostalgic / hopeful / critical / neutral / ironic.\n• Toets-patroon: zoek emotie-woorden + word-choice.\n\n**6. Register** (formaliteit-niveau):\n• Very formal: academic English, complex zinnen.\n• Formal: news / professional letter.\n• Neutral: standaard-Engels.\n• Informal: spreektaal, idioms.\n• Slang/colloquial: 'gonna', 'wanna', 'yeah'.\n\n**Toets-register-vraag-favoriet**:\n• 'How would you describe the register of this article?'\n• Strategie: kijk naar **woordkeuze** (Latin-derived = formeler) + **zinslengte** + **gebruik 'I/we'**.\n\n**7. Vergelijking-vraag**:\n• 'How do paragraph 2 and 5 relate?'\n• Soorten: contrast / continuatie / illustratie / weerlegging.\n\n**8. Title-keuze**:\n• 'Which would be the best title?'\n• Strategie: titel moet **hoofdgedachte** weerspiegelen.\n\n**Signaalwoorden HAVO/VWO** (uitbreiding):\n• **Causaal**: consequently, hence, accordingly, owing to.\n• **Concessie**: notwithstanding, albeit, granted that.\n• **Vergelijking**: similarly, likewise, in the same vein.\n• **Versterking**: indeed, in fact, moreover, furthermore.\n• **Tegenstelling**: nonetheless, conversely, on the other hand.\n• **Klassieke val**: 'However' staat soms na lange concessie — let op.\n\n**Toets-truc — toonvragen**:\nCheck **drie elementen**: word-choice (positief/negatief/emotioneel) + figuur-spraak (irony/hyperbool) + auteur-intentie. Combo geeft toon.",
+      "HAVO/VWO Engels CSE heeft **complexere vraagsoorten** dan VMBO. Plus: **register** (formeel/informeel) speelt grote rol.\n\n**Uitgebreide vraagsoorten** (boven VMBO-niveau):\n\n**1. Intentie/purpose** ('What is the author's purpose?'):\n• To inform / persuade / entertain / warn / criticise.\n• Strategie: kijk naar **toon** + **slot**. Vooral laatste alinea.\n\n**2. Argumentation** ('On which argument does the author rely?'):\n• Type argumenten herkennen (feit / voorbeeld / autoriteit).\n• Drogredenen identificeren.\n\n**3. Function** ('What is the function of paragraph 4?'):\n• Inleiden / toelichten / nuanceren / weerleggen / concluderen.\n• Strategie: vraag wat paragraaf **toevoegt** aan tekst.\n\n**4. Implication** ('What is implied/suggested?'):\n• Niet letterlijk gezegd maar gesuggereerd.\n• Strategie: lees **tussen de regels** + 'als-dan' afleiden.\n\n**5. Tone/mood**:\n• Sarcastic / cynical / nostalgic / hopeful / critical / neutral / ironic.\n• Toets-patroon: zoek emotie-woorden + word-choice.\n\n**6. Register** (formaliteit-niveau):\n• Very formal: academic English, complex zinnen.\n• Formal: news / professional letter.\n• Neutral: standaard-Engels.\n• Informal: spreektaal, idioms.\n• Slang/colloquial: 'gonna', 'wanna', 'yeah'.\n\n**Toets-register-vraag-favoriet**:\n• 'How would you describe the register of this article?'\n• Strategie: kijk naar **woordkeuze** (Latijnse woorden = formeler) + **zinslengte** + **gebruik 'I/we'**.\n\n**7. Vergelijking-vraag**:\n• 'How do paragraph 2 and 5 relate?'\n• Soorten: contrast / continuatie / illustratie / weerlegging.\n\n**8. Title-keuze**:\n• 'Which would be the best title?'\n• Strategie: titel moet **hoofdgedachte** weerspiegelen.\n\n**Signaalwoorden HAVO/VWO** (uitbreiding):\n• **Causaal**: consequently, hence, accordingly, owing to.\n• **Concessie**: notwithstanding, albeit, granted that.\n• **Vergelijking**: similarly, likewise, in the same vein.\n• **Versterking**: indeed, in fact, moreover, furthermore.\n• **Tegenstelling**: nonetheless, conversely, on the other hand.\n• **Klassieke val**: 'However' staat soms na lange concessie — let op.\n\n**Toets-truc — toonvragen**:\nCheck **drie elementen**: word-choice (positief/negatief/emotioneel) + figuur-spraak (irony/hyperbool) + auteur-intentie. Combo geeft toon.",
     checks: [
       {
         q: "*'What is the author's purpose in the final paragraph?'* — welke vraag-type?",
@@ -109,9 +109,9 @@ const steps = [
         q: "Een artikel gebruikt veel woorden als 'consequently', 'notwithstanding', 'whereupon'. Wat is het **register**?",
         options: ["Formal/academic","Informal","Slang","Mixed"],
         answer: 0,
-        wrongHints: [null, "Niet — Latin-origin woorden = formeel.", "Niet — slang gebruikt korte woorden.", "Niet — consistent formal."],
+        wrongHints: [null, "Niet — Latijnse woorden = formeel.", "Niet — slang gebruikt korte woorden.", "Niet — consistent formal."],
         uitlegPad: {
-          stappen: [{ titel: "Lange Latin-words = academisch", tekst: "**Consequently** (vs 'so'), **notwithstanding** (vs 'although'), **whereupon** (vs 'then'). Allemaal **Latijns-Frans-derived** = formeel/academic register. Tegenovergesteld: 'cuz', 'gonna' = informeel/slang." }],
+          stappen: [{ titel: "Lange Latin-words = academisch", tekst: "**Consequently** (vs 'so'), **notwithstanding** (vs 'although'), **whereupon** (vs 'then'). Allemaal van **Latijns-Franse oorsprong** = formeel/academic register. Tegenovergesteld: 'cuz', 'gonna' = informeel/slang." }],
           woorden: [{ woord: "register", uitleg: "Formaliteit-niveau van taal (formal / neutral / informal)." }],
           theorie: "Engelse taal heeft 2 lagen: Germaans (kortere woorden, informeler) en Latijns/Frans (langere, formeler). Buy vs purchase. Help vs assist. Sweat vs perspire.",
           niveaus: { basis: "Formal.", simpeler: "Lange Latin-woorden = formal", nogSimpeler: "Formal" },
@@ -124,7 +124,7 @@ const steps = [
         wrongHints: [null, "Niet — however = tegenstelling.", "Niet — geen voorbeeld.", "Niet — geen samenvatting."],
         uitlegPad: {
           stappen: [{ titel: "However = tegenstelling", tekst: "**However** = klassiek contrast-signaalwoord. Voorgaande zin zei iets positiefs over studie; deze keert om: 'maar is bekritiseerd'. Vooral belangrijk bij conclusie-vragen — zin na 'however' is vaak echte mening." }],
-          theorie: "Toets-trick: kijk altijd zin NA 'however' / 'nonetheless' / 'on the contrary' voor hoofdstandpunt.",
+          theorie: "Toets-truc: kijk altijd zin NA 'however' / 'nonetheless' / 'on the contrary' voor hoofdstandpunt.",
           niveaus: { basis: "Contrast.", simpeler: "However = maar = contrast", nogSimpeler: "Contrast" },
         },
       },
@@ -134,7 +134,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — bedoeld tegenovergestelde.", "Niet — emotie.", "Niet — niet zakelijk."],
         uitlegPad: {
-          stappen: [{ titel: "Sarcasme = positief woord, negatieve bedoeling", tekst: "**Sarcastisch**: 'great' + 'just what I needed' in regen-context = duidelijk tegenovergestelde bedoeling. Cynisme/sarcasm in tekst herkennen aan **mismatch** tussen woordkeuze + context." }],
+          stappen: [{ titel: "Sarcasme = positief woord, negatieve bedoeling", tekst: "**Sarcastisch**: 'great' + 'just what I needed' in regen-context = duidelijk tegenovergestelde bedoeling. Cynisme/sarcasme in tekst herkennen aan **mismatch** tussen woordkeuze + context." }],
           theorie: "Toets-truc: bij toon-vragen — past de letterlijke betekenis bij wat schrijver écht bedoelt? Mismatch = irony of sarcasme.",
           niveaus: { basis: "Sarcastisch.", simpeler: "Positief woord + slechte situatie = sarcasme", nogSimpeler: "Sarcastisch" },
         },
@@ -145,7 +145,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — geen vertaling.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Function = rol binnen tekst", tekst: "**Function** = welke ROL deze alinea heeft in de tekst-structuur. Opties: introduceren / illustreren / nuanceren / weerleggen / contrasteren / concluderen. Kijk naar **inhoud relatie** met omringende alinea's." }],
+          stappen: [{ titel: "Function = rol binnen tekst", tekst: "**Function** = welke ROL deze alinea heeft in de tekst-structuur. Opties: introduceren / illustreren / nuanceren / weerleggen / contrasteren / concluderen. Kijk naar **inhoudelijke relatie** met omringende alinea's." }],
           niveaus: { basis: "Wat alinea toevoegt.", simpeler: "Function = rol in tekst", nogSimpeler: "Rol" },
         },
       },
@@ -156,7 +156,7 @@ const steps = [
   {
     title: "Lange teksten — strategie voor 1000+ woorden",
     explanation:
-      "HAVO/VWO-teksten zijn vaak 600-1500 woorden — veel langer dan VMBO. **Strategie-aanpak** is essentieel.\n\n**5-stappen-strategie lange tekst**:\n\n**Stap 1 — Pre-read (30 sec)**:\n• Lees **titel** + **inleider** (vaak vetgedrukt boven artikel).\n• Lees **eerste alinea** + **laatste alinea**.\n• Conclusie: waar gaat tekst over? Wat is hoofd-standpunt?\n\n**Stap 2 — Vraag-scan (1 min)**:\n• Lees alle **vragen** voor die tekst voordat je tekst leest.\n• Markeer **trefwoorden** in vragen.\n• Krijg overzicht: wat moet ik zoeken?\n\n**Stap 3 — Skim-lezen (2-3 min)**:\n• Lees titel + **eerste + laatste zin elke alinea**.\n• Schrijf alinea-thema's in margin (1-2 woorden per alinea).\n• Nu weet je waar info zit.\n\n**Stap 4 — Per vraag detail-lezen**:\n• Scan voor trefwoord → vind relevante alinea.\n• Lees alinea **3x** als nodig.\n• Antwoord + ga door.\n\n**Stap 5 — Twijfel-vragen markeren**:\n• Onzeker antwoord? **Markeer** met * + ga door.\n• Niet vastlopen — tijd is kostbaar.\n• Aan eind: terug naar markeerde vragen.\n\n**Tijdsbudget per tekst**:\n• 8 teksten × ~17 min = 136 min.\n• 10-15 min eind-check.\n• Variabel: korte tekst (~10 min), lange tekst (~25 min).\n\n**Markeren in tekst** (toegestaan op klad of eigen tekst):\n• Onderstreep trefwoorden uit vraag.\n• Omcirkel signaalwoorden ('however', 'therefore').\n• Tel zinnen of alinea's met nummers.\n• 'P3 = critique' in margin (kort thema).\n\n**Lange-tekst-valstrikken**:\n• **Verloren in detail**: blijf hangen in 1 alinea, vergeet rest.\n• **Tijds-illusie**: denkt 'ik heb nog tijd' tot helft over is.\n• **Vraag-vergeten**: leest tekst, vergeet wat vraag was.\n• **Eind-haasten**: laatste 5 vragen in 5 min = punten missen.\n\n**Anti-valstrikken**:\n• Houd **klok in gaten** elke 2 vragen.\n• Lees vraag **opnieuw** voor je antwoordt.\n• Schrap **direct foute opties** (sluit uit).\n• Vertrouw **eerste indruk** vaak — niet eindeloos heroverwegen.\n\n**Bij open vragen** (HAVO/VWO heeft die):\n• Antwoord in **Nederlands** (tenzij anders gevraagd).\n• **Vol/zinnen** schrijven.\n• **2-3 bewijspunten** uit tekst.\n• Geen overbodige info — concreet en gericht.\n• Voorbeeld: 'De schrijver vindt klimaatbeleid traag omdat (1) politici onvoldoende actie ondernemen en (2) bedrijven veel uitstel krijgen.'",
+      "HAVO/VWO-teksten zijn vaak 600-1500 woorden — veel langer dan VMBO. **Strategie-aanpak** is essentieel.\n\n**5-stappen-strategie lange tekst**:\n\n**Stap 1 — Pre-read (30 sec)**:\n• Lees **titel** + **inleider** (vaak vetgedrukt boven artikel).\n• Lees **eerste alinea** + **laatste alinea**.\n• Conclusie: waar gaat tekst over? Wat is hoofd-standpunt?\n\n**Stap 2 — Vraag-scan (1 min)**:\n• Lees alle **vragen** voor die tekst voordat je tekst leest.\n• Markeer **trefwoorden** in vragen.\n• Krijg overzicht: wat moet ik zoeken?\n\n**Stap 3 — Skim-lezen (2-3 min)**:\n• Lees titel + **eerste + laatste zin elke alinea**.\n• Schrijf alinea-thema's in de kantlijn (1-2 woorden per alinea).\n• Nu weet je waar info zit.\n\n**Stap 4 — Per vraag detail-lezen**:\n• Scan voor trefwoord → vind relevante alinea.\n• Lees alinea **3x** als nodig.\n• Antwoord + ga door.\n\n**Stap 5 — Twijfel-vragen markeren**:\n• Onzeker antwoord? **Markeer** met * + ga door.\n• Niet vastlopen — tijd is kostbaar.\n• Aan eind: terug naar gemarkeerde vragen.\n\n**Tijdsbudget per tekst**:\n• 8 teksten × ~17 min = 136 min.\n• 10-15 min eind-check.\n• Variabel: korte tekst (~10 min), lange tekst (~25 min).\n\n**Markeren in tekst** (toegestaan op klad of eigen tekst):\n• Onderstreep trefwoorden uit vraag.\n• Omcirkel signaalwoorden ('however', 'therefore').\n• Tel zinnen of alinea's met nummers.\n• 'P3 = critique' in de kantlijn (kort thema).\n\n**Lange-tekst-valstrikken**:\n• **Verloren in detail**: blijf hangen in 1 alinea, vergeet rest.\n• **Tijds-illusie**: denkt 'ik heb nog tijd' tot helft over is.\n• **Vraag-vergeten**: leest tekst, vergeet wat vraag was.\n• **Eind-haasten**: laatste 5 vragen in 5 min = punten missen.\n\n**Anti-valstrikken**:\n• Houd **klok in gaten** elke 2 vragen.\n• Lees vraag **opnieuw** voor je antwoordt.\n• Schrap **direct foute opties** (sluit uit).\n• Vertrouw **eerste indruk** vaak — niet eindeloos heroverwegen.\n\n**Bij open vragen** (HAVO/VWO heeft die):\n• Antwoord in **Nederlands** (tenzij anders gevraagd).\n• **Volzinnen** schrijven.\n• **2-3 bewijspunten** uit tekst.\n• Geen overbodige info — concreet en gericht.\n• Voorbeeld: 'De schrijver vindt klimaatbeleid traag omdat (1) politici onvoldoende actie ondernemen en (2) bedrijven veel uitstel krijgen.'",
     checks: [
       {
         q: "Wat doe je het EERST bij een lange tekst?",
@@ -183,7 +183,7 @@ const steps = [
         q: "Hoe schrijf je een **open vraag-antwoord** op HAVO/VWO?",
         options: ["NL volledige zin met 2-3 bewijspunten uit tekst","Engels woord-voor-woord","Alleen trefwoord","Lang essay"],
         answer: 0,
-        wrongHints: [null, "Niet — open vragen meestal in NL.", "Te kort — geen volle antwoord.", "Te lang — overbodig."],
+        wrongHints: [null, "Niet — open vragen meestal in NL.", "Te kort — geen volledig antwoord.", "Te lang — overbodig."],
         uitlegPad: {
           stappen: [{ titel: "NL + bewijs uit tekst", tekst: "Open vragen: **Nederlands volledige zin** + **2-3 bewijspunten** uit tekst. 'De schrijver vindt X omdat (1) ... en (2) ...'. Punten per bewijspunt." }],
           theorie: "Toets-scoring: 1 bewijs = 1 punt, 2 = 2 punten. Geen extra punten voor lang antwoord.",
@@ -202,7 +202,7 @@ const steps = [
         },
       },
       {
-        q: "Welk **valstrik** is meest schadelijk bij HAVO/VWO lang examen?",
+        q: "Welke **valstrik** is het meest schadelijk bij HAVO/VWO lang examen?",
         options: ["Eind-haasten (laatste vragen in 5 min)","Te traag lezen","Markeren","Klok kijken"],
         answer: 0,
         wrongHints: [null, "Niet — wel risico maar minder dan eind-haasten.", "Markeren is JUIST strategie.", "Klok kijken is goed."],
@@ -219,7 +219,7 @@ const steps = [
   {
     title: "Literair fragment (VWO) + tone-analyse",
     explanation:
-      "**VWO** heeft op CSE altijd **1 literair fragment** (roman / short story / soms gedicht). Vereist andere skills dan journalistiek.\n\n**Verschil met non-fictie**:\n| | Journalistiek | Literair |\n|---|---|---|\n| Doel | Informeren / overtuigen | Vermaak + reflectie |\n| Toon | Vast (formal/neutral) | Wisselend, vaak ambigu |\n| Personage | Auteur zelf | Verteller (≠ auteur) + characters |\n| Vraag-typen | Feit / argument | Tone / character / sub-text |\n| Tijd | Heden | Vaak verleden / dialogue |\n\n**Verteller-soorten** (POV — point of view):\n• **First-person (I/we)**: hoofdpersoon vertelt. Subjectief.\n• **Third-person limited (he/she)**: weet alleen wat hoofdpersoon weet.\n• **Third-person omniscient**: alwetende verteller.\n• **Second-person (you)**: zeldzaam — lezer wordt aangesproken.\n\n**Character-analyse**:\n• **Round character**: complex, ontwikkelt zich (protagonist).\n• **Flat character**: 1-dimensionaal (vaak supporting).\n• **Static**: verandert niet.\n• **Dynamic**: verandert door verhaal.\n\n**Tone in literatuur**:\n• Auteur kan **andere toon** dan personage hebben.\n• 'Reliable narrator': we vertrouwen de verteller.\n• 'Unreliable narrator': verteller liegt of mist info — lezer moet doorzien.\n\n**Sub-text** (wat NIET letterlijk gezegd):\n• Personage zegt 'It's fine.' maar context suggereert dat 't NIET fine is.\n• Toets-favoriet: 'What does X really feel?'\n\n**Literaire stijlmiddelen** (engels):\n• **Metaphor**: 'The world is a stage.'\n• **Simile** (met 'as' of 'like'): 'as cold as ice.'\n• **Personification**: 'The wind whispered.'\n• **Foreshadowing**: voorspellen toekomst-gebeurtenis in verhaal.\n• **Flashback**: terugkijken naar verleden.\n• **Symbolism**: object/locatie staat voor abstract idee.\n• **Irony**: tegenovergestelde van wat lijkt (situational / verbal / dramatic).\n• **Mood vs tone**:\n  - **Mood** = sfeer die lezer voelt.\n  - **Tone** = houding schrijver.\n  - Voorbeeld: somber mood + sarcastic tone in dystopie-roman.\n\n**VWO-examen-literair-strategie**:\n1. **Lees fragment 2x**: 1e voor verhaal-overzicht, 2e voor details.\n2. **Identificeer verteller-POV**.\n3. **Markeer character-emoties** in margin.\n4. **Zoek symbolen + recurring images**.\n5. **Vraag jezelf**: WAT zegt fragment ZONDER te zeggen?\n\n**Veel-gevraagde VWO-vraag-typen**:\n• 'How does X feel at this moment?'\n• 'What does the [object/setting] symbolise?'\n• 'What is the tone of the narrator?'\n• 'What does the dialogue reveal about character?'\n• 'How does the fragment build tension?'",
+      "**VWO** heeft op CSE altijd **1 literair fragment** (roman / short story / soms gedicht). Vereist andere skills dan journalistiek.\n\n**Verschil met non-fictie**:\n| | Journalistiek | Literair |\n|---|---|---|\n| Doel | Informeren / overtuigen | Vermaak + reflectie |\n| Toon | Vast (formal/neutral) | Wisselend, vaak ambigu |\n| Personage | Auteur zelf | Verteller (≠ auteur) + characters |\n| Vraag-typen | Feit / argument | Tone / character / sub-text |\n| Tijd | Heden | Vaak verleden / dialogue |\n\n**Verteller-soorten** (POV — point of view):\n• **First-person (I/we)**: hoofdpersoon vertelt. Subjectief.\n• **Third-person limited (he/she)**: weet alleen wat hoofdpersoon weet.\n• **Third-person omniscient**: alwetende verteller.\n• **Second-person (you)**: zeldzaam — lezer wordt aangesproken.\n\n**Character-analyse**:\n• **Round character**: complex, ontwikkelt zich (protagonist).\n• **Flat character**: 1-dimensionaal (vaak supporting).\n• **Static**: verandert niet.\n• **Dynamic**: verandert door verhaal.\n\n**Tone in literatuur**:\n• Auteur kan **andere toon** dan personage hebben.\n• 'Reliable narrator': we vertrouwen de verteller.\n• 'Unreliable narrator': verteller liegt of mist info — lezer moet doorzien.\n\n**Sub-text** (wat NIET letterlijk gezegd):\n• Personage zegt 'It's fine.' maar context suggereert dat 't NIET fine is.\n• Toets-favoriet: 'What does X really feel?'\n\n**Literaire stijlmiddelen** (Engels):\n• **Metaphor**: 'The world is a stage.'\n• **Simile** (met 'as' of 'like'): 'as cold as ice.'\n• **Personification**: 'The wind whispered.'\n• **Foreshadowing**: voorspellen toekomst-gebeurtenis in verhaal.\n• **Flashback**: terugkijken naar verleden.\n• **Symbolism**: object/locatie staat voor abstract idee.\n• **Irony**: tegenovergestelde van wat lijkt (situational / verbal / dramatic).\n• **Mood vs tone**:\n  - **Mood** = sfeer die lezer voelt.\n  - **Tone** = houding schrijver.\n  - Voorbeeld: somber mood + sarcastic tone in dystopie-roman.\n\n**VWO-examen-literair-strategie**:\n1. **Lees fragment 2x**: 1e voor verhaal-overzicht, 2e voor details.\n2. **Identificeer verteller-POV**.\n3. **Markeer character-emoties** in de kantlijn.\n4. **Zoek symbolen + recurring images**.\n5. **Vraag jezelf**: WAT zegt fragment ZONDER te zeggen?\n\n**Veel-gevraagde VWO-vraag-typen**:\n• 'How does X feel at this moment?'\n• 'What does the [object/setting] symbolise?'\n• 'What is the tone of the narrator?'\n• 'What does the dialogue reveal about character?'\n• 'How does the fragment build tension?'",
     checks: [
       {
         q: "Wat is het verschil tussen **mood** en **tone**?",
@@ -238,14 +238,14 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — dat is reliable.", "Wel — komt vaak voor in moderne literatuur.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Unreliable = lezer moet doorzien", tekst: "**Unreliable narrator** = verteller die liegt / details vergeet / overdrijft / cognitief beperkt is. Lezer moet **tussen de regels** lezen om 'echte' verhaal te vinden. Klassieke voorbeelden: Catcher in the Rye (Holden), Lolita (Humbert), Gone Girl." }],
+          stappen: [{ titel: "Unreliable = lezer moet doorzien", tekst: "**Unreliable narrator** = verteller die liegt / details vergeet / overdrijft / cognitief beperkt is. Lezer moet **tussen de regels** lezen om het 'echte' verhaal te vinden. Klassieke voorbeelden: Catcher in the Rye (Holden), Lolita (Humbert), Gone Girl." }],
           theorie: "VWO-examen-strategie: bij first-person-vertelling — denk altijd 'is dit echt zo of liegt verteller?'.",
           niveaus: { basis: "Misleidende verteller.", simpeler: "Unreliable = liegt/mist info", nogSimpeler: "Misleidt" },
         },
       },
       {
         q: "Wat is **foreshadowing**?",
-        options: ["Hint vooraf op latere gebeurtenis","Terugflash","Beeldspraak","Karakter-beschrijving"],
+        options: ["Hint vooraf op latere gebeurtenis","Terugblik","Beeldspraak","Karakter-beschrijving"],
         answer: 0,
         wrongHints: [null, "Niet — dat is flashback.", "Niet — dat is metaphor.", "Niet relevant."],
         uitlegPad: {
@@ -302,7 +302,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet relevant op leesvaardigheid.", "Niet primair.", "Niet primair."],
         uitlegPad: {
-          stappen: [{ titel: "Opinion + sarcasme = tone-vraag", tekst: "Bij **opinion column met sarcasme** test voor de toets: kan leerling de **echte mening** achter sarcastisch oppervlak herkennen? Vraag-soort: tone / intentie / implication." }],
+          stappen: [{ titel: "Opinion + sarcasme = tone-vraag", tekst: "Bij **opinion column met sarcasme** test de toets: kan leerling de **echte mening** achter sarcastisch oppervlak herkennen? Vraag-soort: tone / intentie / implication." }],
           niveaus: { basis: "Intentie + ironie.", simpeler: "Sarcasme = ironie-vraag", nogSimpeler: "Ironie" },
         },
       },
@@ -312,7 +312,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — feit-vraag.", "Niet — feit-vraag.", "Niet — definitie."],
         uitlegPad: {
-          stappen: [{ titel: "Sub-text + character", tekst: "**Literair-fragment-vragen** gaan om **sub-tekst**, character-emoties, symbolisme. 'What does silence reveal?' = wat zegt deze stilte over personages/relatie? Klassiek lit-vraag." }],
+          stappen: [{ titel: "Sub-text + character", tekst: "**Literair-fragment-vragen** gaan om **sub-tekst**, character-emoties, symbolisme. 'What does silence reveal?' = wat zegt deze stilte over personages/relatie? Klassieke literatuurvraag." }],
           niveaus: { basis: "Eerste.", simpeler: "Sub-text-vraag = literair", nogSimpeler: "Eerste" },
         },
       },
@@ -357,7 +357,7 @@ const engelsCseHavoVwo = {
     { id: "woordenschat-engels-po", title: "Woordenschat Engels (basis)", niveau: "po-1F" },
   ],
   intro:
-    "Engels CSE HAVO/VWO — leesvaardigheid op lange teksten (1000+ woorden) + register-analyse + 8 vraagsoorten + literair fragment (alleen VWO) + tone/mood/character-analyse. Diepe-uitbreiding van VMBO-strategie-pad. ~15 min.",
+    "Engels CSE HAVO/VWO — leesvaardigheid op lange teksten (1000+ woorden) + register-analyse + 8 vraagsoorten + literair fragment (alleen VWO) + tone/mood/character-analyse. Verdieping van de VMBO-strategie. ~15 min.",
   triggerKeywords: [
     "Engels CSE", "HAVO Engels", "VWO Engels",
     "leesvaardigheid Engels",

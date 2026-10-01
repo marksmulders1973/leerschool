@@ -92,7 +92,7 @@ ${[0, 1, 2].map(r => [0, 1, 2].map(c => `<ellipse cx="${175 + c * 22}" cy="${85 
         ],
         uitlegPad: {
           stappen: [{ titel: "Microscoop = kijken naar kleine dingen", tekst: "Cellen zijn meestal 0,01 mm — te klein voor het oog. Een microscoop vergroot ~100× tot 1000× zodat ze zichtbaar worden." }],
-          woorden: [{ woord: "microscoop", uitleg: "instrument om miniscule dingen te zien" }],
+          woorden: [{ woord: "microscoop", uitleg: "instrument om minuscule dingen te zien" }],
           theorie: "Vergroting nodig: vergrootglas (5×) is te zwak voor cellen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Op school: lichtmicroscoop. In onderzoek: elektronenmicroscoop tot 1.000.000×" }],
           basiskennis: [{ onderwerp: "10× vergrootglas vs 400× microscoop", uitleg: "groot verschil" }],
@@ -103,7 +103,7 @@ ${[0, 1, 2].map(r => [0, 1, 2].map(c => `<ellipse cx="${175 + c * 22}" cy="${85 
   },
   {
     title: "Eencellig of meercellig?",
-    explanation: "Niet elk organisme is groot. Sommige bestaan uit **één cel** (eencellig), andere uit **veel cellen** (meercellig).\n\n**Eencellig** *(unicellulair)*:\n• Bacteriën\n• Pantoffeldiertjes (Paramecium)\n• Algen (zoals Chlamydomonas)\n• Gisten *(de paddenstoel-soort die brood doet rijzen)*\n\nDeze organismen zijn complete wezens in één cel — ze eten, bewegen en planten zich voort.\n\n**Meercellig** *(multicellulair)*:\n• Planten (van mos tot eikenboom)\n• Dieren (van slak tot olifant)\n• Schimmels (paddenstoelen)\n• Mensen — ~30 biljoen cellen\n\nIn meercellige organismen specialiseren cellen zich: spiercellen kunnen samentrekken, zenuwcellen geleiden signalen, huidcellen beschermen. Samen vormen ze **weefsels**, die op hun beurt **organen** vormen.",
+    explanation: "Niet elk organisme is groot. Sommige bestaan uit **één cel** (eencellig), andere uit **veel cellen** (meercellig).\n\n**Eencellig** *(unicellulair)*:\n• Bacteriën\n• Pantoffeldiertjes (Paramecium)\n• Algen (zoals Chlamydomonas)\n• Gisten *(de schimmel-soort die brood laat rijzen)*\n\nDeze organismen zijn complete wezens in één cel — ze eten, bewegen en planten zich voort.\n\n**Meercellig** *(multicellulair)*:\n• Planten (van mos tot eikenboom)\n• Dieren (van slak tot olifant)\n• Schimmels (paddenstoelen)\n• Mensen — ~30 biljoen cellen\n\nIn meercellige organismen specialiseren cellen zich: spiercellen kunnen samentrekken, zenuwcellen geleiden signalen, huidcellen beschermen. Samen vormen ze **weefsels**, die op hun beurt **organen** vormen.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="80" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="12" font-family="Arial" font-weight="bold">eencellig</text>
 <ellipse cx="80" cy="80" rx="38" ry="28" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="2"/>
@@ -220,7 +220,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           null,
           "Plantcellen hebben wél een kern.",
           "Spiercellen zijn dierlijke cellen — die hebben een kern.",
-          "Klopt dat bloedplaatjes geen kern hebben — maar dat is een speciale uitzondering bij dieren. Welke hele groep cellen heeft systematisch geen kern?",
+          "Het klopt dat bloedplaatjes geen kern hebben — maar dat is een speciale uitzondering bij dieren. Welke hele groep cellen heeft systematisch geen kern?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Bacterie = geen kern", tekst: "Bacteriën horen bij de prokaryoten: hun DNA zweeft los, niet in een afgesloten kern. Plant en dier (eukaryoten) hebben wel een kern." }],
@@ -235,7 +235,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
   },
   {
     title: "Cytoplasma & celmembraan",
-    explanation: "**Cytoplasma** is de **gel-achtige vloeistof** binnenin de cel. Hierin zweven alle celdelen (organellen). Het cytoplasma vervoert stoffen en is de plek waar veel reacties gebeuren.\n\n**Celmembraan** *(plasmamembraan)* is het **buitenste vliesje** dat de cel bij elkaar houdt. Het is heel **selectief**: het laat sommige stoffen doorlaten (zuurstof, water, glucose) en houdt andere tegen (afval, vergif).\n\nEen handig beeld: \n• Cytoplasma = de soep binnenin\n• Celmembraan = de huid eromheen\n• Organellen = de stukjes groente in de soep\n\n**Plantcel-bonus**: planten hebben naast het celmembraan ook nog een stevige **celwand** (van cellulose) eromheen. Dat geeft de plant zijn vorm en stevigheid.",
+    explanation: "**Cytoplasma** is de **gel-achtige vloeistof** binnenin de cel. Hierin zweven alle celdelen (organellen). Het cytoplasma vervoert stoffen en is de plek waar veel reacties gebeuren.\n\n**Celmembraan** *(plasmamembraan)* is het **buitenste vliesje** dat de cel bij elkaar houdt. Het is heel **selectief**: het laat sommige stoffen doorlaten (zuurstof, water, glucose) en houdt andere tegen (zoals veel schadelijke stoffen).\n\nEen handig beeld: \n• Cytoplasma = de soep binnenin\n• Celmembraan = de huid eromheen\n• Organellen = de stukjes groente in de soep\n\n**Plantcel-bonus**: planten hebben naast het celmembraan ook nog een stevige **celwand** (van cellulose) eromheen. Dat geeft de plant zijn vorm en stevigheid.",
     svg: `<svg viewBox="0 0 300 200">
 <ellipse cx="150" cy="104" rx="116" ry="74" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="4"/>
 <!-- celkern -->
@@ -344,7 +344,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         answer: 0,
         wrongHints: [
           null,
-          "DNA zit in de kern, niet in mitochondriën (al hebben mitochondriën ook eigen kleinere DNA).",
+          "DNA zit in de kern, niet in mitochondriën (al hebben mitochondriën ook een eigen klein stukje DNA).",
           "Verteren doen lysosomen.",
           "Fotosynthese doen chloroplasten — alleen in plantcellen.",
         ],
@@ -368,10 +368,10 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           "Bacteriën hebben helemaal geen mitochondriën.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Veel energie nodig → veel mitochondriën", tekst: "De hartspier werkt 24/7 zonder pauze. Daarom heeft een hartspiercel duizenden mitochondriën — meer dan elke andere cel." }],
+          stappen: [{ titel: "Veel energie nodig → veel mitochondriën", tekst: "De hartspier werkt 24/7 zonder pauze. Daarom heeft een hartspiercel duizenden mitochondriën — meer dan bijna elke andere cel." }],
           woorden: [{ woord: "hartspier", uitleg: "spier die nooit stopt" }],
           theorie: "Hoeveelheid mitochondriën hangt af van energievraag.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Spierhel sporter > leerlingencel sedentair" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Spiercel van een sporter > spiercel van iemand die weinig beweegt" }],
           basiskennis: [{ onderwerp: "harder werken = meer", uitleg: "vraag bepaalt aantal" }],
           niveaus: { basis: "Hartspiercel.", simpeler: "Cellen die hard werken.", nogSimpeler: "Hart klopt altijd." },
         },
@@ -573,10 +573,10 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           "Lysosomen zitten juist vooral in dierlijke cellen.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "PCV = Plant", tekst: "Plant heeft drie unieke onderdelen: P (Celwand), C (Chloroplasten), V (grote Vacuole). Dier heeft die niet." }],
+          stappen: [{ titel: "PCV = Plant", tekst: "Plant (P) heeft drie unieke onderdelen: Celwand, Chloroplasten (C) en grote Vacuole (V). Dier heeft die niet." }],
           woorden: [{ woord: "PCV-truc", uitleg: "ezelsbruggetje" }],
           theorie: "Onthoud: Plant = Celwand + Chloroplasten + Vacuole.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Een blad: groene chloroplasten + stevige celwand + dikke vacuole" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Een blad: groene chloroplasten + stevige celwand + grote vacuole" }],
           basiskennis: [{ onderwerp: "ezelsbrug", uitleg: "PCV onthouden" }],
           niveaus: { basis: "PCV-combinatie.", simpeler: "Celwand + chloroplasten + vacuole.", nogSimpeler: "Plant-special." },
         },
@@ -609,7 +609,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
   },
   {
     title: "Bacteriecel — de kernloze",
-    explanation: "**Bacteriën** zijn een aparte groep. Ze zijn **eencellig** en hun cel is anders dan plant/dier:\n\n**Verschillen**:\n• **Geen celkern** — DNA zweeft los in een gebied dat *nucleoïde* heet.\n• **Geen mitochondriën** — energie wordt in het celmembraan gemaakt.\n• **Geen chloroplasten** (uitgezonderd cyanobacteriën, die kunnen wel fotosynthese).\n• **Geen 'echte' organellen met membraan**.\n• Wel: een **celwand** (van peptidoglycaan, niet cellulose), **celmembraan**, **cytoplasma**, **ribosomen** (kleiner dan in plant/dier).\n\nWegens dat ontbreken van een kern noemen we bacteriën **prokaryoot** *(\"voor-kern\")*. Plant en dier zijn **eukaryoot** *(\"echte kern\")*.\n\n**Goede bacteriën**: in je darmen, in yoghurt, in compostbakken.\n**Slechte bacteriën**: salmonella, bacteriën die infecties veroorzaken.\n\nGrootte: een bacterie is ~10× kleiner dan een dierlijke cel.",
+    explanation: "**Bacteriën** zijn een aparte groep. Ze zijn **eencellig** en hun cel is anders dan plant/dier:\n\n**Verschillen**:\n• **Geen celkern** — DNA zweeft los in een gebied dat *nucleoïde* heet.\n• **Geen mitochondriën** — energie wordt in het celmembraan gemaakt.\n• **Geen chloroplasten** (uitgezonderd cyanobacteriën, die kunnen wel fotosynthese).\n• **Geen 'echte' organellen met membraan**.\n• Wel: een **celwand** (van peptidoglycaan, niet cellulose), **celmembraan**, **cytoplasma**, **ribosomen** (kleiner dan in plant/dier).\n\nOmdat de kern ontbreekt, noemen we bacteriën **prokaryoot** *(\"voor-kern\")*. Plant en dier zijn **eukaryoot** *(\"echte kern\")*.\n\n**Goede bacteriën**: in je darmen, in yoghurt, in compostbakken.\n**Slechte bacteriën**: salmonella, bacteriën die infecties veroorzaken.\n\nGrootte: een bacterie is ~10× kleiner dan een dierlijke cel.",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="60" y="50" width="180" height="80" rx="40" fill="${COLORS.cyto}" stroke="${COLORS.wall}" stroke-width="3"/>
 <rect x="65" y="55" width="170" height="70" rx="35" fill="none" stroke="${COLORS.membrane}" stroke-width="1.5"/>
@@ -667,7 +667,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
   // ─── D. Hoe groeit een organisme? ───────────────
   {
     title: "Celdeling — zo groeit een organisme",
-    explanation: "Een baby is bij geboorte ongeveer 50 cm. Een volwassene is ~1,70 m. Hoe wordt iemand groter? Door **celdeling**: één cel splitst in twee, die twee delen weer in vier, enzovoort.\n\n**Stappen van een eenvoudige celdeling (mitose)**:\n1. **DNA verdubbelt** — er komen twee identieke kopieën in de kern.\n2. **DNA wordt verdeeld** — elke helft gaat naar een andere kant van de cel.\n3. **Cel knijpt zich af** — middenin ontstaat een scheidingswand.\n4. **Twee dochtercellen** — beide hebben dezelfde DNA als de moedercel.\n\n**Wanneer gebeurt het?**\n• Groei: kind wordt groter\n• Herstel: na een wond worden nieuwe huidcellen gemaakt\n• Vervanging: huidcellen, bloedcellen worden voortdurend vernieuwd\n\n**Belangrijk**: bij mitose krijg je **twee identieke** cellen. Bij voortplanting (mens) gaat het anders — daar krijg je geslachtscellen via *meiose*. Maar dat is voor later.",
+    explanation: "Een baby is bij geboorte ongeveer 50 cm. Een volwassene is ~1,70 m. Hoe wordt iemand groter? Door **celdeling**: één cel splitst in twee, die twee delen zich weer en dan zijn het er vier, enzovoort.\n\n**Stappen van een eenvoudige celdeling (mitose)**:\n1. **DNA verdubbelt** — er komen twee identieke kopieën in de kern.\n2. **DNA wordt verdeeld** — elke helft gaat naar een andere kant van de cel.\n3. **Cel knijpt zich af** — middenin ontstaat een scheidingswand.\n4. **Twee dochtercellen** — beide hebben hetzelfde DNA als de moedercel.\n\n**Wanneer gebeurt het?**\n• Groei: kind wordt groter\n• Herstel: na een wond worden nieuwe huidcellen gemaakt\n• Vervanging: huidcellen, bloedcellen worden voortdurend vernieuwd\n\n**Belangrijk**: bij mitose krijg je **twee identieke** cellen. Bij voortplanting (mens) gaat het anders — daar krijg je geslachtscellen via *meiose*. Maar dat is voor later.",
     svg: `<svg viewBox="0 0 320 180">
 <ellipse cx="50" cy="90" rx="30" ry="32" fill="${COLORS.cyto}" stroke="${COLORS.membrane}" stroke-width="1.5"/>
 <circle cx="50" cy="90" r="10" fill="${COLORS.nucleus}" opacity="0.7"/>
@@ -691,7 +691,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         answer: 0,
         wrongHints: [
           null,
-          "Één cel splitst in twee. Eindigen op één betekent dat er niets gebeurd is.",
+          "Eén cel splitst in twee. Eindigen op één betekent dat er niets gebeurd is.",
           "Vier krijg je pas na twee delingen achter elkaar.",
           "Acht krijg je pas na drie delingen.",
         ],
@@ -720,7 +720,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           "Het celmembraan blijft juist bestaan.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "DNA verdubbeling eerst", tekst: "Voor de cel mag splitsen, moet het DNA eerst gekopieerd worden. Anders krijgt één dochtercel geen DNA en sterft." }],
+          stappen: [{ titel: "DNA verdubbeling eerst", tekst: "Voor de cel mag splitsen, moet het DNA eerst gekopieerd worden. Anders krijgt één dochtercel geen DNA en sterft die." }],
           woorden: [{ woord: "DNA-replicatie", uitleg: "verdubbeling van DNA" }],
           theorie: "Stappen: 1) DNA verdubbelt 2) celkern splitst 3) cel snoert af 4) 2 dochters.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Elke dochtercel krijgt exacte kopie DNA — identiek aan moeder" }],
@@ -734,7 +734,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
   // ─── E. Eindopdracht ───────────────
   {
     title: "Eindopdracht — alles op een rij",
-    explanation: "Tijd om alles te combineren! Bij elke vraag: bedenk welk type cel het is en welk celdeel het hoort.\n\n**Snelle checklist**:\n• Heeft het een celwand? → plant of bacterie.\n• Heeft het chloroplasten? → plant.\n• Heeft het géén kern? → bacterie.\n• Maakt het zelf voedsel met zonlicht? → plant (chloroplast).\n• Verbrandt het glucose voor energie? → mitochondriën.\n• Slaat DNA op? → kern.\n\nVeel succes!",
+    explanation: "Tijd om alles te combineren! Bij elke vraag: bedenk welk type cel het is en bij welk celdeel het hoort.\n\n**Snelle checklist**:\n• Heeft het een celwand? → plant of bacterie.\n• Heeft het chloroplasten? → plant.\n• Heeft het géén kern? → bacterie.\n• Maakt het zelf voedsel met zonlicht? → plant (chloroplast).\n• Verbrandt het glucose voor energie? → mitochondriën.\n• Slaat DNA op? → kern.\n\nVeel succes!",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="24" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">eindopdracht — combineer alles</text>
 <text x="20" y="58" fill="${COLORS.text}" font-size="11" font-family="Arial">1. Welk type cel?</text>
@@ -771,7 +771,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           null,
           "Mitochondriën *verbranden* suiker, ze *maken* die niet.",
           "De kern slaat DNA op — geen voedsel.",
-          "Een lysosoom verteert afval — niet maakt voedsel.",
+          "Een lysosoom verteert afval — het maakt geen voedsel.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Chloroplast = zonlicht → suiker", tekst: "Chloroplast neemt zonlicht op via chlorofyl en zet water + CO₂ om in glucose. Mitochondrium doet het omgekeerde: verbrandt glucose voor energie." }],
@@ -779,7 +779,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           theorie: "Chloroplast maakt suiker. Mitochondrium verbrandt suiker.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Bladeren maken suiker overdag in chloroplasten" }],
           basiskennis: [{ onderwerp: "licht → energie", uitleg: "energie-opslag in suiker" }],
-          niveaus: { basis: "Chloroplast.", simpeler: "Groene organel.", nogSimpeler: "Plant-only." },
+          niveaus: { basis: "Chloroplast.", simpeler: "Groen organel.", nogSimpeler: "Plant-only." },
         },
       },
       {
@@ -806,7 +806,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         },
       },
       {
-        q: "Welke beweringen klopt over **mitochondriën**?",
+        q: "Welke bewering klopt over **mitochondriën**?",
         options: [
           "Ze zitten in zowel plant- als dierlijke cellen en maken energie",
           "Ze zitten alleen in plantcellen",
@@ -824,7 +824,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           stappen: [{ titel: "Mitochondrium = energie in plant + dier", tekst: "Mitochondriën zitten in BEIDE plantcellen en dierlijke cellen — alle eukaryote cellen hebben ze. Functie altijd: energie maken." }],
           woorden: [{ woord: "universeel", uitleg: "voor alle eukaryote cellen" }],
           theorie: "Bacterie: GEEN mitochondrium. Plant + dier + schimmel: WEL.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Eikenhouder + slak hebben allebei mitochondriën" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Eikenboom + slak hebben allebei mitochondriën" }],
           basiskennis: [{ onderwerp: "geldt voor beide", uitleg: "niet plant-only" }],
           niveaus: { basis: "Plant + dier + energie.", simpeler: "Beide hebben mito.", nogSimpeler: "Energie-maker." },
         },

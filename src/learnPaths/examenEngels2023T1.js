@@ -108,7 +108,7 @@ const steps = [
         { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "'doel van campagne'-vraag — zoek werkwoorden 'to create / aim / protect'" },
       ],
       uitlegPad: compactUitleg(
-        "'Create a national register' + 'protect them from being cut down' = lijst aanleggen om bijzondere bomen te behouden. Optie A direct parafrase.",
+        "'Create a national register' + 'protect them from being cut down' = lijst aanleggen om bijzondere bomen te behouden. Optie A = directe parafrase.",
         { basis: "Lijst aanleggen + behouden.", simpeler: "Register van bijzondere bomen + bescherming tegen kappen.", nogSimpeler: "Register + behouden" },
       ),
     }],
@@ -154,7 +154,7 @@ const steps = [
         "It is a breeding programme that aims to prevent the extermination of wildlife.",
       ],
       answer: 1,
-      wrongHints: ["Niet over verbeteren van captiviteit — wel over native wildlife (oorspronkelijke fauna).", null, "Niet over kweek-programma — wel over samenleven van bestaande dieren."],
+      wrongHints: ["Niet over verbeteren van gevangenschap — wel over native wildlife (oorspronkelijke fauna).", null, "Niet over kweek-programma — wel over samenleven van bestaande dieren."],
       explanation: "Tekst: 'native bears and wolves are coming snout to muzzle with each other ... once again sharing space.' Het project laat **oorspronkelijke (native) fauna weer samenleven** in dezelfde habitat — na 1000 jaar.",
       examenBron: BRON_LABEL(12),
       bronLink: BRON_LINK,
@@ -162,7 +162,7 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid" },
       voorkennisKeten: [
         { id: "woordenschat-engels-po", title: "Woordenschat Engels", niveau: "po-1F", why: "begrijpen 'native wildlife', 'extinct', 'captivity', 'breeding programme'" },
-        { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "synonymische parafrase: 'native wildlife sharing space' = 'native wildlife living together'" },
+        { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "synonieme parafrase: 'native wildlife sharing space' = 'native wildlife living together'" },
       ],
       uitlegPad: compactUitleg(
         "'Native bears and wolves... once again sharing space.' = inheemse beren en wolven leven weer in dezelfde ruimte. Het Wild Place Project brengt deze oorspronkelijke fauna terug bij elkaar. Geen captivity-verbetering (= A), geen breeding-programma (= C).",
@@ -212,7 +212,7 @@ const steps = [
         "Most fires in the Canadian wilderness are put out before they can cause serious damage.",
       ],
       answer: 3,
-      wrongHints: ["BC heeft al smokejumper-team — Bergen ervan zegt 'in BC'.", "Tegengesteld — Bergen zegt juist dat brandweer SUCCESVOL is (90%).", "Geen media-discussie in alinea 5.", null],
+      wrongHints: ["BC heeft al smokejumper-team — Bergen zegt zelf 'in BC'.", "Tegengesteld — Bergen zegt juist dat brandweer SUCCESVOL is (90%).", "Geen media-discussie in alinea 5.", null],
       explanation: "Bergen-citaat: 'our success rate of putting out fires before they get to two hectares is over 90 per cent' + 'Most fires in the wilderness get controlled before they become catastrophic.' = **meeste vuren worden geblust voordat er ernstige schade ontstaat**.",
       examenBron: BRON_LABEL(23),
       bronLink: BRON_LINK,
@@ -220,7 +220,7 @@ const steps = [
       leerpadLink: { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid" },
       voorkennisKeten: [
         { id: "woordenschat-engels-po", title: "Woordenschat Engels", niveau: "po-1F", why: "begrijpen 'success rate', 'put out fires', 'catastrophic', 'wilderness'" },
-        { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "'point made by X'-vraag — zoek directe citatie + parafrase Nederlandse opties" },
+        { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "'point made by X'-vraag — zoek het directe citaat + de parafrase in de opties" },
       ],
       uitlegPad: compactUitleg(
         "90% success rate + 'most fires... controlled before they become catastrophic' = de meeste vuren in Canadese wildernis worden geblust voor er ernstige schade is. Optie D = directe parafrase.",

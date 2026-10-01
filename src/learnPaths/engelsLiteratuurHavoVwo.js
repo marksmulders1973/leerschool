@@ -46,7 +46,7 @@ const steps = [
           "Science-fiction roman",
           "Detectiveroman",
           "Western",
-          "Romantisch poëziebundel"
+          "Romantische poëziebundel"
         ],
         answer: 0,
         wrongHints: [null, "Niet — kwam later.", "Niet — Amerikaans subgenre.", "Niet — proza."],
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — wel diverse thema's.", "Niet — Joyce had lange zinnen."],
         uitlegPad: {
           stappen: [
-            { titel: "Breken met traditie", tekst: "WO1 schokte vertrouwen in 'vooruitgang' → schrijvers experimenteren. Stream of consciousness = gedachten direct op papier (Joyce 'Ulysses', Woolf 'Mrs Dalloway'). Tijd-sprong, multiple verteller, ambiguïteit. T.S. Eliot 'The Waste Land' (1922) = pinnacle." },
+            { titel: "Breken met traditie", tekst: "WO1 schokte vertrouwen in 'vooruitgang' → schrijvers experimenteren. Stream of consciousness = gedachten direct op papier (Joyce 'Ulysses', Woolf 'Mrs Dalloway'). Tijd-sprong, meerdere vertellers, ambiguïteit. T.S. Eliot 'The Waste Land' (1922) = hoogtepunt." },
           ],
           niveaus: { basis: "Experiment.", simpeler: "Gebroken vorm + stream.", nogSimpeler: "Modernism" },
         },
@@ -96,7 +96,7 @@ const steps = [
   {
     title: "Shakespeare — drama-genres + bekende werken",
     explanation:
-      "**William Shakespeare** (1564-1616) — meest invloedrijke schrijver in Engels.\n• Geboren Stratford-upon-Avon, werkte in Londen (Globe Theatre).\n• 37+ toneelstukken + 154 sonnetten.\n• Schiep ~1700 nieuwe woorden + uitdrukkingen die nu standaard zijn (eyeball, lonely, gossip, etc.).\n\n**Genres**:\n\n**1. Tragedies**:\n• **Hamlet** (1601): Deense prins twijfelt over wraak op zijn oom-koning. 'To be or not to be'. Bekendste monologie ter wereld.\n• **Othello** (1604): zwarte generaal wordt gemanipuleerd door Iago → vermoordt onschuldige vrouw Desdemona.\n• **Macbeth** (1606): Schotse edelman wordt koning via moord; geweten + heksen-voorspelling.\n• **King Lear** (1605): oud koning verdeelt rijk over dochters → verraad + waanzin.\n• **Romeo and Juliet** (1595): verboden liefde tussen Montague + Capulet.\n\n**2. Comedies**:\n• **A Midsummer Night's Dream** (1595): magische bos, feeën, verwarringen.\n• **Much Ado About Nothing** (1598): scherpe dialogen Beatrice + Benedick.\n• **The Tempest** (1611): magisch eiland, Prospero + Caliban — laatste werk.\n\n**3. Histories**:\n• Henry IV, V, VI; Richard II, III — Engelse koningen.\n• Politieke + morele dilemma's.\n\n**Kenmerken**:\n• **Iambic pentameter**: 5 jamben per regel (10 lettergrepen). 'Shall I compare thee to a summer's day?'\n• **Blank verse**: ongerijmd jambisch.\n• **Wordplay + puns**: bewuste dubbelzinnigheden.\n• **Soliloquies**: hardop denken op podium (Hamlet's 'to be or not to be').\n• **Mengt klassen**: koningen + dwazen samen op podium.\n\n**Sonnetten** (1609):\n• 154 stuks, 14 regels ABAB CDCD EFEF GG.\n• Veel over liefde, schoonheid, tijd, dood.\n• Bekend: sonnet 18 ('Shall I compare thee...'), 116 ('Let me not to the marriage...').\n\n**Globe Theatre**:\n• Open-air, plaats voor 3000.\n• Goedkope plekken staan (groundlings), duurdere zitten.\n• Alle rollen door mannen (vrouwen verboden) — jongens speelden vrouwen.\n\n**Waarom nog steeds gelezen?**\n• Universele thema's: macht, liefde, jaloezie, ambitie.\n• Psychologische diepgang voor 1600 ongekend.\n• Taal-virtuositeit.",
+      "**William Shakespeare** (1564-1616) — meest invloedrijke schrijver in Engels.\n• Geboren Stratford-upon-Avon, werkte in Londen (Globe Theatre).\n• 37+ toneelstukken + 154 sonnetten.\n• Schiep ~1700 nieuwe woorden + uitdrukkingen die nu standaard zijn (eyeball, lonely, gossip, etc.).\n\n**Genres**:\n\n**1. Tragedies**:\n• **Hamlet** (1601): Deense prins twijfelt over wraak op zijn oom-koning. 'To be or not to be'. Bekendste monoloog ter wereld.\n• **Othello** (1604): zwarte generaal wordt gemanipuleerd door Iago → vermoordt onschuldige vrouw Desdemona.\n• **Macbeth** (1606): Schotse edelman wordt koning via moord; geweten + heksen-voorspelling.\n• **King Lear** (1605): oude koning verdeelt rijk over dochters → verraad + waanzin.\n• **Romeo and Juliet** (1595): verboden liefde tussen Montague + Capulet.\n\n**2. Comedies**:\n• **A Midsummer Night's Dream** (1595): magisch bos, feeën, verwarringen.\n• **Much Ado About Nothing** (1598): scherpe dialogen Beatrice + Benedick.\n• **The Tempest** (1611): magisch eiland, Prospero + Caliban — laatste werk.\n\n**3. Histories**:\n• Henry IV, V, VI; Richard II, III — Engelse koningen.\n• Politieke + morele dilemma's.\n\n**Kenmerken**:\n• **Iambic pentameter**: 5 jamben per regel (10 lettergrepen). 'Shall I compare thee to a summer's day?'\n• **Blank verse**: ongerijmd jambisch.\n• **Wordplay + puns**: bewuste dubbelzinnigheden.\n• **Soliloquies**: hardop denken op podium (Hamlet's 'to be or not to be').\n• **Mengt klassen**: koningen + dwazen samen op podium.\n\n**Sonnetten** (1609):\n• 154 stuks, 14 regels ABAB CDCD EFEF GG.\n• Veel over liefde, schoonheid, tijd, dood.\n• Bekend: sonnet 18 ('Shall I compare thee...'), 116 ('Let me not to the marriage...').\n\n**Globe Theatre**:\n• Open-air, plaats voor 3000.\n• Goedkope plekken staan (groundlings), duurdere zitten.\n• Alle rollen door mannen (vrouwen verboden) — jongens speelden vrouwen.\n\n**Waarom nog steeds gelezen?**\n• Universele thema's: macht, liefde, jaloezie, ambitie.\n• Psychologische diepgang voor 1600 ongekend.\n• Taal-virtuositeit.",
     checks: [
       {
         q: "**'To be or not to be'** komt uit welk werk?",
@@ -124,7 +124,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — eindigt slecht.", "Wel historisch maar dramatisch genre = tragedy.", "Niet — toneelstuk."],
         uitlegPad: {
-          stappen: [{ titel: "Schots koningschap door moord", tekst: "Macbeth + Lady Macbeth manipuleren elkaar tot moord op koning Duncan. Resultaat: schuldgevoel, waanzin, ondergang beide. Klassieke tragedy: ambitie + hubris → val. Geïnspireerd door echte Schotse historie (deels)." }],
+          stappen: [{ titel: "Schots koningschap door moord", tekst: "Macbeth + Lady Macbeth manipuleren elkaar tot moord op koning Duncan. Resultaat: schuldgevoel, waanzin, ondergang van beiden. Klassieke tragedy: ambitie + hubris → val. Geïnspireerd door echte Schotse historie (deels)." }],
           niveaus: { basis: "Tragedy.", simpeler: "Tragedie.", nogSimpeler: "Tragedy" },
         },
       },
@@ -134,7 +134,7 @@ const steps = [
           "5 jamben per regel (10 lettergrepen, ta-DAH × 5)",
           "Geen metrum",
           "Rijmend AABB",
-          "Vrije vers"
+          "Vrij vers"
         ],
         answer: 0,
         wrongHints: [null, "Wel metrum.", "Niet — geen vast rijm-vereiste.", "Niet — wel structuur."],
@@ -157,9 +157,9 @@ const steps = [
         wrongHints: [null, "Niet — anachronisme.", "Niet — publiek.", "Bestaat wel + replica vandaag."],
         uitlegPad: {
           stappen: [
-            { titel: "Originele was 1599-1644", tekst: "Open-air ronde theater bij Theems. 'Groundlings' (lagere klasse) stonden op vloer voor 1 penny. Galerijen rondom voor rijken. Vrouwenrollen door jonge mannen gespeeld (acteursvak verboden voor vrouwen tot 1660+). Replica gebouwd 1997 in Londen — bezoekbaar." },
+            { titel: "Originele was 1599-1644", tekst: "Open-air rond theater aan de Theems. 'Groundlings' (lagere klasse) stonden op vloer voor 1 penny. Galerijen rondom voor rijken. Vrouwenrollen door jonge mannen gespeeld (acteursvak verboden voor vrouwen tot 1660+). Replica gebouwd 1997 in Londen — bezoekbaar." },
           ],
-          niveaus: { basis: "Open-air + mannen.", simpeler: "Buiten theater met staanplek.", nogSimpeler: "Open" },
+          niveaus: { basis: "Open-air + mannen.", simpeler: "Openluchttheater met staanplek.", nogSimpeler: "Open" },
         },
       },
     ],
@@ -169,7 +169,7 @@ const steps = [
   {
     title: "Britse roman 19e + 20e eeuw — hoogtepunten",
     explanation:
-      "**Britse roman bloeit** in deze periodes.\n\n**Charles Dickens** (1812-1870):\n• Werd verkocht in **wekelijkse afleveringen** (zoals tv-series nu).\n• Sociale kritiek: armoede, kinderarbeid, justitie.\n• Beroemde werken:\n  - **Oliver Twist** (1838): weeskind, criminele wereld Londen.\n  - **A Christmas Carol** (1843): Ebenezer Scrooge, gierigheid, geesten.\n  - **David Copperfield** (1850): semi-autobiografisch.\n  - **Great Expectations** (1861): Pip, sociale klimming, illusie.\n  - **A Tale of Two Cities** (1859): Frans Revolutie.\n• Personages zijn vaak archetypisch (Scrooge = vrek geworden).\n\n**Brontë-zusters**:\n• **Charlotte** — 'Jane Eyre' (1847): wees → gouvernante → liefde met Rochester.\n• **Emily** — 'Wuthering Heights' (1847): gepassioneerde Heathcliff + Catherine, gotisch + wild.\n• **Anne** — 'The Tenant of Wildfell Hall'.\n• Schreven onder pseudoniem (Currer, Ellis, Acton Bell) om vrouwen-vooroordeel te omzeilen.\n\n**Late Victoriaans / Edwardian**:\n• Thomas Hardy — 'Tess of the d'Urbervilles' (1891): tragedy van vrouwelijk slachtoffer.\n• Bram Stoker — 'Dracula' (1897): gotische horror.\n• Joseph Conrad — 'Heart of Darkness' (1899): koloniale kritiek.\n• Arthur Conan Doyle — Sherlock Holmes verhalen.\n\n**Modernist (1900-1945)**:\n\n**Virginia Woolf** (1882-1941):\n• Pionier stream-of-consciousness.\n• **Mrs Dalloway** (1925): één dag in leven Clarissa Dalloway.\n• **To the Lighthouse** (1927): familiedrama, perceptie.\n• 'A Room of One's Own' (1929): feministisch essay.\n\n**James Joyce** (1882-1941, Ier):\n• **Ulysses** (1922): één dag (16 juni 1904) in Dublin, parallel met Homerus' Odyssee.\n• 'Bloomsday' jaarlijks gevierd 16 juni.\n• Notoir moeilijk te lezen — experimenteel.\n\n**George Orwell** (1903-1950):\n• **Animal Farm** (1945): allegorie Russische Revolutie via boerderij-dieren.\n• **1984** (1949): dystopische toekomst (Big Brother, doublethink, Newspeak).\n• Politiek-engagement schrijver.\n\n**Naoorlogs**:\n• William Golding — 'Lord of the Flies' (1954): jongens op eiland devolven.\n• J.R.R. Tolkien — 'Lord of the Rings' (1954): fantasy-epos.\n• C.S. Lewis — 'Narnia'-serie.\n• Ian McEwan — 'Atonement', 'On Chesil Beach'.\n• Kazuo Ishiguro (Nobel 2017) — 'Remains of the Day', 'Never Let Me Go'.\n• Zadie Smith — 'White Teeth' (2000).\n• Salman Rushdie — 'Midnight's Children' (1981).\n\n**Fantasy + populair**:\n• J.K. Rowling — Harry Potter (1997-2007).\n• Philip Pullman — His Dark Materials.\n• Terry Pratchett — Discworld.",
+      "**Britse roman bloeit** in deze periodes.\n\n**Charles Dickens** (1812-1870):\n• Werd verkocht in **afleveringen** (maandelijks of wekelijks, zoals tv-series nu).\n• Sociale kritiek: armoede, kinderarbeid, justitie.\n• Beroemde werken:\n  - **Oliver Twist** (1838): weeskind, criminele wereld Londen.\n  - **A Christmas Carol** (1843): Ebenezer Scrooge, gierigheid, geesten.\n  - **David Copperfield** (1850): semi-autobiografisch.\n  - **Great Expectations** (1861): Pip, sociale stijging, illusie.\n  - **A Tale of Two Cities** (1859): Franse Revolutie.\n• Personages zijn vaak archetypisch (Scrooge = vrek geworden).\n\n**Brontë-zusters**:\n• **Charlotte** — 'Jane Eyre' (1847): wees → gouvernante → liefde met Rochester.\n• **Emily** — 'Wuthering Heights' (1847): gepassioneerde Heathcliff + Catherine, gotisch + wild.\n• **Anne** — 'The Tenant of Wildfell Hall'.\n• Schreven onder pseudoniem (Currer, Ellis, Acton Bell) om vrouwen-vooroordeel te omzeilen.\n\n**Late Victoriaans / Edwardian**:\n• Thomas Hardy — 'Tess of the d'Urbervilles' (1891): tragedy van vrouwelijk slachtoffer.\n• Bram Stoker — 'Dracula' (1897): gotische horror.\n• Joseph Conrad — 'Heart of Darkness' (1899): koloniale kritiek.\n• Arthur Conan Doyle — Sherlock Holmes verhalen.\n\n**Modernist (1900-1945)**:\n\n**Virginia Woolf** (1882-1941):\n• Pionier stream-of-consciousness.\n• **Mrs Dalloway** (1925): één dag in leven Clarissa Dalloway.\n• **To the Lighthouse** (1927): familiedrama, perceptie.\n• 'A Room of One's Own' (1929): feministisch essay.\n\n**James Joyce** (1882-1941, Ier):\n• **Ulysses** (1922): één dag (16 juni 1904) in Dublin, parallel met Homerus' Odyssee.\n• 'Bloomsday' jaarlijks gevierd 16 juni.\n• Notoir moeilijk te lezen — experimenteel.\n\n**George Orwell** (1903-1950):\n• **Animal Farm** (1945): allegorie Russische Revolutie via boerderij-dieren.\n• **1984** (1949): dystopische toekomst (Big Brother, doublethink, Newspeak).\n• Politiek-engagement schrijver.\n\n**Naoorlogs**:\n• William Golding — 'Lord of the Flies' (1954): jongens op eiland verwilderen.\n• J.R.R. Tolkien — 'Lord of the Rings' (1954): fantasy-epos.\n• C.S. Lewis — 'Narnia'-serie.\n• Ian McEwan — 'Atonement', 'On Chesil Beach'.\n• Kazuo Ishiguro (Nobel 2017) — 'Remains of the Day', 'Never Let Me Go'.\n• Zadie Smith — 'White Teeth' (2000).\n• Salman Rushdie — 'Midnight's Children' (1981).\n\n**Fantasy + populair**:\n• J.K. Rowling — Harry Potter (1997-2007).\n• Philip Pullman — His Dark Materials.\n• Terry Pratchett — Discworld.",
     checks: [
       {
         q: "Wie schreef **'1984'**?",
@@ -186,7 +186,7 @@ const steps = [
       {
         q: "**Charles Dickens'** romans verschenen vaak als:",
         options: [
-          "Wekelijkse afleveringen (serial publication)",
+          "Afleveringen (serial publication)",
           "Eén dik boek tegelijk",
           "Korte verhalen alleen",
           "Toneelstukken"
@@ -195,10 +195,10 @@ const steps = [
         wrongHints: [null, "Niet — werd zo populair.", "Wel verhalen ook.", "Niet — vooral proza."],
         uitlegPad: {
           stappen: [
-            { titel: "Victoriaanse 'tv-series'", tekst: "Dickens publiceerde in tijdschriften, ~30 weken één hoofdstuk. Mensen wachtten in spanning op volgende. Bv. 'The Old Curiosity Shop': Amerikaanse lezers wachtten op haven naar Engelse boten met de laatste aflevering om te weten of Little Nell stierf." },
+            { titel: "Victoriaanse 'tv-series'", tekst: "Dickens publiceerde in tijdschriften en losse delen, steeds een nieuw stuk per week of per maand. Mensen wachtten in spanning op volgende. Bv. 'The Old Curiosity Shop': Amerikaanse lezers wachtten in de haven op Engelse boten met de laatste aflevering om te weten of Little Nell stierf." },
           ],
           theorie: "Verklaart Dickens' stijl: cliffhangers, dramatische scènes, veel personages om aandacht vast te houden over maanden.",
-          niveaus: { basis: "Wekelijks.", simpeler: "In afleveringen.", nogSimpeler: "Serial" },
+          niveaus: { basis: "In afleveringen.", simpeler: "Stukje bij beetje.", nogSimpeler: "Serial" },
         },
       },
       {
@@ -220,7 +220,7 @@ const steps = [
         wrongHints: [null, "Niet — politieke fictie.", "Niet — Victoriaans.", "Niet — wel modernist, ander werk."],
         uitlegPad: {
           stappen: [
-            { titel: "Notoir moeilijk maar bewonderd", tekst: "Joyce, Iers schrijver. Ulysses speelt op één dag (16 juni 1904) in Dublin. Volgt Leopold Bloom door 18 hoofdstukken, elk in andere literaire stijl. Parallel met Homerus' Odyssee (Bloom = Odysseus). Stream of consciousness pioneerde hier. Lang gecensureerd in VS + UK door taal." },
+            { titel: "Notoir moeilijk maar bewonderd", tekst: "Joyce, Iers schrijver. Ulysses speelt op één dag (16 juni 1904) in Dublin. Volgt Leopold Bloom door 18 hoofdstukken, elk in andere literaire stijl. Parallel met Homerus' Odyssee (Bloom = Odysseus). Stream of consciousness pionierde hier. Lang gecensureerd in VS + UK door taal." },
           ],
           theorie: "16 juni heet vandaag 'Bloomsday' — wereldwijd door Joyce-fans gevierd met lezingen + verkleed-tochten door Dublin.",
           niveaus: { basis: "Joyce.", simpeler: "James Joyce.", nogSimpeler: "Joyce" },
@@ -238,7 +238,7 @@ const steps = [
         wrongHints: [null, "Niet — Conan Doyle.", "Niet — Stoker.", "Niet — Shelley."],
         uitlegPad: {
           stappen: [
-            { titel: "Bekendste vrek wereld", tekst: "Dickens, 1843. Scrooge wordt bezocht door 3 geesten (verleden, heden, toekomst) → bekeert van gierigaard tot vrijgevig. Naam 'scrooge' is sinds tegen synoniem voor 'vrek'. Bah humbug! Klassiek Kerst-verhaal." },
+            { titel: "Bekendste vrek wereld", tekst: "Dickens, 1843. Scrooge wordt bezocht door 3 geesten (verleden, heden, toekomst) → bekeert zich van gierigaard tot vrijgevig mens. Naam 'scrooge' is sindsdien een synoniem voor 'vrek'. Bah humbug! Klassiek Kerst-verhaal." },
           ],
           niveaus: { basis: "Scrooge.", simpeler: "Scrooge = vrek-figuur.", nogSimpeler: "Scrooge" },
         },
@@ -250,7 +250,7 @@ const steps = [
   {
     title: "Amerikaanse literatuur — van Twain tot vandaag",
     explanation:
-      "**19e-eeuwse pioniers**:\n\n• **Edgar Allan Poe** (1809-1849): horror + detective. 'The Raven' (poëzie), 'The Tell-Tale Heart', 'The Murders in the Rue Morgue' (eerste detective-verhaal).\n• **Nathaniel Hawthorne** (1804-1864): 'The Scarlet Letter' (1850) — Puritanisme + zonde.\n• **Herman Melville** (1819-1891): 'Moby Dick' (1851) — kapitein Ahab obsessief jagend op witte walvis. Symbolische diepgang.\n• **Walt Whitman** (1819-1892): 'Leaves of Grass' (1855) — vrije vers, vier-letten over Amerika + democratie.\n• **Emily Dickinson** (1830-1886): 1800 korte gedichten over leven, dood, natuur. Pas postuum gepubliceerd.\n• **Mark Twain** (1835-1910): 'The Adventures of Huckleberry Finn' (1884) — eerste echt Amerikaanse roman in vernaculair Engels (geen Brits). Sociaal-kritiek slavernij.\n\n**'Lost Generation'** (1920s):\n• Schrijvers gemarkeerd door WO1 + ontworteling.\n• **F. Scott Fitzgerald** — 'The Great Gatsby' (1925): Jazz Age, American Dream + verval.\n• **Ernest Hemingway** — 'The Sun Also Rises', 'A Farewell to Arms', 'The Old Man and the Sea' (Nobel 1954). Korte, krachtige zinnen.\n• Gertrude Stein, John Dos Passos.\n\n**Southern Gothic + 1930-1960**:\n• **William Faulkner** (1897-1962, Nobel 1949): 'The Sound and the Fury', 'As I Lay Dying'. Stream of consciousness over Mississippi.\n• **Flannery O'Connor**: korte verhalen vol grotesk + religieus.\n• **Harper Lee** — 'To Kill a Mockingbird' (1960): racisme in 1930s Alabama door ogen van kind. Pulitzer.\n\n**Beat Generation** (1950s):\n• Reactie op conformisme jaren 50.\n• **Jack Kerouac** — 'On the Road' (1957).\n• **Allen Ginsberg** — 'Howl'.\n• William S. Burroughs — 'Naked Lunch'.\n\n**Postmodern + Contemporary**:\n• **Toni Morrison** (Nobel 1993, Pulitzer): 'Beloved' (1987) — slavernij en trauma.\n• **John Updike**, **Philip Roth** — joods-Amerikaanse stem.\n• **Cormac McCarthy** — 'No Country for Old Men', 'The Road'.\n• **Don DeLillo** — 'White Noise', 'Underworld'.\n• **Donna Tartt** — 'The Secret History', 'The Goldfinch'.\n• **Jonathan Franzen** — 'The Corrections', 'Freedom'.\n\n**Amerikaanse poëzie**:\n• **T.S. Eliot** (Amerikaans-Brits) — 'The Waste Land' (1922), Nobel 1948.\n• **Robert Frost** — 'The Road Not Taken', 'Stopping by Woods on a Snowy Evening'.\n• **Sylvia Plath** — 'Ariel', 'The Bell Jar' (deels autobiografisch).\n• **Maya Angelou** — 'I Know Why the Caged Bird Sings'.\n\n**Drama**:\n• Tennessee Williams — 'A Streetcar Named Desire' (1947).\n• Arthur Miller — 'Death of a Salesman' (1949), 'The Crucible' (1953).\n• Eugene O'Neill (Nobel 1936).\n\n**Sci-fi + populair**:\n• Ray Bradbury — 'Fahrenheit 451' (1953) — boekverbranding.\n• Philip K. Dick — basis 'Blade Runner', 'Minority Report'.\n• Stephen King — horror-fiction.",
+      "**19e-eeuwse pioniers**:\n\n• **Edgar Allan Poe** (1809-1849): horror + detective. 'The Raven' (poëzie), 'The Tell-Tale Heart', 'The Murders in the Rue Morgue' (eerste detective-verhaal).\n• **Nathaniel Hawthorne** (1804-1864): 'The Scarlet Letter' (1850) — Puritanisme + zonde.\n• **Herman Melville** (1819-1891): 'Moby Dick' (1851) — kapitein Ahab obsessief jagend op witte walvis. Symbolische diepgang.\n• **Walt Whitman** (1819-1892): 'Leaves of Grass' (1855) — vrij vers, viert Amerika + democratie.\n• **Emily Dickinson** (1830-1886): 1800 korte gedichten over leven, dood, natuur. Pas postuum gepubliceerd.\n• **Mark Twain** (1835-1910): 'The Adventures of Huckleberry Finn' (1884) — eerste echt Amerikaanse roman in vernaculair Engels (geen Brits). Sociaal-kritiek slavernij.\n\n**'Lost Generation'** (1920s):\n• Schrijvers gemarkeerd door WO1 + ontworteling.\n• **F. Scott Fitzgerald** — 'The Great Gatsby' (1925): Jazz Age, American Dream + verval.\n• **Ernest Hemingway** — 'The Sun Also Rises', 'A Farewell to Arms', 'The Old Man and the Sea' (Nobel 1954). Korte, krachtige zinnen.\n• Gertrude Stein, John Dos Passos.\n\n**Southern Gothic + 1930-1960**:\n• **William Faulkner** (1897-1962, Nobel 1949): 'The Sound and the Fury', 'As I Lay Dying'. Stream of consciousness over Mississippi.\n• **Flannery O'Connor**: korte verhalen vol grotesk + religieus.\n• **Harper Lee** — 'To Kill a Mockingbird' (1960): racisme in 1930s Alabama door ogen van kind. Pulitzer.\n\n**Beat Generation** (1950s):\n• Reactie op conformisme jaren 50.\n• **Jack Kerouac** — 'On the Road' (1957).\n• **Allen Ginsberg** — 'Howl'.\n• William S. Burroughs — 'Naked Lunch'.\n\n**Postmodern + Contemporary**:\n• **Toni Morrison** (Nobel 1993, Pulitzer): 'Beloved' (1987) — slavernij en trauma.\n• **Philip Roth** — joods-Amerikaanse stem; **John Updike** — Amerikaanse middenklasse.\n• **Cormac McCarthy** — 'No Country for Old Men', 'The Road'.\n• **Don DeLillo** — 'White Noise', 'Underworld'.\n• **Donna Tartt** — 'The Secret History', 'The Goldfinch'.\n• **Jonathan Franzen** — 'The Corrections', 'Freedom'.\n\n**Amerikaanse poëzie**:\n• **T.S. Eliot** (Amerikaans-Brits) — 'The Waste Land' (1922), Nobel 1948.\n• **Robert Frost** — 'The Road Not Taken', 'Stopping by Woods on a Snowy Evening'.\n• **Sylvia Plath** — 'Ariel', 'The Bell Jar' (deels autobiografisch).\n• **Maya Angelou** — 'I Know Why the Caged Bird Sings'.\n\n**Drama**:\n• Tennessee Williams — 'A Streetcar Named Desire' (1947).\n• Arthur Miller — 'Death of a Salesman' (1949), 'The Crucible' (1953).\n• Eugene O'Neill (Nobel 1936).\n\n**Sci-fi + populair**:\n• Ray Bradbury — 'Fahrenheit 451' (1953) — boekverbranding.\n• Philip K. Dick — basis 'Blade Runner', 'Minority Report'.\n• Stephen King — horror-fiction.",
     checks: [
       {
         q: "**'The Great Gatsby'** is geschreven door:",
@@ -283,7 +283,7 @@ const steps = [
         wrongHints: [null, "Te vroeg.", "Te recent.", "Wel gewonnen."],
         uitlegPad: {
           stappen: [
-            { titel: "Eerste zwarte vrouw Nobel", tekst: "Morrison (1931-2019): meest gevierde Afro-Amerikaanse schrijver. 'Beloved' (1987, Pulitzer + basis Nobel-citation) over voormalig-slaaf vrouw wier dode dochter terugkeert als geest. Trauma-roman. Anderen: 'Song of Solomon', 'Sula'." },
+            { titel: "Eerste zwarte vrouw Nobel", tekst: "Morrison (1931-2019): meest gevierde Afro-Amerikaanse schrijver. 'Beloved' (1987, Pulitzer + basis Nobel-citation) over een voormalige slavin wier dode dochter terugkeert als geest. Trauma-roman. Anderen: 'Song of Solomon', 'Sula'." },
           ],
           niveaus: { basis: "1993.", simpeler: "Nobel 1993.", nogSimpeler: "1993" },
         },
@@ -300,7 +300,7 @@ const steps = [
         wrongHints: [null, "Eerder generatie.", "Eerder eeuw.", "Latere generatie."],
         uitlegPad: {
           stappen: [
-            { titel: "On the road, jazz, drugs, oosterse filosofie", tekst: "Kerouac, Ginsberg, Burroughs reageerden op '50s-rust met spontane improvisatie, reizen, drugs-experimenten, oosters denken. 'On the Road' (1957): Kerouac's road-trip met Neal Cassady → manifest van vrijheid + zoektocht. Voorloper van hippy-cultuur." },
+            { titel: "On the road, jazz, drugs, oosterse filosofie", tekst: "Kerouac, Ginsberg, Burroughs reageerden op '50s-rust met spontane improvisatie, reizen, drugs-experimenten, oosters denken. 'On the Road' (1957): Kerouac's road-trip met Neal Cassady → manifest van vrijheid + zoektocht. Voorloper van hippiecultuur." },
           ],
           niveaus: { basis: "Anti-conformisme.", simpeler: "Reactie op brave jaren 50.", nogSimpeler: "Conformisme" },
         },
@@ -317,7 +317,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet — anti-Brits.", "Wel plot."],
         uitlegPad: {
           stappen: [
-            { titel: "Echte Amerikaanse stem", tekst: "Voor Twain: Amerikaanse schrijvers imiteerden Brits Engels. Huck Finn (jong meisje van armoede) spreekt + denkt in DIALECT-Engels van Zuid-VS. Plus: hij vriendschap met weglopen-slaaf Jim → ontmaskert hypocrisie van 'fatsoenlijke' samenleving die slavernij steunde. Hemingway: 'All modern American literature comes from one book... Huckleberry Finn.'" },
+            { titel: "Echte Amerikaanse stem", tekst: "Voor Twain: Amerikaanse schrijvers imiteerden Brits Engels. Huck Finn (arme jongen) spreekt + denkt in DIALECT-Engels van Zuid-VS. Plus: hij sluit vriendschap met de weggelopen slaaf Jim → ontmaskert hypocrisie van 'fatsoenlijke' samenleving die slavernij steunde. Hemingway: 'All modern American literature comes from one book... Huckleberry Finn.'" },
           ],
           niveaus: { basis: "Eerste Amerikaans + slavernij-kritiek.", simpeler: "Echt Amerikaans + over slavernij.", nogSimpeler: "Huck" },
         },
@@ -329,7 +329,7 @@ const steps = [
   {
     title: "Eindopdracht — analyse + moderne fictie",
     explanation:
-      "**Literaire analyse-strategie** (English exam):\n\n**1. Read carefully**: don't skim. Look for stylistic devices.\n\n**2. Identify**: \n• **Narrative voice**: who tells the story? First person / third person?\n• **Setting**: when + where? Why does it matter?\n• **Plot**: rising action → climax → resolution?\n• **Theme**: what is the universal idea?\n• **Style**: simple/complex sentences, formal/informal register, dialect?\n\n**3. Literary devices to spot**:\n• **Metaphor / simile**.\n• **Imagery**: visual, auditory, tactile.\n• **Symbolism**: recurring object representing larger idea.\n• **Irony**: dramatic, situational, verbal.\n• **Foreshadowing**: hints of what's to come.\n• **Allusion**: reference to other text/event.\n\n**4. Common essay-question types**:\n• 'How does the author convey X?' → focus on technique.\n• 'What is the significance of Y?' → interpret.\n• 'Compare two characters/passages' → contrast.\n\n**Moderne authors worth knowing** (CSE+):\n\n• **Kazuo Ishiguro** (UK-Japans, Nobel 2017): 'Remains of the Day' (oude butler kijkt terug), 'Never Let Me Go' (klonen-dystopie).\n• **Margaret Atwood** (Can): 'Handmaid's Tale' (1985) — vrouwen onderdrukt in religieuze toekomst-staat. Tegenwoordig opnieuw relevant.\n• **Ian McEwan** (UK): 'Atonement', 'On Chesil Beach', 'Saturday'.\n• **Zadie Smith** (UK): 'White Teeth' (2000) — multiculturele Londen.\n• **Salman Rushdie** (UK-Indiër): 'Midnight's Children' (1981, Booker) — onafhankelijkheid India.\n• **Hilary Mantel** (UK): 'Wolf Hall'-trilogie over Henry VIII tijdperk.\n• **Donna Tartt** (US): 'The Secret History' (1992), 'The Goldfinch' (2013, Pulitzer).\n• **Colson Whitehead** (US, Pulitzer × 2): 'The Underground Railroad'.\n• **Sally Rooney** (Ier): 'Normal People' (2018) — millennial-relaties.\n\n**Genres + populair**:\n• **Dystopian YA**: Suzanne Collins 'Hunger Games', Veronica Roth 'Divergent'.\n• **Fantasy**: George R.R. Martin 'Game of Thrones', Brandon Sanderson, Neil Gaiman.\n• **Sci-fi**: Andy Weir 'The Martian', Liu Cixin 'Three-Body Problem' (Chinees, vertaald).\n• **Crime/thriller**: Gillian Flynn 'Gone Girl', Tana French.\n\n**Tip voor essays**: gebruik tekst-citaten ALTIJD met paginanummer. Geen vage statements. 'The author shows X through quote ABC (p. 42)' is sterker dan 'I think X'.",
+      "**Literaire analyse-strategie** (English exam):\n\n**1. Read carefully**: don't skim. Look for stylistic devices.\n\n**2. Identify**: \n• **Narrative voice**: who tells the story? First person / third person?\n• **Setting**: when + where? Why does it matter?\n• **Plot**: rising action → climax → resolution?\n• **Theme**: what is the universal idea?\n• **Style**: simple/complex sentences, formal/informal register, dialect?\n\n**3. Literary devices to spot**:\n• **Metaphor / simile**.\n• **Imagery**: visual, auditory, tactile.\n• **Symbolism**: recurring object representing larger idea.\n• **Irony**: dramatic, situational, verbal.\n• **Foreshadowing**: hints of what's to come.\n• **Allusion**: reference to other text/event.\n\n**4. Common essay-question types**:\n• 'How does the author convey X?' → focus on technique.\n• 'What is the significance of Y?' → interpret.\n• 'Compare two characters/passages' → contrast.\n\n**Moderne auteurs die je moet kennen** (CSE+):\n\n• **Kazuo Ishiguro** (UK-Japans, Nobel 2017): 'Remains of the Day' (oude butler kijkt terug), 'Never Let Me Go' (klonen-dystopie).\n• **Margaret Atwood** (Can): 'Handmaid's Tale' (1985) — vrouwen onderdrukt in religieuze toekomst-staat. Tegenwoordig opnieuw relevant.\n• **Ian McEwan** (UK): 'Atonement', 'On Chesil Beach', 'Saturday'.\n• **Zadie Smith** (UK): 'White Teeth' (2000) — multicultureel Londen.\n• **Salman Rushdie** (Brits-Indiaas): 'Midnight's Children' (1981, Booker) — onafhankelijkheid India.\n• **Hilary Mantel** (UK): 'Wolf Hall'-trilogie over het tijdperk van Henry VIII.\n• **Donna Tartt** (US): 'The Secret History' (1992), 'The Goldfinch' (2013, Pulitzer).\n• **Colson Whitehead** (US, Pulitzer × 2): 'The Underground Railroad'.\n• **Sally Rooney** (Ier): 'Normal People' (2018) — millennial-relaties.\n\n**Genres + populair**:\n• **Dystopian YA**: Suzanne Collins 'Hunger Games', Veronica Roth 'Divergent'.\n• **Fantasy**: George R.R. Martin 'Game of Thrones', Brandon Sanderson, Neil Gaiman.\n• **Sci-fi**: Andy Weir 'The Martian', Liu Cixin 'Three-Body Problem' (Chinees, vertaald).\n• **Crime/thriller**: Gillian Flynn 'Gone Girl', Tana French.\n\n**Tip voor essays**: gebruik tekst-citaten ALTIJD met paginanummer. Geen vage statements. 'The author shows X through quote ABC (p. 42)' is sterker dan 'I think X'.",
     checks: [
       {
         q: "Wie schreef **'The Handmaid's Tale'**?",
@@ -338,7 +338,7 @@ const steps = [
         wrongHints: [null, "Niet — Beloved.", "Niet — White Teeth.", "Niet — Goldfinch."],
         uitlegPad: {
           stappen: [
-            { titel: "Atwood, 1985 (TV 2017)", tekst: "Dystopie waarin VS overgenomen door religieus regime; vruchtbare vrouwen ('handmaids') gedwongen tot baren voor elites. Vandaag herontdekt door politieke ontwikkelingen (Trump-tijdperk, anti-abortion-wetten). TV-serie hits 2017. Vervolg 'The Testaments' (2019, Booker)." },
+            { titel: "Atwood, 1985 (TV 2017)", tekst: "Dystopie waarin VS overgenomen door religieus regime; vruchtbare vrouwen ('handmaids') gedwongen tot baren voor elites. Vandaag herontdekt door politieke ontwikkelingen (Trump-tijdperk, anti-abortuswetten). TV-serie werd een hit in 2017. Vervolg 'The Testaments' (2019, Booker)." },
           ],
           niveaus: { basis: "Atwood.", simpeler: "Atwood.", nogSimpeler: "Atwood" },
         },
@@ -372,7 +372,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel verteller."],
         uitlegPad: {
           stappen: [
-            { titel: "Joyce + Woolf + Faulkner", tekst: "Pogen INTERN bewustzijn van personage weer te geven: associatieve sprongen, herinneringen, halverwege zinnen onderbroken, geen interpunctie soms. Voorbeeld Molly Bloom's monoloog (Ulysses): 40 pagina's één lange zin." },
+            { titel: "Joyce + Woolf + Faulkner", tekst: "Pogen INTERN bewustzijn van personage weer te geven: associatieve sprongen, herinneringen, halverwege zinnen onderbroken, geen interpunctie soms. Voorbeeld Molly Bloom's monoloog (Ulysses): 40 pagina's met bijna geen leestekens." },
           ],
           niveaus: { basis: "Ongefilterde gedachten.", simpeler: "Gedachtenstroom op papier.", nogSimpeler: "Stream" },
         },
@@ -403,7 +403,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — Moby Dick.", "Niet — A Tale of Two Cities.", "Niet — Bijbel."],
         uitlegPad: {
-          stappen: [{ titel: "Beroemdste openingsregel monoloog", tekst: "Hamlet, Act 3, Scene 1. Filosofische overpeinzing over leven, dood, betekenis. Wordt vaak parodieerd, gebruikt in films + reclame. Onmiddellijk herkenbaar — toets je geletterdheid via dit citaat." }],
+          stappen: [{ titel: "Beroemdste openingsregel monoloog", tekst: "Hamlet, Act 3, Scene 1. Filosofische overpeinzing over leven, dood, betekenis. Wordt vaak geparodieerd, gebruikt in films + reclame. Onmiddellijk herkenbaar — toets je geletterdheid via dit citaat." }],
           niveaus: { basis: "Hamlet.", simpeler: "To be or not to be = Hamlet.", nogSimpeler: "Hamlet" },
         },
       },

@@ -147,7 +147,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [{ titel: "Letterlijke citaat-match", tekst: "Tekst: 'otherworldly: relaxed, dreamlike, almost meditative'. Optie B = letterlijk relaxed + dreamlike + otherworldly. → B." }],
-          woorden: [{ woord: "otherworldly", uitleg: "Bovenaards, niet van deze wereld." }, { woord: "dreamlike", uitleg: "Droomachtig." }, { woord: "meditative", uitleg: "Mediterend, rustgevend." }],
+          woorden: [{ woord: "otherworldly", uitleg: "Bovenaards, niet van deze wereld." }, { woord: "dreamlike", uitleg: "Droomachtig." }, { woord: "meditative", uitleg: "Meditatief, rustgevend." }],
           theorie: "Match-vraag: zoek optie die LETTERLIJK overeenkomt met tekst-fragment.",
           voorbeelden: [{ type: "match", tekst: "Tekst-woorden: relaxed, dreamlike, otherworldly. Optie B: relaxed, dreamlike, otherworldly. Identiek." }],
           basiskennis: [{ onderwerp: "Geen techno/covers", uitleg: "Tekst noemt geen techno-beats of covers — alleen guitar improvisations." }],
@@ -191,7 +191,7 @@ const steps = [
           theorie: "Synoniem-match: 'crews' = workers. 'Surprising' = unforeseen.",
           voorbeelden: [{ type: "match", tekst: "Crews → group of workers. Surprising → unforeseen. → A." }],
           basiskennis: [{ onderwerp: "Niet researcher", uitleg: "Tekst zegt 'crews' (werkers), niet 'researcher'. Strikvraag." }],
-          niveaus: { basis: "Werkers vonden iets onverwacht.", simpeler: "Crews (werkers) unearthed (vonden) something surprising (onverwachts) → A (group of workers, unforeseen).", nogSimpeler: "Crews (werkers) unearthed (vonden) something surprising (onverwachts) … → A." },
+          niveaus: { basis: "Werkers vonden iets onverwachts.", simpeler: "Crews (werkers) unearthed (vonden) something surprising (onverwachts) → A (group of workers, unforeseen).", nogSimpeler: "Crews (werkers) unearthed (vonden) something surprising (onverwachts) … → A." },
         },
       },
     ],
@@ -226,7 +226,7 @@ const steps = [
           { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "vmbo-3", why: "EN-vocab + alinea-signaalwoorden — kern van deze examenvraag" },
         ],
         uitlegPad: {
-          stappen: [{ titel: "Quote = details", tekst: "Alinea 2 quote Allyn Gore + opening → chamber → tunnel = details over wat gevonden werd. → D (facts in detail)." }],
+          stappen: [{ titel: "Quote = details", tekst: "Alinea 2 citeert Allyn Gore + opening → chamber → tunnel = details over wat gevonden werd. → D (facts in detail)." }],
           woorden: [{ woord: "elaboration", uitleg: "Uitwerking met meer details." }, { woord: "presents", uitleg: "Geeft, presenteert." }],
           theorie: "Functie-vraag: kijk wat alinea DOET, niet wat het zegt. Beschrijven, uitleggen, vergelijken?",
           voorbeelden: [{ type: "match", tekst: "Alinea 2 = puur feiten (citaat + ruimtelijke details) → presents facts in detail." }],

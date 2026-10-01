@@ -139,7 +139,7 @@ const steps = [
           null,
           "De tekst noemt geen verkoopcijfers of populariteit-rankings — geen profit-motief expliciet beschreven.",
           "Geen claim over fabricage-vakmanschap — wel detail over de jurk maar geen 'showing off skill'.",
-          "Mattel positioneert dit niet als politiek statement (steun voor royals) — wel als artistieke eerbetoon.",
+          "Mattel positioneert dit niet als politiek statement (steun voor royals) — wel als artistiek eerbetoon.",
         ],
         explanation: "Alinea 3: '*The Queen doll forms part of Barbie's Tribute Collection, which launched in 2021 to celebrate visionary individuals with an outstanding impact and legacy within society.*' De Queen wordt eerbetoond als visionary individual met outstanding impact — dat is precies optie A ('influential and important person').",
         examenBron: BRON_LABEL(33),
@@ -168,7 +168,7 @@ const steps = [
           voorbeelden: [
             { type: "stap", tekst: "Andere Tribute Collection-Barbies: Ella Fitzgerald (jazz), Helen Keller (activiste), Maya Angelou (dichteres) — allemaal 'visionary individuals'. Bevestigt het patroon: eerbetoon-collectie." },
           ],
-          basiskennis: [{ onderwerp: "Eliminate", uitleg: "B (profit) en C (manufacturing skill) staan niet in de tekst. D (royal family support) is een politiek statement dat Mattel zorgvuldig niet maakt." }],
+          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "B (profit) en C (manufacturing skill) staan niet in de tekst. D (royal family support) is een politiek statement dat Mattel zorgvuldig niet maakt." }],
           niveaus: {
             basis: "Eerbetoon aan invloedrijk persoon.",
             simpeler: "Tribute Collection viert visionary individuals = invloedrijke mensen. Queen = invloedrijk.",
@@ -206,14 +206,14 @@ const steps = [
         leerpadLink: { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid" },
         voorkennisKeten: [
           { id: "woordenschat-engels-po", title: "Woordenschat Engels", niveau: "po-1F", why: "begrijpen 'subtitle', 'everyday correspondence', 'classified information', 'naval routines'" },
-          { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "subtitel-keuze = hoofdgedachte-vraag in disguise. Welke optie omvat zowel het soort brieven (alledaags) als de tijd (historisch)?" },
+          { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "subtitel-keuze = hoofdgedachte-vraag in vermomming. Welke optie omvat zowel het soort brieven (alledaags) als de tijd (historisch)?" },
           { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2", niveau: "VMBO-GT eindexamen", why: "1941 + U-boat-torpedo + SS Gairsoppa = WO2-context — directe achtergrond van de bronTekst" },
         ],
         uitlegPad: {
           stappen: [
             { titel: "Subtitel = hoofdgedachte-in-1-zin", tekst: "Een goede subtitel vat de **hoofdgedachte** samen — niet een detail uit één alinea. Vraag: wat is de essentie van dit verhaal?" },
             { titel: "Wat zijn deze brieven?", tekst: "**Everyday correspondence** — gewone post tussen familie + vrienden + geliefden. Geen geheime documenten. Tegelijk: tijdens WO2 (= historisch belangrijke tijd)." },
-            { titel: "Welke optie combineert beide?", tekst: "Optie B: **'Everyday messages written in times of historical importance'**. 'Everyday' = alledaagse (matched 'everyday correspondence'). 'Historical importance' = WO2 (matched 1941, U-boat torpedo). Perfecte match." },
+            { titel: "Welke optie combineert beide?", tekst: "Optie B: **'Everyday messages written in times of historical importance'**. 'Everyday' = alledaags (past bij 'everyday correspondence'). 'Historical importance' = WO2 (past bij 1941, U-boat torpedo). Perfecte match." },
           ],
           woorden: [
             { woord: "subtitle", uitleg: "Ondertitel — vat artikel samen." },
@@ -221,11 +221,11 @@ const steps = [
             { woord: "correspondence", uitleg: "Briefwisseling." },
             { woord: "classified", uitleg: "Geheim, vertrouwelijk." },
           ],
-          theorie: "Toets-truc subtitel-keuze: kijk welke optie ALLE belangrijke elementen van de tekst dekt. Niet alleen één alinea. Eliminate opties die maar over één aspect gaan (alleen leeftijd, alleen marine) of die feitelijk fout zijn.",
+          theorie: "Toets-truc subtitel-keuze: kijk welke optie ALLE belangrijke elementen van de tekst dekt. Niet alleen één alinea. Schrap opties die maar over één aspect gaan (alleen leeftijd, alleen marine) of die feitelijk fout zijn.",
           voorbeelden: [
             { type: "stap", tekst: "Wartime brieven aan 'darling Iris' = liefdesbrief = alledaags (niet militair geheim). Tegelijk: 1941 WO2 = historisch belangrijke tijd." },
           ],
-          basiskennis: [{ onderwerp: "Eliminate", uitleg: "A: geen youngsters in tekst. C: brieven waren NIET classified. D: geen nieuwe naval routines onthuld — alleen brieven gevonden." }],
+          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "A: geen youngsters in tekst. C: brieven waren NIET classified. D: geen nieuwe naval routines onthuld — alleen brieven gevonden." }],
           niveaus: {
             basis: "B (alledaagse berichten in historisch belangrijke tijd).",
             simpeler: "Brieven = alledaags. Tijd = WO2 historisch. B combineert beide.",
@@ -253,10 +253,10 @@ const steps = [
         wrongHints: [
           "Star Wars wordt genoemd maar de tekst gaat niet over film-locatie-analyse — Skellig Michael is breder.",
           null,
-          "Geen analyse van Ierland's wedstrijd-deelname of winst. Big Seven Travel = magazine-erkenning, geen competitie met prijzen.",
+          "Geen analyse van Ierlands wedstrijd-deelname of winst. Big Seven Travel = magazine-erkenning, geen competitie met prijzen.",
           "Puffins worden genoemd maar de tekst gaat niet primair over natuurbescherming — focus is op landschap + internationale erkenning.",
         ],
-        explanation: "De tekst zegt: *'ONE OF Ireland's most spectacular landmarks has gained international recognition for its sheer beauty.*' Vervolgens: Big Seven Travel noemt het 'een van de mooiste film-locaties wereldwijd'. De essentie: Ier-se schoonheid + wereldwijde erkenning. Optie B vat dat samen.",
+        explanation: "De tekst zegt: *'ONE OF Ireland's most spectacular landmarks has gained international recognition for its sheer beauty.*' Vervolgens: Big Seven Travel noemt het 'een van de mooiste film-locaties wereldwijd'. De essentie: Ierse schoonheid + wereldwijde erkenning. Optie B vat dat samen.",
         examenBron: BRON_LABEL(40),
         bronLink: BRON_LINK,
         bronTekst: tekst13,
@@ -269,7 +269,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Vraag = hoofdgedachte + toon", tekst: "'Best describes' = wat is de essentie + houding van de schrijver? Niet één detail." },
-            { titel: "Wat is de toon?", tekst: "**'gained international recognition for its sheer beauty'** + **'most beautiful movie locations in the world'**. Beide positief — schrijver **viert** (celebrates) Ierland's schoonheid." },
+            { titel: "Wat is de toon?", tekst: "**'gained international recognition for its sheer beauty'** + **'most beautiful movie locations in the world'**. Beide positief — schrijver **viert** (celebrates) Ierlands schoonheid." },
             { titel: "Waarom B en niet A/C/D?", tekst: "A 'analyses' = neutraal/onderzoekend — past niet, tekst is enthousiast. C 'profit' = geld-aspect — staat niet in tekst. D 'protects flora and fauna' = natuurbescherming — staat niet centraal." },
           ],
           woorden: [
@@ -283,7 +283,7 @@ const steps = [
           voorbeelden: [
             { type: "stap", tekst: "Sleutel-woorden tekst: 'spectacular', 'sheer beauty', 'beautiful movie locations'. Allemaal positief-vierend → 'celebrates'" },
           ],
-          basiskennis: [{ onderwerp: "Toon-werkwoorden Engels", uitleg: "celebrate (positief) > praise (positief) > appreciate (positief) > analyse (neutraal) > criticise (negatief) > question (twijfelen). Niveau van enthousiasme oplopend tot negatief." }],
+          basiskennis: [{ onderwerp: "Toon-werkwoorden Engels", uitleg: "celebrate (positief) > praise (positief) > appreciate (positief) > analyse (neutraal) > criticise (negatief) > question (twijfelen). Van enthousiast aflopend tot negatief." }],
           niveaus: {
             basis: "Viert Ierse schoonheid wereldwijd.",
             simpeler: "Toon = enthousiast positief. Optie B 'celebrates ... appreciated worldwide' past.",
@@ -310,7 +310,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Geen schuld over verkoop — Nicole verkocht niet, ze hield de stukken. Ook geen 'fake' artifacts.",
+          "Geen schuldgevoel over verkoop — Nicole verkocht niet, ze hield de stukken. Ook geen 'fake' artifacts.",
           "Geen 'purchased' — ze stal ze (took bits). Ook geen melding dat ze geen historische waarde hebben.",
           "Ze is niet 'geïnteresseerd in violent events' — ze beschouwt de tegels juist als bron van haar tegenslag.",
         ],
@@ -335,12 +335,12 @@ const steps = [
             { woord: "misfortune", uitleg: "Pech / tegenslag." },
             { woord: "artifact", uitleg: "Voorwerp uit het verleden — archeologisch object." },
           ],
-          theorie: "Toets-truc 'becomes clear about X'-vragen: zoek alinea waar X expliciet spreekt of een actie doet. Dan extract de essentie. Niet wat de schrijver of een ander zegt — wat zegt X zelf.",
+          theorie: "Toets-truc 'becomes clear about X'-vragen: zoek alinea waar X expliciet spreekt of een actie doet. Haal dan de essentie eruit. Niet wat de schrijver of een ander zegt — wat zegt X zelf.",
           voorbeelden: [
             { type: "stap", tekst: "Nicole's letter: 'I took a piece of history captured in a time with so much negative energy attached to it' — zij denkt dat de negatieve energie haar tegenslag bracht." },
             { type: "feit", tekst: "Vulkaan Vesuvius (79 n.Chr.) doodde 16.000 mensen in Pompeii en Herculaneum. 'Curse of Pompeii' is een populaire mythe — toeristen sturen sinds 1900 stiekem gestolen stenen terug omdat ze pech denken te hebben." },
           ],
-          basiskennis: [{ onderwerp: "Eliminate", uitleg: "Optie A is enige die letterlijk uit alinea 2 volgt (attributes hardships to tiles). Andere opties zijn vervormingen of niet-genoemde feiten." }],
+          basiskennis: [{ onderwerp: "Wegstrepen", uitleg: "Optie A is enige die letterlijk uit alinea 2 volgt (attributes hardships to tiles). Andere opties zijn vervormingen of niet-genoemde feiten." }],
           niveaus: {
             basis: "Geeft tegels schuld voor pech.",
             simpeler: "Nicole geloofde dat de gestolen tegels haar ongeluk brachten — bijgeloof = curse.",
@@ -371,13 +371,13 @@ const steps = [
           null,
           "Niet onbeschoft / rude — niemand wordt aangevallen. Het is een grapje, geen belediging.",
         ],
-        explanation: "De zin *'good news for absolutely no-one'* is een **ironische grap** — uiteraard is meer toxiciteit van een gevaarlijke spin slecht nieuws voor iedereen. De schrijver gebruikt understatement (= playful ironie) om het serieuze onderwerp luchtig te brengen. Optie C 'playful' (= speels, grappig) klopt.",
+        explanation: "De zin *'good news for absolutely no-one'* is een **ironische grap** — uiteraard is meer toxiciteit van een gevaarlijke spin slecht nieuws voor iedereen. De schrijver gebruikt ironie (= playful) om het serieuze onderwerp luchtig te brengen. Optie C 'playful' (= speels, grappig) klopt.",
         examenBron: BRON_LABEL(4),
         bronLink: BRON_LINK,
         bronTekst: tekst3,
         leerpadLink: { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid" },
         voorkennisKeten: [
-          { id: "woordenschat-engels-po", title: "Woordenschat Engels", niveau: "po-1F", why: "begrijpen 'playful', 'outraged', 'enthusiastic', 'rude' — toon-werkwoorden onderscheiden" },
+          { id: "woordenschat-engels-po", title: "Woordenschat Engels", niveau: "po-1F", why: "begrijpen 'playful', 'outraged', 'enthusiastic', 'rude' — toon-woorden onderscheiden" },
           { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "Toets-truc toon-vraag: ironische opmerking herkennen + onderscheiden van boze / verontwaardigde tonen" },
         ],
         uitlegPad: {
@@ -396,9 +396,9 @@ const steps = [
           theorie: "Toets-truc toon-vraag: lees de zin hardop. Klinkt het serieus, woedend, vrolijk of speels? Een tegenstrijdige uitspraak ('good news for no-one') = vrijwel altijd ironie/playful. Schrijver maakt grap, niet kwaad of enthousiast.",
           voorbeelden: [
             { type: "stap", tekst: "Andere playful-ironie voorbeelden: 'Just what we needed!' (sarcastisch over slecht nieuws). 'Brilliant.' (na ramp). 'Perfect timing.' (na storing)." },
-            { type: "feit", tekst: "Britse journalistiek gebruikt veel deze toon — Guardian / Independent typische voorbeelden. Helpt zware onderwerpen toegankelijk maken." },
+            { type: "feit", tekst: "Britse journalistiek gebruikt deze toon veel — Guardian / Independent typische voorbeelden. Helpt zware onderwerpen toegankelijk maken." },
           ],
-          basiskennis: [{ onderwerp: "Toon-werkwoorden Engels", uitleg: "playful = speels (humor + niet-aanvallend). rude = onbeschoft (= aanvallend, persoonlijk). Onderscheid: rude raakt iemand, playful raakt niemand." }],
+          basiskennis: [{ onderwerp: "Toon-woorden Engels", uitleg: "playful = speels (humor + niet-aanvallend). rude = onbeschoft (= aanvallend, persoonlijk). Onderscheid: rude raakt iemand, playful raakt niemand." }],
           niveaus: {
             basis: "Speelse ironie.",
             simpeler: "'Good news for no-one' = ironische grap = playful. Niet boos, niet onbeschoft.",

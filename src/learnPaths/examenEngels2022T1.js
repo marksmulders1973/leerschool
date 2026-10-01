@@ -38,7 +38,7 @@ const BRON_LINK = "https://www.examenblad.nl/2022/vmbo-gl/documenten/cse-1/gt-00
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Engels-leesvaardigheid: bij doel-van-bord/main-purpose-paragraph — lees inleiding + samenvat. Bij waarom-vraag — zoek 'because/since' woorden.",
+  theorie: "Engels-leesvaardigheid: bij doel-van-bord/main-purpose-paragraph — lees inleiding + samenvatting. Bij waarom-vraag — zoek 'because/since' woorden.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -71,11 +71,11 @@ const steps = [
       leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
       voorkennisKeten: [
         { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "VMBO-GT eindexamen", why: "begrijpen 'spread', 'non-native', 'wildlife', 'cooperation'" },
-        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen strategie", niveau: "po-2F", why: "doel van bord/tekst destilleren — kern-truc" },
+        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen strategie", niveau: "po-2F", why: "doel van bord/tekst distilleren — kern-truc" },
       ],
       uitlegPad: compact(
         "Doel-van-bord-truc: lees laatste alinea — daar staat altijd 'please...' of wat de lezer MOET DOEN. Hier: 'ensure it is not spread' = verspreiding stoppen. Plant uit NZ → niet-native → exotisch.",
-        { basis: "Voorkomen verspreiding exotische plant.", simpeler: "Bord vraagt schoenen/kleding checken zodat plant niet OP NIEUWE PLEK terechtkomt.", nogSimpeler: "Verspreiding stoppen" },
+        { basis: "Voorkomen verspreiding exotische plant.", simpeler: "Bord vraagt kleding en huisdieren te checken zodat plant niet OP NIEUWE PLEK terechtkomt.", nogSimpeler: "Verspreiding stoppen" },
         [{ woord: "non-native", uitleg: "Niet-inheems, exotisch." }, { woord: "spread", uitleg: "Verspreiden." }],
       ),
     }],
@@ -123,7 +123,7 @@ const steps = [
         "Many meals served in restaurants contain more calories than meals served in fast-food chains.",
       ],
       answer: 3,
-      wrongHints: ["Tekst zegt niets over ingrediënten-misinformatie — wel over CALORIE-content.", "Geen publicatie over kwaliteit. Lees: aantal calorieën in sit-down vs fast-food.", "Geen undercover-onderzoek. Wel publiek menus-onderzoek.", null],
+      wrongHints: ["Tekst zegt niets over ingrediënten-misinformatie — wel over CALORIE-content.", "Geen publicatie over kwaliteit. Lees: aantal calorieën in sit-down vs fast-food.", "Geen undercover-onderzoek. Wel publiek menu's-onderzoek.", null],
       explanation: "Alinea 1: 'sit-down restaurants are unhealthier than fast-food chains'. Alinea 2: 'Sit-down restaurants were **five times more likely** to offer high-calorie meals of 1,000kcal or more than fast-food restaurants.' → meer calorieën in restaurants.",
       examenBron: BRON_LABEL(9),
       bronLink: BRON_LINK,
@@ -131,10 +131,10 @@ const steps = [
       leerpadLink: { id: "woordenschat-engels", title: "Woordenschat Engels" },
       voorkennisKeten: [
         { id: "woordenschat-engels", title: "Woordenschat Engels", niveau: "VMBO-GT eindexamen", why: "begrijpen 'sit-down', 'fast-food chain', 'kcal', 'recommended'" },
-        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen strategie", niveau: "po-2F", why: "hoofdgedachte 2 alinea's destilleren — kern-truc" },
+        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen strategie", niveau: "po-2F", why: "hoofdgedachte 2 alinea's distilleren — kern-truc" },
       ],
       uitlegPad: compact(
-        "Lees alinea 1+2 + zoek de KERN. Hier: sit-down restaurants ≠ fast-food — sit-down BLIJKT 5× ongezonder. Andere opties verzinnen iets dat NIET in tekst staat.",
+        "Lees alinea 1+2 + zoek de KERN. Hier: sit-down restaurants ≠ fast-food — sit-down biedt 5× vaker maaltijden van 1.000+ kcal. Andere opties verzinnen iets dat NIET in tekst staat.",
         { basis: "Restaurants > fast-food in calorieën.", simpeler: "Onderzoek toont: gewone restaurants meer calorieën dan McDonalds-achtigen.", nogSimpeler: "Restaurants > FF" },
         [{ woord: "sit-down restaurant", uitleg: "Gewoon restaurant waar je zit en bediening krijgt." }, { woord: "kcal", uitleg: "Kilocalorieën — eenheid energie in eten." }],
       ),
@@ -165,8 +165,8 @@ const steps = [
       ],
       uitlegPad: compact(
         "Quote-attributie: kijk wie SPREKT in de zin. Hier 'Eddie wrote' direct na de quote → Eddie is de bron. Andere opties leiden af van wie het zei.",
-        { basis: "Eddie wrote de suggestie.", simpeler: "De quote komt van Eddie (6 jaar), in zijn brief aan de burgemeester.", nogSimpeler: "Eddie" },
-        [{ woord: "mayor", uitleg: "Burgemeester." }, { woord: "charitable", uitleg: "Goeddoelend, liefdadig." }],
+        { basis: "Eddie schreef de suggestie.", simpeler: "De quote komt van Eddie (6 jaar), in zijn brief aan de burgemeester.", nogSimpeler: "Eddie" },
+        [{ woord: "mayor", uitleg: "Burgemeester." }, { woord: "charitable", uitleg: "Liefdadig, voor het goede doel." }],
       ),
     }],
   },

@@ -57,7 +57,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Boven = jij, onder = totaal", tekst: "3 gegeten van 8 = ⅜." }],
           woorden: [{ woord: "breuk", uitleg: "teller/noemer = deel van het geheel" }],
-          theorie: "Teller boven = aantal stukjes jij hebt. Noemer onder = totaal aantal.",
+          theorie: "Teller boven = aantal stukjes dat jij hebt. Noemer onder = totaal aantal.",
           voorbeelden: [{ type: "voorbeeld", tekst: "3 van 8 = ⅜. 5 van 8 = ⅝." }],
           basiskennis: [{ onderwerp: "lezen", uitleg: "⅜ lees je: drie achtste" }],
           niveaus: {
@@ -91,7 +91,7 @@ const steps = [
         wrongHints: [
           null,
           "5 is de **teller** (bovenaan). De noemer is het getal eronder.",
-          "Een breuk heeft één teller en één noemer — niet beide samen één van de twee.",
+          "Een breuk heeft één teller en één noemer — ze kunnen niet allebei de noemer zijn.",
           "Elke breuk heeft een teller én een noemer. Zoek het onderste getal.",
         ],
         uitlegPad: {
@@ -138,7 +138,7 @@ const steps = [
         wrongHints: [
           null,
           "Niet de cijfers naast elkaar — een breuk is een deling. Welk getal staat boven, welk onder?",
-          "Je hebt de breuk omgedraaid: welke is de teller (boven), welk de noemer (onder)?",
+          "Je hebt de breuk omgedraaid: welk getal is de teller (boven), welk de noemer (onder)?",
           "Welk getal deel je door welk? Boven door onder, niet andersom.",
         ],
         uitlegPad: {
@@ -150,7 +150,7 @@ const steps = [
           niveaus: {
             basis: "¾ = 3 ÷ 4 = 0,75.",
             simpeler: "Deel boven door onder: 3÷4 = 0,75.",
-            nogSimpeler: "0,75 omdat 3 keer in 4 niet past, dan 75 keer in 100.",
+            nogSimpeler: "3 ÷ 4 = 0,75 (3 kwartjes = 75 cent).",
           },
         },
       },
@@ -553,7 +553,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt gedeeld door 3 — dat is ⅓ van 60. Maar de noemer van ¾ is 4, niet 3.",
-          "60 keer 3 is optellen — niet de breuk berekenen. Hoe bereken je een breuk van een getal?",
+          "Je hebt 60 keer 3 gedaan, maar nog niet door 4 gedeeld. Hoe bereken je een breuk van een getal?",
           "15 is één kwart van 60 — maar je zoekt drie kwart. Wat doe je dan met 15?",
         ],
         uitlegPad: {
@@ -573,7 +573,7 @@ const steps = [
   },
   {
     title: "Toepassing: breuken vergelijken",
-    explanation: "Welke breuk is **groter**: ⅔ of ¾?\n\n**Methode 1**: gelijknamig maken, dan vergelijken.\n• Gemeenschappelijke noemer 12: ⅔ = ⁸⁄₁₂, ¾ = ⁹⁄₁₂\n• 9 > 8, dus **¾ > ⅔**\n\n**Methode 2**: omzetten naar kommagetal.\n• ⅔ ≈ 0,67\n• ¾ = 0,75\n• 0,75 > 0,67, dus **¾ > ⅔**\n\nBeide methodes geven hetzelfde antwoord — kies wat je makkelijker vindt.\n\n**Algemeen geldt**: bij gelijke teller, kleinere noemer = grotere breuk.\n• ⅓ < ½ (drie stukken eten = kleiner stuk dan twee)\n• ⅖ < ⅓ ? Nee andersom.\n\n**Bij gelijke noemer, grotere teller = grotere breuk**:\n• ⅗ > ⅖ (meer van dezelfde grootte)\n\n**Onthoudtruc**: hoe groter de noemer, hoe kleiner het stuk (8 stukjes pizza zijn kleiner dan 4 stukjes uit dezelfde pizza).",
+    explanation: "Welke breuk is **groter**: ⅔ of ¾?\n\n**Methode 1**: gelijknamig maken, dan vergelijken.\n• Gemeenschappelijke noemer 12: ⅔ = ⁸⁄₁₂, ¾ = ⁹⁄₁₂\n• 9 > 8, dus **¾ > ⅔**\n\n**Methode 2**: omzetten naar kommagetal.\n• ⅔ ≈ 0,67\n• ¾ = 0,75\n• 0,75 > 0,67, dus **¾ > ⅔**\n\nBeide methodes geven hetzelfde antwoord — kies wat je makkelijker vindt.\n\n**Algemeen geldt**: bij gelijke teller, kleinere noemer = grotere breuk.\n• ⅓ < ½ (in 3 stukken verdeeld = kleinere stukken dan in 2)\n• ⅖ < ⅔ (zelfde teller, grotere noemer)\n\n**Bij gelijke noemer, grotere teller = grotere breuk**:\n• ⅗ > ⅖ (meer van dezelfde grootte)\n\n**Onthoudtruc**: hoe groter de noemer, hoe kleiner het stuk (8 stukjes pizza zijn kleiner dan 4 stukjes uit dezelfde pizza).",
     svg: `<svg viewBox="0 0 300 200">
 <text x="80" y="32" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">⅔</text>
 <text x="150" y="32" text-anchor="middle" fill="${COLORS.muted}" font-size="20" font-family="Arial">vs</text>
@@ -660,9 +660,9 @@ const steps = [
       { q: "3/4 als decimaal?", options: ["0,75","0,34","0,43","0,8"], answer: 0, wrongHints: [null, "Niet — alleen cijfers gehusseld.", "Niet.", "Niet."] },
       { q: "¼ + ⅛ = ?", options: ["⅜","½","⅙","⅔"], answer: 0, wrongHints: [null, "Te hoog.", "Niet.", "Niet."] },
       { q: "2½ + 1¼ = ?", options: ["3¾","3¼","4","4½"], answer: 0, wrongHints: [null, "Niet.", "Niet — niet rond.", "Te veel."] },
-      { q: "Welke breuk is groter: ⅓ of ¼?", options: ["⅓","¼","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — andersom.", "Niet — verschillend.", "Wel — andersom dan PO."] },
+      { q: "Welke breuk is groter: ⅓ of ¼?", options: ["⅓","¼","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — andersom.", "Niet — verschillend.", "Wel te zeggen — vergelijk de noemers."] },
       { q: "1 − ⅖ = ?", options: ["⅗","⅖","⅘","½"], answer: 0, wrongHints: [null, "Andersom.", "Niet.", "Niet."] },
-      { q: "Wat is **¼ als procent**?", options: ["25%","14%","40%","20%"], answer: 0, wrongHints: [null, "Niet zomaar cijfers.", "Niet — denk na: hoeveel procent is een halve, en hoe verhoudt een kwart zich daartoe?", "Niet."] },
+      { q: "Wat is **¼ als procent**?", options: ["25%","14%","40%","20%"], answer: 0, wrongHints: [null, "Niet zomaar cijfers.", "Niet — denk na: hoeveel procent is de helft, en hoe verhoudt een kwart zich daartoe?", "Niet."] },
       { q: "Wat is **⅗ als procent**?", options: ["60%","35%","53%","30%"], answer: 0, wrongHints: [null, "Cijfers gehusseld.", "Niet primair.", "Helft."] },
       { q: "½ × 4 = ?", options: ["2","½","¼","4½"], answer: 0, wrongHints: [null, "Niet — vermenigvuldig met heel.", "Niet — kleiner dan heel.", "Niet."] },
       { q: "Welke breuk = ½?", options: ["²⁄₄","⅔","⅓","¾"], answer: 0, wrongHints: [null, "Te groot.", "Te klein.", "Te groot."] },

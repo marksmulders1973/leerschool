@@ -66,14 +66,14 @@ const steps = [
         "Studenten/onderwijskundige zijn personen, geen contrast-paar in alinea 4.",
         "Uitstelgedrag is het ONDERWERP — geen contrast-paar in alinea 4 zelf.",
       ],
-      explanation: "Alinea 4 zegt: 'De planning is namelijk niet het probleem... Het probleem zit in de UITVOERING'. Klassieke tegenstelling: iedereen kan een planning maken, maar het GAAN DOEN is een ander dier.",
+      explanation: "Alinea 4 zegt: 'De planning is namelijk niet het probleem... Het probleem zit in de UITVOERING'. Klassieke tegenstelling: iedereen kan een planning maken, maar het GAAN DOEN is een ander verhaal.",
       examenBron: BRON_LABEL(3),
       bronLink: BRON_LINK,
       bronTekst: tekst1,
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: [
         { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "tegenstellingen herkennen via signaalwoorden (niet... maar...)" },
-        { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "contrasten in alineas — kern" },
+        { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "contrasten in alinea's — kern" },
       ],
       uitlegPad: compact(
         "Tegenstelling-signaalwoorden: MAAR, ECHTER, TOCH, NIET... MAAR, INTEGENDEEL. Hier: 'NIET het probleem... HET PROBLEEM zit in...'. Wat staat tegenover wat? Planning ↔ uitvoering.",
@@ -103,7 +103,7 @@ const steps = [
       answer: 0,
       wrongHints: [
         null,
-        "Persoonlijke noot = MENING/ANEKDOTE van schrijver zelf. Alinea 14 trekt rationeel een conclusie.",
+        "Persoonlijke noot = MENING/ANEKDOTE van de schrijver zelf. Alinea 14 trekt rationeel een conclusie.",
         "Toekomstverwachting = wat ER GAAT gebeuren. Alinea 14 spreekt over hoe je het NU aanpakt.",
         "Geen nieuwe info — alinea 14 vat samen wat eerder werd gezegd.",
       ],
@@ -206,7 +206,7 @@ const steps = [
           nogSimpeler: "Informeren-EEN",
         },
         [
-          { woord: "een vs de", uitleg: "'Een' = één van meerdere. 'De' = de enige. Bij de Doorstroomtoets altijd opletten." },
+          { woord: "een vs de", uitleg: "'Een' = één van meerdere. 'De' = de enige. Bij leesvragen altijd opletten." },
         ],
       ),
     }],
@@ -227,7 +227,7 @@ const steps = [
       wrongHints: [
         null,
         "Te smal — de meeste lezers weten niet eens precies hoe muskietennetten werken. De advertentie verklaart het kort.",
-        "Te oppervlakkig — kerstcadeaus geven kan iedereen, het GOEDE DOEL is de hook.",
+        "Te oppervlakkig — kerstcadeaus geven kan iedereen, het GOEDE DOEL is de kern.",
         "Letterlijk inpakken = vrijwilligerswerk. De advertentie vraagt om GELD, niet om handen.",
       ],
       explanation: "Tekst: 'Geef een kerstpakket waarmee je levens redt' + Artsen zonder Grenzen + medische zorg redden + €25 voor 10 netten. Hele framing = mensen die GELD willen geven aan een goed doel rond Kerstmis.",
@@ -269,7 +269,7 @@ const steps = [
         "Te smal — de tekst noemt geen cijfers over hoeveelheid; gaat over AANPAK.",
         null,
         "Overtuigen = mening. Tekst beschrijft + nuanceert (zelfs psychologen ingeschakeld), neemt geen stelling 'McDonald's is goed'.",
-        "Overtuigen lezer = aansporing voor de LEZER. Tekst is over wat MCDONALD'S doet, niet wat jij moet doen.",
+        "Overtuigen lezer = aansporing voor de LEZER. Tekst gaat over wat MCDONALD'S doet, niet wat jij moet doen.",
       ],
       explanation: "Tekst beschrijft: McDonald's wil zwerfafval aanpakken, gebruikt psychologen, beloont schone klanten, neemt verpakkingen terug. Allemaal AANPAK-info zonder mening. = informeren over hoe ze omgaan met afval.",
       examenBron: BRON_LABEL(33),

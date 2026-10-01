@@ -138,7 +138,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Kolom dinsdag, rij 1e uur", tekst: "Zoek de kolom 'dinsdag' en ga naar het 1e uur: taal." }],
           niveaus: {
-            basis: "Dinsdag 1e uur = het eerste vak in de dinsdag-rij: taal.",
+            basis: "Dinsdag 1e uur = het eerste vak in de dinsdag-kolom: taal.",
             simpeler: "Welk vak staat bovenaan onder dinsdag?",
             nogSimpeler: "Wat is het 1e vak op dinsdag?",
           },
@@ -347,7 +347,7 @@ const steps = [
         q: "School begint om 8:30. Elk lesuur duurt 45 minuten (geen pauzes). Gym is het 3e uur. Hoe laat begint gym?",
         options: ["10:00", "9:15", "9:45", "10:30"],
         answer: 0,
-        wrongHints: [null, "Dat is pas ná het 1e uur.", "Dat is het begin van het 2e uur.", "Te laat — je telt te veel uren."],
+        wrongHints: [null, "Dat is pas ná het 1e uur.", "Tel je wel twee keer 45 minuten op?", "Te laat — je telt te veel uren."],
         uitlegPad: {
           stappen: [{ titel: "Twee lesuren ervoor", tekst: "Vóór het 3e uur zitten 2 lesuren: 2 × 45 = 90 min = 1,5 uur. 8:30 + 1:30 = 10:00." }],
           niveaus: {
@@ -361,7 +361,7 @@ const steps = [
         q: "Een film begint om 19:45 en duurt 1 uur en 50 minuten. Hoe laat is de film afgelopen?",
         options: ["21:35", "21:05", "20:35", "21:55"],
         answer: 0,
-        wrongHints: [null, "Dat zou maar 1 uur en 20 min duren.", "Dat is maar bijna een uur erbij.", "Iets te veel."],
+        wrongHints: [null, "Dat zou maar 1 uur en 20 min duren.", "Dat is maar 50 minuten erbij.", "Iets te veel."],
         uitlegPad: {
           stappen: [{ titel: "Eerst de uren, dan de minuten", tekst: "19:45 + 1 uur = 20:45. Dan + 50 min: 20:45 → 21:00 is 15 min, nog 35 min over → 21:35." }],
           niveaus: {

@@ -97,7 +97,7 @@ const steps = [
           ],
           woorden: [{ woord: "deling die 'op' gaat", uitleg: "Een deelsom waarbij niets overblijft — de rest is dan nul." }],
           theorie: "Niet elke deelsom laat een rest achter. Past de deler precies een aantal keer in het deeltal, dan is de rest nul en zeg je dat de deling 'op gaat'.",
-          voorbeelden: [{ type: "winkel", tekst: "Een winkelier verdeelt 24 appels eerlijk over 4 bakjes: soms komt dat precies uit en soms blijft er eentje liggen." }],
+          voorbeelden: [{ type: "winkel", tekst: "Een winkelier verdeelt 24 appels eerlijk over 4 bakjes: dat komt precies uit, er blijft niets liggen." }],
           basiskennis: [{ onderwerp: "Terugvermenigvuldigen", uitleg: "Je kunt een deelsom controleren door je antwoord terug te vermenigvuldigen met de deler." }],
           niveaus: {
             basis: "6 past precies 5 keer in 30 → 5 rest 0.",
@@ -113,7 +113,7 @@ const steps = [
         wrongHints: [null, "Dat getal keer de deler gaat over 41 heen — probeer het getal ervoor.", "De rest moet kleiner zijn dan de deler (7).", "De rest mag niet groter zijn dan de deler."],
         uitlegPad: {
           stappen: [
-            { titel: "Tel op in stappen van 7", tekst: "7, 14, 21, 28, 35, 42... Welk getal uit deze rij mag niet groter zijn dan 41?" },
+            { titel: "Tel op in stappen van 7", tekst: "7, 14, 21, 28, 35, 42... Welk getal uit deze rij komt het dichtst bij 41, zonder eroverheen te gaan?" },
             { titel: "Bereken wat overblijft", tekst: "Trek dat getal af van 41. Controleer ook: is de rest kleiner dan 7? Zo niet, dan kon je nog verder tellen." },
           ],
           woorden: [{ woord: "deler", uitleg: "Het getal waardoor je deelt — hier is dat 7." }],

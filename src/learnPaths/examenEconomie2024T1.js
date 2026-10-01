@@ -67,8 +67,8 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "EU ≠ EMU", tekst: "Niet elk EU-land heeft de euro. EU-lidmaatschap betekent vrij verkeer; EMU = eurozone (gemeenschappelijke munt)." },
-            { titel: "Welke landen hebben euro?", tekst: "20 van de 27 EU-landen, o.a. NL, BE, DE, FR, ES, IT, AT, IE, PT, GR." },
-            { titel: "Welke EU-landen hebben GEEN euro?", tekst: "Denemarken, Zweden, Polen, Tsjechië, Hongarije, Roemenië, Bulgarije. Zweden hoort daarbij — gebruikt de kroon." },
+            { titel: "Welke landen hebben euro?", tekst: "20 van de 27 EU-landen (2024; sinds 2026 21 met Bulgarije), o.a. NL, BE, DE, FR, ES, IT, AT, IE, PT, GR." },
+            { titel: "Welke EU-landen hebben GEEN euro?", tekst: "Denemarken, Zweden, Polen, Tsjechië, Hongarije, Roemenië (en tot 2026 ook Bulgarije). Zweden hoort daarbij — gebruikt de kroon." },
             { titel: "Wettig betaalmiddel", tekst: "Een land heeft maar 1 wettig betaalmiddel. In Zweden = de kroon. Niet samen met de euro." },
           ],
           woorden: [
@@ -77,7 +77,7 @@ const steps = [
             { woord: "wettig betaalmiddel", uitleg: "Geld dat verkopers verplicht moeten accepteren als betaling. Per land 1 valuta." },
             { woord: "Zweedse kroon", uitleg: "Munteenheid van Zweden, afkorting SEK. ~€0,09 per kroon (2024)." },
           ],
-          theorie: "**EU vs EMU:**\n\n• **EU** = politiek-economische unie, 27 landen\n• **EMU** = monetair pact, 20 landen met euro\n\n**Voorwaarden om bij EMU te horen:**\n• Lage inflatie (~max 1,5% boven EU-gemiddelde)\n• Begrotingstekort < 3% BBP\n• Staatsschuld < 60% BBP\n• Stabiele wisselkoers tegen euro (2 jr lid van ERM-II)\n\nZweden voldoet aan de criteria maar koos er BEWUST voor om de kroon te houden (referendum 2003).",
+          theorie: "**EU vs EMU:**\n\n• **EU** = politiek-economische unie, 27 landen\n• **EMU** = monetair pact, 20 landen met euro\n\n**Voorwaarden om bij EMU te horen:**\n• Lage inflatie (~max 1,5% boven EU-gemiddelde)\n• Begrotingstekort < 3% BBP\n• Staatsschuld < 60% BBP\n• Stabiele wisselkoers tegen euro (2 jr lid van ERM-II)\n\nZweden voldoet aan de meeste criteria, maar koos er BEWUST voor om de kroon te houden (referendum 2003) en doet daarom niet mee aan ERM-II.",
           voorbeelden: [
             { type: "EU-lid + euro", tekst: "Italië = EU + EMU → betaalt met euro." },
             { type: "EU-lid, géén euro", tekst: "Zweden, Denemarken, Polen = EU maar eigen valuta." },
@@ -147,7 +147,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Paar omroepen + verschillend = oligopolie.",
-            simpeler: "Stel je voor: 10 supermarktketens in NL — niet 1 (monopolie), niet 1000 (volkomen concurrentie). Een PAAR. Elke ketens heeft eigen sfeer (Lidl = goedkoop, AH = midden, Jumbo = vriendelijk). Hetzelfde geldt voor publieke omroepen — paar spelers, elk met eigen karakter = oligopolie.",
+            simpeler: "Stel je voor: 10 supermarktketens in NL — niet 1 (monopolie), niet 1000 (volkomen concurrentie). Een PAAR. Elke keten heeft eigen sfeer (Lidl = goedkoop, AH = midden, Jumbo = vriendelijk). Hetzelfde geldt voor publieke omroepen — paar spelers, elk met eigen karakter = oligopolie.",
             nogSimpeler: "Paar spelers + verschillend = oligopolie",
           },
         },
@@ -290,7 +290,7 @@ const steps = [
           "Vaste lasten (huur, abo's) zijn juist makkelijk te begroten — die vergeet je niet.",
           "Vaste lasten zie je elke maand voorbij komen — die vergeet je meestal niet.",
         ],
-        explanation: "Studenten onderschatten vooral: (1) **incidentele uitgaven** zoals fietsreparatie, kapotte telefoon, onverwachte zorgkosten — die zijn moeilijk te plannen, en (2) **dagelijkse huishoudelijke uitgaven** (boodschappen, koffie, soms uit eten) — die lopen op zonder dat je het door hebt. Vaste lasten (huur, abonnementen) staan wél elke maand in de bank, die vergeet niemand.",
+        explanation: "Studenten onderschatten vooral: (1) **incidentele uitgaven** zoals fietsreparatie, kapotte telefoon, onverwachte zorgkosten — die zijn moeilijk te plannen, en (2) **dagelijkse huishoudelijke uitgaven** (boodschappen, koffie, soms uit eten) — die lopen op zonder dat je het door hebt. Vaste lasten (huur, abonnementen) staan wél elke maand op je bankrekening, die vergeet niemand.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 36",
         bronTekst: bronSasja,
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
@@ -321,7 +321,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Citaat noemt fiets-reparatie (incidenteel) + lunch/koffie (dagelijks huishoudelijk).",
-            simpeler: "Het Nibud zegt: studenten onderschatten 2 dingen: (a) onverwachte kosten (fiets stuk) en (b) kleine dagelijkse kosten (broodje, koffie). Vaste lasten zoals huur zien ze WEL — die staan elke maand in de bank.",
+            simpeler: "Het Nibud zegt: studenten onderschatten 2 dingen: (a) onverwachte kosten (fiets stuk) en (b) kleine dagelijkse kosten (broodje, koffie). Vaste lasten zoals huur zien ze WEL — die staan elke maand op hun bankrekening.",
             nogSimpeler: "Citaat = incidenteel + dagelijks",
           },
         },
@@ -347,9 +347,9 @@ const steps = [
           "Conjunctureel = door slechte economie / recessie. Hier verdwijnen bedrijven structureel.",
           "Conjunctureel = door slechte economie. Hier is het structureel.",
           null,
-          "Het verdwijnen van werkgelegenheid = aanbodkant van de arbeidsmarkt (er is minder werk te verrichten in NL).",
+          "Bedrijven die vertrekken = minder productie in NL. Gaat dat over de vraagkant of de aanbodkant van de economie?",
         ],
-        explanation: "Bedrijven verplaatsen naar het buitenland = de werkgelegenheid verdwijnt structureel — dat is structurele werkloosheid (niet conjunctureel = tijdelijke recessie). Het is de aanbodkant: er wordt minder arbeid in Nederland aangeboden door werkgevers.",
+        explanation: "Bedrijven verplaatsen naar het buitenland = de werkgelegenheid verdwijnt structureel — dat is structurele werkloosheid (niet conjunctureel = tijdelijke recessie). Het is de aanbodkant van de economie: bedrijven produceren (bieden goederen en diensten aan) niet meer in Nederland.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 41",
         leerpadLink: { id: "pincode-werk-arbeidsmarkt", title: "Werk en arbeidsmarkt" },
         voorkennisKeten: [
@@ -361,7 +361,7 @@ const steps = [
           stappen: [
             { titel: "Welke 2 hoofdsoorten werkloosheid zijn er?", tekst: "(1) Conjuncturele = door ECONOMISCHE situatie (recessie, mindere vraag). Tijdelijk. (2) Structurele = door langdurige veranderingen (techniek, verplaatsing, ander beroep gevraagd)." },
             { titel: "Verdwijnen bedrijven = welk type?", tekst: "Bedrijven gaan WEG (verplaatsen). Dat is een blijvend, structureel verlies van werkgelegenheid → STRUCTURELE werkloosheid." },
-            { titel: "Vraag of aanbod?", tekst: "Op de arbeidsmarkt: werknemers BIEDEN arbeid aan, werkgevers VRAGEN arbeid. Bedrijven verdwijnen = minder vraag naar arbeid? Of minder aanbod van banen? In NL-context: het 'aanbod' van banen daalt = aanbodkant." },
+            { titel: "Vraag of aanbod?", tekst: "Op de arbeidsmarkt: werknemers BIEDEN arbeid aan, werkgevers VRAGEN arbeid. Let op: de vraag gaat over de aanbodkant van de ECONOMIE (productie), niet van de arbeidsmarkt. Bedrijven die vertrekken = minder productie in NL = aanbodkant." },
           ],
           woorden: [
             { woord: "conjuncturele werkloosheid", uitleg: "Werkloosheid door tijdelijke economische dip (recessie). Verdwijnt als economie weer aantrekt." },

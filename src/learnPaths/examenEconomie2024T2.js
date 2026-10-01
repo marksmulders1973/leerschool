@@ -44,7 +44,7 @@ const steps = [
             { titel: "Loop opties langs", tekst: "Optie 1: Kameroen KOOPT in NL (geld weg uit Kameroen) ✗. Optie 2: eigen groente verbouwen (geen geldstroom) ✗. Optie 3: NL-toeristen GEVEN UIT in Kameroen (geld komt binnen) ✓." },
           ],
           woorden: [
-            { woord: "nationaal inkomen", uitleg: "Totale verdiende inkomen van alle mensen + bedrijven in een land per jaar. Maatstaf voor welvaart." },
+            { woord: "nationaal inkomen", uitleg: "Totaal verdiend inkomen van alle mensen + bedrijven in een land per jaar. Maatstaf voor welvaart." },
             { woord: "export", uitleg: "Goederen of diensten verkopen aan het buitenland → geld komt het land BINNEN." },
             { woord: "import", uitleg: "Goederen of diensten kopen IN het buitenland → geld gaat het land UIT." },
             { woord: "export van diensten", uitleg: "Buitenlanders die in jouw land geld uitgeven aan diensten (toerisme, transport, financieel)." },
@@ -53,7 +53,7 @@ const steps = [
           voorbeelden: [
             { type: "export goederen", tekst: "NL verkoopt bloemen aan Duitsland → Duits geld → NL → NL-inkomen stijgt." },
             { type: "export diensten", tekst: "Duits gezin gaat skiën in NL bergen (theoretisch 😉) → geeft Duits geld uit in NL → export van diensten." },
-            { type: "Kameroen", tekst: "NL-toerist Sarah betaalt Kameroenese hotelhouder voor 5 nachten → geld stroomt NL → Kameroen → KAM-inkomen stijgt." },
+            { type: "Kameroen", tekst: "NL-toerist Sarah betaalt Kameroense hotelhouder voor 5 nachten → geld stroomt NL → Kameroen → KAM-inkomen stijgt." },
           ],
           basiskennis: [
             { onderwerp: "Lopende rekening", uitleg: "Onderdeel van betalingsbalans dat export-import bijhoudt. Positief saldo = land verdient meer dan het uitgeeft aan buitenland." },
@@ -154,12 +154,12 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Wat zijn marketing-instrumenten (P's)?", tekst: "Klassiek 4: Product, Prijs, Plaats, Promotie. Pincode noemt vaak 5: Personeel + Presentatie. Allemaal 'wat kun je veranderen om beter te verkopen'." },
+            { titel: "Wat zijn marketing-instrumenten (P's)?", tekst: "Klassiek 4: Product, Prijs, Plaats, Promotie. Pincode noemt er vaak 6: ook Personeel + Presentatie. Allemaal 'wat kun je veranderen om beter te verkopen'." },
             { titel: "Wat verandert Arjun?", tekst: "Hij maakt de PLAATSEN op de camping luxer (sanitair, keuken). Hij verandert het PRODUCT (= wat hij aan klanten verkoopt)." },
             { titel: "Loop opties langs", tekst: "Personeel = medewerkers ✗. Plaats = waar je verkoopt ✗. Presentatie = uiterlijk/sfeer (wel verwarrend, maar Pincode rekent dit als hoe je AANBIEDT, niet wat). Product = wat je verkoopt ✓." },
           ],
           woorden: [
-            { woord: "marketinginstrument", uitleg: "Een knop waar je aan kunt draaien om beter te verkopen. De 4 (of 5) P's." },
+            { woord: "marketinginstrument", uitleg: "Een knop waar je aan kunt draaien om beter te verkopen. De 4 (of 6) P's." },
             { woord: "productbeleid", uitleg: "Beslissingen over WAT je verkoopt: kwaliteit, variaties, ontwerp, garantie." },
             { woord: "prijsbeleid", uitleg: "Beslissingen over HOEVEEL je vraagt: korting, premium-prijs, inkoopprijzen." },
             { woord: "plaatsbeleid", uitleg: "Beslissingen over WAAR + HOE je verkoopt: winkel, online, kanaal." },
@@ -224,12 +224,12 @@ const steps = [
             { woord: "vergrijzing", uitleg: "Bevolking wordt gemiddeld OUDER → meer AOW-ers per werkende → i/a-ratio stijgt." },
             { woord: "sociale zekerheid", uitleg: "Stelsel van uitkeringen (WW, WIA, AOW, bijstand) gefinancierd door werkenden via premies." },
           ],
-          theorie: "**i/a-ratio en sociale zekerheid:**\n\nUitkeringen worden betaald door werkenden via premies (sociale lasten op loon).\n\n• i/a stijgt → minder werkenden per uitkering → ELK lid moet meer betalen → wordt zwaarder\n• i/a daalt → meer werkenden per uitkering → lasten verspreid → blijft betaalbaar\n\n**NL-context (2024):** vergrijzing → veel AOW-ers, minder werkenden → i/a stijgt → druk op AOW-systeem.",
+          theorie: "**i/a-ratio en sociale zekerheid:**\n\nUitkeringen worden betaald door werkenden via premies (sociale lasten op loon).\n\n• i/a stijgt → minder werkenden per uitkering → ELKE werkende moet meer betalen → wordt zwaarder\n• i/a daalt → meer werkenden per uitkering → lasten verspreid → blijft betaalbaar\n\n**NL-context (2024):** vergrijzing → veel AOW-ers, minder werkenden → i/a stijgt → druk op AOW-systeem.",
           voorbeelden: [
             { type: "berekening", tekst: "100 actieven moeten 50 inactieven onderhouden (i/a = 0,5). Bij vergrijzing: 100 actieven moeten 80 inactieven onderhouden (i/a = 0,8). Lasten per werkende stijgen 60%." },
           ],
           basiskennis: [
-            { onderwerp: "Hoe werken premies?", uitleg: "Op je loon worden 'sociale premies' ingehouden (WW, WIA, AOW). Die geld gaat naar uitkeringen voor anderen." },
+            { onderwerp: "Hoe werken premies?", uitleg: "Op je loon worden 'sociale premies' ingehouden (WW, WIA, AOW). Dat geld gaat naar uitkeringen voor anderen." },
           ],
           niveaus: {
             basis: "i/a stijgt → meer ontvangers per werkende → moeilijker betaalbaar.",
@@ -274,7 +274,7 @@ const steps = [
             { titel: "Welke past bij fairtrade?", tekst: "Fairtrade is langdurig en pakt oorzaken (te lage prijzen voor boeren) aan = STRUCTUREEL." },
           ],
           woorden: [
-            { woord: "fairtrade", uitleg: "Keurmerk dat producent in ontwikkelingsland gegarandeerde min-prijs krijgt voor product, plus premie voor lokale projecten." },
+            { woord: "fairtrade", uitleg: "Keurmerk waarbij de producent in een ontwikkelingsland een gegarandeerde minimumprijs krijgt, plus een premie voor lokale projecten." },
             { woord: "particuliere ontwikkelingshulp", uitleg: "Hulp via PRIVATE kanalen: NGO's, consumenten, bedrijven — niet via overheid." },
             { woord: "bilaterale hulp", uitleg: "Hulp van overheid-A naar overheid-B (bv. NL stuurt geld naar Bangladesh-regering)." },
             { woord: "noodhulp", uitleg: "Acute hulp bij ramp/oorlog: voedsel, water, medicijnen, opvang. Kortlopend." },

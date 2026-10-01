@@ -200,9 +200,9 @@ const steps = [
             { titel: "Verschil: doorgeven of niet", tekst: "Mutatie in lichaamscel = blijft in dat individu (kan ziekte/kanker veroorzaken). Mutatie in geslachtscel = wordt doorgegeven aan kinderen (verandert nakomelingen). Beide ontstaan dus, alleen het gevolg verschilt." },
           ],
           woorden: [
-            { woord: "mutatie", uitleg: "Verandering in DNA — kan spontaan of door externe oorzaak." },
-            { woord: "lichaamscel", uitleg: "Elke cel behalve geslachtscel (sperma/eicel)." },
-            { woord: "geslachtscel", uitleg: "Sperma of eicel — heeft de helft DNA." },
+            { woord: "mutatie", uitleg: "Verandering in DNA — ontstaat spontaan of door een externe oorzaak." },
+            { woord: "lichaamscel", uitleg: "Elke cel behalve geslachtscel (zaadcel/eicel)." },
+            { woord: "geslachtscel", uitleg: "Zaadcel of eicel — heeft de helft DNA." },
           ],
           theorie: "Onthoud: mutaties komen in elke cel voor. Alleen mutaties in geslachtscellen worden doorgegeven.",
           voorbeelden: [{ type: "stap", tekst: "UV-straling → huidmutatie → huidkanker (in lichaamscel, niet doorgegeven). Mutatie in zaadcel vader → kind met die mutatie." }],

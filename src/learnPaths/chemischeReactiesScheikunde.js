@@ -158,7 +158,7 @@ const steps = [
   // ─── A. Wat is een chemische reactie ───────────────
   {
     title: "Wat is een chemische reactie?",
-    explanation: "Een **chemische reactie** is een proces waarbij **stoffen veranderen in andere stoffen**. De atomen blijven dezelfde, maar ze schuiven naar nieuwe combinaties.\n\n**Vergelijk met legoblokjes**: je breekt een huis af (uitgangsstoffen) en bouwt er een auto van (eindstoffen). Geen blokjes worden vernietigd, ze worden opnieuw gerangschikt.\n\n**Termen**:\n• **Reactanten** (uitgangsstoffen) = de stoffen die je begint mee.\n• **Producten** (eindstoffen) = de stoffen die er uit komen.\n• **→** = 'gaat over in'.\n\n**Voorbeeld**:\nAls je waterstofgas (H₂) verbrandt in zuurstof (O₂), krijg je water:\n\n**2 H₂ + O₂ → 2 H₂O**\n\n**Hoe herken je dat er een reactie is gebeurd?**\n• Kleurverandering.\n• Gasvorming (bubbeltjes).\n• Neerslag (vaste stof komt uit oplossing).\n• Warmte vrijkomen of opgenomen.\n• Geur ontstaat.\n\n**Geen reactie maar oplossen**: zout in water → zout lost op, maar het zout zelf is nog gewoon zout. Geen nieuwe stof. Wel een **fysisch verschijnsel**, geen scheikundige reactie.\n\n**Reacties zijn overal**:\n• Verbranding (vuur).\n• Fotosynthese in planten.\n• Roesten van ijzer.\n• Spijsvertering in je lichaam.\n• Cement uitharden.",
+    explanation: "Een **chemische reactie** is een proces waarbij **stoffen veranderen in andere stoffen**. De atomen blijven dezelfde, maar ze schuiven naar nieuwe combinaties.\n\n**Vergelijk met legoblokjes**: je breekt een huis af (uitgangsstoffen) en bouwt er een auto van (eindstoffen). Geen blokjes worden vernietigd, ze worden opnieuw gerangschikt.\n\n**Termen**:\n• **Reactanten** (uitgangsstoffen) = de stoffen waarmee je begint.\n• **Producten** (eindstoffen) = de stoffen die er uit komen.\n• **→** = 'gaat over in'.\n\n**Voorbeeld**:\nAls je waterstofgas (H₂) verbrandt in zuurstof (O₂), krijg je water:\n\n**2 H₂ + O₂ → 2 H₂O**\n\n**Hoe herken je dat er een reactie is gebeurd?**\n• Kleurverandering.\n• Gasvorming (bubbeltjes).\n• Neerslag (vaste stof komt uit oplossing).\n• Warmte komt vrij of wordt opgenomen.\n• Geur ontstaat.\n\n**Geen reactie maar oplossen**: zout in water → zout lost op, maar het zout zelf is nog gewoon zout. Geen nieuwe stof. Wel een **fysisch verschijnsel**, geen scheikundige reactie.\n\n**Reacties zijn overal**:\n• Verbranding (vuur).\n• Fotosynthese in planten.\n• Roesten van ijzer.\n• Spijsvertering in je lichaam.\n• Cement uitharden.",
     svg: reactieSvg(),
     checks: [
       {
@@ -213,7 +213,7 @@ const steps = [
   },
   {
     title: "Wet van Behoud van Massa",
-    explanation: "**Antoine Lavoisier** (Frans, eind 18e eeuw) ontdekte dat tijdens een chemische reactie **geen atomen verloren gaan of erbij komen** — ze worden alleen anders gerangschikt.\n\n**Wet van Behoud van Massa**: in een gesloten systeem is de **totale massa van de producten = totale massa van de reactanten**.\n\n**Voorbeeld**: 1 g waterstof + 8 g zuurstof → 9 g water. Niets verdwenen, niets erbij.\n\n**Wat betekent dit voor reactievergelijkingen?**\nLinks (reactanten) en rechts (producten) moeten **evenveel atomen van elke soort** hebben.\n\n**Voorbeeld klopt**:\n**2 H₂ + O₂ → 2 H₂O**\n• Links: 4 H + 2 O.\n• Rechts: 4 H + 2 O.\n• Klopt! ✓\n\n**Voorbeeld klopt NIET (nog te kloppend maken)**:\n**H₂ + O₂ → H₂O**\n• Links: 2 H + 2 O.\n• Rechts: 2 H + 1 O.\n• Klopt niet ✗ — er is een O-atoom 'verdwenen' wat onmogelijk is.\n\n**Daarom**: bij reactievergelijkingen moeten we soms **coëfficiënten** voor moleculen zetten — getallen voor het molecuul.\n\n**Coëfficiënten**: '2' in '2 H₂' betekent: er zijn 2 H₂-moleculen. Dat is in totaal 4 H-atomen.\n\n**Indices** (klein cijfertje achter): de '2' in 'H₂' betekent: 2 H-atomen per molecuul. **Indices mag je nooit veranderen** bij balanceren — alleen coëfficiënten.\n\n**Belangrijk**: de stoffen blijven dezelfde — alleen veranderen we hun aantallen door coëfficiënten ervoor te zetten.",
+    explanation: "**Antoine Lavoisier** (Frans, eind 18e eeuw) ontdekte dat tijdens een chemische reactie **geen atomen verloren gaan of erbij komen** — ze worden alleen anders gerangschikt.\n\n**Wet van Behoud van Massa**: in een gesloten systeem is de **totale massa van de producten = totale massa van de reactanten**.\n\n**Voorbeeld**: 1 g waterstof + 8 g zuurstof → 9 g water. Niets verdwenen, niets erbij.\n\n**Wat betekent dit voor reactievergelijkingen?**\nLinks (reactanten) en rechts (producten) moeten **evenveel atomen van elke soort** hebben.\n\n**Voorbeeld klopt**:\n**2 H₂ + O₂ → 2 H₂O**\n• Links: 4 H + 2 O.\n• Rechts: 4 H + 2 O.\n• Klopt! ✓\n\n**Voorbeeld klopt NIET (nog te kloppend maken)**:\n**H₂ + O₂ → H₂O**\n• Links: 2 H + 2 O.\n• Rechts: 2 H + 1 O.\n• Klopt niet ✗ — er is een O-atoom 'verdwenen', en dat is onmogelijk.\n\n**Daarom**: bij reactievergelijkingen moeten we soms **coëfficiënten** vóór moleculen zetten — getallen vóór het molecuul.\n\n**Coëfficiënten**: '2' in '2 H₂' betekent: er zijn 2 H₂-moleculen. Dat is in totaal 4 H-atomen.\n\n**Indices** (klein cijfertje achter): de '2' in 'H₂' betekent: 2 H-atomen per molecuul. **Indices mag je nooit veranderen** bij balanceren — alleen coëfficiënten.\n\n**Belangrijk**: de stoffen blijven dezelfde — alleen veranderen we hun aantallen door coëfficiënten ervoor te zetten.",
     svg: reactieSvg("H₂ + O₂", "H₂O", false),
     checks: [
       {
@@ -270,7 +270,7 @@ const steps = [
   // ─── B. Reactievergelijkingen ───────────────
   {
     title: "Molecuulformules — wat staat er in een formule?",
-    explanation: "Elke chemische stof heeft een **molecuulformule** die zegt **welke atomen** en **hoeveel** er in één molecuul zitten.\n\n**Voorbeelden**:\n• **H₂O** = water = 2 waterstof-atomen + 1 zuurstof-atoom\n• **CO₂** = kooldioxide = 1 koolstof + 2 zuurstof\n• **NaCl** = keukenzout = 1 natrium + 1 chloor\n• **C₆H₁₂O₆** = glucose = 6 koolstof + 12 waterstof + 6 zuurstof\n• **CH₄** = methaan (aardgas) = 1 koolstof + 4 waterstof\n• **NH₃** = ammoniak = 1 stikstof + 3 waterstof\n\n**Indices** (klein cijfertje achter, vaak onderaan):\n• Geen index → 1 atoom (bijv. de N in NH₃ = 1 N).\n• '2', '3', etc. → meer atomen.\n\n**Coëfficiënten** (groot getal voor):\n• Geen coëfficiënt → 1 molecuul.\n• '2 H₂O' = 2 watermoleculen = 4 H + 2 O totaal.\n• '3 CO₂' = 3 kooldioxide-moleculen = 3 C + 6 O totaal.\n\n**Belangrijke 'twee-atomige moleculen'** (di-atomic) — komen ALTIJD als pair:\n• **H₂** (waterstofgas)\n• **O₂** (zuurstofgas)\n• **N₂** (stikstofgas)\n• **Cl₂** (chloorgas)\n• **Br₂** (broom)\n• **I₂** (jood)\n• **F₂** (fluor)\n\nGeheugenezel: **'HONClBrIF'** — \"Has Old Nelson Cleared Boring Issues Forever?\"\n\nAls je deze atoom alleen gebruikt in een reactie, gebruik dan altijd de di-atomische vorm (bijvoorbeeld H₂, niet H).\n\n**Atoom tellen — voorbeeld**\n**3 H₂SO₄** = 3 zwavelzuur-moleculen.\n• H: 3 × 2 = 6.\n• S: 3 × 1 = 3.\n• O: 3 × 4 = 12.\n• Totaal in 3 moleculen: 6 H + 3 S + 12 O.",
+    explanation: "Elke chemische stof heeft een **molecuulformule** die zegt **welke atomen** en **hoeveel** er in één molecuul zitten.\n\n**Voorbeelden**:\n• **H₂O** = water = 2 waterstof-atomen + 1 zuurstof-atoom\n• **CO₂** = kooldioxide = 1 koolstof + 2 zuurstof\n• **NaCl** = keukenzout = 1 natrium + 1 chloor\n• **C₆H₁₂O₆** = glucose = 6 koolstof + 12 waterstof + 6 zuurstof\n• **CH₄** = methaan (aardgas) = 1 koolstof + 4 waterstof\n• **NH₃** = ammoniak = 1 stikstof + 3 waterstof\n\n**Indices** (klein cijfertje achter, vaak onderaan):\n• Geen index → 1 atoom (bijv. de N in NH₃ = 1 N).\n• '2', '3', etc. → meer atomen.\n\n**Coëfficiënten** (groot getal voor):\n• Geen coëfficiënt → 1 molecuul.\n• '2 H₂O' = 2 watermoleculen = 4 H + 2 O totaal.\n• '3 CO₂' = 3 kooldioxide-moleculen = 3 C + 6 O totaal.\n\n**Belangrijke 'twee-atomige moleculen'** (twee-atomig) — komen ALTIJD als paar:\n• **H₂** (waterstofgas)\n• **O₂** (zuurstofgas)\n• **N₂** (stikstofgas)\n• **Cl₂** (chloorgas)\n• **Br₂** (broom)\n• **I₂** (jood)\n• **F₂** (fluor)\n\nEzelsbruggetje: **'HONClBrIF'** — \"Has Old Nelson Cleared Boring Issues Forever?\"\n\nGebruik je een van deze elementen als losse stof in een reactie, schrijf dan altijd de twee-atomige vorm (bijvoorbeeld H₂, niet H).\n\n**Atoom tellen — voorbeeld**\n**3 H₂SO₄** = 3 zwavelzuur-moleculen.\n• H: 3 × 2 = 6.\n• S: 3 × 1 = 3.\n• O: 3 × 4 = 12.\n• Totaal in 3 moleculen: 6 H + 3 S + 12 O.",
     svg: reactieSvg("CH₄ + 2 O₂", "CO₂ + 2 H₂O", true),
     checks: [
       {
@@ -313,18 +313,18 @@ const steps = [
       },
       {
         q: "Welke vorm gebruik je voor zuurstof in een reactievergelijking?",
-        options: ["O₂ (di-atomic)", "O", "O₃", "O₄"],
+        options: ["O₂ (twee-atomig)", "O", "O₃", "O₄"],
         answer: 0,
         wrongHints: [
           null,
-          "Zuurstof komt als pair voor in de natuur — O₂.",
+          "Zuurstof komt als paar voor in de natuur — O₂.",
           "O₃ is ozon (speciaal), niet de gewone vorm.",
           "Bestaat niet als gewone vorm.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Zuurstof = O₂ (pair)", tekst: "Zuurstofgas komt altijd als 2 atomen samen → O₂ (di-atomic)." }],
-          woorden: [{ woord: "di-atomic", uitleg: "2 atomen vormen samen molecuul" }],
-          theorie: "HONClBrIF-regel: H₂, O₂, N₂, Cl₂, Br₂, I₂, F₂ komen als pair voor.",
+          stappen: [{ titel: "Zuurstof = O₂ (paar)", tekst: "Zuurstofgas komt altijd als 2 atomen samen → O₂ (twee-atomig)." }],
+          woorden: [{ woord: "twee-atomig", uitleg: "2 atomen vormen samen een molecuul" }],
+          theorie: "HONClBrIF-regel: H₂, O₂, N₂, Cl₂, Br₂, I₂, F₂ komen als paar voor.",
           voorbeelden: [{ type: "voorbeeld", tekst: "lucht: O₂ en N₂, geen losse O of N" }],
           basiskennis: [{ onderwerp: "O₃ vs O₂", uitleg: "O₂ normaal, O₃ = ozon (zeldzaam)" }],
           niveaus: { basis: "O₂.", simpeler: "Twee-atomig.", nogSimpeler: "Twee-atomig. → O₂." },
@@ -345,14 +345,14 @@ const steps = [
           null,
           "Volgorde fout — element-symbool eerst, dan index.",
           "Te weinig waterstof — CH₂ is iets anders.",
-          "Te weinig informatie — methaan heeft H atomen.",
+          "Te weinig informatie — methaan heeft H-atomen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "CH₄ = 1 C + 4 H", tekst: "Methaan = koolstof omringd door 4 waterstof." }],
           woorden: [{ woord: "CH₄", uitleg: "aardgas, hoofdbestanddeel" }],
           theorie: "Element-symbool eerst, dan index achter.",
           voorbeelden: [{ type: "voorbeeld", tekst: "CH₄ niet HC4 of CH2" }],
-          basiskennis: [{ onderwerp: "ruimtelijk", uitleg: "tetrahedron-vorm" }],
+          basiskennis: [{ onderwerp: "ruimtelijk", uitleg: "tetraëder-vorm" }],
           niveaus: { basis: "CH₄.", simpeler: "1 C + 4 H.", nogSimpeler: "1 C + 4 H. → CH₄." },
         },
       },
@@ -381,7 +381,7 @@ const steps = [
   // ─── C. Balanceren ───────────────
   {
     title: "Balanceren — stap voor stap",
-    explanation: "**Balanceren** = de coëfficiënten zo aanpassen dat aan beide kanten van de pijl evenveel atomen van elke soort staan.\n\n**Strategie (standaard-trucje)**:\n1. **Tel** atomen aan beide kanten.\n2. **Begin met het ingewikkelde element** (meestal niet H of O).\n3. **H en O als laatste** (omdat ze in vele moleculen voorkomen).\n4. **Controleer** door alles opnieuw te tellen.\n\n**Voorbeeld stap-voor-stap**: methaan-verbranding\n\n**Begin**: CH₄ + O₂ → CO₂ + H₂O\n\n**Stap 1: tellen**\n• Links: 1 C, 4 H, 2 O.\n• Rechts: 1 C, 2 H, 3 O.\n• C klopt al. H niet. O ook niet.\n\n**Stap 2: H balanceren**\nLinks 4 H, rechts 2 H. Plaats coëfficiënt 2 voor H₂O:\n→ CH₄ + O₂ → CO₂ + **2** H₂O\n• Links: 1 C, 4 H, 2 O.\n• Rechts: 1 C, 4 H, 4 O.\n• H klopt nu.\n\n**Stap 3: O balanceren**\nLinks 2 O, rechts 4 O. Plaats coëfficiënt 2 voor O₂:\n→ CH₄ + **2** O₂ → CO₂ + 2 H₂O\n• Links: 1 C, 4 H, 4 O.\n• Rechts: 1 C, 4 H, 4 O.\n• Alles klopt! ✓\n\n**Eindresultaat**: **CH₄ + 2 O₂ → CO₂ + 2 H₂O**\n\n**Tweede voorbeeld**: ijzer-verbranding\n\n**Begin**: Fe + O₂ → Fe₂O₃\n\n**Tellen**: links 1 Fe, 2 O. Rechts 2 Fe, 3 O. Beide niet kloppend.\n\n**Trucje voor moeilijke gevallen**: zoek een **kleinste-gemeen-veelvoud (KGV)** van het probleem-element. Hier voor O: links 2, rechts 3 → KGV = 6. Dus 6 O links én rechts:\n→ 3 O₂ aan links (= 6 O), 2 Fe₂O₃ aan rechts (= 6 O). \n\nNu Fe: links 1 Fe, rechts 4 Fe (2 × Fe₂). Plaats 4 voor Fe links:\n→ **4 Fe + 3 O₂ → 2 Fe₂O₃** ✓\n\n**Tip: gebruik geen breuken in eindantwoord**\nAls je tijdens berekenen een breuk krijgt (bv. coëfficiënt 1,5), vermenigvuldig alle coëfficiënten met 2 om hele getallen te krijgen.",
+    explanation: "**Balanceren** = de coëfficiënten zo aanpassen dat aan beide kanten van de pijl evenveel atomen van elke soort staan.\n\n**Strategie (standaard-trucje)**:\n1. **Tel** atomen aan beide kanten.\n2. **Begin met het ingewikkelde element** (meestal niet H of O).\n3. **H en O als laatste** (omdat ze in vele moleculen voorkomen).\n4. **Controleer** door alles opnieuw te tellen.\n\n**Voorbeeld stap-voor-stap**: methaan-verbranding\n\n**Begin**: CH₄ + O₂ → CO₂ + H₂O\n\n**Stap 1: tellen**\n• Links: 1 C, 4 H, 2 O.\n• Rechts: 1 C, 2 H, 3 O.\n• C klopt al. H niet. O ook niet.\n\n**Stap 2: H balanceren**\nLinks 4 H, rechts 2 H. Plaats coëfficiënt 2 voor H₂O:\n→ CH₄ + O₂ → CO₂ + **2** H₂O\n• Links: 1 C, 4 H, 2 O.\n• Rechts: 1 C, 4 H, 4 O.\n• H klopt nu.\n\n**Stap 3: O balanceren**\nLinks 2 O, rechts 4 O. Plaats coëfficiënt 2 voor O₂:\n→ CH₄ + **2** O₂ → CO₂ + 2 H₂O\n• Links: 1 C, 4 H, 4 O.\n• Rechts: 1 C, 4 H, 4 O.\n• Alles klopt! ✓\n\n**Eindresultaat**: **CH₄ + 2 O₂ → CO₂ + 2 H₂O**\n\n**Tweede voorbeeld**: ijzer-verbranding\n\n**Begin**: Fe + O₂ → Fe₂O₃\n\n**Tellen**: links 1 Fe, 2 O. Rechts 2 Fe, 3 O. Beide niet kloppend.\n\n**Trucje voor moeilijke gevallen**: zoek het **kleinste gemene veelvoud (KGV)** van het probleem-element. Hier voor O: links 2, rechts 3 → KGV = 6. Dus 6 O links én rechts:\n→ 3 O₂ links (= 6 O), 2 Fe₂O₃ rechts (= 6 O). \n\nNu Fe: links 1 Fe, rechts 4 Fe (2 × Fe₂). Plaats 4 voor Fe links:\n→ **4 Fe + 3 O₂ → 2 Fe₂O₃** ✓\n\n**Tip: gebruik geen breuken in eindantwoord**\nAls je tijdens berekenen een breuk krijgt (bv. coëfficiënt 1,5), vermenigvuldig alle coëfficiënten met 2 om hele getallen te krijgen.",
     svg: atoomtellingSvg(
       [{ label: "C", left: 1 }, { label: "H", left: 4 }, { label: "O", left: 4 }],
       [{ right: 1 }, { right: 4 }, { right: 4 }],
@@ -440,7 +440,7 @@ const steps = [
   },
   {
     title: "Moeilijkere voorbeelden + complete reactie",
-    explanation: "**Voorbeeld 3**: glucose verbranding (cellulaire ademhaling)\n\n**Begin**: C₆H₁₂O₆ + O₂ → CO₂ + H₂O\n\n**Tellen**:\n• Links: 6 C, 12 H, 8 O (6 in glucose + 2 in O₂).\n• Rechts: 1 C, 2 H, 3 O.\n\n**Stap 1: balanceer C**\nLinks 6, rechts 1. Coëfficiënt 6 voor CO₂:\n→ C₆H₁₂O₆ + O₂ → 6 CO₂ + H₂O\n• Rechts: 6 C, 2 H, 13 O.\n\n**Stap 2: balanceer H**\nLinks 12 H, rechts 2 H. Coëfficiënt 6 voor H₂O:\n→ C₆H₁₂O₆ + O₂ → 6 CO₂ + 6 H₂O\n• Rechts: 6 C, 12 H, 18 O.\n\n**Stap 3: balanceer O**\nLinks: 6 O (glucose) + ? O₂. Rechts: 18 O totaal.\n6 + 2x = 18 → x = 6.\nDus 6 O₂:\n→ **C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O** ✓\n\n**Voorbeeld 4**: ammoniak-vorming (Haber-proces, belangrijke industriële reactie voor kunstmest)\n\n**Begin**: N₂ + H₂ → NH₃\n\n**Tellen**: links 2 N, 2 H. Rechts 1 N, 3 H. Niet kloppend.\n\n**Trucje: KGV voor H** is 6 (KGV van 2 en 3).\n→ N₂ + 3 H₂ → 2 NH₃\n• Links: 2 N, 6 H.\n• Rechts: 2 N, 6 H.\n• ✓\n\n**Voorbeeld 5**: ontleding (decompositie) van waterstofperoxide\n\n**Begin**: H₂O₂ → H₂O + O₂\n\n**Tellen**: links 2 H, 2 O. Rechts 2 H, 3 O. H klopt, O niet.\n\n**Trucje**: KGV van 2 en 3 is 6.\n→ 2 H₂O₂ → 2 H₂O + O₂\n• Links: 4 H, 4 O.\n• Rechts: 4 H, 4 O.\n• ✓\n\n**Tips voor lastige reacties**:\n• **Werk met fractie als nodig** en vermenigvuldig daarna alle coëfficiënten met 2.\n• **Controleer altijd opnieuw** — fouten gebeuren snel.\n• **Schrijf de tellen-tabel uit** als je het lastig vindt.",
+    explanation: "**Voorbeeld 3**: glucose verbranding (cellulaire ademhaling)\n\n**Begin**: C₆H₁₂O₆ + O₂ → CO₂ + H₂O\n\n**Tellen**:\n• Links: 6 C, 12 H, 8 O (6 in glucose + 2 in O₂).\n• Rechts: 1 C, 2 H, 3 O.\n\n**Stap 1: balanceer C**\nLinks 6, rechts 1. Coëfficiënt 6 voor CO₂:\n→ C₆H₁₂O₆ + O₂ → 6 CO₂ + H₂O\n• Rechts: 6 C, 2 H, 13 O.\n\n**Stap 2: balanceer H**\nLinks 12 H, rechts 2 H. Coëfficiënt 6 voor H₂O:\n→ C₆H₁₂O₆ + O₂ → 6 CO₂ + 6 H₂O\n• Rechts: 6 C, 12 H, 18 O.\n\n**Stap 3: balanceer O**\nLinks: 6 O (glucose) + ? O₂. Rechts: 18 O totaal.\n6 + 2x = 18 → x = 6.\nDus 6 O₂:\n→ **C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O** ✓\n\n**Voorbeeld 4**: ammoniak-vorming (Haber-proces, belangrijke industriële reactie voor kunstmest)\n\n**Begin**: N₂ + H₂ → NH₃\n\n**Tellen**: links 2 N, 2 H. Rechts 1 N, 3 H. Niet kloppend.\n\n**Trucje: KGV voor H** is 6 (KGV van 2 en 3).\n→ N₂ + 3 H₂ → 2 NH₃\n• Links: 2 N, 6 H.\n• Rechts: 2 N, 6 H.\n• ✓\n\n**Voorbeeld 5**: ontleding (decompositie) van waterstofperoxide\n\n**Begin**: H₂O₂ → H₂O + O₂\n\n**Tellen**: links 2 H, 2 O. Rechts 2 H, 3 O. H klopt, O niet.\n\n**Trucje**: zet een 2 vóór H₂O₂ én vóór H₂O.\n→ 2 H₂O₂ → 2 H₂O + O₂\n• Links: 4 H, 4 O.\n• Rechts: 4 H, 4 O.\n• ✓\n\n**Tips voor lastige reacties**:\n• **Werk zo nodig met een breuk** en vermenigvuldig daarna alle coëfficiënten met 2.\n• **Controleer altijd opnieuw** — fouten gebeuren snel.\n• **Schrijf de teltabel uit** als je het lastig vindt.",
     svg: reactieSvg("C₆H₁₂O₆ + 6 O₂", "6 CO₂ + 6 H₂O", true),
     checks: [
       {
@@ -497,11 +497,11 @@ const steps = [
   // ─── D. Types reacties + energie ───────────────
   {
     title: "Types chemische reacties",
-    explanation: "Reacties komen in verschillende soorten — handig om te herkennen welk type je hebt.\n\n**1. Synthese-reactie (samenvoeging)**\nTwee of meer stoffen → één nieuwe stof.\nFormule: **A + B → AB**\nVoorbeeld: 2 H₂ + O₂ → 2 H₂O\n\n**2. Ontledings-reactie (decompositie)**\nEén stof → twee of meer nieuwe stoffen.\nFormule: **AB → A + B**\nVoorbeeld: 2 H₂O₂ → 2 H₂O + O₂ (waterstofperoxide ontleedt)\nVoorbeeld: CaCO₃ → CaO + CO₂ (kalk wordt gebrand)\n\n**3. Verbranding (oxidatie)**\nReageren met zuurstof, vaak met vrijkomen van licht en warmte.\nVoorbeeld: CH₄ + 2 O₂ → CO₂ + 2 H₂O (gasverbranding)\nVoorbeeld: C + O₂ → CO₂ (kool verbranden)\n\n**4. Verdringings-reactie (substitutie)**\nEen element verdringt een ander uit een verbinding.\nFormule: **A + BC → AC + B**\nVoorbeeld: Fe + CuSO₄ → FeSO₄ + Cu (ijzer verdringt koper).\n\n**5. Dubbele verdringing (omzetting)**\nTwee stoffen wisselen partner uit.\nFormule: **AB + CD → AD + CB**\nVoorbeeld: NaCl + AgNO₃ → NaNO₃ + AgCl (zilverchloride slaat neer als witte vlokken).\n\n**6. Zuur-base reactie (neutralisatie)**\nZuur + base → zout + water.\nVoorbeeld: HCl + NaOH → NaCl + H₂O.\n\n**Wat herkent je een type aan?**\n• Aantal reactanten + producten.\n• Of er O₂ bij zit (waarschijnlijk verbranding).\n• Wat er ontstaat (gas, neerslag, water).",
+    explanation: "Reacties komen in verschillende soorten — handig om te herkennen welk type je hebt.\n\n**1. Synthese-reactie (samenvoeging)**\nTwee of meer stoffen → één nieuwe stof.\nFormule: **A + B → AB**\nVoorbeeld: 2 H₂ + O₂ → 2 H₂O\n\n**2. Ontledings-reactie (decompositie)**\nEén stof → twee of meer nieuwe stoffen.\nFormule: **AB → A + B**\nVoorbeeld: 2 H₂O₂ → 2 H₂O + O₂ (waterstofperoxide ontleedt)\nVoorbeeld: CaCO₃ → CaO + CO₂ (kalk wordt gebrand)\n\n**3. Verbranding (oxidatie)**\nReageren met zuurstof, vaak met vrijkomen van licht en warmte.\nVoorbeeld: CH₄ + 2 O₂ → CO₂ + 2 H₂O (gasverbranding)\nVoorbeeld: C + O₂ → CO₂ (kool verbranden)\n\n**4. Verdringings-reactie (substitutie)**\nEen element verdringt een ander uit een verbinding.\nFormule: **A + BC → AC + B**\nVoorbeeld: Fe + CuSO₄ → FeSO₄ + Cu (ijzer verdringt koper).\n\n**5. Dubbele verdringing (omzetting)**\nTwee stoffen wisselen partner uit.\nFormule: **AB + CD → AD + CB**\nVoorbeeld: NaCl + AgNO₃ → NaNO₃ + AgCl (zilverchloride slaat neer als witte vlokken).\n\n**6. Zuur-base reactie (neutralisatie)**\nZuur + base → zout + water.\nVoorbeeld: HCl + NaOH → NaCl + H₂O.\n\n**Waaraan herken je een type?**\n• Aantal reactanten + producten.\n• Of er O₂ bij zit (waarschijnlijk verbranding).\n• Wat er ontstaat (gas, neerslag, water).",
     svg: reactieSvg("Fe + CuSO₄", "FeSO₄ + Cu", true),
     checks: [
       {
-        q: "Bij welk type reactie ontleed één stof in meerdere?",
+        q: "Bij welk type reactie ontleedt één stof in meerdere?",
         options: [
           "Ontledings-reactie (decompositie)",
           "Synthese-reactie",
@@ -552,7 +552,7 @@ const steps = [
   },
   {
     title: "Exotherm vs endotherm — energie bij reacties",
-    explanation: "Bij reacties komt vaak **energie** vrij of wordt **energie nodig**.\n\n**Exotherme reactie** (exo = naar buiten)\n• **Energie komt vrij** als warmte (en/of licht).\n• Reactanten hebben **meer energie** dan producten.\n• Het verschil komt vrij als warmte.\n• Voorbeelden:\n  - Verbranding (vuur, gasvlam, kachel).\n  - Roesten (langzame oxidatie, weinig warmte).\n  - Lichaam-stofwisseling.\n  - Beton uitharden.\n\n**Endotherme reactie** (endo = naar binnen)\n• **Energie wordt opgenomen** uit de omgeving (vaak: omgeving wordt kouder).\n• Reactanten hebben **minder energie** dan producten.\n• Energie van buiten nodig om reactie te laten gebeuren.\n• Voorbeelden:\n  - Fotosynthese (licht-energie nodig om suikers te maken).\n  - Smelten van ijs (eigenlijk fysisch, maar zelfde principe).\n  - Cold-pack (NH₄NO₃ + water — sportblessure-koeling).\n  - Bakken van brood — warmte van oven nodig.\n\n**Hoe herken je het?**\n• Vat warm bij reactie → exotherm.\n• Vat koud bij reactie → endotherm.\n\n**Energiediagram**:\nReactanten en producten op verschillende hoogtes:\n• **Exotherm**: producten lager → energie 'naar beneden' → komt vrij.\n• **Endotherm**: producten hoger → energie 'naar boven' → opgenomen.\n\n**Activerings-energie**\nElke reactie heeft een **drempel**: een berg die de reactanten over moeten. Daarom moet je een lucifer ontsteken voor een vlam (anders blijft het vat papier-en-zuurstof gewoon liggen). De activeringsenergie is de minimale energie nodig om de reactie te starten.\n\n**Katalysator**\nEen **katalysator** is een stof die de reactie sneller laat gaan zonder zelf opgebruikt te worden. Verlaagt de activerings-energie.\n• In je auto: **katalysator** maakt schone uitlaatgassen.\n• In je lichaam: **enzymen** = biologische katalysatoren.",
+    explanation: "Bij reacties komt vaak **energie** vrij of is er **energie nodig**.\n\n**Exotherme reactie** (exo = naar buiten)\n• **Energie komt vrij** als warmte (en/of licht).\n• Reactanten hebben **meer energie** dan producten.\n• Het verschil komt vrij als warmte.\n• Voorbeelden:\n  - Verbranding (vuur, gasvlam, kachel).\n  - Roesten (langzame oxidatie, weinig warmte).\n  - Lichaam-stofwisseling.\n  - Beton uitharden.\n\n**Endotherme reactie** (endo = naar binnen)\n• **Energie wordt opgenomen** uit de omgeving (vaak: omgeving wordt kouder).\n• Reactanten hebben **minder energie** dan producten.\n• Energie van buiten nodig om reactie te laten gebeuren.\n• Voorbeelden:\n  - Fotosynthese (licht-energie nodig om suikers te maken).\n  - Smelten van ijs (eigenlijk fysisch, maar zelfde principe).\n  - Cold-pack (NH₄NO₃ + water — sportblessure-koeling).\n  - Bakken van brood — warmte van oven nodig.\n\n**Hoe herken je het?**\n• Vat warm bij reactie → exotherm.\n• Vat koud bij reactie → endotherm.\n\n**Energiediagram**:\nReactanten en producten op verschillende hoogtes:\n• **Exotherm**: producten lager → energie 'naar beneden' → komt vrij.\n• **Endotherm**: producten hoger → energie 'naar boven' → opgenomen.\n\n**Activerings-energie**\nElke reactie heeft een **drempel**: een berg die de reactanten over moeten. Daarom moet je een lucifer ontsteken voor een vlam (anders blijft het papier in de lucht gewoon liggen). De activeringsenergie is de minimale energie nodig om de reactie te starten.\n\n**Katalysator**\nEen **katalysator** is een stof die de reactie sneller laat gaan zonder zelf opgebruikt te worden. Verlaagt de activerings-energie.\n• In je auto: **katalysator** maakt schone uitlaatgassen.\n• In je lichaam: **enzymen** = biologische katalysatoren.",
     svg: reactieSvg("CH₄ + 2 O₂", "CO₂ + 2 H₂O + warmte", true),
     checks: [
       {
@@ -592,7 +592,7 @@ const steps = [
           null,
           "Niet vooral over warmte.",
           "Andersom — versnelt.",
-          "Katalysator zelf raakt niet veranderd.",
+          "De katalysator zelf verandert niet.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Katalysator", tekst: "Versnelt reactie zonder zelf op te raken. Verlaagt activerings-energie." }],
@@ -632,7 +632,7 @@ const steps = [
           woorden: [{ woord: "magnesium-oxide", uitleg: "MgO, witte vlam bij verbranding" }],
           theorie: "Bij verbranding van magnesium: zeer fel wit licht.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Magnesium-lint brandt fel wit (vroeger flits-fotografie)" }],
-          basiskennis: [{ onderwerp: "O₂ is di-atomic", uitleg: "altijd O₂" }],
+          basiskennis: [{ onderwerp: "O₂ is twee-atomig", uitleg: "altijd O₂" }],
           niveaus: { basis: "2, 1, 2.", simpeler: "Links 2 O, rechts 2 O.", nogSimpeler: "Mg+O₂ → MgO." },
         },
       },
@@ -690,17 +690,17 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet als enkel atoom — als pair.",
+          "Niet als enkel atoom — als paar.",
           "O₃ is ozon, speciaal geval.",
           "Wel degelijk in de formule.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "O₂ — di-atomic", tekst: "Zuurstof komt in de natuur altijd als O₂ voor (twee atomen aan elkaar). Schrijf nooit alleen 'O'." }],
-          woorden: [{ woord: "di-atomic", uitleg: "twee-atomig: molecuul met 2 atomen aaneengeplakt" }],
+          stappen: [{ titel: "O₂ — twee-atomig", tekst: "Zuurstof komt in de natuur altijd als O₂ voor (twee atomen aan elkaar). Schrijf nooit alleen 'O'." }],
+          woorden: [{ woord: "twee-atomig", uitleg: "molecuul met 2 atomen aaneengeplakt" }],
           theorie: "Sommige gassen komen als paar: H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Lucht bevat O₂ (zuurstof) en N₂ (stikstof) — beide pairs" }],
-          basiskennis: [{ onderwerp: "gas-elementen", uitleg: "gassen op zichzelf zijn vaak di-atomic" }],
-          niveaus: { basis: "O₂.", simpeler: "Altijd als pair.", nogSimpeler: "Twee aan elkaar." },
+          voorbeelden: [{ type: "voorbeeld", tekst: "Lucht bevat O₂ (zuurstof) en N₂ (stikstof) — beide paren" }],
+          basiskennis: [{ onderwerp: "gas-elementen", uitleg: "gassen op zichzelf zijn vaak twee-atomig" }],
+          niveaus: { basis: "O₂.", simpeler: "Altijd als paar.", nogSimpeler: "Twee aan elkaar." },
         },
       },
       {
@@ -711,7 +711,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is chemische reactie?", tekst: "**Chemische reactie** = proces waarbij **stoffen veranderen in andere stoffen** met nieuwe eigenschappen. Atomen blijven hetzelfde, maar hun rangschikking verandert.\n\nVoorbeelden:\n• IJzer + zuurstof → roest\n• Hout + zuurstof → as + CO₂ + water (verbranding)\n• Magnesium + zuurstof → magnesiumoxide (felle witte flits)\n• Maagzuur + voedsel → vertering" },
-            { titel: "Hoe herken je chemische reactie?", tekst: "**Signalen** dat chemische reactie plaatsvond:\n• **Kleurverandering** (zilver → zwart)\n• **Temperatuur** stijgt of daalt\n• **Gas** vrijkomt (bruiseend)\n• **Vaste stof** vormt zich (precipitatie)\n• **Geur** verandert\n• **Licht** geeft (vuur, vuurwerk)\n\nLet op: smelten of verdampen is GEEN chemische reactie (zelfde stof, alleen andere toestand)." },
+            { titel: "Hoe herken je een chemische reactie?", tekst: "**Signalen** dat er een chemische reactie plaatsvond:\n• **Kleurverandering** (zilver → zwart)\n• **Temperatuur** stijgt of daalt\n• **Gas** komt vrij (bruisend)\n• **Vaste stof** vormt zich (precipitatie)\n• **Geur** verandert\n• **Licht** komt vrij (vuur, vuurwerk)\n\nLet op: smelten of verdampen is GEEN chemische reactie (zelfde stof, alleen andere toestand)." },
             { titel: "Toets-feit: Wet van Behoud van Massa", tekst: "**Antoine Lavoisier** (Frans, 1789): de **totale massa** vóór + ná reactie is GELIJK. Atomen verdwijnen niet, alleen rangschikking verandert.\n\nVoorbeeld: 12 g koolstof + 32 g zuurstof = 44 g CO₂. (geen 30 g, geen 50 g — exact 44).\n\nDit principe is basis van alle scheikunde-berekeningen + reactievergelijkingen." },
           ],
           woorden: [
@@ -720,7 +720,7 @@ const steps = [
             { woord: "product", uitleg: "Stof die ontstaat (rechts van pijl)." },
             { woord: "Wet van Behoud van Massa", uitleg: "Totale massa blijft gelijk in chemische reactie." },
           ],
-          theorie: "Reactievergelijking-notatie:\n• Reactanten → Producten\n• Bv: 2H₂ + O₂ → 2H₂O\n• Aantal atomen LINKS = RECHTS (kloppend maken)\n• Hoge cijfers = molecule-aantal\n• Lage cijfers = atomen binnen molecule",
+          theorie: "Reactievergelijking-notatie:\n• Reactanten → Producten\n• Bv: 2H₂ + O₂ → 2H₂O\n• Aantal atomen LINKS = RECHTS (kloppend maken)\n• Grote cijfers vóór = aantal moleculen\n• Kleine cijfers onderaan = atomen binnen een molecuul",
           voorbeelden: [
             { type: "feit", tekst: "Verbranden hout: hout + O₂ → CO₂ + H₂O + as. Zelfde aantal atomen, andere stoffen." },
           ],
@@ -735,9 +735,9 @@ const steps = [
         wrongHints: [null, "Niet — grootte is geen fase.", "Niet — temperatuur is geen fase (wel oorzaak overgang).", "Niet — kleur niet relevant voor fase."],
         uitlegPad: {
           stappen: [
-            { titel: "3 hoofdfasen", tekst: "Een stof kan in **3 fasen** (toestanden) bestaan:\n• **Vast** (s = solid): atomen vast op plek, vorm + volume vast (ijs, hout, metaal)\n• **Vloeibaar** (l = liquid): atomen kunnen bewegen, vorm aanpassen aan vat, volume vast (water, olie)\n• **Gas** (g): atomen bewegen vrij, vorm + volume vullen vat (lucht, stoom)\n\n4e fase: **plasma** (g) — geïoniseerd gas, in zon + bliksem + neon-lampen." },
-            { titel: "Faseovergangen", tekst: "Tussen fasen 6 overgangen:\n• Vast → Vloeibaar = **smelten**\n• Vloeibaar → Vast = **stollen/vriezen**\n• Vloeibaar → Gas = **verdampen/koken**\n• Gas → Vloeibaar = **condenseren**\n• Vast → Gas = **sublimeren** (droog ijs CO₂)\n• Gas → Vast = **rijp/depositie** (waterdamp → ijskristal)" },
-            { titel: "Toets-tip: water", tekst: "Water = enige veel-voorkomende stof die natuurlijk in **alle 3 fasen** op aarde voorkomt:\n• **IJs** (gletsjers, ijsklontjes, sneeuw)\n• **Water** (oceaan, regen)\n• **Damp** (wolken, stoom)\n\nDaarom waterkringloop continue: zon verdampt → wolk → regen → terug." },
+            { titel: "3 hoofdfasen", tekst: "Een stof kan in **3 fasen** (toestanden) bestaan:\n• **Vast** (s = solid): atomen vast op plek, vorm + volume vast (ijs, hout, metaal)\n• **Vloeibaar** (l = liquid): atomen kunnen bewegen, vorm aanpassen aan vat, volume vast (water, olie)\n• **Gas** (g): atomen bewegen vrij, vorm + volume vullen vat (lucht, stoom)\n\n4e fase: **plasma** — geïoniseerd gas, in zon + bliksem + neon-lampen." },
+            { titel: "Faseovergangen", tekst: "Tussen fasen 6 overgangen:\n• Vast → Vloeibaar = **smelten**\n• Vloeibaar → Vast = **stollen/vriezen**\n• Vloeibaar → Gas = **verdampen/koken**\n• Gas → Vloeibaar = **condenseren**\n• Vast → Gas = **sublimeren** (droog ijs CO₂)\n• Gas → Vast = **rijpen/depositie** (waterdamp → ijskristal)" },
+            { titel: "Toets-tip: water", tekst: "Water = enige veel-voorkomende stof die natuurlijk in **alle 3 fasen** op aarde voorkomt:\n• **IJs** (gletsjers, ijsklontjes, sneeuw)\n• **Water** (oceaan, regen)\n• **Damp** (wolken, stoom)\n\nDaarom is de waterkringloop continu: zon verdampt → wolk → regen → terug." },
           ],
           woorden: [
             { woord: "aggregatietoestand", uitleg: "Fase (vast/vloeibaar/gas) van een stof." },
@@ -759,9 +759,9 @@ const steps = [
         wrongHints: [null, "Niet — molecuul kan elk type atoom bevatten.", "Niet — cellen zijn biologisch, moleculen scheikundig.", "Niet — kern = onderdeel atoom, niet molecuul."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is een molecuul?", tekst: "Een **molecuul** is een **groep atomen** die **chemisch verbonden** zijn (via electronen). Vormen kleinste eenheid van een chemische verbinding.\n\nVoorbeelden moleculen:\n• **H₂O** = water (2 H + 1 O)\n• **CO₂** = koolstofdioxide (1 C + 2 O)\n• **O₂** = zuurstof-gas (2 O)\n• **CH₄** = methaan (1 C + 4 H)\n• **NaCl** = keukenzout (1 Na + 1 Cl)" },
-            { titel: "Atoom vs molecuul vs stof", tekst: "**Hiërarchie**:\n• **Atoom** = kleinste deel element (H, O, Fe, Au)\n• **Molecuul** = 2+ atomen verbonden (H₂, H₂O, glucose)\n• **Stof** = veel moleculen samen (1 glas water = ~10²⁴ H₂O-moleculen)\n\nVergelijking: atoom = letter. Molecuul = woord. Stof = boek." },
-            { titel: "Toets-feit: zichtbaar?", tekst: "Moleculen zijn **onzichtbaar** voor blote oog (en zelfs gewone microscoop). Pas zichtbaar met **elektronenmicroscoop** of **STM** (scanning tunneling microscope, 1981 Nobelprijs).\n\nGrote moleculen zoals DNA = 'lang' (2 m als uitgerold!) maar dun (~2 nanometer). Zichtbaar via speciale technieken." },
+            { titel: "Wat is een molecuul?", tekst: "Een **molecuul** is een **groep atomen** die **chemisch verbonden** zijn (via elektronen). Het is de kleinste eenheid van een moleculaire stof.\n\nVoorbeelden moleculen:\n• **H₂O** = water (2 H + 1 O)\n• **CO₂** = koolstofdioxide (1 C + 2 O)\n• **O₂** = zuurstof-gas (2 O)\n• **CH₄** = methaan (1 C + 4 H)\n• **NH₃** = ammoniak (1 N + 3 H)" },
+            { titel: "Atoom vs molecuul vs stof", tekst: "**Hiërarchie**:\n• **Atoom** = kleinste deel element (H, O, Fe, Au)\n• **Molecuul** = 2+ atomen verbonden (H₂, H₂O, glucose)\n• **Stof** = veel moleculen samen (1 glas water = ~10²⁵ H₂O-moleculen)\n\nVergelijking: atoom = letter. Molecuul = woord. Stof = boek." },
+            { titel: "Toets-feit: zichtbaar?", tekst: "Moleculen zijn **onzichtbaar** voor het blote oog (en zelfs gewone microscoop). Pas zichtbaar met **elektronenmicroscoop** of **STM** (scanning tunneling microscope, uitgevonden in 1981).\n\nGrote moleculen zoals DNA = 'lang' (2 m als uitgerold!) maar dun (~2 nanometer). Zichtbaar via speciale technieken." },
           ],
           woorden: [
             { woord: "molecuul", uitleg: "Groep atomen chemisch verbonden. Kleinste eenheid verbinding." },
@@ -793,12 +793,12 @@ const steps = [
             { woord: "base", uitleg: "Stof die OH⁻-ionen afgeeft. pH >7." },
             { woord: "lakmoes", uitleg: "Indicator-papier dat verkleurt bij zuur/base." },
           ],
-          theorie: "Belangrijke pH-feiten:\n• Bloed mens MOET tussen pH 7,35-7,45 zijn — anders ziek\n• Mond pH ~6,5 (lichte zuur)\n• Maagzuur pH 1-2 = zo zuur dat het bacteriën doodt\n• Regen normaal pH 5,6 (CO₂ in lucht). Zure regen pH <5",
+          theorie: "Belangrijke pH-feiten:\n• Bloed mens MOET tussen pH 7,35-7,45 zijn — anders ziek\n• Mond pH ~6,5 (licht zuur)\n• Maagzuur pH 1-2 = zo zuur dat het bacteriën doodt\n• Regen normaal pH 5,6 (CO₂ in lucht). Zure regen pH <5",
           voorbeelden: [
             { type: "feit", tekst: "Bij brandend maagzuur: maagzuur lekt naar slokdarm. Anti-zuur-pillen (Rennies) = base = neutraliseert zuur tot pH ~7." },
           ],
           basiskennis: [{ onderwerp: "VMBO-examen scheikunde", uitleg: "pH-vragen vaak in examen-stof. Onthoud schaal + 7 = neutraal." }],
-          niveaus: { basis: "Zuur/base maat 0-14.", simpeler: "pH = maat voor zuur of base. 0 = sterk zuur (maagzuur), 7 = neutraal (water), 14 = sterk base (gootsteenontstopper).", nogSimpeler: "Zuur/base" },
+          niveaus: { basis: "Zuur/base maat 0-14.", simpeler: "pH = maat voor zuur of base. 0 = sterk zuur (maagzuur), 7 = neutraal (water), 14 = sterke base (gootsteenontstopper).", nogSimpeler: "Zuur/base" },
         },
       },
       { q: "**H₂O** is de formule voor?", options: ["Water","Waterstofgas","Zuurstofgas","Zout"], answer: 0, wrongHints: [null,"Dat is H₂.","Dat is O₂.","Dat is NaCl."] },

@@ -42,7 +42,7 @@ const steps = [
   {
     title: "De 7 continenten",
     explanation:
-      "De wereld is verdeeld in **7 continenten** *(grote stukken land)*.\n\n**De 7 continenten** *(uit je hoofd!)*:\n1. **Noord-Amerika** — Canada, VS, Mexico.\n2. **Zuid-Amerika** — Brazilië, Argentinië, Peru.\n3. **Europa** — Nederland, Frankrijk, Duitsland.\n4. **Afrika** — Egypte, Zuid-Afrika, Marokko.\n5. **Azië** — China, India, Japan.\n6. **Oceanië** — Australië, Nieuw-Zeeland.\n7. **Antarctica** — geen land, alleen ijs en pinguïns.\n\n**Grootste en kleinste**:\n• **Grootste continent**: Azië (44 miljoen km²).\n• **Kleinste continent**: Oceanië *(of Australië — geldt als één)*.\n• **Koudste**: Antarctica.\n• **Heetste**: Afrika (Sahara-woestijn).\n• **Meeste mensen**: Azië (~4,7 miljard mensen).\n\n**Wonderfeitje — Antarctica**:\n• Niemand woont er permanent.\n• Het is een echte ijswoestijn — temperatuur -50 °C tot -80 °C.\n• Enige 'inwoners': pinguïns, zeehonden, onderzoekers in stations.\n\n**Truc om de continenten te onthouden**:\n**N**ederland-noord, **N**ederland-zuid?\n• **N**oord-Amerika — **Z**uid-Amerika.\n• **E**uropa, **A**zië, **A**frika.\n• **O**ceanië, **A**ntarctica.\nKun je ook onthouden als: 'N, Z, E, A, A, O, A' van groot naar klein.",
+      "De wereld is verdeeld in **7 continenten** *(grote stukken land)*.\n\n**De 7 continenten** *(uit je hoofd!)*:\n1. **Noord-Amerika** — Canada, VS, Mexico.\n2. **Zuid-Amerika** — Brazilië, Argentinië, Peru.\n3. **Europa** — Nederland, Frankrijk, Duitsland.\n4. **Afrika** — Egypte, Zuid-Afrika, Marokko.\n5. **Azië** — China, India, Japan.\n6. **Oceanië** — Australië, Nieuw-Zeeland.\n7. **Antarctica** — geen land, alleen ijs en pinguïns.\n\n**Grootste en kleinste**:\n• **Grootste continent**: Azië (44 miljoen km²).\n• **Kleinste continent**: Oceanië *(of Australië — geldt als één)*.\n• **Koudste**: Antarctica.\n• **Heetste**: Afrika (Sahara-woestijn).\n• **Meeste mensen**: Azië (~4,7 miljard mensen).\n\n**Wonderfeitje — Antarctica**:\n• Niemand woont er permanent.\n• Het is een echte ijswoestijn — temperatuur -50 °C tot -80 °C.\n• Enige 'inwoners': pinguïns, zeehonden, onderzoekers in stations.\n\n**Truc om de continenten te onthouden**:\n**N**ederland-noord, **N**ederland-zuid?\n• **N**oord-Amerika — **Z**uid-Amerika.\n• **E**uropa, **A**zië, **A**frika.\n• **O**ceanië, **A**ntarctica.\nKun je ook onthouden als: 'N, Z, E, A, A, O, A'.",
     interactiveComponent: Wereldbol,
     checks: [
       {
@@ -60,7 +60,7 @@ const steps = [
             { woord: "continent", uitleg: "Groot stuk land op de aarde." },
             { woord: "Antarctica", uitleg: "Het zuid-pool-continent, alleen ijs en pinguïns." },
           ],
-          theorie: "Toets-feit: in Nederland is het antwoord ALTIJD 7 continenten. Andere systemen bestaan, maar zijn niet wat De toets vraagt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
+          theorie: "Toets-feit: in Nederland is het antwoord ALTIJD 7 continenten. Andere systemen bestaan, maar zijn niet wat de toets vraagt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
           voorbeelden: [
             { type: "stap", tekst: "Trek de wereldkaart in je hoofd: Amerika links (Noord boven, Zuid onder = 2), Europa + Afrika in midden (= 2), Azië rechts (= 1), Australië/Oceanië onder Azië (= 1), Antarctica onderin (= 1). Totaal 7." },
             { type: "stap", tekst: "Veel-fout: 5 zeggen (oude indeling). Op de toets altijd 7." },
@@ -82,7 +82,7 @@ const steps = [
           stappen: [
             { titel: "Waar ligt Europa?", tekst: "Europa is een van de 7 continenten — in het noord-westen van Eurazië. Het is een relatief klein continent qua oppervlakte, maar met veel landen." },
             { titel: "Nederland in Europa", tekst: "Nederland ligt in **West-Europa**, aan de Noordzee. Buurlanden: Duitsland (oosten), België (zuiden). Hoofdstad: Amsterdam." },
-            { titel: "Andere continenten ligging", tekst: "Azië = oosten (China, Japan). Afrika = zuiden (Egypte, Kenia). Noord-Amerika = westen (VS, Canada). Niet via die kant kom je naar Nederland zonder oversteek." },
+            { titel: "Andere continenten ligging", tekst: "Azië = oosten (China, Japan). Afrika = zuiden (Egypte, Kenia). Noord-Amerika = westen (VS, Canada). Nederland ligt dus in geen van die continenten." },
           ],
           woorden: [{ woord: "continent", uitleg: "Groot landmassief op aarde." }, { woord: "Europa", uitleg: "Continent waar Nederland op ligt." }],
           theorie: "Toets-truc continent-vraag: zoek per land in welk continent het ligt. Nederland = Europa is een vrijwel altijd-correct antwoord.",
@@ -106,7 +106,7 @@ const steps = [
             { titel: "Rangorde van groot naar klein", tekst: "1) Azië 2) Afrika 3) Noord-Amerika 4) Zuid-Amerika 5) Antarctica 6) Europa 7) Oceanië (Australië)." },
             { titel: "Verwarring", tekst: "Veel mensen denken dat Afrika het grootst is omdat het op de kaart groot oogt — maar Azië is groter. (Kaarten vertekenen vaak ronde aarde naar plat → polen lijken groter dan ze zijn.)" },
           ],
-          woorden: [{ woord: "Azië", uitleg: "Grootste continent met meer dan helft van wereldbevolking." }],
+          woorden: [{ woord: "Azië", uitleg: "Grootste continent met meer dan de helft van de wereldbevolking." }],
           theorie: "Onthoud: A → A → N: Azië-Afrika-Noord-Amerika. Top 3.",
           voorbeelden: [{ type: "schatten", tekst: "Azië heeft ~4,7 miljard mensen — meer dan de helft van de hele wereldbevolking (8 miljard)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Grootste continent = Azië (oppervlakte + bevolking)." }],
@@ -125,7 +125,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is Antarctica?", tekst: "Antarctica = het continent rond de **Zuidpool**. 99% bedekt met ijs. Gemiddelde temperatuur 's winters: -49°C. Niemand woont er permanent." },
-            { titel: "Wie zit er dan?", tekst: "**Pinguïns** (Keizerspinguïn vooral), zeehonden, sommige walvissen in het zee-water. En: ~5000 **onderzoekers** in 70 onderzoeksstations — zij blijven hooguit een paar maanden." },
+            { titel: "Wie zit er dan?", tekst: "**Pinguïns** (Keizerspinguïn vooral), zeehonden, sommige walvissen in het zee-water. En: ~5000 **onderzoekers** in 70 onderzoeksstations — de meesten blijven er maar een paar maanden." },
             { titel: "Geen permanente inwoners", tekst: "Geen steden, geen dorpen, geen scholen, geen winkels. Geen land 'bezit' Antarctica — er is een internationaal verdrag (1959) dat zegt: alleen voor wetenschap." },
           ],
           woorden: [
@@ -133,10 +133,10 @@ const steps = [
             { woord: "pinguïn", uitleg: "Vogel die niet kan vliegen maar wel zwemmen; leeft op Antarctica + dichtbij." },
             { woord: "onderzoeksstation", uitleg: "Plek waar wetenschappers tijdelijk wonen + experimenten doen." },
           ],
-          theorie: "Toets-truc: Antarctica = koudst, niet bewoond. Geen verwarring met Arctica (Noordpool, daar wonen wél mensen — Inuit, Sami).",
+          theorie: "Toets-truc: Antarctica = koudst, niet bewoond. Niet verwarren met het Noordpoolgebied (Arctis) — daar wonen wél mensen, zoals Inuit en Sami.",
           voorbeelden: [
             { type: "verbazing", tekst: "Antarctica is het droogste continent — er valt amper sneeuw. Het ijs is opgebouwd over miljoenen jaren." },
-            { type: "nederland", tekst: "Nederland heeft sinds 1988 een eigen onderzoeksstation: 'Dirck Gerritsz Laboratorium'." },
+            { type: "nederland", tekst: "Nederland heeft een eigen onderzoekslaboratorium op Antarctica: het 'Dirck Gerritsz Laboratorium' (bij een Brits station)." },
           ],
           basiskennis: [{ onderwerp: "Tegen-stelling", uitleg: "Antarctica = koud, geen mensen. Tropisch regenwoud = warm, veel leven. Het tegenovergestelde." }],
           niveaus: {
@@ -168,7 +168,7 @@ const steps = [
         wrongHints: [null, "Stille is groter.", "Indische is 3e.", "Veel kleiner."],
         uitlegPad: {
           stappen: [
-            { titel: "De Stille Oceaan = grootste", tekst: "De **Stille Oceaan** (in het Engels: *Pacific*) is veruit de grootste. Hij beslaat ongeveer **een derde van de aarde** — meer water dan alle continenten samen!" },
+            { titel: "De Stille Oceaan = grootste", tekst: "De **Stille Oceaan** (in het Engels: *Pacific*) is veruit de grootste. Hij beslaat ongeveer **een derde van de aarde** — hij is groter dan alle continenten samen!" },
             { titel: "Waar ligt hij?", tekst: "Tussen Azië/Oceanië (links) en Amerika (rechts). Als je vanuit Tokio naar Los Angeles vliegt, kruis je de Stille Oceaan." },
             { titel: "Volgorde van groot naar klein", tekst: "1) Stille (grootst) → 2) Atlantische → 3) Indische → 4) Zuidelijke IJszee → 5) Noordelijke IJszee (kleinst). Onthoud de **top-3** voor de Doorstroomtoets." },
           ],
@@ -236,7 +236,7 @@ const steps = [
         wrongHints: [null, "Te ver westelijk.", "Andere kant.", "Andere kant."],
         uitlegPad: {
           stappen: [
-            { titel: "China = Azië", tekst: "China is een land in Oost-Azië. Het is het grootste land qua aantal mensen (samen met India)." },
+            { titel: "China = Azië", tekst: "China is een land in Oost-Azië. Samen met India is het het land met de meeste inwoners ter wereld (India heeft er sinds 2023 net iets meer)." },
           ],
           woorden: [{ woord: "Oost-Azië", uitleg: "Oost-deel van het continent Azië — China, Japan, Korea." }],
           theorie: "Belangrijke Aziatische landen: China, India, Japan, Indonesië, Thailand.",
@@ -256,7 +256,7 @@ const steps = [
   {
     title: "Tijdzones — waarom is het ergens nacht?",
     explanation:
-      "De aarde **draait om z'n eigen as** *(in 24 uur)*. Daardoor is het ergens **dag** terwijl het ergens anders **nacht** is.\n\n**Daarom werken we met tijdzones**:\nElke zone is **1 uur verschoven** van de buur-zone.\n\n**Voorbeelden — als het 12:00 's middags is in Nederland** *(wintertijd, UTC+1)*:\n• **Engeland (Londen)**: 11:00 (1 uur eerder).\n• **Spanje (Madrid)**: 12:00 (zelfde tijdzone).\n• **Duitsland (Berlijn)**: 12:00.\n• **Griekenland (Athene)**: 13:00 (1 uur later).\n• **Turkije (Istanbul)**: 14:00.\n• **India (Mumbai)**: 16:30.\n• **China (Beijing)**: 19:00.\n• **Japan (Tokio)**: 20:00.\n• **VS-Oostkust (New York)**: 06:00 *('s ochtends)*.\n• **VS-Westkust (LA)**: 03:00 *(midden in de nacht)*.\n• **Australië (Sydney)**: 21:00 *('s avonds)*.\n\n**Eenvoudige regel**:\n• Ten **oosten** van Nederland → **uur later** *(uurwerk vooruit)*.\n• Ten **westen** van Nederland → **uur eerder** *(uurwerk achteruit)*.\n\n**toetsvragen** over tijdzones:\n*'Het is 14:00 in Nederland. Hoe laat is het in Beijing *(7 uur later)*?'*\n• 14:00 + 7 uur = **21:00**.\n\n*'Het is 12:00 in Nederland. Hoe laat is het in New York *(6 uur eerder)*?'*\n• 12:00 − 6 uur = **06:00**.\n\n**Waarom tijdzones?**\nOm te zorgen dat 12:00 's middags overal ongeveer **midden op de dag** is *(zon hoogste punt)*.\n\n**Datumlijn**:\nIn de Stille Oceaan loopt de **datumlijn**. Aan de ene kant is het al de volgende dag, aan de andere kant nog de vorige. Vliegers van Tokio naar LA 'reizen terug in tijd'.",
+      "De aarde **draait om z'n eigen as** *(in 24 uur)*. Daardoor is het ergens **dag** terwijl het ergens anders **nacht** is.\n\n**Daarom werken we met tijdzones**:\nElke zone is **1 uur verschoven** van de buur-zone.\n\n**Voorbeelden — als het 12:00 's middags is in Nederland** *(wintertijd, UTC+1)*:\n• **Engeland (Londen)**: 11:00 (1 uur eerder).\n• **Spanje (Madrid)**: 12:00 (zelfde tijdzone).\n• **Duitsland (Berlijn)**: 12:00.\n• **Griekenland (Athene)**: 13:00 (1 uur later).\n• **Turkije (Istanbul)**: 14:00.\n• **India (Mumbai)**: 16:30.\n• **China (Beijing)**: 19:00.\n• **Japan (Tokio)**: 20:00.\n• **VS-Oostkust (New York)**: 06:00 *('s ochtends)*.\n• **VS-Westkust (LA)**: 03:00 *(midden in de nacht)*.\n• **Australië (Sydney)**: 22:00 *('s avonds — daar is het dan zomertijd)*.\n\n**Eenvoudige regel**:\n• Ten **oosten** van Nederland → **uur later** *(uurwerk vooruit)*.\n• Ten **westen** van Nederland → **uur eerder** *(uurwerk achteruit)*.\n\n**toetsvragen** over tijdzones:\n*'Het is 14:00 in Nederland. Hoe laat is het in Beijing *(7 uur later)*?'*\n• 14:00 + 7 uur = **21:00**.\n\n*'Het is 12:00 in Nederland. Hoe laat is het in New York *(6 uur eerder)*?'*\n• 12:00 − 6 uur = **06:00**.\n\n**Waarom tijdzones?**\nOm te zorgen dat 12:00 's middags overal ongeveer **midden op de dag** is *(zon hoogste punt)*.\n\n**Datumlijn**:\nIn de Stille Oceaan loopt de **datumlijn**. Aan de ene kant is het al de volgende dag, aan de andere kant nog de vorige. Wie van Tokio naar LA vliegt, 'reist terug in de tijd'.",
     checks: [
       {
         q: "Hoeveel uur draait de aarde om z'n eigen as?",
@@ -265,10 +265,10 @@ const steps = [
         wrongHints: [null, "Te weinig — dat zou een halve dag zijn.", "Veel te lang.", "Dat zou een jaar zijn."],
       },
       {
-        q: "Het is **12:00** in Nederland. Wanneer is het 's nachts in **Tokio (8 uur later)**? *(Tokio-tijd)*",
+        q: "Het is **12:00** in Nederland. Hoe laat is het dan in **Tokio (8 uur later)**?",
         options: ["20:00", "04:00", "24:00", "00:00"],
         answer: 0,
-        wrongHints: [null, "Te vroeg — Tokio loopt vóór op Nederland.", "Niet — 24:00 is een notatie, niet een uur ná 12.", "Te ver doorgerekend."],
+        wrongHints: [null, "Te vroeg — Tokio loopt vóór op Nederland.", "Hoeveel uur tel je op bij 12:00 — 8 of 12?", "Te ver doorgerekend."],
       },
       {
         q: "Het is **12:00** in Nederland. Hoe laat in **New York (6 uur eerder)**?",
@@ -277,9 +277,9 @@ const steps = [
         wrongHints: [null, "Verkeerde richting.", "Niet hetzelfde — andere tijdzone.", "Verkeerde berekening."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat betekent '6 uur eerder'?", tekst: "Als New York **6 uur eerder** is dan Nederland, dan loopt de klok daar ACHTER op die van ons. Wij zijn al om 12:00 's middags, zij nog NIET — bij hen is het pas vroeg ochtend." },
+            { titel: "Wat betekent '6 uur eerder'?", tekst: "Als New York **6 uur eerder** is dan Nederland, dan loopt de klok daar ACHTER op die van ons. Wij zijn al om 12:00 's middags, zij nog NIET — bij hen is het pas vroeg in de ochtend." },
             { titel: "Rekenen: trek af!", tekst: "Eerder = klok lager = **AFTREKKEN**. NL-tijd 12:00 **min** 6 uur = **06:00**. Dus in New York is het 6 uur 's ochtends terwijl wij aan het lunchen zijn." },
-            { titel: "Andere richting: Tokio", tekst: "Als een stad **later** is (bv. Tokio, 8 uur later), dan moet je **OPTELLEN**: 12:00 + 8 = 20:00. Wij eten lunch, Tokio is bij het avondeten." },
+            { titel: "Andere richting: Tokio", tekst: "Als een stad **later** is (bv. Tokio, 8 uur later), dan moet je **OPTELLEN**: 12:00 + 8 = 20:00. Wij eten lunch, in Tokio is het tijd voor het avondeten." },
           ],
           woorden: [
             { woord: "tijdzone", uitleg: "Gebied op aarde met dezelfde kloktijd." },
@@ -287,7 +287,7 @@ const steps = [
           ],
           theorie: "Toets-truc tijdzone-rekenen: lees of de andere stad **eerder** of **later** is. Eerder → MIN (aftrekken). Later → PLUS (optellen). Dan gewoon de uren rekenen. Pas op bij negatieve uitkomsten of >24 (dag wisselt).",
           voorbeelden: [
-            { type: "stap", tekst: "NL 15:00 → London (1 uur eerder) = 15 − 1 = 14:00." },
+            { type: "stap", tekst: "NL 15:00 → Londen (1 uur eerder) = 15 − 1 = 14:00." },
             { type: "stap", tekst: "NL 10:00 → Beijing (7 uur later) = 10 + 7 = 17:00." },
             { type: "stap", tekst: "NL 03:00 → LA (9 uur eerder) = 3 − 9 = -6 → +24 = 18:00 (avond ervoor)." },
           ],
@@ -380,7 +380,7 @@ const steps = [
       },
       {
         q: "**Antarctica** is bekend om ... ?",
-        options: ["Ijs en pinguïns", "Tropisch regenwoud", "Grote steden", "Lange rivieren"],
+        options: ["IJs en pinguïns", "Tropisch regenwoud", "Grote steden", "Lange rivieren"],
         answer: 0,
         wrongHints: [null, "Te koud voor regenwoud.", "Geen steden — onbewoond.", "Geen lange rivieren — ijs."],
       },
@@ -393,11 +393,11 @@ const steps = [
       { q: "Tussen welke 2 continenten ligt de **Atlantische Oceaan**?", options: ["Amerika ↔ Europa/Afrika","Azië ↔ Australië","NAm ↔ ZAm","Niet."], answer: 0, wrongHints: [null, "Stille Oceaan.", "Geen oceaan tussen.", "Wel."] },
       { q: "Welk continent ligt rond de **noordpool**?", options: ["Niet één continent — vooral water","Antarctica","Europa","Azië"], answer: 0, wrongHints: [null, "Dat is zuidpool.", "Wel deels, geen continent op pool.", "Wel deels."] },
       { q: "Op welk werelddeel ligt **Nederland**?", options: ["Europa","Azië","Afrika","Amerika"], answer: 0, wrongHints: [null, "Te ver oost.", "Te ver zuid.", "Te ver west — andere oceaan."] },
-      { q: "Welke continent heeft de **Mount Everest**?", options: ["Azië","Afrika","Zuid-Amerika","Noord-Amerika"], answer: 0, wrongHints: [null, "Wel bergen, niet Everest.", "Andean.", "Wel bergen, niet hoogste."] },
+      { q: "Welk continent heeft de **Mount Everest**?", options: ["Azië","Afrika","Zuid-Amerika","Noord-Amerika"], answer: 0, wrongHints: [null, "Wel bergen, niet Everest.", "Wel de Andes, maar niet de Everest.", "Wel bergen, niet hoogste."] },
       { q: "Welke landen-groep ligt in **Oceanië**?", options: ["Australië + Nieuw-Zeeland + eilanden","NL + BE + DE","China + Japan","Brazilië + Argentinië"], answer: 0, wrongHints: [null, "Europa.", "Azië.", "Zuid-Amerika."] },
-      { q: "Welk continent is dichtstbevolkt?", options: ["Azië","Afrika","Europa","Antarctica"], answer: 0, wrongHints: [null, "Tweede.", "Niet groot genoeg.", "Geen bewoning."] },
-      { q: "Tijdzones-feit: hoeveel uur verschil **NL ↔ Sydney**?", options: ["+9 of +10 uur","+5","Geen verschil","−8"], answer: 0, wrongHints: [null, "Te weinig.", "Wel verschil.", "Verkeerde richting."] },
-      { q: "Welke continent ligt deels op **noordelijk** + deels **zuidelijk** halfrond?", options: ["Afrika (en ZAm)","Antarctica","Europa","Azië"], answer: 0, wrongHints: [null, "Volledig zuid.", "Volledig noord.", "Voor 95% noord."] },
+      { q: "Welk continent is dichtstbevolkt?", options: ["Azië","Afrika","Europa","Antarctica"], answer: 0, wrongHints: [null, "Tweede.", "Europa is vol, maar heeft minder mensen per km² dan Azië.", "Geen bewoning."] },
+      { q: "Tijdzones-feit: hoeveel uur verschil **NL ↔ Sydney**?", options: ["+8 tot +10 uur","+5","Geen verschil","−8"], answer: 0, wrongHints: [null, "Te weinig.", "Wel verschil.", "Verkeerde richting."] },
+      { q: "Welk continent ligt deels op **noordelijk** + deels **zuidelijk** halfrond?", options: ["Afrika (en ZAm)","Antarctica","Europa","Azië"], answer: 0, wrongHints: [null, "Volledig zuid.", "Volledig noord.", "Voor 95% noord."] },
     ],
   },
 ];

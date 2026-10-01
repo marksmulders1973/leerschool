@@ -48,7 +48,7 @@ const steps = [
         wrongHints: [null, "Te langzaam — kost te veel tijd.", "Niet — je hebt de tekst wel nodig.", "Niet — niet te raden."],
         uitlegPad: {
           stappen: [{ titel: "Vraag eerst = focused lezen", tekst: "Door **eerst de vragen** te lezen weet je wélke informatie te zoeken in de tekst. Skim daarna voor overzicht (1 min). Dan per vraag terug. Bespaart 30-50% tijd vs hele tekst eerst doorlezen." }],
-          theorie: "Werkt vooral bij **mc-vragen** (Doorstroomtoets-stijl). Bij open vragen ook OK, maar dan minder evident.",
+          theorie: "Werkt vooral bij **mc-vragen** (examenstijl). Bij open vragen ook OK, maar dan minder evident.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Vraag: 'Why was the boy scared?' → scan voor 'scared / afraid / frightened / terrified' in tekst." }],
           niveaus: { basis: "Vragen eerst — A.", simpeler: "Vragen lezen → tekst skimmen", nogSimpeler: "Vraag eerst" },
         },
@@ -135,7 +135,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Echter = however.", "Omdat = because.", "Bijvoorbeeld = for example."],
         uitlegPad: {
-          stappen: [{ titel: "Therefore = conclusie/gevolg", tekst: "**Therefore / Thus / As a result / Consequently** → signaal voor **GEVOLG / conclusie**. Eerder zin = oorzaak, na 'therefore' = gevolg/conclusie." }],
+          stappen: [{ titel: "Therefore = conclusie/gevolg", tekst: "**Therefore / Thus / As a result / Consequently** → signaal voor **GEVOLG / conclusie**. Zin ervoor = oorzaak, na 'therefore' = gevolg/conclusie." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "'It rained all night. Therefore, the football match was cancelled.' → cause (rain) + effect (cancellation)." }],
           niveaus: { basis: "Gevolg — A.", simpeler: "Therefore = daarom", nogSimpeler: "Daarom" },
         },
@@ -144,7 +144,7 @@ const steps = [
         q: "Voor een **woord-betekenis-vraag** wat kun je het beste doen?",
         options: ["Context + voor/achter woord lezen","Direct het woordenboek pakken","Het woord overslaan","Raden willekeurig"],
         answer: 0,
-        wrongHints: [null, "Niet — geen woordenboek op CSE.", "Niet — punten misgelopen.", "Niet — kans 25% is te laag."],
+        wrongHints: [null, "Een woordenboek mag op het CSE, maar opzoeken kost veel tijd — probeer eerst de context.", "Niet — punten misgelopen.", "Niet — kans 25% is te laag."],
         uitlegPad: {
           stappen: [{ titel: "Context-strategie", tekst: "Lees zin met onbekend woord. Kijk **1-2 zinnen ervoor + erna**. Wat past logisch? Soms staat **synoniem** in andere zin, of **voorbeeld** ('such as...') dat woord verheldert." }],
           theorie: "Tip: kijk naar **woord-onderdelen** — prefix (un-/re-/dis-) + root + suffix (-tion/-able/-ly). 'Unbelievable' = un + believe + able = 'niet te geloven'.",
@@ -158,7 +158,7 @@ const steps = [
   {
     title: "Onbekende woorden — raad-strategie",
     explanation:
-      "Je hoeft op het CSE GEEN woordenboek bij je. Dus hoe ga je om met onbekende woorden?\n\n**5 raad-strategieën**:\n\n**1. Context** (sterkste):\n• Lees de zin én 1-2 zinnen ervoor en erna.\n• Wat past logisch? Welk woord zou daar kunnen staan?\n• Vaak: synoniem of voorbeeld in nabije zinnen.\n\n**2. Woord-onderdelen herkennen** (prefix + root + suffix):\n• **Prefix** (voorvoegsel): **un-** (niet), **re-** (opnieuw), **dis-** (tegenover), **pre-** (vooraf), **anti-** (tegen), **mis-** (verkeerd).\n• **Root** (stam): vaak een woord dat je wél kent.\n• **Suffix** (achtervoegsel): **-tion** (zelfstandig naamwoord), **-able** (kunnen), **-ful** (vol), **-less** (zonder), **-ly** (bijwoord).\n• Voorbeeld: *unbelievable* = un + believe + able = 'niet te geloven'.\n• *Hopeless* = hope + less = 'zonder hoop'.\n\n**3. Stam herkennen van Latijn/Frans/Duits** (vooral voor moeilijke woorden):\n• Veel Engelse woorden komen uit **Latijn** via Frans of direct.\n• **'-tion / -sion'** komt uit Latijn ('action / decision'). Vaak vergelijkbaar met NL '-tie / -sie'.\n• Voorbeeld: *examination* (Engels) = *examinatie* (NL-equivalent).\n\n**4. Word family** (familie van woord):\n• Als je *educate* kent, herken je *education / educator / educational / educated*.\n• Als je *happy* kent, herken je *happiness / unhappy / happily*.\n\n**5. Sla over + verder lezen**:\n• Niet elk woord is essentieel voor vraag.\n• Soms snap je vraag ook zonder dat ene woord.\n• Lees verder, kom later terug.\n\n**Toets-truc Trans-talen-vertaling**:\n• *Important* ≈ NL 'importeren / import' (heeft te maken met) maar betekent BELANGRIJK.\n• *Final* ≈ NL 'finale' = laatste/einde.\n• *Constant* ≈ NL 'constant' = doorlopend.\n• *Difficult* — een echte 'false friend' weinig — maar let op **'eventueel'** (NL ≈ 'misschien') vs **'eventually'** (Engels ≈ 'uiteindelijk'). False friends bestaan.\n\n**Veel-voorkomende prefixes/suffixes (Toets-niveau)**:\n• un- / non- / dis- / im- / il- / ir- = NIET (unfair, dishonest, impossible)\n• re- = OPNIEUW (rewrite = herschrijven)\n• -tion = handeling (creation, education)\n• -able = kunnen worden (drinkable = drinkbaar)\n• -less = zonder (homeless = zonder huis)\n• -ful = vol (hopeful = hoopvol)\n• -er / -or = persoon (teacher, doctor)\n• -ist = aanhanger (artist, dentist)\n• -ly = bijwoord (quickly = snel)",
+      "Een vertaalwoordenboek mag op het CSE, maar elk woord opzoeken kost veel te veel tijd. Dus hoe ga je slim om met onbekende woorden?\n\n**5 raad-strategieën**:\n\n**1. Context** (sterkste):\n• Lees de zin én 1-2 zinnen ervoor en erna.\n• Wat past logisch? Welk woord zou daar kunnen staan?\n• Vaak: synoniem of voorbeeld in nabije zinnen.\n\n**2. Woord-onderdelen herkennen** (prefix + root + suffix):\n• **Prefix** (voorvoegsel): **un-** (niet), **re-** (opnieuw), **dis-** (tegenover), **pre-** (vooraf), **anti-** (tegen), **mis-** (verkeerd).\n• **Root** (stam): vaak een woord dat je wél kent.\n• **Suffix** (achtervoegsel): **-tion** (zelfstandig naamwoord), **-able** (kunnen), **-ful** (vol), **-less** (zonder), **-ly** (bijwoord).\n• Voorbeeld: *unbelievable* = un + believe + able = 'niet te geloven'.\n• *Hopeless* = hope + less = 'zonder hoop'.\n\n**3. Stam herkennen van Latijn/Frans/Duits** (vooral voor moeilijke woorden):\n• Veel Engelse woorden komen uit **Latijn** via Frans of direct.\n• **'-tion / -sion'** komt uit Latijn ('action / decision'). Vaak vergelijkbaar met NL '-tie / -sie'.\n• Voorbeeld: *examination* (Engels) = *examinatie* (NL-equivalent).\n\n**4. Word family** (familie van woord):\n• Als je *educate* kent, herken je *education / educator / educational / educated*.\n• Als je *happy* kent, herken je *happiness / unhappy / happily*.\n\n**5. Sla over + verder lezen**:\n• Niet elk woord is essentieel voor vraag.\n• Soms snap je vraag ook zonder dat ene woord.\n• Lees verder, kom later terug.\n\n**Toets-truc Trans-talen-vertaling**:\n• *Important* ≈ NL 'importeren / import' (heeft te maken met) maar betekent BELANGRIJK.\n• *Final* ≈ NL 'finale' = laatste/einde.\n• *Constant* ≈ NL 'constant' = doorlopend.\n• *Difficult* is geen false friend — maar let op **'eventueel'** (NL ≈ 'misschien') vs **'eventually'** (Engels ≈ 'uiteindelijk'). False friends bestaan.\n\n**Veel-voorkomende prefixes/suffixes (Toets-niveau)**:\n• un- / non- / dis- / im- / il- / ir- = NIET (unfair, dishonest, impossible)\n• re- = OPNIEUW (rewrite = herschrijven)\n• -tion = handeling (creation, education)\n• -able = kunnen worden (drinkable = drinkbaar)\n• -less = zonder (homeless = zonder huis)\n• -ful = vol (hopeful = hoopvol)\n• -er / -or = persoon (teacher, doctor)\n• -ist = persoon met een beroep of overtuiging (artist, dentist)\n• -ly = bijwoord (quickly = snel)",
     checks: [
       {
         q: "Wat betekent **'unbelievable'** waarschijnlijk?",
@@ -224,7 +224,7 @@ const steps = [
   {
     title: "Valstrikken + examen-tips",
     explanation:
-      "Toets-makers maken bewust **valstrikken** om te zien of leerlingen écht goed lezen.\n\n**5 veel-voorkomende valstrikken**:\n\n**1. Distractors met identieke woorden**:\n• Een fout antwoord gebruikt **exact dezelfde woorden** als de tekst, maar **uit een andere context**.\n• Voorbeeld: tekst zegt 'in summer the kids play outside'. Vraag 'where do kids play?'. Fout antwoord: 'in summer' (klopt — maar vraagt naar plek, niet tijd).\n• **Strategie**: lees vraag zorgvuldig. Antwoord moet het juiste TYPE info geven.\n\n**2. Half-juiste antwoorden**:\n• Antwoord klopt 50% maar ander deel niet.\n• 'The boy was happy and tired' — vraag 'How did the boy feel?'. Optie 'happy' alleen → onvolledig.\n\n**3. Logische valstrikken** (waar zonder bewijs):\n• Antwoord klinkt redelijk maar staat NIET in de tekst.\n• 'Dolphins are smart, like dogs' → vraag over dolfijnen, niet honden. Hondenklimaal niet beantwoorden.\n\n**4. Tijd-valstrik**:\n• Tekst zegt 'in 2010 X started, in 2020 Y'. Vraag 'When did X start?' → 2010.\n• Niet verwarren met Y-jaar.\n\n**5. Negatief geformuleerde vraag**:\n• 'Which is **NOT** true?'\n• Welke optie staat **niet** in de tekst? Drie kloppen wél, 1 niet.\n• **Strategie**: onderstreep 'NOT' voor je antwoordt.\n\n**Algemene examen-tips**:\n\n**A. Tijd**: kijk regelmatig op klok. Loopt niet achter? Sneller. Loopt voor? Diepere check.\n\n**B. Markeer in tekst** (mag op klad-versie): onderstreep trefwoorden uit vraag, omkring antwoord.\n\n**C. Open vragen (als die er zijn)**: schrijf in **Nederlands** (tenzij anders gevraagd). Volledige zin. Geef de **2-3 bewijspunten** uit tekst.\n\n**D. Multiple choice gokken**: als je écht moet gokken — kies **niet de extreme optie** (always / never / all / none zijn vaak fout). Genuanceerde opties (sometimes / usually) winnen vaker.\n\n**E. Antwoord-blad**: vul gelijk in tijdens vraag (niet eind opslaan — risico op vergeten).\n\n**F. Eind-check 10 min**: ga terug door overgeslagen + onzekere vragen.\n\n**Toets-feit**: gemiddeld VMBO-GT-Engels-cijfer = 6,3. Met strategie + woordenschat = 7+.",
+      "Toets-makers maken bewust **valstrikken** om te zien of leerlingen écht goed lezen.\n\n**5 veel-voorkomende valstrikken**:\n\n**1. Distractors met identieke woorden**:\n• Een fout antwoord gebruikt **exact dezelfde woorden** als de tekst, maar **uit een andere context**.\n• Voorbeeld: tekst zegt 'in summer the kids play outside'. Vraag 'where do kids play?'. Fout antwoord: 'in summer' (klopt — maar vraagt naar plek, niet tijd).\n• **Strategie**: lees vraag zorgvuldig. Antwoord moet het juiste TYPE info geven.\n\n**2. Half-juiste antwoorden**:\n• Antwoord klopt 50% maar ander deel niet.\n• 'The boy was happy and tired' — vraag 'How did the boy feel?'. Optie 'happy' alleen → onvolledig.\n\n**3. Logische valstrikken** (waar zonder bewijs):\n• Antwoord klinkt redelijk maar staat NIET in de tekst.\n• 'Dolphins are smart, like dogs' → vraag over dolfijnen, niet honden. Een antwoord over honden is hier dus fout.\n\n**4. Tijd-valstrik**:\n• Tekst zegt 'in 2010 X started, in 2020 Y'. Vraag 'When did X start?' → 2010.\n• Niet verwarren met Y-jaar.\n\n**5. Negatief geformuleerde vraag**:\n• 'Which is **NOT** true?'\n• Welke optie staat **niet** in de tekst? Drie kloppen wél, 1 niet.\n• **Strategie**: onderstreep 'NOT' voor je antwoordt.\n\n**Algemene examen-tips**:\n\n**A. Tijd**: kijk regelmatig op klok. Loop je achter? Sneller. Loop je voor? Diepere check.\n\n**B. Markeer in tekst** (mag op klad-versie): onderstreep trefwoorden uit vraag, omkring antwoord.\n\n**C. Open vragen (als die er zijn)**: schrijf in **Nederlands** (tenzij anders gevraagd). Volledige zin. Geef de **2-3 bewijspunten** uit tekst.\n\n**D. Multiple choice gokken**: als je écht moet gokken — kies **niet de extreme optie** (always / never / all / none zijn vaak fout). Genuanceerde opties (sometimes / usually) winnen vaker.\n\n**E. Antwoord-blad**: vul meteen in tijdens vraag (niet eind opslaan — risico op vergeten).\n\n**F. Eind-check 10 min**: ga terug door overgeslagen + onzekere vragen.\n\n**Toets-feit**: gemiddeld VMBO-GT-Engels-cijfer = 6,3. Met strategie + woordenschat = 7+.",
     checks: [
       {
         q: "Wat is een **'distractor'** in CSE-meerkeuze?",
@@ -266,7 +266,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — tijd benutten.", "Te langzaam — al klaar.", "Doe direct tijdens vraag."],
         uitlegPad: {
-          stappen: [{ titel: "Eind-check = goud", tekst: "10 min eind-check kan **3-5 punten** schelen. **Eerst**: ingevuld de overgeslagen vragen. **Daarna**: check 2-3 onzekere antwoorden — kun je nu beter? Antwoord pas wijzigen als je redelijk zeker bent — vaak is je eerste keuze de juiste." }],
+          stappen: [{ titel: "Eind-check = goud", tekst: "10 min eind-check kan **3-5 punten** schelen. **Eerst**: vul de overgeslagen vragen in. **Daarna**: check 2-3 onzekere antwoorden — kun je nu beter? Antwoord pas wijzigen als je redelijk zeker bent — vaak is je eerste keuze de juiste." }],
           niveaus: { basis: "Eind-check — A.", simpeler: "Laatste 10 min = check + skip-vragen", nogSimpeler: "Check" },
         },
       },
@@ -274,7 +274,7 @@ const steps = [
         q: "Bij een **open vraag** (niet multiple choice) hoe schrijf je antwoord?",
         options: ["Korte volledige zin in Nederlands, met bewijs uit tekst","Engels antwoord, woord-voor-woord","Trefwoord alleen","Lange uitleg in Engels"],
         answer: 0,
-        wrongHints: [null, "Niet — open vragen meestal in NL.", "Te kort — geen volledige antwoord.", "Te lang + verkeerde taal."],
+        wrongHints: [null, "Niet — open vragen meestal in NL.", "Te kort — geen volledig antwoord.", "Te lang + verkeerde taal."],
         uitlegPad: {
           stappen: [{ titel: "Open antwoord = NL + bewijs", tekst: "Open vragen meestal **in Nederlands** beantwoord (tenzij anders aangegeven). **Volledige zin** met **2-3 bewijspunten** uit tekst. Voorbeeld: 'De schrijver vindt sport belangrijk omdat (1) het je gezond houdt en (2) je leert samenwerken.'" }],
           theorie: "Toets-correctie: open vragen scoren punten per bewijspunt. 1 bewijs = 1 punt, 2 bewijs = 2 punten.",
@@ -304,7 +304,7 @@ const steps = [
         q: "Wat betekent **'eventually'** in het Engels?",
         options: ["Uiteindelijk","Eventueel / misschien","Snel","Vroeger"],
         answer: 0,
-        wrongHints: [null, "False friend — lijkt op NL maar betekent anders.", "Niet relevant.", "Niet — 'eventually' = laat."],
+        wrongHints: [null, "False friend — lijkt op NL maar betekent anders.", "Niet relevant.", "Niet — 'eventually' gaat over later, niet over vroeger."],
         uitlegPad: {
           stappen: [{ titel: "False friend — let op!", tekst: "**Eventually** (Engels) = 'uiteindelijk / na verloop van tijd'. **NIET** 'eventueel' (NL). 'Eventueel' = perhaps / possibly. Toets-favoriete valstrik." }],
           theorie: "Memo: 'eventueel' (NL) ≠ 'eventually' (Engels). Twee aparte concepten.",
@@ -327,7 +327,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Reden = because.", "Tijd = when / before.", "Voorbeeld = for instance."],
         uitlegPad: {
-          stappen: [{ titel: "However = HOE-WEL-VER = maar", tekst: "**However** = contrast-signaalwoord. Tekst gaat ANDERS richting in. Vooral belangrijk voor conclusie-vragen — zin na 'however' = vaak hoofd-standpunt." }],
+          stappen: [{ titel: "However = HOE-WEL-VER = maar", tekst: "**However** = contrast-signaalwoord. Tekst gaat een ANDERE richting in. Vooral belangrijk voor conclusie-vragen — zin na 'however' = vaak hoofd-standpunt." }],
           niveaus: { basis: "Tegenstelling — A.", simpeler: "However = maar = contrast", nogSimpeler: "Contrast" },
         },
       },

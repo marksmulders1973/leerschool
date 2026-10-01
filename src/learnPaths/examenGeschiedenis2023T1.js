@@ -27,30 +27,30 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "Kamerleden worden GEKOZEN, niet door koning benoemd. Vóór 1848 noch erna door koning benoemd.",
+          "Tweede Kamerleden worden GEKOZEN, niet door de koning benoemd. Vóór 1848 koos de Provinciale Staten ze, daarna de kiezers zelf.",
           null,
           "Voorzitter Eerste Kamer is een Kamerlid — de koning was dat nooit.",
           "De koning is GEEN Kamerlid en is dat ook niet geworden in 1848 (kreeg juist ceremoniële rol).",
         ],
-        explanation: "Vóór 1848 had de koning veel politieke macht: benoemde ministers, kon wetten weigeren. Met **Grondwet 1848 (Thorbecke)** werd de koning onschendbaar én verloor hij politieke macht. Ministers werden verantwoordelijk aan parlement. Koning kreeg ceremoniële + symbolische rol. NL = constitutionele monarchie.",
+        explanation: "Vóór 1848 had de koning veel politieke macht: benoemde ministers, kon wetten weigeren. Met **Grondwet 1848 (Thorbecke)** werd de koning onschendbaar én verloor hij politieke macht. Ministers werden verantwoording schuldig aan het parlement. Koning kreeg ceremoniële + symbolische rol. NL = constitutionele monarchie.",
         examenBron: BRON(1),
         bronLink: PDF_LINK,
         leerpadLink: LEERPAD_STAAT,
         voorkennisKeten: [
-          { id: "nederlandse-staat-maatschappijleer", title: "De Nederlandse staat", niveau: "vmbo-3", why: "constitutionele monarchie + ministeriele verantwoordelijkheid" },
+          { id: "nederlandse-staat-maatschappijleer", title: "De Nederlandse staat", niveau: "vmbo-3", why: "constitutionele monarchie + ministeriële verantwoordelijkheid" },
         ],
         uitlegPad: {
           stappen: [
             { titel: "Waarom 1848?", tekst: "Revolutiejaar in heel Europa (1848). Willem II — bang voor zelfde lot als de gevallen Franse koning — werd 'in één nacht van conservatief naar liberaal'. Liet Thorbecke een nieuwe Grondwet schrijven." },
-            { titel: "Wat veranderde", tekst: "• Koning onschendbaar (geen politiek meer)\n• Ministers verantwoordelijk aan parlement\n• Tweede Kamer rechtstreeks gekozen\n• Vrijheid van vereniging, drukpers, godsdienst (langzaam ingevoerd)\n→ Begin moderne democratie NL." },
+            { titel: "Wat veranderde", tekst: "• Koning onschendbaar (geen politiek meer)\n• Ministers verantwoordelijk tegenover parlement\n• Tweede Kamer rechtstreeks gekozen\n• Vrijheid van vereniging, drukpers, godsdienst (langzaam ingevoerd)\n→ Begin moderne democratie NL." },
           ],
           woorden: [
-            { woord: "constitutionele monarchie", uitleg: "Koning + grondwet beperken zijn macht." },
+            { woord: "constitutionele monarchie", uitleg: "Koning met een grondwet die zijn macht beperkt." },
             { woord: "Thorbecke", uitleg: "Liberaal staatsman, schreef Grondwet 1848." },
-            { woord: "ministeriële verantwoordelijkheid", uitleg: "Ministers verantwoorden aan parlement, niet aan koning." },
+            { woord: "ministeriële verantwoordelijkheid", uitleg: "Ministers leggen verantwoording af aan het parlement, niet aan de koning." },
           ],
           theorie: "1848 = scheidslijn: voor → absolute koning. Na → koning ceremonieel + parlement politiek.",
-          voorbeelden: [{ type: "stap", tekst: "Willem II's portret in de Eerste Kamer was bijna afscheid — kort daarna verloor hij grootste deel macht. Symbolisch + tragisch tegelijk." }],
+          voorbeelden: [{ type: "stap", tekst: "Het portret van Willem II in de Eerste Kamer was bijna een afscheid — kort daarna verloor hij het grootste deel van zijn macht. Symbolisch + tragisch tegelijk." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1848 = koning verliest macht. Onthoud dat jaartal!" }],
           niveaus: {
             basis: "Veel politieke macht verloren.",
@@ -74,7 +74,7 @@ const steps = [
         wrongHints: [
           null,
           "Liberale Unie = liberale partij (Thorbecke-richting). Geen confessioneel-protestants.",
-          "RKSP = Rooms-Katholieke Staatspartij. Kuyper was juist anti-katholiek (protestants).",
+          "RKSP = Rooms-Katholieke Staatspartij. Kuyper was protestants, niet katholiek.",
           "SDAP = sociaaldemocraten (arbeiders). Geheel andere richting + later (1894).",
         ],
         explanation: "**ARP** = Anti-Revolutionaire Partij, in 1879 opgericht door **Abraham Kuyper**. 'Anti-revolutionair' = tegen de Franse Revolutie-idealen (zonder God, secularisme). Protestants-christelijke partij. Streed voor gelijke financiering van bijzonder onderwijs. Wordt later (1980) onderdeel van het CDA samen met KVP + CHU.",
@@ -85,7 +85,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Schoolstrijd", tekst: "**Schoolstrijd** = conflict 1850-1917 over financiering: openbaar onderwijs werd door staat betaald, bijzonder (protestants/katholiek) onderwijs NIET. Confessionelen vonden dat oneerlijk. Strijden zorgde voor verzuiling." },
+            { titel: "Schoolstrijd", tekst: "**Schoolstrijd** = conflict 1850-1917 over financiering: openbaar onderwijs werd door staat betaald, bijzonder (protestants/katholiek) onderwijs NIET. Confessionelen vonden dat oneerlijk. De strijd droeg bij aan de verzuiling." },
             { titel: "Wie was Kuyper?", tekst: "**Abraham Kuyper** (1837-1920) = predikant + journalist + politicus. Stichtte ARP (1879), de Vrije Universiteit (1880) + Gereformeerde Kerken (1892). Premier 1901-1905. Centrale figuur van protestantse zuil." },
           ],
           woorden: [
@@ -126,7 +126,7 @@ const steps = [
           "1917 jaar klopt, maar Caoutchouc-artikel ging over KIESRECHT (1887), niet schoolstrijd.",
           null,
         ],
-        explanation: "**Pacificatie van 1917** = grote nationale compromis tussen liberalen, socialisten en confessionelen. Twee zaken tegelijk geregeld: (1) **algemeen mannenkiesrecht** (liberalen + socialisten kregen wat ze wilden) (2) **gelijke financiering bijzonder onderwijs** (confessionelen kregen hun zin). Vrouwenkiesrecht volgde in 1919.",
+        explanation: "**Pacificatie van 1917** = groot nationaal compromis tussen liberalen, socialisten en confessionelen. Twee zaken tegelijk geregeld: (1) **algemeen mannenkiesrecht** (liberalen + socialisten kregen wat ze wilden) (2) **gelijke financiering bijzonder onderwijs** (confessionelen kregen hun zin). Vrouwenkiesrecht volgde in 1919.",
         examenBron: BRON(7),
         bronLink: PDF_LINK,
         voorkennisKeten: [
@@ -134,7 +134,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is een 'pacificatie'?", tekst: "Pacificatie = vrede-sluiting tussen partijen. **1917**: liberalen + socialisten + confessionelen sluiten compromis. Beide kanten krijgen wat ze willen — basis van NL-overlegcultuur." },
+            { titel: "Wat is een 'pacificatie'?", tekst: "Pacificatie = vredessluiting tussen partijen. **1917**: liberalen + socialisten + confessionelen sluiten een compromis. Alle kanten krijgen iets wat ze willen — basis van NL-overlegcultuur." },
             { titel: "Twee dingen geregeld", tekst: "1. **Algemeen kiesrecht** (mannen) — liberalen + socialisten kregen wat ze wilden.\n2. **Gelijke financiering bijzonder onderwijs** — confessionelen (ARP, RKSP, CHU) kregen hun zin.\nWin-win-compromis = pacificatie." },
             { titel: "Caoutchouc-artikel = iets anders", tekst: "1887 grondwetswijziging waarbij kiesrecht 'rubber'-achtig flexibel werd — uitbreiding van het censuskiesrecht, maar geen algemeen kiesrecht (dat kwam pas 1917)." },
           ],
@@ -166,7 +166,7 @@ const steps = [
         options: ["Kennedy", "Reagan", "Roosevelt", "Wilson"],
         answer: 1,
         wrongHints: [
-          "Kennedy = jaren '60 (Cubacrisis). Was anti-communistisch maar veel eerder + ging om koe dilemma's, niet wapenwedloop.",
+          "Kennedy = jaren '60 (Cubacrisis). Was anti-communistisch, maar veel eerder: de Sovjet-Unie bestond daarna nog bijna 30 jaar.",
           null,
           "Roosevelt = WO2-president (1933-45). Werkte juist SAMEN met USSR tegen nazi-Duitsland.",
           "Wilson = WO1-president (1913-21). Veel te vroeg voor de Sovjet-context.",
@@ -181,7 +181,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "4 VS-presidenten kort", tekst: "**Wilson** (1913-21): WO1 + Volkenbond.\n**Roosevelt** (1933-45): New Deal + WO2.\n**Kennedy** (1961-63): Cubacrisis + Vietnam-begin.\n**Reagan** (1981-89): anti-communistisch + wapenwedloop." },
-            { titel: "Reagans rol bij val USSR", tekst: "Wapenwedloop opdrijven → USSR economisch onder druk. 'Evil empire'-speech 1983 — geen verzoening. Later wel onderhandeld met Gorbatsjov over kernwapen-reductie. USSR viel in 1991 (na Reagan, onder Bush sr.) maar zijn beleid wordt vaak als trigger gezien." },
+            { titel: "Reagans rol bij val USSR", tekst: "Wapenwedloop opdrijven → USSR economisch onder druk. 'Evil empire'-speech 1983 — geen verzoening. Later wel onderhandeld met Gorbatsjov over kernwapen-reductie. USSR viel in 1991 (na Reagan, onder Bush sr.) maar zijn beleid wordt vaak als aanleiding gezien." },
           ],
           woorden: [
             { woord: "Reagan", uitleg: "VS-president 1981-89. Anti-communistisch. Wapenwedloop." },
@@ -189,7 +189,7 @@ const steps = [
             { woord: "evil empire", uitleg: "Reagans benaming voor USSR." },
           ],
           theorie: "Onthoud: Koude Oorlog-eindspel = Reagan + Gorbatsjov. USSR viel 1991.",
-          voorbeelden: [{ type: "stap", tekst: "Reagan's beroemde uitspraak in Berlijn (1987): 'Mr. Gorbachev, tear down this wall!' Muur viel 2 jaar later (1989)." }],
+          voorbeelden: [{ type: "stap", tekst: "Reagans beroemde uitspraak in Berlijn (1987): 'Mr. Gorbachev, tear down this wall!' Muur viel 2 jaar later (1989)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Reagan = jaren '80 + anti-communistisch + 'evil empire'." }],
           niveaus: {
             basis: "Reagan.",
@@ -231,7 +231,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is populisme?", tekst: "**Populisme** = stelt 'volk' tegenover 'elite'. Vaak met sterke leider die zegt 'iedereen' te begrijpen. Simpele oplossingen voor ingewikkelde problemen. Wij/zij-denken (volk tegen elite, NL tegen buitenland, etc.)." },
-            { titel: "NL populistische partijen", tekst: "**LPF** (2002, Pim Fortuyn) — eerste grote NL-populist. Vermoord vóór verkiezingen, partij won 26 zetels.\n**PVV** (2006, Geert Wilders) — focus immigratie + EU. Won grote verkiezingen 2023 (37 zetels).\n**FvD** (2016, Thierry Baudet) — populistisch + complot-affiniteit.\n**BBB** (2019, Caroline van der Plas) — boeren-populisme tegen stikstof-aanpak." },
+            { titel: "NL populistische partijen", tekst: "**LPF** (2002, Pim Fortuyn) — eerste grote NL-populist. Vermoord vóór verkiezingen, partij won 26 zetels.\n**PVV** (2006, Geert Wilders) — focus immigratie + EU. Won de verkiezingen van 2023 (37 zetels).\n**FvD** (2016, Thierry Baudet) — populistisch + complot-affiniteit.\n**BBB** (2019, Caroline van der Plas) — boeren-populisme tegen stikstof-aanpak." },
             { titel: "Niet alleen NL", tekst: "Populisme is wereldwijd: Trump (VS), Le Pen (Frankrijk), Orbán (Hongarije), Milei (Argentinië). Heeft veel verschijningsvormen — links + rechts." },
           ],
           woorden: [
@@ -241,7 +241,7 @@ const steps = [
           ],
           theorie: "Onthoud kenmerken populisme:\n• Volk vs elite\n• Simpele oplossingen\n• Sterke leider\n• Focus op enkele kernthema's",
           voorbeelden: [{ type: "stap", tekst: "PVV-thema's: minder immigratie, minder Europa, meer geld voor zorg + lagere belasting. Klassiek populistisch programma." }],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Populisme = pop(ulair) → ulus → volk-gericht." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Populisme komt van populus (Latijn) = volk → volk-gericht." }],
           niveaus: {
             basis: "Populisme.",
             simpeler: "LPF, PVV, FvD, BBB = partijen die zich opwerpen als 'stem van het volk' tegenover de 'elite' = populistische stroming.",

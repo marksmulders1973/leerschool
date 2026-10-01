@@ -33,7 +33,7 @@ const steps = [
           null,
           "Beleidsuitvoering = na aanname → wet wordt uitgevoerd. Pas hierna.",
         ],
-        explanation: "**Beleidsbepaling** = het MOMENT waarop het parlement stemt en de wet officieel besluit. De 4 fasen op rij: agendavorming → voorbereiding → bepaling (stemming) → uitvoering.",
+        explanation: "**Beleidsbepaling** = het MOMENT waarop het parlement stemt en officieel over de wet besluit. De 4 fasen op rij: agendavorming → voorbereiding → bepaling (stemming) → uitvoering.",
         examenBron: BRON_LABEL(5),
         bronLink: PDF_LINK,
         leerpadLink: LEERPAD,
@@ -131,7 +131,7 @@ const steps = [
           null,
           "Coalitie = samenwerking om meerderheid te krijgen, niet per se dezelfde ideologie (vaak juist verschillende).",
         ],
-        explanation: "**Coalitiepartijen** = partijen die samen genoeg meerderheid hebben gevormd en gezamenlijk in het **college van B en W** (Burgemeester + Wethouders) zitten. Lokale variant van een coalitiekabinet.",
+        explanation: "**Coalitiepartijen** = partijen die samen een meerderheid hebben gevormd en gezamenlijk in het **college van B en W** (Burgemeester + Wethouders) zitten. Lokale variant van een coalitiekabinet.",
         examenBron: BRON_LABEL(17),
         bronLink: PDF_LINK,
         leerpadLink: LEERPAD,
@@ -176,7 +176,7 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "Rechtsorde handhaven = regels opleggen + zien dat ze worden nageleefd. Dat IS er al, niet 'te weinig'.",
+          "Rechtsorde handhaven = regels opleggen + toezien dat ze worden nageleefd. Dat IS er al, niet 'te weinig'.",
           null,
           "Vergelding = straf als 'oog om oog'. Dat is juist WEL aanwezig in een streng-straf-systeem.",
           "Eigenrichting voorkomen = mensen mogen niet zelf wraak nemen. Wordt al gedaan via rechtspraak.",
@@ -191,7 +191,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "4 doelen van straffen", tekst: "1. **Vergelding** — straf als reactie op misdaad ('verdiende loon').\n2. **Afschrikking** — anderen + dader laten zien dat misdaad niet loont.\n3. **Resocialisatie** — ex-dader voorbereiden op normaal leven.\n4. **Beveiliging** — gevaarlijk persoon weghouden van samenleving." },
-            { titel: "Resocialisatie = terug-in-maatschappij", tekst: "Soci-aliseren = sociaal maken. RE-socialiseren = OPNIEUW sociaal maken. In gevangenis: opleiding, werk, therapie. Anders: bij uitkomst weer in oude patroon = recidive." },
+            { titel: "Resocialisatie = terug-in-maatschappij", tekst: "Soci-aliseren = sociaal maken. RE-socialiseren = OPNIEUW sociaal maken. In gevangenis: opleiding, werk, therapie. Anders: na vrijlating weer in het oude patroon = recidive." },
           ],
           woorden: [
             { woord: "resocialisatie", uitleg: "Ex-gedetineerde voorbereiden op leven in samenleving." },
@@ -226,7 +226,7 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "Aanklacht = WAT iemand wordt beschuldigd. Komt vóór het requisitoir, niet erin.",
+          "Aanklacht = WAARVAN iemand wordt beschuldigd. Komt vóór het requisitoir, niet erin.",
           null,
           "Pleidooi = redevoering van de ADVOCAAT, niet de officier.",
           "Vonnis = uitspraak van de RECHTER, niet de officier.",
@@ -240,7 +240,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Rolverdeling in rechtszaal", tekst: "**Officier van justitie** = aanklager namens samenleving. Houdt **requisitoir**: bewijs + strafeis.\n**Advocaat** = verdediger van verdachte. Houdt **pleidooi**: bezwaren tegen aanklacht + pleit voor lagere straf/vrijspraak.\n**Rechter** = beslist. Doet **vonnis**." },
+            { titel: "Rolverdeling in rechtszaal", tekst: "**Officier van justitie** = aanklager namens samenleving. Houdt **requisitoir**: bewijs + strafeis.\n**Advocaat** = verdediger van verdachte. Houdt **pleidooi**: bezwaren tegen aanklacht + pleit voor lagere straf/vrijspraak.\n**Rechter** = beslist. Spreekt **vonnis** uit." },
             { titel: "Onderdelen van een requisitoir", tekst: "1. Feiten samenvatten (wat is er gebeurd?)\n2. Bewijsvoering (waarom denkt OM dat verdachte schuldig is?)\n3. **Strafeis** (welke straf eist OM?)" },
           ],
           woorden: [

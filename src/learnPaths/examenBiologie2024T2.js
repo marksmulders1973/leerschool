@@ -54,10 +54,10 @@ const steps = [
             { woord: "pepsine", uitleg: "Maag-enzym dat eiwitten afbreekt." },
             { woord: "maagzuur (HCl)", uitleg: "Zuur — doodt bacteriën + activeert pepsine." },
           ],
-          theorie: "Onthoud: maagzuur = doodt bacteriën. Enzymen = verteren. Twee verschillende functies in dezelfde maagsap.",
+          theorie: "Onthoud: maagzuur = doodt bacteriën. Enzymen = verteren. Twee verschillende functies in hetzelfde maagsap.",
           voorbeelden: [
             { type: "stap", tekst: "Speeksel-amylase = enzym voor koolhydraten in mond." },
-            { type: "stap", tekst: "Lipase + gal = enzymen voor vet in dunne darm." },
+            { type: "stap", tekst: "Lipase (enzym) + gal = vetvertering in dunne darm." },
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Enzymen = verteren. Per spijsverteringsorgaan andere enzymen." }],
           niveaus: {
@@ -91,7 +91,7 @@ const steps = [
           "Hersenstam = onbewuste functies (ademen, hartslag) — geen bewegings-coördinatie.",
           "Ruggenmerg = signaal-doorgifte + reflexen — coördinatie is hogerop.",
         ],
-        explanation: "De KLEINE HERSENEN (cerebellum, achter onder in de schedel) zijn verantwoordelijk voor coördinatie van bewegingen + balans. Alcohol verstoort die werking — daarom waggelt iemand die te veel gedronken heeft. Politie's loopproeven (rechte lijn lopen, ogen dicht) testen de kleine hersenen.",
+        explanation: "De KLEINE HERSENEN (cerebellum, achter onder in de schedel) zijn verantwoordelijk voor coördinatie van bewegingen + balans. Alcohol verstoort die werking — daarom waggelt iemand die te veel gedronken heeft. De loopproeven van de politie (rechte lijn lopen, ogen dicht) testen de kleine hersenen.",
         examenBron: BRON_LABEL(43),
         bronLink: PDF_LINK,
         leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
@@ -212,7 +212,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Wat zijn weeën?", tekst: "**Weeën** = sterke samentrekkingen van de baarmoeder. Komen in golven, worden steeds sterker en korter na elkaar. Doel: kind richting + door de baarmoederhals duwen (ontsluiting), en later het kind naar buiten persen (uitdrijving)." },
+            { titel: "Wat zijn weeën?", tekst: "**Weeën** = sterke samentrekkingen van de baarmoeder. Komen in golven, worden steeds sterker en komen steeds sneller achter elkaar. Doel: kind richting + door de baarmoederhals duwen (ontsluiting), en later het kind naar buiten persen (uitdrijving)." },
             { titel: "Welke spier?", tekst: "De baarmoeder bestaat uit een dikke laag GLADDE SPIER (myometrium). Die spier wordt onbewust aangestuurd door het hormoon **oxytocine**. Buikspieren + middenrif werken later mee bij persen (dat is bewust)." },
             { titel: "Antwoord", tekst: "Onbewuste samentrekkingen tijdens weeën = baarmoederspieren." },
           ],
@@ -278,9 +278,9 @@ const steps = [
             { woord: "uitwendige prikkel", uitleg: "Signaal van buiten (licht, geluid, etc.)." },
             { woord: "adequate prikkel", uitleg: "Soort waarvoor een zintuig gespecialiseerd is." },
           ],
-          theorie: "**Onthoud**: kom signaal van binnen = INwendig. Van buiten = UITwendig. Hormonen, bloedsuiker, dorst, honger = inwendig.",
+          theorie: "**Onthoud**: komt het signaal van binnen = INwendig. Van buiten = UITwendig. Hormonen, bloedsuiker, dorst, honger = inwendig.",
           voorbeelden: [
-            { type: "stap", tekst: "Honger = inwendige prikkel (laag bloedsuiker)." },
+            { type: "stap", tekst: "Honger = inwendige prikkel (lage bloedsuiker)." },
             { type: "stap", tekst: "Zonlicht op huid = uitwendige prikkel." },
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Hormoon = altijd inwendig (eigen klier maakt het)." }],
@@ -334,7 +334,7 @@ const steps = [
           theorie: "**Onthoud**: A = nee-leven (abiotisch). Bio = leven (biotisch). Bij ecosysteem-vragen onderscheid altijd of een factor levend (b) of niet-levend (a) is.",
           voorbeelden: [
             { type: "stap", tekst: "Regen = abiotisch. Konijn = biotisch. Bodem-pH = abiotisch. Schimmel = biotisch." },
-            { type: "stap", tekst: "Krokodillen ook: warmere nesten geven meer vrouwtjes. Temperatuur stuurt geslacht = abiotische factor." },
+            { type: "stap", tekst: "Zeeschildpadden ook: warmere nesten geven meer vrouwtjes. Temperatuur stuurt geslacht = abiotische factor." },
           ],
           basiskennis: [{ onderwerp: "Onthoud", uitleg: "Temperatuur/water/lucht/grond = ALTIJD abiotisch." }],
           niveaus: {

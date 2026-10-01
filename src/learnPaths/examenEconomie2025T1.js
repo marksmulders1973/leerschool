@@ -98,7 +98,7 @@ const steps = [
             { woord: "handelsbalans", uitleg: "Verschil export − import. Positief = overschot, negatief = tekort." },
             { woord: "miljoen (mln)", uitleg: "1.000.000. In de tabel: 854 = €854 miljoen." },
           ],
-          theorie: "**Hoe lees je een jaar-vergelijkings-tabel?**\n\n1. Vind kolommen voor de jaren\n2. Vind rij voor de gevraagde data (export, import)\n3. Lees waarde per jaar\n4. Vergelijk per jaar (export vs import)\n\nIn dit examen: 2017 was een tegenvaller voor Sint-Maarten (Irma-orkaan trof eilanden 2017) → minder toerisme → minder export.",
+          theorie: "**Hoe lees je een jaar-vergelijkings-tabel?**\n\n1. Vind kolommen voor de jaren\n2. Vind rij voor de gevraagde data (export, import)\n3. Lees waarde per jaar\n4. Vergelijk per jaar (export vs import)\n\nIn dit examen: 2017 was een tegenvaller voor Sint-Maarten (orkaan Irma trof het eiland in 2017) → minder toerisme → minder export.",
           voorbeelden: [
             { type: "berekening", tekst: "2010: export 854 − import 847 = +7 (overschot). 2017: export 835 − import 921 = −86 (tekort)." },
           ],
@@ -191,7 +191,7 @@ const steps = [
           "Souvenir is een tastbaar product, geen dienst.",
           null,
           "Sint-Maarten verkoopt — niet importeert.",
-          "Souvenir is wel goed, maar export ipv import (verkocht aan buitenlandse toerist).",
+          "Souvenir is wel een goed, maar export ipv import (verkocht aan buitenlandse toerist).",
         ],
         explanation: "Een souvenir is een goed (tastbaar). Een buitenlandse toerist die het op Sint-Maarten koopt, betaalt aan een Sint-Maartens bedrijf — dat heet export van goederen door Sint-Maarten.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 4",
@@ -284,7 +284,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Paspoort/ID/rijbewijs = burgerzaken = gemeente.",
-            simpeler: "Waar haal jij je paspoort? Niet bij de premier in Den Haag, niet bij het waterschap — bij het GEMEENTEHUIS in jouw woonplaats. Dat is gemeentelijke taak.",
+            simpeler: "Waar haal jij je paspoort? Niet bij de premier in Den Haag, niet bij het waterschap — bij het GEMEENTEHUIS in jouw woonplaats. Dat is een gemeentelijke taak.",
             nogSimpeler: "Paspoort = gemeente",
           },
         },
@@ -312,7 +312,7 @@ const steps = [
           null,
           "VPB is een Rijksbelasting voor BV's en NV's.",
         ],
-        explanation: "OZB (onroerendezaakbelasting) is de belangrijkste gemeentelijke belasting voor inwoners. Het wordt geheven over het bezit van een woning of bedrijfspand binnen de gemeente.",
+        explanation: "OZB (onroerendezaakbelasting) is de belangrijkste gemeentelijke belasting voor inwoners. Die wordt geheven over het bezit van een woning of bedrijfspand binnen de gemeente.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 9",
         leerpadLink: { id: "pincode-overheid", title: "De overheid" },
         voorkennisKeten: [
@@ -322,9 +322,9 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Welke 4 belastingen worden opgegeven?", tekst: "Accijns, motorrijtuigenbelasting, OZB, vennootschapsbelasting. Welke zijn voor de GEMEENTE?" },
+            { titel: "Welke 4 belastingen worden genoemd?", tekst: "Accijns, motorrijtuigenbelasting, OZB, vennootschapsbelasting. Welke zijn voor de GEMEENTE?" },
             { titel: "Loop ze langs", tekst: "Accijns (alcohol/brandstof) = Rijk ✗. Motorrijtuigenbelasting = Rijk + provincie ✗. OZB = gemeente ✓. VPB (BV winst) = Rijk ✗." },
-            { titel: "Waarom OZB?", tekst: "OZB = belasting op huis/pand-EIGENDOM in de gemeente. Heffing en inning gebeurt door GEMEENTE." },
+            { titel: "Waarom OZB?", tekst: "OZB = belasting op huis/pand-EIGENDOM in de gemeente. Heffing en inning gebeuren door de GEMEENTE." },
           ],
           woorden: [
             { woord: "OZB", uitleg: "Onroerendezaakbelasting — gemeentelijke belasting voor eigenaren van een woning of bedrijfspand. Berekend op WOZ-waarde." },
@@ -341,7 +341,7 @@ const steps = [
           ],
           niveaus: {
             basis: "OZB = gemeente.",
-            simpeler: "OZB betekent letterlijk 'Onroerendezaakbelasting' — belasting op je huis. Die wordt door de GEMEENTE geheven (zij innen het, gebruiken het voor lokale voorzieningen). De andere drie zijn allemaal Rijksbelastingen.",
+            simpeler: "OZB betekent letterlijk 'Onroerendezaakbelasting' — belasting op je huis. Die wordt door de GEMEENTE geheven (zij innen die en gebruiken die voor lokale voorzieningen). De andere drie zijn allemaal Rijksbelastingen.",
             nogSimpeler: "OZB = gemeente",
           },
         },
@@ -390,14 +390,14 @@ const steps = [
             { woord: "zakgeld", uitleg: "Geld dat ouders aan kinderen geven zonder dat kind ervoor werkt. = overdracht." },
             { woord: "productiefactor", uitleg: "Iets dat je inzet om te produceren: arbeid, kapitaal, natuur, ondernemerschap." },
           ],
-          theorie: "**Inkomenssoorten:**\n\n• **Primair** (= verdiend met productiefactor): loon, rente, huur, winst, dividend\n• **Secundair / overdrachten** (= ZONDER tegenprestatie): bijstand, AOW, kinderbijslag, zorgtoeslag, zakgeld\n\nVoor jongeren komt het inkomen vaak gemixt: bijbaan-loon (primair) + zakgeld van ouders (overdracht) + studiefinanciering (overdracht).",
+          theorie: "**Inkomenssoorten:**\n\n• **Primair** (= verdiend met productiefactor): loon, rente, huur, winst, dividend\n• **Secundair / overdrachten** (= ZONDER tegenprestatie): bijstand, AOW, kinderbijslag, zorgtoeslag, zakgeld\n\nBij jongeren is het inkomen vaak een mix: bijbaan-loon (primair) + zakgeld van ouders (overdracht) + studiefinanciering (overdracht).",
           voorbeelden: [
             { type: "primair", tekst: "Bijbaan AH = loon = primair (uit arbeid)." },
             { type: "overdracht", tekst: "Zakgeld €15/week van ouders = overdrachtsinkomen." },
             { type: "overdracht", tekst: "Zorgtoeslag voor 18+ student = overdrachtsinkomen (van overheid)." },
           ],
           basiskennis: [
-            { onderwerp: "Loon vs zakgeld", uitleg: "Loon krijg je voor WERK. Zakgeld krijg je gewoon, zonder dat je iets terug levert. Daarom is loon primair en zakgeld overdracht." },
+            { onderwerp: "Loon vs zakgeld", uitleg: "Loon krijg je voor WERK. Zakgeld krijg je gewoon, zonder dat je iets teruglevert. Daarom is loon primair en zakgeld overdracht." },
           ],
           niveaus: {
             basis: "Zakgeld = krijg je zonder tegenprestatie = overdrachtsinkomen.",
@@ -457,11 +457,11 @@ const steps = [
             { type: "VOF in les", tekst: "Klas richt mini-onderneming op voor schoolproject. Geen formele BV. = VOF (of vergelijkbaar)." },
           ],
           basiskennis: [
-            { onderwerp: "Rechtspersoon", uitleg: "BV/NV is juridisch een aparte 'persoon'. Heeft eigen vermogen, kan failliet gaan zonder eigenaar mee te trekken." },
+            { onderwerp: "Rechtspersoon", uitleg: "BV/NV is juridisch een aparte 'persoon'. Heeft eigen vermogen, kan failliet gaan zonder de eigenaar mee te trekken." },
           ],
           niveaus: {
             basis: "Meerdere personen + allen privé aansprakelijk = VOF.",
-            simpeler: "De klas is GEEN BV opgericht (= geen rechtspersoon). Met meerdere mensen samen ondernemen + privé aansprakelijk → VOF.",
+            simpeler: "De klas heeft GEEN BV opgericht (= geen rechtspersoon). Met meerdere mensen samen ondernemen + privé aansprakelijk → VOF.",
             nogSimpeler: "Veel + privé = VOF",
           },
         },
@@ -487,7 +487,7 @@ const steps = [
           null,
           "Klopt al uit de vraag (import procentueel sterker), maar verklaart niet waarom overschot toch toeneemt.",
         ],
-        explanation: "Hoewel het AANTAL geïmporteerd sterker stijgt, is de WAARDE van de export hoger geworden door hogere exportprijzen. Resultaat: overschot in geld neemt toe, ondanks dat het volume-saldo wijzigt.",
+        explanation: "Hoewel het geïmporteerde AANTAL sterker stijgt, is de WAARDE van de export hoger geworden door hogere exportprijzen. Resultaat: overschot in geld neemt toe, ondanks dat het volume-saldo wijzigt.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 29",
         leerpadLink: { id: "pincode-buitenland-eu", title: "Nederland en het buitenland" },
         voorkennisKeten: [
@@ -497,12 +497,12 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Wat zijn 2 dingen aan handelsoverschot?", tekst: "AANTAL (volume = hoeveelheid) en PRIJS. WAARDE = aantal × prijs. Het 'overschot in geld' kijkt naar WAARDE." },
+            { titel: "Welke 2 dingen bepalen het handelsoverschot?", tekst: "AANTAL (volume = hoeveelheid) en PRIJS. WAARDE = aantal × prijs. Het 'overschot in geld' kijkt naar WAARDE." },
             { titel: "Wat zegt de vraag?", tekst: "Import is procentueel STERKER gegroeid in volume. Toch werd het overschot GROTER. Hoe kan dat?" },
             { titel: "Conclusie", tekst: "Alleen mogelijk als de PRIJS van export harder is gestegen dan prijs van import. Dan compenseert hogere prijs het lagere volume → overschot in geld groeit." },
           ],
           woorden: [
-            { woord: "handelsoverschot", uitleg: "Verschil export − import in WAARDE (€). Positief = exporteer meer dan importeer." },
+            { woord: "handelsoverschot", uitleg: "Verschil export − import in WAARDE (€). Positief = je exporteert meer dan je importeert." },
             { woord: "prijspeil", uitleg: "Gemiddelde prijs in een sector/categorie. Stijgt = inflatie." },
             { woord: "volume", uitleg: "AANTAL of hoeveelheid (kilo's, stuks). Niet de waarde." },
             { woord: "waarde", uitleg: "Volume × prijs. Wat het in EURO's opbrengt of kost." },
@@ -545,14 +545,14 @@ const steps = [
           null,
           "Tegendeel — als besparing lager was dan rente, zou sparen juist beter zijn.",
           "Germaine zegt iets over het terugverdienen via energie-besparing, niet vergelijking lening vs warmtepomp-prijs.",
-          "Idem als C — niet de kern van Germaine's redenering.",
+          "Net als C — niet de kern van Germaines redenering.",
         ],
-        explanation: "Germaine's redenering: spaarrente is laag → een investering die jaarlijks méér bespaart dan die rente, levert per saldo meer op. Antwoord A vat dat precies samen: besparing energie > rente op spaargeld.",
+        explanation: "Germaines redenering: spaarrente is laag → een investering die jaarlijks méér bespaart dan die rente, levert per saldo meer op. Antwoord A vat dat precies samen: besparing energie > rente op spaargeld.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 37",
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
         voorkennisKeten: [
           { id: "woordenschat-po", title: "Woordenschat", niveau: "po-1F", why: "begrijpen 'spaarrente', 'investeren', 'rendement', 'warmtepomp'" },
-          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "Germaine's argument in 3 stappen lezen → welk antwoord is de samenvatting" },
+          { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-1F", why: "Germaines argument in 3 stappen lezen → welk antwoord is de samenvatting" },
           { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen", niveau: "vmbo-3", why: "sparen vs investeren + opbrengst-vergelijking — kern van deze examenvraag" },
         ],
         uitlegPad: {
@@ -594,7 +594,7 @@ const examenEconomie2025T1 = {
   referentieNiveau: "VMBO-GT eindexamen",
   sloThema: "Economie - eindexamen oefenen 2025-T1",
   intro:
-    "10 echte examenvragen uit het VMBO-GL/TL economie-examen 2025 tijdvak 1. Per vraag krijg je de informatiebron uit de bijlage als nette tabel of tekst, de 4 antwoorden uit het examen, en daarna de '📖 Leg uit'-knop voor de officiële uitleg uit het correctievoorschrift. V12 + V19 zijn weggelaten omdat die een grafiek/tabel-afbeelding nodig hebben.",
+    "9 echte examenvragen uit het VMBO-GL/TL economie-examen 2025 tijdvak 1. Per vraag krijg je de informatiebron uit de bijlage als nette tabel of tekst, de 4 antwoorden uit het examen, en daarna de '📖 Leg uit'-knop voor de officiële uitleg uit het correctievoorschrift. V12 + V19 zijn weggelaten omdat die een grafiek/tabel-afbeelding nodig hebben.",
   triggerKeywords: [
     "examen 2025", "examen oefenen", "echte examenvragen", "eindexamen oefenen",
     "informatiebron", "sint-maarten", "dog4fun", "rijkwijk", "armere",

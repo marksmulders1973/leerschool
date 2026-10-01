@@ -486,7 +486,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
     title: "Onderbouwd of een gok?",
     explanation: `Hier zit het grote gevaar van conclusie-vragen: een antwoord kan **heel logisch klinken** en tóch fout zijn. Hoe kan dat?
 
-Een **onderbouwde conclusie** steunt op aanwijzingen die je kunt áánwijzen in de tekst. Een **gok** (of aanname) steunt alleen op wat jij dénkt dat er waar zou kunnen zijn.
+Een **onderbouwde conclusie** steunt op aanwijzingen die je kunt áánwijzen in de tekst. Een **gok** (of aanname) steunt alleen op wat jij dénkt dat waar zou kunnen zijn.
 
 Voorbeeld. In een verhaal heeft Sem een pleister op zijn knie. Jij denkt misschien meteen: *hij is van zijn fiets gevallen!* Klinkt logisch — kinderen vallen vaak van de fiets. Maar staat er iets over een fiets? Nee. Misschien is hij gestruikeld, of tegen een tafel gebotst. Je wéét alleen: hij heeft iets aan zijn knie gehad. Meer mag je niet concluderen.
 
@@ -672,17 +672,17 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         wrongHints: [
           null,
           "Zie je ergens het woord 'boos' of een aanwijzing voor boosheid? Kijk wat er letterlijk staat.",
-          "Zou dat kloppen met 'maar hij nam niet op'? Welke verklaring ga je te ver voor?",
+          "Staat er in de zin iets over een kwijtgeraakte telefoon? Of ga je dan te ver?",
           null,
         ],
         uitlegPad: {
           stappen: [
             { titel: "Wat staat er letterlijk?", tekst: "Ze belde drie keer — dat laat zien dat ze contact wil. Hij nam niet op — hij reageert niet. Dat zijn de enige twee feiten." },
-            { titel: "Doe de te-ver-test", tekst: "Boos zijn zou méér informatie nodig hebben. Telefoon kwijt en storing zijn verklaringen die ergens op steunen — maar er staat niets over in de zin." },
-            { titel: "Voorzichtigste conclusie", tekst: "Het enige wat je zeker weet: ze probeert hem te bereiken en hij pakt niet op. Meer kun je niet concluderen." },
+            { titel: "Doe de te-ver-test", tekst: "Boos zijn zou méér informatie nodig hebben. Telefoon kwijt en storing zijn verklaringen die zouden kúnnen — maar er staat niets over in de zin." },
+            { titel: "Voorzichtigste conclusie", tekst: "Het enige wat je zeker weet: ze probeert hem te bereiken en hij neemt niet op. Meer kun je niet concluderen." },
           ],
           niveaus: {
-            basis: "Wat weet je zeker uit deze ene zin — en wat verzin je er bij?",
+            basis: "Wat weet je zeker uit deze ene zin — en wat verzin je erbij?",
             simpeler: "Als je drie keer iemand belt en hij neemt niet op, wéét je dan zeker waaróm niet?",
             nogSimpeler: "Wat doe je als je iemand wilt spreken die de telefoon niet opneemt?",
           },
@@ -950,7 +950,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         wrongHints: [
           null,
           "De nestkasten zijn gratis — wat zegt dat over een handelsmotief? Zoek de aanwijzing voor wát hij hoopt.",
-          "Hij zegt 'we hopen dat bewoners meedoen' — hoopvol klinkt dat niet als je denkt dat het te laat is.",
+          "Hij zegt 'we hopen dat de bewoners meedoen'. Zeg je dat als je denkt dat het al te laat is?",
           null,
         ],
         uitlegPad: {
@@ -1008,7 +1008,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         wrongHints: [
           null,
           "'Vrees' betekent dat je iets angstig verwacht — niet dat je het zeker weet. Is dat hetzelfde als 'zeker weten'?",
-          "Hij geeft juist tips en deelt nestkasten uit — dat is handelen in vijf jaar. Klinkt dat als 'te kort'?",
+          "Er worden juist tips gegeven en nestkasten uitgedeeld om nú iets te veranderen. Klinkt dat als 'vijf jaar is te kort'?",
           "Lees de zin nog eens: hij spreekt over mussen tellen, niet over stoppen met tellen.",
         ],
         uitlegPad: {
@@ -1019,8 +1019,8 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
           ],
           niveaus: {
             basis: "'Vrees' en 'weet zeker' zijn niet hetzelfde. Welk gevoel drukt 'vrees' uit?",
-            simpeler: "Als je zegt 'ik vrees dat het regent morgen' — weet je het dan zeker of ben je het bang?",
-            nogSimpeler: "Wanneer vrees je iets — als je zeker weet dat het gaat gebeuren, of als je bang bent dat het misschien kan?",
+            simpeler: "Als je zegt 'ik vrees dat het morgen regent' — weet je het dan zeker of ben je er bang voor?",
+            nogSimpeler: "Wanneer vrees je iets — als je zeker weet dat het gaat gebeuren, of als je bang bent dat het misschien gebeurt?",
           },
         },
       },
@@ -1043,7 +1043,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk de twee wijken", tekst: "Zonnehof: tegels, potdichte daken, hoge schuttingen → weinig mussen. Oude wijk: heggen, losse dakpannen, brood → veel mussen. Twee verschillende omgevingen, twee verschillende aantallen." },
-            { titel: "Wat wijzen die gegevens samen?", tekst: "Meer groene ruimte en nestplekken = meer mussen. Minder groen = minder mussen. De omgeving maakt het verschil — dat is wat de tekst laat zien." },
+            { titel: "Waar wijzen die gegevens samen op?", tekst: "Meer groene ruimte en nestplekken = meer mussen. Minder groen = minder mussen. De omgeving maakt het verschil — dat is wat de tekst laat zien." },
             { titel: "Controleer: is de conclusie te ver?", tekst: "De conclusie is: de omgeving telt mee. Dat steunt de tekst volledig. Andere opties gaan over dingen (gevoel van bewoners, slechte telmethode) die nergens in de tekst staan." },
           ],
           niveaus: {

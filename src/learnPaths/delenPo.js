@@ -57,7 +57,7 @@ const steps = [
   {
     title: "Wat is delen?",
     explanation:
-      "**Delen** is het tegenovergestelde van **vermenigvuldigen**.\n\n**Voorbeeld 1 — verdelen in groepen**:\n*'12 snoepjes verdeel je over 3 kinderen.'*\n• 12 ÷ 3 = **4 snoepjes per kind**.\n\n**Voorbeeld 2 — hoeveel groepen passen erin?**:\n*'Een doos met 24 koekjes; 6 koekjes per zakje. Hoeveel zakjes?'*\n• 24 ÷ 6 = **4 zakjes**.\n\n**Symbool**: **÷** of **/** of **:**\n• 20 ÷ 4 = 5.\n• 20 / 4 = 5.\n• 20 : 4 = 5.\nAllemaal hetzelfde.\n\n**Verschil tussen × en ÷**:\n• 3 × 4 = 12 *(samenvoegen)*.\n• 12 ÷ 4 = 3 *(opdelen)*.\n• 12 ÷ 3 = 4 *(opdelen anders)*.\n\nDelen is de **omgekeerde** van keer. Als 4 × 3 = 12, dan 12 ÷ 3 = 4 en 12 ÷ 4 = 3.\n\n**Toets-truc — gebruik tafel terug**:\nVoor 18 ÷ 3: denk *'wat keer 3 is 18?'*. Antwoord: **6 keer**. Dus 18 ÷ 3 = **6**.\n\n**Belangrijke termen**:\n• **Deeltal** = wat je deelt *(in 12 ÷ 3 is dat 12)*.\n• **Deler** = waardoor je deelt *(de 3)*.\n• **Quotiënt** = uitkomst *(de 4)*.\n\nMaar je hoeft die termen niet uit het hoofd te leren — De toets vraagt het zelden.\n\n**Pas op — delen door 1 en door zichzelf**:\n• 7 ÷ 1 = **7** *(elk getal blijft hetzelfde gedeeld door 1)*.\n• 7 ÷ 7 = **1** *(elk getal door zichzelf = 1)*.\n• 0 ÷ 7 = **0** *(0 verdeeld geeft 0)*.\n• 7 ÷ 0 = **mag niet!** *(delen door 0 bestaat niet)*.",
+      "**Delen** is het tegenovergestelde van **vermenigvuldigen**.\n\n**Voorbeeld 1 — verdelen in groepen**:\n*'12 snoepjes verdeel je over 3 kinderen.'*\n• 12 ÷ 3 = **4 snoepjes per kind**.\n\n**Voorbeeld 2 — hoeveel groepen passen erin?**:\n*'Een doos met 24 koekjes; 6 koekjes per zakje. Hoeveel zakjes?'*\n• 24 ÷ 6 = **4 zakjes**.\n\n**Symbool**: **÷** of **/** of **:**\n• 20 ÷ 4 = 5.\n• 20 / 4 = 5.\n• 20 : 4 = 5.\nAllemaal hetzelfde.\n\n**Verschil tussen × en ÷**:\n• 3 × 4 = 12 *(samenvoegen)*.\n• 12 ÷ 4 = 3 *(opdelen)*.\n• 12 ÷ 3 = 4 *(opdelen anders)*.\n\nDelen is het **omgekeerde** van keer. Als 4 × 3 = 12, dan 12 ÷ 3 = 4 en 12 ÷ 4 = 3.\n\n**Toets-truc — gebruik tafel terug**:\nVoor 18 ÷ 3: denk *'wat keer 3 is 18?'*. Antwoord: **6 keer**. Dus 18 ÷ 3 = **6**.\n\n**Belangrijke termen**:\n• **Deeltal** = wat je deelt *(in 12 ÷ 3 is dat 12)*.\n• **Deler** = waardoor je deelt *(de 3)*.\n• **Quotiënt** = uitkomst *(de 4)*.\n\nMaar je hoeft die termen niet uit het hoofd te leren — de toets vraagt het zelden.\n\n**Pas op — delen door 1 en door zichzelf**:\n• 7 ÷ 1 = **7** *(elk getal blijft hetzelfde gedeeld door 1)*.\n• 7 ÷ 7 = **1** *(elk getal door zichzelf = 1)*.\n• 0 ÷ 7 = **0** *(0 verdeeld geeft 0)*.\n• 7 ÷ 0 = **mag niet!** *(delen door 0 bestaat niet)*.",
     svg: delenSvg(),
     checks: [
       {
@@ -123,14 +123,14 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Delen door 2 = halveren", tekst: "Delen door 2 betekent in 2 gelijke stukken splitsen — de helft pakken. Helft van 24 = **12**." },
-            { titel: "Truc voor halveren", tekst: "Bij even getallen: deel het cijferpaar in 2. 24 = 20 + 4 → helft = 10 + 2 = **12**." },
+            { titel: "Truc voor halveren", tekst: "Splits het getal: 24 = 20 + 4 → helft = 10 + 2 = **12**." },
             { titel: "Check terug", tekst: "12 × 2 = 24 ✓. Vermenigvuldigen + delen zijn elkaars tegenpolen — terug-rekenen bevestigt." },
           ],
           woorden: [{ woord: "halveren", uitleg: "In 2 gelijke stukken splitsen." }],
           theorie: "Toets-truc: ÷ 2 = halveren. ÷ 4 = halveren + nog eens halveren. ÷ 10 = laatste cijfer (0) weghalen.",
           voorbeelden: [
             { type: "stap", tekst: "18 ÷ 2 = 9. 30 ÷ 2 = 15. 100 ÷ 2 = 50." },
-            { type: "stap", tekst: "Odd-getal halveren: 25 ÷ 2 = 12,5 (komma!). Voor PO mostly even getallen." },
+            { type: "stap", tekst: "Oneven getal halveren: 25 ÷ 2 = 12,5 (komma!). Op de basisschool meestal even getallen." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Op deze leeftijd weet je tafel-2 al uit je hoofd. ÷ 2 is gewoon andersom: 12 × 2 = 24, dus 24 ÷ 2 = 12." }],
           niveaus: {
@@ -148,10 +148,10 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Delen door 10 = laatste 0 weghalen", tekst: "Bij delen door 10 haal je gewoon de laatste 0 weg. **40** ÷ 10 = **4**." },
-            { titel: "Waarom werkt dit?", tekst: "Onze cijfer-systeem heeft 10 als basis. 40 betekent: 4 keer 10 + 0 keer 1. Dus 40 ÷ 10 = hoeveel keer 10? = 4 keer." },
+            { titel: "Waarom werkt dit?", tekst: "Ons cijfersysteem heeft 10 als basis. 40 betekent: 4 keer 10 + 0 keer 1. Dus 40 ÷ 10 = hoeveel keer 10? = 4 keer." },
             { titel: "Bij grotere getallen", tekst: "100 ÷ 10 = 10. 250 ÷ 10 = 25. 1000 ÷ 10 = 100. Altijd: 0 eraf." },
           ],
-          woorden: [{ woord: "tientallen", uitleg: "Getallen die delen op 10 (10, 20, 30, ...)." }],
+          woorden: [{ woord: "tientallen", uitleg: "Getallen die eindigen op 0 (10, 20, 30, ...)." }],
           theorie: "Toets-truc: ÷ 10 = 0 weg. ÷ 100 = 2 nullen weg. ÷ 1000 = 3 nullen weg.",
           voorbeelden: [{ type: "stap", tekst: "70 ÷ 10 = 7. 900 ÷ 10 = 90. 30 ÷ 10 = 3." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Werkt alleen bij getallen die op 0 eindigen (tientallen). 47 ÷ 10 zou 4,7 zijn — komma erbij." }],
@@ -174,7 +174,7 @@ const steps = [
             { titel: "Check", tekst: "7 × 5 = 35 ✓. Terug-rekenen bevestigt het antwoord altijd." },
           ],
           woorden: [{ woord: "tafel van 5", uitleg: "5, 10, 15, 20, 25, 30, 35, 40, ..." }],
-          theorie: "Toets-truc: ÷ 5 → kijk welke veelvoud van 5 het is. Tafel-5 ken je uit je hoofd, dus terug-zoeken is snel.",
+          theorie: "Toets-truc: ÷ 5 → kijk welk veelvoud van 5 het is. Tafel-5 ken je uit je hoofd, dus terug-zoeken is snel.",
           voorbeelden: [
             { type: "stap", tekst: "45 ÷ 5 = 9 (9 × 5 = 45). 60 ÷ 5 = 12. 75 ÷ 5 = 15." },
             { type: "stap", tekst: "Bij niet-tafel-5 (bv. 32 ÷ 5): kom uit op 6 rest 2, of 6,4." },
@@ -268,7 +268,7 @@ const steps = [
   {
     title: "Delen met rest",
     explanation:
-      "Soms gaat een deling **niet precies op**. Dan blijft er een **rest** over.\n\n**Voorbeeld**: 11 ÷ 3 = ?\n• 3 × 3 = 9 *(net niet 11)*.\n• 3 × 4 = 12 *(te veel)*.\n• Dus 11 ÷ 3 = **3 rest 2**.\n\nWaarom rest 2? 11 − 9 = 2. *(11 = 3 × 3 + 2.)*\n\n**Schrijfwijze**:\n• 11 ÷ 3 = **3 rest 2** *(meeste de toets)*.\n• 11 ÷ 3 = **3 r 2** *(verkort)*.\n• 11 ÷ 3 = **3⅔** *(met breuk: rest÷deler = 2/3)*.\n\n**Stappenplan**:\n1. Zoek de **grootste tafel-keer** die NIET groter is dan het deeltal.\n2. **Trek af** om de rest te vinden.\n3. Schrijf 'rest X'.\n\n**Voorbeelden uit de toets**:\n• 17 ÷ 5 = 3 rest 2 *(want 5×3=15, 17-15=2)*.\n• 22 ÷ 4 = 5 rest 2 *(want 4×5=20, 22-20=2)*.\n• 30 ÷ 7 = 4 rest 2 *(want 7×4=28, 30-28=2)*.\n• 50 ÷ 8 = 6 rest 2 *(want 8×6=48)*.\n\n**Toets-truc — rest 0**:\nAls het precies opgaat: rest = 0.\n• 20 ÷ 4 = 5 rest 0.\nMeestal schrijf je dan gewoon 'rest 0' niet — gewoon 'precies 5'.\n\n**Praktijk-vraag — wat doe je met rest?**:\nSoms moet je **afronden naar boven** *(want de rest moet ook ergens heen)*:\n• 'In 1 doos passen 6 ballen. Hoeveel dozen voor 20 ballen?'\n• 20 ÷ 6 = 3 rest 2 → je hebt **4 dozen nodig** *(3 vol + 1 extra voor de rest)*.\n\nSoms **afronden naar beneden** *(want rest hou je over)*:\n• 'Per fles 5 glazen. Hoeveel glazen uit 23 flessen?'\n• 23 × 5 = 115 → dan 115 ÷ niet relevant. Toch gewoon: 23 ÷ 5 = 4 rest 3. Maar hier vraag is anders. Skip dit voorbeeld voor nu.\n\nDe **Toets-strikvraag** test of je weet **wanneer je naar boven afrondt** (dozen, dragen).",
+      "Soms gaat een deling **niet precies op**. Dan blijft er een **rest** over.\n\n**Voorbeeld**: 11 ÷ 3 = ?\n• 3 × 3 = 9 *(net niet 11)*.\n• 3 × 4 = 12 *(te veel)*.\n• Dus 11 ÷ 3 = **3 rest 2**.\n\nWaarom rest 2? 11 − 9 = 2. *(11 = 3 × 3 + 2.)*\n\n**Schrijfwijze**:\n• 11 ÷ 3 = **3 rest 2** *(meest gebruikt)*.\n• 11 ÷ 3 = **3 r 2** *(verkort)*.\n• 11 ÷ 3 = **3⅔** *(met breuk: rest÷deler = 2/3)*.\n\n**Stappenplan**:\n1. Zoek de **grootste tafel-keer** die NIET groter is dan het deeltal.\n2. **Trek af** om de rest te vinden.\n3. Schrijf 'rest X'.\n\n**Voorbeelden uit de toets**:\n• 17 ÷ 5 = 3 rest 2 *(want 5×3=15, 17-15=2)*.\n• 22 ÷ 4 = 5 rest 2 *(want 4×5=20, 22-20=2)*.\n• 30 ÷ 7 = 4 rest 2 *(want 7×4=28, 30-28=2)*.\n• 50 ÷ 8 = 6 rest 2 *(want 8×6=48)*.\n\n**Toets-truc — rest 0**:\nAls het precies opgaat: rest = 0.\n• 20 ÷ 4 = 5 rest 0.\nMeestal schrijf je dan gewoon 'rest 0' niet — gewoon 'precies 5'.\n\n**Praktijk-vraag — wat doe je met rest?**:\nSoms moet je **afronden naar boven** *(want de rest moet ook ergens heen)*:\n• 'In 1 doos passen 6 ballen. Hoeveel dozen voor 20 ballen?'\n• 20 ÷ 6 = 3 rest 2 → je hebt **4 dozen nodig** *(3 vol + 1 extra voor de rest)*.\n\nSoms **afronden naar beneden** *(want rest hou je over)*:\n• 'Je hebt €23. Een boek kost €5. Hoeveel boeken kun je kopen?'\n• 23 ÷ 5 = 4 rest 3 → je kunt **4 boeken** kopen *(van de €3 die over is, kun je geen boek meer kopen)*.\n\nDe **Toets-strikvraag** test of je weet **wanneer je naar boven afrondt** (dozen, dragen).",
     checks: [
       {
         q: "**11 ÷ 3** = ?",
@@ -350,7 +350,7 @@ const steps = [
         q: "**5 appels** voor **€2,50** totaal. Prijs **per appel**?",
         options: ["€0,50", "€2,50", "€5,00", "€1,25"],
         answer: 0,
-        wrongHints: [null, "Dat is alle samen.", "Te veel.", "Net niet."],
+        wrongHints: [null, "Dat is alles samen.", "Te veel.", "Net niet."],
       },
       {
         q: "**56 kinderen** in **groepjes van 7**. Hoeveel **groepjes**?",
@@ -395,7 +395,7 @@ const steps = [
         q: "**8 kinderen** verdelen **€40** eerlijk. **Per kind**?",
         options: ["€5", "€40", "€8", "€48"],
         answer: 0,
-        wrongHints: [null, "Alle samen.", "Niet zo veel per kind.", "Optelling."],
+        wrongHints: [null, "Alles samen.", "Niet zo veel per kind.", "Optelling."],
       },
       {
         q: "**63 ÷ 7** = ?",
@@ -422,7 +422,7 @@ const steps = [
       { q: "100 ÷ 25 = ?", options: ["4","25","5","10"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Niet."] },
       { q: "Wat is **omgekeerde** van delen?", options: ["Vermenigvuldigen","Aftrekken","Optellen","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
       { q: "**Halveren** is delen door?", options: ["2","½","4","10"], answer: 0, wrongHints: [null, "Vermenigvuldigen met.", "Kwarten.", "Niet."] },
-      { q: "**Eerlijk verdelen** 18 koeken over 6 kinderen?", options: ["3 per kind","12","6","18"], answer: 0, wrongHints: [null, "Niet — som onderdelen.", "Aantal kinderen.", "Hele."] },
+      { q: "**Eerlijk verdelen** 18 koeken over 6 kinderen?", options: ["3 per kind","12","6","18"], answer: 0, wrongHints: [null, "Dat is 18 − 6, geen deling.", "Aantal kinderen.", "Dat is het totaal."] },
     ],
   },
   // G. Oefenronde (11 aug 2026, zelfde didactiek als topografie "Ken ze alle 12"):

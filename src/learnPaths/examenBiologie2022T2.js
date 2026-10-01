@@ -44,7 +44,7 @@ const steps = [
         { id: "voortplanting-hormonen-biologie", title: "Hormonen & voortplanting", niveau: "VMBO-GT eindexamen", why: "hormoon-werking + klieren — kern van deze vraag" },
       ],
       uitlegPad: compact(
-        "3 hormonen + functie: ADRENALINE (bijnieren, stress, versnelt hart), GLUCAGON (alvleesklier, verhoogt bloedsuiker), INSULINE (alvleesklier, verlaagt bloedsuiker). Hart-effect = adrenaline. Bètablokker werkt door 'beta-receptoren' voor adrenaline te blokkeren.",
+        "3 hormonen + functie: ADRENALINE (bijnieren, stress, versnelt hart), GLUCAGON (alvleesklier, verhoogt bloedsuiker), INSULINE (alvleesklier, verlaagt bloedsuiker). Hart-effect = adrenaline. Bètablokker werkt door 'bèta-receptoren' voor adrenaline te blokkeren.",
         { basis: "Adrenaline op hart → bètablokker blokkeert adrenaline.", simpeler: "Bèta-blokker → adrenaline geblokkeerd → hart langzamer.", nogSimpeler: "Adrenaline" },
         [{ woord: "adrenaline", uitleg: "Stress-hormoon uit bijnieren — versnelt hart." }, { woord: "bètablokker", uitleg: "Medicijn dat adrenaline-receptoren blokkeert." }],
       ),

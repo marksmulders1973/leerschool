@@ -104,7 +104,7 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Conclusie = de tekst eindelijk kort samenvatten met EINDOORDEEL. Alinea 15 trekt geen oordeel.",
+        "Conclusie = de tekst aan het eind kort samenvatten met EINDOORDEEL. Alinea 15 trekt geen oordeel.",
         null,
         "Samenvatting = ALLE punten kort herhalen. Alinea 15 noemt alleen 1 nieuw inzicht.",
         "Toekomstverwachting = voorspellen wat ER GAAT gebeuren. Alinea 15 spreekt over NU.",
@@ -164,7 +164,7 @@ const steps = [
         "4 schrijfdoelen: INFORMEREN (feiten, neutraal, leren), OVERTUIGEN (mening + argumenten), AMUSEREN (humor, plezier), ACTIVEREN (oproep, doe iets). Interview met experts + feiten + verschillende ontwikkelingen = informeren.",
         {
           basis: "Interview met feiten, geen mening = informeren.",
-          simpeler: "Informeren = JOU iets LEREN. Zonder dat de schrijver iets WIL.",
+          simpeler: "Informeren = JOU iets LEREN. Zonder dat de schrijver iets van je WIL.",
           nogSimpeler: "Informeren",
         },
         [
@@ -199,13 +199,13 @@ const steps = [
       bronTekst: tekst4,
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: [
-        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "hoofdonderwerp = rode draad door alle alineas" },
+        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "hoofdonderwerp = rode draad door alle alinea's" },
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "onderwerp vs detail — kern" },
       ],
       uitlegPad: compact(
-        "Hoofdonderwerp = DE RODE DRAAD door ALLE alineas. Truc: lees kop + slot — wat keert telkens terug? Hier: hiphop (alinea 1-2), bieb verdwijnt (3), lezen daalt (4-5), schoolbieb-actie (8-9), hiphopdans helpt (12-14). RODE DRAAD = jongeren weer laten lezen.",
+        "Hoofdonderwerp = DE RODE DRAAD door ALLE alinea's. Truc: lees kop + slot — wat keert telkens terug? Hier: hiphop (alinea 1-2), bieb verdwijnt (3), lezen daalt (4-5), schoolbieb-actie (8-9), hiphopdans helpt (12-14). RODE DRAAD = jongeren weer laten lezen.",
         {
-          basis: "Alle alineas wijzen naar: jongeren aan het lezen krijgen.",
+          basis: "Alle alinea's wijzen naar: jongeren aan het lezen krijgen.",
           simpeler: "Wat is het DOEL van al die acties? = jongeren laten lezen.",
           nogSimpeler: "Lezen krijgen",
         },
@@ -246,8 +246,8 @@ const steps = [
       uitlegPad: compact(
         "Signaalwoorden tekstverband: OM…TE (doel-middel), DOORDAT/OMDAT (oorzaak-gevolg), MAAR/ECHTER (tegenstelling), DUS/DAAROM (gevolg), ALS…DAN (voorwaarde), ZOALS/NAMELIJK (voorbeeld), EN/OOK (opsomming). 'Om...te' = ALTIJD doel-middel.",
         {
-          basis: "'Om...te' is een doel-zin. Antwoord",
-          simpeler: "Om EEN DOEL te bereiken doen we EEN MIDDEL. 'Om veilig te stellen → investeren.'",
+          basis: "'Om...te' is een doel-zin → doel-middel.",
+          simpeler: "Om EEN DOEL te bereiken zetten we EEN MIDDEL in. 'Om veilig te stellen → investeren.'",
           nogSimpeler: "Doel-middel",
         },
         [

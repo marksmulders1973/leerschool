@@ -50,7 +50,7 @@ const steps = [
             { titel: "Waarom belangrijk?", tekst: "Mutaties in geslachtscellen (zoals hier) worden doorgegeven. Soms gunstig (basis voor evolutie), soms schadelijk (ziekte), meestal neutraal." },
           ],
           woorden: [
-            { woord: "mutatie", uitleg: "Verandering in DNA. Kan spontaan of door externe oorzaak." },
+            { woord: "mutatie", uitleg: "Verandering in DNA. Ontstaat spontaan of door een externe oorzaak." },
             { woord: "evolutie", uitleg: "Verandering van soorten over generaties — gebeurt MEDE door mutaties + selectie, maar is niet hetzelfde." },
             { woord: "reductie", uitleg: "Halvering van chromosomen tijdens meiose (geslachtscel-vorming)." },
             { woord: "selectie", uitleg: "Natuurlijke selectie — overleven van de meest aangepaste individuen." },
@@ -112,11 +112,11 @@ const steps = [
             { woord: "X-chromosoom", uitleg: "Een van de geslachtschromosomen — draagt veel genen. Vrouwen hebben er 2, mannen 1." },
             { woord: "Y-chromosoom", uitleg: "Klein geslachtschromosoom — vooral mannelijke eigenschappen, weinig genen." },
             { woord: "meiose", uitleg: "Reductiedeling waarbij chromosomen-aantal halveert tot geslachtscellen ontstaan." },
-            { woord: "geslachtscel", uitleg: "Sperma of eicel — heeft de helft van het normale DNA." },
+            { woord: "geslachtscel", uitleg: "Zaadcel of eicel — heeft de helft van het normale DNA." },
           ],
           theorie: "**Geslacht bepalen — fruitvliegen en mensen:**\n\n• Vrouwtjes XX → alle eicellen X\n• Mannetjes XY → 50% spermacellen X, 50% Y\n\n**Geslachtsgebonden overerving:**\nAls een gen alleen op X zit (zoals oogkleur hier, of bij mensen kleurenblindheid en hemofilie), gelden speciale regels:\n• Vader geeft X aan dochters, Y aan zonen.\n• Moeder geeft 1 van haar 2 X'en aan elk kind.",
           voorbeelden: [
-            { type: "voorbeeld", tekst: "Mens man met rood-groen kleurenblind (X-gebonden recessief): zijn dochters worden draagster (krijgen 1 zieke X van hem, 1 gezonde van moeder). Zijn zonen krijgen zijn Y → niet kleurenblind via hem." },
+            { type: "voorbeeld", tekst: "Man met rood-groene kleurenblindheid (X-gebonden recessief): zijn dochters worden draagster (krijgen 1 zieke X van hem, 1 gezonde van moeder). Zijn zonen krijgen zijn Y → niet kleurenblind via hem." },
             { type: "voorbeeld", tekst: "Bij deze examenvraag: mannetje X(rood)Y. Spermacellen: X(rood) of Y. Helft draagt het rode-ogen-gen." },
           ],
           basiskennis: [
@@ -151,7 +151,7 @@ const steps = [
           null,
           "Kweekvlees komt van dierlijke spiercellen — die hebben een CELKERN waar chromosomen liggen. Liam heeft het mis.",
           "Sophie heeft het mis: dierlijke cellen hebben GEEN celwand (alleen plantencellen + bacteriën wel).",
-          "Beiden hebben het mis — los chromosomen + celwand zijn kenmerken van BACTERIËN, niet van dierlijke spiercellen.",
+          "Beiden hebben het mis — losse chromosomen + celwand zijn kenmerken van BACTERIËN, niet van dierlijke spiercellen.",
         ],
         explanation: "Kweekvlees wordt gemaakt uit DIERLIJKE spiercellen (eukaryoot). Die hebben (1) chromosomen in een celkern — NIET los in het cytoplasma, en (2) GEEN celwand. Liam beschrijft een prokaryote cel (bacterie), Sophie beschrijft plantencellen of bacteriën. Beiden fout.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 36",
@@ -171,7 +171,7 @@ const steps = [
           woorden: [
             { woord: "cytoplasma", uitleg: "Vloeistof in de cel waarin organellen zweven (buiten de kern)." },
             { woord: "celkern", uitleg: "Compartiment in eukaryote cellen waarin de chromosomen liggen." },
-            { woord: "celwand", uitleg: "Stevig buitenste laag van plantencellen en bacteriën — dierlijke cellen hebben dit NIET." },
+            { woord: "celwand", uitleg: "Stevige buitenste laag van plantencellen en bacteriën — dierlijke cellen hebben dit NIET." },
             { woord: "eukaryoot vs prokaryoot", uitleg: "Eukaryoot = cel met kern (planten, dieren, schimmels). Prokaryoot = cel zonder kern (bacteriën)." },
           ],
           theorie: "**Verschil tussen 3 celtypes:**\n\n| Cel | Kern? | Celwand? |\n|---|---|---|\n| Dierlijk (mens, koe) | ja | nee |\n| Plantaardig | ja | ja (cellulose) |\n| Bacterieel | nee (chromosoom los) | ja (peptidoglycaan) |\n\nKweekvlees = dierlijke spiercellen → kern + GEEN celwand → noch Liam noch Sophie heeft gelijk.",
@@ -225,8 +225,8 @@ const steps = [
           stappen: [
             { titel: "Wat doet sterilisatie bij de man?", tekst: "Bij **vasectomie** worden de twee **zaadleiders** doorgeknipt of afgesloten. Dat zijn de buisjes die zaadcellen van de testikels naar buiten brengen." },
             { titel: "Wat gebeurt er in de testikels?", tekst: "De testikels blijven GEWOON werken:\n• zaadcellen worden nog steeds gemaakt\n• testosteron wordt nog steeds geproduceerd\nAlleen de UITGANG is dicht — zaadcellen komen niet meer naar buiten en worden in het lichaam afgebroken." },
-            { titel: "Waarom dan onvruchtbaar?", tekst: "Omdat er bij ejaculatie geen zaadcellen meer in het sperma zitten (alleen vloeistof). De vrouw kan dus niet meer bevrucht raken via deze man. Niet door productie-stop, maar door blokkade." },
-            { titel: "Wat zegt dit over Hans en Karlijn?", tekst: "Hans denkt: geen zaadcellen meer gemaakt. FOUT — die worden nog steeds gemaakt. Karlijn denkt: geen testosteron meer. FOUT — testosteron wordt nog steeds gemaakt (dat is een hormoon dat ook nog allerlei andere functies heeft: stem, spieren, etc.). Beide hebben dus het mis." },
+            { titel: "Waarom dan onvruchtbaar?", tekst: "Omdat er bij ejaculatie geen zaadcellen meer in het sperma zitten (alleen vloeistof). De vrouw kan dus niet meer zwanger raken van deze man. Niet door productie-stop, maar door blokkade." },
+            { titel: "Wat zegt dit over Hans en Karlijn?", tekst: "Hans denkt: geen zaadcellen meer gemaakt. FOUT — die worden nog steeds gemaakt. Karlijn denkt: geen testosteron meer. FOUT — testosteron wordt nog steeds gemaakt (dat is een hormoon dat ook nog allerlei andere functies heeft: stem, spieren, etc.). Beiden hebben dus het mis." },
           ],
           woorden: [
             { woord: "vasectomie", uitleg: "Sterilisatie van de man — zaadleiders doorgeknipt." },
@@ -243,7 +243,7 @@ const steps = [
             { onderwerp: "Vergelijking", uitleg: "Sterilisatie = doorknippen leider. Castratie = orgaan weghalen. Heel verschillend resultaat." },
           ],
           niveaus: {
-            basis: "Beide zaadcellen + testosteron worden nog gemaakt. Beiden fout.",
+            basis: "Zowel zaadcellen als testosteron worden nog gemaakt. Beiden fout.",
             simpeler: "Bij sterilisatie wordt alleen de UITGANG van de zaadcellen geblokkeerd. De TESTIKELS werken gewoon door: zaadcellen worden nog steeds gemaakt, en testosteron óók. Hans denkt aan productie-stop (fout), Karlijn ook (fout).",
             nogSimpeler: "Beiden fout",
           },
@@ -288,7 +288,7 @@ const steps = [
           woorden: [
             { woord: "ureum", uitleg: "Afvalstof uit eiwit-afbraak. Bevat stikstof." },
             { woord: "lever", uitleg: "Groot orgaan rechtsboven in de buik. Maakt + breekt veel stoffen af, waaronder ureum-vorming uit aminozuren." },
-            { woord: "nier", uitleg: "Filtreert bloed. Maakt urine. Verwijdert afvalstoffen zoals ureum + overtollig water." },
+            { woord: "nier", uitleg: "Filtert bloed. Maakt urine. Verwijdert afvalstoffen zoals ureum + overtollig water." },
             { woord: "nierdialyse", uitleg: "Machinaal vervangen van de nierfunctie als de nieren niet meer werken." },
           ],
           theorie: "**Eiwit-cyclus:**\n\n1. Je eet eiwitten (vlees, vis, bonen).\n2. Maag + darm breken eiwitten af tot **aminozuren**.\n3. Aminozuren gaan via bloed naar de **lever**.\n4. Lever gebruikt aminozuren voor bouwstenen ÓF breekt overschot af → maakt **ureum**.\n5. Ureum gaat via bloed naar **nieren**.\n6. Nieren filteren ureum → in de urine → naar buiten.\n\n**Onthoud**: lever MAAKT ureum, nier VERWIJDERT ureum.",
@@ -297,7 +297,7 @@ const steps = [
             { type: "stap", tekst: "Bij nierfalen wordt ureum-niveau in bloed te hoog → moeheid, jeuk, misselijkheid → dialyse nodig." },
           ],
           basiskennis: [
-            { onderwerp: "Bron versus filter", uitleg: "Lever = bron (maakt). Nier = filter (verwijdert). Bij examen vragen 'waar ontstaat' = bron = lever." },
+            { onderwerp: "Bron versus filter", uitleg: "Lever = bron (maakt). Nier = filter (verwijdert). Bij examenvragen 'waar ontstaat' = bron = lever." },
           ],
           niveaus: {
             basis: "Ureum ontstaat in de lever (bij eiwit-afbraak).",
@@ -457,13 +457,13 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Twee transportsystemen", tekst: "Lichaam heeft 2 vloeistof-systemen:\n• **Bloed** in slagaders + aders + haarvaten → aangedreven door HART.\n• **Lymfe** in lymfevaten → NIET aangedreven door hart." },
-            { titel: "Waar komt lymfe vandaan?", tekst: "Uit weefselvocht (vloeistof tussen cellen). Lymfevaten zuigen dat op en transporteren het terug naar grote aders bij hartwerking-gebied. Dus wel uiteindelijk naar bloed, maar niet ÍN bloed." },
+            { titel: "Waar komt lymfe vandaan?", tekst: "Uit weefselvocht (vloeistof tussen cellen). Lymfevaten zuigen dat op en transporteren het terug naar grote aders bij het hart. Dus wel uiteindelijk naar bloed, maar niet ÍN bloed." },
             { titel: "Wat duwt lymfe vooruit?", tekst: "1. **Druk** uit weefsel\n2. **Spier-bewegingen** (lopen, ademen) knijpen lymfevaten samen\n3. **Kleppen** in lymfevaten zorgen dat lymfe niet terug stroomt — alleen vooruit\n\nHet hart speelt hier GEEN rol." },
             { titel: "Conclusie", tekst: "Julia (kleppen → goede richting): klopt. Finn (hart pompt): klopt NIET." },
           ],
           woorden: [
             { woord: "lymfevaten", uitleg: "Buisjes-systeem dat weefselvocht terugbrengt naar de bloedbaan." },
-            { woord: "klep", uitleg: "Eénrichtingsdoorgang — stroomt alleen vooruit, niet terug." },
+            { woord: "klep", uitleg: "Eenrichtingsdoorgang — stroomt alleen vooruit, niet terug." },
             { woord: "haarvat", uitleg: "Heel klein bloedvat tussen slagader en ader, waar uitwisseling met weefsel plaatsvindt." },
           ],
           theorie: "**Bloed vs lymfe — verschillen:**\n\n| | Bloed | Lymfe |\n|---|---|---|\n| Pomp | hart | spierwerking |\n| Kleur | rood (rode bloedcel) | helder/geel |\n| Inhoud | rode + witte cellen + plaatjes | alleen witte cellen |\n| Richting | rondje | eenrichting (van weefsel naar bloed) |",
@@ -513,7 +513,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "3 soorten bloeddeeltjes", tekst: "**Rode bloedcellen** (zuurstof-transport) — groot + rood door hemoglobine.\n**Witte bloedcellen** (afweer) — minder talrijk, kunnen door celwanden heen kruipen.\n**Bloedplaatjes** (stolling) — celfragmenten." },
+            { titel: "3 soorten bloeddeeltjes", tekst: "**Rode bloedcellen** (zuurstof-transport) — groot + rood door hemoglobine.\n**Witte bloedcellen** (afweer) — minder talrijk, kunnen door vaatwanden heen kruipen.\n**Bloedplaatjes** (stolling) — celfragmenten." },
             { titel: "Wat past door haarvatwand?", tekst: "Witte bloedcellen kunnen actief door haarvatwand kruipen (diapedese) — dat is nodig om infecties in weefsels aan te pakken. Rode cellen + plaatjes blijven binnen het vat." },
             { titel: "Wat zit in lymfe?", tekst: "Lymfe = weefselvocht dat via lymfevaten teruggevoerd wordt. Bevat dus wat in weefselvocht zit: WITTE bloedcellen (de andere bloed-deeltjes komen niet uit het bloedvat)." },
           ],
@@ -521,10 +521,10 @@ const steps = [
             { woord: "diapedese", uitleg: "Door de vaatwand heen kruipen — alleen witte cellen kunnen dit." },
             { woord: "weefselvocht", uitleg: "Vloeistof tussen cellen — voert voedingsstoffen aan en afval af." },
           ],
-          theorie: "Bedenk: lymfe = letterlijk vloeistof TUSSEN cellen die door haarvaatwand is gesijpeld. Wat past door die wand?\n• water + opgeloste stoffen ✓\n• witte bloedcellen (actief kruipend) ✓\n• rode bloedcellen — te groot ✗\n• bloedplaatjes — blijven binnen ✗",
+          theorie: "Bedenk: lymfe = letterlijk vloeistof TUSSEN cellen die door de haarvatwand is gesijpeld. Wat past door die wand?\n• water + opgeloste stoffen ✓\n• witte bloedcellen (actief kruipend) ✓\n• rode bloedcellen — te groot ✗\n• bloedplaatjes — blijven binnen ✗",
           voorbeelden: [
-            { type: "stap", tekst: "Bij infectie: witte cellen gaan uit bloed naar weefsel (etter = veel witte cellen). Roding bloed blijft in vat." },
-            { type: "stap", tekst: "Bij sportblessure: bloeding = rode cellen lekken uit kapotte bloedvat. In lymfe gebeurt dit niet zo." },
+            { type: "stap", tekst: "Bij infectie: witte cellen gaan uit bloed naar weefsel (etter = veel witte cellen). Rode bloedcellen blijven in het vat." },
+            { type: "stap", tekst: "Bij sportblessure: bloeding = rode cellen lekken uit een kapot bloedvat. In lymfe gebeurt dit niet zo." },
           ],
           basiskennis: [
             { onderwerp: "Onthoud", uitleg: "Lymfe = witte cellen ✓, rode cellen + plaatjes ✗." },
@@ -583,7 +583,7 @@ const steps = [
           theorie: "**Vertering per plek:**\n• Mond → koolhydraten (speeksel-amylase)\n• Maag → **EIWITTEN** (pepsine)\n• Dunne darm → koolhydraten + eiwitten + vetten (galsap + pancreas-enzymen)\n• Vezels → niet verteerd",
           voorbeelden: [
             { type: "stap", tekst: "Hamburger eten: gehakt (eiwit) wordt in maag afgebroken. Brood (koolhydraat) gaat door naar dunne darm." },
-            { type: "stap", tekst: "Vet steak: vet blijft intact in maag, verteerd pas in dunne darm met behulp van gal." },
+            { type: "stap", tekst: "Vette steak: vet blijft intact in maag, verteerd pas in dunne darm met behulp van gal." },
           ],
           basiskennis: [
             { onderwerp: "Onthoud", uitleg: "Maag = zuur = eiwit-vertering. Dunne darm = neutraal = alle drie." },
@@ -628,14 +628,14 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "3 lagen van een nier", tekst: "Van buiten naar binnen:\n1. **Nierschors** — buitenste laag, hier komen de meeste filter-units (nefronen).\n2. **Niermerg** — middenstuk, waar water + nuttige stoffen terug-opgenomen worden.\n3. **Nierbekken** — holle ruimte binnenin, hier komt klare urine in voordat 'ie naar de urineleider gaat." },
-            { titel: "Wat filtert wat?", tekst: "Het **nefron** (microscopisch filter-eenheid) zit half in schors + half in merg. Bloed wordt eerst in schors gefilterd, dan loopt het door het merg waar bruikbare stoffen + water terug naar bloed gaan. Wat overblijft = urine." },
+            { titel: "Wat filtert wat?", tekst: "Het **nefron** (microscopische filtereenheid) zit half in schors + half in merg. Bloed wordt eerst in schors gefilterd, dan loopt het door het merg waar bruikbare stoffen + water terug naar bloed gaan. Wat overblijft = urine." },
             { titel: "Antwoord", tekst: "Filtering = schors + merg samen." },
           ],
           woorden: [
             { woord: "nierschors", uitleg: "Buitenste laag van nier — start van filteren." },
             { woord: "niermerg", uitleg: "Middenlaag — terug-opname water + zout." },
             { woord: "nierbekken", uitleg: "Verzamelpot voor urine — niet filterend." },
-            { woord: "nefron", uitleg: "Microscopisch filter-eenheid (1 nier = ~1 miljoen nefronen)." },
+            { woord: "nefron", uitleg: "Microscopische filtereenheid (1 nier = ~1 miljoen nefronen)." },
           ],
           theorie: "**Functie per nier-deel:**\n• Nierschors: filteren (waar nefronen starten)\n• Niermerg: terug-opname water + zouten\n• Nierbekken: opvangen klare urine\n• Urineleider: vervoer naar blaas",
           voorbeelden: [
@@ -647,7 +647,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Nierschors + niermerg.",
-            simpeler: "Het filteren doet de nefron — die loopt door schors EN merg. Het nierbekken vangt alleen urine op, filtert niet.",
+            simpeler: "Het filteren doet het nefron — dat loopt door schors EN merg. Het nierbekken vangt alleen urine op, filtert niet.",
             nogSimpeler: "Schors + merg",
           },
         },
@@ -676,7 +676,7 @@ const steps = [
           "Inprenten = jonge dieren leren hun moeder/eerste-zien (eend achter mens) — niet hier.",
           "Trial-and-error = uitproberen + zelf ontdekken — hier kríjgt de hond een signaal en beloning.",
         ],
-        explanation: "Bij clicker-training koppelt de hond een SIGNAAL (click) aan een GEDRAG (zit) aan een BELONING (snoepje). Dat is klassieke **conditionering**: een aangeleerde reactie op een specifieke prikkel. Pavlov was de eerste die dit beschreef bij honden + bel + voer.",
+        explanation: "Bij clicker-training koppelt de hond een SIGNAAL (click) aan een GEDRAG (zit) aan een BELONING (snoepje). Dat is **conditionering**: een aangeleerde reactie op een specifieke prikkel. Pavlov was de eerste die dit beschreef bij honden + bel + voer.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 1",
         bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
         voorkennisKeten: [
@@ -684,7 +684,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "4 typen leergedrag", tekst: "Biologen onderscheiden:\n• **Conditionering** — prikkel koppelen aan reactie (Pavlov, clicker)\n• **Gewenning** — leren een prikkel NEGEREN (gewone fietsbel-geluid stoort niet meer)\n• **Inprenten** — jong dier herkent eerste-bewegende-ding als 'moeder' (eendje + Lorenz)\n• **Trial-and-error** — uitproberen + onthouden wat werkt" },
+            { titel: "4 typen leergedrag", tekst: "Biologen onderscheiden:\n• **Conditionering** — prikkel koppelen aan reactie (Pavlov, clicker)\n• **Gewenning** — leren een prikkel NEGEREN (het geluid van een fietsbel stoort niet meer)\n• **Inprenten** — jong dier herkent eerste-bewegende-ding als 'moeder' (eendje + Lorenz)\n• **Trial-and-error** — uitproberen + onthouden wat werkt" },
             { titel: "Wat doet clicker-training?", tekst: "Hond hoort click → krijgt snoepje. Na herhaling: hond verbindt click = beloning. Dan: click NA gewenst gedrag = hond herhaalt gedrag. Dit is conditionering — net als Pavlov's bel-experiment." },
             { titel: "Verschil met trial-and-error", tekst: "Bij conditionering geeft de TRAINER het signaal + beloning. Bij trial-and-error zoekt het dier ZELF de oplossing (rat in doolhof). Hier komt het signaal van de mens → conditionering." },
           ],

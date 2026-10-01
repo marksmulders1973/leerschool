@@ -108,7 +108,7 @@ const steps = [
           ],
           theorie: "Onthoud: parlement = volksvertegenwoordigers (gekozen). Regering = ministers (benoemd door koning na coalitie-akkoord).",
           voorbeelden: [{ type: "stap", tekst: "Mark Rutte zat als premier in de regering, NIET als volksvertegenwoordiger (zijn ministerschap was zijn rol). Geert Wilders was wel volksvertegenwoordiger in Tweede Kamer." }],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Parlement = volk-vertegenwoordigt. Regering = besluit + voert uit." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Parlement = vertegenwoordigt het volk. Regering = besluit + voert uit." }],
           niveaus: {
             basis: "Volksvertegenwoordigers.",
             simpeler: "Staten-Generaal = parlement. Leden zijn door het volk gekozen = volksvertegenwoordigers.",
@@ -140,7 +140,7 @@ const steps = [
           "Raad van de Europese Unie = ministers van lidstaten. Stemt over wetten samen met Parlement, geen toezicht.",
           "Europees Parlement = gekozen volksvertegenwoordigers. Controleert EU-Commissie, geen direct lidstaat-toezicht.",
         ],
-        explanation: "De **Europese Commissie** is het 'dagelijks bestuur' van de EU. Heeft 27 commissarissen (1 per lidstaat). Stelt wetten voor, controleert of lidstaten regels uitvoeren, en kan lidstaten voor het Europees Hof slepen bij overtredingen. Zogenaamde 'hoeder van de verdragen'.",
+        explanation: "De **Europese Commissie** is het 'dagelijks bestuur' van de EU. Heeft 27 commissarissen (1 per lidstaat). Stelt wetten voor, controleert of lidstaten regels uitvoeren, en kan lidstaten voor het Europees Hof van Justitie slepen bij overtredingen. Zogenaamde 'hoeder van de verdragen'.",
         examenBron: BRON_LABEL(12),
         bronLink: PDF_LINK,
         leerpadLink: LEERPAD,
@@ -150,8 +150,8 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "4 EU-instellingen om te onthouden", tekst: "**Europese Commissie** — dagelijks bestuur (27 commissarissen). Toezicht + wetsvoorstellen.\n**Europese Raad** — 27 regeringsleiders. Grote lijnen.\n**Raad van de EU** — 27 ministers per onderwerp. Stemmen over wetten.\n**Europees Parlement** — 705 gekozen leden. Stemmen samen met Raad over wetten." },
-            { titel: "Wie doet toezicht?", tekst: "Europese **Commissie** is de 'hoeder van de verdragen'. Controleert of lidstaten Europese wetten correct uitvoeren. Kan een lidstaat een boete geven of voor het Europees Hof slepen." },
+            { titel: "4 EU-instellingen om te onthouden", tekst: "**Europese Commissie** — dagelijks bestuur (27 commissarissen). Toezicht + wetsvoorstellen.\n**Europese Raad** — 27 regeringsleiders. Grote lijnen.\n**Raad van de EU** — 27 ministers per onderwerp. Stemmen over wetten.\n**Europees Parlement** — 720 gekozen leden. Stemmen samen met Raad over wetten." },
+            { titel: "Wie doet toezicht?", tekst: "Europese **Commissie** is de 'hoeder van de verdragen'. Controleert of lidstaten Europese wetten correct uitvoeren. Kan een lidstaat voor het Europees Hof van Justitie slepen, dat een boete kan opleggen." },
           ],
           woorden: [
             { woord: "Europese Commissie", uitleg: "Dagelijks bestuur EU. Toezicht + wetsinitiatief." },
@@ -160,7 +160,7 @@ const steps = [
           ],
           theorie: "Onthoud: Commissie = uitvoer + toezicht. Europese Raad = strategie. Raad van de EU = ministers besluiten. Parlement = gekozenen besluiten.",
           voorbeelden: [
-            { type: "stap", tekst: "NL ratificeert EU-wet niet binnen 2 jaar → Commissie stuurt eerst waarschuwing, dan boete." },
+            { type: "stap", tekst: "NL zet een EU-richtlijn niet op tijd om in eigen wet → Commissie stuurt eerst een waarschuwing, daarna kan het Hof van Justitie een boete opleggen." },
             { type: "stap", tekst: "Frans Timmermans was Eurocommissaris (lid van Europese Commissie) voor klimaat 2019-2023." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Commissie heeft 'commissarissen' — die houden TOEZICHT (zoals een commissaris in een bedrijf)." }],
@@ -193,7 +193,7 @@ const steps = [
           null,
           "Schadevergoeding = compensatie voor schade. Maakt het vonnis NIET ongedaan.",
           "Recht om verdenking te kennen = bescherming TIJDENS proces. Niet om vonnis ongedaan te maken.",
-          "Recht op advocaat = bijstand tijdens proces. Op zich verandert vonnis niet.",
+          "Recht op advocaat = bijstand tijdens proces. Op zich verandert dat het vonnis niet.",
         ],
         explanation: "Met **hoger beroep** vraag je een HOGERE rechter (gerechtshof) om de zaak opnieuw te bekijken. Dat hof kan het eerdere vonnis bevestigen, wijzigen of vernietigen. Dit is hét recht om een vonnis aan te vechten. De andere rechten zijn voor andere fasen (verhoor, proces).",
         examenBron: BRON_LABEL(17),
@@ -206,7 +206,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Hoger beroep = nog een keer", tekst: "Als je het oneens bent met een vonnis van de rechtbank, kun je naar het **gerechtshof**. Dat hof bekijkt de zaak helemaal opnieuw. Mogelijke uitkomsten: 1) zelfde straf, 2) lichtere straf, 3) zwaardere straf, 4) vrijspraak." },
-            { titel: "Andere rechten verwijst naar andere momenten", tekst: "**Schadevergoeding** = na onterechte vervolging.\n**Verdenking kennen** = bij arrestatie/verhoor.\n**Advocaat** = tijdens hele proces.\nAlleen hoger beroep verandert het VONNIS." },
+            { titel: "Andere rechten horen bij andere momenten", tekst: "**Schadevergoeding** = na onterechte vervolging.\n**Verdenking kennen** = bij arrestatie/verhoor.\n**Advocaat** = tijdens hele proces.\nAlleen hoger beroep verandert het VONNIS." },
             { titel: "Na hoger beroep → cassatie", tekst: "Nog hoger niveau: **Hoge Raad** (cassatie). Maar daar kijkt men alleen of de wet juist is toegepast, niet of feiten kloppen. Hoger beroep = inhoudelijke nieuwe behandeling." },
           ],
           woorden: [
@@ -261,7 +261,7 @@ const steps = [
           stappen: [
             { titel: "4 taken van een officier van justitie", tekst: "1. Leiding geven aan **opsporing** (samen met politie).\n2. Beslissen of iemand wordt **vervolgd**.\n3. Strafbeschikkingen opleggen (boete bij lichte zaken).\n4. Optreden als **openbaar aanklager** in rechtszaal." },
             { titel: "Welke taak past bij een politieactie?", tekst: "Politieactie = het OPSPORINGSDEEL van het strafrecht. De officier van justitie geeft daar leiding aan (zegt: 'doe een inval', 'arresteer', etc.). Andere taken komen LATER." },
-            { titel: "Openbaar Ministerie (OM)", tekst: "Alle officieren van justitie samen vormen het **Openbaar Ministerie**. Onderdeel van rechterlijke macht maar uitvoerend. Beslissingen over vervolging hier vandaan." },
+            { titel: "Openbaar Ministerie (OM)", tekst: "Alle officieren van justitie samen vormen het **Openbaar Ministerie**. Hoort bij de rechterlijke organisatie, maar valt onder de minister (uitvoerende macht). Beslissingen over vervolging komen hiervandaan." },
           ],
           woorden: [
             { woord: "officier van justitie", uitleg: "Werknemer van het OM — leidt opsporing + treedt op als aanklager." },
@@ -270,7 +270,7 @@ const steps = [
             { woord: "vervolging", uitleg: "Beslissing om iemand voor de rechter te brengen." },
           ],
           theorie: "Tijdlijn strafrechtelijk proces:\n1. Misdrijf → politie meldt aan OM.\n2. OFFICIER LEIDT opsporing.\n3. OM beslist: vervolgen of niet.\n4. Bij vervolging: officier wordt aanklager bij rechtbank.\n5. Rechter doet uitspraak.",
-          voorbeelden: [{ type: "stap", tekst: "Drugsbende-inval: politie doet de inval, maar officier van justitie heeft tevoren de operatie goedgekeurd + leidt het hele opsporingsonderzoek." }],
+          voorbeelden: [{ type: "stap", tekst: "Drugsbende-inval: politie doet de inval, maar officier van justitie heeft van tevoren de operatie goedgekeurd + leidt het hele opsporingsonderzoek." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Politieactie = opsporing-fase = leiding officier. Rechtszaal = aanklager-rol." }],
           niveaus: {
             basis: "Leiding aan opsporingsonderzoek.",

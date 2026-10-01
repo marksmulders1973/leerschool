@@ -113,7 +113,7 @@ const steps = [
           ],
           theorie: "**Eigen huis in IB:**\n\n+ Eigenwoningforfait (= WOZ × ~0,35%) → BIJ inkomen\n− Hypotheekrente betaalde dat jaar → AF van inkomen\n= Netto-effect op je belastbaar inkomen\n\nOmdat het forfait klein is en de rente vaak groot, krijgen huiseigenaren met hypotheek vaak GELD TERUG van de Belastingdienst.",
           voorbeelden: [
-            { type: "berekening", tekst: "Adriaan: WOZ €300.000 × 0,35% = €1.050 eigenwoningforfait. Betaalde €4.000 hypotheekrente. Netto: €1.050 − €4.000 = −€2.950 lager belastbaar inkomen." },
+            { type: "berekening", tekst: "Adriaan: WOZ €300.000 × 0,35% = €1.050 eigenwoningforfait. Betaalde €4.000 hypotheekrente. Netto: €1.050 − €4.000 = −€2.950 → belastbaar inkomen €2.950 lager." },
           ],
           basiskennis: [
             { onderwerp: "Inkomstenbelasting basics", uitleg: "Iedereen met inkomen betaalt IB. Hoe hoger je inkomen, hoe meer % belasting. Aftrekposten verlagen je belastbaar inkomen → minder belasting." },
@@ -341,7 +341,7 @@ const steps = [
             { woord: "importprijs", uitleg: "De prijs die importeurs betalen voor een buitenlands product, INCLUSIEF heffingen." },
             { woord: "vrijhandel", uitleg: "Tegenovergestelde van protectionisme — geen heffingen, vrij verkeer van goederen tussen landen." },
           ],
-          theorie: "**Effect van invoerrechten:**\n\n1. Buitenlandse product wordt DUURDER (heffing erop)\n2. Eigen product wordt RELATIEF goedkoper\n3. Bedrijven kopen meer EIGEN producten\n4. Eigen industrie wordt beschermd, kan groeien\n\nKeerzijde: handelspartner (China) heft vaak vergeldingsmaatregelen → handelsoorlog. Consumenten betalen uiteindelijk meer.",
+          theorie: "**Effect van invoerrechten:**\n\n1. Het buitenlandse product wordt DUURDER (heffing erop)\n2. Eigen product wordt RELATIEF goedkoper\n3. Bedrijven kopen meer EIGEN producten\n4. Eigen industrie wordt beschermd, kan groeien\n\nKeerzijde: handelspartner (China) heft vaak vergeldingsmaatregelen → handelsoorlog. Consumenten betalen uiteindelijk meer.",
           voorbeelden: [
             { type: "Trump 2018", tekst: "VS legde 25% invoerrecht op Chinees staal → US Steel kreeg meer orders, maar Amerikaanse autobouwers (Ford, GM) klaagden over duurder staal voor hun fabriek." },
             { type: "EU 2024", tekst: "EU heeft invoerrechten op Chinese elektrische auto's gelegd → Europese auto-industrie beter beschermd, maar EV's worden duurder voor consumenten." },
@@ -351,7 +351,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Heffing op Chinees staal → Chinees duurder → VS-bedrijven kopen meer eigen staal.",
-            simpeler: "Stel je voor: Chinees staal kostte $1.000/ton. VS heft 25% heffing → kost nu $1.250 voor VS-bedrijven. Amerikaans staal kostte $1.100/ton — was te duur, nu goedkoper. VS-bedrijven schuiven over naar Amerikaans staal.",
+            simpeler: "Stel je voor: Chinees staal kostte $1.000/ton. VS heft 25% heffing → kost nu $1.250 voor VS-bedrijven. Amerikaans staal kostte $1.100/ton — was duurder, nu relatief goedkoper. VS-bedrijven schuiven over naar Amerikaans staal.",
             nogSimpeler: "Heffing maakt China duurder → koop meer eigen → B.",
           },
         },
@@ -402,14 +402,14 @@ const steps = [
           theorie: "**Wisselkoers werkt als markt:**\n\n• Veel vraag naar valuta X = X wordt duurder (koers stijgt)\n• Veel aanbod van valuta X = X wordt goedkoper (koers daalt)\n\n**Wie veroorzaakt vraag naar dollars?**\n• Kopers van Amerikaanse producten (moeten dollars hebben)\n• Beleggers in Amerikaanse aandelen\n• Centrale banken die dollar-reserves opbouwen (zoals China)\n\n**Wie veroorzaakt aanbod van dollars?**\n• Amerikanen die EU-producten kopen (geven dollars uit)\n• Amerikaanse beleggers in EU-aandelen",
           voorbeelden: [
             { type: "vraag stijgt", tekst: "Als veel mensen ineens dollars willen (vakantie VS, beleggen) → dollar wordt duurder voor Europeanen → koers EUR/USD daalt." },
-            { type: "aanbod stijgt", tekst: "Als de Federal Reserve veel dollars BIJ MAAKT → meer dollars in omloop → dollar wordt minder waard." },
+            { type: "aanbod stijgt", tekst: "Als de Federal Reserve veel dollars BIJMAAKT → meer dollars in omloop → dollar wordt minder waard." },
           ],
           basiskennis: [
             { onderwerp: "Wet van vraag en aanbod", uitleg: "Werkt op alle markten: meer vraag = duurder, meer aanbod = goedkoper. Geldt ook voor valuta." },
           ],
           niveaus: {
             basis: "China KOOPT (= vraag) dollars → vraag dollars stijgt → koers dollar stijgt.",
-            simpeler: "Stel je voor: een land koopt veel iPhones. Wat doet de iPhone-prijs? Stijgen, want iedereen wil ze. Hetzelfde met dollars: China koopt veel dollars → veel vraag → dollar wordt duurder = stijgt in waarde.",
+            simpeler: "Stel je voor: een land koopt veel iPhones. Wat doet de iPhone-prijs? Die stijgt, want iedereen wil ze. Hetzelfde met dollars: China koopt veel dollars → veel vraag → dollar wordt duurder = stijgt in waarde.",
             nogSimpeler: "Kopen = vraag = prijs omhoog",
           },
         },

@@ -48,7 +48,7 @@ const steps = [
           ],
           woorden: [
             { woord: "peristaltiek", uitleg: "Knijp-golf van spieren door spijsverteringsbuis." },
-            { woord: "spierlaag", uitleg: "Middenste laag van maagwand — verantwoordelijk voor beweging." },
+            { woord: "spierlaag", uitleg: "Buitenste van de drie lagen van de maagwand — verantwoordelijk voor beweging." },
           ],
           theorie: "Onthoud: beweging = spier. Spierlaag = wat maag voedsel laat verwerken + doorgeven.",
           voorbeelden: [{ type: "stap", tekst: "Vol-gevoel uren na maaltijd? Trage maag → spierlaag werkt minder snel." }],
@@ -139,9 +139,9 @@ const steps = [
           null,
           "Kiemlaag ligt VÓÓR lederhuid (kiemlaag is onderkant opperhuid, lederhuid komt daarna).",
           "Hoornlaag is buitenste — niet kiemlaag.",
-          "Hoornlaag staat buitenste, niet kiemlaag.",
-          "Hoornlaag staat buitenste, niet lederhuid (lederhuid ligt dieper).",
-          "Hoornlaag staat buitenste, niet lederhuid.",
+          "Hoornlaag is de buitenste, niet kiemlaag.",
+          "Hoornlaag is de buitenste, niet lederhuid (lederhuid ligt dieper).",
+          "Hoornlaag is de buitenste, niet lederhuid.",
         ],
         explanation: "De huid heeft van **buiten naar binnen**: **hoornlaag** (dode cellen, bescherming) → **kiemlaag** (levende delende cellen) → **lederhuid** (bloedvaten + haarwortels). Een hoofdluis moet door alle drie om bij een bloedvat te komen.",
         examenBron: BRON_LABEL(16),
@@ -192,7 +192,7 @@ const steps = [
         wrongHints: [
           "Bijna goed — maar halsADER brengt bloed TERUG naar het hart, niet naar de kop.",
           null,
-          "Longslagader gaat FROM hart naar longen (met arm bloed) — niet vanuit longen.",
+          "Longslagader gaat VAN hart naar longen (met arm bloed) — niet vanuit longen.",
           "Longslagader gaat van hart naar longen, niet andersom.",
         ],
         explanation: "Vanuit longblaasje gaat zuurstofrijk bloed via **longader** terug naar het hart (linker harthelft). Hart pompt het via de **aorta** (grote slagader) richting lichaam. Naar de kop gaat het via een **halsslagader** (slagader = van hart weg). Een halsader zou bloed terug naar het hart brengen, niet ernaartoe.",
@@ -207,7 +207,7 @@ const steps = [
           stappen: [
             { titel: "Slagader vs ader", tekst: "**Slagader** = AF van hart (bloed naar lichaam toe).\n**Ader** = TERUG naar hart.\n\nDoor de namen heen kun je dus de richting weten. Halsslagader = van hart naar kop. Halsader = van kop terug naar hart." },
             { titel: "Route na long-opname", tekst: "Longblaasje → **longader** (terug naar hart, met zuurstof) → linker hartkamer → **aorta** (de grote slagader uit hart) → **halsslagader** (afgeleid van aorta, naar de kop)." },
-            { titel: "Verschil longader / longslagader", tekst: "**LongSLAGader** = FROM hart NAAR longen (met arm bloed, om O₂ op te pikken).\n**Longader** = van longen TERUG naar hart (met rijk bloed). Deze 2 zijn uitzonderingen op de norm 'slagader heeft zuurstofrijk bloed'." },
+            { titel: "Verschil longader / longslagader", tekst: "**LongSLAGader** = VAN hart NAAR longen (met arm bloed, om O₂ op te pikken).\n**Longader** = van longen TERUG naar hart (met rijk bloed). Deze 2 zijn uitzonderingen op de norm 'slagader heeft zuurstofrijk bloed'." },
           ],
           woorden: [
             { woord: "longader", uitleg: "Brengt zuurstofRIJK bloed van longen terug naar hart." },
@@ -217,7 +217,7 @@ const steps = [
           ],
           theorie: "**Onthoud volgorde**: long → longader → hart → aorta → halsslagader → hoofd.\nKortste weg van longblaasje naar kop = 3 vaten + door hart heen.",
           voorbeelden: [{ type: "stap", tekst: "Voel je hartslag op nek = halsslagader klopt. Aan binnenkant pols = polsslagader." }],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "SLAGader = AF (van hart). Onthoud die regel — werkt voor 95% van bloedvaten." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "SLAGader = AF (van hart). Onthoud die regel — die geldt voor álle slagaders." }],
           niveaus: {
             basis: "Longader → aorta → halsslagader.",
             simpeler: "Vanuit longblaasje gaat bloed via longader naar hart. Hart pompt door aorta. Aftakking naar kop = halsSLAGader (= weg van hart).",
@@ -259,7 +259,7 @@ const steps = [
           stappen: [
             { titel: "2 processen — niet verwarren", tekst: "**Fotosynthese**: alleen overdag (licht nodig). Gebeurt in bladcellen met bladgroenkorrels. CO₂ + H₂O + licht → glucose + O₂.\n**Cellulaire ademhaling**: ALTIJD (24/7). Gebeurt in alle levende cellen. Glucose + O₂ → CO₂ + H₂O + energie." },
             { titel: "Wortels hebben geen bladgroen", tekst: "Wortels doen GEEN fotosynthese (geen licht, geen bladgroenkorrels). Maar wel ademhaling — net als alle cellen. Daarom 24/7 zuurstof nodig." },
-            { titel: "Waarom planten 's nachts CO₂ uitstoten", tekst: "Overdag: fotosynthese > ademhaling → plant neemt netto O₂ op, geeft CO₂. 's Nachts: alleen ademhaling → CO₂ uitstoot. Wortels stoten altijd CO₂ uit." },
+            { titel: "Waarom planten 's nachts CO₂ uitstoten", tekst: "Overdag: fotosynthese > ademhaling → plant neemt netto CO₂ op, geeft O₂ af. 's Nachts: alleen ademhaling → CO₂ uitstoot. Wortels stoten altijd CO₂ uit." },
           ],
           woorden: [
             { woord: "cellulaire ademhaling", uitleg: "Verbranding van glucose + zuurstof voor energie. Gebeurt in elke cel, altijd." },
@@ -267,7 +267,7 @@ const steps = [
           ],
           theorie: "Onthoud: alle cellen ademen 24/7. Alleen bladcellen doen daarnaast fotosynthese (overdag).",
           voorbeelden: [{ type: "stap", tekst: "Te natte grond → wortels verstikken (geen zuurstof) → plant gaat dood. Toont aan dat wortels constant O₂ nodig hebben." }],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Foto-synthese = LICHT-maken (alleen overdag). Ademhaling = altijd." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Foto-synthese = maken met LICHT (alleen overdag). Ademhaling = altijd." }],
           niveaus: {
             basis: "Overdag en 's nachts.",
             simpeler: "Alle levende cellen ademen 24/7 — ook wortelcellen. Fotosynthese is iets anders (alleen overdag, alleen in bladeren).",

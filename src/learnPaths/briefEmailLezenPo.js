@@ -575,7 +575,7 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
           woorden: [
             { woord: "schrijfdatum", uitleg: "De dag waarop de brief gemaakt en verstuurd is. Staat bovenaan, vaak met de plaatsnaam ervoor." },
           ],
-          theorie: "**Plaats + datum bovenaan = schrijfdatum**\n\nIn een nette brief staat bovenaan: 'Plaatsnaam, dag maand jaar'. Bijvoorbeeld: 'Zonnedorp, 4 mei 2026'. Dat betekent altijd: hier en op deze dag is de brief geschreven.\n\nBij een e-mail doet de regel 'Datum:' hetzelfde werk — die vult de computer automatisch in.\n\nHandig weetje: de schrijfdatum is altijd éérder dan de datums ín de brief. Je kunt tenslotte geen brief schrijven over een sportdag die al geweest is (behalve als je terugblikt!).",
+          theorie: "**Plaats + datum bovenaan = schrijfdatum**\n\nIn een nette brief staat bovenaan: 'Plaatsnaam, dag maand jaar'. Bijvoorbeeld: 'Zonnedorp, 4 mei 2026'. Dat betekent altijd: hier en op deze dag is de brief geschreven.\n\nBij een e-mail doet de regel 'Datum:' hetzelfde werk — die vult de computer automatisch in.\n\nHandig weetje: de schrijfdatum is meestal éérder dan de datums ín de brief. Je kunt tenslotte geen brief schrijven over een sportdag die al geweest is (behalve als je terugblikt!).",
           voorbeelden: [
             { type: "schrijfdatum", tekst: "'Appelheim, 3 maart 2026 — Beste leden, op 21 maart is de grote schoonmaakdag...' → geschreven op 3 maart, schoonmaakdag op 21 maart." },
           ],
@@ -675,7 +675,7 @@ Oefen deze drie gevallen hieronder met korte stukjes brief.`,
         options: [
           "Informeren over de situatie én hulp vragen",
           "Klagen over de kat",
-          "Bedanken voor eerder hulp zoeken",
+          "Bedanken voor eerdere hulp bij het zoeken",
           "Uitnodigen voor een zoekactie",
         ],
         answer: 0,
@@ -1038,7 +1038,7 @@ const briefEmailLezenPo = {
     { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategieën", niveau: "po-1F/1S" },
   ],
   intro:
-    "Een brief van school of een e-mail van de sportclub — op de Doorstroomtoets krijg je er altijd vragen over. Leer de vaste onderdelen kennen (afzender, aanhef, ondertekening...), bepaal het doel van de schrijver en beantwoord dé toetsvraag: wat moet de ontvanger DOEN na het lezen? Met eigen oefenbrieven en een toets-stijl eindopdracht.",
+    "Een brief van school of een e-mail van de sportclub — op de Doorstroomtoets krijg je er vaak vragen over. Leer de vaste onderdelen kennen (afzender, aanhef, ondertekening...), bepaal het doel van de schrijver en beantwoord dé toetsvraag: wat moet de ontvanger DOEN na het lezen? Met eigen oefenbrieven en een toets-stijl eindopdracht.",
   triggerKeywords: [
     "brief lezen", "e-mail lezen", "email lezen", "zakelijke brief", "zakelijke tekst",
     "afzender", "ontvanger", "aanhef", "afsluiting", "ondertekening", "onderwerpregel",

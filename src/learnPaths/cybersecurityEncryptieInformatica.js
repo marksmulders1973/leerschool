@@ -219,7 +219,7 @@ const steps = [
         q: "De **AVG** gaat over…",
         options: ["Hoe organisaties met persoonsgegevens moeten omgaan", "Hoe je sneller internet krijgt", "Welke kleuren een website mag hebben", "Hoe je een virus maakt"],
         answer: 0,
-        wrongHints: [null, "De AVG gaat over privacy, niet over snelheid.", "Het bepaalt geen kleuren.", "Het is een privacywet, niets met malware maken."],
+        wrongHints: [null, "De AVG gaat over privacy, niet over snelheid.", "Het bepaalt geen kleuren.", "Het is een privacywet; met malware maken heeft het niets te maken."],
         uitlegPad: {
           stappen: [{ titel: "Europese privacywet", tekst: "De **AVG** (Algemene Verordening Gegevensbescherming) regelt hoe organisaties met **persoonsgegevens** mogen omgaan: dataminimalisatie (alleen wat nodig is), doelbinding, toestemming, en je recht op **inzage, correctie en verwijdering** — plus veilig bewaren." }],
           niveaus: { basis: "Omgaan met persoonsgegevens.", simpeler: "AVG = privacywet", nogSimpeler: "A." },

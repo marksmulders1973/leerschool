@@ -24,9 +24,9 @@ const steps = [
           "Distributiesysteem = manier waarop goederen verspreid worden. Een GEVOLG van productie, geen oorzaak.",
           null,
           "Mobilisatie = leger op oorlogsvoet brengen. Geen verband met fabrieken.",
-          "Werkverschaffing = overheidsbanen voor werklozen, vooral jaren '30. Te laat + andere doel.",
+          "Werkverschaffing = overheidsbanen voor werklozen, vooral jaren '30. Te laat + ander doel.",
         ],
-        explanation: "**Industrialisatie** = overgang van handenarbeid + kleine werkplaatsen naar mechanische productie in grote fabrieken (vanaf ~1750 in Engeland, in NL pas in late 19e eeuw). Stoommachines + later elektriciteit + machine-productie waren technologische motor. Sociale gevolgen: trek naar steden, arbeidersklasse, kinderarbeid, vakbonden.",
+        explanation: "**Industrialisatie** = overgang van handenarbeid + kleine werkplaatsen naar mechanische productie in grote fabrieken (vanaf ~1750 in Engeland, in NL pas in late 19e eeuw). Stoommachines + later elektriciteit + machine-productie waren de technologische motor. Sociale gevolgen: trek naar steden, arbeidersklasse, kinderarbeid, vakbonden.",
         examenBron: BRON(5),
         bronLink: PDF_LINK,
         leerpadLink: { id: "industriele-revolutie-po", title: "Industriële Revolutie" },
@@ -73,7 +73,7 @@ const steps = [
           null,
           "Parlementaire democratie verzwakte juist (Weimar-republiek faalde). Tegenovergesteld.",
           "Koloniën waren al verloren in 1919 (Vredesverdrag Versailles) — niet door de crisis.",
-          "Tegen 1933 nam Hitler de macht — Duitsland werd nationaal-socialistisch, niet communistisch.",
+          "In 1933 kwam Hitler aan de macht — Duitsland werd nationaal-socialistisch, niet communistisch.",
         ],
         explanation: "Wereldwijde crisis na **Beurskrach 1929** raakte Duitsland extra hard (afhankelijk van VS-leningen die werden teruggetrokken). Werkloosheid explodeerde tot 6 miljoen. Wanhopige burgers vluchtten naar **antidemocratische** partijen: vooral de **NSDAP** (nazi's onder Hitler) en de KPD (communisten). De democratie van Weimar viel uiteen → 1933: Hitler aan de macht.",
         examenBron: BRON(16),
@@ -84,7 +84,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Beurskrach 1929 → crisis", tekst: "**24 oktober 1929** ('Black Thursday'): NY-beurs stort in. Vertrouwen weg → banken sluiten → bedrijven failliet → werkloosheid → minder besteding → meer faillissementen. Vicieuze cirkel. Wereldwijd voelbaar." },
-            { titel: "Waarom Duitsland extra hard", tekst: "Duitsland had grote oorlogsschulden + leefde op leningen uit VS. Toen VS leningen terugtrok = totale instorting. Werkloosheid steeg van 1 miljoen (1928) naar 6 miljoen (1932). Vele bedrijven failliet." },
+            { titel: "Waarom Duitsland extra hard", tekst: "Duitsland had grote oorlogsschulden + leefde op leningen uit VS. Toen de VS de leningen terugtrokken = totale instorting. Werkloosheid steeg van 1 miljoen (1928) naar 6 miljoen (1932). Vele bedrijven failliet." },
             { titel: "Politiek gevolg", tekst: "Mensen verloren vertrouwen in democratie. Stemmen naar extremen: nazi's beloven 'sterke leider + werk + grootsheid'. NSDAP groeit van 12 zetels (1928) naar 230 (1932). 1933: Hitler kanselier." },
           ],
           woorden: [
@@ -117,8 +117,8 @@ const steps = [
         wrongHints: [
           null,
           "Hitlerjugend = nazi-JEUGDORGANISATIE. Voor opvoeding/indoctrinatie, geen opsporing.",
-          "NSB = Nederlandse Nationaal-Socialistische Beweging — Mussert. Politieke partij in NL, geen Duitse opsporingsdienst.",
-          "NSDAP = Hitler's POLITIEKE PARTIJ. Daar viel de Gestapo onder, maar partij zelf is niet 'opsporings-organisatie'.",
+          "NSB = Nationaal-Socialistische Beweging (in Nederland) — Mussert. Politieke partij in NL, geen Duitse opsporingsdienst.",
+          "NSDAP = Hitlers POLITIEKE PARTIJ. Een partij zelf is geen 'opsporingsorganisatie'.",
         ],
         explanation: "**Gestapo** (Geheime Staatspolizei) = nazi-geheime politie. Berucht voor wrede ondervragingen + arrestaties zonder proces. Opsporen van: communisten, sociaaldemocraten, joden, homoseksuelen, kerkverzet, kunstenaars met 'verkeerde' ideeën. In bezet NL ook actief — vaak met hulp van NL-collaborateurs.",
         examenBron: BRON(30),
@@ -136,7 +136,7 @@ const steps = [
             { woord: "Hitlerjugend", uitleg: "Nazi-jeugdorganisatie." },
             { woord: "NSB", uitleg: "Nederlandse Nazi-partij (Mussert)." },
           ],
-          theorie: "Onthoud:\n• Gestapo = OPSPOREN tegenstanders\n• Hitlerjugend = JEUGD-indoctrinatie\n• NSB = NL-partij\n• NSDAP = Duits-partij",
+          theorie: "Onthoud:\n• Gestapo = OPSPOREN tegenstanders\n• Hitlerjugend = JEUGD-indoctrinatie\n• NSB = NL-partij\n• NSDAP = Duitse partij",
           voorbeelden: [{ type: "stap", tekst: "Anne Frank en haar familie werden in 1944 opgepakt door politie + Gestapo, na verraad door een nog onbekende tipgever." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Gestapo = 'Geheime' politie = OPSPOREN. Jugend = Jeugd. NSB = NL. NSDAP = Duits." }],
           niveaus: {

@@ -39,13 +39,13 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is ministeriële verantwoordelijkheid?", tekst: "Ministers moeten in het parlement verantwoording afleggen over alles wat ze doen — én voor wat de koning zegt of doet. De koning zelf is onschendbaar (kan niet ter verantwoording worden geroepen)." },
-            { titel: "Waarom 1848 zo belangrijk", tekst: "Thorbecke's Grondwet maakte van NL een **constitutionele monarchie**. Koning kreeg ceremoniële rol, parlement kreeg politieke macht. Mijlpaal voor democratie." },
+            { titel: "Waarom 1848 zo belangrijk", tekst: "De Grondwet van Thorbecke maakte van NL een **constitutionele monarchie**. Koning kreeg ceremoniële rol, parlement kreeg politieke macht. Mijlpaal voor democratie." },
           ],
           woorden: [
             { woord: "ministeriële verantwoordelijkheid", uitleg: "Ministers leggen verantwoording af aan parlement, niet aan koning." },
             { woord: "onschendbaar", uitleg: "Koning kan niet politiek ter verantwoording worden geroepen." },
           ],
-          theorie: "1848 = sleuteljaar: Grondwet Thorbecke → koning onschendbaar + ministers verantwoordelijk aan parlement.",
+          theorie: "1848 = sleuteljaar: Grondwet Thorbecke → koning onschendbaar + ministers verantwoordelijk tegenover parlement.",
           voorbeelden: [{ type: "stap", tekst: "Als de koning bv. een omstreden uitspraak doet, moet de premier dat in de Tweede Kamer verdedigen — niet de koning zelf." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1848 = Thorbecke = parlement boven koning." }],
           niveaus: {
@@ -176,7 +176,7 @@ const steps = [
           stappen: [
             { titel: "Wat is soevereiniteit?", tekst: "**Soevereiniteit** = het hoogste gezag over een gebied. Een soevereine staat is onafhankelijk en bestuurt zichzelf, zonder een 'moederland' erboven." },
             { titel: "Tijdlijn Indonesië", tekst: "17 aug 1945: Soekarno + Hatta roepen onafhankelijkheid uit (door NL niet erkend).\n1947 + 1948: politionele acties (NL probeert controle te herwinnen).\n1949: internationale druk dwingt NL → onderhandelingen → 27 dec 1949: soevereiniteitsoverdracht." },
-            { titel: "Nieuwe Guinea uitzondering", tekst: "Nederland behield Nieuw-Guinea (West-Papoea) tot 1962 — pas dan ook over. Indonesische staat erkende NL pas in 2005 voor het feit dat de echte onafhankelijkheidsdatum 17 augustus 1945 was." },
+            { titel: "Uitzondering Nieuw-Guinea", tekst: "Nederland behield Nieuw-Guinea (West-Papoea) tot 1962 — pas toen ging ook dat over. Nederland aanvaardde pas in 2005 (politiek en moreel) dat de echte onafhankelijkheidsdatum 17 augustus 1945 was." },
           ],
           woorden: [
             { woord: "soevereiniteit", uitleg: "Hoogste gezag over een gebied — onafhankelijk besturen." },
@@ -220,14 +220,14 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Cubacrisis oktober 1962", tekst: "USSR plaatste kernraketten op Cuba — vlak voor de kust van de VS. President Kennedy eiste verwijdering, verklaarde zee-blokkade rond Cuba. 13 dagen lang op rand van kernoorlog. USSR-leider Chroesjtsjov gaf uiteindelijk toe — raketten teruggehaald in ruil voor VS-belofte om Cuba niet aan te vallen + USA-raketten uit Turkije te verwijderen." },
-            { titel: "Hotline 1963", tekst: "Na de crisis: beide leiders realiseerden dat een directe lijn nodig was om misverstanden te voorkomen. Eerst telex-verbinding, later telefoon. Tot vandaag in gebruik." },
+            { titel: "Cubacrisis oktober 1962", tekst: "USSR plaatste kernraketten op Cuba — vlak voor de kust van de VS. President Kennedy eiste verwijdering, verklaarde zee-blokkade rond Cuba. 13 dagen lang op de rand van een kernoorlog. USSR-leider Chroesjtsjov gaf uiteindelijk toe — raketten teruggehaald in ruil voor VS-belofte om Cuba niet aan te vallen + VS-raketten uit Turkije te verwijderen." },
+            { titel: "Hotline 1963", tekst: "Na de crisis: beide leiders beseften dat een directe lijn nodig was om misverstanden te voorkomen. Eerst een telexverbinding, later fax en e-mail. Tot vandaag in gebruik." },
           ],
           woorden: [
             { woord: "Cubacrisis", uitleg: "Oktober 1962: VS-USSR confrontatie over raketten op Cuba." },
             { woord: "hotline", uitleg: "Directe verbinding tussen wereldleiders om escalatie te voorkomen." },
           ],
-          theorie: "Cubacrisis = dichtste moment ooit bij kernoorlog. Hotline = directe gevolg = preventief crisis-management.",
+          theorie: "Cubacrisis = dichtste moment ooit bij kernoorlog. Hotline = direct gevolg = preventief crisis-management.",
           voorbeelden: [{ type: "stap", tekst: "Tijdens de Cubacrisis duurde 1 boodschap soms 12 uur. Met hotline = direct. Bij toekomstige crises essentieel." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1962 = Cubacrisis. 1963 = hotline opgericht na schrik." }],
           niveaus: {
@@ -255,7 +255,7 @@ const steps = [
           "Secularisatie = ontkerkelijking (minder religie). Geen verband met overleg.",
           "Verzorgingsstaat = sociale zekerheid + uitkeringen. Wel deel van NL-cultuur, maar dit gaat specifiek over OVERLEG-vorm.",
         ],
-        explanation: "**Poldermodel** = Nederlandse traditie van consensus-overleg tussen werkgevers (VNO-NCW), werknemers (FNV/CNV vakbonden) en overheid. Belangrijke beslissingen over loon, pensioenen, sociale zekerheid worden via overleg genomen — niet door eenzijdige besluiten of stakingen. Dateert al van Akkoord van Wassenaar (1982) maar bloeide vooral in jaren '90.",
+        explanation: "**Poldermodel** = Nederlandse traditie van consensus-overleg tussen werkgevers (VNO-NCW), werknemers (FNV/CNV vakbonden) en overheid. Belangrijke beslissingen over loon, pensioenen, sociale zekerheid worden via overleg genomen — niet door eenzijdige besluiten of stakingen. Dateert al van het Akkoord van Wassenaar (1982), maar bloeide vooral in de jaren '90.",
         examenBron: BRON(41),
         bronLink: PDF_LINK,
         voorkennisKeten: [
@@ -264,7 +264,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is het poldermodel?", tekst: "**3 sociale partners** komen regelmatig samen:\n• **Werkgevers** (VNO-NCW, MKB-Nederland)\n• **Werknemers** (FNV, CNV)\n• **Overheid** (kabinet)\n→ Onderhandelen over lonen, pensioenen, werktijd, sociale zekerheid." },
-            { titel: "Waarom werkt het in NL?", tekst: "NL is een klein land met traditie van samenwerken (zelfs polders moeten samen onderhouden — vandaar de naam). Geeft stabiliteit. Geen stakingsgolven zoals in Frankrijk/UK. Maar ook tragere veranderingen." },
+            { titel: "Waarom werkt het in NL?", tekst: "NL is een klein land met traditie van samenwerken (polders moesten samen onderhouden worden — vandaar de naam). Geeft stabiliteit. Geen stakingsgolven zoals in Frankrijk/UK. Maar ook tragere veranderingen." },
           ],
           woorden: [
             { woord: "poldermodel", uitleg: "NL-overlegcultuur tussen werkgevers, werknemers, overheid." },

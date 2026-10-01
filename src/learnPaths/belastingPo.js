@@ -95,9 +95,9 @@ const steps = [
       },
       {
         q: "Waarvan betalen we onder andere **belasting**?",
-        options: ["Wegen, scholen en ziekenhuizen", "Snoep en speelgoed van jezelf", "Je eigen verjaardagskado", "De vakantie van de buurman"],
+        options: ["Wegen, scholen en ziekenhuizen", "Snoep en speelgoed van jezelf", "Je eigen verjaardagscadeau", "De vakantie van de buurman"],
         answer: 0,
-        wrongHints: [null, "Dat koop je zelf met je eigen geld — is dat 'samen'?", "Een kado is voor één persoon. Belasting is voor iedereen samen.", "Belasting is voor dingen die we állemaal gebruiken."],
+        wrongHints: [null, "Dat koop je zelf met je eigen geld — is dat 'samen'?", "Een cadeau is voor één persoon. Belasting is voor iedereen samen.", "Belasting is voor dingen die we állemaal gebruiken."],
       },
       {
         q: "Wie **int** de belasting in Nederland?",
@@ -259,9 +259,9 @@ const steps = [
       },
       {
         q: "Hoeveel is **10%** belasting van een brutoloon van **€300**?",
-        options: ["€30", "€3", "€30,00", "€300"],
+        options: ["€30", "€3", "€270", "€300"],
         answer: 0,
-        wrongHints: [null, "Dat is 10% van €30, niet van €300.", "Dat is juist ook €30 — maar kijk of je optie 0 al correct is.", "Dat is het hele brutoloon, niet de belasting erover."],
+        wrongHints: [null, "Dat is 10% van €30, niet van €300.", "Dat is wat je overhoudt, niet de belasting zelf.", "Dat is het hele brutoloon, niet de belasting erover."],
         uitlegPad: {
           stappen: [
             { titel: "10% van €300", tekst: "10% = een tiende. €300 ÷ 10 = **€30**." },
@@ -280,7 +280,7 @@ const steps = [
   {
     title: "Btw — de belasting die in de prijs zit",
     explanation:
-      "Belasting betaal je niet alleen over je loon. Ook als je iets **koopt** betaal je belasting: de **btw**.\n\n**Btw** *(belasting toegevoegde waarde)* zit al **in de prijs verstopt**. Je betaalt 'm automatisch mee bij de kassa. De winkel geeft dat stukje door aan de **Belastingdienst**.\n\n**Twee tarieven in Nederland**:\n• **9%** *(laag tarief)* — op **eten, drinken en dieren** 🍎🐶.\n• **21%** *(hoog tarief)* — op bijna **al het andere** *(speelgoed, kleding, een telefoon)*.\n\n**Belangrijk**: het prijskaartje is de prijs **inclusief** btw. Je betaalt dus nooit méér dan wat op het kaartje staat — de btw zit er al in.\n\n**Voorbeeld** *(redactiesom)*:\n• Een knuffel kost **€10** *(dat is inclusief btw)*.\n• Daarvan is **€1** btw.\n• Voor de knuffel zelf is dan: €10 − €1 = **€9**.\n\nZo zit in elke prijs een klein stukje belasting. Bij een park vol dieren in **Mijn Park** zie je dit terug op je **bonnetje**: de prijs van het dier + de btw die er al in zat.\n\n**Waarom btw?**\nNet als loonbelasting: van de btw betaalt de overheid **samen** de wegen, scholen en ziekenhuizen.\n\n**toetsvragen**:\n*'Wat is btw?'* → belasting die al in de winkelprijs zit.\n*'Welk tarief op eten?'* → 9% *(laag)*.\n*'Prijs €10, €1 btw — hoeveel voor het product zelf?'* → €9.",
+      "Belasting betaal je niet alleen over je loon. Ook als je iets **koopt** betaal je belasting: de **btw**.\n\n**Btw** *(belasting over de toegevoegde waarde)* zit al **in de prijs verstopt**. Je betaalt 'm automatisch mee bij de kassa. De winkel geeft dat stukje door aan de **Belastingdienst**.\n\n**Twee tarieven in Nederland**:\n• **9%** *(laag tarief)* — op **eten, drinken en boeken** 🍎📚.\n• **21%** *(hoog tarief)* — op bijna **al het andere** *(speelgoed, kleding, een telefoon)*.\n\n**Belangrijk**: het prijskaartje is de prijs **inclusief** btw. Je betaalt dus nooit méér dan wat op het kaartje staat — de btw zit er al in.\n\n**Voorbeeld** *(redactiesom)*:\n• Een knuffel kost **€10** *(dat is inclusief btw)*.\n• Daarvan is **€1** btw.\n• Voor de knuffel zelf blijft dan over: €10 − €1 = **€9**.\n\nZo zit in elke prijs een klein stukje belasting. Bij een park vol dieren in **Mijn Park** zie je dit terug op je **bonnetje**: de prijs van het dier + de btw die er al in zat.\n\n**Waarom btw?**\nNet als loonbelasting: van de btw betaalt de overheid **samen** de wegen, scholen en ziekenhuizen.\n\n**toetsvragen**:\n*'Wat is btw?'* → belasting die al in de winkelprijs zit.\n*'Welk tarief op eten?'* → 9% *(laag)*.\n*'Prijs €10, €1 btw — hoeveel voor het product zelf?'* → €9.",
     checks: [
       {
         q: "Wat is **btw**?",
@@ -291,10 +291,10 @@ const steps = [
           stappen: [
             { titel: "Btw zit in de prijs", tekst: "Btw is belasting die je betaalt als je iets koopt. Het zit al **in de prijs** verstopt — je ziet het niet apart op het prijskaartje." },
             { titel: "Je betaalt het mee", tekst: "Bij de kassa betaal je de prijs van het kaartje. Daar zit de btw al in. De winkel geeft dat stukje door aan de Belastingdienst." },
-            { titel: "Twee tarieven", tekst: "9% op eten, drinken en dieren. 21% op bijna al het andere, zoals speelgoed en kleding." },
+            { titel: "Twee tarieven", tekst: "9% op eten, drinken en boeken. 21% op bijna al het andere, zoals speelgoed en kleding." },
           ],
           woorden: [
-            { woord: "btw", uitleg: "Belasting toegevoegde waarde — belasting in de verkoopprijs." },
+            { woord: "btw", uitleg: "Belasting over de toegevoegde waarde — belasting in de verkoopprijs." },
             { woord: "inclusief", uitleg: "Er al in zit (de btw zit ín de prijs)." },
           ],
           theorie: "Toets-kern: btw is belasting in de prijs van wat je koopt. Het prijskaartje is altijd inclusief btw — je betaalt nooit extra bij de kassa.",
@@ -311,7 +311,7 @@ const steps = [
         },
       },
       {
-        q: "Welk **btw-tarief** geldt voor **eten en dieren**?",
+        q: "Welk **btw-tarief** geldt voor **eten en drinken**?",
         options: ["9% (laag tarief)", "21% (hoog tarief)", "50%", "100%"],
         answer: 0,
         wrongHints: [null, "Dat hoge tarief is voor de meeste andere spullen.", "Zoveel belasting zou eten wel heel duur maken.", "Dan zou alles dubbel zo duur zijn — te veel."],
@@ -323,7 +323,7 @@ const steps = [
         wrongHints: [null, "De btw zit er al in — je telt hem er niet nóg eens bij.", "Dat is alleen de btw, niet de knuffel.", "Daar zit de btw nog in; haal die er eerst af."],
         uitlegPad: {
           stappen: [
-            { titel: "De prijs zit uit 2 stukjes", tekst: "De €10 op het kaartje bestaat uit: de knuffel zelf + de btw. Samen €10." },
+            { titel: "De prijs bestaat uit 2 stukjes", tekst: "De €10 op het kaartje bestaat uit: de knuffel zelf + de btw. Samen €10." },
             { titel: "Welke som?", tekst: "Je weet het totaal (€10) en de btw (€1). De knuffel zelf = totaal − btw." },
             { titel: "Reken uit", tekst: "€10 − €1 = **€9** voor de knuffel zelf. Tel terug: €9 + €1 btw = €10. Klopt!" },
           ],
@@ -356,7 +356,7 @@ const steps = [
         wrongHints: [null, "21% is het hoge tarief voor de meeste andere spullen, niet voor eten.", "Er zit wél btw op eten, maar dan het lage tarief.", "Fruit valt gewoon onder het normale lage tarief van 9% op eten."],
         uitlegPad: {
           stappen: [
-            { titel: "Twee btw-tarieven", tekst: "9% (laag) op eten, drinken en dieren. 21% (hoog) op bijna al het andere." },
+            { titel: "Twee btw-tarieven", tekst: "9% (laag) op eten, drinken en boeken. 21% (hoog) op bijna al het andere." },
             { titel: "Fruit = eten", tekst: "Fruit is eten, dus het lage tarief van 9% geldt." },
           ],
           niveaus: {
@@ -377,7 +377,7 @@ const steps = [
           ],
           niveaus: {
             basis: "€20,66 (€25 − €4,34).",
-            simpeler: "Trek de btw van de totaalprijs: 25 − 4,34 = 20,66.",
+            simpeler: "Trek de btw van de totaalprijs af: 25 − 4,34 = 20,66.",
             nogSimpeler: "€20,66",
           },
         },
@@ -393,9 +393,9 @@ const steps = [
     checks: [
       {
         q: "Belasting gebruiken we om **samen** te betalen voor?",
-        options: ["Wegen, scholen en ziekenhuizen", "Jouw eigen snoep", "Een kado voor één kind", "Niets"],
+        options: ["Wegen, scholen en ziekenhuizen", "Jouw eigen snoep", "Een cadeau voor één kind", "Niets"],
         answer: 0,
-        wrongHints: [null, "Dat koop je zelf — niet 'samen'.", "Een kado is voor één persoon.", "Er wordt juist veel mee betaald."],
+        wrongHints: [null, "Dat koop je zelf — niet 'samen'.", "Een cadeau is voor één persoon.", "Er wordt juist veel mee betaald."],
       },
       {
         q: "Brutoloon **€50**, belasting **€10**. **Netto**?",
@@ -413,7 +413,7 @@ const steps = [
         q: "Welk **btw-tarief** geldt voor de meeste spullen (speelgoed, kleding)?",
         options: ["21% (hoog tarief)", "9% (laag tarief)", "0%", "100%"],
         answer: 0,
-        wrongHints: [null, "Dat lage tarief is juist voor eten en dieren.", "Er zit wél btw op, dus niet 0.", "Dat zou alles dubbel zo duur maken."],
+        wrongHints: [null, "Dat lage tarief is juist voor eten en drinken.", "Er zit wél btw op, dus niet 0.", "Dat zou alles dubbel zo duur maken."],
       },
       {
         q: "Een bal kost **€20**, daarvan is **€2** btw. De bal **zelf**?",

@@ -52,8 +52,8 @@ const steps = [
         q: "Wat is de hoofdstad van de Europese Unie (waar de meeste organisaties zitten)?",
         options: ["Brussel (België)", "Den Haag (Nederland)", "Parijs (Frankrijk)", "Straatsburg (Frankrijk)"],
         answer: 0,
-        wrongHints: [null, "Den Haag heeft VN-organen (Internationaal Strafhof) — niet EU.", "Parijs heeft geen grote EU-instelling.", "Straatsburg heeft 1 maand per jaar het Europees Parlement — niet 'hoofdstad'."],
-        explanation: "**Brussel** = de facto EU-hoofdstad. Europese Commissie, Raad van de EU, deel van het Parlement + NAVO zitten er. Straatsburg (FR) host het Parlement 1 week per maand (politiek compromis).",
+        wrongHints: [null, "Den Haag heeft VN-organen (Internationaal Gerechtshof) — niet EU.", "Parijs heeft geen grote EU-instelling.", "Straatsburg heeft elke maand een week het Europees Parlement — niet 'hoofdstad'."],
+        explanation: "**Brussel** = de facto EU-hoofdstad. Europese Commissie, Raad van de EU, deel van het Parlement + NAVO zitten er. Straatsburg (FR) is 1 week per maand de vergaderplek van het Parlement (politiek compromis).",
         uitlegPad: compact(
           "Brussel = hart van de EU. Commissie + Raad + groot deel Parlement zitten hier.",
           { basis: "Brussel.", simpeler: "België-Brussel = EU-stad.", nogSimpeler: "Brussel" },
@@ -64,7 +64,7 @@ const steps = [
   },
   {
     title: "Stap 2 — De 4 vrijheden",
-    explanation: "De EU heeft 4 basisrechten — de **vier vrijheden**:\n\n1. **Vrij verkeer van personen** — elke EU-burger mag wonen + werken in elk ander EU-land. Geen werkvergunning nodig.\n2. **Vrij verkeer van goederen** — geen invoerheffingen tussen lidstaten. Een Spaanse sinaasappel kost in NL dus geen extra belasting.\n3. **Vrij verkeer van diensten** — een Nederlandse loodgieter mag in Duitsland werken.\n4. **Vrij verkeer van kapitaal** — geld + investeringen kunnen vrij stromen.\n\nDit is de **interne markt** — een groot economisch gebied zonder grenzen voor handel. Voordeel: meer welvaart + concurrentie. Nadeel: lokale baby's verdwijnen soms (bv. NL-staal kon niet concurreren met goedkope import).",
+    explanation: "De EU heeft 4 basisrechten — de **vier vrijheden**:\n\n1. **Vrij verkeer van personen** — elke EU-burger mag wonen + werken in elk ander EU-land. Geen werkvergunning nodig.\n2. **Vrij verkeer van goederen** — geen invoerheffingen tussen lidstaten. Een Spaanse sinaasappel kost in NL dus geen extra belasting.\n3. **Vrij verkeer van diensten** — een Nederlandse loodgieter mag in Duitsland werken.\n4. **Vrij verkeer van kapitaal** — geld + investeringen kunnen vrij stromen.\n\nDit is de **interne markt** — een groot economisch gebied zonder grenzen voor handel. Voordeel: meer welvaart + concurrentie. Nadeel: lokale banen verdwijnen soms (bv. NL-staal kon niet concurreren met goedkope import).",
     emoji: "🛂",
     checks: [
       {
@@ -84,7 +84,7 @@ const steps = [
         options: ["Ja — door het vrij verkeer van personen", "Nee — alleen met speciale vergunning", "Alleen voor maximaal 3 maanden", "Alleen als hij Frans spreekt"],
         answer: 0,
         wrongHints: [null, "EU-burgers hebben juist GEEN vergunning nodig. Wel registratie soms.", "Geen 3-maanden-limiet voor werken. Wel voor toerisme buiten EU.", "Taal is leuk maar niet wettelijk verplicht."],
-        explanation: "**Vrij verkeer van personen** = elke EU-burger mag in elk EU-land wonen, werken, studeren, pensioenkrijgen. Geen werkvergunning vereist. Wel: meestal eerste 3 maanden registreren bij gemeente.",
+        explanation: "**Vrij verkeer van personen** = elke EU-burger mag in elk EU-land wonen, werken, studeren en met pensioen gaan. Geen werkvergunning vereist. Wel: meestal eerste 3 maanden registreren bij gemeente.",
         uitlegPad: compact(
           "EU-burger = mag overal in EU werken + wonen zonder vergunning. Geldt niet voor niet-EU (bv. Britten sinds Brexit moeten weer vergunning).",
           { basis: "Ja, vrij verkeer.", simpeler: "NL'er in FR werken = mag, geen papier nodig.", nogSimpeler: "Ja" },
@@ -95,7 +95,7 @@ const steps = [
         q: "Mag de Nederlandse overheid invoerheffing leggen op auto's uit Duitsland?",
         options: ["Ja — vrij om te kiezen", "Ja — alleen op luxe-auto's", "Nee — vrij verkeer van goederen verbiedt dit", "Nee — alleen voor brandstof-auto's"],
         answer: 2,
-        wrongHints: ["Tegenovergesteld — invoerheffingen binnen EU zijn juist VERBODEN.", "Geen onderscheid lux/standaard binnen EU.", null, "Geen onderscheid brandstof/elektrisch binnen EU."],
+        wrongHints: ["Tegenovergesteld — invoerheffingen binnen EU zijn juist VERBODEN.", "Geen onderscheid luxe/standaard binnen EU.", null, "Geen onderscheid brandstof/elektrisch binnen EU."],
         explanation: "**Vrij verkeer van goederen** = geen invoerheffingen tussen EU-lidstaten. NL mag geen extra belasting op Duitse auto's heffen. WEL toegestaan: BPM (Belasting van Personenauto's) op ALLE auto's (Nederlandse + Duitse) — dat is geen invoerheffing, maar gebruiks-belasting.",
         uitlegPad: compact(
           "Geen invoerheffingen tussen EU-lidstaten = douanevrije markt. Wel BTW + gebruiks-belastingen (BPM) — die gelden voor alle auto's gelijk.",
@@ -107,7 +107,7 @@ const steps = [
   },
   {
     title: "Stap 3 — Europese Commissie + Parlement",
-    explanation: "Twee belangrijke EU-instellingen:\n\n**🏛️ Europese Commissie** (in Brussel)\n- Heeft 27 commissarissen (1 per lidstaat).\n- **Initiatiefrecht**: ALLEEN de Commissie mag nieuwe wetsvoorstellen indienen.\n- Voorzitter: **Ursula von der Leyen** (sinds 2019, Duits CDU-politica).\n- Ambtenaren-apparaat dat beleid voorbereidt + uitvoert.\n\n**📋 Europees Parlement** (in Brussel + Straatsburg)\n- **705 leden** (MEPs — Members of European Parliament) — direct gekozen door EU-burgers (elke 5 jaar).\n- NL heeft 31 MEPs (op basis van bevolking).\n- Bevoegdheid: wetsvoorstellen van Commissie goedkeuren of afwijzen + EU-begroting stemmen + Commissie controleren.\n- Voorzitter: Roberta Metsola (Malta, sinds 2022).\n\n**Onthoud:** Commissie maakt het voorstel → Parlement + Raad stemmen. Net als regering + Tweede Kamer in NL.",
+    explanation: "Twee belangrijke EU-instellingen:\n\n**🏛️ Europese Commissie** (in Brussel)\n- Heeft 27 commissarissen (1 per lidstaat).\n- **Initiatiefrecht**: ALLEEN de Commissie mag nieuwe wetsvoorstellen indienen.\n- Voorzitter: **Ursula von der Leyen** (sinds 2019, Duits CDU-politica).\n- Ambtenaren-apparaat dat beleid voorbereidt + uitvoert.\n\n**📋 Europees Parlement** (in Brussel + Straatsburg)\n- **720 leden** (MEPs — Members of European Parliament) — direct gekozen door EU-burgers (elke 5 jaar).\n- NL heeft 31 MEPs (op basis van bevolking).\n- Bevoegdheid: wetsvoorstellen van Commissie goedkeuren of afwijzen + EU-begroting stemmen + Commissie controleren.\n- Voorzitter: Roberta Metsola (Malta, sinds 2022).\n\n**Onthoud:** Commissie maakt het voorstel → Parlement + Raad stemmen. Net als regering + Tweede Kamer in NL.",
     emoji: "🏛️",
     checks: [
       {
@@ -129,7 +129,7 @@ const steps = [
         wrongHints: ["Regeringsleiders kiezen de Commissie-voorzitter en commissarissen, NIET de MEPs.", "Nationale parlementen kiezen geen MEPs — dat doen de burgers zelf.", null, "Commissie kiest niet — wordt zelf door Parlement goedgekeurd."],
         explanation: "**MEPs worden direct door EU-burgers gekozen** in EU-parlementsverkiezingen — elke 5 jaar. Laatste verkiezingen: juni 2024. NL koos 31 MEPs uit verschillende partijen.",
         uitlegPad: compact(
-          "MEPs (Europees Parlement) = direct gekozen door burgers. Net als Tweede Kamerleden in NL — gekozen volk vertegenwoordigen.",
+          "MEPs (Europees Parlement) = direct gekozen door burgers. Net als Tweede Kamerleden in NL — gekozen om het volk te vertegenwoordigen.",
           { basis: "Direct gekozen.", simpeler: "Burgers stemmen elke 5 jaar op MEPs.", nogSimpeler: "Burgers kiezen" },
           [{ woord: "MEP", uitleg: "Member of European Parliament — Europarlementariër." }, { woord: "Europese verkiezingen", uitleg: "Eens per 5 jaar — alle EU-burgers stemmen." }],
         ),
@@ -186,7 +186,7 @@ const steps = [
         uitlegPad: compact(
           "António Costa = voorzitter Europese Raad sinds dec 2024. Portugese sociaal-democraat, oud-premier Portugal.",
           { basis: "António Costa.", simpeler: "Costa (PT) = Europese Raad-voorzitter sinds eind 2024.", nogSimpeler: "Costa" },
-          [{ woord: "Antóní­o Costa", uitleg: "Voorzitter Europese Raad sinds 1 december 2024." }],
+          [{ woord: "António Costa", uitleg: "Voorzitter Europese Raad sinds 1 december 2024." }],
         ),
       },
     ],
@@ -213,9 +213,9 @@ const steps = [
         options: ["België", "Duitsland", "Polen", "Spanje"],
         answer: 2,
         wrongHints: ["België is euro-land vanaf dag 1 (1999).", "Duitsland is euro-land vanaf 1999.", null, "Spanje is euro-land sinds 1999."],
-        explanation: "**Polen** heeft de **zloty** (PLN). Polen besloot bewust euro NIET in te voeren. Andere EU-landen zonder euro: Zweden, Denemarken, Tsjechië, Hongarije, Roemenië, Bulgarije.",
+        explanation: "**Polen** heeft de **zloty** (PLN). Polen besloot bewust euro NIET in te voeren. Andere EU-landen zonder euro: Zweden, Denemarken, Tsjechië, Hongarije, Roemenië.",
         uitlegPad: compact(
-          "Polen = zloty. Andere EU-landen met eigen munt: Zweden + Denemarken (krona/krone), Tsjechië + Hongarije (forint), Roemenië + Bulgarije.",
+          "Polen = zloty. Andere EU-landen met eigen munt: Zweden + Denemarken (krona/krone), Tsjechië (kroon), Hongarije (forint), Roemenië (leu).",
           { basis: "Polen heeft zloty.", simpeler: "Polen = niet-euro = zloty.", nogSimpeler: "Polen" },
           [{ woord: "zloty", uitleg: "Munt van Polen (PLN)." }],
         ),
@@ -244,7 +244,7 @@ const steps = [
         options: ["10 sterren", "12 sterren", "15 sterren", "27 sterren (één per lidstaat)"],
         answer: 1,
         wrongHints: ["Te weinig.", null, "Te veel — het is een vast aantal.", "Veel mensen denken dit — maar nee, het aantal sterren verandert NIET met het aantal landen. Vaste 12."],
-        explanation: "**12 sterren** op de EU-vlag — vast aantal sinds 1955 (toen er nog maar 6 landen waren). 12 staat voor perfectie/voltooidheid (12 maanden, 12 apostelen, 12 uren). VERANDERT NIET met aantal lidstaten.",
+        explanation: "**12 sterren** op de EU-vlag — vast aantal sinds 1955 (eerst als vlag van de Raad van Europa). 12 staat voor perfectie/voltooidheid (12 maanden, 12 apostelen, 12 uren). VERANDERT NIET met aantal lidstaten.",
         uitlegPad: compact(
           "EU-vlag = 12 gele sterren op blauw. Vast getal — niet aantal landen. Symbool van eenheid + perfectie.",
           { basis: "12 sterren.", simpeler: "Vlag heeft altijd 12 sterren, los van aantal landen.", nogSimpeler: "12" },
@@ -268,7 +268,7 @@ const steps = [
         options: ["1 mei (Dag van de Arbeid)", "9 mei (Schuman-verklaring 1950)", "1 januari (oprichting euro)", "31 januari (Brexit)"],
         answer: 1,
         wrongHints: ["1 mei is Dag van de Arbeid (vakbonden-dag), niet EU.", null, "1 jan 2002 = invoering euro, maar geen Europa-dag.", "31 jan 2020 = Brexit — geen viering!"],
-        explanation: "**9 mei** = Schuman-dag, naar Robert Schuman (Frans buitenlandse-minister) die op 9 mei 1950 het plan voor de Europese samenwerking presenteerde (kolen + staal). Dat is officieel het begin van de EU-samenwerking.",
+        explanation: "**9 mei** = Schuman-dag, naar Robert Schuman (Franse minister van Buitenlandse Zaken) die op 9 mei 1950 het plan voor de Europese samenwerking presenteerde (kolen + staal). Dat is officieel het begin van de EU-samenwerking.",
         uitlegPad: compact(
           "9 mei = Dag van Europa. Verwijst naar Schuman-verklaring 1950 — startpunt EU-samenwerking.",
           { basis: "9 mei.", simpeler: "9 mei = Europa-dag. Schuman 1950.", nogSimpeler: "9 mei" },

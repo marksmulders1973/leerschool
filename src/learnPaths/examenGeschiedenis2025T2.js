@@ -33,10 +33,10 @@ const steps = [
         wrongHints: [
           "Niet alle mannen — censuskiesrecht bleef. Volledig mannenkiesrecht kwam pas in 1917.",
           null,
-          "De koning bleef juist onschendbaar (artikel 42): 'De koning is onschendbaar, de ministers zijn verantwoordelijk.'",
+          "De koning bleef juist onschendbaar (nu artikel 42 van de Grondwet): 'De koning is onschendbaar, de ministers zijn verantwoordelijk.'",
           "Nederland bleef een constitutionele monarchie — geen republiek.",
         ],
-        explanation: "Thorbecke's Grondwet van 1848 maakte ministers verantwoordelijk aan het parlement (in plaats van aan de koning). De Tweede Kamer werd voortaan rechtstreeks gekozen. Dit was het begin van de parlementaire democratie in Nederland. Echte machtsoverdracht van koning naar parlement.",
+        explanation: "De Grondwet van Thorbecke (1848) maakte ministers verantwoordelijk tegenover het parlement (in plaats van aan de koning). De Tweede Kamer werd voortaan rechtstreeks gekozen. Dit was het begin van de parlementaire democratie in Nederland. Echte machtsoverdracht van koning naar parlement.",
         examenBron: BRON_LABEL(1),
         bronLink: BRON_LINK,
         leerpadLink: { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis" },
@@ -47,8 +47,8 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "1848 = Thorbecke's grondwet", tekst: "**Johan Rudolph Thorbecke** schreef in 1848 een nieuwe Grondwet voor koning Willem II. Reden: angst voor revolutie (1848 = revolutiejaar in heel Europa)." },
-            { titel: "Wat veranderde concreet?", tekst: "**Ministers werden verantwoordelijk aan het parlement**, niet meer aan de koning. **Tweede Kamer** werd direct gekozen door kiesgerechtigden. Het parlement kreeg dus echt macht." },
+            { titel: "1848 = grondwet van Thorbecke", tekst: "**Johan Rudolph Thorbecke** schreef in 1848 een nieuwe Grondwet voor koning Willem II. Reden: angst voor revolutie (1848 = revolutiejaar in heel Europa)." },
+            { titel: "Wat veranderde concreet?", tekst: "**Ministers werden verantwoordelijk tegenover het parlement**, niet meer aan de koning. **Tweede Kamer** werd direct gekozen door kiesgerechtigden. Het parlement kreeg dus echt macht." },
             { titel: "Wat bleef hetzelfde?", tekst: "Censuskiesrecht (alleen rijke mannen mochten stemmen) bleef tot 1917. Koning bleef onschendbaar. Geen republiek — koning bleef staatshoofd." },
           ],
           woorden: [
@@ -56,14 +56,14 @@ const steps = [
             { woord: "parlement", uitleg: "Volksvertegenwoordiging — Tweede + Eerste Kamer." },
             { woord: "constitutionele monarchie", uitleg: "Koning + parlement + grondwet — geen absolute koning." },
           ],
-          theorie: "Toets-truc: 1848 = Thorbecke = parlement meer macht. Drie veranderingen onthouden: 1) ministers verantwoordelijk aan Kamer, 2) Tweede Kamer rechtstreeks gekozen, 3) grondrechten erin (vrijheid van drukpers, vergadering).",
+          theorie: "Toets-truc: 1848 = Thorbecke = parlement meer macht. Drie veranderingen onthouden: 1) ministers verantwoordelijk tegenover Kamer, 2) Tweede Kamer rechtstreeks gekozen, 3) grondrechten erin (vrijheid van drukpers, vergadering).",
           voorbeelden: [
             { type: "feit", tekst: "In 1848 woedden revoluties in Frankrijk, Duitsland, Italië. Willem II zei: 'Ik ben in 24 uur van conservatief liberaal geworden' — om revolutie in NL te voorkomen." },
           ],
-          basiskennis: [{ onderwerp: "Tijdvak", uitleg: "1848 valt in tijdvak 8 (Burgers en stoommachines, 1800-1900) van de canon van Nederland." }],
+          basiskennis: [{ onderwerp: "Tijdvak", uitleg: "1848 valt in tijdvak 8 (Burgers en stoommachines, 1800-1900) van de tien tijdvakken." }],
           niveaus: {
             basis: "Parlement meer macht.",
-            simpeler: "Thorbecke 1848 → parlement (Tweede Kamer) gekozen + ministers verantwoordelijk aan Kamer = parlement meer macht.",
+            simpeler: "Thorbecke 1848 → parlement (Tweede Kamer) gekozen + ministers verantwoordelijk tegenover Kamer = parlement meer macht.",
             nogSimpeler: "Parlement meer macht",
           },
         },
@@ -88,7 +88,7 @@ const steps = [
         wrongHints: [
           "Een openbare zitting is wél een kenmerk van een rechtsstaat — niet een reden dat het er géén is.",
           null,
-          "Een openbare zitting alléén is niet genoeg — in dictaturen waren show-processes ook 'openbaar'.",
+          "Een openbare zitting alléén is niet genoeg — in dictaturen waren showprocessen ook 'openbaar'.",
           "Onjuist: in dictaturen zoals USSR-Stalin of nazi-Duitsland was er géén eerlijk proces — uitkomst stond vooraf vast.",
         ],
         explanation: "Een **rechtsstaat** wordt gedefinieerd door **eerlijk proces** (verdediging, onschuld-tot-bewezen-anders, onafhankelijke rechter), niet alleen door 'openbare zitting'. In show-processen (USSR-Stalin, nazi-Volksgerichtshof) was de uitkomst van tevoren bepaald — bekentenissen werden afgedwongen, advocaten waren benoemd door de staat, rechters waren politiek loyaal. Dat is geen rechtsstaat.",
@@ -104,7 +104,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een rechtsstaat?", tekst: "Een **rechtsstaat** is een land waar de **wet boven de macht** staat. Iedereen (ook de regering) moet zich aan de wet houden. Burgers hebben rechten: eerlijk proces, vrijheid van meningsuiting, geen willekeurige arrestatie." },
             { titel: "Wat maakt een proces 'eerlijk'?", tekst: "1) Onafhankelijke rechter (niet politiek gestuurd). 2) Recht op advocaat van eigen keuze. 3) Verdachte mag zich verdedigen. 4) Onschuldig totdat bewijs anders zegt. 5) Beroep mogelijk." },
-            { titel: "Show-processen ≠ eerlijk", tekst: "In dictaturen (Stalin's Sovjet-Unie, nazi-Volksgerichtshof, Mao's China) waren processen vaak openbaar — maar de **uitkomst stond vooraf vast**. Bekentenissen werden gemarteld eruit. Advocaten waren staats-loyaal. Dus: openbaar ≠ eerlijk." },
+            { titel: "Show-processen ≠ eerlijk", tekst: "In dictaturen (Stalins Sovjet-Unie, nazi-Volksgerichtshof, Mao's China) waren processen vaak openbaar — maar de **uitkomst stond vooraf vast**. Bekentenissen werden eruit gemarteld. Advocaten waren staats-loyaal. Dus: openbaar ≠ eerlijk." },
           ],
           woorden: [
             { woord: "rechtsstaat", uitleg: "Land waar wet boven macht staat — burgers beschermd tegen willekeur." },
@@ -113,7 +113,7 @@ const steps = [
           ],
           theorie: "Toets-truc rechtsstaat-vraag: kijk naar **kern-kenmerken** (eerlijk proces + onafhankelijke rechter + advocaat + beroep), niet naar oppervlakte (openbaar/gesloten zitting). Een dictatuur kan show-processen openbaar houden voor propaganda.",
           voorbeelden: [
-            { type: "feit", tekst: "Stalin's Grote Zuiveringen (1936-1938): drie show-processen tegen oude bolsjewieken. Bekentenissen onder marteling, executies binnen 24 uur. Openbaar maar volstrekt oneerlijk." },
+            { type: "feit", tekst: "Stalins Grote Zuiveringen (1936-1938): drie show-processen tegen oude bolsjewieken. Bekentenissen onder marteling, executies binnen 24 uur. Openbaar maar volstrekt oneerlijk." },
             { type: "feit", tekst: "Neurenberg-tribunaal (1945-46): nazi-leiders berecht door geallieerden. Met advocaten, verdediging, bewijslast — wél een eerlijk proces ondanks de zware misdrijven." },
           ],
           basiskennis: [{ onderwerp: "Toets-strikvraag", uitleg: "Het woord 'openbaar' klinkt positief en lijkt op rechtsstaat-kenmerk. Maar dictaturen waren ook openbaar — dat is geen onderscheidend criterium. **Eerlijk proces** is wél onderscheidend." }],
@@ -147,7 +147,7 @@ const steps = [
           "Het distributiesysteem (rantsoenering) was het GEVOLG van de tekorten, niet de oorzaak. Vraag staat omgekeerd.",
           "De Russische Revolutie (1917) raakte vooral Oost-Europa, niet de aanvoer naar Nederland.",
         ],
-        explanation: "Hoewel Nederland tijdens WO1 (1914-1918) neutraal was, raakte het wel verzeild in de **handelsblokkades** tussen Duitsland en de geallieerden. Britse marine blokkeerde Duitse aanvoer; Duitsland gebruikte onbeperkte duikbootoorlog tegen koopvaardij. Nederlandse handel zat tussen beide kampen klem. Resultaat: importen vielen weg → tekort aan kolen, voedsel, grondstoffen. Pas eind 1918 (na het einde van de oorlog) verdwenen de blokkades.",
+        explanation: "Hoewel Nederland tijdens WO1 (1914-1918) neutraal was, raakte het wel verzeild in de **handelsblokkades** tussen Duitsland en de geallieerden. Britse marine blokkeerde Duitse aanvoer; Duitsland gebruikte onbeperkte duikbootoorlog tegen koopvaardij. Nederlandse handel zat tussen beide kampen klem. Resultaat: de import viel weg → tekort aan kolen, voedsel, grondstoffen. Pas eind 1918 (na het einde van de oorlog) verdwenen de blokkades.",
         examenBron: BRON_LABEL(10),
         bronLink: BRON_LINK,
         leerpadLink: { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis" },
@@ -158,9 +158,9 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Nederland 1914-1918 = neutraal", tekst: "Nederland deed niet mee aan WO1. Maar lag tussen Duitsland (vechtkamp 1) en België/Frankrijk/UK (kamp 2) in. Onze schepen werden door beide kanten lastig gevallen." },
-            { titel: "Handelsbelemmeringen = blokkades", tekst: "**Engelse marine** sloot Noordzee af om Duitse aanvoer te stoppen. **Duitsland** vuurde duikboten op alles wat naar Engeland voer (onbeperkte duikbootoorlog vanaf 1917). Nederlandse handel klem → import valt weg." },
-            { titel: "Wat kwam erna?", tekst: "Distributiesysteem (= rantsoenering = bonnen voor brood, kolen, suiker) was het GEVOLG van het tekort, niet de oorzaak. Vandaar foute" },
+            { titel: "Nederland 1914-1918 = neutraal", tekst: "Nederland deed niet mee aan WO1. Maar lag tussen Duitsland (vechtkamp 1) en België/Frankrijk/UK (kamp 2) in. Onze schepen werden door beide kanten lastiggevallen." },
+            { titel: "Handelsbelemmeringen = blokkades", tekst: "**Engelse marine** sloot Noordzee af om Duitse aanvoer te stoppen. **Duitse duikboten** vielen alles aan wat naar Engeland voer (onbeperkte duikbootoorlog vanaf 1917). Nederlandse handel klem → import valt weg." },
+            { titel: "Wat kwam erna?", tekst: "Distributiesysteem (= rantsoenering = bonnen voor brood, kolen, suiker) was het GEVOLG van het tekort, niet de oorzaak. Vandaar dat die optie fout is." },
           ],
           woorden: [
             { woord: "handelsbelemmering", uitleg: "Iets wat handel hindert (blokkade, tarief, embargo)." },
@@ -170,10 +170,10 @@ const steps = [
           ],
           theorie: "Toets-truc oorzaak-vs-gevolg vraag: lees de vraag heel zorgvuldig. 'Oorzaak van' → wat veroorzaakt het. 'Gevolg van' → wat ontstaat erdoor. Distributiesysteem was duidelijk gevolg (= oplossing voor het tekort), niet oorzaak.",
           voorbeelden: [
-            { type: "feit", tekst: "1918: in Nederlandse steden 'aardappel-oproer' uitgebroken — vrouwen plunderden distributiekantoren omdat hun bonnen geen eten meer kregen." },
-            { type: "feit", tekst: "Engelse blokkade was zo effectief dat Duitsland 800.000 burgers verloor aan hongersnood — 'Steckrübenwinter' 1916-1917 (knollenwinter)." },
+            { type: "feit", tekst: "1917: in Amsterdam brak het 'aardappeloproer' uit — vrouwen plunderden aardappelschepen omdat er op hun bonnen geen eten meer te krijgen was." },
+            { type: "feit", tekst: "Engelse blokkade was zo effectief dat Duitsland 800.000 burgers verloor aan hongersnood — 'Steckrübenwinter' 1916-1917 (koolrapenwinter)." },
           ],
-          basiskennis: [{ onderwerp: "Tijdvak", uitleg: "WO1 (1914-1918) zit in tijdvak 9. Neutrale houding NL: Wilhelmina, Cort van der Linden. Hoeveel doden: 0 oorlogsdoden NL (Belgische vluchtelingen wel)." }],
+          basiskennis: [{ onderwerp: "Tijdvak", uitleg: "WO1 (1914-1918) zit in tijdvak 9. Neutrale houding NL: Wilhelmina, Cort van der Linden. Geen gevechtsdoden in NL; wel ving NL zo'n 1 miljoen Belgische vluchtelingen op." }],
           niveaus: {
             basis: "Handelsbelemmeringen (blokkade door beide kampen).",
             simpeler: "NL was neutraal in WO1 maar lag tussen Engeland en Duitsland in. Beide kampen blokkeerden de scheepvaart → import viel weg → tekort.",
@@ -204,7 +204,7 @@ const steps = [
           "Nederland verklaarde Duitsland nooit zelf de oorlog — Duitsland viel zonder waarschuwing binnen op 10 mei 1940.",
           "Nederland was juist NIET meer neutraal — dat eindigde op 10 mei toen Duitsland binnenviel.",
         ],
-        explanation: "Het bombardement van Rotterdam op 14 mei 1940 verwoestte de hele binnenstad — ~25.000 huizen vernield, ~900 doden. Duitsland dreigde ook Utrecht en Amsterdam te bombarderen. **Generaal Winkelman tekende dezelfde avond de capitulatie**. Koningin Wilhelmina en de regering waren al uitgeweken naar Londen (13 mei). Vijf dagen oorlog → 5 jaar bezetting.",
+        explanation: "Het bombardement van Rotterdam op 14 mei 1940 verwoestte de hele binnenstad — ~25.000 huizen vernield, ~900 doden. Duitsland dreigde ook Utrecht en Amsterdam te bombarderen. **Generaal Winkelman besloot dezelfde avond te capituleren** (de handtekening volgde op 15 mei). Koningin Wilhelmina en de regering waren al uitgeweken naar Londen (13 mei). Vijf dagen oorlog → 5 jaar bezetting.",
         examenBron: BRON_LABEL(24),
         bronLink: BRON_LINK,
         leerpadLink: { id: "wereldoorlog2-geschiedenis", title: "Wereldoorlog 2" },
@@ -217,7 +217,7 @@ const steps = [
           stappen: [
             { titel: "10 mei 1940 — Duitse inval", tekst: "Zonder oorlogsverklaring viel Duitsland Nederland, België, Luxemburg en Frankrijk tegelijk binnen. Nederland was tot dat moment neutraal." },
             { titel: "11-13 mei — gevechten + vlucht", tekst: "Nederlandse leger vocht 5 dagen tegen oppermachtige Duitsers. **Wilhelmina** vluchtte op 13 mei naar Londen. Regering volgde — vormde regering-in-ballingschap." },
-            { titel: "14 mei — Rotterdam + capitulatie", tekst: "Duitse Luftwaffe bombardeerde 14 mei rond 13:30 uur Rotterdam plat — ~900 doden, hele binnenstad weg. Dreiging: Utrecht is volgende. **Generaal Winkelman tekent capitulatie** dezelfde avond. 5 jaar bezetting begint." },
+            { titel: "14 mei — Rotterdam + capitulatie", tekst: "Duitse Luftwaffe bombardeerde 14 mei rond 13:30 uur Rotterdam plat — ~900 doden, hele binnenstad weg. Dreiging: Utrecht is volgende. **Generaal Winkelman besluit dezelfde avond te capituleren**. 5 jaar bezetting begint." },
           ],
           woorden: [
             { woord: "capituleren", uitleg: "Overgeven, de strijd opgeven." },
@@ -227,10 +227,10 @@ const steps = [
           ],
           theorie: "Toets-truc tijdvolgorde-vraag: schrijf de gebeurtenissen op datum. Inval (10 mei) → vlucht Wilhelmina (13 mei) → Rotterdam-bom (14 mei) → capitulatie (14 mei avond). Reactie OP bombardement = capitulatie. Mobilisatie was al maanden eerder.",
           voorbeelden: [
-            { type: "feit", tekst: "In totaal verloor NL ~2000 militaren tijdens de 5-dagen-strijd. Rotterdam-burgerslachtoffers: ~900. Toaal NL slachtoffers WO2 (incl. holocaust): ~250.000." },
-            { type: "feit", tekst: "Het bombardement was gepland op 12 mei, maar wegens slecht weer uitgesteld. Een onderhandelingspoging om Rotterdam te sparen werd door communicatiefout onderbroken." },
+            { type: "feit", tekst: "In totaal verloor NL ~2000 militaren tijdens de 5-dagen-strijd. Rotterdam-burgerslachtoffers: ~900. Totaal NL slachtoffers WO2 (incl. holocaust): ~250.000." },
+            { type: "feit", tekst: "Tijdens het bombardement liep er nog een onderhandeling over overgave. Door een communicatiefout werd een deel van de bommenwerpers niet op tijd teruggeroepen." },
           ],
-          basiskennis: [{ onderwerp: "Tijdvak", uitleg: "Mei 1940 = begin tijdvak 9 (wereldoorlogen + holocaust). NL was neutraal tot 10 mei, daarna bezet 1940-1945." }],
+          basiskennis: [{ onderwerp: "Tijdvak", uitleg: "Mei 1940 valt in tijdvak 9 (wereldoorlogen + holocaust). NL was neutraal tot 10 mei, daarna bezet 1940-1945." }],
           niveaus: {
             basis: "Nederland capituleerde.",
             simpeler: "Rotterdam plat, Utrecht is volgende → leger geeft zich over (capituleert) op 14 mei avond.",
@@ -261,7 +261,7 @@ const steps = [
           null,
           "Overlegeconomie (poldermodel, jaren '80) was juist een STABILISERENDE factor — geen bedreiging.",
         ],
-        explanation: "**Vergrijzing** = de babyboomers (1946-1964 geboren) bereikten in de jaren '90 langzaam pensioen-leeftijd. Meer AOW'ers + langere levensduur + minder werkenden = AOW-pot komt onder druk. Daarom werd de pensioenleeftijd later (van 65 naar 67) verhoogd. De andere opties zijn maatschappelijke veranderingen die de verzorgingsstaat-financiën niet direct raken.",
+        explanation: "**Vergrijzing** = steeds meer ouderen. In de jaren '90 werd duidelijk dat de babyboomers (geboren 1946-1964) vanaf ~2010 met pensioen zouden gaan. Meer AOW'ers + langere levensduur + minder werkenden = AOW-pot komt onder druk. Daarom werd de pensioenleeftijd later verhoogd (van 65 naar 67). De andere opties zijn maatschappelijke veranderingen die de verzorgingsstaat-financiën niet direct raken.",
         examenBron: BRON_LABEL(43),
         bronLink: BRON_LINK,
         leerpadLink: { id: "nederlandse-staat-maatschappijleer", title: "Nederlandse staat + politiek" },
@@ -274,7 +274,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een verzorgingsstaat?", tekst: "Een **verzorgingsstaat** zorgt voor burgers van wieg tot graf: kinderbijslag, ziekenfonds, werkloosheidsuitkering, **AOW** (ouderdomsuitkering 67+). Opgebouwd in NL na 1957 (Drees)." },
             { titel: "Wie betaalt? Wie krijgt?", tekst: "**Werkenden betalen premie** via belasting. **Ouderen + zieken + werklozen** krijgen uitkering. Werkt zolang er genoeg werkenden zijn per uitkering-ontvanger." },
-            { titel: "Vergrijzing = onbalans", tekst: "Geboortegolf 1946-1964 (babyboomers) wordt in jaren '90+ oud. **Meer AOW'ers + langere levensduur**, terwijl het aantal werkenden niet meegroeit. AOW-pot raakt leeg → in 2012 verhoogde NL pensioenleeftijd van 65 naar 67." },
+            { titel: "Vergrijzing = onbalans", tekst: "Geboortegolf 1946-1964 (babyboomers) gaat vanaf ~2010 met pensioen. **Meer AOW'ers + langere levensduur**, terwijl het aantal werkenden niet meegroeit. AOW-pot raakt leeg → in 2012 verhoogde NL pensioenleeftijd van 65 naar 67." },
           ],
           woorden: [
             { woord: "verzorgingsstaat", uitleg: "Staat met uitkeringen voor zieken, werklozen, ouderen — gefinancierd door belastingen." },
@@ -290,7 +290,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Tijdvak", uitleg: "Verzorgingsstaat opgebouwd in tijdvak 10 (televisie + computers, 1950-nu). Jaren '90 = piek-vergrijzing-discussie." }],
           niveaus: {
             basis: "Toename ouderdomsuitkering (vergrijzing).",
-            simpeler: "Babyboomers werden oud → meer AOW-betalers vs minder werkenden → financieel probleem.",
+            simpeler: "Babyboomers werden oud → meer AOW-ontvangers vs minder werkenden → financieel probleem.",
             nogSimpeler: "Vergrijzing",
           },
         },
@@ -313,12 +313,12 @@ const steps = [
         ],
         answer: 2,
         wrongHints: [
-          "EU-uitbreiding naar Oost-Europa kwam later (2004). In 1991 was de EU pas net opgericht (Verdrag van Maastricht).",
+          "EU-uitbreiding naar Oost-Europa kwam later (2004). In 1991 bestond de EU nog niet eens (pas in 1993, Verdrag van Maastricht).",
           "Russische invloed was juist aan het AFBROKKELEN in 1991, niet uitbreiden. Sovjet-Unie viel uit elkaar.",
           null,
-          "Fascisme verdween al in 1945 met de val van Hitler en Mussolini. In 1991 is dit volkomen niet aan de orde.",
+          "Fascisme verdween al in 1945 met de val van Hitler en Mussolini. In 1991 is dit helemaal niet aan de orde.",
         ],
-        explanation: "1989 = de revoluties in Oost-Europa: Berlijnse Muur valt, communistische regeringen treden af in Polen (Solidarność), Hongarije, Tsjechoslowakije (Fluwelen Revolutie), Roemenië (Ceaușescu vermoord). 1990 = Duitsland hereniging. 1991 = de drie landen verlaten formeel het Warschaupact (Sovjet-militaire alliantie). Daarna valt de Sovjet-Unie zelf uit elkaar (26 december 1991). De drijvende kracht: het communisme had de bevolking + economie kapot gemaakt — overal opstand tegen.",
+        explanation: "1989 = de revoluties in Oost-Europa: Berlijnse Muur valt, communistische regeringen treden af in Polen (Solidarność), Hongarije, Tsjechoslowakije (Fluwelen Revolutie), Roemenië (Ceaușescu geëxecuteerd). 1990 = Duitse hereniging. 1991 = de drie landen verlaten formeel het Warschaupact (Sovjet-militaire alliantie). Daarna valt de Sovjet-Unie zelf uit elkaar (26 december 1991). De drijvende kracht: het communisme had de bevolking + economie kapot gemaakt — overal opstand tegen.",
         examenBron: BRON_LABEL(44),
         bronLink: BRON_LINK,
         leerpadLink: { id: "koude-oorlog-modern-po", title: "Koude Oorlog + moderne geschiedenis" },
@@ -331,7 +331,7 @@ const steps = [
           stappen: [
             { titel: "Wat was het Warschaupact?", tekst: "Het **Warschaupact** (1955-1991) was de Sovjet-militaire alliantie tegenover de NAVO. Leden: USSR + Oost-Duitsland (DDR) + Polen + Tsjechoslowakije + Hongarije + Roemenië + Bulgarije + Albanië. Communistisch blok in Oost-Europa." },
             { titel: "1989 = jaar van revoluties", tekst: "**Solidarność** wint verkiezingen Polen (juni). Hongarije opent grens naar Oostenrijk (september). **Berlijnse Muur valt** (9 november). **Fluwelen Revolutie** Tsjechoslowakije (november). Roemeense dictator Ceaușescu geëxecuteerd (kerst). Allemaal binnen 1 jaar — overal viel het communisme weg." },
-            { titel: "1991 = lege wraak-club", tekst: "Zonder communistische regeringen had het Warschaupact (= verdedigingspact voor communisme) geen doel meer. Polen, Hongarije, Tsjechoslowakije stapten formeel uit in 1991. Vervolgens viel de Sovjet-Unie zelf uit elkaar — 26 december 1991. Warschaupact stierf hetzelfde jaar." },
+            { titel: "1991 = club zonder doel", tekst: "Zonder communistische regeringen had het Warschaupact (= verdedigingspact voor communisme) geen doel meer. Polen, Hongarije, Tsjechoslowakije stapten formeel uit in 1991. Vervolgens viel de Sovjet-Unie zelf uit elkaar — 26 december 1991. Warschaupact stierf hetzelfde jaar." },
           ],
           woorden: [
             { woord: "Warschaupact", uitleg: "Sovjet-militaire alliantie 1955-1991 (tegenhanger NAVO)." },
@@ -339,11 +339,11 @@ const steps = [
             { woord: "Fluwelen Revolutie", uitleg: "Vreedzame omverwerping communisme Tsjechoslowakije 1989." },
             { woord: "Gorbatsjov", uitleg: "Laatste Sovjet-leider 1985-1991, gaf landen vrijheid (Glasnost/Perestrojka)." },
           ],
-          theorie: "Toets-truc datum-vraag: 1991 = einde Koude Oorlog. Eliminate optie A (EU-uitbreiding kwam pas 2004). Eliminate B (Russische invloed groeide juist niet, maar kromp). Eliminate D (fascisme al weg in 1945). Blijft over: C — communisme verdween.",
+          theorie: "Toets-truc datum-vraag: 1991 = einde Koude Oorlog. Schrap optie A (EU-uitbreiding kwam pas 2004). Schrap B (Russische invloed groeide juist niet, maar kromp). Schrap D (fascisme al weg in 1945). Blijft over: C — communisme verdween.",
           voorbeelden: [
             { type: "feit", tekst: "Václav Havel — toneelschrijver-dissident — werd na de Fluwelen Revolutie eerste niet-communistische president van Tsjechoslowakije (1989-1992)." },
             { type: "feit", tekst: "Lech Wałęsa — Poolse elektricien + Solidarność-leider — werd president Polen (1990-1995). Nobelprijs voor de Vrede in 1983." },
-            { type: "feit", tekst: "Het Warschaupact was destijds zo aangetast dat Polen, Hongarije en Tsjechië in 1999 lid werden van de **NAVO** — hun voormalige vijand." },
+            { type: "feit", tekst: "Na het einde van het Warschaupact werden Polen, Hongarije en Tsjechië in 1999 lid van de **NAVO** — hun voormalige vijand." },
           ],
           basiskennis: [{ onderwerp: "Tijdvak", uitleg: "1991 valt in tijdvak 10 (televisie + computers). Einde Koude Oorlog = breekpunt — 'einde van de geschiedenis' (Fukuyama 1992)." }],
           niveaus: {

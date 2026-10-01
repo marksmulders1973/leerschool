@@ -62,7 +62,7 @@ const steps = [
       ],
       answer: 2,
       wrongHints: ["Brandnetels HEBBEN wel bloemen+stuifmeel (geslachtelijk) — maar dat is niet alles. Wat doen ze ook ondergronds?", "Ze hebben WEL bloemen → ook geslachtelijk. Niet alleen ondergronds.", null],
-      explanation: "**Brandnetel** plant zich op 2 manieren voort: GESLACHTELIJK (bloemen + stuifmeel → zaden) + ONGESLACHTELIJK (wortelstokken die kruipen onder de grond + nieuwe planten uitsteken). Daarom verspreidt de brandnetel zich zo snel in tuinen.",
+      explanation: "**Brandnetel** plant zich op 2 manieren voort: GESLACHTELIJK (bloemen + stuifmeel → zaden) + ONGESLACHTELIJK (wortelstokken die onder de grond kruipen + nieuwe planten vormen). Daarom verspreidt de brandnetel zich zo snel in tuinen.",
       examenBron: BRON_LABEL(20),
       bronLink: BRON_LINK,
       leerpadLink: { id: "voortplanting-hormonen-biologie", title: "Hormonen & voortplanting" },
@@ -129,7 +129,7 @@ const steps = [
         { id: "genetica-erfelijkheid-biologie", title: "Genetica en erfelijkheid", niveau: "VMBO-GT eindexamen", why: "fenotype vs genotype — kern van deze vraag" },
       ],
       uitlegPad: compact(
-        "Onthoud: GEN-otype = GEN-en in DNA = nooit veranderen. FEN-otype = wat je ZIET = wel veranderen. Eeneiige tweelingen = zelfde GENotype maar door omgeving verschillende FENotype. Rups = zelfde DNA als vlinder, andere genen aan/uit.",
+        "Onthoud: GEN-otype = GEN-en in DNA = verandert nooit. FEN-otype = wat je ZIET = verandert wel. Eeneiige tweelingen = zelfde GENotype maar door omgeving een ander FENotype. Rups = zelfde DNA als vlinder, andere genen aan/uit.",
         { basis: "Genotype blijft gelijk.", simpeler: "DNA verandert niet — wel hoe het lichaam eruitziet (fenotype).", nogSimpeler: "Genotype gelijk" },
         [{ woord: "genotype", uitleg: "Je DNA-code — onveranderlijk." }, { woord: "fenotype", uitleg: "Je uiterlijk + eigenschappen — wel veranderlijk." }],
       ),
