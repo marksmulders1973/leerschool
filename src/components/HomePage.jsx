@@ -1081,7 +1081,9 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             src/data/ouderQuotes.js staan. Nooit verzonnen quotes — een
             onzichtbare sectie is beter dan een nep-quote. */}
         {/* Partner-uitspraken — klein (Mark 30 sep 2026: "kunnen weg of kleiner"); alleen de organisatie. */}
-        {step === "role" && OUDER_QUOTES.length > 0 && (
+        {/* Quotes van organisaties staan sinds 1 okt 2026 op voor-organisaties.html (daar beslist een partner);
+            de startpagina blijft rustig. Ouder-quotes horen later bij het Familie-pakket (abonnement.html). */}
+        {false && step === "role" && OUDER_QUOTES.length > 0 && (
           <div className="lk-content-wide" style={{ margin: "0 auto 18px", maxWidth: 520, fontFamily: "var(--font-body)", fontSize: 12.5, lineHeight: 1.5, color: "rgba(255,255,255,0.62)" }}>
             {OUDER_QUOTES.slice(0, 3).map((q, i) => (
               <div key={i} style={{ marginBottom: 6 }}>
