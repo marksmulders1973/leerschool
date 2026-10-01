@@ -549,6 +549,7 @@ export default function MijnPagina({
   });
   const wisselMetBril = (naam) => {
     try { if (weergave === "ouder") sessionStorage.setItem("lk_weergave_wens", "ouder"); } catch { /* */ }
+    try { sessionStorage.setItem("lk_wie_net", naam); } catch { /* */ }
     if (onWisselProfiel) onWisselProfiel(naam);
   };
   const [week, setWeek] = useState(null);
@@ -1083,7 +1084,8 @@ export default function MijnPagina({
                     </button>
                   )}
                 </div>
-                {rolKey !== "leerling" && rolKey !== "student" && (<>
+                {rolKey === "ouder" && <div style={{ fontSize: 14, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", margin: "2px 0 4px" }}>Ouder of verzorger</div>}
+                {rolKey === "teacher" && (<>
                 {/* 🪪 Rol-regel (Mark 27 aug: "mij is niet duidelijk of ik hier
                     als ouder ben ingelogd") — altijd in woorden zichtbaar wíé
                     dit profiel is. Tik = rol-menu (Mark 27 aug avond): wat kun
@@ -1635,7 +1637,7 @@ export default function MijnPagina({
 
         {/* ── Weergave-schakelaar: kind ↔ ouder/juf ── */}
             {/* Meekijk-schakelaar niet voor leerlingen (Mark 1 okt 2026: "maak het simpel"). */}
-            {rolKey !== "leerling" && rolKey !== "student" && (<>
+            {rolKey === "teacher" && (<>
             <div role="group" aria-label="Weergave kiezen" style={{
               display: "inline-flex", background: "rgba(255,255,255,0.05)",
               border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999,
@@ -2502,37 +2504,20 @@ export default function MijnPagina({
             </>)}
 
             {weergave === "ouder" && (<>
-            {/* ── Gedeeld ouder-inzicht (Mark 14 aug): exact hetzelfde blok als
-                op /ouder — kind koppelen (code via WhatsApp/e-mail/kopiëren),
-                partner-mail, betalen én de voortgang per kind. Bovenaan de
-                ouder-bril zodat de koppelcode meteen te vinden is. Niet ingelogd?
-                Dan toont het blok zelf de "Inloggen met Google"-knop. ── */}
-            <div style={{ marginBottom: "var(--space-4)" }}>
-              <OuderInzicht
-                embedded
-                authUser={authUser}
-                subscription={subscription}
-                onUpgrade={onUpgrade}
-                onLogin={onLogin}
-                onKlaarzetten={onKlaarzetten}
-                onHierOefenen={onHierOefenen}
-                onOpenLes={onPickPath}
-              />
-            </div>
             {/* ── Wie oefent er op dit apparaat + login-uitnodiging (Mark 13 aug:
                 "als je ouder bent, wie zijn dan de kinderen?"). Zacht model —
                 anders dan Squla/Junior Einstein, die eerst een (betaald) account
                 eisen: wij tonen meteen wie hier oefent en nodigen uit tot
                 inloggen voor koppelen-over-apparaten + weekmail. ── */}
-            {andereNamen.length > 0 && (
+            {andereNamen.filter((n) => n.rol !== "ouder" && n.rol !== "teacher").length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(0,176,255,0.35)" }}>
-                <div style={eyebrowStijl}>Op dit apparaat</div>
+                <div style={eyebrowStijl}>{rolKey === "ouder" ? "Je kinderen" : "Op dit apparaat"}</div>
                 {/* Mark 27 aug: "als ouder moet er simpel iets staan als
                     'bekijk de resultaten van…'" — tik = kind-profiel in de
                     ouder-bril (resultaten), niet de kind-weergave. */}
-                <div style={kaartTitelStijl}>Bekijk de resultaten van…</div>
+                <div style={kaartTitelStijl}>{rolKey === "ouder" ? "Tik op je kind om te zien hoe het gaat" : "Bekijk de resultaten van…"}</div>
                 <div style={{ display: "flex", gap: 8, flexWrap: "wrap", margin: "6px 0 8px" }}>
-                  {andereNamen.map((n) => (
+                  {andereNamen.filter((n) => n.rol !== "ouder" && n.rol !== "teacher").map((n) => (
                     <button
                       key={n.naam}
                       onClick={() => { try { track("mijn_ouder_kind_wissel", {}); } catch { /* */ } wisselMetBril(n.naam); }}
@@ -2555,6 +2540,24 @@ export default function MijnPagina({
               </Card>
             )}
 
+            {rolKey === "ouder" && <div style={{ ...eyebrowStijl, margin: "4px 0 6px 2px" }}>Wat kun je doen?</div>}
+            {/* ── Gedeeld ouder-inzicht (Mark 14 aug): exact hetzelfde blok als
+                op /ouder — kind koppelen (code via WhatsApp/e-mail/kopiëren),
+                partner-mail, betalen én de voortgang per kind. Bovenaan de
+                ouder-bril zodat de koppelcode meteen te vinden is. Niet ingelogd?
+                Dan toont het blok zelf de "Inloggen met Google"-knop. ── */}
+            <div style={{ marginBottom: "var(--space-4)" }}>
+              <OuderInzicht
+                embedded
+                authUser={authUser}
+                subscription={subscription}
+                onUpgrade={onUpgrade}
+                onLogin={onLogin}
+                onKlaarzetten={onKlaarzetten}
+                onHierOefenen={onHierOefenen}
+                onOpenLes={onPickPath}
+              />
+            </div>
             {/* ── Pakket + waitlist (Mark-keuze 13 aug: informeren + waitlist).
                 Alleen voor de leraar-rol; paywall staat UIT tot 2027. Ouders
                 zien sinds 14 aug de Familie-gate in het gedeelde <OuderInzicht>
@@ -2585,8 +2588,8 @@ export default function MijnPagina({
                 </Card>
               );
             })()}
-            {/* ── Ouder/juf: afgelopen week ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+            {/* ── Ouder/juf: afgelopen week ── (niet als de ouder zélf de speler is, 1 okt 2026) */}
+            {rolKey !== "ouder" && <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               {/* Naam in de kop (Mark 27 aug: "bekijk de resultaten van…") —
                   zo is meteen duidelijk over wíé dit overzicht gaat. */}
               <div style={eyebrowStijl}>Resultaten</div>
@@ -2629,14 +2632,14 @@ export default function MijnPagina({
                   </>
                 );
               })()}
-            </Card>
+            </Card>}
 
             {/* Device-lokale "waar het misgaat" + thuis-tip ALLEEN tonen als er
                 GEEN gekoppeld kind is. Anders reflecteren ze de account-houder
                 (bv. de ouder zelf) i.p.v. het kind — dat gaf "Hier moet Mark nog
                 aan werken" in de ouder-bril (Mark 31 aug 2026). Met een gekoppeld
                 kind staat de échte Sterk/Zwak al in <OuderInzicht> hierboven. */}
-            {ouderKinderen.length === 0 && (<>
+            {ouderKinderen.length === 0 && rolKey !== "ouder" && (<>
             {/* ── Ouder/juf: waar het misgaat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Aandachtspunten</div>
@@ -2687,9 +2690,9 @@ export default function MijnPagina({
                 en per-kind-scores zitten daar nu inline — geen sprong naar /ouder
                 meer nodig. Leerkracht-uitleg blijft bewust staan. */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-              <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+              {rolKey === "teacher" && <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
                 🧑‍🏫 Leerkracht? Via het leerkracht-overzicht zet je oefenwerk klaar met een deelcode — leerlingen loggen gewoon als zichzelf in.
-              </div>
+              </div>}
               <div style={{ marginTop: 10, padding: "10px 12px", borderRadius: 10, background: "rgba(255,255,255,0.04)", border: "1px solid rgba(255,255,255,0.1)", fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
                 🔒 <strong style={{ color: "var(--color-text)" }}>Wat er zichtbaar is:</strong> voornaam, groep en het poppetje (een eigen foto blijft alleen op het apparaat zelf — wij slaan geen foto's op). Geen achternaam, niets zichtbaar voor andere leerlingen. Meting is een indicatie op basis van gemaakte vragen — geen toetsuitslag.
               </div>
