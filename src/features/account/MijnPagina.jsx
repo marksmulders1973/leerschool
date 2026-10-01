@@ -556,6 +556,8 @@ export default function MijnPagina({
   // 👨‍👩‍👧 "Wie oefent er?" (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): bij openen
   // met 2+ profielen op dit apparaat eerst kiezen (zoals Netflix), daarna via "Wissel".
   const [meerOpen, setMeerOpen] = useState(false);
+  // Compact kwartierblok (Mark 1 okt 2026: "dit groene blok is nog enorm groot"): eerste keuze achter een linkje.
+  const [zelfKiezenOpen, setZelfKiezenOpen] = useState(false);
   // Mark 1 okt 2026 (middag): "als je naar Mijn pagina gaat altijd hier beginnen". Alleen direct na
   // een keuze niet opnieuw (de pagina start opnieuw op bij een profielwissel): lk_wie_net = gekozen naam.
   const [wieOpen, setWieOpen] = useState(() => {
@@ -1704,10 +1706,10 @@ export default function MijnPagina({
                           ? `Nog ${15 - min} ${15 - min === 1 ? "minuut" : "minuten"} en je kwartier zit erop`
                           : "Vandaag nog niet geoefend — een kwartier is genoeg"}
                     </div>
-                    <div style={{ display: "flex", gap: 4, marginBottom: 12 }} aria-label={`${min} van de 15 minuten geoefend`}>
+                    <div style={{ display: "flex", gap: 3, marginBottom: 10 }} aria-label={`${min} van de 15 minuten geoefend`}>
                       {Array.from({ length: 15 }, (_, i) => (
                         <span key={i} style={{
-                          flex: 1, height: 22, borderRadius: 5,
+                          flex: 1, height: 8, borderRadius: 4,
                           background: i < min ? "#69f0ae" : "rgba(255,255,255,0.18)",
                         }} />
                       ))}
@@ -1735,14 +1737,14 @@ export default function MijnPagina({
                       const stand = bezig ? kwartierStand() : null;
                       return (
                         <>
-                          <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 8, lineHeight: 1.4 }}>
+                          {bezig && stand && <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 8, lineHeight: 1.4 }}>
                             {bezig && stand
                               ? <>Je bent bezig: blokje {stand.idx + 1} van {stand.blokjes.length} · <strong style={{ color: "var(--color-text)" }}>{stand.blokjes[stand.idx]?.titel}</strong></>
                               : <>{gedaan ? "Nog een rondje? " : "Vandaag: "}<strong style={{ color: "var(--color-text)" }}>{planSamenvatting(plan)}</strong>{plan.reden === "klaargezet" ? "" : ` · ${plan.uitleg}`}</>}
-                          </div>
+                          </div>}
                           {/* Mark 10 sep 2026: "kan het kind ook zijn eerste keuze kiezen?" — de blokjes zijn
                               tikbaar: tik er één en het kwartier begint dáármee, de rest volgt. */}
-                          {!bezig && plan.blokjes.length > 1 && (
+                          {!bezig && plan.blokjes.length > 1 && zelfKiezenOpen && (
                             <div style={{ marginBottom: 10 }}>
                               <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", marginBottom: 5 }}>Waar wil je mee beginnen?</div>
                               <div style={{ display: "flex", gap: 6, flexWrap: "wrap" }}>
@@ -1778,6 +1780,12 @@ export default function MijnPagina({
                           >
                             {resume ? "of: verder waar je was" : "of: zelf een onderwerp kiezen"}
                           </button>
+                          {!bezig && plan.blokjes.length > 1 && (
+                            <button type="button" onClick={() => setZelfKiezenOpen((o) => !o)} aria-expanded={zelfKiezenOpen}
+                              style={{ display: "block", margin: "8px auto 0", background: "none", border: "none", color: "var(--color-text-muted, #8899aa)", textDecoration: "underline", cursor: "pointer", fontSize: 12.5 }}>
+                              {zelfKiezenOpen ? "minder tonen" : "kies waarmee je kwartier begint"}
+                            </button>
+                          )}
                         </>
                       );
                     })()}
