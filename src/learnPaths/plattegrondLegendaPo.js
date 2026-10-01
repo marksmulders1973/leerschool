@@ -227,7 +227,7 @@ const steps = [
           "zomaar wat raden en doorlopen",
         ],
         answer: 0,
-        wrongHints: [null, "Negeren helpt je niet verder.", "Juist de legenda heb je nu nodig.", "Raden kan je de verkeerde kant op sturen."],
+        wrongHints: [null, "Negeren helpt je niet verder.", "Juist de plattegrond heb je nu nodig.", "Raden kan je de verkeerde kant op sturen."],
         uitlegPad: {
           stappen: [{ titel: "Legenda raadplegen", tekst: "Ken je een symbool niet? Kijk in de legenda; daar staat wat het betekent." }],
           niveaus: {
@@ -246,7 +246,7 @@ const steps = [
     explanation:
       "Op veel plattegronden staat een **windroos** of een pijl met de letter **N** (noorden). Meestal wijst het **noorden naar boven**. Dan geldt:\n\n" +
       "• **Noord** = boven · **Zuid** = onder · **Oost** = rechts · **West** = links.\n\n" +
-      "Ezelsbruggetje voor de klok rond: **N**ooit **Z**onder **O**ntbijt naar **W**erk (boven → onder, of: Noord-Oost-Zuid-West met de klok mee).\n\n" +
+      "Ezelsbruggetje met de klok mee: **N**ooit **O**p **Z**ondag **W**assen (Noord-Oost-Zuid-West).\n\n" +
       "Een **route** lees je vanaf de 'je bent hier'-stip: rechtdoor, links, rechts — stap voor stap.",
     checks: [
       {
@@ -407,7 +407,7 @@ const steps = [
           "naar de uitgang lopen",
         ],
         answer: 0,
-        wrongHints: [null, "Omdraaien helpt je niet vinden.", "Juist de legenda heb je nodig.", "De uitgang is niet het toilet."],
+        wrongHints: [null, "Omdraaien helpt je het toilet niet vinden.", "Juist de legenda heb je nodig.", "De uitgang is niet het toilet."],
         uitlegPad: {
           stappen: [{ titel: "Symbool op de kaart vinden", tekst: "Je weet uit de legenda dat 🚻 het toilet is. Zoek dat symbool op de plattegrond en loop ernaartoe." }],
           niveaus: {

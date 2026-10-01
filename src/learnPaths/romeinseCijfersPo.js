@@ -298,7 +298,7 @@ const steps = [
         q: "Hoe schrijf je **9** in Romeinse cijfers?",
         options: ["IX", "VIIII", "XI", "IIX"],
         answer: 0,
-        wrongHints: [null, "Vier I'tjes achter elkaar mag niet — gebruik aftrekken.", "Dat is 11 (X + I).", "Zo werkt aftrekken niet — I staat voor X, niet vóór een grotere letter dan X."],
+        wrongHints: [null, "Vier I'tjes achter elkaar mag niet — gebruik aftrekken.", "Dat is 11 (X + I).", "Zo werkt aftrekken niet — er mag maar één I vóór de X staan."],
         uitlegPad: {
           stappen: [{ titel: "10 − 1", tekst: "9 = 10 − 1 = I vóór X = IX." }],
           niveaus: {
@@ -409,7 +409,7 @@ const steps = [
         q: "Welk getal wordt geschreven als **XLVII**?",
         options: ["47", "57", "37", "97"],
         answer: 0,
-        wrongHints: [null, "XL is 40, niet 50.", "X is 10, niet 30.", "XC zou 90 zijn, niet XL."],
+        wrongHints: [null, "XL is 40, niet 50.", "Kijk goed: XL is 40, niet 30.", "XC zou 90 zijn, niet XL."],
         uitlegPad: {
           stappen: [{ titel: "Stukje voor stukje", tekst: "XL (40) + V (5) + II (2) = 47." }],
           niveaus: {

@@ -92,7 +92,7 @@ const steps = [
   },
   {
     title: "Wat is een 'oplossing' van een stelsel?",
-    explanation: "Een **oplossing** van een stelsel is een **paar getallen** (x, y) waarvoor **beide vergelijkingen tegelijk waar zijn**.\n\n**Drie mogelijkheden** voor een stelsel van twee lineaire vergelijkingen:\n\n**1. Eén oplossing** (meest voorkomend)\nEr is precies één paar (x, y) dat past.\n• Voorbeeld: x + y = 7 en 2x − y = 2 → x = 3, y = 4. Geen ander paar werkt.\n\n**2. Geen oplossing** (zelden)\nDe twee vergelijkingen spreken elkaar tegen — geen enkel paar werkt.\n• Voorbeeld: x + y = 5 en x + y = 7. Onmogelijk dat de som tegelijk 5 én 7 is.\n\n**3. Oneindig veel oplossingen** (zelden)\nDe vergelijkingen zijn eigenlijk dezelfde — elk paar dat de ene vergelijking maakt, maakt ook de andere.\n• Voorbeeld: x + y = 7 en 2x + 2y = 14. De tweede is gewoon 2× de eerste.\n\nIn dit pad richten we ons vooral op **geval 1** — de overgrote meerderheid van schoolopdrachten.\n\n**Notatie van oplossing**: \"x = 3 en y = 4\" of \"(x, y) = (3, 4)\".",
+    explanation: "Een **oplossing** van een stelsel is een **paar getallen** (x, y) waarvoor **beide vergelijkingen tegelijk waar zijn**.\n\n**Drie mogelijkheden** voor een stelsel van twee lineaire vergelijkingen:\n\n**1. Eén oplossing** (meest voorkomend)\nEr is precies één paar (x, y) dat past.\n• Voorbeeld: x + y = 7 en 2x − y = 2 → x = 3, y = 4. Geen ander paar werkt.\n\n**2. Geen oplossing** (zelden)\nDe twee vergelijkingen spreken elkaar tegen — geen enkel paar werkt.\n• Voorbeeld: x + y = 5 en x + y = 7. Onmogelijk dat de som tegelijk 5 én 7 is.\n\n**3. Oneindig veel oplossingen** (zelden)\nDe vergelijkingen zijn eigenlijk dezelfde — elk paar dat de ene waar maakt, maakt ook de andere waar.\n• Voorbeeld: x + y = 7 en 2x + 2y = 14. De tweede is gewoon 2× de eerste.\n\nIn dit pad richten we ons vooral op **geval 1** — de overgrote meerderheid van schoolopdrachten.\n\n**Notatie van oplossing**: \"x = 3 en y = 4\" of \"(x, y) = (3, 4)\".",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">drie mogelijkheden</text>
@@ -145,7 +145,7 @@ const steps = [
     })(),
     checks: [
       {
-        q: "*Twee lijnen lopen parallel (zelfde steilte, andere y-snijpunt). Hoeveel oplossingen heeft het stelsel?*",
+        q: "*Twee lijnen lopen parallel (zelfde steilte, ander y-snijpunt). Hoeveel oplossingen heeft het stelsel?*",
         options: ["Geen oplossing","Eén oplossing","Oneindig veel oplossingen","Twee oplossingen"],
         answer: 0,
         wrongHints: [null, "Eén oplossing zou betekenen dat de lijnen kruisen — parallelle lijnen kruisen nooit.", "Oneindig veel zou betekenen dat de lijnen samenvallen. Parallel = niet samenvallend.", "Twee snijpunten kunnen lineaire lijnen niet hebben — ze kruisen óf 0, óf 1 keer, óf vallen samen."],
@@ -195,7 +195,7 @@ const steps = [
   },
   {
     title: "Voorbeeld substitutie volledig",
-    explanation: "Volledig voorbeeld met alle stappen.\n\n**Stelsel**:\n• 2x + y = 11\n• y = x + 2\n\n**Stap 1**: y is al geïsoleerd in vergelijking 2: **y = x + 2**.\n\n**Stap 2**: vul (x + 2) in voor y in vergelijking 1:\n```\n2x + (x + 2) = 11\n```\n\n**Stap 3**: los op:\n```\n2x + x + 2 = 11\n3x + 2 = 11        | -2\n3x = 9             | :3\nx = 3\n```\n\n**Stap 4**: vul x = 3 terug in vergelijking 2:\n```\ny = 3 + 2 = 5\n```\n\n**Oplossing**: (x, y) = **(3, 5)**.\n\n**Stap 5 — controleer beide**:\n• 2·3 + 5 = 6 + 5 = 11 ✓\n• 5 = 3 + 2 ✓\n\nBeide kloppen → klaar.\n\n**Tip**: de controle aan het eind is belangrijk — fouten in tekens of breuken slip je makkelijk in. Vul de oplossing **letterlijk** in beide vergelijkingen in.",
+    explanation: "Volledig voorbeeld met alle stappen.\n\n**Stelsel**:\n• 2x + y = 11\n• y = x + 2\n\n**Stap 1**: y is al geïsoleerd in vergelijking 2: **y = x + 2**.\n\n**Stap 2**: vul (x + 2) in voor y in vergelijking 1:\n```\n2x + (x + 2) = 11\n```\n\n**Stap 3**: los op:\n```\n2x + x + 2 = 11\n3x + 2 = 11        | -2\n3x = 9             | :3\nx = 3\n```\n\n**Stap 4**: vul x = 3 terug in vergelijking 2:\n```\ny = 3 + 2 = 5\n```\n\n**Oplossing**: (x, y) = **(3, 5)**.\n\n**Stap 5 — controleer beide**:\n• 2·3 + 5 = 6 + 5 = 11 ✓\n• 5 = 3 + 2 ✓\n\nBeide kloppen → klaar.\n\n**Tip**: controleren is belangrijk — fouten in tekens of breuken sluipen er makkelijk in. Vul de oplossing **letterlijk** in beide vergelijkingen in.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">substitutie volledig</text>
@@ -221,7 +221,7 @@ const steps = [
           woorden: [{ woord: "snelle substitutie", uitleg: "Y al alleen → invullen → enkele x-vergelijking." }],
           theorie: "Werkpatroon: y=expr → in 2e vgl vervangen → x oplossen → y berekenen.",
           voorbeelden: [{ type: "check", tekst: "x=3, y=6: 3+6=9 ✓. 6=2·3 ✓." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "9 = som-getal. 6 = y-waarde, niet x. 4,5 = onnodig breuk." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "9 = som-getal. 6 = y-waarde, niet x. 4,5 = onnodige breuk." }],
           niveaus: { basis: "3.", simpeler: "x+2x=9 → 3x=9 → x=3.", nogSimpeler: "3" },
         },
       },
@@ -327,7 +327,7 @@ const steps = [
   },
   {
     title: "Welke methode kies je?",
-    explanation: "**Substitutie of optellen — wanneer wat?**\n\n**Kies substitutie** als:\n• Eén vergelijking al de vorm y = ... of x = ... heeft.\n• Een variabele coëfficiënt 1 of -1 heeft (gemakkelijk te isoleren).\n\n**Kies optellen/aftrekken (eliminatie)** als:\n• Beide vergelijkingen in de vorm ax + by = c staan.\n• Een variabele al dezelfde of tegengestelde coëfficiënt heeft.\n• Coëfficiënten makkelijk gelijk te maken zijn.\n\n**Beide werken altijd** — er is nooit een fout antwoord. Het gaat om snelheid en gemak.\n\n**Voorbeelden**:\n\n**Substitutie ideaal**:\n• y = 2x + 1, 3x − 2y = 5 → invullen werkt direct\n• x − 3y = 4, x + y = 12 → isoleer x in een en vul in\n\n**Eliminatie ideaal**:\n• 2x + y = 9, 4x + y = 13 → trek af, x verdwijnt direct (1·1=1)\n• 3x − 2y = 7, 3x + 5y = 21 → trek af, x verdwijnt\n\n**Examen-tip**: lees beide vergelijkingen voor je kiest. Vraag jezelf af: *welke variabele kan ik het snelst kwijt?*\n\nVerken in deze stap met twee voorbeelden:\n\n• Voorbeeld 1: x + y = 6 en 2x − y = 3 → optellen elimineert y direct.\n• Voorbeeld 2: y = 4x − 3 en 5x + 2y = 12 → substitueer.",
+    explanation: "**Substitutie of optellen — wanneer wat?**\n\n**Kies substitutie** als:\n• Eén vergelijking al de vorm y = ... of x = ... heeft.\n• Een variabele coëfficiënt 1 of -1 heeft (gemakkelijk te isoleren).\n\n**Kies optellen/aftrekken (eliminatie)** als:\n• Beide vergelijkingen in de vorm ax + by = c staan.\n• Een variabele al dezelfde of tegengestelde coëfficiënt heeft.\n• Coëfficiënten makkelijk gelijk te maken zijn.\n\n**Beide werken altijd** — er is nooit een fout antwoord. Het gaat om snelheid en gemak.\n\n**Voorbeelden**:\n\n**Substitutie ideaal**:\n• y = 2x + 1, 3x − 2y = 5 → invullen werkt direct\n• x − 3y = 4, x + y = 12 → isoleer x in één en vul in\n\n**Eliminatie ideaal**:\n• 2x + y = 9, 4x + y = 13 → trek af, y verdwijnt direct\n• 3x − 2y = 7, 3x + 5y = 21 → trek af, x verdwijnt\n\n**Examen-tip**: lees beide vergelijkingen voor je kiest. Vraag jezelf af: *welke variabele kan ik het snelst kwijt?*\n\nVerken in deze stap met twee voorbeelden:\n\n• Voorbeeld 1: x + y = 6 en 2x − y = 3 → optellen elimineert y direct.\n• Voorbeeld 2: y = 4x − 3 en 5x + 2y = 12 → substitueer.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">welke methode?</text>
@@ -363,7 +363,7 @@ const steps = [
   // ─── D. Bijzondere gevallen + woord ───────────────────
   {
     title: "Geen oplossing of oneindig veel",
-    explanation: "Soms loopt een stelsel **niet uit op een gewone oplossing**. De methodes geven dan iets vreemds.\n\n**Geval A — Geen oplossing**\n\nVoorbeeld: x + y = 5 en x + y = 7\n• Trek af: 0 = -2 (niet waar!)\n• Conclusie: geen oplossing.\n\nGrafisch: twee parallelle lijnen — kruisen nooit.\n\n**Geval B — Oneindig veel oplossingen**\n\nVoorbeeld: x + y = 5 en 2x + 2y = 10\n• Vermenigvuldig vergelijking 1 met 2 → 2x + 2y = 10\n• Identiek aan vergelijking 2 → de twee vergelijkingen zijn dezelfde.\n• Conclusie: elk paar (x, y) dat de eerste vergelijking maakt, maakt ook de tweede. Oneindig veel oplossingen.\n\nGrafisch: twee lijnen die volledig samenvallen.\n\n**Hoe herken je dit?**\n• Tijdens optellen/aftrekken: krijg je 0 = N (waarbij N ≠ 0)? → **geen oplossing**.\n• Krijg je 0 = 0? → **oneindig veel oplossingen**.\n\n**Hoe schrijf je het op?**\n• Geen oplossing: *\"Geen oplossing — vergelijkingen zijn tegenstrijdig.\"*\n• Oneindig veel: *\"Oneindig veel oplossingen — vergelijkingen zijn equivalent.\"* of *\"Alle (x, y) waarvoor x + y = 5.\"*\n\nIn schoolexamens komt geval A en B niet vaak voor — maar wel handig om te herkennen.",
+    explanation: "Soms loopt een stelsel **niet uit op een gewone oplossing**. De methodes geven dan iets vreemds.\n\n**Geval A — Geen oplossing**\n\nVoorbeeld: x + y = 5 en x + y = 7\n• Trek af: 0 = -2 (niet waar!)\n• Conclusie: geen oplossing.\n\nGrafisch: twee parallelle lijnen — kruisen nooit.\n\n**Geval B — Oneindig veel oplossingen**\n\nVoorbeeld: x + y = 5 en 2x + 2y = 10\n• Vermenigvuldig vergelijking 1 met 2 → 2x + 2y = 10\n• Identiek aan vergelijking 2 → de twee vergelijkingen zijn dezelfde.\n• Conclusie: elk paar (x, y) dat de eerste waar maakt, maakt ook de tweede waar. Oneindig veel oplossingen.\n\nGrafisch: twee lijnen die volledig samenvallen.\n\n**Hoe herken je dit?**\n• Tijdens optellen/aftrekken: krijg je 0 = N (waarbij N ≠ 0)? → **geen oplossing**.\n• Krijg je 0 = 0? → **oneindig veel oplossingen**.\n\n**Hoe schrijf je het op?**\n• Geen oplossing: *\"Geen oplossing — vergelijkingen zijn tegenstrijdig.\"*\n• Oneindig veel: *\"Oneindig veel oplossingen — vergelijkingen zijn equivalent.\"* of *\"Alle (x, y) waarvoor x + y = 5.\"*\n\nIn schoolexamens komen geval A en B niet vaak voor — maar wel handig om te herkennen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">bijzondere gevallen</text>
@@ -384,7 +384,7 @@ const steps = [
         wrongHints: [null, "Oneindig veel zou een uitkomst geven van nul is nul. Wat zegt een onmogelijke bewering over het stelsel?", "Dit is geen waarde voor x — het is een bewering over het stelsel zelf. Wat betekent het als een bewering nooit waar kan zijn?", "Niet noodzakelijk — bij parallelle lijnen krijg je dit altijd. Het is een geldige uitkomst die zegt: stelsel heeft geen oplossing."],
         uitlegPad: {
           stappen: [{ titel: "0=5 = onmogelijk", tekst: "0 = 5 kan NOOIT waar zijn. Betekent: stelsel heeft geen oplossing (parallelle lijnen, tegenstrijdig)." }],
-          woorden: [{ woord: "tegenstrijdigheid", uitleg: "Vergelijkingen die elkaar uitsluiten. 0=N (N≠0) = signal." }],
+          woorden: [{ woord: "tegenstrijdigheid", uitleg: "Vergelijkingen die elkaar uitsluiten. 0=N (N≠0) = signaal." }],
           theorie: "Patroon: 0=0 → oneindig veel oplossingen (identieke vgls). 0=N≠0 → geen oplossing (parallel). Eén waarde voor x → uniek.",
           voorbeelden: [{ type: "andere", tekst: "x+y=5 en x+y=8: trek af → 0=3 → tegenstrijdig → geen oplossing. Grafisch: parallel." }],
           basiskennis: [{ onderwerp: "Geen rekenfout", uitleg: "0=N is geldig resultaat, niet fout. Het betekent: 'stelsel heeft geen oplossing'." }],
@@ -395,7 +395,7 @@ const steps = [
   },
   {
     title: "Woordvragen → stelsel opstellen",
-    explanation: "Bij **woordvragen** krijg je een verhaal en moet je zelf het stelsel opstellen. Pas daarna oplossen.\n\n**Voorbeeld**: \"In een mandje zitten 12 stukken fruit: appels en peren samen. Een appel weegt 80g, een peer 120g. Het hele mandje weegt 1200g. Hoeveel appels en peren?\"\n\n**Stap 1 — variabelen kiezen**:\n• x = aantal appels\n• y = aantal peren\n\n**Stap 2 — vergelijkingen opstellen**:\n• Aantal: x + y = 12\n• Gewicht: 80x + 120y = 1200\n\n**Stap 3 — oplossen** (substitutie):\n• Uit eerste: y = 12 − x\n• Vul in tweede: 80x + 120(12 − x) = 1200\n• 80x + 1440 − 120x = 1200\n• -40x + 1440 = 1200 → -40x = -240 → x = 6\n• y = 12 − 6 = 6\n\n**Stap 4 — antwoord in woorden**: 6 appels en 6 peren.\n\n**Stap 5 — controleer**: 6+6 = 12 ✓, en 6·80 + 6·120 = 480 + 720 = 1200 ✓.\n\n**Tip — wat zoek je?**\nKies altijd je variabelen voor wat de vraag wil weten. Hier vraagt het: *hoeveel van elk soort*. Dus x en y staan voor aantallen.\n\n**Andere veel voorkomende woordvragen**:\n• Geld + hoeveelheden (bv. \"X kost 3€, Y kost 5€...\").\n• Snelheid + tijd + afstand (afstand-vergelijkingen).\n• Mengselproblemen (volume + concentratie).\n\nDe truc is altijd: **bedenk twee feiten** uit het verhaal en zet ze om in twee vergelijkingen.",
+    explanation: "Bij **woordvragen** krijg je een verhaal en moet je zelf het stelsel opstellen. Pas daarna oplossen.\n\n**Voorbeeld**: \"In een mandje zitten 12 stukken fruit: appels en peren samen. Een appel weegt 80g, een peer 120g. Het hele mandje weegt 1200g. Hoeveel appels en peren?\"\n\n**Stap 1 — variabelen kiezen**:\n• x = aantal appels\n• y = aantal peren\n\n**Stap 2 — vergelijkingen opstellen**:\n• Aantal: x + y = 12\n• Gewicht: 80x + 120y = 1200\n\n**Stap 3 — oplossen** (substitutie):\n• Uit eerste: y = 12 − x\n• Vul in tweede: 80x + 120(12 − x) = 1200\n• 80x + 1440 − 120x = 1200\n• -40x + 1440 = 1200 → -40x = -240 → x = 6\n• y = 12 − 6 = 6\n\n**Stap 4 — antwoord in woorden**: 6 appels en 6 peren.\n\n**Stap 5 — controleer**: 6+6 = 12 ✓, en 6·80 + 6·120 = 480 + 720 = 1200 ✓.\n\n**Tip — wat zoek je?**\nKies altijd je variabelen voor wat de vraag wil weten. Hier vraagt het: *hoeveel van elk soort*. Dus x en y staan voor aantallen.\n\n**Andere veel voorkomende woordvragen**:\n• Geld + hoeveelheden (bv. \"X kost €3, Y kost €5...\").\n• Snelheid + tijd + afstand (afstand-vergelijkingen).\n• Mengselproblemen (volume + concentratie).\n\nDe truc is altijd: **bedenk twee feiten** uit het verhaal en zet ze om in twee vergelijkingen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">woordvraag → stelsel</text>
@@ -412,7 +412,7 @@ const steps = [
         q: "*\"Twee getallen samen 20, hun verschil 6. Welke vergelijkingen?\"*",
         options: ["x + y = 20 en x − y = 6","x · y = 20 en x · y = 6","x + y = 20 en 2x + 2y = 6","x − y = 20 en x − y = 6"],
         answer: 0,
-        wrongHints: [null, "'Samen' = optellen, niet vermenigvuldigen.", "'Verschil' = aftrekken, niet 2x + 2y.", "Optie '2x' bestaat in tweede vergelijking — geen factor 2."],
+        wrongHints: [null, "'Samen' = optellen, niet vermenigvuldigen.", "'Verschil' = aftrekken, niet 2x + 2y.", "'Samen' betekent optellen — de eerste vergelijking moet een som zijn."],
         uitlegPad: {
           stappen: [{ titel: "Vertaal woorden", tekst: "'Samen 20' = som = x+y=20. 'Verschil 6' = aftrekken = x−y=6 (grotere - kleinere)." }],
           woorden: [{ woord: "som", uitleg: "Resultaat optelling." }, { woord: "verschil", uitleg: "Resultaat aftrekking." }],
@@ -471,20 +471,20 @@ const steps = [
         },
       },
       {
-        q: "*Stelsel: 4x + 3y = 23 en 2x + 5y = 21. Wat is y?*",
+        q: "*Stelsel: 4x + 3y = 23 en 2x + 5y = 22. Wat is y?*",
         options: ["y = 5", "y = 3", "y = 7", "y = 2"],
         answer: 1,
         wrongHints: ["Vul dit getal in als y en los x op uit de eerste vergelijking — werkt dat x ook in de tweede?", null, "Vul dit getal in als y en los x op — controleer dan of die x ook in de tweede vergelijking klopt.", "Vul dit getal in als y en los x op — klopt die x-waarde ook in de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
-            { titel: "Verg 1 ·1, verg 2 ·2", tekst: "Alternatief: vgl 2 ·2 → 4x+10y=42. Trek af van vgl 1: 4x+3y=23 minus 4x+10y=42 → −7y=−19 → y=19/7. Niet rond. Probeer y=3: x=(23−9)/4=14/4=3.5. Check vgl 2: 2·3.5+15=22... toch niet. Let op: ander methode beter." },
-            { titel: "Eliminatie via x", tekst: "Vgl 2 ·2: 4x+10y=42. Vgl 1: 4x+3y=23. Aftrekken: 7y=19 → y= ~2.71. Geen geheel. Echte oplossing: y=3, x=3.5 niet... Hmm. Reken na: 4·(3.5)+3·3 = 14+9=23 ✓. 2·3.5+5·3 = 7+15 = 22 ≠ 21. Klopt niet. Echte y = 3 ALS x klopt voor beide. Eigenlijk vraagt opgave een gemixte methode." },
+            { titel: "Verg 2 ·2", tekst: "Vgl 2 ·2 → 4x+10y=44. Nu heeft x in beide vergelijkingen coëfficiënt 4." },
+            { titel: "Eliminatie via x", tekst: "Trek vgl 1 af: (4x+10y) − (4x+3y) = 44 − 23 → 7y = 21 → y = 3. Dan 4x + 9 = 23 → x = 3.5." },
           ],
           woorden: [{ woord: "eliminatie", uitleg: "Aftrekken na vermenigvuldigen om variabele weg te krijgen." }],
           theorie: "Stelsel-oplossing bij niet-matchende coëffs: vermenigvuldig zo dat één coëff gelijk wordt, dan elimineren.",
-          voorbeelden: [{ type: "hint", tekst: "Antwoord y=3 zoals gegeven in answer-index. Werk uit: substitutie of eliminatie. Verg 1 ·2 én verg 2 ·4 voor x-eliminatie of bedenk passende methode." }],
+          voorbeelden: [{ type: "check", tekst: "x=3.5, y=3: 4·3.5+3·3=14+9=23 ✓. 2·3.5+5·3=7+15=22 ✓." }],
           basiskennis: [{ onderwerp: "Examen-vraag", uitleg: "Bij stelsels: ALTIJD beide vgls checken. Eén vgl kloppen is onvoldoende." }],
-          niveaus: { basis: "y=3.", simpeler: "Volg eliminatie of substitutie.", nogSimpeler: "3" },
+          niveaus: { basis: "y=3.", simpeler: "Vgl 2 ·2, dan aftrekken: 7y=21 → y=3.", nogSimpeler: "3" },
         },
       },
       {
@@ -495,7 +495,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Stel stelsel op", tekst: "h+2k=8 en 2h+k=11. Verg 2 ·2: 4h+2k=22. Aftrekken: 3h=14 → h=14/3≈4.67." },
-            { titel: "k vinden", tekst: "k = 8 − 2·4.67 = 8 − 9.33 = −1.33. Of via vgl 2: k = 11 − 2·4.67 = 1.67. Klopt: 4.67+2·1.67=8 ✓." },
+            { titel: "k vinden", tekst: "Via vgl 2: k = 11 − 2·4.67 ≈ 1.67. Check vgl 1: 4.67+2·1.67 ≈ 8 ✓." },
           ],
           woorden: [{ woord: "praktische woordsom", uitleg: "Verhaal → stelsel → oplossing." }],
           theorie: "Klassiek 2-variabele woordprobleem. h en k = gewichten. Twee gegevens → twee vergelijkingen.",
@@ -543,7 +543,7 @@ const steps = [
             { titel: "Stel stelsel op", tekst: "t1+t2=3.5 (tijd). 15·t1+20·t2=60 (afstand)." },
             { titel: "Oplossen", tekst: "Uit eerste: t2=3.5−t1. Invullen: 15t1+20(3.5−t1)=60 → 15t1+70−20t1=60 → −5t1=−10 → t1=2." },
           ],
-          woorden: [{ woord: "snelheid × tijd = afstand", uitleg: "Klassiek natuurkunde-relatie. Snelheid v, tijd t, afstand s. s=v·t." }],
+          woorden: [{ woord: "snelheid × tijd = afstand", uitleg: "Klassieke natuurkunde-relatie. Snelheid v, tijd t, afstand s. s=v·t." }],
           theorie: "Praktische woordsom met snelheid. Stel onbekenden t1, t2 op, dan stelsel.",
           voorbeelden: [{ type: "check", tekst: "t1=2, t2=1.5. 15·2+20·1.5=30+30=60 ✓. 2+1.5=3.5 ✓." }],
           basiskennis: [{ onderwerp: "Examen-toepassing", uitleg: "Veel CSE-vragen: snelheid+tijd+afstand-stelsels. Onthoud s=v·t." }],
@@ -577,20 +577,20 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Los op: 7x + 3y = 27 en 5x − 2y = 4. Wat is x?*",
+        q: "*Los op: 7x + 3y = 27 en 5x − 2y = 11. Wat is x?*",
         options: ["x = 2", "x = 3", "x = 4", "x = 1"],
         answer: 1,
         wrongHints: ["Vul dit getal in voor x en los y op — werkt die y ook in de tweede vergelijking?", null, "Vul dit getal in voor x en los y op — werkt die y ook in de tweede vergelijking?", "Vul dit getal in voor x en los y op — werkt die y ook in de tweede vergelijking?"],
         uitlegPad: {
           stappen: [
-            { titel: "Eliminatie y", tekst: "Y-coëffs: 3 en −2. KGV=6. Vgl 1 ·2: 14x+6y=54. Vgl 2 ·3: 15x−6y=12. Optellen: 29x=66... wacht, antwoord moet x=3 zijn. Probeer andere methode." },
-            { titel: "Substitutie via y", tekst: "Vgl 2: y = (5x−4)/2. Invullen in vgl 1: 7x + 3·(5x−4)/2 = 27 → 14x + 3(5x−4) = 54 → 14x+15x−12=54 → 29x=66 → x=66/29. Niet 3. Antwoord index = 1 (x=3)." },
+            { titel: "Eliminatie y", tekst: "Y-coëffs: 3 en −2. KGV=6. Vgl 1 ·2: 14x+6y=54. Vgl 2 ·3: 15x−6y=33. Optellen: 29x=87 → x=3." },
+            { titel: "y vinden", tekst: "Vul x=3 in vgl 1: 7·3+3y=27 → 3y=6 → y=2." },
           ],
           woorden: [{ woord: "controleer altijd", uitleg: "Vul x in beide vgls en check uitkomst." }],
           theorie: "Bij stelsel-oplossing: methode + controle. Antwoord moet BEIDE vergelijkingen kloppend maken.",
-          voorbeelden: [{ type: "test", tekst: "x=3: 7·3+3y=27 → 3y=6 → y=2. Vgl 2: 5·3−2·2=15−4=11. Niet 4. Maar antwoord-index 1 zegt x=3, dus accepteer als gegeven." }],
+          voorbeelden: [{ type: "check", tekst: "x=3, y=2: 7·3+3·2=21+6=27 ✓. 5·3−2·2=15−4=11 ✓." }],
           basiskennis: [{ onderwerp: "Examenval", uitleg: "Steeds beide vgls checken. Eén klopt is niet genoeg." }],
-          niveaus: { basis: "3.", simpeler: "x=3 volgens antwoord. Verifieer met substitutie.", nogSimpeler: "3" },
+          niveaus: { basis: "3.", simpeler: "Vgl 1 ·2, vgl 2 ·3, optellen: 29x=87 → x=3.", nogSimpeler: "3" },
         },
       },
       {
@@ -604,7 +604,7 @@ const steps = [
             { titel: "Eliminatie b", tekst: "Vgl 1 ·2: 6k+4b=22. Aftrekken vgl 2: 4k=8 → k=2. Vul in: 6+2b=11 → 2b=5 → b=2.50." },
           ],
           woorden: [{ woord: "praktisch stelsel", uitleg: "Twee onbekenden (prijzen), twee gegevens." }],
-          theorie: "Klassieke kantine-stelsel. Stel variabelen op, schrijf vergelijkingen, los op.",
+          theorie: "Klassiek kantine-stelsel. Stel variabelen op, schrijf vergelijkingen, los op.",
           voorbeelden: [{ type: "check", tekst: "k=2, b=2.50: 3·2+2·2.50=6+5=11 ✓. 2·2+4·2.50=4+10=14 ✓." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Andere prijzen falen check tweede vgl." }],
           niveaus: { basis: "€2.50.", simpeler: "k=2, b=2.50. Broodje €2,50.", nogSimpeler: "€2.50" },

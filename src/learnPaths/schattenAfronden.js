@@ -23,7 +23,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is schatten?",
-    explanation: "**Schatten** is een getal **bijna goed** opgeven, niet helemaal precies. Vaak handig om snel te checken of een antwoord klopt.\n\n**Voorbeeld**:\n*'Hoeveel is 23 × 19?'*\n• Schatten: 20 × 20 = **400**.\n• Echte uitkomst: 23 × 19 = 437.\n• Klopt — beide bij 400.\n\n**Wanneer schatten**:\n• Snel checken bij de Doorstroomtoets: 'Klinkt mijn antwoord redelijk?'\n• In de winkel: 'Past dit binnen mijn budget?'\n• Bij grote getallen waar exact weten niet hoeft.\n\n**Toets-truc — schatten als check**:\nNa een berekening, schat altijd om te zien of je antwoord 'klopt qua grootte'. Als je 437 antwoord en jouw schatting was 400, dan zit je goed. Als jouw antwoord 4370 was, klopt iets niet.\n\n**Verschil schatten vs. afronden**:\n• **Afronden**: een precies getal bijna-precies maken *(123 → 120)*.\n• **Schatten**: een ruwe inschatting *(soms zonder precies getal)*.",
+    explanation: "**Schatten** is een getal **bijna goed** opgeven, niet helemaal precies. Vaak handig om snel te checken of een antwoord klopt.\n\n**Voorbeeld**:\n*'Hoeveel is 23 × 19?'*\n• Schatten: 20 × 20 = **400**.\n• Echte uitkomst: 23 × 19 = 437.\n• Klopt — beide bij 400.\n\n**Wanneer schatten**:\n• Snel checken bij de Doorstroomtoets: 'Klinkt mijn antwoord redelijk?'\n• In de winkel: 'Past dit binnen mijn budget?'\n• Bij grote getallen waar exact weten niet hoeft.\n\n**Toets-truc — schatten als check**:\nNa een berekening, schat altijd om te zien of je antwoord 'klopt qua grootte'. Als je 437 antwoordt en jouw schatting was 400, dan zit je goed. Als jouw antwoord 4370 was, klopt iets niet.\n\n**Verschil schatten vs. afronden**:\n• **Afronden**: een precies getal bijna-precies maken *(123 → 120)*.\n• **Schatten**: een ruwe inschatting *(soms zonder precies getal)*.",
     checks: [
       {
         q: "**Schat 28 × 41**. Welk antwoord komt het dichtst bij?",
@@ -70,7 +70,7 @@ const steps = [
 
   {
     title: "Afronden op 10, 100 of 1000",
-    explanation: "**Afronden** = een getal **vereenvoudigen** naar een 'rond' getal.\n\n**Regel — kijken naar de cijfer ERNA**:\n• **0, 1, 2, 3, 4** → **naar beneden** afronden.\n• **5, 6, 7, 8, 9** → **naar boven** afronden.\n\n**Afronden op 10**:\n• 23 → 20 *(3 = naar beneden)*\n• 27 → 30 *(7 = naar boven)*\n• 25 → 30 *(5 = naar boven, regel)*\n• 144 → 140 *(4 = naar beneden)*\n\n**Afronden op 100**:\n• 247 → 200 *(4 = naar beneden, kijk naar TIENTAL)*\n• 270 → 300 *(7 in tienen = naar boven)*\n• 850 → 900 *(5 in tienen = naar boven)*\n\n**Afronden op 1000**:\n• 2300 → 2000 *(3 in honderden = naar beneden)*\n• 2700 → 3000 *(7 in honderden = naar boven)*\n• 1500 → 2000.\n\n**Toets-truc — kijk naar het juiste cijfer**:\n• Op 10 → kijk naar **eenheden**.\n• Op 100 → kijk naar **tientallen**.\n• Op 1000 → kijk naar **honderdtallen**.\n\n**Veel-voorkomende fout**:\nNiet de juiste cijfer bekijken. Voor 'op 100': kijk naar de tien, niet de eenheden.",
+    explanation: "**Afronden** = een getal **vereenvoudigen** naar een 'rond' getal.\n\n**Regel — kijk naar het cijfer ERNA**:\n• **0, 1, 2, 3, 4** → **naar beneden** afronden.\n• **5, 6, 7, 8, 9** → **naar boven** afronden.\n\n**Afronden op 10**:\n• 23 → 20 *(3 = naar beneden)*\n• 27 → 30 *(7 = naar boven)*\n• 25 → 30 *(5 = naar boven, regel)*\n• 144 → 140 *(4 = naar beneden)*\n\n**Afronden op 100**:\n• 247 → 200 *(4 = naar beneden, kijk naar TIENTAL)*\n• 270 → 300 *(7 in tienen = naar boven)*\n• 850 → 900 *(5 in tienen = naar boven)*\n\n**Afronden op 1000**:\n• 2300 → 2000 *(3 in honderden = naar beneden)*\n• 2700 → 3000 *(7 in honderden = naar boven)*\n• 1500 → 2000.\n\n**Toets-truc — kijk naar het juiste cijfer**:\n• Op 10 → kijk naar **eenheden**.\n• Op 100 → kijk naar **tientallen**.\n• Op 1000 → kijk naar **honderdtallen**.\n\n**Veel-voorkomende fout**:\nNaar het verkeerde cijfer kijken. Voor 'op 100': kijk naar de tien, niet de eenheden.",
     checks: [
       {
         q: "**Rond af op 10: 47**",
@@ -117,7 +117,7 @@ const steps = [
 
   {
     title: "Schatten van sommen — eerst afronden, dan rekenen",
-    explanation: "Bij toetsvragen staat soms: *'Schat ongeveer'*. Dan ronden we eerst af en rekenen daarna.\n\n**Voorbeeld 1**:\n*'Schat 287 + 419'*\n• Afronden op 100: 300 + 400 = **700**.\n• Echte som: 287 + 419 = 706. Klopt!\n\n**Voorbeeld 2**:\n*'Schat 78 × 23'*\n• Afronden op 10: 80 × 20 = **1600**.\n• Echte som: 78 × 23 = 1794. Klopt qua grootte.\n\n**Voorbeeld 3 — verschil**:\n*'Schat 612 − 387'*\n• Afronden op 100: 600 − 400 = **200**.\n• Echte som: 612 − 387 = 225. Klopt.\n\n**Toets-tip**:\n• Schatten geeft **niet de exacte uitkomst**. Bij de Doorstroomtoets is meestal een schatting goed als 't dicht bij de echte uitkomst zit.\n• Gebruik schatten als **check**: 'klopt mijn echte antwoord met mijn schatting?'\n\n**Hoe accurate?**:\n• Op 10 afronden = ruim 90% accuraat.\n• Op 100 afronden = ruim 80% accuraat.\n• Op 1000 afronden = ruim 70% accuraat.\n\n**Praktijk**:\n*'Drie boodschappen kosten € 12,80 + € 8,40 + € 6,75. Klopt het dat ik € 30 nodig heb?'*\n• Schatten: €13 + €8 + €7 = **€28**.\n• Antwoord: ja, €30 is genoeg.",
+    explanation: "Bij toetsvragen staat soms: *'Schat ongeveer'*. Dan ronden we eerst af en rekenen daarna.\n\n**Voorbeeld 1**:\n*'Schat 287 + 419'*\n• Afronden op 100: 300 + 400 = **700**.\n• Echte som: 287 + 419 = 706. Klopt!\n\n**Voorbeeld 2**:\n*'Schat 78 × 23'*\n• Afronden op 10: 80 × 20 = **1600**.\n• Echte som: 78 × 23 = 1794. Klopt qua grootte.\n\n**Voorbeeld 3 — verschil**:\n*'Schat 612 − 387'*\n• Afronden op 100: 600 − 400 = **200**.\n• Echte som: 612 − 387 = 225. Klopt.\n\n**Toets-tip**:\n• Schatten geeft **niet de exacte uitkomst**. Bij de Doorstroomtoets is meestal een schatting goed als 't dicht bij de echte uitkomst zit.\n• Gebruik schatten als **check**: 'klopt mijn echte antwoord met mijn schatting?'\n\n**Hoe nauwkeurig?**:\n• Op 10 afronden = meestal dicht bij het echte antwoord.\n• Op 100 of 1000 afronden = grover, minder precies.\n\n**Praktijk**:\n*'Drie boodschappen kosten € 12,80 + € 8,40 + € 6,75. Klopt het dat ik € 30 nodig heb?'*\n• Schatten: €13 + €8 + €7 = **€28**.\n• Antwoord: ja, €30 is genoeg.",
     checks: [
       {
         q: "**Schat 198 + 412** (afgerond op 100):",
@@ -139,7 +139,7 @@ const steps = [
             { type: "stap", tekst: "Schat 287 + 419 → 300 + 400 = 700. Echt: 706." },
             { type: "stap", tekst: "Schat 612 − 387 → 600 − 400 = 200. Echt: 225." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Afronden, dan rekenen. Veel sneller dan exact rekenen, en bijna altijd binnen 10% van echte antwoord." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Afronden, dan rekenen. Veel sneller dan exact rekenen, en meestal dicht bij het echte antwoord." }],
           niveaus: {
             basis: "Schatten op 100: rond af, dan optellen. 200 + 400 = 600.",
             simpeler: "198 → 200. 412 → 400. Som = 600.",
@@ -157,7 +157,7 @@ const steps = [
         q: "**Schat 732 − 289** (afgerond op 100):",
         options: ["400","500","300","450"],
         answer: 0,
-        wrongHints: [null,"Te veel — rond beide getallen af op honderdtallen en trek af.","Te weinig — heb je 700 - 400 gedaan?","Niet afgerond — dat is exact."],
+        wrongHints: [null,"Te veel — rond beide getallen af op honderdtallen en trek af.","Te weinig — heb je 700 - 400 gedaan?","Niet afgerond op 100 — kies een rond honderdtal."],
       },
     ],
   },
@@ -205,7 +205,7 @@ const steps = [
       },
       {
         q: "Een biljet van **€ 50** voor boodschappen van **€ 12,40 + € 8,30 + € 25,80**. **Past 't?**",
-        options: ["Net niet — schat 47","Ja, ruim genoeg","Nee, te veel","Onmogelijk te zeggen"],
+        options: ["Ja, net — schat ~47","Ja, ruim genoeg","Nee, te veel","Onmogelijk te zeggen"],
         answer: 0,
         wrongHints: [null,"Niet ruim — het is kort op de 50.","Het past wél — de som is ongeveer 46.","Wel te zeggen — schat de som (12 + 8 + 26)."],
       },
@@ -246,17 +246,17 @@ const steps = [
         },
       },
       {
-        q: "**Rond af op 10**: 145 + 89 + 36 = ?",
+        q: "Tel op en **rond de uitkomst af op 10**: 145 + 89 + 36 = ?",
         options: ["270","260","280","250"],
         answer: 0,
-        wrongHints: [null, "Te weinig — rond elk getal af op tientallen en tel op.", "Let op: vraag de schatting of het exacte antwoord? Lees de vraag opnieuw.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — tel eerst precies op.", "Dat krijg je als je elk getal apart afrondt. Hier rond je de uitkomst af.", "Veel te weinig."],
         uitlegPad: {
           stappen: [
-            { titel: "Precies vs schatten", tekst: "Voor PRECIES antwoord: 145 + 89 + 36. Cent-stijl: 145+89 = 234, +36 = **270**." },
+            { titel: "Precies vs schatten", tekst: "Voor PRECIES antwoord: 145 + 89 + 36. Stap voor stap: 145+89 = 234, +36 = **270**." },
             { titel: "Schat-check via afronding", tekst: "Als check: 145≈150, 89≈90, 36≈40. Schatting: 150+90+40 = 280. Het echte antwoord (270) ligt dichtbij. ✓" },
           ],
           woorden: [{ woord: "afronding-check", uitleg: "Ronde getallen om te checken of je antwoord ongeveer klopt." }],
-          theorie: "Bij grote getallen: gebruik afronding om FOUT-ANTWOORDEN snel uit te sluiten. Antwoord 250 of 290 zou kloppen niet bij schatting 280.",
+          theorie: "Bij grote getallen: gebruik afronding om FOUT-ANTWOORDEN snel uit te sluiten. Een antwoord als 180 of 380 past niet bij schatting 280.",
           voorbeelden: [{ type: "stap", tekst: "234 + 167: schat 230+170=400. Echt 401. Past." }],
           basiskennis: [{ onderwerp: "Twee technieken combineren", uitleg: "Precies uitrekenen + ronde schatting als sanity-check = minste foutkans." }],
           niveaus: { basis: "145+89+36 = 270.", simpeler: "Tel: 145+89=234. 234+36=270. Schat-check: 150+90+40=280 (klopt qua orde).", nogSimpeler: "270" },
@@ -264,14 +264,14 @@ const steps = [
       },
       {
         q: "Een **klas van 24 kinderen** krijgt elk een trakteerzakje van **€ 2,15**. **Past het in € 50 budget**?",
-        options: ["Ja, net — schat ~€52, maar precies €51,60 → past niet","Ja, precies — schat €48","Nee, ruim te duur","Geen idee zonder rekenmachine"],
+        options: ["Nee, net niet — precies €51,60","Ja, precies — schat €48","Nee, ruim te duur","Geen idee zonder rekenmachine"],
         answer: 0,
         wrongHints: [null, "Te optimistisch — schat: 24 × €2,15 ≈ 24 × €2 = €48, + 24 × €0,15 = €3,60 erbij = €51,60. NET niet.", "Te pessimistisch — schat eerst: 24 × €2 = €48.", "Wel — schat altijd eerst voor budget-vragen."],
         uitlegPad: {
           stappen: [
             { titel: "Schatten voor budget-check", tekst: "Bij 'past het in budget?'-vragen schat je eerst grof. 24 × €2,15." },
             { titel: "Splits in stukken", tekst: "24 × €2 = €48 (hoofdrekenen makkelijk). 24 × €0,15 = 24 × 15 cent = 360 cent = €3,60. Totaal: €48 + €3,60 = **€51,60**." },
-            { titel: "Conclusie + Toets-tip", tekst: "€51,60 > €50 budget → past NET niet. Toets-tip: bij budget-vragen altijd zelfs naar boven afronden voor zekerheid. Een 'misschien-past'-antwoord is risicovol." },
+            { titel: "Conclusie + Toets-tip", tekst: "€51,60 > €50 budget → past NET niet. Toets-tip: bij budget-vragen bij twijfel naar boven afronden voor zekerheid. Een 'misschien-past'-antwoord is risicovol." },
           ],
           woorden: [
             { woord: "budget", uitleg: "Maximum geld dat je mag uitgeven." },
@@ -292,11 +292,11 @@ const steps = [
           stappen: [
             { titel: "Afronden op 1000", tekst: "Kijk naar de **honderden-cijfer**:\n• 4.612 → 6 in honderden ≥ 5 → afronden naar BOVEN = **5.000**\n• 3.298 → 2 in honderden < 5 → afronden naar BENEDEN = **3.000**" },
             { titel: "Reken met ronde getallen", tekst: "5.000 + 3.000 = **8.000**. Schat-check: echt antwoord 4.612 + 3.298 = 7.910 (vlak bij 8.000) ✓." },
-            { titel: "Toets-truc — eerst afronden, dan optellen", tekst: "Bij grote getallen: afronden naar boven of onder via tussen-cijfer. Decimaal voor afronding 1000 = honderden-cijfer." },
+            { titel: "Toets-truc — eerst afronden, dan optellen", tekst: "Bij grote getallen: afronden naar boven of onder via tussen-cijfer. Bij afronden op 1000 kijk je naar het honderdtal." },
           ],
           woorden: [
             { woord: "afronden op 1000", uitleg: "Naar de dichtstbijzijnde 1000. Kijk naar honderden-cijfer." },
-            { woord: "regel >=5 omhoog", uitleg: "Cijfer 5 of meer in volgende decimaal → afronden naar boven." },
+            { woord: "regel >=5 omhoog", uitleg: "Cijfer 5 of meer op de volgende plaats → afronden naar boven." },
           ],
           theorie: "Afrondings-regel:\n• Cijfer < 5 → omlaag (naar beneden)\n• Cijfer ≥ 5 → omhoog (naar boven)\n• Voor 1000: kijk naar honderden\n• Voor 100: kijk naar tientallen\n• Voor 10: kijk naar eenheden",
           voorbeelden: [
@@ -327,7 +327,7 @@ const steps = [
           niveaus: { basis: "5 × €8 = €40.", simpeler: "€7,99 ≈ €8. 5 × €8 = €40. Antwoord ~€40.", nogSimpeler: "~€40" },
         },
       },
-      { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5, afronden omhoog.", "Dat is honderdtal.", "Dat is honderdtal afgerond op."] },
+      { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5, afronden omhoog.", "Dat is honderdtal.", "Te ver — dat is ook geen tiental van 347."] },
       { q: "Rond 6,82 af op heel getal.", options: ["7","6","6,8","7,0"], answer: 0, wrongHints: [null, "Niet — afronden omhoog.", "Dat is op 1 decimaal.", "Niet — geen decimaal nodig."] },
       { q: "Ongeveer hoeveel is 198 + 403?", options: ["~600","~700","~500","~1000"], answer: 0, wrongHints: [null, "Te hoog.", "Te laag.", "Veel te hoog."] },
       { q: "Rond 4.567 af op honderdtal", options: ["4.600","4.500","4.000","5.000"], answer: 0, wrongHints: [null, "Niet.", "Te ver.", "Te ver."] },
@@ -337,11 +337,11 @@ const steps = [
       { q: "Rond af op duizendtal: 12.567", options: ["13.000","12.000","12.500","10.000"], answer: 0, wrongHints: [null, "Niet — 5 ≥ 5.", "Honderdtal-niveau.", "Te ver."] },
       { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
       { q: "Schat hoogte mens 1,72 m", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Niet — 172 < 175.", "Geen schatting.", "Te laag."] },
-      { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€20,00"], answer: 0, wrongHints: [null, "Niet.", "Geen afronding.", "Niet — euro is heel."] },
+      { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€21"], answer: 0, wrongHints: [null, "Niet.", "Geen afronding.", "Te ver — 19,80 ligt dicht bij 20."] },
       { q: "Wanneer **schatten** ipv exact?", options: ["Bij snelle controle of als precisie niet hoeft","Altijd","Nooit","Alleen in winkel"], answer: 0, wrongHints: [null, "Niet altijd nuttig.", "Wel handig.", "Niet alleen daar."] },
       { q: "10 × ~9 ≈ wat?", options: ["~90","~100","~10","~900"], answer: 0, wrongHints: [null, "Niet — geen exact 10×10.", "Te weinig.", "Te veel."] },
-      { q: "Hoeveel is 998 + 1.005 ongeveer?", options: ["~2.000","~3.000","~1.500","~10.000"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel."] },
-      { q: "Welke regel bij afronden 5?", options: ["Naar boven","Naar beneden","Random","Niet afronden"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel — meestal."] },
+      { q: "Hoeveel is 998 + 1.005 ongeveer?", options: ["~2.000","~3.000","~1.500","~10.000"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."] },
+      { q: "Het cijfer na de afrondplek is een 5. Wat doe je?", options: ["Naar boven","Naar beneden","Willekeurig","Niet afronden"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Je rondt wél af."] },
       { q: "11,3 + 8,9 schatten = ?", options: ["~20","~30","~10","~25"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Niet."] },
       { q: "Verschil tussen 'schatten' en 'afronden'?", options: ["Schatten = ruw idee; afronden = exact geregeld op getal","Hetzelfde","Geen verschil","Afronden is moeilijker"], answer: 0, wrongHints: [null, "Wel verschil.", "Wel verschil.", "Beide makkelijk."] },
       { q: "Rond 0,49 af op heel getal", options: ["0","1","0,5","49"], answer: 0, wrongHints: [null, "Niet — onder 0,5.", "Niet — heel getal.", "Niet."] },

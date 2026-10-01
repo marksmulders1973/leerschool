@@ -22,7 +22,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is een verhouding?",
-    explanation: "Een **verhouding** zegt hoe twee (of meer) hoeveelheden zich tot elkaar verhouden. **Niet** de absolute getallen, maar de **verhouding** ertussen.\n\n**Voorbeelden**:\n• Een kan limonadesiroop: **1 deel siroop op 4 delen water**. Verhouding: **1 : 4**.\n• In een klas: **8 jongens en 12 meisjes**. Verhouding: **8 : 12** (kun je vereenvoudigen tot 2 : 3).\n• Maatbeker meel/water: **3 : 2** (3 maatjes meel op 2 maatjes water).\n\n**Notatie**: we schrijven verhoudingen met een **dubbelpunt**: **a : b** (lees: 'a tot b').\n\n**Verschil met breuk**: \n• ⅖ = 2 deel van een totaal van 5 (breuk).\n• 2 : 3 = 2 deel naast 3 deel (verhouding) — totaal 5 delen.",
+    explanation: "Een **verhouding** zegt hoe twee (of meer) hoeveelheden zich tot elkaar verhouden. **Niet** de absolute getallen, maar de **verhouding** ertussen.\n\n**Voorbeelden**:\n• Een kan limonadesiroop: **1 deel siroop op 4 delen water**. Verhouding: **1 : 4**.\n• In een klas: **8 jongens en 12 meisjes**. Verhouding: **8 : 12** (vereenvoudigd: 2 : 3).\n• Maatbeker meel/water: **3 : 2** (3 maatjes meel op 2 maatjes water).\n\n**Notatie**: we schrijven verhoudingen met een **dubbelpunt**: **a : b** (lees: 'a tot b').\n\n**Verschil met breuk**: \n• ⅖ = 2 delen van een totaal van 5 (breuk).\n• 2 : 3 = 2 delen naast 3 delen (verhouding) — totaal 5 delen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="60" width="50" height="80" fill="rgba(255,213,79,0.40)" stroke="${COLORS.point}" stroke-width="2"/>
 <text x="65" y="108" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">1</text>
@@ -40,7 +40,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Klopt qua aantal, maar de vraag is vereenvoudigd. Door welk getal kun je 12 én 18 delen?",
+          "Klopt qua aantal, maar je moet nog vereenvoudigen. Door welk getal kun je 12 én 18 delen?",
           "De volgorde klopt niet: jongens worden eerst genoemd. En vereenvoudig daarna.",
           "1 : 1 betekent gelijk. Zijn er evenveel jongens als meisjes hier?",
         ],
@@ -471,7 +471,7 @@ const steps = [
           },
         },
       },
-      { q: "Verhouding 3 : 5 — vereenvoudig 12 : 20", options: ["3 : 5","12 : 20","4 : 5","2 : 3"], answer: 0, wrongHints: [null, "Niet vereenvoudigd.", "Niet — beide niet door 4.", "Niet — controle 2:3 = 4:6, niet 12:20."] },
+      { q: "Vereenvoudig 12 : 20", options: ["3 : 5","12 : 20","4 : 5","2 : 3"], answer: 0, wrongHints: [null, "Niet vereenvoudigd.", "Niet — deel beide getallen door hetzelfde getal.", "Niet — controle 2:3 = 4:6, niet 12:20."] },
       { q: "Recept 4 personen: 200 g pasta. Voor 6 personen?", options: ["300 g","250 g","400 g","350 g"], answer: 0, wrongHints: [null, "Te weinig — verhoudings­factor 1,5.", "Te veel — voor 8 personen.", "Te veel."] },
       { q: "Schaal 1:100.000 — 5 cm op kaart = ? in werkelijkheid", options: ["5 km","500 m","50 m","50 km"], answer: 0, wrongHints: [null, "Te weinig — heb je 1:10.000 gerekend?", "Veel te weinig.", "Te veel."] },
       { q: "Schaal 1:50 — 6 cm tekening = ? in werkelijkheid", options: ["3 m","300 m","30 cm","3 km"], answer: 0, wrongHints: [null, "Verkeerde eenheid (te groot).", "Te weinig — heb je vergeten te vermenigvuldigen?", "Veel te groot."] },

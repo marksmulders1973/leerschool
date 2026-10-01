@@ -69,9 +69,9 @@ const steps = [
           stappen: [{ titel: "Nieuws = feiten geven", tekst: "Nieuwsbericht: 'Gisteren stond er een storm. De wind was 110 km/u.' Dat zijn FEITEN. Doel = **Informeren** (B = Beschrijven in OBIA, ook informeren genoemd)." }],
           woorden: [{ woord: "informeren", uitleg: "Feiten geven zonder mening." }, { woord: "feit", uitleg: "Iets dat is gebeurd of bewezen kan worden." }],
           theorie: "Krantenbericht / journaal / school-tekstboek → bijna altijd Informeren. Geen mening, geen oproep.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "'Nederland heeft 17,8 miljoen inwoners' → feit → Informeren." }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "'Nederland heeft ongeveer 18 miljoen inwoners' → feit → Informeren." }],
           basiskennis: [{ onderwerp: "Niet verwarren", uitleg: "Een opiniestuk in de krant is WEL Overtuigen (mening). Nieuws is Informeren." }],
-          niveaus: { basis: "Nieuws = feiten = Informeren.", simpeler: "Bericht geeft feiten. Geen mening. = Informeren.", nogSimpeler: "Nieuws = I (van OBIA-B)." },
+          niveaus: { basis: "Nieuws = feiten = Informeren.", simpeler: "Bericht geeft feiten. Geen mening. = Informeren.", nogSimpeler: "Nieuws = Informeren (B van OBIA)." },
         },
       },
       {
@@ -89,7 +89,7 @@ const steps = [
         },
       },
       {
-        q: "De zin *'Ik vind dat alle scholen pauze moeten verlengen.'* — welk tekstdoel start hier?",
+        q: "De zin *'Ik vind dat alle scholen de pauze moeten verlengen.'* — welk tekstdoel start hier?",
         options: ["Overtuigen","Informeren","Amuseren","Instrueren"],
         answer: 0,
         wrongHints: [null, "'Ik vind' is geen feit — kijk naar de mening.", "Niet — de zin is serieus.", "Niet — er staat geen stappenplan."],
@@ -98,7 +98,7 @@ const steps = [
           woorden: [{ woord: "mening", uitleg: "Wat iemand persoonlijk denkt. Niet bewijsbaar zoals een feit." }],
           theorie: "Toets-truc: zoek 'ik vind', 'volgens mij', 'het is belangrijk dat'. → Overtuigen.",
           voorbeelden: [{ type: "controle", tekst: "'Ik vind voetbal de mooiste sport.' = mening = Overtuigen." }],
-          basiskennis: [{ onderwerp: "Mening vs feit", uitleg: "FEIT: '40% van NL doet aan sport'. MENING: 'Sporten is geweldig'." }],
+          basiskennis: [{ onderwerp: "Mening vs feit", uitleg: "FEIT: 'Een voetbalwedstrijd duurt 90 minuten'. MENING: 'Sporten is geweldig'." }],
           niveaus: { basis: "Ik vind = mening = Overtuigen.", simpeler: "'Ik vind' is geen feit maar mening. Schrijver wil je overtuigen.", nogSimpeler: "Mening = Overtuigen" },
         },
       },
@@ -188,7 +188,7 @@ const steps = [
   {
     title: "Samenvatten — hoofdgedachte vinden",
     explanation:
-      "**Samenvatten** = de tekst korter maken zonder belangrijke info te verliezen. toetsvraag-favoriet.\n\n**Stappenplan samenvatten (Toets-truc)**:\n1. Lees de hele tekst.\n2. Vind de **hoofdgedachte** — wat is de **belangrijkste boodschap**? (vaak in eerste/laatste alinea)\n3. Per alinea: wat is de **kern-zin**? (vaak de eerste zin)\n4. Schrijf de hoofdgedachte + kern-zinnen in eigen woorden.\n5. Lengte = **20-30%** van de oorspronkelijke tekst.\n\n**Wat WEGLATEN**:\n• Voorbeelden ('zoals bijvoorbeeld...').\n• Details (datums, getallen tenzij heel belangrijk).\n• Herhalingen.\n• Mening van de schrijver (tenzij hoofdpunt).\n\n**Toets-signaalwoorden voor hoofdgedachte**:\n• 'Dit betekent dat...', 'Kort gezegd...', 'Conclusie:', 'Het komt erop neer dat...'.\n• Vaak in **laatste alinea** of vlak voor 'kortom'.\n\n**Veel-voorkomende fout**: de eerste zin van de tekst klakkeloos overnemen. Niet altijd is de eerste zin de hoofdgedachte.",
+      "**Samenvatten** = de tekst korter maken zonder belangrijke info te verliezen. Vaak getoetst.\n\n**Stappenplan samenvatten (Toets-truc)**:\n1. Lees de hele tekst.\n2. Vind de **hoofdgedachte** — wat is de **belangrijkste boodschap**? (vaak in eerste/laatste alinea)\n3. Per alinea: wat is de **kern-zin**? (vaak de eerste zin)\n4. Schrijf de hoofdgedachte + kern-zinnen in eigen woorden.\n5. Lengte = **20-30%** van de oorspronkelijke tekst.\n\n**Wat WEGLATEN**:\n• Voorbeelden ('zoals bijvoorbeeld...').\n• Details (datums, getallen tenzij heel belangrijk).\n• Herhalingen.\n• Mening van de schrijver (tenzij hoofdpunt).\n\n**Toets-signaalwoorden voor hoofdgedachte**:\n• 'Dit betekent dat...', 'Kort gezegd...', 'Conclusie:', 'Het komt erop neer dat...'.\n• Vaak in **laatste alinea** of vlak voor 'kortom'.\n\n**Veel-voorkomende fout**: de eerste zin van de tekst klakkeloos overnemen. Niet altijd is de eerste zin de hoofdgedachte.",
     checks: [
       {
         q: "Wat is de **eerste stap** bij samenvatten van een tekst?",
@@ -267,7 +267,7 @@ const steps = [
   {
     title: "Opinie geven — argumenten onderbouwen",
     explanation:
-      "Een **mening** geven kun je iedereen. Een **opinie met argumenten onderbouwen** is moeilijker — en exact wat De toets test.\n\n**Verschil**:\n• **Mening** = wat je vindt. 'Ik vind aardrijkskunde leuk.'\n• **Argument** = REDEN waarom je dat vindt. 'Aardrijkskunde is leuk **omdat** je over verre landen leert.'\n• **Voorbeeld** = concreet geval dat argument ondersteunt. '...Bijvoorbeeld: ik wist niet dat IJsland 30 actieve vulkanen heeft.'\n\n**Argument-soorten (Doorstroomtoets groep 7-8)**:\n• **Feit-argument**: '...want uit onderzoek blijkt dat 80% van de kinderen het leuk vindt.'\n• **Voorbeeld-argument**: '...want toen ik laatst over Japan leerde, was iedereen geïnteresseerd.'\n• **Gevoel-argument**: '...want ik voel me trots als ik veel hoofdsteden weet.' (zwakste — alleen jij voelt zo).\n• **Autoriteit-argument**: '...want de meester zegt dat AK belangrijk is.' (matig — wie zegt het zelf-belangrijk?).\n\n**Toets-truc opbouw opiniestuk**:\n1. Onderwerp + mening (1 zin)\n2. 2-3 argumenten met voorbeeld\n3. Tegenargument noemen + weerleggen ('Sommigen denken dat... maar...')\n4. Slot-zin = je mening herhalen\n\n**Drogredenen** (= foute argumenten, valstrik in de Doorstroomtoets):\n• Persoonlijke aanval ('Jij hebt ongelijk omdat je dom bent').\n• Generaliseren ('Iedereen vindt het leuk').\n• Vals dilemma ('Of jij stemt voor, of je bent tegen kinderen').",
+      "Een **mening** geven kan iedereen. Een **opinie met argumenten onderbouwen** is moeilijker — en precies wat de toets test.\n\n**Verschil**:\n• **Mening** = wat je vindt. 'Ik vind aardrijkskunde leuk.'\n• **Argument** = REDEN waarom je dat vindt. 'Aardrijkskunde is leuk **omdat** je over verre landen leert.'\n• **Voorbeeld** = concreet geval dat argument ondersteunt. '...Bijvoorbeeld: ik wist niet dat IJsland 30 actieve vulkanen heeft.'\n\n**Argument-soorten (Doorstroomtoets groep 7-8)**:\n• **Feit-argument**: '...want uit onderzoek blijkt dat 80% van de kinderen het leuk vindt.'\n• **Voorbeeld-argument**: '...want toen ik laatst over Japan leerde, was iedereen geïnteresseerd.'\n• **Gevoel-argument**: '...want ik voel me trots als ik veel hoofdsteden weet.' (zwakste — alleen jij voelt zo).\n• **Autoriteit-argument**: '...want de meester zegt dat AK belangrijk is.' (matig — iemand zégt het alleen).\n\n**Toets-truc opbouw opiniestuk**:\n1. Onderwerp + mening (1 zin)\n2. 2-3 argumenten met voorbeeld\n3. Tegenargument noemen + weerleggen ('Sommigen denken dat... maar...')\n4. Slot-zin = je mening herhalen\n\n**Drogredenen** (= foute argumenten, valstrik in de Doorstroomtoets):\n• Persoonlijke aanval ('Jij hebt ongelijk omdat je dom bent').\n• Generaliseren ('Iedereen vindt het leuk').\n• Vals dilemma ('Of jij stemt voor, of je bent tegen kinderen').",
     checks: [
       {
         q: "*'Ik vind voetbal de mooiste sport, want het houdt je gezond.'* Welk argument-soort?",
@@ -278,7 +278,7 @@ const steps = [
           stappen: [{ titel: "Bewijsbaar = feit", tekst: "'Voetbal houdt je gezond' is **bewijsbaar** via onderzoek/cijfers. Dus feit-argument — sterk type. Beter dan 'omdat ik het leuk vind' (gevoel)." }],
           woorden: [{ woord: "argument", uitleg: "Reden achter een mening." }],
           theorie: "Sterkste argumenten: feit > voorbeeld > autoriteit > gevoel. De toets waardeert feit/voorbeeld het meest.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Feit: 'WHO zegt dat 60 min sport/dag het immuunsysteem verbetert' → bewijs." }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Feit: 'De WHO raadt kinderen 60 minuten beweging per dag aan' → te controleren." }],
           basiskennis: [{ onderwerp: "Bewijsbaarheid", uitleg: "Feit = kan worden gecheckt. Gevoel = alleen jouw beleving." }],
           niveaus: { basis: "Gezond = bewijsbaar = feit.", simpeler: "'Gezond' kun je meten → feit-argument.", nogSimpeler: "Bewijsbaar = feit" },
         },
@@ -291,7 +291,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Iedereen weet' = generaliseren", tekst: "'Iedereen' = **iedereen ter wereld**? Nee. Dit is een **generalisatie** — een uitspraak alsof alles voor iedereen geldt. Drogreden — Toets-val." }],
           woorden: [{ woord: "drogreden", uitleg: "Foute reden — lijkt logisch maar is het niet." }, { woord: "generaliseren", uitleg: "Iets over 'iedereen' zeggen zonder bewijs." }],
-          theorie: "Toets-letten op: 'iedereen', 'alle mensen', 'niemand', 'altijd', 'nooit' → drogreden-signalen.",
+          theorie: "Let op: 'iedereen', 'alle mensen', 'niemand', 'altijd', 'nooit' → drogreden-signalen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Alle kinderen houden van pizza' → niet waar — er zijn kinderen die geen pizza lusten." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Vraag: ken ik 1 voorbeeld dat tégen deze uitspraak ingaat? Zo ja → generalisatie." }],
           niveaus: { basis: "'Iedereen' = generaliseren.", simpeler: "'Iedereen weet' is geen bewijs — drogreden.", nogSimpeler: "Iedereen" },
@@ -306,7 +306,7 @@ const steps = [
           stappen: [{ titel: "Voorbeeld = concreet geval", tekst: "Een voorbeeld-argument geeft een **specifieke ervaring**: 'Ik las... over... en leerde...'. Dat is sterker dan 'lezen is leuk' (mening) of 'iedereen leest' (drogreden)." }],
           woorden: [{ woord: "voorbeeld-argument", uitleg: "Bewijs uit een concrete situatie." }],
           theorie: "Toets-tip: een voorbeeld-argument begint vaak met 'Ik las...', 'Laatst zag ik...', 'Bij ons in de klas...'.",
-          voorbeelden: [{ type: "controle", tekst: "Goed voorbeeld: 'Toen ik dyslexie kreeg, lezen werd minder leuk maar ik leerde dat met de juiste hulp het lukt.'" }],
+          voorbeelden: [{ type: "controle", tekst: "Goed voorbeeld: 'Door mijn dyslexie vond ik lezen lastig, maar met de juiste hulp lukt het nu wel.'" }],
           basiskennis: [{ onderwerp: "Persoonlijk maar concreet", uitleg: "Voorbeeld-argument = jouw ervaring met FEITEN. Niet alleen je gevoel." }],
           niveaus: { basis: "Concrete ervaring = voorbeeld.", simpeler: "Boek + plankton geleerd = voorbeeld.", nogSimpeler: "Eigen ervaring" },
         },
@@ -315,12 +315,12 @@ const steps = [
         q: "Bij een goed opiniestuk: wat doe je met een **tegenargument**?",
         options: ["Noemen + weerleggen","Negeren","Voor jezelf houden","Bevestigen en stoppen"],
         answer: 0,
-        wrongHints: [null, "Niet — sterker juist als je 't tegenkomt.", "Niet — dan ziet de lezer niet dat je 'm hebt overwogen.", "Niet — dan verlies je je eigen punt."],
+        wrongHints: [null, "Niet — je stuk wordt juist sterker als je het noemt.", "Niet — dan ziet de lezer niet dat je 'm hebt overwogen.", "Niet — dan verlies je je eigen punt."],
         uitlegPad: {
           stappen: [{ titel: "Tegenargument toelaten = sterker", tekst: "Toets-truc: noem de **tegenargumenten** ('Sommigen denken dat...'), **weerleg** ze ('...maar dat klopt niet omdat...'), en kom terug naar jouw mening. Dat toont dat je doordenkt." }],
           woorden: [{ woord: "weerleggen", uitleg: "Tegenargument onderuit halen met bewijs." }],
           theorie: "Opbouw opiniestuk: mening → 2-3 argumenten → tegenargument + weerlegging → herhaalde mening (slot).",
-          voorbeelden: [{ type: "voorbeeld", tekst: "'Sommige ouders vinden zakgeld leerzaam, maar onderzoek toont dat kinderen zonder zakgeld even goed leren omgaan met geld.'" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "'Sommigen vinden een schooluniform saai, maar het voorkomt dat kinderen om hun kleren gepest worden.'" }],
           basiskennis: [{ onderwerp: "Niet drogreden-weerlegging", uitleg: "Weerleg met FEIT/voorbeeld, niet met 'jij hebt ongelijk' (= persoonlijke aanval-drogreden)." }],
           niveaus: { basis: "Noemen + weerleggen.", simpeler: "'Sommigen denken... MAAR...' = sterke opbouw.", nogSimpeler: "Weerleggen" },
         },
@@ -346,7 +346,7 @@ const steps = [
   {
     title: "Eindopdracht — alles samen",
     explanation:
-      "Mix van tekstdoelen + brief + samenvatten + opinie. Doorstroomtoets-stijl vragen door elkaar — zoals in de Doorstroomtoets-test.\n\n**Strategie eindopdracht**:\n• Lees vraag eerst, daarna pas tekstje.\n• Tijdsbudget: ~1 min per meerkeuze-vraag.\n• Twijfel? Sluit eerst de duidelijk foute opties uit.\n• Open vraag? Beantwoord in volledige zinnen.\n\nVeel succes!",
+      "Mix van tekstdoelen + brief + samenvatten + opinie. Doorstroomtoets-stijl vragen door elkaar — zoals op de Doorstroomtoets.\n\n**Strategie eindopdracht**:\n• Lees vraag eerst, daarna pas tekstje.\n• Tijdsbudget: ~1 min per meerkeuze-vraag.\n• Twijfel? Sluit eerst de duidelijk foute opties uit.\n• Open vraag? Beantwoord in volledige zinnen.\n\nVeel succes!",
     checks: [
       {
         q: "Welke opbouw past bij een goed **opiniestuk**?",
@@ -390,7 +390,7 @@ const steps = [
       },
       {
         q: "*'Iedereen wil meer huiswerk, dus de school moet het verplichten.'* — wat klopt niet?",
-        options: ["'Iedereen' is generaliseren — drogreden","De zin is grammaticaal fout","De school heeft geen recht","Te lang zin"],
+        options: ["'Iedereen' is generaliseren — drogreden","De zin is grammaticaal fout","De school heeft geen recht","Te lange zin"],
         answer: 0,
         wrongHints: [null, "Niet — grammaticaal klopt het.", "Niet de kwestie hier — kijk naar 'iedereen'.", "Niet — lengte is geen probleem."],
         uitlegPad: {

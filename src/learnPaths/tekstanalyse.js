@@ -136,7 +136,7 @@ const steps = [
   },
   {
     title: "De hoofdgedachte vinden",
-    explanation: "De **hoofdgedachte** (ook: kernidee) is wat de schrijver in de hele tekst probeert te zeggen — samen te vatten in **één zin**. Examenvraag: *\"Wat is de hoofdgedachte van deze tekst?\"*\n\n**Drie technieken**:\n\n**1. Lees alleen de inleiding en het slot**\n• De inleiding kondigt de hoofdgedachte vaak aan.\n• Het slot herhaalt 'm in andere woorden.\n• Vergelijk: wat overlap is, dat is de kern.\n\n**2. Vat elke alinea in één zin samen**\n• Wat is het topic sentence van elke alinea?\n• Zet die zinnen op een rij. De rode draad daarin = hoofdgedachte.\n\n**3. Vraag jezelf**\n*\"Als ik dit artikel in één tweet zou samenvatten — wat zeg ik dan?\"* (max 280 tekens)\n\n**Voorbeeld**:\nTekst: *\"De maximumsnelheid moet omlaag. Lagere snelheden besparen CO2. Ze leiden tot minder verkeersdoden. De extra reistijd is verwaarloosbaar.\"*\n→ Hoofdgedachte: *\"De maximumsnelheid moet omlaag, want milieu en veiligheid winnen meer dan de minimale tijdverlies kost.\"*\n\n**Verschil met onderwerp**:\n• **Onderwerp** = waar de tekst over gaat (één woord/zinsdeel: *\"de maximumsnelheid\"*).\n• **Hoofdgedachte** = wat de schrijver erover **stelt** (volzin met standpunt of conclusie).\n\nVerwarrend: een examenvraag naar de hoofdgedachte vraagt om een **volledige zin** met een claim — niet een woord of thema.",
+    explanation: "De **hoofdgedachte** (ook: kernidee) is wat de schrijver in de hele tekst probeert te zeggen — samen te vatten in **één zin**. Examenvraag: *\"Wat is de hoofdgedachte van deze tekst?\"*\n\n**Drie technieken**:\n\n**1. Lees alleen de inleiding en het slot**\n• De inleiding kondigt de hoofdgedachte vaak aan.\n• Het slot herhaalt 'm in andere woorden.\n• Vergelijk: wat overlap is, dat is de kern.\n\n**2. Vat elke alinea in één zin samen**\n• Wat is de topic sentence van elke alinea?\n• Zet die zinnen op een rij. De rode draad daarin = hoofdgedachte.\n\n**3. Vraag jezelf**\n*\"Als ik dit artikel in één tweet zou samenvatten — wat zeg ik dan?\"* (max 280 tekens)\n\n**Voorbeeld**:\nTekst: *\"De maximumsnelheid moet omlaag. Lagere snelheden besparen CO2. Ze leiden tot minder verkeersdoden. De extra reistijd is verwaarloosbaar.\"*\n→ Hoofdgedachte: *\"De maximumsnelheid moet omlaag, want milieu en veiligheid winnen meer dan het minimale tijdverlies kost.\"*\n\n**Verschil met onderwerp**:\n• **Onderwerp** = waar de tekst over gaat (één woord/zinsdeel: *\"de maximumsnelheid\"*).\n• **Hoofdgedachte** = wat de schrijver erover **stelt** (volzin met standpunt of conclusie).\n\nLet op: een examenvraag naar de hoofdgedachte vraagt om een **volledige zin** met een claim — niet een woord of thema.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">hoofdgedachte — 3 technieken</text>
@@ -194,7 +194,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Hoofdgedachte van een tekst: \"Sociale media zijn schadelijk voor jongeren en zouden boven de 13 jaar pas mogen.\" Wat is de bijbehorende hoofdvraag?*",
+        q: "*Hoofdgedachte van een tekst: \"Sociale media zijn schadelijk voor jongeren en zouden pas vanaf 13 jaar mogen.\" Wat is de bijbehorende hoofdvraag?*",
         options: [
           "Zijn sociale media schadelijk voor jongeren?",
           "Wat zijn sociale media?",
@@ -268,7 +268,7 @@ const steps = [
   },
   {
     title: "Tekstindeling — kop, romp, slot",
-    explanation: "De **tekstindeling** is de globale opbouw van een tekst. De klassieke indeling — die je op het examen vaak moet herkennen — is **inleiding (=kop), middenstuk (=romp), slot**.\n\n**Inleiding** (alinea 1, soms 2)\n• Aanleiding\n• Vraag of stelling\n• Eventueel aankondiging structuur\n\n**Middenstuk** (de bulk, meestal 60-80% van de tekst)\n• Bevat de daadwerkelijke uitwerking\n• Per alinea één deel-onderwerp / argument / perspectief\n\n**Slot** (laatste alinea, soms twee)\n• Samenvatting + conclusie / advies / open vraag\n\n**Examen-vraagtypen**:\n\n**1. \"Welke alinea's vormen de inleiding?\"**\nMeestal alinea 1 of 1+2. Aanwijzing: hier staat de centrale vraag/stelling, geen uitwerking.\n\n**2. \"Welke alinea's vormen het slot?\"**\nMeestal de laatste 1-2 alinea's. Aanwijzing: \"concluderend\", \"al met al\", \"kortom\", advies-toon.\n\n**3. \"Hoe is de tekst opgebouwd?\"**\nGeef indeling met alinea-nummers: \"Inleiding 1-2, middenstuk 3-7, slot 8-9.\"\n\n**Belangrijk**: er kunnen ook **andere indelingen** zijn:\n• **Probleem-oplossing**: probleem schetsen → mogelijke oplossingen → keuze\n• **Chronologisch**: gebeurtenis 1 → 2 → 3\n• **Vergelijkend**: optie A → optie B → afweging\n• **Voor-/nadelen**: voordelen → nadelen → eigen positie\n\n**Examenvraag**: \"Welke indelingsprincipe gebruikt de schrijver?\" Kies dan uit deze types.",
+    explanation: "De **tekstindeling** is de globale opbouw van een tekst. De klassieke indeling — die je op het examen vaak moet herkennen — is **inleiding (=kop), middenstuk (=romp), slot**.\n\n**Inleiding** (alinea 1, soms 2)\n• Aanleiding\n• Vraag of stelling\n• Eventueel aankondiging structuur\n\n**Middenstuk** (de bulk, meestal 60-80% van de tekst)\n• Bevat de daadwerkelijke uitwerking\n• Per alinea één deel-onderwerp / argument / perspectief\n\n**Slot** (laatste alinea, soms twee)\n• Samenvatting + conclusie / advies / open vraag\n\n**Examen-vraagtypen**:\n\n**1. \"Welke alinea's vormen de inleiding?\"**\nMeestal alinea 1 of 1+2. Aanwijzing: hier staat de centrale vraag/stelling, geen uitwerking.\n\n**2. \"Welke alinea's vormen het slot?\"**\nMeestal de laatste 1-2 alinea's. Aanwijzing: \"concluderend\", \"al met al\", \"kortom\", advies-toon.\n\n**3. \"Hoe is de tekst opgebouwd?\"**\nGeef indeling met alinea-nummers: \"Inleiding 1-2, middenstuk 3-7, slot 8-9.\"\n\n**Belangrijk**: er kunnen ook **andere indelingen** zijn:\n• **Probleem-oplossing**: probleem schetsen → mogelijke oplossingen → keuze\n• **Chronologisch**: gebeurtenis 1 → 2 → 3\n• **Vergelijkend**: optie A → optie B → afweging\n• **Voor-/nadelen**: voordelen → nadelen → eigen positie\n\n**Examenvraag**: \"Welk indelingsprincipe gebruikt de schrijver?\" Kies dan uit deze types.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">tekstindeling</text>
@@ -296,7 +296,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "'Concluderend' = slot", tekst: "Signaalwoord 'concluderend' = afsluiting → slot." }],
           woorden: [{ woord: "slot", uitleg: "afsluiting tekst" }],
-          theorie: "Inleiding (kop) → middenstuk (romp) → slot (eindzin).",
+          theorie: "Inleiding (kop) → middenstuk (romp) → slot (staart).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Concluderend, kortom, al met al = slot" }],
           basiskennis: [{ onderwerp: "slot bevat", uitleg: "samenvatting + conclusie + advies" }],
           niveaus: { basis: "Slot.", simpeler: "Afsluiting.", nogSimpeler: "Einde." },
@@ -341,7 +341,7 @@ const steps = [
           woorden: [{ woord: "tegenstellend", uitleg: "alinea geeft tegenargument" }],
           theorie: "Echter / aan de andere kant = tegenstellende functie.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Echter, niet iedereen is overtuigd...'" }],
-          basiskennis: [{ onderwerp: "11 functies", uitleg: "inleidend, stellend, ondersteunend, tegenstellend..." }],
+          basiskennis: [{ onderwerp: "10 functies", uitleg: "inleidend, stellend, ondersteunend, tegenstellend..." }],
           niveaus: { basis: "Tegenstellend.", simpeler: "Tegenargument.", nogSimpeler: "Echter." },
         },
       },
@@ -458,16 +458,16 @@ const steps = [
       {
         q: "*Welke zin is een MENING (geen feit)?*",
         options: [
-          "De zorgpremie is in 2025 met €40 per maand gestegen.",
+          "De zorgpremie is in 2025 gestegen.",
           "Sociale media zijn schadelijk voor kinderen.",
-          "Het IPCC-rapport van 2024 voorspelt een zeespiegelstijging van 30 cm tegen 2050.",
-          "In Nederland geldt sinds 2019 een rookverbod in horeca.",
+          "Volgens het IPCC-rapport van 2021 stijgt de zeespiegel deze eeuw verder.",
+          "In Nederland geldt sinds 2008 een rookverbod in de horeca.",
         ],
         answer: 1,
         wrongHints: [
           "Dat is een controleerbaar getal. De juiste optie is iets dat je niet objectief kunt toetsen.",
           null,
-          "Een onderzoeksrapport met specifieke cijfers is feitelijk — toetsbaar bij de bron. Welke optie is een waardeoordeel?",
+          "Wat in een onderzoeksrapport staat, is feitelijk — toetsbaar bij de bron. Welke optie is een waardeoordeel?",
           "Een wettelijke regeling met datum is feitelijk. Welke optie bevat een waardeoordeel?",
         ],
         uitlegPad: {
@@ -699,11 +699,11 @@ const steps = [
         },
       },
       { q: "*'De zonneschijn voelt heerlijk warm.'* — Welke uitspraak?", options: ["Mening","Feit","Hypothese","Wet"], answer: 0, wrongHints: [null, "Geen meetbaar feit.", "Niet specifiek getoetst.", "Niet."] },
-      { q: "*'Nederland heeft 17 miljoen inwoners.'* — Welke uitspraak?", options: ["Feit","Mening","Hypothese","Suggestie"], answer: 0, wrongHints: [null, "Geen waardering.", "Geen veronderstelling.", "Geen advies."] },
+      { q: "*'Nederland heeft meer dan 17 miljoen inwoners.'* — Welke uitspraak?", options: ["Feit","Mening","Hypothese","Suggestie"], answer: 0, wrongHints: [null, "Geen waardering.", "Geen veronderstelling.", "Geen advies."] },
       { q: "Een **uiteenzettende tekst** heeft welk doel?", options: ["Informeren","Overtuigen","Vermaken","Aansporen tot actie"], answer: 0, wrongHints: [null, "Dat is betogend.", "Dat is amuserend.", "Dat is appellerend."] },
       { q: "Wat is een **tekstdoel**?", options: ["Waarom de schrijver de tekst schreef","De titel","Het aantal woorden","De zinslengte"], answer: 0, wrongHints: [null, "Titel ≠ doel.", "Telling.", "Stijl."] },
       { q: "Welk signaalwoord geeft een **conclusie** aan?", options: ["dus","want","bijvoorbeeld","echter"], answer: 0, wrongHints: [null, "Reden.", "Voorbeeld.", "Tegenstelling."] },
-      { q: "Wat zegt het **doelgroep** van een tekst?", options: ["Voor wie de tekst is bedoeld","Hoe lang de tekst is","Wat het tekstdoel is","Wie de tekst schreef"], answer: 0, wrongHints: [null, "Lengte.", "Dat is tekstdoel.", "Auteur."] },
+      { q: "Wat is de **doelgroep** van een tekst?", options: ["Voor wie de tekst is bedoeld","Hoe lang de tekst is","Wat het tekstdoel is","Wie de tekst schreef"], answer: 0, wrongHints: [null, "Lengte.", "Dat is tekstdoel.", "Auteur."] },
       { q: "Welke vraag stel je om de **hoofdvraag** te vinden?", options: ["Wat is de centrale vraag die de tekst beantwoordt?","Hoeveel alinea's heeft de tekst?","Wat staat in de eerste zin?","Welke kleuren komen voor?"], answer: 0, wrongHints: [null, "Telling.", "Te oppervlakkig.", "Onzinnig."] },
     ],
   },

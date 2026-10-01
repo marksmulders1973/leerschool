@@ -61,7 +61,7 @@ const steps = [
 Kijk maar naar de openingstijden van Bibliotheek De Boekenberg:
 
 — Maandag: 13.00 – 17.00 uur
-— Woensdag: 10.00 – 17.00 uur
+— Woensdag: 10.00 – 16.00 uur
 — Vrijdag: 13.00 – 20.00 uur
 — Zaterdag: 10.00 – 13.00 uur
 
@@ -82,7 +82,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
         q: "Kijk naar de openingstijden van Bibliotheek De Boekenberg. Hoe laat gaat de bibliotheek op woensdag open?",
         options: ["Om 10.00 uur", "Om 13.00 uur", "Om 17.00 uur", "Om 20.00 uur"],
         answer: 0,
-        evidence: "Woensdag: 10.00 – 17.00 uur",
+        evidence: "Woensdag: 10.00 – 16.00 uur",
         wrongHints: [
           null,
           "Kijk je wel op de goede regel? Zoek eerst de regel die met 'woensdag' begint.",
@@ -114,26 +114,26 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
         },
       },
       {
-        q: "Op welke dag is de bibliotheek op maandagavond open tot 20.00 uur?",
+        q: "Is de bibliotheek op maandag open tot 20.00 uur?",
         options: [
-          "Op geen enkele dag — op maandag is de bibliotheek alleen open tot 17.00 uur",
-          "Maandag",
-          "Vrijdag",
-          "Zaterdag",
+          "Nee — op maandag is de bibliotheek alleen open tot 17.00 uur",
+          "Ja, op maandag is hij tot 20.00 uur open",
+          "Ja, net als op vrijdag",
+          "Nee, op maandag is hij de hele dag dicht",
         ],
         answer: 0,
         evidence: "Maandag: 13.00 – 17.00 uur",
         wrongHints: [
           null,
           "Kijk precies op de maandag-regel: tot hoe laat is de bibliotheek dan open?",
-          "Vrijdag is inderdaad tot 20.00 uur open — maar de vraag gaat over maandagavond.",
+          "Vrijdag is inderdaad tot 20.00 uur open — maar de vraag gaat over maandag.",
           null,
         ],
         uitlegPad: {
           stappen: [
             { titel: "Zoek de maandag-regel", tekst: "De maandag-regel in de lijst: '13.00 – 17.00 uur'. Op maandag sluit de bibliotheek dus om 17.00 uur." },
             { titel: "Vergelijk met de vraag", tekst: "De vraag vraagt of de bibliotheek op maandagavond tot 20.00 uur open is. 17.00 uur is niet 20.00 uur." },
-            { titel: "Conclusie", tekst: "Op maandag is de bibliotheek gesloten voor 20.00 uur — die tijd geldt voor vrijdag. Niet voor maandag." },
+            { titel: "Conclusie", tekst: "Op maandag gaat de bibliotheek al om 17.00 uur dicht. De tijd 20.00 uur geldt alleen voor vrijdag." },
           ],
           niveaus: {
             basis: "Kijk op de maandag-regel: sluit die om 17.00 of om 20.00 uur?",
@@ -182,7 +182,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
         },
       },
       {
-        q: "Je zoekt de regel over eet-openingstijden van een restaurant in een lijst. Welke stap is altijd de eerste bij kruispunt-lezen?",
+        q: "Je zoekt in een lijst de openingstijden van een restaurant. Welke stap is altijd de eerste bij kruispunt-lezen?",
         options: [
           "Zoek de rij die bij jouw vraag hoort",
           "Lees de hele lijst van boven naar beneden",
@@ -276,7 +276,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
       },
       {
         q: "Op welke dag is de bibliotheek het langst open?",
-        options: ["Vrijdag (7 uur open)", "Woensdag (7 uur open)", "Maandag (4 uur open)", "Zaterdag (3 uur open)"],
+        options: ["Vrijdag (7 uur open)", "Woensdag (6 uur open)", "Maandag (4 uur open)", "Zaterdag (3 uur open)"],
         answer: 0,
         evidence: "Vrijdag: 13.00 – 20.00 uur",
         wrongHints: [
@@ -287,9 +287,9 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Bereken de openingsduur per dag", tekst: "Trek de openingstijd af van de sluitingstijd: Maandag: 17−13=4 uur. Woensdag: 17−10=7 uur. Vrijdag: 20−13=7 uur. Zaterdag: 13−10=3 uur." },
-            { titel: "Vergelijk", tekst: "Vrijdag en woensdag zijn allebei 7 uur open. Maar de vraag zegt dat vrijdag 7 uur open is — en vrijdag is de langste, samen met woensdag." },
-            { titel: "Kies het antwoord", tekst: "Vrijdag is het antwoord, want 20.00−13.00 = 7 uur, en dat is gelijk aan woensdag. Beide zijn het langst." },
+            { titel: "Bereken de openingsduur per dag", tekst: "Trek de openingstijd af van de sluitingstijd: Maandag: 17−13=4 uur. Woensdag: 16−10=6 uur. Vrijdag: 20−13=7 uur. Zaterdag: 13−10=3 uur." },
+            { titel: "Vergelijk", tekst: "Woensdag is 6 uur open, vrijdag 7 uur. Maandag en zaterdag zijn nog korter open." },
+            { titel: "Kies het antwoord", tekst: "Vrijdag is het antwoord, want 20.00−13.00 = 7 uur. Dat is meer dan op alle andere dagen." },
           ],
           niveaus: {
             basis: "Bereken per dag: sluitingstijd min openingstijd. Welke dag heeft het grootste verschil?",
@@ -660,7 +660,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
             { woord: "eenheid", uitleg: "Waarvoor een prijs geldt: per persoon, per groepje, per uur, per keer. Staat vaak tussen haakjes." },
             { woord: "maximaal", uitleg: "Hoogstens, niet meer dan. 'Maximaal 5 kinderen' = 5 of minder." },
           ],
-          theorie: "**Valkuil 3: de eenheid**\n\nEen prijs zegt niets zonder eenheid. € 10,00 pér kind is iets heel anders dan € 10,00 pér groepje.\n\nCheck-vragen die je jezelf stelt vóór het rekenen:\n1. Waarvoor geldt deze prijs — per persoon, per groepje, per keer, per uur?\n2. Hoeveel van die eenheden heb ik nodig? (Vier kinderen = vier personen, maar maar één groepje.)\n3. Pas dan pas vermenigvuldigen — of juist niet.\n\nDe klassieke fout is aantal × prijs zonder naar de eenheid te kijken.",
+          theorie: "**Valkuil 3: de eenheid**\n\nEen prijs zegt niets zonder eenheid. € 10,00 pér kind is iets heel anders dan € 10,00 pér groepje.\n\nCheck-vragen die je jezelf stelt vóór het rekenen:\n1. Waarvoor geldt deze prijs — per persoon, per groepje, per keer, per uur?\n2. Hoeveel van die eenheden heb ik nodig? (Vier kinderen = vier personen, maar maar één groepje.)\n3. Ga dan pas vermenigvuldigen — of juist niet.\n\nDe klassieke fout is aantal × prijs zonder naar de eenheid te kijken.",
           voorbeelden: [
             { type: "eenheid", tekst: "'Huur kano: € 8,00 per uur.' Twee kinderen varen samen één uur in één kano: dat kost € 8,00 — niet € 16,00, want de prijs is per kano per uur, niet per kind." },
           ],

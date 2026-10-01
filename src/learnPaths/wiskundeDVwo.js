@@ -26,7 +26,7 @@ const steps = [
   {
     title: "Complexe getallen — basis",
     explanation:
-      "**Wiskunde D** = VWO-specialisatievak (alleen SE, geen CSE). Voor N&T-profiel + technische studies. Onderwerpen: complexe getallen, matrices, statistiek-verdieping, meetkunde.\n\n**Reëel getallen** (ℝ) zijn niet genoeg voor alle wiskunde.\n• x² = −1 heeft geen reële oplossing.\n• Daarom: uitbreiding naar **complexe getallen** (ℂ).\n\n**De imaginaire eenheid i**:\n• **$i^2 = -1$**.\n• i = √(−1) (informeel).\n• Niet 'echt' bestaand — vandaar 'imaginair'.\n\n**Complex getal** z:\n• z = a + bi.\n• a = **reëel deel** (Re(z) = a).\n• b = **imaginair deel** (Im(z) = b).\n• Voorbeelden: 3 + 2i, −1 − 4i, 5i (zuiver imaginair), 7 (zuiver reëel met b=0).\n\n**Complex vlak (Gauss-vlak)**:\n• Tekenen op vlak: horizontale as = reëel, verticale = imaginair.\n• Punt (a, b) voor a + bi.\n• Voorbeeld: 3 + 2i ligt op (3, 2).\n\n**Rekenregels**:\n\n**Optellen** (component-wise):\n• (a + bi) + (c + di) = (a+c) + (b+d)i.\n• Voorbeeld: (3 + 2i) + (1 + 4i) = 4 + 6i.\n\n**Aftrekken**:\n• (a + bi) − (c + di) = (a−c) + (b−d)i.\n\n**Vermenigvuldigen**:\n• (a + bi)(c + di) = ac + adi + bci + bdi².\n• Met i² = −1: = (ac − bd) + (ad + bc)i.\n• Voorbeeld: (3 + 2i)(1 + 4i) = 3 + 12i + 2i + 8i² = 3 + 14i − 8 = −5 + 14i.\n\n**Geconjugeerde**:\n• Van z = a + bi → **$\\bar{z} = a - bi$** (imaginaire deel-teken omgekeerd).\n• Voorbeeld: 3 + 2i → 3 − 2i.\n\n**Eigenschap**: z · z̄ = a² + b² (altijd reëel, niet-negatief).\n\n**Delen** (truc: vermenigvuldig met geconjugeerde):\n• (a + bi) / (c + di) = ((a + bi)(c − di)) / ((c + di)(c − di)) = ((a + bi)(c − di)) / (c² + d²).\n• Voorbeeld: (3 + 2i) / (1 + i):\n  - Vermenigvuldig boven + onder met geconjugeerde (1 − i):\n  - Boven: (3 + 2i)(1 − i) = 3 − 3i + 2i − 2i² = 3 − i + 2 = 5 − i.\n  - Onder: (1 + i)(1 − i) = 1 − i² = 1 + 1 = 2.\n  - Resultaat: (5 − i)/2 = 2,5 − 0,5i.\n\n**Modulus (lengte/absolute waarde)**:\n• $|z| = \\sqrt{a^2 + b^2}$ — Pythagoras vanaf oorsprong.\n• Voorbeeld: |3 + 4i| = √(9 + 16) = √25 = 5.\n\n**Argument**:\n• Hoek met positieve x-as.\n• arg(z) = arctan(b/a) — let op kwadrant.\n• Voorbeeld: 1 + i → arg = arctan(1/1) = 45° = π/4.\n\n**Oplossen vergelijkingen**:\n• x² + 1 = 0 → x² = −1 → x = ±i.\n• x² + 4 = 0 → x = ±2i.\n• Algemeen kwadratisch met negatieve discriminant heeft 2 complexe wortels.\n• Voorbeeld: x² − 2x + 5 = 0.\n  - D = 4 − 20 = −16.\n  - x = (2 ± √(−16)) / 2 = (2 ± 4i) / 2 = 1 ± 2i.\n  - Twee complexe oplossingen, elkaars geconjugeerde.\n\n**Fundamentele stelling algebra**:\n• Elk polynoom van graad n heeft **precies n complexe wortels** (met multipliciteit).\n• x³ − 1 = 0 heeft drie complexe oplossingen.\n• Reden voor uitbreiding ℝ → ℂ: alle polynomen factorizeerbaar.\n\n**Toepassingen**:\n• Elektrotechniek: wisselstroom-circuits (j gebruikt ipv i om verwarring met stroom-I te voorkomen).\n• Kwantummechanica: golffunctie complex.\n• Signaal-bewerking: Fourier-transformatie.\n• Computer graphics: rotaties via complexe getallen.\n• Mandelbrot-set (fractalen).",
+      "**Wiskunde D** = VWO-specialisatievak (alleen SE, geen CSE). Voor N&T-profiel + technische studies. Onderwerpen: complexe getallen, matrices, statistiek-verdieping, meetkunde.\n\n**Reële getallen** (ℝ) zijn niet genoeg voor alle wiskunde.\n• x² = −1 heeft geen reële oplossing.\n• Daarom: uitbreiding naar **complexe getallen** (ℂ).\n\n**De imaginaire eenheid i**:\n• **$i^2 = -1$**.\n• i = √(−1) (informeel).\n• Vandaar de naam 'imaginair'.\n\n**Complex getal** z:\n• z = a + bi.\n• a = **reëel deel** (Re(z) = a).\n• b = **imaginair deel** (Im(z) = b).\n• Voorbeelden: 3 + 2i, −1 − 4i, 5i (zuiver imaginair), 7 (zuiver reëel met b=0).\n\n**Complex vlak (Gauss-vlak)**:\n• Tekenen op vlak: horizontale as = reëel, verticale = imaginair.\n• Punt (a, b) voor a + bi.\n• Voorbeeld: 3 + 2i ligt op (3, 2).\n\n**Rekenregels**:\n\n**Optellen** (per component):\n• (a + bi) + (c + di) = (a+c) + (b+d)i.\n• Voorbeeld: (3 + 2i) + (1 + 4i) = 4 + 6i.\n\n**Aftrekken**:\n• (a + bi) − (c + di) = (a−c) + (b−d)i.\n\n**Vermenigvuldigen**:\n• (a + bi)(c + di) = ac + adi + bci + bdi².\n• Met i² = −1: = (ac − bd) + (ad + bc)i.\n• Voorbeeld: (3 + 2i)(1 + 4i) = 3 + 12i + 2i + 8i² = 3 + 14i − 8 = −5 + 14i.\n\n**Geconjugeerde**:\n• Van z = a + bi → **$\\bar{z} = a - bi$** (imaginaire deel-teken omgekeerd).\n• Voorbeeld: 3 + 2i → 3 − 2i.\n\n**Eigenschap**: z · z̄ = a² + b² (altijd reëel, niet-negatief).\n\n**Delen** (truc: vermenigvuldig met geconjugeerde):\n• (a + bi) / (c + di) = ((a + bi)(c − di)) / ((c + di)(c − di)) = ((a + bi)(c − di)) / (c² + d²).\n• Voorbeeld: (3 + 2i) / (1 + i):\n  - Vermenigvuldig boven + onder met geconjugeerde (1 − i):\n  - Boven: (3 + 2i)(1 − i) = 3 − 3i + 2i − 2i² = 3 − i + 2 = 5 − i.\n  - Onder: (1 + i)(1 − i) = 1 − i² = 1 + 1 = 2.\n  - Resultaat: (5 − i)/2 = 2,5 − 0,5i.\n\n**Modulus (lengte/absolute waarde)**:\n• $|z| = \\sqrt{a^2 + b^2}$ — Pythagoras vanaf oorsprong.\n• Voorbeeld: |3 + 4i| = √(9 + 16) = √25 = 5.\n\n**Argument**:\n• Hoek met positieve x-as.\n• arg(z) = arctan(b/a) — let op kwadrant.\n• Voorbeeld: 1 + i → arg = arctan(1/1) = 45° = π/4.\n\n**Oplossen vergelijkingen**:\n• x² + 1 = 0 → x² = −1 → x = ±i.\n• x² + 4 = 0 → x = ±2i.\n• Algemeen kwadratisch met negatieve discriminant heeft 2 complexe wortels.\n• Voorbeeld: x² − 2x + 5 = 0.\n  - D = 4 − 20 = −16.\n  - x = (2 ± √(−16)) / 2 = (2 ± 4i) / 2 = 1 ± 2i.\n  - Twee complexe oplossingen, elkaars geconjugeerde.\n\n**Fundamentele stelling algebra**:\n• Elk polynoom van graad n heeft **precies n complexe wortels** (met multipliciteit).\n• x³ − 1 = 0 heeft drie complexe oplossingen.\n• Reden voor uitbreiding ℝ → ℂ: alle polynomen factoriseerbaar.\n\n**Toepassingen**:\n• Elektrotechniek: wisselstroom-circuits (j gebruikt ipv i om verwarring met stroom-I te voorkomen).\n• Kwantummechanica: golffunctie complex.\n• Signaal-bewerking: Fourier-transformatie.\n• Computer graphics: rotaties via complexe getallen.\n• Mandelbrot-set (fractalen).",
     checks: [
       {
         q: "Wat is **i²**?",
@@ -67,7 +67,7 @@ const steps = [
         wrongHints: [null, "Niet — andere reëel deel.", "Niet — beide tekens.", "Geen verandering."],
         uitlegPad: {
           stappen: [{ titel: "Spiegelen langs reële as", tekst: "**Geconjugeerde** = imaginaire deel-teken omkeren. 3 − 4i → **3 + 4i**. In complex vlak: spiegelen langs reële (horizontale) as.\n\nEigenschap: z·z̄ = (3−4i)(3+4i) = 9 + 16 = 25 (altijd reëel)." }],
-          niveaus: { basis: "3+4i.", simpeler: "Geconjugeerd = teken om", nogSimpeler: "A." },
+          niveaus: { basis: "3+4i.", simpeler: "Geconjugeerd = teken om", nogSimpeler: "3 + 4i." },
         },
       },
       {
@@ -80,7 +80,7 @@ const steps = [
             { titel: "Discriminant negatief", tekst: "D = b² − 4ac = 16 − 52 = −36. Negatief → complexe oplossing." },
             { titel: "Wortelformule", tekst: "x = (4 ± √(−36)) / 2 = (4 ± 6i)/2 = **2 ± 3i**. Twee complexe wortels, elkaars geconjugeerde." },
           ],
-          niveaus: { basis: "2±3i.", simpeler: "(4±6i)/2 = 2±3i", nogSimpeler: "A." },
+          niveaus: { basis: "2±3i.", simpeler: "(4±6i)/2 = 2±3i", nogSimpeler: "2 ± 3i." },
         },
       },
     ],
@@ -90,16 +90,16 @@ const steps = [
   {
     title: "Complexe getallen — polaire vorm + Euler",
     explanation:
-      "Naast **cartesisch** (a + bi) is er **polaire** vorm.\n\n**Polaire vorm**:\n• z = r(cos θ + i·sin θ).\n• r = |z| = modulus.\n• θ = arg(z) = argument (hoek).\n\n**Conversie cartesisch ↔ polair**:\n• r = √(a² + b²).\n• θ = arctan(b/a) (mind kwadrant!).\n• a = r·cos θ, b = r·sin θ.\n\n**Voorbeeld**:\nz = 1 + i:\n• r = √2.\n• θ = arctan(1) = π/4 = 45°.\n• Polair: √2 (cos 45° + i sin 45°).\n\n**Eulerformule**:\n**$e^{i\\theta} = \\cos\\theta + i\\sin\\theta$**.\n• Daarom: z = r·e^(iθ) (exponentiële vorm — kortste vorm).\n• Beroemd: **$e^{i\\pi} + 1 = 0$** (Euler's identiteit, mooiste formule wiskunde — combineert e, i, π, 1, 0).\n\n**Vermenigvuldigen in polair**:\nz₁·z₂ = r₁·r₂ · e^(i(θ₁+θ₂)).\n• Modulus vermenigvuldigt.\n• Argumenten optellen.\n• Bv: 2e^(iπ/4) × 3e^(iπ/3) = 6e^(i·7π/12).\n\n**Delen**:\nz₁/z₂ = (r₁/r₂) · e^(i(θ₁−θ₂)).\n• Modulus delen.\n• Argumenten aftrekken.\n\n**Stelling De Moivre**:\nz^n = r^n · e^(inθ) = r^n (cos nθ + i sin nθ).\n• Voor machten van complexe getallen.\n• Voorbeeld: (1 + i)⁴.\n  - 1 + i = √2 · e^(iπ/4).\n  - (√2)⁴ · e^(iπ) = 4 · (−1) = **−4**.\n  - Check via uitvoer: (1+i)² = 1 + 2i − 1 = 2i. (2i)² = −4. ✓\n\n**N-de wortels**:\nz^(1/n) heeft **n verschillende waarden**:\nz_k = r^(1/n) · e^(i(θ + 2kπ)/n) voor k = 0, 1, ..., n−1.\n\n• Op complex vlak vormen ze **regelmatige n-hoek** rond oorsprong.\n• 4 wortels uit 1: 1, i, −1, −i (op eenheidscirkel, hoeken 90° apart).\n\n**Eenheidscirkel**:\n• |z| = 1 → z ligt op cirkel om oorsprong straal 1.\n• z = e^(iθ).\n• Alle 'eenheids-getallen' rouleren rond met θ.\n\n**Rotaties via complex**:\n• Vermenigvuldigen met e^(iα) = rotatie met hoek α.\n• Vermenigvuldigen met i = rotatie 90°.\n• Vermenigvuldigen met −1 = rotatie 180°.\n• Handig voor computer-graphics + signaalbewerking.\n\n**Toepassingen**:\n• **Wisselstroom**: u(t) = U₀·cos(ωt) → in complex: U(t) = U₀·e^(iωt).\n• **Golfvergelijkingen**: ψ(x,t) = A·e^(i(kx−ωt)) (kwantummechanica).\n• **Fourier-analyse**: signaal opbreken in complexe sinusoïdes.\n• **Fractalen**: Mandelbrot iteratie z → z² + c.",
+      "Naast **cartesisch** (a + bi) is er **polaire** vorm.\n\n**Polaire vorm**:\n• z = r(cos θ + i·sin θ).\n• r = |z| = modulus.\n• θ = arg(z) = argument (hoek).\n\n**Conversie cartesisch ↔ polair**:\n• r = √(a² + b²).\n• θ = arctan(b/a) (let op kwadrant!).\n• a = r·cos θ, b = r·sin θ.\n\n**Voorbeeld**:\nz = 1 + i:\n• r = √2.\n• θ = arctan(1) = π/4 = 45°.\n• Polair: √2 (cos 45° + i sin 45°).\n\n**Eulerformule**:\n**$e^{i\\theta} = \\cos\\theta + i\\sin\\theta$**.\n• Daarom: z = r·e^(iθ) (exponentiële vorm — kortste vorm).\n• Beroemd: **$e^{i\\pi} + 1 = 0$** (Euler's identiteit, mooiste formule wiskunde — combineert e, i, π, 1, 0).\n\n**Vermenigvuldigen in polair**:\nz₁·z₂ = r₁·r₂ · e^(i(θ₁+θ₂)).\n• Modulus vermenigvuldigt.\n• Argumenten optellen.\n• Bv: 2e^(iπ/4) × 3e^(iπ/3) = 6e^(i·7π/12).\n\n**Delen**:\nz₁/z₂ = (r₁/r₂) · e^(i(θ₁−θ₂)).\n• Modulus delen.\n• Argumenten aftrekken.\n\n**Stelling De Moivre**:\nz^n = r^n · e^(inθ) = r^n (cos nθ + i sin nθ).\n• Voor machten van complexe getallen.\n• Voorbeeld: (1 + i)⁴.\n  - 1 + i = √2 · e^(iπ/4).\n  - (√2)⁴ · e^(iπ) = 4 · (−1) = **−4**.\n  - Check via uitwerken: (1+i)² = 1 + 2i − 1 = 2i. (2i)² = −4. ✓\n\n**N-de wortels**:\nz^(1/n) heeft **n verschillende waarden**:\nz_k = r^(1/n) · e^(i(θ + 2kπ)/n) voor k = 0, 1, ..., n−1.\n\n• Op complex vlak vormen ze **regelmatige n-hoek** rond oorsprong.\n• 4 wortels uit 1: 1, i, −1, −i (op eenheidscirkel, hoeken 90° apart).\n\n**Eenheidscirkel**:\n• |z| = 1 → z ligt op cirkel om oorsprong straal 1.\n• z = e^(iθ).\n• Alle 'eenheids-getallen' rouleren rond met θ.\n\n**Rotaties via complex**:\n• Vermenigvuldigen met e^(iα) = rotatie met hoek α.\n• Vermenigvuldigen met i = rotatie 90°.\n• Vermenigvuldigen met −1 = rotatie 180°.\n• Handig voor computer-graphics + signaalbewerking.\n\n**Toepassingen**:\n• **Wisselstroom**: u(t) = U₀·cos(ωt) → in complex: U(t) = U₀·e^(iωt).\n• **Golfvergelijkingen**: ψ(x,t) = A·e^(i(kx−ωt)) (kwantummechanica).\n• **Fourier-analyse**: signaal opbreken in complexe sinusoïdes.\n• **Fractalen**: Mandelbrot iteratie z → z² + c.",
     checks: [
       {
         q: "**Eulerformule**:",
         options: ["e^(iθ) = cos θ + i·sin θ","e^θ = cos θ","e^(iπ) = i","cos + sin = 1"],
         answer: 0,
-        wrongHints: [null, "Mist i.", "Niet correct.", "Wel waar maar niet Euler-formule."],
+        wrongHints: [null, "Mist i.", "Niet correct.", "Niet waar — je denkt aan cos² + sin² = 1."],
         uitlegPad: {
           stappen: [{ titel: "Verband e met sin+cos", tekst: "**Eulerformule**: e^(iθ) = cos θ + i·sin θ. Verbindt exponent met goniometrie. **Beroemd gevolg**: e^(iπ) = cos π + i·sin π = −1 + 0 = −1. Daarom: **e^(iπ) + 1 = 0** = Euler's identiteit ('mooiste formule in wiskunde')." }],
-          niveaus: { basis: "e^(iθ) = cos+i·sin.", simpeler: "Euler-formule", nogSimpeler: "A." },
+          niveaus: { basis: "e^(iθ) = cos+i·sin.", simpeler: "Euler-formule", nogSimpeler: "e^(iθ) = cos θ + i·sin θ." },
         },
       },
       {
@@ -109,7 +109,7 @@ const steps = [
         wrongHints: [null, "Niet correct.", "Niet correct.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Mod × Arg +", tekst: "**r₁·e^(iθ₁) · r₂·e^(iθ₂) = (r₁·r₂)·e^(i(θ₁+θ₂))**. Modulus vermenigvuldigt, argumenten optellen. Komt door regel e^a·e^b = e^(a+b)." }],
-          niveaus: { basis: "Mod × Arg +.", simpeler: "× = mod×, arg+", nogSimpeler: "A." },
+          niveaus: { basis: "Mod × Arg +.", simpeler: "× = mod×, arg+", nogSimpeler: "Moduli ×, hoeken +." },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "i = e^(iπ/2)", tekst: "**Vermenigvuldigen met i**: |i|=1 (modulus 1, geen schaling), arg(i)=π/2 (90°). Resultaat: rotatie 90° **tegen klok**. Voorbeeld: 1·i = i (van punt (1,0) naar (0,1)). i·i = −1 (van (0,1) naar (−1,0)). Eindeloos draaien." }],
           theorie: "Toepassing: computer graphics, signaal-bewerking.",
-          niveaus: { basis: "Rotatie 90°.", simpeler: "×i = 90° draaien", nogSimpeler: "A." },
+          niveaus: { basis: "Rotatie 90°.", simpeler: "×i = 90° draaien", nogSimpeler: "Kwartslag draaien." },
         },
       },
       {
@@ -144,7 +144,7 @@ const steps = [
             { titel: "Vierde macht", tekst: "z⁴ = (√2)⁴ · e^(i·4·π/4) = 4 · e^(iπ) = 4 · (−1) = **−4**." },
             { titel: "Check directe", tekst: "(1+i)² = 1 + 2i + i² = 2i. (2i)² = 4i² = −4. ✓" },
           ],
-          niveaus: { basis: "−4.", simpeler: "(1+i)⁴ = −4", nogSimpeler: "A." },
+          niveaus: { basis: "−4.", simpeler: "(1+i)⁴ = −4", nogSimpeler: "−4" },
         },
       },
     ],
@@ -154,7 +154,7 @@ const steps = [
   {
     title: "Matrices — basis-operaties",
     explanation:
-      "**Matrix** = rechthoekige reeks getallen, georganiseerd in rijen + kolommen.\n\n**Notatie**: m × n matrix heeft m rijen, n kolommen.\n```\nA = [1 2 3]\n    [4 5 6]\n```\n2×3 matrix.\n\n**Element**: a_ij = element op rij i, kolom j.\nIn voorbeeld: a_12 = 2, a_21 = 4.\n\n**Soorten**:\n• **Vierkant**: m = n. Bv. 3×3.\n• **Identiteit (eenheidsmatrix)** I_n: hoofddiagonaal 1, rest 0.\n  - I_3 = [[1,0,0],[0,1,0],[0,0,1]].\n• **Diagonaal**: alleen hoofddiagonaal non-nul.\n• **Nul-matrix**: alle nullen.\n• **Symmetrisch**: A = A^T (transpose = origineel).\n• **Vector**: 1-kolom (kolomvector) of 1-rij.\n\n**Optellen** (zelfde dimensies):\n• Component-wise: (A + B)_ij = A_ij + B_ij.\n\n**Scalair vermenigvuldigen**:\n• (k·A)_ij = k·A_ij. Elk element × k.\n\n**Matrix-vermenigvuldiging** (A·B, **niet** B·A in algemeen):\n• Werkt alleen als kolommen A = rijen B.\n• Resultaat: rij A × kolom B → 1 element.\n• (A·B)_ij = Σ A_ik · B_kj.\n• Belangrijk: **niet commutatief**! A·B ≠ B·A meestal.\n\n**Voorbeeld**:\n```\nA = [1 2]    B = [5 6]\n    [3 4]        [7 8]\n\nA·B = [1·5+2·7  1·6+2·8]   [19 22]\n      [3·5+4·7  3·6+4·8] = [43 50]\n```\n\n**Transpose A^T**:\n• Verwissel rijen + kolommen.\n• (A^T)_ij = A_ji.\n• 2×3 matrix → 3×2.\n\n**Determinant** (alleen vierkante):\n• Voor 2×2: $\\det\\left(\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}\\right) = ad - bc$.\n• Voor 3×3: meer complex (zarrus-regel of cofactor-expansie).\n• Geeft 'schaalfactor' van afbeelding.\n• **det = 0** → matrix is **singulier** (geen inverse).\n\n**Inverse A^(−1)**:\n• A·A^(−1) = I (eenheidsmatrix).\n• Voor 2×2: A^(−1) = (1/det A) · [[d, −b], [−c, a]].\n• Niet alle matrices hebben inverse (alleen vierkante + det ≠ 0).\n\n**Voorbeeld 2×2 inverse**:\n```\nA = [2 1]   det = 2·3 − 1·1 = 5\n    [1 3]\n\nA^(−1) = (1/5) [ 3 −1]\n               [−1  2]\n```\n\nCheck: A·A^(−1) = I ✓.\n\n**Stelsels vergelijkingen oplossen**:\n• 2x + y = 5\n• x + 3y = 10.\n• Matrix-vorm: A·**x** = **b** waarbij A = [[2,1],[1,3]], **x** = [x,y]^T, **b** = [5,10]^T.\n• Oplossing: **x** = A^(−1)·**b**.\n\n**Eigenwaarden + eigenvectoren** (geavanceerd):\n• Eigenvector v van A: A·v = λ·v voor scalair λ.\n• λ = **eigenwaarde**.\n• Oplossen: det(A − λI) = 0.\n• Toepassing: PCA (data-science), kwantummechanica.\n\n**Toepassingen matrices**:\n• Lineaire stelsels.\n• Grafische rotaties + schalingen (3D-modellen).\n• Markov-ketens (statistiek).\n• Adjacency-matrix (graf-theorie).\n• Kwantummechanica.\n• Machine learning (neurale netwerken).",
+      "**Matrix** = rechthoekige reeks getallen, georganiseerd in rijen + kolommen.\n\n**Notatie**: m × n matrix heeft m rijen, n kolommen.\n```\nA = [1 2 3]\n    [4 5 6]\n```\n2×3 matrix.\n\n**Element**: a_ij = element op rij i, kolom j.\nIn voorbeeld: a_12 = 2, a_21 = 4.\n\n**Soorten**:\n• **Vierkant**: m = n. Bv. 3×3.\n• **Identiteit (eenheidsmatrix)** I_n: hoofddiagonaal 1, rest 0.\n  - I_3 = [[1,0,0],[0,1,0],[0,0,1]].\n• **Diagonaal**: alleen hoofddiagonaal niet-nul.\n• **Nul-matrix**: alle nullen.\n• **Symmetrisch**: A = A^T (transpose = origineel).\n• **Vector**: 1-kolom (kolomvector) of 1-rij.\n\n**Optellen** (zelfde dimensies):\n• Per component: (A + B)_ij = A_ij + B_ij.\n\n**Scalair vermenigvuldigen**:\n• (k·A)_ij = k·A_ij. Elk element × k.\n\n**Matrix-vermenigvuldiging** (A·B, **niet** B·A in algemeen):\n• Werkt alleen als kolommen A = rijen B.\n• Resultaat: rij A × kolom B → 1 element.\n• (A·B)_ij = Σ A_ik · B_kj.\n• Belangrijk: **niet commutatief**! A·B ≠ B·A meestal.\n\n**Voorbeeld**:\n```\nA = [1 2]    B = [5 6]\n    [3 4]        [7 8]\n\nA·B = [1·5+2·7  1·6+2·8]   [19 22]\n      [3·5+4·7  3·6+4·8] = [43 50]\n```\n\n**Transpose A^T**:\n• Verwissel rijen + kolommen.\n• (A^T)_ij = A_ji.\n• 2×3 matrix → 3×2.\n\n**Determinant** (alleen vierkante):\n• Voor 2×2: $\\det\\left(\\begin{bmatrix}a&b\\\\c&d\\end{bmatrix}\\right) = ad - bc$.\n• Voor 3×3: meer complex (regel van Sarrus of cofactor-expansie).\n• Geeft 'schaalfactor' van afbeelding.\n• **det = 0** → matrix is **singulier** (geen inverse).\n\n**Inverse A^(−1)**:\n• A·A^(−1) = I (eenheidsmatrix).\n• Voor 2×2: A^(−1) = (1/det A) · [[d, −b], [−c, a]].\n• Niet alle matrices hebben inverse (alleen vierkante + det ≠ 0).\n\n**Voorbeeld 2×2 inverse**:\n```\nA = [2 1]   det = 2·3 − 1·1 = 5\n    [1 3]\n\nA^(−1) = (1/5) [ 3 −1]\n               [−1  2]\n```\n\nCheck: A·A^(−1) = I ✓.\n\n**Stelsels vergelijkingen oplossen**:\n• 2x + y = 5\n• x + 3y = 10.\n• Matrix-vorm: A·**x** = **b** waarbij A = [[2,1],[1,3]], **x** = [x,y]^T, **b** = [5,10]^T.\n• Oplossing: **x** = A^(−1)·**b**.\n\n**Eigenwaarden + eigenvectoren** (geavanceerd):\n• Eigenvector v van A: A·v = λ·v voor scalair λ.\n• λ = **eigenwaarde**.\n• Oplossen: det(A − λI) = 0.\n• Toepassing: PCA (data-science), kwantummechanica.\n\n**Toepassingen matrices**:\n• Lineaire stelsels.\n• Grafische rotaties + schalingen (3D-modellen).\n• Markov-ketens (statistiek).\n• Adjacency-matrix (graf-theorie).\n• Kwantummechanica.\n• Machine learning (neurale netwerken).",
     checks: [
       {
         q: "Matrix-vermenigvuldiging is:",
@@ -163,7 +163,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Wel bestaand.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Volgorde telt", tekst: "Matrix-vermenigvuldiging is **NIET commutatief**: in het algemeen A·B ≠ B·A. Soms verschilt de dimensie zelfs zodat B·A niet eens gedefinieerd is. Belangrijk verschil met getal-vermenigvuldiging (2·3 = 3·2)." }],
-          niveaus: { basis: "Niet commutatief.", simpeler: "AB ≠ BA", nogSimpeler: "A." },
+          niveaus: { basis: "Niet commutatief.", simpeler: "AB ≠ BA", nogSimpeler: "Volgorde telt." },
         },
       },
       {
@@ -183,7 +183,7 @@ const steps = [
         wrongHints: [null, "Niet — wel inverteerbaar.", "Voorwaarde maar niet doorslaggevend.", "Wel inverteerbaar (als geen nul-diagonaal)."],
         uitlegPad: {
           stappen: [{ titel: "Singulier", tekst: "Matrix **niet inverteerbaar** (singulier) als **det = 0**. Reden: inverse-formule heeft 1/det → deling door 0. Geometrisch: matrix 'plat-drukt' ruimte (verliest dimensie). Stelsel met det=0 heeft 0 of oneindig veel oplossingen, geen unieke." }],
-          niveaus: { basis: "det=0.", simpeler: "Singulier = det=0", nogSimpeler: "A." },
+          niveaus: { basis: "det=0.", simpeler: "Singulier = det=0", nogSimpeler: "det = 0." },
         },
       },
       {
@@ -193,7 +193,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — nulmatrix.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Multiplicatief neutraal", tekst: "**I_n** (eenheidsmatrix): hoofddiagonaal **1**, rest **0**. I₃ = [[1,0,0],[0,1,0],[0,0,1]]. Eigenschap: A·I = I·A = A. Net zoals 1 voor getallen. Inverse-relatie: A·A^(−1) = I." }],
-          niveaus: { basis: "Diagonaal 1, rest 0.", simpeler: "I = diag 1", nogSimpeler: "A." },
+          niveaus: { basis: "Diagonaal 1, rest 0.", simpeler: "I = diag 1", nogSimpeler: "Enen op de diagonaal." },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
         wrongHints: [null, "Niet relevant.", "Niet — geen verandering.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Rijen ↔ kolommen", tekst: "**Transpose A^T**: rijen worden kolommen + vice versa. Rij 1 (1,2) wordt kolom 1. Rij 2 (3,4) wordt kolom 2. **A^T = [[1,3],[2,4]]**." }],
-          niveaus: { basis: "[[1,3],[2,4]].", simpeler: "Transpose = rijen↔kolom", nogSimpeler: "A." },
+          niveaus: { basis: "[[1,3],[2,4]].", simpeler: "Transpose = rijen↔kolom", nogSimpeler: "[[1,3],[2,4]]" },
         },
       },
     ],
@@ -213,7 +213,7 @@ const steps = [
   {
     title: "Lineaire afbeeldingen + meetkunde",
     explanation:
-      "**Lineaire afbeelding** = transformatie van ruimte die lijnen op lijnen afbeeldt + oorsprong vast laat.\n\n**Matrix-representatie**:\n• Elke lineaire afbeelding in 2D/3D heeft matrix-vorm.\n• T(**v**) = A·**v** waarbij A de transformatie-matrix is.\n\n**Standaard 2D-transformaties**:\n\n**Rotatie** met hoek θ tegen klok:\n```\nR(θ) = [cos θ  −sin θ]\n        [sin θ   cos θ]\n```\n• Bv. R(90°) = [[0,−1],[1,0]].\n• R(90°) op (1,0) = (0,1). ✓\n\n**Schaling** factor k:\n```\nS(k) = [k 0]\n        [0 k]\n```\n• Uniforme schaling.\n• Niet-uniform: [[k1,0],[0,k2]].\n\n**Spiegeling** in x-as:\n```\nM_x = [1  0]\n      [0 −1]\n```\n\n**Spiegeling** in y-as:\n```\nM_y = [−1 0]\n      [0  1]\n```\n\n**Spiegeling** in lijn y=x:\n```\nM = [0 1]\n    [1 0]\n```\n\n**Shear** (afschuiving):\n```\nH_x = [1 k]\n      [0 1]\n```\nx-coord schuift met k·y.\n\n**Combineren transformaties**:\n• Compositie = matrix-vermenigvuldiging.\n• T = T₂·T₁ → eerst T₁, dan T₂.\n• Volgorde matters (niet commutatief).\n\n**3D-rotaties**:\n• Rond x-as, y-as, z-as elk eigen 3×3-matrix.\n• Quaternions vaak gebruikt in 3D-graphics (vermijden gimbal-lock).\n\n**Lineaire onafhankelijkheid**:\n• Vectoren v₁, ..., v_n zijn **lineair onafhankelijk** als geen niet-triviale lineaire combinatie 0 oplevert.\n• Voor 2D: 2 vectoren onafhankelijk = geen veelvoud van elkaar.\n• Lineair afhankelijk = liggen op zelfde lijn (in 2D).\n\n**Rang van matrix** (rank):\n• Aantal lineair onafhankelijke kolommen (= rijen).\n• Vol-rang: rank = min(rijen, kolommen).\n• Singuliere matrix: rank < n.\n\n**Vectorruimten** (algemener concept):\n• Ruimte met optellen + scalair vermenigvuldiging.\n• ℝ², ℝ³ klassieke voorbeelden.\n• Andere voorbeelden: polynomen, functies, matrices zelf.\n\n**Stelsels van lineaire vergelijkingen**:\n\n**Gauss-eliminatie**:\n• Systematische manier om stelsel op te lossen.\n• Reduceren naar bovendriehoek-vorm via rij-operaties.\n• Daarna terugsubstitutie.\n\n**Voorbeeld**:\n2x + y = 7\nx + 3y = 16\n\nMatrix-vorm:\n```\n[2 1 | 7 ]\n[1 3 | 16]\n```\n\nRij 2 wordt rij 2 − (1/2)·rij 1:\n```\n[2 1   | 7 ]\n[0 2.5 | 12.5]\n```\n\nUit rij 2: 2,5y = 12,5 → y = 5.\nUit rij 1: 2x + 5 = 7 → x = 1.\n\n**Eigenvectoren + eigenwaarden** (geavanceerd):\n• Eigenvector v: A·v = λv voor scalair λ.\n• λ = eigenwaarde.\n• Bepalen: oplossen det(A − λI) = 0 (karakteristieke polynoom).\n\n**Voorbeeld**:\nA = [[3, 1], [0, 2]].\ndet(A − λI) = det([[3−λ, 1], [0, 2−λ]]) = (3−λ)(2−λ) = 0.\nEigenwaarden λ₁ = 3, λ₂ = 2.\nVoor λ=3: (A − 3I)v = 0 → v = (1, 0).\nVoor λ=2: (A − 2I)v = 0 → v = (1, −1).\n\n**Toepassingen**:\n• **PCA** (Principal Component Analysis): dimensionaliteit-reductie in data-science.\n• **PageRank** Google: eigenvector van web-graf-matrix.\n• **Markov-ketens**: stabiele toestand = eigenvector met eigenwaarde 1.\n• **Kwantummechanica**: eigenwaarden Hamiltoniaan = energieniveaus.\n• **Mechanica**: trillingsfreqenties via eigenwaarden.\n• **Machine learning**: SVD (singular value decomposition) — generalisatie eigenwaarde.",
+      "**Lineaire afbeelding** = transformatie van ruimte die lijnen op lijnen afbeeldt + oorsprong vast laat.\n\n**Matrix-representatie**:\n• Elke lineaire afbeelding in 2D/3D heeft matrix-vorm.\n• T(**v**) = A·**v** waarbij A de transformatie-matrix is.\n\n**Standaard 2D-transformaties**:\n\n**Rotatie** met hoek θ tegen klok:\n```\nR(θ) = [cos θ  −sin θ]\n        [sin θ   cos θ]\n```\n• Bv. R(90°) = [[0,−1],[1,0]].\n• R(90°) op (1,0) = (0,1). ✓\n\n**Schaling** factor k:\n```\nS(k) = [k 0]\n        [0 k]\n```\n• Uniforme schaling.\n• Niet-uniform: [[k1,0],[0,k2]].\n\n**Spiegeling** in x-as:\n```\nM_x = [1  0]\n      [0 −1]\n```\n\n**Spiegeling** in y-as:\n```\nM_y = [−1 0]\n      [0  1]\n```\n\n**Spiegeling** in lijn y=x:\n```\nM = [0 1]\n    [1 0]\n```\n\n**Shear** (afschuiving):\n```\nH_x = [1 k]\n      [0 1]\n```\nx-coord schuift met k·y.\n\n**Combineren transformaties**:\n• Compositie = matrix-vermenigvuldiging.\n• T = T₂·T₁ → eerst T₁, dan T₂.\n• Volgorde telt (niet commutatief).\n\n**3D-rotaties**:\n• Rond x-as, y-as, z-as elk eigen 3×3-matrix.\n• Quaternions vaak gebruikt in 3D-graphics (vermijden gimbal-lock).\n\n**Lineaire onafhankelijkheid**:\n• Vectoren v₁, ..., v_n zijn **lineair onafhankelijk** als geen niet-triviale lineaire combinatie 0 oplevert.\n• Voor 2D: 2 vectoren onafhankelijk = geen veelvoud van elkaar.\n• Lineair afhankelijk = liggen op zelfde lijn (in 2D).\n\n**Rang van matrix** (rank):\n• Aantal lineair onafhankelijke kolommen (= rijen).\n• Vol-rang: rank = min(rijen, kolommen).\n• Singuliere matrix: rank < n.\n\n**Vectorruimten** (algemener concept):\n• Ruimte met optellen + scalair vermenigvuldiging.\n• ℝ², ℝ³ klassieke voorbeelden.\n• Andere voorbeelden: polynomen, functies, matrices zelf.\n\n**Stelsels van lineaire vergelijkingen**:\n\n**Gauss-eliminatie**:\n• Systematische manier om stelsel op te lossen.\n• Reduceren naar bovendriehoek-vorm via rij-operaties.\n• Daarna terugsubstitutie.\n\n**Voorbeeld**:\n2x + y = 7\nx + 3y = 16\n\nMatrix-vorm:\n```\n[2 1 | 7 ]\n[1 3 | 16]\n```\n\nRij 2 wordt rij 2 − (1/2)·rij 1:\n```\n[2 1   | 7 ]\n[0 2.5 | 12.5]\n```\n\nUit rij 2: 2,5y = 12,5 → y = 5.\nUit rij 1: 2x + 5 = 7 → x = 1.\n\n**Eigenvectoren + eigenwaarden** (geavanceerd):\n• Eigenvector v: A·v = λv voor scalair λ.\n• λ = eigenwaarde.\n• Bepalen: oplossen det(A − λI) = 0 (karakteristieke polynoom).\n\n**Voorbeeld**:\nA = [[3, 1], [0, 2]].\ndet(A − λI) = det([[3−λ, 1], [0, 2−λ]]) = (3−λ)(2−λ) = 0.\nEigenwaarden λ₁ = 3, λ₂ = 2.\nVoor λ=3: (A − 3I)v = 0 → v = (1, 0).\nVoor λ=2: (A − 2I)v = 0 → v = (1, −1).\n\n**Toepassingen**:\n• **PCA** (Principal Component Analysis): dimensionaliteit-reductie in data-science.\n• **PageRank** Google: eigenvector van web-graf-matrix.\n• **Markov-ketens**: stabiele toestand = eigenvector met eigenwaarde 1.\n• **Kwantummechanica**: eigenwaarden Hamiltoniaan = energieniveaus.\n• **Mechanica**: trillingsfrequenties via eigenwaarden.\n• **Machine learning**: SVD (singular value decomposition) — generalisatie eigenwaarde.",
     checks: [
       {
         q: "**Rotatiematrix 90°** in 2D:",
@@ -222,7 +222,7 @@ const steps = [
         wrongHints: [null, "Eenheidsmatrix.", "180° rotatie.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "cos 90 = 0, sin 90 = 1", tekst: "**R(θ) = [[cos θ, −sin θ], [sin θ, cos θ]]**. Voor θ = 90°: cos 90° = 0, sin 90° = 1 → **R(90°) = [[0, −1], [1, 0]]**.\n\nTest: R · (1, 0)^T = (0, 1). Punt (1,0) draait naar (0,1) — correct 90° tegen klok." }],
-          niveaus: { basis: "[[0,-1],[1,0]].", simpeler: "R90 = [[0,-1],[1,0]]", nogSimpeler: "A." },
+          niveaus: { basis: "[[0,-1],[1,0]].", simpeler: "R90 = [[0,-1],[1,0]]", nogSimpeler: "[[0,-1],[1,0]]" },
         },
       },
       {
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Niet primair.", "Andere operatie.", "Indirect via."],
         uitlegPad: {
           stappen: [{ titel: "Systematische methode", tekst: "**Gauss-eliminatie**: methode om stelsel lineaire vergelijkingen systematisch op te lossen door rij-operaties (vermenigvuldigen, optellen, verwisselen). Reduceer naar **bovendriehoek-vorm**, dan terugsubstitutie. Carl Friedrich Gauss (1777-1855) — werd grootste wiskundige zijn tijd genoemd." }],
-          niveaus: { basis: "Stelsels.", simpeler: "Gauss = stelsel oplossen", nogSimpeler: "A." },
+          niveaus: { basis: "Stelsels.", simpeler: "Gauss = stelsel oplossen", nogSimpeler: "Stelsels oplossen." },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [null, "Niet — eigenvector ≠ 0.", "Niet zinvol.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Karakteristieke vergelijking", tekst: "**Eigenvector v** van matrix A: **A·v = λ·v** voor scalair λ. v wordt door A op zichzelf afgebeeld (alleen geschaald met λ). λ = **eigenwaarde**. Vinden: oplossen det(A − λI) = 0.\n\nToepassing: PCA, PageRank, Markov-stabiel, trillingen." }],
-          niveaus: { basis: "A·v = λv.", simpeler: "Eig: A·v = λv", nogSimpeler: "A." },
+          niveaus: { basis: "A·v = λv.", simpeler: "Eig: A·v = λv", nogSimpeler: "A·v = λ·v" },
         },
       },
       {
@@ -252,7 +252,7 @@ const steps = [
         wrongHints: [null, "Spiegeling in x-as.", "Spiegeling in y=x.", "Geen verandering."],
         uitlegPad: {
           stappen: [{ titel: "x-coord teken om", tekst: "**Spiegeling y-as**: x-coord wisselt van teken, y blijft. (1,2) → (−1,2). Matrix: **[[−1,0],[0,1]]**. (−1)·1 + 0·2 = −1. 0·1 + 1·2 = 2. ✓" }],
-          niveaus: { basis: "[[-1,0],[0,1]].", simpeler: "y-as = [[-1,0],[0,1]]", nogSimpeler: "A." },
+          niveaus: { basis: "[[-1,0],[0,1]].", simpeler: "y-as = [[-1,0],[0,1]]", nogSimpeler: "x wordt −x." },
         },
       },
       {
@@ -261,8 +261,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "PageRank rangschikt pagina's niet willekeurig — het rekent met de link-structuur van het web. Welk lineair-algebra-begrip hoort daarbij?", "Een database bewaart gegevens, maar berekent niet welke pagina belangrijker is — daar is een wiskundige berekening voor nodig.", "HTML-tags bepalen hoe een pagina eruitziet, niet hoe hoog hij scoort — PageRank kijkt naar de links tússen pagina's."],
         uitlegPad: {
-          stappen: [{ titel: "Larry Page 1996", tekst: "**PageRank** (Google-algoritme, Larry Page + Sergey Brin 1996): pagina's geranked op basis van **eigenvector** van matrix die links tussen pagina's representeert. Pagina populair als veel populaire pagina's ernaar linken (recursief). Eigenvector met eigenwaarde 1 = stabiele oplossing. Toonde kracht van lineaire algebra voor web-zoeken — basis Google-success." }],
-          niveaus: { basis: "Eigenvector.", simpeler: "PageRank = eig vec", nogSimpeler: "A." },
+          stappen: [{ titel: "Larry Page 1996", tekst: "**PageRank** (Google-algoritme, Larry Page + Sergey Brin 1996): pagina's geranked op basis van **eigenvector** van matrix die links tussen pagina's representeert. Pagina populair als veel populaire pagina's ernaar linken (recursief). Eigenvector met eigenwaarde 1 = stabiele oplossing. Toonde kracht van lineaire algebra voor web-zoeken — basis Google-succes." }],
+          niveaus: { basis: "Eigenvector.", simpeler: "PageRank = eigenvector", nogSimpeler: "Eigenvector." },
         },
       },
     ],
@@ -280,8 +280,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Imaginair deel teken.", "Niet — moet optellen.", "Niet — niet vermenigvuldigen."],
         uitlegPad: {
-          stappen: [{ titel: "Reëel + reëel, im + im", tekst: "**Component-wise** optellen: reële delen optellen (2+4=6), imaginaire delen optellen (3+(−5)=−2). = **6 − 2i**." }],
-          niveaus: { basis: "6−2i.", simpeler: "6−2i", nogSimpeler: "A." },
+          stappen: [{ titel: "Reëel + reëel, im + im", tekst: "**Per component** optellen: reële delen optellen (2+4=6), imaginaire delen optellen (3+(−5)=−2). = **6 − 2i**." }],
+          niveaus: { basis: "6−2i.", simpeler: "(2+4) + (3−5)i = 6 − 2i", nogSimpeler: "6 − 2i" },
         },
       },
       {
@@ -291,17 +291,17 @@ const steps = [
         wrongHints: [null, "Niet — niet optellen.", "Niet correct.", "Niet — niet vermenigvuldigen."],
         uitlegPad: {
           stappen: [{ titel: "Pythagoras", tekst: "|5 − 12i| = √(5² + 12²) = √(25 + 144) = √169 = **13**. Klassiek Pythagoras-triple 5-12-13." }],
-          niveaus: { basis: "13.", simpeler: "√169 = 13", nogSimpeler: "A." },
+          niveaus: { basis: "13.", simpeler: "√169 = 13", nogSimpeler: "13" },
         },
       },
       {
         q: "Welke matrix maakt **dubbele schaling**?",
         options: ["[[2,0],[0,2]]","[[1,1],[1,1]]","[[0,2],[2,0]]","[[1,0],[0,2]]"],
         answer: 0,
-        wrongHints: [null, "Niet — geen schaling.", "Spiegeling 90°.", "Alleen y-schaling."],
+        wrongHints: [null, "Niet — geen schaling.", "Spiegelt in y = x én schaalt.", "Alleen y-schaling."],
         uitlegPad: {
           stappen: [{ titel: "Uniforme schaling", tekst: "**Uniforme schaling met factor k**: matrix [[k,0],[0,k]]. Voor **2×**: **[[2,0],[0,2]]**. Test op (3,4): 2·3 + 0·4 = 6; 0·3 + 2·4 = 8. (3,4) → (6,8) = dubbel. ✓" }],
-          niveaus: { basis: "[[2,0],[0,2]].", simpeler: "2× schaling", nogSimpeler: "A." },
+          niveaus: { basis: "[[2,0],[0,2]].", simpeler: "2× schaling", nogSimpeler: "[[2,0],[0,2]]" },
         },
       },
       {
@@ -320,8 +320,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet correct.", "Niet altijd.", "Niet."],
         uitlegPad: {
-          stappen: [{ titel: "Carl Friedrich Gauss 1799", tekst: "**Fundamentele Stelling Algebra**: elk polynoom van graad **n ≥ 1** (met complexe coëfficiënten) heeft **precies n complexe wortels** (met multipliciteit). Bewezen door **Gauss** in 1799 (proefschrift, 22 jaar oud!). Reden om ℝ uit te breiden naar ℂ: alle polynomen factorizeerbaar in lineaire factoren. Onmisbaar voor algebra + complexe analyse." }],
-          niveaus: { basis: "n wortels.", simpeler: "Polynoom n = n wortels", nogSimpeler: "A." },
+          stappen: [{ titel: "Carl Friedrich Gauss 1799", tekst: "**Fundamentele Stelling Algebra**: elk polynoom van graad **n ≥ 1** (met complexe coëfficiënten) heeft **precies n complexe wortels** (met multipliciteit). Bewezen door **Gauss** in 1799 (proefschrift, 22 jaar oud!). Reden om ℝ uit te breiden naar ℂ: alle polynomen factoriseerbaar in lineaire factoren. Onmisbaar voor algebra + complexe analyse." }],
+          niveaus: { basis: "n wortels.", simpeler: "Polynoom n = n wortels", nogSimpeler: "n wortels." },
         },
       },
     ],

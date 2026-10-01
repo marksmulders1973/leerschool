@@ -27,7 +27,7 @@ const steps = [
   {
     title: "Brønsted-Lowry — zuren + basen",
     explanation:
-      "**Definitie Brønsted-Lowry** (1923):\n• **Zuur** = stof die H⁺ (proton) afstaat.\n• **Base** = stof die H⁺ opneemt.\n• Zuur-base-reactie = **protonoverdracht**.\n\nOudere definitie (Arrhenius): zuur geeft H⁺ in water, base geeft OH⁻. Brønsted-Lowry is breder.\n\n**Voorbeelden zuren** (proton-donors):\n• Sterke: HCl (zoutzuur), H₂SO₄ (zwavelzuur), HNO₃ (salpeterzuur), HBr, HI, HClO₄.\n• Zwakke: CH₃COOH (azijnzuur), HF (waterstoffluoride), HCOOH (mierenzuur), H₂CO₃ (koolzuur), H₃PO₄ (fosforzuur), citroenzuur, melkzuur.\n\n**Voorbeelden basen** (proton-acceptors):\n• Sterke: NaOH (natronloog), KOH (kaliloog), Ca(OH)₂, Ba(OH)₂.\n• Zwakke: NH₃ (ammoniak), CO₃²⁻ (carbonaat), HCO₃⁻ (bicarbonaat), F⁻, CH₃COO⁻ (acetaat).\n\n**Geconjugeerd zuur-base-paar**:\n• Zuur HA staat proton af → wordt A⁻ (geconjugeerde base).\n• Base B neemt proton op → wordt BH⁺ (geconjugeerd zuur).\n• Voorbeeld: HCl + H₂O → Cl⁻ + H₃O⁺.\n  - HCl/Cl⁻ = zuur/geconj.base-paar.\n  - H₂O/H₃O⁺ = base/geconj.zuur-paar.\n\n**Water amfoteer** (kan zuur EN base zijn):\n• Met HCl: H₂O is base (neemt H⁺ op → H₃O⁺).\n• Met NH₃: H₂O is zuur (geeft H⁺ af → OH⁻).\n• In zuiver water: zelf-protolyse → H₂O + H₂O ⇌ H₃O⁺ + OH⁻ (heel weinig).\n\n**Notatie H⁺ vs H₃O⁺**:\n• Strikt genomen: H⁺ in water bestaat niet vrij — het hangt altijd aan water = H₃O⁺ (hydronium-ion).\n• In formules vaak afgekort als H⁺ (eenvoudiger).\n• Op eindexamen: H₃O⁺ correcter bij Brønsted-Lowry-formules.\n\n**Zuur-/base-eigenschappen**:\n• Zure oplossing: zure smaak (citroen), reageert met metalen (geeft H₂-gas), rood lakmoes blijft rood / blauw → rood, geleiden elektriciteit (door ionen), pH < 7.\n• Basische oplossing: bittere smaak (zeep), glibberig, blauwe lakmoes blijft blauw / rood → blauw, geleiden, pH > 7.\n• Neutralisatie: zuur + base → zout + water (vaak). Bv: HCl + NaOH → NaCl + H₂O.\n\n**Niet-watersystemen** (uitbreiding Brønsted-Lowry):\n• In ammoniak-vloeistof: NH₃ als oplosmiddel; zuren staan H⁺ af aan NH₃ → NH₄⁺.\n• Belangrijk in organische chemie + industrie.",
+      "**Definitie Brønsted-Lowry** (1923):\n• **Zuur** = stof die H⁺ (proton) afstaat.\n• **Base** = stof die H⁺ opneemt.\n• Zuur-base-reactie = **protonoverdracht**.\n\nOudere definitie (Arrhenius): zuur geeft H⁺ in water, base geeft OH⁻. Brønsted-Lowry is breder.\n\n**Voorbeelden zuren** (proton-donors):\n• Sterke: HCl (zoutzuur), H₂SO₄ (zwavelzuur), HNO₃ (salpeterzuur), HBr, HI, HClO₄.\n• Zwakke: CH₃COOH (azijnzuur), HF (waterstoffluoride), HCOOH (mierenzuur), H₂CO₃ (koolzuur), H₃PO₄ (fosforzuur), citroenzuur, melkzuur.\n\n**Voorbeelden basen** (proton-acceptors):\n• Sterke: NaOH (natronloog), KOH (kaliloog), Ca(OH)₂, Ba(OH)₂.\n• Zwakke: NH₃ (ammoniak), CO₃²⁻ (carbonaat), HCO₃⁻ (bicarbonaat), F⁻, CH₃COO⁻ (acetaat).\n\n**Geconjugeerd zuur-base-paar**:\n• Zuur HA staat proton af → wordt A⁻ (geconjugeerde base).\n• Base B neemt proton op → wordt BH⁺ (geconjugeerd zuur).\n• Voorbeeld: HCl + H₂O → Cl⁻ + H₃O⁺.\n  - HCl/Cl⁻ = zuur/geconj.base-paar.\n  - H₂O/H₃O⁺ = base/geconj.zuur-paar.\n\n**Water amfoteer** (kan zuur EN base zijn):\n• Met HCl: H₂O is base (neemt H⁺ op → H₃O⁺).\n• Met NH₃: H₂O is zuur (geeft H⁺ af → OH⁻).\n• In zuiver water: zelf-protolyse → H₂O + H₂O ⇌ H₃O⁺ + OH⁻ (heel weinig).\n\n**Notatie H⁺ vs H₃O⁺**:\n• Strikt genomen: H⁺ in water bestaat niet vrij — het hangt altijd aan water = H₃O⁺ (hydronium-ion).\n• In formules vaak afgekort als H⁺ (eenvoudiger).\n• Op eindexamen: H₃O⁺ correcter bij Brønsted-Lowry-formules.\n\n**Zuur-/base-eigenschappen**:\n• Zure oplossing: zure smaak (citroen), reageert met metalen (geeft H₂-gas), rood lakmoes blijft rood / blauw → rood, geleiden elektriciteit (door ionen), pH < 7.\n• Basische oplossing: bittere smaak (zeep), glibberig, blauw lakmoes blijft blauw / rood → blauw, geleiden, pH > 7.\n• Neutralisatie: zuur + base → zout + water (vaak). Bv: HCl + NaOH → NaCl + H₂O.\n\n**Niet-watersystemen** (uitbreiding Brønsted-Lowry):\n• In ammoniak-vloeistof: NH₃ als oplosmiddel; zuren staan H⁺ af aan NH₃ → NH₄⁺.\n• Belangrijk in organische chemie + industrie.",
     checks: [
       {
         q: "Wat is een **Brønsted-zuur**?",
@@ -57,7 +57,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet wat amfoteer betekent.", "Wel kan, maar niet altijd.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Amfoteer = beide", tekst: "**Amfoteer**: kan zowel als zuur als als base functioneren. **Water**: met HCl is het base (neemt H⁺ op). Met NH₃ is het zuur (geeft H⁺ af). Komt door OH-groep + H die beide overgedragen kunnen worden." }],
+          stappen: [{ titel: "Amfoteer = beide", tekst: "**Amfoteer**: kan zowel als zuur als als base functioneren. **Water**: met HCl is het base (neemt H⁺ op). Met NH₃ is het zuur (geeft H⁺ af). Water kan een H⁺ opnemen (→ H₃O⁺) én een H⁺ afstaan (→ OH⁻)." }],
           niveaus: { basis: "Beide.", simpeler: "Amfoteer = zuur+base", nogSimpeler: "Beide" },
         },
       },
@@ -78,7 +78,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Wel reactie.", "Soms (bv. CO₂), niet altijd.", "Niet algemeen."],
         uitlegPad: {
-          stappen: [{ titel: "Neutralisatie", tekst: "**Neutralisatie**: zuur + base → zout + water. Voorbeelden:\n• HCl + NaOH → NaCl + H₂O\n• H₂SO₄ + 2 KOH → K₂SO₄ + 2 H₂O\npH-verandering naar neutraal (7) als zuur + base evenredig zijn." }],
+          stappen: [{ titel: "Neutralisatie", tekst: "**Neutralisatie**: zuur + base → zout + water. Voorbeelden:\n• HCl + NaOH → NaCl + H₂O\n• H₂SO₄ + 2 KOH → K₂SO₄ + 2 H₂O\nBij sterk zuur + sterke base in gelijke hoeveelheden wordt de pH neutraal (7)." }],
           niveaus: { basis: "Zout + water.", simpeler: "Z+B → zout+water", nogSimpeler: "Zout+water" },
         },
       },
@@ -89,7 +89,7 @@ const steps = [
   {
     title: "pH-berekeningen — H₃O⁺ + OH⁻",
     explanation:
-      "**pH** = mate van zuurgraad = negatieve logaritme van H₃O⁺-concentratie.\n\n**pH = −log[H₃O⁺]**\n\nDe vierkante haken [...] betekenen 'concentratie in mol/L'.\n\n**Bereik**:\n• pH = 0-14 in waterige oplossingen meestal.\n• pH < 7: zuur.\n• pH = 7: neutraal (zuiver water op 25°C).\n• pH > 7: basisch.\n\n**Voorbeelden**:\n• [H₃O⁺] = 10⁻³ → pH = 3 (zuur).\n• [H₃O⁺] = 10⁻⁷ → pH = 7 (neutraal).\n• [H₃O⁺] = 10⁻¹⁰ → pH = 10 (basisch).\n\n**Omgekeerd**: [H₃O⁺] = 10^(−pH).\n\n**Logaritmen-truc**:\n• [H₃O⁺] = 10⁻⁵ → pH = 5 (heel makkelijk).\n• [H₃O⁺] = 2 × 10⁻⁴ → pH = −log(2 × 10⁻⁴) = 4 − log(2) = 4 − 0,301 = **3,7**.\n• Op rekenmachine: gewoon log-knop indrukken.\n\n**Waterconstante Kw**:\nIn water: [H₃O⁺] × [OH⁻] = Kw = **10⁻¹⁴** (bij 25°C).\n\n**pOH = −log[OH⁻]**\n\n**Belangrijke relatie**: **pH + pOH = 14** (bij 25°C).\n\n**Voorbeeld**:\n• [OH⁻] = 10⁻³ → pOH = 3 → pH = 14 − 3 = 11 (basisch).\n• [OH⁻] = 0,01 mol/L → pOH = 2 → pH = 12.\n\n**Berekenen pH van sterke zuren**:\nVolledige dissociatie → [H₃O⁺] = concentratie van het zuur.\n• 0,1 M HCl → [H₃O⁺] = 0,1 = 10⁻¹ → pH = 1.\n• 0,001 M HCl → pH = 3.\n\n**Berekenen pH van sterke basen**:\nVolledige dissociatie naar OH⁻ → [OH⁻] = concentratie van de base (× aantal OH-groepen).\n• 0,01 M NaOH → [OH⁻] = 0,01 → pOH = 2 → pH = 12.\n• 0,001 M Ca(OH)₂ → [OH⁻] = 0,002 → pOH ≈ 2,7 → pH ≈ 11,3.\n\n**Verdunnen**:\n• Verdun 10× → [H₃O⁺] daalt 10× → pH stijgt met 1.\n• Voorbeeld: 0,1 M HCl (pH=1) → 10× verdund = 0,01 M (pH=2).\n\n**pH in dagelijks leven**:\n• Maagzuur: 1-2.\n• Citroensap: ~2.\n• Cola: ~2,5.\n• Koffie: ~5.\n• Regen (schoon): ~5,6 (CO₂-oplossing).\n• Speeksel: ~6,5.\n• Water: 7.\n• Bloed: 7,35-7,45 (zeer nauw gereguleerd!).\n• Zeep: 8-10.\n• Ammoniak schoonmaakmiddel: ~11.\n• Bleekloog: 13-14.",
+      "**pH** = mate van zuurgraad = negatieve logaritme van H₃O⁺-concentratie.\n\n**pH = −log[H₃O⁺]**\n\nDe vierkante haken [...] betekenen 'concentratie in mol/L'.\n\n**Bereik**:\n• pH = 0-14 in waterige oplossingen meestal.\n• pH < 7: zuur.\n• pH = 7: neutraal (zuiver water op 25°C).\n• pH > 7: basisch.\n\n**Voorbeelden**:\n• [H₃O⁺] = 10⁻³ → pH = 3 (zuur).\n• [H₃O⁺] = 10⁻⁷ → pH = 7 (neutraal).\n• [H₃O⁺] = 10⁻¹⁰ → pH = 10 (basisch).\n\n**Omgekeerd**: [H₃O⁺] = 10^(−pH).\n\n**Logaritmen-truc**:\n• [H₃O⁺] = 10⁻⁵ → pH = 5 (heel makkelijk).\n• [H₃O⁺] = 2 × 10⁻⁴ → pH = −log(2 × 10⁻⁴) = 4 − log(2) = 4 − 0,301 = **3,7**.\n• Op rekenmachine: gewoon log-knop indrukken.\n\n**Waterconstante Kw**:\nIn water: [H₃O⁺] × [OH⁻] = Kw = **10⁻¹⁴** (bij 25°C).\n\n**pOH = −log[OH⁻]**\n\n**Belangrijke relatie**: **pH + pOH = 14** (bij 25°C).\n\n**Voorbeeld**:\n• [OH⁻] = 10⁻³ → pOH = 3 → pH = 14 − 3 = 11 (basisch).\n• [OH⁻] = 0,01 mol/L → pOH = 2 → pH = 12.\n\n**Berekenen pH van sterke zuren**:\nVolledige dissociatie → [H₃O⁺] = concentratie van het zuur.\n• 0,1 M HCl → [H₃O⁺] = 0,1 = 10⁻¹ → pH = 1.\n• 0,001 M HCl → pH = 3.\n\n**Berekenen pH van sterke basen**:\nVolledige dissociatie naar OH⁻ → [OH⁻] = concentratie van de base (× aantal OH-groepen).\n• 0,01 M NaOH → [OH⁻] = 0,01 → pOH = 2 → pH = 12.\n• 0,001 M Ca(OH)₂ → [OH⁻] = 0,002 → pOH ≈ 2,7 → pH ≈ 11,3.\n\n**Verdunnen**:\n• Verdun 10× → [H₃O⁺] daalt 10× → pH stijgt met 1.\n• Voorbeeld: 0,1 M HCl (pH=1) → 10× verdund = 0,01 M (pH=2).\n\n**pH in dagelijks leven**:\n• Maagzuur: 1-2.\n• Citroensap: ~2.\n• Cola: ~2,5.\n• Koffie: ~5.\n• Regen (schoon): ~5,6 (CO₂-oplossing).\n• Speeksel: ~6,5.\n• Water: 7.\n• Bloed: 7,35-7,45 (zeer nauw gereguleerd!).\n• Zeep: 8-10.\n• Ammoniak schoonmaakmiddel: ~11.\n• Bleekloog: ~12-13.",
     checks: [
       {
         q: "[H₃O⁺] = **10⁻⁴ mol/L**. **pH** = ?",
@@ -115,7 +115,7 @@ const steps = [
         q: "Welke relatie geldt **altijd** in water (25°C)?",
         options: ["pH + pOH = 14","pH × pOH = 14","pH − pOH = 14","pH = pOH"],
         answer: 0,
-        wrongHints: [null, "Niet — het gaat om een som, niet om een product.", "Niet — het is ook een som, maar dan min in plaats van plus.", "Alleen bij neutrale oplossing zijn pH en pOH gelijk aan elkaar."],
+        wrongHints: [null, "Niet — het gaat om een som, niet om een product.", "Niet — het is een som, geen verschil.", "Alleen bij neutrale oplossing zijn pH en pOH gelijk aan elkaar."],
         uitlegPad: {
           stappen: [{ titel: "Kw = 10⁻¹⁴", tekst: "Waterconstante: [H₃O⁺][OH⁻] = **10⁻¹⁴**. Log-versie: **pH + pOH = 14** (bij 25°C). Bij neutraal: pH = pOH = 7." }],
           niveaus: { basis: "pH + pOH = 14.", simpeler: "Som = 14", nogSimpeler: "14" },
@@ -140,7 +140,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — pH stijgt na verdunnen.", "Niet pH.", "Niet — geen base."],
         uitlegPad: {
-          stappen: [{ titel: "10× verdund = pH +1", tekst: "0,1 M HCl heeft pH=1. **10× verdund** → 0,01 M → pH=**2**. Algemene regel: 10× verdunnen = pH stijgt 1 (zuur) of daalt 1 (base). Maximaal tot pH=7 (verdunde sterk zuur kan nooit basisch worden)." }],
+          stappen: [{ titel: "10× verdund = pH +1", tekst: "0,1 M HCl heeft pH=1. **10× verdund** → 0,01 M → pH=**2**. Algemene regel: 10× verdunnen = pH stijgt 1 (zuur) of daalt 1 (base). Maximaal tot pH=7 (verdund sterk zuur kan nooit basisch worden)." }],
           niveaus: { basis: "2.", simpeler: "10× verdund = pH+1 = 2", nogSimpeler: "2" },
         },
       },
@@ -151,7 +151,7 @@ const steps = [
   {
     title: "Sterk vs zwak — buffers",
     explanation:
-      "**Sterk zuur/base**: dissocieert **volledig** in water.\n• HCl → 100% naar Cl⁻ + H⁺.\n• [H⁺] = oorspronkelijke concentratie.\n\n**Zwak zuur/base**: dissocieert **gedeeltelijk** in water. Evenwicht.\n• CH₃COOH ⇌ CH₃COO⁻ + H⁺ (slechts ~1% bij 0,1 M).\n• [H⁺] < oorspronkelijke concentratie.\n\n**Zuurconstante Ka** (mate van dissociatie):\n• HA ⇌ A⁻ + H⁺\n• Ka = [A⁻][H⁺] / [HA]\n• **Hoge Ka = sterk zuur** (veel gedissocieerd).\n• **Lage Ka = zwak zuur**.\n• Sterk zuur: Ka >> 1.\n• Zwak zuur: Ka << 1 (vaak 10⁻³ tot 10⁻¹⁰).\n\n**pKa = −log(Ka)**:\n• Lage pKa = sterker zuur.\n• Hoge pKa = zwakker zuur.\n• Azijnzuur: Ka = 1,8 × 10⁻⁵ → pKa = 4,75.\n• HF: pKa = 3,17.\n• HCN: pKa = 9,2 (zeer zwak).\n\n**Berekenen pH zwak zuur** (HAVO/VWO):\n• Geef Ka + concentratie → benadering: [H⁺] ≈ √(Ka × C).\n• Voorbeeld: 0,1 M azijnzuur, Ka = 1,8 × 10⁻⁵:\n  - [H⁺] ≈ √(1,8×10⁻⁵ × 0,1) = √(1,8×10⁻⁶) ≈ 1,34 × 10⁻³.\n  - pH ≈ 2,87 (NIET 1 zoals 0,1 M HCl zou geven).\n\n**Buffers**:\n**Bufferoplossing** = mengsel zwak zuur + zijn geconjugeerde base in vergelijkbare hoeveelheden. **Weerstandsvermogen** tegen pH-verandering bij toevoegen kleine hoeveelheid zuur/base.\n\n**Voorbeelden buffer**:\n• CH₃COOH (azijnzuur) + CH₃COO⁻ (natriumacetaat). pH-bereik rond 4-6.\n• H₂CO₃ + HCO₃⁻. pH-bereik rond 6-8.\n• NH₄⁺ + NH₃. pH-bereik 8-10.\n\n**Werking**:\n• Bij toevoegen zuur: H⁺ reageert met base-component → afgevangen.\n• Bij toevoegen base: OH⁻ reageert met zuur-component → afgevangen.\n• pH blijft (ongeveer) constant.\n\n**Henderson-Hasselbalch-formule** (HAVO/VWO niet altijd vereist):\npH = pKa + log([A⁻]/[HA])\n• Als [A⁻] = [HA]: pH = pKa.\n\n**Bloed-buffer** (cruciaal voor leven!):\n• Bloed-pH = 7,35-7,45 (zeer nauw).\n• Bicarbonaat-buffer: H₂CO₃ ⇌ HCO₃⁻ + H⁺.\n• CO₂ in bloed → H₂CO₃ via koolzuuranhydrase enzym.\n• Hyperventilatie: te veel CO₂ uitademen → bloed wordt basisch (pH↑).\n• Onderademing: te weinig CO₂ uit → bloed zuur (pH↓).\n• Nieren reguleren HCO₃⁻ als langzame tweede laag.\n\n**Andere buffers in natuur**:\n• Speeksel: bicarbonaat — beschermt tandglazuur.\n• Oceaan: bicarbonaat — bufft CO₂-opname (maar overschrijden → oceaan-verzuring).\n• Bodem: humuszuren + carbonaten.",
+      "**Sterk zuur/base**: dissocieert **volledig** in water.\n• HCl → 100% naar Cl⁻ + H⁺.\n• [H⁺] = oorspronkelijke concentratie.\n\n**Zwak zuur/base**: dissocieert **gedeeltelijk** in water. Evenwicht.\n• CH₃COOH ⇌ CH₃COO⁻ + H⁺ (slechts ~1% bij 0,1 M).\n• [H⁺] < oorspronkelijke concentratie.\n\n**Zuurconstante Ka** (mate van dissociatie):\n• HA ⇌ A⁻ + H⁺\n• Ka = [A⁻][H⁺] / [HA]\n• **Hoge Ka = sterk zuur** (veel gedissocieerd).\n• **Lage Ka = zwak zuur**.\n• Sterk zuur: Ka >> 1.\n• Zwak zuur: Ka << 1 (vaak 10⁻³ tot 10⁻¹⁰).\n\n**pKa = −log(Ka)**:\n• Lage pKa = sterker zuur.\n• Hoge pKa = zwakker zuur.\n• Azijnzuur: Ka = 1,8 × 10⁻⁵ → pKa = 4,75.\n• HF: pKa = 3,17.\n• HCN: pKa = 9,2 (zeer zwak).\n\n**Berekenen pH zwak zuur** (HAVO/VWO):\n• Geef Ka + concentratie → benadering: [H⁺] ≈ √(Ka × C).\n• Voorbeeld: 0,1 M azijnzuur, Ka = 1,8 × 10⁻⁵:\n  - [H⁺] ≈ √(1,8×10⁻⁵ × 0,1) = √(1,8×10⁻⁶) ≈ 1,34 × 10⁻³.\n  - pH ≈ 2,87 (NIET 1 zoals 0,1 M HCl zou geven).\n\n**Buffers**:\n**Bufferoplossing** = mengsel zwak zuur + zijn geconjugeerde base in vergelijkbare hoeveelheden. **Weerstandsvermogen** tegen pH-verandering bij toevoegen kleine hoeveelheid zuur/base.\n\n**Voorbeelden buffer**:\n• CH₃COOH (azijnzuur) + CH₃COO⁻ (natriumacetaat). pH-bereik rond 4-6.\n• H₂CO₃ + HCO₃⁻. pH-bereik rond 6-8.\n• NH₄⁺ + NH₃. pH-bereik 8-10.\n\n**Werking**:\n• Bij toevoegen zuur: H⁺ reageert met base-component → afgevangen.\n• Bij toevoegen base: OH⁻ reageert met zuur-component → afgevangen.\n• pH blijft (ongeveer) constant.\n\n**Henderson-Hasselbalch-formule** (HAVO/VWO niet altijd vereist):\npH = pKa + log([A⁻]/[HA])\n• Als [A⁻] = [HA]: pH = pKa.\n\n**Bloed-buffer** (cruciaal voor leven!):\n• Bloed-pH = 7,35-7,45 (zeer nauw).\n• Bicarbonaat-buffer: H₂CO₃ ⇌ HCO₃⁻ + H⁺.\n• CO₂ in bloed → H₂CO₃ via koolzuuranhydrase enzym.\n• Hyperventilatie: te veel CO₂ uitademen → bloed wordt basisch (pH↑).\n• Onderademing: te weinig CO₂ uit → bloed zuur (pH↓).\n• Nieren reguleren HCO₃⁻ als langzame tweede laag.\n\n**Andere buffers in natuur**:\n• Speeksel: bicarbonaat — beschermt tandglazuur.\n• Oceaan: bicarbonaat — buffert CO₂-opname (maar overschrijden → oceaan-verzuring).\n• Bodem: humuszuren + carbonaten.",
     checks: [
       {
         q: "**Zwak zuur** dissocieert:",
@@ -180,7 +180,7 @@ const steps = [
         wrongHints: [null, "Niet — sterk zuur geen buffer.", "Niet — geen weerstand.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Zwak-zuur-paar = buffer", tekst: "**Buffer** = oplossing met **zwak zuur + zijn geconjugeerde base** (of zwakke base + geconj. zuur). Weerstaat pH-verandering bij toevoegen klein beetje zuur/base. Voorbeeld: azijnzuur + acetaat-zout." }],
-          niveaus: { basis: "Zwak zuur + geconj.base.", simpeler: "Buffer = zwak-paar", nogSimpeler: "A." },
+          niveaus: { basis: "Zwak zuur + geconj.base.", simpeler: "Buffer = zwak-paar", nogSimpeler: "Zwak zuur + base" },
         },
       },
       {
@@ -199,7 +199,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — niet in bloed.", "Niet — sterk zuur, geen buffer.", "Niet — bloed-pH zeer nauw gereguleerd."],
         uitlegPad: {
-          stappen: [{ titel: "Bicarbonaat = bloed-pH", tekst: "**Bicarbonaat-buffer** H₂CO₃ ⇌ HCO₃⁻ + H⁺ houdt bloed-pH op 7,35-7,45. Cruciaal — afwijking >0,4 = levensbedreigend. CO₂ uit ademhaling + nier-reabsorptie HCO₃⁻ samen reguleren." }],
+          stappen: [{ titel: "Bicarbonaat = bloed-pH", tekst: "**Bicarbonaat-buffer** H₂CO₃ ⇌ HCO₃⁻ + H⁺ houdt bloed-pH op 7,35-7,45. Cruciaal — een grote afwijking is levensbedreigend. CO₂ uit ademhaling + nier-reabsorptie HCO₃⁻ samen reguleren." }],
           theorie: "Toets-actueel: hyperventilatie verhoogt pH (alkalose), longontsteking kan pH verlagen (acidose).",
           niveaus: { basis: "Bicarbonaat.", simpeler: "Bloed-buffer = bicarbonaat", nogSimpeler: "Bicarbonaat" },
         },
@@ -211,7 +211,7 @@ const steps = [
   {
     title: "Titratie + indicatoren",
     explanation:
-      "**Titratie** = analyse-techniek: bepaal onbekende concentratie zuur of base door druppelsgewijs sterk tegenmiddel toe te voegen tot equivalentie.\n\n**Uitvoering**:\n1. Bekend volume onbekende oplossing in erlenmeyer.\n2. Indicator (kleurstof die kleur verandert bij pH-omslag) toevoegen.\n3. Vul buret met titratieoplossing van bekende concentratie.\n4. Druppel langzaam toe, **roer** continu.\n5. Stop wanneer indicator (definitief) van kleur verandert = **equivalentiepunt** bereikt.\n6. Volume toegevoegd aflezen → bereken onbekende concentratie.\n\n**Equivalentiepunt** vs **eindpunt**:\n• **Equivalentiepunt**: exact theoretisch punt waarop zuur en base evenredig zijn.\n• **Eindpunt**: wanneer indicator van kleur verandert (praktisch).\n• Goed gekozen indicator → eindpunt = equivalentiepunt.\n\n**Berekening**:\nC_zuur × V_zuur = C_base × V_base (voor 1-protonig)\n\nVoor meer-protonig zuur of base: factor erbij.\n\n**Voorbeeld**:\n10 mL onbekend HCl getitreerd met 0,1 M NaOH. Indicator omslagt bij 15 mL NaOH.\nC_HCl × 10 = 0,1 × 15 → C_HCl = 0,15 M.\n\n**Indicatoren** (zwak zuur dat per kleur verschilt afhankelijk van pH):\n• **Lakmoes**: rood (zuur) ↔ blauw (basisch). Omslagpunt rond pH 5-8. Niet erg scherp.\n• **Fenolftaleïne**: kleurloos (pH<8) ↔ roze (pH>8,2). Voor titratie sterk zuur + sterk base.\n• **Methyloranje**: rood (pH<3,1) ↔ oranje-geel (pH>4,4). Voor titratie sterk zuur.\n• **BTB (broomthymolblauw)**: geel (pH<6) ↔ blauw (pH>7,6). Algemeen.\n• **Universeel indicator-papier**: meerdere kleuren over hele pH-bereik.\n\n**Indicator-keuze**:\n• Sterk zuur + sterk base (HCl + NaOH): equivalentiepunt = pH 7. Fenolftaleïne of methyloranje werken beide.\n• Sterk zuur + zwak base (HCl + NH₃): equivalentiepunt < 7 (zuur zout). Methyloranje.\n• Zwak zuur + sterk base (azijn + NaOH): equivalentiepunt > 7 (basisch zout). Fenolftaleïne.\n• Zwak zuur + zwak base: equivalentiepunt afhankelijk, vaak moeilijk visueel — gebruik pH-meter.\n\n**Titratiekromme** (pH vs toegevoegd volume):\n• Begint bij pH van oplossing.\n• Daalt/stijgt langzaam.\n• **Steile sprong** bij equivalentiepunt (pH springt ~3-7 binnen druppels).\n• Buffergebied (vlak deel) als zwak component aanwezig.\n• Bij zwak zuur + sterk base: pKa = pH bij half-equivalentiepunt.\n\n**Praktische foutbronnen**:\n• Te snel druppelen → voorbij equivalentiepunt.\n• Verkeerde indicator → eindpunt ≠ equivalentiepunt.\n• Erlenmeyer niet schoon → onbekende stoffen.\n• Buret niet gespoeld met titratie-oplossing → vermenging.\n\n**Pipet vs buret**:\n• Pipet: vast volume (10 mL, 25 mL).\n• Buret: variabel volume met aflezing.\n• Maatkolf: bekende totaal-volume (250 mL, 500 mL) — voor verdunning van standaard.",
+      "**Titratie** = analyse-techniek: bepaal onbekende concentratie zuur of base door druppelsgewijs sterk tegenmiddel toe te voegen tot equivalentie.\n\n**Uitvoering**:\n1. Bekend volume onbekende oplossing in erlenmeyer.\n2. Indicator (kleurstof die kleur verandert bij pH-omslag) toevoegen.\n3. Vul buret met titratieoplossing van bekende concentratie.\n4. Druppel langzaam toe, **roer** continu.\n5. Stop wanneer indicator (definitief) van kleur verandert = **eindpunt** bereikt.\n6. Volume toegevoegd aflezen → bereken onbekende concentratie.\n\n**Equivalentiepunt** vs **eindpunt**:\n• **Equivalentiepunt**: exact theoretisch punt waarop zuur en base evenredig zijn.\n• **Eindpunt**: wanneer indicator van kleur verandert (praktisch).\n• Goed gekozen indicator → eindpunt = equivalentiepunt.\n\n**Berekening**:\nC_zuur × V_zuur = C_base × V_base (voor 1-protonig)\n\nVoor meer-protonig zuur of base: factor erbij.\n\n**Voorbeeld**:\n10 mL onbekend HCl getitreerd met 0,1 M NaOH. Indicator slaat om bij 15 mL NaOH.\nC_HCl × 10 = 0,1 × 15 → C_HCl = 0,15 M.\n\n**Indicatoren** (zwak zuur waarvan de kleur afhangt van de pH):\n• **Lakmoes**: rood (zuur) ↔ blauw (basisch). Omslagpunt rond pH 5-8. Niet erg scherp.\n• **Fenolftaleïne**: kleurloos (pH<8) ↔ roze (pH>8,2). Voor titratie sterk zuur + sterke base.\n• **Methyloranje**: rood (pH<3,1) ↔ oranje-geel (pH>4,4). Voor titratie sterk zuur.\n• **BTB (broomthymolblauw)**: geel (pH<6) ↔ blauw (pH>7,6). Algemeen.\n• **Universeel indicator-papier**: meerdere kleuren over hele pH-bereik.\n\n**Indicator-keuze**:\n• Sterk zuur + sterke base (HCl + NaOH): equivalentiepunt = pH 7. Fenolftaleïne of methyloranje werken beide.\n• Sterk zuur + zwakke base (HCl + NH₃): equivalentiepunt < 7 (zuur zout). Methyloranje.\n• Zwak zuur + sterke base (azijn + NaOH): equivalentiepunt > 7 (basisch zout). Fenolftaleïne.\n• Zwak zuur + zwakke base: equivalentiepunt afhankelijk, vaak moeilijk visueel — gebruik pH-meter.\n\n**Titratiekromme** (pH vs toegevoegd volume):\n• Begint bij pH van oplossing.\n• Daalt/stijgt langzaam.\n• **Steile sprong** bij equivalentiepunt (pH springt ~3-7 binnen druppels).\n• Buffergebied (vlak deel) als zwak component aanwezig.\n• Bij zwak zuur + sterke base: pKa = pH bij half-equivalentiepunt.\n\n**Praktische foutbronnen**:\n• Te snel druppelen → voorbij equivalentiepunt.\n• Verkeerde indicator → eindpunt ≠ equivalentiepunt.\n• Erlenmeyer niet schoon → onbekende stoffen.\n• Buret niet gespoeld met titratie-oplossing → vermenging.\n\n**Pipet vs buret**:\n• Pipet: vast volume (10 mL, 25 mL).\n• Buret: variabel volume met aflezing.\n• Maatkolf: bekende totaal-volume (250 mL, 500 mL) — voor verdunning van standaard.",
     checks: [
       {
         q: "Wat is het **equivalentiepunt** in een titratie?",
@@ -219,7 +219,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — begin = pH onbekend.", "Niet — alleen bij sterk-sterk.", "Eindpunt — niet hetzelfde."],
         uitlegPad: {
-          stappen: [{ titel: "Stoichiometrisch", tekst: "**Equivalentiepunt** = exact moment waarop toegevoegde stof stoichiometrisch gelijk is aan beginstof. Bij sterk zuur + sterk base = pH 7. Bij zwak/sterk-combinaties anders." }],
+          stappen: [{ titel: "Stoïchiometrisch", tekst: "**Equivalentiepunt** = exact moment waarop toegevoegde stof stoichiometrisch gelijk is aan beginstof. Bij sterk zuur + sterke base = pH 7. Bij zwak/sterk-combinaties anders." }],
           niveaus: { basis: "Stoichiometrisch evenwicht.", simpeler: "Equivalentie = even-veel", nogSimpeler: "Even" },
         },
       },
@@ -239,7 +239,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — omslag te vroeg.", "Te vaag.", "Wel nodig."],
         uitlegPad: {
-          stappen: [{ titel: "Zwak zuur + sterk base = basisch eq.", tekst: "Bij zwak zuur (azijn) + sterk base (NaOH): equivalentiepunt **pH > 7** (acetaat-ion is base). **Fenolftaleïne** omslagt rond pH 8,2 → match. Methyloranje slaat al om bij pH 4 → veel te vroeg." }],
+          stappen: [{ titel: "Zwak zuur + sterke base = basisch eq.", tekst: "Bij zwak zuur (azijn) + sterke base (NaOH): equivalentiepunt **pH > 7** (acetaat-ion is base). **Fenolftaleïne** slaat om rond pH 8,2 → past. Methyloranje slaat al om bij pH 4 → veel te vroeg." }],
           niveaus: { basis: "Fenolftaleïne.", simpeler: "Azijn+NaOH = fenolftaleïne", nogSimpeler: "Fenolft." },
         },
       },
@@ -254,7 +254,7 @@ const steps = [
         },
       },
       {
-        q: "Bij zwak zuur + sterk base, **pKa = pH op halfequivalentiepunt**?",
+        q: "Bij zwak zuur + sterke base, **pKa = pH op halfequivalentiepunt**?",
         options: ["Ja","Nee","Alleen bij neutralisatie","Onmogelijk te zeggen"],
         answer: 0,
         wrongHints: [null, "Wel — vaste relatie.", "Niet — overal in zwak-zuur-titratie.", "Wel — bekende relatie."],
@@ -299,14 +299,14 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Wel — CO₂ minder.", "Wel duidelijke richting."],
         uitlegPad: {
-          stappen: [{ titel: "CO₂ uit → pH op", tekst: "**Hyperventilatie** = snel ademen → veel CO₂ uitgeademd → minder H₂CO₃ in bloed → minder H⁺ → pH **stijgt** (alkalose). Behandeling: in tasje ademen om CO₂ weer op te bouwen." }],
+          stappen: [{ titel: "CO₂ uit → pH op", tekst: "**Hyperventilatie** = snel ademen → veel CO₂ uitgeademd → minder H₂CO₃ in bloed → minder H⁺ → pH **stijgt** (alkalose). Rustig ademen brengt het CO₂-gehalte weer op peil." }],
           theorie: "Onderademing (hypoventilatie): omgekeerd, pH daalt (acidose). Beide gevaarlijk.",
           niveaus: { basis: "Stijgen.", simpeler: "Hyperventilatie = pH↑", nogSimpeler: "Op" },
         },
       },
       {
         q: "Mengsel **CH₃COOH + CH₃COONa** = ?",
-        options: ["Buffer (zwak zuur + geconj.base)","Sterk zuur","Sterk base","Geen reactie"],
+        options: ["Buffer (zwak zuur + geconj.base)","Sterk zuur","Sterke base","Geen reactie"],
         answer: 0,
         wrongHints: [null, "Niet — beide zwak.", "Niet primair.", "Wel werking."],
         uitlegPad: {

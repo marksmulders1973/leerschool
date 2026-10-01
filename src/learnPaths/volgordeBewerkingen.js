@@ -71,7 +71,7 @@ ${steps.map((s, i) => {
 const steps = [
   {
     title: "Het probleem — wat eerst doen?",
-    explanation: "Als je een **rekensom** hebt met meerdere getallen en bewerkingen, **maakt het uit in welke volgorde je ze doet**.\n\n**Voorbeeld**: **2 + 3 × 4** = ?\n\nTwee mogelijke antwoorden:\n• Optie A: van links naar rechts → 2 + 3 = 5, dan 5 × 4 = **20**.\n• Optie B: vermenigvuldigen eerst → 3 × 4 = 12, dan 2 + 12 = **14**.\n\nWelke is goed? **14** is goed.\n\nWaarom? **Omdat 'maal' altijd vóór 'plus' gaat**. Dat is een **wereldwijde wiskundige afspraak**.\n\nAnders zou iedereen een ander antwoord krijgen, en kunnen we niet meer rekenen met elkaar!\n\n**Het probleem**: kinderen rekenen vaak **van links naar rechts**, alsof bij lezen. Dat is **fout** bij rekenen waar bewerkingen gemixt zijn.\n\n**Andere voorbeelden**:\n• **10 − 6 ÷ 2** = 10 − 3 = **7** (delen eerst, dan aftrekken)\n• **5 + 2 × 3** = 5 + 6 = **11** (× eerst)\n• **8 ÷ 2 + 3** = 4 + 3 = **7** (÷ eerst)\n\n**De regel** *(in dit pad uitgelegd)*:\n1. **Haakjes** eerst\n2. **Machten** (zoals 3² = 9)\n3. **Vermenigvuldigen + delen**\n4. **Optellen + aftrekken**\n\nGeheugentruc Nederlands: '**H**aakjes, **M**achten, **V**ermenigvuldigen, **D**elen, **O**ptellen, **A**ftrekken' = **HMVDOA**.\n\nVeel scholen leren ook: **'M**aal **e**erst' (M staat voor maal/×).\n\n**Belangrijk**: × en ÷ zijn **even sterk** — werken die in dezelfde stap. Idem + en −.",
+    explanation: "Als je een **rekensom** hebt met meerdere getallen en bewerkingen, **maakt het uit in welke volgorde je ze doet**.\n\n**Voorbeeld**: **2 + 3 × 4** = ?\n\nTwee mogelijke antwoorden:\n• Optie A: van links naar rechts → 2 + 3 = 5, dan 5 × 4 = **20**.\n• Optie B: vermenigvuldigen eerst → 3 × 4 = 12, dan 2 + 12 = **14**.\n\nWelke is goed? **14** is goed.\n\nWaarom? **Omdat 'maal' altijd vóór 'plus' gaat**. Dat is een **wereldwijde wiskundige afspraak**.\n\nAnders zou iedereen een ander antwoord krijgen, en kunnen we niet meer rekenen met elkaar!\n\n**Het probleem**: kinderen rekenen vaak **van links naar rechts**, zoals bij lezen. Dat is **fout** bij rekenen waar bewerkingen gemixt zijn.\n\n**Andere voorbeelden**:\n• **10 − 6 ÷ 2** = 10 − 3 = **7** (delen eerst, dan aftrekken)\n• **5 + 2 × 3** = 5 + 6 = **11** (× eerst)\n• **8 ÷ 2 + 3** = 4 + 3 = **7** (÷ eerst)\n\n**De regel** *(in dit pad uitgelegd)*:\n1. **Haakjes** eerst\n2. **Machten** (zoals 3² = 9)\n3. **Vermenigvuldigen + delen**\n4. **Optellen + aftrekken**\n\nGeheugentruc Nederlands: '**H**aakjes, **M**achten, **V**ermenigvuldigen, **D**elen, **O**ptellen, **A**ftrekken' = **HMVDOA**.\n\nVeel scholen leren ook: **'M**aal **e**erst' (M staat voor maal/×).\n\n**Belangrijk**: × en ÷ zijn **even sterk** — die doe je in dezelfde stap. Idem + en −.",
     svg: volgordeSvg(),
     checks: [
       {
@@ -106,7 +106,7 @@ const steps = [
   },
   {
     title: "De volgorde-regel — × en ÷ vóór + en −",
-    explanation: "**Regel**: **vermenigvuldigen** (×) en **delen** (÷) komen **vóór** **optellen** (+) en **aftrekken** (−).\n\n**Voorbeelden** *(stap voor stap)*:\n\n**Voorbeeld 1**: 2 + 3 × 4\n• Eerst ×: 3 × 4 = 12\n• Dan +: 2 + 12 = **14**\n\n**Voorbeeld 2**: 10 − 6 ÷ 2\n• Eerst ÷: 6 ÷ 2 = 3\n• Dan −: 10 − 3 = **7**\n\n**Voorbeeld 3**: 5 × 4 + 3 × 2\n• Eerst beide ×: 5×4 = 20, en 3×2 = 6\n• Dan +: 20 + 6 = **26**\n\n**Voorbeeld 4**: 8 + 12 ÷ 4 − 5\n• Eerst ÷: 12 ÷ 4 = 3\n• Dan om-de-buurt + en − van links naar rechts:\n  - 8 + 3 = 11\n  - 11 − 5 = **6**\n\n**Belangrijk: × en ÷ zijn even sterk**\nAls er meerdere × en ÷ in een som staan, doe ze van **links naar rechts**:\n• 12 ÷ 3 × 2 = (12 ÷ 3) × 2 = 4 × 2 = **8**\n• 24 × 2 ÷ 6 = (24 × 2) ÷ 6 = 48 ÷ 6 = **8**\n\n**Idem voor + en −**: even sterk, links naar rechts:\n• 10 − 3 + 5 = (10 − 3) + 5 = 7 + 5 = **12**\n• 8 + 4 − 6 = (8 + 4) − 6 = 12 − 6 = **6**\n\n**Trucje om bewerkingen te onthouden**:\n• × en ÷ zijn **stronger** (\"krachtiger\")\n• + en − zijn **swakker** (\"basiser\")\n\nDoe altijd eerst de stronkere bewerkingen.\n\n**Veelvoorkomende fout**:\nKinderen rekenen \"5 + 2 × 3\" als (5+2)×3 = 21. Maar correct is 5 + 6 = **11**. Onthoud: × eerst!",
+    explanation: "**Regel**: **vermenigvuldigen** (×) en **delen** (÷) komen **vóór** **optellen** (+) en **aftrekken** (−).\n\n**Voorbeelden** *(stap voor stap)*:\n\n**Voorbeeld 1**: 2 + 3 × 4\n• Eerst ×: 3 × 4 = 12\n• Dan +: 2 + 12 = **14**\n\n**Voorbeeld 2**: 10 − 6 ÷ 2\n• Eerst ÷: 6 ÷ 2 = 3\n• Dan −: 10 − 3 = **7**\n\n**Voorbeeld 3**: 5 × 4 + 3 × 2\n• Eerst beide ×: 5×4 = 20, en 3×2 = 6\n• Dan +: 20 + 6 = **26**\n\n**Voorbeeld 4**: 8 + 12 ÷ 4 − 5\n• Eerst ÷: 12 ÷ 4 = 3\n• Dan + en − van links naar rechts:\n  - 8 + 3 = 11\n  - 11 − 5 = **6**\n\n**Belangrijk: × en ÷ zijn even sterk**\nAls er meerdere × en ÷ in een som staan, doe ze van **links naar rechts**:\n• 12 ÷ 3 × 2 = (12 ÷ 3) × 2 = 4 × 2 = **8**\n• 24 × 2 ÷ 6 = (24 × 2) ÷ 6 = 48 ÷ 6 = **8**\n\n**Idem voor + en −**: even sterk, links naar rechts:\n• 10 − 3 + 5 = (10 − 3) + 5 = 7 + 5 = **12**\n• 8 + 4 − 6 = (8 + 4) − 6 = 12 − 6 = **6**\n\n**Trucje om bewerkingen te onthouden**:\n• × en ÷ zijn **sterker**\n• + en − zijn **zwakker**\n\nDoe altijd eerst de sterkere bewerkingen.\n\n**Veelvoorkomende fout**:\nKinderen rekenen \"5 + 2 × 3\" als (5+2)×3 = 21. Maar correct is 5 + 6 = **11**. Onthoud: × eerst!",
     svg: uitwerkingSvg([
       { expr: "2 + 3 × 4", uitleg: "Eerst de × doen" },
       { expr: "= 2 + 12", uitleg: "Nu het optellen" },
@@ -124,7 +124,7 @@ const steps = [
           theorie: "Volgorde-regel onafhankelijk van positie: × eerst, dan +.",
           voorbeelden: [{ type: "stap", tekst: "5×4+3 = 20+3 = 23." }],
           basiskennis: [{ onderwerp: "Niet (5×4+3)", uitleg: "Geen haakjes om hele som — gewoon volgorde." }],
-          niveaus: { basis: "23.", simpeler: "5×4=20, +3=23. (Niet 5+3 of 4+3 ipv ×).", nogSimpeler: "23" },
+          niveaus: { basis: "23.", simpeler: "5×4=20, +3=23. (Niet eerst 4+3.)", nogSimpeler: "23" },
         },
       },
       {
@@ -158,8 +158,8 @@ const steps = [
     ],
   },
   {
-    title: "Haakjes — boss boven alles",
-    explanation: "**Haakjes ( )** kunnen de volgorde **veranderen**.\n\nWat tussen haakjes staat, doe je **EERST** — vóór alles anders!\n\n**Vergelijk**:\n\n*Zonder haakjes*:\n**2 + 3 × 4** = 2 + 12 = **14** *(× eerst)*\n\n*Met haakjes*:\n**(2 + 3) × 4** = 5 × 4 = **20** *(haakjes eerst)*\n\nDe haakjes **forceren** dat 2 + 3 als eerste berekend wordt.\n\n**Voorbeelden**:\n\n**Voorbeeld 1**: (4 + 6) × 3\n• Eerst haakjes: 4 + 6 = 10\n• Dan ×: 10 × 3 = **30**\n\n**Voorbeeld 2**: 8 × (5 − 2)\n• Eerst haakjes: 5 − 2 = 3\n• Dan ×: 8 × 3 = **24**\n\n**Voorbeeld 3**: (10 + 5) ÷ (1 + 2)\n• Eerst beide haakjes: (15) ÷ (3)\n• Dan ÷: 15 ÷ 3 = **5**\n\n**Geneste haakjes** *(haakjes binnen haakjes)*:\n\n**Voorbeeld**: 3 × ((4 + 2) − 1)\n• Eerst de **binnenste** haakjes: 4 + 2 = 6\n• Dan de **buitenste** haakjes: 6 − 1 = 5\n• Tot slot ×: 3 × 5 = **15**\n\nWerkje van **binnen** naar **buiten**.\n\n**Wanneer gebruik je haakjes?**\n• Om volgorde te forceren: '(2+3)×4' ipv '2+3×4'.\n• Om duidelijkheid: zelfs als niet nodig, soms voor leesbaarheid.\n• In wiskunde-formules constant: omtrek = 2(l + b).\n\n**Pas op met deelstrepen**:\n• 12 ÷ (4 + 2) = 12 ÷ 6 = 2\n• 12 ÷ 4 + 2 = 3 + 2 = 5 (geheel anders!)\n\nHaakjes maken het verschil.",
+    title: "Haakjes — de baas boven alles",
+    explanation: "**Haakjes ( )** kunnen de volgorde **veranderen**.\n\nWat tussen haakjes staat, doe je **EERST** — vóór alles anders!\n\n**Vergelijk**:\n\n*Zonder haakjes*:\n**2 + 3 × 4** = 2 + 12 = **14** *(× eerst)*\n\n*Met haakjes*:\n**(2 + 3) × 4** = 5 × 4 = **20** *(haakjes eerst)*\n\nDe haakjes **forceren** dat 2 + 3 als eerste berekend wordt.\n\n**Voorbeelden**:\n\n**Voorbeeld 1**: (4 + 6) × 3\n• Eerst haakjes: 4 + 6 = 10\n• Dan ×: 10 × 3 = **30**\n\n**Voorbeeld 2**: 8 × (5 − 2)\n• Eerst haakjes: 5 − 2 = 3\n• Dan ×: 8 × 3 = **24**\n\n**Voorbeeld 3**: (10 + 5) ÷ (1 + 2)\n• Eerst beide haakjes: (15) ÷ (3)\n• Dan ÷: 15 ÷ 3 = **5**\n\n**Geneste haakjes** *(haakjes binnen haakjes)*:\n\n**Voorbeeld**: 3 × ((4 + 2) − 1)\n• Eerst de **binnenste** haakjes: 4 + 2 = 6\n• Dan de **buitenste** haakjes: 6 − 1 = 5\n• Tot slot ×: 3 × 5 = **15**\n\nWerk van **binnen** naar **buiten**.\n\n**Wanneer gebruik je haakjes?**\n• Om volgorde te forceren: '(2+3)×4' ipv '2+3×4'.\n• Voor duidelijkheid: soms ook als het niet nodig is.\n• In wiskunde-formules constant: omtrek = 2(l + b).\n\n**Pas op bij delen**:\n• 12 ÷ (4 + 2) = 12 ÷ 6 = 2\n• 12 ÷ 4 + 2 = 3 + 2 = 5 (geheel anders!)\n\nHaakjes maken het verschil.",
     svg: uitwerkingSvg([
       { expr: "(2 + 3) × 4", uitleg: "Eerst haakjes" },
       { expr: "= 5 × 4", uitleg: "Nu de ×" },
@@ -229,7 +229,7 @@ const steps = [
           woorden: [{ woord: "kwadraat", uitleg: "x² = x maal x. 'Tot de tweede macht'." }],
           theorie: "Macht: kleine getal zegt HOE VAAK je vermenigvuldigt. 3² = 2 keer 3 vermenigvuldigen.",
           voorbeelden: [{ type: "tabel", tekst: "2²=4. 3²=9. 4²=16. 5²=25. 10²=100." }],
-          basiskennis: [{ onderwerp: "Niet 3×2", uitleg: "3² ≠ 3×2 = 6. Macht is HERHALEN, niet vermenigvuldigen." }],
+          basiskennis: [{ onderwerp: "Niet 3×2", uitleg: "3² ≠ 3×2 = 6. Macht = het getal met zichzelf vermenigvuldigen." }],
           niveaus: { basis: "9.", simpeler: "3² = 3×3 = 9 (NIET 3+3 of 3×2).", nogSimpeler: "9" },
         },
       },
@@ -265,7 +265,7 @@ const steps = [
   },
   {
     title: "De volledige volgorde — alles samen",
-    explanation: "**Volledige volgorde** *(één-voor-één)*:\n\n1. **Haakjes** ( ) eerst — van binnen naar buiten\n2. **Machten** (zoals 3²)\n3. **× en ÷** *(samen, van links naar rechts)*\n4. **+ en −** *(samen, van links naar rechts)*\n\n**Geheugenezels Nederlands**:\n• **HMVDOA** (Haakjes Machten Vermenigvuldigen Delen Optellen Aftrekken)\n• **'Hoe Maak Vader Diepe Open Aardlaag?'** (verzonnen rijmpje)\n\n**Engels** *(soms gebruikt)*:\n• **PEMDAS** (Parentheses Exponents Multiplication Division Addition Subtraction)\n• 'Please Excuse My Dear Aunt Sally'\n\n**Voorbeeld met alles**: 2 × (3 + 1)² − 4 ÷ 2\n• **1. Haakjes**: 3 + 1 = 4\n• Som wordt: 2 × 4² − 4 ÷ 2\n• **2. Machten**: 4² = 16\n• Som wordt: 2 × 16 − 4 ÷ 2\n• **3. × en ÷** (van links naar rechts): 2 × 16 = 32, en 4 ÷ 2 = 2\n• Som wordt: 32 − 2\n• **4. + en −**: 32 − 2 = **30**\n\n**Pas op**:\n\n**Veelvoorkomende fout 1**: aftrekken vóór delen\n• \"10 − 6 ÷ 2\" → kinderen doen vaak (10−6) ÷ 2 = 2. Fout! ÷ eerst: 10 − 3 = **7**.\n\n**Veelvoorkomende fout 2**: machten als gewone ×\n• 3² = 9, niet 6. Wees alert.\n\n**Veelvoorkomende fout 3**: alles van links naar rechts\n• \"5 + 3 × 2\" wordt 16 ipv 11. Onthoud: × is sterker!\n\n**Trucje om rustig te werken**:\nSchrijf **elke stap apart op**, zodat je niet door elkaar haalt:\n```\n2 + 3 × 4\n= 2 + 12\n= 14\n```\n\nNet zoals een kookrecept: één stap tegelijk.",
+    explanation: "**Volledige volgorde** *(één-voor-één)*:\n\n1. **Haakjes** ( ) eerst — van binnen naar buiten\n2. **Machten** (zoals 3²)\n3. **× en ÷** *(samen, van links naar rechts)*\n4. **+ en −** *(samen, van links naar rechts)*\n\n**Ezelsbruggetjes Nederlands**:\n• **HMVDOA** (Haakjes Machten Vermenigvuldigen Delen Optellen Aftrekken)\n• **'Hoe Moeten Wij Van De Onvoldoendes Afkomen?'** (W = worteltrekken)\n\n**Engels** *(soms gebruikt)*:\n• **PEMDAS** (Parentheses Exponents Multiplication Division Addition Subtraction)\n• 'Please Excuse My Dear Aunt Sally'\n\n**Voorbeeld met alles**: 2 × (3 + 1)² − 4 ÷ 2\n• **1. Haakjes**: 3 + 1 = 4\n• Som wordt: 2 × 4² − 4 ÷ 2\n• **2. Machten**: 4² = 16\n• Som wordt: 2 × 16 − 4 ÷ 2\n• **3. × en ÷** (van links naar rechts): 2 × 16 = 32, en 4 ÷ 2 = 2\n• Som wordt: 32 − 2\n• **4. + en −**: 32 − 2 = **30**\n\n**Pas op**:\n\n**Veelvoorkomende fout 1**: aftrekken vóór delen\n• \"10 − 6 ÷ 2\" → kinderen doen vaak (10−6) ÷ 2 = 2. Fout! ÷ eerst: 10 − 3 = **7**.\n\n**Veelvoorkomende fout 2**: machten als gewone ×\n• 3² = 9, niet 6. Wees alert.\n\n**Veelvoorkomende fout 3**: alles van links naar rechts\n• \"5 + 3 × 2\" wordt 16 ipv 11. Onthoud: × is sterker!\n\n**Trucje om rustig te werken**:\nSchrijf **elke stap apart op**, zodat je niet door elkaar haalt:\n```\n2 + 3 × 4\n= 2 + 12\n= 14\n```\n\nNet zoals een kookrecept: één stap tegelijk.",
     svg: volgordeSvg(),
     checks: [
       {
@@ -300,7 +300,7 @@ const steps = [
         q: "**3 × 2² + 4** = ?",
         options: ["16","24","28","12"],
         answer: 0,
-        wrongHints: [null,"Dat zou je krijgen als er haakjes om 3×2 stonden — maar er zijn geen haakjes.","Doe eerst de macht, dan ×, dan +.","Heb je de macht 2² wel gedaan?"],
+        wrongHints: [null,"Dat zou je krijgen als er haakjes om 2²+4 stonden — maar er zijn geen haakjes.","Doe eerst de macht, dan ×, dan +.","Vergeet de + 4 aan het eind niet."],
         uitlegPad: {
           stappen: [{ titel: "M → × → +", tekst: "Macht eerst: 2²=4. ×: 3×4=12. +: 12+4=16." }],
           woorden: [{ woord: "macht ≠ vermenigvuldiging", uitleg: "Macht (2²) en × (3×2) zijn verschillend." }],
@@ -314,7 +314,7 @@ const steps = [
   },
   {
     title: "Lastige sommen — combinaties",
-    explanation: "Tijd voor wat lastigere sommen waar alle regels samenkomen.\n\n**Voorbeeld 1**: 24 ÷ (2 + 4) × 3\n• Haakjes: 2 + 4 = 6\n• Som wordt: 24 ÷ 6 × 3\n• ÷ en × van links naar rechts: 24 ÷ 6 = 4, 4 × 3 = **12**\n\n**Voorbeeld 2**: 100 − 5 × (3 + 2²)\n• Macht: 2² = 4\n• Haakjes: 3 + 4 = 7\n• Som wordt: 100 − 5 × 7\n• ×: 5 × 7 = 35\n• −: 100 − 35 = **65**\n\n**Voorbeeld 3** (geneste haakjes): 2 × (3 + (4 × 2))\n• Binnenste haakjes: 4 × 2 = 8\n• Buitenste haakjes: 3 + 8 = 11\n• ×: 2 × 11 = **22**\n\n**Voorbeeld 4** (machten + haakjes): (2 + 3)² − (4 − 1)²\n• Beide haakjes: 5 en 3\n• Beide machten: 5² = 25, 3² = 9\n• Tot slot: 25 − 9 = **16**\n\n**Voorbeeld 5** (echt lastig): 50 − 2 × (3² + 1) ÷ 5\n• Macht binnen haakjes: 3² = 9\n• Haakjes: 9 + 1 = 10\n• Som wordt: 50 − 2 × 10 ÷ 5\n• × en ÷ van links naar rechts: 2 × 10 = 20, 20 ÷ 5 = 4\n• Som wordt: 50 − 4\n• −: **46**\n\n**Tips voor lastige sommen**:\n1. **Schrijf elke stap apart** — niet alles in één keer doen.\n2. **Onderlijn wat je net berekend hebt** zodat je niet vergeet.\n3. **Werk van binnen naar buiten** bij geneste haakjes.\n4. **Controleer aan het einde** — is je antwoord realistisch?\n\n**Hoe controleer je?**\nBijvoorbeeld bij 100 − 5 × 7 = 65:\n• 5 × 7 = 35 (~30, ~40 — past).\n• 100 − 35 = 65 (groter dan 100 zou raar zijn).\n• Antwoord 65 is plausibel.",
+    explanation: "Tijd voor wat lastigere sommen waar alle regels samenkomen.\n\n**Voorbeeld 1**: 24 ÷ (2 + 4) × 3\n• Haakjes: 2 + 4 = 6\n• Som wordt: 24 ÷ 6 × 3\n• ÷ en × van links naar rechts: 24 ÷ 6 = 4, 4 × 3 = **12**\n\n**Voorbeeld 2**: 100 − 5 × (3 + 2²)\n• Macht: 2² = 4\n• Haakjes: 3 + 4 = 7\n• Som wordt: 100 − 5 × 7\n• ×: 5 × 7 = 35\n• −: 100 − 35 = **65**\n\n**Voorbeeld 3** (geneste haakjes): 2 × (3 + (4 × 2))\n• Binnenste haakjes: 4 × 2 = 8\n• Buitenste haakjes: 3 + 8 = 11\n• ×: 2 × 11 = **22**\n\n**Voorbeeld 4** (machten + haakjes): (2 + 3)² − (4 − 1)²\n• Beide haakjes: 5 en 3\n• Beide machten: 5² = 25, 3² = 9\n• Tot slot: 25 − 9 = **16**\n\n**Voorbeeld 5** (echt lastig): 50 − 2 × (3² + 1) ÷ 5\n• Macht binnen haakjes: 3² = 9\n• Haakjes: 9 + 1 = 10\n• Som wordt: 50 − 2 × 10 ÷ 5\n• × en ÷ van links naar rechts: 2 × 10 = 20, 20 ÷ 5 = 4\n• Som wordt: 50 − 4\n• −: **46**\n\n**Tips voor lastige sommen**:\n1. **Schrijf elke stap apart** — niet alles in één keer doen.\n2. **Onderstreep wat je net berekend hebt** zodat je niet vergeet.\n3. **Werk van binnen naar buiten** bij geneste haakjes.\n4. **Controleer aan het einde** — is je antwoord realistisch?\n\n**Hoe controleer je?**\nBijvoorbeeld bij 100 − 5 × 7 = 65:\n• 5 × 7 = 35 (~30, ~40 — past).\n• 100 − 35 = 65 (groter dan 100 zou raar zijn).\n• Antwoord 65 is plausibel.",
     svg: uitwerkingSvg([
       { expr: "24 ÷ (2 + 4) × 3", uitleg: "Eerst haakjes" },
       { expr: "= 24 ÷ 6 × 3", uitleg: "Nu × en ÷ links naar rechts" },
@@ -368,7 +368,7 @@ const steps = [
   },
   {
     title: "Eindopdracht",
-    explanation: "**Snelle samenvatting**:\n\n**Volgorde** *(altijd):\n1. Haakjes\n2. Machten\n3. × en ÷ *(samen, links→rechts)*\n4. + en − *(samen, links→rechts)*\n\n**Geheugenezel: HMVDOA**\n\n**Tips**:\n• Schrijf elke stap apart\n• Bij geneste haakjes: van binnen naar buiten\n• Onthoud: × eerst, niet altijd van links naar rechts\n• Macht is herhaling van vermenigvuldigen, niet zomaar tweemaal\n\nVeel succes!",
+    explanation: "**Snelle samenvatting**:\n\n**Volgorde** *(altijd)*:\n1. Haakjes\n2. Machten\n3. × en ÷ *(samen, links→rechts)*\n4. + en − *(samen, links→rechts)*\n\n**Ezelsbruggetje: HMVDOA**\n\n**Tips**:\n• Schrijf elke stap apart\n• Bij geneste haakjes: van binnen naar buiten\n• Onthoud: × eerst, niet altijd van links naar rechts\n• Macht is herhaling van vermenigvuldigen, niet zomaar tweemaal\n\nVeel succes!",
     svg: volgordeSvg(),
     checks: [
       {
@@ -435,7 +435,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "× sterker", tekst: "× en ÷ zijn sterker dan + en −. + en − zijn even sterk." }],
           woorden: [{ woord: "sterkte", uitleg: "Welke bewerking gaat eerst in volgorde-regel." }],
-          theorie: "HMVDOA-niveau: × en ÷ = niveau 3. + en − = niveau 4. Hoger niveau = eerst.",
+          theorie: "HMVDOA-niveau: × en ÷ = niveau 3. + en − = niveau 4. Lager nummer = eerst.",
           voorbeelden: [{ type: "tabel", tekst: "× sterker dan + ja. − even sterk als +. Haakje = niet bewerking." }],
           basiskennis: [{ onderwerp: "Eigenlijk allebei", uitleg: "× en ÷ zijn allebei sterker dan +. Optie A is correct genoemd." }],
           niveaus: { basis: "× (vermenigvuldigen).", simpeler: "× en ÷ zijn sterker dan + en −. Optie A correct.", nogSimpeler: "×" },
@@ -447,16 +447,16 @@ const steps = [
       { q: "Bereken: 5 × (3 + 4) = ?", options: ["35","19","27","9"], answer: 0, wrongHints: [null, "Niet — haakjes prioriteit.", null, null] },
       { q: "Bereken: 100 − 30 × 2 = ?", options: ["40","140","70","60"], answer: 0, wrongHints: [null, "Niet — × eerst.", null, null] },
       { q: "Bereken: (10 + 5) × 2 = ?", options: ["30","25","15","20"], answer: 0, wrongHints: [null, "Niet — haakjes eerst.", null, null] },
-      { q: "Bereken: 18 ÷ (6 − 3) = ?", options: ["6","3","18","2"], answer: 0, wrongHints: [null, "Niet — niet zonder haakjes.", null, null] },
+      { q: "Bereken: 18 ÷ (6 − 3) = ?", options: ["6","3","18","2"], answer: 0, wrongHints: [null, "Niet — 18 ÷ 3 is meer.", null, null] },
       { q: "Bereken: 4 × 3 − 5 = ?", options: ["7","2","17","12"], answer: 0, wrongHints: [null, null, "Niet — geen +.", "Vergeet −5."] },
       { q: "Bereken: 8 + 4 ÷ 2 = ?", options: ["10","6","12","16"], answer: 0, wrongHints: [null, "Niet — ÷ eerst.", "Te veel.", null] },
       { q: "Welke bewerking is **sterkste** (eerst doen)?", options: ["Haakjes","Optellen","Aftrekken","Vermenigvuldigen"], answer: 0, wrongHints: [null, "Zwakst.", "Zwakst.", "Sterker dan +/−, niet sterkst."] },
-      { q: "Bereken: 6² + 3 = ?", options: ["39","15","36","9"], answer: 0, wrongHints: [null, "Niet — 6² niet 6×3.", "Niet — vergeet +3.", null] },
-      { q: "Bereken: 2 + 3 × 4 − 1 = ?", options: ["13","19","5","11"], answer: 0, wrongHints: [null, "Niet — niet eerst optellen.", null, "Niet — vergeet niet 3."] },
+      { q: "Bereken: 6² + 3 = ?", options: ["39","15","36","9"], answer: 0, wrongHints: [null, "Niet — 6² is niet 6×2.", "Niet — vergeet +3.", null] },
+      { q: "Bereken: 2 + 3 × 4 − 1 = ?", options: ["13","19","5","11"], answer: 0, wrongHints: [null, "Niet — niet eerst optellen.", null, "Niet — vergeet de 2 niet."] },
       { q: "Wat staat de **H** in HMVDOA voor?", options: ["Haakjes","Hard","Half","Honderdtal"], answer: 0, wrongHints: [null, "HMVDOA is het ezelsbruggetje voor de rekenvolgorde — welke bewerking doe je altijd als éérste?", null, null] },
       { q: "Bereken: 5 + (8 − 3) × 2 = ?", options: ["15","16","26","13"], answer: 0, wrongHints: [null, null, "Te veel.", null] },
-      { q: "Bereken: 20 ÷ 4 × 2 = ?", options: ["10","2,5","160","5"], answer: 0, wrongHints: [null, "Niet — niet ÷ laatste.", "Te veel.", "20÷8."] },
-      { q: "Bereken: 3² × 2 = ?", options: ["18","12","9","6"], answer: 0, wrongHints: [null, "Niet — bereken eerst de macht, dan vermenigvuldig je pas.", "Macht.", null] },
+      { q: "Bereken: 20 ÷ 4 × 2 = ?", options: ["10","2,5","160","5"], answer: 0, wrongHints: [null, "Niet — × en ÷ van links naar rechts.", "Te veel.", "Vergeet × 2 niet."] },
+      { q: "Bereken: 3² × 2 = ?", options: ["18","12","9","6"], answer: 0, wrongHints: [null, "Niet — bereken eerst de macht, dan vermenigvuldig je pas.", "Vergeet × 2 niet.", null] },
       { q: "Welke is **gelijkwaardig**: × en ÷ of + en −?", options: ["Beide paren onderling gelijk","Niet relevant","× sterker dan ÷","+ sterker dan −"], answer: 0, wrongHints: [null, "Wel.", null, null] },
       { q: "Bereken: (4 + 2) × (3 − 1) = ?", options: ["12","7","10","20"], answer: 0, wrongHints: [null, null, null, null] },
     ],

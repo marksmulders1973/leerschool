@@ -149,7 +149,7 @@ const steps = [
 
   {
     title: "Driehoek — basis × hoogte ÷ 2",
-    explanation: "Een **driehoek** heeft 3 zijden. De omtrek is gewoon de som van alle 3 zijden. Maar de **oppervlakte** is bijzonder.\n\n**Formule**:\n• Oppervlakte driehoek = **(basis × hoogte) ÷ 2**.\n\n**Belangrijk**: 'hoogte' is **NIET** een schuine zijde. Het is de **loodrechte** afstand van de top naar de basis (recht omhoog).\n\n**Voorbeeld**: driehoek met basis 8 m en hoogte 5 m.\n• Oppervlakte = (8 × 5) ÷ 2 = 40 ÷ 2 = **20 m²**.\n\n**Waarom delen door 2?**\nOmdat een driehoek **half** een rechthoek is. Stel je voor: rechthoek 8 × 5 m → oppervlakte 40 m². Snij diagonaal door = 2 driehoeken van 20 m² elk.\n\n**Toets-truc**:\n• Eerst basis × hoogte → dan ÷ 2.\n• Of eerst ÷ 2 → dan vermenigvuldigen *(als één van beide getallen even is, scheelt fouten)*.\n\n**Voorbeeld**: basis 10, hoogte 6.\n• 10 × 6 = 60. ÷ 2 = **30 m²**.\n• Of: 10 × 6 ÷ 2 = 10 × 3 = **30 m²**.\n\n**Veel-voorkomende fout**:\n'Hoogte' verwarren met een zijde. **Hoogte = loodrecht** vanaf de top naar de basis. In een schuine driehoek is dat een **gestippelde lijn**, niet een echte zijde.",
+    explanation: "Een **driehoek** heeft 3 zijden. De omtrek is gewoon de som van alle 3 zijden. Maar de **oppervlakte** is bijzonder.\n\n**Formule**:\n• Oppervlakte driehoek = **(basis × hoogte) ÷ 2**.\n\n**Belangrijk**: 'hoogte' is **NIET** een schuine zijde. Het is de **loodrechte** afstand van de top naar de basis (recht omhoog).\n\n**Voorbeeld**: driehoek met basis 8 m en hoogte 5 m.\n• Oppervlakte = (8 × 5) ÷ 2 = 40 ÷ 2 = **20 m²**.\n\n**Waarom delen door 2?**\nOmdat een driehoek **half** een rechthoek is. Neem een rechthoek 8 × 5 m → oppervlakte 40 m². Snijd diagonaal door = 2 driehoeken van 20 m² elk.\n\n**Toets-truc**:\n• Eerst basis × hoogte → dan ÷ 2.\n• Of eerst ÷ 2 → dan vermenigvuldigen *(als één van beide getallen even is, scheelt fouten)*.\n\n**Voorbeeld**: basis 10, hoogte 6.\n• 10 × 6 = 60. ÷ 2 = **30 m²**.\n• Of: 10 × 6 ÷ 2 = 10 × 3 = **30 m²**.\n\n**Veel-voorkomende fout**:\n'Hoogte' verwarren met een zijde. **Hoogte = loodrecht** vanaf de top naar de basis. In een schuine driehoek is dat een **gestippelde lijn**, niet een echte zijde.",
     svg: driehoekSvg(10, 6, "Driehoek b=10, h=6 → opp = 30"),
     checks: [
       {
@@ -170,7 +170,7 @@ const steps = [
         q: "Driehoek met **basis 5 cm, hoogte 4 cm** — oppervlakte?",
         options: ["10 cm²","20 cm²","9 cm²","40 cm²"],
         answer: 0,
-        wrongHints: [null,"Te veel — vergeet ÷ 2.","Niet × of +.","Veel te veel."],
+        wrongHints: [null,"Te veel — vergeet ÷ 2.","Niet optellen — vermenigvuldigen.","Veel te veel."],
         uitlegPad: {
           stappen: [{ titel: "B × H ÷ 2", tekst: "5 × 4 = 20. ÷2 = 10 cm²." }],
           woorden: [{ woord: "driehoek-oppervlakte", uitleg: "(basis × hoogte) ÷ 2." }],
@@ -181,7 +181,7 @@ const steps = [
         },
       },
       {
-        q: "Een driehoekige tuintje basis **6 m**, hoogte **9 m**. Hoeveel **m² gras**?",
+        q: "Een driehoekig tuintje met basis **6 m**, hoogte **9 m**. Hoeveel **m² gras**?",
         options: ["27 m²","54 m²","15 m²","18 m²"],
         answer: 0,
         wrongHints: [null,"Te veel — vergeet ÷ 2.","Te weinig — heb je optellen gedaan?","Te weinig — controleer 6×9÷2."],
@@ -199,7 +199,7 @@ const steps = [
 
   {
     title: "Praktijk — schoolse situaties",
-    explanation: "toetsvragen mengen vaak omtrek/oppervlakte met andere onderwerpen *(geld, kosten, tegels, verf)*.\n\n**Voorbeeld 1**:\n*'Een kantoor van 10 × 8 m wordt geverfd. 1 liter verf is voor 10 m². Hoeveel liter?'*\n• Oppervlakte = 80 m².\n• Liter = 80 ÷ 10 = **8 L**.\n\n**Voorbeeld 2**:\n*'Een tuin 20 × 15 m. Hek kost € 8 per meter. Wat kost het hek?'*\n• Omtrek = 2 × (20 + 15) = 70 m.\n• Kost = 70 × 8 = **€ 560**.\n\n**Voorbeeld 3 — gras + hek**:\n*'Een gras-veld 25 × 12 m. Het kost € 5 per m² gras + € 6 per meter hek. Totaal?'*\n• Gras-oppervlakte = 25 × 12 = 300 m². Kost = 300 × 5 = € 1500.\n• Hek-omtrek = 2 × (25 + 12) = 74 m. Kost = 74 × 6 = € 444.\n• Totaal = **€ 1944**.\n\n**Stappenplan**:\n1. Lees: heb je omtrek of oppervlakte nodig?\n2. Reken die uit met de juiste formule.\n3. Vermenigvuldig met de prijs/factor.\n4. Voeg samen als het meerdere onderdelen zijn.",
+    explanation: "Toetsvragen mengen vaak omtrek/oppervlakte met andere onderwerpen *(geld, kosten, tegels, verf)*.\n\n**Voorbeeld 1**:\n*'Een kantoor van 10 × 8 m wordt geverfd. 1 liter verf is voor 10 m². Hoeveel liter?'*\n• Oppervlakte = 80 m².\n• Liter = 80 ÷ 10 = **8 L**.\n\n**Voorbeeld 2**:\n*'Een tuin 20 × 15 m. Hek kost € 8 per meter. Wat kost het hek?'*\n• Omtrek = 2 × (20 + 15) = 70 m.\n• Kost = 70 × 8 = **€ 560**.\n\n**Voorbeeld 3 — gras + hek**:\n*'Een gras-veld 25 × 12 m. Het kost € 5 per m² gras + € 6 per meter hek. Totaal?'*\n• Gras-oppervlakte = 25 × 12 = 300 m². Kost = 300 × 5 = € 1500.\n• Hek-omtrek = 2 × (25 + 12) = 74 m. Kost = 74 × 6 = € 444.\n• Totaal = **€ 1944**.\n\n**Stappenplan**:\n1. Lees: heb je omtrek of oppervlakte nodig?\n2. Reken die uit met de juiste formule.\n3. Vermenigvuldig met de prijs/factor.\n4. Voeg samen als het meerdere onderdelen zijn.",
     checks: [
       {
         q: "Een tuin **15 × 12 m**. Hek kost **€ 10/m**. Hekkosten?",
@@ -348,7 +348,7 @@ const steps = [
         q: "Een **L-vormig** terras: rechthoek 8 × 4 m + uitstekend stuk 3 × 2 m. **Totale oppervlakte**?",
         options: ["38 m²","32 m²","26 m²","48 m²"],
         answer: 0,
-        wrongHints: [null, "Klopt voor de grote rechthoek alleen — uitstekend stuk vergeten.", "Niet beide vermenigvuldigd.", "Te veel — geen overlap."],
+        wrongHints: [null, "Klopt voor de grote rechthoek alleen — uitstekend stuk vergeten.", "Niet aftrekken — het uitstekende stuk komt erbij.", "Te veel — geen overlap."],
         uitlegPad: {
           stappen: [
             { titel: "Splits in eenvoudige stukken", tekst: "L-vorm = optellen van twee rechthoeken.\n• Rechthoek 1: 8 × 4 = **32 m²**\n• Uitstekend stuk: 3 × 2 = **6 m²**" },
@@ -405,7 +405,7 @@ const steps = [
       { q: "Oppervlakte vierkant 5 m bij 5 m?", options: ["25 m²","20 m²","10 m²","100 m²"], answer: 0, wrongHints: [null, "Omtrek.", "Niet.", "Niet."] },
       { q: "Tegel 50 cm × 50 cm. Oppervlakte?", options: ["2500 cm² (= 0,25 m²)","100 cm²","250 cm²","1 m²"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
       { q: "Een **cirkel** heeft hoeveel zijden?", options: ["0 (één gebogen lijn)","1","2","4"], answer: 0, wrongHints: [null, "Bijna — de lijn is 1 rondgaand.", "Niet.", "Niet."] },
-      { q: "Een **gelijkzijdige** driehoek heeft hoe veel gelijke zijden?", options: ["3","2","1","0"], answer: 0, wrongHints: [null, "Dat is gelijkbenig.", "Niet.", "Niet."] },
+      { q: "Een **gelijkzijdige** driehoek heeft hoeveel gelijke zijden?", options: ["3","2","1","0"], answer: 0, wrongHints: [null, "Dat is gelijkbenig.", "Niet.", "Niet."] },
       { q: "Een **rechte hoek** = hoeveel graden?", options: ["90°","45°","180°","360°"], answer: 0, wrongHints: [null, "Halve rechte.", "Gestrekt.", "Volle cirkel."] },
       { q: "Som van 3 hoeken in een driehoek?", options: ["180°","90°","360°","270°"], answer: 0, wrongHints: [null, "Eén hoek.", "Cirkel.", "Niet."] },
       { q: "Som van 4 hoeken in een vierhoek?", options: ["360°","180°","270°","90°"], answer: 0, wrongHints: [null, "Driehoek.", "Niet.", "Eén hoek."] },

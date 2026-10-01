@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Trillingen — periode, frequentie, amplitude",
     explanation:
-      "**Trilling** = beweging die zich periodiek herhaalt rond een evenwichtsstand. Voorbeeld: slinger, massa aan veer, snaar.\n\n**Drie grootheden**:\n• **Periode T** (s): tijd voor één volledige trilling (heen + terug = 1 trilling).\n• **Frequentie f** (Hz): aantal trillingen per seconde. **f = 1/T**.\n• **Amplitude A** (m): maximale uitwijking uit de evenwichtsstand (NIET de totale lengte van uiterst-links naar uiterst-rechts — dat is 2A).\n\n**Harmonische trilling** = sinus-vormig: u(t) = A·sin(2π·f·t) = A·sin(ω·t).\n• **Hoekfrequentie ω** = 2π·f = 2π/T (rad/s).\n• Op t=0 vanuit evenwicht: gebruik sin. Vanuit max-uitwijking: gebruik cos.\n\n**Massa-veer-systeem** (veerconstante C in N/m, massa m in kg):\n• T = 2π·√(m/C).\n• Zwaardere massa → langere T (trager). Stijvere veer → kortere T (sneller).\n\n**Mathematische slinger** (touw-lengte L):\n• T = 2π·√(L/g), met g ≈ 9,81 m/s².\n• Periode hangt **NIET af van de massa** (Galileï's ontdekking).\n• Langere slinger → langere periode (klassieke kerkklok).\n\n**Energie in een trilling**:\n• In evenwichtsstand: alle E zit in kinetisch (max v).\n• In uiterste stand: alle E zit in potentieel (v = 0).\n• Totale energie blijft constant (zonder demping).\n\n**Cito/examen-tips**:\n• Tel altijd: 1 trilling = heen + terug. Veel leerlingen tellen alleen heen → halveerden T → fout.\n• Eenheid Hz = 1/s. 50 Hz = 50 trillingen/s.\n• Op uitwijking-t-grafiek: T is afstand tussen twee top-pieken (of nuldoorgangen met zelfde richting).",
+      "**Trilling** = beweging die zich periodiek herhaalt rond een evenwichtsstand. Voorbeeld: slinger, massa aan veer, snaar.\n\n**Drie grootheden**:\n• **Periode T** (s): tijd voor één volledige trilling (heen + terug = 1 trilling).\n• **Frequentie f** (Hz): aantal trillingen per seconde. **f = 1/T**.\n• **Amplitude A** (m): maximale uitwijking uit de evenwichtsstand (NIET de totale lengte van uiterst-links naar uiterst-rechts — dat is 2A).\n\n**Harmonische trilling** = sinus-vormig: u(t) = A·sin(2π·f·t) = A·sin(ω·t).\n• **Hoekfrequentie ω** = 2π·f = 2π/T (rad/s).\n• Op t=0 vanuit evenwicht: gebruik sin. Vanuit max-uitwijking: gebruik cos.\n\n**Massa-veer-systeem** (veerconstante C in N/m, massa m in kg):\n• T = 2π·√(m/C).\n• Zwaardere massa → langere T (trager). Stijvere veer → kortere T (sneller).\n\n**Mathematische slinger** (touw-lengte L):\n• T = 2π·√(L/g), met g ≈ 9,81 m/s².\n• Periode hangt **NIET af van de massa** (ontdekt door Galilei).\n• Langere slinger → langere periode (klassieke kerkklok).\n\n**Energie in een trilling**:\n• In evenwichtsstand: alle E zit in kinetisch (max v).\n• In uiterste stand: alle E zit in potentieel (v = 0).\n• Totale energie blijft constant (zonder demping).\n\n**Cito/examen-tips**:\n• Tel altijd: 1 trilling = heen + terug. Veel leerlingen tellen alleen heen → halve T → fout.\n• Eenheid Hz = 1/s. 50 Hz = 50 trillingen/s.\n• Op uitwijking-t-grafiek: T is afstand tussen twee top-pieken (of nuldoorgangen met zelfde richting).",
     checks: [
       {
         q: "Een snaar trilt **20 keer per seconde**. Wat is de **periode T**?",
@@ -95,7 +95,7 @@ const steps = [
         q: "Een massa-veer-systeem heeft T = 0,5 s. Je **verdubbelt de massa**. Nieuwe T?",
         options: ["0,71 s", "1,0 s", "0,25 s", "0,5 s"],
         answer: 0,
-        wrongHints: [null, "Niet — T is √(m), niet m. Verdubbelen m geeft √2-factor.", "Niet — dat zou kwart-versie zijn.", "Niet — er verandert wel iets."],
+        wrongHints: [null, "Niet — T hangt af van √m, niet van m. Verdubbelen van m geeft factor √2.", "Niet — dat zou kwart-versie zijn.", "Niet — er verandert wel iets."],
         uitlegPad: {
           stappen: [
             { titel: "T ~ √m", tekst: "T = 2π·√(m/C). Verdubbelen van m geeft factor √2 ≈ 1,41 op T. Dus T_nieuw = 0,5 × √2 ≈ **0,71 s**." },
@@ -115,13 +115,13 @@ const steps = [
   {
     title: "Lopende golven — v = f·λ",
     explanation:
-      "**Golf** = trilling die zich door een medium voortplant. De stof beweegt niet mee — alleen de energie reist door.\n\n**Twee soorten**:\n• **Transversaal**: trilling staat **loodrecht** op voortplantingsrichting. Voorbeeld: golf in touw, watergolf, licht (elektromagnetisch).\n• **Longitudinaal**: trilling staat **parallel** aan voortplantingsrichting. Voorbeeld: geluidsgolf in lucht, golf in veer-langs-langs.\n\n**Drie grootheden**:\n• **Golflengte λ** (m): afstand tussen twee opeenvolgende toppen (of twee compressies bij longitudinaal).\n• **Frequentie f** (Hz): aantal golven per seconde door een vast punt.\n• **Golfsnelheid v** (m/s): hoe snel de golf vooruit gaat.\n\n**Kernformule**: **v = f · λ**\n• Bij gegeven medium: v is constant. Hogere f → kortere λ.\n• Verschillende media: licht in glas is langzamer dan in lucht.\n\n**Voorbeeld geluid**:\n• v_geluid in lucht ≈ 343 m/s (20 °C, 1 atm).\n• A4 = 440 Hz → λ = 343/440 ≈ 0,78 m.\n\n**Voorbeeld licht**:\n• c = 3,0·10⁸ m/s in vacuüm.\n• Rood licht λ ≈ 700 nm → f = c/λ = 3·10⁸/7·10⁻⁷ ≈ 4,3·10¹⁴ Hz.\n\n**Reflectie + breking**:\n• Bij overgang medium kan een golf **reflecteren** (terugkaatsen) of **breken** (vanaf andere snelheid → andere richting).\n• Vaste hoekrelatie: invalshoek = reflectiehoek (vanaf de normaal).\n\n**Examen-valkuilen**:\n• Mengelmoes f, T, λ — check eenheden: f in Hz = 1/s, T in s, λ in m.\n• v hangt af van het MEDIUM, niet van de bron. Drukkere lucht/dichter medium = vaak hogere v.",
+      "**Golf** = trilling die zich door een medium voortplant. De stof beweegt niet mee — alleen de energie reist door.\n\n**Twee soorten**:\n• **Transversaal**: trilling staat **loodrecht** op voortplantingsrichting. Voorbeeld: golf in touw, watergolf, licht (elektromagnetisch).\n• **Longitudinaal**: trilling staat **parallel** aan voortplantingsrichting. Voorbeeld: geluidsgolf in lucht, drukgolf in een veer.\n\n**Drie grootheden**:\n• **Golflengte λ** (m): afstand tussen twee opeenvolgende toppen (of twee compressies bij longitudinaal).\n• **Frequentie f** (Hz): aantal golven per seconde door een vast punt.\n• **Golfsnelheid v** (m/s): hoe snel de golf vooruit gaat.\n\n**Kernformule**: **v = f · λ**\n• Bij gegeven medium: v is constant. Hogere f → kortere λ.\n• Verschillende media: licht in glas is langzamer dan in lucht.\n\n**Voorbeeld geluid**:\n• v_geluid in lucht ≈ 343 m/s (20 °C, 1 atm).\n• A4 = 440 Hz → λ = 343/440 ≈ 0,78 m.\n\n**Voorbeeld licht**:\n• c = 3,0·10⁸ m/s in vacuüm.\n• Rood licht λ ≈ 700 nm → f = c/λ = 3·10⁸/7·10⁻⁷ ≈ 4,3·10¹⁴ Hz.\n\n**Reflectie + breking**:\n• Bij overgang medium kan een golf **reflecteren** (terugkaatsen) of **breken** (door andere snelheid → andere richting).\n• Vaste hoekrelatie: invalshoek = reflectiehoek (vanaf de normaal).\n\n**Examen-valkuilen**:\n• Mengelmoes f, T, λ — check eenheden: f in Hz = 1/s, T in s, λ in m.\n• v hangt af van het MEDIUM, niet van de bron. Stijver medium = vaak hogere v.",
     checks: [
       {
         q: "Een watergolf heeft **f = 5 Hz** en **λ = 0,8 m**. Wat is **v**?",
         options: ["4,0 m/s", "6,25 m/s", "0,16 m/s", "40 m/s"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou f/λ zijn.", "Niet — dat is λ/f.", "Niet — eenheid in tien-tallen klopt niet."],
+        wrongHints: [null, "Niet — dat zou f/λ zijn.", "Niet — dat is λ/f.", "Niet — let op de komma: λ is 0,8 m, niet 8 m."],
         uitlegPad: {
           stappen: [
             { titel: "v = f·λ", tekst: "v = 5 × 0,8 = **4,0 m/s**. Vermenigvuldigen: golven per seconde × meter per golf = meter per seconde." },
@@ -146,7 +146,7 @@ const steps = [
           ],
           voorbeelden: [
             { type: "transversaal", tekst: "Touw, watergolf, licht (EM-golf)." },
-            { type: "longitudinaal", tekst: "Geluid in lucht, golf langs veer-in-langsrichting." },
+            { type: "longitudinaal", tekst: "Geluid in lucht, drukgolf in een veer." },
           ],
           niveaus: {
             basis: "Trilling loodrecht op richting = transversaal.",
@@ -222,7 +222,7 @@ const steps = [
   {
     title: "Geluid — snelheid, decibel, hoorbaarheid",
     explanation:
-      "**Geluid** = longitudinale drukgolf door een medium (lucht, water, vast materiaal).\n\n**Snelheid in verschillende media**:\n• Lucht (20 °C): ~343 m/s.\n• Water: ~1480 m/s (4× sneller).\n• Staal: ~5100 m/s (15× sneller).\n• **Hoe stijver het medium → hoe sneller**.\n\n**Snelheid + temperatuur** (lucht):\n• v ≈ 331 + 0,6·θ (met θ in °C). Bij 0 °C: 331 m/s; bij 20 °C: 343 m/s.\n\n**Hoorbaar frequentie-bereik mens**:\n• ~20 Hz tot 20 kHz (jong); daalt met leeftijd.\n• <20 Hz = infrageluid (olifanten gebruiken dit).\n• >20 kHz = ultrageluid (vleermuizen, echografie).\n\n**Luidheid + intensiteit**:\n• Intensiteit I (W/m²): energie per oppervlakte per tijd.\n• Decibel-schaal: **L = 10·log(I/I₀)** met I₀ = 10⁻¹² W/m² (gehoordrempel).\n• **Logaritmisch**: 10 dB erbij = 10× zo intens; 20 dB = 100× zo intens.\n• 0 dB = stilte-grens; 60 dB = gesprek; 100 dB = drilhamer; 120 dB = pijngrens.\n\n**Bron + waarnemer**:\n• Geluid wordt zwakker met afstand: I ~ 1/r² (energie verspreidt over groter oppervlak).\n• Verdubbel afstand → vier keer minder intens → −6 dB.\n\n**Echo + galm**:\n• Echo: gereflecteerd geluid, hoor je apart (oren scheiden >0,1 s = >17 m heen+terug).\n• Galm: snelle reflecties die met origineel mengen.\n\n**Snelheidsmeting**:\n• Bliksem-donder: tel seconden, deel door 3 → afstand in km (geluid ~340 m/s ≈ 1 km per 3 s).",
+      "**Geluid** = longitudinale drukgolf door een medium (lucht, water, vast materiaal).\n\n**Snelheid in verschillende media**:\n• Lucht (20 °C): ~343 m/s.\n• Water: ~1480 m/s (4× sneller).\n• Staal: ~5100 m/s (15× sneller).\n• **Hoe stijver het medium → hoe sneller**.\n\n**Snelheid + temperatuur** (lucht):\n• v ≈ 331 + 0,6·θ (met θ in °C). Bij 0 °C: 331 m/s; bij 20 °C: 343 m/s.\n\n**Hoorbaar frequentie-bereik mens**:\n• ~20 Hz tot 20 kHz (jong); daalt met leeftijd.\n• <20 Hz = infrageluid (olifanten gebruiken dit).\n• >20 kHz = ultrageluid (vleermuizen, echografie).\n\n**Luidheid + intensiteit**:\n• Intensiteit I (W/m²): energie per oppervlakte per tijd.\n• Decibel-schaal: **L = 10·log(I/I₀)** met I₀ = 10⁻¹² W/m² (gehoordrempel).\n• **Logaritmisch**: 10 dB erbij = 10× zo intens; 20 dB = 100× zo intens.\n• 0 dB = stilte-grens; 60 dB = gesprek; 100 dB = drilhamer; 120 dB = pijngrens.\n\n**Bron + waarnemer**:\n• Geluid wordt zwakker met afstand: I ~ 1/r² (energie verspreidt over groter oppervlak).\n• Verdubbel afstand → vier keer minder intens → −6 dB.\n\n**Echo + galm**:\n• Echo: gereflecteerd geluid, hoor je apart (oren scheiden >0,1 s → wand >17 m ver).\n• Galm: snelle reflecties die met origineel mengen.\n\n**Snelheidsmeting**:\n• Bliksem-donder: tel seconden, deel door 3 → afstand in km (geluid ~340 m/s ≈ 1 km per 3 s).",
     checks: [
       {
         q: "Bij donder hoor je het **9 s** na de bliksem. Hoe ver is de bui? (v ≈ 340 m/s)",
@@ -248,7 +248,7 @@ const steps = [
         wrongHints: [null, "Niet — dB is logaritmisch, niet lineair.", "Te klein — dB-schaal is steiler.", "Dat zou +20 dB zijn."],
         uitlegPad: {
           stappen: [
-            { titel: "+10 dB = ×10", tekst: "De decibel-schaal is **logaritmisch**: elke +10 dB betekent 10× zo grote intensiteit (W/m²). Dus 90 dB is 10× zo intens als 80 dB. Subjectief klinkt het wel maar 2× zo luid (psycho-akoestiek), maar fysiek 10× zo veel energie." },
+            { titel: "+10 dB = ×10", tekst: "De decibel-schaal is **logaritmisch**: elke +10 dB betekent 10× zo grote intensiteit (W/m²). Dus 90 dB is 10× zo intens als 80 dB. Je oor ervaart het maar als ongeveer 2× zo luid (psycho-akoestiek), maar fysiek is het 10× zo veel energie." },
           ],
           theorie: "Onthoud-tabel: +10 dB = ×10; +20 dB = ×100; +30 dB = ×1000.",
           niveaus: {
@@ -298,7 +298,7 @@ const steps = [
           stappen: [
             { titel: "1/r²-wet", tekst: "Punt-bron straalt energie uit over een **bol** met oppervlak 4π·r². Verdubbel r → oppervlak ×4 → intensiteit ÷4. In dB: 10·log(1/4) ≈ −6 dB." },
           ],
-          theorie: "Geldt voor **vrije punt-bron**. In een ruimte met reflecties is afval minder steil. Wettelijk werken met **laagste blootstelling** is meestal beter dan dempen aan de bron.",
+          theorie: "Geldt voor **vrije punt-bron**. In een ruimte met reflecties neemt de intensiteit minder snel af.",
           niveaus: {
             basis: "2× verder = 4× minder = −6 dB.",
             simpeler: "Oppervlak groeit met r² → energie ÷4 bij ×2 afstand.",
@@ -313,16 +313,16 @@ const steps = [
   {
     title: "Resonantie + staande golven",
     explanation:
-      "**Eigentrillingen**: elk object heeft natuurlijke trillingsfrequenties (snaar, buis, brug, glas). Wordt het met die frequentie aangestoten, dan trilt het mee → **resonantie**.\n\n**Voorbeelden resonantie**:\n• Schommel: duwen op het juiste moment → steeds groter.\n• Wijnglas barst bij juiste toon (zangeres-stem).\n• Tacoma-brug 1940: wind veroorzaakte resonantie → instortte.\n• Radio-ontvanger: stem 'm op zender-frequentie via afstembare LC-kring.\n\n**Staande golf** ontstaat als een lopende golf reflecteert en zich met zichzelf overlapt → vaste patroon met **knopen** (geen trilling) en **buiken** (max trilling).\n\n**Snaar — beide einden vast** (gitaar, viool):\n• Eigenfrequenties: f_n = n·v/(2L), n = 1, 2, 3, ...\n• **Grondtoon** (n=1): f₁ = v/(2L), golflengte λ₁ = 2L.\n• Boventonen: 2·f₁, 3·f₁, ... (= **harmonisch spectrum**, geheel-getal-veelvoud).\n\n**Buis — beide kanten open** (fluit, panfluit):\n• f_n = n·v/(2L) — zelfde formule als snaar.\n• λ₁ = 2L (buik aan beide eindes).\n\n**Buis — één kant dicht** (klarinet, glasfles):\n• f_n = (2n−1)·v/(4L) — alleen ONEVEN harmonieken.\n• Grondtoon: f₁ = v/(4L). Klinkt **een octaaf lager** dan een open buis van dezelfde lengte!\n\n**Stemvork-meeneem-effect**: 2 stemvorken op zelfde frequentie naast elkaar → één laten trillen → ander begint ook (sympathische resonantie).\n\n**Examen-vraag-type**:\n• Gegeven: lengte snaar L + v-touwgolf. Wat is grondtoon?\n• Antwoord: f₁ = v/(2L).\n• Bij open of half-gesloten buis: check welke formule!",
+      "**Eigentrillingen**: elk object heeft natuurlijke trillingsfrequenties (snaar, buis, brug, glas). Wordt het met die frequentie aangestoten, dan trilt het mee → **resonantie**.\n\n**Voorbeelden resonantie**:\n• Schommel: duwen op het juiste moment → steeds groter.\n• Wijnglas barst bij juiste toon (zangeres-stem).\n• Tacoma-brug 1940: wind veroorzaakte resonantie → stortte in.\n• Radio-ontvanger: stem 'm op zender-frequentie via afstembare LC-kring.\n\n**Staande golf** ontstaat als een lopende golf reflecteert en zich met zichzelf overlapt → vast patroon met **knopen** (geen trilling) en **buiken** (max trilling).\n\n**Snaar — beide einden vast** (gitaar, viool):\n• Eigenfrequenties: f_n = n·v/(2L), n = 1, 2, 3, ...\n• **Grondtoon** (n=1): f₁ = v/(2L), golflengte λ₁ = 2L.\n• Boventonen: 2·f₁, 3·f₁, ... (= **harmonisch spectrum**, geheel-getal-veelvoud).\n\n**Buis — beide kanten open** (fluit, panfluit):\n• f_n = n·v/(2L) — zelfde formule als snaar.\n• λ₁ = 2L (buik aan beide eindes).\n\n**Buis — één kant dicht** (klarinet, glasfles):\n• f_n = (2n−1)·v/(4L) — alleen ONEVEN harmonieken.\n• Grondtoon: f₁ = v/(4L). Klinkt **een octaaf lager** dan een open buis van dezelfde lengte!\n\n**Stemvork-meeneem-effect**: 2 stemvorken op zelfde frequentie naast elkaar → één laten trillen → ander begint ook (sympathische resonantie).\n\n**Examen-vraag-type**:\n• Gegeven: lengte snaar L + v-touwgolf. Wat is grondtoon?\n• Antwoord: f₁ = v/(2L).\n• Bij open of half-gesloten buis: check welke formule!",
     checks: [
       {
         q: "Een **gitaarsnaar** is L = 0,65 m. Golfsnelheid v = 286 m/s. **Grondtoon**?",
         options: ["220 Hz", "440 Hz", "143 Hz", "880 Hz"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is octaaf hoger.", "Niet — controleer formule f = v/(2L), niet v/L.", "Niet — 2 octaven te hoog."],
+        wrongHints: [null, "Niet — dat is een octaaf hoger: je rekende v/L in plaats van v/(2L).", "Niet — je deelde alleen door 2; gebruik f = v/(2L).", "Niet — 2 octaven te hoog."],
         uitlegPad: {
           stappen: [
-            { titel: "f₁ = v/(2L)", tekst: "f₁ = 286 / (2 × 0,65) = 286 / 1,3 = **220 Hz**. Dat is een A3-toon — bijvoorbeeld de open A-snaar." },
+            { titel: "f₁ = v/(2L)", tekst: "f₁ = 286 / (2 × 0,65) = 286 / 1,3 = **220 Hz**. Dat is een A-toon (A3)." },
           ],
           theorie: "Voor snaar: λ₁ = 2L (één buik in het midden). Korter maken (vinger op fret) → kortere λ → hogere f.",
           niveaus: {
@@ -361,7 +361,7 @@ const steps = [
         q: "Een **open buis** heeft λ-grondtoon = 2L. Een **buis met één gesloten kant** heeft λ-grondtoon = ?",
         options: ["4L", "2L", "L", "L/2"],
         answer: 0,
-        wrongHints: [null, "Niet — bij ene dichte kant is grondtoon-golflengte langer.", "Niet — dat zou een buik aan beide eindes betekenen.", "Niet — niet kleiner dan L."],
+        wrongHints: [null, "Niet — dat geldt bij een buik aan beide eindes; bij één dichte kant is de golflengte langer.", "Niet — de golflengte wordt juist langer, niet korter.", "Niet — niet kleiner dan L."],
         uitlegPad: {
           stappen: [
             { titel: "Dichte kant = knoop", tekst: "Aan een dichte kant moet de lucht in rust zijn → **knoop**. Aan open kant → **buik**. Het kortste patroon dat in een buis van L past met knoop+buik = kwart-golflengte → λ = 4L." },
@@ -385,7 +385,7 @@ const steps = [
           ],
           niveaus: {
             basis: "3 buiken = 3·f₁ = 330.",
-            simpeler: "3 buiken op de snaar = 3e boventoon = 3×110 = 330 Hz.",
+            simpeler: "3 buiken op de snaar = 3e harmonische (2e boventoon) = 3×110 = 330 Hz.",
             nogSimpeler: "3×110=330.",
           },
         },
@@ -468,7 +468,7 @@ const steps = [
         },
       },
       {
-        q: "Een geluid van 70 dB naast een ander van 70 dB. Samen (zelfde frequentie + in fase, ideaal):",
+        q: "Een geluid van 70 dB naast een ander van 70 dB. Samen (twee losse, onafhankelijke bronnen):",
         options: ["~73 dB", "~140 dB", "~70 dB", "~77 dB"],
         answer: 0,
         wrongHints: [null, "Niet — dB is logaritmisch, je telt NIET op tot 140.", "Niet — bij twee bronnen is intensiteit wel groter.", "Te veel."],
@@ -493,7 +493,7 @@ const steps = [
           "Beide afhankelijk van temperatuur, niet van eindes",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — meet eindes.", "Niet — tegenovergesteld.", "Niet — eindes bepalen wel mode."],
+        wrongHints: [null, "Niet — de eindes maken wel verschil.", "Niet — tegenovergesteld.", "Niet — de eindes bepalen welke golven passen."],
         uitlegPad: {
           stappen: [
             { titel: "λ-verdubbeling = f-halvering", tekst: "Open buis: buik aan beide kanten → λ₁ = 2L. Half-open: knoop aan dichte kant + buik aan open → λ₁ = 4L. Dus λ verdubbelt; bij gelijke v geldt f = v/λ → f halveert → octaaf lager." },

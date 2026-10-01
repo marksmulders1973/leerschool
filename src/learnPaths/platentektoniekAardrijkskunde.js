@@ -196,7 +196,7 @@ const steps = [
   // ─── A. Intro ───────────────
   {
     title: "Wat is platentektoniek?",
-    explanation: "De aarde lijkt vast en stabiel — maar in werkelijkheid is de buitenkant opgedeeld in **grote stukken** die heel langzaam **bewegen**. Die stukken heten **tektonische platen**, en de leer over hun beweging heet **platentektoniek**.\n\n**Hoe weten we dat ze bewegen?**\n• De vorm van **Zuid-Amerika** en **Afrika** lijkt op een puzzel die past — alsof ze ooit aan elkaar zaten.\n• De duitse wetenschapper **Alfred Wegener** stelde dit al in **1912** voor (theorie van de continentendrift).\n• Pas in de jaren '60 werd bewezen dat hij gelijk had: er zit smeltend gesteente onder de platen, dat ze meedraagt.\n\n**Hoe snel bewegen ze?**\nOngeveer **2 tot 10 cm per jaar** — even snel als je vingernagels groeien. Lijkt weinig, maar in **miljoenen jaren** rijgen continenten zo flink op.\n\n**Wat veroorzaakt het?**\nDe beweging komt van **convectiestromen** in de hete mantel onder de platen: warm gesteente stijgt, koelt af aan de oppervlakte, en zinkt weer. Net zoals water in een kookpan kookt, alleen dan veel langzamer.\n\n**Waarom belangrijk?**\nDoor plaatbewegingen ontstaan **bergen, oceanen, aardbevingen en vulkanen** — het hele 'gezicht' van de aarde.",
+    explanation: "De aarde lijkt vast en stabiel — maar in werkelijkheid is de buitenkant opgedeeld in **grote stukken** die heel langzaam **bewegen**. Die stukken heten **tektonische platen**, en de leer over hun beweging heet **platentektoniek**.\n\n**Hoe weten we dat ze bewegen?**\n• De vorm van **Zuid-Amerika** en **Afrika** lijkt op een puzzel die past — alsof ze ooit aan elkaar zaten.\n• De Duitse wetenschapper **Alfred Wegener** stelde dit al in **1912** voor (theorie van de continentendrift).\n• Pas in de jaren '60 werd bewezen dat hij gelijk had: de platen liggen op heet, stroperig gesteente dat ze meedraagt.\n\n**Hoe snel bewegen ze?**\nOngeveer **2 tot 10 cm per jaar** — even snel als je vingernagels groeien. Lijkt weinig, maar in **miljoenen jaren** schuiven continenten zo ver op.\n\n**Wat veroorzaakt het?**\nDe beweging komt van **convectiestromen** in de hete mantel onder de platen: warm gesteente stijgt, koelt af aan de oppervlakte, en zinkt weer. Net als water in een pan op het vuur, alleen veel langzamer.\n\n**Waarom belangrijk?**\nDoor plaatbewegingen ontstaan **bergen, oceanen, aardbevingen en vulkanen** — het hele 'gezicht' van de aarde.",
     svg: aardlagenSvg(),
     checks: [
       {
@@ -232,7 +232,7 @@ const steps = [
   // ─── B. Aardlagen + platen ───────────────
   {
     title: "De aardlagen — opbouw van binnen naar buiten",
-    explanation: "De aarde is opgebouwd uit **vier hoofdlagen**, als de schillen van een ui:\n\n**1. Binnenkern** *(vast, ~5.000 °C)*\n• Een bal van **vast ijzer en nikkel**.\n• Ondanks de extreme temperatuur **vast** door de gigantische druk.\n• Diameter: ~2.400 km.\n\n**2. Buitenkern** *(vloeibaar, 4.000-5.000 °C)*\n• Bestaat uit **vloeibaar ijzer en nikkel**.\n• De beweging hier wekt het **aardmagnetisch veld** op (waardoor je kompas werkt).\n• Dikte: ~2.300 km.\n\n**3. Mantel** *(stroperig, 1.000-3.700 °C)*\n• Dit is het dikst: ~2.900 km dik — vrijwel alle 'inhoud' van de aarde.\n• Niet vast en niet echt vloeibaar — meer als **stroperig gesteente** dat héél langzaam stroomt.\n• Hier ontstaan **convectiestromen** die de platen meeslepen.\n\n**4. Korst** *(vast, dun)*\n• Het 'velletje' waar wij op leven.\n• Dikte verschilt: **5-10 km** onder oceanen, **30-70 km** onder bergen.\n• Onderverdeeld in de tektonische platen.\n\n**Een simpele vergelijking:** denk aan een **gekookt ei** — schaal = korst, eiwit = mantel, dooier = kern.",
+    explanation: "De aarde is opgebouwd uit **vier hoofdlagen**, als de schillen van een ui:\n\n**1. Binnenkern** *(vast, ~5.000 °C)*\n• Een bal van **vast ijzer en nikkel**.\n• Ondanks de extreme temperatuur **vast** door de gigantische druk.\n• Diameter: ~2.400 km.\n\n**2. Buitenkern** *(vloeibaar, 4.000-5.000 °C)*\n• Bestaat uit **vloeibaar ijzer en nikkel**.\n• De beweging hier wekt het **aardmagnetisch veld** op (waardoor je kompas werkt).\n• Dikte: ~2.300 km.\n\n**3. Mantel** *(stroperig, 1.000-3.700 °C)*\n• De dikste laag: ~2.900 km — het grootste deel van de aarde.\n• Niet vast en niet echt vloeibaar — meer als **stroperig gesteente** dat héél langzaam stroomt.\n• Hier ontstaan **convectiestromen** die de platen meeslepen.\n\n**4. Korst** *(vast, dun)*\n• Het 'velletje' waar wij op leven.\n• Dikte verschilt: **5-10 km** onder oceanen, **30-70 km** onder bergen.\n• Onderverdeeld in de tektonische platen.\n\n**Een simpele vergelijking:** denk aan een **gekookt ei** — schaal = korst, eiwit = mantel, dooier = kern.",
     svg: aardlagenSvg("mantel"),
     checks: [
       {
@@ -253,7 +253,7 @@ const steps = [
         wrongHints: [
           null,
           "Te dik — onder bergen kan 'ie 70 km zijn, dat is het max.",
-          "Veel te dik. Dat is meer dan de mantel.",
+          "Veel te dik — dat is al een derde van de mantel.",
           "Er IS korst onder oceanen, alleen dunner dan onder land.",
         ],
       },
@@ -261,7 +261,7 @@ const steps = [
   },
   {
     title: "Tektonische platen — de puzzelstukken",
-    explanation: "De aardkorst is **niet één stuk**. Hij bestaat uit ongeveer **15 grote** en een paar kleinere **tektonische platen**, die als puzzelstukken op de mantel drijven.\n\n**De zeven grootste platen**:\n• **Pacifische Plaat** (grootste — bijna de hele Stille Oceaan)\n• **Noord-Amerikaanse Plaat**\n• **Zuid-Amerikaanse Plaat**\n• **Euraziatische Plaat** (Europa + Azië)\n• **Afrikaanse Plaat**\n• **Indo-Australische Plaat**\n• **Antarctische Plaat**\n\n**Twee soorten platen**:\n\n**A. Continentale platen** — *dik en licht*\n• Dragen de continenten.\n• Dikte ~30-70 km.\n• Voornamelijk graniet (lichter gesteente).\n\n**B. Oceanische platen** — *dun en zwaar*\n• Liggen onder oceanen.\n• Dikte ~5-10 km.\n• Voornamelijk basalt (zwaarder gesteente).\n\n**Belangrijk verschil**: oceanische platen zijn zwaarder. Daarom **duiken ze onder** continentale platen wanneer twee platen botsen — dat heet **subductie**, een proces dat we straks tegenkomen.\n\n**Wat gebeurt er aan de randen?**\nDe randen van platen zijn de **interessante zones** — daar gebeurt bijna alle aardbevings- en vulkanische activiteit. In het midden van een plaat is er weinig activiteit.\n\n**Nederland**: ligt midden op de Euraziatische Plaat — vandaar dat we vrijwel geen aardbevingen of vulkanen hebben. Wel kunnen er door **gaswinning** kunstmatige bevinkjes optreden in Groningen.",
+    explanation: "De aardkorst is **niet één stuk**. Hij bestaat uit ongeveer **15 grote** en een paar kleinere **tektonische platen**, die als puzzelstukken op de mantel drijven.\n\n**De zeven grootste platen**:\n• **Pacifische Plaat** (grootste — bijna de hele Stille Oceaan)\n• **Noord-Amerikaanse Plaat**\n• **Zuid-Amerikaanse Plaat**\n• **Euraziatische Plaat** (Europa + Azië)\n• **Afrikaanse Plaat**\n• **Indo-Australische Plaat**\n• **Antarctische Plaat**\n\n**Twee soorten platen**:\n\n**A. Continentale platen** — *dik en licht*\n• Dragen de continenten.\n• Dikte ~30-70 km.\n• Voornamelijk graniet (lichter gesteente).\n\n**B. Oceanische platen** — *dun en zwaar*\n• Liggen onder oceanen.\n• Dikte ~5-10 km.\n• Voornamelijk basalt (zwaarder gesteente).\n\n**Belangrijk verschil**: oceanische platen zijn zwaarder. Daarom **duiken ze onder** continentale platen wanneer twee platen botsen — dat heet **subductie**, een proces dat we straks tegenkomen.\n\n**Wat gebeurt er aan de randen?**\nDe randen van platen zijn de **interessante zones** — daar gebeurt bijna alle aardbevings- en vulkanische activiteit. In het midden van een plaat is er weinig activiteit.\n\n**Nederland**: ligt midden op de Euraziatische Plaat — vandaar dat we vrijwel geen aardbevingen of vulkanen hebben. Wel kunnen er door **gaswinning** kunstmatige bevingen optreden in Groningen.",
     svg: ringOfFireSvg(),
     checks: [
       {
@@ -386,7 +386,7 @@ const steps = [
   },
   {
     title: "Plaatgrenzen 3 — Langs elkaar (transform)",
-    explanation: "Soms bewegen platen niet uit elkaar én niet tegen elkaar, maar **langs elkaar**. Dan schuiven ze als twee auto's die elkaar passeren — alleen veel langzamer en met flink wat **wrijving**.\n\n**Wat gebeurt daar?**\n• Geen nieuwe korst (zoals bij divergent).\n• Geen bergen of subductie (zoals bij convergent).\n• **Wel: aardbevingen** — door de wrijving blijven platen vaak een tijdje 'vastzitten', en breken dan los met een schok.\n\n**Het bekendste voorbeeld: San Andreas-breuk**\n• Ligt in **Californië**, VS.\n• Hier schuift de **Pacifische Plaat** noordwaarts langs de **Noord-Amerikaanse Plaat**.\n• Snelheid: ~5 cm per jaar — over 16 miljoen jaar zal Los Angeles op de hoogte van San Francisco liggen.\n• Veroorzaakt regelmatig grote aardbevingen (1906 San Francisco, 1989 Loma Prieta, 1994 Northridge).\n\n**Geen vulkanen**\n• Bij langs-elkaar-glijdende platen smelt geen gesteente → **geen vulkanen**.\n• Alleen schuif-bewegingen.\n\n**Andere voorbeelden**:\n• **Noord-Anatolische Breuk** in Turkije — bron van de zware aardbevingen daar.\n• **Alpine Fault** in Nieuw-Zeeland.\n\n**Samenvatting van de drie typen**:\n\n| Type | Wat gebeurt | Wat ontstaat | Voorbeeld |\n|---|---|---|---|\n| Divergent | Uit elkaar | Nieuwe oceaan, vulkanen | Mid-Atlantische Rug |\n| Convergent | Tegen elkaar | Bergen, vulkanen, troggen | Himalaya, Andes |\n| Transform | Langs elkaar | Aardbevingen | San Andreas |",
+    explanation: "Soms bewegen platen niet uit elkaar én niet tegen elkaar, maar **langs elkaar**. Dan schuiven ze als twee auto's die elkaar passeren — alleen veel langzamer en met flink wat **wrijving**.\n\n**Wat gebeurt daar?**\n• Geen nieuwe korst (zoals bij divergent).\n• Geen bergen of subductie (zoals bij convergent).\n• **Wel: aardbevingen** — door de wrijving blijven platen vaak een tijdje 'vastzitten', en breken dan los met een schok.\n\n**Het bekendste voorbeeld: San Andreas-breuk**\n• Ligt in **Californië**, VS.\n• Hier schuift de **Pacifische Plaat** noordwaarts langs de **Noord-Amerikaanse Plaat**.\n• Snelheid: ~5 cm per jaar — over 16 miljoen jaar zal Los Angeles op de hoogte van San Francisco liggen.\n• Veroorzaakt regelmatig grote aardbevingen (1906 San Francisco, 1989 Loma Prieta).\n\n**Geen vulkanen**\n• Bij langs-elkaar-glijdende platen smelt geen gesteente → **geen vulkanen**.\n• Alleen schuif-bewegingen.\n\n**Andere voorbeelden**:\n• **Noord-Anatolische Breuk** in Turkije — bron van de zware aardbevingen daar.\n• **Alpine Fault** in Nieuw-Zeeland.\n\n**Samenvatting van de drie typen**:\n\n| Type | Wat gebeurt | Wat ontstaat | Voorbeeld |\n|---|---|---|---|\n| Divergent | Uit elkaar | Nieuwe oceaan, vulkanen | Mid-Atlantische Rug |\n| Convergent | Tegen elkaar | Bergen, vulkanen, troggen | Himalaya, Andes |\n| Transform | Langs elkaar | Aardbevingen | San Andreas |",
     svg: plaatgrenzenSvg("transform"),
     checks: [
       {
@@ -417,7 +417,7 @@ const steps = [
   // ─── D. Aardbevingen ───────────────
   {
     title: "Aardbevingen — hoe ze ontstaan en gemeten worden",
-    explanation: "Een **aardbeving** is een plotselinge schok in de aardkorst, veroorzaakt door **opgehoopte spanning** die in één keer vrijkomt.\n\n**Hoe werkt het?**\n1. Twee platen drukken/schuiven tegen elkaar maar de **wrijving** houdt ze vast.\n2. Spanning bouwt zich op (jaren tot eeuwen).\n3. De spanning wordt te groot → de platen **schieten los** met een ruk → schok.\n\n**Belangrijke begrippen**:\n• **Hypocentrum** (focus) = punt onder de grond waar de schok ontstaat.\n• **Epicentrum** = het punt aan het oppervlak **recht boven** het hypocentrum. Daar is de schok het sterkst voelbaar.\n• **Schokgolven** verspreiden zich vandaaruit door alle richtingen.\n\n**Hoe sterk?** — De Schaal van Richter\nVan **1 (niet voelbaar)** tot **10 (catastrofaal)**:\n• 1-3: niet of nauwelijks voelbaar (alleen seismografen)\n• 4: voelbaar, geen schade\n• 5: lichte schade aan oude gebouwen\n• 6: gebouwen kunnen instorten\n• 7+: zware schade over grote gebieden\n• 9+: catastrofale beving (zeldzaam)\n\nElke punt op de schaal is **10× sterker** dan de vorige! Een 7 is dus geen 'iets meer' dan een 6, maar **10× sterker**.\n\n**Aardbevingen in Nederland**\n• Door plaatbeweging vrijwel nooit (wij zitten in het rustige midden van de Euraziatische Plaat).\n• Wél **kunstmatige bevinkjes in Groningen** door **gaswinning** sinds de jaren '80. Daardoor schade aan honderden huizen en kabinetscrisis.\n• De gaswinning is daarom afgebouwd en grotendeels gestopt in 2024.\n\n**Tsunami's**\nAls een onderzeese aardbeving plaatsvindt, kan die enorme **vloedgolven** veroorzaken — tsunami's. Bij Japan-2011 (magnitude 9,1) ontstond een tsunami van wel 40 m hoog → kerncentrale Fukushima beschadigd.",
+    explanation: "Een **aardbeving** is een plotselinge schok in de aardkorst, veroorzaakt door **opgehoopte spanning** die in één keer vrijkomt.\n\n**Hoe werkt het?**\n1. Twee platen drukken/schuiven tegen elkaar maar de **wrijving** houdt ze vast.\n2. Spanning bouwt zich op (jaren tot eeuwen).\n3. De spanning wordt te groot → de platen **schieten los** met een ruk → schok.\n\n**Belangrijke begrippen**:\n• **Hypocentrum** (focus) = punt onder de grond waar de schok ontstaat.\n• **Epicentrum** = het punt aan het oppervlak **recht boven** het hypocentrum. Daar is de schok het sterkst voelbaar.\n• **Schokgolven** verspreiden zich vandaaruit door alle richtingen.\n\n**Hoe sterk?** — De Schaal van Richter\nVan **1 (niet voelbaar)** tot **10 (catastrofaal)**:\n• 1-3: niet of nauwelijks voelbaar (alleen seismografen)\n• 4: voelbaar, geen schade\n• 5: lichte schade aan oude gebouwen\n• 6: gebouwen kunnen instorten\n• 7+: zware schade over grote gebieden\n• 9+: catastrofale beving (zeldzaam)\n\nElk punt op de schaal is **10× sterker** dan de vorige! Een 7 is dus geen 'iets meer' dan een 6, maar **10× sterker**.\n\n**Aardbevingen in Nederland**\n• Door plaatbeweging vrijwel nooit (wij zitten in het rustige midden van de Euraziatische Plaat).\n• Wél **kunstmatige bevingen in Groningen** door **gaswinning** sinds de jaren '80. Daardoor schade aan tienduizenden huizen.\n• De gaswinning is daarom afgebouwd en grotendeels gestopt in 2024.\n\n**Tsunami's**\nAls een onderzeese aardbeving plaatsvindt, kan die enorme **vloedgolven** veroorzaken — tsunami's. Bij Japan-2011 (magnitude 9,1) ontstond een tsunami van wel 40 m hoog → kerncentrale Fukushima beschadigd.",
     svg: plaatgrenzenSvg(),
     checks: [
       {
@@ -443,14 +443,14 @@ const steps = [
         wrongHints: [
           null,
           "Het is logaritmisch — geen kleine stap maar een hele schaal.",
-          "Te veel — elke punt is 10× (niet 100×).",
+          "Te veel — elk punt is 10× (niet 100×).",
           "Veel meer dan 2× — denk aan logaritmische schaal.",
         ],
       },
       {
-        q: "Waarom zijn er in Groningen kunstmatige bevinkjes?",
+        q: "Waarom zijn er in Groningen kunstmatige aardbevingen?",
         options: [
-          "Door gaswinning is de bodem verzakt en spanning ontstaat",
+          "Door gaswinning is de bodem verzakt en ontstaat spanning",
           "Door een actieve vulkaan",
           "Door zware regenval",
           "Door het verkeer",
@@ -460,7 +460,7 @@ const steps = [
           null,
           "Geen vulkanen in NL.",
           "Regenval veroorzaakt geen aardbevingen.",
-          "Verkeer geeft trillingen, geen echte bevinkjes onder de grond.",
+          "Verkeer geeft trillingen, geen echte bevingen onder de grond.",
         ],
       },
     ],
@@ -469,7 +469,7 @@ const steps = [
   // ─── E. Vulkanen ───────────────
   {
     title: "Vulkanen — bouw en uitbarstingen",
-    explanation: "Een **vulkaan** is een opening in de aardkorst waar **magma** (heet gesmolten gesteente) naar boven komt.\n\n**Belangrijke termen**:\n• **Magma**: gesmolten gesteente **onder de grond**.\n• **Lava**: hetzelfde gesmolten gesteente **boven de grond** (na uitbarsting).\n• **Magmakamer**: grote ruimte onder de vulkaan vol magma.\n• **Schoorsteen** (of pijp): kanaal waardoor magma omhoog stijgt.\n• **Krater**: opening bovenop waar de uitbarsting plaatsvindt.\n• **As-wolk**: fijne stofjes hoog de lucht in geschoten.\n\n**Twee hoofdtypen vulkanen**:\n\n**A. Schildvulkaan** *(rustig)*\n• Lava is **dun en vloeibaar** → stroomt ver weg.\n• Berg is **flauw en breed** (als een schild op de grond).\n• Uitbarstingen zijn niet explosief.\n• **Voorbeeld**: vulkanen op **Hawaii** (Mauna Loa).\n\n**B. Stratovulkaan** *(explosief)*\n• Lava is **dik en stroperig** → barst uit met druk.\n• Berg is **hoog en steil**, kegelvormig.\n• Uitbarstingen kunnen catastrofaal zijn.\n• **Voorbeeld**: **Vesuvius** (Italië), **Mount St. Helens** (VS).\n\n**Levenscyclus van een vulkaan**:\n• **Actief**: barst regelmatig uit (Etna, Stromboli)\n• **Slapend**: niet recent maar kan nog (Vesuvius — laatste uitbarsting 1944)\n• **Uitgedoofd**: nooit meer actief (de meeste oude vulkaankegels)\n\n**Goede en slechte gevolgen**:\n*+* **Zeer vruchtbare grond** rond vulkanen → goede landbouw (zuid-Italië, Java).\n*+* **Geothermische energie** (warmte uit de aarde) — IJsland verwarmt veel huizen ermee.\n*−* **Aswolken** kunnen luchtverkeer dagen lang stilleggen (IJsland 2010 — Eyjafjallajökull).\n*−* **Pyroklastische stromen** (gloeiend hete gas-as-mengsels die met 700 km/u afdalen) zijn dodelijk.",
+    explanation: "Een **vulkaan** is een opening in de aardkorst waar **magma** (heet gesmolten gesteente) naar boven komt.\n\n**Belangrijke termen**:\n• **Magma**: gesmolten gesteente **onder de grond**.\n• **Lava**: hetzelfde gesmolten gesteente **boven de grond** (na uitbarsting).\n• **Magmakamer**: grote ruimte onder de vulkaan vol magma.\n• **Schoorsteen** (of pijp): kanaal waardoor magma omhoog stijgt.\n• **Krater**: opening bovenop waar de uitbarsting plaatsvindt.\n• **As-wolk**: fijne stofjes hoog de lucht in geschoten.\n\n**Twee hoofdtypen vulkanen**:\n\n**A. Schildvulkaan** *(rustig)*\n• Lava is **dun en vloeibaar** → stroomt ver weg.\n• Berg is **flauw en breed** (als een schild op de grond).\n• Uitbarstingen zijn niet explosief.\n• **Voorbeeld**: vulkanen op **Hawaii** (Mauna Loa).\n\n**B. Stratovulkaan** *(explosief)*\n• Lava is **dik en stroperig** → barst uit met druk.\n• Berg is **hoog en steil**, kegelvormig.\n• Uitbarstingen kunnen catastrofaal zijn.\n• **Voorbeeld**: **Vesuvius** (Italië), **Mount St. Helens** (VS).\n\n**Levenscyclus van een vulkaan**:\n• **Actief**: barst regelmatig uit (Etna, Stromboli)\n• **Slapend**: niet recent maar kan nog (Vesuvius — laatste uitbarsting 1944)\n• **Uitgedoofd**: nooit meer actief (de meeste oude vulkaankegels)\n\n**Goede en slechte gevolgen**:\n*+* **Zeer vruchtbare grond** rond vulkanen → goede landbouw (zuid-Italië, Java).\n*+* **Geothermische energie** (warmte uit de aarde) — IJsland verwarmt veel huizen ermee.\n*−* **Aswolken** kunnen luchtverkeer dagenlang stilleggen (IJsland 2010 — Eyjafjallajökull).\n*−* **Pyroklastische stromen** (gloeiend hete gas-as-mengsels die met 700 km/u afdalen) zijn dodelijk.",
     svg: vulkaanSvg(),
     checks: [
       {
@@ -484,7 +484,7 @@ const steps = [
         wrongHints: [
           null,
           "Niet helemaal — er is een echt verschil.",
-          "Beide zijn gesmolten gesteente met dezelfde temperatuur.",
+          "Het verschil zit niet in de temperatuur, maar in de plek.",
           "Beide zijn vloeibaar gesteente.",
         ],
       },
@@ -508,7 +508,7 @@ const steps = [
   },
   {
     title: "Beroemde vulkaanuitbarstingen + de Ring of Fire",
-    explanation: "**De Pacific Ring of Fire**\nRond de Stille Oceaan ligt een hoefijzer-vormige zone waar veel vulkanen en aardbevingen zijn — de **Ring of Fire**:\n• **75% van alle actieve vulkanen** op aarde liggen hier.\n• **90% van alle aardbevingen** vinden hier plaats.\n• Loopt langs: Chili, Peru, west-VS, Alaska, Japan, Filipijnen, Indonesië, Nieuw-Zeeland.\n• Ontstaan door subductie aan de randen van de Pacifische Plaat.\n\n**Beroemde uitbarstingen**:\n\n**1. Vesuvius — 79 n.Chr.** *(Italië)*\nDe stratovulkaan barstte uit en bedolf de Romeinse stad **Pompeï** onder een dikke laag as. ~16.000 doden. Ironisch: door die as zijn de stad en lichamen perfect bewaard gebleven — nu een UNESCO Werelderfgoed.\n\n**2. Krakatau — 1883** *(Indonesië)*\nEen van de heftigste uitbarstingen ooit. Knal hoorbaar tot 4.800 km afstand. Veroorzaakte een tsunami van 35 m hoog, ~36.000 doden. Aswolk koelde wereldwijd het klimaat 1°C voor jaren.\n\n**3. Mount St. Helens — 1980** *(VS)*\nVerwoestte 600 km² bos. 57 doden. Top van de berg blies eraf — werd 400 m lager.\n\n**4. Eyjafjallajökull — 2010** *(IJsland)*\nGeen doden, maar de aswolk legde **8 dagen lang het luchtverkeer in heel Europa stil**. Miljoenen reizigers gestrand.\n\n**5. Mount Tambora — 1815** *(Indonesië)*\nDe heftigste uitbarsting in de geschiedenis. Veroorzaakte het '**jaar zonder zomer**' (1816) — gewassen wereldwijd mislukten, hongersnood, 100.000+ doden.\n\n**Vulkanen in Europa**\n• **Etna** (Sicilië, Italië) — actiefste vulkaan in Europa, barst regelmatig uit.\n• **Stromboli** (Italië) — barst al duizenden jaren bijna continu uit (mini-uitbarstingen).\n• **Hekla** + **Eyjafjallajökull** (IJsland) — actief.\n\n**Voorspellen?** Wetenschappers gebruiken seismografen, GPS-meters en gas-metingen om uitbarstingen te voorspellen. Vaak weten ze dagen tot weken van tevoren dat een vulkaan actief wordt — niet alle, maar veel uitbarstingen worden zo voorspeld.",
+    explanation: "**De Pacific Ring of Fire**\nRond de Stille Oceaan ligt een hoefijzer-vormige zone waar veel vulkanen en aardbevingen zijn — de **Ring of Fire**:\n• **75% van alle actieve vulkanen** op aarde liggen hier.\n• **90% van alle aardbevingen** vinden hier plaats.\n• Loopt langs: Chili, Peru, west-VS, Alaska, Japan, Filipijnen, Indonesië, Nieuw-Zeeland.\n• Ontstaan door subductie aan de randen van de Pacifische Plaat.\n\n**Beroemde uitbarstingen**:\n\n**1. Vesuvius — 79 n.Chr.** *(Italië)*\nDe stratovulkaan barstte uit en bedolf de Romeinse stad **Pompeï** onder een dikke laag as. Duizenden doden. Ironisch: door die as zijn de stad en lichamen perfect bewaard gebleven — nu een UNESCO Werelderfgoed.\n\n**2. Krakatau — 1883** *(Indonesië)*\nEen van de heftigste uitbarstingen ooit. Knal hoorbaar tot 4.800 km afstand. Veroorzaakte een tsunami van 35 m hoog, ~36.000 doden. Aswolk koelde het klimaat wereldwijd jarenlang ~1°C af.\n\n**3. Mount St. Helens — 1980** *(VS)*\nVerwoestte 600 km² bos. 57 doden. Top van de berg blies eraf — werd 400 m lager.\n\n**4. Eyjafjallajökull — 2010** *(IJsland)*\nGeen doden, maar de aswolk legde **dagenlang het luchtverkeer in grote delen van Europa stil**. Miljoenen reizigers gestrand.\n\n**5. Mount Tambora — 1815** *(Indonesië)*\nDe heftigste uitbarsting in de opgeschreven geschiedenis. Veroorzaakte het '**jaar zonder zomer**' (1816) — gewassen mislukten, hongersnood, tienduizenden doden.\n\n**Vulkanen in Europa**\n• **Etna** (Sicilië, Italië) — actiefste vulkaan in Europa, barst regelmatig uit.\n• **Stromboli** (Italië) — barst al duizenden jaren bijna continu uit (mini-uitbarstingen).\n• **Hekla** + **Eyjafjallajökull** (IJsland) — actief.\n\n**Voorspellen?** Wetenschappers meten met seismografen, GPS-meters en gas-metingen. Vaak weten ze dagen tot weken van tevoren dat een vulkaan actief wordt — niet alle, maar veel uitbarstingen worden zo voorspeld.",
     svg: ringOfFireSvg(),
     checks: [
       {
@@ -519,7 +519,7 @@ const steps = [
           null,
           "Te weinig — de Ring is wereld-dominant.",
           "Te weinig — meer dan de helft.",
-          "Te veel — ook elders zijn vulkanen (Italië, IJsland, Hawaii in oceanmidden).",
+          "Te veel — ook elders zijn vulkanen (Italië, IJsland, Hawaii midden in de oceaan).",
         ],
       },
       {
@@ -544,7 +544,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Geen wereldoorlog in die tijd op die schaal.",
+          "Een oorlog verandert het weer niet wereldwijd.",
           "Een ijstijd duurt duizenden jaren, niet één jaar.",
           "Geen meteoriet — wel een vulkaan.",
         ],
@@ -555,7 +555,7 @@ const steps = [
   // ─── F. Tsunami's + eindopdracht ───────────────
   {
     title: "Tsunami's — gigantische zeegolven",
-    explanation: "Een **tsunami** is een **gigantische golf** in de zee, veroorzaakt door een onderwater-aardbeving, vulkaanuitbarsting of onderzeese aardverschuiving.\n\n**Hoe werkt het?**\n1. Onderwater **verschuiving** verplaatst plotseling enorme hoeveelheid water.\n2. Op **open zee** is de golf nog laag (~1 m hoog) maar verschrikkelijk **lang** (~100-500 km tussen toppen) en snel (**800 km/u**, vergelijkbaar met een vliegtuig).\n3. Bij de **kust** wordt de zee ondieper → de golf **stuwt op** tot wel **30+ m hoog**.\n4. Het water trekt eerst soms ver terug (zee 'verdwijnt'), daarna **slaat de muur van water het land in**.\n\n**Verschil met gewone golf**:\n• Een **stormgolf**: enkele meters hoog, snel voorbij.\n• Een **tsunami**: kan tientallen meters zijn, 'duurt' lang (water blijft binnenstromen) — verwoestend over kilometers landinwaarts.\n\n**Beroemde tsunami's**:\n\n**Indische Oceaan — 2004**\n• Aardbeving van magnitude 9,1 voor de kust van Sumatra (Indonesië).\n• Tsunami trof Indonesië, Thailand, Sri Lanka, India, Maldiven.\n• ~230.000 doden — de zwaarste natuurramp van deze eeuw tot nu toe.\n\n**Japan — 2011** (Tōhoku)\n• Aardbeving magnitude 9,1.\n• Tsunami tot 40 m hoog op sommige plaatsen.\n• Beschadigde de **kerncentrale Fukushima** → kernramp.\n• ~20.000 doden + miljarden schade.\n\n**Waarschuwingssystemen**\nNa 2004 zijn er **internationale waarschuwingssystemen** opgezet. Zodra een onderzeese aardbeving wordt gemeten, gaan binnen minuten alarm-meldingen naar kustgebieden. Mensen krijgen ~10-30 minuten waarschuwing voordat de golf aanlandt.\n\n**Wat te doen bij een tsunami?**\n• Direct **landinwaarts** vluchten naar **hoger gelegen gebied**.\n• Niet wachten op verdere waarschuwingen — als je de zee plotseling ver ziet teruglopen, vluchten.\n• Niet terugkeren tot het sein 'veilig' is — vaak komen meerdere golven achter elkaar.",
+    explanation: "Een **tsunami** is een **gigantische golf** in de zee, veroorzaakt door een onderwater-aardbeving, vulkaanuitbarsting of onderzeese aardverschuiving.\n\n**Hoe werkt het?**\n1. Onderwater **verschuiving** verplaatst plotseling enorme hoeveelheid water.\n2. Op **open zee** is de golf nog laag (~1 m hoog) maar verschrikkelijk **lang** (~100-500 km tussen toppen) en snel (**800 km/u**, vergelijkbaar met een vliegtuig).\n3. Bij de **kust** wordt de zee ondieper → de golf **stuwt op** tot wel **30+ m hoog**.\n4. Het water trekt eerst soms ver terug (zee 'verdwijnt'), daarna **slaat de muur van water het land in**.\n\n**Verschil met gewone golf**:\n• Een **stormgolf**: enkele meters hoog, snel voorbij.\n• Een **tsunami**: kan tientallen meters zijn, 'duurt' lang (water blijft binnenstromen) — verwoestend over kilometers landinwaarts.\n\n**Beroemde tsunami's**:\n\n**Indische Oceaan — 2004**\n• Aardbeving van magnitude 9,1 voor de kust van Sumatra (Indonesië).\n• Tsunami trof Indonesië, Thailand, Sri Lanka, India, Maldiven.\n• ~230.000 doden — een van de zwaarste natuurrampen van deze eeuw.\n\n**Japan — 2011** (Tōhoku)\n• Aardbeving magnitude 9,1.\n• Tsunami tot 40 m hoog op sommige plaatsen.\n• Beschadigde de **kerncentrale Fukushima** → kernramp.\n• ~20.000 doden + miljarden schade.\n\n**Waarschuwingssystemen**\nNa 2004 zijn er **internationale waarschuwingssystemen** opgezet. Zodra een onderzeese aardbeving wordt gemeten, gaan binnen minuten alarm-meldingen naar kustgebieden. Mensen krijgen ~10-30 minuten waarschuwing voordat de golf aanlandt.\n\n**Wat te doen bij een tsunami?**\n• Direct **landinwaarts** vluchten naar **hoger gelegen gebied**.\n• Niet wachten op verdere waarschuwingen — als je de zee plotseling ver ziet teruglopen, vluchten.\n• Niet terugkeren tot het sein 'veilig' is — vaak komen meerdere golven achter elkaar.",
     svg: ringOfFireSvg(),
     checks: [
       {
@@ -573,7 +573,7 @@ const steps = [
         q: "Wat moet je doen als je merkt dat de zee plotseling **ver wegtrekt**?",
         options: [
           "Direct landinwaarts naar hoger gebied vluchten",
-          "Naar de strand-rand lopen om te kijken",
+          "Naar de waterlijn lopen om te kijken",
           "In het water gaan liggen tot het voorbij is",
           "Niets — gewoon een eb-effect",
         ],

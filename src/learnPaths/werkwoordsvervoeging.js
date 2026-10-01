@@ -174,7 +174,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
           stappen: [{ titel: "Vraagtruc", tekst: "Bakt vader pannenkoeken? → bakt springt naar voren = pv." }],
           woorden: [{ woord: "persoonsvorm", uitleg: "= vervoegd werkwoord" }],
           theorie: "Pv = werkwoord dat verandert per persoon/tijd.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Bakt jij? Hij bakt. Wij bakken." }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Bak jij? Hij bakt. Wij bakken." }],
           basiskennis: [{ onderwerp: "test", uitleg: "vraag maken, getal veranderen" }],
           niveaus: { basis: "bakt.", simpeler: "Wat doet vader? Bakt.", nogSimpeler: "bakt." },
         },
@@ -185,17 +185,17 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
   // ─── B. Tegenwoordige tijd ────────────────────────────
   {
     title: "Ik — de stam, zonder t",
-    explanation: "Bij **ik** in de tegenwoordige tijd schrijf je **alleen de stam**. Geen t. Geen extra letters.\n\n**Voorbeelden**:\n• ik **werk** (stam = werk)\n• ik **fiets** (stam = fiets — eindigt al op t van zichzelf!)\n• ik **antwoord** (stam = antwoord — eindigt al op d!)\n• ik **vind** (stam = vind)\n• ik **word** (stam = word)\n\n**Let op de instinker**: bij \"ik fiets\" is die -t **niet** de t-uitgang, maar gewoon onderdeel van het woord zelf.\n\nVergelijk:\n• ik fiets / jij fiets**t** — hier zie je het verschil: de jij-vorm krijgt de t **erbij**.\n• ik antwoord / jij antwoord**t** — zelfde idee.\n\n**Regel**: bij **ik** = altijd de stam. Niets toevoegen.",
+    explanation: "Bij **ik** in de tegenwoordige tijd schrijf je **alleen de stam**. Geen t. Geen extra letters.\n\n**Voorbeelden**:\n• ik **werk** (stam = werk)\n• ik **zit** (stam = zit — eindigt al op t van zichzelf!)\n• ik **antwoord** (stam = antwoord — eindigt al op d!)\n• ik **vind** (stam = vind)\n• ik **word** (stam = word)\n\n**Let op de instinker**: bij \"ik zit\" is die -t **niet** de t-uitgang, maar gewoon onderdeel van het woord zelf.\n\nVergelijk:\n• ik fiets / jij fiets**t** — de jij-vorm krijgt de t **erbij**.\n• ik antwoord / jij antwoord**t** — zelfde idee.\n\n**Regel**: bij **ik** = altijd de stam. Niets toevoegen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="30" width="260" height="50" rx="8" fill="rgba(0,200,83,0.10)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="150" y="55" text-anchor="middle" fill="${COLORS.good}" font-size="16" font-family="Arial" font-weight="bold">ik = stam</text>
 <text x="150" y="73" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial" font-style="italic">geen t toevoegen</text>
 <text x="40" y="110" fill="${COLORS.text}" font-size="13" font-family="Arial">ik werk</text>
-<text x="40" y="130" fill="${COLORS.text}" font-size="13" font-family="Arial">ik fiets</text>
+<text x="40" y="130" fill="${COLORS.text}" font-size="13" font-family="Arial">ik zit</text>
 <text x="40" y="150" fill="${COLORS.text}" font-size="13" font-family="Arial">ik antwoord</text>
 <text x="40" y="170" fill="${COLORS.text}" font-size="13" font-family="Arial">ik vind</text>
 <text x="180" y="110" fill="${COLORS.alt}" font-size="11" font-family="Arial">stam: werk</text>
-<text x="180" y="130" fill="${COLORS.alt}" font-size="11" font-family="Arial">stam: fiets ← al -t</text>
+<text x="180" y="130" fill="${COLORS.alt}" font-size="11" font-family="Arial">stam: zit ← al -t</text>
 <text x="180" y="150" fill="${COLORS.alt}" font-size="11" font-family="Arial">stam: antwoord ← al -d</text>
 <text x="180" y="170" fill="${COLORS.alt}" font-size="11" font-family="Arial">stam: vind</text>
 </svg>`,
@@ -242,7 +242,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
   },
   {
     title: "Jij / hij / zij / het — stam + t",
-    explanation: "Bij **jij**, **u**, **hij**, **zij**, **het** (één persoon, niet ik) krijgt het werkwoord een **-t** achter de stam.\n\n**Formule**: stam + **t**\n\n**Voorbeelden**:\n• jij **werkt** (stam werk + t)\n• hij **loopt** (stam loop + t)\n• zij **kookt** (stam kook + t)\n• het **regent** (stam regen + t)\n\n**Belangrijke uitzondering — als de stam al op een t eindigt**: geen extra -t!\n• jij fiets**t**? → stam = fiets, eindigt al op t. Maar je schrijft toch fietst! Eigenlijk is de regel: stam **klinkt** met t aan het eind, dus je voegt geen tweede -t toe.\n\nWacht — je ziet hier wél fiets**t** met een t. Dat klopt: bij \"jij fiets\" zou je geen verschil horen tussen ik-vorm en jij-vorm. Het Nederlands schrijft daarom toch fiets**t** (één t per stam-eind, geen dubbele).\n\n**Nog beter te onthouden**:\n• stam eindigt op andere letter → +t (werk → werkt, loop → loopt)\n• stam eindigt op -t → blijft één t (fiets → fietst, weet → weet, eet → eet)\n\n**Vraag-omkering** (de pv komt vóór de jij): dan **geen** -t achter de stam.\n• Jij werkt. → **Werk** jij?\n• Jij loopt. → **Loop** jij?",
+    explanation: "Bij **jij**, **u**, **hij**, **zij**, **het** (één persoon, niet ik) krijgt het werkwoord een **-t** achter de stam.\n\n**Formule**: stam + **t**\n\n**Voorbeelden**:\n• jij **werkt** (stam werk + t)\n• hij **loopt** (stam loop + t)\n• zij **kookt** (stam kook + t)\n• het **regent** (stam regen + t)\n\n**Belangrijke uitzondering — als de stam al op een t eindigt**: geen extra -t!\n• zitten → stam **zit** → hij **zit** (niet: zitt).\n• weten → stam **weet** → jij **weet**.\n\nLet op: **fietsen** → stam **fiets** eindigt op een **s**, niet op t. Dus gewoon: jij fiets**t**.\n\n**Nog beter te onthouden**:\n• stam eindigt op andere letter → +t (werk → werkt, fiets → fietst)\n• stam eindigt op -t → blijft één t (zit → zit, weet → weet, eet → eet)\n\n**Vraag-omkering** (de pv komt vóór de jij): dan **geen** -t achter de stam.\n• Jij werkt. → **Werk** jij?\n• Jij loopt. → **Loop** jij?",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="20" width="260" height="40" rx="8" fill="rgba(0,200,83,0.10)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="150" y="45" text-anchor="middle" fill="${COLORS.good}" font-size="16" font-family="Arial" font-weight="bold">jij/hij/zij/het = stam + t</text>
@@ -250,7 +250,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
 <text x="200" y="85" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">→ werkt</text>
 <text x="40" y="110" fill="${COLORS.text}" font-size="13" font-family="Arial">hij loop + t</text>
 <text x="200" y="110" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">→ loopt</text>
-<text x="40" y="135" fill="${COLORS.text}" font-size="13" font-family="Arial">zij fiets (al -t)</text>
+<text x="40" y="135" fill="${COLORS.text}" font-size="13" font-family="Arial">zij fiets + t</text>
 <text x="200" y="135" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">→ fietst</text>
 <text x="20" y="170" fill="${COLORS.alt}" font-size="11" font-family="Arial">vraag-omkering: Werk jij? (geen -t)</text>
 </svg>`,
@@ -403,7 +403,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
           stappen: [{ titel: "Kofschip: p", tekst: "Stam klop eindigt op p (in kofschip) → klopte." }],
           woorden: [{ woord: "'t kofschip", uitleg: "t k o f s ch p" }],
           theorie: "Letter in 't kofschip → +te.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "werken→werkte, kopen→kocht (sterk)" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "werken→werkte, kopen→kocht (onregelmatig)" }],
           basiskennis: [{ onderwerp: "p in kofschip", uitleg: "p staat erin" }],
           niveaus: { basis: "klopte.", simpeler: "Klop + te.", nogSimpeler: "klopte." },
         },
@@ -435,7 +435,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
           null,
           "De stam eindigt op de klank **ch**. Staat ch in 't kofschip?",
           "Dit is meervoud. Vraag is naar ik-vorm.",
-          "Twee keer dezelfde optie zou kunnen verwarren — kijk goed naar de letter na lach. Toets aan 't kofschip.",
+          "Eén t is genoeg: stam lach + te. Toets aan 't kofschip.",
         ],
         uitlegPad: {
           stappen: [{ titel: "ch in kofschip", tekst: "Stam lach eindigt op ch (in kofschip) → +te = lachte." }],
@@ -450,7 +450,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
   },
   {
     title: "Voltooid deelwoord — ge- + stam + d/t",
-    explanation: "Het **voltooid deelwoord** gebruik je na **hebben** of **zijn**: \"ik **heb** gewerkt\", \"hij **is** gefietst\".\n\n**Vorm**: **ge-** + stam + **d** of **t**.\n\n**Welke letter?** Weer 't kofschip!\n• Stam eindigt op letter uit kofschip → **t**\n• Stam eindigt op andere letter → **d**\n\n**Voorbeelden**:\n• werken → ge + werk + **t** → ik heb **gewerkt** (k zit in kofschip)\n• fietsen → ge + fiets + **t** → ik heb **gefietst** (s zit erin) — *let op: stam eindigt op t, dus geen dubbele t. Het wordt gewoon \"gefietst\".*\n• horen → ge + hoor + **d** → ik heb **gehoord** (r zit er niet in)\n• spelen → ge + speel + **d** → ik heb **gespeeld**\n• maken → ge + maak + **t** → ik heb **gemaakt** (k zit erin)\n\n**Onregelmatige werkwoorden**: krijgen meestal **ge- + ...-en**. Geen d/t-keuze nodig — leer ze los.\n• eten → **gegeten**\n• lopen → **gelopen**\n• zien → **gezien**\n• zijn → **geweest**\n\n**Stappenplan voor voltooid deelwoord van een zwak werkwoord**:\n1. Stam vinden\n2. **ge-** ervoor\n3. Stam-eindletter toetsen aan 't kofschip → t of d?\n4. Plakken!",
+    explanation: "Het **voltooid deelwoord** gebruik je na **hebben** of **zijn**: \"ik **heb** gewerkt\", \"hij **is** gefietst\".\n\n**Vorm**: **ge-** + stam + **d** of **t**.\n\n**Welke letter?** Weer 't kofschip!\n• Stam eindigt op letter uit kofschip → **t**\n• Stam eindigt op andere letter → **d**\n\n**Voorbeelden**:\n• werken → ge + werk + **t** → ik heb **gewerkt** (k zit in kofschip)\n• fietsen → ge + fiets + **t** → ik heb **gefietst** (s zit erin)\n• zetten → ge + zet → ik heb **gezet** *(stam eindigt al op t: geen extra t)*\n• horen → ge + hoor + **d** → ik heb **gehoord** (r zit er niet in)\n• spelen → ge + speel + **d** → ik heb **gespeeld**\n• maken → ge + maak + **t** → ik heb **gemaakt** (k zit erin)\n\n**Onregelmatige werkwoorden**: krijgen meestal **ge- + ...-en**. Geen d/t-keuze nodig — leer ze los.\n• eten → **gegeten**\n• lopen → **gelopen**\n• zien → **gezien**\n• zijn → **geweest**\n\n**Stappenplan voor voltooid deelwoord van een zwak werkwoord**:\n1. Stam vinden\n2. **ge-** ervoor\n3. Stam-eindletter toetsen aan 't kofschip → t of d?\n4. Plakken!",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="20" width="260" height="40" rx="8" fill="rgba(0,200,83,0.10)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="150" y="45" text-anchor="middle" fill="${COLORS.good}" font-size="14" font-family="Arial" font-weight="bold">ge- + stam + d/t (kofschip)</text>
@@ -517,7 +517,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
   // ─── D. Beruchte instinkers ───────────────────────────
   {
     title: "Worden / wordt — tegenwoordige tijd",
-    explanation: "**worden** is heel vaak de bron van d/t-fouten. Toets gewoon de regels:\n\n**Stam van worden** = **word** (haal -en eraf).\n\n**Tegenwoordige tijd**:\n• ik **word** (stam, geen t)\n• jij **wordt** (stam + t)\n• hij/zij/het **wordt** (stam + t)\n• wij/jullie/zij **worden** (hele werkwoord)\n\n**Veelgemaakte fout**: \"ik wordt\" — fout! Bij ik komt **nooit** een -t. Het is altijd **ik word**.\n\n**Geheugensteun**: doe het truukje met \"lopen\":\n• ik loop / ik word ✓ (geen t)\n• hij loopt / hij wordt ✓ (met t)\n\nAls je twijfelt: vervang \"worden\" tijdelijk door **lopen** in dezelfde zin. Hoor je dan \"loop\" of \"loopt\"? Datzelfde patroon (geen t / wel t) geldt voor worden.\n\n**Voorbeelden**:\n• Ik **word** morgen 12. *(ik loop → ik word)*\n• Hij **wordt** morgen 12. *(hij loopt → hij wordt)*\n• **Word** ik nu boos? *(loop ik → word ik — vraag-omkering, geen t)*",
+    explanation: "**worden** is heel vaak de bron van d/t-fouten. Toets gewoon de regels:\n\n**Stam van worden** = **word** (haal -en eraf).\n\n**Tegenwoordige tijd**:\n• ik **word** (stam, geen t)\n• jij **wordt** (stam + t)\n• hij/zij/het **wordt** (stam + t)\n• wij/jullie/zij **worden** (hele werkwoord)\n\n**Veelgemaakte fout**: \"ik wordt\" — fout! Bij ik komt **nooit** een -t. Het is altijd **ik word**.\n\n**Geheugensteun**: doe het trucje met \"lopen\":\n• ik loop / ik word ✓ (geen t)\n• hij loopt / hij wordt ✓ (met t)\n\nAls je twijfelt: vervang \"worden\" tijdelijk door **lopen** in dezelfde zin. Hoor je dan \"loop\" of \"loopt\"? Datzelfde patroon (geen t / wel t) geldt voor worden.\n\n**Voorbeelden**:\n• Ik **word** morgen 12. *(ik loop → ik word)*\n• Hij **wordt** morgen 12. *(hij loopt → hij wordt)*\n• **Word** ik nu boos? *(loop ik → word ik — vraag-omkering, geen t)*",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="20" width="260" height="40" rx="8" fill="rgba(255,213,79,0.18)" stroke="${COLORS.warm}" stroke-width="2"/>
 <text x="150" y="40" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">truc: vervang door lopen</text>
@@ -554,20 +554,20 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
       },
       {
         q: "*Hij ___ steeds bozer.*",
-        options: ["wordt", "word", "worden", "werd"],
+        options: ["wordt", "word", "worden", "wort"],
         answer: 0,
         wrongHints: [
           null,
           "Bij **hij** komt er een -t bij de stam. Welke letter mist?",
           "Dat is meervoud. Hier gaat het om één persoon (hij).",
-          "Verleden tijd — kan, maar de zin is in de tegenwoordige tijd (\"steeds\").",
+          "Bestaat niet. Stam = word (met d), dan + t.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Hij wordt — met t!", tekst: "Lopen-test: hij loopt → hij wordt. Stam + t." }],
           woorden: [{ woord: "wordt", uitleg: "hij/zij/het + stam + t" }],
           theorie: "Bij hij/zij/het + werkwoord 'worden': stam + t = wordt.",
           voorbeelden: [{ type: "voorbeeld", tekst: "hij wordt boos, zij wordt 12" }],
-          basiskennis: [{ onderwerp: "altijd dubbele t-letter", uitleg: "word + t = wordt" }],
+          basiskennis: [{ onderwerp: "eindigt op dt", uitleg: "word + t = wordt" }],
           niveaus: { basis: "wordt.", simpeler: "Hij + stam + t.", nogSimpeler: "wordt." },
         },
       },
@@ -623,7 +623,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         uitlegPad: {
           stappen: [{ titel: "Gebeurd — met 'is'", tekst: "'Is gebeurd' = voltooid → -d." }],
           woorden: [{ woord: "gebeurd", uitleg: "voltooid deelwoord" }],
-          theorie: "Met 'is/heeft' → voltooid → -d.",
+          theorie: "Met 'is/heeft' → voltooid deelwoord → gebeur + d.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Er is iets gebeurd. Het is goed gebeurd." }],
           basiskennis: [{ onderwerp: "test", uitleg: "vervang door 'gewerkt'" }],
           niveaus: { basis: "gebeurd.", simpeler: "Is + -d.", nogSimpeler: "gebeurd." },
@@ -825,8 +825,8 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         ],
         uitlegPad: {
           stappen: [{ titel: "Is gebeurd", tekst: "Na 'is' → voltooid → gebeurd (met -d)." }],
-          woorden: [{ woord: "is + voltooid", uitleg: "altijd -d" }],
-          theorie: "Met 'is/heeft/wordt' → voltooid → -d.",
+          woorden: [{ woord: "is + voltooid", uitleg: "hier -d: r zit niet in 't kofschip" }],
+          theorie: "Met 'is/heeft/wordt' → voltooid deelwoord: gebeur + d.",
           voorbeelden: [{ type: "voorbeeld", tekst: "is gebeurd, heeft gewerkt" }],
           basiskennis: [{ onderwerp: "test", uitleg: "vervang door 'gewerkt'" }],
           niveaus: { basis: "gebeurd.", simpeler: "Is + -d.", nogSimpeler: "gebeurd." },
@@ -834,13 +834,13 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
       },
       {
         q: "*Ik ___ steeds groter.*  (werkwoord: worden)",
-        options: ["word", "wordt", "wort", "werd"],
+        options: ["word", "wordt", "wort", "worden"],
         answer: 0,
         wrongHints: [
           null,
           "Bij **ik** komt nooit een -t. Doe de lopen-test.",
           "Niet bestaand woord. Ik = stam alleen.",
-          "Verleden tijd, maar de zin is tegenwoordig (\"steeds\").",
+          "Hele werkwoord. Bij ik gebruik je de stam.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Ik word — nooit t!", tekst: "Ik loop → ik word. Geen -t bij ik." }],

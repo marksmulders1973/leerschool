@@ -224,7 +224,7 @@ const steps = [
       "• **dat / dit** — bij een 'het'-woord: *het touw → dat / dit.*\n\n" +
       "*Ik zag een film. **Die** was spannend.* → 'Die' verwijst naar de film.\n" +
       "*Pak het touw. Bind **dat** goed vast.* → 'Dat' verwijst naar het touw.\n\n" +
-      "**Deze/dit** gebruik je vaak voor iets dat dichtbij of net genoemd is; **die/dat** voor iets iets verder weg.",
+      "**Deze/dit** gebruik je vaak voor iets dat dichtbij of net genoemd is; **die/dat** voor iets verder weg.",
     checks: [
       {
         q: "*Ik heb gisteren een film gezien. Die was echt spannend.* Waar verwijst 'Die' naar?",

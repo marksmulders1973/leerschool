@@ -63,7 +63,7 @@ const steps = [
           woorden: [{ woord: "negatief", uitleg: "kleiner dan 0, met minteken" }],
           theorie: "Op getallenlijn: links = lager, rechts = hoger.",
           voorbeelden: [{ type: "voorbeeld", tekst: "−10 < −3 < 0 < 5" }],
-          basiskennis: [{ onderwerp: "tegenovergestelde", uitleg: "voor negatief getal: groter cijfer = lager getal" }],
+          basiskennis: [{ onderwerp: "groter cijfer", uitleg: "voor negatief getal: groter cijfer = lager getal" }],
           niveaus: {
             basis: "−10 is verder van 0 onder nul → laagst.",
             simpeler: "−10 is heel koud, lager dan −3.",
@@ -161,7 +161,7 @@ const steps = [
   },
   {
     title: "Optellen met negatieve getallen",
-    explanation: "**+ negatief getal** = aftrekken.\n\n**Voorbeelden**:\n• 5 + (−3) = 5 − 3 = **2**\n• 8 + (−10) = 8 − 10 = **−2**\n• 4 + (−4) = **0**\n\n**Regel**: een plus en een min naast elkaar werkt als één **min**.\n\n**Visualisatie op de getallenlijn**: bij +3 ga je 3 stappen naar **rechts**. Bij +(−3) ga je 3 stappen naar **links**.\n\n**Negatief + negatief** geeft een nóg meer negatief getal:\n• −3 + (−5) = −8 (twee minnen samen → 8 stappen naar links vanaf 0)\n\n**Trucje**: bij $+(-x)$ doe je gewoon $-x$. Schrap de + en de haakjes.",
+    explanation: "**+ negatief getal** = aftrekken.\n\n**Voorbeelden**:\n• 5 + (−3) = 5 − 3 = **2**\n• 8 + (−10) = 8 − 10 = **−2**\n• 4 + (−4) = **0**\n\n**Regel**: een plus en een min naast elkaar werkt als één **min**.\n\n**Visualisatie op de getallenlijn**: bij +3 ga je 3 stappen naar **rechts**. Bij +(−3) ga je 3 stappen naar **links**.\n\n**Negatief + negatief** geeft een nóg meer negatief getal:\n• −3 + (−5) = −8 (eerst 3, dan nog 5 stappen links van 0)\n\n**Trucje**: bij $+(-x)$ doe je gewoon $-x$. Schrap de + en de haakjes.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="20" y1="100" x2="280" y2="100" stroke="${COLORS.text}" stroke-width="2"/>
 <text x="50" y="120" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">−4</text>
@@ -241,7 +241,7 @@ const steps = [
   },
   {
     title: "Plus en min combineren — schema",
-    explanation: "Onthoud dit schema voor combineerde plussen en minnen:\n\n| Combinatie | Wordt |\n|-----------|-------|\n| **+ +** | + |\n| **+ −** | − |\n| **− +** | − |\n| **− −** | + |\n\nIn woorden:\n• **Twee gelijke tekens** (++ of −−) → **plus**\n• **Twee verschillende tekens** (+− of −+) → **min**\n\n**Voorbeelden**:\n• 5 + +3 = 5 + 3 = **8**\n• 5 + −3 = 5 − 3 = **2**\n• 5 − +3 = 5 − 3 = **2**\n• 5 − −3 = 5 + 3 = **8**\n\n**Trucje**: tel de mintekens. **Even** aantal minnen → uitkomst plus. **Oneven** aantal → uitkomst min.",
+    explanation: "Onthoud dit schema voor plussen en minnen samen:\n\n| Combinatie | Wordt |\n|-----------|-------|\n| **+ +** | + |\n| **+ −** | − |\n| **− +** | − |\n| **− −** | + |\n\nIn woorden:\n• **Twee gelijke tekens** (++ of −−) → **plus**\n• **Twee verschillende tekens** (+− of −+) → **min**\n\n**Voorbeelden**:\n• 5 + +3 = 5 + 3 = **8**\n• 5 + −3 = 5 − 3 = **2**\n• 5 − +3 = 5 − 3 = **2**\n• 5 − −3 = 5 + 3 = **8**\n\n**Trucje**: tel de mintekens. **Even** aantal minnen → uitkomst plus. **Oneven** aantal → uitkomst min.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <line x1="40" y1="48" x2="260" y2="48" stroke="${COLORS.curve}" stroke-width="1"/>
@@ -264,7 +264,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet optellen — wat is de regel voor min plus plus?",
+          "Niet optellen — wat is de regel voor een min gevolgd door een plus?",
           "Welk getal is groter — 4 of 6? Wat zegt dat over het teken?",
           "Te ver onder nul. Reken op je vingers af: trek 6 af van 4 — hoe ver kom je onder nul?",
         ],
@@ -272,7 +272,7 @@ const steps = [
           stappen: [{ titel: "− + = −", tekst: "4 − +6 = 4 − 6 = −2." }],
           woorden: [{ woord: "− +", uitleg: "verschillend teken → min" }],
           theorie: "Verschillende tekens → min.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "4 − 6 = 4 minder dan 6, dus −2 (2 onder nul)" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "4 − 6: je haalt er 2 meer af dan je hebt, dus −2 (2 onder nul)" }],
           basiskennis: [{ onderwerp: "getallenlijn", uitleg: "vanaf 4 zes stappen naar links" }],
           niveaus: {
             basis: "4 − 6 = −2.",
@@ -329,7 +329,7 @@ const steps = [
   },
   {
     title: "Delen — zelfde regels als vermenigvuldigen",
-    explanation: "**Delen** met negatieve getallen gaat hetzelfde als vermenigvuldigen:\n\n• **plus ÷ plus = plus**\n• **plus ÷ min = min**\n• **min ÷ plus = min**\n• **min ÷ min = plus**\n\n**Voorbeelden**:\n• 12 ÷ 4 = **3**\n• 12 ÷ (−4) = **−3**\n• (−12) ÷ 4 = **−3**\n• (−12) ÷ (−4) = **3** ← min ÷ min = plus\n\n**Onthoud**: verschillende tekens → min. Gelijke tekens → plus.\n\nDit geldt ook voor **breuken** met negatieve tekens:\n• −⁶⁄₂ = −3 (min boven, plus onder → min)\n• ⁻¹⁰⁄−₅ = 2 (min boven, min onder → plus)",
+    explanation: "**Delen** met negatieve getallen gaat hetzelfde als vermenigvuldigen:\n\n• **plus ÷ plus = plus**\n• **plus ÷ min = min**\n• **min ÷ plus = min**\n• **min ÷ min = plus**\n\n**Voorbeelden**:\n• 12 ÷ 4 = **3**\n• 12 ÷ (−4) = **−3**\n• (−12) ÷ 4 = **−3**\n• (−12) ÷ (−4) = **3** ← min ÷ min = plus\n\n**Onthoud**: verschillende tekens → min. Gelijke tekens → plus.\n\nDit geldt ook voor **breuken** met negatieve tekens:\n• −⁶⁄₂ = −3 (min boven, plus onder → min)\n• ⁻¹⁰⁄₋₅ = 2 (min boven, min onder → plus)",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="30" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial" font-weight="bold">delen werkt net als vermenigvuldigen</text>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="0.7"/>
@@ -400,7 +400,7 @@ const steps = [
           null,
           "Je hebt afgetrokken in plaats van opgeteld. Wat betekent 'warmer' voor de bewerking?",
           "Te warm — begin bij −12 en ga 8 stappen omhoog. Ben je dan al boven nul?",
-          "+4 zou kloppen als het startpunt 0 was — maar het is geen 0. Probeer opnieuw.",
+          "+4 krijg je als je 12 − 8 doet en de min vergeet. Waar begon je?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Warmer = optellen", tekst: "−12 + 8 = −4. Begin onder nul, 8 erbij = nog onder nul." }],
@@ -411,7 +411,7 @@ const steps = [
           niveaus: {
             basis: "−12 + 8 = −4 (8 stappen omhoog vanaf −12).",
             simpeler: "Eerst 8 erbij: 12−8 = 4 onder nul = −4.",
-            nogSimpeler: "Van −12 naar 0 = 12 stappen. Maar maar 8 erbij. Dus nog −4.",
+            nogSimpeler: "Van −12 naar 0 = 12 stappen. Je gaat maar 8 omhoog. Dus nog −4.",
           },
         },
       },
@@ -439,7 +439,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Je hebt opgeteld in plaats van afgetrokken. Bereken eerst de keer-som, trek dan pas 5 af.",
+          "Let op het teken: min × min = plus. Bereken eerst de keer-som, trek dan pas 5 af.",
           "Dat is alleen de tussenstap — je bent er bijna, maar welke stap ontbreekt nog?",
           "Je hebt het teken van de keer-som onjuist bepaald — denk: min × min = welk teken?",
         ],
@@ -459,25 +459,25 @@ const steps = [
       { q: "−8 + 3 = ?", options: ["−5","5","−11","11"], answer: 0, wrongHints: [null, "Andersom — blijft onder nul.", "Te ver naar links — heb je 3 erbij of eraf?", "Wel onder nul."] },
       { q: "−5 − 7 = ?", options: ["−12","−2","2","12"], answer: 0, wrongHints: [null, "Niet — extra 7 erbij in min-richting.", "Tegenovergesteld.", "Te ver naar plus."] },
       { q: "12 − (−5) = ?", options: ["17","7","−17","−7"], answer: 0, wrongHints: [null, "Niet — twee minnen worden plus.", "Niet — geen min.", "Niet."] },
-      { q: "(−4) × 5 = ?", options: ["−20","20","−9","9"], answer: 0, wrongHints: [null, "Tegengesteld teken.", "Niet vermenigvuldigen — optellen.", "Idem."] },
-      { q: "(−6) × (−3) = ?", options: ["18","−18","9","−9"], answer: 0, wrongHints: [null, "Tegengesteld — twee minnen = plus.", "Niet — vermenigvuldigen, niet aftrekken.", "Idem."] },
+      { q: "(−4) × 5 = ?", options: ["−20","20","−9","9"], answer: 0, wrongHints: [null, "Tegengesteld teken.", "Niet optellen — vermenigvuldigen.", "Idem."] },
+      { q: "(−6) × (−3) = ?", options: ["18","−18","9","−9"], answer: 0, wrongHints: [null, "Tegengesteld — twee minnen = plus.", "Niet — vermenigvuldigen, niet optellen.", "Idem."] },
       { q: "24 ÷ (−4) = ?", options: ["−6","6","−96","96"], answer: 0, wrongHints: [null, "Tegengesteld teken — 1 min in som = uitkomst min.", "Niet — delen, niet vermenigvuldigen.", "Idem."] },
       { q: "(−15) ÷ (−3) = ?", options: ["5","−5","45","−45"], answer: 0, wrongHints: [null, "Tegengesteld — twee minnen = plus.", "Niet — delen, geen × .", "Idem."] },
       { q: "Temperatuur −12 °C wordt 8 graden warmer. Nieuwe temperatuur?", options: ["−4 °C","+4 °C","−20 °C","20 °C"], answer: 0, wrongHints: [null, "Te hoog — niet alle 12 graden weggewerkt.", "Tegenovergesteld — warmer = optellen, niet aftrekken.", "Veel te hoog."] },
-      { q: "Een schuld van €25 + lening van €10 erbij. Totale schuld?", options: ["€35","€15","−€15","€25"], answer: 0, wrongHints: [null, "Te weinig — extra geld geleend, schuld stijgt.", "Met min — schuld is positief getal als 'schuld' genoemd; in saldo wel min.", "Onveranderd — geleend erbij, dus hoger."] },
+      { q: "Een schuld van €25 + lening van €10 erbij. Totale schuld?", options: ["€35","€15","−€15","€25"], answer: 0, wrongHints: [null, "Te weinig — extra geld geleend, schuld stijgt.", "Een lening maakt je schuld groter, niet kleiner.", "Onveranderd — geleend erbij, dus hoger."] },
       { q: "Duiker op −15 m stijgt 9 m. Nieuwe diepte?", options: ["−6 m","−24 m","6 m","24 m"], answer: 0, wrongHints: [null, "Tegenovergesteld — stijgen = richting 0.", "Niet — nog niet boven water.", "Veel te hoog."] },
       { q: "Welk getal is HET GROOTST: −15, −3, 0, +2?", options: ["+2","−3","0","−15"], answer: 0, wrongHints: [null, "Negatief, dus kleiner dan 0.", "Wel groter dan negatieven, maar +2 is groter.", "Het kleinst."] },
       { q: "**Verschil** tussen −7 °C en +5 °C?", options: ["12 °C","2 °C","−12 °C","−2 °C"], answer: 0, wrongHints: [null, "Te weinig — vergeet niet de stappen onder nul.", "Niet — verschil = afstand, altijd positief.", "Idem."] },
-      { q: "Reken: 10 − 4 × 3", options: ["−2","18","6","30"], answer: 0, wrongHints: [null, "Optellen ipv aftrekken.", "Eerst −, dan × (verkeerde volgorde).", "Geen haakjes — × eerst."] },
-      { q: "Wat is **tegenovergestelde** van −9?", options: ["+9","−9","0","9 (al positief)"], answer: 0, wrongHints: [null, "Zelfde getal.", "0 is tegenovergestelde van 0.", "Optie A is correct — '+9' notatie."] },
+      { q: "Reken: 10 − 4 × 3", options: ["−2","18","6","30"], answer: 0, wrongHints: [null, "Eerst −, dan × — verkeerde volgorde.", "Je bent de × 3 vergeten.", "Geen haakjes — × eerst."] },
+      { q: "Wat is het **tegenovergestelde** van −9?", options: ["+9","−9","0","18"], answer: 0, wrongHints: [null, "Zelfde getal.", "0 is het tegenovergestelde van 0.", "Alleen het teken verandert, niet de grootte."] },
       { q: "Een lift gaat 3 verdiepingen omlaag vanaf etage 1. Welke etage?", options: ["−2","2","−1","4"], answer: 0, wrongHints: [null, "Tegenovergesteld — omlaag = min.", "Slechts 2 omlaag.", "Optellen ipv aftrekken."] },
-      { q: "**(−5) + 3** = ?", options: ["−2","−8","2","8"], answer: 0, wrongHints: [null,"Te ver — slechts +3 erbij.","Andersom.","Tegenovergesteld."] },
+      { q: "**(−5) + 3** = ?", options: ["−2","−8","2","8"], answer: 0, wrongHints: [null,"Andersom — +3 gaat naar rechts.","Andersom.","Tegenovergesteld."] },
       { q: "**(−4) × 2** = ?", options: ["−8","8","−2","−6"], answer: 0, wrongHints: [null,"Min × plus = min.","Onvolledig.","Optellen."] },
       { q: "**3 − (−5)** = ?", options: ["8","−2","2","−8"], answer: 0, wrongHints: [null,"Twee minnen = plus.","Onjuist.","Andersom."] },
       { q: "**Absolute waarde** van −7 = ?", options: ["7","−7","0","49"], answer: 0, wrongHints: [null,"Niet — abs is altijd ≥0.","Wel iets.","Niet — geen kwadraat."] },
       { q: "Welke is **kleiner**: −10 of −3?", options: ["−10","−3","Gelijk","Niet bepaald"], answer: 0, wrongHints: [null,"Andersom — −3 ligt dichter bij 0.","Verschillende getallen.","Wel bepaald."] },
-      { q: "**(−2)²** = ?", options: ["4","−4","2","−2"], answer: 0, wrongHints: [null,"Min × min = plus.","Niet primair.","Geen verandering."] },
-      { q: "Wat is **tegengestelde** van +12?", options: ["−12","12","0","24"], answer: 0, wrongHints: [null,"Zelfde.","Tegenovergestelde van 0.","Verdubbeld."] },
+      { q: "**(−2)²** = ?", options: ["4","−4","2","−2"], answer: 0, wrongHints: [null,"Min × min = plus.","Kwadraat = keer zichzelf: (−2) × (−2).","Kwadraat betekent keer zichzelf."] },
+      { q: "Wat is het **tegengestelde** van +12?", options: ["−12","12","0","24"], answer: 0, wrongHints: [null,"Zelfde.","Tegenovergestelde van 0.","Verdubbeld."] },
       { q: "**Open vraag**: bereken (−6) + (−4). Typ getal.", kind: "open", acceptedAnswers: ["-10", "−10"], explanation: "−6 + −4 = −10 (twee negatieven optellen)." },
       { q: "**Open vraag**: bereken (−15) ÷ 3. Typ getal.", kind: "open", acceptedAnswers: ["-5", "−5"], explanation: "−15 ÷ 3 = −5 (min ÷ plus = min)." },
     ],

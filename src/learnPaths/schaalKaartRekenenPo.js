@@ -54,7 +54,7 @@ const steps = [
             { titel: "Kijk naar het getal na de dubbele punt", tekst: "Zoek het getal dat achter de '1 :' staat — dat is het antwoord op 'hoeveel keer kleiner'." },
           ],
           woorden: [{ woord: "verkleind", uitleg: "Kleiner gemaakt. Bij een kaart betekent dit dat alles evenveel keer kleiner is dan in het echt." }],
-          theorie: "Het schaalgetal (het getal ná de dubbele punt) geeft altijd de **verkleinfactor** aan: hoe vaak de werkelijkheid past in de kaartafbeelding. Hoe groter dat getal, hoe sterker alles is verkleind. Dit getal is voor élke afstand op die kaart hetzelfde.",
+          theorie: "Het schaalgetal (het getal ná de dubbele punt) geeft altijd de **verkleinfactor** aan: hoe vaak de kaart kleiner is dan de werkelijkheid. Hoe groter dat getal, hoe sterker alles is verkleind. Dit getal is voor élke afstand op die kaart hetzelfde.",
           voorbeelden: [{ type: "thuis", tekst: "Een speelgoedauto op schaal 1 : 18 is achttien keer kleiner dan de echte auto — elk onderdeel is even vaak verkleind." }],
           basiskennis: [{ onderwerp: "Verhoudingsgetal", uitleg: "Het getal ná de dubbele punt bij een schaal staat los van de eenheid — het is gewoon een aantal keer." }],
           niveaus: {
@@ -98,7 +98,7 @@ const steps = [
           woorden: [{ woord: "gebied", uitleg: "Het stuk werkelijkheid (bijvoorbeeld een provincie of land) dat op de kaart te zien is." }],
           theorie: "Een kaart met een **groot schaalgetal** (zoals 1 : 1.000.000) toont een heel groot gebied, maar met weinig details, omdat alles extreem is verkleind. Een kaart met een **klein schaalgetal** (zoals 1 : 100) toont juist een klein gebied heel gedetailleerd. Om te bepalen welke kaart het grootste gebied laat zien, vergelijk je simpelweg welk schaalgetal het grootst is.",
           voorbeelden: [{ type: "school", tekst: "Een wereldkaart heeft een veel groter schaalgetal dan een plattegrond van je eigen straat, want de wereldkaart moet veel meer werkelijkheid op hetzelfde vel papier laten passen." }],
-          basiskennis: [{ onderwerp: "Grote getallen vergelijken", uitleg: "Bij getallen met punten zoals 100.000 en 1.000: tel eerst hoeveel cijfers ervoor staan, dat laat meteen zien welk getal groter is." }],
+          basiskennis: [{ onderwerp: "Grote getallen vergelijken", uitleg: "Bij getallen zoals 100.000 en 1.000: tel hoeveel cijfers elk getal heeft. Meer cijfers = groter getal." }],
           niveaus: {
             basis: "1 : 100.000 heeft het grootste getal → het meest verkleind.",
             simpeler: "Welk schaalgetal is het grootst?",
@@ -258,7 +258,7 @@ const steps = [
           ],
           woorden: [{ woord: "controleren", uitleg: "Na het rekenen even nagaan of de uitkomst logisch is bij de vraag." }],
           theorie: "Bij grotere schaalgetallen zoals 25.000 werk je met grotere tussenuitkomsten in centimeter. Blijf toch rustig in twee stappen werken: eerst vermenigvuldigen met het schaalgetal, dan pas omrekenen naar de gevraagde eenheid. Zo maak je minder rekenfouten dan wanneer je het in één keer probeert.",
-          voorbeelden: [{ type: "school", tekst: "Bij een topografische kaart van de klas met schaal 1 : 25.000 reken je de afstand tussen twee dorpen stap voor stap om naar kilometers." }],
+          voorbeelden: [{ type: "school", tekst: "Bij een topografische kaart in de klas met schaal 1 : 25.000 reken je de afstand tussen twee dorpen stap voor stap om naar kilometers." }],
           basiskennis: [{ onderwerp: "cm naar km", uitleg: "Honderdduizend centimeter is gelijk aan één kilometer." }],
           niveaus: {
             basis: "8 × 25.000 = 200.000 cm = 2 km.",
@@ -371,11 +371,11 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Kijk naar de richting", tekst: "De kaart is altijd kleiner dan de werkelijkheid, dus de bewerking moet de afstand kleiner maken." },
-            { titel: "Welke bewerking maakt kleiner?", tekst: "Van de twee hoofdbewerkingen optellen/aftrekken en vermenigvuldigen/delen maakt delen een getal kleiner, als je door een getal groter dan 1 rekent." },
+            { titel: "Welke bewerking maakt kleiner?", tekst: "Delen door een getal groter dan 1 maakt een getal kleiner; vermenigvuldigen maakt het groter." },
           ],
           woorden: [{ woord: "bewerking", uitleg: "Een rekenstap zoals optellen, aftrekken, vermenigvuldigen of delen." }],
           theorie: "Bij schaalsommen zijn er maar twee richtingen mogelijk: van de kaart naar het echt (de afstand wordt groter, dus je **vermenigvuldigt**) of van het echt naar de kaart (de afstand wordt kleiner, dus je **deelt**). Onthoud deze twee richtingen goed, want ze zijn precies elkaars tegenovergestelde.",
-          voorbeelden: [{ type: "thuis", tekst: "Een architect die een huis eerst op ware grootte bouwt en daarna een kleine tekening maakt, gebruikt dezelfde denkstap: van groot naar klein." }],
+          voorbeelden: [{ type: "thuis", tekst: "Wie een bestaand huis natekent op papier, gebruikt dezelfde denkstap: van groot naar klein." }],
           basiskennis: [{ onderwerp: "Tegenovergestelde bewerkingen", uitleg: "Vermenigvuldigen en delen zijn elkaars tegenovergestelde — de ene maakt groter, de andere kleiner." }],
           niveaus: {
             basis: "Echte afstand ÷ schaalgetal = kaart-afstand.",
@@ -391,7 +391,7 @@ const steps = [
         wrongHints: [null, "Deel door 200, niet door 20.", "Vergeet niet door de schaal te delen.", "Te klein — deel door 200, niet door 2.000."],
         uitlegPad: {
           stappen: [
-            { titel: "Andere richting", tekst: "De echte lengte is gegeven, dus je gaat nu van het echt naar de kaart en dus delen." },
+            { titel: "Andere richting", tekst: "De echte lengte is gegeven, dus je gaat nu van het echt naar de kaart: dan deel je." },
             { titel: "Voer de deling uit", tekst: "Deel de echte lengte in centimeter door het schaalgetal tweehonderd." },
           ],
           woorden: [{ woord: "schutting", uitleg: "Een houten of ander hek rond een tuin." }],
@@ -506,7 +506,7 @@ const steps = [
         q: "Twee steden liggen 3 km uit elkaar. Op een kaart staan ze 6 cm uit elkaar. Welke schaal heeft de kaart?",
         options: ["1 : 50.000", "1 : 100.000", "1 : 5.000", "1 : 500.000"],
         answer: 0,
-        wrongHints: [null, "Reken: hoeveel cm is 3 km? Deel dat door het aantal cm op de kaart.", "Dan zou 6 cm een andere werkelijke afstand vertegenwoordigen — klopt dat met de gegeven steden?", "Veel te klein — hoe groot wordt het tweede getal als je deelt?"],
+        wrongHints: [null, "Reken: hoeveel cm is 3 km? Deel dat door het aantal cm op de kaart.", "Veel te klein — hoe groot wordt het tweede getal als je deelt?", "Te groot — reken 3 km om naar cm en deel door 6."],
         uitlegPad: {
           stappen: [
             { titel: "Zet de echte afstand om", tekst: "Reken de drie kilometer eerst om naar centimeter, zodat je met de kaartafstand kunt vergelijken." },

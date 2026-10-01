@@ -36,7 +36,7 @@ function vocabSvg(rows, color) {
 const steps = [
   {
     title: "Hoe leer je woordenschat?",
-    explanation: "Engels leren = woorden leren. Hoe meer woorden je kent, hoe makkelijker lezen, schrijven en spreken wordt.\n\n**Tips voor woorden onthouden**:\n• **Per thema** leren: alle eten-woorden bij elkaar, alle kleding bij elkaar.\n• **Hardop zeggen** als je leert.\n• **Beelden bedenken** bij elk woord.\n• **3 keer herhalen** verspreid over een week (spaced repetition).\n• Maak **eigen zinnen** met nieuwe woorden.\n\n**In dit pad** leer je ~80 basiswoorden in 8 thema's:\n• Eten & drinken, kleding, lichaam, familie, school, huis, dieren, werkwoorden + getallen.\n\nDeze ~80 woorden dekken de grootste deel van dagelijks gepraat. Met deze kun je al simpele Engelse zinnen begrijpen en maken.\n\n**Truc**: niet alle woorden in één keer proberen — doe 1 thema per dag, herhaal de oude.",
+    explanation: "Engels leren = woorden leren. Hoe meer woorden je kent, hoe makkelijker lezen, schrijven en spreken wordt.\n\n**Tips voor woorden onthouden**:\n• **Per thema** leren: alle eten-woorden bij elkaar, alle kleding bij elkaar.\n• **Hardop zeggen** als je leert.\n• **Beelden bedenken** bij elk woord.\n• **3 keer herhalen** verspreid over een week (spaced repetition).\n• Maak **eigen zinnen** met nieuwe woorden.\n\n**In dit pad** leer je ~80 basiswoorden in 8 thema's:\n• Eten & drinken, kleding, lichaam, familie, school, huis, dieren, werkwoorden + getallen.\n\nMet deze ~80 woorden kun je al simpele Engelse zinnen begrijpen en maken.\n\n**Truc**: niet alle woorden in één keer proberen — doe 1 thema per dag, herhaal de oude.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">8 thema's woordenschat</text>
 <text x="20" y="55" fill="${COLORS.food}" font-size="11" font-family="Arial">🍽️ eten & drinken</text>
@@ -62,10 +62,10 @@ const steps = [
         wrongHints: [null, "Eén keer is niet genoeg — herhaling werkt beter.", "Alleen invullen zonder context werkt slecht.", "Lezen helpt, maar zonder begrijpen niet."],
         uitlegPad: {
           stappen: [{ titel: "Twee elementen", tekst: "Thema = woorden bij elkaar (eten, kleding...). Herhalen = meerdere keren in een week (spaced repetition)." }],
-          woorden: [{ woord: "spaced repetition", uitleg: "Herhalen met steeds langere tussenpozen — meest bewezen leertechniek." }],
+          woorden: [{ woord: "spaced repetition", uitleg: "Herhalen met steeds langere tussenpozen — een van de best onderzochte leertechnieken." }],
           theorie: "Hersenen onthouden beter via: (1) groepering per thema, (2) herhaling met pauzes ertussen.",
           voorbeelden: [{ type: "schema", tekst: "Maandag eten-thema → woensdag herhaal → vrijdag herhaal." }],
-          basiskennis: [{ onderwerp: "Cramming werkt niet", uitleg: "Alles in 1 dag stampen = vergeten binnen 1 week." }],
+          basiskennis: [{ onderwerp: "Cramming werkt niet", uitleg: "Alles in 1 dag stampen = je vergeet het veel sneller." }],
           niveaus: { basis: "Per thema + herhalen.", simpeler: "Beste manier = woorden per thema leren + ~3× herhalen verspreid over een week. Eén keer hardop is te weinig.", nogSimpeler: "Thema + herhaal" },
         },
       },
@@ -89,7 +89,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "bread = brood", tekst: "Bread = basiswoord. Vergelijk met Duits 'Brot', Nederlands 'brood' — zelfde stam." }],
           woorden: [{ woord: "bread", uitleg: "Brood. Onderdeel van breakfast (ontbijt)." }],
-          theorie: "Eten-thema kerntalen: bread, butter, cheese, meat, fish, milk, water.",
+          theorie: "Eten-thema kernwoorden: bread, butter, cheese, meat, fish, milk, water.",
           voorbeelden: [{ type: "zin", tekst: "I eat bread for breakfast = Ik eet brood als ontbijt." }],
           basiskennis: [{ onderwerp: "Verwarring", uitleg: "Bread (brood) ≠ butter (boter) ≠ meat (vlees)." }],
           niveaus: { basis: "Bread = brood.", simpeler: "B-r-e-a-d = brood. Onthoud: 'breakfast' = ontbijt, dat is vaak met bread.", nogSimpeler: "Brood" },
@@ -120,7 +120,7 @@ const steps = [
           theorie: "Eet-soorten: meat (vlees), fish (vis), eggs (eieren), bread (brood), fruit (fruit).",
           voorbeelden: [{ type: "zin", tekst: "I like fish and chips = Ik hou van vis en frietjes." }],
           basiskennis: [{ onderwerp: "Geen meervoud", uitleg: "One fish, two fish — fish blijft fish (uitzondering)." }],
-          niveaus: { basis: "Fish = vis.", simpeler: "F-I-S-H = vis. Klinkt op vis. (Vlees=meat, fruit=fruit, ei=egg).", nogSimpeler: "Vis" },
+          niveaus: { basis: "Fish = vis.", simpeler: "F-I-S-H = vis. Lijkt op vis. (Vlees=meat, fruit=fruit, ei=egg).", nogSimpeler: "Vis" },
         },
       },
     ],
@@ -143,7 +143,7 @@ const steps = [
           woorden: [{ woord: "shoes", uitleg: "Schoenen (meervoud van shoe)." }],
           theorie: "Voet-thema: shoes (schoenen), socks (sokken), boots (laarzen), sandals.",
           voorbeelden: [{ type: "zin", tekst: "My shoes are wet = Mijn schoenen zijn nat." }],
-          basiskennis: [{ onderwerp: "Geen schoenpoets", uitleg: "Schoenpoets = shoe polish. Optie D bestaat niet als woord." }],
+          basiskennis: [{ onderwerp: "Geen schoenpoets", uitleg: "Schoenpoets = shoe polish, dat is iets anders dan schoenen." }],
           niveaus: { basis: "Shoes = schoenen.", simpeler: "Shoes (sjoes) = schoenen. Sokken = socks (klinkt anders).", nogSimpeler: "Schoenen" },
         },
       },
@@ -233,7 +233,7 @@ const steps = [
           woorden: [{ woord: "homework", uitleg: "Huiswerk. Samengesteld woord: home + work." }],
           theorie: "School-woorden samengesteld: homework, classroom, schoolbook, textbook.",
           voorbeelden: [{ type: "zin", tekst: "I have a lot of homework today = Ik heb veel huiswerk vandaag." }],
-          basiskennis: [{ onderwerp: "Geen telbaar", uitleg: "Homework is meestal ontelbaar — geen 'a homework' of 'homeworks'." }],
+          basiskennis: [{ onderwerp: "Niet telbaar", uitleg: "Homework is meestal ontelbaar — geen 'a homework' of 'homeworks'." }],
           niveaus: { basis: "Homework = huiswerk.", simpeler: "Home (thuis) + work (werk) = werk dat je thuis doet = huiswerk.", nogSimpeler: "Huiswerk" },
         },
       },
@@ -247,7 +247,7 @@ const steps = [
           woorden: [{ woord: "eraser", uitleg: "Gum (om uit te wissen). Komt van 'erase' (uitwissen)." }],
           theorie: "False friend: NL 'gum' ≠ EN 'gum'. Zelfde klank, andere betekenis.",
           voorbeelden: [{ type: "zin", tekst: "May I borrow your eraser? = Mag ik je gum lenen?" }],
-          basiskennis: [{ onderwerp: "False friends", uitleg: "Woorden die identiek lijken maar anders betekenen: gum, hand, ring, kind." }],
+          basiskennis: [{ onderwerp: "False friends", uitleg: "Woorden die identiek lijken maar anders betekenen: gum (kauwgom), kind (aardig), become (worden)." }],
           niveaus: { basis: "Gum = eraser.", simpeler: "Engels 'gum' is kauwgom! Schoolgum = eraser (uitwisser).", nogSimpeler: "Eraser" },
         },
       },
@@ -299,7 +299,7 @@ const steps = [
           woorden: [{ woord: "mice", uitleg: "Meervoud van mouse (muis)." }],
           theorie: "Onregelmatige meervouden: mouse→mice, foot→feet, tooth→teeth, man→men.",
           voorbeelden: [{ type: "patroon", tekst: "One mouse, two mice. NIET 'two mouses'." }],
-          basiskennis: [{ onderwerp: "Computer-muis", uitleg: "Voor de computer-muis kan zowel 'mice' als 'mouses' — beide goedgekeurd." }],
+          basiskennis: [{ onderwerp: "Computer-muis", uitleg: "Voor de computer-muis zie je zowel 'mice' als 'mouses' — beide worden gebruikt." }],
           niveaus: { basis: "Mouse → mice.", simpeler: "Mouse is onregelmatig — meervoud is mice (klanksprong ou→i). Niet 'mouses'.", nogSimpeler: "Mice" },
         },
       },
@@ -309,7 +309,7 @@ const steps = [
   // C
   {
     title: "Veelgebruikte werkwoorden",
-    explanation: "De top 15 werkwoorden in dagelijks Engels:\n\n| NL | EN |\n|---|---|\n| zijn | to be (am/is/are) |\n| hebben | to have / has |\n| doen | to do / does |\n| gaan | to go |\n| komen | to come |\n| zien | to see |\n| weten | to know |\n| denken | to think |\n| willen | to want |\n| kunnen | can |\n| moeten | must / have to |\n| eten | to eat |\n| drinken | to drink |\n| spreken | to speak |\n| werken | to work |\n| spelen | to play |\n| lezen | to read |\n| schrijven | to write |\n| lopen | to walk |\n| rennen | to run |\n| zwemmen | to swim |\n| slapen | to sleep |\n\n**Truc**: deze werkwoorden komen in 80% van alle Engelse zinnen voor. Leer hun **3 vormen** (V1/V2/V3) — zie ook leerpad 'Onregelmatige werkwoorden'.",
+    explanation: "Veelgebruikte Engelse werkwoorden:\n\n| NL | EN |\n|---|---|\n| zijn | to be (am/is/are) |\n| hebben | to have / has |\n| doen | to do / does |\n| gaan | to go |\n| komen | to come |\n| zien | to see |\n| weten | to know |\n| denken | to think |\n| willen | to want |\n| kunnen | can |\n| moeten | must / have to |\n| eten | to eat |\n| drinken | to drink |\n| spreken | to speak |\n| werken | to work |\n| spelen | to play |\n| lezen | to read |\n| schrijven | to write |\n| lopen | to walk |\n| rennen | to run |\n| zwemmen | to swim |\n| slapen | to sleep |\n\n**Truc**: deze werkwoorden kom je in heel veel Engelse zinnen tegen. Leer hun **3 vormen** (V1/V2/V3) — zie ook leerpad 'Onregelmatige werkwoorden'.",
     svg: vocabSvg([
       ["gaan", "go / went / gone"], ["zien", "see / saw / seen"],
       ["eten", "eat / ate / eaten"], ["lopen", "walk / walked"],
@@ -341,7 +341,7 @@ const steps = [
           theorie: "Vier W-werkwoorden lijken op elkaar: work (werken), walk (lopen), watch (kijken), wash (wassen). Lees scherp.",
           voorbeelden: [{ type: "zin", tekst: "My father works in a factory = Mijn vader werkt in een fabriek." }],
           basiskennis: [{ onderwerp: "Spel-truc", uitleg: "Work-Werken: beide W. Walk-Wandelen: beide W ook (verwarrend!)." }],
-          niveaus: { basis: "Werken = work.", simpeler: "Vier W-werkwoorden: work (werken), play (spelen), walk (lopen), watch (kijken). Werken = work.", nogSimpeler: "Work" },
+          niveaus: { basis: "Werken = work.", simpeler: "Werken = work. Play = spelen, walk = lopen, watch = kijken.", nogSimpeler: "Work" },
         },
       },
     ],
@@ -363,7 +363,7 @@ const steps = [
         q: "Hoeveel is **fifteen**?",
         options: ["15", "5", "50", "500"],
         answer: 0,
-        wrongHints: [null, "Five is het getal vijf — hoe klinkt vijftien in Engels anders?", "Fifty heeft -ty, niet -teen.", "Five hundred is drieletterwoord — vijftien is dat niet."],
+        wrongHints: [null, "Five is het getal vijf — hoe klinkt vijftien in Engels anders?", "Fifty heeft -ty, niet -teen.", "Five hundred = vijfhonderd — fifteen is veel kleiner."],
         uitlegPad: {
           stappen: [{ titel: "fifteen = 15", tekst: "-teen achtervoegsel = tussen 13 en 19. Fif-teen = 15. Fif komt van five." }],
           woorden: [{ woord: "fifteen", uitleg: "15. Five (5) + teen-suffix = 15." }],
@@ -405,7 +405,7 @@ const steps = [
   },
   {
     title: "Standaarduitdrukkingen",
-    explanation: "Veelvoorkomende zinnen die je kant-en-klaar kunt leren:\n\n**Begroetingen**:\n• Hello / Hi — hallo\n• Good morning — goede morgen\n• Good afternoon — goede middag\n• Good evening — goede avond\n• Good night — welterusten\n• Goodbye / Bye — dag\n\n**Beleefdheid**:\n• Please — alsjeblieft (vragend)\n• Thank you / Thanks — bedankt\n• You're welcome — graag gedaan\n• Sorry — sorry\n• Excuse me — pardon\n\n**Eenvoudige vragen**:\n• What's your name? → My name is...\n• How old are you? → I'm 12 (years old).\n• Where are you from? → I'm from the Netherlands.\n• How are you? → I'm fine, thank you.\n• What time is it? → It's 3 o'clock.\n\n**Hulpzinnen**:\n• I don't understand. — Ik begrijp het niet.\n• Can you repeat that? — Kun je dat herhalen?\n• How do you say ... in English? — Hoe zeg je ... in Engels?",
+    explanation: "Veelvoorkomende zinnen die je kant-en-klaar kunt leren:\n\n**Begroetingen**:\n• Hello / Hi — hallo\n• Good morning — goedemorgen\n• Good afternoon — goedemiddag\n• Good evening — goedenavond\n• Good night — welterusten\n• Goodbye / Bye — dag\n\n**Beleefdheid**:\n• Please — alsjeblieft (vragend)\n• Thank you / Thanks — bedankt\n• You're welcome — graag gedaan\n• Sorry — sorry\n• Excuse me — pardon\n\n**Eenvoudige vragen**:\n• What's your name? → My name is...\n• How old are you? → I'm 12 (years old).\n• Where are you from? → I'm from the Netherlands.\n• How are you? → I'm fine, thank you.\n• What time is it? → It's 3 o'clock.\n\n**Hulpzinnen**:\n• I don't understand. — Ik begrijp het niet.\n• Can you repeat that? — Kun je dat herhalen?\n• How do you say ... in English? — Hoe zeg je ... in Engels?",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">standaardzinnen</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">Hello! · Good morning · Goodbye</text>
@@ -413,7 +413,7 @@ const steps = [
 <text x="20" y="95" fill="${COLORS.text}" font-size="11" font-family="Arial">What's your name? - My name is...</text>
 <text x="20" y="113" fill="${COLORS.text}" font-size="11" font-family="Arial">How are you? - I'm fine.</text>
 <text x="20" y="131" fill="${COLORS.text}" font-size="11" font-family="Arial">I don't understand.</text>
-<text x="150" y="165" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">deze ken je → 80% van gesprek</text>
+<text x="150" y="165" text-anchor="middle" fill="${COLORS.good}" font-size="11" font-family="Arial" font-weight="bold">hiermee kun je al een gesprekje voeren</text>
 </svg>`,
     checks: [
       {
@@ -434,7 +434,7 @@ const steps = [
         q: "Wat betekent **You're welcome**?",
         options: ["Graag gedaan", "Welkom", "Je bent welkom thuis", "Goedemorgen"],
         answer: 0,
-        wrongHints: [null, "Welkom = welcome (los).", "Letterlijk klopt, maar als reactie op 'thanks' = graag gedaan.", "Goedemorgen = good morning."],
+        wrongHints: [null, "Welkom = welcome (los).", "Bijna letterlijk, maar als reactie op 'thanks' = graag gedaan.", "Goedemorgen = good morning."],
         uitlegPad: {
           stappen: [{ titel: "Reactie op 'thanks'", tekst: "You're welcome = standaard reactie op 'thank you' = graag gedaan." }],
           woorden: [{ woord: "you're welcome", uitleg: "Letterlijk: 'jij bent welkom'. In context: 'graag gedaan'." }],
@@ -460,7 +460,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Welke is het **niet**: een familie-woord?",
+        q: "Welk woord is **geen** familiewoord?",
         options: ["window", "mother", "uncle", "cousin"],
         answer: 0,
         wrongHints: [null, "Mother = moeder.", "Uncle = oom.", "Cousin = neef/nicht."],
@@ -497,7 +497,7 @@ const steps = [
           woorden: [{ woord: "grandmother", uitleg: "Oma. Grand- (groot-) + mother (moeder)." }, { woord: "lives", uitleg: "Woont (van to live)." }],
           theorie: "Vertaaltruc: vertaal elk woord apart, dan plak ze samen.",
           voorbeelden: [{ type: "vertaling", tekst: "She lives in Amsterdam = Zij woont in Amsterdam." }],
-          basiskennis: [{ onderwerp: "False friends", uitleg: "Lives ≠ leven (zelfstandig nw) maar = woont (werkwoord)." }],
+          basiskennis: [{ onderwerp: "False friends", uitleg: "Lives kan ook 'levens' zijn (meervoud van life), maar hier is het een werkwoord: woont." }],
           niveaus: { basis: "Mijn oma woont in een klein huis.", simpeler: "Grandmother=oma, lives=woont, small=klein, house=huis → 'Mijn oma woont in een klein huis'.", nogSimpeler: "Oma + klein huis" },
         },
       },
@@ -525,7 +525,7 @@ const steps = [
           woorden: [{ woord: "Tuesday", uitleg: "Dinsdag — 2e dag van de werkweek." }],
           theorie: "Week-volgorde EN: Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday.",
           voorbeelden: [{ type: "ezelsbrug", tekst: "Tu (twee) + esday → 2e dag = dinsdag." }],
-          basiskennis: [{ onderwerp: "Verwarring", uitleg: "Tuesday/Thursday lijken op elkaar (T-eind). Tuesday = di (2), Thursday = do (4)." }],
+          basiskennis: [{ onderwerp: "Verwarring", uitleg: "Tuesday/Thursday lijken op elkaar (beginnen allebei met T). Tuesday = di (2), Thursday = do (4)." }],
           niveaus: { basis: "Tuesday = dinsdag.", simpeler: "Volgorde: Monday (ma), Tuesday (di). Tuesday is de 2e dag = dinsdag.", nogSimpeler: "Dinsdag" },
         },
       },

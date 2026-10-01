@@ -14,7 +14,7 @@ const steps = [
   {
     title: "Hoe werkt de waterkringloop?",
     explanation:
-      "**Waterkringloop** *(water-cyclus)* = water dat **rondgaat** op aarde — verdamping, wolken, regen, terug naar zee.\n\n**Hoeveelheid water op aarde**:\n• **71% van aardoppervlak** = water.\n• Daarvan **97% zout** *(zeeën + oceanen)*.\n• Slechts **3% zoet water**:\n  - 2,5% bevroren *(poolijs + gletsjers)*.\n  - 0,5% vloeibaar *(rivieren, meren, grondwater)*.\n• Totaal blijft **gelijk** — water verdwijnt niet, alleen verplaatst.\n\n**Vier stappen** van de kringloop:\n\n**1. Verdamping (evaporatie)** ☀️\n• Zonnewarmte verandert vloeibaar water in **damp** *(gas)*.\n• Gebeurt vooral op zeeën + oceanen.\n• Ook bij meren, rivieren, planten *(transpiratie)*, jouw zweet.\n• Per dag verdampt **~1200 km³** water wereldwijd.\n\n**2. Condensatie** ☁️\n• Damp stijgt op + koelt af in hogere luchtlagen.\n• Wordt **kleine waterdruppels** *(of ijskristallen)*.\n• Vormt **wolken**.\n• Hoe meer afkoeling, hoe meer condensatie.\n\n**3. Neerslag** 🌧️\n• Wolken te zwaar → druppels vallen.\n• Vormen:\n  - **Regen** *(vloeibaar)*.\n  - **Sneeuw** *(bevroren druppels in vlokken)*.\n  - **Hagel** *(ijsklompjes)*.\n  - **IJzel** *(regen die bevriest bij contact)*.\n  - **Mist** *(wolk op grondniveau)*.\n  - **Dauw** *(condens op koud oppervlak 's nachts)*.\n\n**4. Afstroming + grondwater** 🏞️\n• Water op aarde gaat naar:\n  - **Beken + rivieren** *(stromen naar zee)*.\n  - **Meren** *(blijven liggen)*.\n  - **Grondwater** *(zakt in bodem)*.\n  - **Gletsjers** *(bevriest bovenin bergen)*.\n• Water bereikt uiteindelijk weer **zee**.\n• Cyclus begint opnieuw.\n\n**Versie kort**:\nZee → verdamping → wolken → regen → land → rivier → zee.\n\n**Hoe lang duurt de cyclus?**\n• Een waterdruppel kan **eeuwen** in oceaan, **wereken** in atmosfeer, **dagen** in rivier, **duizenden jaren** in poolijs.\n• Gemiddeld: 1 cyclus = ~8-10 dagen voor wolkenwater.\n\n**Water = altijd zelfde water**:\n• Het water dat een dinosaurus dronk is misschien in jouw glas vandaag.\n• Hele kringloop op aarde = ~4 miljard jaar oud.\n• Geen nieuw water 'gemaakt' — alleen omgezet tussen vormen.\n\n**Toets-feitje**:\nDe **diepste plek in oceaan** *(Marianentrog, Stille Oceaan)* is **11 km diep** — daar zou de **Mount Everest** *(8848 m)* in kunnen + nog 2 km over.",
+      "**Waterkringloop** *(water-cyclus)* = water dat **rondgaat** op aarde — verdamping, wolken, regen, terug naar zee.\n\n**Hoeveelheid water op aarde**:\n• **71% van aardoppervlak** = water.\n• Daarvan **97% zout** *(zeeën + oceanen)*.\n• Slechts **3% zoet water**:\n  - 2,5% bevroren *(poolijs + gletsjers)*.\n  - 0,5% vloeibaar *(rivieren, meren, grondwater)*.\n• Totaal blijft **gelijk** — water verdwijnt niet, alleen verplaatst.\n\n**Vier stappen** van de kringloop:\n\n**1. Verdamping (evaporatie)** ☀️\n• Zonnewarmte verandert vloeibaar water in **damp** *(gas)*.\n• Gebeurt vooral op zeeën + oceanen.\n• Ook bij meren, rivieren, planten *(transpiratie)*, jouw zweet.\n• Per dag verdampt **~1200 km³** water wereldwijd.\n\n**2. Condensatie** ☁️\n• Damp stijgt op + koelt af in hogere luchtlagen.\n• Wordt **kleine waterdruppels** *(of ijskristallen)*.\n• Vormt **wolken**.\n• Hoe meer afkoeling, hoe meer condensatie.\n\n**3. Neerslag** 🌧️\n• Wolken te zwaar → druppels vallen.\n• Vormen:\n  - **Regen** *(vloeibaar)*.\n  - **Sneeuw** *(ijskristallen in vlokken)*.\n  - **Hagel** *(ijsklompjes)*.\n  - **IJzel** *(regen die bevriest bij contact)*.\n  - **Mist** *(wolk op grondniveau)*.\n  - **Dauw** *(condens op koud oppervlak 's nachts)*.\n\n**4. Afstroming + grondwater** 🏞️\n• Water op aarde gaat naar:\n  - **Beken + rivieren** *(stromen naar zee)*.\n  - **Meren** *(blijven liggen)*.\n  - **Grondwater** *(zakt in bodem)*.\n  - **Gletsjers** *(bevriest bovenin bergen)*.\n• Water bereikt uiteindelijk weer **zee**.\n• Cyclus begint opnieuw.\n\n**Versie kort**:\nZee → verdamping → wolken → regen → land → rivier → zee.\n\n**Hoe lang duurt de cyclus?**\n• Een waterdruppel kan **eeuwen** in oceaan, **ruim een week** in atmosfeer, **weken** in rivier, **duizenden jaren** in poolijs.\n• Gemiddeld: ~8-10 dagen in de lucht.\n\n**Water = altijd zelfde water**:\n• Het water dat een dinosaurus dronk is misschien in jouw glas vandaag.\n• Hele kringloop op aarde = ~4 miljard jaar oud.\n• Geen nieuw water 'gemaakt' — alleen omgezet tussen vormen.\n\n**Toets-feitje**:\nDe **diepste plek in oceaan** *(Marianentrog, Stille Oceaan)* is **11 km diep** — daar zou de **Mount Everest** *(8848 m)* in kunnen + nog 2 km over.",
     checks: [
       {
         q: "Hoeveel **zoet water** op aarde (totaal water)?",
@@ -24,8 +24,8 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "97% zout / 3% zoet", tekst: "Van al het water op aarde is **97% ZOUT** water (zeeën + oceanen). Slechts **3% is ZOET** water — dat is waar we van drinken, koken, douchen." },
-            { titel: "Maar nog minder beschikbaar...", tekst: "Van die 3% zoet water:\n• **2,5%** zit in **POLEN + GLETSJERS** als ijs (niet direct te gebruiken)\n• **0,5%** is vloeibaar = rivieren, meren, grondwater.\nDus uiteindelijk is maar **0,5% van al het water op aarde** direct bruikbaar voor mensen!" },
-            { titel: "Vergelijking met bad", tekst: "Stel je voor: alle water op aarde = 100 emmers.\n• 97 emmers = zout (zee)\n• 2,5 emmers = ijs (pool)\n• 0,5 emmer = drinkbaar.\nDat halve emmertje moet 8 miljard mensen + dieren + planten voeden!" },
+            { titel: "Maar nog minder beschikbaar...", tekst: "Van die 3% zoet water:\n• **2,5%** zit in **POOLIJS + GLETSJERS** als ijs (niet direct te gebruiken)\n• **0,5%** is vloeibaar = rivieren, meren, grondwater.\nDus uiteindelijk is maar **0,5% van al het water op aarde** direct bruikbaar voor mensen!" },
+            { titel: "Vergelijking met bad", tekst: "Stel je voor: al het water op aarde = 100 emmers.\n• 97 emmers = zout (zee)\n• 2,5 emmers = ijs (pool)\n• 0,5 emmer = drinkbaar.\nDat halve emmertje moet 8 miljard mensen + dieren + planten voeden!" },
           ],
           woorden: [
             { woord: "zoet water", uitleg: "Water zonder veel zout — drinkbaar voor mens." },
@@ -33,7 +33,7 @@ const steps = [
           ],
           theorie: "Toets-feit waterverdeling:\n• 71% aardoppervlak = water.\n• 97% zout, 3% zoet.\n• 2,5% ijs, 0,5% vloeibaar.\n• Daarom: **waterbesparing** belangrijk.",
           voorbeelden: [
-            { type: "stap", tekst: "Klimaatverandering doet poolijs smelten. Wordt zoet water in zee = wordt zout = onbruikbaar." },
+            { type: "stap", tekst: "Klimaatverandering doet poolijs smelten. Het smeltwater komt in zee, wordt zout en is dan onbruikbaar." },
             { type: "stap", tekst: "Sommige landen (Saoedi-Arabië, Israël) maken zoet water uit zeewater (ontzilten). Duur." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Onthoud: 3% zoet (slechts!). 97% is zout. Wij zijn allemaal afhankelijk van die kleine 3%." }],
@@ -52,7 +52,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "3 toestanden van water", tekst: "Water kan in 3 vormen voorkomen: VAST (ijs), VLOEIBAAR (water uit kraan) en GAS (damp/stoom)." },
-            { titel: "Verdamping = vloeibaar → gas", tekst: "Bij verdamping wordt water UIT vloeibaar UIT gas (damp). Dit gebeurt door warmte: het water krijgt energie en 'vliegt weg' als gas." },
+            { titel: "Verdamping = vloeibaar → gas", tekst: "Bij verdamping gaat water VAN vloeibaar NAAR gas (damp). Dit gebeurt door warmte: het water krijgt energie en 'vliegt weg' als gas." },
             { titel: "Dagelijks voorbeeld", tekst: "Natte plas die in de zon ligt → na een uur droog. Het water is verdampt — de gas-vorm is in de lucht gegaan." },
           ],
           woorden: [
@@ -60,12 +60,12 @@ const steps = [
             { woord: "condensatie", uitleg: "Andersom: damp wordt weer vloeibaar." },
             { woord: "damp", uitleg: "Water in gas-vorm (onzichtbaar). Stoom = damp + heel kleine druppeltjes." },
           ],
-          theorie: "Toets-tip waterkringloop: VERDAMPING (op aarde, door warmte) → CONDENSATIE (in lucht, koud) → NEERSLAG (regen/sneeuw) → terug op aarde. Steeds dezelfde rondje.",
+          theorie: "Toets-tip waterkringloop: VERDAMPING (op aarde, door warmte) → CONDENSATIE (in lucht, koud) → NEERSLAG (regen/sneeuw) → terug op aarde. Steeds hetzelfde rondje.",
           voorbeelden: [
             { type: "stap", tekst: "Was aan de lijn → wind/zon verdampt het water → droog." },
             { type: "stap", tekst: "Zee verdampt door zon → water gaat omhoog → wolken → regen elders." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Verdamping = naar BOVEN (warm). Condensatie = naar BENEDEN (koud). Omgekeerde processen." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Verdamping = water wordt gas (door warmte). Condensatie = gas wordt water (door afkoeling). Omgekeerde processen." }],
           niveaus: {
             basis: "Verdamping = vloeibaar water wordt damp/gas.",
             simpeler: "Natte plas droogt op door zon = verdampt.",
@@ -80,7 +80,7 @@ const steps = [
         wrongHints: [null, "Neerslag.", "Niet primair.", "Tegenovergesteld."],
       },
       {
-        q: "Hoe lang duurt **gemiddeld cyclus** wolkenwater?",
+        q: "Hoe lang blijft water **gemiddeld** in de lucht?",
         options: ["~8-10 dagen", "1 uur", "Eeuwen", "Niet bekend"],
         answer: 0,
         wrongHints: [null, "Te kort.", "Wel sommige plekken, niet gemiddeld.", "Wel."],
@@ -90,7 +90,7 @@ const steps = [
   {
     title: "Wolken + soorten neerslag",
     explanation:
-      "**Wolken** = veel kleine waterdruppels + ijskristallen samen.\n\n**Hoe ontstaan wolken?**\n• Warme lucht stijgt *(want lichter)*.\n• Bij hoogte koelt het af.\n• **Waterdamp** in lucht **condenseert** rond stofdeeltjes.\n• Miljarden druppels samen = wolk.\n\n**Hoeveel weegt een wolk?**\n• Een gemiddelde cumulus-wolk weegt ~500 ton *(zo zwaar als 100 olifanten)*!\n• Druppels heel klein dus blijven zweven.\n\n**Soorten wolken** *(op basis van hoogte + vorm)*:\n\n**Hoge wolken** *(boven 5 km)*:\n• **Cirrus** *(veerwolken)*: dun, wit, sliertvormig.\n• **Cirrocumulus**: kleine schaapjes.\n• Bestaan vaak uit ijskristallen.\n\n**Middelhoge wolken** *(2-5 km)*:\n• **Altocumulus**: grote witte schapen.\n• **Altostratus**: grijze laag, zon zichtbaar maar wazig.\n\n**Lage wolken** *(onder 2 km)*:\n• **Stratus**: lage grijze laag *(soort mist hoger)*.\n• **Cumulus**: grote witte bolwolken *(zomerse stapelwolk)*.\n• **Stratocumulus**: groot stukken bewolking.\n\n**Verticaal-uitgebreid**:\n• **Cumulonimbus**: enorme stapelwolken *(onweerswolk)*. Kan **15 km hoog** worden.\n• Brengt regen, hagel, onweer, soms tornado.\n\n**Voorspellen weer**:\n• Stapelwolken *(cumulonimbus)* → bui komt.\n• Sluierwolken *(cirrus)* → vaak goed weer.\n• Lage grijze laag *(stratus)* → bewolkt + miezerige regen.\n\n**Soorten neerslag** 🌧️:\n\n**1. Regen**:\n• Druppels groter dan 0,5 mm.\n• Bij temperatuur boven 0°C.\n• Per jaar in NL: ~850 mm (= 850 L/m²).\n\n**2. Motregen / miezer**:\n• Hele kleine druppels *(<0,5 mm)*.\n• Hangt in lucht.\n\n**3. Sneeuw**:\n• IJskristallen in wolk groeien tot vlokken.\n• Bij temperatuur onder 0°C.\n• Elke sneeuwvlok uniek *(6-hoekige structuur)*.\n• 10 cm sneeuw = ~1 cm water.\n\n**4. Hagel**:\n• Druppels gaan op + neer in cumulonimbus → vriezen + groeien.\n• Soms zo groot als knikker of ei.\n• Kan schade doen aan auto's + gewassen.\n\n**5. Ijzel**:\n• Druppels bevriezen bij contact met **koude grond/bomen**.\n• Glad ijslaag.\n• Gevaarlijk verkeer.\n\n**6. Mist + dauw**:\n• **Mist** = wolk op grondniveau, zicht <1 km.\n• **Dauw** = condens 's nachts op gras (koudere oppervlak).\n• **Rijp** = bevroren dauw.\n\n**7. Regenboog** 🌈:\n• Bij regen + zon.\n• Zonlicht breekt in druppel → 7 kleuren *(rood-oranje-geel-groen-blauw-indigo-violet)*.\n• 'Boog' want druppels bollen — kleuren in cirkel.\n• Soms **dubbele regenboog** *(2e flauwer, kleuren omgekeerd)*.\n\n**Toets-feitje**:\nEen **regenboog** zie je alleen wanneer de **zon achter** je staat + regen voor. Bij volle zon kan **dauw**-regenboog op gras ontstaan. Aan einde van regenboog ligt geen pot goud (sprookje) — geen einde, het is een **cirkel**.",
+      "**Wolken** = veel kleine waterdruppels + ijskristallen samen.\n\n**Hoe ontstaan wolken?**\n• Warme lucht stijgt *(want lichter)*.\n• Bij hoogte koelt het af.\n• **Waterdamp** in lucht **condenseert** rond stofdeeltjes.\n• Miljarden druppels samen = wolk.\n\n**Hoeveel weegt een wolk?**\n• Een gemiddelde cumulus-wolk weegt ~500 ton *(zo zwaar als 100 olifanten)*!\n• Druppels heel klein dus blijven zweven.\n\n**Soorten wolken** *(op basis van hoogte + vorm)*:\n\n**Hoge wolken** *(boven 5 km)*:\n• **Cirrus** *(veerwolken)*: dun, wit, sliertvormig.\n• **Cirrocumulus**: kleine schaapjes.\n• Bestaan vaak uit ijskristallen.\n\n**Middelhoge wolken** *(2-5 km)*:\n• **Altocumulus**: grote witte schapen.\n• **Altostratus**: grijze laag, zon zichtbaar maar wazig.\n\n**Lage wolken** *(onder 2 km)*:\n• **Stratus**: lage grijze laag *(soort mist hoger)*.\n• **Cumulus**: grote witte bolwolken *(zomerse stapelwolk)*.\n• **Stratocumulus**: grote stukken bewolking.\n\n**Verticaal-uitgebreid**:\n• **Cumulonimbus**: enorme stapelwolken *(onweerswolk)*. Kan **15 km hoog** worden.\n• Brengt regen, hagel, onweer, soms tornado.\n\n**Voorspellen weer**:\n• Stapelwolken *(cumulonimbus)* → bui komt.\n• Veerwolken *(cirrus)* → nu mooi, soms later regen.\n• Lage grijze laag *(stratus)* → bewolkt + miezerige regen.\n\n**Soorten neerslag** 🌧️:\n\n**1. Regen**:\n• Druppels groter dan 0,5 mm.\n• Bij temperatuur boven 0°C.\n• Per jaar in NL: ~850 mm (= 850 L/m²).\n\n**2. Motregen / miezer**:\n• Hele kleine druppels *(<0,5 mm)*.\n• Hangt in lucht.\n\n**3. Sneeuw**:\n• IJskristallen in wolk groeien tot vlokken.\n• Bij temperatuur onder 0°C.\n• Elke sneeuwvlok uniek *(6-hoekige structuur)*.\n• 10 cm sneeuw = ~1 cm water.\n\n**4. Hagel**:\n• Druppels gaan op + neer in cumulonimbus → vriezen + groeien.\n• Soms zo groot als knikker of ei.\n• Kan schade doen aan auto's + gewassen.\n\n**5. IJzel**:\n• Druppels bevriezen bij contact met **koude grond/bomen**.\n• Gladde ijslaag.\n• Gevaarlijk verkeer.\n\n**6. Mist + dauw**:\n• **Mist** = wolk op grondniveau, zicht <1 km.\n• **Dauw** = condens 's nachts op gras (koud oppervlak).\n• **Rijp** = bevroren dauw.\n\n**7. Regenboog** 🌈:\n• Bij regen + zon.\n• Zonlicht breekt in druppel → 7 kleuren *(rood-oranje-geel-groen-blauw-indigo-violet)*.\n• 'Boog' want druppels bollen — kleuren in cirkel.\n• Soms **dubbele regenboog** *(2e flauwer, kleuren omgekeerd)*.\n\n**Toets-feitje**:\nEen **regenboog** zie je alleen wanneer de **zon achter** je staat + regen voor. Bij volle zon kan **dauw**-regenboog op gras ontstaan. Aan einde van regenboog ligt geen pot goud (sprookje) — geen einde, het is een **cirkel**.",
     checks: [
       {
         q: "Welke wolk brengt **onweer**?",
@@ -107,9 +107,9 @@ const steps = [
             { woord: "cumulonimbus", uitleg: "Grootste wolksoort, brengt onweer + hevige regen." },
             { woord: "aambeeld", uitleg: "Platte top van cumulonimbus (lijkt op smid-aambeeld)." },
           ],
-          theorie: "Toets-feit wolksoorten:\n• **Cirrus** (hoog, dun, veer) = mooi weer\n• **Cumulus** (witte bol, zomer) = goed\n• **Stratus** (lage grijze laag) = miezerig\n• **Cumulonimbus** (enorm) = ONWEER\nElk geeft hint over wat voor weer komt.",
+          theorie: "Toets-feit wolksoorten:\n• **Cirrus** (hoog, dun, veer) = nu nog mooi weer\n• **Cumulus** (witte bol, zomer) = goed\n• **Stratus** (lage grijze laag) = miezerig\n• **Cumulonimbus** (enorm) = ONWEER\nElk geeft hint over wat voor weer komt.",
           voorbeelden: [
-            { type: "stap", tekst: "Zomerse middag: kleine cumulus-wolken op blauwe lucht = mooi weer. Als ze samengroeien + worden hoge cumulonimbus → bui-tje opbouw." },
+            { type: "stap", tekst: "Zomerse middag: kleine cumulus-wolken op blauwe lucht = mooi weer. Als ze samengroeien tot een hoge cumulonimbus → er bouwt een bui op." },
             { type: "stap", tekst: "Tegen middag: lucht warm → opstijgt → koelt af → wolk groeit groter → cumulonimbus → onweer." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Cumulo-NIMBUS = NIMBUS = regen. Plus stapel-vorm. Onthoud die combinatie." }],
@@ -170,7 +170,7 @@ const steps = [
             { woord: "regenboog", uitleg: "7-kleurige boog door zonlicht in regendruppels." },
             { woord: "spectrum", uitleg: "Alle kleuren van wit licht (zoals uit een prisma)." },
           ],
-          theorie: "Toets-feit regenboog:\n• 7 kleuren = ROYGBIV.\n• Zon achter jou, regen voor je.\n• Soms **dubbele** regenboog (2e zwakker, kleuren OMGEKEERD).\n• In Engels al sinds 1600s.\n• Newton ontdekte dat wit licht uit kleuren bestaat (prisma-experiment).",
+          theorie: "Toets-feit regenboog:\n• 7 kleuren = ROYGBIV.\n• Zon achter jou, regen voor je.\n• Soms **dubbele** regenboog (2e zwakker, kleuren OMGEKEERD).\n• Newton ontdekte dat wit licht uit kleuren bestaat (prisma-experiment).",
           voorbeelden: [
             { type: "stap", tekst: "Sprookjes: 'aan einde van regenboog ligt pot goud.' Wetenschap: regenboog heeft GEEN einde — het is een cirkel. Vanaf grond zien wij alleen de bovenste helft." },
             { type: "stap", tekst: "Prisma-experiment: wit licht door driehoekig glas-blok → 7 kleuren komen eruit. Newton deed dit in 1666." },
@@ -188,10 +188,10 @@ const steps = [
   {
     title: "Water in Nederland + thuis",
     explanation:
-      "**Water in NL** — speciaal hoofdstuk, want NL is een **waterland**.\n\n**NL kenmerken**:\n• Een **kwart van NL** ligt **onder zeeniveau**.\n• Zonder dijken zou groot deel onder water staan.\n• 18% van NL = water.\n• 7000 km dijken + 14.500 km waterwegen.\n\n**Belangrijke rivieren**:\n• **Rijn** *(uit Zwitserland)* → splitst in **Waal, Lek, IJssel** in NL.\n• **Maas** *(uit Frankrijk)*.\n• **Schelde** *(uit België → Westerschelde)*.\n• **IJssel** + **Vecht** + **Eem** *(kleinere)*.\n\n**Meren + zee**:\n• **IJsselmeer** *(vroeger Zuiderzee — afgesloten 1932 door Afsluitdijk)*.\n• **Markermeer** *(deel van IJsselmeer)*.\n• **Noordzee** *(West NL)*.\n• **Waddenzee** *(boven NL — UNESCO)*.\n\n**Polders** 🌾:\n• Land dat **drooggemaakt** is.\n• Vroeger zee of moeras.\n• Bekend: **Flevoland** *(hele provincie was Zuiderzee)*.\n• **Beemster** *(UNESCO, 17e eeuw)*.\n• Werkt met **gemalen + dijken**.\n\n**Watermanagement**:\n• **Rijkswaterstaat**: rijk-niveau *(grote rivieren, snelwegen-bruggen)*.\n• **Waterschappen** *(21 stuks)*: regionaal *(dijken, water-niveau)*.\n• **Deltawerken** *(1953-1997)*: na Watersnoodramp 1953, beschermen tegen storm + zeespiegelstijging.\n\n**Watersnoodramp 1953**:\n• Februari 1953 → **stormvloed** + springtij.\n• Dijken braken in Zeeland + Zuid-Holland.\n• **1836 doden**.\n• Reactie: **Deltawerken** gebouwd.\n• Bekendste: **Oosterscheldekering** *(stormstuw)*.\n\n**Water thuis**:\n\n**Drinkwater**:\n• In NL: **kraanwater = veiligste ter wereld**.\n• Komt uit **grondwater** + duin-water + rivieren *(gezuiverd)*.\n• 10 grote drinkwaterbedrijven *(Waternet, Vitens, Dunea, etc.)*.\n• Kosten: ~€2 per 1000 L.\n• In flesje: 1000x duurder.\n\n**Hoeveel gebruiken we?**\n• Gemiddelde Nederlander: **~130 L per dag**.\n• Daarvan: douchen (39 L), wc (35 L), kleren-wassen (15 L), drinken+koken (5 L), rest.\n• Vergelijking: VS = 300 L/dag.\n\n**Riolering**:\n• Vies water uit huis → riool → **waterzuivering**.\n• Waterzuiveringinstallaties filteren + maken schoon.\n• Daarna terug in rivier.\n\n**Waterbesparing**:\n• Kort douchen *(5 min ipv 15)*: scheelt 70 L.\n• Wc niet als prullenbak.\n• Tuin sproeien 's avonds *(minder verdamping)*.\n• Regenton voor planten.\n• Vaatwasser ipv handwas *(minder water!)*.\n\n**Hard vs zacht water**:\n• In NL: vooral **hard water** *(veel kalk)*.\n• Goed voor botten, maar kalkaanslag op kraan + apparaten.\n• In sommige regio's *(Limburg, kuststreek)* zacht water.\n\n**Watervervuiling**:\n• Plastic in oceanen — **plastic soup**.\n• Medicijnresten in rivieren *(uit urine + afval)*.\n• Microplastics in vis + kraanwater.\n• Probleem: niet alles te filteren.\n\n**Toets-feitje**:\nIn **NL is drinkwater zo schoon** dat er amper bleekmiddel/chloor in zit. In andere landen *(VS, Frankrijk)* wel veel chloor. Daarom proeft NL-kraanwater 'puur'. **Niet** in flessen drinken — slechter voor milieu + duurder.",
+      "**Water in NL** — speciaal hoofdstuk, want NL is een **waterland**.\n\n**NL kenmerken**:\n• Een **kwart van NL** ligt **onder zeeniveau**.\n• Zonder dijken zou groot deel onder water staan.\n• 18% van NL = water.\n• Duizenden km dijken + waterwegen.\n\n**Belangrijke rivieren**:\n• **Rijn** *(uit Zwitserland)* → splitst in **Waal, Lek, IJssel** in NL.\n• **Maas** *(uit Frankrijk)*.\n• **Schelde** *(via België → Westerschelde)*.\n• **IJssel** + **Vecht** + **Eem** *(kleinere)*.\n\n**Meren + zee**:\n• **IJsselmeer** *(vroeger Zuiderzee — afgesloten 1932 door Afsluitdijk)*.\n• **Markermeer** *(afgesplitst van IJsselmeer)*.\n• **Noordzee** *(West NL)*.\n• **Waddenzee** *(boven NL — UNESCO)*.\n\n**Polders** 🌾:\n• Land dat **drooggemaakt** is.\n• Vroeger zee of moeras.\n• Bekend: **Flevoland** *(hele provincie was Zuiderzee)*.\n• **Beemster** *(UNESCO, 17e eeuw)*.\n• Werkt met **gemalen + dijken**.\n\n**Watermanagement**:\n• **Rijkswaterstaat**: rijk-niveau *(grote rivieren, snelwegen-bruggen)*.\n• **Waterschappen** *(21 stuks)*: regionaal *(dijken, water-niveau)*.\n• **Deltawerken** *(1958-1997)*: na Watersnoodramp 1953, beschermen tegen storm + zeespiegelstijging.\n\n**Watersnoodramp 1953**:\n• Februari 1953 → **stormvloed** + springtij.\n• Dijken braken in Zeeland + Zuid-Holland.\n• **1836 doden**.\n• Reactie: **Deltawerken** gebouwd.\n• Bekendste: **Oosterscheldekering** *(stormvloedkering)*.\n\n**Water thuis**:\n\n**Drinkwater**:\n• In NL: **kraanwater = bij veiligste ter wereld**.\n• Komt uit **grondwater** + duin-water + rivieren *(gezuiverd)*.\n• 10 grote drinkwaterbedrijven *(Waternet, Vitens, Dunea, etc.)*.\n• Kosten: ~€2 per 1000 L.\n• In flesje: 1000x duurder.\n\n**Hoeveel gebruiken we?**\n• Gemiddelde Nederlander: **~130 L per dag**.\n• Daarvan: douchen (39 L), wc (35 L), kleren-wassen (15 L), drinken+koken (5 L), rest.\n• Vergelijking: VS = 300 L/dag.\n\n**Riolering**:\n• Vies water uit huis → riool → **waterzuivering**.\n• Waterzuiveringsinstallaties filteren + maken schoon.\n• Daarna terug in rivier.\n\n**Waterbesparing**:\n• Kort douchen *(5 min ipv 15)*: scheelt 70 L.\n• Wc niet als prullenbak.\n• Tuin sproeien 's avonds *(minder verdamping)*.\n• Regenton voor planten.\n• Vaatwasser ipv handwas *(minder water!)*.\n\n**Hard vs zacht water**:\n• In NL: vooral **hard water** *(veel kalk)*.\n• Geeft kalkaanslag op kraan + apparaten.\n• In sommige regio's *(o.a. Noord-NL)* zacht water.\n\n**Watervervuiling**:\n• Plastic in oceanen — **plastic soup**.\n• Medicijnresten in rivieren *(uit urine + afval)*.\n• Microplastics in vis + kraanwater.\n• Probleem: niet alles te filteren.\n\n**Toets-feitje**:\nIn **NL is drinkwater zo schoon** dat er amper bleekmiddel/chloor in zit. In andere landen *(VS, Frankrijk)* wel veel chloor. Daarom proeft NL-kraanwater 'puur'. **Niet** in flessen drinken — slechter voor milieu + duurder.",
     checks: [
       {
-        q: "Hoeveel **NL onder zeeniveau**?",
+        q: "Hoeveel van **NL ligt onder zeeniveau**?",
         options: ["~25%", "100%", "0%", "75%"],
         answer: 0,
         wrongHints: [null, "Te veel.", "Wel.", "Te veel."],
@@ -199,7 +199,7 @@ const steps = [
           stappen: [
             { titel: "Nederland is een waterland", tekst: "Een KWART van Nederland (= ~25%) ligt LAGER dan zeeniveau. Dat betekent: zonder dijken zou een groot deel onder water staan!" },
             { titel: "Welke delen?", tekst: "Vooral het westen (Zuid-Holland, Noord-Holland, Flevoland, Zeeland). Het laagste punt is in Nieuwerkerk aan den IJssel = -6,76 m onder zeeniveau." },
-            { titel: "Hoe blijft het droog?", tekst: "Met **dijken** (7.000 km in NL) houden we het zeewater buiten. Met **gemalen** pompen we overtollig water weg naar zee of rivieren." },
+            { titel: "Hoe blijft het droog?", tekst: "Met **dijken** (duizenden km in NL) houden we het zeewater buiten. Met **gemalen** pompen we overtollig water weg naar zee of rivieren." },
           ],
           woorden: [
             { woord: "zeeniveau", uitleg: "Hoogte van de zee, gebruikt als nul-punt." },
@@ -211,7 +211,7 @@ const steps = [
             { type: "stap", tekst: "Flevoland: hele provincie was vroeger de Zuiderzee. Nu polder met steden (Almere, Lelystad)." },
             { type: "stap", tekst: "Beemster (UNESCO): in 17e eeuw drooggemaakt met windmolens." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Een kwart = 25% = 1/4 van NL. Zonder dijken zou je nog steeds in 75% van NL kunnen wonen." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Een kwart = 25% = 1/4 van NL. Dus 1 op de 4 stukjes NL ligt onder zeeniveau." }],
           niveaus: {
             basis: "~25% van NL ligt onder zeeniveau, beschermd door dijken.",
             simpeler: "Een kwart van NL is lager dan de zee. Dijken houden water tegen.",
@@ -226,10 +226,10 @@ const steps = [
         wrongHints: [null, "Te vroeg.", "Veel later.", "Te vroeg."],
       },
       {
-        q: "Hoeveel **water per dag** Nederlander?",
+        q: "Hoeveel **water per dag** gebruikt een Nederlander?",
         options: ["~130 L", "10 L", "500 L", "1 L"],
         answer: 0,
-        wrongHints: [null, "Veel meer.", "VS-niveau.", "Veel meer."],
+        wrongHints: [null, "Veel meer.", "Veel te veel.", "Veel meer."],
       },
       {
         q: "Wat is een **polder**?",
@@ -247,7 +247,7 @@ const steps = [
       { q: "Welke **wolk** = onweer?", options: ["Cumulonimbus", "Cirrus", "Stratus", "Altocumulus"], answer: 0, wrongHints: [null, "Cirrus zijn dunne ijsveertjes hoog in de lucht — zoek de torenhoge stapelwolk.", "Stratus is een grijze, saaie laag — onweer komt uit een wolk die omhoog tórent.", "Middelhoge schapenwolkjes — welke wolk groeit uit tot een reusachtige toren?"] },
       { q: "Hoeveel **zoet water** op aarde?", options: ["~3%", "50%", "100%", "97%"], answer: 0, wrongHints: [null, "Niet.", "Wel water maar zout.", "Zout."] },
       { q: "**Polder** = ?", options: ["Drooggemaakt land", "Bergweide", "Meer", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wanneer **Afsluitdijk**?", options: ["1932 (sloot Zuiderzee af)", "1953", "1900", "Nooit"], answer: 0, wrongHints: [null, "Watersnood.", "Te vroeg.", "Wel."] },
+      { q: "Wanneer was de **Afsluitdijk** klaar?", options: ["1932 (sloot Zuiderzee af)", "1953", "1900", "Nooit"], answer: 0, wrongHints: [null, "Watersnood.", "Te vroeg.", "Wel."] },
       { q: "Hoeveel **kleuren** regenboog?", options: ["7", "3", "10", "1"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Niet."] },
       {
         q: "Welke 4 hoofdstappen vormen samen de **waterkringloop**?",
@@ -268,8 +268,8 @@ const steps = [
           ],
           theorie: "Waterkringloop is **fundamenteel** voor Toets-natuur:\n• Geeft regen + zoet water\n• Houdt klimaat in balans\n• Veroorzaakt weer + wolken\n• Verbindt zee + land\n\nVerstoring (klimaatverandering, ontbossing) → onbalans → meer extreem weer.",
           voorbeelden: [
-            { type: "feit", tekst: "Eén regendruppel kan tot **10 jaar** in een wolk blijven voordat hij valt — afhankelijk van temperatuur + wind." },
-            { type: "feit", tekst: "Amazone-regenwoud produceert ~20% van wereld-zuurstof DOOR de waterkringloop (verdamping + plant-fotosynthese)." },
+            { type: "feit", tekst: "Water blijft gemiddeld zo'n **8-10 dagen** in de lucht voordat het weer als neerslag valt." },
+            { type: "feit", tekst: "Het Amazone-regenwoud verdampt via zijn bladeren zoveel water dat het voor een groot deel zijn eigen regen maakt." },
           ],
           basiskennis: [{ onderwerp: "Niet gemaakt of weg", uitleg: "Water op aarde is een constante hoeveelheid. Gaat alleen rond." }],
           niveaus: { basis: "Verdamping → wolk → neerslag → afstromen.", simpeler: "Water gaat eindeloos rond: zon verdampt zeewater → omhoog → wolk → regen → terug naar zee via rivieren.", nogSimpeler: "Eindeloze cyclus" },
@@ -282,23 +282,23 @@ const steps = [
         wrongHints: [null, "Niet — andere techniek (waterkracht­centrale).", "Niet — dat is een haven/pier.", "Niet — dat is waterzuivering."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is een dijk?", tekst: "Een **dijk** is een **wal van klei + zand + soms stenen** die water tegen­houdt. Beschermt land achter de dijk tegen overstroming.\n\nNederland heeft **~22.000 km dijken** — meer dan welk land ook. Reden: 26% van NL ligt **onder zeespiegel**. Zonder dijken: helft van NL onder water." },
+            { titel: "Wat is een dijk?", tekst: "Een **dijk** is een **wal van klei + zand + soms stenen** die water tegen­houdt. Beschermt land achter de dijk tegen overstroming.\n\nNederland heeft **duizenden kilometers dijken**. Reden: ongeveer een kwart van NL ligt **onder zeespiegel**. Zonder dijken: groot deel van NL onder water." },
             { titel: "Soorten dijken in NL", tekst: "• **Zeedijken** — beschermen tegen Noordzee + Waddenzee (bv. Afsluitdijk)\n• **Rivierdijken** — bij Rijn, Maas, Waal, IJssel\n• **Polderdijken** — rond drooggemaakt land (Haarlemmermeer)\n• **Duinen** — natuurlijke 'dijken' van zand langs kust\n\nBeroemde dijken: **Afsluitdijk** (1932, 32 km) + **Deltawerken** (jaren 50-90, beschermen Zuid-Holland/Zeeland)." },
-            { titel: "Toets-feit: Watersnood 1953", tekst: "Op **31 januari / 1 februari 1953** brak een ramp uit:\n• Storm + extreme springtij\n• Dijken in Zeeland + Zuid-Holland braken\n• **1.836 mensen verdronken**\n• 200.000 ha land onder water\n• 200.000 dieren dood\n\nGevolg: **Deltawerken** gebouwd om dit nooit meer te laten gebeuren. Officieel klaar in 1997. Beschermt nu tegen 1-in-4.000-jaar-stormen." },
+            { titel: "Toets-feit: Watersnood 1953", tekst: "Op **31 januari / 1 februari 1953** brak een ramp uit:\n• Storm + extreem springtij\n• Dijken in Zeeland + Zuid-Holland braken\n• **1.836 mensen verdronken**\n• zo'n 165.000 ha land onder water\n• tienduizenden dieren dood\n\nGevolg: **Deltawerken** gebouwd om dit nooit meer te laten gebeuren. Officieel klaar in 1997. Beschermt nu tegen zeer zware stormen." },
           ],
           woorden: [
-            { woord: "dijk", uitleg: "Aarden wal die water tegenhoudt. NL: ~22.000 km totaal." },
-            { woord: "Deltawerken", uitleg: "Reeks dammen + stormvloedkeringen in Zuid-Holland/Zeeland (1953-1997)." },
+            { woord: "dijk", uitleg: "Aarden wal die water tegenhoudt. NL: duizenden km totaal." },
+            { woord: "Deltawerken", uitleg: "Reeks dammen + stormvloedkeringen in Zuid-Holland/Zeeland (1958-1997)." },
             { woord: "Afsluitdijk", uitleg: "Dijk van 32 km die in 1932 Zuiderzee → IJsselmeer maakte." },
             { woord: "polder", uitleg: "Drooggemaakt land beneden zeespiegel, omringd door dijken." },
           ],
-          theorie: "NL waterveiligheid kerntermen:\n• **Dijk** — wal die water tegenhoudt\n• **Polder** — droog land achter dijk\n• **Sluis** — opening voor schepen, kan dicht bij hoog water\n• **Stormvloedkering** — beweegbare dam (Maeslantkering, Oosterscheldekering)\n• **Spaarbekken** — extra waterberging bij overlast\n\nDoor klimaatverandering wordt water-management nóg belangrijker.",
+          theorie: "NL waterveiligheid kerntermen:\n• **Dijk** — wal die water tegenhoudt\n• **Polder** — droog land achter dijk\n• **Sluis** — opening voor schepen, kan dicht bij hoog water\n• **Stormvloedkering** — beweegbare dam (Maeslantkering, Oosterscheldekering)\n• **Waterbergingsgebied** — extra ruimte voor water bij overlast\n\nDoor klimaatverandering wordt water-management nóg belangrijker.",
           voorbeelden: [
-            { type: "feit", tekst: "De Maeslantkering bij Hoek van Holland is een van de grootste beweegbare bouwwerken ter wereld — twee armen elk zo groot als de Eiffeltoren liggend." },
-            { type: "feit", tekst: "Tijdens hoogwater in 1995 moesten 250.000 mensen evacueren in Limburg/Gelderland. Net niet ramp." },
+            { type: "feit", tekst: "De Maeslantkering bij Hoek van Holland is een van de grootste beweegbare bouwwerken ter wereld — twee armen, elk bijna zo lang als een liggende Eiffeltoren." },
+            { type: "feit", tekst: "Tijdens hoogwater in 1995 moesten 250.000 mensen evacueren, vooral in Gelderland. Net geen ramp." },
           ],
           basiskennis: [{ onderwerp: "Niet voor elektriciteit", uitleg: "Een dijk is GEEN waterkrachtcentrale. Wel kan op een dijk een windmolen staan." }],
-          niveaus: { basis: "Water tegenhouden.", simpeler: "Een dijk is een aarden wal die zeewater of rivierwater tegenhoudt zodat land erachter niet overstroomt. NL heeft 22.000 km dijken.", nogSimpeler: "Water tegen" },
+          niveaus: { basis: "Water tegenhouden.", simpeler: "Een dijk is een aarden wal die zeewater of rivierwater tegenhoudt zodat land erachter niet overstroomt. NL heeft duizenden kilometers dijken.", nogSimpeler: "Water tegen" },
         },
       },
       {
@@ -308,9 +308,9 @@ const steps = [
         wrongHints: [null, "Zout water → onbruikbaar zonder ontzilting (duur, niet in NL).", "Te onbetrouwbaar voor heel land.", "Niet — NL maakt eigen drinkwater."],
         uitlegPad: {
           stappen: [
-            { titel: "Bron 1: grondwater (60% in NL)", tekst: "**Grondwater** is water dat onder de grond zit — eeuwen geleden in de bodem gezakt. **Diep, schoon, beschermd** door zandlagen die als natuurlijk filter werken.\n\nWaterbedrijven pompen het op uit **diepe putten** (50-300 meter diep) in heide­gebieden + bossen. Vraag voor extra zuivering meestal klein." },
+            { titel: "Bron 1: grondwater (60% in NL)", tekst: "**Grondwater** is water dat onder de grond zit — eeuwen geleden in de bodem gezakt. **Diep, schoon, beschermd** door zandlagen die als natuurlijk filter werken.\n\nWaterbedrijven pompen het op uit **diepe putten** (50-300 meter diep) in heide­gebieden + bossen. Er is meestal maar weinig zuivering nodig." },
             { titel: "Bron 2: oppervlaktewater (40% in NL)", tekst: "**Oppervlaktewater** = water uit rivieren, meren, duinen. Bv. **Rijn** + **Maas** + **IJsselmeer**.\n\nDit water is **viezer** dan grondwater (industrie, landbouw, riool). Daarom **veel meer zuivering** nodig. Vooral in west-NL (Den Haag, Rotterdam) gebruikt omdat grondwater daar zout is door zeenabijheid." },
-            { titel: "Toets-feit: zuivering-stappen", tekst: "Zuivering van rivierwater tot drinkwater:\n1. **Voorfilter** (zand, grind verwijderen)\n2. **Beluchting** (zuurstof toevoegen)\n3. **Coagulatie** (chemisch — vuil klontert)\n4. **Zandfilter** (microben)\n5. **Actief-kool-filter** (geur/smaak)\n6. **Chloor** of **UV** (desinfectie)\n7. **Drinkwater** naar leiding\n\nKost ~€1 per 1000 liter — Nederlands drinkwater = goedkoopste + schoonste ter wereld (volgens internationale rankings)." },
+            { titel: "Toets-feit: zuivering-stappen", tekst: "Zuivering van rivierwater tot drinkwater:\n1. **Voorfilter** (zand, grind verwijderen)\n2. **Beluchting** (zuurstof toevoegen)\n3. **Coagulatie** (chemisch — vuil klontert)\n4. **Zandfilter** (microben)\n5. **Actief-kool-filter** (geur/smaak)\n6. **Chloor** of **UV** (desinfectie)\n7. **Drinkwater** naar leiding\n\nKost ~€1-2 per 1000 liter — Nederlands drinkwater hoort bij het schoonste ter wereld." },
           ],
           woorden: [
             { woord: "grondwater", uitleg: "Water in de bodem, diep onder grond. Schoonste bron." },
@@ -319,10 +319,10 @@ const steps = [
           ],
           theorie: "Verschil zoet/zout/brak water:\n• **Zoet** — minder dan 0,5 g zout/L. Drinkbaar zonder ontzilting.\n• **Brak** — 0,5-30 g zout/L. Mengsel zout-zoet (zoals delta's).\n• **Zout** — meer dan 30 g zout/L. Zee. Niet drinkbaar zonder dure ontzilting.\n\nOcean Cleanup-stichting + zuiver-water-organisaties werken aan oceaan-vervuiling.",
           voorbeelden: [
-            { type: "feit", tekst: "Nederlanders drinken gemiddeld 120 liter water per dag — uit kraan. Goedkoper dan flessen + minder plastic-afval." },
-            { type: "feit", tekst: "Nederland heeft 10 drinkwaterbedrijven (bv. Vitens, PWN, Evides). Alle in overheidshanden (geen winstdoel)." },
+            { type: "feit", tekst: "Nederlanders gebruiken gemiddeld 120-130 liter kraanwater per dag. Goedkoper dan flessen + minder plastic-afval." },
+            { type: "feit", tekst: "Nederland heeft 10 drinkwaterbedrijven (bv. Vitens, PWN, Evides). Allemaal in overheidshanden (geen winstdoel)." },
           ],
-          basiskennis: [{ onderwerp: "Niet zee", uitleg: "Zeewater is in NL niet bruikbaar voor drinkwater — ontzilting te duur. Sommige eilanden (Aruba, Saba) gebruiken wel ontzilte zee." }],
+          basiskennis: [{ onderwerp: "Niet zee", uitleg: "Zeewater is in NL niet bruikbaar voor drinkwater — ontzilting te duur. Sommige eilanden (Aruba, Saba) gebruiken wel ontzilt zeewater." }],
           niveaus: { basis: "Grond + oppervlaktewater.", simpeler: "NL drinkwater = 60% grondwater (diep onder grond) + 40% rivierwater. Beide goed gezuiverd in waterzuiveringsinstallaties.", nogSimpeler: "Grond + rivier, gezuiverd" },
         },
       },
@@ -334,16 +334,16 @@ const steps = [
       { q: "Welk water is **zoet**?", options: ["Rivier + meer","Zee","Oceaan","Niet bestaand"], answer: 0, wrongHints: [null, "Zout.", "Zout.", "Wel."] },
       { q: "Wat is **regenwater**?", options: ["Neerslag uit wolken","Grondwater","Niet relevant","Drinkwater direct"], answer: 0, wrongHints: [null, "Wel onderdeel kringloop.", "Wel.", "Niet zonder zuivering."] },
       { q: "Wat is **neerslag**?", options: ["Regen + sneeuw + hagel","Alleen regen","Alleen sneeuw","Wolken"], answer: 0, wrongHints: [null, "Te beperkt.", "Te beperkt.", "Vormt neerslag."] },
-      { q: "Wat is **sneeuw**?", options: ["Bevroren waterkristallen","IJskoud water","Niet relevant","Hagel"], answer: 0, wrongHints: [null, "Vloeibaar.", "Wel.", "Andere vorm."] },
+      { q: "Wat is **sneeuw**?", options: ["IJskristallen (bevroren water)","IJskoud water","Niet relevant","Hagel"], answer: 0, wrongHints: [null, "Vloeibaar.", "Wel.", "Andere vorm."] },
       { q: "Wat is **hagel**?", options: ["IJsballetjes uit onweerswolken","Sneeuw","Regen","Niet relevant"], answer: 0, wrongHints: [null, "Andere vorm.", "Vloeibaar.", "Wel."] },
-      { q: "Welke kleur is een **regenboog**?", options: ["7 kleuren","1 kleur","Zwart-wit","Onzichtbaar"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel zichtbaar."] },
+      { q: "Hoe ziet een **regenboog** eruit?", options: ["7 kleuren","1 kleur","Zwart-wit","Onzichtbaar"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel zichtbaar."] },
       { q: "Wat is **mist**?", options: ["Kleine waterdruppels in lucht (lage wolk)","Sneeuw","Regen","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wanneer is **dauw**?", options: ["Ochtend op gras","Middag","Nacht in lucht","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Wel 's nachts maar zichtbaar bij ochtend.", "Wel."] },
+      { q: "Wanneer zie je **dauw**?", options: ["Ochtend op gras","Middag","Nacht in lucht","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Wel 's nachts maar zichtbaar bij ochtend.", "Wel."] },
       { q: "Welke vier **fases** in de waterkringloop?", options: ["Verdamping → condensatie → neerslag → afstroming","Alleen regen","2 fases","6 fases"], answer: 0, wrongHints: [null, "Te simpel.", "Te weinig.", "Te veel."] },
       { q: "Wat is **grondwater**?", options: ["Water dat in de bodem zit","Regenwater","Wolken","Drinkwater"], answer: 0, wrongHints: [null, "Wel onderdeel.", "Niet.", "Soms uit grondwater gemaakt."] },
       { q: "Wat is **afstroming**?", options: ["Water dat over land naar rivier stroomt","Verdamping","Wolken","Niet relevant"], answer: 0, wrongHints: [null, "Andere fase.", "Niet.", "Wel."] },
       { q: "Welke **rivier** stroomt door Nederland?", options: ["Rijn (Lek/Waal)","Donau","Amazone","Nijl"], answer: 0, wrongHints: [null, "Duitsland-Oost-Europa.", "Zuid-Amerika.", "Afrika."] },
-      { q: "Hoeveel **liter water** is in een persoon?", options: ["~60% lichaamsgewicht","10%","100%","30%"], answer: 0, wrongHints: [null, "Te weinig.", "Onmogelijk.", "Te weinig."] },
+      { q: "Hoeveel van je **lichaam** is water?", options: ["~60% lichaamsgewicht","10%","100%","30%"], answer: 0, wrongHints: [null, "Te weinig.", "Onmogelijk.", "Te weinig."] },
       { q: "Wat is **vervuild water**?", options: ["Bevat schadelijke stoffen","Schoon","Drinkbaar","Niet relevant"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Wel."] },
     ],
   },

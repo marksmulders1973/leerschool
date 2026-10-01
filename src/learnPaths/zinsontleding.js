@@ -39,7 +39,7 @@ const steps = [
   // ─── A. PV + onderwerp ────────────────────────────────
   {
     title: "Persoonsvorm vinden — drie trucs",
-    explanation: "De **persoonsvorm** (pv) is het werkwoord dat **vervoegd** is naar persoon en tijd. Élke zin heeft een persoonsvorm — vinden ze gaat met drie trucs:\n\n**Truc 1 — Maak van de zin een vraag**\nHet werkwoord dat vooraan komt, is de persoonsvorm.\n• Sara **leest** een boek. → *\"Leest Sara een boek?\"* → **leest** = pv.\n• De hond **slaapt** lekker. → *\"Slaapt de hond lekker?\"* → **slaapt** = pv.\n\n**Truc 2 — Verander de tijd**\nHet werkwoord dat van vorm verandert is de persoonsvorm.\n• Hij **werkt** hard → Hij **werkte** hard. → **werkt/werkte** = pv.\n• De fiets **rijdt** snel → De fiets **reed** snel. → **rijdt/reed** = pv.\n\n**Truc 3 — Verander het getal** (1 → meer of andersom)\nHet werkwoord dat verandert is de persoonsvorm.\n• De jongen **rent**. → De jongens **rennen**. → **rent** = pv.\n• Wij **lezen**. → Ik **lees**. → **lezen/lees** = pv.\n\n**Belangrijk**: in een zin kan **meer dan één werkwoord** staan, maar **slechts één is de pv**. De andere werkwoorden zijn **werkwoordelijke restdelen**.\n• Hij **heeft** zijn boek **gelezen**. → heeft = pv (vervoegd naar 'hij'). gelezen = werkwoordelijk restdeel.\n• Wij **moeten** snel **leren**. → moeten = pv. leren = restdeel (geen vervoeging).\n\n**Geheugensteun**: pv = de **eerste** vervoegde werkwoordsvorm. De rest van het gezegde komt verderop in de zin.",
+    explanation: "De **persoonsvorm** (pv) is het werkwoord dat **vervoegd** is naar persoon en tijd. Élke zin heeft een persoonsvorm — je vindt hem met drie trucs:\n\n**Truc 1 — Maak van de zin een vraag**\nHet werkwoord dat vooraan komt, is de persoonsvorm.\n• Sara **leest** een boek. → *\"Leest Sara een boek?\"* → **leest** = pv.\n• De hond **slaapt** lekker. → *\"Slaapt de hond lekker?\"* → **slaapt** = pv.\n\n**Truc 2 — Verander de tijd**\nHet werkwoord dat van vorm verandert is de persoonsvorm.\n• Hij **werkt** hard → Hij **werkte** hard. → **werkt/werkte** = pv.\n• De fiets **rijdt** snel → De fiets **reed** snel. → **rijdt/reed** = pv.\n\n**Truc 3 — Verander het getal** (1 → meer of andersom)\nHet werkwoord dat verandert is de persoonsvorm.\n• De jongen **rent**. → De jongens **rennen**. → **rent** = pv.\n• Wij **lezen**. → Ik **lees**. → **lezen/lees** = pv.\n\n**Belangrijk**: in een zin kan **meer dan één werkwoord** staan, maar **slechts één is de pv**. De andere werkwoorden zijn **werkwoordelijke restdelen**.\n• Hij **heeft** zijn boek **gelezen**. → heeft = pv (vervoegd naar 'hij'). gelezen = werkwoordelijk restdeel.\n• Wij **moeten** snel **leren**. → moeten = pv. leren = restdeel (geen vervoeging).\n\n**Geheugensteun**: pv = de **eerste** vervoegde werkwoordsvorm. De rest van het gezegde komt verderop in de zin.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">persoonsvorm = vervoegd werkwoord</text>
@@ -143,7 +143,7 @@ const steps = [
           theorie: "Bij weer/tijd: 'het' = onderwerp.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Het regent. Het sneeuwt. Het wordt laat." }],
           basiskennis: [{ onderwerp: "wat regent?", uitleg: "antwoord = 'het'" }],
-          niveaus: { basis: "het.", simpeler: "Wat regent? het.", nogSimpeler: "Wat regent? het. → het." },
+          niveaus: { basis: "het.", simpeler: "Wat regent? het.", nogSimpeler: "het." },
         },
       },
     ],
@@ -300,14 +300,14 @@ const steps = [
           "Wij zijn naar huis gegaan.",
           "Mijn vader is timmerman.",
           "De koffie wordt koud.",
-          "Het lijkt te regenen.",
+          "Zij lijkt boos.",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Hier is 'is' een koppelwerkwoord en 'timmerman' het naamwoordelijke deel — naamwoordelijk gezegde.",
           "Wordt = koppelww, koud = bijv. naamw. → naamwoordelijk gezegde.",
-          "Lijkt = koppelww, te regenen is hier het naamw. deel → naamwoordelijk.",
+          "Lijkt = koppelww, boos = bijv. naamw. → naamwoordelijk gezegde.",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Zijn' = hulpww in volt. tijd", tekst: "Wij zijn gegaan: zijn + gegaan (voltooid deelw) = werkwoordelijk gezegde." }],
@@ -327,7 +327,7 @@ const steps = [
     explanation: "Het **lijdend voorwerp** (lv) is degene of datgene op wie/wat de actie van de pv **gericht** is. Het 'ondergaat' de actie van het onderwerp.\n\n**Truc — vraag**:\n*\"Wie of wat + onderwerp + persoonsvorm?\"*\nHet antwoord is het lijdend voorwerp.\n\n**Voorbeelden**:\n• Sara leest **een boek**.\n  → Vraag: *\"Wat leest Sara?\"* → Antwoord: **een boek** = lv.\n• De hond bijt **de postbode**.\n  → *\"Wie bijt de hond?\"* → **de postbode** = lv.\n• Ik zie **mijn zus** lopen.\n  → *\"Wie zie ik?\"* → **mijn zus** = lv.\n\n**Let op**: niet elke zin heeft een lijdend voorwerp.\n• \"De hond **rent**.\" → geen lv (rennen kan niet 'iets ondergaan').\n• \"Hij **slaapt**.\" → geen lv.\n• Werkwoorden zonder lv heten **onovergankelijk**: rennen, slapen, vallen, lopen.\n• Werkwoorden mét lv heten **overgankelijk**: lezen (een boek), eten (een appel), zien (iemand), bijten (de postbode).\n\n**Hoe controleer je of het echt een lv is?**\n\n**Test**: maak van de zin een **lijdende vorm** (= passief).\n• Actief: \"Sara leest een boek.\" → Passief: \"Een boek wordt door Sara gelezen.\"\n• 'Een boek' is in de passieve zin onderwerp → bewijst dat het in de actieve zin het lv is.\n\n**Vergelijk**:\n• \"Hij wandelt elke ochtend door het park.\" → geen lv mogelijk (kun je niet zeggen 'het park wordt door hem gewandeld').\n• \"Hij ziet elke ochtend zijn buurman.\" → wel lv: 'zijn buurman' wordt door hem gezien.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
-<text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">lijdend voorwerp = wat onderaat actie</text>
+<text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">lijdend voorwerp = wat ondergaat actie</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="76" fill="${COLORS.text}" font-size="12" font-family="Arial">"<tspan fill="${COLORS.blue}" font-weight="bold">Sara</tspan> <tspan fill="${COLORS.good}" font-weight="bold">leest</tspan> <tspan fill="${COLORS.alt}" font-weight="bold">een boek</tspan>."</text>
 <text x="35" y="94" fill="${COLORS.muted}" font-size="11" font-family="Arial">→ wat leest Sara? een boek = lv</text>
@@ -390,7 +390,7 @@ const steps = [
   },
   {
     title: "Meewerkend voorwerp — aan/voor wie?",
-    explanation: "Het **meewerkend voorwerp** (mv) is degene **voor wie** of **aan wie** de actie wordt gedaan. Het 'werkt mee' op de achtergrond.\n\n**Truc — vraag**:\n*\"Aan wie / voor wie + onderwerp + pv + lv?\"*\n\n**Voorbeelden**:\n• Sara geeft **haar broertje** een cadeau.\n  → Vraag: *\"Aan wie geeft Sara een cadeau?\"* → **haar broertje** = mv.\n• Ik koop **mijn moeder** een bos bloemen.\n  → *\"Voor wie koop ik een bos bloemen?\"* → **mijn moeder** = mv.\n• De leerkracht legt **ons** de regels uit.\n  → *\"Aan wie legt zij de regels uit?\"* → **ons** = mv.\n\n**Kenmerken van het mv**:\n• Vaak een **persoon** (niet altijd, kan ook 'aan de regering' bv.).\n• Staat vaak vóór het lv in de zin (Nederlandse woordvolgorde).\n• Kan **vervangen worden** door 'aan / voor + persoon': \"Sara geeft een cadeau **aan haar broertje**\" — zelfde betekenis.\n\n**Niet elke zin heeft een mv**: alleen bij werkwoorden waar 'aan/voor iemand iets doen' bij past.\n• Werkwoorden met mv: geven, sturen, schenken, vertellen, uitleggen, kopen, schrijven, brengen, aanbieden\n• Werkwoorden zonder mv: rennen, slapen, vallen, eten, zien (zonder aan-construction)\n\n**Verschil met lijdend voorwerp**:\n• Lv = **wat wordt gegeven** / **wie wordt gezien** (object van de actie zelf)\n• Mv = **aan wie** wordt het gegeven (degene voor wie het is)\n\nIn de zin \"Ik geef **mijn zus** een cadeau\":\n• onderwerp = ik\n• pv = geef\n• lv = een cadeau (wat gegeven wordt)\n• mv = mijn zus (aan wie gegeven wordt)\n\n**Ezelsbruggetje**: het mv is **'aan wie / voor wie'**, het lv is **'wat / wie ondergaat'**.",
+    explanation: "Het **meewerkend voorwerp** (mv) is degene **voor wie** of **aan wie** de actie wordt gedaan. Het 'werkt mee' op de achtergrond.\n\n**Truc — vraag**:\n*\"Aan wie / voor wie + onderwerp + pv + lv?\"*\n\n**Voorbeelden**:\n• Sara geeft **haar broertje** een cadeau.\n  → Vraag: *\"Aan wie geeft Sara een cadeau?\"* → **haar broertje** = mv.\n• Ik koop **mijn moeder** een bos bloemen.\n  → *\"Voor wie koop ik een bos bloemen?\"* → **mijn moeder** = mv.\n• De leerkracht legt **ons** de regels uit.\n  → *\"Aan wie legt zij de regels uit?\"* → **ons** = mv.\n\n**Kenmerken van het mv**:\n• Vaak een **persoon** (niet altijd, kan ook 'aan de regering' bv.).\n• Staat vaak vóór het lv in de zin (Nederlandse woordvolgorde).\n• Kan **vervangen worden** door 'aan / voor + persoon': \"Sara geeft een cadeau **aan haar broertje**\" — zelfde betekenis.\n\n**Niet elke zin heeft een mv**: alleen bij werkwoorden waar 'aan/voor iemand iets doen' bij past.\n• Werkwoorden met mv: geven, sturen, schenken, vertellen, uitleggen, kopen, schrijven, brengen, aanbieden\n• Werkwoorden zonder mv: rennen, slapen, vallen, eten, zien\n\n**Verschil met lijdend voorwerp**:\n• Lv = **wat wordt gegeven** / **wie wordt gezien** (object van de actie zelf)\n• Mv = **aan wie** wordt het gegeven (degene voor wie het is)\n\nIn de zin \"Ik geef **mijn zus** een cadeau\":\n• onderwerp = ik\n• pv = geef\n• lv = een cadeau (wat gegeven wordt)\n• mv = mijn zus (aan wie gegeven wordt)\n\n**Ezelsbruggetje**: het mv is **'aan wie / voor wie'**, het lv is **'wat / wie ondergaat'**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">meewerkend voorwerp = aan/voor wie</text>
@@ -425,14 +425,14 @@ const steps = [
           theorie: "Vraag: aan/voor wie + zin? Antwoord = mv.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Ik geef mijn zus een cadeau → mijn zus = mv" }],
           basiskennis: [{ onderwerp: "vorm", uitleg: "= 'aan/voor + persoon'" }],
-          niveaus: { basis: "mij.", simpeler: "Aan wie? mij.", nogSimpeler: "Aan wie? mij. → mij." },
+          niveaus: { basis: "mij.", simpeler: "Aan wie? mij.", nogSimpeler: "mij." },
         },
       },
     ],
   },
   {
     title: "Lijdend vs meewerkend — verschil oefenen",
-    explanation: "**Snelle herkennings-tabel**:\n\n| Voorwerp | Vraag | Voorbeeld |\n|---|---|---|\n| **Lijdend (lv)** | Wat / wie ondergaat? | Sara leest **een boek**. |\n| **Meewerkend (mv)** | Aan / voor wie? | Sara geeft haar zus **een cadeau**. |\n\n**Verschil van betekenis**:\n• **Lv** is het **object** van de handeling (= wat de handeling betreft).\n• **Mv** is **degene voor wie** de handeling wordt verricht.\n\n**Volgorde in een Nederlandse zin** (meestal):\n*Onderwerp — pv — mv — lv — bepalingen*\n\n• \"Mijn moeder (onderwerp) **bakt** (pv) ons (mv) elke week (bep) een taart (lv).\"\n• \"De juf (onderw) **vertelt** (pv) ons (mv) een verhaal (lv).\"\n• \"Mijn vader (onderw) **stuurde** (pv) mijn opa (mv) een ansichtkaart (lv).\"\n\n**Soms wisselt de volgorde** als het mv met 'aan' wordt geformuleerd:\n• \"Mijn moeder bakt een taart **voor ons**.\"\n• \"De juf vertelt een verhaal **aan ons**.\"\n→ De zinsdelen blijven dezelfde rol vervullen, maar de woordvolgorde verandert.\n\n**Examen-truc** (test of je het juiste voorwerp aanwijst):\n• Stel de vraag-truc op: 'wat?' = lv. 'aan/voor wie?' = mv.\n• Vervang het mv door 'aan/voor + de persoon' om te checken of het echt een mv is.\n• Je kunt geen lv hebben zonder pv. Geen mv zonder lv? Soms wel: \"Hij vertrouwt mij\" — mij = lv (wat ondergaat het vertrouwen).\n\n**Beruchte instinker**:\n• \"Mijn vader heeft mij geholpen.\" → 'mij' lijkt mv-achtig, maar is hier eigenlijk lv (het werkwoord 'helpen' werkt direct op een persoon).\n• Bij twijfel: doe de passieve test. \"Ik werd door mijn vader geholpen\" → 'ik' is onderwerp in passief = was lv in actief.",
+    explanation: "**Snelle herkennings-tabel**:\n\n| Voorwerp | Vraag | Voorbeeld |\n|---|---|---|\n| **Lijdend (lv)** | Wat / wie ondergaat? | Sara leest **een boek**. |\n| **Meewerkend (mv)** | Aan / voor wie? | Sara geeft haar zus **een cadeau**. |\n\n**Verschil van betekenis**:\n• **Lv** is het **object** van de handeling (= wat de handeling betreft).\n• **Mv** is **degene voor wie** de handeling wordt verricht.\n\n**Volgorde in een Nederlandse zin** (meestal):\n*Onderwerp — pv — mv — lv — bepalingen*\n\n• \"Mijn moeder (onderwerp) **bakt** (pv) ons (mv) elke week (bep) een taart (lv).\"\n• \"De juf (onderw) **vertelt** (pv) ons (mv) een verhaal (lv).\"\n• \"Mijn vader (onderw) **stuurde** (pv) mijn opa (mv) een ansichtkaart (lv).\"\n\n**Soms wisselt de volgorde** als het mv met 'aan' wordt geformuleerd:\n• \"Mijn moeder bakt een taart **voor ons**.\"\n• \"De juf vertelt een verhaal **aan ons**.\"\n→ De zinsdelen blijven dezelfde rol vervullen, maar de woordvolgorde verandert.\n\n**Examen-truc** (test of je het juiste voorwerp aanwijst):\n• Stel de vraag-truc op: 'wat?' = lv. 'aan/voor wie?' = mv.\n• Vervang het mv door 'aan/voor + de persoon' om te checken of het echt een mv is.\n• Een mv komt meestal samen met een lv voor. In \"Hij vertrouwt mij\" is 'mij' gewoon het lv.\n\n**Beruchte instinker**:\n• \"Mijn vader heeft mij geholpen.\" → 'mij' lijkt mv-achtig, maar is hier eigenlijk lv (het werkwoord 'helpen' werkt direct op een persoon).\n• Bij twijfel: doe de passieve test. \"Ik werd door mijn vader geholpen\" → 'ik' is onderwerp in passief = was lv in actief.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">lv ↔ mv — herken het verschil</text>
@@ -500,7 +500,7 @@ const steps = [
   // ─── D. Bepalingen ────────────────────────────────────
   {
     title: "Bepalingen — waar, wanneer, hoe, waarom?",
-    explanation: "**Bepalingen** zijn zinsdelen die extra informatie geven over **waar**, **wanneer**, **hoe**, of **waarom** iets gebeurt. Ze zijn niet noodzakelijk voor de zin maar maken 'm rijker.\n\n**Vier hoofdsoorten bepalingen**:\n\n**1. Bepaling van plaats** (waar?)\n• \"Hij zit **in de tuin**.\" → \"in de tuin\" = bep. van plaats\n• \"Wij wonen **in Amsterdam**.\"\n• \"De kat slaapt **op de bank**.\"\n\n**2. Bepaling van tijd** (wanneer?)\n• \"Ik kom **morgen**.\" → \"morgen\" = bep. van tijd\n• \"De vergadering begint **om half twee**.\"\n• \"In de zomer ga ik op vakantie.\"\n\n**3. Bepaling van wijze** (hoe?)\n• \"Hij rent **snel**.\" → \"snel\" = bep. van wijze\n• \"Ze zingt **prachtig**.\"\n• \"Ze schreef de brief **met een rode pen**.\"\n\n**4. Bepaling van reden** (waarom?)\n• \"Hij blijft thuis **omdat hij ziek is**.\" → \"omdat hij ziek is\" = bep. van reden\n• \"Ze gaat naar de winkel **vanwege een aanbieding**.\"\n• \"Ik leer Frans **om in Parijs te kunnen praten**.\"\n\n**Andere soorten** (komen minder op examen):\n• Bep. van mate (in welke mate? hoeveel?): \"Hij is **erg moe**.\"\n• Bep. van middel (waarmee?): \"Ze schrijft **met een potlood**.\"\n• Bep. van gezelschap (met wie?): \"Hij gaat **met zijn vader**.\"\n\n**Truc**: stel een **wat-vraag** om bepalingen te vinden:\n• Waar? → plaats\n• Wanneer? → tijd\n• Hoe? → wijze\n• Waarom? → reden\n\nElke bep. die je vindt is **iets extra's** boven op de basis: onderwerp + pv + lv + mv.",
+    explanation: "**Bepalingen** zijn zinsdelen die extra informatie geven over **waar**, **wanneer**, **hoe**, of **waarom** iets gebeurt. Ze zijn niet noodzakelijk voor de zin maar maken 'm rijker.\n\n**Vier hoofdsoorten bepalingen**:\n\n**1. Bepaling van plaats** (waar?)\n• \"Hij zit **in de tuin**.\" → \"in de tuin\" = bep. van plaats\n• \"Wij wonen **in Amsterdam**.\"\n• \"De kat slaapt **op de bank**.\"\n\n**2. Bepaling van tijd** (wanneer?)\n• \"Ik kom **morgen**.\" → \"morgen\" = bep. van tijd\n• \"De vergadering begint **om half twee**.\"\n• \"In de zomer ga ik op vakantie.\"\n\n**3. Bepaling van wijze** (hoe?)\n• \"Hij rent **snel**.\" → \"snel\" = bep. van wijze\n• \"Ze zingt **prachtig**.\"\n• \"Ze loopt **voorzichtig** over het ijs.\"\n\n**4. Bepaling van reden** (waarom?)\n• \"Hij blijft thuis **omdat hij ziek is**.\" → \"omdat hij ziek is\" = bep. van reden\n• \"Ze gaat naar de winkel **vanwege een aanbieding**.\"\n• \"Ze lacht **omdat de clown grappig is**.\"\n\n**Andere soorten** (komen minder op examen):\n• Bep. van mate (in welke mate? hoeveel?): \"Hij is **erg** moe.\"\n• Bep. van middel (waarmee?): \"Ze schrijft **met een potlood**.\"\n• Bep. van gezelschap (met wie?): \"Hij gaat **met zijn vader**.\"\n\n**Truc**: stel een **vraag** om bepalingen te vinden:\n• Waar? → plaats\n• Wanneer? → tijd\n• Hoe? → wijze\n• Waarom? → reden\n\nElke bep. die je vindt is **iets extra's** boven op de basis: onderwerp + pv + lv + mv.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">bepalingen — extra informatie</text>
@@ -546,7 +546,7 @@ const steps = [
   },
   {
     title: "Bijwoord vs bijvoeglijk naamwoord",
-    explanation: "Twee woordsoorten die op elkaar lijken maar verschillende functies hebben:\n\n**Bijvoeglijk naamwoord** (bnw)\n• Zegt iets over een **zelfstandig naamwoord**.\n• Staat meestal **vóór** het zelfst. naamw.\n• Voorbeelden: een **mooie** dag, een **snelle** auto, het **groene** gras.\n• Krijgt vaak een **-e** als het bij een zelfst. naamw. met een lidwoord (de/het) staat.\n\n**Bijwoord** (bw)\n• Zegt iets over een **werkwoord**, een **bijvoeglijk naamwoord**, of een ander **bijwoord**.\n• Geeft vaak antwoord op vragen als hoe?, wanneer?, waar?\n• Voorbeelden: hij rent **snel**, ze zingt **prachtig**, hij is **erg** boos, het ging **goed**.\n• Krijgt **geen -e**.\n\n**Verschil-voorbeelden**:\n• \"Hij rijdt een **snelle** auto.\" → snelle = bnw (bij 'auto')\n• \"Hij rijdt **snel**.\" → snel = bw (bij 'rijdt')\n\n• \"Het is een **mooie** dag.\" → mooie = bnw\n• \"Hij zingt **mooi**.\" → mooi = bw\n\n• \"Een **goed** boek.\" → goed = bnw (geen -e want 'een')\n• \"Hij doet **goed** zijn best.\" → goed = bw (bij 'doet')\n\n**Tip**: kijk naar het woord erna of ervoor:\n• Bij een zelfst. naamw. → meestal bnw\n• Bij een werkwoord of ander bnw → meestal bw\n\n**Examen-vraag**: \"Geef de woordsoort van het cursief gedrukte woord.\" — dan moet je dit verschil weten.\n\n**Beruchte instinker**: \n• \"Het was een echte feest.\" — fout (echt = bw, dus geen -e); moet zijn \"Het was een echt feest.\"\n• \"Echt waar?\" → echt = bw (versterkt 'waar').",
+    explanation: "Twee woordsoorten die op elkaar lijken, met verschillende functies:\n\n**Bijvoeglijk naamwoord** (bnw)\n• Zegt iets over een **zelfstandig naamwoord**.\n• Staat meestal **vóór** het zelfst. naamw.\n• Voorbeelden: een **mooie** dag, een **snelle** auto, het **groene** gras.\n• Krijgt vaak een **-e** als het bij een zelfst. naamw. met een lidwoord (de/het) staat.\n\n**Bijwoord** (bw)\n• Zegt iets over een **werkwoord**, een **bijvoeglijk naamwoord**, of een ander **bijwoord**.\n• Geeft vaak antwoord op vragen als hoe?, wanneer?, waar?\n• Voorbeelden: hij rent **snel**, ze zingt **prachtig**, hij is **erg** boos, het ging **goed**.\n• Krijgt **geen -e**.\n\n**Verschil-voorbeelden**:\n• \"Hij rijdt een **snelle** auto.\" → snelle = bnw (bij 'auto')\n• \"Hij rijdt **snel**.\" → snel = bw (bij 'rijdt')\n\n• \"Het is een **mooie** dag.\" → mooie = bnw\n• \"Hij zingt **mooi**.\" → mooi = bw\n\n• \"Een **goed** boek.\" → goed = bnw (geen -e want 'een')\n• \"Hij speelt **goed**.\" → goed = bw (bij 'speelt')\n\n**Tip**: kijk naar het woord erna of ervoor:\n• Bij een zelfst. naamw. → meestal bnw\n• Bij een werkwoord of ander bnw → meestal bw\n\n**Examen-vraag**: \"Geef de woordsoort van het cursief gedrukte woord.\" — dan moet je dit verschil weten.\n\n**Beruchte instinker**: \n• \"Het was een echte feest.\" — fout: 'een' + het-woord, dus geen -e; moet zijn \"Het was een echt feest.\"\n• \"Echt waar?\" → echt = bw (versterkt 'waar').",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">bijvoeglijk naamw. ↔ bijwoord</text>
@@ -603,7 +603,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Welk woord is het ONDERWERP in: \"Vandaag heeft mijn moeder voor ons een feest georganiseerd.\"?*",
+        q: "*Welk zinsdeel is het ONDERWERP in: \"Vandaag heeft mijn moeder voor ons een feest georganiseerd.\"?*",
         options: [
           "mijn moeder",
           "vandaag",
@@ -618,11 +618,11 @@ const steps = [
           "Ons = mv (voor wie werd het feest georganiseerd?).",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Wie georganiseerd?", tekst: "Wie heeft georganiseerd? mijn moeder = onderwerp." }],
+          stappen: [{ titel: "Wie heeft georganiseerd?", tekst: "Wie heeft georganiseerd? mijn moeder = onderwerp." }],
           woorden: [{ woord: "onderwerp", uitleg: "wie/wat doet de actie" }],
           theorie: "Vraag bij pv → onderwerp.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Mijn moeder = onderwerp van 'heeft georganiseerd'" }],
-          basiskennis: [{ onderwerp: "samengesteld pv", uitleg: "'heeft' = pv-deel, georganiseerd = restdeel" }],
+          basiskennis: [{ onderwerp: "pv + restdeel", uitleg: "'heeft' = pv, georganiseerd = restdeel" }],
           niveaus: { basis: "mijn moeder.", simpeler: "Wie? mijn moeder.", nogSimpeler: "mijn moeder." },
         },
       },
@@ -631,7 +631,7 @@ const steps = [
         options: [
           "Mijn vader is timmerman.",
           "Mijn vader werkt als timmerman.",
-          "Mijn vader heeft een nieuwe job.",
+          "Mijn vader heeft een nieuwe baan.",
           "Mijn vader bouwt huizen.",
         ],
         answer: 0,
@@ -702,7 +702,7 @@ const steps = [
   },
   {
     title: "Examen-stijl — meervoudige zinnen",
-    explanation: "Bij ingewikkelde zinnen kunnen er meerdere voorwerpen, bepalingen, of zelfs meerdere persoonsvormen voorkomen. Vooral bij **samengestelde zinnen** (twee of meer hoofdzinnen / hoofdzin + bijzin).\n\n**Voorbeeld samengestelde zin**:\n*\"Hij ging naar de winkel **omdat hij melk nodig had**.\"*\n• Hoofdzin: Hij ging naar de winkel\n• Bijzin: omdat hij melk nodig had\n• Twee persoonsvormen: \"ging\" (hoofdzin) + \"had\" (bijzin)\n• Twee onderwerpen: \"hij\" (hoofdzin) + \"hij\" (bijzin) — verwijst naar dezelfde persoon\n\n**Examen-tip bij ontleden**:\n• **Ontleed elke deelzin apart**.\n• Eerst hoofdzin, dan bijzin.\n• Per deelzin: pv → onderwerp → eventuele lv/mv/bep.\n\nLaten we wat oefenen met examen-style vragen.",
+    explanation: "Bij ingewikkelde zinnen kunnen er meerdere voorwerpen, bepalingen, of zelfs meerdere persoonsvormen voorkomen. Vooral bij **samengestelde zinnen** (twee of meer hoofdzinnen / hoofdzin + bijzin).\n\n**Voorbeeld samengestelde zin**:\n*\"Hij ging naar de winkel **omdat hij melk nodig had**.\"*\n• Hoofdzin: Hij ging naar de winkel\n• Bijzin: omdat hij melk nodig had\n• Twee persoonsvormen: \"ging\" (hoofdzin) + \"had\" (bijzin)\n• Twee onderwerpen: \"hij\" (hoofdzin) + \"hij\" (bijzin) — verwijst naar dezelfde persoon\n\n**Examen-tip bij ontleden**:\n• **Ontleed elke deelzin apart**.\n• Eerst hoofdzin, dan bijzin.\n• Per deelzin: pv → onderwerp → eventuele lv/mv/bep.\n\nLaten we wat oefenen met examenvragen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="60" y="40" width="180" height="100" rx="14" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="3"/>
 <text x="150" y="80" text-anchor="middle" fill="${COLORS.good}" font-size="32" font-family="Arial" font-weight="bold">examen</text>
@@ -776,7 +776,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Waarom? = reden", tekst: "Waarom blijven we binnen? omdat het regent = bep. van reden." }],
           woorden: [{ woord: "bep. van reden", uitleg: "waarom? bijzin met omdat" }],
-          theorie: "Reden-vraag → bijzin met omdat/want/doordat.",
+          theorie: "Reden-vraag → vaak een bijzin met omdat.",
           voorbeelden: [{ type: "voorbeeld", tekst: "...omdat hij ziek is = reden" }],
           basiskennis: [{ onderwerp: "hele zin als bep", uitleg: "bijzin = één geheel" }],
           niveaus: { basis: "omdat het regent.", simpeler: "Waarom? omdat regent.", nogSimpeler: "omdat-zin." },
@@ -786,7 +786,7 @@ const steps = [
   },
   {
     title: "Eindopdracht — alle vaardigheden",
-    explanation: "Laatste set van vier vragen. Combineert alles uit het hele leerpad: pv, onderwerp, gezegde-type, lv, mv, bepalingen, woordsoorten.\n\n**Klaar?** Dan kun je zinsontleding op onderbouw-niveau!\n\n**Volgende stap**: gebruik dit bij Nederlands-toetsen, schrijfopdrachten (helpt bij correcte zinnen), en bij grammatica-vragen op CITO-toetsen.\n\nVeel succes! 🏆",
+    explanation: "Laatste set van vier vragen. Combineert alles uit het hele leerpad: pv, onderwerp, gezegde-type, lv, mv, bepalingen, woordsoorten.\n\n**Klaar?** Dan kun je zinsontleding op onderbouw-niveau!\n\n**Volgende stap**: gebruik dit bij Nederlands-toetsen, schrijfopdrachten (helpt bij correcte zinnen), en bij grammatica-vragen op toetsen.\n\nVeel succes! 🏆",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="60" y="40" width="180" height="100" rx="14" fill="rgba(160,96,255,0.15)" stroke="${COLORS.paars}" stroke-width="3"/>
 <text x="150" y="80" text-anchor="middle" fill="${COLORS.paars}" font-size="28" font-family="Arial" font-weight="bold">ont-</text>
@@ -805,7 +805,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Verhuizen is een werkwoord, maar niet vervoegd. 'Zullen' is wel vervoegd (van 'zullen' → 'zullen' meervoud).",
+          "Verhuizen is een werkwoord, maar niet vervoegd. 'Zullen' is wel vervoegd: meervoud, passend bij 'mijn ouders'.",
           "Ouders = onderwerp.",
           "Spanje = bep. van plaats.",
         ],
@@ -843,17 +843,17 @@ const steps = [
         },
       },
       {
-        q: "*In de zin \"Mijn moeder bakt morgen voor het feest een grote taart\" — wat is de bepaling van TIJD?*",
+        q: "*In de zin \"Mijn moeder bakt morgen voor haar collega's een grote taart\" — wat is de bepaling van TIJD?*",
         options: [
           "morgen",
-          "voor het feest",
+          "voor haar collega's",
           "een grote taart",
           "mijn moeder",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "'Voor het feest' kan een bep. van doel zijn, maar antwoord op 'wanneer?' is duidelijker.",
+          "'Voor haar collega's' zegt voor wie, niet wanneer.",
           "'Een grote taart' = lv (wat wordt gebakken?).",
           "'Mijn moeder' = onderwerp.",
         ],
@@ -862,7 +862,7 @@ const steps = [
           woorden: [{ woord: "tijd", uitleg: "wanneer? hoe lang?" }],
           theorie: "Morgen / gisteren / nu / altijd = tijd.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Morgen bakt ze... morgen = wanneer" }],
-          basiskennis: [{ onderwerp: "vs doel", uitleg: "'voor het feest' = doel, niet tijd" }],
+          basiskennis: [{ onderwerp: "vs voor wie", uitleg: "'voor haar collega's' = voor wie, niet tijd" }],
           niveaus: { basis: "morgen.", simpeler: "Wanneer? morgen.", nogSimpeler: "morgen." },
         },
       },
@@ -879,7 +879,7 @@ const steps = [
           null,
           "Atleet = zelfstandig naamwoord (zaak/persoon).",
           "Finish = zelfstandig naamwoord.",
-          "Naar = voorzetsel. 'Ongelooflijk' versterkt 'snel' (een ander bijwoord) — typisch bijwoord-gedrag.",
+          "Naar = voorzetsel.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Bw versterkt ander bw", tekst: "'Ongelooflijk' bij 'snel' (ook bw) = bijwoord." }],

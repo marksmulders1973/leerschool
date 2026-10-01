@@ -19,7 +19,7 @@ const steps = [
   {
     title: "Het alfabet — de letters op volgorde",
     explanation:
-      "Het **alfabet** zijn alle letters op een rij:\n\n**a b c d e f g h i j k l m n o p q r s t u v w x y z**\n\nDat zijn er 26.\n\n**Waarom handig?**\n• Woorden in een woordenboek staan op alfabet.\n• Namen op een lijst staan op alfabet.\n\n**Zo zoek je**: kijk naar de **eerste letter** van het woord. De b komt vóór de k. Dus *bal* staat vóór *kat*.",
+      "Het **alfabet** is alle letters op een rij:\n\n**a b c d e f g h i j k l m n o p q r s t u v w x y z**\n\nDat zijn er 26.\n\n**Waarom handig?**\n• Woorden in een woordenboek staan op alfabet.\n• Namen op een lijst staan op alfabet.\n\n**Zo zoek je**: kijk naar de **eerste letter** van het woord. De b komt vóór de k. Dus *bal* staat vóór *kat*.",
     checks: [
       {
         q: "Welke letter komt **na de d**?",
@@ -95,7 +95,7 @@ const steps = [
         q: "Wat is het meervoud van **huis**?",
         options: ["huizen", "huisen", "huises", "huizes"],
         answer: 0,
-        wrongHints: [null, "Bijna! De s verandert in een andere letter.", "Zeg het hardop — klinkt dat goed?", "Daar zit een letter te veel."],
+        wrongHints: [null, "Bijna! De s verandert in een andere letter.", "Zeg het hardop — klinkt dat goed?", "Bijna — maar het meervoud eindigt op -en."],
         uitlegPad: {
           stappen: [{ titel: "De s wordt een z", tekst: "één huis → twee **huizen**. De s verandert in een z. Zo ook: muis → muizen." }],
           voorbeelden: [{ type: "voorbeeld", tekst: "één muis → twee muizen. één neus → twee neuzen." }],
@@ -263,7 +263,7 @@ const steps = [
         },
       },
       {
-        q: "Welk woord in deze zin moet een **hoofdletter** hebben? **gisteren ging lisa naar school.**",
+        q: "Welke woorden in deze zin moeten een **hoofdletter** hebben? **gisteren ging lisa naar school.**",
         options: ["gisteren én lisa", "alleen school", "alleen ging", "geen enkel woord"],
         answer: 0,
         wrongHints: [null, "Denk aan het begin van de zin — en aan namen.", "Kijk naar het eerste woord van de zin.", "Er zijn er zeker twee."],

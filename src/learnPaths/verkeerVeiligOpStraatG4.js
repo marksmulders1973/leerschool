@@ -91,7 +91,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Daar komen de fietsers van de andere kant!", "Dan kan niemand je voorbij.", "Er is wél een regel voor."],
         uitlegPad: {
-          stappen: [{ titel: "Rechts houden", tekst: "In Nederland rijdt iedereen **rechts** — auto's én fietsers. Zo botst je niet tegen fietsers die je tegemoetkomen." }],
+          stappen: [{ titel: "Rechts houden", tekst: "In Nederland rijdt iedereen **rechts** — auto's én fietsers. Zo bots je niet tegen fietsers die je tegemoetkomen." }],
           niveaus: { basis: "Je fietst rechts.", simpeler: "Zelfde kant als de auto's: rechts.", nogSimpeler: "rechts" },
         },
       },
@@ -146,7 +146,7 @@ const steps = [
         },
       },
       {
-        q: "Wat betekent het **rode poppetje** bij het zebrapad?",
+        q: "Wat betekent het **rode poppetje** bij het verkeerslicht?",
         options: ["wachten op de stoep", "je mag oversteken", "het licht is kapot", "alleen volwassenen mogen gaan"],
         answer: 0,
         wrongHints: [null, "Dat is bij het gróéne poppetje.", "Het licht doet het gewoon.", "De regel is voor iedereen hetzelfde."],
@@ -249,7 +249,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Een rode rand is nooit 'alles mag'.", "Verkeersborden gaan over de weg.", "Verkeersborden gaan over de weg."],
         uitlegPad: {
-          stappen: [{ titel: "Driehoek = waarschuwing", tekst: "Een **driehoek met rode rand** waarschuwt: pas op! Bijvoorbeeld voor een overstekende kinderen-plek, een bocht of werk aan de weg. Het plaatje in de driehoek zegt waarvoor." }],
+          stappen: [{ titel: "Driehoek = waarschuwing", tekst: "Een **driehoek met rode rand** waarschuwt: pas op! Bijvoorbeeld voor een plek waar kinderen oversteken, een bocht of werk aan de weg. Het plaatje in de driehoek zegt waarvoor." }],
           niveaus: { basis: "Driehoek met rode rand = pas op.", simpeler: "Driehoek zegt: let op!", nogSimpeler: "pas op" },
         },
       },

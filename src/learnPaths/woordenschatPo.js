@@ -23,7 +23,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is woordenschat?",
-    explanation: "**Woordenschat** = alle woorden die je **kent en begrijpt**. Hoe meer woorden, hoe beter je teksten begrijpt.\n\n**Soorten 'woord-vragen' bij de Doorstroomtoets**:\n• **Synoniemen**: woorden met dezelfde betekenis. *snel = vlug = rap*.\n• **Antoniemen** *(tegenstellingen)*: woorden met tegenovergestelde betekenis. *groot ↔ klein*.\n• **Betekenis in zin**: 'wat betekent dit moeilijke woord in deze zin?'\n• **Verbindingswoorden**: 'maar', 'omdat', 'echter' — wat doen ze?\n\n**Toets-strategieën om woordenschat te vergroten**:\n1. **Veel lezen** *(boeken, krant)*. Elk nieuw woord = 1 stap dichter bij Toets-niveau.\n2. **Context gebruiken**: kijk naar de zin rondom een onbekend woord.\n3. **Verband leggen** met woorden die je al kent. *snel ↔ vlug — beide betekenen het 'rapper gaan'*.\n4. **Ezelsbruggetjes**: gekke verbanden helpen onthouden.\n\n**toetsvraag-vorm — meerkeuze**:\n*'Welk woord betekent ongeveer hetzelfde als ENORM?'*\n• A: heel groot (✓)\n• B: heel klein\n• C: snel\n• D: kleurig\n\n**Toets-tip**:\nLees ELKE optie. Soms zien meerdere er bij eerste blik logisch uit.",
+    explanation: "**Woordenschat** = alle woorden die je **kent en begrijpt**. Hoe meer woorden, hoe beter je teksten begrijpt.\n\n**Soorten 'woord-vragen' bij de Doorstroomtoets**:\n• **Synoniemen**: woorden met dezelfde betekenis. *snel = vlug = rap*.\n• **Antoniemen** *(tegenstellingen)*: woorden met tegenovergestelde betekenis. *groot ↔ klein*.\n• **Betekenis in zin**: 'wat betekent dit moeilijke woord in deze zin?'\n• **Verbindingswoorden**: 'maar', 'omdat', 'echter' — wat doen ze?\n\n**Toets-strategieën om woordenschat te vergroten**:\n1. **Veel lezen** *(boeken, krant)*. Elk nieuw woord = 1 stap dichter bij Toets-niveau.\n2. **Context gebruiken**: kijk naar de zin rondom een onbekend woord.\n3. **Verband leggen** met woorden die je al kent. *snel = vlug: ze betekenen hetzelfde*.\n4. **Ezelsbruggetjes**: gekke verbanden helpen onthouden.\n\n**toetsvraag-vorm — meerkeuze**:\n*'Welk woord betekent ongeveer hetzelfde als ENORM?'*\n• A: heel groot (✓)\n• B: heel klein\n• C: snel\n• D: kleurig\n\n**Toets-tip**:\nLees ELKE optie. Soms zien meerdere er bij eerste blik logisch uit.",
     checks: [
       {
         q: "Wat is **woordenschat**?",
@@ -50,7 +50,7 @@ const steps = [
           theorie: "Woordenschat = woord-betekenis. Spelling = woord-schrijfwijze. Twee aparte vakgebieden.",
           voorbeelden: [{ type: "verschil", tekst: "Woordenschat: 'wat betekent enorm?'. Spelling: 'hoe schrijf je enorm?'." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Lees vraag goed: zoek wat NIET hoort." }],
-          niveaus: { basis: "Spelling = niet woordenschat.", simpeler: "Synoniem (=B), antoniem (=C), betekenis in zin (=D) zijn ALLEMAAL woordenschat. Spelling-regels (A) is iets anders.", nogSimpeler: "Spelling = niet" },
+          niveaus: { basis: "Spelling = niet woordenschat.", simpeler: "Synoniemen, antoniemen en betekenis in zin zijn ALLEMAAL woordenschat. Spelling-regels zijn iets anders.", nogSimpeler: "Spelling = niet" },
         },
       },
       {
@@ -72,7 +72,7 @@ const steps = [
 
   {
     title: "Synoniemen — dezelfde betekenis, andere woorden",
-    explanation: "**Synoniemen** zijn woorden met **dezelfde of bijna dezelfde betekenis**. Twee woorden die je kunt uitwisselen in een zin.\n\n**Voorbeelden**:\n• **groot** = enorm = reusachtig = gigantisch = mega\n• **snel** = vlug = rap = gauw = kwiek\n• **klein** = mini = piepklein = nietig\n• **mooi** = prachtig = schitterend = fraai\n• **bang** = angstig = bezorgd = bezorgd\n• **blij** = vrolijk = opgewekt = gelukkig\n\n**Waarom synoniemen?**\n• Maakt teksten **rijker** — niet steeds hetzelfde woord.\n• Helpt bij begrijpend lezen — als je 'enorm' niet kent, weet je via synoniem dat 't 'heel groot' betekent.\n\n**Toets-tip — hoe vind je het beste synoniem**:\n1. Lees de zin met het origineel woord.\n2. Vervang het met elk antwoord.\n3. Klinkt de zin nog steeds **logisch en hetzelfde**? Dan klopt het synoniem.\n\n**Voorbeeld**: *'Het was een prachtige dag.'*\n• 'Het was een mooie dag' — klinkt logisch + zelfde betekenis ✓\n• 'Het was een grote dag' — klinkt gek (dag is niet 'groot').\n\n**Veel-voorkomende fout**:\nWoorden die op elkaar **lijken** maar niet hetzelfde zijn. Bijvoorbeeld 'grappig' en 'leuk' lijken op elkaar, maar:\n• 'Grappig' = doet je lachen.\n• 'Leuk' = aangenaam.\n\nNiet hetzelfde, hoewel ze elkaar overlappen.",
+    explanation: "**Synoniemen** zijn woorden met **dezelfde of bijna dezelfde betekenis**. Twee woorden die je kunt uitwisselen in een zin.\n\n**Voorbeelden**:\n• **groot** = enorm = reusachtig = gigantisch = mega\n• **snel** = vlug = rap = gauw = kwiek\n• **klein** = mini = piepklein = nietig\n• **mooi** = prachtig = schitterend = fraai\n• **bang** = angstig = bevreesd\n• **blij** = vrolijk = opgewekt = gelukkig\n\n**Waarom synoniemen?**\n• Maakt teksten **rijker** — niet steeds hetzelfde woord.\n• Helpt bij begrijpend lezen — als je 'enorm' niet kent, weet je via synoniem dat 't 'heel groot' betekent.\n\n**Toets-tip — hoe vind je het beste synoniem**:\n1. Lees de zin met het oorspronkelijke woord.\n2. Vervang het door elk antwoord.\n3. Klinkt de zin nog steeds **logisch en hetzelfde**? Dan klopt het synoniem.\n\n**Voorbeeld**: *'Het was een prachtige dag.'*\n• 'Het was een mooie dag' — klinkt logisch + zelfde betekenis ✓\n• 'Het was een grote dag' — klinkt gek (dag is niet 'groot').\n\n**Veel-voorkomende fout**:\nWoorden die op elkaar **lijken** maar niet hetzelfde zijn. Bijvoorbeeld 'grappig' en 'leuk' lijken op elkaar, maar:\n• 'Grappig' = doet je lachen.\n• 'Leuk' = aangenaam.\n\nNiet hetzelfde, hoewel ze elkaar overlappen.",
     checks: [
       {
         q: "Wat is een **synoniem voor 'enorm'**?",
@@ -108,7 +108,7 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Andersom — eng is niet leuk.","Geen verband.","Geen verband."],
         uitlegPad: {
-          stappen: [{ titel: "Eng = griezelig", tekst: "Eng, griezelig, eng, akelig — woorden voor angstig-makend." }],
+          stappen: [{ titel: "Eng = griezelig", tekst: "Eng, griezelig, akelig — woorden voor iets wat je bang maakt." }],
           woorden: [{ woord: "eng", uitleg: "Iets dat je bang maakt. Synoniemen: griezelig, akelig, beangstigend." }],
           theorie: "Angst-makend-familie: eng, griezelig, akelig, beangstigend, scary (Engels).",
           voorbeelden: [{ type: "eng", tekst: "Een eng spook = een griezelig spook." }],
@@ -125,7 +125,7 @@ const steps = [
           stappen: [{ titel: "Bezorgd = ongerust", tekst: "Bezorgd, ongerust, bang, gespannen — emotie van zorgen-maken." }],
           woorden: [{ woord: "bezorgd", uitleg: "Zorg-emotie. Vrees voor wat kan gebeuren." }],
           theorie: "Synoniemen voor zorg: bezorgd, ongerust, bang, angstig, gespannen.",
-          voorbeelden: [{ type: "bezorgd", tekst: "Hij was bezorgd voor de toets = hij was ongerust over de toets." }],
+          voorbeelden: [{ type: "bezorgd", tekst: "Hij was bezorgd over de toets = hij was ongerust over de toets." }],
           basiskennis: [{ onderwerp: "Vervang-test", uitleg: "Past 'ongerust' in plaats van 'bezorgd' in zin? Ja → synoniem." }],
           niveaus: { basis: "Bezorgd = ongerust.", simpeler: "Bezorgd over toets = ongerust over toets. Hetzelfde gevoel, ander woord.", nogSimpeler: "Ongerust" },
         },
@@ -135,7 +135,7 @@ const steps = [
 
   {
     title: "Antoniemen — tegenstellingen",
-    explanation: "**Antoniemen** zijn woorden met **tegenovergestelde betekenis**.\n\n**Standaard-tegenstellingen**:\n• groot ↔ klein\n• hoog ↔ laag\n• snel ↔ langzaam\n• warm ↔ koud\n• vol ↔ leeg\n• licht ↔ zwaar\n• zacht ↔ hard\n• jong ↔ oud\n• boven ↔ onder\n• voor ↔ achter\n• binnen ↔ buiten\n• begin ↔ einde\n• meer ↔ minder\n• plus ↔ min\n\n**Soms zijn er meerdere tegenstellingen**:\n• 'licht' kan tegenstelling zijn van 'zwaar' (gewicht) **of** 'donker' (helderheid).\n• Welke past hangt af van de **context**.\n\n**Toets-vraagstijl**:\n*'Welke is de tegenstelling van INTERESSANT?'*\n• A: saai (✓)\n• B: leuk\n• C: kort\n• D: rood\n\n**Tip**: 'leuk' lijkt synoniem, niet antoniem. Pas op!\n\n**Toets-truc — context**:\n*'De zaal was tot op de laatste plek gevuld. Het was ___.'*\n• Tegenstelling van 'vol' = **leeg**.\n• Maar context zegt: zaal was vol → zoek antoniem die past in zo'n zin.\n\n**Tegenstellingen van werkwoorden**:\n• komen ↔ gaan\n• kopen ↔ verkopen\n• stijgen ↔ dalen\n• beginnen ↔ eindigen",
+    explanation: "**Antoniemen** zijn woorden met **tegenovergestelde betekenis**.\n\n**Standaard-tegenstellingen**:\n• groot ↔ klein\n• hoog ↔ laag\n• snel ↔ langzaam\n• warm ↔ koud\n• vol ↔ leeg\n• licht ↔ zwaar\n• zacht ↔ hard\n• jong ↔ oud\n• boven ↔ onder\n• voor ↔ achter\n• binnen ↔ buiten\n• begin ↔ einde\n• meer ↔ minder\n• plus ↔ min\n\n**Soms zijn er meerdere tegenstellingen**:\n• 'licht' kan tegenstelling zijn van 'zwaar' (gewicht) **of** 'donker' (helderheid).\n• Welke past hangt af van de **context**.\n\n**Toets-vraagstijl**:\n*'Welke is de tegenstelling van INTERESSANT?'*\n• A: saai (✓)\n• B: leuk\n• C: kort\n• D: rood\n\n**Tip**: 'leuk' is eerder een synoniem dan een antoniem. Pas op!\n\n**Toets-truc — context**:\n*'Gisteren zat de zaal vol, maar vandaag was hij ___.'*\n• 'maar' kondigt een tegenstelling aan.\n• Tegenstelling van 'vol' = **leeg**.\n\n**Tegenstellingen van werkwoorden**:\n• komen ↔ gaan\n• kopen ↔ verkopen\n• stijgen ↔ dalen\n• beginnen ↔ eindigen",
     checks: [
       {
         q: "Tegenstelling van **'zwaar'**?",
@@ -157,7 +157,7 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Synoniem van beginnen, geen tegenstelling.","Synoniem van beginnen.","Lijkt qua betekenis, maar er is een preciezer woord."],
         uitlegPad: {
-          stappen: [{ titel: "Beginnen ↔ eindigen", tekst: "Beginnen = start. Tegenovergesteld = eindigen, klaarmaken, afronden." }],
+          stappen: [{ titel: "Beginnen ↔ eindigen", tekst: "Beginnen = start. Tegenovergesteld = eindigen, afronden." }],
           woorden: [{ woord: "eindigen", uitleg: "Tot een einde komen — antoniem van beginnen." }],
           theorie: "Tijd-paar: beginnen ↔ eindigen. Stoppen lijkt erop maar is breder. Starten/openen = synoniem.",
           voorbeelden: [{ type: "anti", tekst: "De film begint om 8 ↔ de film eindigt om 10." }],
@@ -173,10 +173,10 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verlengen ↔ verkorten", tekst: "Verlengen = langer maken. Tegenovergesteld = verkorten (korter maken)." }],
           woorden: [{ woord: "verlengen", uitleg: "Langer maken in tijd of afstand." }],
-          theorie: "Lengte-paar: verlengen ↔ verkorten. Vergroten = synoniem (groter maken).",
+          theorie: "Lengte-paar: verlengen ↔ verkorten. Vergroten = groter maken, geen tegenstelling.",
           voorbeelden: [{ type: "anti", tekst: "Vergadering verlengen ↔ vergadering verkorten. Touw verlengen ↔ touw verkorten." }],
           basiskennis: [{ onderwerp: "Voorvoegsel ver-", uitleg: "ver- + lang/kort verandert 'lang' en 'kort' in werkwoorden — tegenovergesteld blijft hetzelfde." }],
-          niveaus: { basis: "Verlengen ↔ verkorten.", simpeler: "Langer maken ↔ korter maken = verlengen ↔ verkorten. (Vergroten=synoniem, openen/stoppen=geen verband).", nogSimpeler: "Verkorten" },
+          niveaus: { basis: "Verlengen ↔ verkorten.", simpeler: "Langer maken ↔ korter maken = verlengen ↔ verkorten. (Vergroten=groter maken, openen/stoppen=geen verband).", nogSimpeler: "Verkorten" },
         },
       },
       {
@@ -198,7 +198,7 @@ const steps = [
 
   {
     title: "Woorden in zinnen begrijpen",
-    explanation: "Vaak kom je een **onbekend woord** tegen. **Context** *(de woorden eromheen)* helpt je raden wat het betekent.\n\n**Voorbeeld**:\n*'De auto reed met een **enorme** snelheid voorbij — bijna 200 km per uur.'*\n\nWat betekent **enorm** hier?\n• De zin geeft de hint: '200 km/h' = heel snel.\n• Dus 'enorm' = **heel groot/veel**.\n\n**Toets-strategieën — context-clues**:\n1. **Synoniem in zin**: 'De man was bezorgd, ofwel ongerust over zijn kind.'\n   - 'ofwel' geeft een synoniem. Bezorgd = ongerust.\n2. **Voorbeeld**: 'Tropische dieren — bv. olifanten en apen — leven in warme landen.'\n   - 'tropisch' = van warme landen.\n3. **Tegenstelling**: 'Hij was niet boos, hij was kalm.'\n   - 'kalm' = tegenstelling van boos = rustig.\n4. **Algemene context**: lees de hele alinea — wat is het hoofdonderwerp?\n\n**toetsvraag-typen**:\n• 'Wat betekent X in zin Y?'\n• 'Welke optie kun je niet vervangen door X in deze zin?'\n• 'Welk woord is hier het meest passend?'\n\n**Veel-voorkomende fout**:\nLetterlijke betekenis nemen zonder context. *'De man was geel van angst'* — geel betekent hier 'heel bang', niet de kleur.",
+    explanation: "Vaak kom je een **onbekend woord** tegen. **Context** *(de woorden eromheen)* helpt je raden wat het betekent.\n\n**Voorbeeld**:\n*'De auto reed met een **enorme** snelheid voorbij — bijna 200 km per uur.'*\n\nWat betekent **enorm** hier?\n• De zin geeft de hint: '200 km/h' = heel snel.\n• Dus 'enorm' = **heel groot/veel**.\n\n**Toets-strategieën — context-clues**:\n1. **Synoniem in zin**: 'De man was bezorgd, ofwel ongerust over zijn kind.'\n   - 'ofwel' geeft een synoniem. Bezorgd = ongerust.\n2. **Voorbeeld**: 'Tropische dieren — bv. olifanten en apen — leven in warme landen.'\n   - 'tropisch' = van warme landen.\n3. **Tegenstelling**: 'Hij was niet boos, hij was kalm.'\n   - 'kalm' = tegenstelling van boos = rustig.\n4. **Algemene context**: lees de hele alinea — wat is het hoofdonderwerp?\n\n**toetsvraag-typen**:\n• 'Wat betekent X in zin Y?'\n• 'Welke optie kun je niet vervangen door X in deze zin?'\n• 'Welk woord is hier het meest passend?'\n\n**Veel-voorkomende fout**:\nLetterlijke betekenis nemen zonder context. *'De man was wit van angst'* — wit betekent hier 'heel bang', niet de kleur.",
     checks: [
       {
         q: "*'Het ging goed met Tom: hij vorderde gestaag op school.'* — 'vorderde' betekent:",
@@ -210,7 +210,7 @@ const steps = [
           woorden: [{ woord: "vorderen", uitleg: "Vooruitgang maken, beter worden." }, { woord: "gestaag", uitleg: "Constant doorgaan, niet stoppen." }],
           theorie: "Context-truc: zinsgevoel (positief/negatief) bepaalt welke optie past.",
           voorbeelden: [{ type: "context", tekst: "'Ging goed' = positief → 'vorderde' = positief → vooruitgang." }],
-          basiskennis: [{ onderwerp: "Schrap optie's", uitleg: "Problemen, sloeg over, bleef hetzelfde = niet positief → wegstrepen." }],
+          basiskennis: [{ onderwerp: "Schrap opties", uitleg: "Problemen, sloeg over, bleef hetzelfde = niet positief → wegstrepen." }],
           niveaus: { basis: "Vorderde = vooruitgang.", simpeler: "Tom ging het GOED = positief. Dus 'vorderde' moet positief betekenen = maakte vooruitgang.", nogSimpeler: "Vooruit" },
         },
       },
@@ -273,7 +273,7 @@ const steps = [
           woorden: [{ woord: "on-", uitleg: "Voorvoegsel dat tegenstelling maakt: on-eerlijk, on-aardig, on-mogelijk." }],
           theorie: "Veel antoniemen via 'on-' voorvoegsel: prettig↔onprettig, geduldig↔ongeduldig.",
           voorbeelden: [{ type: "on-", tekst: "Eerlijk ↔ oneerlijk. Verstandig ↔ onverstandig. Beleefd ↔ onbeleefd." }],
-          basiskennis: [{ onderwerp: "Direct herkennen", uitleg: "Optie A heeft 'on-' voor 'eerlijk' = directe tegenstelling." }],
+          basiskennis: [{ onderwerp: "Direct herkennen", uitleg: "'On-' voor 'eerlijk' zetten = directe tegenstelling." }],
           niveaus: { basis: "Eerlijk ↔ oneerlijk.", simpeler: "Voor 'eerlijk' het voorvoegsel 'on-' zetten = oneerlijk = tegenstelling.", nogSimpeler: "On+eerlijk" },
         },
       },
@@ -284,9 +284,9 @@ const steps = [
         wrongHints: [null,"Andersom.","Andersom.","Niet de exacte betekenis."],
         uitlegPad: {
           stappen: [{ titel: "Uitdrukking", tekst: "'In zijn schik' = vaste uitdrukking voor: blij, tevreden, gelukkig." }],
-          woorden: [{ woord: "in zijn schik", uitleg: "Uitdrukking voor 'blij'. Schik = oude woord voor plezier." }],
+          woorden: [{ woord: "in zijn schik", uitleg: "Uitdrukking voor 'blij'. Schik = oud woord voor plezier." }],
           theorie: "Uitdrukkingen ('zegswijzen') = vaste woordcombinaties met aparte betekenis. Niet letterlijk vertalen.",
-          voorbeelden: [{ type: "uitdr", tekst: "In zijn schik = blij. In zijn nopjes = blij. Door dolle heen = uitgelaten blij." }],
+          voorbeelden: [{ type: "uitdr", tekst: "In zijn schik = blij. In zijn nopjes = blij. Door het dolle heen = uitgelaten blij." }],
           basiskennis: [{ onderwerp: "Cadeau = positief", uitleg: "Context (cadeau krijgen) geeft hint dat het iets positiefs moet zijn." }],
           niveaus: { basis: "In zijn schik = blij.", simpeler: "'In zijn schik' is een uitdrukking voor blij/tevreden. Cadeau krijgen = blij worden.", nogSimpeler: "Blij" },
         },
@@ -315,7 +315,7 @@ const steps = [
           woorden: [{ woord: "uiterst", uitleg: "Versterkend bijwoord: heel, zeer, extreem. Voor bijvoeglijke woorden." }],
           theorie: "Versterkers: heel, zeer, uiterst, bijzonder, ongelooflijk — allemaal sterker dan zonder.",
           voorbeelden: [{ type: "uiterst", tekst: "Uiterst nuttig = heel nuttig. Uiterst belangrijk = heel belangrijk." }],
-          basiskennis: [{ onderwerp: "Niet 'uiterst' = uiterlijk", uitleg: "Uiterst en uiterlijk lijken op elkaar — ander betekenis. Uiterlijk = aan de buitenkant." }],
+          basiskennis: [{ onderwerp: "Niet 'uiterst' = uiterlijk", uitleg: "Uiterst en uiterlijk lijken op elkaar — andere betekenis. Uiterlijk = aan de buitenkant." }],
           niveaus: { basis: "Uiterst = heel.", simpeler: "'Uiterst nuttig' = heel nuttig. Uiterst maakt het bijvoeglijk woord sterker.", nogSimpeler: "Heel" },
         },
       },
@@ -328,7 +328,7 @@ const steps = [
           stappen: [{ titel: "Welke is GEEN", tekst: "Lelijk = TEGENSTELLING van mooi (antoniem). De rest = synoniemen." }],
           woorden: [{ woord: "fraai", uitleg: "Synoniem van mooi — ouder/formeel woord." }],
           theorie: "Mooi-familie: mooi, prachtig, schitterend, fraai, knap. Antoniem: lelijk.",
-          voorbeelden: [{ type: "test", tekst: "Vervangtest: 'een mooie dag' → 'een prachtige dag' ✓ → 'een lelijke dag' = ander betekenis." }],
+          voorbeelden: [{ type: "test", tekst: "Vervangtest: 'een mooie dag' → 'een prachtige dag' ✓ → 'een lelijke dag' = andere betekenis." }],
           basiskennis: [{ onderwerp: "FOUT-vraag", uitleg: "Vraag zoekt het ENE woord dat NIET past. Lees opties scherp." }],
           niveaus: { basis: "Lelijk = niet synoniem.", simpeler: "Prachtig, schitterend, fraai = allemaal synoniem voor mooi. Lelijk = TEGENSTELLING.", nogSimpeler: "Lelijk" },
         },
@@ -342,7 +342,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een spreekwoord?", tekst: "Een **spreekwoord** is een **vaste uitdrukking** met een **figuurlijke** (= overdrachtelijke) betekenis. Je begrijpt het niet door de woorden letterlijk te nemen.\n\nVoorbeeld: 'de kat uit de boom kijken' = NIET letterlijk naar een kat staren. Wel: **'voorzichtig afwachten + kijken hoe een situatie zich ontwikkelt voordat je actie onderneemt'**." },
             { titel: "Toets-truc: letterlijk vs figuurlijk", tekst: "Bij elke spreekwoord-vraag: vraag jezelf 'wat is de **figuurlijke** betekenis?'\n\nMeer voorbeelden:\n• **'Boter bij de vis'** = direct betalen (niet letterlijk over eten)\n• **'Gras over laten groeien'** = vergeten, voorbij laten gaan\n• **'Iemand om de tuin leiden'** = bedriegen, misleiden\n• **'Door de zure appel heen bijten'** = iets vervelends doen wat moet\n• **'Met de deur in huis vallen'** = direct ter zake komen" },
-            { titel: "Toets-feit: in NL veel 'dieren-spreekwoorden'", tekst: "Veel Nederlandse spreekwoorden gebruiken dieren:\n• 'Een kat in de zak kopen' (slecht koopje)\n• 'Een paard kijken in de bek' (kritiek op cadeau)\n• 'De koe bij de horens vatten' (probleem aanpakken)\n• 'Vissen achter het net' (te laat zijn)\n• 'Een wolf in schaapskleren' (boos persoon doet aardig)\n\nVoor de toets hoef je niet alles te kennen — wel: weten dat spreekwoord = figuurlijk + kunnen achterhalen uit context." },
+            { titel: "Toets-feit: in NL veel 'dieren-spreekwoorden'", tekst: "Veel Nederlandse spreekwoorden gebruiken dieren:\n• 'Een kat in de zak kopen' (slecht koopje)\n• 'Een gegeven paard niet in de bek kijken' (geen kritiek op een cadeau)\n• 'De koe bij de horens vatten' (probleem aanpakken)\n• 'Vissen achter het net' (te laat zijn)\n• 'Een wolf in schaapskleren' (slecht persoon die zich aardig voordoet)\n\nVoor de toets hoef je niet alles te kennen — wel: weten dat spreekwoord = figuurlijk + kunnen achterhalen uit context." },
           ],
           woorden: [
             { woord: "spreekwoord", uitleg: "Vaste uitdrukking met figuurlijke betekenis. Vaak generaties oud." },
@@ -352,7 +352,7 @@ const steps = [
           theorie: "Spreekwoord-aanpak voor de toets:\n1. Lees zin in context (verhaal/dialoog)\n2. Letterlijke woorden niet voldoende — denk: 'wat betekent dit FIGUURLIJK?'\n3. Twijfel? Welke optie past bij wat in het verhaal gebeurt?\n\nNiet meteen kiezen letterlijke optie — bijna altijd verkeerd bij spreekwoord-vragen.",
           voorbeelden: [
             { type: "stap", tekst: "'Tom kreeg een appeltje voor de dorst' = Tom kreeg iets voor later/zekerheid, niet letterlijk fruit." },
-            { type: "stap", tekst: "'De spijker op de kop' = exact het juiste raken." },
+            { type: "stap", tekst: "'De spijker op de kop slaan' = precies het juiste zeggen." },
           ],
           basiskennis: [{ onderwerp: "Niet letterlijk", uitleg: "Bij spreekwoord-vraag: kies NOOIT letterlijke optie. Altijd figuurlijke uitleg." }],
           niveaus: { basis: "Afwachten + observeren.", simpeler: "Spreekwoord 'de kat uit de boom kijken' = voorzichtig zijn, eerst kijken hoe iets verloopt voor je iets doet. NIET letterlijk.", nogSimpeler: "Afwachten" },
@@ -367,13 +367,13 @@ const steps = [
           stappen: [
             { titel: "Figuurlijke uitdrukking", tekst: "**'Een open boek'** betekent figuurlijk: **iemand of iets dat doorzichtig + makkelijk te begrijpen is**. Geen verborgen agenda. Eerlijk + voorspelbaar.\n\nIemand die 'een gesloten boek' is = ondoorgrondelijk, mysterieus." },
             { titel: "Toets-context: persoonsbeschrijving", tekst: "In de zin 'Floor is een open boek voor mij':\n• 'Ik kan haar gemakkelijk doorzien'\n• 'Ze verbergt niets'\n• 'Ik weet altijd wat ze denkt + voelt'\n\nLet op CONTEXT: 'voor mij' = vanuit perspectief van spreker. Iemand anders kan haar moeilijker doorzien." },
-            { titel: "Toets-tip: stijlfiguren herkennen", tekst: "**'Een open boek'** is een **metafoor** — beeldspraak waarbij iets met iets anders vergeleken wordt zonder 'als' of 'zoals'.\n\nAndere metaforen:\n• 'Hij is een leeuw in een gevecht' (= sterk, dapper)\n• 'Mijn baas is een dictator' (= autoritair)\n• 'Het regent pijpenstelen' (= het regent hard)\n\n**Vergelijking** ('zoals'): 'Hij is sterk ALS een leeuw' — met woord 'als' = vergelijking. Zonder = metafoor." },
+            { titel: "Toets-tip: stijlfiguren herkennen", tekst: "**'Een open boek'** is een **metafoor** — beeldspraak waarbij iets met iets anders vergeleken wordt zonder 'als' of 'zoals'.\n\nAndere metaforen:\n• 'Hij is een leeuw in een gevecht' (= sterk, dapper)\n• 'Mijn baas is een dictator' (= autoritair)\n• 'Zij is het zonnetje in huis' (= vrolijk)\n\n**Vergelijking** ('zoals'): 'Hij is sterk ALS een leeuw' — met woord 'als' = vergelijking. Zonder = metafoor." },
           ],
           woorden: [
             { woord: "metafoor", uitleg: "Beeldspraak: iets WORDT iets anders genoemd zonder 'als'. 'Hij is een ster' = sterren-vergelijking." },
-            { woord: "doorzichtig", uitleg: "Letterlijk: licht doorlaat (glas). Figuurlijk: makkelijk te begrijpen." },
+            { woord: "doorzichtig", uitleg: "Letterlijk: laat licht door (glas). Figuurlijk: makkelijk te begrijpen." },
           ],
-          theorie: "**Stijlfiguren** in toetsstof:\n• **Metafoor**: 'mijn hart is een woestijn' (zonder 'als')\n• **Vergelijking**: 'mijn hart is als een woestijn' (mét 'als')\n• **Personificatie**: 'de wind huilt' (dingen krijgen menselijk gedrag)\n• **Hyperbool**: 'ik heb 1000 keer gezegd' (overdrijving)\n• **Litotes**: 'niet onaardig' (= aardig, dubbele ontkenning)",
+          theorie: "**Stijlfiguren** in toetsstof:\n• **Metafoor**: 'mijn hart is een woestijn' (zonder 'als')\n• **Vergelijking**: 'mijn hart is als een woestijn' (mét 'als')\n• **Personificatie**: 'de wind huilt' (dingen krijgen menselijk gedrag)\n• **Hyperbool**: 'ik heb het 1000 keer gezegd' (overdrijving)\n• **Litotes**: 'niet onaardig' (= aardig, dubbele ontkenning)",
           voorbeelden: [
             { type: "stap", tekst: "'Mijn moeder is een rots' = sterke steun, niet letterlijk steen." },
             { type: "stap", tekst: "'De zon lacht' = personificatie, zon kan niet echt lachen." },
@@ -386,12 +386,12 @@ const steps = [
         q: "Wat is het **antoniem** van **'overvloed'**?",
         options: ["Tekort / schaarste","Veel","Eten","Bos"],
         answer: 0,
-        wrongHints: [null, "Niet — 'veel' is synoniem van overvloed.", "Niet — eten heeft niets met de tegenstelling.", "Niet — bos is een plek."],
+        wrongHints: [null, "Niet — 'veel' is synoniem van overvloed.", "Niet — eten heeft niets met de tegenstelling te maken.", "Niet — bos is een plek."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een antoniem?", tekst: "Een **antoniem** is een woord met **tegengestelde betekenis**. Het is het tegenovergestelde van een **synoniem** (zelfde betekenis).\n\nVoorbeeld:\n• 'Mooi' ↔ antoniem 'lelijk'\n• 'Snel' ↔ antoniem 'langzaam'\n• 'Veel' ↔ antoniem 'weinig'" },
             { titel: "Overvloed = ?", tekst: "**Overvloed** betekent: heel veel ergens van. Bijvoorbeeld 'overvloed aan voedsel' = veel meer dan genoeg.\n\nTegenstelling: **tekort** of **schaarste** — wanneer er TE WEINIG is van iets. Bijvoorbeeld 'tekort aan water' = te weinig water.\n\nIn toetsvragen wordt vaak gevraagd: 'Welk woord is het ANTONIEM van X?'" },
-            { titel: "Toets-tip: synoniem vs antoniem", tekst: "De toets test allebei:\n• **Synoniem** = zelfde betekenis. (Bv. 'huis' ↔ 'woning')\n• **Antoniem** = tegenovergestelde. (Bv. 'huis' geen direct antoniem, maar 'mooi' ↔ 'lelijk')\n\nLet ALTIJD op vraag: zoekt de toets synoniem of antoniem? Veel kinderen lezen te snel + wisselen ze om → verkeerd antwoord ondanks goede kennis." },
+            { titel: "Toets-tip: synoniem vs antoniem", tekst: "De toets test allebei:\n• **Synoniem** = zelfde betekenis. (Bv. 'huis' ↔ 'woning')\n• **Antoniem** = tegenovergestelde. (Bv. 'huis' heeft geen direct antoniem, maar 'mooi' ↔ 'lelijk')\n\nLet ALTIJD op vraag: zoekt de toets synoniem of antoniem? Veel kinderen lezen te snel + wisselen ze om → verkeerd antwoord ondanks goede kennis." },
           ],
           woorden: [
             { woord: "antoniem", uitleg: "Woord met tegengestelde betekenis. Ook wel 'tegenstelling' genoemd." },
@@ -404,16 +404,16 @@ const steps = [
             { type: "stap", tekst: "Antoniem van 'optimistisch' = pessimistisch." },
             { type: "stap", tekst: "Antoniem van 'transparant' = ondoorzichtig." },
           ],
-          basiskennis: [{ onderwerp: "Niet vertroubelen", uitleg: "Antoniem is TEGENOVERGESTELDE — niet 'iets anders'. 'Mooi' antoniem is 'lelijk', niet 'rood' (rood is ander concept, geen tegenstelling)." }],
+          basiskennis: [{ onderwerp: "Niet verwarren", uitleg: "Antoniem is TEGENOVERGESTELDE — niet 'iets anders'. 'Mooi' antoniem is 'lelijk', niet 'rood' (rood is ander concept, geen tegenstelling)." }],
           niveaus: { basis: "Tekort.", simpeler: "Overvloed = veel → antoniem = tekort/schaarste.", nogSimpeler: "Tekort" },
         },
       },
       { q: "Synoniem van **boos**?", options: ["kwaad","blij","verdrietig","bang"], answer: 0, wrongHints: [null, "Antoniem.", "Andere emotie.", "Andere emotie."] },
-      { q: "Wat betekent 'pessimistisch'?", options: ["Verwacht het slechtste","Verwacht het beste","Lacht veel","Eet veel"], answer: 0, wrongHints: [null, "Dat is optimistisch.", "Niet betekenis.", "Geen verband."] },
+      { q: "Wat betekent 'pessimistisch'?", options: ["Verwacht het slechtste","Verwacht het beste","Lacht veel","Eet veel"], answer: 0, wrongHints: [null, "Dat is optimistisch.", "Heeft er niets mee te maken.", "Geen verband."] },
       { q: "Wat is een **synoniem**?", options: ["Woord met dezelfde betekenis","Tegengestelde","Lang woord","Klein woord"], answer: 0, wrongHints: [null, "Dat is antoniem.", "Niet relevant.", "Niet relevant."] },
       { q: "Wat is een **antoniem**?", options: ["Tegengestelde betekenis","Zelfde betekenis","Lang woord","Spreekwoord"], answer: 0, wrongHints: [null, "Synoniem.", "Niet.", "Niet."] },
       { q: "Synoniem van **snel**?", options: ["vlug","traag","stil","langzaam"], answer: 0, wrongHints: [null, "Antoniem.", "Niets met snelheid.", "Antoniem."] },
-      { q: "Antoniem van **licht** (gewicht)?", options: ["zwaar","donker","helder","klein"], answer: 0, wrongHints: [null, "Andere betekenis (licht = donker).", "Synoniem helderheid.", "Niet."] },
+      { q: "Antoniem van **licht** (gewicht)?", options: ["zwaar","donker","helder","klein"], answer: 0, wrongHints: [null, "Andere betekenis (licht ↔ donker).", "Synoniem helderheid.", "Niet."] },
       { q: "Antoniem van **vol**?", options: ["leeg","gevuld","groot","klein"], answer: 0, wrongHints: [null, "Synoniem.", "Niet.", "Niet."] },
       { q: "Wat betekent **enthousiast**?", options: ["Vol energie en blij","Boos","Verdrietig","Verveeld"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Tegengestelde."] },
       { q: "*Context*: 'De vissers haalden de buit binnen.' Wat betekent 'buit'?", options: ["Vangst / gevonden spullen","Boot","Net","Water"], answer: 0, wrongHints: [null, "Een boot is vervoer, geen buit.", "Een net is gereedschap, geen buit.", "Water is omgeving, geen buit."] },

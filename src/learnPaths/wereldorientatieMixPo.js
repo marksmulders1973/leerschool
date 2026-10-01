@@ -27,7 +27,7 @@ const steps = [
   {
     title: "NL-geschiedenis — tijdvakken-overzicht",
     explanation:
-      "Op de Doorstroomtoets / Doorstroomtoets komen vragen over **wereldoriëntatie** in gemengde vorm. Geschiedenis + aardrijkskunde + natuur worden door elkaar gevraagd. Goed om **overzichts-kennis** te hebben.\n\n**Tien tijdvakken NL-geschiedenis** (officiële indeling sinds 2007):\n\n1. **Tijd van jagers + boeren** (tot 3000 v.Chr.): prehistorie, geen schrift.\n2. **Tijd van Grieken + Romeinen** (3000 v.Chr.-500 n.Chr.): Oudheid, Romeinen ook in NL.\n3. **Tijd van monniken + ridders** (500-1000): Vroege Middeleeuwen.\n4. **Tijd van steden + staten** (1000-1500): Late Middeleeuwen, kastelen, gilden.\n5. **Tijd van ontdekkers + hervormers** (1500-1600): Renaissance, Reformatie, ontdekkings-reizen.\n6. **Tijd van regenten + vorsten** (1600-1700): Gouden Eeuw, VOC, Rembrandt.\n7. **Tijd van pruiken + revoluties** (1700-1800): Verlichting, Franse Revolutie.\n8. **Tijd van burgers + stoommachines** (1800-1900): industriële revolutie, NL koninkrijk.\n9. **Tijd van wereldoorlogen** (1900-1950): WO1, WO2, crisis 1929.\n10. **Tijd van televisie + computer** (1950-nu): wederopbouw, EU, internet.\n\n**Belangrijke jaartallen** (Toets-favoriet):\n• **1492**: Columbus ontdekt Amerika.\n• **1602**: VOC opgericht in Amsterdam — eerste multinationale onderneming.\n• **1648**: Vrede van Münster — NL onafhankelijk van Spanje (na Tachtigjarige Oorlog 1568-1648).\n• **1648**: einde 80-jarige oorlog.\n• **1789**: begin Franse Revolutie (bestorming Bastille 14 juli).\n• **1813**: NL bevrijd van Napoleon.\n• **1815**: Koninkrijk der Nederlanden gesticht (Willem I).\n• **1848**: nieuwe grondwet (Thorbecke), ministerieel verantwoordelijk.\n• **1914-1918**: Eerste Wereldoorlog (NL neutraal).\n• **1929**: beurskrach Wall Street, begin Crisis.\n• **1940-1945**: NL bezet door Duitsland in WO2.\n• **10 mei 1940**: Duitse inval NL.\n• **14 mei 1940**: bombardement Rotterdam.\n• **5 mei 1945**: NL bevrijd.\n• **1948**: Universele Verklaring Rechten Mens.\n• **1953**: Watersnoodramp Zeeland (1836 doden).\n• **1957**: oprichting EEG (basis EU).\n• **1969**: man op de maan (Apollo 11, VS).\n• **1989**: val Berlijnse Muur, einde Koude Oorlog symbolisch.\n• **2002**: euro-munt ingevoerd in NL.\n• **2020-2023**: COVID-19-pandemie.\n\n**Beroemde NL'ers**:\n• **Anne Frank** (1929-1945): Joodse onderduikster Amsterdam, dagboek bewaard, sterft Bergen-Belsen.\n• **Willem van Oranje** (1533-1584): leider 80-jarige oorlog, 'Vader des Vaderlands', vermoord Delft.\n• **Rembrandt van Rijn** (1606-1669): schilder Gouden Eeuw, *De Nachtwacht*.\n• **Johannes Vermeer** (1632-1675): schilder, *Meisje met de parel*.\n• **Vincent van Gogh** (1853-1890): post-impressionist, *Sterrennacht*, *Zonnebloemen*.\n• **Aletta Jacobs** (1854-1929): eerste vrouwelijke arts NL + vrouwenkiesrecht-activist.\n• **Mata Hari** (1876-1917): NL-spionne in WO1, geëxecuteerd door FR.\n• **Erasmus van Rotterdam** (1466-1536): Renaissance-humanist, *Lof der Zotheid*.\n• **Antoni van Leeuwenhoek** (1632-1723): Delftse microscoop-uitvinder, ontdekte bacteriën.\n\n**Toets-typische vraag**:\n'Op welk plaatje zie je een schilderij uit de Gouden Eeuw?'\n→ herken Rembrandt-stijl (clair-obscur, donkere achtergrond, NL-gezicht).",
+      "Op de Doorstroomtoets komen vragen over **wereldoriëntatie** in gemengde vorm. Geschiedenis + aardrijkskunde + natuur worden door elkaar gevraagd. Goed om **overzichts-kennis** te hebben.\n\n**Tien tijdvakken NL-geschiedenis** (officiële indeling sinds 2007):\n\n1. **Tijd van jagers + boeren** (tot 3000 v.Chr.): prehistorie, geen schrift.\n2. **Tijd van Grieken + Romeinen** (3000 v.Chr.-500 n.Chr.): Oudheid, Romeinen ook in NL.\n3. **Tijd van monniken + ridders** (500-1000): Vroege Middeleeuwen.\n4. **Tijd van steden + staten** (1000-1500): Late Middeleeuwen, kastelen, gilden.\n5. **Tijd van ontdekkers + hervormers** (1500-1600): Renaissance, Reformatie, ontdekkings-reizen.\n6. **Tijd van regenten + vorsten** (1600-1700): Gouden Eeuw, VOC, Rembrandt.\n7. **Tijd van pruiken + revoluties** (1700-1800): Verlichting, Franse Revolutie.\n8. **Tijd van burgers + stoommachines** (1800-1900): industriële revolutie, NL koninkrijk.\n9. **Tijd van wereldoorlogen** (1900-1950): WO1, WO2, crisis 1929.\n10. **Tijd van televisie + computer** (1950-nu): wederopbouw, EU, internet.\n\n**Belangrijke jaartallen** (Toets-favoriet):\n• **1492**: Columbus ontdekt Amerika.\n• **1602**: VOC opgericht in Amsterdam — eerste multinationale onderneming.\n• **1648**: Vrede van Münster — NL onafhankelijk van Spanje (na Tachtigjarige Oorlog 1568-1648).\n• **1789**: begin Franse Revolutie (bestorming Bastille 14 juli).\n• **1813**: NL bevrijd van Napoleon.\n• **1815**: Koninkrijk der Nederlanden gesticht (Willem I).\n• **1848**: nieuwe grondwet (Thorbecke), ministeriële verantwoordelijkheid.\n• **1914-1918**: Eerste Wereldoorlog (NL neutraal).\n• **1929**: beurskrach Wall Street, begin Crisis.\n• **1940-1945**: NL bezet door Duitsland in WO2.\n• **10 mei 1940**: Duitse inval NL.\n• **14 mei 1940**: bombardement Rotterdam.\n• **5 mei 1945**: NL bevrijd.\n• **1948**: Universele Verklaring Rechten Mens.\n• **1953**: Watersnoodramp Zeeland (1836 doden).\n• **1957**: oprichting EEG (basis EU).\n• **1969**: man op de maan (Apollo 11, VS).\n• **1989**: val Berlijnse Muur, einde Koude Oorlog symbolisch.\n• **2002**: euro-munt ingevoerd in NL.\n• **2020-2023**: COVID-19-pandemie.\n\n**Beroemde NL'ers**:\n• **Anne Frank** (1929-1945): Joodse onderduikster Amsterdam, dagboek bewaard, sterft Bergen-Belsen.\n• **Willem van Oranje** (1533-1584): leider 80-jarige oorlog, 'Vader des Vaderlands', vermoord Delft.\n• **Rembrandt van Rijn** (1606-1669): schilder Gouden Eeuw, *De Nachtwacht*.\n• **Johannes Vermeer** (1632-1675): schilder, *Meisje met de parel*.\n• **Vincent van Gogh** (1853-1890): post-impressionist, *Sterrennacht*, *Zonnebloemen*.\n• **Aletta Jacobs** (1854-1929): eerste vrouwelijke arts NL + vrouwenkiesrecht-activist.\n• **Mata Hari** (1876-1917): NL-spionne in WO1, geëxecuteerd door FR.\n• **Erasmus van Rotterdam** (1466-1536): Renaissance-humanist, *Lof der Zotheid*.\n• **Antoni van Leeuwenhoek** (1632-1723): Delftse microscoopbouwer, ontdekte bacteriën.\n\n**Toets-typische vraag**:\n'Op welk plaatje zie je een schilderij uit de Gouden Eeuw?'\n→ herken Rembrandt-stijl (clair-obscur, donkere achtergrond, NL-gezicht).",
     checks: [
       {
         q: "In welk **tijdvak** valt de Gouden Eeuw (1600s)?",
@@ -36,16 +36,16 @@ const steps = [
         wrongHints: [null, "Niet — 1800s.", "Niet — 1700s.", "Niet — 1900s."],
         uitlegPad: {
           stappen: [{ titel: "1600-1700", tekst: "**Gouden Eeuw NL** valt in **Tijd van regenten + vorsten (1600-1700)** = tijdvak 6 (van 10). Welvaart door VOC + handel. Rembrandt + Vermeer + Hugo de Groot leefden toen. Andere termen: regenten = bestuurders, vorsten = koningen elders." }],
-          niveaus: { basis: "Regenten + vorsten.", simpeler: "Gouden Eeuw = 1600s", nogSimpeler: "A." },
+          niveaus: { basis: "Regenten + vorsten.", simpeler: "Gouden Eeuw = 1600s", nogSimpeler: "1600-1700." },
         },
       },
       {
         q: "Wanneer was de **Watersnoodramp**?",
         options: ["1953","1916","1995","2021"],
         answer: 0,
-        wrongHints: [null, "Niet — markeerde Afsluitdijk-bouw.", "Niet — kleinere overstromingen Limburg.", "Niet — recente kleinere."],
+        wrongHints: [null, "Niet — Zuiderzeevloed, leidde tot Afsluitdijk-plan.", "Niet — kleinere overstromingen Limburg.", "Niet — recente kleinere."],
         uitlegPad: {
-          stappen: [{ titel: "1 februari 1953", tekst: "**Watersnoodramp 1 februari 1953**: zware storm + springtij → dijken breken in Zeeland + Zuid-Holland. **1836 doden** + 200.000 dieren + 47.000 huizen verwoest. Reactie: **Deltawerken** gebouwd 1958-1997 (Oosterscheldekering, Maeslantkering)." }],
+          stappen: [{ titel: "1 februari 1953", tekst: "**Watersnoodramp 1 februari 1953**: zware storm + springtij → dijken breken in Zeeland + Zuid-Holland. **1836 doden** + tienduizenden dieren + ~47.000 huizen beschadigd of verwoest. Reactie: **Deltawerken** gebouwd 1958-1997 (Oosterscheldekering, Maeslantkering)." }],
           niveaus: { basis: "1953.", simpeler: "1953 = watersnood", nogSimpeler: "1953" },
         },
       },
@@ -65,8 +65,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet primair — wel schrijver."],
         uitlegPad: {
-          stappen: [{ titel: "Achterhuis Amsterdam", tekst: "**Anne Frank** (1929-1945, Frankfurt → Amsterdam): Joodse onderduikster met familie + 4 anderen in **Achterhuis Prinsengracht 263**, 1942-1944. Opgepakt 4 augustus 1944, deported, stierf typhus in **Bergen-Belsen** februari/maart 1945. **Dagboek** bewaard door Miep Gies, na oorlog uitgegeven door vader Otto Frank → wereldberoemd document over Holocaust." }],
-          niveaus: { basis: "Joodse onderduikster.", simpeler: "Anne = onderduiken", nogSimpeler: "A." },
+          stappen: [{ titel: "Achterhuis Amsterdam", tekst: "**Anne Frank** (1929-1945, Frankfurt → Amsterdam): Joodse onderduikster met familie + 4 anderen in **Achterhuis Prinsengracht 263**, 1942-1944. Opgepakt 4 augustus 1944, gedeporteerd, stierf aan vlektyfus in **Bergen-Belsen** februari/maart 1945. **Dagboek** bewaard door Miep Gies, na oorlog uitgegeven door vader Otto Frank → wereldberoemd document over Holocaust." }],
+          niveaus: { basis: "Joodse onderduikster.", simpeler: "Anne = onderduiken", nogSimpeler: "Onderduikster." },
         },
       },
       {
@@ -76,7 +76,7 @@ const steps = [
         wrongHints: [null, "Begin bezetting.", "Algemene Europa-bevrijding.", "Niet — D-Day was juni 1944."],
         uitlegPad: {
           stappen: [{ titel: "Bevrijdingsdag", tekst: "**5 mei 1945**: NL volledig bevrijd door geallieerden (Canadezen + Britten + Amerikanen). Bezet sinds 10 mei 1940. Capitulatie Duits leger NL ondertekend hotel De Wereld Wageningen door generaal Blaskowitz. **Bevrijdingsdag NL** elke 5 mei sinds 1990 nationale feestdag. **4 mei** = Dodenherdenking." }],
-          niveaus: { basis: "5 mei 1945.", simpeler: "5-5-45", nogSimpeler: "A." },
+          niveaus: { basis: "5 mei 1945.", simpeler: "5-5-45", nogSimpeler: "5 mei." },
         },
       },
     ],
@@ -86,7 +86,7 @@ const steps = [
   {
     title: "Aardrijkskunde — NL + wereld",
     explanation:
-      "**Nederland in een notendop**:\n• Oppervlakte: 41.500 km² (klein).\n• Inwoners: ~18 mln (2024).\n• Hoofdstad: **Amsterdam** (maar regering zit Den Haag!).\n• 12 provincies: Noord-Holland, Zuid-Holland, Utrecht, Gelderland, Overijssel, Drenthe, Groningen, Friesland, Flevoland, Noord-Brabant, Limburg, Zeeland.\n• Talen: Nederlands, Fries (officieel in Friesland).\n• **26% NL ligt onder NAP** (Normaal Amsterdams Peil = zeeniveau).\n\n**Belangrijke geografie**:\n• **Rivieren**: Rijn (Lobith → Rotterdam), Maas, Waal, IJssel, Schelde.\n• **Meren**: IJsselmeer (vroegere Zuiderzee, afgesloten 1932 met Afsluitdijk), Markermeer.\n• **Hoogste 'berg'**: Vaalserberg (Limburg) — 322 m. (Eigenlijk laag).\n• **Laagste punt**: Nieuwerkerk aan den IJssel, −6,7 m onder NAP.\n• **Polders + dijken**: groot deel west-NL kunstmatig drooggelegd. Beemster (1612), Flevoland (1957-1968 — jongste provincie).\n• **Wadden-eilanden**: Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog.\n• **Deltawerken**: Maeslantkering, Oosterscheldekering, etc. (gebouwd 1953-1997 na Watersnoodramp).\n\n**Werelddelen + werelddeel-namen**:\n• **Europa** (~745 mln inwoners).\n• **Azië** (~4,7 mld — grootste).\n• **Afrika** (~1,4 mld).\n• **Noord-Amerika** (~580 mln).\n• **Zuid-Amerika** (~440 mln).\n• **Oceanië / Australië** (~45 mln — kleinste).\n• **Antarctica** (geen permanente bewoners).\n\n**Wereld-cijfers**:\n• ~8 mld mensen wereldwijd (2024).\n• Grootste landen oppervlakte: **Rusland, Canada, VS, China, Brazilië**.\n• Grootste landen bevolking: **India** (~1,44 mld), China (~1,42 mld), VS, Indonesië, Pakistan.\n• Klimaten: tropisch (evenaar) → woestijn (subtropisch) → gematigd (NL!) → toendra → poolklimaat.\n\n**Wereldsteden**:\n• **Londen** (UK, hoofdstad).\n• **Parijs** (Frankrijk).\n• **Berlijn** (Duitsland).\n• **Madrid** (Spanje).\n• **Rome** (Italië).\n• **Tokyo** (Japan, grootste metropool wereld ~37 mln).\n• **Peking + Shanghai** (China).\n• **New York** (VS).\n• **Mexico-Stad**.\n• **São Paulo** (Brazilië).\n• **Caïro** (Egypte).\n\n**EU + Europa**:\n• 27 EU-lidstaten sinds Brexit (2020 UK uit).\n• 21 landen met euro (eurozone, sinds Bulgarije 2026).\n• Hoofdstad EU: **Brussel** (Commissie + Parlement deels).\n• Andere EU-steden: Straatsburg (Parlement plenair), Luxemburg (Hof).\n• Schengen: open grenzen tussen lidstaten.\n\n**Klimaat + klimaatverandering**:\n• **Broeikaseffect**: CO₂ houdt warmte vast in atmosfeer.\n• Sinds 1880: aarde **~1,2°C warmer**.\n• Parijs-akkoord 2015: doel onder 1,5-2°C blijven.\n• Gevolgen: **zeespiegelstijging**, droogtes, hittegolven, smeltende ijskappen.\n• NL: door zeespiegelstijging extra dijken nodig in toekomst.\n• Oorzaken: fossiele brandstoffen (kolen, olie, gas), ontbossing, vee-houderij.\n\n**Energie**:\n• Fossiel: olie, gas, kolen (vervuilen).\n• Hernieuwbaar: zon, wind, water (waterkracht), geothermie, biomassa.\n• Kernenergie: weinig CO₂ maar afval-probleem.\n• NL: groot deel nog gas + olie. **Groningen-gasveld** afgebouwd door aardbevingen.\n\n**Topografie NL** (Toets-favoriet!):\nKlik op kaart-vragen vaak. Onthoud:\n• **Provincies + hoofdsteden**.\n• **Grote steden + waar liggen**: Amsterdam (NH), Rotterdam (ZH), Den Haag (ZH), Utrecht (Utr), Eindhoven (NB), Groningen (Gr), Maastricht (Lim), Arnhem (Geld), Enschede (Ov), Leeuwarden (Fr).\n• **Rivieren-lopen**: Rijn vanaf Lobith → Waal+Lek → Rotterdam (verdeling Pannerden).",
+      "**Nederland in een notendop**:\n• Oppervlakte: 41.500 km² (klein).\n• Inwoners: ~18 mln (2024).\n• Hoofdstad: **Amsterdam** (maar regering zit Den Haag!).\n• 12 provincies: Noord-Holland, Zuid-Holland, Utrecht, Gelderland, Overijssel, Drenthe, Groningen, Friesland, Flevoland, Noord-Brabant, Limburg, Zeeland.\n• Talen: Nederlands, Fries (officieel in Friesland).\n• **26% NL ligt onder NAP** (Normaal Amsterdams Peil = zeeniveau).\n\n**Belangrijke geografie**:\n• **Rivieren**: Rijn (Lobith → Rotterdam), Maas, Waal, IJssel, Schelde.\n• **Meren**: IJsselmeer (vroegere Zuiderzee, afgesloten 1932 met Afsluitdijk), Markermeer.\n• **Hoogste 'berg'**: Vaalserberg (Limburg) — 322 m. (Eigenlijk laag).\n• **Laagste punt**: Nieuwerkerk aan den IJssel, −6,7 m onder NAP.\n• **Polders + dijken**: groot deel west-NL kunstmatig drooggelegd. Beemster (1612), Flevoland (1957-1968 — jongste provincie).\n• **Wadden-eilanden**: Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog.\n• **Deltawerken**: Maeslantkering, Oosterscheldekering, etc. (gebouwd 1958-1997 na Watersnoodramp).\n\n**Werelddelen + werelddeel-namen**:\n• **Europa** (~745 mln inwoners).\n• **Azië** (~4,7 mld — grootste).\n• **Afrika** (~1,4 mld).\n• **Noord-Amerika** (~580 mln).\n• **Zuid-Amerika** (~440 mln).\n• **Oceanië / Australië** (~45 mln — kleinste).\n• **Antarctica** (geen permanente bewoners).\n\n**Wereld-cijfers**:\n• ~8 mld mensen wereldwijd (2024).\n• Grootste landen oppervlakte: **Rusland, Canada, VS, China, Brazilië**.\n• Grootste landen bevolking: **India** (~1,44 mld), China (~1,42 mld), VS, Indonesië, Pakistan.\n• Klimaten: tropisch (evenaar) → woestijn (subtropisch) → gematigd (NL!) → toendra → poolklimaat.\n\n**Wereldsteden**:\n• **Londen** (UK, hoofdstad).\n• **Parijs** (Frankrijk).\n• **Berlijn** (Duitsland).\n• **Madrid** (Spanje).\n• **Rome** (Italië).\n• **Tokyo** (Japan, een van de grootste metropolen).\n• **Peking + Shanghai** (China).\n• **New York** (VS).\n• **Mexico-Stad**.\n• **São Paulo** (Brazilië).\n• **Caïro** (Egypte).\n\n**EU + Europa**:\n• 27 EU-lidstaten sinds Brexit (2020 UK uit).\n• 21 landen met euro (eurozone, sinds Bulgarije 2026).\n• Hoofdstad EU: **Brussel** (Commissie + Parlement deels).\n• Andere EU-steden: Straatsburg (Parlement plenair), Luxemburg (Hof).\n• Schengen: open grenzen tussen lidstaten.\n\n**Klimaat + klimaatverandering**:\n• **Broeikaseffect**: CO₂ houdt warmte vast in atmosfeer.\n• Sinds 1880: aarde **~1,2°C warmer**.\n• Parijs-akkoord 2015: doel onder 1,5-2°C blijven.\n• Gevolgen: **zeespiegelstijging**, droogtes, hittegolven, smeltende ijskappen.\n• NL: door zeespiegelstijging extra dijken nodig in toekomst.\n• Oorzaken: fossiele brandstoffen (kolen, olie, gas), ontbossing, vee-houderij.\n\n**Energie**:\n• Fossiel: olie, gas, kolen (vervuilen).\n• Hernieuwbaar: zon, wind, water (waterkracht), geothermie, biomassa.\n• Kernenergie: weinig CO₂ maar afval-probleem.\n• NL: groot deel nog gas + olie. **Groningen-gasveld** afgebouwd door aardbevingen.\n\n**Topografie NL** (Toets-favoriet!):\nKlik op kaart-vragen vaak. Onthoud:\n• **Provincies + hoofdsteden**.\n• **Grote steden + waar liggen**: Amsterdam (NH), Rotterdam (ZH), Den Haag (ZH), Utrecht (Utr), Eindhoven (NB), Groningen (Gr), Maastricht (Lim), Arnhem (Geld), Enschede (Ov), Leeuwarden (Fr).\n• **Rivieren-lopen**: Rijn vanaf Lobith → Waal+Lek → Rotterdam (verdeling Pannerden).",
     checks: [
       {
         q: "Hoeveel **provincies** heeft Nederland?",
@@ -105,7 +105,7 @@ const steps = [
         wrongHints: [null, "Niet — regering zit daar, niet hoofdstad.", "Niet — grootste haven.", "Niet — vierde stad."],
         uitlegPad: {
           stappen: [{ titel: "Amsterdam vs Den Haag", tekst: "**Amsterdam = hoofdstad NL** (Grondwet art 32). **Den Haag** = regerings-zetel (parlement + ministeries + koning). Internationaal Hof + ICC ook in Den Haag. Klassieke val: 'wat is hoofdstad?' = Amsterdam. 'Wat is regerings-zetel?' = Den Haag." }],
-          niveaus: { basis: "Amsterdam.", simpeler: "Hoofdstad = Adam", nogSimpeler: "Adam" },
+          niveaus: { basis: "Amsterdam.", simpeler: "Hoofdstad = Amsterdam", nogSimpeler: "Amsterdam" },
         },
       },
       {
@@ -115,7 +115,7 @@ const steps = [
         wrongHints: [null, "Nummer 2 (~1,4 mld).", "Nummer 3 (~745 mln).", "~580 mln."],
         uitlegPad: {
           stappen: [{ titel: "Azië-dominantie", tekst: "**Azië** = grootste werelddeel qua bevolking: ~**4,7 miljard mensen** (~60% wereldbevolking). Inclusief China (1,4 mld) + India (1,44 mld) + Indonesië + Pakistan + Bangladesh + Japan + Filipijnen + etc. **Afrika** is op 2: ~1,4 mld + snelst groeiend." }],
-          niveaus: { basis: "Azië.", simpeler: "Grootste = Azië", nogSimpeler: "A." },
+          niveaus: { basis: "Azië.", simpeler: "Grootste = Azië", nogSimpeler: "Azië." },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
         wrongHints: [null, "Klein deel.", "Niet primair.", "Niet primair menselijk."],
         uitlegPad: {
           stappen: [{ titel: "Broeikaseffect", tekst: "**CO₂** (koolstofdioxide) uit verbranding **fossiele brandstoffen** (olie + gas + kolen): hoofdoorzaak klimaatverandering. CO₂ houdt warmte in atmosfeer vast (**broeikaseffect**). Sinds 1880 is aarde ~1,2°C warmer. **Parijs-akkoord 2015**: doel onder 1,5-2°C blijven. Ook bijdragend: methaan (vee-houderij + gas), ontbossing." }],
-          niveaus: { basis: "CO₂ fossiel.", simpeler: "Klimaat = CO2", nogSimpeler: "A." },
+          niveaus: { basis: "CO₂ fossiel.", simpeler: "Klimaat = CO2", nogSimpeler: "CO₂." },
         },
       },
     ],
@@ -145,7 +145,7 @@ const steps = [
   {
     title: "Natuur + biologie — algemene kennis",
     explanation:
-      "**Soorten levende wezens** (5 grote rijken):\n• **Bacteriën**: enkelvoudige cellen, geen celkern.\n• **Schimmels** (paddenstoelen, gisten, schimmels op brood).\n• **Planten**: maken eigen voedsel via **fotosynthese** (CO₂ + water + zonlicht → suiker + zuurstof).\n• **Dieren**: eten andere organismes.\n• **Protisten**: enkelvoudige cellen met celkern (amoeben).\n\n**Dieren-klassen** (binnen rijk dieren):\n• **Zoogdieren**: voeden jongen met melk. Hond, kat, koe, mens, walvis, vleermuis.\n• **Vogels**: veren, leggen eieren, snavel. Mus, eend, struisvogel, pinguïn.\n• **Vissen**: leven in water, kieuwen. Haring, snoek, haai, tonijn.\n• **Reptielen**: koudbloedig, schubben. Slangen, hagedissen, schildpadden, krokodillen.\n• **Amfibieën**: water + land. Kikkers, padden, salamanders.\n• **Insecten**: 6 poten + 3 lichaamsdelen. Vlinder, mier, kever, bij.\n• **Spinnen**: 8 poten (geen insect!). Kruisspin, tarantula.\n\n**Voedselketen + voedselweb**:\n• **Producenten**: planten (maken eigen voedsel).\n• **Consumenten**: dieren die anderen eten.\n  - **Herbivoor / planteneter**: koe, schaap, konijn.\n  - **Carnivoor / vleeseter**: leeuw, haai, kat.\n  - **Omnivoor / alleseter**: mens, varken, beer.\n• **Reducenten** / afbrekers: schimmels + bacteriën breken dode organismen af.\n\n**Lichaam mens**:\n• **Hart**: pompt bloed (~70 slagen/min in rust).\n• **Longen**: zuurstof opnemen + CO₂ afgeven.\n• **Maag + darmen**: vertering voedsel.\n• **Lever**: vele functies — ontgift, gal voor vertering vet.\n• **Nieren**: filteren bloed → urine.\n• **Hersenen**: denken + sturen.\n• **Skelet**: ~206 botten houdt vorm.\n• **Spieren**: ~600 maakt beweging.\n• **Huid**: grootste orgaan, beschermt.\n\n**Cellen**:\n• **Cel** = bouwsteen leven.\n• **Plantenceleel** heeft celwand (steviger) + chloroplasten (groen, fotosynthese).\n• **Dierlijke cel** geen celwand, geen chloroplasten.\n• **Celkern** = bevat DNA-instructies.\n\n**Voortplanting**:\n• Veel dieren: man + vrouw → bevruchting → embryo.\n• Eieren-leggers: vogels, reptielen, vissen, sommige zoogdieren (vogelbekdier!).\n• Levendbarend: meeste zoogdieren.\n• Planten: bestuiving via bijen + wind + andere insecten.\n\n**Seizoenen** (gematigd klimaat NL):\n• **Lente** (mrt-mei): bloei + jongen geboren.\n• **Zomer** (jun-aug): warm + groen, foto-synthese piek.\n• **Herfst** (sep-nov): bladeren verkleuren + vallen, oogst.\n• **Winter** (dec-feb): koud, bomen kaal, winterslaap of trek.\n\n**Trekvogels**:\n• Ooievaars, zwaluwen, kraanvogels naar zuiden in winter.\n• Door honger + kou — komen terug in voorjaar.\n\n**Bedreigde dieren NL**:\n• **Wolf**: terug sinds 2015 (~50 in NL nu).\n• **Otter**: hersteld via reïntroductie.\n• **Bever**: hersteld.\n• **Zeearend**: terug.\n• Insecten dalen sterk — biodiversiteitscrisis.\n\n**Ecosystemen**:\n• Tropisch regenwoud (Amazone), woestijn (Sahara), savanne (Afrika), gematigd bos (Europa), toendra (poolgebied), oceaan.\n• Biodiversiteit (variatie soorten) belangrijk voor stabiliteit.\n\n**Klimaatverandering + natuur**:\n• Vroegere lente → bloei + insecten te vroeg.\n• Soorten verschuiven naar polen.\n• Coral bleaching door warm zeewater.\n• NL: insectenpopulatie −75% sinds 1989.",
+      "**Soorten levende wezens** (5 grote rijken):\n• **Bacteriën**: enkelvoudige cellen, geen celkern.\n• **Schimmels** (paddenstoelen, gisten, schimmels op brood).\n• **Planten**: maken eigen voedsel via **fotosynthese** (CO₂ + water + zonlicht → suiker + zuurstof).\n• **Dieren**: eten andere organismes.\n• **Protisten**: enkelvoudige cellen met celkern (amoeben).\n\n**Dieren-klassen** (binnen rijk dieren):\n• **Zoogdieren**: voeden jongen met melk. Hond, kat, koe, mens, walvis, vleermuis.\n• **Vogels**: veren, leggen eieren, snavel. Mus, eend, struisvogel, pinguïn.\n• **Vissen**: leven in water, kieuwen. Haring, snoek, haai, tonijn.\n• **Reptielen**: koudbloedig, schubben. Slangen, hagedissen, schildpadden, krokodillen.\n• **Amfibieën**: water + land. Kikkers, padden, salamanders.\n• **Insecten**: 6 poten + 3 lichaamsdelen. Vlinder, mier, kever, bij.\n• **Spinnen**: 8 poten (geen insect!). Kruisspin, tarantula.\n\n**Voedselketen + voedselweb**:\n• **Producenten**: planten (maken eigen voedsel).\n• **Consumenten**: dieren die anderen eten.\n  - **Herbivoor / planteneter**: koe, schaap, konijn.\n  - **Carnivoor / vleeseter**: leeuw, haai, kat.\n  - **Omnivoor / alleseter**: mens, varken, beer.\n• **Reducenten** / afbrekers: schimmels + bacteriën breken dode organismen af.\n\n**Lichaam mens**:\n• **Hart**: pompt bloed (~70 slagen/min in rust).\n• **Longen**: zuurstof opnemen + CO₂ afgeven.\n• **Maag + darmen**: vertering voedsel.\n• **Lever**: vele functies — ontgift, gal voor vertering vet.\n• **Nieren**: filteren bloed → urine.\n• **Hersenen**: denken + sturen.\n• **Skelet**: ~206 botten houden vorm.\n• **Spieren**: ~600 maken beweging.\n• **Huid**: grootste orgaan, beschermt.\n\n**Cellen**:\n• **Cel** = bouwsteen leven.\n• **Plantencel** heeft celwand (steviger) + chloroplasten (groen, fotosynthese).\n• **Dierlijke cel** geen celwand, geen chloroplasten.\n• **Celkern** = bevat DNA-instructies.\n\n**Voortplanting**:\n• Veel dieren: man + vrouw → bevruchting → embryo.\n• Eieren-leggers: vogels, reptielen, vissen, sommige zoogdieren (vogelbekdier!).\n• Levendbarend: meeste zoogdieren.\n• Planten: bestuiving via bijen + wind + andere insecten.\n\n**Seizoenen** (gematigd klimaat NL):\n• **Lente** (mrt-mei): bloei + jongen geboren.\n• **Zomer** (jun-aug): warm + groen, foto-synthese piek.\n• **Herfst** (sep-nov): bladeren verkleuren + vallen, oogst.\n• **Winter** (dec-feb): koud, bomen kaal, winterslaap of trek.\n\n**Trekvogels**:\n• Ooievaars, zwaluwen, kraanvogels naar zuiden in winter.\n• Door honger + kou — komen terug in voorjaar.\n\n**Bedreigde dieren NL**:\n• **Wolf**: terug sinds 2015 (nu vele tientallen).\n• **Otter**: hersteld via reïntroductie.\n• **Bever**: hersteld.\n• **Zeearend**: terug.\n• Insecten dalen sterk — biodiversiteitscrisis.\n\n**Ecosystemen**:\n• Tropisch regenwoud (Amazone), woestijn (Sahara), savanne (Afrika), gematigd bos (Europa), toendra (poolgebied), oceaan.\n• Biodiversiteit (variatie soorten) belangrijk voor stabiliteit.\n\n**Klimaatverandering + natuur**:\n• Vroegere lente → bloei + insecten te vroeg.\n• Soorten verschuiven naar polen.\n• Koraalverbleking door warm zeewater.\n• Vliegende insecten −75% sinds 1989 (Duits onderzoek).",
     checks: [
       {
         q: "Welke is een **zoogdier**?",
@@ -154,17 +154,17 @@ const steps = [
         wrongHints: [null, "Reptiel.", "Insect.", "Vis."],
         uitlegPad: {
           stappen: [{ titel: "Voedt jongen met melk", tekst: "**Walvissen zijn zoogdieren** (niet vissen!). Leven in water maar: ademen lucht (komen boven), warmbloedig, voeden jongen met **melk**. **Definitie zoogdier**: voedt jongen via melkklieren. Vleermuizen = enige vliegende zoogdier. Vogelbekdier = legt eieren maar voedt melk → ook zoogdier." }],
-          niveaus: { basis: "Walvis.", simpeler: "Walvis = zoogd", nogSimpeler: "A." },
+          niveaus: { basis: "Walvis.", simpeler: "Walvis = zoogdier", nogSimpeler: "Walvis." },
         },
       },
       {
         q: "Wat doen planten bij **fotosynthese**?",
         options: ["CO₂ + water + zonlicht → suiker + zuurstof","Eten andere planten","Slapen overdag","Bloemen openen"],
         answer: 0,
-        wrongHints: [null, "Niet — planten zijn producenten.", "Niet relevant.", "Onderdeel maar niet fotosynth."],
+        wrongHints: [null, "Niet — planten zijn producenten.", "Niet relevant.", "Onderdeel maar niet fotosynthese."],
         uitlegPad: {
           stappen: [{ titel: "Producent", tekst: "**Fotosynthese**: planten gebruiken **CO₂ + water + zonlicht** om **suiker (glucose) + zuurstof** te maken. Vindt plaats in **chloroplasten** (groene cellen) met **chlorofyl** (groen pigment). Zonder fotosynthese geen leven op aarde — alle voedsel begint hier. Bijproduct = zuurstof voor dieren." }],
-          niveaus: { basis: "Maakt suiker + zuurstof.", simpeler: "Fotosynth = energie", nogSimpeler: "A." },
+          niveaus: { basis: "Maakt suiker + zuurstof.", simpeler: "Fotosynthese = voedsel maken", nogSimpeler: "Suiker + zuurstof." },
         },
       },
       {
@@ -183,8 +183,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — insecten hebben 6 poten.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Klassieke val!", tekst: "**Spinnen zijn GEEN insecten**. **Insecten**: 6 poten + 3 lichaamsdelen (kop/borst/achterlijf) + vaak vleugels. **Spinnen**: 8 poten + 2 lichaamsdelen + nooit vleugels — horen bij groep 'spinachtigen' (arachniden, samen met schorpioenen + mijten + teken). Vaak verwarrend. toetsvraag-classic." }],
-          niveaus: { basis: "Geen insect.", simpeler: "Spin ≠ insect", nogSimpeler: "A." },
+          stappen: [{ titel: "Klassieke val!", tekst: "**Spinnen zijn GEEN insecten**. **Insecten**: 6 poten + 3 lichaamsdelen (kop/borst/achterlijf) + vaak vleugels. **Spinnen**: 8 poten + 2 lichaamsdelen + nooit vleugels — horen bij groep 'spinachtigen' (arachniden, samen met schorpioenen + mijten + teken). Vaak verwarrend. Klassieke toetsvraag." }],
+          niveaus: { basis: "Geen insect.", simpeler: "Spin ≠ insect", nogSimpeler: "8 poten." },
         },
       },
       {
@@ -194,7 +194,7 @@ const steps = [
         wrongHints: [null, "Consument.", "Reducent.", "Consument."],
         uitlegPad: {
           stappen: [{ titel: "Maakt eigen voedsel", tekst: "**Producent** = maakt eigen voedsel via fotosynthese — **planten** + algen. **Consument** = eet anderen (dieren). **Reducent** = breekt dood materiaal af (schimmels + bacteriën). Voedselketen begint altijd bij producent (plant → herbivoor → carnivoor)." }],
-          niveaus: { basis: "Plant.", simpeler: "Producent = plant", nogSimpeler: "A." },
+          niveaus: { basis: "Plant.", simpeler: "Producent = plant", nogSimpeler: "Plant." },
         },
       },
     ],
@@ -204,7 +204,7 @@ const steps = [
   {
     title: "Wetenschap + techniek — algemene kennis",
     explanation:
-      "**Beroemde wetenschappers + uitvinders**:\n\n• **Isaac Newton** (1643-1727, UK): zwaartekracht-wetten, 3 bewegingswetten, optica.\n• **Albert Einstein** (1879-1955, DE/CH/VS): relativiteits-theorie, E=mc², Nobel-prijs 1921.\n• **Marie Curie** (1867-1934, PL/FR): radioactiviteit, **2× Nobelprijs** (eerste vrouw, eerste persoon 2× verschillende vakken).\n• **Charles Darwin** (1809-1882, UK): evolutie-theorie + natuurlijke selectie.\n• **Galileo Galilei** (1564-1642, IT): telescoop, ondersteunde heliocentrisch model.\n• **Nicolaus Copernicus** (1473-1543, PL): aarde draait om zon (1543).\n• **Antoni van Leeuwenhoek** (1632-1723, NL): microscoop, ontdekte bacteriën.\n• **Christiaan Huygens** (1629-1695, NL): slingerklok, Saturnusring.\n• **Thomas Edison** (1847-1931, VS): gloeilamp, fonograaf, ~1000 patenten.\n• **Alexander Graham Bell** (1847-1922, UK/VS): telefoon (1876).\n• **Wright Brothers** (1903): eerste gemotoriseerde vlucht.\n• **Tim Berners-Lee** (1989): uitvinder van het World Wide Web (CERN).\n• **Steve Jobs** (1955-2011, VS): Apple-oprichter.\n\n**Uitvindingen + jaartal (Toets-favoriet)**:\n• **Boekdrukkunst**: Gutenberg ~1450.\n• **Stoommachine**: James Watt 1769 (verbetering van eerder).\n• **Elektrische lamp**: Edison 1879.\n• **Telefoon**: Bell 1876.\n• **Auto**: Karl Benz 1885.\n• **Vliegtuig**: Wright Brothers 1903.\n• **Televisie**: ~1925 (John Logie Baird).\n• **Computer**: WO2-tijd (Turing/Eckert/Mauchly).\n• **Internet/WWW**: 1989-1990 (Berners-Lee).\n• **Smartphone**: iPhone 2007 (Apple).\n• **AI / ChatGPT**: 2022 OpenAI.\n\n**Ruimtevaart**:\n• **Spoetnik 1**: eerste kunstmatige satelliet, 4 oktober 1957, USSR.\n• **Joeri Gagarin**: eerste mens in ruimte, 12 april 1961, USSR.\n• **Apollo 11**: eerste mens op de maan, 20 juli 1969 (Armstrong + Aldrin + Collins, VS).\n• **Wubbo Ockels**: eerste NL'er in ruimte (1985).\n• **André Kuipers**: 2e NL'er, 2x in ruimte (2004 + 2011-12, ISS).\n• **ISS** (International Space Station): bemand sinds 2000, ~400 km hoog.\n• **SpaceX** (Elon Musk): herbruikbare raketten + Mars-plannen.\n• **James Webb-telescoop** (2021): opvolger Hubble — kijkt diep in heelal.\n\n**Hemellichamen**:\n• **Zon** = ster + middelpunt zonnestelsel.\n• **Planeten** (in volgorde van zon): Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus. Memo: 'Maar Vader Adam Maakte Jullie Soms Uitstapjes Naar...' of equivalent.\n• **Pluto** = sinds 2006 geen planeet meer (dwergplaneet).\n• **Maan** = aarde's natuurlijke satelliet.\n• **Sterren** = grote massa-gas, fusie kern.\n• **Sterrenstelsels** (zoals onze Melkweg) = miljarden sterren samen.\n\n**Natuurkunde-begrippen**:\n• **Zwaartekracht**: trekt alles naar grond. Op aarde g ≈ 9,8 m/s² (vereenvoudigd 10).\n• **Snelheid**: m/s of km/h. 36 km/h = 10 m/s.\n• **Energie**: vermogen om werk te doen.\n• **Geluid**: trillingen door lucht/medium. Snelheid in lucht: ~340 m/s.\n• **Licht**: zeer snel (300.000 km/s in vacuüm).\n• **Magnetisme**: trekt ijzer + kobalt + nikkel aan.\n• **Elektriciteit**: stroom van elektronen.\n\n**Scheikunde-basis**:\n• **Atoom** = bouwsteen materie, bestaat uit kern + elektronen.\n• **Element**: stof bestaande uit één soort atoom (waterstof H, zuurstof O, ijzer Fe, goud Au).\n• **Molecuul**: 2+ atomen samen (H₂O = water, CO₂ = koolstofdioxide).\n• **Periodiek systeem**: tabel van alle 118 elementen.\n• **3 toestanden materie**: vast, vloeibaar, gas.\n• **Smelten**: vast → vloeibaar.\n• **Verdampen**: vloeibaar → gas.\n• **Stollen**: vloeibaar → vast.\n• **Condenseren**: gas → vloeibaar.\n\n**Lichaam + gezondheid**:\n• **Vaccinatie**: leert immuun-systeem ziekteverwekker herkennen.\n• **Antibiotica**: doodt bacteriën, niet virussen.\n• **DNA**: erfelijk materiaal, in elke cel.\n• **Genen**: stukjes DNA met instructies.\n\n**Mensen uit wetenschap NL recent**:\n• **Andre Geim + Konstantin Novoselov**: Nobelprijs natuurkunde 2010 (grafeen) — beide werkten in NL/UK.\n• **Ben Feringa**: Nobelprijs scheikunde 2016 (moleculaire machines) — Groningen.\n• **Robbert Dijkgraaf**: theoretisch fysicus, ex-minister onderwijs.",
+      "**Beroemde wetenschappers + uitvinders**:\n\n• **Isaac Newton** (1643-1727, UK): zwaartekracht-wetten, 3 bewegingswetten, optica.\n• **Albert Einstein** (1879-1955, DE/CH/VS): relativiteits-theorie, E=mc², Nobel-prijs 1921.\n• **Marie Curie** (1867-1934, PL/FR): radioactiviteit, **2× Nobelprijs** (eerste vrouw, eerste persoon 2× verschillende vakken).\n• **Charles Darwin** (1809-1882, UK): evolutie-theorie + natuurlijke selectie.\n• **Galileo Galilei** (1564-1642, IT): verbeterde telescoop, ondersteunde heliocentrisch model.\n• **Nicolaus Copernicus** (1473-1543, PL): aarde draait om zon (1543).\n• **Antoni van Leeuwenhoek** (1632-1723, NL): microscoop, ontdekte bacteriën.\n• **Christiaan Huygens** (1629-1695, NL): slingerklok, Saturnusring.\n• **Thomas Edison** (1847-1931, VS): gloeilamp, fonograaf, ~1000 patenten.\n• **Alexander Graham Bell** (1847-1922, UK/VS): telefoon (1876).\n• **Wright Brothers** (1903): eerste gemotoriseerde vlucht.\n• **Tim Berners-Lee** (1989): uitvinder van het World Wide Web (CERN).\n• **Steve Jobs** (1955-2011, VS): Apple-oprichter.\n\n**Uitvindingen + jaartal (Toets-favoriet)**:\n• **Boekdrukkunst**: Gutenberg ~1450.\n• **Stoommachine**: James Watt 1769 (verbetering van eerder).\n• **Elektrische lamp**: Edison 1879.\n• **Telefoon**: Bell 1876.\n• **Auto**: Karl Benz 1885.\n• **Vliegtuig**: Wright Brothers 1903.\n• **Televisie**: ~1925 (John Logie Baird).\n• **Computer**: WO2-tijd (Turing/Eckert/Mauchly).\n• **Internet/WWW**: 1989-1990 (Berners-Lee).\n• **Smartphone**: iPhone 2007 (Apple).\n• **AI / ChatGPT**: 2022 OpenAI.\n\n**Ruimtevaart**:\n• **Spoetnik 1**: eerste kunstmatige satelliet, 4 oktober 1957, USSR.\n• **Joeri Gagarin**: eerste mens in ruimte, 12 april 1961, USSR.\n• **Apollo 11**: eerste mens op de maan, 20 juli 1969 (Armstrong + Aldrin + Collins, VS).\n• **Wubbo Ockels**: eerste NL'er in ruimte (1985).\n• **André Kuipers**: 2e NL'er, 2x in ruimte (2004 + 2011-12, ISS).\n• **ISS** (International Space Station): bemand sinds 2000, ~400 km hoog.\n• **SpaceX** (Elon Musk): herbruikbare raketten + Mars-plannen.\n• **James Webb-telescoop** (2021): opvolger Hubble — kijkt diep in heelal.\n\n**Hemellichamen**:\n• **Zon** = ster + middelpunt zonnestelsel.\n• **Planeten** (in volgorde van zon): Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus. Ezelsbrug: M-V-A-M-J-S-U-N.\n• **Pluto** = sinds 2006 geen planeet meer (dwergplaneet).\n• **Maan** = natuurlijke satelliet van aarde.\n• **Sterren** = gasbollen met kernfusie.\n• **Sterrenstelsels** (zoals onze Melkweg) = miljarden sterren samen.\n\n**Natuurkunde-begrippen**:\n• **Zwaartekracht**: trekt alles naar grond. Op aarde g ≈ 9,8 m/s² (vereenvoudigd 10).\n• **Snelheid**: m/s of km/h. 36 km/h = 10 m/s.\n• **Energie**: vermogen om werk te doen.\n• **Geluid**: trillingen door lucht/medium. Snelheid in lucht: ~340 m/s.\n• **Licht**: zeer snel (300.000 km/s in vacuüm).\n• **Magnetisme**: trekt ijzer + kobalt + nikkel aan.\n• **Elektriciteit**: stroom van elektronen.\n\n**Scheikunde-basis**:\n• **Atoom** = bouwsteen materie, bestaat uit kern + elektronen.\n• **Element**: stof bestaande uit één soort atoom (waterstof H, zuurstof O, ijzer Fe, goud Au).\n• **Molecuul**: 2+ atomen samen (H₂O = water, CO₂ = koolstofdioxide).\n• **Periodiek systeem**: tabel van alle 118 elementen.\n• **3 toestanden materie**: vast, vloeibaar, gas.\n• **Smelten**: vast → vloeibaar.\n• **Verdampen**: vloeibaar → gas.\n• **Stollen**: vloeibaar → vast.\n• **Condenseren**: gas → vloeibaar.\n\n**Lichaam + gezondheid**:\n• **Vaccinatie**: leert immuun-systeem ziekteverwekker herkennen.\n• **Antibiotica**: doodt bacteriën, niet virussen.\n• **DNA**: erfelijk materiaal, in elke cel.\n• **Genen**: stukjes DNA met instructies.\n\n**Mensen uit wetenschap NL recent**:\n• **Andre Geim + Konstantin Novoselov**: Nobelprijs natuurkunde 2010 (grafeen) — beide werkten in NL/UK.\n• **Ben Feringa**: Nobelprijs scheikunde 2016 (moleculaire machines) — Groningen.\n• **Robbert Dijkgraaf**: theoretisch fysicus, ex-minister onderwijs.",
     checks: [
       {
         q: "Wie ontdekte **zwaartekracht-wetten**?",
@@ -213,7 +213,7 @@ const steps = [
         wrongHints: [null, "Verfijnde later met relativiteit.", "Wel bewegingen onderzocht maar niet zwaartekracht-wetten.", "Andere theorie."],
         uitlegPad: {
           stappen: [{ titel: "Appel-verhaal", tekst: "**Isaac Newton** (1643-1727 UK): zwaartekracht + 3 bewegingswetten. Volgens legende inspireerde vallende appel. *Philosophiæ Naturalis Principia Mathematica* (1687). Beschreef hoe maan om aarde + planeten om zon door zwaartekracht. **Einstein** verfijnde later met algemene relativiteit (1915) — ruimte-tijd-kromming." }],
-          niveaus: { basis: "Newton.", simpeler: "Zwaartekracht = Newton", nogSimpeler: "A." },
+          niveaus: { basis: "Newton.", simpeler: "Zwaartekracht = Newton", nogSimpeler: "Newton." },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
         wrongHints: [null, "Gagarin in ruimte.", "Spoetnik (satelliet).", "Wubbo Ockels."],
         uitlegPad: {
           stappen: [{ titel: "Apollo 11", tekst: "**20 juli 1969**: Neil Armstrong stapt als eerste mens op maan. 'One small step for man, one giant leap for mankind'. Apollo 11-missie (VS). Bemanning: **Armstrong** + **Buzz Aldrin** (ook op maan) + **Michael Collins** (in baan). Onderdeel space race tegen USSR. Tot 1972 6× geslaagde maan-landingen — daarna niemand meer." }],
-          niveaus: { basis: "20-7-1969.", simpeler: "1969 = maan", nogSimpeler: "A." },
+          niveaus: { basis: "20-7-1969.", simpeler: "1969 = maan", nogSimpeler: "1969." },
         },
       },
       {
@@ -233,7 +233,7 @@ const steps = [
         wrongHints: [null, "Mercurius draait als kleinste planeet het dichtst om de zon — is dat een echte planeet of niet?", "Saturnus met zijn beroemde ringen is een van de acht grote planeten — hoort die bij de uitzondering?", "Neptunus is de verste grote planeet van de zon — dat is juist wél een echte planeet."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 2006 dwergplaneet", tekst: "**Pluto** was van 1930-2006 9e planeet. Sinds 2006 'gedegradeerd' door **Internationale Astronomische Unie (IAU)** tot **dwergplaneet** — te klein + niet 'baan-vrij'. Echte 8 planeten: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus. Pluto vandaag samen met Eris, Makemake, Haumea = dwergplaneten." }],
-          niveaus: { basis: "Pluto.", simpeler: "Pluto = geen planeet", nogSimpeler: "A." },
+          niveaus: { basis: "Pluto.", simpeler: "Pluto = geen planeet", nogSimpeler: "Pluto." },
         },
       },
       {
@@ -242,8 +242,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — andere chemische formule.", "Niet — NaCl.", "Mengsel, geen molecuul."],
         uitlegPad: {
-          stappen: [{ titel: "Watermolecule", tekst: "**H₂O = water**: 2 waterstof-atomen (H) + 1 zuurstof-atoom (O). H₂ = subscript betekent '2 keer'. Cruciaal voor leven. Andere bekende formules:\n• **CO₂** = koolstofdioxide.\n• **NaCl** = natriumchloride (keukenzout).\n• **C₆H₁₂O₆** = glucose (suiker).\n• **O₂** = zuurstof (gas)." }],
-          niveaus: { basis: "Water.", simpeler: "H2O = water", nogSimpeler: "A." },
+          stappen: [{ titel: "Watermolecuul", tekst: "**H₂O = water**: 2 waterstof-atomen (H) + 1 zuurstof-atoom (O). De kleine 2 betekent '2 keer'. Cruciaal voor leven. Andere bekende formules:\n• **CO₂** = koolstofdioxide.\n• **NaCl** = natriumchloride (keukenzout).\n• **C₆H₁₂O₆** = glucose (suiker).\n• **O₂** = zuurstof (gas)." }],
+          niveaus: { basis: "Water.", simpeler: "H2O = water", nogSimpeler: "Water." },
         },
       },
       {
@@ -253,7 +253,7 @@ const steps = [
         wrongHints: [null, "1× (1921).", "Geen Nobelprijs (vóór Nobels tijd).", "Geen Nobelprijs."],
         uitlegPad: {
           stappen: [{ titel: "Unieke prestatie", tekst: "**Marie Curie** (1867-1934, Pools-Frans): **eerste vrouw + eerste persoon met 2 Nobelprijzen in verschillende vakken**:\n• Natuurkunde 1903 (met Pierre + Becquerel, radioactiviteit).\n• Scheikunde 1911 (radium + polonium isolatie).\n\nStierf aan straling-blootstelling — haar notitieboeken nog radioactief vandaag." }],
-          niveaus: { basis: "Curie.", simpeler: "2× Nobel = Curie", nogSimpeler: "A." },
+          niveaus: { basis: "Curie.", simpeler: "2× Nobel = Curie", nogSimpeler: "Curie." },
         },
       },
     ],
@@ -266,33 +266,33 @@ const steps = [
       "Mix van geschiedenis + aardrijkskunde + natuur + wetenschap. Doorstroomtoets-stijl gemengde vragen.\n\nVeel succes!",
     checks: [
       {
-        q: "Wat doe je als je een **schaaltrappetje** (toets-woord) leest?",
+        q: "Wat doe je bij een **lange leesvraag** op de toets?",
         options: ["Lees zorgvuldig + check tussen-stappen","Snelste antwoord direct","Sla over","Zoek hulp"],
         answer: 0,
-        wrongHints: [null, "Vaak fout.", "Niet — punten kwijt.", "Niet — op examen alleen."],
+        wrongHints: [null, "Vaak fout.", "Niet — punten kwijt.", "Op de toets kun je geen hulp vragen."],
         uitlegPad: {
           stappen: [{ titel: "Toets-strategie", tekst: "Bij **lange leesvraag** (Doorstroomtoets-stijl): **lees zorgvuldig + check stap voor stap**. Niet meteen 1e antwoord kiezen — kijk welke optie alle voorwaarden uit tekst nakomt. Vaak zit val in details. Tip: streep belangrijke woorden in vraag onder." }],
-          niveaus: { basis: "Stap voor stap.", simpeler: "Stap voor stap", nogSimpeler: "A." },
+          niveaus: { basis: "Stap voor stap.", simpeler: "Stap voor stap", nogSimpeler: "Goed lezen." },
         },
       },
       {
-        q: "Welke is een **kapitaal werelddeel** van NL?",
+        q: "In welk **werelddeel** ligt NL?",
         options: ["Europa","Azië","Afrika","Antarctica"],
         answer: 0,
-        wrongHints: [null, "Niet — apart werelddeel.", "Niet relevant.", "Niet bewoond."],
+        wrongHints: [null, "Ligt veel verder naar het oosten.", "Ligt ten zuiden van Europa.", "Niet bewoond."],
         uitlegPad: {
           stappen: [{ titel: "EU-lid", tekst: "**Nederland ligt in Europa** (West-Europa specifiek). Onderdeel van **EU** sinds oprichting EEG 1957. NL = klein land (41.500 km²) maar grote economische rol door handel + havens. Buurlanden: België + Duitsland + Noordzee." }],
-          niveaus: { basis: "Europa.", simpeler: "NL = Europa", nogSimpeler: "A." },
+          niveaus: { basis: "Europa.", simpeler: "NL = Europa", nogSimpeler: "Europa." },
         },
       },
       {
-        q: "Welke is **WO2-jaartallen** correct?",
-        options: ["1940-1945 voor NL","1914-1918","1939-1945 wereldwijd, 1940-1945 NL","Alle drie kloppen, eerste het meest specifiek NL"],
-        answer: 3,
-        wrongHints: ["Wel correct maar niet alleen.", "WO1.", "Wel beste.", null],
+        q: "Welke **WO2-jaartallen** kloppen?",
+        options: ["1940-1945 voor NL","1914-1918","1939-1945 wereldwijd, 1940-1945 NL","Alle drie kloppen"],
+        answer: 2,
+        wrongHints: ["Klopt voor Nederland, maar de oorlog begon elders al eerder.", "Dat zijn de jaren van WO1.", null, "Kijk nog eens naar 1914-1918: welke oorlog was dat?"],
         uitlegPad: {
           stappen: [{ titel: "WO1 vs WO2", tekst: "**WO1**: 1914-1918 (NL **neutraal**, niet bezet). **WO2**: 1939-1945 wereldwijd, **NL 1940-1945** bezet (Duitse inval 10 mei 1940 → bevrijding 5 mei 1945)." }],
-          niveaus: { basis: "Beide jaartallen correct.", simpeler: "WO2-NL = 40-45", nogSimpeler: "A." },
+          niveaus: { basis: "WO2 duurde wereldwijd van 1939 tot 1945; in Nederland van 1940 tot 1945.", simpeler: "Wereld 1939-1945, Nederland 1940-1945.", nogSimpeler: "1939/1940 tot 1945." },
         },
       },
       {
@@ -301,8 +301,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Herbivoor.", "Omnivoor.", "Producent."],
         uitlegPad: {
-          stappen: [{ titel: "Latijnse termen", tekst: "**Carnivoor** (Latijn 'caro' = vlees + 'vorare' = eten) = vleeseter. Voorbeelden: leeuw, tijger, haai, krokodil, gier. **Herbivoor** = planteneter (koe, paard, konijn). **Omnivoor** = alleseter (mens, varken, beer). Goede ezelsbruggetje: HERB = herbal = planten." }],
-          niveaus: { basis: "Vleeseter.", simpeler: "Carni = vlees", nogSimpeler: "A." },
+          stappen: [{ titel: "Latijnse termen", tekst: "**Carnivoor** (Latijn 'caro' = vlees + 'vorare' = eten) = vleeseter. Voorbeelden: leeuw, tijger, haai, krokodil, gier. **Herbivoor** = planteneter (koe, paard, konijn). **Omnivoor** = alleseter (mens, varken, beer). Goed ezelsbruggetje: herb (Engels) = kruid = planten." }],
+          niveaus: { basis: "Vleeseter.", simpeler: "Carni = vlees", nogSimpeler: "Vlees." },
         },
       },
       {
@@ -311,8 +311,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Vroegere koninginnedag.", "Bevrijdingsdag.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Verjaardag Willem-Alexander", tekst: "**Koningsdag = 27 april**, sinds 2014 (verjaardag koning Willem-Alexander, geboren 1967). Voor 2014: **Koninginnedag 30 april** (Juliana's geb-dag, later Beatrix). Beatrix' eigen geb-dag is 31 januari — koos voor 30 april ter ere van moeder Juliana. Bij valt op zondag → wordt naar zaterdag verschoven." }],
-          niveaus: { basis: "27 april.", simpeler: "Koningsdag = 27-4", nogSimpeler: "A." },
+          stappen: [{ titel: "Verjaardag Willem-Alexander", tekst: "**Koningsdag = 27 april**, sinds 2014 (verjaardag koning Willem-Alexander, geboren 1967). Voor 2014: **Koninginnedag 30 april** (Juliana's geb-dag, later Beatrix). Beatrix' eigen geb-dag is 31 januari — koos voor 30 april ter ere van moeder Juliana. Valt 27 april op zondag, dan wordt het zaterdag 26 april." }],
+          niveaus: { basis: "27 april.", simpeler: "Koningsdag = 27-4", nogSimpeler: "27 april." },
         },
       },
     ],

@@ -15,7 +15,18 @@ import { AvatarSvg, loadAvatarConfig } from "./avatar.jsx";
 import { VOORKEUR_VAKKEN, bewaarVoorkeur, standaardTot } from "../vandaag/voorkeur.js";
 import { track } from "../../utils.js";
 
-export const MAX_PROFIELEN = 5;
+// 6 vaste plekken (Mark 1 okt 2026, middag): 3 kinderen, 2 ouders of verzorgers, 1 leerkracht.
+// Lege plekken staan lichtgrijs klaar ("Kind 2 · naam · groep") en worden ingevuld bij aantikken.
+export const PLEKKEN = [
+  { groep: "kind", rol: "leerling", label: "Kind 1", hint: "naam · groep" },
+  { groep: "kind", rol: "leerling", label: "Kind 2", hint: "naam · groep" },
+  { groep: "kind", rol: "leerling", label: "Kind 3", hint: "naam · groep" },
+  { groep: "ouder", rol: "ouder", label: "Ouder 1", hint: "ouder of verzorger" },
+  { groep: "ouder", rol: "ouder", label: "Ouder 2", hint: "ouder of verzorger" },
+  { groep: "leraar", rol: "teacher", label: "Leerkracht", hint: "juf of meester" },
+];
+export const MAX_PROFIELEN = PLEKKEN.length;
+const groepVanRol = (role) => (role === "ouder" ? "ouder" : role === "teacher" ? "leraar" : "kind");
 
 const ROL_KNOPPEN = [
   { key: "leerling", label: "Leerling", uitleg: "Ik oefen zelf" },
@@ -81,22 +92,22 @@ function Tegel({ p, actief, onKies }) {
       onClick={onKies}
       style={{
         ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
-        padding: "14px 8px", width: "100%", minHeight: 150,
+        padding: "12px 6px", width: "100%", minHeight: 138,
         border: actief ? "2px solid #00e676" : "1px solid rgba(255,255,255,0.15)",
         background: actief ? "rgba(0,230,118,0.08)" : "rgba(255,255,255,0.04)", color: "#fff",
       }}
     >
-      <span style={{ width: 72, height: 72, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
-        <AvatarSvg config={config} size={72} />
+      <span style={{ width: 56, height: 56, display: "inline-flex", alignItems: "center", justifyContent: "center" }}>
+        <AvatarSvg config={config} size={56} />
       </span>
-      <span style={{ fontSize: 17, lineHeight: 1.2 }}>{p.naam}</span>
-      <span style={{ fontFamily: "var(--font-body)", fontSize: 12, fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>{rolWoord(p)}</span>
+      <span style={{ fontSize: 15, lineHeight: 1.2, wordBreak: "break-word" }}>{p.naam}</span>
+      <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.6)" }}>{rolWoord(p)}</span>
     </button>
   );
 }
 
-function ProfielKaart({ bestaand, onKlaar, onTerug }) {
-  const [role, setRole] = useState("leerling");
+function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
+  const [role, setRole] = useState(vasteRol || "leerling");
   const [naam, setNaam] = useState("");
   const [leeftijd, setLeeftijd] = useState("");
   const [level, setLevel] = useState("");
@@ -125,11 +136,13 @@ function ProfielKaart({ bestaand, onKlaar, onTerug }) {
 
   return (
     <div style={{ maxWidth: 460, margin: "0 auto", textAlign: "left" }}>
-      <h2 style={{ fontFamily: "var(--font-display)", fontSize: 24, margin: "0 0 4px", color: "#fff" }}>Nieuw profiel</h2>
-      <p style={{ margin: 0, fontSize: 13.5, color: "rgba(255,255,255,0.6)" }}>Alleen wie je bent en je naam zijn nodig. De rest kan later.</p>
+      <h2 style={{ fontFamily: "var(--font-display)", fontSize: 24, margin: "0 0 4px", color: "#fff" }}>
+        {vasteRol === "ouder" ? "Nieuw profiel: ouder of verzorger" : vasteRol === "teacher" ? "Nieuw profiel: leerkracht" : vasteRol ? "Nieuw profiel: kind" : "Nieuw profiel"}
+      </h2>
+      <p style={{ margin: 0, fontSize: 13.5, color: "rgba(255,255,255,0.6)" }}>Alleen een naam is nodig. De rest kan later.</p>
 
-      <span style={label}>Wie ben je?</span>
-      <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
+      {!vasteRol && <span style={label}>Wie ben je?</span>}
+      {!vasteRol && <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
         {ROL_KNOPPEN.map((r) => (
           <button key={r.key} type="button" onClick={() => setRole(r.key)} style={{
             ...knopBasis, padding: "12px 6px", fontSize: 14,
@@ -140,7 +153,7 @@ function ProfielKaart({ bestaand, onKlaar, onTerug }) {
             <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, color: "rgba(255,255,255,0.55)", marginTop: 3 }}>{r.uitleg}</span>
           </button>
         ))}
-      </div>
+      </div>}
 
       <label style={label} htmlFor="wie-naam">Naam</label>
       <input id="wie-naam" style={veld} value={naam} onChange={(e) => { setNaam(e.target.value); setFout(""); }}
@@ -211,11 +224,35 @@ function ProfielKaart({ bestaand, onKlaar, onTerug }) {
   );
 }
 
-export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, startNieuw = false }) {
+function LegePlek({ plek, onKlik }) {
+  return (
+    <button type="button" onClick={onKlik} aria-label={`${plek.label}: nog invullen`} style={{
+      ...knopBasis, display: "flex", flexDirection: "column", alignItems: "center", gap: 6, padding: "12px 6px", width: "100%", minHeight: 138,
+      border: "2px dashed rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.02)", color: "rgba(255,255,255,0.38)",
+    }}>
+      <span aria-hidden="true" style={{ width: 56, height: 56, borderRadius: "50%", background: "rgba(255,255,255,0.08)", display: "flex", alignItems: "flex-end", justifyContent: "center", overflow: "hidden" }}>
+        <svg width="40" height="44" viewBox="0 0 40 44"><circle cx="20" cy="14" r="9" fill="rgba(255,255,255,0.22)" /><path d="M2 44c0-11 8-18 18-18s18 7 18 18z" fill="rgba(255,255,255,0.22)" /></svg>
+      </span>
+      <span style={{ fontSize: 14.5, lineHeight: 1.2 }}>{plek.label}</span>
+      <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 600, fontStyle: "italic" }}>{plek.hint}</span>
+      <span style={{ fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, color: "rgba(105,240,174,0.75)" }}>+ invullen</span>
+    </button>
+  );
+}
+
+export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, startNieuw = false, startRol = null }) {
   const [versie, setVersie] = useState(0);
   const profielen = useMemo(() => leesProfielen(), [versie]); // eslint-disable-line react-hooks/exhaustive-deps
-  // "Profiel toevoegen" op Mijn pagina opent meteen de kaart (niet eerst het raster).
-  const [nieuw, setNieuw] = useState(profielen.length === 0 || (startNieuw && profielen.length < MAX_PROFIELEN));
+  // Profielen verdelen over de vaste plekken; wat niet past (oude apparaten) komt onder "Andere profielen".
+  const verdeling = useMemo(() => {
+    const per = { kind: [], ouder: [], leraar: [] };
+    profielen.forEach((p) => per[groepVanRol(p.role)].push(p));
+    const tel = { kind: 0, ouder: 0, leraar: 0 };
+    const plekken = PLEKKEN.map((pl) => ({ plek: pl, profiel: per[pl.groep][tel[pl.groep]++] || null }));
+    const geplaatst = new Set(plekken.filter((x) => x.profiel).map((x) => x.profiel.naam));
+    return { plekken, extra: profielen.filter((p) => !geplaatst.has(p.naam)) };
+  }, [profielen]);
+  const [nieuwRol, setNieuwRol] = useState(startNieuw ? (startRol || "leerling") : null);
   const [beheren, setBeheren] = useState(false);
   const [weg, setWeg] = useState(null);
 
@@ -235,42 +272,56 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
   };
 
   const kies = (naam) => {
-    try { sessionStorage.setItem("lk_wie_gekozen", "1"); } catch { /* */ }
     try { track("profiel_wissel", { via: "wie_oefent_er" }); } catch { /* */ }
     onKies(naam);
   };
 
-  const vol = profielen.length >= MAX_PROFIELEN;
+  const sectie = (titel, groep) => {
+    const items = verdeling.plekken.filter((x) => x.plek.groep === groep);
+    return (
+      <div style={{ marginBottom: 18 }}>
+        <div style={{ textAlign: "left", fontSize: 12, fontWeight: 800, letterSpacing: 0.6, textTransform: "uppercase", color: "rgba(255,255,255,0.5)", margin: "0 0 8px 2px" }}>{titel}</div>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 10 }}>
+          {items.map(({ plek, profiel }, i) => (
+            <div key={plek.label + i} style={{ position: "relative" }}>
+              {profiel
+                ? <Tegel p={profiel} actief={profiel.naam === huidigeNaam} onKies={() => (beheren ? setWeg(profiel.naam) : kies(profiel.naam))} />
+                : (!beheren && <LegePlek plek={plek} onKlik={() => { try { track("profiel_plek_invullen", { groep }); } catch { /* */ } setNieuwRol(plek.rol); }} />)}
+              {beheren && profiel && <span aria-hidden="true" style={{ position: "absolute", top: 6, right: 8, fontSize: 12, fontWeight: 800, color: "#ff8a80" }}>weghalen</span>}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
 
   return (
     <div role="dialog" aria-modal="true" aria-label="Wie oefent er?" style={{
       position: "fixed", inset: 0, zIndex: 1000, overflowY: "auto",
-      background: "radial-gradient(circle at 50% 0%, #16264a, #0b1224 70%)", padding: "28px 16px 40px",
+      background: "radial-gradient(circle at 50% 0%, #16264a, #0b1224 70%)", padding: "24px 14px 40px",
     }}>
-      {nieuw ? (
-        <ProfielKaart bestaand={profielen} onKlaar={(d) => { try { sessionStorage.setItem("lk_wie_gekozen", "1"); } catch { /* */ } maak(d); }}
-          onTerug={() => (profielen.length ? setNieuw(false) : onSluit?.())} />
+      {nieuwRol ? (
+        <ProfielKaart bestaand={profielen} vasteRol={nieuwRol} onKlaar={maak} onTerug={() => setNieuwRol(null)} />
       ) : (
-        <div style={{ maxWidth: 560, margin: "0 auto", textAlign: "center" }}>
-          <h2 style={{ fontFamily: "var(--font-display)", fontSize: 28, margin: "6px 0 4px", color: "#fff" }}>Wie oefent er?</h2>
-          <p style={{ margin: "0 0 18px", fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen profiel.</p>
-          <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(140px, 1fr))", gap: 12 }}>
-            {profielen.slice(0, Math.max(MAX_PROFIELEN, profielen.length)).map((p) => (
-              <div key={p.naam} style={{ position: "relative" }}>
-                <Tegel p={p} actief={p.naam === huidigeNaam} onKies={() => (beheren ? setWeg(p.naam) : kies(p.naam))} />
-                {beheren && <span aria-hidden="true" style={{ position: "absolute", top: 8, right: 10, fontSize: 13, fontWeight: 800, color: "#ff8a80" }}>weghalen</span>}
+        <div style={{ maxWidth: 520, margin: "0 auto", textAlign: "center" }}>
+          <h2 style={{ fontFamily: "var(--font-display)", fontSize: 28, margin: "4px 0 4px", color: "#fff" }}>Wie oefent er?</h2>
+          <p style={{ margin: "0 0 18px", fontSize: 14, color: "rgba(255,255,255,0.6)" }}>Tik op je eigen profiel, of vul een lege plek in.</p>
+          {sectie("Kinderen", "kind")}
+          {sectie("Ouders of verzorgers", "ouder")}
+          {sectie("Leerkracht", "leraar")}
+
+          {verdeling.extra.length > 0 && (
+            <div style={{ textAlign: "left", marginTop: 4 }}>
+              <div style={{ fontSize: 12, color: "rgba(255,255,255,0.5)", margin: "0 0 6px 2px" }}>Andere profielen op dit apparaat</div>
+              <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
+                {verdeling.extra.map((p) => (
+                  <button key={p.naam} type="button" onClick={() => (beheren ? setWeg(p.naam) : kies(p.naam))} style={{ ...knopBasis, padding: "7px 12px", fontSize: 13, borderRadius: 999, border: "1px solid rgba(255,255,255,0.2)", background: "transparent", color: "#fff" }}>
+                    {p.naam}{beheren ? " · weghalen" : ""}
+                  </button>
+                ))}
               </div>
-            ))}
-            {!vol && !beheren && (
-              <button type="button" onClick={() => setNieuw(true)} style={{
-                ...knopBasis, minHeight: 150, border: "2px dashed rgba(255,255,255,0.25)", background: "transparent",
-                color: "rgba(255,255,255,0.8)", fontSize: 15, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", gap: 6,
-              }}>
-                <span style={{ fontSize: 34, lineHeight: 1 }}>+</span>Profiel toevoegen
-              </button>
-            )}
-          </div>
-          {vol && !beheren && <p style={{ fontSize: 13, color: "rgba(255,255,255,0.55)", marginTop: 12 }}>Er passen {MAX_PROFIELEN} profielen op dit apparaat. Wil je een nieuw profiel? Haal er eerst een weg.</p>}
+            </div>
+          )}
 
           {weg && (
             <div role="alertdialog" style={{ marginTop: 16, padding: 14, borderRadius: 14, border: "1px solid rgba(255,138,128,0.5)", background: "rgba(255,138,128,0.08)", color: "#fff", textAlign: "left" }}>
@@ -282,13 +333,13 @@ export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder,
             </div>
           )}
 
-          <div style={{ display: "flex", justifyContent: "center", gap: 18, marginTop: 22 }}>
+          <div style={{ display: "flex", justifyContent: "center", gap: 18, marginTop: 18 }}>
             {profielen.length > 0 && (
               <button type="button" onClick={() => { setBeheren((b) => !b); setWeg(null); }} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.65)", textDecoration: "underline", cursor: "pointer", fontSize: 14 }}>
                 {beheren ? "Klaar met beheren" : "Profielen beheren"}
               </button>
             )}
-            {onSluit && huidigeNaam && (
+            {onSluit && (
               <button type="button" onClick={onSluit} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.65)", textDecoration: "underline", cursor: "pointer", fontSize: 14 }}>Terug</button>
             )}
           </div>

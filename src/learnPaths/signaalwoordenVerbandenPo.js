@@ -339,7 +339,7 @@ const steps = [
           stappen: [{ titel: "Spannend ↔ te lang", tekst: "Spannend (positief) en te lang (negatief) botsen. 'Maar' geeft een tegenstelling." }],
           niveaus: {
             basis: "Twee dingen die botsen → tegenstelling.",
-            simpeler: "Is 'spannend' en 'te lang' positief én negatief? Dan botst het.",
+            simpeler: "Zijn 'spannend' en 'te lang' positief én negatief? Dan botst het.",
             nogSimpeler: "Welk verband hoort bij het woord 'maar'?",
           },
         },
@@ -395,7 +395,7 @@ const steps = [
           stappen: [{ titel: "Regen ↔ toch wandelen", tekst: "Je zou bij regen binnen blijven, maar je gaat tóch. Dat botst: 'hoewel' geeft een tegenstelling." }],
           niveaus: {
             basis: "Iets gebeurt tegen de verwachting in → tegenstelling.",
-            simpeler: "Past 'regen' en 'toch wandelen' bij elkaar of botst het?",
+            simpeler: "Passen 'regen' en 'toch wandelen' bij elkaar of botst het?",
             nogSimpeler: "'Hoewel' lijkt op welk verband-woord: maar, of en?",
           },
         },

@@ -59,7 +59,7 @@ const steps = [
           ],
           woorden: [{ woord: "twelve", uitleg: "Engels voor 12." }, { woord: "eleven", uitleg: "Engels voor 11. Ook geen -teen." }],
           theorie: "Toets-truc Engels getallen: 0-12 zijn losse woorden, 13-19 = -teen-patroon, 20-90 = -ty-patroon.",
-          voorbeelden: [{ type: "stap", tekst: "Op een klok: '12 o'clock' = twelve o'clock. Maand december = twelve month." }],
+          voorbeelden: [{ type: "stap", tekst: "Op een klok: '12 o'clock' = twelve o'clock. December = the twelfth month (de twaalfde maand)." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Twelve (12) vs twenty (20) — let op de uitspraak: TWELVE vs TWENty (klemtoon vooraan)." }],
           niveaus: {
             basis: "12 = twelve.",
@@ -86,12 +86,12 @@ const steps = [
           },
         },
       },
-      { q: "Wat is **40** in Engels?", options: ["forty", "fourteen", "four", "fourty"], answer: 0, wrongHints: [null, "14 = fourteen (-teen-achtervoegsel, 1-cijferig getal).", "4 = four (de basisvorm zonder achtervoegsel).", "Veel mensen schrijven dit fout — Engels schrijft 'forty' ZONDER de u. Uitzondering!"],
+      { q: "Wat is **40** in Engels?", options: ["forty", "fourteen", "four", "fourty"], answer: 0, wrongHints: [null, "14 = fourteen (-teen-achtervoegsel).", "4 = four (de basisvorm zonder achtervoegsel).", "Veel mensen schrijven dit fout — Engels schrijft 'forty' ZONDER de u. Uitzondering!"],
         uitlegPad: {
           stappen: [
             { titel: "20-90 = -ty-patroon", tekst: "Veelvouden van 10 eindigen op **-ty**: twenty (20), thirty (30), **forty (40)**, fifty (50), sixty (60), seventy (70), eighty (80), ninety (90)." },
-            { titel: "Forty is een spelling-uitzondering!", tekst: "**Belangrijk**: 4 = **four** (met u), maar 40 = **forty** (ZONDER u). Dit is de meest-vergeten spelling-uitzondering in Engels. Onthoud: 'FORTY heeft geen u'." },
-            { titel: "Geen 'fourty' bestaat", tekst: "'Fourty' is ALTIJD fout in Engels. Geen native speaker schrijft het zo. Alleen 'forty' = correct." },
+            { titel: "Forty is een spelling-uitzondering!", tekst: "**Belangrijk**: 4 = **four** (met u), maar 40 = **forty** (ZONDER u). Dit is een veelvergeten spelling-uitzondering in het Engels. Onthoud: 'FORTY heeft geen u'." },
+            { titel: "Geen 'fourty' bestaat", tekst: "'Fourty' is ALTIJD fout in het Engels. Alleen 'forty' is correct." },
           ],
           woorden: [{ woord: "forty", uitleg: "Engels voor 40 — zonder u." }],
           theorie: "Toets-strikvraag: forty wordt vaak fout geschreven door Nederlandse leerlingen omdat het verband met four (4) verwarrend lijkt. Onthoud: 40 = forty, niet fourty.",
@@ -120,7 +120,7 @@ const steps = [
   },
   {
     title: "Days & months — dagen en maanden",
-    explanation: "**Dagen van de week** (English, hoofdletter!):\n• Monday — maandag\n• Tuesday — dinsdag\n• Wednesday — woensdag\n• Thursday — donderdag\n• Friday — vrijdag\n• Saturday — zaterdag\n• Sunday — zondag\n\n**Maanden** (ook hoofdletter):\n• January, February, March, April\n• May, June, July, August\n• September, October, November, December\n\n**Let op spelling**:\n• Wednesday (NIET 'Wensday' — moeilijk woord!)\n• February (NIET 'Feb-u-ary')\n\n**Datum**: in Engels eerst de maand, dan de dag (US-stijl). 'May 14' = 14 mei.",
+    explanation: "**Dagen van de week** (English, hoofdletter!):\n• Monday — maandag\n• Tuesday — dinsdag\n• Wednesday — woensdag\n• Thursday — donderdag\n• Friday — vrijdag\n• Saturday — zaterdag\n• Sunday — zondag\n\n**Maanden** (ook hoofdletter):\n• January, February, March, April\n• May, June, July, August\n• September, October, November, December\n\n**Let op spelling**:\n• Wednesday (NIET 'Wensday' — moeilijk woord!)\n• February (NIET 'Feb-u-ary')\n\n**Datum**: in Amerikaans Engels eerst de maand, dan de dag. 'May 14' = 14 mei.",
     checks: [
       { q: "Wat is **Friday** in NL?", options: ["vrijdag", "zaterdag", "donderdag", "maandag"], answer: 0, wrongHints: [null, "Saturday = zaterdag.", "Thursday = donderdag.", "Monday = maandag."] },
       { q: "Wat is **Wednesday** in NL?", options: ["woensdag", "dinsdag", "donderdag", "maandag"], answer: 0, wrongHints: [null, "Tuesday = dinsdag.", "Thursday = donderdag.", "Monday = maandag."] },

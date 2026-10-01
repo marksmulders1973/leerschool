@@ -83,7 +83,7 @@ const steps = [
   {
     title: "Wat is tijdsduur?",
     explanation:
-      "**Tijdsduur** is **hoe lang iets duurt** — van begin tot eind.\n\n**Voorbeelden**:\n• Een schooldag duurt 6 uur en 30 minuten.\n• Een voetbalwedstrijd duurt 90 minuten.\n• Een aflevering van een tekenfilm duurt 25 minuten.\n• Slapen 's nachts: 9 uur.\n\n**Eenheden voor tijd**:\n• **seconden** (s) — voor heel korte dingen *(een knipoog ~0,3 s)*.\n• **minuten** (min) — voor korte stukken *(les van 45 min)*.\n• **uren** (u) — voor langere periodes *(school 6 uur)*.\n• **dagen** — voor heel lange dingen *(vakantie 14 dagen)*.\n\n**Belangrijke afspraken** *(uit je hoofd!)*:\n• 1 minuut = **60 seconden**.\n• 1 uur = **60 minuten** = **3600 seconden**.\n• 1 dag = **24 uur**.\n• 1 week = 7 dagen.\n• 1 jaar = ongeveer 365 dagen.\n\n**Toets-truc — niet 100, maar 60!**\nBij tijd gaat het in stappen van **60** *(niet 100 zoals bij geld)*. Dus 1 uur en 70 minuten ≠ 1u 70m, maar 2u 10m (omdat 70 min = 60 min + 10 min = 1u 10 min).\n\n**Wat is verschil tussen 'tijdstip' en 'tijdsduur'?**\n• **Tijdstip** = wanneer? (bv. om 14:30 uur).\n• **Tijdsduur** = hoe lang? (bv. 45 minuten).",
+      "**Tijdsduur** is **hoe lang iets duurt** — van begin tot eind.\n\n**Voorbeelden**:\n• Een schooldag duurt 6 uur en 30 minuten.\n• Een voetbalwedstrijd duurt 90 minuten.\n• Een aflevering van een tekenfilm duurt 25 minuten.\n• Slapen 's nachts: 9 uur.\n\n**Eenheden voor tijd**:\n• **seconden** (s) — voor heel korte dingen *(een knipoog ~0,3 s)*.\n• **minuten** (min) — voor korte stukken *(les van 45 min)*.\n• **uren** (u) — voor langere periodes *(school 6 uur)*.\n• **dagen** — voor heel lange dingen *(vakantie 14 dagen)*.\n\n**Belangrijke afspraken** *(uit je hoofd!)*:\n• 1 minuut = **60 seconden**.\n• 1 uur = **60 minuten** = **3600 seconden**.\n• 1 dag = **24 uur**.\n• 1 week = 7 dagen.\n• 1 jaar = ongeveer 365 dagen.\n\n**Toets-truc — niet 100, maar 60!**\nBij tijd gaat het in stappen van **60** *(niet 100 zoals bij geld)*. Dus 1 uur en 70 minuten ≠ 1u 70m, maar 2u 10m (want 70 min = 1u 10 min).\n\n**Wat is het verschil tussen 'tijdstip' en 'tijdsduur'?**\n• **Tijdstip** = wanneer? (bv. om 14:30 uur).\n• **Tijdsduur** = hoe lang? (bv. 45 minuten).",
     checks: [
       {
         q: "**1 uur** is hoeveel **minuten**?",
@@ -96,10 +96,10 @@ const steps = [
             { titel: "Op de klok zichtbaar", tekst: "Een analoge klok heeft 60 streepjes voor de minuten. Eén volle rondje van de grote wijzer = 60 minuten = 1 uur." },
             { titel: "Andere tijd-omrekeningen", tekst: "1 minuut = 60 seconden. 1 dag = 24 uur. 1 week = 7 dagen. 1 jaar = ~365 dagen." },
           ],
-          woorden: [{ woord: "60-base", uitleg: "Tijd gaat met 60, niet 100. Sinds de oude Babyloniërs." }],
+          woorden: [{ woord: "60-stappen", uitleg: "Tijd gaat met 60, niet 100. Sinds de oude Babyloniërs." }],
           theorie: "Toets-truc: bij tijd-vraag — altijd 60 omrekenen, niet 100. Veelgemaakte fout: '1 uur 70 min' (niet bestaand) ipv '2 uur 10 min'.",
           voorbeelden: [
-            { type: "stap", tekst: "2 uur = 2 × 60 = 120 min. 30 min = 1/2 uur = halve. 90 min = 1u 30min." },
+            { type: "stap", tekst: "2 uur = 2 × 60 = 120 min. 30 min = 1/2 uur. 90 min = 1u 30min." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "60 min = 1 uur. Klassiek getal, onthoud dit en alle tijd-vragen worden makkelijker." }],
           niveaus: {
@@ -123,7 +123,7 @@ const steps = [
           woorden: [{ woord: "seconde", uitleg: "Korte tijd-eenheid. 60 zitten er in een minuut." }],
           theorie: "Toets-truc: ÷ 60 of × 60. Minuten naar seconden = × 60. Seconden naar minuten = ÷ 60.",
           voorbeelden: [
-            { type: "stap", tekst: "5 min = 300 sec. 10 min = 600 sec. Half min = 30 sec." },
+            { type: "stap", tekst: "5 min = 300 sec. 10 min = 600 sec. Een halve minuut = 30 sec." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Werk met tafel-6 (3 × 6 = 18) + 0 eraan plakken. Snelle truc voor 'min naar sec'." }],
           niveaus: {
@@ -148,7 +148,7 @@ const steps = [
             { woord: "tijdsduur", uitleg: "Hoe lang iets duurt (een aantal minuten/uren)." },
             { woord: "tijdstip", uitleg: "Wanneer iets gebeurt (een klok-tijd zoals 14:30)." },
           ],
-          theorie: "Bij Toets-rekenen-vragen 80% kans dat het gaat om tijdsduur berekenen tussen 2 tijdstippen. Bv. 'van 9:15 tot 10:45 — hoe lang?' = duur-vraag.",
+          theorie: "Tijd-vragen op de toets gaan vaak over tijdsduur berekenen tussen 2 tijdstippen. Bv. 'van 9:15 tot 10:45 — hoe lang?' = duur-vraag.",
           voorbeelden: [
             { type: "stap", tekst: "Tijdstip: het is nu 13:45 (klok-aanwijzing). Tijdsduur: het duurde 45 minuten (van 13:00 tot 13:45)." },
           ],
@@ -187,7 +187,7 @@ const steps = [
   {
     title: "Tijdsduur tussen 2 klokken",
     explanation:
-      "Vaak vraagt voor de toets: *'Hoe lang duurt het van 10:45 tot 12:20?'*\n\n**Toets-stappenplan — opklimmen**:\n1. Reken van **start-tijd naar volgende heel uur**.\n2. Tel **hele uren** erbij tot je vóór de eind-tijd zit.\n3. Tel de **resterende minuten** erbij.\n4. Tel alles op = tijdsduur.\n\n**Voorbeeld — 10:45 tot 12:20**:\n• Stap 1: 10:45 → 11:00 = **15 minuten**.\n• Stap 2: 11:00 → 12:00 = **1 uur**.\n• Stap 3: 12:00 → 12:20 = **20 minuten**.\n• Stap 4: 15 min + 1 uur + 20 min = **1 uur 35 minuten**.\n\n**Voorbeeld — 8:30 tot 11:15**:\n• 8:30 → 9:00 = 30 min.\n• 9:00 → 11:00 = 2 uur.\n• 11:00 → 11:15 = 15 min.\n• Totaal: 30 + 2u + 15 = **2 uur 45 minuten**.\n\n**Voorbeeld — 14:50 tot 15:20** *(over een heel uur heen)*:\n• 14:50 → 15:00 = 10 min.\n• 15:00 → 15:20 = 20 min.\n• Totaal: **30 minuten**.\n\n**Toets-truc — kleine duur (binnen 1 uur)**:\nGewoon minuten aftrekken werkt soms ook:\n• 15:20 − 14:50: 20 − 50 gaat niet → leen 60 min van het uur: (15:80) − (14:50) — wait, beter eerst de opklim-methode gebruiken.\n\n**Veel-voorkomende fout**:\n• Vergeten over het heel uur heen te springen. *'Van 10:50 tot 11:10 — niet 20 min, maar 20 min ✓'*. Wacht — wel correct. Maar: *'Van 10:50 tot 11:30 — niet 80 min, maar 40 min'* — splits hier: 10 min + 30 min = 40 min.",
+      "Vaak vraagt de toets: *'Hoe lang duurt het van 10:45 tot 12:20?'*\n\n**Toets-stappenplan — opklimmen**:\n1. Reken van **start-tijd naar volgende heel uur**.\n2. Tel **hele uren** erbij tot je vóór de eind-tijd zit.\n3. Tel de **resterende minuten** erbij.\n4. Tel alles op = tijdsduur.\n\n**Voorbeeld — 10:45 tot 12:20**:\n• Stap 1: 10:45 → 11:00 = **15 minuten**.\n• Stap 2: 11:00 → 12:00 = **1 uur**.\n• Stap 3: 12:00 → 12:20 = **20 minuten**.\n• Stap 4: 15 min + 1 uur + 20 min = **1 uur 35 minuten**.\n\n**Voorbeeld — 8:30 tot 11:15**:\n• 8:30 → 9:00 = 30 min.\n• 9:00 → 11:00 = 2 uur.\n• 11:00 → 11:15 = 15 min.\n• Totaal: 30 + 2u + 15 = **2 uur 45 minuten**.\n\n**Voorbeeld — 14:50 tot 15:20** *(over een heel uur heen)*:\n• 14:50 → 15:00 = 10 min.\n• 15:00 → 15:20 = 20 min.\n• Totaal: **30 minuten**.\n\n**Toets-truc — aftrekken kan ook**:\n• 15:20 − 14:50: 20 − 50 gaat niet → leen 60 min van het uur: 14:80 − 14:50 = **30 min**. Opklimmen is meestal makkelijker.\n\n**Veel-voorkomende fout**:\n• Rekenen alsof een uur 100 minuten heeft. *'Van 10:50 tot 11:30'* is niet 80 min, maar 10 min + 30 min = **40 min**.",
     svg: tijdsverschilSvg(),
     checks: [
       {
@@ -200,7 +200,7 @@ const steps = [
         q: "Van **8:45** tot **10:15** is hoe lang?",
         options: ["1 uur 30 min", "2 uur 30 min", "1 uur 15 min", "1 uur 45 min"],
         answer: 0,
-        wrongHints: [null, "Te veel — controleer per stap.", "Te weinig — vergeet niet het halve uur boven.", "Te veel — controleer."],
+        wrongHints: [null, "Te veel — controleer per stap.", "Te weinig — tel ook de 15 minuten na 10:00 mee.", "Te veel — controleer."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: naar 9:00", tekst: "8:45 → 9:00 = 15 min." },
@@ -238,7 +238,7 @@ const steps = [
   {
     title: "Tijden optellen en aftrekken",
     explanation:
-      "Bij **tijden optellen** moet je opletten: als minuten ≥ 60, draag je een uur op.\n\n**Voorbeeld — optellen**:\n*'Een film duurt 1 uur 45 minuten. Ze begint om 15:30. Wanneer is hij afgelopen?'*\n• 15:30 + 1 uur = 16:30.\n• 16:30 + 45 min = 17:15 *(want 30 + 45 = 75 min = 1 uur 15 min)*.\n• Antwoord: **17:15**.\n\n**Voorbeeld — uren+minuten optellen**:\n*'2 uur 40 min + 1 uur 35 min = ?'*\n• Uren: 2 + 1 = 3 uur.\n• Minuten: 40 + 35 = 75 min = **1 uur 15 min**.\n• Totaal: 3 uur + 1 uur 15 min = **4 uur 15 min**.\n\n**Voorbeeld — aftrekken**:\n*'Een treinrit duurde 2 uur 20 min. Ik kwam aan om 14:05. Wanneer ben ik vertrokken?'*\n• 14:05 − 2 uur = 12:05.\n• 12:05 − 20 min = 11:45.\n• Antwoord: vertrokken om **11:45**.\n\n**Toets-truc — lenen bij aftrekken**:\nAls je minuten af moet trekken en het gaat niet *(bv. 5 min − 20 min)*: leen 60 min van het uur.\n• 14:05 − 20 min = 13:65 − 20 = **13:45**.\n• Of: 14:05 − 5 min = 14:00, dan nog 15 min eraf = 13:45.\n\n**Veel-voorkomende fout**:\nVergeten te lenen of vergeten te dragen. Tijd gaat met 60, niet 100!",
+      "Bij **tijden optellen** moet je opletten: als minuten ≥ 60, draag je een uur over.\n\n**Voorbeeld — optellen**:\n*'Een film duurt 1 uur 45 minuten. Hij begint om 15:30. Wanneer is hij afgelopen?'*\n• 15:30 + 1 uur = 16:30.\n• 16:30 + 45 min = 17:15 *(want 30 + 45 = 75 min = 1 uur 15 min)*.\n• Antwoord: **17:15**.\n\n**Voorbeeld — uren+minuten optellen**:\n*'2 uur 40 min + 1 uur 35 min = ?'*\n• Uren: 2 + 1 = 3 uur.\n• Minuten: 40 + 35 = 75 min = **1 uur 15 min**.\n• Totaal: 3 uur + 1 uur 15 min = **4 uur 15 min**.\n\n**Voorbeeld — aftrekken**:\n*'Een treinrit duurde 2 uur 20 min. Ik kwam aan om 14:05. Wanneer ben ik vertrokken?'*\n• 14:05 − 2 uur = 12:05.\n• 12:05 − 20 min = 11:45.\n• Antwoord: vertrokken om **11:45**.\n\n**Toets-truc — lenen bij aftrekken**:\nAls je minuten af moet trekken en het gaat niet *(bv. 5 min − 20 min)*: leen 60 min van het uur.\n• 14:05 − 20 min = 13:65 − 20 = **13:45**.\n• Of: 14:05 − 5 min = 14:00, dan nog 15 min eraf = 13:45.\n\n**Veel-voorkomende fout**:\nVergeten te lenen of over te dragen. Tijd gaat met 60, niet 100!",
     checks: [
       {
         q: "**1 uur 40 min + 50 min** = ?",
@@ -250,7 +250,7 @@ const steps = [
         q: "Film begint **19:30** en duurt **1 uur 50 min**. **Eindtijd**?",
         options: ["21:20", "20:80", "21:50", "20:20"],
         answer: 0,
-        wrongHints: [null, "Niet :80 — tijd loopt max tot :59. Splits eerst de uren, dan de minuten.", "Te veel — eindtijd is vóór 21:50.", "Te weinig — 50 min erbij, niet eraf."],
+        wrongHints: [null, "Niet :80 — tijd loopt max tot :59. Splits eerst de uren, dan de minuten.", "Te veel — eindtijd is vóór 21:50.", "Te weinig — vergeet het hele uur niet."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst uur erbij", tekst: "19:30 + 1 uur = 20:30." },
@@ -259,7 +259,7 @@ const steps = [
           woorden: [{ woord: "dragen", uitleg: "Als minuten ≥ 60: trek 60 af, voeg 1 uur toe." }],
           theorie: "Optellen tijd: eerst uren, dan minuten. Bij ≥60 min: dragen.",
           voorbeelden: [{ type: "stap", tekst: "19:30 + 1u 50min = 21:20." }],
-          basiskennis: [{ onderwerp: "60 niet 100", uitleg: "Tijd is geen decimaal." }],
+          basiskennis: [{ onderwerp: "60 niet 100", uitleg: "Tijd is niet tientallig." }],
           niveaus: {
             basis: "19:30 + 1u 50min = 21:20.",
             simpeler: "Voeg eerst 1 uur toe: 19:30 → 20:30. Voeg dan 50 min toe: 20:30 + 50 min = 21:20 (30 + 50 = 80 = 1u 20).",
@@ -286,13 +286,13 @@ const steps = [
   {
     title: "24-uurs format — treinen, vluchten, programma's",
     explanation:
-      "Bij **roosters en vertrektijden** gebruiken we het **24-uurs format**: geen ochtend/middag, maar gewoon 00:00 tot 23:59.\n\n**Hoe lees je 24-uurs tijden?**\n• **00:00** tot **11:59** = ochtend.\n• **12:00** = middag.\n• **13:00** = 1 uur 's middags.\n• **18:00** = 6 uur 's avonds.\n• **22:00** = 10 uur 's avonds.\n• **23:59** = bijna middernacht.\n\n**Omrekenen 12-uurs → 24-uurs**:\n• 's morgens 8 uur → **08:00**.\n• 's middags 1 uur → **13:00** (12 + 1).\n• 's avonds 7 uur → **19:00** (12 + 7).\n• 's avonds 11 uur → **23:00** (12 + 11).\n\n**Voorbeeld — vluchten**:\n*'Vlucht vertrekt 09:25, duurt 7 uur 40 min. Aankomst?'*\n• 09:25 + 7 uur = 16:25.\n• 16:25 + 40 min = **17:05**.\n\n**Voorbeeld — over middernacht**:\n*'Nachtvlucht vertrekt 22:30, duurt 3 uur 15 min. Aankomst?'*\n• 22:30 + 3 uur = 25:30 = 01:30 *(volgende dag)*.\n• 01:30 + 15 min = **01:45** *(volgende dag)*.\n\n**Toets-truc — TV-gids**:\n*'Programma start 20:15, eindigt 21:50. Hoe lang?'*\n• Verschil 20:15 → 21:50.\n• 20:15 → 21:00 = 45 min.\n• 21:00 → 21:50 = 50 min.\n• Totaal: 45 + 50 = **95 min** = **1 uur 35 min**.\n\n**Veel-voorkomende fout**:\nVergeten dat na 23:59 komt 00:00 (de volgende dag).",
+      "Bij **roosters en vertrektijden** gebruiken we het **24-uurs format**: geen ochtend/middag, maar gewoon 00:00 tot 23:59.\n\n**Hoe lees je 24-uurs tijden?**\n• **00:00** tot **11:59** = nacht en ochtend.\n• **12:00** = middag.\n• **13:00** = 1 uur 's middags.\n• **18:00** = 6 uur 's avonds.\n• **22:00** = 10 uur 's avonds.\n• **23:59** = bijna middernacht.\n\n**Omrekenen 12-uurs → 24-uurs**:\n• 's morgens 8 uur → **08:00**.\n• 's middags 1 uur → **13:00** (12 + 1).\n• 's avonds 7 uur → **19:00** (12 + 7).\n• 's avonds 11 uur → **23:00** (12 + 11).\n\n**Voorbeeld — vluchten**:\n*'Vlucht vertrekt 09:25, duurt 7 uur 40 min. Aankomst?'*\n• 09:25 + 7 uur = 16:25.\n• 16:25 + 40 min = **17:05**.\n\n**Voorbeeld — over middernacht**:\n*'Nachtvlucht vertrekt 22:30, duurt 3 uur 15 min. Aankomst?'*\n• 22:30 + 3 uur = 25:30 = 01:30 *(volgende dag)*.\n• 01:30 + 15 min = **01:45** *(volgende dag)*.\n\n**Toets-truc — TV-gids**:\n*'Programma start 20:15, eindigt 21:50. Hoe lang?'*\n• 20:15 → 21:00 = 45 min.\n• 21:00 → 21:50 = 50 min.\n• Totaal: 45 + 50 = **95 min** = **1 uur 35 min**.\n\n**Veel-voorkomende fout**:\nVergeten dat na 23:59 weer 00:00 komt (de volgende dag).",
     checks: [
       {
         q: "**4 uur 's middags** in 24-uurs format?",
         options: ["16:00", "4:00", "12:00", "04:00"],
         answer: 0,
-        wrongHints: [null, "Niet 4 — dat is 's nachts of 's ochtends.", "Dat is middag, niet 's middags.", "Dat is heel vroeg 's ochtends."],
+        wrongHints: [null, "Niet 4 — dat is 's nachts of 's ochtends.", "Dat is 12 uur 's middags, niet 4 uur.", "Dat is heel vroeg 's ochtends."],
       },
       {
         q: "Vlucht vertrekt **10:40**, duurt **3 uur 25 min**. **Aankomst**?",
@@ -334,7 +334,7 @@ const steps = [
   {
     title: "Praktijk — school, reizen, sport",
     explanation:
-      "Toets-praktijksommen met tijd komen vaak voor — school, reizen, sport.\n\n**Voorbeeld — schooldag**:\n*'School begint 8:30, eindigt 14:45. Hoe lang ben je op school?'*\n• 8:30 → 9:00 = 30 min.\n• 9:00 → 14:00 = 5 uur.\n• 14:00 → 14:45 = 45 min.\n• Totaal: 30 + 5u + 45 = **6 uur 15 min**.\n\n**Voorbeeld — reizen**:\n*'Trein vertrekt 7:45, aankomst 10:30. Reistijd?'*\n• 7:45 → 8:00 = 15 min.\n• 8:00 → 10:00 = 2 uur.\n• 10:00 → 10:30 = 30 min.\n• Totaal: **2 uur 45 min**.\n\n**Voorbeeld — sportwedstrijd**:\n*'Een wedstrijd begint 14:00, duurt 2 keer 35 min met 10 min pauze. Eindtijd?'*\n• 14:00 + 35 min = 14:35.\n• 14:35 + 10 min pauze = 14:45.\n• 14:45 + 35 min = **15:20**.\n\n**Voorbeeld — bedrijfsuren**:\n*'Bibliotheek open 9:00-17:30. Hoeveel uur per dag?'*\n• 9:00 → 12:00 = 3 uur.\n• 12:00 → 17:00 = 5 uur.\n• 17:00 → 17:30 = 30 min.\n• Totaal: **8 uur 30 min**.\n\n**Toets-tip**:\nBij meerdere stappen *(film + pauze + film, of trein + bus)*: reken **elk deel apart**, tel daarna alles op.",
+      "Toets-praktijksommen met tijd komen vaak voor — school, reizen, sport.\n\n**Voorbeeld — schooldag**:\n*'School begint 8:30, eindigt 14:45. Hoe lang ben je op school?'*\n• 8:30 → 9:00 = 30 min.\n• 9:00 → 14:00 = 5 uur.\n• 14:00 → 14:45 = 45 min.\n• Totaal: 30 + 5u + 45 = **6 uur 15 min**.\n\n**Voorbeeld — reizen**:\n*'Trein vertrekt 7:45, aankomst 10:30. Reistijd?'*\n• 7:45 → 8:00 = 15 min.\n• 8:00 → 10:00 = 2 uur.\n• 10:00 → 10:30 = 30 min.\n• Totaal: **2 uur 45 min**.\n\n**Voorbeeld — sportwedstrijd**:\n*'Een wedstrijd begint 14:00, duurt 2 keer 35 min met 10 min pauze. Eindtijd?'*\n• 14:00 + 35 min = 14:35.\n• 14:35 + 10 min pauze = 14:45.\n• 14:45 + 35 min = **15:20**.\n\n**Voorbeeld — openingstijden**:\n*'Bibliotheek open 9:00-17:30. Hoeveel uur per dag?'*\n• 9:00 → 12:00 = 3 uur.\n• 12:00 → 17:00 = 5 uur.\n• 17:00 → 17:30 = 30 min.\n• Totaal: **8 uur 30 min**.\n\n**Toets-tip**:\nBij meerdere stappen *(film + pauze + film, of trein + bus)*: reken **elk deel apart**, tel dan alles op.",
     checks: [
       {
         q: "School **8:15** tot **14:30**. Hoeveel **uur** op school?",
@@ -423,15 +423,15 @@ const steps = [
       },
       { q: "**8:00 → 12:00**. Duur?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Te weinig — tel het verschil 12 − 8.", "Te veel — niet 5.", "Te weinig — meer dan 2."] },
       { q: "Hardlopen van 17:50 → 18:25. Hoe lang?", options: ["35 min","45 min","25 min","1 uur"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Te veel."] },
-      { q: "Vlucht 6 uur 45 min. Vertrek 9:00. Aankomst?", options: ["15:45","16:00","14:45","15:00"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — 30 vergeten."] },
+      { q: "Vlucht 6 uur 45 min. Vertrek 9:00. Aankomst?", options: ["15:45","16:00","14:45","15:00"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te weinig — 1 uur vergeten?"] },
       { q: "**70 minuten** = ?", options: ["1 uur 10 min","1 uur 7 min","70 sec","2 uur"], answer: 0, wrongHints: [null, "Niet.", "Niet — minuten.", "Te veel."] },
       { q: "Hoeveel **seconden** in 5 minuten?", options: ["300","60","100","500"], answer: 0, wrongHints: [null, "1 min.", "Niet.", "Niet."] },
-      { q: "School 8:30 → 12:00, daarna 13:00 → 15:00. Totale lestijd?", options: ["5 uur 30 min","6 uur","4 uur","5 uur"], answer: 0, wrongHints: [null, "Niet — pauze niet meegerekend.", "Niet.", "Bijna."] },
+      { q: "School 8:30 → 12:00, daarna 13:00 → 15:00. Totale lestijd?", options: ["5 uur 30 min","6 uur","4 uur","5 uur"], answer: 0, wrongHints: [null, "Te veel — de pauze telt niet mee.", "Niet.", "Bijna."] },
       { q: "Reis duurt 2 uur 50 min. Begint 14:25. Eindigt?", options: ["17:15","17:25","16:25","17:00"], answer: 0, wrongHints: [null, "Niet — 50 min ipv 60.", "Maar 2 uur.", "Niet."] },
       { q: "Hoeveel uur is **240 minuten**?", options: ["4 uur","3 uur","5 uur","2 uur"], answer: 0, wrongHints: [null, "Te weinig — hoeveel minuten zijn er in 1 uur, en deel dan 240 daardoor.", "Te veel — hoeveel minuten is 5 uur, en is dat meer of minder dan 240?", "Te weinig — hoeveel minuten is 2 uur, en is dat meer of minder dan 240?"] },
-      { q: "Wedstrijd 90 min + verlenging 30 min. Totaal?", options: ["2 uur","1 uur 30 min","1 uur","2 uur 30 min"], answer: 0, wrongHints: [null, "Niet — niet verlenging.", "Niet — alleen verlenging.", "Te veel."] },
+      { q: "Wedstrijd 90 min + verlenging 30 min. Totaal?", options: ["2 uur","1 uur 30 min","1 uur","2 uur 30 min"], answer: 0, wrongHints: [null, "Te weinig — verlenging vergeten.", "Niet — alleen verlenging.", "Te veel."] },
       { q: "Tussen **13:15** en **15:50**. Duur?", options: ["2 uur 35 min","2 uur 45 min","2 uur 25 min","3 uur"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
-      { q: "Bus elke 20 min. Eerste 7:00. Vierde?", options: ["8:00","7:40","7:20","8:20"], answer: 0, wrongHints: [null, "Tweede.", "Eerste.", "Vijfde."] },
+      { q: "Bus elke 20 min. Eerste 7:00. Vierde?", options: ["8:00","7:40","7:20","8:20"], answer: 0, wrongHints: [null, "Derde.", "Tweede.", "Vijfde."] },
       { q: "Film 02:15 lang. Begint 19:30. Klaar om?", options: ["21:45","21:30","21:15","22:00"], answer: 0, wrongHints: [null, "Maar 2 uur.", "Maar 1u45.", "Te lang."] },
       { q: "Hoeveel **uur** in 1 dag?", options: ["24","12","48","60"], answer: 0, wrongHints: [null, "Halve dag.", "2 dagen.", "Niet."] },
       { q: "Tussen **23:30** en **01:00** (volgende dag). Duur?", options: ["1 uur 30 min","30 min","1 uur","22 uur 30 min"], answer: 0, wrongHints: [null, "Te kort.", "Vergeet halfuur.", "Te lang."] },

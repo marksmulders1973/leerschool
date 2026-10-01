@@ -59,7 +59,7 @@ ${Array.from({ length: range + 1 }).map((_, i) => {
 const steps = [
   {
     title: "Wat is een negatief getal?",
-    explanation: "**Negatieve getallen** zijn getallen **kleiner dan 0**. Ze zien er uit met een **min-teken**: −1, −2, −3, etc.\n\n**Echte voorbeelden**:\n• **Temperatuur**: in de winter daalt 't onder nul. −5 °C = vijf graden onder nul.\n• **Geld**: een **schuld** is negatief. Je hebt −€ 50 = je moet 50 euro betalen.\n• **Verlies**: een **kelder** is onder grondniveau. -2 verdieping = 2 onder nul.\n\n**Op de getalslijn**:\nGetallen gaan in beide richtingen vanaf nul:\n```\n← ... -5  -4  -3  -2  -1   0   +1  +2  +3  +4  +5 ...→\n```\n\n**Hoe lees je**:\n• 'Min vier' = −4.\n• 'Min twaalf' = −12.\n• 'Plus drie' = +3 *(of gewoon 3)*.\n\n**Welk getal is groter?**\n• −1 is **groter** dan −5. *(Op de getalslijn ligt −1 rechts van −5.)*\n• 0 is groter dan elke negatieve. \n• Elke positieve is groter dan elke negatieve.\n\n**Toets-tip**:\nDenk aan een thermometer. **Hoger** = warmer = groter. **Lager** = kouder = kleiner.",
+    explanation: "**Negatieve getallen** zijn getallen **kleiner dan 0**. Ze hebben een **min-teken**: −1, −2, −3, etc.\n\n**Echte voorbeelden**:\n• **Temperatuur**: in de winter daalt 't onder nul. −5 °C = vijf graden onder nul.\n• **Geld**: een **schuld** is negatief. Je hebt −€ 50 = je moet 50 euro betalen.\n• **Hoogte**: een **kelder** is onder de grond. Verdieping −2 = 2 onder nul.\n\n**Op de getalslijn**:\nGetallen gaan in beide richtingen vanaf nul:\n```\n← ... -5  -4  -3  -2  -1   0   +1  +2  +3  +4  +5 ...→\n```\n\n**Hoe lees je**:\n• 'Min vier' = −4.\n• 'Min twaalf' = −12.\n• 'Plus drie' = +3 *(of gewoon 3)*.\n\n**Welk getal is groter?**\n• −1 is **groter** dan −5. *(Op de getalslijn ligt −1 rechts van −5.)*\n• 0 is groter dan elke negatieve. \n• Elke positieve is groter dan elke negatieve.\n\n**Toets-tip**:\nDenk aan een thermometer. **Hoger** = warmer = groter. **Lager** = kouder = kleiner.",
     svg: thermometerSvg(-5, "Vijf graden onder nul"),
     checks: [
       {
@@ -85,8 +85,8 @@ const steps = [
           stappen: [{ titel: "Min = onder nul", tekst: "−12 °C = 12 graden ONDER nul. Min-teken = onder/min." }],
           woorden: [{ woord: "−X °C", uitleg: "X graden onder nul (vriespunt)." }],
           theorie: "Temperatuur: positief = boven 0 (warm). Negatief = onder 0 (vries).",
-          voorbeelden: [{ type: "tabel", tekst: "+20°C zomer. 0°C vriespunt. −5°C lichte vorst. −12°C hard vriest." }],
-          basiskennis: [{ onderwerp: "Bestaat zeker", uitleg: "Bij ons in winter, of bij Pool/Siberië nog veel kouder (−40°C)." }],
+          voorbeelden: [{ type: "tabel", tekst: "+20°C zomer. 0°C vriespunt. −5°C lichte vorst. −12°C strenge vorst." }],
+          basiskennis: [{ onderwerp: "Bestaat zeker", uitleg: "Bij ons in de winter, en op de Noordpool of in Siberië nog veel kouder (−40°C)." }],
           niveaus: { basis: "12 graden onder nul.", simpeler: "Min-teken voor 12 = onder nul. Dus −12°C = 12 graden onder vriespunt.", nogSimpeler: "Onder nul" },
         },
       },
@@ -148,7 +148,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Verder onder nul", tekst: "Begin op −5. 4 stappen links: −5→−6→−7→−8→−9." }],
           woorden: [{ woord: "negatief - positief", uitleg: "Min van negatief: nog dieper onder nul." }],
-          theorie: "Bij negatief getal aftrekken: tel gewoon op wat er afgaat. −5 − 4 = −(5+4) = −9.",
+          theorie: "Vanaf een negatief getal aftrekken: tel op wat er afgaat. −5 − 4 = −(5+4) = −9.",
           voorbeelden: [{ type: "truc", tekst: "Beide negatief denken: −5 + (−4) = −9. Of: schuld 5 + schuld 4 = schuld 9." }],
           basiskennis: [{ onderwerp: "Schuld-truc", uitleg: "Schuld €5 + schuld €4 = schuld €9 = saldo −€9." }],
           niveaus: { basis: "−9.", simpeler: "−5 − 4: vanaf −5 vier stappen links = −9.", nogSimpeler: "−9" },
@@ -159,7 +159,7 @@ const steps = [
 
   {
     title: "Min een minus = plus",
-    explanation: "Een **lastige** maar belangrijke regel:\n\n**Twee min-tekens op rij worden plus**.\n\n**Voorbeeld**: 5 − (−3) = ?\n\nDe '−(−3)' betekent: je trekt een negatief getal af. Dat is hetzelfde als **er drie bij optellen**.\n\nDus: 5 − (−3) = 5 + 3 = **8**.\n\n**Waarom?**\nStel je hebt geld: € 5. Een 'schuld' van € 3 betekent dat je in totaal € 5 − € 3 = € 2 hebt. Maar als die schuld **wegvalt** *(wordt afgetrokken)*, krijg je € 3 erbij. Dus 5 − (−3) = 8.\n\n**Andere voorbeelden**:\n• −2 − (−5) = −2 + 5 = **+3**.\n• 4 + (−6) = 4 − 6 = **−2** *(plus een negatief = aftrekken)*.\n• −7 + (−3) = −7 − 3 = **−10**.\n\n**Toets-truc — telkens-tekens-regel**:\nKijk naar de **2 tekens op rij**:\n• + + = **plus**\n• + − = **min**\n• − + = **min**\n• − − = **plus**\n\nVoorbeeld: 8 − − 5 = 8 + 5 = **13** *(want −− = +)*.\n\n**toetsvraag-vorm**:\n*'In een spel kun je punten verliezen. Sven had +12 en verliest dan −5 (dus krijgt 5 erbij). Wat is zijn nieuwe score?'*\n• Niet aftrekken want 'verliest' van negatief = krijgt erbij.\n• 12 − (−5) = 12 + 5 = **17**.",
+    explanation: "Een **lastige** maar belangrijke regel:\n\n**Twee min-tekens op rij worden plus**.\n\n**Voorbeeld**: 5 − (−3) = ?\n\nDe '−(−3)' betekent: je trekt een negatief getal af. Dat is hetzelfde als **er drie bij optellen**.\n\nDus: 5 − (−3) = 5 + 3 = **8**.\n\n**Waarom?**\nStel je hebt geld: € 5. Een 'schuld' van € 3 betekent dat je in totaal € 5 − € 3 = € 2 hebt. Maar als die schuld **wegvalt** *(wordt afgetrokken)*, krijg je € 3 erbij. Dus 5 − (−3) = 8.\n\n**Andere voorbeelden**:\n• −2 − (−5) = −2 + 5 = **+3**.\n• 4 + (−6) = 4 − 6 = **−2** *(plus een negatief = aftrekken)*.\n• −7 + (−3) = −7 − 3 = **−10**.\n\n**Toets-truc — tekens-regel**:\nKijk naar de **2 tekens op rij**:\n• + + = **plus**\n• + − = **min**\n• − + = **min**\n• − − = **plus**\n\nVoorbeeld: 8 − − 5 = 8 + 5 = **13** *(want −− = +)*.\n\n**Toetsvraag-vorm**:\n*'In een spel kun je punten verliezen. Sven had +12 en verliest dan −5 (dus krijgt 5 erbij). Wat is zijn nieuwe score?'*\n• Niet aftrekken want 'verliest' van negatief = krijgt erbij.\n• 12 − (−5) = 12 + 5 = **17**.",
     checks: [
       {
         q: "**8 − (−3)** = ?",
@@ -208,7 +208,7 @@ const steps = [
 
   {
     title: "Praktijk — temperatuur en geld",
-    explanation: "Negatieve getallen zie je vooral in:\n\n**Temperatuur**:\n*'In de winter daalde de temperatuur van +3 °C overdag naar −7 °C 's nachts. Hoeveel graden was 't gedaald?'*\n\n• Verschil = +3 − (−7) = 3 + 7 = **10 graden**.\n\nOf op de thermometer: van +3 → 0 = 3 omlaag. Van 0 → −7 = 7 omlaag. Totaal **10 omlaag**.\n\n**Geld** *(schuld + saldo)*:\n*'Mark heeft saldo van € 25 op rekening. Hij betaalt € 40 boodschappen. Wat is zijn saldo nu?'*\n\n• 25 − 40 = **−€ 15** *(roodstand)*.\n\n*'Hij krijgt zijn loon van € 100. Wat is zijn saldo?'*\n• −15 + 100 = **+€ 85**.\n\n**Diepte / hoogte** *(zeespiegel)*:\nNederland ligt deels onder zeespiegel.\n• Schiphol: −4 m *(4 meter onder zeespiegel)*.\n• Mont Blanc: +4810 m *(boven zeespiegel)*.\n\n**Toets-tip — verschil van temperaturen**:\nVerschil = grotere getal − kleinere getal *(altijd positief uitkomst)*.\n• Tussen +5 en −3: verschil = 5 − (−3) = 5 + 3 = **8**.\n• Tussen +20 en −10: verschil = 20 − (−10) = 20 + 10 = **30**.\n\n**Slimme aanpak**: tel apart het 'positieve deel' (tot 0) en het 'negatieve deel' (van 0 omlaag). Dan tel je beide samen.",
+    explanation: "Negatieve getallen zie je vooral in:\n\n**Temperatuur**:\n*'In de winter daalde de temperatuur van +3 °C overdag naar −7 °C 's nachts. Hoeveel graden was 't gedaald?'*\n\n• Verschil = +3 − (−7) = 3 + 7 = **10 graden**.\n\nOf op de thermometer: van +3 → 0 = 3 omlaag. Van 0 → −7 = 7 omlaag. Totaal **10 omlaag**.\n\n**Geld** *(schuld + saldo)*:\n*'Mark heeft € 25 op zijn rekening. Hij betaalt € 40 boodschappen. Wat is zijn saldo nu?'*\n\n• 25 − 40 = **−€ 15** *(roodstand)*.\n\n*'Hij krijgt zijn loon van € 100. Wat is zijn saldo?'*\n• −15 + 100 = **+€ 85**.\n\n**Diepte / hoogte** *(zeespiegel)*:\nNederland ligt deels onder zeespiegel.\n• Schiphol: −3 m *(3 meter onder zeespiegel)*.\n• Mont Blanc: +4810 m *(boven zeespiegel)*.\n\n**Toets-tip — verschil van temperaturen**:\nVerschil = grootste − kleinste *(uitkomst altijd positief)*.\n• Tussen +5 en −3: verschil = 5 − (−3) = 5 + 3 = **8**.\n• Tussen +20 en −10: verschil = 20 − (−10) = 20 + 10 = **30**.\n\n**Slimme aanpak**: tel apart het 'positieve deel' (tot 0) en het 'negatieve deel' (van 0 omlaag). Dan tel je beide samen.",
     checks: [
       {
         q: "Temperatuur is **+5 °C**, daalt **8 graden**. **Nieuwe temperatuur**?",
@@ -218,7 +218,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "5 − 8 = −3", tekst: "Dalen = aftrekken. 5 − 8 = −3 (3 onder nul)." }],
           woorden: [{ woord: "dalen", uitleg: "Temperatuur omlaag = aftrekken." }],
-          theorie: "Stijgen = +. Dalen = −. Bij dalen onder 5 → onder nul.",
+          theorie: "Stijgen = +. Dalen = −. Daal je meer dan 5 → onder nul.",
           voorbeelden: [{ type: "stap", tekst: "5 − 5 = 0. Nog 3 verder omlaag = −3." }],
           basiskennis: [{ onderwerp: "Thermometer", uitleg: "Kwik daalt 8 streepjes vanaf +5 → komt op −3." }],
           niveaus: { basis: "−3 °C.", simpeler: "Dalen 8 graden van +5: 5 − 8 = −3 (3 graden onder nul).", nogSimpeler: "−3" },
@@ -349,7 +349,7 @@ const steps = [
             { type: "stap", tekst: "Verschil tussen +5 en −3: 5 + 3 = 8." },
             { type: "stap", tekst: "Verschil tussen −10 en −2: 10 − 2 = 8 (allebei negatief, kleinere afstand)." },
           ],
-          basiskennis: [{ onderwerp: "Weer-vraag", uitleg: "De toets veel met temperatuur: −5°C 's nachts vs +12°C overdag → verschil 17 graden." }],
+          basiskennis: [{ onderwerp: "Weer-vraag", uitleg: "De toets vraagt vaak naar temperatuur: −5°C 's nachts vs +12°C overdag → verschil 17 graden." }],
           niveaus: { basis: "17 °C.", simpeler: "Van −5 naar 0 = 5. Van 0 naar +12 = 12. Samen: 17 graden verschil.", nogSimpeler: "17" },
         },
       },
@@ -368,10 +368,10 @@ const steps = [
             { woord: "zeespiegel", uitleg: "Niveau van de zee = 0 m. Boven = +, onder = −." },
             { woord: "stijgen / dalen", uitleg: "Stijgen = optellen (richting 0/+). Dalen = aftrekken (richting −)." },
           ],
-          theorie: "Diepte / hoogte met negatieve getallen:\n• Vliegtuig +10.000 m\n• Berg +800 m\n• Zeespiegel 0\n• Duiker −12 m\n• Onderzeeer −80 m\nBij beweging: pas op of getal positief of negatief is — context bepaalt.",
+          theorie: "Diepte / hoogte met negatieve getallen:\n• Vliegtuig +10.000 m\n• Berg +800 m\n• Zeespiegel 0\n• Duiker −12 m\n• Onderzeeër −80 m\nBij beweging: pas op of getal positief of negatief is — context bepaalt.",
           voorbeelden: [
             { type: "stap", tekst: "Berg +500 m, daalt 200 m → +300 m." },
-            { type: "stap", tekst: "Onderzeeer −80 m, stijgt 30 m → −50 m." },
+            { type: "stap", tekst: "Onderzeeër −80 m, stijgt 30 m → −50 m." },
           ],
           basiskennis: [{ onderwerp: "Onder zeespiegel NL", uitleg: "Nederland heeft delen onder zeespiegel (−6 m bv. in Zuidplaspolder). Vandaar dijken." }],
           niveaus: { basis: "−12 + 8 = −4.", simpeler: "Duiker op −12 m. 8 omhoog = −12 + 8 = −4 m. Nog 4 m onder water.", nogSimpeler: "−4 m" },
@@ -384,7 +384,7 @@ const steps = [
         wrongHints: [null, "Niet op volgorde — 0 hoort tussen negatieven en positieven.", "Niet — −9 < −3, dus −9 hoort eerst.", "Andersom — dat is groot naar klein."],
         uitlegPad: {
           stappen: [
-            { titel: "Negatieven: groter cijfer = kleiner getal", tekst: "Bij negatieve getallen is het tegenovergesteld dan bij positieven. **−9 < −3** (omdat −9 verder van 0 ligt, dus kleiner)." },
+            { titel: "Negatieven: groter cijfer = kleiner getal", tekst: "Bij negatieve getallen is het andersom dan bij positieven. **−9 < −3** (omdat −9 verder van 0 ligt, dus kleiner)." },
             { titel: "Volgorde op getalslijn", tekst: "Links naar rechts: kleinste naar grootste.\n←  −9    −3    0    +4  →\nDus de juiste volgorde: **−9, −3, 0, +4**." },
             { titel: "Toets-instinker", tekst: "Veelgemaakte fout: −9 plaatsen NA −3 omdat '9 > 3'. Bij negatieven werkt het andersom — '−9 ligt verder onder nul dan −3'." },
           ],
@@ -392,7 +392,7 @@ const steps = [
             { woord: "klein naar groot", uitleg: "Van links naar rechts op getalslijn." },
             { woord: "negatief vergelijken", uitleg: "Hoe groter het cijfer achter de min, hoe kleiner het getal." },
           ],
-          theorie: "Negatieve-getallen-vergelijk-regel:\n• Verder weg van 0 (groter cijfer) = kleiner getal\n• −100 < −10 < −1 < 0 < +1 < +10\n• Truc: trek streep door min — kleinste 'gewone' getal in min = grootste in absoluut, dus kleinst overall.",
+          theorie: "Negatieve-getallen-vergelijk-regel:\n• Verder weg van 0 (groter cijfer) = kleiner getal\n• −100 < −10 < −1 < 0 < +1 < +10\n• Truc: zonder min is 9 groter dan 3, maar mét min is −9 juist kleiner dan −3.",
           voorbeelden: [
             { type: "stap", tekst: "Sorteer −5, +2, −1, 0: −5 < −1 < 0 < +2." },
             { type: "stap", tekst: "Wat is groter: −7 of −20? −7 (ligt dichter bij 0)." },
@@ -405,7 +405,7 @@ const steps = [
         q: "**(−5) × 3** = ?",
         options: ["−15","+15","−8","+8"],
         answer: 0,
-        wrongHints: [null, "Niet — bij min×plus blijft het minteken.", "Niet vermenigvuldigen genoeg.", "Andersom."],
+        wrongHints: [null, "Niet — bij min×plus blijft het minteken.", "Niet aftrekken — vermenigvuldigen.", "Andersom."],
         uitlegPad: {
           stappen: [
             { titel: "Min × plus = min", tekst: "Regel: bij vermenigvuldigen tellen we de minnen.\n• min × plus → **min**\n• plus × min → **min**\n• min × min → **plus**\n• plus × plus → **plus**\nHier: (−5) × 3 → één min → **negatief antwoord**." },
@@ -422,12 +422,12 @@ const steps = [
             { type: "stap", tekst: "(−2) × (−7) = +14 (2 min = even = +)." },
             { type: "stap", tekst: "(−1) × (−1) × (−1) = −1 (3 min = oneven = −)." },
           ],
-          basiskennis: [{ onderwerp: "Examen-stof", uitleg: "Dit is brugklas-VO-stof, maar Doorstroomtoets test het ook." }],
+          basiskennis: [{ onderwerp: "Examen-stof", uitleg: "Dit is eigenlijk brugklas-stof. Handig om alvast te kennen." }],
           niveaus: { basis: "−15.", simpeler: "Min × plus = min. 5 × 3 = 15. Met minteken: −15.", nogSimpeler: "−15" },
         },
       },
       { q: "Het is −3°C. De temperatuur stijgt 8°. Hoe warm is het nu?", options: ["5°C","11°C","−11°C","−5°C"], answer: 0, wrongHints: [null, "Niet — niet bij elkaar optellen zonder min.", "Niet — getal is gestegen.", "Niet — je telt erbij op, daalt niet."] },
-      { q: "Op een rekening staat −€20. Er komt €35 bij. Saldo nu?", options: ["+€15","+€55","−€55","−€15"], answer: 0, wrongHints: [null, "Niet — niet −20 omgedraaid bij +35.", "Niet — je VOEGT TOE.", "Niet — kleiner schuld? Klopt niet."] },
+      { q: "Op een rekening staat −€20. Er komt €35 bij. Saldo nu?", options: ["+€15","+€55","−€55","−€15"], answer: 0, wrongHints: [null, "Niet — de schuld van €20 gaat er eerst af.", "Niet — je VOEGT TOE.", "Niet — €35 is meer dan de schuld, dus je komt boven nul."] },
       { q: "−6 − 4 = ?", options: ["−10","−2","2","10"], answer: 0, wrongHints: [null, "Niet — schuld wordt groter, niet kleiner.", "Niet — antwoord is negatief.", "Niet — beide min, getal wordt min."] },
       { q: "Welke is het kleinst?", options: ["−8","−3","0","5"], answer: 0, wrongHints: [null, "Niet — dichter bij nul = groter.", "Niet — er zijn nog kleinere.", "Niet — dat is de grootste."] },
       { q: "**5 − 8** = ?", options: ["−3","3","−13","13"], answer: 0, wrongHints: [null, "Verkeerd teken.", "Te ver.", "Niet."] },
@@ -436,8 +436,8 @@ const steps = [
       { q: "0 − 4 = ?", options: ["−4","4","0","−40"], answer: 0, wrongHints: [null, "Niet — onder nul.", "Niet — eraf.", "Te ver."] },
       { q: "Wat is **tegengestelde** van −7?", options: ["7","−7","0","14"], answer: 0, wrongHints: [null, "Niet — zichzelf.", "Niet.", "Niet."] },
       { q: "Hoogte mens: 1,5 m boven zee. Duiker −3 m. Verschil?", options: ["4,5 m","1,5 m","−4,5 m","−1,5 m"], answer: 0, wrongHints: [null, "Maar 1 zijde.", "Verkeerd teken voor verschil.", "Niet."] },
-      { q: "Welke getallenrij is **kleinst → grootst**?", options: ["−5, −2, 0, 3","3, 0, −2, −5","0, −2, −5, 3","−2, −5, 0, 3"], answer: 0, wrongHints: [null, "Andersom.", "Niet sorteer.", "Niet."] },
-      { q: "Beneden zee-niveau is meestal?", options: ["Negatief","Positief","Nul","Niet relevant"], answer: 0, wrongHints: [null, "Boven.", "Op niveau.", "Wel."] },
+      { q: "Welke getallenrij is **kleinst → grootst**?", options: ["−5, −2, 0, 3","3, 0, −2, −5","0, −2, −5, 3","−2, −5, 0, 3"], answer: 0, wrongHints: [null, "Andersom.", "Niet gesorteerd.", "Niet."] },
+      { q: "Een hoogte onder zeeniveau is…", options: ["Negatief","Positief","Nul","Niet relevant"], answer: 0, wrongHints: [null, "Boven.", "Op niveau.", "Wel."] },
       { q: "**−7 + 7** = ?", options: ["0","−14","14","7"], answer: 0, wrongHints: [null, "Niet — tegengestelde.", "Niet — tegengestelde.", "Niet."] },
       { q: "**−3 × 2** = ?", options: ["−6","6","−1","−5"], answer: 0, wrongHints: [null, "Verkeerd teken.", "Niet zo.", "Niet."] },
       { q: "**−2 × −3** = ?", options: ["6","−6","−5","5"], answer: 0, wrongHints: [null, "Verkeerd teken.", "Niet.", "Verkeerd teken."] },

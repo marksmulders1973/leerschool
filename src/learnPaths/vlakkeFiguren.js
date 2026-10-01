@@ -128,7 +128,7 @@ const steps = [
   // ─── B. Middelloodlijn ────────────────────────────
   {
     title: "Wat is een middelloodlijn?",
-    explanation: "De **middelloodlijn** van een lijnstuk AB is een lijn die:\n1. Door het **midden** van AB gaat, en\n2. **Loodrecht** op AB staat.\n\nVandaar de naam: **midden** + **lood**.\n\n**Hoe teken je hem?**:\n1. Bepaal het midden M van AB.\n2. Trek door M een lijn die haaks (90°) op AB staat.\n3. Klaar — dat is de middelloodlijn.\n\n**Bijzondere eigenschap**: de middelloodlijn deelt het lijnstuk AB precies in twee gelijke delen, en is symmetrisch (zoals een spiegel-as).\n\n**In het echt**: stel je hebt twee huizen A en B, en je wilt een verbindingsweg recht door het midden tussen ze: dat is langs de middelloodlijn.",
+    explanation: "De **middelloodlijn** van een lijnstuk AB is een lijn die:\n1. Door het **midden** van AB gaat, en\n2. **Loodrecht** op AB staat.\n\nVandaar de naam: **midden** + **lood**.\n\n**Hoe teken je hem?**:\n1. Bepaal het midden M van AB.\n2. Trek door M een lijn die haaks (90°) op AB staat.\n3. Klaar — dat is de middelloodlijn.\n\n**Bijzondere eigenschap**: de middelloodlijn deelt het lijnstuk AB precies in twee gelijke delen, en is symmetrisch (zoals een spiegel-as).\n\n**In het echt**: stel je hebt twee huizen A en B, en je wilt een weg recht door het midden ertussen: dat is langs de middelloodlijn.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="50" y1="140" x2="250" y2="140" stroke="${COLORS.curve}" stroke-width="2.5"/>
 <circle cx="50" cy="140" r="5" fill="${COLORS.point}"/>
@@ -176,7 +176,7 @@ const steps = [
   },
   {
     title: "Eigenschap: gelijke afstanden",
-    explanation: "De middelloodlijn heeft een **bijzondere eigenschap** die in heel veel meetkundige bewijzen voorkomt:\n\n**Elk punt op de middelloodlijn van AB ligt even ver van A als van B.**\n\nMet symbolen: voor elk punt P op de middelloodlijn geldt:  **|PA| = |PB|**\n\nDe omgekeerde regel klopt ook:\n\n**Als een punt even ver van A als van B ligt, dan ligt het op de middelloodlijn.**\n\nDeze twee dingen zijn dus equivalent: 'op middelloodlijn' = 'gelijke afstand tot A en B'.\n\n**Toepassing**: stel je wilt een **postbode** een huis kiezen dat even ver van twee dorpen A en B af ligt. Elk punt op de middelloodlijn is een geldige plek.",
+    explanation: "De middelloodlijn heeft een **bijzondere eigenschap** die in heel veel meetkundige bewijzen voorkomt:\n\n**Elk punt op de middelloodlijn van AB ligt even ver van A als van B.**\n\nMet symbolen: voor elk punt P op de middelloodlijn geldt:  **|PA| = |PB|**\n\nDe omgekeerde regel klopt ook:\n\n**Als een punt even ver van A als van B ligt, dan ligt het op de middelloodlijn.**\n\nDeze twee dingen zijn dus equivalent: 'op middelloodlijn' = 'gelijke afstand tot A en B'.\n\n**Toepassing**: stel een **postbode** wil een huis kiezen dat even ver van twee dorpen A en B ligt. Elk punt op de middelloodlijn is een geldige plek.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="50" y1="150" x2="250" y2="150" stroke="${COLORS.curve}" stroke-width="2"/>
 <circle cx="50" cy="150" r="5" fill="${COLORS.point}"/>
@@ -225,7 +225,7 @@ const steps = [
   },
   {
     title: "Omgeschreven cirkel — drie middelloodlijnen kruisen",
-    explanation: "Maak nu een **driehoek ABC**. Teken de **drie middelloodlijnen** — één per zijde (van AB, BC en AC).\n\n**Verrassing**: alle drie de lijnen kruisen elkaar **in één punt**! Dat punt heet **M** (middelpunt).\n\n**Waarom?** \n- M ligt op middelloodlijn van AB → |MA| = |MB|\n- M ligt op middelloodlijn van BC → |MB| = |MC|\n- Dus: |MA| = |MB| = |MC| — M ligt even ver van alle 3 hoeken.\n\nDat betekent: je kunt een **cirkel rond de driehoek** tekenen, met M als middelpunt. Die cirkel raakt alle drie de hoeken precies.\n\nDit heet de **omgeschreven cirkel**: de cirkel die de driehoek netjes omspant.",
+    explanation: "Maak nu een **driehoek ABC**. Teken de **drie middelloodlijnen** — één per zijde (van AB, BC en AC).\n\n**Verrassing**: alle drie de lijnen kruisen elkaar **in één punt**! Dat punt heet **M** (middelpunt).\n\n**Waarom?** \n- M ligt op middelloodlijn van AB → |MA| = |MB|\n- M ligt op middelloodlijn van BC → |MB| = |MC|\n- Dus: |MA| = |MB| = |MC| — M ligt even ver van alle 3 hoeken.\n\nDat betekent: je kunt een **cirkel rond de driehoek** tekenen, met M als middelpunt. Die cirkel gaat precies door alle drie de hoekpunten.\n\nDit heet de **omgeschreven cirkel**: de cirkel die de driehoek netjes omspant.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="80,150 220,150 150,50" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2"/>
 <text x="70" y="170" fill="${COLORS.point}" font-size="13" font-family="Arial" font-weight="bold">A</text>
@@ -255,7 +255,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [{ titel: "3 middelloodlijnen → M", tekst: "Drie middelloodlijnen van driehoek kruisen in één punt M — middelpunt omgeschreven cirkel." }],
-          woorden: [{ woord: "omgeschreven", uitleg: "cirkel rond de driehoek, raakt 3 hoeken" }],
+          woorden: [{ woord: "omgeschreven", uitleg: "cirkel rond de driehoek, door de 3 hoekpunten" }],
           theorie: "M ligt even ver van A, B en C → cirkel mogelijk.",
           voorbeelden: [{ type: "voorbeeld", tekst: "|MA|=|MB|=|MC| = straal omgeschreven cirkel" }],
           basiskennis: [{ onderwerp: "logica", uitleg: "M op middelloodlijn van AB ⇒ |MA|=|MB|; M op die van BC ⇒ |MB|=|MC|" }],
@@ -272,7 +272,7 @@ const steps = [
   // ─── C. Bissectrice ────────────────────────────
   {
     title: "Wat is een bissectrice?",
-    explanation: "Een **bissectrice** is een lijn die een **hoek** in **twee gelijke delen** verdeelt.\n\nLetterlijk uit het Latijn: 'bi-sect' = 'in tweeën snijden'.\n\nStel je hebt een hoek die 60° groot is. De bissectrice deelt 'm in twee hoeken van **30°** elk.\n\n**Hoe teken je een bissectrice?**:\n1. Begin in het hoekpunt.\n2. Trek een lijn die zo loopt dat de hoeken aan beide kanten **gelijk** zijn.\n3. De lijn zit dus 'in het midden' van de hoek.\n\n**Twee hoeken van 90°**: bissectrice = 45° schuin.\n**Hoek van 100°**: bissectrice splitst in 50° en 50°.\n\nElke hoek heeft precies één bissectrice.",
+    explanation: "Een **bissectrice** is een lijn die een **hoek** in **twee gelijke delen** verdeelt.\n\nLetterlijk uit het Latijn: 'bi-sect' = 'in tweeën snijden'.\n\nStel je hebt een hoek die 60° groot is. De bissectrice deelt 'm in twee hoeken van **30°** elk.\n\n**Hoe teken je een bissectrice?**:\n1. Begin in het hoekpunt.\n2. Trek een lijn die zo loopt dat de hoeken aan beide kanten **gelijk** zijn.\n3. De lijn zit dus 'in het midden' van de hoek.\n\n**Hoek van 90°**: bissectrice splitst in 45° en 45°.\n**Hoek van 100°**: bissectrice splitst in 50° en 50°.\n\nElke hoek heeft precies één bissectrice.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="60" y1="160" x2="240" y2="160" stroke="${COLORS.curve}" stroke-width="2"/>
 <line x1="60" y1="160" x2="200" y2="50" stroke="${COLORS.curve}" stroke-width="2"/>
@@ -365,7 +365,7 @@ const steps = [
   },
   {
     title: "Ingeschreven cirkel — drie bissectrices kruisen",
-    explanation: "Bij een driehoek ABC heeft elke hoek een **bissectrice** — drie in totaal.\n\n**Mooie eigenschap**: de drie bissectrices kruisen elkaar **in één punt**, midden in de driehoek. Dat punt heet **I** (van **i**ngeschreven).\n\n**Waarom belangrijk?**\n• I ligt op alle drie de bissectrices\n• Dus I ligt even ver van **alle drie** de zijden van de driehoek\n\nDat betekent: je kunt een **cirkel binnen** de driehoek tekenen die alle drie de zijden **raakt** (nét aan). Middelpunt = I, straal = afstand van I tot een zijde.\n\nDit heet de **ingeschreven cirkel**: de grootste cirkel die binnen de driehoek past.\n\n**Verschil**:\n• **Omgeschreven** cirkel: gaat rond de driehoek (raakt de hoeken).\n• **Ingeschreven** cirkel: zit binnen de driehoek (raakt de zijden).",
+    explanation: "Bij een driehoek ABC heeft elke hoek een **bissectrice** — drie in totaal.\n\n**Mooie eigenschap**: de drie bissectrices kruisen elkaar **in één punt**, midden in de driehoek. Dat punt heet **I** (van **i**ngeschreven).\n\n**Waarom belangrijk?**\n• I ligt op alle drie de bissectrices\n• Dus I ligt even ver van **alle drie** de zijden van de driehoek\n\nDat betekent: je kunt een **cirkel binnen** de driehoek tekenen die alle drie de zijden **raakt** (nét aan). Middelpunt = I, straal = afstand van I tot een zijde.\n\nDit heet de **ingeschreven cirkel**: de grootste cirkel die binnen de driehoek past.\n\n**Verschil**:\n• **Omgeschreven** cirkel: gaat rond de driehoek (door de hoekpunten).\n• **Ingeschreven** cirkel: zit binnen de driehoek (raakt de zijden).",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,170 240,170 150,40" fill="rgba(0,200,83,0.08)" stroke="${COLORS.curve}" stroke-width="2"/>
 <circle cx="150" cy="135" r="35" fill="rgba(255,213,79,0.10)" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
@@ -412,7 +412,7 @@ const steps = [
   // ─── D. Zwaartelijn en hoogtelijn ────────────────────────────
   {
     title: "Zwaartelijn — naar het midden van de overkant",
-    explanation: "Een **zwaartelijn** in een driehoek is een lijn die loopt van een **hoek** naar het **midden van de overstaande zijde**.\n\nElke driehoek heeft drie zwaartelijnen — één per hoek.\n\n**Hoe teken je een zwaartelijn vanuit hoek A?**\n1. Bepaal het midden M van de overstaande zijde BC.\n2. Trek een lijn van A naar M.\n3. Klaar.\n\n**Verschil met andere speciale lijnen**:\n• Middelloodlijn: loopt loodrecht op het midden (niet door een hoek).\n• Bissectrice: deelt de hoek in tweeën (eindpunt op willekeurige zijde).\n• Zwaartelijn: van hoek naar **midden** van overkant.\n\n**Naam komt van**: bij gewicht-balans van een driehoek (denk aan een papieren driehoek balanceren op je vinger) loopt elke zwaartelijn door het 'zwaartepunt'.",
+    explanation: "Een **zwaartelijn** in een driehoek is een lijn die loopt van een **hoek** naar het **midden van de overstaande zijde**.\n\nElke driehoek heeft drie zwaartelijnen — één per hoek.\n\n**Hoe teken je een zwaartelijn vanuit hoek A?**\n1. Bepaal het midden M van de overstaande zijde BC.\n2. Trek een lijn van A naar M.\n3. Klaar.\n\n**Verschil met andere speciale lijnen**:\n• Middelloodlijn: loopt loodrecht op het midden (niet door een hoek).\n• Bissectrice: deelt de hoek in tweeën (komt meestal niet op het midden uit).\n• Zwaartelijn: van hoek naar **midden** van overkant.\n\n**Naam komt van**: bij gewicht-balans van een driehoek (denk aan een papieren driehoek balanceren op je vinger) loopt elke zwaartelijn door het 'zwaartepunt'.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 240,160 150,40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2"/>
 <circle cx="150" cy="160" r="4" fill="${COLORS.curveAlt}"/>
@@ -437,7 +437,7 @@ const steps = [
         wrongHints: [
           null,
           "Niet willekeurig — specifiek de **overstaande** zijde (zonder hoek A).",
-          "Een zijde naast A heeft A als eindpunt — die heeft geen 'eigen midden' apart van A.",
+          "Een lijn van A naar het midden van een zijde naast A loopt langs die zijde zelf — dat is geen zwaartelijn.",
           "Een zwaartelijn eindigt op een midden, niet op een hoek.",
         ],
         uitlegPad: {
@@ -551,7 +551,7 @@ const steps = [
   // ─── E. Vierhoeken ────────────────────────────
   {
     title: "Oppervlakte parallellogram",
-    explanation: "Een **parallellogram** is een vierhoek waarvan de overstaande zijden **evenwijdig** zijn (parallel) en gelijk lang.\n\n**Oppervlakte** = **basis × hoogte**\n\nLet op: hoogte is de **loodrechte** afstand tussen de twee evenwijdige basis-zijden — niet de schuine zijde!\n\n**Voorbeeld**: parallellogram met basis 8 cm en hoogte 5 cm.\n• Oppervlakte = 8 × 5 = **40 cm²**\n\n**Trucje voor begrip**: knip een parallellogram diagonaal door, draai een driehoek om — dan heb je een rechthoek met dezelfde basis en hoogte. Die heeft oppervlakte basis × hoogte. Dus parallellogram ook.\n\n**Speciale gevallen**:\n• Een **rechthoek** is een parallellogram waar alle hoeken 90° zijn.\n• Een **vierkant** is een rechthoek met alle zijden gelijk.",
+    explanation: "Een **parallellogram** is een vierhoek waarvan de overstaande zijden **evenwijdig** zijn (parallel) en gelijk lang.\n\n**Oppervlakte** = **basis × hoogte**\n\nLet op: hoogte is de **loodrechte** afstand tussen de twee evenwijdige basis-zijden — niet de schuine zijde!\n\n**Voorbeeld**: parallellogram met basis 8 cm en hoogte 5 cm.\n• Oppervlakte = 8 × 5 = **40 cm²**\n\n**Trucje voor begrip**: knip langs de hoogte een driehoek af en leg die aan de andere kant — dan heb je een rechthoek met dezelfde basis en hoogte. Die heeft oppervlakte basis × hoogte. Dus parallellogram ook.\n\n**Speciale gevallen**:\n• Een **rechthoek** is een parallellogram waar alle hoeken 90° zijn.\n• Een **vierkant** is een rechthoek met alle zijden gelijk.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,140 220,140 250,60 90,60" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>
 <line x1="60" y1="140" x2="60" y2="60" stroke="${COLORS.curveAlt}" stroke-width="2" stroke-dasharray="4 3"/>
@@ -627,7 +627,7 @@ const steps = [
   },
   {
     title: "Oppervlakte trapezium",
-    explanation: "Een **trapezium** is een vierhoek met **één paar evenwijdige zijden** (en de andere twee zijden niet noodzakelijk parallel).\n\nDe twee evenwijdige zijden heten **a** en **b** (vaak verschillend lang). De **hoogte h** is de loodrechte afstand tussen ze.\n\n**Oppervlakte trapezium = ½ × (a + b) × h**\n\nIn woorden: gemiddelde van de twee evenwijdige zijden, keer de hoogte.\n\n**Voorbeeld**: trapezium met evenwijdige zijden 4 cm en 8 cm, hoogte 5 cm.\n• Oppervlakte = ½ × (4 + 8) × 5 = ½ × 12 × 5 = ½ × 60 = **30 cm²**\n\n**Waarom werkt dit?** Stel je twee identieke trapezia naast elkaar zodanig dat ze samen een parallellogram vormen. Die parallellogram heeft basis (a + b) en hoogte h. Oppervlakte parallellogram = (a+b)·h. Dus trapezium = de helft = ½·(a+b)·h.",
+    explanation: "Een **trapezium** is een vierhoek met **één paar evenwijdige zijden** (en de andere twee zijden niet noodzakelijk parallel).\n\nDe twee evenwijdige zijden heten **a** en **b** (vaak verschillend lang). De **hoogte h** is de loodrechte afstand ertussen.\n\n**Oppervlakte trapezium = ½ × (a + b) × h**\n\nIn woorden: gemiddelde van de twee evenwijdige zijden, keer de hoogte.\n\n**Voorbeeld**: trapezium met evenwijdige zijden 4 cm en 8 cm, hoogte 5 cm.\n• Oppervlakte = ½ × (4 + 8) × 5 = ½ × 12 × 5 = ½ × 60 = **30 cm²**\n\n**Waarom werkt dit?** Stel je twee identieke trapezia naast elkaar zodanig dat ze samen een parallellogram vormen. Dat parallellogram heeft basis (a + b) en hoogte h. Oppervlakte parallellogram = (a+b)·h. Dus trapezium = de helft = ½·(a+b)·h.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="80,150 220,150 180,60 120,60" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>
 <text x="150" y="170" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">b</text>
@@ -646,7 +646,7 @@ const steps = [
         wrongHints: [
           null,
           "Heb je BEIDE evenwijdige zijden meegenomen — 6 én 10?",
-          "Heb je de ½ in de formule meegenomen? Anders krijg je het dubbele.",
+          "Controleer je berekening: eerst 6 + 10, dan × 4, dan ÷ 2.",
           "Niet alleen één zijde — een trapezium gebruikt het GEMIDDELDE van beide evenwijdige zijden.",
         ],
         uitlegPad: {
@@ -668,7 +668,7 @@ const steps = [
   // ─── F. Eindopdrachten ────────────────────────────
   {
     title: "Eindopdracht 1: middelpunten",
-    explanation: "**Drie korte conceptvragen**:\n\n**A**: Hoe vind je het **middelpunt van de omgeschreven cirkel** van een driehoek?\n→ Snijpunt van de drie **middelloodlijnen**.\n\n**B**: Hoe vind je het **middelpunt van de ingeschreven cirkel**?\n→ Snijpunt van de drie **bissectrices**.\n\n**C**: Hoe vind je het **zwaartepunt** van een driehoek?\n→ Snijpunt van de drie **zwaartelijnen**.\n\n**Onthoudtruc**:\n• **omgeschreven** (rond hoeken) ↔ **middelloodlijnen** (over zijden)\n• **ingeschreven** (rond zijden) ↔ **bissectrices** (over hoeken)\n• **zwaartepunt** (balans) ↔ **zwaartelijnen** (van hoek naar midden)\n\n**Wat hoogtelijnen geven**: snijpunt heet 'hoogtelijnpunt' — wordt minder vaak gevraagd, gebruik je als je de hoogte (en daarmee oppervlakte) wilt berekenen.",
+    explanation: "**Drie korte conceptvragen**:\n\n**A**: Hoe vind je het **middelpunt van de omgeschreven cirkel** van een driehoek?\n→ Snijpunt van de drie **middelloodlijnen**.\n\n**B**: Hoe vind je het **middelpunt van de ingeschreven cirkel**?\n→ Snijpunt van de drie **bissectrices**.\n\n**C**: Hoe vind je het **zwaartepunt** van een driehoek?\n→ Snijpunt van de drie **zwaartelijnen**.\n\n**Onthoudtruc**:\n• **omgeschreven** (rond hoeken) ↔ **middelloodlijnen** (over zijden)\n• **ingeschreven** (rond zijden) ↔ **bissectrices** (over hoeken)\n• **zwaartepunt** (balans) ↔ **zwaartelijnen** (van hoek naar midden)\n\n**Wat hoogtelijnen geven**: snijpunt heet 'hoogtelijnpunt' — wordt minder vaak gevraagd. Voor oppervlakte heb je één hoogtelijn nodig.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="55" y="30" fill="${COLORS.text}" font-size="12" font-family="Arial">middelpunt cirkels:</text>
 <text x="55" y="55" fill="${COLORS.curveAlt}" font-size="11" font-family="Arial" font-weight="bold">omgeschreven</text>
@@ -703,7 +703,7 @@ const steps = [
           stappen: [{ titel: "Zwaartepunt", tekst: "3 zwaartelijnen kruisen in het zwaartepunt Z." }],
           woorden: [{ woord: "zwaartelijnen", uitleg: "lijnen van hoek naar midden overkant" }],
           theorie: "Z = snijpunt van zwaartelijnen. M = middelloodlijnen. I = bissectrices.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Z lijst balanspunt" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Z is het balanspunt" }],
           basiskennis: [{ onderwerp: "naam = lijn", uitleg: "zwaarte-PUNT van zwaarte-LIJNEN" }],
           niveaus: {
             basis: "Zwaartelijnen kruisen in zwaartepunt.",
@@ -716,7 +716,7 @@ const steps = [
   },
   {
     title: "Eindopdracht 2: oppervlakte berekenen",
-    explanation: "Drie figuren — bereken de oppervlakte:\n\n**A** — **Driehoek** met basis 10 cm en hoogte 6 cm.\n• Opp = ½ × 10 × 6 = **30 cm²**\n\n**B** — **Parallellogram** met basis 7 m en hoogte 4 m.\n• Opp = 7 × 4 = **28 m²**\n\n**C** — **Trapezium** met evenwijdige zijden 5 cm en 9 cm, hoogte 4 cm.\n• Opp = ½ × (5 + 9) × 4 = ½ × 14 × 4 = **28 cm²**\n\n**D** — **Ruit** met diagonalen 12 cm en 5 cm.\n• Opp = ½ × 12 × 5 = **30 cm²**\n\n**Overzicht formules**:\n\n| Figuur | Formule |\n|--------|---------|\n| Driehoek | ½ × b × h |\n| Rechthoek | l × b |\n| Parallellogram | b × h |\n| Ruit | ½ × d₁ × d₂ |\n| Trapezium | ½ × (a + b) × h |\n\nOnthoud: de **hoogte** is altijd loodrecht — niet de schuine zijde.",
+    explanation: "Vier figuren — bereken de oppervlakte:\n\n**A** — **Driehoek** met basis 10 cm en hoogte 6 cm.\n• Opp = ½ × 10 × 6 = **30 cm²**\n\n**B** — **Parallellogram** met basis 7 m en hoogte 4 m.\n• Opp = 7 × 4 = **28 m²**\n\n**C** — **Trapezium** met evenwijdige zijden 5 cm en 9 cm, hoogte 4 cm.\n• Opp = ½ × (5 + 9) × 4 = ½ × 14 × 4 = **28 cm²**\n\n**D** — **Ruit** met diagonalen 12 cm en 5 cm.\n• Opp = ½ × 12 × 5 = **30 cm²**\n\n**Overzicht formules**:\n\n| Figuur | Formule |\n|--------|---------|\n| Driehoek | ½ × b × h |\n| Rechthoek | l × b |\n| Parallellogram | b × h |\n| Ruit | ½ × d₁ × d₂ |\n| Trapezium | ½ × (a + b) × h |\n\nOnthoud: de **hoogte** is altijd loodrecht — niet de schuine zijde.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="1"/>
@@ -842,7 +842,7 @@ const steps = [
           },
         },
       },
-      { q: "Oppervlakte parallellogram met basis 6 en hoogte 4 = ?", options: ["24","10","12","20"], answer: 0, wrongHints: [null, "Niet — niet optellen.", "Geen verklaring.", "Niet."] },
+      { q: "Oppervlakte parallellogram met basis 6 en hoogte 4 = ?", options: ["24","10","12","20"], answer: 0, wrongHints: [null, "Niet — niet optellen.", "Niet — dat is de helft.", "Niet."] },
       { q: "Een **ruit** heeft hoeveel gelijke zijden?", options: ["4","2","3","Geen"], answer: 0, wrongHints: [null, "Niet — alle 4.", "Niet.", "Niet."] },
       { q: "Omtrek cirkel met straal 5 = ?", options: ["10π","5π","25π","π/5"], answer: 0, wrongHints: [null, "Niet — diameter.", "Dat is oppervlakte.", "Niet."] },
       { q: "Oppervlakte cirkel met straal 3 = ?", options: ["9π","6π","3π","12π"], answer: 0, wrongHints: [null, "Dat is omtrek.", "Niet.", "Niet."] },

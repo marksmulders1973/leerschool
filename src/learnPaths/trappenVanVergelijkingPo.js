@@ -253,10 +253,10 @@ const steps = [
       "De **overtreffende trap** (met **-st**) gebruik je als iets **het meest** is van allemaal. Er staat vaak **'het'** of **'de ...ste'** bij:\n\n" +
       "*Dit is **de hoogste** berg.* / *Zij loopt **het snelst**.*\n\n" +
       "**Onregelmatige overtreffende trappen:**\n" +
-      "• goed → best → **best**\n" +
+      "• goed → beter → **best**\n" +
       "• veel → meer → **meest**\n" +
       "• weinig → minder → **minst**\n\n" +
-      "Bij een zelfstandig naamwoord komt er vaak nog een -e bij: de hoog**ste** berg, de snel**ste** auto.",
+      "Voor een zelfstandig naamwoord komt er vaak een -e bij: de hoog**ste** berg, de snel**ste** auto.",
     checks: [
       {
         q: "Vul in: *Dit is de ___ berg van Nederland.* (hoog)",
@@ -335,14 +335,14 @@ const steps = [
       },
       {
         q: "Vul in: *Van alle renners is hij het ___.* (snel)",
-        options: ["snelst", "sneller", "snel", "snelste"],
+        options: ["snelst", "sneller", "snel", "snels"],
         answer: 0,
-        wrongHints: [null, "Dat is de vergrotende trap; bij 'van alle' hoort de overtreffende.", "Dat is de gewone vorm.", "Bij 'het …' zonder lidwoord schrijf je 'snelst'."],
+        wrongHints: [null, "Dat is de vergrotende trap; bij 'van alle' hoort de overtreffende.", "Dat is de gewone vorm.", "'Snels' bestaat niet — de overtreffende trap eindigt op -st."],
         uitlegPad: {
           stappen: [{ titel: "'het …st van alle'", tekst: "'Van alle renners' = hij is de allersnelste → overtreffende trap: het snelst." }],
           niveaus: {
             basis: "het snelst van alle = overtreffende trap.",
-            simpeler: "Wie is het allerbeste? Zoek de overtreffende trap.",
+            simpeler: "Wie is het allersnelst? Zoek de overtreffende trap.",
             nogSimpeler: "snel + st = ?",
           },
         },
@@ -358,7 +358,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is een vergelijking van twee dingen → vergrotende trap.", "Dat is de stellende trap.", "Dat is geen trap van vergelijking."],
         uitlegPad: {
-          stappen: [{ titel: "'de …ste van' = overtreffend", tekst: "'De langste straat van de stad' — dat is het meeste van allemaal → overtreffende trap." }],
+          stappen: [{ titel: "'de …ste van' = overtreffend", tekst: "'De langste straat van de stad' — dat is het meest van allemaal → overtreffende trap." }],
           niveaus: {
             basis: "De …ste van … = overtreffende trap.",
             simpeler: "Welke zin vergelijkt iets met alles van de stad?",
@@ -421,12 +421,12 @@ const steps = [
         },
       },
       {
-        q: "Vul in: *Van alle dieren is de cheetah het ___.* (snel)",
+        q: "Vul in: *Van alle landdieren is het jachtluipaard het ___.* (snel)",
         options: ["snelst", "sneller", "snel", "snelle"],
         answer: 0,
         wrongHints: [null, "Bij 'het … van alle' hoort de overtreffende trap.", "Dat is de gewone vorm.", "Dat is 'snel' met een -e."],
         uitlegPad: {
-          stappen: [{ titel: "het …st van alle", tekst: "De cheetah is het meest snel van alle dieren → overtreffende trap: het snelst." }],
+          stappen: [{ titel: "het …st van alle", tekst: "Het jachtluipaard is het meest snel van alle landdieren → overtreffende trap: het snelst." }],
           niveaus: {
             basis: "'het snelst' = overtreffende trap.",
             simpeler: "Welke vorm betekent 'het allersnelst'?",
@@ -459,7 +459,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Sterker + dan is de juiste vergrotende trap.", "De sterkste + van is de juiste overtreffende trap.", "Het sterkst + van is ook juist."],
         uitlegPad: {
-          stappen: [{ titel: "'Als' klopt niet bij de overtreffende trap", tekst: "'De sterkste als iedereen' is fout: bij de overtreffende trap gebruik je 'van', niet 'als'. 'Als' hoort ook niet bij 'dan'. Zeg: 'de sterkste van iedereen'." }],
+          stappen: [{ titel: "'Als' klopt niet bij de overtreffende trap", tekst: "'De sterkste als iedereen' is fout: bij de overtreffende trap gebruik je 'van', niet 'als'. Zeg: 'de sterkste van iedereen'." }],
           niveaus: {
             basis: "Bij de overtreffende trap gebruik je 'van', niet 'als'.",
             simpeler: "Welke zin heeft een fout woordje bij de overtreffende trap?",

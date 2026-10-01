@@ -43,7 +43,7 @@ const steps = [
   // ── Stap 1: de vier trucs ─────────────────────────────────────────
   {
     title: "De truc: kijk om het woord heen",
-    explanation: `Op de Doorstroomtoets kom je gegarandeerd deze vraag tegen: **"Wat betekent 'X' in deze tekst?"** Het goede nieuws: je hoeft het woord NIET uit je hoofd te kennen. Het antwoord staat bijna altijd verstopt in de tekst zelf. Je moet alleen weten wáár je moet kijken.
+    explanation: `Op de Doorstroomtoets kom je vrijwel altijd deze vraag tegen: **"Wat betekent 'X' in deze tekst?"** Het goede nieuws: je hoeft het woord NIET uit je hoofd te kennen. Het antwoord staat bijna altijd verstopt in de tekst zelf. Je moet alleen weten wáár je kijkt.
 
 Er zijn vier trucs:
 
@@ -119,7 +119,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         uitlegPad: {
           stappen: [
             { titel: "Zoek het signaalwoord", tekst: "In de zin staat 'zoals'. Dat woord kondigt VOORBEELDEN aan van het moeilijke woord. De voorbeelden vertellen je wat voor soort ding het is." },
-            { titel: "Bekijk de voorbeelden", tekst: "De voorbeelden zijn: oude knopen, kralen en kleine beeldjes. Wat hebben die drie gemeen? Ze zijn klein, niet duur, en je bewaart ze meer voor de leuk dan omdat je ze nodig hebt." },
+            { titel: "Bekijk de voorbeelden", tekst: "De voorbeelden zijn: oude knopen, kralen en kleine beeldjes. Wat hebben die drie gemeen? Ze zijn klein, niet duur, en je bewaart ze meer omdat ze leuk zijn dan omdat je ze nodig hebt." },
             { titel: "Kies wat bij álle voorbeelden past", tekst: "Het juiste antwoord moet kloppen voor knopen ÉN kralen ÉN beeldjes tegelijk. Toets elk antwoord daaraan." },
           ],
           woorden: [
@@ -249,7 +249,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           niveaus: {
             basis: "Geen dubbele punt, geen 'maar', geen 'zoals'. Welke truc blijft er over?",
             simpeler: "Zie je 'uit' en 'geput' in het woord? 'Geput' hoort bij putten = krachten halen. Wat betekent 'uit' dan in dit geval?",
-            nogSimpeler: "Wat voel je nadat je uren lang hebt geklommen?",
+            nogSimpeler: "Wat voel je nadat je urenlang hebt geklommen?",
           },
         },
       },
@@ -517,7 +517,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         },
       },
       {
-        q: "Wat betekent *'lokaas'* in de zin: *\"De hengelvis gebruikt zijn lichtgevende aanhangsel als lokaas: kleine diepzeediertjes denken dat het plankton is en zwemmen er naartoe — recht in de bek van de vis.\"*?",
+        q: "Wat betekent *'lokaas'* in de zin: *\"De hengelvis gebruikt zijn lichtgevende aanhangsel als lokaas: kleine diepzeediertjes denken dat het plankton is en zwemmen ernaartoe — recht in de bek van de vis.\"*?",
         options: [
           "Iets waarmee je een prooi naar je toe lokt",
           "Een giftige stof die dieren verlamt",
@@ -525,17 +525,17 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
           "De manier waarop de vis in het donker ziet",
         ],
         answer: 0,
-        evidence: "kleine diepzeediertjes denken dat het plankton is en zwemmen er naartoe — recht in de bek van de vis",
+        evidence: "kleine diepzeediertjes denken dat het plankton is en zwemmen ernaartoe — recht in de bek van de vis",
         wrongHints: [
           null,
           "Er staat niets over gif. Wat doen de kleine diertjes als ze het lichtje zien?",
           "Het aanhangsel ís het lokaas, maar ze zijn niet hetzelfde. Wat doet het lokaas?",
-          "De vis ziet niets — hij lokket anderen. Wat doet het lichtje met de kleine diertjes?",
+          "De vis ziet niets — hij lokt anderen. Wat doet het lichtje met de kleine diertjes?",
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Lees wat er ná de dubbele punt staat", tekst: "'kleine diertjes denken dat het plankton is en zwemmen er naartoe.' Het lichtje trekt ze aan — dat is de uitleg van 'lokaas'." },
-            { titel: "Wat is het effect?", tekst: "Ze zwemmen er naartoe en belanden in de bek. Het lokaas lijkt iets lekkers, maar het is een val. Lokaas = iets waarmee je iemand naar je toe trekt." },
+            { titel: "Lees wat er ná de dubbele punt staat", tekst: "'kleine diertjes denken dat het plankton is en zwemmen ernaartoe.' Het lichtje trekt ze aan — dat is de uitleg van 'lokaas'." },
+            { titel: "Wat is het effect?", tekst: "Ze zwemmen ernaartoe en belanden in de bek. Het lokaas lijkt iets lekkers, maar het is een val. Lokaas = iets waarmee je iemand naar je toe trekt." },
           ],
           niveaus: {
             basis: "De dubbele punt legt het uit: de diertjes zwemmen naar het lichtje. Wat doet het lichtje dan met hen?",
@@ -723,31 +723,31 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         },
       },
       {
-        q: "Lees: *\"De schaatser gleed over het blad en maakte een prachtige pirouette.\"* — Wat betekent 'blad' in deze zin?",
+        q: "Lees: *\"Mama zette de hete pan op het blad van de keukentafel.\"* — Wat betekent 'blad' in deze zin?",
         options: [
-          "Het vlakke ijsoppervlak van de schaatsbaan",
+          "Het platte bovenvlak van de tafel",
           "Een blad van een boom",
           "Een pagina uit een boek",
           "Een mes of bijl",
         ],
         answer: 0,
-        evidence: "De schaatser gleed over het blad",
+        evidence: "op het blad van de keukentafel",
         wrongHints: [
           null,
-          "Rijdt er een schaatser over een boom? Kijk naar wie of wat er in de zin staat.",
-          "Je bladert door een boek, maar glijdt niet over een boekpagina. Denk aan wat een schaatsbaan heeft.",
-          "Een mes-blad bestaat, maar schaatst iemand over een mes? Kijk wie de hoofdpersoon is.",
+          "Groeit er een boom in de keuken? Kijk naar de woorden om 'blad' heen.",
+          "Zet je een pan op een boekpagina? Denk aan wat een tafel heeft.",
+          "Een mes-blad bestaat, maar zet je daar een hete pan op? Kijk bij welk meubel het blad hoort.",
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Bedenk de betekenissen", tekst: "'Blad' kan zijn: een boomblad, een boekpagina, een mes-blad, of het vlakke deel van een schaatsbaan. Allemaal bestaand." },
-            { titel: "Vul ze in de zin in", tekst: "'Gleed over het boomblad'? 'Gleed over de boekpagina'? Dat klinkt raar. 'Gleed over het ijsvlak'? Een schaatser kan over ijs glijden — dat klopt." },
-            { titel: "Buurwoord: 'schaatser' en 'gleed'", tekst: "Glijen + schaatser = ijs nodig. 'Blad' heeft hier zijn schaatsbaan-betekenis: het vlakke ijsoppervlak." },
+            { titel: "Bedenk de betekenissen", tekst: "'Blad' kan zijn: een boomblad, een boekpagina, een mes-blad, of het platte bovenvlak van een tafel (tafelblad). Allemaal bestaand." },
+            { titel: "Vul ze in de zin in", tekst: "'De pan op het boomblad van de tafel'? 'Op de boekpagina van de tafel'? Dat klinkt raar. 'Op het bovenvlak van de keukentafel'? Daar zet je een pan neer — dat klopt." },
+            { titel: "Buurwoord: 'keukentafel'", tekst: "'Van de keukentafel' vertelt waar het blad bij hoort. 'Blad' betekent hier: het platte bovenvlak van de tafel." },
           ],
           niveaus: {
-            basis: "Vul elke betekenis in: bij welke klinkt 'gleed over het ...' logisch als je aan een schaatser denkt?",
-            simpeler: "Over welk soort oppervlak kan een schaatser glijden?",
-            nogSimpeler: "Wat heeft een schaatsbaan dat de schaatser over heen glijdt?",
+            basis: "Vul elke betekenis in: bij welke klinkt 'de pan op het ... van de keukentafel' logisch?",
+            simpeler: "Op welk deel van een tafel zet je een pan neer?",
+            nogSimpeler: "Waar zet je een pan neer als je aan tafel gaat eten?",
           },
         },
       },
@@ -764,7 +764,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
         wrongHints: [
           null,
           "Je kunt iets aan iemand toevertrouwen (bewaren), maar 'vertrouwen IN jezelf' gaat over jezelf — niet over bewaren.",
-          "De coach zegt 'vertrouwen in JEZElf' — dat betekent dat Tim zelf iets moet doen of denken, niet anderen vragen.",
+          "De coach zegt 'vertrouwen in JEZELF' — dat betekent dat Tim zelf iets moet doen of denken, niet anderen vragen.",
           "Oefenen is goed, maar dat zegt de coach niet. Wat ZEI de coach precies?",
         ],
         uitlegPad: {
@@ -972,7 +972,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
           ],
           theorie: "**De grote afsluiter: combineer je trucs.**\n\n1. Truc 4: on + voorspel + baar = niet vooraf te zeggen.\n2. Truc 1: de zin ervoor ('helemaal zeker weten ze het nooit') zegt hetzelfde met andere woorden.\n\nZo werk je op de Doorstroomtoets: eerste gok via het woord zelf, bevestiging via de tekst. Kloppen ze met elkaar? Dan durf je te kiezen.",
           voorbeelden: [
-            { type: "zelfde bouw", tekst: "onbereikbaar = niet te bereiken, onverslaanbaar = niet te verslaan, ononderbroken = zonder onderbreking. Het bouwpakket on+...+baar kom je overal tegen." },
+            { type: "zelfde bouw", tekst: "onbereikbaar = niet te bereiken, onverslaanbaar = niet te verslaan, onbetaalbaar = niet te betalen. Het bouwpakket on+...+baar kom je overal tegen." },
           ],
           basiskennis: [
             { onderwerp: "Vaak ≠ altijd", uitleg: "Wetenschappers zien een uitbarsting 'vaak' aankomen — dus niet altijd. Zulke kleine woordjes maken op de toets het verschil tussen goed en fout." },
@@ -1058,7 +1058,7 @@ const woordbetekenisContextPo = {
     { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategieën", niveau: "po-1F/1S" },
   ],
   intro:
-    "Op de Doorstroomtoets komt hij gegarandeerd: de vraag \"Wat betekent 'X' in deze tekst?\". In dit deel leer je vier trucs om de betekenis uit de tekst zelf te halen — ook bij woorden die je nog nooit hebt gezien. Met twee eigen oefenteksten en vragen precies in toets-stijl.",
+    "Op de Doorstroomtoets komt hij vrijwel altijd: de vraag \"Wat betekent 'X' in deze tekst?\". In dit deel leer je vier trucs om de betekenis uit de tekst zelf te halen — ook bij woorden die je nog nooit hebt gezien. Met twee eigen oefenteksten en vragen precies in toets-stijl.",
   triggerKeywords: [
     "woordbetekenis", "wat betekent", "moeilijke woorden",
     "betekenis raden", "context", "begrijpend lezen",

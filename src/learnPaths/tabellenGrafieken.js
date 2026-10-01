@@ -124,7 +124,7 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Lijngrafiek = verloop over tijd, niet vergelijken van groepen.","Tabel toont getallen maar geen visuele vergelijking.","Tekst is traag — beter een grafiek."],
         uitlegPad: {
-          stappen: [{ titel: "Staaf = vergelijken", tekst: "Staafdiagram heeft verschillende-hoog balken naast elkaar. Hoogte = hoeveelheid. Perfect om in één oogopslag te zien wie meer/minder is dan ander." }],
+          stappen: [{ titel: "Staaf = vergelijken", tekst: "Staafdiagram heeft verschillend hoge balken naast elkaar. Hoogte = hoeveelheid. Perfect om in één oogopslag te zien wie meer/minder is dan ander." }],
           woorden: [{ woord: "staafdiagram", uitleg: "Grafiek met balken voor categorieën (sport, kleuren, namen). Hoogte = hoeveelheid." }, { woord: "categorieën", uitleg: "Groepen die je vergelijkt (sporten, schooljaren, etc.)." }],
           theorie: "Welke grafiek wanneer: vergelijken groepen = STAAFDIAGRAM. Verloop tijd = LIJNGRAFIEK. Delen-geheel = CIRKELDIAGRAM. Exacte getallen = TABEL.",
           voorbeelden: [{ type: "verschillen", tekst: "Sport-keuze klas: voetbal=28, tennis=15, hockey=12. Staafdiagram laat direct zien voetbal wint, hockey laagst." }],
@@ -136,7 +136,7 @@ const steps = [
         q: "Welke vorm voor **'aantal leerlingen per maand een jaar lang'**?",
         options: ["Lijngrafiek","Cirkeldiagram","Staafdiagram","Tabel zonder iets"],
         answer: 0,
-        wrongHints: [null,"Cirkel = delen-van-geheel, niet verloop in tijd.","Staaf werkt ook, maar lijn is voor verloop in tijd nóg duidelijker.","Tabel is goed voor exacte getallen, maar zie je verloop slecht."],
+        wrongHints: [null,"Cirkel = delen-van-geheel, niet verloop in tijd.","Staaf werkt ook, maar lijn is voor verloop in tijd nóg duidelijker.","Tabel is goed voor exacte getallen, maar je ziet het verloop slecht."],
         uitlegPad: {
           stappen: [{ titel: "Lijn = tijd", tekst: "Verloop over tijd (12 maanden) → lijngrafiek. Lijn maakt de TREND zichtbaar: stijgt of daalt het door het jaar? Veel beter dan staafdiagram voor tijdverloop." }],
           woorden: [{ woord: "lijngrafiek", uitleg: "Grafiek met punten verbonden door lijn. Toont VERLOOP/VERANDERING in tijd." }, { woord: "trend", uitleg: "Algemene richting (stijgt/daalt/blijft gelijk)." }],
@@ -165,7 +165,7 @@ const steps = [
 
   {
     title: "Tabellen lezen",
-    explanation: "Een **tabel** is opgebouwd uit **rijen** (horizontaal) en **kolommen** (verticaal). Bovenin de kolomtitels, links de rij-labels.\n\n**Voorbeeld** — verkochte ijsjes per smaak per week:\n\n| smaak | ma | di | wo | do | vr |\n|-------|----|----|----|----|----|\n| vanille | 5 | 8 | 4 | 6 | 9 |\n| chocolade | 7 | 10 | 5 | 9 | 13 |\n| aardbei | 3 | 6 | 3 | 5 | 7 |\n\n**Lees-aanpak**:\n• **'Hoeveel chocolade-ijsjes op woensdag?'**\n  → Vind rij 'chocolade' + kolom 'wo' → kruispunt = **5**.\n• **'Welke smaak verkocht meest op vrijdag?'**\n  → Vind kolom 'vr' → vergelijk: 9, 13, 7 → **chocolade**.\n• **'Hoeveel chocolade in de hele week?'**\n  → Tel rij 'chocolade': 7 + 10 + 5 + 9 + 13 = **44**.\n\n**toetsvraag-typen bij tabellen**:\n1. **Aflezen** — 1 cel zoeken.\n2. **Vergelijken** — 'meer/minder/meest/minst'.\n3. **Optellen** — totalen per rij/kolom.\n4. **Verschil** — 'hoeveel meer X dan Y?'.\n5. **Gemiddelde** — som ÷ aantal.\n\n**Toets-tip**:\nWijs met je vinger of pen — anders lees je de verkeerde rij of kolom. **Gegarandeerd dé fout** als je vlug doet.",
+    explanation: "Een **tabel** is opgebouwd uit **rijen** (horizontaal) en **kolommen** (verticaal). Bovenin de kolomtitels, links de rij-labels.\n\n**Voorbeeld** — verkochte ijsjes per smaak per week:\n\n| smaak | ma | di | wo | do | vr |\n|-------|----|----|----|----|----|\n| vanille | 5 | 8 | 4 | 6 | 9 |\n| chocolade | 7 | 10 | 5 | 9 | 13 |\n| aardbei | 3 | 6 | 3 | 5 | 7 |\n\n**Lees-aanpak**:\n• **'Hoeveel chocolade-ijsjes op woensdag?'**\n  → Vind rij 'chocolade' + kolom 'wo' → kruispunt = **5**.\n• **'Welke smaak verkocht meest op vrijdag?'**\n  → Vind kolom 'vr' → vergelijk: 9, 13, 7 → **chocolade**.\n• **'Hoeveel chocolade in de hele week?'**\n  → Tel rij 'chocolade': 7 + 10 + 5 + 9 + 13 = **44**.\n\n**Toetsvraag-typen bij tabellen**:\n1. **Aflezen** — 1 cel zoeken.\n2. **Vergelijken** — 'meer/minder/meest/minst'.\n3. **Optellen** — totalen per rij/kolom.\n4. **Verschil** — 'hoeveel meer X dan Y?'.\n5. **Gemiddelde** — som ÷ aantal.\n\n**Toets-tip**:\nWijs met je vinger of pen — anders lees je de verkeerde rij of kolom. **Gegarandeerd dé fout** als je vlug doet.",
     svg: tabelSvg(
       [
         ["vanille", "5", "8", "4", "6", "9"],
@@ -202,7 +202,7 @@ const steps = [
           ],
           woorden: [{ woord: "totaal", uitleg: "Som van alle getallen in een rij of kolom." }],
           theorie: "Voor 'meeste/minste totaal'-vragen: tel alle rij-getallen voor elke kolom op, dan vergelijk. Niet 1 rij vergelijken — som van álle.",
-          voorbeelden: [{ type: "weekend-trend", tekst: "Logisch: vrijdag = weekend-start, mensen gaan ijs eten. Klopt vaak in echte data." }],
+          voorbeelden: [{ type: "weekend-trend", tekst: "Kan logisch zijn: vrijdag = begin van het weekend, dan eten mensen vaker ijs." }],
           basiskennis: [{ onderwerp: "Eerst optellen", uitleg: "Veel mensen kijken alleen 1 rij (bv. chocolade-top) en denken die wint. Maar vraag is over ALLE smaken samen." }],
           niveaus: { basis: "Vrijdag (29 stuks).", simpeler: "Som per dag. Vr=29 hoogst.", nogSimpeler: "Vr" },
         },
@@ -226,7 +226,7 @@ const steps = [
 
   {
     title: "Staafdiagram lezen",
-    explanation: "Een **staafdiagram** toont hoeveelheden via **verticale balken**. Hoe **hoger** de balk, hoe **meer**.\n\n**Onderdelen**:\n• **Y-as** (verticaal) — toont aantallen.\n• **X-as** (horizontaal) — toont categorieën *(dagen, maanden, namen, etc.)*.\n• **Balken** — elke balk = 1 categorie.\n• **Schaal** — let op: y-as kan stappen van 1, 5, 10, 100 hebben.\n\n**Lees-aanpak**:\n1. Welke categorie zoek je? *(zoek balk op x-as)*\n2. Hoe hoog is de balk? *(volg met je vinger naar y-as)*\n3. Lees het cijfer.\n\n**Voorbeeld vragen**:\n• **'Hoeveel kinderen kozen voetbal?'** → vind 'voetbal'-balk → lees y-as.\n• **'Welke sport is het populairst?'** → zoek de hoogste balk.\n• **'Welk verschil tussen voetbal en hockey?'** → lees beide → trek af.\n\n**Toets-valkuil — schaal**:\nKijk goed naar de **y-as-stappen**. Sommige diagrammen springen per 100 ipv per 10. Dan is een 'kleine' balk al heel veel.\n\n**Toets-truc — vergelijking**:\nVergelijk balken visueel — heeft balk A 2× zo hoog als B? Dan is A 2× zoveel.",
+    explanation: "Een **staafdiagram** toont hoeveelheden via **verticale balken**. Hoe **hoger** de balk, hoe **meer**.\n\n**Onderdelen**:\n• **Y-as** (verticaal) — toont aantallen.\n• **X-as** (horizontaal) — toont categorieën *(dagen, maanden, namen, etc.)*.\n• **Balken** — elke balk = 1 categorie.\n• **Schaal** — let op: y-as kan stappen van 1, 5, 10, 100 hebben.\n\n**Lees-aanpak**:\n1. Welke categorie zoek je? *(zoek balk op x-as)*\n2. Hoe hoog is de balk? *(volg met je vinger naar y-as)*\n3. Lees het cijfer.\n\n**Voorbeeld vragen**:\n• **'Hoeveel kinderen kozen voetbal?'** → vind 'voetbal'-balk → lees y-as.\n• **'Welke sport is het populairst?'** → zoek de hoogste balk.\n• **'Welk verschil tussen voetbal en hockey?'** → lees beide → trek af.\n\n**Toets-valkuil — schaal**:\nKijk goed naar de **y-as-stappen**. Sommige diagrammen springen per 100 ipv per 10. Dan is een 'kleine' balk al heel veel.\n\n**Toets-truc — vergelijking**:\nVergelijk balken visueel — is balk A 2× zo hoog als B? Dan is A 2× zoveel.",
     svg: staafDiagram([
       { l: "voetbal", v: 28 },
       { l: "tennis", v: 15 },
@@ -253,7 +253,7 @@ const steps = [
         q: "**Hoeveel meer kinderen kozen voetbal dan judo**?",
         options: ["20","8","36","12"],
         answer: 0,
-        wrongHints: [null,"Dat is alleen judo — vraag is verschil.","Dat is som van beide. Vraag is verschil.","Dat is verschil voetbal-hockey, niet voetbal-judo."],
+        wrongHints: [null,"Dat is alleen judo — vraag is verschil.","Dat is som van beide. Vraag is verschil.","Dat is het aantal voor hockey, niet het verschil."],
         uitlegPad: {
           stappen: [
             { titel: "Twee balken aflezen", tekst: "Voetbal = 28. Judo = 8. Beide afgelezen op y-as." },
@@ -270,7 +270,7 @@ const steps = [
         q: "**Hoeveel kinderen kozen NIET voor voetbal of zwemmen**?",
         options: ["35","57","85","43"],
         answer: 0,
-        wrongHints: [null,"Te veel — dat is voetbal+zwemmen, maar de vraag vraagt juist de anderen.","Dat is het totaal van alle sporten — maar de vraag vraagt alleen die zonder voetbal of zwemmen.","Tel de sporten op die NIET voetbal of zwemmen zijn."],
+        wrongHints: [null,"Te veel — tel alleen de sporten op die niet voetbal of zwemmen zijn.","Dat is het totaal van alle sporten — maar de vraag vraagt alleen die zonder voetbal of zwemmen.","Tel de sporten op die NIET voetbal of zwemmen zijn."],
         uitlegPad: {
           stappen: [
             { titel: "Andere balken optellen", tekst: "NIET voetbal/zwemmen = tennis + hockey + judo. 15 + 12 + 8 = 35." },
@@ -288,7 +288,7 @@ const steps = [
 
   {
     title: "Lijngrafiek — verloop in de tijd",
-    explanation: "Een **lijngrafiek** toont hoe iets **verandert in de tijd**. Punten worden verbonden met lijnen.\n\n**Onderdelen**:\n• **X-as** = tijd *(maanden, jaren, weken)*.\n• **Y-as** = waarde *(aantal, prijs, temperatuur)*.\n• **Punten** = waarde op een tijdstip.\n• **Lijn** = verbinding tussen punten *(visualiseert de verandering)*.\n\n**Wat lees je af**:\n• **Stijgt of daalt?** — kijk naar de richting van de lijn.\n• **Hoogste/laagste punt?** — zoek hoogste/laagste op de lijn.\n• **Wanneer ging het omhoog/omlaag?** — kijk waar de lijn van richting verandert.\n• **Verschil tussen 2 momenten?** — lees 2 punten af, trek af.\n\n**toetsvraag-typen**:\n• 'Wat was de temperatuur op vrijdag?' → exact aflezen.\n• 'Op welke dag was 't het warmst?' → hoogste punt zoeken.\n• 'Hoeveel verschil tussen ma en vr?' → twee punten aflezen, aftrekken.\n• 'Op welke dagen daalde de temperatuur?' → kijk naar lijn-richtingen.\n\n**Toets-tip**:\n• Een **rechte lijn** betekent geen verandering.\n• Een **stijgende lijn** = waarde wordt groter.\n• Een **dalende lijn** = waarde wordt kleiner.\n• **Knik in lijn** = verandering van richting.\n\n**Veel-voorkomende fout**: x-as en y-as omdraaien. Eerst kijken: tijd staat altijd op x-as.",
+    explanation: "Een **lijngrafiek** toont hoe iets **verandert in de tijd**. Punten worden verbonden met lijnen.\n\n**Onderdelen**:\n• **X-as** = tijd *(maanden, jaren, weken)*.\n• **Y-as** = waarde *(aantal, prijs, temperatuur)*.\n• **Punten** = waarde op een tijdstip.\n• **Lijn** = verbinding tussen punten *(visualiseert de verandering)*.\n\n**Wat lees je af**:\n• **Stijgt of daalt?** — kijk naar de richting van de lijn.\n• **Hoogste/laagste punt?** — zoek hoogste/laagste op de lijn.\n• **Wanneer ging het omhoog/omlaag?** — kijk waar de lijn van richting verandert.\n• **Verschil tussen 2 momenten?** — lees 2 punten af, trek af.\n\n**Toetsvraag-typen**:\n• 'Wat was de temperatuur op vrijdag?' → exact aflezen.\n• 'Op welke dag was 't het warmst?' → hoogste punt zoeken.\n• 'Hoeveel verschil tussen ma en vr?' → twee punten aflezen, aftrekken.\n• 'Op welke dagen daalde de temperatuur?' → kijk naar lijn-richtingen.\n\n**Toets-tip**:\n• Een **vlakke lijn** betekent geen verandering.\n• Een **stijgende lijn** = waarde wordt groter.\n• Een **dalende lijn** = waarde wordt kleiner.\n• **Knik in lijn** = verandering van richting.\n\n**Veel-voorkomende fout**: x-as en y-as omdraaien. Eerst kijken: tijd staat altijd op x-as.",
     svg: lijnGrafiek([
       { l: "ma", v: 16 },
       { l: "di", v: 19 },
@@ -358,7 +358,7 @@ const steps = [
 
   {
     title: "Cirkeldiagram — taartstuk-grootte",
-    explanation: "Een **cirkeldiagram** (ook wel 'taartdiagram') is een cirkel verdeeld in **taartstukken**. Elk stuk = een deel van het geheel.\n\n**Belangrijk**:\n• De hele cirkel = **100%** of **alles**.\n• Hoe **groter** een taartstuk, hoe **groter** dat deel.\n\n**Voorbeeld**: een klas van 30 leerlingen, hun favoriete sport.\n• Voetbal — 50% (de helft van de cirkel)\n• Hockey — 25% (een kwart)\n• Tennis — 15%\n• Anders — 10%\n\nIn aantallen:\n• Voetbal: 30 × 50% = **15** leerlingen.\n• Hockey: 30 × 25% = **7-8** leerlingen *(in praktijk afgerond)*.\n• Tennis: 30 × 15% = ~4-5.\n• Anders: 30 × 10% = 3.\n\n**toetsvraag-typen**:\n• 'Welk **percentage** kiest X?' — lees taart-stuk in %.\n• 'Hoeveel **leerlingen** kiezen X?' — % × totaal.\n• 'Welk grootste/kleinste deel?' — vergelijk taart-stukken.\n\n**Toets-truc — sleutel-percentages herkennen**:\n• **Halve cirkel** = 50%.\n• **Kwart cirkel** = 25%.\n• **Drie-kwart cirkel** = 75%.\n• **Tien-procent-stukje** = klein puntje.\n\n**Belangrijke check**:\nAlle percentages moeten samen **100%** zijn. Anders klopt het diagram niet.",
+    explanation: "Een **cirkeldiagram** (ook wel 'taartdiagram') is een cirkel verdeeld in **taartstukken**. Elk stuk = een deel van het geheel.\n\n**Belangrijk**:\n• De hele cirkel = **100%** of **alles**.\n• Hoe **groter** een taartstuk, hoe **groter** dat deel.\n\n**Voorbeeld**: een klas van 40 leerlingen, hun favoriete sport.\n• Voetbal — 50% (de helft van de cirkel)\n• Hockey — 25% (een kwart)\n• Tennis — 15%\n• Anders — 10%\n\nIn aantallen:\n• Voetbal: 40 × 50% = **20** leerlingen.\n• Hockey: 40 × 25% = **10** leerlingen.\n• Tennis: 40 × 15% = 6.\n• Anders: 40 × 10% = 4.\n\n**Toetsvraag-typen**:\n• 'Welk **percentage** kiest X?' — lees taart-stuk in %.\n• 'Hoeveel **leerlingen** kiezen X?' — % × totaal.\n• 'Welk grootste/kleinste deel?' — vergelijk taart-stukken.\n\n**Toets-truc — sleutel-percentages herkennen**:\n• **Halve cirkel** = 50%.\n• **Kwart cirkel** = 25%.\n• **Drie-kwart cirkel** = 75%.\n• **Tien-procent-stukje** = klein puntje.\n\n**Belangrijke check**:\nAlle percentages moeten samen **100%** zijn. Anders klopt het diagram niet.",
     checks: [
       {
         q: "Een klas van **40 leerlingen**: **25%** kiest voetbal. Hoeveel?",
@@ -375,7 +375,7 @@ const steps = [
         },
       },
       {
-        q: "Cirkeldiagram met taarten: **rood 50%**, **blauw 30%**, **groen 20%**. Wat is **groen + blauw**?",
+        q: "Cirkeldiagram met taartstukken: **rood 50%**, **blauw 30%**, **groen 20%**. Wat is **groen + blauw**?",
         options: ["50%","20%","80%","30%"],
         answer: 0,
         wrongHints: [null,"Te weinig — alleen groen.","Te veel — heb je rood erbij geteld?","Te weinig — alleen blauw."],
@@ -407,7 +407,7 @@ const steps = [
 
   {
     title: "Praktijk — de toets data-vragen",
-    explanation: "toetsvragen combineren vaak **meerdere stappen**: aflezen + bewerking *(optellen, aftrekken, vermenigvuldigen of percentage)*.\n\n**Voorbeeld 1**:\n*'Tabel: aantal koeken-verkopen per dag. Ma 12, di 18, wo 9, do 15, vr 22. Wat is het gemiddelde per dag?'*\n• Som = 12+18+9+15+22 = 76.\n• Aantal dagen = 5.\n• Gemiddelde = 76 ÷ 5 = **15,2**.\n\n**Voorbeeld 2 — staafdiagram + percentage**:\n*'Voetbal: 28, judo: 8 van 85 leerlingen. Welk percentage doet voetbal?'*\n• 28 ÷ 85 ≈ 0,33 → **33%**.\n\n**Voorbeeld 3 — lijngrafiek + verschil**:\n*'Temperatuur dinsdag 19 °C, vrijdag 24 °C. Hoeveel graden is 't gestegen?'*\n• 24 − 19 = **5 °C**.\n\n**Voorbeeld 4 — cirkeldiagram + getal**:\n*'In een klas van 30: 40% kiest hockey, 25% kiest voetbal. Hoeveel kiezen iets anders?'*\n• Hockey + voetbal = 40+25 = 65%.\n• Anders = 100−65 = 35%.\n• 35% van 30 = **10,5** *(afgerond ~11)*.\n\n**Toets-stappenplan**:\n1. Welke vorm? *(tabel/staaf/lijn/cirkel)*\n2. Wat lees ik af? *(getallen of percentage)*\n3. Welke bewerking moet ik doen? *(+ − × ÷ of percentage)*\n4. Schrijf op en reken.",
+    explanation: "Toetsvragen combineren vaak **meerdere stappen**: aflezen + bewerking *(optellen, aftrekken, vermenigvuldigen of percentage)*.\n\n**Voorbeeld 1**:\n*'Tabel: aantal koeken-verkopen per dag. Ma 12, di 18, wo 9, do 15, vr 22. Wat is het gemiddelde per dag?'*\n• Som = 12+18+9+15+22 = 76.\n• Aantal dagen = 5.\n• Gemiddelde = 76 ÷ 5 = **15,2**.\n\n**Voorbeeld 2 — staafdiagram + percentage**:\n*'Voetbal: 28, judo: 8 van 85 leerlingen. Welk percentage doet voetbal?'*\n• 28 ÷ 85 ≈ 0,33 → **33%**.\n\n**Voorbeeld 3 — lijngrafiek + verschil**:\n*'Temperatuur dinsdag 19 °C, vrijdag 24 °C. Hoeveel graden is 't gestegen?'*\n• 24 − 19 = **5 °C**.\n\n**Voorbeeld 4 — cirkeldiagram + getal**:\n*'In een klas van 40: 40% kiest hockey, 25% kiest voetbal. Hoeveel kiezen iets anders?'*\n• Hockey + voetbal = 40+25 = 65%.\n• Anders = 100−65 = 35%.\n• 35% van 40 = **14**.\n\n**Toets-stappenplan**:\n1. Welke vorm? *(tabel/staaf/lijn/cirkel)*\n2. Wat lees ik af? *(getallen of percentage)*\n3. Welke bewerking moet ik doen? *(+ − × ÷ of percentage)*\n4. Schrijf op en reken.",
     checks: [
       {
         q: "Tabel met aantal verkochte boeken: **ma 25, di 30, wo 18, do 22, vr 35**. Wat is het **gemiddelde per dag**?",
@@ -421,7 +421,7 @@ const steps = [
           ],
           woorden: [{ woord: "gemiddelde", uitleg: "Som van alle getallen gedeeld door aantal getallen. Engels: average/mean." }],
           theorie: "Formule: gemiddelde = (a+b+c+...) ÷ n. n = aantal getallen. Belangrijk: alle dagen tellen, ook lage (anders schat je te hoog).",
-          voorbeelden: [{ type: "check", tekst: "26 ligt tussen laagste (18) en hoogste (35). Past in midden van de range. Logisch." }],
+          voorbeelden: [{ type: "check", tekst: "26 ligt tussen laagste (18) en hoogste (35). Past in het midden. Logisch." }],
           basiskennis: [{ onderwerp: "Examen-val", uitleg: "Veel mensen kiezen 1 dag (30) als 'lijkt gemiddeld'. Moet je echt uitrekenen." }],
           niveaus: { basis: "26 (130÷5).", simpeler: "Som 130 ÷ 5 dagen = 26 gemiddeld.", nogSimpeler: "26" },
         },
@@ -461,7 +461,7 @@ const steps = [
 
   {
     title: "Eindopdracht — data lezen mix",
-    explanation: "Mix-toets met tabellen en grafieken in Doorstroomtoets-stijl. Verschillende vorm en bewerkingen door elkaar.\n\n**Hint**: lees telkens eerst titel + assen, dan vraag, dan reken.\n\nVeel succes!",
+    explanation: "Mix-toets met tabellen en grafieken in Doorstroomtoets-stijl. Verschillende vormen en bewerkingen door elkaar.\n\n**Hint**: lees telkens eerst titel + assen, dan vraag, dan reken.\n\nVeel succes!",
     svg: staafDiagram([
       { l: "Tom", v: 24 },
       { l: "Eva", v: 32 },
@@ -474,9 +474,9 @@ const steps = [
         q: "Welk kind liep **het meest**?",
         options: ["Eva","Tom","Ali","Lisa"],
         answer: 0,
-        wrongHints: [null,"Tweede — Eva is hoger.","Minst — kijk naar de hoogste.","Tweede — Eva is hoger."],
+        wrongHints: [null,"Derde — Eva is hoger.","Minst — kijk naar de hoogste.","Tweede — Eva is hoger."],
         uitlegPad: {
-          stappen: [{ titel: "Hoogste balk", tekst: "Tom=24, Eva=32, Ali=18, Lisa=28. Eva (32) heeft hoogste balk. Top-5: Eva 32 > Lisa 28 > Tom 24 > Ali 18." }],
+          stappen: [{ titel: "Hoogste balk", tekst: "Tom=24, Eva=32, Ali=18, Lisa=28. Eva (32) heeft hoogste balk. Volgorde: Eva 32 > Lisa 28 > Tom 24 > Ali 18." }],
           woorden: [{ woord: "meest", uitleg: "Grootste hoeveelheid. In staafdiagram: hoogste balk." }],
           theorie: "Standaard staafdiagram-vraag: hoogste balk = meest. Visueel direct te zien.",
           voorbeelden: [{ type: "ranglijst", tekst: "Eva 32 (1e). Lisa 28 (2e). Tom 24 (3e). Ali 18 (4e/laatst)." }],
@@ -531,7 +531,7 @@ const steps = [
           woorden: [{ woord: "gemiddelde", uitleg: "Som van alle waarden gedeeld door aantal waarden." }],
           theorie: "Stap 1: som van ALLE waarden (alle 4 kinderen, niet 3). Stap 2: deel door aantal. Niet schatten.",
           voorbeelden: [{ type: "check", tekst: "25,5 ligt tussen laagste (Ali 18) en hoogste (Eva 32). Past in midden." }],
-          basiskennis: [{ onderwerp: "Comma", uitleg: "Gemiddelde mag een komma-getal zijn (25,5). Niet afronden tenzij gevraagd." }],
+          basiskennis: [{ onderwerp: "Komma", uitleg: "Gemiddelde mag een komma-getal zijn (25,5). Niet afronden tenzij gevraagd." }],
           niveaus: { basis: "25,5 (102÷4).", simpeler: "Som 102 ÷ 4 kinderen = 25,5 gemiddeld.", nogSimpeler: "25,5" },
         },
       },
@@ -569,7 +569,7 @@ const steps = [
       { q: "Een **lijngrafiek** wordt vooral gebruikt om wat te tonen?", options: ["Verloop in de tijd","Categorieën vergelijken","Verdeling van geheel","Frequentie"], answer: 0, wrongHints: [null, "Dat is staafdiagram.", "Dat is cirkeldiagram.", "Dat is histogram."] },
       { q: "Welk soort grafiek voor **30% jongens / 70% meisjes**?", options: ["Cirkel/taartdiagram","Lijngrafiek","Staafdiagram","Verspreidingsdiagram"], answer: 0, wrongHints: [null, "Niet verloop.", "Soms maar niet ideaal.", "Niet."] },
       { q: "Tabel: rijen = leerlingen, kolommen = vakken. Welke cel = Anna's wiskunde-cijfer?", options: ["Rij Anna × kolom Wiskunde","Anna × klas","Top-rij","Onderste rij"], answer: 0, wrongHints: [null, "Niet.", "Header.", "Niet."] },
-      { q: "Welke tabel-cel staat **gemiddeld**?", options: ["Vaak onderaan (kolom-totaal)","Linksboven","Verspreid","Niet in tabel"], answer: 0, wrongHints: [null, "Niet — daar staat label.", "Niet — apart vermeld.", "Wel."] },
+      { q: "Waar staat in een tabel meestal het **totaal**?", options: ["Vaak onderaan (kolom-totaal)","Linksboven","Verspreid","Niet in tabel"], answer: 0, wrongHints: [null, "Niet — daar staat label.", "Niet — apart vermeld.", "Wel."] },
       { q: "Bij **categorie-data** (kleuren, vakken) is beste grafiek?", options: ["Staafdiagram","Lijngrafiek","Verspreidingsdiagram","Heatmap"], answer: 0, wrongHints: [null, "Niet — geen tijdvolgorde.", "Niet inhoudelijk.", "Niet voor kinderen."] },
       { q: "Bij **percentages die samen 100% zijn**: kies?", options: ["Cirkeldiagram","Staafdiagram","Lijngrafiek","Tabel"], answer: 0, wrongHints: [null, "Soms.", "Niet voor verdeling.", "Wel mogelijk maar niet visueel."] },
       { q: "In een **kolom** van een tabel staan typisch?", options: ["Verticale waarden (onder elkaar)","Horizontale data","Plaatjes","Tekst"], answer: 0, wrongHints: [null, "Dat is rij.", "Niet inhoud.", "Soms."] },
@@ -577,7 +577,7 @@ const steps = [
       { q: "**Kolom-totaal** in tabel = ?", options: ["Som van alle cellen in die kolom","Som van 1 rij","Gemiddelde","Modus"], answer: 0, wrongHints: [null, "Dat is rij-totaal.", "Niet som.", "Niet som."] },
       { q: "Welk **schaal-probleem** kan grafiek misleidend maken?", options: ["Y-as begint niet bij 0","Lijngrafiek","Veel data","Mooi getekend"], answer: 0, wrongHints: [null, "Niet inhoud zelf.", "Niet probleem.", "Niet relevant."] },
       { q: "Welke gegevens zet je **niet** in een cirkeldiagram?", options: ["Verloop in tijd","Verdeling","Procenten","Verhouding"], answer: 0, wrongHints: [null, "Wel — kern.", "Wel.", "Wel."] },
-      { q: "Bij **'meeste/minste'-vraag in staaf**: kijk naar?", options: ["Hoogste/laagste staaf","Eerste staaf","Laatste","Random"], answer: 0, wrongHints: [null, "Niet zonder kijken.", "Niet zonder kijken.", "Niet."] },
+      { q: "Bij **'meeste/minste'-vraag in staaf**: kijk naar?", options: ["Hoogste/laagste staaf","Eerste staaf","Laatste","Willekeurig"], answer: 0, wrongHints: [null, "Niet zonder kijken.", "Niet zonder kijken.", "Niet."] },
       { q: "Een **frequentietabel** toont?", options: ["Hoe vaak elke waarde voorkomt","Tijd-verloop","Verhouding","Som"], answer: 0, wrongHints: [null, "Lijngrafiek.", "Niet.", "Niet enkel."] },
       { q: "Bij grafiek-vraag: **eerst** doen?", options: ["Titel + assen lezen","Direct antwoord raden","Telling totaal","Naam tellen"], answer: 0, wrongHints: [null, "Niet — fout.", "Soms maar niet eerst.", "Niet."] },
       { q: "Welke vraag bij **tabel** is moeilijkst?", options: ["Optellen meerdere cellen + interpreteren","Naam zoeken","Datum lezen","Titel lezen"], answer: 0, wrongHints: [null, "Te makkelijk.", "Niet.", "Niet."] },

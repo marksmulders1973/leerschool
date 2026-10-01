@@ -22,7 +22,7 @@ const chapters = [
 const steps = [
   {
     title: "Woordsoorten — wat zijn dat?",
-    explanation: "Elk woord in een zin heeft een **woordsoort** — een grammaticale categorie die zegt wat voor woord het is.\n\n**De 8 hoofdwoordsoorten** in het Nederlands:\n\n1. **Zelfstandig naamwoord** (zn) — een ding, persoon of plaats: *huis, Sara, Amsterdam*.\n2. **Werkwoord** (ww) — wat iemand doet of is: *loopt, eet, wordt*.\n3. **Bijvoeglijk naamwoord** (bn) — beschrijft een zn: *groot, mooi, rood*.\n4. **Lidwoord** (lw) — *de, het, een*.\n5. **Voornaamwoord** (vnw) — vervangt zn: *ik, jij, mijn, deze*.\n6. **Voorzetsel** (vz) — plaats/relatie: *in, op, naar, met*.\n7. **Voegwoord** (vg) — verbindt zinnen: *en, maar, omdat*.\n8. **Bijwoord** (bw) — beschrijft ww/bn/zin: *snel, vandaag, niet*.\n\n**Waarom belangrijk?** Bij zinsontleding, spelling, ontleden van werkwoorden — overal heb je woordsoorten nodig.\n\n**Voorbeeld in een zin**:\n*De (lw) grote (bn) hond (zn) loopt (ww) snel (bw) door (vz) het (lw) park (zn).*",
+    explanation: "Elk woord in een zin heeft een **woordsoort** — een grammaticale categorie die zegt wat voor woord het is.\n\n**8 belangrijke woordsoorten** in het Nederlands:\n\n1. **Zelfstandig naamwoord** (zn) — een ding, persoon of plaats: *huis, Sara, Amsterdam*.\n2. **Werkwoord** (ww) — wat iemand doet of is: *loopt, eet, wordt*.\n3. **Bijvoeglijk naamwoord** (bn) — beschrijft een zn: *groot, mooi, rood*.\n4. **Lidwoord** (lw) — *de, het, een*.\n5. **Voornaamwoord** (vnw) — vervangt zn: *ik, jij, mijn, deze*.\n6. **Voorzetsel** (vz) — plaats/relatie: *in, op, naar, met*.\n7. **Voegwoord** (vg) — verbindt zinnen: *en, maar, omdat*.\n8. **Bijwoord** (bw) — beschrijft ww/bn/zin: *snel, vandaag, niet*.\n\n**Waarom belangrijk?** Bij zinsontleding, spelling, ontleden van werkwoorden — overal heb je woordsoorten nodig.\n\n**Voorbeeld in een zin**:\n*De (lw) grote (bn) hond (zn) loopt (ww) snel (bw) door (vz) het (lw) park (zn).*",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">8 woordsoorten</text>
 <text x="20" y="50" fill="${COLORS.zn}" font-size="11" font-family="Arial">1. zelfstandig nw — huis</text>
@@ -69,7 +69,7 @@ const steps = [
   // B
   {
     title: "Zelfstandig naamwoord (zn)",
-    explanation: "Een **zelfstandig naamwoord** is een naam voor:\n• Een **ding**: tafel, boek, fiets.\n• Een **persoon**: jongen, leraar, Sara.\n• Een **dier**: hond, vogel, leeuw.\n• Een **plaats**: school, Amsterdam, park.\n• Een **gevoel/idee**: liefde, geluk, vrijheid.\n\n**Hoe herken je het?**\n• Je kunt er **de** of **het** voor zetten: *de tafel, het boek*.\n• Je kunt er een meervoud van maken: *tafels, boeken*.\n• Je kunt er een verkleinwoord van maken: *tafeltje, boekje*.\n\n**Twee soorten**:\n• **Zelfstandig nw met de**: *de tafel, de fiets, de jongen*.\n• **Zelfstandig nw met het**: *het boek, het huis, het kind*.\n\n**Eigennamen** zijn ook zn — schrijf je met hoofdletter:\n• *Sara, Amsterdam, Nederland, januari* (maand wel hoofdletter? Nee, alleen eigennamen — januari = klein).",
+    explanation: "Een **zelfstandig naamwoord** is een naam voor:\n• Een **ding**: tafel, boek, fiets.\n• Een **persoon**: jongen, leraar, Sara.\n• Een **dier**: hond, vogel, leeuw.\n• Een **plaats**: school, Amsterdam, park.\n• Een **gevoel/idee**: liefde, geluk, vrijheid.\n\n**Hoe herken je het?**\n• Je kunt er **de** of **het** voor zetten: *de tafel, het boek*.\n• Je kunt er een meervoud van maken: *tafels, boeken*.\n• Je kunt er een verkleinwoord van maken: *tafeltje, boekje*.\n\n**Twee soorten**:\n• **Zelfstandig nw met de**: *de tafel, de fiets, de jongen*.\n• **Zelfstandig nw met het**: *het boek, het huis, het kind*.\n\n**Eigennamen** zijn ook zn — schrijf je met hoofdletter:\n• *Sara, Amsterdam, Nederland* (maar maanden niet: *januari*).",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.zn}" font-size="14" font-family="Arial" font-weight="bold">zelfstandig naamwoord</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">ding: tafel, fiets, boek</text>
@@ -171,7 +171,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Welk lidwoord hoort bij **boekje**?",
+        q: "Welk **bepaald** lidwoord (de of het) hoort bij **boekje**?",
         options: ["het", "de", "een", "geen"],
         answer: 0,
         wrongHints: [null, "Verkleinwoorden zijn altijd het.", "Een kan ook ('een boekje'), maar 'het' is het bepaalde lidwoord.", "Boekje heeft wel een lidwoord."],
@@ -181,7 +181,7 @@ const steps = [
           theorie: "Verkleinwoorden krijgen altijd 'het' als lidwoord.",
           voorbeelden: [{ type: "voorbeeld", tekst: "het boekje, het tafeltje, het kindje" }],
           basiskennis: [{ onderwerp: "regel", uitleg: "uniform: -je → het" }],
-          niveaus: { basis: "het.", simpeler: "Verkleinwoord → het.", nogSimpeler: "Verkleinwoord → het. → het." },
+          niveaus: { basis: "het.", simpeler: "Verkleinwoord → het.", nogSimpeler: "het." },
         },
       },
       {
@@ -234,12 +234,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Gegaan is een voltooid deelwoord — geen pv.", "Naar = voorzetsel.", "Winkel = zelfstandig nw."],
         uitlegPad: {
-          stappen: [{ titel: "'Is' = vervoegde ww = pv", tekst: "Hij is gegaan: is = pv (vervoegd), gegaan = restdeel." }],
-          woorden: [{ woord: "pv", uitleg: "vervoegde werkwoord, één per zin" }],
+          stappen: [{ titel: "'Is' = vervoegd ww = pv", tekst: "Hij is gegaan: is = pv (vervoegd), gegaan = restdeel." }],
+          woorden: [{ woord: "pv", uitleg: "vervoegd werkwoord, één per zin" }],
           theorie: "Bij meer ww: pv = vervoegde vorm.",
           voorbeelden: [{ type: "voorbeeld", tekst: "is, heeft, kan, moet (vervoegd) = pv" }],
           basiskennis: [{ onderwerp: "test", uitleg: "verander tijd: 'was' i.p.v. 'is' → 'is' is pv" }],
-          niveaus: { basis: "is.", simpeler: "Is = vervoegd.", nogSimpeler: "Is = vervoegd. → is." },
+          niveaus: { basis: "is.", simpeler: "Is = vervoegd.", nogSimpeler: "is." },
         },
       },
     ],
@@ -257,7 +257,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Welk woord is een **persoonlijk vnw** in: *Hij geeft mij een boek*?",
+        q: "Welke woorden zijn **persoonlijke vnw** in: *Hij geeft mij een boek*?",
         options: ["Hij én mij", "boek", "geeft", "een"],
         answer: 0,
         wrongHints: [null, "Boek = zn.", "Geeft = werkwoord.", "Een = lidwoord."],
@@ -281,7 +281,7 @@ const steps = [
           theorie: "Hun bij meewerkend voorwerp (aan/voor wie?).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Ik zie hen (lv), ik geef hun (mv)" }],
           basiskennis: [{ onderwerp: "informeel", uitleg: "in spreektaal: ze" }],
-          niveaus: { basis: "hun.", simpeler: "Aan wie = hun.", nogSimpeler: "Aan wie = hun. → hun." },
+          niveaus: { basis: "hun.", simpeler: "Aan wie = hun.", nogSimpeler: "hun." },
         },
       },
     ],
@@ -309,14 +309,14 @@ const steps = [
           theorie: "Ons huis (het), onze auto (de), onze kinderen (mv).",
           voorbeelden: [{ type: "voorbeeld", tekst: "ons + het-woord, onze + rest" }],
           basiskennis: [{ onderwerp: "test", uitleg: "is het 'de huis' of 'het huis'?" }],
-          niveaus: { basis: "Ons.", simpeler: "Het-woord + ons.", nogSimpeler: "Het-woord + ons. → ons." },
+          niveaus: { basis: "Ons.", simpeler: "Het-woord + ons.", nogSimpeler: "ons." },
         },
       },
       {
         q: "Welke is een **bezittelijk vnw**?",
         options: ["mijn", "ik", "mij", "ikzelf"],
         answer: 0,
-        wrongHints: [null, "Ik = persoonlijk vnw, onderwerp.", "Mij = persoonlijk vnw, voorwerp.", "Wederkerend, niet bezittelijk."],
+        wrongHints: [null, "Ik = persoonlijk vnw, onderwerp.", "Mij = persoonlijk vnw, voorwerp.", "Ikzelf = nadruk op 'ik', niet bezittelijk."],
         uitlegPad: {
           stappen: [{ titel: "Mijn = bezit", tekst: "Mijn zegt 'van wie' → bezittelijk voornaamwoord." }],
           woorden: [{ woord: "bezittelijk vnw", uitleg: "mijn, jouw, zijn, haar, ons, jullie, hun" }],
@@ -332,7 +332,7 @@ const steps = [
   // D
   {
     title: "Voorzetsel (vz)",
-    explanation: "Een **voorzetsel** is een klein woord dat een **plaats**, **tijd** of **relatie** aangeeft. Het staat vaak vóór een zelfstandig naamwoord.\n\n**Plaats**:\n• *De kat ligt **op** het bed.*\n• *Hij staat **voor** de deur.*\n• *We lopen **door** het park.*\n\n**Tijd**:\n• *Ik kom **om** 8 uur.*\n• ***Voor** het eten poetsen we de tafel.*\n• ***Na** school spelen we voetbal.*\n\n**Relatie / overige**:\n• *Een cadeau **voor** mijn moeder.*\n• *Praten **over** school.*\n• *Met de fiets, met mij.*\n\n**Veelgebruikte voorzetsels**:\n*aan, achter, bij, boven, buiten, door, in, langs, met, naar, naast, om, onder, op, over, sinds, tegen, tijdens, tot, tussen, uit, van, voor, zonder*.\n\n**Truc**: een voorzetsel staat bijna altijd vóór een zn of vnw, en je kunt 'm vaak invullen tussen \"de muis ___ het hol\".",
+    explanation: "Een **voorzetsel** is een klein woord dat een **plaats**, **tijd** of **relatie** aangeeft. Het staat vaak vóór een zelfstandig naamwoord.\n\n**Plaats**:\n• *De kat ligt **op** het bed.*\n• *Hij staat **voor** de deur.*\n• *We lopen **door** het park.*\n\n**Tijd**:\n• *Ik kom **om** 8 uur.*\n• ***Voor** het eten dekken we de tafel.*\n• ***Na** school spelen we voetbal.*\n\n**Relatie / overige**:\n• *Een cadeau **voor** mijn moeder.*\n• *Praten **over** school.*\n• *Met de fiets, met mij.*\n\n**Veelgebruikte voorzetsels**:\n*aan, achter, bij, boven, buiten, door, in, langs, met, naar, naast, om, onder, op, over, sinds, tegen, tijdens, tot, tussen, uit, van, voor, zonder*.\n\n**Truc**: een voorzetsel staat bijna altijd vóór een zn of vnw, en je kunt 'm vaak invullen tussen \"de muis ___ het hol\".",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.vz}" font-size="14" font-family="Arial" font-weight="bold">voorzetsel</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">plaats: in, op, onder, naast</text>
@@ -353,7 +353,7 @@ const steps = [
           theorie: "Vz geeft plaats/tijd/relatie. Staat vóór zn.",
           voorbeelden: [{ type: "voorbeeld", tekst: "op tafel, in huis, naar school" }],
           basiskennis: [{ onderwerp: "test", uitleg: "de muis __ het hol = vz erin passen" }],
-          niveaus: { basis: "op.", simpeler: "Waar? op.", nogSimpeler: "Waar? op. → op." },
+          niveaus: { basis: "op.", simpeler: "Waar? op.", nogSimpeler: "op." },
         },
       },
       {
@@ -395,7 +395,7 @@ const steps = [
           theorie: "Onderschikkend vg maakt een bijzin (omdat/als/toen).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Ik blijf thuis omdat ik ziek ben." }],
           basiskennis: [{ onderwerp: "neven vs onder", uitleg: "en/maar = neven, omdat = onder" }],
-          niveaus: { basis: "omdat = vg.", simpeler: "Verbindt = vg.", nogSimpeler: "Verbindt = vg. → vg." },
+          niveaus: { basis: "omdat = vg.", simpeler: "Verbindt = vg.", nogSimpeler: "vg." },
         },
       },
       {
@@ -409,7 +409,7 @@ const steps = [
           theorie: "Onder: omdat/als/dat/toen/terwijl/hoewel.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Als het regent, blijf ik binnen." }],
           basiskennis: [{ onderwerp: "vs neven", uitleg: "en/of/maar/want = nevenschikkend" }],
-          niveaus: { basis: "als.", simpeler: "Bijzin-maker.", nogSimpeler: "Bijzin-maker. → als." },
+          niveaus: { basis: "als.", simpeler: "Bijzin-maker.", nogSimpeler: "als." },
         },
       },
     ],
@@ -434,17 +434,17 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Snel bij ww = bw", tekst: "Snel bij 'rent' (ww) → bijwoord." }],
           woorden: [{ woord: "bw", uitleg: "zegt iets over ww/bn/zin" }],
-          theorie: "Bnw bij zn, bw bij ww/bn.",
+          theorie: "Bn bij zn, bw bij ww/bn.",
           voorbeelden: [{ type: "voorbeeld", tekst: "rent snel = bw; snelle auto = bn" }],
           basiskennis: [{ onderwerp: "-e regel", uitleg: "bw geen -e, bn vaak -e" }],
           niveaus: { basis: "snel (bij rent).", simpeler: "Bij ww = bw.", nogSimpeler: "snel." },
         },
       },
       {
-        q: "Welk woord is een bijwoord in: *Hij komt vandaag thuis*?",
-        options: ["vandaag", "Hij", "komt", "thuis"],
+        q: "Welk woord is een bijwoord in: *Hij fietst vandaag naar school*?",
+        options: ["vandaag", "Hij", "fietst", "school"],
         answer: 0,
-        wrongHints: [null, "Hij = persoonlijk vnw.", "Komt = werkwoord.", "Thuis is ook bijwoord/zn afhankelijk van context — beide kunnen — vandaag is duidelijk een tijdsbijwoord."],
+        wrongHints: [null, "Hij = persoonlijk vnw.", "Fietst = werkwoord.", "School = zelfstandig nw."],
         uitlegPad: {
           stappen: [{ titel: "Vandaag = tijd = bw", tekst: "Vandaag zegt wanneer hij komt → bijwoord van tijd." }],
           woorden: [{ woord: "tijd-bijwoord", uitleg: "vandaag, gisteren, nu, soms" }],
@@ -481,7 +481,7 @@ const steps = [
           theorie: "Bn staat voor zn, vaak met -e (de mooie / een mooie).",
           voorbeelden: [{ type: "voorbeeld", tekst: "een mooie dag, het grote huis" }],
           basiskennis: [{ onderwerp: "test", uitleg: "hoe is de dag? mooi → bn" }],
-          niveaus: { basis: "bn.", simpeler: "Beschrijft dag.", nogSimpeler: "Beschrijft dag. → bn." },
+          niveaus: { basis: "bn.", simpeler: "Beschrijft dag.", nogSimpeler: "bn." },
         },
       },
       {
@@ -495,7 +495,7 @@ const steps = [
           theorie: "Niet voor zn (vz), niet vervangen (vnw), niet beschrijven (bw).",
           voorbeelden: [{ type: "voorbeeld", tekst: "...omdat het regent" }],
           basiskennis: [{ onderwerp: "onderschikkend", uitleg: "maakt bijzin" }],
-          niveaus: { basis: "voegwoord.", simpeler: "Verbindt = vg.", nogSimpeler: "Verbindt = vg. → vg." },
+          niveaus: { basis: "voegwoord.", simpeler: "Verbindt = vg.", nogSimpeler: "vg." },
         },
       },
       {
@@ -523,7 +523,7 @@ const steps = [
           theorie: "Bw bij ww (werk) over tijd = bijwoord van tijd.",
           voorbeelden: [{ type: "voorbeeld", tekst: "vandaag, morgen, gisteren, nu" }],
           basiskennis: [{ onderwerp: "geen verbuiging", uitleg: "blijft 'vandaag' altijd" }],
-          niveaus: { basis: "bijwoord (tijd).", simpeler: "Wanneer = bw.", nogSimpeler: "Wanneer = bw. → bw." },
+          niveaus: { basis: "bijwoord (tijd).", simpeler: "Wanneer = bw.", nogSimpeler: "bw." },
         },
       },
       { q: "Welke woordsoort is **omdat** in: *Ik blijf thuis omdat het regent*?", options: ["Voegwoord","Voorzetsel","Bijwoord","Lidwoord"], answer: 0, wrongHints: [null, "Voorzetsel staat vóór zn (op, in, onder).", "Geen bijwoord.", "De/het/een."] },

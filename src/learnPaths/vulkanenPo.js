@@ -189,7 +189,7 @@ const steps = [
   {
     title: "Gevaar én nut",
     explanation:
-      "Vulkanen zijn **gevaarlijk**. In het jaar **79** bedolf de **Vesuvius** de Romeinse stad **Pompeï** onder meters as. De stad bleef eeuwenlang verstopt. Toen mensen haar opgroeven, vonden ze huizen, winkels en zelfs brood in de oven: een momentopname van 2000 jaar geleden.\n\nToch wonen **miljoenen mensen** vlak bij een vulkaan. Waarom?\n\n**1. Vruchtbare grond.** Vulkaan-as zit vol mineralen, een soort natuurlijke mest. Rondom de **Etna** op Sicilië groeien sinaasappels, druiven en olijven beter dan ergens anders. Op Java (Indonesië) worden drie keer per jaar rijst geoogst.\n\n**2. Warmte uit de grond.** Op **IJsland** verwarmen ze bijna alle huizen met heet water uit de aarde. Ze maken er ook stroom mee: **aardwarmte**. Schoon en het raakt nooit op.\n\n**3. Toeristen.** Mensen komen van ver om een vulkaan te zien. Dat levert werk op: gidsen, hotels, restaurants.\n\n**4. Nieuw land.** Hawaï en IJsland bestaan helemaal uit lava. Zonder vulkanen waren die eilanden er niet.\n\n**Hoe houd je het veilig?** Wetenschappers (**vulkanologen**) meten de berg dag en nacht: trilt de grond, zwelt de berg op, komt er meer gas uit? Dan waarschuwen ze op tijd, zodat mensen kunnen vertrekken. Zo werd in 1991 op de Filipijnen bij de Pinatubo een hele stad op tijd ontruimd.",
+      "Vulkanen zijn **gevaarlijk**. In het jaar **79** bedolf de **Vesuvius** de Romeinse stad **Pompeï** onder meters as. De stad bleef eeuwenlang verstopt. Toen mensen haar opgroeven, vonden ze huizen, winkels en zelfs brood in de oven: een momentopname van 2000 jaar geleden.\n\nToch wonen **miljoenen mensen** vlak bij een vulkaan. Waarom?\n\n**1. Vruchtbare grond.** Vulkaan-as zit vol mineralen, een soort natuurlijke mest. Rondom de **Etna** op Sicilië groeien sinaasappels, druiven en olijven heel goed. Op Java (Indonesië) wordt soms drie keer per jaar rijst geoogst.\n\n**2. Warmte uit de grond.** Op **IJsland** verwarmen ze bijna alle huizen met heet water uit de aarde. Ze maken er ook stroom mee: **aardwarmte**. Schoon en het raakt nooit op.\n\n**3. Toeristen.** Mensen komen van ver om een vulkaan te zien. Dat levert werk op: gidsen, hotels, restaurants.\n\n**4. Nieuw land.** Hawaï en IJsland bestaan helemaal uit lava. Zonder vulkanen waren die eilanden er niet.\n\n**Hoe houd je het veilig?** Wetenschappers (**vulkanologen**) meten de berg dag en nacht: trilt de grond, zwelt de berg op, komt er meer gas uit? Dan waarschuwen ze op tijd, zodat mensen kunnen vertrekken. Zo werd in 1991 op de Filipijnen bij de Pinatubo een hele stad op tijd ontruimd.",
     checks: [
       {
         q: "Waarom wonen veel mensen **vlak bij** een vulkaan, ondanks het gevaar?",
@@ -207,7 +207,7 @@ const steps = [
             { woord: "aardwarmte", uitleg: "Warmte uit de aarde die je gebruikt om te verwarmen of stroom te maken." },
           ],
           theorie: "Toets-truc 'voordelen van vulkanen': grond (mest), warmte (energie), toerisme (werk), nieuw land.",
-          voorbeelden: [{ type: "stap", tekst: "Rondom de Vesuvius wonen 3 miljoen mensen — de grond is er goud waard." }],
+          voorbeelden: [{ type: "stap", tekst: "Rondom de Vesuvius wonen heel veel mensen — de grond is er goud waard." }],
           basiskennis: [{ onderwerp: "Mineralen", uitleg: "Stofjes in de grond die planten nodig hebben om te groeien." }],
           niveaus: {
             basis: "De as maakt de grond vruchtbaar en de warmte uit de aarde is gratis energie.",

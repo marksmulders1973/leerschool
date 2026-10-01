@@ -21,7 +21,7 @@ Fenna heeft een kat. Ze heet Snuffel en is drie jaar oud. Elke ochtend springt S
 
 Gisteren was er iets mis. Snuffel wilde niet eten en lag stil in haar mand. Fenna's vader maakte zich zorgen. Hij belde meteen de dierenarts. Die zei dat ze direct langs mochten komen.
 
-Bij de dierenarts kreeg Snuffel een prikje. Dat vond ze niet leuk: ze blies naar de mevrouw in de witte jas. Gelukkig was het snel voorbij. De dierenarts gaf Fenna's vader een doosje pilletjes mee, verstopt in een brokje moest Snuffel er elke dag één innemen.
+Bij de dierenarts kreeg Snuffel een prikje. Dat vond ze niet leuk: ze blies naar de mevrouw in de witte jas. Gelukkig was het snel voorbij. De dierenarts gaf Fenna's vader een doosje pilletjes mee. Snuffel kreeg elke dag een brokje. Fenna verstopte er een pilletje in.
 
 Na twee dagen was Snuffel weer de oude. Ze sprong 's ochtends vrolijk op het bed. Fenna was opgelucht: haar kat was weer beter.`;
 
@@ -50,7 +50,7 @@ Wacht eens... wie is 'hij'? Er staat toch geen jongen in de zin? Klopt! Het woor
 
 Bekende verwijswoorden zijn: **hij, zij, ze, het, die, dat, deze, daar, er, hem, haar, hun**.
 
-Op de Doorstroomtoets krijg je hier bijna altijd een vraag over: *"Naar wie of wat verwijst het woord 'die'?"* Gebruik dan deze vaste strategie:
+Op de Doorstroomtoets krijg je hier vaak een vraag over: *"Naar wie of wat verwijst het woord 'die'?"* Gebruik dan deze vaste strategie:
 
 1. **Vind** het verwijswoord in de tekst.
 2. **Zoek terug** — het antwoord staat meestal vlak vóór het verwijswoord, vaak in de zin ervoor.
@@ -143,7 +143,7 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
         uitlegPad: {
           stappen: [
             { titel: "Zoek terug", tekst: "De zin ervoor noemt één ding: de hond. Dat is de enige kandidaat voor 'hij'." },
-            { titel: "Controleer", tekst: "Vul in: 'De hond rende naar de deur.' Logisch — een hond rende hard en wil dan weten wie er aan de deur is." },
+            { titel: "Controleer", tekst: "Vul in: 'De hond rende naar de deur.' Logisch — een hond blaft en rent naar de deur om te kijken wie er is." },
             { titel: "Check het verwijswoord", tekst: "'Hij' past bij een mannelijk ding of wezen. Een hond kan 'hij' zijn." },
           ],
           niveaus: {
@@ -265,7 +265,7 @@ Nu ga je de strategie gebruiken in een echte tekst. Dat is precies wat je op de 
 2. Lees de zin ervóór (en soms nog een zin verder terug). Welke personen of dingen worden daar genoemd?
 3. Controleer: enkelvoud of meervoud? Persoon of ding? Vul in en luister of het klopt.
 
-Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fenna heeft een kat. Ze heet Snuffel"* worden Fenna én de kat allebei vlak voor 'ze' genoemd — maar wie krijgt er een kattennaam? Juist. Controleren blijft dus altijd nodig. Beantwoord nu de vier vragen over de tekst hierboven.`,
+Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fenna heeft een kat. Ze heet Snuffel"* worden Fenna én de kat allebei vlak voor 'ze' genoemd — maar wie krijgt er een kattennaam? Juist. Controleren blijft dus altijd nodig. Beantwoord nu de vragen.`,
     checks: [
       {
         q: "*\"Fenna heeft een kat. Ze heet Snuffel...\"* — Naar wie of wat verwijst 'ze' in deze zin?",
@@ -370,7 +370,7 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
         },
       },
       {
-        q: "*\"De dierenarts gaf Fenna's vader een doosje pilletjes mee, verstopt in een brokje moest Snuffel er elke dag één innemen.\"* — Naar wat verwijst 'er'?",
+        q: "*\"Snuffel kreeg elke dag een brokje. Fenna verstopte er een pilletje in.\"* — Naar wat verwijst 'er'?",
         options: ["In het brokje (de plek waar het pilletje in gaat)", "De dierenarts", "Het doosje", "Fenna's vader"],
         answer: 0,
         wrongHints: [
@@ -381,8 +381,8 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
         ],
         uitlegPad: {
           stappen: [
-            { titel: "'Er' = plek-verwijswoord", tekst: "Net als 'daar' wijst 'er' vaak naar een plek. 'Verstopt in een brokje moest Snuffel er één innemen' — het 'er' staat voor 'in het brokje'." },
-            { titel: "Controleer", tekst: "Vul in: 'Verstopt in een brokje moest Snuffel in het brokje één innemen.' Bijna hetzelfde — 'er' vervangt 'in het brokje' zodat je het niet hoeft te herhalen." },
+            { titel: "'Er' = plek-verwijswoord", tekst: "Net als 'daar' wijst 'er' vaak naar een plek. 'Fenna verstopte er een pilletje in' — 'er … in' staat voor 'in het brokje'." },
+            { titel: "Controleer", tekst: "Vul in: 'Fenna verstopte in het brokje een pilletje.' Klopt — 'er' vervangt 'het brokje' zodat je het niet hoeft te herhalen." },
             { titel: "Gebruik de context", tekst: "Je kunt een pilletje verstoppen in een stukje voedsel. De vorige zin noemt een brokje — dat is de plek waar het pilletje in gaat." },
           ],
           niveaus: {
@@ -668,7 +668,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
           woorden: [
             { woord: "oorzaak", uitleg: "Waardoor iets komt. De oorzaak gebeurt eerst." },
             { woord: "gevolg", uitleg: "Wat er daarna gebeurt dóór de oorzaak. Beker valt (oorzaak) → melk op tafel (gevolg)." },
-            { woord: "hierdoor", uitleg: "Verwijswoord dat naar een oorzaak wijst die net genoemd is. Familie: daardoor, daarom, daardoor kwam het dat..." },
+            { woord: "hierdoor", uitleg: "Verwijswoord dat naar een oorzaak wijst die net genoemd is. Familie: daardoor, daarom." },
           ],
           theorie: "**Hierdoor, daardoor, daarom — oorzaak-verwijzers**\n\nDeze woorden wijzen bijna altijd naar een **hele gebeurtenis** in de zin(nen) ervoor — namelijk de oorzaak:\n\n- 'Het vroor vannacht. Hierdoor waren de wegen glad.' → oorzaak = dat het vroor\n- 'Jip oefende elke dag. Daardoor werd hij steeds beter.' → oorzaak = dat Jip elke dag oefende\n\nStrategie: vraag jezelf 'wáárdoor gebeurde dit?' en zoek de gebeurtenis in de vorige zin. Losse woorden (tafel, melk) zijn bijna nooit het antwoord — een oorzaak is iets dat gebéúrt.",
           voorbeelden: [

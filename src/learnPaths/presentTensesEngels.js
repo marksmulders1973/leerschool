@@ -33,7 +33,7 @@ const steps = [
         q: "Welke vorm is **goed**? — *She ___ to school every day.*",
         options: ["walks", "walk", "walking", "is walk"],
         answer: 0,
-        wrongHints: [null, "She is he/she/it → -s erachter.", "Dat is -ing, andere tijd.", "Geen geldige vorm."],
+        wrongHints: [null, "She hoort bij he/she/it → -s erachter.", "Dat is -ing, andere tijd.", "Geen geldige vorm."],
       },
       {
         q: "Welke zin is **goed**?",
@@ -154,7 +154,7 @@ const steps = [
   // C
   {
     title: "Simple of continuous? — de basisregel",
-    explanation: "De grote vraag: **simple of continuous?** Eenvoudige regel:\n\n**Present simple** = altijd / vaak / gewoonte / waar.\n**Present continuous** = nu bezig / tijdelijk / op dit moment.\n\n**Vergelijk**:\n• *I work in Amsterdam.* — Mijn vaste baan, altijd. (simple)\n• *I'm working in Amsterdam this week.* — Tijdelijk, alleen deze week. (continuous)\n\n• *She speaks French.* — Ze kan Frans. (simple, vermogen/feit)\n• *She is speaking French.* — Op dit moment praat ze Frans. (continuous)\n\n• *It rains a lot in November.* — Algemene regel. (simple)\n• *It is raining.* — Nu, regen valt. (continuous)\n\n**Vraag jezelf af**: *gebeurt dit altijd of nu?*",
+    explanation: "De grote vraag: **simple of continuous?** Eenvoudige regel:\n\n**Present simple** = altijd / vaak / gewoonte / waar.\n**Present continuous** = nu bezig / tijdelijk / op dit moment.\n\n**Vergelijk**:\n• *I work in Amsterdam.* — Mijn vaste baan, altijd. (simple)\n• *I'm working in Amsterdam this week.* — Tijdelijk, alleen deze week. (continuous)\n\n• *She speaks French.* — Ze kan Frans. (simple, vermogen/feit)\n• *She is speaking French.* — Op dit moment praat ze Frans. (continuous)\n\n• *It rains a lot in November.* — Algemene regel. (simple)\n• *It is raining.* — Het regent nu. (continuous)\n\n**Vraag jezelf af**: *gebeurt dit altijd of nu?*",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="40" width="120" height="120" rx="10" fill="${COLORS.simple}" opacity="0.15" stroke="${COLORS.simple}" stroke-width="2"/>
 <text x="80" y="65" text-anchor="middle" fill="${COLORS.simple}" font-size="13" font-family="Arial" font-weight="bold">SIMPLE</text>
@@ -172,7 +172,7 @@ const steps = [
         q: "Welke is goed? — *Look! It ___ outside.*",
         options: ["is raining", "rains", "rain", "are raining"],
         answer: 0,
-        wrongHints: [null, "'Look!' = nu → continuous. Klopt als je is raining koos.", "Simple = algemeen, niet 'nu'.", "It → is, niet are."],
+        wrongHints: [null, "'Look!' = nu → continuous, niet simple.", "Simple = algemeen, niet 'nu'.", "It → is, niet are."],
       },
       {
         q: "Welke is goed? — *My dad ___ in a hospital.* (vaste baan)",
@@ -184,7 +184,7 @@ const steps = [
   },
   {
     title: "Signaalwoorden: kies snel",
-    explanation: "Bepaalde **tijdwoorden** geven direct aan welke tijd je nodig hebt:\n\n**Simple-signalen** (regelmaat):\n• always, usually, often, sometimes, never\n• every day / week / year\n• in the morning, on Mondays\n• once a week, twice a year\n\n**Continuous-signalen** (nu):\n• now, right now\n• at the moment, currently\n• today, this week, this morning\n• Look! Listen!\n\n**Voorbeelden**:\n• *I always **drink** coffee in the morning.* (always = simple)\n• *I'm **drinking** coffee right now.* (right now = continuous)\n• *She often **plays** tennis.* (often = simple)\n• *She is **playing** tennis at the moment.* (at the moment = continuous)\n\n**Truc**: zie je een tijdwoord? Sla direct over naar de juiste tijd. Geen tijdwoord → kijk naar betekenis.",
+    explanation: "Bepaalde **tijdwoorden** geven direct aan welke tijd je nodig hebt:\n\n**Simple-signalen** (regelmaat):\n• always, usually, often, sometimes, never\n• every day / week / year\n• in the morning, on Mondays\n• once a week, twice a year\n\n**Continuous-signalen** (nu):\n• now, right now\n• at the moment, currently\n• today, this week, this morning\n• Look! Listen!\n\n**Voorbeelden**:\n• *I always **drink** coffee in the morning.* (always = simple)\n• *I'm **drinking** coffee right now.* (right now = continuous)\n• *She often **plays** tennis.* (often = simple)\n• *She is **playing** tennis at the moment.* (at the moment = continuous)\n\n**Truc**: zie je een tijdwoord? Kies dan meteen de juiste tijd. Geen tijdwoord → kijk naar betekenis.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">signaalwoorden</text>
 <rect x="20" y="40" width="120" height="120" rx="10" fill="${COLORS.simple}" opacity="0.12"/>
@@ -211,7 +211,7 @@ const steps = [
         q: "Welke is goed? — *Sarah ___ a film at the moment.*",
         options: ["is watching", "watches", "watch", "watching"],
         answer: 0,
-        wrongHints: [null, "Simple past niet bij 'at the moment'.", "Welk werkwoord hoort bij 'she/he/it' in de tegenwoordige tijd?", "-ing zonder be werkt niet."],
+        wrongHints: [null, "Simple (watches) hoort niet bij 'at the moment'.", "Welk werkwoord hoort bij 'she/he/it' in de tegenwoordige tijd?", "-ing zonder be werkt niet."],
       },
     ],
   },
@@ -246,7 +246,7 @@ const steps = [
   // D
   {
     title: "Mix-oefening — alle regels samen",
-    explanation: "Tijd om alle regels los te laten op gemengde zinnen. Stappenplan per zin:\n\n1. **Tijdwoord?** Always/often → simple. Now/at the moment → continuous.\n2. **State verb?** know/like/want/be (bezit) → simple, ook bij 'now'.\n3. **Onderwerp?** he/she/it → -s in simple, is in continuous; we/they → are.\n4. **Vraag?** do/does naar voren (simple), be-vorm naar voren (continuous).\n5. **Ontkenning?** don't/doesn't (simple), isn't/aren't (continuous).\n\nVerder: spelling check — verdubbeling, -ies, -es bij -ch/-sh/-x/-o.",
+    explanation: "Tijd om alle regels los te laten op gemengde zinnen. Stappenplan per zin:\n\n1. **Tijdwoord?** Always/often → simple. Now/at the moment → continuous.\n2. **State verb?** know/like/want/have (bezit) → simple, ook bij 'now'.\n3. **Onderwerp?** he/she/it → -s in simple, is in continuous; we/they → are.\n4. **Vraag?** do/does naar voren (simple), be-vorm naar voren (continuous).\n5. **Ontkenning?** don't/doesn't (simple), isn't/aren't (continuous).\n\nLet op spelling: verdubbeling, -ies, -es bij -ch/-sh/-x/-o.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">checklist per zin</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">1. Tijdwoord? → simple of continuous</text>
@@ -266,7 +266,7 @@ const steps = [
         q: "*Listen! The teacher ___ something.*",
         options: ["is saying", "says", "say", "is says"],
         answer: 0,
-        wrongHints: [null, "Simple past niet hier.", "He → is, niet 'say'.", "Geen geldige combinatie."],
+        wrongHints: [null, "Simple hoort niet bij 'Listen!'.", "He → is, niet 'say'.", "Geen geldige combinatie."],
       },
       {
         q: "*___ you ___ to school by bus?* (gewoonte)",
@@ -290,7 +290,7 @@ const steps = [
         q: "*She ___ a great song right now.* (sing)",
         options: ["is singing", "sings", "sing", "singing"],
         answer: 0,
-        wrongHints: [null, "Simple past niet bij 'right now'.", "She → -s of is.", "Geen vorm zonder hulpwerkwoord."],
+        wrongHints: [null, "Simple hoort niet bij 'right now'.", "She → -s of is.", "Geen vorm zonder hulpwerkwoord."],
       },
       {
         q: "*We ___ that man.* (know — state verb!)",

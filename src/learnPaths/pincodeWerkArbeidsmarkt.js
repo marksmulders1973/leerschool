@@ -28,7 +28,7 @@ const steps = [
   // ─── Stap 1: Werkgevers en werknemers ─────────────────
   {
     title: "Werkgever en werknemer — wie doet wat?",
-    explanation: "**Werknemer**: werkt in dienst van een werkgever en krijgt loon.\n**Werkgever**: betaalt loon, geeft opdrachten, draagt het bedrijfsrisico.\n\n**Verplichtingen werkgever**:\n• Loon op tijd uitbetalen\n• Veilige werkplek bieden\n• Loonheffing inhouden + afdragen\n• Vakantiedagen + vakantiegeld\n\n**Verplichtingen werknemer**:\n• Werk goed en op tijd uitvoeren\n• Bedrijfsregels naleven\n• Bij ziekte zo snel mogelijk melden\n\n**Soorten contracten**:\n\n**Vast contract (onbepaalde tijd)**\n• Meeste zekerheid\n• Ontslag is moeilijker (UWV-toestemming, opzegtermijn)\n• Aantrekkelijk voor hypotheek\n\n**Tijdelijk contract (bepaalde tijd)**\n• Voor X maanden of 1-3 jaar\n• Loopt automatisch af\n• Maximaal **3 contracten in 3 jaar** (Wet Werk en Zekerheid), daarna automatisch vast\n\n**Oproepcontract / nuluren**\n• Werken alleen als werkgever je belt\n• Geen vaste uren = geen vast inkomen = onzekerheid\n\n**Uitzendcontract**\n• Via uitzendbureau (Randstad, Tempo-Team)\n• Bureau betaalt loon, jij werkt voor de inlener\n• Vaak voor pieken, tijdelijke vervangingen\n\n**Zelfstandige (zzp)**\n• Geen werknemer maar opdrachtnemer\n• Doet klussen voor opdrachtgevers\n• Regelt zelf belasting + verzekeringen\n\n**Voor jongeren — eerste baantje**:\n• Bijbaan van 13-15 jaar: max 2-3 uur per dag, niet na 19:00\n• 16-17 jaar: ruimer, max 8 uur per dag, geen nachtwerk\n• Vanaf 18: alle regels gelden\n\n**Loonstrookje** belangrijk om te lezen:\n• Brutoloon - inhoudingen = nettoloon\n• Vakantiegeld (8% van jaarloon) staat apart of komt in mei",
+    explanation: "**Werknemer**: werkt in dienst van een werkgever en krijgt loon.\n**Werkgever**: betaalt loon, geeft opdrachten, draagt het bedrijfsrisico.\n\n**Verplichtingen werkgever**:\n• Loon op tijd uitbetalen\n• Veilige werkplek bieden\n• Loonheffing inhouden + afdragen\n• Vakantiedagen + vakantiegeld\n\n**Verplichtingen werknemer**:\n• Werk goed en op tijd uitvoeren\n• Bedrijfsregels naleven\n• Bij ziekte zo snel mogelijk melden\n\n**Soorten contracten**:\n\n**Vast contract (onbepaalde tijd)**\n• Meeste zekerheid\n• Ontslag is moeilijker (UWV-toestemming, opzegtermijn)\n• Handig voor hypotheek\n\n**Tijdelijk contract (bepaalde tijd)**\n• Voor X maanden of 1-3 jaar\n• Loopt automatisch af\n• Maximaal **3 contracten in 3 jaar** (ketenregeling), daarna automatisch vast\n\n**Oproepcontract / nuluren**\n• Werken alleen als werkgever je belt\n• Geen vaste uren = geen vast inkomen = onzekerheid\n\n**Uitzendcontract**\n• Via uitzendbureau (Randstad, Tempo-Team)\n• Bureau betaalt loon, jij werkt voor de inlener\n• Vaak voor pieken, tijdelijke vervangingen\n\n**Zelfstandige (zzp)**\n• Geen werknemer maar opdrachtnemer\n• Doet klussen voor opdrachtgevers\n• Regelt zelf belasting + verzekeringen\n\n**Voor jongeren — eerste baantje**:\n• Bijbaan van 13-15 jaar: op schooldagen max 2 uur, niet na 19:00\n• 16-17 jaar: ruimer, max 9 uur per dag, geen nachtwerk\n• Vanaf 18: alle regels gelden\n\n**Loonstrookje** belangrijk om te lezen:\n• Brutoloon - inhoudingen = nettoloon\n• Vakantiegeld (8% van jaarloon) staat apart of komt in mei",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">WERKGEVER ↔ WERKNEMER</text>
 <rect x="30" y="40" width="100" height="55" rx="8" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
@@ -67,8 +67,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zelfstandige, geen team", tekst: "ZZP = Zelfstandige Zonder Personeel. Werkt voor klanten/opdrachtgevers maar IS GEEN WERKNEMER. Regelt zelf belasting, verzekering, pensioen, vakantie." }],
           woorden: [{ woord: "zzp'er", uitleg: "Zelfstandige zonder personeel. Eigen ondernemer, ingeschreven bij KvK." }, { woord: "opdrachtgever", uitleg: "Klant van een zzp'er. Geen werkgever — geen loonheffing, geen vakantiegeld." }],
-          theorie: "Voordelen: vrijheid, eigen tarief, zelfstandigenaftrek (€5k+ belastingvoordeel). Nadelen: geen werkloosheidsuitkering, zelf pensioen/AOV regelen, geen vakantiegeld, geen werkgever die jou ondersteunt.",
-          voorbeelden: [{ type: "praktijk", tekst: "Webdesigner-zzp bouwt sites voor 8 klanten/jaar. Stuur factuur per project. Regelt eigen belasting + verzekering." }],
+          theorie: "Voordelen: vrijheid, eigen tarief, zelfstandigenaftrek (belastingvoordeel). Nadelen: geen werkloosheidsuitkering, zelf pensioen/AOV regelen, geen vakantiegeld, geen werkgever die jou ondersteunt.",
+          voorbeelden: [{ type: "praktijk", tekst: "Webdesigner-zzp bouwt sites voor 8 klanten/jaar. Stuurt factuur per project. Regelt eigen belasting + verzekering." }],
           basiskennis: [{ onderwerp: "Niet werkloos", uitleg: "Zzp werkt actief — heeft alleen geen vaste werkgever. Tegenovergesteld van werkloos." }],
           niveaus: { basis: "Zelfstandige zonder personeel.", simpeler: "Zzp = je werkt voor jezelf, voor verschillende opdrachtgevers. Geen baas.", nogSimpeler: "Zelfstandig" },
         },
@@ -79,9 +79,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Oproep = werken als baas belt.", "Uitzend = via bureau, snel klaar.", "Tijdelijk eindigt na 6 mnd."],
         uitlegPad: {
-          stappen: [{ titel: "Vast = vrijwel onontslagbaar", tekst: "Vast contract (onbepaalde tijd) = grootste zekerheid: geen einddatum, opzeg-procedure beschermt jou, ontslag vraagt UWV of rechter. Alle andere contractvormen zijn beperkter." }],
+          stappen: [{ titel: "Vast = goed beschermd", tekst: "Vast contract (onbepaalde tijd) = grootste zekerheid: geen einddatum, opzeg-procedure beschermt jou, ontslag vraagt UWV of rechter. Alle andere contractvormen zijn beperkter." }],
           woorden: [{ woord: "vast contract", uitleg: "Onbepaalde tijd. Geen einddatum. Wettelijk beschermd tegen willekeurig ontslag." }, { woord: "ontslagbescherming", uitleg: "Reeks regels die voorkomen dat werkgever zomaar mag ontslaan — UWV-route of vaststellingsovereenkomst." }],
-          theorie: "Vast voordelen: voorspelbaar inkomen, hypotheek mogelijk, ontslagbescherming, recht op transitievergoeding. Nadelen: werkgever moet 'goede reden' hebben voor ontslag — anders niet mogelijk.",
+          theorie: "Vast voordelen: voorspelbaar inkomen, hypotheek mogelijk, ontslagbescherming, recht op transitievergoeding. Nadeel voor de werkgever: die moet een 'goede reden' hebben voor ontslag — anders niet mogelijk.",
           voorbeelden: [{ type: "vast", tekst: "Vast: werkgever wil je weg → moet bedrijfseconomische reden hebben + UWV-toestemming + transitievergoeding." }, { type: "tijdelijk", tekst: "Tijdelijk: contract loopt 6 mnd → eindigt automatisch zonder reden." }],
           basiskennis: [{ onderwerp: "Hypotheek", uitleg: "Banken willen vooral vast contract voor hypotheek — meer zekerheid voor terugbetaling." }],
           niveaus: { basis: "Vast = meeste zekerheid.", simpeler: "Vast contract = werkgever mag je niet zomaar wegsturen. Andere contracten lopen makkelijker af.", nogSimpeler: "Vast" },
@@ -93,26 +93,26 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te beperkend.", "Niet onbeperkt — wettelijke regel.", "Veel te veel — 3 max."],
         uitlegPad: {
-          stappen: [{ titel: "Ketenregeling 3×3×3", tekst: "Wet Werk en Zekerheid: max 3 tijdelijke contracten in 3 jaar bij dezelfde werkgever. Daarna AUTOMATISCH vast contract. Doel: voorkomen 'eeuwige tijdelijken'." }],
+          stappen: [{ titel: "Ketenregeling 3×3×3", tekst: "Ketenregeling (sinds 2020): max 3 tijdelijke contracten in 3 jaar bij dezelfde werkgever. Daarna AUTOMATISCH vast contract. Doel: voorkomen 'eeuwige tijdelijken'." }],
           woorden: [{ woord: "ketenregeling", uitleg: "Wet die opeenvolgende tijdelijke contracten beperkt: 3 contracten / 3 jaar / 6 mnd pauze tussen ketens." }],
-          theorie: "Werkgevers proberen soms ontwijken via uitzend-constructies of pauze van 6 maanden tussen ketens. Sinds 2020 strenger geworden — pauze van >6 mnd nodig om opnieuw te starten.",
+          theorie: "Werkgevers proberen dit soms te ontwijken via uitzend-constructies of een pauze tussen ketens. Sinds 2020 mag de keten 3 jaar duren (was 2). Pas na een pauze van meer dan 6 mnd begint de telling opnieuw.",
           voorbeelden: [{ type: "vast worden", tekst: "Contract 1 jaar → 2e van 1 jaar → 3e van 1 jaar (3 in 3 jr). 4e moet vast zijn." }, { type: "ontwijking", tekst: "Sommige werkgevers ontslaan na 3e contract → 6 mnd pauze → opnieuw tijdelijk. Onethisch, soms juridisch wankel." }],
           basiskennis: [{ onderwerp: "Niet onbeperkt", uitleg: "Wet beperkt om misbruik te voorkomen. Anders zou werkgever altijd tijdelijk geven." }],
           niveaus: { basis: "3 in 3 jaar.", simpeler: "Max 3 tijdelijke contracten in 3 jaar bij dezelfde werkgever. Daarna vast.", nogSimpeler: "3×3" },
         },
       },
       {
-        q: "Een 14-jarige bijbaan: hoeveel uur per dag mag je maximaal werken?",
-        options: ["2-3 uur (jeugd-arbeidsregels)", "8 uur", "12 uur", "Onbeperkt"],
+        q: "Je bent 14 en hebt een bijbaan: hoeveel uur mag je op een schooldag maximaal werken?",
+        options: ["2 uur (jeugd-arbeidsregels)", "8 uur", "12 uur", "Onbeperkt"],
         answer: 0,
-        wrongHints: [null, "8 uur geldt vanaf 16.", "Niet voor jeugd.", "Wel beperkingen."],
+        wrongHints: [null, "Zoveel mag pas vanaf 16.", "Niet voor jeugd.", "Wel beperkingen."],
         uitlegPad: {
-          stappen: [{ titel: "Jeugd-arbeidsregels", tekst: "13-15 jaar: max 2-3 uur per dag, alleen licht werk (kranten, vakkenvullen, oppassen). Niet na 19:00. School-uren beschermd. 16-17: ruimer. Vanaf 18: alle regels van volwassenen." }],
-          woorden: [{ woord: "jeugd-arbeidswet", uitleg: "Wet die werk voor minderjarigen beperkt voor onderwijs + gezondheid." }, { woord: "licht werk", uitleg: "Lichte fysieke + mentale belasting: vakkenvullen, kranten, oppassen. Geen zware machine of nachtwerk." }],
-          theorie: "Wet bedoeld om school + ontwikkeling te beschermen. Werkgever die regels overtreedt → boete. Bij twijfel check Arbeidsinspectie of jeugdwerkregels.nl.",
-          voorbeelden: [{ type: "13-jr", tekst: "Vakkenvullen 2-3 uur op zaterdag + 2-3 uur op woensdag. Niet 's avonds. Schoolwerk eerst." }, { type: "16-jr", tekst: "Bijbaan tot 8 uur per dag toegestaan, ook 's avonds (tot 22:00)." }],
-          basiskennis: [{ onderwerp: "Niet 8 uur", uitleg: "8 uur geldt vanaf 16 jaar. Voor jongeren strenger." }],
-          niveaus: { basis: "2-3 uur jeugd.", simpeler: "Op je 14e mag je maar 2-3 uur per dag werken — niet 's avonds. Wet beschermt schoolwerk.", nogSimpeler: "Beperkt" },
+          stappen: [{ titel: "Jeugd-arbeidsregels", tekst: "13-15 jaar: op schooldagen max 2 uur, alleen licht werk (kranten, vakkenvullen, oppassen). Niet na 19:00. School-uren beschermd. 16-17: ruimer. Vanaf 18: alle regels van volwassenen." }],
+          woorden: [{ woord: "jeugd-arbeidsregels", uitleg: "Regels in de wet die werk voor minderjarigen beperkt voor onderwijs + gezondheid." }, { woord: "licht werk", uitleg: "Lichte fysieke + mentale belasting: vakkenvullen, kranten, oppassen. Geen zware machine of nachtwerk." }],
+          theorie: "Wet bedoeld om school + ontwikkeling te beschermen. Werkgever die regels overtreedt → boete. Bij twijfel: check de site van de Nederlandse Arbeidsinspectie.",
+          voorbeelden: [{ type: "13-jr", tekst: "Vakkenvullen op zaterdag + 2 uur op woensdagmiddag. Niet 's avonds. Schoolwerk eerst." }, { type: "16-jr", tekst: "Bijbaan tot 9 uur per dag toegestaan, ook 's avonds (niet na 23:00)." }],
+          basiskennis: [{ onderwerp: "Niet 8 uur", uitleg: "Lange werkdagen mogen pas vanaf 16 jaar. Voor jongeren strenger." }],
+          niveaus: { basis: "2 uur op een schooldag.", simpeler: "Op je 14e mag je op een schooldag maar 2 uur werken — niet 's avonds. Wet beschermt schoolwerk.", nogSimpeler: "Beperkt" },
         },
       },
       {
@@ -124,8 +124,8 @@ const steps = [
           stappen: [{ titel: "Verplichte items loonstrookje", tekst: "Loonstrookje verplicht bevat: brutoloon, inhoudingen (loonheffing, AOW-premie, ZVW, WLZ), nettoloon, vakantiegeld-opbouw, gewerkte uren, periode." }],
           woorden: [{ woord: "loonstrookje", uitleg: "Maandelijks overzicht van loon + inhoudingen. Verplicht voor elke werkgever." }, { woord: "inhoudingen", uitleg: "Bedragen die werkgever inhoudt op brutoloon: loonheffing, sociale premies." }],
           theorie: "Check loonstrookje altijd! Veelgemaakte fouten: verkeerde uren, gemiste toeslagen, verkeerd belastingtarief. Bij twijfel → werkgever of vakbond.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Bruto €2.500 − loonheffing €600 − premies €100 = netto €1.800. + vakantiegeld-opbouw €200. = €2.000 totaal gewaardeerd." }],
-          basiskennis: [{ onderwerp: "Niet alleen bedrag", uitleg: "Werkgever MOET specificatie geven. 'Alleen het bedrag' is niet wettig — vraag uitleg." }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Bruto €2.500 − loonheffing €600 − premies €100 = netto €1.800. Daarnaast bouw je €200 bruto vakantiegeld op." }],
+          basiskennis: [{ onderwerp: "Niet alleen bedrag", uitleg: "Werkgever MOET specificatie geven. 'Alleen het bedrag' is niet toegestaan — vraag uitleg." }],
           niveaus: { basis: "Bruto + inhoudingen + netto + vakantie.", simpeler: "Loonstrookje toont brutoloon, wat eraf gaat, netto-uitkomst, vakantieopbouw. Wettelijk verplicht.", nogSimpeler: "Veel details" },
         },
       },
@@ -134,7 +134,7 @@ const steps = [
   // ─── Stap 2: Arbeidsovereenkomst en regels ─────────────
   {
     title: "Arbeidsovereenkomst — wat staat erin?",
-    explanation: "Een **arbeidsovereenkomst** is het contract tussen werkgever en werknemer. Wettelijk verplichte items:\n\n**Persoonsgegevens**:\n• Naam + adres werkgever\n• Naam + adres werknemer\n• Geboortedatum\n\n**Werk**:\n• Functie en taken\n• Plek van werken (kantoor, thuis, beide)\n• Datum van indiensttreding\n• Onbepaalde of bepaalde tijd (en zo ja, hoe lang)\n\n**Tijd**:\n• Aantal uren per week\n• Werktijden\n• **Proeftijd** (max 1 maand bij contract &lt; 2 jr; max 2 maanden bij contract ≥ 2 jr)\n\n**Loon**:\n• Brutoloon per maand of uur\n• Wanneer betaald (meestal eind v/d maand)\n• Vakantiegeld + vakantiedagen\n• Extra's: bonus, 13e maand, reiskostenvergoeding\n\n**Rechten en verplichtingen**:\n• CAO van toepassing (zo ja, welke)\n• Pensioenregeling\n• Geheimhoudingsplicht\n• Concurrentiebeding (mag niet meteen bij concurrent werken na ontslag)\n• Opzegtermijn\n\n**Proeftijd**:\n• Eerste periode waarin beide partijen ZONDER reden mogen stoppen\n• Schriftelijk overeengekomen\n• Bij contract &lt; 6 mnd: GEEN proeftijd toegestaan\n\n**Beëindiging arbeidsovereenkomst**:\n• Zelf opzeggen (met opzegtermijn)\n• Werkgever ontslaat (heeft sterke reden + UWV/rechter nodig)\n• Met wederzijds goedvinden (vaststellingsovereenkomst, vaak met vergoeding)\n• Tijdelijk contract loopt af\n• Met pensioen gaan\n• Faillissement werkgever\n\n**Transitievergoeding**: bij ontslag (na 1 jaar werk) heb je recht op een vergoeding — ongeveer 1/3 maandloon per jaar dienst.",
+    explanation: "Een **arbeidsovereenkomst** is het contract tussen werkgever en werknemer. Wettelijk verplichte items:\n\n**Persoonsgegevens**:\n• Naam + adres werkgever\n• Naam + adres werknemer\n• Geboortedatum\n\n**Werk**:\n• Functie en taken\n• Plek van werken (kantoor, thuis, beide)\n• Datum van indiensttreding\n• Onbepaalde of bepaalde tijd (en zo ja, hoe lang)\n\n**Tijd**:\n• Aantal uren per week\n• Werktijden\n• **Proeftijd** (max 1 maand bij contract &lt; 2 jr; max 2 maanden bij contract ≥ 2 jr)\n\n**Loon**:\n• Brutoloon per maand of uur\n• Wanneer betaald (meestal eind v/d maand)\n• Vakantiegeld + vakantiedagen\n• Extra's: bonus, 13e maand, reiskostenvergoeding\n\n**Rechten en verplichtingen**:\n• CAO van toepassing (zo ja, welke)\n• Pensioenregeling\n• Geheimhoudingsplicht\n• Concurrentiebeding (mag niet meteen bij concurrent werken na ontslag)\n• Opzegtermijn\n\n**Proeftijd**:\n• Eerste periode waarin beide partijen ZONDER reden mogen stoppen\n• Schriftelijk overeengekomen\n• Bij contract &lt; 6 mnd: GEEN proeftijd toegestaan\n\n**Beëindiging arbeidsovereenkomst**:\n• Zelf opzeggen (met opzegtermijn)\n• Werkgever ontslaat (heeft sterke reden + UWV/rechter nodig)\n• Met wederzijds goedvinden (vaststellingsovereenkomst, vaak met vergoeding)\n• Tijdelijk contract loopt af\n• Met pensioen gaan\n• Faillissement werkgever\n\n**Transitievergoeding**: bij ontslag (vanaf dag 1) heb je recht op een vergoeding — ongeveer 1/3 maandloon per jaar dienst.",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ARBEIDSOVEREENKOMST</text>
 <rect x="30" y="40" width="260" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
@@ -184,12 +184,12 @@ const steps = [
       },
       {
         q: "Een **concurrentiebeding** in je contract betekent:",
-        options: ["Je mag na ontslag niet direct bij een concurrent werken", "Je krijgt een bonus", "Je werkgever mag je betere kant niet zien", "Je krijgt een opleiding"],
+        options: ["Je mag na ontslag niet direct bij een concurrent werken", "Je krijgt een bonus", "Je moet altijd overuren maken", "Je krijgt een opleiding"],
         answer: 0,
-        wrongHints: [null, "Geen bonus-regeling.", "Onzin.", "Niet automatisch."],
+        wrongHints: [null, "Geen bonus-regeling.", "Dat heeft niets met concurrentie te maken.", "Een opleiding staat los van dit beding."],
         uitlegPad: {
           stappen: [{ titel: "Beperking na ontslag", tekst: "Concurrentiebeding = clausule in arbeidscontract die jou verbiedt om na vertrek bij een concurrent te gaan werken voor X tijd in Y gebied. Beschermt werkgever's bedrijfsgeheimen + klanten." }],
-          woorden: [{ woord: "concurrentiebeding", uitleg: "Contract-clausule die werknemer beperkt om bij concurrent te werken na uit dienst." }, { woord: "relatiebeding", uitleg: "Specifiekere versie: mag geen oud-klanten benaderen." }],
+          woorden: [{ woord: "concurrentiebeding", uitleg: "Contract-clausule die werknemer beperkt om na uitdiensttreding bij een concurrent te werken." }, { woord: "relatiebeding", uitleg: "Specifiekere versie: mag geen oud-klanten benaderen." }],
           theorie: "Sinds 2015 alleen bij contract ONBEPAALDE TIJD geldig, tenzij zwaarwegend bedrijfsbelang. Vaak 6-12 maanden, regio Nederland. Bij overtreding: boete (vaak in contract genoemd) of schadevergoeding.",
           voorbeelden: [{ type: "geldig", tekst: "Web-developer met klantkennis: beding '12 mnd geen werk bij concurrent in NL'. Bij overtreding €25k boete." }],
           basiskennis: [{ onderwerp: "Niet automatisch", uitleg: "Moet expliciet in contract staan. Geen contract-clausule = geen beperking." }],
@@ -197,14 +197,14 @@ const steps = [
         },
       },
       {
-        q: "Welke 4 hoofdcategorieën hoort op een arbeidsovereenkomst?",
+        q: "Welke 4 hoofdcategorieën horen op een arbeidsovereenkomst?",
         options: ["Persoon · werk · tijd · loon", "Brutoloon · netto · vakantie · pensioen", "Opzegtermijn · ontslag · loon · pensioen", "Werkgever · werknemer"],
         answer: 0,
         wrongHints: [null, "Te beperkt.", "Te beperkt.", "Te beperkt — meer items nodig."],
         uitlegPad: {
           stappen: [{ titel: "Vier kerncategorieën", tekst: "Persoon (wie), Werk (wat), Tijd (uren/periode), Loon (hoeveel). Andere zaken (CAO, pensioen, beëindiging) vallen binnen deze hoofdcategorieën." }],
           woorden: [{ woord: "arbeidsovereenkomst", uitleg: "Contract tussen werkgever en werknemer. Schriftelijk of mondeling (maar schriftelijk veiliger)." }],
-          theorie: "Wet verplicht binnen 1 maand na in dienst schriftelijke bevestiging van essentiële items. Anders kan werknemer naar rechter.",
+          theorie: "Wet verplicht de werkgever om de belangrijkste afspraken snel na indiensttreding schriftelijk te bevestigen. Anders kan werknemer naar rechter.",
           voorbeelden: [{ type: "compleet", tekst: "Persoon: Jan Janssen. Werk: programmeur bij BV X. Tijd: 40 uur/wk, vast. Loon: €3.500 bruto + 8% vakantiegeld." }],
           basiskennis: [{ onderwerp: "Andere items vallen eronder", uitleg: "Brutoloon zit in 'loon'. Vakantie ook. Opzegtermijn zit in 'tijd'. 4 hoofdcategorieën als kapstok." }],
           niveaus: { basis: "Persoon+werk+tijd+loon.", simpeler: "Vier hoofdcategorieën: wie je bent, wat je doet, hoeveel uur, welk loon.", nogSimpeler: "4 P/W/T/L" },
@@ -216,10 +216,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Eenzijdig zou geen 'wederzijds' zijn.", "Idem.", "Rechter kan ook nodig zijn, maar 'wederzijds' = samen."],
         uitlegPad: {
-          stappen: [{ titel: "Samen afspraken maken", tekst: "Wederzijds goedvinden = jij EN werkgever leggen ontslag samen vast in een 'vaststellingsovereenkomst'. Geen rechter, geen UWV. Werkgever betaalt vaak een vergoeding (vaak hoger dan transitievergoeding) om snel klaar te zijn." }],
+          stappen: [{ titel: "Samen afspraken maken", tekst: "Wederzijds goedvinden = jij EN werkgever leggen ontslag samen vast in een 'vaststellingsovereenkomst'. Geen rechter, geen UWV. Werkgever betaalt vaak een vergoeding (soms hoger dan transitievergoeding) om snel klaar te zijn." }],
           woorden: [{ woord: "vaststellingsovereenkomst", uitleg: "Schriftelijk akkoord ontslag met afspraken over einddatum, vergoeding, WW-aanspraak." }, { woord: "wederzijds goedvinden", uitleg: "Wettelijke beëindigingsmethode waarbij beide partijen instemmen." }],
           theorie: "Voordelen werkgever: snel klaar zonder UWV-procedure. Voordelen werknemer: vaak hogere vergoeding + recht op WW (mits goed geformuleerd). Belangrijk: laat juridisch checken!",
-          voorbeelden: [{ type: "praktijk", tekst: "Werkgever wil zaken stoppen met jou → biedt aan: einddatum + 3 maandlonen vergoeding + WW-aanspraak. Jij tekent → vertrek." }],
+          voorbeelden: [{ type: "praktijk", tekst: "Werkgever wil met jou stoppen → biedt aan: einddatum + 3 maandlonen vergoeding + WW-aanspraak. Jij tekent → vertrek." }],
           basiskennis: [{ onderwerp: "Niet eenzijdig", uitleg: "'Wederzijds' = samen. Eenzijdig is iets anders (ontslag-op-staande-voet of zelf opzeggen)." }],
           niveaus: { basis: "Samen afspraken.", simpeler: "Wederzijds goedvinden = werkgever + werknemer maken samen ontslagafspraken in een papier.", nogSimpeler: "Samen" },
         },
@@ -243,7 +243,7 @@ const steps = [
   // ─── Stap 3: Arbeidsmarkt + CAO ───────────────────────────
   {
     title: "De arbeidsmarkt en CAO",
-    explanation: "De **arbeidsmarkt** = waar werkgevers (vraag naar arbeid) en werknemers (aanbod van arbeid) elkaar ontmoeten.\n\n**Vraag naar arbeid** = hoeveel mensen wil de werkgever in dienst nemen?\n• Bij **hogere lonen** wil de werkgever **minder** mensen aannemen.\n\n**Aanbod van arbeid** = hoeveel mensen willen werken?\n• Bij **hogere lonen** willen **meer** mensen werken (of meer uren).\n\n**Krapte op de arbeidsmarkt** = meer vraag dan aanbod\n• Werkgever moet hoger loon bieden om mensen te vinden\n• Voorbeeld 2024: zorg, IT, bouw, horeca\n• Effect: lonen stijgen, mensen kunnen kiezen\n\n**Ruime arbeidsmarkt** = meer aanbod dan vraag\n• Werkgever heeft keuze, lonen blijven laag of dalen\n• Voorbeeld: bij een recessie\n\n**CAO — Collectieve Arbeidsovereenkomst**:\n• Afspraken tussen vakbonden (kant van werknemers) en werkgeversorganisaties\n• Geldt voor een hele sector (bv. CAO horeca, CAO zorg)\n• Regelt: loon, werktijden, overwerktoeslag, vakantie, pensioen, scholing\n• Voordeel: één set regels voor iedereen, geen onderhandeling per persoon\n\n**Vakbonden** (FNV, CNV):\n• Komen op voor werknemersbelangen\n• Onderhandelen CAO\n• Helpen leden bij ontslag, conflicten\n• Bekostigd door contributie van leden\n\n**Werkgeversorganisaties** (VNO-NCW, MKB-Nederland):\n• Komen op voor werkgevers\n• Onderhandelen aan andere kant\n\n**Wat als ze er niet uitkomen?**\n• **Stakingen** door werknemers (geen werk, dus druk op werkgever)\n• **Lock-out** door werkgever (werknemers buitensluiten)\n• Bemiddeling, soms door overheid\n\n**Recente trends arbeidsmarkt**:\n• Veel **flexwerk** (zzp, oproep, uitzend) — meer onzekerheid\n• **Krapte** in techniek + zorg → hogere lonen daar\n• **Thuiswerk** (sinds corona) blijft belangrijk\n• **Vergrijzing**: meer ouderen pensioen, minder jongeren werken",
+    explanation: "De **arbeidsmarkt** = waar werkgevers (vraag naar arbeid) en werknemers (aanbod van arbeid) elkaar ontmoeten.\n\n**Vraag naar arbeid** = hoeveel mensen wil de werkgever in dienst nemen?\n• Bij **hogere lonen** wil de werkgever **minder** mensen aannemen.\n\n**Aanbod van arbeid** = hoeveel mensen willen werken?\n• Bij **hogere lonen** willen **meer** mensen werken (of meer uren).\n\n**Krapte op de arbeidsmarkt** = meer vraag dan aanbod\n• Werkgever moet hoger loon bieden om mensen te vinden\n• Voorbeeld 2024: zorg, IT, bouw, horeca\n• Effect: lonen stijgen, mensen kunnen kiezen\n\n**Ruime arbeidsmarkt** = meer aanbod dan vraag\n• Werkgever heeft keuze, lonen blijven laag of dalen\n• Voorbeeld: bij een recessie\n\n**CAO — Collectieve Arbeidsovereenkomst**:\n• Afspraken tussen vakbonden (kant van werknemers) en werkgeversorganisaties\n• Geldt voor een hele sector (bv. CAO horeca, CAO zorg)\n• Regelt: loon, werktijden, overwerktoeslag, vakantie, pensioen, scholing\n• Voordeel: één set regels voor iedereen, geen onderhandeling per persoon\n\n**Vakbonden** (FNV, CNV):\n• Komen op voor werknemersbelangen\n• Onderhandelen CAO\n• Helpen leden bij ontslag, conflicten\n• Bekostigd door contributie van leden\n\n**Werkgeversorganisaties** (VNO-NCW, MKB-Nederland):\n• Komen op voor werkgevers\n• Onderhandelen aan andere kant\n\n**Wat als ze er niet uitkomen?**\n• **Stakingen** door werknemers (geen werk, dus druk op werkgever)\n• **Lock-out** door werkgever (werknemers buitensluiten)\n• Bemiddeling, soms door overheid\n\n**Recente trends arbeidsmarkt**:\n• Veel **flexwerk** (zzp, oproep, uitzend) — meer onzekerheid\n• **Krapte** in techniek + zorg → hogere lonen daar\n• **Thuiswerk** (sinds corona) blijft belangrijk\n• **Vergrijzing**: meer ouderen met pensioen, minder werkenden",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ARBEIDSMARKT</text>
 <line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
@@ -268,7 +268,7 @@ const steps = [
           stappen: [{ titel: "Twee partijen", tekst: "CAO = afspraak tussen VAKBONDEN (namens werknemers) en WERKGEVERSORGANISATIES (namens werkgevers). Geldt voor hele sector. Niet individueel, niet overheid." }],
           woorden: [{ woord: "CAO", uitleg: "Collectieve Arbeidsovereenkomst. Sectorbrede afspraken over loon, uren, voorwaarden." }, { woord: "vakbond", uitleg: "FNV, CNV: onderhandelen namens werknemers." }, { woord: "werkgeversorganisatie", uitleg: "VNO-NCW, MKB-NL: onderhandelen namens werkgevers." }],
           theorie: "Voordeel CAO: één set regels voor iedereen in sector. Werknemer hoeft niet zelf te onderhandelen. Onderhandelingen elke 2-3 jaar — bij vastlopen: stakingen of bemiddeling.",
-          voorbeelden: [{ type: "praktijk", tekst: "CAO zorg: FNV + CNV vs werkgevers (NVZ, Actiz, etc) → loonsverhoging 5% + extra vakantiedag. Geldt voor alle ziekenhuizen." }],
+          voorbeelden: [{ type: "praktijk", tekst: "CAO ziekenhuizen: FNV + CNV vs werkgevers (NVZ) → bv. loonsverhoging + extra vakantiedag. Geldt voor alle ziekenhuizen in die CAO." }],
           basiskennis: [{ onderwerp: "Niet overheid", uitleg: "Overheid faciliteert maar zit zelden zelf aan tafel. CAO is afspraak tussen werkgevers + werknemers." }],
           niveaus: { basis: "Bonden + werkgevers.", simpeler: "CAO wordt onderhandeld tussen vakbonden (FNV/CNV) en werkgeversorganisaties.", nogSimpeler: "Bonden + werkgevers" },
         },
@@ -277,12 +277,12 @@ const steps = [
         q: "Wat is **krapte** op de arbeidsmarkt?",
         options: ["Meer vraag dan aanbod (te weinig werknemers)", "Iedereen werkt", "Lonen dalen", "Veel werklozen"],
         answer: 0,
-        wrongHints: [null, "Iedereen werkt is volledig werkgelegen.", "Krapte = lonen stijgen.", "Dat is ruim."],
+        wrongHints: [null, "Dat heet volledige werkgelegenheid.", "Krapte = lonen stijgen.", "Dat is ruim."],
         uitlegPad: {
           stappen: [{ titel: "Vraag > aanbod", tekst: "Krapte = werkgevers vragen MEER mensen dan beschikbaar zijn. Resultaat: werkgevers moeten hogere lonen bieden om mensen te lokken. Werknemers kunnen kiezen, eisen meer." }],
           woorden: [{ woord: "krapte op arbeidsmarkt", uitleg: "Toestand waarin vraag naar arbeid groter is dan aanbod. Veroorzaakt loonstijging." }, { woord: "vacaturegraad", uitleg: "Aantal vacatures per 100 banen. Hoog = krapte." }],
           theorie: "Effect: lonen STIJGEN. Werknemers gaan tegen hogere lonen werken. Werkgevers betalen meer om mensen aan te trekken. Inflatie-effect mogelijk (loonkosten → hogere prijzen).",
-          voorbeelden: [{ type: "2024 NL", tekst: "Zorg + IT + bouw: meer vacatures dan werkzoekenden → loonstijging 5-10% in deze sectoren." }],
+          voorbeelden: [{ type: "2024 NL", tekst: "Zorg + IT + bouw: meer vacatures dan werkzoekenden → stevige loonstijgingen in deze sectoren." }],
           basiskennis: [{ onderwerp: "Niet 'iedereen werkt'", uitleg: "Volledige werkgelegenheid is iets anders. Krapte = aantal werkzoekenden < vacatures." }],
           niveaus: { basis: "Meer vraag dan aanbod.", simpeler: "Krapte = werkgevers zoeken meer mensen dan er beschikbaar zijn → hogere lonen.", nogSimpeler: "Tekort" },
         },
@@ -295,7 +295,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Specifieke sectoren krap", tekst: "Krapte verschilt per sector. Typisch krap in 2026: ZORG (vergrijzing → meer patiënten), IT (digitalisering), BOUW (woningbouw + verduurzaming), techniek." }],
           woorden: [{ woord: "structureel tekort", uitleg: "Langdurige krapte in sector — niet tijdelijk." }],
-          theorie: "Ruim daarentegen: sommige administratieve functies (vervangen door AI), retail (online-verschuiving). Krapte ontstaat vaak door demografische trends (vergrijzing zorg) of technologische verschuivingen (IT).",
+          theorie: "Ruim daarentegen: sommige administratieve functies (deels geautomatiseerd), retail (online-verschuiving). Krapte ontstaat vaak door demografische trends (vergrijzing zorg) of technologische verschuivingen (IT).",
           voorbeelden: [{ type: "krap", tekst: "Verpleegkundigen, software-developers, elektromonteurs, dakdekkers. Vacatures > werkzoekenden." }, { type: "ruim", tekst: "Administratief medewerker, callcenter-medewerker. Meer aanbieders dan vraag." }],
           basiskennis: [{ onderwerp: "Niet alle sectoren", uitleg: "Krapte is per sector, niet algemeen. Sommige zelfs RUIM." }],
           niveaus: { basis: "Zorg + IT + bouw.", simpeler: "Zorg, IT en bouw zijn in 2026 typische tekortsectoren.", nogSimpeler: "Zorg/IT/bouw" },
@@ -307,10 +307,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Werkgevers hebben eigen organisaties (VNO-NCW).", "Uitzendbureau is iets anders.", "Vakbond is onafhankelijk."],
         uitlegPad: {
-          stappen: [{ titel: "Werknemers-organisatie", tekst: "Vakbond = organisatie die opkomt voor werknemersbelangen. Onderhandelt CAO's, helpt leden bij conflicten, voert acties (staking). Gefinancierd door lidmaatschapscontributie (~€15/mnd)." }],
+          stappen: [{ titel: "Werknemers-organisatie", tekst: "Vakbond = organisatie die opkomt voor werknemersbelangen. Onderhandelt CAO's, helpt leden bij conflicten, voert acties (staking). Gefinancierd door de contributie van leden." }],
           woorden: [{ woord: "vakbond", uitleg: "Werknemersorganisatie. NL grootste: FNV (Federatie Nederlandse Vakbeweging), CNV." }, { woord: "vakbondslid", uitleg: "Werknemer die contributie betaalt voor bescherming + service." }],
-          theorie: "Voordelen lidmaatschap: juridische hulp bij ontslag, gratis advies, sterkere positie bij CAO-onderhandelingen. Aantal leden NL gedaald (van 39% in 1965 tot 17% in 2020) maar nog steeds invloedrijk.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Klusje verkeerd? Werkgever wil ontslag? Vakbondsjurist helpt gratis voor leden." }],
+          theorie: "Voordelen lidmaatschap: juridische hulp bij ontslag, gratis advies, sterkere positie bij CAO-onderhandelingen. Aandeel werknemers dat lid is, is flink gedaald (van zo'n 40% in de jaren 60 tot ongeveer 15% nu), maar bonden zijn nog steeds invloedrijk.",
+          voorbeelden: [{ type: "voorbeeld", tekst: "Conflict met je baas? Werkgever wil ontslag? Vakbondsjurist helpt gratis voor leden." }],
           basiskennis: [{ onderwerp: "Niet werkgevers/uitzend", uitleg: "Werkgevers hebben EIGEN organisaties (VNO-NCW). Vakbond is voor WERKNEMERS." }],
           niveaus: { basis: "Werknemers-org.", simpeler: "Vakbond = organisatie die opkomt voor werknemersrechten. FNV, CNV.", nogSimpeler: "Werknemers" },
         },
@@ -324,7 +324,7 @@ const steps = [
           stappen: [{ titel: "Aanbod > vraag", tekst: "Ruime arbeidsmarkt = meer werkzoekenden dan vacatures. Werkgevers kunnen kiezen, hoeven niet veel te bieden. Lonen blijven laag of dalen. Werkloosheid hoog." }],
           woorden: [{ woord: "ruime arbeidsmarkt", uitleg: "Toestand waarin aanbod groter is dan vraag. Tegengesteld van krapte." }],
           theorie: "Typisch bij recessie: bedrijven nemen niet aan, ontslaan zelfs. Werkzoekenden hebben weinig keuze. Komt voor in slechte tijden of bij structureel banenverlies (digitalisering, off-shoring).",
-          voorbeelden: [{ type: "2009", tekst: "Na financiële crisis: werkloosheid 8%+, lonen onder druk, werkgevers konden kiezen uit 10 sollicitanten per vacature." }, { type: "sector", tekst: "Sommige sectoren chronisch ruim: kunst, journalistiek, sommige geesteswetenschappen." }],
+          voorbeelden: [{ type: "2009", tekst: "Na financiële crisis: werkloosheid steeg flink, lonen onder druk, werkgevers konden kiezen uit veel sollicitanten per vacature." }, { type: "sector", tekst: "Sommige sectoren chronisch ruim: kunst, journalistiek, sommige geesteswetenschappen." }],
           basiskennis: [{ onderwerp: "Tegendeel van krapte", uitleg: "Krapte = vraag > aanbod = loonstijging. Ruim = vraag < aanbod = loondruk." }],
           niveaus: { basis: "Veel zoekers, weinig werk.", simpeler: "Ruime arbeidsmarkt = veel werkzoekenden, weinig vacatures → lonen laag.", nogSimpeler: "Overschot" },
         },
@@ -337,7 +337,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Werknemers-drukmiddel", tekst: "Staking = werknemers leggen WERK NEER om druk uit te oefenen op werkgever. Vaak na vastgelopen CAO-onderhandeling. Vakbond organiseert + beschermt stakers tegen ontslag." }],
           woorden: [{ woord: "staking", uitleg: "Werknemers leggen tijdelijk werk neer als drukmiddel." }, { woord: "lock-out", uitleg: "Werkgever-equivalent: werknemers buitensluiten." }, { woord: "stakingskas", uitleg: "Vakbondsgeld om stakers gedeeltelijk loon te betalen tijdens actie." }],
-          theorie: "Stakingsrecht is grondwet-recht. Werknemers mogen niet ontslagen worden om staking. Werkgever verliest omzet tijdens staking → druk om CAO te accepteren.",
+          theorie: "Stakingsrecht is vastgelegd in het Europees Sociaal Handvest. Werknemers mogen niet ontslagen worden om staking. Werkgever verliest omzet tijdens staking → druk om CAO te accepteren.",
           voorbeelden: [{ type: "NS-staking", tekst: "NS-werknemers leggen treindienst stil → reizigers boos → druk op NS-directie om hogere lonen toe te kennen." }],
           basiskennis: [{ onderwerp: "Niet werkgever", uitleg: "Werkgever heeft eigen drukmiddel (lock-out) maar staking is voor werknemers." }],
           niveaus: { basis: "Werknemers via vakbond.", simpeler: "Staking = werknemers leggen werk neer als drukmiddel op werkgever. Via vakbond.", nogSimpeler: "Werknemers" },
@@ -347,8 +347,8 @@ const steps = [
   },
   // ─── Stap 4: Vraag/aanbod arbeid (extra context) ──────
   {
-    title: "Wet van de vraag en aanbod op de arbeidsmarkt",
-    explanation: "Loon wordt bepaald door **vraag en aanbod** van arbeid — net als de prijs van een product op de markt.\n\n**Vraagcurve naar arbeid (werkgevers)**:\n• Hoog loon → werkgever wil minder mensen (te duur)\n• Laag loon → werkgever wil meer mensen\n• Curve loopt **naar rechts beneden**\n\n**Aanbodcurve van arbeid (werknemers)**:\n• Hoog loon → meer mensen willen werken\n• Laag loon → minder mensen willen werken\n• Curve loopt **naar rechts boven**\n\n**Evenwichtsloon**: punt waar vraag = aanbod. Daar 'klikt' de markt.\n\n**Wanneer verschuift de vraag naar arbeid?**\n• Hoogconjunctuur (economie groeit) → meer vraag\n• Recessie → minder vraag\n• Technologische verandering (AI vervangt werk) → minder vraag voor specifieke beroepen\n\n**Wanneer verschuift het aanbod van arbeid?**\n• Vergrijzing (meer met pensioen) → minder aanbod\n• Immigratie → meer aanbod\n• Hoger opleidingsniveau → meer aanbod hoger niveau\n\n**Voorbeeld**: tijdens COVID gingen veel horeca-medewerkers ander werk zoeken. Toen restaurants weer open mochten, was er **te weinig aanbod** voor horeca → krapte → hogere lonen daar.\n\n**Verschillen per beroepsgroep**:\n• **Schaarse beroepen** (chirurg, software-engineer): hoog loon\n• **Ruim beschikbare beroepen** (kassiere, schoonmaker): minimumloon-niveau\n• **Krachten van schaarste** = wat werkgever bereid is te betalen × hoeveel mensen het kunnen\n\n**Loon = niet alleen prijs**:\n• Ook secundaire arbeidsvoorwaarden (auto, telefoon, opleiding, thuiswerken)\n• 'Tertiaire' (sfeer, doel, ontwikkelingsmogelijkheden)\n\n**Minimumloon** = wettelijke ondergrens, voorkomt 'race naar de bodem'.",
+    title: "Wet van vraag en aanbod op de arbeidsmarkt",
+    explanation: "Loon wordt bepaald door **vraag en aanbod** van arbeid — net als de prijs van een product op de markt.\n\n**Vraagcurve naar arbeid (werkgevers)**:\n• Hoog loon → werkgever wil minder mensen (te duur)\n• Laag loon → werkgever wil meer mensen\n• Curve loopt **naar rechts beneden**\n\n**Aanbodcurve van arbeid (werknemers)**:\n• Hoog loon → meer mensen willen werken\n• Laag loon → minder mensen willen werken\n• Curve loopt **naar rechts boven**\n\n**Evenwichtsloon**: punt waar vraag = aanbod. Daar 'klikt' de markt.\n\n**Wanneer verschuift de vraag naar arbeid?**\n• Hoogconjunctuur (economie groeit) → meer vraag\n• Recessie → minder vraag\n• Technologische verandering (AI vervangt werk) → minder vraag voor specifieke beroepen\n\n**Wanneer verschuift het aanbod van arbeid?**\n• Vergrijzing (meer met pensioen) → minder aanbod\n• Immigratie → meer aanbod\n• Hoger opleidingsniveau → meer aanbod hoger niveau\n\n**Voorbeeld**: tijdens COVID gingen veel horeca-medewerkers ander werk zoeken. Na de heropening was er **te weinig aanbod** voor horeca → krapte → hogere lonen daar.\n\n**Verschillen per beroepsgroep**:\n• **Schaarse beroepen** (chirurg, software-engineer): hoog loon\n• **Ruim beschikbare beroepen** (caissière, schoonmaker): minimumloon-niveau\n• **Krachten van schaarste** = wat werkgever bereid is te betalen × hoeveel mensen het kunnen\n\n**Loon = niet alleen prijs**:\n• Ook secundaire arbeidsvoorwaarden (auto, telefoon, opleiding, thuiswerken)\n• 'Tertiaire' (sfeer, doel, ontwikkelingsmogelijkheden)\n\n**Minimumloon** = wettelijke ondergrens, voorkomt 'race naar de bodem'.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">VRAAG & AANBOD ARBEID</text>
 <line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
@@ -372,7 +372,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Te duur = minder", tekst: "Hoger loon = duurder per medewerker → werkgever past begroting aan en neemt MINDER mensen aan. Wet van de vraag toegepast op arbeid." }],
           woorden: [{ woord: "vraag naar arbeid", uitleg: "Hoeveel mensen werkgever wil aannemen. Daalt bij stijgend loon." }],
-          theorie: "Aanbod-zijde redenering: bij €10/uur is werknemer goedkoop → werkgever neemt 10 aan. Bij €20/uur dubbel zo duur → neemt slechts 6 aan. Vraagcurve loopt naar rechts beneden.",
+          theorie: "Vraagzijde-redenering: bij €10/uur is werknemer goedkoop → werkgever neemt 10 aan. Bij €20/uur dubbel zo duur → neemt slechts 6 aan. Vraagcurve loopt naar rechts beneden.",
           voorbeelden: [{ type: "horeca", tekst: "Minimumloon stijging → restaurant neemt 1 medewerker minder aan → werkdruk hoger." }],
           basiskennis: [{ onderwerp: "Vraag-en-aanbod-logica", uitleg: "Voor werkgevers is arbeid een 'aankoop'. Duurder = minder kopen." }],
           niveaus: { basis: "Hoger loon = minder.", simpeler: "Loon hoger → werkgever neemt minder mensen aan want te duur.", nogSimpeler: "Duur = minder" },
@@ -399,7 +399,7 @@ const steps = [
         wrongHints: [null, "Hoogste niet automatisch evenwicht.", "Minimumloon is wettelijke ondergrens.", "Gemiddelde is iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Vraag = aanbod", tekst: "Evenwichtsloon = het loon waarbij het aantal mensen DIE WILLEN werken (aanbod) PRECIES gelijk is aan het aantal dat werkgevers WILLEN aannemen (vraag). Markt klikt." }],
-          woorden: [{ woord: "evenwichtsloon", uitleg: "Loon waarbij vraag = aanbod arbeid. Iedereen die wil + kan werken vindt werk." }, { woord: "marktevenwicht", uitleg: "Algemene economische staat waarin alle vraag aan alle aanbod beantwoordt." }],
+          woorden: [{ woord: "evenwichtsloon", uitleg: "Loon waarbij vraag = aanbod arbeid. Iedereen die wil + kan werken vindt werk." }, { woord: "marktevenwicht", uitleg: "Toestand waarin vraag en aanbod precies gelijk zijn." }],
           theorie: "Boven evenwichtsloon: te veel werknemers, te weinig vacatures → werkloosheid. Onder evenwichtsloon: te veel vacatures, te weinig werknemers → krapte. Markt beweegt richting evenwicht.",
           voorbeelden: [{ type: "vereenvoudigd", tekst: "Bij €15/uur willen 1000 werken, willen werkgevers 1000 aannemen → markt klikt op €15." }],
           basiskennis: [{ onderwerp: "Niet hoog/laag/gemiddeld", uitleg: "Evenwicht is wáár beide curves kruisen. Kan elke hoogte zijn afhankelijk van markt." }],
@@ -412,25 +412,25 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegendeel — meer pensioen, minder aanbod.", "Wel verschuiving.", "Vergrijzing is structureel."],
         uitlegPad: {
-          stappen: [{ titel: "Meer pensioen = minder werkers", tekst: "Vergrijzing = meer ouderen, meer mensen met pensioen. Pensioenleeftijd verlaat de werkende bevolking → aanbod van arbeid daalt → aanbodcurve schuift NAAR LINKS." }],
+          stappen: [{ titel: "Meer pensioen = minder werkers", tekst: "Vergrijzing = meer ouderen, meer mensen met pensioen. Wie de pensioenleeftijd bereikt, verlaat de werkende bevolking → aanbod van arbeid daalt → aanbodcurve schuift NAAR LINKS." }],
           woorden: [{ woord: "vergrijzing", uitleg: "Demografische trend: groter aandeel ouderen in samenleving. NL al jaren bezig." }, { woord: "verschuiving aanbodcurve", uitleg: "Hele curve schuift naar links (minder aanbod) of rechts (meer)." }],
-          theorie: "Effect: bij elke loonsniveau zijn er minder werkers beschikbaar. Lonen stijgen, krapte. Combineert met de andere trends: AOW-leeftijd omhoog, vraag naar zorg omhoog (juist door vergrijzing). Stress in arbeidsmarkt.",
-          voorbeelden: [{ type: "NL 2026", tekst: "1 op 4 NL'ers 65+. Pensioneren > nieuwe instromers → krimpende beroepsbevolking → krapte." }],
+          theorie: "Effect: bij elk loonniveau zijn er minder werkers beschikbaar. Lonen stijgen, krapte. Combineert met de andere trends: AOW-leeftijd omhoog, vraag naar zorg omhoog (juist door vergrijzing). Stress in arbeidsmarkt.",
+          voorbeelden: [{ type: "NL 2026", tekst: "Bijna 1 op 5 NL'ers is 65+. Pensioneren > nieuwe instromers → krimpende beroepsbevolking → krapte." }],
           basiskennis: [{ onderwerp: "Niet 'meer'", uitleg: "Vergrijzing betekent MINDER aanbod, niet meer. Tegendeel van immigratie-effect." }],
           niveaus: { basis: "Naar links.", simpeler: "Meer mensen met pensioen → minder werkers beschikbaar → aanbodcurve naar links.", nogSimpeler: "Minder werkers" },
         },
       },
       {
-        q: "Een **chirurg** verdient veel meer dan een **kassiere** vooral door:",
+        q: "Een **chirurg** verdient veel meer dan een **caissière** vooral door:",
         options: ["Schaarste — weinig mensen kunnen het", "Toeval", "Geluk", "Het ziekenhuis bepaalt willekeurig"],
         answer: 0,
         wrongHints: [null, "Geen toeval — markt-mechanisme.", "Idem.", "Volgt vraag/aanbod-logica."],
         uitlegPad: {
-          stappen: [{ titel: "Schaarste van vaardigheden", tekst: "Chirurg = 12+ jaar opleiding, weinig mensen kunnen het. Beperkt AANBOD + hoge VRAAG → hoog loon. Kassiere = veel mensen kunnen het → ruim aanbod → lager loon." }],
+          stappen: [{ titel: "Schaarste van vaardigheden", tekst: "Chirurg = 12+ jaar opleiding, weinig mensen kunnen het. Beperkt AANBOD + hoge VRAAG → hoog loon. Caissière = veel mensen kunnen het → ruim aanbod → lager loon." }],
           woorden: [{ woord: "schaarste van vaardigheden", uitleg: "Specialistische skill die slechts weinigen hebben. Markt-mechanisme drijft loon op." }, { woord: "opleidingsinvestering", uitleg: "Lange + dure studie compenseert later via hoger loon." }],
           theorie: "Loonverschillen worden bepaald door 4 factoren: schaarste, opleiding, verantwoordelijkheid, sector. Niet toeval. Markten bepalen via vraag-en-aanbod-mechanisme.",
-          voorbeelden: [{ type: "chirurg", tekst: "Hartchirurg verdient €200k+. Reden: 12 jr opleiding + zware verantwoordelijkheid + schaars (1.000+ in NL totaal)." }, { type: "kassiere", tekst: "Kassiere verdient minimumloon. Reden: korte training + miljoenen kunnen het + grote groep werknemers." }],
-          basiskennis: [{ onderwerp: "Geen waarde-oordeel", uitleg: "Hoog loon ≠ 'belangrijker werk'. Kassieres zijn onmisbaar maar markt biedt minder doordat aanbod groter is." }],
+          voorbeelden: [{ type: "chirurg", tekst: "Hartchirurg verdient €200k+. Reden: 12 jr opleiding + zware verantwoordelijkheid + schaars (enkele honderden in NL)." }, { type: "caissière", tekst: "Caissière verdient rond het minimumloon. Reden: korte training + miljoenen kunnen het + grote groep werknemers." }],
+          basiskennis: [{ onderwerp: "Geen waarde-oordeel", uitleg: "Hoog loon ≠ 'belangrijker werk'. Caissières zijn onmisbaar maar markt biedt minder doordat aanbod groter is." }],
           niveaus: { basis: "Schaarste.", simpeler: "Weinig mensen kunnen chirurg zijn (lange opleiding) = werkgever moet veel betalen.", nogSimpeler: "Schaars = duur" },
         },
       },
@@ -453,7 +453,7 @@ const steps = [
   // ─── Stap 5: Werkloosheid ─────────────────────────────
   {
     title: "Werkloosheid — soorten en oorzaken",
-    explanation: "**Werkloos** = je hebt geen werk maar zou WEL willen werken én bent BESCHIKBAAR.\n\n**Werkloosheidspercentage** = (werklozen / beroepsbevolking) × 100%\n\n**Beroepsbevolking** = mensen 15-75 jaar die kunnen + willen werken (werkenden + werkloos zoekenden).\n\nNL: ~3-4% werkloosheid in 2024 (laag).\n\n**Soorten werkloosheid**:\n\n**1. Frictiewerkloosheid**\n• Tussen twee banen\n• Kort, normaal in gezonde economie\n• Bv. baan opzeggen, 2 maanden zoeken voor nieuwe\n\n**2. Conjuncturele werkloosheid**\n• Door slechte economie (recessie)\n• Bedrijven verkopen minder → ontslaan personeel\n• Bv. corona-tijd: horeca, evenementenbranche\n\n**3. Structurele werkloosheid**\n• Vaardigheden passen niet meer\n• Bv. typist in een digitaal kantoor; mijnwerker zonder mijnen\n• Oplossing: omscholing\n\n**4. Seizoenswerkloosheid**\n• Hangt af van het jaargetijde\n• Bv. ijscoman in de winter, skileraar in de zomer, festival-personeel buiten zomer\n\n**5. Verborgen werkloosheid**\n• Mensen die WEL willen werken maar niet zoeken (geen vertrouwen meer)\n• Tellen niet officieel als werkloos\n• Onderschatting van werkelijk probleem\n\n**Gevolgen werkloosheid**:\n• Inkomensverlies → koopkracht daalt\n• Spannen op uitkeringen (overheid betaalt meer WW + bijstand)\n• Sociaal isolement, mentale klachten\n• Vaardigheden 'roesten'\n\n**Oplossingen overheid**:\n• **Stimulering economie** (lagere belasting, investering)\n• **Scholing en omscholing**\n• **UWV**: helpt zoeken, biedt cursussen\n• **Aanvullende inkomenssteun** (WW, bijstand)\n\n**Belangrijk om te weten**:\n• 'Werkloosheid' is iets anders dan 'niet werken' — een huisvrouw is geen werkloze, een student ook niet (geen actief zoekend op arbeidsmarkt).\n• 'Niet beschikbaar' = niet werkloos (bv. iemand die ziek is, met pensioen).",
+    explanation: "**Werkloos** = je hebt geen werk maar zou WEL willen werken én bent BESCHIKBAAR.\n\n**Werkloosheidspercentage** = (werklozen / beroepsbevolking) × 100%\n\n**Beroepsbevolking** = mensen 15-75 jaar die kunnen + willen werken (werkenden + werkloos zoekenden).\n\nNL: ~3-4% werkloosheid in 2024 (laag).\n\n**Soorten werkloosheid**:\n\n**1. Frictiewerkloosheid**\n• Tussen twee banen\n• Kort, normaal in gezonde economie\n• Bv. baan opzeggen, 2 maanden zoeken voor nieuwe\n\n**2. Conjuncturele werkloosheid**\n• Door slechte economie (recessie)\n• Bedrijven verkopen minder → ontslaan personeel\n• Bv. corona-tijd: horeca, evenementenbranche\n\n**3. Structurele werkloosheid**\n• Vaardigheden passen niet meer\n• Bv. typist in een digitaal kantoor; mijnwerker zonder mijnen\n• Oplossing: omscholing\n\n**4. Seizoenswerkloosheid**\n• Hangt af van het jaargetijde\n• Bv. ijscoman in de winter, skileraar in de zomer, festival-personeel buiten zomer\n\n**5. Verborgen werkloosheid**\n• Mensen die WEL willen werken maar niet zoeken (geen vertrouwen meer)\n• Tellen niet officieel als werkloos\n• Onderschatting van werkelijk probleem\n\n**Gevolgen werkloosheid**:\n• Inkomensverlies → koopkracht daalt\n• Druk op uitkeringen (overheid betaalt meer WW + bijstand)\n• Sociaal isolement, mentale klachten\n• Vaardigheden 'roesten'\n\n**Oplossingen overheid**:\n• **Stimulering economie** (lagere belasting, investering)\n• **Scholing en omscholing**\n• **UWV**: helpt zoeken, biedt cursussen\n• **Aanvullende inkomenssteun** (WW, bijstand)\n\n**Belangrijk om te weten**:\n• 'Werkloosheid' is iets anders dan 'niet werken' — een huisvrouw is geen werkloze, een student ook niet (geen actief zoekend op arbeidsmarkt).\n• 'Niet beschikbaar' = niet werkloos (bv. iemand die ziek is, met pensioen).",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">SOORTEN WERKLOOSHEID</text>
 <rect x="20" y="40" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
@@ -476,10 +476,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Frictie is kort tussen banen.", "Conjunctureel is door slechte economie.", "Seizoens hangt af van jaargetijde."],
         uitlegPad: {
-          stappen: [{ titel: "Vaardigheden niet meer gewild", tekst: "Spraakherkenning vervangt typists structureel — beroep verdwijnt. Mismatch tussen wat typist kan en wat werkgevers vragen = STRUCTURELE werkloosheid." }],
+          stappen: [{ titel: "Vaardigheden niet meer gewild", tekst: "Spraakherkenning vervangt typisten structureel — beroep verdwijnt. Mismatch tussen wat typist kan en wat werkgevers vragen = STRUCTURELE werkloosheid." }],
           woorden: [{ woord: "structurele werkloosheid", uitleg: "Werkloosheid door BLIJVENDE veranderingen: technologie, off-shoring, andere skills vereist." }, { woord: "omscholing", uitleg: "Bijscholen naar ander beroep — oplossing voor structurele werkloosheid." }],
-          theorie: "Vier soorten: frictie (kort), conjunctureel (recessie), structureel (mismatch), seizoens (jaargetijde). Structureel = lastigste, vereist heromscholing.",
-          voorbeelden: [{ type: "klassiek", tekst: "Mijnwerkers Limburg na sluiting mijnen 1965-1975: structureel werkloos. Decennia om om te scholen." }, { type: "AI", tekst: "Tekstschrijvers + grafici: deels vervangen door ChatGPT/Midjourney. Structurele dreiging." }],
+          theorie: "Vier soorten: frictie (kort), conjunctureel (recessie), structureel (mismatch), seizoens (jaargetijde). Structureel = lastigste, vereist omscholing.",
+          voorbeelden: [{ type: "klassiek", tekst: "Mijnwerkers Limburg na sluiting mijnen 1965-1975: structureel werkloos. Decennia om om te scholen." }, { type: "AI", tekst: "Tekstschrijvers + grafici: deels vervangen door AI-tools. Structurele dreiging." }],
           basiskennis: [{ onderwerp: "Niet frictie/conjunctureel", uitleg: "Frictie = tijdelijk tussen banen. Conjunctureel = door slechte economie. Hier: technologie maakt beroep overbodig." }],
           niveaus: { basis: "Structureel.", simpeler: "Beroep verdwijnt door technologie → structurele werkloosheid. Niet tijdelijk.", nogSimpeler: "Beroep weg" },
         },
@@ -506,22 +506,22 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Formule toepassen", tekst: "Werkloosheidspercentage = werklozen / beroepsbevolking × 100%. 100.000 / 5.000.000 = 0,02 = 2%." }],
           woorden: [{ woord: "werkloosheidspercentage", uitleg: "Werklozen als % van beroepsbevolking. CBS-cijfer." }],
-          theorie: "Vuistregels NL: < 3% = krapte. 3-5% = gezond. 5-8% = moeilijk. >8% = crisis. 2024 ~3-4% = krappe markt.",
+          theorie: "Grove indicatie: rond 3-4% (zoals in 2024) = krappe markt. Ruim boven 8% = crisis.",
           voorbeelden: [{ type: "berekening", tekst: "100k / 5mln = 100/5000 = 2/100 = 2%. Schaalbaar via miljoenen." }],
           basiskennis: [{ onderwerp: "Niet 20% of 0,2%", uitleg: "100/5000 = 0,02 = 2%, niet 0,2% (te klein) of 20% (te groot)." }],
           niveaus: { basis: "100k/5mln = 2%.", simpeler: "100.000 / 5.000.000 = 0,02 = 2% werkloosheid.", nogSimpeler: "2%" },
         },
       },
       {
-        q: "Door **recessie** verlies veel mensen hun baan. Welk type werkloosheid?",
+        q: "Door **recessie** verliezen veel mensen hun baan. Welk type werkloosheid?",
         options: ["Conjuncturele werkloosheid", "Frictie", "Structureel", "Seizoens"],
         answer: 0,
         wrongHints: [null, "Frictie ontstaat niet door recessie.", "Structureel is mismatch.", "Seizoens is jaargetijde."],
         uitlegPad: {
           stappen: [{ titel: "Recessie = conjunctureel", tekst: "Recessie = slechte economische cyclus. Bedrijven verkopen minder → ontslaan personeel om kosten te besparen. Dit type werkloosheid heet CONJUNCTUREEL — door economische op-en-neer." }],
           woorden: [{ woord: "conjuncturele werkloosheid", uitleg: "Werkloosheid door tijdelijke economische dip. Verdwijnt als economie aantrekt." }, { woord: "recessie", uitleg: "Twee kwartalen op rij krimp van BBP." }],
-          theorie: "Conjunctureel werkloosheid is TIJDELIJK — bij herstel van economie nemen bedrijven weer aan. Tegenovergesteld van structureel (blijvend). Bij corona 2020: veel horeca/evenementen-personeel tijdelijk werkloos.",
-          voorbeelden: [{ type: "corona", tekst: "Maart 2020: lockdown → horeca dicht → 10.000 horecawerkers werkloos. Na heropening: meeste teruggenomen." }],
+          theorie: "Conjuncturele werkloosheid is TIJDELIJK — bij herstel van economie nemen bedrijven weer aan. Tegenovergesteld van structureel (blijvend). Bij corona 2020: veel horeca/evenementen-personeel tijdelijk werkloos.",
+          voorbeelden: [{ type: "corona", tekst: "Maart 2020: lockdown → horeca dicht → veel flexwerkers in de horeca zonder werk. Na heropening: meeste weer aan de slag." }],
           basiskennis: [{ onderwerp: "Verschil structureel", uitleg: "Recessie = tijdelijk (conjunctureel). Beroep weg door technologie = blijvend (structureel)." }],
           niveaus: { basis: "Conjunctureel.", simpeler: "Recessie = slechte tijd → ontslagen tijdelijk → conjuncturele werkloosheid.", nogSimpeler: "Recessie = conj" },
         },
@@ -534,7 +534,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Per seizoen", tekst: "Skileraar werkt in winter, geen vraag in zomer. Komt jaarlijks terug = SEIZOENSwerkloosheid. Voorspelbaar patroon door jaargetijde." }],
           woorden: [{ woord: "seizoenswerkloosheid", uitleg: "Werkloosheid die terugkomt in bepaalde periode van het jaar." }],
-          theorie: "Andere seizoenswerken: ijscoman (winter), festival-personeel (buiten zomer), bouwvakker (vorst-winter), strandtent (winter). Vaak combineren met ander seizoenswerk: ski-instructeur wordt surf-instructeur in zomer.",
+          theorie: "Ander seizoenswerk: ijscoman (winter), festival-personeel (buiten zomer), bouwvakker (vorst-winter), strandtent (winter). Vaak combineren met ander seizoenswerk: ski-instructeur wordt surf-instructeur in zomer.",
           voorbeelden: [{ type: "ski", tekst: "Skileraar december-april in Alpen → mei-november werkloos OF surfleraar." }, { type: "festival", tekst: "Geluidstechnicus festival-seizoen mei-september → november-april werkloos." }],
           basiskennis: [{ onderwerp: "Niet conjunctureel", uitleg: "Conjunctureel = door slechte economie. Seizoens = door tijd van jaar." }],
           niveaus: { basis: "Seizoens.", simpeler: "Per seizoen werken (winter ski-leraar) = elk jaar 6 mnd werkloos = seizoenswerkloosheid.", nogSimpeler: "Per seizoen" },
@@ -544,14 +544,14 @@ const steps = [
         q: "Wat is **verborgen werkloosheid**?",
         options: ["Mensen die wel willen werken maar geen vertrouwen meer hebben en niet zoeken", "Mensen met een tweede baan", "Buitenlanders zonder verblijfsstatus", "Pensioenbeleid"],
         answer: 0,
-        wrongHints: [null, "Tweede baan = wel werken.", "Vergaande politieke vraag, niet definitie.", "Pensioenbeleid is ander onderwerp."],
+        wrongHints: [null, "Tweede baan = wel werken.", "Dat gaat over verblijfsrecht, niet over deze definitie.", "Pensioenbeleid is ander onderwerp."],
         uitlegPad: {
           stappen: [{ titel: "Niet meer zoekend", tekst: "Verborgen werklozen = mensen die ZOUDEN willen werken maar opgegeven hebben en niet meer zoeken. Tellen niet officieel als werkloos (te weinig actief). Onderschatting werkelijk probleem." }],
           woorden: [{ woord: "verborgen werkloosheid", uitleg: "Mensen zonder werk die wel zouden werken maar gestopt met zoeken — niet in officiële cijfers." }, { woord: "ontmoediging-effect", uitleg: "Na lange werkloosheid stoppen mensen met solliciteren — vertrouwen weg." }],
-          theorie: "Echte werkloosheid is hoger dan CBS-cijfer suggereert. Bij CBS-meting moet je ACTIEF zoeken — anders niet meegerekend. Sommige cijfers (U-6 in VS) tellen ontmoedigden wél mee. NL is conservatiever.",
+          theorie: "Echte werkloosheid is hoger dan CBS-cijfer suggereert. Bij CBS-meting moet je ACTIEF zoeken — anders niet meegerekend. Sommige cijfers (U-6 in VS) tellen ontmoedigden wél mee. Het CBS telt ze apart (onbenut arbeidspotentieel).",
           voorbeelden: [{ type: "praktijk", tekst: "Vrouw 55, 200 sollicitaties zonder uitnodiging → opgegeven → blijft thuis. Officieel niet werkloos, in werkelijkheid wel." }],
           basiskennis: [{ onderwerp: "Niet tweede baan", uitleg: "Tweede baan = WEL werken. Verborgen = HELEMAAL niet werken én niet zoeken." }],
-          niveaus: { basis: "Wil wel, zoekt niet meer.", simpeler: "Verborgen werkloos = mensen die geen baan hebben maar opgegeven hebben te zoeken. Tellen niet in officiele cijfers.", nogSimpeler: "Opgegeven" },
+          niveaus: { basis: "Wil wel, zoekt niet meer.", simpeler: "Verborgen werkloos = mensen die geen baan hebben maar opgegeven hebben te zoeken. Tellen niet in officiële cijfers.", nogSimpeler: "Opgegeven" },
         },
       },
     ],
@@ -559,7 +559,7 @@ const steps = [
   // ─── Stap 6: Productiviteit ─────────────────────────────
   {
     title: "Productiviteit — beter werken, niet langer",
-    explanation: "**Productiviteit** = hoeveel produceert één werknemer per uur (of per dag)?\n\nMeting: **output / input**\n• Een bakker maakt 100 broden in 8 uur → productiviteit = 12,5 broden/uur\n• Met betere oven: 200 broden in 8 uur → productiviteit = 25 broden/uur\n\n**Hoe stijgt productiviteit?**\n• **Betere machines/automatisering** (industriële robot, AI)\n• **Betere opleiding** van werknemers\n• **Betere organisatie** (slimmere processen, minder verspilling)\n• **Specialisatie** (1 ding heel goed kunnen)\n• **Beter materiaal** (sneller te verwerken)\n\n**Effecten van hogere productiviteit**:\n• Bedrijf kan **goedkoper** produceren of **hogere lonen** betalen\n• Producten worden **goedkoper** voor consumenten\n• Werknemers met hoge productiviteit verdienen meer\n• Op landniveau: **economische groei**\n\n**Productiviteit per land** (BBP per gewerkt uur):\n• NL: ~€60/uur (een van de hoogste ter wereld)\n• Duitsland: ~€55/uur\n• VS: ~€65/uur\n• Mexico: ~€20/uur\n\n**Werkweek + productiviteit**:\n• NL werkt gemiddeld weinig uur (~30/week, deels door deeltijd)\n• MAAR: hoge productiviteit per uur\n• Effect: vergelijkbare welvaart als landen met meer uren\n\n**Maar pas op**: productiviteit ≠ hard werken. Je kunt 12 uur per dag rommelen of 6 uur slim werken.\n\n**'Productiviteitsparadox'**:\n• Sinds digitalisering en computers stijgt productiviteit langzamer dan verwacht\n• Mensen worden afgeleid (e-mail, vergaderingen, social media)\n• Veel kantoorwerk levert moeilijk meetbare output op\n\n**Verband loon + productiviteit**:\n• Op lange termijn: lonen stijgen ongeveer mee met productiviteit\n• Anders verliezen werkgevers concurrentievermogen\n\n**Robotisering en AI** zijn nieuwste productiviteits-boosters — maar zorgen ook voor **structurele werkloosheid** in beroepen die geautomatiseerd worden (kassiere → zelfscan).",
+    explanation: "**Productiviteit** = hoeveel produceert één werknemer per uur (of per dag)?\n\nMeting: **output / input**\n• Een bakker maakt 100 broden in 8 uur → productiviteit = 12,5 broden/uur\n• Met betere oven: 200 broden in 8 uur → productiviteit = 25 broden/uur\n\n**Hoe stijgt productiviteit?**\n• **Betere machines/automatisering** (robots, AI)\n• **Betere opleiding** van werknemers\n• **Betere organisatie** (slimmere processen, minder verspilling)\n• **Specialisatie** (1 ding heel goed kunnen)\n• **Beter materiaal** (sneller te verwerken)\n\n**Effecten van hogere productiviteit**:\n• Bedrijf kan **goedkoper** produceren of **hogere lonen** betalen\n• Producten worden **goedkoper** voor consumenten\n• Werknemers met hoge productiviteit verdienen meer\n• Op landniveau: **economische groei**\n\n**Productiviteit per land** (BBP per gewerkt uur):\n• NL: ~€60/uur (een van de hoogste ter wereld)\n• Duitsland: ~€55/uur\n• VS: ~€65/uur\n• Mexico: ~€20/uur\n\n**Werkweek + productiviteit**:\n• NL werkt gemiddeld weinig uur (~30/week, deels door deeltijd)\n• MAAR: hoge productiviteit per uur\n• Effect: vergelijkbare welvaart als landen met meer uren\n\n**Maar pas op**: productiviteit ≠ hard werken. Je kunt 12 uur per dag rommelen of 6 uur slim werken.\n\n**'Productiviteitsparadox'**:\n• Sinds digitalisering en computers stijgt productiviteit langzamer dan verwacht\n• Mensen worden afgeleid (e-mail, vergaderingen, social media)\n• Veel kantoorwerk levert moeilijk meetbare output op\n\n**Verband loon + productiviteit**:\n• Op lange termijn: lonen stijgen ongeveer mee met productiviteit\n• Anders verliezen werkgevers concurrentievermogen\n\n**Robotisering en AI** zijn nieuwste productiviteits-boosters — maar zorgen ook voor **structurele werkloosheid** in beroepen die geautomatiseerd worden (caissière → zelfscan).",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PRODUCTIVITEIT</text>
 <text x="160" y="40" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">output ÷ input (per uur)</text>
@@ -585,7 +585,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Output ÷ input", tekst: "Productiviteit = hoeveel produceer je per UUR (of per werknemer). Bakker met 100 broden in 8u = 12,5 brood/uur. Niet hoeveel UREN je werkt — wat je in die uren maakt." }],
           woorden: [{ woord: "productiviteit", uitleg: "Output per ingezette eenheid arbeid (uur of werknemer)." }, { woord: "arbeidsproductiviteit", uitleg: "Specifiek: output per gewerkt uur." }],
-          theorie: "Hoog uitvoer in weinig tijd = productief. 8 uur Netflix kijken op kantoor = lage productiviteit. 4 uur efficiënt werken kan meer opleveren dan 8 uur traag werken.",
+          theorie: "Hoge output in weinig tijd = productief. 8 uur Netflix kijken op kantoor = lage productiviteit. 4 uur efficiënt werken kan meer opleveren dan 8 uur traag werken.",
           voorbeelden: [{ type: "stijging", tekst: "Bakker krijgt nieuwe oven: 100 → 200 broden in 8u. Productiviteit van 12,5 → 25 brood/uur, factor 2." }],
           basiskennis: [{ onderwerp: "Niet 'hard werken'", uitleg: "Productiviteit = output per uur, niet hoeveel uren je maakt." }],
           niveaus: { basis: "Output / input.", simpeler: "Productiviteit = hoeveel je per uur produceert. Niet hoeveel uren je maakt.", nogSimpeler: "Per uur" },
@@ -614,7 +614,7 @@ const steps = [
           stappen: [{ titel: "Kostendaling = keuze", tekst: "Hogere productiviteit = lagere productiekosten per eenheid. Bedrijf kan kiezen: (1) prijs verlagen (goedkoper voor consument), (2) hogere lonen betalen (werknemer profiteert), (3) winstmarge vergroten." }],
           woorden: [{ woord: "productiviteits-dividend", uitleg: "Voordeel van hogere productiviteit. Kan verdeeld worden tussen consumenten, werknemers, eigenaars." }],
           theorie: "Wie krijgt het voordeel? Hangt af van marktdynamiek. Veel concurrentie → prijs daalt (consument wint). Krappe arbeidsmarkt → loon stijgt (werknemer wint). Geen druk → winst stijgt (eigenaar wint).",
-          voorbeelden: [{ type: "tech", tekst: "Smartphone productie: hogere productiviteit + concurrentie → prijs gedaald van €1k naar €500 voor zelfde rekenkracht." }, { type: "tech-jobs", tekst: "Tech-bedrijven: hogere productiviteit → hogere lonen ($200k+ voor engineers)." }],
+          voorbeelden: [{ type: "tech", tekst: "Smartphone-productie: hogere productiviteit + concurrentie → dezelfde rekenkracht is nu veel goedkoper dan vroeger." }, { type: "tech-jobs", tekst: "Tech-bedrijven: hogere productiviteit → hogere lonen ($200k+ voor engineers)." }],
           basiskennis: [{ onderwerp: "Niet altijd werkloosheid", uitleg: "Automatisering kan banen kosten, maar hogere productiviteit op zich maakt geld vrij voor andere zaken." }],
           niveaus: { basis: "Goedkoper of hogere lonen.", simpeler: "Hogere productiviteit → lagere kosten → kan naar consument (prijs ↓) of werknemer (loon ↑).", nogSimpeler: "Verdeling" },
         },
@@ -628,7 +628,7 @@ const steps = [
           stappen: [{ titel: "BBP per uur", tekst: "Productiviteit per land = BBP / totaal gewerkte uren. NL: ~€1000mrd BBP / ~17mrd uren = ~€60 per uur. Wereldwijde top (samen met Noorwegen, Zwitserland)." }],
           woorden: [{ woord: "productiviteit per land", uitleg: "BBP gedeeld door totaal gewerkte uren. Maatstaf voor economische efficiëntie." }],
           theorie: "Vergelijking 2024: NL ~€60/uur, Duitsland ~€55, VS ~€65, Mexico ~€20, India ~€8. NL werkt weinig uren maar zeer productief — vergelijkbare welvaart met meer-werkende landen.",
-          voorbeelden: [{ type: "vergelijking", tekst: "NL gemiddeld 30 uur/week, VS 38 uur/week. Beide ~€60-65/uur. Totale BBP per persoon vergelijkbaar." }],
+          voorbeelden: [{ type: "vergelijking", tekst: "NL gemiddeld 30 uur/week, VS 38 uur/week. Per uur ongeveer even productief; de VS haalt meer BBP per persoon door meer uren." }],
           basiskennis: [{ onderwerp: "Niet €10/€500", uitleg: "€10 zou ontwikkelingsland zijn. €500 onmogelijk hoog (alleen specifieke industrieën)." }],
           niveaus: { basis: "~€60/uur.", simpeler: "Nederland: ongeveer €60 BBP per gewerkt uur. Wereldwijd hoog.", nogSimpeler: "€60" },
         },
@@ -639,10 +639,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet altijd hoog.", "Onzin-antwoord.", "Computers wel beter, maar niet zoveel als gehoopt."],
         uitlegPad: {
-          stappen: [{ titel: "Verwacht versus werkelijk", tekst: "Sinds 1990s: computers, internet, smartphones. Verwacht: enorme productiviteitsstijging. Werkelijk: slechts ~1-2% per jaar — minder dan voorgaande decennia. PARADOX." }],
+          stappen: [{ titel: "Verwacht versus werkelijk", tekst: "Sinds de jaren 90: computers, internet, smartphones. Verwacht: enorme productiviteitsstijging. Werkelijk: slechts ~1-2% per jaar — minder dan voorgaande decennia. PARADOX." }],
           woorden: [{ woord: "productiviteitsparadox", uitleg: "Discrepantie tussen verwachte (door technologie) en werkelijke productiviteitsstijging." }, { woord: "Solow-paradox", uitleg: "Robert Solow 1987: 'Je ziet computers overal, behalve in productiviteitscijfers'." }],
           theorie: "Mogelijke verklaringen: (1) afleiding door e-mail/social media, (2) administratieve overhead, (3) productiviteit moeilijk meetbaar in dienstensector, (4) gewenning aan tools duurt jaren. Sinds AI hoop op nieuwe stijging.",
-          voorbeelden: [{ type: "praktijk", tekst: "Kantoorwerker uit 1990 (typmachine) → 2024 (computer/internet) → MEER tools, maar gemeten productiviteit nauwelijks meer dan 30 jaar geleden." }],
+          voorbeelden: [{ type: "praktijk", tekst: "Kantoorwerker uit 1990 (typmachine) → 2024 (computer/internet) → MEER tools, maar gemeten productiviteit steeg minder dan verwacht." }],
           basiskennis: [{ onderwerp: "Niet 'altijd hoog'", uitleg: "Tegendeel: productiviteit groeit MINDER dan verwacht ondanks technologie." }],
           niveaus: { basis: "Trage groei ondanks tech.", simpeler: "Verwacht: computers maken alles veel productiever. Realiteit: minder dan gedacht.", nogSimpeler: "Paradox" },
         },
@@ -655,9 +655,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Productiviteit financiert loonstijging", tekst: "Werkgever kan blijvend hogere lonen alleen betalen als werknemer meer per uur produceert. Op LANGE termijn dus: productiviteitsgroei → loongroei. Anders concurrentievermogen kwijt." }],
           woorden: [{ woord: "reële loongroei", uitleg: "Loonstijging boven inflatie. Volgt productiviteitsgroei op lange termijn." }],
-          theorie: "20e eeuw: productiviteit verdrievoudigd → reëel loon ook verdrievoudigd. Recente decennia: productiviteit groeit trager → loonstijging ook trager. Sommige landen (VS): productiviteit groeit harder dan lonen → eigenaars profiteren meer.",
-          voorbeelden: [{ type: "ASML", tekst: "ASML productiviteit per medewerker hoog (chip-machines €200mln) → kan lonen €100k+ betalen." }, { type: "supermarkt", tekst: "AH-kassiere: lage productiviteit per uur → minimumloon." }],
-          basiskennis: [{ onderwerp: "Niet alleen stakingen", uitleg: "Stakingen kunnen wel kortdurig loonsverhoging afdwingen, maar lange termijn = productiviteit." }],
+          theorie: "20e eeuw: productiviteit en reëel loon stegen allebei sterk. Recente decennia: productiviteit groeit trager → loonstijging ook trager. Sommige landen (VS): productiviteit groeit harder dan lonen → eigenaars profiteren meer.",
+          voorbeelden: [{ type: "ASML", tekst: "ASML productiviteit per medewerker hoog (chipmachines van honderden miljoenen) → kan hoge lonen betalen." }, { type: "supermarkt", tekst: "Caissière: lage productiviteit per uur → rond minimumloon." }],
+          basiskennis: [{ onderwerp: "Niet alleen stakingen", uitleg: "Stakingen kunnen wel kortdurend loonsverhoging afdwingen, maar lange termijn = productiviteit." }],
           niveaus: { basis: "Loon volgt productiviteit.", simpeler: "Op lange termijn stijgen lonen mee met hoe productief werknemers worden.", nogSimpeler: "Mee" },
         },
       },
@@ -666,7 +666,7 @@ const steps = [
   // ─── Stap 7: Sociale zekerheid ───────────────────────
   {
     title: "Sociale zekerheid — vangnet als het misgaat",
-    explanation: "**Sociale zekerheid** = financieel vangnet voor wie (tijdelijk) niet kan werken. Geregeld door overheid + werkgevers via premies.\n\n**Twee hoofdtypen**:\n\n**1. Werknemersverzekeringen** (alleen voor werknemers, betaald via premies van werkgevers):\n• **WW** (Werkloosheidswet) — bij ontslag\n• **WIA / WGA** (Wet Werk en Inkomen naar Arbeidsvermogen) — bij arbeidsongeschiktheid\n• **ZW** (Ziektewet) — bij ziekte zonder dienstverband (bv. uitzendkrachten)\n\n**2. Volksverzekeringen** (voor IEDEREEN in NL, betaald via belastingen):\n• **AOW** (Algemene Ouderdomswet) — basis-pensioen\n• **AKW** (Algemene Kinderbijslagwet) — kinderbijslag\n• **WLZ** (Wet Langdurige Zorg) — verpleeghuiszorg, etc.\n• **ANW** (Algemene Nabestaandenwet) — bij overlijden partner\n\n**3. Sociale voorzieningen** (vangnet als andere regelingen niet werken):\n• **Bijstand (Participatiewet)** — als je geen ander inkomen hebt, gemeente betaalt\n\n**WW in detail**:\n• Voorwaarde: gewerkt minstens 26 weken in afgelopen 36\n• Hoogte: ~75% van laatste loon eerste 2 maanden, daarna 70%\n• Duur: minimaal 3 maanden, maximaal 24 maanden (afhankelijk van werkverleden)\n• Plicht: actief solliciteren (UWV controleert)\n\n**Bijstand**:\n• Last resort als andere regelingen niet werken\n• Meestal lager dan WW\n• Kostendelersnorm: minder als je samen woont\n• Plicht: tegenprestatie + actief zoeken\n\n**Wie financiert?**\n• **Premies** worden ingehouden op je loon (~25-30% van bruto)\n• **Belastingen** financieren volksverzekeringen\n• Werkgever draagt OOK premies af\n\n**Spanning sociale zekerheid**:\n• Vergrijzing → meer mensen AOW + zorg\n• Minder werkenden om premies te betalen\n• Overheid moet of premies verhogen of uitkeringen verlagen\n\n**Verschil verzekering vs voorziening**:\n• **Verzekering**: je hebt premie betaald → recht op uitkering\n• **Voorziening (bijstand)**: vangnet zonder eigen bijdrage, maar voorwaarden",
+    explanation: "**Sociale zekerheid** = financieel vangnet voor wie (tijdelijk) niet kan werken. Geregeld door overheid + werkgevers via premies.\n\n**Twee hoofdtypen**:\n\n**1. Werknemersverzekeringen** (alleen voor werknemers, betaald via premies van werkgevers):\n• **WW** (Werkloosheidswet) — bij ontslag\n• **WIA / WGA** (Wet Werk en Inkomen naar Arbeidsvermogen) — bij arbeidsongeschiktheid\n• **ZW** (Ziektewet) — bij ziekte zonder dienstverband (bv. uitzendkrachten)\n\n**2. Volksverzekeringen** (voor IEDEREEN in NL, betaald via premies + belasting):\n• **AOW** (Algemene Ouderdomswet) — basis-pensioen\n• **AKW** (Algemene Kinderbijslagwet) — kinderbijslag\n• **WLZ** (Wet Langdurige Zorg) — verpleeghuiszorg, etc.\n• **ANW** (Algemene Nabestaandenwet) — bij overlijden partner\n\n**3. Sociale voorzieningen** (vangnet als andere regelingen niet werken):\n• **Bijstand (Participatiewet)** — als je geen ander inkomen hebt, gemeente betaalt\n\n**WW in detail**:\n• Voorwaarde: gewerkt minstens 26 weken in afgelopen 36\n• Hoogte: ~75% van laatste loon eerste 2 maanden, daarna 70%\n• Duur: minimaal 3 maanden, maximaal 24 maanden (afhankelijk van werkverleden)\n• Plicht: actief solliciteren (UWV controleert)\n\n**Bijstand**:\n• Laatste vangnet\n• Meestal lager dan WW\n• Kostendelersnorm: minder als je samen woont\n• Plicht: tegenprestatie + actief zoeken\n\n**Wie financiert?**\n• **Premies** worden ingehouden op je loon (samen met loonbelasting)\n• **Premies + belasting** financieren volksverzekeringen\n• Werkgever draagt OOK premies af\n\n**Spanning sociale zekerheid**:\n• Vergrijzing → meer mensen AOW + zorg\n• Minder werkenden om premies te betalen\n• Overheid moet of premies verhogen of uitkeringen verlagen\n\n**Verschil verzekering vs voorziening**:\n• **Verzekering**: je hebt premie betaald → recht op uitkering\n• **Voorziening (bijstand)**: vangnet zonder eigen bijdrage, maar voorwaarden",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">SOCIALE ZEKERHEID</text>
 <rect x="20" y="40" width="280" height="50" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
@@ -676,7 +676,7 @@ const steps = [
 <rect x="20" y="100" width="280" height="50" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
 <text x="160" y="118" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">VOLKSVERZEKERINGEN</text>
 <text x="160" y="133" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">AOW · kinderbijslag · WLZ</text>
-<text x="160" y="145" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">voor iedereen, uit belasting</text>
+<text x="160" y="145" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">voor iedereen, premie + belasting</text>
 <rect x="20" y="160" width="280" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
 <text x="160" y="178" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">SOCIALE VOORZIENINGEN</text>
 <text x="160" y="193" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">bijstand (gemeente, vangnet)</text>
@@ -688,10 +688,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "AOW = volksverzekering.", "Bijstand = vangnet, geen verzekering.", "Kinderbijslag = volksverzekering."],
         uitlegPad: {
-          stappen: [{ titel: "Werknemersverzekering", tekst: "WW = werknemersverzekering. Werkgever + werknemer betalen premie tijdens dienstverband. Bij ontslag: recht op uitkering uit dat premiefonds." }],
-          woorden: [{ woord: "werknemersverzekering", uitleg: "Verzekering voor werknemers — premie via loon, uitkering bij ontslag/ziekte/arbeidsongeschiktheid." }, { woord: "volksverzekering", uitleg: "Voor iedereen in NL — gefinancierd uit belasting, niet premie." }],
+          stappen: [{ titel: "Werknemersverzekering", tekst: "WW = werknemersverzekering. Werkgever betaalt premie tijdens dienstverband. Bij ontslag: recht op uitkering uit dat premiefonds." }],
+          woorden: [{ woord: "werknemersverzekering", uitleg: "Verzekering voor werknemers — premie via loon, uitkering bij ontslag/ziekte/arbeidsongeschiktheid." }, { woord: "volksverzekering", uitleg: "Voor iedereen in NL — gefinancierd via premies volksverzekeringen + belasting." }],
           theorie: "Verschil belangrijk: WW + WIA + Ziektewet = werknemers. AOW + kinderbijslag + WLZ = iedereen. Zzp'ers vallen tussen wal en schip — geen WW, moeten zelf verzekeren (AOV).",
-          voorbeelden: [{ type: "WW", tekst: "Werknemer ontslagen → meld bij UWV → WW-uitkering binnen weken. Want premie betaald." }, { type: "AOW", tekst: "Iedereen 67+ krijgt AOW, ongeacht of ooit gewerkt. Volksverzekering uit belasting." }],
+          voorbeelden: [{ type: "WW", tekst: "Werknemer ontslagen → meld bij UWV → WW-uitkering binnen weken. Want premie betaald." }, { type: "AOW", tekst: "Iedereen 67+ krijgt AOW, ongeacht of ooit gewerkt. Volksverzekering." }],
           basiskennis: [{ onderwerp: "Niet AOW", uitleg: "AOW is volksverzekering, geen werknemersverzekering. Iedereen krijgt het op pensioenleeftijd." }],
           niveaus: { basis: "WW.", simpeler: "WW = alleen voor werknemers, uit hun premies betaald.", nogSimpeler: "WW" },
         },
@@ -704,7 +704,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Iedereen 67+", tekst: "AOW (Algemene Ouderdomswet) = basis-pensioen voor IEDEREEN vanaf pensioenleeftijd (~67). Geen onderscheid werknemer/zzp/huisvrouw. Voorwaarde: in NL gewoond hebben (per gewoond jaar 2% opbouw)." }],
           woorden: [{ woord: "AOW", uitleg: "Algemene Ouderdomswet. Volksverzekering. Basis-pensioen voor iedereen op pensioenleeftijd." }, { woord: "pensioenleeftijd", uitleg: "Leeftijd waarop AOW ingaat. Stijgt mee met levensverwachting — ~67 in 2024." }],
-          theorie: "Hoogte: ~€1.300/mnd alleenstaande, ~€870/persoon stel (2024). Wordt jaarlijks aangepast. Aanvullend pensioen (van werkgever) komt erbij. Volledige AOW = 50 jaar in NL gewoond tussen 15 en 67.",
+          theorie: "Hoogte: alleenstaanden krijgen meer per persoon dan stellen. Bedragen worden elk half jaar aangepast. Aanvullend pensioen (van werkgever) komt erbij. Volledige AOW = in NL gewoond in alle 50 jaar vóór je AOW-leeftijd.",
           voorbeelden: [{ type: "iedereen", tekst: "Huisvrouw die nooit werkte krijgt AOW. Net als CEO. Net als zzp'er. Iedereen die in NL woonde." }],
           basiskennis: [{ onderwerp: "Niet inkomensafhankelijk", uitleg: "AOW = volksverzekering, ongeacht inkomen of werkstatus. Universeel." }],
           niveaus: { basis: "Iedereen vanaf 67.", simpeler: "AOW krijg je gewoon omdat je in NL gewoond hebt en 67 wordt.", nogSimpeler: "Iedereen" },
@@ -719,7 +719,7 @@ const steps = [
           stappen: [{ titel: "Laatste vangnet", tekst: "Bijstand (Participatiewet) = vangnet via gemeente voor wie GEEN ander inkomen heeft + geen recht op WW/WIA. Sociaal minimum, lager dan WW. Plicht: solliciteren + tegenprestatie." }],
           woorden: [{ woord: "bijstand", uitleg: "Sociale voorziening via gemeente. Sociaal minimum bij geen ander inkomen." }, { woord: "Participatiewet", uitleg: "Wet die bijstand regelt sinds 2015. Inclusief plicht tot tegenprestatie." }],
           theorie: "Bedragen (2024): alleenstaande ~€1.300/mnd, stel ~€1.800/mnd. Vermogensgrens (~€7.500 alleenstaande) — boven die grens eerst eigen geld op. Strenge regels + sancties bij niet-meewerken.",
-          voorbeelden: [{ type: "student zonder werk", tekst: "Student verliest bijbaan + geen WW-recht → bijstand via gemeente. Vangnet tot ander werk gevonden." }],
+          voorbeelden: [{ type: "geen WW-recht", tekst: "Volwassene verliest kort tijdelijk werk + geen WW-recht → bijstand via gemeente. Vangnet tot ander werk gevonden." }],
           basiskennis: [{ onderwerp: "Niet loon/toeslag/verzekering", uitleg: "Bijstand = aparte categorie. Niet loon (geen werk), niet toeslag (uitkering), niet verzekering (geen premie betaald)." }],
           niveaus: { basis: "Vangnet gemeente.", simpeler: "Bijstand = uitkering van gemeente als je geen inkomen + geen WW hebt. Laatste vangnet.", nogSimpeler: "Vangnet" },
         },
@@ -730,7 +730,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet 100%.", "Te laag — 75%.", "Geen vast bedrag."],
         uitlegPad: {
-          stappen: [{ titel: "75% eerste 2 maanden", tekst: "WW eerste 2 maanden: 75% van laatste loon. Daarna 70% tot einde uitkering. Boven max (~€5.700 brutoloon/mnd) wordt afgekapt." }],
+          stappen: [{ titel: "75% eerste 2 maanden", tekst: "WW eerste 2 maanden: 75% van laatste loon. Daarna 70% tot einde uitkering. Boven een maximumloon wordt afgekapt." }],
           woorden: [{ woord: "WW-uitkering", uitleg: "Tijdelijke uitkering bij ontslag, gebaseerd op laatste loon." }, { woord: "dagloon", uitleg: "Maatstaf voor WW-hoogte. Gebaseerd op gemiddeld loon laatste jaar." }],
           theorie: "Duur: minimaal 3 mnd (bij kort werkverleden), maximaal 24 mnd (lange historie). 1 maand WW per gewerkt jaar tot 10 jaar, dan 0,5 maand per gewerkt jaar tot max 24.",
           voorbeelden: [{ type: "berekening", tekst: "Laatste loon €3.000 → WW maand 1-2: €2.250 (75%). Maand 3+: €2.100 (70%). Tot je nieuwe baan vindt of max-duur bereikt." }],
@@ -747,7 +747,7 @@ const steps = [
           stappen: [{ titel: "Premie vs vangnet", tekst: "VERZEKERING: jij betaalde premie → recht op uitkering. VOORZIENING: vangnet vanuit gemeenschap voor wie het écht nodig heeft, zonder eigen bijdrage maar mét voorwaarden (zoeken, geen vermogen)." }],
           woorden: [{ woord: "verzekering", uitleg: "Uitkering op basis van betaalde premie. WW, WIA." }, { woord: "voorziening", uitleg: "Vangnet zonder eigen premie. Bijstand. Voorwaarden + lager bedrag." }],
           theorie: "Verzekering = 'verdiend recht'. Voorziening = 'solidair vangnet'. Praktisch: WW heeft minder voorwaarden + hoger bedrag dan bijstand. Vandaar verschillende politieke discussies.",
-          voorbeelden: [{ type: "verzekering", tekst: "10 jr werknemer → ontslagen → WW vrijwel automatisch toegekend." }, { type: "voorziening", tekst: "Student zonder werkhistorie → bijstand met strenge voorwaarden + sollicitatieplicht." }],
+          voorbeelden: [{ type: "verzekering", tekst: "10 jr werknemer → ontslagen → WW vrijwel automatisch toegekend." }, { type: "voorziening", tekst: "Volwassene zonder werkverleden → bijstand met strenge voorwaarden + sollicitatieplicht." }],
           basiskennis: [{ onderwerp: "Niet rijken/65+", uitleg: "Beide categorieën zijn beschikbaar voor iedereen die voldoet aan voorwaarden — geen inkomens- of leeftijdsdiscriminatie." }],
           niveaus: { basis: "Verzekering = premie betaald.", simpeler: "Verzekering: jij betaalde mee → uitkering. Voorziening: vangnet voor wie niets heeft.", nogSimpeler: "Premie vs vangnet" },
         },
@@ -758,9 +758,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegendeel.", "Tegendeel.", "Vergrijzing is wel echt."],
         uitlegPad: {
-          stappen: [{ titel: "Demografisch onbalans", tekst: "Vergrijzing = meer ouderen, minder jongeren. Meer mensen krijgen AOW + zorg, minder mensen betalen premies. Sociale zekerheid raakt onder druk: ofwel premies omhoog, ofwel uitkeringen omlaag, ofwel pensioenleeftijd omhoog." }],
+          stappen: [{ titel: "Demografische onbalans", tekst: "Vergrijzing = meer ouderen, minder jongeren. Meer mensen krijgen AOW + zorg, minder mensen betalen premies. Sociale zekerheid raakt onder druk: ofwel premies omhoog, ofwel uitkeringen omlaag, ofwel pensioenleeftijd omhoog." }],
           woorden: [{ woord: "vergrijzing", uitleg: "Demografische trend: groter % ouderen. NL is sinds jaren bezig." }, { woord: "i/a-ratio", uitleg: "Inactieven (gepensioneerden/uitkeringsontvangers) / actieven (werkenden). Hoog = druk op systeem." }],
-          theorie: "Maatregelen: AOW-leeftijd verhoogd (was 65, nu 67+, gaat naar 68). Pensioenstelsel hervormd. Discussie: nivellering vs eigen verantwoordelijkheid. Geen makkelijke oplossing.",
+          theorie: "Maatregelen: AOW-leeftijd verhoogd (was 65, nu 67+, stijgt mee met de levensverwachting). Pensioenstelsel hervormd. Discussie: nivellering vs eigen verantwoordelijkheid. Geen makkelijke oplossing.",
           voorbeelden: [{ type: "1965", tekst: "5 werkenden per gepensioneerde. Sociaal systeem ruim financierbaar." }, { type: "2050", tekst: "Verwacht 2 werkenden per gepensioneerde. Krappere financiering — vandaar hervormingen." }],
           basiskennis: [{ onderwerp: "Niet 'te veel jongeren'", uitleg: "Tegendeel: te WEINIG jongeren. Vergrijzing wel echt structureel probleem." }],
           niveaus: { basis: "Vergrijzing.", simpeler: "Meer ouderen + minder jongeren → minder premies + meer uitkeringen → druk op systeem.", nogSimpeler: "Vergrijzing" },

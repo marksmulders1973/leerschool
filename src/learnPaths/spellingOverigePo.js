@@ -23,13 +23,13 @@ const chapters = [
 const steps = [
   {
     title: "Spelling van -isch en -lijk",
-    explanation: "Twee woord-eindes die vaak fout gaan: **-isch** en **-lijk**.\n\n**Regel -isch**:\nAls een woord eindigt op een **'ies'-klank** *(zoals in 'tropisch')* schrijf je **-isch** (met -ch).\n• tropisch (niet 'tropies')\n• logisch\n• elektrisch\n• fantastisch\n• komisch\n\n**Truc**: zet er '-e' achter. Hoor je 'iese'? Dan -isch.\n• tropisch → tropische ✓\n• logisch → logische ✓\n\n**Uitzondering**: na een **f, t, p, ch, k, s** krijgt het soms 'ies'-spelling, bijv. 'fris', 'kennis'. Maar dat zijn meestal **andere** woorden, geen -isch-woorden.\n\n**Regel -lijk**:\nWoorden die eindigen op een **'-uk'-klank** schrijf je met **-lijk**.\n• vrolijk\n• mogelijk\n• waarschijnlijk\n• gemakkelijk\n• gevaarlijk\n\n**Truc**: zet er '-e' achter. Hoor je '-luk-e'? Dan -lijk.\n• vrolijk → vrolijke ✓\n\n**Toets-tip**:\n• Hoor je 'iese' op het eind → schrijf -isch.\n• Hoor je '-uk' op het eind → schrijf -lijk.",
+    explanation: "Twee woord-eindes die vaak fout gaan: **-isch** en **-lijk**.\n\n**Regel -isch**:\nAls een woord eindigt op een **'ies'-klank** *(zoals in 'tropisch')* schrijf je **-isch** (met -ch).\n• tropisch (niet 'tropies')\n• logisch\n• elektrisch\n• fantastisch\n• komisch\n\n**Truc**: zet er '-e' achter. Hoor je 'iese'? Dan -isch.\n• tropisch → tropische ✓\n• logisch → logische ✓\n\n**Let op**: woorden als 'fris' en 'kennis' zijn géén -isch-woorden.\n\n**Regel -lijk**:\nWoorden die eindigen op een **'-uk'-klank** schrijf je met **-lijk**.\n• vrolijk\n• mogelijk\n• waarschijnlijk\n• gemakkelijk\n• gevaarlijk\n\n**Truc**: zet er '-e' achter. Hoor je '-luk-e'? Dan -lijk.\n• vrolijk → vrolijke ✓\n\n**Toets-tip**:\n• Hoor je 'iese' op het eind → schrijf -isch.\n• Hoor je '-uk' op het eind → schrijf -lijk.",
     checks: [
       {
         q: "**'tropisch'** of **'tropies'**?",
         options: ["tropisch","tropies","tropich","tropiesch"],
         answer: 0,
-        wrongHints: [null,"Truc: hoor je 'iese' achter het woord? Dan eindigt het op -isch.","-ch komt achter -s, niet voor.","Eén 'sch' achterin is genoeg — niet twee."],
+        wrongHints: [null,"Truc: hoor je 'iese' achter het woord? Dan eindigt het op -isch.","Je mist de s: het is -isch.","Geen 'ie' — het is -isch."],
         uitlegPad: {
           stappen: [
             { titel: "-isch herkennen", tekst: "'Iese'-klank op het eind = -isch (sch)." },
@@ -50,13 +50,13 @@ const steps = [
         q: "**'mogelijk'** of **'mogelik'**?",
         options: ["mogelijk","mogelik","mogeluk","mogelijck"],
         answer: 0,
-        wrongHints: [null,"-lijk wordt geschreven met -lijk, niet -lik.","Niet 'uk' geschreven als 'uk'.","Geen -ck."],
+        wrongHints: [null,"-lijk wordt geschreven met -lijk, niet -lik.","Je hoort 'uk', maar je schrijft -lijk.","Geen -ck."],
         uitlegPad: {
           stappen: [
             { titel: "-lijk herkennen", tekst: "'Uk'-klank op het eind = altijd -lijk geschreven (met ij)." },
             { titel: "Test", tekst: "Mogelijk + e = mogelijke ✓. Niet -lik (te kort), niet -luk (geen ij)." },
           ],
-          woorden: [{ woord: "-lijk", uitleg: "Veelvoorkomend NL achtervoegsel met onuitgesproken ij." }],
+          woorden: [{ woord: "-lijk", uitleg: "Veelvoorkomend NL achtervoegsel met zwak uitgesproken ij." }],
           theorie: "Hoor je 'uk' op het eind? Schrijf altijd -lijk (vaste spelling). Vrolijk, mogelijk, gevaarlijk.",
           voorbeelden: [{ type: "lijk", tekst: "vrolijk, mogelijk, gevaarlijk, gemakkelijk, waarschijnlijk." }],
           basiskennis: [{ onderwerp: "Stille ij", uitleg: "De ij in -lijk wordt zwak uitgesproken (bijna 'uk' klank), maar wel ij geschreven." }],
@@ -112,7 +112,7 @@ const steps = [
 
   {
     title: "Leestekens — punt, komma, vraagteken",
-    explanation: "**Leestekens** maken een tekst leesbaar.\n\n**Punt . **\n• **Einde van een zin** die een gewone **mededeling** is.\n• 'De zon schijnt vandaag.'\n• Na een afkorting: 'mevr.', 'bv.', 'a.u.b.'\n\n**Komma , **\n• **Pauze in een zin** of bij **opsomming**.\n• 'Ik kocht appels, peren en bananen.' *(de laatste vóór 'en' is optioneel)*.\n• Na 'maar', 'omdat' soms wel/niet — luister naar de pauze.\n• Tussen twee hoofdzinnen verbonden met 'en'/'of'/'maar' kan komma.\n\n**Vraagteken ?**\n• **Einde van een vraag**.\n• 'Wat is jouw naam?'\n\n**Uitroepteken !**\n• **Sterk gevoel** of **bevel**.\n• 'Wauw, geweldig!' / 'Stop!' / 'Pas op!'\n\n**Toets-fouten**:\n• Vergeten van punt aan eind = fout.\n• ? aan einde van een mededeling = fout.\n• Komma's missen in opsomming = fout.\n\n**Voorbeeld**:\n*'Wat een mooie dag'* — mist een **!** of **.**\n*'Ben jij ziek'* — mist een **?**\n\n**Toets-tip**:\nLees de zin hardop in je hoofd. Hoor je de stem **omhoog gaan** aan eind → vraagteken. Hoor je **uitroep** → uitroepteken. Anders: **punt**.",
+    explanation: "**Leestekens** maken een tekst leesbaar.\n\n**Punt . **\n• **Einde van een zin** die een gewone **mededeling** is.\n• 'De zon schijnt vandaag.'\n• Na een afkorting: 'mevr.', 'bv.', 'a.u.b.'\n\n**Komma , **\n• **Pauze in een zin** of bij **opsomming**.\n• 'Ik kocht appels, peren en bananen.' *(de laatste vóór 'en' is optioneel)*.\n• Vóór 'maar' en 'omdat' staat vaak een komma.\n• Tussen twee hoofdzinnen verbonden met 'en'/'of'/'maar' kan komma.\n\n**Vraagteken ?**\n• **Einde van een vraag**.\n• 'Wat is jouw naam?'\n\n**Uitroepteken !**\n• **Sterk gevoel** of **bevel**.\n• 'Wauw, geweldig!' / 'Stop!' / 'Pas op!'\n\n**Toets-fouten**:\n• Vergeten van punt aan eind = fout.\n• ? aan einde van een mededeling = fout.\n• Komma's missen in opsomming = fout.\n\n**Voorbeeld**:\n*'Wat een mooie dag'* — mist een **!** of **.**\n*'Ben jij ziek'* — mist een **?**\n\n**Toets-tip**:\nLees de zin hardop in je hoofd. Hoor je de stem **omhoog gaan** aan eind → vraagteken. Hoor je **uitroep** → uitroepteken. Anders: **punt**.",
     checks: [
       {
         q: "*'Hoe oud ben je___'* — welk leesteken?",
@@ -169,8 +169,8 @@ const steps = [
           basiskennis: [{ onderwerp: "Komma = pauze", uitleg: "Komma = kleine pauze in lezen. Bij opsomming pauzeer je tussen items." }],
           niveaus: {
             basis: "Opsomming zonder komma's = fout.",
-            simpeler: "Lees A hardop: 'Ik kocht appels peren en bananen' — voelt vreemd, geen pauze tussen appels en peren. Komma nodig. = A is fout.",
-            nogSimpeler: "Geen komma's = A fout",
+            simpeler: "Lees A hardop: 'Ik kocht appels peren en bananen' — voelt vreemd, geen pauze tussen appels en peren. Komma nodig. Dus die zin is fout.",
+            nogSimpeler: "Geen komma's = fout",
           },
         },
       },
@@ -179,7 +179,7 @@ const steps = [
 
   {
     title: "Samenstellingen — woorden plakken",
-    explanation: "**Samenstellingen** = twee of meer woorden aan elkaar geplakt tot één woord.\n\n**Voorbeelden**:\n• tand + arts = **tandarts**\n• voetbal + schoen = **voetbalschoen**\n• boek + kast = **boekenkast**\n• zonne + bril = **zonnebril**\n\n**Hoofdregel**: schrijf het samengestelde woord aan elkaar.\n• ✓ tandarts (niet 'tand arts')\n• ✓ voetbalschoen (niet 'voetbal schoen')\n\n**Tussenletter -en-**:\nSoms zit er een '-en-' tussen.\n• boek**en**kast (1 boek of meer? meer)\n• pann**en**koek\n• Regel: de eerste woord-deel kun je je voorstellen in **meervoud** → **-en-** ertussen.\n  - 'boekenkast' = kast voor **boeken** (meervoud).\n  - 'pannenkoek' = koek uit een **pan** — toch -en-, dat is een uitzondering!\n\n**Tussenletter -e-**:\n• zonn**e**bril (de zon — 1 stuk, dus -e-)\n• begrot**e**ningskosten\n• regel: enkelvoud-zelfstandig naamwoord met -e- tussen.\n\n**Toets-fouten**:\n• 'voetbal schoen' (los geschreven) = fout. Aan elkaar.\n• 'pannekoek' = fout sinds 1995. Het is **pannenkoek**.\n• 'boekenwurm' = goed (boekenwurm — een persoon die veel boeken leest).\n\n**Tip**: Twijfel? Probeer het hardop:\n• 'voetbalschoen' = 1 ding (een soort schoen voor voetbal). Aan elkaar.",
+    explanation: "**Samenstellingen** = twee of meer woorden aan elkaar geplakt tot één woord.\n\n**Voorbeelden**:\n• tand + arts = **tandarts**\n• voetbal + schoen = **voetbalschoen**\n• boek + kast = **boekenkast**\n• zon + bril = **zonnebril**\n\n**Hoofdregel**: schrijf het samengestelde woord aan elkaar.\n• ✓ tandarts (niet 'tand arts')\n• ✓ voetbalschoen (niet 'voetbal schoen')\n\n**Tussenletter -en-**:\nSoms zit er een '-en-' tussen.\n• boek**en**kast (1 boek of meer? meer)\n• pann**en**koek\n• Regel: heeft het eerste deel een meervoud op **-en**? Dan **-en-** ertussen.\n  - boek → boeken → boekenkast\n  - pan → pannen → pannenkoek (ook al is het één pan!)\n\n**Tussenletter -e-**:\n• zonn**e**bril (er is maar één zon, dus -e-)\n• rijst**e**brij (rijst heeft geen meervoud)\n\n**Toets-fouten**:\n• 'voetbal schoen' (los geschreven) = fout. Aan elkaar.\n• 'pannekoek' = fout sinds 1995. Het is **pannenkoek**.\n• 'boekenwurm' = goed (boekenwurm — een persoon die veel boeken leest).\n\n**Tip**: Twijfel? Probeer het hardop:\n• 'voetbalschoen' = 1 ding (een soort schoen voor voetbal). Aan elkaar.",
     checks: [
       {
         q: "Welke is **goed** geschreven?",
@@ -232,7 +232,7 @@ const steps = [
           ],
           woorden: [{ woord: "tussen-n", uitleg: "Extra 'en' bij eerste-deel met meervoud op -en." }],
           theorie: "Bij elke samenstelling check: heeft eerste woord meervoud op -en? Ja → tussen-n. Boek → boeken → boekenkast.",
-          voorbeelden: [{ type: "tussen-n", tekst: "boekenkast (boeken), pannenkoek (pannen), kindertekening — wacht, kind heeft meervoud kinderen → kindertekening." }],
+          voorbeelden: [{ type: "tussen-n", tekst: "boekenkast (boeken), pannenkoek (pannen), paddenstoel (padden)." }],
           basiskennis: [{ onderwerp: "Niet altijd", uitleg: "Niet alle samenstellingen krijgen -en-. Alleen als eerste woord meervoud op -en heeft." }],
           niveaus: {
             basis: "Tussen-n want meervoud boeken.",
@@ -251,7 +251,7 @@ const steps = [
             { titel: "Aaneen", tekst: "Zonnebril = 1 woord (samenstelling). Geen spatie, geen streepje." },
           ],
           woorden: [{ woord: "aaneen", tekst: "Samenstellingen schrijf je aaneen.", uitleg: "Samenstellingen schrijf je aaneen." }],
-          theorie: "Zon + bril = zonnebril. Verdubbel n omdat zon korte o heeft (zonn-).",
+          theorie: "Zon + bril = zonnebril. Er komt een -e- tussen (er is maar één zon) en de n verdubbelt omdat zon een korte o heeft.",
           voorbeelden: [{ type: "aaneen", tekst: "zonnebril, schoolboek, fietsenrek." }],
           basiskennis: [{ onderwerp: "Geen 'zonen'", uitleg: "Zonen = meervoud van zoon (kind). Geen relatie met zon." }],
           niveaus: {
@@ -266,7 +266,7 @@ const steps = [
 
   {
     title: "Hoofdletters — wanneer wel?",
-    explanation: "**Hoofdletter (BIG letter)** schrijf je in deze gevallen:\n\n**1. Aan het begin van een zin**.\n• 'Het regent vandaag.'\n• 'Na het ontbijt ging ik naar school.'\n\n**2. Eigennamen** *(namen van mensen, dieren, plaatsen)*:\n• Tom, Lisa, Amsterdam, Jupiter, Nederland\n• Mijn hond Buddy is lief.\n\n**3. Landen, talen, nationaliteiten**:\n• België, Frankrijk, Duitsland\n• Nederlands, Engels, Frans\n• een Nederlander, een Belg\n\n**4. Dagen, maanden NIET (tegenwoordig)**:\n• maandag, dinsdag — **kleine letter**\n• januari, februari — **kleine letter**\n• Uitzondering: aan begin van zin natuurlijk wel.\n\n**5. Feestdagen — meestal kleine letter**:\n• kerst, sinterklaas, pasen — kleine letter (sinds spelling-update)\n• MAAR: namen als 'Kerstmis' soms wel hoofdletter — context-afhankelijk.\n\n**6. Titels van boeken/films — eerste woord**:\n• 'Harry Potter en de Steen der Wijzen' — alleen het eerste woord+eigennamen.\n\n**7. God, namen religies**:\n• God, Allah, Boeddha — hoofdletter.\n• christendom, islam — kleine letter (dat zijn algemene woorden).\n\n**Toets-fouten**:\n• 'maandag' met **M** = fout (tenzij begin van zin).\n• 'amsterdam' zonder hoofdletter = fout.\n• Een naam zonder hoofdletter = fout.\n\n**Voorbeeld-zin**:\n*'Op maandag 5 mei 2026 ging Tom naar Amsterdam.'*\n• 'Op' = begin zin → hoofdletter.\n• 'maandag' = dag → klein.\n• '5 mei' = datum → klein.\n• '2026' = jaar.\n• 'Tom' = naam → hoofdletter.\n• 'Amsterdam' = plaats → hoofdletter.",
+    explanation: "**Hoofdletter (grote letter)** schrijf je in deze gevallen:\n\n**1. Aan het begin van een zin**.\n• 'Het regent vandaag.'\n• 'Na het ontbijt ging ik naar school.'\n\n**2. Eigennamen** *(namen van mensen, dieren, plaatsen)*:\n• Tom, Lisa, Amsterdam, Jupiter, Nederland\n• Mijn hond Buddy is lief.\n\n**3. Landen, talen, nationaliteiten**:\n• België, Frankrijk, Duitsland\n• Nederlands, Engels, Frans\n• een Nederlander, een Belg\n\n**4. Dagen, maanden NIET (tegenwoordig)**:\n• maandag, dinsdag — **kleine letter**\n• januari, februari — **kleine letter**\n• Uitzondering: aan begin van zin natuurlijk wel.\n\n**5. Feestdagen**:\n• Kerstmis, Pasen, Pinksteren — hoofdletter\n• maar: kerst, kerstboom, paasei — kleine letter\n\n**6. Titels van boeken/films — eerste woord**:\n• 'De brief voor de koning' — alleen het eerste woord + eigennamen.\n\n**7. God, namen religies**:\n• God, Allah, Boeddha — hoofdletter.\n• christendom, islam — kleine letter (dat zijn algemene woorden).\n\n**Toets-fouten**:\n• 'maandag' met **M** = fout (tenzij begin van zin).\n• 'amsterdam' zonder hoofdletter = fout.\n• Een naam zonder hoofdletter = fout.\n\n**Voorbeeld-zin**:\n*'Op maandag 5 mei 2026 ging Tom naar Amsterdam.'*\n• 'Op' = begin zin → hoofdletter.\n• 'maandag' = dag → klein.\n• '5 mei' = datum → klein.\n• '2026' = jaar.\n• 'Tom' = naam → hoofdletter.\n• 'Amsterdam' = plaats → hoofdletter.",
     checks: [
       {
         q: "Welke zin is **goed**?",
@@ -283,13 +283,13 @@ const steps = [
           basiskennis: [{ onderwerp: "Niet alles hoofd", uitleg: "Niet ELK woord met hoofdletter zoals in titels — alleen waar regels zeggen." }],
           niveaus: {
             basis: "Tom + Amsterdam hoofd, maandag klein.",
-            simpeler: "Tom (naam = hoofdletter), Amsterdam (plaats = hoofdletter), maandag (dag = klein). A heeft alle 3 goed.",
+            simpeler: "Tom (naam = hoofdletter), Amsterdam (plaats = hoofdletter), maandag (dag = klein). Eén zin heeft alle 3 goed.",
             nogSimpeler: "Naam + plaats hoofd",
           },
         },
       },
       {
-        q: "Welke woord schrijf je met **hoofdletter**?",
+        q: "Welk woord schrijf je met **hoofdletter**?",
         options: ["Nederland","maandag","januari","kerst"],
         answer: 0,
         wrongHints: [null,"Klein (tenzij begin zin).","Klein.","Klein."],
@@ -298,7 +298,7 @@ const steps = [
             { titel: "Welke is eigennaam?", tekst: "Nederland = land = eigennaam = hoofdletter. Maandag/januari/kerst = klein." },
           ],
           woorden: [{ woord: "eigennaam", uitleg: "Specifieke unieke naam — krijgt hoofdletter." }],
-          theorie: "Landen WEL hoofdletter (Nederland, België). Dagen/maanden/feestdagen NIET (anders dan Engels).",
+          theorie: "Landen WEL hoofdletter (Nederland, België). Dagen, maanden en kerst NIET (maar Kerstmis en Pasen wel).",
           voorbeelden: [{ type: "hoofd", tekst: "Nederland, Anna, Amsterdam = hoofd. maandag, mei, kerst = klein." }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "Engels: Monday, December. NL: maandag, december." }],
           niveaus: {
@@ -338,12 +338,12 @@ const steps = [
             { titel: "Welke is FOUT?", tekst: "'mijn naam is sara' mist 2 hoofdletters: Mijn (begin) + Sara (naam). + punt aan einde." },
           ],
           woorden: [{ woord: "begin zin", uitleg: "Eerste woord altijd hoofdletter." }],
-          theorie: "3 fouten in optie A: kleine 'm' begin, kleine 's' naam, geen punt eind. Andere opties hebben alles correct.",
+          theorie: "3 fouten in deze zin: kleine 'm' begin, kleine 's' naam, geen punt eind. Andere opties hebben alles correct.",
           voorbeelden: [{ type: "fout", tekst: "'mijn naam is sara' ✗ → 'Mijn naam is Sara.' ✓" }],
           basiskennis: [{ onderwerp: "Altijd punt aan einde", uitleg: "Mededeling-zin eindigt op punt." }],
           niveaus: {
-            basis: "A heeft 3 fouten (Mijn, Sara, punt).",
-            simpeler: "Loop A langs: 'mijn' (FOUT, begin zin moet hoofdletter), 'sara' (FOUT, eigennaam moet hoofdletter), geen punt aan eind (FOUT). 3 fouten = duidelijk fout.",
+            basis: "Die zin heeft 3 fouten (Mijn, Sara, punt).",
+            simpeler: "Loop die zin langs: 'mijn' (FOUT, begin zin moet hoofdletter), 'sara' (FOUT, eigennaam moet hoofdletter), geen punt aan eind (FOUT). 3 fouten = duidelijk fout.",
             nogSimpeler: "Geen hoofdletters/punt",
           },
         },
@@ -411,12 +411,12 @@ const steps = [
           niveaus: {
             basis: "Spatie in samenstelling = fout.",
             simpeler: "'Voetbal schoen' met spatie = fout. Moet aaneen: voetbalschoen.",
-            nogSimpeler: "Spatie = A fout",
+            nogSimpeler: "Spatie = fout",
           },
         },
       },
       {
-        q: "Welke woord schrijf je met **hoofdletter**?",
+        q: "Welk woord schrijf je met **hoofdletter**?",
         options: ["België","dinsdag","mei","kerst"],
         answer: 0,
         wrongHints: [null,"Klein (tenzij begin zin).","Klein.","Klein."],
@@ -425,7 +425,7 @@ const steps = [
             { titel: "Land = hoofdletter", tekst: "België = land = eigennaam = hoofdletter. Dinsdag/mei/kerst = klein in NL." },
           ],
           woorden: [{ woord: "eigennaam", uitleg: "Specifieke naam — hoofdletter." }],
-          theorie: "Landen WEL hoofdletter. Dagen, maanden, feestdagen NIET (anders dan Engels).",
+          theorie: "Landen WEL hoofdletter. Dagen, maanden en kerst NIET (maar Kerstmis en Pasen wel).",
           voorbeelden: [{ type: "hoofd", tekst: "België, Nederland, Frankrijk = hoofd. dinsdag, mei, kerst = klein." }],
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "In Engels: Tuesday, May. NL: dinsdag, mei." }],
           niveaus: {
@@ -486,7 +486,7 @@ const steps = [
             { titel: "Toets-instinker: spaties", tekst: "Veel mensen schrijven 'fiets pomp' (engels-stijl). FOUT in NL. Andere voorbeelden:\n• ✓ kinderboek (niet 'kinder boek')\n• ✓ schoolplein (niet 'school plein')\n• ✓ wereldoorlog (niet 'wereld oorlog')\n• ✓ tijdsverschil (niet 'tijds verschil')\n\nUitzondering: **streepje** soms bij klinker-conflicten of woorden met merkenamen." },
           ],
           woorden: [{ woord: "samenstelling", uitleg: "2+ woorden gecombineerd tot 1 nieuw woord. Zonder spatie." }],
-          theorie: "Toets-spelfout #1 = spaties in samenstellingen. Engels heeft wel spaties ('book store') maar NL niet ('boekwinkel').",
+          theorie: "Veelgemaakte spelfout = spaties in samenstellingen. Engels heeft wel spaties ('book store') maar NL niet ('boekwinkel').",
           voorbeelden: [{ type: "fout", tekst: "✗ 'pizza koerier' → ✓ 'pizzakoerier'." }],
           basiskennis: [{ onderwerp: "Geen Engels", uitleg: "NL = aan elkaar. Engels = spaties. Verwar niet." }],
           niveaus: { basis: "Aan elkaar.", simpeler: "Samenstelling 'fiets+pomp' = fietspomp, aan elkaar zonder spatie of streepje.", nogSimpeler: "Aan elkaar" },
@@ -499,8 +499,8 @@ const steps = [
         wrongHints: [null, "Niet — landnamen NIET met kleine letter.", "Niet — alleen 1 hoofdletter aan begin.", "Niet — geen streepje midden in landnaam."],
         uitlegPad: {
           stappen: [
-            { titel: "Wanneer hoofdletter?", tekst: "Hoofdletter (kapitaal) gebruik je bij:\n• **Begin zin**: 'De auto rijdt.'\n• **Eigennamen**: persoonsnamen (Tom, Lisa), landen (Nederland), steden (Amsterdam), rivieren (Rijn)\n• **Talen**: Nederlands, Engels, Duits\n• **Volk-namen**: Nederlander, Marokkaan, Spanjaard\n• **Maanden + dagen**: Januari, Maandag... — WACHT, in NL juist NIET (kleine letter)" },
-            { titel: "NL-specifiek: kleine letter", tekst: "**Anders dan Engels**:\n• In Engels: 'I speak English' (taal met hoofdletter)\n• In NL: 'Ik spreek Nederlands' — DAT WEL hoofdletter\n• Maar **maanden + dagen**: 'januari, maandag' — KLEINE letter!\n• **Seizoenen**: 'lente, zomer, herfst, winter' — KLEINE letter\n\nEnglish style: 'Monday in January' = beide hoofdletters. NL: 'maandag in januari' = beide klein." },
+            { titel: "Wanneer hoofdletter?", tekst: "Hoofdletter (kapitaal) gebruik je bij:\n• **Begin zin**: 'De auto rijdt.'\n• **Eigennamen**: persoonsnamen (Tom, Lisa), landen (Nederland), steden (Amsterdam), rivieren (Rijn)\n• **Talen**: Nederlands, Engels, Duits\n• **Volk-namen**: Nederlander, Marokkaan, Spanjaard\n• Maar **maanden + dagen** NIET: januari, maandag (kleine letter)" },
+            { titel: "NL-specifiek: kleine letter", tekst: "**Anders dan Engels**:\n• In Engels: 'I speak English' (taal met hoofdletter)\n• In NL: 'Ik spreek Nederlands' — DAT WEL hoofdletter\n• Maar **maanden + dagen**: 'januari, maandag' — KLEINE letter!\n• **Seizoenen**: 'lente, zomer, herfst, winter' — KLEINE letter\n\nEngels: 'Monday in January' = beide hoofdletters. NL: 'maandag in januari' = beide klein." },
           ],
           woorden: [
             { woord: "eigennaam", uitleg: "Naam van specifieke persoon/plaats/ding. Met hoofdletter." },
@@ -520,13 +520,13 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "'-isch'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-isch'**:\n• fantastisch\n• elektrisch\n• logisch\n• magisch\n• klassiek (verwarrend! Zonder -h: 'klassiek')\n\nDe -h is stil — je hoort 'fantasties' maar SCHRIJFT '-isch'." },
-            { titel: "Toets-truc: hoor vs schrijf", tekst: "**Belangrijk verschil**:\n• HOREN: 'fan-tas-ties'\n• SCHRIJVEN: 'fan-tas-tisch'\n\nDat 'h' op het einde is ALTIJD aanwezig in '-isch'-woorden. Vergelijk Latijnse herkomst: 'fantasticus' (Latijn) → '-isch' (NL).\n\nVeel-gemaakte fouten: 'fantastiesch' (te veel klinkers) of 'logies' (vergeten -h)." },
+            { titel: "Toets-truc: hoor vs schrijf", tekst: "**Belangrijk verschil**:\n• HOREN: 'fan-tas-ties'\n• SCHRIJVEN: 'fan-tas-tisch'\n\nDie 'h' op het einde is ALTIJD aanwezig in '-isch'-woorden. Vergelijk Latijnse herkomst: 'fantasticus' (Latijn) → '-isch' (NL).\n\nVeel-gemaakte fouten: 'fantastiesch' (te veel klinkers) of 'logies' (vergeten -h)." },
           ],
           woorden: [
             { woord: "-isch uitgang", uitleg: "Standaard-NL-uitgang voor veel bijvoeglijke naamwoorden uit Latijn/Grieks." },
             { woord: "stille h", uitleg: "H die wel geschreven wordt maar niet uitgesproken." },
           ],
-          theorie: "Veel '-isch'-woorden zijn van **Latijnse/Griekse oorsprong**:\n• elektrisch (electricus)\n• magisch (magicus)\n• logisch (logicus)\n• fantastisch (fantasticus)\n• automatisch\n\nUitspraak NL: '-isies'. Schrijfwijze: altijd '-isch'.",
+          theorie: "Veel '-isch'-woorden zijn van **Latijnse/Griekse oorsprong**:\n• elektrisch (electricus)\n• magisch (magicus)\n• logisch (logicus)\n• fantastisch (fantasticus)\n• automatisch\n\nUitspraak NL: '-ies'. Schrijfwijze: altijd '-isch'.",
           voorbeelden: [{ type: "fout", tekst: "✗ 'elektries' → ✓ 'elektrisch'. ✗ 'logiesch' → ✓ 'logisch'." }],
           basiskennis: [{ onderwerp: "Niet horen, wel schrijven", uitleg: "Stille h = leerlingen vergeten vaak. Train: '-isch' altijd met h." }],
           niveaus: { basis: "fantastisch.", simpeler: "Woorden eindigend op -isch (zoals fantastisch, elektrisch, logisch) hebben altijd een stille h: -ISCH, geen -ies.", nogSimpeler: "-isch" },
@@ -539,8 +539,8 @@ const steps = [
         wrongHints: [null, "Niet — geen 'k' zonder 'j'.", "Niet — geen 'c'.", "Niet — 'e' tussen 'vriend' + 'lijk' nodig."],
         uitlegPad: {
           stappen: [
-            { titel: "'-lijk'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-lijk'**:\n• vriendelijk\n• gelukkig (uitzondering: -ig ipv -lijk)\n• menselijk\n• kinderlijk\n• plotseling (-ling, niet -lijk)\n\nUitgang -lijk = vaste schrijfwijze, niet '-lik' of '-lijc'." },
-            { titel: "Toets-truc: hoor vs schrijf", tekst: "Je hoort '-lijk' uitspraak: '-lik' (zonder de j-klank). Maar schrijft altijd **-lijk** met j+k.\n\nVeel-gemaakte fout: 'vriendelik' = klinkt OK maar SCHRIJF-fout. Onthoud: bij -lijk altijd j-k samen, in die volgorde." },
+            { titel: "'-lijk'-uitgang", tekst: "Veel NL bijvoeglijke naamwoorden eindigen op **'-lijk'**:\n• vriendelijk\n• menselijk\n• kinderlijk\n• Let op, géén -lijk: gelukkig (-ig), plotseling (-ling)\n\nUitgang -lijk = vaste schrijfwijze, niet '-lik' of '-lijc'." },
+            { titel: "Toets-truc: hoor vs schrijf", tekst: "Je hoort bij '-lijk' meestal '-luk' (zonder ij-klank). Maar schrijft altijd **-lijk** met j+k.\n\nVeel-gemaakte fout: 'vriendelik' = klinkt OK maar SCHRIJF-fout. Onthoud: bij -lijk altijd j-k samen, in die volgorde." },
           ],
           woorden: [
             { woord: "-lijk uitgang", uitleg: "Standaard-NL-uitgang voor veel bijvoeglijke naamwoorden." },
@@ -552,20 +552,20 @@ const steps = [
         },
       },
       { q: "Hoe schrijf je: 'natuurlijk' / 'natuurlik' / 'natuurlic'?", options: ["natuurlijk","natuurlik","natuurlic","naturalijk"], answer: 0, wrongHints: [null, "Niet — j-k blijft.", "Niet — geen c.", "Niet — verkeerd grond-woord."] },
-      { q: "Hoe schrijf je: 'kritisch' / 'kritich' / 'kritiek'?", options: ["kritisch","kritich","kritiec","kritis"], answer: 0, wrongHints: [null, "Niet — h zonder s.", "Niet.", "Niet."] },
+      { q: "Hoe schrijf je: 'kritisch' / 'kritich' / 'kritis'?", options: ["kritisch","kritich","kritiec","kritis"], answer: 0, wrongHints: [null, "Niet — de s ontbreekt.", "Niet.", "Niet."] },
       { q: "Welke is goed: 'voetbalveld' of 'voetbal-veld'?", options: ["voetbalveld","voetbal-veld","voet-bal-veld","voet balveld"], answer: 0, wrongHints: [null, "Geen streepje nodig.", "Niet.", "Niet."] },
-      { q: "Hoofdletter: 'mijn moeder is uit ___.'", options: ["Nederland","nederland","Nederland (?)","NEDERLAND"], answer: 0, wrongHints: [null, "Niet — land krijgt hoofdletter.", "Niet — geen vraag.", "Niet — niet alles hoofdletter."] },
+      { q: "Hoofdletter: 'Mijn moeder komt uit ___.'", options: ["Nederland","nederland","Nederland (?)","NEDERLAND"], answer: 0, wrongHints: [null, "Niet — land krijgt hoofdletter.", "Niet — geen vraag.", "Niet — niet alles hoofdletter."] },
       { q: "Hoofdletter: 'we zien elkaar op ___.'", options: ["maandag","Maandag","MAANDAG","maan dag"], answer: 0, wrongHints: [null, "Niet — dagen in NL klein.", "Niet.", "Niet."] },
       { q: "Welke zin heeft de **juiste hoofdletter** voor namen?", options: ["Mijn vriend Tim komt morgen.","mijn vriend tim komt morgen.","Mijn Vriend Tim komt morgen.","mijn vriend tim Komt morgen."], answer: 0, wrongHints: [null, "Geen hoofdletter aan begin zin.", "Vriend ≠ naam.", "Komt ≠ naam."] },
-      { q: "Welke woord is goed: 'mogelik' / 'mogelijk' / 'moglijk'?", options: ["mogelijk","mogelik","moglijk","mogeleijk"], answer: 0, wrongHints: [null, "Niet — j-k samen.", "Verkeerde klinker.", "Niet."] },
+      { q: "Welk woord is goed: 'mogelik' / 'mogelijk' / 'moglijk'?", options: ["mogelijk","mogelik","moglijk","mogeleijk"], answer: 0, wrongHints: [null, "Niet — j-k samen.", "Verkeerde klinker.", "Niet."] },
       { q: "Welke is goed: 'huisdier' of 'huis dier' of 'huis-dier'?", options: ["huisdier","huis dier","huis-dier","huisdir"], answer: 0, wrongHints: [null, "Niet — uit elkaar.", "Niet — geen streepje.", "Niet."] },
       { q: "**Het meervoud** van 'huis' is?", options: ["huizen","huisen","huises","huis'en"], answer: 0, wrongHints: [null, "Niet — verandering nodig.", "Engels.", "Niet."] },
       { q: "Het meervoud van 'kind' is?", options: ["kinderen","kinden","kindes","kinds"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Engels."] },
       { q: "Het meervoud van 'auto' is?", options: ["auto's","autos","autoes","auto"], answer: 0, wrongHints: [null, "Niet — apostrof nodig.", "Engels.", "Niet — meervoud nodig."] },
-      { q: "Welke trema: 'po___tje' / 'po-etje' / 'poöetje'?", options: ["poëtje","poetje","poötje","po'etje"], answer: 0, wrongHints: [null, "Niet — letters botsen.", "Niet — verkeerde trema.", "Geen apostrof."] },
+      { q: "Wat is het meervoud van 'idee'?", options: ["ideeën","ideeen","idee's","ideën"], answer: 0, wrongHints: [null, "Niet — zonder trema lees je het verkeerd.", "Geen apostrof.", "Je mist een e."] },
       { q: "Welke is goed: 'in tussen' of 'intussen'?", options: ["intussen","in tussen","in-tussen","intussent"], answer: 0, wrongHints: [null, "Niet — geen 2 woorden.", "Geen streepje.", "Niet."] },
       { q: "Welke is goed: 's morgens' of 'smorgens' of 's-morgens'?", options: ["'s morgens","s morgens","smorgens","'smorgens"], answer: 0, wrongHints: [null, "Apostrof mist.", "Aan elkaar fout.", "Spatie ontbreekt."] },
-      { q: "Welke is goed: 'sinterklaas' of 'Sinterklaas'?", options: ["Sinterklaas","sinterklaas","sint-erklaas","Sint Erklaas"], answer: 0, wrongHints: [null, "Niet — naam = hoofdletter.", "Niet — geen streepje.", "Niet."] },
+      { q: "De goedheiligman zelf (de persoon): 'sinterklaas' of 'Sinterklaas'?", options: ["Sinterklaas","sinterklaas","sint-erklaas","Sint Erklaas"], answer: 0, wrongHints: [null, "Niet — de persoon krijgt een hoofdletter (het feest: sinterklaas).", "Niet — geen streepje.", "Niet."] },
     ],
   },
 ];

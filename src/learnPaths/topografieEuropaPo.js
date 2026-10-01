@@ -12,7 +12,7 @@ const chapters = [
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Toets-truc topografie: lijst per windrichting onthouden + geheugentrucs (bv. 'Wie Pa Bedrog Vraagt' voor Wenen-Praag-Boedapest-Vlaanderen). Hoofdsteden vaak in vraag verstopt.",
+  theorie: "Toets-truc topografie: lijst per windrichting onthouden + geheugentrucs (bv. 'WBBB' voor de Donau-hoofdsteden Wenen-Bratislava-Boedapest-Belgrado). Hoofdsteden vaak in vraag verstopt.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -25,7 +25,7 @@ const steps = [
     emoji: "🌍",
     checks: [
       {
-        q: "Welke gebergte vormt de oostelijke grens van Europa (en scheidt Europa van Azië)?",
+        q: "Welk gebergte vormt de oostelijke grens van Europa (en scheidt Europa van Azië)?",
         options: ["Alpen", "Pyreneeën", "Oeral", "Karpaten"],
         answer: 2,
         wrongHints: ["Alpen liggen in midden-Europa (Zwitserland, Oostenrijk, Italië-grens) — niet de grens met Azië.", "Pyreneeën liggen tussen Frankrijk en Spanje — geen Azië-grens.", null, "Karpaten liggen in Roemenië/Polen — binnen Europa, geen continent-grens."],
@@ -33,7 +33,7 @@ const steps = [
         uitlegPad: compact(
           "Oeral = Europa-Azië-grens binnen Rusland. Westelijk = Europa, oostelijk = Azië. Plus Kaspische Zee in zuiden.",
           { basis: "Oeral.", simpeler: "Oeral splitst Europa en Azië in Rusland.", nogSimpeler: "Oeral" },
-          [{ woord: "Oeral", uitleg: "Gebergte in Rusland — symbolische Europa-Azië-grens." }, { woord: "Kaspische Zee", uitleg: "Grote binnenzee tussen Europa, Azië, Iran." }],
+          [{ woord: "Oeral", uitleg: "Gebergte in Rusland — symbolische Europa-Azië-grens." }, { woord: "Kaspische Zee", uitleg: "Grote binnenzee op de grens van Europa en Azië." }],
         ),
       },
       {
@@ -52,10 +52,10 @@ const steps = [
         q: "Welk land ligt deels in Europa én deels in Azië?",
         options: ["Turkije", "Rusland", "Beide A en B", "Frankrijk"],
         answer: 2,
-        wrongHints: ["Turkije ligt voor het grootste deel in Azië, maar Istanbul is deels Europees — dus deel A klopt. Maar er is meer.", "Rusland ligt deels in Europa (westkant tot Oeral) en deels in Azië (oostkant tot Pacific) — dus B klopt ook. Maar...", null, "Frankrijk ligt volledig in Europa (op overzeese gebieden na in Caribisch/Pacific)."],
+        wrongHints: ["Turkije ligt voor het grootste deel in Azië, maar Istanbul is deels Europees — dus deel A klopt. Maar er is meer.", "Rusland ligt deels in Europa (westkant tot Oeral) en deels in Azië (oostkant tot de Grote Oceaan) — dus B klopt ook. Maar...", null, "Frankrijk ligt volledig in Europa (op overzeese gebieden na)."],
         explanation: "**Zowel Rusland als Turkije** liggen op 2 werelddelen. Rusland: Europa (Moskou + Sint-Petersburg) + Azië (Vladivostok + Siberië). Turkije: Europa (Istanbul-Europees deel) + Azië (Ankara + rest).",
         uitlegPad: compact(
-          "2 landen op 2 continenten: Rusland (Europa-Azië via Oeral) + Turkije (Europa-Azië via Bosporus in Istanbul). Egypte ligt op Afrika maar Sinaï-schiereiland telt soms als Azië.",
+          "2 landen op 2 continenten: Rusland (Europa-Azië via Oeral) + Turkije (Europa-Azië via Bosporus in Istanbul). Egypte ligt in Afrika, maar Sinaï-schiereiland telt soms als Azië.",
           { basis: "Beide.", simpeler: "Rusland EN Turkije liggen in 2 werelddelen.", nogSimpeler: "Beide" },
           [{ woord: "Bosporus", uitleg: "Zeestraat door Istanbul — scheidt Europa van Azië." }],
         ),
@@ -64,7 +64,7 @@ const steps = [
   },
   {
     title: "Stap 2 — Hoofdsteden West-Europa",
-    explanation: "**West-Europese hoofdsteden** (handig om naast NL te kennen):\n\n| Land | Hoofdstad |\n|---|---|\n| Nederland 🇳🇱 | **Amsterdam** (regering in Den Haag) |\n| België 🇧🇪 | **Brussel** (ook EU-hoofdstad) |\n| Luxemburg 🇱🇺 | **Luxemburg-Stad** |\n| Duitsland 🇩🇪 | **Berlijn** |\n| Frankrijk 🇫🇷 | **Parijs** |\n| Verenigd Koninkrijk 🇬🇧 | **Londen** |\n| Ierland 🇮🇪 | **Dublin** |\n\n**Bijzonderheden**:\n- **Amsterdam vs Den Haag**: Amsterdam is officieel hoofdstad (Grondwet 1815) — maar regering + parlement zitten in **Den Haag**. Uitzonderlijk.\n- **Brussel**: hoofdstad België + de facto EU-hoofdstad + NAVO. Drietalig (NL/FR/DE).\n- **Berlijn**: hoofdstad Duitsland sinds 1990 (na hereniging). Voor 1990 was Bonn de hoofdstad van West-Duitsland.\n- **Verenigd Koninkrijk** = Engeland + Schotland + Wales + Noord-Ierland. Niet meer EU-lid sinds Brexit.",
+    explanation: "**West-Europese hoofdsteden** (handig om naast NL te kennen):\n\n| Land | Hoofdstad |\n|---|---|\n| Nederland 🇳🇱 | **Amsterdam** (regering in Den Haag) |\n| België 🇧🇪 | **Brussel** (ook EU-hoofdstad) |\n| Luxemburg 🇱🇺 | **Luxemburg-Stad** |\n| Duitsland 🇩🇪 | **Berlijn** |\n| Frankrijk 🇫🇷 | **Parijs** |\n| Verenigd Koninkrijk 🇬🇧 | **Londen** |\n| Ierland 🇮🇪 | **Dublin** |\n\n**Bijzonderheden**:\n- **Amsterdam vs Den Haag**: Amsterdam is officieel hoofdstad (volgens de Grondwet) — maar regering + parlement zitten in **Den Haag**. Bijzonder.\n- **Brussel**: hoofdstad België + de facto EU-hoofdstad + NAVO. Tweetalig (NL/FR).\n- **Berlijn**: hoofdstad Duitsland sinds 1990 (na hereniging). Voor 1990 was Bonn de hoofdstad van West-Duitsland.\n- **Verenigd Koninkrijk** = Engeland + Schotland + Wales + Noord-Ierland. Niet meer EU-lid sinds Brexit.",
     emoji: "🏛️",
     checks: [
       {
@@ -98,7 +98,7 @@ const steps = [
         wrongHints: ["Antwerpen = grote havenstad België (Vlaanderen) — niet hoofdstad.", null, "Gent = mooie stad Vlaanderen — niet hoofdstad.", "Brugge = toeristisch Vlaanderen — niet hoofdstad."],
         explanation: "**Brussel** = hoofdstad België. Bijzonder: ligt in Vlaanderen-gebied (waar NL gesproken wordt) maar zelf hoofdzakelijk Franstalig. Plus: hoofdstad EU (Commissie + Raad) + NAVO.",
         uitlegPad: compact(
-          "Brussel = België-hoofdstad + EU-hoofdstad + NAVO-hoofdstad. Drietalig (NL/FR/DE). NL-grens-buurland.",
+          "Brussel = België-hoofdstad + EU-hoofdstad + NAVO-hoofdstad. Tweetalig (NL/FR). NL-grens-buurland.",
           { basis: "Brussel.", simpeler: "België = Brussel.", nogSimpeler: "Brussel" },
           [{ woord: "Brussel", uitleg: "Hoofdstad België + de facto EU." }],
         ),
@@ -117,7 +117,7 @@ const steps = [
         wrongHints: ["Barcelona = grote stad Catalonië — niet hoofdstad. Wel veel toerisme.", null, "Valencia = grote stad oostkust — niet hoofdstad.", "Sevilla = stad Andalusië (zuiden) — niet hoofdstad."],
         explanation: "**Madrid** = hoofdstad Spanje. Ligt centraal in het land (op een hoogvlakte). Grootste stad van Spanje + financieel centrum.",
         uitlegPad: compact(
-          "Madrid = Spanje-hoofdstad. Centraal gelegen, ~3.3 mln inwoners. Barcelona is wel groter qua toerisme maar geen hoofdstad.",
+          "Madrid = Spanje-hoofdstad. Centraal gelegen, ~3,3 mln inwoners. Barcelona is wel groter qua toerisme maar geen hoofdstad.",
           { basis: "Madrid.", simpeler: "Spanje = Madrid.", nogSimpeler: "Madrid" },
           [{ woord: "Madrid", uitleg: "Hoofdstad Spanje, centraal." }],
         ),
@@ -131,7 +131,7 @@ const steps = [
         uitlegPad: compact(
           "Rome = Italië-hoofdstad. Romeinse Rijk-hoofdstad, sinds 1871 ook Italië-hoofdstad. Bevat Vaticaanstad.",
           { basis: "Rome.", simpeler: "Italië = Rome.", nogSimpeler: "Rome" },
-          [{ woord: "Rome", uitleg: "Hoofdstad Italië, Romeinse erfgoed." }, { woord: "Vaticaanstad", uitleg: "Kleinste land ter wereld, ligt in Rome." }],
+          [{ woord: "Rome", uitleg: "Hoofdstad Italië, Romeins erfgoed." }, { woord: "Vaticaanstad", uitleg: "Kleinste land ter wereld, ligt in Rome." }],
         ),
       },
       {
@@ -139,9 +139,9 @@ const steps = [
         options: ["Sparta", "Athene", "Olympia", "Thessaloniki"],
         answer: 1,
         wrongHints: ["Sparta is een oude stadstaat uit de oudheid — denk aan welke stad nu de rol van hoofdstad vervult.", null, "Olympia is beroemd door de Olympische Spelen in de oudheid, maar is dat ook de bestuurlijke hoofdstad?", "Thessaloniki is de tweede stad van Griekenland — maar welke stad is de eerste én de hoofdstad?"],
-        explanation: "**Athene** = hoofdstad Griekenland. Een van oudste steden ter wereld (3500 jaar). Bekend om de Akropolis + Parthenon — 'wieg van de democratie'.",
+        explanation: "**Athene** = hoofdstad Griekenland. Een van de oudste steden ter wereld (3500 jaar). Bekend om de Akropolis + Parthenon — 'wieg van de democratie'.",
         uitlegPad: compact(
-          "Athene = Griekenland-hoofdstad. Oudste continu bewoonde stad van Europa.",
+          "Athene = Griekenland-hoofdstad. Een van de oudste steden van Europa.",
           { basis: "Athene.", simpeler: "Griekenland = Athene.", nogSimpeler: "Athene" },
           [{ woord: "Athene", uitleg: "Hoofdstad Griekenland, oude democratie." }, { woord: "Akropolis", uitleg: "Heuvel in Athene met Parthenon-tempel." }],
         ),
@@ -150,7 +150,7 @@ const steps = [
   },
   {
     title: "Stap 4 — Hoofdsteden Noord-Europa",
-    explanation: "**Noord-Europese hoofdsteden** (Scandinavië + buren):\n\n| Land | Hoofdstad |\n|---|---|\n| Zweden 🇸🇪 | **Stockholm** |\n| Noorwegen 🇳🇴 | **Oslo** |\n| Finland 🇫🇮 | **Helsinki** |\n| Denemarken 🇩🇰 | **Kopenhagen** |\n| IJsland 🇮🇸 | **Reykjavik** |\n\n**Bijzonderheden**:\n- **Scandinavië** = traditioneel Zweden + Noorwegen + Denemarken. Bredere term: 'Noordse landen' (+ Finland + IJsland).\n- **Noorwegen + IJsland**: GEEN EU-lidstaten (Noorwegen koos in 1972 + 1994 referenda voor NEE). Wel in EER.\n- **Finland** spreekt Fins (geen Germaanse taal — verwant aan Estisch + Hongaars).\n- **Reykjavik** = noordelijkste hoofdstad ter wereld.\n- Klimaat: lang + koud. 's Zomers 'middernachtzon', 's winters 'pooldageraad'.",
+    explanation: "**Noord-Europese hoofdsteden** (Scandinavië + buren):\n\n| Land | Hoofdstad |\n|---|---|\n| Zweden 🇸🇪 | **Stockholm** |\n| Noorwegen 🇳🇴 | **Oslo** |\n| Finland 🇫🇮 | **Helsinki** |\n| Denemarken 🇩🇰 | **Kopenhagen** |\n| IJsland 🇮🇸 | **Reykjavik** |\n\n**Bijzonderheden**:\n- **Scandinavië** = traditioneel Zweden + Noorwegen + Denemarken. Bredere term: 'Noordse landen' (+ Finland + IJsland).\n- **Noorwegen + IJsland**: GEEN EU-lidstaten (Noorwegen koos in 1972 + 1994 referenda voor NEE). Wel in EER.\n- **Finland** spreekt Fins (geen Germaanse taal — verwant aan Estisch + Hongaars).\n- **Reykjavik** = noordelijkste hoofdstad ter wereld.\n- Klimaat: lang + koud. 's Zomers 'middernachtzon', 's winters 'poolnacht'.",
     emoji: "🏛️",
     checks: [
       {
@@ -182,18 +182,18 @@ const steps = [
         options: ["Zweden", "Finland", "Denemarken", "Noorwegen"],
         answer: 3,
         wrongHints: ["Zweden is EU-lid sinds 1995.", "Finland is EU-lid sinds 1995.", "Denemarken is EU-lid sinds 1973.", null],
-        explanation: "**Noorwegen** is GEEN EU-lid. Twee referenda (1972 + 1994) wezen toetreding af — vooral vanwege visserij + olie-belangen. Wel in EER (European Economic Area) → meeste EU-regels gelden.",
+        explanation: "**Noorwegen** is GEEN EU-lid. Twee referenda (1972 + 1994) wezen toetreding af — vooral vanwege visserij + olie-belangen. Wel in EER (Europese Economische Ruimte) → meeste EU-regels gelden.",
         uitlegPad: compact(
-          "Noorwegen + IJsland + Zwitserland = EER maar geen EU-lid. Zweden/Finland/Denemarken zijn wel EU. Denemarken zit ook NIET in eurozone (heeft Deense kroon).",
+          "Noorwegen + IJsland + Liechtenstein = EER maar geen EU-lid. Zweden/Finland/Denemarken zijn wel EU. Denemarken zit ook NIET in eurozone (heeft Deense kroon).",
           { basis: "Noorwegen.", simpeler: "Noorwegen koos 2x tegen EU.", nogSimpeler: "Noorwegen" },
-          [{ woord: "EER", uitleg: "European Economic Area — EU + Noorwegen/IJsland/Liechtenstein." }],
+          [{ woord: "EER", uitleg: "Europese Economische Ruimte — EU + Noorwegen/IJsland/Liechtenstein." }],
         ),
       },
     ],
   },
   {
     title: "Stap 5 — Hoofdsteden Oost-Europa",
-    explanation: "**Oost-Europese hoofdsteden** (voormalige Oostblok-landen + meer):\n\n| Land | Hoofdstad |\n|---|---|\n| Polen 🇵🇱 | **Warschau** |\n| Tsjechië 🇨🇿 | **Praag** |\n| Slowakije 🇸🇰 | **Bratislava** |\n| Hongarije 🇭🇺 | **Boedapest** |\n| Roemenië 🇷🇴 | **Boekarest** |\n| Bulgarije 🇧🇬 | **Sofia** |\n| Oostenrijk 🇦🇹 | **Wenen** |\n| Rusland 🇷🇺 | **Moskou** |\n| Oekraïne 🇺🇦 | **Kiev** (Kyiv) |\n\n**Geheugentruc voor 4 hoofdsteden**:\n- **W**enen (Oostenrijk)\n- **P**raag (Tsjechië)\n- **B**oedapest (Hongarije)\n- **B**ratislava (Slowakije)\n→ 'WPBB' alle 4 aan de **Donau-rivier**.\n\n**Bijzonderheden**:\n- **Tsjechoslowakije** splitste in 1993 vreedzaam in Tsjechië (Praag) + Slowakije (Bratislava). 'Fluwelen scheiding'.\n- **Wenen** = oude Habsburgs-hoofdstad. Niet voor de hand voor 'Oost' maar lag ten tijde van Koude Oorlog dicht bij IJzeren Gordijn.\n- **Kiev/Kyiv**: hoofdstad Oekraïne. Russische schrijving = Kiev, Oekraïense schrijving = Kyiv. Door oorlog vanaf 2022 vaak in nieuws.",
+    explanation: "**Oost-Europese hoofdsteden** (voormalige Oostblok-landen + meer):\n\n| Land | Hoofdstad |\n|---|---|\n| Polen 🇵🇱 | **Warschau** |\n| Tsjechië 🇨🇿 | **Praag** |\n| Slowakije 🇸🇰 | **Bratislava** |\n| Hongarije 🇭🇺 | **Boedapest** |\n| Roemenië 🇷🇴 | **Boekarest** |\n| Bulgarije 🇧🇬 | **Sofia** |\n| Oostenrijk 🇦🇹 | **Wenen** |\n| Rusland 🇷🇺 | **Moskou** |\n| Oekraïne 🇺🇦 | **Kiev** (Kyiv) |\n\n**Geheugentruc voor 4 hoofdsteden**:\n- **W**enen (Oostenrijk)\n- **B**ratislava (Slowakije)\n- **B**oedapest (Hongarije)\n- **B**elgrado (Servië)\n→ 'WBBB' alle 4 aan de **Donau**.\n\n**Bijzonderheden**:\n- **Tsjechoslowakije** splitste in 1993 vreedzaam in Tsjechië (Praag) + Slowakije (Bratislava). 'Fluwelen scheiding'.\n- **Wenen** = oude Habsburgs-hoofdstad. Niet voor de hand voor 'Oost' maar lag ten tijde van Koude Oorlog dicht bij IJzeren Gordijn.\n- **Kiev/Kyiv**: hoofdstad Oekraïne. Russische schrijving = Kiev, Oekraïense schrijving = Kyiv. Door oorlog vanaf 2022 vaak in nieuws.",
     emoji: "🏛️",
     checks: [
       {
@@ -217,7 +217,7 @@ const steps = [
           "Berlijn, Wenen, Boedapest, Sofia",
         ],
         answer: 2,
-        wrongHints: ["Praag ligt aan Moldau (zijrivier), niet Donau. Berlijn aan Spree.", "Praag ligt NIET aan Donau.", null, "Berlijn ligt aan Spree, Sofia niet aan Donau."],
+        wrongHints: ["Praag ligt aan de Moldau (zijrivier van de Elbe), niet Donau. Berlijn aan Spree.", "Praag ligt NIET aan Donau.", null, "Berlijn ligt aan Spree, Sofia niet aan Donau."],
         explanation: "**Donau** stroomt door Wenen (Oostenrijk), Bratislava (Slowakije), Boedapest (Hongarije), Belgrado (Servië). 2e langste rivier Europa (na Wolga).",
         uitlegPad: compact(
           "Donau = 2e langste rivier Europa. Door 10 landen. 4 hoofdsteden eraan: Wenen, Bratislava, Boedapest, Belgrado. (Praag aan Moldau, niet Donau.)",
@@ -230,9 +230,9 @@ const steps = [
         options: ["Moskou", "Minsk", "Kiev", "Sofia"],
         answer: 2,
         wrongHints: [null, null, null, null],
-        explanation: "**Kiev** (Oekraïens: Kyiv) = hoofdstad Oekraïne. Sinds Russische invasie februari 2022 dagelijks in het nieuws.",
+        explanation: "**Kiev** (Oekraïens: Kyiv) = hoofdstad Oekraïne. Sinds de Russische invasie van februari 2022 vaak in het nieuws.",
         uitlegPad: compact(
-          "Kiev/Kyiv = Oekraïne-hoofdstad. Russische spelling 'Kiev', Oekraïense 'Kyiv'. Sinds 2022 in oorlog met Rusland.",
+          "Kiev/Kyiv = Oekraïne-hoofdstad. Russische spelling 'Kiev', Oekraïense 'Kyiv'. In 2022 viel Rusland Oekraïne binnen.",
           { basis: "Kiev.", simpeler: "Oekraïne = Kiev.", nogSimpeler: "Kiev" },
           [{ woord: "Kiev", uitleg: "Hoofdstad Oekraïne." }],
         ),
@@ -251,7 +251,7 @@ const steps = [
         wrongHints: ["Rijn ~1233 km — belangrijke handelsrivier maar niet langst.", "Donau ~2860 km — 2e langste. Maar niet de allerlangste.", null, "Seine ~777 km — klein."],
         explanation: "**Wolga** is langste rivier Europa (~3530 km). Stroomt door Rusland → Kaspische Zee. Donau is 2e (~2860 km).",
         uitlegPad: compact(
-          "Top 3 langste rivieren Europa: 1) Wolga (~3530 km, Rusland), 2) Donau (~2860 km), 3) Oeral.",
+          "Top 3 langste rivieren Europa: 1) Wolga (~3530 km, Rusland), 2) Donau (~2860 km), 3) Oeral (rivier).",
           { basis: "Wolga.", simpeler: "Wolga (Rusland) = langste rivier Europa.", nogSimpeler: "Wolga" },
           [{ woord: "Wolga", uitleg: "Langste Europese rivier, door Rusland, naar Kaspische Zee." }],
         ),

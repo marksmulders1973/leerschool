@@ -28,7 +28,7 @@ const steps = [
   {
     title: "Lineair model — gelijke toename",
     explanation:
-      "**Lineaire groei**: per tijdseenheid stijgt of daalt iets met een **vast bedrag** (absolute toename).\n\n**Formule**: $y = a + b \\cdot x$\n• a = startwaarde (y bij x=0).\n• b = richtingscoëfficiënt (helling) = toename per tijdseenheid.\n• x = tijd of onafhankelijke variabele.\n\n**Voorbeelden**:\n• Spaarrekening met €50 per maand: y = 100 + 50·x (start €100, +€50/maand).\n• Mobiel-abonnement: y = 15 + 0,20·x (vast €15 + €0,20/min belminuut).\n• Boom groeit elk jaar 20 cm: y = 100 + 20·x.\n\n**Herkenning lineair**:\n• Tabel: verschillen tussen opvolgende y-waarden zijn **constant**.\n  - x: 1, 2, 3, 4\n  - y: 5, 8, 11, 14 → verschillen 3, 3, 3 → lineair, b=3.\n• Grafiek: **rechte lijn**.\n• Verbaal: 'per X krijgt erbij/eraf'.\n\n**Berekenen b uit twee punten** (x1, y1) en (x2, y2):\nb = (y2 − y1) / (x2 − x1)\n\n**Voorbeeld**: punten (2, 10) en (5, 22).\nb = (22 − 10) / (5 − 2) = 12/3 = 4.\nDan a: 10 = a + 4·2 → a = 2.\nFormule: y = 2 + 4·x.\n\n**Negatieve helling** (b<0): daling.\n• Bv. auto-waarde verliest €1500/jaar: y = 25000 − 1500·x.\n\n**Lineair ↔ procentueel verwarring**:\n• Lineair = vast bedrag erbij.\n• Procentueel = vast percentage = exponentieel (volgende stap).\n• Bij '5% per jaar erbij' is het **niet** lineair! Zelfs als grafiek voor korte tijd lijkt op rechte lijn.\n\n**Toepassingen**:\n• Salarisstijging vast bedrag per jaar.\n• Verbruik (kWh per maand redelijk constant).\n• Afschrijving lineair vs exponentieel.\n• Toets-context: bevolkingsgrafieken bij stabiele groei.\n\n**Extrapolatie + interpolatie**:\n• **Interpolatie**: waarden BINNEN data-bereik schatten via formule.\n• **Extrapolatie**: waarden BUITEN data-bereik schatten (risicovol — patronen kunnen veranderen).\n• Bij lineair extrapoleren: niet eindeloos doorgaan. Bv: kind groeit lineair tot 18, daarna stopt.\n\n**Verschil-met-richting-coefficient (gemiddelde verandering)**:\nVoor niet-lineaire functies: gem.verandering tussen x=a en x=b = (f(b) − f(a)) / (b − a) = **helling van koorde**.",
+      "**Lineaire groei**: per tijdseenheid stijgt of daalt iets met een **vast bedrag** (absolute toename).\n\n**Formule**: $y = a + b \\cdot x$\n• a = startwaarde (y bij x=0).\n• b = richtingscoëfficiënt (helling) = toename per tijdseenheid.\n• x = tijd of onafhankelijke variabele.\n\n**Voorbeelden**:\n• Spaarrekening met €50 per maand: y = 100 + 50·x (start €100, +€50/maand).\n• Mobiel-abonnement: y = 15 + 0,20·x (vast €15 + €0,20 per belminuut).\n• Boom groeit elk jaar 20 cm: y = 100 + 20·x.\n\n**Herkenning lineair**:\n• Tabel: verschillen tussen opvolgende y-waarden zijn **constant**.\n  - x: 1, 2, 3, 4\n  - y: 5, 8, 11, 14 → verschillen 3, 3, 3 → lineair, b=3.\n• Grafiek: **rechte lijn**.\n• Verbaal: 'per X komt er een vast bedrag bij/af'.\n\n**Berekenen b uit twee punten** (x1, y1) en (x2, y2):\nb = (y2 − y1) / (x2 − x1)\n\n**Voorbeeld**: punten (2, 10) en (5, 22).\nb = (22 − 10) / (5 − 2) = 12/3 = 4.\nDan a: 10 = a + 4·2 → a = 2.\nFormule: y = 2 + 4·x.\n\n**Negatieve helling** (b<0): daling.\n• Bv. auto-waarde verliest €1500/jaar: y = 25000 − 1500·x.\n\n**Lineair ↔ procentueel verwarring**:\n• Lineair = vast bedrag erbij.\n• Procentueel = vast percentage = exponentieel (volgende stap).\n• Bij '5% per jaar erbij' is het **niet** lineair! Zelfs als grafiek voor korte tijd lijkt op rechte lijn.\n\n**Toepassingen**:\n• Salarisstijging vast bedrag per jaar.\n• Verbruik (kWh per maand redelijk constant).\n• Afschrijving lineair vs exponentieel.\n• Toets-context: bevolkingsgrafieken bij stabiele groei.\n\n**Extrapolatie + interpolatie**:\n• **Interpolatie**: waarden BINNEN data-bereik schatten via formule.\n• **Extrapolatie**: waarden BUITEN data-bereik schatten (risicovol — patronen kunnen veranderen).\n• Bij lineair extrapoleren: niet eindeloos doorgaan. Bv: een kind groeit niet eeuwig door.\n\n**Gemiddelde verandering**:\nVoor niet-lineaire functies: gem.verandering tussen x=a en x=b = (f(b) − f(a)) / (b − a) = **helling van koorde**.",
     checks: [
       {
         q: "Bij **lineaire groei** is welke eigenschap constant?",
@@ -36,7 +36,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is exponentieel.", "Niet — een van twee.", "Wel constant."],
         uitlegPad: {
-          stappen: [{ titel: "Vast bedrag erbij", tekst: "**Lineair**: elke stap **zelfde bedrag** erbij (of eraf). Bv +€50/maand spaaren. Procentueel (5%/jaar) is exponentieel, niet lineair." }],
+          stappen: [{ titel: "Vast bedrag erbij", tekst: "**Lineair**: elke stap **zelfde bedrag** erbij (of eraf). Bv +€50/maand sparen. Procentueel (5%/jaar) is exponentieel, niet lineair." }],
           theorie: "Toets-favoriet om te onderscheiden: 'is dit lineair of exponentieel?' → kijk naar verschillen vs procenten in tabel.",
           niveaus: { basis: "Absolute toename.", simpeler: "Lineair = vast bedrag erbij", nogSimpeler: "Vast" },
         },
@@ -82,9 +82,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — juist eenvoudig.", "Niet relevant.", "Niet — wordt gebruikt."],
         uitlegPad: {
-          stappen: [{ titel: "Extrapolatie-risico", tekst: "Lineair past kort meetbaar bereik vaak goed, maar **extrapolatie** buiten dat bereik = risicovol omdat patroon kan kantelen (capaciteit, saturatie, technologische verandering). Bevolking ooit lineair gegroeid maar nu stagnatie." }],
+          stappen: [{ titel: "Extrapolatie-risico", tekst: "Lineair past kort meetbaar bereik vaak goed, maar **extrapolatie** buiten dat bereik = risicovol omdat patroon kan kantelen (capaciteit, saturatie, technologische verandering). Bevolkingsgroei kan bijvoorbeeld afvlakken." }],
           theorie: "Klassieker: Malthusiaans lineair voedsel + exp.bevolking → catastrofe. In praktijk bleek voedselgroei ook exp. door techniek.",
-          niveaus: { basis: "Patroon verandert.", simpeler: "Extrapolatie risico", nogSimpeler: "A." },
+          niveaus: { basis: "Patroon verandert.", simpeler: "Extrapolatie risico", nogSimpeler: "Patroon kan veranderen" },
         },
       },
     ],
@@ -94,7 +94,7 @@ const steps = [
   {
     title: "Exponentieel model — gelijke factor",
     explanation:
-      "**Exponentiële groei**: per tijdseenheid wordt iets met een **vast percentage** of **vaste factor** vermenigvuldigd (relatieve toename).\n\n**Formule**: $y = a \\cdot b^x$\n• a = startwaarde (y bij x=0).\n• b = **groeifactor** per tijdseenheid.\n• x = tijd.\n\n**Groeifactor b berekenen** uit groei-percentage p%:\n• Groei: b = 1 + p/100.\n• Afname: b = 1 − p/100.\n\n**Voorbeelden**:\n• Spaargeld 3% rente per jaar: y = 1000 · 1,03^x.\n• Bevolking groeit 1,5%/jaar: P = P₀ · 1,015^x.\n• Auto verliest 20% per jaar: y = 25000 · 0,80^x.\n• Bacterie verdubbelt per uur: y = 1 · 2^x.\n• Radio-actief verval, halveringstijd 5 jaar: y = a · 0,5^(t/5).\n\n**Herkenning exponentieel**:\n• Tabel: **quotiënten** tussen opvolgende y-waarden zijn constant.\n  - x: 1, 2, 3, 4\n  - y: 6, 12, 24, 48 → quotiënten 2, 2, 2 → exp met b=2.\n• Grafiek: **kromme** die steeds steiler stijgt (b>1) of asymptotisch naar 0 daalt (0<b<1).\n• Op semi-log-papier (log-as): rechte lijn.\n\n**Verdubbelingstijd**:\nT_v = log(2) / log(b) ≈ 0,301 / log(b).\n• Voorbeeld: groei 7%/jaar → b=1,07 → T_v ≈ 10,3 jaar.\n• **Vuistregel 70**: T_v ≈ 70/p (jaren) bij groei van p%. Bv: 7% → 10 jaar.\n\n**Halveringstijd**:\nT_h = log(0,5) / log(b) = log(2) / log(1/b).\n• Voor afname b=0,8 (20% verlies/jaar): T_h ≈ 3,1 jaar.\n\n**Berekenen b uit twee waarnemingen**:\nb = (y2/y1)^(1/(x2−x1)).\n• Voorbeeld: x=2, y=10; x=5, y=80. b = (80/10)^(1/3) = 8^(1/3) = 2.\n\n**Exponentieel vs lineair vergelijken**:\n• Klein interval: lijkt op elkaar.\n• Lang interval: exponentieel domineert (loopt enorm uit).\n• Bv: lineair 1+5x na 20 jaar = 101. Exp 1·1,05^20 ≈ 2,65 (klein bij lage rente).\n• Bv: 1·1,10^20 ≈ 6,73. Bij 50 jaar 1,10^50 ≈ 117.\n\n**Continue groei (e^kt)**:\n• Bij continue (i.p.v. discrete) groei: y = a · e^(k·t) waarbij k = continue groeisnelheid.\n• Verband: b = e^k → k = ln(b).\n• Voorbeeld: k=0,05 → b ≈ 1,0513 → ~5,13% per jaar.\n\n**Toepassingen exp groei**:\n• Rente op rente (samengestelde rente).\n• Bevolkingsgroei (Malthus).\n• Bacterien-, virus-spread (pandemie).\n• Inflatie cumulatief.\n• Moore's wet (chip-transistors verdubbelen ~2 jaar).\n\n**Toepassingen exp daling**:\n• Radioactief verval.\n• Medicijn-uitscheiding in bloed.\n• Auto-/inventaris-afschrijving exp.\n• Daling temperatuur naar kamer-T (Newtons koeling).\n• Cooling carrière-loonvraag.",
+      "**Exponentiële groei**: per tijdseenheid wordt iets met een **vast percentage** of **vaste factor** vermenigvuldigd (relatieve toename).\n\n**Formule**: $y = a \\cdot b^x$\n• a = startwaarde (y bij x=0).\n• b = **groeifactor** per tijdseenheid.\n• x = tijd.\n\n**Groeifactor b berekenen** uit groei-percentage p%:\n• Groei: b = 1 + p/100.\n• Afname: b = 1 − p/100.\n\n**Voorbeelden**:\n• Spaargeld 3% rente per jaar: y = 1000 · 1,03^x.\n• Bevolking groeit 1,5%/jaar: P = P₀ · 1,015^x.\n• Auto verliest 20% per jaar: y = 25000 · 0,80^x.\n• Bacterie verdubbelt per uur: y = 1 · 2^x.\n• Radio-actief verval, halveringstijd 5 jaar: y = a · 0,5^(t/5).\n\n**Herkenning exponentieel**:\n• Tabel: **quotiënten** tussen opvolgende y-waarden zijn constant.\n  - x: 1, 2, 3, 4\n  - y: 6, 12, 24, 48 → quotiënten 2, 2, 2 → exp met b=2.\n• Grafiek: **kromme** die steeds steiler stijgt (b>1) of asymptotisch naar 0 daalt (0<b<1).\n• Op semi-log-papier (log-as): rechte lijn.\n\n**Verdubbelingstijd**:\nT_v = log(2) / log(b) ≈ 0,301 / log(b).\n• Voorbeeld: groei 7%/jaar → b=1,07 → T_v ≈ 10,2 jaar.\n• **Vuistregel 70**: T_v ≈ 70/p (jaren) bij groei van p%. Bv: 7% → 10 jaar.\n\n**Halveringstijd**:\nT_h = log(0,5) / log(b) = log(2) / log(1/b).\n• Voor afname b=0,8 (20% verlies/jaar): T_h ≈ 3,1 jaar.\n\n**Berekenen b uit twee waarnemingen**:\nb = (y2/y1)^(1/(x2−x1)).\n• Voorbeeld: x=2, y=10; x=5, y=80. b = (80/10)^(1/3) = 8^(1/3) = 2.\n\n**Exponentieel vs lineair vergelijken**:\n• Klein interval: lijkt op elkaar.\n• Lang interval: exponentieel domineert (loopt enorm uit).\n• Bv: lineair 1+0,05x na 20 jaar = 2. Exp 1·1,05^20 ≈ 2,65.\n• Bv: 1·1,10^20 ≈ 6,73. Bij 50 jaar 1,10^50 ≈ 117.\n\n**Continue groei (e^kt)**:\n• Bij continue (i.p.v. discrete) groei: y = a · e^(k·t) waarbij k = continue groeisnelheid.\n• Verband: b = e^k → k = ln(b).\n• Voorbeeld: k=0,05 → b ≈ 1,0513 → ~5,13% per jaar.\n\n**Toepassingen exp groei**:\n• Rente op rente (samengestelde rente).\n• Bevolkingsgroei (Malthus).\n• Bacteriegroei, virusverspreiding (pandemie).\n• Inflatie cumulatief.\n• Moore's wet (chip-transistors verdubbelen ~2 jaar).\n\n**Toepassingen exp daling**:\n• Radioactief verval.\n• Medicijn-uitscheiding in bloed.\n• Auto-/inventaris-afschrijving exp.\n• Daling temperatuur naar kamer-T (Newtons koeling).",
     checks: [
       {
         q: "Bij **5% rente per jaar** is de groeifactor:",
@@ -131,7 +131,7 @@ const steps = [
         q: "Auto **20%/jaar afnemen**, start €25.000. Na 2 jaar?",
         options: ["€16.000","€15.000","€10.000","€20.000"],
         answer: 0,
-        wrongHints: [null, "Lijkt — maar exp anders.", "Niet — te laag.", "Niet — lineair zou 21000."],
+        wrongHints: [null, "Lijkt — maar exp anders.", "Niet — te laag.", "Niet — dat is na 1 jaar."],
         uitlegPad: {
           stappen: [{ titel: "y = 25000 · 0,8²", tekst: "Groeifactor 0,8. y = 25000 · 0,80² = 25000 · 0,64 = **€16.000**." }],
           theorie: "Lineair 'min €5000/jaar' zou na 2 jaar 15000 zijn. Exponentieel is hier nipt hoger (16000) omdat de daling ‘op kleiner bedrag’ wordt toegepast.",
@@ -156,13 +156,13 @@ const steps = [
   {
     title: "Logaritmes — terugrekenen exponenten",
     explanation:
-      "**Logaritme** = inverse van exponent. Beantwoord vraag: 'tot welke macht moet ik b verheffen om x te krijgen?'\n\n**Notatie**: log_b(x) = exponent. Op CSE meestal log_10 (gewone log) of ln (natuurlijke log, basis e).\n\n• log(1000) = 3 (want 10³ = 1000).\n• log(100) = 2.\n• log(10) = 1.\n• log(1) = 0.\n• log(0,1) = −1.\n\n**Rekenregels** logaritmes:\n• log(a · b) = log(a) + log(b) — vermenigvuldigen → optellen.\n• log(a/b) = log(a) − log(b) — delen → aftrekken.\n• log(a^n) = n · log(a) — macht naar voren.\n• log_b(b) = 1, log_b(1) = 0.\n• Basis-conversie: log_b(x) = log(x) / log(b).\n\n**Toepassingen logaritmen**:\n\n**1. Verdubbelings- en halveringstijd berekenen**:\n• T_v = log(2) / log(b) bij groei.\n• T_h = log(2) / log(1/b) bij afname.\n• Voorbeeld: 3% groei → T_v = log(2) / log(1,03) ≈ 0,301 / 0,01284 ≈ 23,4 jaar.\n\n**2. 'Wanneer bereik ik...?'**:\nKlassieke toetsvraag: 'na hoeveel jaar zijn we boven X?'\n• Formule: y = a · b^t. Oplossen t bij gegeven y.\n• Voorbeeld: spaargeld €1000 bij 5%/jaar, wanneer €2500?\n• 2500 = 1000 · 1,05^t → 2,5 = 1,05^t.\n• Log nemen: log(2,5) = t · log(1,05) → t = log(2,5)/log(1,05) ≈ 0,398/0,0212 ≈ 18,8 jaar.\n\n**3. pH (chemie)**:\n• pH = −log[H₃O⁺].\n• Logaritmische schaal voor zuurgraad.\n• pH 3 → 10× zuurder dan pH 4.\n\n**4. Geluidssterkte (decibel)**:\n• dB = 10 · log(I/I₀).\n• Logaritmische schaal voor geluid.\n• 60 dB = 100× sterker dan 40 dB.\n\n**5. Aardbevingen (Richter)**:\n• Logaritmisch — M7 is 10× sterker dan M6 (amplitude).\n\n**6. Sterren-magnitude (astronomie)**:\n• Helderheid op log-schaal.\n• Magnitude 1 ster is 100× helderder dan magnitude 6.\n\n**Halveringstijd radioactief verval**:\n• Elk type radio-actief element heeft eigen halveringstijd.\n• C-14 (koolstof-14): 5730 jaar — gebruikt voor datering archeologie.\n• U-238: 4,5 miljard jaar — datering steen.\n• Jod-131: 8 dagen — medisch.\n• Cs-137: 30 jaar — Tsjernobyl-fall-out.\n• Po-210: 138 dagen — Litvinenko-vergiftiging.\n\n**Carbon-dating-voorbeeld**:\n• Levend organisme heeft constant C-14/C-12 ratio.\n• Na dood: C-14 vervalt, ratio daalt exp.\n• Meet ratio in fossiel → bereken hoe lang dood.\n• Houtskool met 25% C-14 → 2 halveringstijden voorbij → 2 × 5730 = 11.460 jaar oud.\n\n**Log-schaal-grafieken**:\n• X- of y-as logaritmisch.\n• Exp groei wordt **rechte lijn** op semi-log.\n• Handig om groei-snelheden te vergelijken.\n• Gebruikt in: bevolking, COVID-statistieken, schaalvergelijking aarde-zonnestelsel.\n\n**Veel-gemaakte fouten**:\n• log(a + b) ≠ log(a) + log(b) (alleen ×).\n• log(−x) bestaat niet (in reëel).\n• log(0) niet gedefinieerd (gaat naar −∞).",
+      "**Logaritme** = inverse van exponent. Beantwoordt de vraag: 'tot welke macht moet ik b verheffen om x te krijgen?'\n\n**Notatie**: log_b(x) = exponent. Op CSE meestal log_10 (gewone log) of ln (natuurlijke log).\n\n• log(1000) = 3 (want 10³ = 1000).\n• log(100) = 2.\n• log(10) = 1.\n• log(1) = 0.\n• log(0,1) = −1.\n\n**Rekenregels** logaritmes:\n• log(a · b) = log(a) + log(b) — vermenigvuldigen → optellen.\n• log(a/b) = log(a) − log(b) — delen → aftrekken.\n• log(a^n) = n · log(a) — macht naar voren.\n• log_b(b) = 1, log_b(1) = 0.\n• Basis-conversie: log_b(x) = log(x) / log(b).\n\n**Toepassingen logaritmen**:\n\n**1. Verdubbelings- en halveringstijd berekenen**:\n• T_v = log(2) / log(b) bij groei.\n• T_h = log(2) / log(1/b) bij afname.\n• Voorbeeld: 3% groei → T_v = log(2) / log(1,03) ≈ 0,301 / 0,01284 ≈ 23,4 jaar.\n\n**2. 'Wanneer bereik ik...?'**:\nKlassieke toetsvraag: 'na hoeveel jaar zijn we boven X?'\n• Formule: y = a · b^t. Oplossen t bij gegeven y.\n• Voorbeeld: spaargeld €1000 bij 5%/jaar, wanneer €2500?\n• 2500 = 1000 · 1,05^t → 2,5 = 1,05^t.\n• Log nemen: log(2,5) = t · log(1,05) → t = log(2,5)/log(1,05) ≈ 0,398/0,0212 ≈ 18,8 jaar.\n\n**3. pH (chemie)**:\n• pH = −log[H₃O⁺].\n• Logaritmische schaal voor zuurgraad.\n• pH 3 → 10× zuurder dan pH 4.\n\n**4. Geluidssterkte (decibel)**:\n• dB = 10 · log(I/I₀).\n• Logaritmische schaal voor geluid.\n• 60 dB = 100× sterker dan 40 dB.\n\n**5. Aardbevingen (Richter)**:\n• Logaritmisch — M7 is 10× sterker dan M6 (amplitude).\n\n**6. Sterren-magnitude (astronomie)**:\n• Helderheid op log-schaal.\n• Magnitude 1 ster is 100× helderder dan magnitude 6.\n\n**Halveringstijd radioactief verval**:\n• Elk type radio-actief element heeft eigen halveringstijd.\n• C-14 (koolstof-14): 5730 jaar — gebruikt voor datering archeologie.\n• U-238: 4,5 miljard jaar — datering steen.\n• Jodium-131: 8 dagen — medisch.\n• Cs-137: 30 jaar — Tsjernobyl-fall-out.\n• Po-210: 138 dagen — Litvinenko-vergiftiging.\n\n**C-14-datering-voorbeeld**:\n• Levend organisme heeft constante C-14/C-12-ratio.\n• Na dood: C-14 vervalt, ratio daalt exp.\n• Meet ratio in fossiel → bereken hoe lang dood.\n• Houtskool met 25% C-14 → 2 halveringstijden voorbij → 2 × 5730 = 11.460 jaar oud.\n\n**Log-schaal-grafieken**:\n• X- of y-as logaritmisch.\n• Exp groei wordt **rechte lijn** op semi-log.\n• Handig om groei-snelheden te vergelijken.\n• Gebruikt in: bevolking, COVID-statistieken, schaalvergelijking aarde-zonnestelsel.\n\n**Veel-gemaakte fouten**:\n• log(a + b) ≠ log(a) + log(b) (alleen ×).\n• log(−x) bestaat niet (in reëel).\n• log(0) niet gedefinieerd (gaat naar −∞).",
     checks: [
       {
         q: "Wat is **log(1000)** (basis 10)?",
         options: ["3","100","1000","0"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is √.", "Niet — log is exponent.", "Niet — dat is log(1)."],
+        wrongHints: [null, "Niet — log geeft de exponent.", "Niet — log is exponent.", "Niet — dat is log(1)."],
         uitlegPad: {
           stappen: [{ titel: "10³ = 1000", tekst: "log_10(1000) = **3** want 10³ = 1000. Logaritme = de exponent die je nodig hebt om grondtal naar getal te krijgen." }],
           niveaus: { basis: "3.", simpeler: "10³=1000 → log=3", nogSimpeler: "3" },
@@ -202,8 +202,8 @@ const steps = [
             { titel: "Tellen halveringen", tekst: "Levend: 100%. Na 1 halvering: 50%. Na 2 halveringen: 25%. → **2 halveringstijden** voorbij." },
             { titel: "Tijd", tekst: "2 × 5730 = **11.460 jaar** oud." },
           ],
-          theorie: "Carbon-dating betrouwbaar tot ~50.000 jaar. Daarna te weinig C-14 over. Voor oudere steen: K-Ar of U-Pb-methodes.",
-          niveaus: { basis: "11.460 jaar.", simpeler: "25%=2 halveringen=11460j", nogSimpeler: "A." },
+          theorie: "C-14-datering betrouwbaar tot ~50.000 jaar. Daarna te weinig C-14 over. Voor oudere steen: K-Ar of U-Pb-methodes.",
+          niveaus: { basis: "11.460 jaar.", simpeler: "25%=2 halveringen=11460j", nogSimpeler: "2 halveringen" },
         },
       },
       {
@@ -223,7 +223,7 @@ const steps = [
   {
     title: "Logistisch + andere modellen",
     explanation:
-      "**Niet alles groeit eindeloos exponentieel.** Vaak komt er een **plafond** door schaarste of capaciteit.\n\n**Logistische groei**:\n• Beginfase: nauwelijks groei (lage aantallen).\n• Middenfase: snelle (~exp) groei.\n• Eindfase: groei vlakt af richting plafond (carrying capacity K).\n\n**Formule** (vereenvoudigd):\nN(t) = K / (1 + ((K − N₀)/N₀) · e^(−r·t))\n• K = plafond.\n• N₀ = startwaarde.\n• r = groeisnelheid.\n• t = tijd.\n• Op CSE meestal alleen herkennen + interpreteren, niet handmatig oplossen.\n\n**Grafiek logistisch**:\n• S-vorm (sigmoid).\n• Eerst plat (vergelijkbaar met exp).\n• Dan snel.\n• Dan asymptotisch naar K.\n\n**Voorbeelden**:\n• **Bevolking-cap** in eindig gebied (eiland met dieren).\n• **Virus-uitbraak**: snelle groei eerst, dan vertraging door immuniteit/maatregelen → plafond.\n• **Marktaandeel** nieuw product: trage start → snelle adoptie → markt verzadigd.\n• **Bacterie-cultuur** in beperkte petrischaal.\n• **Leerproces**: weinig vooruitgang eerst (basis), dan snel, dan plateau (expert).\n\n**Verschil exp vs logistisch**:\n• Korte tijd: lijken op elkaar.\n• Lang: exp loopt door tot oneindig, logistisch stabiliseert op K.\n• toetsvraag: 'past dit model lange-termijn?' — bevolking kan niet exp doorgroeien (voedsel-, ruimte-grenzen).\n\n**Periodiek model** (sinus):\n$f(t) = a + b \\cdot \\sin(c \\cdot t + d)$\n• Cyclisch herhalend.\n• Voorbeelden: getijden, seizoenen, eb-en-vloed, dag-nacht-cyclus, biologische ritme.\n\n**Kwadratisch model** (parabool):\n$y = a + b \\cdot x + c \\cdot x^2$\n• Voorbeeld: bal omhoog gooien (hoogte als functie van tijd).\n• Winst-functie met optimum.\n\n**Macht-model** (machtsfunctie):\n$y = a \\cdot x^b$\n• Bv: oppervlakte cirkel = π·r² (b=2). Volume bol = (4/3)π·r³ (b=3).\n• Allometric scaling: lichaamsgewicht ~ massa^0,75 voor hartslag.\n\n**Combinaties**:\n• **Gedempte oscillatie**: sinus + exp daling. Bv: veer met wrijving, harmonisch oscillerend systeem dat tot stilstand komt.\n• **Pieken + bodem-model**: cyclisch in trend. Bv: economie (cyclus rond stijgende trend).\n\n**Model-kiezen-strategie (Toets-patroon)**:\n\n1. **Tabel inspecteren**:\n   - Constante verschillen → lineair.\n   - Constante quotiënten → exponentieel.\n   - Patroon herhaalt → periodiek.\n   - Curve met plafond → logistisch.\n\n2. **Context analyseren**:\n   - Eindige resource → logistisch waarschijnlijker.\n   - Geen beperking → exp.\n   - Vast bedrag → lineair.\n\n3. **Grafiek**:\n   - Rechte lijn → lineair.\n   - Exp-curve → exp.\n   - S-vorm → logistisch.\n   - Golf → periodiek.\n   - Parabool → kwadratisch.\n\n4. **Voorspelling beoordelen**:\n   - 'Klopt voor 10 jaar maar niet voor 100' — denk over model-grenzen.\n   - 'Extrapoleren tot 2050 mag/mag niet' — Doorstroomtoets-stijl-vraag.\n\n**Toepassing economie**:\n• BBP-groei: exp model voor lange termijn (recessies + boom-cycli rond trend).\n• Inflatie cumulatief: exp.\n• Marktverzadiging: logistisch.\n\n**Toepassing biologie**:\n• Populatie zonder voedsel-/ruimte-limiet: exp.\n• Populatie in habitat: logistisch.\n• Roofdier-prooi-cyclus: cyclisch (Lotka-Volterra).\n\n**Toepassing technologie**:\n• Adoptie nieuwe technologie: S-curve (logistisch).\n• Moore's wet: exp tot verzadiging (dan logistisch).\n• Internet-gebruikers: was exp, nu logistisch (verzadiging).",
+      "**Niet alles groeit eindeloos exponentieel.** Vaak komt er een **plafond** door schaarste of capaciteit.\n\n**Logistische groei**:\n• Beginfase: nauwelijks groei (lage aantallen).\n• Middenfase: snelle (~exp) groei.\n• Eindfase: groei vlakt af richting plafond (carrying capacity K).\n\n**Formule** (vereenvoudigd):\nN(t) = K / (1 + ((K − N₀)/N₀) · e^(−r·t))\n• K = plafond.\n• N₀ = startwaarde.\n• r = groeisnelheid.\n• t = tijd.\n• Op CSE meestal alleen herkennen + interpreteren, niet handmatig oplossen.\n\n**Grafiek logistisch**:\n• S-vorm (sigmoid).\n• Eerst plat (vergelijkbaar met exp).\n• Dan snel.\n• Dan asymptotisch naar K.\n\n**Voorbeelden**:\n• **Bevolking-cap** in eindig gebied (eiland met dieren).\n• **Virus-uitbraak**: snelle groei eerst, dan vertraging door immuniteit/maatregelen → plafond.\n• **Marktaandeel** nieuw product: trage start → snelle adoptie → markt verzadigd.\n• **Bacterie-cultuur** in beperkte petrischaal.\n• **Leerproces**: weinig vooruitgang eerst (basis), dan snel, dan plateau (expert).\n\n**Verschil exp vs logistisch**:\n• Korte tijd: lijken op elkaar.\n• Lang: exp loopt door tot oneindig, logistisch stabiliseert op K.\n• Toetsvraag: 'past dit model lange-termijn?' — bevolking kan niet exp doorgroeien (voedsel-, ruimte-grenzen).\n\n**Periodiek model** (sinus):\n$f(t) = a + b \\cdot \\sin(c \\cdot t + d)$\n• Cyclisch herhalend.\n• Voorbeelden: getijden, seizoenen, dag-nacht-cyclus, biologisch ritme.\n\n**Kwadratisch model** (parabool):\n$y = a + b \\cdot x + c \\cdot x^2$\n• Voorbeeld: bal omhoog gooien (hoogte als functie van tijd).\n• Winst-functie met optimum.\n\n**Macht-model** (machtsfunctie):\n$y = a \\cdot x^b$\n• Bv: oppervlakte cirkel = π·r² (b=2). Volume bol = (4/3)π·r³ (b=3).\n• Allometrie: stofwisseling ~ massa^0,75 (wet van Kleiber).\n\n**Combinaties**:\n• **Gedempte oscillatie**: sinus + exp daling. Bv: veer met wrijving, harmonisch oscillerend systeem dat tot stilstand komt.\n• **Pieken + bodem-model**: cyclisch in trend. Bv: economie (cyclus rond stijgende trend).\n\n**Model-kiezen-strategie (Toets-patroon)**:\n\n1. **Tabel inspecteren**:\n   - Constante verschillen → lineair.\n   - Constante quotiënten → exponentieel.\n   - Patroon herhaalt → periodiek.\n   - Curve met plafond → logistisch.\n\n2. **Context analyseren**:\n   - Eindige resource → logistisch waarschijnlijker.\n   - Geen beperking → exp.\n   - Vast bedrag → lineair.\n\n3. **Grafiek**:\n   - Rechte lijn → lineair.\n   - Exp-curve → exp.\n   - S-vorm → logistisch.\n   - Golf → periodiek.\n   - Parabool → kwadratisch.\n\n4. **Voorspelling beoordelen**:\n   - 'Klopt voor 10 jaar maar niet voor 100' — denk over model-grenzen.\n   - 'Extrapoleren tot 2050 mag/mag niet' — examenvraag.\n\n**Toepassing economie**:\n• BBP-groei: exp model voor lange termijn (recessies + boom-cycli rond trend).\n• Inflatie cumulatief: exp.\n• Marktverzadiging: logistisch.\n\n**Toepassing biologie**:\n• Populatie zonder voedsel-/ruimte-limiet: exp.\n• Populatie in habitat: logistisch.\n• Roofdier-prooi-cyclus: cyclisch (Lotka-Volterra).\n\n**Toepassing technologie**:\n• Adoptie nieuwe technologie: S-curve (logistisch).\n• Moore's wet: exp tot verzadiging (dan logistisch).\n• Internet-gebruikers: was exp, nu logistisch (verzadiging).",
     checks: [
       {
         q: "Welk model heeft een **plafond**?",
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Niet — gaat door.", "Niet — naar oneindig.", "Wel begrensd maar geen plafond — schommelt."],
         uitlegPad: {
           stappen: [{ titel: "S-curve = logistisch", tekst: "**Logistisch model**: S-vormige curve, groeit eerst snel, vlakt af naar plafond (carrying capacity K). Past op bevolking in eindig gebied, virus-uitbraak, marktverzadiging." }],
-          niveaus: { basis: "Logistisch.", simpeler: "Plafond = logistisch", nogSimpeler: "Logist." },
+          niveaus: { basis: "Logistisch.", simpeler: "Plafond = logistisch", nogSimpeler: "Logistisch" },
         },
       },
       {
@@ -249,21 +249,21 @@ const steps = [
         q: "Bal omhoog gooien — hoogte als functie van tijd is:",
         options: ["Kwadratisch (parabool)","Lineair","Exponentieel","Logaritmisch"],
         answer: 0,
-        wrongHints: [null, "Niet — versnelling.", "Niet — daalt eerst niet exp.", "Niet relevant."],
+        wrongHints: [null, "Niet — versnelling.", "Niet — de bal stijgt eerst en daalt dan.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "h = v₀·t − ½g·t²", tekst: "**Kwadratisch model**: hoogte stijgt eerst (lineaire bijdrage v₀·t) maar wordt door zwaartekracht (−½g·t²) afgeremd → maximum → daling. **Parabool** met top." }],
           niveaus: { basis: "Kwadratisch.", simpeler: "Bal-baan = parabool", nogSimpeler: "Parabool" },
         },
       },
       {
-        q: "Virus-uitbraak: aantal besmetten verloopt typisch:",
+        q: "Virus-uitbraak: aantal besmettingen verloopt typisch:",
         options: ["Eerst exp → afvlakkend (logistisch)","Lineair","Periodiek alleen","Constant"],
         answer: 0,
         wrongHints: [null, "Niet — niet zonder beperking.", "Wel later golf, eerst monotoon.", "Niet — wel verandering."],
         uitlegPad: {
-          stappen: [{ titel: "Logistisch met R0", tekst: "Beginfase virus: weinig immuniteit → besmetten dragen exp. Naarmate meer mensen besmet (of beschermd door maatregelen/immuniteit): R-getal daalt → groei vlakt af → **logistische curve**.\n\nMeerdere golven mogelijk (nieuwe varianten) → opvolgende S-curves." }],
-          theorie: "COVID-19 grafiek-pattern: meerdere logistische golven achter elkaar.",
-          niveaus: { basis: "Logistisch.", simpeler: "Virus = logistisch", nogSimpeler: "Logist." },
+          stappen: [{ titel: "Logistisch met R0", tekst: "Beginfase virus: weinig immuniteit → besmettingen groeien exp. Naarmate meer mensen besmet (of beschermd door maatregelen/immuniteit): R-getal daalt → groei vlakt af → **logistische curve**.\n\nMeerdere golven mogelijk (nieuwe varianten) → opvolgende S-curves." }],
+          theorie: "COVID-19-grafiekpatroon: meerdere logistische golven achter elkaar.",
+          niveaus: { basis: "Logistisch.", simpeler: "Virus = logistisch", nogSimpeler: "Logistisch" },
         },
       },
       {
@@ -307,7 +307,7 @@ const steps = [
         },
       },
       {
-        q: "Iod-131 halveringstijd 8 dagen. Na **24 dagen** is welk % over?",
+        q: "Jodium-131 halveringstijd 8 dagen. Na **24 dagen** is welk % over?",
         options: ["12,5%","50%","25%","6,25%"],
         answer: 0,
         wrongHints: [null, "Niet — dat is 8 dagen.", "Niet — dat is 16 dagen.", "Niet — dat is 32 dagen."],
@@ -316,7 +316,7 @@ const steps = [
             { titel: "Hoeveel halveringen?", tekst: "24 / 8 = 3 halveringen." },
             { titel: "0,5³", tekst: "Na 3 halveringen: (0,5)³ = 0,125 = **12,5%**." },
           ],
-          theorie: "Medisch: na 80 dagen (10 halveringen) < 0,1% → praktisch nul. Daarom Tsjernobyl-jood snel weg, Cs-137 (T_h=30 jaar) blijft veel langer.",
+          theorie: "Medisch: na 80 dagen (10 halveringen) < 0,1% → praktisch nul. Daarom Tsjernobyl-jodium snel weg, Cs-137 (T_h=30 jaar) blijft veel langer.",
           niveaus: { basis: "12,5%.", simpeler: "3×halveren = 1/8 = 12,5%", nogSimpeler: "12,5" },
         },
       },
@@ -326,7 +326,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — geen gelijke stappen.", "Niet — geen cyclus.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Learning curve = S-vorm", tekst: "**Leren**: begin traag (basis snappen), dan snel (kennis groeit op kennis), uiteindelijk plateau (expertgrens, marginal returns). Klassieke S-curve = **logistisch**. Wordt gebruikt in psychologie + training-theorie." }],
+          stappen: [{ titel: "Learning curve = S-vorm", tekst: "**Leren**: begin traag (basis snappen), dan snel (kennis groeit op kennis), uiteindelijk plateau (expertgrens, afnemende meeropbrengst). Klassieke S-curve = **logistisch**. Wordt gebruikt in psychologie + training-theorie." }],
           theorie: "Daarom: 15-min/dag werkt op lange termijn (volharden door beginplateau) > sprong-leren.",
           niveaus: { basis: "Logistisch.", simpeler: "Leren = S-curve", nogSimpeler: "S" },
         },
@@ -337,8 +337,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet — voor exp.", "Wel bestaand."],
         uitlegPad: {
-          stappen: [{ titel: "Vuistregel uit ln(2)", tekst: "T_v = ln(2)/ln(1+r) ≈ 0,693/r voor kleine r (Taylor-expansie). Met r in % en uitkomst in jaar: T_v ≈ 70/p. **Werkt voor p < 10%**. Bij grotere groei (20%, 50%) wordt approximatie minder nauwkeurig — gebruik exacte formule." }],
-          niveaus: { basis: "Kleine %.", simpeler: "70-regel = kleine %", nogSimpeler: "A." },
+          stappen: [{ titel: "Vuistregel uit ln(2)", tekst: "T_v = ln(2)/ln(1+r) ≈ 0,693/r voor kleine r (Taylorbenadering). Met r in % en uitkomst in jaar: T_v ≈ 70/p. **Werkt voor p < 10%**. Bij grotere groei (20%, 50%) wordt de benadering minder nauwkeurig — gebruik exacte formule." }],
+          niveaus: { basis: "Kleine %.", simpeler: "70-regel = kleine %", nogSimpeler: "Kleine %" },
         },
       },
     ],

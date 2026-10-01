@@ -129,7 +129,7 @@ const steps = [
   },
   {
     title: "Korte en lange klinkers — verdubbelen of niet",
-    explanation: "Bij meervouds- en verkleinvormen moet je vaak **letters verdubbelen** of juist **eentje weglaten**. De regel hangt af van de **klank**:\n\n**Korte klinker** in gesloten lettergreep → de **medeklinker erna verdubbelen** zodat het kort blijft klinken.\n• kam → kam**m**en (anders zou je 'ka-men' zeggen)\n• pop → pop**p**en (anders 'po-pen')\n• bus → bus**s**en\n• hek → hek**k**en\n• rat → rat**t**en\n\n**Lange klinker** in open lettergreep → **één klinker is genoeg** (verdubbeling weghalen).\n• maan → ma-nen (één a)\n• boom → bo-men (één o)\n• vuur → vu-ren\n• zee → ze-ten? Nee — bij 'ee' blijft de dubbele e meestal: ze-ten/zeden, maar zeg-gen niet. Speciaal bij 'ee': de dubbele e blijft staan vóór een medeklinker (zee-pen), en wordt enkel vóór een klinker (ze-en, twee-en kan beide).\n\n**Heel makkelijke vuistregel**:\n• Klinker kort → medeklinker erna verdubbelen.\n• Klinker lang → één klinker schrijven.\n\n**Voorbeelden testen**:\n• man (kort) → mannen ✓ (medeklinker dubbel)\n• maan (lang) → manen ✓ (één klinker)\n• pop (kort) → poppen ✓\n• poot (lang) → poten ✓ — *let op: dit is geen werkwoord, maar het meervoud van poot!*\n• ster (kort) → sterren ✓",
+    explanation: "Bij meervouds- en verkleinvormen moet je vaak **letters verdubbelen** of juist **eentje weglaten**. De regel hangt af van de **klank**:\n\n**Korte klinker** in gesloten lettergreep → de **medeklinker erna verdubbelen** zodat het kort blijft klinken.\n• kam → kam**m**en (anders zou je 'ka-men' zeggen)\n• pop → pop**p**en (anders 'po-pen')\n• bus → bus**s**en\n• hek → hek**k**en\n• rat → rat**t**en\n\n**Lange klinker** in open lettergreep → **één klinker is genoeg** (verdubbeling weghalen).\n• maan → ma-nen (één a)\n• boom → bo-men (één o)\n• vuur → vu-ren\n• Let op: eindigt een woord op **ee**, dan blijft die staan: zee → zeeën, fee → feeën.\n\n**Heel makkelijke vuistregel**:\n• Klinker kort → medeklinker erna verdubbelen.\n• Klinker lang → één klinker schrijven.\n\n**Voorbeelden testen**:\n• man (kort) → mannen ✓ (medeklinker dubbel)\n• maan (lang) → manen ✓ (één klinker)\n• pop (kort) → poppen ✓\n• poot (lang) → poten ✓ — *let op: dit is geen werkwoord, maar het meervoud van poot!*\n• ster (kort) → sterren ✓",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">korte ↔ lange klank</text>
@@ -172,7 +172,7 @@ const steps = [
             { type: "kort+verdubbel", tekst: "kat → katten, bus → bussen, pop → poppen." },
             { type: "lang", tekst: "kaas → kazen, boom → bomen — geen verdubbel, want klank is al lang." },
           ],
-          basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Zeg het woord hardop. Klinkt de klinker kort (kèt) of lang (kaas)?" }],
+          basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Zeg het woord hardop. Klinkt de klinker kort (kat) of lang (kaas)?" }],
           niveaus: {
             basis: "Pen = korte e → verdubbel n → pennen.",
             simpeler: "Hoor je 'pen' (kort) of 'peen' (lang)? Kort. Bij kort: medeklinker dubbel. dus pen + n + en = pennen.",
@@ -215,7 +215,7 @@ const steps = [
   },
   {
     title: "Eindletter — stemhebbend of stemloos?",
-    explanation: "Aan het eind van een woord schrijf je vaak een **andere letter** dan je hoort. Daar zit een regel achter:\n\n**Aan het eind van een Nederlands woord** wordt een 'd' uitgesproken als 't', en een 'v'/'z' als 'f'/'s'. Maar je schrijft de letter zoals die in het meervoud / lange vorm verschijnt.\n\n**Voorbeelden**:\n• hond → klink: 'hont'. Maar meervoud = honden → dus schrijf je hond.\n• lief → klink: 'lief'. Maar lange vorm = lieve → dus schrijf je lief.\n• huis → klink: 'huis'. Meervoud = huizen → schrijf huis (let op: hier verschilt z/s).\n• raad → klink: 'raat'. Meervoud raden → raad.\n\n**Geheugentruc — verleng het woord**:\nZet er een uitgang achter (-en, -e, -de) en luister wat de letter dan is.\n• raad → ra-d-en → d ✓ (niet raat)\n• graf → gra-v-en → v? Nee, hier blijft het 'graf' want graven heeft v. Hmm. Dus schrijf graf met f maar het meervoud is graven met v.\n\n**De v/f-regel**:\n• Als de meervoud-vorm met **v** is, schrijf je in enkelvoud **f**: graf-graven, brief-brieven, doof-dove.\n• Als de meervoud-vorm met **z** is, schrijf je in enkelvoud **s**: huis-huizen, glas-glazen.\n\n**De d/t-regel** (niet werkwoord):\n• Eind klinkt als 't' maar meervoud heeft d → schrijf d: hond → honden, paard → paarden, hand → handen.\n• Eind klinkt als 't' en meervoud heeft ook t → schrijf t: kat → katten, voet → voeten.",
+    explanation: "Aan het eind van een woord schrijf je vaak een **andere letter** dan je hoort. Daar zit een regel achter:\n\n**Aan het eind van een Nederlands woord** wordt een 'd' uitgesproken als 't', en een 'v'/'z' als 'f'/'s'. Maar je schrijft de letter zoals die in het meervoud / lange vorm verschijnt.\n\n**Voorbeelden**:\n• hond → klinkt: 'hont'. Maar meervoud = honden → dus schrijf je hond.\n• lief → klinkt: 'lief'. Maar lange vorm = lieve → dus schrijf je lief.\n• huis → klinkt: 'huis'. Meervoud = huizen → schrijf huis (let op: hier verschilt z/s).\n• raad → klinkt: 'raat'. Meervoud raden → raad.\n\n**Geheugentruc — verleng het woord**:\nZet er een uitgang achter (-en, -e, -de) en luister wat de letter dan is.\n• raad → ra-d-en → d ✓ (niet raat)\n• graf → gra-v-en: in het meervoud hoor je een v, maar aan het eind schrijf je f (zie hieronder).\n\n**De v/f-regel**:\n• Als de meervoud-vorm met **v** is, schrijf je in enkelvoud **f**: graf-graven, brief-brieven, doof-dove.\n• Als de meervoud-vorm met **z** is, schrijf je in enkelvoud **s**: huis-huizen, glas-glazen.\n\n**De d/t-regel** (niet werkwoord):\n• Eind klinkt als 't' maar meervoud heeft d → schrijf d: hond → honden, paard → paarden, hand → handen.\n• Eind klinkt als 't' en meervoud heeft ook t → schrijf t: kat → katten, voet → voeten.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">truc: verleng het woord</text>
@@ -239,10 +239,10 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Verleng-truc", tekst: "'Paard' eindigt met t-klank. Maak meervoud: 'paarden' — daar hoor je een D. Dus enkelvoud" },
+            { titel: "Verleng-truc", tekst: "'Paard' eindigt met t-klank. Maak meervoud: 'paarden' — daar hoor je een D. Dus enkelvoud: paard." },
           ],
           woorden: [{ woord: "verleng-truc", uitleg: "Maak woord langer (meervoud / lange vorm). De echte letter wordt dan hoorbaar." }],
-          theorie: "**Eind-letter-truc:** veel NL-woorden eindigen op stille D of T. Verleng het woord (meervoud / werkwoordvorm) — dan hoor je welke letter het echt is.\n• Paard → paarden = D\n• Hand → handen = D\n• Hond → honden = D\n• Krat → kratten = T",
+          theorie: "**Eind-letter-truc:** veel NL-woorden eindigen op een d die als t klinkt. Verleng het woord (meervoud / werkwoordvorm) — dan hoor je welke letter het echt is.\n• Paard → paarden = D\n• Hand → handen = D\n• Hond → honden = D\n• Krat → kratten = T",
           voorbeelden: [{ type: "verlengen", tekst: "'Hond' klinkt als 'hont'. Maar verleng: 'honden' = D. Dus hond eindigt op D." }],
           basiskennis: [{ onderwerp: "Niet 'td' of 'dt'", uitleg: "Bij gewone zelfstandige naamwoorden 1 letter, niet combinaties." }],
           niveaus: {
@@ -267,7 +267,7 @@ const steps = [
             { titel: "V wordt F aan het eind", tekst: "Lieve (lange vorm) heeft V. Maar AAN HET EIND van een woord wordt V → F. Dus 'lief'." },
           ],
           woorden: [{ woord: "v→f-regel", uitleg: "Aan het eind van een NL-woord wordt v als f geschreven. Z wordt s." }],
-          theorie: "**Eind-letter-regels:**\n• v wordt f: lieve → lief, brieven → brief\n• z wordt s: lezen → las (preteritum), vertel → vertelt\n\nBij verlengen kom je de echte letter weer tegen.",
+          theorie: "**Eind-letter-regels:**\n• v wordt f: lieve → lief, brieven → brief\n• z wordt s: huizen → huis, glazen → glas\n\nBij verlengen kom je de echte letter weer tegen.",
           voorbeelden: [{ type: "v→f", tekst: "Lieve → lief. Brieven → brief. Halve → half." }],
           basiskennis: [{ onderwerp: "Verleng om te checken", uitleg: "Twijfel je? Maak 'm langer: 'lieve' = v. Aan het eind: f." }],
           niveaus: {
@@ -283,7 +283,7 @@ const steps = [
   // ─── B. Lastige klanken ───────────────────────────────
   {
     title: "ei vs ij — geen logische regel",
-    explanation: "**ei** en **ij** klinken **precies hetzelfde** in het Nederlands. Er is **geen logische regel** waarmee je het altijd goed doet. Je moet het **woord-voor-woord leren** (woordbeeld).\n\n**Vuistregels die soms helpen** (meer trucjes dan regels):\n\n**1. ij komt veel vaker voor dan ei** in Nederlandse woorden. Bij twijfel: ij is statistisch een betere gok.\n\n**2. Korte ei (= 'kort ei') komt vaak voor in**:\n• Veel **woorden van vroeger / Latijn**: trein, plein, fontein, zwijn, plezier ← (dit is 'ie' overigens)\n• Veelvoorkomend rijtje: trein, plein, klein, sein, fontein, fortein, geheim, eik, eind, einde, eis, eilander\n\n**3. Lange ij komt vaak voor in**:\n• De meeste werkwoorden: krijgen, lijden, blijven, schrijven\n• Veel zelfstandige naamwoorden: vrijheid, gelijkheid, blijdschap\n• Eigennamen: Marije, Chris-tij-n, IJ (de rivier)\n\n**4. Specifieke woordfamilies**:\n• 'klein' (klein, kleinkind, kleinood) → ei\n• 'wijs' (wijs, wijzer, wijsheid) → ij\n\n**5. Het beruchte rijtje voor ei** (om te oefenen):\n*\"de meid eet feiten met haar reisleider in de trein.\"*\n\n**Geheim**: gewoon vaak lezen + spellingfouten zelf controleren in eigen tekst. Hoe meer woorden je tegenkomt, hoe beter je woordbeeld wordt.\n\n**Beruchte instinkers**: \n• rein vs reinigen (beide ei)\n• zijn (werkwoord) vs zeyn (bestaat niet — alleen ij)\n• mei (maand) vs mij (= 'aan mij'): beide bestaan!",
+    explanation: "**ei** en **ij** klinken **precies hetzelfde** in het Nederlands. Er is **geen logische regel** waarmee je het altijd goed doet. Je moet het **woord-voor-woord leren** (woordbeeld).\n\n**Vuistregels die soms helpen** (meer trucjes dan regels):\n\n**1. ij komt veel vaker voor dan ei** in Nederlandse woorden. Bij twijfel: ij is statistisch een betere gok.\n\n**2. De 'korte ei' zie je vaak in leenwoorden** (uit het Frans/Latijn): trein, plein, fontein, porselein.\n• Veelvoorkomend rijtje: klein, sein, geheim, eik, eind, eis, reis\n\n**3. Lange ij komt vaak voor in**:\n• Veel werkwoorden: krijgen, lijden, blijven, schrijven\n• Veel zelfstandige naamwoorden: vrijheid, gelijkheid, blijdschap\n• Het achtervoegsel **-lijk**: eerlijk, vrolijk, gelijk\n\n**4. Specifieke woordfamilies**:\n• 'klein' (klein, kleinkind, kleinood) → ei\n• 'wijs' (wijs, wijzer, wijsheid) → ij\n\n**5. Het beruchte rijtje voor ei** (om te oefenen):\n*\"de meid eet feiten met haar reisleider in de trein.\"*\n\n**Geheim**: gewoon vaak lezen + spellingfouten zelf controleren in eigen tekst. Hoe meer woorden je tegenkomt, hoe beter je woordbeeld wordt.\n\n**Beruchte instinkers**: \n• rein vs reinigen (beide ei)\n• zij (persoon) vs zei (van zeggen): beide bestaan!\n• mei (maand) vs mij (= 'aan mij'): beide bestaan!",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ei = ij (klinken hetzelfde!)</text>
@@ -302,18 +302,18 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Hoe schrijf je het woord voor de witte vloeistof uit een koe (in een rijm-rijtje met 'plein')?*",
-        options: ["melk — geen ei/ij", "meilk", "mijlk", "melk"],
+        q: "*Strikvraag over ei/ij: hoe schrijf je het woord voor de witte drank die van een koe komt?*",
+        options: ["melk — geen ei/ij", "meilk", "mijlk", "mielk"],
         answer: 0,
         wrongHints: [
           null,
           "'Meilk' bestaat niet. Melk heeft helemaal geen ei/ij — alleen een korte e.",
           "'Mijlk' bestaat ook niet. Melk is een gewoon woord met e.",
-          "Klopt — geen instinker met ei/ij hier. Melk schrijf je gewoon zo.",
+          "'Mielk' bestaat ook niet. Melk schrijf je met een korte e.",
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Strikvraag", tekst: "De vraag suggereert ei/ij maar 'melk' heeft GEEN ei/ij. Gewoon korte 'e' (mèlk). Antwoord A: 'melk — geen ei/ij'." },
+            { titel: "Strikvraag", tekst: "De vraag suggereert ei/ij maar 'melk' heeft GEEN ei/ij. Gewoon korte 'e' (mèlk), zonder ei of ij." },
           ],
           woorden: [{ woord: "korte e", uitleg: "Klank zoals in 'pen' of 'mèlk' — niet de lange 'ee' van zee." }],
           theorie: "Niet elk woord met e-klank heeft ei/ij. Lees zorgvuldig wat het woord ECHT is.",
@@ -321,7 +321,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Zeg het woord. Hoor je 'mei' (ei-klank) of 'mè' (korte e)?" }],
           niveaus: {
             basis: "Melk = korte e, geen ei/ij.",
-            simpeler: "Strikvraag! De vraag noemt 'plein' (ei) maar het echte woord 'melk' heeft alleen een korte e. Geen ei, geen ij.",
+            simpeler: "Strikvraag! De vraag gaat over ei/ij, maar het woord 'melk' heeft alleen een korte e. Geen ei, geen ij.",
             nogSimpeler: "Melk = gewoon e",
           },
         },
@@ -343,7 +343,7 @@ const steps = [
           ],
           woorden: [{ woord: "woordfamilie", uitleg: "Woorden die bij elkaar horen: vrij/vrije/vrijheid — allemaal dezelfde spelling." }],
           theorie: "Vuistregel: kijk naar woordfamilie. 'Vrij' is bekend ij-woord → vrijheid ook ij.",
-          voorbeelden: [{ type: "familie", tekst: "blij → blijheid, klein → kleinheid, wijs → wijsheid — familie houdt zelfde spelling." }],
+          voorbeelden: [{ type: "familie", tekst: "blij → blijdschap, klein → kleintje, wijs → wijsheid — familie houdt zelfde spelling." }],
           basiskennis: [{ onderwerp: "y bestaat haast niet", uitleg: "In modern Nederlands gebruiken we y bijna nooit. Alleen in leenwoorden (yoghurt, baby)." }],
           niveaus: {
             basis: "Vrijheid = ij.",
@@ -356,7 +356,7 @@ const steps = [
   },
   {
     title: "au vs ou — net zo lastig",
-    explanation: "**au** en **ou** klinken ook **precies hetzelfde**. Net als bij ei/ij: woordbeeld leren is de enige weg.\n\n**Ou is veel vaker voorkomend dan au.** Bij twijfel = ou een goede gok.\n\n**Veelvoorkomende au-woorden** (om te leren):\n• auto, augustus, applaus, blauw, kabouter, paus, restaurant, saus, taupe, trauma\n• En ook: nautisch, klauw, lauw, mauw, pauw, rauw, paus, kraut\n\n**Veelvoorkomende ou-woorden**:\n• oud, ouder, koud, vrouw, mouw, hout, route, fout, schouder, bouwen, vouwen, houden, jou, nou, zou, zout, blouson, koud, woud\n• En ook: bouw, douche, rouwen, hou, bout, gouden, houtwol\n\n**Trucjes**:\n\n**1. Familie-truc**: woorden uit dezelfde familie hebben dezelfde spelling.\n• oud → ouder, oudst, oudheid (allemaal ou)\n• vouwen → opvouwen, vouwfiets (allemaal ou)\n\n**2. Werkwoorden -ouwen / -auwen**:\n• Vaak ou: bouwen, vouwen, houwen, schouwen, zouwen\n• Soms au: blauwen (= blauw maken), klauwen, lauwen, mauwen, pauwen\n\n**Beruchte fouten**:\n• \"olifant\" — schrijf je met o, niet ou\n• \"oranje\" — schrijf je met o\n• \"roze\" — schrijf je met o (één z!)\n\n**Tip**: bij twijfel, schrijf het **op** en kijk of het 'er goed uitziet'. Soms gebruikt je hersenen het woordbeeld zonder dat je de regel kent.",
+    explanation: "**au** en **ou** klinken ook **precies hetzelfde**. Net als bij ei/ij: woordbeeld leren is de enige weg.\n\n**Ou is veel vaker voorkomend dan au.** Bij twijfel = ou een goede gok.\n\n**Veelvoorkomende au-woorden** (om te leren):\n• auto, augustus, applaus, blauw, flauw, paus, restaurant, saus, taupe, trauma\n• En ook: nautisch, klauw, lauw, gauw, pauw, rauw, dauw\n\n**Veelvoorkomende ou-woorden**:\n• oud, ouder, koud, vrouw, mouw, hout, goud, fout, schouder, bouwen, vouwen, houden, jou, nou, zou, zout, touw, trouw, woud\n• En ook: bouw, kous, rouwen, hou, bout, gouden, houtwol\n\n**Trucjes**:\n\n**1. Familie-truc**: woorden uit dezelfde familie hebben dezelfde spelling.\n• oud → ouder, oudst, oudheid (allemaal ou)\n• vouwen → opvouwen, vouwfiets (allemaal ou)\n\n**2. Werkwoorden -ouwen / -auwen**:\n• Vaak ou: bouwen, vouwen, houwen, schouwen, trouwen\n• Soms au: kauwen, miauwen\n\n**Beruchte fouten**:\n• \"gauw\" en \"blauw\" — met au\n• \"kabouter\" — met ou\n• \"saus\" en \"paus\" — met au\n\n**Tip**: bij twijfel, schrijf het **op** en kijk of het 'er goed uitziet'. Soms gebruiken je hersenen het woordbeeld zonder dat je de regel kent.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">au = ou (klinken hetzelfde!)</text>
@@ -405,9 +405,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Hoort 'au' of 'ou' bij deze klank? Vergelijk met 'oud' en 'gauw'.",
+          "Hoort 'au' of 'ou' bij deze klank? Vergelijk met 'oud' en 'kouder'.",
           "Kowd bestaat niet in Nederlands. We gebruiken 'ou' voor deze klank.",
-          "Cowd is Engels (cold). Nederlands schrijft het anders.",
+          "'Cowd' bestaat niet (Engels is 'cold'). Nederlands schrijft het anders.",
         ],
         uitlegPad: {
           stappen: [
@@ -418,7 +418,7 @@ const steps = [
           ],
           theorie: "OU komt vaker voor in NL dan AU. Kerngroep: oud, koud, vrouw, hout, mouw, jou, nou. Bij twijfel: kies ou.",
           voorbeelden: [{ type: "familie", tekst: "koud → kouder, koudst, koude — alles ou." }],
-          basiskennis: [{ onderwerp: "Engels ≠ Nederlands", uitleg: "Engelse cold (cowd) is niet de Nederlandse spelling." }],
+          basiskennis: [{ onderwerp: "Engels ≠ Nederlands", uitleg: "Het Engelse 'cold' is niet de Nederlandse spelling." }],
           niveaus: {
             basis: "Koud = ou-woord.",
             simpeler: "Tegengesteld van warm = koud. Bekend NL-woord met ou. Familie: koud, kouder, koudst — allemaal OU.",
@@ -430,7 +430,7 @@ const steps = [
   },
   {
     title: "ch en g — wanneer welke?",
-    explanation: "De klanken **ch** en **g** klinken in het Nederlands soms **bijna hetzelfde** (zachte Nederlandse 'g'). De spelling is echter vaak vast — woordbeeld telt.\n\n**Algemene regels**:\n\n**1. Aan het begin van een woord**: meestal **g**.\n• gaan, geven, groot, grond, gat\n• Uitzondering: enkele leenwoorden (cheque, chips, China — die starten vaak met 'sj'-klank).\n\n**2. Tussen klinkers in een lettergreep**: vaak **g**.\n• regen, dagen, mogen, vragen, slagen\n\n**3. Aan het eind van een woord**: vaak **g** (klinkt zacht 'ch').\n• berg, dag, vraag, vlag, beweeg\n\n**4. Vóór een t-klank** (in -cht-): meestal **ch**.\n• gracht, lucht, bucht, vrucht, dochter, slecht, recht, vechten, lichten\n• \"De grachten in Amsterdam zijn vol prachtig licht.\" → veel cht!\n\n**5. In samengestelde woorden + na voor- of achtervoegsels**: kijk apart naar elk deel.\n• voor**l**ich**ten** = voor + lichten → cht\n• ge**brui**ken = ge + bruiken → g (geen ch want geen t-klank)\n\n**Beruchte fouten**:\n• 'lachen' — met ch (omdat het samenhangt met 'lacht')\n• 'gisteren' — met g\n• 'graag' — met dubbele g (één aan begin, één aan eind)\n• 'gracht' — met g + cht\n\n**Truc**: zit er een **t-klank na de g/ch**? Dan vrijwel altijd **cht**.",
+    explanation: "De klanken **ch** en **g** klinken in het Nederlands soms **bijna hetzelfde** (zachte Nederlandse 'g'). De spelling is echter vaak vast — woordbeeld telt.\n\n**Algemene regels**:\n\n**1. Aan het begin van een woord**: meestal **g**.\n• gaan, geven, groot, grond, gat\n• Uitzondering: enkele leenwoorden (cheque, chips, China — die starten vaak met 'sj'-klank).\n\n**2. Tussen klinkers in een lettergreep**: vaak **g**.\n• regen, dagen, mogen, vragen, slagen\n\n**3. Aan het eind van een woord**: vaak **g** (klinkt zacht 'ch').\n• berg, dag, vraag, vlag, beweeg\n\n**4. Vóór een t-klank** (in -cht-): meestal **ch**.\n• gracht, lucht, bocht, vrucht, dochter, slecht, recht, vechten, lichten\n• Let op: werkwoorden met g in de stam houden de g: hij zegt, ligt.\n\n**5. In samengestelde woorden + na voor- of achtervoegsels**: kijk apart naar elk deel.\n• zon**licht** = zon + licht → cht\n• **dag**boek = dag + boek → g\n\n**Beruchte fouten**:\n• 'lachen' — met ch (net als 'de lach')\n• 'gisteren' — met g\n• 'graag' — met dubbele g (één aan begin, één aan eind)\n• 'gracht' — met g + cht\n\n**Truc**: zit er een **t-klank na de g/ch**? Dan meestal **cht** (niet bij werkwoorden als 'zegt').",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ch vs g — vuistregels</text>
@@ -466,7 +466,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Niet kt, niet ggt", uitleg: "De klank lijkt soms op k (grakt) of dubbele g (graggt) maar die spelling bestaat niet." }],
           niveaus: {
             basis: "G/ch + t-klank = cht → gracht.",
-            simpeler: "Hoor je een 'ch'-klank en daarna een 't'? Dan schrijf je altijd 'cht'. Gracht hoort daarbij.",
+            simpeler: "Hoor je een 'ch'-klank en daarna een 't'? Dan schrijf je bijna altijd 'cht'. Gracht hoort daarbij.",
             nogSimpeler: "Cht",
           },
         },
@@ -477,7 +477,7 @@ const steps = [
   // ─── C. Samenstellingen ───────────────────────────────
   {
     title: "Aaneen of los?",
-    explanation: "Een veelgemaakte fout: schrijf je *autobandenservice* als één woord, of *auto banden service* met spaties? In het Nederlands geldt:\n\n**HOOFDREGEL**: samenstellingen schrijf je **aan elkaar**.\n\n**Voorbeelden**:\n• schoolboek (niet \"school boek\")\n• fietsenrek (niet \"fietsen rek\")\n• zomervakantie (niet \"zomer vakantie\")\n• wereldkampioenschap\n• schoenfabriek\n• telefoonabonnement\n\n**Verschil met Engels**: in het Engels schrijf je samenstellingen vaak los (school book, swimming pool). In het Nederlands aan elkaar (schoolboek, zwembad).\n\n**Wanneer mag je een KOPPELTEKEN gebruiken?**\n\n**1. Bij klinker-botsing** (twee gelijke klinkers naast elkaar door samenstelling):\n• zee-egel (niet zeeegel)\n• na-apen\n• auto-onderdeel\n\n**2. Bij ondoorzichtige samenstellingen** (lezer raakt verward):\n• auto-immuun (= auto + immuun, niet 'autoim-muun')\n\n**3. Bij eigennamen + soortnamen**:\n• Sinterklaas-cadeau (mag, maar Sinterklaascadeau ook)\n• Amsterdam-Centraal\n\n**4. Bij drie of meer woorden** (lange samenstellingen):\n• kinder-tv-programma (= kinderprogramma op tv)\n• ja-knikker\n\n**5. Bij combinatie met cijfers of letters**:\n• 50-jarige, B-merk, 5-stappenplan\n\n**Beruchte fouten**:\n• \"te vinden\" → twee woorden ✓ (werkwoord met 'te')\n• \"tevreden\" → één woord ✓ (bijvoeglijk naamwoord)\n• \"in plaats van\" → drie woorden ✓\n• \"vanwege\" → één woord ✓\n\n**Twijfel?** Spellingcontrole van Word/Google Docs is vaak goed bij dit soort woorden.",
+    explanation: "Een veelgemaakte fout: schrijf je *autobandenservice* als één woord, of *auto banden service* met spaties? In het Nederlands geldt:\n\n**HOOFDREGEL**: samenstellingen schrijf je **aan elkaar**.\n\n**Voorbeelden**:\n• schoolboek (niet \"school boek\")\n• fietsenrek (niet \"fietsen rek\")\n• zomervakantie (niet \"zomer vakantie\")\n• wereldkampioenschap\n• schoenfabriek\n• telefoonabonnement\n\n**Verschil met Engels**: in het Engels schrijf je samenstellingen vaak los (school book, swimming pool). In het Nederlands aan elkaar (schoolboek, zwembad).\n\n**Wanneer mag je een KOPPELTEKEN gebruiken?**\n\n**1. Bij klinker-botsing** (twee gelijke klinkers naast elkaar door samenstelling):\n• zee-egel (niet zeeegel)\n• na-apen\n• auto-onderdeel\n\n**2. Bij ondoorzichtige samenstellingen** (lezer raakt verward):\n• auto-immuun (= auto + immuun, niet 'autoim-muun')\n\n**3. Bij eigennamen + soortnamen**:\n• Afrika-expert\n• Ajax-supporter\n\n**4. Bij afkortingen en woordgroepen**:\n• kinder-tv-programma (= kinderprogramma op tv)\n• ja-knikker\n\n**5. Bij combinatie met cijfers of letters**:\n• 50-jarige, B-merk, 5-stappenplan\n\n**Beruchte fouten**:\n• \"te vinden\" → twee woorden ✓ (werkwoord met 'te')\n• \"tevreden\" → één woord ✓ (bijvoeglijk naamwoord)\n• \"in plaats van\" → drie woorden ✓\n• \"vanwege\" → één woord ✓\n\n**Twijfel?** Spellingcontrole van Word/Google Docs is vaak goed bij dit soort woorden.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">samenstellingen → aan elkaar</text>
@@ -506,7 +506,7 @@ const steps = [
             { titel: "NL = aaneen", tekst: "Samenstellingen in NL: ALTIJD aan elkaar. Geen spatie, geen koppelteken (tenzij klinker-botsing)." },
           ],
           woorden: [{ woord: "samenstelling", uitleg: "2 woorden samen tot 1 nieuw woord: zomer + vakantie = zomervakantie." }],
-          theorie: "**Hoofdregel NL:** samenstellingen aaneen. Verschil met Engels (where 'school book' los is). NL: schoolboek, fietsenrek, zomervakantie.",
+          theorie: "**Hoofdregel NL:** samenstellingen aaneen. Verschil met Engels (waar 'school book' los is). NL: schoolboek, fietsenrek, zomervakantie.",
           voorbeelden: [{ type: "aaneen", tekst: "schoolboek, telefoonabonnement, wereldkampioenschap — allemaal 1 woord." }],
           basiskennis: [{ onderwerp: "Engels ≠ NL", uitleg: "In Engels: spaties OK. In NL: NEE. Lange woorden zijn normaal." }],
           niveaus: {
@@ -517,12 +517,12 @@ const steps = [
         },
       },
       {
-        q: "*Hoe spel je het samengestelde woord voor 'eieren van een zee-dier' (klinker-botsing kan optreden)?*",
+        q: "*Hoe spel je het samengestelde woord voor 'een stekelig dier uit de zee' (klinker-botsing kan optreden)?*",
         options: ["zee-egel", "zeeegel", "zeeëgel", "zee egel"],
         answer: 0,
         wrongHints: [
           null,
-          "Drie e's achter elkaar leest moeilijk — daarom mag het koppelteken.",
+          "Drie e's achter elkaar leest moeilijk — daarom komt er een koppelteken.",
           "Een trema (¨) gebruik je niet bij samenstellingen, alleen bij gewone woorden zoals 'reëel'.",
           "Samenstellingen schrijf je aaneen, geen spatie. Maar bij klinker-botsing: koppelteken.",
         ],
@@ -548,7 +548,7 @@ const steps = [
   },
   {
     title: "Tussen-n in samenstellingen",
-    explanation: "Bij sommige samenstellingen komt een **tussen-n** (en) tussen de twee delen. Wanneer wel, wanneer niet?\n\n**Hoofdregel** (geldt sinds spellingherziening 2005):\nDe **tussen-n** komt alleen als het eerste deel een **zelfstandig naamwoord** is dat in het meervoud op **-en** kan eindigen.\n\n**Voorbeelden mét tussen-n** (eerste deel heeft meervoud op -en):\n• padd**en**stoel (paddenstoel — meervoud van pad = padden)\n• pann**en**koek (meervoud van pan = pannen)\n• pinn**en**code (meervoud van pin = pinnen)\n• apen**bak**? Wacht, mag dit ook? Eigenlijk wel, want meervoud aap = apen. Schrijf 'apenbak'.\n\n**Voorbeelden ZONDER tussen-n** (eerste deel heeft geen meervoud op -en, of is geen zelfstandig naamwoord):\n• zonneschijn (zon → ja meervoud zonnen, dus → zonn**e**schijn? Nee, regel zegt: meervoud op -en is mogelijk = tussen-n schrijven. Hier dus zonneschijn met dubbel n, alleen één e ervoor — let op de spelling! Het wordt geschreven als 'zonneschijn' of 'zonn**e**schijn' — beide zijn het samen.\n\n  Wacht, ik moet dit duidelijker maken. De huidige regel:\n  zon → meervoud zonnen → samenstelling: zonneschijn (één keer 'n', dus de regel \"meervoud op -en\" geldt en je schrijft zonn**en**schijn? Dat is fout.\n\n  Eigenlijk is het: zonn**e**schijn (één extra n maar geen tweede n in 'schijn'). Hmm, even checken in een echt voorbeeld...\n\n**Eenvoudige praktijk-voorbeelden**:\n• paddenstoel ✓ (pad-padden)\n• pannenkoek ✓ (pan-pannen)\n• boekenkast ✓ (boek-boeken)\n• kindertelefoon ✗ (kind-kinderen, dus geen -en + n; je schrijft kinder + telefoon = kindertelefoon)\n\nOmgang met **uitzonderingen**:\n• Als het eerste deel maar één geslacht/vorm heeft (zon, maan, hemel) of géén meervoud op -en: dan **geen tussen-n**.\n• Bij **menselijke onderwerpen**: 'koningin' wordt 'konin**g**innenmoord' — meervoud koninginnen, dus -en.\n\n**Beste advies**: bij twijfel, gebruik een spellingchecker. Tussen-n is een van de meest verwarrende spellingregels van het Nederlands en zelfs experts maken hier soms fouten.",
+    explanation: "Bij sommige samenstellingen hoor je een **-e-**-klank tussen de twee delen: pannenkoek, zonnebloem. Schrijf je dan **-en-** of alleen **-e-**?\n\n**Hoofdregel** (sinds de spellingherziening van 2005):\nHeeft het eerste deel een **meervoud op -en**? Dan schrijf je **-en-**.\n• padd**en**stoel (pad → padden)\n• pann**en**koek (pan → pannen)\n• boek**en**kast (boek → boeken)\n• ap**en**bal (aap → apen)\n\nHeeft het eerste deel **geen meervoud op -en**? Dan schrijf je alleen **-e-**.\n• rijst**e**brij (rijst heeft geen meervoud)\n\n**Uitzonderingen**:\n• Is er maar één van (zon, maan)? Dan ook **-e-**: zonnebloem, zonneschijn, maneschijn.\n• Hoor je geen -e-? Dan voeg je niets toe: kinderboek, boekwinkel.\n\n**Beste advies**: twijfel je, zoek het woord dan op in de Woordenlijst (het 'Groene Boekje'). Tussen-n is een van de lastigste spellingregels — zelfs volwassenen maken hier fouten.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">tussen-n: regel sinds 2005</text>
@@ -577,8 +577,8 @@ const steps = [
             { titel: "Tussen-n-regel (sinds 2005)", tekst: "Eerste woord meervoud op -en? Tussen-n. Pan → pannen → pannenkoek." },
           ],
           woorden: [{ woord: "tussen-n", uitleg: "Extra n tussen 2 woorden in samenstelling — als eerste woord meervoud op -en heeft." }],
-          theorie: "Pan heeft meervoud 'pannen' (op -en). Dus samenstelling = pann + en + koek = pannenkoek. Vergelijk: 'paardenstal' (paard → paarden), 'kindertekening' (kind → kinderen).",
-          voorbeelden: [{ type: "tussen-n", tekst: "pannenkoek, paardenstal, kindertekening, hondenbak — allemaal met tussen-n." }],
+          theorie: "Pan heeft meervoud 'pannen' (op -en). Dus samenstelling = pann + en + koek = pannenkoek. Vergelijk: 'paardenstal' (paard → paarden), 'boekenkast' (boek → boeken).",
+          voorbeelden: [{ type: "tussen-n", tekst: "pannenkoek, paardenstal, boekenkast, hondenbak — allemaal met tussen-n." }],
           basiskennis: [{ onderwerp: "Geen koppelteken", uitleg: "Pan-koek bestaat niet. Samenstellingen schrijf je aaneen, geen streepje (tenzij klinker-botsing)." }],
           niveaus: {
             basis: "Pan → pannen → pannenkoek.",
@@ -591,7 +591,7 @@ const steps = [
   },
   {
     title: "Tussen-s — extra letter zonder duidelijke regel",
-    explanation: "Soms staat er een **tussen-s** in een samenstelling: \"verkeerslicht\", \"staatshoofd\", \"liefdesverklaring\". Anders dan de tussen-n is er **geen vaste regel** — je leert het per woord.\n\n**Wel of geen tussen-s?**\n\nDe tussen-s zit er als je hem in **uitspraak** ook duidelijk hoort. Dat blijkt achteraf — het is geen vooraf-regel.\n\n**Veel voorkomende woorden mét tussen-s**:\n• verkeerslicht (verkeer + licht)\n• staatsbezoek (staat + bezoek)\n• liefdesverdriet (liefde + verdriet)\n• meningsverschil (mening + verschil)\n• jaarverslag → géén tussen-s (jaar + verslag, schrijf gewoon 'jaarverslag')\n• geluidshinder (geluid + hinder) — mét tussen-s\n• beleidsvoornemen (beleid + voornemen) — mét tussen-s\n\n**Veelvoorkomende woorden ZONDER tussen-s**:\n• boekverkoper (boek + verkoper)\n• schoolfeest (school + feest)\n• zomeravond (zomer + avond)\n• kantoorgebouw (kantoor + gebouw)\n\n**Trucje**: spreek het uit. Hoor je een 's' tussen de twee delen? Dan hoort er een tussen-s.\n• \"verkeer-s-licht\" → ja, 's' hoorbaar → tussen-s\n• \"boek-verkoper\" → geen 's' tussen → geen tussen-s\n\n**Bij twijfel**: kijk in een woordenboek of laat de spellingchecker beslissen. Tussen-s is een van de moeilijkste onderdelen van Nederlandse spelling — fouten hier worden niet zwaar aangerekend.\n\n**Beruchte fout**:\n• \"meeting\" → geen tussen-s (Engels woord)\n• \"meningsverschil\" → wel tussen-s",
+    explanation: "Soms staat er een **tussen-s** in een samenstelling: \"verkeerslicht\", \"staatshoofd\", \"liefdesverklaring\". Anders dan de tussen-n is er **geen vaste regel** — je leert het per woord.\n\n**Wel of geen tussen-s?**\n\nDe tussen-s zit er als je hem in **uitspraak** ook duidelijk hoort. Dat blijkt achteraf — het is geen vooraf-regel.\n\n**Veel voorkomende woorden mét tussen-s**:\n• verkeerslicht (verkeer + licht)\n• staatsbezoek (staat + bezoek)\n• liefdesverdriet (liefde + verdriet)\n• meningsverschil (mening + verschil)\n• jaarverslag → géén tussen-s (jaar + verslag, schrijf gewoon 'jaarverslag')\n• geluidshinder (geluid + hinder) — mét tussen-s\n• beleidsvoornemen (beleid + voornemen) — mét tussen-s\n\n**Veelvoorkomende woorden ZONDER tussen-s**:\n• boekverkoper (boek + verkoper)\n• schoolfeest (school + feest)\n• zomeravond (zomer + avond)\n• kantoorgebouw (kantoor + gebouw)\n\n**Trucje**: spreek het uit. Hoor je een 's' tussen de twee delen? Dan hoort er een tussen-s.\n• \"verkeer-s-licht\" → ja, 's' hoorbaar → tussen-s\n• \"boek-verkoper\" → geen 's' tussen → geen tussen-s\n\n**Bij twijfel**: kijk in een woordenboek of laat de spellingchecker beslissen. Tussen-s is een van de moeilijkste onderdelen van Nederlandse spelling.\n\n**Beruchte fout**:\n• \"stadhuis\" → géén tussen-s (maar wel: stadsbus)\n• \"meningsverschil\" → wel tussen-s",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">tussen-s — geen vaste regel</text>
@@ -637,7 +637,7 @@ const steps = [
   // ─── D. Bijzondere gevallen ───────────────────────────
   {
     title: "Hoofdletters",
-    explanation: "**Hoofdletter wel of niet?** Een paar veelgebruikte regels:\n\n**Hoofdletter WEL**:\n\n**1. Aan het begin van een zin** ✓\n\n**2. Bij eigennamen** (personen, plaatsen, landen, instanties):\n• Anna, Mark, Johan\n• Amsterdam, Den Haag, Nederland\n• Albert Heijn, Universiteit Utrecht\n\n**3. Bij namen van talen, volken en bewoners** (als zelfstandig nw):\n• de Nederlanders, de Duitsers\n• Engels, Frans, Spaans\n\n**4. Maand- en dagnamen — NIET in Nederland** (wel in Engels):\n• ❌ \"Op Maandag\" → ✓ \"op maandag\"\n• ❌ \"In Augustus\" → ✓ \"in augustus\"\n\n**5. Beleefdheidsvormen** (formele brieven):\n• U, Uw — kan met hoofdletter in heel formele context\n\n**6. Afgeleiden van eigennamen** (vaak):\n• een Hollander, het Nederlandse → hoofdletter\n• maar: hollanditis, nederlandser → meestal kleine letter (afgeleide)\n\n**Hoofdletter NIET**:\n\n**1. Maand- en dagnamen** (zoals boven)\n• maandag, dinsdag... december\n\n**2. Seizoenen**:\n• lente, zomer, herfst, winter\n\n**3. Algemene namen die geen eigennaam zijn**:\n• een vader, een leerling, een school\n• Maar: \"een Vader van twee kinderen\" → toch klein, want algemeen.\n\n**4. Functies en titels** (meestal):\n• de minister, de president — meestal klein\n• Mark Rutte, premier van Nederland → \"premier\" klein\n\n**Beruchte instinkers**:\n• \"de Tweede Wereldoorlog\" — Tweede en Wereldoorlog: hoofdletters (eigennaam-achtig event)\n• \"de Eerste Kamer\" — beide hoofdletters\n• \"het Wilhelmus\" — eigennaam (volkslied), hoofdletter\n• \"de holocaust\" — meestal klein in modern Nederlands\n• Bij twijfel: de regering wisselt soms van mening — kijk woordenlijst.",
+    explanation: "**Hoofdletter wel of niet?** Een paar veelgebruikte regels:\n\n**Hoofdletter WEL**:\n\n**1. Aan het begin van een zin** ✓\n\n**2. Bij eigennamen** (personen, plaatsen, landen, instanties):\n• Anna, Mark, Johan\n• Amsterdam, Den Haag, Nederland\n• Albert Heijn, Universiteit Utrecht\n\n**3. Bij namen van talen, volken en bewoners** (als zelfstandig nw):\n• de Nederlanders, de Duitsers\n• Engels, Frans, Spaans\n\n**4. Maand- en dagnamen — NIET in Nederland** (wel in Engels):\n• ❌ \"Op Maandag\" → ✓ \"op maandag\"\n• ❌ \"In Augustus\" → ✓ \"in augustus\"\n\n**5. Beleefdheidsvormen** (formele brieven):\n• U, Uw — kan met hoofdletter in heel formele context\n\n**6. Afgeleiden van eigennamen** (vaak):\n• een Hollander, het Nederlandse → hoofdletter\n• maar: hollanditis, calvinisme → kleine letter (afgeleide)\n\n**Hoofdletter NIET**:\n\n**1. Maand- en dagnamen** (zoals boven)\n• maandag, dinsdag... december\n\n**2. Seizoenen**:\n• lente, zomer, herfst, winter\n\n**3. Algemene namen die geen eigennaam zijn**:\n• een vader, een leerling, een school\n• Dus ook: \"een vader van twee kinderen\" → klein.\n\n**4. Functies en titels** (meestal):\n• de minister, de president — meestal klein\n• de premier van Nederland → \"premier\" klein\n\n**Beruchte instinkers**:\n• \"de Tweede Wereldoorlog\" — Tweede en Wereldoorlog: hoofdletters (eigennaam-achtig event)\n• \"de Eerste Kamer\" — beide hoofdletters\n• \"het Wilhelmus\" — eigennaam (volkslied), hoofdletter\n• \"de Holocaust\" (de jodenvervolging) — hoofdletter\n• Bij twijfel: kijk in de Woordenlijst.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">hoofdletters in NL</text>
@@ -670,7 +670,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "3 hoofdletter-checks", tekst: "(1) Begin van zin: hoofdletter. (2) Eigennaam (Nederland): hoofdletter. (3) Maand (december): GEEN hoofdletter in NL." },
-            { titel: "Loop A langs", tekst: "Mijn (begin zin ✓) vader (gewoon zn ✓) december (maand ✓) Nederland (eigennaam ✓). A is correct." },
+            { titel: "Loop de eerste zin langs", tekst: "Mijn (begin zin ✓) vader (gewoon zn ✓) december (maand ✓) Nederland (eigennaam ✓). Alles klopt." },
           ],
           woorden: [
             { woord: "eigennaam", uitleg: "Naam van persoon, plaats, instantie — krijgt hoofdletter (Mark, Amsterdam, AH)." },
@@ -681,7 +681,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Begin altijd hoofdletter", uitleg: "Eerste woord van zin = ALTIJD hoofdletter, ook als het 'mijn' is." }],
           niveaus: {
             basis: "Begin (Mijn) + Nederland hoofdletter. December klein.",
-            simpeler: "In NL: maandnamen klein (december). Eigennamen hoofdletter (Nederland). Begin van zin altijd hoofdletter (Mijn). Optie A heeft alle 3 goed.",
+            simpeler: "In NL: maandnamen klein (december). Eigennamen hoofdletter (Nederland). Begin van zin altijd hoofdletter (Mijn). Eén zin heeft alle 3 goed.",
             nogSimpeler: "NL: maand klein, land hoofdletter",
           },
         },
@@ -690,7 +690,7 @@ const steps = [
   },
   {
     title: "Verkleinwoorden",
-    explanation: "Het **verkleinwoord** geef je met een **achtervoegsel**: -je, -tje, -etje, -pje, -kje. Welke kies je?\n\n**Hoofdregel**: hangt af van wat de **laatste letter** van het oorspronkelijke woord is.\n\n**1. -je** na 'doffe' medeklinker (b, d, k, p, s, t, ch, f):\n• boek → boekje\n• kop → kopje\n• kat → katje\n• tas → tasje\n• laf → lafje\n• lach → lachje\n\n**2. -tje** na klinker (a, e, i, o, u, oe, etc.) of na n, l, r in een open lettergreep:\n• auto → autootje (let op: extra o!)\n• ja → jaatje\n• boom → boompje (uitzondering, want -m: zie -pje)\n• maan → maantje\n• pen → pennetje (pe**nn**etje, dubbele n want kort)\n• man → mannetje\n• stoel → stoeltje\n• boer → boertje\n\n**3. -pje** na lange m of n na klinker:\n• boom → boompje\n• raam → raampje\n• arm → armpje\n• film → filmpje\n\n**4. -kje** na -ing (waarvan de g vrijwel niet meer hoorbaar is):\n• koning → koninkje\n• ketting → kettinkje\n• haring → harinkje\n\n**5. -etje** na korte klank waarbij medeklinker verdubbeld wordt:\n• man → mannetje\n• pen → pennetje\n• ram → rammetje\n• kar → karretje\n• vol → volletje (vol-le-tje)\n\n**Examenvraag**: \"Wat is het verkleinwoord van X?\" — pas de regel toe.\n\n**Beruchte fouten**:\n• kind → kindje (niet kindetje)\n• meisje (uitzondering, geen 'meidetje')\n• jongetje (uitzondering: jongen + tje? eigenlijk jongen → jong + etje + verdubbeling g? nee, het is gewoon 'jongetje')",
+    explanation: "Het **verkleinwoord** geef je met een **achtervoegsel**: -je, -tje, -etje, -pje, -kje. Welke kies je?\n\n**Hoofdregel**: hangt af van wat de **laatste letter** van het oorspronkelijke woord is.\n\n**1. -je** na 'doffe' medeklinker (b, d, k, p, s, t, ch, f):\n• boek → boekje\n• kop → kopje\n• kat → katje\n• tas → tasje\n• laf → lafje\n• lach → lachje\n\n**2. -tje** na klinker (a, e, i, o, u, oe, etc.) of na lange klank + n, l, r:\n• auto → autootje (let op: extra o!)\n• ja → jaatje\n• maan → maantje\n• stoel → stoeltje\n• boer → boertje\n\n**3. -pje** na een m (na lange klank of na l/r):\n• boom → boompje\n• raam → raampje\n• arm → armpje\n• film → filmpje\n\n**4. -kje** na -ing (waarvan de g vrijwel niet meer hoorbaar is):\n• koning → koninkje\n• ketting → kettinkje\n• haring → harinkje\n\n**5. -etje** na korte klank waarbij medeklinker verdubbeld wordt:\n• man → mannetje\n• pen → pennetje\n• ram → rammetje\n• kar → karretje\n• bal → balletje\n\n**Examenvraag**: \"Wat is het verkleinwoord van X?\" — pas de regel toe.\n\n**Beruchte fouten**:\n• kind → kindje (niet kindetje)\n• meisje (uitzondering, geen 'meidetje')\n• jongen → jongetje (uitzondering)",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">verkleinwoorden — kies je achtervoegsel</text>
@@ -746,7 +746,7 @@ const steps = [
           woorden: [
             { woord: "klinker-verdubbeling", uitleg: "Bij verkleinwoord van woord op klinker: extra klinker invoegen om klank te bewaren." },
           ],
-          theorie: "Bij woord op KLINKER + verkleinwoord: extra klinker invoegen vóór -tje. auto → autootje, jaar → jaartje, baby → baby'tje (ander pad).",
+          theorie: "Bij woord op KLINKER + verkleinwoord: extra klinker invoegen vóór -tje. auto → autootje, oma → omaatje, baby → baby'tje (ander pad).",
           voorbeelden: [{ type: "klinker", tekst: "auto → autootje, foto → fotootje, taxi → taxi'tje (apostrof)." }],
           basiskennis: [{ onderwerp: "Spreek-truc", uitleg: "Zeg 'autootje' — voelt natuurlijk. 'Autotje' niet." }],
           niveaus: {
@@ -760,7 +760,7 @@ const steps = [
   },
   {
     title: "Apostrof — wanneer 's, 'n, 'r?",
-    explanation: "De **apostrof** ( ' ) gebruik je in Nederlands op specifieke plekken:\n\n**1. Bij meervouden van woorden die op a, i, o, u, y eindigen**:\n• auto → auto's\n• mama → mama's\n• taxi → taxi's\n• menu → menu's\n• baby → baby's\n• foto → foto's\n• cadeau → cadeau's\n\n*Waarom?* Zonder apostrof zou je 'autos' lezen alsof de o kort is. De apostrof zegt: \"de klinker daarvóór blijft lang\".\n\n**Uitzondering**: na -e bij Engelse woorden geen apostrof:\n• cafés (de é is al lang vanwege accent)\n\n**2. Bij bezit (genitief) van eigennamen op a, i, o, u, y**:\n• Anna's auto\n• Marko's huis\n• Amy's broer\n\n**Geen apostrof**: bij medeklinker-eindes:\n• Marks huis (niet Mark's)\n• Janneke's? Nee — Jannekes (eindigt op e).\n\n**3. Bij weglatingen** (informeel):\n• 'k weet het niet (= ik)\n• 'n hond (= een)\n• 's morgens (= des morgens, oud Nederlands)\n• d'r tas (= haar)\n\n**4. Bij verkleinwoorden van woorden uit punt 1**:\n• auto's → autootje (verkleinwoord, geen apostrof meer want -tje)\n• Maar in meervoud van verkleinwoord kan je weer apostrof zien: \"autotjes\"? Nee, gewoon autotjes.\n\n**Beruchte fouten**:\n• ❌ Mark's auto → ✓ Marks auto (Engels-stijl, niet NL)\n• ❌ apple's → ✓ apples (NL: appels)\n• ❌ De auto's gaan rijden → vraag: meervoud (= veel auto's)? of bezit (= van de auto)?\n  • Meervoud: \"De auto's staan op het plein.\" ✓\n  • Bezit (1 auto): \"De auto's deur staat open.\" → ✓ apostrof bij meervoud OF bezit\n\nIn moderne tekst is het bezit-pattern (apostrof + s) bij meervoud minder gebruikelijk dan in Engels. Je gebruikt dan vaker 'van': \"De deur van de auto staat open.\"",
+    explanation: "De **apostrof** ( ' ) gebruik je in Nederlands op specifieke plekken:\n\n**1. Bij meervouden van woorden die op a, i, o, u, y eindigen**:\n• auto → auto's\n• mama → mama's\n• taxi → taxi's\n• menu → menu's\n• baby → baby's\n• foto → foto's\n• paraplu → paraplu's\n\n*Waarom?* Zonder apostrof zou je 'autos' lezen alsof de o kort is. De apostrof zegt: \"de klinker daarvóór blijft lang\".\n\n**Uitzondering**: na é geen apostrof:\n• cafés (de é is al lang vanwege accent)\n\n**2. Bij bezit (genitief) van eigennamen op a, i, o, u, y**:\n• Anna's auto\n• Marko's huis\n• Amy's broer\n\n**Geen apostrof**: bij medeklinker-eindes:\n• Marks huis (niet Mark's)\n• Janneke's? Nee — Jannekes (eindigt op e).\n\n**3. Bij weglatingen** (informeel):\n• 'k weet het niet (= ik)\n• 'n hond (= een)\n• 's morgens (= des morgens, oud Nederlands)\n• d'r tas (= haar)\n\n**4. Bij verkleinwoorden van woorden uit punt 1**:\n• auto → autootje → meervoud: autootjes (geen apostrof)\n\n**Beruchte fouten**:\n• ❌ Mark's auto → ✓ Marks auto (Engels-stijl, niet NL)\n• ❌ appel's → ✓ appels\n• ❌ \"De auto's deur staat open.\" → ✓ \"De deur van de auto staat open.\" Bij gewone woorden gebruik je voor bezit 'van'.\n• ✓ \"De auto's staan op het plein.\" (meervoud)",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">apostrof — wanneer?</text>
@@ -839,7 +839,7 @@ const steps = [
         },
       },
       {
-        q: "*Welke spelling is correct?*",
+        q: "*Wat is het meervoud van 'man'?*",
         options: ["mannen", "manen", "manens", "manne"],
         answer: 0,
         wrongHints: [
@@ -857,7 +857,7 @@ const steps = [
             { woord: "verdubbel-regel", uitleg: "Korte klinker + meervoud op -en → medeklinker verdubbelen." },
           ],
           theorie: "Man (kort) → mannen (verdubbel). Maan (lang) → manen (1 a). Verschillende woorden, verschillende meervoud.",
-          voorbeelden: [{ type: "kort vs lang", tekst: "man → mannen, maan → manen. Hond → honden, hond gaat anders (lange klank in honden? nee, honden korte o → hondden zou je verwachten maar wegens d-stam wordt het 'honden')." }],
+          voorbeelden: [{ type: "kort vs lang", tekst: "man → mannen, maan → manen, pop → poppen, poot → poten." }],
           basiskennis: [{ onderwerp: "Hoor de klank", uitleg: "Mèn (kort) of maan (lang)? Bepaalt de spelling." }],
           niveaus: {
             basis: "Man (kort) → mannen (verdubbel).",
@@ -894,7 +894,7 @@ const steps = [
           basiskennis: [{ onderwerp: "NL ≠ Engels", uitleg: "In Engels: December, August. In NL: december, augustus." }],
           niveaus: {
             basis: "Frankrijk = hoofd, augustus = klein.",
-            simpeler: "Loop de zin langs: zomer (klein OK), vakantie (klein OK), frankrijk (FOUT — moet hoofdletter want land), Augustus (FOUT — moet klein want maand). Antwoord A noemt deze 2.",
+            simpeler: "Loop de zin langs: zomer (klein OK), vakantie (klein OK), frankrijk (FOUT — moet hoofdletter want land), Augustus (FOUT — moet klein want maand). Eén antwoord noemt precies deze 2.",
             nogSimpeler: "Frankrijk + augustus",
           },
         },
@@ -947,22 +947,22 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Wind = ou (niet au — kaud bestaat niet). Bomen = lange klank in open lettergreep, één o (niet boomen).",
+          "Koud = ou (niet au — kaud bestaat niet). Bomen = lange klank in open lettergreep, één o (niet boomen).",
           "Audi is een merk, oud is een woord. 'Aud' bestaat in dit verband niet.",
           "Wind = met d (niet wint). Verleng: winden — d klinkt.",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Check elk woord", tekst: "Koude (ou ✓), wind (eindigt op d, verleng winden = d ✓), oude (ou ✓), bomen (lang in open lettergreep = 1 o ✓)." },
-            { titel: "Vergelijk fouten", tekst: "B: kaude (au ✗) + boomen (2 o's ✗). C: aude (au ✗). D: wint (verleng winden = d niet t)." },
+            { titel: "Vergelijk fouten", tekst: "Fouten elders: kaude (au ✗), boomen (2 o's ✗), aude (au ✗), wint (verleng winden = d, niet t)." },
           ],
           woorden: [{ woord: "verleng-truc", uitleg: "Maak woord langer (meervoud / werkwoordvorm) om echte eindletter te horen." }],
           theorie: "Mix-vraag: combineer ou-regel + verleng-truc + lange-klinker-regel. Loop elk woord systematisch langs.",
           voorbeelden: [{ type: "regels", tekst: "Wind → winden = D. Koud = ou-woord. Bomen = open lettergreep, 1 o." }],
           basiskennis: [{ onderwerp: "Systematisch lezen", uitleg: "Bij zinnen: check elk woord apart, niet in 1 oogopslag." }],
           niveaus: {
-            basis: "Alle 4 woorden in A correct.",
-            simpeler: "Lees A langs: koude ✓ (ou), wind ✓ (d), oude ✓ (ou), bomen ✓ (1 o). Andere opties hebben ergens een fout.",
+            basis: "Alle 4 woorden in de eerste zin correct.",
+            simpeler: "Lees de eerste zin langs: koude ✓ (ou), wind ✓ (d), oude ✓ (ou), bomen ✓ (1 o). Andere opties hebben ergens een fout.",
             nogSimpeler: "Allemaal goed",
           },
         },
@@ -1009,7 +1009,7 @@ const steps = [
           ],
           woorden: [{ woord: "-kje achtervoegsel", uitleg: "Speciaal verkleinwoord-uitgang voor -ing-woorden." }],
           theorie: "**Verkleinwoord-regel-ing:** -ing → -inkje. De g 'verandert' in k, dan + je.",
-          voorbeelden: [{ type: "ing-kje", tekst: "koning → koninkje, ketting → kettinkje, haring → harinkje, ring → rinkje." }],
+          voorbeelden: [{ type: "ing-kje", tekst: "koning → koninkje, ketting → kettinkje, haring → harinkje, woning → woninkje." }],
           basiskennis: [{ onderwerp: "Klank verandert", uitleg: "Spreek 'koningje' uit — voelt onnatuurlijk. 'Koninkje' is wat je hoort." }],
           niveaus: {
             basis: "-ing → -kje → koninkje.",
@@ -1026,19 +1026,19 @@ const steps = [
           null,
           "Vóór een t-klank schrijf je in het Nederlands cht — niet alleen ct.",
           "cgt bestaat niet als combinatie in het Nederlands.",
-          "gt bestaat ook niet als deze klank — het is altijd cht.",
+          "Bij een woord als dit schrijf je cht (gt zie je alleen bij werkwoorden zoals 'zegt').",
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Cht-regel", tekst: "Hoor je 'g/ch'-klank gevolgd door t? Schrijf altijd 'cht'. Lucht = lu + cht." },
+            { titel: "Cht-regel", tekst: "Hoor je 'g/ch'-klank gevolgd door t? Schrijf (bijna) altijd 'cht'. Lucht = lu + cht." },
           ],
           woorden: [{ woord: "cht-combinatie", uitleg: "Vaste NL-spelling voor g/ch-klank + t-klank." }],
-          theorie: "Andere combinaties (ct, cgt, gt) bestaan niet voor deze klank. Alleen cht.",
+          theorie: "Ct en cgt bestaan niet voor deze klank. Gt zie je alleen bij werkwoorden (hij zegt, ligt).",
           voorbeelden: [{ type: "cht", tekst: "lucht, slecht, recht, vrucht, dochter, lichten — allemaal cht." }],
-          basiskennis: [{ onderwerp: "Vast", uitleg: "G/ch + t-klank = cht. Geen uitzonderingen." }],
+          basiskennis: [{ onderwerp: "Vast", uitleg: "G/ch + t-klank = cht. Uitzondering: werkwoorden met g in de stam (zeggen → zegt)." }],
           niveaus: {
             basis: "Lucht = cht.",
-            simpeler: "Hoor je in 'lucht' een 'ch'-klank gevolgd door 't'? Ja. Dan altijd 'cht'. Lucht.",
+            simpeler: "Hoor je in 'lucht' een 'ch'-klank gevolgd door 't'? Ja. Dan (bijna) altijd 'cht'. Lucht.",
             nogSimpeler: "Cht",
           },
         },

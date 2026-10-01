@@ -16,7 +16,7 @@ const steps = [
   {
     title: "De persoonsvorm vinden",
     explanation:
-      "De **persoonsvorm** is het werkwoord in de zin dat **verandert** als je de tijd of het aantal verandert. Er staat er altijd precies één in een hele zin.\n\n" +
+      "De **persoonsvorm** is het werkwoord in de zin dat **verandert** als je de tijd of het aantal verandert. In een gewone zin staat er precies één.\n\n" +
       "**Twee trucs om 'm te vinden:**\n" +
       "1. **Zet de zin in een andere tijd** (bijv. verleden tijd). Het woord dat dan verandert, is de persoonsvorm.\n" +
       "   *De hond blaft.* → *De hond blafte.* → 'blaft/blafte' verandert = persoonsvorm.\n" +
@@ -109,16 +109,16 @@ const steps = [
         },
       },
       {
-        q: "Wat is de persoonsvorm? *Gaat jullie morgen mee?*",
-        options: ["Gaat", "jullie", "morgen", "mee"],
+        q: "Wat is de persoonsvorm? *Gaan jullie morgen mee?*",
+        options: ["Gaan", "jullie", "morgen", "mee"],
         answer: 0,
         wrongHints: [null, "Dat is het onderwerp.", "Dat zegt wanneer.", "Dat zegt waarheen, geen werkwoord."],
         uitlegPad: {
-          stappen: [{ titel: "Vraagzin: pv staat vooraan", tekst: "In een vraagzin staat de persoonsvorm altijd vooraan. 'Gaat' staat vooraan → persoonsvorm." }],
+          stappen: [{ titel: "Vraagzin: pv staat vooraan", tekst: "In een vraagzin staat de persoonsvorm altijd vooraan. 'Gaan' staat vooraan → persoonsvorm." }],
           niveaus: {
             basis: "In een vraagzin staat de persoonsvorm als eerste woord.",
             simpeler: "Welk woord staat helemaal vooraan in deze vraag?",
-            nogSimpeler: "Gaat staat vooraan: is dat het werkwoord?",
+            nogSimpeler: "Gaan staat vooraan: is dat het werkwoord?",
           },
         },
       },
@@ -333,7 +333,7 @@ const steps = [
           niveaus: {
             basis: "Eén vogel → 'zingt'. Onderwerp en werkwoord passen bij elkaar.",
             simpeler: "Is het één vogel of meerdere? Check dan het werkwoord.",
-            nogSimpeler: "Één vogel: de vogel … (enkelvoud van zingen).",
+            nogSimpeler: "Eén vogel: de vogel … (enkelvoud van zingen).",
           },
         },
       },

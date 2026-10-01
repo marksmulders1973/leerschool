@@ -360,7 +360,7 @@ const steps = [
           ],
           niveaus: {
             basis: "'U' + 'uw kind' + de lezer moet een zwemschool kiezen — wie doet dat?",
-            simpeler: "De lezer heeft zelf een kind ('uw kind') en moet een zwemschool uitzoeken, naar de wachtlijst vragen en op de kosten letten. Wie regelt zulke dingen in een gezin?",
+            simpeler: "De lezer heeft zelf een kind ('uw kind') en moet een zwemschool uitzoeken en naar de wachtlijst en diplomagarantie vragen. Wie regelt zulke dingen in een gezin?",
             nogSimpeler: "Wie kiest er thuis de zwemschool en betaalt de lessen? Die persoon moet deze tekst lezen.",
           },
         },
@@ -412,7 +412,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Check de aanspreekvorm", tekst: "'Beste ouders' + 'u' — dit zijn drie aanwijzingen in één: de schrijver noemt de doelgroep zelfs bij naam." },
+            { titel: "Check de aanspreekvorm", tekst: "'Beste ouders' + 'u' — twee aanwijzingen tegelijk: de schrijver noemt de doelgroep zelfs bij naam." },
             { titel: "Check het onderwerp", tekst: "Een ouderavond is een avond waarvoor ouders of verzorgers worden uitgenodigd, niet leerlingen." },
             { titel: "Conclusie", tekst: "Aangesproken als 'ouders' + u-vorm + ouderavond → doelgroep is ouders." },
           ],
@@ -429,7 +429,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "De aanspreekvorm 'jij' en 'jou' past bij welke groep?",
+          "De aanspreekvorm 'jij' en 'je' past bij welke groep?",
           "Gaat het over tanden of over een beroep? Kijk naar wat de lezer móét doen.",
           null,
         ],
@@ -656,7 +656,7 @@ const steps = [
           "Degene die boodschappen doet — die moet het pak kopen",
           "De juf — die moet het in de klas uitdelen",
           "De onderzoekers — die moeten verder onderzoeken",
-          "De goudvis — die moet het opeten",
+          "De supermarkt — die moet meer pakken inkopen",
         ],
         answer: 0,
         evidence: "Haal deze week een pak Ochtendkracht bij supermarkt De Knabbelhoek",
@@ -698,7 +698,7 @@ const steps = [
     explanation:
       "Tijd voor een echte oefening in Doorstroomtoets-stijl. Je leest één tekst en krijgt er vragen over het **schrijversdoel** en de **doelgroep** bij — precies zoals op de toets. Gebruik alles wat je geleerd hebt: de vier doelen, de drie doelgroep-aanwijzingen én je speurneus voor een dubbel doel.\n\n" +
       egelTekst +
-      "\n\n*Beantwoord de 5 vragen op basis van de tekst hierboven.*",
+      "\n\n*Beantwoord de vragen op basis van de tekst hierboven.*",
     checks: [
       {
         q: "Waarom heeft de schrijver deze tekst VOORAL geschreven?",

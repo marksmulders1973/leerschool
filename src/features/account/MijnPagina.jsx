@@ -16,7 +16,7 @@ import KoppelcodeBanner from "../../components/KoppelcodeBanner.jsx";
 import TrouweGastKaart from "./TrouweGastKaart.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
-import WieOefentEr, { leesProfielen } from "./WieOefentEr.jsx";
+import WieOefentEr from "./WieOefentEr.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
@@ -555,8 +555,14 @@ export default function MijnPagina({
   // 👨‍👩‍👧 "Wie oefent er?" (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): bij openen
   // met 2+ profielen op dit apparaat eerst kiezen (zoals Netflix), daarna via "Wissel".
   const [meerOpen, setMeerOpen] = useState(false);
+  // Mark 1 okt 2026 (middag): "als je naar Mijn pagina gaat altijd hier beginnen". Alleen direct na
+  // een keuze niet opnieuw (de pagina start opnieuw op bij een profielwissel): lk_wie_net = gekozen naam.
   const [wieOpen, setWieOpen] = useState(() => {
-    try { return leesProfielen().length >= 2 && !sessionStorage.getItem("lk_wie_gekozen"); } catch { return false; }
+    try {
+      const net = sessionStorage.getItem("lk_wie_net");
+      if (net !== null && net === (player || "")) { sessionStorage.removeItem("lk_wie_net"); return false; }
+    } catch { /* */ }
+    return true;
   });
   const [wieNieuw, setWieNieuw] = useState(false);
   // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
@@ -1002,8 +1008,11 @@ export default function MijnPagina({
         <WieOefentEr
           huidigeNaam={player}
           startNieuw={wieNieuw}
-          onKies={(naam) => { setWieOpen(false); setProfielVersie((v) => v + 1); if (naam !== player && onWisselProfiel) onWisselProfiel(naam); }}
-          onSluit={() => { try { sessionStorage.setItem("lk_wie_gekozen", "1"); } catch { /* */ } setWieOpen(false); }}
+          onKies={(naam) => {
+            setWieOpen(false); setWieNieuw(false); setProfielVersie((v) => v + 1);
+            if (naam !== player && onWisselProfiel) { try { sessionStorage.setItem("lk_wie_net", naam); } catch { /* */ } onWisselProfiel(naam); }
+          }}
+          onSluit={() => { setWieOpen(false); setWieNieuw(false); if (onBack) onBack(); }}
           onVerwijder={(naam) => { if (onVerwijderProfiel) onVerwijderProfiel(naam); setProfielVersie((v) => v + 1); }}
         />
       )}

@@ -357,7 +357,7 @@
       "frictie",
       "structureel"
     ],
-    "intro": "Macro-economie voor klas 4-5 — BBP (totale productie, nominaal vs reëel), conjunctuur (opgang/piek/recessie/dal, 2 kwartalen rule), inflatie (vraag/kosten, hyperinflatie Weimar/Zimbabwe, koopkracht), ",
+    "intro": "Macro-economie voor klas 4-5 — BBP (totale productie, nominaal vs reëel), conjunctuur (opgang/piek/recessie/dal, 2-kwartalenregel), inflatie (vraag/kosten, hyperinflatie Weimar/Zimbabwe, koopkracht), ",
     "stepCount": 6,
     "checkCount": 42,
     "chapterCount": 6,
@@ -831,7 +831,7 @@
       "onderwerpregel",
       "doel van de tekst"
     ],
-    "intro": "Een brief van school of een e-mail van de sportclub — op de Doorstroomtoets krijg je er altijd vragen over. Leer de vaste onderdelen kennen (afzender, aanhef, ondertekening...), bepaal het doel van de",
+    "intro": "Een brief van school of een e-mail van de sportclub — op de Doorstroomtoets krijg je er vaak vragen over. Leer de vaste onderdelen kennen (afzender, aanhef, ondertekening...), bepaal het doel van de s",
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,
@@ -956,7 +956,7 @@
   {
     "id": "cito-strategieen-groep8",
     "file": "./citoStrategieenGroep8.js",
-    "title": "De toets Doorstroomtoets — strategieën voor groep 8",
+    "title": "Doorstroomtoets — strategieën voor groep 8",
     "subject": "cito",
     "level": "groep8",
     "emoji": "🎯",
@@ -1610,7 +1610,7 @@
       "amn",
       "dia"
     ],
-    "intro": "~75 Doorstroomtoets-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Voorbeelden uit de toets: gratis voorbeeldopgavenboekje",
+    "intro": "~75 Doorstroomtoets-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte voorbeelden uit de toets: gratis voorbeeldopgavenboekje",
     "stepCount": 6,
     "checkCount": 264,
     "chapterCount": 4,
@@ -1957,7 +1957,7 @@
       "irony",
       "sarcasm"
     ],
-    "intro": "Engels CSE HAVO/VWO — leesvaardigheid op lange teksten (1000+ woorden) + register-analyse + 8 vraagsoorten + literair fragment (alleen VWO) + tone/mood/character-analyse. Diepe-uitbreiding van VMBO-st",
+    "intro": "Engels CSE HAVO/VWO — leesvaardigheid op lange teksten (1000+ woorden) + register-analyse + 8 vraagsoorten + literair fragment (alleen VWO) + tone/mood/character-analyse. Verdieping van de VMBO-strate",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -2480,7 +2480,7 @@
       "melkrobot",
       "zuivelboer"
     ],
-    "intro": "10 echte examenvragen uit het VMBO-GL/TL economie-examen 2025 tijdvak 1. Per vraag krijg je de informatiebron uit de bijlage als nette tabel of tekst, de 4 antwoorden uit het examen, en daarna de '📖 ",
+    "intro": "9 echte examenvragen uit het VMBO-GL/TL economie-examen 2025 tijdvak 1. Per vraag krijg je de informatiebron uit de bijlage als nette tabel of tekst, de 4 antwoorden uit het examen, en daarna de '📖 L",
     "stepCount": 9,
     "checkCount": 9,
     "chapterCount": 6,
@@ -2682,7 +2682,7 @@
       "begrijpend lezen engels",
       "reading comprehension"
     ],
-    "intro": "9 echte examenvragen uit VMBO-GL/TL Engels 2025 tijdvak 1, verdeeld over 3 leesteksten (UFO sightings, e-scooter battery fires, microplastics research). Per vraag de echte 4 antwoorden, denkprikkel-hi",
+    "intro": "9 echte examenvragen uit VMBO-GL/TL Engels 2025 tijdvak 1, verdeeld over 3 leesteksten (UFO sightings, e-scooter battery fires, microplastics research). Per vraag de echte antwoordopties, denkprikkel-",
     "stepCount": 9,
     "checkCount": 9,
     "chapterCount": 3,
@@ -3568,7 +3568,7 @@
       "homozygoot",
       "heterozygoot"
     ],
-    "intro": "Hoe eigenschappen van ouders aan kinderen worden doorgegeven via DNA. Van basisbouw (chromosomen + genen + allelen) via Mendel's wetten (dominant/recessief, Punnett-tabellen) tot geslachtsbepaling, st",
+    "intro": "Hoe eigenschappen van ouders aan kinderen worden doorgegeven via DNA. Van basisbouw (chromosomen + genen + allelen) via Mendels wetten (dominant/recessief, Punnett-tabellen) tot geslachtsbepaling, sta",
     "stepCount": 9,
     "checkCount": 35,
     "chapterCount": 5,
@@ -5060,12 +5060,12 @@
   {
     "id": "marktvormen-havo-vwo",
     "file": "./marktvormenHavoVwo.js",
-    "title": "Marktvormen + Markfalen (HAVO/VWO Economie)",
+    "title": "Marktvormen + Marktfalen (HAVO/VWO Economie)",
     "subject": "economie",
     "level": "havo-vwo-4-5",
     "emoji": "🏪",
     "referentieNiveau": "havo-3F / vwo-3S",
-    "sloThema": "Economie — Marktvormen + Markfalen + Inkomensverdeling (CSE-onderwerp)",
+    "sloThema": "Economie — Marktvormen + Marktfalen + Inkomensverdeling (CSE-onderwerp)",
     "triggerKeywords": [
       "vraag",
       "aanbod",
@@ -5080,7 +5080,7 @@
       "monopolistische concurrentie",
       "oligopolie"
     ],
-    "intro": "Marktvormen + Markfalen voor HAVO/VWO eindexamen — vraag+aanbod, prijselasticiteit, vier marktvormen, markfalen + externaliteiten, overheidsingrijpen, inkomensverdeling (Lorenz, Gini). 5 stappen × 5 v",
+    "intro": "Marktvormen + Marktfalen voor HAVO/VWO eindexamen — vraag+aanbod, prijselasticiteit, vier marktvormen, marktfalen + externaliteiten, overheidsingrijpen, inkomensverdeling (Lorenz, Gini). 5 stappen × 5",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -5786,7 +5786,7 @@
       "go went gone",
       "eat ate eaten"
     ],
-    "intro": "Onregelmatige werkwoorden in het Engels — uitbreiding op het klas-1-pad. Patronen herkennen (AAA, ABA, AAB, ABC + klinker-shifts), de 30 meest voorkomende werkwoorden + slimme groepen zoals -ought/-au",
+    "intro": "Onregelmatige werkwoorden in het Engels — uitbreiding op het klas-1-pad. Patronen herkennen (AAA, ABA, ABB, ABC + klinker-shifts), de 30 meest voorkomende werkwoorden + slimme groepen zoals -ought/-au",
     "stepCount": 9,
     "checkCount": 34,
     "chapterCount": 5,
@@ -5958,7 +5958,7 @@
   {
     "id": "passe-compose-frans",
     "file": "./passeComposeFrans.js",
-    "title": "Passé composé (voltooid verleden tijd)",
+    "title": "Passé composé (Franse verleden tijd)",
     "subject": "frans",
     "level": "klas2-3",
     "emoji": "🇫🇷",
@@ -5978,7 +5978,7 @@
       "dr mrs vandertrampp",
       "vandertrampp"
     ],
-    "intro": "De voltooid verleden tijd in Frans: hulpwerkwoord avoir of être + participe passé. Met de DR & MRS VANDERTRAMPP-lijst voor être-werkwoorden, vorming p.p. (-é/-i/-u + onregelmatig), aanpassing aan onde",
+    "intro": "De passé composé in het Frans (lijkt op de Nederlandse voltooid tegenwoordige tijd): hulpwerkwoord avoir of être + participe passé. Met de DR & MRS VANDERTRAMPP-lijst voor être-werkwoorden, vorming p.",
     "stepCount": 10,
     "checkCount": 34,
     "chapterCount": 4,
@@ -6395,7 +6395,7 @@
       "stijging",
       "afname"
     ],
-    "intro": "Procenten kom je overal tegen — in de winkel, op je rekening, in nieuwsbericht. Hier leer je vanaf de basis: wat % betekent, omzettingen naar kommagetal en breuk, percentage van een getal, andersom, k",
+    "intro": "Procenten kom je overal tegen — in de winkel, op je rekening, in het nieuws. Hier leer je vanaf de basis: wat % betekent, omzettingen naar kommagetal en breuk, percentage van een getal, andersom, kort",
     "stepCount": 13,
     "checkCount": 25,
     "chapterCount": 6,
@@ -7218,7 +7218,7 @@
       "lange ij",
       "voornaamwoorden ij"
     ],
-    "intro": "De vier klassieke homofoon-paren in het Nederlands: ei vs ij (reis vs rijst) en au vs ou (paus vs pous). Met woordlijsten, trucjes (voornaamwoorden = ij, -oud + -ouw = ou) en context-voorbeelden. Voor",
+    "intro": "De vier klassieke homofoon-paren in het Nederlands: ei vs ij (reist vs rijst) en au vs ou (paus vs pous). Met woordlijsten, trucjes (voornaamwoorden = ij, -oud + -ouw = ou) en context-voorbeelden. Voo",
     "stepCount": 9,
     "checkCount": 40,
     "chapterCount": 4,
@@ -7304,7 +7304,7 @@
       "regering",
       "kabinet"
     ],
-    "intro": "Hoe ontstond ons huidige politieke systeem? Van koning Willem II (1848) via Thorbecke naar koning Willem-Alexander + kabinet Schoof (2024). VMBO-GT eindexamen-stof. 5 stappen × ~5 vragen. ~15 min.",
+    "intro": "Hoe ontstond ons huidige politieke systeem? Van koning Willem II (1848) via Thorbecke naar koning Willem-Alexander + de regering van nu. VMBO-GT eindexamen-stof. 5 stappen × ~5 vragen. ~15 min.",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -8340,7 +8340,7 @@
       "Rousseau",
       "volonté générale"
     ],
-    "intro": "Tijdvak Pruiken + Revoluties (1700-1900) HAVO/VWO geschiedenis. Verlichting (Locke/Voltaire/Montesquieu/Rousseau/Kant + verlicht despotisme), Amerikaanse Revolutie (1776 Jefferson + Locke-invloed), Fr",
+    "intro": "Tijdvak Pruiken + Revoluties (1700-1800) HAVO/VWO geschiedenis. Verlichting (Locke/Voltaire/Montesquieu/Rousseau/Kant + verlicht despotisme), Amerikaanse Revolutie (1776 Jefferson + Locke-invloed), Fr",
     "stepCount": 5,
     "checkCount": 25,
     "chapterCount": 5,
@@ -9128,7 +9128,7 @@
       "voorvoegsel",
       "meerdere betekenissen"
     ],
-    "intro": "Op de Doorstroomtoets komt hij gegarandeerd: de vraag \"Wat betekent 'X' in deze tekst?\". In dit deel leer je vier trucs om de betekenis uit de tekst zelf te halen — ook bij woorden die je nog nooit he",
+    "intro": "Op de Doorstroomtoets komt hij vrijwel altijd: de vraag \"Wat betekent 'X' in deze tekst?\". In dit deel leer je vier trucs om de betekenis uit de tekst zelf te halen — ook bij woorden die je nog nooit ",
     "stepCount": 4,
     "checkCount": 26,
     "chapterCount": 4,

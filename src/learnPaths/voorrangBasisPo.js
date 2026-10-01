@@ -190,7 +190,7 @@ const steps = [
     title: "Op een gelijkwaardig kruispunt",
     emoji: "↗️",
     explanation:
-      "Een **gelijkwaardig kruispunt** heeft **geen borden + geen stoplichten + geen haaientanden**.\n\n**Regel: rechts heeft voorrang**.\n\nIn het plaatje kom **jij van onderen** aanrijden op de fiets. **De auto komt van rechts** — dat is jouw rechterhand. Rechts heeft voorrang → de auto mag eerst, **jij wacht**.\n\nDit is de meest voorkomende voorrang-vraag op het VVN-examen. Onthoud: 'rechts gaat eerst'.",
+      "Een **gelijkwaardig kruispunt** heeft **geen borden + geen stoplichten + geen haaientanden**.\n\n**Regel: rechts heeft voorrang**.\n\nIn het plaatje kom **jij van onderen** aanrijden op de fiets. **De auto komt van rechts** — dat is jouw rechterhand. Rechts heeft voorrang → de auto mag eerst, **jij wacht**.\n\nDit is een veelvoorkomende voorrang-vraag op het VVN-examen. Onthoud: 'rechts gaat eerst'.",
     checks: [
       {
         q: "Bekijk de tekening. Wie heeft hier voorrang?",
@@ -246,7 +246,7 @@ const steps = [
         wrongHints: [null, "Niet — voetganger heeft voorrang, je MOET stoppen.", "Toeteren mag niet als voetganger oversteekt.", "Niet logisch."],
         uitlegPad: {
           stappen: [{ titel: "Zebra = voetganger eerst", tekst: "Op zebrapad heeft de **voetganger altijd voorrang** zodra hij oversteekt. Fietsers + auto's stoppen. Pas doorrijden als voetganger veilig op trottoir is." }],
-          theorie: "Boete bij overtreding: ~€280 voor auto, ~€110 voor fiets. Geldt ook voor scooter + e-step.",
+          theorie: "Geen voorrang geven kost een flinke boete. Geldt voor iedereen: auto, fiets, scooter.",
           niveaus: { basis: "Stoppen.", simpeler: "Zebra + voetganger = stop", nogSimpeler: "Stop" },
         },
       },
@@ -280,8 +280,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — rood is altijd stop, ook zonder verkeer.", "Niet — gevaarlijk + boete.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Rood = stop", tekst: "**Rood licht = altijd stoppen** voor de stopstreep. Wachten tot het licht zelf op groen springt. Geldt voor alle weggebruikers — ook fietsers (anders dan in België waar fietsers soms wel mogen)." }],
-          theorie: "Boete door rood fietsen: ~€110. Bij ongeluk dat door jou-door-rood ontstaat: jouw schuld.",
+          stappen: [{ titel: "Rood = stop", tekst: "**Rood licht = altijd stoppen** voor de stopstreep. Wachten tot het licht zelf op groen springt. Geldt ook voor fietsers — behalve waar een bordje 'rechtsaf voor fietsers vrij' hangt." }],
+          theorie: "Door rood fietsen kost een flinke boete (ruim €100). Ongeluk doordat jij door rood reed? Dan ben jij schuldig.",
           niveaus: { basis: "Stoppen + wachten.", simpeler: "Rood = stop", nogSimpeler: "Stop" },
         },
       },

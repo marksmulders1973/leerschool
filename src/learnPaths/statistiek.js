@@ -23,7 +23,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is statistiek?",
-    explanation: "**Statistiek** is het bestuderen van **gegevens** (data). Je verzamelt cijfers, ordent ze, en trekt conclusies.\n\n**Voorbeelden waar je statistiek tegenkomt**:\n• Gemiddelde cijfer in een toets\n• Aantal regenbuien per maand\n• Hoogste, laagste en gemiddelde temperatuur\n• Populairste sport in een klas\n• Aantal stemmen op een kandidaat\n\n**Twee fasen**:\n1. **Verzamelen + ordenen** (frequentietabel, staafdiagram)\n2. **Beschrijven** (gemiddelde, modus, mediaan)\n\n**Voorbeeld**: in een klas vragen we de schoenmaten:\n38, 40, 38, 42, 39, 38, 41, 40, 39, 38\n\nVan deze 10 getallen kunnen we van alles uitrekenen — daar gaan de volgende stappen over.",
+    explanation: "**Statistiek** is het bestuderen van **gegevens** (data). Je verzamelt cijfers, ordent ze, en trekt conclusies.\n\n**Voorbeelden waar je statistiek tegenkomt**:\n• Gemiddeld cijfer in een toets\n• Aantal regenbuien per maand\n• Hoogste, laagste en gemiddelde temperatuur\n• Populairste sport in een klas\n• Aantal stemmen op een kandidaat\n\n**Twee fasen**:\n1. **Verzamelen + ordenen** (frequentietabel, staafdiagram)\n2. **Beschrijven** (gemiddelde, modus, mediaan)\n\n**Voorbeeld**: in een klas vragen we de schoenmaten:\n38, 40, 38, 42, 39, 38, 41, 40, 39, 38\n\nVan deze 10 getallen kunnen we van alles uitrekenen — daar gaan de volgende stappen over.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="40" width="220" height="120" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <text x="150" y="62" text-anchor="middle" fill="${COLORS.text}" font-weight="bold" font-size="13" font-family="Arial">schoenmaten klas</text>
@@ -117,7 +117,7 @@ const steps = [
         wrongHints: [null, "Dat staat op de x-as.", "Percentages kunnen, maar in basis-staafdiagram is het frequentie.", "Het gemiddelde is één getal — geen as."],
         uitlegPad: {
           stappen: [{ titel: "Y-as = hoogte = aantal", tekst: "Bij standaard frequentie-staafdiagram: X-as = waardes (38, 39, 40...). Y-as = frequentie (HOE VAAK elke waarde voorkomt). Hoogte balk = frequentie." }],
-          woorden: [{ woord: "x-as", uitleg: "Horizontale as (links-rechts). Staan de categorieën/waardes." }, { woord: "y-as", uitleg: "Verticale as (boven-onder). Staan de aantallen/frequenties." }],
+          woorden: [{ woord: "x-as", uitleg: "Horizontale as (links-rechts). Hier staan de categorieën/waardes." }, { woord: "y-as", uitleg: "Verticale as (boven-onder). Hier staan de aantallen/frequenties." }],
           theorie: "Vaste conventie: x=horizontaal, y=verticaal. Onafhankelijke variabele (wat we meten) op x. Afhankelijke variabele (hoe vaak/hoeveel) op y.",
           voorbeelden: [{ type: "uitzondering", tekst: "Soms wordt staafdiagram horizontaal getekend (staven naar rechts). Dan x↔y omgedraaid. Maar standaard: y=frequentie." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Waardes = x-as. Percentages = ander type diagram. Gemiddelde = 1 getal, niet as." }],
@@ -188,7 +188,7 @@ const steps = [
           ],
           woorden: [{ woord: "modus", uitleg: "Meest voorkomende waarde in reeks." }],
           theorie: "Speciale gevallen: 2 waardes even vaak top = 2 modi. Alle waardes 1× = geen modus. Bij frequentietabel = hoogste staaf.",
-          voorbeelden: [{ type: "andere", tekst: "Modus van 1,2,3,4,5 = geen (allen 1×). Modus van 1,2,2,3,3 = 2 en 3 (twee modi)." }],
+          voorbeelden: [{ type: "andere", tekst: "Modus van 1,2,3,4,5 = geen (alle 1×). Modus van 1,2,2,3,3 = 2 en 3 (twee modi)." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "4 niet (komt minder vaak). 5,7 = gemiddelde, andere maat. 9 = maar 1× voor." }],
           niveaus: { basis: "7.", simpeler: "7 komt 3× voor (vaakst) = modus.", nogSimpeler: "7" },
         },
@@ -255,7 +255,7 @@ const steps = [
           stappen: [{ titel: "Uitschieters vertekenen gemiddelde", tekst: "Gemiddelde is GEVOELIG voor uitschieters (extreem hoog/laag). Mediaan is ONGEVOELIG. Voorbeeld inkomens 20k, 25k, 22k, 23k, 1000k. Gemiddelde 218k (vertekend door miljonair!). Mediaan 23k (realistisch). Bij scheve data: kies mediaan." }],
           woorden: [{ woord: "uitschieter", uitleg: "Extreem hoog/laag getal dat ver van rest ligt. Engels: outlier." }, { woord: "scheve verdeling", uitleg: "Data niet symmetrisch verdeeld. Bv. inkomens (paar zeer hoog, rest gemiddeld)." }],
           theorie: "Vuistregel: data symmetrisch + zonder uitschieters → gemiddelde. Met uitschieters of scheef → mediaan. Beide kunnen samen gerapporteerd worden.",
-          voorbeelden: [{ type: "klassiek", tekst: "Huizenprijzen NL: mediaan ~400k. Gemiddelde ~500k (vertekend door villa's miljoenen). Mediaan eerlijker beeld 'normale woning'." }],
+          voorbeelden: [{ type: "klassiek", tekst: "Huizenprijzen: het gemiddelde ligt hoger dan de mediaan, omdat dure villa's het optrekken. De mediaan geeft een eerlijker beeld van een 'normale woning'." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet over aantal even/oneven. Niet 'nooit' (vaak juist beter). Niet 'altijd' (soms gemiddelde prima)." }],
           niveaus: { basis: "Bij uitschieters.", simpeler: "Mediaan beter bij uitschieters (extreem hoge/lage getallen). Anders gemiddelde.", nogSimpeler: "Uitschieters" },
         },
@@ -294,7 +294,7 @@ const steps = [
           ],
           woorden: [{ woord: "bereik", uitleg: "Spreidingsmaat. Verschil tussen max en min. Engels: range." }],
           theorie: "Formule: $\\text{bereik} = \\text{max} - \\text{min}$. Klein bereik = data dicht bij elkaar. Groot bereik = wijd verspreid. Voorbeeld: 50,50,50 = bereik 0 (geen spreiding).",
-          voorbeelden: [{ type: "interpretatie", tekst: "Bereik 22 op data 8-30 is fors (gebied 22 wijd in plek 22 breed). Veel variatie tussen min en max." }],
+          voorbeelden: [{ type: "interpretatie", tekst: "Bereik 22 op data 8-30 is fors: veel variatie tussen min en max." }],
           basiskennis: [{ onderwerp: "Niet enkel waarden", uitleg: "8 en 30 zijn min/max, NIET het bereik zelf. Bereik = verschil tussen die twee." }],
           niveaus: { basis: "22 (30-8).", simpeler: "Bereik = 30 - 8 = 22.", nogSimpeler: "22" },
         },
@@ -303,7 +303,7 @@ const steps = [
   },
   {
     title: "Welke variantie tussen klassen?",
-    explanation: "Een vergelijking met **bereik en gemiddelde** samen:\n\nKlas A scoort op een toets: 6, 6, 7, 7, 8\nKlas B scoort: 3, 5, 7, 9, 10\n\n**Allebei**:\n• Gemiddelde: (6+6+7+7+8)/5 = 6,8 vs (3+5+7+9+10)/5 = 6,8 → **gelijk**!\n• Mediaan: 7 vs 7 → **gelijk**\n\n**Maar bereik**:\n• Klas A: 8 − 6 = **2** (compact, leerlingen presteren ongeveer gelijk)\n• Klas B: 10 − 3 = **7** (groot verschil tussen leerlingen)\n\nHetzelfde gemiddelde, hele andere verdeling. Daarom is bereik (en andere spreidingsmaten) belangrijk om naast het gemiddelde te zetten.\n\n**Tip in een opgave**: noem altijd minstens **één centrummaat** (gem./med./mod.) én **één spreidingsmaat** (bereik) om de data goed te beschrijven.",
+    explanation: "Een vergelijking met **bereik en gemiddelde** samen:\n\nKlas A scoort op een toets: 6, 6, 7, 7, 8\nKlas B scoort: 3, 5, 7, 9, 10\n\n**Allebei**:\n• Gemiddelde: (6+6+7+7+8)/5 = 6,8 vs (3+5+7+9+10)/5 = 6,8 → **gelijk**!\n• Mediaan: 7 vs 7 → **gelijk**\n\n**Maar bereik**:\n• Klas A: 8 − 6 = **2** (compact, leerlingen presteren ongeveer gelijk)\n• Klas B: 10 − 3 = **7** (groot verschil tussen leerlingen)\n\nHetzelfde gemiddelde, heel andere verdeling. Daarom is bereik (en andere spreidingsmaten) belangrijk om naast het gemiddelde te zetten.\n\n**Tip in een opgave**: noem altijd minstens **één centrummaat** (gem./med./mod.) én **één spreidingsmaat** (bereik) om de data goed te beschrijven.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="40" y1="100" x2="280" y2="100" stroke="${COLORS.text}" stroke-width="1"/>
 <text x="155" y="30" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">zelfde gemiddelde, ander bereik</text>
@@ -333,7 +333,7 @@ const steps = [
           stappen: [{ titel: "Gemiddelde + spreiding samen", tekst: "Gemiddelde gelijk = gemiddelde prestatie zelfde. Maar bereik verschilt = SPREIDING verschilt. Klein bereik: leerlingen presteren ongeveer gelijk. Groot bereik: grote verschillen tussen leerlingen. Beide kunnen 'beter' zijn afhankelijk van wat je wilt." }],
           woorden: [{ woord: "spreiding", uitleg: "Hoe verspreid de data is. Bereik is simpelste spreidingsmaat." }],
           theorie: "Daarom rapporteer je vaak BEIDE: centrummaat (gem./med./mod.) + spreidingsmaat (bereik). Samen geven ze beter beeld dan elk apart.",
-          voorbeelden: [{ type: "concreet", tekst: "Klas A: 6,6,7,7,8 (gem 6,8, bereik 2). Klas B: 3,5,7,9,10 (gem 6,8, bereik 7). Zelfde gem, hele andere klas." }],
+          voorbeelden: [{ type: "concreet", tekst: "Klas A: 6,6,7,7,8 (gem 6,8, bereik 2). Klas B: 3,5,7,9,10 (gem 6,8, bereik 7). Zelfde gem, heel andere klas." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Geen klas 'beter' (gemiddelde gelijk). Klassen NIET identiek (bereik verschilt)." }],
           niveaus: { basis: "Verschillende verdeling.", simpeler: "Zelfde gem + ander bereik = even goed, anders gespreid.", nogSimpeler: "Anders verdeeld" },
         },
@@ -369,7 +369,7 @@ const steps = [
           woorden: [{ woord: "som", uitleg: "Totaal van alle waarden bij elkaar opgeteld." }],
           theorie: "Stel je hebt 5 cijfers met gemiddelde 6. Som onbekend? Som = 5 × 6 = 30. Stel je wilt gemiddelde 7 over 6 cijfers, je had som 30. 6e cijfer nodig = (6×7) - 30 = 42 - 30 = 12. Onmogelijk → niet haalbaar.",
           voorbeelden: [{ type: "examen-type", tekst: "Veel CSE-vragen: 'wat moet je halen op de 6e toets om gem 7,5 te krijgen?' Werk je dit uit met som-formule." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "11 = som + aantal (geen formule). 1,2 = som/30 ofzo (geen statistiek). 5 = aantal." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "11 = som + aantal (geen formule). 1,2 = gemiddelde ÷ aantal (verkeerde bewerking). 5 = aantal." }],
           niveaus: { basis: "30 (5×6).", simpeler: "Som = aantal × gemiddelde = 5 × 6 = 30.", nogSimpeler: "30" },
         },
       },
@@ -418,7 +418,7 @@ const steps = [
       { q: "Frequentie van 4 in [4,5,4,6,4,7,5]?", options: ["3","2","1","4"], answer: 0, wrongHints: [null, "Niet — tel zorgvuldig.", "Niet — tel nog eens.", "Niet."] },
       { q: "Staafdiagram-hoogte staat voor?", options: ["Frequentie","Waarde","Som","Modus"], answer: 0, wrongHints: [null, "Niet — waarde op x-as.", "Niet.", "Modus = HOOGSTE staaf, niet hoogte zelf."] },
       { q: "5, 5, 5, 5, 5 — bereik?", options: ["0","5","25","1"], answer: 0, wrongHints: [null, "Dat is de waarde, niet bereik.", "Dat is de som.", "Niet."] },
-      { q: "Modus van 3, 4, 5, 7, 8 (allen verschillend)?", options: ["Geen modus","3","8","5"], answer: 0, wrongHints: [null, "Niet — 3 komt 1× voor (zoals alle).", "Niet — zelfde frequentie.", "Niet."] },
+      { q: "Modus van 3, 4, 5, 7, 8 (alle verschillend)?", options: ["Geen modus","3","8","5"], answer: 0, wrongHints: [null, "Niet — 3 komt 1× voor (zoals alle).", "Niet — zelfde frequentie.", "Niet."] },
       { q: "6 cijfers gem 7. Eén cijfer is 4. Som overige 5?", options: ["38","42","32","7"], answer: 0, wrongHints: [null, "Dat is totaal-som, niet 'overige 5'.", "Te laag.", "Niet."] },
     ],
   },
@@ -456,7 +456,7 @@ const steps = [
           ],
           woorden: [{ woord: "frequentietabel", uitleg: "Tabel met waarde + hoe vaak. Snelle manier som berekenen." }],
           theorie: "Bij frequentietabellen: NIET losse cijfers schrijven. Gebruik cijfer × frequentie. Bespaart tijd + minder fouten. Standaard-CSE-techniek.",
-          voorbeelden: [{ type: "alternatief", tekst: "Of: 4+4+5+5+5+6+6+6+6+6+7+7+7+7+7+7+8+8+8+8+9 = 132. Maar veel kans op telfouten. Formule-aanpak is sneller." }],
+          voorbeelden: [{ type: "alternatief", tekst: "Of: 4+5+5+5+6+6+6+6+6+7+7+7+7+7+7+8+8+8+8+9 = 132. Maar veel kans op telfouten. Formule-aanpak is sneller." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "6,5 = bijna goed, reken zorgvuldig. 7 = modus. 5,5 = te laag." }],
           niveaus: { basis: "6,6 (132÷20).", simpeler: "Som=132, ÷20 leerlingen = 6,6 gemiddeld.", nogSimpeler: "6,6" },
         },

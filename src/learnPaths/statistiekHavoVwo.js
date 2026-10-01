@@ -44,7 +44,7 @@ const steps = [
         q: "Bereken de **mediaan** van: 2, 5, 8, 11, 14.",
         options: ["8","7","10","5"],
         answer: 0,
-        wrongHints: [null, "Te weinig — niet middelste.", "Niet — gemiddelde benadering, niet exact middelste.", "Niet — dat is 2e element."],
+        wrongHints: [null, "Te weinig — niet middelste.", "Te veel — 10 staat niet in het midden van de rij.", "Niet — dat is 2e element."],
         uitlegPad: {
           stappen: [{ titel: "Middelste bij oneven", tekst: "Vijf waarden op volgorde: 2, 5, **8**, 11, 14. De middelste = derde positie = **8**." }],
           woorden: [{ woord: "mediaan", uitleg: "Middelste waarde in een geordende reeks." }],
@@ -53,7 +53,7 @@ const steps = [
         },
       },
       {
-        q: "Bij een **scheve verdeling met uitschieters** is welk centrummaat beter?",
+        q: "Bij een **scheve verdeling met uitschieters** is welke centrummaat beter?",
         options: ["Mediaan","Gemiddelde","Modus","Som"],
         answer: 0,
         wrongHints: [null, "Niet — gevoelig voor uitschieters.", "Soms — maar mediaan algemener bij continue data.", "Niet — geen centrummaat."],
@@ -67,7 +67,7 @@ const steps = [
         q: "Wat is de **modus** van: 2, 4, 4, 4, 7, 8?",
         options: ["4","2","8","Geen modus"],
         answer: 0,
-        wrongHints: [null, "Niet — 2 komt 1 keer voor.", "Niet — komt 1 keer.", "Wel — 4 komt 3 keer voor."],
+        wrongHints: [null, "Niet — 2 komt 1 keer voor.", "Niet — komt 1 keer.", "Er is wél een modus — 4 komt 3 keer voor."],
         uitlegPad: {
           stappen: [{ titel: "Vaakst voorkomend", tekst: "Aantal keren: 2 → 1x, 4 → **3x**, 7 → 1x, 8 → 1x. Modus = waarde met hoogste frequentie = **4**." }],
           woorden: [{ woord: "modus", uitleg: "Meest voorkomende waarde in dataset." }],
@@ -93,7 +93,7 @@ const steps = [
   {
     title: "Spreiding — standaardafwijking + boxplot",
     explanation:
-      "Centrum-maten zeggen waar data 'zit'. **Spreidings-maten** zeggen hoe **verspreid** ze zijn.\n\n**Variatiebreedte (range)**:\n• Hoogste − laagste waarde.\n• Eenvoudig maar gevoelig voor uitschieters.\n• Voorbeeld: 3, 5, 8, 12, 100 → range = 100 − 3 = 97 (door uitschieter).\n\n**Standaardafwijking** (σ of s):\n• **Gemiddelde afstand** van elke waarde tot het gemiddelde.\n• Formule: σ = √(Σ(x-x̄)² / n).\n• HAVO/VWO: alleen interpreteren, vaak met **GR** (grafische rekenmachine) of formule-blad.\n• Kleine σ = data dichtbij gemiddelde. Grote σ = data verspreid.\n• Eenheid = zelfde als data (cm, kg, euro).\n\n**Variantie** (s² of σ²):\n• Standaardafwijking gekwadrateerd.\n• Wiskundig handiger maar geen logische eenheid (cm², kg², €²).\n• In wiskunde A: meestal eindstap voor standaardafwijking.\n\n**Boxplot** (doosdiagram):\n• Visualisatie van **kwartielen + uitschieters**.\n• Onderkant box = Q1. Streep in box = mediaan (Q2). Bovenkant box = Q3.\n• Whiskers (\"snorhaarjes\"): tot 1,5·IQR boven Q3 + onder Q1.\n• Stippen buiten whiskers = uitschieters.\n\n**Boxplot-interpretatie**:\n• Lange box = grote spreiding middelste 50%.\n• Streep niet in midden = scheve verdeling.\n• Veel stippen = veel uitschieters.\n\n**HAVO/VWO-toets-favoriet**:\n• 'Gegeven boxplot: lees mediaan af.'\n• 'Bereken IQR uit boxplot.'\n• 'Is data symmetrisch?' → kijk waar mediaan-streep in box zit.",
+      "Centrum-maten zeggen waar data 'zit'. **Spreidings-maten** zeggen hoe **verspreid** ze zijn.\n\n**Variatiebreedte (range)**:\n• Hoogste − laagste waarde.\n• Eenvoudig maar gevoelig voor uitschieters.\n• Voorbeeld: 3, 5, 8, 12, 100 → range = 100 − 3 = 97 (door uitschieter).\n\n**Standaardafwijking** (σ of s):\n• **Gemiddelde afstand** van elke waarde tot het gemiddelde.\n• Formule: σ = √(Σ(x-x̄)² / n).\n• HAVO/VWO: alleen interpreteren, vaak met **GR** (grafische rekenmachine) of formule-blad.\n• Kleine σ = data dichtbij gemiddelde. Grote σ = data verspreid.\n• Eenheid = zelfde als data (cm, kg, euro).\n\n**Variantie** (s² of σ²):\n• Standaardafwijking gekwadrateerd.\n• Handiger maar geen logische eenheid (cm², kg², €²).\n• In wiskunde A: meestal tussenstap voor standaardafwijking.\n\n**Boxplot** (doosdiagram):\n• Visualisatie van **kwartielen + uitschieters**.\n• Onderkant box = Q1. Streep in box = mediaan (Q2). Bovenkant box = Q3.\n• Whiskers (\"snorhaarjes\"): tot 1,5·IQR boven Q3 + onder Q1.\n• Stippen buiten whiskers = uitschieters.\n\n**Boxplot-interpretatie**:\n• Lange box = grote spreiding middelste 50%.\n• Streep niet in midden = scheve verdeling.\n• Veel stippen = veel uitschieters.\n\n**HAVO/VWO-toets-favoriet**:\n• 'Gegeven boxplot: lees mediaan af.'\n• 'Bereken IQR uit boxplot.'\n• 'Is data symmetrisch?' → kijk waar mediaan-streep in box zit.",
     checks: [
       {
         q: "Wat is de **range** (variatiebreedte) van: 8, 15, 22, 30, 40?",
@@ -108,7 +108,7 @@ const steps = [
       },
       {
         q: "Wat betekent een **grote standaardafwijking**?",
-        options: ["Data is sterk gespreid","Data zit dichtbij gemiddelde","Geen mediaan","Veel modussen"],
+        options: ["Data is sterk gespreid","Data zit dichtbij gemiddelde","Geen mediaan","Veel modi"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — dat is kleine σ.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
@@ -178,7 +178,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is binnen 2σ (70-130).", "Te weinig.", "Te veel — dat is binnen 3σ."],
         uitlegPad: {
           stappen: [{ titel: "Binnen 1σ", tekst: "μ = 100, σ = 15. Bereik 85-115 = μ ± σ. Volgens 68%-regel: **68%** ligt hier." }],
-          theorie: "Toets-voorbeeld-pattern: IQ-vragen met N(100,15). Ook lengte N(170,8) of cijfers N(6,1).",
+          theorie: "Toets-voorbeeldpatroon: IQ-vragen met N(100,15). Ook lengte N(170,8) of cijfers N(6,1).",
           niveaus: { basis: "68%.", simpeler: "85-115 = ±1σ = 68%", nogSimpeler: "68%" },
         },
       },
@@ -198,7 +198,7 @@ const steps = [
         q: "Welke kans is **P(Z < 0)** in standaard-normaalverdeling?",
         options: ["0,5","1","0","0,68"],
         answer: 0,
-        wrongHints: [null, "Niet — niet alles ligt links van 0.", "Niet — niet niets.", "Niet — 0,68 is een ander pattern."],
+        wrongHints: [null, "Niet — niet alles ligt links van 0.", "Niet — niet niets.", "Niet — 0,68 is een ander patroon."],
         uitlegPad: {
           stappen: [{ titel: "Symmetrie rond 0", tekst: "Standaard-normaalverdeling (Z) heeft gemiddelde 0. Bij symmetrische verdeling ligt **50%** onder gemiddelde. Dus P(Z < 0) = **0,5**." }],
           theorie: "Idem: P(X < μ) = 0,5 voor elke normaalverdeling.",
@@ -222,7 +222,7 @@ const steps = [
   {
     title: "Lineaire regressie + correlatie",
     explanation:
-      "Wanneer **twee variabelen** (x en y) samenhangen — bv. lengte vs gewicht, studie-uren vs cijfer — gebruik je **regressie** + **correlatie**.\n\n**Correlatiecoëfficiënt** (r):\n• Tussen **−1 en +1**.\n• r = +1: perfect positief lineair verband (alle punten op stijgende lijn).\n• r = 0: geen lineair verband.\n• r = −1: perfect negatief verband (dalende lijn).\n• |r| > 0,7: sterke samenhang.\n• |r| 0,3-0,7: matige samenhang.\n• |r| < 0,3: zwakke / geen samenhang.\n• Berekend uit data via GR of formule (HAVO/VWO meestal GR).\n\n**Belangrijk**: correlatie ≠ oorzaak!\n• Hoge correlatie betekent NIET dat x → y veroorzaakt.\n• Voorbeeld: ijsverkoop + verdrinking-statistieken correleren positief — niet omdat ijs verdrinking veroorzaakt, maar omdat in zomer beide stijgen (gemeenschappelijke oorzaak: warmte).\n\n**Lineaire regressie-lijn** (y = ax + b):\n• Beste rechte lijn door datapunten.\n• **Helling a**: hoeveel y stijgt per eenheid x.\n• **Y-snijpunt b**: y-waarde als x = 0.\n• HAVO/VWO: bereken met GR (LinReg) of uit formule met x̄, ȳ, σ.\n\n**Voorspelling met regressie**:\n• Heb je y = 0,4x + 12, dan voor x = 30: y = 0,4·30 + 12 = 24.\n• Let op: voorspellen alleen binnen bereik van data (interpolatie). Buiten bereik = onbetrouwbaar (extrapolatie).\n\n**Scatterplot** (spreidingsdiagram):\n• Visualisatie van x-y paren als puntenwolk.\n• Lijngerecht patroon = lineaire correlatie.\n• Kromme = niet-lineair verband — regressie-lijn past niet.\n• Cluster zonder patroon = geen verband.\n\n**HAVO/VWO-toets-favoriet**:\n• 'Schat r uit deze scatterplot.' (visueel beoordelen)\n• 'Bereken voorspelling y bij gegeven x.'\n• 'Beoordeel of verband oorzakelijk is.'",
+      "Wanneer **twee variabelen** (x en y) samenhangen — bv. lengte vs gewicht, studie-uren vs cijfer — gebruik je **regressie** + **correlatie**.\n\n**Correlatiecoëfficiënt** (r):\n• Tussen **−1 en +1**.\n• r = +1: perfect positief lineair verband (alle punten op stijgende lijn).\n• r = 0: geen lineair verband.\n• r = −1: perfect negatief verband (dalende lijn).\n• |r| > 0,7: sterke samenhang.\n• |r| 0,3-0,7: matige samenhang.\n• |r| < 0,3: zwakke / geen samenhang.\n• Berekend uit data via GR of formule (HAVO/VWO meestal GR).\n\n**Belangrijk**: correlatie ≠ oorzaak!\n• Hoge correlatie betekent NIET dat x → y veroorzaakt.\n• Voorbeeld: ijsverkoop + verdrinking-statistieken correleren positief — niet omdat ijs verdrinking veroorzaakt, maar omdat in zomer beide stijgen (gemeenschappelijke oorzaak: warmte).\n\n**Lineaire regressie-lijn** (y = ax + b):\n• Beste rechte lijn door datapunten.\n• **Helling a**: hoeveel y stijgt per eenheid x.\n• **Y-snijpunt b**: y-waarde als x = 0.\n• HAVO/VWO: bereken met GR (LinReg) of uit formule met x̄, ȳ, σ.\n\n**Voorspelling met regressie**:\n• Heb je y = 0,4x + 12, dan voor x = 30: y = 0,4·30 + 12 = 24.\n• Let op: voorspellen alleen binnen bereik van data (interpolatie). Buiten bereik = onbetrouwbaar (extrapolatie).\n\n**Scatterplot** (spreidingsdiagram):\n• Visualisatie van x-y paren als puntenwolk.\n• Rechtlijnig patroon = lineaire correlatie.\n• Kromme = niet-lineair verband — regressie-lijn past niet.\n• Cluster zonder patroon = geen verband.\n\n**HAVO/VWO-toets-favoriet**:\n• 'Schat r uit deze scatterplot.' (visueel beoordelen)\n• 'Bereken voorspelling y bij gegeven x.'\n• 'Beoordeel of verband oorzakelijk is.'",
     checks: [
       {
         q: "Wat zegt **correlatiecoëfficiënt r = 0,9**?",
@@ -239,7 +239,7 @@ const steps = [
         q: "*'IJsverkoop en verdrinkingen correleren positief'* — wat is meest waarschijnlijk?",
         options: ["Gemeenschappelijke oorzaak (warmte)","IJs veroorzaakt verdrinking","Verdrinking veroorzaakt ijsverkoop","Toeval"],
         answer: 0,
-        wrongHints: [null, "Onzin — geen causaal verband.", "Onzin.", "Onwaarschijnlijk — gerichte correlatie."],
+        wrongHints: [null, "Onzin — geen causaal verband.", "Onzin.", "Onwaarschijnlijk — het verband keert elke zomer terug."],
         uitlegPad: {
           stappen: [{ titel: "Correlatie ≠ oorzaak", tekst: "Beide stijgen in zomer. **Warmte** is de gemeenschappelijke oorzaak. **Schijncorrelatie** — leerlingen moeten dit herkennen." }],
           woorden: [{ woord: "schijncorrelatie", uitleg: "Correlatie zonder oorzakelijk verband — door gemeenschappelijke factor." }],
@@ -276,7 +276,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Binnen bereik = veiliger", tekst: "**Interpolatie** (voorspellen binnen data-bereik) is **betrouwbaarder** dan extrapolatie. Extrapolatie buiten bereik kan compleet fout zijn — model kan niet meer lineair zijn op extremen." }],
           woorden: [{ woord: "interpolatie", uitleg: "Voorspellen binnen data-bereik." }, { woord: "extrapolatie", uitleg: "Voorspellen buiten data-bereik." }],
-          theorie: "Voorbeeld: regressie lengte-leeftijd kinderen 4-16 jaar. Extrapolatie naar leeftijd 60 = onzin (mensen krimpen niet meer mee).",
+          theorie: "Voorbeeld: regressie lengte-leeftijd kinderen 4-16 jaar. Extrapolatie naar leeftijd 60 = onzin (volwassenen groeien niet meer door).",
           niveaus: { basis: "Interpolatie.", simpeler: "Binnen bereik = veiliger", nogSimpeler: "Interpolatie" },
         },
       },
@@ -303,7 +303,7 @@ const steps = [
         q: "Lengte mannen N(184; 7). Hoeveel % is **groter dan 198**?",
         options: ["~2,5%","~5%","~50%","~16%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is binnen 1σ uitschieter (84% < of 16%>).", "Wel groot deel — niet helft.", "Niet — dat is groter dan μ+σ."],
+        wrongHints: [null, "Niet — 5% ligt buiten 2σ aan béide kanten samen; je zoekt alleen de bovenkant.", "Niet — 50% is groter dan het gemiddelde (184), niet dan 198.", "Niet — dat is groter dan μ+σ."],
         uitlegPad: {
           stappen: [{ titel: "Z-truc", tekst: "Z = (198 − 184)/7 = 2. P(Z > 2) ≈ **2,5%** (uit 68-95-99,7: 95% binnen 2σ → 5% buiten → 2,5% boven)." }],
           theorie: "Toets-truc-cluster: P(Z > 1) ≈ 16%. P(Z > 2) ≈ 2,5%. P(Z > 3) ≈ 0,15%.",
@@ -334,7 +334,7 @@ const steps = [
         q: "In een **boxplot**: linkerkant van de box (Q1) = 30, mediaan (Q2) = 50, rechterkant (Q3) = 60. Wat is **IQR**?",
         options: ["30","20","10","60"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Q3 − mediaan.", "Niet — dat is alleen mediaan − Q1.", "Niet."],
+        wrongHints: [null, "Niet — dat is alleen mediaan − Q1.", "Niet — dat is Q3 − mediaan.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Q3 − Q1", tekst: "IQR = Q3 − Q1 = 60 − 30 = **30**." }],
           niveaus: { basis: "30.", simpeler: "IQR = 60-30 = 30", nogSimpeler: "30" },

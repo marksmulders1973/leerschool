@@ -182,7 +182,7 @@ const steps = [
   },
   {
     title: "Alinea-opbouw — topic sentence eerst",
-    explanation: "Een **alinea** is een blok zinnen dat **één gedachte** behandelt. Goede alinea's volgen meestal dit patroon:\n\n**1. Topic sentence** — eerste zin vat de kern van de alinea samen.\n**2. Uitwerking** — toelichting, voorbeelden, cijfers, citaten.\n**3. (Optioneel) Mini-conclusie** — laatste zin koppelt terug aan de hoofdvraag.\n\n**Voorbeeld**:\n> *(topic)* **Een lagere maximumsnelheid bespaart aanzienlijk op CO2-uitstoot.** *(uitwerking)* Onderzoek van het CBS toont dat een verlaging van 130 naar 100 km/u de uitstoot per voertuig met circa 15% reduceert. *(uitwerking)* Voor heel Nederland betekent dit jaarlijks ruim 1,5 miljoen ton minder CO2. *(mini-conclusie)* Dat alleen al rechtvaardigt de maatregel.\n\n**Tip**: lees alleen de **eerste zin** van elke alinea van je tekst. Vormen die samen een logische redeneerlijn? Zo ja → goede structuur.\n\n**Lengte**: ~3-7 zinnen per alinea. Te kort = stiltes. Te lang = lezer raakt de draad kwijt.\n\n**Veelgemaakte fout**: alinea begint met een vraag of voorbeeld in plaats van een claim. Werkt soms voor variatie, maar niet als standaardpatroon — examen-correctoren waarderen de **topic sentence eerst**.",
+    explanation: "Een **alinea** is een blok zinnen dat **één gedachte** behandelt. Goede alinea's volgen meestal dit patroon:\n\n**1. Topic sentence** — eerste zin vat de kern van de alinea samen.\n**2. Uitwerking** — toelichting, voorbeelden, cijfers, citaten.\n**3. (Optioneel) Mini-conclusie** — laatste zin koppelt terug aan de hoofdvraag.\n\n**Voorbeeld**:\n> *(topic)* **Een lagere maximumsnelheid bespaart aanzienlijk op CO2-uitstoot.** *(uitwerking)* Bij 100 in plaats van 130 km/u stoot een auto merkbaar minder uit. *(uitwerking)* Over alle auto's in Nederland samen telt dat flink op. *(mini-conclusie)* Dat alleen al rechtvaardigt de maatregel.\n\n**Tip**: lees alleen de **eerste zin** van elke alinea van je tekst. Vormen die samen een logische redeneerlijn? Zo ja → goede structuur.\n\n**Lengte**: ~3-7 zinnen per alinea. Te kort = hakkelig. Te lang = lezer raakt de draad kwijt.\n\n**Veelgemaakte fout**: alinea begint met een vraag of voorbeeld in plaats van een claim. Werkt soms voor variatie, maar niet als standaardpatroon — examen-correctoren waarderen de **topic sentence eerst**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">alinea-structuur</text>
@@ -207,16 +207,16 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een individueel anekdote werkt als voorbeeld in de uitwerking, maar niet als topic sentence. Wat is de kern-claim?",
-          "Te kort en te vrijblijvend — geen claim die de lezer ankert in de alinea-thema.",
-          "Een vraag kan een aandachttrekker zijn maar geen topic sentence. Welke optie geeft de hoofdgedachte van de alinea?",
+          "Een persoonlijke anekdote werkt als voorbeeld in de uitwerking, maar niet als topic sentence. Wat is de kern-claim?",
+          "Te kort en te vrijblijvend — geen claim die de lezer houvast geeft in het alinea-thema.",
+          "Een vraag kan een aandachtstrekker zijn maar geen topic sentence. Welke optie geeft de hoofdgedachte van de alinea?",
         ],
       },
     ],
   },
   {
     title: "Slot — samenvatten en vooruitkijken",
-    explanation: "Een goed **slot** doet drie dingen:\n\n**1. Vat de hoofdpunten kort samen** (zonder ze letterlijk te herhalen).\n**2. Trek een conclusie** of geef een advies/oproep.\n**3. (Optioneel) Open een bredere blik** — een toekomstverwachting, een vervolgvraag.\n\n**Voorbeeld-slot (betoog 100 km/u)**:\n*\"De milieueffecten zijn onmiskenbaar, het aantal verkeersdoden daalt aantoonbaar, en de tijdwinst door 130 km/u is verwaarloosbaar. (= samenvatting) De 100-km-grens moet daarom definitief blijven. (= advies) Pas wanneer er volwaardige duurzame alternatieven zijn — een fijnmazig openbaar vervoer, betaalbare elektrische auto's — kan deze maatregel heroverwogen worden. (= bredere blik)\"*\n\n**Per tekstsoort**:\n• **Betoog**: slot is een krachtig advies of oproep.\n• **Beschouwing**: slot weegt af, eindigt met een open vraag of een persoonlijke noot.\n• **Uiteenzetting**: slot vat de uitleg samen, verwijst eventueel naar verder onderzoek.\n\n**Veelgemaakte fout**:\n• Nieuw argument introduceren in het slot (hoort in middenstuk).\n• Letterlijk herhalen wat al stond (lezer voelt zich dom geadresseerd).\n• Slappe zinnen als \"Al met al is dit een interessant onderwerp.\" — zegt niets.",
+    explanation: "Een goed **slot** doet drie dingen:\n\n**1. Vat de hoofdpunten kort samen** (zonder ze letterlijk te herhalen).\n**2. Trek een conclusie** of geef een advies/oproep.\n**3. (Optioneel) Open een bredere blik** — een toekomstverwachting, een vervolgvraag.\n\n**Voorbeeld-slot (betoog 100 km/u)**:\n*\"De milieueffecten zijn onmiskenbaar, het aantal verkeersdoden daalt aantoonbaar, en de tijdwinst door 130 km/u is verwaarloosbaar. (= samenvatting) De 100-km-grens moet daarom definitief blijven. (= advies) Pas wanneer er volwaardige duurzame alternatieven zijn — een fijnmazig openbaar vervoer, betaalbare elektrische auto's — kan deze maatregel heroverwogen worden. (= bredere blik)\"*\n\n**Per tekstsoort**:\n• **Betoog**: slot is een krachtig advies of oproep.\n• **Beschouwing**: slot weegt af, eindigt met een open vraag of een persoonlijke noot.\n• **Uiteenzetting**: slot vat de uitleg samen, verwijst eventueel naar verder onderzoek.\n\n**Veelgemaakte fout**:\n• Nieuw argument introduceren in het slot (hoort in middenstuk).\n• Letterlijk herhalen wat al stond (lezer voelt zich niet serieus genomen).\n• Slappe zinnen als \"Al met al is dit een interessant onderwerp.\" — zegt niets.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">slot — 3 elementen</text>
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [
           null,
           "De lengte is acceptabel. De fout zit niet in lengte maar in *wat* er staat.",
-          "Er staat wél een advies (\"de maatregel rechtvaardigen\"). Het probleem zit ergens anders.",
+          "Misschien, maar er is een grotere fout. Wat gebeurt er in de tweede zin?",
           "De toon is gewoon zakelijk. Zoek naar wat er in een slot *niet* hoort.",
         ],
       },
@@ -365,7 +365,7 @@ const steps = [
   // ─── D. Verfijning ────────────────────────────────────
   {
     title: "Verbindingswoorden — alinea's aan elkaar lijmen",
-    explanation: "**Verbindingswoorden** (ook: signaalwoorden, connectives) maken het verband tussen zinnen en alinea's expliciet. Goede verbindingen = vloeiende tekst.\n\n**Per relatie de juiste woorden**:\n\n**Toevoegen** (extra punt erbij):\n*ook, daarnaast, bovendien, verder, eveneens, nog een argument is...*\n\n**Tegenstellen** (oppositie tonen):\n*echter, daarentegen, hoewel, toch, niettemin, in tegenstelling tot, anderzijds*\n\n**Oorzaak-gevolg**:\n*daardoor, dus, daarom, doordat, immers, vandaar, met als gevolg dat*\n\n**Voorbeeld geven**:\n*bijvoorbeeld, zo, om dit te illustreren, neem het geval van, denk aan*\n\n**Conclusie**:\n*kortom, samenvattend, al met al, concluderend, ten slotte*\n\n**Volgorde aangeven**:\n*ten eerste, vervolgens, daarna, tot slot*\n\n**Veelgemaakte fout**:\n• Hetzelfde woord steeds opnieuw gebruiken (\"Ook... ook... ook...\"). Wissel af.\n• Verkeerd verband leggen (\"echter\" gebruiken waar je eigenlijk \"daarnaast\" bedoelt).\n• Te veel verbindingswoorden — als elke zin met \"daarom\" begint wordt het mechanisch. Gebruik ze waar nodig.",
+    explanation: "**Verbindingswoorden** (ook: signaalwoorden) maken het verband tussen zinnen en alinea's expliciet. Goede verbindingen = vloeiende tekst.\n\n**Per relatie de juiste woorden**:\n\n**Toevoegen** (extra punt erbij):\n*ook, daarnaast, bovendien, verder, eveneens, nog een argument is...*\n\n**Tegenstellen** (oppositie tonen):\n*echter, daarentegen, hoewel, toch, niettemin, in tegenstelling tot, anderzijds*\n\n**Oorzaak-gevolg**:\n*daardoor, dus, daarom, doordat, immers, vandaar, met als gevolg dat*\n\n**Voorbeeld geven**:\n*bijvoorbeeld, zo, om dit te illustreren, neem het geval van, denk aan*\n\n**Conclusie**:\n*kortom, samenvattend, al met al, concluderend, ten slotte*\n\n**Volgorde aangeven**:\n*ten eerste, vervolgens, daarna, tot slot*\n\n**Veelgemaakte fout**:\n• Hetzelfde woord steeds opnieuw gebruiken (\"Ook... ook... ook...\"). Wissel af.\n• Verkeerd verband leggen (\"echter\" gebruiken waar je eigenlijk \"daarnaast\" bedoelt).\n• Te veel verbindingswoorden — als elke zin met \"daarom\" begint wordt het mechanisch. Gebruik ze waar nodig.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">verbindingswoorden per relatie</text>
@@ -394,7 +394,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Daarom legt een gevolg-relatie. Maar de twee zinnen zijn juist tegengesteld aan elkaar — wat past dan?",
+          "Daarom geeft een gevolg aan. Maar de twee zinnen zijn juist tegengesteld aan elkaar — wat past dan?",
           "Bijvoorbeeld leidt een illustratie in. Hier wordt geen voorbeeld gegeven, maar een tegenstelling.",
           "Kortom hoort aan het eind van een betoog, als conclusie. Hier zitten we midden in een redeneerlijn.",
         ],
@@ -419,7 +419,7 @@ const steps = [
   },
   {
     title: "Toon en formuleren — de juiste woordkeus",
-    explanation: "**Formuleren** is de kunst van *de juiste woorden in de juiste volgorde*. Een paar examen-aandachtspunten:\n\n**1. Concreet boven abstract**\n• ❌ \"Er moeten dingen veranderen.\"\n• ✓ \"De maximumsnelheid moet omlaag naar 100 km/u.\"\n\n**2. Actief boven passief** (in een betoog)\n• ❌ \"Er werd door de regering besloten.\"\n• ✓ \"De regering besloot.\"\n\n**3. Vermijd vaag taalgebruik**\n• ❌ *\"Er zijn veel mensen die hier last van hebben.\"*\n• ✓ *\"Volgens een GGD-rapport ondervindt 1 op de 4 omwonenden geluidsoverlast.\"*\n\n**4. Geen versterkers strooien**\n• ❌ \"De maatregel is super belangrijk en echt heel erg goed.\"\n• ✓ \"De maatregel is belangrijk.\"\n*(\"Super\", \"echt\", \"heel erg\" verzwakken juist je betoog.)*\n\n**5. Geen platte woorden in formele tekst**\n• ❌ \"De regering heeft het flink verkloot.\"\n• ✓ \"De regering heeft op dit punt ernstig gefaald.\"\n\n**6. Cijfers zijn krachtig — gebruik ze**\n• ❌ \"Veel jongeren krijgen te weinig slaap.\"\n• ✓ \"Volgens het CBS slaapt 38% van de havo-leerlingen minder dan 7 uur per nacht.\"\n\n**Tip**: lees je tekst hardop. Struikel je over een zin? Te lang of te ingewikkeld → opsplitsen.",
+    explanation: "**Formuleren** is de kunst van *de juiste woorden in de juiste volgorde*. Een paar examen-aandachtspunten:\n\n**1. Concreet boven abstract**\n• ❌ \"Er moeten dingen veranderen.\"\n• ✓ \"De maximumsnelheid moet omlaag naar 100 km/u.\"\n\n**2. Actief boven passief** (in een betoog)\n• ❌ \"Er werd door de regering besloten.\"\n• ✓ \"De regering besloot.\"\n\n**3. Vermijd vaag taalgebruik**\n• ❌ *\"Er zijn veel mensen die hier last van hebben.\"*\n• ✓ *\"Volgens een GGD-rapport ondervindt 1 op de 4 omwonenden geluidsoverlast.\"*\n\n**4. Geen versterkers strooien**\n• ❌ \"De maatregel is super belangrijk en echt heel erg goed.\"\n• ✓ \"De maatregel is belangrijk.\"\n*(\"Super\", \"echt\", \"heel erg\" verzwakken juist je betoog.)*\n\n**5. Geen platte woorden in formele tekst**\n• ❌ \"De regering heeft het flink verkloot.\"\n• ✓ \"De regering heeft op dit punt ernstig gefaald.\"\n\n**6. Cijfers zijn krachtig — gebruik ze**\n• ❌ \"Veel jongeren krijgen te weinig slaap.\"\n• ✓ \"Volgens een enquête op school slaapt 38% van de leerlingen minder dan 7 uur.\"\n\n**Tip**: lees je tekst hardop. Struikel je over een zin? Te lang of te ingewikkeld → opsplitsen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">formuleer-checklist</text>
@@ -435,7 +435,7 @@ const steps = [
       {
         q: "*Welke formulering is het sterkst voor een betoog?*",
         options: [
-          "Volgens het RIVM stierven in 2024 in Nederland 4.300 mensen vroegtijdig door luchtvervuiling.",
+          "Volgens het RIVM sterven in Nederland jaarlijks duizenden mensen vroegtijdig door luchtvervuiling.",
           "Heel erg veel mensen sterven super vroeg door slechte lucht.",
           "Er zijn dingen die wijzen op gezondheidsschade door lucht.",
           "Mensen kunnen ziek worden van vieze lucht, dat weet iedereen.",
@@ -452,7 +452,7 @@ const steps = [
   },
   {
     title: "Reviseren — de tweede ronde",
-    explanation: "**Goed schrijven = herschrijven.** Veel havo-leerlingen leveren hun eerste versie in. Wie reviseert haalt vaak een hele schaalpunt hoger.\n\n**Revisie-checklist** (3 rondes):\n\n**Ronde 1 — structuur**\n• Heb je een duidelijke inleiding-middenstuk-slot?\n• Komen de hoofdpunten in de juiste volgorde?\n• Zijn er alinea's die elkaar overlappen?\n• Mist er nog een belangrijk argument of perspectief?\n\n**Ronde 2 — alinea-niveau**\n• Heeft elke alinea één duidelijke topic sentence?\n• Zit er voldoende uitwerking bij (cijfers, voorbeelden)?\n• Zijn er goede verbindingswoorden tussen alinea's?\n\n**Ronde 3 — zin-niveau**\n• Te lange zinnen? Opsplitsen.\n• Vage formuleringen (\"dingen\", \"veel\", \"men\")? Concreet maken.\n• Spelfouten + d/t-fouten? Uitkammen.\n\n**Truc — lees achterstevoren**:\nLees de **laatste zin eerst**, dan de op-één-na-laatste, enzovoort. Je merkt zo veel makkelijker spelfouten op (je hersenen leiden niet meer af door de inhoud).\n\n**Andere truc — leg het opzij**:\nMin. 30 minuten weg, dan opnieuw lezen. Frisse blik = veel meer fouten zichtbaar.\n\n**Examen-tijd**: plan altijd 10 min revisie-tijd in de 70 min die je krijgt voor de schrijfopdracht.",
+    explanation: "**Goed schrijven = herschrijven.** Veel havo-leerlingen leveren hun eerste versie in. Wie reviseert, haalt vaak een hoger cijfer.\n\n**Revisie-checklist** (3 rondes):\n\n**Ronde 1 — structuur**\n• Heb je een duidelijke inleiding-middenstuk-slot?\n• Komen de hoofdpunten in de juiste volgorde?\n• Zijn er alinea's die elkaar overlappen?\n• Mist er nog een belangrijk argument of perspectief?\n\n**Ronde 2 — alinea-niveau**\n• Heeft elke alinea één duidelijke topic sentence?\n• Zit er voldoende uitwerking bij (cijfers, voorbeelden)?\n• Zijn er goede verbindingswoorden tussen alinea's?\n\n**Ronde 3 — zin-niveau**\n• Te lange zinnen? Opsplitsen.\n• Vage formuleringen (\"dingen\", \"veel\", \"men\")? Concreet maken.\n• Spelfouten + d/t-fouten? Uitkammen.\n\n**Truc — lees achterstevoren**:\nLees de **laatste zin eerst**, dan de op-één-na-laatste, enzovoort. Je merkt zo veel makkelijker spelfouten op (de inhoud leidt je dan minder af).\n\n**Andere truc — leg het opzij**:\nMin. 30 minuten weg, dan opnieuw lezen. Frisse blik = veel meer fouten zichtbaar.\n\n**Examen-tijd**: plan altijd ~10 min revisie-tijd in.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">revisie — 3 rondes</text>
@@ -478,7 +478,7 @@ const steps = [
         wrongHints: [
           null,
           "Geen revisie betekent gegarandeerd taal- en structuurfouten die makkelijk te vermijden waren. Wat is dan zonde van de punten?",
-          "Te krap planning = chaos in middenstuk. En geen revisie-tijd = onnodige fouten.",
+          "Te krappe planning = chaos in middenstuk. En geen revisie-tijd = onnodige fouten.",
           "30 min planning is overdreven. Voor een havo 4-betoog van ~500 woorden moet je in ~10 min een opzet hebben — anders kom je niet aan schrijven toe.",
         ],
       },
@@ -539,7 +539,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Daarom legt een gevolg-relatie. Hier liggen de twee zinnen juist tegenover elkaar.",
+          "Daarom geeft een gevolg aan. Hier liggen de twee zinnen juist tegenover elkaar.",
           "Bijvoorbeeld leidt een illustratie in. Geen voorbeeld hier, wel een tegenstelling.",
           "Bovendien voegt iets toe in dezelfde richting. Hier is juist sprake van een tegenstelling.",
         ],
@@ -560,7 +560,7 @@ const steps = [
           "Cijfers zijn welkom maar het ontbreken is niet de hoofdfout. Denk aan welke tekstsoort dit was.",
         ],
       },
-      { q: "Wat is doel van een **betoog**?", options: ["Lezer overtuigen","Lezer informeren","Lezer aan laten denken","Lezer laten lachen"], answer: 0, wrongHints: [null, "Dat is uiteenzetting.", "Dat is beschouwing.", "Niet examen-tekstsoort."] },
+      { q: "Wat is doel van een **betoog**?", options: ["Lezer overtuigen","Lezer informeren","Lezer aan het denken zetten","Lezer laten lachen"], answer: 0, wrongHints: [null, "Dat is uiteenzetting.", "Dat is beschouwing.", "Niet examen-tekstsoort."] },
       { q: "Een **uiteenzetting** heeft welk doel?", options: ["Informeren","Overtuigen","Tegenargumenten geven","Mening kiezen"], answer: 0, wrongHints: [null, "Dat is betoog.", "Dat is beschouwing.", "Geen mening — neutraal."] },
       { q: "Een **beschouwing** geeft?", options: ["Verschillende kanten zonder definitieve keuze","Eén mening","Alleen feiten","Alleen voorbeelden"], answer: 0, wrongHints: [null, "Dat is betoog.", "Dat is uiteenzetting.", "Niet structuur."] },
       { q: "Welk **verbindingswoord** geeft een tegenstelling aan?", options: ["echter","want","bijvoorbeeld","ten eerste"], answer: 0, wrongHints: [null, "Reden, geen tegenstelling.", "Voorbeeld.", "Volgorde."] },

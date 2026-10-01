@@ -98,7 +98,7 @@ const steps = [
   },
   {
     title: "De balans-methode — beide kanten hetzelfde",
-    explanation: "Een vergelijking is als een **weegschaal in balans**: links en rechts wegen even zwaar.\n\nAls je iets aan **één kant** verandert, raakt de balans verstoord. Maar als je **aan beide kanten hetzelfde** doet, blijft de balans intact.\n\n**Toegelaten acties op beide kanten** (om x te isoleren):\n1. **Optellen** — bij beide kanten +N\n2. **Aftrekken** — bij beide kanten −N\n3. **Vermenigvuldigen** — beide kanten × N (geen 0)\n4. **Delen** — beide kanten ÷ N (geen 0)\n\n**Doel**: de x **alleen** krijgen aan één kant, en het getal aan de andere kant. Dan staat de oplossing er.\n\n**Voorbeeld**: x + 3 = 7\n• Aan beide kanten −3 doen:\n  → x + 3 − 3 = 7 − 3\n  → x = 4 ✓\n\n**Voorbeeld**: 5x = 25\n• Aan beide kanten ÷5:\n  → 5x ÷ 5 = 25 ÷ 5\n  → x = 5 ✓\n\n**Belangrijk**: doe **altijd hetzelfde** aan beide kanten. Vergeet je een kant, dan klopt de balans niet meer.\n\n**Schrijfwijze tip**: schrijf de actie naast de vergelijking om bij te houden wat je doet:\n```\nx + 3 = 7      | -3\nx = 4\n```",
+    explanation: "Een vergelijking is als een **weegschaal in balans**: links en rechts wegen even zwaar.\n\nAls je iets aan **één kant** verandert, raakt de balans verstoord. Maar als je **aan beide kanten hetzelfde** doet, blijft de balans intact.\n\n**Toegestane acties op beide kanten** (om x te isoleren):\n1. **Optellen** — bij beide kanten +N\n2. **Aftrekken** — bij beide kanten −N\n3. **Vermenigvuldigen** — beide kanten × N (geen 0)\n4. **Delen** — beide kanten ÷ N (geen 0)\n\n**Doel**: de x **alleen** krijgen aan één kant, en het getal aan de andere kant. Dan staat de oplossing er.\n\n**Voorbeeld**: x + 3 = 7\n• Aan beide kanten −3 doen:\n  → x + 3 − 3 = 7 − 3\n  → x = 4 ✓\n\n**Voorbeeld**: 5x = 25\n• Aan beide kanten ÷5:\n  → 5x ÷ 5 = 25 ÷ 5\n  → x = 5 ✓\n\n**Belangrijk**: doe **altijd hetzelfde** aan beide kanten. Vergeet je een kant, dan klopt de balans niet meer.\n\n**Schrijfwijze tip**: schrijf de actie naast de vergelijking om bij te houden wat je doet:\n```\nx + 3 = 7      | -3\nx = 4\n```",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">balans-methode</text>
@@ -154,7 +154,7 @@ const steps = [
         wrongHints: [null, "Verkeerde richting — om x alleen over te houden moet je de +8 wegwerken. Welke bewerking is de tegenhanger?", "Vul je antwoord terug in en check: levert x + 8 echt 15 op?", "Een negatieve x past hier niet — kijk welk getal groter is, 8 of 15."],
         uitlegPad: {
           stappen: [{ titel: "−8 beide kanten", tekst: "x + 8 = 15 → −8 → x = 7. Check: 7+8=15 ✓." }],
-          woorden: [{ woord: "isoleren x", uitleg: "x alleen overhouden aan ene kant van =." }],
+          woorden: [{ woord: "isoleren x", uitleg: "x alleen overhouden aan één kant van =." }],
           theorie: "Regel +: gebruik − ongedaan-bewerking. Beide kanten zelfde.",
           voorbeelden: [{ type: "andere", tekst: "x+3=10 → x=7. x+5=12 → x=7. x+1=8 → x=7. Patroon: x = rechts − links-getal." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "23 = 15+8 (verkeerde kant). 8 = vast getal. −7 = teken-fout." }],
@@ -179,7 +179,7 @@ const steps = [
   },
   {
     title: "Vergelijking met ×: delen",
-    explanation: "Een vergelijking als **3x = 21** los je op door **aan beide kanten te delen door 3**:\n\n```\n3x = 21        | :3\nx = 7\n```\n\nLinks wordt 3x ÷ 3 = x. Rechts wordt 21 ÷ 3 = 7.\n\n**Andere voorbeelden**:\n\n• 5x = 35   →  | :5   →  x = 7\n• 4x = 24   →  | :4   →  x = 6\n• 7x = 56   →  | :7   →  x = 8\n• 2x = -10  →  | :2   →  x = -5\n\n**Belangrijk**: bij delen door een **negatief getal** moet je opletten — daar komen we later bij ongelijkheden op terug. Voor gewone vergelijkingen werkt het identiek.\n\n• -3x = 12  →  | :(-3)  →  x = -4 *(let op: 12 ÷ (-3) = -4)*\n\n**Truc om te zien dat het klopt**: vul de oplossing in. 3 · 7 = 21 ✓.\n\n**Tip voor breuk-uitkomsten**:\n• 3x = 7  →  x = 7/3 (mag als breuk blijven staan)\n• 5x = 12  →  x = 12/5 = 2.4",
+    explanation: "Een vergelijking als **3x = 21** los je op door **aan beide kanten te delen door 3**:\n\n```\n3x = 21        | :3\nx = 7\n```\n\nLinks wordt 3x ÷ 3 = x. Rechts wordt 21 ÷ 3 = 7.\n\n**Andere voorbeelden**:\n\n• 5x = 35   →  | :5   →  x = 7\n• 4x = 24   →  | :4   →  x = 6\n• 7x = 56   →  | :7   →  x = 8\n• 2x = -10  →  | :2   →  x = -5\n\n**Belangrijk**: bij delen door een **negatief getal** moet je opletten — daar komen we later bij ongelijkheden op terug. Voor gewone vergelijkingen werkt het identiek.\n\n• -3x = 12  →  | :(-3)  →  x = -4 *(let op: 12 ÷ (-3) = -4)*\n\n**Truc om te zien dat het klopt**: vul de oplossing in. 3 · 7 = 21 ✓.\n\n**Tip voor breuk-uitkomsten**:\n• 3x = 7  →  x = 7/3 (mag als breuk blijven staan)\n• 5x = 12  →  x = 12/5 = 2,4",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">× wegwerken: delen</text>
@@ -228,7 +228,7 @@ const steps = [
     checks: [
       {
         q: "*Los op: x/6 = 9.*",
-        options: ["x = 54", "x = 1.5", "x = 15", "x = 3"],
+        options: ["x = 54", "x = 1,5", "x = 15", "x = 3"],
         answer: 0,
         wrongHints: [null, "Verkeerde richting — om x alleen over te houden moet je delen ondoen. Welke bewerking is dat?", "Niet optellen — x/6 betekent x gedeeld door 6. Welke tegenhanger?", "Vul je antwoord in: deel het door 6 — krijg je 9?"],
         uitlegPad: {
@@ -236,7 +236,7 @@ const steps = [
           woorden: [{ woord: "delen ondoen", uitleg: "÷ ondoen door ×. Beide kanten ×noemer." }],
           theorie: "Patroon x/a=b: x=b·a. Hier x/6=9 → x=9·6=54.",
           voorbeelden: [{ type: "andere", tekst: "x/3=4 → x=12. x/5=2 → x=10. x/10=7 → x=70." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "1.5 = 9/6 (verkeerde kant). 15 = 9+6 (optellen). 3 = 9−6 (aftrekken)." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "1,5 = 9/6 (verkeerde kant). 15 = 9+6 (optellen). 3 = 9−6 (aftrekken)." }],
           niveaus: { basis: "54.", simpeler: "x/6=9 → x=9·6=54.", nogSimpeler: "54" },
         },
       },
@@ -246,7 +246,7 @@ const steps = [
   // ─── C. x aan beide kanten ────────────────────────────
   {
     title: "x aan beide kanten — x'en bij elkaar halen",
-    explanation: "Bij vergelijkingen als **5x = 2x + 12** staat x **aan beide kanten**. Eerste stap: alle x'en aan **één kant** verzamelen.\n\n**Voorbeeld**: 5x = 2x + 12\n\n```\n5x = 2x + 12     | -2x\n3x = 12          | :3\nx = 4\n```\n\n**Stap 1**: Trek 2x af van beide kanten. Links: 5x − 2x = 3x. Rechts: 2x + 12 − 2x = 12.\n**Stap 2**: Deel beide kanten door 3.\n\n**Andere voorbeelden**:\n\n• 7x = 4x + 9    →  | -4x  →  3x = 9   →  | :3  →  x = 3\n• 6x = x + 25    →  | -x   →  5x = 25  →  | :5  →  x = 5\n• 8x = 3x + 30   →  | -3x  →  5x = 30  →  | :5  →  x = 6\n\n**Tip**: haal altijd de x'en bij elkaar **aan de kant waar ze al groter zijn**. Dat voorkomt negatieve aantallen x'en.\n\n**Voorbeeld andersom**: 2x = 5x − 12 (let op: 5x > 2x)\n• Beter naar links halen: zou 2x − 5x = -3x geven, lastig.\n• Beter naar rechts: trek 2x af → 0 = 3x − 12 → +12 → 12 = 3x → x = 4.",
+    explanation: "Bij vergelijkingen als **5x = 2x + 12** staat x **aan beide kanten**. Eerste stap: alle x'en aan **één kant** verzamelen.\n\n**Voorbeeld**: 5x = 2x + 12\n\n```\n5x = 2x + 12     | -2x\n3x = 12          | :3\nx = 4\n```\n\n**Stap 1**: Trek 2x af van beide kanten. Links: 5x − 2x = 3x. Rechts: 2x + 12 − 2x = 12.\n**Stap 2**: Deel beide kanten door 3.\n\n**Andere voorbeelden**:\n\n• 7x = 4x + 9    →  | -4x  →  3x = 9   →  | :3  →  x = 3\n• 6x = x + 25    →  | -x   →  5x = 25  →  | :5  →  x = 5\n• 8x = 3x + 30   →  | -3x  →  5x = 30  →  | :5  →  x = 6\n\n**Tip**: haal altijd de x'en bij elkaar **aan de kant waar ze al groter zijn**. Dat voorkomt negatieve aantallen x'en.\n\n**Voorbeeld andersom**: 2x = 5x − 12 (let op: 5x > 2x)\n• Naar links halen: zou 2x − 5x = -3x geven, lastig.\n• Beter naar rechts: trek 2x af → 0 = 3x − 12 → +12 → 12 = 3x → x = 4.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">x aan beide kanten</text>
@@ -271,7 +271,7 @@ const steps = [
             { titel: "−2x", tekst: "6x = 2x + 16 → −2x → 4x = 16." },
             { titel: "÷4", tekst: "4x = 16 → x = 4." },
           ],
-          woorden: [{ woord: "x bij elkaar", uitleg: "Verzamel alle x'en aan ene kant via aftrekken." }],
+          woorden: [{ woord: "x bij elkaar", uitleg: "Verzamel alle x'en aan één kant via aftrekken." }],
           theorie: "Stappen: (1) x naar één kant (−kleinste-x-deel). (2) Getallen naar andere kant. (3) Deel door coëfficiënt.",
           voorbeelden: [{ type: "check", tekst: "x=4: 6·4=24. 2·4+16=24. ✓" }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "8, 2, 16 = niet via stappenplan. Volg balansmethode." }],
@@ -282,7 +282,7 @@ const steps = [
   },
   {
     title: "Met getallen aan beide kanten",
-    explanation: "Soms staan er **getallen** aan beide kanten **én** x aan beide kanten. Dan is het twee stappen:\n\n**Voorbeeld**: 4x + 3 = x + 18\n\n```\n4x + 3 = x + 18      | -x   (x'en bij elkaar)\n3x + 3 = 18          | -3   (getallen bij elkaar)\n3x = 15              | :3\nx = 5\n```\n\n**Volgorde**: meestal eerst de x'en, daarna de getallen, daarna delen. Maar je mag ook andersom — het maakt niet uit zolang je consistent bent.\n\n**Andere voorbeelden**:\n\n• 5x + 7 = 2x + 16  →  | -2x  →  3x + 7 = 16   →  | -7  →  3x = 9    →  | :3  →  x = 3\n• 6x − 4 = 3x + 11  →  | -3x  →  3x − 4 = 11   →  | +4  →  3x = 15   →  | :3  →  x = 5\n• 2x + 8 = 5x − 4   →  | -2x  →  8 = 3x − 4    →  | +4  →  12 = 3x   →  | :3  →  x = 4\n\n**Belangrijk**: streep nooit door wat je aan één kant doet zonder het ook aan de andere kant te doen.",
+    explanation: "Soms staan er **getallen** aan beide kanten **én** x aan beide kanten. Dan is het twee stappen:\n\n**Voorbeeld**: 4x + 3 = x + 18\n\n```\n4x + 3 = x + 18      | -x   (x'en bij elkaar)\n3x + 3 = 18          | -3   (getallen bij elkaar)\n3x = 15              | :3\nx = 5\n```\n\n**Volgorde**: meestal eerst de x'en, daarna de getallen, daarna delen. Maar je mag ook andersom — het maakt niet uit zolang je consistent bent.\n\n**Andere voorbeelden**:\n\n• 5x + 7 = 2x + 16  →  | -2x  →  3x + 7 = 16   →  | -7  →  3x = 9    →  | :3  →  x = 3\n• 6x − 4 = 3x + 11  →  | -3x  →  3x − 4 = 11   →  | +4  →  3x = 15   →  | :3  →  x = 5\n• 2x + 8 = 5x − 4   →  | -2x  →  8 = 3x − 4    →  | +4  →  12 = 3x   →  | :3  →  x = 4\n\n**Belangrijk**: doe nooit iets aan één kant zonder het ook aan de andere kant te doen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">getallen + x aan beide kanten</text>
@@ -308,7 +308,7 @@ const steps = [
             { titel: "−2x", tekst: "5x+4 = 2x+19 → −2x → 3x+4 = 19." },
             { titel: "−4 dan ÷3", tekst: "3x = 15 → x = 5." },
           ],
-          woorden: [{ woord: "stappen-volgorde", uitleg: "Eerst x-en, dan getallen, dan delen. Klassiek 3-stappen." }],
+          woorden: [{ woord: "stappen-volgorde", uitleg: "Eerst x'en, dan getallen, dan delen. Klassiek 3-stappen." }],
           theorie: "Algemeen patroon: ax+b = cx+d. (1) −cx. (2) −b. (3) ÷(a−c). x = (d−b)/(a−c).",
           voorbeelden: [{ type: "check", tekst: "x=5: 5·5+4=29. 2·5+19=29. ✓" }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "4, 7, 3 = niet via stappenplan. Volg systematisch." }],
@@ -404,7 +404,7 @@ const steps = [
     checks: [
       {
         q: "*Los op: x/5 = 8.*",
-        options: ["x = 40", "x = 13", "x = 1.6", "x = 3"],
+        options: ["x = 40", "x = 13", "x = 1,6", "x = 3"],
         answer: 0,
         wrongHints: [null, "Tel je hier x en 5 bij elkaar op, of doe je een andere bewerking?", "Deelde je soms 8 door 5 in plaats van anders? Denk aan welke kant de 5 staat.", "Vul 3 in: hoeveel is dan 3 gedeeld door 5? Is dat 8?"],
         uitlegPad: {
@@ -412,7 +412,7 @@ const steps = [
           woorden: [{ woord: "noemer wegwerken", uitleg: "Vermenigvuldig met de noemer om breuk weg te halen." }],
           theorie: "Patroon x/a = b: x = b·a. Werkt altijd.",
           voorbeelden: [{ type: "andere", tekst: "x/3=2 → x=6. x/10=4 → x=40. x/2=11 → x=22." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "13 = optellen fout. 1.6 = omgekeerd delen. 3 = te veel afgetrokken." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "13 = optellen fout. 1,6 = omgekeerd delen. 3 = te veel afgetrokken." }],
           niveaus: { basis: "40.", simpeler: "x/5=8 → x=8·5=40.", nogSimpeler: "40" },
         },
       },
@@ -420,7 +420,7 @@ const steps = [
   },
   {
     title: "Woordvergelijkingen — uit verhaal naar formule",
-    explanation: "Bij een **woordvergelijking** krijg je een verhaaltje en moet je daar zelf een vergelijking uit maken. Daarna pas oplossen.\n\n**Voorbeeld**: \"Ik denk aan een getal. Ik vermenigvuldig dat met 3 en tel er 5 bij op. Het resultaat is 26. Welk getal denk ik?\"\n\n**Vertaling naar wiskunde**:\n• 'Een getal' = x\n• 'Vermenigvuldigen met 3' = 3x\n• 'Er 5 bij optellen' = 3x + 5\n• 'Het resultaat is 26' = 3x + 5 = 26\n\n**Oplossen**:\n```\n3x + 5 = 26    | -5\n3x = 21         | :3\nx = 7\n```\n\nAntwoord: het getal is **7**. (Check: 3·7 + 5 = 26 ✓)\n\n**Veelvoorkomende vertalingen**:\n• 'twee meer dan' → +2\n• 'drie minder dan' → -3\n• 'vier keer zoveel' → ·4\n• 'helft van' → /2\n• 'is gelijk aan' / 'het resultaat is' / 'wordt' → =\n\n**Voorbeeld 2**: \"Mijn vader is 4 keer zo oud als ik. Samen zijn we 50. Hoe oud ben ik?\"\n• Mijn leeftijd = x. Vaders leeftijd = 4x.\n• Samen = 50: x + 4x = 50.\n• 5x = 50 → x = 10. Ik ben 10, vader is 40.\n\n**Tip**: kies een **duidelijke variabele** (vaak x voor wat je zoekt). Schrijf even op wat x betekent in jouw context, voorkom verwarring.",
+    explanation: "Bij een **woordvergelijking** krijg je een verhaaltje en moet je daar zelf een vergelijking uit maken. Daarna pas oplossen.\n\n**Voorbeeld**: \"Ik denk aan een getal. Ik vermenigvuldig dat met 3 en tel er 5 bij op. Het resultaat is 26. Welk getal denk ik?\"\n\n**Vertaling naar wiskunde**:\n• 'Een getal' = x\n• 'Vermenigvuldigen met 3' = 3x\n• 'Er 5 bij optellen' = 3x + 5\n• 'Het resultaat is 26' = 3x + 5 = 26\n\n**Oplossen**:\n```\n3x + 5 = 26    | -5\n3x = 21         | :3\nx = 7\n```\n\nAntwoord: het getal is **7**. (Check: 3·7 + 5 = 26 ✓)\n\n**Veelvoorkomende vertalingen**:\n• 'twee meer dan' → +2\n• 'drie minder dan' → -3\n• 'vier keer zoveel' → ·4\n• 'helft van' → /2\n• 'is gelijk aan' / 'het resultaat is' / 'wordt' → =\n\n**Voorbeeld 2**: \"Mijn vader is 4 keer zo oud als ik. Samen zijn we 50. Hoe oud ben ik?\"\n• Mijn leeftijd = x. Vaders leeftijd = 4x.\n• Samen = 50: x + 4x = 50.\n• 5x = 50 → x = 10. Ik ben 10, vader is 40.\n\n**Tip**: kies een **duidelijke variabele** (vaak x voor wat je zoekt). Schrijf op wat x betekent in jouw context, dat voorkomt verwarring.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">woord → formule → oplossing</text>
@@ -546,7 +546,7 @@ const steps = [
   },
   {
     title: "Eindopdracht — examen-stijl",
-    explanation: "Laatste vier examen-style vragen.\n\n**Tip**: bij examen-vraagstukken — lees twee keer voor je begint te rekenen. En controleer altijd je antwoord door het in te vullen.",
+    explanation: "Laatste vragen in examenstijl.\n\n**Tip**: bij examen-vraagstukken — lees twee keer voor je begint te rekenen. En controleer altijd je antwoord door het in te vullen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="60" y="40" width="180" height="100" rx="14" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="3"/>
 <text x="150" y="80" text-anchor="middle" fill="${COLORS.good}" font-size="32" font-family="Arial" font-weight="bold">examen</text>

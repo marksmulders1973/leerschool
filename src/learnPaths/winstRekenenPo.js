@@ -62,7 +62,7 @@ const steps = [
         q: "Wat is **winst**?",
         options: ["De verkoopprijs min de inkoopprijs", "De inkoopprijs min de verkoopprijs", "De verkoopprijs plus de inkoopprijs", "Alleen de verkoopprijs"],
         answer: 0,
-        wrongHints: [null, "Andersom — dan zou je altijd een negatief getal krijgen.", "Optellen klopt niet; winst is wat je overhoudt.", "De inkoop telt ook mee — die ben je kwijtgeraakt."],
+        wrongHints: [null, "Andersom — dan krijg je bij winst een negatief getal.", "Optellen klopt niet; winst is wat je overhoudt.", "De inkoop telt ook mee — die ben je kwijtgeraakt."],
         uitlegPad: {
           stappen: [
             { titel: "Wat houd je over?", tekst: "Je verkoopt iets en krijgt de verkoopprijs. Maar het kostte jou eerst de inkoopprijs. Wat overblijft is de winst." },
@@ -296,7 +296,7 @@ const steps = [
         wrongHints: [null, "Optellen van prijs en aantal klopt niet — het is 4 × €3.", "Dat is de prijs van één patatje.", "Dat is het aantal, niet het geld."],
         uitlegPad: {
           stappen: [
-            { titel: "Opbrengst = prijs × aantal", tekst: "Alle geld dat binnenkomt = verkoopprijs × aantal verkochte stuks." },
+            { titel: "Opbrengst = prijs × aantal", tekst: "Al het geld dat binnenkomt = verkoopprijs × aantal verkochte stuks." },
             { titel: "Vul in", tekst: "Prijs €3, aantal 4. Dus: €3 × 4 = **€12** opbrengst." },
             { titel: "Let op: dit is nog niet je winst!", tekst: "De opbrengst is al het geld dat binnenkomt. Je winst is pas de opbrengst min wat de patatjes jou kostten (de inkoop)." },
           ],
@@ -346,7 +346,7 @@ const steps = [
           ],
           niveaus: {
             basis: "€2,50 (winst per koekje €0,25 × 10).",
-            simpeler: "Elke koekje levert 25 cent op. 10 × 25 cent = 250 cent = €2,50.",
+            simpeler: "Elk koekje levert 25 cent op. 10 × 25 cent = 250 cent = €2,50.",
             nogSimpeler: "€2,50",
           },
         },
@@ -393,7 +393,7 @@ const steps = [
         q: "Inkoop **€2**, je wilt **€3 winst**. Voor hoeveel **verkopen**?",
         options: ["€5", "€1", "€6", "€3"],
         answer: 0,
-        wrongHints: [null, "Aftrekken klopt niet — je wilt méér dan je inkoop.", "Dat is de inkoop verdubbeld; reken inkoop + winst.", "Dat is alleen de winst; de inkoop moet erbij."],
+        wrongHints: [null, "Aftrekken klopt niet — je wilt méér dan je inkoop.", "Niet vermenigvuldigen; reken inkoop + winst.", "Dat is alleen de winst; de inkoop moet erbij."],
       },
       {
         q: "Inkoop **€7**, verkoop **€6**. Wat gebeurt er?",
@@ -436,7 +436,7 @@ const steps = [
           ],
           niveaus: {
             basis: "€10,50 (€1,50 × 7).",
-            simpeler: "Elke 7 stuks levert €1,50 op. 7 × 1,50 = 10,50.",
+            simpeler: "Elk van de 7 stuks levert €1,50 op. 7 × €1,50 = €10,50.",
             nogSimpeler: "€10,50",
           },
         },

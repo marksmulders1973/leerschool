@@ -22,14 +22,14 @@ const compact = (kern, niveaus, woorden = []) => ({
 const steps = [
   {
     title: "Stap 1 — Wat is een wereldreligie?",
-    explanation: "Een **religie** = een geloof of levensbeschouwing met:\n- regels voor leven + dood\n- een heilig boek of leer\n- gebouwen voor samenkomst\n- rituelen + feestdagen\n- symbolen + kleren soms\n\n**5 grote wereldreligies** (op aantal aanhangers):\n\n| Religie | Aanhangers | Land van oorsprong |\n|---|---|---|\n| **Christendom** | ~2,4 miljard | Israël (1e eeuw n.Chr.) |\n| **Islam** | ~1,9 miljard | Saudi-Arabië (7e eeuw n.Chr.) |\n| **Hindoeïsme** | ~1,2 miljard | India (oudste, >3000 jr) |\n| **Boeddhisme** | ~500 miljoen | India / Nepal (6e eeuw v.Chr.) |\n| **Jodendom** | ~15 miljoen | Israël (oudste monotheïsme) |\n\nDaarnaast: traditionele Chinese religies (taoïsme + confucianisme), Sikh-religie (~30 miljoen, India), en mensen zonder religie (~1,2 miljard).\n\nIn **Nederland**: ~43% gelovig (christendom + islam grootst), ~57% niet-gelovig. Steeds meer mensen zonder religie (secularisatie).",
+    explanation: "Een **religie** = een geloof of levensbeschouwing met:\n- regels voor leven + dood\n- een heilig boek of leer\n- gebouwen voor samenkomst\n- rituelen + feestdagen\n- symbolen + kleren soms\n\n**5 grote wereldreligies** (op aantal aanhangers):\n\n| Religie | Aanhangers | Land van oorsprong |\n|---|---|---|\n| **Christendom** | ~2,4 miljard | Israël (1e eeuw n.Chr.) |\n| **Islam** | ~1,9 miljard | Saudi-Arabië (7e eeuw n.Chr.) |\n| **Hindoeïsme** | ~1,2 miljard | India (oudste, >3000 jr) |\n| **Boeddhisme** | ~500 miljoen | India / Nepal (6e eeuw v.Chr.) |\n| **Jodendom** | ~15 miljoen | Israël (oudste monotheïsme) |\n\nDaarnaast: traditionele Chinese religies (taoïsme + confucianisme), Sikh-religie (~30 miljoen, India), en mensen zonder religie (~1,2 miljard).\n\nIn **Nederland**: ~43% gelovig (christendom + islam grootst), ~57% niet-gelovig. Steeds meer mensen zijn niet-gelovig.",
     emoji: "🌍",
     checks: [
       {
         q: "Welke religie heeft wereldwijd de **meeste aanhangers**?",
         options: ["Hindoeïsme", "Islam", "Christendom", "Boeddhisme"],
         answer: 2,
-        wrongHints: ["Hindoeïsme is groot (3e plek met ~1.2 mld) maar niet de grootste.", "Islam is 2e met ~1.9 mld — bijna de grootste, maar niet helemaal.", null, "Boeddhisme staat op 4e plek met ~500 mln."],
+        wrongHints: ["Hindoeïsme is groot (3e plek met ~1,2 mld) maar niet de grootste.", "Islam is 2e met ~1,9 mld — bijna de grootste, maar niet helemaal.", null, "Boeddhisme staat op 4e plek met ~500 mln."],
         explanation: "**Christendom** is wereldwijd de grootste religie met ~2,4 miljard aanhangers. Islam is 2e (~1,9 mld), hindoeïsme 3e (~1,2 mld), boeddhisme 4e (~500 mln).",
         uitlegPad: compact(
           "Top 5 wereldreligies: 1) christendom 2,4 mld, 2) islam 1,9 mld, 3) hindoeïsme 1,2 mld, 4) boeddhisme 0,5 mld, 5) jodendom 0,015 mld. Plus 1,2 mld zonder religie.",
@@ -54,9 +54,9 @@ const steps = [
         options: ["Christendom", "Islam", "Hindoeïsme", "Boeddhisme"],
         answer: 2,
         wrongHints: ["Christendom is relatief jong — het ontstond in de eerste eeuw na Christus.", "Islam is juist de jongste van de grote wereldreligies — bekijk wanneer het is ontstaan.", null, "Boeddhisme is oud, maar is het ouder dan alle andere genoemde religies?"],
-        explanation: "**Hindoeïsme** is de oudste — >3000 jaar oud (~1500 v.Chr.). Geen één 'stichter'. Boeddhisme volgt (6e eeuw v.Chr.), dan christendom (1e eeuw), islam (7e eeuw). Jodendom is ook heel oud (~1800 v.Chr.) maar 'jonger' dan oudste hindoe-teksten.",
+        explanation: "**Hindoeïsme** is de oudste — wortels van ruim 3500 jaar terug. Geen één 'stichter'. Boeddhisme volgt (6e eeuw v.Chr.), dan christendom (1e eeuw), islam (7e eeuw). Jodendom is ook heel oud (traditie: Abraham ~1800 v.Chr.).",
         uitlegPad: compact(
-          "Tijdlijn: HINDOEÏSME >3000 jr (oudst, ~1500 vChr). JODENDOM ~1800 vChr (Abraham). BOEDDHISME 6e eeuw vChr. CHRISTENDOM 1e eeuw nChr. ISLAM 7e eeuw nChr (jongst).",
+          "Tijdlijn: HINDOEÏSME >3500 jr (oudst, wortels vóór 2000 vChr). JODENDOM ~1800 vChr (Abraham, traditie). BOEDDHISME 6e eeuw vChr. CHRISTENDOM 1e eeuw nChr. ISLAM 7e eeuw nChr (jongst).",
           { basis: "Hindoeïsme oudste.", simpeler: "Hindoeïsme is +3000 jaar oud — oudste wereldreligie.", nogSimpeler: "Hindoeïsme" },
           [{ woord: "hindoeïsme", uitleg: "Oudste wereldreligie, ontstaan in India >3000 jaar geleden." }],
         ),
@@ -65,7 +65,7 @@ const steps = [
   },
   {
     title: "Stap 2 — Christendom",
-    explanation: "**Christendom** = grootste religie wereldwijd, ontstaan in Israël/Palestina rond jaar 0.\n\n**Belangrijkste feiten**:\n- **Stichter**: Jezus Christus (geboren ~4 v.Chr. — gestorven 33 n.Chr.). 'Christus' = 'gezalfde' (= verlosser).\n- **Heilig boek**: De **Bijbel** — 2 delen:\n  - Oude Testament (gedeeld met jodendom)\n  - Nieuwe Testament (over Jezus + apostelen)\n- **Gebouw**: **kerk** (rooms-katholiek + protestant) of basiliek/kathedraal (groot)\n- **Symbool**: **kruis** (Jezus stierf aan kruis)\n- **Heilige dag**: zondag\n- **Belangrijke feesten**: Kerstmis (geboorte Jezus, 25 dec), Pasen (opstanding Jezus), Pinksteren (Heilige Geest), Hemelvaartsdag\n\n**Hoofdstromingen**:\n- **Rooms-katholiek** (~1,3 mld) — paus is hoofd, Vaticaan. Beelden + heiligen.\n- **Protestants** (~900 mln) — afsplitsing 1517 door Maarten Luther. Bijbel centraal, minder ceremonie.\n- **Orthodox** (~220 mln) — vooral in Rusland, Griekenland. Eigen paus per land.\n\nIn **Nederland**: ~25% christen (was vroeger ~85%).",
+    explanation: "**Christendom** = grootste religie wereldwijd, ontstaan in Israël/Palestina rond jaar 0.\n\n**Belangrijkste feiten**:\n- **Stichter**: Jezus Christus (geboren ~4 v.Chr. — gestorven 33 n.Chr.). 'Christus' = 'gezalfde' (= verlosser).\n- **Heilig boek**: De **Bijbel** — 2 delen:\n  - Oude Testament (gedeeld met jodendom)\n  - Nieuwe Testament (over Jezus + apostelen)\n- **Gebouw**: **kerk** (rooms-katholiek + protestant) of basiliek/kathedraal (groot)\n- **Symbool**: **kruis** (Jezus stierf aan kruis)\n- **Heilige dag**: zondag\n- **Belangrijke feesten**: Kerstmis (geboorte Jezus, 25 dec), Pasen (opstanding Jezus), Pinksteren (Heilige Geest), Hemelvaartsdag\n\n**Hoofdstromingen**:\n- **Rooms-katholiek** (~1,3 mld) — paus is hoofd, Vaticaan. Beelden + heiligen.\n- **Protestants** (~900 mln) — afsplitsing 1517 door Maarten Luther. Bijbel centraal, minder ceremonie.\n- **Orthodox** (~220 mln) — vooral in Rusland, Griekenland. Eigen patriarch per land.\n\nIn **Nederland**: ~1 op 3 christen (was ~85%).",
     emoji: "✝️",
     checks: [
       {
@@ -97,7 +97,7 @@ const steps = [
         options: ["Mohammed", "Paus Franciscus", "Maarten Luther", "Jezus"],
         answer: 2,
         wrongHints: ["Mohammed = profeet van de islam (geen christendom).", "Paus = hoofd van rooms-katholieke kerk, niet protestanten.", null, "Jezus = stichter van het hele christendom, niet specifiek protestantisme."],
-        explanation: "**Maarten Luther** (1483-1546) = Duitse theoloog. In 1517 spijkerde hij 95 stellingen op een kerkdeur in Wittenberg om misbruik in de rooms-katholieke kerk aan te klagen. Dit begin de **Reformatie** → ontstaan van protestantse kerken.",
+        explanation: "**Maarten Luther** (1483-1546) = Duitse theoloog. In 1517 spijkerde hij 95 stellingen op een kerkdeur in Wittenberg om misbruik in de rooms-katholieke kerk aan te klagen. Dit was het begin van de **Reformatie** → ontstaan van protestantse kerken.",
         uitlegPad: compact(
           "Maarten Luther 1517 = begin van Reformatie. Splitsing rooms-katholiek vs protestants. Belangrijk in Nederland: 80-jarige Oorlog ging deels om religievrijheid.",
           { basis: "Maarten Luther.", simpeler: "Protestants = Luther 1517.", nogSimpeler: "Luther" },
@@ -108,7 +108,7 @@ const steps = [
   },
   {
     title: "Stap 3 — Islam",
-    explanation: "**Islam** = 2e grootste religie, ontstaan in Saudi-Arabië in de 7e eeuw n.Chr.\n\n**Belangrijkste feiten**:\n- **Stichter / profeet**: **Mohammed** (570-632 n.Chr.). Volgens islam ontving hij openbaringen van God (Allah) via aartsengel Gabriël.\n- **Heilig boek**: **Koran** — bevat de openbaringen aan Mohammed (114 hoofdstukken = soera's).\n- **Gebouw**: **moskee**. Heeft een toren = **minaret** (vanaf waar oproep tot gebed klinkt).\n- **Symbool**: **wassende maan + ster** (op vlaggen van veel moslimlanden).\n- **Heilige dag**: vrijdag (vrijdagmiddagsgebed in moskee).\n- **Heilig stad**: **Mekka** (Saudi-Arabië) — geboorteplek Mohammed + Kaäba.\n\n**5 zuilen van de islam** (basisplichten):\n1. Geloofsbelijdenis (Shahada — 'er is geen god dan Allah, Mohammed is zijn profeet')\n2. 5× per dag bidden (salat)\n3. Vasten in **Ramadan** (1 maand, geen eten/drinken overdag)\n4. Liefdadigheid (zakat — % van inkomen geven)\n5. Bedevaart naar **Mekka** (hadj — minstens 1× in leven indien mogelijk)\n\n**Hoofdstromingen**: soennieten (~85%) + sjiieten (~15%).\nIn **Nederland**: ~5% moslim.",
+    explanation: "**Islam** = 2e grootste religie, ontstaan in Saudi-Arabië in de 7e eeuw n.Chr.\n\n**Belangrijkste feiten**:\n- **Stichter / profeet**: **Mohammed** (570-632 n.Chr.). Volgens islam ontving hij openbaringen van God (Allah) via aartsengel Gabriël.\n- **Heilig boek**: **Koran** — bevat de openbaringen aan Mohammed (114 hoofdstukken = soera's).\n- **Gebouw**: **moskee**. Heeft een toren = **minaret** (vanaf waar oproep tot gebed klinkt).\n- **Symbool**: **wassende maan + ster** (op vlaggen van veel moslimlanden).\n- **Heilige dag**: vrijdag (vrijdagmiddaggebed in moskee).\n- **Heilige stad**: **Mekka** (Saudi-Arabië) — geboorteplek Mohammed + Kaäba.\n\n**5 zuilen van de islam** (basisplichten):\n1. Geloofsbelijdenis (Shahada — 'er is geen god dan Allah, Mohammed is zijn profeet')\n2. 5× per dag bidden (salat)\n3. Vasten in **Ramadan** (1 maand, geen eten/drinken overdag)\n4. Liefdadigheid (zakat — % van inkomen geven)\n5. Bedevaart naar **Mekka** (hadj — minstens 1× in leven indien mogelijk)\n\n**Hoofdstromingen**: soennieten (~85%) + sjiieten (~15%).\nIn **Nederland**: ~5% moslim.",
     emoji: "☪️",
     checks: [
       {
@@ -136,7 +136,7 @@ const steps = [
         ),
       },
       {
-        q: "Welke maand vasten moslims tijdens de **Ramadan**?",
+        q: "Hoe vasten moslims tijdens de **Ramadan**?",
         options: ["van zonsopgang tot zonsondergang, 1 maand lang", "elke woensdag", "de hele dag, alleen tijdens religieuze feesten", "1 week per jaar"],
         answer: 0,
         wrongHints: [null, "Niet woensdag — Ramadan duurt een hele maand.", "Niet alleen tijdens feesten — een vaste maand per jaar.", "Niet 1 week — een hele maand."],
@@ -151,7 +151,7 @@ const steps = [
   },
   {
     title: "Stap 4 — Hindoeïsme + boeddhisme",
-    explanation: "**🕉️ Hindoeïsme**\n- **Oorsprong**: India, >3000 jaar oud (oudste religie). Geen één stichter.\n- **Heilige boeken**: **Veda** + Bhagavad Gita\n- **Gebouw**: **tempel** (hindoetempel = kleurrijk + veel beelden)\n- **Symbool**: **Om** (heilig geluid 'aum')\n- **Veel goden**: Brahma (schepper), Vishnoe (behouder), Shiva (vernieuwer) + duizenden anderen. Eigenlijk: één goddelijk principe (Brahman) in vele vormen.\n- **Reïncarnatie**: na dood word je opnieuw geboren in andere vorm (mens, dier, etc.) gebaseerd op karma (goede/slechte daden).\n- **Heilige rivier**: **Ganges** in India.\n- **Geen vlees**: veel hindoes eten vegetarisch (vooral geen rund — koe = heilig).\n\n**☸️ Boeddhisme**\n- **Stichter**: **Boeddha** ('de Ontwaakte') = Siddhartha Gautama (~563-483 v.Chr., India/Nepal).\n- **Heilig boek**: **Tripitaka** (3 manden van leer)\n- **Gebouw**: **tempel** of **pagode** (gelaagde toren)\n- **Symbool**: **wiel van dharma** (8 spaken = 8-voudig pad)\n- **Geen god** in westerse zin — boeddhisme is filosofie/levensweg.\n- **4 edele waarheden**: 1) lijden bestaat 2) door verlangens 3) los verlangens 4) volg achtvoudig pad.\n- **Reïncarnatie + karma** ook (gedeeld met hindoeïsme).\n- **Doel**: verlichting + bevrijding uit cyclus geboorte-dood.",
+    explanation: "**🕉️ Hindoeïsme**\n- **Oorsprong**: India, >3000 jaar oud (oudste religie). Geen één stichter.\n- **Heilige boeken**: **Veda** + Bhagavad Gita\n- **Gebouw**: **tempel** (kleurrijk + veel beelden)\n- **Symbool**: **Om** (heilig geluid 'aum')\n- **Veel goden**: Brahma (schepper), Vishnoe (behouder), Shiva (vernieuwer) + duizenden anderen. Eigenlijk: één goddelijk principe (Brahman) in vele vormen.\n- **Reïncarnatie**: na dood word je opnieuw geboren in andere vorm (mens, dier, etc.) gebaseerd op karma (goede/slechte daden).\n- **Heilige rivier**: **Ganges** in India.\n- **Geen vlees**: veel hindoes eten vegetarisch (vooral geen rund — koe = heilig).\n\n**☸️ Boeddhisme**\n- **Stichter**: **Boeddha** ('de Ontwaakte') = Siddhartha Gautama (~563-483 v.Chr., India/Nepal).\n- **Heilig boek**: **Tripitaka** (3 manden van leer)\n- **Gebouw**: **tempel** of **pagode** (gelaagde toren)\n- **Symbool**: **wiel van dharma** (8 spaken = 8-voudig pad)\n- **Geen god** in westerse zin — boeddhisme is filosofie/levensweg.\n- **4 edele waarheden**: 1) lijden bestaat 2) door verlangen 3) stop verlangen = stop lijden 4) volg achtvoudig pad.\n- **Reïncarnatie + karma** ook (gedeeld met hindoeïsme).\n- **Doel**: verlichting + bevrijding uit cyclus geboorte-dood.",
     emoji: "🕉️",
     checks: [
       {
@@ -159,7 +159,7 @@ const steps = [
         options: ["China", "India", "Iran", "Egypte"],
         answer: 1,
         wrongHints: ["China heeft taoïsme + confucianisme + boeddhisme — geen hindoeïsme als origineel.", null, "Iran = vooral islamitisch (in oudheid Zoroastrisme).", "Egypte had eigen oude religies (Ra, Osiris) — geen hindoeïsme."],
-        explanation: "**India** is bakermat van hindoeïsme. Ook van boeddhisme (al verspreidde zich later). ~80% van India is hindoe. Hindoeïsme is oudste wereldreligie, >3000 jaar oud.",
+        explanation: "**India** is bakermat van hindoeïsme. Ook van boeddhisme (dat zich later verspreidde). ~80% van India is hindoe. Hindoeïsme is oudste wereldreligie, >3000 jaar oud.",
         uitlegPad: compact(
           "Hindoeïsme = India (oudste wereldreligie). Boeddhisme ook India/Nepal. China = taoïsme/confucianisme. Iran (vroeger) = zoroastrisme.",
           { basis: "India.", simpeler: "Hindoeïsme = India.", nogSimpeler: "India" },
@@ -194,7 +194,7 @@ const steps = [
   },
   {
     title: "Stap 5 — Jodendom",
-    explanation: "**Jodendom** = oudste van de **3 monotheïstische** wereldreligies (christendom + islam zijn jonger maar groeiden veel groter).\n\n**Belangrijkste feiten**:\n- **Oorsprong**: ~1800 v.Chr. (stamvader Abraham), in huidig Israël/Palestina.\n- **Stichters/aartsvaders**: **Abraham, Isaak, Jakob**. Plus **Mozes** die de 10 Geboden ontving.\n- **Heilig boek**: **Tora** (eerste 5 boeken van Bijbel — 'Wet') + **Tenach** (hele Hebreeuwse Bijbel).\n- **Gebouw**: **synagoge** (Hebreeuws: bet knesset = 'huis van samenkomst').\n- **Symbool**: **davidster** (zespuntige ster) + 7-armige kandelaar (menora).\n- **Heilige dag**: **sabbat** (zaterdag — vrijdag-avond tot zaterdag-avond). Geen werk.\n- **Heilige stad**: **Jeruzalem** — met Klaagmuur (laatste rest van oude tempel).\n- **Aanhangers**: ~15 miljoen wereldwijd. Grootste gemeenschappen: Israël (7 mln) + VS (6 mln). NL: ~30.000.\n\n**Belangrijke feesten**:\n- **Pesach** (Pasen — herinnert vlucht uit Egypte onder Mozes)\n- **Rosj Hasjana** (joods Nieuwjaar — sep/okt)\n- **Jom Kippoer** (Grote Verzoendag — vasten, vergeving)\n- **Chanoeka** (Lichtfeest — dec, 8 kaarsen op menora)\n\n**Tragiek**: in de **Holocaust** (1939-1945) werden ~6 miljoen Joden vermoord door Nazi-Duitsland. Daarna stichten 1948 = staat **Israël**.",
+    explanation: "**Jodendom** = oudste van de **3 monotheïstische** wereldreligies (christendom + islam zijn jonger maar groeiden veel groter).\n\n**Belangrijkste feiten**:\n- **Oorsprong**: ~1800 v.Chr. (stamvader Abraham), in huidig Israël/Palestina.\n- **Stichters/aartsvaders**: **Abraham, Isaak, Jakob**. Plus **Mozes** die de 10 Geboden ontving.\n- **Heilig boek**: **Tora** (eerste 5 boeken van Bijbel — 'Wet') + **Tenach** (hele Hebreeuwse Bijbel).\n- **Gebouw**: **synagoge** (Hebreeuws: bet knesset = 'huis van samenkomst').\n- **Symbool**: **davidster** (zespuntige ster) + 7-armige kandelaar (menora).\n- **Heilige dag**: **sabbat** (zaterdag — vrijdag-avond tot zaterdag-avond). Geen werk.\n- **Heilige stad**: **Jeruzalem** — met Klaagmuur (laatste rest van oude tempel).\n- **Aanhangers**: ~15 miljoen wereldwijd. Grootste gemeenschappen: Israël (7 mln) + VS (6 mln). NL: ~30.000.\n\n**Belangrijke feesten**:\n- **Pesach** (Pasen — herinnert vlucht uit Egypte onder Mozes)\n- **Rosj Hasjana** (joods Nieuwjaar — sep/okt)\n- **Jom Kippoer** (Grote Verzoendag — vasten, vergeving)\n- **Chanoeka** (Lichtfeest — dec, 8 kaarsen op menora)\n\n**Tragiek**: in de **Holocaust** (1939-1945) werden ~6 miljoen Joden vermoord door Nazi-Duitsland. In 1948 werd de staat **Israël** gesticht.",
     emoji: "✡️",
     checks: [
       {
@@ -210,7 +210,7 @@ const steps = [
         ),
       },
       {
-        q: "In welke stad ligt de **Klaagmuur** — heiligste plek van het jodendom?",
+        q: "In welke stad ligt de **Klaagmuur** — heiligste gebedsplaats van het jodendom?",
         options: ["Mekka", "Vaticaanstad", "Jeruzalem", "Bethlehem"],
         answer: 2,
         wrongHints: ["Mekka = heiligste plek van de islam (Saudi-Arabië).", "Vaticaanstad = hoofdkwartier rooms-katholiek (Rome).", null, "Bethlehem = geboorteplek Jezus (christendom)."],
@@ -237,7 +237,7 @@ const steps = [
   },
   {
     title: "Stap 6 — Vergelijking: religies in 1 overzicht",
-    explanation: "**📊 Overzicht 5 wereldreligies**:\n\n| | Christendom | Islam | Jodendom | Hindoeïsme | Boeddhisme |\n|---|---|---|---|---|---|\n| **Boek** | Bijbel | Koran | Tora | Veda | Tripitaka |\n| **Gebouw** | Kerk | Moskee | Synagoge | Tempel | Tempel/Pagode |\n| **Symbool** | Kruis | Halve maan | Davidster | Om | Dharma-wiel |\n| **Heilige dag** | Zondag | Vrijdag | Zaterdag | (geen vaste) | (geen vaste) |\n| **Stichter** | Jezus | Mohammed | Abraham/Mozes | (geen) | Boeddha |\n| **Aantal goden** | 1 | 1 | 1 | veel | (geen god) |\n| **Heilige stad** | Jeruzalem/Rome | Mekka | Jeruzalem | Varanasi | Bodh Gaya |\n\n**3 grote groepen**:\n- **Monotheïstisch** (1 god): christendom, islam, jodendom — alle drie 'Abrahamitische' religies (delen stamvader Abraham).\n- **Polytheïstisch** (meerdere goden): hindoeïsme (en oude Grieken/Romeinen/Vikingen).\n- **Niet-theïstisch** (geen god): boeddhisme (meer filosofie dan religie).\n\n**Religies + landen** (waar meerderheid heeft):\n- 🇳🇱 Nederland: ~25% christen + ~5% moslim + ~57% geen\n- 🇮🇱 Israël: vooral jodendom\n- 🇸🇦 Saudi-Arabië: 100% islam\n- 🇮🇳 India: ~80% hindoe + ~15% moslim\n- 🇹🇭 Thailand: ~95% boeddhist",
+    explanation: "**📊 Overzicht 5 wereldreligies**:\n\n| | Christendom | Islam | Jodendom | Hindoeïsme | Boeddhisme |\n|---|---|---|---|---|---|\n| **Boek** | Bijbel | Koran | Tora | Veda | Tripitaka |\n| **Gebouw** | Kerk | Moskee | Synagoge | Tempel | Tempel/Pagode |\n| **Symbool** | Kruis | Halve maan | Davidster | Om | Dharma-wiel |\n| **Heilige dag** | Zondag | Vrijdag | Zaterdag | (geen vaste) | (geen vaste) |\n| **Stichter** | Jezus | Mohammed | Abraham/Mozes | (geen) | Boeddha |\n| **Aantal goden** | 1 | 1 | 1 | veel | (geen god) |\n| **Heilige stad** | Jeruzalem/Rome | Mekka | Jeruzalem | Varanasi | Bodh Gaya |\n\n**3 grote groepen**:\n- **Monotheïstisch** (1 god): christendom, islam, jodendom — alle drie 'Abrahamitische' religies (delen stamvader Abraham).\n- **Polytheïstisch** (meerdere goden): hindoeïsme (en oude Grieken/Romeinen/Vikingen).\n- **Niet-theïstisch** (geen god): boeddhisme (meer filosofie dan religie).\n\n**Religies + landen** (waar meerderheid heeft):\n- 🇳🇱 Nederland: ~35% christen + ~6% moslim + ~57% geen\n- 🇮🇱 Israël: vooral jodendom\n- 🇸🇦 Saudi-Arabië: vrijwel 100% islam\n- 🇮🇳 India: ~80% hindoe + ~15% moslim\n- 🇹🇭 Thailand: ~95% boeddhist",
     emoji: "🌐",
     checks: [
       {

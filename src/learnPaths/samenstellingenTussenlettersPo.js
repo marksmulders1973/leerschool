@@ -189,7 +189,7 @@ const steps = [
         q: "Hoe schrijf je: de tafel in de keuken?",
         options: ["keukentafel", "keukentabellen", "keuktafel", "keukenetafel"],
         answer: 0,
-        wrongHints: [null, "Dat is het meervoud van 'tafel'.", "Keuken → keuken, dus het -en- zit er al in het eerste woord.", "Het is -en-, niet een extra -e-."],
+        wrongHints: [null, "'Tabellen' is een ander woord (meervoud van tabel).", "Keuken → keuken, dus het -en- zit er al in het eerste woord.", "Het is -en-, niet een extra -e-."],
         uitlegPad: {
           stappen: [{ titel: "keuken + tafel = keukentafel", tekst: "Het meervoud van 'keuken' is 'keukens' (op -s), maar het woord zelf eindigt al op -en. Daarom: keukentafel, met het -en- van het eerste woord." }],
           niveaus: {
@@ -298,15 +298,15 @@ const steps = [
       },
       {
         q: "Welk woord heeft een tussen-s?",
-        options: ["landschap", "pannenkoek", "boekenkast", "krantenwijk"],
+        options: ["verjaardagstaart", "pannenkoek", "boekenkast", "krantenwijk"],
         answer: 0,
         wrongHints: [null, "Pannenkoek heeft een tussen-n (pan → pannen).", "Boekenkast heeft een tussen-n (boek → boeken).", "Krantenwijk heeft een tussen-n (krant → kranten)."],
         uitlegPad: {
-          stappen: [{ titel: "lands-chap", tekst: "Bij 'landschap' hoor je een -s- tussen land enschap. De andere woorden hebben een -en-." }],
+          stappen: [{ titel: "verjaardags-taart", tekst: "Bij 'verjaardagstaart' hoor je een -s- tussen verjaardag en taart. De andere woorden hebben een -en-." }],
           niveaus: {
-            basis: "'landschap' heeft een tussen-s.",
+            basis: "'verjaardagstaart' heeft een tussen-s.",
             simpeler: "Hoor je bij welk woord een -s- ertussen?",
-            nogSimpeler: "Bij welk woord hoor je 'lands' (met s) ertussen?",
+            nogSimpeler: "Bij welk woord hoor je 'verjaardags' (met s) ertussen?",
           },
         },
       },
@@ -352,9 +352,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: een stalling voor fietsen?",
-        options: ["fietsenstalling", "fietsstalling", "fietsestalling", "fietsenstallingen"],
+        options: ["fietsenstalling", "fietsen stalling", "fietsestalling", "fietsenstallingen"],
         answer: 0,
-        wrongHints: [null, "Fiets → fietsen, dus met tussen-n.", "Het is -en-, niet alleen -e-.", "Dat is het meervoud."],
+        wrongHints: [null, "Een samenstelling schrijf je aan elkaar.", "Het is -en-, niet alleen -e-.", "Dat is het meervoud."],
         uitlegPad: {
           stappen: [{ titel: "fiets → fietsen → fietsenstalling", tekst: "Het meervoud van 'fiets' is 'fietsen'. Daarom fietsenstalling, met tussen-n." }],
           niveaus: {
@@ -380,9 +380,9 @@ const steps = [
       },
       {
         q: "Hoe schrijf je: een winkel waar je schoenen koopt?",
-        options: ["schoenenwinkel", "schoenwinkel", "schoeneswinkel", "schoenenswinkels"],
+        options: ["schoenenwinkel", "schoenewinkel", "schoeneswinkel", "schoenenswinkels"],
         answer: 0,
-        wrongHints: [null, "Schoen → schoenen, dus met tussen-n.", "Het is -en-, niet alleen -e-.", "Dat is het meervoud."],
+        wrongHints: [null, "Het is -en-, niet alleen -e-.", "Er hoort geen -s- in.", "Dat is het meervoud, en er hoort geen -s- in."],
         uitlegPad: {
           stappen: [{ titel: "schoen → schoenen → schoenenwinkel", tekst: "Het meervoud van 'schoen' is 'schoenen'. Daarom schoenenwinkel, met tussen-n." }],
           niveaus: {
@@ -410,7 +410,7 @@ const steps = [
         q: "Hoe schrijf je: een centrum voor sport in een stad?",
         options: ["sportcentrum", "sportencentrum", "sportscentrum", "sport centrum"],
         answer: 0,
-        wrongHints: [null, "Sport → sporten gaat niet als meervoud — geen tussen-n.", "Je hoort hier geen -s-.", "Een samenstelling schrijf je aan elkaar."],
+        wrongHints: [null, "Je hoort hier geen -en-.", "Je hoort hier geen -s-.", "Een samenstelling schrijf je aan elkaar."],
         uitlegPad: {
           stappen: [{ titel: "Geen tussenletter", tekst: "Bij 'sportcentrum' hoor je geen extra -en- of -s-: gewoon sport + centrum aan elkaar." }],
           niveaus: {

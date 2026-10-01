@@ -142,7 +142,7 @@ const steps = [
   {
     title: "Vast, vloeibaar, gas — 3 toestanden",
     explanation:
-      "Elke stof kan in **3 toestanden** voorkomen:\n\n**1. Vast** *(bv. ijs, hout, steen, metaal)*\n• **Vaste vorm** — blijft hetzelfde.\n• **Vast volume** — neemt vaste hoeveelheid ruimte in.\n• Moleculen zitten **dicht op elkaar**.\n\n**2. Vloeibaar** *(bv. water, melk, olie)*\n• **Geen vaste vorm** — neemt de vorm van het glas/kom over.\n• **Vast volume** — 1 liter water blijft 1 liter.\n• Moleculen zitten dichtbij maar **bewegen langs elkaar**.\n\n**3. Gas** *(bv. lucht, stoom, helium)*\n• **Geen vaste vorm** — vult de hele ruimte.\n• **Geen vast volume** — kan ingedrukt of uitgezet worden.\n• Moleculen zitten **ver uit elkaar** en bewegen heel snel.\n\n**Voorbeeld — water**:\n• **IJs** = vast *(onder 0°C)*.\n• **Water** = vloeibaar *(tussen 0°C en 100°C)*.\n• **Stoom** = gas *(boven 100°C)*.\nHetzelfde water, maar **in 3 toestanden** afhankelijk van de temperatuur!\n\n**Doorstroomtoets**: 'Welke vorm heeft een vloeistof?'\n→ De vorm van het ding waar het in zit *(glas, fles, kop)*.\n\n**Andere voorbeelden uit het dagelijks leven**:\n• Brood = vast.\n• Limonade = vloeibaar.\n• Koolzuur in cola = gas *(bubbeltjes)*.\n• Wolken = waterdamp *(eigenlijk gas met heel kleine waterdruppeltjes)*.\n• De lucht om je heen = mengsel van gassen *(stikstof, zuurstof)*.",
+      "Elke stof kan in **3 toestanden** voorkomen:\n\n**1. Vast** *(bv. ijs, hout, steen, metaal)*\n• **Vaste vorm** — blijft hetzelfde.\n• **Vast volume** — neemt vaste hoeveelheid ruimte in.\n• Moleculen zitten **dicht op elkaar**.\n\n**2. Vloeibaar** *(bv. water, melk, olie)*\n• **Geen vaste vorm** — neemt de vorm van het glas/kom over.\n• **Vast volume** — 1 liter water blijft 1 liter.\n• Moleculen zitten dichtbij maar **bewegen langs elkaar**.\n\n**3. Gas** *(bv. lucht, stoom, helium)*\n• **Geen vaste vorm** — vult de hele ruimte.\n• **Geen vast volume** — kan ingedrukt of uitgezet worden.\n• Moleculen zitten **ver uit elkaar** en bewegen heel snel.\n\n**Voorbeeld — water**:\n• **IJs** = vast *(onder 0°C)*.\n• **Water** = vloeibaar *(tussen 0°C en 100°C)*.\n• **Stoom** = gas *(boven 100°C)*.\nHetzelfde water, maar **in 3 toestanden** afhankelijk van de temperatuur!\n\n**Doorstroomtoets**: 'Welke vorm heeft een vloeistof?'\n→ De vorm van het ding waar het in zit *(glas, fles, kop)*.\n\n**Andere voorbeelden uit het dagelijks leven**:\n• Brood = vast.\n• Limonade = vloeibaar.\n• Koolzuur in cola = gas *(bubbeltjes)*.\n• Wolken = heel kleine waterdruppeltjes *(geen gas!)*.\n• De lucht om je heen = mengsel van gassen *(stikstof, zuurstof)*.",
     svg: toestandSvg(),
     checks: [
       {
@@ -198,7 +198,7 @@ const steps = [
   {
     title: "Vloeistoffen — eigenschappen",
     explanation:
-      "**Vloeistoffen** zijn een speciale toestand. Wat is bijzonder?\n\n**Eigenschappen**:\n1. **Stromen** — water 'loopt' van hoog naar laag.\n2. **Vorm aannemen** — past zich aan aan glas, kop, plas.\n3. **Niet samen te drukken** — 1 liter water blijft 1 liter, ook onder druk.\n4. **Verdampen** — kan langzaam in lucht 'verdwijnen' (wordt damp).\n5. **Mengen of niet** — sommige vloeistoffen mengen *(water + limonadesiroop)*, andere niet *(water + olie)*.\n\n**Belangrijke vloeistoffen**:\n• **Water** (H₂O) — meest voorkomende vloeistof op aarde.\n• **Melk** — water met vetdeeltjes en eiwitten.\n• **Olie** — drijft op water *(lichter)*.\n• **Honing** — vloeibaar maar **dik** *(stroperig)*.\n\n**Toets-experiment-vraag**:\n*'Wat gebeurt als je water en olie mengt?'*\n• Olie **drijft op** water *(olie is lichter)*.\n• Ze mengen **niet** — vormen 2 lagen.\n\n*'Wat gebeurt als je honing in water doet?'*\n• Honing **zinkt** *(zwaarder dan water)* en lost langzaam op.\n\n*'Wat verdwijnt sneller — water uit een diep glas of uit een vlakke schaal?'*\n• Uit de **vlakke schaal** *(meer oppervlak voor verdamping)*.\n\n**Belangrijke termen**:\n• **Stroperig** = dik, langzaam vloeiend *(honing, siroop)*.\n• **Dun** = snel vloeiend *(water, alcohol)*.\n• **Verdampen** = vloeistof → gas, langzaam, ook onder kookpunt.\n• **Oplossen** = vaste stof verdwijnt in vloeistof *(suiker in thee)*.",
+      "**Vloeistoffen** zijn een speciale toestand. Wat is bijzonder?\n\n**Eigenschappen**:\n1. **Stromen** — water 'loopt' van hoog naar laag.\n2. **Vorm aannemen** — past zich aan aan glas, kop, plas.\n3. **Bijna niet samen te drukken** — 1 liter water blijft 1 liter, ook onder druk.\n4. **Verdampen** — kan langzaam in lucht 'verdwijnen' (wordt damp).\n5. **Mengen of niet** — sommige vloeistoffen mengen *(water + limonadesiroop)*, andere niet *(water + olie)*.\n\n**Belangrijke vloeistoffen**:\n• **Water** (H₂O) — meest voorkomende vloeistof op aarde.\n• **Melk** — water met vetdeeltjes en eiwitten.\n• **Olie** — drijft op water *(lichter)*.\n• **Honing** — vloeibaar maar **dik** *(stroperig)*.\n\n**Toets-experiment-vraag**:\n*'Wat gebeurt als je water en olie mengt?'*\n• Olie **drijft op** water *(olie is lichter)*.\n• Ze mengen **niet** — vormen 2 lagen.\n\n*'Wat gebeurt als je honing in water doet?'*\n• Honing **zinkt** *(zwaarder dan water)* en lost langzaam op.\n\n*'Wat verdwijnt sneller — water uit een diep glas of uit een vlakke schaal?'*\n• Uit de **vlakke schaal** *(meer oppervlak)*.\n\n**Belangrijke termen**:\n• **Stroperig** = dik, langzaam vloeiend *(honing, siroop)*.\n• **Dun** = snel vloeiend *(water, alcohol)*.\n• **Verdampen** = vloeistof → gas, langzaam, ook onder kookpunt.\n• **Oplossen** = vaste stof verdwijnt in vloeistof *(suiker in thee)*.",
     checks: [
       {
         q: "Waarom drijft **olie** op water?",
@@ -222,8 +222,8 @@ const steps = [
             { titel: "Oppervlak telt", tekst: "Verdampen gebeurt aan het oppervlak. Veel oppervlak = meer plek waar moleculen kunnen vertrekken. Vlakke schaal heeft meer oppervlak dan diep glas." },
           ],
           woorden: [{ woord: "verdampen", uitleg: "Vloeistof langzaam in lucht verdwijnen, ook bij kamertemperatuur." }],
-          theorie: "Verdamping snelheid hangt af van: oppervlak, temperatuur, wind/luchtstroom.",
-          voorbeelden: [{ type: "stap", tekst: "Plas op straat verdampt sneller op zonnig dag met wind." }],
+          theorie: "Verdampingssnelheid hangt af van: oppervlak, temperatuur, wind/luchtstroom.",
+          voorbeelden: [{ type: "stap", tekst: "Plas op straat verdampt sneller op een zonnige dag met wind." }],
           basiskennis: [{ onderwerp: "Oppervlak", uitleg: "Hoe meer oppervlak, hoe sneller verdamping." }],
           niveaus: {
             basis: "Vlakke schaal.",
@@ -236,7 +236,7 @@ const steps = [
         q: "Wat **lost op** in water?",
         options: ["Suiker", "Olie", "IJzer", "Hout"],
         answer: 0,
-        wrongHints: [null, "Olie mengt juist niet.", "IJzer roest maar lost niet op.", "Hout zinkt maar lost niet op."],
+        wrongHints: [null, "Olie mengt juist niet.", "IJzer roest maar lost niet op.", "Hout drijft, maar lost niet op."],
       },
     ],
   },
@@ -245,7 +245,7 @@ const steps = [
   {
     title: "Gassen — onzichtbaar maar overal",
     explanation:
-      "**Gassen** zijn vaak onzichtbaar maar **overal om ons heen**.\n\n**Voorbeelden**:\n• **Lucht** — mengsel van stikstof (~78%), zuurstof (~21%), CO₂, edelgassen.\n• **Stoom** — water in gas-vorm.\n• **Koolzuurgas (CO₂)** — in cola, bier, lucht.\n• **Helium** — in ballonnen *(stijgt op omdat het lichter is dan lucht)*.\n• **Aardgas** — voor verwarming + koken in Nederland.\n\n**Eigenschappen van gas**:\n1. **Vult de hele ruimte** — een ballon vult zich helemaal als je gas erin pompt.\n2. **Onzichtbaar** *(meestal)* — wel zichtbaar bij stoom of mist, want dan zijn er minimal kleine waterdruppeltjes in.\n3. **Samen te drukken** — je kunt veel gas in een klein flesje persen *(bv. propaan-gasfles)*.\n4. **Beweegt heel snel** — moleculen rennen rond.\n5. **Verspreid** — geur van eten gaat door het hele huis.\n\n**Toets-feitjes om te kennen**:\n• Lucht is **niets** zien, maar voel je wel *(wind)*.\n• Stoom is **niet** echt water-damp die je ziet — die is onzichtbaar. Wat je ziet zijn kleine waterdruppeltjes (mist).\n• **Ballon met helium stijgt** omdat helium lichter is dan lucht. Een ballon met gewone lucht zinkt.\n\n**toetsvraag**:\n*'Wat is een mengsel van gassen?'*\n→ Lucht.\n\n**Pas op**:\n• **Adem** = bevat zuurstof in en koolstofdioxide uit.\n• **Zuurstof** is een gas dat je nodig hebt om te leven.\n• **Koolstofdioxide (CO₂)** is wat planten 'inademen' en jij 'uitademt'.\n\n**Brandstoffen**:\n• Aardgas, propaan, butaan — allemaal gassen die kunnen branden.\n• **Vuur** heeft 3 dingen nodig: brandstof + zuurstof + warmte. Vandaar dat zonder zuurstof geen vuur kan.",
+      "**Gassen** zijn vaak onzichtbaar maar **overal om ons heen**.\n\n**Voorbeelden**:\n• **Lucht** — mengsel van stikstof (~78%), zuurstof (~21%), CO₂, edelgassen.\n• **Stoom** — water in gas-vorm.\n• **Koolzuurgas (CO₂)** — in cola, bier, lucht.\n• **Helium** — in ballonnen *(stijgt op omdat het lichter is dan lucht)*.\n• **Aardgas** — voor verwarming + koken in Nederland.\n\n**Eigenschappen van gas**:\n1. **Vult de hele ruimte** — een ballon vult zich helemaal als je gas erin pompt.\n2. **Onzichtbaar** *(meestal)* — wel zichtbaar bij stoom of mist, want dan zijn er piepkleine waterdruppeltjes.\n3. **Samen te drukken** — je kunt veel gas in een klein flesje persen *(bv. propaan-gasfles)*.\n4. **Beweegt heel snel** — moleculen rennen rond.\n5. **Verspreid** — geur van eten gaat door het hele huis.\n\n**Toets-feitjes om te kennen**:\n• Lucht kun je **niet** zien, maar wel voelen *(wind)*.\n• Stoom is **niet** echt water-damp die je ziet — die is onzichtbaar. Wat je ziet zijn kleine waterdruppeltjes (mist).\n• **Ballon met helium stijgt** omdat helium lichter is dan lucht. Een ballon met gewone lucht zinkt.\n\n**Toetsvraag**:\n*'Wat is een mengsel van gassen?'*\n→ Lucht.\n\n**Pas op**:\n• **Ademen** = zuurstof in, koolstofdioxide uit.\n• **Zuurstof** is een gas dat je nodig hebt om te leven.\n• **Koolstofdioxide (CO₂)** is wat planten 'inademen' en jij 'uitademt'.\n\n**Brandstoffen**:\n• Aardgas, propaan, butaan — allemaal gassen die kunnen branden.\n• **Vuur** heeft 3 dingen nodig: brandstof + zuurstof + warmte. Zonder zuurstof dus geen vuur.",
     checks: [
       {
         q: "**Lucht** is een mengsel van vooral ... ?",
@@ -300,7 +300,7 @@ const steps = [
   {
     title: "Overgangen + watercyclus",
     explanation:
-      "Stoffen kunnen **van toestand veranderen** door warmte of kou.\n\n**De 6 overgangen** *(uit je hoofd!)*:\n• **Smelten** = vast → vloeibaar *(ijs → water)*.\n• **Stollen** = vloeibaar → vast *(water → ijs)*.\n• **Verdampen** = vloeibaar → gas *(water → stoom)*.\n• **Condenseren** = gas → vloeibaar *(stoom → water op koude ruit)*.\n• **Sublimeren** = vast → gas *(ijs verdwijnt direct, zoals bij vriesdroge)*.\n• **Desublimeren** = gas → vast *(rijp op gras 's winters)*.\n\n**Voorbeeld water**:\n• 0°C: water bevriest *(stollen)*.\n• 100°C: water kookt *(verdampen)*.\n• Tussen 0-100°C: vloeibaar.\n• Onder 0°C: vast *(ijs)*.\n• Boven 100°C: gas *(stoom)*.\n\nDit zijn **standaard druk** *(zeeniveau)*. Hoog in de bergen kookt water iets onder 100°C.\n\n**De watercyclus**:\n1. **Zon** verwarmt zee, meer, rivier → water **verdampt**.\n2. Waterdamp **stijgt op** in de lucht.\n3. Hoog in de lucht **koelt** het af → **condenseert** tot wolk.\n4. Druppels in wolken groeien → **regen** valt naar beneden.\n5. Regen valt op land of zee → cyclus begint opnieuw.\n\n**Toets-feitjes over de watercyclus**:\n• Wolken zijn **kleine waterdruppeltjes**, geen pure damp.\n• **Bewolking** ontstaat als waterdamp condenseert.\n• Sneeuw is bevroren water *(condenseert + bevriest in 1 stap, soms direct uit damp)*.\n\n**Veel-voorkomende fout**:\n• Denken dat ijs gewoon weg-gaat als het 'verdampt'. Eigenlijk smelt het meestal eerst tot water, dan verdampt.\n• Echte sublimatie *(direct van vast naar gas)* gebeurt wel bij heel koude omstandigheden *(bv. vrieskast — ijs verdwijnt zonder eerst water te worden, zogenoemd 'vriesbrand')*.",
+      "Stoffen kunnen **van toestand veranderen** door warmte of kou.\n\n**De 6 overgangen** *(uit je hoofd!)*:\n• **Smelten** = vast → vloeibaar *(ijs → water)*.\n• **Stollen** = vloeibaar → vast *(water → ijs)*.\n• **Verdampen** = vloeibaar → gas *(water → stoom)*.\n• **Condenseren** = gas → vloeibaar *(stoom → water op koude ruit)*.\n• **Sublimeren** = vast → gas *(droogijs → gas)*.\n• **Desublimeren** = gas → vast *(rijp op gras 's winters)*.\n\n**Voorbeeld water**:\n• 0°C: water bevriest *(stollen)*.\n• 100°C: water kookt *(verdampen)*.\n• Tussen 0-100°C: vloeibaar.\n• Onder 0°C: vast *(ijs)*.\n• Boven 100°C: gas *(stoom)*.\n\nDit geldt bij **standaard druk** *(zeeniveau)*. Hoog in de bergen kookt water iets onder 100°C.\n\n**De watercyclus**:\n1. **Zon** verwarmt zee, meer, rivier → water **verdampt**.\n2. Waterdamp **stijgt op** in de lucht.\n3. Hoog in de lucht **koelt** het af → **condenseert** tot wolk.\n4. Druppels in wolken groeien → **regen** valt naar beneden.\n5. Regen valt op land of zee → cyclus begint opnieuw.\n\n**Toets-feitjes over de watercyclus**:\n• Wolken zijn **kleine waterdruppeltjes**, geen pure damp.\n• **Bewolking** ontstaat als waterdamp condenseert.\n• Sneeuw is bevroren water *(ontstaat vaak direct uit damp: desublimeren)*.\n\n**Veel-voorkomende fout**:\n• Denken dat ijs gewoon weg-gaat als het 'verdampt'. Eigenlijk smelt het meestal eerst tot water, dan verdampt.\n• Echte sublimatie *(direct van vast naar gas)* gebeurt wel bij heel koude omstandigheden *(bv. vrieskast — ijs verdwijnt zonder eerst water te worden, zogenoemd 'vriesbrand')*.",
     svg: watercyclusSvg(),
     checks: [
       {
@@ -320,7 +320,7 @@ const steps = [
           ],
           theorie: "Toets-truc overgangen-tabel (uit het hoofd!):\n• vast→vloeibaar = **smelten**\n• vloeibaar→vast = **stollen**\n• vloeibaar→gas = **verdampen**\n• gas→vloeibaar = **condenseren**\n6 overgangen totaal (+ sublimeren + desublimeren), maar deze 4 zijn de belangrijkste.",
           voorbeelden: [
-            { type: "stap", tekst: "Lood smelt bij 327°C. IJs bij 0°C. Boter bij ~32°C (lichaamswarmte is bijna genoeg)." },
+            { type: "stap", tekst: "Lood smelt bij 327°C. IJs bij 0°C. Boter bij ~32°C (je hand is al warm genoeg)." },
             { type: "stap", tekst: "Smelten gebeurt altijd MET warmte. Geen warmte erbij = blijft vast." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Smelten = WARMTE. Stollen = KOU. Beide gaan tussen vast/vloeibaar. Onthoud: warmte → vloeit, kou → bevriest." }],
@@ -392,7 +392,7 @@ const steps = [
         q: "Wat is **sublimeren**?",
         options: ["Direct van vast naar gas", "Smelten", "Stollen", "Verdampen via vloeibaar"],
         answer: 0,
-        wrongHints: [null, "Smelten = naar vloeibaar tussen.", "Stollen = vloeibaar → vast.", "Niet hetzelfde — sublimatie slaat vloeibaar over."],
+        wrongHints: [null, "Smelten = van vast naar vloeibaar.", "Stollen = vloeibaar → vast.", "Niet hetzelfde — sublimatie slaat vloeibaar over."],
       },
       {
         q: "Bij welke **temperatuur** kookt water (op zeespiegel)?",
@@ -402,16 +402,16 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Vriespunt + kookpunt water", tekst: "Twee belangrijke temperaturen voor water:\n• **Vriespunt**: **0 °C** — water wordt ijs (stollen)\n• **Kookpunt**: **100 °C** — water wordt damp/stoom (verdampen)\n\nDeze twee zijn de **referentiepunten** voor de Celsius-temperatuurschaal." },
-            { titel: "Druk + hoogte beïnvloeden kookpunt", tekst: "Op **zeespiegel** kookt water op 100°C. Maar op **hoge bergen** (lage luchtdruk) kookt het bij lagere temperatuur:\n• Mount Everest (8.849 m): water kookt bij ~70°C\n• Zwitserse alpen: ~95°C\n\nDaarom in bergen: thee minder heet, eten duurder om gaar te koken. Snelkookpan helpt." },
+            { titel: "Druk + hoogte beïnvloeden kookpunt", tekst: "Op **zeespiegel** kookt water op 100°C. Maar op **hoge bergen** (lage luchtdruk) kookt het bij lagere temperatuur:\n• Mount Everest (8.849 m): water kookt bij ~70°C\n• Zwitserse alpen: ~95°C\n\nDaarom in bergen: thee minder heet, eten gaart langzamer. Snelkookpan helpt." },
           ],
           woorden: [
-            { woord: "kookpunt", uitleg: "Temperatuur waarbij vloeistof verdampt. Water: 100°C op zeespiegel." },
+            { woord: "kookpunt", uitleg: "Temperatuur waarbij vloeistof kookt. Water: 100°C op zeespiegel." },
             { woord: "vriespunt", uitleg: "Temperatuur waarbij vloeistof stolt. Water: 0°C." },
             { woord: "Celsius", uitleg: "Temperatuurschaal: 0 = water vriest, 100 = water kookt." },
           ],
-          theorie: "Andere stoffen, andere kookpunten:\n• IJzer: 1538°C (smeltpunt)\n• Goud: 1064°C\n• Stikstof: -196°C (vloeibaar bij die temperatuur)\n• Alcohol: ~78°C\n• Water: 100°C\n\nCelsius vernoemd naar Zweedse Anders Celsius (1701-1744).",
+          theorie: "Andere stoffen, andere kookpunten:\n• IJzer: 1538°C (smeltpunt)\n• Goud: 1064°C (smeltpunt)\n• Stikstof: -196°C (vloeibaar bij die temperatuur)\n• Alcohol: ~78°C\n• Water: 100°C\n\nCelsius vernoemd naar Zweedse Anders Celsius (1701-1744).",
           voorbeelden: [
-            { type: "stap", tekst: "Stoom uit theeketel = 100°C. Pas op verbranding!" },
+            { type: "stap", tekst: "Stoom uit theeketel = 100°C. Pas op voor brandwonden!" },
           ],
           basiskennis: [{ onderwerp: "Op zeespiegel", uitleg: "100°C geldt bij normale luchtdruk op zeespiegel. In bergen anders." }],
           niveaus: { basis: "100 °C.", simpeler: "Water kookt bij 100°C (op zeespiegel). Daarbij wordt vloeistof gas (stoom).", nogSimpeler: "100°C" },
@@ -425,8 +425,8 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Smelten + vriezen", tekst: "Bij **0°C** gebeurt twee dingen:\n• Water → IJs (vriezen/stollen)\n• IJs → water (smelten)\n\nHet is hetzelfde getal — heen + terug. Onder 0°C: ijs. Boven 0°C: water (vloeibaar)." },
-            { titel: "Toets-feit: gladde wegen", tekst: "Bij temperaturen rond 0°C ontstaan **gladde wegen**. Water op weg-oppervlak kan ineens bevriezen bij dalende temperatuur. Strooidiensten gebruiken **zout** — dat verlaagt vriespunt tot ~-9°C.\n\nDaarom strooien: zout verandert moment van bevriezen. Bij -15°C werkt zout niet meer." },
-            { titel: "Toets-tip: vergeten niet", tekst: "**Belangrijke temperaturen onthouden**:\n• 0°C — water/ijs\n• 100°C — water/stoom\n• 37°C — gemiddelde lichaamstemperatuur\n• ~20°C — kamer-temperatuur\n• -18°C — vriezer (modern)\n• 4°C — koelkast" },
+            { titel: "Toets-feit: gladde wegen", tekst: "Bij temperaturen rond 0°C ontstaan **gladde wegen**. Water op weg-oppervlak kan ineens bevriezen bij dalende temperatuur. Strooidiensten gebruiken **zout** — dat verlaagt het vriespunt, dus water bevriest pas bij lagere temperatuur.\n\nBij strenge vorst (rond -10°C of kouder) werkt zout steeds slechter." },
+            { titel: "Toets-tip: niet vergeten", tekst: "**Belangrijke temperaturen onthouden**:\n• 0°C — water/ijs\n• 100°C — water/stoom\n• 37°C — gemiddelde lichaamstemperatuur\n• ~20°C — kamer-temperatuur\n• -18°C — vriezer (modern)\n• 4°C — koelkast" },
           ],
           woorden: [
             { woord: "smelten", uitleg: "Vast → vloeibaar. Bv. ijs → water." },
@@ -437,8 +437,8 @@ const steps = [
           voorbeelden: [
             { type: "stap", tekst: "Sneeuwman in zon: smelt langzaam (0°C → boven 0°C)." },
           ],
-          basiskennis: [{ onderwerp: "Niet altijd 0°C", uitleg: "Zout water (zee) bevriest bij ~-2°C — daarom NL-Noordzee zelden bevriest." }],
-          niveaus: { basis: "0 °C.", simpeler: "IJs smelt bij 0°C — wordt water. Hetzelfde temperatuur als waarbij water vriest.", nogSimpeler: "0°C" },
+          basiskennis: [{ onderwerp: "Niet altijd 0°C", uitleg: "Zout water (zee) bevriest bij ~-2°C — daarom bevriest de Noordzee zelden." }],
+          niveaus: { basis: "0 °C.", simpeler: "IJs smelt bij 0°C — wordt water. Dezelfde temperatuur als waarbij water vriest.", nogSimpeler: "0°C" },
         },
       },
       {
@@ -454,7 +454,7 @@ const steps = [
           woorden: [
             { woord: "condenseren", uitleg: "Gas → vloeibaar. Tegenovergestelde van verdampen." },
             { woord: "dauw", uitleg: "Druppels op gras 's morgens — water dat uit lucht condenseerde 's nachts." },
-            { woord: "condens", uitleg: "Het gecondenseerde water dat je ziet (op raam, in douche, op koude glas)." },
+            { woord: "condens", uitleg: "Het gecondenseerde water dat je ziet (op raam, in douche, op koud glas)." },
           ],
           theorie: "**Toestandsveranderingen-overzicht**:\n• Smelten: vast → vloeibaar (ijs → water)\n• Stollen: vloeibaar → vast (water → ijs)\n• Verdampen: vloeibaar → gas (water → damp)\n• Condenseren: gas → vloeibaar (damp → water)\n• Sublimeren: vast → gas (droog ijs → CO₂-gas)\n• Rijp/depositie: gas → vast (waterdamp → ijskristallen)",
           voorbeelden: [
@@ -472,11 +472,11 @@ const steps = [
       { q: "Wat is **verdampen**?", options: ["Vloeibaar wordt gas","Gas wordt vloeibaar","Smelten","Stollen"], answer: 0, wrongHints: [null, "Condenseren.", "Niet.", "Niet."] },
       { q: "**IJs op een glas** is welke toestand?", options: ["Vast","Vloeibaar","Gas","Plasma"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet bij water-stof."] },
       { q: "**Stoom uit kookpot** is?", options: ["Gas","Vloeibaar","Vast","Plasma"], answer: 0, wrongHints: [null, "Stoom is geen druppels — daarvoor zou het al gecondenseerd zijn.", "Stoom heeft geen vaste vorm.", "Plasma is iets heel anders (heter, in sterren)."] },
-      { q: "**Smelt-** en **kookpunt** zijn?", options: ["Vaste eigenschappen van een stof","Random","Niet bestaand","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Wel."] },
+      { q: "**Smelt-** en **kookpunt** zijn?", options: ["Vaste eigenschappen van een stof","Toevallig","Niet bestaand","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Wel."] },
       { q: "Wat is **massa**?", options: ["Hoeveelheid materie","Gewicht","Volume","Niet relevant"], answer: 0, wrongHints: [null, "Wel verwant maar verschillend.", "Ruimte-inname.", "Wel."] },
       { q: "Wat is een **mengsel**?", options: ["Meerdere stoffen samen","Zuivere stof","Element","Niet bestaand"], answer: 0, wrongHints: [null, "Tegengestelde.", "Specifieker.", "Wel."] },
-      { q: "**Lucht** is welke toestand?", options: ["Gas","Vloeibaar","Vast","Mengsel van gassen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Ook correct — specifieker."] },
-      { q: "Wat is **verdrijven** (vloeistof)?", options: ["Plaats innemen in vloeistof — Archimedes","Verdwijnen","Mengen","Smelten"], answer: 0, wrongHints: [null, "Verdwijnen is iets anders — verdrijven betekent juist 'wegduwen'.", "Mengen is twee stoffen bij elkaar doen.", "Smelten is vast → vloeibaar door warmte."] },
+      { q: "**Lucht** is welke toestand?", options: ["Gas","Vloeibaar","Vast","Mengsel van gassen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Lucht is wel een mengsel van gassen, maar dat is geen toestand. Welke toestand heeft lucht?"] },
+      { q: "Wat is **water verplaatsen** (Archimedes)?", options: ["Plaats innemen in vloeistof — Archimedes","Verdwijnen","Mengen","Smelten"], answer: 0, wrongHints: [null, "Verdwijnen is iets anders — verplaatsen betekent juist 'opzij duwen'.", "Mengen is twee stoffen bij elkaar doen.", "Smelten is vast → vloeibaar door warmte."] },
       { q: "Wat is **sublimeren**?", options: ["Vast direct naar gas","Vloeibaar naar gas","Gas naar vast","Niet bestaand"], answer: 0, wrongHints: [null, "Verdampen.", "Rijp.", "Wel."] },
       { q: "Welke **stof** zet uit bij verwarming (gewoonlijk)?", options: ["Bijna alle stoffen","Geen","Alleen water","Alleen ijs"], answer: 0, wrongHints: [null, "Niet — wel uitzetting.", "Niet — geldt breder.", "Niet."] },
     ],

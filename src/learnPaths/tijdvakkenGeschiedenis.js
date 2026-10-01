@@ -74,7 +74,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "10 tijdvakken (NL-canon)", tekst: "Commissie De Rooy heeft de geschiedenis in 10 tijdvakken verdeeld. Elk tijdvak heeft een NAAM die typisch is voor die periode (jagers, monniken, ontdekkers, etc)." }],
           woorden: [{ woord: "tijdvak", uitleg: "Periode in de geschiedenis met een eigen naam en kenmerken." }, { woord: "Commissie De Rooy", uitleg: "Werkgroep die in 2001 de 10 tijdvakken vastlegde voor het onderwijs." }],
-          theorie: "Doel: overzicht in lange geschiedenis. Elk tijdvak loopt 100-3000 jaar. Vroegste tijdvakken zijn het langst (jagers tot 3000 v.Chr.), recentste het kortst.",
+          theorie: "Doel: overzicht in lange geschiedenis. Tijdvakken verschillen sterk in lengte: de vroegste zijn het langst (jagers tot 3000 v.Chr.), de recentste het kortst (tijdvak 9: 50 jaar).",
           voorbeelden: [{ type: "lijstje", tekst: "1 Jagers+boeren · 2 Grieken+Romeinen · 3 Monniken+ridders · ... · 10 Televisie+computer. Onthoud namen + volgorde." }],
           basiskennis: [{ onderwerp: "Niet 5/8/12", uitleg: "10 is de NL-standaard. Andere landen hebben eigen indelingen." }],
           niveaus: { basis: "10.", simpeler: "Nederlandse geschiedenis-canon = 10 tijdvakken.", nogSimpeler: "10" },
@@ -87,7 +87,7 @@ const steps = [
         wrongHints: [null, "Dat is tijdvak 2 — een lang tweede tijdvak (3000 v.Chr. tot 500 n.Chr.).", "Dat is tijdvak 3 — vroege middeleeuwen.", "Dat is tijdvak 9 — pas in de 20e eeuw."],
         uitlegPad: {
           stappen: [{ titel: "Prehistorie = jagers+boeren", tekst: "Tijdvak 1 = Jagers en boeren, tot 3000 v.Chr. Alles vóór schrift. Mensen leefden van jacht + later landbouw. Geen geschreven bronnen." }],
-          woorden: [{ woord: "prehistorie", uitleg: "Tijd vóór het schrift (in NL tot ~3000 v.Chr). Alles wat we weten komt uit archeologie." }, { woord: "landbouwrevolutie", uitleg: "Overgang van jagers-verzamelaars naar boeren (~10.000 v.Chr.)." }],
+          woorden: [{ woord: "prehistorie", uitleg: "Tijd vóór het schrift (tijdvak 1: tot ~3000 v.Chr.). Alles wat we weten komt uit archeologie." }, { woord: "landbouwrevolutie", uitleg: "Overgang van jagers-verzamelaars naar boeren (~10.000 v.Chr.)." }],
           theorie: "Eerste fase: jagers-verzamelaars (rondtrekkend). Tweede fase: landbouw + vaste dorpen + aardewerk. In NL: hunebedden ~3000 v.Chr.",
           voorbeelden: [{ type: "NL-spoor", tekst: "Hunebedden in Drenthe = stenen graven van Trechterbekercultuur ~3000 v.Chr. Toeristische bezienswaardigheid." }],
           basiskennis: [{ onderwerp: "Volgorde belangrijk", uitleg: "Tijdvak 2/3/9 komen LATER. Eerste = jagers." }],
@@ -123,10 +123,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Romeinen kwamen pas in tijdvak 2.", "Kastelen zijn middeleeuws — tijdvak 3-4.", "Gouden Eeuw is tijdvak 6."],
         uitlegPad: {
-          stappen: [{ titel: "Oudste monumenten NL", tekst: "Hunebedden = grote stenen graven uit ~3000 v.Chr. Gebouwd door de Trechterbekercultuur (TRB). Vooral in Drenthe (53 stuks). Per hunebed: enorme stenen (10-25 ton) bovenop kleinere." }],
+          stappen: [{ titel: "Oudste monumenten NL", tekst: "Hunebedden = grote stenen graven uit ~3000 v.Chr. Gebouwd door de Trechterbekercultuur (TRB). Vooral in Drenthe (52 van de 54 in NL). Per hunebed: enorme stenen (10-25 ton) bovenop kleinere." }],
           woorden: [{ woord: "hunebed", uitleg: "Megalitisch graf van zwerfkeien. Oudste monument NL (~5000 jaar oud)." }, { woord: "Trechterbekercultuur", uitleg: "Neolithische cultuur in Noord-NL/Duitsland (~3400-2800 v.Chr.). Genoemd naar trechter-vormige potten." }],
           theorie: "Stenen kwamen door ijstijden vanuit Scandinavië. Mensen sleepten ze + plaatsten ze als graf. Bedoeld voor collectieve begrafenissen. Toeristische bezienswaardigheid bij Borger (Hunebed-D27, grootste van NL).",
-          voorbeelden: [{ type: "praktijk", tekst: "Hunebed D27 in Borger: 22 m lang, ~22 stenen. Bezoek gratis." }],
+          voorbeelden: [{ type: "praktijk", tekst: "Hunebed D27 in Borger: ruim 22 m lang. Bezoek gratis." }],
           basiskennis: [{ onderwerp: "Niet later", uitleg: "Hunebedden zijn PREHISTORISCH — vóór Romeinen, vóór Middeleeuwen, ver vóór Gouden Eeuw." }],
           niveaus: { basis: "Stenen graven tijdvak 1.", simpeler: "Hunebedden = stenen graven van ~5000 jaar geleden in Drenthe.", nogSimpeler: "Oude graven" },
         },
@@ -172,7 +172,7 @@ const steps = [
   // ─── C. Middeleeuwen ───────────────
   {
     title: "Tijdvak 3 — Monniken en ridders (500 – 1000)",
-    explanation: "**Vroege middeleeuwen**. Na de val van Rome viel Europa uiteen in kleinere rijken. Twee groepen domineren:\n\n**Monniken** *(de Kerk)*\n• Het **christendom** verspreidt zich over heel Europa.\n• **Kloosters** worden gebouwd — daar werkten en baden monniken.\n• Monniken **kopiëren boeken** met de hand (er was nog geen drukpers).\n• De Kerk wordt heel machtig — politiek én geestelijk.\n\n**Ridders** *(de adel)*\n• Het **feodale stelsel**: koning → leenmannen (ridders) → boeren.\n• De koning gaf land aan ridders, en die beschermden hem in oorlog.\n• Boeren (**horigen**) werkten op het land van de heer in ruil voor bescherming.\n\n**Belangrijke gebeurtenissen**:\n• **Karel de Grote** (768-814): bouwde een groot rijk dat Frankrijk + Duitsland + Nederland besloeg. Werd in 800 tot keizer gekroond door de paus.\n• **Vikingen** (~800-1050): Scandinavische krijgers, plunderden en handelden in Europa. Plaatsnamen in Nederland zoals 'Wijk' wijzen vaak op Vikingsporen.",
+    explanation: "**Vroege middeleeuwen**. Na de val van Rome viel Europa uiteen in kleinere rijken. Twee groepen domineren:\n\n**Monniken** *(de Kerk)*\n• Het **christendom** verspreidt zich over heel Europa.\n• **Kloosters** worden gebouwd — daar werkten en baden monniken.\n• Monniken **kopiëren boeken** met de hand (er was nog geen drukpers).\n• De Kerk wordt heel machtig — politiek én geestelijk.\n\n**Ridders** *(de adel)*\n• Het **feodale stelsel**: koning → leenmannen (ridders) → boeren.\n• De koning gaf land aan ridders, en die beschermden hem in oorlog.\n• Boeren (**horigen**) werkten op het land van de heer in ruil voor bescherming.\n\n**Belangrijke gebeurtenissen**:\n• **Karel de Grote** (768-814): bouwde een groot rijk dat Frankrijk + Duitsland + Nederland besloeg. Werd in 800 tot keizer gekroond door de paus.\n• **Vikingen** (~800-1050): Scandinavische krijgers, plunderden en handelden in Europa. In Nederland plunderden ze o.a. handelsstad Dorestad.",
     svg: tijdlijnSvg(2),
     checks: [
       {
@@ -193,11 +193,11 @@ const steps = [
         q: "Wie werd in 800 tot keizer gekroond door de paus?",
         options: ["Karel de Grote", "Julius Caesar", "Willem van Oranje", "Napoleon"],
         answer: 0,
-        wrongHints: [null, "Caesar leefde rond 100-44 v.Chr. — tijdvak 2.", "Willem van Oranje = tijdvak 5/6 (1500s).", "Napoleon = tijdvak 7 (1800)."],
+        wrongHints: [null, "Caesar leefde rond 100-44 v.Chr. — tijdvak 2.", "Willem van Oranje = tijdvak 5/6 (16e eeuw).", "Napoleon = tijdvak 7 (1800)."],
         uitlegPad: {
           stappen: [{ titel: "Karel de Grote 800", tekst: "Karel de Grote (768-814) was koning van de Franken. Bouwde een groot rijk dat Frankrijk + Duitsland + NL + Noord-Italië besloeg. In jaar 800 werd hij in Rome door de paus tot KEIZER gekroond — symbool van macht + christelijke legitimering." }],
           woorden: [{ woord: "Karel de Grote", uitleg: "Frankisch koning (768-814). Eerste 'keizer' van Europa sinds val Rome. Voorloper Heilige Romeinse Rijk." }, { woord: "kroning", uitleg: "Officiële ceremonie waarin iemand koning/keizer wordt. Vaak door paus = goddelijk gezag." }],
-          theorie: "Paus gaf kroon = Karel's macht 'door God gegeven'. Politiek slim: paus krijgt beschermer, Karel krijgt legitimiteit. Patroon herhaalt zich tot Napoleon (zelf kroont zich in 1804!).",
+          theorie: "Paus gaf kroon = Karel's macht 'door God gegeven'. Politiek slim: paus krijgt beschermer, Karel krijgt legitimiteit. Patroon herhaalt zich tot Napoleon (die zichzelf kroonde in 1804!).",
           voorbeelden: [{ type: "rijk Karel", tekst: "Carolingisch Rijk omvatte Frankrijk + Duitsland + Lage Landen + Noord-Italië + delen Oostenrijk. Hoofdstad Aken." }],
           basiskennis: [{ onderwerp: "Tijdvak 3", uitleg: "800 = midden in tijdvak 3 (Monniken+ridders). Andere namen zijn andere tijdvakken." }],
           niveaus: { basis: "Karel de Grote.", simpeler: "Karel de Grote werd in 800 tot keizer gekroond door de paus in Rome.", nogSimpeler: "Karel" },
@@ -207,7 +207,7 @@ const steps = [
   },
   {
     title: "Tijdvak 4 — Steden en staten (1000 – 1500)",
-    explanation: "**Late middeleeuwen**. Europa wordt rijker. Nieuwe ontwikkelingen:\n\n**Steden ontstaan en groeien**\n• Handel komt op gang → mensen trekken naar steden.\n• In Nederland: Amsterdam, Brugge, Gent, Utrecht.\n• In de stad ontstaat een nieuwe groep: **burgers** (handelaars, ambachtslieden, niet-adel).\n• **Gilden**: organisaties van bakkers, smeden, wevers — ze regelden kwaliteit en lonen.\n\n**Staten ontstaan**\n• Koningen worden machtiger en bouwen hun rijk uit tot een **staat** (vast territorium met regering).\n• Frankrijk, Engeland en Spanje worden duidelijke landen met grenzen.\n• In de Lage Landen (= ongeveer Nederland + België) regeren de **Bourgondiërs** (vanaf 1384).\n\n**Andere belangrijke zaken**:\n• **Kruistochten** (1096-1291): Europese ridders trokken naar Jeruzalem om het 'heilige land' te 'bevrijden' van de moslims.\n• **Pest / Zwarte Dood** (1347-1351): doodde ongeveer 1/3 van Europa.\n• **Boekdrukkunst** uitgevonden door **Gutenberg** (~1450) — boeken worden veel goedkoper.",
+    explanation: "**Late middeleeuwen**. Europa wordt rijker. Nieuwe ontwikkelingen:\n\n**Steden ontstaan en groeien**\n• Handel komt op gang → mensen trekken naar steden.\n• In de Lage Landen: Amsterdam, Brugge, Gent, Utrecht.\n• In de stad ontstaat een nieuwe groep: **burgers** (handelaars, ambachtslieden, niet-adel).\n• **Gilden**: organisaties van bakkers, smeden, wevers — ze regelden kwaliteit en lonen.\n\n**Staten ontstaan**\n• Koningen worden machtiger en bouwen hun rijk uit tot een **staat** (vast territorium met regering).\n• Frankrijk, Engeland en Spanje worden duidelijke landen met grenzen.\n• In de Lage Landen (= ongeveer Nederland + België) regeren de **Bourgondiërs** (vanaf 1384).\n\n**Andere belangrijke zaken**:\n• **Kruistochten** (1096-1291): Europese ridders trokken naar Jeruzalem om het 'heilige land' te 'bevrijden' van de moslims.\n• **Pest / Zwarte Dood** (1347-1351): doodde ongeveer 1/3 van Europa.\n• **Boekdrukkunst** uitgevonden door **Gutenberg** (~1450) — boeken worden goedkoper.",
     svg: tijdlijnSvg(3),
     checks: [
       {
@@ -230,12 +230,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Romeinen kwamen veel eerder — tijdvak 2.", "Kastelen werden vooral in tijdvak 3-4 gebouwd, los van de drukpers.", "Christendom bleef heel sterk."],
         uitlegPad: {
-          stappen: [{ titel: "Massa-kopie van kennis", tekst: "Tot 1450 moesten monniken boeken HAND-KOPIËREN — maanden werk, peperduur. Gutenberg's drukpers (1450) kon honderden kopieën per dag. Boeken werden 100× goedkoper, kennis breed beschikbaar." }],
-          woorden: [{ woord: "boekdrukkunst", uitleg: "Mechanische druk met losse letters. Gutenberg ~1450 in Mainz." }, { woord: "Gutenberg-bijbel", uitleg: "Eerste gedrukte boek (1455). Symbool van revolutie." }],
+          stappen: [{ titel: "Massa-kopie van kennis", tekst: "Tot 1450 moesten monniken boeken HAND-KOPIËREN — maanden werk, peperduur. Gutenbergs drukpers (~1450) kon honderden kopieën maken. Boeken werden veel goedkoper, kennis breed beschikbaar." }],
+          woorden: [{ woord: "boekdrukkunst", uitleg: "Mechanische druk met losse letters. Gutenberg ~1450 in Mainz." }, { woord: "Gutenberg-bijbel", uitleg: "Eerste grote boek in Europa gedrukt met losse letters (~1455). Symbool van revolutie." }],
           theorie: "Gevolgen: (1) Bijbel in volkstalen verspreid → bron voor Reformatie 1517, (2) wetenschappelijke ideeën verspreidden sneller → Renaissance + Verlichting, (3) geletterdheid omhoog. Een van de belangrijkste uitvindingen ooit.",
-          voorbeelden: [{ type: "vergelijking", tekst: "Vóór 1450: bijbel kostte ~3 jaarlonen, 1 jaar werk om te maken. Na 1450: enkele weeklonen, dagen om te drukken." }],
+          voorbeelden: [{ type: "vergelijking", tekst: "Vóór 1450: een bijbel overschrijven kostte maanden werk en was peperduur. Na 1450: veel goedkoper en sneller te maken." }],
           basiskennis: [{ onderwerp: "Niet Romeinen/kastelen/christendom", uitleg: "Boekdruk heeft niets met die zaken te maken — gaat over informatie-verspreiding." }],
-          niveaus: { basis: "Goedkoper + verspreid.", simpeler: "Boekdrukkunst (~1450) = boeken werden 100× goedkoper, iedereen kon leren lezen.", nogSimpeler: "Goedkoper" },
+          niveaus: { basis: "Goedkoper + verspreid.", simpeler: "Boekdrukkunst (~1450) = boeken werden veel goedkoper, kennis verspreidde sneller.", nogSimpeler: "Goedkoper" },
         },
       },
     ],
@@ -244,7 +244,7 @@ const steps = [
   // ─── D. Vroegmoderne tijd ───────────────
   {
     title: "Tijdvak 5 — Ontdekkers en hervormers (1500 – 1600)",
-    explanation: "Een eeuw vol veranderingen. Twee grote bewegingen:\n\n**Ontdekkers** *(grote ontdekkingsreizen)*\n• 1492: **Columbus** ontdekt Amerika.\n• 1498: **Vasco da Gama** vaart om Afrika naar India.\n• 1519-22: **Magelhaen** zeilt rond de wereld.\n• Spanje en Portugal richten **koloniën** op in Amerika.\n• Nieuwe producten in Europa: aardappel, tomaat, mais, tabak, suiker.\n\n**Hervormers** *(Reformatie)*\n• 1517: **Maarten Luther** (Duits) plakt zijn 95 stellingen op de kerkdeur in Wittenberg — protest tegen rijkdom + corruptie van de katholieke Kerk.\n• Hij vond dat gewone mensen de Bijbel moesten kunnen lezen — dus vertaalde hij hem in het Duits.\n• De **protestantse kerk** ontstaat. Europa raakt verdeeld: katholiek vs protestant.\n• In Nederland: **Calvijn**'s ideeën worden populair (calvinisme).\n\n**In Nederland**: 1568 begint de **Tachtigjarige Oorlog** — Nederlanders komen in opstand tegen de Spaanse koning (Filips II) onder leiding van **Willem van Oranje**.",
+    explanation: "Een eeuw vol veranderingen. Twee grote bewegingen:\n\n**Ontdekkers** *(grote ontdekkingsreizen)*\n• 1492: **Columbus** ontdekt Amerika.\n• 1498: **Vasco da Gama** vaart om Afrika naar India.\n• 1519-22: **Magellaans** expeditie zeilt rond de wereld.\n• Spanje en Portugal richten **koloniën** op in Amerika.\n• Nieuwe producten in Europa: aardappel, tomaat, mais, tabak, suiker.\n\n**Hervormers** *(Reformatie)*\n• 1517: **Maarten Luther** (Duits) plakt zijn 95 stellingen op de kerkdeur in Wittenberg — protest tegen corruptie in de katholieke Kerk.\n• Hij vond dat gewone mensen de Bijbel moesten kunnen lezen — hij vertaalde hem in het Duits.\n• De **protestantse kerk** ontstaat. Europa raakt verdeeld: katholiek vs protestant.\n• In Nederland: **Calvijns** ideeën worden populair (calvinisme).\n\n**In Nederland**: 1568 begint de **Tachtigjarige Oorlog** — Nederlanders komen in opstand tegen de Spaanse koning (Filips II) onder leiding van **Willem van Oranje**.",
     svg: tijdlijnSvg(4),
     checks: [
       {
@@ -289,9 +289,9 @@ const steps = [
         wrongHints: [null, "Politieke partijen zoals nu kwamen pas in de 19e eeuw — tijdvak 8.", "Romeinen = tijdvak 2.", "VOC was een handelsbedrijf, geen kerk."],
         uitlegPad: {
           stappen: [{ titel: "Eerste multinational ter wereld", tekst: "VOC = Vereenigde Oost-Indische Compagnie, opgericht 1602. Handel in specerijen uit Indonesië. Had eigen leger + vloot + recht om oorlog te voeren. Verdiende fortuin in Gouden Eeuw — basis Nederlandse welvaart." }],
-          woorden: [{ woord: "VOC", uitleg: "1602-1799. Specerijen-handelsbedrijf met staats-rechten." }, { woord: "WIC", uitleg: "West-Indische Compagnie. Handel + kolonisatie Amerika + Afrika (ook slavenhandel)." }, { woord: "stuk", uitleg: "Aandeel in VOC. Eerste beurs ter wereld (Amsterdam 1602)." }],
-          theorie: "VOC was prive-onderneming MET overheidstaken (oorlog, koloniseren). Innovatief: eerste echte multinational met aandeelhouders. Donkere kant: kolonisatie, geweld tegen lokale bevolking, slavernij via WIC.",
-          voorbeelden: [{ type: "schaal", tekst: "Op piek: 25.000 medewerkers, 150 schepen, handelsposten van Kaap tot Japan. Batavia (huidige Jakarta) = hoofdstad." }],
+          woorden: [{ woord: "VOC", uitleg: "1602-1799. Specerijen-handelsbedrijf met staats-rechten." }, { woord: "WIC", uitleg: "West-Indische Compagnie. Handel + kolonisatie Amerika + Afrika (ook slavenhandel)." }, { woord: "aandeel", uitleg: "Stukje eigendom van de VOC. Daarin werd in Amsterdam gehandeld — een van de eerste beurzen." }],
+          theorie: "VOC was privéonderneming MET overheidstaken (oorlog, koloniseren). Innovatief: eerste echte multinational met aandeelhouders. Donkere kant: kolonisatie, geweld tegen lokale bevolking, slavernij via WIC.",
+          voorbeelden: [{ type: "schaal", tekst: "Op zijn hoogtepunt: tienduizenden medewerkers, zo'n 150 schepen, handelsposten van Kaap tot Japan. Batavia (huidige Jakarta) = hoofdstad." }],
           basiskennis: [{ onderwerp: "Niet politiek/leger/kerk", uitleg: "VOC was COMMERCIEEL bedrijf, geen partij/leger/kerk." }],
           niveaus: { basis: "Handelscompagnie Azië.", simpeler: "VOC = NL-handelsbedrijf in specerijen uit Indonesië, 17e eeuw. Eerste multinational.", nogSimpeler: "Handel" },
         },
@@ -304,8 +304,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zonnekoning Frankrijk", tekst: "Lodewijk XIV (1638-1715) = absolute koning van Frankrijk, 72 jaar geregeerd. Symbool: zon. Quote: \"L'État, c'est moi\" (de staat, dat ben ik). Bouwde paleis Versailles als statussymbool." }],
           woorden: [{ woord: "Lodewijk XIV", uitleg: "Franse koning 1643-1715. Symbool van absolute monarchie." }, { woord: "absolute monarchie", uitleg: "Koning heeft ALLE macht, geen parlement, geen beperkingen." }, { woord: "Versailles", uitleg: "Reusachtig paleis bij Parijs. Symbool van Lodewijks macht + adel onder controle." }],
-          theorie: "Lodewijk verzamelde adel in Versailles → onder controle. Voerde veel oorlogen (kostbaar voor Frankrijk). Tijdsbeeld: terwijl NL koningloze republiek had, was Frankrijk absolute monarchie. Tegenstelling die tot Tweede Engels-Nederlandse Oorlog leidde.",
-          voorbeelden: [{ type: "Versailles", tekst: "Versailles: 2.300 kamers, 700 woon-aristocraten, 50 jaar bouw. Symbool macht." }],
+          theorie: "Lodewijk verzamelde adel in Versailles → onder controle. Voerde veel oorlogen (kostbaar voor Frankrijk). Tijdsbeeld: terwijl NL koningloze republiek had, was Frankrijk absolute monarchie. In 1672 (het Rampjaar) viel Frankrijk de Republiek aan.",
+          voorbeelden: [{ type: "Versailles", tekst: "Versailles: zo'n 2.300 kamers, veel edelen woonden aan het hof. Symbool macht." }],
           basiskennis: [{ onderwerp: "Niet Engels/NL/Spaans", uitleg: "Lodewijk = Frans. Engelse koningen Charles/James. NL had stadhouders (Oranjes). Spanje eigen koningen." }],
           niveaus: { basis: "Franse zonnekoning.", simpeler: "Lodewijk XIV = absolute koning Frankrijk, 'Zonnekoning', paleis Versailles.", nogSimpeler: "Frans" },
         },
@@ -314,7 +314,7 @@ const steps = [
   },
   {
     title: "Tijdvak 7 — Pruiken en revoluties (1700 – 1800)",
-    explanation: "**De achttiende eeuw** — een eeuw van **Verlichting**: het idee dat **rede en wetenschap** belangrijker zijn dan geloof of traditie. Mensen begonnen door te denken hoe de samenleving anders kon.\n\n**Pruiken** *(adel)*\n• Adellijke heren droegen poederpruiken — symbool voor de oude wereld van vorsten en standen.\n\n**Verlichtingsdenkers**\n• **Voltaire** — godsdienstvrijheid.\n• **Montesquieu** — **trias politica**: scheiding tussen wetgevende, uitvoerende en rechtsprekende macht.\n• **Rousseau** — alle mensen zijn van nature gelijk.\n• Ideeën inspireerden later de Amerikaanse en Franse Revolutie.\n\n**Revoluties**\n• 1776: **Amerikaanse Revolutie** — VS verklaart zich onafhankelijk van Engeland (\"All men are created equal\").\n• 1789: **Franse Revolutie** — Franse volk komt in opstand tegen Lodewijk XVI. Slogan: *Vrijheid, Gelijkheid, Broederschap*.\n• Lodewijk XVI én zijn vrouw Marie-Antoinette worden in 1793 onthoofd met de **guillotine**.\n\n**Napoleon** (eind tijdvak):\n• Komt na de revolutie aan de macht in Frankrijk (1799).\n• Verovert grote delen van Europa.\n• Bezet ook Nederland (1795-1813).",
+    explanation: "**De achttiende eeuw** — een eeuw van **Verlichting**: het idee dat **rede en wetenschap** belangrijker zijn dan geloof of traditie.\n\n**Pruiken** *(adel)*\n• Adellijke heren droegen poederpruiken — symbool voor de oude wereld van vorsten en standen.\n\n**Verlichtingsdenkers**\n• **Voltaire** — godsdienstvrijheid.\n• **Montesquieu** — **trias politica**: scheiding tussen wetgevende, uitvoerende en rechtsprekende macht.\n• **Rousseau** — alle mensen zijn van nature gelijk.\n• Ideeën inspireerden later de Amerikaanse en Franse Revolutie.\n\n**Revoluties**\n• 1776: **Amerikaanse Revolutie** — VS verklaart zich onafhankelijk van Groot-Brittannië (\"All men are created equal\").\n• 1789: **Franse Revolutie** — het Franse volk komt in opstand tegen Lodewijk XVI. Slogan: *Vrijheid, Gelijkheid, Broederschap*.\n• Lodewijk XVI én zijn vrouw Marie-Antoinette worden in 1793 onthoofd met de **guillotine**.\n\n**Napoleon** (eind tijdvak):\n• Komt na de revolutie aan de macht in Frankrijk (1799).\n• Verovert grote delen van Europa.\n• Nederland is van 1795 tot 1813 afhankelijk van Frankrijk.",
     svg: tijdlijnSvg(6),
     checks: [
       {
@@ -325,8 +325,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Macht in 3 delen", tekst: "Trias politica = bedacht door Montesquieu (1748). Drie machten gescheiden: WETGEVEND (parlement maakt wetten), UITVOEREND (regering voert uit), RECHTSPREKEND (rechters oordelen). Doel: voorkomen dat 1 persoon alles kan." }],
           woorden: [{ woord: "trias politica", uitleg: "Latijn: 'drie machten'. Filosofisch principe achter moderne rechtsstaten." }, { woord: "Montesquieu", uitleg: "Frans Verlichtingsdenker. Boek 'De l'esprit des lois' (1748)." }],
-          theorie: "Toegepast in Amerikaanse grondwet (1787) + Franse (1791). Vandaag in bijna alle democratieën. NL: parlement (wetten), regering (uitvoeren), Hoge Raad (rechtspraak). Onafhankelijkheid = balans en controle.",
-          voorbeelden: [{ type: "NL", tekst: "Tweede Kamer maakt wet → regering voert uit → rechter toetst of conform grondwet. Geen ENIGE persoon kan alles." }],
+          theorie: "Toegepast in Amerikaanse grondwet (1787) + Franse (1791). Vandaag in bijna alle democratieën. NL: parlement (wetten), regering (uitvoeren), rechters (rechtspraak). Onafhankelijkheid = balans en controle.",
+          voorbeelden: [{ type: "NL", tekst: "Tweede Kamer maakt wet → regering voert uit → rechter oordeelt over geschillen en straffen. Geen ENIGE persoon kan alles." }],
           basiskennis: [{ onderwerp: "Niet religie", uitleg: "Trias politica = POLITIEK begrip. Drie-eenheid (Vader/Zoon/Heilige Geest) is religieus, andere zaak." }],
           niveaus: { basis: "Wetgevend+uitvoerend+rechter.", simpeler: "Trias politica = macht in 3 delen: wetten maken / uitvoeren / oordelen. Door Montesquieu.", nogSimpeler: "3 machten" },
         },
@@ -363,7 +363,7 @@ const steps = [
           stappen: [{ titel: "Industriële revolutie", tekst: "Stoommachine (verbeterd door James Watt 1769) gaf MASSALE krachtbron. Fabrieken konden produceren zonder mens-kracht. Trein verving paard. Stoomschepen vervangen zeilboten. Massale verstedelijking + arbeidersklasse." }],
           woorden: [{ woord: "stoommachine", uitleg: "Apparaat dat warmte (kolen → stoom) omzet in beweging. Basis industriële revolutie." }, { woord: "industriële revolutie", uitleg: "Overgang van hand-arbeid naar mechanische productie, ~1750-1900. Begin in Engeland." }],
           theorie: "Gevolgen: massa-werkloosheid ambachtslieden, opkomst fabrieks-arbeider, kinderarbeid, slechte werkomstandigheden, opkomst vakbonden, urbanisatie. Sleutel-uitvinding 19e eeuw — vergelijkbaar met internet voor 20e eeuw.",
-          voorbeelden: [{ type: "fabriek", tekst: "Eerste textielfabrieken in Engeland 1780s → werknemers 14u/dag, soms kinderen vanaf 6 jr. Lagere kosten textiel → wereldhandel boomde." }],
+          voorbeelden: [{ type: "fabriek", tekst: "Eerste textielfabrieken in Engeland 1780s → werknemers 14u/dag, soms kinderen vanaf 6 jr. Lagere kosten textiel → wereldhandel bloeide." }],
           basiskennis: [{ onderwerp: "Niet computers/Romeinen", uitleg: "Computers = tijdvak 10. Romeinen = tijdvak 2. Stoommachine = tijdvak 8." }],
           niveaus: { basis: "Fabrieken + treinen.", simpeler: "Stoommachine → eerste fabrieken + treinen + massaproductie.", nogSimpeler: "Fabrieken" },
         },
@@ -374,9 +374,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Begin Tachtigjarige Oorlog — tijdvak 5.", "Franse Revolutie — tijdvak 7.", "Begin WO1 — tijdvak 9."],
         uitlegPad: {
-          stappen: [{ titel: "1848 grondwet Thorbecke", tekst: "Thorbecke schreef NL-grondwet in 1848 (in 24 uur tijdens revolutie-jaar Europa). Koning Willem II ('die nacht van conservatief naar liberaal'). Sindsdien: parlement maakt wetten, koning werd ceremonieel hoofd. Basis huidige democratie." }],
+          stappen: [{ titel: "1848 grondwet Thorbecke", tekst: "Thorbecke schreef de nieuwe grondwet in 1848, het revolutiejaar in Europa. Koning Willem II werd naar eigen zeggen 'in 24 uur van zeer conservatief zeer liberaal'. Sindsdien: ministers verantwoordelijk, koning veel minder macht. Basis huidige democratie." }],
           woorden: [{ woord: "Thorbecke", uitleg: "Johan Rudolf Thorbecke (1798-1872). Liberaal staatsman. Vader Nederlandse grondwet." }, { woord: "constitutionele monarchie", uitleg: "Koning blijft, maar parlement heeft echte macht. Modern NL-model." }],
-          theorie: "Voor 1848: koning regeerde absoluut. Na 1848: ministers verantwoordelijk aan parlement, niet alleen aan koning. Kiesrecht eerst alleen rijken (censuskiesrecht), later algemeen (1917 mannen, 1919 vrouwen).",
+          theorie: "Voor 1848: koning had veel macht. Na 1848: ministers verantwoordelijk aan parlement, niet alleen aan koning. Kiesrecht eerst alleen rijken (censuskiesrecht), later algemeen (1917 mannen, 1919 vrouwen).",
           voorbeelden: [{ type: "context", tekst: "1848 was revolutiejaar in heel Europa. Veel landen kregen toen grondwet. NL deed het netjes via Thorbecke, geen geweld." }],
           basiskennis: [{ onderwerp: "Niet andere jaartallen", uitleg: "1568 = Tachtigjarige Oorlog (tijdvak 5). 1789 = Franse Revolutie (tijdvak 7). 1914 = WO1 (tijdvak 9)." }],
           niveaus: { basis: "1848.", simpeler: "NL-grondwet kwam in 1848 — Thorbecke maakte 'm. Koning kreeg minder macht.", nogSimpeler: "1848" },
@@ -386,7 +386,7 @@ const steps = [
   },
   {
     title: "Tijdvak 9 — Wereldoorlogen (1900 – 1950)",
-    explanation: "Een korte maar zeer dramatische periode met **twee wereldoorlogen** en de **Holocaust**.\n\n**Eerste Wereldoorlog (1914-1918)**\n• Aanleiding: aanslag op Aartshertog Frans Ferdinand in Sarajevo (1914).\n• Loopgravenoorlog in Frankrijk en België — miljoenen doden.\n• Nederland bleef **neutraal** (deed niet mee).\n• 1918: Duitsland verloren. Verdrag van Versailles legt zware lasten op Duitsland.\n\n**Tussen de oorlogen (1918-1939)**\n• 1929: **beurskrach** in New York → wereldwijde economische crisis (Crisisjaren).\n• 1933: **Hitler** komt aan de macht in Duitsland (NSDAP, nazi-partij).\n• Hitler vervolgt joden, communisten en andere groepen.\n\n**Tweede Wereldoorlog (1939-1945)**\n• 1939: Duitsland valt Polen binnen.\n• 1940: Duitsland valt **Nederland** binnen — bombardement Rotterdam (mei 1940). 5 jaar bezetting.\n• **Holocaust**: ~6 miljoen joden vermoord, waaronder Anne Frank.\n• 1945: bevrijding Nederland (5 mei). Atoombommen op Japan (augustus). Einde oorlog.\n\n**Na de oorlog**:\n• 1945: oprichting **Verenigde Naties** (VN).\n• 1948: Universele Verklaring van de Rechten van de Mens.",
+    explanation: "Een korte maar zeer dramatische periode met **twee wereldoorlogen** en de **Holocaust**.\n\n**Eerste Wereldoorlog (1914-1918)**\n• Aanleiding: aanslag op Aartshertog Frans Ferdinand in Sarajevo (1914).\n• Loopgravenoorlog in Frankrijk en België — miljoenen doden.\n• Nederland bleef **neutraal** (deed niet mee).\n• 1918: Duitsland verliest. Verdrag van Versailles legt zware lasten op Duitsland.\n\n**Tussen de oorlogen (1918-1939)**\n• 1929: **beurskrach** in New York → wereldwijde economische crisis (Crisisjaren).\n• 1933: **Hitler** komt aan de macht in Duitsland (NSDAP, nazi-partij).\n• Hitler vervolgt joden, communisten en andere groepen.\n\n**Tweede Wereldoorlog (1939-1945)**\n• 1939: Duitsland valt Polen binnen.\n• 1940: Duitsland valt **Nederland** binnen — bombardement Rotterdam (mei 1940). 5 jaar bezetting.\n• **Holocaust**: ~6 miljoen joden vermoord, waaronder Anne Frank.\n• 1945: bevrijding Nederland (5 mei). Atoombommen op Japan (augustus). Einde oorlog.\n\n**Na de oorlog**:\n• 1945: oprichting **Verenigde Naties** (VN).\n• 1948: Universele Verklaring van de Rechten van de Mens.",
     svg: tijdlijnSvg(8),
     checks: [
       {
@@ -395,7 +395,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is WO2 — vier jaar later.",
+          "Dat is WO2 — ruim twintig jaar later.",
           "Dat is de Tachtigjarige Oorlog (NL).",
           "Dat is de tijd van de Franse Revolutie + Napoleon.",
         ],
@@ -415,7 +415,7 @@ const steps = [
   },
   {
     title: "Tijdvak 10 — Televisie en computer (1950 – nu)",
-    explanation: "**Het laatste tijdvak** — onze eigen tijd, vol technologie en grote verschuivingen.\n\n**Koude Oorlog (1947-1989)**\n• Wereld verdeeld tussen **VS** (kapitalistisch) en **Sovjet-Unie** (communistisch).\n• Geen rechtstreekse oorlog, wel: wapenwedloop, ruimtevaart, spionnage.\n• 1961: bouw **Berlijnse Muur** — symbool van de scheiding.\n• 1989: **val Berlijnse Muur** — einde Koude Oorlog.\n• 1991: Sovjet-Unie valt uiteen.\n\n**Dekolonisatie**\n• Koloniën worden onafhankelijk: Nederlands-Indië → Indonesië (1949), Suriname (1975).\n\n**Europese eenwording**\n• 1957: **EEG** opgericht (voorloper van EU).\n• 2002: invoering **euro**.\n\n**Technologische revolutie**\n• Televisie (vanaf jaren '50).\n• Computer + internet (vanaf jaren '90).\n• Smartphone (vanaf 2007).\n• Sociale media, AI.\n\n**Andere ontwikkelingen**:\n• Welvaart en sociale zekerheid in West-Europa.\n• **Klimaatverandering** wordt erkend als groot probleem.\n• **Globalisering**: wereldhandel, migratie, internationale samenwerking.",
+    explanation: "**Het laatste tijdvak** — onze eigen tijd, vol technologie en grote verschuivingen.\n\n**Koude Oorlog (1947-1989)**\n• Wereld verdeeld tussen **VS** (kapitalistisch) en **Sovjet-Unie** (communistisch).\n• Geen rechtstreekse oorlog, wel: wapenwedloop, ruimtevaart, spionage.\n• 1961: bouw **Berlijnse Muur** — symbool van de scheiding.\n• 1989: **val Berlijnse Muur** — einde Koude Oorlog.\n• 1991: Sovjet-Unie valt uiteen.\n\n**Dekolonisatie**\n• Koloniën worden onafhankelijk: Nederlands-Indië → Indonesië (1949), Suriname (1975).\n\n**Europese eenwording**\n• 1957: **EEG** opgericht (voorloper van EU).\n• 2002: invoering **euro**.\n\n**Technologische revolutie**\n• Televisie (vanaf jaren '50).\n• Computer + internet (vanaf jaren '90).\n• Smartphone (vanaf 2007).\n• Sociale media, AI.\n\n**Andere ontwikkelingen**:\n• Welvaart en sociale zekerheid in West-Europa.\n• **Klimaatverandering** wordt erkend als groot probleem.\n• **Globalisering**: wereldhandel, migratie, internationale samenwerking.",
     svg: tijdlijnSvg(9),
     checks: [
       {
@@ -426,7 +426,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "9 november 1989 — Muur valt", tekst: "De Berlijnse Muur (gebouwd 1961) scheidde Oost- en West-Berlijn 28 jaar lang. Op 9 november 1989 mocht het Oost-Duitse volk plots vrij naar het westen. Mensen sloegen de muur eigenhandig kapot. Symbool van het einde Koude Oorlog." }],
           woorden: [{ woord: "Berlijnse Muur", uitleg: "Betonnen muur 1961-1989 die Berlijn in tweeën deelde. Symbool IJzeren Gordijn." }, { woord: "IJzeren Gordijn", uitleg: "Term Churchill: scheidslijn tussen democratisch West-Europa en communistisch Oost-Europa." }],
-          theorie: "Gevolgen: Duitse hereniging (3 oktober 1990). Einde Sovjet-Unie (1991). Oost-Europese landen werden democratisch + traden later EU+NAVO toe. Start tijdvak-10 fase 'na Koude Oorlog'.",
+          theorie: "Gevolgen: Duitse hereniging (3 oktober 1990). Einde Sovjet-Unie (1991). Oost-Europese landen werden democratisch + traden later toe tot EU en NAVO. Start tijdvak-10 fase 'na Koude Oorlog'.",
           voorbeelden: [{ type: "context", tekst: "Niet alleen Berlijn — in 1989 vielen communistische regimes in Polen, Hongarije, Tsjechoslowakije, Roemenië. Heel Oost-Europa veranderde in 1 jaar." }],
           basiskennis: [{ onderwerp: "Niet andere jaartallen", uitleg: "1939 = begin WO2. 1648 = Vrede van Münster (NL onafhankelijk). 1450 = boekdrukkunst Gutenberg." }],
           niveaus: { basis: "Muur viel.", simpeler: "1989 = Berlijnse Muur viel, einde Koude Oorlog.", nogSimpeler: "Muur weg" },
@@ -439,11 +439,11 @@ const steps = [
         wrongHints: [null, "Niet letterlijk koud qua temperatuur — figuurlijk.", "Middeleeuwen = tijdvak 3-4.", "Tachtigjarige Oorlog = tijdvak 5-6."],
         uitlegPad: {
           stappen: [{ titel: "1945-1989 — twee blokken", tekst: "Na WO2 stonden 2 supermachten tegenover elkaar: VS (kapitalisme/democratie) en Sovjet-Unie (communisme/dictatuur). Géén directe oorlog tussen hen (vandaar 'koud'), maar wel wapenwedloop, ruimterace, kernwapens, spionage, en proxy-oorlogen (Korea, Vietnam, Afghanistan)." }],
-          woorden: [{ woord: "Koude Oorlog", uitleg: "1945-1989. Spanning tussen VS en USSR zonder open militair conflict tussen hen direct." }, { woord: "wapenwedloop", uitleg: "Beide kanten bouwden steeds meer en grotere kernwapens. Op piek: 70.000 kernkoppen." }, { woord: "proxy-oorlog", uitleg: "Conflict in derde land waar beide machten zich mee bemoeien (Korea, Vietnam, Cuba)." }],
-          theorie: "Symbolen: Berlijnse Muur (1961), Cubacrisis (1962, dichtst bij WO3), Maan-landing (1969 VS wint ruimterace), val Sovjet-Unie (1991). Eindigde door economische zwakte USSR + reformen Gorbatsjov + opstanden Oost-Europa.",
-          voorbeelden: [{ type: "fase", tekst: "1962 Cubacrisis = VS ontdekt Sovjet-raketten op Cuba (90 km van VS-kust). 13 dagen op rand van kernoorlog. Kennedy + Chroesjtsjov sloten compromis." }],
+          woorden: [{ woord: "Koude Oorlog", uitleg: "1945-1989. Spanning tussen VS en USSR zonder open militair conflict tussen hen direct." }, { woord: "wapenwedloop", uitleg: "Beide kanten bouwden steeds meer en grotere kernwapens. Op piek: 70.000 kernkoppen." }, { woord: "proxy-oorlog", uitleg: "Conflict in derde land waar beide machten zich mee bemoeien (Korea, Vietnam, Afghanistan)." }],
+          theorie: "Symbolen: Berlijnse Muur (1961), Cubacrisis (1962, dichtst bij WO3), Maan-landing (1969 VS wint ruimterace), val Sovjet-Unie (1991). Eindigde door economische zwakte USSR + hervormingen Gorbatsjov + opstanden Oost-Europa.",
+          voorbeelden: [{ type: "fase", tekst: "1962 Cubacrisis = VS ontdekt Sovjet-raketten op Cuba (zo'n 150 km van de VS-kust). 13 dagen op rand van kernoorlog. Kennedy + Chroesjtsjov sloten compromis." }],
           basiskennis: [{ onderwerp: "Niet letterlijk", uitleg: "'Koud' = figuurlijk, niet warm/heet als open oorlog. Niet over temperatuur. Niet Antarctica." }],
-          niveaus: { basis: "VS vs USSR.", simpeler: "Koude Oorlog = spanning VS↔Sovjet-Unie zonder echt vechten. 1945-1989.", nogSimpeler: "VS en Rusland tegen elkaar" },
+          niveaus: { basis: "VS vs USSR.", simpeler: "Koude Oorlog = spanning VS↔Sovjet-Unie zonder echt vechten. 1945-1989.", nogSimpeler: "VS en Sovjet-Unie tegen elkaar" },
         },
       },
     ],
@@ -476,9 +476,9 @@ const steps = [
         wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 4 eindigt rond 1500. Welk tijdvak heeft 'ontdekkingsreizen' als kenmerk?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
         uitlegPad: {
           stappen: [{ titel: "1492 → kenmerk tijdvak 5", tekst: "1492 ligt op de grens tussen tijdvak 4 (Steden+staten, 1000-1500) en tijdvak 5 (Ontdekkers+hervormers, 1500-1600). Maar 'ontdekkingsreizen' is het BELANGRIJKSTE kenmerk van tijdvak 5. Dus Columbus = tijdvak 5." }],
-          woorden: [{ woord: "Columbus", uitleg: "Christoffel Columbus. Italiaans-Spaans zeevaarder. Landde 12 oktober 1492 op Bahamas." }, { woord: "ontdekkingsreizen", uitleg: "Europese zeevaarders zochten zee-route naar Azië, vonden Amerika + omzeilden Afrika. ~1490-1600." }],
+          woorden: [{ woord: "Columbus", uitleg: "Christoffel Columbus. Italiaans-Spaans zeevaarder. Landde 12 oktober 1492 op de Bahama's." }, { woord: "ontdekkingsreizen", uitleg: "Europese zeevaarders zochten zee-route naar Azië, vonden Amerika + omzeilden Afrika. ~1490-1600." }],
           theorie: "Regel bij grens-jaartallen: kijk naar het kenmerk. 1492 = ontdekkingsreizen = tijdvak 5. Niet tijdvak 4 hoewel het jaartal daar technisch nog in valt. Tijdvakken zijn thema's, niet harde scheiding.",
-          voorbeelden: [{ type: "andere", tekst: "Vasco da Gama omzeilde Kaap de Goede Hoop (1498). Magellaan zeilde rond de wereld (1519-1522). Allemaal tijdvak 5." }],
+          voorbeelden: [{ type: "andere", tekst: "Vasco da Gama omzeilde Kaap de Goede Hoop (1498). De expeditie van Magellaan zeilde rond de wereld (1519-1522). Allemaal tijdvak 5." }],
           basiskennis: [{ onderwerp: "Grens-regel", uitleg: "Bij jaartallen op de grens: kijk welk KENMERK het beste past. Columbus = ontdekkingsreis = thema tijdvak 5." }],
           niveaus: { basis: "Tijdvak 5.", simpeler: "Columbus 1492 valt in tijdvak 5 (Ontdekkers) omdat ontdekkingsreizen = kenmerk daar.", nogSimpeler: "5" },
         },
@@ -505,7 +505,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1989 = midden tijdvak 10", tekst: "Tijdvak 10 (Televisie+computer, 1950-nu). 1989 valt daar precies midden in. Val Berlijnse Muur = einde Koude Oorlog = sleutelmoment tijdvak 10. Vaak gevraagd op examens." }],
           woorden: [{ woord: "Berlijnse Muur viel", uitleg: "9 november 1989. Oost-Duitse regering opende grens. Mensen sloegen muur kapot." }, { woord: "tijdvak 10", uitleg: "1950 tot nu. Kenmerken: televisie, computer, Koude Oorlog, EU, internet, sociale media." }],
-          theorie: "Andere sleutelmomenten tijdvak 10: oprichting NAVO (1949), EEG (1957), maanlanding (1969), val Sovjet-Unie (1991), introductie euro (2002), 9/11 (2001), smartphones (2007+).",
+          theorie: "Andere sleutelmomenten tijdvak 10: EEG (1957), maanlanding (1969), val Sovjet-Unie (1991), introductie euro (2002), 9/11 (2001), smartphones (2007+).",
           voorbeelden: [{ type: "context", tekst: "1989 staat ook bekend als 'Wonderjaar' — niet alleen Berlijn maar bijna alle Oost-Europese communistische regimes vielen dat jaar." }],
           basiskennis: [{ onderwerp: "Niet andere tijdvakken", uitleg: "Tijdvak 9 eindigt 1950. Tijdvak 8 = 19e eeuw. Tijdvak 7 = 18e eeuw. Alle te vroeg." }],
           niveaus: { basis: "Tijdvak 10.", simpeler: "1989 = Muur valt = tijdvak 10 (Televisie+computer, 1950-nu).", nogSimpeler: "10" },

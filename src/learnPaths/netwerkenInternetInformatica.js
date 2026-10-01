@@ -16,7 +16,7 @@ const steps = [
   {
     title: "Wat is een netwerk?",
     explanation:
-      "Een **netwerk** is een groep apparaten (computers, telefoons, servers) die met elkaar **verbonden** zijn en data kunnen uitwisselen.\n\n**Soorten netwerken naar grootte:**\n• **LAN** (Local Area Network) — klein, bv. je huis of een school.\n• **WAN** (Wide Area Network) — groot, over lange afstand.\n• **Het internet** = een **netwerk van netwerken**: miljoenen LANs en WANs aan elkaar geknoopt, wereldwijd.\n\n**Belangrijk verschil — internet ≠ web:**\n• Het **internet** is de **infrastructuur** (de kabels, routers, verbindingen).\n• Het **world wide web** (www) is **één van de diensten** die over het internet loopt (websites). E-mail, videobellen, games en streaming zijn andere diensten over hetzelfde internet.\n\n**Client–server:**\n• Een **client** vraagt iets (bv. je browser of telefoon).\n• Een **server** levert het (een krachtige computer die altijd 'aan' staat, bv. die een website of YouTube-video bewaart).\nVeel internetverkeer werkt zo: client vraagt → server antwoordt.",
+      "Een **netwerk** is een groep apparaten (computers, telefoons, servers) die met elkaar **verbonden** zijn en data kunnen uitwisselen.\n\n**Soorten netwerken naar grootte:**\n• **LAN** (Local Area Network) — klein, bv. thuis of op school.\n• **WAN** (Wide Area Network) — groot, over lange afstand.\n• **Het internet** = een **netwerk van netwerken**: miljoenen LAN's en WAN's aan elkaar geknoopt, wereldwijd.\n\n**Belangrijk verschil — internet ≠ web:**\n• Het **internet** is de **infrastructuur** (de kabels, routers, verbindingen).\n• Het **world wide web** (www) is **één van de diensten** die over het internet loopt (websites). E-mail, videobellen, games en streaming zijn andere diensten over hetzelfde internet.\n\n**Client–server:**\n• Een **client** vraagt iets (bv. je browser of telefoon).\n• Een **server** levert het (een krachtige computer die altijd 'aan' staat, bv. die een website of YouTube-video bewaart).\nVeel internetverkeer werkt zo: client vraagt → server antwoordt.",
     checks: [
       {
         q: "Wat is **het internet**?",
@@ -25,7 +25,7 @@ const steps = [
         wrongHints: [null, "Het is niet één machine, maar heel veel verbonden netwerken.", "Een website is iets dát op internet staat, niet het internet zelf.", "Een taal is iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Netwerk van netwerken", tekst: "Het **internet** is een wereldwijd **netwerk van netwerken**: miljoenen kleine (LAN) en grote (WAN) netwerken aan elkaar verbonden via kabels en routers. Het is de infrastructuur waarover diensten zoals het web, e-mail en streaming lopen." }],
-          niveaus: { basis: "Netwerk van netwerken.", simpeler: "Internet = netwerken aan elkaar", nogSimpeler: "A." },
+          niveaus: { basis: "Netwerk van netwerken.", simpeler: "Internet = netwerken aan elkaar", nogSimpeler: "Netwerken samen" },
         },
       },
       {
@@ -35,7 +35,7 @@ const steps = [
         wrongHints: [null, "Er is wel degelijk verschil.", "Andersom: het web is een deel van wat over internet loopt.", "Verwisseld: de kabels zijn het internet."],
         uitlegPad: {
           stappen: [{ titel: "Web = één dienst", tekst: "Het **internet** is de **infrastructuur** (kabels, routers). Het **web** (websites) is **één van de diensten** die daarover loopt — net als e-mail, videobellen en streaming. Dus: het web zit óp het internet, niet andersom." }],
-          niveaus: { basis: "Internet = kabels, web = sites.", simpeler: "Web is een dienst óp internet", nogSimpeler: "A." },
+          niveaus: { basis: "Internet = kabels, web = sites.", simpeler: "Web is een dienst óp internet", nogSimpeler: "Web zit óp internet" },
         },
       },
       {
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Dat is juist de rol van de client.", "Een server is meestal een krachtige, altijd-aan computer.", "Een server is juist het hart van veel verbindingen."],
         uitlegPad: {
           stappen: [{ titel: "Vragen en leveren", tekst: "Een **client** (jouw browser/telefoon) **vraagt** iets; een **server** (krachtige, altijd-aan computer) **levert** het — bv. een webpagina of een video. Veel internetverkeer is: client vraagt → server antwoordt." }],
-          niveaus: { basis: "Server levert.", simpeler: "Server = levert wat client vraagt", nogSimpeler: "A." },
+          niveaus: { basis: "Server levert.", simpeler: "Server = levert wat client vraagt", nogSimpeler: "Server levert" },
         },
       },
       {
@@ -54,8 +54,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is juist een WAN (groot, lange afstand).", "Een website staat óp een netwerk, is er geen.", "Een IP-adres is iets anders."],
         uitlegPad: {
-          stappen: [{ titel: "Lokaal = klein", tekst: "Een **LAN** (Local Area Network) is een **klein, lokaal** netwerk — je huis, een klaslokaal, een kantoor. Een **WAN** (Wide Area Network) overbrugt juist grote afstanden. Het **internet** knoopt miljoenen LANs en WANs aan elkaar." }],
-          niveaus: { basis: "Klein/lokaal netwerk.", simpeler: "LAN = klein netwerk", nogSimpeler: "A." },
+          stappen: [{ titel: "Lokaal = klein", tekst: "Een **LAN** (Local Area Network) is een **klein, lokaal** netwerk — je huis, een klaslokaal, een kantoor. Een **WAN** (Wide Area Network) overbrugt juist grote afstanden. Het **internet** knoopt miljoenen LAN's en WAN's aan elkaar." }],
+          niveaus: { basis: "Klein/lokaal netwerk.", simpeler: "LAN = klein netwerk", nogSimpeler: "Klein netwerk" },
         },
       },
       {
@@ -65,7 +65,7 @@ const steps = [
         wrongHints: [null, "Leveren is juist de rol van de server.", "Altijd-aan en krachtig is de server.", "Kabels verbinden is niet de rol van een client."],
         uitlegPad: {
           stappen: [{ titel: "De vrager", tekst: "De **client** is het apparaat dat iets **opvraagt** — jouw browser, telefoon of app. De **server** levert het antwoord (de pagina, video, data). Bijna al het internetverkeer werkt zo: client vraagt → server antwoordt." }],
-          niveaus: { basis: "Vraagt iets op.", simpeler: "Client = vrager", nogSimpeler: "A." },
+          niveaus: { basis: "Vraagt iets op.", simpeler: "Client = vrager", nogSimpeler: "Client vraagt" },
         },
       },
     ],
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Dat is de domeinnaam — die hoort wél bij een IP, maar is iets anders.", "Een IP-adres is geen wachtwoord.", "Het heeft niets met malware te maken."],
         uitlegPad: {
           stappen: [{ titel: "Het huisadres van een apparaat", tekst: "Een **IP-adres** (bv. `145.7.220.13`) identificeert een apparaat op een netwerk — als een huisadres, zodat data op de juiste plek aankomt. IPv4 = vier getallen 0-255; IPv6 is veel langer omdat IPv4-adressen bijna op zijn." }],
-          niveaus: { basis: "Adres van een apparaat.", simpeler: "IP = apparaat-adres", nogSimpeler: "A." },
+          niveaus: { basis: "Adres van een apparaat.", simpeler: "IP = apparaat-adres", nogSimpeler: "Apparaat-adres" },
         },
       },
       {
@@ -94,7 +94,7 @@ const steps = [
         wrongHints: [null, "Beveiliging is een andere taak (bv. HTTPS).", "Dat is iets anders (caching/CDN).", "Opslag is niet de taak van DNS."],
         uitlegPad: {
           stappen: [{ titel: "Het telefoonboek van internet", tekst: "**DNS** vertaalt een leesbare **domeinnaam** (`leerkwartier.app`) naar het bijbehorende **IP-adres**, zodat je computer weet met welke server hij moet verbinden. Daarom hoef je geen getallen te onthouden — DNS doet de vertaling." }],
-          niveaus: { basis: "Naam → IP.", simpeler: "DNS = naam naar IP", nogSimpeler: "A." },
+          niveaus: { basis: "Naam → IP.", simpeler: "DNS = naam naar IP", nogSimpeler: "Naam → IP" },
         },
       },
       {
@@ -104,7 +104,7 @@ const steps = [
         wrongHints: [null, "Leesbaarheid was niet de reden — IPv6 is juist langer/complexer.", "IPv4 wordt nog volop gebruikt.", "Kleuren hebben hier niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "~4,3 miljard is te weinig", tekst: "IPv4 heeft maar ~4,3 miljard adressen — te weinig voor alle telefoons, laptops en slimme apparaten. **IPv6** gebruikt veel langere (hexadecimale) adressen → praktisch onuitputtelijk. Daarom schakelt het internet geleidelijk over." }],
-          niveaus: { basis: "IPv4 raakt op.", simpeler: "Te weinig IPv4 → IPv6", nogSimpeler: "A." },
+          niveaus: { basis: "IPv4 raakt op.", simpeler: "Te weinig IPv4 → IPv6", nogSimpeler: "Meer adressen" },
         },
       },
       {
@@ -114,7 +114,7 @@ const steps = [
         wrongHints: [null, "Versleuteling (HTTPS) komt pas bij het verbinden.", "Een back-up hoort hier niet.", "Resetten gebeurt niet."],
         uitlegPad: {
           stappen: [{ titel: "Eerst het adres opzoeken", tekst: "Je computer kent alleen de **naam**, niet het **IP**. Dus vraagt hij eerst aan een **DNS-server**: 'welk IP hoort bij leerkwartier.app?'. Pas met dat IP kan hij verbinding maken met de juiste server. Domeinnaam → (DNS) → IP → server." }],
-          niveaus: { basis: "DNS zoekt het IP.", simpeler: "Eerst DNS → IP", nogSimpeler: "A." },
+          niveaus: { basis: "DNS zoekt het IP.", simpeler: "Eerst DNS → IP", nogSimpeler: "Eerst DNS" },
         },
       },
       {
@@ -124,7 +124,7 @@ const steps = [
         wrongHints: [null, "Dat is een domeinnaam, geen IP-adres.", "Dat is een stukje protocol.", "Dat is een geheugengrootte."],
         uitlegPad: {
           stappen: [{ titel: "Vier getallen 0-255", tekst: "Een **IPv4-adres** bestaat uit **vier getallen (0-255)** met punten ertussen, bv. `145.7.220.13`. Een naam als `leerkwartier.app` is een **domeinnaam** die via DNS naar zo'n IP-adres vertaald wordt." }],
-          niveaus: { basis: "Vier getallen met punten.", simpeler: "IPv4 = 4 getallen", nogSimpeler: "A." },
+          niveaus: { basis: "Vier getallen met punten.", simpeler: "IPv4 = 4 getallen", nogSimpeler: "4 getallen" },
         },
       },
     ],
@@ -143,7 +143,7 @@ const steps = [
         wrongHints: [null, "Juist niet als geheel — het wordt opgeknipt.", "Ook beeld en geluid gaan zo (als bits in pakketjes).", "Routers zijn juist essentieel."],
         uitlegPad: {
           stappen: [{ titel: "Opknippen en weer samenvoegen", tekst: "Data wordt in kleine **pakketjes** geknipt. Elk pakketje heeft afzender, ontvanger en een **volgnummer**, reist via **routers** (mogelijk verschillende routes), en wordt bij de ontvanger met de volgnummers weer in de juiste volgorde gezet. Kwijt? Opnieuw sturen." }],
-          niveaus: { basis: "In pakketjes.", simpeler: "Data = pakketjes", nogSimpeler: "A." },
+          niveaus: { basis: "In pakketjes.", simpeler: "Data = pakketjes", nogSimpeler: "Pakketjes" },
         },
       },
       {
@@ -153,7 +153,7 @@ const steps = [
         wrongHints: [null, "Een protocol is een afspraak, geen fysieke kabel.", "Het is geen wachtwoord.", "Een website is iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Dezelfde regels", tekst: "Een **protocol** is een **afspraak** (set regels) zodat apparaten van verschillende makers elkaar begrijpen. **TCP/IP** is de basis van internet: IP regelt de adressering + route, TCP zorgt dat alle pakketjes compleet en in volgorde aankomen." }],
-          niveaus: { basis: "Afspraak voor communicatie.", simpeler: "Protocol = afspraak", nogSimpeler: "A." },
+          niveaus: { basis: "Afspraak voor communicatie.", simpeler: "Protocol = afspraak", nogSimpeler: "Afspraak" },
         },
       },
       {
@@ -163,7 +163,7 @@ const steps = [
         wrongHints: [null, "IP regelt de adressering/route, niet de volgorde-controle.", "DNS vertaalt namen naar IP's — andere taak.", "HTTP is voor het web, niet voor de volgorde van pakketjes."],
         uitlegPad: {
           stappen: [{ titel: "IP adresseert, TCP controleert", tekst: "**IP** zorgt voor het **adres + de route** (waar moet het heen). **TCP** zorgt voor de **betrouwbaarheid**: het zet pakketjes in de juiste volgorde, controleert of alles binnen is en laat ontbrekende pakketjes opnieuw sturen." }],
-          niveaus: { basis: "TCP.", simpeler: "Volgorde/compleet = TCP", nogSimpeler: "A." },
+          niveaus: { basis: "TCP.", simpeler: "Volgorde/compleet = TCP", nogSimpeler: "TCP" },
         },
       },
       {
@@ -173,7 +173,7 @@ const steps = [
         wrongHints: [null, "Bewaren doet de opslag.", "Namen vertalen doet DNS.", "Versleutelen hoort bij HTTPS."],
         uitlegPad: {
           stappen: [{ titel: "De wegwijzer", tekst: "Een **router** staat op de kruispunten van het netwerk en stuurt elk **pakketje** de beste/snelste kant op naar zijn bestemming. Verschillende pakketjes van dezelfde data kunnen zo verschillende routes nemen." }],
-          niveaus: { basis: "Kiest de route.", simpeler: "Router = wegwijzer", nogSimpeler: "A." },
+          niveaus: { basis: "Kiest de route.", simpeler: "Router = wegwijzer", nogSimpeler: "Wegwijzer" },
         },
       },
       {
@@ -183,7 +183,7 @@ const steps = [
         wrongHints: [null, "Eén verloren pakketje legt het internet niet plat.", "TCP zorgt juist voor herzending.", "Pakketjes kunnen wel degelijk kwijtraken."],
         uitlegPad: {
           stappen: [{ titel: "TCP houdt de tel bij", tekst: "**TCP** controleert of alle pakketjes (met hun **volgnummers**) compleet aankomen. Ontbreekt er één, dan vraagt het om **herzending**. Daarom komt je bericht toch heel aan, ook al ging er onderweg eentje verloren — het internet is zo robuust." }],
-          niveaus: { basis: "Opnieuw sturen.", simpeler: "Kwijt = opnieuw", nogSimpeler: "A." },
+          niveaus: { basis: "Opnieuw sturen.", simpeler: "Kwijt = opnieuw", nogSimpeler: "Opnieuw sturen" },
         },
       },
     ],
@@ -202,7 +202,7 @@ const steps = [
         wrongHints: [null, "DNS vertaalt namen naar IP's — geen webprotocol op zich.", "MP3 is een geluidsformaat.", "USB is een fysieke aansluiting."],
         uitlegPad: {
           stappen: [{ titel: "HyperText Transfer Protocol", tekst: "Websites werken met **HTTP** (HyperText Transfer Protocol): je browser stuurt een **request**, de server stuurt een **response** (de HTML + plaatjes) terug. **HTTPS** is dezelfde afspraak, maar dan **versleuteld**." }],
-          niveaus: { basis: "HTTP(S).", simpeler: "Web = HTTP", nogSimpeler: "A." },
+          niveaus: { basis: "HTTP(S).", simpeler: "Web = HTTP", nogSimpeler: "HTTP(S)" },
         },
       },
       {
@@ -212,7 +212,7 @@ const steps = [
         wrongHints: [null, "Het zegt niets over de prijs.", "Het zegt niets over populariteit.", "Iedere site kan HTTPS hebben, niet alleen de overheid."],
         uitlegPad: {
           stappen: [{ titel: "Versleuteld verkeer", tekst: "**HTTPS** = HTTP **met versleuteling** (TLS). Het slotje 🔒 betekent dat het verkeer tussen jou en de server **versleuteld** is, zodat anderen op het netwerk niet kunnen meelezen. Belangrijk bij wachtwoorden en betalingen. Let op: het garandeert niet dat de site zelf eerlijk is." }],
-          niveaus: { basis: "Versleuteld/beveiligd.", simpeler: "🔒 = beveiligde verbinding", nogSimpeler: "A." },
+          niveaus: { basis: "Versleuteld/beveiligd.", simpeler: "🔒 = beveiligde verbinding", nogSimpeler: "Beveiligd" },
         },
       },
       {
@@ -222,7 +222,7 @@ const steps = [
         wrongHints: [null, "Het protocol is het `https`-deel.", "Het pad is `/cito`.", "Er staat geen wachtwoord in een gewone URL."],
         uitlegPad: {
           stappen: [{ titel: "Een URL ontleden", tekst: "In `https://leerkwartier.app/cito`: `https` = **protocol**, `leerkwartier.app` = **domein** (DNS vertaalt dit naar een IP-adres), `/cito` = **pad** naar een specifieke pagina. De browser gebruikt het domein om de juiste server te vinden." }],
-          niveaus: { basis: "Het domein.", simpeler: "leerkwartier.app = domein", nogSimpeler: "A." },
+          niveaus: { basis: "Het domein.", simpeler: "leerkwartier.app = domein", nogSimpeler: "Domein" },
         },
       },
       {
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Het domein is `leerkwartier.app`.", "Het pad is `/cito`.", "Er staat geen IP-adres in deze URL."],
         uitlegPad: {
           stappen: [{ titel: "Het eerste stukje", tekst: "In `https://leerkwartier.app/cito` is `https` het **protocol** (de afspraak hoe browser en server praten — hier versleuteld). `leerkwartier.app` is het **domein**, `/cito` het **pad** naar de pagina." }],
-          niveaus: { basis: "Het protocol.", simpeler: "https = protocol", nogSimpeler: "A." },
+          niveaus: { basis: "Het protocol.", simpeler: "https = protocol", nogSimpeler: "Protocol" },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [null, "Het IP gebruikt hij om te verbinden, maar hij stuurt een request.", "DNS is een eerdere, aparte stap.", "Een back-up heeft er niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "Vraag en antwoord", tekst: "Je browser (de **client**) stuurt een **HTTP-request** ('geef mij pagina /cito'). De server stuurt een **HTTP-response** terug: de HTML, plaatjes enzovoort. Je browser zet die code om in de pagina die je ziet. Bij HTTPS is dat verkeer versleuteld." }],
-          niveaus: { basis: "Een HTTP-request.", simpeler: "Browser stuurt request", nogSimpeler: "A." },
+          niveaus: { basis: "Een HTTP-request.", simpeler: "Browser stuurt request", nogSimpeler: "Request" },
         },
       },
     ],

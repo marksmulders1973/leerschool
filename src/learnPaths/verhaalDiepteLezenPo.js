@@ -160,7 +160,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
           stappen: [
             { titel: "Hoe wordt het gezegd?", tekst: "'Lachend' is een manier-woord: het vertelt hoe de zin wordt uitgesproken. Lachend = vrolijk, niet kwaad." },
             { titel: "Vergelijk: zacht vs hard", tekst: "Zonder 'lachend': 'dat lukt jou toch nooit' klinkt gemeen. Mét 'lachend' klinkt het als een plagend grapje tussen zussen." },
-            { titel: "Conclusie", tekst: "Het woordje 'lachend' verandert de sfeer van de zin — van aanval naar pesterij die niet echt kwetst." },
+            { titel: "Conclusie", tekst: "Het woordje 'lachend' verandert de sfeer van de zin — van aanval naar plagerij die niet echt kwetst." },
           ],
           niveaus: {
             basis: "Hoe kun je iets zeggen dat gemeen lijkt maar eigenlijk niet zo bedoeld is? Wat verandert het als iemand lacht?",
@@ -182,11 +182,11 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         uitlegPad: {
           stappen: [
             { titel: "Zoek het gedrag", tekst: "Lotte begint opnieuw én gooit haar papier weg. Dat zijn twee stukjes gedrag die samen iets vertellen." },
-            { titel: "Vergelijk met jezelf", tekst: "Wanneer begin jij opnieuw en gooi je je werk weg? Als het niet goed genoeg is, en je er baal van." },
-            { titel: "Kies het gevoels-woord", tekst: "Niet tevreden, steeds opnieuw — dat past bij frustration: je wil iets maar het lukt niet." },
+            { titel: "Vergelijk met jezelf", tekst: "Wanneer begin jij opnieuw en gooi je je werk weg? Als het niet goed genoeg is en je er flink van baalt." },
+            { titel: "Kies het gevoels-woord", tekst: "Niet tevreden, steeds opnieuw — dat past bij gefrustreerd zijn: je wilt iets, maar het lukt niet." },
           ],
           niveaus: {
-            basis: "Twee keer opnieuw beginnen én weggooien — wanneer doe jij dat bij je schoolwerk?",
+            basis: "Opnieuw beginnen én je papier weggooien — wanneer doe jij dat bij je schoolwerk?",
             simpeler: "Als iets niet lukt en je gooit het weg — voel je je dan blij of juist niet tevreden?",
             nogSimpeler: "Hoe voelt het als je iets steeds opnieuw moet doen en het lukt maar niet?",
           },
@@ -211,7 +211,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         uitlegPad: {
           stappen: [
             { titel: "Denk terug aan Rik", tekst: "'Rik zei niets. Hij sloeg de deur keihard achter zich dicht.' Er stond geen gevoels-woord — en toch wist je precies hoe Rik zich voelde. Hoe wist je dat?" },
-            { titel: "Het spoor zit in de zin", tekst: "Je gebruikte wat Rik dééd. Zijn gedrag was het spoor. De schrijver heeft dat spoor er express in gestopt, zodat jij het gevoel zelf kunt ontdekken." },
+            { titel: "Het spoor zit in de zin", tekst: "Je gebruikte wat Rik dééd. Zijn gedrag was het spoor. De schrijver heeft dat spoor er expres in gestopt, zodat jij het gevoel zelf kunt ontdekken." },
             { titel: "Zo werkt het altijd", tekst: "Bij elke gevoels-vraag zonder gevoels-woord: zoek het gedrag, vergelijk met jezelf, kies het passende woord. Die drie stappen werken bij elk verhaal." },
           ],
           woorden: [
@@ -388,7 +388,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Wat doet 'alsof'?", tekst: "'Alsof' betekent: het lijkt erop, maar het is misschien niet echt zo. Noa gokket dat het voor Milan niks is — ze weet het niet zeker." },
+            { titel: "Wat doet 'alsof'?", tekst: "'Alsof' betekent: het lijkt erop, maar het is misschien niet echt zo. Noa gokt dat het voor Milan niks is — ze weet het niet zeker." },
             { titel: "In een ik-verhaal", tekst: "In een ik-verhaal kent de verteller alleen zijn eigen hoofd. Van anderen weet hij alleen wat hij ziet. 'Alsof' is het teken van een gok." },
             { titel: "Conclusie", tekst: "'Alsof' verraadt: dit is de mening van Noa, geen feit. De lezer weet net zo weinig als Noa." },
           ],
@@ -494,7 +494,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Lees wat Noa zegt", tekst: "Noa zegt: 'Ik moet wél. Niet van hem, niet van de badmeester — van mezelf.' Ze pusht zichzelf." },
+            { titel: "Lees wat Noa zegt", tekst: "Noa zegt: 'Ik moet wél. Niet van hem, niet van de badmeester — van mezelf.' Ze zet zichzelf onder druk." },
             { titel: "Koppel aan de context", tekst: "Noa heeft de hele week aan iedereen verteld dat ze vandaag gaat springen. Ze kan niet meer terug zonder gezichtsverlies." },
             { titel: "Leid de drang af", tekst: "Die combinatie — eigen belofte + trots — geeft een sterke innerlijke drang. Dat is meer dan angst of druk van buiten." },
           ],
@@ -770,7 +770,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
             { woord: "letterlijk", uitleg: "Precies zoals het er staat. Beeldspraak moet je juist níét letterlijk nemen." },
             { woord: "figuurlijk", uitleg: "Niet echt, maar als beeld bedoeld. 'Ik heb een olifantenhonger' = figuurlijk: heel veel honger." },
           ],
-          theorie: "**De letterlijk-nemen-valkuil**\n\nDé klassieke fout bij beeldspraak-vragen: het beeld letterlijk nemen. De toets zet zulke letterlijke antwoorden er express tussen ('haar mond plakte', 'geel van kleur').\n\nZo ontwijk je de valkuil:\n1. **Kan het letterlijk?** Een stem van honing — nee. Dus beeldspraak.\n2. **Zoek de gemeenschappelijke eigenschap** tussen beeld en echt ding.\n3. **Check met de rest van de zin**: 'iedereen werd er rustig van' — welk antwoord past dáárbij?\n\nDe zin er direct omheen geeft bijna altijd gratis bewijs voor de juiste betekenis. Gebruik dat!",
+          theorie: "**De letterlijk-nemen-valkuil**\n\nDé klassieke fout bij beeldspraak-vragen: het beeld letterlijk nemen. De toets zet zulke letterlijke antwoorden er expres tussen ('haar mond plakte', 'geel van kleur').\n\nZo ontwijk je de valkuil:\n1. **Kan het letterlijk?** Een stem van honing — nee. Dus beeldspraak.\n2. **Zoek de gemeenschappelijke eigenschap** tussen beeld en echt ding.\n3. **Check met de rest van de zin**: 'iedereen werd er rustig van' — welk antwoord past dáárbij?\n\nDe zin er direct omheen geeft bijna altijd gratis bewijs voor de juiste betekenis. Gebruik dat!",
           voorbeelden: [
             { type: "check-de-context", tekst: "'Opa is een wandelende encyclopedie: vraag hem alles over vroeger.' → het tweede stuk verklapt de betekenis: opa wéét heel veel." },
             { type: "letterlijk-fout", tekst: "'Het regende katten en honden' betekent níét dat er dieren vielen — het goot enorm. Engels leenbeeld, zelfde valkuil." },
@@ -975,8 +975,8 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
         wrongHints: [
           null,
           "Staat er iets over dwingen in de tekst? Kijk ook naar het woord 'mocht' — geeft dat dwang aan?",
-          null,
           "De klas had wekenlang gespaard voor de vaas — die was van alle kinderen samen.",
+          null,
         ],
         uitlegPad: {
           stappen: [

@@ -494,7 +494,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tegen de cyclus in", tekst: "Anticyclisch = TEGEN de economische cyclus werken. Recessie? Stimuleren: belasting omlaag + uitgaven omhoog = meer geld in economie → economie veert terug." }],
           woorden: [{ woord: "anticyclisch begroten", uitleg: "Bij krimp uitgeven, bij groei sparen. Tegenwicht aan cyclus." }, { woord: "Keynesiaans beleid", uitleg: "Theorie van John Maynard Keynes: overheid moet in recessie de vraag opvijzelen." }],
-          theorie: "Logica: in recessie minder besteden burgers → minder omzet bedrijven → ontslagen → nog minder besteden. Spiraal stoppen door overheid die WEL uitgeeft. Bij groei: oversparen om buffers op te bouwen voor volgende crisis.",
+          theorie: "Logica: in recessie minder besteden burgers → minder omzet bedrijven → ontslagen → nog minder besteden. Spiraal stoppen door overheid die WEL uitgeeft. Bij groei: sparen om buffers op te bouwen voor volgende crisis.",
           voorbeelden: [{ type: "corona 2020", tekst: "NL gaf €80 mrd uit aan NOW + TOZO + TVL → ontslagen verminderd, bedrijven overleefden, economie veerde terug." }],
           basiskennis: [{ onderwerp: "Niet bezuinigen", uitleg: "Bezuinigen in recessie = procyclisch = VERERGERT crisis. Politiek verleidelijk, economisch schadelijk." }],
           niveaus: { basis: "Stimuleren in recessie.", simpeler: "Anticyclisch = overheid steekt geld in economie als die in dip zit. Belasting omlaag + meer uitgeven.", nogSimpeler: "Stimuleren" },
@@ -506,7 +506,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Een recessie is juist een dip in de economie — past dat bij het woorddeel 'hoog' in hoogconjunctuur?", "Als het BBP krimpt, draait de economie terug — hoort dat bij de topfase of bij de dalfase?", "Veel werklozen hoort bij slechte tijden; in een bloeiende economie hebben juist veel mensen werk."],
         uitlegPad: {
-          stappen: [{ titel: "Boom-fase", tekst: "Hoogconjunctuur = goede tijden. BBP groeit snel, bedrijven hebben veel orders, weinig werkloosheid, lonen onder druk → stijgen. Risico: oververhitting + inflatie." }],
+          stappen: [{ titel: "Boom-fase", tekst: "Hoogconjunctuur = goede tijden. BBP groeit snel, bedrijven hebben veel orders, weinig werkloosheid, lonen stijgen. Risico: oververhitting + inflatie." }],
           woorden: [{ woord: "hoogconjunctuur", uitleg: "Bovenkant van de economische cyclus. Hoge groei + lage werkloosheid." }, { woord: "oververhitting", uitleg: "Economie groeit te snel → grondstoffen-tekort + inflatie." }],
           theorie: "Conjunctuurfasen: hoogconjunctuur (boom) → recessie → depressie (extreem) → herstel → hoogconjunctuur. Cyclus duurt vaak 5-10 jaar.",
           voorbeelden: [{ type: "boom NL", tekst: "2017-2019: BBP +2-3%/jaar, werkloosheid <4%, lonen stegen, inflatie liep op." }],
@@ -518,9 +518,9 @@ const steps = [
         q: "Wat veroorzaakt vaak een recessie?",
         options: ["Externe schokken (pandemie, energieprijs, schuldcrisis)", "Een verkiezing", "Een Koningsdag", "Goede zomer"],
         answer: 0,
-        wrongHints: [null, "Verkiezing is geen oorzaak.", "Feestdag heeft geen impact.", "Weer is niet maatschappelijk."],
+        wrongHints: [null, "Verkiezing is geen oorzaak.", "Feestdag heeft geen impact.", "Een mooie zomer veroorzaakt geen recessie."],
         uitlegPad: {
-          stappen: [{ titel: "Plotselinge schok", tekst: "Recessies komen vaak door EXTERNE schokken: oorlog, pandemie, beursvalkrach, energieprijs-piek. Plotse impact verstoort economie." }],
+          stappen: [{ titel: "Plotselinge schok", tekst: "Recessies komen vaak door EXTERNE schokken: oorlog, pandemie, beurskrach, energieprijs-piek. Zo'n plotselinge klap verstoort de economie." }],
           woorden: [{ woord: "externe schok", uitleg: "Onverwachte gebeurtenis van buitenaf die economie raakt: oorlog, pandemie, beurskrach." }, { woord: "endogene oorzaak", uitleg: "Interne oorzaak: vertrouwens-cyclus, schuldopbouw, overinvestering." }],
           theorie: "Bekende voorbeelden: oliecrisis 1973, Black Monday 1987, dotcom-crash 2000, financiële crisis 2008, eurocrisis 2012, corona 2020, energie-crisis 2022.",
           voorbeelden: [{ type: "schokken", tekst: "Lehman Brothers faillissement september 2008 → wereldwijde recessie 2009." }, { type: "corona", tekst: "Lockdowns maart 2020 → toerisme/horeca/luchtvaart in vrije val." }],
@@ -550,8 +550,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Recessie × tijd × diepte", tekst: "Depressie = bijzonder LANGE + DIEPE recessie. Niet maanden maar jaren. Niet -3% maar -10% of meer. Beroemd: Great Depression 1929-1939." }],
           woorden: [{ woord: "depressie", uitleg: "Extreme vorm van recessie: jaren durend, zeer diepe krimp, massale werkloosheid." }],
-          theorie: "Great Depression startte met Wall Street Crash 1929 → 1933 VS werkloosheid 25% → ~10 jaar herstel → eindigde pas met WO2-economie. Sindsdien beleid voorkomt dit (overheid grijpt in).",
-          voorbeelden: [{ type: "Great Depression", tekst: "VS werkloosheid 1929: 3% → 1933: 25%. BBP daalde 30%. Banken faillieten massaal." }],
+          theorie: "Great Depression startte met Wall Street Crash 1929 → 1933 VS werkloosheid 25% → ~10 jaar herstel → eindigde pas met de WO2-economie. Sindsdien probeert beleid dit te voorkomen (overheid grijpt in).",
+          voorbeelden: [{ type: "Great Depression", tekst: "VS werkloosheid 1929: 3% → 1933: 25%. BBP daalde ruim een kwart. Banken gingen massaal failliet." }],
           basiskennis: [{ onderwerp: "Niet inflatie", uitleg: "Depressie = krimp + werkloosheid. Hyperinflatie is iets anders (prijzen exploderen)." }],
           niveaus: { basis: "Lange diepe recessie.", simpeler: "Depressie = recessie die JAREN duurt en VEEL dieper is. Bv. 1930-1935.", nogSimpeler: "Lang + diep" },
         },
@@ -561,7 +561,7 @@ const steps = [
   // ─── Stap 6: Marktordening ────────────────────────────
   {
     title: "Marktordening — overheid bewaakt de markt",
-    explanation: "De markt werkt alleen goed als er **regels** zijn. Anders ontstaat misbruik, monopolie, oneerlijke concurrentie. **Marktordening** = de overheid stelt + handhaaft deze regels.\n\n**Belangrijke onderwerpen**:\n\n**1. Mededingingsbeleid (concurrentie)**\n• Voorkomt **kartels** (afspraken over prijzen tussen bedrijven)\n• Voorkomt **monopolie-misbruik** (alleen-aanbieder die hoge prijzen vraagt)\n• Verbiedt fusies die concurrentie schaden\n• Toezichthouder: **ACM** (Autoriteit Consument & Markt)\n\n**2. Consumentenbescherming**\n• Garantie op producten (2 jaar wettelijk)\n• Recht op herroeping (online: 14 dagen bedenktijd)\n• Eerlijke voorwaarden, geen verborgen kosten\n• ACM + Reclame Code Commissie\n\n**3. Productveiligheid**\n• NVWA (Nederlandse Voedsel- en Warenautoriteit) — voor voedsel\n• Strenge eisen: speelgoed, medicijnen, auto's\n\n**4. Milieuregels**\n• Vervuiling beperken (uitstoot, afval)\n• CO2-belasting + emissieheffingen\n• Zonder regels: tragedy of the commons (iedereen verspilt natuur)\n\n**5. Arbeidsmarkt**\n• Minimumloon (bewaakt door SZW + Inspectie SZW)\n• Veiligheid op werkplek (arbo-wet)\n• Anti-discriminatie (College Rechten van Mens)\n\n**6. Financiële markten**\n• Banken-toezicht (DNB, AFM)\n• Beschermen spaarders (DGS = Depositogarantiestelsel — €100k garantie per spaarder per bank)\n• Voorkomen woekerwinsten en misleiding\n\n**Bekende ACM-zaken**:\n• Bouwfraude 2002 (kartels in wegenbouw)\n• Apple App Store boetes (misbruik macht)\n• Ahold Delhaize-fusie (toegestaan met voorwaarden)\n\n**Internationaal**:\n• EU heeft eigen mededingingsbeleid (DG Competition)\n• Boetes Google, Apple, Meta — miljarden euro's\n• Beïnvloedt wereldwijd",
+    explanation: "De markt werkt alleen goed als er **regels** zijn. Anders ontstaat misbruik, monopolie, oneerlijke concurrentie. **Marktordening** = de overheid stelt + handhaaft deze regels.\n\n**Belangrijke onderwerpen**:\n\n**1. Mededingingsbeleid (concurrentie)**\n• Voorkomt **kartels** (afspraken over prijzen tussen bedrijven)\n• Voorkomt **monopolie-misbruik** (alleen-aanbieder die hoge prijzen vraagt)\n• Verbiedt fusies die concurrentie schaden\n• Toezichthouder: **ACM** (Autoriteit Consument & Markt)\n\n**2. Consumentenbescherming**\n• Garantie op producten (2 jaar wettelijk)\n• Recht op herroeping (online: 14 dagen bedenktijd)\n• Eerlijke voorwaarden, geen verborgen kosten\n• ACM + Reclame Code Commissie\n\n**3. Productveiligheid**\n• NVWA (Nederlandse Voedsel- en Warenautoriteit) — voor voedsel\n• Strenge eisen: speelgoed, medicijnen, auto's\n\n**4. Milieuregels**\n• Vervuiling beperken (uitstoot, afval)\n• CO2-belasting + emissieheffingen\n• Zonder regels: tragedy of the commons (iedereen verspilt natuur)\n\n**5. Arbeidsmarkt**\n• Minimumloon (toezicht: Nederlandse Arbeidsinspectie)\n• Veiligheid op werkplek (arbo-wet)\n• Anti-discriminatie (College voor de Rechten van de Mens)\n\n**6. Financiële markten**\n• Banken-toezicht (DNB, AFM)\n• Beschermen spaarders (DGS = Depositogarantiestelsel — €100k garantie per spaarder per bank)\n• Voorkomen woekerwinsten en misleiding\n\n**Bekende ACM-zaken**:\n• Bouwfraude 2002 (kartels in wegenbouw)\n• Apple App Store boetes (misbruik macht)\n• Ahold Delhaize-fusie (toegestaan met voorwaarden)\n\n**Internationaal**:\n• EU heeft eigen mededingingsbeleid (DG Competition)\n• Boetes Google, Apple, Meta — miljarden euro's",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">MARKTORDENING</text>
 <rect x="20" y="40" width="135" height="32" rx="4" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
@@ -628,12 +628,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Geen belasting.", "Geen lening.", "DGS is bank-bescherming."],
         uitlegPad: {
-          stappen: [{ titel: "Spaarders beschermd", tekst: "DGS = depositogarantiestelsel. Als jouw bank failliet gaat, garandeert de overheid tot €100.000 per spaarder per bank. Beschermt vertrouwen + voorkomt bank-run." }],
+          stappen: [{ titel: "Spaarders beschermd", tekst: "DGS = depositogarantiestelsel. Als jouw bank failliet gaat, garandeert het DGS tot €100.000 per spaarder per bank. Beschermt vertrouwen + voorkomt bank-run." }],
           woorden: [{ woord: "DGS", uitleg: "Depositogarantiestelsel. Verzekert spaargeld tot €100.000 per persoon per bank bij faillissement." }, { woord: "bank-run", uitleg: "Massale geldopname bij bank — kan bank doen omvallen door liquiditeit-tekort." }],
-          theorie: "DGS is EU-regelgeving. Banken betalen jaarlijks premie aan een fonds, daaruit worden depositors uitbetaald bij faillissement. Hierdoor durf je spaargeld bij bank te laten staan.",
+          theorie: "DGS is EU-regelgeving. Banken betalen jaarlijks premie aan een fonds, daaruit worden spaarders uitbetaald bij faillissement. Hierdoor durf je spaargeld bij de bank te laten staan.",
           voorbeelden: [{ type: "DSB Bank 2009", tekst: "DSB Bank failliet → spaarders kregen via DGS hun geld terug tot €100k." }, { type: "spreiding", tekst: "Spaargeld €250k? Verdeel over 3 banken → 3× €100k garantie." }],
           basiskennis: [{ onderwerp: "Niet belasting", uitleg: "DGS = garantieverzekering, geen belasting. Wordt gefinancierd door banken zelf." }],
-          niveaus: { basis: "€100k spaargarantie per bank.", simpeler: "Bank failliet → overheid garandeert tot €100.000 spaargeld per spaarder per bank.", nogSimpeler: "€100k" },
+          niveaus: { basis: "€100k spaargarantie per bank.", simpeler: "Bank failliet → DGS garandeert tot €100.000 spaargeld per spaarder per bank.", nogSimpeler: "€100k" },
         },
       },
       {
@@ -643,9 +643,9 @@ const steps = [
         wrongHints: [null, "ACM = consument + concurrentie.", "DNB = banken.", "DUO = studie."],
         uitlegPad: {
           stappen: [{ titel: "Voedsel + waren", tekst: "NVWA = Nederlandse Voedsel- en Warenautoriteit. Controleert restaurants, supermarkten, fabrieken op hygiëne, dierwelzijn, productveiligheid." }],
-          woorden: [{ woord: "NVWA", uitleg: "Nederlandse Voedsel- en Warenautoriteit. Onder ministerie van LNV. Controleert hygiëne + veiligheid + dierwelzijn." }],
+          woorden: [{ woord: "NVWA", uitleg: "Nederlandse Voedsel- en Warenautoriteit. Valt onder het landbouwministerie. Controleert hygiëne + veiligheid + dierwelzijn." }],
           theorie: "NVWA inspecteert + sluit zaken (slecht restaurant, fipronil-eieren-affaire 2017), publiceert sectorrapporten. Werkt samen met EU-instanties bij grensoverschrijdende voedselzaken.",
-          voorbeelden: [{ type: "praktijk", tekst: "Fipronil-eierschandaal 2017: NVWA-onderzoek leidde tot miljoenen eieren uit schap." }, { type: "restaurant", tekst: "Hygiëneinspectie + boete bij slecht onderhouden keuken." }],
+          voorbeelden: [{ type: "praktijk", tekst: "Fipronil-eierschandaal 2017: door NVWA-onderzoek gingen miljoenen eieren uit de schappen." }, { type: "restaurant", tekst: "Hygiëne-inspectie + boete bij slecht onderhouden keuken." }],
           basiskennis: [{ onderwerp: "Verschillende toezichthouders", uitleg: "Voedsel = NVWA. Concurrentie/consument = ACM. Banken = DNB. Studie = DUO. Verschillende terreinen." }],
           niveaus: { basis: "NVWA voor voedsel.", simpeler: "Voedselveiligheid en productveiligheid = NVWA.", nogSimpeler: "Voedsel = NVWA" },
         },
@@ -656,11 +656,11 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te kort.", "Wel bedenktijd.", "Te lang."],
         uitlegPad: {
-          stappen: [{ titel: "Online = 14 dagen", tekst: "Bij online aankopen heb je wettelijke BEDENKTIJD van 14 dagen na ontvangst. Mag zonder reden retourneren. Verkoper moet geld terugstorten binnen 14 dagen na ontvangst retour." }],
+          stappen: [{ titel: "Online = 14 dagen", tekst: "Bij online aankopen heb je wettelijke BEDENKTIJD van 14 dagen na ontvangst. Mag zonder reden retourneren. Verkoper moet het geld binnen 14 dagen terugstorten." }],
           woorden: [{ woord: "bedenktijd", uitleg: "Wettelijke periode waarin je een online aankoop zonder reden mag annuleren." }, { woord: "herroepingsrecht", uitleg: "Formele juridische naam voor de 14-dagen-bedenktijd bij online verkoop." }],
-          theorie: "Reden: in winkel kun je product bekijken, online niet. Bedenktijd compenseert dit. Uitzonderingen: gepersonaliseerd, hygiëne-producten (zwemkleding), zegelversiegelde software/CDs/DVD's.",
-          voorbeelden: [{ type: "praktijk", tekst: "Zalando-broek niet leuk? 14 dagen voor retour. Coolblue: gratis retourneren + geld terug binnen 14 dagen." }],
-          basiskennis: [{ onderwerp: "Niet in winkel", uitleg: "In FYSIEKE winkel geen wettelijke bedenktijd (winkel mag wel uit servicse 30 dagen aanbieden). Online wel." }],
+          theorie: "Reden: in winkel kun je product bekijken, online niet. Bedenktijd compenseert dit. Uitzonderingen: gepersonaliseerd, hygiëne-producten (zwemkleding), verzegelde software/cd's/dvd's waarvan de verzegeling is verbroken.",
+          voorbeelden: [{ type: "praktijk", tekst: "Online gekochte broek niet leuk? Je hebt 14 dagen om hem te retourneren en krijgt je geld terug." }],
+          basiskennis: [{ onderwerp: "Niet in winkel", uitleg: "In FYSIEKE winkel geen wettelijke bedenktijd (winkel mag wel uit service bv. 30 dagen ruilen aanbieden). Online wel." }],
           niveaus: { basis: "14 dagen.", simpeler: "Online aankoop: 14 dagen bedenktijd. Mag zonder reden retourneren.", nogSimpeler: "14 dagen" },
         },
       },
@@ -669,7 +669,7 @@ const steps = [
   // ─── Stap 7: Politiek systeem ────────────────────────
   {
     title: "Politiek systeem — wie maakt de wetten?",
-    explanation: "Nederland is een **parlementaire democratie + constitutionele monarchie**.\n\n**Trias politica** (machtenscheiding):\n• **Wetgevende macht**: maakt wetten — Tweede + Eerste Kamer + regering\n• **Uitvoerende macht**: voert wetten uit — regering (premier + ministers)\n• **Rechtsprekende macht**: toetst wetten — onafhankelijke rechters\n\n**Tweede Kamer (150 leden)**:\n• Direct gekozen door volk (1× per 4 jaar)\n• Maakt + amendeert wetten\n• Controleert de regering\n• Kan minister wegsturen (motie van wantrouwen)\n\n**Eerste Kamer (75 leden)**:\n• Gekozen door Provinciale Staten\n• Toetst wetten op kwaliteit\n• Kan alleen ja/nee zeggen, geen amendement\n• 'Senaat' of 'Chambre de réflexion'\n\n**Regering**:\n• **Minister-president (premier)** + ministers + staatssecretarissen\n• Komt voort uit verkiezingen + coalitievorming\n• Voert beleid uit\n• Legt verantwoording af aan Tweede Kamer\n\n**De koning**:\n• Constitutioneel (niet politiek)\n• Tekent wetten ceremonieel\n• Geeft Troonrede\n• 'Reigns but does not rule'\n\n**Verkiezingen Tweede Kamer**:\n• Stemt op partij (PvdA, VVD, NSC, D66, GL-PvdA, etc.)\n• Evenredige vertegenwoordiging — geen kiesdrempel (alleen 1/150e zetelnorm)\n• Vaak coalities nodig (geen partij krijgt meerderheid)\n• Coalitievorming: maand of meer onderhandelen\n\n**Politieke partijen** + economisch profiel:\n• **VVD/NSC**: minder overheid, lage belasting voor bedrijven, marktwerking\n• **PvdA/GL/SP**: meer overheid, hogere belasting voor herverdeling, sociaal vangnet\n• **D66**: progressief, gemengde aanpak\n• **CDA/CU**: verzorgingsstaat met christelijke solidariteit\n• **PVV/FVD**: minder migratie, lager belasting\n\n**Coalitie-akkoord**:\n• Document met afspraken voor 4 jaar\n• Compromis tussen partijen\n• Wordt in Tweede Kamer steun gegeven\n\n**Provinciale + gemeenteraad-verkiezingen**:\n• Provincie: kiest ook indirect Eerste Kamer\n• Gemeente: lokale partijen + landelijke afdelingen\n\n**Belangrijk economisch**:\n• Beleid Tweede Kamer en regering bepaalt **belasting, uitgaven, regels** — direct effect op iedereen\n• Bij verkiezingen: kijk naar economische standpunten partijen\n• VOOR jou over een paar jaar relevant — eerste keer stemmen vanaf 18!",
+    explanation: "Nederland is een **parlementaire democratie + constitutionele monarchie**.\n\n**Trias politica** (machtenscheiding):\n• **Wetgevende macht**: maakt wetten — Tweede + Eerste Kamer + regering\n• **Uitvoerende macht**: voert wetten uit — regering (premier + ministers)\n• **Rechtsprekende macht**: spreekt recht — onafhankelijke rechters\n\n**Tweede Kamer (150 leden)**:\n• Direct gekozen door volk (1× per 4 jaar)\n• Maakt + amendeert wetten\n• Controleert de regering\n• Kan minister wegsturen (motie van wantrouwen)\n\n**Eerste Kamer (75 leden)**:\n• Gekozen door Provinciale Staten\n• Toetst wetten op kwaliteit\n• Kan alleen ja/nee zeggen, geen amendement\n• 'Senaat' of 'Chambre de réflexion'\n\n**Regering**:\n• **Minister-president (premier)** + ministers + staatssecretarissen\n• Komt voort uit verkiezingen + coalitievorming\n• Voert beleid uit\n• Legt verantwoording af aan Tweede Kamer\n\n**De koning**:\n• Constitutioneel (niet politiek)\n• Tekent wetten ceremonieel\n• Geeft Troonrede\n• Ministers zijn verantwoordelijk\n\n**Verkiezingen Tweede Kamer**:\n• Stemt op een partij (VVD, D66, CDA, PVV, etc.)\n• Evenredige vertegenwoordiging — geen kiesdrempel (alleen 1/150e zetelnorm)\n• Vaak coalities nodig (geen partij krijgt meerderheid)\n• Coalitievorming: vaak maanden onderhandelen\n\n**Politieke partijen** + economisch profiel:\n• **VVD**: minder overheid, lage belasting voor bedrijven, marktwerking\n• **GL-PvdA/SP**: meer overheid, hogere belasting voor herverdeling, sociaal vangnet\n• **D66**: progressief, gemengde aanpak\n• **CDA/CU**: verzorgingsstaat met christelijke solidariteit\n• **PVV/FVD**: minder migratie, lagere belasting\n\n**Coalitie-akkoord**:\n• Document met afspraken voor 4 jaar\n• Compromis tussen partijen\n• Krijgt steun van een Kamermeerderheid\n\n**Provinciale + gemeenteraad-verkiezingen**:\n• Provincie: kiest ook indirect Eerste Kamer\n• Gemeente: lokale partijen + landelijke afdelingen\n\n**Belangrijk economisch**:\n• Beleid Tweede Kamer en regering bepaalt **belasting, uitgaven, regels** — direct effect op iedereen\n• Bij verkiezingen: kijk naar economische standpunten partijen\n• VOOR jou over een paar jaar relevant — eerste keer stemmen vanaf 18!",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PARLEMENTAIRE DEMOCRATIE</text>
 <rect x="20" y="40" width="280" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
@@ -695,9 +695,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "150 = TK, 75 = EK", tekst: "Tweede Kamer = 150 leden (direct gekozen door volk). Eerste Kamer = 75 leden (gekozen door Provinciale Staten). Tweede heeft meer macht — daar gebeurt het debat." }],
           woorden: [{ woord: "Tweede Kamer", uitleg: "Hoofd-orgaan van het Nederlandse parlement, 150 zetels, direct gekozen." }, { woord: "Eerste Kamer", uitleg: "Senaat met 75 leden, indirect gekozen, toetst kwaliteit van wetten." }],
-          theorie: "Naam 'Tweede Kamer' komt uit historie (na Eerste Kamer-instelling kreeg ze die naam). In de praktijk is Tweede dominant — daar liggen amendement-rechten + politieke debat.",
+          theorie: "Naam 'Tweede Kamer' is historisch: in 1815 gold de Eerste Kamer als voornaamste. In de praktijk is de Tweede dominant — daar liggen het recht van amendement + het politieke debat.",
           voorbeelden: [{ type: "verkiezing", tekst: "Verkiezingen Tweede Kamer 2023: 150 zetels verdeeld over 15+ partijen." }],
-          basiskennis: [{ onderwerp: "150 onthouden", uitleg: "150 zetels = onthouden, komt elk examen voor. Coalitie heeft meerderheid van 76 zetels nodig." }],
+          basiskennis: [{ onderwerp: "150 onthouden", uitleg: "150 zetels = onthouden, komt vaak terug op toetsen. Coalitie heeft meerderheid van 76 zetels nodig." }],
           niveaus: { basis: "150 zetels TK.", simpeler: "Tweede Kamer heeft 150 leden. Eerste Kamer 75.", nogSimpeler: "150" },
         },
       },
@@ -709,8 +709,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Macht in 3 delen", tekst: "Trias politica (Montesquieu, 1748): scheiding van macht in (1) wetgevende macht (parlement), (2) uitvoerende macht (regering), (3) rechtsprekende macht (rechters)." }],
           woorden: [{ woord: "trias politica", uitleg: "Latijn voor 'drie machten'. Filosofisch principe achter rechtsstaten." }, { woord: "machtenscheiding", uitleg: "Verschillende organen mogen elkaars taken niet overnemen — onafhankelijke controle." }],
-          theorie: "Doel: voorkomen dat 1 persoon/groep alles bepaalt (tirannie). Rechters MOGEN wetten toetsen, parlement mag rechters NIET ontslaan. Onafhankelijkheid = bescherming burger.",
-          voorbeelden: [{ type: "praktijk NL", tekst: "Hoge Raad toetst regeringsbeleid (urgenda-vonnis 2019). Parlement laat regering vallen via motie van wantrouwen. Onderlinge balans." }],
+          theorie: "Doel: voorkomen dat 1 persoon/groep alles bepaalt (tirannie). Rechters zijn onafhankelijk: parlement en regering mogen rechters NIET ontslaan. Onafhankelijkheid = bescherming burger.",
+          voorbeelden: [{ type: "praktijk NL", tekst: "Hoge Raad oordeelde over regeringsbeleid (Urgenda-vonnis 2019). Parlement laat regering vallen via motie van wantrouwen. Onderlinge balans." }],
           basiskennis: [{ onderwerp: "Politiek vs partij", uitleg: "Trias politica gaat over MACHTEN, niet over partijen. Drie verschillende soorten gezag." }],
           niveaus: { basis: "Wetgever + uitvoerder + rechter.", simpeler: "Macht in drie delen: parlement maakt wetten, regering voert uit, rechters toetsen.", nogSimpeler: "3 machten" },
         },
@@ -735,9 +735,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Wetten maken doet ze samen met parlement.", "Rechtspraak is gescheiden.", "Wel actief."],
         uitlegPad: {
-          stappen: [{ titel: "Uitvoerende macht", tekst: "Regering = premier + ministers + staatssecretarissen. Voert wetten UIT, dient wetsvoorstellen in, bepaalt dagelijks beleid. Krijgt taken via Tweede Kamer-meerderheid." }],
+          stappen: [{ titel: "Uitvoerende macht", tekst: "Regering = premier + ministers + staatssecretarissen. Voert wetten UIT, dient wetsvoorstellen in, bepaalt dagelijks beleid. Steunt op een meerderheid in de Tweede Kamer." }],
           woorden: [{ woord: "regering", uitleg: "Uitvoerend orgaan van Nederland: koning + ministers. Praktisch: kabinet (premier + ministers)." }, { woord: "kabinet", uitleg: "Premier + ministers + staatssecretarissen. Beleidsmakend gezelschap." }],
-          theorie: "Regering kan wetsvoorstellen INDIENEN, maar parlement moet ze GOEDKEUREN. Voert ze daarna uit. Bij wantrouwen Tweede Kamer → kabinet valt → nieuwe verkiezingen.",
+          theorie: "Regering kan wetsvoorstellen INDIENEN, maar parlement moet ze GOEDKEUREN. Voert ze daarna uit. Bij wantrouwen Tweede Kamer → kabinet valt → vaak nieuwe verkiezingen.",
           voorbeelden: [{ type: "rol", tekst: "Minister van Financiën voert belastingbeleid uit. Minister van Justitie zet politie aan het werk." }],
           basiskennis: [{ onderwerp: "Samen met parlement", uitleg: "Wetten maken doet de regering SAMEN met parlement. Niet alleen." }],
           niveaus: { basis: "Wetten uitvoeren + beleid.", simpeler: "Regering = premier + ministers. Voeren beleid uit + dienen wetsvoorstellen in.", nogSimpeler: "Uitvoeren" },
@@ -747,13 +747,13 @@ const steps = [
         q: "Wat is een **coalitie**?",
         options: ["Samenwerking van meerdere partijen om meerderheid te vormen", "Een type wet", "De koning + regering", "Een verkiezing"],
         answer: 0,
-        wrongHints: [null, "Geen wet.", "Niet politieke samenwerking met koning.", "Coalitie komt na verkiezing."],
+        wrongHints: [null, "Geen wet.", "De koning doet niet mee aan coalities.", "Coalitie komt na verkiezing."],
         uitlegPad: {
           stappen: [{ titel: "Samen meerderheid", tekst: "Coalitie = 2 of meer partijen die SAMENWERKEN om een Tweede Kamer-meerderheid (76 zetels) te halen. Nodig omdat geen enkele partij in NL alleen meerderheid krijgt." }],
           woorden: [{ woord: "coalitie", uitleg: "Politieke samenwerking van meerdere partijen, vaak gebaseerd op coalitieakkoord." }, { woord: "coalitieakkoord", uitleg: "Document met afspraken tussen coalitiepartijen over beleid voor 4 jaar." }],
           theorie: "Coalitievorming na verkiezingen: informateurs gaan praten, partijen leggen wensen op tafel, compromis = coalitieakkoord. Duurt vaak maanden in NL.",
           voorbeelden: [{ type: "Rutte-IV", tekst: "Coalitie 2022: VVD + D66 + CDA + CU (4 partijen). Coalitieakkoord 50+ pagina's." }],
-          basiskennis: [{ onderwerp: "Niet 1 partij", uitleg: "NL kent geen 1-partij-meerderheid sinds 1800. Altijd coalities." }],
+          basiskennis: [{ onderwerp: "Niet 1 partij", uitleg: "Sinds 1918 heeft geen partij in NL in haar eentje een meerderheid gehaald. Altijd coalities." }],
           niveaus: { basis: "Samenwerkende partijen.", simpeler: "Coalitie = paar partijen die samen genoeg zetels hebben om kabinet te vormen.", nogSimpeler: "Samen" },
         },
       },
@@ -761,13 +761,13 @@ const steps = [
         q: "Vanaf welke leeftijd mag je **stemmen** in NL?",
         options: ["18 jaar", "16 jaar", "21 jaar", "25 jaar"],
         answer: 0,
-        wrongHints: [null, "Wel mag je vroeger andere dingen.", "Was vroeger zo.", "Te oud."],
+        wrongHints: [null, "In sommige andere landen is dat zo, in NL niet.", "Was vroeger zo.", "Te oud."],
         uitlegPad: {
           stappen: [{ titel: "Vanaf 18", tekst: "Actief kiesrecht (mogen stemmen) in NL = vanaf 18 jaar. Passief kiesrecht (gekozen worden) ook 18+. Geldt voor alle verkiezingen: Tweede Kamer, gemeenteraad, provincie, EU." }],
           woorden: [{ woord: "actief kiesrecht", uitleg: "Recht om zelf te stemmen. NL: 18+." }, { woord: "passief kiesrecht", uitleg: "Recht om gekozen te worden. NL: ook 18+." }],
-          theorie: "21 was de stemleeftijd tot 1972. Daarna verlaagd naar 18. Sommige landen verlaagden recent verder (Oostenrijk 16, Schotland 16 voor referendum). NL discussie hierover loopt.",
+          theorie: "21 was de stemleeftijd tot 1972. Daarna verlaagd naar 18. Sommige landen gingen verder omlaag (Oostenrijk 16, Schotland 16 voor referendum). NL discussie hierover loopt.",
           voorbeelden: [{ type: "praktijk", tekst: "Word je 18 op 14 maart? Verkiezingen op 15 maart → je mag stemmen." }],
-          basiskennis: [{ onderwerp: "Niet 21", uitleg: "21 was vroeger, niet meer. 16 is in NL niet algemeen kiesrecht (wel in sommige gemeenteraadverkiezingen-pilots)." }],
+          basiskennis: [{ onderwerp: "Niet 21", uitleg: "21 was vroeger, niet meer. 16 is in NL geen stemleeftijd; er wordt wel over gediscussieerd." }],
           niveaus: { basis: "18 jaar.", simpeler: "Je mag stemmen in NL vanaf je 18e verjaardag.", nogSimpeler: "18" },
         },
       },
