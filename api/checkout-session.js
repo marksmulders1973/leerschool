@@ -183,10 +183,15 @@ export default async function handler(req) {
       if (await db.heeftPartnerCode(userId)) {
         return json({ error: "Je hebt het Familie-pakket al, gratis via je partnercode. Je hoeft niets te betalen.", alActief: true }, 409);
       }
+      // 📅 Geldigheid op de factuur (Mark 1 okt 2026: "abonnement geldig van datum a tot b"). Zelfde rekensom
+      // als de webhook: start = later van nu / lancering (behalve proef) / einde van het lopende pakket.
+      const nlDatum = (ms) => new Date(ms).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric", timeZone: "Europe/Amsterdam" });
+      const geldigStart = Math.max(Date.now(), plan === "test1" ? 0 : FAMILIE_START, bestaand?.valid_until ? Date.parse(bestaand.valid_until) : 0);
+      const geldigTekst = p.dagen ? `${nlDatum(geldigStart)} t/m ${nlDatum(geldigStart + p.dagen * 86400e3 - 86400e3)}` : null;
       const session = await stripe("checkout/sessions", {
         mode: p.mode,
         line_items: [{ price: p.price(), quantity: 1 }],
-        success_url: `${SITE}/abonnement.html?betaald=1&plan=${plan}`,
+        success_url: `${SITE}/abonnement.html?betaald=1&plan=${plan}${geldigTekst ? `&geldig=${encodeURIComponent(geldigTekst)}` : ""}`,
         cancel_url: `${SITE}/abonnement.html?geannuleerd=1`,
         client_reference_id: userId,
         customer: bestaand?.stripe_customer_id || undefined,
@@ -200,10 +205,12 @@ export default async function handler(req) {
         allow_promotion_codes: true,
         // Factuur óók bij een eenmalige betaling (Mark-eis 28 aug 2026).
         invoice_creation: p.mode === "payment" ? { enabled: true, invoice_data: {
+          description: geldigTekst ? `Familie-pakket Leerkwartier, geldig van ${geldigTekst}.` : undefined,
+          custom_fields: geldigTekst ? [{ name: "Geldig", value: geldigTekst }] : undefined,
           // KOR (Mark 30 sep 2026): geen btw; dat staat op elke factuur, met voorwaarden-link.
           footer: "Btw vrijgesteld op grond van de kleineondernemersregeling (KOR). Leerkwartier · KvK 42176244 · Lijsterbeslaan 7, 4171 AS Herwijnen · 14 dagen bedenktijd, voorwaarden: leerkwartier.app/voorwaarden.html",
         } } : undefined,
-        metadata: { userId, plan },
+        metadata: { userId, plan, geldig: geldigTekst || "" },
         subscription_data: p.mode === "subscription" ? { metadata: { userId, plan } } : undefined,
       });
       return json({ url: session.url });

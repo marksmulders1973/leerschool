@@ -291,6 +291,8 @@
       var duur = proef ? "Je proef-Familie staat aan: 30 dagen."
         : vroeg ? "Tot 1 januari is alles nog gratis. Jouw 12 maanden Familie lopen daarna van 1 januari 2027 tot 1 januari 2028."
         : "Je Familie-pakket staat aan: 12 maanden, en het stopt vanzelf.";
+      var geldig = q.get("geldig");
+      if (geldig) duur = (vroeg ? "Tot 1 januari is alles nog gratis. " : "") + "Je Familie-pakket is geldig van " + geldig.replace(/[<>&]/g, "") + ", en stopt daarna vanzelf.";
       var kaart = document.createElement("div");
       kaart.setAttribute("role", "status");
       kaart.style.cssText = "max-width:560px;margin:18px auto;padding:22px 20px;border-radius:18px;border:2px solid #ffd54f;background:linear-gradient(135deg,rgba(255,213,79,.18),rgba(30,45,70,.85));color:#fff;text-align:center;box-shadow:0 12px 40px rgba(0,0,0,.35)";
