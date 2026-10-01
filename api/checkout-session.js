@@ -42,6 +42,7 @@ const STRIPE_ACTIVE = process.env.STRIPE_ACTIVE === "true";
 const PROEF_EURO = process.env.STRIPE_PROEF_EURO === "1";
 // 🐦 Vroege vogel (Mark 30 sep 2026): tot de lancering is Familie voor iedereen gratis. Wie vóór de lancering
 // afsluit, betaalt niet voor gratis maanden: de 12 maanden gaan pas in op FAMILIE_START. De €1-proef (test1) niet.
+const KOR_START = Date.parse(process.env.KOR_START || "2027-01-01T00:00:00+01:00");
 const FAMILIE_START = Date.parse(process.env.FAMILIE_START || "2027-01-01T00:00:00+01:00");
 const SITE = process.env.SITE_URL || "https://leerkwartier.app";
 const SEIZOEN_EIND = process.env.SEIZOENSPAS_EIND || "2027-07-31T21:59:59Z"; // t/m 31 juli (NL zomertijd)
@@ -207,8 +208,12 @@ export default async function handler(req) {
         invoice_creation: p.mode === "payment" ? { enabled: true, invoice_data: {
           description: geldigTekst ? `Familie-pakket Leerkwartier, geldig van ${geldigTekst}.` : undefined,
           custom_fields: geldigTekst ? [{ name: "Geldig", value: geldigTekst }] : undefined,
-          // KOR (Mark 30 sep 2026): geen btw; dat staat op elke factuur, met voorwaarden-link.
-          footer: "Btw vrijgesteld op grond van de kleineondernemersregeling (KOR). Leerkwartier · KvK 42176244 · Lijsterbeslaan 7, 4171 AS Herwijnen · 14 dagen bedenktijd, voorwaarden: leerkwartier.app/voorwaarden.html",
+          // Btw (correctie 1 okt 2026): de KOR gaat pas in op 1 jan 2027. Tot dan is Leerkwartier btw-plichtig
+          // (Q4-aangifte) en is de prijs inclusief 21% btw; daarna "btw vrijgesteld (KOR)".
+          footer: (Date.now() < KOR_START
+            ? "Prijs inclusief 21% btw. "
+            : "Btw vrijgesteld op grond van de kleineondernemersregeling (KOR). ")
+            + "Leerkwartier · KvK 42176244 · Lijsterbeslaan 7, 4171 AS Herwijnen · 14 dagen bedenktijd, voorwaarden: leerkwartier.app/voorwaarden.html",
         } } : undefined,
         metadata: { userId, plan, geldig: geldigTekst || "" },
         subscription_data: p.mode === "subscription" ? { metadata: { userId, plan } } : undefined,
