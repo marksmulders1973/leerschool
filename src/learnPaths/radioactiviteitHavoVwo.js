@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Atoomkern — protonen, neutronen, isotopen",
     explanation:
-      "**Atoomkern** = piepklein middenstuk van atoom (~10⁻¹⁵ m, 10 000× kleiner dan atoom zelf).\n\n**Bestanddelen**:\n• **Proton** (p): +1 lading, massa ≈ 1 u (1,67·10⁻²⁷ kg).\n• **Neutron** (n): geen lading, massa ≈ 1 u (iets zwaarder dan proton).\n• Elektronen draaien er omheen (−1 lading, m ≈ 1/1836 u).\n\n**Notatie**: ⁽^A_Z⁾X waar:\n• **Z = atoomnummer** = aantal protonen = bepaalt welk element. (H Z=1, He Z=2, ...)\n• **A = massagetal** = protonen + neutronen.\n• Aantal neutronen = A − Z.\n• Voorbeeld: ⁽²³⁵_₉₂⁾U = uranium, 92 protonen, 143 neutronen.\n\n**Isotopen** = atomen met **zelfde Z, verschillende A**. Dezelfde scheikundige eigenschappen, ander gewicht + soms stabiel/instabiel.\n• ¹²C (stabiel, 6p+6n), ¹³C (stabiel, 6p+7n), ¹⁴C (radioactief, 6p+8n).\n• ¹H (gewoon waterstof), ²H = deuterium (zwaar water), ³H = tritium (radioactief).\n\n**Stabiliteit**:\n• Lichte kernen: stabiel als ongeveer evenveel p als n.\n• Zware kernen (Z > 20): hebben **meer neutronen** dan protonen nodig — neutronen 'verdunnen' afstoting tussen protonen.\n• **Z > 83** (bismut): alle isotopen radioactief.\n\n**Eenheid massa**: atomaire massa-eenheid u = 1/12 van massa ¹²C = 1,66·10⁻²⁷ kg.\n• Eenheid energie in kernfysica: **elektronvolt eV** = 1,6·10⁻¹⁹ J. Vaak MeV = 10⁶ eV.\n• Einstein E = mc²: 1 u ≈ 931,5 MeV — handig voor bindingsenergie.",
+      "**Atoomkern** = piepklein middenstuk van atoom (~10⁻¹⁵ m, ~100 000× kleiner dan atoom zelf).\n\n**Bestanddelen**:\n• **Proton** (p): +1 lading, massa ≈ 1 u (1,67·10⁻²⁷ kg).\n• **Neutron** (n): geen lading, massa ≈ 1 u (iets zwaarder dan proton).\n• Elektronen draaien er omheen (−1 lading, m ≈ 1/1836 u).\n\n**Notatie**: ⁽^A_Z⁾X waar:\n• **Z = atoomnummer** = aantal protonen = bepaalt welk element. (H Z=1, He Z=2, ...)\n• **A = massagetal** = protonen + neutronen.\n• Aantal neutronen = A − Z.\n• Voorbeeld: ⁽²³⁵_₉₂⁾U = uranium, 92 protonen, 143 neutronen.\n\n**Isotopen** = atomen met **zelfde Z, verschillende A**. Dezelfde scheikundige eigenschappen, ander gewicht + soms stabiel/instabiel.\n• ¹²C (stabiel, 6p+6n), ¹³C (stabiel, 6p+7n), ¹⁴C (radioactief, 6p+8n).\n• ¹H (gewoon waterstof), ²H = deuterium (zwaar water), ³H = tritium (radioactief).\n\n**Stabiliteit**:\n• Lichte kernen: stabiel als ongeveer evenveel p als n.\n• Zware kernen (Z > 20): hebben **meer neutronen** dan protonen nodig — neutronen 'verdunnen' afstoting tussen protonen.\n• **Z > 83** (bismut): alle isotopen radioactief.\n\n**Eenheid massa**: atomaire massa-eenheid u = 1/12 van massa ¹²C = 1,66·10⁻²⁷ kg.\n• Eenheid energie in kernfysica: **elektronvolt eV** = 1,6·10⁻¹⁹ J. Vaak MeV = 10⁶ eV.\n• Einstein E = mc²: 1 u ≈ 931,5 MeV — handig voor bindingsenergie.",
     checks: [
       {
         q: "Uranium-238 ⁽²³⁸_₉₂⁾U bevat hoeveel **neutronen**?",
@@ -94,7 +94,7 @@ const steps = [
   {
     title: "Drie soorten straling — α / β / γ",
     explanation:
-      "**Radioactief verval**: instabiele kern wordt stabieler door **straling** uit te zenden.\n\n**α-straling (alfa)**:\n• Bestaat uit **helium-4 kernen**: 2 protonen + 2 neutronen (⁴He of α).\n• Z daalt met 2, A met 4.\n• Voorbeeld: ²³⁸U → ²³⁴Th + α.\n• **Snelheid** ~5% c. **Doordringend vermogen klein**: papier of paar cm lucht stopt α.\n• Binnen lichaam (ingeademd, gegeten): zeer gevaarlijk (radon-gas).\n\n**β-straling (bèta)**:\n• **β⁻**: kern stuurt een ELECTRON uit. Een neutron wordt proton: n → p + e⁻ + antineutrino.\n  - Z stijgt met 1, A blijft gelijk.\n  - Voorbeeld: ¹⁴C → ¹⁴N + e⁻.\n• **β⁺ (positron)** (zeldzamer, op VWO+): proton → neutron + e⁺ + neutrino.\n• **Snelheid** tot ~99% c. **Doordringend vermogen middel**: een paar mm aluminium stopt het.\n\n**γ-straling (gamma)**:\n• Geen materie maar **elektromagnetische golf** (heel hoge frequentie, hoge E-foton).\n• Z + A blijven gelijk — kern dumpt alleen overtollige energie.\n• Vaak NA α- of β-verval (kern komt in lagere energie-toestand).\n• **Doordringend vermogen groot**: dikke laag lood of beton nodig om te stoppen.\n\n**Vergelijkingstabel**:\n| | Wat | Z-effect | A-effect | Stopt door |\n|---|---|---|---|---|\n| α | He-kern | −2 | −4 | papier |\n| β⁻ | e⁻ uit kern | +1 | 0 | dun Al |\n| γ | foton | 0 | 0 | dik Pb |\n\n**Cito/CSE-vraag-types**:\n• Gegeven beginkern + soort verval → eindkern.\n• Vergelijking balanceren (Z en A behouden).\n• Welke straling stopt door welke barrière.",
+      "**Radioactief verval**: instabiele kern wordt stabieler door **straling** uit te zenden.\n\n**α-straling (alfa)**:\n• Bestaat uit **helium-4 kernen**: 2 protonen + 2 neutronen (⁴He of α).\n• Z daalt met 2, A met 4.\n• Voorbeeld: ²³⁸U → ²³⁴Th + α.\n• **Snelheid** ~5% c. **Doordringend vermogen klein**: papier of paar cm lucht stopt α.\n• Binnen lichaam (ingeademd, gegeten): zeer gevaarlijk (radon-gas).\n\n**β-straling (bèta)**:\n• **β⁻**: kern stuurt een ELEKTRON uit. Een neutron wordt proton: n → p + e⁻ + antineutrino.\n  - Z stijgt met 1, A blijft gelijk.\n  - Voorbeeld: ¹⁴C → ¹⁴N + e⁻.\n• **β⁺ (positron)** (zeldzamer, op VWO+): proton → neutron + e⁺ + neutrino.\n• **Snelheid** tot ~99% c. **Doordringend vermogen middel**: een paar mm aluminium stopt het.\n\n**γ-straling (gamma)**:\n• Geen materie maar **elektromagnetische golf** (heel hoge frequentie, hoge E-foton).\n• Z + A blijven gelijk — kern dumpt alleen overtollige energie.\n• Vaak NA α- of β-verval (kern komt in lagere energie-toestand).\n• **Doordringend vermogen groot**: dikke laag lood of beton nodig om te stoppen.\n\n**Vergelijkingstabel**:\n| | Wat | Z-effect | A-effect | Stopt door |\n|---|---|---|---|---|\n| α | He-kern | −2 | −4 | papier |\n| β⁻ | e⁻ uit kern | +1 | 0 | dun Al |\n| γ | foton | 0 | 0 | dik Pb |\n\n**Cito/CSE-vraag-types**:\n• Gegeven beginkern + soort verval → eindkern.\n• Vergelijking balanceren (Z en A behouden).\n• Welke straling stopt door welke barrière.",
     checks: [
       {
         q: "²²⁶Ra (Z=88) doet **α-verval**. Wat is de dochterkern?",
@@ -196,7 +196,7 @@ const steps = [
         q: "Een houtmonster bevat **25%** van het oorspronkelijke C-14 (t½ = 5730 j). Hoe **oud**?",
         options: ["~11 460 j", "~5 730 j", "~22 920 j", "~2 865 j"],
         answer: 0,
-        wrongHints: [null, "Niet — 50% over zou betekenen.", "Niet — te oud.", "Niet — te jong."],
+        wrongHints: [null, "Niet — dan zou er nog 50% over zijn.", "Niet — te oud.", "Niet — te jong."],
         uitlegPad: {
           stappen: [
             { titel: "25% = 2 halveringen", tekst: "100% → 50% (na 1× t½) → 25% (na 2× t½). Dus 2 × 5730 = **11 460 jaar**. Toepassing op archeologische vondsten (bv. veen-lijken, mummies)." },
@@ -226,7 +226,7 @@ const steps = [
           "Temperatuur"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — alleen het radioactieve deel telt.", "Niet — volume irrelevant.", "Niet — radioactief verval is OAFHANKELIJK van temperatuur (uniek!)."],
+        wrongHints: [null, "Niet — alleen het radioactieve deel telt.", "Niet — volume irrelevant.", "Niet — radioactief verval is ONAFHANKELIJK van temperatuur (uniek!)."],
         uitlegPad: {
           stappen: [
             { titel: "A = λ·N", tekst: "Hoe meer radioactieve kernen aanwezig, hoe meer per seconde vervallen → grotere A. Vervalconstante λ = ln(2)/t½ is een eigenschap van de isotoop." },
@@ -242,7 +242,7 @@ const steps = [
   {
     title: "Fissie + fusie + bindingsenergie",
     explanation:
-      "**Bindingsenergie E_b**: energie die nodig is om een kern uit elkaar te halen tot losse p + n. Per nucleon (E_b/A) heeft een kromme:\n• Klein bij waterstof.\n• **Maximum rond ijzer** (Fe-56) ≈ 8,8 MeV/nucleon.\n• Daalt langzaam voor zware kernen.\n\n**Gevolg**: energie wordt vrij wanneer:\n• **Lichte kernen samensmelten** (fusie) tot zwaardere → richting Fe.\n• **Zware kernen splijten** (fissie) in kleinere → ook richting Fe.\n\n**Massadefect**: stuk van een kern is altijd minder dan optelsom van losse p + n. Dat verschil Δm zit als energie 'verstopt' (E_b = Δm · c²).\n\n**Fissie** (splijten):\n• Zware kern (U-235, Pu-239) absorbeert neutron → splijt in 2 lichtere kernen + **2-3 neutronen** + ~200 MeV energie.\n• Voorbeeld: n + ²³⁵U → ¹⁴¹Ba + ⁹²Kr + 3n + energie.\n• Kettingreactie: 3 neutronen kunnen weer 3 splijtingen veroorzaken → exponentiële groei.\n\n**Fissie-toepassing**:\n• **Kerncentrale**: gecontroleerde kettingreactie. Regelstaven (cadmium/borium) absorberen neutronen → ketting in toom houden.\n• **Atoombom**: ongecontroleerde kettingreactie.\n• Restproduct: radioactief afval (lange t½, lastig).\n\n**Fusie** (samensmelten):\n• Lichte kernen + extreem hoge T (10⁷ K) → samensmelting → zwaardere kern + energie.\n• In zon: 4 ¹H → ⁴He + 2 e⁺ + 2 ν + energie (proton-proton-keten).\n• Op aarde: ²H + ³H → ⁴He + n + 17,6 MeV (D-T fusie, ITER-experiment).\n\n**Voordeel fusie**:\n• Brandstof overvloedig (deuterium uit zeewater).\n• Weinig radioactief afval (vooral kort-halverend).\n• Geen kettingreactie (kan niet 'op hol slaan').\n\n**Nadeel fusie**:\n• Extreem moeilijk: extreem hoge T + druk nodig.\n• Plasma-opsluiting (Tokamak, ITER) nog niet commercieel rendabel.\n\n**Einstein E = m·c²**: ook al verandert massa heel weinig — c² is enorm (9·10¹⁶ m²/s²) → energie aanzienlijk. 1 gram massa-verlies ≈ 9·10¹³ J ≈ energie 25 GWh.",
+      "**Bindingsenergie E_b**: energie die nodig is om een kern uit elkaar te halen tot losse p + n. Per nucleon (E_b/A) heeft een kromme:\n• Klein bij waterstof.\n• **Maximum rond ijzer** (Fe-56) ≈ 8,8 MeV/nucleon.\n• Daalt langzaam voor zware kernen.\n\n**Gevolg**: energie wordt vrij wanneer:\n• **Lichte kernen samensmelten** (fusie) tot zwaardere → richting Fe.\n• **Zware kernen splijten** (fissie) in kleinere → ook richting Fe.\n\n**Massadefect**: de massa van een kern is altijd kleiner dan de optelsom van de losse p + n. Dat verschil Δm zit als energie 'verstopt' (E_b = Δm · c²).\n\n**Fissie** (splijten):\n• Zware kern (U-235, Pu-239) absorbeert neutron → splijt in 2 lichtere kernen + **2-3 neutronen** + ~200 MeV energie.\n• Voorbeeld: n + ²³⁵U → ¹⁴¹Ba + ⁹²Kr + 3n + energie.\n• Kettingreactie: 3 neutronen kunnen weer 3 splijtingen veroorzaken → exponentiële groei.\n\n**Fissie-toepassing**:\n• **Kerncentrale**: gecontroleerde kettingreactie. Regelstaven (cadmium/borium) absorberen neutronen → ketting in toom houden.\n• **Atoombom**: ongecontroleerde kettingreactie.\n• Restproduct: radioactief afval (lange t½, lastig).\n\n**Fusie** (samensmelten):\n• Lichte kernen + extreem hoge T (10⁷ K) → samensmelting → zwaardere kern + energie.\n• In zon: 4 ¹H → ⁴He + 2 e⁺ + 2 ν + energie (proton-proton-keten).\n• Op aarde: ²H + ³H → ⁴He + n + 17,6 MeV (D-T fusie, ITER-experiment).\n\n**Voordeel fusie**:\n• Brandstof overvloedig (deuterium uit zeewater).\n• Weinig radioactief afval (vooral kort-halverend).\n• Geen kettingreactie (kan niet 'op hol slaan').\n\n**Nadeel fusie**:\n• Extreem moeilijk: extreem hoge T + druk nodig.\n• Plasma-opsluiting (Tokamak, ITER) nog niet commercieel rendabel.\n\n**Einstein E = m·c²**: ook al verandert massa heel weinig — c² is enorm (9·10¹⁶ m²/s²) → energie aanzienlijk. 1 gram massa-verlies ≈ 9·10¹³ J ≈ energie 25 GWh.",
     checks: [
       {
         q: "Bij **fissie** komt energie vrij omdat:",
@@ -256,7 +256,7 @@ const steps = [
         wrongHints: [null, "Niet — protonen worden niet extra gemaakt.", "Niet — T-stijging is gevolg, niet oorzaak.", "Niet — neutronen-overschot is bijproduct."],
         uitlegPad: {
           stappen: [
-            { titel: "E_b/A-piek = Fe", tekst: "Bij U-235 (zware kern, lager E_b/A) → splijten naar middelzware kernen (hoger E_b/A). Massadefect groter → energie vrij volgens E=mc². Per splijting ~200 MeV — 1 miljoen keer chemische reactie." },
+            { titel: "E_b/A-piek = Fe", tekst: "Bij U-235 (zware kern, lager E_b/A) → splijten naar middelzware kernen (hoger E_b/A). Massadefect groter → energie vrij volgens E=mc². Per splijting ~200 MeV — tientallen miljoenen keren zoveel als bij een chemische reactie." },
           ],
           niveaus: { basis: "Dichter bij Fe = stabieler = E vrij.", simpeler: "Splijtproducten zijn sterker gebonden → energie over.", nogSimpeler: "Bindingsenergie-winst" },
         },
@@ -267,8 +267,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — proton alleen heeft 0 E_b.", "Niet — U zit weg van piek (hoog A).", "Niet — He heeft hoge E_b, maar Fe meer."],
         uitlegPad: {
-          stappen: [{ titel: "Fe-piek ≈ 8,8 MeV/nucleon", tekst: "IJzer-56 zit op de top van de bindingsenergie-kromme. Daarom is fusie naar Fe in sterren (na koolstof, zuurstof) een 'doodlopende straat': zwaarder fuseren KOST energie. Daarom ontploft een ster in een supernova zodra Fe-kern groot wordt." }],
-          theorie: "Alle elementen zwaarder dan Fe (goud, uranium) ontstaan in supernova-explosies — niet in 'gewone' stervorming.",
+          stappen: [{ titel: "Fe-piek ≈ 8,8 MeV/nucleon", tekst: "IJzer-56 zit op de top van de bindingsenergie-kromme. Daarom is fusie naar Fe in sterren (na koolstof, zuurstof) een 'doodlopende straat': zwaarder fuseren KOST energie. Daarom ontploft een zware ster in een supernova zodra de Fe-kern te groot wordt." }],
+          theorie: "Alle elementen zwaarder dan Fe (goud, uranium) ontstaan vooral bij supernova-explosies en botsende neutronensterren — niet in 'gewone' kernfusie.",
           niveaus: { basis: "Fe-56.", simpeler: "IJzer is meest stabiel.", nogSimpeler: "Fe" },
         },
       },
@@ -278,7 +278,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — uranium = fissie op aarde.", "Niet — koolstof is in zwaardere sterren.", "Niet — zuurstof is fusie-product, niet brandstof."],
         uitlegPad: {
-          stappen: [{ titel: "p-p-keten", tekst: "4 ¹H → ⁴He + 2 e⁺ + 2 ν + ~26 MeV. Zon zet elke seconde ~4·10⁹ kg waterstof in helium om. Voldoende voor nog 5 miljard jaar." }],
+          stappen: [{ titel: "p-p-keten", tekst: "4 ¹H → ⁴He + 2 e⁺ + 2 ν + ~26 MeV. Zon zet elke seconde ~6·10¹¹ kg waterstof in helium om (en verliest daarbij ~4·10⁹ kg massa als energie). Voldoende voor nog 5 miljard jaar." }],
           theorie: "In zwaardere sterren (rode reuzen) lopen ook koolstof- en zuurstof-fusies → produceren zwaardere elementen tot Fe.",
           niveaus: { basis: "H → He fusie.", simpeler: "Waterstof smelt samen tot helium.", nogSimpeler: "H → He" },
         },
@@ -323,7 +323,7 @@ const steps = [
   {
     title: "Eindopdracht — toepassingen + stralingsdosis",
     explanation:
-      "**Equivalente dosis H** (Sv = sievert): biologische schade per kg weefsel, rekening houdend met **stralingstype**:\n• α: Q-factor 20 — 20× meer schade per joule.\n• β: Q-factor 1.\n• γ: Q-factor 1.\n• H = Q · D, met D = geabsorbeerde dosis (Gy = gray = J/kg).\n\n**Achtergrond-niveaus**:\n• Natuurlijke achtergrond NL: ~2 mSv/jaar (kosmische straling + radon + bodem).\n• Borstkas-röntgen: ~0,02 mSv (1% van jaardosis).\n• CT-scan: ~5-10 mSv.\n• Vlucht over Atlantische Oceaan: ~0,05 mSv (kosmische straling op hoogte).\n• Acute dosis (1 keer):\n  - 100 mSv: kans op kanker meetbaar verhoogd.\n  - 1 Sv: stralingsziekte.\n  - 5 Sv: 50% sterfte.\n\n**Beschermen**:\n• **Afstand**: dosis ~1/r². 2× verder = 4× minder.\n• **Tijd**: korter blijven = minder dosis (dosis = stralings-intensiteit × tijd).\n• **Afscherming**: papier voor α, Al voor β, dik lood/beton voor γ.\n\n**Toepassingen**:\n• Medisch: röntgenfoto (γ), CT, PET (positronen), bestraling tumor (gerichte γ), tracers (Tc-99m).\n• Industrie: niveau-meting tank, laskwaliteit-controle, sterilisatie medische instrumenten.\n• Datering: C-14 (archeologie), U-Pb (geologie miljard-jaren), K-Ar (lava).\n• Energie: kerncentrale (fissie), ITER-experiment (fusie).\n\n**VWO-extra**: stralings-werking op DNA → kanker / mutaties / acute effecten.",
+      "**Equivalente dosis H** (Sv = sievert): biologische schade per kg weefsel, rekening houdend met **stralingstype**:\n• α: Q-factor 20 — 20× meer schade per joule.\n• β: Q-factor 1.\n• γ: Q-factor 1.\n• H = Q · D, met D = geabsorbeerde dosis (Gy = gray = J/kg).\n\n**Achtergrond-niveaus**:\n• Natuurlijke achtergrond NL: ~2 mSv/jaar (kosmische straling + radon + bodem).\n• Borstkas-röntgen: ~0,02 mSv (1% van jaardosis).\n• CT-scan: ~5-10 mSv.\n• Vlucht over Atlantische Oceaan: ~0,05 mSv (kosmische straling op hoogte).\n• Acute dosis (1 keer):\n  - 100 mSv: kans op kanker meetbaar verhoogd.\n  - 1 Sv: stralingsziekte.\n  - 5 Sv: 50% sterfte.\n\n**Beschermen**:\n• **Afstand**: dosis ~1/r². 2× verder = 4× minder.\n• **Tijd**: korter blijven = minder dosis (dosis = stralings-intensiteit × tijd).\n• **Afscherming**: papier voor α, Al voor β, dik lood/beton voor γ.\n\n**Toepassingen**:\n• Medisch: röntgenfoto (röntgenstraling), CT, PET (positronen), bestraling tumor (gerichte γ), tracers (Tc-99m).\n• Industrie: niveau-meting tank, laskwaliteit-controle, sterilisatie medische instrumenten.\n• Datering: C-14 (archeologie), U-Pb (geologie miljard-jaren), K-Ar (lava).\n• Energie: kerncentrale (fissie), ITER-experiment (fusie).\n\n**VWO-extra**: stralings-werking op DNA → kanker / mutaties / acute effecten.",
     checks: [
       {
         q: "**Equivalente dosis** H = ?",
@@ -350,9 +350,9 @@ const steps = [
         q: "Welke isotoop heeft halveringstijd **van miljarden jaren** + wordt gebruikt voor leeftijds-bepaling rotsen?",
         options: ["U-238", "C-14", "I-131", "Tc-99m"],
         answer: 0,
-        wrongHints: [null, "C-14 wordt voor iets ouds maar veel jongers ingezet.", "Medische isotoop, niet voor rotsen.", "Medische isotoop, niet voor rotsen."],
+        wrongHints: [null, "C-14 gebruik je voor veel jongere vondsten (tot zo'n 50 000 jaar).", "Medische isotoop, niet voor rotsen.", "Medische isotoop, niet voor rotsen."],
         uitlegPad: {
-          stappen: [{ titel: "U-238 → Pb-206, t½=4,5 mld j", tekst: "Uranium-238 vervalt naar lood-206 met halveringstijd ~4,5 miljard jaar — ongeveer leeftijd aarde. Verhouding U/Pb in een rots → ouderdom. Klassieke methode voor oudste aardrotsen (4,4 mld j!)." }],
+          stappen: [{ titel: "U-238 → Pb-206, t½=4,5 mld j", tekst: "Uranium-238 vervalt naar lood-206 met halveringstijd ~4,5 miljard jaar — ongeveer leeftijd aarde. Verhouding U/Pb in een rots → ouderdom. Klassieke methode voor de oudste aardse mineralen (4,4 mld j!)." }],
           niveaus: { basis: "U-238 voor rotsdatering.", simpeler: "Lange halveringstijd → miljard-jaren bereik.", nogSimpeler: "U-238" },
         },
       },

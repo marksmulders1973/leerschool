@@ -45,7 +45,7 @@ for (let i = 0; i < 5; i++) {
 tientallen[0].uitlegPad = {
   stappen: [
     { titel: "Tientallen zijn groepjes van 10", tekst: "**Een tiental** is 10. **3 tientallen** is 10, 20, 30. Dus 30." },
-    { titel: "Eenheden zijn losse", tekst: "**Eenheden** zijn losse. 3 tientallen en 4 eenheden: 30 en 4 = **34**." },
+    { titel: "Eenheden zijn losse", tekst: "**Eenheden** zijn de losse. 3 tientallen en 4 eenheden: 30 en 4 = **34**." },
     { titel: "Zo schrijf je het", tekst: "Het eerste cijfer = tientallen. Het tweede cijfer = eenheden. **34** = 3 tientallen, 4 eenheden." },
   ],
   woorden: [{ woord: "tiental", uitleg: "Een groepje van 10." }, { woord: "eenheid", uitleg: "Eén losse." }],

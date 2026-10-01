@@ -33,7 +33,7 @@ const steps = [
   // ─── A. Rechthoekige driehoeken ────────────────────────────
   {
     title: "Wat is een rechthoekige driehoek?",
-    explanation: "Een **rechthoekige driehoek** is een driehoek met **één rechte hoek** (een hoek van 90°).\n\nEen rechte hoek herken je aan het **vierkantje** in de hoek (zie plaatje).\n\nDe andere twee hoeken samen zijn ook 90° (want alle hoeken samen zijn altijd 180°). Dus de twee niet-rechte hoeken zijn altijd **scherp** (kleiner dan 90°).\n\nVoorbeelden in het echt:\n• De hoek tussen vloer en muur\n• De hoek van een vierkant of rechthoek\n• Het gat tussen een ladder en de grond\n\nIn dit hoofdstuk werken we **alleen** met rechthoekige driehoeken — Pythagoras werkt niet bij andere driehoeken.",
+    explanation: "Een **rechthoekige driehoek** is een driehoek met **één rechte hoek** (een hoek van 90°).\n\nEen rechte hoek herken je aan het **vierkantje** in de hoek (zie plaatje).\n\nDe andere twee hoeken samen zijn ook 90° (want alle hoeken samen zijn altijd 180°). Dus de twee niet-rechte hoeken zijn altijd **scherp** (kleiner dan 90°).\n\nVoorbeelden in het echt:\n• De hoek tussen vloer en muur\n• De hoek van een vierkant of rechthoek\n• De hoek tussen een muur en de vloer\n\nIn dit hoofdstuk werken we **alleen** met rechthoekige driehoeken — Pythagoras werkt niet bij andere driehoeken.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 220,160 60,40" fill="rgba(0,200,83,0.15)" stroke="${COLORS.curve}" stroke-width="2.5"/>
 <rect x="60" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="2"/>
@@ -146,7 +146,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een rechthoekszijde is een van de twee zijden bij de rechte hoek. Die zijn samen kleiner dan de schuine zijde.",
+          "Een rechthoekszijde is een van de twee zijden bij de rechte hoek. Elk van die twee is korter dan de schuine zijde.",
           "Het maakt wél uit. Door de geometrie is de schuine zijde altijd de langste.",
           "Er is geen vaste 'korte zijde' in een rechthoekige driehoek.",
         ],
@@ -219,7 +219,7 @@ const steps = [
   },
   {
     title: "Waarom werkt het — visueel",
-    explanation: "Pythagoras klinkt vreemd: kwadraten van zijden? Maar visueel klopt het.\n\nTeken een vierkant met zijde **a** vast aan zijde a — oppervlakte **a²**.\nIdem voor zijde **b** — oppervlakte **b²**.\nIdem voor de schuine zijde **c** — oppervlakte **c²**.\n\nDe stelling zegt: de **oppervlakte van het grootste vierkant** is gelijk aan de **som van de andere twee**.\n\nVoor onze 3-4-5 driehoek:\n• Vierkant op zijde 3 → oppervlakte 9\n• Vierkant op zijde 4 → oppervlakte 16\n• Vierkant op zijde 5 → oppervlakte 25\n\nEn 9 + 16 = 25 ✓.\n\nDit is honderden jaren met meetkundige tekeningen bewezen. We hoeven het niet zelf te bewijzen — we **gebruiken** het.",
+    explanation: "Pythagoras klinkt vreemd: kwadraten van zijden? Maar visueel klopt het.\n\nTeken een vierkant met zijde **a** vast aan zijde a — oppervlakte **a²**.\nIdem voor zijde **b** — oppervlakte **b²**.\nIdem voor de schuine zijde **c** — oppervlakte **c²**.\n\nDe stelling zegt: de **oppervlakte van het grootste vierkant** is gelijk aan de **som van de andere twee**.\n\nVoor onze 3-4-5 driehoek:\n• Vierkant op zijde 3 → oppervlakte 9\n• Vierkant op zijde 4 → oppervlakte 16\n• Vierkant op zijde 5 → oppervlakte 25\n\nEn 9 + 16 = 25 ✓.\n\nDit is al meer dan 2000 jaar geleden met meetkundige tekeningen bewezen. We hoeven het niet zelf te bewijzen — we **gebruiken** het.",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="120,140 180,140 120,100" fill="rgba(0,200,83,0.20)" stroke="${COLORS.curve}" stroke-width="2"/>
 <rect x="120" y="122" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
@@ -249,7 +249,7 @@ const steps = [
   },
   {
     title: "Wanneer gebruik je Pythagoras?",
-    explanation: "Pythagoras is je gereedschap als:\n\n1. Je hebt een **rechthoekige** driehoek (eerst checken: zit er een rechte hoek?)\n2. Je weet **2 van de 3 zijden**\n3. Je wilt de **derde zijde** vinden\n\nAls deze drie kloppen, kun je Pythagoras toepassen: $a^2 + b^2 = c^2$.\n\nDrie scenarios:\n\n• **Beide rechthoekszijden bekend, schuine zijde zoeken**: vul a en b in, los c op.\n• **Schuine zijde + één rechthoekszijde bekend, andere rechthoekszijde zoeken**: omschrijven en oplossen.\n• **Geen rechte hoek**: Pythagoras werkt **niet**, gebruik andere methodes (later).\n\n**Tip bij het opschrijven**: zet altijd eerst de stelling neer (a² + b² = c²), vul daarna de getallen in. Voorkomt fouten.",
+    explanation: "Pythagoras is je gereedschap als:\n\n1. Je hebt een **rechthoekige** driehoek (eerst checken: zit er een rechte hoek?)\n2. Je weet **2 van de 3 zijden**\n3. Je wilt de **derde zijde** vinden\n\nAls deze drie kloppen, kun je Pythagoras toepassen: $a^2 + b^2 = c^2$.\n\nDrie scenario's:\n\n• **Beide rechthoekszijden bekend, schuine zijde zoeken**: vul a en b in, los c op.\n• **Schuine zijde + één rechthoekszijde bekend, andere rechthoekszijde zoeken**: omschrijven en oplossen.\n• **Geen rechte hoek**: Pythagoras werkt **niet**, gebruik andere methodes (later).\n\n**Tip bij het opschrijven**: zet altijd eerst de stelling neer (a² + b² = c²), vul daarna de getallen in. Voorkomt fouten.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">stappenplan</text>
 <rect x="40" y="42" width="220" height="2" fill="${COLORS.curve}" opacity="0.4"/>
@@ -497,8 +497,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Welke twee zijden ken je, en welke tegenover? Schuine zijde minus rechthoekszijde mag NIET zomaar afgetrokken — kwadrateer eerst.",
-          "Een hoogte kan niet groter zijn dan de ladder zelf — kwadrateer en trek af, niet andersom.",
+          "Welke twee zijden ken je, en welke tegenover? Je mag niet zomaar 10 − 6 doen — kwadrateer eerst.",
+          "Een hoogte kan niet groter zijn dan de ladder zelf. Je telde op — kwadrateer eerst en trek dan af.",
           "Dat is groter dan de ladder zelf — onmogelijk. Welke zijde is de schuine en welke kort?",
         ],
       },
@@ -553,15 +553,15 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt waarschijnlijk de zijden bij elkaar opgeteld zonder kwadrateren.",
-          "Dat is alleen 2,4² in een vorm — je vergeet de wortel + 7,2² er niet bij op te tellen.",
-          "Dat is een van de zijden, niet de schuine zijde — kwadrateer beide zijden op en trek dan de wortel.",
+          "Dat is alleen 2,4². Tel 7,2² erbij op en neem dan de wortel.",
+          "Je trok de zijden van elkaar af. Kwadrateer beide zijden, tel op en neem dan de wortel.",
         ],
       },
       { q: "a=3, b=4. c=?", options: ["5","7","12","25"], answer: 0, wrongHints: [null,"3+4 mag niet — Pythagoras kwadrateert eerst.","3×4 mag niet — denk a² + b² = c².","Dat is c², nog niet c — welke bewerking haal je nog?"] },
       { q: "Bij Pythagoras heet de **langste** zijde?", options: ["Hypotenusa (schuin)","Rechthoekszijde","Hoogte","Basis"], answer: 0, wrongHints: [null, "Dat zijn de korte twee.", "Niet de naam.", "Niet."] },
       { q: "Een rechthoekige driehoek a=6, b=8. Schuine zijde c?", options: ["10","14","48","2"], answer: 0, wrongHints: [null, "Niet — niet optellen.", "Niet.", "Niet."] },
       { q: "**Stelling** klinkt: a² + b² = ?", options: ["c²","c","a+b","a×b"], answer: 0, wrongHints: [null, "Niet — kwadraat.", "Niet.", "Niet."] },
-      { q: "Bij a=5, c=13, b=?", options: ["12","8","18","6"], answer: 0, wrongHints: [null, "Niet.", "Optellen, niet aftrekken.", "Niet."] },
+      { q: "Bij a=5, c=13, b=?", options: ["12","8","18","6"], answer: 0, wrongHints: [null, "Niet.", "Je telde op — hier moet je aftrekken (c² − a²).", "Niet."] },
     ],
   },
 ];

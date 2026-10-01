@@ -54,14 +54,14 @@ const steps = [
           "40 per 100",
           "40 keer iets",
           "40 + 100",
-          "40 ÷ 100 = 0,4",
+          "40 ÷ 10 = 4",
         ],
         answer: 0,
         wrongHints: [
           null,
           "% betekent niet 'keer'. Het is 'per honderd'.",
           "Niet '+'. Het is een verhouding: 40 per honderd.",
-          "Klopt eigenlijk wél (0,4 = 40/100), maar 'per honderd' is de meest letterlijke betekenis. Dus de eerste optie.",
+          "Procent betekent 'per honderd', niet 'per tien'. Waardoor moet je dus delen?",
         ],
       },
     ],
@@ -167,7 +167,7 @@ const steps = [
     ],
   },
   {
-    title: "Hoofdrekenen: trucjes voor netjes percentages",
+    title: "Hoofdrekenen: trucjes voor nette percentages",
     explanation: "Sommige percentages kun je **uit het hoofd** uitrekenen, zonder rekenmachine.\n\n**Trucs voor handig rekenen**:\n\n**5% van x** = ½ × 10% van x\n• 5% van 200 = ½ × 20 = **10**\n\n**15% van x** = 10% + 5%\n• 15% van 80 = 8 + 4 = **12**\n\n**30% van x** = 3 × 10%\n• 30% van 50 = 3 × 5 = **15**\n\n**90% van x** = 100% − 10%\n• 90% van 250 = 250 − 25 = **225**\n\n**12,5% van x** = ⅛ van x\n• 12,5% van 80 = 80 ÷ 8 = **10**\n\n**Praktijk**: je rekent dit soort sommen vaak in supermarkt, restaurant, bij korting. Met deze trucs ben je sneller dan met je telefoon.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="30" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">hoofdrekenen-trucs</text>
@@ -249,7 +249,7 @@ const steps = [
   },
   {
     title: "Voorbeelden uit het echte leven",
-    explanation: "Procenten kom je overal tegen. Drie typische situaties:\n\n**A — Examen**: 32 leerlingen doen een toets. 24 zijn geslaagd. Slagingspercentage?\n• 24 / 32 = 0,75\n• 0,75 × 100% = **75%** is geslaagd\n\n**B — Korting**: een spijkerbroek kost normaal €60, nu €45. Hoeveel korting?\n• Korting in euro: €60 − €45 = €15\n• Korting in %: 15 / 60 × 100% = **25%**\n\n**C — Prijsstijging**: een ijsje kost vroeger €1,50, nu €1,80. Hoeveel duurder?\n• Verhoging in euro: 1,80 − 1,50 = €0,30\n• Verhoging in %: 0,30 / 1,50 × 100% = **20%** duurder\n\n**Schema**:\n• Welk % is X van Y? → (X / Y) × 100%\n• Welk % is veranderd? → (verschil / origineel) × 100%\n\n**Tip**: bij **stijging/daling** altijd vergelijken met het **oorspronkelijke** getal.",
+    explanation: "Procenten kom je overal tegen. Drie typische situaties:\n\n**A — Examen**: 32 leerlingen doen een toets. 24 zijn geslaagd. Slagingspercentage?\n• 24 / 32 = 0,75\n• 0,75 × 100% = **75%** is geslaagd\n\n**B — Korting**: een spijkerbroek kost normaal €60, nu €45. Hoeveel korting?\n• Korting in euro: €60 − €45 = €15\n• Korting in %: 15 / 60 × 100% = **25%**\n\n**C — Prijsstijging**: een ijsje kostte vroeger €1,50, nu €1,80. Hoeveel duurder?\n• Verhoging in euro: 1,80 − 1,50 = €0,30\n• Verhoging in %: 0,30 / 1,50 × 100% = **20%** duurder\n\n**Schema**:\n• Welk % is X van Y? → (X / Y) × 100%\n• Welk % is veranderd? → (verschil / origineel) × 100%\n\n**Tip**: bij **stijging/daling** altijd vergelijken met het **oorspronkelijke** getal.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="55" y="30" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">A. examen</text>
 <text x="55" y="50" fill="${COLORS.text}" font-size="11" font-family="Arial">24 / 32 × 100% = </text>
@@ -309,7 +309,7 @@ const steps = [
   },
   {
     title: "Toename — andersom",
-    explanation: "Bij **toename** of **verhoging** doe je het omgekeerde: er komt iets bij.\n\n**Voorbeeld**: een investering groeit met 8%. Begin: €1000. Eindstand?\n\n**Methode 1**:\n• Toename: 8% van 1000 = €80\n• Nieuwe waarde: 1000 + 80 = **€1080**\n\n**Methode 2**: groei-factor.\n• Bij 8% toename betaal je 100% + 8% = **108%** van het origineel.\n• 1,08 × 1000 = **€1080**\n\n**Algemeen**: bij X% toename = factor **(100 + X) / 100**:\n• 5% toename → × 1,05\n• 10% toename → × 1,10\n• 25% toename → × 1,25\n• 100% toename → × 2 (verdubbeling)\n\n**Voorbeelden**:\n• €60 + 15% btw: 1,15 × 60 = **€69**\n• 250 inwoners + 12% groei: 1,12 × 250 = **280**\n• €40 + 5% rente: 1,05 × 40 = **€42**",
+    explanation: "Bij **toename** of **verhoging** doe je het omgekeerde: er komt iets bij.\n\n**Voorbeeld**: een investering groeit met 8%. Begin: €1000. Eindstand?\n\n**Methode 1**:\n• Toename: 8% van 1000 = €80\n• Nieuwe waarde: 1000 + 80 = **€1080**\n\n**Methode 2**: groei-factor.\n• Bij 8% toename heb je 100% + 8% = **108%** van het origineel.\n• 1,08 × 1000 = **€1080**\n\n**Algemeen**: bij X% toename = factor **(100 + X) / 100**:\n• 5% toename → × 1,05\n• 10% toename → × 1,10\n• 25% toename → × 1,25\n• 100% toename → × 2 (verdubbeling)\n\n**Voorbeelden**:\n• €60 + 15% btw: 1,15 × 60 = **€69**\n• 250 inwoners + 12% groei: 1,12 × 250 = **280**\n• €40 + 5% rente: 1,05 × 40 = **€42**",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="36" fill="rgba(0,200,83,0.15)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="44" text-anchor="middle" fill="${COLORS.text}" font-size="14" font-family="Arial">€1000 + 8% groei</text>
@@ -329,7 +329,7 @@ const steps = [
           null,
           "Bij +25% wordt het bedrag hoger, niet lager. Welke factor hoort bij + 25%?",
           "Dat is alleen het btw-bedrag, niet het totaal. Wat moet je daar nog bij optellen?",
-          "Reken nog eens met + 25% in plaats van + 30%. Welke factor hoort daarbij?",
+          "Je telde €25 op in plaats van 25%. Hoeveel euro is 25% van €80?",
         ],
       },
     ],
@@ -338,7 +338,7 @@ const steps = [
   // ─── E. Eindopdrachten ────────────────────────────
   {
     title: "Eindopdracht: gemengde procentvragen",
-    explanation: "**Drie typische vraagstukken** — alle technieken samen:\n\n**A** — Een trui kost €60. Vandaag 20% korting. Wat betaal je?\n• Kortingsfactor: 100% − 20% = 80%\n• Nieuwe prijs: 0,80 × 60 = **€48**\n\n**B** — Vorig jaar 240 leerlingen, dit jaar 300. Hoeveel procent meer?\n• Stijging: 300 − 240 = 60\n• Percentage: 60 / 240 × 100% = **25%** meer\n\n**C** — Een telefoon kost €450 inclusief 21% btw. Wat is de prijs zonder btw?\n• Met btw is 121% van origineel\n• Origineel = 450 / 1,21 = **€371,90** (afgerond)\n\n**Overzicht formules**:\n\n| Vraag | Formule |\n|-------|---------|\n| X% van G | (X/100) × G |\n| Welk % is X van Y? | (X/Y) × 100% |\n| X% korting | × (100−X)/100 |\n| X% toename | × (100+X)/100 |\n| Origineel uit eindprijs | eindprijs / factor |\n\nMet deze 5 formules dek je 99% van alle procent-vragen.",
+    explanation: "**Drie typische vraagstukken** — alle technieken samen:\n\n**A** — Een trui kost €60. Vandaag 20% korting. Wat betaal je?\n• Kortingsfactor: 100% − 20% = 80%\n• Nieuwe prijs: 0,80 × 60 = **€48**\n\n**B** — Vorig jaar 240 leerlingen, dit jaar 300. Hoeveel procent meer?\n• Stijging: 300 − 240 = 60\n• Percentage: 60 / 240 × 100% = **25%** meer\n\n**C** — Een telefoon kost €450 inclusief 21% btw. Wat is de prijs zonder btw?\n• De prijs met btw is 121% van de prijs zonder btw\n• Origineel = 450 / 1,21 = **€371,90** (afgerond)\n\n**Overzicht formules**:\n\n| Vraag | Formule |\n|-------|---------|\n| X% van G | (X/100) × G |\n| Welk % is X van Y? | (X/Y) × 100% |\n| X% korting | × (100−X)/100 |\n| X% toename | × (100+X)/100 |\n| Origineel uit eindprijs | eindprijs / factor |\n\nMet deze 5 formules dek je 99% van alle procent-vragen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="170" fill="rgba(0,200,83,0.06)" stroke="${COLORS.curve}" stroke-width="1.5" rx="6"/>
 <line x1="40" y1="42" x2="260" y2="42" stroke="${COLORS.curve}" stroke-width="1"/>
@@ -413,7 +413,7 @@ const steps = [
   // ─── F. Examenstijl — VMBO-GT CSE ─────────────────────────
   {
     title: "CSE-vraag — huizenprijs in 4 jaar",
-    explanation: "Klassieke CSE-context: een **prijsstijging** of **-daling** uitrekenen, vaak met **indexcijfer**.\n\n> **In 2020 kostte een gemiddeld huis €280.000.** In 2024 is dat **€420.000**.\n\n**Aanpak in 3 stappen:**\n1. **Absolute stijging** = nieuw − oud = 420.000 − 280.000 = **€140.000**.\n2. **Procentuele stijging** = (stijging / oude waarde) × 100% = (140.000 / 280.000) × 100% = 0,5 × 100 = **50%**.\n3. **Indexcijfer** met 2020 = 100: indexcijfer 2024 = (nieuw / oud) × 100 = (420.000 / 280.000) × 100 = **150**.\n\n**Examen-tips**:\n• Procentuele verandering: deel altijd door de **oude** waarde.\n• Indexcijfer: het basisjaar krijgt 100. Andere jaren tov dat basisjaar.\n• Een index van 150 betekent: 50% gestegen sinds basisjaar.",
+    explanation: "Klassieke CSE-context: een **prijsstijging** of **-daling** uitrekenen, vaak met **indexcijfer**.\n\n> **In 2020 kostte een gemiddeld huis €280.000.** In 2024 is dat **€420.000**.\n\n**Aanpak in 3 stappen:**\n1. **Absolute stijging** = nieuw − oud = 420.000 − 280.000 = **€140.000**.\n2. **Procentuele stijging** = (stijging / oude waarde) × 100% = (140.000 / 280.000) × 100% = 0,5 × 100 = **50%**.\n3. **Indexcijfer** met 2020 = 100: indexcijfer 2024 = (nieuw / oud) × 100 = (420.000 / 280.000) × 100 = **150**.\n\n**Examen-tips**:\n• Procentuele verandering: deel altijd door de **oude** waarde.\n• Indexcijfer: het basisjaar krijgt 100. Andere jaren vergelijk je met dat basisjaar.\n• Een index van 150 betekent: 50% gestegen sinds basisjaar.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="40" y1="170" x2="280" y2="170" stroke="#8899aa" stroke-width="1.2"/>
 <line x1="40" y1="20" x2="40" y2="170" stroke="#8899aa" stroke-width="1.2"/>
@@ -465,9 +465,9 @@ const steps = [
       { q: "Stijging van 50 naar 75 = welk percentage?", options: ["50%","25%","20%","75%"], answer: 0, wrongHints: [null, "Dat is de toename in getallen, niet in procenten.", "Vergelijk de toename met waar je begon (50).", "Dat is het eindgetal, niet de stijging."] },
       { q: "**BTW** in NL standaard?", options: ["21%","9%","19%","25%"], answer: 0, wrongHints: [null, "Dat is het lage tarief (o.a. eten).", "Dat tarief bestaat hier niet.", "Net niet — geen Nederlands tarief."] },
       { q: "0,75 is welk percentage?", options: ["75%","7,5%","0,75%","750%"], answer: 0, wrongHints: [null, "Te laag.", "Te laag.", "Te hoog."] },
-      { q: "Welk percentage is **½**?", options: ["50%","25%","20%","100%"], answer: 0, wrongHints: [null, "Dat is ¼.", "Dat is ⅕.", "Dat is hele."] },
+      { q: "Welk percentage is **½**?", options: ["50%","25%","20%","100%"], answer: 0, wrongHints: [null, "Dat is ¼.", "Dat is ⅕.", "Dat is het geheel."] },
       { q: "Inflatie 5% per jaar. €100 wordt na 1 jaar?", options: ["€105","€95","€150","€100"], answer: 0, wrongHints: [null, "Niet — inflatie = stijging.", "Te veel — alleen 5%.", "Niet — er is iets veranderd."] },
-      { q: "20% van een getal is 60. Wat is het hele getal?", options: ["300","12","80","30"], answer: 0, wrongHints: [null, "Niet — vermenigvuldigen ipv delen.", "Niet.", "Niet."] },
+      { q: "20% van een getal is 60. Wat is het hele getal?", options: ["300","12","80","30"], answer: 0, wrongHints: [null, "Je deelde 60 door 5. Moet het hele getal groter of kleiner zijn dan 60?", "Niet.", "Niet."] },
       { q: "Auto kost €20.000 + 10% btw. Totaal?", options: ["€22.000","€20.100","€20.000","€18.000"], answer: 0, wrongHints: [null, "Niet — 10% niet 0,1%.", "Niet — btw moet erbij.", "Niet — btw komt erbij, niet eraf."] },
     ],
   },
@@ -489,7 +489,7 @@ const procenten = {
     { id: "procenten-po", title: "Procenten (basis)", niveau: "po-1F" },
     { id: "breuken", title: "Breuken", niveau: "vmbo-2F" },
   ],
-  intro: "Procenten kom je overal tegen — in de winkel, op je rekening, in nieuwsbericht. Hier leer je vanaf de basis: wat % betekent, omzettingen naar kommagetal en breuk, percentage van een getal, andersom, korting, toename en BTW.",
+  intro: "Procenten kom je overal tegen — in de winkel, op je rekening, in het nieuws. Hier leer je vanaf de basis: wat % betekent, omzettingen naar kommagetal en breuk, percentage van een getal, andersom, korting, toename en BTW.",
   triggerKeywords: ["procent", "procenten", "korting", "btw", "toename", "stijging", "afname"],
   chapters,
   steps,

@@ -151,7 +151,7 @@ const steps = [
   // ─── B. Haakjes wegwerken ────────────────────────────
   {
     title: "a(b + c) = ab + ac",
-    explanation: "**Haakjes wegwerken** = een uitdrukking met haakjes ompschrijven naar één zonder haakjes.\n\n**Hoofdregel**: $a \\cdot (b + c) = a \\cdot b + a \\cdot c$\n\nIn woorden: vermenigvuldig **elk** ding binnen de haakjes met wat ervoor staat.\n\n**Voorbeelden**:\n• 3(x + 5) = 3·x + 3·5 = **3x + 15**\n• 4(2y − 3) = 4·2y − 4·3 = **8y − 12**\n• 5(a + b) = **5a + 5b**\n• x(x + 4) = x·x + x·4 = **x² + 4x**\n\n**Tip**: vergeet **niet** de tweede vermenigvuldiging. Veel leerlingen schrijven 3(x + 5) = 3x + 5 (fout). Je moet 3 ook keer 5 doen!",
+    explanation: "**Haakjes wegwerken** = een uitdrukking met haakjes omschrijven naar één zonder haakjes.\n\n**Hoofdregel**: $a \\cdot (b + c) = a \\cdot b + a \\cdot c$\n\nIn woorden: vermenigvuldig **elk** ding binnen de haakjes met wat ervoor staat.\n\n**Voorbeelden**:\n• 3(x + 5) = 3·x + 3·5 = **3x + 15**\n• 4(2y − 3) = 4·2y − 4·3 = **8y − 12**\n• 5(a + b) = **5a + 5b**\n• x(x + 4) = x·x + x·4 = **x² + 4x**\n\n**Tip**: vergeet **niet** de tweede vermenigvuldiging. Veel leerlingen schrijven 3(x + 5) = 3x + 5 (fout). Je moet 3 ook keer 5 doen!",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="40" width="220" height="50" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="8"/>
 <text x="80" y="73" text-anchor="middle" fill="${COLORS.text}" font-size="20" font-family="Arial">3</text>
@@ -322,7 +322,7 @@ const steps = [
   },
   {
     title: "(a − b)² — met een min",
-    explanation: "Bij **(a − b)²** verandert er weinig — alleen de middelste term wordt **min**:\n\n$(a - b)^2 = a^2 - 2ab + b^2$\n\nWaarom blijft b² positief? Omdat (−b)² = b² (kwadraat van een negatief is positief, zie H5).\n\n**Voorbeelden**:\n• (x − 3)² = x² − 6x + 9\n• (y − 5)² = y² − 10y + 25\n• (2x − 1)² = 4x² − 4x + 1\n\n**Schema** voor zowel + als −:\n• Eerste term² (a²)\n• ± middelste term (2ab) — teken volgt de ± in de haakjes\n• Tweede term² (b²) — altijd plus\n\n**Tip**: schrijf altijd alle drie de termen op. Vergeet de middelste niet.",
+    explanation: "Bij **(a − b)²** verandert er weinig — alleen de middelste term wordt **min**:\n\n$(a - b)^2 = a^2 - 2ab + b^2$\n\nWaarom blijft b² positief? Omdat (−b)² = b² (het kwadraat van een negatief getal is positief).\n\n**Voorbeelden**:\n• (x − 3)² = x² − 6x + 9\n• (y − 5)² = y² − 10y + 25\n• (2x − 1)² = 4x² − 4x + 1\n\n**Schema** voor zowel + als −:\n• Eerste term² (a²)\n• ± middelste term (2ab) — teken volgt de ± in de haakjes\n• Tweede term² (b²) — altijd plus\n\n**Tip**: schrijf altijd alle drie de termen op. Vergeet de middelste niet.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a − b)² = a² − 2ab + b²</text>
@@ -344,8 +344,8 @@ const steps = [
         wrongHints: [
           null,
           "Middelste term vergeten — de formule (a−b)² geeft drie termen. Hoe bereken je de middelste?",
-          "Dat zou (x²)·(−5) of zoiets zijn. (x−5)² geeft een uitdrukking met **drie** termen.",
-          "Het eindterm b² is altijd positief, ook als de oorspronkelijke b negatief was. (−5)² = +25.",
+          "Dat is (x+5)(x−5). Maar (x−5)² = (x−5)(x−5) geeft **drie** termen.",
+          "De eindterm b² is altijd positief, ook als de oorspronkelijke b negatief was. (−5)² = +25.",
         ],
         uitlegPad: {
           stappen: [{ titel: "(a−b)²-formule", tekst: "(x−5)² = x² − 2·x·5 + 5² = x² − 10x + 25. b² blijft positief (kwadraat)." }],
@@ -360,7 +360,7 @@ const steps = [
   },
   {
     title: "(a + b)(a − b) = a² − b²",
-    explanation: "Een derde merkwaardig product: **plus en min combineren**.\n\n$(a + b)(a - b) = a^2 - b^2$\n\nDit is verrassend simpel — alleen twee termen, geen middelste term.\n\n**Waarom?** Werk uit:\n(a + b)(a − b) = a·a + a·(−b) + b·a + b·(−b)\n               = a² − ab + ba − b²\n               = a² − b² (de middelste termen heffen elkaar op!)\n\n**Voorbeelden**:\n• (x + 3)(x − 3) = x² − 9\n• (y + 7)(y − 7) = y² − 49\n• (2x + 5)(2x − 5) = 4x² − 25\n\nDeze regel is heel handig — soms kun je 'm omkeerd gebruiken om snel een uitdrukking te factoriseren:\n\n• x² − 16 = (x + 4)(x − 4)\n• x² − 100 = (x + 10)(x − 10)\n\nDat heet **factoriseren met merkwaardige producten**.",
+    explanation: "Een derde merkwaardig product: **plus en min combineren**.\n\n$(a + b)(a - b) = a^2 - b^2$\n\nDit is verrassend simpel — alleen twee termen, geen middelste term.\n\n**Waarom?** Werk uit:\n(a + b)(a − b) = a·a + a·(−b) + b·a + b·(−b)\n               = a² − ab + ba − b²\n               = a² − b² (de middelste termen heffen elkaar op!)\n\n**Voorbeelden**:\n• (x + 3)(x − 3) = x² − 9\n• (y + 7)(y − 7) = y² − 49\n• (2x + 5)(2x − 5) = 4x² − 25\n\nDeze regel is heel handig — soms kun je 'm omgekeerd gebruiken om snel een uitdrukking te factoriseren:\n\n• x² − 16 = (x + 4)(x − 4)\n• x² − 100 = (x + 10)(x − 10)\n\nDat heet **factoriseren met merkwaardige producten**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="20" width="220" height="40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2" rx="6"/>
 <text x="150" y="47" text-anchor="middle" fill="${COLORS.text}" font-size="18" font-family="Arial">(a + b)(a − b) = a² − b²</text>
@@ -488,7 +488,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt de exponenten opgeteld — dat is de regel voor gewoon vermenigvuldigen. Maar dit is macht ván macht. Welke bewerking hoort daarbij?",
-          "Dat getal is een kwadraat-resultaat voor de exponent zelf, niet de regel die je nodig hebt. Hoe combineer je twee exponenten bij macht van macht?",
+          "Je hebt 3⁴ = 81 uitgerekend — dat is niet de regel die je nodig hebt. Hoe combineer je twee exponenten bij macht van macht?",
           "De basis blijft x — de nieuwe exponent bereken je door de twee exponenten te combineren. Welke bewerking geeft de juiste exponent?",
         ],
         uitlegPad: {
@@ -529,7 +529,7 @@ const steps = [
         wrongHints: [
           null,
           "Werk eerst de vermenigvuldiging 3x · 2x volledig uit (coëfficiënten én exponenten), voeg daarna soortgelijke termen samen.",
-          "x² + x² = x², niet x⁴. Bij optellen blijft de macht gelijk (alleen coëfficiënten optellen).",
+          "x² + x² = 2x², niet x⁴. Bij optellen blijft de macht gelijk (alleen coëfficiënten optellen).",
           "De vermenigvuldiging 3x · 2x geeft een andere x²-term dan je denkt — herbereken die stap apart.",
         ],
         uitlegPad: {
@@ -540,7 +540,7 @@ const steps = [
           woorden: [{ woord: "volgorde", uitleg: "Eerst vermenigvuldigingen, dan optellen (zoals normaal in rekenen)." }],
           theorie: "Volgorde: vermenigvuldigingen vóór optellingen. 3x·2x = 6x². Plus 4x² = 10x².",
           voorbeelden: [{ type: "combineren", tekst: "4x² + 3x·2x. Eerst 3x·2x=6x². Dan 4x²+6x²=10x²." }],
-          basiskennis: [{ onderwerp: "x²+x²=2x²", uitleg: "Bij optellen exponent gelijk blijft. 4x²+6x²=10x², niet 10x⁴." }],
+          basiskennis: [{ onderwerp: "x²+x²=2x²", uitleg: "Bij optellen blijft de exponent gelijk. 4x²+6x²=10x², niet 10x⁴." }],
           niveaus: { basis: "Eerst ×, dan +. 10x².", simpeler: "Stap 1: 3x·2x = 6x² (coëfficiënten ×, exponenten +). Stap 2: 4x²+6x²=10x².", nogSimpeler: "10x²" },
         },
       },

@@ -23,7 +23,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is een redactiesom?",
-    explanation: "Een **redactiesom** is een rekensom in een **verhaal**. Je moet eerst lezen wat er gevraagd wordt, en dan zelf bedenken welke som je moet maken.\n\n**Voorbeeld**:\n*'Lisa heeft 24 stickers. Ze geeft er 8 weg. Hoeveel houdt ze over?'*\n\nDit is geen 'kale som' (24 − 8). Je moet eerst lezen, daarna de som maken.\n\n**Waarom moeilijker dan kale sommen?**\n• Je moet de **vraag begrijpen**.\n• Je moet zelf **kiezen welke bewerking** *(+, −, ×, of ÷)*.\n• Vaak zijn er **extra getallen** die niet relevant zijn (Toets-strikgetallen).\n• Soms zijn er **meerdere stappen** nodig.\n\n**Toets-vraagvorm — 4 standaard-typen**:\n1. **Optellen**: 'samen', 'totaal', 'in totaal'.\n2. **Aftrekken**: 'verschil', 'meer dan', 'over', 'rest'.\n3. **Vermenigvuldigen**: 'per', 'elk', 'iedereen krijgt'.\n4. **Delen**: 'gelijk verdeeld', 'hoeveel ieder', 'in groepen van'.\n\n**Belangrijk**:\nLezen = **de helft van het werk**. Als je vraag verkeerd begrijpt, gaat alles fout.",
+    explanation: "Een **redactiesom** is een rekensom in een **verhaal**. Je moet eerst lezen wat er gevraagd wordt, en dan zelf bedenken welke som je moet maken.\n\n**Voorbeeld**:\n*'Lisa heeft 24 stickers. Ze geeft er 8 weg. Hoeveel houdt ze over?'*\n\nDit is geen 'kale som' (24 − 8). Je moet eerst lezen, daarna de som maken.\n\n**Waarom moeilijker dan kale sommen?**\n• Je moet de **vraag begrijpen**.\n• Je moet zelf **kiezen welke bewerking** *(+, −, ×, of ÷)*.\n• Vaak zijn er **extra getallen** die niet relevant zijn (Toets-strikgetallen).\n• Soms zijn er **meerdere stappen** nodig.\n\n**Toets-vraagvorm — 4 standaard-typen**:\n1. **Optellen**: 'samen', 'totaal', 'in totaal'.\n2. **Aftrekken**: 'verschil', 'meer dan', 'over', 'rest'.\n3. **Vermenigvuldigen**: 'per', 'elk', 'iedereen krijgt'.\n4. **Delen**: 'gelijk verdeeld', 'hoeveel ieder', 'in groepen van'.\n\n**Belangrijk**:\nLezen = **de helft van het werk**. Als je de vraag verkeerd begrijpt, gaat alles fout.",
     checks: [
       {
         q: "Welk woord zegt vaak: **vermenigvuldigen**?",
@@ -90,7 +90,7 @@ const steps = [
           ],
           theorie: "Toets-tip: bij verhaaltjes-sommen ALTIJD vragen: 'Welke info heb ik echt nodig?' Schrap of negeer wat irrelevant is. De toets test bewust met afleiders.",
           voorbeelden: [
-            { type: "stap", tekst: "'Anna heeft 5 € + 3 broers en ze koopt iets van €2.' Antwoord = €5−€2=€3. 'Broers' is afleider." },
+            { type: "stap", tekst: "'Anna heeft €5 en 3 broers. Ze koopt iets van €2.' Antwoord = €5−€2=€3. 'Broers' is afleider." },
             { type: "stap", tekst: "'Trein vertrekt om 8:15 en heeft 6 wagons. Aankomst om 9:30.' Reistijd vraag = 1u15min. 'Wagons' is afleider." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Niet alle gegeven cijfers gebruiken — alleen wat de vraag écht nodig heeft." }],
@@ -150,9 +150,9 @@ const steps = [
       },
       {
         q: "*'Sven loopt 8 dagen 4 km per dag. Hoeveel **totaal**?'*",
-        options: ["32 km","12 km","4 km","32"],
+        options: ["32 km","12 km","4 km","36 km"],
         answer: 0,
-        wrongHints: [null,"Niet optellen — 'per dag' = vermenigvuldigen.","Veel te weinig.","Vergeet de eenheid niet."],
+        wrongHints: [null,"Niet optellen — 'per dag' = vermenigvuldigen.","Veel te weinig.","Reken nog eens: 8 × 4."],
       },
       {
         q: "*'Een klas spaart € 96 voor 6 kinderen. Hoeveel **per kind**?'*",
@@ -180,10 +180,10 @@ const steps = [
         wrongHints: [null,"Dat is wat ze betalen (12 × €14,50), niet wat er over is.","Dat is de prijs per boek, niet het restant.","Niets afgetrokken — €200 is het startbedrag."],
       },
       {
-        q: "*'30 leerlingen verdelen € 90 evenwichtig. Iedereen krijgt 1 ijsje van € 1,50. Hoeveel **over per kind**?'*",
+        q: "*'30 leerlingen verdelen € 90 eerlijk. Iedereen krijgt 1 ijsje van € 1,50. Hoeveel **over per kind**?'*",
         options: ["€ 1,50","€ 3","€ 0","€ 4,50"],
         answer: 0,
-        wrongHints: [null,"Te veel — eerst per kind: €90 ÷ 30 = €3. Dan €3 − €1,50.","Niet 0 — er blijft wat over per kind.","Klopt niet — dat is per-kind-totaal vóór ijsje, niet 'over'."],
+        wrongHints: [null,"Te veel — eerst per kind: €90 ÷ 30 = €3. Dan €3 − €1,50.","Niet 0 — er blijft wat over per kind.","Je telde op — het ijsje kost geld, dus trek je af."],
       },
     ],
   },
@@ -211,10 +211,10 @@ const steps = [
         wrongHints: [null,"Te weinig — vergeet vrachtwagen-gewicht niet.","Klopt niet — vergeet vrachtwagen.","Veel te veel."],
       },
       {
-        q: "*'Drie vriendinnen verdelen € 75 evenwichtig. Daarna koopt iedereen iets van € 12. **Hoeveel ieder over?'*",
+        q: "*'Drie vriendinnen verdelen € 75 eerlijk. Daarna koopt iedereen iets van € 12. **Hoeveel ieder over**?'*",
         options: ["€ 13","€ 25","€ 12","€ 39"],
         answer: 0,
-        wrongHints: [null,"Te veel — dat is per kind vóór de koop.","Te veel — controleer 25 − 12.","Veel te veel."],
+        wrongHints: [null,"Te veel — dat is per kind vóór de koop.","Bijna — controleer 25 − 12.","Veel te veel."],
       },
       {
         q: "*'Een trein vertrekt 09:35 en rijdt 2 uur 50 min. **Aankomst**?'*",
@@ -300,7 +300,7 @@ const steps = [
         q: "*'In groep 8 zitten **27 leerlingen**. **2/3** gaat naar VMBO, de rest naar HAVO/VWO. Hoeveel naar **HAVO/VWO**?'*",
         options: ["9","18","13","6"],
         answer: 0,
-        wrongHints: [null, "Dat is naar VMBO (2/3), niet de rest.", "Niet deelbaar — controleer 27 ÷ 3.", "Te weinig — controleer met 27 − 18."],
+        wrongHints: [null, "Dat is naar VMBO (2/3), niet de rest.", "Klopt niet — controleer 27 ÷ 3.", "Te weinig — controleer met 27 − 18."],
         uitlegPad: {
           stappen: [
             { titel: "Wie zijn 'de rest'?", tekst: "2/3 naar VMBO → **1/3** naar HAVO/VWO. (Want 2/3 + 1/3 = 3/3 = alles.)" },
@@ -313,26 +313,26 @@ const steps = [
           ],
           theorie: "Bij 'X-deel doet A, rest doet B' → reken (1 − X-deel) voor de rest. Of: trek 'A-aantal' af van totaal.",
           voorbeelden: [{ type: "stap", tekst: "30 kinderen, 3/5 buiten spelen → 2/5 binnen = 12 kinderen." }],
-          basiskennis: [{ onderwerp: "Schooladvies-vraag", uitleg: "toetsstof. Doorstroomtoets gebruikt dit soort verdelingen vaak." }],
+          basiskennis: [{ onderwerp: "Schooladvies-vraag", uitleg: "Toetsstof: de Doorstroomtoets gebruikt dit soort verdelingen vaak." }],
           niveaus: { basis: "1/3 van 27 = 9.", simpeler: "Rest = 1/3. 27 ÷ 3 = 9 naar HAVO/VWO.", nogSimpeler: "9" },
         },
       },
       { q: "Lisa heeft 36 stickers. Ze geeft 1/4 weg. Hoeveel houdt ze over?", options: ["27","9","32","12"], answer: 0, wrongHints: [null, "Dat is wat ze WEG geeft.", "Te veel — niet alleen 4 weg.", "Niet — 1/4 is geen 12."] },
-      { q: "Een rugzak kost €40. Met 15% korting kost hij?", options: ["€34","€25","€55","€38"], answer: 0, wrongHints: [null, "Te laag — 25% korting niet 15%.", "Niet — korting trekt af, telt niet op.", "Bijna — reken korting nogmaals."] },
+      { q: "Een rugzak kost €40. Met 15% korting kost hij?", options: ["€34","€25","€55","€38"], answer: 0, wrongHints: [null, "Te laag — je trok €15 af in plaats van 15%.", "Niet — korting trekt af, telt niet op.", "Bijna — reken korting nogmaals."] },
       { q: "Tom fietst 12 km in 1 uur. Hoeveel km in 30 minuten?", options: ["6 km","12 km","24 km","18 km"], answer: 0, wrongHints: [null, "Dat is in 1 uur.", "Dat is 2 uur.", "Niet — halveer 12, niet bij optellen."] },
       { q: "5 vrienden delen 20 koeken eerlijk. Per persoon?", options: ["4","5","20","2"], answer: 0, wrongHints: [null, "Aantal personen.", "Totaal.", "Te weinig."] },
       { q: "Anna had €25. Kocht boek €12 + pen €3. Hoeveel over?", options: ["€10","€15","€40","€13"], answer: 0, wrongHints: [null, "Niet — twee uitgaven.", "Niet — geld minder, niet meer.", "Bijna."] },
       { q: "In de klas 24 leerlingen. ⅔ jongens. Hoeveel jongens?", options: ["16","8","12","18"], answer: 0, wrongHints: [null, "Dat is ⅓.", "Helft.", "Drie kwart."] },
       { q: "Een vlucht duurt 3 uur 30 min. Begin 14:00. Eindigt om?", options: ["17:30","17:00","18:30","16:30"], answer: 0, wrongHints: [null, "Niet — vergeet niet 30 min.", "Te lang.", "Te kort."] },
-      { q: "Doos heeft 12 chocoladerepen. 3 dozen?", options: ["36","12","9","15"], answer: 0, wrongHints: [null, "Dat is 1 doos.", "Niet zo.", "Niet."] },
-      { q: "Tot welk **signaalwoord** kies je delen?", options: ["per persoon","samen","meer","plus"], answer: 0, wrongHints: [null, "Optellen.", "Niet expliciet.", "Optellen."] },
+      { q: "Een doos heeft 12 chocoladerepen. Hoeveel repen zitten er in 3 dozen?", options: ["36","12","9","15"], answer: 0, wrongHints: [null, "Dat is 1 doos.", "Niet zo.", "Niet."] },
+      { q: "Bij welk **signaalwoord** kies je delen?", options: ["per persoon","samen","meer","plus"], answer: 0, wrongHints: [null, "Optellen.", "Niet expliciet.", "Optellen."] },
       { q: "100 m hardlopen in 20 sec. Snelheid in m/sec?", options: ["5","20","100","2"], answer: 0, wrongHints: [null, "Tijd.", "Afstand.", "Te laag."] },
       { q: "Klas heeft 30 leerlingen. 12 meisjes. Hoeveel jongens?", options: ["18","12","30","42"], answer: 0, wrongHints: [null, "Aantal meisjes.", "Totaal.", "Te veel."] },
       { q: "Marathon 42 km. Loper deed al 1/3. Nog hoeveel km?", options: ["28","14","42","21"], answer: 0, wrongHints: [null, "Dat is gedaan.", "Hele.", "Helft."] },
       { q: "Trein 250 km/u. In 3 uur?", options: ["750","250","83","550"], answer: 0, wrongHints: [null, "1 uur.", "Per uur ÷3.", "Niet."] },
       { q: "Bij **'samen'** in een redactiesom kies je?", options: ["Optellen","Aftrekken","Vermenigvuldigen","Delen"], answer: 0, wrongHints: [null, "Verschil = aftrekken.", "Per groep = ×.", "Eerlijk verdelen = ÷."] },
       { q: "8 leerlingen krijgen elk 3 stickers. Hoeveel totaal?", options: ["24","11","3","8"], answer: 0, wrongHints: [null, "Optelfout.", "Per leerling.", "Aantal leerlingen."] },
-      { q: "Bij **'verschil'** in een som doe je?", options: ["Aftrekken","Optellen","Vermenigvuldigen","Delen"], answer: 0, wrongHints: [null, "Samen = +.", "Per × = ×.", "Eerlijk = ÷."] },
+      { q: "Bij **'verschil'** in een som doe je?", options: ["Aftrekken","Optellen","Vermenigvuldigen","Delen"], answer: 0, wrongHints: [null, "Samen = +.", "Per = ×.", "Eerlijk = ÷."] },
       { q: "Boek van 240 pagina's. Anna las al 150. Nog hoeveel?", options: ["90","150","240","390"], answer: 0, wrongHints: [null, "Al gelezen.", "Hele.", "Bij elkaar."] },
       { q: "Een gezin eet in **4 dagen 6 kg appels**. Hoeveel **per dag**?", options: ["1,5 kg","6 kg","24 kg","4 kg"], answer: 0, wrongHints: [null, "Dat is het totaal, niet per dag.", "Niet — vermenigvuldigd ipv gedeeld.", "Aantal dagen, geen kg."] },
     ],
