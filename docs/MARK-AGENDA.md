@@ -66,6 +66,8 @@ Pas dán gaat de Leergeld-prijsmail de deur uit — daarna ligt de prijs een jaa
 
 > Mark 15 sep: "zet alles ergens in het dagrapport als todo". Blijft staan tot alles ✅ is. Details: memory `reference_leerkwartier_accounts_beveiliging` + `reference_leerkwartier_backup_en_herstel`.
 
+- [ ] **Stripe-login nooit kwijt (1 okt):** nieuwe 24-teken back-upcode maken (Profiel → Personal details → Two-step) → op papier bij het Wachtwoordblad; tweede inlogmanier op je telefoon (passkey of authenticator-app); Stripe-login (Gmail) + koppeling Knab …009 op het Wachtwoordblad. ~5 min, alleen jij.
+
 - ✅ Supabase Pro (dagelijkse back-ups, spend cap aan) · ✅ main-branch beschermd · ✅ Google/GitHub/hosting-account met wachtwoord/passkey + herstelcodes op papier · ✅ recovery-mail 15 sep naar Mark + Deianera (stappenplan + wachtwoordblad + pakket)
 - ☐ **ma 21 sep (Claude):** eerste zondag-export controleren (mail "💾 Database-back-up Leerkwartier"; interne dagrapport-mail toont 💾 database-back-up: 1)
 - ☐ **Mark, deze week:** hotmail-wachtwoord op het wachtwoordblad · TransIP-wachtwoord op het blad · **bewaarplek van het blad doorgeven** (→ Claude zet het in het stappenplan voor Deianera) · **vervaldatum ICS-kaart doorgeven** (→ 2 mnd vooraf in agenda; Claude, Anthropic, Supabase, TransIP lopen erop)
