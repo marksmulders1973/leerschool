@@ -25,3 +25,4 @@
 - Kapotte tekens in examentekst (importfout, herstel = authenticiteit terug): examenGeschiedenis2025T1 v16 M'nchen/Groot-Brittanni', v35 optie 0 afgekapt; examenEconomie2024T1 v30 Itali'.
 - examenEngels2024T1: intro 30 vragen maar 8 stappen, hoofdstukken D-J wijzen naar niet-bestaande stappen.
 - examenBiologie2025T2 v15 meerlingen 1% vs ~1,6% CBS → correctievoorschrift.
+- B13 nog niet nagelezen (tokenwacht): nederlandWaterVo, negatieveGetallen, negatieveGetallenPo, netwerkenInternetInformatica, nieuwkomersFoutUitleg, nieuwkomersHelpers, nieuwkomersPicto.

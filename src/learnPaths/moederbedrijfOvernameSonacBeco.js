@@ -21,7 +21,7 @@ const steps = [
   {
     title: "Moederbedrijf en dochteronderneming",
     explanation:
-      "Grote bedrijven bestaan vaak uit meerdere kleinere bedrijven. Het bedrijf dat de **baas** is en de andere **bezit**, heet het **moederbedrijf** (of moederbedrijf/concern). De bedrijven die eronder vallen heten **dochterondernemingen** (dochters).\n\n" +
+      "Grote bedrijven bestaan vaak uit meerdere kleinere bedrijven. Het bedrijf dat de **baas** is en de andere **bezit**, heet het **moederbedrijf** (of concern). De bedrijven die eronder vallen heten **dochterondernemingen** (dochters).\n\n" +
       "Voorbeeld: een groot voedingsconcern kan tientallen fabrieken bezitten. Elke fabriek is een dochter; het concern erboven is de moeder.\n\n" +
       "**Let op het verschil:**\n" +
       "• **Moederbedrijf** = het bedrijf dat eigenaar is (de baas boven).\n" +
@@ -47,7 +47,7 @@ const steps = [
     title: "Een overname",
     explanation:
       "Soms **koopt** een groot bedrijf een ander bedrijf op. Dat heet een **overname**. Het opgekochte bedrijf wordt dan een **dochter** van de koper.\n\n" +
-      "Een bedrijf kan in de loop van de jaren door **verschillende moederbedrijven** worden bezit — telkens als het wordt doorverkocht. De naam van de fabriek zelf kan hetzelfde blijven, terwijl de moeder erboven verandert.",
+      "Een bedrijf kan in de loop van de jaren door **verschillende moederbedrijven** worden bezeten — telkens als het wordt doorverkocht. De naam van de fabriek zelf kan hetzelfde blijven, terwijl de moeder erboven verandert.",
     checks: [
       {
         q: "Een groot concern koopt een kleinere fabriek op. Hoe heet dat?",
@@ -97,7 +97,7 @@ const steps = [
       "Boven Sonac stonden door de jaren heen verschillende **moederbedrijven**:\n" +
       "• Lange tijd viel Sonac onder **VION** (het voedingsconcern; **VION heette vroeger 'Sovion'**).\n" +
       "• **Sinds 2014** is Sonac onderdeel van **Darling Ingredients** — een groot internationaal bedrijf met meer dan 200 locaties wereldwijd.\n\n" +
-      "**Belangrijk (en een veelgemaakte fout):** **Vion** en **Sovion** waren **moederbedrijven** boven Sonac — het zijn géén 'voorganger' van Sonac. Sovion is gewoon de oude naam van Vion. De **voorganger van de fabriek zelf** was **Smits**.",
+      "**Belangrijk (en een veelgemaakte fout):** **Vion** en **Sovion** waren **moederbedrijven** boven Sonac — het zijn géén 'voorgangers' van Sonac. Sovion is gewoon de oude naam van Vion. De **voorganger van de fabriek zelf** was **Smits**.",
     checks: [
       {
         q: "Onder welk internationaal moederbedrijf valt Sonac sinds 2014?",

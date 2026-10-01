@@ -42,7 +42,7 @@ const steps = [
             { titel: "Komma opschuiven", tekst: "Bij keer 1000 schuift de komma drie plekken naar rechts. Schuif de komma van 2,5 drie plekken op en kijk welk getal je krijgt." },
           ],
           woorden: [{ woord: "kilogram (kg)", uitleg: "De volledige naam voor 'kilo' — een gewicht van 1000 gram." }],
-          theorie: "**Gewicht** meet je met gram, ons, pond en kilo. Van een grote naar een kleine eenheid **vermenigvuldig** je (bijvoorbeeld kilo naar gram: × 1000); van klein naar groot **deel** je juist. Een kommagetal zoals 2,5 vertelt je dat er een half méér bij komt dan het hele getal ervoor.",
+          theorie: "**Gewicht** meet je met gram, ons, pond en kilo. Van een grote naar een kleine eenheid **vermenigvuldig** je (bijvoorbeeld kilo naar gram: × 1000); van klein naar groot **deel** je juist. Een kommagetal zoals 2,5 vertelt je dat er nog een half bij het hele getal komt.",
           voorbeelden: [
             { type: "winkel", tekst: "Een zak aardappelen van 5 kg weegt evenveel als 5000 g." },
             { type: "thuis", tekst: "Een pak boter van 250 g is een kwart kilo." },
@@ -93,7 +93,7 @@ const steps = [
           theorie: "**Ons, pond en kilo** zijn drie handige tussenmaten voor gewicht. Een ons is 100 g, een pond is 500 g en een kilo is 1000 g. Weet je hoeveel keer een eenheid in de andere past, dan kun je makkelijk omrekenen door te vermenigvuldigen of te delen.",
           voorbeelden: [
             { type: "winkel", tekst: "Bij de kaaswinkel vraag je vaak om 'twee ons belegen kaas'." },
-            { type: "thuis", tekst: "Een handje chips weegt ongeveer een ons." },
+            { type: "thuis", tekst: "Een reep chocolade weegt vaak ongeveer een ons." },
           ],
           basiskennis: [{ onderwerp: "Herhaald optellen", uitleg: "Iets 'keer 3 nemen' kun je ook doen door het getal drie keer bij elkaar op te tellen." }],
           niveaus: {
@@ -352,7 +352,7 @@ const steps = [
             { titel: "Ken de omrekening", tekst: "1 centiliter (cl) is altijd 10 milliliter (ml)." },
             { titel: "Vermenigvuldig", tekst: "Reken 33 × 10 uit — welk getal krijg je?" },
           ],
-          woorden: [{ woord: "blikje", uitleg: "Een klein drankverpakking, meestal aangegeven in cl op het etiket." }],
+          woorden: [{ woord: "blikje", uitleg: "Een kleine drankverpakking, meestal aangegeven in cl op het etiket." }],
           theorie: "Van centiliter naar milliliter vermenigvuldig je met 10 — dat is dezelfde stap als van deciliter naar centiliter. Elke stap in de rij liter → dl → cl → ml is een factor 10 groter of kleiner.",
           voorbeelden: [
             { type: "winkel", tekst: "Een blikje frisdrank van 33 cl staat ook wel bekend als 330 ml op andere verpakkingen." },
@@ -557,7 +557,7 @@ const steps = [
         q: "Een wedstrijd duurt **1,5 uur**. Hoeveel minuten is dat?",
         options: ["90 min", "150 min", "60 min", "100 min"],
         answer: 0,
-        wrongHints: [null, "Let op: 1,5 is niet hetzelfde als 1 uur en 50 minuten.", "Dat is maar 1 uur — de halve uur telt nog mee.", "Tijd rekent met 60, niet met 100."],
+        wrongHints: [null, "Let op: 1,5 is niet hetzelfde als 1 uur en 50 minuten.", "Dat is maar 1 uur — het halve uur telt nog mee.", "Tijd rekent met 60, niet met 100."],
         uitlegPad: {
           stappen: [
             { titel: "Splits het kommagetal", tekst: "1,5 uur bestaat uit 1 heel uur plus een half uur." },

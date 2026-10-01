@@ -19,7 +19,7 @@ const steps = [
   {
     title: "Mol — Avogadro's getal + molair volume",
     explanation:
-      "**Mol (mol)** = SI-eenheid voor hoeveelheid stof. 1 mol bevat **6,022·10²³ deeltjes** (= **Avogadro's getal N_A**).\n\n**Waarom mol?**\nAtomen zijn onnoembaar klein. 1 gram water bevat ~3,3·10²² moleculen. Door in mol te tellen krijgen we hanteerbare getallen.\n\n**Molaire massa M** (g/mol):\n• = massa van 1 mol stof.\n• Gelijk aan **atoommassa A** (van periodiek systeem) in g/mol.\n• Voorbeelden:\n  - H: M = 1,01 g/mol.\n  - C: M = 12,01 g/mol.\n  - O: M = 16,00 g/mol.\n  - Na: M = 22,99 g/mol.\n  - Cl: M = 35,45 g/mol.\n\n**Molaire massa van moleculen**: som van atomaire massa's.\n• H₂O: 2·1 + 16 = **18 g/mol**.\n• CO₂: 12 + 2·16 = **44 g/mol**.\n• NaCl: 23 + 35,5 = **58,5 g/mol**.\n\n**Kernformule** voor mol-massa-conversie:\n**n = m / M**\n• n = aantal mol.\n• m = massa (g).\n• M = molaire massa (g/mol).\n\n**Voor gassen** (STP: 0 °C + 1 atm):\n**V_mol = 22,4 L/mol**\n• Bij kamertemperatuur (25 °C): ~24,5 L/mol.\n• Geldt voor ELK ideaal gas (Avogadro's wet).\n\n**Aantal deeltjes**:\n**N = n · N_A**\n\n**Voorbeeld**: 18 g water = ?\n• n = 18/18 = 1 mol water.\n• Bevat N = 1·6,022·10²³ moleculen H₂O.\n• Bevat 3·6,022·10²³ = 1,8·10²⁴ atomen totaal (2H + 1O per molecuul).\n\n**Concentratie** (oplossingen):\n• c = n / V (mol/L = M = molair).\n• 1 M = 1 mol opgelost per liter.\n• Pure water: 55,5 M (= 1000/18).\n\n**Cito/CSE-tips**:\n• Bij gasvragen: gebruik 22,4 L/mol vóór som te beginnen.\n• Massa → mol: deel door M. Mol → massa: vermenigvuldig met M.",
+      "**Mol (mol)** = SI-eenheid voor hoeveelheid stof. 1 mol bevat **6,022·10²³ deeltjes** (= **Avogadro's getal N_A**).\n\n**Waarom mol?**\nAtomen zijn onnoembaar klein. 1 gram water bevat ~3,3·10²² moleculen. Door in mol te tellen krijgen we hanteerbare getallen.\n\n**Molaire massa M** (g/mol):\n• = massa van 1 mol stof.\n• Gelijk aan **atoommassa A** (van periodiek systeem) in g/mol.\n• Voorbeelden:\n  - H: M = 1,01 g/mol.\n  - C: M = 12,01 g/mol.\n  - O: M = 16,00 g/mol.\n  - Na: M = 22,99 g/mol.\n  - Cl: M = 35,45 g/mol.\n\n**Molaire massa van moleculen**: som van atomaire massa's.\n• H₂O: 2·1 + 16 = **18 g/mol**.\n• CO₂: 12 + 2·16 = **44 g/mol**.\n• NaCl: 23 + 35,5 = **58,5 g/mol**.\n\n**Kernformule** voor mol-massa-conversie:\n**n = m / M**\n• n = aantal mol.\n• m = massa (g).\n• M = molaire massa (g/mol).\n\n**Voor gassen** (STP: 0 °C + 1 atm):\n**V_mol = 22,4 L/mol**\n• Bij kamertemperatuur (25 °C): ~24,5 L/mol.\n• Geldt voor ELK ideaal gas (Avogadro's wet).\n\n**Aantal deeltjes**:\n**N = n · N_A**\n\n**Voorbeeld**: 18 g water = ?\n• n = 18/18 = 1 mol water.\n• Bevat N = 1·6,022·10²³ moleculen H₂O.\n• Bevat 3·6,022·10²³ = 1,8·10²⁴ atomen totaal (2H + 1O per molecuul).\n\n**Concentratie** (oplossingen):\n• c = n / V (mol/L = M = molair).\n• 1 M = 1 mol opgelost per liter.\n• Zuiver water: 55,5 M (= 1000/18).\n\n**Cito/CSE-tips**:\n• Bij gasvragen: gebruik 22,4 L/mol vóór som te beginnen.\n• Massa → mol: deel door M. Mol → massa: vermenigvuldig met M.",
     checks: [
       {
         q: "Molaire massa van **CO₂**? (C: 12, O: 16)",
@@ -47,7 +47,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is 1 mol.", "Niet — half.", "Onmogelijk."],
         uitlegPad: {
-          stappen: [{ titel: "V = n · V_mol", tekst: "V = 2 · 22,4 = **44,8 L**. Alle ideale gassen nemen dezelfde volume per mol bij STP — onafhankelijk van stof." }],
+          stappen: [{ titel: "V = n · V_mol", tekst: "V = 2 · 22,4 = **44,8 L**. Alle ideale gassen nemen hetzelfde volume per mol bij STP — onafhankelijk van stof." }],
           theorie: "Bij 25 °C i.p.v. 0 °C: gebruik 24,5 L/mol.",
           niveaus: { basis: "2·22,4 L.", simpeler: "Per mol 22,4 L → 2 mol = 44,8 L.", nogSimpeler: "44,8" },
         },
@@ -81,13 +81,13 @@ const steps = [
   {
     title: "Reactievergelijkingen balanceren",
     explanation:
-      "**Wet van behoud van massa** (Lavoisier 1789): in een chemische reactie verandert massa niet — atomen kunnen alleen herschikken.\n\n**Gevolg**: aantal atomen LINKS = aantal atomen RECHTS van pijl.\n\n**Vorm reactievergelijking**:\nA + B → C + D\n• A, B = uitgangsstoffen (reactanten).\n• C, D = reactieproducten.\n• Pijl = 'reageert tot'.\n• Dubbelpijl (⇌): evenwichtsreactie.\n\n**Balanceren-procedure**:\n1. Schrijf ongebalanceerde vergelijking.\n2. Tel atomen per element links + rechts.\n3. Voeg **coëfficienten** vóór formules toe (NIET binnen formules!) om gelijk te maken.\n4. Begin met meest complexe molecuul. Houd O + H meestal laatste.\n5. Controleer alle atomen.\n\n**Voorbeeld 1 — methaan-verbranding**:\nCH₄ + O₂ → CO₂ + H₂O\nOngebalanceerd: 1C, 4H, 2O ↔ 1C, 2H, 3O.\nStap: 2 H₂O voor 4 H → CH₄ + O₂ → CO₂ + 2 H₂O.\nNu: 1C, 4H, 2O ↔ 1C, 4H, 4O.\nO mismatch: 2 O₂ voor 4 O → **CH₄ + 2 O₂ → CO₂ + 2 H₂O**. ✓\n\n**Voorbeeld 2 — synthese ammoniak**:\nN₂ + H₂ → NH₃\nGebalanceerd: **N₂ + 3 H₂ → 2 NH₃**.\n\n**Soorten reacties**:\n• **Verbranding**: stof + O₂ → oxiden (+ H₂O bij organische).\n• **Synthese**: A + B → AB.\n• **Ontleding**: AB → A + B.\n• **Substitutie**: AB + C → AC + B.\n• **Neutralisatie**: zuur + base → zout + water.\n\n**Toestandssymbolen**:\n• (s) = vast.\n• (l) = vloeibaar.\n• (g) = gas.\n• (aq) = aqua (in water opgelost).\n• Bv: HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l).\n\n**Cito/CSE-vraag-types**:\n• Coëfficienten invullen.\n• Onbalanceerde vergelijking afmaken.\n• Verbranding-formules organische stoffen.",
+      "**Wet van behoud van massa** (Lavoisier 1789): in een chemische reactie verandert massa niet — atomen kunnen alleen herschikken.\n\n**Gevolg**: aantal atomen LINKS = aantal atomen RECHTS van pijl.\n\n**Vorm reactievergelijking**:\nA + B → C + D\n• A, B = uitgangsstoffen (reactanten).\n• C, D = reactieproducten.\n• Pijl = 'reageert tot'.\n• Dubbelpijl (⇌): evenwichtsreactie.\n\n**Balanceren-procedure**:\n1. Schrijf ongebalanceerde vergelijking.\n2. Tel atomen per element links + rechts.\n3. Voeg **coëfficiënten** vóór formules toe (NIET binnen formules!) om gelijk te maken.\n4. Begin met meest complexe molecuul. Houd O + H meestal laatste.\n5. Controleer alle atomen.\n\n**Voorbeeld 1 — methaan-verbranding**:\nCH₄ + O₂ → CO₂ + H₂O\nOngebalanceerd: 1C, 4H, 2O ↔ 1C, 2H, 3O.\nStap: 2 H₂O voor 4 H → CH₄ + O₂ → CO₂ + 2 H₂O.\nNu: 1C, 4H, 2O ↔ 1C, 4H, 4O.\nO mismatch: 2 O₂ voor 4 O → **CH₄ + 2 O₂ → CO₂ + 2 H₂O**. ✓\n\n**Voorbeeld 2 — synthese ammoniak**:\nN₂ + H₂ → NH₃\nGebalanceerd: **N₂ + 3 H₂ → 2 NH₃**.\n\n**Soorten reacties**:\n• **Verbranding**: stof + O₂ → oxiden (+ H₂O bij organische).\n• **Synthese**: A + B → AB.\n• **Ontleding**: AB → A + B.\n• **Substitutie**: AB + C → AC + B.\n• **Neutralisatie**: zuur + base → zout + water.\n\n**Toestandssymbolen**:\n• (s) = vast.\n• (l) = vloeibaar.\n• (g) = gas.\n• (aq) = aqua (in water opgelost).\n• Bv: HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l).\n\n**Cito/CSE-vraag-types**:\n• Coëfficiënten invullen.\n• Ongebalanceerde vergelijking afmaken.\n• Verbranding-formules organische stoffen.",
     checks: [
       {
         q: "Balanceer: ** ___ H₂ + ___ O₂ → ___ H₂O** — kleinste gehele coëfficienten?",
         options: ["2, 1, 2", "1, 1, 1", "1, 2, 2", "2, 2, 2"],
         answer: 0,
-        wrongHints: [null, "Niet — links 2 H, rechts 1 H mis-balans.", "Niet — links 2 O, rechts 4 O.", "Niet — niet kleinste."],
+        wrongHints: [null, "Niet — links 2 O, rechts maar 1 O.", "Niet — links 2 H + 4 O, rechts 4 H + 2 O.", "Niet — niet kleinste."],
         uitlegPad: {
           stappen: [{ titel: "2 H₂ + 1 O₂ → 2 H₂O", tekst: "Links: 4H, 2O. Rechts: 4H, 2O. ✓\nWatersynthese (knalgas-explosie)." }],
           niveaus: { basis: "2,1,2.", simpeler: "Twee H₂ + één O₂ → twee H₂O.", nogSimpeler: "2-1-2" },
@@ -97,7 +97,7 @@ const steps = [
         q: "Verbranding propaan: C₃H₈ + ___ O₂ → ___ CO₂ + ___ H₂O?",
         options: ["5, 3, 4", "3, 3, 4", "4, 3, 3", "5, 3, 8"],
         answer: 0,
-        wrongHints: [null, "Niet — O is verkeerd.", "Niet — controleer C.", "Niet — H telling."],
+        wrongHints: [null, "Niet — O is verkeerd.", "Niet — controleer H.", "Niet — H telling."],
         uitlegPad: {
           stappen: [
             { titel: "C, H, dan O", tekst: "C₃H₈ + O₂ → CO₂ + H₂O. 3 C → 3 CO₂. 8 H → 4 H₂O. Rechts: 3·2 + 4·1 = 10 O → 5 O₂.\n\n**C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O**." },
@@ -117,7 +117,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — moleculen veranderen wel.", "Onjuist hier — energie wel, maar vraag was atomen.", "Onjuist — wel behoud."],
         uitlegPad: {
-          stappen: [{ titel: "Wet Lavoisier", tekst: "Atomen blijven dezelfde, alleen ze schuiven naar nieuwe combinaties. Daarom telt links = rechts per element. Massa-behoud is gevolg." }],
+          stappen: [{ titel: "Wet Lavoisier", tekst: "Atomen blijven hetzelfde; ze schuiven alleen naar nieuwe combinaties. Daarom telt links = rechts per element. Massa-behoud is gevolg." }],
           niveaus: { basis: "Atomen behouden.", simpeler: "Aantal atomen elk element gelijk.", nogSimpeler: "Atomen" },
         },
       },
@@ -128,14 +128,14 @@ const steps = [
         wrongHints: [null, "Niet — combinaties bestaan zo niet.", "Niet — molecuul vorm.", "Niet — geen Na+Cl los."],
         uitlegPad: {
           stappen: [
-            { titel: "Zuur + base → zout + water", tekst: "HCl(aq) + NaOH(aq) → **NaCl(aq) + H₂O(l)**. Klassiek neutralisatie-patroon — zuur en base elimineren elkaar." },
+            { titel: "Zuur + base → zout + water", tekst: "HCl(aq) + NaOH(aq) → **NaCl(aq) + H₂O(l)**. Klassiek neutralisatie-patroon — zuur en base heffen elkaar op." },
           ],
           theorie: "Industriële toepassing: water-zuiveren, pH-regulatie in zwembad.",
           niveaus: { basis: "NaCl + H₂O.", simpeler: "Zout + water.", nogSimpeler: "Zout+water" },
         },
       },
       {
-        q: "Welke verbranding-product van **koolstof + zuurstof** bij voldoende O₂?",
+        q: "Welk verbrandingsproduct ontstaat uit **koolstof + zuurstof** bij voldoende O₂?",
         options: ["CO₂", "CO", "C₂O", "H₂O"],
         answer: 0,
         wrongHints: [null, "Niet — dat is bij O-tekort.", "Bestaat niet.", "Geen waterstof in C+O."],
@@ -151,7 +151,7 @@ const steps = [
   {
     title: "Stoichiometrie — mol-verhoudingen + opbrengst",
     explanation:
-      "**Stoichiometrie**: berekenen met mol-verhoudingen uit reactievergelijkingen.\n\n**Coëfficienten = mol-verhouding**:\n2 H₂ + O₂ → 2 H₂O betekent:\n• 2 mol H₂ + 1 mol O₂ → 2 mol H₂O.\n• Of: 2 moleculen H₂ + 1 molecuul O₂ → 2 moleculen H₂O.\n\n**5-stappen-aanpak**:\n1. **Vergelijking** balanceren.\n2. **Gegeven** omzetten naar mol (n = m/M of n = V/V_mol).\n3. **Verhouding** toepassen om mol van gevraagde stof te krijgen.\n4. **Antwoord** omzetten naar gevraagde eenheid (g, L, of mol).\n5. **Controle**: massa-behoud klopt?\n\n**Voorbeeld**: hoeveel g water uit 16 g methaan-verbranding?\nCH₄ + 2 O₂ → CO₂ + **2 H₂O**.\n• n(CH₄) = 16/16 = 1 mol.\n• Verhouding 1 CH₄ : 2 H₂O → 2 mol H₂O.\n• m(H₂O) = 2 · 18 = **36 g**.\n\n**Beperkende reactant**:\nVaak heb je niet exact stoechiometrische hoeveelheden. De stof die EERST OP is = **limiterende reactant** → bepaalt opbrengst.\n\nVoorbeeld: 1 mol H₂ + 1 mol O₂ → ?\nReactie 2 H₂ + O₂ → 2 H₂O verlangt H₂:O₂ = 2:1. We hebben 1:1 → H₂ is limiterend.\n• Mol H₂O = mol H₂ × (2 H₂O / 2 H₂) = 1 mol.\n• Overblijvend O₂: 1 − 0,5 = 0,5 mol (de helft was 'overmaat').\n\n**Opbrengstpercentage**:\n• Theoretische opbrengst = max berekend.\n• Werkelijke opbrengst = wat je daadwerkelijk verzamelt (lab).\n• % opbrengst = (werkelijk/theoretisch) · 100%.\n• Verliezen door: niet volledig reagerend, bijproducten, filtratie-verlies.\n\n**Industriële schaal**: bij chemische fabriek, optimaliseren via Le Chatelier (drukken, T) om opbrengst > 95% te krijgen.",
+      "**Stoichiometrie**: berekenen met mol-verhoudingen uit reactievergelijkingen.\n\n**Coëfficiënten = mol-verhouding**:\n2 H₂ + O₂ → 2 H₂O betekent:\n• 2 mol H₂ + 1 mol O₂ → 2 mol H₂O.\n• Of: 2 moleculen H₂ + 1 molecuul O₂ → 2 moleculen H₂O.\n\n**5-stappen-aanpak**:\n1. **Vergelijking** balanceren.\n2. **Gegeven** omzetten naar mol (n = m/M of n = V/V_mol).\n3. **Verhouding** toepassen om mol van gevraagde stof te krijgen.\n4. **Antwoord** omzetten naar gevraagde eenheid (g, L, of mol).\n5. **Controle**: massa-behoud klopt?\n\n**Voorbeeld**: hoeveel g water uit 16 g methaan-verbranding?\nCH₄ + 2 O₂ → CO₂ + **2 H₂O**.\n• n(CH₄) = 16/16 = 1 mol.\n• Verhouding 1 CH₄ : 2 H₂O → 2 mol H₂O.\n• m(H₂O) = 2 · 18 = **36 g**.\n\n**Beperkende reactant**:\nVaak heb je niet exact stoechiometrische hoeveelheden. De stof die EERST OP is = **limiterende reactant** → bepaalt opbrengst.\n\nVoorbeeld: 1 mol H₂ + 1 mol O₂ → ?\nReactie 2 H₂ + O₂ → 2 H₂O verlangt H₂:O₂ = 2:1. We hebben 1:1 → H₂ is limiterend.\n• Mol H₂O = mol H₂ × (2 H₂O / 2 H₂) = 1 mol.\n• Overblijvend O₂: 1 − 0,5 = 0,5 mol (de helft was 'overmaat').\n\n**Opbrengstpercentage**:\n• Theoretische opbrengst = max berekend.\n• Werkelijke opbrengst = wat je daadwerkelijk verzamelt (lab).\n• % opbrengst = (werkelijk/theoretisch) · 100%.\n• Verliezen door: niet volledig reagerend, bijproducten, filtratie-verlies.\n\n**Industriële schaal**: bij chemische fabriek, optimaliseren via Le Chatelier (druk, T) om de opbrengst zo hoog mogelijk te krijgen.",
     checks: [
       {
         q: "Reactie: **N₂ + 3 H₂ → 2 NH₃** (Haber-Bosch). Hoeveel mol NH₃ uit **6 mol H₂** (overmaat N₂)?",
@@ -162,7 +162,7 @@ const steps = [
           stappen: [
             { titel: "Mol-verhouding 3 H₂ : 2 NH₃", tekst: "n(NH₃) = 6 · (2/3) = **4 mol**. Met N₂ in overmaat is H₂ limiterend." },
           ],
-          theorie: "Haber-Bosch is industrieel kunstmest-proces, 1 % van werelds-energiegebruik. Cruciaal voor voedselproductie.",
+          theorie: "Haber-Bosch is industrieel kunstmest-proces, ~1-2% van het wereldwijde energiegebruik. Cruciaal voor voedselproductie.",
           niveaus: { basis: "6·2/3=4.", simpeler: "Voor elke 3 H₂ → 2 NH₃; dus 6 → 4.", nogSimpeler: "4" },
         },
       },
@@ -219,7 +219,7 @@ const steps = [
   {
     title: "Redox-reacties — oxidatie + reductie",
     explanation:
-      "**Redox-reactie** = **electron-overdracht** tussen twee deeltjes.\n\n**Definities**:\n• **Oxidatie**: stof **verliest** elektronen → oxidatiegetal stijgt.\n• **Reductie**: stof **krijgt** elektronen → oxidatiegetal daalt.\n• **Oxidator**: stof die elektronen aantrekt → wordt ZELF gereduceerd.\n• **Reductor**: stof die elektronen geeft → wordt ZELF geoxideerd.\n\n*Geheugen-truc OIL RIG*: Oxidation Is Loss (of electrons), Reduction Is Gain.\n\n**Oxidatiegetallen** (HAVO basis):\n• Vrij element: 0 (Fe-metaal: 0; H₂-gas: 0).\n• Monatomisch ion: lading (Na⁺: +1; Cl⁻: −1).\n• O in oxide: meestal −2 (uitzondering: H₂O₂ = −1).\n• H: meestal +1 (uitzondering: metaalhydride zoals NaH = −1).\n• Som oxidatiegetallen in neutraal molecuul: 0.\n• Som in ion: lading van ion.\n\n**Voorbeeld**:\nFe + Cu²⁺ → Fe²⁺ + Cu\n• Fe: 0 → +2 → **GEOXIDEERD** (afgeeft 2 e⁻) → Fe is reductor.\n• Cu²⁺: +2 → 0 → **GEREDUCEERD** (neemt 2 e⁻ op) → Cu²⁺ is oxidator.\n\n**Veelvoorkomende redox**:\n• Roesten: Fe + O₂ + H₂O → Fe(OH)₃ (Fe oxideert van 0 naar +3).\n• Verbranding: C + O₂ → CO₂ (C oxideert).\n• Fotosynthese: 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂ (omgekeerd, energie van zon).\n• Batterij: chemische redox → elektrische stroom.\n\n**Electrochemische cel**:\n• Twee halfcellen met elektroden in oplossingen.\n• Anode: oxidatie (− pool in batterij, + pool in galvanische cel).\n• Kathode: reductie.\n• Elektronen lopen door extern circuit van anode naar kathode.\n• Stroomsterkte × tijd × valentie = mol elektronen.\n\n**Edel- + onedele metalen**:\n• Edel (Au, Pt, Ag, Cu) = lage neiging om elektronen af te geven → minder roesten.\n• Onedel (Na, Mg, Zn, Fe) = hoge neiging om e⁻ af te geven → makkelijk geoxideerd.\n• 'Spanningsreeks' van onedel naar edel: K Ca Na Mg Al Zn Fe Pb (H) Cu Ag Au.\n\n**Cito/CSE-vraag-types**:\n• Identificeer oxidator/reductor.\n• Oxidatiegetal opstellen.\n• Halfreactie opschrijven.",
+      "**Redox-reactie** = **elektronenoverdracht** tussen twee deeltjes.\n\n**Definities**:\n• **Oxidatie**: stof **verliest** elektronen → oxidatiegetal stijgt.\n• **Reductie**: stof **krijgt** elektronen → oxidatiegetal daalt.\n• **Oxidator**: stof die elektronen aantrekt → wordt ZELF gereduceerd.\n• **Reductor**: stof die elektronen geeft → wordt ZELF geoxideerd.\n\n*Geheugen-truc OIL RIG*: Oxidation Is Loss (of electrons), Reduction Is Gain.\n\n**Oxidatiegetallen** (HAVO basis):\n• Vrij element: 0 (Fe-metaal: 0; H₂-gas: 0).\n• Monatomisch ion: lading (Na⁺: +1; Cl⁻: −1).\n• O in oxide: meestal −2 (uitzondering: H₂O₂ = −1).\n• H: meestal +1 (uitzondering: metaalhydride zoals NaH = −1).\n• Som oxidatiegetallen in neutraal molecuul: 0.\n• Som in ion: lading van ion.\n\n**Voorbeeld**:\nFe + Cu²⁺ → Fe²⁺ + Cu\n• Fe: 0 → +2 → **GEOXIDEERD** (geeft 2 e⁻ af) → Fe is reductor.\n• Cu²⁺: +2 → 0 → **GEREDUCEERD** (neemt 2 e⁻ op) → Cu²⁺ is oxidator.\n\n**Veelvoorkomende redox**:\n• Roesten: Fe + O₂ + H₂O → Fe(OH)₃ (Fe oxideert van 0 naar +3).\n• Verbranding: C + O₂ → CO₂ (C oxideert).\n• Fotosynthese: 6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂ (omgekeerd, energie van zon).\n• Batterij: chemische redox → elektrische stroom.\n\n**Electrochemische cel**:\n• Twee halfcellen met elektroden in oplossingen.\n• Anode: oxidatie (− pool in batterij/galvanische cel, + pool bij elektrolyse).\n• Kathode: reductie.\n• Elektronen lopen door extern circuit van anode naar kathode.\n• Stroomsterkte × tijd / F (96 485 C/mol) = mol elektronen.\n\n**Edel- + onedele metalen**:\n• Edel (Au, Pt, Ag, Cu) = lage neiging om elektronen af te geven → minder roesten.\n• Onedel (Na, Mg, Zn, Fe) = hoge neiging om e⁻ af te geven → makkelijk geoxideerd.\n• 'Spanningsreeks' van onedel naar edel: K Ca Na Mg Al Zn Fe Pb (H) Cu Ag Au.\n\n**Cito/CSE-vraag-types**:\n• Identificeer oxidator/reductor.\n• Oxidatiegetal opstellen.\n• Halfreactie opschrijven.",
     checks: [
       {
         q: "Reactie: **Zn + Cu²⁺ → Zn²⁺ + Cu**. Wat wordt **geoxideerd**?",
@@ -243,7 +243,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is reductie.", "Niet — verwarring zuur-base.", "Niet — niet specifiek voor redox."],
         uitlegPad: {
-          stappen: [{ titel: "OIL — Oxidation Is Loss", tekst: "Onthoud-truc: OIL RIG.\n- **O**xidation **I**s **L**oss (of electrons).\n- **R**eduction **I**s **G**ain.\nOoit verwarring? Bedenk: oxidatie kwam oorspronkelijk van 'reactie met oxygen' (O₂). Maar verbreed: 'elektron-verlies' is de moderne def." }],
+          stappen: [{ titel: "OIL — Oxidation Is Loss", tekst: "Onthoud-truc: OIL RIG.\n- **O**xidation **I**s **L**oss (of electrons).\n- **R**eduction **I**s **G**ain.\nOoit verwarring? Bedenk: oxidatie kwam oorspronkelijk van 'reactie met zuurstof' (oxygenium, O₂). Breder: 'elektronenverlies' is de moderne definitie." }],
           niveaus: { basis: "Verlies van e⁻.", simpeler: "Oxidatie = elektronen weggeven.", nogSimpeler: "Verlies" },
         },
       },
@@ -254,9 +254,9 @@ const steps = [
         wrongHints: [null, "Niet — controleer som.", "Niet — dat is MnO₂.", "Onjuist teken."],
         uitlegPad: {
           stappen: [
-            { titel: "Som = 0 oplossen", tekst: "K: +1 (alkali-metaal). O: −2 (×4 = −8). Totaal molecuul: 0.\n+1 + Mn + (−8) = 0 → Mn = **+7**. Sterk oxidator (paars zout, lab-reagens)." },
+            { titel: "Som = 0 oplossen", tekst: "K: +1 (alkali-metaal). O: −2 (×4 = −8). Totaal molecuul: 0.\n+1 + Mn + (−8) = 0 → Mn = **+7**. Sterke oxidator (paars zout, lab-reagens)." },
           ],
-          theorie: "Mn in +7 is een van de hoogste oxidatiegetallen → 'wil' graag elektronen aannemen → krachtige oxidator (Mn²⁺ pink-rood eindproduct).",
+          theorie: "Mn in +7 is een van de hoogste oxidatiegetallen → 'wil' graag elektronen aannemen → krachtige oxidator (eindproduct Mn²⁺ is bijna kleurloos).",
           niveaus: { basis: "Mn = +7.", simpeler: "K(+1) + 4·O(−2) + Mn = 0 → Mn = +7.", nogSimpeler: "+7" },
         },
       },
@@ -272,7 +272,7 @@ const steps = [
         wrongHints: [null, "Niet — Fe geeft elektronen.", "Onjuist concept.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "Fe → Fe³⁺ in roest", tekst: "In Fe(OH)₃ of Fe₂O₃ heeft Fe oxidatiegetal +3. Ging van 0 (metaal) naar +3 = oxidatie. O₂ is hier oxidator (wordt zelf gereduceerd van 0 naar −2 in OH⁻)." }],
-          theorie: "Voorkoming roest: galvaniseren (zink-laag → 'opoffert' zich, beschermt Fe), schilderen (lucht buiten houden), of edelmetalen-leg-ringen.",
+          theorie: "Voorkoming roest: galvaniseren (zinklaag → 'offert zich op', beschermt Fe), schilderen (lucht buiten houden), of een beschermend laagje van een ander metaal.",
           niveaus: { basis: "Fe-geoxideerd.", simpeler: "IJzer geeft elektronen → oxidatie.", nogSimpeler: "Geoxideerd" },
         },
       },
@@ -282,15 +282,15 @@ const steps = [
           "De plek waar oxidatie plaatsvindt (− pool in cel)",
           "Altijd + pool",
           "Heeft geen functie",
-          "Vangst elektronen op"
+          "Vangt elektronen op"
         ],
         answer: 0,
         wrongHints: [null, "Niet — in batterij is anode −.", "Onjuist.", "Niet — dat is kathode."],
         uitlegPad: {
           stappen: [
-            { titel: "Anode = oxidatie", tekst: "Anode is per definitie waar oxidatie plaatsvindt (elektronen verlaten elektrode → naar extern circuit). In gewone batterij (galvanische cel): anode = − pool. In elektrolyse-cel: anode = + pool (geforceerd). Verwarrend! Onthoud regel: ANode = Anodische = OXidatie." },
+            { titel: "Anode = oxidatie", tekst: "Anode is per definitie waar oxidatie plaatsvindt (elektronen verlaten elektrode → naar extern circuit). In gewone batterij (galvanische cel): anode = − pool. In elektrolyse-cel: anode = + pool (geforceerd). Verwarrend! Onthoud: AnOx — RedKat (anode = oxidatie, reductie = kathode)." },
           ],
-          theorie: "Elektronen lopen door extern circuit van anode (−) naar kathode (+). Daarvoor 'opent' batterij het circuit.",
+          theorie: "Elektronen lopen door extern circuit van anode (−) naar kathode (+). Daarvoor moet het circuit gesloten zijn.",
           niveaus: { basis: "Anode = oxidatie.", simpeler: "Anode geeft elektronen weg.", nogSimpeler: "Anode" },
         },
       },
@@ -345,7 +345,7 @@ const steps = [
           "Wordt verbruikt in reactie"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — evenwicht onveranderd.", "Niet — onafhankelijk van T.", "Niet — wordt regenereerd."],
+        wrongHints: [null, "Niet — evenwicht onveranderd.", "Niet — onafhankelijk van T.", "Niet — wordt teruggevormd."],
         uitlegPad: {
           stappen: [{ titel: "Verlaagt activeringsenergie", tekst: "Katalysator biedt alternatief reactie-pad met lagere Ea → reactie verloopt sneller. Geldt voor zowel heen- als terug-reactie → evenwichtspositie verandert NIET. Hoeveelheid katalysator blijft zelfde na reactie." }],
           theorie: "Voorbeelden: enzymen in cellen, platina in auto-katalysator (uitlaatgassen-zuivering), Fe in Haber-Bosch.",
@@ -356,7 +356,7 @@ const steps = [
         q: "Concentratie-eenheid M (molair) is gelijk aan:",
         options: ["mol/L", "g/L", "mol/kg", "deeltjes/L"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is dichtheid-massa.", "Niet — dat is molaliteit.", "Niet — deeltjes ≠ mol."],
+        wrongHints: [null, "Niet — dat is massaconcentratie.", "Niet — dat is molaliteit.", "Niet — deeltjes ≠ mol."],
         uitlegPad: {
           stappen: [{ titel: "M = molair = mol/L", tekst: "Bv. 1 M HCl = 1 mol opgelost in 1 L oplossing. Veel gebruikt in lab + medische context." }],
           niveaus: { basis: "M = mol/L.", simpeler: "Molair = mol per liter.", nogSimpeler: "mol/L" },
@@ -374,7 +374,7 @@ const steps = [
         wrongHints: [null, "Niet — Cl₂ vormt zich aan ANODE.", "Niet — geen water aanwezig.", "Niet — geen O."],
         uitlegPad: {
           stappen: [
-            { titel: "Kathode = reductie", tekst: "Aan kathode (− pool): Na⁺ + e⁻ → Na (reductie). Aan anode (+ pool): 2 Cl⁻ → Cl₂ + 2 e⁻ (oxidatie). Industriële Na + Cl₂ productie via dit proces (chloor-alkali-elektrolyse)." },
+            { titel: "Kathode = reductie", tekst: "Aan kathode (− pool): Na⁺ + e⁻ → Na (reductie). Aan anode (+ pool): 2 Cl⁻ → Cl₂ + 2 e⁻ (oxidatie). Industriële Na + Cl₂ productie via dit proces (Downs-proces)." },
           ],
           theorie: "In oplossing (NaCl in water) wint H₂O voor reductie aan kathode → H₂ ipv Na. Daarom gesmolten zout nodig voor Na-metaal.",
           niveaus: { basis: "Na aan kathode.", simpeler: "Kathode reduceert Na⁺ tot Na.", nogSimpeler: "Na" },

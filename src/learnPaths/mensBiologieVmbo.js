@@ -179,7 +179,7 @@ const steps = [
   {
     title: "Ademhaling — luchtweg + gaswisseling",
     explanation:
-      "Met **ademhaling** halen we zuurstof binnen en stoten CO₂ af.\n\n**Luchtweg — volgorde**:\n1. **Neus / mond** *(filteren + opwarmen + bevochtigen lucht)*\n2. **Keel** *(faryx)*\n3. **Strottenhoofd** *(larynx — met stembanden)*\n4. **Luchtpijp** *(trachea — grote centrale buis)*\n5. **Bronchiën** *(2 hoofdtakken, 1 per long)*\n6. **Bronchiolen** *(steeds kleinere vertakkingen)*\n7. **Longblaasjes** *(alveolen — eindstation)*\n\nDe eerste 6 zijn **alleen transport**. Pas in de longblaasjes vindt **gaswisseling** plaats.\n\n**Longblaasjes — alveolen**:\n• ~300 miljoen per long.\n• Wand: **1 cel dik**, omringd door dichte haarvaten.\n• Hier wisselt O₂ ↔ CO₂ tussen lucht en bloed via diffusie.\n• Totaal oppervlak: ~70 m² *(zo groot als tennishal!)*.\n\n**In + uit ademen**:\n• **Inademen**: middenrif zakt + ribben omhoog → borstkas groter → lucht in.\n• **Uitademen**: middenrif omhoog + ribben omlaag → borstkas kleiner → lucht eruit.\n• **Middenrif** *(diafragma)* = grote spier onder longen — belangrijkste ademspier.\n\n**Wat doet bloed bij gaswisseling?**\n• Bloed komt aan in longen met veel CO₂ + weinig O₂ *(via longslagader)*.\n• In longblaasjes: O₂ naar bloed, CO₂ naar lucht.\n• Bloed gaat weer richting hart met veel O₂ + weinig CO₂ *(via longader)*.\n• Daarna door hart het lichaam in.\n\n**Vluchtige stoffen** *(zoals alcohol)* kunnen óók via longblaasjes terug naar uitgeademde lucht → daarom werkt een **blaastest**.",
+      "Met **ademhaling** halen we zuurstof binnen en stoten CO₂ af.\n\n**Luchtweg — volgorde**:\n1. **Neus / mond** *(filteren + opwarmen + bevochtigen lucht)*\n2. **Keel** *(farynx)*\n3. **Strottenhoofd** *(larynx — met stembanden)*\n4. **Luchtpijp** *(trachea — grote centrale buis)*\n5. **Bronchiën** *(2 hoofdtakken, 1 per long)*\n6. **Bronchiolen** *(steeds kleinere vertakkingen)*\n7. **Longblaasjes** *(alveolen — eindstation)*\n\nDe eerste 6 zijn **alleen transport**. Pas in de longblaasjes vindt **gaswisseling** plaats.\n\n**Longblaasjes — alveolen**:\n• ~300 miljoen per long.\n• Wand: **1 cel dik**, omringd door dichte haarvaten.\n• Hier wisselt O₂ ↔ CO₂ tussen lucht en bloed via diffusie.\n• Totaal oppervlak: ~70 m² *(ongeveer een halve tennisbaan!)*.\n\n**In + uit ademen**:\n• **Inademen**: middenrif zakt + ribben omhoog → borstkas groter → lucht in.\n• **Uitademen**: middenrif omhoog + ribben omlaag → borstkas kleiner → lucht eruit.\n• **Middenrif** *(diafragma)* = grote spier onder longen — belangrijkste ademspier.\n\n**Wat doet bloed bij gaswisseling?**\n• Bloed komt aan in longen met veel CO₂ + weinig O₂ *(via longslagader)*.\n• In longblaasjes: O₂ naar bloed, CO₂ naar lucht.\n• Bloed gaat weer richting hart met veel O₂ + weinig CO₂ *(via longader)*.\n• Daarna door hart het lichaam in.\n\n**Vluchtige stoffen** *(zoals alcohol)* kunnen óók via longblaasjes terug naar uitgeademde lucht → daarom werkt een **blaastest**.",
     checks: [
       {
         q: "Waar vindt de gaswisseling plaats?",
@@ -237,7 +237,7 @@ const steps = [
       },
       {
         q: "Hoe groot is het totale oppervlak van alle longblaasjes ongeveer?",
-        options: ["~70 m² (zo groot als tennishal)", "~1 m²", "~10.000 m²", "~10 cm²"],
+        options: ["~70 m² (ongeveer een halve tennisbaan)", "~1 m²", "~10.000 m²", "~10 cm²"],
         answer: 0,
         wrongHints: [
           null,
@@ -326,7 +326,7 @@ const steps = [
   {
     title: "Uitscheiding — afvalstoffen uit het lichaam",
     explanation:
-      "**Uitscheiding** = afvalstoffen uit het lichaam verwijderen. Belangrijkste organen: **nieren** + **lever** + **longen** + **huid**.\n\n**Nieren — filteren bloed**:\n\nElke nier heeft ~1 miljoen kleine filter-eenheden: **nefronen**.\n\n**3 lagen van de nier**:\n1. **Nierschors** *(buitenste laag)* — hier zitten de glomeruli (filter-startpunt van nefron).\n2. **Niermerg** *(middenlaag)* — hier worden water + nuttige stoffen TERUG-opgenomen.\n3. **Nierbekken** *(holle ruimte binnenin)* — verzamelt klare urine voordat die naar de blaas gaat.\n\n**Filtering vindt plaats in NIERSCHORS + NIERMERG**. Het nierbekken filtert NIET — het verzamelt alleen.\n\n**Wat doen de nieren?**\n• Filteren bloed.\n• Verwijderen afvalstoffen *(ureum, overtollig zout, water)*.\n• Reguleren water-balans + bloeddruk + pH.\n\n**Route van urine**:\nNier → urineleider *(uretur)* → blaas → urinebuis *(urethra)* → naar buiten.\n\n**Lever — afbraak + ureum-vorming**:\nDe **lever** breekt veel stoffen af, waaronder:\n• **Aminozuren** *(uit eiwit-vertering)* die je niet meer nodig hebt → stikstof eruit → **ureum** *(afvalstof)*.\n• **Alcohol** *(door enzymen)*.\n• **Medicijnen** *(metaboliseren)*.\n\nUreum gaat via bloed naar de nieren, die het uit het bloed filteren → urine → naar buiten.\n\n**Onthoud**: **lever MAAKT ureum** (uit eiwit-afbraak). **Nier VERWIJDERT ureum** (uit bloed). Twee verschillende stappen.\n\n**Nierdialyse**:\nAls nieren falen, kan een **kunstnier** (dialyse-machine) het bloed filteren. ~4 uur per behandeling, 3× per week. Tijdelijke oplossing tot een transplantatie mogelijk is.\n\n**Andere uitscheidingsorganen**:\n• **Longen** — verwijderen CO₂ (en vluchtige stoffen zoals alcoholdamp).\n• **Huid** — verwijderen zweet (water + zouten + kleine hoeveelheid ureum).\n• **Dikke darm** — verwijdert onverteerd voedsel + galkleurstof.",
+      "**Uitscheiding** = afvalstoffen uit het lichaam verwijderen. Belangrijkste organen: **nieren** + **lever** + **longen** + **huid**.\n\n**Nieren — filteren bloed**:\n\nElke nier heeft ~1 miljoen kleine filter-eenheden: **nefronen**.\n\n**3 lagen van de nier**:\n1. **Nierschors** *(buitenste laag)* — hier zitten de glomeruli (filter-startpunt van nefron).\n2. **Niermerg** *(middenlaag)* — hier worden water + nuttige stoffen TERUG-opgenomen.\n3. **Nierbekken** *(holle ruimte binnenin)* — verzamelt klare urine voordat die naar de blaas gaat.\n\n**Filtering vindt plaats in NIERSCHORS + NIERMERG**. Het nierbekken filtert NIET — het verzamelt alleen.\n\n**Wat doen de nieren?**\n• Filteren bloed.\n• Verwijderen afvalstoffen *(ureum, overtollig zout, water)*.\n• Reguleren water-balans + bloeddruk + pH.\n\n**Route van urine**:\nNier → urineleider *(ureter)* → blaas → urinebuis *(urethra)* → naar buiten.\n\n**Lever — afbraak + ureum-vorming**:\nDe **lever** breekt veel stoffen af, waaronder:\n• **Aminozuren** *(uit eiwit-vertering)* die je niet meer nodig hebt → stikstof eruit → **ureum** *(afvalstof)*.\n• **Alcohol** *(door enzymen)*.\n• **Medicijnen** *(metaboliseren)*.\n\nUreum gaat via bloed naar de nieren, die het uit het bloed filteren → urine → naar buiten.\n\n**Onthoud**: **lever MAAKT ureum** (uit eiwit-afbraak). **Nier VERWIJDERT ureum** (uit bloed). Twee verschillende stappen.\n\n**Nierdialyse**:\nAls nieren falen, kan een **kunstnier** (dialyse-machine) het bloed filteren. ~4 uur per behandeling, 3× per week. Tijdelijke oplossing tot een transplantatie mogelijk is.\n\n**Andere uitscheidingsorganen**:\n• **Longen** — verwijderen CO₂ (en vluchtige stoffen zoals alcoholdamp).\n• **Huid** — verwijderen zweet (water + zouten + kleine hoeveelheid ureum).\n• **Dikke darm** — verwijdert onverteerd voedsel + galkleurstof.",
     checks: [
       {
         q: "In welke delen van een nier wordt het bloed gefilterd?",
@@ -348,7 +348,7 @@ const steps = [
             { titel: "Nefron strekt zich uit", tekst: "Elk nefron begint in de schors (filtering bloed) en gaat verder naar het merg (terug-opname water + zouten). Beide lagen samen = filterwerk." },
           ],
           woorden: [
-            { woord: "nefron", uitleg: "Microscopisch filter-eenheid van de nier — ~1 miljoen per nier." },
+            { woord: "nefron", uitleg: "Microscopisch kleine filtereenheid van de nier — ~1 miljoen per nier." },
             { woord: "nierbekken", uitleg: "Holle ruimte binnen in de nier waar klare urine in komt." },
           ],
           theorie: "Filter = schors + merg. Bekken = opvang. Niet verwarren.",
@@ -438,7 +438,7 @@ const steps = [
         options: ["de lever", "de nieren", "de darmen", "de hersenen"],
         answer: 0,
         wrongHints: [null, "Nieren filteren ureum, maken het niet.", "Darm = opname voeding, geen ureum-vorming.", "Hersenen verbruiken voeding maar maken geen ureum."],
-        explanation: "Lever breekt overtollige aminozuren af → stikstof om naar ureum → bloed → nieren → urine.",
+        explanation: "Lever breekt overtollige aminozuren af → stikstof wordt omgezet in ureum → bloed → nieren → urine.",
       },
       {
         q: "Welke spier is de belangrijkste ademspier?",

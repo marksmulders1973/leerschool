@@ -120,7 +120,7 @@ const steps = [
           stappen: [{ titel: "Koning + grondwet samen", tekst: "Constitutioneel = 'volgens grondwet'. Monarchie = koningschap. Samen: koning bestaat WEL maar zijn macht is BEPERKT door grondwet. NL voorbeeld: Willem-Alexander is staatshoofd maar mag wetten niet weigeren." }],
           woorden: [{ woord: "constitutioneel", uitleg: "Volgens (grond)wet. Met regels en limieten." }, { woord: "monarchie", uitleg: "Staatsvorm met erfelijk staatshoofd (koning of koningin)." }],
           theorie: "NL is constitutionele monarchie sinds 1848 (Thorbecke-grondwet). Verschil met absolute monarchie (koning heerst zonder grondwet, zoals vroeger Lodewijk XIV Frankrijk).",
-          voorbeelden: [{ type: "landen", tekst: "Constitutioneel: NL, België, Engeland, Zweden, Japan, Spanje. Absoluut: Saoedi-Arabië, Brunei. Republiek (geen koning): Frankrijk, Duitsland, VS." }],
+          voorbeelden: [{ type: "landen", tekst: "Constitutioneel: NL, België, Verenigd Koninkrijk, Zweden, Japan, Spanje. Absoluut: Saoedi-Arabië, Brunei. Republiek (geen koning): Frankrijk, Duitsland, VS." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Absoluut = alle macht. Republiek = president (geen koning). Anarchie = geen wet." }],
           niveaus: { basis: "Koning beperkt door wet.", simpeler: "Constitutionele monarchie = koning bestaat, maar grondwet beperkt zijn macht. NL is dit.", nogSimpeler: "Koning + wet" },
         },
@@ -187,7 +187,7 @@ const steps = [
           woorden: [{ woord: "Montesquieu", uitleg: "Frans denker 1689-1755. Verlichting. Trias Politica is zijn belangrijkste idee." }],
           theorie: "Vóór Montesquieu: koning had alle macht. Idee was revolutionair. Werd politiek principe na Franse Revolutie 1789.",
           voorbeelden: [{ type: "context", tekst: "Trias = Latijn 'drie'. Politica = politiek. 'Drie politieke machten'. Wetgevend + uitvoerend + rechtsprekend." }],
-          basiskennis: [{ onderwerp: "Niet andere", uitleg: "Thorbecke = NL-grondwet 1848. Willem van Oranje = NL-leider 16e eeuw. Plato = Griekse filosoof (4 eeuw v.Chr., andere ideeën)." }],
+          basiskennis: [{ onderwerp: "Niet andere", uitleg: "Thorbecke = NL-grondwet 1848. Willem van Oranje = NL-leider 16e eeuw. Plato = Griekse filosoof (4e eeuw v.Chr., andere ideeën)." }],
           niveaus: { basis: "Montesquieu.", simpeler: "Trias Politica = Montesquieu (1748, Frans denker).", nogSimpeler: "Montesquieu" },
         },
       },
@@ -209,7 +209,7 @@ const steps = [
   },
   {
     title: "Tweede Kamer — het parlement",
-    explanation: "De **Tweede Kamer** is het belangrijkste orgaan van de Nederlandse democratie. Hier worden wetten gemaakt en de regering gecontroleerd.\n\n**Feiten**:\n• **150 zetels** (kamerleden).\n• Gekozen door het volk, **om de 4 jaar**.\n• Vergadert in Den Haag, **Binnenhof**.\n• Voorzitter: de **Kamervoorzitter**.\n\n**Wat doet de Tweede Kamer?**\n• **Wetten maken**: voorstel → debat → stemmen.\n• **Regering controleren**: vragen stellen aan ministers.\n• **Begroting goedkeuren**: hoe geeft Nederland geld uit?\n\n**Politieke partijen** in 2025-2026 (~15 partijen): VVD, D66, PVV, GL-PvdA, CDA, SP, ChristenUnie, SGP, FvD, BBB, NSC, Volt, etc.\n\n**Coalitie**: meestal vormen meerdere partijen samen een meerderheid (>75 zetels) en regeren samen. Dat wordt vastgelegd in een **regeerakkoord**.\n\n**Oppositie**: partijen die niet meeregeren — zij controleren extra streng.",
+    explanation: "De **Tweede Kamer** is het belangrijkste orgaan van de Nederlandse democratie. Hier worden wetten gemaakt en de regering gecontroleerd.\n\n**Feiten**:\n• **150 zetels** (kamerleden).\n• Gekozen door het volk, **om de 4 jaar**.\n• Vergadert in Den Haag, **Binnenhof**.\n• Voorzitter: de **Kamervoorzitter**.\n\n**Wat doet de Tweede Kamer?**\n• **Wetten maken**: voorstel → debat → stemmen.\n• **Regering controleren**: vragen stellen aan ministers.\n• **Begroting goedkeuren**: hoe geeft Nederland geld uit?\n\n**Politieke partijen** in 2025-2026 (~15 partijen): VVD, D66, PVV, GL-PvdA, CDA, JA21, SP, ChristenUnie, SGP, FvD, BBB, Volt, etc.\n\n**Coalitie**: meestal vormen meerdere partijen samen een meerderheid (>75 zetels) en regeren samen. Dat wordt vastgelegd in een **regeerakkoord**.\n\n**Oppositie**: partijen die niet meeregeren — zij controleren extra streng.",
     svg: tweedeKamerSvg(),
     checks: [
       {
@@ -234,7 +234,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Samen meerderheid vormen", tekst: "In NL haalt 1 partij nooit meerderheid alleen (zou >75 zetels nodig hebben). Daarom: na verkiezingen onderhandelen partijen wie samen regeren = coalitie. Ze schrijven samen REGEERAKKOORD. Anders = oppositie (controle vanuit minderheid)." }],
           woorden: [{ woord: "coalitie", uitleg: "Samenwerking van meerdere partijen om te regeren." }, { woord: "regeerakkoord", uitleg: "Document waarin coalitiepartijen afspreken wat ze samen willen doen." }, { woord: "formatie", uitleg: "Periode waarin coalitie wordt gevormd (kan maanden duren)." }],
-          theorie: "NL heeft meestal coalities van 3-4 partijen. Recent: Rutte IV = VVD+D66+CDA+CU (4 partijen). 2024+: PVV+VVD+NSC+BBB (4 partijen).",
+          theorie: "NL heeft meestal coalities van 3-4 partijen. Recent: Rutte IV = VVD+D66+CDA+CU (4 partijen). 2024-2025: PVV+VVD+NSC+BBB (4 partijen).",
           voorbeelden: [{ type: "voorbeelden", tekst: "Coalitiepartij = doet mee in kabinet. Oppositie = niet in kabinet maar controleert. Soms ook 'minderheidskabinet' (<76 zetels, wisselend steun)." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet een aparte partij (verzameling). Niet campagne (vóór verkiezing). Niet internationaal verdrag (=ander iets)." }],
           niveaus: { basis: "Samen-regerende partijen.", simpeler: "Coalitie = meerdere partijen die samen regeren (= meerderheid).", nogSimpeler: "Samen" },
@@ -244,7 +244,7 @@ const steps = [
   },
   {
     title: "Eerste Kamer + regering",
-    explanation: "**Eerste Kamer** (Senaat):\n• **75 zetels**.\n• Indirect gekozen door **Provinciale Staten** (provinciale parlementen).\n• Controleert wetten van de Tweede Kamer: zijn ze grondwetelijk en uitvoerbaar?\n• Kan een wet alleen aannemen of verwerpen — niet veranderen.\n\n**Regering** (= **kabinet**):\n• Bestaat uit:\n  - **Minister-president (premier)** — leider van het kabinet.\n  - **Ministers** — elk verantwoordelijk voor een gebied (Onderwijs, Financiën, Defensie, etc.).\n  - **Staatssecretarissen** — hulp-ministers voor specifieke onderwerpen.\n• Plus de **Koning** — staatshoofd (zie volgende stap).\n\n**Wat doet de regering?**\n• Voert wetten uit (uitvoerende macht).\n• Maakt wetsvoorstellen die ze naar de Tweede Kamer stuurt.\n• Regeert het land elke dag.\n\n**Hoe komt een regering tot stand?**\n1. Verkiezingen Tweede Kamer.\n2. **Formatie** (kan maanden duren): partijen onderhandelen om een meerderheid te vormen.\n3. **Regeerakkoord** wordt geschreven.\n4. Het nieuwe kabinet wordt beëdigd door de Koning.",
+    explanation: "**Eerste Kamer** (Senaat):\n• **75 zetels**.\n• Indirect gekozen door **Provinciale Staten** (provinciale parlementen).\n• Controleert wetten van de Tweede Kamer: zijn ze grondwettig en uitvoerbaar?\n• Kan een wet alleen aannemen of verwerpen — niet veranderen.\n\n**Regering** (= **kabinet**):\n• Bestaat uit:\n  - **Minister-president (premier)** — leider van het kabinet.\n  - **Ministers** — elk verantwoordelijk voor een gebied (Onderwijs, Financiën, Defensie, etc.).\n  - **Staatssecretarissen** — hulp-ministers voor specifieke onderwerpen.\n• Plus de **Koning** — staatshoofd (zie volgende stap).\n\n**Wat doet de regering?**\n• Voert wetten uit (uitvoerende macht).\n• Maakt wetsvoorstellen die ze naar de Tweede Kamer stuurt.\n• Regeert het land elke dag.\n\n**Hoe komt een regering tot stand?**\n1. Verkiezingen Tweede Kamer.\n2. **Formatie** (kan maanden duren): partijen onderhandelen om een meerderheid te vormen.\n3. **Regeerakkoord** wordt geschreven.\n4. Het nieuwe kabinet wordt beëdigd door de Koning.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="40" width="120" height="60" rx="6" fill="${COLORS.parlement}" opacity="0.15" stroke="${COLORS.parlement}" stroke-width="2"/>
 <text x="80" y="62" text-anchor="middle" fill="${COLORS.parlement}" font-size="11" font-family="Arial" font-weight="bold">EERSTE KAMER</text>
@@ -278,10 +278,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Koning is staatshoofd, niet hoofd regering.", "Voorzitter Tweede Kamer is een ander.", "Nederland heeft geen president."],
         uitlegPad: {
-          stappen: [{ titel: "Minister-president = premier", tekst: "Minister-president (afgekort MP, ook 'premier') is leider van het kabinet (=regering). Voorzit ministerraad (wekelijks vergadering ministers). Vertegenwoordigt NL in buitenland. Sinds 2024: Dick Schoof (was Mark Rutte 2010-2024)." }],
-          woorden: [{ woord: "Minister-president", uitleg: "Premier. Leider regering. Eerste onder gelijken (ministers)." }, { woord: "premier", uitleg: "Engels voor MP. 'Premier' = eerste/voornaamste minister." }, { woord: "kabinet", uitleg: "Alle ministers + staatssecretarissen samen. = regering." }],
-          theorie: "Onderscheid: koning = STAATSHOOFD (ceremonieel). Premier = REGERINGSLEIDER (politiek). In republieken (Duitsland, Italië) heeft je beide: president (staatshoofd) + premier (regering). NL: koning + premier.",
-          voorbeelden: [{ type: "premiers NL", tekst: "Mark Rutte 2010-2024 (langste premier ooit, 14 jaar). Daarvoor: Balkenende, Kok, Lubbers, Van Agt. Sinds juli 2024: Dick Schoof." }],
+          stappen: [{ titel: "Minister-president = premier", tekst: "Minister-president (afgekort MP, ook 'premier') is leider van het kabinet (=regering). Zit de ministerraad voor (wekelijkse vergadering ministers). Vertegenwoordigt NL in buitenland. In 2024 volgde Dick Schoof Mark Rutte (2010-2024) op." }],
+          woorden: [{ woord: "Minister-president", uitleg: "Premier. Leider regering. Eerste onder gelijken (ministers)." }, { woord: "premier", uitleg: "Ander woord voor MP. 'Premier' = eerste/voornaamste minister." }, { woord: "kabinet", uitleg: "Alle ministers + staatssecretarissen samen. = regering." }],
+          theorie: "Onderscheid: koning = STAATSHOOFD (ceremonieel). Premier = REGERINGSLEIDER (politiek). In republieken (Duitsland, Italië) heb je beide: president (staatshoofd) + premier (regering). NL: koning + premier.",
+          voorbeelden: [{ type: "premiers NL", tekst: "Mark Rutte 2010-2024 (langste premier ooit, 14 jaar). Daarvoor: Balkenende, Kok, Lubbers, Van Agt. In juli 2024 volgde Dick Schoof hem op." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Koning = ceremonieel staatshoofd. Tweede Kamervoorzitter = leidt vergaderingen Kamer. NL heeft GEEN president." }],
           niveaus: { basis: "Minister-president.", simpeler: "Regeringshoofd NL = minister-president (premier).", nogSimpeler: "Premier" },
         },
@@ -290,7 +290,7 @@ const steps = [
   },
   {
     title: "De Koning — wat doet hij?",
-    explanation: "Nederland is een **constitutionele monarchie**. De Koning is **staatshoofd**, maar heeft **geen echte politieke macht**. Wat hij doet, doet hij volgens de grondwet.\n\n**Huidige Koning**: Willem-Alexander (sinds 2013).\n**Koningin (echtgenote)**: Máxima.\n**Troonopvolgster**: prinses Amalia.\n\n**Wat doet de Koning?**\n• **Tekent wetten** — formele handeling, hij kan ze niet weigeren.\n• **Houdt Troonrede** — opent het parlementaire jaar (3e dinsdag van september = Prinsjesdag).\n• Vertegenwoordigt Nederland bij **buitenlandse bezoeken**.\n• Beëdigt nieuwe ministers.\n• Adviseert de minister-president (vertrouwelijk overleg, wekelijks).\n\n**Wat doet hij NIET?**\n• Wetten maken.\n• Politieke uitspraken in het openbaar.\n• Stemmen voor partijen.\n• Beslissingen nemen tegen de regering in.\n\n**Belangrijk principe**: \"De koning is onschendbaar, de ministers zijn verantwoordelijk\" (artikel 42 Grondwet). Dat betekent dat ministers — niet de Koning — zich verantwoorden in de Tweede Kamer.",
+    explanation: "Nederland is een **constitutionele monarchie**. De Koning is **staatshoofd**, maar heeft **geen echte politieke macht**. Wat hij doet, doet hij volgens de grondwet.\n\n**Huidige Koning**: Willem-Alexander (sinds 2013).\n**Koningin (echtgenote)**: Máxima.\n**Troonopvolgster**: prinses Amalia.\n\n**Wat doet de Koning?**\n• **Tekent wetten** — formele handeling, hij kan ze niet weigeren.\n• **Houdt Troonrede** — opent het parlementaire jaar (3e dinsdag van september = Prinsjesdag).\n• Vertegenwoordigt Nederland bij **buitenlandse bezoeken**.\n• Beëdigt nieuwe ministers.\n• Overlegt wekelijks vertrouwelijk met de minister-president.\n\n**Wat doet hij NIET?**\n• Wetten maken.\n• Politieke uitspraken in het openbaar.\n• Stemmen voor partijen.\n• Beslissingen nemen tegen de regering in.\n\n**Belangrijk principe**: \"De koning is onschendbaar, de ministers zijn verantwoordelijk\" (artikel 42 Grondwet). Dat betekent dat ministers — niet de Koning — zich verantwoorden in de Tweede Kamer.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.koning}" font-size="14" font-family="Arial" font-weight="bold">de Koning 👑</text>
 <text x="150" y="50" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">Willem-Alexander (sinds 2013)</text>
@@ -309,9 +309,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Willem-Alexander sinds 2013", tekst: "30 april 2013 abdiceerde Beatrix (afstand troon). Willem-Alexander werd koning. Eerste mannelijke staatshoofd NL sinds 1890. Geboren 1967. Getrouwd met Máxima (Argentijnse). 3 dochters: Amalia (kroonprinses), Alexia, Ariane." }],
           woorden: [{ woord: "Willem-Alexander", uitleg: "Koning der Nederlanden sinds 2013. Geboren 27 april 1967." }, { woord: "abdicatie", uitleg: "Vrijwillig afstand doen van troon. Beatrix in 2013, eerder Wilhelmina (1948) en Juliana (1980)." }, { woord: "Amalia", uitleg: "Prinses van Oranje. Kroonprinses. Geboren 2003." }],
-          theorie: "Erfopvolging NL: oudste kind (sinds 1983 ook vrouw mag). Lijn: Willem-Alexander → Amalia → Alexia → Ariane. Daarna prinses Margriet's lijn.",
+          theorie: "Erfopvolging NL: oudste kind (sinds 1983 ook vrouw mag). Lijn: Willem-Alexander → Amalia → Alexia → Ariane. Daarna prins Constantijn en zijn kinderen.",
           voorbeelden: [{ type: "tijdlijn", tekst: "Wilhelmina 1890-1948. Juliana 1948-1980. Beatrix 1980-2013. Willem-Alexander 2013-nu. 3 koninginnen achter elkaar, daarna weer een koning." }],
-          basiskennis: [{ onderwerp: "Niet andere", uitleg: "Beatrix abdiceerde 2013 (nog leven). Juliana tot 1980 (overl. 2004). Amalia = nog troonopvolgster, niet koningin." }],
+          basiskennis: [{ onderwerp: "Niet andere", uitleg: "Beatrix abdiceerde 2013 (leeft nog). Juliana tot 1980 (overl. 2004). Amalia = nog troonopvolgster, niet koningin." }],
           niveaus: { basis: "Willem-Alexander.", simpeler: "Koning sinds 2013 = Willem-Alexander.", nogSimpeler: "Willem-Alexander" },
         },
       },
@@ -323,7 +323,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen veto in NL", tekst: "In NL constitutionele monarchie: Koning TEKENT wetten verplicht. Dat is symbolisch (laatste stap). Hij mag niet weigeren — geen veto. Dit zou ongrondwettelijk zijn. 'De koning is onschendbaar, de ministers zijn verantwoordelijk' (art. 42 Grondwet)." }],
           woorden: [{ woord: "veto", uitleg: "Recht om iets te blokkeren. Latijn 'ik verbied'." }, { woord: "onschendbaar", uitleg: "Niet aansprakelijk. Koning kan niet politiek verantwoordelijk worden gehouden — wel de ministers." }],
-          theorie: "Vergelijk VS-president: heeft wél veto-recht over wetten (kan geblokkeerd worden door 2/3 meerderheid Congress). NL-koning: geen enkele veto. Symbolisch ondertekenen.",
+          theorie: "Vergelijk VS-president: heeft wél veto-recht over wetten (dat veto kan door een 2/3 meerderheid van het Congres worden doorbroken). NL-koning: geen enkele veto. Symbolisch ondertekenen.",
           voorbeelden: [{ type: "alle koningen", tekst: "Wilhelmina, Juliana, Beatrix, Willem-Alexander: niemand heeft ooit wet geweigerd te tekenen. Dat zou grondwet schenden." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Geen veto = geen 'ja, hij kan weigeren'. Geen uitzondering bij eigen mening of oorlog. Strikt geen blokkade-macht." }],
           niveaus: { basis: "Ondertekent formeel.", simpeler: "Koning tekent wetten formeel — geen veto, kan niet weigeren.", nogSimpeler: "Formaliteit" },
@@ -335,7 +335,7 @@ const steps = [
   // C
   {
     title: "Grondwet en grondrechten",
-    explanation: "De **Grondwet** is de **belangrijkste wet** van Nederland. Alle andere wetten moeten ermee in overeenstemming zijn.\n\n**Geschiedenis**:\n• 1848: **Thorbecke** schreef de moderne grondwet — basis voor parlementaire democratie.\n• 1983: laatste grote herziening.\n\n**Grondrechten** zijn rechten die iedereen heeft. Ze staan in de eerste hoofdstukken van de Grondwet:\n\n**Klassieke grondrechten** (vrijheidsrechten):\n• Vrijheid van **godsdienst** (art. 6)\n• Vrijheid van **meningsuiting** (art. 7)\n• Vrijheid van **onderwijs** (art. 23)\n• Recht op **vereniging en vergadering** (art. 8-9)\n• **Onaantastbaarheid lichaam** (art. 11)\n• **Bescherming privacy** (art. 10, 12)\n• **Gelijkheidsbeginsel** (art. 1) — niemand mag discrimineren\n\n**Sociale grondrechten** (zorgrechten):\n• Recht op **werk** (art. 19)\n• Recht op **gezondheidszorg** (art. 22)\n• Recht op **onderwijs** (art. 23)\n• Recht op **woning** (art. 22)\n\n**Verschil**: klassieke = wat de overheid niet mag doen. Sociale = wat de overheid moet zorgen.\n\n**Beroemd is artikel 1**: *\"Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld.\"*",
+    explanation: "De **Grondwet** is de **belangrijkste wet** van Nederland. Alle andere wetten moeten ermee in overeenstemming zijn.\n\n**Geschiedenis**:\n• 1848: **Thorbecke** schreef de moderne grondwet — basis voor parlementaire democratie.\n• 1983: laatste grote herziening.\n\n**Grondrechten** zijn rechten die iedereen heeft. Ze staan in de eerste hoofdstukken van de Grondwet:\n\n**Klassieke grondrechten** (vrijheidsrechten):\n• Vrijheid van **godsdienst** (art. 6)\n• Vrijheid van **meningsuiting** (art. 7)\n• Vrijheid van **onderwijs** (art. 23)\n• Recht op **vereniging en vergadering** (art. 8-9)\n• **Onaantastbaarheid lichaam** (art. 11)\n• **Bescherming privacy** (art. 10, 12)\n• **Gelijkheidsbeginsel** (art. 1) — niemand mag discrimineren\n\n**Sociale grondrechten** (zorgrechten):\n• Recht op **werk** (art. 19)\n• Recht op **gezondheidszorg** (art. 22)\n• Recht op **onderwijs** (art. 23)\n• Recht op **woning** (art. 22)\n\n**Verschil**: klassieke = wat de overheid niet mag doen. Sociale = waarvoor de overheid moet zorgen.\n\n**Beroemd is artikel 1**: *\"Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld.\"*",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">Grondwet</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial" font-weight="bold">Klassiek (vrijheidsrechten):</text>
@@ -352,7 +352,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Bekend als 'vader des vaderlands' uit de 16e eeuw — toen bestond de moderne grondwet nog niet.", "Bezette Nederland rond 1800; daarvoor en daarna golden andere regels.", "Was koningin in de 20e eeuw, ruim na de grondwet-herziening."],
         uitlegPad: {
-          stappen: [{ titel: "Thorbecke 1848 — in 24 uur", tekst: "Johan Rudolf Thorbecke (1798-1872) was liberaal NL-politicus. 1848 = revolutiejaar Europa. Koning Willem II (bang voor onrust) gaf Thorbecke opdracht nieuwe grondwet te schrijven. Hij deed dit in 24 uur tijdens 'nacht van Twesi'. Vanaf toen: parlement leidend, koning gebonden aan grondwet." }],
+          stappen: [{ titel: "Thorbecke 1848", tekst: "Johan Rudolf Thorbecke (1798-1872) was liberaal NL-politicus. 1848 = revolutiejaar Europa. Koning Willem II (bang voor onrust) werd naar eigen zeggen 'in 24 uur van conservatief liberaal' en liet een commissie onder leiding van Thorbecke een nieuwe grondwet schrijven. Vanaf toen: parlement leidend, koning gebonden aan grondwet." }],
           woorden: [{ woord: "Thorbecke", uitleg: "Liberaal staatsman 1798-1872. Vader NL-grondwet." }, { woord: "grondwet", uitleg: "Hoogste wet van land. Andere wetten moeten ermee in lijn zijn." }],
           theorie: "Belang Thorbecke-grondwet: van absolute monarchie naar parlementaire democratie. Ministers verantwoordelijk aan parlement (niet koning). Basis voor moderne NL.",
           voorbeelden: [{ type: "context", tekst: "1848 zelfde jaar als revoluties in heel Europa: Frankrijk (val koning), Duitsland, Oostenrijk. NL deed het 'netjes' zonder geweld via Thorbecke." }],
@@ -366,7 +366,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Artikel 24 over staatshoofd.", "Niet artikel 1.", "Vrijheid van godsdienst is artikel 6."],
         uitlegPad: {
-          stappen: [{ titel: "Gelijkheidsbeginsel", tekst: "Artikel 1 Grondwet: 'Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld. Discriminatie wegens godsdienst, levensovertuiging, politieke gezindheid, ras, geslacht of op welke grond dan ook, is niet toegestaan.' Dit is BASIS van NL-rechtsstaat." }],
+          stappen: [{ titel: "Gelijkheidsbeginsel", tekst: "Artikel 1 Grondwet: 'Allen die zich in Nederland bevinden, worden in gelijke gevallen gelijk behandeld. Discriminatie wegens godsdienst, levensovertuiging, politieke gezindheid, ras, geslacht, handicap, seksuele gerichtheid of op welke grond dan ook, is niet toegestaan.' Dit is BASIS van NL-rechtsstaat." }],
           woorden: [{ woord: "gelijkheidsbeginsel", uitleg: "Iedereen wordt gelijk behandeld door wet en overheid." }, { woord: "discriminatie", uitleg: "Onterecht onderscheid maken op basis van eigenschappen." }],
           theorie: "Artikel 1 staat helemaal vooraan omdat het belangrijkst is. Sinds 1983 (laatste grondwet-herziening). 2023 uitbreiding met 'handicap + seksuele gerichtheid'.",
           voorbeelden: [{ type: "toepassing", tekst: "Werkgever mag niet weigeren omdat sollicitant moslim/joods/vrouw/homoseksueel is. Artikel 1 beschermt. Overheid moet ook iedereen gelijk behandelen." }],
@@ -378,7 +378,7 @@ const steps = [
   },
   {
     title: "Rechtsstaat en rechters",
-    explanation: "Een **rechtsstaat** is een land waar:\n• Iedereen zich aan **dezelfde wetten** moet houden, ook de overheid.\n• **Onafhankelijke rechters** beoordelen geschillen.\n• Niemand wordt willekeurig gestraft of gevangen gezet.\n\nDit is anders dan een **politiestaat** (overheid heeft alle macht) of **wetteloze staat** (geen regels).\n\n**Soorten rechtspraak in NL**:\n\n**Strafrecht**: misdrijven (diefstal, geweld, moord).\n• Officier van Justitie klaagt aan.\n• Rechter beoordeelt schuld + straft.\n• Mogelijke straffen: boete, taakstraf, gevangenis, tbs.\n\n**Civielrecht**: geschillen tussen burgers/bedrijven.\n• Echtscheiding, schade vergoeden, contract verbroken.\n\n**Bestuursrecht**: tussen burger en overheid.\n• Bv. boete bij parkeren — je kunt naar de rechter.\n\n**Hoeveel rechtbanken?**\n1. **Rechtbank** (eerste niveau).\n2. **Gerechtshof** (hoger beroep).\n3. **Hoge Raad** (cassatie — alleen of de wet juist toegepast is).\n\n**Onafhankelijkheid**: rechters worden voor het leven benoemd door de Koning. Ze kunnen niet ontslagen worden door politici. Dat beschermt onpartijdigheid.",
+    explanation: "Een **rechtsstaat** is een land waar:\n• Iedereen zich aan **dezelfde wetten** moet houden, ook de overheid.\n• **Onafhankelijke rechters** beoordelen geschillen.\n• Niemand wordt willekeurig gestraft of gevangengezet.\n\nDit is anders dan een **politiestaat** (overheid heeft alle macht) of **wetteloze staat** (geen regels).\n\n**Soorten rechtspraak in NL**:\n\n**Strafrecht**: misdrijven (diefstal, geweld, moord).\n• Officier van Justitie klaagt aan.\n• Rechter beoordeelt schuld + straft.\n• Mogelijke straffen: boete, taakstraf, gevangenis, tbs.\n\n**Civielrecht**: geschillen tussen burgers/bedrijven.\n• Echtscheiding, schade vergoeden, contract verbroken.\n\n**Bestuursrecht**: tussen burger en overheid.\n• Bv. boete bij parkeren — je kunt naar de rechter.\n\n**Hoeveel rechtbanken?**\n1. **Rechtbank** (eerste niveau).\n2. **Gerechtshof** (hoger beroep).\n3. **Hoge Raad** (cassatie — alleen of de wet juist toegepast is).\n\n**Onafhankelijkheid**: rechters worden voor het leven (tot hun 70e) benoemd door de Koning. Ze kunnen niet ontslagen worden door politici. Dat beschermt onpartijdigheid.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.recht}" font-size="13" font-family="Arial" font-weight="bold">rechtsstaat ⚖️</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">strafrecht: diefstal, geweld</text>
@@ -421,7 +421,7 @@ const steps = [
   },
   {
     title: "Burger zijn — rechten en plichten",
-    explanation: "Als Nederlandse burger heb je **rechten** én **plichten**.\n\n**Belangrijkste rechten**:\n• Stemrecht (vanaf 18).\n• Vrijheid van mening, godsdienst, onderwijs.\n• Recht op een eerlijk proces.\n• Recht op gezondheidszorg, onderwijs.\n• Privacy.\n\n**Belangrijkste plichten**:\n• **Belasting betalen** (voor onderwijs, zorg, infrastructuur).\n• **Leerplicht** tot 18 jaar (of tot startkwalificatie).\n• **Wetten naleven** (geen diefstal, geweld, etc.).\n• **Identificatieplicht** vanaf 14 jaar.\n• **Getuigeplicht** als rechter dat vraagt.\n\n**Geen plicht meer (sinds 1997)**: militaire dienst (dienstplicht). Ze bestaat nog op papier maar wordt niet uitgevoerd — vrijwillig leger.\n\n**Verkiezingen**: stemmen is een **recht**, geen plicht in NL. Maar door te stemmen invloed je beleid. Niet stemmen = laten anderen voor jou kiezen.\n\n**Burgerschap**: betekenis van 'goed burger zijn' in NL:\n• Verantwoordelijkheid nemen voor je gedrag.\n• Anderen respecteren ook al ben je 't niet eens.\n• Bijdragen aan de maatschappij.",
+    explanation: "Als Nederlandse burger heb je **rechten** én **plichten**.\n\n**Belangrijkste rechten**:\n• Stemrecht (vanaf 18).\n• Vrijheid van mening, godsdienst, onderwijs.\n• Recht op een eerlijk proces.\n• Recht op gezondheidszorg, onderwijs.\n• Privacy.\n\n**Belangrijkste plichten**:\n• **Belasting betalen** (voor onderwijs, zorg, infrastructuur).\n• **Leerplicht** tot 18 jaar (of tot startkwalificatie).\n• **Wetten naleven** (geen diefstal, geweld, etc.).\n• **Identificatieplicht** vanaf 14 jaar.\n• **Getuigeplicht** als rechter dat vraagt.\n\n**Geen plicht meer (sinds 1997)**: militaire dienst (dienstplicht). Ze bestaat nog op papier maar wordt niet uitgevoerd — vrijwillig leger.\n\n**Verkiezingen**: stemmen is een **recht**, geen plicht in NL. Maar door te stemmen beïnvloed je beleid. Niet stemmen = anderen voor jou laten kiezen.\n\n**Burgerschap**: betekenis van 'goed burger zijn' in NL:\n• Verantwoordelijkheid nemen voor je gedrag.\n• Anderen respecteren ook al ben je 't niet eens.\n• Bijdragen aan de maatschappij.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">burger zijn</text>
 <rect x="20" y="40" width="120" height="120" rx="8" fill="${COLORS.good}" opacity="0.12"/>
@@ -472,7 +472,7 @@ const steps = [
   // D
   {
     title: "Nederland in de wereld",
-    explanation: "Nederland is geen eiland — we werken samen met andere landen.\n\n**Europese Unie (EU)**:\n• 27 landen, sinds 1957 (begon met 6).\n• NL is **medeoprichter**.\n• **Vrij verkeer** van personen, goederen, diensten en kapitaal binnen EU.\n• Gemeenschappelijke regels (bv. AVG-privacywet).\n• **Euro** is de munt sinds 2002 (in 21 EU-landen).\n• **Europees Parlement** kiest NL elke 5 jaar (29 NL-zetels van 720).\n\n**Verenigde Naties (VN)**:\n• 193 landen (bijna alle).\n• Opgericht 1945, na WO2.\n• Doel: vrede, mensenrechten, ontwikkeling.\n• **Veiligheidsraad** mag sancties opleggen.\n• Bekende organisaties: WHO (gezondheid), UNICEF (kinderen), UNESCO (cultuur).\n\n**NAVO**:\n• Militaire bondgenootschap, 32 landen.\n• \"Aanval op één = aanval op allen\" (artikel 5).\n• NL hoort bij sinds oprichting (1949).\n\n**Andere belangrijke organisaties**:\n• **WTO** (handel)\n• **IMF** (financiën)\n• **Internationaal Strafhof** (Den Haag!) — berecht oorlogsmisdaden.",
+    explanation: "Nederland is geen eiland — we werken samen met andere landen.\n\n**Europese Unie (EU)**:\n• 27 landen, sinds 1957 (begon met 6).\n• NL is **medeoprichter**.\n• **Vrij verkeer** van personen, goederen, diensten en kapitaal binnen EU.\n• Gemeenschappelijke regels (bv. AVG-privacywet).\n• **Euro** is de munt sinds 2002 (in 21 EU-landen).\n• **Europees Parlement** kiest NL elke 5 jaar (31 NL-zetels van 720).\n\n**Verenigde Naties (VN)**:\n• 193 landen (bijna alle).\n• Opgericht 1945, na WO2.\n• Doel: vrede, mensenrechten, ontwikkeling.\n• **Veiligheidsraad** mag sancties opleggen.\n• Bekende organisaties: WHO (gezondheid), UNICEF (kinderen), UNESCO (cultuur).\n\n**NAVO**:\n• Militair bondgenootschap, 32 landen.\n• \"Aanval op één = aanval op allen\" (artikel 5).\n• NL is lid sinds de oprichting (1949).\n\n**Andere belangrijke organisaties**:\n• **WTO** (handel)\n• **IMF** (financiën)\n• **Internationaal Strafhof** (Den Haag!) — berecht oorlogsmisdaden.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">NL in de wereld</text>
 <rect x="20" y="40" width="80" height="60" rx="6" fill="#003399" opacity="0.30" stroke="#003399" stroke-width="2"/>
@@ -553,7 +553,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Wetten maakt de Tweede Kamer.", "Koning kan ministers niet ontslaan.", "Tweede Kamer heeft eigen voorzitter."],
         uitlegPad: {
-          stappen: [{ titel: "Koning ondertekent — meer niet", tekst: "Constitutionele monarchie: Koning ondertekent wetten als formaliteit (laatste handeling, kan niet weigeren). Daarbuiten: ceremonieel werk, vertegenwoordigt NL, advies aan premier. Geen wetgevende macht. Geen ministerieel ontslag-recht. Leidt geen Kamer (Tweede Kamer heeft eigen voorzitter)." }],
+          stappen: [{ titel: "Koning ondertekent — meer niet", tekst: "Constitutionele monarchie: Koning ondertekent wetten als formaliteit (laatste handeling, kan niet weigeren). Daarbuiten: ceremonieel werk, vertegenwoordigt NL, wekelijks overleg met premier. Geen wetgevende macht. Geen ministerieel ontslag-recht. Leidt geen Kamer (Tweede Kamer heeft eigen voorzitter)." }],
           woorden: [{ woord: "formele handtekening", uitleg: "Ondertekening zonder politieke macht. Verplichte handeling." }],
           theorie: "'De Koning is onschendbaar, ministers zijn verantwoordelijk' (art. 42 Grondwet). Koning kan geen politieke uitspraken doen, geen wetten maken, geen ministers ontslaan. Alle politieke macht bij gekozen Kamer + regering.",
           voorbeelden: [{ type: "wel/niet", tekst: "WEL: ondertekenen wetten, troonrede uitspreken (door regering geschreven), buitenlandse bezoeken. NIET: wetten maken, beslissen, partijen kiezen, ministers ontslaan." }],
@@ -569,7 +569,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Binnenhof — 800 jaar oud", tekst: "Tweede Kamer vergadert in Binnenhof, Den Haag. Eeuwenoud complex (ouder dan NL als land). Sinds renovatie 2021-2027 tijdelijk in andere gebouwen (Bezuidenhoutseweg). Maar STAATSRECHTELIJK is Binnenhof de plek. Ridderzaal hier (waar koning Troonrede uitspreekt op Prinsjesdag)." }],
           woorden: [{ woord: "Binnenhof", uitleg: "Historisch parlements- en regeringscomplex Den Haag." }, { woord: "Ridderzaal", uitleg: "Belangrijkste zaal Binnenhof. Troonrede Prinsjesdag." }, { woord: "Prinsjesdag", uitleg: "3e dinsdag september. Koning houdt Troonrede. Opening parlementair jaar." }],
-          theorie: "Andere bekende gebouwen Den Haag: Paleis Huis ten Bosch (koning woont), Catshuis (ambtswoning premier), Vredespaleis (Internationaal Gerechtshof + ICJ). Allemaal verschillende functies.",
+          theorie: "Andere bekende gebouwen Den Haag: Paleis Huis ten Bosch (koning woont), Catshuis (ambtswoning premier), Vredespaleis (Internationaal Gerechtshof/ICJ + Permanent Hof van Arbitrage). Allemaal verschillende functies.",
           voorbeelden: [{ type: "andere", tekst: "Paleis op de Dam (Amsterdam) = officieel paleis Koning voor ceremoniën. Niet politiek. Catshuis (Den Haag) = werkresidentie premier." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Paleis op de Dam = koninklijk paleis Amsterdam. Vredespaleis = ICJ/PCA Den Haag. Catshuis = premier-woning." }],
           niveaus: { basis: "Binnenhof Den Haag.", simpeler: "Tweede Kamer = Binnenhof, Den Haag.", nogSimpeler: "Binnenhof" },
@@ -577,13 +577,13 @@ const steps = [
       },
       {
         q: "Wat is de **euro**?",
-        options: ["De munt van 20 EU-landen","Een Nederlandse munt","Een Europese stad","Een politieke partij"],
+        options: ["De munt van 21 EU-landen","Een Nederlandse munt","Een Europese stad","Een politieke partij"],
         answer: 0,
         wrongHints: [null, "Niet alleen NL.", "Geen plaats.", "Geen partij."],
         uitlegPad: {
           stappen: [{ titel: "Euro — 21 landen", tekst: "Euro (€) is de gemeenschappelijke munt van 21 EU-landen (in 2026): NL, DE, FR, IT, ES, PT, BE, LU, IE, FI, AT, GR, MT, CY, EE, LV, LT, SI, SK, HR, BG (Bulgarije sinds 1 jan 2026). Ingevoerd: 1999 (giraal), 2002 (briefjes+munten). 6 EU-landen behouden eigen munt (vb. Denemarken kroon, Zweden kroon, Polen zloty)." }],
           woorden: [{ woord: "euro", uitleg: "Gemeenschappelijke EU-munt. Symbool €." }, { woord: "Eurozone", uitleg: "EU-landen die euro hebben. Bestuurd door ECB (Europese Centrale Bank) Frankfurt." }, { woord: "ECB", uitleg: "Europese Centrale Bank. Bepaalt euro-rente + monetair beleid." }],
-          theorie: "Vóór 2002 had NL gulden (ƒ). 1 euro = 2,20371 gulden. Euro maakte handel binnen EU makkelijker (geen wisselen). Mark Rutte (toen kandidaat) was ervoor. Geert Wilders (later) tegen.",
+          theorie: "Vóór 2002 had NL gulden (ƒ). 1 euro = 2,20371 gulden. Euro maakte handel binnen EU makkelijker (geen wisselen).",
           voorbeelden: [{ type: "wisselen", tekst: "Reis naar UK: pond nodig. Reis naar DE/FR/IT/ES: euro (zelfde als NL). Reis naar Zweden: kroon. Polen: zloty." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet alleen NL (21 landen). Geen stad. Geen partij." }],
           niveaus: { basis: "Munt 21 EU-landen.", simpeler: "Euro = munt van 21 EU-landen, incl. NL sinds 2002.", nogSimpeler: "EU-munt" },

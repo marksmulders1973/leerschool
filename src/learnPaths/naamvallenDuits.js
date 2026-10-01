@@ -20,7 +20,7 @@ const chapters = [
 const steps = [
   {
     title: "Duits — drie geslachten",
-    explanation: "In het Duits heeft elk zelfstandig naamwoord een **geslacht**: mannelijk, vrouwelijk of onzijdig. Dit bepaalt welk **lidwoord** je gebruikt:\n\n• **der** = mannelijk *(de Mann, de jongen)*\n• **die** = vrouwelijk *(de Frau, de moeder)*\n• **das** = onzijdig *(het Kind, het huis)*\n• **die** = meervoud *(de Männer, de Frauen, de Kinder)*\n\n**In het Nederlands** hebben we 'de' en 'het' — geen drie geslachten zoals Duits.\n\n**Probleem**: het geslacht is in Duits niet altijd logisch.\n• das Mädchen *(meisje, onzijdig!)* \n• die Sonne *(zon, vrouwelijk)* \n• der Mond *(maan, mannelijk)*\n\nJe moet daarom het **lidwoord erbij leren** wanneer je een woord leert.\n\n**Truc**: leer woorden ALTIJD met lidwoord:\n❌ Tisch *(tafel)* \n✓ **der** Tisch",
+    explanation: "In het Duits heeft elk zelfstandig naamwoord een **geslacht**: mannelijk, vrouwelijk of onzijdig. Dit bepaalt welk **lidwoord** je gebruikt:\n\n• **der** = mannelijk *(der Mann = de man)*\n• **die** = vrouwelijk *(die Frau = de vrouw)*\n• **das** = onzijdig *(das Kind = het kind)*\n• **die** = meervoud *(de Männer, de Frauen, de Kinder)*\n\n**In het Nederlands** hebben we 'de' en 'het' — geen drie geslachten zoals Duits.\n\n**Probleem**: het geslacht is in het Duits niet altijd logisch.\n• das Mädchen *(meisje, onzijdig!)* \n• die Sonne *(zon, vrouwelijk)* \n• der Mond *(maan, mannelijk)*\n\nJe moet daarom het **lidwoord erbij leren** wanneer je een woord leert.\n\n**Truc**: leer woorden ALTIJD met lidwoord:\n❌ Tisch *(tafel)* \n✓ **der** Tisch",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="40" width="80" height="80" rx="10" fill="${COLORS.mas}" opacity="0.30" stroke="${COLORS.mas}" stroke-width="2"/>
 <text x="60" y="70" text-anchor="middle" fill="${COLORS.mas}" font-size="14" font-family="Arial" font-weight="bold">der</text>
@@ -113,7 +113,7 @@ const steps = [
   },
   {
     title: "Onbepaald lidwoord — ein, eine, ein",
-    explanation: "Naast 'der/die/das' heeft Duits ook **onbepaalde lidwoorden** — vergelijkbaar met 'een' in Nederlands.\n\n**Vormen**:\n• **ein** — bij mannelijk en onzijdig. *(ein Mann, ein Kind)*\n• **eine** — bij vrouwelijk. *(eine Frau)*\n\n**Geen meervoud** voor 'ein' — bij meervoud gebruik je geen lidwoord:\n• die Bücher → Bücher *(boeken)*\n\n**Truc**: 'eine' = vrouwelijk → die ↔ eine (beide e's). Verder gewoon 'ein'.\n\n**Voorbeelden**:\n• der Mann → ein Mann\n• die Frau → eine Frau\n• das Kind → ein Kind\n• die Bücher → Bücher (geen onbepaald lidwoord in meervoud)\n\n**Negatie**: 'kein' (geen) volgt dezelfde patronen — kein Mann, keine Frau, kein Kind.",
+    explanation: "Naast 'der/die/das' heeft het Duits ook **onbepaalde lidwoorden** — vergelijkbaar met 'een' in het Nederlands.\n\n**Vormen**:\n• **ein** — bij mannelijk en onzijdig. *(ein Mann, ein Kind)*\n• **eine** — bij vrouwelijk. *(eine Frau)*\n\n**Geen meervoud** voor 'ein' — bij meervoud gebruik je geen lidwoord:\n• die Bücher → Bücher *(boeken)*\n\n**Truc**: 'eine' = vrouwelijk → die ↔ eine (beide e's). Verder gewoon 'ein'.\n\n**Voorbeelden**:\n• der Mann → ein Mann\n• die Frau → eine Frau\n• das Kind → ein Kind\n• die Bücher → Bücher (geen onbepaald lidwoord in meervoud)\n\n**Negatie**: 'kein' (geen) volgt dezelfde patronen — kein Mann, keine Frau, kein Kind.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">onbepaald lidwoord</text>
 <rect x="20" y="50" width="80" height="60" rx="6" fill="${COLORS.mas}" opacity="0.20"/>
@@ -142,7 +142,7 @@ const steps = [
           niveaus: {
             basis: "Een vrouw = eine Frau (vrouwelijk → eine).",
             simpeler: "Frau = vrouwelijk woord. Onbepaald lidwoord vrouwelijk = eine. Dus eine Frau.",
-            nogSimpeler: "Truc: 'die' wordt 'eine' (beide eindigen op -e). 'ein' is voor de-woorden en het-woorden mannelijk/onzijdig.",
+            nogSimpeler: "Truc: 'die' wordt 'eine' (beide eindigen op -e). 'ein' is voor mannelijke en onzijdige woorden.",
           },
         },
       },
@@ -164,7 +164,7 @@ const steps = [
   },
   {
     title: "Bezittelijke voornaamwoorden",
-    explanation: "Bezittelijk: 'mijn / jouw / onze' enz. — komt vaak voor.\n\n**Basisvormen** (mannelijk + onzijdig + meervoud):\n• mein = mijn\n• dein = jouw\n• sein = zijn (van hem)\n• ihr = haar (van haar)\n• unser = ons\n• euer = jullie\n• ihr = hun / Ihr = uw (beleefd)\n\n**Bij vrouwelijke woorden** krijgt het een **-e** erachter:\n• meine, deine, seine, unsere, euere, ihre.\n\n**Voorbeeld**:\n• mein Vater (mannelijk → mein)\n• meine Mutter (vrouwelijk → meine)\n• mein Kind (onzijdig → mein)\n• meine Eltern (meervoud → meine)\n\n**Truc**: bezittelijk volgt het patroon van **kein/eine** — vrouwelijk + meervoud krijgen -e.",
+    explanation: "Bezittelijk: 'mijn / jouw / onze' enz. — komt vaak voor.\n\n**Basisvormen** (mannelijk + onzijdig):\n• mein = mijn\n• dein = jouw\n• sein = zijn (van hem)\n• ihr = haar (van haar)\n• unser = ons\n• euer = jullie\n• ihr = hun / Ihr = uw (beleefd)\n\n**Bij vrouwelijke woorden** krijgt het een **-e** erachter:\n• meine, deine, seine, unsere, euere, ihre.\n\n**Voorbeeld**:\n• mein Vater (mannelijk → mein)\n• meine Mutter (vrouwelijk → meine)\n• mein Kind (onzijdig → mein)\n• meine Eltern (meervoud → meine)\n\n**Truc**: bezittelijk volgt het patroon van **kein/eine** — vrouwelijk + meervoud krijgen -e.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">bezittelijk: mein / meine</text>
 <rect x="20" y="40" width="120" height="60" rx="6" fill="${COLORS.mas}" opacity="0.20"/>
@@ -211,7 +211,7 @@ const steps = [
   // B
   {
     title: "Wat zijn naamvallen?",
-    explanation: "In Duits verandert het lidwoord (en soms het zelfstandig naamwoord zelf) naargelang de **rol in de zin**. Die rol heet de **naamval**:\n\n**1. Nominatief** (1e nv) — onderwerp van de zin.\n*Wer/was?* — Wie/wat doet het?\n\n**2. Genitief** (2e nv) — bezit (in NL: 'van').\n*Wessen?*\n\n**3. Datief** (3e nv) — meewerkend voorwerp (aan/voor wie?).\n*Wem?*\n\n**4. Accusatief** (4e nv) — lijdend voorwerp (wat wordt gedaan/geraakt?).\n*Wen/was?*\n\n**Voorbeeld** in zinnen:\n• Der Mann gibt der Frau das Buch.\n• Der Mann (NOM, onderwerp) — wie geeft?\n• der Frau (DAT, aan wie geeft hij?) — meewerkend.\n• das Buch (ACC, wat wordt gegeven?) — lijdend.\n\nElke naamval heeft eigen vormen voor der/die/das.",
+    explanation: "In het Duits verandert het lidwoord (en soms het zelfstandig naamwoord zelf) naargelang de **rol in de zin**. Die rol heet de **naamval**:\n\n**1. Nominatief** (1e nv) — onderwerp van de zin.\n*Wer/was?* — Wie/wat doet het?\n\n**2. Genitief** (2e nv) — bezit (in NL: 'van').\n*Wessen?*\n\n**3. Datief** (3e nv) — meewerkend voorwerp (aan/voor wie?).\n*Wem?*\n\n**4. Accusatief** (4e nv) — lijdend voorwerp (wat wordt gedaan/geraakt?).\n*Wen/was?*\n\n**Voorbeeld** in zinnen:\n• Der Mann gibt der Frau das Buch.\n• Der Mann (NOM, onderwerp) — wie geeft?\n• der Frau (DAT, aan wie geeft hij?) — meewerkend.\n• das Buch (ACC, wat wordt gegeven?) — lijdend.\n\nElke naamval heeft eigen vormen voor der/die/das.",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">4 naamvallen</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="12" font-family="Arial" font-weight="bold">1. Nominatief</text>
@@ -399,7 +399,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
 
   {
     title: "Eindopdracht — naamvallen door elkaar",
-    explanation: "Tijd om alles te combineren!\n\n**Snelle samenvatting**:\n\n| | m | v | o | mv |\n|---|---|---|---|---|\n| Nom | der | die | das | die |\n| Acc | **den** | die | das | die |\n| Dat | dem | der | dem | **den** |\n| Gen | des | der | des | der |\n\n**Ezelsbruggetjes**:\n• Acc verandert ALLEEN bij mannelijk (der → den).\n• Datief vrouwelijk = der.\n• Datief meervoud = den (+ noun krijgt -n).\n\n**Voorzetsels**:\n• Acc: **d**urch, **f**ür, **g**egen, **o**hne, **u**m → \"DFGOU\"\n• Dat: **a**us, **b**ei, **m**it, **n**ach, **s**eit, **v**on, **z**u\n\nVeel succes!",
+    explanation: "Tijd om alles te combineren!\n\n**Snelle samenvatting**:\n\n| | m | v | o | mv |\n|---|---|---|---|---|\n| Nom | der | die | das | die |\n| Acc | **den** | die | das | die |\n| Dat | dem | der | dem | **den** |\n| Gen | des | der | des | der |\n\n**Ezelsbruggetjes**:\n• Acc verandert ALLEEN bij mannelijk (der → den).\n• Datief vrouwelijk = der.\n• Datief meervoud = den (+ zelfstandig naamwoord krijgt -n).\n\n**Voorzetsels**:\n• Acc: **d**urch, **f**ür, **g**egen, **o**hne, **u**m → \"DFGOU\"\n• Dat: **a**us, **b**ei, **m**it, **n**ach, **s**eit, **v**on, **z**u\n\nVeel succes!",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="24" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">checklist</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">1. Geslacht weten? (der/die/das)</text>
