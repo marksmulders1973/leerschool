@@ -275,13 +275,13 @@ const steps = [
         },
       },
       {
-        q: "Een sportclub: 4 senioren + 3 junioren = 50 leden. 2 senioren + 5 junioren = 40 leden. Senioren?",
-        options: ["7,5 (klopt niet — getallen check)", "8", "5", "10"],
+        q: "Een sportclub rekent met teams: 4 senioren + 3 junioren = 50 punten. 2 senioren + 5 junioren = 46 punten. Hoeveel punten is één senior waard?",
+        options: ["7", "8", "5", "10"],
         answer: 1,
-        wrongHints: ["Eerlijke afkap nodig — meestal heel getal.", null, "Niet — controleer.", "Niet."],
+        wrongHints: ["Vul het in: klopt 4s + 3j = 50 dan nog?", null, "Controleer met de tweede vergelijking.", "Controleer met de tweede vergelijking."],
         uitlegPad: {
           stappen: [
-            { titel: "Eliminatie", tekst: "4s + 3j = 50\n2s + 5j = 40 (×2): 4s + 10j = 80\nAftrekken: 7j = 30 → j = 30/7 ≈ 4,29 (niet geheel).\n\n*Som-anomalie* — getallen kloppen niet voor mooie integer. In CSE-realiteit: getallen worden zo gekozen dat resultaten geheel zijn. Voor deze opdracht: kies tweede antwoord (8) als 'best benaderbaar' — maar belangrijker = methode kennen." },
+            { titel: "Eliminatie", tekst: "4s + 3j = 50\n2s + 5j = 46 (×2): 4s + 10j = 92\nAftrekken: 7j = 42 → j = 6.\nInvullen: 4s + 18 = 50 → 4s = 32 → s = 8." },
           ],
           niveaus: { basis: "Methode: eliminatie.", simpeler: "Twee onbekenden = stelsel.", nogSimpeler: "Stelsel" },
         },

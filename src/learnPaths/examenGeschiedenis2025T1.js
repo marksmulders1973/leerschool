@@ -101,7 +101,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Tijdens de Conferentie van M'nchen werd een akkoord gesloten tussen Hitler, als leider van nazi-Duitsland, en Chamberlain, de minister-president van Groot-Brittanni'. Wat was voor Chamberlain de reden om het akkoord met Hitler te sluiten?",
+        q: "Tijdens de Conferentie van München werd een akkoord gesloten tussen Hitler, als leider van nazi-Duitsland, en Chamberlain, de minister-president van Groot-Brittannië. Wat was voor Chamberlain de reden om het akkoord met Hitler te sluiten?",
         options: [
           "De Duitse politiek voor meer Lebensraum moest een succes worden.",
           "Duitsland wilde lid worden van de Volkenbond.",

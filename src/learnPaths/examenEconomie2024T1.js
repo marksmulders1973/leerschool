@@ -220,7 +220,7 @@ const steps = [
     emoji: "🎓",
     checks: [
       {
-        q: "Wat kan een reden zijn dat de staatsschuld van Itali' blijft stijgen?",
+        q: "Wat kan een reden zijn dat de staatsschuld van Italië blijft stijgen?",
         options: [
           "De inkomsten van de Italiaanse overheid zijn groter dan de uitgaven van de overheid.",
           "De inkomsten van de Italiaanse overheid zijn kleiner dan de uitgaven van de overheid.",

@@ -499,7 +499,7 @@ TOPIC_QUESTIONS["redactiesommen tijd"] = [
   { q: "Er zijn 3 weken en 4 dagen. Hoeveel dagen zijn dat in totaal?", options: ["21", "28", "24", "25"], answer: 3 },
   { q: "Tom werkt van 9:00 tot 12:30. Hoeveel uur is dat?", options: ["3 uur", "4 uur", "2,5 uur", "3,5 uur"], answer: 3 },
   { q: "Een wedstrijd begint om 15:30 en eindigt om 17:15. Hoe lang duurt hij?", options: ["1 uur 30 min", "2 uur", "1 uur 15 min", "1 uur 45 min"], answer: 3 },
-  { q: "Het is maandag 8 mei. Over 12 dagen is er een feest. Op welke dag is dat?", options: ["zondag 18 mei", "zaterdag 20 mei", "maandag 20 mei", "vrijdag 20 mei"], answer: 3 },
+  { q: "Het is maandag 8 mei. Over 12 dagen is er een feest. Op welke dag is dat?", options: ["zondag 18 mei", "zaterdag 20 mei", "maandag 20 mei", "vrijdag 20 mei"], answer: 1 },
   { q: "Een treinrit duurt 55 minuten. De trein vertrekt om 9:15. Hoe laat is hij er?", options: ["9:55", "10:05", "10:20", "10:10"], answer: 3 },
   { q: "Een concert begint om 20:15 en duurt 2 uur. Hoe laat eindigt het?", options: ["22:15", "21:45", "22:45", "23:15"], answer: 0 },
   { q: "Het is 11:40. Over 35 minuten begint de les. Hoe laat begint die?", options: ["12:05", "12:15", "12:10", "12:20"], answer: 1 },
