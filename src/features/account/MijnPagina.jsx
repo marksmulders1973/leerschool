@@ -1083,6 +1083,7 @@ export default function MijnPagina({
                     </button>
                   )}
                 </div>
+                {rolKey !== "leerling" && rolKey !== "student" && (<>
                 {/* 🪪 Rol-regel (Mark 27 aug: "mij is niet duidelijk of ik hier
                     als ouder ben ingelogd") — altijd in woorden zichtbaar wíé
                     dit profiel is. Tik = rol-menu (Mark 27 aug avond): wat kun
@@ -1284,6 +1285,7 @@ export default function MijnPagina({
                     </span>
                   </div>
                 )}
+                </>)}
                 {wisselOpen && (
                   <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", margin: "2px 0 2px" }}>
                     Nieuw hier? Typ je naam en kies daarna hieronder je groep of klas.
@@ -1421,12 +1423,12 @@ export default function MijnPagina({
                   vol in kleur met groene ring; de rest doorzichtig, tik =
                   wisselen (Mark 22 aug). Alleen tonen als er iets te kiezen is. */}
               {/* Profiel wisselen via "Wie oefent er?" (1 okt 2026) i.p.v. de oude gezinsrij. */}
-              <div style={{ flexBasis: "100%", marginTop: 2, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+              {false && <div style={{ flexBasis: "100%", marginTop: 2, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
                 <button type="button" onClick={() => { try { track("profiel_wissel_open", {}); } catch { /* */ } setWieNieuw(gezinsRij.length <= 1); setWieOpen(true); }} style={{ padding: "9px 16px", borderRadius: 999, cursor: "pointer", border: "1px solid rgba(0,230,118,0.45)", background: "rgba(0,230,118,0.08)", color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800 }}>
                   {gezinsRij.length > 1 ? "Wissel van profiel" : "Profiel toevoegen"}
                 </button>
                 <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>{gezinsRij.length > 1 ? `${gezinsRij.length} profielen op dit apparaat` : "Tot 5 profielen per apparaat, bijvoorbeeld voor broers, zussen of een ouder."}</span>
-              </div>
+              </div>}
               {false && gezinsRij.length > 1 && (
                 <div style={{ flexBasis: "100%", marginTop: 2, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                   <div style={{ ...eyebrowStijl, marginBottom: 6 }}>Wie is er bezig?</div>
@@ -1632,6 +1634,8 @@ export default function MijnPagina({
         )}
 
         {/* ── Weergave-schakelaar: kind ↔ ouder/juf ── */}
+            {/* Meekijk-schakelaar niet voor leerlingen (Mark 1 okt 2026: "maak het simpel"). */}
+            {rolKey !== "leerling" && rolKey !== "student" && (<>
             <div role="group" aria-label="Weergave kiezen" style={{
               display: "inline-flex", background: "rgba(255,255,255,0.05)",
               border: "1px solid rgba(255,255,255,0.12)", borderRadius: 999,
@@ -1678,13 +1682,14 @@ export default function MijnPagina({
                 Ben jij de ouder, verzorger of voogd? Tik bovenaan op je eigen naam of op "Je bent hier als…".
               </div>
             )}
+            </>)}
 
             {weergave === "kind" && (<>
 
             {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
                 mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)", background: kaartBg("linear-gradient(120deg, rgba(0,200,83,0.18), rgba(15,165,196,0.14))"), border: "1px solid rgba(0,200,83,0.4)" }}>
-              <div style={eyebrowStijl}>Vandaag</div>
+              <div style={eyebrowStijl}>{rolKey === "leerling" || rolKey === "student" ? "Wat moet je doen?" : "Vandaag"}</div>
               {(() => {
                 const min = Math.min(minutenVandaag(), 15);
                 const klaarVandaag = min >= 15;
@@ -1796,9 +1801,18 @@ export default function MijnPagina({
                 via de klaarzet-modus koos. Cadeau-gevoel, geen huiswerk-druk;
                 "iemand thuis" i.p.v. papa/mama sluit niemand uit (voogd/pleeg-
                 gezin). Alleen tonen als er echt iets klaarstaat. ── */}
+            {/* Lege staat (1 okt 2026): een leerling ziet altijd wat er van thuis of school klaarstaat. */}
+            {thuisKlaargezet.length === 0 && (rolKey === "leerling" || rolKey === "student") && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.25)" }}>
+                <div style={eyebrowStijl}>Van je ouder of leerkracht</div>
+                <div style={{ fontSize: 14, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
+                  Nog niets voor je klaargezet. Je ouder, verzorger of juf kan hier oefeningen voor je klaarzetten.
+                </div>
+              </Card>
+            )}
             {thuisKlaargezet.length > 0 && (
               <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1px solid rgba(255,105,135,0.4)", background: kaartBg("rgba(255,105,135,0.08)") }}>
-                <div style={eyebrowStijl}>Voor jou klaargezet</div>
+                <div style={eyebrowStijl}>Van je ouder of leerkracht</div>
                 <div style={kaartTitelStijl}>💛 Speciaal voor jou klaargezet</div>
                 <div style={{ display: "flex", flexDirection: "column", gap: 8, marginTop: 4 }}>
                   {thuisKlaargezet.map((it) => {
@@ -1843,7 +1857,7 @@ export default function MijnPagina({
 
             {/* ── Waar je staat ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-              <div style={eyebrowStijl}>Waar je staat</div>
+              <div style={eyebrowStijl}>{rolKey === "leerling" || rolKey === "student" ? "Hoe sta je ervoor?" : "Waar je staat"}</div>
               <div style={kaartTitelStijl}>Je vakken</div>
               {loading && <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)" }}>Laden…</div>}
               {/* Curriculum-weergave (Mark 12 aug): ALLE vakken die bij deze
