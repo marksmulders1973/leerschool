@@ -1,7 +1,7 @@
 # Plan — Mijn pagina met profielen ("Wie oefent er?")
 
 Mark, 1 okt 2026: "ik wil 5 (denk ik) profielen met dropdown en blanks of voorbeeld; ik ben leerling, ouder etc. (net als Netflix); wat je het liefst hebt, naam, leeftijd, groep; achtergrond-personalisatie kan uit; zo overzichtelijk en duidelijk mogelijk."
-**Status: plan, nog niet gebouwd. Wacht op Marks keuzes (§7).**
+**Status 1 okt 2026: fase 1 deels LIVE (v840)** — "Wie oefent er?" (max 5 tegels, aanmaakkaart, beheren), wissel-knop i.p.v. gezinsrij, achtergrond-thema's uit. Keuzes: 5 profielen, leeftijd→groep, thema's weg, nieuwkomers apart, slotje = fase 2. **Nog open uit fase 1:** leerlingpagina terugbrengen tot 3 blokken (nu nog alle blokken; vraagt eerst een kliktocht wat weg mag).
 
 ## 1. Hoe anderen het doen (intern, niet voor naar buiten)
 
