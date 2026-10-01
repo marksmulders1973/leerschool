@@ -38,11 +38,24 @@ function niveauBijLeeftijd(l) {
   return `klas${Math.min(6, n - 11)}`;
 }
 
+// Kliktocht 1 okt 2026: de app bewaart het niveau als los cijfer ("6") + schoolType voor
+// de middelbare school (zoals HomePage/Gezinsstart); "groep6" gaf op StudentHome "Groep groep6".
+function naarAppNiveau(level) {
+  if (level === "groep12") return { level: "2", schoolType: "" };
+  const g = (level || "").match(/^groep(\d)$/);
+  if (g) return { level: g[1], schoolType: "" };
+  const k = (level || "").match(/^klas(\d)$/);
+  if (k) return { level: k[1], schoolType: "havo-vwo" };
+  return { level: "", schoolType: "" };
+}
+
 const rolWoord = (p) => {
   if (p.role === "ouder") return "ouder of verzorger";
   if (p.role === "teacher") return "leerkracht";
   const niv = NIVEAUS.find((x) => x.level === p.level);
-  return niv ? `leerling · ${niv.label.toLowerCase()}` : "leerling";
+  if (niv) return `leerling · ${niv.label.toLowerCase()}`;
+  if (/^\d+$/.test(String(p.level || ""))) return `leerling · ${p.role === "student" || p.schoolType ? "klas" : "groep"} ${p.level}`;
+  return "leerling";
 };
 
 export function leesProfielen() {
@@ -51,7 +64,7 @@ export function leesProfielen() {
     return namen.map((naam) => {
       let p = {};
       try { p = JSON.parse(localStorage.getItem(`lk_profiel:${naam}`) || "{}") || {}; } catch { /* */ }
-      return { naam, role: p.role || "leerling", level: p.level || "", leeftijd: p.leeftijd || "" };
+      return { naam, role: p.role || "leerling", level: p.level || "", schoolType: p.schoolType || "", leeftijd: p.leeftijd || "" };
     });
   } catch { return []; }
 }
@@ -198,16 +211,18 @@ function ProfielKaart({ bestaand, onKlaar, onTerug }) {
   );
 }
 
-export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder }) {
+export default function WieOefentEr({ huidigeNaam, onKies, onSluit, onVerwijder, startNieuw = false }) {
   const [versie, setVersie] = useState(0);
   const profielen = useMemo(() => leesProfielen(), [versie]); // eslint-disable-line react-hooks/exhaustive-deps
-  const [nieuw, setNieuw] = useState(profielen.length === 0);
+  // "Profiel toevoegen" op Mijn pagina opent meteen de kaart (niet eerst het raster).
+  const [nieuw, setNieuw] = useState(profielen.length === 0 || (startNieuw && profielen.length < MAX_PROFIELEN));
   const [beheren, setBeheren] = useState(false);
   const [weg, setWeg] = useState(null);
 
   const maak = ({ naam, role, level, leeftijd, vakken }) => {
     try {
-      localStorage.setItem(`lk_profiel:${naam}`, JSON.stringify({ role, level, schoolType: "", leeftijd: leeftijd || "", aangemaakt: Date.now() }));
+      const app = naarAppNiveau(level);
+      localStorage.setItem(`lk_profiel:${naam}`, JSON.stringify({ role, level: app.level, schoolType: app.schoolType, leeftijd: leeftijd || "", aangemaakt: Date.now() }));
       const lijst = JSON.parse(localStorage.getItem("lk_namen") || "[]").filter((x) => x !== naam);
       lijst.unshift(naam);
       localStorage.setItem("lk_namen", JSON.stringify(lijst.slice(0, 8)));

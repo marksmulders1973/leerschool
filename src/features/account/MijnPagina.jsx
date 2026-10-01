@@ -558,6 +558,7 @@ export default function MijnPagina({
   const [wieOpen, setWieOpen] = useState(() => {
     try { return leesProfielen().length >= 2 && !sessionStorage.getItem("lk_wie_gekozen"); } catch { return false; }
   });
+  const [wieNieuw, setWieNieuw] = useState(false);
   // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
   const [wisselOpen, setWisselOpen] = useState(false);
   // 🗑️ Profiel verwijderen (Mark 28 aug): welke naam wacht op bevestiging?
@@ -1000,6 +1001,7 @@ export default function MijnPagina({
       {wieOpen && (
         <WieOefentEr
           huidigeNaam={player}
+          startNieuw={wieNieuw}
           onKies={(naam) => { setWieOpen(false); setProfielVersie((v) => v + 1); if (naam !== player && onWisselProfiel) onWisselProfiel(naam); }}
           onSluit={() => { try { sessionStorage.setItem("lk_wie_gekozen", "1"); } catch { /* */ } setWieOpen(false); }}
           onVerwijder={(naam) => { if (onVerwijderProfiel) onVerwijderProfiel(naam); setProfielVersie((v) => v + 1); }}
@@ -1059,7 +1061,7 @@ export default function MijnPagina({
                       wisselen?"). */}
                   {onWisselProfiel && (
                     <button
-                      onClick={() => { setWisselOpen(false); setWieOpen(true); }}
+                      onClick={() => { setWisselOpen(false); setWieNieuw(false); setWieOpen(true); }}
                       aria-expanded={wisselOpen}
                       style={{
                         padding: "4px 10px", borderRadius: 999, cursor: "pointer",
@@ -1411,7 +1413,7 @@ export default function MijnPagina({
                   wisselen (Mark 22 aug). Alleen tonen als er iets te kiezen is. */}
               {/* Profiel wisselen via "Wie oefent er?" (1 okt 2026) i.p.v. de oude gezinsrij. */}
               <div style={{ flexBasis: "100%", marginTop: 2, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
-                <button type="button" onClick={() => { try { track("profiel_wissel_open", {}); } catch { /* */ } setWieOpen(true); }} style={{ padding: "9px 16px", borderRadius: 999, cursor: "pointer", border: "1px solid rgba(0,230,118,0.45)", background: "rgba(0,230,118,0.08)", color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800 }}>
+                <button type="button" onClick={() => { try { track("profiel_wissel_open", {}); } catch { /* */ } setWieNieuw(gezinsRij.length <= 1); setWieOpen(true); }} style={{ padding: "9px 16px", borderRadius: 999, cursor: "pointer", border: "1px solid rgba(0,230,118,0.45)", background: "rgba(0,230,118,0.08)", color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800 }}>
                   {gezinsRij.length > 1 ? "Wissel van profiel" : "Profiel toevoegen"}
                 </button>
                 <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>{gezinsRij.length > 1 ? `${gezinsRij.length} profielen op dit apparaat` : "Tot 5 profielen per apparaat, bijvoorbeeld voor broers, zussen of een ouder."}</span>
