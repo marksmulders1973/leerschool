@@ -739,7 +739,23 @@ export default function App() {
   // waar je vandaan kwam i.p.v. altijd naar home.
   const vorigePageRef = useRef("home");
   useEffect(() => { vorigePageRef.current = pageRef.current; pageRef.current = page; }, [page]);
+  // Mijn pagina: "Wie oefent er?" alleen bij binnenkomen, niet bij terugkomen van een pagina die je
+  // vanaf Mijn pagina opende. Via de startpagina weer binnenkomen = opnieuw kiezen.
+  const mijnTerugRef = useRef(false);
+  useEffect(() => {
+    if (page === "home") mijnTerugRef.current = false;
+    else if (vorigePageRef.current === "mijn-pagina" && page !== "mijn-pagina") mijnTerugRef.current = true;
+  }, [page]);
   const terugNaarVorige = (toegestaan, standaard = "home") => setPage(toegestaan.includes(vorigePageRef.current) ? vorigePageRef.current : standaard);
+  // Familie-tegels op Mijn pagina (Mark 1 okt 2026: "fix de terug-knop"): kwam je via een tegel, dan brengt
+  // "← terug" op een Familie-pagina (die naar de hub of home wil) je terug naar Mijn pagina.
+  const FAMILIE_PAGINAS = ["familie", "paraatheid", "oefenboekje", "diploma", "ouderkaart", "weekschema", "trots", "vonk"];
+  const familieBronRef = useRef(null);
+  useEffect(() => { if (!FAMILIE_PAGINAS.includes(page)) familieBronRef.current = null; }, [page]); // eslint-disable-line react-hooks/exhaustive-deps
+  const familieSetPage = (p) => {
+    if ((p === "familie" || p === "home") && familieBronRef.current) { const t = familieBronRef.current; familieBronRef.current = null; setPage(t); return; }
+    setPage(p);
+  };
 
   // Profielen op dit apparaat (Mark 12 aug: "wisselen van profiel op de
   // persoonlijke pagina"): elke gebruikte naam komt in lk_namen; per naam
@@ -1571,7 +1587,8 @@ export default function App() {
           onWerkwoorden={() => setPage("werkwoorden")}
           onVandaagKwartier={() => setPage("vandaag-kwartier")}
           onKwartiercheck={() => setPage("kwartiercheck")}
-          onNaar={(p) => setPage(p)}
+          terugkomst={mijnTerugRef.current}
+          onNaar={(p) => { if (FAMILIE_PAGINAS.includes(p)) familieBronRef.current = "mijn-pagina"; setPage(p); }}
           onGoCito={() => setPage("cito")}
           onGoVoortgang={() => setPage("my-mastery")}
           onVak={(subject) => {
@@ -2621,14 +2638,14 @@ export default function App() {
       {page === "redactiebladen" && <RedactiebladenPage setPage={setPage} />}
       {/* Familie-preview (geheim): hub + paraatheidsmeter + oefenboekje. */}
       {/* Familie-extra's — bèta-live (Mark 1 aug: deel-voor-deel, niet meer geheim). */}
-      {page === "familie" && <FamilieHub setPage={setPage} />}
-      {page === "paraatheid" && <Paraatheidsmeter setPage={setPage} />}
-      {page === "oefenboekje" && <OefenboekjePagina setPage={setPage} />}
-      {page === "diploma" && <DiplomaPagina setPage={setPage} />}
-      {page === "ouderkaart" && <OuderkaartPagina setPage={setPage} />}
-      {page === "weekschema" && <WeekschemaPagina setPage={setPage} />}
-      {page === "trots" && <TrotsMomentPagina setPage={setPage} />}
-      {page === "vonk" && <VonkPagina setPage={setPage} />}
+      {page === "familie" && <FamilieHub setPage={familieSetPage} />}
+      {page === "paraatheid" && <Paraatheidsmeter setPage={familieSetPage} />}
+      {page === "oefenboekje" && <OefenboekjePagina setPage={familieSetPage} />}
+      {page === "diploma" && <DiplomaPagina setPage={familieSetPage} />}
+      {page === "ouderkaart" && <OuderkaartPagina setPage={familieSetPage} />}
+      {page === "weekschema" && <WeekschemaPagina setPage={familieSetPage} />}
+      {page === "trots" && <TrotsMomentPagina setPage={familieSetPage} />}
+      {page === "vonk" && <VonkPagina setPage={familieSetPage} />}
       {page === "brugklas" && <BrugklasPage setPage={setPage} />}
       {page === "dictees" && <DicteesPage setPage={setPage} />}
       {page === "dagkaart" && <DagkaartGenerator setPage={setPage} />}

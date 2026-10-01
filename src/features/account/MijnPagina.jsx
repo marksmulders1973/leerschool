@@ -373,6 +373,7 @@ export default function MijnPagina({
   onVandaagKwartier,
   onKwartiercheck,
   onNaar,
+  terugkomst = false,
   onGoVoortgang,
   onOuderDashboard,
   onHernoem,
@@ -567,6 +568,8 @@ export default function MijnPagina({
   // Mark 1 okt 2026 (middag): "als je naar Mijn pagina gaat altijd hier beginnen". Alleen direct na
   // een keuze niet opnieuw (de pagina start opnieuw op bij een profielwissel): lk_wie_net = gekozen naam.
   const [wieOpen, setWieOpen] = useState(() => {
+    // Terug van een pagina die je vanaf hier opende (tegel, oefening): niet opnieuw kiezen (Mark 1 okt 2026).
+    if (terugkomst) return false;
     try {
       const net = sessionStorage.getItem("lk_wie_net");
       if (net !== null && net === (player || "")) { sessionStorage.removeItem("lk_wie_net"); return false; }
