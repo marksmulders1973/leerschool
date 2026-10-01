@@ -99,7 +99,7 @@ const steps = [
   {
     title: "Woordenboek — alfabetisch zoeken",
     explanation:
-      "In een woordenboek staan woorden **alfabetisch**: van A naar Z. De toets test of je snel kunt zoeken.\n\n**Alfabetische volgorde — Toets-regels**:\n1. Eerst kijken naar de **eerste letter** van het woord.\n2. Gelijke eerste letter? → vergelijk **tweede letter**.\n3. Gelijke tweede ook? → derde letter, etc.\n\n**Voorbeeld**: 'banaan' komt voor 'beer' (a komt vóór e in 'b**a**naan' vs 'b**e**er').\n\n**Toets-bladzijde-truc**: bovenaan elke bladzijde staan **trefwoorden** (eerste + laatste woord op die bladzijde). Bv. 'baan — bever'. Het gezochte woord 'banaan' valt daarbinnen → die bladzijde.\n\n**Trefwoord vinden**:\n• 'kat' opzoeken? → 'k' → 'ka...' → 'kat'.\n• Hoofdvorm gebruiken: 'liep' → kijken bij 'lopen' (hele werkwoord). 'kinderen' → 'kind' (enkelvoud).\n\n**Toets-letters die op elkaar lijken**:\n• Geen onderscheid IJ vs Y in oudere woordenboeken — kijk bij I.\n• Onze (Nederlandse) alfabet: A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z (26 letters).",
+      "In een woordenboek staan woorden **alfabetisch**: van A naar Z. De toets test of je snel kunt zoeken.\n\n**Alfabetische volgorde — Toets-regels**:\n1. Eerst kijken naar de **eerste letter** van het woord.\n2. Gelijke eerste letter? → vergelijk **tweede letter**.\n3. Gelijke tweede ook? → derde letter, etc.\n\n**Voorbeeld**: 'banaan' komt voor 'beer' (a komt vóór e in 'b**a**naan' vs 'b**e**er').\n\n**Toets-bladzijde-truc**: bovenaan elke bladzijde staan **trefwoorden** (eerste + laatste woord op die bladzijde). Bv. 'baan — bever'. Het gezochte woord 'banaan' valt daarbinnen → die bladzijde.\n\n**Trefwoord vinden**:\n• 'kat' opzoeken? → 'k' → 'ka...' → 'kat'.\n• Hoofdvorm gebruiken: 'liep' → kijken bij 'lopen' (hele werkwoord). 'kinderen' → 'kind' (enkelvoud).\n\n**Toets-letters die op elkaar lijken**:\n• Geen onderscheid IJ vs Y in oudere woordenboeken — kijk bij I.\n• Ons (Nederlandse) alfabet: A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z (26 letters).",
     checks: [
       {
         q: "In het woordenboek: welk woord komt **eerst** alfabetisch?",
@@ -119,12 +119,12 @@ const steps = [
         q: "Op een bladzijde staan bovenaan: *'koers — komkommer'*. Welk woord vind je op deze bladzijde?",
         options: ["kok","kameel","krant","loek"],
         answer: 0,
-        wrongHints: [null, "'Kameel' start met 'ka' — komt VOOR 'koers' op kaart.", "'Krant' komt NA 'komkommer' (kr > kom).", "'Loek' begint met 'l' — andere bladzijde."],
+        wrongHints: [null, "'Kameel' start met 'ka' — komt VOOR 'koers' in het alfabet.", "'Krant' komt NA 'komkommer' (kr > kom).", "'Loek' begint met 'l' — andere bladzijde."],
         uitlegPad: {
           stappen: [{ titel: "Tussen 2 trefwoorden", tekst: "Bovenaan staan **eerste + laatste woord** van die bladzijde. 'koers — komkommer' → ergens daartussen vind je 'kok' (koers < kok < komkommer in alfabet)." }],
           woorden: [{ woord: "trefwoord", uitleg: "Eerste/laatste woord bovenaan een woordenboek-bladzijde." }],
           theorie: "Toets-truc: vergelijk gezocht woord met trefwoorden. Eerste-trefwoord ≤ gezochte ≤ laatste-trefwoord → goede bladzijde.",
-          voorbeelden: [{ type: "controle", tekst: "Trefwoorden 'app — auto'. 'Aubergine' past (auto < aubergine? Nee — kijk weer: 'au' = 'au', dan 't' vs 'b' → auto < aubergine). Dus zit hier niet. Volgende bladzijde." }],
+          voorbeelden: [{ type: "controle", tekst: "Trefwoorden 'app — auto'. Past 'aubergine'? 'au' = 'au', dan 'b' vs 't': b komt vóór t → aubergine < auto. Dus ja, 'aubergine' staat op deze bladzijde." }],
           basiskennis: [{ onderwerp: "Wat als woord trefwoord IS", uitleg: "Als gezochte woord exact = trefwoord, dan staat het op die bladzijde (vaak helemaal bovenaan of onderaan)." }],
           niveaus: { basis: "Kok past tussen koers en komkommer.", simpeler: "koers < kok < komkommer = ja, kok zit ertussen.", nogSimpeler: "Kok" },
         },
@@ -133,7 +133,7 @@ const steps = [
         q: "Je zoekt **'liep'** in het woordenboek. Onder welk woord vind je het?",
         options: ["lopen","lieg","liep","leven"],
         answer: 0,
-        wrongHints: [null, "Geen woord — kijk naar het hele werkwoord.", "Niet — andere stam.", "Niet — als losse vorm staat 't niet."],
+        wrongHints: [null, "Niet — dat is een vorm van 'liegen', een ander werkwoord.", "Niet — als losse vorm staat 't er meestal niet in; kijk naar het hele werkwoord.", "Niet — ander werkwoord."],
         uitlegPad: {
           stappen: [{ titel: "Hele werkwoord opzoeken", tekst: "Vervoegde werkwoorden (liep, loop, lopen) staan onder **hele werkwoord = 'lopen'**. Vergeet niet: 'kat-katten' staat onder 'kat' (enkelvoud)." }],
           woorden: [{ woord: "hele werkwoord", uitleg: "Vorm op -en: lopen, denken, zwemmen." }],
@@ -154,12 +154,12 @@ const steps = [
         },
       },
       {
-        q: "Het woord **'oligarchie'** — hoe spel je het in een toetsvraag waarbij je het opzoekt? Welk woord ligt het DICHTSTE bij?",
+        q: "Je zoekt **'oligarchie'** op in het woordenboek. Bij welk woord staat het het DICHTST in de buurt?",
         options: ["oliebol","monarchie","democratie","oligine"],
         answer: 0,
         wrongHints: [null, "Niet — begint met 'm', andere bladzijde.", "Niet — begint met 'd'.", "Niet bestaand woord."],
         uitlegPad: {
-          stappen: [{ titel: "Eerste 3 letters tellen", tekst: "**'oli'** is de start. Op de bladzijde 'oliebol — olijfboom' zou 'oligarchie' staan. Andere woorden met 'mon-', 'dem-' staan op compleet andere bladzijden." }],
+          stappen: [{ titel: "Eerste 3 letters vergelijken", tekst: "**'oli'** is de start. Op de bladzijde 'oliebol — olijfboom' zou 'oligarchie' staan. Andere woorden met 'mon-', 'dem-' staan op compleet andere bladzijden." }],
           niveaus: { basis: "Oliebol — zelfde start.", simpeler: "'Oli'-woorden bij elkaar.", nogSimpeler: "Oliebol" },
         },
       },
@@ -237,7 +237,7 @@ const steps = [
   {
     title: "Betrouwbaarheid — fake news + AI + bronnen vergelijken",
     explanation:
-      "Niet alle info is **waar**. De toets test of je betrouwbare van onbetrouwbare bronnen kunt onderscheiden. Belangrijk in tijd van **fake news + AI**.\n\n**Vragen om te checken**:\n1. **WIE schreef het?** Expert of anoniem? Naam-met-functie = betrouwbaarder.\n2. **WANNEER?** Recent of 10 jaar oud? Recente info weegt vaak zwaarder (behalve bij geschiedenis).\n3. **WAAR gepubliceerd?** Officiële site (overheid, krant) of random blog?\n4. **WAAROM?** Wil de schrijver iets verkopen / overtuigen? Dan oppassen.\n5. **CHECK 2e bron**: zegt een tweede onafhankelijke bron hetzelfde?\n\n**Primaire vs secundaire bron**:\n• **Primair** = direct van bron. Bv. dagboek Anne Frank, originele wet, ooggetuige.\n• **Secundair** = iemand anders die het beschrijft. Bv. schoolboek over Anne Frank.\n• De toets waardeert primaire bronnen vaak hoger (dichter bij feiten).\n\n**AI-gegenereerde teksten** (ChatGPT, Bard):\n• AI VERZINT soms feiten (= 'hallucineren'). Niet automatisch waar!\n• Toets-tip: AI-info ALTIJD checken via 2e bron.\n\n**Wikipedia**:\n• Door **iedereen aanpasbaar** = niet altijd 100% correct.\n• Voor **algemeen** redelijk goed, voor **omstreden** opletten.\n• Toets-truc: kijk naar **bronnen-lijst onderaan** Wikipedia-artikel. Veel/goede bronnen = betrouwbaarder.\n\n**Fake news-signalen**:\n• Sensationele kop ('JE WILT NIET WETEN WAT...').\n• Anonieme schrijver.\n• Geen bron-vermelding.\n• Beweringen zonder bewijs.\n• Vaak gedeeld op social media zonder krantvermelding.",
+      "Niet alle info is **waar**. De toets test of je betrouwbare van onbetrouwbare bronnen kunt onderscheiden. Belangrijk in tijd van **fake news + AI**.\n\n**Vragen om te checken**:\n1. **WIE schreef het?** Expert of anoniem? Naam-met-functie = betrouwbaarder.\n2. **WANNEER?** Recent of 10 jaar oud? Recente info weegt vaak zwaarder (behalve bij geschiedenis).\n3. **WAAR gepubliceerd?** Officiële site (overheid, krant) of random blog?\n4. **WAAROM?** Wil de schrijver iets verkopen / overtuigen? Dan oppassen.\n5. **CHECK 2e bron**: zegt een tweede onafhankelijke bron hetzelfde?\n\n**Primaire vs secundaire bron**:\n• **Primair** = direct van bron. Bv. dagboek Anne Frank, originele wet, ooggetuige.\n• **Secundair** = iemand anders die het beschrijft. Bv. schoolboek over Anne Frank.\n• De toets waardeert primaire bronnen vaak hoger (dichter bij feiten).\n\n**AI-gegenereerde teksten** (ChatGPT, Gemini):\n• AI VERZINT soms feiten (= 'hallucineren'). Niet automatisch waar!\n• Toets-tip: AI-info ALTIJD checken via 2e bron.\n\n**Wikipedia**:\n• Door **iedereen aanpasbaar** = niet altijd 100% correct.\n• Voor **algemeen** redelijk goed, voor **omstreden** opletten.\n• Toets-truc: kijk naar **bronnen-lijst onderaan** Wikipedia-artikel. Veel/goede bronnen = betrouwbaarder.\n\n**Fake news-signalen**:\n• Sensationele kop ('JE WILT NIET WETEN WAT...').\n• Anonieme schrijver.\n• Geen bron-vermelding.\n• Beweringen zonder bewijs.\n• Vaak gedeeld op social media zonder krantvermelding.",
     checks: [
       {
         q: "Welke bron is **het meest betrouwbaar** voor info over de Tweede Wereldoorlog?",
@@ -256,7 +256,7 @@ const steps = [
         q: "Wat is een **primaire bron** over Anne Frank?",
         options: ["Het dagboek van Anne Frank zelf","Schoolboek over Anne Frank","Film over Anne Frank","Wikipedia-artikel"],
         answer: 0,
-        wrongHints: [null, "Niet — iemand anders schreef dat (secundair).", "Niet — gebaseerd op het dagboek (secundair).", "Niet — samenvat van bronnen (secundair)."],
+        wrongHints: [null, "Niet — iemand anders schreef dat (secundair).", "Niet — gebaseerd op het dagboek (secundair).", "Niet — samenvatting van bronnen (secundair)."],
         uitlegPad: {
           stappen: [{ titel: "Primair = direct van bron", tekst: "Het dagboek **schreef Anne zelf**. Direct van de bron. Schoolboek/film/wiki = iemand anders interpreteert haar dagboek (secundair)." }],
           woorden: [{ woord: "primaire bron", uitleg: "Direct van de persoon/gebeurtenis zelf (dagboek, ooggetuige, originele wet)." }, { woord: "secundaire bron", uitleg: "Iemand anders die de primaire bron beschrijft." }],
@@ -283,7 +283,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "AI hallucineert", tekst: "AI zoals ChatGPT **verzint soms feiten** zonder dat 't merkt — dat heet 'hallucineren'. ALTIJD checken via Wikipedia/krant/expert voor je 't gebruikt in een werkstuk." }],
           woorden: [{ woord: "hallucineren", uitleg: "Wanneer AI iets verzint dat NIET waar is." }],
-          theorie: "AI-output = goede STARTpunt, geen EINDpunt. 2e bron = altijd nodig.",
+          theorie: "AI-output = goed STARTpunt, geen EINDpunt. 2e bron = altijd nodig.",
           voorbeelden: [{ type: "voorbeeld", tekst: "ChatGPT zegt: 'Napoleon won bij Waterloo'. Check → klopt niet, hij verloor er." }],
           niveaus: { basis: "2e bron checken.", simpeler: "AI = checken bij 2e bron.", nogSimpeler: "Checken" },
         },
@@ -294,7 +294,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Geen bronnen = niet te checken.", "'Omstreden'-banner = waarschuwing.", "Geen bronnen blijft een probleem."],
         uitlegPad: {
-          stappen: [{ titel: "Bronnen-aantal = betrouwbaarheid-signaal", tekst: "Veel **goede** bronnen onderaan = veel mensen hebben dit nagekeken. Bronnen kun je zelf naast leggen. Geen bronnen = anders dan een meningstekst." }],
+          stappen: [{ titel: "Bronnen-aantal = betrouwbaarheid-signaal", tekst: "Veel **goede** bronnen onderaan = veel mensen hebben dit nagekeken. Bronnen kun je zelf naast leggen. Geen bronnen = niet beter dan een meningstekst." }],
           theorie: "Wikipedia-checklist: hoeveel bronnen? Bekende bronnen? 'Omstreden'-banner? Recent bewerkt?",
           niveaus: { basis: "Veel bronnen = betrouwbaarder.", simpeler: "Bronnen-lijst toont onderzoek = check.", nogSimpeler: "Bronnen" },
         },
@@ -322,9 +322,9 @@ const steps = [
         q: "Welk woord komt **derde** alfabetisch: kraan, krant, kralen?",
         options: ["krant","kraan","kralen","alle drie"],
         answer: 0,
-        wrongHints: [null, "Bijna — vergelijk 3e/4e letter: kraan vs kralen vs krant. Kraan < kralen < krant.", "Dat is eerste.", "Niet — er IS een volgorde."],
+        wrongHints: [null, "Dat is de eerste — kraan < kralen < krant.", "Bijna — dat is de tweede. Vergelijk de 4e letter: kraan < kralen < krant.", "Niet — er IS een volgorde."],
         uitlegPad: {
-          stappen: [{ titel: "3e letter vergelijken bij gelijke 1+2", tekst: "Alle 3 beginnen met 'kra'. Kijk 4e letter: kra**a**n (a) < kra**l**en (l) < kra**n**t (n). A<L<N → kraan, kralen, krant. Derde = krant." }],
+          stappen: [{ titel: "4e letter vergelijken bij gelijke 1-3", tekst: "Alle 3 beginnen met 'kra'. Kijk 4e letter: kra**a**n (a) < kra**l**en (l) < kra**n**t (n). A<L<N → kraan, kralen, krant. Derde = krant." }],
           niveaus: { basis: "Krant derde.", simpeler: "Volgorde: kraan, kralen, krant → 3e = krant.", nogSimpeler: "Krant" },
         },
       },
@@ -354,7 +354,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Encyclopedie geeft betekenis maar woordenboek heeft spelling-check sneller.", "Atlas heeft geen woorden.", "Krant heeft geen spelling-uitleg."],
         uitlegPad: {
-          stappen: [{ titel: "Spelling = woordenboek", tekst: "Woordenboek geeft **spelling + betekenis** per woord. Voor spelling-check: woordenboek (Van Dale) of online groene-boekje." }],
+          stappen: [{ titel: "Spelling = woordenboek", tekst: "Woordenboek geeft **spelling + betekenis** per woord. Voor spelling-check: woordenboek (Van Dale) of het online Groene Boekje." }],
           niveaus: { basis: "Woordenboek.", simpeler: "Voor spelling → woordenboek.", nogSimpeler: "Woordenboek" },
         },
       },

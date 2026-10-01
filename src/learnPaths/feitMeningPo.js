@@ -426,9 +426,9 @@ const steps = [
         },
       },
       {
-        q: "In een tekst staat: *'Nederland heeft 17 miljoen inwoners. Het is het drukste land van Europa.'* Welk deel is een feit?",
+        q: "In een tekst staat: *'Nederland heeft 18 miljoen inwoners. Het is het drukste land van Europa.'* Welk deel is een feit?",
         options: [
-          "Nederland heeft 17 miljoen inwoners.",
+          "Nederland heeft 18 miljoen inwoners.",
           "Het is het drukste land van Europa.",
           "Allebei zijn feiten.",
           "Allebei zijn meningen.",
@@ -436,7 +436,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "'Drukste' is een oordeel — dat is geen feit.", "Eén van de twee is een mening.", "Het inwoneraantal is te tellen — dat is geen mening."],
         uitlegPad: {
-          stappen: [{ titel: "Tellen vs. oordelen", tekst: "17 miljoen inwoners kun je tellen (feit). 'Het drukste land' is een oordeel — niet iedereen is het daarmee eens (mening)." }],
+          stappen: [{ titel: "Tellen vs. oordelen", tekst: "18 miljoen inwoners kun je tellen (feit). 'Het drukste land' is een oordeel — niet iedereen is het daarmee eens (mening)." }],
           niveaus: {
             basis: "Inwoneraantal = feit; 'drukste' = mening.",
             simpeler: "Welk deel is te controleren?",

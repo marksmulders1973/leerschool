@@ -20,7 +20,7 @@ const stepEmojis = [
   "🔄",   // A1. wat zijn onregelmatige
   "🎯",   // A2. drie vormen
   "🅰️",   // B1. AAA pattern
-  "🅱️",   // B2. ABA + AAB pattern
+  "🅱️",   // B2. ABA + ABB pattern
   "🆎",   // B3. ABC pattern
   "📚",   // C1. lijst veelvoorkomend
   "🔍",   // C2. patroon -ought
@@ -65,7 +65,7 @@ function drieVormenSvg() {
 </svg>`;
 }
 
-// Patroon-overzicht (AAA, AAB, ABA, ABC).
+// Patroon-overzicht (AAA, ABB, ABA, ABC).
 function patronenSvg() {
   return `<svg viewBox="0 0 320 200">
 <rect x="0" y="0" width="320" height="200" fill="${COLORS.paper}"/>
@@ -74,7 +74,7 @@ function patronenSvg() {
 ${[
     { label: "AAA", v1: "cut", v2: "cut", v3: "cut", desc: "alle 3 hetzelfde" },
     { label: "ABA", v1: "come", v2: "came", v3: "come", desc: "V1 = V3" },
-    { label: "AAB", v1: "make", v2: "made", v3: "made", desc: "V2 = V3" },
+    { label: "ABB", v1: "make", v2: "made", v3: "made", desc: "V2 = V3" },
     { label: "ABC", v1: "go", v2: "went", v3: "gone", desc: "alle 3 verschillend" },
   ].map((p, i) => {
     const y = 40 + i * 35;
@@ -96,7 +96,7 @@ const steps = [
   // ─── A. Inleiding ───────────────
   {
     title: "Wat zijn onregelmatige werkwoorden?",
-    explanation: "**Reguliere (regelmatige) werkwoorden** vormen hun verleden tijd door **-ed** toe te voegen:\n• walk → walked → walked\n• play → played → played\n• talk → talked → talked\n\nMakkelijk!\n\n**Maar Engelse hebben ook ~150 onregelmatige werkwoorden** die je gewoon moet leren:\n• go → went → gone (NIET 'goed'!)\n• see → saw → seen\n• eat → ate → eaten\n• be → was/were → been\n\nJe moet ze **uit je hoofd kennen** — er bestaat geen regel die altijd werkt.\n\n**Slecht nieuws**: dit is een leertopic.\n**Goed nieuws**: ze zijn de **meest gebruikte** werkwoorden in het Engels. 80% van wat je hoort/leest gebruikt deze. Dus zodra je ze kent, kun je heel veel.\n\n**Strategie om ze te leren**:\n1. **Patronen herkennen** — sommige werkwoorden volgen dezelfde verandering (bv. sing/sang/sung en ring/rang/rung).\n2. **Lijstjes uit je hoofd** — typisch ~15 werkwoorden tegelijk leren.\n3. **In zinnen oefenen** — niet alleen rijtjes, maar voorbeelden.\n4. **Tegelijk vertalen + horen** — sommige zien je, hoor je in films/series.\n\nIn dit pad bouwen we op het bestaande klas-1-pad voort met meer werkwoorden + slimme patronen.\n\n**Quick check Klas-1 herhaling**: ken je deze 8 al?\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| be | was/were | been | zijn |\n| have | had | had | hebben |\n| do | did | done | doen |\n| go | went | gone | gaan |\n| see | saw | seen | zien |\n| make | made | made | maken |\n| take | took | taken | nemen |\n| come | came | come | komen |\n\nAls deze nog wennen, doe eerst even het klas-1 pad. Dit pad bouwt erop voort.",
+    explanation: "**Reguliere (regelmatige) werkwoorden** vormen hun verleden tijd door **-ed** toe te voegen:\n• walk → walked → walked\n• play → played → played\n• talk → talked → talked\n\nMakkelijk!\n\n**Maar het Engels heeft ook ~150 onregelmatige werkwoorden** die je gewoon moet leren:\n• go → went → gone (NIET 'goed'!)\n• see → saw → seen\n• eat → ate → eaten\n• be → was/were → been\n\nJe moet ze **uit je hoofd kennen** — er bestaat geen regel die altijd werkt.\n\n**Slecht nieuws**: dit is stampwerk.\n**Goed nieuws**: ze zijn de **meest gebruikte** werkwoorden in het Engels. Een groot deel van wat je hoort en leest gebruikt deze. Dus zodra je ze kent, kun je heel veel.\n\n**Strategie om ze te leren**:\n1. **Patronen herkennen** — sommige werkwoorden volgen dezelfde verandering (bv. sing/sang/sung en ring/rang/rung).\n2. **Lijstjes uit je hoofd** — typisch ~15 werkwoorden tegelijk leren.\n3. **In zinnen oefenen** — niet alleen rijtjes, maar voorbeelden.\n4. **Luisteren** — veel ervan hoor je vanzelf in films en series.\n\nIn dit pad bouwen we op het bestaande klas-1-pad voort met meer werkwoorden + slimme patronen.\n\n**Quick check Klas-1 herhaling**: ken je deze 8 al?\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| be | was/were | been | zijn |\n| have | had | had | hebben |\n| do | did | done | doen |\n| go | went | gone | gaan |\n| see | saw | seen | zien |\n| make | made | made | maken |\n| take | took | taken | nemen |\n| come | came | come | komen |\n\nAls deze nog wennen, doe eerst even het klas-1 pad. Dit pad bouwt erop voort.",
     svg: drieVormenSvg(),
     checks: [
       {
@@ -141,7 +141,7 @@ const steps = [
   },
   {
     title: "De drie vormen — V1, V2, V3",
-    explanation: "Bij elk werkwoord onthoud je **drie vormen**:\n\n**V1 — Infinitive (basisvorm)**\n• De vorm die in het woordenboek staat.\n• Gebruikt voor: tegenwoordige tijd, 'to + V1', na hulpwerkwoorden (will, can, must).\n• Voorbeelden: *I go to school. I want to eat. She can swim.*\n\n**V2 — Past Simple (verleden tijd, eenvoudig)**\n• Gebruikt voor: gebeurde in het verleden, vaak met tijdsbepaling.\n• Voorbeelden: *Yesterday I went to school. Last year she ate sushi.*\n• Signaalwoorden: yesterday, last (week, year), ago, in 1999, when I was young.\n\n**V3 — Past Participle (voltooid deelwoord)**\n• Gebruikt na **have / has / had** (perfect-tijden).\n• Voorbeelden: *I have eaten. She has gone home. They had seen it.*\n• Ook: passive voice (be + V3): *The book was written by her.*\n\n**Volledige conjugatie van 'eat' (eten)**:\n• V1: I eat\n• V2: I ate (yesterday)\n• V3: I have eaten (recently / already / before)\n\n**Hoe weet je welke vorm je nodig hebt?**\n• Tegenwoordige tijd → V1 (+ s bij 3e persoon: he/she/it eats)\n• Past simple → V2 (yesterday, last week)\n• Present perfect → have/has + V3 (already, just, ever, never, since)\n• Past perfect → had + V3 (when I came home, she had already left)\n\n**Top tip**: Engels gebruikt vaker present perfect dan Nederlands. Waar wij zeggen *'Ik heb het al gegeten'* (verleden), gebruiken Engelsen *'I have eaten it already'* (present perfect, V3).",
+    explanation: "Bij elk werkwoord onthoud je **drie vormen**:\n\n**V1 — Infinitive (basisvorm)**\n• De vorm die in het woordenboek staat.\n• Gebruikt voor: tegenwoordige tijd, 'to + V1', na hulpwerkwoorden (will, can, must).\n• Voorbeelden: *I go to school. I want to eat. She can swim.*\n\n**V2 — Past Simple (verleden tijd, eenvoudig)**\n• Gebruikt voor: iets wat in het verleden gebeurde, vaak met tijdsbepaling.\n• Voorbeelden: *Yesterday I went to school. Last year she ate sushi.*\n• Signaalwoorden: yesterday, last (week, year), ago, in 1999, when I was young.\n\n**V3 — Past Participle (voltooid deelwoord)**\n• Gebruikt na **have / has / had** (perfect-tijden).\n• Voorbeelden: *I have eaten. She has gone home. They had seen it.*\n• Ook: passive voice (be + V3): *The book was written by her.*\n\n**Volledige conjugatie van 'eat' (eten)**:\n• V1: I eat\n• V2: I ate (yesterday)\n• V3: I have eaten (recently / already / before)\n\n**Hoe weet je welke vorm je nodig hebt?**\n• Tegenwoordige tijd → V1 (+ s bij 3e persoon: he/she/it eats)\n• Past simple → V2 (yesterday, last week)\n• Present perfect → have/has + V3 (already, just, ever, never, since)\n• Past perfect → had + V3 (when I came home, she had already left)\n\n**Top tip**: Nederlands gebruikt de voltooide tijd vaker dan Engels. Waar wij zeggen *'Ik heb hem gisteren gezien'*, zeggen Engelsen *'I saw him yesterday'* (past simple, V2) — bij een vast tijdstip in het verleden gebruik je in het Engels geen present perfect.",
     svg: drieVormenSvg(),
     checks: [
       {
@@ -193,7 +193,7 @@ const steps = [
   // ─── B. Patronen ───────────────
   {
     title: "Patroon AAA — alle 3 hetzelfde",
-    explanation: "Sommige onregelmatige werkwoorden hebben **alle 3 vormen hetzelfde**! Geen werk om te onthouden, gewoon ongewijzigd.\n\n**Lijst AAA** (V1 = V2 = V3):\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| cut | cut | cut | snijden |\n| put | put | put | leggen, zetten |\n| set | set | set | zetten, instellen |\n| let | let | let | laten, toestaan |\n| hit | hit | hit | slaan |\n| shut | shut | shut | sluiten |\n| cost | cost | cost | kosten |\n| hurt | hurt | hurt | pijn doen |\n| read* | read* | read* | lezen |\n| spread | spread | spread | verspreiden |\n\n*Let op: 'read' is geschreven hetzelfde, maar uitspraak verandert: V1 'reed' (lange ee), V2/V3 'red' (rood-uitspraak).\n\n**Voorbeeldzinnen**:\n• I **cut** my hair every month. (V1, present)\n• Yesterday I **cut** my finger. (V2, past)\n• I have **cut** myself many times. (V3, perfect)\n\n• Please **shut** the door. (V1)\n• She **shut** the door angrily. (V2)\n• They have **shut** the windows. (V3)\n\n**Trucje**: AAA-werkwoorden zijn vaak korte, simpele woorden die op een **t** of **d** eindigen.",
+    explanation: "Sommige onregelmatige werkwoorden hebben **alle 3 vormen hetzelfde**! Geen werk om te onthouden, gewoon ongewijzigd.\n\n**Lijst AAA** (V1 = V2 = V3):\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| cut | cut | cut | snijden |\n| put | put | put | leggen, zetten |\n| set | set | set | zetten, instellen |\n| let | let | let | laten, toestaan |\n| hit | hit | hit | slaan |\n| shut | shut | shut | sluiten |\n| cost | cost | cost | kosten |\n| hurt | hurt | hurt | pijn doen |\n| read* | read* | read* | lezen |\n| spread | spread | spread | verspreiden |\n\n*Let op: 'read' wordt hetzelfde geschreven, maar de uitspraak verandert: V1 'reed' (lange ee), V2/V3 'red' (rood-uitspraak).\n\n**Voorbeeldzinnen**:\n• I **cut** my hair every month. (V1, present)\n• Yesterday I **cut** my finger. (V2, past)\n• I have **cut** myself many times. (V3, perfect)\n\n• Please **shut** the door. (V1)\n• She **shut** the door angrily. (V2)\n• They have **shut** the windows. (V3)\n\n**Trucje**: AAA-werkwoorden zijn vaak korte, simpele woorden die op een **t** of **d** eindigen.",
     svg: patronenSvg(),
     checks: [
       {
@@ -237,8 +237,8 @@ const steps = [
     ],
   },
   {
-    title: "Patroon ABA + AAB — twee gelijk",
-    explanation: "**ABA-patroon** — V1 = V3 (alleen V2 is anders)\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| come | came | come | komen |\n| become | became | become | worden |\n| run | ran | run | rennen |\n\n**Voorbeelden ABA**:\n• I **come** here every day.\n• Yesterday I **came** here too.\n• I have **come** here a hundred times.\n\n**AAB-patroon** — V1 ≠ V2 = V3\n\nDit is het MEEST VOORKOMENDE patroon. Veel werkwoorden hebben dit:\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| have | had | had | hebben |\n| make | made | made | maken |\n| say | said | said | zeggen |\n| pay | paid | paid | betalen |\n| tell | told | told | vertellen |\n| sell | sold | sold | verkopen |\n| think | thought | thought | denken |\n| bring | brought | brought | brengen |\n| buy | bought | bought | kopen |\n| catch | caught | caught | vangen |\n| teach | taught | taught | leren (aan iemand) |\n| find | found | found | vinden |\n| feel | felt | felt | voelen |\n| keep | kept | kept | houden |\n| sleep | slept | slept | slapen |\n| meet | met | met | ontmoeten |\n| sit | sat | sat | zitten |\n| stand | stood | stood | staan |\n| lose | lost | lost | verliezen |\n| send | sent | sent | sturen |\n| spend | spent | spent | uitgeven, besteden |\n\n**Voorbeelden AAB**:\n• I **buy** food. (V1)\n• Yesterday I **bought** food. (V2)\n• I have **bought** food. (V3)\n\n**Patroon-tip**: heel veel AAB-werkwoorden hebben **-ought** of **-aught** in V2/V3 (zie volgende stap voor uitgebreider patroon).\n\n**AAB**-werkwoorden zijn **makkelijker** dan ABC omdat je maar 2 vormen hoeft te onthouden.",
+    title: "Patroon ABA + ABB — twee gelijk",
+    explanation: "**ABA-patroon** — V1 = V3 (alleen V2 is anders)\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| come | came | come | komen |\n| become | became | become | worden |\n| run | ran | run | rennen |\n\n**Voorbeelden ABA**:\n• I **come** here every day.\n• Yesterday I **came** here too.\n• I have **come** here a hundred times.\n\n**ABB-patroon** — V1 ≠ V2 = V3\n\nDit is het MEEST VOORKOMENDE patroon. Veel werkwoorden hebben dit:\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| have | had | had | hebben |\n| make | made | made | maken |\n| say | said | said | zeggen |\n| pay | paid | paid | betalen |\n| tell | told | told | vertellen |\n| sell | sold | sold | verkopen |\n| think | thought | thought | denken |\n| bring | brought | brought | brengen |\n| buy | bought | bought | kopen |\n| catch | caught | caught | vangen |\n| teach | taught | taught | leren (aan iemand) |\n| find | found | found | vinden |\n| feel | felt | felt | voelen |\n| keep | kept | kept | houden |\n| sleep | slept | slept | slapen |\n| meet | met | met | ontmoeten |\n| sit | sat | sat | zitten |\n| stand | stood | stood | staan |\n| lose | lost | lost | verliezen |\n| send | sent | sent | sturen |\n| spend | spent | spent | uitgeven, besteden |\n\n**Voorbeelden ABB**:\n• I **buy** food. (V1)\n• Yesterday I **bought** food. (V2)\n• I have **bought** food. (V3)\n\n**Patroon-tip**: heel veel ABB-werkwoorden hebben **-ought** of **-aught** in V2/V3 (zie volgende stap voor uitgebreider patroon).\n\n**ABB**-werkwoorden zijn **makkelijker** dan ABC omdat je maar 2 vormen hoeft te onthouden.",
     svg: patronenSvg(),
     checks: [
       {
@@ -252,12 +252,12 @@ const steps = [
           "Dat is -ing vorm, niet V3.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "buy-bought-bought", tekst: "AAB: V2 = V3 = bought." }],
-          woorden: [{ woord: "AAB", uitleg: "V2 en V3 hetzelfde" }],
-          theorie: "AAB-werkwoorden: minder werk dan ABC.",
+          stappen: [{ titel: "buy-bought-bought", tekst: "ABB: V2 = V3 = bought." }],
+          woorden: [{ woord: "ABB", uitleg: "V2 en V3 hetzelfde" }],
+          theorie: "ABB-werkwoorden: minder werk dan ABC.",
           voorbeelden: [{ type: "voorbeeld", tekst: "buy-bought, think-thought, find-found" }],
           basiskennis: [{ onderwerp: "-ought", uitleg: "patroon in deze groep" }],
-          niveaus: { basis: "bought.", simpeler: "AAB → bought.", nogSimpeler: "bought." },
+          niveaus: { basis: "bought.", simpeler: "ABB → bought.", nogSimpeler: "bought." },
         },
       },
       {
@@ -266,7 +266,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "make-made-made is AAB.",
+          "make-made-made is ABB.",
           "go-went-gone is ABC (alle 3 verschillend).",
           "eat-ate-eaten is ABC.",
         ],
@@ -295,19 +295,19 @@ const steps = [
           "V3 is hetzelfde als V2: thought.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "think-thought-thought", tekst: "AAB: V2 = V3 = thought." }],
+          stappen: [{ titel: "think-thought-thought", tekst: "ABB: V2 = V3 = thought." }],
           woorden: [{ woord: "-ought", uitleg: "patroon: bought, brought, thought, fought" }],
-          theorie: "Veel AAB-werkwoorden eindigen op -ought.",
+          theorie: "Veel ABB-werkwoorden eindigen op -ought.",
           voorbeelden: [{ type: "voorbeeld", tekst: "think→thought, buy→bought" }],
-          basiskennis: [{ onderwerp: "uitspraak", uitleg: "gh = stom, klinkt 'oht'" }],
-          niveaus: { basis: "think-thought-thought.", simpeler: "AAB.", nogSimpeler: "thought." },
+          basiskennis: [{ onderwerp: "uitspraak", uitleg: "gh = stom, klinkt als 'awt'" }],
+          niveaus: { basis: "think-thought-thought.", simpeler: "ABB.", nogSimpeler: "thought." },
         },
       },
     ],
   },
   {
     title: "Patroon ABC — alle drie verschillend (lastigste)",
-    explanation: "**ABC-patroon** — alle drie vormen zijn anders. Lastigste te onthouden.\n\n**De belangrijkste lijst**:\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| be | was/were | been | zijn |\n| do | did | done | doen |\n| go | went | gone | gaan |\n| see | saw | seen | zien |\n| eat | ate | eaten | eten |\n| drink | drank | drunk | drinken |\n| swim | swam | swum | zwemmen |\n| sing | sang | sung | zingen |\n| ring | rang | rung | bellen, klinken |\n| begin | began | begun | beginnen |\n| run | ran | run | rennen *(eigenlijk ABA)* |\n| give | gave | given | geven |\n| take | took | taken | nemen |\n| break | broke | broken | breken |\n| speak | spoke | spoken | spreken |\n| steal | stole | stolen | stelen |\n| choose | chose | chosen | kiezen |\n| forget | forgot | forgotten | vergeten |\n| get | got | got/gotten | krijgen |\n| write | wrote | written | schrijven |\n| ride | rode | ridden | rijden (paard, fiets) |\n| drive | drove | driven | rijden (auto) |\n| fall | fell | fallen | vallen |\n| know | knew | known | weten/kennen |\n| grow | grew | grown | groeien |\n| throw | threw | thrown | gooien |\n| show | showed | shown | tonen |\n| fly | flew | flown | vliegen |\n| draw | drew | drawn | tekenen |\n| wear | wore | worn | dragen (kleding) |\n| tear | tore | torn | scheuren |\n| sweat | sweat | sweat | zweten *(of regelmatig)* |\n\n**Voorbeelden ABC**:\n• I **eat** breakfast. (V1)\n• Yesterday I **ate** breakfast. (V2)\n• I have **eaten** breakfast. (V3)\n\n• They **drink** water. \n• They **drank** water yesterday.\n• They have **drunk** water.\n\n**Pro tip**: bij ABC-werkwoorden hoor je vaak **klinker-shift**: i-a-u of e-o-o (zie volgende stap voor patronen).",
+    explanation: "**ABC-patroon** — alle drie vormen zijn anders. Lastigste te onthouden.\n\n**De belangrijkste lijst**:\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| be | was/were | been | zijn |\n| do | did | done | doen |\n| go | went | gone | gaan |\n| see | saw | seen | zien |\n| eat | ate | eaten | eten |\n| drink | drank | drunk | drinken |\n| swim | swam | swum | zwemmen |\n| sing | sang | sung | zingen |\n| ring | rang | rung | bellen, klinken |\n| begin | began | begun | beginnen |\n| run | ran | run | rennen *(eigenlijk ABA)* |\n| give | gave | given | geven |\n| take | took | taken | nemen |\n| break | broke | broken | breken |\n| speak | spoke | spoken | spreken |\n| steal | stole | stolen | stelen |\n| choose | chose | chosen | kiezen |\n| forget | forgot | forgotten | vergeten |\n| get | got | got/gotten | krijgen |\n| write | wrote | written | schrijven |\n| ride | rode | ridden | rijden (paard, fiets) |\n| drive | drove | driven | rijden (auto) |\n| fall | fell | fallen | vallen |\n| know | knew | known | weten/kennen |\n| grow | grew | grown | groeien |\n| throw | threw | thrown | gooien |\n| show | showed | shown | tonen |\n| fly | flew | flown | vliegen |\n| draw | drew | drawn | tekenen |\n| wear | wore | worn | dragen (kleding) |\n| tear | tore | torn | scheuren |\n| sweat | sweat | sweat | zweten *(eigenlijk AAA, of regelmatig)* |\n\n**Voorbeelden ABC**:\n• I **eat** breakfast. (V1)\n• Yesterday I **ate** breakfast. (V2)\n• I have **eaten** breakfast. (V3)\n\n• They **drink** water. \n• They **drank** water yesterday.\n• They have **drunk** water.\n\n**Pro tip**: bij ABC-werkwoorden hoor je vaak **klinker-shift**: i-a-u of e-o-o (zie volgende stap voor patronen).",
     svg: drieVormenSvg(),
     checks: [
       {
@@ -318,7 +318,7 @@ const steps = [
           null,
           "Dat is V2 (yesterday I ate).",
           "Dat is V1.",
-          "Eten is onregelmatig.",
+          "Eat is onregelmatig.",
         ],
         uitlegPad: {
           stappen: [{ titel: "eat-ate-eaten", tekst: "V3 = eaten (groep 5, -en eind)." }],
@@ -359,7 +359,7 @@ const steps = [
   // ─── C. Veelvoorkomend ───────────────
   {
     title: "Top 30 — meest gebruikte onregelmatige werkwoorden",
-    explanation: "Hier zijn de **30 meest voorkomende** onregelmatige werkwoorden in het Engels. Ken je deze, dan kun je 80% van het dagelijks Engels begrijpen.\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| be | was/were | been | zijn |\n| have | had | had | hebben |\n| do | did | done | doen |\n| say | said | said | zeggen |\n| go | went | gone | gaan |\n| get | got | got | krijgen |\n| make | made | made | maken |\n| know | knew | known | weten |\n| think | thought | thought | denken |\n| take | took | taken | nemen |\n| see | saw | seen | zien |\n| come | came | come | komen |\n| want* | wanted | wanted | willen |\n| look* | looked | looked | kijken |\n| use* | used | used | gebruiken |\n| find | found | found | vinden |\n| give | gave | given | geven |\n| tell | told | told | vertellen |\n| become | became | become | worden |\n| feel | felt | felt | voelen |\n| leave | left | left | weggaan, achterlaten |\n| put | put | put | leggen |\n| mean | meant | meant | betekenen, bedoelen |\n| keep | kept | kept | houden |\n| let | let | let | laten |\n| begin | began | begun | beginnen |\n| seem* | seemed | seemed | lijken |\n| help* | helped | helped | helpen |\n| show | showed | shown | tonen |\n| hear | heard | heard | horen |\n\n*regelmatig (gemarkeerd) — bij wijze van uitzondering: deze zijn regelmatig maar staan in top frequency.\n\n**Tip om te leren**:\n1. Pak elke dag **5 werkwoorden**.\n2. Maak voor elk een **eigen voorbeeldzin** in alle 3 vormen.\n3. Lees ze **hardop** — gehoor onthoudt beter dan ogen.\n4. Test jezelf de volgende dag.\n\nIn 6 dagen ken je deze top 30.",
+    explanation: "Hier zijn de **30 meest voorkomende** onregelmatige werkwoorden in het Engels. Ken je deze, dan begrijp je al een groot deel van het dagelijks Engels.\n\n| V1 | V2 | V3 | Vertaling |\n|---|---|---|---|\n| be | was/were | been | zijn |\n| have | had | had | hebben |\n| do | did | done | doen |\n| say | said | said | zeggen |\n| go | went | gone | gaan |\n| get | got | got | krijgen |\n| make | made | made | maken |\n| know | knew | known | weten |\n| think | thought | thought | denken |\n| take | took | taken | nemen |\n| see | saw | seen | zien |\n| come | came | come | komen |\n| want* | wanted | wanted | willen |\n| look* | looked | looked | kijken |\n| use* | used | used | gebruiken |\n| find | found | found | vinden |\n| give | gave | given | geven |\n| tell | told | told | vertellen |\n| become | became | become | worden |\n| feel | felt | felt | voelen |\n| leave | left | left | weggaan, achterlaten |\n| put | put | put | leggen |\n| mean | meant | meant | betekenen, bedoelen |\n| keep | kept | kept | houden |\n| let | let | let | laten |\n| begin | began | begun | beginnen |\n| seem* | seemed | seemed | lijken |\n| help* | helped | helped | helpen |\n| show | showed | shown | tonen |\n| hear | heard | heard | horen |\n\n*Gemarkeerd = eigenlijk regelmatig, maar ze horen wel bij de meest gebruikte werkwoorden.\n\n**Tip om te leren**:\n1. Pak elke dag **5 werkwoorden**.\n2. Maak voor elk een **eigen voorbeeldzin** in alle 3 vormen.\n3. Lees ze **hardop** — dat helpt bij onthouden.\n4. Test jezelf de volgende dag.\n\nIn 6 dagen ken je deze top 30.",
     svg: drieVormenSvg(),
     checks: [
       {
@@ -373,12 +373,12 @@ const steps = [
           "Dat is -ing vorm.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "leave-left-left", tekst: "AAB: V2 = V3 = left." }],
+          stappen: [{ titel: "leave-left-left", tekst: "ABB: V2 = V3 = left." }],
           woorden: [{ woord: "left", uitleg: "V2/V3 van leave" }],
-          theorie: "AAB-patroon, eindigt op -ft.",
+          theorie: "ABB-patroon, eindigt op -ft.",
           voorbeelden: [{ type: "voorbeeld", tekst: "She left, they have left" }],
-          basiskennis: [{ onderwerp: "AAB-groep", uitleg: "veel werkwoorden" }],
-          niveaus: { basis: "left.", simpeler: "AAB.", nogSimpeler: "left." },
+          basiskennis: [{ onderwerp: "ABB-groep", uitleg: "veel werkwoorden" }],
+          niveaus: { basis: "left.", simpeler: "ABB.", nogSimpeler: "left." },
         },
       },
       {
@@ -392,7 +392,7 @@ const steps = [
           "Dat is -ing vorm.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "hear-heard-heard", tekst: "AAB: V2 = V3 = heard." }],
+          stappen: [{ titel: "hear-heard-heard", tekst: "ABB: V2 = V3 = heard." }],
           woorden: [{ woord: "heard", uitleg: "uitgesproken als 'herd'" }],
           theorie: "Spelling -eard (geen -eared).",
           voorbeelden: [{ type: "voorbeeld", tekst: "I have heard the news" }],
@@ -404,7 +404,7 @@ const steps = [
   },
   {
     title: "Patroon -ought / -aught (think → thought)",
-    explanation: "Een **mooi patroon**: als je dit één keer hebt gezien, herken je het overal.\n\nVeel werkwoorden eindigen in V2/V3 op **-ought** of **-aught**:\n\n**-ought groep**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| think | thought | thought |\n| bring | brought | brought |\n| buy | bought | bought |\n| fight | fought | fought |\n| seek | sought | sought |\n\n**-aught groep**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| catch | caught | caught |\n| teach | taught | taught |\n\n**Geheugentruc**: deze werkwoorden hebben allemaal het patroon AAB (V2 = V3 = '-ought' of '-aught').\n\n**Uitspraak**:\n• -ought: klinkt als 'oht' (vergelijkbaar met 'boat' zonder de t).\n• -aught: klinkt hetzelfde — 'oht'.\n\nIn beide gevallen is de 'gh' **stom** (niet uitgesproken).\n\n**Voorbeelden**:\n• I **think** he is right. → I **thought** he was right.\n• They **buy** new shoes. → They **bought** new shoes.\n• She **catches** fish. → She **caught** a big fish.\n• He **teaches** math. → He **taught** us math.\n\n**Andere klinker-patronen**:\n\n*-eep → -ept*\n• keep → kept\n• sleep → slept\n• weep → wept\n\n*-eet → -et*\n• meet → met\n\n*-end → -ent*\n• send → sent\n• spend → spent\n• lend → lent\n\nAls je deze patronen herkent, hoef je niet elk werkwoord apart te onthouden.",
+    explanation: "Een **mooi patroon**: als je dit één keer hebt gezien, herken je het overal.\n\nVeel werkwoorden eindigen in V2/V3 op **-ought** of **-aught**:\n\n**-ought groep**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| think | thought | thought |\n| bring | brought | brought |\n| buy | bought | bought |\n| fight | fought | fought |\n| seek | sought | sought |\n\n**-aught groep**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| catch | caught | caught |\n| teach | taught | taught |\n\n**Geheugentruc**: deze werkwoorden hebben allemaal het patroon ABB (V2 = V3 = '-ought' of '-aught').\n\n**Uitspraak**:\n• -ought: klinkt als 'awt' (de klank van het Engelse 'saw' + t).\n• -aught: klinkt hetzelfde — 'awt'.\n\nIn beide gevallen is de 'gh' **stom** (niet uitgesproken).\n\n**Voorbeelden**:\n• I **think** he is right. → I **thought** he was right.\n• They **buy** new shoes. → They **bought** new shoes.\n• She **catches** fish. → She **caught** a big fish.\n• He **teaches** math. → He **taught** us math.\n\n**Andere klinker-patronen**:\n\n*-eep → -ept*\n• keep → kept\n• sleep → slept\n• weep → wept\n\n*-eet → -et*\n• meet → met\n\n*-end → -ent*\n• send → sent\n• spend → spent\n• lend → lent\n\nAls je deze patronen herkent, hoef je niet elk werkwoord apart te onthouden.",
     svg: patronenSvg(),
     checks: [
       {
@@ -418,18 +418,18 @@ const steps = [
           "Dat is -ing vorm.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "teach-taught-taught", tekst: "AAB met -aught patroon." }],
+          stappen: [{ titel: "teach-taught-taught", tekst: "ABB met -aught patroon." }],
           woorden: [{ woord: "-aught", uitleg: "catch en teach" }],
           theorie: "-aught vs -ought: teach/catch hebben -aught.",
           voorbeelden: [{ type: "voorbeeld", tekst: "teach→taught, catch→caught" }],
           basiskennis: [{ onderwerp: "uitspraak", uitleg: "klinkt 'aw'" }],
-          niveaus: { basis: "taught.", simpeler: "AAB → taught.", nogSimpeler: "taught." },
+          niveaus: { basis: "taught.", simpeler: "ABB → taught.", nogSimpeler: "taught." },
         },
       },
       {
         q: "Welk werkwoord past **niet** bij het -ought/aught patroon?",
         options: [
-          "swim (drinkt-patroon, niet -ought)",
+          "swim (drink-patroon, niet -ought)",
           "think",
           "buy",
           "catch",
@@ -456,7 +456,7 @@ const steps = [
   // ─── D. Klinker-shift ───────────────
   {
     title: "Klinker-shift werkwoorden (sing → sang → sung)",
-    explanation: "Sommige onregelmatige werkwoorden volgen een **klinker-shift** patroon: de medeklinkers blijven hetzelfde, alleen de klinker verandert.\n\n**Patroon i → a → u**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| sing | sang | sung |\n| ring | rang | rung |\n| swim | swam | swum |\n| drink | drank | drunk |\n| sink | sank | sunk |\n| begin | began | begun |\n| run | ran | run |\n| spring | sprang | sprung |\n\n*Geheugentruc: '**I-A-U**' (zoals 'ik-aa-uu')*\n\n**Patroon i → o → o** (V2 = V3):\n\n| V1 | V2 | V3 |\n|---|---|---|\n| win | won | won |\n| spin | spun | spun |\n| dig | dug | dug |\n| stick | stuck | stuck |\n| swing | swung | swung |\n| sting | stung | stung |\n| string | strung | strung |\n| hang | hung | hung |\n\n**Patroon ee → e → e**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| feed | fed | fed |\n| breed | bred | bred |\n| bleed | bled | bled |\n| meet | met | met |\n| keep | kept | kept |\n| sleep | slept | slept |\n\n**Patroon ow → ew → own**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| know | knew | known |\n| grow | grew | grown |\n| throw | threw | thrown |\n| blow | blew | blown |\n| fly | flew | flown (ja, geen 'ow' in V1 maar volgt zelfde patroon) |\n| draw | drew | drawn |\n\n**Patroon i → o → en (driemaal verschillend)**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| ride | rode | ridden |\n| drive | drove | driven |\n| write | wrote | written |\n| rise | rose | risen |\n| forget | forgot | forgotten |\n| break | broke | broken |\n| speak | spoke | spoken |\n| steal | stole | stolen |\n| choose | chose | chosen |\n\n**Strategie voor leren**: groepeer werkwoorden die hetzelfde patroon volgen. Die ken je dan in batch.",
+    explanation: "Sommige onregelmatige werkwoorden volgen een **klinker-shift** patroon: de medeklinkers blijven hetzelfde, alleen de klinker verandert.\n\n**Patroon i → a → u**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| sing | sang | sung |\n| ring | rang | rung |\n| swim | swam | swum |\n| drink | drank | drunk |\n| sink | sank | sunk |\n| begin | began | begun |\n| run | ran | run |\n| spring | sprang | sprung |\n\n*Geheugentruc: '**I-A-U**' (zoals 'ik-aa-uu')*\n\n**Patroon i → o/u → o/u** (V2 = V3):\n\n| V1 | V2 | V3 |\n|---|---|---|\n| win | won | won |\n| spin | spun | spun |\n| dig | dug | dug |\n| stick | stuck | stuck |\n| swing | swung | swung |\n| sting | stung | stung |\n| string | strung | strung |\n| hang | hung | hung |\n\n**Patroon ee → e → e**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| feed | fed | fed |\n| breed | bred | bred |\n| bleed | bled | bled |\n| meet | met | met |\n| keep | kept | kept |\n| sleep | slept | slept |\n\n**Patroon ow → ew → own**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| know | knew | known |\n| grow | grew | grown |\n| throw | threw | thrown |\n| blow | blew | blown |\n| fly | flew | flown (ja, geen 'ow' in V1 maar volgt zelfde patroon) |\n| draw | drew | drawn |\n\n**Patroon klinkerwissel + -en in V3 (alle drie verschillend)**:\n\n| V1 | V2 | V3 |\n|---|---|---|\n| ride | rode | ridden |\n| drive | drove | driven |\n| write | wrote | written |\n| rise | rose | risen |\n| forget | forgot | forgotten |\n| break | broke | broken |\n| speak | spoke | spoken |\n| steal | stole | stolen |\n| choose | chose | chosen |\n\n**Strategie voor leren**: groepeer werkwoorden die hetzelfde patroon volgen. Die leer je dan in één keer.",
     svg: drieVormenSvg(),
     checks: [
       {
@@ -496,9 +496,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "win = i-o-o", tekst: "Win-won-won. V2 = V3 = won." }],
           woorden: [{ woord: "i-o-o groep", uitleg: "win, spin, dig, stick, hang" }],
-          theorie: "AAB-patroon met klinker-o in V2/V3.",
+          theorie: "ABB-patroon met klinker-o in V2/V3.",
           voorbeelden: [{ type: "voorbeeld", tekst: "win→won, dig→dug" }],
-          basiskennis: [{ onderwerp: "AAB", uitleg: "minder werk dan i-a-u" }],
+          basiskennis: [{ onderwerp: "ABB", uitleg: "minder werk dan i-a-u" }],
           niveaus: { basis: "win.", simpeler: "i-o-o.", nogSimpeler: "win/won." },
         },
       },
@@ -510,7 +510,7 @@ const steps = [
           null,
           "Dat is V2.",
           "Onregelmatig — geen -ed.",
-          "Dat is geen vorm — gewoon -ing.",
+          "Dat is geen V3 — en de -ing-vorm schrijf je met één t.",
         ],
         uitlegPad: {
           stappen: [{ titel: "write-wrote-written", tekst: "V3 = written (-en eind)." }],
@@ -527,7 +527,7 @@ const steps = [
   // ─── E. Eindopdracht ───────────────
   {
     title: "Eindopdracht — kies de juiste vorm",
-    explanation: "Tijd om alles toe te passen! Bij elke zin: welke vorm hoort erbij?\n\n**Snelle check**:\n\n| Patroon | V1 | V2 | V3 |\n|---|---|---|---|\n| AAA | cut | cut | cut |\n| ABA | come | came | come |\n| AAB | think | thought | thought |\n| ABC | go | went | gone |\n| i-a-u | swim | swam | swum |\n| i-o-o | win | won | won |\n\n**Wanneer welke vorm?**\n• V1: present (I/you/we/they go), of na will/can/must.\n• V1 + 's': 3e persoon present (he/she/it goes).\n• V2: past simple (yesterday I went).\n• V3: na have/has/had (I have gone).\n• V3: ook in passive voice (it was made).\n\n**Veel succes!**",
+    explanation: "Tijd om alles toe te passen! Bij elke zin: welke vorm hoort erbij?\n\n**Snelle check**:\n\n| Patroon | V1 | V2 | V3 |\n|---|---|---|---|\n| AAA | cut | cut | cut |\n| ABA | come | came | come |\n| ABB | think | thought | thought |\n| ABC | go | went | gone |\n| i-a-u | swim | swam | swum |\n| i-o-o | win | won | won |\n\n**Wanneer welke vorm?**\n• V1: present (I/you/we/they go), of na will/can/must.\n• V1 + 's': 3e persoon present (he/she/it goes).\n• V2: past simple (yesterday I went).\n• V3: na have/has/had (I have gone).\n• V3: ook in passive voice (it was made).\n\n**Veel succes!**",
     svg: drieVormenSvg(),
     checks: [
       {
@@ -545,7 +545,7 @@ const steps = [
           woorden: [{ woord: "went", uitleg: "V2 van go" }],
           theorie: "Yesterday is signaal voor V2.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Yesterday I went, last week we ate" }],
-          basiskennis: [{ onderwerp: "tijdwoord", uitleg: "signaleert tense" }],
+          basiskennis: [{ onderwerp: "tijdwoord", uitleg: "geeft de tijd aan" }],
           niveaus: { basis: "went.", simpeler: "V2 = went.", nogSimpeler: "went." },
         },
       },
@@ -579,12 +579,12 @@ const steps = [
           "Onregelmatig — geen -ed.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "lose-lost-lost", tekst: "AAB: V2 = V3 = lost." }],
+          stappen: [{ titel: "lose-lost-lost", tekst: "ABB: V2 = V3 = lost." }],
           woorden: [{ woord: "lost", uitleg: "V2/V3 van lose" }],
           theorie: "Lose ≠ loose (los). Vt = lost.",
           voorbeelden: [{ type: "voorbeeld", tekst: "She lost her keys yesterday" }],
           basiskennis: [{ onderwerp: "verwarring", uitleg: "lose (verliezen) vs loose (los)" }],
-          niveaus: { basis: "lost.", simpeler: "AAB.", nogSimpeler: "lost." },
+          niveaus: { basis: "lost.", simpeler: "ABB.", nogSimpeler: "lost." },
         },
       },
       {
@@ -594,7 +594,7 @@ const steps = [
         wrongHints: [
           null,
           "Past simple V2 — maar 'have' vereist V3.",
-          "V1 — zonder hulpwerkwoord.",
+          "V1 — past niet na 'have'.",
           "-ing vorm voor 'be seeing'.",
         ],
         uitlegPad: {
@@ -626,8 +626,8 @@ const steps = [
         },
       },
       { q: "Yesterday I _____ (run) to school.", options: ["ran","runned","run","running"], answer: 0, wrongHints: [null,"Niet — 'run' is onregelmatig, geen +ed.","Dat is V1 — verleden tijd nodig.","-ing gebruik je bij continuous."] },
-      { q: "She has _____ (eat) all the cookies.", options: ["eaten","ate","eated","eating"], answer: 0, wrongHints: [null,"Dat is V2 — na 'has' gebruik V3.","Onregelmatig — geen +ed.","-ing is continuous."] },
-      { q: "**V2 van 'go'** =?", options: ["went","goed","gone","goes"], answer: 0, wrongHints: [null,"Onregelmatig.","Dat is V3.","Tegenwoordig 3e persoon."] },
+      { q: "She has _____ (eat) all the cookies.", options: ["eaten","ate","eated","eating"], answer: 0, wrongHints: [null,"Dat is V2 — na 'has' gebruik je V3.","Onregelmatig — geen +ed.","-ing is continuous."] },
+      { q: "**V2 van 'go'** =?", options: ["went","goed","gone","goes"], answer: 0, wrongHints: [null,"Onregelmatig.","Dat is V3.","Tegenwoordige tijd, 3e persoon."] },
       { q: "**V2 van 'see'** =?", options: ["saw","seed","seen","sees"], answer: 0, wrongHints: [null,"Onregelmatig.","V3.","Present 3e."] },
       { q: "**V2 van 'take'** =?", options: ["took","taked","taken","takes"], answer: 0, wrongHints: [null,"Onregelmatig.","V3.","Present 3e."] },
       { q: "**V2 van 'do'** =?", options: ["did","done","doed","does"], answer: 0, wrongHints: [null,"V3.","Onregelmatig.","Present 3e."] },
@@ -654,7 +654,7 @@ const onregelmatigeWerkwoordenV2Engels = {
     { id: "onregelmatige-werkwoorden-engels", title: "Onregelmatige werkwoorden Engels (basis)", niveau: "engels-A2/B1" },
   ],
   intro:
-    "Onregelmatige werkwoorden in het Engels — uitbreiding op het klas-1-pad. Patronen herkennen (AAA, ABA, AAB, ABC + klinker-shifts), de 30 meest voorkomende werkwoorden + slimme groepen zoals -ought/-aught en de i-a-u shift. Met voorbeeldzinnen en eindopdracht waarbij je de juiste vorm kiest in zinnen.",
+    "Onregelmatige werkwoorden in het Engels — uitbreiding op het klas-1-pad. Patronen herkennen (AAA, ABA, ABB, ABC + klinker-shifts), de 30 meest voorkomende werkwoorden + slimme groepen zoals -ought/-aught en de i-a-u shift. Met voorbeeldzinnen en eindopdracht waarbij je de juiste vorm kiest in zinnen.",
   triggerKeywords: [
     "onregelmatige werkwoorden", "irregular verbs",
     "engels werkwoorden",

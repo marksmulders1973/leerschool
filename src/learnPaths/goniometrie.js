@@ -38,7 +38,7 @@ const steps = [
         q: "Hoeveel rechte hoeken heeft een rechthoekige driehoek?",
         options: ["1", "2", "3", "0"],
         answer: 0,
-        wrongHints: [null, "Wat is de hoekensom in een driehoek? Past dat bij twee rechte hoeken?", "Past dat bij de hoekensom van een driehoek?", "Een 'rechthoekige driehoek' heeft per definitie hoeveel rechte hoeken in z'n naam zitten?"],
+        wrongHints: [null, "Wat is de hoekensom in een driehoek? Past dat bij twee rechte hoeken?", "Past dat bij de hoekensom van een driehoek?", "Een 'rechthoekige driehoek' — hoeveel rechte hoeken zitten er per definitie in?"],
         uitlegPad: {
           stappen: [{ titel: "1 rechte hoek", tekst: "Een rechthoekige driehoek heeft 1 hoek van 90°." }],
           woorden: [{ woord: "rechte hoek", uitleg: "90° hoek" }],
@@ -189,7 +189,7 @@ const steps = [
         q: "α = 30°, schuine zijde 20. Hoe lang is de tegenoverstaande?",
         options: ["10", "5", "0,5", "20"],
         answer: 0,
-        wrongHints: [null, "Klopt bij een kleinere schuine zijde — kijk goed hoelang de schuine zijde hier is.", "0,5 is sin 30°, niet de zijde zelf — vermenigvuldig die waarde met de schuine zijde.", "Je hebt de schuine zijde als antwoord — maar je zoekt de tegenoverstaande."],
+        wrongHints: [null, "Klopt bij een kleinere schuine zijde — kijk goed hoe lang de schuine zijde hier is.", "0,5 is sin 30°, niet de zijde zelf — vermenigvuldig die waarde met de schuine zijde.", "Je hebt de schuine zijde als antwoord — maar je zoekt de tegenoverstaande."],
         uitlegPad: {
           stappen: [{ titel: "sin × schuin", tekst: "tegenover = sin 30° × 20 = 0,5 × 20 = 10." }],
           woorden: [{ woord: "formule", uitleg: "tegenover = sin α × schuin" }],
@@ -233,7 +233,7 @@ const steps = [
   },
   {
     title: "Hoek uitrekenen — sin⁻¹, cos⁻¹, tan⁻¹",
-    explanation: "Andersom: heb je twee **zijden** en zoek je de **hoek**? Gebruik de **inverse** functies.\n\nOp je rekenmachine: **sin⁻¹** (of 'arcsin'), **cos⁻¹**, **tan⁻¹** (vaak met SHIFT-toets).\n\n**Voorbeeld**: rechthoekige driehoek met tegenover = 5, schuine = 10. Hoeveel graden is α?\n• sin α = 5 / 10 = 0,5\n• α = sin⁻¹(0,5) = **30°**\n\n**Stappenplan**:\n1. Bereken de verhouding: deel een zijde door een ander.\n2. Pas inverse toe op je rekenmachine.\n3. Lees de hoek af.\n\n**Voorbeeld 2**: aanliggend = 4, tegenover = 4 (gelijk). Welke α?\n• tan α = 4 / 4 = 1\n• α = tan⁻¹(1) = **45°**",
+    explanation: "Andersom: heb je twee **zijden** en zoek je de **hoek**? Gebruik de **inverse** functies.\n\nOp je rekenmachine: **sin⁻¹** (of 'arcsin'), **cos⁻¹**, **tan⁻¹** (vaak met SHIFT-toets).\n\n**Voorbeeld**: rechthoekige driehoek met tegenover = 5, schuine = 10. Hoeveel graden is α?\n• sin α = 5 / 10 = 0,5\n• α = sin⁻¹(0,5) = **30°**\n\n**Stappenplan**:\n1. Bereken de verhouding: deel een zijde door een andere.\n2. Pas inverse toe op je rekenmachine.\n3. Lees de hoek af.\n\n**Voorbeeld 2**: aanliggend = 4, tegenover = 4 (gelijk). Welke α?\n• tan α = 4 / 4 = 1\n• α = tan⁻¹(1) = **45°**",
     svg: `<svg viewBox="0 0 300 200">
 <polygon points="60,160 220,160 60,40" fill="rgba(0,200,83,0.10)" stroke="${COLORS.curve}" stroke-width="2"/>
 <rect x="60" y="142" width="18" height="18" fill="none" stroke="${COLORS.curveAlt}" stroke-width="1.5"/>
@@ -441,19 +441,19 @@ const steps = [
       { q: "**SOSCASTOA** — wat staat SOH voor?", options: ["Sinus = Overstaand / Hypotenusa","Sinus = Schuin / Overstaand","Sinus = Onder / Hoog","Sinus = Som / Hoogte"], answer: 0, wrongHints: [null, "Andersom — O staat boven H.", "Niet — geen onder/hoog.", "Niet — geen som."] },
       { q: "Driehoek met hoek 30°, hypotenusa 10. Overstaand?", options: ["5","8,66","10","3"], answer: 0, wrongHints: [null, "Dat is aanliggend (cos 30°).", "Niet — moet kleiner zijn.", "Niet."] },
       { q: "Wat is **tan 45°**?", options: ["1","0","√2","0,5"], answer: 0, wrongHints: [null, "Niet — denk: bij 45° zijn beide zijden gelijk, hoeveel is dan tegenover ÷ aanliggend?", "Niet — dat is sin 45° of cos 45°, niet de tangens.", "Niet — tan 30° is kleiner dan 1."] },
-      { q: "**Pythagoras**: a²+b²=? wanneer a=3, b=4", options: ["c=5","c=7","c=12","c=25"], answer: 0, wrongHints: [null, "Optellen ipv kwadraat.", "Vermenigvuldigen ipv +.", "Niet trek wortel."] },
+      { q: "**Pythagoras**: a²+b²=? wanneer a=3, b=4", options: ["c=5","c=7","c=12","c=25"], answer: 0, wrongHints: [null, "Optellen ipv kwadraat.", "Vermenigvuldigen ipv +.", "Vergeet niet de wortel te trekken."] },
       { q: "Hoek tussen schuin en grond is 60°. Welke zijde langste?", options: ["Hypotenusa","Aanliggend","Overstaand","Allemaal gelijk"], answer: 0, wrongHints: [null, "Aanliggende is altijd korter dan de schuine zijde.", "Overstaande is in deze driehoek niet de langste.", "Geen gelijkzijdige driehoek — een zijde springt eruit."] },
-      { q: "Welke is correct? sin² 30° + cos² 30° = ?", options: ["1","0","2","½"], answer: 0, wrongHints: [null, "Niet — minimum 0.", "Niet — max 1.", "Niet."] },
+      { q: "Welke is correct? sin² 30° + cos² 30° = ?", options: ["1","0","2","½"], answer: 0, wrongHints: [null, "Niet — sin² 30° en cos² 30° zijn allebei groter dan 0.", "Niet — max 1.", "Niet."] },
       { q: "Tan 0° = ?", options: ["0","1","∞","−1"], answer: 0, wrongHints: [null, "Tan 45°.", "Tan 90°.", "Niet."] },
       { q: "Bij **rechthoekige driehoek** — wat is altijd 90°?", options: ["1 hoek (de rechte hoek)","2 hoeken","Alle 3 hoeken","Geen"], answer: 0, wrongHints: [null, "Niet — andere 2 zijn samen 90° (niet elk).", "Niet — som alle hoeken altijd 180°.", "Wel — dat hoort bij rechthoekig."] },
       { q: "Som van 3 hoeken in elke driehoek = ?", options: ["180°","90°","270°","360°"], answer: 0, wrongHints: [null, "Dat is 1 rechte hoek, niet de som van 3 hoeken.", "Te veel — denk aan een vlakke driehoek, niet 3D.", "Dat is een volledige cirkel."] },
-      { q: "Welke functie groeit eindeloos bij benadering 90°?", options: ["tan","sin","cos","Allebei"], answer: 0, wrongHints: [null, "Niet — sin nadert een eindige waarde bij 90°.", "Niet — cos nadert ook een eindige waarde bij 90°.", "Niet — 2 zijn begrensd."] },
+      { q: "Welke functie groeit eindeloos als de hoek 90° nadert?", options: ["tan","sin","cos","Allebei"], answer: 0, wrongHints: [null, "Niet — sin nadert een eindige waarde bij 90°.", "Niet — cos nadert ook een eindige waarde bij 90°.", "Niet — 2 zijn begrensd."] },
       { q: "In een rechthoekige driehoek met hoek 60°: tan 60° ≈ ?", options: ["1,73 (√3)","0,5","1,41","2"], answer: 0, wrongHints: [null, "Sin 30° / cos 60°.", "√2 — bij 45°.", "Niet."] },
       { q: "Driehoek hoek 30°, aanliggend 6 cm. Overstaand = ?", options: ["3,46 cm (6×tan 30°)","12 cm","6 cm","2 cm"], answer: 0, wrongHints: [null, "Dubbel — verkeerd.", "Geen verandering — geen vermenigvuldiging.", "Niet."] },
       { q: "**sin 30°** = ?", options: ["½","1","0","√3/2"], answer: 0, wrongHints: [null,"Niet — sin 90°.","sin 0°.","cos 30°."] },
       { q: "**cos 60°** = ?", options: ["½","1","0","√3/2"], answer: 0, wrongHints: [null,"cos 0°.","cos 90°.","cos 30°."] },
       { q: "**tan 45°** = ?", options: ["1","0","∞","½"], answer: 0, wrongHints: [null,"tan 0°.","tan 90°.","Niet."] },
-      { q: "**SOS-CAS-TOA** is geheugentruc voor?", options: ["Sin = Overstaand/Schuine, Cos = Aanliggend/Schuine, Tan = Overstaand/Aanliggend","Verkeerd geheugen","Onbruikbaar","Geen relevant"], answer: 0, wrongHints: [null,"Nee.","Heel handig.","Wel relevant."] },
+      { q: "**SOS-CAS-TOA** is geheugentruc voor?", options: ["Sin = Overstaand/Schuine, Cos = Aanliggend/Schuine, Tan = Overstaand/Aanliggend","Verkeerd geheugen","Onbruikbaar","Niet relevant"], answer: 0, wrongHints: [null,"Nee.","Heel handig.","Wel relevant."] },
       { q: "Hoek **A en B** zijn samen 90° in rechthoekige driehoek. **cos A** is gelijk aan?", options: ["sin B","sin A","tan A","cos B"], answer: 0, wrongHints: [null,"Sin van A, niet B.","Andere functie.","Niet — A en B verschillen."] },
       { q: "**Sinusregel** geldt voor?", options: ["Alle driehoeken","Alleen rechthoekige","Alleen gelijkzijdige","Geen"], answer: 0, wrongHints: [null,"Bredere toepassing.","Bredere toepassing.","Wel."] },
       { q: "Hypotenusa heeft welke positie?", options: ["Tegenover de rechte hoek","Aan de rechte hoek","Naast aanliggend","Niet relevant"], answer: 0, wrongHints: [null,"Niet — tegenover.","Onvolledig.","Wel relevant."] },

@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Aspecifieke afweer — barrières + ontstekingsreactie",
     explanation:
-      "**Immuunsysteem** verdedigt tegen ziekteverwekkers (pathogenen): bacteriën, virussen, schimmels, parasieten.\n\n**Twee hoofdlijnen**:\n• **Aspecifiek** (= niet-gericht, snel, aangeboren): werkt tegen ALLES.\n• **Specifiek** (= gericht, langzamer, verworven): herkent + onthoudt specifieke pathogenen.\n\n**Aspecifieke afweer — 3 lagen**:\n\n**1. Externe barrières**:\n• **Huid**: fysieke barrière + zuur (pH ~5).\n• **Slijmvliezen** (neus, longen, darm): vangen pathogenen op.\n• **Trilharen** in luchtwegen: spoelen slijm met indringers omhoog.\n• **Maagsap** (pH ~2): doodt meeste pathogenen.\n• **Traanvocht + speeksel**: bevatten **lysozym** (enzym dat bacterie-celwanden afbreekt).\n• **Goede bacteriën** (microbiota): verdringen pathogenen.\n\n**2. Interne aspecifieke reactie**:\n• **Ontsteking** (rood, warm, gezwollen, pijn) bij binnendringen:\n  - Bloedvaten verwijden → meer bloed → rood/warm.\n  - Doorlatender → vocht uit → zwelling.\n  - Witte bloedcellen lokken erin via chemische signalen.\n• **Fagocyten** (macrofagen + neutrofielen): 'opeters' van pathogenen.\n• **Koorts**: hoger T → minder gunstig voor pathogenen + sneller immuunwerk.\n\n**3. Aspecifieke moleculen**:\n• **Complement-systeem**: bloedeiwitten die pathogenen markeren of doorboren.\n• **Interferonen**: virus-geïnfecteerde cellen sturen waarschuwing naar buurcellen.\n\n**Snel maar grof**:\n• Reageert binnen minuten/uren.\n• Geen 'geheugen' — elke keer opnieuw.\n• Geen onderscheid tussen verschillende pathogenen.\n\n**toetsvraag-type**:\n• 'Welke is aspecifiek?' — huid, slijmvlies, fagocytose.\n• 'Wat is functie van koorts?' — hogere T remt pathogenen + activeert immuuncellen.\n• 'Waarom doen rood/warm/gezwollen?' — ontstekingsreactie.",
+      "**Immuunsysteem** verdedigt tegen ziekteverwekkers (pathogenen): bacteriën, virussen, schimmels, parasieten.\n\n**Twee hoofdlijnen**:\n• **Aspecifiek** (= niet-gericht, snel, aangeboren): werkt tegen ALLES.\n• **Specifiek** (= gericht, langzamer, verworven): herkent + onthoudt specifieke pathogenen.\n\n**Aspecifieke afweer — 3 lagen**:\n\n**1. Externe barrières**:\n• **Huid**: fysieke barrière + zuur (pH ~5).\n• **Slijmvliezen** (neus, longen, darm): vangen pathogenen op.\n• **Trilharen** in luchtwegen: spoelen slijm met indringers omhoog.\n• **Maagsap** (pH ~2): doodt meeste pathogenen.\n• **Traanvocht + speeksel**: bevatten **lysozym** (enzym dat bacterie-celwanden afbreekt).\n• **Goede bacteriën** (microbiota): verdringen pathogenen.\n\n**2. Interne aspecifieke reactie**:\n• **Ontsteking** (rood, warm, gezwollen, pijn) bij binnendringen:\n  - Bloedvaten verwijden → meer bloed → rood/warm.\n  - Doorlatender → vocht uit → zwelling.\n  - Witte bloedcellen worden erheen gelokt via chemische signalen.\n• **Fagocyten** (macrofagen + neutrofielen): 'opeters' van pathogenen.\n• **Koorts**: hoger T → minder gunstig voor pathogenen + sneller immuunwerk.\n\n**3. Aspecifieke moleculen**:\n• **Complement-systeem**: bloedeiwitten die pathogenen markeren of doorboren.\n• **Interferonen**: virus-geïnfecteerde cellen sturen waarschuwing naar buurcellen.\n\n**Snel maar grof**:\n• Reageert binnen minuten/uren.\n• Geen 'geheugen' — elke keer opnieuw.\n• Geen onderscheid tussen verschillende pathogenen.\n\n**toetsvraag-type**:\n• 'Welke is aspecifiek?' — huid, slijmvlies, fagocytose.\n• 'Wat is functie van koorts?' — hogere T remt pathogenen + activeert immuuncellen.\n• 'Waarom wordt het rood/warm/gezwollen?' — ontstekingsreactie.",
     checks: [
       {
         q: "Welke is **aspecifieke** afweer?",
@@ -59,10 +59,10 @@ const steps = [
           "Geen functie heeft"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — indirect.", "Niet — fagocyt-werk.", "Wel functie."],
+        wrongHints: [null, "Niet — indirect.", "Niet — dat doen B-cellen.", "Wel functie."],
         uitlegPad: {
           stappen: [
-            { titel: "T-stijging als wapen", tekst: "Bij infectie maakt lichaam **pyrogenen** (interleukine-1) die hypothalamus opdragen T omhoog te zetten. Pathogenen + virus-replicatie remmen bij hogere T. Immuuncel-werking versnelt. Bij T>40°C wel risico — paracetamol-grens." },
+            { titel: "T-stijging als wapen", tekst: "Bij infectie maakt lichaam **pyrogenen** (interleukine-1) die hypothalamus opdragen T omhoog te zetten. Pathogenen + virus-replicatie worden geremd bij hogere T. Immuuncel-werking versnelt. Bij T>40°C wel risico — paracetamol-grens." },
           ],
           niveaus: { basis: "Pathogenen geremd.", simpeler: "Warmte slecht voor ziektes.", nogSimpeler: "Warmte" },
         },
@@ -72,16 +72,16 @@ const steps = [
         options: [
           "Ontstekingsreactie (vasodilatatie + meer bloedvloei)",
           "Antilichaam-reactie",
-          "T-cel attack",
+          "T-cel-aanval",
           "Allergie"
         ],
         answer: 0,
         wrongHints: [null, "Geen direct antilichaam-effect.", "T-cellen op andere plek.", "Geen allergeen."],
         uitlegPad: {
           stappen: [
-            { titel: "5 tekenen ontsteking", tekst: "Rubor (rood), calor (warm), tumor (zwelling), dolor (pijn), functio laesa (functieverlies). Veroorzaakt door histamine + ander cytokinen. Bloedvaten verwijden + doorlatender → meer immuunwerk ter plekke." },
+            { titel: "5 tekenen ontsteking", tekst: "Rubor (rood), calor (warm), tumor (zwelling), dolor (pijn), functio laesa (functieverlies). Veroorzaakt door histamine + andere cytokinen. Bloedvaten verwijden + doorlatender → meer immuunwerk ter plekke." },
           ],
-          niveaus: { basis: "Ontstekingsreactie.", simpeler: "Inflammation.", nogSimpeler: "Ontsteking" },
+          niveaus: { basis: "Ontstekingsreactie.", simpeler: "Lichaam reageert met ontsteking.", nogSimpeler: "Ontsteking" },
         },
       },
       {
@@ -106,7 +106,7 @@ const steps = [
   {
     title: "Specifieke afweer — B + T cellen + antilichamen",
     explanation:
-      "**Specifieke afweer** = gericht op specifiek antigeen + geheugen.\n• Trager (dagen tot weken) maar krachtiger + duurzamer.\n• Werkt via twee soorten **lymfocyten**:\n\n**B-lymfocyten** (B = bone marrow / been-merg):\n• Produceren **antilichamen** (Y-vormige eiwitten).\n• Antilichaam herkent specifiek **antigeen** (kenmerk op pathogeen).\n• Bindt aan antigeen → markeert voor fagocyten of blokkeert.\n• **Plasmacellen**: actieve B-cellen die massaal antilichamen maken.\n• **Geheugen-B-cellen**: blijven jaren leven → snelle response bij hercontact.\n\n**T-lymfocyten** (T = thymus = zwezerik):\n• Drie hoofd-types:\n  - **T-helper (CD4+)**: 'dirigent' — activeert B-cellen + andere T-cellen.\n  - **T-killer/cytotoxisch (CD8+)**: doodt geïnfecteerde lichaamscellen.\n  - **T-regulator**: dempt immuunreactie als nodig.\n• Werken via direct contact (geen antilichamen).\n• Cruciaal voor virussen (binnen-cel-pathogenen).\n\n**Antigenen** (Ag):\n• Moleculen op pathogeen-oppervlak die immuunsysteem herkent.\n• Vaak eiwitten of suikers.\n• Elk pathogeen heeft uniek antigeen-profiel.\n\n**Hoe werkt het** (vereenvoudigd):\n1. Macrofaag eet pathogeen.\n2. Toont antigeen op zijn oppervlak.\n3. T-helper herkent + activeert B-cel én T-killer met dezelfde specifiteit.\n4. B-cellen vermenigvuldigen → plasmacellen → antilichamen.\n5. T-killers doden geïnfecteerde cellen.\n6. Pathogeen geëlimineerd.\n7. Geheugen-cellen blijven achter.\n\n**Antilichamen-types** (immunoglobulinen):\n• **IgG**: meest voorkomend (80%), bescherming langere tijd.\n• **IgM**: eerste respons.\n• **IgA**: in slijmvliezen + moedermelk.\n• **IgE**: allergie + parasieten.\n• **IgD**: B-cel-receptoren.\n\n**Primaire vs secundaire respons**:\n• Eerste blootstelling: 1-2 weken voor antilichaamproductie (primair).\n• Tweede blootstelling: dagen, veel meer antilichamen (secundair) — door geheugen.\n• Daarom worden veel ziektes maar één keer doorgemaakt.",
+      "**Specifieke afweer** = gericht op specifiek antigeen + geheugen.\n• Trager (dagen tot weken) maar krachtiger + duurzamer.\n• Werkt via twee soorten **lymfocyten**:\n\n**B-lymfocyten** (B = bone marrow / been-merg):\n• Produceren **antilichamen** (Y-vormige eiwitten).\n• Antilichaam herkent specifiek **antigeen** (kenmerk op pathogeen).\n• Bindt aan antigeen → markeert voor fagocyten of blokkeert.\n• **Plasmacellen**: actieve B-cellen die massaal antilichamen maken.\n• **Geheugen-B-cellen**: blijven jaren leven → snelle respons bij hercontact.\n\n**T-lymfocyten** (T = thymus = zwezerik):\n• Drie hoofd-types:\n  - **T-helper (CD4+)**: 'dirigent' — activeert B-cellen + andere T-cellen.\n  - **T-killer/cytotoxisch (CD8+)**: doodt geïnfecteerde lichaamscellen.\n  - **T-regulator**: dempt immuunreactie als nodig.\n• Werken via direct contact (geen antilichamen).\n• Cruciaal voor virussen (binnen-cel-pathogenen).\n\n**Antigenen** (Ag):\n• Moleculen op pathogeen-oppervlak die immuunsysteem herkent.\n• Vaak eiwitten of suikers.\n• Elk pathogeen heeft uniek antigeen-profiel.\n\n**Hoe werkt het** (vereenvoudigd):\n1. Macrofaag eet pathogeen.\n2. Toont antigeen op zijn oppervlak.\n3. T-helper herkent + activeert B-cel én T-killer met dezelfde specificiteit.\n4. B-cellen vermenigvuldigen → plasmacellen → antilichamen.\n5. T-killers doden geïnfecteerde cellen.\n6. Pathogeen geëlimineerd.\n7. Geheugen-cellen blijven achter.\n\n**Antilichamen-types** (immunoglobulinen):\n• **IgG**: meest voorkomend (80%), bescherming langere tijd.\n• **IgM**: eerste respons.\n• **IgA**: in slijmvliezen + moedermelk.\n• **IgE**: allergie + parasieten.\n• **IgD**: B-cel-receptoren.\n\n**Primaire vs secundaire respons**:\n• Eerste blootstelling: 1-2 weken voor antilichaamproductie (primair).\n• Tweede blootstelling: dagen, veel meer antilichamen (secundair) — door geheugen.\n• Daarom worden veel ziektes maar één keer doorgemaakt.",
     checks: [
       {
         q: "**B-cellen** produceren:",
@@ -114,8 +114,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — pancreas-cellen.", "Niet — rode bloedcellen.", "Niet — bijnieren."],
         uitlegPad: {
-          stappen: [{ titel: "Plasmacel-fabriek", tekst: "Een actieve B-cell (plasmacel) maakt tot 2000 antilichaam-moleculen per seconde. Antilichamen circuleren in bloed + lymfe → binden aan antigeen op pathogeen → markeren voor opruiming." }],
-          niveaus: { basis: "Antilichamen.", simpeler: "B = antilichaam-maker.", nogSimpeler: "Ab" },
+          stappen: [{ titel: "Plasmacel-fabriek", tekst: "Een actieve B-cel (plasmacel) maakt tot 2000 antilichaam-moleculen per seconde. Antilichamen circuleren in bloed + lymfe → binden aan antigeen op pathogeen → markeren voor opruiming." }],
+          niveaus: { basis: "Antilichamen.", simpeler: "B = antilichaam-maker.", nogSimpeler: "Antilichamen" },
         },
       },
       {
@@ -149,7 +149,7 @@ const steps = [
           stappen: [
             { titel: "Antigeen = herken-molecuul", tekst: "Antigenen zijn eiwitten/suikers op pathogeen-oppervlak. Antilichamen binden specifiek aan één antigeen. Vaccin bevat (verzwakt) antigeen → lichaam maakt geheugen zonder ziekte." },
           ],
-          niveaus: { basis: "Pathogeen-molecuul.", simpeler: "Vlag op pathogeen.", nogSimpeler: "Antigen" },
+          niveaus: { basis: "Pathogeen-molecuul.", simpeler: "Vlag op pathogeen.", nogSimpeler: "Antigeen" },
         },
       },
       {
@@ -164,7 +164,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is primair.", "Niet — apart proces.", "Niet — fout-reactie."],
         uitlegPad: {
           stappen: [
-            { titel: "Sneller via geheugen", tekst: "Primair: 1-2 weken voor antilichaam-productie. Secundair: 1-3 dagen, met 10-100× meer antilichamen. Verklaart waarom mazelen na één keer nooit meer terug komt + waarom vaccinaties werken." },
+            { titel: "Sneller via geheugen", tekst: "Primair: 1-2 weken voor antilichaam-productie. Secundair: 1-3 dagen, met 10-100× meer antilichamen. Verklaart waarom mazelen na één keer nooit meer terugkomt + waarom vaccinaties werken." },
           ],
           niveaus: { basis: "Sneller + krachtiger.", simpeler: "2e keer sneller dankzij geheugen.", nogSimpeler: "Snel" },
         },
@@ -183,7 +183,7 @@ const steps = [
           stappen: [
             { titel: "Virus-respons", tekst: "Virussen verstoppen binnen lichaamscellen → antilichamen kunnen daar niet komen. T-killers herkennen geïnfecteerde cellen via virale antigenen op celoppervlak → doden cel (apoptose) → virus stopt vermenigvuldiging. Cruciaal voor virus-bestrijding." },
           ],
-          niveaus: { basis: "Geïnfecteerde cellen.", simpeler: "Cellen vol virus weg.", nogSimpeler: "Geinf cellen" },
+          niveaus: { basis: "Geïnfecteerde cellen.", simpeler: "Cellen vol virus weg.", nogSimpeler: "Geïnfecteerde cellen" },
         },
       },
     ],
@@ -193,7 +193,7 @@ const steps = [
   {
     title: "Vaccinatie + immuniteit — actief + passief",
     explanation:
-      "**Vaccinatie** = bewust antigeen toedienen om immuunrespons + geheugen op te wekken ZONDER ziekte.\n\n**Vaccin-types**:\n• **Verzwakt** (live attenuated): mazelen, BMR, geel koorts. Sterke + langdurige immuniteit, maar niet voor immuun-zwakke patiënten.\n• **Geïnactiveerd**: griep, polio (IPV), tetanus. Veiliger maar zwakker → boosters nodig.\n• **Subunit** (alleen eiwit): hepatitis B, HPV. Heel veilig.\n• **Toxoid** (gif onschadelijk gemaakt): difterie, tetanus.\n• **mRNA** (nieuw): COVID-19 (Pfizer, Moderna). mRNA codeert voor antigeen → eigen cellen maken het. Snel ontwikkelbaar.\n• **Vector** (ander virus draagt antigeen): AstraZeneca, Janssen voor COVID.\n\n**Immuniteit-types**:\n\n**1. Actieve immuniteit** (lichaam maakt zelf antilichamen + geheugen):\n• **Natuurlijk**: door ziekte zelf doormaken.\n• **Kunstmatig**: door vaccinatie.\n• Geheugen: jaren tot levenslang.\n\n**2. Passieve immuniteit** (kant-en-klare antilichamen ontvangen):\n• **Natuurlijk**: baby via placenta (IgG) + moedermelk (IgA).\n• **Kunstmatig**: serum/immunoglobuline-injectie (na slangenbeet, tetanus, hondsdolheid).\n• Geen geheugen → tijdelijk (weken-maanden).\n\n**Groepsimmuniteit (herd immunity)**:\n• Wanneer voldoende % bevolking immuun (door vaccin of ziekte) → pathogeen verspreidt zich niet meer effectief → ook niet-immune mensen beschermd.\n• Drempel hangt af van besmettelijkheid:\n  - Mazelen (R₀ 12-18): ~95% nodig.\n  - COVID-19 (R₀ 2-3): ~65-70%.\n  - Polio: ~80-85%.\n• Beschermt mensen die niet zelf kunnen vaccineren (baby's, kanker-patiënten, immuun-zwakken).\n\n**RIVM-vaccinatieprogramma NL** (Rijksvaccinatie):\n• DKTP-Hib-HepB (6-in-1) op 3/5/11 maanden.\n• BMR (bof, mazelen, rode hond): 14 maanden + 9 jaar.\n• MenACWY (meningokokken) op 14 mnd + 14 jr.\n• HPV (kanker): 10 jaar (sinds 2022 ook jongens).\n\n**Vaccinatie-effecten wereld**:\n• Pokken UITGEROEID (laatste 1977) — WHO succes 1980.\n• Polio bijna uitgeroeid (alleen Afghanistan + Pakistan nog).\n• Mazelen-doden gehalveerd sinds 2000 maar nog ~140 000 per jaar.\n\n**Bijwerkingen** zijn meestal mild (pijn arm, lichte koorts). Ernstige bijwerkingen extreem zeldzaam (~1 op miljoen). Voordeel : risico ratio is enorm.",
+      "**Vaccinatie** = bewust antigeen toedienen om immuunrespons + geheugen op te wekken ZONDER ziekte.\n\n**Vaccin-types**:\n• **Verzwakt** (live attenuated): mazelen, BMR, gele koorts. Sterke + langdurige immuniteit, maar niet voor immuun-zwakke patiënten.\n• **Geïnactiveerd**: griep, polio (IPV), tetanus. Veiliger maar zwakker → boosters nodig.\n• **Subunit** (alleen eiwit): hepatitis B, HPV. Heel veilig.\n• **Toxoid** (gif onschadelijk gemaakt): difterie, tetanus.\n• **mRNA** (nieuw): COVID-19 (Pfizer, Moderna). mRNA codeert voor antigeen → eigen cellen maken het. Snel ontwikkelbaar.\n• **Vector** (ander virus draagt antigeen): AstraZeneca, Janssen voor COVID.\n\n**Immuniteit-types**:\n\n**1. Actieve immuniteit** (lichaam maakt zelf antilichamen + geheugen):\n• **Natuurlijk**: door ziekte zelf doormaken.\n• **Kunstmatig**: door vaccinatie.\n• Geheugen: jaren tot levenslang.\n\n**2. Passieve immuniteit** (kant-en-klare antilichamen ontvangen):\n• **Natuurlijk**: baby via placenta (IgG) + moedermelk (IgA).\n• **Kunstmatig**: serum/immunoglobuline-injectie (na slangenbeet, tetanus, hondsdolheid).\n• Geen geheugen → tijdelijk (weken-maanden).\n\n**Groepsimmuniteit (herd immunity)**:\n• Wanneer voldoende % bevolking immuun (door vaccin of ziekte) → pathogeen verspreidt zich niet meer effectief → ook niet-immune mensen beschermd.\n• Drempel hangt af van besmettelijkheid:\n  - Mazelen (R₀ 12-18): ~95% nodig.\n  - COVID-19 (R₀ 2-3): ~65-70%.\n  - Polio: ~80-85%.\n• Beschermt mensen die niet zelf kunnen vaccineren (baby's, kanker-patiënten, immuun-zwakken).\n\n**RIVM-vaccinatieprogramma NL** (Rijksvaccinatie):\n• DKTP-Hib-HepB (6-in-1) op 3/5/11 maanden.\n• BMR (bof, mazelen, rode hond): 14 maanden + 9 jaar.\n• MenACWY (meningokokken) op 14 mnd + 14 jr.\n• HPV (kanker): 10 jaar (sinds 2022 ook jongens).\n\n**Vaccinatie-effecten wereld**:\n• Pokken UITGEROEID (laatste 1977) — WHO succes 1980.\n• Polio bijna uitgeroeid (alleen Afghanistan + Pakistan nog).\n• Mazelen-doden gehalveerd sinds 2000 maar nog ~140 000 per jaar.\n\n**Bijwerkingen** zijn meestal mild (pijn arm, lichte koorts). Ernstige bijwerkingen extreem zeldzaam (~1 op miljoen). Voordeel : risico ratio is enorm.",
     checks: [
       {
         q: "**Actieve immuniteit** krijg je via:",
@@ -258,7 +258,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Wel via vaccin uitgeroeid.", "Onjuist."],
         uitlegPad: {
           stappen: [
-            { titel: "Eerste mensziekte uitgeroeid", tekst: "WHO-campagne 1967-1980 met mass-vaccinatie + isolatie → laatste natuurlijk geval Somalië 1977. WHO verklaarde 1980 uitroeiing. **Enige menselijke pathogeen ooit uitgeroeid** (rinderpest 2011 voor dier). Polio bijna ook — Afghanistan + Pakistan nog endemisch." },
+            { titel: "Eerste mensziekte uitgeroeid", tekst: "WHO-campagne 1967-1980 met massavaccinatie + isolatie → laatste natuurlijk geval Somalië 1977. WHO verklaarde 1980 uitroeiing. **Enige menselijke pathogeen ooit uitgeroeid** (rinderpest 2011 voor dier). Polio bijna ook — Afghanistan + Pakistan nog endemisch." },
           ],
           niveaus: { basis: "Uitgeroeid 1980.", simpeler: "Niet meer wereldwijd.", nogSimpeler: "Uitgeroeid" },
         },
@@ -287,7 +287,7 @@ const steps = [
   {
     title: "Wanneer immuunsysteem fout gaat — auto-immuun + allergie",
     explanation:
-      "**Immuunsysteem kan misgaan** op twee manieren:\n\n**1. Auto-immuunziekten**: immuunsysteem valt EIGEN cellen aan.\n• Verstoorde 'zelf' vs 'niet-zelf' herkenning.\n• Vaak chronisch + niet te genezen, alleen onderdrukken.\n\n**Bekende voorbeelden**:\n• **Type-1 diabetes**: T-cellen vernietigen insuline-producerende β-cellen pancreas. Patiënt moet insuline inspuiten.\n• **Multiple Sclerose (MS)**: aanval op myeline-omhulsel van zenuwcellen → trillen, krachtverlies, blindheid.\n• **Reumatoïde Artritis**: aanval op gewricht-kraakbeen → pijn, vervorming.\n• **Lupus**: meerdere organen aangevallen (huid, nieren, gewrichten).\n• **Coeliakie**: gluten triggert immuunreactie tegen darm-villi → opname-stoornis.\n• **Hashimoto + Graves**: schildklier-aanval (te traag/snel).\n• **Multiple Sclerose, Crohn, Ulcerative Colitis**: chronische darm-ontsteking.\n\n**Behandeling**: immuunsuppressiva (corticosteroïden, biologicals). Onderdrukt immuunsysteem → bijwerking: meer kwetsbaar voor infecties.\n\n**Oorzaak** vaak combinatie:\n• Genetische aanleg (sommige HLA-types).\n• Trigger (virus-infectie, stress, dieet).\n• Vrouwen 3-4× meer kans (hormonen-rol).\n\n**2. Allergie**: immuunsysteem reageert OVERMATIG op ONSCHADELIJK 'antigeen' (allergeen).\n• Stuifmeel, kattenhaar, pinda, schaaldieren, latex, wesp-steek.\n• IgE-gemedieerd → histamine-vrijgave → niezen, jeuk, zwelling.\n\n**Allergische reactie**:\n1. **Sensitisatie** (eerste blootstelling): IgE wordt aangemaakt, geen symptomen.\n2. **Reactie** (volgende blootstelling): allergeen bindt aan IgE op mestcellen → histamine vrij.\n3. Symptomen: hooikoorts, eczeem, astma.\n\n**Anafylaxis**: extreem allergische reactie — bloeddruk-val, zwelling luchtweg → levensgevaarlijk. Behandeling: **adrenaline (EpiPen)** direct, dan ziekenhuis.\n\n**Astma**: chronische allergische ontsteking luchtwegen → bronchiën vernauwen + slijm → benauwd. Behandeling: bronchodilatator (ventolin) + corticosteroïden-inhalator.\n\n**Atopische triade**: hooikoorts + astma + eczeem komen vaak samen voor (familie-erfelijkheid).\n\n**Hygiene-hypothese**:\n• Theorie: minder vroege blootstelling aan microben → immuunsysteem 'verveelt' zich → reageert op onschuldige stoffen.\n• Verklaart deels stijging allergie + auto-immuun in westerse landen.\n• Daarom: 'kinderen mogen vies spelen', boerderijdieren, brede dieetblootstelling vroeg.\n\n**Immuundeficiëntie** (3e probleem-categorie):\n• **Aangeboren**: SCID (zeer zeldzaam, 'bubble baby').\n• **Verworven**: AIDS (HIV vernietigt T-helpers), chemotherapie, transplantatie-suppressie.",
+      "**Immuunsysteem kan misgaan** op twee manieren:\n\n**1. Auto-immuunziekten**: immuunsysteem valt EIGEN cellen aan.\n• Verstoorde 'zelf' vs 'niet-zelf' herkenning.\n• Vaak chronisch + niet te genezen, alleen onderdrukken.\n\n**Bekende voorbeelden**:\n• **Type-1 diabetes**: T-cellen vernietigen insuline-producerende β-cellen pancreas. Patiënt moet insuline inspuiten.\n• **Multiple Sclerose (MS)**: aanval op myeline-omhulsel van zenuwcellen → trillen, krachtverlies, blindheid.\n• **Reumatoïde Artritis**: aanval op gewricht-kraakbeen → pijn, vervorming.\n• **Lupus**: meerdere organen aangevallen (huid, nieren, gewrichten).\n• **Coeliakie**: gluten triggert immuunreactie tegen darm-villi → opname-stoornis.\n• **Hashimoto + Graves**: schildklier-aanval (te traag/snel).\n• **Ziekte van Crohn, colitis ulcerosa**: chronische darm-ontsteking.\n\n**Behandeling**: immuunsuppressiva (corticosteroïden, biologicals). Onderdrukt immuunsysteem → bijwerking: meer kwetsbaar voor infecties.\n\n**Oorzaak** vaak combinatie:\n• Genetische aanleg (sommige HLA-types).\n• Trigger (virus-infectie, stress, dieet).\n• Vrouwen 3-4× meer kans (hormonen-rol).\n\n**2. Allergie**: immuunsysteem reageert OVERMATIG op ONSCHADELIJK 'antigeen' (allergeen).\n• Stuifmeel, kattenhaar, pinda, schaaldieren, latex, wesp-steek.\n• IgE-gemedieerd → histamine-vrijgave → niezen, jeuk, zwelling.\n\n**Allergische reactie**:\n1. **Sensitisatie** (eerste blootstelling): IgE wordt aangemaakt, geen symptomen.\n2. **Reactie** (volgende blootstelling): allergeen bindt aan IgE op mestcellen → histamine vrij.\n3. Symptomen: hooikoorts, eczeem, astma.\n\n**Anafylaxie**: extreem allergische reactie — bloeddruk-val, zwelling luchtweg → levensgevaarlijk. Behandeling: **adrenaline (EpiPen)** direct, dan ziekenhuis.\n\n**Astma**: chronische allergische ontsteking luchtwegen → bronchiën vernauwen + slijm → benauwd. Behandeling: bronchodilatator (ventolin) + corticosteroïden-inhalator.\n\n**Atopische triade**: hooikoorts + astma + eczeem komen vaak samen voor (familie-erfelijkheid).\n\n**Hygiëne-hypothese**:\n• Theorie: minder vroege blootstelling aan microben → immuunsysteem 'verveelt' zich → reageert op onschuldige stoffen.\n• Verklaart deels stijging allergie + auto-immuun in westerse landen.\n• Daarom: 'kinderen mogen vies spelen', boerderijdieren, brede dieetblootstelling vroeg.\n\n**Immuundeficiëntie** (3e probleem-categorie):\n• **Aangeboren**: SCID (zeer zeldzaam, 'bubble baby').\n• **Verworven**: AIDS (HIV vernietigt T-helpers), chemotherapie, transplantatie-suppressie.",
     checks: [
       {
         q: "**Type-1 diabetes** is auto-immuun omdat:",
@@ -307,7 +307,7 @@ const steps = [
         },
       },
       {
-        q: "**Anafylaxis** is:",
+        q: "**Anafylaxie** is:",
         options: [
           "Levensgevaarlijke allergische reactie (bloeddruk-val, luchtweg-zwelling)",
           "Milde allergie",
@@ -318,16 +318,16 @@ const steps = [
         wrongHints: [null, "Niet — extreem.", "Niet — allergisch.", "Niet — geen infectie."],
         uitlegPad: {
           stappen: [
-            { titel: "EpiPen redden levens", tekst: "Systemische IgE-reactie: massa histamine → bloedvaten verwijden + lekken → bloeddruk valt + luchtweg zwelt. Binnen minuten levensbedreigend. **Adrenaline-injectie (EpiPen)** keert reactie om → naar ziekenhuis. Triggers: pinda's, schaaldieren, wespsteek, medicijnen." },
+            { titel: "EpiPens redden levens", tekst: "Systemische IgE-reactie: massa histamine → bloedvaten verwijden + lekken → bloeddruk valt + luchtweg zwelt. Binnen minuten levensbedreigend. **Adrenaline-injectie (EpiPen)** keert reactie om → naar ziekenhuis. Triggers: pinda's, schaaldieren, wespsteek, medicijnen." },
           ],
-          niveaus: { basis: "Levensgevaarlijke allergie.", simpeler: "Extreem allergie + EpiPen.", nogSimpeler: "Anaf" },
+          niveaus: { basis: "Levensgevaarlijke allergie.", simpeler: "Extreme allergie + EpiPen.", nogSimpeler: "Anafylaxie" },
         },
       },
       {
-        q: "**Hygiene-hypothese** suggereert:",
+        q: "**Hygiëne-hypothese** suggereert:",
         options: [
           "Minder vroege blootstelling aan microben → meer allergie + auto-immuun later",
-          "Hygiene voorkomt allergie",
+          "Hygiëne voorkomt allergie",
           "Schoonmaken is altijd goed",
           "Geen verband"
         ],
@@ -335,10 +335,10 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet altijd.", "Wel theorie."],
         uitlegPad: {
           stappen: [
-            { titel: "'Immuun-training'", tekst: "Sinds 1950 stijgen allergie + auto-immuun in westerse landen. Theorie: te schoon → immuunsysteem 'verveelt' → reageert op stuifmeel, eten. Boerderijkinderen hebben minder allergie (vroege diersmet)." },
+            { titel: "'Immuun-training'", tekst: "Sinds 1950 stijgen allergie + auto-immuun in westerse landen. Theorie: te schoon → immuunsysteem 'verveelt' → reageert op stuifmeel, eten. Boerderijkinderen hebben minder allergie (vroeg contact met dieren)." },
           ],
-          theorie: "Niet bedoeld 'wees vies' maar: balans + diverse blootstelling (probiotica, buitenspelen, brede dieet).",
-          niveaus: { basis: "Te schoon = meer allergie.", simpeler: "Vroege microben = beter immuun.", nogSimpeler: "Hygiene-hypo" },
+          theorie: "Niet bedoeld 'wees vies' maar: balans + diverse blootstelling (probiotica, buitenspelen, breed dieet).",
+          niveaus: { basis: "Te schoon = meer allergie.", simpeler: "Vroege microben = beter immuun.", nogSimpeler: "Hygiëne-hypothese" },
         },
       },
       {
@@ -353,13 +353,13 @@ const steps = [
         wrongHints: [null, "Niet — virus.", "Niet — virus.", "Niet — verworven immuundeficiëntie."],
         uitlegPad: {
           stappen: [
-            { titel: "T-helpers cruciaal", tekst: "HIV bindt CD4-receptor op T-helpers → infecteert + doodt ze. CD4-aantal daalt onder 200/mm³ = AIDS. Zonder T-helpers: geen activatie B + T-killer cellen → opportunistische infecties (PCP-longontsteking, Kaposi-sarcoom). Antiretrovirale therapie (ART) houdt virus laag, behoud CD4." },
+            { titel: "T-helpers cruciaal", tekst: "HIV bindt CD4-receptor op T-helpers → infecteert + doodt ze. CD4-aantal daalt onder 200/mm³ = AIDS. Zonder T-helpers: geen activatie B + T-killer cellen → opportunistische infecties (PCP-longontsteking, Kaposi-sarcoom). Antiretrovirale therapie (ART) houdt virus laag en behoudt CD4." },
           ],
-          niveaus: { basis: "T-helpers weg.", simpeler: "HIV doodt dirigent-cellen.", nogSimpeler: "T-help" },
+          niveaus: { basis: "T-helpers weg.", simpeler: "HIV doodt dirigent-cellen.", nogSimpeler: "T-helpers" },
         },
       },
       {
-        q: "**Coeliakie** is een auto-immuunziekte gericht tegen welk allergeen?",
+        q: "**Coeliakie** is een auto-immuunziekte. Welke stof is de trigger?",
         options: [
           "Gluten (in tarwe, gerst, rogge)",
           "Lactose",
@@ -383,7 +383,7 @@ const steps = [
   {
     title: "Eindopdracht — pandemie + actuele toepassingen",
     explanation:
-      "**Pandemie** (COVID-19 als case-study):\n\n**Verloop**:\n• 2019: SARS-CoV-2 ontstaat in Wuhan.\n• Januari 2020: wereldwijd verspreiding.\n• Maart 2020: WHO verklaart pandemie.\n• 2021: eerste vaccins (Pfizer/Moderna mRNA, AstraZeneca vector).\n• 2024: endemisch — virus circuleert, maar minder dodelijk door immuniteit.\n• Totaal: ~7+ miljoen geregistreerde doden (werkelijk waarschijnlijk hoger).\n\n**Waarom moeilijk te bestrijden?**\n• **Asymptomatische verspreiding**: mensen zonder symptomen besmettelijk.\n• **Mutatie-snelheid**: Delta → Omicron → andere varianten. Vaccins moeten meegroeien (zoals griep-jaarvaccin).\n• **Lange incubatie**: 5-14 dagen — quarantaine moeilijk.\n• **Internationaal reizen**: geen virus blijft op één plek.\n\n**Reproductiegetal R**:\n• R = aantal mensen die één besmette persoon gemiddeld besmet.\n• R > 1: epidemie groeit. R < 1: krimpt.\n• Vroege COVID R₀ ~3. Met maatregelen + immuniteit → R rond 1.\n\n**Maatregelen pyramid** (van licht naar zwaar):\n• Hand wassen + ventileren.\n• 1,5m afstand + mondkapje.\n• Beperking bijeenkomsten.\n• Scholen + horeca dicht.\n• Lockdown.\n\n**Vaccinatie + boostercampagne**:\n• Primaire serie + booster om antilichaam-titer hoog te houden.\n• Aangepaste vaccins per variant (zoals jaarlijkse griep).\n\n**Antibiotica-resistentie** (parallel actueel probleem):\n• Bacteriën muteren tegen antibiotica.\n• MRSA, ESBL bekende resistente stammen.\n• Verklaring: overgebruik in ziekenhuizen + veehouderij.\n• WHO: kan grootste mediсal bedreiging 2050 worden (mss 10 mln doden/jaar).\n• Oplossingen: zuiniger gebruik, nieuwe antibiotica ontwikkelen (moeilijk), bacteriofagen (virussen die bacteriën doden).\n\n**Kanker + immuuntherapie** (recent + revolutionair):\n• Kankercellen zijn 'eigen cellen die misgaan' → immuunsysteem probeert ze normaal te doden, maar kanker ontwijkt vaak.\n• **Checkpoint-inhibitors** (Nobel 2018, Allison + Honjo): blokkeren 'rem' op T-cellen → meer kanker-doden.\n• **CAR-T-therapie**: T-cellen patiënt genetisch gewijzigd om kanker te herkennen → terug ingespoten. Spectaculaire resultaten bij sommige bloedkankers.\n\n**Orgaantransplantatie**:\n• Immuunsysteem ziet vreemd orgaan als 'niet-zelf' → afstoting.\n• Daarom: HLA-typering (zoeken naar match) + immuun-suppressie levenslang.\n• Bijwerking: hogere kans infectie + kanker.\n\n**Microbioom**:\n• Lichaam bevat ~38 trillion bacteriën (meer dan eigen cellen).\n• Belangrijk voor immuunsysteem-training, voedsel-vertering, vitamine-aanmaak.\n• Verstoring (door antibiotica, dieet) → meer auto-immuun + allergie + obesitas.",
+      "**Pandemie** (COVID-19 als case-study):\n\n**Verloop**:\n• 2019: SARS-CoV-2 ontstaat in Wuhan.\n• Januari 2020: wereldwijde verspreiding.\n• Maart 2020: WHO verklaart pandemie.\n• 2021: eerste vaccins (Pfizer/Moderna mRNA, AstraZeneca vector).\n• 2024: endemisch — virus circuleert, maar minder dodelijk door immuniteit.\n• Totaal: ~7+ miljoen geregistreerde doden (werkelijk waarschijnlijk hoger).\n\n**Waarom moeilijk te bestrijden?**\n• **Asymptomatische verspreiding**: mensen zonder symptomen besmettelijk.\n• **Mutatie-snelheid**: Delta → Omicron → andere varianten. Vaccins moeten meegroeien (zoals griep-jaarvaccin).\n• **Lange incubatie**: 5-14 dagen — quarantaine moeilijk.\n• **Internationaal reizen**: geen virus blijft op één plek.\n\n**Reproductiegetal R**:\n• R = aantal mensen die één besmette persoon gemiddeld besmet.\n• R > 1: epidemie groeit. R < 1: krimpt.\n• Vroege COVID R₀ ~3. Met maatregelen + immuniteit → R rond 1.\n\n**Maatregelen-piramide** (van licht naar zwaar):\n• Hand wassen + ventileren.\n• 1,5m afstand + mondkapje.\n• Beperking bijeenkomsten.\n• Scholen + horeca dicht.\n• Lockdown.\n\n**Vaccinatie + boostercampagne**:\n• Primaire serie + booster om antilichaam-titer hoog te houden.\n• Aangepaste vaccins per variant (zoals jaarlijkse griep).\n\n**Antibiotica-resistentie** (parallel actueel probleem):\n• Bacteriën muteren tegen antibiotica.\n• MRSA, ESBL bekende resistente stammen.\n• Verklaring: overgebruik in ziekenhuizen + veehouderij.\n• WHO: kan grootste medische bedreiging 2050 worden (mogelijk 10 mln doden/jaar).\n• Oplossingen: zuiniger gebruik, nieuwe antibiotica ontwikkelen (moeilijk), bacteriofagen (virussen die bacteriën doden).\n\n**Kanker + immuuntherapie** (recent + revolutionair):\n• Kankercellen zijn 'eigen cellen die misgaan' → immuunsysteem probeert ze normaal te doden, maar kanker ontwijkt vaak.\n• **Checkpoint-inhibitors** (Nobel 2018, Allison + Honjo): blokkeren 'rem' op T-cellen → T-cellen doden meer kankercellen.\n• **CAR-T-therapie**: T-cellen patiënt genetisch gewijzigd om kanker te herkennen → terug ingespoten. Spectaculaire resultaten bij sommige bloedkankers.\n\n**Orgaantransplantatie**:\n• Immuunsysteem ziet vreemd orgaan als 'niet-zelf' → afstoting.\n• Daarom: HLA-typering (zoeken naar match) + immuun-suppressie levenslang.\n• Bijwerking: hogere kans infectie + kanker.\n\n**Microbioom**:\n• Lichaam bevat ~38 biljoen bacteriën (meer dan eigen cellen).\n• Belangrijk voor immuunsysteem-training, voedsel-vertering, vitamine-aanmaak.\n• Verstoring (door antibiotica, dieet) → meer auto-immuun + allergie + obesitas.",
     checks: [
       {
         q: "Een virus met **R₀ = 2** zonder maatregelen:",
@@ -407,7 +407,7 @@ const steps = [
         wrongHints: [null, "Wel — basis-doel.", "Wel (antifungale).", "Wel maar moeilijk."],
         uitlegPad: {
           stappen: [
-            { titel: "Virussen ≠ bacteriën", tekst: "Antibiotica richten zich op bacterie-specifieke structuren (celwand, ribosomen). Virussen hebben dat niet → werken niet. Voor virussen: antivirale middelen (oseltamivir voor griep, paxlovid voor COVID) of vaccinatie. Veel artsen schrijven antibiotica voor griep — IS NUTLOZE praktijk + draagt bij aan resistentie." },
+            { titel: "Virussen ≠ bacteriën", tekst: "Antibiotica richten zich op bacterie-specifieke structuren (celwand, ribosomen). Virussen hebben dat niet → werken niet. Voor virussen: antivirale middelen (oseltamivir voor griep, paxlovid voor COVID) of vaccinatie. Antibiotica tegen griep zijn NUTTELOOS + dragen bij aan resistentie." },
           ],
           niveaus: { basis: "Niet tegen virussen.", simpeler: "Virus is geen bacterie.", nogSimpeler: "Niet virus" },
         },
@@ -424,7 +424,7 @@ const steps = [
         wrongHints: [null, "Niet — geen virus.", "Onzin.", "Onzin."],
         uitlegPad: {
           stappen: [
-            { titel: "Wij = 50% niet-menselijk", tekst: "~38 trillion bacteriële cellen vs ~30 trillion menselijke cellen. Vooral in darmen. Helpen vertering, vitamine-aanmaak, immuun-training. Verstoring (slecht dieet, te veel antibiotica) → diverse ziektes. Nieuw veld: probiotica + faeces-transplantatie." },
+            { titel: "Wij = 50% niet-menselijk", tekst: "~38 biljoen bacteriële cellen vs ~30 biljoen menselijke cellen. Vooral in darmen. Helpen vertering, vitamine-aanmaak, immuun-training. Verstoring (slecht dieet, te veel antibiotica) → diverse ziektes. Nieuw veld: probiotica + faeces-transplantatie." },
           ],
           niveaus: { basis: "Eigen bacterie-ecosysteem.", simpeler: "Goede bacteriën in lichaam.", nogSimpeler: "Bacteriën" },
         },
@@ -443,14 +443,14 @@ const steps = [
           stappen: [
             { titel: "Major Histocompatibility Complex", tekst: "HLA = MHC bij mensen. Eiwitten op celoppervlak die immuunsysteem 'eigen' vs 'vreemd' onderscheiden. Bij transplantatie: hoe meer HLA-match donor/ontvanger, hoe minder afstotingsrisico. Plus levenslange immuunsuppressiva." },
           ],
-          theorie: "Eeneiige tweelingen zijn 100% HLA-match (klassieker transplantatie-keuze). Familieleden vaak betere match dan vreemden.",
-          niveaus: { basis: "HLA = zelf-markers.", simpeler: "Match nodig voor geen afstoten.", nogSimpeler: "HLA" },
+          theorie: "Eeneiige tweelingen zijn 100% HLA-match (ideale match). Familieleden vaak betere match dan vreemden.",
+          niveaus: { basis: "HLA = zelf-markers.", simpeler: "Match nodig om afstoting te voorkomen.", nogSimpeler: "HLA" },
         },
       },
       {
         q: "**CAR-T-therapie** voor kanker:",
         options: [
-          "Patiënt's T-cellen genetisch gewijzigd om kanker te herkennen + ingespoten",
+          "T-cellen van de patiënt genetisch gewijzigd om kanker te herkennen + ingespoten",
           "Bestralingstherapie",
           "Chirurgie",
           "Antibiotica"
@@ -459,7 +459,7 @@ const steps = [
         wrongHints: [null, "Apart middel.", "Apart.", "Werkt niet."],
         uitlegPad: {
           stappen: [
-            { titel: "Patiënt eigen leger uitrusten", tekst: "T-cellen uit patiënt → laboratorium genetisch wijzigen met **Chimeric Antigen Receptor (CAR)** dat kanker-antigeen herkent → terug ingespoten → vermenigvuldigen + vernietigen kanker. Eerst voor bloedkankers (leukemie, lymfoom). Spectaculaire resultaten, maar duur (€300-500k) + bijwerkingen mogelijk." },
+            { titel: "Eigen leger van de patiënt uitrusten", tekst: "T-cellen uit patiënt → laboratorium genetisch wijzigen met **Chimeric Antigen Receptor (CAR)** die kanker-antigeen herkent → terug ingespoten → vermenigvuldigen + vernietigen kanker. Eerst voor bloedkankers (leukemie, lymfoom). Spectaculaire resultaten, maar duur (€300-500k) + bijwerkingen mogelijk." },
           ],
           niveaus: { basis: "Eigen T-cellen reprogrammeren.", simpeler: "T-cellen 'leren' kanker doden.", nogSimpeler: "CAR-T" },
         },

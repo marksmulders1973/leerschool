@@ -195,7 +195,7 @@ Oefen de strategie met de vragen hieronder.`,
           ],
           niveaus: {
             basis: "Als je weet wat je zoekt, kun je dan gericht scannen. Wat doe je daarvoor als eerste?",
-            simpeler: "Een speurder weet ééérst wat hij zoekt, dan gaat hij zoeken. Welke actie hoort bij 'weten wat je zoekt'?",
+            simpeler: "Een speurder weet éérst wat hij zoekt, dan gaat hij zoeken. Welke actie hoort bij 'weten wat je zoekt'?",
             nogSimpeler: "Zoek de actie die begint bij de vraag, niet bij de tekst.",
           },
         },
@@ -240,7 +240,7 @@ Oefen de strategie met de vragen hieronder.`,
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Zoekwoord", tekst: "De vraag gaat over de nijlpaard. Zoekwoord = 'nijlpaard'. Scan de twee zinnen op dat woord." },
+            { titel: "Zoekwoord", tekst: "De vraag gaat over het nijlpaard. Zoekwoord = 'nijlpaard'. Scan de twee zinnen op dat woord." },
             { titel: "Precies lezen", tekst: "De zin met 'nijlpaard' zegt: 3.200 kilo. Dat is je antwoord." },
             { titel: "Controleer de valkuil", tekst: "Het andere getal (2.300) hoort bij de neushoorn. Neem alleen het getal over uit de zin over het dier dat de vraag noemt." },
           ],
@@ -318,7 +318,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
           stappen: [
             { titel: "Zoekwoord", tekst: "De vraag gaat over 'potten honing'. Scan de tekst op het woord 'potten'." },
             { titel: "Precies lezen", tekst: "Je komt uit in de derde alinea, bij de zin over de oogst van vorig jaar. Welk getal staat vlak vóór 'potten honing'?" },
-            { titel: "Controleer de buren", tekst: "In dezelfde alinea staan nog meer getallen: eentje over euro's en verderop het aantal kasten. Alleen het getal dat direct bij 'potten' hoort, beantwoordt de vraag." },
+            { titel: "Controleer de buren", tekst: "In de tekst staan nog meer getallen: in dezelfde alinea eentje over euro's, en eerder het aantal kasten en bijen. Alleen het getal dat direct bij 'potten' hoort, beantwoordt de vraag." },
           ],
           woorden: [
             { woord: "oogsten", uitleg: "Binnenhalen wat gegroeid of gemaakt is — de boer oogst graan, de imker oogst honing." },
@@ -445,7 +445,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
         wrongHints: [
           null,
           null,
-          "Een foto van de bijen stond op de posters bij Joost — maar staat er ook iets op het bord? Scan op 'bord'.",
+          "Staat er in de tekst iets over een foto? Scan op 'bord' en lees wat daar staat.",
           null,
         ],
         uitlegPad: {
@@ -490,7 +490,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
           ],
           niveaus: {
             basis: "De vraag gaat over geld. Scan op het woord 'euro' en lees het getal ervoor.",
-            simpeler: "Zoek de zin over de herfstmarkt. Er staan die zin een bedrag mét het woord 'euro' erbij — dat zoek je.",
+            simpeler: "Zoek de zin over de herfstmarkt. Er staat in die zin een bedrag mét het woord 'euro' erbij — dat zoek je.",
             nogSimpeler: "Zoek het woord 'euro' in de tekst en lees het getal dat er direct vóór staat.",
           },
         },
@@ -649,13 +649,13 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Lees precies wat er staat", tekst: "'Van maandag tot en met vrijdag' = maandag, dinsdag, woensdag, donderdag en vrijdag zijn open. Welke dagen mist er?" },
+            { titel: "Lees precies wat er staat", tekst: "'Van maandag tot en met vrijdag' = maandag, dinsdag, woensdag, donderdag en vrijdag zijn open. Welke dagen ontbreken er?" },
             { titel: "Redeneer", tekst: "Een week heeft zeven dagen. Vijf zijn open. Dan zijn er twee over: zaterdag en zondag. Die worden nergens als openingsdag genoemd." },
             { titel: "Betrouwbaarheidscheck", tekst: "Dit is een kleine redeneer-stap bovenop het opzoeken. Op de toets wordt dat ook gevraagd: de tekst geeft de open dagen, jij trekt zelf de conclusie over de dichte." },
           ],
           niveaus: {
             basis: "Welke dagen noemt de zin als open dagen? Welke weekdagen horen daar dan niet bij?",
-            simpeler: "Twaalf zeven dagen in een week op: ma, di, wo, do, vr, za, zo. Welke staan niet in het rijtje 'maandag tot en met vrijdag'?",
+            simpeler: "Noem de zeven dagen van de week: ma, di, wo, do, vr, za, zo. Welke staan niet in het rijtje 'maandag tot en met vrijdag'?",
             nogSimpeler: "Als de bibliotheek van maandag tot vrijdag open is, is ze in het weekend dan open of dicht?",
           },
         },
@@ -896,7 +896,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
         },
       },
       {
-        q: "Hoe oud moet je minimaal zijn om naar het Uilenfort te gaan zonder gratis toegang?",
+        q: "Vanaf welke leeftijd moet je betalen voor het Uilenfort?",
         options: [
           "Vier jaar",
           "Zes jaar",
@@ -906,7 +906,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de minimumleeftijd voor het museum zelf. Maar de vraag gaat over de grens voor gráátis toegang. Lees de prijzen-zin nog eens.",
+          "Zes jaar noemt de folder bij de leeftijd waarvoor het museum bedoeld is. Maar de vraag gaat over de grens voor grátis toegang. Lees de prijzen-zin nog eens.",
           null,
           null,
         ],

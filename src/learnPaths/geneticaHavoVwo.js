@@ -29,7 +29,7 @@ const steps = [
   {
     title: "DNA + genen + chromosomen — de basis",
     explanation:
-      "Erfelijkheid begint bij **DNA** (deoxyribonucleïnezuur), het molecuul dat alle erfelijke info bevat.\n\n**Structuur DNA**:\n• Dubbele helix — twee strengen om elkaar gedraaid (Watson + Crick 1953).\n• Opgebouwd uit **nucleotiden**: suiker (deoxyribose) + fosfaatgroep + **base**.\n• 4 basen: **A**denine, **T**hymine, **G**uanine, **C**ytosine.\n• Basenparing: **A-T** en **G-C** (Chargaff's regel) — A altijd tegenover T, G altijd tegenover C.\n• Volgorde basen = **genetische code**.\n\n**Gen vs chromosoom**:\n• **Gen** = stukje DNA dat codeert voor 1 eigenschap of eiwit. Bv. gen voor oogkleur.\n• **Chromosoom** = lang DNA-molecuul + eiwitten (histonen). 1 chromosoom = duizenden genen.\n• Mens heeft **46 chromosomen** = 23 paren = **diploïd** (2n).\n• Geslachtscellen (sperma + eicel) hebben 23 chromosomen = **haploïd** (n).\n\n**Allelen**:\n• Een **allel** = variant van een gen. Bv. allel voor blauwe ogen vs allel voor bruine ogen.\n• Mens heeft van elk gen **2 allelen** — 1 van vader, 1 van moeder.\n• **Homozygoot**: twee dezelfde allelen (BB of bb).\n• **Heterozygoot**: twee verschillende allelen (Bb).\n\n**Geslachtschromosomen**:\n• Vrouw: **XX** (paar 23).\n• Man: **XY**.\n• Y-chromosoom heeft veel minder genen dan X — vandaar geslachtsgebonden overerving (stap C).\n\n**Genotype vs fenotype**:\n• **Genotype** = welke allelen (Bb, BB, bb).\n• **Fenotype** = hoe het eruit ziet (bruine ogen, blauwe ogen).\n• Genotype Bb + Bb-vader+moeder → fenotype hangt af van dominantie.",
+      "Erfelijkheid begint bij **DNA** (deoxyribonucleïnezuur), het molecuul dat alle erfelijke info bevat.\n\n**Structuur DNA**:\n• Dubbele helix — twee strengen om elkaar gedraaid (Watson + Crick 1953).\n• Opgebouwd uit **nucleotiden**: suiker (deoxyribose) + fosfaatgroep + **base**.\n• 4 basen: **A**denine, **T**hymine, **G**uanine, **C**ytosine.\n• Basenparing: **A-T** en **G-C** (regel van Chargaff) — A altijd tegenover T, G altijd tegenover C.\n• Volgorde basen = **genetische code**.\n\n**Gen vs chromosoom**:\n• **Gen** = stukje DNA dat codeert voor 1 eigenschap of eiwit. Bv. gen voor oogkleur.\n• **Chromosoom** = lang DNA-molecuul + eiwitten (histonen). 1 chromosoom = duizenden genen.\n• Mens heeft **46 chromosomen** = 23 paren = **diploïd** (2n).\n• Geslachtscellen (sperma + eicel) hebben 23 chromosomen = **haploïd** (n).\n\n**Allelen**:\n• Een **allel** = variant van een gen. Bv. allel voor blauwe ogen vs allel voor bruine ogen.\n• Mens heeft van elk gen **2 allelen** — 1 van vader, 1 van moeder.\n• **Homozygoot**: twee dezelfde allelen (BB of bb).\n• **Heterozygoot**: twee verschillende allelen (Bb).\n\n**Geslachtschromosomen**:\n• Vrouw: **XX** (paar 23).\n• Man: **XY**.\n• Y-chromosoom heeft veel minder genen dan X — vandaar geslachtsgebonden overerving (stap C).\n\n**Genotype vs fenotype**:\n• **Genotype** = welke allelen (Bb, BB, bb).\n• **Fenotype** = hoe het eruitziet (bruine ogen, blauwe ogen).\n• Welk fenotype bij een genotype hoort, hangt af van dominantie.",
     checks: [
       {
         q: "Welke **basenparing** klopt in DNA?",
@@ -37,9 +37,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — verkeerde paring.", "Niet — A paart niet met A.", "Niet — A paart met T, niet C."],
         uitlegPad: {
-          stappen: [{ titel: "Chargaff's regel", tekst: "**A** (adenine) plakt altijd op **T** (thymine) via 2 waterstofbruggen. **G** (guanine) op **C** (cytosine) via 3 waterstofbruggen. Daarom is %A = %T en %G = %C in elke DNA-streng (Chargaff)." }],
-          woorden: [{ woord: "nucleotide", uitleg: "DNA-bouwsteen: suiker + fosfaat + base." }, { woord: "Chargaff's regel", uitleg: "In elk DNA: %A = %T en %G = %C." }],
-          theorie: "CSE-pattern: gegeven %A → bereken %T (=zelfde), %G + %C (= 100% - 2·%A samen).",
+          stappen: [{ titel: "Regel van Chargaff", tekst: "**A** (adenine) plakt altijd op **T** (thymine) via 2 waterstofbruggen. **G** (guanine) op **C** (cytosine) via 3 waterstofbruggen. Daarom is %A = %T en %G = %C in dubbelstrengs DNA (Chargaff)." }],
+          woorden: [{ woord: "nucleotide", uitleg: "DNA-bouwsteen: suiker + fosfaat + base." }, { woord: "regel van Chargaff", uitleg: "In elk DNA: %A = %T en %G = %C." }],
+          theorie: "CSE-patroon: gegeven %A → bereken %T (=zelfde), %G + %C (= 100% - 2·%A samen).",
           niveaus: { basis: "A-T, G-C.", simpeler: "A↔T, G↔C = basenparing.", nogSimpeler: "A-T" },
         },
       },
@@ -47,7 +47,7 @@ const steps = [
         q: "Hoeveel **chromosomen** heeft een menselijke **geslachtscel** (sperma/eicel)?",
         options: ["23 (haploïd)","46 (diploïd)","2 (XY)","48"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is normale lichaamscel.", "Geslachtscel maar 1 paar — verkeerd genoteerd.", "Niet menselijk."],
+        wrongHints: [null, "Niet — dat is normale lichaamscel.", "Niet — XY is alleen het paar geslachtschromosomen, niet het totaal.", "Niet menselijk."],
         uitlegPad: {
           stappen: [{ titel: "Meiose halveert", tekst: "Lichaamscel = **diploïd (2n) = 46 chromosomen**. Bij **meiose** (vorming geslachtscel) wordt aantal gehalveerd → **haploïd (n) = 23**. Bij bevruchting: sperma (23) + eicel (23) = zygote 46." }],
           woorden: [{ woord: "haploïd", uitleg: "Cel met 1 set chromosomen (n)." }, { woord: "diploïd", uitleg: "Cel met 2 sets chromosomen (2n)." }, { woord: "meiose", uitleg: "Celdeling waarbij 1 diploïde cel → 4 haploïde geslachtscellen." }],
@@ -68,9 +68,9 @@ const steps = [
       },
       {
         q: "Wat is **fenotype**?",
-        options: ["Uiterlijke kenmerk (zichtbaar)","Allel-combinatie (genotype)","DNA-volgorde","Chromosoom-aantal"],
+        options: ["Uiterlijk kenmerk (zichtbaar)","Allel-combinatie (genotype)","DNA-volgorde","Chromosoom-aantal"],
         answer: 0,
-        wrongHints: [null, "Dat is genotype.", "Onderdeel van genotype.", "Niet — biologische taxonomie."],
+        wrongHints: [null, "Dat is genotype.", "Onderdeel van genotype.", "Niet — dat zegt niets over wat je ziet of meet."],
         uitlegPad: {
           stappen: [{ titel: "Fenotype = zichtbaar", tekst: "**Fenotype** = wat je **ziet** of meet (bruine ogen, lengte 1,80m, bloedgroep A). **Genotype** = de allel-combinatie (Bb, OO, AA). Genotype → fenotype via dominantie." }],
           theorie: "Voorbeeld: bruine ogen kunnen Bb of BB zijn (zelfde fenotype, ander genotype). Blauwe ogen alleen bb.",
@@ -84,7 +84,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is vrouw.", "Niet — Y zonder X = niet levensvatbaar.", "Niet — onvolledig (Turner-syndroom is X0)."],
         uitlegPad: {
           stappen: [{ titel: "Geslachtsbepaling man", tekst: "Vrouw = **XX** (paar 23). Man = **XY**. De **vader** bepaalt geslacht — sperma met X → meisje, sperma met Y → jongen. Eicel is altijd X." }],
-          theorie: "Toets-patroon: SRY-gen op Y-chromosoom triggert mannelijke ontwikkeling. Zonder Y → vrouwelijke ontwikkeling default.",
+          theorie: "Toets-patroon: SRY-gen op Y-chromosoom triggert mannelijke ontwikkeling. Zonder Y → vrouwelijke ontwikkeling (standaard).",
           niveaus: { basis: "XY.", simpeler: "Man = XY", nogSimpeler: "XY" },
         },
       },
@@ -95,7 +95,7 @@ const steps = [
   {
     title: "Mendel — wetten van overerving",
     explanation:
-      "**Gregor Mendel** (1822-1884), Tsjechische monnik, deed kruisings-experimenten met **erwten**. Ontdekte 3 wetten van overerving — basis voor moderne genetica.\n\n**Mendel-experiment**:\n• Kruiste **homozygote** ouders (bv. paarse bloem × witte bloem).\n• F1-generatie: ALLE paars (paars dominant over wit).\n• F1 × F1 = F2-generatie: **3 paars : 1 wit** (klassiek 3:1-verhouding).\n• Conclusie: erfelijke factoren bestaan in paren + één is dominant.\n\n**Mendel's 3 wetten**:\n\n**1. Uniformiteitswet (F1)**:\n• Kruis 2 homozygote ouders met verschillende eigenschap → F1 is **uniform heterozygoot**.\n• Bv. BB × bb → 100% Bb.\n\n**2. Splitsingswet (F2)**:\n• Kruis 2 heterozygoten (F1 × F1) → 1:2:1 genotype-verhouding (BB:Bb:bb) of **3:1 fenotype** bij volledige dominantie.\n• Bb × Bb → 25% BB, 50% Bb, 25% bb.\n\n**3. Onafhankelijkheidswet**:\n• Bij dihybride kruising (2 genen) splitsen genen onafhankelijk.\n• Alleen geldig als genen op verschillende chromosomen liggen.\n\n**Monohybride kruising — Punnett-vierkant**:\nKruising Bb × Bb:\n```\n        B       b\n   B  | BB    | Bb\n   b  | Bb    | bb\n```\n→ 1 BB : 2 Bb : 1 bb genotype.\n→ 3 dominant : 1 recessief fenotype.\n\n**Onvolledige dominantie**:\n• Heterozygoot = **tussenvorm**. Bv. rood (RR) × wit (rr) → roze (Rr).\n• Splitsing F2: 1 rood : 2 roze : 1 wit.\n\n**Co-dominantie**:\n• Beide allelen **tegelijk zichtbaar**. Bv. bloedgroep AB (allel A + B beide actief).",
+      "**Gregor Mendel** (1822-1884), monnik in Brno (nu Tsjechië), deed kruisings-experimenten met **erwten**. Ontdekte 3 wetten van overerving — basis voor moderne genetica.\n\n**Mendel-experiment**:\n• Kruiste **homozygote** ouders (bv. paarse bloem × witte bloem).\n• F1-generatie: ALLE paars (paars dominant over wit).\n• F1 × F1 = F2-generatie: **3 paars : 1 wit** (klassiek 3:1-verhouding).\n• Conclusie: erfelijke factoren bestaan in paren + één is dominant.\n\n**Mendels 3 wetten**:\n\n**1. Uniformiteitswet (F1)**:\n• Kruis 2 homozygote ouders met verschillende eigenschap → F1 is **uniform heterozygoot**.\n• Bv. BB × bb → 100% Bb.\n\n**2. Splitsingswet (F2)**:\n• Kruis 2 heterozygoten (F1 × F1) → 1:2:1 genotype-verhouding (BB:Bb:bb) of **3:1 fenotype** bij volledige dominantie.\n• Bb × Bb → 25% BB, 50% Bb, 25% bb.\n\n**3. Onafhankelijkheidswet**:\n• Bij dihybride kruising (2 genen) splitsen genen onafhankelijk.\n• Alleen geldig als genen op verschillende chromosomen liggen.\n\n**Monohybride kruising — Punnett-vierkant**:\nKruising Bb × Bb:\n```\n        B       b\n   B  | BB    | Bb\n   b  | Bb    | bb\n```\n→ 1 BB : 2 Bb : 1 bb genotype.\n→ 3 dominant : 1 recessief fenotype.\n\n**Onvolledige dominantie**:\n• Heterozygoot = **tussenvorm**. Bv. rood (RR) × wit (rr) → roze (Rr).\n• Splitsing F2: 1 rood : 2 roze : 1 wit.\n\n**Co-dominantie**:\n• Beide allelen **tegelijk zichtbaar**. Bv. bloedgroep AB (allel A + B beide actief).",
     checks: [
       {
         q: "Welke verhouding krijg je in **F2** bij kruising Bb × Bb (volledige dominantie)?",
@@ -110,9 +110,9 @@ const steps = [
       },
       {
         q: "Kruising **BB × bb** levert in F1:",
-        options: ["100% Bb (heterozygoot)","75% BB, 25% bb","50% BB, 50% bb","Mendel's uitzondering"],
+        options: ["100% Bb (heterozygoot)","75% BB, 25% bb","50% BB, 50% bb","Mendels uitzondering"],
         answer: 0,
-        wrongHints: [null, "Niet — geen splitsing in F1.", "Niet — geen homozygoten in F1.", "Niet — Mendel's uniformiteitswet voorspelt dit."],
+        wrongHints: [null, "Niet — geen splitsing in F1.", "Niet — geen homozygoten in F1.", "Niet — Mendels uniformiteitswet voorspelt dit."],
         uitlegPad: {
           stappen: [{ titel: "Uniformiteitswet (1e wet)", tekst: "BB-ouder geeft alleen B-allel. bb-ouder geeft alleen b-allel. F1-kinderen krijgen 1 van elke ouder = Bb. **Alle F1 = uniform Bb**." }],
           theorie: "Eerste Mendel-wet: kruising homozygoten met verschillende allelen → uniforme F1 (alle heterozygoot).",
@@ -123,11 +123,11 @@ const steps = [
         q: "Bij **onvolledige dominantie** rood (RR) × wit (rr) → F1:",
         options: ["Roze (Rr)","Helft rood, helft wit","Alleen rood","Alleen wit"],
         answer: 0,
-        wrongHints: [null, "Niet — dat zou volledig dominant zijn.", "Niet — geen R dominant.", "Niet."],
+        wrongHints: [null, "Niet — in F1 krijgen alle nakomelingen Rr.", "Niet — dat zou volledige dominantie zijn.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Tussenvorm bij onvolledig", tekst: "Bij **onvolledige dominantie** is heterozygoot een **tussenvorm**. RR × rr → 100% Rr **roze**. F2 (Rr × Rr): 25% rood, 50% roze, 25% wit (= 1:2:1)." }],
           woorden: [{ woord: "onvolledige dominantie", uitleg: "Heterozygoot vertoont tussenvorm-fenotype." }],
-          theorie: "Voorbeelden in natuur: leeuwebek-bloem rood/wit/roze, vergelijkbare planten.",
+          theorie: "Voorbeelden in natuur: leeuwenbek rood/wit/roze, vergelijkbare planten.",
           niveaus: { basis: "Roze.", simpeler: "Onvolledig dominant = tussenvorm = roze", nogSimpeler: "Roze" },
         },
       },
@@ -149,7 +149,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat zijn Watson + Crick.", "Niet — dat is Darwin.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Mendel = vader genetica", tekst: "**Gregor Mendel** (1822-1884) was Tsjechische augustijner-monnik in Brno. Werkte ~10 jaar met erwten-experimenten. Publiceerde 1866 — werd lange tijd genegeerd. **Herontdekt 1900** door 3 wetenschappers gelijktijdig — start moderne genetica." }],
+          stappen: [{ titel: "Mendel = vader genetica", tekst: "**Gregor Mendel** (1822-1884) was augustijner monnik in Brno (nu Tsjechië). Werkte ~10 jaar met erwten-experimenten. Publiceerde 1866 — werd lange tijd genegeerd. **Herontdekt 1900** door 3 wetenschappers gelijktijdig — start moderne genetica." }],
           theorie: "Geen DNA bekend toen — Mendel sprak over 'erfelijke factoren' (later: genen). DNA pas in 1953 ontrafeld door Watson + Crick + Franklin.",
           niveaus: { basis: "Mendel-monnik.", simpeler: "Mendel = erwt-erfelijkheid", nogSimpeler: "Mendel" },
         },
@@ -161,7 +161,7 @@ const steps = [
   {
     title: "Dihybride kruising + geslachtsgebonden overerving",
     explanation:
-      "**Dihybride kruising** = kruising met 2 eigenschappen tegelijk (2 genen).\n\n**Mendel's onafhankelijkheidswet**:\n• Bij genen op verschillende chromosomen: ze splitsen onafhankelijk.\n• Kruising AaBb × AaBb → klassieke **9:3:3:1 fenotype**.\n\n**Voorbeeld dihybride**:\n• Erwten: geel (G) dominant over groen (g). Glad (R) dominant over gerimpeld (r).\n• GgRr × GgRr:\n```\nGenotype (4×4 Punnett):\n        GR    Gr    gR    gr\n  GR  GGRR  GGRr  GgRR  GgRr\n  Gr  GGRr  GGrr  GgRr  Ggrr\n  gR  GgRR  GgRr  ggRR  ggRr\n  gr  GgRr  Ggrr  ggRr  ggrr\n```\n• Fenotypes: 9 geel-glad : 3 geel-gerimpeld : 3 groen-glad : 1 groen-gerimpeld.\n\n**Geslachtsgebonden overerving**:\n• Genen op **X-chromosoom** ('X-linked').\n• Y-chromosoom heeft maar weinig genen — vooral SRY (mannelijkheid).\n• Vrouwen (XX): hebben 2 kopieën van X-gen. Mannen (XY): maar 1 kopie X.\n• Gevolg: **recessieve X-allelen tonen vaker bij mannen** (geen tweede X-kopie om dominant te zijn).\n\n**Voorbeelden geslachtsgebonden ziekten** (recessief op X):\n• **Hemofilie** (bloedstollings-stoornis): vooral bij jongens.\n• **Duchenne spierdystrofie**: vooral bij jongens.\n• **Kleurenblindheid (rood-groen)**: ~8% van mannen, ~0,5% van vrouwen.\n\n**Hoe overerving werkt** (kleurenblindheid voorbeeld):\n• Moeder draagster (X^cX) × normale vader (XY):\n  - 25% X^cX (dochter draagster, normaal zicht)\n  - 25% XX (dochter normaal)\n  - 25% X^cY (zoon kleurenblind)\n  - 25% XY (zoon normaal)\n• 50% zonen kleurenblind, 0% dochters kleurenblind (wel draagster).\n\n**Testcross** (testkruising):\n• Onbekend genotype × homozygoot recessief.\n• Doel: bepalen of onbekend BB of Bb.\n• BB × bb → alle Bb (allemaal dominant fenotype).\n• Bb × bb → 50% Bb : 50% bb (1:1 verhouding).",
+      "**Dihybride kruising** = kruising met 2 eigenschappen tegelijk (2 genen).\n\n**Mendels onafhankelijkheidswet**:\n• Bij genen op verschillende chromosomen: ze splitsen onafhankelijk.\n• Kruising AaBb × AaBb → klassieke **9:3:3:1 fenotype**.\n\n**Voorbeeld dihybride**:\n• Erwten: geel (G) dominant over groen (g). Glad (R) dominant over gerimpeld (r).\n• GgRr × GgRr:\n```\nGenotype (4×4 Punnett):\n        GR    Gr    gR    gr\n  GR  GGRR  GGRr  GgRR  GgRr\n  Gr  GGRr  GGrr  GgRr  Ggrr\n  gR  GgRR  GgRr  ggRR  ggRr\n  gr  GgRr  Ggrr  ggRr  ggrr\n```\n• Fenotypes: 9 geel-glad : 3 geel-gerimpeld : 3 groen-glad : 1 groen-gerimpeld.\n\n**Geslachtsgebonden overerving**:\n• Genen op **X-chromosoom** ('X-linked').\n• Y-chromosoom heeft maar weinig genen — vooral SRY (mannelijkheid).\n• Vrouwen (XX): hebben 2 kopieën van X-gen. Mannen (XY): maar 1 kopie X.\n• Gevolg: **recessieve X-allelen komen vaker tot uiting bij mannen** (geen tweede X-kopie die het kan maskeren).\n\n**Voorbeelden geslachtsgebonden ziekten** (recessief op X):\n• **Hemofilie** (bloedstollings-stoornis): vooral bij jongens.\n• **Duchenne spierdystrofie**: vooral bij jongens.\n• **Kleurenblindheid (rood-groen)**: ~8% van mannen, ~0,5% van vrouwen.\n\n**Hoe overerving werkt** (kleurenblindheid voorbeeld):\n• Moeder draagster (X^cX) × normale vader (XY):\n  - 25% X^cX (dochter draagster, normaal zicht)\n  - 25% XX (dochter normaal)\n  - 25% X^cY (zoon kleurenblind)\n  - 25% XY (zoon normaal)\n• 50% zonen kleurenblind, 0% dochters kleurenblind (wel draagster).\n\n**Testcross** (testkruising):\n• Onbekend genotype × homozygoot recessief.\n• Doel: bepalen of onbekend BB of Bb.\n• BB × bb → alle Bb (allemaal dominant fenotype).\n• Bb × bb → 50% Bb : 50% bb (1:1 verhouding).",
     checks: [
       {
         q: "Welke **fenotype-verhouding** krijg je bij AaBb × AaBb (volledige dominantie, onafhankelijke genen)?",
@@ -189,7 +189,7 @@ const steps = [
         q: "Een **draagster-moeder** (X^cX) krijgt kinderen met een **normale vader** (XY). Hoeveel % **zonen** is kleurenblind?",
         options: ["50%","100%","25%","0%"],
         answer: 0,
-        wrongHints: [null, "Niet — moeder geeft maar 1 X-allel.", "Niet — vier mogelijke kinderen.", "Onmogelijk — wel kans."],
+        wrongHints: [null, "Niet — moeder geeft maar 1 X-allel.", "Niet — 25% geldt voor álle kinderen samen; kijk alleen naar de zonen.", "Onmogelijk — wel kans."],
         uitlegPad: {
           stappen: [{ titel: "Punnett geslachtsgebonden", tekst: "Moeder XcX × vader XY:\n```\n       Xc    X\n  X | XcX  XX (dochters)\n  Y | XcY  XY (zonen)\n```\nZonen: 50% XcY (kleurenblind) + 50% XY (normaal). **50% van zonen kleurenblind**." }],
           theorie: "Dochters: 50% draagster XcX + 50% normaal XX. Geen kleurenblinde dochter (moet 2 Xc hebben, vader gaf gezonde X).",
@@ -225,7 +225,7 @@ const steps = [
   {
     title: "Stamboomanalyse + mutaties + genetische ziekten",
     explanation:
-      "**Stamboom** (pedigree) = familie-tekening die toont wie welke eigenschap heeft. CSE-favoriet — bijna elk biologie-eindexamen heeft een stamboom-vraag.\n\n**Stamboom-symbolen**:\n• ○ = vrouw (cirkel)\n• □ = man (vierkant)\n• Ingevuld (●/■) = persoon met aandoening.\n• Halfvol = draagster (vooral bij geslachtsgebonden).\n• Lijn tussen ○ en □ = paar.\n• Verticale lijn naar onder = kinderen.\n\n**Analyseren**:\n1. Is aandoening **dominant of recessief**?\n   - Dominant: minstens 1 ouder ALTIJD aangedaan.\n   - Recessief: aangedane kind kan 2 gezond-lijkende dragers-ouders hebben.\n2. Is aandoening **autosomaal of geslachtsgebonden**?\n   - Autosomaal: jongens en meisjes ongeveer even vaak.\n   - X-gebonden recessief: vooral jongens. Moeder is draagster.\n   - X-gebonden dominant: meisjes 2× vaker (2 X-chromosomen).\n3. Bepaal **genotypes** waar mogelijk.\n\n**Voorbeeld**:\n• Twee gezonde ouders krijgen een aangedaan kind → recessief.\n• Vader aangedaan + moeder gezond + alle dochters draagster + alle zonen gezond → X-gebonden recessief.\n\n**Mutaties**:\nVeranderingen in DNA-volgorde. Bronnen: kopieer-fouten bij celdeling, straling, chemische stoffen, virussen.\n\n**Soorten mutaties**:\n• **Puntmutatie**: 1 base verandert. Kan stil zijn (zelfde aminozuur), missense (ander aminozuur) of nonsense (stopcodon).\n• **Frameshift**: invoeging of deletie van basen → hele leeskader verschuift → meestal ernstig.\n• **Chromosoom-mutaties**: hele stukken verloren, gedupliceerd, omgekeerd.\n• **Aneuploïdie**: verkeerd aantal chromosomen. Bv. **trisomie 21 = Down-syndroom** (3 ipv 2 van chromosoom 21).\n\n**Wanneer mutatie ernstig**:\n• In codant DNA (gen) → eiwit-effect.\n• In niet-codant DNA → meestal geen effect.\n• In geslachtscel → doorgegeven aan nageslacht.\n• In lichaamscel → alleen die persoon.\n\n**Bekende genetische ziekten**:\n• **Cystic fibrosis (taaislijmziekte)**: autosomaal recessief, 1 op 25 NL'ers is drager.\n• **Sikkelcelanemie**: autosomaal recessief, vooral Afrikaanse afkomst.\n• **Huntington**: autosomaal **dominant**, ziekte op latere leeftijd.\n• **Down-syndroom**: trisomie 21, niet erfelijk meestal.\n• **Hemofilie / Duchenne**: X-gebonden recessief (zie stap C).",
+      "**Stamboom** (pedigree) = familie-tekening die toont wie welke eigenschap heeft. CSE-favoriet — bijna elk biologie-eindexamen heeft een stamboom-vraag.\n\n**Stamboom-symbolen**:\n• ○ = vrouw (cirkel)\n• □ = man (vierkant)\n• Ingevuld (●/■) = persoon met aandoening.\n• Halfvol = draagster (vooral bij geslachtsgebonden).\n• Lijn tussen ○ en □ = paar.\n• Verticale lijn naar onder = kinderen.\n\n**Analyseren**:\n1. Is aandoening **dominant of recessief**?\n   - Dominant: minstens 1 ouder ALTIJD aangedaan.\n   - Recessief: aangedane kind kan 2 gezond-lijkende dragers-ouders hebben.\n2. Is aandoening **autosomaal of geslachtsgebonden**?\n   - Autosomaal: jongens en meisjes ongeveer even vaak.\n   - X-gebonden recessief: vooral jongens. Moeder is draagster.\n   - X-gebonden dominant: meisjes 2× vaker (2 X-chromosomen).\n3. Bepaal **genotypes** waar mogelijk.\n\n**Voorbeeld**:\n• Twee gezonde ouders krijgen een aangedaan kind → recessief.\n• Vader aangedaan + moeder gezond + alle dochters draagster + alle zonen gezond → X-gebonden recessief.\n\n**Mutaties**:\nVeranderingen in DNA-volgorde. Bronnen: kopieer-fouten bij celdeling, straling, chemische stoffen, virussen.\n\n**Soorten mutaties**:\n• **Puntmutatie**: 1 base verandert. Kan stil zijn (zelfde aminozuur), missense (ander aminozuur) of nonsense (stopcodon).\n• **Frameshift**: invoeging of deletie van basen → hele leeskader verschuift → meestal ernstig.\n• **Chromosoom-mutaties**: hele stukken verloren, gedupliceerd, omgekeerd.\n• **Aneuploïdie**: verkeerd aantal chromosomen. Bv. **trisomie 21 = Down-syndroom** (3 ipv 2 van chromosoom 21).\n\n**Wanneer mutatie ernstig**:\n• In coderend DNA (gen) → eiwit-effect.\n• In niet-coderend DNA → meestal geen effect.\n• In geslachtscel → doorgegeven aan nageslacht.\n• In lichaamscel → alleen die persoon.\n\n**Bekende genetische ziekten**:\n• **Cystic fibrosis (taaislijmziekte)**: autosomaal recessief, 1 op 25 NL'ers is drager.\n• **Sikkelcelanemie**: autosomaal recessief, vooral Afrikaanse afkomst.\n• **Huntington**: autosomaal **dominant**, ziekte op latere leeftijd.\n• **Down-syndroom**: trisomie 21, niet erfelijk meestal.\n• **Hemofilie / Duchenne**: X-gebonden recessief (zie stap C).",
     checks: [
       {
         q: "In een stamboom: **2 gezonde ouders** krijgen een **aangedaan kind**. Wat zegt dit?",
@@ -265,10 +265,10 @@ const steps = [
         q: "Wat is een **frameshift-mutatie**?",
         options: ["Invoeging/deletie verschuift leeskader","1 base verandert","Hele chromosoom verloren","Geen effect"],
         answer: 0,
-        wrongHints: [null, "Dat is puntmutatie.", "Dat is chromosoom-mutatie.", "Niet — meestal grote effect."],
+        wrongHints: [null, "Dat is puntmutatie.", "Dat is chromosoom-mutatie.", "Niet — meestal groot effect."],
         uitlegPad: {
           stappen: [{ titel: "Insertie/deletie = leeskader-shift", tekst: "**Frameshift** = invoeging (insertie) of weglaten (deletie) van basen — niet 3 of 6 etc. Hele **leeskader** verschuift → alle aminozuren erna fout → eiwit functioneert niet. Meestal ernstig." }],
-          theorie: "Toets-patroon: leeskader = codons van 3 basen. Verschuiving 1-2-3 basen = ramp. Verschuiving van 3 = 1 codon weg/erbij = minder ernstig.",
+          theorie: "Toets-patroon: leeskader = codons van 3 basen. Invoeging/deletie van 1 of 2 basen = ramp. Van 3 basen = 1 codon weg/erbij = minder ernstig.",
           niveaus: { basis: "Invoeging/deletie.", simpeler: "Frameshift = leeskader-shift", nogSimpeler: "Shift" },
         },
       },
@@ -296,7 +296,7 @@ const steps = [
         q: "Kruising Aa × aa levert genotypes:",
         options: ["50% Aa, 50% aa","75% Aa, 25% aa","100% Aa","100% aa"],
         answer: 0,
-        wrongHints: [null, "Niet — testcross is 1:1.", "Wel mogelijk maar dit is testcross — 50:50.", "Wel mogelijk maar dit is testcross — 50:50."],
+        wrongHints: [null, "Niet — testcross is 1:1.", "Niet — Aa geeft de helft van de keren a door.", "Niet — Aa geeft de helft van de keren A door."],
         uitlegPad: {
           stappen: [{ titel: "Testcross = 1:1", tekst: "Aa geeft 50% A, 50% a. aa geeft alleen a. F1: 50% Aa + 50% aa. **Klassieke testcross-uitkomst**." }],
           niveaus: { basis: "50:50.", simpeler: "Aa × aa = 1:1", nogSimpeler: "50:50" },
@@ -317,10 +317,10 @@ const steps = [
         q: "Een **draagster-moeder** voor hemofilie krijgt met gezonde man:",
         options: ["50% zonen ziek, 50% dochters draagster","100% zieke zonen","Geen kans op ziekte","50% van alle kinderen ziek"],
         answer: 0,
-        wrongHints: [null, "Niet — slechts 50%.", "Niet — wel kans.", "Niet — dochters worden geen ziektedragers automatisch, alleen draagsters."],
+        wrongHints: [null, "Niet — slechts 50%.", "Niet — wel kans.", "Niet — dochters worden niet ziek, hooguit draagster."],
         uitlegPad: {
           stappen: [{ titel: "X-gebonden recessief patroon", tekst: "XcX × XY → dochters: 50% XX (normaal) + 50% XcX (draagster). Zonen: 50% XY (normaal) + 50% XcY (ziek). **50% zonen ziek, 50% dochters draagster**." }],
-          niveaus: { basis: "50% zonen ziek + 50% dochters draagster.", simpeler: "Hemofilie-draagster + gezond", nogSimpeler: "Eerste optie" },
+          niveaus: { basis: "50% zonen ziek + 50% dochters draagster.", simpeler: "Hemofilie-draagster + gezond", nogSimpeler: "50% zonen ziek" },
         },
       },
       {
@@ -336,12 +336,12 @@ const steps = [
       },
       {
         q: "Wat ontdekten **Watson + Crick** in 1953?",
-        options: ["Dubbele helix DNA-structuur","Mendel's wetten","Evolutie-theorie","Eerste vaccin"],
+        options: ["Dubbele helix DNA-structuur","Mendels wetten","Evolutie-theorie","Eerste vaccin"],
         answer: 0,
         wrongHints: [null, "Niet — Mendel in 1866.", "Niet — Darwin in 1859.", "Niet — Jenner 1796."],
         uitlegPad: {
-          stappen: [{ titel: "Dubbele helix 1953", tekst: "**James Watson + Francis Crick** publiceerden in **Nature, 25 april 1953** de dubbele-helix-structuur van DNA. Mede dankzij röntgen-foto's van **Rosalind Franklin** (vaak vergeten in NL-leerboeken). Kreeg Nobelprijs 1962 — Franklin was inmiddels overleden." }],
-          theorie: "Toets-historische context: 1953 = mijlpaal moleculaire biologie. Mogelijk maakte 50 jaar later het Human Genome Project.",
+          stappen: [{ titel: "Dubbele helix 1953", tekst: "**James Watson + Francis Crick** publiceerden in **Nature, 25 april 1953** de dubbele-helix-structuur van DNA. Mede dankzij röntgen-foto's van **Rosalind Franklin** (vaak vergeten in NL-leerboeken). Zij kregen (met Wilkins) de Nobelprijs in 1962 — Franklin was inmiddels overleden." }],
+          theorie: "Toets-historische context: 1953 = mijlpaal moleculaire biologie. Maakte 50 jaar later het Human Genome Project mogelijk.",
           niveaus: { basis: "Dubbele helix DNA.", simpeler: "1953 = DNA-structuur", nogSimpeler: "DNA" },
         },
       },

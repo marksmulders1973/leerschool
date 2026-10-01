@@ -103,7 +103,7 @@ const steps = [
           stappen: [
             { titel: "θ_g berekenen + vergelijken", tekst: "sin(θ_g) = n_lucht/n_water = 1/1,33 = 0,752 → θ_g ≈ 48,8°. 50° > 48,8° → boven grens → totale interne reflectie. Niets komt uit." },
           ],
-          theorie: "Daarom werken glasvezels: licht binnen wordt onder hoek >θ_g op de glas-wand aangestoten → ketst altijd terug binnen → tot km zonder verlies.",
+          theorie: "Daarom werken glasvezels: licht binnen raakt de glaswand onder een hoek >θ_g → ketst altijd terug naar binnen → over km's met heel weinig verlies.",
           niveaus: { basis: "50° > 48,8° → totale reflectie.", simpeler: "Boven grenshoek = alles terug, niets uit.", nogSimpeler: "Totale reflectie" },
         },
       },
@@ -127,7 +127,7 @@ const steps = [
           "Dispersie door luchtdruppels"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — wolk-reflectie geeft halo, geen regenboog.", "Niet — diffractie geeft andere patronen.", "Niet — geen 'lucht-druppels'."],
+        wrongHints: [null, "Niet — reflectie tegen wolken splitst licht niet in kleuren.", "Niet — diffractie geeft andere patronen.", "Niet — geen 'lucht-druppels'."],
         uitlegPad: {
           stappen: [
             { titel: "Drie stappen per druppel", tekst: "1. Zonlicht treedt druppel binnen → breekt (dispersie: kleuren splitsen).\n2. Reflecteert intern aan achterkant druppel.\n3. Breekt opnieuw bij uittreden.\nVerschillende kleuren komen onder iets verschillende hoek uit → boogvorm met rood buitenaan, violet binnenaan." },
@@ -145,9 +145,9 @@ const steps = [
           "Lichtemissie door gloeidraad"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — een gewone lens focust, niet doorgeleidt.", "Niet — geen metaal in glasvezel.", "Niet — vezel zelf geeft geen licht."],
+        wrongHints: [null, "Niet — een lens focust licht, maar geleidt het niet over grote afstand door.", "Niet — geen metaal in glasvezel.", "Niet — vezel zelf geeft geen licht."],
         uitlegPad: {
-          stappen: [{ titel: "Licht ketst, geen verlies", tekst: "Glasvezel-kern heeft hoger n dan de mantel. Licht in de kern raakt mantel onder hoek >θ_g → totale reflectie → ketst verder. Geen energieverlies aan absorptie. Daarom km-bereik mogelijk + extreem hoge bandbreedte." }],
+          stappen: [{ titel: "Licht ketst, geen verlies", tekst: "Glasvezel-kern heeft hoger n dan de mantel. Licht in de kern raakt mantel onder hoek >θ_g → totale reflectie → ketst verder. Bij de reflectie gaat geen licht verloren, en het glas absorbeert heel weinig. Daarom km-bereik mogelijk + extreem hoge bandbreedte." }],
           niveaus: { basis: "Totale reflectie binnen vezel.", simpeler: "Licht ketst binnen kern zonder uit te komen.", nogSimpeler: "Totale refl." },
         },
       },
@@ -176,7 +176,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — controleer eenheden.", "Niet — komt door verwarring D/cm.", "Niet — veel te kort."],
         uitlegPad: {
-          stappen: [{ titel: "f = 1/S", tekst: "S = 2,0 D = 2,0 1/m. f = 1/S = 0,50 m = **50 cm**. Dat is de afstand waarop deze bril collimaat licht (parallel) focust." }],
+          stappen: [{ titel: "f = 1/S", tekst: "S = 2,0 D = 2,0 1/m. f = 1/S = 0,50 m = **50 cm**. Dat is de afstand waarop deze bril evenwijdig invallend licht focust." }],
           theorie: "Typische leesbrillen: +1 tot +3 D. Hoger = sterker = kortere f.",
           niveaus: { basis: "f=1/2=0,5 m.", simpeler: "f is omgekeerde sterkte → 1/2 = 50 cm.", nogSimpeler: "50 cm" },
         },
@@ -190,22 +190,22 @@ const steps = [
           stappen: [
             { titel: "1/f = 1/v + 1/b", tekst: "1/20 = 1/30 + 1/b → 1/b = 1/20 − 1/30 = 3/60 − 2/60 = 1/60 → b = **60 cm**. Reëel + omgekeerd + 2× vergroot (N = 60/30 = 2)." },
           ],
-          niveaus: { basis: "b=60 cm.", simpeler: "Vermenigvuldig + aftrekken Snellius-formule.", nogSimpeler: "60 cm" },
+          niveaus: { basis: "b=60 cm.", simpeler: "Breuken aftrekken in de lensformule.", nogSimpeler: "60 cm" },
         },
       },
       {
         q: "Een **bolle lens** als vergrootglas: voorwerp **dichter dan f**. Beeld?",
         options: [
-          "Virtueel + rechtop + vergroot (achter lens kant je naar kijkt)",
+          "Virtueel + rechtop + vergroot (aan dezelfde kant als het voorwerp)",
           "Reëel + omgekeerd + vergroot",
           "Reëel + rechtop + verkleind",
           "Virtueel + omgekeerd"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is v > 2f.", "Niet — beeld is vergroot.", "Niet — virtueel beeld is rechtop."],
+        wrongHints: [null, "Niet — dat is f < v < 2f.", "Niet — beeld is vergroot.", "Niet — virtueel beeld is rechtop."],
         uitlegPad: {
           stappen: [{ titel: "v < f → virtueel", tekst: "Bij v < f lopen stralen na lens divergerend. Brein extrapoleert recht achter → schijnbaar beeld 'achter' lens (= virtueel). Rechtop en vergroot — daarom werkt het als vergrootglas." }],
-          theorie: "Zelfde principe in loep, microscoop-objectief op kort voorwerpsafstand.",
+          theorie: "Zelfde principe in de loep en in het oculair van een microscoop.",
           niveaus: { basis: "Virtueel + rechtop + vergroot.", simpeler: "Vergrootglas: dichtbij = virtueel + vergroot.", nogSimpeler: "Vergroot" },
         },
       },
@@ -215,7 +215,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — bolle bril is voor verziend.", "Niet — bril nodig om verre objecten scherp te zien.", "Niet — spiegel zou niet helpen."],
         uitlegPad: {
-          stappen: [{ titel: "Bijziend = mind focus te dicht", tekst: "Het oog focust het beeld VOOR netvlies (te sterke lens). Holle bril divergeert licht eerst → schijnbaar voorwerp dichter → oog focust dan op netvlies. Dioptrie negatief, bijv. −2 D voor matig bijziend." }],
+          stappen: [{ titel: "Bijziend = oog focust te dicht", tekst: "Het oog focust het beeld VOOR netvlies (te sterke lens). Holle bril divergeert licht eerst → schijnbaar voorwerp dichter → oog focust dan op netvlies. Dioptrie negatief, bijv. −2 D voor matig bijziend." }],
           theorie: "Verziend (hypermetropie) is omgekeerd: positieve bril nodig.",
           niveaus: { basis: "Holle/negatieve bril.", simpeler: "Bijziend = min-bril.", nogSimpeler: "Negatief" },
         },
@@ -226,7 +226,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — v<f geeft virtueel beeld (geen opname).", "Niet — bij v=f valt beeld op oneindig.", "Niet — onmogelijk."],
         uitlegPad: {
-          stappen: [{ titel: "Reëel = v > f", tekst: "Reëel beeld vereist v > f. Bij v > 2f: verkleind beeld (normale foto). Bij f<v<2f: vergroot beeld (macro-fotografie). Lens-stelmotor in camera past v aan voor scherpstellen." }],
+          stappen: [{ titel: "Reëel = v > f", tekst: "Reëel beeld vereist v > f. Bij v > 2f: verkleind beeld (normale foto). Bij f<v<2f: vergroot beeld (macro-fotografie). Lens-stelmotor in camera past b (afstand lens–sensor) aan voor scherpstellen." }],
           niveaus: { basis: "v>f.", simpeler: "Voorwerp verder dan brandpunt → reëel beeld.", nogSimpeler: "v>f" },
         },
       },
@@ -237,7 +237,7 @@ const steps = [
   {
     title: "Kleuren + spectrum",
     explanation:
-      "**Zichtbaar licht** = klein deel van EM-spectrum: golflengte ~400 nm (violet) tot ~700 nm (rood).\n\n**Volgorde wit-licht-spectrum** (lange → korte golflengte):\nRood → Oranje → Geel → Groen → Cyaan → Blauw → Violet.\n*Geheugen-truc*: ROGGBV.\n\n**Frequentie + golflengte** (in vacuüm/lucht):\n• Rood: λ ≈ 700 nm → f ≈ 4,3·10¹⁴ Hz.\n• Groen: λ ≈ 550 nm → f ≈ 5,5·10¹⁴ Hz.\n• Violet: λ ≈ 400 nm → f ≈ 7,5·10¹⁴ Hz.\n• In medium: λ verandert, f blijft (de bron bepaalt f).\n\n**Primaire kleuren licht** (additief, **RGB**):\n• **R**ood + **G**roen + **B**lauw → wit.\n• Beeldschermen + projectoren gebruiken RGB.\n\n**Primaire kleuren verf** (subtractief, **CMY**):\n• **C**yaan + **M**agenta + **G**eel (yellow) → zwart.\n• Inkt-printers gebruiken CMY(K, K=zwart).\n\n**Waarom blauwe lucht?** Rayleigh-verstrooiing: lucht-moleculen verstrooien blauw licht meer dan rood (omgekeerd evenredig met λ⁴). Bij zonsondergang reist licht langer door atmosfeer → blauw weggestrooid → rood blijft over.\n\n**Absorberen + reflecteren**:\n• Een rode appel **reflecteert** rood + absorbeert andere kleuren.\n• Witte stof reflecteert alles, zwarte absorbeert alles.\n• Onder rood licht ziet groen blad **zwart** (geen groen om te reflecteren).\n\n**Spectraal-analyse**:\n• Prisma of tralie splitst licht in spectrum.\n• Elke stof heeft uniek emissie- of absorptiespectrum (vingerafdruk).\n• Astronomie: spectrum van ster verteld over samenstelling + temperatuur.\n\n**Doppler-roodverschuiving**:\n• Sterrenstelsels die van ons af bewegen → spectrum verschoven naar rood (langer λ).\n• Hubble (1929) ontdekte: hoe verder, hoe sneller weg → uitbreiding heelal.",
+      "**Zichtbaar licht** = klein deel van EM-spectrum: golflengte ~400 nm (violet) tot ~700 nm (rood).\n\n**Volgorde wit-licht-spectrum** (lange → korte golflengte):\nRood → Oranje → Geel → Groen → Cyaan → Blauw → Violet.\n*Geheugen-truc*: ROGGBV.\n\n**Frequentie + golflengte** (in vacuüm/lucht):\n• Rood: λ ≈ 700 nm → f ≈ 4,3·10¹⁴ Hz.\n• Groen: λ ≈ 550 nm → f ≈ 5,5·10¹⁴ Hz.\n• Violet: λ ≈ 400 nm → f ≈ 7,5·10¹⁴ Hz.\n• In medium: λ verandert, f blijft (de bron bepaalt f).\n\n**Primaire kleuren licht** (additief, **RGB**):\n• **R**ood + **G**roen + **B**lauw → wit.\n• Beeldschermen + projectoren gebruiken RGB.\n\n**Primaire kleuren verf** (subtractief, **CMY**):\n• **C**yaan + **M**agenta + **G**eel (yellow) → zwart.\n• Inkt-printers gebruiken CMY(K, K=zwart).\n\n**Waarom blauwe lucht?** Rayleigh-verstrooiing: lucht-moleculen verstrooien blauw licht meer dan rood (omgekeerd evenredig met λ⁴). Bij zonsondergang reist licht langer door atmosfeer → blauw weggestrooid → rood blijft over.\n\n**Absorberen + reflecteren**:\n• Een rode appel **reflecteert** rood + absorbeert andere kleuren.\n• Witte stof reflecteert alles, zwarte absorbeert alles.\n• Onder rood licht ziet groen blad **zwart** (geen groen om te reflecteren).\n\n**Spectraal-analyse**:\n• Prisma of tralie splitst licht in spectrum.\n• Elke stof heeft uniek emissie- of absorptiespectrum (vingerafdruk).\n• Astronomie: spectrum van ster vertelt over samenstelling + temperatuur.\n\n**Doppler-roodverschuiving**:\n• Sterrenstelsels die van ons af bewegen → spectrum verschoven naar rood (langer λ).\n• Hubble (1929) ontdekte: hoe verder, hoe sneller weg → uitbreiding heelal.",
     checks: [
       {
         q: "De **3 primaire kleuren** voor RGB-schermen zijn:",
@@ -245,7 +245,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — geel is geen primaire voor licht (wel voor verf).", "Niet — dat is verf, subtractief.", "Wit is geen kleur."],
         uitlegPad: {
-          stappen: [{ titel: "Additieve menging", tekst: "Licht: alle 3 RGB op vol → wit. Beeldschermen hebben miljoenen R-, G- en B-LEDjes. Door verschillende intensiteiten → miljoenen kleuren." }],
+          stappen: [{ titel: "Additieve menging", tekst: "Licht: alle 3 RGB op vol → wit. Beeldschermen hebben miljoenen R-, G- en B-subpixels. Door verschillende intensiteiten → miljoenen kleuren." }],
           theorie: "Verf werkt omgekeerd (subtractief): CMY mengen → zwart, want elke verf absorbeert deel van het spectrum.",
           niveaus: { basis: "R + G + B.", simpeler: "Rood, groen, blauw voor schermen.", nogSimpeler: "RGB" },
         },
@@ -254,11 +254,11 @@ const steps = [
         q: "Een **blad** is groen. Onder pure **rode** lamp lijkt het:",
         options: ["Zwart", "Groen", "Rood", "Geel"],
         answer: 0,
-        wrongHints: [null, "Niet — onder rood licht geen groen om te reflecteren.", "Niet — alleen onmogelijk om groen te zien zonder groen licht.", "Niet — mengkleur ontstaat niet zo."],
+        wrongHints: [null, "Niet — onder rood licht geen groen om te reflecteren.", "Niet — het blad absorbeert rood licht en kaatst dus geen rood terug.", "Niet — mengkleur ontstaat niet zo."],
         uitlegPad: {
           stappen: [{ titel: "Geen groen → niets terug", tekst: "Blad reflecteert alleen groen, absorbeert rest. Bij rode lamp: er IS geen groen licht aanwezig → blad heeft niets om te reflecteren → ziet er zwart uit." }],
           theorie: "Daarom gebruiken theaters gekleurde lampen om kleuren te 'doven': een groen kostuum verdwijnt onder magenta licht.",
-          niveaus: { basis: "Geen groen licht = zwart blad.", simpeler: "Blad heeft geen rood te reflecteren → zwart.", nogSimpeler: "Zwart" },
+          niveaus: { basis: "Geen groen licht = zwart blad.", simpeler: "Blad reflecteert geen rood → zwart.", nogSimpeler: "Zwart" },
         },
       },
       {
@@ -335,11 +335,11 @@ const steps = [
           stappen: [
             { titel: "d·sin(θ)=n·λ → θ klein", tekst: "n=1: sin(θ) = λ/d = 600·10⁻⁹ / 10⁻⁴ = 6·10⁻³ → θ ≈ 0,344°. Bij kleine hoeken: sin(θ)≈θ in radialen ≈ 0,006 rad." },
           ],
-          niveaus: { basis: "θ ≈ 0,34°.", simpeler: "Berg uit Snellius-Young: λ/d → klein hoek.", nogSimpeler: "0,34°" },
+          niveaus: { basis: "θ ≈ 0,34°.", simpeler: "Bereken sin(θ) = λ/d → kleine hoek.", nogSimpeler: "0,34°" },
         },
       },
       {
-        q: "Wat onthul **spectraal-analyse** van een ster?",
+        q: "Wat onthult **spectraal-analyse** van een ster?",
         options: [
           "Chemische samenstelling + temperatuur + snelheid",
           "Alleen kleur",
@@ -350,7 +350,7 @@ const steps = [
         wrongHints: [null, "Veel meer dan kleur.", "Onvolledig.", "Niet — sterren-licht draagt informatie mee."],
         uitlegPad: {
           stappen: [
-            { titel: "Absorptie-lijnen", tekst: "Donkere lijnen in spectrum = wat de ster-atmosfeer absorbeert. Elke chemische stof heeft unieke absorptie → vingerafdruk. Verbreding lijnen → temperatuur. Doppler-verschuiving lijnen → snelheid (rood/blauwverschuiving)." },
+            { titel: "Absorptie-lijnen", tekst: "Donkere lijnen in spectrum = wat de ster-atmosfeer absorbeert. Elke chemische stof heeft unieke absorptie → vingerafdruk. Kleurverdeling van het spectrum (wet van Wien) → temperatuur. Doppler-verschuiving lijnen → snelheid (rood/blauwverschuiving)." },
           ],
           theorie: "Helium werd in zon-spectrum ontdekt VÓÓR aarde-laboratorium (Janssen 1868). Naam van Grieks 'helios' (zon).",
           niveaus: { basis: "Samenstelling + T + v uit spectrum.", simpeler: "Spectraal-vingerafdrukken vertellen veel.", nogSimpeler: "Veel info" },
@@ -382,10 +382,10 @@ const steps = [
           "Spiegels schitteren mooier"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — kostenargument is bijzaak.", "Onzin — lenzen versterken niet verbreken.", "Niet — schitteren is bijwerking."],
+        wrongHints: [null, "Niet — kostenargument is bijzaak.", "Niet — lenzen breken licht, ze 'verbreken' het niet.", "Niet — schitteren is bijwerking."],
         uitlegPad: {
           stappen: [
-            { titel: "Geen kleur-fout", tekst: "Lenzen hebben **chromatische aberratie**: verschillende kleuren breken anders → onscherp beeld met kleur-rand. Spiegels reflecteren alle kleuren gelijk → geen kleur-fout. Plus: grote lenzen vervormen onder eigen gewicht (Yerkes 1.02 m is grens). Spiegels kunnen veel groter (10+ m, ESO VLT)." },
+            { titel: "Geen kleur-fout", tekst: "Lenzen hebben **chromatische aberratie**: verschillende kleuren breken anders → onscherp beeld met kleur-rand. Spiegels reflecteren alle kleuren gelijk → geen kleur-fout. Plus: grote lenzen vervormen onder eigen gewicht (Yerkes 1,02 m is grens). Spiegels kunnen veel groter (10+ m, ESO VLT)." },
           ],
           niveaus: { basis: "Geen dispersie + groter mogelijk.", simpeler: "Spiegels hebben geen kleurfout en kunnen reuze worden.", nogSimpeler: "Spiegels" },
         },

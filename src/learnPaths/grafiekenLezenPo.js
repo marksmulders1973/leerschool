@@ -212,7 +212,7 @@ const steps = [
           stappen: [
             { titel: "Cirkeldiagram = de hele taart", tekst: "Een **cirkeldiagram** (ook **taartdiagram** of **pie chart**) is een cirkel verdeeld in stukken. De hele cirkel = **100%** = het geheel. Elk stuk is een **percentage** daarvan." },
             { titel: "Waarom cirkel beter voor 'deel van totaal'?", tekst: "Met cirkel zie je **meteen visueel**: groot stuk = veel, klein stuk = weinig. Bij een staafdiagram zie je wel hoogte, maar moet je optellen om te weten of het 'veel van het geheel' is.\n\nVoorbeeld: 'welke sport is populairst in klas?' → cirkel toont direct het grootste stuk. Staaf moet je vergelijken." },
-            { titel: "Wanneer GEEN cirkel?", tekst: "Cirkel werkt NIET goed voor:\n• **Verandering over tijd** → gebruik lijn\n• **Veel categorieën (10+)** → wordt te druk → gebruik staaf\n• **Exact getal lezen** → tabel beter\nCirkel is sweet spot voor 3-7 categorieën die samen 100% vormen." },
+            { titel: "Wanneer GEEN cirkel?", tekst: "Cirkel werkt NIET goed voor:\n• **Verandering over tijd** → gebruik lijn\n• **Veel categorieën (10+)** → wordt te druk → gebruik staaf\n• **Exact getal lezen** → tabel beter\nCirkel werkt het best voor 3-7 categorieën die samen 100% vormen." },
           ],
           woorden: [
             { woord: "cirkeldiagram", uitleg: "Cirkel verdeeld in % van een geheel." },
@@ -276,7 +276,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Tel de balken zorgvuldig. Als de vraag 'maart' zegt, tel niet de balk van februari per ongeluk mee." }],
           niveaus: {
             basis: "Maart-balk = 40 mm.",
-            simpeler: "Zoek 'mrt' onderaan. Kijk hoog die balk komt → 40 mm.",
+            simpeler: "Zoek 'mrt' onderaan. Kijk hoe hoog die balk komt → 40 mm.",
             nogSimpeler: "Maart = 40 mm",
           },
         },
@@ -285,7 +285,7 @@ const steps = [
         q: "Klas: ma 22, di 18, wo 26, do 30, vr 24 kinderen. **Hoeveel kinderen meer** op **donderdag** dan op **dinsdag**?",
         options: ["12 kinderen", "6 kinderen", "8 kinderen", "48 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is do − wo. Pak do − di.", "Te weinig — dat is do − ma. Pak do − di.", "Te veel — heb je opgeteld? De vraag is 'hoeveel meer' = aftrekken."],
+        wrongHints: [null, "Te weinig — dat is do − vr. Pak do − di.", "Te weinig — dat is do − ma. Pak do − di.", "Te veel — heb je opgeteld? De vraag is 'hoeveel meer' = aftrekken."],
         uitlegPad: {
           stappen: [
             { titel: "Verschil = aftrekken", tekst: "Donderdag 30 kinderen − dinsdag 18 kinderen = 12 kinderen meer." },
@@ -461,7 +461,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "X-as horizontaal, Y-as verticaal", tekst: "Elke grafiek heeft 2 assen:\n• **X-as** = horizontaal (onderaan) → vaak **tijd** of **categorieën** (dagen, maanden, namen)\n• **Y-as** = verticaal (zijkant) → altijd de **waarde** of **hoeveelheid**" },
-            { titel: "Y-as = wat je meet", tekst: "De y-as vertelt **HOEVEEL**. Bij regen-grafiek: mm. Bij temperatuur: °C. Bij kinderen: aantal. Bij geld: €.\n\nKijk altijd naar de **eenheid op de y-as** voordat je een getal aflezen." },
+            { titel: "Y-as = wat je meet", tekst: "De y-as vertelt **HOEVEEL**. Bij regen-grafiek: mm. Bij temperatuur: °C. Bij kinderen: aantal. Bij geld: €.\n\nKijk altijd naar de **eenheid op de y-as** voordat je een getal afleest." },
             { titel: "Aflezen — recht naar boven", tekst: "Om een waarde af te lezen:\n1. Vind het punt of de balk op de **x-as** (bv. maandag).\n2. Ga **recht omhoog** tot de top.\n3. Lees vanuit dat punt **links** op de y-as af.\n4. Schrijf op + eenheid." },
           ],
           woorden: [
@@ -524,7 +524,7 @@ const steps = [
           niveaus: {
             basis: "Voetbal heeft 50% = grootste stuk",
             simpeler: "Welk percentage is het hoogst? 50% → dat hoort bij voetbal. Antwoord = naam: voetbal.",
-            nogSimpeler: "Voetbal = A. Hoogste % wint.",
+            nogSimpeler: "Voetbal. Hoogste % wint.",
           },
         },
       },
@@ -586,7 +586,7 @@ const steps = [
           stappen: [
             { titel: "Een taart is een geheel = 100%", tekst: "Bij een cirkeldiagram is de **hele cirkel** = het **totale aantal** = **100%**. Alle stukken samen vormen die hele cirkel — dus alle % samen = 100%." },
             { titel: "Voorbeeld: sport-keuze klas", tekst: "Voetbal 50% + Hockey 25% + Zwemmen 15% + Anders 10% = **100%** ✓\nDe stukken sluiten precies aan tot de hele cirkel. Geen overlap, geen gaten." },
-            { titel: "Toets-truc: ontbrekend stuk berekenen", tekst: "Soms vraagt voor de toets: 'Drie stukken zijn 40%, 30%, en 20%. Hoeveel is het vierde?'\nReken: 100% − (40+30+20) = 100 − 90 = **10%**.\nOmdat alle stukken samen 100% MOETEN zijn, kun je het ontbrekende stuk altijd berekenen." },
+            { titel: "Toets-truc: ontbrekend stuk berekenen", tekst: "Soms vraagt de toets: 'Drie stukken zijn 40%, 30%, en 20%. Hoeveel is het vierde?'\nReken: 100% − (40+30+20) = 100 − 90 = **10%**.\nOmdat alle stukken samen 100% MOETEN zijn, kun je het ontbrekende stuk altijd berekenen." },
           ],
           woorden: [
             { woord: "100%", uitleg: "Het hele geheel. Alles wat er is." },
@@ -703,7 +703,7 @@ const steps = [
         q: "Staafdiagram regen-mm: jan 60, feb 80, mrt 40, apr 50. **Totaal regen-mm** in deze 4 maanden?",
         options: ["230 mm", "180 mm", "210 mm", "190 mm"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer 60+80+40+50.", "Te weinig — controleer optelling.", "Te weinig — kom je 20 tekort?"],
+        wrongHints: [null, "Te weinig — controleer 60+80+40+50.", "Te weinig — kom je 20 tekort?", "Te weinig — controleer optelling."],
         uitlegPad: {
           stappen: [
             { titel: "'Totaal' = alle balken bij elkaar optellen", tekst: "Het woord **'totaal'** is een **signaalwoord voor +** (optellen). Bij staafdiagram: **alle balken bij elkaar** = totaal." },
@@ -772,13 +772,13 @@ const steps = [
             { woord: "50%", uitleg: "De helft. Truc: deel door 2." },
             { woord: "totaal", uitleg: "Hele groep = 100%." },
           ],
-          theorie: "Percentage TOEPASSEN op een geheel:\n1. Identificeer het **totaal** (hier: 40 kinderen = 100%).\n2. Identificeer het **gevraagde %** (hier: blauw 50%).\n3. Bereken: % × totaal / 100, OF gebruik snelheid-truc:\n   - 50% → ÷ 2\n   - 25% → ÷ 4\n   - 10% → ÷ 10\n\nLet op: vraag is naar **aantal kinderen**, niet naar % zelf!",
+          theorie: "Percentage TOEPASSEN op een geheel:\n1. Identificeer het **totaal** (hier: 40 kinderen = 100%).\n2. Identificeer het **gevraagde %** (hier: blauw 50%).\n3. Bereken: % × totaal / 100, OF gebruik een snelle truc:\n   - 50% → ÷ 2\n   - 25% → ÷ 4\n   - 10% → ÷ 10\n\nLet op: vraag is naar **aantal kinderen**, niet naar % zelf!",
           voorbeelden: [
             { type: "stap", tekst: "60 kinderen, 25% jongens → 60÷4 = 15 jongens." },
             { type: "stap", tekst: "200 zakjes, 10% gratis → 200÷10 = 20 gratis." },
             { type: "stap", tekst: "80 leerlingen, 50% meisjes → 80÷2 = 40 meisjes." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "50% = helft = ÷ 2. 25% = kwart = ÷ 4. Onthoud deze 2, dan kun je veel toetsvragen snel." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "50% = helft = ÷ 2. 25% = kwart = ÷ 4. Onthoud deze 2, dan kun je veel toetsvragen snel oplossen." }],
           niveaus: {
             basis: "50% van 40 = 40÷2 = 20 kinderen.",
             simpeler: "50% = de helft. Helft van 40 kinderen = 20.",
@@ -793,9 +793,9 @@ const steps = [
         wrongHints: [null, "Hond is 12 — niet de minste.", "Kat is 18 — dat is juist de MEESTE.", "Vis is 6 — er is nog een dier dat minder voorkomt."],
         uitlegPad: {
           stappen: [
-            { titel: "'Minst' = laagste balk", tekst: "**'Komt het minst voor'** = het dier met het **kleinste aantal** = de **laagste balk** in de staaf-diagram." },
+            { titel: "'Minst' = laagste balk", tekst: "**'Komt het minst voor'** = het dier met het **kleinste aantal** = de **laagste balk** in het staafdiagram." },
             { titel: "Vergelijk alle 4 huisdieren", tekst: "• Hond = 12\n• Kat = 18\n• **Vogel = 4** ← laagste!\n• Vis = 6\n\nGesorteerd van laag naar hoog: vogel (4) < vis (6) < hond (12) < kat (18).\n→ Vogel is met **4** het minst." },
-            { titel: "Toets-instinker: vergelijk ALLE opties", tekst: "Veel kinderen kiezen het EERSTE lage getal dat ze zien. Maar je moet **ALLE 4** vergelijken — anders mis je iets lagers.\nVoorbeeld: je ziet vis (6) en denkt 'dat lijkt laag, kies vis'. Maar vogel is **nog lager** (4). Pas op dat je niet stopt bij het eerste 'best lijkende' antwoord.\n→ **Truc**: schrijf alle 4 getallen op in volgorde, dan pak de laagste." },
+            { titel: "Toets-instinker: vergelijk ALLE opties", tekst: "Veel kinderen kiezen het EERSTE lage getal dat ze zien. Maar je moet **ALLE 4** vergelijken — anders mis je iets lagers.\nVoorbeeld: je ziet vis (6) en denkt 'dat lijkt laag, kies vis'. Maar vogel is **nog lager** (4). Pas op dat je niet stopt bij het eerste 'best lijkende' antwoord.\n→ **Truc**: schrijf alle 4 getallen op in volgorde en pak dan de laagste." },
           ],
           woorden: [
             { woord: "minst", uitleg: "Het kleinste aantal." },

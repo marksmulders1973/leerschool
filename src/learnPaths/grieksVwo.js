@@ -26,7 +26,7 @@ const steps = [
   {
     title: "Grieks alfabet + uitspraak",
     explanation:
-      "**Oud-Grieks** = taal van Plato, Aristoteles, Homerus, Sofokles, en het Nieuwe Testament (Koinè-Grieks).\n\nGymnasium-Grieks = klassiek Grieks (~5e-4e eeuw v.Chr., Athene-dialect).\n\n**Belang**:\n• Basis westerse filosofie, wetenschap, literatuur, theater.\n• 25% Engelse wetenschappelijke woorden uit Grieks (filo-sofie = liefhebber wijsheid, demo-cratie = volks-macht, biologie = leer van het leven).\n• Modern Grieks afstammeling — Atheners begrijpen klassieke teksten met inspanning.\n• Nieuwe Testament + vroege kerkvaders.\n\n**Alfabet** — 24 letters:\n```\nLetter   Naam      Klank/letter\nΑ α     Alfa      a\nΒ β     Bèta      b\nΓ γ     Gamma     g\nΔ δ     Delta     d\nΕ ε     Epsilon   e (kort)\nΖ ζ     Zèta      z\nΗ η     Èta       e (lang)\nΘ θ     Thèta     th (zoals Engels 'think')\nΙ ι     Iota      i\nΚ κ     Kappa     k\nΛ λ     Lambda    l\nΜ μ     Mu        m\nΝ ν     Nu        n\nΞ ξ     Xi        ks\nΟ ο     Omicron   o (kort)\nΠ π     Pi        p\nΡ ρ     Rho       r\nΣ σ ς   Sigma     s (σ in woord, ς aan eind)\nΤ τ     Tau       t\nΥ υ     Upsilon   u/y\nΦ φ     Phi       f\nΧ χ     Chi       ch (zoals Duits 'ach')\nΨ ψ     Psi       ps\nΩ ω     Omega     o (lang)\n```\n\n**Klemtoon + accenten**:\n• 3 accenten (in moderne edities): acuut (´), gravis (`), circumflex (~).\n• Acuut: stijgende toon (vroeger), nu klemtoon.\n• Circumflex: lange klinker met klemtoon.\n• Gravis: vervangt acuut aan eind woord (voor andere woord).\n\n**Spiritus** (op klinker aan begin woord):\n• **Spiritus asper** (῾): met h-klank — *ἥλιος* = hèlios = zon → 'hèlios'.\n• **Spiritus lenis** (᾽): zonder h — *ἀγαθός* = agathos = goed.\n• Op rho (ρ) altijd asper aan begin woord.\n\n**Uitspraak Erasmus (gymnasium-standaard)**:\n• Klassiek dialect-uitspraak ~5e eeuw v.Chr. Atheen.\n• Beta = b, gamma = g (hard), delta = d, eta = lange è, theta = th, chi = ch.\n• Diftongen: αι = ai, ει = ei, οι = oi, ου = oe.\n\n**Modern Grieks** (anders!):\n• β = v.\n• η = i.\n• υ = i.\n• Veel klinkers samen vallen tot 'i'.\n• Voor gymnasium wordt **Erasmus** geleerd.\n\n**Modern bekende Griekse woorden**:\n• **Demos** (δῆμος) = volk → democratie.\n• **Logos** (λόγος) = woord, rede → logica, theologie, biologie.\n• **Kosmos** (κόσμος) = orde, wereld → kosmos.\n• **Psyche** (ψυχή) = ziel → psychologie.\n• **Polis** (πόλις) = stad → politiek, metropolis.\n• **Anthropos** (ἄνθρωπος) = mens → antropologie.\n• **Bios** (βίος) = leven → biologie.\n• **Geo** (γῆ) = aarde → geografie, geologie.\n• **Hydro** (ὕδωρ) = water → hydrologie.\n• **Sophia** (σοφία) = wijsheid → philosofie.\n• **Phobos** (φόβος) = vrees → claustrofobie.\n\n**Schrijven**:\n• Klassiek alleen **hoofdletters** + geen spaties (scriptio continua).\n• Kleine letters + interpunctie + accenten = middeleeuwse Byzantijnse uitvinding.\n• Modern Grieks gebruikt nog steeds zelfde alfabet, maar met diakritische vereenvoudigingen (sinds 1982).",
+      "**Oud-Grieks** = taal van Plato, Aristoteles, Homerus, Sofokles, en het Nieuwe Testament (Koinè-Grieks).\n\nGymnasium-Grieks = klassiek Grieks (~5e-4e eeuw v.Chr., Athene-dialect).\n\n**Belang**:\n• Basis westerse filosofie, wetenschap, literatuur, theater.\n• 25% Engelse wetenschappelijke woorden uit Grieks (filo-sofie = liefde voor wijsheid, demo-cratie = volks-macht, biologie = leer van het leven).\n• Modern Grieks afstammeling — Atheners begrijpen klassieke teksten met inspanning.\n• Nieuwe Testament + vroege kerkvaders.\n\n**Alfabet** — 24 letters:\n```\nLetter   Naam      Klank/letter\nΑ α     Alfa      a\nΒ β     Bèta      b\nΓ γ     Gamma     g\nΔ δ     Delta     d\nΕ ε     Epsilon   e (kort)\nΖ ζ     Zèta      z\nΗ η     Èta       e (lang)\nΘ θ     Thèta     th (zoals Engels 'think')\nΙ ι     Iota      i\nΚ κ     Kappa     k\nΛ λ     Lambda    l\nΜ μ     Mu        m\nΝ ν     Nu        n\nΞ ξ     Xi        ks\nΟ ο     Omicron   o (kort)\nΠ π     Pi        p\nΡ ρ     Rho       r\nΣ σ ς   Sigma     s (σ in woord, ς aan eind)\nΤ τ     Tau       t\nΥ υ     Upsilon   u/y\nΦ φ     Phi       f\nΧ χ     Chi       ch (zoals Duits 'ach')\nΨ ψ     Psi       ps\nΩ ω     Omega     o (lang)\n```\n\n**Klemtoon + accenten**:\n• 3 accenten (in moderne edities): acuut (´), gravis (`), circumflex (~).\n• Acuut: stijgende toon (vroeger), nu klemtoon.\n• Circumflex: lange klinker met klemtoon.\n• Gravis: vervangt acuut aan eind woord (voor een ander woord).\n\n**Spiritus** (op klinker aan begin woord):\n• **Spiritus asper** (῾): met h-klank — *ἥλιος* = hèlios = zon → 'hèlios'.\n• **Spiritus lenis** (᾽): zonder h — *ἀγαθός* = agathos = goed.\n• Op rho (ρ) altijd asper aan begin woord.\n\n**Uitspraak Erasmus (gymnasium-standaard)**:\n• Klassiek dialect-uitspraak ~5e eeuw v.Chr. Athene.\n• Beta = b, gamma = g (hard), delta = d, eta = lange è, theta = th, chi = ch.\n• Diftongen: αι = ai, ει = ei, οι = oi, ου = oe.\n\n**Modern Grieks** (anders!):\n• β = v.\n• η = i.\n• υ = i.\n• Veel klinkers samen vallen tot 'i'.\n• Voor gymnasium wordt **Erasmus** geleerd.\n\n**Modern bekende Griekse woorden**:\n• **Demos** (δῆμος) = volk → democratie.\n• **Logos** (λόγος) = woord, rede → logica, theologie, biologie.\n• **Kosmos** (κόσμος) = orde, wereld → kosmos.\n• **Psyche** (ψυχή) = ziel → psychologie.\n• **Polis** (πόλις) = stad → politiek, metropolis.\n• **Anthropos** (ἄνθρωπος) = mens → antropologie.\n• **Bios** (βίος) = leven → biologie.\n• **Geo** (γῆ) = aarde → geografie, geologie.\n• **Hydro** (ὕδωρ) = water → hydrologie.\n• **Sophia** (σοφία) = wijsheid → filosofie.\n• **Phobos** (φόβος) = vrees → claustrofobie.\n\n**Schrijven**:\n• Klassiek alleen **hoofdletters** + geen spaties (scriptio continua).\n• Kleine letters + interpunctie + accenten = middeleeuwse Byzantijnse uitvinding.\n• Modern Grieks gebruikt nog steeds zelfde alfabet, maar met diakritische vereenvoudigingen (sinds 1982).",
     checks: [
       {
         q: "Hoeveel letters heeft **Grieks alfabet**?",
@@ -34,7 +34,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — modern Engels.", "Niet — te veel.", "Niet — te weinig."],
         uitlegPad: {
-          stappen: [{ titel: "Α t/m Ω", tekst: "**Grieks alfabet: 24 letters** van **Alfa (Α)** tot **Omega (Ω)**. Engelse 'from alpha to omega' = van begin tot eind. Tussen-letters waar Engels niet heeft: theta (θ), xi (ξ), psi (ψ), phi (φ), chi (χ), omega (ω). Wetenschap leent veel: π (pi), δ (delta), Σ (sigma) etc." }],
+          stappen: [{ titel: "Α t/m Ω", tekst: "**Grieks alfabet: 24 letters** van **Alfa (Α)** tot **Omega (Ω)**. Engelse 'from alpha to omega' = van begin tot eind. Letters die het Engels niet heeft: theta (θ), xi (ξ), psi (ψ), phi (φ), chi (χ), omega (ω). Wetenschap leent veel: π (pi), δ (delta), Σ (sigma) etc." }],
           niveaus: { basis: "24.", simpeler: "Grieks = 24 letters", nogSimpeler: "24" },
         },
       },
@@ -45,7 +45,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is omicron.", "Niet — theta.", "Wel klein ook, hoofdletter Ω."],
         uitlegPad: {
           stappen: [{ titel: "Lange vs korte o", tekst: "**Omega Ω/ω** = lange o (oh). **Omicron Ο/ο** = korte o. Grieks onderscheidt klinker-lengtes — belangrijk voor klemtoon + metrum poëzie. Vergelijkbaar: Eta (Η/η) = lange e vs Epsilon (Ε/ε) = korte e." }],
-          niveaus: { basis: "Ω.", simpeler: "Omega = Ω lange o", nogSimpeler: "A." },
+          niveaus: { basis: "Ω.", simpeler: "Omega = Ω lange o", nogSimpeler: "Ω" },
         },
       },
       {
@@ -55,7 +55,7 @@ const steps = [
         wrongHints: [null, "Niet — sophia.", "Niet — nomos.", "Niet — strategos."],
         uitlegPad: {
           stappen: [{ titel: "Δῆμος = volk", tekst: "**Demos** (δῆμος) = volk. **Demo-cratie** = letterlijk 'macht van het volk'. Athene 5e eeuw v.Chr. = eerste democratie (alle vrije mannelijke burgers konden meebeslissen, niet vrouwen of slaven). Verwant: epidemie ('over het volk'), demografie ('schrijven over volk')." }],
-          niveaus: { basis: "Volk.", simpeler: "Demos = volk", nogSimpeler: "A." },
+          niveaus: { basis: "Volk.", simpeler: "Demos = volk", nogSimpeler: "Volk" },
         },
       },
       {
@@ -65,7 +65,7 @@ const steps = [
         wrongHints: [null, "Spiritus lenis.", "Niet — andere markering.", "Niet — accenten apart."],
         uitlegPad: {
           stappen: [{ titel: "῾ = ruwe ademing", tekst: "**Spiritus asper** (῾, 'ruwe ademing'): geeft h-klank vooraf. *ἑπτά* = hepta = zeven. *ἥλιος* = hèlios = zon. **Spiritus lenis** (᾽, 'gladde ademing'): geen h. *ἀγαθός* = agathos = goed. **Rho** (ρ) krijgt altijd asper aan begin." }],
-          niveaus: { basis: "H-klank.", simpeler: "Asper = h", nogSimpeler: "A." },
+          niveaus: { basis: "H-klank.", simpeler: "Asper = h", nogSimpeler: "H-klank" },
         },
       },
       {
@@ -85,7 +85,7 @@ const steps = [
   {
     title: "Naamvallen + declinaties Grieks",
     explanation:
-      "**Grieks heeft 5 naamvallen** (vs Latijn 6, Duits 4):\n\n**1. Nominatief**: onderwerp.\n**2. Genitief**: bezit, vergelijking, herkomst.\n**3. Datief**: meewerkend voorwerp, instrumentaal, locaal.\n**4. Accusatief**: lijdend voorwerp, richting.\n**5. Vocatief**: aanspreken.\n\n**Geen ablatief** — datief overneemt veel functies.\n\n**Geen 'h'-spiritus voor naamvallen** — dat is fonetisch.\n\n**3 declinaties** (zoals Latijn):\n\n**1e declinatie** (vooral vrouwelijk -a/-è):\n```\nNom: χώρα (chōra, land)\nGen: χώρας\nDat: χώρᾳ\nAcc: χώραν\nVoc: χώρα\n```\nMeervoud: χῶραι, χωρῶν, χώραις, χώρας, χῶραι.\n\n**2e declinatie** (mannelijk -ος, onzijdig -ον):\n```\nNom: λόγος (logos, woord) — δῶρον (doron, geschenk)\nGen: λόγου — δώρου\nDat: λόγῳ — δώρῳ\nAcc: λόγον — δῶρον\nVoc: λόγε — δῶρον\n```\n\n**3e declinatie** (divers, vele stamtypen).\n\n**Lidwoord** (anders dan Latijn — Grieks HEEFT lidwoorden!):\n```\nNom: ὁ (m) ἡ (v) τό (n)\nGen: τοῦ τῆς τοῦ\nDat: τῷ τῇ τῷ\nAcc: τόν τήν τό\nMv Nom: οἱ αἱ τά\n```\n\nLidwoord stemt overeen met geslacht + getal + naamval.\nVoorbeeld: ὁ λόγος (het woord, m, nom enkelvoud).\n\n**3 geslachten**: mannelijk, vrouwelijk, onzijdig.\n\n**Bijvoeglijke naamwoorden** stemmen overeen.\n\n**Drievoudige aantal-systeem** (in oud-Grieks, vergeten in modern):\n• Enkelvoud.\n• Tweevoud (paar — ogen, broers, etc.) — vooral Homerisch.\n• Meervoud.\n\nIn klassiek Atheen-Grieks (5e v.Chr.) is dualis al uitstervend.\n\n**Vrije woordvolgorde** (zoals Latijn) door naamvallen.\nGewone volgorde: subject-werkwoord-object, maar variabel voor emfase.\n\n**Voorzetsels met naamvallen**:\nIn Grieks bepalen voorzetsels welke naamval:\n• **ἐν** + datief = in (rust).\n• **εἰς** + accusatief = naar (richting).\n• **πρός** + acc = naar / bij.\n• **ὑπό** + gen = door (passief-agent: 'door iemand').\n• **διά** + gen = doorheen / via.\n• **διά** + acc = vanwege.\n• **παρά** + gen = van.\n\nElk voorzetsel kan meerdere naamvallen 'sturen' met verschillende betekenissen.",
+      "**Grieks heeft 5 naamvallen** (vs Latijn 6, Duits 4):\n\n**1. Nominatief**: onderwerp.\n**2. Genitief**: bezit, vergelijking, herkomst.\n**3. Datief**: meewerkend voorwerp, instrumentaal, locaal.\n**4. Accusatief**: lijdend voorwerp, richting.\n**5. Vocatief**: aanspreken.\n\n**Geen ablatief** — de datief neemt veel functies over.\n\n**Geen 'h'-spiritus voor naamvallen** — dat is fonetisch.\n\n**3 declinaties** (zoals Latijn):\n\n**1e declinatie** (vooral vrouwelijk -a/-è):\n```\nNom: χώρα (chōra, land)\nGen: χώρας\nDat: χώρᾳ\nAcc: χώραν\nVoc: χώρα\n```\nMeervoud: χῶραι, χωρῶν, χώραις, χώρας, χῶραι.\n\n**2e declinatie** (mannelijk -ος, onzijdig -ον):\n```\nNom: λόγος (logos, woord) — δῶρον (doron, geschenk)\nGen: λόγου — δώρου\nDat: λόγῳ — δώρῳ\nAcc: λόγον — δῶρον\nVoc: λόγε — δῶρον\n```\n\n**3e declinatie** (divers, vele stamtypen).\n\n**Lidwoord** (anders dan Latijn — Grieks HEEFT lidwoorden!):\n```\nNom: ὁ (m) ἡ (v) τό (n)\nGen: τοῦ τῆς τοῦ\nDat: τῷ τῇ τῷ\nAcc: τόν τήν τό\nMv Nom: οἱ αἱ τά\n```\n\nLidwoord stemt overeen met geslacht + getal + naamval.\nVoorbeeld: ὁ λόγος (het woord, m, nom enkelvoud).\n\n**3 geslachten**: mannelijk, vrouwelijk, onzijdig.\n\n**Bijvoeglijke naamwoorden** stemmen overeen.\n\n**Drievoudige aantal-systeem** (in oud-Grieks, vergeten in modern):\n• Enkelvoud.\n• Tweevoud (paar — ogen, broers, etc.) — vooral Homerisch.\n• Meervoud.\n\nIn klassiek Atheens Grieks (5e v.Chr.) is dualis al uitstervend.\n\n**Vrije woordvolgorde** (zoals Latijn) door naamvallen.\nGewone volgorde: subject-werkwoord-object, maar variabel voor emfase.\n\n**Voorzetsels met naamvallen**:\nIn Grieks bepalen voorzetsels welke naamval:\n• **ἐν** + datief = in (rust).\n• **εἰς** + accusatief = naar (richting).\n• **πρός** + acc = naar / bij.\n• **ὑπό** + gen = door (passief-agent: 'door iemand').\n• **διά** + gen = doorheen / via.\n• **διά** + acc = vanwege.\n• **παρά** + gen = van.\n\nElk voorzetsel kan meerdere naamvallen 'sturen' met verschillende betekenissen.",
     checks: [
       {
         q: "Hoeveel **naamvallen** heeft Grieks?",
@@ -103,15 +103,15 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — wel.", "Niet — onbepaald LIDWOORD ontbreekt eigenlijk.", "Niet — alle geslachten."],
         uitlegPad: {
-          stappen: [{ titel: "ὁ ἡ τό", tekst: "**Grieks heeft lidwoorden** (anders dan Latijn): **ὁ (m), ἡ (v), τό (n)** voor 'de/het'. Buigen verbuigen in alle naamvallen.\n\n**Geen onbepaald lidwoord** ('een') in klassiek Grieks — context bepaalt." }],
-          niveaus: { basis: "Ja.", simpeler: "Grieks = lidwoord", nogSimpeler: "A." },
+          stappen: [{ titel: "ὁ ἡ τό", tekst: "**Grieks heeft lidwoorden** (anders dan Latijn): **ὁ (m), ἡ (v), τό (n)** voor 'de/het'. Ze worden verbogen in alle naamvallen.\n\n**Geen onbepaald lidwoord** ('een') in klassiek Grieks — context bepaalt." }],
+          niveaus: { basis: "Ja.", simpeler: "Grieks = lidwoord", nogSimpeler: "Ja" },
         },
       },
       {
         q: "**Logos** (λόγος) hoort bij welke declinatie?",
         options: ["2e (mannelijk -ος)","1e (vrouwelijk -α)","3e (divers)","Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — eindigt op os.", "Niet — pattern duidelijk.", "Wel."],
+        wrongHints: [null, "Niet — eindigt op os.", "Niet — patroon duidelijk.", "Wel."],
         uitlegPad: {
           stappen: [{ titel: "2e decl -ος", tekst: "**Logos** (λόγος) = mannelijk, eindigt op **-ος** = **2e declinatie**. Gen: λόγου, Dat: λόγῳ, Acc: λόγον, Voc: λόγε.\n\nOnzijdig 2e decl eindigt op -ον: δῶρον (doron, geschenk)." }],
           niveaus: { basis: "2e.", simpeler: "-ος = 2e decl", nogSimpeler: "2e" },
@@ -123,8 +123,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Met datief = in.", "Met gen = uit.", "Met gen = van."],
         uitlegPad: {
-          stappen: [{ titel: "Richting = εἰς + acc", tekst: "**εἰς + Acc** = 'naar' (richting beweging). *εἰς τὴν πόλιν* = naar de stad. Tegenstelling: **ἐν + Dat** = 'in' (rust). *ἐν τῇ πόλει* = in de stad.\n\nGriekse voorzetsels veranderen betekenis afhankelijk naamval." }],
-          niveaus: { basis: "εἰς.", simpeler: "Richting = εἰς+acc", nogSimpeler: "A." },
+          stappen: [{ titel: "Richting = εἰς + acc", tekst: "**εἰς + Acc** = 'naar' (richting beweging). *εἰς τὴν πόλιν* = naar de stad. Tegenstelling: **ἐν + Dat** = 'in' (rust). *ἐν τῇ πόλει* = in de stad.\n\nGriekse voorzetsels veranderen betekenis afhankelijk van de naamval." }],
+          niveaus: { basis: "εἰς.", simpeler: "Richting = εἰς+acc", nogSimpeler: "εἰς" },
         },
       },
       {
@@ -144,7 +144,7 @@ const steps = [
   {
     title: "Werkwoorden + tijden Grieks",
     explanation:
-      "**Griekse werkwoorden** zijn **complexer dan Latijn** door extra categorieën.\n\n**Categorieën**:\n• **Persoon + getal**: 1e/2e/3e × enkelvoud/(tweevoud)/meervoud.\n• **Tijd**: 7 tijden (praesens, imperfectum, futurum, aoristus, perfectum, plusquamperfectum, futurum exactum).\n• **Wijs**: 4 (indicatief, conjunctief, optatief, imperatief).\n• **Genus**: 3 (actief, mediaal, passief).\n• **Aspect** (cruciaal in Grieks!).\n\n**Aspect** = hoofd-verschil met Latijn/Nederlands:\n\n• **Imperfectief aspect** (presens, imperfectum): handeling als doorlopend / herhalend.\n  - *ἔγραφον* (egraphon) = ik was aan het schrijven.\n  - *γράφω* (graphō) = ik schrijf (nu, doorlopend).\n\n• **Aoristisch aspect** (aoristus): handeling als eenmalig / geheel.\n  - *ἔγραψα* (egrapsa) = ik schreef (één keer, of: ik heb opgeschreven).\n  - Niet specifiek 'verleden' — eerder 'feit als geheel'.\n\n• **Perfectief aspect** (perfectum): voltooide handeling met **doorlopend resultaat**.\n  - *γέγραφα* (gegrapha) = ik heb geschreven (en het staat er nog).\n\n**Tijden enkel-praesens-stam** (imperfectief):\n• Praesens: γράφω = ik schrijf.\n• Imperfectum: ἔγραφον = ik was aan het schrijven / schreef herhaaldelijk.\n\n**Tijden aoristus-stam**:\n• Aoristus: ἔγραψα = ik schreef.\n• Aoristische conjunctief, optatief, imperatief, infinitief, participium.\n\n**Tijden perfect-stam**:\n• Perfectum: γέγραφα = ik heb geschreven (gevolgen blijven).\n• Plusquamperfectum.\n• Futurum perfectum.\n\n**Voorbeeld werkwoord 'liefhebben' (φιλέω) in praesens actief**:\n```\nφιλῶ      (filoo)   = ik heb lief\nφιλεῖς    (fileis)  = jij\nφιλεῖ     (filei)   = hij/zij\nφιλοῦμεν  (filoumen) = wij\nφιλεῖτε   (fileite) = jullie\nφιλοῦσιν  (filousin) = zij\n```\n\n**Augment**: prefix **ἐ-** vóór werkwoord-stam voor verleden tijden.\n• Praesens: λύω (luō) = ik maak los.\n• Imperfectum: ἔλυον (eluon) = ik was los aan het maken.\n• Aoristus: ἔλυσα (elusa) = ik maakte los.\n\n**Reduplicatie**: stam-begin verdubbeld in perfectum.\n• Perfectum: λέλυκα (leluka) = ik heb losgemaakt.\n• γράφω → γέγραφα (perfect-stam met re-).\n\n**Mediale + passieve vormen**:\n• **Medium** = subject doet handeling voor zichzelf. *λύομαι* = ik maak (mezelf) los.\n• **Passief** = subject ondergaat. *λύομαι* = ik word losgemaakt (zelfde vorm! context bepaalt).\n• Aoristus passief heeft eigen vormen.\n\n**Onregelmatige werkwoorden** veel:\n• **εἰμί** (eimi) = zijn: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν).\n• **εἶμι** (let op iota, ander!) = gaan.\n• **φημί** = zeggen.\n• **οἶδα** = weten (perfect-vorm met praesens-betekenis).\n\n**Conjunctief + optatief**:\n• **Conjunctief**: wens, bevel, doel.\n• **Optatief**: nog niet uitgesproken wens, mogelijkheid.\n  - 'Mag God de Koning bewaren' soort uitdrukkingen.\n• Beide veel gebruikt in Plato, Sofokles, etc.\n\n**Tip voor de toets**: aspect-onderscheid is kritiek. Bij vertaling 'ἔλυον' versus 'ἔλυσα':\n• ἔλυον (imperf): herhaald / doorlopend in verleden → 'ik was los aan het maken' / 'ik maakte (steeds) los'.\n• ἔλυσα (aoristus): één keer, voltooid → 'ik maakte los'.",
+      "**Griekse werkwoorden** zijn **complexer dan Latijn** door extra categorieën.\n\n**Categorieën**:\n• **Persoon + getal**: 1e/2e/3e × enkelvoud/(tweevoud)/meervoud.\n• **Tijd**: 7 tijden (praesens, imperfectum, futurum, aoristus, perfectum, plusquamperfectum, futurum exactum).\n• **Wijs**: 4 (indicatief, conjunctief, optatief, imperatief).\n• **Genus**: 3 (actief, mediaal, passief).\n• **Aspect** (cruciaal in Grieks!).\n\n**Aspect** = hoofd-verschil met Latijn/Nederlands:\n\n• **Imperfectief aspect** (presens, imperfectum): handeling als doorlopend / herhalend.\n  - *ἔγραφον* (egraphon) = ik was aan het schrijven.\n  - *γράφω* (graphō) = ik schrijf (nu, doorlopend).\n\n• **Aoristisch aspect** (aoristus): handeling als eenmalig / geheel.\n  - *ἔγραψα* (egrapsa) = ik schreef (één keer, of: ik heb opgeschreven).\n  - Niet specifiek 'verleden' — eerder 'feit als geheel'.\n\n• **Perfectief aspect** (perfectum): voltooide handeling met **doorlopend resultaat**.\n  - *γέγραφα* (gegrapha) = ik heb geschreven (en het staat er nog).\n\n**Tijden enkel-praesens-stam** (imperfectief):\n• Praesens: γράφω = ik schrijf.\n• Imperfectum: ἔγραφον = ik was aan het schrijven / schreef herhaaldelijk.\n\n**Tijden aoristus-stam**:\n• Aoristus: ἔγραψα = ik schreef.\n• Aoristische conjunctief, optatief, imperatief, infinitief, participium.\n\n**Tijden perfect-stam**:\n• Perfectum: γέγραφα = ik heb geschreven (gevolgen blijven).\n• Plusquamperfectum.\n• Futurum perfectum.\n\n**Voorbeeld werkwoord 'liefhebben' (φιλέω) in praesens actief**:\n```\nφιλῶ      (filoo)   = ik heb lief\nφιλεῖς    (fileis)  = jij\nφιλεῖ     (filei)   = hij/zij\nφιλοῦμεν  (filoumen) = wij\nφιλεῖτε   (fileite) = jullie\nφιλοῦσιν  (filousin) = zij\n```\n\n**Augment**: prefix **ἐ-** vóór werkwoord-stam voor verleden tijden.\n• Praesens: λύω (luō) = ik maak los.\n• Imperfectum: ἔλυον (eluon) = ik was los aan het maken.\n• Aoristus: ἔλυσα (elusa) = ik maakte los.\n\n**Reduplicatie**: stam-begin verdubbeld in perfectum.\n• Perfectum: λέλυκα (leluka) = ik heb losgemaakt.\n• γράφω → γέγραφα (perfect-stam met re-).\n\n**Mediale + passieve vormen**:\n• **Medium** = subject doet handeling voor zichzelf. *λύομαι* = ik maak (mezelf) los.\n• **Passief** = subject ondergaat. *λύομαι* = ik word losgemaakt (zelfde vorm! context bepaalt).\n• Aoristus passief heeft eigen vormen.\n\n**Onregelmatige werkwoorden** veel:\n• **εἰμί** (eimi) = zijn: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν).\n• **εἶμι** (let op iota, ander!) = gaan.\n• **φημί** = zeggen.\n• **οἶδα** = weten (perfect-vorm met praesens-betekenis).\n\n**Conjunctief + optatief**:\n• **Conjunctief**: wens, bevel, doel.\n• **Optatief**: nog niet uitgesproken wens, mogelijkheid.\n  - 'Mag God de Koning bewaren' soort uitdrukkingen.\n• Beide veel gebruikt in Plato, Sofokles, etc.\n\n**Tip voor de toets**: aspect-onderscheid is cruciaal. Bij vertaling 'ἔλυον' versus 'ἔλυσα':\n• ἔλυον (imperf): herhaald / doorlopend in verleden → 'ik was los aan het maken' / 'ik maakte (steeds) los'.\n• ἔλυσα (aoristus): één keer, voltooid → 'ik maakte los'.",
     checks: [
       {
         q: "**Grieks aspect-onderscheid** is uniek t.o.v. Latijn:",
@@ -153,7 +153,7 @@ const steps = [
         wrongHints: [null, "Niet — drievoudig.", "Niet — meer.", "Wel verschil."],
         uitlegPad: {
           stappen: [{ titel: "Aspect = manier van handelen", tekst: "Grieks heeft **3 aspecten**:\n• **Imperfectief** (praesens, imperfectum): doorlopend / herhalend.\n• **Aoristisch** (aoristus): eenmalig / geheel.\n• **Perfectief** (perfectum): voltooid met doorlopend resultaat.\n\nLatijn heeft hoofdzakelijk tijden-onderscheid (verleden/heden/toekomst), Grieks combineert tijd + aspect." }],
-          niveaus: { basis: "Imperfectief/aoristisch/perfectief.", simpeler: "3 aspecten", nogSimpeler: "A." },
+          niveaus: { basis: "Imperfectief/aoristisch/perfectief.", simpeler: "3 aspecten", nogSimpeler: "3 aspecten" },
         },
       },
       {
@@ -163,7 +163,7 @@ const steps = [
         wrongHints: [null, "Spreken.", "Schrijven.", "Liefhebben."],
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig 'zijn'", tekst: "**εἰμί** (eimi) = ik ben. Vervoeging: εἰμί, εἶ, ἐστί(ν), ἐσμέν, ἐστέ, εἰσί(ν). Onregelmatig (zoals Latijn 'esse' + Engels 'be'). Bekendste citaat: *Πάντα ῥεῖ* (panta rhei) = 'alles stroomt', maar dat is een ander werkwoord (ῥέω, stromen)." }],
-          niveaus: { basis: "εἰμί.", simpeler: "Zijn = εἰμί", nogSimpeler: "A." },
+          niveaus: { basis: "εἰμί.", simpeler: "Zijn = εἰμί", nogSimpeler: "εἰμί" },
         },
       },
       {
@@ -173,7 +173,7 @@ const steps = [
         wrongHints: [null, "Een augment plakt vóór de stam en verwijst terug in de tijd, niet vooruit — past 'toekomst' daar wel bij?", "De conjunctief is een wijs (wens/mogelijkheid), geen aanduiding van tijd. Markeert een augment een wijs of juist een tijd?", "Onzijdig is een geslacht van naamwoorden, niet iets van werkwoorden. Hoort dat bij een werkwoord-stam?"],
         uitlegPad: {
           stappen: [{ titel: "Verleden-marker", tekst: "**Augment** (Grieks ἐ-) staat vóór stam voor **verleden tijden** (imperfectum, aoristus, plusquamperfectum).\n\n• Praesens: λύω.\n• Imperfectum: **ἔ**λυον = ik was los aan het maken.\n• Aoristus: **ἔ**λυσα = ik maakte los.\n\nLijkt op augment in Sanskriet — beide Indo-Europees." }],
-          niveaus: { basis: "Verleden tijd.", simpeler: "ἐ- = verleden", nogSimpeler: "A." },
+          niveaus: { basis: "Verleden tijd.", simpeler: "ἐ- = verleden", nogSimpeler: "Verleden" },
         },
       },
       {
@@ -183,7 +183,7 @@ const steps = [
         wrongHints: [null, "Geen augment.", "Anders gevormd.", "Anders gevormd."],
         uitlegPad: {
           stappen: [{ titel: "Augment + presens-stam", tekst: "**ἔγραφον** = augment (ἐ-) + presens-stam (γραφ-) + uitgang -ον. **Imperfectum**: 'ik was aan het schrijven' of 'ik schreef herhaaldelijk'. **Imperfectief aspect** in verleden.\n\nVergelijk: **ἔγραψα** = aoristus, eenmalige actie." }],
-          niveaus: { basis: "Imperfectum.", simpeler: "ἔγραφον = imperf", nogSimpeler: "A." },
+          niveaus: { basis: "Imperfectum.", simpeler: "ἔγραφον = imperf", nogSimpeler: "Imperfectum" },
         },
       },
       {
@@ -203,7 +203,7 @@ const steps = [
   {
     title: "Griekse cultuur + auteurs",
     explanation:
-      "**Oud-Griekenland** ~800-146 v.Chr. (van Homerus tot Romeinse verovering).\n\n**Periodes**:\n• **Geometrische** ~900-700 v.Chr.: Homerus periode (Ilias + Odyssee).\n• **Archaïsch** ~700-480 v.Chr.: poleis-stichting, schrift, dichters Sappho + Hesiodus.\n• **Klassiek** ~480-323 v.Chr.: bloeitijd Athene. Marathon, Salamis, Perikles, Sokrates, Plato, Aristoteles, Sofokles.\n• **Hellenistisch** ~323-31 v.Chr.: na Alexander de Grote, Griekse cultuur verspreid van Egypte tot India.\n• **Romeinse periode** ~146 v.Chr.-330 n.Chr.: Griekenland onderdeel Romeinse Rijk.\n• **Byzantijnse periode** 330-1453 n.Chr.: Oost-Romeins.\n\n**Poleis** (stadstaten):\n• Geen verenigd Griekenland in klassieke tijd.\n• **Athene**: democratie, kunst, filosofie.\n• **Sparta**: militair, oligarchisch.\n• **Korinthe**, **Thebe**, **Argos**, **Milete**.\n• **Magna Graecia** (Zuid-Italië + Sicilië): Griekse kolonies.\n• **Klein-Azië-kust** (Turkije): Ionische kolonies.\n\n**Grote gebeurtenissen**:\n• **776 v.Chr.**: eerste Olympische Spelen (Olympia).\n• **490 v.Chr.**: Slag bij Marathon — Atheners verslaan Perzen.\n• **480 v.Chr.**: Slag bij Thermopylae (300 Spartanen onder Leonidas tegen Perzen) + Slag bij Salamis (zee-overwinning Atheners).\n• **461-429 v.Chr.**: **Eeuw van Perikles** — Athene's gouden tijd.\n• **431-404 v.Chr.**: Peloponnesische Oorlog (Athene vs Sparta — Sparta wint).\n• **399 v.Chr.**: Sokrates terechtgesteld (gif-beker).\n• **336-323 v.Chr.**: **Alexander de Grote** verovert van Griekenland tot India.\n• **146 v.Chr.**: Romeinen veroveren Korinthe → einde onafhankelijkheid.\n• **330 n.Chr.**: Constantijn maakt Byzantion hoofdstad Oost-Romein.\n\n**Belangrijke filosofen**:\n\n**Sokrates** (~470-399 v.Chr.):\n• 'Ik weet dat ik niets weet.'\n• Niets geschreven — kennen we via Plato + Xenophon.\n• **Sokratische methode**: vragen stellen tot tegenspraak vinden.\n• Terechtgesteld voor goden-loochening + jeugd-bederf.\n\n**Plato** (427-347 v.Chr.):\n• Sokrates' student.\n• Stichter **Academie** (Athene).\n• Dialogen: *Politeia* (Republiek), *Symposium*, *Apologie*, *Phaedo*.\n• **Ideeën-leer**: echte werkelijkheid = abstracte ideeën, materiële wereld is afgeleide.\n• **Grotgelijkenis**: mensen zien schaduwen, denken dat realiteit is.\n\n**Aristoteles** (384-322 v.Chr.):\n• Plato's student.\n• Stichter **Lyceum** (Athene).\n• Leraar Alexander de Grote.\n• Werken: *Ethica Nicomachea*, *Politica*, *Metafysica*, *Logica*, *Poetica*, *Physica*.\n• Systematische logica + classificatie wetenschap.\n\n**Andere filosofen**:\n• **Heraclitus** (~500 v.Chr.): 'Panta rhei' (alles stroomt). Veranderlijkheid centraal.\n• **Parmenides**: tegendeel — alles is één + onveranderlijk.\n• **Pythagoras**: getallen + driehoek-stelling.\n• **Demokritos**: atoom-theorie.\n• **Epicurus**: hedonisme. Ataraxia.\n• **Zeno**: Stoïcisme.\n• **Diogenes**: Cynisme. Leefde in een vat.\n\n**Literatuur**:\n\n**Homerus** (~750 v.Chr., legendarisch):\n• ***Ilias***: laatste jaar Trojaanse Oorlog. Held: Achilles.\n• ***Odyssee***: Odysseus' terugkeer (10 jaar). Cycloop, Sirenen, etc.\n• Episch dactylisch hexameter.\n• Inspiratie voor 3000 jaar westerse literatuur.\n\n**Sappho** (~600 v.Chr.):\n• Vrouwelijke dichter, Lesbos.\n• Liefdesgedichten.\n• Inspirator term 'lesbisch'.\n\n**Aischylus** (525-456 v.Chr.):\n• Eerste grote tragedie-schrijver.\n• *Oresteia*-trilogie.\n\n**Sofokles** (~497-406 v.Chr.):\n• 120+ stukken (7 bewaard).\n• ***Oidipous Tyrannos*** (Koning Oedipus).\n• ***Antigone***.\n• ***Elektra***.\n\n**Euripides** (~480-406 v.Chr.):\n• Innovatiever, psychologischer.\n• ***Medea***, ***Bakchen***, ***Trojaanse Vrouwen***.\n\n**Aristofanes** (~446-386 v.Chr.):\n• Komedies.\n• ***Wolken*** (parodieert Sokrates), ***Lysistrata*** (vrouwen stoppen oorlog door seks-staking).\n\n**Herodotus** (~484-425 v.Chr.):\n• 'Vader van geschiedenis'.\n• Persische Oorlogen + Egypte + Skythen.\n\n**Thucydides** (~460-400 v.Chr.):\n• Eerste 'wetenschappelijk' historicus.\n• *Peloponnesische Oorlog* — eerstehands.\n\n**Mythologie** (vaak op CSE):\n• **Olympische goden** (12): Zeus, Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Aphrodite, Hephaestus, Hermes, Dionysos.\n• **Trojaanse Oorlog**: Helena ontvoerd door Paris → Achilles + Odysseus tegen Troje.\n• **Heracles**: 12 werken.\n• **Theseus**: Minotauros + labyrint.\n• **Perseus**: Medusa.\n• **Prometheus**: vuur aan mensen → eeuwig gestraft.\n\n**Theater**:\n• Begon als religieus festival voor Dionysos.\n• **Tragedies**: hoge personages, fataal einde.\n• **Komedies**: politiek + sociaal satirisch.\n• **Koor**: groep dansers/zangers commentator.\n• **Drie eenheden** (later Aristoteles): tijd, plaats, handeling.\n• Maskers, mannelijke acteurs (geen vrouwen).",
+      "**Oud-Griekenland** ~800-146 v.Chr. (van Homerus tot Romeinse verovering).\n\n**Periodes**:\n• **Geometrische** ~900-700 v.Chr.: Homerus periode (Ilias + Odyssee).\n• **Archaïsch** ~700-480 v.Chr.: poleis-stichting, schrift, dichters Sappho + Hesiodus.\n• **Klassiek** ~480-323 v.Chr.: bloeitijd Athene. Marathon, Salamis, Perikles, Sokrates, Plato, Aristoteles, Sofokles.\n• **Hellenistisch** ~323-31 v.Chr.: na Alexander de Grote, Griekse cultuur verspreid van Egypte tot India.\n• **Romeinse periode** ~146 v.Chr.-330 n.Chr.: Griekenland onderdeel Romeinse Rijk.\n• **Byzantijnse periode** 330-1453 n.Chr.: Oost-Romeins.\n\n**Poleis** (stadstaten):\n• Geen verenigd Griekenland in klassieke tijd.\n• **Athene**: democratie, kunst, filosofie.\n• **Sparta**: militair, oligarchisch.\n• **Korinthe**, **Thebe**, **Argos**, **Milete**.\n• **Magna Graecia** (Zuid-Italië + Sicilië): Griekse kolonies.\n• **Klein-Azië-kust** (Turkije): Ionische kolonies.\n\n**Grote gebeurtenissen**:\n• **776 v.Chr.**: eerste Olympische Spelen (Olympia).\n• **490 v.Chr.**: Slag bij Marathon — Atheners verslaan Perzen.\n• **480 v.Chr.**: Slag bij Thermopylae (300 Spartanen onder Leonidas tegen Perzen) + Slag bij Salamis (zee-overwinning Atheners).\n• **461-429 v.Chr.**: **Eeuw van Perikles** — Athene's gouden tijd.\n• **431-404 v.Chr.**: Peloponnesische Oorlog (Athene vs Sparta — Sparta wint).\n• **399 v.Chr.**: Sokrates terechtgesteld (gif-beker).\n• **336-323 v.Chr.**: **Alexander de Grote** verovert van Griekenland tot India.\n• **146 v.Chr.**: Romeinen veroveren Korinthe → einde onafhankelijkheid.\n• **330 n.Chr.**: Constantijn maakt Byzantion (Constantinopel) hoofdstad van het Romeinse Rijk.\n\n**Belangrijke filosofen**:\n\n**Sokrates** (~470-399 v.Chr.):\n• 'Ik weet dat ik niets weet.'\n• Niets geschreven — kennen we via Plato + Xenophon.\n• **Sokratische methode**: vragen stellen tot tegenspraak vinden.\n• Terechtgesteld voor goden-loochening + jeugd-bederf.\n\n**Plato** (427-347 v.Chr.):\n• Sokrates' student.\n• Stichter **Academie** (Athene).\n• Dialogen: *Politeia* (Republiek), *Symposium*, *Apologie*, *Phaedo*.\n• **Ideeën-leer**: echte werkelijkheid = abstracte ideeën, materiële wereld is afgeleide.\n• **Grotgelijkenis**: mensen zien schaduwen, denken dat realiteit is.\n\n**Aristoteles** (384-322 v.Chr.):\n• Plato's student.\n• Stichter **Lyceum** (Athene).\n• Leraar Alexander de Grote.\n• Werken: *Ethica Nicomachea*, *Politica*, *Metafysica*, *Logica*, *Poetica*, *Physica*.\n• Systematische logica + classificatie wetenschap.\n\n**Andere filosofen**:\n• **Heraclitus** (~500 v.Chr.): 'Panta rhei' (alles stroomt). Veranderlijkheid centraal.\n• **Parmenides**: tegendeel — alles is één + onveranderlijk.\n• **Pythagoras**: getallen + driehoek-stelling.\n• **Demokritos**: atoom-theorie.\n• **Epicurus**: hedonisme. Ataraxia.\n• **Zeno**: Stoïcisme.\n• **Diogenes**: Cynisme. Leefde in een vat.\n\n**Literatuur**:\n\n**Homerus** (~750 v.Chr., legendarisch):\n• ***Ilias***: laatste jaar Trojaanse Oorlog. Held: Achilles.\n• ***Odyssee***: Odysseus' terugkeer (10 jaar). Cycloop, Sirenen, etc.\n• Episch dactylisch hexameter.\n• Inspiratie voor 3000 jaar westerse literatuur.\n\n**Sappho** (~600 v.Chr.):\n• Vrouwelijke dichter, Lesbos.\n• Liefdesgedichten.\n• Inspirator term 'lesbisch'.\n\n**Aischylus** (525-456 v.Chr.):\n• Eerste grote tragedie-schrijver.\n• *Oresteia*-trilogie.\n\n**Sofokles** (~497-406 v.Chr.):\n• 120+ stukken (7 bewaard).\n• ***Oidipous Tyrannos*** (Koning Oedipus).\n• ***Antigone***.\n• ***Elektra***.\n\n**Euripides** (~480-406 v.Chr.):\n• Innovatiever, psychologischer.\n• ***Medea***, ***Bakchen***, ***Trojaanse Vrouwen***.\n\n**Aristofanes** (~446-386 v.Chr.):\n• Komedies.\n• ***Wolken*** (parodieert Sokrates), ***Lysistrata*** (vrouwen stoppen oorlog door seks-staking).\n\n**Herodotus** (~484-425 v.Chr.):\n• 'Vader van geschiedenis'.\n• Perzische Oorlogen + Egypte + Skythen.\n\n**Thucydides** (~460-400 v.Chr.):\n• Eerste 'wetenschappelijk' historicus.\n• *Peloponnesische Oorlog* — eerstehands.\n\n**Mythologie** (vaak op CSE):\n• **Olympische goden** (12): Zeus, Hera, Poseidon, Demeter, Athena, Apollo, Artemis, Ares, Aphrodite, Hephaestus, Hermes, Dionysos.\n• **Trojaanse Oorlog**: Helena ontvoerd door Paris → Achilles + Odysseus tegen Troje.\n• **Heracles**: 12 werken.\n• **Theseus**: Minotauros + labyrint.\n• **Perseus**: Medusa.\n• **Prometheus**: vuur aan mensen → eeuwig gestraft.\n\n**Theater**:\n• Begon als religieus festival voor Dionysos.\n• **Tragedies**: hoge personages, fataal einde.\n• **Komedies**: politiek + sociaal satirisch.\n• **Koor**: groep dansers/zangers commentator.\n• **Drie eenheden** (later Aristoteles): tijd, plaats, handeling.\n• Maskers, mannelijke acteurs (geen vrouwen).",
     checks: [
       {
         q: "Wie was leraar van **Alexander de Grote**?",
@@ -212,7 +212,7 @@ const steps = [
         wrongHints: [null, "Niet — Plato eerder.", "Veel eerder.", "Heel anders thema."],
         uitlegPad: {
           stappen: [{ titel: "Aristoteles 343 v.Chr.", tekst: "**Aristoteles** (384-322 v.Chr.) was 3 jaar (vanaf 343 v.Chr.) leraar van **Alexander de Grote** (toen ~13-16 jaar oud) in Macedonië. Filip II (Alexander's vader) huurde Aristoteles in. Onderwijs in filosofie, ethiek, politiek, retorica, natuurwetenschap." }],
-          niveaus: { basis: "Aristoteles.", simpeler: "Alex leraar = Aristoteles", nogSimpeler: "A." },
+          niveaus: { basis: "Aristoteles.", simpeler: "Alex leraar = Aristoteles", nogSimpeler: "Aristoteles" },
         },
       },
       {
@@ -242,7 +242,7 @@ const steps = [
         wrongHints: [null, "Niet — tragedie.", "Niet — tragedie.", "Niet — historicus."],
         uitlegPad: {
           stappen: [{ titel: "~750 v.Chr.", tekst: "**Homerus** (~750 v.Chr., legendarische dichter) — eigenlijk waarschijnlijk traditie van orale dichters die geconsolideerd werden onder die naam. **Ilias** = laatste jaar Trojaanse Oorlog (Achilles' woede). **Odyssee** = Odysseus' 10-jarige terugkeer. Dactylisch hexameter — fundament westerse literatuur." }],
-          niveaus: { basis: "Homerus.", simpeler: "Ilias = Homerus", nogSimpeler: "A." },
+          niveaus: { basis: "Homerus.", simpeler: "Ilias = Homerus", nogSimpeler: "Homerus" },
         },
       },
       {
@@ -251,9 +251,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — Peloponnesische oorlog.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Atheners winnen", tekst: "**490 v.Chr.**: Atheners onder Miltiades verslaan Perzen op vlakte van **Marathon** (~25 km van Athene). Boodschapper Phidippides liep terug naar Athene om overwinning te melden, viel dood neer (volgens legende) → **modern Marathon-loop** (42,2 km) vernoemd. Onderdeel **Persische Oorlogen** 499-449 v.Chr." }],
+          stappen: [{ titel: "Atheners winnen", tekst: "**490 v.Chr.**: Atheners onder Miltiades verslaan Perzen op vlakte van **Marathon** (~40 km van Athene). Boodschapper Phidippides liep terug naar Athene om overwinning te melden, viel dood neer (volgens legende) → de **moderne marathon** (42,2 km) is ernaar vernoemd. Onderdeel **Perzische Oorlogen** 499-449 v.Chr." }],
           theorie: "10 jaar later: 480 v.Chr. Xerxes komt terug — Slag bij Salamis (Atheense zee-overwinning) + Thermopylae (300 Spartanen).",
-          niveaus: { basis: "Atheners + Perzen.", simpeler: "Marathon = AT vs PE", nogSimpeler: "A." },
+          niveaus: { basis: "Atheners + Perzen.", simpeler: "Marathon = AT vs PE", nogSimpeler: "Atheners + Perzen" },
         },
       },
     ],
@@ -271,8 +271,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — Parmenides.", "Niet relevant.", "Wel etymologie 'filosofie' maar andere zin."],
         uitlegPad: {
-          stappen: [{ titel: "Heraclitus' beweging", tekst: "**Panta rhei** (πάντα ῥεῖ) = 'alles stroomt'. **Heraclitus** (~500 v.Chr.): werkelijkheid is constant verandering, zoals rivier waar je nooit twee keer in zelfde water staat. Tegenstelling: **Parmenides** — alles is één + onveranderlijk." }],
-          niveaus: { basis: "Alles stroomt.", simpeler: "Panta rhei = stroomt", nogSimpeler: "A." },
+          stappen: [{ titel: "Heraclitus' beweging", tekst: "**Panta rhei** (πάντα ῥεῖ) = 'alles stroomt'. **Heraclitus** (~500 v.Chr.): werkelijkheid is voortdurend in verandering, zoals rivier waar je nooit twee keer in zelfde water staat. Tegenstelling: **Parmenides** — alles is één + onveranderlijk." }],
+          niveaus: { basis: "Alles stroomt.", simpeler: "Panta rhei = stroomt", nogSimpeler: "Alles stroomt" },
         },
       },
       {
@@ -281,8 +281,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — Sokrates' student.", "Niet — andere ideeën.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Socratische bescheidenheid", tekst: "**Sokrates**: 'Ik weet dat ik niets weet.' (overgeleverd via Plato). Vroeg vragen tot tegenstanders zelf zagen dat ze niets wisten. Spotseer-paradox: hij wist meer dan anderen juist door zijn besef van onwetendheid. **Daadwerkelijk uitgesproken** (en in Plato's *Apologie*): 'Ik weet alleen dat ik niets weet'." }],
-          niveaus: { basis: "Sokrates.", simpeler: "Niets weten = Sokrates", nogSimpeler: "A." },
+          stappen: [{ titel: "Socratische bescheidenheid", tekst: "**Sokrates**: 'Ik weet dat ik niets weet.' (overgeleverd via Plato). Vroeg vragen tot tegenstanders zelf zagen dat ze niets wisten. Paradox: hij wist meer dan anderen juist door zijn besef van onwetendheid. **Daadwerkelijk uitgesproken** (en in Plato's *Apologie*): 'Ik weet alleen dat ik niets weet'." }],
+          niveaus: { basis: "Sokrates.", simpeler: "Niets weten = Sokrates", nogSimpeler: "Sokrates" },
         },
       },
       {
@@ -291,8 +291,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — Aphrodite.", "Niet — Ares.", "Niet — Poseidon."],
         uitlegPad: {
-          stappen: [{ titel: "Olympus-leider", tekst: "**Zeus** (Ζεύς) = oppergod Olympus. Romeinse equivalent: **Jupiter**. Wapen: bliksem. Vader van velen (Athena uit zijn hoofd, Heracles uit verhouding met mens, etc.). Zeer overspelig — bron veel mythen. Cultus-centrum: Olympia + Dodona." }],
-          niveaus: { basis: "Oppergod.", simpeler: "Zeus = oppergod", nogSimpeler: "A." },
+          stappen: [{ titel: "Olympus-leider", tekst: "**Zeus** (Ζεύς) = oppergod Olympus. Romeinse tegenhanger: **Jupiter**. Wapen: bliksem. Vader van velen (Athena uit zijn hoofd, Heracles uit verhouding met mens, etc.). Zeer overspelig — bron veel mythen. Cultus-centrum: Olympia + Dodona." }],
+          niveaus: { basis: "Oppergod.", simpeler: "Zeus = oppergod", nogSimpeler: "Oppergod" },
         },
       },
       {
@@ -302,7 +302,7 @@ const steps = [
         wrongHints: [null, "Euripides.", "Aristofanes (komedie).", "Homerus (epos)."],
         uitlegPad: {
           stappen: [{ titel: "Tragisch lot", tekst: "**Sofokles** schreef *Oidipous Tyrannos* (Koning Oedipus): koning ontdekt dat hij vader doodde + moeder huwde, ondanks pogingen lot te ontvluchten. **Freud-inspirator** (Oedipus-complex). Sofokles schreef 120+ stukken, 7 bewaard. Andere: *Antigone*, *Elektra*, *Aias*." }],
-          niveaus: { basis: "Oidipous.", simpeler: "Sofokles = Oidipous", nogSimpeler: "A." },
+          niveaus: { basis: "Oidipous.", simpeler: "Sofokles = Oidipous", nogSimpeler: "Oidipous" },
         },
       },
       {

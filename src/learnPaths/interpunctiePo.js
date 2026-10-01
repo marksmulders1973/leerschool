@@ -60,7 +60,7 @@ const steps = [
   {
     title: "Wat is interpunctie?",
     explanation:
-      "**Interpunctie** is alles wat geen letter is in een zin: **leestekens** en **hoofdletters**.\n\n**Waarom zijn leestekens belangrijk?**\nLeestekens helpen je **goed lezen**. Ze laten zien:\n• waar een zin begint en eindigt,\n• of het een vraag of uitroep is,\n• of er een korte pauze in een zin zit,\n• wat iemand zegt.\n\n**De 5 belangrijkste leestekens**:\n• **.** punt — einde van een gewone zin.\n• **?** vraagteken — einde van een vraag.\n• **!** uitroepteken — verbazing of bevel.\n• **,** komma — korte pauze, of opsomming.\n• ' **'** aanhalingstekens — wat iemand zegt.\n\n**Hoofdletters** gebruik je:\n• Aan **begin van een zin**.\n• Bij **namen van mensen** *(Anna, Lisa, Tom)*.\n• Bij **namen van plaatsen** *(Amsterdam, Frankrijk)*.\n• Bij **dagen, maanden, titels** worden in NL meestal géén hoofdletters gebruikt *(maandag, januari)*.\n\n**Voorbeeld zonder interpunctie**:\n*'mijn naam is tom ik woon in utrecht waar woon jij'*\n\n**Met interpunctie**:\n*'Mijn naam is Tom. Ik woon in Utrecht. Waar woon jij?'*\n\nVeel makkelijker te lezen! Daar is interpunctie voor.",
+      "**Interpunctie** is alles wat geen letter is in een zin: **leestekens** en **hoofdletters**.\n\n**Waarom zijn leestekens belangrijk?**\nLeestekens helpen je **goed lezen**. Ze laten zien:\n• waar een zin begint en eindigt,\n• of het een vraag of uitroep is,\n• of er een korte pauze in een zin zit,\n• wat iemand zegt.\n\n**De 5 belangrijkste leestekens**:\n• **.** punt — einde van een gewone zin.\n• **?** vraagteken — einde van een vraag.\n• **!** uitroepteken — verbazing of bevel.\n• **,** komma — korte pauze, of opsomming.\n• ' **'** aanhalingstekens — wat iemand zegt.\n\n**Hoofdletters** gebruik je:\n• Aan **begin van een zin**.\n• Bij **namen van mensen** *(Anna, Lisa, Tom)*.\n• Bij **namen van plaatsen** *(Amsterdam, Frankrijk)*.\n• Bij **dagen en maanden** gebruik je in het Nederlands géén hoofdletter *(maandag, januari)*.\n\n**Voorbeeld zonder interpunctie**:\n*'mijn naam is tom ik woon in utrecht waar woon jij'*\n\n**Met interpunctie**:\n*'Mijn naam is Tom. Ik woon in Utrecht. Waar woon jij?'*\n\nVeel makkelijker te lezen! Daar is interpunctie voor.",
     svg: leestekensSvg(),
     checks: [
       {
@@ -76,7 +76,7 @@ const steps = [
         wrongHints: [null, "Mooi maken is niet hun functie.", "Wél een reden — duidelijk lezen.", "Woorden tellen doen leestekens niet."],
       },
       {
-        q: "Welke leesteken hoort bij een **vraag**?",
+        q: "Welk leesteken hoort bij een **vraag**?",
         options: ["?", ".", "!", ","],
         answer: 0,
         wrongHints: [null, "Punt is voor een gewone zin.", "Uitroepteken is voor verbazing.", "Komma zit midden in een zin."],
@@ -112,7 +112,7 @@ const steps = [
   {
     title: "Hoofdletters — wanneer gebruik je ze?",
     explanation:
-      "**Hoofdletters** zijn de **grote letters** *(A, B, C...)*. Je gebruikt ze op deze plekken:\n\n**1. Aan begin van een zin**:\n• 'Het is mooi weer.'\n• 'Vandaag ga ik naar school.'\n\n**2. Bij namen van mensen**:\n• Anna, Lisa, Tom, Mark, Sara, Bram.\n• Ook achternamen: De Vries, Jansen.\n\n**3. Bij namen van plaatsen**:\n• Steden: Amsterdam, Utrecht, Den Haag.\n• Landen: Nederland, België, Duitsland.\n• Werelddelen: Europa, Afrika, Azië.\n• Straten: Hoofdstraat, Schoolplein.\n\n**4. Bij eigennamen van dingen**:\n• Boektitels: 'Harry Potter', 'De Zwarte Zwaan'.\n• Bedrijven: Hema, Albert Heijn.\n• Eigen merken: Lego, Coca-Cola.\n\n**5. Bij namen van talen**:\n• Frans, Duits, Engels, Spaans, Chinees — **wél hoofdletter** (talen krijgen er één!).\n\n**Géén hoofdletter** bij:\n• Dagen: maandag, dinsdag *(in Nederlands)*.\n• Maanden: januari, februari.\n• Seizoenen: zomer, winter.\n\n**Toets-strikvraag**:\n*'in nederland eten we vaak in januari oliebollen'* → **'In Nederland eten we vaak in januari oliebollen.'**\n• Hoofdletter: In (begin zin), Nederland (land).\n• Géén hoofdletter: januari (maand), oliebollen (gewoon woord).",
+      "**Hoofdletters** zijn de **grote letters** *(A, B, C...)*. Je gebruikt ze op deze plekken:\n\n**1. Aan begin van een zin**:\n• 'Het is mooi weer.'\n• 'Vandaag ga ik naar school.'\n\n**2. Bij namen van mensen**:\n• Anna, Lisa, Tom, Mark, Sara, Bram.\n• Ook achternamen: De Vries, Jansen.\n\n**3. Bij namen van plaatsen**:\n• Steden: Amsterdam, Utrecht, Den Haag.\n• Landen: Nederland, België, Duitsland.\n• Werelddelen: Europa, Afrika, Azië.\n• Straten: Hoofdstraat, Schoolplein.\n\n**4. Bij eigennamen van dingen**:\n• Boektitels: 'Harry Potter', 'De Zwarte Zwaan'.\n• Bedrijven: Hema, Albert Heijn.\n• Eigen merken: Lego, Coca-Cola.\n\n**5. Bij namen van talen**:\n• Frans, Duits, Engels, Spaans, Chinees — **wél hoofdletter** (talen krijgen er één!).\n\n**Géén hoofdletter** bij:\n• Dagen: maandag, dinsdag *(in het Nederlands)*.\n• Maanden: januari, februari.\n• Seizoenen: zomer, winter.\n\n**Toets-strikvraag**:\n*'in nederland eten we vaak in januari oliebollen'* → **'In Nederland eten we vaak in januari oliebollen.'**\n• Hoofdletter: In (begin zin), Nederland (land).\n• Géén hoofdletter: januari (maand), oliebollen (gewoon woord).",
     checks: [
       {
         q: "Welke zin is **goed**?",
@@ -133,15 +133,15 @@ const steps = [
         wrongHints: [null, "Dagen niet — kleine letter.", "Maanden niet.", "Seizoenen niet."],
         uitlegPad: {
           stappen: [
-            { titel: "Talen krijgen hoofdletter", tekst: "In Nederland: talen krijgen hoofdletter, dagen/maanden/seizoenen niet. Dus 'Frans' wel, 'maandag' niet." },
+            { titel: "Talen krijgen hoofdletter", tekst: "In het Nederlands: talen krijgen hoofdletter, dagen/maanden/seizoenen niet. Dus 'Frans' wel, 'maandag' niet." },
           ],
           woorden: [{ woord: "taal-naam", uitleg: "Naam van een taal — bv. Frans, Duits, Spaans." }],
-          theorie: "Talen krijgen in Nederlands hoofdletter. Dagen/maanden/seizoenen niet.",
+          theorie: "Talen krijgen in het Nederlands hoofdletter. Dagen/maanden/seizoenen niet.",
           voorbeelden: [{ type: "stap", tekst: "'Ik leer Frans op woensdag in januari.' (Frans WEL, woensdag NIET, januari NIET)." }],
           basiskennis: [{ onderwerp: "Tegenintuïtief", uitleg: "Dit verschilt soms van Engels — onthoud de regel goed." }],
           niveaus: {
             basis: "Frans (taal).",
-            simpeler: "Talen krijgen hoofdletter in Nederlands. Dagen/maanden/seizoenen niet. Frans is een taal, dus wél hoofdletter.",
+            simpeler: "Talen krijgen hoofdletter in het Nederlands. Dagen/maanden/seizoenen niet. Frans is een taal, dus wél hoofdletter.",
             nogSimpeler: "Frans",
           },
         },
@@ -159,10 +159,10 @@ const steps = [
   {
     title: "Punt, vraagteken, uitroepteken",
     explanation:
-      "Een zin eindigt op een **leesteken**. Welke teken hangt af van het soort zin.\n\n**Gewone zin → punt (.)**\nEen mededeling of beschrijving.\n• 'Het regent buiten.'\n• 'Ik ga naar school.'\n• 'Anna heeft een hond.'\n\n**Vraag → vraagteken (?)**\nEen zin waarop je een antwoord verwacht.\n• 'Waar ga je heen?'\n• 'Hoe heet jouw kat?'\n• 'Heb je gehoord wat ik zei?'\n\n**Hoe herken je een vraag?**\n• Begint vaak met een vraagwoord: wat / wie / waar / wanneer / waarom / hoe.\n• OF begint met werkwoord: 'Heb je...?' / 'Ga je...?' / 'Wil je...?'\n\n**Uitroep → uitroepteken (!)**\nVerbazing, blijdschap, schrik, bevel.\n• 'Wat een mooie hond!'\n• 'Stop! Niet doen!'\n• 'Hoera, ik heb gewonnen!'\n• 'Pas op!'\n\n**Toets-trucs**:\n• **Twijfel tussen . en !**: zit er emotie in? Dan !. Anders een rustige zin → punt.\n• **Vraag herkennen**: vervang in gedachten 'Heb' door 'Ja/Nee' — als dat past, is het een vraag.\n• **Nooit** mix: '?!' is informele schrijftaal, maar bij de Doorstroomtoets altijd 1 leesteken kiezen.\n\n**Veel-voorkomende fout**:\nVergeten leesteken aan eind. De toets test ALTIJD of je een zin afsluit.",
+      "Een zin eindigt op een **leesteken**. Welk teken hangt af van het soort zin.\n\n**Gewone zin → punt (.)**\nEen mededeling of beschrijving.\n• 'Het regent buiten.'\n• 'Ik ga naar school.'\n• 'Anna heeft een hond.'\n\n**Vraag → vraagteken (?)**\nEen zin waarop je een antwoord verwacht.\n• 'Waar ga je heen?'\n• 'Hoe heet jouw kat?'\n• 'Heb je gehoord wat ik zei?'\n\n**Hoe herken je een vraag?**\n• Begint vaak met een vraagwoord: wat / wie / waar / wanneer / waarom / hoe.\n• OF begint met werkwoord: 'Heb je...?' / 'Ga je...?' / 'Wil je...?'\n\n**Uitroep → uitroepteken (!)**\nVerbazing, blijdschap, schrik, bevel.\n• 'Wat een mooie hond!'\n• 'Stop! Niet doen!'\n• 'Hoera, ik heb gewonnen!'\n• 'Pas op!'\n\n**Toets-trucs**:\n• **Twijfel tussen . en !**: zit er emotie in? Dan !. Anders een rustige zin → punt.\n• **Vraag herkennen**: kun je er 'ja' of 'nee' (of een ander antwoord) op geven? Dan is het een vraag.\n• **Nooit** mixen: '?!' is informele schrijftaal, maar bij de Doorstroomtoets altijd 1 leesteken kiezen.\n\n**Veel-voorkomende fout**:\nVergeten leesteken aan eind. De toets test ALTIJD of je een zin afsluit.",
     checks: [
       {
-        q: "Welke zin **mist** het juiste leesteken? *'Wat een mooie auto'*",
+        q: "Welk leesteken **mist** er in: *'Wat een mooie auto'*?",
         options: ["! (uitroepteken)", ". (punt)", "? (vraagteken)", ", (komma)"],
         answer: 0,
         wrongHints: [null, "Punt mist de emotie. Beter !.", "Geen vraag.", "Komma sluit geen zin af."],
@@ -174,13 +174,13 @@ const steps = [
         wrongHints: [null, "Punt is geen vraag.", "Niet boos genoeg voor uitroep.", "Komma sluit geen zin af."],
         uitlegPad: {
           stappen: [
-            { titel: "Begint met werkwoord = vraag", tekst: "De zin begint met '**Heb**' (werkwoord). Dat is een typische **vraag-opbouw** in Nederlands: werkwoord vooraan + persoon erachter. 'Heb **je**...?'" },
+            { titel: "Begint met werkwoord = vraag", tekst: "De zin begint met '**Heb**' (werkwoord). Dat is een typische **vraag-opbouw** in het Nederlands: werkwoord vooraan + persoon erachter. 'Heb **je**...?'" },
             { titel: "Wacht op antwoord", tekst: "Bij deze zin verwacht je een **ja/nee-antwoord** ('Ja, ik heb gepoetst' of 'Nee, nog niet'). Dat is hét kenmerk van een vraag." },
             { titel: "Test: vervang de woord-volgorde", tekst: "Mededeling: 'Je hebt je tanden gepoetst.' (volgorde: persoon → werkwoord) → eindigt op **.**\nVraag: 'Heb je je tanden gepoetst?' (volgorde: werkwoord → persoon) → eindigt op **?**\nDe omdraai-truc helpt." },
           ],
           woorden: [
             { woord: "ja/nee-vraag", uitleg: "Vraag waarop antwoord 'ja' of 'nee' kan zijn." },
-            { woord: "vraag-opbouw", uitleg: "Werkwoord eerst, dan persoon (in Nederlands)." },
+            { woord: "vraag-opbouw", uitleg: "Werkwoord eerst, dan persoon (in het Nederlands)." },
           ],
           theorie: "Toets-truc vraag-herkenning: **Werkwoord vooraan** = vraag (Heb je..., Ga je..., Komt zij...). **Persoon vooraan** = mededeling (Je hebt..., Jij gaat..., Zij komt...). Hoofdregel om snel te zien.",
           voorbeelden: [
@@ -216,18 +216,18 @@ const steps = [
   {
     title: "Komma's — kleine pauzes in een zin",
     explanation:
-      "Een **komma (,)** is een **kleine pauze** in een zin. Maar wanneer zet je er een?\n\n**Regel 1 — opsomming**:\nBij meer dan 2 dingen achter elkaar.\n• 'Ik kocht **appels, peren, druiven en bananen**.'\n• Komma's tussen items.\n• **Vóór 'en' GEEN komma** *(bij 2 items)*.\n• Maar bij 3+ items en de laatste begint met 'en': komma's tussen tussenliggende items, geen komma vóór 'en'.\n\n**Regel 2 — bijzin/aanvulling**:\nAls je een extra zin tussenvoegt.\n• 'De jongen, **die een blauwe trui had**, rende weg.'\n• Komma's omsluiten de bijzin.\n\n**Regel 3 — vóór bepaalde woorden** (omdat / maar / als / wanneer):\n• 'Ik ben moe**,** omdat ik laat opbleef.'\n• 'Hij komt mee**,** als het droog blijft.'\n• 'Ze fietst hard**,** maar wordt toch nat.'\n\n**Regel 4 — aanhalen iemand (directe rede)**:\n• 'Anna zei**:** \"Ik kom morgen.\"'\n• **Dubbele punt** vóór de aanhalingstekens *(zie ook stap E voor de hele regel)*.\n\n**Toets-truc — lees-pauze**:\nLees de zin hardop. Pauzeer je heel even? Daar staat vaak een komma.\n\n*'Toen het regende, gingen we naar binnen.'*\n• 'Toen het regende' (pauze) 'gingen we naar binnen.'\n• Komma op de pauze.\n\n**Veel-voorkomende fouten**:\n• Komma vóór 'en' bij 2 items: ❌ 'Anna en, Tom' → ✓ 'Anna en Tom'.\n• Geen komma waar wel een lange pauze is.\n• Komma in plaats van een punt — als de 2 delen zelfstandige zinnen zijn, gebruik een punt.",
+      "Een **komma (,)** is een **kleine pauze** in een zin. Maar wanneer zet je er een?\n\n**Regel 1 — opsomming**:\nBij meer dan 2 dingen achter elkaar.\n• 'Ik kocht **appels, peren, druiven en bananen**.'\n• Komma's tussen items.\n• **Vóór 'en' GEEN komma** *(bij 2 items)*.\n• Maar bij 3+ items en de laatste begint met 'en': komma's tussen tussenliggende items, geen komma vóór 'en'.\n\n**Regel 2 — bijzin/aanvulling**:\nAls je een extra zin tussenvoegt.\n• 'De jongen, **die een blauwe trui had**, rende weg.'\n• Komma's omsluiten de bijzin.\n\n**Regel 3 — vóór bepaalde woorden** (omdat / maar / als / wanneer):\n• 'Ik ben moe**,** omdat ik laat opbleef.'\n• 'Hij komt mee**,** als het droog blijft.'\n• 'Ze fietst hard**,** maar wordt toch nat.'\n\n**Regel 4 — iemand aanhalen (directe rede)**:\n• 'Anna zei**:** \"Ik kom morgen.\"'\n• **Dubbele punt** vóór de aanhalingstekens *(zie ook stap E voor de hele regel)*.\n\n**Toets-truc — lees-pauze**:\nLees de zin hardop. Pauzeer je heel even? Daar staat vaak een komma.\n\n*'Toen het regende, gingen we naar binnen.'*\n• 'Toen het regende' (pauze) 'gingen we naar binnen.'\n• Komma op de pauze.\n\n**Veel-voorkomende fouten**:\n• Komma vóór 'en' bij 2 items: ❌ 'Anna en, Tom' → ✓ 'Anna en Tom'.\n• Geen komma waar wel een lange pauze is.\n• Komma in plaats van een punt — als de 2 delen zelfstandige zinnen zijn, gebruik een punt.",
     checks: [
       {
         q: "Welke zin heeft komma's op de **juiste plek**?",
         options: ["Ik kocht appels, peren en druiven.", "Ik kocht appels peren, en druiven.", "Ik kocht appels, peren, en druiven.", "Ik, kocht appels peren en druiven."],
         answer: 0,
-        wrongHints: [null, "Geen komma's vóór elk woord — alleen tussen items.", "Geen komma vóór 'en' bij 2 items.", "Geen komma na werkwoord zonder reden."],
+        wrongHints: [null, "De komma hoort tussen appels en peren, niet vóór 'en'.", "Geen komma vóór het laatste 'en'.", "Geen komma na werkwoord zonder reden."],
         uitlegPad: {
           stappen: [
             { titel: "Regel voor opsommingen", tekst: "Bij een opsomming (3 of meer items achter elkaar) zet je **komma's tussen de items**. MAAR: **vóór het laatste 'en' GEEN komma** — dat is de Nederlandse regel." },
             { titel: "Stap voor stap door de zin", tekst: "'Ik kocht **appels**, **peren** en **druiven**.'\n• Appels → komma erna (want er volgt nog meer)\n• Peren → 'en' volgt direct, dus GEEN komma vóór 'en'\n• Druiven → laatste item, daarna punt." },
-            { titel: "Verschil met Engels", tekst: "In Engels gebruiken ze soms wél een komma vóór 'and' (Oxford-komma). In **Nederlands NIET**. Onthoud: NL-regel = geen komma vóór 'en'." },
+            { titel: "Verschil met Engels", tekst: "In het Engels gebruiken ze soms wél een komma vóór 'and' (Oxford-komma). In het **Nederlands NIET**. Onthoud: NL-regel = geen komma vóór 'en'." },
           ],
           woorden: [
             { woord: "opsomming", uitleg: "Lijstje van 3 of meer items in een zin." },
@@ -243,7 +243,7 @@ const steps = [
           niveaus: {
             basis: "'Ik kocht appels, peren en druiven.'",
             simpeler: "Komma tussen items van opsomming. Voor laatste 'en' geen komma.",
-            nogSimpeler: "Eerste optie",
+            nogSimpeler: "Appels, peren en druiven.",
           },
         },
       },
@@ -286,7 +286,7 @@ const steps = [
   {
     title: "Aanhalingstekens — wat iemand zegt",
     explanation:
-      "**Aanhalingstekens** zijn de tekens '' of \"\" — ze geven aan **wat iemand zegt**.\n\n**Voorbeeld**:\n*'Mama zei: **\"Ga je tanden poetsen.\"**'*\n\nDe woorden tussen de aanhalingstekens zijn precies wat mama zei.\n\n**Toets-stappenplan voor directe rede**:\n1. Wie zegt iets? Bijv. 'Mama zegt'.\n2. **Dubbele punt** (:) na 'zegt' / 'zei' / 'roept'.\n3. **Aanhalingsteken openen** (\").\n4. Hoofdletter aan het begin van wat hij/zij zegt.\n5. Leesteken aan eind van het gezegde (binnen aanhalingstekens).\n6. **Aanhalingsteken sluiten** (\").\n\n**Voorbeeld goed**:\n*'Tom roept: \"Pas op!\"'*\n• Komma/dubbele punt na 'roept': → ':' (dubbele punt is standaard).\n• Hoofdletter bij 'Pas'.\n• Uitroepteken binnen aanhalingstekens.\n\n**In het echt zie je vaak deze 3 varianten**:\n• \"Hier de tekst.\" *(Engels stijl)*\n• 'Hier de tekst.' *(NL informeel)*\n• „Hier de tekst.\" *(NL formeel, in boeken)*\n\nBij de toets is de eerste meestal goed. Wat belangrijk is: **begin én eind hetzelfde type** aanhalingsteken.\n\n**Veel-voorkomende fout**:\n• Aanhalingstekens vergeten te sluiten.\n• Geen dubbele punt vóór de aanhaling.\n• Geen hoofdletter bij 1e woord van de aanhaling.\n• Leesteken (.!?) buiten de aanhalingstekens i.p.v. binnen.",
+      "**Aanhalingstekens** zijn de tekens '' of \"\" — ze geven aan **wat iemand zegt**.\n\n**Voorbeeld**:\n*'Mama zei: **\"Ga je tanden poetsen.\"**'*\n\nDe woorden tussen de aanhalingstekens zijn precies wat mama zei.\n\n**Toets-stappenplan voor directe rede**:\n1. Wie zegt iets? Bijv. 'Mama zegt'.\n2. **Dubbele punt** (:) na 'zegt' / 'zei' / 'roept'.\n3. **Aanhalingsteken openen** (\").\n4. Hoofdletter aan het begin van wat hij/zij zegt.\n5. Leesteken aan eind van het gezegde (binnen aanhalingstekens).\n6. **Aanhalingsteken sluiten** (\").\n\n**Voorbeeld goed**:\n*'Tom roept: \"Pas op!\"'*\n• Komma/dubbele punt na 'roept': → ':' (dubbele punt is standaard).\n• Hoofdletter bij 'Pas'.\n• Uitroepteken binnen aanhalingstekens.\n\n**In het echt zie je vaak deze 3 varianten**:\n• \"Hier de tekst.\" *(Engelse stijl)*\n• 'Hier de tekst.' *(NL informeel)*\n• „Hier de tekst.\" *(NL formeel, in boeken)*\n\nBij de toets is de eerste meestal goed. Wat belangrijk is: **begin én eind hetzelfde type** aanhalingsteken.\n\n**Veel-voorkomende fout**:\n• Aanhalingstekens vergeten te sluiten.\n• Geen dubbele punt vóór de aanhaling.\n• Geen hoofdletter bij 1e woord van de aanhaling.\n• Leesteken (.!?) buiten de aanhalingstekens i.p.v. binnen.",
     checks: [
       {
         q: "Welke schrijfwijze is **correct**?",
@@ -296,7 +296,7 @@ const steps = [
       },
       {
         q: "Waar staat het **uitroepteken** bij: *'Tom roept: \"Pas op!\"'*?",
-        options: ["Binnen aanhalingstekens", "Buiten aanhalingstekens", "Vóór 'zei'", "Niet nodig"],
+        options: ["Binnen aanhalingstekens", "Buiten aanhalingstekens", "Vóór 'roept'", "Niet nodig"],
         answer: 0,
         wrongHints: [null, "Niet juist — leesteken bij wat gezegd wordt.", "Niet vóór.", "Wél nodig — bij uitroep altijd !."],
       },
@@ -314,9 +314,9 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Mama zei: \"Kom maar mee.\" — netjes opgebouwd." }],
           basiskennis: [{ onderwerp: "5 onderdelen", uitleg: "Hoofdletter / dubbele punt / aanhalen / hoofdletter / leesteken." }],
           niveaus: {
-            basis: "Mama zei: \"Kom maar mee.\".",
-            simpeler: "5 dingen nodig: Hoofdletter / dubbele punt / aanhalingstekens / hoofdletter / leesteken binnen. Antwoord A heeft alles.",
-            nogSimpeler: "Truc: Wie zei : \"Inhoud .\" — 5 dingen op rij. Antwoord A = correct.",
+            basis: "Mama zei: \"Kom maar mee.\"",
+            simpeler: "5 dingen nodig: Hoofdletter / dubbele punt / aanhalingstekens / hoofdletter / leesteken binnen. Het goede antwoord heeft alles.",
+            nogSimpeler: "Truc: Wie zei : \"Inhoud .\" — 5 dingen op rij.",
           },
         },
       },
@@ -370,7 +370,7 @@ const steps = [
       { q: "Welk **leesteken** voor een uitroep?", options: ["!","?",".",","], answer: 0, wrongHints: [null, "Vraag.", "Mededeling.", "Niet einde."] },
       { q: "Wanneer **hoofdletter** in midden van zin?", options: ["Bij namen (van personen/plaatsen)","Altijd","Nooit","Alleen na komma"], answer: 0, wrongHints: [null, "Niet altijd.", "Wel soms.", "Niet alleen daar."] },
       { q: "Welke zin is **fout**?", options: ["mijn naam is anna.","Mijn naam is Anna.","Wat heet jij?","Hallo!"], answer: 0, wrongHints: [null, "Deze klopt qua hoofdletters. Welke zin mist een hoofdletter aan het begin?", "Hoofdletter én vraagteken zitten goed. Zoek de zin zónder hoofdletter.", "Deze is goed. Welke zin begint niet met een hoofdletter?"] },
-      { q: "Een **dubbele punt (:)** komt voor?", options: ["Een opsomming of citaat","Vraag","Einde","Komma's"], answer: 0, wrongHints: [null, "Vraagteken.", "Punt.", "Niet."] },
+      { q: "Een **dubbele punt (:)** zet je vóór?", options: ["Een opsomming of citaat","Vraag","Einde","Komma's"], answer: 0, wrongHints: [null, "Vraagteken.", "Punt.", "Niet."] },
       { q: "Een **puntkomma (;)** verbindt?", options: ["Twee verwante zinnen","Een opsomming","Niets","Vraag en antwoord"], answer: 0, wrongHints: [null, "Komma's doen dat.", "Wel functie.", "Niet."] },
       { q: "Welke zin heeft **goede aanhalingstekens**?", options: ["Hij zei: \"Kom!\"","Hij zei: Kom!","\"Hij zei kom!\"","Hij zei \"kom!"], answer: 0, wrongHints: [null, "Aanhalingstekens missen.", "Aanhalingstekens fout.", "Niet gesloten."] },
       { q: "Welke zin is goed?", options: ["Ik ga naar Amsterdam.","ik ga naar amsterdam.","ik ga naar Amsterdam.","Ik ga naar amsterdam."], answer: 0, wrongHints: [null, "Geen hoofdletters.", "Begin mist.", "Plaats mist."] },

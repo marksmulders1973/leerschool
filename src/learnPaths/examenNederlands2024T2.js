@@ -107,7 +107,7 @@ const steps = [
         "Overtuigen = mening + actie-oproep. Interview noemt geen oproep om de app te gaan gebruiken.",
         "Overtuigen vraagt MENING. Interview is feitelijk + chronologisch, geen pleidooi.",
       ],
-      explanation: "Interview-tekst over hoe Flitsmeister zich ONTWIKKELDE — van flitserlijst naar volledige app. Chronologisch + feitelijk = informeren. Specifiek: VERANDERINGEN die het bedrijf doorging.",
+      explanation: "Interview-tekst over hoe Flitsmeister zich ONTWIKKELDE — van flitserlijst naar volledige app. Chronologisch + feitelijk = informeren. Specifiek: VERANDERINGEN die het bedrijf doormaakte.",
       examenBron: BRON_LABEL(9),
       bronLink: BRON_LINK,
       bronTekst: tekst1,
@@ -158,7 +158,7 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "informeren over X — precisie — kern" },
       ],
       uitlegPad: compact(
-        "Bij doel-vragen: kijk welke optie ALLE alineas dekt. Tekst combineert onderzoek + opinie van jongeren = 'onderzoek wat jongeren VAN spelfouten VINDEN'. Optie C dekt zowel onderzoek als mening.",
+        "Bij doel-vragen: kijk welke optie ALLE alinea's dekt. Tekst combineert onderzoek + opinie van jongeren = 'onderzoek wat jongeren VAN spelfouten VINDEN'. Optie C dekt zowel onderzoek als mening.",
         {
           basis: "Onderzoek + mening jongeren = optie C dekt allebei.",
           simpeler: "Wat zit ER ALLEMAAL in? Onderzoek + opinie. C zegt dat.",
@@ -247,7 +247,7 @@ const steps = [
           nogSimpeler: "Via Independer",
         },
         [
-          { woord: "call-to-action", uitleg: "De expliciete oproep in een advertentie wat je moet doen." },
+          { woord: "call-to-action", uitleg: "De expliciete oproep in een advertentie om iets te doen." },
         ],
       ),
     }],

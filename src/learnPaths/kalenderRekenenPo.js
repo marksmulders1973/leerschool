@@ -128,7 +128,7 @@ const steps = [
   {
     title: "Dagen tellen — vooruit en achteruit",
     explanation:
-      "De toets vraagt vaak: *'Wat is de dag X dagen na DATUM?'* of *'X dagen geleden was DATUM'*.\n\n**Stappenplan — vooruit tellen (na)**:\n1. Schrijf de start-datum op.\n2. Tel zo veel mogelijk **hele weken** (7 dagen) — verschuif de datum gewoon, dag-naam blijft hetzelfde.\n3. Tel de resterende dagen één voor één.\n\n**Voorbeeld**: 'Wat is 10 dagen na **donderdag 5 maart**?'\n• 10 dagen = **7 + 3 dagen**.\n• Vrijdag 5 maart + 1 week = vrijdag 12 maart.\n• 12 maart + 3 dagen = za 13, zo 14, **ma 15 maart**.\n• Antwoord: **maandag 15 maart**.\n\n**Stappenplan — achteruit tellen (geleden)**:\nZelfde, maar terug in plaats van vooruit.\n\n**Voorbeeld**: '14 dagen geleden was woensdag 20 mei. Welke dag is **vandaag** = wat als jij toen al wist het is 'vandaag 14 dagen later'?'* Beter: 'Wat is 14 dagen NA woensdag 20 mei?'\n• 14 dagen = 2 weken.\n• Datum + 14 = 3 juni. Dag-naam blijft **woensdag** *(want hele weken)*.\n• Antwoord: woensdag 3 juni.\n\n**Toets-truc — dag-naam berekenen**:\n• **+7 dagen = zelfde dag-naam** (dezelfde dag van de week).\n• **+1 dag** = volgende dag.\n• **+14 dagen** = ook zelfde dag.\n• **+21 dagen** = zelfde dag.\n\nElk veelvoud van 7 → dezelfde dag-naam.\n\n**Veel-voorkomende fout**:\n• Vergeten dat een maand niet altijd 30 of 31 heeft.\n• Vergeten dat februari 28 of 29 dagen heeft.\n• Verwarring tussen 'na' en 'geleden'.",
+      "De toets vraagt vaak: *'Wat is de dag X dagen na DATUM?'* of *'X dagen geleden was DATUM'*.\n\n**Stappenplan — vooruit tellen (na)**:\n1. Schrijf de start-datum op.\n2. Tel zo veel mogelijk **hele weken** (7 dagen) — verschuif de datum gewoon, dag-naam blijft hetzelfde.\n3. Tel de resterende dagen één voor één.\n\n**Voorbeeld**: 'Wat is 10 dagen na **donderdag 5 maart**?'\n• 10 dagen = **7 + 3 dagen**.\n• Donderdag 5 maart + 1 week = donderdag 12 maart.\n• 12 maart + 3 dagen = vr 13, za 14, **zo 15 maart**.\n• Antwoord: **zondag 15 maart**.\n\n**Stappenplan — achteruit tellen (geleden)**:\nZelfde, maar terug in plaats van vooruit.\n\n**Voorbeeld**: 'Vandaag is woensdag 3 juni. Welke datum was het **14 dagen geleden**?'\n• 14 dagen = 2 weken.\n• Datum − 14 = 20 mei. Dag-naam blijft **woensdag** *(want hele weken)*.\n• Antwoord: woensdag 20 mei.\n\n**Toets-truc — dag-naam berekenen**:\n• **+7 dagen = zelfde dag-naam** (dezelfde dag van de week).\n• **+1 dag** = volgende dag.\n• **+14 dagen** = ook zelfde dag.\n• **+21 dagen** = zelfde dag.\n\nElk veelvoud van 7 → dezelfde dag-naam.\n\n**Veel-voorkomende fout**:\n• Vergeten dat een maand niet altijd 30 of 31 heeft.\n• Vergeten dat februari 28 of 29 dagen heeft.\n• Verwarring tussen 'na' en 'geleden'.",
     checks: [
       {
         q: "**7 dagen na maandag** is welke dag?",
@@ -298,7 +298,7 @@ const steps = [
         q: "Joost geboren in **2014**. Lisa is **3 jaar ouder**. Lisa geboren in?",
         options: ["2011", "2017", "2014", "2016"],
         answer: 0,
-        wrongHints: [null, "Verkeerde richting — 3 jaar ouder = eerder geboren.", "Same year.", "Verkeerde richting."],
+        wrongHints: [null, "Verkeerde richting — 3 jaar ouder = eerder geboren.", "Zelfde jaar — dan zijn ze even oud.", "Verkeerde richting."],
       },
       {
         q: "**Tante** wordt **40** op **15 mei 2026**. Geboortejaar?",
@@ -339,7 +339,7 @@ const steps = [
         q: "**Vandaag is dinsdag**. Wat is **3 weken later**?",
         options: ["Dinsdag", "Vrijdag", "Zaterdag", "Maandag"],
         answer: 0,
-        wrongHints: [null, "Dat is 3 dagen later, niet 3 weken.", "Niet dat veel later.", "1 dag eerder."],
+        wrongHints: [null, "Dat is 3 dagen later, niet 3 weken.", "Niet zoveel later.", "1 dag eerder."],
       },
       {
         q: "**Mark wordt 12 op 5 augustus 2026**. Wanneer geboren?",
@@ -356,7 +356,7 @@ const steps = [
           stappen: [
             { titel: "Let op de vraag — 'tot' vs 't/m'", tekst: "Belangrijk verschil in toetsvragen:\n• **'tot'** = einddag NIET meetellen\n• **'t/m' (tot en met)** = einddag WEL meetellen\nHier staat 'tot' → 10 juli zelf telt niet mee." },
             { titel: "Reken: 10 juni → 10 juli", tekst: "Van 10 juni tot 10 juli is precies **1 maand**. Juni heeft **30 dagen**. Dus 30 dagen tussen 10 juni en 10 juli (10 juli niet meegerekend)." },
-            { titel: "Optellen-methode (check)", tekst: "Van 10 juni tot 30 juni = 30 − 10 = **20 dagen** (juni klaar).\nVan 1 juli tot 10 juli (10 juli niet mee) = **9 dagen**.\nTotaal: 20 + 9 = 29... \nMaar denk goed na: 10 juni telt mee als startpunt — niet als 'verstreken dag'. Vanaf 10 juni: 20 dagen later = 30 juni. Daarna nog 10 dagen = 10 juli. Totaal: **30 dagen**." },
+            { titel: "Optellen-methode (check)", tekst: "Van 10 juni tot 30 juni = 30 − 10 = **20 dagen**.\nVan 30 juni tot 10 juli = **10 dagen**.\nTotaal: 20 + 10 = **30 dagen**.\nLet op: 10 juni is het startpunt, geen 'verstreken dag'." },
           ],
           woorden: [
             { woord: "tot vs t/m", uitleg: "'tot' = einde NIET inclusief, 't/m' = wel inclusief." },
@@ -394,10 +394,10 @@ const steps = [
       { q: "Welke maand heeft **31 dagen**?", options: ["Januari","Februari","April","September"], answer: 0, wrongHints: [null, "Niet — 28/29.", "Niet — 30.", "Niet — 30."] },
       { q: "**Schrikkeljaar** komt elke?", options: ["4 jaar","2 jaar","10 jaar","100 jaar"], answer: 0, wrongHints: [null, "Te vaak.", "Te zelden.", "Niet primair."] },
       { q: "Hoeveel **weken** in 1 jaar (ongeveer)?", options: ["52","12","100","30"], answer: 0, wrongHints: [null, "Dat is maanden.", "Niet.", "Niet."] },
-      { q: "Welke dag komt **na vrijdag**?", options: ["Zaterdag","Donderdag","Zondag","Maandag"], answer: 0, wrongHints: [null, "Niet — daarvóór.", "Niet — dag erna 2.", "Niet."] },
-      { q: "Geboren 2014, hoe oud in 2026?", options: ["12","11","13","10"], answer: 0, wrongHints: [null, "Niet — verjaardag al gehad.", "Te oud.", "Te jong."] },
+      { q: "Welke dag komt **na vrijdag**?", options: ["Zaterdag","Donderdag","Zondag","Maandag"], answer: 0, wrongHints: [null, "Niet — daarvóór.", "Niet — dat is 2 dagen erna.", "Niet."] },
+      { q: "Geboren 2014, hoe oud in 2026 (na de verjaardag)?", options: ["12","11","13","10"], answer: 0, wrongHints: [null, "Niet — verjaardag al gehad.", "Te oud.", "Te jong."] },
       { q: "**Koningsdag** is op?", options: ["27 april","30 april","5 mei","30 maart"], answer: 0, wrongHints: [null, "Vroegere Koninginnedag.", "Bevrijdingsdag.", "Niet."] },
-      { q: "**Bevrijdingsdag** is op?", options: ["5 mei","4 mei","27 april","31 december"], answer: 0, wrongHints: [null, "Dodenherdenking.", "Koningsdag.", "Oudjaar."] },
+      { q: "**Bevrijdingsdag** is op?", options: ["5 mei","4 mei","27 april","31 december"], answer: 0, wrongHints: [null, "Dodenherdenking.", "Koningsdag.", "Oudejaarsdag."] },
       { q: "**Dodenherdenking** is op?", options: ["4 mei","5 mei","11 nov","2 nov"], answer: 0, wrongHints: [null, "Bevrijding.", "Wapenstilstand WO1.", "Niet."] },
       { q: "Hoeveel **dagen** in een week?", options: ["7","5","10","6"], answer: 0, wrongHints: [null, "Werkweek.", "Niet.", "Niet."] },
       { q: "Een **kwartaal** heeft hoeveel maanden?", options: ["3","4","6","12"], answer: 0, wrongHints: [null, "Niet.", "Half jaar.", "Heel jaar."] },

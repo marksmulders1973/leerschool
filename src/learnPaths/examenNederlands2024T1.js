@@ -79,11 +79,11 @@ const steps = [
         "Deelonderwerp = wat dit BLOK behandelt (niet de hele tekst). Truc: lees alinea 1 + alinea 5 — wat hebben ze gemeen? Hier: kust verdwijnt + overheid doet weinig. Rode draad = TERUGTREKKEN van kust.",
         {
           basis: "Alinea 1-5 = kust trekt terug.",
-          simpeler: "Wat is in al die alineas hetzelfde? Kust wordt minder.",
+          simpeler: "Wat is in al die alinea's hetzelfde? Kust wordt minder.",
           nogSimpeler: "Terugtrekkende kust",
         },
         [
-          { woord: "deelonderwerp", uitleg: "Het sub-thema dat één blok alineas behandelt." },
+          { woord: "deelonderwerp", uitleg: "Het sub-thema dat één blok alinea's behandelt." },
           { woord: "erosie", uitleg: "Het wegspoelen of afbrokkelen van land door water of wind." },
         ],
       ),
@@ -104,7 +104,7 @@ const steps = [
       answer: 3,
       wrongHints: [
         "Te smal + emotioneel — tekst gaat niet vooral over 'geschiedenis verliezen' maar over keuzes.",
-        "Te eenzijdig — tekst geeft GEEN moetes ('er moeten maatregelen'), maar stelt VRAAG ('wat verdient bescherming?').",
+        "Te eenzijdig — tekst geeft GEEN opdracht ('er moeten maatregelen'), maar stelt VRAAG ('wat verdient bescherming?').",
         "Te smal — Britse-vs-Nederlandse vergelijking is 1 detail, niet de kerngedachte.",
         null,
       ],
@@ -118,7 +118,7 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "kerngedachte vinden — kern" },
       ],
       uitlegPad: compact(
-        "Hoofdgedachte = wat de schrijver wil ZEGGEN met de hele tekst (in 1 zin). Truc: kijk naar slot + alinea-functies. Tekst eindigt met OPEN VRAAG ('wat moet bescherming?'), dus hoofdgedachte bevat OOK die vraag.",
+        "Hoofdgedachte = wat de schrijver wil ZEGGEN met de hele tekst (in 1 zin). Truc: kijk naar slot + alinea-functies. Tekst eindigt met OPEN VRAAG ('wat verdient bescherming?'), dus hoofdgedachte bevat OOK die vraag.",
         {
           basis: "Slot stelt vraag — hoofdgedachte ook.",
           simpeler: "Hoofdgedachte = de KERN-boodschap. Hier: erosie + keuze maken.",
@@ -190,7 +190,7 @@ const steps = [
         "Informeren = lezer iets LEREN. Hier wil de advertentie ACTIE: kijk op de site. = activeren, niet informeren.",
         "Te smal — informeren over BESTAAN is geen activatie. De advertentie WIL dat je actie onderneemt.",
       ],
-      explanation: "Advertentie = ALMOST ALWAYS activeren (oproep tot actie). Hier: 'Kijk op cultuurfonds.nl/nalaten of vraag onze brochure aan.' Concrete oproep.",
+      explanation: "Advertentie = BIJNA ALTIJD activeren (oproep tot actie). Hier: 'Kijk op cultuurfonds.nl/nalaten of vraag onze brochure aan.' Concrete oproep.",
       examenBron: BRON_LABEL(22),
       bronLink: BRON_LINK,
       bronTekst: tekst3,
@@ -273,13 +273,13 @@ const steps = [
         "Te smal — Instagram is 1 van de apps. Tekst noemt ook WhatsApp + Facebook.",
         null,
       ],
-      explanation: "Rode draad door alle alineas = verslavings-mechanismen + cijfers gebruik + 97 minuten/dag + normalisatie. Storing was alleen aanleiding. = verslaving aan SOCIALE MEDIA (niet 1 platform).",
+      explanation: "Rode draad door alle alinea's = verslavings-mechanismen + cijfers gebruik + 97 minuten/dag + normalisatie. Storing was alleen aanleiding. = verslaving aan SOCIALE MEDIA (niet 1 platform).",
       examenBron: BRON_LABEL(30),
       bronLink: BRON_LINK,
       bronTekst: tekst4,
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: [
-        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "hoofdonderwerp = rode draad ALLE alineas, niet 1 detail" },
+        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "hoofdonderwerp = rode draad ALLE alinea's, niet 1 detail" },
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "aanleiding vs hoofdonderwerp scheiden — kern" },
       ],
       uitlegPad: compact(
@@ -290,7 +290,7 @@ const steps = [
           nogSimpeler: "Verslaving SM",
         },
         [
-          { woord: "hoofdonderwerp", uitleg: "Het centrale thema dat door ALLE alineas loopt." },
+          { woord: "hoofdonderwerp", uitleg: "Het centrale thema dat door ALLE alinea's loopt." },
           { woord: "aanleiding", uitleg: "De gebeurtenis die de schrijver het begin gaf — vaak niet het hoofdthema." },
         ],
       ),

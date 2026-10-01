@@ -25,7 +25,7 @@ const steps = [
       "• **Prijs van meerdere stuks** = aantal × prijs per stuk.\n" +
       "• **Totaalbedrag** = alles bij elkaar opgeteld.\n" +
       "• **Wisselgeld** = wat je betaalt − het totaalbedrag.\n" +
-      "Soms staat er **BTW** (belasting toegevoegde waarde) op de bon: dat is belasting die al in de prijs zit.",
+      "Soms staat er **BTW** (belasting over de toegevoegde waarde) op de bon: dat is belasting die al in de prijs zit.",
     checks: [
       {
         q: "Je koopt 3 broden van €1,20 per stuk. Hoeveel kost het brood samen?",
@@ -61,7 +61,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Het maakt iets juist niet goedkoper.", "Het is geen extraatje voor het personeel.", "Dat is iets anders (geld terug op flessen)."],
         uitlegPad: {
-          stappen: [{ titel: "BTW = belasting toegevoegde waarde", tekst: "BTW is belasting die de overheid heft. Die zit al in de prijs die je betaalt." }],
+          stappen: [{ titel: "BTW = belasting over de toegevoegde waarde", tekst: "BTW is belasting die de overheid heft. Die zit al in de prijs die je betaalt." }],
           niveaus: {
             basis: "BTW is belasting die al in de prijs verwerkt zit.",
             simpeler: "Is BTW een korting of juist belasting? Het is belasting.",
@@ -378,7 +378,7 @@ const steps = [
         q: "Een boek kost €30. Je krijgt 10% korting, maar betaalt €2 verzendkosten. Wat betaal je in totaal?",
         options: ["€29", "€27", "€32", "€28"],
         answer: 0,
-        wrongHints: [null, "Vergeet de verzendkosten niet erbij op te tellen.", "Dat is zónder verzendkosten.", "Je vergat de korting eraf te halen."],
+        wrongHints: [null, "Vergeet de verzendkosten niet erbij op te tellen.", "Je vergat de korting eraf te halen.", "Reken de korting nog eens na: 10% van €30."],
         uitlegPad: {
           stappen: [{ titel: "Korting eraf, verzending erbij", tekst: "10% van €30 = €3 korting → €27. Dan €2 verzendkosten erbij: €27 + €2 = €29." }],
           niveaus: {

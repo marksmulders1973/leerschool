@@ -16,7 +16,7 @@ const steps = [
     title: "Breuk en kommagetal",
     explanation:
       "Een **deel** kun je op drie manieren opschrijven: als **breuk**, als **kommagetal** en als **procent**. Ze betekenen hetzelfde.\n\n" +
-      "**Handige om uit je hoofd te kennen:**\n" +
+      "**Handig om uit je hoofd te kennen:**\n" +
       "| Breuk | Kommagetal | Procent |\n" +
       "|---|---|---|\n" +
       "| ½ | 0,5 | 50% |\n" +
@@ -92,9 +92,9 @@ const steps = [
       },
       {
         q: "Wat is 1/10 als kommagetal?",
-        options: ["0,1", "0,01", "1,0", "0,10 0"],
+        options: ["0,1", "0,01", "1,0", "0,001"],
         answer: 0,
-        wrongHints: [null, "Dat is 1/100.", "Dat is een heel getal.", "Dat is geen geldig kommagetal."],
+        wrongHints: [null, "Dat is 1/100.", "Dat is een heel getal.", "Dat is 1/1000 — veel te klein."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent tiende", tekst: "1/10 betekent: het geheel is verdeeld in 10 gelijke stukjes, en jij hebt er 1." },
@@ -136,7 +136,7 @@ const steps = [
         q: "Wat is 0,75 als breuk (zo eenvoudig mogelijk)?",
         options: ["¾", "7/5", "75/10", "3/10"],
         answer: 0,
-        wrongHints: [null, "Dat is meer dan 1.", "Dat klopt niet vereenvoudigd — denk aan kwarten.", "Dat is 0,3, niet 0,75."],
+        wrongHints: [null, "Dat is meer dan 1.", "Dat is 7,5 — veel te groot. Denk aan kwarten.", "Dat is 0,3, niet 0,75."],
         uitlegPad: {
           stappen: [
             { titel: "Schrijf als honderdsten", tekst: "0,75 heeft twee cijfers achter de komma, dus dat zijn 75 honderdsten: 75/100." },
@@ -268,7 +268,7 @@ const steps = [
           niveaus: {
             basis: "0,07 × 100 = 7%.",
             simpeler: "Komma 2 naar rechts: 0,07 → 07 → 7.",
-            nogSimpeler: "Zijn dat twee nullen achter de komma?",
+            nogSimpeler: "Hoeveel cijfers staan er achter de komma?",
           },
         },
       },
@@ -307,7 +307,7 @@ const steps = [
       "• ¾ = 75%\n" +
       "• 1/5 = 20%\n" +
       "• 1/10 = 10%\n\n" +
-      "**Truc:** ga via het kommagetal als je het niet zo weet. ¼ → 0,25 → 25%.",
+      "**Truc:** ga via het kommagetal als je het niet meteen weet. ¼ → 0,25 → 25%.",
     checks: [
       {
         q: "Wat is ¼ in procent?",

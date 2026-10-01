@@ -72,7 +72,7 @@ const steps = [
         },
       },
       {
-        q: "Op welke volgorde staat de inhoudsopgave?",
+        q: "In welke volgorde staat de inhoudsopgave?",
         options: ["op volgorde van het boek (hoofdstuk 1, 2, 3…)", "op alfabet", "van duur naar goedkoop", "willekeurig"],
         answer: 0,
         wrongHints: [null, "Alfabetisch is het register, niet de inhoudsopgave.", "Een boek heeft geen prijs-volgorde.", "Het is juist netjes op hoofdstuk-volgorde."],
@@ -182,7 +182,7 @@ const steps = [
         },
       },
       {
-        q: "Op welke volgorde staat een register?",
+        q: "In welke volgorde staat een register?",
         options: ["op alfabet", "op boekvolgorde", "op paginanummer", "op grootte"],
         answer: 0,
         wrongHints: [null, "Boekvolgorde is de inhoudsopgave.", "Het is geordend op onderwerp-naam, niet op pagina.", "Grootte speelt geen rol."],
@@ -389,7 +389,7 @@ const steps = [
         },
       },
       {
-        q: "Waar staat het register en op welke volgorde?",
+        q: "Waar staat het register en in welke volgorde?",
         options: ["achteraan, op alfabet", "vooraan, op alfabet", "achteraan, op boekvolgorde", "vooraan, op boekvolgorde"],
         answer: 0,
         wrongHints: [null, "Vooraan staat de inhoudsopgave.", "Het register is niet op boekvolgorde.", "Vooraan + boekvolgorde is juist de inhoudsopgave."],

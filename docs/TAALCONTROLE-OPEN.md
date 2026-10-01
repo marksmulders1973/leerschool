@@ -1,0 +1,27 @@
+# Verdachte gemarkeerde antwoorden (taalcontrole 1 okt)
+- sampleQuestions L880: "Het IJ" als grens Noord-/Zuid-Holland — IJ ligt helemaal in NH.
+- sampleQuestions L1088: Gotthardtunnel ligt helemaal in Zwitserland (vraag herschrijven).
+- sampleQuestions L1188: "Maagdenburger Confessie" → beter index 1 "religieus document".
+- sampleQuestions L874: Rijn = grensrivier met Duitsland (twijfel).
+- sampleQuestions L861: Vecht/Utrecht vs Rijn (dubbel goed?).
+- sampleQuestions L1361: lente vs zomer dubbelzinnig.
+- langeToetsTekstenG8Po: raamvraag citeert zin die niet in Sanne-verhaal staat.
+- topics.js:502: maandag 8 mei + 12 dagen = zaterdag 20 mei (index 1), gemarkeerd vrijdag → ZEKER FOUT, herstellen.
+- dierenSeizoenenNatuur.js:642: zomer als droogste seizoen (NL: lente vaak droogst) — twijfel.
+- dierenSeizoenenNatuur.js:645 vs 619: knoppen lente/herfst tegenstrijdig.
+- nogSimpeler = "A." placeholders (Duits, elektromagnetisme).
+- sampleQuestions ~2196 Frans passief: gemarkeerd "Être + infinitief", goed = index 0 "Être + participe passé" → ZEKER FOUT.
+- sampleQuestions ~3092 marktmacht: gemarkeerd aandelen..., goed = index 0 → controleren.
+- sampleQuestions ~3697: fietsen op stoep <12 jaar — geen wettelijke uitzondering → vraag herzien.
+- sampleQuestions ~3875 bv./bijv. dubbel goed; ~3915 "met u mee" dubbel goed.
+- algebraVergelijkingenHavoVwo.js:278-284 sportclub-stelsel: getallen kloppen niet (s=65/7) → vraag-getallen aanpassen zodat 8 klopt.
+- argumentatieleer griepprik = eigenlijk post hoc, niet overhaaste generalisatie (twijfel).
+- begrijpendLezenStrategie: "Onderzoek Universiteit Leiden ~1 jaar voorsprong" lijkt verzonnen → verwijderen/afzwakken.
+- bedrijfseconomie "€9,99 verkoopt 20-30% beter" zonder bron → afzwakken.
+- bekendeNederlandersPo.js:378: "premier 2026 = Dick Schoof" waarschijnlijk verouderd (na verkiezingen okt 2025) → Mark/actueel checken.
+- continentenWereldPo:399 tijdsverschil Sydney aangepast; cseSchrijfvaardigheidEngels:327 accepteert yours sincerely bij onbekende naam (tegenstrijdig).
+- 9% btw op dieren mogelijk ook in Mijn Park-bonnetje-code (dieren = 21%).
+- examenGeschiedenis2022T1 v17: gemarkeerd terreur+strafkampen, bron 8 wijst op indoctrinatie → tegen officieel correctievoorschrift checken.
+- Kapotte tekens in examentekst (importfout, herstel = authenticiteit terug): examenGeschiedenis2025T1 v16 M'nchen/Groot-Brittanni', v35 optie 0 afgekapt; examenEconomie2024T1 v30 Itali'.
+- examenEngels2024T1: intro 30 vragen maar 8 stappen, hoofdstukken D-J wijzen naar niet-bestaande stappen.
+- examenBiologie2025T2 v15 meerlingen 1% vs ~1,6% CBS → correctievoorschrift.

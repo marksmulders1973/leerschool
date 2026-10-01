@@ -309,7 +309,7 @@ const steps = [
   {
     title: "Mediaan — het middelste getal",
     explanation:
-      "De **mediaan** is het **middelste getal** als je alles op volgorde zet — van klein naar groot.\n\n**Stappenplan**:\n1. Zet de getallen op **volgorde** *(klein → groot)*.\n2. Pak het **middelste** getal.\n\n**Voorbeeld 1 — oneven aantal**:\nGetallen: 3, 8, 5, 9, 7.\n• Op volgorde: 3, 5, **7**, 8, 9.\n• Middelste *(positie 3 van 5)*: **7**.\n• Mediaan = **7**.\n\n**Voorbeeld 2 — even aantal**:\nGetallen: 4, 6, 8, 10 *(4 getallen)*.\n• Op volgorde: 4, 6, 8, 10.\n• Geen ÉÉN middelste — pak de **2 middelste** en neem hun gemiddelde.\n• Middelste 2: 6 en 8. Gemiddelde = (6+8) ÷ 2 = **7**.\n• Mediaan = **7**.\n\n**Toets-truc**:\n• **Oneven** aantal getallen (3, 5, 7, ...) → er is 1 middelste getal.\n• **Even** aantal getallen (2, 4, 6, ...) → neem gemiddelde van de 2 middelste.\n\n**Mediaan vs gemiddelde — wat is het verschil?**:\n• Gemiddelde gebruikt **alle getallen** (en kan beïnvloed worden door extreme uitschieters).\n• Mediaan kijkt alleen naar het **midden**. Een rare uitschieter heeft minder effect.\n\nVoorbeeld: cijfers 6, 7, 7, 7, **2** *(2 = iemand was ziek)*.\n• Gemiddelde = (6+7+7+7+2) ÷ 5 = 29 ÷ 5 = **5,8**.\n• Mediaan = 6 op volgorde = 2, 6, **7**, 7, 7 → 7.\n• Mediaan (7) geeft een beter beeld van 'normale' klas dan gemiddelde (5,8).",
+      "De **mediaan** is het **middelste getal** als je alles op volgorde zet — van klein naar groot.\n\n**Stappenplan**:\n1. Zet de getallen op **volgorde** *(klein → groot)*.\n2. Pak het **middelste** getal.\n\n**Voorbeeld 1 — oneven aantal**:\nGetallen: 3, 8, 5, 9, 7.\n• Op volgorde: 3, 5, **7**, 8, 9.\n• Middelste *(positie 3 van 5)*: **7**.\n• Mediaan = **7**.\n\n**Voorbeeld 2 — even aantal**:\nGetallen: 4, 6, 8, 10 *(4 getallen)*.\n• Op volgorde: 4, 6, 8, 10.\n• Geen ÉÉN middelste — pak de **2 middelste** en neem hun gemiddelde.\n• Middelste 2: 6 en 8. Gemiddelde = (6+8) ÷ 2 = **7**.\n• Mediaan = **7**.\n\n**Toets-truc**:\n• **Oneven** aantal getallen (3, 5, 7, ...) → er is 1 middelste getal.\n• **Even** aantal getallen (2, 4, 6, ...) → neem gemiddelde van de 2 middelste.\n\n**Mediaan vs gemiddelde — wat is het verschil?**:\n• Gemiddelde gebruikt **alle getallen** (en kan beïnvloed worden door extreme uitschieters).\n• Mediaan kijkt alleen naar het **midden**. Een rare uitschieter heeft minder effect.\n\nVoorbeeld: cijfers 6, 7, 7, 7, **2** *(2 = iemand was ziek)*.\n• Gemiddelde = (6+7+7+7+2) ÷ 5 = 29 ÷ 5 = **5,8**.\n• Mediaan: op volgorde 2, 6, **7**, 7, 7 → 7.\n• Mediaan (7) geeft een beter beeld van 'normale' klas dan gemiddelde (5,8).",
     svg: mediaanSvg(),
     checks: [
       {
@@ -448,7 +448,7 @@ const steps = [
       { q: "Modus van 4, 7, 4, 9, 4, 7, 2?", options: ["4","7","9","2"], answer: 0, wrongHints: [null, "2 keer.", "1 keer.", "1 keer."] },
       { q: "Mediaan van 5, 2, 8, 1, 4?", options: ["4","2","8","5"], answer: 0, wrongHints: [null, "Niet zonder sorteren.", "Niet.", "Niet zonder sorteren."] },
       { q: "Mediaan van 4, 6, 8, 10?", options: ["7","6","8","9"], answer: 0, wrongHints: [null, "Een midden.", "Een midden.", "Niet."] },
-      { q: "Gem van 10, 20, 30, 40?", options: ["25","30","100","40"], answer: 0, wrongHints: [null, "Niet — middelpunt klopt.", "Som.", "Max."] },
+      { q: "Gem van 10, 20, 30, 40?", options: ["25","30","100","40"], answer: 0, wrongHints: [null, "Niet — reken (10+20+30+40) ÷ 4.", "Som.", "Max."] },
       { q: "5 toetsen, gemiddelde 7. Som?", options: ["35","12","7","75"], answer: 0, wrongHints: [null, "Niet — som = aantal × gem.", "Gem.", "Te veel."] },
       { q: "Bereik van 12, 5, 18, 9, 3?", options: ["15","18","12","3"], answer: 0, wrongHints: [null, "Max alleen.", "Niet.", "Min alleen."] },
       { q: "Modus van 1,2,3,4,5 (alle 1×)?", options: ["Geen modus","1","5","3"], answer: 0, wrongHints: [null, "Niet — vaakst is niemand.", "Niet.", "Niet."] },
@@ -456,9 +456,9 @@ const steps = [
       { q: "Wanneer is mediaan zinvoller dan gemiddelde?", options: ["Bij uitschieters","Bij weinig getallen","Nooit","Altijd"], answer: 0, wrongHints: [null, "Niet.", "Wel soms.", "Niet altijd."] },
       { q: "Een **uitschieter** is?", options: ["Extreem hoog/laag getal dat van rest afwijkt","Een wedstrijd","Een spel","Niet relevant"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet.", "Wel."] },
       { q: "Welke maat verandert het meest als je 1 grote uitschieter toevoegt?", options: ["Gemiddelde","Mediaan","Modus","Geen"], answer: 0, wrongHints: [null, "Mediaan verschuift maar weinig — de middelste blijft bijna gelijk.", "Modus blijft meestal hetzelfde — vaakste-getal verandert niet vlug.", "Eén van deze maten reageert wél sterk op een uitschieter."] },
-      { q: "5 keer gegooid: 3, 5, 5, 6, 6. Mediaan?", options: ["5","6","4","3"], answer: 0, wrongHints: [null, "2 middelste.", "Te laag.", "Te laag."] },
+      { q: "5 keer gegooid: 3, 5, 5, 6, 6. Mediaan?", options: ["5","6","4","3"], answer: 0, wrongHints: [null, "Te hoog — pak het 3e getal van de 5 (ze staan al op volgorde).", "Te laag.", "Te laag."] },
       { q: "Gem van 4 en 8?", options: ["6","12","4","2"], answer: 0, wrongHints: [null, "Niet — dat is som.", "Klein.", "Niet."] },
-      { q: "Welke verschilt: gem 5, modus 5, mediaan 5 — kan dat?", options: ["Ja — vooral bij symmetrische data","Nooit","Alleen bij 1 getal","Alleen bij 2 getallen"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
+      { q: "Gemiddelde 5, modus 5 én mediaan 5 — kan dat?", options: ["Ja — vooral bij symmetrische data","Nooit","Alleen bij 1 getal","Alleen bij 2 getallen"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
     ],
   },
 ];

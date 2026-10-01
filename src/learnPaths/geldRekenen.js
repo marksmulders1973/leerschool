@@ -60,7 +60,7 @@ const steps = [
         q: "**450 cent** = ?",
         options: ["€ 4,50","€ 0,45","€ 45,00","€ 4,05"],
         answer: 0,
-        wrongHints: [null,"Komma fout — heb je per ongeluk × 100 ipv ÷ 100 gedaan?","Veel te veel — dat is 4500 cent.","5 vergeten meegerekend?"],
+        wrongHints: [null,"Komma fout — heb je per ongeluk × 100 ipv ÷ 100 gedaan?","Veel te veel — dat is 4500 cent.","Let op: 50 cent schrijf je als ,50 — niet als ,05."],
         uitlegPad: {
           stappen: [{ titel: "Cent→euro", tekst: "÷100 = komma 2 plekken naar links. 450 → €4,50." }],
           woorden: [{ woord: "omrekenen", uitleg: "Cent → euro = ÷100." }],
@@ -98,7 +98,7 @@ const steps = [
 
   {
     title: "Optellen en aftrekken met geld",
-    explanation: "Geldsommen werken net als gewone sommen, maar pas op met de **komma**.\n\n**Voorbeelden — optellen**:\n• € 2,50 + € 1,75 = ?\n  - 2,50 + 1,75 — schrijf onder elkaar, zorg dat komma's recht staan.\n  - Eindbedrag: **€ 4,25**.\n\n• € 0,80 + € 0,30 = ?\n  - Cents: 80 + 30 = 110 cent = € 1,10.\n  - Of: 0,80 + 0,30 = **1,10**.\n\n**Voorbeelden — aftrekken**:\n• € 5,00 − € 2,35 = ?\n  - Schrijf onder elkaar: 5,00 − 2,35.\n  - Eindbedrag: **€ 2,65**.\n\n• € 10,00 − € 3,75 = ?\n  - Truc: gebruik 9,99 − 3,75 = 6,24, dan +0,01 = **€ 6,25**.\n\n**Toets-tip**:\n• Schrijf altijd **netjes onder elkaar** met komma's recht.\n• Cento's tellen los kan ook: € 2,75 + € 1,80 → 275 + 180 = 455 cent → **€ 4,55**.",
+    explanation: "Geldsommen werken net als gewone sommen, maar pas op met de **komma**.\n\n**Voorbeelden — optellen**:\n• € 2,50 + € 1,75 = ?\n  - 2,50 + 1,75 — schrijf onder elkaar, zorg dat komma's recht staan.\n  - Eindbedrag: **€ 4,25**.\n\n• € 0,80 + € 0,30 = ?\n  - Cents: 80 + 30 = 110 cent = € 1,10.\n  - Of: 0,80 + 0,30 = **1,10**.\n\n**Voorbeelden — aftrekken**:\n• € 5,00 − € 2,35 = ?\n  - Schrijf onder elkaar: 5,00 − 2,35.\n  - Eindbedrag: **€ 2,65**.\n\n• € 10,00 − € 3,75 = ?\n  - Truc: gebruik 9,99 − 3,75 = 6,24, dan +0,01 = **€ 6,25**.\n\n**Toets-tip**:\n• Schrijf altijd **netjes onder elkaar** met komma's recht.\n• Centen apart tellen kan ook: € 2,75 + € 1,80 → 275 + 180 = 455 cent → **€ 4,55**.",
     checks: [
       {
         q: "**€ 3,40 + € 1,75** = ?",
@@ -169,7 +169,7 @@ const steps = [
             { type: "stap", tekst: "€1,99 + €2,99 = €5 − €0,02 = €4,98." },
             { type: "stap", tekst: "€4,99 + €4,99 + €4,99 = €15 − €0,03 = €14,97." },
           ],
-          basiskennis: [{ onderwerp: "Toets-instinker", uitleg: "Winkel-prijzen zijn vaak X,99 om groter lijkende korting te lijken. Echte verschil is 1 cent." },],
+          basiskennis: [{ onderwerp: "Toets-instinker", uitleg: "Winkelprijzen eindigen vaak op ,99 zodat ze goedkoper lijken. Het echte verschil met het hele bedrag is maar 1 cent." },],
           niveaus: { basis: "€2,99+€4,99=€7,98.", simpeler: "€2,99 ≈ €3. €4,99 ≈ €5. Samen €8. Min 2 cent (twee 'bijna') = €7,98.", nogSimpeler: "€7,98" },
         },
       },
@@ -178,7 +178,7 @@ const steps = [
 
   {
     title: "Wisselgeld berekenen",
-    explanation: "Bij **wisselgeld** krijg je terug = (wat je betaalt) − (wat het kost).\n\n**Voorbeeld**: een ijsje kost € 1,80. Je betaalt met € 5. Wisselgeld?\n• €5,00 − €1,80 = **€3,20**.\n\n**Toets-truc — terug-tellen**:\nJe kunt ook **vooruit tellen** vanaf de prijs.\n• €1,80 → €0,20 erbij → €2,00 *(20 cent)*\n• €2,00 → €3 erbij → €5,00 *(3 euro)*\n• Totaal terug: **€3 + €0,20 = €3,20**.\n\n**Voorbeeld 2**: 3 spullen van € 2,75 betaalt met biljet van € 10:\n• 3 × €2,75 = €8,25.\n• €10 − €8,25 = **€1,75 wisselgeld**.\n\n**Toets-tip**:\nReken altijd met de **gevolgde cijfers** *(een biljet van 5,00 lees je als € 5)*. Schrijf netjes op.",
+    explanation: "Bij **wisselgeld** krijg je terug = (wat je betaalt) − (wat het kost).\n\n**Voorbeeld**: een ijsje kost € 1,80. Je betaalt met € 5. Wisselgeld?\n• €5,00 − €1,80 = **€3,20**.\n\n**Toets-truc — vooruit-tellen**:\nJe kunt ook **vooruit tellen** vanaf de prijs.\n• €1,80 → €0,20 erbij → €2,00 *(20 cent)*\n• €2,00 → €3 erbij → €5,00 *(3 euro)*\n• Totaal terug: **€3 + €0,20 = €3,20**.\n\n**Voorbeeld 2**: 3 spullen van € 2,75, je betaalt met een biljet van € 10:\n• 3 × €2,75 = €8,25.\n• €10 − €8,25 = **€1,75 wisselgeld**.\n\n**Toets-tip**:\nReken altijd met de **juiste bedragen** *(een biljet van 5,00 is gewoon € 5)*. Schrijf netjes op.",
     checks: [
       {
         q: "Een tas kost **€ 24,50**. Je betaalt met **€ 50**. Wisselgeld?",
@@ -247,7 +247,7 @@ const steps = [
           ],
           theorie: "Bij meerdere producten + wisselgeld: stappenplan altijd:\n1. Tel alle producten op = totaalkosten\n2. Trek totaalkosten af van betaalde bedrag = wisselgeld",
           voorbeelden: [
-            { type: "stap", tekst: "Ijsje €1,80 + drinken €2,20 = €4. Betaald €5: wisselgeld €1." },
+            { type: "stap", tekst: "IJsje €1,80 + drinken €2,20 = €4. Betaald €5: wisselgeld €1." },
             { type: "stap", tekst: "Boek €7,95 + pen €2,05 = €10. Betaald €10: wisselgeld €0 precies." },
           ],
           basiskennis: [{ onderwerp: "Niet 1 product vergeten", uitleg: "Bij de Doorstroomtoets staan vaak meerdere producten — lees alles voor je rekent." }],
@@ -259,7 +259,7 @@ const steps = [
 
   {
     title: "Wat is voordeligst? — vergelijken",
-    explanation: "toetsvragen vragen vaak: **welke aanbieding is goedkoper per stuk**?\n\n**Voorbeeld**: chips!\n• A: een zak van **200 g** voor **€ 1,80**.\n• B: een zak van **500 g** voor **€ 4,00**.\n\nWelke is **voordeliger per gram**?\n\n**Aanpak — prijs per eenheid berekenen**:\n• A: 1,80 ÷ 200 = € 0,009 per gram = **0,9 cent per g**.\n• B: 4,00 ÷ 500 = € 0,008 per gram = **0,8 cent per g**.\n\n**Antwoord**: B is goedkoper per gram.\n\n**Toets-truc — vergelijk per 100 g**:\nMakkelijker zonder kommagetallen:\n• A: 200 g voor € 1,80 → 100 g = € 0,90.\n• B: 500 g voor € 4,00 → 100 g = € 0,80.\n• Per 100 g: B is goedkoper.\n\n**Voorbeeld 2 — limonade**:\n• A: 1 L = € 2,40.\n• B: 1,5 L = € 3,30.\n\nPer L:\n• A: € 2,40.\n• B: 3,30 ÷ 1,5 = € 2,20.\n• B is voordeliger.\n\n**Toets-tip**:\nReken altijd **per zelfde eenheid** *(per 100 g, per liter, per stuk)*. Anders vergelijk je appels met peren.",
+    explanation: "Toetsvragen vragen vaak: **welke aanbieding is goedkoper per stuk**?\n\n**Voorbeeld**: chips!\n• A: een zak van **200 g** voor **€ 1,80**.\n• B: een zak van **500 g** voor **€ 4,00**.\n\nWelke is **voordeliger per gram**?\n\n**Aanpak — prijs per eenheid berekenen**:\n• A: 1,80 ÷ 200 = € 0,009 per gram = **0,9 cent per g**.\n• B: 4,00 ÷ 500 = € 0,008 per gram = **0,8 cent per g**.\n\n**Antwoord**: B is goedkoper per gram.\n\n**Toets-truc — vergelijk per 100 g**:\nMakkelijker zonder kommagetallen:\n• A: 200 g voor € 1,80 → 100 g = € 0,90.\n• B: 500 g voor € 4,00 → 100 g = € 0,80.\n• Per 100 g: B is goedkoper.\n\n**Voorbeeld 2 — limonade**:\n• A: 1 L = € 2,40.\n• B: 1,5 L = € 3,30.\n\nPer L:\n• A: € 2,40.\n• B: 3,30 ÷ 1,5 = € 2,20.\n• B is voordeliger.\n\n**Toets-tip**:\nReken altijd **per zelfde eenheid** *(per 100 g, per liter, per stuk)*. Anders vergelijk je appels met peren.",
     checks: [
       {
         q: "Pak A: **6 koekjes voor € 1,20**. Pak B: **10 koekjes voor € 2,40**. Welke is **goedkoper per koekje**?",
@@ -281,13 +281,13 @@ const steps = [
         q: "Pak A: **500 g rijst € 1,50**. Pak B: **1 kg rijst € 2,80**. **Voordeligst**?",
         options: ["B","A","Hetzelfde","Niet vergelijkbaar"],
         answer: 0,
-        wrongHints: [null,"A: 1,50 / 500 = € 0,30/100g. B: 2,80/1000 = € 0,28/100g. B is iets goedkoper.","Niet hetzelfde — reken per 100 g.","Wel — beide is rijst."],
+        wrongHints: [null,"A: €1,50 voor 500 g = € 0,30 per 100 g. B: €2,80 voor 1000 g = € 0,28 per 100 g. B is iets goedkoper.","Niet hetzelfde — reken per 100 g.","Wel — beide is rijst."],
         uitlegPad: {
           stappen: [
             { titel: "Per 100 g", tekst: "A: 500g €1,50 → 100g = €0,30. B: 1000g €2,80 → 100g = €0,28. B goedkoper." },
           ],
           woorden: [{ woord: "per gewicht", uitleg: "Vergelijk altijd per zelfde eenheid (100g, kg, liter)." }],
-          theorie: "Verschillende verpakkingsgrootten? Reken per 100g (of per kg). Ander niet eerlijk vergelijken.",
+          theorie: "Verschillende verpakkingsgrootten? Reken per 100g (of per kg). Anders vergelijk je niet eerlijk.",
           voorbeelden: [{ type: "per-100g", tekst: "A €0,30/100g. B €0,28/100g. B 2 cent goedkoper per 100g." }],
           basiskennis: [{ onderwerp: "kg ≠ g", uitleg: "1 kg = 1000 g. Even omrekenen voor je vergelijkt." }],
           niveaus: { basis: "A €0,30/100g. B €0,28/100g. B wint.", simpeler: "Per 100g vergelijken. A: 500g voor 1,50 → 100g voor 0,30. B: 1000g voor 2,80 → 100g voor 0,28. B 2 cent goedkoper.", nogSimpeler: "B goedkoper" },
@@ -303,10 +303,10 @@ const steps = [
             { titel: "Per stuk", tekst: "A: 2,00÷4=€0,50. B: 2,40÷6=€0,40. B is €0,10 goedkoper per yoghurt." },
           ],
           woorden: [{ woord: "vergelijken", uitleg: "Reken altijd per zelfde eenheid." }],
-          theorie: "Bigger pack ≠ altijd voordeliger — reken NA om te checken.",
+          theorie: "Groter pak ≠ altijd voordeliger — reken NA om te checken.",
           voorbeelden: [{ type: "per-stuk", tekst: "A €0,50/stuk. B €0,40/stuk. B wint." }],
           basiskennis: [{ onderwerp: "Reken altijd na", uitleg: "Niet vertrouwen op intuïtie — reken het uit." }],
-          niveaus: { basis: "B €0,40/stuk. A €0,50/stuk. B wint.", simpeler: "A: €2 voor 4 = €0,50/stuk. B: €2,40 voor 6 = €0,40/stuk. B is goedkoper. = A (= 'B').", nogSimpeler: "B goedkoper" },
+          niveaus: { basis: "B €0,40/stuk. A €0,50/stuk. B wint.", simpeler: "A: €2 voor 4 = €0,50/stuk. B: €2,40 voor 6 = €0,40/stuk. B is goedkoper.", nogSimpeler: "B goedkoper" },
         },
       },
       {
@@ -385,7 +385,7 @@ const steps = [
           theorie: "Reken per zelfde eenheid (paar). Laagste prijs/paar wint.",
           voorbeelden: [{ type: "per-paar", tekst: "A €2/paar. B €1,60/paar. Verschil €0,40 per paar." }],
           basiskennis: [{ onderwerp: "Niet de totaalprijs", uitleg: "B kost meer (€8 vs €6) maar IS goedkoper per paar." }],
-          niveaus: { basis: "B €1,60/paar wint.", simpeler: "A: €6÷3=€2/paar. B: €8÷5=€1,60/paar. B is voordeliger. = A (= 'B').", nogSimpeler: "B" },
+          niveaus: { basis: "B €1,60/paar wint.", simpeler: "A: €6÷3=€2/paar. B: €8÷5=€1,60/paar. B is voordeliger.", nogSimpeler: "B" },
         },
       },
       {
@@ -425,12 +425,12 @@ const steps = [
         q: "Anna spaart **€ 7,50 per week**. Hoeveel heeft ze **na 8 weken** gespaard?",
         options: ["€ 60","€ 56","€ 75","€ 50"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je alleen 8 × €7 gerekend, zonder de 50 cent?", "Geen vermenigvuldigen — dat zou €7,50 × 10 zijn.", "Te weinig — controleer met schatting (8 × €7,50 ≈ 8 × 8 = €64)."],
+        wrongHints: [null, "Te weinig — heb je alleen 8 × €7 gerekend, zonder de 50 cent?", "Dat is €7,50 × 10 — Anna spaart maar 8 weken.", "Te weinig — controleer met schatting (8 × €7,50 ≈ 8 × 8 = €64)."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is de som?", tekst: "Sparen-per-week × aantal weken = totaal. 8 weken × €7,50/week = ?" },
             { titel: "Slim splitsen", tekst: "Splits in 2 sommen die makkelijker zijn:\n• 8 × €7 = €56 (gewone tafel)\n• 8 × €0,50 = €4 (8 halve euro's)\n• Samen: €56 + €4 = **€60**" },
-            { titel: "Of: × 0,50 = ÷ 2", tekst: "Andere truc: €7,50 = €7,50. 8 keer = 8 × 7,50. Reken: 8 × 7 = 56, dan 8 × 0,5 = 4, totaal 60. €60." },
+            { titel: "Of: × 0,50 = ÷ 2", tekst: "Andere truc: 8 × €0,50 = 8 ÷ 2 = €4. En 8 × €7 = €56. Samen €60." },
           ],
           woorden: [
             { woord: "sparen", uitleg: "Geld bewaren ipv uitgeven, vaak om iets te kopen later." },

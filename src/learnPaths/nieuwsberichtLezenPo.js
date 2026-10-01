@@ -224,7 +224,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Lees de zin analyse", tekst: "'De elfjarige Noa' — dat is een persoon = wie. 'Won het NK schaken' — dat is de gebeurtenis = wat. Twee gouden vragen in één zin." },
+            { titel: "Ontleed de zin", tekst: "'De elfjarige Noa' — dat is een persoon = wie. 'Won het NK schaken' — dat is de gebeurtenis = wat. Twee gouden vragen in één zin." },
             { titel: "Wat staat er niet in?", tekst: "De plek (Vissersdam staat erbij als herkomst, niet als locatie van de wedstrijd), de reden en de manier ontbreken. Die staan verderop in het bericht." },
             { titel: "Gebruik dit bij de toets", tekst: "Weet je welke gouden vraag de toets stelt? Kijk dan of het antwoord in de eerste zin staat of dat je verder moet zoeken." },
           ],
@@ -444,7 +444,7 @@ Tip: je hoeft niets uit je hoofd te weten. Terugkijken in de tekst mag altijd �
         wrongHints: [
           null,
           "In maart vond iets anders plaats. Zoek de zin die zegt wanneer de openingsceremonie was.",
-          "Vorig jaar werd de oud toren afgekeurd — maar wanneer werd de nieuwe geopend?",
+          "Vorig jaar werd de oude toren afgekeurd — maar wanneer werd de nieuwe geopend?",
           null,
         ],
         uitlegPad: {
@@ -905,7 +905,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
             { type: "dat-vs-wat", tekst: "'\"Ons dorp is het gezelligste van het land\", zegt de bakker.' Feit: de bakker zei dit. Mening: dat het dorp het gezelligste is." },
           ],
           basiskennis: [
-            { onderwerp: "Bron bij de mening", uitleg: "Een goed nieuwsbericht zet bij elke mening wíé het vindt. Staat er een naam bij een uitspraak? Dan weet je: dit is die persoon zijn of haar kijk erop." },
+            { onderwerp: "Bron bij de mening", uitleg: "Een goed nieuwsbericht zet bij elke mening wíé het vindt. Staat er een naam bij een uitspraak? Dan weet je: dit is de kijk van die persoon." },
           ],
           niveaus: {
             basis: "Doe de controleer-test: kun je nameten of dit écht het spannendste ooit in het dorp was?",
@@ -966,7 +966,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
           niveaus: {
             basis: "Scan op 'buurtbewoners'. Wat staat er in die zin dat ze deden?",
             simpeler: "Lees de derde alinea: hoe maakten de buurtbewoners de vermissing van Berry bekend?",
-            nogSimpeler: "Zoek het woord 'posters' in de tekst en lees de zin ervoor.",
+            nogSimpeler: "Zoek het woord 'posters' in de tekst en lees die zin.",
           },
         },
       },

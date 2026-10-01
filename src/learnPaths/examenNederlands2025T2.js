@@ -35,7 +35,7 @@ const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
   theorie:
-    "De toets leesvaardigheid: 4 doelen (informeren/overtuigen/amuseren/activeren). Doelgroep = wie ECHT de oproep kan opvolgen. Tekstverband alineas onderling: opsomming/tegenstelling/gevolg/conclusie/uitwerking. Hoofdgedachte = wat schrijver wil zeggen IN 1 ZIN.",
+    "De toets leesvaardigheid: 4 doelen (informeren/overtuigen/amuseren/activeren). Doelgroep = wie ECHT de oproep kan opvolgen. Tekstverband alinea's onderling: opsomming/tegenstelling/gevolg/conclusie/uitwerking. Hoofdgedachte = wat schrijver wil zeggen IN 1 ZIN.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -189,13 +189,13 @@ const steps = [
         null,
         "Te smal — verantwoordelijkheids-discussie is 1 deel (alinea 7-8). Hele tekst gaat over álle problemen.",
       ],
-      explanation: "Tekst schetst HET PROBLEEM: oprapen werkt deels, statiegeld helpt, overheid vs bedrijven, EU-regels, lobby — allemaal HORDES bij zwerfafval-bestrijding. = informeren over PROBLEMEN bij aanpak.",
+      explanation: "Tekst schetst HET PROBLEEM: oprapen werkt deels, statiegeld helpt, overheid vs bedrijven, EU-regels, lobby — allemaal HORDEN bij zwerfafval-bestrijding. = informeren over PROBLEMEN bij aanpak.",
       examenBron: BRON_LABEL(32),
       bronLink: BRON_LINK,
       bronTekst: tekst4,
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: [
-        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "problem-analyse-tekst = informeren, niet activeren" },
+        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "probleemanalyse-tekst = informeren, niet activeren" },
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel + breedste passende optie — kern" },
       ],
       uitlegPad: compact(
@@ -236,18 +236,18 @@ const steps = [
       bronTekst: tekst4,
       leerpadLink: { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands" },
       voorkennisKeten: [
-        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "tegenstelling tussen 2 alineas (overheid ↔ bedrijven)" },
-        { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "alineas-verband — kern" },
+        { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen — strategie", niveau: "po-2F", why: "tegenstelling tussen 2 alinea's (overheid ↔ bedrijven)" },
+        { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "alineaverband — kern" },
       ],
       uitlegPad: compact(
-        "Tegenstelling-signalen tussen alineas: MAAR, ÓÓK NIET, ANDERZIJDS, AAN DE ANDERE KANT. Hier: 7 'overheid moet' ↔ 8 'maar OOK bedrijven'.",
+        "Tegenstelling-signalen tussen alinea's: MAAR, ÓÓK NIET, ANDERZIJDS, AAN DE ANDERE KANT. Hier: 7 'overheid moet' ↔ 8 'maar OOK bedrijven'.",
         {
           basis: "'Niet alleen overheid maar ook bedrijven' = tegenstelling.",
           simpeler: "Alinea 7 wijst naar A, alinea 8 zegt 'ook B'. Tegenstelling.",
           nogSimpeler: "Tegenstelling",
         },
         [
-          { woord: "tegenstelling tussen alineas", uitleg: "Twee alineas die elkaar AANVULLEN met een tegenwerping ('niet alleen X, ook Y')." },
+          { woord: "tegenstelling tussen alinea's", uitleg: "Twee alinea's die elkaar AANVULLEN met een tegenwerping ('niet alleen X, ook Y')." },
         ],
       ),
     }],

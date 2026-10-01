@@ -27,7 +27,7 @@ const steps = [
   {
     title: "Primitieven — omgekeerd differentiëren",
     explanation:
-      "**Integreren** = omgekeerd van differentiëren. Bij differentiëren ga je van F(x) → F'(x) = f(x). Bij integreren ga je terug: gegeven f(x), vind F(x) zodat F'(x) = f(x). F heet de **primitieve** van f.\n\n**Notatie**: ∫ f(x) dx = F(x) + C\n• ∫ = integraalteken\n• f(x) = de **integrand**\n• dx = geeft aan: integreren naar variabele x\n• C = **integratieconstante** (afgeleide van constante = 0, dus altijd onbekend)\n\n**Basis-regels**:\n• $\\int x^n \\, dx = \\dfrac{x^{n+1}}{n+1} + C$ **(n ≠ −1)**\n• $\\int 1 \\, dx = x + C$\n• $\\int k \\cdot f(x)\\, dx = k \\cdot \\int f(x)\\, dx$ (constante voor het integraal)\n• $\\int \\left[f(x) + g(x)\\right] dx = \\int f(x)\\, dx + \\int g(x)\\, dx$\n\n**Voorbeelden**:\n• ∫ x² dx = x³/3 + C (check: d/dx(x³/3) = 3x²/3 = x²)\n• ∫ x³ dx = x⁴/4 + C\n• ∫ 6x dx = 3x² + C\n• ∫ (2x + 3) dx = x² + 3x + C\n• ∫ √x dx = ∫ x^(1/2) dx = x^(3/2) / (3/2) = (2/3)x^(3/2) + C\n• ∫ 1/x² dx = ∫ x^(-2) dx = x^(-1)/(-1) = −1/x + C\n\n**Speciale primitieven** (uit hoofd kennen):\n• ∫ e^x dx = e^x + C\n• ∫ 1/x dx = ln|x| + C **(let op: |x|)**\n• ∫ sin(x) dx = −cos(x) + C **(min!)**\n• ∫ cos(x) dx = sin(x) + C\n• ∫ a^x dx = a^x / ln(a) + C\n\n**Checken**: differentieer je antwoord → krijg je f(x) terug? Dan klopt het.\n\n**Veelgemaakte fouten**:\n• C vergeten.\n• Bij ∫ x^n: 'n+1' in noemer vergeten of bij teller delen.\n• ∫ sin(x) → vergeten van min-teken bij −cos.\n• ∫ 1/x = ln(x) zonder absolute waarde.\n• Productregel verkeerd toepassen: ∫ f · g dx ≠ ∫f · ∫g (geen productregel voor integraal — vergt partieel-integreren).",
+      "**Integreren** = omgekeerd van differentiëren. Bij differentiëren ga je van F(x) → F'(x) = f(x). Bij integreren ga je terug: gegeven f(x), vind F(x) zodat F'(x) = f(x). F heet de **primitieve** van f.\n\n**Notatie**: ∫ f(x) dx = F(x) + C\n• ∫ = integraalteken\n• f(x) = de **integrand**\n• dx = geeft aan: integreren naar variabele x\n• C = **integratieconstante** (afgeleide van constante = 0, dus altijd onbekend)\n\n**Basis-regels**:\n• $\\int x^n \\, dx = \\dfrac{x^{n+1}}{n+1} + C$ **(n ≠ −1)**\n• $\\int 1 \\, dx = x + C$\n• $\\int k \\cdot f(x)\\, dx = k \\cdot \\int f(x)\\, dx$ (constante voor de integraal)\n• $\\int \\left[f(x) + g(x)\\right] dx = \\int f(x)\\, dx + \\int g(x)\\, dx$\n\n**Voorbeelden**:\n• ∫ x² dx = x³/3 + C (check: d/dx(x³/3) = 3x²/3 = x²)\n• ∫ x³ dx = x⁴/4 + C\n• ∫ 6x dx = 3x² + C\n• ∫ (2x + 3) dx = x² + 3x + C\n• ∫ √x dx = ∫ x^(1/2) dx = x^(3/2) / (3/2) = (2/3)x^(3/2) + C\n• ∫ 1/x² dx = ∫ x^(-2) dx = x^(-1)/(-1) = −1/x + C\n\n**Speciale primitieven** (uit hoofd kennen):\n• ∫ e^x dx = e^x + C\n• ∫ 1/x dx = ln|x| + C **(let op: |x|)**\n• ∫ sin(x) dx = −cos(x) + C **(min!)**\n• ∫ cos(x) dx = sin(x) + C\n• ∫ a^x dx = a^x / ln(a) + C\n\n**Checken**: differentieer je antwoord → krijg je f(x) terug? Dan klopt het.\n\n**Veelgemaakte fouten**:\n• C vergeten.\n• Bij ∫ x^n: 'n+1' in noemer vergeten of bij teller delen.\n• ∫ sin(x) → vergeten van min-teken bij −cos.\n• ∫ 1/x = ln(x) zonder absolute waarde.\n• Productregel verkeerd toepassen: ∫ f · g dx ≠ ∫f · ∫g (geen productregel voor integraal — vergt partieel-integreren).",
     checks: [
       {
         q: "Wat is ∫ **x² dx**?",
@@ -54,7 +54,7 @@ const steps = [
         q: "Wat is ∫ **sin(x) dx**?",
         options: ["−cos(x) + C","cos(x) + C","−sin(x) + C","tan(x) + C"],
         answer: 0,
-        wrongHints: [null, "Mist het minteken.", "Niet — dat zou afgeleide van −cos zijn? Nee.", "Niet — andere functie."],
+        wrongHints: [null, "Mist het minteken.", "Niet — dat is de afgeleide van cos(x).", "Niet — andere functie."],
         uitlegPad: {
           stappen: [{ titel: "Goniometrische tabel", tekst: "**∫ sin(x) dx = −cos(x) + C**. Reden: d/dx(−cos x) = −(−sin x) = sin x. ✓\n\nVergelijk: ∫ cos(x) dx = sin(x) + C (zonder min)." }],
           theorie: "Toets-favoriet-val: min-teken vergeten. Onthoud: sin → −cos, cos → +sin.",
@@ -78,7 +78,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — macht-regel werkt niet voor e^x.", "Verkeerde regel.", "Niet zinvol."],
         uitlegPad: {
-          stappen: [{ titel: "e blijft e", tekst: "**∫ e^x dx = e^x + C**. Speciaal: e^x is z'n eigen afgeleide EN primitieve. Komt uit hoofd kennen." }],
+          stappen: [{ titel: "e blijft e", tekst: "**∫ e^x dx = e^x + C**. Speciaal: e^x is z'n eigen afgeleide EN primitieve. Uit je hoofd kennen." }],
           niveaus: { basis: "e^x + C.", simpeler: "e^x → e^x", nogSimpeler: "e^x+C" },
         },
       },
@@ -130,15 +130,15 @@ const steps = [
         wrongHints: [null, "Niet — meer rekenen.", "Niet — alleen één term.", "Niet — alleen boven."],
         uitlegPad: {
           stappen: [{ titel: "Opp = ∫(boven−onder)", tekst: "Op [0,2]: 2x ≥ x² (lineair boven parabool). Oppervlakte = ∫[0,2] (2x − x²) dx = [x² − x³/3] van 0 tot 2 = (4 − 8/3) − 0 = **12/3 − 8/3 = 4/3**." }],
-          theorie: "Pattern: snijpunten → 'boven minus onder' → integraal nemen.",
+          theorie: "Patroon: snijpunten → 'boven minus onder' → integraal nemen.",
           niveaus: { basis: "4/3.", simpeler: "∫(2x−x²) van 0→2 = 4−8/3 = 4/3", nogSimpeler: "4/3" },
         },
       },
       {
         q: "∫[2 tot 2] f(x) dx = ?",
-        options: ["0","f(2)","f(2)−f(2)","Onbepaald"],
+        options: ["0","f(2)","2·f(2)","Onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — je hoeft de functie niet te evalueren; kijk naar de grenzen.", "Klopt dat de uitkomst nul is, maar om de goede reden: kijk naar de grenzen van de integraal.", "Wel bepaald — de definitie van een bepaalde integraal met gelijke grenzen geeft een eenduidig resultaat."],
+        wrongHints: [null, "Niet — je hoeft de functie niet te evalueren; kijk naar de grenzen.", "Niet — kijk naar de grenzen: van 2 tot 2 is er geen interval.", "Wel bepaald — de definitie van een bepaalde integraal met gelijke grenzen geeft een eenduidig resultaat."],
         uitlegPad: {
           stappen: [{ titel: "Gelijke grenzen", tekst: "**∫[a tot a] f(x) dx = 0**. Geen interval = geen oppervlakte = 0. Eigenschap bepaalde integraal." }],
           niveaus: { basis: "0.", simpeler: "Gelijke grenzen = 0", nogSimpeler: "0" },
@@ -151,7 +151,7 @@ const steps = [
   {
     title: "Integratietechnieken — substitutie + partieel",
     explanation:
-      "Niet elke functie heeft een directe primitieve via basisregels. Twee technieken op HAVO/VWO Wiskunde B:\n\n**1. Substitutie (kettingregel omgekeerd)**:\n\nWerkt als integrand de vorm **f(g(x)) · g'(x)** heeft.\n\nStrategie:\n• Stel u = g(x).\n• Dan du = g'(x) dx.\n• Integraal wordt ∫ f(u) du.\n• Integreer + substitueer x terug.\n\n**Voorbeeld 1**: ∫ 2x · cos(x²) dx\n• u = x² → du = 2x dx ✓ (precies matchend in integrand)\n• ∫ cos(u) du = sin(u) + C = **sin(x²) + C**\n• Check: d/dx(sin x²) = cos(x²) · 2x ✓\n\n**Voorbeeld 2**: ∫ (3x²+1)(x³+x)⁵ dx\n• u = x³+x → du = (3x²+1) dx ✓\n• ∫ u⁵ du = u⁶/6 = **(x³+x)⁶/6 + C**\n\n**Eenvoudige substitutie** (lineair): ∫ f(ax+b) dx → **F(ax+b)/a + C**\n• ∫ cos(3x) dx = **sin(3x)/3 + C**\n• ∫ e^(2x) dx = **e^(2x)/2 + C**\n• ∫ (2x+5)⁴ dx = **(2x+5)⁵/(5·2) = (2x+5)⁵/10 + C**\n\n**2. Partiële integratie** (productregel omgekeerd):\n\n∫ u dv = uv − ∫ v du\n\nHandig bij producten als x·sin(x), x·e^x, x²·ln(x), e^x·cos(x) etc.\n\n**Strategie**:\n• Kies u = factor die simpeler wordt na differentieren (vaak x of ln of inverse).\n• Kies dv = rest (moet primitieve hebben).\n• Bereken du (afgeleide u) en v (primitieve dv).\n• Pas formule toe.\n\n**Ezelsbruggetje LIATE** voor u-keuze:\n**L**ogaritmen → **I**nverse goniometrisch → **A**lgebraïsch (x, x²) → **T**rigonometrisch → **E**xponentieel.\nKies de meest-links beschikbare als u.\n\n**Voorbeeld**: ∫ x · e^x dx\n• u = x (A) → du = dx\n• dv = e^x dx → v = e^x\n• ∫ x·e^x dx = x·e^x − ∫ e^x dx = x·e^x − e^x + C = **(x−1)e^x + C**\n\n**Voorbeeld 2**: ∫ ln(x) dx (truc: ln·1)\n• u = ln(x) (L) → du = 1/x dx\n• dv = 1·dx → v = x\n• ∫ ln(x) dx = x·ln(x) − ∫ x · 1/x dx = x·ln(x) − x + C = **x(ln(x) − 1) + C**\n\n**Wanneer welke?**\n• Functie binnen functie + afgeleide-buiten? → **substitutie**.\n• Product van twee verschillende soorten? → **partieel**.\n• Soms beide nodig of substitutie 2× of partieel 2×.",
+      "Niet elke functie heeft een directe primitieve via basisregels. Twee technieken op HAVO/VWO Wiskunde B:\n\n**1. Substitutie (kettingregel omgekeerd)**:\n\nWerkt als integrand de vorm **f(g(x)) · g'(x)** heeft.\n\nStrategie:\n• Stel u = g(x).\n• Dan du = g'(x) dx.\n• Integraal wordt ∫ f(u) du.\n• Integreer + substitueer x terug.\n\n**Voorbeeld 1**: ∫ 2x · cos(x²) dx\n• u = x² → du = 2x dx ✓ (precies matchend in integrand)\n• ∫ cos(u) du = sin(u) + C = **sin(x²) + C**\n• Check: d/dx(sin x²) = cos(x²) · 2x ✓\n\n**Voorbeeld 2**: ∫ (3x²+1)(x³+x)⁵ dx\n• u = x³+x → du = (3x²+1) dx ✓\n• ∫ u⁵ du = u⁶/6 = **(x³+x)⁶/6 + C**\n\n**Eenvoudige substitutie** (lineair): ∫ f(ax+b) dx → **F(ax+b)/a + C**\n• ∫ cos(3x) dx = **sin(3x)/3 + C**\n• ∫ e^(2x) dx = **e^(2x)/2 + C**\n• ∫ (2x+5)⁴ dx = **(2x+5)⁵/(5·2) = (2x+5)⁵/10 + C**\n\n**2. Partiële integratie** (productregel omgekeerd):\n\n∫ u dv = uv − ∫ v du\n\nHandig bij producten als x·sin(x), x·e^x, x²·ln(x), e^x·cos(x) etc.\n\n**Strategie**:\n• Kies u = factor die simpeler wordt na differentiëren (vaak x of ln of inverse).\n• Kies dv = rest (moet primitieve hebben).\n• Bereken du (afgeleide u) en v (primitieve dv).\n• Pas formule toe.\n\n**Ezelsbruggetje LIATE** voor u-keuze:\n**L**ogaritmen → **I**nverse goniometrisch → **A**lgebraïsch (x, x²) → **T**rigonometrisch → **E**xponentieel.\nKies de meest-links beschikbare als u.\n\n**Voorbeeld**: ∫ x · e^x dx\n• u = x (A) → du = dx\n• dv = e^x dx → v = e^x\n• ∫ x·e^x dx = x·e^x − ∫ e^x dx = x·e^x − e^x + C = **(x−1)e^x + C**\n\n**Voorbeeld 2**: ∫ ln(x) dx (truc: ln·1)\n• u = ln(x) (L) → du = 1/x dx\n• dv = 1·dx → v = x\n• ∫ ln(x) dx = x·ln(x) − ∫ x · 1/x dx = x·ln(x) − x + C = **x(ln(x) − 1) + C**\n\n**Wanneer welke?**\n• Functie binnen functie + afgeleide-buiten? → **substitutie**.\n• Product van twee verschillende soorten? → **partieel**.\n• Soms beide nodig of substitutie 2× of partieel 2×.",
     checks: [
       {
         q: "Bij ∫ **2x · cos(x²) dx** — welke techniek?",
@@ -167,7 +167,7 @@ const steps = [
         q: "Wat is ∫ **e^(2x) dx**?",
         options: ["e^(2x)/2 + C","e^(2x) + C","2·e^(2x) + C","e^x + C"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet niet door 2.", "Niet — dat is afgeleide.", "Niet — andere functie."],
+        wrongHints: [null, "Niet — vergeet niet te delen door 2.", "Niet — dat is afgeleide.", "Niet — andere functie."],
         uitlegPad: {
           stappen: [{ titel: "Lineaire substitutie", tekst: "∫ e^(ax+b) dx = **e^(ax+b)/a + C**. Hier a=2: ∫ e^(2x) dx = **e^(2x)/2 + C**. Check: d/dx(e^(2x)/2) = 2·e^(2x)/2 = e^(2x). ✓" }],
           niveaus: { basis: "e^(2x)/2 + C.", simpeler: "e^(ax) → e^(ax)/a", nogSimpeler: "/2" },
@@ -212,7 +212,7 @@ const steps = [
   {
     title: "Toepassingen — wegen, volumes, gemiddelden",
     explanation:
-      "Integralen lossen veel praktische problemen op. CSE-eindexamen test toepassingen.\n\n**1. Snelheid → afstand (kinematica)**:\n• Snelheid v(t) = positie's afgeleide.\n• Dan: **afstand tussen tijdstip t=a en t=b = ∫[a tot b] v(t) dt**.\n• Bij negatieve v: terug — let op tekens.\n\n**Voorbeeld**: v(t) = 3t² m/s op [0,4]:\nAfstand = ∫[0,4] 3t² dt = [t³] van 0 tot 4 = 64 m.\n\n**2. Versnelling → snelheid**:\n• Versnelling a(t) = afgeleide v(t).\n• v(t) = ∫ a(t) dt + v₀ (begin-snelheid).\n\n**3. Oppervlakte tussen 2 grafieken** (zie stap B): ∫(boven − onder).\n\n**4. Volume omwentelingslichaam**:\n• Roteer grafiek y = f(x) rond x-as op [a,b].\n• Volume = π · ∫[a tot b] [f(x)]² dx (schijf-methode).\n• Bij rotatie rond y-as: π · ∫[c,d] [g(y)]² dy.\n\n**Voorbeeld**: y = √x op [0,4], rond x-as:\nV = π · ∫[0,4] (√x)² dx = π · ∫[0,4] x dx = π · [x²/2] van 0 tot 4 = π · 8 = **8π** ≈ 25,1.\n\n**5. Gemiddelde waarde** functie op [a,b]:\n$f_{\\text{gem}} = \\dfrac{1}{b-a} \\cdot \\int_a^b f(x)\\, dx$.\n\n**Voorbeeld**: temperatuur T(t) gemeten over 24 uur:\nGem. dagtemperatuur = (1/24) · ∫[0,24] T(t) dt.\n\n**6. Boog-lengte** (VWO):\nL = ∫[a,b] √(1 + [f'(x)]²) dx. Op CSE meestal alleen herkennen.\n\n**7. Cumulatieve waarden uit dichtheidsfuncties** (statistiek/economie):\n• Snelheid van toename × tijd = totaal.\n• Bv: bedrijfswinst-snelheid p(t) = 100 − t² → totaal winst op [0,10] = ∫[0,10] p(t) dt.\n\n**Eindexamen-pattern**:\n• Functie + interval gegeven.\n• Eerst: snijpunten / primitieve / interpretatie.\n• Daarna: bepaalde integraal evalueren.\n• Soms: optimalisatie ('voor welke x is opp/volume maximaal') → differentieer integraal naar parameter.",
+      "Integralen lossen veel praktische problemen op. CSE-eindexamen test toepassingen.\n\n**1. Snelheid → afstand (kinematica)**:\n• Snelheid v(t) = afgeleide van de positie.\n• Dan: **afstand tussen tijdstip t=a en t=b = ∫[a tot b] v(t) dt**.\n• Bij negatieve v: terug — let op tekens.\n\n**Voorbeeld**: v(t) = 3t² m/s op [0,4]:\nAfstand = ∫[0,4] 3t² dt = [t³] van 0 tot 4 = 64 m.\n\n**2. Versnelling → snelheid**:\n• Versnelling a(t) = afgeleide v(t).\n• v(t) = ∫ a(t) dt + v₀ (begin-snelheid).\n\n**3. Oppervlakte tussen 2 grafieken** (zie stap B): ∫(boven − onder).\n\n**4. Volume omwentelingslichaam**:\n• Roteer grafiek y = f(x) rond x-as op [a,b].\n• Volume = π · ∫[a tot b] [f(x)]² dx (schijf-methode).\n• Bij rotatie rond y-as: π · ∫[c,d] [g(y)]² dy.\n\n**Voorbeeld**: y = √x op [0,4], rond x-as:\nV = π · ∫[0,4] (√x)² dx = π · ∫[0,4] x dx = π · [x²/2] van 0 tot 4 = π · 8 = **8π** ≈ 25,1.\n\n**5. Gemiddelde waarde** functie op [a,b]:\n$f_{\\text{gem}} = \\dfrac{1}{b-a} \\cdot \\int_a^b f(x)\\, dx$.\n\n**Voorbeeld**: temperatuur T(t) gemeten over 24 uur:\nGem. dagtemperatuur = (1/24) · ∫[0,24] T(t) dt.\n\n**6. Boog-lengte** (VWO):\nL = ∫[a,b] √(1 + [f'(x)]²) dx. Op CSE meestal alleen herkennen.\n\n**7. Cumulatieve waarden uit dichtheidsfuncties** (statistiek/economie):\n• Snelheid van toename × tijd = totaal.\n• Bv: bedrijfswinst-snelheid p(t) = 100 − t² → totaal winst op [0,10] = ∫[0,10] p(t) dt.\n\n**Eindexamen-patroon**:\n• Functie + interval gegeven.\n• Eerst: snijpunten / primitieve / interpretatie.\n• Daarna: bepaalde integraal evalueren.\n• Soms: optimalisatie ('voor welke x is opp/volume maximaal') → differentieer integraal naar parameter.",
     checks: [
       {
         q: "v(t) = 2t m/s. **Afstand tussen t=0 en t=5**?",
@@ -232,7 +232,7 @@ const steps = [
         wrongHints: [null, "Mist π·x².", "Niet — te groot.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Schijf-methode", tekst: "V = π · ∫[a,b] [f(x)]² dx = π · ∫[0,3] x² dx = π · [x³/3] van 0 tot 3 = π · 9 = **9π**. (≈ 28,3 eenheden³)" }],
-          theorie: "Cone om x-as is dit precies — kegel met straal 3, hoogte 3. V = (1/3)πr²h = (1/3)·π·9·3 = 9π. ✓",
+          theorie: "Om de x-as is dit precies een kegel met straal 3, hoogte 3. V = (1/3)πr²h = (1/3)·π·9·3 = 9π. ✓",
           niveaus: { basis: "9π.", simpeler: "π·∫x²dx 0→3 = 9π", nogSimpeler: "9π" },
         },
       },
@@ -284,7 +284,7 @@ const steps = [
         wrongHints: [null, "Niet — dat is afgeleide.", "Mist /2 bij 4x.", "Niet correct (waar zijn /3, /2?)."],
         uitlegPad: {
           stappen: [{ titel: "Term voor term", tekst: "∫ 3x² = x³, ∫ 4x = 2x², ∫ −5 = −5x. Totaal: **x³ + 2x² − 5x + C**." }],
-          niveaus: { basis: "x³+2x²−5x+C.", simpeler: "Per term primitief", nogSimpeler: "A." },
+          niveaus: { basis: "x³+2x²−5x+C.", simpeler: "Per term primitief", nogSimpeler: "x³+2x²−5x+C" },
         },
       },
       {

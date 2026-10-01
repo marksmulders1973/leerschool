@@ -28,7 +28,7 @@ const steps = [
   {
     title: "Koolstof — element van het leven",
     explanation:
-      "**Organische chemie** = chemie van **koolstof-verbindingen**. Alle bekende leven op aarde is op koolstof-basis. Een paar miljoen organische verbindingen bekend, vs ~100.000 anorganische.\n\n**Waarom koolstof zo bijzonder**:\n• Koolstof heeft **4 valentie-elektronen** → kan **4 covalente bindingen** maken.\n• Vormt **lange ketens** + **vertakkingen** + **ringen**.\n• Kan ook **dubbele** en **drievoudige** bindingen vormen (C=C, C≡C).\n• Resultaat: enorme variëteit aan moleculen.\n\n**Octetregel + koolstof**:\n• Atomen willen 8 elektronen in buitenste schil (edelgas-config).\n• Koolstof heeft 4 → deelt 4 → krijgt 8 (octet).\n• Daarom altijd **4 bindingen** in stabiel koolstof.\n\n**Veel-voorkomende atomen in organische verbindingen**:\n• **C** (koolstof): 4 bindingen.\n• **H** (waterstof): 1 binding.\n• **O** (zuurstof): 2 bindingen.\n• **N** (stikstof): 3 bindingen.\n• Halogenen (F, Cl, Br, I): 1 binding.\n\n**Notatie organisch**:\n• **Structuurformule**: alle atomen + bindingen getekend. CH₄ = methaan = C met 4 H eromheen.\n• **Skelet-formule**: alleen koolstof-skelet getekend, H weglaten. Veel sneller voor lange moleculen.\n• **Molecuulformule**: alleen atomen tellen. CH₄, C₂H₆, C₃H₈.\n\n**Levensbouwstenen organisch**:\n• **Eiwitten** (proteïnen): koolstof + waterstof + zuurstof + stikstof + zwavel.\n• **Koolhydraten** (suikers): C + H + O. Bv. glucose C₆H₁₂O₆.\n• **Vetten**: C + H + O.\n• **DNA**: C + H + O + N + P.",
+      "**Organische chemie** = chemie van **koolstof-verbindingen**. Al het bekende leven op aarde is op koolstof-basis. Er zijn tientallen miljoenen organische verbindingen bekend, veel meer dan anorganische.\n\n**Waarom koolstof zo bijzonder**:\n• Koolstof heeft **4 valentie-elektronen** → kan **4 covalente bindingen** maken.\n• Vormt **lange ketens** + **vertakkingen** + **ringen**.\n• Kan ook **dubbele** en **drievoudige** bindingen vormen (C=C, C≡C).\n• Resultaat: enorme variëteit aan moleculen.\n\n**Octetregel + koolstof**:\n• Atomen willen 8 elektronen in buitenste schil (edelgas-config).\n• Koolstof heeft 4 → deelt 4 → krijgt 8 (octet).\n• Daarom altijd **4 bindingen** in stabiel koolstof.\n\n**Veel-voorkomende atomen in organische verbindingen**:\n• **C** (koolstof): 4 bindingen.\n• **H** (waterstof): 1 binding.\n• **O** (zuurstof): 2 bindingen.\n• **N** (stikstof): 3 bindingen.\n• Halogenen (F, Cl, Br, I): 1 binding.\n\n**Notatie organisch**:\n• **Structuurformule**: alle atomen + bindingen getekend. CH₄ = methaan = C met 4 H eromheen.\n• **Skelet-formule**: alleen koolstof-skelet getekend, H weglaten. Veel sneller voor lange moleculen.\n• **Molecuulformule**: alleen atomen tellen. CH₄, C₂H₆, C₃H₈.\n\n**Levensbouwstenen organisch**:\n• **Eiwitten** (proteïnen): koolstof + waterstof + zuurstof + stikstof + zwavel.\n• **Koolhydraten** (suikers): C + H + O. Bv. glucose C₆H₁₂O₆.\n• **Vetten**: C + H + O.\n• **DNA**: C + H + O + N + P.",
     checks: [
       {
         q: "Hoeveel **bindingen** maakt koolstof normaal?",
@@ -48,7 +48,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — onmogelijk (3 H + 1 C zou C 1 binding open laten).", "Niet — dat is ethaan.", "Niet — dat is koolstofdioxide (geen koolstof-waterstof)."],
         uitlegPad: {
-          stappen: [{ titel: "1 C + 4 H = methaan", tekst: "**Methaan** = simpelste alkaan. 1 koolstof + 4 waterstof = CH₄. Structuur: tetrahedrisch (4 H rond C, hoeken 109,5°)." }],
+          stappen: [{ titel: "1 C + 4 H = methaan", tekst: "**Methaan** = simpelste alkaan. 1 koolstof + 4 waterstof = CH₄. Structuur: tetraëdrisch (4 H rond C, hoeken 109,5°)." }],
           theorie: "Aardgas = grotendeels methaan. Geur (rotte eieren) is toegevoegd voor veiligheid — methaan zelf reukloos.",
           niveaus: { basis: "CH₄.", simpeler: "Methaan = CH₄", nogSimpeler: "CH4" },
         },
@@ -59,7 +59,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — 4 bindingen.", "Niet — 2 bindingen.", "Niet — 3 bindingen."],
         uitlegPad: {
-          stappen: [{ titel: "H = 1 elektron = 1 binding", tekst: "Waterstof heeft maar **1 elektron** → maar 1 binding. Vandaar dat H altijd 'eindpunt' is in organische molecule." }],
+          stappen: [{ titel: "H = 1 elektron = 1 binding", tekst: "Waterstof heeft maar **1 elektron** → maar 1 binding. Vandaar dat H altijd 'eindpunt' is in een organisch molecuul." }],
           theorie: "Onthoud: C=4, H=1, O=2, N=3, halogenen=1.",
           niveaus: { basis: "H.", simpeler: "Waterstof = 1 binding", nogSimpeler: "H" },
         },
@@ -98,10 +98,10 @@ const steps = [
         q: "Wat is de **algemene formule** van een alkaan?",
         options: ["CₙH₂ₙ₊₂","CₙH₂ₙ","CₙHₙ","CₙH₂ₙ₋₂"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is alkenen (dubbele binding) of cyclo-alkanen.", "Niet.", "Niet — dat is alkynen (drievoudig)."],
+        wrongHints: [null, "Niet — dat zijn alkenen (dubbele binding) of cyclo-alkanen.", "Niet.", "Niet — dat zijn alkynen (drievoudig)."],
         uitlegPad: {
           stappen: [{ titel: "Verzadigd = max H", tekst: "Alkanen = alleen enkele bindingen = max waterstof. Formule **CₙH₂ₙ₊₂**. Bv. n=3: C₃H₈ (propaan)." }],
-          theorie: "Onthoud verschil: alkaan CₙH₂ₙ₊₂, alkeen CₙH₂ₙ (1 dubbel), alkyn CₙH₂ₙ₋₂ (1 driedubbel), cyclo-alkaan CₙH₂ₙ.",
+          theorie: "Onthoud verschil: alkaan CₙH₂ₙ₊₂, alkeen CₙH₂ₙ (1 dubbel), alkyn CₙH₂ₙ₋₂ (1 drievoudig), cyclo-alkaan CₙH₂ₙ.",
           niveaus: { basis: "CₙH₂ₙ₊₂.", simpeler: "Alkaan = CₙH₂ₙ₊₂", nogSimpeler: "2n+2" },
         },
       },
@@ -111,7 +111,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is propaan.", "Niet — dat is hexaan.", "Niet — dat is decaan."],
         uitlegPad: {
-          stappen: [{ titel: "Penta = 5", tekst: "Penta-prefix (Grieks: vijf). **Pentaan = C₅H₁₂**. Veel-gebruikt: penthouse (5 verdiepingen), pentagram (5-puntige ster), pentathlon (5 sporten)." }],
+          stappen: [{ titel: "Penta = 5", tekst: "Penta-prefix (Grieks: vijf). **Pentaan = C₅H₁₂**. Veel-gebruikt: pentagon (vijfhoek), pentagram (5-puntige ster), pentathlon (5 sporten)." }],
           theorie: "Memo: meth=1, eth=2, prop=3, but=4, pent=5, hex=6, hept=7, oct=8, non=9, dec=10.",
           niveaus: { basis: "5.", simpeler: "Pentaan = 5 C", nogSimpeler: "5" },
         },
@@ -120,10 +120,10 @@ const steps = [
         q: "**Octaangetal** in benzine verwijst naar:",
         options: ["Verbrandingseigenschap (anti-klopcapaciteit)","Aantal octaan-moleculen","Octopus-uitvinding","Olie-prijs"],
         answer: 0,
-        wrongHints: [null, "Niet — geen rechtstreekse aantal.", "Niet — irrelevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — geen rechtstreeks aantal.", "Niet — irrelevant.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Octaangetal = brandeigenschap", tekst: "**Octaangetal** geeft hoe **goed brandstof presteert** in motor. Schaal: octaan (zeer goed) = 100, heptaan (slecht, klopt) = 0. Benzine 95 = vergelijkbaar met mix van 95% octaan + 5% heptaan." }],
-          theorie: "Toets-actueel: Euro 95 / 98 verwijst naar octaangetal. Hogere octaangetal = duurder + voor zwaardere motoren.",
+          stappen: [{ titel: "Octaangetal = brandeigenschap", tekst: "**Octaangetal** geeft hoe **goed brandstof presteert** in motor. Schaal: iso-octaan (zeer goed) = 100, heptaan (slecht, klopt) = 0. Benzine 95 = vergelijkbaar met mix van 95% iso-octaan + 5% heptaan." }],
+          theorie: "Toets-actueel: Euro 95 / 98 verwijst naar octaangetal. Hoger octaangetal = duurder + nodig voor motoren met hoge compressie.",
           niveaus: { basis: "Verbrandingseigenschap.", simpeler: "Octaangetal = brandkwaliteit", nogSimpeler: "Brand" },
         },
       },
@@ -131,7 +131,7 @@ const steps = [
         q: "Hoeveel **isomeren** heeft butaan C₄H₁₀?",
         options: ["2 (n-butaan + iso-butaan)","1","3","Onbeperkt"],
         answer: 0,
-        wrongHints: [null, "Niet — minstens 2.", "Niet — meer voor C₅H₁₂.", "Niet — beperkt."],
+        wrongHints: [null, "Niet — minstens 2.", "Niet — 3 isomeren heeft C₅H₁₂.", "Niet — beperkt."],
         uitlegPad: {
           stappen: [{ titel: "Twee isomeren C₄H₁₀", tekst: "1) **n-Butaan**: rechte keten CH₃-CH₂-CH₂-CH₃. 2) **2-Methylpropaan** (iso-butaan): vertakt. Zelfde formule, andere structuur." }],
           woorden: [{ woord: "isomeer", uitleg: "Verbinding met dezelfde molecuulformule maar verschillende structuur." }],
@@ -221,7 +221,7 @@ const steps = [
   {
     title: "Reacties + verbranding",
     explanation:
-      "Organische verbindingen ondergaan diverse reacties. Belangrijkste voor HAVO/VWO:\n\n**1. Verbranding (oxidatie)**:\n\n**Volledige verbranding** (genoeg zuurstof):\n• Alkaan + O₂ → **CO₂ + H₂O** + warmte.\n• Bv. propaan: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O.\n• **Balansvergelijking**: tel C, H, O links + rechts. Moet kloppen.\n\n**Onvolledige verbranding** (te weinig zuurstof):\n• Alkaan + minder O₂ → **CO** (koolmonoxide) + H₂O + roet.\n• Gevaarlijk: CO is reukloos + dodelijk (CO-vergiftiging).\n• Zwart roet zichtbaar.\n• Gebeurt in slecht-ventileerde geisers, oude open haarden.\n\n**Energie-vergelijking**:\n• Verbrandingsreactie is **exotherm** = geeft energie af (warmte + licht).\n• Brandstof-waarde: hoeveel J energie per gram of mol.\n• Methaan ~890 kJ/mol bij volledige verbranding.\n\n**2. Substitutie (alkanen + halogeen)**:\n• CH₄ + Cl₂ → CH₃Cl + HCl (met UV-licht).\n• 1 H vervangen door Cl.\n• Klassiek HAVO-reactie.\n\n**3. Additie (alkenen + alkynen)**:\n• Dubbele binding kan reageren met H₂, X₂ (halogeen), HX, etc.\n• Bv: etheen + waterstof → ethaan: C₂H₄ + H₂ → C₂H₆.\n• Bv: etheen + broom → 1,2-dibromoethaan: C₂H₄ + Br₂ → C₂H₄Br₂.\n• Onverzadigd → verzadigd.\n\n**4. Polymerisatie**:\n• Vele kleine monomeren → polymeer (lange keten).\n• Voorbeeld plastics: etheen (C₂H₄) → poly-etheen (PE, plastic-zak).\n• Andere: PVC (uit chloor-etheen), PET (frisdrank-flessen).\n\n**5. Verestering** (zie stap C):\n• Alcohol + zuur → ester + water.\n\n**6. Hydrolyse**:\n• Omgekeerd van verestering: ester + water → alcohol + zuur.\n• Ook eiwit-verbindingen, vetten, koolhydraten kunnen hydrolyseren.\n\n**Brandstoffen** (Toets-actueel):\n• Aardgas (methaan): NL-belangrijkste energiebron tot ~2020.\n• Benzine: mix van C₅-C₁₂ alkanen.\n• Diesel: mix van C₁₀-C₂₀.\n• LPG: butaan + propaan.\n• Biobrandstoffen: ethanol uit maïs/suikerriet, biodiesel uit plantaardige olie.\n• Waterstof: schoon (alleen H₂O bij verbranding), maar duur.\n\n**Klimaat-context**: bij elke verbranding van koolstof-verbindingen komt **CO₂** vrij. Hoofdoorzaak antropogene klimaatverandering. Oplossingen: minder fossiele brandstof, meer hernieuwbaar.",
+      "Organische verbindingen ondergaan diverse reacties. Belangrijkste voor HAVO/VWO:\n\n**1. Verbranding (oxidatie)**:\n\n**Volledige verbranding** (genoeg zuurstof):\n• Alkaan + O₂ → **CO₂ + H₂O** + warmte.\n• Bv. propaan: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O.\n• **Balansvergelijking**: tel C, H, O links + rechts. Moet kloppen.\n\n**Onvolledige verbranding** (te weinig zuurstof):\n• Alkaan + minder O₂ → **CO** (koolmonoxide) + H₂O + roet.\n• Gevaarlijk: CO is reukloos + dodelijk (CO-vergiftiging).\n• Zwart roet zichtbaar.\n• Gebeurt in slecht geventileerde geisers, oude open haarden.\n\n**Energie-vergelijking**:\n• Verbrandingsreactie is **exotherm** = geeft energie af (warmte + licht).\n• Brandstof-waarde: hoeveel J energie per gram of mol.\n• Methaan ~890 kJ/mol bij volledige verbranding.\n\n**2. Substitutie (alkanen + halogeen)**:\n• CH₄ + Cl₂ → CH₃Cl + HCl (met UV-licht).\n• 1 H vervangen door Cl.\n• Klassieke HAVO-reactie.\n\n**3. Additie (alkenen + alkynen)**:\n• Dubbele binding kan reageren met H₂, X₂ (halogeen), HX, etc.\n• Bv: etheen + waterstof → ethaan: C₂H₄ + H₂ → C₂H₆.\n• Bv: etheen + broom → 1,2-dibroomethaan: C₂H₄ + Br₂ → C₂H₄Br₂.\n• Onverzadigd → verzadigd.\n\n**4. Polymerisatie**:\n• Vele kleine monomeren → polymeer (lange keten).\n• Voorbeeld plastics: etheen (C₂H₄) → poly-etheen (PE, plastic-zak).\n• Andere: PVC (uit chloor-etheen), PET (frisdrank-flessen).\n\n**5. Verestering** (zie stap C):\n• Alcohol + zuur → ester + water.\n\n**6. Hydrolyse**:\n• Omgekeerd van verestering: ester + water → alcohol + zuur.\n• Ook eiwit-verbindingen, vetten, koolhydraten kunnen hydrolyseren.\n\n**Brandstoffen** (Toets-actueel):\n• Aardgas (methaan): lang de belangrijkste energiebron van NL.\n• Benzine: mix van C₅-C₁₂ alkanen.\n• Diesel: mix van C₁₀-C₂₀.\n• LPG: butaan + propaan.\n• Biobrandstoffen: ethanol uit maïs/suikerriet, biodiesel uit plantaardige olie.\n• Waterstof: schoon (alleen H₂O bij verbranding), maar duur.\n\n**Klimaat-context**: bij elke verbranding van koolstof-verbindingen komt **CO₂** vrij. Hoofdoorzaak antropogene klimaatverandering. Oplossingen: minder fossiele brandstof, meer hernieuwbaar.",
     checks: [
       {
         q: "Bij **volledige verbranding** van methaan ontstaat:",
@@ -240,8 +240,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — onruikbaar = gevaar.", "Niet — onzichtbaar.", "Wel brandbaar maar dat is niet hoofd-gevaar."],
         uitlegPad: {
-          stappen: [{ titel: "CO bind aan hemoglobine", tekst: "**CO** bindt 200× sterker aan hemoglobine dan zuurstof. Hemoglobine kan geen O₂ meer vervoeren → verstikking. **Reukloos + smaakloos** → slachtoffer merkt niets, valt in slaap, sterft. Slecht-ventileerde geisers = klassieke oorzaak." }],
-          theorie: "Toets-actueel: CO-melders verplicht sinds 2024 in elke woning met gasapparaat. Voorkomt ~10 NL-doden per jaar.",
+          stappen: [{ titel: "CO bindt aan hemoglobine", tekst: "**CO** bindt 200× sterker aan hemoglobine dan zuurstof. Hemoglobine kan geen O₂ meer vervoeren → verstikking. **Reukloos + smaakloos** → slachtoffer merkt niets, valt in slaap, sterft. Slecht geventileerde geisers = klassieke oorzaak." }],
+          theorie: "Toets-actueel: een CO-melder wordt sterk aangeraden in elke woning met een gasapparaat. In NL overlijden elk jaar mensen aan CO-vergiftiging.",
           niveaus: { basis: "Reukloos + dodelijk.", simpeler: "CO = stille killer", nogSimpeler: "Reukloos" },
         },
       },
@@ -275,7 +275,7 @@ const steps = [
         wrongHints: [null, "Niet — O₂-niveau blijft hoog.", "Niet relevant.", "Niet — methaan = uitgangsstof bij verbranding."],
         uitlegPad: {
           stappen: [{ titel: "CO₂ = broeikasgas", tekst: "Bij verbranding van fossiele brandstof komt **CO₂** vrij. CO₂ houdt warmte vast in atmosfeer → **versterkt broeikaseffect** → klimaatopwarming. Sinds 1850: CO₂ van 280 ppm → 420 ppm (2024)." }],
-          theorie: "Toets-actueel: NL-klimaatakkoord 2019 wil 49% CO₂-reductie 2030 vs 1990 (zie pad Sociale Zekerheid).",
+          theorie: "Toets-actueel: de Nederlandse Klimaatwet wil 55% minder broeikasgas in 2030 t.o.v. 1990.",
           niveaus: { basis: "CO₂ = broeikas.", simpeler: "CO₂ → klimaatopwarming", nogSimpeler: "CO₂" },
         },
       },
@@ -309,12 +309,12 @@ const steps = [
         },
       },
       {
-        q: "Wat is **isomeren**?",
+        q: "Wat zijn **isomeren**?",
         options: ["Zelfde formule, andere structuur","Verschillende formule","Onbestaand","Polymeer"],
         answer: 0,
         wrongHints: [null, "Niet.", "Wel bestaand.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Iso = gelijk + meer = deel", tekst: "**Isomeren** = verbindingen met dezelfde **molecuulformule** maar verschillende **structuur**. Voorbeeld: butaan (rechte keten) en 2-methylpropaan (vertakt) = beide C₄H₁₀." }],
+          stappen: [{ titel: "Iso = gelijk, meros = deel", tekst: "**Isomeren** = verbindingen met dezelfde **molecuulformule** maar verschillende **structuur**. Voorbeeld: butaan (rechte keten) en 2-methylpropaan (vertakt) = beide C₄H₁₀." }],
           niveaus: { basis: "Zelfde formule.", simpeler: "Iso = zelfde formule, andere bouw", nogSimpeler: "Iso" },
         },
       },
@@ -330,7 +330,7 @@ const steps = [
       },
       {
         q: "Wat is **bio-ethanol**?",
-        options: ["Ethanol uit plantaardige bron (maïs, suikerriet)","Synthetisch alcohol","Een nieuw vak","Methaan-derivaat"],
+        options: ["Ethanol uit plantaardige bron (maïs, suikerriet)","Synthetische alcohol","Een nieuw vak","Methaan-derivaat"],
         answer: 0,
         wrongHints: [null, "Niet — biologisch (uit organisch).", "Niet relevant.", "Niet — uit suiker, niet methaan."],
         uitlegPad: {

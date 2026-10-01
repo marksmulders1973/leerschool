@@ -120,7 +120,7 @@ const steps = [
   },
   {
     title: "De drie vormen: V1, V2 en V3",
-    explanation: "Ieder werkwoord heeft drie hoofdvormen. Je leert ze meestal samen, in een rijtje:\n\n| | naam | gebruikt voor |\n|---|---|---|\n| **V1** | infinitive (basisvorm) | tegenwoordige tijd, after to/will/can |\n| **V2** | past simple | gewone verleden tijd |\n| **V3** | past participle | voltooide tijd (have / has / had) |\n\n**Voorbeeld: go**\n• V1 = **go** — *I go to school.*\n• V2 = **went** — *Yesterday I went to school.*\n• V3 = **gone** — *I have gone to school many times.*\n\nDoor V1/V2/V3 als rijtje te leren, weet je meteen welke vorm je nodig hebt zodra je weet welke tijd je wilt schrijven.",
+    explanation: "Ieder werkwoord heeft drie hoofdvormen. Je leert ze meestal samen, in een rijtje:\n\n| | naam | gebruikt voor |\n|---|---|---|\n| **V1** | infinitive (basisvorm) | tegenwoordige tijd, na to/will/can |\n| **V2** | past simple | gewone verleden tijd |\n| **V3** | past participle | voltooide tijd (have / has / had) |\n\n**Voorbeeld: go**\n• V1 = **go** — *I go to school.*\n• V2 = **went** — *Yesterday I went to school.*\n• V3 = **gone** — *I have gone to school many times.*\n\nDoor V1/V2/V3 als rijtje te leren, weet je meteen welke vorm je nodig hebt zodra je weet welke tijd je wilt schrijven.",
     svg: tableSvg([
       ["go", "went", "gone"],
       ["see", "saw", "seen"],
@@ -139,7 +139,7 @@ const steps = [
           "Het maakt zeker wel uit — anders zijn de drie vormen overbodig.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Na have/has/had = V3", tekst: "V3 = past participle, gebruikt in perfect tijden." }],
+          stappen: [{ titel: "Na have/has/had = V3", tekst: "V3 = past participle, gebruikt in de voltooide tijden (perfect tenses)." }],
           woorden: [{ woord: "V3", uitleg: "past participle" }],
           theorie: "have + V3 = present perfect.",
           voorbeelden: [{ type: "voorbeeld", tekst: "I have eaten, she has gone" }],
@@ -162,7 +162,7 @@ const steps = [
           woorden: [{ woord: "see-saw-seen", uitleg: "1-2-3 rijtje" }],
           theorie: "V2 voor past simple, V3 voor perfect.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Yesterday I saw a film" }],
-          basiskennis: [{ onderwerp: "onthouden", uitleg: "see-saw-seen rhymes" }],
+          basiskennis: [{ onderwerp: "onthouden", uitleg: "see-saw-seen rijmt" }],
           niveaus: { basis: "saw.", simpeler: "V2 = saw.", nogSimpeler: "V2 = saw. → saw." },
         },
       },
@@ -378,8 +378,8 @@ const steps = [
           "Niet bestaand woord.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "run-ran-run", tekst: "V2 = ran. Klinker i → a." }],
-          woorden: [{ woord: "klinkerwissel", uitleg: "i → a in V2" }],
+          stappen: [{ titel: "run-ran-run", tekst: "V2 = ran. Klinker u → a." }],
+          woorden: [{ woord: "klinkerwissel", uitleg: "u → a in V2" }],
           theorie: "Run is groep 3 (V1=V3=run, V2=ran).",
           voorbeelden: [{ type: "voorbeeld", tekst: "I run, I ran, I have run" }],
           basiskennis: [{ onderwerp: "geen -ed", uitleg: "geen 'runned'" }],
@@ -390,7 +390,7 @@ const steps = [
   },
   {
     title: "Groep 4 — Klinkerwissel i → a → u",
-    explanation: "Een hele groep werkwoorden volgt het muzikale patroon **i → a → u**: de klinker schuift in elke vorm op.\n\n• begin – **began** – **begun**\n• drink – **drank** – **drunk**\n• swim – **swam** – **swum**\n• sing – **sang** – **sung**\n• ring – **rang** – **rung**\n• sink – **sank** – **sunk**\n• shrink – shrank – shrunk\n• run *(uitzondering: V3 = run, niet \"run\")* — zat in groep 3.\n\nLees ze hardop in dit rijtje — de klank rolt bijna vanzelf. Dit is een van de makkelijkste groepen om te onthouden zodra je het patroon hoort.\n\n**Voorbeeldzinnen**:\n• *I **drink** water now.*\n• *Yesterday I **drank** orange juice.*\n• *I have **drunk** all my coffee.*",
+    explanation: "Een hele groep werkwoorden volgt het muzikale patroon **i → a → u**: de klinker schuift in elke vorm op.\n\n• begin – **began** – **begun**\n• drink – **drank** – **drunk**\n• swim – **swam** – **swum**\n• sing – **sang** – **sung**\n• ring – **rang** – **rung**\n• sink – **sank** – **sunk**\n• shrink – shrank – shrunk\n• run – ran – run *(uitzondering: V3 is weer gelijk aan V1)* — zat in groep 3.\n\nLees ze hardop in dit rijtje — de klank rolt bijna vanzelf. Dit is een van de makkelijkste groepen om te onthouden zodra je het patroon hoort.\n\n**Voorbeeldzinnen**:\n• *I **drink** water now.*\n• *Yesterday I **drank** orange juice.*\n• *I have **drunk** all my coffee.*",
     svg: tableSvg([
       ["begin", "began", "begun"],
       ["drink", "drank", "drunk"],
@@ -446,7 +446,7 @@ const steps = [
   },
   {
     title: "Groep 5 — V3 op -en (write/wrote/written)",
-    explanation: "Een grote groep onregelmatige werkwoorden krijgt **-en** (of -n) achter V3. Vaak zit er een klinkerwissel in V2.\n\nPatroon **i → o → i + en**:\n• write – wrote – **written**\n• ride – rode – **ridden**\n• drive – drove – **driven**\n• rise – rose – **risen**\n\nPatroon **-ake → -ook/-oke → -aken/-oken**:\n• take – took – **taken**\n• break – broke – **broken**\n• speak – spoke – **spoken**\n• wake – woke – **woken**\n• choose – chose – **chosen**\n\nNog meer -en op het eind:\n• give – gave – **given**\n• see – saw – **seen**\n• eat – ate – **eaten**\n• fall – fell – **fallen**\n• forget – forgot – **forgotten**\n• get – got – **gotten** *(US-Engels)* / **got** *(UK)*\n\n**Truc**: wanneer V3 eindigt op -en, dan staat er bijna altijd 'have/has/had' voor.",
+    explanation: "Een grote groep onregelmatige werkwoorden krijgt **-en** (of -n) achter V3. Vaak zit er een klinkerwissel in V2.\n\nPatroon **i → o → i + en**:\n• write – wrote – **written**\n• ride – rode – **ridden**\n• drive – drove – **driven**\n• rise – rose – **risen**\n\nPatroon **-ake → -ook/-oke → -aken/-oken**:\n• take – took – **taken**\n• break – broke – **broken**\n• speak – spoke – **spoken**\n• wake – woke – **woken**\n• choose – chose – **chosen**\n\nNog meer -en op het eind:\n• give – gave – **given**\n• see – saw – **seen**\n• eat – ate – **eaten**\n• fall – fell – **fallen**\n• forget – forgot – **forgotten**\n• get – got – **gotten** *(US-Engels)* / **got** *(UK)*\n\n**Truc**: wanneer V3 eindigt op -en, dan staat er vaak 'have/has/had' voor.",
     svg: tableSvg([
       ["write", "wrote", "written"],
       ["take", "took", "taken"],
@@ -522,7 +522,7 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
         uitlegPad: {
           stappen: [{ titel: "go-went-gone", tekst: "V3 van go = gone." }],
           woorden: [{ woord: "must-know", uitleg: "be/have/do/go = vaakst gebruikt" }],
-          theorie: "Vier kerwerkwoorden uit hoofd kennen.",
+          theorie: "Vier kernwerkwoorden uit je hoofd kennen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "I have gone, she has gone" }],
           basiskennis: [{ onderwerp: "geen 'goed'", uitleg: "fout: I goed" }],
           niveaus: { basis: "gone.", simpeler: "V3 = gone.", nogSimpeler: "gone." },
@@ -540,13 +540,13 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
         wrongHints: [
           null,
           "Na 'has' hoort V3 = done, niet V2 = did.",
-          "'Homework' is in het Engels onbekreidbaar — geen meervoud.",
+          "'Homework' is in het Engels ontelbaar — geen meervoud.",
           "She → has, niet have.",
         ],
         uitlegPad: {
           stappen: [{ titel: "has done", tekst: "do-did-done. Na has → done." }],
           woorden: [{ woord: "done", uitleg: "V3 van do" }],
-          theorie: "Korte rijtje: do-did-done. Have-had-had. Be-was-been.",
+          theorie: "Kort rijtje: do-did-done. Have-had-had. Be-was-been.",
           voorbeelden: [{ type: "voorbeeld", tekst: "She has done her homework" }],
           basiskennis: [{ onderwerp: "she + has", uitleg: "3e persoon enkv" }],
           niveaus: { basis: "has done.", simpeler: "Has + done.", nogSimpeler: "done." },
@@ -558,7 +558,7 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
   // ─── D. Toepassen ───────────────
   {
     title: "Toepassen: kies de juiste vorm in past simple",
-    explanation: "**Past simple** = V2. Gebruik je voor één afgeronde gebeurtenis in het verleden, vaak met tijdwoorden zoals *yesterday, last week, in 2010, ago*.\n\nGeen hulpwerkwoord nodig (in een gewone bewering) — gewoon V2 op de plek van het werkwoord.\n\n**Voorbeelden**:\n• *Yesterday I **bought** a new bike.* (buy → bought)\n• *We **saw** that film last week.* (see → saw)\n• *He **gave** me the keys.* (give → gave)\n• *They **were** at the cinema.* (be → were, meervoud)\n• *She **wrote** a letter to her grandma.* (write → wrote)\n\n**Let op de twee fouten die je veel hoort**:\n1. ❌ *I **goed** to school.* → ✅ *I **went** to school.* (go is onregelmatig)\n2. ❌ *He **buyed** a book.* → ✅ *He **bought** a book.* (geen -ed bij irregular)",
+    explanation: "**Past simple** = V2. Gebruik je voor één afgeronde gebeurtenis in het verleden, vaak met tijdwoorden zoals *yesterday, last week, in 2010, ago*.\n\nGeen hulpwerkwoord nodig (in een gewone bewering) — gewoon V2 op de plek van het werkwoord.\n\n**Voorbeelden**:\n• *Yesterday I **bought** a new bike.* (buy → bought)\n• *We **saw** that film last week.* (see → saw)\n• *He **gave** me the keys.* (give → gave)\n• *They **were** at the cinema.* (be → were, meervoud)\n• *She **wrote** a letter to her grandma.* (write → wrote)\n\n**Let op de twee fouten die je veel hoort**:\n1. ❌ *I **goed** to school.* → ✅ *I **went** to school.* (go is onregelmatig)\n2. ❌ *He **buyed** a book.* → ✅ *He **bought** a book.* (geen -ed bij onregelmatige werkwoorden)",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="20" width="260" height="40" rx="8" fill="rgba(0,200,83,0.10)" stroke="${COLORS.good}" stroke-width="2"/>
 <text x="150" y="38" text-anchor="middle" fill="${COLORS.good}" font-size="12" font-family="Arial" font-weight="bold">✓ Yesterday I bought a bike.</text>
@@ -620,7 +620,7 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
         uitlegPad: {
           stappen: [{ titel: "hear-heard-heard", tekst: "Last night I heard. V2 = heard (geen -ed-spelling)." }],
           woorden: [{ woord: "heard", uitleg: "V2 én V3 = heard" }],
-          theorie: "Hear is onregelmatig — heard met -d (geen -ed achteraan d).",
+          theorie: "Hear is onregelmatig — heard eindigt op -d (er komt geen -ed achter).",
           voorbeelden: [{ type: "voorbeeld", tekst: "I heard, you heard, they heard" }],
           basiskennis: [{ onderwerp: "spelling", uitleg: "heard, niet heared" }],
           niveaus: { basis: "heard.", simpeler: "V2 = heard.", nogSimpeler: "heard." },
@@ -666,8 +666,8 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
         answer: 0,
         wrongHints: [
           null,
-          "V2 single — past niet na 'have'. V3 van be is 'been'.",
-          "V2 plural — past niet na 'have'.",
+          "V2 enkelvoud — past niet na 'have'. V3 van be is 'been'.",
+          "V2 meervoud — past niet na 'have'.",
           "V1 — niet juist na 'have'.",
         ],
         uitlegPad: {
@@ -781,7 +781,7 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
         uitlegPad: {
           stappen: [{ titel: "left / were", tekst: "Leave-left-left. Be: they → were (mv)." }],
           woorden: [{ woord: "left", uitleg: "V2/V3 van leave" }],
-          theorie: "Yesterday → V2. Be past: was (1) / were (mv).",
+          theorie: "Yesterday → V2. Be past: was (ev) / were (mv).",
           voorbeelden: [{ type: "voorbeeld", tekst: "They left because they were tired" }],
           basiskennis: [{ onderwerp: "were vs was", uitleg: "they/we → were" }],
           niveaus: { basis: "left / were.", simpeler: "Beide V2.", nogSimpeler: "left + were." },

@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Sinus, cosinus, tangens — rechthoekige driehoek",
     explanation:
-      "In een **rechthoekige driehoek** definieer je 3 verhoudingen voor een hoek α:\n\n**SOSCASTOA** (geheugen-truc voor leerlingen):\n• **S**in α = **O**verstaande / **S**chuine = a/c.\n• **C**os α = **A**anliggende / **S**chuine = b/c.\n• **T**an α = **O**verstaande / **A**anliggende = a/b.\n\n**Belangrijke waarden** (te onthouden):\n| hoek | sin | cos | tan |\n|------|-----|-----|-----|\n| 0° | 0 | 1 | 0 |\n| 30° | 0,5 | √3/2 | 1/√3 |\n| 45° | √2/2 | √2/2 | 1 |\n| 60° | √3/2 | 0,5 | √3 |\n| 90° | 1 | 0 | ∞ |\n\n**Relaties**:\n• tan α = sin α / cos α.\n• sin² α + cos² α = 1 (pythagoras op eenheidscirkel).\n\n**Pythagoras-stelling** (basis):\n**a² + b² = c²** (rechthoekzijden a, b; schuine c).\n\n**Toepassingen**:\n• Hoogte boom meten met afstand + hoek.\n• Helling-graad van weg.\n• Krachten ontbinden in horizontaal + verticaal (physica).\n• Schaduw-lengte uit zon-hoek.\n\n**Voorbeeld**: ladder van 4 m tegen muur, voet 1 m van muur. Hoek met grond?\ncos α = 1/4 = 0,25 → α = arccos(0,25) ≈ 75,5°.\n\n**Inverse functies**:\n• arcsin (sin⁻¹): geeft hoek bij sin-waarde.\n• arccos (cos⁻¹): hoek bij cos-waarde.\n• arctan (tan⁻¹): hoek bij tan-waarde.\n• Op rekenmachine: shift + sin/cos/tan.\n\n**Cito/CSE-tip**: teken altijd de driehoek + label de zijden voor je formule invult.",
+      "In een **rechthoekige driehoek** definieer je 3 verhoudingen voor een hoek α:\n\n**SOSCASTOA** (geheugen-truc voor leerlingen):\n• **S**in α = **O**verstaande / **S**chuine = a/c.\n• **C**os α = **A**anliggende / **S**chuine = b/c.\n• **T**an α = **O**verstaande / **A**anliggende = a/b.\n\n**Belangrijke waarden** (te onthouden):\n| hoek | sin | cos | tan |\n|------|-----|-----|-----|\n| 0° | 0 | 1 | 0 |\n| 30° | 0,5 | √3/2 | 1/√3 |\n| 45° | √2/2 | √2/2 | 1 |\n| 60° | √3/2 | 0,5 | √3 |\n| 90° | 1 | 0 | ∞ |\n\n**Relaties**:\n• tan α = sin α / cos α.\n• sin² α + cos² α = 1 (pythagoras op eenheidscirkel).\n\n**Pythagoras-stelling** (basis):\n**a² + b² = c²** (rechthoekszijden a, b; schuine c).\n\n**Toepassingen**:\n• Hoogte boom meten met afstand + hoek.\n• Helling-graad van weg.\n• Krachten ontbinden in horizontaal + verticaal (natuurkunde).\n• Schaduw-lengte uit zon-hoek.\n\n**Voorbeeld**: ladder van 4 m tegen muur, voet 1 m van muur. Hoek met grond?\ncos α = 1/4 = 0,25 → α = arccos(0,25) ≈ 75,5°.\n\n**Inverse functies**:\n• arcsin (sin⁻¹): geeft hoek bij sin-waarde.\n• arccos (cos⁻¹): hoek bij cos-waarde.\n• arctan (tan⁻¹): hoek bij tan-waarde.\n• Op rekenmachine: shift + sin/cos/tan.\n\n**Cito/CSE-tip**: teken altijd de driehoek + label de zijden voor je formule invult.",
     checks: [
       {
         q: "In een rechthoekige driehoek met **schuine zijde 5** en overstaande zijde **3**, wat is **sin α**?",
@@ -41,13 +41,13 @@ const steps = [
         },
       },
       {
-        q: "Pythagoras: rechthoek met zijden 6 en 8. Schuine zijde?",
+        q: "Pythagoras: rechthoekige driehoek met rechthoekszijden 6 en 8. Schuine zijde?",
         options: ["10", "14", "48", "√48"],
         answer: 0,
         wrongHints: [null, "Niet — dat is som.", "Niet — dat is product.", "Niet — controleer berekening."],
         uitlegPad: {
           stappen: [{ titel: "c² = a² + b²", tekst: "c² = 6² + 8² = 36+64 = 100 → c = **10**. Klassieke 6-8-10 (= 3-4-5 × 2) driehoek." }],
-          theorie: "3-4-5, 5-12-13, 8-15-17 zijn klassieke gehele-driehoeken (Pythagorean triples).",
+          theorie: "3-4-5, 5-12-13, 8-15-17 zijn klassieke gehele-driehoeken (Pythagoreïsche drietallen).",
           niveaus: { basis: "c=√100=10.", simpeler: "Pythagoras → 10.", nogSimpeler: "10" },
         },
       },
@@ -80,7 +80,7 @@ const steps = [
   {
     title: "Eenheidscirkel + radialen",
     explanation:
-      "**Eenheidscirkel** = cirkel met straal 1 om de oorsprong O.\n\n**Punt P op cirkel** bij hoek α (gemeten vanaf positieve x-as, tegen-de-klok-in):\n• P = (cos α, sin α).\n• Dus cos α = x-coördinaat, sin α = y-coördinaat van P.\n\n**Voordeel eenheidscirkel**:\n• Werkt voor **ALLE** hoeken (niet alleen 0° tot 90°).\n• Negatieve hoeken: kloksgewijs.\n• Hoeken > 360°: rondes optellen.\n\n**Quadranten**:\n• Q1 (0° - 90°): sin +, cos +, tan +.\n• Q2 (90° - 180°): sin +, cos −, tan −.\n• Q3 (180° - 270°): sin −, cos −, tan +.\n• Q4 (270° - 360°): sin −, cos +, tan −.\n\n*Geheugen-truc*: All Sin Tan Cos (ASTC: in Q1 alles +, in Q2 alleen sin +, in Q3 alleen tan +, in Q4 alleen cos +).\n\n**Symmetrieën**:\n• cos(−α) = cos α (cos is even-functie).\n• sin(−α) = −sin α (sin is oneven-functie).\n• sin(180° − α) = sin α.\n• cos(180° − α) = −cos α.\n• sin(α + 360°) = sin α (periodiek met periode 360°).\n\n**Radialen** (rad):\n• Andere maat voor hoeken — gebaseerd op cirkel-omtrek.\n• 360° = 2π rad ≈ 6,28 rad.\n• 180° = π rad.\n• 90° = π/2 rad.\n• Omrekening: rad = ° · π/180; ° = rad · 180/π.\n\n**Waarom radialen?**\n• Natuurlijke maat voor cirkels (booglengte = r · α in rad).\n• In differentiaalrekening (VWO): d/dα(sin α) = cos α werkt ALLEEN in radialen.\n• Wiskunde-formules gebruiken bijna altijd radialen.\n\n**Belangrijke radialen-waarden**:\n• π/6 = 30°.\n• π/4 = 45°.\n• π/3 = 60°.\n• π/2 = 90°.\n• π = 180°.\n• 2π = 360°.",
+      "**Eenheidscirkel** = cirkel met straal 1 om de oorsprong O.\n\n**Punt P op cirkel** bij hoek α (gemeten vanaf positieve x-as, tegen-de-klok-in):\n• P = (cos α, sin α).\n• Dus cos α = x-coördinaat, sin α = y-coördinaat van P.\n\n**Voordeel eenheidscirkel**:\n• Werkt voor **ALLE** hoeken (niet alleen 0° tot 90°).\n• Negatieve hoeken: kloksgewijs.\n• Hoeken > 360°: rondes optellen.\n\n**Kwadranten**:\n• Q1 (0° - 90°): sin +, cos +, tan +.\n• Q2 (90° - 180°): sin +, cos −, tan −.\n• Q3 (180° - 270°): sin −, cos −, tan +.\n• Q4 (270° - 360°): sin −, cos +, tan −.\n\n*Geheugen-truc*: All Sin Tan Cos (ASTC: in Q1 alles +, in Q2 alleen sin +, in Q3 alleen tan +, in Q4 alleen cos +).\n\n**Symmetrieën**:\n• cos(−α) = cos α (cos is even-functie).\n• sin(−α) = −sin α (sin is oneven-functie).\n• sin(180° − α) = sin α.\n• cos(180° − α) = −cos α.\n• sin(α + 360°) = sin α (periodiek met periode 360°).\n\n**Radialen** (rad):\n• Andere maat voor hoeken — gebaseerd op cirkel-omtrek.\n• 360° = 2π rad ≈ 6,28 rad.\n• 180° = π rad.\n• 90° = π/2 rad.\n• Omrekening: rad = ° · π/180; ° = rad · 180/π.\n\n**Waarom radialen?**\n• Natuurlijke maat voor cirkels (booglengte = r · α in rad).\n• In differentiaalrekening (VWO): d/dα(sin α) = cos α werkt ALLEEN in radialen.\n• Wiskunde-formules gebruiken bijna altijd radialen.\n\n**Belangrijke radialen-waarden**:\n• π/6 = 30°.\n• π/4 = 45°.\n• π/3 = 60°.\n• π/2 = 90°.\n• π = 180°.\n• 2π = 360°.",
     checks: [
       {
         q: "Wat is **45°** in radialen?",
@@ -93,7 +93,7 @@ const steps = [
         },
       },
       {
-        q: "In welk **quadrant** ligt hoek 120°?",
+        q: "In welk **kwadrant** ligt hoek 120°?",
         options: ["Q2 (sin+, cos−)", "Q1 (alles+)", "Q3 (tan+)", "Q4 (cos+)"],
         answer: 0,
         wrongHints: [null, "Niet — Q1 is 0-90°.", "Niet — Q3 is 180-270°.", "Niet — Q4 is 270-360°."],
@@ -143,7 +143,7 @@ const steps = [
     checks: [
       {
         q: "Een driehoek heeft a=10, b=14, hoek C=90°. Cosinusregel geeft c² = ?",
-        options: ["296", "100+196−0=296", "−196", "Niet te bepalen"],
+        options: ["296", "100+196−280=16", "−196", "Niet te bepalen"],
         answer: 0,
         wrongHints: [null, "Verfijn — wat is cos 90°?", "Niet — controleer teken.", "Wel."],
         uitlegPad: {
@@ -191,7 +191,7 @@ const steps = [
         q: "Driehoek met a=5, b=7, c=8. Cosinusregel: cos C = ?",
         options: ["1/7 ≈ 0,143", "0,500", "1", "−0,143"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer formule.", "Niet — geen 60°.", "Wel positief."],
+        wrongHints: [null, "Niet — geen 60°.", "Niet — controleer formule.", "Wel positief."],
         uitlegPad: {
           stappen: [
             { titel: "cos C = (a² + b² − c²)/(2ab)", tekst: "cos C = (25 + 49 − 64) / (2·5·7) = 10/70 = **1/7 ≈ 0,143**. → C = arccos(0,143) ≈ 81,8°." },
@@ -206,7 +206,7 @@ const steps = [
   {
     title: "Goniometrische grafieken",
     explanation:
-      "**Grafiek sinus** y = sin x:\n• Periodiek met periode 2π (= 360°).\n• Amplitude 1: −1 ≤ sin x ≤ 1.\n• Nulpunten: x = 0, π, 2π, 3π, ... (= veelvouden van π).\n• Top (max +1) bij x = π/2 + 2kπ.\n• Dal (min −1) bij x = 3π/2 + 2kπ.\n• Begint in (0, 0).\n\n**Grafiek cosinus** y = cos x:\n• Periodiek 2π. Amplitude 1.\n• Nulpunten: x = π/2, 3π/2, ... (= π/2 + kπ).\n• Top bij x = 0, 2π, ...\n• Cos is sin **verschoven π/2 naar links** (cos x = sin(x + π/2)).\n• Begint in (0, 1).\n\n**Grafiek tangens** y = tan x:\n• Periodiek π (kortere periode!).\n• Geen amplitude — geen min/max — gaat naar ±∞.\n• **Verticale asymptoten** bij x = π/2 + kπ (waar cos = 0).\n• Nulpunten bij x = 0, π, 2π, ... (waar sin = 0).\n\n**Algemene sinus-functie**:\n**y = a · sin(b·x + c) + d**\n• **a** = amplitude (|a|).\n• **b** = horizontale schaal: periode = 2π / b.\n• **c** = horizontale verschuiving (faseschuif). −c/b naar rechts.\n• **d** = verticale verschuiving.\n\n**Voorbeeld**: y = 3 · sin(2x − π) + 1.\n• Amplitude 3 → schommelt tussen 1−3 = −2 en 1+3 = 4.\n• Periode 2π/2 = π.\n• Verschuiving π/2 naar rechts (uit 2x − π = 0 → x = π/2).\n• Centraal om y=1.\n\n**Cito/CSE-toepassingen**:\n• Trillingen (zie natuurkunde): uitwijking-grafiek = sinusoïde.\n• Wisselstroom: U(t) = U_max · sin(ω·t).\n• Getijden + bioritmes.\n• Geluidsgolven.\n\n**Identificatie uit grafiek**:\n• Lees amplitude van piek − min) / 2.\n• Lees periode (afstand tussen twee tops).\n• Lees centerlijn = (piek + min) / 2.\n• Lees verschuiving uit nulpunt.",
+      "**Grafiek sinus** y = sin x:\n• Periodiek met periode 2π (= 360°).\n• Amplitude 1: −1 ≤ sin x ≤ 1.\n• Nulpunten: x = 0, π, 2π, 3π, ... (= veelvouden van π).\n• Top (max +1) bij x = π/2 + 2kπ.\n• Dal (min −1) bij x = 3π/2 + 2kπ.\n• Begint in (0, 0).\n\n**Grafiek cosinus** y = cos x:\n• Periodiek 2π. Amplitude 1.\n• Nulpunten: x = π/2, 3π/2, ... (= π/2 + kπ).\n• Top bij x = 0, 2π, ...\n• Cos is sin **verschoven π/2 naar links** (cos x = sin(x + π/2)).\n• Begint in (0, 1).\n\n**Grafiek tangens** y = tan x:\n• Periodiek π (kortere periode!).\n• Geen amplitude — geen min/max — gaat naar ±∞.\n• **Verticale asymptoten** bij x = π/2 + kπ (waar cos = 0).\n• Nulpunten bij x = 0, π, 2π, ... (waar sin = 0).\n\n**Algemene sinus-functie**:\n**y = a · sin(b·x + c) + d**\n• **a** = amplitude (|a|).\n• **b** = horizontale schaal: periode = 2π / b.\n• **c** = horizontale verschuiving (faseverschuiving). −c/b naar rechts.\n• **d** = verticale verschuiving.\n\n**Voorbeeld**: y = 3 · sin(2x − π) + 1.\n• Amplitude 3 → schommelt tussen 1−3 = −2 en 1+3 = 4.\n• Periode 2π/2 = π.\n• Verschuiving π/2 naar rechts (uit 2x − π = 0 → x = π/2).\n• Centraal om y=1.\n\n**Cito/CSE-toepassingen**:\n• Trillingen (zie natuurkunde): uitwijking-grafiek = sinusoïde.\n• Wisselstroom: U(t) = U_max · sin(ω·t).\n• Getijden + bioritmes.\n• Geluidsgolven.\n\n**Identificatie uit grafiek**:\n• Lees amplitude af: (piek − min) / 2.\n• Lees periode (afstand tussen twee tops).\n• Lees evenwichtslijn = (piek + min) / 2.\n• Lees verschuiving uit nulpunt.",
     checks: [
       {
         q: "**Periode** van y = sin x is:",
@@ -232,7 +232,7 @@ const steps = [
         q: "Voor welke x heeft tan x **asymptoot** (= niet gedefinieerd)?",
         options: ["x = π/2 + kπ", "x = 0", "x = π", "Bij elke x"],
         answer: 0,
-        wrongHints: [null, "Niet — daar is tan gedefinieerd en gelijk aan nul; de asymptoot ligt ergens anders.", "Idem — ook een nulpunt.", "Onjuist — tan bestaat voor alle x."],
+        wrongHints: [null, "Niet — daar is tan gedefinieerd en gelijk aan nul; de asymptoot ligt ergens anders.", "Idem — ook een nulpunt.", "Onjuist — tan bestaat voor bijna alle x, maar niet overal."],
         uitlegPad: {
           stappen: [
             { titel: "tan = sin/cos → asymp waar cos=0", tekst: "cos x = 0 bij x = π/2, 3π/2, 5π/2, ... (= π/2 + k·π). Daar wordt tan x = sin x / 0 → ±∞ → verticale asymptoot." },
@@ -241,7 +241,7 @@ const steps = [
         },
       },
       {
-        q: "Een sinus-grafiek heeft tops op 5 en dalen op −1. Centerlijn?",
+        q: "Een sinus-grafiek heeft tops op 5 en dalen op −1. Evenwichtslijn?",
         options: ["y = 2", "y = 0", "y = 3", "y = 4"],
         answer: 0,
         wrongHints: [null, "Niet — daar zou geen verschuiving zijn.", "Niet — controleer gemiddelde.", "Te hoog."],
@@ -297,7 +297,7 @@ const steps = [
         q: "**Afgeleide** van y = sin x?",
         options: ["cos x", "−cos x", "sin x", "−sin x"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is voor −sin.", "Niet — dat is integraal.", "Niet — dat is afgeleide van cos."],
+        wrongHints: [null, "Niet — dat is voor −sin.", "Niet — dat is de functie zelf.", "Niet — dat is afgeleide van cos."],
         uitlegPad: {
           stappen: [{ titel: "Basisformule", tekst: "d/dx (sin x) = **cos x**. Bewijs via verschilformule + limiet. Werkt alleen wanneer x in radialen!" }],
           theorie: "Volgorde sin → cos → −sin → −cos → sin (terug). Elke afleiding draait de cirkel met π/2.",

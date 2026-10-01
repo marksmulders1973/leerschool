@@ -21,7 +21,7 @@ const compact = (kern, niveaus, woorden = []) => ({
 const steps = [
   {
     title: "Stap 1 — Wat is het verschil tussen omtrek en oppervlakte?",
-    explanation: "**Omtrek** en **oppervlakte** zijn 2 verschillende dingen — vaak verward.\n\n**🔄 OMTREK**\n- Hoe lang is de **rand** rondom een figuur?\n- Loop met je vinger langs alle zijden — wat is de totale lengte?\n- Eenheid: **cm, m, km** (gewoon lengte)\n- Voorbeeld: hek om een tuin\n\n**🟦 OPPERVLAKTE**\n- Hoe veel **vlak** zit er IN een figuur?\n- Hoeveel kleine vierkantjes passen erin?\n- Eenheid: **cm², m², km², ha** (altijd kwadraat-symbool ²)\n- Voorbeeld: tapijt op de vloer leggen, tuin bezaaien met gras\n\n**🎯 Truc om ze uit elkaar te houden**:\n- **Om-trek** = je **trekt eromheen** (rondje)\n- **Opper-vlak** = het hele **vlak** binnen de rand\n\n**Toets-valkuil**: bij een vraag goed lezen: gaat het over **omheining** (omtrek) of over **bestrating** (oppervlakte)? Vraag in tweesporig: 'Hoeveel meter hek heb je nodig?' = omtrek. 'Hoeveel tegels heb je nodig?' = oppervlakte.",
+    explanation: "**Omtrek** en **oppervlakte** zijn 2 verschillende dingen — vaak verward.\n\n**🔄 OMTREK**\n- Hoe lang is de **rand** rondom een figuur?\n- Loop met je vinger langs alle zijden — wat is de totale lengte?\n- Eenheid: **cm, m, km** (gewoon lengte)\n- Voorbeeld: hek om een tuin\n\n**🟦 OPPERVLAKTE**\n- Hoeveel **vlak** zit er IN een figuur?\n- Hoeveel kleine vierkantjes passen erin?\n- Eenheid: **cm², m², km², ha** (altijd kwadraat-symbool ²)\n- Voorbeeld: tapijt op de vloer leggen, tuin bezaaien met gras\n\n**🎯 Truc om ze uit elkaar te houden**:\n- **Om-trek** = je **trekt eromheen** (rondje)\n- **Opper-vlak** = het hele **vlak** binnen de rand\n\n**Toets-valkuil**: bij een vraag goed lezen: gaat het over **omheining** (omtrek) of over **bestrating** (oppervlakte)? Vergelijk: 'Hoeveel meter hek heb je nodig?' = omtrek. 'Hoeveel tegels heb je nodig?' = oppervlakte.",
     emoji: "📐",
     checks: [
       {
@@ -196,7 +196,7 @@ const steps = [
         q: "Een vierkant heeft een oppervlakte van **64 cm²**. Hoe lang is **één zijde**?",
         options: ["8 cm", "16 cm", "32 cm", "4 cm"],
         answer: 0,
-        wrongHints: [null, "Dat is de halve omtrek — welke formule geeft oppervlakte van een vierkant?", "Dat is veel te groot — je moet juist terugrekenen naar de zijde, niet nog eens kwadrateren.", "Dat is te klein — zoek het getal dat maal zichzelf de oppervlakte geeft."],
+        wrongHints: [null, "Dat is 64 ÷ 4 — zo reken je bij omtrek terug, niet bij oppervlakte.", "Dat is 64 ÷ 2 — zoek het getal dat maal zichzelf de oppervlakte geeft.", "Dat is te klein — zoek het getal dat maal zichzelf de oppervlakte geeft."],
         explanation: "Vierkant opp. = z². Zijde = √64 = **8 cm**. Check: 8×8 = 64 ✓.",
         uitlegPad: compact(
           "Opp=z². 64=z². z=√64=8 cm.",
@@ -239,7 +239,7 @@ const steps = [
         q: "Een rechthoekige driehoek heeft een rechte hoek bij hoek A. De zijden bij A zijn **5 cm** en **12 cm**. Wat is de oppervlakte?",
         options: ["17 cm²", "30 cm²", "60 cm²", "60 cm"],
         answer: 1,
-        wrongHints: ["Dat is een optelling — de formule voor driehoek-oppervlakte vraagt meer dan dat.", null, "Je bent de deling door 2 vergeten — driehoek is de helft van een rechthoek!", "Eenheid moet cm²."],
+        wrongHints: ["Dat is een optelling — de formule voor driehoek-oppervlakte vraagt meer dan dat.", null, "Je bent de deling door 2 vergeten — driehoek is de helft van een rechthoek!", "Eenheid moet cm² zijn."],
         explanation: "**Bij rechthoekige driehoek**: de 2 rechte zijden ZIJN basis + hoogte (ze staan al haaks). A = ½ × 5 × 12 = ½ × 60 = **30 cm²**.",
         uitlegPad: compact(
           "Rechthoekige driehoek: de 2 zijden bij de rechte hoek = basis + hoogte. (5×12)/2 = 30.",
@@ -267,7 +267,7 @@ const steps = [
         explanation: "A = ½ × 6 × 4 = **12 cm²**.",
         uitlegPad: compact(
           "A = (b×h)/2 = (6×4)/2 = 12 cm².",
-          { basis: "(6×4)÷2 = 12 cm².", simpeler: "6×4=24, halving = 12.", nogSimpeler: "12" },
+          { basis: "(6×4)÷2 = 12 cm².", simpeler: "6×4=24, gehalveerd = 12.", nogSimpeler: "12" },
           [{ woord: "oppervlakte driehoek", uitleg: "½ × basis × hoogte." }],
         ),
       },
@@ -287,14 +287,14 @@ const steps = [
   },
   {
     title: "Stap 5 — Cirkel: omtrek + oppervlakte",
-    explanation: "**Cirkel** heeft 2 belangrijke maten:\n- **Straal (r)** = van middelpunt naar rand\n- **Diameter (d)** = van rand naar rand door middelpunt. **d = 2r**\n\n**Omtrek cirkel** (rondje langs de rand):\n- O = **π × d** (pi maal diameter)\n- O = **2 × π × r** (pi maal 2 maal straal)\n- π (pi) ≈ **3,14** (oneindig veel decimalen, vaak ronden we naar 3,14)\n\n**Oppervlakte cirkel** (vlak binnenin):\n- A = **π × r²**\n- (pi maal straal in het kwadraat)\n\n**Voorbeeld 1**: cirkel met straal 5 cm.\n- Omtrek = 2 × π × 5 = 10π ≈ 10 × 3,14 = **31,4 cm**\n- Oppervlakte = π × 5² = π × 25 ≈ 25 × 3,14 = **78,5 cm²**\n\n**Voorbeeld 2**: cirkel met diameter 10 m.\n- Straal = 10÷2 = 5 m\n- Omtrek = π × 10 = 10π ≈ **31,4 m**\n- Oppervlakte = π × 5² ≈ **78,5 m²**\n\n**Toets-truc**: kijk goed of de vraag STRAAL of DIAMETER geeft. Vaak verleidt de toets je om diameter te gebruiken waar straal moet (of andersom).\n\n**Geheugentruc**: 'OMtrek = OMtrek-rondje = π × d' (allebei begint met letters). 'Oppervlakte = vlak = r² (twee dimensies, dus kwadraat)'.",
+    explanation: "**Cirkel** heeft 2 belangrijke maten:\n- **Straal (r)** = van middelpunt naar rand\n- **Diameter (d)** = van rand naar rand door middelpunt. **d = 2r**\n\n**Omtrek cirkel** (rondje langs de rand):\n- O = **π × d** (pi maal diameter)\n- O = **2 × π × r** (pi maal 2 maal straal)\n- π (pi) ≈ **3,14** (oneindig veel decimalen, vaak ronden we naar 3,14)\n\n**Oppervlakte cirkel** (vlak binnenin):\n- A = **π × r²**\n- (pi maal straal in het kwadraat)\n\n**Voorbeeld 1**: cirkel met straal 5 cm.\n- Omtrek = 2 × π × 5 = 10π ≈ 10 × 3,14 = **31,4 cm**\n- Oppervlakte = π × 5² = π × 25 ≈ 25 × 3,14 = **78,5 cm²**\n\n**Voorbeeld 2**: cirkel met diameter 10 m.\n- Straal = 10÷2 = 5 m\n- Omtrek = π × 10 = 10π ≈ **31,4 m**\n- Oppervlakte = π × 5² ≈ **78,5 m²**\n\n**Toets-truc**: kijk goed of de vraag STRAAL of DIAMETER geeft. Vaak verleidt de toets je om diameter te gebruiken waar straal moet (of andersom).\n\n**Geheugentruc**: 'OMtrek = rondje OM de cirkel = π × d'. 'Oppervlakte = vlak = r² (twee dimensies, dus kwadraat)'.",
     emoji: "⭕",
     checks: [
       {
         q: "Een cirkel heeft een **straal van 4 cm**. Wat is de **omtrek**? (Gebruik π ≈ 3,14)",
         options: ["12,56 cm", "25,12 cm", "50,24 cm", "12,56 cm²"],
         answer: 1,
-        wrongHints: ["12,56 = π × 4 (vergeten ×2 — gebruikt straal, formule is π×d = π×2r).", null, "50,24 = π × 4 × 4 (oppervlakte met r² verkeerd). Niet omtrek.", "Eenheid omtrek = cm, niet cm²."],
+        wrongHints: ["12,56 = π × 4 (vergeten ×2 — gebruikt straal, formule is π×d = π×2r).", null, "50,24 = π × 4 × 4 = π × r² — dat is de oppervlakte, niet de omtrek.", "Eenheid omtrek = cm, niet cm²."],
         explanation: "**Omtrek = 2 × π × r** = 2 × 3,14 × 4 = 6,28 × 4 = **25,12 cm**. (Of: d = 2×4 = 8 cm, π×d = 3,14×8 = 25,12.)",
         uitlegPad: compact(
           "Omtrek cirkel = 2πr = πd. r=4: 2×3,14×4 = 25,12 cm.",
@@ -306,11 +306,11 @@ const steps = [
         q: "Een ronde tafel heeft een **diameter van 1 meter**. Wat is de **oppervlakte**? (π ≈ 3,14)",
         options: ["3,14 m²", "0,785 m²", "1,57 m²", "0,5 m²"],
         answer: 1,
-        wrongHints: ["Dat is π × diameter — welke formule geeft oppervlakte (niet omtrek)?", null, "Je hebt iets gehalveerd wat niet gehalveerd moet worden — welke grootheid moet je kwadrateren?", "Dat is de helft van de diameter — geen oppervlakte-formule. Welke maat gebruik je in de oppervlakte-formule?"],
+        wrongHints: ["Dat is π × diameter — welke formule geeft oppervlakte (niet omtrek)?", null, "Dat is π × straal — welke maat moet je nog in het kwadraat nemen?", "Dat is de helft van de diameter — geen oppervlakte-formule. Welke maat gebruik je in de oppervlakte-formule?"],
         explanation: "**Diameter = 1 m, dus straal = 0,5 m**. Oppervlakte = π × r² = 3,14 × 0,5² = 3,14 × 0,25 = **0,785 m²** (= 7850 cm²).",
         uitlegPad: compact(
           "Diameter=1m → straal=0,5m. Oppervlakte=πr²=3,14×0,5²=3,14×0,25=0,785 m².",
-          { basis: "π × 0,25 = 0,785 m².", simpeler: "Straal halveer eerst (1m → 0,5m). Dan π × 0,5² = 0,785.", nogSimpeler: "0,785" },
+          { basis: "π × 0,25 = 0,785 m².", simpeler: "Halveer eerst de diameter (1m → 0,5m). Dan π × 0,5² = 0,785.", nogSimpeler: "0,785" },
           [{ woord: "oppervlakte cirkel", uitleg: "π × straal² (NIET diameter²)." }],
         ),
       },
@@ -330,7 +330,7 @@ const steps = [
   },
   {
     title: "Stap 6 — Praktijk-vraagstukken",
-    explanation: "Op de Doorstroomtoets en in het echt komen oppervlakte + omtrek vaak in **praktijksituaties** voor:\n\n**Voorbeelden**:\n- 🏡 **Tuin omheinen** → omtrek (hoeveel meter hek?)\n- 🎨 **Muur behangen** → oppervlakte (hoeveel rollen?)\n- 🟨 **Vloer betegelen** → oppervlakte (hoeveel tegels?)\n- 🧶 **Lint om cadeau** → omtrek\n- 🌱 **Gazon mest geven** → oppervlakte\n- 🚪 **Schuur schilderen** → oppervlakte van de muren\n- 🛣️ **Rondje hardlopen om vijver** → omtrek\n\n**Aanpak toetsvraag (3 stappen)**:\n1. **Lees goed**: gaat het om **rand** (omtrek) of **vlak** (oppervlakte)?\n2. **Maak schets**: teken figuur + zet getallen erbij.\n3. **Reken uit + check eenheid**: m, m², m³? Klopt het?\n\n**Toets-valkuilen**:\n- Een **schuine zijde** is geen 'hoogte' van een driehoek — die staat haaks.\n- 1 m² ≠ 100 cm² — het is **10.000 cm²**.\n- Bij cirkel: gebruik **straal** voor r², niet diameter.\n- Soms moet je een **gat eraf trekken** (bv. tuin met vijver: tuin-oppervlakte − vijver-oppervlakte = gras).\n\n**Combinatie-vragen**: soms gevraagd OMTREK én OPPERVLAKTE in 1 vraag. Lees vraag 2× — pak de juiste formule.",
+    explanation: "Op de Doorstroomtoets en in het echt komen oppervlakte + omtrek vaak in **praktijksituaties** voor:\n\n**Voorbeelden**:\n- 🏡 **Tuin omheinen** → omtrek (hoeveel meter hek?)\n- 🎨 **Muur behangen** → oppervlakte (hoeveel rollen?)\n- 🟨 **Vloer betegelen** → oppervlakte (hoeveel tegels?)\n- 🧶 **Lint om cadeau** → omtrek\n- 🌱 **Gazon mest geven** → oppervlakte\n- 🚪 **Schuur schilderen** → oppervlakte van de muren\n- 🛣️ **Rondje hardlopen om vijver** → omtrek\n\n**Aanpak toetsvraag (3 stappen)**:\n1. **Lees goed**: gaat het om **rand** (omtrek) of **vlak** (oppervlakte)?\n2. **Maak schets**: teken figuur + zet getallen erbij.\n3. **Reken uit + check eenheid**: m, m², m³? Klopt het?\n\n**Toets-valkuilen**:\n- Een **schuine zijde** is geen 'hoogte' van een driehoek — die staat haaks.\n- 1 m² ≠ 100 cm² — het is **10.000 cm²**.\n- Bij cirkel: gebruik **straal** voor r², niet diameter.\n- Soms moet je een **gat eraf trekken** (bv. tuin met vijver: tuin-oppervlakte − vijver-oppervlakte = gras).\n\n**Combinatie-vragen**: soms wordt naar OMTREK én OPPERVLAKTE gevraagd in 1 vraag. Lees vraag 2× — pak de juiste formule.",
     emoji: "🛋️",
     checks: [
       {
@@ -361,7 +361,7 @@ const steps = [
         q: "Een ronde **pizza** heeft een **diameter van 30 cm**. Hoeveel cm² is de pizza? (π ≈ 3,14)",
         options: ["94,2 cm²", "188,4 cm²", "706,5 cm²", "2826 cm²"],
         answer: 2,
-        wrongHints: ["Dat is de omtrek van de pizza, niet de oppervlakte. Welke formule geeft oppervlakte?", "Foute formule — de oppervlakte van een cirkel gebruik je π × r². Welke maat is r?", null, "Je hebt de diameter gekwadrateerd — maar de formule vraagt de straal. Wat is het verschil tussen straal en diameter?"],
+        wrongHints: ["Dat is de omtrek van de pizza, niet de oppervlakte. Welke formule geeft oppervlakte?", "Foute formule — voor de oppervlakte van een cirkel gebruik je π × r². Welke maat is r?", null, "Je hebt de diameter gekwadrateerd — maar de formule vraagt de straal. Wat is het verschil tussen straal en diameter?"],
         explanation: "**Diameter = 30, straal = 15**. Oppervlakte = π × r² = 3,14 × 15² = 3,14 × 225 = **706,5 cm²**. Toets-trap: pas op voor diameter ipv straal!",
         uitlegPad: compact(
           "Pizza diameter=30, straal=15. Oppervlakte = πr² = 3,14×225 = 706,5 cm². Niet 30² gebruiken!",

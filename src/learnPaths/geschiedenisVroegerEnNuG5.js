@@ -120,7 +120,7 @@ const steps = [
   {
     title: "Leven en school vroeger — geen licht-knopje!",
     explanation:
-      "Zo'n **honderd jaar geleden** was het leven heel anders:\n\n• Veel huizen hadden **geen elektriciteit**: 's avonds brandde een olielamp of kaars.\n• **Water** kwam vaak uit een pomp, niet uit de kraan.\n• Kleren werden met de **hand gewassen**.\n\nEn op school?\n• Kinderen schreven op een **lei** met een **griffel** (een soort krijtpennetje op een zwart plankje).\n• Klassen waren groot en de meester of juf was vaak streng.\n• Veel kinderen moesten na school **meehelpen** thuis of op het land.",
+      "Zo'n **honderd jaar geleden** was het leven heel anders:\n\n• Veel huizen hadden **geen elektriciteit**: 's avonds brandde een olielamp of kaars.\n• **Water** kwam vaak uit een pomp, niet uit de kraan.\n• Kleren werden met de **hand gewassen**.\n\nEn op school?\n• Kinderen schreven op een **lei** met een **griffel** (een soort krijtpennetje; de lei is een zwart plankje).\n• Klassen waren groot en de meester of juf was vaak streng.\n• Veel kinderen moesten na school **meehelpen** thuis of op het land.",
     checks: [
       {
         q: "Waarop schreven kinderen ongeveer honderd jaar geleden op school?",
