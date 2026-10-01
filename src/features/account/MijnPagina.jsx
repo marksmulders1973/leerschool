@@ -16,6 +16,7 @@ import KoppelcodeBanner from "../../components/KoppelcodeBanner.jsx";
 import TrouweGastKaart from "./TrouweGastKaart.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
+import WieOefentEr, { leesProfielen } from "./WieOefentEr.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
@@ -551,6 +552,11 @@ export default function MijnPagina({
     if (onWisselProfiel) onWisselProfiel(naam);
   };
   const [week, setWeek] = useState(null);
+  // 👨‍👩‍👧 "Wie oefent er?" (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): bij openen
+  // met 2+ profielen op dit apparaat eerst kiezen (zoals Netflix), daarna via "Wissel".
+  const [wieOpen, setWieOpen] = useState(() => {
+    try { return leesProfielen().length >= 2 && !sessionStorage.getItem("lk_wie_gekozen"); } catch { return false; }
+  });
   // Profiel-wissel (Mark 12 aug): andere namen die dit apparaat gebruikten.
   const [wisselOpen, setWisselOpen] = useState(false);
   // 🗑️ Profiel verwijderen (Mark 28 aug): welke naam wacht op bevestiging?
@@ -988,7 +994,16 @@ export default function MijnPagina({
   };
 
   return (
-    <div style={{ ...styles.page, ...(thema.pageStyle || {}) }}>
+    <div style={styles.page}>
+      {/* Eigen achtergrond-thema's uit (Mark 1 okt 2026: "achtergrond personalisatie kan uit") — rustiger. */}
+      {wieOpen && (
+        <WieOefentEr
+          huidigeNaam={player}
+          onKies={(naam) => { setWieOpen(false); setProfielVersie((v) => v + 1); if (naam !== player && onWisselProfiel) onWisselProfiel(naam); }}
+          onSluit={() => { try { sessionStorage.setItem("lk_wie_gekozen", "1"); } catch { /* */ } setWieOpen(false); }}
+          onVerwijder={(naam) => { if (onVerwijderProfiel) onVerwijderProfiel(naam); setProfielVersie((v) => v + 1); }}
+        />
+      )}
       {/* WhatsApp 13 aug 18:55: géén dubbel huisje (de functionele 🏠-knop
           zit rechts in de Header) + persoonlijke titel. */}
       <Header title={player ? `${player}’s Leerkwartier` : "Mijn Leerkwartier"} subtitle="" onBack={onBack} onHome={onHome} />
@@ -1393,7 +1408,14 @@ export default function MijnPagina({
               {/* 👨‍👩‍👧 Gezinsrij: wie is er bezig op dit apparaat? Actief profiel
                   vol in kleur met groene ring; de rest doorzichtig, tik =
                   wisselen (Mark 22 aug). Alleen tonen als er iets te kiezen is. */}
-              {gezinsRij.length > 1 && (
+              {/* Profiel wisselen via "Wie oefent er?" (1 okt 2026) i.p.v. de oude gezinsrij. */}
+              <div style={{ flexBasis: "100%", marginTop: 2, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)", display: "flex", alignItems: "center", gap: 10, flexWrap: "wrap" }}>
+                <button type="button" onClick={() => { try { track("profiel_wissel_open", {}); } catch { /* */ } setWieOpen(true); }} style={{ padding: "9px 16px", borderRadius: 999, cursor: "pointer", border: "1px solid rgba(0,230,118,0.45)", background: "rgba(0,230,118,0.08)", color: "#69f0ae", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800 }}>
+                  {gezinsRij.length > 1 ? "Wissel van profiel" : "Profiel toevoegen"}
+                </button>
+                <span style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)" }}>{gezinsRij.length > 1 ? `${gezinsRij.length} profielen op dit apparaat` : "Tot 5 profielen per apparaat, bijvoorbeeld voor broers, zussen of een ouder."}</span>
+              </div>
+              {false && gezinsRij.length > 1 && (
                 <div style={{ flexBasis: "100%", marginTop: 2, paddingTop: 10, borderTop: "1px solid rgba(255,255,255,0.08)" }}>
                   <div style={{ ...eyebrowStijl, marginBottom: 6 }}>Wie is er bezig?</div>
                   <div style={{ display: "flex", gap: 16, alignItems: "flex-start" }}>
@@ -2356,7 +2378,7 @@ export default function MijnPagina({
             {/* ── 🎨 Eigen achtergrond (Mark 13 aug): gekozen palet i.p.v.
                 vrije foto's — rustig en veilig; goud verdien je met je
                 eerste échte diploma. ── */}
-            <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+            {false && <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
               <div style={eyebrowStijl}>Jouw pagina, jouw kleur</div>
               <div style={kaartTitelStijl}>🎨 Kies je achtergrond</div>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -2407,7 +2429,7 @@ export default function MijnPagina({
                   </button>
                 ))}
               </div>
-            </Card>
+            </Card>}
 
             {/* ── Abonnement & toegang ── */}
             <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>

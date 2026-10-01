@@ -749,7 +749,9 @@ export default function App() {
     const n = (userName || "").trim();
     if (!n || n.toLowerCase() === "speler") return;
     try {
-      localStorage.setItem(`lk_profiel:${n}`, JSON.stringify({ level: userLevel || "", role: role || "", schoolType: userSchoolType || "" }));
+      // Samenvoegen (1 okt 2026): leeftijd/voorkeur uit de profielkaart ("Wie oefent er?") niet overschrijven.
+      let oud = {}; try { oud = JSON.parse(localStorage.getItem(`lk_profiel:${n}`) || "{}") || {}; } catch { /* */ }
+      localStorage.setItem(`lk_profiel:${n}`, JSON.stringify({ ...oud, level: userLevel || "", role: role || "", schoolType: userSchoolType || "" }));
       const lijst = JSON.parse(localStorage.getItem("lk_namen") || "[]").filter((x) => x !== n);
       lijst.unshift(n);
       localStorage.setItem("lk_namen", JSON.stringify(lijst.slice(0, 8)));
