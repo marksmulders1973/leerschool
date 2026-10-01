@@ -66,7 +66,7 @@ const steps = [
   },
   {
     title: "Hoe ontstaan klimaten? — de zon",
-    explanation: "Klimaten ontstaan vooral door de **zon**. Maar de zon schijnt niet overal even sterk.\n\n**Hoe verder van de evenaar, hoe minder zonkracht** — om twee redenen:\n1. **Schuine inval**: bij de polen valt het zonlicht onder een steile hoek → het verspreidt zich over een groter oppervlak en is dus minder sterk per m².\n2. **Lange weg door de atmosfeer**: licht moet daar verder door de atmosfeer, en verliest meer energie.\n\nDaardoor zijn er drie hoofdgroepen:\n• Bij de **evenaar** (0° breedte): heel warm — *tropisch klimaat*.\n• Tussen evenaar en polen (~25°-65°): lekker temperatuurverschil — *gematigd klimaat*.\n• Bij de **polen** (90°): heel koud — *poolklimaat*.\n\nNaast de zon spelen ook **zee/oceaan** (verzacht het klimaat) en **hoogte** (hoe hoger, hoe kouder) een rol.",
+    explanation: "Klimaten ontstaan vooral door de **zon**. Maar de zon schijnt niet overal even sterk.\n\n**Hoe verder van de evenaar, hoe minder zonkracht** — om twee redenen:\n1. **Schuine inval**: bij de polen valt het zonlicht onder een kleine (schuine) hoek → het verspreidt zich over een groter oppervlak en is dus minder sterk per m².\n2. **Lange weg door de atmosfeer**: licht moet daar verder door de atmosfeer, en verliest meer energie.\n\nDaardoor zijn er drie hoofdgroepen:\n• Bij de **evenaar** (0° breedte): heel warm — *tropisch klimaat*.\n• Tussen evenaar en polen (~25°-65°): lekker temperatuurverschil — *gematigd klimaat*.\n• Bij de **polen** (90°): heel koud — *poolklimaat*.\n\nNaast de zon spelen ook **zee/oceaan** (verzacht het klimaat) en **hoogte** (hoe hoger, hoe kouder) een rol.",
     svg: `<svg viewBox="0 0 300 200">
 <circle cx="150" cy="100" r="70" fill="${COLORS.gematigd}" opacity="0.25" stroke="${COLORS.gematigd}" stroke-width="2"/>
 <line x1="80" y1="100" x2="220" y2="100" stroke="${COLORS.warm}" stroke-width="1" stroke-dasharray="3"/>
@@ -104,7 +104,7 @@ const steps = [
         wrongHints: [null, "Polen staan juist niet dichterbij — afstand maakt nauwelijks verschil.", "Er is wél atmosfeer.", "Polen zijn juist droog."],
         uitlegPad: {
           stappen: [{ titel: "Schuine zoninval = zwak", tekst: "Bij polen valt zonlicht onder zeer schuine hoek (bijna horizontaal). Dezelfde hoeveelheid licht wordt verspreid over een veel groter oppervlak → minder warmte per m². Plus: zomer is heel kort + winter zonder zon (poolnacht)." }],
-          woorden: [{ woord: "poolnacht", uitleg: "Bij polen blijft zon hele winter onder horizon (~6 maanden). Daarna 'middernachtszon' (zon nooit onder)." }, { woord: "albedo", uitleg: "Hoe veel licht een oppervlak weerkaatst. IJs weerkaatst veel (90%). Daarom blijft pool koud." }],
+          woorden: [{ woord: "poolnacht", uitleg: "Bij polen blijft zon hele winter onder horizon (~6 maanden). Daarna 'middernachtszon' (zon nooit onder)." }, { woord: "albedo", uitleg: "Hoeveel licht een oppervlak weerkaatst. IJs weerkaatst veel (90%). Daarom blijft pool koud." }],
           theorie: "Niet afstand tot zon: aarde-zon afstand verschilt slechts 3% (zomer↔winter). Wel zoninval-hoek. Plus albedo-effect: ijs weerkaatst licht, blijft koud.",
           voorbeelden: [{ type: "feit", tekst: "Antarctica gemiddelde wintertemp: -49°C. Centrum: -89°C (laagst ooit gemeten). Bij evenaar zelden onder 18°C." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Polen niet dichter bij zon (afstand ~vast). WEL atmosfeer. Polen DROOG (niet veel regen)." }],
@@ -115,7 +115,7 @@ const steps = [
   },
   {
     title: "Tropisch klimaat (A)",
-    explanation: "**Ligging**: rond de evenaar, tussen ~23° NB en 23° ZB.\n\n**Kenmerken**:\n• Het hele jaar **warm** (≥ 18 °C, vaak 25-30 °C).\n• Geen seizoenen zoals wij die kennen.\n• Veel **regen** — er bestaat geen droge winter.\n\n**Subtypes**:\n• **Tropisch regenwoud (Af)**: het hele jaar warm én nat. *Voorbeelden: Amazonegebied, Congo.*\n• **Savanne (Aw)**: warm met een **droge** en een **natte** tijd. Grasvlaktes met losse bomen. *Voorbeelden: groot deel van Afrika, India.*\n\n**Wat groeit er?**\n• Regenwoud: enorme bomen, lianen, tropische dieren.\n• Savanne: gras, acacia's, leeuwen, zebra's, olifanten.",
+    explanation: "**Ligging**: rond de evenaar, tussen ~23° NB en 23° ZB.\n\n**Kenmerken**:\n• Het hele jaar **warm** (≥ 18 °C, vaak 25-30 °C).\n• Geen seizoenen zoals wij die kennen.\n• Veel **regen** (bij de savanne alleen in de natte tijd).\n\n**Subtypes**:\n• **Tropisch regenwoud (Af)**: het hele jaar warm én nat. *Voorbeelden: Amazonegebied, Congo.*\n• **Savanne (Aw)**: warm met een **droge** en een **natte** tijd. Grasvlaktes met losse bomen. *Voorbeelden: groot deel van Afrika, India.*\n\n**Wat groeit er?**\n• Regenwoud: enorme bomen, lianen, tropische dieren.\n• Savanne: gras, acacia's, leeuwen, zebra's, olifanten.",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="30" width="260" height="120" rx="10" fill="${COLORS.trop}" opacity="0.18" stroke="${COLORS.trop}" stroke-width="2"/>
 <text x="150" y="55" text-anchor="middle" fill="${COLORS.trop}" font-size="14" font-family="Arial" font-weight="bold">TROPISCH 🌴</text>
@@ -171,7 +171,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Spanje ligt veel noordelijker dan de evenaar.", "Spanje is zeker niet zo koud.", "Landklimaat heeft extreme winters — Spanje heeft milde winters."],
         uitlegPad: {
-          stappen: [{ titel: "Mediterraan = droge zomer", tekst: "Spanje + Italië + Griekenland + Zuid-Frankrijk: mediterraan klimaat (Cs). Warme, DROGE zomers (>25°C, weinig regen). Milde, NATTE winters (~10°C). Speciaal subtype. Naam: 'Middellandse zee' (Latijn medi+terra)." }],
+          stappen: [{ titel: "Mediterraan = droge zomer", tekst: "Spanje + Italië + Griekenland + Zuid-Frankrijk: mediterraan klimaat (Cs). Warme, DROGE zomers (>25°C, weinig regen). Milde, NATTE winters (~10°C). Speciaal subtype. Naam: van 'Middellandse Zee' (Latijn medius + terra = midden + land)." }],
           woorden: [{ woord: "mediterraan", uitleg: "'Aan Middellandse Zee'. Klimaattype met droge zomer + natte winter." }],
           theorie: "Andere mediterrane gebieden wereldwijd: Californië, Centraal-Chili, deel Zuid-Afrika, Zuid-Australië. Allemaal westkant continent, ~30-45° breedte. Goed voor: druiven (wijn!), olijven, citrus.",
           voorbeelden: [{ type: "feit", tekst: "Madrid zomertemp ~35°C, vrijwel geen regen. Wintertemp ~6°C, wel regen. NL juist: zomer milder + regen hele jaar." }],
@@ -185,7 +185,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Toendra = koud poolgebied.", "Savanne heeft natte+droge tijd; Sahara is altijd droog.", "Mediterraan heeft milde winters; Sahara is veel droger."],
         uitlegPad: {
-          stappen: [{ titel: "Sahara — grootste woestijn", tekst: "Sahara (Noord-Afrika) = grootste WARME woestijn wereld. 9 mln km² (groter dan VS!). Woestijnklimaat (BW): <250 mm regen/jaar. Heet overdag (50°C), koud nacht (kan vriezen). Geen vegetatie behalve oases." }],
+          stappen: [{ titel: "Sahara — grootste woestijn", tekst: "Sahara (Noord-Afrika) = grootste WARME woestijn wereld. 9 mln km² (bijna zo groot als de VS!). Woestijnklimaat (BW): <250 mm regen/jaar. Heet overdag (50°C), koud nacht (kan vriezen). Geen vegetatie behalve oases." }],
           woorden: [{ woord: "woestijn", uitleg: "Gebied met <250 mm regen/jaar. Kan heet (Sahara) of koud (Gobi)." }, { woord: "oase", uitleg: "Plek in woestijn met water uit ondergrondse bron. Mensen + planten daar." }],
           theorie: "Andere grote woestijnen: Australië-binnenland, Gobi (Mongolië), Atacama (Chili, droogste), Arabische woestijn. Ontstaan door subtropische hogedruk (lucht droogt).",
           voorbeelden: [{ type: "schaal", tekst: "Sahara 9 mln km². Atacama is droogste plek aarde (sommige plekken 0 mm regen sinds metingen). Vergelijk: NL ~800 mm regen/jaar." }],
@@ -226,11 +226,11 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Nederland ligt op ~52° NB — vrij noordelijk.", "Stedelijk effect bestaat, maar zee is veel groter.", "Sneeuw maakt het juist niet zacht."],
         uitlegPad: {
-          stappen: [{ titel: "Golfstroom + westenwind", tekst: "Atlantische Oceaan + Golfstroom voert warme zeewater + lucht aan vanaf Mexicaanse Golf naar Europa. Westenwind blaast die warme lucht naar binnenland. Resultaat: NL veel zachter dan zelfde breedte zonder zee (bv. Canada centraal-binnenland)." }],
+          stappen: [{ titel: "Golfstroom + westenwind", tekst: "Atlantische Oceaan + Golfstroom voert warm zeewater + lucht aan vanaf Mexicaanse Golf naar Europa. Westenwind blaast die warme lucht naar binnenland. Resultaat: NL veel zachter dan zelfde breedte zonder zee (bv. Canada centraal-binnenland)." }],
           woorden: [{ woord: "Golfstroom", uitleg: "Warme zeestroming Caribische Zee → Atlantische Oceaan → Noordwest-Europa. Brengt warmte." }, { woord: "westenwind", uitleg: "Wind die uit het westen blaast. In NL dominant door rotatie aarde + drukverschillen." }],
           theorie: "Zonder Golfstroom: NL winter ~-15°C (zoals Canada-binnenland zelfde breedte). Door Golfstroom: +3°C gemiddeld. Verschil van 18°C dankzij zee.",
           voorbeelden: [{ type: "vergelijk", tekst: "Canada zelfde breedte (Calgary 52° N): januari -10°C. Amsterdam 52° N: januari +3°C. Atlantische Oceaan effect." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "NL ligt verre van evenaar (52°N). Steden = klein effect. Sneeuw = juist kou, niet zacht." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "NL ligt ver van de evenaar (52°N). Steden = klein effect. Sneeuw = juist kou, niet zacht." }],
           niveaus: { basis: "Zee + westenwind.", simpeler: "NL zacht 's winters door warme zee + westenwind uit Atlantische Oceaan.", nogSimpeler: "Zee warm" },
         },
       },
@@ -253,10 +253,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Constant warm = tropisch.", "Hele jaar koud = pool.", "Veel regen + zachte winter = zeeklimaat."],
         uitlegPad: {
-          stappen: [{ titel: "Verre van zee = extreem", tekst: "Landklimaat (D) = ver van zee, midden in continent. Zonder zee-verzachting: hete zomers (>20°C) + koude winters (<-10°C). Verschil 30+ graden zomer↔winter. Minder regen. Voorbeelden: Polen, Centraal-Rusland, Canada-binnenland." }],
-          woorden: [{ woord: "landklimaat", uitleg: "Klimaat met grote temperatuurverschil zomer↔winter. Land = continentaal." }, { woord: "continentaliteit", uitleg: "Hoe sterk een plek 'landklimaat-achtig' is. Bepaald door afstand tot zee." }],
+          stappen: [{ titel: "Ver van zee = extreem", tekst: "Landklimaat (D) = ver van zee, midden in continent. Zonder zee-verzachting: hete zomers (>20°C) + koude winters (<-10°C). Verschil 30+ graden zomer↔winter. Minder regen. Voorbeelden: Polen, Centraal-Rusland, Canada-binnenland." }],
+          woorden: [{ woord: "landklimaat", uitleg: "Klimaat met groot temperatuurverschil zomer↔winter. Land = continentaal." }, { woord: "continentaliteit", uitleg: "Hoe sterk een plek 'landklimaat-achtig' is. Bepaald door afstand tot zee." }],
           theorie: "Vergelijk zeeklimaat (NL): klein verschil zomer↔winter (~14°C). Landklimaat (Polen): groot verschil (~25°C). Hoe verder in continent: groter contrast.",
-          voorbeelden: [{ type: "cijfers", tekst: "Moscow (Centraal-Rusland, landklimaat): januari -10°C, juli +19°C. Verschil 29°C. NL: januari +3°C, juli +17°C. Verschil 14°C." }],
+          voorbeelden: [{ type: "cijfers", tekst: "Moskou (Centraal-Rusland, landklimaat): januari -10°C, juli +19°C. Verschil 29°C. NL: januari +3°C, juli +17°C. Verschil 14°C." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Constant warm = tropisch (A). Hele jaar koud = pool (E). Zeeklimaat = milde winter + regen hele jaar." }],
           niveaus: { basis: "Groot zomer-winter verschil.", simpeler: "Landklimaat = extreme zomers + winters door afstand tot zee.", nogSimpeler: "Extreem" },
         },
@@ -270,7 +270,7 @@ const steps = [
           stappen: [{ titel: "Centraal Rusland = ver van zee", tekst: "Centraal-Rusland (Moskou, Siberië) ligt 1000+ km van zee. Extreme winter (-20°C) + warme zomer (+25°C). Voorbeeld landklimaat (D). Andere landklimaten: Polen, Oekraïne, Kazachstan, midden Canada, midden VS." }],
           woorden: [{ woord: "binnenland", uitleg: "Gebied ver van kust. Wordt sterker beïnvloed door land dan door zee." }],
           theorie: "Regel: hoe verder van zee, hoe groter dag/nacht- en zomer/winter-verschil. Land warmt snel op en koelt snel af. Water (zee) verandert traag.",
-          voorbeelden: [{ type: "cijfers", tekst: "Moskou jan: -10°C / jul: +19°C. NL jan: +3°C / jul: +17°C. Op zelfde breedte ~52° NB — verschil door zee/land." }],
+          voorbeelden: [{ type: "cijfers", tekst: "Moskou jan: -10°C / jul: +19°C. NL jan: +3°C / jul: +17°C. Op ongeveer dezelfde breedte (~52-56° NB) — verschil door zee/land." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "NL = zeeklimaat. Brazilië = tropisch (bij evenaar). Egypte = woestijn (subtropisch droog)." }],
           niveaus: { basis: "Centraal Rusland.", simpeler: "Landklimaat = midden continent. Centraal Rusland = voorbeeld.", nogSimpeler: "Rusland" },
         },
@@ -294,10 +294,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Permafrost is een bodemkenmerk.", "Niets met bergen.", "Een dier — niet de bodem."],
         uitlegPad: {
-          stappen: [{ titel: "Permanent bevroren grond", tekst: "Permafrost = bodem die het hele jaar door (≥2 jaar) onder 0°C blijft. Dus altijd bevroren, ook 's zomers. Vooral in poolgebieden (Siberië, noord-Canada, Alaska, Antarctica). Bovenlaag kan in zomer ontdooien, maar dieper blijft ijs." }],
+          stappen: [{ titel: "Permanent bevroren grond", tekst: "Permafrost = bodem die minstens 2 jaar achter elkaar onder 0°C blijft. Dus altijd bevroren, ook 's zomers. Vooral in poolgebieden (Siberië, noord-Canada, Alaska, Antarctica). Bovenlaag kan in zomer ontdooien, maar dieper blijft ijs." }],
           woorden: [{ woord: "permafrost", uitleg: "'Permanent' + 'frost' (vorst). Permanent bevroren bodem." }, { woord: "toendra", uitleg: "Vlak gebied met permafrost. Korte zomer, geen bomen, mossen + grassen." }],
           theorie: "Permafrost-gebieden: ~25% landoppervlak Noordelijk Halfrond. Door klimaatverandering smelt het — risico: vrijkomen broeikasgassen (methaan) + bodem zakt in.",
-          voorbeelden: [{ type: "feit", tekst: "Sommige permafrost in Siberië is duizenden jaren oud. Bevatten mammoetkadavers nog goed bewaard." }],
+          voorbeelden: [{ type: "feit", tekst: "Sommige permafrost in Siberië is duizenden jaren oud. Er zitten nog goed bewaarde mammoetkadavers in." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet sneeuwvlok (water-kristallen lucht). Geen berg (bodem). Geen dier (=ijsbeer)." }],
           niveaus: { basis: "Bevroren bodem.", simpeler: "Permafrost = altijd bevroren grond (>2 jaar).", nogSimpeler: "Bevroren" },
         },
@@ -320,7 +320,7 @@ const steps = [
   },
   {
     title: "Hoogteklimaat — bergen",
-    explanation: "**Hoe hoger je komt, hoe kouder het wordt** — gemiddeld zo'n **0,6 °C kouder per 100 meter** stijging.\n\nDaarom kan het op een berg in een tropisch land toch vriezen op de top — denk aan **Kilimanjaro** (Tanzania, op de evenaar, maar 5895 m hoog → besneeuwde top).\n\n**Verticale klimaatzones** in een berg:\n• Onderaan: het lokale klimaat (bv. tropisch).\n• Hoger: gematigd, dan koud, dan eeuwige sneeuw.\n\n**Voorbeelden**:\n• Andes (Zuid-Amerika).\n• Himalaya (Mount Everest, 8848 m — eeuwig ijs).\n• Alpen (Europa).\n\n**Praktisch**: bergvolkeren leven op verschillende hoogten en passen wat ze verbouwen aan op de hoogte (mais beneden, aardappel midden, lama's hoog).",
+    explanation: "**Hoe hoger je komt, hoe kouder het wordt** — gemiddeld zo'n **0,6 °C kouder per 100 meter** stijging.\n\nDaarom kan het op een berg in een tropisch land toch vriezen op de top — denk aan **Kilimanjaro** (Tanzania, vlak bij de evenaar, maar 5895 m hoog → besneeuwde top).\n\n**Verticale klimaatzones** in een berg:\n• Onderaan: het lokale klimaat (bv. tropisch).\n• Hoger: gematigd, dan koud, dan eeuwige sneeuw.\n\n**Voorbeelden**:\n• Andes (Zuid-Amerika).\n• Himalaya (Mount Everest, 8848 m — eeuwig ijs).\n• Alpen (Europa).\n\n**Praktisch**: bergvolkeren leven op verschillende hoogten en passen wat ze verbouwen aan op de hoogte (mais beneden, aardappel midden, lama's hoog).",
     svg: `<svg viewBox="0 0 300 180">
 <polygon points="40,150 150,30 260,150" fill="${COLORS.hoog}" opacity="0.30" stroke="${COLORS.hoog}" stroke-width="2"/>
 <rect x="40" y="120" width="220" height="30" fill="${COLORS.trop}" opacity="0.4"/>
@@ -337,21 +337,21 @@ const steps = [
         wrongHints: [null, "Veel te veel — dan zou alles boven 1 km al bevroren zijn.", "Veel te weinig — dan zou hoogte nauwelijks effect hebben.", "Hoogte = juist kouder, niet warmer."],
         uitlegPad: {
           stappen: [{ titel: "0,6°C kouder per 100m", tekst: "Vuistregel: temperatuur daalt ~0,6°C per 100m stijging (vochtige lucht) tot ~1°C (droge lucht). Dus 1 km hoger = ~6°C kouder. 5 km hoger = ~30°C kouder. Vandaar besneeuwde bergtoppen, ook in warme landen." }],
-          woorden: [{ woord: "lapse rate", uitleg: "Engelse term voor temperatuurdaling per hoogte. NL: 'verticale temperatuurgradient'." }],
-          theorie: "Reden: lucht hoger = minder druk = uitzet = koeler. Vandaar berg-effect. Werkt ook lokaal: dal-bodem zomer warm, bergtop koud.",
+          woorden: [{ woord: "lapse rate", uitleg: "Engelse term voor temperatuurdaling per hoogte. NL: 'verticale temperatuurgradiënt'." }],
+          theorie: "Reden: lucht hoger = minder druk = zet uit = koeler. Vandaar berg-effect. Werkt ook lokaal: dal-bodem zomer warm, bergtop koud.",
           voorbeelden: [{ type: "berekening", tekst: "Strand zee-niveau: 30°C. 1 km hoger berg: 30 - 6 = 24°C. Mount Everest 8848m: 30 - 53 = -23°C. Klopt: Everest = ijskoud." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet 10°C (te veel). Niet 0,01°C (te weinig). Wel kouder met hoogte." }],
           niveaus: { basis: "0,6°C/100m.", simpeler: "Hoogte = kouder, ~0,6°C per 100m omhoog.", nogSimpeler: "0,6" },
         },
       },
       {
-        q: "Hoe kan er sneeuw liggen op de Kilimanjaro, terwijl die op de evenaar staat?",
+        q: "Hoe kan er sneeuw liggen op de Kilimanjaro, terwijl die vlak bij de evenaar staat?",
         options: ["Hoogte zorgt dat het toch koud wordt","Hij ligt in Antarctica","Het is een vulkaan","Klimaatverandering smelt dat"],
         answer: 0,
-        wrongHints: [null, "Hij staat in Tanzania, niet Antarctica.", "Vulkaan ja, maar dat geeft niet sneeuw.", "Het smelt inderdaad — maar dat verklaart niet waarom er ooit sneeuw lág."],
+        wrongHints: [null, "Hij staat in Tanzania, niet Antarctica.", "Vulkaan ja, maar dat geeft geen sneeuw.", "Het smelt inderdaad — maar dat verklaart niet waarom er ooit sneeuw lág."],
         uitlegPad: {
           stappen: [{ titel: "5895m → diep onder vriespunt", tekst: "Kilimanjaro (Tanzania) is 5895m hoog. Op zee-niveau bij evenaar: ~25°C. Op 5895m: 25 - 35 = ongeveer -10°C. Daarom: besneeuwde top ondanks ligging op evenaar! Hoogte > breedte voor klimaat." }],
-          woorden: [{ woord: "Kilimanjaro", uitleg: "Hoogste berg Afrika. Tanzania. 5895m. Vulkaan (dormant)." }, { woord: "hoogteklimaat", uitleg: "Klimaat door hoogte ipv breedte. Verticale klimaatzones op bergen." }],
+          woorden: [{ woord: "Kilimanjaro", uitleg: "Hoogste berg Afrika. Tanzania. 5895m. Vulkaan (slapend)." }, { woord: "hoogteklimaat", uitleg: "Klimaat door hoogte ipv breedte. Verticale klimaatzones op bergen." }],
           theorie: "Op berg ontstaan VERTICALE klimaatzones: tropisch beneden → gematigd → koud → eeuwige sneeuw. Andere voorbeelden: Andes (tropisch op evenaar, sneeuw boven 5000m), Himalaya.",
           voorbeelden: [{ type: "klimaatzorgen", tekst: "Kilimanjaro-sneeuw is 80% gesmolten sinds 1912 door klimaatverandering. Verwacht volledige verdwijning ~2050. Cultureel verlies." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Niet in Antarctica (Tanzania!). Vulkaan-zijn levert geen sneeuw op. Klimaatverandering smelt sneeuw, maar verklaart niet AANWEZIGHEID." }],
@@ -395,7 +395,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Maan blijft hetzelfde.", "Onzin.", "Onzin."],
         uitlegPad: {
-          stappen: [{ titel: "Zeespiegel stijgt", tekst: "Klimaatverandering veroorzaakt: (1) smeltend ijs op land (Groenland + Antarctica) → meer water in zee. (2) Uitzetten zeewater (warm = meer volume). Resultaat: zeespiegel stijgt ~3-4 mm/jaar. Tegen 2100: +30-100 cm. Lage landen (NL, Bangladesh, Maladiven) bedreigd." }],
+          stappen: [{ titel: "Zeespiegel stijgt", tekst: "Klimaatverandering veroorzaakt: (1) smeltend ijs op land (Groenland + Antarctica) → meer water in zee. (2) Uitzetten zeewater (warm = meer volume). Resultaat: zeespiegel stijgt ~3-4 mm/jaar. Tegen 2100: +30-100 cm. Lage landen (NL, Bangladesh, Malediven) bedreigd." }],
           woorden: [{ woord: "zeespiegelstijging", uitleg: "Niveau zee gaat omhoog. Door smelt + warmere-water-uitzet." }, { woord: "Akkoord van Parijs", uitleg: "VN-klimaatakkoord 2015. Doel: max 1,5-2°C opwarming." }],
           theorie: "Andere gevolgen: meer extreem weer (hittegolven, stormen, droogtes), klimaatzones schuiven op, soorten sterven uit, oogst-problemen, migratie. Allemaal effecten van die +1,2°C nu.",
           voorbeelden: [{ type: "concreet", tekst: "Sinds 1900 zeespiegel +20 cm. Versnelt: 1900-1990 = 1,4 mm/jaar. Nu: 4 mm/jaar. NL beschermt zich met versterkte dijken." }],
@@ -421,7 +421,7 @@ const steps = [
     checks: [
       {
         q: "Welk klimaat: \"Het hele jaar warm, veel regen, ligt rond de evenaar\"?",
-        options: ["Tropisch regenwoud (A)", "Mediterraan (B)", "Gematigd zeeklimaat (C)", "Toendra (E)"],
+        options: ["Tropisch regenwoud (A)", "Mediterraan (Cs)", "Gematigd zeeklimaat (C)", "Toendra (E)"],
         answer: 0,
         wrongHints: [null, "Mediterraan heeft droge zomers.", "Gematigd is niet 'het hele jaar warm'.", "Toendra is heel koud."],
         uitlegPad: {
@@ -441,7 +441,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Klassieke NL-beschrijving", tekst: "Vier seizoenen + zachte winters + regen hele jaar = Cfb = gematigd zeeklimaat. NL voorbeeld. Ook UK, Ierland, België, NW Frankrijk, Denemarken." }],
           woorden: [{ woord: "Cfb", uitleg: "Köppen. C=gematigd, f=geen droog seizoen, b=warme (niet hete) zomer." }],
-          theorie: "Kenmerken in volgorde: (1) 4 seizoenen = gematigd. (2) Zachte winter = zee-invloed (Cfb). (3) Regen hele jaar = 'f' (no dry season).",
+          theorie: "Kenmerken in volgorde: (1) 4 seizoenen = gematigd. (2) Zachte winter = zee-invloed (Cfb). (3) Regen hele jaar = 'f' (geen droog seizoen).",
           voorbeelden: [{ type: "uitsluiten", tekst: "Tropisch = geen seizoenen. Woestijn = nauwelijks regen. IJsklimaat = nooit boven 0°C." }],
           basiskennis: [{ onderwerp: "Klassieker", uitleg: "'NL-beschrijving' = Cfb gematigd zeeklimaat. Hele NL valt hieronder." }],
           niveaus: { basis: "Gematigd zeeklimaat.", simpeler: "4 seizoenen + zacht + regen = gematigd zeeklimaat (NL).", nogSimpeler: "Cfb" },
@@ -463,12 +463,12 @@ const steps = [
       },
       {
         q: "Welk klimaat heeft Centraal Rusland?",
-        options: ["Landklimaat (D)", "Mediterraan (B)", "Tropisch (A)", "Hoogteklimaat (H)"],
+        options: ["Landklimaat (D)", "Mediterraan (Cs)", "Tropisch (A)", "Hoogteklimaat (H)"],
         answer: 0,
-        wrongHints: [null, "Mediterraan ligt langs de zee, in het Zuiden.", "Tropisch = bij evenaar.", "Centraal Rusland is grotendeels vlak."],
+        wrongHints: [null, "Mediterraan ligt langs de zee, in het zuiden.", "Tropisch = bij evenaar.", "Centraal Rusland is grotendeels vlak."],
         uitlegPad: {
           stappen: [{ titel: "Ver van zee = landklimaat", tekst: "Centraal Rusland (rond Moskou, Siberië) ligt 1000+ km van zee. Resultaat: extreme winters (-10 tot -40°C) + warme zomers (+20°C). Klassiek landklimaat (D). Plus boreaal (Dfc) verder noord met naaldwouden (taiga)." }],
-          woorden: [{ woord: "boreaal", uitleg: "Naaldwoud-klimaat (Dfc). Subtype landklimaat. Siberië + Canada + Scandinavië." }, { woord: "taiga", uitleg: "Naaldwoud-gordel in Noord. Grootste bos-biome aarde." }],
+          woorden: [{ woord: "boreaal", uitleg: "Naaldwoud-klimaat (Dfc). Subtype landklimaat. Siberië + Canada + Scandinavië." }, { woord: "taiga", uitleg: "Naaldwoud-gordel in het noorden. Grootste bosgebied op aarde." }],
           theorie: "Vergelijk Moskou (landklimaat): januari -10°C, juli +19°C. NL Amsterdam (zeeklimaat, zelfde breedte): januari +3°C, juli +17°C. Zelfde breedte, ander klimaat door zee-afstand.",
           voorbeelden: [{ type: "uitsluiten", tekst: "Mediterraan = bij Middellandse Zee (Spanje, Italië). Tropisch = bij evenaar. Hoogte = bergen (Rusland-Europa grotendeels vlak)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Ver van zee + extreme winter/zomer = landklimaat (D). Centraal Rusland past perfect." }],
@@ -489,11 +489,11 @@ const steps = [
           woorden: [
             { woord: "moesson", uitleg: "Seizoens-wind met droog/nat-wisseling. Vooral Azië." },
             { woord: "tropisch", uitleg: "Klimaat bij evenaar — warm + veel regen." },
-            { woord: "cycloon", uitleg: "Tropische storm — Azië noemt het anders dan orkaan (VS) of taifoen (Pacifisch)." },
+            { woord: "cycloon", uitleg: "Tropische storm — Azië noemt het anders dan orkaan (VS) of tyfoon (Grote Oceaan)." },
           ],
-          theorie: "Andere klimaat-fenomenen toetsstof:\n• **El Niño** — Pacific-oceaan-opwarming, beïnvloedt wereldweer\n• **Föhn** — droge bergwind (Alpen)\n• **Mistral** — koude wind Frankrijk\n• **Sirocco** — hete wind Sahara → Italië",
+          theorie: "Andere klimaat-fenomenen toetsstof:\n• **El Niño** — opwarming van de Grote Oceaan, beïnvloedt wereldweer\n• **Föhn** — droge bergwind (Alpen)\n• **Mistral** — koude wind Frankrijk\n• **Sirocco** — hete wind Sahara → Italië",
           voorbeelden: [
-            { type: "feit", tekst: "Cherrapunji (India) is wettest plek op aarde — ~11.000 mm regen/jaar door moesson." },
+            { type: "feit", tekst: "Cherrapunji (India) is een van de natste plekken op aarde — ~11.000 mm regen/jaar door moesson." },
           ],
           basiskennis: [{ onderwerp: "Niet storm", uitleg: "Moesson is regenseizoen-systeem, geen aparte storm. Wel zware regenval mogelijk." }],
           niveaus: { basis: "Seizoens-wind droog/nat.", simpeler: "Moesson = seizoens-wind die 6 maanden uit zee waait (nat) en 6 maanden uit binnenland (droog). Vooral Zuid-Azië, India.", nogSimpeler: "Wisselwind" },
@@ -508,7 +508,7 @@ const steps = [
           stappen: [
             { titel: "Köppen-systeem 1900", tekst: "**Wladimir Köppen** (Duits-Russisch klimatoloog, 1846-1940) bedacht in 1900 een systeem om klimaten in te delen. Nog steeds standaard:\n• **A** — Tropisch (warm + nat, evenaar)\n• **B** — Droog (woestijn + steppe)\n• **C** — Gematigd (NL = Cfb)\n• **D** — Continentaal/land (Rusland)\n• **E** — Polair (Antarctica + Noordpool)\n\nElke groep heeft subtypes (Cfb, Csa, Aw, etc.)." },
             { titel: "Nederland = Cfb", tekst: "NL valt onder **Cfb** = **gematigd zeeklimaat**:\n• **C** = gematigd (geen extremen)\n• **f** = vol jaar nat (volle regen)\n• **b** = warmste maand 10-22°C\n\nKenmerken: milde winter (3-5°C), koele zomer (17-19°C), regen heel jaar. Door **Noordzee + Golfstroom** stabieler dan landen op zelfde breedte." },
-            { titel: "Toets-feit: 5 klimaatgordels herkennen", tekst: "**Wereld-kaart klimaten** (van evenaar naar pool):\n• Evenaar: A — tropisch (Amazone, Congo)\n• Subtropen: B — woestijn (Sahara, Australia)\n• Gematigd: C — Europa, oostkust VS\n• Continentaal: D — Rusland, Canada-binnen\n• Pool: E — Antarctica, Groenland\n\nCito vraagt vaak: 'Welk klimaat hoort bij land X?'" },
+            { titel: "Toets-feit: 5 klimaatgordels herkennen", tekst: "**Wereld-kaart klimaten** (van evenaar naar pool):\n• Evenaar: A — tropisch (Amazone, Congo)\n• Subtropen: B — woestijn (Sahara, Australië)\n• Gematigd: C — Europa, oostkust VS\n• Continentaal: D — Rusland, Canada-binnen\n• Pool: E — Antarctica, Groenland\n\nCito vraagt vaak: 'Welk klimaat hoort bij land X?'" },
           ],
           woorden: [
             { woord: "Köppen-classificatie", uitleg: "Wereldwijd systeem voor klimaat-indeling. A-E hoofdgroepen + subtypes." },
@@ -531,7 +531,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Hoe werkt broeikaseffect?", tekst: "**Broeikaseffect** = natuurlijk proces waarbij gassen in atmosfeer **zonnewarmte vasthouden**, vergelijkbaar met glas in een broeikas.\n\n**Stappen**:\n1. Zon stuurt warmte naar aarde\n2. Aarde absorbeert + straalt warmte terug (infrarood)\n3. **Broeikasgassen** (CO₂, methaan, waterdamp) absorberen die infrarood-straling\n4. Warmte blijft in atmosfeer → aarde warmer\n\nZonder broeikaseffect: aarde zou gemiddeld -18°C zijn. Met natuurlijk effect: +15°C. Daarmee leven mogelijk." },
-            { titel: "Versterkt broeikaseffect = klimaatverandering", tekst: "Probleem: **mensen maken te veel CO₂** sinds Industriële Revolutie:\n• Verbranden olie/kolen/gas\n• Ontbossing (bomen halen CO₂ uit lucht)\n• Veehouderij (methaan)\n• CO₂ in atmosfeer 280 ppm (1850) → 425 ppm (2024) = +50%\n• Gevolg: aarde +1,5°C warmer (versterkt broeikaseffect)\n\nDaarom: klimaatverandering = mensgemaakt versterking van natuurlijk proces." },
+            { titel: "Versterkt broeikaseffect = klimaatverandering", tekst: "Probleem: **mensen maken te veel CO₂** sinds Industriële Revolutie:\n• Verbranden olie/kolen/gas\n• Ontbossing (bomen halen CO₂ uit lucht)\n• Veehouderij (methaan)\n• CO₂ in atmosfeer 280 ppm (1850) → 425 ppm (2024) = +50%\n• Gevolg: aarde +1,2°C warmer (versterkt broeikaseffect)\n\nDaarom: klimaatverandering = mensgemaakte versterking van natuurlijk proces." },
           ],
           woorden: [
             { woord: "broeikasgas", uitleg: "Gas dat warmte vasthoudt: CO₂, methaan (CH₄), lachgas (N₂O), waterdamp." },
@@ -550,18 +550,18 @@ const steps = [
       { q: "Welk klimaat heeft NL?", options: ["Gematigd zeeklimaat","Tropisch","Woestijn","Toendra"], answer: 0, wrongHints: [null, "Te warm.", "Te droog.", "Te koud."] },
       { q: "**Tropisch klimaat** is rond?", options: ["De evenaar","Polen","Gematigde zone","Woestijn"], answer: 0, wrongHints: [null, "Te koud.", "Niet tropisch.", "Wel warm maar droog."] },
       { q: "**Woestijnklimaat** is vooral?", options: ["Droog","Nat","Koud","Tropisch"], answer: 0, wrongHints: [null, "Niet.", "Soms wel koud.", "Niet."] },
-      { q: "Wat is **temperatuur** gemeten met?", options: ["Thermometer","Barometer","Anemometer","Hygrometer"], answer: 0, wrongHints: [null, "Luchtdruk.", "Wind.", "Vochtigheid."] },
+      { q: "Waarmee meet je **temperatuur**?", options: ["Thermometer","Barometer","Anemometer","Hygrometer"], answer: 0, wrongHints: [null, "Luchtdruk.", "Wind.", "Vochtigheid."] },
       { q: "Welk klimaat heeft de **Sahara**?", options: ["Woestijn (heet + droog)","Tropisch","Toendra","Bergklimaat"], answer: 0, wrongHints: [null, "Niet droog.", "Te koud.", "Niet."] },
       { q: "Wat is **klimaat** versus **weer**?", options: ["Klimaat = lange termijn (30+ jaar); weer = nu","Hetzelfde","Klimaat = dag; weer = maand","Niet relevant"], answer: 0, wrongHints: [null, "Wel verschil.", "Andersom.", "Wel."] },
       { q: "Welk **gas** is hoofd-broeikasgas?", options: ["CO₂","O₂","N₂","H₂"], answer: 0, wrongHints: [null, "Zuurstof.", "Stikstof.", "Waterstof."] },
-      { q: "Wat is **smelten van poolijs** gevolg van?", options: ["Klimaatopwarming","Maan","Industrie alleen","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Onderdeel daarvan, niet alleen.", "Wel."] },
-      { q: "Welke klimaat-zone heeft **toendra**?", options: ["Subpolair / koud","Tropisch","Woestijn","Gematigd"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
+      { q: "Waarvan is het **smelten van poolijs** een gevolg?", options: ["Klimaatopwarming","Maan","Industrie alleen","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Onderdeel daarvan, niet alleen.", "Wel."] },
+      { q: "In welke klimaatzone vind je **toendra**?", options: ["Subpolair / koud","Tropisch","Woestijn","Gematigd"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
       { q: "Wat is een **moesson**?", options: ["Seizoenswind met regen (vooral Azië)","Storm","Aardbeving","Niet relevant"], answer: 0, wrongHints: [null, "Niet specifiek.", "Niet relevant.", "Wel."] },
-      { q: "Welk continent heeft veel **Amazone-regenwoud**?", options: ["Zuid-Amerika","Afrika","Azië","Australië"], answer: 0, wrongHints: [null, "Heeft Congo-regenwoud.", "Heeft Borneo-regenwoud.", "Niet primair."] },
+      { q: "Op welk continent ligt het **Amazone-regenwoud**?", options: ["Zuid-Amerika","Afrika","Azië","Australië"], answer: 0, wrongHints: [null, "Heeft Congo-regenwoud.", "Heeft Borneo-regenwoud.", "Niet primair."] },
       { q: "Wat is een **gevolg** van klimaatopwarming?", options: ["Zeespiegel-stijging","Lagere temperatuur","Meer ijs","Minder droogte"], answer: 0, wrongHints: [null, "Opwarming betekent dat het gemiddeld juist warmer wordt — daalt de temperatuur dan?", "Als het warmer wordt smelt het ijs op de polen — komt er dan meer of minder ijs?", "Door hogere temperaturen verdampt er meer water en worden sommige gebieden juist droger — klopt 'minder' dan?"] },
       { q: "Welk type **regen** komt door bergen?", options: ["Stuwingsregen","Convectieregen","Frontale regen","Geen regen"], answer: 0, wrongHints: [null, "Door warmte.", "Door front.", "Wel regen."] },
-      { q: "Wat doet het **golfstroom**?", options: ["Warm water transporteert van tropen naar Europa","Koud water","Niet relevant","Niet bestaand"], answer: 0, wrongHints: [null, "Niet primair.", "Wel.", "Wel."] },
-      { q: "Welk verschil tussen **Köppen** zones?", options: ["Internationale klimaat-classificatie","Niet bestaand","Mode-stijlen","Politiek"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
+      { q: "Wat doet de **Golfstroom**?", options: ["Transporteert warm water van de tropen naar Europa","Koud water","Niet relevant","Niet bestaand"], answer: 0, wrongHints: [null, "Niet primair.", "Wel.", "Wel."] },
+      { q: "Wat zijn de **Köppen**-zones?", options: ["Internationale klimaat-classificatie","Niet bestaand","Mode-stijlen","Politiek"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
     ],
   },
 ];

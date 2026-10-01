@@ -252,7 +252,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "7 staat niet in de kwadratentabel — welk geheel getal kwadraat geeft precies 7?", "50 staat niet in de tabel — kijk welke twee kwadraten het dichtst bij 50 zitten.", "99 staat niet in de tabel — kijk welke twee kwadraten het dichtst bij 99 zitten."],
         uitlegPad: {
-          stappen: [{ titel: "81 in tabel = 9²", tekst: "√81 = 9 (mooi rond). Andere opties: √7, √50, √99 staan NIET in kwadratentabel → komen oneindige decimalen uit. Vandaar deze is enige 'mooie'." }],
+          stappen: [{ titel: "81 in tabel = 9²", tekst: "√81 = 9 (mooi rond). Andere opties: √7, √50, √99 staan NIET in kwadratentabel → daar komen oneindige decimalen uit. Daarom is dit de enige 'mooie'." }],
           woorden: [{ woord: "perfect kwadraat", uitleg: "Getal dat kwadraat van geheel is. 81=9² perfect. 50 niet." }],
           theorie: "Test: in kwadratentabel? (1,4,9,16,25,36,49,64,81,100). Ja → rond. Nee → oneindig decimaal. Truc om snel te beoordelen.",
           voorbeelden: [{ type: "vergelijk", tekst: "√81 = 9 (rond). √50 ≈ 7,07 (decimaal). √99 ≈ 9,95. √7 ≈ 2,65." }],
@@ -319,13 +319,13 @@ const steps = [
         q: "Wat is √3 × √12?",
         options: ["6", "√15", "12", "36"],
         answer: 0,
-        wrongHints: [null, "Mag je wortels optellen? Nee — je vermenigvuldigt de getallen onder de wortels en neemt dan pas de wortel.", "Je hebt alleen het product berekend maar de wortel nog niet genomen — welk getal staat er dan nog onder de wortelstreep?", "Je hebt het product berekend zonder de wortel te trekken. Welk getal staat er onder de wortelstreep, en wat is de wortel daarvan?"],
+        wrongHints: [null, "Mag je wortels optellen? Nee — je vermenigvuldigt de getallen onder de wortels en neemt dan pas de wortel.", "12 staat al onder de wortel. Vermenigvuldig eerst de getallen onder de wortels en trek dan pas de wortel.", "Je hebt het product berekend zonder de wortel te trekken. Welk getal staat er onder de wortelstreep, en wat is de wortel daarvan?"],
         uitlegPad: {
           stappen: [
             { titel: "Regel: √a × √b = √(ab)", tekst: "Wortels vermenigvuldigen: getallen onder wortels combineren. √3 × √12 = √(3×12) = √36." },
             { titel: "Uitrekenen", tekst: "√36 = 6 (uit tabel). Dus √3 × √12 = 6." },
           ],
-          woorden: [{ woord: "wortels combineren", uitleg: "Bij × of ÷ mag onder ene wortel. Niet bij + of −!" }],
+          woorden: [{ woord: "wortels combineren", uitleg: "Bij × of ÷ mag het onder één wortel. Niet bij + of −!" }],
           theorie: "Algemene formule: √a × √b = √(a·b). Werkt voor positieve getallen. Niet voor + of − (dan blijven wortels apart!).",
           voorbeelden: [{ type: "test", tekst: "√2 × √8 = √16 = 4. √5 × √5 = √25 = 5. √3 × √12 = √36 = 6 (deze opgave)." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "√15 zou bij + zijn (15=3+12). 12 zonder wortel. 36 zelf is onder wortel — moet nog √ doen → 6." }],
@@ -355,7 +355,7 @@ const steps = [
         q: "Wat is √72 / √8?",
         options: ["3", "9", "√64", "√9"],
         answer: 0,
-        wrongHints: [null, "Heb je de deling onder de wortel gedaan? Bereken eerst 72 gedeeld door 8, dan de wortel van het resultaat.", "Optellen geeft een ander getal onder de wortel — de regel voor deling van wortels is √a / √b = √(a/b).", "Je bent al bijna klaar. Er staat nog een wortel voor een getal — trek die ook."],
+        wrongHints: [null, "Heb je de deling onder de wortel gedaan? Bereken eerst 72 gedeeld door 8, dan de wortel van het resultaat.", "Aftrekken (72 − 8) is niet de regel — bij delen van wortels geldt √a / √b = √(a/b).", "Je bent al bijna klaar. Er staat nog een wortel voor een getal — trek die ook."],
         uitlegPad: {
           stappen: [
             { titel: "Regel: √a/√b = √(a/b)", tekst: "Wortels delen: √72/√8 = √(72/8) = √9." },
@@ -512,11 +512,11 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Eén oplossing krijg je als het rechterlid nul is. Kijk wat hier aan de rechterkant staat.", "Twee oplossingen krijg je alleen als het rechterlid positief is. Wat is het hier?", "Een vergelijking met x² heeft hooguit twee oplossingen — kan een kwadraat dit getal opleveren?"],
         uitlegPad: {
-          stappen: [{ titel: "Kwadraat nooit negatief", tekst: "x² = −9 → onmogelijk. Want x² is ALTIJD ≥ 0 (kwadraat van elk reëel getal is positief of 0). Geen reëele x voldoet. 0 oplossingen." }],
-          woorden: [{ woord: "reëel getal", uitleg: "Standaard getallen (positief, negatief, breuken, decimalen). Excludeert 'imaginaire' getallen." }],
+          stappen: [{ titel: "Kwadraat nooit negatief", tekst: "x² = −9 → onmogelijk. Want x² is ALTIJD ≥ 0 (kwadraat van elk reëel getal is positief of 0). Geen reële x voldoet. 0 oplossingen." }],
+          woorden: [{ woord: "reëel getal", uitleg: "Standaard getallen (positief, negatief, breuken, decimalen). Zonder 'imaginaire' getallen." }],
           theorie: "Volledige regel x²=c: c>0 → 2 opl (±√c). c=0 → 1 opl (x=0). c<0 → 0 opl. Drie gevallen.",
           voorbeelden: [{ type: "vergelijk", tekst: "x²=9 → ±3 (2 opl). x²=0 → 0 (1 opl). x²=−9 → onmogelijk (0 opl)." }],
-          basiskennis: [{ onderwerp: "Hoger niveau", uitleg: "Vanaf havo/vwo: imaginaire getallen (i²=−1) → dan wel oplossing. Voor VMBO: 0 oplossingen." }],
+          basiskennis: [{ onderwerp: "Hoger niveau", uitleg: "Pas bij vwo wiskunde D: imaginaire getallen (i²=−1) → dan wel oplossing. Hier: 0 oplossingen." }],
           niveaus: { basis: "0.", simpeler: "x²=−9 onmogelijk (kwadraat nooit negatief) → 0 oplossingen.", nogSimpeler: "0" },
         },
       },
@@ -600,7 +600,7 @@ const steps = [
   },
   {
     title: "Irrationale getallen — √2, π, ...",
-    explanation: "Sommige getallen kun je **niet** als breuk schrijven. Deze heten **irrationale getallen**.\n\nKenmerk: hun decimale schrijfwijze gaat **oneindig door zonder herhaling**.\n\nBekendste voorbeelden:\n• **√2** = 1,4142135... (oneindig, geen patroon)\n• **√3** = 1,7320508...\n• **√5** = 2,2360679...\n• **π** (pi) = 3,1415926...\n\nSterker nog: **elk wortelgetal van een niet-perfect kwadraat is irrationaal**. Dus √2, √3, √5, √6, √7, √8, √10, ... zijn allemaal irrationaal.\n\n**Reële getallen** (ℝ): alle rationale + alle irrationale getallen samen. Dit is de hele getallenlijn die je kent.\n\n**Hierarchie**: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ (elke groep is een onderdeel van de volgende).",
+    explanation: "Sommige getallen kun je **niet** als breuk schrijven. Deze heten **irrationale getallen**.\n\nKenmerk: hun decimale schrijfwijze gaat **oneindig door zonder herhaling**.\n\nBekendste voorbeelden:\n• **√2** = 1,4142135... (oneindig, geen patroon)\n• **√3** = 1,7320508...\n• **√5** = 2,2360679...\n• **π** (pi) = 3,1415926...\n\nSterker nog: **elk wortelgetal van een niet-perfect kwadraat is irrationaal**. Dus √2, √3, √5, √6, √7, √8, √10, ... zijn allemaal irrationaal.\n\n**Reële getallen** (ℝ): alle rationale + alle irrationale getallen samen. Dit is de hele getallenlijn die je kent.\n\n**Hiërarchie**: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ (elke groep is een onderdeel van de volgende).",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">irrationaal: oneindige niet-herhalende decimaal</text>
 <rect x="40" y="42" width="220" height="2" fill="${COLORS.curveAlt}" opacity="0.4"/>
@@ -707,10 +707,10 @@ const steps = [
       { q: "Bereken **5² + 12²**", options: ["169","144","25","60"], answer: 0, wrongHints: [null,"Alleen 12².","Alleen 5².","Niet."] },
       { q: "Hoeveel is **(−4)²**?", options: ["16","−16","−8","8"], answer: 0, wrongHints: [null,"Minus × minus = plus.","Verkeerd.","Verkeerd."] },
       { q: "Wat is **√0**?", options: ["0","1","Bestaat niet","∞"], answer: 0, wrongHints: [null,"√1 = 1.","Wel bestaat.","Niet relevant."] },
-      { q: "Wat is **√(25 × 4)**?", options: ["10","20","100","5"], answer: 0, wrongHints: [null,"Dat is het product zelf, zonder de wortel te trekken. Splits de wortel en trek hem van elke factor.","Niet — eerst worteltrekken.","Niet."] },
+      { q: "Wat is **√(25 × 4)**?", options: ["10","20","100","5"], answer: 0, wrongHints: [null,"Niet — trek de wortel van elke factor (√25 en √4) en vermenigvuldig die.","Dat is het product zelf, zonder de wortel te trekken.","Niet."] },
       { q: "**Kwadraat** van een breuk **(½)²** = ?", options: ["¼","½","¾","1"], answer: 0, wrongHints: [null,"Niet — kwadraat verkleint.","Niet primair.","Veel te groot."] },
       { q: "Welke getallen zijn **perfecte kwadraten**?", options: ["1, 4, 9, 16, 25...","Alle even getallen","Alle oneven","Alle priemgetallen"], answer: 0, wrongHints: [null,"Niet alle even (6 is geen kwadraat).","Niet alle oneven (3 is geen kwadraat).","Niet."] },
-      { q: "**a² × b²** = ?", options: ["(a × b)²","a × b","a² + b²","Te beoordelen"], answer: 0, wrongHints: [null,"Te simpel.","Tegen-bewerking.","Geen relevant."] },
+      { q: "**a² × b²** = ?", options: ["(a × b)²","a × b","a² + b²","Niet te bepalen"], answer: 0, wrongHints: [null,"Te simpel.","Tegen-bewerking.","Wel te bepalen."] },
       { q: "**Open vraag**: bereken 9² (typ alleen getal).", kind: "open", acceptedAnswers: ["81"], numericTolerance: 0, explanation: "9 × 9 = 81." },
       { q: "**Open vraag**: bereken √169 (typ alleen getal).", kind: "open", acceptedAnswers: ["13"], numericTolerance: 0, explanation: "13² = 169 → √169 = 13." },
     ],

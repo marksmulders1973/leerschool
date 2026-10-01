@@ -27,7 +27,7 @@ const steps = [
   {
     title: "Hoe werd Indonesië een Nederlandse kolonie?",
     explanation:
-      "Vóór 1900 hadden Nederlanders al **300 jaar invloed** in wat we nu Indonesië noemen — eerst via een handelscompagnie, later als staat.\n\n**De VOC (Verenigde Oostindische Compagnie) 1602-1799**:\n• Opgericht in 1602 als eerste **naamloze vennootschap** ter wereld.\n• Had monopolie op handel met Azië voor de Republiek der Nederlanden.\n• Vestigde forten en handelsposten — vooral op **Java**, **Molukken**, **Sumatra**.\n• Specerijen (nootmuskaat, kruidnagel, peper, kaneel) waren extreem winstgevend.\n• 1799: VOC **failliet** door corruptie + Engelse oorlogen. Bezittingen overgenomen door Nederlandse staat.\n\n**Wat veranderde rond 1800**:\n• Bezittingen werden **Nederlands-Indië** (officiële kolonie).\n• 1810-1816: tijdelijk Britse overheersing tijdens Napoleon-oorlogen.\n• 1816: terug naar Nederland via Conventie van Londen.\n\n**Geografie**: 'Indonesië' omvat tegenwoordig 17.000+ eilanden. Belangrijkste: Java (politieke kern), Sumatra (olie + rubber), Borneo, Sulawesi (Celebes), Bali, Molukken (specerijen), Papoea.\n\n**Inwonertal 1900**: ~38 miljoen Indonesiërs vs ~60.000 Nederlanders in de kolonie.",
+      "Vóór 1900 hadden Nederlanders al **300 jaar invloed** in wat we nu Indonesië noemen — eerst via een handelscompagnie, later als staat.\n\n**De VOC (Verenigde Oostindische Compagnie) 1602-1799**:\n• Opgericht in 1602 als eerste **naamloze vennootschap** ter wereld.\n• Had monopolie op handel met Azië voor de Republiek der Nederlanden.\n• Vestigde forten en handelsposten — vooral op **Java**, **Molukken**, **Sumatra**.\n• Specerijen (nootmuskaat, kruidnagel, peper, kaneel) waren extreem winstgevend.\n• 1799: VOC **failliet** door corruptie + Engelse oorlogen. Bezittingen overgenomen door Nederlandse staat.\n\n**Wat veranderde rond 1800**:\n• Bezittingen werden **Nederlands-Indië** (officiële kolonie).\n• 1811-1816: tijdelijk Britse overheersing tijdens Napoleon-oorlogen.\n• 1816: terug naar Nederland via Conventie van Londen.\n\n**Geografie**: 'Indonesië' omvat tegenwoordig 17.000+ eilanden. Belangrijkste: Java (politieke kern), Sumatra (olie + rubber), Borneo, Sulawesi (Celebes), Bali, Molukken (specerijen), Papoea.\n\n**Inwonertal 1900**: ~38 miljoen Indonesiërs vs ~60.000 Nederlanders in de kolonie.",
     checks: [
       {
         q: "In welk jaar werd de **VOC** opgericht?",
@@ -35,11 +35,11 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is einde Tachtigjarige Oorlog.", "Bataafse Republiek/Frans tijdperk.", "Te laat — VOC was toen al 50 jaar failliet."],
         uitlegPad: {
-          stappen: [{ titel: "VOC 1602-1799", tekst: "**VOC** opgericht **20 maart 1602** door de Staten-Generaal. Bestond 197 jaar. Eerste multinationale onderneming. Vandaag de **VOC-mentaliteit** (term Balkenende 2006) verwijst kritisch naar deze historie." }],
+          stappen: [{ titel: "VOC 1602-1799", tekst: "**VOC** opgericht **20 maart 1602** door de Staten-Generaal. Bestond 197 jaar. Eerste multinationale onderneming. Tegenwoordig verwijst de term **VOC-mentaliteit** (Balkenende, 2006) kritisch naar deze geschiedenis." }],
           woorden: [{ woord: "VOC", uitleg: "Verenigde Oostindische Compagnie — Nederlands handelsbedrijf in Azië 1602-1799." }, { woord: "octrooi", uitleg: "Monopolie/exclusieve recht verleend door overheid." }],
           theorie: "Toets-feit: VOC = 1602. Tegenhanger: WIC (West-Indische Compagnie) = 1621 — opereerde in Amerika/West-Afrika.",
           voorbeelden: [{ type: "feit", tekst: "VOC was eerste bedrijf ter wereld met verhandelbare aandelen (Amsterdamse beurs)." }],
-          niveaus: { basis: "1602 — A.", simpeler: "VOC = 1602", nogSimpeler: "1602" },
+          niveaus: { basis: "1602.", simpeler: "VOC = 1602", nogSimpeler: "1602" },
         },
       },
       {
@@ -52,7 +52,7 @@ const steps = [
           woorden: [{ woord: "specerij", uitleg: "Geurig + smaakvol kruid uit tropen, gebruikt voor eten/conservering." }, { woord: "Molukken", uitleg: "Eilandengroep oostelijk Indonesië, beroemd om kruidnagel + nootmuskaat." }],
           theorie: "Toets-controversie: J.P. Coen wordt nu zelden meer in straatnamen genoemd vanwege Banda-massamoord.",
           voorbeelden: [{ type: "feit", tekst: "1621: ~14.000 Bandanezen vermoord/verbannen door Coen om monopolie te garanderen." }],
-          niveaus: { basis: "Specerijen — A.", simpeler: "Nootmuskaat etc. = VOC-hoofdproduct", nogSimpeler: "Specerijen" },
+          niveaus: { basis: "Specerijen.", simpeler: "Nootmuskaat etc. = VOC-hoofdproduct", nogSimpeler: "Specerijen" },
         },
       },
       {
@@ -63,18 +63,18 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "1799 = VOC einde", tekst: "Door **corruptie**, **lange oorlogen met Engeland** (Vierde Engelse Oorlog 1780-84) en concurrentie viel VOC om. Bezittingen werden door Nederlandse staat overgenomen — begin van koloniale staat **Nederlands-Indië**." }],
           theorie: "VOC werd 197 jaar oud (1602-1799). Toets-truc: VOC = 1602, einde 1799, dus 197 jaar.",
-          niveaus: { basis: "1799 — A.", simpeler: "VOC faillissement = 1799", nogSimpeler: "1799" },
+          niveaus: { basis: "1799.", simpeler: "VOC faillissement = 1799", nogSimpeler: "1799" },
         },
       },
       {
         q: "Hoe heette de kolonie **officieel** in de 19e eeuw?",
         options: ["Nederlands-Indië","Indonesië","Java","Oost-Indië"],
         answer: 0,
-        wrongHints: [null, "Pas vanaf 1945 — onafhankelijk.", "Slechts één eiland (zelfs grootste deel).", "Algemene term, niet officiële naam kolonie."],
+        wrongHints: [null, "Pas vanaf 1945 — onafhankelijk.", "Slechts één eiland (wel het belangrijkste).", "Algemene term, niet officiële naam kolonie."],
         uitlegPad: {
           stappen: [{ titel: "Nederlands-Indië 1816-1945", tekst: "Officiële naam vanaf overdracht door Britten (1816). Bestond uit ~17.000 eilanden (Java, Sumatra, Borneo, Sulawesi, Bali, Molukken, Papoea). Hoofdstad = **Batavia** (nu Jakarta)." }],
           woorden: [{ woord: "Nederlands-Indië", uitleg: "Nederlandse kolonie 1816-1945 in zuidoost-Azië, nu Indonesië." }],
-          niveaus: { basis: "Nederlands-Indië — A.", simpeler: "Kolonie-naam = Nederlands-Indië", nogSimpeler: "Ned-Indië" },
+          niveaus: { basis: "Nederlands-Indië.", simpeler: "Kolonie-naam = Nederlands-Indië", nogSimpeler: "Ned-Indië" },
         },
       },
       {
@@ -85,7 +85,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Batavia = oud, Jakarta = nieuw", tekst: "1619: J.P. Coen sticht **Batavia** op locatie van Jakarta-stad. Naam blijft tot 1942 (Japanse bezetting). 1949: officiële naam **Jakarta** voor onafhankelijke hoofdstad Indonesië." }],
           theorie: "Toets-truc: zelfde plek, twee namen. Batavia = NL-tijd. Jakarta = onafhankelijk Indonesië.",
-          niveaus: { basis: "Batavia — A.", simpeler: "Nederlandse hoofdstad-naam = Batavia", nogSimpeler: "Batavia" },
+          niveaus: { basis: "Batavia.", simpeler: "Nederlandse hoofdstad-naam = Batavia", nogSimpeler: "Batavia" },
         },
       },
     ],
@@ -95,7 +95,7 @@ const steps = [
   {
     title: "Cultuurstelsel + ethische politiek",
     explanation:
-      "Tussen 1816-1942 had Nederland Indonesië als kolonie. Twee belangrijke perioden voor het VMBO-examen:\n\n**Cultuurstelsel (1830-1870)**:\n• Bedacht door gouverneur **Johannes van den Bosch** in 1830.\n• Indonesische boeren werden **gedwongen** om 20% van hun grond te gebruiken voor **export-gewassen** (koffie, suiker, indigo, thee).\n• Opbrengst ging naar Nederlandse staat — leverde **Indonesisch batig slot** op (= overschot voor NL).\n• Met dit geld: bouw NL-spoorwegen, Schipholpolder, terugbetalen staatsschuld na Belgische opstand.\n• Nadeel voor Indonesië: hongersnoden, geen eigen voedsel-grond, dwangarbeid.\n\n**Multatuli 'Max Havelaar' (1860)**:\n• Pseudoniem van **Eduard Douwes Dekker** — voormalig assistent-resident op Java.\n• Roman als aanklacht tegen misbruik in cultuurstelsel.\n• Bekend citaat: 'De Javaan wordt mishandeld.'\n• Wakkerde publiek debat in NL aan over koloniale wreedheid.\n\n**Ethische politiek (1901-1942)**:\n• Koningin **Wilhelmina** in troonrede 1901: *'Nederland heeft een zedelijke roeping te vervullen.'*\n• Drie speerpunten: **Onderwijs, Irrigatie, Emigratie** (van Java naar Sumatra om bevolkingsdruk te verminderen).\n• In praktijk: nog steeds beperkt — alleen kleine inheemse elite kreeg toegang tot onderwijs.\n• Wel: opkomst nationalistische beweging vanuit deze elite (**Boedi Oetomo** 1908, Soekarno's PNI 1927).",
+      "Tussen 1816-1942 had Nederland Indonesië als kolonie. Twee belangrijke perioden voor het VMBO-examen:\n\n**Cultuurstelsel (1830-1870)**:\n• Bedacht door gouverneur **Johannes van den Bosch** in 1830.\n• Indonesische boeren werden **gedwongen** om 20% van hun grond te gebruiken voor **export-gewassen** (koffie, suiker, indigo, thee).\n• Opbrengst ging naar Nederlandse staat — leverde het **Indisch batig slot** op (= overschot voor NL).\n• Met dit geld: bouw NL-spoorwegen, Schipholpolder, terugbetalen staatsschuld na Belgische opstand.\n• Nadeel voor Indonesië: hongersnoden, geen eigen voedsel-grond, dwangarbeid.\n\n**Multatuli 'Max Havelaar' (1860)**:\n• Pseudoniem van **Eduard Douwes Dekker** — voormalig assistent-resident op Java.\n• Roman als aanklacht tegen misbruik in cultuurstelsel.\n• Bekend citaat: 'De Javaan wordt mishandeld.'\n• Wakkerde publiek debat in NL aan over koloniale wreedheid.\n\n**Ethische politiek (1901-1942)**:\n• Koningin **Wilhelmina** in troonrede 1901: *'Nederland heeft een zedelijke roeping te vervullen.'*\n• Drie speerpunten: **Onderwijs, Irrigatie, Emigratie** (van Java naar Sumatra om bevolkingsdruk te verminderen).\n• In praktijk: nog steeds beperkt — alleen kleine inheemse elite kreeg toegang tot onderwijs.\n• Wel: opkomst nationalistische beweging vanuit deze elite (**Boedi Oetomo** 1908, Soekarno's PNI 1927).",
     checks: [
       {
         q: "Wie bedacht het **Cultuurstelsel** in 1830?",
@@ -105,7 +105,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Van den Bosch = bedenker", tekst: "**Johannes van den Bosch** = gouverneur-generaal Nederlands-Indië 1830-1834. Bedacht Cultuurstelsel om de **NL-staatsschuld** (door Belgische opstand) terug te betalen. Werd er rijk van — kreeg adellijke titel ('graaf Van den Bosch')." }],
           woorden: [{ woord: "Cultuurstelsel", uitleg: "Systeem waarbij Indonesische boeren gedwongen werden export-gewassen te verbouwen voor de NL-staat." }],
-          niveaus: { basis: "Van den Bosch — A.", simpeler: "Cultuurstelsel-bedenker = Van den Bosch", nogSimpeler: "Van den Bosch" },
+          niveaus: { basis: "Van den Bosch.", simpeler: "Cultuurstelsel-bedenker = Van den Bosch", nogSimpeler: "Van den Bosch" },
         },
       },
       {
@@ -118,7 +118,7 @@ const steps = [
           woorden: [{ woord: "batig slot", uitleg: "Overschot in een begroting/kassa — positief saldo." }],
           theorie: "Tussen 1830-1870 leverde batig slot ~30% van de Nederlandse staats-inkomsten op. Critici noemden NL daarom 'parasitair' op kolonie.",
           voorbeelden: [{ type: "feit", tekst: "Met batig slot werden o.a. NL-spoorwegen + Schiphol-droogmaking betaald." }],
-          niveaus: { basis: "Overschot voor NL — A.", simpeler: "Batig slot = winst die naar NL ging", nogSimpeler: "Winst voor NL" },
+          niveaus: { basis: "Overschot voor NL.", simpeler: "Batig slot = winst die naar NL ging", nogSimpeler: "Winst voor NL" },
         },
       },
       {
@@ -130,7 +130,7 @@ const steps = [
           stappen: [{ titel: "Multatuli = Latijn voor 'ik heb veel geleden'", tekst: "**Eduard Douwes Dekker** (1820-1887), oud-assistent-resident op Java, schreef de roman als wraak op de NL-koloniale staat. *Max Havelaar* = klassieker van NL-literatuur + politieke aanklacht. Naam **'Max Havelaar'** is ook fairtrade-koffiemerk geworden." }],
           woorden: [{ woord: "Multatuli", uitleg: "Pseudoniem van E. Douwes Dekker, Latijn voor 'ik heb veel geleden'." }],
           theorie: "Toets-aanknopingspunt: Multatuli-citaat 'De Javaan wordt mishandeld' = bekendste protestzin van koloniale tijd.",
-          niveaus: { basis: "Multatuli — A.", simpeler: "Max Havelaar = Multatuli", nogSimpeler: "Multatuli" },
+          niveaus: { basis: "Multatuli.", simpeler: "Max Havelaar = Multatuli", nogSimpeler: "Multatuli" },
         },
       },
       {
@@ -142,18 +142,18 @@ const steps = [
           stappen: [{ titel: "OIE — onthoud O-I-E", tekst: "Speerpunten ethische politiek volgens **koningin Wilhelmina** (troonrede 1901):\n• **O**nderwijs: scholen voor inheemse bevolking\n• **I**rrigatie: betere waterwerken voor landbouw\n• **E**migratie: Javaanse boeren overplaatsen naar minder-bevolkte eilanden (Sumatra, Sulawesi)" }],
           woorden: [{ woord: "ethische politiek", uitleg: "Nieuwe koloniale koers 1901: NL als 'voogd' die welvaart in Indië moet bevorderen." }],
           theorie: "Toets-criticus: ethische politiek was deels propaganda — in praktijk bleef het meeste geld naar NL gaan + slechts ~1% Indonesiërs kreeg onderwijs.",
-          niveaus: { basis: "Onderwijs Irrigatie Emigratie — A.", simpeler: "OIE = ethische politiek", nogSimpeler: "OIE" },
+          niveaus: { basis: "Onderwijs Irrigatie Emigratie.", simpeler: "OIE = ethische politiek", nogSimpeler: "OIE" },
         },
       },
       {
         q: "Welke organisatie startte de **Indonesische nationalistische beweging** in 1908?",
         options: ["Boedi Oetomo","PNI","VOC","KNIL"],
         answer: 0,
-        wrongHints: [null, "PNI werd pas later opgericht — dit is niet de allereerste beweging.", "VOC was de handelskompagnie van de Nederlanders — die was er al lang niet meer in 1908.", "KNIL = Koninklijk Nederlands-Indisch Leger — onderdrukker, geen nationalisten."],
+        wrongHints: [null, "PNI werd pas later opgericht — dit is niet de allereerste beweging.", "VOC was de handelscompagnie van de Nederlanders — die was er al lang niet meer in 1908.", "KNIL = Koninklijk Nederlands-Indisch Leger — onderdrukker, geen nationalisten."],
         uitlegPad: {
           stappen: [{ titel: "Boedi Oetomo 1908", tekst: "**Boedi Oetomo** ('Verheven Streven') = eerste moderne Indonesische nationalistische beweging, opgericht 20 mei 1908 door studenten. Vredig, gericht op zelfontplooiing. Datum 20 mei = **Hari Kebangkitan Nasional** (Dag van het Nationaal Ontwaken)." }],
           theorie: "Volgorde: Boedi Oetomo 1908 → Sarekat Islam 1912 → PNI 1927 (Soekarno) → Onafhankelijkheid 1945.",
-          niveaus: { basis: "Boedi Oetomo — A.", simpeler: "1908 = Boedi Oetomo", nogSimpeler: "Boedi Oetomo" },
+          niveaus: { basis: "Boedi Oetomo.", simpeler: "1908 = Boedi Oetomo", nogSimpeler: "Boedi Oetomo" },
         },
       },
     ],
@@ -163,7 +163,7 @@ const steps = [
   {
     title: "Japanse bezetting 1942-1945",
     explanation:
-      "Tijdens **Tweede Wereldoorlog** veroverde Japan in maart 1942 in 3 maanden tijd heel Nederlands-Indië. De Nederlandse koloniale macht stortte in.\n\n**Hoe het ging**:\n• 10 januari 1942: Japan valt aan via Borneo + Celebes.\n• 8 maart 1942: NL-overgave bij **Kalidjati** — generaal Ter Poorten capituleert.\n• Nederlandse + Brits-Indische militairen + burgers (~100.000) gaan **Japanse kampen** in.\n• Onmenselijke omstandigheden: dwangarbeid Birma-spoorweg, mishandeling, honger.\n• ~20.000 Nederlanders sterven in kampen + ~4 miljoen Indonesiërs door dwangarbeid (romusha).\n\n**Effect op de kolonie**:\n• **Mythe van de witte overmacht doorbroken**: Aziatische macht versloeg Europeanen in 3 maanden.\n• Japan moedigde aanvankelijk Indonesisch nationalisme aan om bevolking tegen NL te keren.\n• **Soekarno + Hatta** kregen meer ruimte om Indonesische beweging te organiseren.\n• Vrouwen + meisjes gedwongen als **'troostmeisjes'** in Japanse legerbordelen — ook NL-vrouwen.\n\n**Augustus 1945**:\n• 6 + 9 augustus: VS gooien atoombommen op Hiroshima + Nagasaki.\n• 15 augustus: Japan capituleert (Keizer Hirohito's radio-toespraak).\n• Plotseling **machts-vacuüm** in Indonesië — NL is nog niet terug, Japan vertrekt.",
+      "Tijdens **Tweede Wereldoorlog** veroverde Japan in maart 1942 in 3 maanden tijd heel Nederlands-Indië. De Nederlandse koloniale macht stortte in.\n\n**Hoe het ging**:\n• 10 januari 1942: Japan valt aan via Borneo + Celebes.\n• 8 maart 1942: NL-overgave bij **Kalidjati** — generaal Ter Poorten capituleert.\n• Nederlandse + Brits-Indische militairen + burgers (~100.000) gaan **Japanse kampen** in.\n• Onmenselijke omstandigheden: dwangarbeid Birma-spoorweg, mishandeling, honger.\n• ~20.000 Nederlanders sterven in kampen + heel veel Indonesiërs door dwangarbeid (romusha, ~4 miljoen tewerkgesteld).\n\n**Effect op de kolonie**:\n• **Mythe van de witte overmacht doorbroken**: Aziatische macht versloeg Europeanen in 3 maanden.\n• Japan moedigde aanvankelijk Indonesisch nationalisme aan om bevolking tegen NL te keren.\n• **Soekarno + Hatta** kregen meer ruimte om Indonesische beweging te organiseren.\n• Vrouwen + meisjes gedwongen als **'troostmeisjes'** in Japanse legerbordelen — ook NL-vrouwen.\n\n**Augustus 1945**:\n• 6 + 9 augustus: VS gooien atoombommen op Hiroshima + Nagasaki.\n• 15 augustus: Japan capituleert (radiotoespraak van keizer Hirohito).\n• Plotseling **machts-vacuüm** in Indonesië — NL is nog niet terug, Japan vertrekt.",
     checks: [
       {
         q: "In welk jaar viel **Japan** Nederlands-Indië binnen?",
@@ -172,8 +172,8 @@ const steps = [
         wrongHints: [null, "Begin WO2 in Europa, maar Japan-Indië-oorlog later.", "Einde Japanse bezetting, geen begin.", "Onafhankelijkheid Indonesië, geen Japan-aanval."],
         uitlegPad: {
           stappen: [{ titel: "Maart 1942 = NL-overgave", tekst: "Pearl Harbor december 1941. Daarna Japan zuidelijk: Filipijnen, Maleisië, Singapore. Maart 1942 NL-overgave bij Kalidjati. Bezetting 1942-1945 (~3,5 jaar)." }],
-          theorie: "Toets-feit: NL-Indië capituleerde sneller dan Japan-veld in Europa verloopt. 3 maanden van aanval tot overgave.",
-          niveaus: { basis: "1942 — A.", simpeler: "Japan veroverde NL-Indië in 1942", nogSimpeler: "1942" },
+          theorie: "Toets-feit: NL-Indië viel heel snel: 3 maanden van aanval tot overgave.",
+          niveaus: { basis: "1942.", simpeler: "Japan veroverde NL-Indië in 1942", nogSimpeler: "1942" },
         },
       },
       {
@@ -182,9 +182,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegenstanders van koloniale onderdrukking maar uit eerdere/andere context.", "NL-koningin + premier — geen onafhankelijkheidsleiders.", "Indiase onafhankelijkheid (1947) — andere kolonie."],
         uitlegPad: {
-          stappen: [{ titel: "Duo: Soekarno + Hatta", tekst: "**Ir. Soekarno** (1901-1970) = charismatische voorman, civiel ingenieur, oprichter PNI 1927. **Mohammad Hatta** (1902-1980) = econoom, mede-strijder. Tegenovergesteld karakters maar effectief duo. Beide werden door NL meermaals verbannen." }],
+          stappen: [{ titel: "Duo: Soekarno + Hatta", tekst: "**Ir. Soekarno** (1901-1970) = charismatische voorman, civiel ingenieur, oprichter PNI 1927. **Mohammad Hatta** (1902-1980) = econoom, mede-strijder. Tegenovergestelde karakters maar een effectief duo. Beide werden door NL meermaals verbannen." }],
           woorden: [{ woord: "Soekarno", uitleg: "Eerste president van onafhankelijk Indonesië (1945-1967)." }, { woord: "Hatta", uitleg: "Eerste vicepresident van Indonesië (1945-1956)." }],
-          niveaus: { basis: "Soekarno + Hatta — A.", simpeler: "Duo Soekarno-Hatta", nogSimpeler: "Soekarno" },
+          niveaus: { basis: "Soekarno + Hatta.", simpeler: "Duo Soekarno-Hatta", nogSimpeler: "Soekarno" },
         },
       },
       {
@@ -193,10 +193,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — de uitbuiters.", "Niet — ambtenaren werden grotendeels behouden.", "Bijna — die zaten in aparte kampen, niet 'romusha'."],
         uitlegPad: {
-          stappen: [{ titel: "Romusha = dwangarbeider", tekst: "**Romusha** = Indonesisch voor 'arbeider'. Tijdens Japanse bezetting werden ~4 miljoen Indonesiërs gedwongen voor de Japanners te werken (oa Birma-spoorweg, kustverdediging). ~2 miljoen kwamen om. Een **vergeten genocide** in NL-geschiedenisles." }],
+          stappen: [{ titel: "Romusha = dwangarbeider", tekst: "**Romusha** = Japans voor 'arbeider'. Tijdens Japanse bezetting werden ~4 miljoen Indonesiërs gedwongen voor de Japanners te werken (oa Birma-spoorweg, kustverdediging). ~2 miljoen kwamen om. Een **vergeten genocide** in NL-geschiedenisles." }],
           woorden: [{ woord: "romusha", uitleg: "Indonesische dwangarbeider tijdens Japanse bezetting WO2." }],
           theorie: "Belangrijk voor balans: ~20.000 Nederlanders + ~2 miljoen Indonesiërs slachtoffer Japanse bezetting. Schade aan Indonesische bevolking veel groter.",
-          niveaus: { basis: "Gedwongen dwangarbeiders — A.", simpeler: "Romusha = Indonesische slaaf-arbeiders Japan", nogSimpeler: "Dwangarbeider" },
+          niveaus: { basis: "Gedwongen dwangarbeiders.", simpeler: "Romusha = Indonesische slaaf-arbeiders Japan", nogSimpeler: "Dwangarbeider" },
         },
       },
       {
@@ -205,9 +205,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Hiroshima-atoombom, geen capitulatie.", "Capitulatie Duitsland in Europa (V-E Day).", "Bijna — Indonesische onafhankelijkheidsverklaring, 2 dagen later."],
         uitlegPad: {
-          stappen: [{ titel: "15 aug 1945 = V-J Day", tekst: "Na 2 atoombommen: 6 aug Hiroshima, 9 aug Nagasaki. 15 augustus 1945: **Keizer Hirohito** kondigt capitulatie aan via radio — eerste keer dat een Japanse keizer publiek sprak. Officiële tekening 2 september 1945 op USS Missouri." }],
+          stappen: [{ titel: "15 aug 1945 = V-J Day", tekst: "Na 2 atoombommen: 6 aug Hiroshima, 9 aug Nagasaki. 15 augustus 1945: **Keizer Hirohito** kondigt capitulatie aan via radio — eerste keer dat een Japanse keizer publiek sprak. Officiële ondertekening 2 september 1945 op USS Missouri." }],
           theorie: "Tijdlijn: 8 mei 1945 Duitsland over → 6 aug Hiroshima → 9 aug Nagasaki → 15 aug Japan capituleert → 17 aug Indonesië roept onafhankelijkheid uit.",
-          niveaus: { basis: "15 augustus 1945 — A.", simpeler: "Japan capituleert 15-8-1945", nogSimpeler: "15-8-1945" },
+          niveaus: { basis: "15 augustus 1945.", simpeler: "Japan capituleert 15-8-1945", nogSimpeler: "15-8-1945" },
         },
       },
       {
@@ -216,9 +216,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — Japanse overmacht was juist een schok.", "Veel effect — psychologische omslag.", "Niet helemaal verdwenen, maar wel doorbroken."],
         uitlegPad: {
-          stappen: [{ titel: "Mythe van witte overmacht", tekst: "Vóór 1942: koloniale ideologie dat 'witte mensen' van nature heersers zijn. **Japan's snelle overwinning** doorbrak die mythe — Aziaten konden Europeanen verslaan. Dit gaf nationalistische bewegingen overal in Azië (Indonesië, Vietnam, Maleisië, Birma) extra kracht na 1945." }],
+          stappen: [{ titel: "Mythe van witte overmacht", tekst: "Vóór 1942: koloniale ideologie dat 'witte mensen' van nature heersers zijn. **Japans snelle overwinning** doorbrak die mythe — Aziaten konden Europeanen verslaan. Dit gaf nationalistische bewegingen overal in Azië (Indonesië, Vietnam, Maleisië, Birma) extra kracht na 1945." }],
           theorie: "Toets-link: deze 'doorbroken mythe' verklaart waarom dekolonisatie in heel Azië versnelde na 1945.",
-          niveaus: { basis: "Doorbroken — A.", simpeler: "Japan won = NL-prestige weg", nogSimpeler: "Doorbroken" },
+          niveaus: { basis: "Doorbroken.", simpeler: "Japan won = NL-prestige weg", nogSimpeler: "Doorbroken" },
         },
       },
     ],
@@ -228,7 +228,7 @@ const steps = [
   {
     title: "Indonesische onafhankelijkheid 1945-1949",
     explanation:
-      "**17 augustus 1945**: 2 dagen na Japanse capitulatie roept **Soekarno** vanaf zijn huis in Jakarta de **onafhankelijkheid van Indonesië** uit. Hatta tekent mee. Nederland accepteert dit aanvankelijk NIET.\n\n**1945-1949: een vergeten oorlog**\nNederlandse regering noemde het officieel '**politionele acties**' (politie-werk, geen oorlog). Indonesische zijde: '**Bersiap**' + **Onafhankelijkheidsoorlog**.\n\n**Belangrijkste gebeurtenissen**:\n• **Bersiap** (eind 1945-begin 1946): chaotische periode. Indonesische jongeren (pemoeda's) vallen Nederlanders/Indo-Europeanen/Chinezen aan. ~3.500-30.000 doden.\n• **Linggadjati-akkoord** (november 1946): NL erkent Java + Sumatra-controle van Republiek Indonesië. Maar uitvoering loopt mis.\n• **Eerste politionele actie** ('Operatie Product', juli-aug 1947): NL valt aan om economische gebieden te heroveren.\n• **Renville-akkoord** (januari 1948): nieuwe pauze.\n• **Tweede politionele actie** ('Operatie Kraai', dec 1948): NL bezet Yogyakarta, neemt Soekarno + Hatta gevangen.\n• Internationale druk (vooral **VS** + **VN**): NL moet stoppen — VS dreigt Marshall-hulp in te trekken.\n• **27 december 1949**: NL erkent **officieel soevereiniteit** Indonesië in een ceremonie in Amsterdam. Koningin Juliana tekent.\n\n**Verliezen**:\n• ~100.000 Indonesiërs dood (NL-leger + gevolgschade)\n• ~5.000 Nederlandse militairen dood\n• ~6.000 Indo-Europese burgers verlieten Indonesië (gerepatrieerd naar NL 1949-1962)\n• Excuses NL koning Willem-Alexander **2020** in Jakarta voor 'buitensporig geweld'.\n\n**Papoea (Nieuw-Guinea)** bleef nog NL t/m 1962, daarna ook overgedragen.",
+      "**17 augustus 1945**: 2 dagen na Japanse capitulatie roept **Soekarno** vanaf zijn huis in Jakarta de **onafhankelijkheid van Indonesië** uit. Hatta tekent mee. Nederland accepteert dit aanvankelijk NIET.\n\n**1945-1949: een vergeten oorlog**\nNederlandse regering noemde het officieel '**politionele acties**' (politie-werk, geen oorlog). Indonesische zijde: '**Bersiap**' + **Onafhankelijkheidsoorlog**.\n\n**Belangrijkste gebeurtenissen**:\n• **Bersiap** (eind 1945-begin 1946): chaotische periode. Indonesische jongeren (pemoeda's) vallen Nederlanders/Indo-Europeanen/Chinezen aan. ~3.500-30.000 doden.\n• **Linggadjati-akkoord** (november 1946): NL erkent Java + Sumatra-controle van Republiek Indonesië. Maar uitvoering loopt mis.\n• **Eerste politionele actie** ('Operatie Product', juli-aug 1947): NL valt aan om economische gebieden te heroveren.\n• **Renville-akkoord** (januari 1948): nieuwe pauze.\n• **Tweede politionele actie** ('Operatie Kraai', dec 1948): NL bezet Yogyakarta, neemt Soekarno + Hatta gevangen.\n• Internationale druk (vooral **VS** + **VN**): NL moet stoppen — VS dreigt Marshall-hulp in te trekken.\n• **27 december 1949**: NL erkent **officieel soevereiniteit** Indonesië in een ceremonie in Amsterdam. Koningin Juliana tekent.\n\n**Verliezen**:\n• ~100.000 Indonesiërs dood (NL-leger + gevolgschade)\n• ~5.000 Nederlandse militairen dood\n• ~300.000 Indo-Europeanen en Nederlanders verlieten Indonesië (gerepatrieerd naar NL 1949-1962)\n• Excuses NL koning Willem-Alexander **2020** in Jakarta voor 'buitensporig geweld'.\n\n**Papoea (Nieuw-Guinea)** bleef nog NL t/m 1962, daarna ook overgedragen.",
     checks: [
       {
         q: "Wanneer riepen Soekarno + Hatta **onafhankelijkheid** uit?",
@@ -236,9 +236,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — Japan-capitulatie, geen onafhankelijkheidsverklaring.", "Niet — pas officiële NL-erkenning, 4 jaar later.", "Niet — start nationalistische beweging Boedi Oetomo."],
         uitlegPad: {
-          stappen: [{ titel: "17 aug 1945 = Hari Kemerdekaan", tekst: "**Soekarno** las de **Proclamasi Kemerdekaan** (onafhankelijkheidsverklaring) voor om 10:00 op 17 augustus 1945, 2 dagen na Japans' capitulatie. Tekst werd op een typemachine getypt door **Sayuti Melik**. **Hari Kemerdekaan** (Onafhankelijkheidsdag) is Indonesische nationale feestdag." }],
+          stappen: [{ titel: "17 aug 1945 = Hari Kemerdekaan", tekst: "**Soekarno** las de **Proclamasi Kemerdekaan** (onafhankelijkheidsverklaring) voor om 10:00 op 17 augustus 1945, 2 dagen na de Japanse capitulatie. Tekst werd op een typemachine getypt door **Sayuti Melik**. **Hari Kemerdekaan** (Onafhankelijkheidsdag) is Indonesische nationale feestdag." }],
           theorie: "Toets-tijdlijn: 15 aug Japan over → 17 aug Indonesië verklaart onafhankelijkheid → 1945-49 strijd → 27 dec 1949 NL erkent.",
-          niveaus: { basis: "17 augustus 1945 — A.", simpeler: "Soekarno-proclamatie = 17-8-1945", nogSimpeler: "17-8-1945" },
+          niveaus: { basis: "17 augustus 1945.", simpeler: "Soekarno-proclamatie = 17-8-1945", nogSimpeler: "17-8-1945" },
         },
       },
       {
@@ -247,10 +247,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — alleen NL-Indonesië.", "Wel feitelijk, maar NIET officiële NL-term.", "Niet — Indonesische term, niet NL."],
         uitlegPad: {
-          stappen: [{ titel: "'Politionele actie' = eufemisme", tekst: "**Politionele acties** klinkt onschuldig (politie-werk, orde-handhaving) maar het waren **militaire offensieven** met tienduizenden NL-soldaten. NL-regering wilde geen 'oorlog' erkennen om buitenlandse interventie te vermijden. Sinds 2022 wordt officieel **'koloniale oorlog'** gebruikt." }],
+          stappen: [{ titel: "'Politionele actie' = eufemisme", tekst: "**Politionele acties** klinkt onschuldig (politie-werk, orde-handhaving) maar het waren **militaire offensieven** met tienduizenden NL-soldaten. NL-regering wilde geen 'oorlog' erkennen om buitenlandse interventie te vermijden. Sinds het grote onderzoek van 2022 spreken historici vaak van een **'dekolonisatieoorlog'** of **'koloniale oorlog'**." }],
           woorden: [{ woord: "eufemisme", uitleg: "Verzachtende term voor iets onaangenaams." }, { woord: "politionele actie", uitleg: "NL-eufemisme voor militair offensief 1947 + 1948 in Indonesië." }],
-          theorie: "Toets-controversie: NL-regering wijzigde in 2022 historische terminologie naar 'koloniale oorlog' op advies van wetenschappelijk onderzoek (KITLV/NIOD).",
-          niveaus: { basis: "Politionele acties — A.", simpeler: "Officiële NL-naam = politionele acties", nogSimpeler: "Politioneel" },
+          theorie: "Toets-controversie: in 2022 concludeerde groot onderzoek (KITLV/NIMH/NIOD) dat NL structureel extreem geweld gebruikte; premier Rutte bood daarvoor excuses aan.",
+          niveaus: { basis: "Politionele acties.", simpeler: "Officiële NL-naam = politionele acties", nogSimpeler: "Politioneel" },
         },
       },
       {
@@ -259,21 +259,21 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Onafhankelijkheidsverklaring zelf — NL erkende nog niet.", "Bijna — 60 jaar later sprak NL het uit als symbolische erkenning.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Soevereiniteitsoverdracht Amsterdam", tekst: "**27 december 1949**: in **Paleis op de Dam, Amsterdam**, tekent **koningin Juliana** de overdracht. Sindsdien is Indonesië in NL-ogen officieel onafhankelijk. Indonesië zelf: officiele datum blijft 17-8-1945. **2005**: minister Ben Bot erkent symbolisch 17 augustus 1945 als juiste datum." }],
+          stappen: [{ titel: "Soevereiniteitsoverdracht Amsterdam", tekst: "**27 december 1949**: in **Paleis op de Dam, Amsterdam**, tekent **koningin Juliana** de overdracht. Sindsdien is Indonesië in NL-ogen officieel onafhankelijk. Indonesië zelf: officiële datum blijft 17-8-1945. **2005**: minister Ben Bot erkent symbolisch 17 augustus 1945 als juiste datum." }],
           theorie: "Spanning: NL viert 27-12-1949, Indonesië 17-8-1945. Verschil ~4 jaar van oorlog daartussen.",
-          niveaus: { basis: "27 december 1949 — A.", simpeler: "NL erkent soevereiniteit = 27-12-1949", nogSimpeler: "27-12-1949" },
+          niveaus: { basis: "27 december 1949.", simpeler: "NL erkent soevereiniteit = 27-12-1949", nogSimpeler: "27-12-1949" },
         },
       },
       {
         q: "Welk land legde **internationale druk** op NL om te stoppen?",
-        options: ["Verenigde Staten","Engeland","Frankrijk","Belgie"],
+        options: ["Verenigde Staten","Engeland","Frankrijk","België"],
         answer: 0,
-        wrongHints: [null, "Brits sympathiseerde gedeeltelijk, geen hoofd-druk.", "Niet — Frans-Indo-China zelf koloniale oorlog.", "Niet relevant."],
+        wrongHints: [null, "Groot-Brittannië steunde deels, maar zette niet de meeste druk.", "Niet — Frankrijk voerde zelf een koloniale oorlog in Indochina.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "VS + VN = breekijzer", tekst: "**Verenigde Staten** dreigde **Marshall-hulp** (Europese wederopbouw na WO2) in te trekken als NL doorging. Voor NL was Marshall-geld essentieel voor wederopbouw. Plus: VN-Veiligheidsraad keurde NL-acties af (resolutie 1947). NL moest plooien." }],
           woorden: [{ woord: "Marshall-hulp", uitleg: "Amerikaans steunprogramma voor wederopbouw Europa na WO2 (1948-1952)." }],
           theorie: "Toets-context: VS in 1948 al Koude Oorlog-modus. Wilde geen instabiele kolonies waar communisme kon groeien — duwde dekolonisatie door.",
-          niveaus: { basis: "VS — A.", simpeler: "Amerika dreigde Marshall-hulp", nogSimpeler: "VS" },
+          niveaus: { basis: "VS.", simpeler: "Amerika dreigde Marshall-hulp", nogSimpeler: "VS" },
         },
       },
       {
@@ -284,7 +284,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Excuses 2020", tekst: "**10 maart 2020**: koning Willem-Alexander biedt tijdens staatsbezoek Indonesië excuses aan voor 'buitensporig geweld' van NL-zijde in 1945-1949. Eerste expliciete koninklijke excuses. **2022**: ook premier Rutte excuses voor slavernijverleden in Indonesië/Suriname." }],
           theorie: "Toets-actueel: 2020-excuses + 2022-slavernij-excuses zijn kantelpunten in NL-koloniale herinnering.",
-          niveaus: { basis: "Willem-Alexander — A.", simpeler: "2020-excuses = Willem-Alexander", nogSimpeler: "Willem-A" },
+          niveaus: { basis: "Willem-Alexander.", simpeler: "2020-excuses = Willem-Alexander", nogSimpeler: "Willem-A" },
         },
       },
     ],
@@ -303,7 +303,7 @@ const steps = [
         wrongHints: [null, "Niet — VOC is veel ouder dan onafhankelijkheid (~350 jaar verschil).", "Niet — VOC eerst (1602), dan cultuurstelsel.", "Niet — onafhankelijkheid is laatste in lijn."],
         uitlegPad: {
           stappen: [{ titel: "Volgorde 1602-1949", tekst: "1) VOC **1602-1799** (handelscompagnie)\n2) Cultuurstelsel **1830-1870** (dwangcultuur)\n3) Ethische politiek **1901-1942** (welvaarts-koloniale ideologie)\n4) Onafhankelijkheid **1945** (Soekarno-proclamatie)" }],
-          niveaus: { basis: "1) VOC 2) Cultuurstelsel 3) Ethisch 4) Onafhankelijkheid — A.", simpeler: "Tijdsvolgorde", nogSimpeler: "A = correct." },
+          niveaus: { basis: "1) VOC 2) Cultuurstelsel 3) Ethisch 4) Onafhankelijkheid.", simpeler: "Tijdsvolgorde", nogSimpeler: "VOC eerst, onafhankelijkheid laatst." },
         },
       },
       {
@@ -313,17 +313,17 @@ const steps = [
         wrongHints: [null, "1948-1980 — te laat.", "1980-2013 — veel te laat.", "Regentes 1890-1898, niet 1901."],
         uitlegPad: {
           stappen: [{ titel: "Wilhelmina = 1901-troonrede", tekst: "Koningin **Wilhelmina** (1880-1962, regering 1890-1948) sprak in troonrede 1901 over 'zedelijke roeping' = start ethische politiek." }],
-          niveaus: { basis: "Wilhelmina — A.", simpeler: "1901 = Wilhelmina", nogSimpeler: "Wilhelmina" },
+          niveaus: { basis: "Wilhelmina.", simpeler: "1901 = Wilhelmina", nogSimpeler: "Wilhelmina" },
         },
       },
       {
         q: "Wie was de eerste **president** van Indonesië (1945-1967)?",
         options: ["Soekarno","Hatta","Soeharto","Soeharno"],
         answer: 0,
-        wrongHints: [null, "Hatta was vicepresident.", "Soeharto = tweede president (1967-1998), na Soekarno-coupe.", "Bestaat niet — verwarring met Soekarno + Soeharto."],
+        wrongHints: [null, "Hatta was vicepresident.", "Soeharto = tweede president (1967-1998), na een machtsgreep.", "Bestaat niet — verwarring met Soekarno + Soeharto."],
         uitlegPad: {
           stappen: [{ titel: "Soekarno = 1e, Soeharto = 2e", tekst: "**Soekarno** = eerste president 1945-1967. **Soeharto** = tweede president 1967-1998, na coup. Lijken op elkaar in naam maar zijn verschillend." }],
-          niveaus: { basis: "Soekarno — A.", simpeler: "Eerste president = Soekarno", nogSimpeler: "Soekarno" },
+          niveaus: { basis: "Soekarno.", simpeler: "Eerste president = Soekarno", nogSimpeler: "Soekarno" },
         },
       },
       {
@@ -333,17 +333,17 @@ const steps = [
         wrongHints: [null, "De politionele acties vonden pas decennia later plaats — Max Havelaar is van 1860.", "De Japanse bezetting was ook tientallen jaren later — niet de context van dit boek.", "Slavenhandel hoort bij West-Indië, niet bij de Java-context van dit boek."],
         uitlegPad: {
           stappen: [{ titel: "Multatuli vs Cultuurstelsel", tekst: "*Max Havelaar* (1860) door Multatuli was geschreven om de **misbruiken van het Cultuurstelsel** (1830-1870) aan de kaak te stellen. Hielp om Cultuurstelsel langzaam af te schaffen ('Agrarische Wet' 1870)." }],
-          niveaus: { basis: "Cultuurstelsel — A.", simpeler: "Max Havelaar 1860 = tegen Cultuurstelsel", nogSimpeler: "Cultuurstelsel" },
+          niveaus: { basis: "Cultuurstelsel.", simpeler: "Max Havelaar 1860 = tegen Cultuurstelsel", nogSimpeler: "Cultuurstelsel" },
         },
       },
       {
-        q: "Welke beweging begon de **moderne Indonesische nationalisme** in 1908?",
+        q: "Welke beweging begon het **moderne Indonesische nationalisme** in 1908?",
         options: ["Boedi Oetomo","PNI","KNIL","VOC"],
         answer: 0,
         wrongHints: [null, "PNI werd pas later opgericht door Soekarno — welke beweging was er eerder?", "KNIL was het Nederlandse koloniale leger — eerder onderdrukker dan nationalisten.", "De VOC was al meer dan een eeuw geleden opgeheven."],
         uitlegPad: {
-          stappen: [{ titel: "1908 = start nationalisme", tekst: "**Boedi Oetomo** opgericht 20 mei 1908 — eerste vredevolle nationalistische beweging. Vanuit medische studenten. Inspireerde latere bewegingen tot Soekarno's PNI in 1927." }],
-          niveaus: { basis: "Boedi Oetomo — A.", simpeler: "1908 nationalisme = Boedi Oetomo", nogSimpeler: "Boedi Oetomo" },
+          stappen: [{ titel: "1908 = start nationalisme", tekst: "**Boedi Oetomo** opgericht 20 mei 1908 — eerste vreedzame nationalistische beweging. Vanuit medische studenten. Inspireerde latere bewegingen tot Soekarno's PNI in 1927." }],
+          niveaus: { basis: "Boedi Oetomo.", simpeler: "1908 nationalisme = Boedi Oetomo", nogSimpeler: "Boedi Oetomo" },
         },
       },
     ],

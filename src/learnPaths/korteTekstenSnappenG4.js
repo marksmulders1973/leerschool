@@ -120,7 +120,7 @@ const steps = [
   {
     title: "Het antwoord staat in de tekst — zoek maar!",
     explanation:
-      "Op de toets krijg je een tekst met vragen. Grote geheim: **het antwoord staat bijna altijd in de tekst**.\n\nZo doe je het:\n1. Lees de **vraag** goed. Welk woord is belangrijk?\n2. **Zoek** dat woord (of een woord dat erop lijkt) in de tekst.\n3. Lees die zin **helemaal**.\n4. Kies het antwoord dat er echt staat.\n\nNiet gokken uit je hoofd — terugkijken in de tekst mag altijd. Dat is precies wat goede lezers doen!",
+      "Op de toets krijg je een tekst met vragen. Het grote geheim: **het antwoord staat bijna altijd in de tekst**.\n\nZo doe je het:\n1. Lees de **vraag** goed. Welk woord is belangrijk?\n2. **Zoek** dat woord (of een woord dat erop lijkt) in de tekst.\n3. Lees die zin **helemaal**.\n4. Kies het antwoord dat er echt staat.\n\nNiet gokken uit je hoofd — terugkijken in de tekst mag altijd. Dat is precies wat goede lezers doen!",
     checks: [
       {
         q: "*De egel slaapt de hele winter. Dat heet een winterslaap. In de lente wordt hij weer wakker. Dan zoekt hij meteen eten.*\n\nHoe heet het als een egel de hele winter slaapt?",

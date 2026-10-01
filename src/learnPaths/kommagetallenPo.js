@@ -79,7 +79,7 @@ const steps = [
   {
     title: "Wat is een kommagetal?",
     explanation:
-      "Een **kommagetal** *(ook wel decimaal genoemd)* is een getal met een **komma** erin. De komma scheidt het **hele** deel van het **stukje** deel.\n\n**Voorbeeld**: **3,5** *(spreek uit: drie-komma-vijf)*.\n• **3** is het hele deel.\n• **5** ná de komma = vijf-tienden = 5/10 = een half.\n• Dus 3,5 = drie-en-een-half.\n\n**Wat staat op welke plek?**\nVoor het getal **123,45**:\n• **1** = honderden *(100)*.\n• **2** = tientallen *(20)*.\n• **3** = eenheden *(3)*.\n• Komma.\n• **4** = tienden *(4 stukjes van 1/10)* = 0,4.\n• **5** = honderdsten *(5 stukjes van 1/100)* = 0,05.\n\nAlles bij elkaar: 100 + 20 + 3 + 0,4 + 0,05 = **123,45**.\n\n**Toets-truc — een kommagetal lezen**:\nLees het vóór de komma als gewoon getal. Lees de komma als 'komma'. Lees ná de komma de cijfers één voor één.\n• 12,5 = 'twaalf-komma-vijf'.\n• 7,03 = 'zeven-komma-nul-drie'.\n• 0,8 = 'nul-komma-acht'.\n\n**Kommagetallen ↔ breuken**:\n• 0,5 = ½ *(de helft)*.\n• 0,25 = ¼ *(een kwart)*.\n• 0,75 = ¾ *(drie kwart)*.\n• 0,1 = 1/10 *(een tiende)*.\n\n**Wanneer kom je kommagetallen tegen?**\n• Geld: € 4,25.\n• Lengte: 1,80 m.\n• Gewicht: 0,5 kg = een halve kilo.\n• Temperatuur: 36,7 °C.\n• Tijd: 3,5 uur = 3 uur en een half.",
+      "Een **kommagetal** *(ook wel decimaal genoemd)* is een getal met een **komma** erin. De komma scheidt het **hele** deel van de **stukjes**.\n\n**Voorbeeld**: **3,5** *(spreek uit: drie-komma-vijf)*.\n• **3** is het hele deel.\n• **5** ná de komma = vijf-tienden = 5/10 = een half.\n• Dus 3,5 = drie-en-een-half.\n\n**Wat staat op welke plek?**\nVoor het getal **123,45**:\n• **1** = honderden *(100)*.\n• **2** = tientallen *(20)*.\n• **3** = eenheden *(3)*.\n• Komma.\n• **4** = tienden *(4 stukjes van 1/10)* = 0,4.\n• **5** = honderdsten *(5 stukjes van 1/100)* = 0,05.\n\nAlles bij elkaar: 100 + 20 + 3 + 0,4 + 0,05 = **123,45**.\n\n**Toets-truc — een kommagetal lezen**:\nLees het vóór de komma als gewoon getal. Lees de komma als 'komma'. Lees ná de komma de cijfers één voor één.\n• 12,5 = 'twaalf-komma-vijf'.\n• 7,03 = 'zeven-komma-nul-drie'.\n• 0,8 = 'nul-komma-acht'.\n\n**Kommagetallen ↔ breuken**:\n• 0,5 = ½ *(de helft)*.\n• 0,25 = ¼ *(een kwart)*.\n• 0,75 = ¾ *(drie kwart)*.\n• 0,1 = 1/10 *(een tiende)*.\n\n**Wanneer kom je kommagetallen tegen?**\n• Geld: € 4,25.\n• Lengte: 1,80 m.\n• Gewicht: 0,5 kg = een halve kilo.\n• Temperatuur: 36,7 °C.\n• Tijd: 3,5 uur = 3 uur en een half.",
     svg: plaatswaardenSvg(),
     checks: [
       {
@@ -118,7 +118,7 @@ const steps = [
         q: "Welk getal is **groter**: 0,9 of 0,12?",
         options: ["0,9", "0,12", "Even groot", "Kan je niet zeggen"],
         answer: 0,
-        wrongHints: [null, "Meer cijfers betekent niet automatisch groter — vergelijk tientallen-positie na de komma.", "Niet hetzelfde — vergelijk per plek.", "Wél te zeggen: zet beide getallen op gelijk aantal decimalen en vergelijk."],
+        wrongHints: [null, "Meer cijfers betekent niet automatisch groter — vergelijk de tienden-positie na de komma.", "Niet hetzelfde — vergelijk per plek.", "Wél te zeggen: zet beide getallen op gelijk aantal decimalen en vergelijk."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk per plek", tekst: "Schrijf gelijk aantal cijfers: 0,90 vs 0,12. Eerste plek: 9 > 1. Dus 0,9 > 0,12." },
@@ -129,7 +129,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Niet aantal cijfers tellen", uitleg: "Meer cijfers betekent niet automatisch groter — kijk per plek." }],
           niveaus: {
             basis: "0,9 = 0,90 > 0,12.",
-            simpeler: "Schrijf gelijk: 0,90 en 0,12. 90 hondertste vs 12 hondertsten. 90 > 12. Dus 0,9 groter.",
+            simpeler: "Schrijf gelijk: 0,90 en 0,12. 90 honderdsten vs 12 honderdsten. 90 > 12. Dus 0,9 groter.",
             nogSimpeler: "0,9",
           },
         },
@@ -141,14 +141,14 @@ const steps = [
   {
     title: "Optellen & aftrekken — komma's onder elkaar!",
     explanation:
-      "Bij optellen en aftrekken met kommagetallen geldt **één belangrijke regel**:\n\n**De komma's moeten recht onder elkaar staan.**\n\nDat is alles. Verder doe je het net als gewoon optellen/aftrekken.\n\n**Voorbeeld optellen**:\n```\n  3,50\n+ 2,70\n─────\n  6,20\n```\nKomma's staan recht. Antwoord-komma op dezelfde plek. Dus **3,50 + 2,70 = 6,20**.\n\n**Voorbeeld aftrekken**:\n```\n  8,25\n− 3,40\n─────\n  4,85\n```\nKomma op dezelfde plek. **8,25 − 3,40 = 4,85**.\n\n**Toets-truc — verschillende aantallen cijfers**:\nAls de getallen niet evenveel cijfers ná de komma hebben, **vul aan met nullen**:\n• 5,2 + 3,75 → schrijf als **5,20** + 3,75.\n• 4,5 + 2 → schrijf als 4,5 + 2,0 (of 4,50 + 2,00).\n\nNullen aan het eind veranderen niets aan de waarde, maar maken het optellen makkelijker.\n\n**Aandachtspunt — gehele getallen**:\nEen getal zonder komma (zoals 5) is gelijk aan 5,0 of 5,00 of 5,000. Allemaal hetzelfde getal!\n\n**Veel-voorkomende fout**:\nKomma's NIET recht onder elkaar zetten. Dan kan **0,5 + 2** worden gerekend als 0,5 + 2 = 2,5 (correct) maar als je 0,5 + 02 doet zonder uitlijnen kun je per ongeluk 7 antwoorden.",
+      "Bij optellen en aftrekken met kommagetallen geldt **één belangrijke regel**:\n\n**De komma's moeten recht onder elkaar staan.**\n\nDat is alles. Verder doe je het net als gewoon optellen/aftrekken.\n\n**Voorbeeld optellen**:\n```\n  3,50\n+ 2,70\n─────\n  6,20\n```\nKomma's staan recht. Antwoord-komma op dezelfde plek. Dus **3,50 + 2,70 = 6,20**.\n\n**Voorbeeld aftrekken**:\n```\n  8,25\n− 3,40\n─────\n  4,85\n```\nKomma op dezelfde plek. **8,25 − 3,40 = 4,85**.\n\n**Toets-truc — verschillende aantallen cijfers**:\nAls de getallen niet evenveel cijfers ná de komma hebben, **vul aan met nullen**:\n• 5,2 + 3,75 → schrijf als **5,20** + 3,75.\n• 4,5 + 2 → schrijf als 4,5 + 2,0 (of 4,50 + 2,00).\n\nNullen aan het eind veranderen niets aan de waarde, maar maken het optellen makkelijker.\n\n**Aandachtspunt — gehele getallen**:\nEen getal zonder komma (zoals 5) is gelijk aan 5,0 of 5,00 of 5,000. Allemaal hetzelfde getal!\n\n**Veel-voorkomende fout**:\nKomma's NIET recht onder elkaar zetten. Dan reken je bij **0,5 + 2** per ongeluk 5 tienden + 2 tienden = **0,7** in plaats van **2,5**.",
     svg: optellenSvg(),
     checks: [
       {
         q: "**3,5 + 2,4** = ?",
         options: ["5,9", "5,11", "59", "0,59"],
         answer: 0,
-        wrongHints: [null, "Te veel — let op de komma; zijn tienden en eenheden niet door elkaar gehaald?", "Komma vergeten.", "Komma te ver naar links."],
+        wrongHints: [null, "Let op de komma — heb je tienden en honderdsten door elkaar gehaald?", "Komma vergeten.", "Komma te ver naar links."],
       },
       {
         q: "**7,80 − 3,25** = ?",
@@ -189,7 +189,7 @@ const steps = [
   {
     title: "Vermenigvuldigen met kommagetallen",
     explanation:
-      "Vermenigvuldigen met kommagetallen heeft een **trucje** *(uit je hoofd!)*:\n\n**Stap 1**: doe alsof de komma er **niet staat** (gewone vermenigvuldiging).\n**Stap 2**: tel de cijfers **ná** de komma — in beide getallen samen.\n**Stap 3**: zet die komma in het antwoord, geteld vanaf rechts.\n\n**Voorbeeld 1**: 0,5 × 0,3 = ?\n• Stap 1: 5 × 3 = 15.\n• Stap 2: cijfers ná komma: 0,5 heeft 1, 0,3 heeft 1 → totaal 2.\n• Stap 3: 2 plaatsen vanaf rechts → 0,15.\n• Dus 0,5 × 0,3 = **0,15**.\n\n**Voorbeeld 2**: 2,4 × 3 = ?\n• Stap 1: 24 × 3 = 72.\n• Stap 2: cijfers ná komma: 2,4 heeft 1, 3 heeft 0 → totaal 1.\n• Stap 3: 1 plaats vanaf rechts → 7,2.\n• Dus 2,4 × 3 = **7,2**.\n\n**Voorbeeld 3**: 1,5 × 1,2 = ?\n• Stap 1: 15 × 12 = 180.\n• Stap 2: 1 + 1 = 2 cijfers ná komma.\n• Stap 3: 2 plaatsen vanaf rechts → 1,80 = 1,8.\n• Dus 1,5 × 1,2 = **1,8**.\n\n**Toets-truc — schatten als check**:\n• 2,4 × 3 → ongeveer 2 × 3 = 6. Antwoord 7,2 klopt qua grootte.\n• 0,5 × 0,3 → 0,5 is de helft, dus de helft van 0,3 = 0,15. Klopt.\n\n**Belangrijke regel**:\nAls je kommagetal vermenigvuldigt met een gewoon getal: alleen het kommagetal heeft cijfers ná de komma.",
+      "Vermenigvuldigen met kommagetallen heeft een **trucje** *(uit je hoofd!)*:\n\n**Stap 1**: doe alsof de komma er **niet staat** (gewone vermenigvuldiging).\n**Stap 2**: tel de cijfers **ná** de komma — in beide getallen samen.\n**Stap 3**: zet die komma in het antwoord, geteld vanaf rechts.\n\n**Voorbeeld 1**: 0,5 × 0,3 = ?\n• Stap 1: 5 × 3 = 15.\n• Stap 2: cijfers ná komma: 0,5 heeft 1, 0,3 heeft 1 → totaal 2.\n• Stap 3: 2 plaatsen vanaf rechts → 0,15.\n• Dus 0,5 × 0,3 = **0,15**.\n\n**Voorbeeld 2**: 2,4 × 3 = ?\n• Stap 1: 24 × 3 = 72.\n• Stap 2: cijfers ná komma: 2,4 heeft 1, 3 heeft 0 → totaal 1.\n• Stap 3: 1 plaats vanaf rechts → 7,2.\n• Dus 2,4 × 3 = **7,2**.\n\n**Voorbeeld 3**: 1,5 × 1,2 = ?\n• Stap 1: 15 × 12 = 180.\n• Stap 2: 1 + 1 = 2 cijfers ná komma.\n• Stap 3: 2 plaatsen vanaf rechts → 1,80 = 1,8.\n• Dus 1,5 × 1,2 = **1,8**.\n\n**Toets-truc — schatten als check**:\n• 2,4 × 3 → ongeveer 2 × 3 = 6. Antwoord 7,2 klopt qua grootte.\n• 0,5 × 0,3 → 0,5 is de helft, dus de helft van 0,3 = 0,15. Klopt.\n\n**Belangrijke regel**:\nAls je een kommagetal vermenigvuldigt met een gewoon getal: alleen het kommagetal heeft cijfers ná de komma.",
     checks: [
       {
         q: "**0,4 × 0,2** = ?",
@@ -201,7 +201,7 @@ const steps = [
         q: "**3,2 × 5** = ?",
         options: ["16", "1,6", "8,2", "1,5"],
         answer: 0,
-        wrongHints: [null, "Komma te ver — tel hoeveel decimalen er in totaal zijn en zet de komma op de juiste plek.", "Te weinig — reken eerst 32 × 5 en bedenk dan hoeveel decimalen het antwoord moet hebben.", "Optelling. We zoeken vermenigvuldiging."],
+        wrongHints: [null, "Komma te ver — tel hoeveel decimalen er in totaal zijn en zet de komma op de juiste plek.", "Dat is een optelling (3,2 + 5). We zoeken vermenigvuldiging.", "Te weinig — reken eerst 32 × 5 en bedenk dan hoeveel decimalen het antwoord moet hebben."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig zonder komma", tekst: "Doe 32 × 5 = 160." },
@@ -238,7 +238,7 @@ const steps = [
   {
     title: "Delen met kommagetallen",
     explanation:
-      "Delen met een kommagetal kent **2 hoofdgevallen**:\n\n**Geval 1 — Delen door een geheel getal**:\nDoe gewoon staartdeling. De komma in het antwoord komt op dezelfde plek als in het deeltal.\n\n**Voorbeeld**: 4,8 ÷ 2 = ?\n• 4 ÷ 2 = 2 → komma → 8 ÷ 2 = 4.\n• Dus 4,8 ÷ 2 = **2,4**.\n\n**Geval 2 — Delen door een kommagetal**:\n**Verschuif de komma** in beide getallen totdat de deler een **geheel getal** wordt.\n\n**Voorbeeld**: 6,4 ÷ 0,2 = ?\n• 0,2 heeft 1 cijfer ná komma — schuif beide kommas 1 plaats naar rechts.\n• Wordt: 64 ÷ 2 = **32**.\n• Dus 6,4 ÷ 0,2 = **32**.\n\n**Voorbeeld 2**: 1,5 ÷ 0,3 = ?\n• Verschuif komma 1 plaats: wordt 15 ÷ 3 = 5.\n• Dus 1,5 ÷ 0,3 = **5**.\n\n**Toets-truc — schatten**:\n• 4,8 ÷ 2 → ongeveer 5 ÷ 2 = 2,5. Antwoord 2,4 klopt qua grootte.\n• 6,4 ÷ 0,2 → 0,2 is een vijfde, dus 6,4 × 5 = 32. Klopt.\n\n**Belangrijk**:\nDelen door een **kleiner dan 1** kommagetal geeft een **groter** antwoord. Bv. 6,4 ÷ 0,2 = 32 *(veel groter dan 6,4!)*. Dat lijkt vreemd maar klopt — je kijkt hoe vaak 0,2 in 6,4 past.\n\n**Veel-voorkomende fout**:\nKomma vergeten of verkeerd verschuiven. Controleer met een schatting.",
+      "Delen met een kommagetal kent **2 hoofdgevallen**:\n\n**Geval 1 — Delen door een geheel getal**:\nDoe gewoon staartdeling. De komma in het antwoord komt op dezelfde plek als in het deeltal.\n\n**Voorbeeld**: 4,8 ÷ 2 = ?\n• 4 ÷ 2 = 2 → komma → 8 ÷ 2 = 4.\n• Dus 4,8 ÷ 2 = **2,4**.\n\n**Geval 2 — Delen door een kommagetal**:\n**Verschuif de komma** in beide getallen totdat de deler een **geheel getal** wordt.\n\n**Voorbeeld**: 6,4 ÷ 0,2 = ?\n• 0,2 heeft 1 cijfer ná komma — schuif beide komma's 1 plaats naar rechts.\n• Wordt: 64 ÷ 2 = **32**.\n• Dus 6,4 ÷ 0,2 = **32**.\n\n**Voorbeeld 2**: 1,5 ÷ 0,3 = ?\n• Verschuif komma 1 plaats: wordt 15 ÷ 3 = 5.\n• Dus 1,5 ÷ 0,3 = **5**.\n\n**Toets-truc — schatten**:\n• 4,8 ÷ 2 → ongeveer 5 ÷ 2 = 2,5. Antwoord 2,4 klopt qua grootte.\n• 6,4 ÷ 0,2 → 0,2 is een vijfde, dus 6,4 × 5 = 32. Klopt.\n\n**Belangrijk**:\nDelen door een kommagetal **kleiner dan 1** geeft een **groter** antwoord. Bv. 6,4 ÷ 0,2 = 32 *(veel groter dan 6,4!)*. Dat lijkt vreemd maar klopt — je kijkt hoe vaak 0,2 in 6,4 past.\n\n**Veel-voorkomende fout**:\nKomma vergeten of verkeerd verschuiven. Controleer met een schatting.",
     checks: [
       {
         q: "**6,8 ÷ 2** = ?",
@@ -298,7 +298,7 @@ const steps = [
         q: "**3 boeken** van **€ 4,75** kosten samen?",
         options: ["€ 14,25", "€ 12,25", "€ 14,75", "€ 7,75"],
         answer: 0,
-        wrongHints: [null, "Te weinig — je moet 3 × €4,75 doen.", "Eén boek + iets — niet 3 keer.", "Veel te weinig — dat is alleen 1 boek + €3."],
+        wrongHints: [null, "Te weinig — je moet 3 × €4,75 doen.", "Te veel — reken 3 × €0,75 nog eens na.", "Veel te weinig — dat is alleen 1 boek + €3."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldigen", tekst: "3 × €4,75. Doe 3 × 475 = 1425. 2 decimalen ná komma in 4,75. Dus €14,25." },
@@ -400,7 +400,7 @@ const steps = [
       { q: "1,25 € + 0,75 € = ?", options: ["2,00 €","1,50","2,25","20,00"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Komma weg."] },
       { q: "Rond 7,38 af op één decimaal", options: ["7,4","7,3","7,0","8,0"], answer: 0, wrongHints: [null, "Niet — 8 ≥ 5.", "Te ver.", "Te ver."] },
       { q: "0,8 × 10 = ?", options: ["8","80","0,08","0,8"], answer: 0, wrongHints: [null, "Te veel.", "Andersom.", "Niet veranderd."] },
-      { q: "Welke is kleinst: 0,4 / 0,04 / 0,44 / 0,4?", options: ["0,04","0,4","0,44","Gelijk"], answer: 0, wrongHints: [null, "Tiende.", "Groter.", "Niet — andere getallen."] },
+      { q: "Welke is het kleinst: 0,4 / 0,04 / 0,44?", options: ["0,04","0,4","0,44","Gelijk"], answer: 0, wrongHints: [null, "Tiende.", "Groter.", "Niet — andere getallen."] },
       { q: "1,75 = welke breuk?", options: ["1¾","1¼","1⅓","1⅖"], answer: 0, wrongHints: [null, "Dat is 1,25.", "≈ 1,33.", "≈ 1,4."] },
       { q: "10,5 ÷ 5 = ?", options: ["2,1","2,5","21","5,5"], answer: 0, wrongHints: [null, "Niet.", "Komma weg.", "Niet."] },
       { q: "Welke is **gelijk** aan 0,25?", options: ["¼","½","⅛","⅓"], answer: 0, wrongHints: [null, "Dat is 0,5.", "Dat is 0,125.", "≈ 0,33."] },

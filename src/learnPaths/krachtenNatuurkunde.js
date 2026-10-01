@@ -12,7 +12,7 @@ const stepEmojis = ["💪", "🏷️", "⚖️", "🌍", "📐", "🚗", "💥",
 const chapters = [
   { letter: "A", title: "Wat is een kracht?", emoji: "💪", from: 0, to: 2 },
   { letter: "B", title: "Soorten krachten", emoji: "⚖️", from: 3, to: 5 },
-  { letter: "C", title: "Newton's wetten", emoji: "🚀", from: 6, to: 8 },
+  { letter: "C", title: "De wetten van Newton", emoji: "🚀", from: 6, to: 8 },
   { letter: "D", title: "Eindopdracht", emoji: "🏆", from: 9, to: 9 },
 ];
 
@@ -43,7 +43,7 @@ const steps = [
           theorie: "Onthoud: kg = massa, N = kracht, m = lengte, s = tijd.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Appel ~1 N, mens ~700 N, auto ~15.000 N" }],
           basiskennis: [{ onderwerp: "eenheid", uitleg: "1 N = 1 kg × 1 m/s²" }],
-          niveaus: { basis: "Newton (N).", simpeler: "N van Newton.", nogSimpeler: "N van Newton. → N." },
+          niveaus: { basis: "Newton (N).", simpeler: "N van Newton.", nogSimpeler: "N van Newton." },
         },
       },
       {
@@ -56,7 +56,7 @@ const steps = [
           woorden: [{ woord: "vector", uitleg: "grootheid met grootte + richting" }],
           theorie: "Andere voorbeelden van vectoren: snelheid, versnelling. Niet-vectoren: massa, temperatuur (alleen grootte).",
           voorbeelden: [{ type: "voorbeeld", tekst: "5 N omhoog ≠ 5 N omlaag, ook al is grootte gelijk" }],
-          basiskennis: [{ onderwerp: "richting telt", uitleg: "anders gaat resultaat anders" }],
+          basiskennis: [{ onderwerp: "richting telt", uitleg: "andere richting = ander resultaat" }],
           niveaus: { basis: "Grootte + richting.", simpeler: "Hoeveel + waarheen.", nogSimpeler: "Pijl." },
         },
       },
@@ -81,7 +81,7 @@ const steps = [
         q: "Iemand heeft op aarde een massa van 60 kg. Wat is zijn gewicht (Fz)?",
         options: ["600 N", "60 N", "60 kg", "10 N"],
         answer: 0,
-        wrongHints: [null, "Bijna — vergeet niet te vermenigvuldigen met g (10).", "Massa staat in kg, gewicht is een kracht in N.", "Veel te weinig — zou minder zijn dan een appel."],
+        wrongHints: [null, "Bijna — vergeet niet te vermenigvuldigen met g (10).", "Massa staat in kg, gewicht is een kracht in N.", "Veel te weinig — dat is het gewicht van een voorwerp van 1 kg."],
         uitlegPad: {
           stappen: [{ titel: "Fz = m × g = 60 × 10 = 600 N", tekst: "Gewicht (Fz) = massa × g (zwaartekrachtsversnelling). Op aarde: g ≈ 10 N/kg. Dus 60 kg × 10 = 600 N." }],
           woorden: [{ woord: "g", uitleg: "valversnelling ≈ 10 N/kg" }],
@@ -107,7 +107,7 @@ const steps = [
           theorie: "Massa = altijd hetzelfde. Gewicht = locatie-afhankelijk.",
           voorbeelden: [{ type: "voorbeeld", tekst: "70 kg mens op aarde: 700 N. Op maan: ~112 N. Op Mars: ~260 N" }],
           basiskennis: [{ onderwerp: "m = constant", uitleg: "stof verandert niet" }],
-          niveaus: { basis: "Gewicht kleiner, massa gelijk.", simpeler: "Je voelt lichter.", nogSimpeler: "Lichter." },
+          niveaus: { basis: "Gewicht kleiner, massa gelijk.", simpeler: "Je voelt je lichter.", nogSimpeler: "Lichter." },
         },
       },
     ],
@@ -201,14 +201,14 @@ const steps = [
           theorie: "Maan g ≈ 1,6. Mars g ≈ 3,7. Jupiter g ≈ 24,8.",
           voorbeelden: [{ type: "voorbeeld", tekst: "1 kg op aarde weegt 10 N (echte waarde: 9,81 N)" }],
           basiskennis: [{ onderwerp: "N/kg", uitleg: "newton per kilogram" }],
-          niveaus: { basis: "10 N/kg.", simpeler: "Tien.", nogSimpeler: "Tien. → 10." },
+          niveaus: { basis: "10 N/kg.", simpeler: "Tien.", nogSimpeler: "Tien (10)." },
         },
       },
     ],
   },
   {
     title: "Wrijvingskracht — remt af",
-    explanation: "**Wrijving** is een kracht die ontstaat als twee oppervlakken langs elkaar bewegen of dat proberen. Ze werkt **tegen de bewegingsrichting** in.\n\n**Soorten wrijving**:\n• **Schuifwrijving**: voorwerp glijdt over een oppervlak (slee op sneeuw).\n• **Rolwrijving**: voorwerp rolt (auto, fiets) — meestal kleiner dan schuifwrijving.\n• **Luchtwrijving** (luchtweerstand): bij snelle dingen — fietser, auto, parachute.\n• **Wrijving in vloeistoffen**: een schip in water voelt waterwrijving.\n\n**Hoe meer wrijving**:\n• Hoe sneller iets afremt.\n• Hoe meer energie verloren gaat (vaak als warmte).\n\n**Wrijving is niet altijd slecht**:\n• Zonder wrijving kun je niet lopen (slipt weg).\n• Remmen werken juist door wrijving.\n• Auto's hebben grip nodig (wrijving banden ↔ wegdek).\n\n**Wrijving verlagen**: gladmaken, oliëen, stroomlijnen.",
+    explanation: "**Wrijving** is een kracht die ontstaat als twee oppervlakken langs elkaar bewegen of dat proberen. Ze werkt **tegen de bewegingsrichting** in.\n\n**Soorten wrijving**:\n• **Schuifwrijving**: voorwerp glijdt over een oppervlak (slee op sneeuw).\n• **Rolwrijving**: voorwerp rolt (auto, fiets) — meestal kleiner dan schuifwrijving.\n• **Luchtwrijving** (luchtweerstand): bij snelle dingen — fietser, auto, parachute.\n• **Wrijving in vloeistoffen**: een schip in water voelt waterwrijving.\n\n**Hoe meer wrijving**:\n• Hoe sneller iets afremt.\n• Hoe meer energie verloren gaat (vaak als warmte).\n\n**Wrijving is niet altijd slecht**:\n• Zonder wrijving kun je niet lopen (slipt weg).\n• Remmen werken juist door wrijving.\n• Auto's hebben grip nodig (wrijving banden ↔ wegdek).\n\n**Wrijving verlagen**: gladmaken, oliën, stroomlijnen.",
     svg: `<svg viewBox="0 0 300 180">
 <line x1="20" y1="140" x2="280" y2="140" stroke="${COLORS.text}" stroke-width="2"/>
 <rect x="100" y="100" width="60" height="40" fill="${COLORS.mass}" stroke="${COLORS.text}" stroke-width="2"/>
@@ -229,7 +229,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wrijving = tegen beweging in", tekst: "Wrijving werkt altijd tegenovergesteld aan de bewegingsrichting. Beweeg je naar rechts, dan werkt wrijving naar links. Daarom remt het je af." }],
           woorden: [{ woord: "Fw", uitleg: "symbool wrijvingskracht" }],
-          theorie: "Soorten: schuif, rol, lucht, water. Alle remmen mee.",
+          theorie: "Soorten: schuif, rol, lucht, water. Ze remmen allemaal af.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Slee glijdt naar rechts → wrijving werkt naar links → slee remt af" }],
           basiskennis: [{ onderwerp: "verlies energie", uitleg: "wrijving zet beweging om in warmte" }],
           niveaus: { basis: "Tegen beweging in.", simpeler: "Omgekeerd aan beweging.", nogSimpeler: "Remt." },
@@ -248,9 +248,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wrijving = grip = lopen kan", tekst: "Bij lopen duw je je voet achteruit op de grond. De wrijving zorgt dat je voet niet wegslipt, en de grond duwt je terug naar voren (Newton 3). Geen wrijving = wegglijden." }],
           woorden: [{ woord: "grip", uitleg: "voldoende wrijving om af te zetten" }],
-          theorie: "Op ijs of zeeppoel: weinig wrijving = je slipt weg.",
+          theorie: "Op ijs of een zeepplas: weinig wrijving = je slipt weg.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Schoen met grof zooltje: meer wrijving = betere grip" }],
-          basiskennis: [{ onderwerp: "nuttig én lastig", uitleg: "wrijving is allebei nodig en remmend" }],
+          basiskennis: [{ onderwerp: "nuttig én lastig", uitleg: "wrijving is nodig én remt af" }],
           niveaus: { basis: "Voet slipt anders weg.", simpeler: "Grip nodig.", nogSimpeler: "Niet glad." },
         },
       },
@@ -258,7 +258,7 @@ const steps = [
   },
   {
     title: "Veerkracht & spankracht",
-    explanation: "**Veerkracht (Fv)** ontstaat als je een veer indrukt of uitrekt. De veer wil terug naar zijn oorspronkelijke vorm.\n\n**Wet van Hooke**: hoe meer je een veer indrukt of uitrekt, hoe groter de veerkracht.\n• Fv = C × u\n• C = veerconstante (N/m): hoe stug de veer is\n• u = uitwijking in m (hoeveel hij is uitgerekt)\n\n**Voorbeeld**: een veer met C = 50 N/m, 0,2 m uitgerekt → Fv = 50 × 0,2 = 10 N.\n\n**Spankracht** is een vergelijkbare kracht in een touw of kabel die **strak gespannen** staat. Het touw trekt aan beide uiteinden naar binnen toe (richting middelpunt van het touw).\n\n**Praktische voorbeelden**:\n• Krachtmeter (= veer met schaal in N).\n• Trampoline (springt je terug).\n• Pen met veertje (voor klikken).\n• Lift-kabel houdt de lift op met spankracht.",
+    explanation: "**Veerkracht (Fv)** ontstaat als je een veer indrukt of uitrekt. De veer wil terug naar zijn oorspronkelijke vorm.\n\n**Wet van Hooke**: hoe meer je een veer indrukt of uitrekt, hoe groter de veerkracht.\n• Fv = C × u\n• C = veerconstante (N/m): hoe stug de veer is\n• u = uitwijking in m (hoeveel hij is uitgerekt)\n\n**Voorbeeld**: een veer met C = 50 N/m, 0,2 m uitgerekt → Fv = 50 × 0,2 = 10 N.\n\n**Spankracht** is een vergelijkbare kracht in een touw of kabel die **strak gespannen** staat. Het touw trekt aan beide uiteinden naar binnen toe (richting middelpunt van het touw).\n\n**Praktische voorbeelden**:\n• Krachtmeter (= veer met schaal in N).\n• Trampoline (veert je terug omhoog).\n• Pen met veertje (voor klikken).\n• Lift-kabel houdt de lift op met spankracht.",
     svg: `<svg viewBox="0 0 300 180">
 <line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="2"/>
 <path d="M 40 60 L 60 55 L 80 65 L 100 55 L 120 65 L 140 55 L 160 65 L 180 55" stroke="${COLORS.good}" stroke-width="2" fill="none"/>
@@ -272,7 +272,7 @@ const steps = [
         q: "Een veer met C = 100 N/m wordt 0,30 m uitgerekt. Wat is Fv?",
         options: ["30 N", "100 N", "0,30 N", "330 N"],
         answer: 0,
-        wrongHints: [null, "Dat is C — je moet vermenigvuldigen met u.", "Te klein — je hebt door 100 niet 100 gedeeld, je moet vermenigvuldigen.", "Optellen i.p.v. vermenigvuldigen."],
+        wrongHints: [null, "Dat is C — je moet vermenigvuldigen met u.", "Te klein — je moet C en u vermenigvuldigen, niet delen.", "Optellen i.p.v. vermenigvuldigen."],
         uitlegPad: {
           stappen: [{ titel: "Fv = C × u = 100 × 0,30 = 30 N", tekst: "Wet van Hooke: veerkracht = veerconstante × uitwijking. 100 N/m × 0,30 m = 30 N." }],
           woorden: [{ woord: "veerconstante C", uitleg: "hoe stug de veer is (N/m)" }],
@@ -295,7 +295,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Spankracht = trekken in touw", tekst: "In een gespannen touw of kabel zit spankracht: het touw trekt aan beide uiteinden naar binnen (richting middelpunt touw). Houdt dingen op." }],
           woorden: [{ woord: "spankracht (Fs)", uitleg: "kracht in gespannen draad/kabel" }],
-          theorie: "Ander dan veerkracht — touw rekt niet uit. Trekt langs zijn lengte.",
+          theorie: "Anders dan veerkracht — een touw rekt (bijna) niet uit. Trekt langs zijn lengte.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Lift hangt aan kabel → spankracht in kabel houdt lift op" }],
           basiskennis: [{ onderwerp: "alleen bij gespannen", uitleg: "slap touw: geen spankracht" }],
           niveaus: { basis: "Kracht in gespannen touw.", simpeler: "Trekken langs touw.", nogSimpeler: "Touw-kracht." },
@@ -307,7 +307,7 @@ const steps = [
   // C
   {
     title: "Newton 1 — Wet van traagheid",
-    explanation: "**Wet van Newton 1**: een voorwerp blijft in **rust** of beweegt **rechtdoor met dezelfde snelheid**, tenzij er een kracht op werkt.\n\nMet andere woorden: zonder netto kracht (= resultante 0) gebeurt er **niets nieuws**. Wat stilstaat blijft staan, wat beweegt blijft op dezelfde manier bewegen.\n\nDit heet **traagheid**. Voorwerpen 'willen' niet veranderen.\n\n**Voorbeelden**:\n• Boek op tafel: blijft liggen.\n• Hockeypuck op gladijs (bijna geen wrijving): glijdt door.\n• In een rijdende auto plotseling remmen: jij vliegt naar voren — je lichaam wil dóór met dezelfde snelheid.\n• In een auto bij optrekken: je wordt in stoel gedrukt — je wil blijven staan terwijl auto versnelt.\n\n**Daarom dragen we autogordels**: ze houden ons tegen als de auto plotseling stopt en ons lichaam door wil bewegen.",
+    explanation: "**Wet van Newton 1**: een voorwerp blijft in **rust** of beweegt **rechtdoor met dezelfde snelheid**, tenzij er een kracht op werkt.\n\nMet andere woorden: zonder netto kracht (= resultante 0) gebeurt er **niets nieuws**. Wat stilstaat blijft staan, wat beweegt blijft op dezelfde manier bewegen.\n\nDit heet **traagheid**. Voorwerpen 'willen' niet veranderen.\n\n**Voorbeelden**:\n• Boek op tafel: blijft liggen.\n• Hockeypuck op glad ijs (bijna geen wrijving): glijdt door.\n• In een rijdende auto plotseling remmen: jij vliegt naar voren — je lichaam wil dóór met dezelfde snelheid.\n• In een auto bij optrekken: je wordt in je stoel gedrukt — je lichaam wil op zijn plek blijven terwijl de auto versnelt.\n\n**Daarom dragen we autogordels**: ze houden ons tegen als de auto plotseling stopt en ons lichaam door wil bewegen.",
     svg: `<svg viewBox="0 0 300 180">
 <line x1="20" y1="120" x2="280" y2="120" stroke="${COLORS.text}" stroke-width="2"/>
 <circle cx="80" cy="105" r="15" fill="${COLORS.good}" opacity="0.7"/>
@@ -333,7 +333,7 @@ const steps = [
           stappen: [{ titel: "Newton 1 = traagheid", tekst: "Zonder netto kracht blijft een voorwerp doen wat het deed: stilstaan blijft stilstaan, bewegen blijft op dezelfde manier bewegen." }],
           woorden: [{ woord: "traagheid", uitleg: "neiging om beweging vol te houden" }],
           theorie: "Newton 1: F=0 → geen verandering. Newton 2: F=m·a. Newton 3: actie = reactie.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Hockeypuck op gladijs glijdt door — bijna geen wrijving" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Hockeypuck op glad ijs glijdt door — bijna geen wrijving" }],
           basiskennis: [{ onderwerp: "zonder kracht = constant", uitleg: "geen verandering" }],
           niveaus: { basis: "Zonder kracht = constant.", simpeler: "Blijft doen wat het deed.", nogSimpeler: "Geen verandering." },
         },
@@ -361,7 +361,7 @@ const steps = [
   },
   {
     title: "Newton 2 — F = m × a",
-    explanation: "**Wet van Newton 2**: als er wél een netto kracht (resultante) op een voorwerp werkt, krijgt het een **versnelling**.\n\n**Formule**: F = m × a\n\n• F = (resulterende) kracht in N\n• m = massa in kg\n• a = versnelling in m/s²\n\n**Wat betekent dit?**\n• **Meer kracht** → meer versnelling.\n• **Meer massa** → minder versnelling (zwaarder ding is moeilijker te versnellen).\n\n**Voorbeelden**:\n• Een fiets (~10 kg) duw je makkelijker weg dan een auto (~1500 kg) met dezelfde kracht.\n• Een sportauto met krachtige motor versnelt sneller dan een vrachtwagen met dezelfde motor.\n\n**Rekenvoorbeeld**:\n• Een blok van 5 kg krijgt een kracht van 20 N → a = F/m = 20/5 = 4 m/s². Het blok versnelt elke seconde 4 m/s erbij.",
+    explanation: "**Wet van Newton 2**: als er wél een netto kracht (resultante) op een voorwerp werkt, krijgt het een **versnelling**.\n\n**Formule**: F = m × a\n\n• F = (resulterende) kracht in N\n• m = massa in kg\n• a = versnelling in m/s²\n\n**Wat betekent dit?**\n• **Meer kracht** → meer versnelling.\n• **Meer massa** → minder versnelling (zwaarder ding is moeilijker te versnellen).\n\n**Voorbeelden**:\n• Een fiets (~10 kg) duw je makkelijker weg dan een auto (~1500 kg) met dezelfde kracht.\n• Een lichte sportauto versnelt sneller dan een zware vrachtwagen met dezelfde motor.\n\n**Rekenvoorbeeld**:\n• Een blok van 5 kg krijgt een kracht van 20 N → a = F/m = 20/5 = 4 m/s². Het blok versnelt elke seconde 4 m/s erbij.",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="40" y="80" width="40" height="40" fill="${COLORS.mass}" stroke="${COLORS.text}" stroke-width="2"/>
 <text x="60" y="105" text-anchor="middle" fill="#fff" font-size="11" font-family="Arial">m</text>
@@ -384,7 +384,7 @@ const steps = [
           theorie: "Versnelling = hoeveel m/s de snelheid per seconde toeneemt.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Auto van 0 naar 30 m/s in 10 s: a = 3 m/s²" }],
           basiskennis: [{ onderwerp: "delen", uitleg: "F gedeeld door m" }],
-          niveaus: { basis: "3 m/s².", simpeler: "12 / 4.", nogSimpeler: "12 / 4. → 3." },
+          niveaus: { basis: "3 m/s².", simpeler: "12 / 4.", nogSimpeler: "12 / 4 = 3." },
         },
       },
       {
@@ -469,7 +469,7 @@ const steps = [
   // D
   {
     title: "Eindopdracht — krachten in actie",
-    explanation: "Tijd om alles toe te passen!\n\n**Snelle samenvatting**:\n\n| Kracht | Symbool | Richting |\n|---|---|---|\n| Zwaartekracht | Fz = m·g | naar beneden |\n| Wrijving | Fw | tegen beweging in |\n| Veerkracht | Fv = C·u | terug naar rust |\n| Spankracht | Fs | langs het touw |\n| Normaalkracht | Fn | loodrecht op oppervlak |\n\n**Newton's wetten**:\n1. Geen netto kracht → geen verandering (traagheid).\n2. F = m · a\n3. Actie = reactie\n\nVeel succes!",
+    explanation: "Tijd om alles toe te passen!\n\n**Snelle samenvatting**:\n\n| Kracht | Symbool | Richting |\n|---|---|---|\n| Zwaartekracht | Fz = m·g | naar beneden |\n| Wrijving | Fw | tegen beweging in |\n| Veerkracht | Fv = C·u | terug naar rust |\n| Spankracht | Fs | langs het touw |\n| Normaalkracht | Fn | loodrecht op oppervlak |\n\n**De wetten van Newton**:\n1. Geen netto kracht → geen verandering (traagheid).\n2. F = m · a\n3. Actie = reactie\n\nVeel succes!",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">checklist</text>
 <text x="20" y="50" fill="${COLORS.text}" font-size="11" font-family="Arial">1. Welke krachten werken?</text>
@@ -490,7 +490,7 @@ const steps = [
           theorie: "Standaardformule: vermenigvuldig massa (kg) met g (10 N/kg op aarde).",
           voorbeelden: [{ type: "voorbeeld", tekst: "75 kg → 750 N. 8 kg → 80 N" }],
           basiskennis: [{ onderwerp: "10× je kg's", uitleg: "snelle truc op aarde" }],
-          niveaus: { basis: "500 N.", simpeler: "50 × 10.", nogSimpeler: "50 × 10. → 500." },
+          niveaus: { basis: "500 N.", simpeler: "50 × 10.", nogSimpeler: "50 × 10 = 500." },
         },
       },
       {
@@ -528,11 +528,11 @@ const steps = [
         wrongHints: [null, "Einstein deed relativiteit, niet deze wetten.", "Galilei was eerder maar formuleerde de wetten niet zo.", "Curie deed radioactiviteit."],
         uitlegPad: {
           stappen: [{ titel: "Isaac Newton (1687)", tekst: "Engelse wetenschapper Isaac Newton publiceerde in 1687 zijn 'Philosophiæ Naturalis Principia Mathematica' met de drie bewegingswetten + zwaartekrachtswet." }],
-          woorden: [{ woord: "Principia", uitleg: "naam van Newton's beroemde boek" }],
-          theorie: "Newton was óók ontdekker van calculus (wiskunde) en lichttheorie.",
+          woorden: [{ woord: "Principia", uitleg: "naam van Newtons beroemde boek" }],
+          theorie: "Newton was óók (mede-)ontdekker van de differentiaalrekening (wiskunde) en van theorieën over licht.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Beroemde appel-anekdote: zou Newton geïnspireerd hebben tot zwaartekrachtswet" }],
           basiskennis: [{ onderwerp: "1643-1727", uitleg: "leefperiode" }],
-          niveaus: { basis: "Isaac Newton.", simpeler: "Engelsman, 1700.", nogSimpeler: "Newton." },
+          niveaus: { basis: "Isaac Newton.", simpeler: "Engelsman, rond 1700.", nogSimpeler: "Newton." },
         },
       },
       { q: "Een voorwerp van 5 kg ondervindt zwaartekracht. Hoe groot is Fz? (g ≈ 10 N/kg)", options: ["50 N","5 N","0,5 N","500 N"], answer: 0, wrongHints: [null,"Te laag — gebruik de formule Fz = m × g en vul massa en g in.","Veel te laag — denk na over de juiste bewerking.","Te hoog — welke twee grootheden vermenigvuldig je met elkaar?"] },
@@ -543,7 +543,7 @@ const steps = [
       { q: "Twee personen trekken aan touw: 10 N links, 15 N rechts. **Netto kracht** = ?", options: ["5 N rechts","25 N","5 N links","0 N"], answer: 0, wrongHints: [null,"Som — alleen bij dezelfde richting.","Verkeerde richting.","Niet gelijk."] },
       { q: "**Zwaartekracht-versnelling** op aarde is ongeveer?", options: ["~10 m/s² (preciezer 9,81)","~5 m/s²","~100 m/s²","0 m/s²"], answer: 0, wrongHints: [null,"Te laag.","Te hoog.","Zwaartekracht bestaat."] },
       { q: "**Normaalkracht** werkt waar?", options: ["Loodrecht op het oppervlak","In bewegingsrichting","Tegen wrijving","Niet"], answer: 0, wrongHints: [null,"Dat is voortstuw-kracht.","Andere kracht.","Wel."] },
-      { q: "Newton's **derde wet** zegt?", options: ["Actie = reactie (gelijk + tegengesteld)","Massa = constant","Snelheid maakt kracht","Geen wet"], answer: 0, wrongHints: [null,"Behoud massa — geen Newton 3.","F=ma niet zo.","Wel."] },
+      { q: "De **derde wet van Newton** zegt?", options: ["Actie = reactie (gelijk + tegengesteld)","Massa = constant","Snelheid maakt kracht","Geen wet"], answer: 0, wrongHints: [null,"Behoud massa — geen Newton 3.","F=ma niet zo.","Wel."] },
       { q: "Een **veerkracht** is bv. de kracht in een ___?", options: ["Uitgerekt elastiek","Een blok hout","Een steen","Niets"], answer: 0, wrongHints: [null,"Niet elastisch.","Niet elastisch.","Wel iets."] },
       { q: "**Open vraag**: bereken zwaartekracht op 8 kg (g=10). Typ getal in Newton.", kind: "open", acceptedAnswers: ["80"], numericTolerance: 0, explanation: "Fz = m × g = 8 × 10 = 80 N." },
       { q: "**Open vraag**: massa 4 kg, versnelling 5 m/s². Hoe groot is F (in Newton)?", kind: "open", acceptedAnswers: ["20"], numericTolerance: 0, explanation: "F = m × a = 4 × 5 = 20 N." },

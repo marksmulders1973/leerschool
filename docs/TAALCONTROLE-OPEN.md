@@ -26,3 +26,4 @@
 - examenEngels2024T1: intro 30 vragen maar 8 stappen, hoofdstukken D-J wijzen naar niet-bestaande stappen.
 - examenBiologie2025T2 v15 meerlingen 1% vs ~1,6% CBS → correctievoorschrift.
 - B13 nog niet nagelezen (tokenwacht): nederlandWaterVo, negatieveGetallen, negatieveGetallenPo, netwerkenInternetInformatica, nieuwkomersFoutUitleg, nieuwkomersHelpers, nieuwkomersPicto.
+- latijnVwo: voorbeeldzin 'Caesar Brutum video' fout Latijn (Caesar als onderwerp) → herstellen.

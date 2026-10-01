@@ -116,7 +116,7 @@ const steps = [
           null,
           "Hoeveel even getallen staan er op een dobbelsteen? Tel ze: 2, 4, 6...",
           "Tel rustig: welke vlakken zijn even? Niet meer dan dat.",
-          "Dat is de kans op één specifiek vlak — maar je vraagt naar áLLE even getallen samen.",
+          "Dat is de kans op één specifiek vlak — maar je vraagt naar álle even getallen samen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "3 even ÷ 6 totaal", tekst: "Even: 2, 4, 6 → 3 vlakken gunstig. 3/6 = 1/2." }],
@@ -131,7 +131,7 @@ const steps = [
   },
   {
     title: "Schaal van kansen — 0% tot 100%",
-    explanation: "Kansen liggen altijd tussen **0 en 1** (= 0% en 100%).\n\n**Speciale waardes**:\n\n**P = 0** → **onmogelijk**\n• \"Kans op een 7 bij een gewone dobbelsteen\" = 0 (er is geen 7).\n• \"Kans dat de zon morgen niet opkomt\" = (praktisch) 0.\n\n**P = 1** → **zeker**\n• \"Kans op een getal tussen 1 en 6 bij dobbelsteen\" = 1.\n• \"Kans dat 1 + 1 = 2\" = 1.\n\n**P = 1/2** → **even waarschijnlijk wel of niet** (= 50/50).\n• \"Kans op kop bij munt\" = 1/2.\n• \"Kans op rood bij roulette (zonder 0)\" = 1/2.\n\n**Klein** (P < 0.1): zelden, maar mogelijk.\n• \"Kans op 4× kop bij 4× munt-werpen\" = 1/16 ≈ 6%.\n\n**Groot** (P > 0.9): bijna zeker.\n• \"Kans dat een gegooide dobbelsteen géén 6 wordt\" = 5/6 ≈ 83%.\n\n**Tip om in te schatten**: vraag jezelf af: *uit hoeveel pogingen verwacht ik 1 succes?*\n• Als je 1 keer per 6 pogingen succes verwacht → P = 1/6.\n• Als je 1 keer per 100 pogingen succes verwacht → P = 1/100 = 1%.\n\n**Rekenen met percentages**:\n• 1/4 → 100/4 = 25%\n• 1/3 → 100/3 ≈ 33.3%\n• 1/8 → 100/8 = 12.5%",
+    explanation: "Kansen liggen altijd tussen **0 en 1** (= 0% en 100%).\n\n**Speciale waardes**:\n\n**P = 0** → **onmogelijk**\n• \"Kans op een 7 bij een gewone dobbelsteen\" = 0 (er is geen 7).\n• \"Kans dat de zon morgen niet opkomt\" = (praktisch) 0.\n\n**P = 1** → **zeker**\n• \"Kans op een getal tussen 1 en 6 bij dobbelsteen\" = 1.\n• \"Kans dat 1 + 1 = 2\" = 1.\n\n**P = 1/2** → **even waarschijnlijk wel of niet** (= 50/50).\n• \"Kans op kop bij munt\" = 1/2.\n• \"Kans op rood bij roulette (zonder 0)\" = 1/2.\n\n**Klein** (P < 0.1): zelden, maar mogelijk.\n• \"Kans op 4× kop bij 4× munt-werpen\" = 1/16 ≈ 6%.\n\n**Groot** (P > 0.9): bijna zeker.\n• \"Kans dat je met twee dobbelstenen géén dubbel-zes gooit\" = 35/36 ≈ 97%.\n\n**Tip om in te schatten**: vraag jezelf af: *uit hoeveel pogingen verwacht ik 1 succes?*\n• Als je 1 keer per 6 pogingen succes verwacht → P = 1/6.\n• Als je 1 keer per 100 pogingen succes verwacht → P = 1/100 = 1%.\n\n**Rekenen met percentages**:\n• 1/4 → 100/4 = 25%\n• 1/3 → 100/3 ≈ 33.3%\n• 1/8 → 100/8 = 12.5%",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">schaal van kansen</text>
@@ -148,7 +148,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Een evenement heeft kans 1. Wat betekent dat?*",
+        q: "*Een gebeurtenis heeft kans 1. Wat betekent dat?*",
         options: [
           "Het is zeker — gebeurt altijd",
           "Het gebeurt nooit",
@@ -163,7 +163,7 @@ const steps = [
           "Kans 1 = altijd. Past dat bij wat de vraag stelt?",
         ],
         uitlegPad: {
-          stappen: [{ titel: "P = 1 = zeker", tekst: "Een evenement met kans 1 gebeurt altijd, 100%." }],
+          stappen: [{ titel: "P = 1 = zeker", tekst: "Een gebeurtenis met kans 1 gebeurt altijd, 100%." }],
           woorden: [{ woord: "zekerheid", uitleg: "P = 1 = 100%" }],
           theorie: "P = 0 onmogelijk. P = 0,5 = 50%. P = 1 zeker.",
           voorbeelden: [{ type: "voorbeeld", tekst: "P(zon komt morgen op) ≈ 1" }],
@@ -177,7 +177,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Welke breuk is 1/5 — kleiner of groter dan 5%? Reken: 100 ÷ 5 = ?",
+          "Is 1/5 kleiner of groter dan 5%? Reken: 100 ÷ 5 = ?",
           "Niet 15% — denk: hoeveel keer past 5 in 100?",
           "25% is een andere breuk (1/4). Hoeveel keer past 5 in 100?",
         ],
@@ -252,7 +252,7 @@ const steps = [
         wrongHints: [
           null,
           "1/8 zou betekenen één specifieke combinatie. Maar precies 2× kop kan op 3 manieren: KKM, KMK, MKK.",
-          "1/3 is geen logische kans bij munten (deler 8).",
+          "1/3 is geen logische kans bij munten (noemer 8).",
           "Tel hoeveel manieren je precies 2× kop kunt gooien bij 3 worpen — is dat 2 of meer?",
         ],
         uitlegPad: {
@@ -268,7 +268,7 @@ const steps = [
   },
   {
     title: "Knikkers, kaarten, mensen — kans uit grotere groepen",
-    explanation: "Bij **grotere groepen** is de aanpak hetzelfde: gunstig/totaal.\n\n**Knikkers**:\nEen zak met 5 rode, 8 blauwe en 7 gele knikkers (totaal 20).\n• P(rood) = 5/20 = 1/4\n• P(blauw) = 8/20 = 2/5\n• P(geel) = 7/20\n• P(rood of blauw) = (5+8)/20 = 13/20 (alle rode én blauwe gunstig)\n• P(niet geel) = (5+8)/20 = 13/20 (alles behalve geel)\n\n**Kaartspel** (52 kaarten, 4 kleuren à 13):\n• P(harten) = 13/52 = 1/4\n• P(aas) = 4/52 = 1/13\n• P(rode kaart) = 26/52 = 1/2\n• P(boer of vrouw of heer) = 12/52 = 3/13\n\n**Klas met 30 leerlingen, 14 jongens, 16 meisjes**:\n• P(jongen) = 14/30 = 7/15\n• P(meisje) = 16/30 = 8/15\n\n**Tip — herken het patroon**:\n1. Tel alle uitkomsten (= totaal).\n2. Tel de gunstige uitkomsten.\n3. Deel.\n4. Vereenvoudig.\n\n**Veelgemaakte fout**: vergeten dat **gunstig kan combinaties** bevatten. \"Kans op rood OF blauw\" telt rode + blauwe knikkers samen op.",
+    explanation: "Bij **grotere groepen** is de aanpak hetzelfde: gunstig/totaal.\n\n**Knikkers**:\nEen zak met 5 rode, 8 blauwe en 7 gele knikkers (totaal 20).\n• P(rood) = 5/20 = 1/4\n• P(blauw) = 8/20 = 2/5\n• P(geel) = 7/20\n• P(rood of blauw) = (5+8)/20 = 13/20 (alle rode én blauwe gunstig)\n• P(niet geel) = (5+8)/20 = 13/20 (alles behalve geel)\n\n**Kaartspel** (52 kaarten, 4 kleuren à 13):\n• P(harten) = 13/52 = 1/4\n• P(aas) = 4/52 = 1/13\n• P(rode kaart) = 26/52 = 1/2\n• P(boer of vrouw of heer) = 12/52 = 3/13\n\n**Klas met 30 leerlingen, 14 jongens, 16 meisjes**:\n• P(jongen) = 14/30 = 7/15\n• P(meisje) = 16/30 = 8/15\n\n**Tip — herken het patroon**:\n1. Tel alle uitkomsten (= totaal).\n2. Tel de gunstige uitkomsten.\n3. Deel.\n4. Vereenvoudig.\n\n**Veelgemaakte fout**: vergeten dat **'gunstig' combinaties kan** bevatten. \"Kans op rood OF blauw\" telt rode + blauwe knikkers samen op.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">grotere groepen</text>
@@ -307,7 +307,7 @@ const steps = [
   // ─── C. Kansboom + vermenigvuldigen ───────────────────
   {
     title: "Kansboom — opeenvolgende gebeurtenissen",
-    explanation: "Een **kansboom** is een diagram waarmee je opeenvolgende gebeurtenissen visueel uitwerkt. Vooral handig bij twee of meer worpen.\n\n**Voorbeeld**: 2× munt-worp.\n\nEerste worp splitst in twee takken (K of M). Elke tak splitst weer in twee. Dat geeft 4 paden — KK, KM, MK, MM.\n\nElke tak krijgt z'n eigen **kans** (hier: 1/2). Op elke pad **vermenigvuldig** je de kansen om de pad-kans te krijgen:\n• KK: 1/2 · 1/2 = 1/4\n• KM: 1/2 · 1/2 = 1/4\n• MK: 1/2 · 1/2 = 1/4\n• MM: 1/2 · 1/2 = 1/4\n\nSomma van alle paden = 1 (zeker dat één pad gebeurt).\n\n**Voorbeeld 2**: Eerst dobbelsteen, dan munt.\n\nEerste worp: 6 takken (1 t/m 6), elk kans 1/6. Daarna elke tak splitst in 2 (K of M), elk 1/2.\n\nP(3 én kop) = 1/6 · 1/2 = 1/12.\n\n**Algemene regel**: bij **opeenvolgende, onafhankelijke** gebeurtenissen = **kansen vermenigvuldigen** langs het pad.\n\n**Wanneer is een kansboom handig?**\n• 2 of 3 stappen achter elkaar.\n• Verschillende soorten objecten/uitkomsten.\n• Wanneer je de kans op een specifieke combinatie wilt.\n\n**Niet handig** bij grote aantallen (zoals 100 worpen) — daar gebruik je formules.",
+    explanation: "Een **kansboom** is een diagram waarmee je opeenvolgende gebeurtenissen visueel uitwerkt. Vooral handig bij twee of meer worpen.\n\n**Voorbeeld**: 2× munt-worp.\n\nEerste worp splitst in twee takken (K of M). Elke tak splitst weer in twee. Dat geeft 4 paden — KK, KM, MK, MM.\n\nElke tak krijgt z'n eigen **kans** (hier: 1/2). Op elk pad **vermenigvuldig** je de kansen om de pad-kans te krijgen:\n• KK: 1/2 · 1/2 = 1/4\n• KM: 1/2 · 1/2 = 1/4\n• MK: 1/2 · 1/2 = 1/4\n• MM: 1/2 · 1/2 = 1/4\n\nDe som van alle paden = 1 (zeker dat één pad gebeurt).\n\n**Voorbeeld 2**: Eerst dobbelsteen, dan munt.\n\nEerste worp: 6 takken (1 t/m 6), elk kans 1/6. Daarna splitst elke tak in 2 (K of M), elk 1/2.\n\nP(3 én kop) = 1/6 · 1/2 = 1/12.\n\n**Algemene regel**: bij **opeenvolgende, onafhankelijke** gebeurtenissen = **kansen vermenigvuldigen** langs het pad.\n\n**Wanneer is een kansboom handig?**\n• 2 of 3 stappen achter elkaar.\n• Verschillende soorten objecten/uitkomsten.\n• Wanneer je de kans op een specifieke combinatie wilt.\n\n**Niet handig** bij grote aantallen (zoals 100 worpen) — daar gebruik je formules.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">kansboom — 2× munt</text>
@@ -353,7 +353,7 @@ const steps = [
   },
   {
     title: "Vermenigvuldigen bij onafhankelijke gebeurtenissen",
-    explanation: "**Twee gebeurtenissen zijn onafhankelijk** als de uitkomst van de ene **geen invloed** heeft op de andere.\n\n**Voorbeelden van onafhankelijke gebeurtenissen**:\n• 2 dobbelstenen rollen — uitkomst eerste beïnvloedt tweede niet.\n• Munt 5× werpen — elke worp staat los van de vorige.\n• Een knikker pakken, **terugleggen**, weer pakken — eerste pakje beïnvloedt tweede niet.\n\n**Bij onafhankelijke gebeurtenissen**:\n$P(A \\text{ en } B) = P(A) \\cdot P(B)$\n\n**Voorbeelden**:\n\n**P(eerst kop, dan munt)** = P(K) · P(M) = 1/2 · 1/2 = 1/4.\n\n**P(eerst 6, dan 5)** bij twee dobbelstenen = 1/6 · 1/6 = 1/36.\n\n**P(3× kop achter elkaar)** = 1/2 · 1/2 · 1/2 = 1/8.\n\n**P(eerst rood, terugleggen, dan blauw)** uit zak met 3 rood + 7 blauw:\n= 3/10 · 7/10 = 21/100.\n\n**Voorbeelden van afhankelijke gebeurtenissen** (komt later):\n• Twee kaarten **zonder** terugleggen — bij eerste pakken verandert het totaal aantal.\n• Twee knikkers achter elkaar **zonder** terugleggen.\n\nVoor afhankelijke gebeurtenissen: pas de tweede kans aan op basis van wat er nog over is.\n\n**Voorbeeld**: P(eerst rood, dan blauw, **zonder** terugleggen) uit 3 rood + 7 blauw:\n= 3/10 · 7/9 = 21/90.\n(De tweede pak heeft nog 9 knikkers totaal, want we hebben er één weggehaald.)",
+    explanation: "**Twee gebeurtenissen zijn onafhankelijk** als de uitkomst van de ene **geen invloed** heeft op de andere.\n\n**Voorbeelden van onafhankelijke gebeurtenissen**:\n• 2 dobbelstenen rollen — uitkomst eerste beïnvloedt tweede niet.\n• Munt 5× werpen — elke worp staat los van de vorige.\n• Een knikker pakken, **terugleggen**, weer pakken — eerste keer pakken beïnvloedt de tweede niet.\n\n**Bij onafhankelijke gebeurtenissen**:\n$P(A \\text{ en } B) = P(A) \\cdot P(B)$\n\n**Voorbeelden**:\n\n**P(eerst kop, dan munt)** = P(K) · P(M) = 1/2 · 1/2 = 1/4.\n\n**P(eerst 6, dan 5)** bij twee dobbelstenen = 1/6 · 1/6 = 1/36.\n\n**P(3× kop achter elkaar)** = 1/2 · 1/2 · 1/2 = 1/8.\n\n**P(eerst rood, terugleggen, dan blauw)** uit zak met 3 rood + 7 blauw:\n= 3/10 · 7/10 = 21/100.\n\n**Voorbeelden van afhankelijke gebeurtenissen** (komt later):\n• Twee kaarten **zonder** terugleggen — bij eerste pakken verandert het totaal aantal.\n• Twee knikkers achter elkaar **zonder** terugleggen.\n\nVoor afhankelijke gebeurtenissen: pas de tweede kans aan op basis van wat er nog over is.\n\n**Voorbeeld**: P(eerst rood, dan blauw, **zonder** terugleggen) uit 3 rood + 7 blauw:\n= 3/10 · 7/9 = 21/90.\n(Bij de tweede keer pakken zijn er nog 9 knikkers, want we hebben er één weggehaald.)",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">P(A en B) = P(A) · P(B)</text>
@@ -409,7 +409,7 @@ const steps = [
   },
   {
     title: "Combinaties tellen — meerdere paden",
-    explanation: "Soms is een gebeurtenis op **meerdere manieren** te bereiken. Dan tel je de kansen van alle paden op.\n\n**Voorbeeld**: Wat is P(precies 2× kop bij 3 muntworpen)?\n\nEr zijn drie paden die geven 'precies 2× kop':\n• KKM (kop, kop, munt) — kans (1/2)³ = 1/8\n• KMK — kans 1/8\n• MKK — kans 1/8\n\nP(precies 2× kop) = 1/8 + 1/8 + 1/8 = **3/8**.\n\n**Algemeen patroon**:\n1. Bepaal alle gunstige paden via een kansboom of opsomming.\n2. Bereken de kans per pad (vermenigvuldigen langs pad).\n3. Tel de pad-kansen op.\n\n**Voorbeeld 2**: Een dobbelsteen + een munt.\n\n**P(even getal én kop)** = P(2,K) + P(4,K) + P(6,K) = 3 paden, elk kans 1/6 · 1/2 = 1/12.\n• Totaal = 3 · 1/12 = 3/12 = 1/4.\n\n**Of korter**: P(even) · P(kop) = 1/2 · 1/2 = 1/4. ✓\n\n**Voorbeeld 3**: Bij 4 worpen — kans op precies 2× kop.\n• Aantal manieren om 2 koppen te kiezen uit 4 worpen: 6 (KKMM, KMKM, KMMK, MKKM, MKMK, MMKK).\n• Elke pad-kans: (1/2)⁴ = 1/16.\n• Totaal: 6 · 1/16 = 6/16 = 3/8.\n\nDit is voorbereiding voor **binomiale verdeling** (komt op havo 4-5).",
+    explanation: "Soms is een gebeurtenis op **meerdere manieren** te bereiken. Dan tel je de kansen van alle paden op.\n\n**Voorbeeld**: Wat is P(precies 2× kop bij 3 muntworpen)?\n\nEr zijn drie paden die 'precies 2× kop' geven:\n• KKM (kop, kop, munt) — kans (1/2)³ = 1/8\n• KMK — kans 1/8\n• MKK — kans 1/8\n\nP(precies 2× kop) = 1/8 + 1/8 + 1/8 = **3/8**.\n\n**Algemeen patroon**:\n1. Bepaal alle gunstige paden via een kansboom of opsomming.\n2. Bereken de kans per pad (vermenigvuldigen langs pad).\n3. Tel de pad-kansen op.\n\n**Voorbeeld 2**: Een dobbelsteen + een munt.\n\n**P(even getal én kop)** = P(2,K) + P(4,K) + P(6,K) = 3 paden, elk kans 1/6 · 1/2 = 1/12.\n• Totaal = 3 · 1/12 = 3/12 = 1/4.\n\n**Of korter**: P(even) · P(kop) = 1/2 · 1/2 = 1/4. ✓\n\n**Voorbeeld 3**: Bij 4 worpen — kans op precies 2× kop.\n• Aantal manieren om 2 koppen te kiezen uit 4 worpen: 6 (KKMM, KMKM, KMMK, MKKM, MKMK, MMKK).\n• Elke pad-kans: (1/2)⁴ = 1/16.\n• Totaal: 6 · 1/16 = 6/16 = 3/8.\n\nDit is voorbereiding voor **binomiale verdeling** (komt op havo 4-5).",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">meerdere paden → optellen</text>
@@ -538,7 +538,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet zomaar getal — denk aan en-kans: P(A én B) = P(A) × P(B).",
+          "Niet zomaar een getal — denk aan en-kans: P(A én B) = P(A) × P(B).",
           "Optellen ipv vermenigvuldigen — bij twee onafhankelijke worpen vermenigvuldig je.",
           "Dat is kans op één 6 bij één worp.",
         ],
@@ -612,7 +612,7 @@ const steps = [
   },
   {
     title: "Examen-stijl",
-    explanation: "Drie examen-style vragen.\n\n**Tip**: bij ingewikkelde vragen — teken een kansboom of maak een tabel. Visueel maakt fouten zichtbaar.",
+    explanation: "Drie vragen in examenstijl.\n\n**Tip**: bij ingewikkelde vragen — teken een kansboom of maak een tabel. Visueel maakt fouten zichtbaar.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="60" y="40" width="180" height="100" rx="14" fill="rgba(0,200,83,0.15)" stroke="${COLORS.good}" stroke-width="3"/>
 <text x="150" y="80" text-anchor="middle" fill="${COLORS.good}" font-size="32" font-family="Arial" font-weight="bold">examen</text>
@@ -631,7 +631,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Met terugleggen zou dat zijn. Maar 'zonder terugleggen' = na de eerste pak heb je nog 4 chocolade en 7 totaal.",
+          "Met terugleggen zou dat zijn. Maar 'zonder terugleggen' = na de eerste keer pakken heb je nog 4 chocolade en 7 totaal.",
           "Optellen ipv vermenigvuldigen — voor en-kans: vermenigvuldig.",
           "Wel goed te bepalen — gewoon stap voor stap (eerste 5/8, daarna 4/7).",
         ],
@@ -655,8 +655,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet 'niet 3 keer' = 'minstens 1 verlies'. Voor 'geen prijs winnen' = 'alle 3 verloren'.",
           "Dat is een ruwe schatting via aftrekken — maar bij onafhankelijke lootjes moet je 'alle 3 verlies' vermenigvuldigen.",
+          "3/100 is ongeveer de kans dat je wél wint. 'Geen prijs' betekent: alle 3 lootjes verliezen.",
           "100/103 is geen logische berekening voor deze setup.",
         ],
         uitlegPad: {
@@ -680,8 +680,8 @@ const steps = [
         wrongHints: [
           null,
           "1/2 is een ruwe schatting maar niet exact — bereken via complement.",
-          "1/4 zou de kans op precies 2 keer kop zijn — maar 'minstens 2' betekent ook 3 of 4 keer kop.",
-          "Dat is de kans op precies 1 keer kop. 'Minstens 2' betekent 2 óf meer — gebruik het complement.",
+          "1/4 = 4/16 is de kans op precies 1 keer kop — maar 'minstens 2' betekent 2, 3 of 4 keer kop.",
+          "5/16 is de kans op hoogstens 1 keer kop (0 of 1 keer). 'Minstens 2' betekent 2 óf meer — gebruik het complement.",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − P(0) − P(1)", tekst: "1 − 1/16 − 4/16 = 11/16." }],

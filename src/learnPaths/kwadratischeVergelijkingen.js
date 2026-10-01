@@ -182,7 +182,7 @@ const steps = [
           woorden: [{ woord: "kwadraat", uitleg: "Iets in het kwadraat. Altijd 0 of positief. Nooit negatief (in reële getallen)." }],
           theorie: "Snelle check: x² = c. Als c > 0: 2 oplossingen. Als c = 0: 1 oplossing (x=0). Als c < 0: 0 oplossingen.",
           voorbeelden: [{ type: "lijst", tekst: "x²=4 → 2 opl (±2). x²=0 → 1 opl (0). x²=−4 → 0 opl. Onmogelijk: geen reëel getal² = negatief." }],
-          basiskennis: [{ onderwerp: "Hogere wiskunde", uitleg: "In havo/vwo bestaat 'imaginair' getal i² = −1, maar voor VMBO: x² ≥ 0 → geen oplossing bij negatief." }],
+          basiskennis: [{ onderwerp: "Hogere wiskunde", uitleg: "Bij vwo wiskunde D bestaat het 'imaginaire' getal i (i² = −1), maar hier geldt: x² ≥ 0 → geen oplossing bij negatief." }],
           niveaus: { basis: "0.", simpeler: "x² = −9 → onmogelijk (x² nooit negatief) → 0 oplossingen.", nogSimpeler: "0" },
         },
       },
@@ -287,7 +287,7 @@ const steps = [
             { titel: "Factoriseer", tekst: "x² + 6x = 0 → x(x + 6) = 0." },
             { titel: "Product=0 regel", tekst: "x = 0 OF x + 6 = 0 → x = −6." },
           ],
-          woorden: [{ woord: "factoriseren-oplossen", tekst: "Klassiek combo voor vergelijkingen zonder los getal (c=0)." }],
+          woorden: [{ woord: "factoriseren-oplossen", tekst: "Klassieke combinatie voor vergelijkingen zonder los getal (c=0)." }],
           theorie: "Stap-voor-stap herhaling: (1) is c=0? Ja → x buiten haakjes. (2) Een factor = 0. (3) Schrijf BEIDE oplossingen.",
           voorbeelden: [{ type: "check", tekst: "x=0: 0+0=0 ✓. x=−6: 36 + (−36) = 0 ✓. Beide kloppen." }],
           basiskennis: [{ onderwerp: "Teken-val", uitleg: "(x + 6) = 0 → x = −6. Niet +6! Verschil: positief in haakje → negatief antwoord." }],
@@ -325,7 +325,7 @@ const steps = [
           ],
           woorden: [{ woord: "nulpunt", uitleg: "x-waarde waar y = 0. Op grafiek: snijpunt met x-as." }],
           theorie: "Verband: kwadratische vergelijking oplossen = nulpunten van parabool vinden. Praktische toepassing voor grafieken.",
-          voorbeelden: [{ type: "grafiek", tekst: "Parabool y = x² + 5x: gaat door (0,0) en (−5,0). Tussen die punten ligt onder x-as. Top tussen 0 en −5, dus bij x = −2,5." }],
+          voorbeelden: [{ type: "grafiek", tekst: "Parabool y = x² + 5x: gaat door (0,0) en (−5,0). Tussen die punten ligt de grafiek onder de x-as. Top tussen 0 en −5, dus bij x = −2,5." }],
           basiskennis: [{ onderwerp: "Teken-val", uitleg: "(x+5)=0 → x=−5 (minteken!). Klassieke val: leerlingen schrijven +5." }],
           niveaus: { basis: "0 en −5.", simpeler: "y=0 → x²+5x=0 → x(x+5)=0 → x=0 of −5.", nogSimpeler: "0, −5" },
         },
@@ -334,7 +334,7 @@ const steps = [
   },
   {
     title: "Toepassing: oppervlakte-vraagstuk",
-    explanation: "**Praktisch voorbeeld**. Een rechthoek heeft een **lengte** die 3 m langer is dan de **breedte**. De oppervlakte is 28 m². Wat zijn de afmetingen?\n\n**Stappen**:\n\n1. Noem de breedte **x**. Dan is de lengte **x + 3**.\n2. Oppervlakte: x · (x + 3) = 28\n3. Werk uit: x² + 3x = 28\n4. In standaardvorm: x² + 3x − 28 = 0\n\nNu oplossen — maar deze heeft **geen factor x** te halen (door de −28). We moeten andere tactiek (factoriseren naar twee haakjes).\n\nVoor klas 2 zou je deze kunnen oplossen door slim **proberen**: welke twee getallen geven samen 3 (= b) én vermenigvuldigd −28 (= c)?\n\n• 7 en −4: 7 + (−4) = 3 ✓ en 7 · (−4) = −28 ✓\n\nDus: x² + 3x − 28 = (x + 7)(x − 4) = 0\nOplossingen: x = −7 of x = 4.\n\nMaar breedte kan niet negatief zijn — dus **x = 4 m** (breedte). Lengte = 4 + 3 = **7 m**.",
+    explanation: "**Praktisch voorbeeld**. Een rechthoek heeft een **lengte** die 3 m langer is dan de **breedte**. De oppervlakte is 28 m². Wat zijn de afmetingen?\n\n**Stappen**:\n\n1. Noem de breedte **x**. Dan is de lengte **x + 3**.\n2. Oppervlakte: x · (x + 3) = 28\n3. Werk uit: x² + 3x = 28\n4. In standaardvorm: x² + 3x − 28 = 0\n\nNu oplossen — maar deze heeft **geen factor x** te halen (door de −28). We hebben een andere tactiek nodig (factoriseren naar twee haakjes).\n\nVoor klas 2 zou je deze kunnen oplossen door slim **proberen**: welke twee getallen geven samen 3 (= b) én vermenigvuldigd −28 (= c)?\n\n• 7 en −4: 7 + (−4) = 3 ✓ en 7 · (−4) = −28 ✓\n\nDus: x² + 3x − 28 = (x + 7)(x − 4) = 0\nOplossingen: x = −7 of x = 4.\n\nMaar breedte kan niet negatief zijn — dus **x = 4 m** (breedte). Lengte = 4 + 3 = **7 m**.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="60" y="60" width="160" height="80" fill="rgba(0,200,83,0.18)" stroke="${COLORS.curve}" stroke-width="2"/>
 <text x="140" y="50" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">lengte = x + 3</text>
@@ -389,7 +389,7 @@ const steps = [
             { titel: "Factoriseer", tekst: "x² − 8x = x(x − 8) = 0." },
             { titel: "Twee oplossingen", tekst: "x = 0 OF x − 8 = 0 → x = 8. Antwoord: 0 EN 8 (beide!)." },
           ],
-          woorden: [{ woord: "factor 0", uitleg: "Een van factoren = 0 → hele product = 0. Drijvende regel." }],
+          woorden: [{ woord: "factor 0", uitleg: "Een van de factoren = 0 → hele product = 0. Belangrijke regel." }],
           theorie: "Examenval: leerlingen vergeten vaak x = 0 als oplossing. SCHRIJF altijd BEIDE: ook bij eenvoudige uitkomsten.",
           voorbeelden: [{ type: "check", tekst: "x=0: 0² − 8·0 = 0 ✓. x=8: 64 − 64 = 0 ✓. Beide werken." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Eén oplossing schrijven = halve antwoord. ± alleen bij x² = c regel, niet hier." }],
@@ -400,7 +400,7 @@ const steps = [
   },
   {
     title: "Eindopdracht 2: gemengd",
-    explanation: "**Drie korte vraagstukken** waar je beide methodes voor nodig hebt.\n\n**A** — Los op: x² − 36 = 0 (geen x-term)\n• x² = 36 → x = ±√36 → **x = 6** of **x = −6**\n\n**B** — Los op: x² + 7x = 0 (geen los getal)\n• x(x + 7) = 0 → x = 0 of x + 7 = 0 → **x = 0** of **x = −7**\n\n**C** — Een vierkant heeft oppervlakte 64 m². Wat is de zijde?\n• zijde² = 64 → zijde = √64 = **8 m** (alleen positief, want zijde kan niet negatief)\n\n**Trucje voor het type herkennen**:\n• **Geen x-term** (alleen x² en getal): gebruik **x² = c** methode.\n• **Geen los getal** (alleen x² en x): gebruik **factoriseren** (x buiten haakjes).\n• **Beide aanwezig**: factoriseren naar twee haakjes (zoals oppervlakte-voorbeeld).",
+    explanation: "**Drie korte vraagstukken** waar je beide methodes voor nodig hebt.\n\n**A** — Los op: x² − 36 = 0 (geen x-term)\n• x² = 36 → x = ±√36 → **x = 6** of **x = −6**\n\n**B** — Los op: x² + 7x = 0 (geen los getal)\n• x(x + 7) = 0 → x = 0 of x + 7 = 0 → **x = 0** of **x = −7**\n\n**C** — Een vierkant heeft oppervlakte 64 m². Wat is de zijde?\n• zijde² = 64 → zijde = √64 = **8 m** (alleen positief, want een zijde kan niet negatief zijn)\n\n**Trucje voor het type herkennen**:\n• **Geen x-term** (alleen x² en getal): gebruik **x² = c** methode.\n• **Geen los getal** (alleen x² en x): gebruik **factoriseren** (x buiten haakjes).\n• **Beide aanwezig**: factoriseren naar twee haakjes (zoals oppervlakte-voorbeeld).",
     svg: `<svg viewBox="0 0 300 200">
 <text x="55" y="35" fill="${COLORS.text}" font-size="13" font-family="Arial" font-weight="bold">A.  x² − 36 = 0</text>
 <rect x="180" y="20" width="80" height="28" fill="rgba(255,213,79,0.18)" stroke="${COLORS.point}" stroke-width="2" rx="6"/>
@@ -436,7 +436,7 @@ const steps = [
   // ─── E. Examenstijl — VMBO-GT CSE ─────────────────────────
   {
     title: "CSE-vraag — bal omhoog gegooid",
-    explanation: "Klassieke CSE-context: een **bal of voorwerp gegooid** met een hoogte-formule die kwadratisch is in tijd.\n\n> **Een bal wordt recht omhoog gegooid.** De hoogte (in meters) na t seconden is gegeven door **h = −5t² + 20t**.\n\n**Aanpak in 3 stappen:**\n1. **Wanneer is de bal weer op de grond?** Op de grond geldt h = 0. Dus −5t² + 20t = 0 → factoriseren: t(−5t + 20) = 0 → t = 0 OF t = 4. Dus na **4 seconden** weer op de grond (t = 0 was startpunt).\n2. **Wanneer is de bal op 15 m hoogte?** Stel −5t² + 20t = 15 → −5t² + 20t − 15 = 0 → :−5 → t² − 4t + 3 = 0 → (t − 1)(t − 3) = 0 → t = **1 of 3**. Op weg omhoog (t = 1) en op weg omlaag (t = 3).\n3. **Maximum hoogte?** Maximum ligt midden tussen de twee nulpunten → t = 2. Invullen: h = −5·4 + 20·2 = −20 + 40 = **20 m**.\n\n**Examen-tips**:\n• 'Op de grond' → h = 0.\n• Bij 'wanneer is hoogte X?' → kwadratische vergelijking: alle naar één kant, dan factoriseren.",
+    explanation: "Klassieke CSE-context: een **bal of voorwerp gegooid** met een hoogte-formule die kwadratisch is in tijd.\n\n> **Een bal wordt recht omhoog gegooid.** De hoogte (in meters) na t seconden is gegeven door **h = −5t² + 20t**.\n\n**Aanpak in 3 stappen:**\n1. **Wanneer is de bal weer op de grond?** Op de grond geldt h = 0. Dus −5t² + 20t = 0 → factoriseren: t(−5t + 20) = 0 → t = 0 OF t = 4. Dus na **4 seconden** weer op de grond (t = 0 was startpunt).\n2. **Wanneer is de bal op 15 m hoogte?** Stel −5t² + 20t = 15 → −5t² + 20t − 15 = 0 → :−5 → t² − 4t + 3 = 0 → (t − 1)(t − 3) = 0 → t = **1 of 3**. Op weg omhoog (t = 1) en op weg omlaag (t = 3).\n3. **Maximum hoogte?** Maximum ligt midden tussen de twee nulpunten → t = 2. Invullen: h = −5·4 + 20·2 = −20 + 40 = **20 m**.\n\n**Examen-tips**:\n• 'Op de grond' → h = 0.\n• Bij 'wanneer is hoogte X?' → kwadratische vergelijking: alles naar één kant, dan factoriseren.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="40" y1="170" x2="280" y2="170" stroke="#8899aa" stroke-width="1.5"/>
 <line x1="40" y1="20" x2="40" y2="170" stroke="#8899aa" stroke-width="1.5"/>
@@ -463,7 +463,7 @@ const steps = [
           ],
           woorden: [{ woord: "h", uitleg: "Hoogte boven grond. h = 0 → bal op grond." }],
           theorie: "Klassieke vraag: 'wanneer op grond/zelfde hoogte als start' → stel h = 0 → kwadratische vergelijking → factoriseren → twee oplossingen (begin + eind).",
-          voorbeelden: [{ type: "logica", tekst: "t = 0: bal vertrek (op grond). t = 4: bal terug (op grond). Tussen die twee: bal omhoog en omlaag." }],
+          voorbeelden: [{ type: "logica", tekst: "t = 0: bal vertrekt (op grond). t = 4: bal terug (op grond). Tussen die twee: bal omhoog en omlaag." }],
           basiskennis: [{ onderwerp: "Negeer t = 0", uitleg: "Antwoord is meestal t = 4 (het NIEUWE moment), niet t = 0 (begin). Context bepaalt." }],
           niveaus: { basis: "t = 4.", simpeler: "h=0: t(−5t+20)=0 → t=0 (start) of t=4 (terug). Antwoord: 4 sec.", nogSimpeler: "4" },
         },
@@ -505,7 +505,7 @@ const steps = [
       { q: "Los op: x² = 16", options: ["x = 4 of x = −4","x = 4","x = 8","x = 256"], answer: 0, wrongHints: [null, "Niet — vergeet niet de negatieve.", "Te hoog.", "x² niet kwadrateren."] },
       { q: "Los op: x² = 25", options: ["x = ±5","x = 5","x = 25","x = ±25"], answer: 0, wrongHints: [null, "Niet — vergeet negatieve.", "Niet — kwadraat al weg.", "Niet."] },
       { q: "Wat is **factoriseren**?", options: ["x²+bx schrijven als x(x+b)","Optellen","Aftrekken","Delen"], answer: 0, wrongHints: [null, "Optellen is gewoon + doen — maar bij factoriseren splits je een uitdrukking juist op in stukjes die je vermenigvuldigt.", "Aftrekken is − doen; factoriseren gaat niet over wegnemen maar over herschrijven als een product.", "Delen is één losse bewerking; bij factoriseren zoek je een gemeenschappelijke factor om buiten haakjes te halen."] },
-      { q: "Factor 'x' uit x² + 5x: =?", options: ["x(x+5)","x·5","x² · 5","x+5"], answer: 0, wrongHints: [null, "Niet — kwadraat klopt niet.", "Andere bewerking.", "Niet — x weg."] },
+      { q: "Haal x buiten haakjes in x² + 5x:", options: ["x(x+5)","x·5","x² · 5","x+5"], answer: 0, wrongHints: [null, "Niet — kwadraat klopt niet.", "Andere bewerking.", "Niet — x weg."] },
       { q: "Los op: x(x − 3) = 0", options: ["x=0 of x=3","x=3","x=0","x=−3"], answer: 0, wrongHints: [null, "Niet — beide.", "Niet — beide.", "Niet — andersom teken."] },
       { q: "**Discriminant** = ?", options: ["b² − 4ac","b² + 4ac","4ac","b · ac"], answer: 0, wrongHints: [null, "Niet — min.", "Niet.", "Niet."] },
       { q: "Discriminant D > 0 betekent?", options: ["2 oplossingen","1 oplossing","Geen oplossingen","Oneindig"], answer: 0, wrongHints: [null, "Bij D=0.", "Bij D<0.", "Niet bij kwadratisch."] },
