@@ -119,6 +119,11 @@ function padBijKlas(level, klas) {
 
 // De hoofdvak-paden die bij dit niveau horen — dit ís "wat je ongeveer moet
 // kunnen": de leerpaden zijn per groep/klas en vak opgebouwd langs de leerlijnen.
+// "Cijferend rekenen — Doorstroomtoets groep 6-8" → "Cijferend rekenen" (tegels zijn klein).
+function korteTitel(t) {
+  return String(t || "").split(/ — | – /)[0].replace(/\s*\([^)]*(groep|klas|doorstroomtoets|po\b)[^)]*\)\s*$/i, "").trim();
+}
+
 function niveauPaden(niveau) {
   if (!niveau) return [];
   const vakken = niveau.soort === "klas" ? Object.keys(VAK_INFO_KLAS) : CURRICULUM_VAKKEN;
@@ -957,6 +962,37 @@ export default function MijnPagina({
     return lijst.slice(0, 6);
   }, [records, niveau, beschikbareVakken, intake]);
 
+  // 🧭 Onderwerp-tegels op de kind-pagina (Mark 1 okt 2026: "leerpaden zijn een groot goed, makkelijk
+  // vindbaar?" — 72 kinderen tikten in 14 dagen op Leren, maar 20 openden een onderwerp: de lijst is te
+  // groot). Drie tegels, één per vak: eerst wat de meting/intake aanwijst, dan nieuwe stof van de eigen
+  // groep, elke dag een andere. Eén tik = meteen de uitleg in.
+  const onderwerpTegels = useMemo(() => {
+    const byId = Object.fromEntries(records.map((r) => [r.pathId, r]));
+    const uit = [];
+    const vakGehad = new Set();
+    const voeg = (pad, reden) => {
+      if (!pad || uit.length >= 3 || vakGehad.has(pad.subject) || /-nieuwkomers$/.test(pad.id)) return;
+      if (uit.some((t) => t.pad.id === pad.id)) return;
+      vakGehad.add(pad.subject);
+      uit.push({ pad, reden });
+    };
+    klaargezet.filter((k) => k.reden !== "nulmeting").forEach((k) => voeg(k.pad, k.reden));
+    const paden = niveauPaden(niveau).filter((p) => !/-nieuwkomers$/.test(p.id) && (byId[p.id]?.level || "unmeasured") === "unmeasured");
+    const dag = Math.floor(Date.now() / 86400000);
+    // Doorstroomtoets-kern eerst (rekenen, taal, spelling, begrijpend lezen); andere vakken alleen als aanvulling.
+    const KERN = ["rekenen", "taal", "spelling", "begrijpend-lezen"];
+    const alle = [...new Set(paden.map((p) => p.subject))];
+    const kern = alle.filter((v) => KERN.includes(v));
+    const vakken = kern.length >= 3 ? kern : [...kern, ...alle.filter((v) => !KERN.includes(v))];
+    // Begin elke dag bij een ander vak, en kies binnen een vak elke dag een ander onderwerp.
+    for (let i = 0; i < vakken.length && uit.length < 3; i++) {
+      const vak = vakken[(i + dag) % vakken.length];
+      const vanVak = paden.filter((p) => p.subject === vak);
+      if (vanVak.length) voeg(vanVak[dag % vanVak.length], "nieuw");
+    }
+    return uit;
+  }, [records, niveau, klaargezet]);
+
   // Doorstroomtoets-countdown (groep 7/8).
   const countdown = useMemo(() => {
     if (!groep || groep < 7) return null;
@@ -1793,11 +1829,27 @@ export default function MijnPagina({
                           >
                             {bezig ? "▶ Verder met je kwartier" : gedaan ? "▶ Nog een kwartier" : "▶ Start je kwartier van vandaag"}
                           </button>
+                          {onderwerpTegels.length > 0 && onPickPath && (
+                            <div style={{ marginTop: 12 }}>
+                              <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Of leer iets nieuws:</div>
+                              <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
+                                {onderwerpTegels.map(({ pad, reden }) => (
+                                  <button key={pad.id} type="button"
+                                    onClick={() => { try { track("mijn_onderwerp_tegel", { pad: pad.id, vak: pad.subject, reden, groep }); } catch { /* */ } onPickPath(pad.id); }}
+                                    style={{ display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 4, textAlign: "left", padding: "10px 9px", minHeight: 92, borderRadius: 12, cursor: "pointer", border: "1px solid rgba(66,165,245,0.35)", background: "rgba(66,165,245,0.08)", color: "var(--color-text)", fontFamily: "var(--font-body)" }}>
+                                    <span aria-hidden="true" style={{ fontSize: 22, lineHeight: 1 }}>{pad.emoji || "📘"}</span>
+                                    <span style={{ fontSize: 12.5, fontWeight: 800, lineHeight: 1.25, color: "var(--color-text-strong, #fff)", display: "-webkit-box", WebkitLineClamp: 3, WebkitBoxOrient: "vertical", overflow: "hidden" }}>{korteTitel(pad.title)}</span>
+                                    <span style={{ marginTop: "auto", fontSize: 10.5, fontWeight: 700, color: reden === "nieuw" ? "#8fd3ff" : "#69f0ae" }}>{reden === "herhalen" ? "herhalen" : reden === "nieuw" ? ((vakMeta(pad.subject).titel || pad.subject) === korteTitel(pad.title) ? "nieuw voor jou" : (vakMeta(pad.subject).titel || pad.subject)) :"hier kun je groeien"}</span>
+                                  </button>
+                                ))}
+                              </div>
+                            </div>
+                          )}
                           <button
                             onClick={() => resume ? (onResumePath && onResumePath(resume.pathId, resume.stepIdx)) : onGoLeren && onGoLeren()}
                             style={{ marginTop: 8, padding: "9px 14px", borderRadius: 10, border: "1px solid var(--color-border-soft)", background: "transparent", color: "var(--color-text)", cursor: "pointer", fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, width: "100%" }}
                           >
-                            {resume ? "of: verder waar je was" : "of: zelf een onderwerp kiezen"}
+                            {resume ? "of: verder waar je was" : "of: alle onderwerpen bekijken"}
                           </button>
                           {(rolKey === "leerling" || rolKey === "student") && !kwartiercheckGedaan && onKwartiercheck && !bezig && (
                             <button type="button" onClick={() => naarKwartiercheck("kind")} style={{ display: "block", width: "100%", marginTop: 8, padding: "9px 12px", borderRadius: 10, cursor: "pointer", border: "1px dashed rgba(255,140,66,0.6)", background: "rgba(255,107,53,0.08)", color: "#ff8c42", fontSize: 13, fontWeight: 700 }}>
