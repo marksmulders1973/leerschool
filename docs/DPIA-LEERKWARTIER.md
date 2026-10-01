@@ -75,3 +75,11 @@ Opgesteld als concept door Claude op basis van de werkelijke datastromen in de c
 **Handtekening:** w.g. Mark Smulders (vastgesteld per expliciet akkoord, 1 september 2026)
 
 *Contact voor privacy-vragen en verzoeken (inzage/wissing): zie leerkwartier.app/privacy.html.*
+
+## Aanvulling 1 oktober 2026 — betaalfunctie (herbeoordeling volgens punt 4)
+
+- **Nieuw:** ouders/verzorgers kunnen het Familie-pakket afsluiten (eenmalig € 39, 12 maanden). Betaling en factuur via **Stripe Payments Europe** (Ierland, EU); Leerkwartier ziet en bewaart geen bank- of kaartgegevens.
+- **Wat wij extra bewaren:** per betaling bedrag, datum, e-mailadres, Stripe-klant- en factuurnummer, en de geldigheid van het pakket (tabellen `payments` en `subscriptions`, RLS: alleen de eigen rij leesbaar). Facturen 7 jaar (fiscale bewaarplicht).
+- **Kinderen:** betalen kan alleen met een ouder-account met e-mailadres; kinderen zien geen koopknoppen.
+- **Risico:** laag. Geen nieuwe gegevens van kinderen; betaalgegevens blijven bij Stripe. Maatregel: beperkte Stripe-sleutel zonder rechten om geld weg te boeken; webhook met handtekeningcontrole.
+- **Gemeenten en partners:** krijgen alleen anonieme totalen per code (partner-rapport), geen persoonsgegevens. Leerkwartier blijft zelf verwerkingsverantwoordelijke; een verwerkersovereenkomst is pas nodig als een school of gemeente zelf persoonsgegevens aanlevert (bijv. een klasoverzicht met leerlingnamen).

@@ -17,7 +17,7 @@
 | 7 | Gebruiksstatistieken | n.v.t. (anoniem) | gebeurtenissen zonder naam, e-mail of IP; tijdelijk sessiekenmerk; anoniem apparaat-kenmerk | verbeteren van de app, dagrapport | gerechtvaardigd belang (art. 6.1f) | events automatisch opgeschoond na de bewaartermijn (pg_cron) |
 | 8 | Wensenbord en feedback | gebruikers | opgegeven naam en tekst | wensen en fouten verzamelen en beantwoorden | gerechtvaardigd belang (art. 6.1f) | tot afgehandeld en gepubliceerd; op verzoek verwijderd |
 | 9 | Contact met partners en scholen (outreach) | medewerkers van organisaties | zakelijk e-mailadres, naam, organisatie, correspondentie | samenwerking aanbieden en onderhouden | gerechtvaardigd belang (art. 6.1f) | zolang het contact loopt; opvolgbronnen maximaal 2 jaar na laatste contact |
-| 10 | Betalingen (vanaf 2027, nog niet actief) | ouders/verzorgers | e-mail, betaalstatus, factuur; kaartgegevens alleen bij Stripe | Familie-abonnement en Seizoenspas | uitvoering overeenkomst (art. 6.1b); wettelijke plicht (art. 6.1c) voor facturen | facturen 7 jaar (fiscale bewaarplicht) |
+| 10 | Betalingen (actief sinds 30 sep 2026; € 1-proef, verkoop Familie) | ouders/verzorgers | e-mail, betaalstatus, factuur; kaartgegevens alleen bij Stripe | Familie-pakket (€ 39 / 12 maanden, eenmalig) | uitvoering overeenkomst (art. 6.1b); wettelijke plicht (art. 6.1c) voor facturen | facturen 7 jaar (fiscale bewaarplicht) |
 
 **Wat we bewust niet verwerken:** verplichte achternaam, adres (behalve vrijwillig bij een partnercode), telefoonnummer, school, geboortedatum, foto's, locatie, tracking-cookies, advertentie-id's. Geen bijzondere persoonsgegevens, geen profilering voor commerciële doelen, geen verkoop of delen voor marketing.
 
@@ -31,7 +31,7 @@
 | Google | optionele login; Gemini als AI-reserve (niet actief) | VS, EU-standaardbepalingen | Cloud-DPA |
 | Resend | verzenden van mails vanaf hallo@leerkwartier.app | VS, EU-standaardbepalingen | standaard-verwerkersovereenkomst |
 | Cloudflare | doorgeefstation voor het gedeelde park (alleen posities, geen persoonsgegevens) | EU/wereldwijd | standaard-voorwaarden |
-| Stripe (vanaf 2027) | betalingen en facturen | EU-entiteit | standaard-verwerkersovereenkomst |
+| Stripe (actief sinds 30 sep 2026) | betalingen en facturen; wij zien geen bank- of kaartgegevens | EU-entiteit (Stripe Payments Europe, Ierland) | standaard-verwerkersovereenkomst (stripe.com/legal/dpa) |
 
 Doorgifte buiten de EU alleen naar bovenstaande verwerkers, op basis van EU-standaardbepalingen en met minimale payloads.
 
