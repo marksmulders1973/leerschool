@@ -27,3 +27,4 @@
 - examenBiologie2025T2 v15 meerlingen 1% vs ~1,6% CBS → correctievoorschrift.
 - B13 nog niet nagelezen (tokenwacht): nederlandWaterVo, negatieveGetallen, negatieveGetallenPo, netwerkenInternetInformatica, nieuwkomersFoutUitleg, nieuwkomersHelpers, nieuwkomersPicto.
 - latijnVwo: voorbeeldzin 'Caesar Brutum video' fout Latijn (Caesar als onderwerp) → herstellen.
+- B16 nog niet (helemaal) nagelezen: pincodeOverheid.js vanaf ~r.474, pincodeWerkArbeidsmarkt, platentektoniekAardrijkskunde, plattegrondLegendaPo, politiekDemocratiePo, presentTensesEngels.

@@ -48,9 +48,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **export** voor Nederland?",
-        options: ["NL verkoopt iets aan het buitenland", "NL koopt iets uit het buitenland", "Toeristen die naar NL komen", "Een NL bedrijf in Duitsland"],
+        options: ["NL verkoopt iets aan het buitenland", "NL koopt iets uit het buitenland", "Nederlanders die in het buitenland op vakantie gaan", "Een NL bedrijf in Duitsland"],
         answer: 0,
-        wrongHints: [null, "Dat is import.", "Toerisme is wel een vorm export van diensten.", "Vestiging = directe investering."],
+        wrongHints: [null, "Dat is import.", "Vakantie in het buitenland is juist import (van diensten).", "Vestiging = directe investering."],
         uitlegPad: {
           stappen: [{ titel: "Export = uit-voer", tekst: "Export = NL verkoopt iets aan buitenland (kaas naar DE, ASML-machines naar TW)." }],
           woorden: [{ woord: "export", uitleg: "Verkopen aan ander land. Tegenovergestelde van import." }, { woord: "import", uitleg: "Kopen uit ander land." }],
@@ -111,7 +111,7 @@ const steps = [
           stappen: [{ titel: "Doorvoer", tekst: "Re-export = goederen komen NL binnen, gaan via NL naar Duitsland of UK. NL is doorgangshuis." }],
           woorden: [{ woord: "re-export", uitleg: "Goederen die NL binnenkomen en weer uitgaan, zonder veel bewerking." }],
           theorie: "~50% van NL-export is re-export (Chinese spullen via Rotterdam → Duitsland). NL = logistiek knooppunt.",
-          voorbeelden: [{ type: "praktijk", tekst: "Chinese kleding aankomt Rotterdam → vrachtwagen naar Berlijn. Re-export." }],
+          voorbeelden: [{ type: "praktijk", tekst: "Chinese kleding komt aan in Rotterdam → vrachtwagen naar Berlijn. Re-export." }],
           basiskennis: [{ onderwerp: "Niet 2× verkopen", uitleg: "Re- = opnieuw (heen). Niet hetzelfde 2× verkopen, wel doorvoeren." }],
           niveaus: { basis: "Doorvoer NL → ander land.", simpeler: "Goederen komen NL binnen (uit China) + gaan door naar Duitsland = re-export (doorvoer).", nogSimpeler: "Doorvoer" },
         },
@@ -135,7 +135,7 @@ const steps = [
   // ─── Stap 2: Beschermingsmaatregelen ────────────────────
   {
     title: "Beschermingsmaatregelen — protectionisme",
-    explanation: "Niet alle handel is volledig vrij. Landen gebruiken **beschermingsmaatregelen** om eigen industrie te beschermen.\n\n**Vier hoofdvormen**:\n\n**1. Invoerheffing (importheffing/-tarief)**\n• Belasting bij grens op importproducten\n• Maakt buitenlandse producten duurder → eigen producten relatief goedkoper\n• Bv. EU-heffing op Chinese elektrische auto's (45%, 2024)\n\n**2. Quotum**\n• Maximum AANTAL dat je mag importeren\n• Bv. 'max 10.000 Chinese kledingstukken/jaar'\n• Boven dat: niet toegestaan of veel duurder\n\n**3. Subsidies**\n• Eigen bedrijven krijgen geld van overheid\n• Maakt hun producten goedkoper, internationaal concurrerender\n• Bv. EU geeft veel subsidies aan boeren (GLB)\n\n**4. Niet-tarifaire belemmeringen**\n• Strenge regels (technisch, milieu, gezondheid) die buitenlandse producten moeilijk maken\n• Bv. EU verbiedt importchemicaliën die in EU verboden zijn\n• Etikettering, productveiligheid, dier-welzijn\n\n**Voor- en nadelen protectionisme**:\n• ✓ Eigen industrie beschermd → banen behouden\n• ✓ Strategische sectoren niet afhankelijk van buitenland\n• ✓ Reactie op oneerlijke concurrentie (kinderarbeid, dumping)\n• ✗ Duurder voor consument\n• ✗ Verlies efficiëntie (geen comparatief voordeel)\n• ✗ Ander land kan terugslag (handelsoorlog)\n\n**Vrijhandel** vs **protectionisme**:\n• **Vrijhandel** (Adam Smith, Ricardo): geen barrières, iedereen wint\n• **Protectionisme**: bescherming, eigen industrie eerst\n• EU = vrijhandel intern, protectionisme extern\n\n**Internationaal**:\n• **WTO** (World Trade Organization): regelt globale handel, beslecht geschillen\n• **Vrijhandelsverdragen**: bijvoorbeeld EU-Canada (CETA), EU-Japan\n• **Sancties**: bewuste handelsbeperking als straf (bv. Rusland 2022)\n\n**Recente trends**:\n• Trump (2018-2020): forse importheffingen op China, EU-staal\n• China-EU spanning over EV's (2024)\n• 'Reshoring': productie terug naar eigen continent\n• Klimaat: import-CO2-heffing (CBAM) op koolstof-intensieve producten",
+    explanation: "Niet alle handel is volledig vrij. Landen gebruiken **beschermingsmaatregelen** om eigen industrie te beschermen.\n\n**Vier hoofdvormen**:\n\n**1. Invoerheffing (importheffing/-tarief)**\n• Belasting bij grens op importproducten\n• Maakt buitenlandse producten duurder → eigen producten relatief goedkoper\n• Bv. EU-heffing op Chinese elektrische auto's (tot ~45%, 2024)\n\n**2. Quotum**\n• Maximum AANTAL dat je mag importeren\n• Bv. 'max 10.000 Chinese kledingstukken/jaar'\n• Boven dat: niet toegestaan of veel duurder\n\n**3. Subsidies**\n• Eigen bedrijven krijgen geld van overheid\n• Maakt hun producten goedkoper, internationaal concurrerender\n• Bv. EU geeft veel subsidies aan boeren (GLB)\n\n**4. Niet-tarifaire belemmeringen**\n• Strenge regels (technisch, milieu, gezondheid) die buitenlandse producten moeilijk maken\n• Bv. EU weert producten met stoffen die in de EU verboden zijn\n• Etikettering, productveiligheid, dier-welzijn\n\n**Voor- en nadelen protectionisme**:\n• ✓ Eigen industrie beschermd → banen behouden\n• ✓ Strategische sectoren niet afhankelijk van buitenland\n• ✓ Reactie op oneerlijke concurrentie (kinderarbeid, dumping)\n• ✗ Duurder voor consument\n• ✗ Verlies efficiëntie (geen comparatief voordeel)\n• ✗ Ander land kan terugslaan (handelsoorlog)\n\n**Vrijhandel** vs **protectionisme**:\n• **Vrijhandel** (Adam Smith, Ricardo): geen barrières, iedereen wint\n• **Protectionisme**: bescherming, eigen industrie eerst\n• EU = vrijhandel intern, protectionisme extern\n\n**Internationaal**:\n• **WTO** (World Trade Organization): regelt globale handel, beslecht geschillen\n• **Vrijhandelsverdragen**: bijvoorbeeld EU-Canada (CETA), EU-Japan\n• **Sancties**: bewuste handelsbeperking als straf (bv. Rusland 2022)\n\n**Recente trends**:\n• Trump (2018-2020 en opnieuw vanaf 2025): forse importheffingen op China, EU-staal\n• China-EU spanning over EV's (2024)\n• 'Reshoring': productie terug naar eigen continent\n• Klimaat: import-CO2-heffing (CBAM) op koolstof-intensieve producten",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PROTECTIONISME</text>
 <rect x="20" y="40" width="135" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.aanbod}" stroke-width="1.2"/>
@@ -162,7 +162,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Belasting bij grens", tekst: "Invoerheffing = belasting die je moet betalen bij invoer van goederen. Maakt buitenlandse producten duurder." }],
           woorden: [{ woord: "invoerheffing", uitleg: "Belasting bij grens op import. Ook: importtarief." }],
-          theorie: "Doel: eigen producenten beschermen tegen goedkope import. Bv. EU-heffing op Chinese EVs (45%, 2024).",
+          theorie: "Doel: eigen producenten beschermen tegen goedkope import. Bv. EU-heffing op Chinese EVs (tot ~45%, 2024).",
           voorbeelden: [{ type: "praktijk", tekst: "Chinese fiets €100 → na 30% heffing = €130 → EU-fiets van €120 lijkt aantrekkelijker." }],
           basiskennis: [{ onderwerp: "Niet BTW", uitleg: "BTW = op alle producten (binnen+buiten). Invoerheffing = alleen import." }],
           niveaus: { basis: "Belasting op import.", simpeler: "Invoerheffing = belasting aan de grens, alleen op spullen uit het buitenland.", nogSimpeler: "Grens-belasting" },
@@ -177,7 +177,7 @@ const steps = [
           stappen: [{ titel: "Maximum-aantal", tekst: "Quotum = maximaal X stuks/jaar. Boven dat = niet toegestaan of veel duurder." }],
           woorden: [{ woord: "quotum", uitleg: "Vaste limiet op aantal of hoeveelheid." }],
           theorie: "Quotum vs heffing: quotum = aantal, heffing = geld. Beide beschermen eigen markt.",
-          voorbeelden: [{ type: "praktijk", tekst: "EU laat max 10.000 ton Chinese kleding per jaar binnen. Boven dat = belast extra." }],
+          voorbeelden: [{ type: "praktijk", tekst: "Stel: de EU laat max 10.000 ton Chinese kleding per jaar binnen. Boven dat = extra belast." }],
           basiskennis: [{ onderwerp: "Strikt", uitleg: "Quotum is harde grens, geen onderhandeling." }],
           niveaus: { basis: "Maximum aantal.", simpeler: "Quotum = max aantal dat je mag importeren. Bv. max 10.000 stuks. Boven dat: niet binnen.", nogSimpeler: "Max" },
         },
@@ -191,7 +191,7 @@ const steps = [
           stappen: [{ titel: "Geld erbij = goedkoper produceren", tekst: "Eigen bedrijf krijgt geld van overheid → kan goedkoper produceren → meer concurrerend." }],
           woorden: [{ woord: "subsidie", uitleg: "Geld van overheid om iets te stimuleren (bv. zonnepanelen, eigen industrie)." }],
           theorie: "EU geeft veel subsidies aan boeren (GLB) en innovatieve sectoren (chips).",
-          voorbeelden: [{ type: "feit", tekst: "ASML krijgt EU-subsidies voor R&D → kan goedkoper innoveren → wereldleider." }],
+          voorbeelden: [{ type: "feit", tekst: "Overheden (NL/EU) steunen chip-onderzoek met subsidies, o.a. via de EU Chips Act." }],
           basiskennis: [{ onderwerp: "Niet altijd toegestaan", uitleg: "WTO heeft regels — bepaalde subsidies mogen, andere niet (concurrentievervalsing)." }],
           niveaus: { basis: "Goedkoper produceren.", simpeler: "Subsidie = geld erbij van overheid → eigen bedrijf produceert goedkoper → kan beter concurreren.", nogSimpeler: "Goedkoper" },
         },
@@ -203,7 +203,7 @@ const steps = [
         wrongHints: [null, "EU = regionaal.", "VN = breder, niet handel-specifiek.", "ECB = euro."],
         uitlegPad: {
           stappen: [{ titel: "WTO = wereld-handel", tekst: "WTO = World Trade Organization. Regelt handel tussen landen + beslecht geschillen." }],
-          woorden: [{ woord: "WTO", uitleg: "Wereldhandelsorganisatie. Hoofdkwartier Genève. ~164 leden." }],
+          woorden: [{ woord: "WTO", uitleg: "Wereldhandelsorganisatie. Hoofdkwartier Genève. ~166 leden." }],
           theorie: "WTO maakt handelsverdragen + regelt klachten (bv. EU klaagt China aan voor dumping).",
           voorbeelden: [{ type: "feit", tekst: "WTO 1995 opgericht (opvolger GATT). Bepaalt wat wel/niet mag bij invoerheffingen." }],
           basiskennis: [{ onderwerp: "Niet hetzelfde als VN", uitleg: "VN = vredesorganisatie. WTO = handelsspecifiek." }],
@@ -219,7 +219,7 @@ const steps = [
           stappen: [{ titel: "Re- = terug", tekst: "Reshoring = productie terughalen die eerder naar lage-loon-landen ging (China, India)." }],
           woorden: [{ woord: "reshoring", uitleg: "Productie terughalen naar eigen land/continent. Tegenovergestelde van offshoring." }],
           theorie: "Trend na corona/oorlog: bedrijven willen minder afhankelijk van verre productie. Chips, medicijnen terug naar EU/VS.",
-          voorbeelden: [{ type: "feit", tekst: "Intel bouwt chipfabriek in Duitsland (€30 mrd). EU CHIPS Act stimuleert reshoring." }],
+          voorbeelden: [{ type: "feit", tekst: "Intel plande een chipfabriek in Duitsland (€30 mrd), maar zette dat plan in 2025 stop. TSMC bouwt wel een fabriek in Dresden. EU CHIPS Act stimuleert reshoring." }],
           basiskennis: [{ onderwerp: "Tegenovergestelde", uitleg: "Offshoring = naar buitenland. Reshoring = terug." }],
           niveaus: { basis: "Productie terug naar eigen continent.", simpeler: "Reshoring = productie weer in eigen land/EU doen, ipv China. Vooral kritieke sectoren (chips, medicijnen).", nogSimpeler: "Terug" },
         },
@@ -243,7 +243,7 @@ const steps = [
   // ─── Stap 3: Europese Unie ──────────────────────────────
   {
     title: "De Europese Unie — 27 landen, 1 markt",
-    explanation: "**EU** = 27 Europese landen die samenwerken op handel, wetgeving en politiek.\n\n**Belangrijkste afspraken**:\n\n**1. Vrije handel**: geen invoerheffingen tussen lidstaten — een Belgische pizza in NL kost niet meer dan in België.\n\n**2. Vrij verkeer (4 vrijheden)**:\n• **Goederen** — geen grenscontrole\n• **Personen** — werken/wonen waar je wilt\n• **Diensten** — bedrijf in andere EU-land openen\n• **Kapitaal** — geld vrij verplaatsen\n\n**3. Eén markt**: alsof EU-landen 1 land zijn voor handel.\n\n**4. Gezamenlijke wetten**: milieu, voedselveiligheid, consumentenbescherming, mededinging.\n\n**De Eurozone** (= subset van EU):\n• 21 landen die de euro gebruiken (NL, DE, FR, IT, ES, BE, etc. — sinds 1 januari 2026 ook Bulgarije)\n• NIET alle EU-landen: Polen, Zweden, Denemarken hebben eigen valuta\n• UK was lid → Brexit 2020\n\n**Structuur EU**:\n• **Europees Parlement**: direct gekozen, 705 leden\n• **Raad van de EU**: ministers uit lidstaten\n• **Europese Commissie**: 'regering', maakt voorstellen\n• **Hof van Justitie EU**: rechtspraak\n• **ECB** (zie stap 7)\n\n**Voordelen voor NL**:\n• 60-70% van NL-export gaat naar EU-landen\n• Geen wisselkosten of -risico binnen eurozone\n• NL bedrijf kan in heel EU verkopen zonder grenzen\n• EU onderhandelt sterker dan 27 losse landen\n\n**Nadelen**:\n• Minder eigen zeggenschap (Brusselse regels)\n• Bijdrage aan EU-begroting (~€8 mrd/jaar netto bijdrager)\n• Bij crisis in andere landen draagt NL mee (Griekse staatsschuld)\n• Snel groeiende regelgeving (regulering uit Brussel)\n\n**Brexit (2016-2020)**:\n• UK wilde controle terug over wetten + grenzen\n• Resultaat: minder handel met EU, problemen logistiek (Noord-Ierland), economie geleden\n• Lessen: vertrek-uit-EU is complex, dure\n\n**Recente discussies**:\n• Migratie (asielbeleid)\n• Klimaatbeleid (Green Deal)\n• China-strategie\n• Uitbreiding (Oekraïne, Westelijke Balkan)\n• Macht ECB",
+    explanation: "**EU** = 27 Europese landen die samenwerken op handel, wetgeving en politiek.\n\n**Belangrijkste afspraken**:\n\n**1. Vrije handel**: geen invoerheffingen tussen lidstaten — een Belgische pizza in NL kost niet meer dan in België.\n\n**2. Vrij verkeer (4 vrijheden)**:\n• **Goederen** — geen grenscontrole\n• **Personen** — werken/wonen waar je wilt\n• **Diensten** — bedrijf in een ander EU-land openen\n• **Kapitaal** — geld vrij verplaatsen\n\n**3. Eén markt**: alsof EU-landen 1 land zijn voor handel.\n\n**4. Gezamenlijke wetten**: milieu, voedselveiligheid, consumentenbescherming, mededinging.\n\n**De Eurozone** (= subset van EU):\n• 21 landen die de euro gebruiken (NL, DE, FR, IT, ES, BE, etc. — sinds 1 januari 2026 ook Bulgarije)\n• NIET alle EU-landen: Polen, Zweden, Denemarken hebben eigen valuta\n• UK was lid → Brexit 2020\n\n**Structuur EU**:\n• **Europees Parlement**: direct gekozen, 720 leden\n• **Raad van de EU**: ministers uit lidstaten\n• **Europese Commissie**: 'regering', maakt voorstellen\n• **Hof van Justitie EU**: rechtspraak\n• **ECB** (zie stap 7)\n\n**Voordelen voor NL**:\n• 60-70% van NL-export gaat naar EU-landen\n• Geen wisselkosten of -risico binnen eurozone\n• NL bedrijf kan in heel EU verkopen zonder grenzen\n• EU onderhandelt sterker dan 27 losse landen\n\n**Nadelen**:\n• Minder eigen zeggenschap (Brusselse regels)\n• Bijdrage aan EU-begroting (NL is netto betaler: enkele miljarden per jaar)\n• Bij crisis in andere landen draagt NL mee (Griekse staatsschuld)\n• Snel groeiende regelgeving (regulering uit Brussel)\n\n**Brexit (2016-2020)**:\n• UK wilde controle terug over wetten + grenzen\n• Resultaat: minder handel met EU, problemen logistiek (Noord-Ierland), economie geleden\n• Lessen: vertrek uit de EU is complex en duur\n\n**Recente discussies**:\n• Migratie (asielbeleid)\n• Klimaatbeleid (Green Deal)\n• China-strategie\n• Uitbreiding (Oekraïne, Westelijke Balkan)\n• Macht ECB",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">EUROPESE UNIE</text>
 <circle cx="160" cy="105" r="65" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="2"/>
@@ -260,7 +260,7 @@ const steps = [
         q: "Hoeveel landen zitten in de EU?",
         options: ["27", "20", "50", "12"],
         answer: 0,
-        wrongHints: [null, "Dat lijkt op de eurozone (nu 21 landen), niet de EU.", "Te veel.", "Begin EEG, nu 27."],
+        wrongHints: [null, "Dat lijkt op de eurozone (nu 21 landen), niet de EU.", "Te veel.", "Zo groot was de EEG rond 1986; nu 27."],
         uitlegPad: {
           stappen: [{ titel: "27 sinds Brexit", tekst: "EU = 27 landen. Was 28 met UK, na Brexit (2020) = 27." }],
           woorden: [{ woord: "EU", uitleg: "Europese Unie. Politieke + economische samenwerking 27 Europese landen." }],
@@ -306,8 +306,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Commissie = regering", tekst: "Europese Commissie = uitvoerende macht EU. Maakt wetsvoorstellen + voert uit." }],
           woorden: [{ woord: "Europese Commissie", uitleg: "EU-regering, 27 commissarissen (1 per land). Voorzitter: Ursula von der Leyen (2024)." }],
-          theorie: "EU-instellingen: Commissie (regering), Parlement (wetgever, 705 leden gekozen), Raad (ministers lidstaten), Hof van Justitie (rechter), ECB (bank).",
-          voorbeelden: [{ type: "feit", tekst: "Commissie stelt voor: 'verbod op ICE-auto's vanaf 2035'. Parlement + Raad keuren goed." }],
+          theorie: "EU-instellingen: Commissie (regering), Parlement (wetgever, 720 leden gekozen), Raad (ministers lidstaten), Hof van Justitie (rechter), ECB (bank).",
+          voorbeelden: [{ type: "feit", tekst: "Commissie stelt voor: 'geen nieuwe benzine- en dieselauto's meer vanaf 2035'. Parlement + Raad keuren goed." }],
           basiskennis: [{ onderwerp: "Niet gekozen", uitleg: "Commissarissen worden voorgedragen door regeringen, niet direct gekozen." }],
           niveaus: { basis: "Regering.", simpeler: "Europese Commissie = 'regering' van EU — maakt voorstellen + voert beleid uit. Parlement = wetgever.", nogSimpeler: "Regering" },
         },
@@ -321,7 +321,7 @@ const steps = [
           stappen: [{ titel: "Britain + Exit", tekst: "Brexit = Britain Exit. UK verliet officieel EU op 31 januari 2020." }],
           woorden: [{ woord: "Brexit", uitleg: "Vertrek UK uit EU. Referendum 2016 → exit 2020." }],
           theorie: "Reden: UK wilde controle over wetten + grenzen. Resultaat: minder handel met EU, problemen Noord-Ierland.",
-          voorbeelden: [{ type: "feit", tekst: "UK is enige land ooit dat EU verlaten heeft. EU-reactie: zware regels om vertrek af te raden." }],
+          voorbeelden: [{ type: "feit", tekst: "UK is het enige land dat de EU ooit verlaten heeft." }],
           basiskennis: [{ onderwerp: "Lessen", uitleg: "Brexit liet zien dat EU-vertrek complex en duur is — afschrikwekkend voor andere landen." }],
           niveaus: { basis: "UK weg.", simpeler: "Brexit (Britain + Exit) = UK verliet EU in 2020 na referendum 2016.", nogSimpeler: "Vertrek UK" },
         },
@@ -345,7 +345,7 @@ const steps = [
   // ─── Stap 4: Wisselkoersen en de euro ─────────────────
   {
     title: "Wisselkoersen — wat is jouw euro waard?",
-    explanation: "**Wisselkoers** = de prijs van de ene valuta in de andere. Voorbeeld: €1 = $1,10 = ¥160.\n\nWisselkoersen veranderen elke dag (en seconde) op de **valutamarkt**. Door:\n• Vraag en aanbod naar valuta\n• Rente-verschillen tussen landen (hogere rente trekt geld aan)\n• Politieke onzekerheid (oorlog, verkiezingen)\n• Economische groei\n• Inflatieverschillen\n\n**Sterke euro** (€1 = $1,30):\n• **Importeren wordt goedkoper** (Amerikaanse iPhone kost minder euro)\n• **Exporteren wordt duurder** (Amerikaanse klanten moeten meer dollar)\n• Toerisme NL → VS goedkoper\n\n**Zwakke euro** (€1 = $1,00):\n• Andersom: import duur, export aantrekkelijk\n• Toerisme NL → VS duur\n\n**Voor jou als toerist**:\n• Vlucht naar Bangkok: blijf op huidige koers letten\n• Geld wisselen op luchthaven = duur (slechte koers + commissie)\n• Beter: pinnen ter plaatse met je gewone bankpas\n\n**Waarom euro voor 21 landen één is**:\n• Geen wisselkoersrisico binnen eurozone\n• Geen wisselkosten\n• Prijzen makkelijk vergelijkbaar\n• ECB bewaakt euro-koers (zie stap 7)\n\n**Belangrijke valuta**:\n• **USD** (US dollar) — wereldreservevaluta\n• **EUR** (euro) — 21 landen\n• **GBP** (Brits pond) — UK\n• **JPY** (Japanse yen) — Japan\n• **CNY** (Chinese yuan) — China, deels gereguleerd\n• **CHF** (Zwitserse frank) — Zwitserland, 'safe haven'\n\n**Wisselkoers-systemen**:\n• **Vrije zwevende koers**: markt bepaalt (USD, EUR, JPY)\n• **Gereguleerde koers**: overheid controleert (CNY deels)\n• **Vaste koers**: overheid garandeert (Hong Kong dollar aan USD)\n\n**Effect inflatie op wisselkoers**:\n• Hoge inflatie in NL → euro daalt vs valuta met lage inflatie\n• Mensen verkiezen sterke valuta\n\n**Speculatie**:\n• Grote handelaren (banken, hedge funds) verdienen aan kleine bewegingen\n• Soms aanvallen op zwakke valuta (Soros vs Brits pond, 1992)\n\n**Voorbeeld vakantie**:\n• Reis Bali, kost 5 mln Indonesische rupiah\n• Bij koers 16.000 IDR per euro = €312\n• Bij koers 18.000 IDR per euro = €278\n→ Verschil €34, soms verschil zit gewoon in 'wanneer je gaat'.",
+    explanation: "**Wisselkoers** = de prijs van de ene valuta in de andere. Voorbeeld: €1 = $1,10 = ¥160.\n\nWisselkoersen veranderen elke dag (en seconde) op de **valutamarkt**. Door:\n• Vraag en aanbod naar valuta\n• Rente-verschillen tussen landen (hogere rente trekt geld aan)\n• Politieke onzekerheid (oorlog, verkiezingen)\n• Economische groei\n• Inflatieverschillen\n\n**Sterke euro** (€1 = $1,30):\n• **Importeren wordt goedkoper** (Amerikaanse iPhone kost minder euro)\n• **Exporteren wordt duurder** (Amerikaanse klanten moeten meer dollar)\n• Toerisme NL → VS goedkoper\n\n**Zwakke euro** (€1 = $1,00):\n• Andersom: import duur, export aantrekkelijk\n• Toerisme NL → VS duur\n\n**Voor jou als toerist**:\n• Vlucht naar Bangkok: blijf op huidige koers letten\n• Geld wisselen op luchthaven = duur (slechte koers + commissie)\n• Beter: pinnen ter plaatse met je gewone bankpas\n\n**Waarom euro voor 21 landen één is**:\n• Geen wisselkoersrisico binnen eurozone\n• Geen wisselkosten\n• Prijzen makkelijk vergelijkbaar\n• ECB bewaakt de waarde van de euro (zie stap 7)\n\n**Belangrijke valuta**:\n• **USD** (US dollar) — wereldreservevaluta\n• **EUR** (euro) — 21 landen\n• **GBP** (Brits pond) — UK\n• **JPY** (Japanse yen) — Japan\n• **CNY** (Chinese yuan) — China, deels gereguleerd\n• **CHF** (Zwitserse frank) — Zwitserland, 'safe haven'\n\n**Wisselkoers-systemen**:\n• **Vrije zwevende koers**: markt bepaalt (USD, EUR, JPY)\n• **Gereguleerde koers**: overheid controleert (CNY deels)\n• **Vaste koers**: overheid garandeert (Hong Kong dollar aan USD)\n\n**Effect inflatie op wisselkoers**:\n• Hoge inflatie in de eurozone → euro daalt vs valuta met lage inflatie\n• Mensen verkiezen sterke valuta\n\n**Speculatie**:\n• Grote handelaren (banken, hedge funds) verdienen aan kleine bewegingen\n• Soms aanvallen op zwakke valuta (Soros vs Brits pond, 1992)\n\n**Voorbeeld vakantie**:\n• Reis Bali, kost 5 mln Indonesische rupiah\n• Bij koers 16.000 IDR per euro = €312\n• Bij koers 18.000 IDR per euro = €278\n→ Verschil €34. Het verschil zit soms gewoon in 'wanneer je gaat'.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">WISSELKOERS € ↔ $</text>
 <rect x="40" y="40" width="80" height="50" rx="8" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
@@ -425,7 +425,7 @@ const steps = [
           stappen: [{ titel: "Vliegveld = duur", tekst: "Wisselkantoor luchthaven heeft hoge commissie + slechtere koers (gevangen klanten)." }],
           woorden: [{ woord: "commissie", uitleg: "Bedrag dat wisselkantoor inhoudt voor de service." }],
           theorie: "Beter: pinnen ter plaatse met gewone bankpas (kleinste marges) of vooraf bij eigen bank.",
-          voorbeelden: [{ type: "feit", tekst: "Schiphol-wisselkantoor: 5-8% slechter dan markt-koers." }],
+          voorbeelden: [{ type: "feit", tekst: "Wisselkantoren op luchthavens zitten vaak een paar procent onder de marktkoers." }],
           basiskennis: [{ onderwerp: "Tip", uitleg: "Pin op je vakantie alleen voor cash dat je echt nodig hebt." }],
           niveaus: { basis: "Luchthaven.", simpeler: "Wisselkantoor luchthaven = slechtste koers + hoge commissie. Pinnen ter plaatse beter.", nogSimpeler: "Vliegveld" },
         },
@@ -449,7 +449,7 @@ const steps = [
   // ─── Stap 5: Globalisering ──────────────────────────────
   {
     title: "Globalisering — de wereld als één markt",
-    explanation: "**Globalisering** = wereld wordt steeds meer verbonden — handel, communicatie, reizen.\n\n**Hoe is het zo gekomen?**\n• Goedkoper transport (vrachtschepen, vliegtuigen)\n• Internet (snel info uitwisselen, online winkelen)\n• Containers (gestandaardiseerd → veel goederen tegelijk)\n• Vrijhandelsverdragen\n• Engels als wereldtaal\n• Gevallen muren (Berlijn 1989, China economisch open)\n\n**Multinationals** (mondiale bedrijven):\n• **Hollands** voorbeeld: Shell (olie/energie), ASML (chipmachines), Heineken (bier), Unilever (consumentengoederen)\n• **Wereldwijd**: Apple, Amazon, Google, Toyota, Samsung, McDonald's\n• Hebben vestigingen in 10+ landen, kunnen winst verschuiven (belastingontwijking)\n\n**Voor- en nadelen globalisering**:\n\n**Winnaars**:\n• Consumenten (goedkope producten, meer keuze)\n• Multinationals\n• Productie-arbeiders in arme landen (banen)\n• Westerse hoogopgeleiden (kunnen wereldwijd werken)\n\n**Verliezers**:\n• Westerse fabrieksarbeiders (banen weg naar lage-loon-landen)\n• Lokaal MKB (concurrentie wereldwijd)\n• Milieu (transport CO2, vervuiling)\n\n**Anti-globalisering**:\n• Mensen voelen zich vergeten\n• Politieke groei van protectionisme (Trump, Brexit, RN)\n• Zorgen over identiteit, cultuur\n\n**Globalisering en arme landen**:\n• Veel banen in textiel, elektronica gemaakt in China, Bangladesh, Vietnam\n• Lonen daar zijn laag (per westerse standaard) maar hoger dan landbouw\n• Bv. Bangladesh-textielfabriek: $200/maand vs landbouw $50\n• → Mensen trekken naar steden, ontwikkeling\n• Risico's: slechte arbeidsomstandigheden (Rana Plaza-ramp 2013, 1.134 doden)\n\n**Klimaat en globalisering**:\n• Productie verplaatst → CO2 in productiegebied (China)\n• Consumptie blijft in westen — wie 'verantwoordelijk'?\n• Transport zelf veel CO2 (containerschepen, luchtvracht)\n• Opkomende beweging: 'koop lokaal'\n\n**Nieuwe trends**:\n• **Digitale globalisering**: Netflix, Spotify, social media wereldwijd\n• **Reshoring/nearshoring**: kritieke productie terug naar eigen continent\n• **Supply chain risico** (corona toonde aan)\n• **Geopolitieke spanningen** (China-VS, Rusland)",
+    explanation: "**Globalisering** = wereld wordt steeds meer verbonden — handel, communicatie, reizen.\n\n**Hoe is het zo gekomen?**\n• Goedkoper transport (vrachtschepen, vliegtuigen)\n• Internet (snel info uitwisselen, online winkelen)\n• Containers (gestandaardiseerd → veel goederen tegelijk)\n• Vrijhandelsverdragen\n• Engels als wereldtaal\n• Gevallen muren (Berlijn 1989, China economisch open)\n\n**Multinationals** (mondiale bedrijven):\n• **Hollands** voorbeeld: Shell (olie/energie), ASML (chipmachines), Heineken (bier), Unilever (consumentengoederen)\n• **Wereldwijd**: Apple, Amazon, Google, Toyota, Samsung, McDonald's\n• Hebben vestigingen in 10+ landen, kunnen winst verschuiven (belastingontwijking)\n\n**Voor- en nadelen globalisering**:\n\n**Winnaars**:\n• Consumenten (goedkope producten, meer keuze)\n• Multinationals\n• Productie-arbeiders in arme landen (banen)\n• Westerse hoogopgeleiden (kunnen wereldwijd werken)\n\n**Verliezers**:\n• Westerse fabrieksarbeiders (banen weg naar lage-loon-landen)\n• Lokaal MKB (concurrentie wereldwijd)\n• Milieu (transport CO2, vervuiling)\n\n**Anti-globalisering**:\n• Mensen voelen zich vergeten\n• Politieke groei van protectionisme (Trump, Brexit, RN)\n• Zorgen over identiteit, cultuur\n\n**Globalisering en arme landen**:\n• Veel banen in textiel, elektronica gemaakt in China, Bangladesh, Vietnam\n• Lonen daar zijn laag (per westerse standaard) maar hoger dan landbouw\n• Bv. in een textielfabriek in Bangladesh verdien je vaak meer dan op het land\n• → Mensen trekken naar steden, ontwikkeling\n• Risico's: slechte arbeidsomstandigheden (Rana Plaza-ramp 2013, 1.134 doden)\n\n**Klimaat en globalisering**:\n• Productie verplaatst → CO2 in productiegebied (China)\n• Consumptie blijft in westen — wie 'verantwoordelijk'?\n• Transport zelf veel CO2 (containerschepen, luchtvracht)\n• Opkomende beweging: 'koop lokaal'\n\n**Nieuwe trends**:\n• **Digitale globalisering**: Netflix, Spotify, social media wereldwijd\n• **Reshoring/nearshoring**: kritieke productie terug naar eigen continent\n• **Supply chain risico** (corona toonde aan)\n• **Geopolitieke spanningen** (China-VS, Rusland)",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">GLOBALISERING</text>
 <circle cx="160" cy="100" r="55" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="2"/>
@@ -502,9 +502,9 @@ const steps = [
           stappen: [{ titel: "Banen verplaatst", tekst: "Westerse fabrieksbanen verdwenen naar China/Vietnam (goedkoper). Lokale arbeiders verloren werk." }],
           woorden: [{ woord: "offshoring", uitleg: "Productie naar buitenland verplaatsen voor lagere kosten." }],
           theorie: "Globalisering heeft winnaars + verliezers. Verliezers: arbeiders in sectoren die niet kunnen concurreren met lage-loon-landen.",
-          voorbeelden: [{ type: "feit", tekst: "NL textielfabrieken sloten 1980-2000. Banen naar Bangladesh." }],
+          voorbeelden: [{ type: "feit", tekst: "NL textielfabrieken (bv. in Twente) sloten vooral in de jaren 60-80. Banen gingen naar lagelonenlanden." }],
           basiskennis: [{ onderwerp: "Politieke gevolgen", uitleg: "Verliezers stemmen anti-globalisering (Trump, Brexit, populisten)." }],
-          niveaus: { basis: "Westerse arbeiders.", simpeler: "Westerse fabriekarbeider = verliezer. Banen verdwenen naar China = werkloos.", nogSimpeler: "Arbeider" },
+          niveaus: { basis: "Westerse arbeiders.", simpeler: "Westerse fabrieksarbeider = verliezer. Banen verdwenen naar China = werkloos.", nogSimpeler: "Arbeider" },
         },
       },
       {
@@ -529,7 +529,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Standaard maat", tekst: "Container = standaard maat (20ft/40ft). Past op schip, trein, vrachtwagen — geen overpakken nodig." }],
           woorden: [{ woord: "containerisatie", uitleg: "Gebruik van gestandaardiseerde containers voor transport. Begin: 1956." }],
-          theorie: "Voor containers: arbeiders pakten elk pakje los in/uit schip. Met containers: kraan tilt 1 ding = 100x goedkoper.",
+          theorie: "Voor containers: arbeiders pakten elk pakje los in/uit schip. Met containers: kraan tilt 1 ding = tientallen keren goedkoper.",
           voorbeelden: [{ type: "feit", tekst: "Vóór: 5 dollar per ton lossen. Na: 16 cent. Globalisering werd betaalbaar." }],
           basiskennis: [{ onderwerp: "Onzichtbare revolutie", uitleg: "Container is misschien belangrijkste uitvinding voor globalisering." }],
           niveaus: { basis: "Gestandaardiseerd.", simpeler: "Container = standaard maat → snel + goedkoop transporteren tussen schip/trein/truck. Geen overpakken.", nogSimpeler: "Standaard" },
@@ -544,7 +544,7 @@ const steps = [
           stappen: [{ titel: "Twee CO2-problemen", tekst: "1) Transport (containerschepen, vliegen) = veel CO2. 2) Productie naar landen met lakse milieuregels = meer vervuiling totaal." }],
           woorden: [{ woord: "carbon leakage", uitleg: "Vervuiling die 'lekt' naar landen met lakse regels — totale vervuiling stijgt." }],
           theorie: "EU CBAM (CO2-importheffing) probeert dit te bestrijden — koolstof-intensief import wordt belast.",
-          voorbeelden: [{ type: "feit", tekst: "Containerschip Maersk → 1 schip = 50 mln auto's CO2. Cement uit China = veel meer CO2 dan EU." }],
+          voorbeelden: [{ type: "feit", tekst: "Een groot containerschip verbruikt tientallen tonnen brandstof per dag (per vervoerd product is dat wel relatief weinig). Cement uit China = vaak meer CO2 dan EU-cement." }],
           basiskennis: [{ onderwerp: "Discussie", uitleg: "Wie 'verantwoordelijk' voor productie-CO2 — productieland of consumentland?" }],
           niveaus: { basis: "CO2 transport + lakse regels.", simpeler: "Globalisering = veel transport-CO2 + productie verhuist naar landen met minder strenge milieu-regels.", nogSimpeler: "CO2 + vervuiling" },
         },
@@ -554,7 +554,7 @@ const steps = [
   // ─── Stap 6: Multinationals + arme landen ─────────────
   {
     title: "Multinationals en hun impact",
-    explanation: "**Multinational** = bedrijf met vestigingen in meerdere landen. Vaak groot — Apple is meer waard dan veel landen-BBPs samen.\n\n**Wereld-multinationals**:\n• **USA**: Apple, Amazon, Google, Microsoft, Coca-Cola\n• **NL**: Shell, ASML, Unilever, Heineken, ING, Philips\n• **DE**: Volkswagen, BMW, SAP, Siemens, Bayer\n• **CN**: Alibaba, Tencent, Huawei\n• **JP**: Toyota, Sony, Honda\n• **KR**: Samsung, Hyundai\n\n**Hoe wordt een bedrijf multinational?**\n• Begint vaak in 1 land\n• Groeit, opent kantoren in andere landen\n• Bv. McDonald's: 1955 1e restaurant USA → nu 40.000 in 100+ landen\n\n**Voor- en nadelen multinationals**:\n\n**Voordelen voor Nederland**:\n• Banen (Shell heeft duizenden NL-medewerkers)\n• Belastingopbrengst\n• Innovatie + R&D\n• Trots ('Made in Holland')\n\n**Nadelen voor Nederland**:\n• Belastingontwijking via internationale structuren (vroeger 'Dutch sandwich')\n• Macht over politiek (lobby)\n• Bij vertrek: veel banen weg\n\n**Voor arme landen**:\n• Banen + loon vaak hoger dan lokale alternatieven\n• Technologietransfer\n• Maar: slechte arbeidsomstandigheden, milieuvervuiling\n• Cultuurverandering ('McDonaldisering')\n\n**Beroemde voorbeelden goed/slecht**:\n• ✓ Apple in China: hoge eisen, betere fabrieken dan lokaal\n• ✗ Shell in Nigeria: olielekken, decennia rechtszaken\n• ✗ Foxconn in China: zelfmoorden bij iPhone-fabriek (2010)\n• ✓ Unilever 'Sustainable Living Plan' (klimaat-doelen)\n\n**Macht van multinationals**:\n• Apple-marktwaarde > NL-BBP\n• Lobby in Washington, Brussel, Den Haag\n• Kunnen landen 'tegen elkaar uitspelen' (waar laagste belasting?)\n\n**Hoe bewaak je ze?**\n• EU-mededingingsbeleid (boetes Google, Apple)\n• Internationale belastingafspraken (OESO BEPS, minimumtarief 15% VPB)\n• ESG-criteria (Environmental, Social, Governance)\n• Activisten + media\n\n**Nederlandse 'kampioenen'**:\n• **ASML** (Veldhoven) — chipmachines, monopolie op EUV-techniek\n• **Shell** — energie, hoofdkantoor naar UK 2022 (politieke kwestie)\n• **Heineken** — wereldwijd bier, #2 brouwer ter wereld\n• **Unilever** — Knorr, Magnum, Lipton, Dove\n\n**Is groot altijd slecht?**\nNee, soms efficiënt. Maar zonder check ontstaat oligopolie of monopolie. Daarom toezicht.",
+    explanation: "**Multinational** = bedrijf met vestigingen in meerdere landen. Vaak groot — Apple is meer waard dan veel landen-BBPs samen.\n\n**Wereld-multinationals**:\n• **USA**: Apple, Amazon, Google, Microsoft, Coca-Cola\n• **NL**: Shell, ASML, Unilever, Heineken, ING, Philips\n• **DE**: Volkswagen, BMW, SAP, Siemens, Bayer\n• **CN**: Alibaba, Tencent, Huawei\n• **JP**: Toyota, Sony, Honda\n• **KR**: Samsung, Hyundai\n\n**Hoe wordt een bedrijf multinational?**\n• Begint vaak in 1 land\n• Groeit, opent kantoren in andere landen\n• Bv. McDonald's: 1955 1e restaurant USA → nu 40.000 in 100+ landen\n\n**Voor- en nadelen multinationals**:\n\n**Voordelen voor Nederland**:\n• Banen (Shell heeft duizenden NL-medewerkers)\n• Belastingopbrengst\n• Innovatie + R&D\n• Trots ('Made in Holland')\n\n**Nadelen voor Nederland**:\n• Belastingontwijking via internationale structuren (vroeger 'Dutch sandwich')\n• Macht over politiek (lobby)\n• Bij vertrek: veel banen weg\n\n**Voor arme landen**:\n• Banen + loon vaak hoger dan lokale alternatieven\n• Technologietransfer\n• Maar: slechte arbeidsomstandigheden, milieuvervuiling\n• Cultuurverandering ('McDonaldisering')\n\n**Beroemde voorbeelden goed/slecht**:\n• ✓ Apple in China: hoge eisen, betere fabrieken dan lokaal\n• ✗ Shell in Nigeria: olielekken, decennia rechtszaken\n• ✗ Foxconn in China: zelfmoorden bij iPhone-fabriek (2010)\n• ✓ Unilever 'Sustainable Living Plan' (klimaat-doelen)\n\n**Macht van multinationals**:\n• Apple-marktwaarde > NL-BBP\n• Lobby in Washington, Brussel, Den Haag\n• Kunnen landen 'tegen elkaar uitspelen' (waar laagste belasting?)\n\n**Hoe bewaak je ze?**\n• EU-mededingingsbeleid (boetes Google, Apple)\n• Internationale belastingafspraken (OESO BEPS, minimumtarief 15% VPB)\n• ESG-criteria (Environmental, Social, Governance)\n• Activisten + media\n\n**Nederlandse 'kampioenen'**:\n• **ASML** (Veldhoven) — chipmachines, monopolie op EUV-techniek\n• **Shell** — energie, hoofdkantoor naar UK 2022 (politieke kwestie)\n• **Heineken** — wereldwijd bier, #2 brouwer ter wereld\n• **Unilever** — Knorr, Dove, Axe, Hellmann's\n\n**Is groot altijd slecht?**\nNee, soms efficiënt. Maar zonder check ontstaat oligopolie of monopolie. Daarom toezicht.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">MULTINATIONALS</text>
 <rect x="20" y="40" width="280" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
@@ -567,7 +567,7 @@ const steps = [
 <text x="232" y="108" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial" font-weight="bold">− NADELEN</text>
 <text x="232" y="122" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">ontwijking · macht · vervuiling</text>
 <text x="160" y="160" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">toezicht: EU + OESO + ESG</text>
-<text x="160" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">ASML &gt; NL-BBP qua waarde</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Apple &gt; NL-BBP qua waarde</text>
 </svg>`,
     checks: [
       {
@@ -635,7 +635,7 @@ const steps = [
           stappen: [{ titel: "Chip-machines", tekst: "ASML maakt machines om chips mee te maken. ENIGE bedrijf wereldwijd dat EUV-techniek heeft." }],
           woorden: [{ woord: "ASML", uitleg: "Advanced Semiconductor Materials Lithography. NL chipmachine-fabrikant in Veldhoven." }],
           theorie: "EUV-machines kosten €200 mln/stuk. Klanten: TSMC, Samsung, Intel. Zonder ASML geen geavanceerde chips wereldwijd.",
-          voorbeelden: [{ type: "feit", tekst: "ASML beurswaarde >€300 mrd (2024). Grootste tech-bedrijf EU." }],
+          voorbeelden: [{ type: "feit", tekst: "ASML beurswaarde >€300 mrd (2024). Een van de grootste techbedrijven van de EU." }],
           basiskennis: [{ onderwerp: "Strategisch", uitleg: "ASML staat midden in geopolitiek (US-China chip-oorlog) — mag niet alle machines aan China verkopen." }],
           niveaus: { basis: "Chipmachines.", simpeler: "ASML = NL bedrijf dat chipmachines maakt (EUV-monopolie). Klanten: chipfabrikanten wereldwijd.", nogSimpeler: "Chips" },
         },
@@ -697,9 +697,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te krap.", "Te hoog.", "Hyperinflatie-niveau."],
         uitlegPad: {
-          stappen: [{ titel: "2% = stabiel", tekst: "ECB streeft naar inflatie van ongeveer 2% per jaar — stabiel groei zonder ontsporen." }],
+          stappen: [{ titel: "2% = stabiel", tekst: "ECB streeft naar inflatie van ongeveer 2% per jaar — stabiele groei zonder ontsporen." }],
           woorden: [{ woord: "inflatie", uitleg: "Stijging van prijzen — geld wordt minder waard." }],
-          theorie: "0% inflatie = risico deflatie (prijzen dalen, mensen wachten kopen, economie stopt). >4% = mensen verliezen vertrouwen in geld.",
+          theorie: "0% inflatie = risico deflatie (prijzen dalen, mensen wachten kopen, economie stopt). Veel hoger dan 2% = geld verliest snel waarde.",
           voorbeelden: [{ type: "tabel", tekst: "2022: NL inflatie ~10% (gas-crisis). 2024: ~3%. ECB doel: ~2%." }],
           basiskennis: [{ onderwerp: "Niet alleen ECB", uitleg: "Andere centrale banken (Fed, Bank of England) hebben ook ~2% doel." }],
           niveaus: { basis: "~2%.", simpeler: "ECB-doel: inflatie ongeveer 2% per jaar — stabiel niveau. Niet 0% (deflatie-risico) of 5% (te hoog).", nogSimpeler: "2%" },

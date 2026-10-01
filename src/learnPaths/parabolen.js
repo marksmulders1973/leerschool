@@ -202,7 +202,7 @@ const steps = [
   },
   {
     title: "Een tabel met y = x²",
-    explanation: "Nu doen we hetzelfde als de vorige stap, maar met de regel **y = x²**.\n\nVoor elke x rekenen we x · x uit:\n\n| x | y = x² |\n|---|--------|\n| 0 | 0 · 0 = 0 |\n| 1 | 1 · 1 = 1 |\n| 2 | 2 · 2 = 4 |\n| 3 | 3 · 3 = 9 |\n| 4 | 4 · 4 = 16 |\n| 5 | 5 · 5 = 25 |\n\nValt je iets op? De y-waardes worden **steeds sneller groter**:\n• Van 0 naar 1: stap van **1**\n• Van 1 naar 4: stap van **3**\n• Van 4 naar 9: stap van **5**\n• Van 9 naar 16: stap van **7**\n• Van 16 naar 25: stap van **9**\n\nIn het plaatje hieronder zie je dat ook: elke staaf is een stuk **groter** dan de vorige. Bij gewone optellen (zoals y = x + 1) zou elke staaf even veel hoger zijn — hier niet. Y = x² **schiet weg**. Onthoud dit, want het is precies wat de parabool zijn U-vorm geeft.",
+    explanation: "Nu doen we hetzelfde als de vorige stap, maar met de regel **y = x²**.\n\nVoor elke x rekenen we x · x uit:\n\n| x | y = x² |\n|---|--------|\n| 0 | 0 · 0 = 0 |\n| 1 | 1 · 1 = 1 |\n| 2 | 2 · 2 = 4 |\n| 3 | 3 · 3 = 9 |\n| 4 | 4 · 4 = 16 |\n| 5 | 5 · 5 = 25 |\n\nValt je iets op? De y-waardes worden **steeds sneller groter**:\n• Van 0 naar 1: stap van **1**\n• Van 1 naar 4: stap van **3**\n• Van 4 naar 9: stap van **5**\n• Van 9 naar 16: stap van **7**\n• Van 16 naar 25: stap van **9**\n\nIn het plaatje hieronder zie je dat ook: elke staaf is een stuk **groter** dan de vorige. Bij gewoon optellen (zoals y = x + 1) zou elke staaf even veel hoger zijn — hier niet. Y = x² **schiet weg**. Onthoud dit, want het is precies wat de parabool zijn U-vorm geeft.",
     svg: `<svg viewBox="0 0 300 210">
 <line x1="20" y1="155" x2="280" y2="155" stroke="${COLORS.axis}" stroke-width="1"/>
 <rect x="40" y="155" width="30" height="0" fill="${COLORS.curve}" opacity="0.85"/>
@@ -276,7 +276,7 @@ ${gridSvg}
         uitlegPad: {
           stappen: [{ titel: "x-as = horizontaal", tekst: "In een assenstelsel: de x-as gaat horizontaal (links-rechts), de y-as gaat verticaal (omhoog-omlaag). Ze kruisen elkaar in de oorsprong (0,0)." }],
           woorden: [{ woord: "horizontaal", uitleg: "links-rechts (= horizon)" }],
-          theorie: "Onthoud: X is van Xerox-printer = liggend. Y is van Yes = staand.",
+          theorie: "Onthoud: de x-as ligt plat (horizontaal), de y-as staat rechtop (verticaal).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Onderaan: x-as. Aan de zijkant: y-as" }],
           basiskennis: [{ onderwerp: "twee assen", uitleg: "kruisen elkaar bij (0,0)" }],
           niveaus: { basis: "x-as.", simpeler: "Onderaan, liggend.", nogSimpeler: "Liggend." },
@@ -501,9 +501,9 @@ ${baseAxes}
           "Een parabool heeft geen knikken — denk aan de U-vorm die we tekenden, dat ging vloeiend.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Vloeiend = geen hoeken", tekst: "Een parabool is een vloeiende kromme — overal afgerond, nergens een scherpe hoek of knik. Helemaal glad zoals een opklimmend balletje." }],
+          stappen: [{ titel: "Vloeiend = geen hoeken", tekst: "Een parabool is een vloeiende kromme — overal afgerond, nergens een scherpe hoek of knik. Helemaal glad, zoals de baan van een gegooid balletje." }],
           woorden: [{ woord: "vloeiend", uitleg: "zonder hoeken of knikken" }],
-          theorie: "Hoeken zijn voor driehoeken/vierkanten. Krommes zijn glad.",
+          theorie: "Hoeken zijn voor driehoeken/vierkanten. Krommen zijn glad.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Cirkel, parabool, golf: allemaal vloeiend. Driehoek: hoeken" }],
           basiskennis: [{ onderwerp: "kromme", uitleg: "gebogen lijn" }],
           niveaus: { basis: "Nee, vloeiend.", simpeler: "Glad.", nogSimpeler: "Geen hoek." },
@@ -632,7 +632,7 @@ ${gridSvg}
   // ─── E. De "a" in y = ax² ────────────────────────────
   {
     title: 'Wat is "a" in y = ax²?',
-    explanation: "Wiskundigen schrijven vaak een **algemene vorm** met een letter, zoals **y = ax²**.\n\nDe letter **a** staat voor *het getal dat vóór x² staat*. Net zoals x een doosje is voor een onbekend getal, is **a** een doosje voor het getal vóór x².\n\nVoorbeelden:\n• y = **4**x² → hier is **a = 4**\n• y = **½**x² → hier is **a = ½**\n• y = **−2**x² → hier is **a = −2**\n• y = x² → hier is **a = 1** (de 1 schrijven we niet op, maar staat er stiekem)\n\nDe **a** is dus gewoon een getal — alleen weet je niet altijd vooraf welk. In een opgave staat 'm meestal er gewoon (zoals de 4 in y = 4x²).",
+    explanation: "Wiskundigen schrijven vaak een **algemene vorm** met een letter, zoals **y = ax²**.\n\nDe letter **a** staat voor *het getal dat vóór x² staat*. Net zoals x een doosje is voor een onbekend getal, is **a** een doosje voor het getal vóór x².\n\nVoorbeelden:\n• y = **4**x² → hier is **a = 4**\n• y = **½**x² → hier is **a = ½**\n• y = **−2**x² → hier is **a = −2**\n• y = x² → hier is **a = 1** (de 1 schrijven we niet op, maar staat er stiekem)\n\nDe **a** is dus gewoon een getal — alleen weet je niet altijd vooraf welk. In een opgave staat hij er meestal gewoon (zoals de 4 in y = 4x²).",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="50" text-anchor="middle" fill="${COLORS.text}" font-size="22" font-family="Arial">y = a · x²</text>
 <text x="135" y="48" text-anchor="middle" fill="${COLORS.curve}" font-size="22" font-family="Arial" font-weight="bold">a</text>
@@ -760,7 +760,7 @@ ${gridSvg}
         uitlegPad: {
           stappen: [{ titel: "Grote a = smal", tekst: "Hoe groter a, hoe smaller (steiler) de parabool. 4 > 1 > ½ → y = 4x² is het smalst van de drie." }],
           woorden: [{ woord: "steilheid", uitleg: "hoe snel de parabool stijgt" }],
-          theorie: "a vergroot → steiler. a verkleind → breder.",
+          theorie: "a vergroot → steiler. a verkleint → breder.",
           voorbeelden: [{ type: "voorbeeld", tekst: "y = 10x²: heel smal. y = 0,1x²: heel breed" }],
           basiskennis: [{ onderwerp: "vergelijk getallen", uitleg: "groter = smaller" }],
           niveaus: { basis: "y = 4x².", simpeler: "Grootste a.", nogSimpeler: "Grootste a. → 4." },
@@ -878,7 +878,7 @@ ${gridSvg}
   },
   {
     title: "Verschuiven omlaag: y = x² − 3",
-    explanation: "Hetzelfde idee, maar nu met **min 3**: de parabool schuift **3 omlaag**.\n\nTabel:\n\n| x | y = x² | y = x² − 3 |\n|---|--------|------------|\n| 0 | 0 | -3 |\n| 1 | 1 | -2 |\n| 2 | 4 | 1 |\n| 3 | 9 | 6 |\n\nDe top zat op (0, 0); is nu op **(0, -3)** — onder de x-as.\n\nDus: een **plus** duwt omhoog, een **min** duwt omlaag. Nooit naar links of rechts (dat doet iets anders, daar komen we later op).",
+    explanation: "Hetzelfde idee, maar nu met **min 3**: de parabool schuift **3 omlaag**.\n\nTabel:\n\n| x | y = x² | y = x² − 3 |\n|---|--------|------------|\n| 0 | 0 | -3 |\n| 1 | 1 | -2 |\n| 2 | 4 | 1 |\n| 3 | 9 | 6 |\n\nDe top zat op (0, 0) en zit nu op **(0, -3)** — onder de x-as.\n\nDus: een **plus** duwt omhoog, een **min** duwt omlaag. Nooit naar links of rechts (dat doet iets anders, daar komen we later op).",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 ${gridSvg}
@@ -1319,7 +1319,7 @@ ${gridSvg}
         uitlegPad: {
           stappen: [{ titel: "Gegooide bal = bergparabool", tekst: "Een bal gaat eerst omhoog, vertraagt, valt dan terug naar beneden. Vorm: bergparabool (∩) — top in het midden, ondersteboven-U." }],
           woorden: [{ woord: "vlucht-baan", uitleg: "pad van bewegend voorwerp" }],
-          theorie: "Zwaartekracht trekt bal naar beneden — vorm is altijd parabool.",
+          theorie: "Zwaartekracht trekt bal naar beneden — vorm is een parabool (als je de luchtweerstand verwaarloost).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Voetbal-schop, basketbal-worp, water uit slang: parabolen" }],
           basiskennis: [{ onderwerp: "natuurkunde", uitleg: "zwaartekracht + horizontale snelheid" }],
           niveaus: { basis: "Berg.", simpeler: "Omgekeerde U.", nogSimpeler: "Berg." },
@@ -1329,7 +1329,7 @@ ${gridSvg}
   },
   {
     title: "Toepassing: een fontein en een satellietschotel",
-    explanation: "Nog twee plekken waar je parabolen ziet:\n\n**Fontein** — water spuit omhoog en valt weer terug. De vorm van de waterstraal is een **bergparabool**.\n\n**Satellietschotel** — die is geen *kromme* maar een hele schaal met een dwarsdoorsnede in de vorm van een **dalparabool**. Waarom? Omdat een parabool een handige eigenschap heeft: alle stralen die er recht in vallen, komen samen op één punt — het brandpunt. Daar zit het ontvanger-puntje van de schotel.\n\nDezelfde eigenschap zit in:\n• **Koplampen** van een auto (lichtstralen vanuit één punt komen er recht uit)\n• **Telescoopspiegels**\n• **Zonnekookers**\n\nParabolen zijn dus niet alleen wiskunde — ze zijn praktisch nuttig.",
+    explanation: "Nog twee plekken waar je parabolen ziet:\n\n**Fontein** — water spuit omhoog en valt weer terug. De vorm van de waterstraal is een **bergparabool**.\n\n**Satellietschotel** — die is geen *kromme* maar een hele schaal met een dwarsdoorsnede in de vorm van een **dalparabool**. Waarom? Omdat een parabool een handige eigenschap heeft: alle stralen die er recht in vallen, komen samen op één punt — het brandpunt. Daar zit het ontvanger-puntje van de schotel.\n\nDezelfde eigenschap zit in:\n• **Koplampen** van een auto (lichtstralen vanuit één punt komen er recht uit)\n• **Telescoopspiegels**\n• **Zonnekokers**\n\nParabolen zijn dus niet alleen wiskunde — ze zijn praktisch nuttig.",
     svg: `<svg viewBox="0 0 300 200">
 <line x1="20" y1="170" x2="280" y2="170" stroke="${COLORS.axis}" stroke-width="1"/>
 <path d="M 35 170 Q 80 30 125 170" stroke="${COLORS.curve2}" stroke-width="2" fill="none"/>
@@ -1357,7 +1357,7 @@ ${gridSvg}
           stappen: [{ titel: "Schotel = dalparabool", tekst: "Satellietschotel heeft de vorm van een dalparabool (U) — alle binnenkomende stralen bundelen samen in één punt (brandpunt). Daar zit de ontvanger." }],
           woorden: [{ woord: "brandpunt", uitleg: "punt waar alle stralen samenkomen" }],
           theorie: "Eigenschap van parabool: parallelle stralen → één brandpunt.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Ook koplampen, telescopen, zonnekookers gebruiken parabool" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Ook koplampen, telescopen, zonnekokers gebruiken parabool" }],
           basiskennis: [{ onderwerp: "natuurkundige eigenschap", uitleg: "uniek voor parabool" }],
           niveaus: { basis: "Dal.", simpeler: "U-vorm.", nogSimpeler: "Komvormig." },
         },
@@ -1407,7 +1407,7 @@ ${gridSvg}
   },
   {
     title: "Eindopdracht 2: y = x² + 6x",
-    explanation: "Een lastiger eindopdracht: **y = x² + 6x** (met een bx-term, dus de top zit niet op de y-as).\n\n**1. Dal of berg?** Geen min vóór x² → **dal**.\n\n**2. Top?** Gebruik de formule x_top = −b/(2a):\n• a = 1, b = 6\n• x_top = −6 / (2·1) = **−3**\n• y_top = (−3)² + 6·(−3) = 9 − 18 = **−9**\n• Top = **(−3, −9)**\n\n**3. Nulpunten?** Stel y = 0: x² + 6x = 0.\nKun je x **buiten haakjes** halen: x · (x + 6) = 0.\nDit is 0 als x = 0 of (x + 6) = 0 → x = −6.\nNulpunten: **x = 0** en **x = −6**.\n\nNotice: de top zit precies in het midden tussen de twee nulpunten (-3 ligt midden tussen 0 en -6). Dat is altijd zo bij een parabool — de top ligt op de spiegel-as, halfweg tussen de nulpunten.",
+    explanation: "Een lastiger eindopdracht: **y = x² + 6x** (met een bx-term, dus de top zit niet op de y-as).\n\n**1. Dal of berg?** Geen min vóór x² → **dal**.\n\n**2. Top?** Gebruik de formule x_top = −b/(2a):\n• a = 1, b = 6\n• x_top = −6 / (2·1) = **−3**\n• y_top = (−3)² + 6·(−3) = 9 − 18 = **−9**\n• Top = **(−3, −9)**\n\n**3. Nulpunten?** Stel y = 0: x² + 6x = 0.\nJe kunt x **buiten haakjes** halen: x · (x + 6) = 0.\nDit is 0 als x = 0 of (x + 6) = 0 → x = −6.\nNulpunten: **x = 0** en **x = −6**.\n\nLet op: de top zit precies in het midden tussen de twee nulpunten (-3 ligt midden tussen 0 en -6). Dat is altijd zo bij een parabool — de top ligt op de spiegel-as, halverwege tussen de nulpunten.",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 ${gridSvg}
@@ -1452,12 +1452,12 @@ ${gridSvg}
           null,
           "Bijna! Haal x buiten haakjes zodat je twee factoren krijgt. Wanneer is een product van twee factoren gelijk aan nul?",
           "-3 is x_top, niet een nulpunt. De top zit niet op de x-as bij deze parabool.",
-          "Er zijn wel nulpunten — vul y gelijk aan nul in en probeer een eenvoudige x die de vergelijking klopt maakt.",
+          "Er zijn wel nulpunten — stel y gelijk aan nul en zoek een eenvoudige x waarvoor de vergelijking klopt.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Buiten haakjes: x(x+6) = 0", tekst: "y = x² + 6x = 0 → haal x buiten haakjes: x · (x + 6) = 0. Dit is 0 als x = 0 OF x + 6 = 0 → x = -6. Nulpunten: 0 en -6." }],
           woorden: [{ woord: "ontbinden", uitleg: "x buiten haakjes halen" }],
-          theorie: "Trick: bij x² + bx = 0 kun je altijd x buiten haakjes halen.",
+          theorie: "Truc: bij x² + bx = 0 kun je altijd x buiten haakjes halen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "y = x² - 4x: x(x-4)=0 → x=0 of x=4" }],
           basiskennis: [{ onderwerp: "product = 0", uitleg: "één factor moet 0 zijn" }],
           niveaus: { basis: "0 en -6.", simpeler: "x = 0 of x = -6.", nogSimpeler: "Twee nulpunten." },

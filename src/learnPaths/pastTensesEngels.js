@@ -178,7 +178,7 @@ const steps = [
         q: "Welke is **goed**? — *We ___ here since 2018.* (live)",
         options: ["have lived", "lived", "are living", "live"],
         answer: 0,
-        wrongHints: [null, "Past simple past niet bij 'since'.", "Continuous past hier minder goed.", "Simple past niet bij 'since'."],
+        wrongHints: [null, "Past simple past niet bij 'since'.", "Continuous past hier minder goed.", "Present simple past niet bij 'since'."],
         uitlegPad: {
           stappen: [{ titel: "Since + perfect", tekst: "We have lived here since 2018." }],
           woorden: [{ woord: "since", uitleg: "sinds (een tijdstip)" }],
@@ -259,13 +259,13 @@ const steps = [
         q: "Welke is goed? — *I ___ him yesterday.* (see)",
         options: ["saw", "have seen", "see", "did see"],
         answer: 0,
-        wrongHints: [null, "Perfect past niet bij 'yesterday'.", "Tegenwoordige tijd, klopt niet.", "Geen geldige vorm."],
+        wrongHints: [null, "Perfect past niet bij 'yesterday'.", "Tegenwoordige tijd, klopt niet.", "'Did see' gebruik je alleen voor nadruk ('ik héb hem wél gezien'); de gewone vorm is V2."],
         uitlegPad: {
           stappen: [{ titel: "Yesterday = simple", tekst: "I saw him yesterday. Vast tijdstip → simple, V2." }],
           woorden: [{ woord: "yesterday", uitleg: "vast verleden tijdstip" }],
           theorie: "Vast tijdstip → past simple.",
           voorbeelden: [{ type: "voorbeeld", tekst: "see → V2 = saw" }],
-          basiskennis: [{ onderwerp: "signal", uitleg: "yesterday signaleert simple" }],
+          basiskennis: [{ onderwerp: "signaal", uitleg: "yesterday signaleert simple" }],
           niveaus: { basis: "saw.", simpeler: "Verleden = saw.", nogSimpeler: "Verleden = saw. → saw." },
         },
       },
@@ -316,7 +316,7 @@ const steps = [
         q: "Welke is **goed**? — sinds 2020 woon ik in Amsterdam.",
         options: ["I have lived in Amsterdam since 2020.", "I live in Amsterdam since 2020.", "I have lived in Amsterdam for 2020.", "I live in Amsterdam for 5 years."],
         answer: 0,
-        wrongHints: [null, "Simple past niet bij 'since'.", "For + jaartal klopt niet — 'for' bij duur, 'since' bij tijdstip.", "Simple past niet bij doorlopende situatie."],
+        wrongHints: [null, "Present simple past niet bij 'since'.", "For + jaartal klopt niet — 'for' bij duur, 'since' bij tijdstip.", "Present simple past niet bij een doorlopende situatie."],
         uitlegPad: {
           stappen: [{ titel: "Since 2020 = perfect", tekst: "I have lived in Amsterdam since 2020. Since + perfect." }],
           woorden: [{ woord: "since vs for", uitleg: "since = vanaf tijdstip, for = gedurende duur" }],
@@ -330,7 +330,7 @@ const steps = [
   },
   {
     title: "Spreektaal: contracties + intonatie",
-    explanation: "In gesproken Engels gebruik je bijna altijd **korte vormen** (contractions). Belangrijk voor natuurlijk klinken.\n\n**Past simple — geen contractie nodig** (tenzij ontkenning):\n• I went, she saw, they came.\n• I **didn't** = did not.\n\n**Present perfect — wel contracties**:\n• I've = I have\n• You've = you have\n• He's / She's / It's = he has / she has / it has *(let op: ook = he is!)*\n• We've / They've = we have / they have\n• I haven't = I have not\n• She hasn't = she has not\n\n**Verwarring**: *He's gone* kan zijn:\n• He **is** gone (continuous of als adjectief — minder vaak)\n• He **has** gone (perfect — vaakst gebruikt)\n\nUit context blijkt het meestal: *He's gone home.* = perfect (weggegaan).\n\n**Tip**: in spreektaal hoor je vaak de hulpwerkwoord-contractie. Train je oor.",
+    explanation: "In gesproken Engels gebruik je bijna altijd **korte vormen** (contractions). Belangrijk voor natuurlijk klinken.\n\n**Past simple — geen contractie nodig** (tenzij ontkenning):\n• I went, she saw, they came.\n• I **didn't** = did not.\n\n**Present perfect — wel contracties**:\n• I've = I have\n• You've = you have\n• He's / She's / It's = he has / she has / it has *(let op: ook = he is!)*\n• We've / They've = we have / they have\n• I haven't = I have not\n• She hasn't = she has not\n\n**Verwarring**: *He's gone* kan zijn:\n• He **is** gone ('gone' als bijvoeglijk naamwoord: 'weg' — minder vaak)\n• He **has** gone (perfect — vaakst gebruikt)\n\nUit context blijkt het meestal: *He's gone home.* = perfect (weggegaan).\n\n**Tip**: in spreektaal hoor je vaak de hulpwerkwoord-contractie. Train je oor.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">contracties</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">I have → <tspan fill="${COLORS.good}" font-weight="bold">I've</tspan></text>
@@ -457,7 +457,7 @@ const steps = [
         q: "*She ___ never ___ a horror film.* (watch)",
         options: ["has / watched", "did / watch", "has / watch", "does / watch"],
         answer: 0,
-        wrongHints: [null, "Did is voor simple zonder 'never' meestal niet juist hier.", "Na has moet V3, niet basisvorm.", "Does is present simple."],
+        wrongHints: [null, "Bij 'never' (ervaring tot nu) gebruik je present perfect, geen did.", "Na has moet V3, niet basisvorm.", "Does is present simple."],
         uitlegPad: {
           stappen: [{ titel: "Never = perfect", tekst: "She has never watched a horror film. Never → perfect, V3 = watched." }],
           woorden: [{ woord: "never", uitleg: "nooit (ervaring)" }],
@@ -485,20 +485,20 @@ const steps = [
         q: "*Last weekend we ___ to the cinema and ___ a great film.* (go / see)",
         options: ["went / saw", "have gone / seen", "went / have seen", "have gone / saw"],
         answer: 0,
-        wrongHints: [null, "Last weekend → niet perfect.", "Beide werkwoorden hetzelfde tense met vast tijdstip.", "Eerste klopt niet, vast tijdstip."],
+        wrongHints: [null, "Last weekend → niet perfect.", "Bij een vast tijdstip krijgen beide werkwoorden past simple.", "Eerste klopt niet, vast tijdstip."],
         uitlegPad: {
           stappen: [{ titel: "Last weekend = simple", tekst: "Last weekend we went... and saw... Beide V2." }],
           woorden: [{ woord: "last weekend", uitleg: "gesloten tijdstip" }],
           theorie: "Beide werkwoorden in zelfde tijdstip → zelfde tense.",
           voorbeelden: [{ type: "voorbeeld", tekst: "went en saw bij last weekend" }],
-          basiskennis: [{ onderwerp: "consistent", uitleg: "verwissel niet tijden in zelfde zin" }],
+          basiskennis: [{ onderwerp: "consistent", uitleg: "bij hetzelfde vaste tijdstip: dezelfde tijd" }],
           niveaus: { basis: "went / saw.", simpeler: "Beide V2.", nogSimpeler: "Verleden + verleden." },
         },
       },
-      { q: "I _____ in London since 2020.", options: ["have lived","lived","live","am living"], answer: 0, wrongHints: [null,"Niet — 'since' triggert present perfect.","Niet — link met nu (woont er nog).","Niet — continuous past niet bij 'since'."] },
+      { q: "I _____ in London since 2020.", options: ["have lived","lived","live","am living"], answer: 0, wrongHints: [null,"Niet — 'since' triggert present perfect.","Niet — link met nu (woont er nog).","Niet — present continuous past niet bij 'since'."] },
       { q: "Welk signaalwoord hoort bij past simple, niet present perfect?", options: ["yesterday","ever","just","already"], answer: 0, wrongHints: [null, "Ever past bij present perfect.", "Just past bij present perfect.", "Already past bij present perfect."] },
-      { q: "**Past simple** van 'play'?", options: ["played","plaid","plays","playing"], answer: 0, wrongHints: [null,"Niet spelling.","V1 / 3e persoon.","Continuous."] },
-      { q: "**Past continuous** vorm?", options: ["was/were + V-ing","had + V3","V2 alleen","will + V"], answer: 0, wrongHints: [null,"Past perfect.","Past simple.","Futur."] },
+      { q: "**Past simple** van 'play'?", options: ["played","plaid","plays","playing"], answer: 0, wrongHints: [null,"Verkeerde spelling.","V1 / 3e persoon.","Continuous."] },
+      { q: "**Past continuous** vorm?", options: ["was/were + V-ing","had + V3","V2 alleen","will + V"], answer: 0, wrongHints: [null,"Past perfect.","Past simple.","Future simple."] },
       { q: "**Past perfect** vorm?", options: ["had + V3","was + V-ing","V2","will have V3"], answer: 0, wrongHints: [null,"Past continuous.","Past simple.","Future perfect."] },
       { q: "*'I ___ TV when the phone rang.'* — past continuous?", options: ["was watching","watched","have watched","will watch"], answer: 0, wrongHints: [null,"Past simple.","Present perfect.","Future."] },
       { q: "*'When she arrived, the film ___ already started.'* — past perfect?", options: ["had","has","is","was"], answer: 0, wrongHints: [null,"Present perfect.","Present.","Past simple."] },

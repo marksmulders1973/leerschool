@@ -98,7 +98,7 @@ const steps = [
           stappen: [{ titel: "Veiligheid = wetten + orde", tekst: "Defensie (leger) = bescherming tegen buitenlandse dreiging. Politie = bescherming binnen NL. Beide vallen onder 'wetten en orde' = veiligheid." }],
           woorden: [{ woord: "wetten en orde", uitleg: "Eerste klassieke overheidstaak: veiligheid waarborgen via wetten + handhaving." }, { woord: "defensie", uitleg: "Bescherming tegen buitenlandse aanvallen door middel van leger, luchtmacht, marine." }],
           theorie: "Klassieke overheidstaken (nachtwakerstaat): wetten, orde, defensie. Moderne taken (verzorgingsstaat): onderwijs, zorg, sociale zekerheid, inkomensverdeling.",
-          voorbeelden: [{ type: "defensie", tekst: "NL-leger uitgaven ~€20 mrd/jaar (~5% van Rijksbegroting). NAVO-verdrag verplicht 2% BBP." }],
+          voorbeelden: [{ type: "defensie", tekst: "NL-leger uitgaven ~€20 mrd/jaar (~5% van Rijksbegroting). NAVO-landen spraken een minimum af als % van het BBP (lang 2%, in 2025 verhoogd)." }],
           basiskennis: [{ onderwerp: "Niet onderwijs/sociaal", uitleg: "Onderwijs en sociale zekerheid zijn aparte taken. Defensie is veiligheid." }],
           niveaus: { basis: "Defensie = wetten + orde.", simpeler: "Defensie beschermt NL = veiligheid = 'wetten en orde'-taak.", nogSimpeler: "Veiligheid" },
         },
@@ -107,7 +107,7 @@ const steps = [
         q: "Wat is een **verzorgingsstaat**?",
         options: ["Land waar de overheid veel sociale taken vervult, gefinancierd door hoge belasting", "Land zonder overheid", "Land met alleen private zorg", "Land met dictatuur"],
         answer: 0,
-        wrongHints: [null, "Zonder overheid bestaat niet.", "Tegendeel — verzorgingsstaat heeft publieke zorg.", "Politiek systeem is iets anders."],
+        wrongHints: [null, "Een land zonder overheid bestaat niet.", "Tegendeel — verzorgingsstaat heeft publieke zorg.", "Politiek systeem is iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Veel sociale taken + hoge belasting", tekst: "Verzorgingsstaat = land waar overheid veel SOCIALE taken vervult: gezondheidszorg, onderwijs, uitkeringen. Burger betaalt veel belasting, krijgt veel publieke voorzieningen terug." }],
           woorden: [{ woord: "verzorgingsstaat", uitleg: "Staatsmodel met sterk publiek systeem voor zorg, onderwijs, sociale zekerheid." }, { woord: "liberale staat", uitleg: "Staat waar overheid weinig doet en markt veel — VS-model." }],
@@ -124,11 +124,11 @@ const steps = [
         wrongHints: [null, "Beleidsmaatregel, geen extern effect.", "Loon is interne uitkomst.", "Spaargeld is privé."],
         uitlegPad: {
           stappen: [{ titel: "Effect VOOR ANDEREN", tekst: "Extern effect = gevolg van een activiteit voor mensen die er NIET aan deelnemen. Fabriek vervuilt → omwonenden krijgen ziekteklachten. Niet in prijs verrekend." }],
-          woorden: [{ woord: "extern effect", uitleg: "Positief of negatief gevolg voor derden, niet meegenomen in de markprijs." }, { woord: "negatief extern effect", uitleg: "Schade voor derden: vervuiling, geluidsoverlast, files." }, { woord: "positief extern effect", uitleg: "Voordeel voor derden: onderwijs (slimmere samenleving), bijenhouder (bestuiving voor buurtboer)." }],
+          woorden: [{ woord: "extern effect", uitleg: "Positief of negatief gevolg voor derden, niet meegenomen in de marktprijs." }, { woord: "negatief extern effect", uitleg: "Schade voor derden: vervuiling, geluidsoverlast, files." }, { woord: "positief extern effect", uitleg: "Voordeel voor derden: onderwijs (slimmere samenleving), bijenhouder (bestuiving voor buurtboer)." }],
           theorie: "Markt regelt externe effecten niet zelf. Overheid grijpt in via heffingen (CO2-heffing), regulering (uitstootnormen) of subsidies (zonnepanelen).",
           voorbeelden: [{ type: "negatief", tekst: "Stikstof-uitstoot landbouw → natuur kapot, omwonenden ziek. Boer betaalt prijs niet." }, { type: "positief", tekst: "Onderwijs maakt iedereen slimmer → hele samenleving profiteert." }],
           basiskennis: [{ onderwerp: "Niet beleid", uitleg: "Belastingverlaging is BELEID, geen extern effect. Loon en spaargeld zijn interne uitkomsten." }],
-          niveaus: { basis: "Vervuiling voor derden.", simpeler: "Extern effect = iemand anders ondervindt jouw activiteit zonder dat het in de prijs zit.", nogSimpeler: "Anderen lijden" },
+          niveaus: { basis: "Vervuiling voor derden.", simpeler: "Extern effect = iemand anders ondervindt gevolgen van jouw activiteit zonder dat het in de prijs zit.", nogSimpeler: "Anderen lijden" },
         },
       },
     ],
@@ -232,8 +232,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Bezuinigingsoperatie", tekst: "Bij decentralisatie 2015 ging jeugdzorg + WMO + bijstand naar gemeenten. Maar het Rijk gaf MINDER geld mee dan de oude budgetten — bezuinigingsoperatie. Gemeenten kwamen in financiële problemen." }],
           woorden: [{ woord: "decentralisatie", uitleg: "Taken van Rijk → gemeenten doorgeven." }, { woord: "korting bij overheveling", uitleg: "Rijk gaf minder geld dan eerder voor dezelfde taken — verwachting was efficiëntiewinst, maar bleek te krap." }],
-          theorie: "Effect: gemeenten moesten wachtlijsten invoeren, eigen bijdragen verhogen, of geld bijleggen uit gemeentefonds. Sommige gemeenten kondigden faillissement aan. Probleem actueel — Rijk doet incidentele bijspijkeringen.",
-          voorbeelden: [{ type: "praktijk", tekst: "Gemeente Zaanstad: jeugdzorg-tekort €15 mln in 2018, moest snijden in andere voorzieningen." }],
+          theorie: "Effect: gemeenten moesten wachtlijsten invoeren, eigen bijdragen verhogen, of geld bijleggen uit gemeentefonds. Sommige gemeenten kwamen in grote financiële nood. Probleem actueel — Rijk doet incidentele bijspijkeringen.",
+          voorbeelden: [{ type: "praktijk", tekst: "Veel gemeenten hadden miljoenentekorten op jeugdzorg en moesten snijden in andere voorzieningen." }],
           basiskennis: [{ onderwerp: "Wel iets merkbaar", uitleg: "Burgers merkten: langere wachtlijsten + hogere eigen bijdragen + verschillende behandeling per gemeente (postcodeloterij)." }],
           niveaus: { basis: "Meer taken, minder geld.", simpeler: "Gemeenten kregen nieuwe taken EN te weinig geld → financiële problemen.", nogSimpeler: "Te weinig geld" },
         },
@@ -275,7 +275,7 @@ const steps = [
           stappen: [{ titel: "Prinsjesdag", tekst: "Elke 3e dinsdag van september presenteert de koning de Troonrede + minister van Financiën de Miljoenennota met de Rijksbegroting voor het komend jaar." }],
           woorden: [{ woord: "Prinsjesdag", uitleg: "3e dinsdag van september. Koningsrijtuig, Troonrede, Miljoenennota." }, { woord: "Rijksbegroting", uitleg: "Plan van inkomsten + uitgaven van Rijk voor 1 jaar." }],
           theorie: "Begrotingsjaar = kalenderjaar. Presentatie 3 maanden voor start — parlement heeft tot eind december om vragen te stellen + amendementen in te dienen. Daadwerkelijk goedgekeurd door beide Kamers.",
-          voorbeelden: [{ type: "ritueel", tekst: "Koning rijdt met de Glazen Koets naar het Binnenhof, leest de Troonrede in de Ridderzaal." }],
+          voorbeelden: [{ type: "ritueel", tekst: "Koning rijdt in een koets door Den Haag en leest de Troonrede voor (traditioneel in de Ridderzaal; tijdens de verbouwing van het Binnenhof op een andere plek)." }],
           basiskennis: [{ onderwerp: "Niet 1 januari", uitleg: "Op 1 jan gaat begroting in, maar presentatie gebeurt al in september." }],
           niveaus: { basis: "3e dinsdag september.", simpeler: "Prinsjesdag = de derde dinsdag van september. Koning leest Troonrede.", nogSimpeler: "Prinsjesdag" },
         },
@@ -298,12 +298,12 @@ const steps = [
         q: "Wat is de **Miljoenennota**?",
         options: ["Document met de plannen voor de Rijksbegroting", "Een toespraak van de koning", "Een rekening voor 1 miljoen", "Europese richtlijn"],
         answer: 0,
-        wrongHints: [null, "Troonrede is de toespraak.", "Geen rekening — naam komt van miljarden bedragen.", "Puur Nederlands document."],
+        wrongHints: [null, "Troonrede is de toespraak.", "Geen rekening — het is een plan-document.", "Puur Nederlands document."],
         uitlegPad: {
           stappen: [{ titel: "Plan-document", tekst: "Miljoenennota = financieel plan-document van het Kabinet. Bevat de uitgangspunten + verwachte inkomsten/uitgaven voor het komend jaar. Wordt op Prinsjesdag aangeboden door minister van Financiën." }],
           woorden: [{ woord: "Miljoenennota", uitleg: "Hoofdstuk van de Rijksbegroting met financiële plannen en economische verwachtingen." }, { woord: "Troonrede", uitleg: "Toespraak van de koning op Prinsjesdag waarin regering hoofdlijnen aankondigt." }],
-          theorie: "Naam komt van: de bedragen lopen in miljarden, maar 'Miljardennota' kwam pas later in zwang. Klassieke naam blijft Miljoenennota.",
-          voorbeelden: [{ type: "praktijk", tekst: "Miljoenennota 2025 ~700 pagina's met sectorale uitgaven, belastingplannen, schuldprognose." }],
+          theorie: "De naam stamt uit de tijd dat de bedragen nog in miljoenen liepen. Nu gaat het om miljarden, maar de oude naam is gebleven.",
+          voorbeelden: [{ type: "praktijk", tekst: "De Miljoenennota is een dik document met sectorale uitgaven, belastingplannen, schuldprognose." }],
           basiskennis: [{ onderwerp: "Niet de toespraak", uitleg: "Troonrede is de TOESPRAAK van de koning. Miljoenennota is het DOCUMENT van Financiën." }],
           niveaus: { basis: "Plan-document begroting.", simpeler: "Miljoenennota = boekwerk met financiële plannen Rijk voor komend jaar.", nogSimpeler: "Plan-boek" },
         },
@@ -312,7 +312,7 @@ const steps = [
         q: "Wat is de **grootste uitgavenpost** van de Rijksoverheid?",
         options: ["Sociale zekerheid (~30%)", "Defensie", "Onderwijs", "Cultuur"],
         answer: 0,
-        wrongHints: [null, "Defensie is veel kleiner (~3%).", "Onderwijs ~10%.", "Cultuur is klein."],
+        wrongHints: [null, "Defensie is veel kleiner (~3-5%).", "Onderwijs ~10%.", "Cultuur is klein."],
         uitlegPad: {
           stappen: [{ titel: "Sociale zekerheid #1", tekst: "AOW + WW + bijstand + WIA + toeslagen + kinderbijslag samen ~30% van Rijksuitgaven. Veruit grootste post." }],
           woorden: [{ woord: "sociale zekerheid", uitleg: "Stelsel van uitkeringen + toeslagen om iedereen een basisinkomen + sociale bescherming te garanderen." }],
@@ -330,7 +330,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tekort = bijlenen", tekst: "Begrotingstekort = uitgaven > inkomsten. Verschil moet de overheid LENEN op de kapitaalmarkt via staatsobligaties. Schuld groeit met dat bedrag." }],
           woorden: [{ woord: "begrotingstekort", uitleg: "Negatief saldo: meer uitgaven dan inkomsten. Resultaat: bijlenen + staatsschuld stijgt." }, { woord: "begrotingsoverschot", uitleg: "Positief saldo: inkomsten > uitgaven. Kan worden gebruikt om schuld af te lossen." }],
-          theorie: "EMU-norm: tekort < 3% BBP. NL had 2024 ~€20 mrd tekort = ~2,5% BBP, net onder grens. Tijdens corona ging dit ver omhoog (~13% in 2020) — uitzondering toegestaan.",
+          theorie: "EMU-norm: tekort < 3% BBP. NL zat de afgelopen jaren meestal onder die grens. Tijdens corona (2020) ging NL er tijdelijk boven — uitzondering toegestaan.",
           voorbeelden: [{ type: "rekensom", tekst: "Inkomsten €350 mrd, uitgaven €370 mrd → tekort €20 mrd → staatsschuld stijgt met €20 mrd." }],
           basiskennis: [{ onderwerp: "Schuld stijgt", uitleg: "Tekort wordt geleend → staatsschuld groeit met dat bedrag. Mechanisme van schuldopbouw." }],
           niveaus: { basis: "Uitgaven > inkomsten.", simpeler: "Begrotingstekort = meer uitgeven dan binnenkrijgen → overheid moet bijlenen → schuld stijgt.", nogSimpeler: "Tekort = bijlenen" },
@@ -342,9 +342,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "De koning ondertekent ceremonieel maar parlement beslist.", "Hij/zij stelt voor, parlement beslist.", "Belastingdienst voert uit."],
         uitlegPad: {
-          stappen: [{ titel: "Parlement beslist", tekst: "Regering DIENT begroting in. Tweede Kamer behandelt + amenden + stemt. Eerste Kamer beoordeelt + stemt. Pas met goedkeuring van BEIDE Kamers wordt begroting wet." }],
+          stappen: [{ titel: "Parlement beslist", tekst: "Regering DIENT begroting in. Tweede Kamer behandelt + amendeert + stemt. Eerste Kamer beoordeelt + stemt. Pas met goedkeuring van BEIDE Kamers wordt begroting wet." }],
           woorden: [{ woord: "Tweede Kamer", uitleg: "150 leden, direct gekozen. Hoofdrol bij budgetbehandeling." }, { woord: "Eerste Kamer", uitleg: "75 leden, indirect gekozen door Provinciale Staten. Toetst kwaliteit van wetten." }],
-          theorie: "Parlementaire controle: Kamer kan begroting WIJZIGEN via amendement (Tweede Kamer) of AFWIJZEN (zowel Tweede als Eerste). Een afgewezen begroting = kabinet valt vaak.",
+          theorie: "Parlementaire controle: Kamer kan begroting WIJZIGEN via amendement (Tweede Kamer) of AFWIJZEN (zowel Tweede als Eerste). Een afgewezen begroting kan tot een kabinetscrisis leiden.",
           voorbeelden: [{ type: "praktijk", tekst: "Begroting Onderwijs €40 mrd → Tweede Kamer voegt €500 mln toe voor lerarensalarissen → Eerste Kamer keurt goed → wet." }],
           basiskennis: [{ onderwerp: "Niet minister", uitleg: "Minister van Financiën STELT VOOR (Miljoenennota). Parlement beslist." }],
           niveaus: { basis: "Tweede + Eerste Kamer.", simpeler: "Beide Kamers moeten goedkeuren. Dan pas is begroting officieel.", nogSimpeler: "Parlement" },
@@ -355,7 +355,7 @@ const steps = [
   // ─── Stap 4: Staatsschuld ────────────────────────────────
   {
     title: "Staatsschuld — wat als er steeds bij wordt geleend?",
-    explanation: "**Staatsschuld** = alle schulden die de overheid in de loop der jaren heeft opgebouwd.\n\nNederland heeft een schuld van **~€500 miljard** (eind 2024). Geleend bij banken, pensioenfondsen en investeerders (via **staatsobligaties**).\n\n**Staatsobligatie**: lening-papiertje van de overheid. Investeerder leent de staat geld voor X jaar tegen Y% rente.\n\n**Waarom is staatsschuld een probleem?**\n• **Rente** moet elk jaar betaald worden — geld dat NIET aan onderwijs of zorg kan\n• Schuld stijgt jaar op jaar bij begrotingstekort\n• **EMU-norm** (EU): schuld max 60% van het BBP\n\n**EMU = Economische en Monetaire Unie**:\n• Stabiliteits- en Groeipact (1997)\n• EU-landen mogen schuld max **60% BBP** + tekort max **3% BBP**\n• Bij overschrijding: 'buitensporig tekort' procedure\n• In praktijk: regel is vaak overschreden (Italië, Frankrijk, ook NL tijdens corona)\n\n**Waarom is sommige schuld OK?**\n• Voor **investeringen** die later geld opleveren (snelweg, hoger onderwijs)\n• Tijdens **crisissen** (corona, financiële crisis 2008) is bijlenen normaal — economie draaiende houden\n• Een land is geen huishouden: kan in principe altijd herfinancieren\n\n**BBP (Bruto Binnenlands Product)** = alles wat in NL in 1 jaar wordt geproduceerd.\nNL BBP ~€1.000 miljard/jaar.\n\nSchuld als % van BBP zegt MEER dan absoluut bedrag:\n• Een arm land met €100 miljard schuld is erger dan een rijk land met €500 miljard schuld\n• Vergelijk: Japan schuld ~250% BBP, USA ~120%, NL ~50%\n\n**Wat als rente stijgt?**\n• 1% rentestijging op €500 mrd schuld = €5 mrd EXTRA per jaar\n• Concurrentie met andere uitgaven\n• Drukt regeringen tot bezuinigingen\n\n**Schuldsanering in andere landen**:\n• **Inflatie**: schuld in vaste euro's wordt minder waard (verkapte vorm)\n• **Hoge belasting + bezuinigen** (Griekenland 2010)\n• Soms **schuldkwijtschelding** (na crisis)\n\n**Belangrijk**: schuld OPLOSSEN duurt decennia. Voorkomen is makkelijker.",
+    explanation: "**Staatsschuld** = alle schulden die de overheid in de loop der jaren heeft opgebouwd.\n\nNederland heeft een schuld van **~€500 miljard** (eind 2024). Geleend bij banken, pensioenfondsen en investeerders (via **staatsobligaties**).\n\n**Staatsobligatie**: lening-papiertje van de overheid. Investeerder leent de staat geld voor X jaar tegen Y% rente.\n\n**Waarom is staatsschuld een probleem?**\n• **Rente** moet elk jaar betaald worden — geld dat NIET aan onderwijs of zorg kan\n• Schuld stijgt jaar op jaar bij begrotingstekort\n• **EMU-norm** (EU): schuld max 60% van het BBP\n\n**EMU = Economische en Monetaire Unie**:\n• Stabiliteits- en Groeipact (1997)\n• EU-landen mogen schuld max **60% BBP** + tekort max **3% BBP**\n• Bij overschrijding: 'buitensporig tekort' procedure\n• In praktijk: regel is vaak overschreden (Italië, Frankrijk, ook NL tijdens corona)\n\n**Waarom is sommige schuld OK?**\n• Voor **investeringen** die later geld opleveren (snelweg, hoger onderwijs)\n• Tijdens **crisissen** (corona, financiële crisis 2008) is bijlenen normaal — economie draaiende houden\n• Een land is geen huishouden: kan in principe altijd herfinancieren\n\n**BBP (Bruto Binnenlands Product)** = alles wat in NL in 1 jaar wordt geproduceerd.\nNL BBP ~€1.000 miljard/jaar.\n\nSchuld als % van BBP zegt MEER dan absoluut bedrag:\n• Een arm land met €100 miljard schuld is erger dan een rijk land met €500 miljard schuld\n• Vergelijk: Japan schuld ~250% BBP, USA ~120%, NL ~50%\n\n**Wat als rente stijgt?**\n• 1% rentestijging op €500 mrd schuld = €5 mrd EXTRA per jaar\n• Concurrentie met andere uitgaven\n• Dwingt regeringen tot bezuinigingen\n\n**Schuldsanering in andere landen**:\n• **Inflatie**: schuld in vaste euro's wordt minder waard (verkapte vorm)\n• **Hoge belasting + bezuinigen** (Griekenland 2010)\n• Soms **schuldkwijtschelding** (na crisis)\n\n**Belangrijk**: schuld OPLOSSEN duurt decennia. Voorkomen is makkelijker.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">STAATSSCHULD NL ~€500 mrd</text>
 <line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
@@ -415,12 +415,12 @@ const steps = [
         q: "Bij **1% rentestijging op €500 mrd schuld** = ... extra rente per jaar?",
         options: ["€5 miljard", "€500 miljoen", "€500 miljard", "€50 miljoen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 1% van 500 mrd.", "Veel te veel — geen verdubbeling.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — 1% van 500 mrd.", "Veel te veel — dat is de hele schuld.", "Veel te weinig."],
         uitlegPad: {
           stappen: [{ titel: "1% van €500 mrd", tekst: "1% × €500.000.000.000 = €5.000.000.000 = €5 miljard. Per jaar EXTRA rente over de hele schuld." }],
           woorden: [{ woord: "rentegevoeligheid", uitleg: "Mate waarin overheidsuitgaven veranderen bij rentewijziging." }],
-          theorie: "Niet hele schuld wordt direct geraakt — alleen nieuwe + her-financierde leningen. Maar over tijd loopt effect op. €5 mrd is ongeveer wat overheid aan defensie uitgeeft.",
-          voorbeelden: [{ type: "schaal", tekst: "€5 mrd = ongeveer hele defensiebudget of het volledige cultuur+onderwijs+sport-budget samen." }],
+          theorie: "Niet hele schuld wordt direct geraakt — alleen nieuwe + her-financierde leningen. Maar over tijd loopt effect op. €5 mrd is ongeveer een kwart van wat de overheid aan defensie uitgeeft.",
+          voorbeelden: [{ type: "schaal", tekst: "€5 mrd = veel meer dan het hele cultuurbudget, of ongeveer een kwart van het defensiebudget." }],
           basiskennis: [{ onderwerp: "Snel rekenen", uitleg: "1% van miljard = 10 miljoen. 1% van 500 miljard = 5 miljard. Schalen via factoren van 1000." }],
           niveaus: { basis: "1% × 500 = 5 mrd.", simpeler: "1% van €500 miljard = €5 miljard. Een groot bedrag per jaar extra.", nogSimpeler: "€5 mrd" },
         },
@@ -448,7 +448,7 @@ const steps = [
           stappen: [{ titel: "Rente vreet budget op", tekst: "Hoge schuld → veel rente per jaar betalen. Dat geld kan NIET aan onderwijs, zorg of infrastructuur worden uitgegeven. Verdringingseffect." }],
           woorden: [{ woord: "rente-uitgaven", uitleg: "Jaarlijkse rente die overheid betaalt over staatsschuld. Bij NL ~€10 mrd in 2024." }],
           theorie: "Hoge rente-uitgaven verdringen andere posten (crowding-out effect). Politiek dilemma: bezuinigen op onderwijs/zorg of meer belasting heffen. Beide impopulair.",
-          voorbeelden: [{ type: "praktijk", tekst: "€10 mrd renteslag = budget van Justitie of Defensie. Bij rentestijging 2022-2023 verschoven middelen." }],
+          voorbeelden: [{ type: "praktijk", tekst: "€10 mrd aan rente = een flink deel van het budget van Justitie of Defensie. Bij rentestijging 2022-2023 verschoven middelen." }],
           basiskennis: [{ onderwerp: "Burgers betalen", uitleg: "Investeerders ontvangen rente. Burgers betalen die rente via belasting." }],
           niveaus: { basis: "Rente vreet budget.", simpeler: "Veel rente betalen aan investeerders → minder geld over voor onderwijs/zorg.", nogSimpeler: "Rente = minder budget" },
         },
@@ -458,7 +458,7 @@ const steps = [
   // ─── Stap 5: Conjunctuur ────────────────────────────────
   {
     title: "Conjunctuur — economische op-en-neer",
-    explanation: "De economie groeit niet altijd gelijkmatig. Er zijn **schommelingen** rond een lange-termijn-trend. Dit heet **conjunctuur**.\n\n**Conjunctuurcyclus** — fasen:\n\n**1. Hoogconjunctuur (boom)**\n• Hoge groei BBP\n• Lage werkloosheid → krapte\n• Bedrijven maken winst\n• Lonen stijgen\n• Risico: hoge inflatie\n\n**2. Recessie**\n• 2 kwartalen op rij krimp BBP\n• Werkloosheid stijgt\n• Bedrijven minder winst, soms failliet\n• Consumenten besteden minder\n• Negatieve sfeer\n\n**3. Depressie**\n• Lange, diepe recessie (jaren)\n• Bv. 1930-1935 (Great Depression)\n\n**4. Herstel**\n• Bodem bereikt, voorzichtig groeien\n• Werkloosheid daalt langzaam\n\n**Wat veroorzaakt conjunctuur?**\n• **Vertrouwen**: consumenten/bedrijven optimistisch → kopen meer → groei\n• **Externe schokken**: oorlog, pandemie, energieprijs (1973, 2008, 2020, 2022)\n• **Cycle van investeringen** (Kondratieff: ~50 jaar)\n• **Krediet**: makkelijk lenen → meer activiteit; schuldcrisis → krimp\n\n**Wat doet de overheid bij recessie?**\n• **Belasting verlagen** → meer besteedbaar inkomen\n• **Investeren** in infrastructuur (banen) → directe stimulans\n• **Uitkeringen verhogen** of verlengen → koopkracht\n• Heet **anticyclisch begroten**: tegen de cyclus in werken\n• Probleem: tekort groeit\n\n**Wat doet de overheid bij hoogconjunctuur?**\n• **Begrotingsoverschot** opbouwen\n• Belasting NIET verlagen (oververhitting voorkomen)\n• Sparen voor de volgende recessie\n\n**Politiek lastig**: kiezers willen belastingverlaging als het goed gaat, niet wanneer overheid moet bezuinigen.\n\n**Recente recessies in NL**:\n• 2008-2009 (financiële crisis)\n• 2012-2014 (eurocrisis)\n• 2020 (corona — kort maar heftig)\n\n**Coronacrisis 2020**:\n• BBP daalde 3,7% in 1 jaar\n• Overheid pompte ~€80 mrd in NOW (steun werkgevers), TOZO (zzp), TVL (vaste lasten)\n• Schuld steeg, maar economie veerde sneller op dan verwacht",
+    explanation: "De economie groeit niet altijd gelijkmatig. Er zijn **schommelingen** rond een lange-termijn-trend. Dit heet **conjunctuur**.\n\n**Conjunctuurcyclus** — fasen:\n\n**1. Hoogconjunctuur (boom)**\n• Hoge groei BBP\n• Lage werkloosheid → krapte\n• Bedrijven maken winst\n• Lonen stijgen\n• Risico: hoge inflatie\n\n**2. Recessie**\n• 2 kwartalen op rij krimp BBP\n• Werkloosheid stijgt\n• Bedrijven minder winst, soms failliet\n• Consumenten besteden minder\n• Negatieve sfeer\n\n**3. Depressie**\n• Lange, diepe recessie (jaren)\n• Bv. 1930-1935 (Great Depression)\n\n**4. Herstel**\n• Bodem bereikt, voorzichtig groeien\n• Werkloosheid daalt langzaam\n\n**Wat veroorzaakt conjunctuur?**\n• **Vertrouwen**: consumenten/bedrijven optimistisch → kopen meer → groei\n• **Externe schokken**: oorlog, pandemie, energieprijs (1973, 2008, 2020, 2022)\n• **Cyclus van investeringen** (Kondratieff: ~50 jaar)\n• **Krediet**: makkelijk lenen → meer activiteit; schuldcrisis → krimp\n\n**Wat doet de overheid bij recessie?**\n• **Belasting verlagen** → meer besteedbaar inkomen\n• **Investeren** in infrastructuur (banen) → directe stimulans\n• **Uitkeringen verhogen** of verlengen → koopkracht\n• Heet **anticyclisch begroten**: tegen de cyclus in werken\n• Probleem: tekort groeit\n\n**Wat doet de overheid bij hoogconjunctuur?**\n• **Begrotingsoverschot** opbouwen\n• Belasting NIET verlagen (oververhitting voorkomen)\n• Sparen voor de volgende recessie\n\n**Politiek lastig**: kiezers willen belastingverlaging als het goed gaat, niet wanneer overheid moet bezuinigen.\n\n**Recente recessies in NL**:\n• 2008-2009 (financiële crisis)\n• 2012-2014 (eurocrisis)\n• 2020 (corona — kort maar heftig)\n\n**Coronacrisis 2020**:\n• BBP daalde 3,7% in 1 jaar\n• Overheid pompte ~€80 mrd in NOW (steun werkgevers), TOZO (zzp), TVL (vaste lasten)\n• Schuld steeg, maar economie veerde sneller op dan verwacht",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">CONJUNCTUURCYCLUS</text>
 <line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>

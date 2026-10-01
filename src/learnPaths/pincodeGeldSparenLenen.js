@@ -73,7 +73,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Giraal = digitaal", tekst: "Giraal geld zit op een REKENING — je ziet alleen een getal in je bank-app. Tegenover chartaal (munten + biljetten die je vasthoudt)." }],
           woorden: [{ woord: "giraal geld", uitleg: "Tegoed op een bankrekening. Digitaal, niet vast te pakken." }, { woord: "chartaal geld", uitleg: "Munten en bankbiljetten. Tastbaar." }],
-          theorie: "Tegenwoordig is ~95% van het geld in NL giraal — pinnen, Tikkie, salaris op je rekening. Chartaal wordt minder gebruikt (Sweden gaat zelfs naar cashloze samenleving).",
+          theorie: "Tegenwoordig is ~95% van het geld in NL giraal — pinnen, Tikkie, salaris op je rekening. Chartaal wordt minder gebruikt (Zweden gaat zelfs richting een cashloze samenleving).",
           voorbeelden: [{ type: "giraal", tekst: "Salaris op rekening, Tikkie, overschrijving, pinbetaling." }, { type: "chartaal", tekst: "€20-biljet in je portemonnee, €2-munt, fooi bij de kapper." }],
           basiskennis: [{ onderwerp: "Niet goud", uitleg: "Goud is een edelmetaal/waarde-object, geen modern geld." }],
           niveaus: { basis: "Giraal = bankrekening.", simpeler: "Giraal = digitaal op je rekening. Chartaal = munten/biljetten.", nogSimpeler: "Op rekening" },
@@ -103,7 +103,7 @@ const steps = [
           woorden: [{ woord: "algemeen geaccepteerd", uitleg: "Iedereen in de samenleving neemt dit aan als betaling." }, { woord: "fiat-geld", uitleg: "Geld zonder eigen waarde (papier, digitaal getal) dat waarde heeft omdat overheid + maatschappij het erkennen." }],
           theorie: "Andere eigenschappen helpen: schaars (anders waardeloos), duurzaam (gaat niet kapot), deelbaar (€1 = 100 cent). Maar zonder algemene acceptatie is geld niets.",
           voorbeelden: [{ type: "accepteren", tekst: "€-biljet werkt overal in eurozone — geaccepteerd. Bitcoin werkt op weinig plekken — beperkte acceptatie." }],
-          basiskennis: [{ onderwerp: "Geen goud nodig", uitleg: "Vroeger waren euro's gekoppeld aan goud. Sinds 1971 niet meer. Geld is nu fiat — gewoon papier of bits." }],
+          basiskennis: [{ onderwerp: "Geen goud nodig", uitleg: "Vroeger was geld (zoals de gulden en de dollar) gekoppeld aan goud. Sinds 1971 niet meer. Geld is nu fiat — gewoon papier of bits." }],
           niveaus: { basis: "Algemeen geaccepteerd.", simpeler: "Iedereen moet het willen aannemen. Anders kun je er niets mee.", nogSimpeler: "Iedereen accepteert" },
         },
       },
@@ -114,7 +114,7 @@ const steps = [
         wrongHints: [null, "Chartaal = munten/biljetten, Tikkie is digitaal.", "Tikkie is geen ruilhandel — gewoon een betaling.", "Spaargeld is een doel, geen vorm."],
         uitlegPad: {
           stappen: [{ titel: "Digitaal = giraal", tekst: "Tikkie is een DIGITALE overschrijving van rekening naar rekening. Geen munten, geen biljetten. Dus giraal geld." }],
-          woorden: [{ woord: "Tikkie", uitleg: "ING-betaalverzoek-app, populair voor onderling afrekenen. Werkt met giraal geld." }, { woord: "spaargeld", uitleg: "Geld dat je opzij zet (doel), niet een type/vorm." }],
+          woorden: [{ woord: "Tikkie", uitleg: "ABN AMRO-betaalverzoek-app, populair voor onderling afrekenen. Werkt met giraal geld." }, { woord: "spaargeld", uitleg: "Geld dat je opzij zet (doel), niet een type/vorm." }],
           theorie: "Alle moderne betalingen (Tikkie, iDEAL, pinnen, Apple Pay) zijn varianten van giraal geld — een getal in een database dat verschuift tussen rekeningen.",
           voorbeelden: [{ type: "giraal", tekst: "Tikkie €5 → €5 op andermans rekening, €5 minder op die van jou. Allemaal digitaal." }],
           basiskennis: [{ onderwerp: "Spaargeld ≠ vorm", uitleg: "Spaargeld is bedoeld voor sparen, maar de VORM ervan is giraal (op spaarrekening)." }],
@@ -160,7 +160,7 @@ const steps = [
           stappen: [{ titel: "Achteraf = lening", tekst: "'Achteraf betalen' = Klarna betaalt nu de winkel, jij betaalt over 14-30 dagen aan Klarna. Dat is per definitie een LENING van Klarna aan jou." }],
           woorden: [{ woord: "achteraf betalen", uitleg: "Vorm van consumentenkrediet waarbij je later betaalt. Vaak gratis bij snel terugbetalen, anders boetes." }, { woord: "BKR", uitleg: "Bureau Krediet Registratie — registreert leningen + betalingsachterstanden. Verhindert toekomstige leningen." }],
           theorie: "Klarna verdient aan: (1) commissie van winkel + (2) boetes/rente bij te-late betaling. Lijkt gratis maar is een schuld-instinker als je laat bent. BKR-registratie kan jarenlang gevolgen hebben (geen hypotheek bv).",
-          voorbeelden: [{ type: "op tijd", tekst: "Hoodie €60, betaald binnen 14 dagen → geen extra kosten." }, { type: "te laat", tekst: "Niet betaald → €15 herinnering + €20 incasso + €50 boete + BKR-registratie." }],
+          voorbeelden: [{ type: "op tijd", tekst: "Hoodie €60, betaald binnen 14 dagen → geen extra kosten." }, { type: "te laat", tekst: "Niet betaald → herinnering + incassokosten (minimaal €40) + mogelijk BKR-registratie." }],
           basiskennis: [{ onderwerp: "Niet cadeau", uitleg: "Klarna is een bedrijf dat geld verdient. Geen liefdadigheid." }],
           niveaus: { basis: "Achteraf = lening.", simpeler: "Klarna betaalt nu voor jou, jij moet binnen 14-30 dagen terugbetalen. Dat is gewoon een lening.", nogSimpeler: "Lening" },
         },
@@ -187,8 +187,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Geen pincode = open deur", tekst: "Contactloos < €50 vraagt geen pincode. Als iemand jouw pas vindt/steelt kan hij meteen uitgeven tot €50 per transactie zonder enige controle." }],
           woorden: [{ woord: "contactloos betalen", uitleg: "Pas/telefoon tegen apparaat houden — werkt via NFC-chip. Onder €50 geen pin." }, { woord: "verlies-risico", uitleg: "Als pas weg is: snel blokkeren bij bank om misbruik te voorkomen." }],
-          theorie: "Beschermen: pas direct blokkeren via app/bank bij verlies. ING/ABN/Rabo hebben 'verlies-direct-blokkeer'-knop in app. Vergoedingsregeling vaak tot enkele honderden euro's, maar niet gegarandeerd.",
-          voorbeelden: [{ type: "verlies", tekst: "Pas verloren in nachtclub. Dief gebruikt 8× contactloos €40 → €320 weg voor bank blokkeert." }],
+          theorie: "Beschermen: pas direct blokkeren via app/bank bij verlies. ING/ABN/Rabo hebben 'verlies-direct-blokkeer'-knop in app. Banken vergoeden misbruik meestal (eigen risico max €50), mits je het verlies snel meldt en zorgvuldig was.",
+          voorbeelden: [{ type: "verlies", tekst: "Pas verloren. Dief betaalt 3× contactloos €40 → €120 weg voordat de pas om een pincode vraagt of jij hem blokkeert." }],
           basiskennis: [{ onderwerp: "Snelheid + risico", uitleg: "Het gemak van geen pin betekent ook minder veiligheid. Trade-off." }],
           niveaus: { basis: "Geen pin = risico.", simpeler: "Bij contactloos onder €50 hoef je geen pin in te voeren → dief kan ook gewoon afrekenen.", nogSimpeler: "Geen pin" },
         },
@@ -215,7 +215,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vuistregel financieel volwassen", tekst: "Voor élke aankoop met uitgesteld betalen (Klarna, creditcard): vraag 'KAN IK DIT NU BETALEN?'. Zo nee → leg de jas terug. Anders bouw je schuld op." }],
           woorden: [{ woord: "uitgesteld betalen", uitleg: "Verzamelnaam voor Klarna, Afterpay, creditcard — verleidt tot kopen wat je niet kunt betalen." }, { woord: "schuldopbouw", uitleg: "Wanneer leningen zich opstapelen omdat je telkens nieuwe aangaat voor consumptie." }],
-          theorie: "Achter Klarna's gemak zit een commerciële strategie: ze willen dat je MEER koopt dan je kunt. Dat maakt jou kwetsbaar. Marketing-truc: 'split in 3 maandelijkse betalingen!' = 3 verkopen ipv 1.",
+          theorie: "Achter Klarna's gemak zit een commerciële strategie: ze willen dat je MEER koopt dan je kunt. Dat maakt jou kwetsbaar. Marketing-truc: 'split in 3 maandelijkse betalingen!' = drempel lager, dus je koopt sneller.",
           voorbeelden: [{ type: "verstandig", tekst: "Marie checkt rekening: €120 saldo. €200 jas? Niet kopen, sparen eerst." }, { type: "fout", tekst: "Marie koopt jas + 2 andere dingen via Klarna → €600 schuld → boetes → BKR → toekomstige hypotheek geweigerd." }],
           basiskennis: [{ onderwerp: "Niet loopt los", uitleg: "Veel jongeren komen in echte problemen door achteraf-betalen. Niet onderschatten." }],
           niveaus: { basis: "Kan ik dit NU betalen?", simpeler: "Stel jezelf altijd de vraag: heb ik dit geld NU? Zo niet, niet kopen — ook niet 'met Klarna'.", nogSimpeler: "Nu betalen" },
@@ -256,7 +256,7 @@ const steps = [
           woorden: [{ woord: "rente", uitleg: "Beloning die bank betaalt voor je gespaarde geld. Uitgedrukt als percentage per jaar." }, { woord: "spaarrente", uitleg: "Specifieke rente voor spaarrekeningen, vaak laag (1-3% in 2024)." }],
           theorie: "Formule: nieuw saldo = oud saldo × (1 + rente%). Hier: €500 × 1,03 = €515. Of: €500 + (€500 × 0,03) = €515.",
           voorbeelden: [{ type: "berekening", tekst: "3% × €500 = €15. €500 + €15 = €515 na 1 jaar." }, { type: "andere", tekst: "5% × €1.000 = €50. €1.050 na 1 jaar." }],
-          basiskennis: [{ onderwerp: "Niet 0,03 × €500 = €3", uitleg: "Vergeet niet te vermenigvuldigen met €500, niet met 1. €15 is correct, niet €3." }],
+          basiskennis: [{ onderwerp: "Niet €3", uitleg: "3% van €500 is niet €3 (dat is 3% van €100): 0,03 × €500 = €15." }],
           niveaus: { basis: "500 × 1,03 = 515.", simpeler: "3% van €500 is €15. Totaal: €500 + €15 = €515.", nogSimpeler: "€515" },
         },
       },
@@ -269,7 +269,7 @@ const steps = [
           stappen: [{ titel: "Rente over rente", tekst: "Samengestelde rente = je krijgt rente OOK over de rente die je eerder hebt ontvangen. Sneeuwbal-effect: elk jaar wordt het bedrag waarover rente wordt berekend groter." }],
           woorden: [{ woord: "samengestelde rente", uitleg: "Rente die ook over eerder ontvangen rente wordt berekend. Maakt sparen op lange termijn krachtig." }, { woord: "enkelvoudige rente", uitleg: "Rente ALLEEN over de oorspronkelijke inleg. Levert minder op." }],
           theorie: "Formule: eindbedrag = startbedrag × (1 + rente)^aantal jaren. Voorbeeld: €1000 × 1,02^10 = €1.219 (€219 winst dankzij rente-over-rente).",
-          voorbeelden: [{ type: "Albert Einstein", tekst: "Zou hebben gezegd: 'samengestelde rente is het 8e wereldwonder'." }, { type: "vergelijking", tekst: "€1000 enkelvoudige rente 2%/jr × 10 = €200 winst. Samengesteld = €219 winst. Verschil groeit exponentieel bij lang sparen." }],
+          voorbeelden: [{ type: "Albert Einstein", tekst: "Zou hebben gezegd: 'samengestelde rente is het 8e wereldwonder' (waarschijnlijk niet echt van hem)." }, { type: "vergelijking", tekst: "€1000 enkelvoudige rente 2%/jr × 10 = €200 winst. Samengesteld = €219 winst. Verschil groeit exponentieel bij lang sparen." }],
           basiskennis: [{ onderwerp: "Niet zakelijk", uitleg: "Samengestelde rente is een PRINCIPE, niet een speciaal product. Geldt voor iedereen die spaart/belegt." }],
           niveaus: { basis: "Rente over rente.", simpeler: "Volgend jaar krijg je rente over: je inleg + je gespaarde rente van vorig jaar. Sneeuwbal.", nogSimpeler: "Sneeuwbal" },
         },
@@ -284,7 +284,7 @@ const steps = [
           woorden: [{ woord: "rentemarge", uitleg: "Verschil tussen rente die bank ONTVANGT (uitleen) en BETAALT (sparen). De winst." }, { woord: "intermediair", uitleg: "Tussenpersoon — bank bemiddelt tussen spaarders en leners." }],
           theorie: "Bank model: spaarders zetten geld in, bank leent uit aan anderen tegen hogere rente. Verschil is winst. Daarom willen banken graag dat je bij hen spaart — meer geld om uit te lenen.",
           voorbeelden: [{ type: "rekenstap", tekst: "Bank krijgt €1mln spaargeld @ 2% = kost €20k. Leent uit @ 4% = €40k inkomsten. Winst: €20k." }],
-          basiskennis: [{ onderwerp: "Niet dankbaarheid/wet", uitleg: "Bank is bedrijf, niet weldoener. Rentevrij hoeft niet — bank kan ook 0% bieden als ze willen." }],
+          basiskennis: [{ onderwerp: "Niet dankbaarheid/wet", uitleg: "Bank is bedrijf, niet weldoener. Rente is niet verplicht — een bank mag ook 0% bieden." }],
           niveaus: { basis: "Bank verdient via uitlenen.", simpeler: "Bank pakt jouw spaargeld, leent het uit voor hogere rente, verschil is winst. Daarom betalen ze jou rente.", nogSimpeler: "Uitlenen-marge" },
         },
       },
@@ -312,7 +312,7 @@ const steps = [
           woorden: [{ woord: "buffer", uitleg: "Spaargeld voor onverwachte uitgaven (fiets kapot, baan verloren). Vuistregel: 3-6 maanden lasten." }, { woord: "doelsparen", uitleg: "Sparen voor specifiek doel. Geeft motivatie ook bij 0% rente." }],
           theorie: "Rente is bonus. Het ECHTE doel van sparen = (1) onverwachte tegenvallers opvangen, (2) grote dingen kunnen kopen, (3) financiële rust + zelfstandigheid.",
           voorbeelden: [{ type: "buffer", tekst: "€3.000 buffer op 0% rente = nog steeds 3 maanden bescherming bij baanverlies. Waarde > rente." }],
-          basiskennis: [{ onderwerp: "Niet 0% = niets", uitleg: "Bij 0% rente verdien je geen geld, maar verlies je ook niks. Veiligheid + discipline is de echte winst." }],
+          basiskennis: [{ onderwerp: "Niet 0% = niets", uitleg: "Bij 0% rente verdien je geen geld, maar je bedrag blijft gelijk (door inflatie wordt het wel iets minder waard). Veiligheid + discipline is de echte winst." }],
           niveaus: { basis: "Voor doelen + buffer.", simpeler: "Apart houden in spaarpot voorkomt onnodige uitgaven, ook bij 0% rente.", nogSimpeler: "Discipline" },
         },
       },
@@ -320,12 +320,12 @@ const steps = [
         q: "Wat gebeurt er bij een **negatieve rente** op je spaargeld?",
         options: ["Je betaalt de bank in plaats van andersom", "Je krijgt extra geld", "De bank gaat failliet", "Niets"],
         answer: 0,
-        wrongHints: [null, "Negatief = bank krijgt iets van jou.", "Betekent dat de bank failliet gaat is iets anders (DGS).", "Het heeft wel impact op je tegoed."],
+        wrongHints: [null, "Negatief = bank krijgt iets van jou.", "Een bankfaillissement is iets anders (daarvoor is het DGS).", "Het heeft wel impact op je tegoed."],
         uitlegPad: {
           stappen: [{ titel: "Bank rekent JOU rente", tekst: "Negatieve rente betekent: bank zegt 'geld bewaren kost MIJ moeite, betaal mij ervoor'. Jouw saldo wordt elk jaar kleiner — je betaalt om te sparen." }],
           woorden: [{ woord: "negatieve rente", uitleg: "Bank int rente over spaargeld i.p.v. te betalen. Bestond bij grote spaarders 2020-2022 (ABN/ING)." }],
           theorie: "Komt voor wanneer ECB rente onder 0 zet (om economie te stimuleren). Banken willen dan niet meer spaargeld omdat hun winst krimpt — ze ontmoedigen het via negatieve rente.",
-          voorbeelden: [{ type: "2021", tekst: "ING + ABN rekenden 0,5% negatieve rente voor spaargeld > €100k. Spaarders met €500k betaalden €2.500/jr." }],
+          voorbeelden: [{ type: "2021", tekst: "ING + ABN rekenden 0,5% negatieve rente voor spaargeld > €100k. Spaarders met €500k betaalden €2.000/jr (0,5% over het deel boven €100k)." }],
           basiskennis: [{ onderwerp: "Niet failliet", uitleg: "Negatieve rente betekent NIET dat de bank failliet gaat. Andersom — bank wil minder spaargeld." }],
           niveaus: { basis: "Jij betaalt bank.", simpeler: "Bij negatieve rente neemt de bank een klein bedrag VAN je spaargeld af — andersom dan normaal.", nogSimpeler: "Jij betaalt" },
         },
@@ -335,7 +335,7 @@ const steps = [
   // ─── Stap 4: Sparen of beleggen ───────────────────────────
   {
     title: "Sparen of beleggen — risico vs rendement",
-    explanation: "Sparen geeft weinig rente maar je geld is veilig. **Beleggen** kan meer opleveren — maar je kunt ook verlies maken. Dit is de kern van Pincode H2.2.\n\n**Sparen** (stap 3 herhaling):\n• Geld op de bank, lage rente (~1-2%)\n• Veilig: gegarandeerd tot €100.000 per bank (DGS)\n• Snel beschikbaar\n• Bij hoge inflatie verlies je toch koopkracht\n\n**Beleggen** = je geld in iets stoppen dat (hopelijk) in waarde stijgt.\n\n**Belangrijkste vormen**:\n\n**1. Aandelen**\n• Stukje eigendom in een bedrijf (Shell, ASML, Apple)\n• Verdien je via: koerswinst (waarde stijgt) + dividend (winstuitkering)\n• Kan ook DALEN — soms tot €0 (bedrijf failliet)\n• Lange termijn: ~7%/jaar gemiddeld\n\n**2. Obligaties**\n• Lening AAN een bedrijf of overheid\n• Krijg je rente over (bv. 3-4%/jaar)\n• Veiliger dan aandelen, lager rendement\n\n**3. Beleggingsfondsen / ETF's**\n• Verzameling van veel aandelen tegelijk (bv. 'wereld-ETF')\n• Spreiding = minder risico (1 bedrijf failliet → fonds heeft nog 499 anderen)\n• Voor beginners: vaak beste keuze\n\n**4. Vastgoed**\n• Huis kopen om te verhuren\n• Veel kapitaal nodig, niet snel verkoopbaar\n\n**5. Crypto**\n• Bitcoin, Ethereum etc.\n• Heel risicovol, kan 50-90% in een jaar dalen of stijgen\n• Geen onderliggende waarde, geen DGS-garantie\n• Niet voor sparen of pensioen\n\n**Risico-rendement-curve**:\n• Hoog rendement = hoog risico (altijd)\n• Wie 'gegarandeerd hoog rendement' belooft → **OPLICHTING**\n\n**Vuistregels**:\n• **Spaar eerst** een buffer (3-6 mnd lasten)\n• **Beleg pas** met geld dat je 5+ jaar kunt missen\n• **Spreid** over verschillende beleggingen\n• **Lange termijn**: aandelen leveren historisch ~7%/jaar (nominaal)\n• **Korte termijn** (< 3 jaar): te risico-vol — kies sparen\n\n**Voorbeeld 'effect van rendement'**:\n• €1.000, 30 jaar, 2% rente (sparen) → €1.811\n• €1.000, 30 jaar, 7% rendement (aandelen) → €7.612\n• Verschil door samengestelde rente — wordt enorm op lange termijn\n\n**Risico's bij beleggen**:\n• **Marktrisico**: beurs daalt (corona 2020: -30%)\n• **Bedrijfsrisico**: 1 bedrijf failliet\n• **Inflatierisico**: rendement < inflatie = verlies in koopkracht\n• **Liquiditeitsrisico**: je geld zit vast, kun je niet snel weghalen\n\n**Belasting op vermogen**:\n• Box 3: spaargeld + beleggingen boven ~€57.000 (vrijstelling 2024)\n• Belasting wordt geschat op fictief rendement → regels veranderen vaak\n\n**Voor jou als 16-jarige**:\n• Beginnen kan vanaf 18 (rekening) of jonger met ouders\n• Kleine bedragen via DEGIRO, BUX, eToro\n• **Eerst leren** — niet meteen veel inleggen\n• Lange termijn = jouw voordeel (decennia tijd voor compounding)",
+    explanation: "Sparen geeft weinig rente maar je geld is veilig. **Beleggen** kan meer opleveren — maar je kunt ook verlies maken. Dit is de kern van Pincode H2.2.\n\n**Sparen** (stap 3 herhaling):\n• Geld op de bank, lage rente (~1-2%)\n• Veilig: gegarandeerd tot €100.000 per bank (DGS)\n• Snel beschikbaar\n• Bij hoge inflatie verlies je toch koopkracht\n\n**Beleggen** = je geld in iets stoppen dat (hopelijk) in waarde stijgt.\n\n**Belangrijkste vormen**:\n\n**1. Aandelen**\n• Stukje eigendom in een bedrijf (Shell, ASML, Apple)\n• Verdien je via: koerswinst (waarde stijgt) + dividend (winstuitkering)\n• Kan ook DALEN — soms tot €0 (bedrijf failliet)\n• Lange termijn: ~7%/jaar gemiddeld\n\n**2. Obligaties**\n• Lening AAN een bedrijf of overheid\n• Krijg je rente over (bv. 3-4%/jaar)\n• Veiliger dan aandelen, lager rendement\n\n**3. Beleggingsfondsen / ETF's**\n• Verzameling van veel aandelen tegelijk (bv. 'wereld-ETF')\n• Spreiding = minder risico (1 bedrijf failliet → fonds heeft nog 499 anderen)\n• Voor beginners: vaak beste keuze\n\n**4. Vastgoed**\n• Huis kopen om te verhuren\n• Veel kapitaal nodig, niet snel verkoopbaar\n\n**5. Crypto**\n• Bitcoin, Ethereum etc.\n• Heel risicovol, kan 50-90% in een jaar dalen of stijgen\n• Geen onderliggende waarde, geen DGS-garantie\n• Niet voor sparen of pensioen\n\n**Risico-rendement-curve**:\n• Hoog rendement = hoog risico (altijd)\n• Wie 'gegarandeerd hoog rendement' belooft → **OPLICHTING**\n\n**Vuistregels**:\n• **Spaar eerst** een buffer (3-6 mnd lasten)\n• **Beleg pas** met geld dat je 5+ jaar kunt missen\n• **Spreid** over verschillende beleggingen\n• **Lange termijn**: aandelen leveren historisch ~7%/jaar (nominaal)\n• **Korte termijn** (< 3 jaar): te riskant — kies sparen\n\n**Voorbeeld 'effect van rendement'**:\n• €1.000, 30 jaar, 2% rente (sparen) → €1.811\n• €1.000, 30 jaar, 7% rendement (aandelen) → €7.612\n• Verschil door samengestelde rente — wordt enorm op lange termijn\n\n**Risico's bij beleggen**:\n• **Marktrisico**: beurs daalt (corona 2020: -30%)\n• **Bedrijfsrisico**: 1 bedrijf failliet\n• **Inflatierisico**: rendement < inflatie = verlies in koopkracht\n• **Liquiditeitsrisico**: je geld zit vast, kun je niet snel weghalen\n\n**Belasting op vermogen**:\n• Box 3: spaargeld + beleggingen boven ~€57.000 (vrijstelling 2024)\n• Belasting wordt geschat op fictief rendement → regels veranderen vaak\n\n**Voor jou als 16-jarige**:\n• Beginnen kan vanaf 18 (rekening) of jonger met ouders\n• Kleine bedragen via DEGIRO, BUX, eToro\n• **Eerst leren** — niet meteen veel inleggen\n• Lange termijn = jouw voordeel (decennia tijd voor compounding)",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">SPAREN vs BELEGGEN</text>
 <rect x="20" y="40" width="135" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
@@ -393,7 +393,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "IJzeren wet", tekst: "Risico en rendement gaan ALTIJD samen. Hoger rendement = hoger risico op verlies. Logisch: niemand betaalt jou hoge winst zonder iets terug te willen — risico = jouw bijdrage." }],
           woorden: [{ woord: "risico-rendement-curve", uitleg: "Lijn die laat zien: meer rendement = meer risico. Geldt voor alle beleggingsproducten." }],
-          theorie: "Sparen 1% = zero risico. Obligaties 3-4% = laag risico. ETF/aandelen 7% = midden risico. Crypto = hoog risico voor hoog (maar onzeker) rendement.",
+          theorie: "Sparen 1% = vrijwel geen risico. Obligaties 3-4% = laag risico. ETF/aandelen 7% = midden risico. Crypto = hoog risico voor hoog (maar onzeker) rendement.",
           voorbeelden: [{ type: "lage rente", tekst: "Spaarrekening 1% = 0% kans op verlies." }, { type: "hoge rente", tekst: "Vriendje die geld leent voor zijn 'startup' 20%/jr = hoog risico op alles kwijtraken." }],
           basiskennis: [{ onderwerp: "Wet zonder uitzondering", uitleg: "Wie gegarandeerd hoog rendement belooft → liegt of weet niet wat hij doet." }],
           niveaus: { basis: "Hoog rendement = hoog risico.", simpeler: "Meer winst mogelijk? Dan ook meer risico. Geen gratis lunch.", nogSimpeler: "Risico+rendement" },
@@ -408,7 +408,7 @@ const steps = [
           stappen: [{ titel: "Te mooi = oplichting", tekst: "Beste belegger ooit (Warren Buffett) haalt ~20%/jr over decennia. Wie 30% GEGARANDEERD belooft is OPLICHTER. Beroemde gevallen: Madoff ($65 mrd weg), MMM-piramides." }],
           woorden: [{ woord: "piramidespel / Ponzi", uitleg: "Oplichting waarbij eerste investeerders worden betaald uit geld van nieuwe investeerders. Stort in bij stop nieuwe inleg." }, { woord: "red flags", uitleg: "Tekenen van oplichting: gegarandeerd hoog rendement, urgentie, geen heldere uitleg." }],
           theorie: "Echte beleggingen: 5-10% per jaar GEMIDDELD over decennia. Wisselend per jaar (sommige +30%, andere -20%). 'Gegarandeerd' bestaat alleen bij sparen, en daar krijg je 1-2%.",
-          voorbeelden: [{ type: "Madoff", tekst: "Beroemste Ponzi: beloofde 10-12% per jaar GESTAAG. Bleek piramidespel. $65 mrd verloren bij ontdekking 2008." }],
+          voorbeelden: [{ type: "Madoff", tekst: "Beroemdste Ponzi: beloofde 10-12% per jaar GESTAAG. Bleek piramidespel. $65 mrd verloren bij ontdekking 2008." }],
           basiskennis: [{ onderwerp: "Red flag-test", uitleg: "Hoog + gegarandeerd + urgent = bijna zeker fraude. Lopen, niet investeren." }],
           niveaus: { basis: "Oplichting.", simpeler: "Niemand kan ECHT gegarandeerd 30% per jaar bieden. Dat is fraude.", nogSimpeler: "Oplichting" },
         },
@@ -449,8 +449,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Extreem volatiel", tekst: "Crypto (Bitcoin, Ethereum) heeft GEEN onderliggende waarde — geen bedrijf, geen winst, geen kasstromen. Prijs hangt op vertrouwen. Kan in 1 jaar 200% stijgen of 80% dalen." }],
           woorden: [{ woord: "crypto", uitleg: "Digitale valuta, niet uitgegeven door overheid. Bitcoin = bekendste." }, { woord: "volatiliteit", uitleg: "Hoe sterk een prijs schommelt. Crypto = extreem volatiel." }],
-          theorie: "Geen DGS-garantie zoals bij spaargeld. Geen toezichthouder zoals AFM bij aandelen. Verlies = je verlies. Veel oplichting (rug pull, hacks). Voor sparen/pensioen → ongeschikt.",
-          voorbeelden: [{ type: "BTC", tekst: "Bitcoin 2021 piek $68k → 2022 dip $16k = -76% in 1 jaar. 2024 weer omhoog." }, { type: "LUNA/Terra", tekst: "LUNA-coin: $116 → $0 in 1 week (mei 2022) — totaalverlies voor beleggers." }],
+          theorie: "Geen DGS-garantie zoals bij spaargeld. Minder toezicht dan bij aandelen (sinds 2024-2025 houdt de AFM via EU-regels wel toezicht op crypto-aanbieders). Verlies = je verlies. Veel oplichting (rug pull, hacks). Voor sparen/pensioen → ongeschikt.",
+          voorbeelden: [{ type: "BTC", tekst: "Bitcoin 2021 piek $68k → 2022 dip $16k = -76% in 1 jaar. 2024 weer omhoog." }, { type: "LUNA/Terra", tekst: "LUNA-coin: van tientallen dollars naar bijna $0 in een paar dagen (mei 2022) — totaalverlies voor beleggers." }],
           basiskennis: [{ onderwerp: "Niet verzekerd", uitleg: "Geen wet beschermt je bij crypto-verlies. Hack van exchange? Geld weg. Crypto-bedrijf failliet? Geld weg." }],
           niveaus: { basis: "Hoog risico, geen garantie.", simpeler: "Crypto kan enorm stijgen óf dalen. Niemand garandeert je geld terug.", nogSimpeler: "Risicovol" },
         },
@@ -461,7 +461,7 @@ const steps = [
   // ─── Stap 5: Geld moet rollen — circulatie en banken ──────
   {
     title: "Geld moet rollen — hoe geld door de economie stroomt",
-    explanation: "**Pincode 2.4: Geld moet rollen!** Geld dat stilstaat doet niets. Pas als het rondgaat — van consument naar bedrijf naar werknemer naar consument — komt de economie in beweging.\n\n**De geldkringloop**:\nJij koopt brood (€2,50) → bakker betaalt zijn werknemer (loon) → werknemer koopt zijn boodschappen → en zo verder. **Hetzelfde geld** wisselt vele keren van eigenaar.\n\n**Welke rol spelen banken hierin?**\n\n**1. Geld bewaren** — betaal- en spaarrekening\n**2. Geld lenen aan anderen** — uit jouw spaargeld\n**3. Betalingen regelen** — Tikkie, overschrijven, pinnen\n\n**Dit is het belangrijkste stuk** — banken zijn niet alleen 'kluis voor jouw geld'. Zij **lenen jouw spaargeld uit** aan iemand anders die het wil lenen voor een hypotheek of bedrijfslening.\n\n**Voorbeeld**: jij stort €1.000 op je spaarrekening.\n• De bank houdt een klein deel achter (kasreserve, ~5% — €50)\n• De rest (€950) leent ze uit aan iemand anders\n• Die persoon betaalt ermee (bv. fiets) → fietsenwinkel stort dat geld op háár bank\n• Die bank houdt 5% achter en leent de rest weer uit\n• → Het geld 'vermenigvuldigt' zich door de economie\n\nDit heet **geldschepping door banken**. Het is veilig zolang banken niet allemaal tegelijk geld nodig hebben.\n\n**Wat als veel mensen tegelijk geld willen?**\n• Heet **bank run** — paniek\n• Bank heeft niet genoeg cash → kan failliet gaan\n• Voorbeeld: SVB-bank USA 2023, 1 dag €40 mrd opgenomen\n• Daarom: **DGS** (Depositogarantiestelsel) — €100k per spaarder gegarandeerd\n\n**Geldhoeveelheid**:\n• **M0** — alleen contant geld (chartaal)\n• **M1** — M0 + direct beschikbaar girale geld (betaalrekeningen)\n• **M2** — M1 + spaarrekeningen\n• **M3** — M2 + langer vastliggende deposito's\n\n**Voor jou belangrijk**:\n• Door uitlenen wordt elke euro 'meer waard' voor de economie\n• Centrale banken (ECB) bewaken hoe snel dit gaat — anders inflatie\n• Vertrouwen is cruciaal — daarom regelgeving DNB op banken\n\n**Geld 'rolt' ook via**:\n• **Belasting** — overheid pakt deel, geeft uit aan zorg/onderwijs/uitkeringen\n• **Sparen + beleggen** — geld helpt bedrijven groeien\n• **Internationale handel** — geld stroomt over grenzen\n\n**Snelheid van rollen** = hoe snel hetzelfde geld van eigenaar wisselt.\n• Hoge snelheid = veel activiteit, economie groeit\n• Lage snelheid = mensen sparen + geven niet uit, recessie\n\n**Quote economen**: 'Geld is als bloed in een lichaam — niet hoeveel je hebt is belangrijk, maar hoe het stroomt.'",
+    explanation: "**Pincode 2.4: Geld moet rollen!** Geld dat stilstaat doet niets. Pas als het rondgaat — van consument naar bedrijf naar werknemer naar consument — komt de economie in beweging.\n\n**De geldkringloop**:\nJij koopt brood (€2,50) → bakker betaalt zijn werknemer (loon) → werknemer koopt zijn boodschappen → en zo verder. **Hetzelfde geld** wisselt vele keren van eigenaar.\n\n**Welke rol spelen banken hierin?**\n\n**1. Geld bewaren** — betaal- en spaarrekening\n**2. Geld lenen aan anderen** — uit jouw spaargeld\n**3. Betalingen regelen** — Tikkie, overschrijven, pinnen\n\n**Dit is het belangrijkste stuk** — banken zijn niet alleen 'kluis voor jouw geld'. Zij **lenen jouw spaargeld uit** aan iemand anders die het wil lenen voor een hypotheek of bedrijfslening.\n\n**Voorbeeld**: jij stort €1.000 op je spaarrekening.\n• De bank houdt een klein deel achter (kasreserve, bijvoorbeeld 5% — €50)\n• De rest (€950) leent ze uit aan iemand anders\n• Die persoon betaalt ermee (bv. fiets) → fietsenwinkel stort dat geld op háár bank\n• Die bank houdt 5% achter en leent de rest weer uit\n• → Het geld 'vermenigvuldigt' zich door de economie\n\nDit heet **geldschepping door banken**. Het is veilig zolang banken niet allemaal tegelijk geld nodig hebben.\n\n**Wat als veel mensen tegelijk geld willen?**\n• Heet **bank run** — paniek\n• Bank heeft niet genoeg cash → kan failliet gaan\n• Voorbeeld: SVB-bank USA 2023, in 1 dag $42 mrd opgenomen\n• Daarom: **DGS** (Depositogarantiestelsel) — €100k per spaarder gegarandeerd\n\n**Geldhoeveelheid**:\n• **M0** — alleen contant geld (chartaal)\n• **M1** — M0 + direct beschikbaar girale geld (betaalrekeningen)\n• **M2** — M1 + spaarrekeningen\n• **M3** — M2 + langer vastliggende deposito's\n\n**Voor jou belangrijk**:\n• Door uitlenen wordt elke euro 'meer waard' voor de economie\n• Centrale banken (ECB) bewaken hoe snel dit gaat — anders inflatie\n• Vertrouwen is cruciaal — daarom regelgeving DNB op banken\n\n**Geld 'rolt' ook via**:\n• **Belasting** — overheid pakt deel, geeft uit aan zorg/onderwijs/uitkeringen\n• **Sparen + beleggen** — geld helpt bedrijven groeien\n• **Internationale handel** — geld stroomt over grenzen\n\n**Snelheid van rollen** = hoe snel hetzelfde geld van eigenaar wisselt.\n• Hoge snelheid = veel activiteit, economie groeit\n• Lage snelheid = mensen sparen + geven niet uit, recessie\n\n**Vergelijking die economen vaak maken**: 'Geld is als bloed in een lichaam — niet hoeveel je hebt is belangrijk, maar hoe het stroomt.'",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">GELDKRINGLOOP</text>
 <circle cx="80" cy="80" r="28" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
@@ -490,10 +490,10 @@ const steps = [
         wrongHints: [null, "Niet meer in kluis — modern bankieren leent uit.", "Klein deel ja, niet alles.", "Banken beleggen sommig wel, maar voornamelijk uitlenen."],
         uitlegPad: {
           stappen: [{ titel: "Bank = uitlenen-machine", tekst: "Bank houdt ~5% in kasreserve (om dagelijkse opnames te kunnen doen). De rest LEEN ze uit aan andere klanten voor hypotheek, bedrijfslening, persoonlijke lening." }],
-          woorden: [{ woord: "kasreserve", uitleg: "Klein percentage (~5%) dat bank in kas houdt voor opnames. Verplicht door DNB." }, { woord: "uitlenen", uitleg: "Geld van spaarders aan leners geven tegen hogere rente — kern van bankmodel." }],
+          woorden: [{ woord: "kasreserve", uitleg: "Klein percentage dat bank in kas houdt voor opnames. Een klein deel is verplicht (ECB-regel); banken houden zelf ook buffers aan." }, { woord: "uitlenen", uitleg: "Geld van spaarders aan leners geven tegen hogere rente — kern van bankmodel." }],
           theorie: "Modern bankieren = FRACTIONAL RESERVE. Bank houdt fractie achter, leent rest uit. Daardoor kan economie sneller groeien want geld werkt op meerdere plekken tegelijk.",
           voorbeelden: [{ type: "praktijk", tekst: "1mln klanten storten elk €10k = €10mrd. Bank houdt €500mln in kas. €9,5mrd wordt uitgeleend (hypotheken/bedrijfsleningen)." }],
-          basiskennis: [{ onderwerp: "Niet kluis", uitleg: "Vroeger waren banken letterlijk kluizen voor goud. Sinds 1900 = uitleen-bedrijven met digitaal tegoed." }],
+          basiskennis: [{ onderwerp: "Niet kluis", uitleg: "Banken lenen al eeuwenlang het geld van spaarders uit. Jij hebt een vordering op de bank, geen eigen kluis." }],
           niveaus: { basis: "Klein deel + rest uitlenen.", simpeler: "Bank houdt ~5% van jouw spaargeld in kas voor opnames. Rest leent zij uit aan andere mensen.", nogSimpeler: "Uitlenen" },
         },
       },
@@ -520,7 +520,7 @@ const steps = [
           stappen: [{ titel: "Massa-opname = paniek", tekst: "Bank houdt maar 5% in kas. Als 50% van klanten tegelijk hun geld wil → onmogelijk. Bank moet uitgeleend geld terugvragen (kost tijd) → ondertussen géén cash → bank failliet." }],
           woorden: [{ woord: "bank run", uitleg: "Massa-paniek waarbij spaarders tegelijk geld opnemen. Kan elke bank doen omvallen, ook gezonde." }],
           theorie: "Vaak kettingreactie: 1 bank in problemen → gerucht → spaarders rennen → andere banken ook → systeemcrisis. DGS-garantie (€100k) voorkomt paniek bij meeste spaarders.",
-          voorbeelden: [{ type: "SVB 2023", tekst: "Silicon Valley Bank: $42 mrd opgenomen in 1 dag → failliet in 48 uur. Begin tech-banken-crisis." }, { type: "Northern Rock 2007", tekst: "UK-bank: kilometerslange rijen bij filialen, eerst sinds 1866." }],
+          voorbeelden: [{ type: "SVB 2023", tekst: "Silicon Valley Bank: $42 mrd opgenomen in 1 dag → failliet in 48 uur. Begin tech-banken-crisis." }, { type: "Northern Rock 2007", tekst: "UK-bank: lange rijen bij filialen, de eerste Britse bank run sinds 1866." }],
           basiskennis: [{ onderwerp: "Letterlijk rennen", uitleg: "Vroeger renden mensen ECHT naar filiaal. Nu meestal digitaal — nog sneller." }],
           niveaus: { basis: "Massa-opname = failliet.", simpeler: "Veel mensen tegelijk geld weghalen → bank heeft niet genoeg cash → failliet.", nogSimpeler: "Massa-paniek" },
         },
@@ -535,7 +535,7 @@ const steps = [
           woorden: [{ woord: "DGS", uitleg: "Depositogarantiestelsel. Verzekert spaargeld tot €100k per persoon per bank bij bankfaillissement." }],
           theorie: "DGS-fonds wordt door alle NL-banken samen gevoed (verplichte premie). Geen overheidsgeld. Doel: voorkomen massa-paniek + bank runs. Spaargeld > €100k? Spreid over meerdere banken!",
           voorbeelden: [{ type: "DSB 2009", tekst: "DSB Bank failliet → 130k spaarders kregen geld terug via DGS." }, { type: "spreiding", tekst: "€250k spaargeld? 3 banken × ~€85k → alles gegarandeerd." }],
-          basiskennis: [{ onderwerp: "Niet €10k", uitleg: "€10k was oude grens vóór 2008. EU verhoogde naar €100k na crisis." }],
+          basiskennis: [{ onderwerp: "Niet €10k", uitleg: "Vóór 2008 lag de grens in NL veel lager (rond €20.000). Na de crisis ging die naar €100k." }],
           niveaus: { basis: "€100k.", simpeler: "Bij bankfaillissement: tot €100.000 per spaarder per bank gegarandeerd.", nogSimpeler: "€100k" },
         },
       },
@@ -574,7 +574,7 @@ const steps = [
         wrongHints: [null, "Niet 'niets' — bank verdient eraan.", "Geen vraagprijs.", "Bank gebruikt het wel — dat is hun businessmodel."],
         uitlegPad: {
           stappen: [{ titel: "Storten = uitlenen", tekst: "Bij storten: bank houdt 5% kasreserve (€50), leent 95% (€950) uit. Op jouw rekening staat nog steeds €1.000, maar dat geld doet 'dubbel werk' — jij ziet het + bank leent het uit." }],
-          woorden: [{ woord: "kasreserve", uitleg: "Verplicht percentage dat bank moet aanhouden om opnames te kunnen doen (DNB-regel)." }],
+          woorden: [{ woord: "kasreserve", uitleg: "Percentage dat bank aanhoudt om opnames te kunnen doen (deels verplicht via ECB-regels)." }],
           theorie: "Bij massa-opname stort het systeem in (bank run) want bank kan nooit alle uitgeleende geld direct terugkrijgen. Daarom DGS-garantie voor vertrouwen.",
           voorbeelden: [{ type: "jouw 1000", tekst: "€1.000 op rekening blijft staan. Bank leent €950 uit aan starter voor zaakje. Die starter betaalt leverancier. Geld werkt op 2 plekken tegelijk." }],
           basiskennis: [{ onderwerp: "Niet 'niets'", uitleg: "Bank kan jouw geld WEL aanraken — dat is het hele bankmodel. Jij hebt vordering, geen kluis." }],
@@ -587,7 +587,7 @@ const steps = [
   // ─── Stap 6: Inflatie en koopkracht ─────────────────────────
   {
     title: "Inflatie — waarom geld minder waard wordt",
-    explanation: "**Inflatie**: prijzen stijgen gemiddeld. Een brood dat in 2010 €1,50 kostte, kost nu rond de €2,80. Dezelfde euro koopt **minder** dan vroeger.\n\nHet **CBS** meet inflatie met de **Consumentenprijsindex (CPI)**:\n• 2023 = basisjaar → CPI = 100\n• 2024: CPI = 104 → 4% inflatie\n• 2025: CPI = 108 → 8% sinds basisjaar\n\n**Koopkracht**: hoeveel je kunt kopen voor je geld.\n• Loon stijgt 2%, prijzen stijgen 4% → koopkracht **daalt** met ~2%.\n• Loon stijgt 5%, prijzen stijgen 2% → koopkracht **stijgt** met ~3%.\n\n**Waarom belangrijk voor sparen?**\nAls je 1% rente krijgt, maar inflatie is 3%, dan **verlies** je effectief 2% per jaar aan koopkracht. Je geld op de bank wordt minder waard.\n\n**Hyperinflatie** (zeldzaam): prijzen verdubbelen elke maand. In Duitsland 1923 kostte een brood miljarden mark. In Venezuela 2018 hetzelfde verhaal. Geld werd onbruikbaar.\n\n**Wat veroorzaakt inflatie?**\n• Energieprijzen stijgen (gas, olie)\n• Te veel geld in omloop\n• Krapte op de markt (vraag &gt; aanbod)",
+    explanation: "**Inflatie**: prijzen stijgen gemiddeld. Een brood dat in 2010 €1,50 kostte, kost nu rond de €2,80. Dezelfde euro koopt **minder** dan vroeger.\n\nHet **CBS** meet inflatie met de **Consumentenprijsindex (CPI)**:\n• Voorbeeld: 2023 = basisjaar → CPI = 100\n• 2024: CPI = 104 → 4% inflatie\n• 2025: CPI = 108 → 8% sinds basisjaar\n\n**Koopkracht**: hoeveel je kunt kopen voor je geld.\n• Loon stijgt 2%, prijzen stijgen 4% → koopkracht **daalt** met ~2%.\n• Loon stijgt 5%, prijzen stijgen 2% → koopkracht **stijgt** met ~3%.\n\n**Waarom belangrijk voor sparen?**\nAls je 1% rente krijgt, maar inflatie is 3%, dan **verlies** je effectief 2% per jaar aan koopkracht. Je geld op de bank wordt minder waard.\n\n**Hyperinflatie** (zeldzaam): prijzen verdubbelen elke maand. In Duitsland 1923 kostte een brood miljarden mark. In Venezuela 2018 hetzelfde verhaal. Geld werd onbruikbaar.\n\n**Wat veroorzaakt inflatie?**\n• Energieprijzen stijgen (gas, olie)\n• Te veel geld in omloop\n• Krapte op de markt (vraag &gt; aanbod)",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PRIJS VAN EEN BROOD</text>
 <rect x="50" y="86" width="40" height="54" fill="${COLORS.geld}" opacity="0.5"/>
@@ -641,7 +641,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Reële rente = nominaal − inflatie", tekst: "1% rente − 3% inflatie = -2% reëel. Je spaargeld groeit met 1% maar prijzen met 3% → over 1 jaar kun je MINDER kopen dan vandaag." }],
           woorden: [{ woord: "nominale rente", uitleg: "Wat bank op papier biedt. Hier 1%." }, { woord: "reële rente", uitleg: "Nominale rente min inflatie. Echte verandering in koopkracht." }],
-          theorie: "Sparen tegen inflatie is een verliezerspartij sinds 2010s. Daarom 'spaargeld verliest waarde' — alleen risicovrije optie maar koopkrachtverlies meegerekend.",
+          theorie: "Sinds de jaren 2010 lag de spaarrente vaak onder de inflatie. Sparen is dan wel veilig, maar je verliest koopkracht.",
           voorbeelden: [{ type: "berekening", tekst: "€1.000 spaargeld + 1% = €1.010 na 1 jaar. Maar mandje boodschappen €100 → €103 (3% inflatie). Vorig jaar 10 mandjes, nu €1.010/€103 = 9,8 mandjes. -2% koopkracht." }],
           basiskennis: [{ onderwerp: "Sparen ≠ winst", uitleg: "Bij hoge inflatie kost sparen koopkracht. Argument voor beleggen voor lange termijn." }],
           niveaus: { basis: "1 − 3 = -2%.", simpeler: "Rente 1% < inflatie 3% → koopkracht daalt 2%. Spaargeld minder waard.", nogSimpeler: "Daalt 2%" },
@@ -649,11 +649,11 @@ const steps = [
       },
       {
         q: "Wat zou inflatie kunnen **veroorzaken**?",
-        options: ["Energieprijzen stijgen sterk (gas, olie)", "Iedereen krijgt meer salaris", "Belastingen worden afgeschaft", "Het regent veel"],
+        options: ["Energieprijzen stijgen sterk (gas, olie)", "Iedereen gaat meer sparen", "Belastingen worden afgeschaft", "Het regent veel"],
         answer: 0,
-        wrongHints: [null, "Hogere lonen kunnen inflatie wel versterken, maar zijn het gevolg eerder dan oorzaak.", "Belasting heeft directer effect via kosten.", "Weer is geen economische factor."],
+        wrongHints: [null, "Meer sparen betekent juist minder vraag — dat remt prijzen eerder af.", "Minder belasting maakt dingen eerder goedkoper — geen logische oorzaak van prijsstijging.", "Weer is geen economische factor."],
         uitlegPad: {
-          stappen: [{ titel: "Kosten-push inflatie", tekst: "Als input-kosten stijgen (energie, grondstoffen), berekenen bedrijven dat door in eindprijs. Iedereen wordt geraakt. Energieprijs is grootste single driver van inflatie." }],
+          stappen: [{ titel: "Kosten-push inflatie", tekst: "Als input-kosten stijgen (energie, grondstoffen), berekenen bedrijven dat door in eindprijs. Iedereen wordt geraakt. Energieprijzen zijn vaak een van de grootste oorzaken van inflatie." }],
           woorden: [{ woord: "kosten-push", uitleg: "Inflatie veroorzaakt door stijgende productiekosten (grondstoffen, energie, lonen)." }, { woord: "vraag-pull", uitleg: "Inflatie door te veel vraag bij beperkt aanbod (krapte)." }],
           theorie: "Andere oorzaken: (1) ECB drukt te veel geld bij, (2) krapte op markt, (3) lonen stijgen sneller dan productiviteit, (4) verstoringen aanbod (oorlog, pandemie).",
           voorbeelden: [{ type: "2022", tekst: "Rusland-Oekraïne oorlog → gasprijs ×5 → alle Europese prijzen stegen (10% inflatie 2022)." }, { type: "1973", tekst: "Oliecrisis: OPEC-prijsverhoging → wereldwijde inflatie + recessie ('stagflatie')." }],
@@ -670,7 +670,7 @@ const steps = [
           stappen: [{ titel: "Geld waardeloos", tekst: "Hyperinflatie = prijzen schieten zó snel omhoog (50%+/maand) dat geld zijn waarde verliest. Mensen ruilen liever direct of gebruiken vreemde valuta." }],
           woorden: [{ woord: "hyperinflatie", uitleg: "Extreme prijsstijging, meestal >50% per maand. Geld functioneert niet meer als ruilmiddel." }],
           theorie: "Oorzaken: meestal overheid drukt te veel geld bij om schulden te betalen. Klassiek: Duitsland 1923 (brood = miljarden mark), Zimbabwe 2008 (100-biljoen-dollar-biljet), Venezuela 2018.",
-          voorbeelden: [{ type: "Duitsland 1923", tekst: "Brood 1922: 160 mark → 1923: 200 miljard mark. Mensen droegen geld in kruiwagens." }, { type: "Venezuela", tekst: "Inflatie 1.000.000%/jaar in 2018. Mensen gebruikten Amerikaanse dollar uit nood." }],
+          voorbeelden: [{ type: "Duitsland 1923", tekst: "Brood 1922: 160 mark → 1923: 200 miljard mark. Mensen droegen geld in kruiwagens." }, { type: "Venezuela", tekst: "Rond 2018 liep de inflatie op tot honderdduizenden procenten per jaar. Mensen gebruikten Amerikaanse dollar uit nood." }],
           basiskennis: [{ onderwerp: "Niet deflatie", uitleg: "Hyperinflatie = extreem omhoog. Deflatie = omlaag. Hyper = veel meer dan normaal." }],
           niveaus: { basis: "Extreem snelle stijging.", simpeler: "Hyperinflatie = prijzen verdubbelen niet jaarlijks maar bv. maandelijks. Geld waardeloos.", nogSimpeler: "Geld waardeloos" },
         },
@@ -695,7 +695,7 @@ const steps = [
 <text x="276" y="118" text-anchor="middle" fill="${COLORS.alt}" font-size="11" font-family="Arial" font-weight="bold">20% SPAAR</text>
 <text x="276" y="131" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€48</text>
 <text x="160" y="160" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">€48 × 12 mnd = €576/jaar</text>
-<text x="160" y="180" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">In 4 jaar: rijbewijs! 🚗</text>
+<text x="160" y="180" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">In ruim 4 jaar: rijbewijs! 🚗</text>
 <text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">de 50/30/20-regel</text>
 </svg>`,
     checks: [
@@ -858,11 +858,11 @@ const steps = [
         q: "Bij netto inkomen **€2.000/mnd**: welk maximum aan vaste maandlasten volgt uit de 30%-regel?",
         options: ["€600", "€2.000", "€300", "€1.000"],
         answer: 0,
-        wrongHints: [null, "Dat zou je hele inkomen zijn.", "Te weinig — dat is 15%.", "Net te veel — dat is 50%."],
+        wrongHints: [null, "Dat zou je hele inkomen zijn.", "Te weinig — dat is 15%.", "Te veel — dat is 50%."],
         uitlegPad: {
           stappen: [{ titel: "30% × €2000 = €600", tekst: "Vuistregel: vaste maandlasten (huur/hypotheek/leningen) max 30% van NETTO inkomen. 30% × €2.000 = €600." }],
           woorden: [{ woord: "30%-regel", uitleg: "Budget-vuistregel: maximaal 30% van netto-inkomen aan vaste woonlasten + leningen." }, { woord: "netto-inkomen", uitleg: "Wat na belasting + premies op je rekening komt." }],
-          theorie: "Hoger dan 30% = risicovol. Bij tegenslag (baan kwijt, scheiding) loop je snel vast. Banken gebruiken deze regel zelf bij hypotheek-toets — ze willen niet dat klanten huis verliezen.",
+          theorie: "Hoger dan 30% = risicovol. Bij tegenslag (baan kwijt, scheiding) loop je snel vast. Banken gebruiken bij de hypotheektoets vergelijkbare normen (Nibud) — ze willen niet dat klanten huis verliezen.",
           voorbeelden: [{ type: "berekening", tekst: "€2.000 netto × 30% = €600 max voor huur + leningen samen. €700 huur + €100 studielening = €800 → te hoog." }],
           basiskennis: [{ onderwerp: "Niet hele inkomen", uitleg: "30% is BUDGET voor lasten. Rest is voor andere uitgaven (boodschappen, leuk, sparen)." }],
           niveaus: { basis: "30% × 2000 = 600.", simpeler: "30% van €2.000 inkomen = €600 max aan vaste lasten.", nogSimpeler: "€600" },
@@ -876,7 +876,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Investering = soms zinvol", tekst: "Lenen kán zinvol zijn voor LANGE-TERMIJN-investering: huis (decennia woongenot + waarde) of opleiding (hoger inkomen). NOOIT voor kortdurende consumptie." }],
           woorden: [{ woord: "investering", uitleg: "Uitgave die LATER iets oplevert: hoger inkomen, gespaarde huurkosten, eigen vermogen." }, { woord: "consumptie-lening", uitleg: "Lening voor kortdurend genot: vakantie, kleren, gadgets. Onverstandig." }],
-          theorie: "Goede schuld: oplossing voor probleem dat lang meeggaat (huis bewonen) of geld oplevert (hogere baan). Slechte schuld: kortdurend plezier met lange schuld.",
+          theorie: "Goede schuld: oplossing voor probleem dat lang meegaat (huis bewonen) of geld oplevert (hogere baan). Slechte schuld: kortdurend plezier met lange schuld.",
           voorbeelden: [{ type: "zinvol", tekst: "Studielening DUO voor universiteit → hoger salaris levenslang. Rendement >> rente." }, { type: "onzinvol", tekst: "€3.000 vakantie geleend bij doorlopend krediet 10% → vakantie voorbij, schuld blijft." }],
           basiskennis: [{ onderwerp: "Kortdurend = sparen", uitleg: "Kleren/telefoon/vakantie: eerst sparen. Anders bouw je schuld voor consumptie." }],
           niveaus: { basis: "Huis + opleiding.", simpeler: "Lenen kan voor iets dat lang meegaat of geld oplevert (huis, opleiding). Niet voor leuk-nu spullen.", nogSimpeler: "Investering" },
@@ -901,7 +901,7 @@ const steps = [
   // ─── Stap 9: Hypotheek in detail ───────────────────────────
   {
     title: "Hypotheek — een huis kopen",
-    explanation: "Een **hypotheek** is een lange lening om een huis te kopen. Je leent vaak het overgrote deel van de huisprijs van een bank. Het huis is **onderpand** — kun je niet betalen, dan verkoopt de bank het huis.\n\n**Looptijd**: meestal **30 jaar**.\n\n**Twee veelvoorkomende vormen**:\n\n**1. Annuïteitenhypotheek**\n• **Vaste maandlast** elk jaar (gemiddeld over de looptijd).\n• Eerst betaal je veel rente, weinig aflossing.\n• Aan het eind: weinig rente, veel aflossing.\n• Populair bij starters.\n\n**2. Lineaire hypotheek**\n• **Vaste aflossing** elke maand.\n• Eerst hoge maandlast (rente over hele bedrag).\n• Wordt elk jaar lager.\n• Goedkoper over de hele looptijd, maar in begin hoger.\n\n**Voorbeeld**: huis kost €350.000.\n• Eigen geld: €30.000.\n• Hypotheek: €320.000 over 30 jaar.\n• Rente 4% → maandlast ongeveer **€1.530**.\n\n**Maximale hypotheek** = afhankelijk van je inkomen (bruto). Vuistregel: ongeveer 4-5× je bruto jaarsalaris.\n\n**Bijkomende kosten** (komen bovenop de huisprijs):\n• **Overdrachtsbelasting** (2% voor starters tot 35 jaar: 0%)\n• **Notaris** (~€2.000)\n• **Taxatie** (~€500)\n• **Hypotheekadvies** (~€2.500)\n\n**Aandachtspunten**:\n• Werkloos worden = inkomen weg = hypotheek niet betalen = huis kwijt\n• Daarom **buffer** op spaarrekening (minimaal 3-6 maanden lasten)\n• Verzekering: arbeidsongeschiktheid, overlijdensrisico",
+    explanation: "Een **hypotheek** is een lange lening om een huis te kopen. Je leent vaak het overgrote deel van de huisprijs van een bank. Het huis is **onderpand** — kun je niet betalen, dan verkoopt de bank het huis.\n\n**Looptijd**: meestal **30 jaar**.\n\n**Twee veelvoorkomende vormen**:\n\n**1. Annuïteitenhypotheek**\n• **Vaste maandlast** (bruto gelijk over de hele looptijd).\n• Eerst betaal je veel rente, weinig aflossing.\n• Aan het eind: weinig rente, veel aflossing.\n• Populair bij starters.\n\n**2. Lineaire hypotheek**\n• **Vaste aflossing** elke maand.\n• Eerst hoge maandlast (rente over hele bedrag).\n• Wordt elk jaar lager.\n• Goedkoper over de hele looptijd, maar in begin hoger.\n\n**Voorbeeld**: huis kost €350.000.\n• Eigen geld: €30.000.\n• Hypotheek: €320.000 over 30 jaar.\n• Rente 4% → maandlast ongeveer **€1.530**.\n\n**Maximale hypotheek** = afhankelijk van je inkomen (bruto). Vuistregel: ongeveer 4-5× je bruto jaarsalaris.\n\n**Bijkomende kosten** (komen bovenop de huisprijs):\n• **Overdrachtsbelasting** (2%; voor starters tot 35 jaar: 0%)\n• **Notaris** (~€2.000)\n• **Taxatie** (~€500)\n• **Hypotheekadvies** (~€2.500)\n\n**Aandachtspunten**:\n• Werkloos worden = inkomen weg = hypotheek niet betalen = huis kwijt\n• Daarom **buffer** op spaarrekening (minimaal 3-6 maanden lasten)\n• Verzekering: arbeidsongeschiktheid, overlijdensrisico",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">HYPOTHEEK €320.000 / 30 jr / 4%</text>
 <text x="160" y="42" text-anchor="middle" fill="${COLORS.text}" font-size="11" font-family="Arial">maandlast ongeveer €1.530</text>
@@ -959,7 +959,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eigen geld → minder lenen", tekst: "Hypotheek = huisprijs MIN je eigen inbreng. €350.000 − €30.000 = €320.000 te lenen." }],
           woorden: [{ woord: "eigen inbreng", uitleg: "Eigen geld dat je investeert in de huiskoop. Verlaagt benodigde hypotheek." }, { woord: "loan-to-value (LTV)", uitleg: "Verhouding lening/huiswaarde. Hier 320/350 = 91% LTV." }],
-          theorie: "Sinds 2018: maximaal 100% LTV in NL (vroeger 110%). Bijkomende kosten (€5-10k) komen daarbovenop — moet je ZELF betalen. Vandaar starters-spaarpot belangrijk.",
+          theorie: "Sinds 2018: maximaal 100% LTV in NL (vroeger meer). Bijkomende kosten (€5-10k) komen daarbovenop — moet je ZELF betalen. Vandaar starters-spaarpot belangrijk.",
           voorbeelden: [{ type: "geen eigen", tekst: "Zonder eigen geld: hypotheek = huisprijs (€350k) + nog ~€7k kosten zelf bijleggen." }, { type: "veel eigen", tekst: "Met €100k eigen: hypotheek €250k = lagere maandlast + minder rente totaal." }],
           basiskennis: [{ onderwerp: "Aftrek, niet optellen", uitleg: "Eigen geld VERMINDERT de hypotheek, niet andersom." }],
           niveaus: { basis: "350 − 30 = 320.", simpeler: "€350k huis − €30k eigen = €320k te lenen van bank.", nogSimpeler: "€320k" },
@@ -973,7 +973,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Inkomen bepaalt limiet", tekst: "Bank kijkt vooral naar je BRUTO-INKOMEN: kun je de maandlast dragen? Vuistregel: max hypotheek = 4-5 × bruto jaarsalaris." }],
           woorden: [{ woord: "loonafhankelijke leennorm", uitleg: "Maximale hypotheek wordt door inkomen begrensd. NHG/Nibud-tabellen." }, { woord: "tweeverdieners", uitleg: "Twee inkomens samen verhogen leennorm sterk." }],
-          theorie: "Andere factoren: andere schulden (verlaagt), leeftijd (boven 67 = pensioen lager), BKR-historie. Maar inkomen is dominantste factor.",
+          theorie: "Andere factoren: andere schulden (verlaagt), leeftijd (boven 67 = pensioen lager), BKR-historie. Maar inkomen is de belangrijkste factor.",
           voorbeelden: [{ type: "alleen", tekst: "€50k bruto → max hypotheek ~€225k (4,5×). Beperkt huis-keuze." }, { type: "samen", tekst: "Twee × €40k = €80k → max ~€360k. Twee inkomens = meer mogelijk." }],
           basiskennis: [{ onderwerp: "Niet alleen leeftijd", uitleg: "Leeftijd telt mee bij pensioenrisico, maar inkomen is hoofdfactor." }],
           niveaus: { basis: "Bruto-inkomen.", simpeler: "Bank kijkt naar je bruto-salaris om te bepalen hoeveel hypotheek je kunt dragen.", nogSimpeler: "Inkomen" },
@@ -983,10 +983,10 @@ const steps = [
         q: "Welke kosten komen **bovenop** de huisprijs bij koop?",
         options: ["Notaris, taxatie, advies en eventueel overdrachtsbelasting", "Alleen extra rente", "Niets", "Een huis-cadeau"],
         answer: 0,
-        wrongHints: [null, "Rente is wel kost, maar niet bij koop — gedurende lening.", "Echt veel bijkomende kosten — denk €5.000 startersregel.", "Geen cadeau — koop is duur."],
+        wrongHints: [null, "Rente is wel kost, maar niet bij koop — gedurende lening.", "Echt veel bijkomende kosten — denk al gauw €5.000 of meer.", "Geen cadeau — koop is duur."],
         uitlegPad: {
           stappen: [{ titel: "K.k. = kosten koper", tekst: "'Kosten koper' (k.k.) bij huiskoop: notaris (~€2.000), taxatie (~€500), hypotheekadvies (~€2.500), overdrachtsbelasting (2% van huis, 0% voor starters <35). Snel €5-10k extra." }],
-          woorden: [{ woord: "kosten koper", uitleg: "Eenmalige extra kosten naast huisprijs bij koop. Moet je zelf betalen, niet meegefinancierd." }, { woord: "overdrachtsbelasting", uitleg: "Belasting bij huiskoop. 2% standaard, 0% voor starters tot 35 + huis tot €510k." }],
+          woorden: [{ woord: "kosten koper", uitleg: "Eenmalige extra kosten naast huisprijs bij koop. Moet je zelf betalen, niet meegefinancierd." }, { woord: "overdrachtsbelasting", uitleg: "Belasting bij huiskoop. 2% standaard, 0% voor starters tot 35 + huis onder de grens (2024: €510k)." }],
           theorie: "Niet vergeten! Veel starters spaarden voor huisprijs maar staan voor onaangename verrassing. Tip: spaar EXTRA €10k voor k.k. naast eigen inbreng.",
           voorbeelden: [{ type: "rekensom", tekst: "Huis €350k. K.k.: notaris €2k + taxatie €500 + advies €2,5k + 2% × €350k = €7k = €12k totaal extra." }, { type: "starter", tekst: "Met starters-vrijstelling: 0% overdrachtsbelasting → spaart €7k. Wel €5k aan andere k.k." }],
           basiskennis: [{ onderwerp: "Niet financierbaar", uitleg: "K.k. komt VAN je spaarrekening, niet uit hypotheek. Spaar dus voor zowel inbreng als k.k." }],
@@ -1003,7 +1003,7 @@ const steps = [
           woorden: [{ woord: "buffer", uitleg: "Spaargeld om vaste lasten te dragen tijdens inkomensverlies. Vuistregel: 3-6 mnd lasten." }, { woord: "WW-uitkering", uitleg: "Werkloosheidsuitkering, ~70% laatste loon, max 24 mnd. Niet altijd genoeg voor hypotheek." }],
           theorie: "WW dekt slechts deel van inkomen. Buffer overbrugt verschil + tijd tussen baan-verlies en nieuwe baan vinden (~3-6 mnd gemiddeld). Voorkomt verlies van huis door tijdelijke pech.",
           voorbeelden: [{ type: "praktijk", tekst: "Hypotheek €1.500/mnd. Baan kwijt → WW €1.400/mnd. Tekort €100/mnd. Buffer dekt dit + andere lasten tot nieuwe baan." }],
-          basiskennis: [{ onderwerp: "Niet wettelijk", uitleg: "Geen wet eist buffer. Wel sterk geadviseerd door alle financieel-adviseurs." }],
+          basiskennis: [{ onderwerp: "Niet wettelijk", uitleg: "Geen wet eist buffer. Wel sterk geadviseerd door financieel adviseurs." }],
           niveaus: { basis: "Voor inkomensverlies.", simpeler: "Baan kwijt → toch hypotheek betalen. Buffer redt je dan tot je weer werk hebt.", nogSimpeler: "Inkomensverlies" },
         },
       },

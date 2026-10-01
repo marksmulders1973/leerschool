@@ -29,7 +29,7 @@ const steps = [
   // ─── Stap 1: Wat is ondernemen ────────────────────────────
   {
     title: "Wat is ondernemen? — kansen, risico en winst",
-    explanation: "**Ondernemen** = met eigen middelen en risico iets produceren of verkopen om **winst** te maken.\n\n**Een ondernemer**:\n• Ziet **kansen** in de markt (wat hebben mensen nodig?)\n• Neemt **risico** (kan ook verlies maken)\n• Is **zelfstandig** (geen baas)\n• Investeert eigen geld of leent\n\n**Soorten ondernemingen** (op basis wat je doet):\n• **Productie**: maakt iets nieuws (bakker, kledingmerk, foodtruck eigenaar)\n• **Handel**: koopt en verkoopt door (winkel, webshop, supermarkt)\n• **Diensten**: levert iets onstoffelijks (kapper, IT-bedrijf, bijles geven)\n\n**Stappen voor het starten van een bedrijf**:\n1. **Idee** — wat ga je doen?\n2. **Marktonderzoek** — is er vraag naar? (volgende stap)\n3. **Ondernemingsplan** — wat ga je verkopen, voor welke prijs, wat zijn de kosten?\n4. **Inschrijven bij KvK** (Kamer van Koophandel) — verplicht\n5. **BTW-nummer** krijgen via Belastingdienst\n6. **Starten** — producten/dienst leveren, klanten werven\n\n**Voorbeeld 'Foodtruck Funky Fries' van Sam (19)**:\n• Idee: Belgische friet op evenementen\n• Marktonderzoek: praat met festival-organisatoren, kijk concurrenten\n• Plan: investering €15.000 (truck + apparatuur + voorraad)\n• KvK-inschrijving: €80\n• Eerste festival: omzet €2.400 over 2 dagen, kosten €1.600 → winst €800\n\n**Risico** = je kunt al je geïnvesteerde geld verliezen als het niet werkt.",
+    explanation: "**Ondernemen** = met eigen middelen en risico iets produceren of verkopen om **winst** te maken.\n\n**Een ondernemer**:\n• Ziet **kansen** in de markt (wat hebben mensen nodig?)\n• Neemt **risico** (kan ook verlies maken)\n• Is **zelfstandig** (geen baas)\n• Investeert eigen geld of leent\n\n**Soorten ondernemingen** (op basis van wat je doet):\n• **Productie**: maakt iets nieuws (bakker, kledingmerk, foodtruck eigenaar)\n• **Handel**: koopt en verkoopt door (winkel, webshop, supermarkt)\n• **Diensten**: levert iets onstoffelijks (kapper, IT-bedrijf, bijles geven)\n\n**Stappen voor het starten van een bedrijf**:\n1. **Idee** — wat ga je doen?\n2. **Marktonderzoek** — is er vraag naar? (volgende stap)\n3. **Ondernemingsplan** — wat ga je verkopen, voor welke prijs, wat zijn de kosten?\n4. **Inschrijven bij KvK** (Kamer van Koophandel) — verplicht\n5. **BTW-nummer** krijgen via Belastingdienst\n6. **Starten** — producten/dienst leveren, klanten werven\n\n**Voorbeeld 'Foodtruck Funky Fries' van Sam (19)**:\n• Idee: Belgische friet op evenementen\n• Marktonderzoek: praat met festival-organisatoren, bekijkt concurrenten\n• Plan: investering €15.000 (truck + apparatuur + voorraad)\n• KvK-inschrijving: €80\n• Eerste festival: omzet €2.400 over 2 dagen, kosten €1.600 → winst €800\n\n**Risico** = je kunt al je geïnvesteerde geld verliezen als het niet werkt.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">START EEN BEDRIJF</text>
 <text x="50" y="55" text-anchor="middle" fill="${COLORS.geld}" font-size="22" font-family="Arial">💡</text>
@@ -78,7 +78,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Tastbaar of niet?", tekst: "Bij bijles geef je UITLEG en TIJD — niets om vast te pakken. Dat is een dienst." }],
           woorden: [{ woord: "dienst", uitleg: "Onstoffelijke prestatie: kennis, tijd, ervaring leveren aan een klant." }],
-          theorie: "Bij dienst lever je iets dat de klant niet kan opstapelen of in een vitrine zetten — kennisoverdracht (bijles), wel-zijn (massage), advies (consultant).",
+          theorie: "Bij dienst lever je iets dat de klant niet kan opstapelen of in een vitrine zetten — kennisoverdracht (bijles), welzijn (massage), advies (consultant).",
           voorbeelden: [{ type: "dienst", tekst: "Bijles, kapper, taxi, fitness-instructeur, advocaat, fysiotherapeut." }],
           basiskennis: [{ onderwerp: "Test", uitleg: "Kun je het opbergen in een doos? Nee → dienst." }],
           niveaus: { basis: "Bijles = dienst.", simpeler: "Je geeft uitleg + tijd. Niet iets tastbaars. Dat is een dienst.", nogSimpeler: "Niet tastbaar" },
@@ -92,7 +92,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Officieel ondernemer worden", tekst: "Voor je mag verkopen + factureren moet je in het Handelsregister staan. Dat regelt de Kamer van Koophandel (KvK)." }],
           woorden: [{ woord: "KvK", uitleg: "Kamer van Koophandel. Onafhankelijk register van alle ondernemingen in NL." }, { woord: "Handelsregister", uitleg: "Officiële lijst van alle bedrijven, beheerd door KvK." }],
-          theorie: "KvK-inschrijving (€80 in 2024) levert je een KvK-nummer op. Vervolgens stuurt KvK je gegevens door naar de Belastingdienst → automatisch BTW-nummer.",
+          theorie: "KvK-inschrijving (ongeveer €80) levert je een KvK-nummer op. Vervolgens stuurt KvK je gegevens door naar de Belastingdienst → automatisch BTW-nummer.",
           voorbeelden: [{ type: "praktijk", tekst: "Sam met de foodtruck: inschrijven bij KvK in Utrecht, betaalt €80, krijgt KvK-nummer + automatisch BTW-nummer." }],
           basiskennis: [{ onderwerp: "Niet de gemeente", uitleg: "Gemeente is voor vergunningen (terras, geluid). Ondernemerschap zelf gaat via KvK." }],
           niveaus: { basis: "KvK schrijft in.", simpeler: "Voor officieel ondernemer = inschrijven bij Kamer van Koophandel.", nogSimpeler: "KvK" },
@@ -135,7 +135,7 @@ const steps = [
           stappen: [{ titel: "Wat onderscheidt ondernemer van werknemer?", tekst: "Werknemer heeft een baas. Ondernemer IS de baas — neemt zelf alle beslissingen, ziet kansen, investeert + draagt risico." }],
           woorden: [{ woord: "ondernemer", uitleg: "Zelfstandig persoon die met eigen middelen een bedrijf runt." }, { woord: "werknemer", uitleg: "Iemand in loondienst bij een werkgever." }],
           theorie: "Drie kerneigenschappen ondernemer: (1) kansen zien, (2) investeren, (3) risico nemen. Een baas hebben zou dit allemaal omkeren — dan ben je werknemer.",
-          voorbeelden: [{ type: "ondernemer", tekst: "Sam beslist zelf welke festivals + welke prijzen + werkt 60 uur in seizoen." }, { type: "werknemer", tekst: "Frituurmedewerker bij McDonalds krijgt rooster van manager + vast loon, geen risico." }],
+          voorbeelden: [{ type: "ondernemer", tekst: "Sam beslist zelf welke festivals + welke prijzen + werkt 60 uur in seizoen." }, { type: "werknemer", tekst: "Frituurmedewerker bij McDonald's krijgt rooster van manager + vast loon, geen risico." }],
           basiskennis: [{ onderwerp: "Geen baas = ondernemer", uitleg: "De afwezigheid van een baas is wat ondernemer onderscheidt. Hij is zelfstandig." }],
           niveaus: { basis: "Baas hebben = werknemer, niet ondernemer.", simpeler: "Een ondernemer heeft GEEN baas. Hij beslist zelf. Daarom past 'heeft een baas' niet bij hem.", nogSimpeler: "Baas = werknemer" },
         },
@@ -236,8 +236,8 @@ const steps = [
           stappen: [{ titel: "Algemeen vs specifiek", tekst: "Desk geeft algemene marktcijfers. Veld geeft antwoorden van JOUW klanten over JOUW idee. Veel waardevoller voor een concrete beslissing." }],
           woorden: [{ woord: "specifiek onderzoek", uitleg: "Onderzoek gericht op JOUW situatie/doelgroep — niet 'de markt in het algemeen'." }],
           theorie: "Tradeoff: desk is goedkoop + snel maar oppervlakkig. Veld is duur + tijdsintensief maar diep + specifiek. Beste combinatie: eerst desk (overzicht), daarna veld (concreet maken).",
-          voorbeelden: [{ type: "desk only", tekst: "CBS: NL bezoekt 800 festivals/jaar. Maar willen ZE jouw friet? Onbekend." }, { type: "veld", tekst: "Sam vraagt 30 festivalbezoekers persoonlijk — krijgt concrete prijs-feedback." }],
-          basiskennis: [{ onderwerp: "Tijd + geld", uitleg: "Veldonderzoek kost altijd MEER tijd én geld dan deskresearch. Geen gratis." }],
+          voorbeelden: [{ type: "desk only", tekst: "Deskresearch: NL heeft honderden festivals per jaar. Maar willen de bezoekers jouw friet? Onbekend." }, { type: "veld", tekst: "Sam vraagt 30 festivalbezoekers persoonlijk — krijgt concrete prijs-feedback." }],
+          basiskennis: [{ onderwerp: "Tijd + geld", uitleg: "Veldonderzoek kost altijd MEER tijd én geld dan deskresearch. Niet gratis." }],
           niveaus: { basis: "Van jouw eigen klanten.", simpeler: "Veldonderzoek krijgt antwoorden van JOUW doelgroep over JOUW idee. Specifieker dus nuttiger.", nogSimpeler: "Eigen klanten" },
         },
       },
@@ -328,11 +328,11 @@ const steps = [
         q: "Een **hoge prijs** (€8 voor friet) past bij welke marketing-strategie?",
         options: ["Exclusieve, kwaliteit-uitstraling — kleinere doelgroep", "Massa-verkoop", "Doelgroep met laag inkomen", "Laagste-prijs-strategie"],
         answer: 0,
-        wrongHints: [null, "Massa = lage prijs, hoge volume.", "Lage inkomens kunnen hoge prijs niet vaak betalen.", "Tegenovergesteld."],
+        wrongHints: [null, "Massa = lage prijs, hoog volume.", "Lage inkomens kunnen hoge prijs niet vaak betalen.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Hoge prijs signaleert kwaliteit", tekst: "Een hoge prijs maakt je product EXCLUSIEF — alleen bepaalde mensen kopen het. Past bij premium-merk, niet bij massa-strategie." }],
           woorden: [{ woord: "premium-strategie", uitleg: "Hoog prijspunt + sterke uitstraling + kleinere maar koopkrachtige doelgroep." }, { woord: "massa-strategie", uitleg: "Lage prijs + groot volume + brede doelgroep." }],
-          theorie: "Drie hoofdstrategieën: (1) laagste prijs (Lidl, Action), (2) middenklasse (AH, HEMA), (3) premium (Albert Heijn-XL, Apple). Hoge prijs = signaal van exclusiviteit. Te lage prijs bij premium-product wekt wantrouwen.",
+          theorie: "Drie hoofdstrategieën: (1) laagste prijs (Lidl, Action), (2) middenklasse (AH, HEMA), (3) premium (Apple). Hoge prijs = signaal van exclusiviteit. Te lage prijs bij premium-product wekt wantrouwen.",
           voorbeelden: [{ type: "premium friet", tekst: "€8 friet met truffel-saus + biologische aardappel + festival-sfeer = premium." }, { type: "massa friet", tekst: "€2 friet bij snackbar = volume-strategie." }],
           basiskennis: [{ onderwerp: "Doelgroep volgt prijs", uitleg: "Doelgroep + prijs moeten OP ELKAAR PASSEN. Hoge prijs + lage-inkomens-doelgroep = mismatch." }],
           niveaus: { basis: "Hoge prijs = exclusief.", simpeler: "Hoge prijs trekt mensen die kwaliteit/exclusiviteit zoeken. Niet massa, niet laag-inkomen.", nogSimpeler: "Hoog = exclusief" },
@@ -347,7 +347,7 @@ const steps = [
           stappen: [{ titel: "Trouw is goud", tekst: "Bestaande klant kent je al, vertrouwt je. Nieuwe klant moet je vinden, overtuigen, eerste keer laten kopen. Veel duurder per persoon." }],
           woorden: [{ woord: "klantbinding", uitleg: "Bestaande klanten tevreden houden zodat ze terugkomen. Goedkoper dan nieuwe werven." }, { woord: "acquisitie", uitleg: "Nieuwe klanten werven. Duur door reclame, kennismakingsaanbiedingen, eerste contact." }],
           theorie: "Vuistregel uit marketing: nieuwe klant kost 5-7× meer dan bestaande klant tevreden houden. Daarom: investeer in service, klantloyaliteit, herhaalkortingen.",
-          voorbeelden: [{ type: "kosten nieuw", tekst: "Sam moet 1 nieuwe klant via Instagram-advertentie kosten ~€10. Een bestaande klant met loyaliteitskaart: €2." }],
+          voorbeelden: [{ type: "kosten nieuw", tekst: "Eén nieuwe klant via een Instagram-advertentie kost Sam ~€10. Een bestaande klant vasthouden met een loyaliteitskaart: €2." }],
           basiskennis: [{ onderwerp: "Klant = investering", uitleg: "Eerste verkoop levert vaak weinig op (kosten reclame). Tweede + derde verkoop = winst." }],
           niveaus: { basis: "5× duurder voor nieuwe klant.", simpeler: "Nieuwe klant overtuigen kost reclame + moeite. Bestaande klant tevreden houden is veel goedkoper. ~5× verschil.", nogSimpeler: "Nieuwe duurder" },
         },
@@ -356,7 +356,7 @@ const steps = [
         q: "Sam wil mensen op een festival bereiken. Welk promotie-kanaal werkt het beste?",
         options: ["Instagram + TikTok — daar zit de doelgroep (16-35)", "Krantenadvertentie", "Telefoongids", "Brieven sturen"],
         answer: 0,
-        wrongHints: [null, "Festival-bezoekers lezen geen kranten gericht.", "Niet meer in gebruik.", "Vaak ongelezen, hoge kosten."],
+        wrongHints: [null, "Festivalbezoekers bereik je niet gericht via de krant.", "Niet meer in gebruik.", "Vaak ongelezen, hoge kosten."],
         uitlegPad: {
           stappen: [{ titel: "Doelgroep bepaalt kanaal", tekst: "Kies het promotie-kanaal waar JOUW DOELGROEP zit. Festivalbezoekers 16-35 zijn op TikTok + Instagram, niet in de krant." }],
           woorden: [{ woord: "promotie-kanaal", uitleg: "Medium om je doelgroep te bereiken: socials, krant, radio, etc." }],
@@ -434,7 +434,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Quitte draaien", tekst: "Break-even-punt (BEP) = de hoeveelheid waar omzet PRECIES gelijk is aan totale kosten. Boven BEP = winst. Onder BEP = verlies." }],
           woorden: [{ woord: "break-even-punt", uitleg: "Punt waar omzet = kosten. Engels 'break even' = quitte spelen." }, { woord: "dekkingsbijdrage", uitleg: "Verkoopprijs − variabele kosten per stuk. Wat overblijft om vaste kosten te dekken." }],
-          theorie: "Formule: BEP = vaste kosten / dekkingsbijdrage per stuk. Vertelt je hoe groot je MINIMAAL moet verkopen om geen verlies te maken.",
+          theorie: "Formule: BEP = vaste kosten / dekkingsbijdrage per stuk. Vertelt je hoeveel je MINIMAAL moet verkopen om geen verlies te maken.",
           voorbeelden: [{ type: "Sam", tekst: "Vaste €125. Dekkingsbijdrage €5−€1,50 = €3,50. BEP = 125/3,50 ≈ 36 frieten. Boven 36 = winst." }],
           basiskennis: [{ onderwerp: "Niet maximum", uitleg: "BEP is MINIMUM (niet maximum). Winst groeit boven dit punt." }],
           niveaus: { basis: "Omzet = kosten.", simpeler: "Break-even = punt waar je net niet verliest en net niet wint. Omzet dekt precies alle kosten.", nogSimpeler: "Quitte" },
@@ -449,7 +449,7 @@ const steps = [
           stappen: [{ titel: "Bereken in 2 stappen", tekst: "(1) Dekkingsbijdrage per friet: €5 − €1,50 = €3,50. (2) BEP: vaste kosten / dekkingsbijdrage = €140 / €3,50 = 40 frieten." }],
           woorden: [{ woord: "dekkingsbijdrage", uitleg: "Wat elke verkochte eenheid bijdraagt aan dekken van vaste kosten." }],
           theorie: "Elke friet 'pakt' €3,50 van de vaste kosten af. Met €140 vaste kosten, en €3,50 per friet, heb je 40 frieten nodig om quitte te draaien.",
-          voorbeelden: [{ type: "rekenstap", tekst: "Bij 39 frieten: 39 × €3,50 = €136,50 dekking. Te weinig (vaste kosten €140). Bij 40: 40 × €3,50 = €140 ✓." }, { type: "bovenBEP", tekst: "41e friet = €3,50 pure winst. 100 frieten = €60 × €3,50 = €210 winst boven BEP." }],
+          voorbeelden: [{ type: "rekenstap", tekst: "Bij 39 frieten: 39 × €3,50 = €136,50 dekking. Te weinig (vaste kosten €140). Bij 40: 40 × €3,50 = €140 ✓." }, { type: "bovenBEP", tekst: "41e friet = €3,50 pure winst. 100 frieten = 60 boven BEP × €3,50 = €210 winst." }],
           basiskennis: [{ onderwerp: "Formule", uitleg: "BEP-formule: vaste kosten / dekkingsbijdrage per stuk = aantal." }],
           niveaus: { basis: "140/3,50 = 40.", simpeler: "Per friet hou je over: €5−€1,50 = €3,50. Vaste kosten €140 / €3,50 = 40 frieten = break-even.", nogSimpeler: "40" },
         },
@@ -458,7 +458,7 @@ const steps = [
         q: "**Brutowinstmarge** voor een friet van €5 met inkoop €1,50?",
         options: ["70%", "30%", "350%", "100%"],
         answer: 0,
-        wrongHints: [null, "Dat is de inkoop-percentage van prijs.", "Dat is de prijs als percentage van inkoop.", "Verkoopprijs zelf is niet de marge."],
+        wrongHints: [null, "Dat is de inkoopprijs als percentage van de verkoopprijs.", "Dat is de prijs als percentage van inkoop.", "Verkoopprijs zelf is niet de marge."],
         uitlegPad: {
           stappen: [{ titel: "Marge-formule", tekst: "Brutowinstmarge = (verkoopprijs − inkoopprijs) / verkoopprijs × 100%. Hier: (5 − 1,50) / 5 = 3,50/5 = 0,70 = 70%." }],
           woorden: [{ woord: "brutowinstmarge", uitleg: "Percentage van de verkoopprijs dat overblijft na inkoop (vóór vaste kosten + belasting)." }],
@@ -487,7 +487,7 @@ const steps = [
   // ─── Stap 5: Vraag en aanbod ──────────────────────────────
   {
     title: "Vraag en aanbod — hoe komt de prijs tot stand?",
-    explanation: "**Pincode 3.3: Vraag en aanbod.** De **prijs** van een product ontstaat door wat kopers willen betalen + wat verkopers willen aanbieden.\n\n**De vraag**: hoeveel willen kopers van iets bij verschillende prijzen?\n• **Wet van de vraag**: hoe **hoger** de prijs, hoe **minder** mensen willen kopen\n• Voorbeeld appels: €3/kg → 100 kg vraag, €1/kg → 400 kg vraag\n\n**Vraagcurve**: lijn die loopt van linksboven naar rechtsbeneden (hogere prijs = minder vraag).\n\n**Het aanbod**: hoeveel willen verkopers leveren bij verschillende prijzen?\n• **Wet van het aanbod**: hoe **hoger** de prijs, hoe **meer** verkopers willen leveren\n• Voorbeeld appels: €1/kg → boer levert weinig (lage winst), €3/kg → boer levert veel (winstgevend)\n\n**Aanbodcurve**: lijn die loopt van linksbeneden naar rechtsboven (hogere prijs = meer aanbod).\n\n**Evenwichtsprijs**: punt waar vraag = aanbod. Hier 'klikt' de markt.\n\n**Voorbeeld concert-tickets**:\n• Vraag: 50.000 mensen willen naar Taylor Swift\n• Aanbod: 35.000 zitplaatsen\n• → Officiele prijs €120, maar zwarte markt €500+ (hoge vraag, laag aanbod)\n\n**Wat als vraag of aanbod verandert?**\n\n**Vraag stijgt** (meer mensen willen het):\n• Bv. trend, reclame, hoger inkomen\n• Curve schuift naar rechts\n• Nieuwe evenwichtsprijs HOGER\n• Voorbeeld: hype rond AirPods Max → prijs blijft hoog\n\n**Vraag daalt**:\n• Bv. recessie, ander product populairder\n• Curve schuift naar links\n• Nieuwe prijs LAGER\n• Voorbeeld: handgels na corona-piek\n\n**Aanbod stijgt** (meer leveranciers):\n• Bv. nieuwe technologie, meer concurrenten\n• Curve schuift naar rechts\n• Prijs LAGER\n• Voorbeeld: zonnepanelen — China produceert massa, prijs gehalveerd\n\n**Aanbod daalt**:\n• Bv. oogst mislukt, fabriek dicht\n• Curve schuift naar links\n• Prijs HOGER\n• Voorbeeld: olieprijs steeg na sancties Rusland\n\n**Voor je dagelijks leven**:\n• Sneakers in sale: aanbod > vraag (te veel, weg ermee)\n• Festival-ticket vlak voor evenement: vraag > aanbod = prijs stijgt\n• Restaurant slechte recensie: vraag daalt, prijs zou moeten dalen of hij gaat dicht\n\n**Substituut en complement**:\n• **Substituten**: vervangbaar (Pepsi vs Coca-Cola). Prijs Coca stijgt → meer Pepsi-vraag.\n• **Complement**: hoort bij elkaar (printer + cartridge). Printer goedkoop → meer cartridges nodig.\n\n**Nuttige formule**:\n• Bij prijs P → bekijk Q_vraag en Q_aanbod\n• Als Q_vraag > Q_aanbod: prijs gaat omhoog (krapte)\n• Als Q_vraag < Q_aanbod: prijs gaat omlaag (overschot)",
+    explanation: "**Pincode 3.3: Vraag en aanbod.** De **prijs** van een product ontstaat door wat kopers willen betalen + wat verkopers willen aanbieden.\n\n**De vraag**: hoeveel willen kopers van iets bij verschillende prijzen?\n• **Wet van de vraag**: hoe **hoger** de prijs, hoe **minder** mensen willen kopen\n• Voorbeeld appels: €3/kg → 100 kg vraag, €1/kg → 400 kg vraag\n\n**Vraagcurve**: lijn die loopt van linksboven naar rechtsbeneden (hogere prijs = minder vraag).\n\n**Het aanbod**: hoeveel willen verkopers leveren bij verschillende prijzen?\n• **Wet van het aanbod**: hoe **hoger** de prijs, hoe **meer** verkopers willen leveren\n• Voorbeeld appels: €1/kg → boer levert weinig (lage winst), €3/kg → boer levert veel (winstgevend)\n\n**Aanbodcurve**: lijn die loopt van linksbeneden naar rechtsboven (hogere prijs = meer aanbod).\n\n**Evenwichtsprijs**: punt waar vraag = aanbod. Hier 'klikt' de markt.\n\n**Voorbeeld concert-tickets**:\n• Vraag: 50.000 mensen willen naar Taylor Swift\n• Aanbod: 35.000 zitplaatsen\n• → Officiële prijs €120, maar zwarte markt €500+ (hoge vraag, laag aanbod)\n\n**Wat als vraag of aanbod verandert?**\n\n**Vraag stijgt** (meer mensen willen het):\n• Bv. trend, reclame, hoger inkomen\n• Curve schuift naar rechts\n• Nieuwe evenwichtsprijs HOGER\n• Voorbeeld: hype rond AirPods Max → prijs blijft hoog\n\n**Vraag daalt**:\n• Bv. recessie, ander product populairder\n• Curve schuift naar links\n• Nieuwe prijs LAGER\n• Voorbeeld: handgels na corona-piek\n\n**Aanbod stijgt** (meer leveranciers):\n• Bv. nieuwe technologie, meer concurrenten\n• Curve schuift naar rechts\n• Prijs LAGER\n• Voorbeeld: zonnepanelen — China produceert massa, prijs gehalveerd\n\n**Aanbod daalt**:\n• Bv. oogst mislukt, fabriek dicht\n• Curve schuift naar links\n• Prijs HOGER\n• Voorbeeld: olieprijs steeg na sancties Rusland\n\n**Voor je dagelijks leven**:\n• Sneakers in sale: aanbod > vraag (te veel, weg ermee)\n• Festival-ticket vlak voor evenement: vraag > aanbod = prijs stijgt\n• Restaurant slechte recensie: vraag daalt, prijs zou moeten dalen of hij gaat dicht\n\n**Substituut en complement**:\n• **Substituten**: vervangbaar (Pepsi vs Coca-Cola). Prijs Coca stijgt → meer Pepsi-vraag.\n• **Complement**: hoort bij elkaar (printer + cartridge). Printer goedkoop → meer cartridges nodig.\n\n**Nuttige formule**:\n• Bij prijs P → bekijk Q_vraag en Q_aanbod\n• Als Q_vraag > Q_aanbod: prijs gaat omhoog (krapte)\n• Als Q_vraag < Q_aanbod: prijs gaat omlaag (overschot)",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">VRAAG &amp; AANBOD — APPELS</text>
 <line x1="40" y1="40" x2="40" y2="160" stroke="${COLORS.text}" stroke-width="1.5"/>
@@ -514,7 +514,7 @@ const steps = [
           theorie: "Test-vraag: 'Als appels duurder worden, koop je dan MEER of MINDER?' Minder. Daarom: prijs ↑ → vraag ↓. Geldt voor bijna alles (uitzondering: luxegoederen waar hogere prijs juist status geeft).",
           voorbeelden: [{ type: "appels", tekst: "€1/kg → mensen kopen 5 kg. €4/kg → mensen kopen 2 kg." }, { type: "concertkaart", tekst: "€80 ticket → 50.000 willen. €200 ticket → 20.000 willen." }],
           basiskennis: [{ onderwerp: "Geen 'sneller'", uitleg: "Wet gaat over HOEVEEL je koopt, niet over snelheid." }],
-          niveaus: { basis: "Duurder = minder vraag.", simpeler: "Wat doet jij als boodschappen duurder worden? Minder kopen. Iedereen doet hetzelfde.", nogSimpeler: "Duurder = minder" },
+          niveaus: { basis: "Duurder = minder vraag.", simpeler: "Wat doe jij als boodschappen duurder worden? Minder kopen. Iedereen doet hetzelfde.", nogSimpeler: "Duurder = minder" },
         },
       },
       {
@@ -527,7 +527,7 @@ const steps = [
           woorden: [{ woord: "aanbod", uitleg: "Hoeveelheid die verkopers willen LEVEREN tegen een bepaalde prijs." }, { woord: "aanbodcurve", uitleg: "Loopt van linksbeneden naar rechtsboven. Hogere prijs = meer aanbod." }],
           theorie: "Test: 'Als de prijs van koffie verdubbelt, gaat de boer dan meer of minder koffie verbouwen?' Meer! Hoge prijs = lonend om uit te breiden.",
           voorbeelden: [{ type: "boer", tekst: "Bij appelprijs €1/kg ploeg je niet bij. Bij €4/kg ga je nieuwe boomgaard planten." }, { type: "industrie", tekst: "Hogere olieprijs in 2022 → meer schaliegas-winning in VS." }],
-          basiskennis: [{ onderwerp: "Tegenovergesteld aan vraag", uitleg: "Vraag: hoog prijs = laag aantal. Aanbod: hoog prijs = hoog aantal. Tegenovergesteld!" }],
+          basiskennis: [{ onderwerp: "Tegenovergesteld aan vraag", uitleg: "Vraag: hoge prijs = laag aantal. Aanbod: hoge prijs = hoog aantal. Tegenovergesteld!" }],
           niveaus: { basis: "Hogere prijs = meer leveren.", simpeler: "Hoge prijs = veel winst per stuk = verkoper wil méér leveren.", nogSimpeler: "Meer winst = meer" },
         },
       },
@@ -535,12 +535,12 @@ const steps = [
         q: "**Evenwichtsprijs** is:",
         options: ["Prijs waar vraag = aanbod", "Hoogste prijs", "Laagste prijs", "Gemiddelde prijs"],
         answer: 0,
-        wrongHints: [null, "Niet automatisch.", "Niet automatisch.", "Niet definitie."],
+        wrongHints: [null, "Niet automatisch.", "Niet automatisch.", "Niet de definitie."],
         uitlegPad: {
           stappen: [{ titel: "Waar curves elkaar kruisen", tekst: "Op een grafiek: waar vraagcurve en aanbodcurve elkaar SNIJDEN — dat is de evenwichtsprijs. Vraag = aanbod, markt is in balans." }],
           woorden: [{ woord: "evenwichtsprijs", uitleg: "Prijs waarbij hoeveelheid vraag = hoeveelheid aanbod. Markt 'klikt'." }, { woord: "marktevenwicht", uitleg: "Toestand waar vraag en aanbod elkaar in balans houden." }],
           theorie: "Boven evenwichtsprijs → te veel aanbod → prijs daalt terug. Onder evenwichtsprijs → te veel vraag → prijs stijgt terug. Markt streeft naar evenwicht.",
-          voorbeelden: [{ type: "appels", tekst: "Boer wil €4/kg leveren (veel), kopers willen alleen €1/kg betalen (veel). Compromis: €2,50/kg waar beide tevreden zijn." }],
+          voorbeelden: [{ type: "appels", tekst: "Bij €4/kg wil de boer veel leveren, bij €1/kg willen kopers veel kopen. Evenwicht: €2/kg, waar vraag en aanbod gelijk zijn." }],
           basiskennis: [{ onderwerp: "Geen hoogste/laagste", uitleg: "Evenwichtsprijs is niet automatisch hoog of laag — het is waar markt 'in balans' is." }],
           niveaus: { basis: "Vraag = aanbod.", simpeler: "Evenwichtsprijs = waar wat kopers willen kopen = wat verkopers willen leveren. Markt klikt.", nogSimpeler: "Balanspunt" },
         },
@@ -554,8 +554,8 @@ const steps = [
           stappen: [{ titel: "Krapte = duurder", tekst: "Veel kopers willen, weinig is beschikbaar. Verkopers kunnen meer vragen — kopers betalen om het te krijgen. Prijs stijgt." }],
           woorden: [{ woord: "krapte", uitleg: "Vraag > aanbod. Resultaat: prijsstijging." }, { woord: "overschot", uitleg: "Aanbod > vraag. Resultaat: prijs daalt." }],
           theorie: "Beweging naar evenwichtsprijs: bij krapte gaan prijzen omhoog, totdat vraag daalt (te duur) en aanbod stijgt (winstgevend). Bij overschot omgekeerd.",
-          voorbeelden: [{ type: "concert", tekst: "Taylor Swift: 50.000 fans, 35.000 plekken. Officiele €120 → zwarte markt €500+." }, { type: "PS5", tekst: "PS5 launch 2020: enorme vraag, geen voorraad → tweedehands €800+." }],
-          basiskennis: [{ onderwerp: "Beweging", uitleg: "Prijs blijft niet bij krapte. Beweging is altijd OMHOOG." }],
+          voorbeelden: [{ type: "concert", tekst: "Taylor Swift: 50.000 fans, 35.000 plekken. Officieel €120 → zwarte markt €500+." }, { type: "PS5", tekst: "PS5 launch 2020: enorme vraag, geen voorraad → tweedehands €800+." }],
+          basiskennis: [{ onderwerp: "Beweging", uitleg: "Bij krapte blijft de prijs niet gelijk. Beweging is altijd OMHOOG." }],
           niveaus: { basis: "Krapte = prijs omhoog.", simpeler: "Iedereen wil het, weinig te krijgen → mensen betalen meer om het toch te krijgen → prijs stijgt.", nogSimpeler: "Krapte = duur" },
         },
       },
@@ -567,7 +567,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Vervangbaar", tekst: "Substituut = product dat de PLAATS kan innemen van een ander. Als Coca duurder wordt, schuiven mensen naar Pepsi (hetzelfde 'doel' bereikt)." }],
           woorden: [{ woord: "substituut", uitleg: "Vervangbaar product. Stijging prijs A → meer vraag naar B." }, { woord: "complement", uitleg: "Aanvullend product. Hoort bij elkaar (printer + cartridge)." }],
-          theorie: "Belangrijk voor prijsbeleid: als concurrent veel substituten heeft (Coca-Pepsi-Spa Cola), kun je niet zomaar de prijs verhogen — klanten lopen weg.",
+          theorie: "Belangrijk voor prijsbeleid: als je product veel substituten heeft (Coca-Cola, Pepsi, huismerk-cola), kun je niet zomaar de prijs verhogen — klanten lopen weg.",
           voorbeelden: [{ type: "substituten", tekst: "Pepsi/Coca, AH-merk/A-merk, trein/auto, Spotify/Apple Music." }, { type: "complementen", tekst: "Printer + inkt, telefoon + lader, auto + benzine, tandpasta + tandenborstel." }],
           basiskennis: [{ onderwerp: "Niet gratis/belastingvrij", uitleg: "Substituut heeft niks met prijs te maken in absolute zin — het gaat om VERVANGBAARHEID." }],
           niveaus: { basis: "Vervangbaar = substituut.", simpeler: "Pepsi en Coca = beide cola, vervangen elkaar = substituten.", nogSimpeler: "Vervang" },
@@ -592,7 +592,7 @@ const steps = [
   // ─── Stap 6: Macht op de markt — marktvormen ──────────────
   {
     title: "Macht op de markt — wie bepaalt de prijs?",
-    explanation: "**Pincode 3.4: Macht op de markt.** Niet elke markt werkt hetzelfde. Hoeveel **concurrentie** er is bepaalt wie de prijs vaststelt.\n\n**4 marktvormen** (van veel naar weinig concurrentie):\n\n**1. Volkomen concurrentie**\n• **Veel** aanbieders + **veel** vragers\n• **Identiek** product (geen verschil tussen leveranciers)\n• Niemand bepaalt prijs — markt doet dat\n• Voorbeeld: tarwe, aardappel, basis-grondstoffen\n• Voor consument: laagst mogelijke prijs, weinig keuze in 'merk'\n\n**2. Monopolistische concurrentie**\n• **Veel** aanbieders\n• **Verschillende** producten (gedifferentieerd door merk, kwaliteit, design)\n• Beetje invloed op prijs door uniek karakter\n• Voorbeeld: kledingmerken (Nike vs Adidas vs Puma), restaurants, kappers\n• Voor consument: veel keuze, prijs varieert per merk\n\n**3. Oligopolie**\n• **Weinig grote** aanbieders (3-10)\n• Strategisch met elkaar — wat doet concurrent?\n• Risico: prijsafspraken (illegaal!)\n• Voorbeeld: telecom (KPN, Vodafone, T-Mobile, Odido), banken (ING, Rabo, ABN, SNS), supermarkten (AH, Jumbo, Lidl, Aldi)\n• Voor consument: beperkte keuze, prijzen vaak hoog\n\n**4. Monopolie**\n• **1** aanbieder\n• Volledige macht over prijs\n• Vaak via patenten, schaarse grondstoffen, of overheidsregulering\n• Voorbeeld: NS (treinen op de meeste lijnen), Schiphol (luchthaven Amsterdam), regionale waterleidingbedrijven\n• Voor consument: hoge prijzen, geen keuze\n\n**Vergelijking prijs en winst**:\n| Marktvorm | Prijs | Winst aanbieder |\n|---|---|---|\n| Volkomen concurr. | Laag | Klein |\n| Monopol. concurr. | Middel | Middel |\n| Oligopolie | Hoog | Hoog |\n| Monopolie | Hoogst | Hoogst |\n\n**Waarom mag een monopolie soms?**\n• Niet meer concurrenten haalbaar (treinrails dubbel aanleggen onpraktisch)\n• Onderzoek + ontwikkeling kost veel (medicijnen-patent voor 20 jaar)\n• Maar: met **prijsregulering** (overheid bepaalt max-prijs)\n\n**Wat doet de ACM (Autoriteit Consument & Markt)?**\n• Voorkomt **kartels** (prijsafspraken tussen oligopolie-spelers)\n• Goedkeuring van fusies (anders monopolie)\n• Voorbeeld: Heineken-Vrumona-fusie geblokkeerd in 2020\n• ACM legt boetes op (Apple App Store, Google)\n\n**Marktmacht en consument**:\n• Hoe meer concurrentie, hoe **beter voor de consument** (lagere prijs, meer keuze)\n• Maar: bedrijven hebben minder winst → minder R&D, minder banen?\n• Spanning tussen efficiëntie en innovatie\n\n**Voorbeelden uit het echte leven**:\n• **Volkomen concurrentie**: weekmarkt-aardappelen — alle boeren leveren ongeveer dezelfde prijs\n• **Monopolistische concurrentie**: 50 cafés in stad, elk eigen sfeer/locatie/menu\n• **Oligopolie**: Nederlandse benzine (Shell, BP, Esso, Total — vergelijkbare prijzen!)\n• **Monopolie**: gemeentelijke watermaatschappij — geen alternatief\n\n**Voor jou**:\n• Bij **volkomen concurrentie** loont vergelijken minst (alle prijzen ongeveer gelijk)\n• Bij **monopolistische concurrentie** loont MERKEN-onderzoek (kwaliteit verschilt)\n• Bij **oligopolie** loont vergelijken (kleine verschillen kunnen €100/jaar schelen — telecom!)\n• Bij **monopolie**: weinig keuze, accepteren of niet kopen",
+    explanation: "**Pincode 3.4: Macht op de markt.** Niet elke markt werkt hetzelfde. Hoeveel **concurrentie** er is bepaalt wie de prijs vaststelt.\n\n**4 marktvormen** (van veel naar weinig concurrentie):\n\n**1. Volkomen concurrentie**\n• **Veel** aanbieders + **veel** vragers\n• **Identiek** product (geen verschil tussen leveranciers)\n• Niemand bepaalt prijs — markt doet dat\n• Voorbeeld: tarwe, aardappel, basis-grondstoffen\n• Voor consument: laagst mogelijke prijs, weinig keuze in 'merk'\n\n**2. Monopolistische concurrentie**\n• **Veel** aanbieders\n• **Verschillende** producten (gedifferentieerd door merk, kwaliteit, design)\n• Beetje invloed op prijs door uniek karakter\n• Voorbeeld: kledingmerken (Nike vs Adidas vs Puma), restaurants, kappers\n• Voor consument: veel keuze, prijs varieert per merk\n\n**3. Oligopolie**\n• **Weinig grote** aanbieders (3-10)\n• Strategisch met elkaar — wat doet concurrent?\n• Risico: prijsafspraken (illegaal!)\n• Voorbeeld: telecom (KPN, Vodafone, Odido), banken (ING, Rabo, ABN, SNS), supermarkten (AH, Jumbo, Lidl, Aldi)\n• Voor consument: beperkte keuze, prijzen vaak hoog\n\n**4. Monopolie**\n• **1** aanbieder\n• Volledige macht over prijs\n• Vaak via patenten, schaarse grondstoffen, of overheidsregulering\n• Voorbeeld: NS (treinen op de meeste lijnen), Schiphol (luchthaven Amsterdam), regionale waterleidingbedrijven\n• Voor consument: hoge prijzen, geen keuze\n\n**Vergelijking prijs en winst**:\n| Marktvorm | Prijs | Winst aanbieder |\n|---|---|---|\n| Volkomen concurr. | Laag | Klein |\n| Monopol. concurr. | Middel | Middel |\n| Oligopolie | Hoog | Hoog |\n| Monopolie | Hoogst | Hoogst |\n\n**Waarom mag een monopolie soms?**\n• Niet meer concurrenten haalbaar (treinrails dubbel aanleggen onpraktisch)\n• Onderzoek + ontwikkeling kost veel (medicijnen-patent voor 20 jaar)\n• Maar: met **prijsregulering** (overheid bepaalt max-prijs)\n\n**Wat doet de ACM (Autoriteit Consument & Markt)?**\n• Voorkomt **kartels** (prijsafspraken tussen oligopolie-spelers)\n• Goedkeuring van fusies (anders monopolie)\n• ACM kan een fusie verbieden als er te weinig concurrentie overblijft\n• ACM legt boetes op (bv. Apple, om de App Store)\n\n**Marktmacht en consument**:\n• Hoe meer concurrentie, hoe **beter voor de consument** (lagere prijs, meer keuze)\n• Maar: bedrijven hebben minder winst → minder R&D, minder banen?\n• Spanning tussen efficiëntie en innovatie\n\n**Voorbeelden uit het echte leven**:\n• **Volkomen concurrentie**: weekmarkt-aardappelen — alle boeren leveren ongeveer dezelfde prijs\n• **Monopolistische concurrentie**: 50 cafés in stad, elk eigen sfeer/locatie/menu\n• **Oligopolie**: Nederlandse benzine (Shell, BP, Esso, Total — vergelijkbare prijzen!)\n• **Monopolie**: gemeentelijke watermaatschappij — geen alternatief\n\n**Voor jou**:\n• Bij **volkomen concurrentie** loont vergelijken het minst (alle prijzen ongeveer gelijk)\n• Bij **monopolistische concurrentie** loont MERKEN-onderzoek (kwaliteit verschilt)\n• Bij **oligopolie** loont vergelijken (kleine verschillen kunnen €100/jaar schelen — telecom!)\n• Bij **monopolie**: weinig keuze, accepteren of niet kopen",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">4 MARKTVORMEN</text>
 <rect x="20" y="40" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
@@ -630,17 +630,17 @@ const steps = [
         },
       },
       {
-        q: "**Telecom** (KPN/Vodafone/T-Mobile/Odido) is welke marktvorm?",
+        q: "**Telecom** (KPN/Vodafone/Odido) is welke marktvorm?",
         options: ["Oligopolie (weinig grote)", "Volkomen concurrentie", "Monopolie", "Monopolistische concurrentie"],
         answer: 0,
-        wrongHints: [null, "Te weinig spelers voor 'volkomen'.", "Niet 1, maar 4.", "Niet 'veel' aanbieders."],
+        wrongHints: [null, "Te weinig spelers voor 'volkomen'.", "Niet 1, maar 3.", "Niet 'veel' aanbieders."],
         uitlegPad: {
-          stappen: [{ titel: "Tel de spelers", tekst: "KPN, Vodafone, T-Mobile, Odido = 4 grote spelers. Niet 1 (monopolie), niet 50+ (mono. concurr.). 'Weinig grote' = oligopolie." }],
+          stappen: [{ titel: "Tel de spelers", tekst: "KPN, Vodafone, Odido = 3 grote spelers. Niet 1 (monopolie), niet 50+ (mono. concurr.). 'Weinig grote' = oligopolie." }],
           woorden: [{ woord: "oligopolie", uitleg: "Marktvorm met weinig grote aanbieders (3-10). Strategisch met elkaar." }],
-          theorie: "Kenmerk oligopolie: spelers KIJKEN naar elkaar. Als KPN tarief verhoogt, kijkt Vodafone of zij ook gaan stijgen. Prijzen verschillen weinig, kunnen samen 'omhoog kruipen' (gevaar voor kartel — daarom ACM oplet).",
-          voorbeelden: [{ type: "telecom", tekst: "4 spelers in NL. Tarieven binnen €5-10 van elkaar. Onbenutte data soms identiek." }, { type: "ander", tekst: "Supermarkten (AH/Jumbo/Lidl/Aldi/Plus), benzine (Shell/BP/Esso/Total), banken." }],
+          theorie: "Kenmerk oligopolie: spelers KIJKEN naar elkaar. Als KPN tarief verhoogt, kijkt Vodafone of zij ook gaan stijgen. Prijzen verschillen weinig, kunnen samen 'omhoog kruipen' (gevaar voor kartel — daarom let de ACM op).",
+          voorbeelden: [{ type: "telecom", tekst: "3 grote spelers in NL. Tarieven liggen vaak binnen €5-10 van elkaar." }, { type: "ander", tekst: "Supermarkten (AH/Jumbo/Lidl/Aldi/Plus), benzine (Shell/BP/Esso/Total), banken." }],
           basiskennis: [{ onderwerp: "Vergelijken loont", uitleg: "Bij oligopolie bestaan kleine verschillen — vergelijken kan €100-300/jaar opleveren." }],
-          niveaus: { basis: "4 spelers = oligopolie.", simpeler: "Telecom heeft 4 grote spelers. Niet 1 (mono), niet 50 (veel) — dus oligopolie.", nogSimpeler: "4 = oligo" },
+          niveaus: { basis: "3 spelers = oligopolie.", simpeler: "Telecom heeft 3 grote spelers. Niet 1 (mono), niet 50 (veel) — dus oligopolie.", nogSimpeler: "3 = oligo" },
         },
       },
       {
@@ -651,8 +651,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mono = 1", tekst: "Monopolie betekent letterlijk 'één verkoper'. Eén aanbieder = volledige macht over prijs. Geen concurrentie = hoge prijs mogelijk." }],
           woorden: [{ woord: "monopolie", uitleg: "Marktvorm met 1 aanbieder. Heeft volledige prijsmacht." }],
-          theorie: "Monopolies zijn vaak ontstaan door patenten (medicijn), schaarse grondstoffen, of natuurlijke noodzaak (1 spoornet). Daarom houdt overheid prijzen vaak in de gaten (NMa, NZa).",
-          voorbeelden: [{ type: "NS", tekst: "NS heeft monopolie op grootste deel hoofdrailnet. Overheid reguleert tarieven." }, { type: "patent", tekst: "Pfizer's COVID-vaccin had patent → tijdelijk monopolie → hoge prijs." }],
+          theorie: "Monopolies zijn vaak ontstaan door patenten (medicijn), schaarse grondstoffen, of natuurlijke noodzaak (1 spoornet). Daarom houdt overheid prijzen vaak in de gaten (ACM, NZa).",
+          voorbeelden: [{ type: "NS", tekst: "NS heeft monopolie op grootste deel hoofdrailnet. Overheid reguleert tarieven." }, { type: "patent", tekst: "Nieuw medicijn met patent → tijdelijk monopolie → hoge prijs." }],
           basiskennis: [{ onderwerp: "Niet 'veel'", uitleg: "Veel aanbieders = volkomen of monopolistische concurrentie, niet monopolie." }],
           niveaus: { basis: "1 aanbieder.", simpeler: "Monopolie = ÉÉN verkoper. Hij bepaalt prijs want klanten kunnen nergens anders heen.", nogSimpeler: "1 = monopolie" },
         },
@@ -665,8 +665,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Marktwaakhond", tekst: "Autoriteit Consument & Markt = overheidstoezichthouder. Voorkomt prijsafspraken (kartels) tussen concurrenten en zorgt dat fusies de markt niet domineren." }],
           woorden: [{ woord: "ACM", uitleg: "Autoriteit Consument & Markt. Onafhankelijke waakhond voor eerlijke markt." }, { woord: "kartel", uitleg: "Illegale prijsafspraak tussen concurrenten om gezamenlijk hogere prijs te vragen." }],
-          theorie: "ACM kan boetes opleggen (Apple AppStore, Google), fusies blokkeren (Heineken-Vrumona 2020), tariefverhogingen onderzoeken. Doel: consument beschermen tegen marktmacht.",
-          voorbeelden: [{ type: "fusie", tekst: "ACM blokkeerde Telfort-KPN fusie destijds — zou oligopolie te dichtbij monopolie brengen." }, { type: "boete", tekst: "Cement-kartel in NL kreeg miljoenen boete voor jarenlange prijsafspraken." }],
+          theorie: "ACM kan boetes opleggen (bv. Apple om de App Store), fusies blokkeren, tariefverhogingen onderzoeken. Doel: consument beschermen tegen marktmacht.",
+          voorbeelden: [{ type: "fusie", tekst: "ACM kan een fusie verbieden als die een oligopolie te dicht bij een monopolie zou brengen." }, { type: "boete", tekst: "Bedrijven die prijsafspraken maken (een kartel) kunnen boetes van miljoenen euro's krijgen." }],
           basiskennis: [{ onderwerp: "Niet wetgevend", uitleg: "ACM voert wetten UIT, maakt ze niet. Wetten komen van parlement. ACM int ook geen belasting (= Belastingdienst)." }],
           niveaus: { basis: "Bewaakt eerlijke markt.", simpeler: "ACM is de marktpolitie — voorkomt dat bedrijven samen prijzen te hoog maken.", nogSimpeler: "Marktwaakhond" },
         },
@@ -687,14 +687,14 @@ const steps = [
       },
       {
         q: "Bij welke marktvorm is **vergelijken** het meest waardevol?",
-        options: ["Oligopolie — kleine verschillen kunnen €100/jr schelen", "Volkomen concurrentie", "Monopolie", "Iedere is gelijk"],
+        options: ["Oligopolie — kleine verschillen kunnen €100/jr schelen", "Volkomen concurrentie", "Monopolie", "Overal gelijk"],
         answer: 0,
         wrongHints: [null, "Bij volkomen alles gelijke prijs.", "Geen alternatief.", "Wel verschil."],
         uitlegPad: {
           stappen: [{ titel: "Wanneer loont vergelijken?", tekst: "Bij oligopolie zijn er weinig (3-10) maar gelijkwaardige spelers — prijzen verschillen genoeg om voor jou €100/jaar te schelen. Telecom, energie, banken." }],
           woorden: [{ woord: "prijsvergelijken", uitleg: "Aanbieders vergelijken om beste prijs/kwaliteit te kiezen." }],
           theorie: "Bij volkomen concurrentie zijn alle prijzen al gelijk (geen winst). Bij monopolie heb je geen keuze. Bij monopolistische concurrentie verschillen producten (lastig vergelijken). Bij oligopolie zijn producten redelijk gelijk maar prijzen verschillen — JACKPOT voor vergelijken.",
-          voorbeelden: [{ type: "telecom", tekst: "KPN €40, Vodafone €35, T-Mobile €32, Odido €28/maand. Verschil €144/jr." }, { type: "energie", tekst: "Eneco vs Vattenfall vs Essent: verschillen tot €300/jaar op contract." }],
+          voorbeelden: [{ type: "telecom", tekst: "KPN €40, Vodafone €35, Odido €28/maand. Verschil €144/jr." }, { type: "energie", tekst: "Eneco vs Vattenfall vs Essent: verschillen tot €300/jaar op contract." }],
           basiskennis: [{ onderwerp: "Vergelijkings-websites", uitleg: "Bestaan dankzij oligopolie-marktvormen waar prijzen vergelijken loont (Consumentenbond, Pricewise, Independer)." }],
           niveaus: { basis: "Oligopolie.", simpeler: "Bij oligopolie (weinig grote spelers zoals telecom) verschillen prijzen genoeg om vergelijken €100+/jaar op te leveren.", nogSimpeler: "Oligopolie" },
         },
@@ -704,7 +704,7 @@ const steps = [
   // ─── Stap 7: Rechtsvormen ─────────────────────────────────
   {
     title: "Rechtsvormen — eenmanszaak, VOF of BV?",
-    explanation: "**Rechtsvorm** = de juridische opzet van een bedrijf. Belangrijk voor:\n• Wie is **aansprakelijk** voor schulden?\n• Hoeveel **belasting** betaal je?\n• Heb je **kapitaal** nodig om te starten?\n\n**Eenmanszaak** (1 ondernemer)\n• ✓ Makkelijk te starten via KvK (~€80)\n• ✓ Geen minimumkapitaal\n• ✓ Belastingvoordelen voor starters (zelfstandigenaftrek)\n• ✗ **Privé aansprakelijk**: bedrijf failliet = je huis/spaargeld in gevaar\n• Belasting: **inkomstenbelasting (IB)** over winst\n\n**VOF — Vennootschap onder Firma** (2+ ondernemers samen)\n• Net als eenmanszaak, maar met meerdere eigenaars (vennoten)\n• ✗ Iedereen privé aansprakelijk — ook voor schulden van de andere vennoot!\n• Belasting: elk apart IB over zijn winstdeel\n\n**BV — Besloten Vennootschap**\n• Apart juridisch lichaam (rechtspersoon, met aandelen)\n• ✓ **Niet privé aansprakelijk** (alleen tot ingelegd kapitaal)\n• ✗ Notaris nodig om op te richten (~€500-€1.500)\n• ✗ Apart financiele administratie + jaarverslag\n• Belasting: **vennootschapsbelasting (VPB)** over winst, en als jij loon krijgt uit de BV ook IB\n\n**Wanneer welke rechtsvorm**?\n• **Eenmanszaak**: kleinschalig starten, weinig risico (bv. bijles geven)\n• **VOF**: samen met 1-2 vrienden, vertrouwen onderling (bv. samen kapsalon)\n• **BV**: als omzet/winst groot wordt, of veel risico (bv. €100k+ omzet, juridisch riskante markt)\n\n**Vuistregel**: tot ~€100.000 winst is eenmanszaak fiscaal voordeliger. Erboven wordt BV interessanter.",
+    explanation: "**Rechtsvorm** = de juridische opzet van een bedrijf. Belangrijk voor:\n• Wie is **aansprakelijk** voor schulden?\n• Hoeveel **belasting** betaal je?\n• Heb je **kapitaal** nodig om te starten?\n\n**Eenmanszaak** (1 ondernemer)\n• ✓ Makkelijk te starten via KvK (~€80)\n• ✓ Geen minimumkapitaal\n• ✓ Belastingvoordelen voor starters (zelfstandigenaftrek)\n• ✗ **Privé aansprakelijk**: bedrijf failliet = je huis/spaargeld in gevaar\n• Belasting: **inkomstenbelasting (IB)** over winst\n\n**VOF — Vennootschap onder Firma** (2+ ondernemers samen)\n• Net als eenmanszaak, maar met meerdere eigenaars (vennoten)\n• ✗ Iedereen privé aansprakelijk — ook voor schulden van de andere vennoot!\n• Belasting: elk apart IB over zijn winstdeel\n\n**BV — Besloten Vennootschap**\n• Apart juridisch lichaam (rechtspersoon, met aandelen)\n• ✓ **Niet privé aansprakelijk** (alleen tot ingelegd kapitaal)\n• ✗ Notaris nodig om op te richten (~€500-€1.500)\n• ✗ Aparte financiële administratie + jaarverslag\n• Belasting: **vennootschapsbelasting (VPB)** over winst, en als jij loon krijgt uit de BV ook IB\n\n**Wanneer welke rechtsvorm**?\n• **Eenmanszaak**: kleinschalig starten, weinig risico (bv. bijles geven)\n• **VOF**: samen met 1-2 vrienden, vertrouwen onderling (bv. samen kapsalon)\n• **BV**: als omzet/winst groot wordt, of veel risico (bv. €100k+ omzet, juridisch riskante markt)\n\n**Vuistregel**: tot ~€100.000 winst is eenmanszaak fiscaal voordeliger. Erboven wordt BV interessanter.",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">3 RECHTSVORMEN</text>
 <rect x="15" y="40" width="95" height="135" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
@@ -770,8 +770,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "BV = aparte belasting", tekst: "Omdat BV een aparte 'persoon' is, betaalt BV zelf vennootschapsbelasting (VPB) over de winst — niet de eigenaar zelf." }],
           woorden: [{ woord: "VPB", uitleg: "Vennootschapsbelasting. Belasting op winst van BV's en NV's." }, { woord: "IB", uitleg: "Inkomstenbelasting. Voor natuurlijke personen (zoals eenmanszaak-eigenaar)." }],
-          theorie: "VPB-tarief (2024): 19% over eerste €200k, 25,8% daarboven. Eigenaar krijgt loon (DGA-loon, ~€56k verplicht) en betaalt daarover IB. Plus dividenden uit BV worden in Box 2 belast (~26,9%).",
-          voorbeelden: [{ type: "BV", tekst: "Sam's BV maakt €300k winst → VPB ~€57k. Sam keert €100k dividend uit → €26,9k Box 2 IB." }],
+          theorie: "VPB-tarief (2024): 19% over eerste €200k, 25,8% daarboven. Eigenaar krijgt loon (DGA-loon, ~€56k verplicht) en betaalt daarover IB. Plus dividenden uit BV worden in Box 2 belast (2024: 24,5% en boven ~€67k 33%).",
+          voorbeelden: [{ type: "BV", tekst: "Sam's BV maakt €300k winst → VPB ~€64k. Sam keert €100k dividend uit → ~€27k Box 2-belasting." }],
           basiskennis: [{ onderwerp: "Twee belastingen", uitleg: "Bij BV: eerst VPB op winst, dan IB op loon + Box 2 op dividend. Vandaar 'dubbel belasten' angst." }],
           niveaus: { basis: "BV = VPB.", simpeler: "BV is een aparte 'persoon' en betaalt zijn eigen belasting: vennootschapsbelasting (VPB).", nogSimpeler: "BV = VPB" },
         },
@@ -783,8 +783,8 @@ const steps = [
         wrongHints: [null, "BV heeft notariskosten van €500-€1.500.", "VOF heeft 2 personen nodig — hij wil alleen.", "Stichting is voor non-profit, niet ondernemen."],
         uitlegPad: {
           stappen: [{ titel: "Beslisboom", tekst: "Sam wil: (1) alleen, (2) lage kosten. Eenmanszaak: 1 persoon, alleen €80 KvK, klaar. BV te duur (notaris), VOF vereist 2 vennoten, stichting is geen ondernemen." }],
-          woorden: [{ woord: "eenmanszaak", uitleg: "1-eigenaars-bedrijf, €80 oprichten, geen minimumkapitaal." }, { woord: "starter-aftrek", uitleg: "Belastingvoordeel voor de eerste 5 jaren als zelfstandige." }],
-          theorie: "Eenmanszaak is dé start-rechtsvorm in NL. Drie redenen: goedkoop, snel, met fiscaal voordeel (zelfstandigenaftrek €5k + starter-aftrek €2k = €7k aftrek in jaar 1).",
+          woorden: [{ woord: "eenmanszaak", uitleg: "1-eigenaars-bedrijf, €80 oprichten, geen minimumkapitaal." }, { woord: "starter-aftrek", uitleg: "Extra belastingvoordeel dat je in je eerste 5 jaar als zelfstandige maximaal 3 keer kunt gebruiken." }],
+          theorie: "Eenmanszaak is dé start-rechtsvorm in NL. Drie redenen: goedkoop, snel, met fiscaal voordeel (zelfstandigenaftrek + startersaftrek).",
           voorbeelden: [{ type: "Sam", tekst: "Sam start als eenmanszaak Funky Fries. Kosten €80 KvK, dezelfde dag BTW-nummer, direct factureren." }],
           basiskennis: [{ onderwerp: "Later omzetten", uitleg: "Begonnen als eenmanszaak, te groot geworden? Je kunt later naar BV omzetten." }],
           niveaus: { basis: "Eenmanszaak.", simpeler: "Alleen, lage kosten, snel beginnen = eenmanszaak.", nogSimpeler: "Alleen + goedkoop" },
@@ -797,7 +797,7 @@ const steps = [
         wrongHints: [null, "Onder €100k is eenmanszaak (met aftrek) voordeliger.", "Te hoog — al ruim voor €1 miljoen omslagpunt.", "BV kan zeker voordeliger worden."],
         uitlegPad: {
           stappen: [{ titel: "Omslagpunt rond €100k", tekst: "Onder €100k winst: eenmanszaak met zelfstandigenaftrek + MKB-winstvrijstelling = lagere belasting dan BV. Boven: VPB-tarief van BV wint." }],
-          woorden: [{ woord: "omslagpunt", uitleg: "Punt waar één rechtsvorm fiscaal voordeliger wordt dan de andere." }, { woord: "zelfstandigenaftrek", uitleg: "~€5.000 aftrek voor eenmanszaak-eigenaren — alleen geldig bij genoeg gewerkte uren." }],
+          woorden: [{ woord: "omslagpunt", uitleg: "Punt waar één rechtsvorm fiscaal voordeliger wordt dan de andere." }, { woord: "zelfstandigenaftrek", uitleg: "Aftrekpost voor eenmanszaak-eigenaren — alleen geldig bij genoeg gewerkte uren." }],
           theorie: "Eenmanszaak-fiscaalbeleid: aftrekposten maken effectief IB-tarief laag bij beperkte winst. BV: vast VPB-tarief plus DGA-loon. Daardoor BV pas interessant boven omslagpunt (~€100k, varieert per situatie).",
           voorbeelden: [{ type: "€50k", tekst: "Eenmanszaak met €50k winst: na aftrekken ~ €8k IB. BV zou ~€10k VPB + DGA-loon belasting moeten betalen. Eenmanszaak wint." }, { type: "€200k", tekst: "BV: €38k VPB + DGA-loon belasting. Eenmanszaak: ~€80k IB. BV wint." }],
           basiskennis: [{ onderwerp: "Niet absoluut", uitleg: "€100k is ruwe vuistregel. Boekhouder kan exact berekenen per situatie." }],
@@ -823,20 +823,20 @@ const steps = [
   // ─── Stap 8: BTW en facturen ───────────────────────────────
   {
     title: "BTW, facturen en boekhouden — basics",
-    explanation: "Als ondernemer moet je BTW (omzetbelasting) **innen voor de overheid** en **administratie** bijhouden.\n\n**BTW (Belasting Toegevoegde Waarde)**:\n• Je rekent BTW bovenop je prijs aan klanten\n• Je houdt deze BTW apart\n• Je drukt af en toe (per kwartaal) op je belastingdienst\n\n**3 BTW-tarieven in NL**:\n• **21%** — algemeen tarief (kleding, elektronica, restaurant, koeriersdienst)\n• **9%** — laag tarief (boodschappen, water, boeken, kapper, OV)\n• **0%** — export en sommige zorg\n\n**Voorbeeld friet €5 inclusief 9% BTW**:\n• Excl BTW: €5 / 1,09 = **€4,59** voor jou\n• BTW: **€0,41** voor de Belastingdienst\n\n**Factuur** = officieel document voor zakelijke verkoop. Verplichte items:\n• **Jouw** naam, adres, KvK-nummer, BTW-nummer\n• **Klant** naam en adres\n• **Datum** + uniek factuurnummer\n• **Omschrijving** dienst/product\n• **Prijs** (excl BTW), BTW-bedrag, totaal\n\n**Boekhouding** = administratie van inkomsten en uitgaven:\n• **Bonnetjes bewaren** — verplicht 7 jaar!\n• **Bankafschriften** koppelen aan facturen\n• **BTW-aangifte** (elk kwartaal voor de meesten)\n• **Aangifte inkomstenbelasting** (eind van het jaar)\n\n**Boekhoudprogramma's** maken het makkelijker:\n• MoneyMonk, e-Boekhouden, Exact Online\n• Vanaf €10/maand\n\n**Vuistregel zelfstandige**:\nHoud **ongeveer 30%** van je omzet apart voor belasting + BTW. Anders sta je later voor een verrassing!",
+    explanation: "Als ondernemer moet je BTW (omzetbelasting) **innen voor de overheid** en **administratie** bijhouden.\n\n**BTW (Belasting Toegevoegde Waarde)**:\n• Je rekent BTW bovenop je prijs aan klanten\n• Je houdt deze BTW apart\n• Je draagt deze (meestal per kwartaal) af aan de Belastingdienst\n\n**3 BTW-tarieven in NL**:\n• **21%** — algemeen tarief (kleding, elektronica, alcohol, koeriersdienst)\n• **9%** — laag tarief (boodschappen, water, boeken, kapper, OV)\n• **0%** — export en sommige zorg\n\n**Voorbeeld friet €5 inclusief 9% BTW**:\n• Excl BTW: €5 / 1,09 = **€4,59** voor jou\n• BTW: **€0,41** voor de Belastingdienst\n\n**Factuur** = officieel document voor zakelijke verkoop. Verplichte items:\n• **Jouw** naam, adres, KvK-nummer, BTW-nummer\n• **Klant** naam en adres\n• **Datum** + uniek factuurnummer\n• **Omschrijving** dienst/product\n• **Prijs** (excl BTW), BTW-bedrag, totaal\n\n**Boekhouding** = administratie van inkomsten en uitgaven:\n• **Bonnetjes bewaren** — verplicht 7 jaar!\n• **Bankafschriften** koppelen aan facturen\n• **BTW-aangifte** (elk kwartaal voor de meesten)\n• **Aangifte inkomstenbelasting** (eind van het jaar)\n\n**Boekhoudprogramma's** maken het makkelijker:\n• MoneyMonk, e-Boekhouden, Exact Online\n• Vanaf €10/maand\n\n**Vuistregel zelfstandige**:\nHoud **ongeveer 30%** van je omzet apart voor belasting + BTW. Anders sta je later voor een verrassing!",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">BTW-TARIEVEN</text>
 <rect x="35" y="40" width="80" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
 <text x="75" y="62" text-anchor="middle" fill="${COLORS.vraag}" font-size="18" font-family="Arial" font-weight="bold">21%</text>
 <text x="75" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">algemeen</text>
-<text x="75" y="94" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">restaurant, kleding</text>
+<text x="75" y="94" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">alcohol, kleding</text>
 <rect x="120" y="40" width="80" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.5"/>
 <text x="160" y="62" text-anchor="middle" fill="${COLORS.geld}" font-size="18" font-family="Arial" font-weight="bold">9%</text>
 <text x="160" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">laag</text>
 <text x="160" y="94" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">eten, kapper, ov</text>
 <rect x="205" y="40" width="80" height="60" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
 <text x="245" y="62" text-anchor="middle" fill="${COLORS.warm}" font-size="18" font-family="Arial" font-weight="bold">0%</text>
-<text x="245" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">special</text>
+<text x="245" y="82" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">speciaal</text>
 <text x="245" y="94" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">export, zorg</text>
 <rect x="20" y="120" width="280" height="40" rx="6" fill="rgba(255,213,79,0.10)" stroke="${COLORS.warm}" stroke-width="1.2"/>
 <text x="160" y="138" text-anchor="middle" fill="${COLORS.warm}" font-size="11" font-family="Arial" font-weight="bold">FACTUUR — verplichte items</text>
@@ -853,7 +853,7 @@ const steps = [
         wrongHints: [null, "21% is voor andere dingen.", "0% is alleen voor specifieke gevallen.", "25% bestaat niet als NL-tarief."],
         uitlegPad: {
           stappen: [{ titel: "Eten/drinken = 9%", tekst: "Voedsel en drinken (geen alcohol) vallen onder het LAGE BTW-tarief van 9%. Ook boeken, kapper, openbaar vervoer." }],
-          woorden: [{ woord: "9% tarief", uitleg: "Verlaagd BTW-tarief voor 1e-levensbehoeften en cultuur." }, { woord: "21% tarief", uitleg: "Algemeen BTW-tarief voor de meeste producten en diensten." }],
+          woorden: [{ woord: "9% tarief", uitleg: "Verlaagd BTW-tarief voor eerste levensbehoeften en cultuur." }, { woord: "21% tarief", uitleg: "Algemeen BTW-tarief voor de meeste producten en diensten." }],
           theorie: "NL-BTW-tarieven (2024): 21% standaard. 9% voor voedsel/boeken/kapper/OV/water. 0% voor export en bepaalde zorg.",
           voorbeelden: [{ type: "9%", tekst: "Brood, melk, fruit, restaurant-eten, kapsels, boek, treintickets." }, { type: "21%", tekst: "Kleding, elektronica, meubels, alcohol, diensten van advocaat." }],
           basiskennis: [{ onderwerp: "Geen 25%", uitleg: "25% bestaat niet als NL-BTW-tarief. Wel in andere landen (bv. Denemarken)." }],
@@ -912,7 +912,7 @@ const steps = [
           woorden: [{ woord: "bewaarplicht", uitleg: "Wettelijke verplichting om administratie 7 jaar te bewaren — papier of digitaal." }],
           theorie: "Wat bewaren: facturen (verstuurd + ontvangen), bonnen, bankafschriften, contracten, jaarrekening, BTW-aangiftes. Voor onroerend goed: 10 jaar.",
           voorbeelden: [{ type: "praktijk", tekst: "Sam start in 2026 → moet bonnen van 2026 tot 2033 bewaren." }, { type: "digitaal", tekst: "Mag ook gescand zijn, mits leesbaar en authentiek." }],
-          basiskennis: [{ onderwerp: "Boete bij weggooi", uitleg: "Te vroeg weggegooid = boete bij belastingcontrole + onbewijsbare aftrek." }],
+          basiskennis: [{ onderwerp: "Boete bij weggooien", uitleg: "Te vroeg weggegooid = boete bij belastingcontrole + onbewijsbare aftrek." }],
           niveaus: { basis: "7 jaar.", simpeler: "Wettelijke bewaarplicht = 7 jaar. Niet weggooien.", nogSimpeler: "7 jaar" },
         },
       },
@@ -935,7 +935,7 @@ const steps = [
   // ─── Stap 9: Risico, verlies en faillissement ────────────
   {
     title: "Risico, verlies en faillissement — wat als het misgaat?",
-    explanation: "Niet alle bedrijven slagen. **Statistiek**: ongeveer **40% van de starters** stopt binnen 5 jaar. Dat hoort bij ondernemerschap.\n\n**Soorten risico**:\n\n**1. Marktrisico**\n• Geen vraag naar je product (verkeerd ingeschat)\n• Trends veranderen (TikTok-rage voorbij)\n• Crisis (corona, recessie)\n\n**2. Concurrentierisico**\n• Grote speler komt op jouw markt (Albert Heijn opent in jouw straat)\n• Goedkopere alternatieven\n\n**3. Kostenrisico**\n• Grondstoffen worden duurder (gas, olie)\n• Personeelskosten stijgen\n• Onverwachte uitgaven (machine kapot)\n\n**4. Financieel risico**\n• Klanten betalen niet of te laat (debiteurenrisico)\n• Lening kun je niet aflossen\n• Belastingschuld groeit\n\n**5. Persoonlijk risico**\n• Ziekte of burn-out → geen omzet\n• Bij eenmanszaak/VOF: privé-vermogen in gevaar\n\n**Wat is een faillissement?**\nJe kunt je schulden niet meer betalen. Een rechter benoemt een **curator** die:\n• Bedrijfs-bezittingen verkoopt\n• Geld eerlijk verdeelt onder schuldeisers\n• Het bedrijf opheft\n\n**Bij eenmanszaak/VOF**: ook privé-bezittingen kunnen worden verkocht (huis, auto). Bij **BV**: alleen het bedrijfs-vermogen.\n\n**Hoe risico beperken?**\n• **Buffer** (3-6 mnd kosten op spaarrekening)\n• **Verzekeringen** (arbeidsongeschiktheid, aansprakelijkheid)\n• **Diversificatie** (niet 1 grote klant maar 10 kleine)\n• **Realistische cashflow-planning**\n• **Niet te snel groeien** (niet meteen 10 medewerkers aannemen)\n\n**WSNP** (Wet Schuldsanering Natuurlijke Personen): laatste redmiddel voor particulieren in nood. Strenge regels, maar na 3 jaar 'schoon'.",
+    explanation: "Niet alle bedrijven slagen. **Statistiek**: ongeveer **40% van de starters** stopt binnen 5 jaar. Dat hoort bij ondernemerschap.\n\n**Soorten risico**:\n\n**1. Marktrisico**\n• Geen vraag naar je product (verkeerd ingeschat)\n• Trends veranderen (TikTok-rage voorbij)\n• Crisis (corona, recessie)\n\n**2. Concurrentierisico**\n• Grote speler komt op jouw markt (Albert Heijn opent in jouw straat)\n• Goedkopere alternatieven\n\n**3. Kostenrisico**\n• Grondstoffen worden duurder (gas, olie)\n• Personeelskosten stijgen\n• Onverwachte uitgaven (machine kapot)\n\n**4. Financieel risico**\n• Klanten betalen niet of te laat (debiteurenrisico)\n• Lening kun je niet aflossen\n• Belastingschuld groeit\n\n**5. Persoonlijk risico**\n• Ziekte of burn-out → geen omzet\n• Bij eenmanszaak/VOF: privé-vermogen in gevaar\n\n**Wat is een faillissement?**\nJe kunt je schulden niet meer betalen. Een rechter benoemt een **curator** die:\n• Bedrijfs-bezittingen verkoopt\n• Geld eerlijk verdeelt onder schuldeisers\n• Het bedrijf opheft\n\n**Bij eenmanszaak/VOF**: ook privé-bezittingen kunnen worden verkocht (huis, auto). Bij **BV**: alleen het bedrijfs-vermogen.\n\n**Hoe risico beperken?**\n• **Buffer** (3-6 mnd kosten op spaarrekening)\n• **Verzekeringen** (arbeidsongeschiktheid, aansprakelijkheid)\n• **Diversificatie** (niet 1 grote klant maar 10 kleine)\n• **Realistische cashflow-planning**\n• **Niet te snel groeien** (niet meteen 10 medewerkers aannemen)\n\n**WSNP** (Wet Schuldsanering Natuurlijke Personen): laatste redmiddel voor particulieren in nood. Strenge regels, maar na afloop 'schoon'.",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">RISICO BIJ ONDERNEMEN</text>
 <text x="160" y="42" text-anchor="middle" fill="${COLORS.aanbod}" font-size="11" font-family="Arial">~40% stopt binnen 5 jaar</text>
@@ -960,7 +960,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Belasting is een ander risico-type.", "Concurrentie-risico.", "Persoonlijk risico."],
         uitlegPad: {
-          stappen: [{ titel: "Wie schuldigt jou?", tekst: "Debiteur = klant die JOU geld schuldig is (factuur niet betaald). Debiteurenrisico = kans dat ze toch NIET betalen of pas heel laat." }],
+          stappen: [{ titel: "Wie is jou geld schuldig?", tekst: "Debiteur = klant die JOU geld schuldig is (factuur niet betaald). Debiteurenrisico = kans dat ze toch NIET betalen of pas heel laat." }],
           woorden: [{ woord: "debiteur", uitleg: "Een klant met een openstaande factuur — schuldenaar." }, { woord: "crediteur", uitleg: "Iemand aan wie jij geld schuldig bent." }],
           theorie: "Debiteurenrisico is groot voor zzp'ers en MKB. Een grote klant die 90 dagen wacht met betalen kan jouw cashflow doodmaken. Tips: vooruitbetaling vragen, kortere betaaltermijn (14 dagen), kredietverzekering.",
           voorbeelden: [{ type: "praktijk", tekst: "Sam levert €5.000 catering aan een festival. Festival gaat failliet zonder betaling → Sam €5.000 kwijt." }],
@@ -1004,7 +1004,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Buffer = veiligheidsnet", tekst: "Een geldbuffer van 3-6 maanden vaste kosten is je schokdemper. Klanten betalen 30 dagen later, machine kapot, ziekte — buffer overbrugt het." }],
           woorden: [{ woord: "buffer", uitleg: "Spaargeld om onverwachte tegenvallers op te vangen. Cruciaal voor zzp en MKB." }, { woord: "cashflow", uitleg: "Stroom in/uit van geld. Goede cashflow = altijd genoeg geld klaar voor betalingen." }],
-          theorie: "Andere risico-beperkers: verzekeringen (AOV, aansprakelijkheid, inventaris), klant-spreiding (geen 80% omzet bij 1 klant), realistische groei (eerst tester, dan opschalen).",
+          theorie: "Andere risico-beperkers: verzekeringen (AOV, aansprakelijkheid, inventaris), klant-spreiding (geen 80% omzet bij 1 klant), realistische groei (eerst testen, dan opschalen).",
           voorbeelden: [{ type: "buffer Sam", tekst: "Sam houdt €8k buffer voor 4 maanden vaste kosten. Festival regent weg + 1 maand geen omzet → blijft overeind." }, { type: "geen buffer", tekst: "Concullega zonder buffer: 1 slechte maand → kan vaste kosten niet betalen → in problemen." }],
           basiskennis: [{ onderwerp: "Tegenovergesteld", uitleg: "Snel groeien + 1 grote klant + geen verzekering zijn allemaal RISICO-VERGROOTERS, niet -verkleiners." }],
           niveaus: { basis: "Buffer van 3-6 mnd.", simpeler: "Een spaarpotje van 3-6 maanden kosten = veiligheid bij tegenvallers.", nogSimpeler: "Buffer" },
@@ -1016,10 +1016,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — afhankelijk van 1 = risico.", "Prijsverschil heeft niets met diversificatie te maken.", "Reclame is iets anders."],
         uitlegPad: {
-          stappen: [{ titel: "Niet alle eieren in 1 mand", tekst: "Diversificatie = SPREIDING. Met 10 kleine klanten ben je weerbaar als er 1 wegvalt. Met 1 grote klant kan je dat 1 vertrek instorten." }],
+          stappen: [{ titel: "Niet alle eieren in 1 mand", tekst: "Diversificatie = SPREIDING. Met 10 kleine klanten ben je weerbaar als er 1 wegvalt. Met 1 grote klant kan dat ene vertrek je bedrijf laten instorten." }],
           woorden: [{ woord: "diversificatie", uitleg: "Spreiding over meerdere klanten, producten, markten — risico verlagen." }, { woord: "concentratierisico", uitleg: "Risico door grote afhankelijkheid van 1 klant of leverancier." }],
           theorie: "Vuistregel: geen klant mag meer dan 20-30% van je omzet zijn. Anders kan vertrek van die klant je bedrijf doodmaken. Door spreiding ben je 'antifragiel'.",
-          voorbeelden: [{ type: "diverse", tekst: "Sam levert aan 8 festivals + 5 bedrijfsfeestjes — als 1 wegvalt, blijft 92% omzet." }, { type: "geconcentreerd", tekst: "Cateraar levert 80% aan 1 grote tech-bedrijf. Bedrijf zegt op → 80% omzet weg." }],
+          voorbeelden: [{ type: "diverse", tekst: "Sam levert aan 8 festivals + 5 bedrijfsfeestjes — als 1 wegvalt, blijft 92% omzet." }, { type: "geconcentreerd", tekst: "Cateraar levert 80% aan 1 groot techbedrijf. Bedrijf zegt op → 80% omzet weg." }],
           basiskennis: [{ onderwerp: "Spreiding", uitleg: "Diversificatie ≠ prijsdifferentiatie. Gaat om HOEVEEL klanten, niet welke prijs." }],
           niveaus: { basis: "Veel verschillende klanten.", simpeler: "Spreiding = veel verschillende klanten zodat je niet van 1 afhankelijk bent.", nogSimpeler: "Spreiden" },
         },

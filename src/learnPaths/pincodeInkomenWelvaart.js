@@ -66,7 +66,7 @@ const steps = [
         q: "**Lucht** is een voorbeeld van:",
         options: ["Vrij goed", "Schaars goed", "Kapitaalgoed", "Consumptiegoed"],
         answer: 0,
-        wrongHints: [null, "Lucht is gratis en in overvloed.", "Kapitaalgoed maakt je iets anders mee.", "Consumptie kan, maar 'vrij' is specifieker."],
+        wrongHints: [null, "Lucht is gratis en in overvloed.", "Met een kapitaalgoed maak je iets anders.", "Consumptie kan, maar 'vrij' is specifieker."],
         uitlegPad: {
           stappen: [{ titel: "Vrij of schaars?", tekst: "Vrij goed = GRATIS en in OVERVLOED beschikbaar. Schaars = kost geld of moeite. Lucht ademen kost niks en is overal → vrij goed." }],
           woorden: [{ woord: "vrij goed", uitleg: "Gratis + onbeperkt: lucht, zonlicht, zeewater (voor zwemmen)." }, { woord: "schaars goed", uitleg: "Kost geld of moeite om te krijgen. Alles in de winkel." }],
@@ -87,18 +87,18 @@ const steps = [
           theorie: "Hetzelfde voorwerp kan beide zijn — afhankelijk van WIE en WAARVOOR. Een bakker die brood verkoopt: voor de bakker is meel een kapitaalgoed (om brood mee te maken), voor jou is brood een consumptiegoed (om op te eten).",
           voorbeelden: [{ type: "consumptie", tekst: "Brood, kleren, ijsje — voor direct gebruik." }, { type: "kapitaal", tekst: "Oven, taxi, vrachtwagen — om iets ANDERS te maken/leveren." }],
           basiskennis: [{ onderwerp: "Ezelsbruggetje", uitleg: "Consument → consumptiegoed. Producent → kapitaalgoed." }],
-          niveaus: { basis: "Brood = consumptie", simpeler: "Jij eet het brood op. Je maakt er niks ANDERS mee. Dus consumptiegoed.", nogSimpeler: "Opgeten = consumptie" },
+          niveaus: { basis: "Brood = consumptie", simpeler: "Jij eet het brood op. Je maakt er niks ANDERS mee. Dus consumptiegoed.", nogSimpeler: "Opgegeten = consumptie" },
         },
       },
       {
-        q: "Wat is **opportunity cost** (offerkost)?",
+        q: "Wat is **opportunity cost** (opofferingskosten)?",
         options: ["Wat je opgeeft door voor iets anders te kiezen", "De prijs in de winkel", "Belasting over een aankoop", "Wat een ondernemer betaalt voor reclame"],
         answer: 0,
         wrongHints: [null, "Dat is gewoon de prijs.", "Belasting is iets anders.", "Reclamekosten ook iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Kiezen = offer brengen", tekst: "Bij schaarste moet je KIEZEN. Wat je niet kiest, geef je OP. Dat opgegeven alternatief = opportunity cost." }],
-          woorden: [{ woord: "opportunity cost", uitleg: "Engels voor 'offerkost'. Wat je opgeeft door A te kiezen i.p.v. B." }],
-          theorie: "Opportunity cost is meer dan de PRIJS in euro's — het is wat je ECHT mist door je keuze. €40 uitgeven aan een avond uit = €40 niet sparen voor rijbewijs. De OFFER is dat sparen.",
+          woorden: [{ woord: "opportunity cost", uitleg: "Engels voor 'opofferingskosten'. Wat je opgeeft door A te kiezen i.p.v. B." }],
+          theorie: "Opportunity cost is meer dan de PRIJS in euro's — het is wat je ECHT mist door je keuze. €40 uitgeven aan een avond uit = €40 niet sparen voor rijbewijs. Het OFFER is dat sparen.",
           voorbeelden: [{ type: "geld", tekst: "Je kiest snowboarden (€500) → kunt geen nieuwe telefoon kopen → offer = telefoon." }, { type: "tijd", tekst: "Je kiest 2 uur Netflix → 2 uur niet leren → offer = je toets-cijfer." }],
           basiskennis: [{ onderwerp: "Niet alleen geld", uitleg: "Opportunity cost geldt ook voor TIJD en aandacht — alles dat schaars is." }],
           niveaus: { basis: "Wat je opgeeft door iets anders te kiezen.", simpeler: "Kies je A? Dan krijg je B niet. Die gemiste B = opportunity cost.", nogSimpeler: "Gemiste keuze" },
@@ -137,7 +137,7 @@ const steps = [
   // ─── Stap 2: Productiefactoren ─────────────────────────────
   {
     title: "Productiefactoren — wat heb je nodig om te maken?",
-    explanation: "Om iets te produceren heb je **vier productiefactoren** nodig:\n\n**1. Arbeid** — werk dat mensen leveren\n• Bij een bakker: het werk van bakker, verkoper, schoonmaker\n• Beloning: **loon** (of voor zelfstandige: arbeidsinkomen)\n\n**2. Natuur** — alles wat de natuur biedt\n• Grond, lucht, water, grondstoffen (graan, hout, olie)\n• Beloning: **pacht** (huur voor grond) of **rente op natuurproducten**\n\n**3. Kapitaal** — geld én apparatuur waarmee je produceert\n• **Vast kapitaal**: gebouwen, machines, vrachtwagens (gaan jaren mee)\n• **Vlottend kapitaal**: voorraden, geld om in te kopen (verbruikt zich)\n• Beloning: **rente** (op geleend geld) of **dividend** (winstuitkering aan aandeelhouders)\n\n**4. Ondernemerschap** — het organiseren, risico nemen\n• Combineert de eerste drie productiefactoren\n• Neemt beslissingen, draagt risico\n• Beloning: **winst** (of verlies)\n\n**Voorbeeld bakker De Korenbloem**:\n• **Arbeid**: 2 bakkers + 1 verkoper\n• **Natuur**: graan, water\n• **Kapitaal**: oven, winkel, bakvormen, voorraad meel\n• **Ondernemerschap**: de bakker zelf, die alles plant\n\n**Beloningsoverzicht** (komt elk examen voor!):\n| Productiefactor | Beloning |\n|---|---|\n| Arbeid | Loon |\n| Natuur | Pacht |\n| Kapitaal | Rente / Dividend |\n| Ondernemerschap | Winst |",
+    explanation: "Om iets te produceren heb je **vier productiefactoren** nodig:\n\n**1. Arbeid** — werk dat mensen leveren\n• Bij een bakker: het werk van bakker, verkoper, schoonmaker\n• Beloning: **loon** (of voor zelfstandige: arbeidsinkomen)\n\n**2. Natuur** — alles wat de natuur biedt\n• Grond, lucht, water, grondstoffen (graan, hout, olie)\n• Beloning: **pacht** (huur voor grond)\n\n**3. Kapitaal** — geld én apparatuur waarmee je produceert\n• **Vast kapitaal**: gebouwen, machines, vrachtwagens (gaan jaren mee)\n• **Vlottend kapitaal**: voorraden, geld om in te kopen (verbruikt zich)\n• Beloning: **rente** (op geleend geld) of **dividend** (winstuitkering aan aandeelhouders)\n\n**4. Ondernemerschap** — het organiseren, risico nemen\n• Combineert de eerste drie productiefactoren\n• Neemt beslissingen, draagt risico\n• Beloning: **winst** (of verlies)\n\n**Voorbeeld bakker De Korenbloem**:\n• **Arbeid**: 2 bakkers + 1 verkoper\n• **Natuur**: graan, water\n• **Kapitaal**: oven, winkel, bakvormen, voorraad meel\n• **Ondernemerschap**: de bakker zelf, die alles plant\n\n**Beloningsoverzicht** (komt elk examen voor!):\n| Productiefactor | Beloning |\n|---|---|\n| Arbeid | Loon |\n| Natuur | Pacht |\n| Kapitaal | Rente / Dividend |\n| Ondernemerschap | Winst |",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">4 PRODUCTIEFACTOREN</text>
 <rect x="20" y="40" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
@@ -173,7 +173,7 @@ const steps = [
           stappen: [{ titel: "Beloningstabel", tekst: "Arbeid → loon. Natuur → pacht. Kapitaal → rente/dividend. Ondernemerschap → winst." }],
           woorden: [{ woord: "loon", uitleg: "Beloning voor arbeid (werk dat een werknemer levert)." }, { woord: "arbeid", uitleg: "De productiefactor 'werk van mensen'." }],
           theorie: "Elke productiefactor heeft een EIGEN beloning — onthoud de tabel uit het hoofd, komt elk jaar terug op examen.",
-          voorbeelden: [{ type: "praktijk", tekst: "Werknemer van AH = arbeid → loon. Eigenaar van AH-pand verhuurt = natuur → pacht." }],
+          voorbeelden: [{ type: "praktijk", tekst: "Werknemer van AH = arbeid → loon. Boer die zijn land verhuurt = natuur → pacht." }],
           basiskennis: [{ onderwerp: "Ezelsbruggetje", uitleg: "A-L-N-P-K-R-O-W: Arbeid-Loon, Natuur-Pacht, Kapitaal-Rente, Ondernemer-Winst." }],
           niveaus: { basis: "Arbeid → loon.", simpeler: "Werk leveren = arbeid. Daarvoor krijg je loon.", nogSimpeler: "Arbeid = loon" },
         },
@@ -228,8 +228,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Risico = winst OF verlies", tekst: "Ondernemer brengt productiefactoren samen + neemt risico. Als het lukt = winst. Als het mislukt = verlies." }],
           woorden: [{ woord: "winst", uitleg: "Wat overblijft na alle kosten zijn betaald. Beloning voor ondernemerschap." }, { woord: "verlies", uitleg: "Als kosten hoger zijn dan omzet. Negatieve winst." }],
-          theorie: "Winst is een ONZEKERE beloning. Werknemers krijgen LOON (zekere beloning). Verschil: ondernemer kan rijk worden óf failliet gaan; werknemer krijgt zijn loon ook bij slechte maand.",
-          voorbeelden: [{ type: "winst", tekst: "Bakker bakt 100 broden, verkoopt voor €200, kosten €120 → winst €80." }, { type: "verlies", tekst: "Bakker verkoopt 60 brood (rest weggegooid) → kost €120, omzet €120 → 0. Bij hagel: omzet €90, kosten €120 → verlies €30." }],
+          theorie: "Winst is een ONZEKERE beloning. Werknemers krijgen LOON (zekere beloning). Verschil: ondernemer kan rijk worden óf failliet gaan; werknemer krijgt zijn loon ook in een slechte maand.",
+          voorbeelden: [{ type: "winst", tekst: "Bakker bakt 100 broden, verkoopt voor €200, kosten €120 → winst €80." }, { type: "verlies", tekst: "Bakker verkoopt 60 broden (rest weggegooid) → kost €120, omzet €120 → 0. Bij hagel: omzet €90, kosten €120 → verlies €30." }],
           basiskennis: [{ onderwerp: "Niet 'niets'", uitleg: "Iemand die risico draagt KRIJGT iets — winst — anders zou niemand ondernemer worden." }],
           niveaus: { basis: "Ondernemen = winst.", simpeler: "De ondernemer draagt risico. Lukt het? Winst. Mislukt? Verlies. Beloning = winst (of negatieve winst).", nogSimpeler: "Risico = winst" },
         },
@@ -241,7 +241,7 @@ const steps = [
         wrongHints: [null, "Mijnbouw heeft alle 4 nodig — maar de output IS natuur.", "Idem.", "Idem."],
         uitlegPad: {
           stappen: [{ titel: "Wat KOMT uit een mijn?", tekst: "Mijnbouw haalt steenkool, ijzererts, koper, goud uit de grond → dat is NATUUR (grondstoffen)." }],
-          woorden: [{ woord: "natuur", uitleg: "Productiefactor: alles wat de NATUUR biedt — grond, lucht, water, grondstoffen." }, { woord: "grondstof", uitleg: "Ruwe materiaal uit natuur dat je bewerkt tot eindproduct." }],
+          woorden: [{ woord: "natuur", uitleg: "Productiefactor: alles wat de NATUUR biedt — grond, lucht, water, grondstoffen." }, { woord: "grondstof", uitleg: "Ruw materiaal uit de natuur dat je bewerkt tot eindproduct." }],
           theorie: "Een mijn HEEFT ook arbeid (mijnwerkers), kapitaal (machines) en ondernemerschap (leiding) nodig — maar wat het LEVERT aan de economie zijn grondstoffen = natuur.",
           voorbeelden: [{ type: "natuur-bedrijven", tekst: "Mijnbouw, oliemaatschappij (Shell), bosbouw, visserij." }, { type: "andere productiefactor", tekst: "Bakkerij = vooral arbeid. Bank = vooral kapitaal. Software-startup = vooral ondernemerschap." }],
           basiskennis: [{ onderwerp: "Wat levert het?", uitleg: "Kijk altijd naar de OUTPUT: een mijn levert grondstoffen, dat is natuur." }],
@@ -253,7 +253,7 @@ const steps = [
   // ─── Stap 3: Soorten inkomen ───────────────────────────────
   {
     title: "Soorten inkomen — bruto, netto, primair, secundair",
-    explanation: "**Inkomen** = geld dat je ontvangt. Belangrijke termen voor je examen:\n\n**Brutoloon**: wat de werkgever betaalt — vóór belasting en premies.\n**Nettoloon**: wat er op je rekening komt — ná aftrek van loonheffing en sociale premies.\n\n**Voorbeeld**: bruto €2.500 → werkgever houdt €600 in (loonheffing + premies) → netto €1.900.\n\n**Primair inkomen** — verdiend door een productiefactor te leveren:\n• **Loon** (arbeid)\n• **Pacht** (natuur — verhuren van land)\n• **Rente** (kapitaal — geld uitlenen)\n• **Winst** (ondernemerschap)\n\n**Secundair inkomen** — ontvangen ZONDER een productiefactor te leveren:\n• **Uitkeringen** (AOW, bijstand, WW, WIA)\n• **Toeslagen** (huurtoeslag, zorgtoeslag, kinderbijslag, kindgebonden budget)\n• **Studiefinanciering**\n\nSecundair inkomen komt vooral van de overheid en wordt gefinancierd uit belastingen.\n\n**Besteedbaar inkomen** = nettoloon + ontvangen toeslagen − betaalde lasten (bv. huur, hypotheek).\n\n**Voorbeeld huishouden**:\n• Netto loon: €2.000\n• Zorgtoeslag: €100\n• Huurtoeslag: €150\n• Huur: €900\n• → Besteedbaar inkomen: €2.000 + €100 + €150 - €900 = **€1.350**\n\n**Persoonlijk inkomen** vs **gezinsinkomen**:\n• Persoonlijk = van 1 persoon\n• Gezinsinkomen = alle inkomens van gezinsleden samen",
+    explanation: "**Inkomen** = geld dat je ontvangt. Belangrijke termen voor je examen:\n\n**Brutoloon**: wat de werkgever betaalt — vóór belasting en premies.\n**Nettoloon**: wat er op je rekening komt — ná aftrek van loonheffing en sociale premies.\n\n**Voorbeeld**: bruto €2.500 → werkgever houdt €600 in (loonheffing + premies) → netto €1.900.\n\n**Primair inkomen** — verdiend door een productiefactor te leveren:\n• **Loon** (arbeid)\n• **Pacht** (natuur — verhuren van land)\n• **Rente** (kapitaal — geld uitlenen)\n• **Winst** (ondernemerschap)\n\n**Secundair inkomen** — ontvangen ZONDER een productiefactor te leveren:\n• **Uitkeringen** (AOW, bijstand, WW, WIA)\n• **Toeslagen** (huurtoeslag, zorgtoeslag, kinderbijslag, kindgebonden budget)\n• **Studiefinanciering**\n\nSecundair inkomen komt vooral van de overheid en wordt gefinancierd uit belastingen.\n\n**Vrij besteedbaar inkomen** = nettoloon + ontvangen toeslagen − vaste lasten (bv. huur, hypotheek).\n\n**Voorbeeld huishouden**:\n• Netto loon: €2.000\n• Zorgtoeslag: €100\n• Huurtoeslag: €150\n• Huur: €900\n• → Vrij besteedbaar inkomen: €2.000 + €100 + €150 - €900 = **€1.350**\n\n**Persoonlijk inkomen** vs **gezinsinkomen**:\n• Persoonlijk = van 1 persoon\n• Gezinsinkomen = alle inkomens van gezinsleden samen",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">BRUTO → NETTO → BESTEEDBAAR</text>
 <rect x="40" y="40" width="240" height="28" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.5"/>
@@ -264,7 +264,7 @@ const steps = [
 <text x="160" y="138" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">+ toeslagen (zorg, huur)</text>
 <text x="160" y="152" text-anchor="middle" fill="${COLORS.text}" font-size="10" font-family="Arial">− vaste lasten (huur, hypotheek)</text>
 <rect x="80" y="160" width="160" height="28" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
-<text x="160" y="178" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">BESTEEDBAAR</text>
+<text x="160" y="178" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">VRIJ BESTEEDBAAR</text>
 </svg>`,
     checks: [
       {
@@ -282,7 +282,7 @@ const steps = [
         },
       },
       {
-        q: "Bij wie hoort de **zorgtoeslag** thuis?",
+        q: "Bij welk soort inkomen hoort de **zorgtoeslag**?",
         options: ["Secundair inkomen", "Primair inkomen", "Loon", "Winst"],
         answer: 0,
         wrongHints: [null, "Toeslag is geen primair inkomen.", "Loon krijg je voor arbeid.", "Winst = voor ondernemers."],
@@ -290,8 +290,8 @@ const steps = [
           stappen: [{ titel: "Toeslag = overheid geeft", tekst: "Zorgtoeslag krijg je VAN de overheid om je zorgverzekering te kunnen betalen. Je leverde geen productiefactor → secundair." }],
           woorden: [{ woord: "zorgtoeslag", uitleg: "Bedrag van overheid voor huishoudens met laag inkomen om zorgpremie te helpen betalen." }, { woord: "toeslag", uitleg: "Vorm van secundair inkomen, overdracht van overheid." }],
           theorie: "Alle TOESLAGEN (zorg, huur, kinderopvang, kindgebonden budget) zijn secundair inkomen — overdrachten van Belastingdienst aan huishoudens.",
-          voorbeelden: [{ type: "toeslagen", tekst: "Zorgtoeslag (~€127/mnd 2024), huurtoeslag, kinderopvangtoeslag." }],
-          basiskennis: [{ onderwerp: "Test", uitleg: "Krijg je het ZONDER tegenprestatie? Ja → secundair. Levert je productiefactor? Nee → secundair." }],
+          voorbeelden: [{ type: "toeslagen", tekst: "Zorgtoeslag (bij een laag inkomen ruim €100/mnd), huurtoeslag, kinderopvangtoeslag." }],
+          basiskennis: [{ onderwerp: "Test", uitleg: "Krijg je het ZONDER tegenprestatie? Ja → secundair. Lever je een productiefactor? Nee → secundair." }],
           niveaus: { basis: "Toeslag = secundair.", simpeler: "Zorgtoeslag krijg je gewoon van overheid — niet voor werk. Dus secundair.", nogSimpeler: "Toeslag = secundair" },
         },
       },
@@ -310,14 +310,14 @@ const steps = [
         },
       },
       {
-        q: "Een gezin: netto €2.500, zorgtoeslag €120, huurtoeslag €200, huur €1.000. **Besteedbaar inkomen**?",
+        q: "Een gezin: netto €2.500, zorgtoeslag €120, huurtoeslag €200, huur €1.000. **Vrij besteedbaar inkomen**?",
         options: ["€1.820", "€2.500", "€3.820", "€820"],
         answer: 0,
         wrongHints: [null, "Vergeet de toeslagen + huur niet.", "Te veel — huur is min.", "Te weinig — toeslagen zijn plus."],
         uitlegPad: {
-          stappen: [{ titel: "Wat zit erin?", tekst: "Besteedbaar = netto + toeslagen − vaste lasten. €2.500 + €120 + €200 − €1.000 = €1.820." }],
-          woorden: [{ woord: "besteedbaar inkomen", uitleg: "Geld dat over is om VRIJ te besteden (boodschappen, kleding, sport) na vaste lasten." }],
-          theorie: "Besteedbaar = netto + toeslagen − vaste lasten. Toeslagen er PLUS bij (extra geld). Vaste lasten (huur, hypotheek, premies) gaan ERAF.",
+          stappen: [{ titel: "Wat zit erin?", tekst: "Vrij besteedbaar = netto + toeslagen − vaste lasten. €2.500 + €120 + €200 − €1.000 = €1.820." }],
+          woorden: [{ woord: "vrij besteedbaar inkomen", uitleg: "Geld dat over is om VRIJ te besteden (boodschappen, kleding, sport) na vaste lasten." }],
+          theorie: "Vrij besteedbaar = netto + toeslagen − vaste lasten. Toeslagen er PLUS bij (extra geld). Vaste lasten (huur, hypotheek, premies) gaan ERAF.",
           voorbeelden: [{ type: "rekenstap", tekst: "Netto €2.500 + Zorgtoeslag €120 + Huurtoeslag €200 − Huur €1.000 = €1.820." }],
           basiskennis: [{ onderwerp: "Plus en min", uitleg: "Toeslagen zijn ontvangen geld = PLUS. Huur is uitgegeven geld = MIN." }],
           niveaus: { basis: "2500+120+200−1000 = 1820.", simpeler: "Begin met €2.500. Tel zorgtoeslag €120 en huurtoeslag €200 erbij = €2.820. Trek huur €1.000 af = €1.820.", nogSimpeler: "1820" },
@@ -356,7 +356,7 @@ const steps = [
   // ─── Stap 4: Inkomensverdeling ───────────────────────────
   {
     title: "Inkomensverdeling — eerlijk of ongelijk?",
-    explanation: "Niet iedereen verdient evenveel. **Inkomensverdeling** = hoe inkomen verdeeld is over de bevolking.\n\n**Gemiddelde** vs **mediaan**:\n• Gemiddelde inkomen NL ~€42.000/jaar\n• Mediaan inkomen NL ~€36.000/jaar\nVerschil ontstaat door enkele zeer hoge inkomens (CEO's) die het gemiddelde optrekken. **Mediaan** zegt vaak meer over 'de meeste Nederlanders'.\n\n**Lorenz-curve** — visualiseert ongelijkheid:\n• X-as: % van de bevolking (oplopend van arm naar rijk)\n• Y-as: % van het totale inkomen\n• Bij **perfecte gelijkheid**: rechte diagonaal (10% mensen = 10% inkomen)\n• Bij **ongelijkheid**: curve buigt naar onderen-rechts (10% mensen = 3% inkomen, etc.)\n\nHoe verder de curve van de diagonaal afwijkt → hoe **schevere inkomensverdeling**.\n\n**Gini-coëfficient**:\n• 0 = perfect gelijk\n• 1 = volledig ongelijk (1 persoon heeft alles)\n• Nederland: ~0,28 (relatief gelijk)\n• VS: ~0,40 (ongelijker)\n• Zuid-Afrika: ~0,63 (zeer ongelijk)\n\n**Waarom verdienen mensen verschillend?**\n• Opleiding (hoger opgeleid → hoger loon)\n• Schaarste (verpleegkundige nu schaars → hoger loon)\n• Sector (IT > horeca)\n• Ervaring + leeftijd\n• Verantwoordelijkheid (CEO > administratief medewerker)\n• Geluk + netwerk\n\n**Inkomensverdeling beleid** (door overheid):\n• **Progressieve belasting**: rijken betalen verhoudingsgewijs meer\n• **Toeslagen**: mensen met laag inkomen krijgen meer steun\n• **Minimumloon**: niemand mag onder €X verdienen\n• **AOW**: iedereen krijgt een basis-pensioen",
+    explanation: "Niet iedereen verdient evenveel. **Inkomensverdeling** = hoe inkomen verdeeld is over de bevolking.\n\n**Gemiddelde** vs **mediaan**:\n• Gemiddelde inkomen NL ~€42.000/jaar\n• Mediaan inkomen NL ~€36.000/jaar\nVerschil ontstaat door enkele zeer hoge inkomens (CEO's) die het gemiddelde optrekken. **Mediaan** zegt vaak meer over 'de meeste Nederlanders'.\n\n**Lorenz-curve** — visualiseert ongelijkheid:\n• X-as: % van de bevolking (oplopend van arm naar rijk)\n• Y-as: % van het totale inkomen\n• Bij **perfecte gelijkheid**: rechte diagonaal (10% mensen = 10% inkomen)\n• Bij **ongelijkheid**: curve buigt naar onderen-rechts (10% mensen = 3% inkomen, etc.)\n\nHoe verder de curve van de diagonaal afwijkt → hoe **schever de inkomensverdeling**.\n\n**Gini-coëfficiënt**:\n• 0 = perfect gelijk\n• 1 = volledig ongelijk (1 persoon heeft alles)\n• Nederland: ~0,28 (relatief gelijk)\n• VS: ~0,40 (ongelijker)\n• Zuid-Afrika: ~0,63 (zeer ongelijk)\n\n**Waarom verdienen mensen verschillend?**\n• Opleiding (hoger opgeleid → hoger loon)\n• Schaarste (verpleegkundige nu schaars → hoger loon)\n• Sector (IT > horeca)\n• Ervaring + leeftijd\n• Verantwoordelijkheid (CEO > administratief medewerker)\n• Geluk + netwerk\n\n**Inkomensverdeling beleid** (door overheid):\n• **Progressieve belasting**: rijken betalen verhoudingsgewijs meer\n• **Toeslagen**: mensen met laag inkomen krijgen meer steun\n• **Minimumloon**: niemand mag onder een wettelijk minimum verdienen\n• **AOW**: iedereen krijgt een basis-pensioen",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">LORENZ-CURVE</text>
 <line x1="50" y1="40" x2="50" y2="180" stroke="${COLORS.text}" stroke-width="1.5"/>
@@ -405,7 +405,7 @@ const steps = [
         wrongHints: [null, "Gini 0 = perfect gelijk.", "Tegenovergesteld.", "Onzin-antwoord."],
         uitlegPad: {
           stappen: [{ titel: "Gini-schaal", tekst: "Gini 0 = perfect gelijk (iedereen evenveel). Gini 1 = volledig ongelijk (1 persoon heeft alles). 0,55 ligt richting de bovenkant — aanzienlijke ongelijkheid." }],
-          woorden: [{ woord: "Gini-coëfficient", uitleg: "Maatstaf voor inkomensongelijkheid op schaal 0 (gelijk) tot 1 (volledig ongelijk)." }],
+          woorden: [{ woord: "Gini-coëfficiënt", uitleg: "Maatstaf voor inkomensongelijkheid op schaal 0 (gelijk) tot 1 (volledig ongelijk)." }],
           theorie: "Gini-referenties: NL ~0,28 (relatief gelijk), Duitsland ~0,30, VS ~0,40 (ongelijker), Brazilië ~0,50, Zuid-Afrika ~0,63 (extreem ongelijk). 0,55 = duidelijke ongelijkheid.",
           voorbeelden: [{ type: "vergelijking", tekst: "Gini 0,28 (NL) → curve dichtbij diagonaal. Gini 0,55 → curve ver onder diagonaal." }],
           basiskennis: [{ onderwerp: "Niet 'perfect gelijk'", uitleg: "Perfect gelijk = Gini 0. Hogere getallen = ongelijker." }],
@@ -418,12 +418,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Als juist de rijkste mensen minder belasting betalen, wordt het verschil met de armen dan kleiner of groter?", "Zonder minimumloon kunnen de laagste lonen verder zakken — helpt dat om de kloof te verkleinen?", "Toeslagen geven lage inkomens juist een steuntje; wat gebeurt er met de ongelijkheid als je die weghaalt?"],
         uitlegPad: {
-          stappen: [{ titel: "Wat verkleint verschil?", tekst: "Progressieve belasting = rijken betalen MEER % belasting. Toeslagen = lagen krijgen iets extra. Beide trekken de uitersten naar elkaar toe → ongelijkheid daalt." }],
+          stappen: [{ titel: "Wat verkleint verschil?", tekst: "Progressieve belasting = rijken betalen MEER % belasting. Toeslagen = lage inkomens krijgen iets extra. Beide trekken de uitersten naar elkaar toe → ongelijkheid daalt." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt mee met het inkomen — hoe meer je verdient, hoe hoger % belasting." }, { woord: "nivellering", uitleg: "Inkomensverschillen KLEINER maken." }],
-          theorie: "Twee logica's: (1) belasting bij rijken weghalen verlaagt hun inkomen, (2) toeslagen verhogen het inkomen van lagen. Resultaat: nivellering. De andere opties doen het tegenovergestelde (denivellering).",
+          theorie: "Twee logica's: (1) belasting bij rijken weghalen verlaagt hun inkomen, (2) toeslagen verhogen het inkomen van lage inkomens. Resultaat: nivellering. De andere opties doen het tegenovergestelde (denivellering).",
           voorbeelden: [{ type: "NL", tekst: "NL: IB-schijven 37%-49% (progressief) + zorg/huur/kindertoeslag. Resultaat: lage Gini ~0,28." }],
           basiskennis: [{ onderwerp: "Twee kanten", uitleg: "Effectieve nivellering komt van TWEE kanten: belasting UP voor hoog + steun voor laag. Eén kant alleen werkt minder." }],
-          niveaus: { basis: "Progressief + toeslagen = nivellering.", simpeler: "Rijken meer belasting + lagen meer toeslag = verschillen kleiner = inkomensongelijkheid omlaag.", nogSimpeler: "Beide" },
+          niveaus: { basis: "Progressief + toeslagen = nivellering.", simpeler: "Rijken meer belasting + lage inkomens meer toeslag = verschillen kleiner = inkomensongelijkheid omlaag.", nogSimpeler: "Beide" },
         },
       },
       {
@@ -487,7 +487,7 @@ const steps = [
           woorden: [{ woord: "koopkracht", uitleg: "Hoeveel je echt kan kopen voor je geld. Daalt als prijzen sneller stijgen dan loon." }, { woord: "reëel", uitleg: "Gecorrigeerd voor inflatie." }],
           theorie: "Twee getallen vergelijken: stijgt loon HARDER dan prijzen → koopkracht UP. Stijgt loon MINDER hard → koopkracht DOWN. Hier: 3% < 5% → −2%.",
           voorbeelden: [{ type: "stijging", tekst: "Vorig jaar verdiende je €1.000, kocht je boodschappen €100. Nu €1.030. Boodschappen kosten €105. Je hebt 1030/105 ≈ 9,8 mandjes (was 10) → −2%." }],
-          basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Inflatie + loonstijging optellen is FOUT. Aftrek je inflatie van loonstijging." }],
+          basiskennis: [{ onderwerp: "Niet optellen", uitleg: "Inflatie + loonstijging optellen is FOUT. Trek de inflatie af van de loonstijging." }],
           niveaus: { basis: "3% − 5% = −2%.", simpeler: "Loon +3%, prijzen +5%. Prijzen winnen → je houdt minder over. ~2% minder.", nogSimpeler: "Daalt 2%" },
         },
       },
@@ -499,7 +499,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Wat staat in de letters?", tekst: "CPI = Consumenten-Prijs-Index. Het meet hoeveel duurder boodschappen + woonlasten + diensten + transport gemiddeld geworden zijn." }],
           woorden: [{ woord: "CPI", uitleg: "Consumentenprijsindex. Maatstaf voor inflatie. Basisjaar = 100." }, { woord: "consumentengoederen", uitleg: "Producten die huishoudens kopen: voedsel, kleding, vervoer, energie, diensten." }],
-          theorie: "CBS meet maandelijks een 'mandje' van ~120.000 prijzen door heel NL. Daar komt CPI uit. Stijging CPI = inflatie.",
+          theorie: "CBS meet maandelijks de prijzen van een groot 'mandje' producten door heel NL. Daar komt CPI uit. Stijging CPI = inflatie.",
           voorbeelden: [{ type: "berekening", tekst: "Mandje boodschappen 2023: €100. Zelfde mandje 2024: €104. CPI 2024 = 104 → 4% inflatie." }],
           basiskennis: [{ onderwerp: "Niet BBP", uitleg: "BBP = totale productie van een land. CPI = prijspeil. Twee verschillende dingen." }],
           niveaus: { basis: "CPI = prijsstijging consumentengoederen.", simpeler: "CPI meet hoe duur boodschappen/wonen/vervoer gemiddeld worden. Stijgt CPI = prijzen omhoog = inflatie.", nogSimpeler: "Prijzen" },
@@ -540,7 +540,7 @@ const steps = [
         wrongHints: [null, "Dat is inflatie.", "Lonen ≠ prijzen.", "Dan zou inflatie 0 zijn."],
         uitlegPad: {
           stappen: [{ titel: "Tegenovergesteld van inflatie", tekst: "Inflatie = prijzen STIJGEN. Deflatie = prijzen DALEN. CPI gaat omlaag." }],
-          woorden: [{ woord: "deflatie", uitleg: "Gemiddelde DALING van prijzen. Tegenover-gesteld van inflatie." }, { woord: "inflatie", uitleg: "Gemiddelde STIJGING van prijzen." }],
+          woorden: [{ woord: "deflatie", uitleg: "Gemiddelde DALING van prijzen. Tegenovergesteld van inflatie." }, { woord: "inflatie", uitleg: "Gemiddelde STIJGING van prijzen." }],
           theorie: "Deflatie klinkt aantrekkelijk (boodschappen worden goedkoper!) maar is gevaarlijk: mensen wachten met aankopen ('volgende maand nog goedkoper'), economie krimpt, banen verdwijnen. ECB streeft naar +2% inflatie, niet 0% of −%.",
           voorbeelden: [{ type: "Japan 1990s", tekst: "Japan had jarenlang deflatie in jaren '90 → 'verloren decennium' van trage groei." }],
           basiskennis: [{ onderwerp: "Niet lonen", uitleg: "Deflatie gaat over PRIJZEN, niet lonen. Lonen kunnen los van prijzen veranderen." }],
@@ -551,13 +551,13 @@ const steps = [
         q: "Wat is het verschil tussen **nominale** en **reële** loonstijging?",
         options: ["Reëel = nominale stijging min inflatie (echte koopkracht)", "Geen verschil", "Nominaal is altijd hoger dan reëel", "Reëel is voor mannen"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Nominaal kan ook lager zijn (bij hoge inflatie).", "Geen geslacht-onderscheid."],
+        wrongHints: [null, "Wel verschil.", "Nominaal kan ook lager zijn dan reëel (bij deflatie).", "Geen geslacht-onderscheid."],
         uitlegPad: {
           stappen: [{ titel: "Twee verschillende metingen", tekst: "Nominaal = wat in EURO'S op je strookje verandert (+3%). Reëel = wat je echt meer KAN KOPEN (+3% − 2% inflatie = +1% reëel)." }],
           woorden: [{ woord: "nominaal", uitleg: "In geldbedragen, zonder rekening te houden met inflatie." }, { woord: "reëel", uitleg: "Gecorrigeerd voor inflatie. Vertelt over werkelijke koopkracht." }],
           theorie: "Formule: reëel ≈ nominaal − inflatie. Reëel kan POSITIEF (je gaat erop vooruit) of NEGATIEF (achteruit) zijn. Soms is nominaal positief maar reëel negatief — dat voelen huishoudens als 'we hebben meer geld, maar kunnen minder kopen'.",
           voorbeelden: [{ type: "2022", tekst: "NL-lonen +3,5% nominaal. Inflatie ~10%. Reëel −6,5% — iedereen voelde zich armer ondanks loonstijging." }],
-          basiskennis: [{ onderwerp: "Beide kunnen + en −", uitleg: "Nominaal is niet 'altijd hoger'. Bij hyperinflatie kan nominaal +50% en reëel −20% zijn." }],
+          basiskennis: [{ onderwerp: "Beide kunnen + en −", uitleg: "Nominaal is niet 'altijd hoger': bij deflatie is reëel hoger dan nominaal. En bij hyperinflatie kan nominaal +50% en reëel −20% zijn." }],
           niveaus: { basis: "Reëel = nominaal − inflatie.", simpeler: "Nominaal = euro's op papier. Reëel = wat je daar echt voor kan kopen na inflatie.", nogSimpeler: "Min inflatie" },
         },
       },
@@ -589,7 +589,7 @@ const steps = [
           stappen: [{ titel: "BBP = totale productie", tekst: "Bruto Binnenlands Product = ALLES wat in NL geproduceerd wordt in 1 jaar, opgeteld in euro's. NL: ~€1.000 miljard." }],
           woorden: [{ woord: "BBP", uitleg: "Bruto Binnenlands Product. Totale waarde productie in 1 jaar." }, { woord: "productie", uitleg: "Alles wat gemaakt + geleverd wordt: goederen + diensten." }],
           theorie: "BBP meet drie kanten van dezelfde munt: (1) wat wordt geproduceerd, (2) wie krijgt het inkomen, (3) wie geeft het uit. Drie methodes leveren hetzelfde antwoord — daarom betrouwbaar.",
-          voorbeelden: [{ type: "NL", tekst: "NL ~€1.000 mrd BBP / 17 mln inwoners = €56k per hoofd." }, { type: "VS", tekst: "VS ~$27 biljoen BBP / 333 mln = $81k per hoofd." }],
+          voorbeelden: [{ type: "NL", tekst: "NL ~€1.000 mrd BBP / 18 mln inwoners = ~€56k per hoofd." }, { type: "VS", tekst: "VS ~$27 biljoen BBP / 333 mln = $81k per hoofd." }],
           basiskennis: [{ onderwerp: "Belasting ≠ BBP", uitleg: "Belasting is een DEEL van BBP, niet BBP zelf. Idem brutoloon — slechts een component." }],
           niveaus: { basis: "BBP = totale productie.", simpeler: "Alles wat NL in 1 jaar produceert, in euro's = BBP.", nogSimpeler: "Totale productie" },
         },
@@ -644,7 +644,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "HDI = drie dimensies", tekst: "Human Development Index combineert: (1) inkomen per hoofd, (2) onderwijs (gemiddelde + verwachte schooljaren), (3) levensverwachting." }],
           woorden: [{ woord: "HDI", uitleg: "Human Development Index. VN-maat voor menselijke ontwikkeling, 0 (laag) tot 1 (hoog)." }],
-          theorie: "HDI is een alternatief voor BBP. Een land kan rijk zijn (hoog BBP) maar slechte HDI hebben als onderwijs of gezondheid achterblijft. Norway, NL en Zwitserland scoren hoog (~0,95). Sub-Sahara-Afrika lager.",
+          theorie: "HDI is een alternatief voor BBP. Een land kan rijk zijn (hoog BBP) maar slechte HDI hebben als onderwijs of gezondheid achterblijft. Noorwegen, NL en Zwitserland scoren hoog (~0,95). Sub-Sahara-Afrika lager.",
           voorbeelden: [{ type: "NL", tekst: "NL HDI ~0,94 (zeer hoog). Niger HDI ~0,40 (zeer laag). NL leeft langer + meer school + hoger inkomen." }],
           basiskennis: [{ onderwerp: "Niet alleen BBP", uitleg: "BBP zit IN HDI (deel 1), maar HDI heeft 2 extra factoren." }],
           niveaus: { basis: "3 dimensies inkomen + school + leven.", simpeler: "HDI combineert: hoe rijk, hoe goed onderwijs, hoe lang mensen leven.", nogSimpeler: "Inkomen+school+leven" },
@@ -669,12 +669,12 @@ const steps = [
   // ─── Stap 7: Inkomensbeleid ──────────────────────────────
   {
     title: "Inkomensbeleid — minimumloon, toeslagen, AOW",
-    explanation: "De overheid grijpt in om inkomens **rechtvaardiger** te verdelen. Dit heet **inkomensbeleid**.\n\n**Minimumloon** (per 2026 ~€1.900/mnd bruto voor 21+):\n• Wettelijk laagste loon\n• Voorkomt dat werkgevers extreem lage lonen betalen\n• Geldt vanaf 21 jaar; lager voor jongeren (jeugd-minimumloon)\n\n**Toeslagen** (Belastingdienst):\n• **Zorgtoeslag**: voor zorgverzekeringspremie als inkomen laag is\n• **Huurtoeslag**: bij sociale huurwoning + laag inkomen\n• **Kinderopvangtoeslag**: voor crèche-kosten\n• **Kindgebonden budget**: extra geld voor kinderen\n• **Kinderbijslag**: vast bedrag per kind, ongeacht inkomen\n\n**Uitkeringen** (UWV/gemeente):\n• **AOW**: vanaf pensioenleeftijd (~67), basis-pensioen voor iedereen die in NL gewoond heeft\n• **WW** (Werkloosheidswet): tijdelijk, na ontslag, ~70% van laatste loon\n• **WIA/WGA**: bij arbeidsongeschiktheid\n• **Bijstand**: vangnet als je geen ander inkomen hebt\n\n**Pensioen — 3 pijlers**:\n1. **AOW** (overheid) — basis voor iedereen\n2. **Aanvullend pensioen** (werkgever) — opgebouwd via pensioenfonds tijdens werk\n3. **Eigen pensioenpotje** (zelf sparen, lijfrente)\n\n**Progressieve belasting** als inkomensherverdeler:\n• Lager inkomen → lager percentage belasting\n• Hoger inkomen → hoger percentage\n• → Verschil tussen rijk en arm wordt kleiner\n\n**Effect inkomensbeleid**:\n• NL heeft een van de **meest gelijke inkomensverdelingen** ter wereld (Gini ~0,28)\n• Mede dankzij sterk uitkeringssysteem en progressieve belasting\n• Tradeoff: hogere belasting = minder netto voor wie veel verdient",
+    explanation: "De overheid grijpt in om inkomens **rechtvaardiger** te verdelen. Dit heet **inkomensbeleid**.\n\n**Minimumloon** (wettelijk vastgesteld bedrag per uur, voor 21+):\n• Wettelijk laagste loon\n• Voorkomt dat werkgevers extreem lage lonen betalen\n• Geldt vanaf 21 jaar; lager voor jongeren (jeugd-minimumloon)\n\n**Toeslagen** (Belastingdienst):\n• **Zorgtoeslag**: voor zorgverzekeringspremie als inkomen laag is\n• **Huurtoeslag**: bij sociale huurwoning + laag inkomen\n• **Kinderopvangtoeslag**: voor crèche-kosten\n• **Kindgebonden budget**: extra geld voor kinderen\n• **Kinderbijslag** (via de SVB): vast bedrag per kind, ongeacht inkomen\n\n**Uitkeringen** (UWV/gemeente):\n• **AOW**: vanaf pensioenleeftijd (~67), basis-pensioen voor iedereen die in NL gewoond heeft\n• **WW** (Werkloosheidswet): tijdelijk, na ontslag, ~70% van laatste loon\n• **WIA/WGA**: bij arbeidsongeschiktheid\n• **Bijstand**: vangnet als je geen ander inkomen hebt\n\n**Pensioen — 3 pijlers**:\n1. **AOW** (overheid) — basis voor iedereen\n2. **Aanvullend pensioen** (werkgever) — opgebouwd via pensioenfonds tijdens werk\n3. **Eigen pensioenpotje** (zelf sparen, lijfrente)\n\n**Progressieve belasting** als inkomensherverdeler:\n• Lager inkomen → lager percentage belasting\n• Hoger inkomen → hoger percentage\n• → Verschil tussen rijk en arm wordt kleiner\n\n**Effect inkomensbeleid**:\n• NL heeft een van de **meest gelijke inkomensverdelingen** ter wereld (Gini ~0,28)\n• Mede dankzij sterk uitkeringssysteem en progressieve belasting\n• Tradeoff: hogere belasting = minder netto voor wie veel verdient",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">INKOMENSBELEID</text>
 <rect x="20" y="40" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
 <text x="87" y="58" text-anchor="middle" fill="${COLORS.vraag}" font-size="11" font-family="Arial" font-weight="bold">MINIMUMLOON</text>
-<text x="87" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">~€1900 bruto/mnd</text>
+<text x="87" y="74" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">wettelijk minimum</text>
 <text x="87" y="86" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">vanaf 21 jaar</text>
 <rect x="165" y="40" width="135" height="55" rx="6" fill="${COLORS.paper}" stroke="${COLORS.geld}" stroke-width="1.2"/>
 <text x="232" y="58" text-anchor="middle" fill="${COLORS.geld}" font-size="11" font-family="Arial" font-weight="bold">TOESLAGEN</text>
@@ -698,10 +698,10 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Gemiddelde is veel hoger.", "Directeur = hoog loon.", "Pensioen is iets anders (AOW)."],
         uitlegPad: {
-          stappen: [{ titel: "Wet beschermt loner", tekst: "Minimumloon = WETTELIJKE ondergrens. Werkgever mag niet minder betalen. Beschermt werknemers tegen extreem lage lonen." }],
+          stappen: [{ titel: "Wet beschermt werknemer", tekst: "Minimumloon = WETTELIJKE ondergrens. Werkgever mag niet minder betalen. Beschermt werknemers tegen extreem lage lonen." }],
           woorden: [{ woord: "minimumloon", uitleg: "Wettelijk laagste uurloon/maandloon dat werkgevers mogen betalen. Geldt vanaf 21 jaar; jongeren krijgen jeugd-minimumloon." }],
-          theorie: "Bedrag wordt elk half jaar bijgesteld voor inflatie. Per 2026 ~€1.900 bruto/maand voor 21+. Werkgevers MOETEN dit betalen, ook bij oneindig laag-geschoold werk.",
-          voorbeelden: [{ type: "praktijk", tekst: "Schoonmaker 21+ heeft recht op €1.900/mnd bruto, ook als werkgever liever €1.500 betaalt." }],
+          theorie: "Het bedrag wordt elk half jaar aangepast (geïndexeerd). Sinds 2024 is het minimumloon een uurloon, voor 21+. Werkgevers MOETEN dit betalen, ook bij werk waarvoor weinig opleiding nodig is.",
+          voorbeelden: [{ type: "praktijk", tekst: "Schoonmaker 21+ heeft recht op minstens het minimumloon, ook als de werkgever liever minder betaalt." }],
           basiskennis: [{ onderwerp: "Niet gemiddelde", uitleg: "Minimum = ondergrens. Gemiddelde NL-loon ligt rond €42k bruto/jaar (~€3.500/mnd). Veel hoger dan minimum." }],
           niveaus: { basis: "Wettelijk laagste loon.", simpeler: "De wet bepaalt het laagste loon dat een werkgever mag betalen. Minder mag niet.", nogSimpeler: "Wettelijk" },
         },
@@ -710,14 +710,14 @@ const steps = [
         q: "Wie krijgt **AOW**?",
         options: ["Iedereen vanaf pensioenleeftijd (~67) die in NL heeft gewoond", "Alleen mensen die werken", "Alleen ondernemers", "Alleen wie geen vermogen heeft"],
         answer: 0,
-        wrongHints: [null, "Niet vereiste werk-status.", "AOW geldt voor iedereen.", "Vermogen geen vereiste."],
+        wrongHints: [null, "Werk is geen voorwaarde.", "AOW geldt voor iedereen.", "Vermogen geen vereiste."],
         uitlegPad: {
           stappen: [{ titel: "AOW = basis voor IEDEREEN", tekst: "AOW is een basis-pensioen dat IEDEREEN krijgt vanaf de pensioenleeftijd (~67), ongeacht werk-historie of vermogen. Voorwaarde: hier gewoond hebben." }],
           woorden: [{ woord: "AOW", uitleg: "Algemene Ouderdomswet. Basis-pensioen voor iedereen vanaf pensioenleeftijd." }, { woord: "pensioenleeftijd", uitleg: "Leeftijd waarop AOW ingaat. Stijgt mee met levensverwachting (~67 in 2024)." }],
           theorie: "AOW wordt betaald uit de AOW-premie (~17,9%) die werkenden betalen. Het is een omslagsysteem: huidige werkenden financieren huidige gepensioneerden.",
-          voorbeelden: [{ type: "iedereen", tekst: "Iemand die alleen huisvrouw was: krijgt AOW. CEO van Shell: krijgt ook AOW. Bedrag is gelijk voor iedereen." }],
+          voorbeelden: [{ type: "iedereen", tekst: "Iemand die alleen huisvrouw was: krijgt AOW. CEO van Shell: krijgt ook AOW. Het bedrag hangt niet af van wat je verdiende." }],
           basiskennis: [{ onderwerp: "Niet werk-afhankelijk", uitleg: "AOW kent geen werk-eis (in tegenstelling tot WW). Iedereen die 50 jaar in NL woonde krijgt vol AOW." }],
-          niveaus: { basis: "Iedereen vanaf ~67.", simpeler: "AOW krijg je gewoon omdat je 67 wordt en hier gewoond hebt. Niet vereiste werk.", nogSimpeler: "Iedereen 67+" },
+          niveaus: { basis: "Iedereen vanaf ~67.", simpeler: "AOW krijg je gewoon omdat je 67 wordt en hier gewoond hebt. Werk is geen vereiste.", nogSimpeler: "Iedereen 67+" },
         },
       },
       {
@@ -742,8 +742,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Drie lagen", tekst: "Pijler 1: AOW van overheid (basis). Pijler 2: aanvullend pensioen via werkgever (opgebouwd in dienst). Pijler 3: eigen sparen/lijfrente (vrijwillig extra)." }],
           woorden: [{ woord: "AOW", uitleg: "Pijler 1: basis-pensioen voor iedereen." }, { woord: "aanvullend pensioen", uitleg: "Pijler 2: bedrag dat werkgever + werknemer samen opbouwen tijdens loopbaan." }, { woord: "lijfrente", uitleg: "Pijler 3: eigen pensioenpotje, vaak via verzekeraar." }],
-          theorie: "Waarom 3 pijlers? AOW alleen is te laag om van rond te komen. Werkgevers-pensioen + eigen sparen vullen het aan. Gemiddelde NL pensionado krijgt AOW (~€1.300/mnd) + aanvullend (~€800/mnd) = €2.100/mnd.",
-          voorbeelden: [{ type: "iemand zonder pijler 2", tekst: "Zzp'er bouwt geen werkgevers-pensioen. Moet meer sparen in pijler 3 of accepteren lager inkomen op 67." }],
+          theorie: "Waarom 3 pijlers? AOW alleen is te laag om van rond te komen. Werkgevers-pensioen + eigen sparen vullen het aan. Een gemiddelde gepensioneerde krijgt AOW plus een aanvullend pensioen van de werkgever.",
+          voorbeelden: [{ type: "iemand zonder pijler 2", tekst: "Zzp'er bouwt geen werkgevers-pensioen. Moet meer sparen in pijler 3 of een lager inkomen na zijn pensioen accepteren." }],
           basiskennis: [{ onderwerp: "Niet bruto/netto", uitleg: "Bruto/netto/vakantiegeld zijn loon-onderdelen, geen pensioen-pijlers." }],
           niveaus: { basis: "AOW + werkgever + eigen.", simpeler: "3 lagen pensioen: (1) AOW van overheid, (2) werkgevers-pensioen, (3) eigen sparen.", nogSimpeler: "3 lagen" },
         },
@@ -770,9 +770,9 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Hoe meer, hoe zwaarder", tekst: "Bij progressieve belasting STIJGT het BELASTING-percentage met je inkomen. €30k betaalt 37%, €100k betaalt 49% over hoogste schijf. Resultaat: hoge inkomens leveren relatief meer in." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt met inkomen. Hoe hoger je inkomen, hoe hoger % belasting." }, { woord: "vlaktaks", uitleg: "Iedereen betaalt zelfde percentage, ongeacht inkomen. (Tegengesteld aan progressief.)" }],
-          theorie: "NL IB-systeem (2024): tot ~€38k = 36,93%. €38k-€73k = 36,93%. Boven €73k = 49,50%. Voor schaalverdeling: rijken betalen relatief meer → netto-verschil tussen rijk en arm wordt kleiner.",
+          theorie: "NL inkomstenbelasting (rond 2024): tot ~€75k ongeveer 37%, daarboven 49,50%. Gevolg: rijken betalen relatief meer → netto-verschil tussen rijk en arm wordt kleiner.",
           voorbeelden: [{ type: "rekensom", tekst: "A verdient €30k bruto → ~€11k IB → netto €19k. B verdient €100k → ~€38k IB → netto €62k. Bruto-verschil €70k → netto-verschil €43k. Verkleind door progressie." }],
-          basiskennis: [{ onderwerp: "Niet 'lagere betalen meer'", uitleg: "Bij progressief betalen LAGEREN minder %, niet meer. Bij regressief (zoals BTW) dragen lagere inkomens % relatief zwaarder." }],
+          basiskennis: [{ onderwerp: "Niet 'lagere betalen meer'", uitleg: "Bij progressief betalen LAGERE inkomens een kleiner %, niet meer. Bij regressief (zoals btw) dragen lagere inkomens relatief zwaarder." }],
           niveaus: { basis: "Hoger % bij hoger inkomen.", simpeler: "Wie meer verdient, betaalt een groter PERCENTAGE belasting. Dat trekt netto-inkomens dichter naar elkaar toe.", nogSimpeler: "Meer = meer %" },
         },
       },

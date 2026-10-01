@@ -19,7 +19,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is passé composé?",
-    explanation: "**Passé composé** is de **voltooid verleden tijd** in het Frans — vergelijkbaar met de Nederlandse 'heb ge-' / 'ben ge-' constructie.\n\n**Vorm**: hulpwerkwoord (avoir of être) + voltooid deelwoord (participe passé).\n\n**Voorbeelden**:\n• *J'ai mangé.* — Ik heb gegeten.\n• *Tu as parlé.* — Jij hebt gesproken.\n• *Elle est partie.* — Zij is vertrokken.\n• *Nous sommes arrivés.* — Wij zijn aangekomen.\n\n**Wanneer gebruik je passé composé?**\n• Voor afgeronde gebeurtenissen in het verleden.\n• *Hier j'ai vu un film.* — Gisteren heb ik een film gezien.\n• *Nous avons mangé au restaurant.* — Wij hebben in een restaurant gegeten.\n\nDe grootste vraag bij passé composé is: gebruik je **avoir** of **être** als hulpwerkwoord? Daar gaan deze stappen over.",
+    explanation: "**Passé composé** is een verleden tijd in het Frans — vergelijkbaar met de Nederlandse **voltooid tegenwoordige tijd** ('heb ge-' / 'ben ge-').\n\n**Vorm**: hulpwerkwoord (avoir of être) + voltooid deelwoord (participe passé).\n\n**Voorbeelden**:\n• *J'ai mangé.* — Ik heb gegeten.\n• *Tu as parlé.* — Jij hebt gesproken.\n• *Elle est partie.* — Zij is vertrokken.\n• *Nous sommes arrivés.* — Wij zijn aangekomen.\n\n**Wanneer gebruik je passé composé?**\n• Voor afgeronde gebeurtenissen in het verleden.\n• *Hier j'ai vu un film.* — Gisteren heb ik een film gezien.\n• *Nous avons mangé au restaurant.* — Wij hebben in een restaurant gegeten.\n\nDe grootste vraag bij passé composé is: gebruik je **avoir** of **être** als hulpwerkwoord? Daar gaan deze stappen over.",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="40" width="260" height="50" rx="8" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="2"/>
 <text x="150" y="70" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">passé composé</text>
@@ -27,13 +27,13 @@ const steps = [
 <text x="40" y="138" fill="${COLORS.text}" font-size="10" font-family="Arial">j'ai mangé</text>
 <text x="170" y="120" fill="${COLORS.etre}" font-size="11" font-family="Arial" font-weight="bold">être + p.p.</text>
 <text x="170" y="138" fill="${COLORS.text}" font-size="10" font-family="Arial">je suis allé(e)</text>
-<text x="150" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">= voltooid verleden tijd</text>
+<text x="150" y="170" text-anchor="middle" fill="${COLORS.muted}" font-size="11" font-family="Arial">= voltooid tegenwoordige tijd (NL)</text>
 </svg>`,
     checks: [
       {
         q: "Wat is **passé composé**?",
         options: [
-          "Voltooid verleden tijd: hulpwerkwoord + p.p.",
+          "Voltooid tegenwoordige tijd (NL): hulpwerkwoord + p.p.",
           "Tegenwoordige tijd",
           "Toekomende tijd",
           "Onvoltooid verleden tijd",
@@ -41,12 +41,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegenwoordige tijd is présent.", "Toekomst = futur.", "Onvoltooid verleden = imparfait."],
         uitlegPad: {
-          stappen: [{ titel: "Voltooid verleden tijd", tekst: "Passé composé = hulpwerkwoord (avoir/être) + voltooid deelwoord." }],
+          stappen: [{ titel: "Lijkt op voltooid tegenwoordige tijd", tekst: "Passé composé = hulpwerkwoord (avoir/être) + voltooid deelwoord." }],
           woorden: [{ woord: "passé composé", uitleg: "letterlijk: samengesteld verleden" }],
           theorie: "Twee delen: hulpww + p.p. Net als NL: 'heb gegeten'.",
           voorbeelden: [{ type: "voorbeeld", tekst: "J'ai mangé = ik heb gegeten" }],
           basiskennis: [{ onderwerp: "anders", uitleg: "présent = nu, futur = later, imparfait = was-bezig" }],
-          niveaus: { basis: "Voltooid verleden tijd.", simpeler: "Wat is gebeurd in verleden.", nogSimpeler: "Heb/ben + iets." },
+          niveaus: { basis: "Lijkt op voltooid tegenwoordige tijd.", simpeler: "Wat is gebeurd in verleden.", nogSimpeler: "Heb/ben + iets." },
         },
       },
       {
@@ -132,7 +132,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Hoe vervoegt **avoir** in 'wij hebben'?",
+        q: "Hoe vervoeg je **avoir** in 'wij hebben'?",
         options: ["nous avons", "nous avez", "nous as", "nous a"],
         answer: 0,
         wrongHints: [null, "Avez = vous (jullie/u).", "As = tu (jij).", "A = il/elle (hij/zij)."],
@@ -207,7 +207,7 @@ const steps = [
   },
   {
     title: "Vragen en ontkenningen met avoir",
-    explanation: "**Vraagvorm**: \n• Plaatsing van vraagteken: *Tu as mangé?* — eenvoudigst.\n• Of inversie: *As-tu mangé?* — formeler.\n• Of est-ce que: *Est-ce que tu as mangé?* — neutraal.\n\n**Ontkenning**: \nJe zet **ne ... pas** rond het *hulpwerkwoord*, niet rond het p.p.\n\n**Voorbeelden**:\n• Je n'ai pas mangé. *(Ik heb niet gegeten.)*\n• Tu n'as pas vu le film. *(Jij hebt de film niet gezien.)*\n• Il n'a pas fini ses devoirs. *(Hij heeft zijn huiswerk niet af.)*\n• Nous n'avons pas compris. *(Wij hebben het niet begrepen.)*\n\n**Andere ontkenningen** (zelfde plek):\n• ne ... jamais (nooit)\n• ne ... rien (niets)\n• ne ... plus (niet meer)\n\n*Je n'ai jamais vu ce film.* — Ik heb deze film nooit gezien.",
+    explanation: "**Vraagvorm**: \n• Plaatsing van vraagteken: *Tu as mangé?* — eenvoudigst.\n• Of inversie: *As-tu mangé?* — formeler.\n• Of est-ce que: *Est-ce que tu as mangé?* — neutraal.\n\n**Ontkenning**: \nJe zet **ne ... pas** rond het *hulpwerkwoord*, niet rond het p.p.\n\n**Voorbeelden**:\n• Je n'ai pas mangé. *(Ik heb niet gegeten.)*\n• Tu n'as pas vu le film. *(Jij hebt de film niet gezien.)*\n• Il n'a pas fini ses devoirs. *(Hij heeft zijn huiswerk niet afgemaakt.)*\n• Nous n'avons pas compris. *(Wij hebben het niet begrepen.)*\n\n**Andere ontkenningen** (zelfde plek):\n• ne ... jamais (nooit)\n• ne ... rien (niets)\n• ne ... plus (niet meer)\n\n*Je n'ai jamais vu ce film.* — Ik heb deze film nooit gezien.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">vraag + ontkenning</text>
 <rect x="20" y="40" width="260" height="50" rx="6" fill="${COLORS.good}" opacity="0.15" stroke="${COLORS.good}" stroke-width="1"/>
@@ -288,13 +288,13 @@ const steps = [
         q: "\"Ik ben vertrokken\" — welk hulpwerkwoord?",
         options: ["être → je suis parti(e)", "avoir → j'ai parti", "être → je es parti", "avoir → je suis parti"],
         answer: 0,
-        wrongHints: [null, "Partir gaat met être, niet avoir.", "Suis is voor 'je', niet 'es'.", "Suis komt met être, niet avoir."],
+        wrongHints: [null, "Partir gaat met être, niet avoir.", "Bij 'je' hoort suis, niet es.", "Suis komt met être, niet avoir."],
         uitlegPad: {
           stappen: [{ titel: "Partir → être", tekst: "Je suis parti(e). Partir is DR & MRS-werkwoord." }],
           woorden: [{ woord: "partir", uitleg: "vertrekken, p.p. = parti" }],
           theorie: "Beweging-werkwoorden → être.",
           voorbeelden: [{ type: "voorbeeld", tekst: "je suis parti = ik ben vertrokken" }],
-          basiskennis: [{ onderwerp: "DR & MRS", uitleg: "lijst van 16 être-werkwoorden" }],
+          basiskennis: [{ onderwerp: "DR & MRS", uitleg: "lijst van 17 être-werkwoorden" }],
           niveaus: { basis: "Je suis parti(e).", simpeler: "Être + parti.", nogSimpeler: "Suis + parti." },
         },
       },
@@ -302,7 +302,7 @@ const steps = [
   },
   {
     title: "De DR & MRS VANDERTRAMPP-lijst",
-    explanation: "Onthoud welke werkwoorden être nemen met deze 16 paren (en wederkerende).\n\n**De lijst** (Engels acroniem):\n• **D**escendre *(afdalen)* — descendu\n• **R**evenir *(terugkomen)* — revenu\n• **M**onter *(opklimmen, instappen)* — monté\n• **R**ester *(blijven)* — resté\n• **S**ortir *(uitgaan)* — sorti\n\n• **V**enir *(komen)* — venu\n• **A**ller *(gaan)* — allé\n• **N**aître *(geboren worden)* — né\n• **D**evenir *(worden)* — devenu\n• **E**ntrer *(binnenkomen)* — entré\n• **R**entrer *(terugkomen / thuiskomen)* — rentré\n• **T**omber *(vallen)* — tombé\n• **R**etourner *(terugkeren)* — retourné\n• **A**rriver *(aankomen)* — arrivé\n• **M**ourir *(sterven)* — mort\n• **P**artir *(vertrekken)* — parti\n• **P**asser *(passeren)* — passé (kan ook met avoir, betekenis verschilt)\n\nKenmerk: bijna allemaal **beweging** of **verandering van staat** (geboren / sterven / worden).\n\n**Truc**: visualiseer een huis. Mensen komen erin (entrer), wonen er (rester), gaan eruit (sortir), klimmen op (monter), vallen (tomber).",
+    explanation: "Onthoud welke werkwoorden être nemen met deze 17 werkwoorden (plus de wederkerende).\n\n**De lijst** (Engels acroniem):\n• **D**escendre *(afdalen)* — descendu\n• **R**evenir *(terugkomen)* — revenu\n• **M**onter *(opklimmen, instappen)* — monté\n• **R**ester *(blijven)* — resté\n• **S**ortir *(uitgaan)* — sorti\n\n• **V**enir *(komen)* — venu\n• **A**ller *(gaan)* — allé\n• **N**aître *(geboren worden)* — né\n• **D**evenir *(worden)* — devenu\n• **E**ntrer *(binnenkomen)* — entré\n• **R**entrer *(terugkomen / thuiskomen)* — rentré\n• **T**omber *(vallen)* — tombé\n• **R**etourner *(terugkeren)* — retourné\n• **A**rriver *(aankomen)* — arrivé\n• **M**ourir *(sterven)* — mort\n• **P**artir *(vertrekken)* — parti\n• **P**asser *(passeren)* — passé (kan ook met avoir, betekenis verschilt)\n\nKenmerk: bijna allemaal **beweging** of **verandering van staat** (geboren / sterven / worden).\n\n**Truc**: visualiseer een huis. Mensen komen erin (entrer), blijven er (rester), gaan eruit (sortir), klimmen op (monter), vallen (tomber).",
     svg: `<svg viewBox="0 0 300 200">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.etre}" font-size="13" font-family="Arial" font-weight="bold">être-werkwoorden</text>
 <polygon points="150,40 100,90 200,90" fill="${COLORS.etre}" opacity="0.30"/>
@@ -320,11 +320,11 @@ const steps = [
         q: "\"Wij zijn vertrokken\" — partir met...?",
         options: ["être → nous sommes partis", "avoir → nous avons parti", "être → nous êtes partis", "avoir → nous sommes parti"],
         answer: 0,
-        wrongHints: [null, "Partir = être-werkwoord.", "Êtes is voor 'vous', niet 'nous'.", "Suis is voor 'je', en avoir is verkeerd hier."],
+        wrongHints: [null, "Partir = être-werkwoord.", "Êtes is voor 'vous', niet 'nous'.", "Sommes hoort bij être, niet bij avoir — en bij nous komt er nog een -s achter het p.p."],
         uitlegPad: {
           stappen: [{ titel: "Nous sommes partis", tekst: "Partir + être. Nous sommes + parti + s (mv)." }],
           woorden: [{ woord: "p.p. aanpassen", uitleg: "+s bij meervoud" }],
-          theorie: "Bij être p.p. past zich aan onderwerp (m/v/mv).",
+          theorie: "Bij être past het p.p. zich aan het onderwerp aan (m/v/mv).",
           voorbeelden: [{ type: "voorbeeld", tekst: "nous (m+v of m) → partis" }],
           basiskennis: [{ onderwerp: "vervoeg sommes", uitleg: "nous → sommes" }],
           niveaus: { basis: "Nous sommes partis.", simpeler: "Wij zijn vertrokken (mv +s).", nogSimpeler: "sommes + partis." },
@@ -409,7 +409,7 @@ const steps = [
     checks: [
       {
         q: "Welk hulpwerkwoord bij **manger**?",
-        options: ["avoir", "être", "Beide kan", "Geen"],
+        options: ["avoir", "être", "Beide kunnen", "Geen"],
         answer: 0,
         wrongHints: [null, "Manger = activiteit met object → avoir.", "Manger gaat altijd met avoir.", "Passé composé heeft hulpwerkwoord."],
         uitlegPad: {
@@ -423,7 +423,7 @@ const steps = [
       },
       {
         q: "Welk hulpwerkwoord bij **arriver**?",
-        options: ["être", "avoir", "Beide kan", "Geen"],
+        options: ["être", "avoir", "Beide kunnen", "Geen"],
         answer: 0,
         wrongHints: [null, "Arriver = beweging → être.", "Arriver hoort bij DR & MRS VANDERTRAMPP.", "Passé composé heeft altijd een hulpwerkwoord."],
         uitlegPad: {
@@ -506,14 +506,14 @@ const steps = [
           niveaus: { basis: "Je n'ai pas compris.", simpeler: "Ontkenning + compris.", nogSimpeler: "n'ai pas compris." },
         },
       },
-      { q: "Welk hulpwerkwoord bij 'aller' (gaan) in passé composé?", options: ["être","avoir","faire","aller"], answer: 0, wrongHints: [null, "Niet — avoir voor meeste, maar 'aller' is être-ww.", "Niet hulpwerkwoord.", "Niet — geen reflexief."] },
+      { q: "Welk hulpwerkwoord bij 'aller' (gaan) in passé composé?", options: ["être","avoir","faire","aller"], answer: 0, wrongHints: [null, "Niet — avoir voor meeste, maar 'aller' is être-ww.", "Niet hulpwerkwoord.", "Niet — aller is zelf het werkwoord, geen hulpwerkwoord."] },
       { q: "Vorm de p.p. van 'manger' (eten)", options: ["mangé","mangi","mangu","mangait"], answer: 0, wrongHints: [null, "Niet — -ir → -i.", "Niet — -re/-oir → -u.", "Dat is imparfait."] },
       { q: "Marie est _____ (allé/allée/allés) à Paris.", options: ["allée","allé","allés","alla"], answer: 0, wrongHints: [null, "Niet — Marie is vrouw, e nodig.", "Niet — meervoud.", "Niet — geen geldige vorm."] },
-      { q: "**Passé composé** drukt uit?", options: ["Voltooid verleden / actie in verleden afgerond","Toekomst","Heden","Algemene waarheid"], answer: 0, wrongHints: [null,"Futur.","Présent.","Niet primair tijd."] },
-      { q: "Welk **hulpwerkwoord** gebruikt 80% van Franse werkwoorden in passé composé?", options: ["avoir","être","faire","aller"], answer: 0, wrongHints: [null,"Voor specifieke bewegings-ww.","Geen hulpwerkwoord.","Geen hulpwerkwoord."] },
+      { q: "**Passé composé** drukt uit?", options: ["Afgeronde actie in het verleden (lijkt op NL voltooid tegenwoordige tijd)","Toekomst","Heden","Algemene waarheid"], answer: 0, wrongHints: [null,"Futur.","Présent.","Daarvoor gebruik je het présent."] },
+      { q: "Welk **hulpwerkwoord** gebruiken de meeste Franse werkwoorden in passé composé?", options: ["avoir","être","faire","aller"], answer: 0, wrongHints: [null,"Voor specifieke bewegings-ww.","Geen hulpwerkwoord.","Geen hulpwerkwoord."] },
       { q: "**P.P. van 'finir'** (eindigen)?", options: ["fini","finé","finu","finit"], answer: 0, wrongHints: [null,"Voor -er-ww.","Voor -re/-oir-ww.","Présent-vorm."] },
       { q: "**P.P. van 'voir'** (zien) — onregelmatig?", options: ["vu","vé","voyé","voir"], answer: 0, wrongHints: [null,"-er-vorm.","Niet bestaand.","Infinitief."] },
-      { q: "**P.P. van 'être'** zelf?", options: ["été","êté","étu","étri"], answer: 0, wrongHints: [null,"Geen accent op eerste e.","Niet.","Niet."] },
+      { q: "**P.P. van 'être'** zelf?", options: ["été","êté","étu","étri"], answer: 0, wrongHints: [null,"Op de eerste e staat een accent aigu (é), geen dakje (ê).","Niet.","Niet."] },
       { q: "**Bij être-ww** komt overeenkomst met onderwerp. Welke -e/-s/-es?", options: ["Vrouw +e, meervoud +s, vrouw-mv +es","Geen verandering","Altijd +s","Alleen +e"], answer: 0, wrongHints: [null,"Wel.","Niet altijd.","Onvolledig."] },
       { q: "Welke is een **être-werkwoord**?", options: ["partir (vertrekken)","manger","parler","finir"], answer: 0, wrongHints: [null,"Manger (eten) brengt je nergens naartoe — être hoort bij beweging of verandering van plaats. Past eten daarbij?","Parler (praten) is geen verplaatsing; de être-lijst gaat over komen, gaan en vallen.","Finir (eindigen) beschrijft geen beweging — welk werkwoord in het rijtje gaat wél over verplaatsen?"] },
       { q: "**Open vraag**: vorm de p.p. van 'parler' (spreken).", kind: "open", acceptedAnswers: ["parlé"], explanation: "-er-ww → vervang -er door -é: parlé." },
@@ -526,7 +526,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const passeComposeFrans = {
   id: "passe-compose-frans",
-  title: "Passé composé (voltooid verleden tijd)",
+  title: "Passé composé (Franse verleden tijd)",
   emoji: "🇫🇷",
   level: "klas2-3",
   subject: "frans",
@@ -536,7 +536,7 @@ const passeComposeFrans = {
     { id: "werkwoordsvervoeging-frans", title: "Werkwoordsvervoeging Frans", niveau: "frans-A1/A2" },
   ],
   intro:
-    "De voltooid verleden tijd in Frans: hulpwerkwoord avoir of être + participe passé. Met de DR & MRS VANDERTRAMPP-lijst voor être-werkwoorden, vorming p.p. (-é/-i/-u + onregelmatig), aanpassing aan onderwerp bij être, vragen en ontkenningen. Eerste pad Frans onderbouw.",
+    "De passé composé in het Frans (lijkt op de Nederlandse voltooid tegenwoordige tijd): hulpwerkwoord avoir of être + participe passé. Met de DR & MRS VANDERTRAMPP-lijst voor être-werkwoorden, vorming p.p. (-é/-i/-u + onregelmatig), aanpassing aan onderwerp bij être, vragen en ontkenningen. Eerste pad Frans onderbouw.",
   triggerKeywords: [
     "passé composé", "passe compose",
     "voltooid verleden", "voltooid deelwoord",
