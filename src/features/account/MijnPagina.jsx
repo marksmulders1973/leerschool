@@ -554,6 +554,7 @@ export default function MijnPagina({
   const [week, setWeek] = useState(null);
   // 👨‍👩‍👧 "Wie oefent er?" (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): bij openen
   // met 2+ profielen op dit apparaat eerst kiezen (zoals Netflix), daarna via "Wissel".
+  const [meerOpen, setMeerOpen] = useState(false);
   const [wieOpen, setWieOpen] = useState(() => {
     try { return leesProfielen().length >= 2 && !sessionStorage.getItem("lk_wie_gekozen"); } catch { return false; }
   });
@@ -1058,7 +1059,7 @@ export default function MijnPagina({
                       wisselen?"). */}
                   {onWisselProfiel && (
                     <button
-                      onClick={() => setWisselOpen(!wisselOpen)}
+                      onClick={() => { setWisselOpen(false); setWieOpen(true); }}
                       aria-expanded={wisselOpen}
                       style={{
                         padding: "4px 10px", borderRadius: 999, cursor: "pointer",
@@ -1668,105 +1669,6 @@ export default function MijnPagina({
             )}
 
             {weergave === "kind" && (<>
-            {/* ── Jouw doel + countdown (niet voor leerkrachten — agent-test
-                12 aug: "overgaan naar het volgende jaar" is kind-taal).
-                Mark 14 aug 21:48: "belangrijk blok moet ergens bovenaan, wat
-                moet ik leren in groep 1" — daarom stáát dit blok nu bovenaan,
-                vóór de Vandaag-kaart. ── */}
-            {/* Ook niet voor de ouder-rol (Mark 27 aug): "klaar zijn voor
-                groep X" is kind-taal — een ouder heeft zelf geen groep. */}
-            {userRole !== "teacher" && userRole !== "ouder" && (
-            <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-              <div style={eyebrowStijl}>Jouw doel</div>
-              {countdown ? (
-                <>
-                  <div style={{ fontSize: 16, fontWeight: 800, color: "var(--color-text-strong)", margin: "4px 0 4px", fontFamily: "var(--font-display)" }}>
-                    Nog {countdown.weken} {countdown.weken === 1 ? "week" : "weken"} tot de doorstroomtoets
-                  </div>
-                  <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 10, lineHeight: 1.5 }}>
-                    Dát is je doel: laten zien wat je kunt op de toets, eind januari {countdown.jaar}{groep === 7 ? " (jij zit dan in groep 8)" : ""}. Het kwartier per dag is hoe je er komt — begin bij het onderwerp waar het meest te winnen valt.
-                  </div>
-                  <button
-                    onClick={onGoCito}
-                    style={{
-                      padding: "10px 18px", borderRadius: 10, border: "1px solid rgba(255,213,79,0.5)",
-                      background: "rgba(255,213,79,0.12)", color: "#ffd54f", cursor: "pointer",
-                      fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, width: "100%",
-                    }}
-                  >
-                    Oefen in doorstroomtoets-stijl →
-                  </button>
-                </>
-              ) : (
-                <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.55, margin: "4px 0 0" }}>
-                  {/* Mark 11 aug 20:40: het kwartier is niet het doel maar het
-                      middel — het doel is klaar zijn voor de volgende stap. */}
-                  <strong>{groep ? `Klaar zijn voor groep ${Math.min(groep + 1, 8)}` : niveau?.soort === "klas" ? (niveau.nr >= 4 ? "Slagen voor je eindexamen" : `Klaar zijn voor klas ${niveau.nr + 1}`) : "Overgaan naar het volgende jaar"}</strong> — dát is je doel.
-                  Een kwartier per dag is hoe je er komt. {streak > 0
-                    ? `Je zit nu op ${streak} ${streak === 1 ? "dag" : "dagen"} op rij. Knap!`
-                    : "Begin vandaag, dan start je reeks."}
-                </div>
-              )}
-              {/* Uitklap: wat hoort er bij jouw groep? (Mark 21:00: "maak de
-                  blokken klikbaar — voor groep 4 moet je dit en dat kennen") */}
-              {niveau && groepVakken.length > 0 && (
-                <div style={{ marginTop: 12 }}>
-                  <button
-                    onClick={() => { setDoelOpen(!doelOpen); if (!doelOpen) track("mijn_doel_uitklap", { groep, klas: niveau?.soort === "klas" ? niveau.nr : undefined }); }}
-                    aria-expanded={doelOpen}
-                    style={{
-                      width: "100%", textAlign: "left", cursor: "pointer",
-                      padding: "10px 14px", borderRadius: 10,
-                      border: "1px dashed rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.04)",
-                      color: "var(--color-text)", fontWeight: 700, fontSize: 13,
-                      fontFamily: "var(--font-display)",
-                    }}
-                  >
-                    🎒 Wat moet ik kennen in {niveauLabel}? {doelOpen ? "▴" : "▾"}
-                  </button>
-                  {doelOpen && (
-                    <div style={{ marginTop: 10 }}>
-                      {groepVakken.map((vak) => {
-                        const meta = vakMeta(vak);
-                        const paden = niveauPaden(niveau).filter((p) => p.subject === vak).slice(0, 4);
-                        return (
-                          <div key={vak} style={{ marginBottom: 10 }}>
-                            <div style={{ fontSize: 12, fontWeight: 800, color: "var(--color-text-strong)", marginBottom: 5 }}>
-                              {meta.emoji} {meta.titel}
-                              {notitieVoor(vak) && <span style={{ fontWeight: 500, color: "var(--color-text-muted, #8899aa)" }}> — {notitieVoor(vak)}</span>}
-                            </div>
-                            {paden.length === 0 && (
-                              <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)" }}>
-                                🔨 Hier bouwen we aan — oefenstof komt eraan.
-                              </div>
-                            )}
-                            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
-                              {paden.map((p) => (
-                                <button
-                                  key={p.id}
-                                  onClick={() => onPickPath && onPickPath(p.id)}
-                                  style={{
-                                    padding: "6px 11px", borderRadius: 999, cursor: "pointer",
-                                    border: "1px solid rgba(0,200,83,0.35)", background: "rgba(0,200,83,0.08)",
-                                    color: "var(--color-text)", fontSize: 12, fontWeight: 600,
-                                  }}
-                                >
-                                  {p.emoji} {p.title.replace(/\s*\(.*?\)\s*$/, "").replace(/\s*—\s*Cito.*$/i, "").replace(/\s*groep\s*\d(\s*-\s*\d)?\s*$/i, "")}
-                                </button>
-                              ))}
-                            </div>
-                          </div>
-                        );
-                      })}
-                      <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.45 }}>
-                        Dit zijn de onderwerpen langs de leerlijnen van {niveauLabel} — tik er een aan om te beginnen. Alles mag, ook hoger of lager.
-                      </div>
-                    </div>
-                  )}
-                </div>
-              )}
-            </Card>
-            )}
 
             {/* ── Vandaag: het kwartier (naar het claude.ai-voorbeeld dat Mark
                 mooi vond — 20:56): minuten-blokjes + één grote verder-knop. ── */}
@@ -1866,26 +1768,6 @@ export default function MijnPagina({
               })()}
             </Card>
 
-            {/* ── 🔢 Snelkoppeling tafels (Mark 17 aug): de tafels zijn de basis
-                van bijna elke rekenvraag; één tik weg vanaf je eigen pagina.
-                Vanaf groep 3 (tafels beginnen daar; kleuters nog niet). ── */}
-            {groep >= 3 && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
-                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
-                  <span style={{ fontSize: 30, flexShrink: 0 }} aria-hidden="true">🔢</span>
-                  <div style={{ flex: 1, minWidth: 0 }}>
-                    <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong)" }}>Tafels oefenen</div>
-                    <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)" }}>De basis van bijna elke rekenvraag — 1 t/m 12.</div>
-                  </div>
-                  <button
-                    onClick={() => onPickPath && onPickPath("tafels-po")}
-                    style={{ flexShrink: 0, padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "linear-gradient(135deg,#00c853,#69f0ae)", color: "#003a15", fontWeight: 800, fontSize: 13, fontFamily: "var(--font-display)" }}
-                  >
-                    ✖️ Oefen
-                  </button>
-                </div>
-              </Card>
-            )}
 
             {/* 🎁 Koppelcode-invoer óók op Mijn pagina (1 sep 2026): de ouder-
                 én leraar-kaarten zeggen "vul 'm in op Mijn pagina", maar het
@@ -2100,6 +1982,187 @@ export default function MijnPagina({
               )}
             </Card>
 
+
+            {/* ── 🎒 Schoolstart-kaart (idee #32, Mark-go): na de zomer schuift
+                iedereen een groep op — één tik en de hele pagina klopt weer. ── */}
+            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg && userRole !== "teacher" && userRole !== "ouder" &&
+              !(kiesSoort === "klas" && niveau.nr >= 6) && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: kaartBg("rgba(0,200,83,0.06)") }}>
+                <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>
+                  🎒 Nieuw schooljaar!
+                </div>
+                <div style={{ fontSize: 13, color: "var(--color-text, #e8edf5)", marginBottom: 10 }}>
+                  {kiesSoort === "groep" && niveau.nr >= 8
+                    ? "Zit je nu op de middelbare school?"
+                    : `Zit je nu in ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}?`}
+                </div>
+                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+                  <button
+                    onClick={() => {
+                      if (kiesSoort === "groep" && niveau.nr >= 8) kiesNiveau("klas", 1, "brugklas");
+                      else kiesNiveau(kiesSoort, niveau.nr + 1);
+                      sluitSchooljaarKaart();
+                    }}
+                    style={{ padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "#00c853", color: "#08240f", fontWeight: 800, fontSize: 13.5, fontFamily: "inherit" }}
+                  >
+                    {kiesSoort === "groep" && niveau.nr >= 8 ? "Ja, ik zit in de brugklas!" : `Ja, ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}!`}
+                  </button>
+                  <button
+                    onClick={sluitSchooljaarKaart}
+                    style={{ padding: "9px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", cursor: "pointer", background: "rgba(255,255,255,0.05)", color: "var(--color-text, #e8edf5)", fontWeight: 700, fontSize: 13, fontFamily: "inherit" }}
+                  >
+                    Nee, klopt zo
+                  </button>
+                </div>
+              </Card>
+            )}
+
+            {/* Sinds /mijn de landing is (13 aug): één duidelijke deur naar
+                de vakken-werkbank voor wie meteen wil oefenen. */}
+            {onBack && (
+              <button
+                onClick={onBack}
+                style={{
+                  width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer",
+                  border: "1px solid rgba(93,179,255,0.45)", background: kaartBg("rgba(93,179,255,0.1)"),
+                  color: "#5db3ff", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)",
+                  marginBottom: "var(--space-4)", textAlign: "center",
+                }}
+              >
+                📚 Alle vakken en oefeningen →
+              </button>
+            )}
+
+            {/* ── Drie blokken (Mark 1 okt 2026, plan docs/PLAN-MIJN-PAGINA-PROFIELEN.md): kwartier,
+                "Hoe gaat het?" en je profiel staan open; de rest zit achter één knop. Niets weg. ── */}
+            <button type="button" onClick={() => { setMeerOpen((o) => !o); try { track("mijn_meer", { open: !meerOpen }); } catch { /* */ } }}
+              style={{ width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer", border: "1px solid rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.04)", color: "var(--color-text)", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)", marginBottom: "var(--space-4)", textAlign: "center" }}
+              aria-expanded={meerOpen}
+            >
+              {meerOpen ? "Minder tonen ▲" : "Meer op je pagina ▼ (doel, tafels, Charley, je lijstje, diploma's, account)"}
+            </button>
+            {meerOpen && (<>
+            {/* ── Jouw doel + countdown (niet voor leerkrachten — agent-test
+                12 aug: "overgaan naar het volgende jaar" is kind-taal).
+                Mark 14 aug 21:48: "belangrijk blok moet ergens bovenaan, wat
+                moet ik leren in groep 1" — daarom stáát dit blok nu bovenaan,
+                vóór de Vandaag-kaart. ── */}
+            {/* Ook niet voor de ouder-rol (Mark 27 aug): "klaar zijn voor
+                groep X" is kind-taal — een ouder heeft zelf geen groep. */}
+            {userRole !== "teacher" && userRole !== "ouder" && (
+            <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+              <div style={eyebrowStijl}>Jouw doel</div>
+              {countdown ? (
+                <>
+                  <div style={{ fontSize: 16, fontWeight: 800, color: "var(--color-text-strong)", margin: "4px 0 4px", fontFamily: "var(--font-display)" }}>
+                    Nog {countdown.weken} {countdown.weken === 1 ? "week" : "weken"} tot de doorstroomtoets
+                  </div>
+                  <div style={{ fontSize: 13, color: "var(--color-text-muted, #8899aa)", marginBottom: 10, lineHeight: 1.5 }}>
+                    Dát is je doel: laten zien wat je kunt op de toets, eind januari {countdown.jaar}{groep === 7 ? " (jij zit dan in groep 8)" : ""}. Het kwartier per dag is hoe je er komt — begin bij het onderwerp waar het meest te winnen valt.
+                  </div>
+                  <button
+                    onClick={onGoCito}
+                    style={{
+                      padding: "10px 18px", borderRadius: 10, border: "1px solid rgba(255,213,79,0.5)",
+                      background: "rgba(255,213,79,0.12)", color: "#ffd54f", cursor: "pointer",
+                      fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 700, width: "100%",
+                    }}
+                  >
+                    Oefen in doorstroomtoets-stijl →
+                  </button>
+                </>
+              ) : (
+                <div style={{ fontSize: 13.5, color: "var(--color-text)", lineHeight: 1.55, margin: "4px 0 0" }}>
+                  {/* Mark 11 aug 20:40: het kwartier is niet het doel maar het
+                      middel — het doel is klaar zijn voor de volgende stap. */}
+                  <strong>{groep ? `Klaar zijn voor groep ${Math.min(groep + 1, 8)}` : niveau?.soort === "klas" ? (niveau.nr >= 4 ? "Slagen voor je eindexamen" : `Klaar zijn voor klas ${niveau.nr + 1}`) : "Overgaan naar het volgende jaar"}</strong> — dát is je doel.
+                  Een kwartier per dag is hoe je er komt. {streak > 0
+                    ? `Je zit nu op ${streak} ${streak === 1 ? "dag" : "dagen"} op rij. Knap!`
+                    : "Begin vandaag, dan start je reeks."}
+                </div>
+              )}
+              {/* Uitklap: wat hoort er bij jouw groep? (Mark 21:00: "maak de
+                  blokken klikbaar — voor groep 4 moet je dit en dat kennen") */}
+              {niveau && groepVakken.length > 0 && (
+                <div style={{ marginTop: 12 }}>
+                  <button
+                    onClick={() => { setDoelOpen(!doelOpen); if (!doelOpen) track("mijn_doel_uitklap", { groep, klas: niveau?.soort === "klas" ? niveau.nr : undefined }); }}
+                    aria-expanded={doelOpen}
+                    style={{
+                      width: "100%", textAlign: "left", cursor: "pointer",
+                      padding: "10px 14px", borderRadius: 10,
+                      border: "1px dashed rgba(255,255,255,0.25)", background: "rgba(255,255,255,0.04)",
+                      color: "var(--color-text)", fontWeight: 700, fontSize: 13,
+                      fontFamily: "var(--font-display)",
+                    }}
+                  >
+                    🎒 Wat moet ik kennen in {niveauLabel}? {doelOpen ? "▴" : "▾"}
+                  </button>
+                  {doelOpen && (
+                    <div style={{ marginTop: 10 }}>
+                      {groepVakken.map((vak) => {
+                        const meta = vakMeta(vak);
+                        const paden = niveauPaden(niveau).filter((p) => p.subject === vak).slice(0, 4);
+                        return (
+                          <div key={vak} style={{ marginBottom: 10 }}>
+                            <div style={{ fontSize: 12, fontWeight: 800, color: "var(--color-text-strong)", marginBottom: 5 }}>
+                              {meta.emoji} {meta.titel}
+                              {notitieVoor(vak) && <span style={{ fontWeight: 500, color: "var(--color-text-muted, #8899aa)" }}> — {notitieVoor(vak)}</span>}
+                            </div>
+                            {paden.length === 0 && (
+                              <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)" }}>
+                                🔨 Hier bouwen we aan — oefenstof komt eraan.
+                              </div>
+                            )}
+                            <div style={{ display: "flex", flexWrap: "wrap", gap: 6 }}>
+                              {paden.map((p) => (
+                                <button
+                                  key={p.id}
+                                  onClick={() => onPickPath && onPickPath(p.id)}
+                                  style={{
+                                    padding: "6px 11px", borderRadius: 999, cursor: "pointer",
+                                    border: "1px solid rgba(0,200,83,0.35)", background: "rgba(0,200,83,0.08)",
+                                    color: "var(--color-text)", fontSize: 12, fontWeight: 600,
+                                  }}
+                                >
+                                  {p.emoji} {p.title.replace(/\s*\(.*?\)\s*$/, "").replace(/\s*—\s*Cito.*$/i, "").replace(/\s*groep\s*\d(\s*-\s*\d)?\s*$/i, "")}
+                                </button>
+                              ))}
+                            </div>
+                          </div>
+                        );
+                      })}
+                      <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.45 }}>
+                        Dit zijn de onderwerpen langs de leerlijnen van {niveauLabel} — tik er een aan om te beginnen. Alles mag, ook hoger of lager.
+                      </div>
+                    </div>
+                  )}
+                </div>
+              )}
+            </Card>
+            )}
+
+            {/* ── 🔢 Snelkoppeling tafels (Mark 17 aug): de tafels zijn de basis
+                van bijna elke rekenvraag; één tik weg vanaf je eigen pagina.
+                Vanaf groep 3 (tafels beginnen daar; kleuters nog niet). ── */}
+            {groep >= 3 && (
+              <Card padding="md" style={{ marginBottom: "var(--space-4)" }}>
+                <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                  <span style={{ fontSize: 30, flexShrink: 0 }} aria-hidden="true">🔢</span>
+                  <div style={{ flex: 1, minWidth: 0 }}>
+                    <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong)" }}>Tafels oefenen</div>
+                    <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)" }}>De basis van bijna elke rekenvraag — 1 t/m 12.</div>
+                  </div>
+                  <button
+                    onClick={() => onPickPath && onPickPath("tafels-po")}
+                    style={{ flexShrink: 0, padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "linear-gradient(135deg,#00c853,#69f0ae)", color: "#003a15", fontWeight: 800, fontSize: 13, fontFamily: "var(--font-display)" }}
+                  >
+                    ✖️ Oefen
+                  </button>
+                </div>
+              </Card>
+            )}
+
             {/* ── Charley's kennismaking (intake) — alleen over vakken waar
                 de app al oefenstof voor heeft. ── */}
             {beschikbareVakken.length > 0 && !intakeCompleet && (
@@ -2218,56 +2281,6 @@ export default function MijnPagina({
                   🐾 Praat met {maatje.naam} — vertel meer of stel een vraag
                 </button>
               </Card>
-            )}
-
-            {/* ── 🎒 Schoolstart-kaart (idee #32, Mark-go): na de zomer schuift
-                iedereen een groep op — één tik en de hele pagina klopt weer. ── */}
-            {onSetLevel && niveau && inSchoolstartPeriode && !schooljaarWeg && userRole !== "teacher" && userRole !== "ouder" &&
-              !(kiesSoort === "klas" && niveau.nr >= 6) && (
-              <Card padding="md" style={{ marginBottom: "var(--space-4)", border: "1.5px solid rgba(0,200,83,0.5)", background: kaartBg("rgba(0,200,83,0.06)") }}>
-                <div style={{ fontSize: 14.5, fontWeight: 800, color: "var(--color-text-strong, #fff)", marginBottom: 4 }}>
-                  🎒 Nieuw schooljaar!
-                </div>
-                <div style={{ fontSize: 13, color: "var(--color-text, #e8edf5)", marginBottom: 10 }}>
-                  {kiesSoort === "groep" && niveau.nr >= 8
-                    ? "Zit je nu op de middelbare school?"
-                    : `Zit je nu in ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}?`}
-                </div>
-                <div style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
-                  <button
-                    onClick={() => {
-                      if (kiesSoort === "groep" && niveau.nr >= 8) kiesNiveau("klas", 1, "brugklas");
-                      else kiesNiveau(kiesSoort, niveau.nr + 1);
-                      sluitSchooljaarKaart();
-                    }}
-                    style={{ padding: "9px 16px", borderRadius: 10, border: "none", cursor: "pointer", background: "#00c853", color: "#08240f", fontWeight: 800, fontSize: 13.5, fontFamily: "inherit" }}
-                  >
-                    {kiesSoort === "groep" && niveau.nr >= 8 ? "Ja, ik zit in de brugklas!" : `Ja, ${kiesSoort === "klas" ? "klas" : "groep"} ${niveau.nr + 1}!`}
-                  </button>
-                  <button
-                    onClick={sluitSchooljaarKaart}
-                    style={{ padding: "9px 14px", borderRadius: 10, border: "1px solid rgba(255,255,255,0.25)", cursor: "pointer", background: "rgba(255,255,255,0.05)", color: "var(--color-text, #e8edf5)", fontWeight: 700, fontSize: 13, fontFamily: "inherit" }}
-                  >
-                    Nee, klopt zo
-                  </button>
-                </div>
-              </Card>
-            )}
-
-            {/* Sinds /mijn de landing is (13 aug): één duidelijke deur naar
-                de vakken-werkbank voor wie meteen wil oefenen. */}
-            {onBack && (
-              <button
-                onClick={onBack}
-                style={{
-                  width: "100%", padding: "13px 16px", borderRadius: 12, cursor: "pointer",
-                  border: "1px solid rgba(93,179,255,0.45)", background: kaartBg("rgba(93,179,255,0.1)"),
-                  color: "#5db3ff", fontWeight: 800, fontSize: 14.5, fontFamily: "var(--font-display, inherit)",
-                  marginBottom: "var(--space-4)", textAlign: "center",
-                }}
-              >
-                📚 Alle vakken en oefeningen →
-              </button>
             )}
 
             {/* ── Schuifbare blokken (Mark 13 aug: "blokken op eigen
@@ -2460,6 +2473,7 @@ export default function MijnPagina({
                 🔒 <strong style={{ color: "var(--color-text)" }}>Wat is hier zichtbaar:</strong> alleen je voornaam, je groep en je poppetje. Kies je een eigen foto, dan blijft die alleen op dit apparaat — geen achternaam, en andere leerlingen zien deze pagina nooit.
               </div>
             </Card>
+            </>)}
             </>)}
 
             {weergave === "ouder" && (<>
