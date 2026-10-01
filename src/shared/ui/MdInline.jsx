@@ -13,9 +13,14 @@ const BOLD_RX = /\*\*([^*]+)\*\*|\*(\S(?:[^*]*\S)?)\*/g;
 // *'…'* of *"…"* — een citaat (mag **vet** bevatten).
 const CITAAT_RX = /\*(['‘"“][^\n]*?['’"”])\*(?!\*)/g;
 
-export default function MdInline({ text }) {
+export default function MdInline({ text, _regels }) {
   if (text == null) return null;
   const s = String(text);
+  // Regels en opsommingen (•) onder elkaar houden (Mark 1 okt 2026: leestekst werd één lap tekst
+  // met "vaak als: • een …" midden in de zin). Eén keer op het hoogste niveau inpakken.
+  if (!_regels && s.includes("\n")) {
+    return <span style={{ whiteSpace: "pre-line" }}><MdInline text={s} _regels /></span>;
+  }
   // $...$-formules → KaTeX (lazy). De rest gaat door de bold-parser.
   if (s.includes("$")) {
     const segs = splitMath(s);
@@ -23,7 +28,7 @@ export default function MdInline({ text }) {
       return segs.map((sg, si) =>
         sg.type === "math"
           ? <KatexSpan key={`m${si}`} tex={sg.tex} />
-          : <MdInline key={`t${si}`} text={sg.text} />
+          : <MdInline key={`t${si}`} text={sg.text} _regels />
       );
     }
   }

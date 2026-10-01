@@ -15,7 +15,7 @@ const steps = [
   {
     title: "Wie zegt het? — kijk naar de bron",
     explanation:
-      "Niet alle informatie is even **betrouwbaar**. Voordat je iets gelooft, kijk je naar de **bron**: wie heeft het geschreven, en weet die er verstand van?\n\n" +
+      "Niet alle informatie is even **betrouwbaar**. Voordat je iets gelooft, kijk je naar de **bron**: wie heeft het geschreven en heeft die er verstand van?\n\n" +
       "**Betrouwbaar** is informatie vaak als:\n" +
       "• een **deskundige** of officiële instantie het zegt (een arts, een museum, de overheid);\n" +
       "• er een **naam en bron** bij staan.\n\n" +
