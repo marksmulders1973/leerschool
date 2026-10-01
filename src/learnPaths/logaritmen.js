@@ -82,7 +82,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Verkeerde grondtal. Bij log_a(b) = c geldt: a^c = b.",
+          "Verkeerd grondtal. Bij log_a(b) = c geldt: a^c = b.",
           "Grondtal en argument verwisseld.",
           "Logaritme is geen som — het is een macht-relatie.",
         ],
@@ -99,7 +99,7 @@ const steps = [
   },
   {
     title: "Notatie en veelvoorkomende grondtallen",
-    explanation: "Het **grondtal** van een logaritme is essentieel. Drie veelvoorkomende notaties:\n\n**1. log₁₀(x)** — gewone logaritme (basis 10)\n• Vaak geschreven als alleen **log(x)** zonder grondtal-getal.\n• Op rekenmachine: knop \"log\".\n• Voorbeelden: log(100) = 2, log(1000) = 3, log(0.01) = -2.\n\n**2. log_e(x)** — natuurlijke logaritme\n• Speciale notatie: **ln(x)**.\n• e ≈ 2.71828 (getal van Euler).\n• Op rekenmachine: knop \"ln\".\n• Komt vaak voor in continue groei (rente, biologie, natuurkunde).\n\n**3. log₂(x)** — binaire logaritme\n• Vooral in informatica (bits, bytes).\n• Soms geschreven als **lg(x)** of **lb(x)**.\n\n**Belangrijke eigenschappen om te onthouden**:\n• **log_a(1) = 0** voor elk grondtal (a⁰ = 1).\n• **log_a(a) = 1** (a¹ = a).\n• **log_a(a^n) = n** (logaritme 'eet' de exponent).\n\n**Voorbeelden**:\n• log(1) = 0\n• log(10) = 1\n• log(10⁵) = 5\n• ln(1) = 0\n• ln(e) = 1\n• ln(e³) = 3\n• log₂(1) = 0\n• log₂(2) = 1\n• log₂(2⁸) = 8\n\n**Tip**: als je een log ziet zonder grondtal — meestal is het log₁₀. Maar in havo wis B is ln vaker dan log.",
+    explanation: "Het **grondtal** van een logaritme is essentieel. Drie veelvoorkomende notaties:\n\n**1. log₁₀(x)** — gewone logaritme (basis 10)\n• Vaak geschreven als alleen **log(x)** zonder grondtal-getal.\n• Op rekenmachine: knop \"log\".\n• Voorbeelden: log(100) = 2, log(1000) = 3, log(0.01) = -2.\n\n**2. log_e(x)** — natuurlijke logaritme\n• Speciale notatie: **ln(x)**.\n• e ≈ 2.71828 (getal van Euler).\n• Op rekenmachine: knop \"ln\".\n• Komt vaak voor in continue groei (rente, biologie, natuurkunde).\n\n**3. log₂(x)** — binaire logaritme\n• Vooral in informatica (bits, bytes).\n• Soms geschreven als **lg(x)** of **lb(x)**.\n\n**Belangrijke eigenschappen om te onthouden**:\n• **log_a(1) = 0** voor elk grondtal (a⁰ = 1).\n• **log_a(a) = 1** (a¹ = a).\n• **log_a(a^n) = n** (logaritme 'eet' de exponent).\n\n**Voorbeelden**:\n• log(1) = 0\n• log(10) = 1\n• log(10⁵) = 5\n• ln(1) = 0\n• ln(e) = 1\n• ln(e³) = 3\n• log₂(1) = 0\n• log₂(2) = 1\n• log₂(2⁸) = 8\n\n**Tip**: als je een log ziet zonder grondtal — meestal is het log₁₀. In vwo wiskunde B kom je ook vaak ln tegen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">drie veelvoorkomende grondtallen</text>
@@ -199,7 +199,7 @@ const steps = [
           theorie: "log(0.1) = -1, log(0.01) = -2, log(0.001) = -3.",
           voorbeelden: [{ type: "voorbeeld", tekst: "10⁻³ = 1/10³ = 0.001" }],
           basiskennis: [{ onderwerp: "machten negatief", uitleg: "10⁻³ = 1/1000" }],
-          niveaus: { basis: "0.001 = 10⁻³ → log = -3.", simpeler: "Drie nullen achter de komma → -3.", nogSimpeler: "Negatieve macht." },
+          niveaus: { basis: "0.001 = 10⁻³ → log = -3.", simpeler: "De 1 staat op de derde plek achter de komma → -3.", nogSimpeler: "Negatieve macht." },
         },
       },
     ],
@@ -245,7 +245,7 @@ const steps = [
   },
   {
     title: "Logaritme op de rekenmachine",
-    explanation: "Op de rekenmachine zitten twee log-knoppen:\n\n**\"log\"** — gewone logaritme (basis 10)\n• Toets in: log + getal + =\n• Voorbeeld: log(50) ≈ 1.699 (want 10^1.699 ≈ 50)\n\n**\"ln\"** — natuurlijke logaritme (basis e)\n• Toets in: ln + getal + =\n• Voorbeeld: ln(50) ≈ 3.912\n\n**Wat als het grondtal anders is dan 10 of e?**\n\nGebruik de **grondtal-omschakelregel**:\n\n$\\log_{a}(b) = \\dfrac{\\log(b)}{\\log(a)}$\n\nOf met ln: log_a(b) = ln(b) / ln(a). Beide werken.\n\n**Voorbeeld**: bereken log₂(50).\n• log₂(50) = log(50) / log(2)\n• Op rekenmachine: log(50) ≈ 1.699, log(2) ≈ 0.301\n• 1.699 / 0.301 ≈ **5.643**\n\n**Check**: 2^5.643 ≈ 50. ✓\n\n**Andere voorbeelden**:\n• log₃(15) = log(15) / log(3) ≈ 1.176 / 0.477 ≈ 2.465\n• log₂(1000) = log(1000) / log(2) = 3 / 0.301 ≈ 9.966\n\n**Tip**: gebruik altijd de grondtal-omschakelregel als je een log met een ander grondtal dan 10 of e hebt en de uitkomst niet 'mooi' is.\n\n**Mooie' uitkomsten** (= gehele getallen of eenvoudige breuken) komen alleen voor als het argument een **machten** is van het grondtal — anders wordt het een decimaal.",
+    explanation: "Op de rekenmachine zitten twee log-knoppen:\n\n**\"log\"** — gewone logaritme (basis 10)\n• Toets in: log + getal + =\n• Voorbeeld: log(50) ≈ 1.699 (want 10^1.699 ≈ 50)\n\n**\"ln\"** — natuurlijke logaritme (basis e)\n• Toets in: ln + getal + =\n• Voorbeeld: ln(50) ≈ 3.912\n\n**Wat als het grondtal anders is dan 10 of e?**\n\nGebruik de **grondtal-omschakelregel**:\n\n$\\log_{a}(b) = \\dfrac{\\log(b)}{\\log(a)}$\n\nOf met ln: log_a(b) = ln(b) / ln(a). Beide werken.\n\n**Voorbeeld**: bereken log₂(50).\n• log₂(50) = log(50) / log(2)\n• Op rekenmachine: log(50) ≈ 1.699, log(2) ≈ 0.301\n• 1.699 / 0.301 ≈ **5.643**\n\n**Check**: 2^5.643 ≈ 50. ✓\n\n**Andere voorbeelden**:\n• log₃(15) = log(15) / log(3) ≈ 1.176 / 0.477 ≈ 2.465\n• log₂(1000) = log(1000) / log(2) = 3 / 0.301 ≈ 9.966\n\n**Tip**: gebruik altijd de grondtal-omschakelregel als je een log met een ander grondtal dan 10 of e hebt en de uitkomst niet 'mooi' is.\n\n**'Mooie' uitkomsten** (= gehele getallen of eenvoudige breuken) komen alleen voor als het argument een **macht** is van het grondtal — anders wordt het een decimaal.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">log op rekenmachine</text>
@@ -272,7 +272,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Aftrekken werkt voor andere logo-eigenschappen, niet voor grondtal-omschakeling.",
+          "Aftrekken werkt voor andere log-eigenschappen, niet voor grondtal-omschakeling.",
           "Te simpel — log is geen deling.",
           "Optellen of vermenigvuldigen in het argument heeft geen direct verband met basis-omschakeling.",
         ],
@@ -281,7 +281,7 @@ const steps = [
           woorden: [{ woord: "omschakelregel", uitleg: "elk grondtal → log10 via deling" }],
           theorie: "log_a(b) = log(b) / log(a) = ln(b) / ln(a). Beide werken.",
           voorbeelden: [{ type: "voorbeeld", tekst: "log₂(20) = log(20)/log(2) ≈ 4.32" }],
-          basiskennis: [{ onderwerp: "knopen", uitleg: "rekenmachine heeft alleen log + ln" }],
+          basiskennis: [{ onderwerp: "knoppen", uitleg: "rekenmachine heeft alleen log + ln" }],
           niveaus: { basis: "log(20) / log(2).", simpeler: "Deel beide logs.", nogSimpeler: "Boven log(20), onder log(2)." },
         },
       },
@@ -318,7 +318,7 @@ const steps = [
           theorie: "log_a(1) = 0 (want a⁰ = 1).",
           voorbeelden: [{ type: "voorbeeld", tekst: "log(1)=0, ln(1)=0, log₅(1)=0" }],
           basiskennis: [{ onderwerp: "log(0)", uitleg: "= onbepaald (-oneindig)" }],
-          niveaus: { basis: "log(1) = 0.", simpeler: "Argument 1 → antwoord 0.", nogSimpeler: "Argument 1 → antwoord 0. → Nul." },
+          niveaus: { basis: "log(1) = 0.", simpeler: "Argument 1 → antwoord 0.", nogSimpeler: "Nul." },
         },
       },
       {
@@ -371,7 +371,7 @@ const steps = [
         wrongHints: [
           null,
           "log(3) + log(7) ≠ log(3 + 7). De regel zegt: som van logs = log van product.",
-          "Eigen woorden — som van logs = log van product, niet log van som.",
+          "Zelfde fout — som van logs = log van product, niet log van som.",
           "Geen logische bewerking. log(a) + log(b) = log(a·b).",
         ],
         uitlegPad: {
@@ -412,7 +412,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Aftrekken in het argument werkt niet — welke regelzegt wat je met een verschil van logs doet?",
+          "Aftrekken in het argument werkt niet — welke regel zegt wat je met een verschil van logs doet?",
           "Optellen klopt ook niet. Wat wordt het argument bij het verschil van twee logs?",
           "Je kunt ook de losse log-waarden uitrekenen en dan aftrekken — is het antwoord dan precies gelijk aan de uitdrukking?",
         ],
@@ -448,14 +448,14 @@ const steps = [
         options: [
           "4 · log(2)",
           "log(8)",
-          "2 · log(4)",
+          "2 · log(2)",
           "log(2) · log(4)",
         ],
         answer: 0,
         wrongHints: [
           null,
           "log(8) = log(2³), niet log(2⁴) = log(16).",
-          "Die uitdrukking kan je verder uitschrijven met een andere regel — is het dan identiek aan de directe formule?",
+          "2 · log(2) = log(2²) = log(4), niet log(2⁴) = log(16).",
           "Geen geldige eigenschap. log(a^n) = n·log(a), geen vermenigvuldiging van logs.",
         ],
         uitlegPad: {
@@ -473,7 +473,7 @@ const steps = [
   // ─── D. Toepassing ────────────────────────────────────
   {
     title: "Exponentiële vergelijkingen oplossen",
-    explanation: "Logaritmen worden vaak gebruikt om **exponentiële vergelijkingen** op te lossen — vergelijkingen waar x in de exponent staat.\n\n**Voorbeeld**: los op: **2^x = 100**.\n\n**Stappenplan**:\n1. Neem log (of ln) van beide kanten: log(2^x) = log(100).\n2. Pas regel 3 toe: x · log(2) = log(100).\n3. Los op: x = log(100) / log(2).\n4. Bereken: x = 2 / 0.301 ≈ **6.644**.\n5. Check: 2^6.644 ≈ 100. ✓\n\n**Welke log neem je?** \n• Meestal log (basis 10) of ln (basis e) — beide werken.\n• Als grondtal van macht is 10 → neem log (eenvoudiger).\n• Als grondtal van macht is e → neem ln (eenvoudiger).\n• Andere grondtallen → log of ln, maakt niet uit.\n\n**Voorbeeld 2**: los op: **3^x = 200**.\n• log(3^x) = log(200)\n• x · log(3) = log(200)\n• x = log(200) / log(3) ≈ 2.301 / 0.477 ≈ **4.823**.\n\n**Voorbeeld 3 (havo wisB)**: los op: **5 · 2^x = 80**.\n• Eerst delen door 5: 2^x = 16.\n• 2^x = 2⁴ → x = 4. (Direct, geen log nodig — argument is een macht van het grondtal.)\n\n**Voorbeeld 4** (echt-leven): bevolking groeit met 3% per jaar (g = 1.03). Na hoeveel jaar is de bevolking verdubbeld?\n• N(t) = N₀ · 1.03^t = 2·N₀ → 1.03^t = 2.\n• t · log(1.03) = log(2)\n• t = log(2) / log(1.03) ≈ 0.301 / 0.0128 ≈ **23.4 jaar**.\n\nDat is de **verdubbelingstijd** voor 3% groei: ongeveer 23 jaar.",
+    explanation: "Logaritmen worden vaak gebruikt om **exponentiële vergelijkingen** op te lossen — vergelijkingen waar x in de exponent staat.\n\n**Voorbeeld**: los op: **2^x = 100**.\n\n**Stappenplan**:\n1. Neem log (of ln) van beide kanten: log(2^x) = log(100).\n2. Pas regel 3 toe: x · log(2) = log(100).\n3. Los op: x = log(100) / log(2).\n4. Bereken: x = 2 / 0.301 ≈ **6.644**.\n5. Check: 2^6.644 ≈ 100. ✓\n\n**Welke log neem je?** \n• Meestal log (basis 10) of ln (basis e) — beide werken.\n• Is het grondtal van de macht 10 → neem log (eenvoudiger).\n• Is het grondtal van de macht e → neem ln (eenvoudiger).\n• Andere grondtallen → log of ln, maakt niet uit.\n\n**Voorbeeld 2**: los op: **3^x = 200**.\n• log(3^x) = log(200)\n• x · log(3) = log(200)\n• x = log(200) / log(3) ≈ 2.301 / 0.477 ≈ **4.823**.\n\n**Voorbeeld 3 (havo wisB)**: los op: **5 · 2^x = 80**.\n• Eerst delen door 5: 2^x = 16.\n• 2^x = 2⁴ → x = 4. (Direct, geen log nodig — argument is een macht van het grondtal.)\n\n**Voorbeeld 4** (echt-leven): bevolking groeit met 3% per jaar (g = 1.03). Na hoeveel jaar is de bevolking verdubbeld?\n• N(t) = N₀ · 1.03^t = 2·N₀ → 1.03^t = 2.\n• t · log(1.03) = log(2)\n• t = log(2) / log(1.03) ≈ 0.301 / 0.0128 ≈ **23.4 jaar**.\n\nDat is de **verdubbelingstijd** voor 3% groei: ongeveer 23 jaar.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">2^x = 100 oplossen</text>
@@ -514,7 +514,7 @@ const steps = [
   },
   {
     title: "Halveringstijd / verdubbelingstijd berekenen",
-    explanation: "Bij **halveringstijd** of **verdubbelingstijd** gebruik je log om de tijd uit te rekenen waarin iets halveert of verdubbelt.\n\n**Halveringstijd berekenen**:\n\n**Voorbeeld**: een radioactief element heeft groeifactor 0.97 per jaar (3% afname). Wat is de halveringstijd T?\n\nWe willen: N(T) = ½·N₀.\n• N₀ · 0.97^T = ½ · N₀\n• 0.97^T = 0.5\n• Neem log: T · log(0.97) = log(0.5)\n• T = log(0.5) / log(0.97) ≈ -0.301 / -0.0132 ≈ **22.8 jaar**\n\nElke 22.8 jaar halveert dus de hoeveelheid.\n\n**Verdubbelingstijd berekenen**:\n\n**Voorbeeld**: bevolking groeit 5% per jaar (g = 1.05). Verdubbelingstijd?\n\nWe willen: N(T) = 2·N₀.\n• 1.05^T = 2\n• T · log(1.05) = log(2)\n• T = log(2) / log(1.05) ≈ 0.301 / 0.0212 ≈ **14.2 jaar**\n\n**Vuistregel — regel van 70**: voor kleine groei-percentages r% per jaar is verdubbelingstijd ≈ 70/r.\n• 5% groei → 70/5 = 14 jaar (klopt ongeveer met onze 14.2).\n• 7% groei → 70/7 = 10 jaar.\n• 10% groei → 70/10 = 7 jaar.\n\nDeze vuistregel is een handige snelle schatting — exact via logs.\n\n**Andere toepassingen**:\n• Wanneer is de spaarrekening verdubbeld?\n• Wanneer is de medicijn-concentratie nog 10% van de begin?\n• Wanneer is de auto nog €5000 waard?\n\nAllemaal: zet de uiteindelijke waarde gelijk aan een veelvoud van de begin, dan log toepassen.",
+    explanation: "Bij **halveringstijd** of **verdubbelingstijd** gebruik je log om de tijd uit te rekenen waarin iets halveert of verdubbelt.\n\n**Halveringstijd berekenen**:\n\n**Voorbeeld**: een radioactief element heeft groeifactor 0.97 per jaar (3% afname). Wat is de halveringstijd T?\n\nWe willen: N(T) = ½·N₀.\n• N₀ · 0.97^T = ½ · N₀\n• 0.97^T = 0.5\n• Neem log: T · log(0.97) = log(0.5)\n• T = log(0.5) / log(0.97) ≈ -0.301 / -0.0132 ≈ **22.8 jaar**\n\nElke 22.8 jaar halveert dus de hoeveelheid.\n\n**Verdubbelingstijd berekenen**:\n\n**Voorbeeld**: bevolking groeit 5% per jaar (g = 1.05). Verdubbelingstijd?\n\nWe willen: N(T) = 2·N₀.\n• 1.05^T = 2\n• T · log(1.05) = log(2)\n• T = log(2) / log(1.05) ≈ 0.301 / 0.0212 ≈ **14.2 jaar**\n\n**Vuistregel — regel van 70**: voor kleine groei-percentages r% per jaar is verdubbelingstijd ≈ 70/r.\n• 5% groei → 70/5 = 14 jaar (klopt ongeveer met onze 14.2).\n• 7% groei → 70/7 = 10 jaar.\n• 10% groei → 70/10 = 7 jaar.\n\nDeze vuistregel is een handige snelle schatting — exact via logs.\n\n**Andere toepassingen**:\n• Wanneer is de spaarrekening verdubbeld?\n• Wanneer is de medicijn-concentratie nog 10% van de beginwaarde?\n• Wanneer is de auto nog €5000 waard?\n\nAllemaal: zet de uiteindelijke waarde gelijk aan een veelvoud van de beginwaarde, dan log toepassen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">verdubbelings- / halveringstijd</text>
@@ -572,8 +572,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
+          "27 = 3³ is een macht van 3, maar niet de exponent. Welke macht van 3 geeft 81?",
           "Dat is log₃(27), niet log₃(81). Hoe schrijf je 81 als macht van 3?",
-          "Dat zou de log van 3 zelf zijn, niet van 81. Hoe schrijf je 81 als macht van 3?",
           "81 is het argument, niet de uitkomst — welke macht van 3 geeft 81?",
         ],
         uitlegPad: {
@@ -582,7 +582,7 @@ const steps = [
           theorie: "Argument als macht van grondtal schrijven.",
           voorbeelden: [{ type: "voorbeeld", tekst: "log₃(27) = 3, log₃(81) = 4" }],
           basiskennis: [{ onderwerp: "tafel", uitleg: "3⁴ = 81 uit hoofd" }],
-          niveaus: { basis: "log₃(81) = 4.", simpeler: "4 keer 3 = 81.", nogSimpeler: "3·3·3·3." },
+          niveaus: { basis: "log₃(81) = 4.", simpeler: "4 factoren 3: 3·3·3·3 = 81.", nogSimpeler: "3·3·3·3." },
         },
       },
       {
@@ -753,9 +753,9 @@ const steps = [
         ],
         answer: 3,
         wrongHints: [
-          "Gedeeltelijk goed maar er is een nog complete versie. Beide opties zijn wiskundig gelijk.",
-          "Gedeeltelijk goed — dit is de gecompacte vorm. Maar er is ook een uitgesplitste versie.",
-          "Gedeeltelijk goed — maar een nog completere versie split de log(y/z).",
+          "Gedeeltelijk goed, maar er is een completere versie. Beide opties zijn wiskundig gelijk.",
+          "Gedeeltelijk goed — dit is de compacte vorm. Maar er is ook een uitgesplitste versie.",
+          "Gedeeltelijk goed — maar een nog completere versie splitst de log(y/z).",
           null,
         ],
         uitlegPad: {
@@ -763,7 +763,7 @@ const steps = [
           woorden: [{ woord: "alle 3 regels", uitleg: "product → som, deling → verschil, macht → factor" }],
           theorie: "Combineren van log-eigenschappen.",
           voorbeelden: [{ type: "voorbeeld", tekst: "log(a²b/c) = 2·log(a) + log(b) − log(c)" }],
-          basiskennis: [{ onderwerp: "examen", uitleg: "vaak schrijven beide vormen kloppen" }],
+          basiskennis: [{ onderwerp: "examen", uitleg: "vaak kloppen beide schrijfwijzen" }],
           niveaus: { basis: "Beide vormen wiskundig gelijk.", simpeler: "Alle 3 regels toepassen.", nogSimpeler: "Mag op meerdere manieren." },
         },
       },
@@ -787,14 +787,14 @@ const steps = [
           woorden: [{ woord: "halveringstijd", uitleg: "T_halveringstijd = 4 uur" }],
           theorie: "N(t) = N₀ · 0.5^(t/T_h). Los t op via log.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Na 4u: 50%. Na 8u: 25%. Na 13.3u: 10%." }],
-          basiskennis: [{ onderwerp: "tussen", uitleg: "10% ligt tussen 25% (8u) en 12.5% (12u)" }],
+          basiskennis: [{ onderwerp: "tussen", uitleg: "10% ligt tussen 12.5% (12u) en 6.25% (16u)" }],
           niveaus: { basis: "t = 4 · log(0.1)/log(0.5) ≈ 13.3.", simpeler: "Tussen 8 en 16 uur.", nogSimpeler: "≈ 13 uur." },
         },
       },
       { q: "log(1000) = ? (basis 10)", options: ["3","2","1000","10"], answer: 0, wrongHints: [null, "Niet — hoeveel nullen heeft 1000, en wat is de exponent van 10 daarvoor?", "Dat is argument.", "Dat is basis."] },
       { q: "Wat is **log(a · b)** volgens eigenschap?", options: ["log(a) + log(b)","log(a) · log(b)","log(a) − log(b)","log(a/b)"], answer: 0, wrongHints: [null, "Niet.", "Andere eigenschap.", "Andere eigenschap."] },
       { q: "**log(10)** = ? (basis 10)", options: ["1","10","0","100"], answer: 0, wrongHints: [null,"Argument.","Dat is log(1).","Niet."] },
-      { q: "**log(1)** = ? (welke basis dan ook)", options: ["0","1","∞","Niet bepaald"], answer: 0, wrongHints: [null,"Niet — log(basis).","Niet — log groeit logaritmisch.","Wel."] },
+      { q: "**log(1)** = ? (welke basis dan ook)", options: ["0","1","∞","Niet bepaald"], answer: 0, wrongHints: [null,"Niet — log(basis).","Niet — log groeit logaritmisch.","Wel bepaald."] },
       { q: "log(a/b) = ?", options: ["log(a) − log(b)","log(a) + log(b)","log(a) · log(b)","log(a − b)"], answer: 0, wrongHints: [null,"Product.","Andere eigenschap.","Geen relatie."] },
       { q: "log(a^n) = ?", options: ["n · log(a)","log(a)^n","log(n · a)","n + log(a)"], answer: 0, wrongHints: [null,"Niet — n als coëfficiënt, niet exponent.","Anders.","Niet."] },
       { q: "ln(e) = ?", options: ["1","0","e","∞"], answer: 0, wrongHints: [null,"ln(1).","Niet.","Niet."] },

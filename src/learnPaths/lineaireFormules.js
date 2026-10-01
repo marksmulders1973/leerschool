@@ -40,7 +40,7 @@ const steps = [
   // ─── A. Wat is een lineaire formule? ────────────────────────────
   {
     title: "Wat is een lineaire formule?",
-    explanation: "Een **lineaire formule** is een formule waarin de uitkomst (y) **rechtevenredig** stijgt of daalt met x. Bij elke stap +1 in x verandert y met een **vast** bedrag.\n\nVoorbeelden:\n• **y = x + 3** (bij elke +1 in x, +1 in y)\n• **y = 2x** (bij elke +1 in x, +2 in y)\n• **y = -x + 5** (bij elke +1 in x, -1 in y)\n• **y = ½x + 1** (bij elke +1 in x, +½ in y)\n\n**Wat 'lineair' betekent**: als je punten van zo'n formule plot op een assenstelsel, krijg je een **rechte lijn** (Latijn: linea = lijn).\n\nKwadratische formules (y = x²) gaven ons een **bocht** (parabool). Lineaire formules geven ons altijd een **rechte lijn** — geen bocht, geen knik.",
+    explanation: "Een **lineaire formule** is een formule waarin de uitkomst (y) **gelijkmatig** stijgt of daalt met x. Bij elke stap +1 in x verandert y met een **vast** bedrag.\n\nVoorbeelden:\n• **y = x + 3** (bij elke +1 in x, +1 in y)\n• **y = 2x** (bij elke +1 in x, +2 in y)\n• **y = -x + 5** (bij elke +1 in x, -1 in y)\n• **y = ½x + 1** (bij elke +1 in x, +½ in y)\n\n**Wat 'lineair' betekent**: als je punten van zo'n formule plot op een assenstelsel, krijg je een **rechte lijn** (Latijn: linea = lijn).\n\nKwadratische formules (y = x²) gaven ons een **bocht** (parabool). Lineaire formules geven ons altijd een **rechte lijn** — geen bocht, geen knik.",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 <line x1="60" y1="160" x2="240" y2="40" stroke="${COLORS.curve}" stroke-width="2.5"/>
@@ -95,7 +95,7 @@ ${baseAxes}
         uitlegPad: {
           stappen: [{ titel: "Invullen + uitrekenen", tekst: "y = 3x + 2. Vul x=4: y = 3·4 + 2 = 12 + 2 = 14. Volgorde: × eerst, dan +." }],
           woorden: [{ woord: "invullen", uitleg: "Variabele x vervangen door getal." }],
-          theorie: "Volgorde bewerkingen: × en ÷ vóór + en − (BODMAS/ezelsbruggetje 'Hoe Moet Ik Van Die Sommen Af').",
+          theorie: "Volgorde bewerkingen: × en ÷ vóór + en − (ezelsbruggetje 'Hoe Moeten Wij Van De Onvoldoendes Afkomen').",
           voorbeelden: [{ type: "vergelijk", tekst: "x=0: y=2. x=1: y=5. x=2: y=8. x=3: y=11. x=4: y=14. Stappen +3." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "12 = 3·4 zonder +2. 9 = 3+4+2 (optellen). 24 = 3·4·2 (vermenigvuldigen alles)." }],
           niveaus: { basis: "14.", simpeler: "3·4+2 = 12+2 = 14.", nogSimpeler: "14" },
@@ -235,7 +235,7 @@ ${baseAxes}
   },
   {
     title: "Het snijpunt b",
-    explanation: "**b** is de **start-waarde**, ofwel waar de lijn de y-as snijdt.\n\nBij **x = 0** is **y = b**. Want: y = a·0 + b = 0 + b = **b**.\n\nDus als je de y-as wilt vinden, kijk naar **(0, b)**.\n\nVoorbeelden:\n• y = 2x + **3** → snijpunt y-as is (0, 3)\n• y = -x + **5** → snijpunt y-as is (0, 5)\n• y = 4x − **2** → snijpunt y-as is (0, -2)\n• y = 3x → snijpunt y-as is (0, 0) — door de oorsprong\n\n**Praktisch nut**: in een verhaaltje is b vaak de 'startwaarde' bij tijd 0. Bv. 'beginbedrag op spaarrekening', 'temperatuur bij start', 'beginstand op de meter'.",
+    explanation: "**b** is de **start-waarde**, ofwel waar de lijn de y-as snijdt.\n\nBij **x = 0** is **y = b**. Want: y = a·0 + b = 0 + b = **b**.\n\nDus als je het snijpunt met de y-as wilt vinden, kijk naar **(0, b)**.\n\nVoorbeelden:\n• y = 2x + **3** → snijpunt y-as is (0, 3)\n• y = -x + **5** → snijpunt y-as is (0, 5)\n• y = 4x − **2** → snijpunt y-as is (0, -2)\n• y = 3x → snijpunt y-as is (0, 0) — door de oorsprong\n\n**Praktisch nut**: in een verhaaltje is b vaak de 'startwaarde' bij tijd 0. Bv. 'beginbedrag op spaarrekening', 'temperatuur bij start', 'beginstand op de meter'.",
     svg: `<svg viewBox="0 0 300 200">
 ${baseAxes}
 <line x1="60" y1="160" x2="240" y2="40" stroke="${COLORS.curve}" stroke-width="2.5"/>
@@ -287,7 +287,7 @@ ${baseAxes}
           stappen: [{ titel: "Invullen + checken", tekst: "Welk punt (x,y) ligt op y=3x−2? Test (2,4): 3·2−2 = 6−2 = 4. Komt overeen met y=4. Dus (2,4) ligt op lijn." }],
           woorden: [{ woord: "op de lijn", uitleg: "Punt (x,y) ligt op lijn als invullen klopt." }],
           theorie: "Punt-test: vul x in formule, vergelijk uitkomst met gegeven y. Match → punt op lijn. Niet match → niet op lijn.",
-          voorbeelden: [{ type: "andere punten", tekst: "y=3x−2. Test (0,−2): 0−2=−2 ✓. Test (1,1): 3−2=1 ✓. Test (3,7): 9−2=7 ✓. Alle ander goede x-en geven punten op lijn." }],
+          voorbeelden: [{ type: "andere punten", tekst: "y=3x−2. Test (0,−2): 0−2=−2 ✓. Test (1,1): 3−2=1 ✓. Test (3,7): 9−2=7 ✓. Elke andere x geeft ook een punt op de lijn." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "(2,6) = vergeten −2. (2,−6) = teken-fout. (0,2) = b verwisseld (b=−2 dus (0,−2))." }],
           niveaus: { basis: "(2,4).", simpeler: "x=2: y=3·2−2=4 → (2,4).", nogSimpeler: "(2,4)" },
         },
@@ -385,7 +385,7 @@ ${baseAxes}
         q: "Los op: 2x + 3 = 11.",
         options: ["x = 4", "x = 7", "x = 14", "x = 11/2"],
         answer: 0,
-        wrongHints: [null, "Je bent halverwege gestopt. Na het wegwerken van de 3, moet je x nog alleen krijgen — welke stap ontbreekt er?", "Je hebt de verkeerde kant opgewerkt. Om de +3 weg te krijgen, doe je het tegenovergestelde.", "Je hebt te vroeg gedeeld. Werk eerst de 3 weg, daarna pas delen."],
+        wrongHints: [null, "Controleer je stappen: haal eerst 3 van beide kanten af en deel daarna door 2.", "Je hebt de verkeerde kant opgewerkt. Om de +3 weg te krijgen, doe je het tegenovergestelde.", "Je hebt te vroeg gedeeld. Werk eerst de 3 weg, daarna pas delen."],
         uitlegPad: {
           stappen: [
             { titel: "Min 3", tekst: "2x + 3 = 11. Beide kanten −3: 2x = 8." },
@@ -496,7 +496,7 @@ ${baseAxes}
           stappen: [{ titel: "Vast + variabel", tekst: "€10/maand = VAST (b). €0,20/minuut = PER eenheid (a vermenigvuldigt met x=minuten). Dus y = 0,20x + 10. y=totaal, x=minuten." }],
           woorden: [{ woord: "vaste kosten", uitleg: "Bedrag dat je altijd betaalt, los van gebruik." }, { woord: "variabele kosten", uitleg: "Bedrag dat afhangt van gebruik. Per eenheid (per minuut/km/uur)." }],
           theorie: "Patroon: y = (per_eenheid × x) + vaste_kosten. Net als taxi: €1,80×km + €4 startbedrag. Steeds zelfde principe.",
-          voorbeelden: [{ type: "andere", tekst: "Sportschool €20 inschrijving + €5/bezoek: y = 5x + 20. Streamingdienst €8/mnd flat: y = 8 (geen x). Pizza €3 + €0,50/extra topping: y = 0,50x + 3." }],
+          voorbeelden: [{ type: "andere", tekst: "Sportschool €20 inschrijving + €5/bezoek: y = 5x + 20. Streamingdienst €8/mnd vast: y = 8 (geen x). Pizza €3 + €0,50/extra topping: y = 0,50x + 3." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "y=10x+0,20: a en b verwisseld. y=10+0,20: geen x. y=10x·0,20: vermenigvuldigen (=2x), niet plus." }],
           niveaus: { basis: "y=0,20x+10.", simpeler: "Per minuut €0,20 (=a). Vast €10 (=b). y=0,20x+10.", nogSimpeler: "0,20x+10" },
         },
@@ -670,13 +670,13 @@ ${baseAxes}
       },
       { q: "Formule y = 2x + 3. Wat is y als x=4?", options: ["11","8","7","5"], answer: 0, wrongHints: [null, "Niet — +3 vergeten.", "Niet.", "Niet."] },
       { q: "Bij y = 3x + 5: wat is **helling**?", options: ["3","5","8","15"], answer: 0, wrongHints: [null, "Dat is constante (start).", "Niet.", "Niet."] },
-      { q: "Bij y = ax + b: wat is **b**?", options: ["Y-startwaarde (waar lijn x-as snijdt)","Helling","Aantal x-waarden","Onbekende"], answer: 0, wrongHints: [null, "Dat is a.", "Niet.", "Niet."] },
+      { q: "Bij y = ax + b: wat is **b**?", options: ["Startwaarde (waar lijn y-as snijdt)","Helling","Aantal x-waarden","Onbekende"], answer: 0, wrongHints: [null, "Dat is a.", "Niet.", "Niet."] },
       { q: "Los op: 3x + 4 = 19", options: ["x = 5","x = 7","x = 4","x = 15"], answer: 0, wrongHints: [null, "Niet — vergeet niet −4 eerst.", "Niet.", "Te hoog."] },
       { q: "Een **horizontale lijn** y = 5 heeft welke helling?", options: ["0","5","1","Niet bepaald"], answer: 0, wrongHints: [null,"Dat is y-waarde.","Schuin omhoog.","Wel bepaald."] },
       { q: "Snijpunt **y-as** van y = 2x − 7 is op?", options: ["(0, −7)","(0, 7)","(7, 0)","(2, 0)"], answer: 0, wrongHints: [null,"Plus i.p.v. min.","Op x-as.","Niet snijpunt y-as."] },
       { q: "Bij y = ax + b: **b > 0** betekent?", options: ["Lijn snijdt y-as BOVEN oorsprong","Onder oorsprong","Door oorsprong","Niet relevant"], answer: 0, wrongHints: [null,"Dat is b<0.","Dat is b=0.","Wel relevant."] },
-      { q: "Punten (1, 5) en (3, 11) — wat is **helling**?", options: ["3","2","6","½"], answer: 0, wrongHints: [null,"x-verschil.","y-verschil totaal.","Andersom."] },
-      { q: "**Lineaire functies** hebben in een grafiek altijd?", options: ["Rechte lijn","Parabool","Cirkel","Knik"], answer: 0, wrongHints: [null,"Kwadratisch.","Geen functie.","Geen lineair."] },
+      { q: "Punten (1, 5) en (3, 11) — wat is **helling**?", options: ["3","2","6","⅓"], answer: 0, wrongHints: [null,"x-verschil.","y-verschil totaal.","Andersom."] },
+      { q: "**Lineaire functies** hebben in een grafiek altijd?", options: ["Rechte lijn","Parabool","Cirkel","Knik"], answer: 0, wrongHints: [null,"Kwadratisch.","Geen functie.","Niet lineair."] },
       { q: "**y = 4** is een ___?", options: ["Horizontale lijn","Verticale lijn","Parabool","Punt"], answer: 0, wrongHints: [null,"Een verticale lijn heeft een vergelijking zonder y — welke variabele ontbreekt in y=4?","Niet.","Lijn, niet punt."] },
       { q: "**Stelsel** van 2 lineaire vergelijkingen heeft meestal?", options: ["1 snijpunt","Geen snijpunt","Oneindig veel","Niet bepaald"], answer: 0, wrongHints: [null,"Bij evenwijdige.","Bij identieke.","Wel bepaald."] },
       { q: "**Open vraag**: bereken y bij x=10 voor y=2x+5. Typ getal.", kind: "open", acceptedAnswers: ["25"], numericTolerance: 0, explanation: "y = 2·10 + 5 = 25." },

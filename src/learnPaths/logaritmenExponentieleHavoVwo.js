@@ -34,7 +34,7 @@ const steps = [
         q: "**Hoeveel is 5⁰**?",
         options: ["1", "0", "5", "Onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen 0⁰ is onbepaald.", "Niet — dat is 5¹.", "Niet — voor 5≠0 is bepaald."],
+        wrongHints: [null, "Niet — a⁰ is niet 0. Denk aan a^n / a^n.", "Niet — dat is 5¹.", "Niet — voor 5≠0 is bepaald."],
         uitlegPad: {
           stappen: [{ titel: "Elke a⁰ = 1 (a≠0)", tekst: "Volgt uit regel a^n / a^n = a^(n-n) = a⁰ = (per definitie van delen) 1. Werkt voor elke a ≠ 0. 0⁰ is wiskundig onbepaald." }],
           niveaus: { basis: "1.", simpeler: "Elk getal-tot-de-nul = 1.", nogSimpeler: "1" },
@@ -79,7 +79,7 @@ const steps = [
   {
     title: "Exponentiële functies — y = a · b^x",
     explanation:
-      "**Exponentiële functie**: $y = a \\cdot b^x$.\n• **a** = beginwaarde (y bij x=0).\n• **b** = groei-factor per eenheid x (per stap met 1 vermenigvuldigt y met b).\n\n**Twee gevallen**:\n• b > 1 → **exponentiële groei** (stijgende kromme).\n• 0 < b < 1 → **exponentieel verval** (dalende kromme).\n• b = 1 → constant (geen exponentieel).\n• b ≤ 0 → niet bruikbaar (geeft negatieve waardes of complex).\n\n**Belangrijke voorbeelden**:\n• Bevolkingsgroei: N(t) = N₀ · (1+r)^t.\n• Bacterie-verdubbeling: N(t) = N₀ · 2^(t/T) (T = verdubbelingstijd).\n• Rente op spaargeld: K(t) = K₀ · (1+r)^t.\n• Radioactief verval: N(t) = N₀ · (½)^(t/t½) (= e^(−λt)).\n• Auto-waardevermindering: V(t) = V₀ · (1−r)^t.\n\n**Speciale gevallen** met grondtal e (Euler):\n• e ≈ 2,71828... (irrationaal).\n• y = e^x. Afgeleide gelijk aan zichzelf.\n• y = e^(kx): continue groei met snelheid k.\n• y = e^(−kx): verval.\n• Conversie: $a \\cdot b^x = a \\cdot e^{x \\cdot \\ln(b)}$.\n\n**Grafiek-eigenschappen** y = b^x (b > 1):\n• Door (0, 1).\n• Voor x → −∞: y → 0 (horizontale asymptoot y=0).\n• Voor x → +∞: y → +∞ (snel!).\n• Stijgt sneller dan elke polynoom.\n\n**Vergelijking met polynoom**:\nNa lange tijd verslaat exponentieel ALTIJD polynoom. Bv. 2^x > x¹⁰⁰⁰ voor grote x. Daarom is exponentiële groei zo gevaarlijk in pandemie of bevolking.\n\n**Halveringstijd vs. levensduur**:\n• Halveringstijd t½: tijd voor halvering.\n• Verband: $b = \\left(\\tfrac{1}{2}\\right)^{1/t_{1/2}}$.\n• Voorbeeld: t½ = 5 jaar → b = (½)^(1/5) ≈ 0,87 (per jaar 13% afname).\n\n**Verdubbelingstijd** (groei):\n• Tijd waarna populatie verdubbelt.\n• Vuistregel '**Rule of 70**': verdubbelingstijd ≈ 70 / groei-% per jaar.\n• 7% groei/jaar → verdubbelt elke ~10 jaar.\n• 2% groei/jaar → verdubbelt elke ~35 jaar.\n\n**Compound interest** (samengestelde rente):\nNa n jaar bij rente r per jaar: $K(n) = K_0 \\cdot (1+r)^n$.\nBv. €1000 bij 5% rente, 10 jaar: 1000 · 1,05¹⁰ ≈ 1629.",
+      "**Exponentiële functie**: $y = a \\cdot b^x$.\n• **a** = beginwaarde (y bij x=0).\n• **b** = groei-factor per eenheid x (per stap met 1 vermenigvuldigt y met b).\n\n**Twee gevallen**:\n• b > 1 → **exponentiële groei** (stijgende kromme).\n• 0 < b < 1 → **exponentieel verval** (dalende kromme).\n• b = 1 → constant (geen exponentieel).\n• b ≤ 0 → niet bruikbaar (geeft negatieve waardes of complex).\n\n**Belangrijke voorbeelden**:\n• Bevolkingsgroei: N(t) = N₀ · (1+r)^t.\n• Bacterie-verdubbeling: N(t) = N₀ · 2^(t/T) (T = verdubbelingstijd).\n• Rente op spaargeld: K(t) = K₀ · (1+r)^t.\n• Radioactief verval: N(t) = N₀ · (½)^(t/t½) (= e^(−λt)).\n• Auto-waardevermindering: V(t) = V₀ · (1−r)^t.\n\n**Speciale gevallen** met grondtal e (Euler):\n• e ≈ 2,71828... (irrationaal).\n• y = e^x. Afgeleide gelijk aan zichzelf.\n• y = e^(kx): continue groei met snelheid k.\n• y = e^(−kx): verval.\n• Conversie: $a \\cdot b^x = a \\cdot e^{x \\cdot \\ln(b)}$.\n\n**Grafiek-eigenschappen** y = b^x (b > 1):\n• Door (0, 1).\n• Voor x → −∞: y → 0 (horizontale asymptoot y=0).\n• Voor x → +∞: y → +∞ (snel!).\n• Stijgt sneller dan elke polynoom.\n\n**Vergelijking met polynoom**:\nNa lange tijd verslaat exponentieel ALTIJD polynoom. Bv. 2^x > x¹⁰⁰⁰ voor grote x. Daarom is exponentiële groei zo gevaarlijk in pandemie of bevolking.\n\n**Halveringstijd vs. levensduur**:\n• Halveringstijd t½: tijd voor halvering.\n• Verband: $b = \\left(\\tfrac{1}{2}\\right)^{1/t_{1/2}}$.\n• Voorbeeld: t½ = 5 jaar → b = (½)^(1/5) ≈ 0,87 (per jaar 13% afname).\n\n**Verdubbelingstijd** (groei):\n• Tijd waarna populatie verdubbelt.\n• Vuistregel '**regel van 70**': verdubbelingstijd ≈ 70 / groei-% per jaar.\n• 7% groei/jaar → verdubbelt elke ~10 jaar.\n• 2% groei/jaar → verdubbelt elke ~35 jaar.\n\n**Compound interest** (samengestelde rente):\nNa n jaar bij rente r per jaar: $K(n) = K_0 \\cdot (1+r)^n$.\nBv. €1000 bij 5% rente, 10 jaar: 1000 · 1,05¹⁰ ≈ 1629.",
     checks: [
       {
         q: "Een populatie groeit met 3% per jaar. Groei-factor b?",
@@ -120,7 +120,7 @@ const steps = [
         q: "**Verdubbelingstijd** bij 7% groei per jaar?",
         options: ["~10 jaar", "~7 jaar", "~14 jaar", "~70 jaar"],
         answer: 0,
-        wrongHints: [null, "Niet — verwarring met %.", "Niet — kwadrant fout.", "Niet — formule is 70/r."],
+        wrongHints: [null, "Niet — verwarring met %.", "Niet — dat hoort bij 5% groei.", "Niet — formule is 70/r."],
         uitlegPad: {
           stappen: [{ titel: "Rule of 70", tekst: "Verdubbelingstijd ≈ 70 / groei-%. Bij 7%: 70/7 = **10 jaar**. Handige vuistregel — exact via t = ln(2)/ln(1+r) ≈ 0,693/0,0677 ≈ 10,2 jaar." }],
           niveaus: { basis: "~10 jaar.", simpeler: "70/7=10.", nogSimpeler: "10" },
@@ -149,7 +149,7 @@ const steps = [
         q: "**log₂(32)** = ?",
         options: ["5", "16", "2", "32/2"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is helft.", "Niet — dat is wortel.", "Onzin."],
+        wrongHints: [null, "Niet — dat is helft.", "Niet — dat is het grondtal.", "Onzin."],
         uitlegPad: {
           stappen: [{ titel: "2^? = 32", tekst: "32 = 2 · 2 · 2 · 2 · 2 = 2⁵. Dus log₂(32) = **5**. Tot welke macht moet 2 verheven worden? 5." }],
           niveaus: { basis: "5.", simpeler: "2⁵=32, dus log₂(32)=5.", nogSimpeler: "5" },
@@ -167,9 +167,9 @@ const steps = [
       },
       {
         q: "Vereenvoudig **log(100) + log(10)**:",
-        options: ["3 (= log 1000)", "log 110", "1000", "log(110)"],
+        options: ["3 (= log 1000)", "log 110", "1000", "2"],
         answer: 0,
-        wrongHints: [null, "Niet — log(som) ≠ som(log).", "Niet — wel 1000 product.", "Niet — som ≠ log."],
+        wrongHints: [null, "Niet — log(som) ≠ som(log).", "Niet — 1000 is het product; neem daar nog de log van.", "Niet — dat is alleen log(100)."],
         uitlegPad: {
           stappen: [
             { titel: "log(a) + log(b) = log(a·b)", tekst: "log(100) + log(10) = log(100·10) = log(1000) = **3**. Productregel logaritmen." },
@@ -186,7 +186,7 @@ const steps = [
           stappen: [
             { titel: "10× per magnitude", tekst: "Richter is log₁₀-schaal. 7−5 = 2 stappen → 10² = **100× sterker** amplitude. Energie zelfs ~32× per magnitude → bij verschil 2: ~1000× energie." },
           ],
-          theorie: "Aardbeving 9,1 (Sumatra 2004) ~ 1000× sterker dan 7 — uitzonderlijk vernietigend.",
+          theorie: "Aardbeving 9,1 (Sumatra 2004) ~ 1000× meer energie dan 7 — uitzonderlijk vernietigend.",
           niveaus: { basis: "100×.", simpeler: "Log-schaal: 2 stappen = 100×.", nogSimpeler: "100" },
         },
       },
@@ -207,7 +207,7 @@ const steps = [
   {
     title: "Exponentiële groei + verval (toepassingen)",
     explanation:
-      "**Model exponentiële groei**: $N(t) = N_0 \\cdot e^{k \\cdot t}$ of $N(t) = N_0 \\cdot b^t$.\n• k > 0: groei.\n• k < 0: verval.\n• Verband: b = e^k.\n\n**Halveringstijd t½**:\nVoor verval N(t) = N₀ · e^(−λ·t):\n• Op t = t½ is N(t) = N₀/2.\n• N₀/2 = N₀ · e^(−λ·t½).\n• ½ = e^(−λ·t½).\n• ln(½) = −λ·t½.\n• **$t_{1/2} = \\dfrac{\\ln(2)}{\\lambda} \\approx \\dfrac{0{,}693}{\\lambda}$**.\n\n**Verdubbelingstijd t_2** (groei):\n• Op t = t_2 is N(t) = 2·N₀.\n• Analoog: t_2 = ln(2) / k.\n\n**Bevolkings-paradox**:\n• Linear groei: +x mensen/jaar.\n• Exponentieel: ×y per jaar.\n• Op lange termijn ALTIJD exponentieel >> lineair.\n• Daarom: 'rente op rente' wordt enorm na decennia.\n\n**Pandemie**:\n• Virus R₀ = 2 (één persoon besmet 2 anderen).\n• Generatie-tijd ~5 dagen.\n• Na 30 dagen: 2⁶ = 64× zoveel besmettingen. Na 60 dagen: 4096×.\n• Daarom is 'platdrukken' (verlagen R) cruciaal — beperken exponentiële fase.\n\n**Wet van afkoelen** (Newton):\n$T(t) - T_{omg} = (T_0 - T_{omg}) \\cdot e^{-k \\cdot t}$.\nVoorwerp benadert omgevingstemperatuur exponentieel. Halftijd is constant.\n\n**Verval radioactiviteit**:\n$A(t) = A_0 \\cdot e^{-\\lambda t}$ waar A = activiteit (Bq).\nHalveringstijd verschillend per isotoop:\n• ¹⁴C: 5730 jaar (datering).\n• ²³⁸U: 4,5·10⁹ jaar (geologisch).\n• ¹³¹I: 8 dagen (medisch).\n• ²²²Rn: 3,8 dagen (radon-gas).\n\n**Logistische groei** (echte populaties):\nIn echt: exponentieel afgeremd door draagkracht K:\n$\\dfrac{dN}{dt} = r \\cdot N \\cdot \\left(1 - \\dfrac{N}{K}\\right)$.\n• Klein N: lijkt exponentieel.\n• Bij K: plat.\n• S-vormige curve.\n\n**Voorbeeld VWO**: koffie van 80 °C in kamer van 20 °C, na 10 min op 60 °C. Wanneer 30 °C?\n80 − 20 = 60 = startverschil.\n60 − 20 = 40 = na 10 min.\n40/60 = (½)^(10/t½) → t½ ≈ 17 min.\nVoor 30 °C: 30 − 20 = 10. 10/60 = 1/6 = (½)^(t/17) → t/17 = log₂(6) ≈ 2,58 → t ≈ 44 min.",
+      "**Model exponentiële groei**: $N(t) = N_0 \\cdot e^{k \\cdot t}$ of $N(t) = N_0 \\cdot b^t$.\n• k > 0: groei.\n• k < 0: verval.\n• Verband: b = e^k.\n\n**Halveringstijd t½**:\nVoor verval N(t) = N₀ · e^(−λ·t):\n• Op t = t½ is N(t) = N₀/2.\n• N₀/2 = N₀ · e^(−λ·t½).\n• ½ = e^(−λ·t½).\n• ln(½) = −λ·t½.\n• **$t_{1/2} = \\dfrac{\\ln(2)}{\\lambda} \\approx \\dfrac{0{,}693}{\\lambda}$**.\n\n**Verdubbelingstijd t_2** (groei):\n• Op t = t_2 is N(t) = 2·N₀.\n• Analoog: t_2 = ln(2) / k.\n\n**Bevolkings-paradox**:\n• Lineaire groei: +x mensen/jaar.\n• Exponentieel: ×y per jaar.\n• Op lange termijn ALTIJD exponentieel >> lineair.\n• Daarom: 'rente op rente' wordt enorm na decennia.\n\n**Pandemie**:\n• Virus R₀ = 2 (één persoon besmet 2 anderen).\n• Generatie-tijd ~5 dagen.\n• Na 30 dagen: 2⁶ = 64× zoveel besmettingen. Na 60 dagen: 4096×.\n• Daarom is 'platdrukken' (verlagen R) cruciaal — beperken exponentiële fase.\n\n**Wet van afkoelen** (Newton):\n$T(t) - T_{omg} = (T_0 - T_{omg}) \\cdot e^{-k \\cdot t}$.\nVoorwerp benadert omgevingstemperatuur exponentieel. Halveringstijd is constant.\n\n**Verval radioactiviteit**:\n$A(t) = A_0 \\cdot e^{-\\lambda t}$ waar A = activiteit (Bq).\nHalveringstijd verschillend per isotoop:\n• ¹⁴C: 5730 jaar (datering).\n• ²³⁸U: 4,5·10⁹ jaar (geologisch).\n• ¹³¹I: 8 dagen (medisch).\n• ²²²Rn: 3,8 dagen (radon-gas).\n\n**Logistische groei** (echte populaties):\nIn werkelijkheid: exponentieel afgeremd door draagkracht K:\n$\\dfrac{dN}{dt} = r \\cdot N \\cdot \\left(1 - \\dfrac{N}{K}\\right)$.\n• Klein N: lijkt exponentieel.\n• Bij K: plat.\n• S-vormige curve.\n\n**Voorbeeld VWO**: koffie van 80 °C in kamer van 20 °C, na 10 min op 60 °C. Wanneer 30 °C?\n80 − 20 = 60 = startverschil.\n60 − 20 = 40 = na 10 min.\n40/60 = (½)^(10/t½) → t½ ≈ 17 min.\nVoor 30 °C: 30 − 20 = 10. 10/60 = 1/6 = (½)^(t/17) → t/17 = log₂(6) ≈ 2,58 → t ≈ 44 min.",
     checks: [
       {
         q: "Bacteriën verdubbelen elke 20 min. Hoeveel keer na **2 uur** (120 min)?",
@@ -224,7 +224,7 @@ const steps = [
         q: "Een isotoop heeft λ = 0,1 per jaar. Halveringstijd?",
         options: ["~6,93 jaar", "~0,1 jaar", "~10 jaar", "Onbepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is λ zelf.", "Niet — close, niet exact.", "Wel."],
+        wrongHints: [null, "Niet — dat is λ zelf.", "Niet — dat is 1/λ, niet ln(2)/λ.", "Wel bepaald."],
         uitlegPad: {
           stappen: [{ titel: "t½ = ln(2)/λ", tekst: "t½ = 0,693 / 0,1 = **6,93 jaar**. Na ~7 jaar helft over. Na ~14 jaar kwart over." }],
           niveaus: { basis: "ln(2)/0,1 ≈ 6,93.", simpeler: "0,693/0,1 = ~7.", nogSimpeler: "6,93" },
@@ -239,7 +239,7 @@ const steps = [
           stappen: [
             { titel: "3 generaties", tekst: "15/5 = 3 generaties. 3³ = **27**. Dus 27× besmettingen na 15 dagen. Exponentiële groei is 'verraderlijk': lijkt klein vroeg, explodeert later." },
           ],
-          theorie: "COVID-19 had R₀ ~2-3 zonder maatregelen, dubbelingstijd ~3-5 dagen. Lockdowns + vaccinaties brachten R onder 1.",
+          theorie: "COVID-19 had R₀ ~2-3 zonder maatregelen, verdubbelingstijd ~3-5 dagen. Lockdowns + vaccinaties brachten R onder 1.",
           niveaus: { basis: "27×", simpeler: "3 generaties × 3-voud = 27.", nogSimpeler: "27" },
         },
       },
@@ -279,7 +279,7 @@ const steps = [
   {
     title: "Eindopdracht — toepassings-mix",
     explanation:
-      "**Examen-vraag-types**:\n\n**1. Bevolkings-projectie**:\nWereld 2024: ~8 mld. Groei 0,9% per jaar. Bevolking in 2050?\n• 26 jaar × 0,9% groei.\n• N = 8 · (1,009)²⁶ ≈ 8 · 1,26 ≈ 10,1 mld.\n• VN-projectie: ~9,7 mld in 2050.\n\n**2. Rente-vergelijking**:\nSparen €1000 bij 3% vs lenen bij 5% over 20 jaar.\n• Sparen: 1000 · 1,03²⁰ ≈ 1806.\n• Lenen (terugbetaal): 1000 · 1,05²⁰ ≈ 2653.\n• Verschil ~€850 — verklaart waarom banken winst maken.\n\n**3. CO₂-budget**:\nHuidige uitstoot 37 Gt/j. Voor 1,5 °C: nog ~400 Gt 'budget'.\n• Tempo gelijk: 400/37 ≈ 11 jaar tot grens.\n• Voor halvering tegen 2030: jaarlijks ~7% reductie nodig — exponentieel afname.\n\n**4. Spaardoel**:\nVoor €100 000 in 30 jaar bij 5% rente — hoeveel start-bedrag?\n• 100 000 = K₀ · 1,05³⁰.\n• 1,05³⁰ ≈ 4,32.\n• K₀ ≈ 100 000 / 4,32 ≈ **€23 138**.\n\n**5. Aardbeving-vergelijking**:\nKobe (1995, M 6,9) vs Sendai (2011, M 9,1). Verschil energie?\n• Magnitudes verschillen 2,2.\n• Energie-verhouding ≈ 32^2,2 ≈ 1700×.\n• Sendai dus ~1700× energetischer.\n\n**6. Pandemie-modellering**:\nR₀ = 3, generatie 5 dagen. Verlagen R via maatregelen naar 0,8 (R<1):\n• Bij R<1: exponentieel verval — pandemie dooft uit.\n• Generatie 5 dgn: na 50 dgn (10 gen): (0,8)¹⁰ ≈ 0,107 → 90% reductie cases.\n\n**Belangrijk**:\n• ALTIJD eenheden checken.\n• Exponentiële groei is sneaky — start klein, explodeert.\n• Log-schalen zijn handzaam voor over-grote-bereik-fenomenen.\n• Compound interest werkt voor + tegen je (sparen + leningen).\n• Doubling time / halving time = handige vuistregels.",
+      "**Examen-vraag-types**:\n\n**1. Bevolkings-projectie**:\nWereld 2024: ~8 mld. Groei 0,9% per jaar. Bevolking in 2050?\n• 26 jaar × 0,9% groei.\n• N = 8 · (1,009)²⁶ ≈ 8 · 1,26 ≈ 10,1 mld.\n• VN-projectie: ~9,7 mld in 2050.\n\n**2. Rente-vergelijking**:\nSparen €1000 bij 3% vs lenen bij 5% over 20 jaar.\n• Sparen: 1000 · 1,03²⁰ ≈ 1806.\n• Lenen (terugbetaal): 1000 · 1,05²⁰ ≈ 2653.\n• Verschil ~€850 — verklaart waarom banken winst maken.\n\n**3. CO₂-budget**:\nHuidige uitstoot 37 Gt/j. Voor 1,5 °C: nog ~400 Gt 'budget'.\n• Tempo gelijk: 400/37 ≈ 11 jaar tot grens.\n• Voor halvering tegen 2030: jaarlijks ~7% reductie nodig — exponentieel afname.\n\n**4. Spaardoel**:\nVoor €100 000 in 30 jaar bij 5% rente — hoeveel start-bedrag?\n• 100 000 = K₀ · 1,05³⁰.\n• 1,05³⁰ ≈ 4,32.\n• K₀ ≈ 100 000 / 4,32 ≈ **€23 138**.\n\n**5. Aardbeving-vergelijking**:\nKobe (1995, M 6,9) vs Sendai (2011, M 9,1). Verschil energie?\n• Magnitudes verschillen 2,2.\n• Energie-verhouding ≈ 32^2,2 ≈ 2000×.\n• Sendai dus ~2000× energetischer.\n\n**6. Pandemie-modellering**:\nR₀ = 3, generatie 5 dagen. Verlagen R via maatregelen naar 0,8 (R<1):\n• Bij R<1: exponentieel verval — pandemie dooft uit.\n• Generatie 5 dgn: na 50 dgn (10 gen): (0,8)¹⁰ ≈ 0,107 → 90% reductie cases.\n\n**Belangrijk**:\n• ALTIJD eenheden checken.\n• Exponentiële groei is verraderlijk — start klein, explodeert.\n• Log-schalen zijn handzaam voor over-grote-bereik-fenomenen.\n• Rente op rente werkt voor + tegen je (sparen + leningen).\n• Verdubbelingstijd / halveringstijd = handige vuistregels.",
     checks: [
       {
         q: "Een spaarrekening: **€500 sparen, 4% rente per jaar**. Na 5 jaar?",
@@ -310,7 +310,7 @@ const steps = [
         wrongHints: [null, "Niet — de pH-schaal is logaritmisch: elke stap staat voor een factor tien, niet voor een gelijk verschil.", "Niet — hoeveel pH-eenheden verschil is er? Reken uit hoe groot de factor dan is op een log-schaal.", "Niet — pH 4 is zuurder dan pH 7, niet het andere."],
         uitlegPad: {
           stappen: [
-            { titel: "log10-schaal", tekst: "pH = −log[H⁺]. Verschil 3 → 10³ = **1000× meer H⁺**. Maag-zuur ~ pH 2 = miljoen-keer zuurder dan zuiver water." },
+            { titel: "log10-schaal", tekst: "pH = −log[H⁺]. Verschil 3 → 10³ = **1000× meer H⁺**. Maagzuur ~ pH 2 = honderdduizend keer zuurder dan zuiver water." },
           ],
           niveaus: { basis: "1000×.", simpeler: "3 pH-eenheden = 1000×.", nogSimpeler: "1000" },
         },

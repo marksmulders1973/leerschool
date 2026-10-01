@@ -82,7 +82,7 @@ const steps = [
   },
   {
     title: "Machten van 1, 0 en negatief grondtal",
-    explanation: "**Wat als de exponent 0 is?**\n\nA-ha-trick: **a⁰ = 1** (voor elke a die niet 0 is).\n\nWaarom? Een goede uitleg: a^n / a^n = 1 (iets door zichzelf). Maar volgens de machtsregel: a^n / a^n = a^(n−n) = a⁰. Dus a⁰ = 1.\n\n**Voorbeelden**:\n• 5⁰ = 1\n• 17⁰ = 1\n• 999⁰ = 1\n• (-3)⁰ = 1\n• 0⁰ = onbepaald (laat dit aan wiskundigen over)\n\n**Wat als de exponent 1 is?**\n\nGewoon zichzelf: **a¹ = a**.\n• 5¹ = 5\n• 100¹ = 100\n\n**Negatief grondtal**:\n• (-2)² = (-2) · (-2) = +4 (twee minnen → plus)\n• (-2)³ = (-2) · (-2) · (-2) = -8 (drie minnen → min)\n• (-2)⁴ = +16\n• (-2)⁵ = -32\n\n**Regel**: even exponent → positief resultaat. Oneven exponent → behoudt teken van grondtal.\n\n**Verschil tussen -2² en (-2)²**:\n• -2² = -(2²) = -4 (eerst kwadrateren, dan minteken)\n• (-2)² = +4 (haakjes maken het verschil — eerst minteken, dan kwadrateren)\n\nOp examens vergeten leerlingen dit verschil regelmatig. Let op de **haakjes**!",
+    explanation: "**Wat als de exponent 0 is?**\n\nBelangrijke regel: **a⁰ = 1** (voor elke a die niet 0 is).\n\nWaarom? Een goede uitleg: a^n / a^n = 1 (iets door zichzelf). Maar volgens de machtsregel: a^n / a^n = a^(n−n) = a⁰. Dus a⁰ = 1.\n\n**Voorbeelden**:\n• 5⁰ = 1\n• 17⁰ = 1\n• 999⁰ = 1\n• (-3)⁰ = 1\n• 0⁰ = onbepaald (laat dit aan wiskundigen over)\n\n**Wat als de exponent 1 is?**\n\nGewoon zichzelf: **a¹ = a**.\n• 5¹ = 5\n• 100¹ = 100\n\n**Negatief grondtal**:\n• (-2)² = (-2) · (-2) = +4 (twee minnen → plus)\n• (-2)³ = (-2) · (-2) · (-2) = -8 (drie minnen → min)\n• (-2)⁴ = +16\n• (-2)⁵ = -32\n\n**Regel**: even exponent → positief resultaat. Oneven exponent → behoudt teken van grondtal.\n\n**Verschil tussen -2² en (-2)²**:\n• -2² = -(2²) = -4 (eerst kwadrateren, dan minteken)\n• (-2)² = +4 (haakjes maken het verschil — eerst minteken, dan kwadrateren)\n\nOp examens vergeten leerlingen dit verschil regelmatig. Let op de **haakjes**!",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">speciale exponenten</text>
@@ -179,7 +179,7 @@ const steps = [
   // ─── B. Drie machtsregels ─────────────────────────────
   {
     title: "Regel 1: vermenigvuldigen → exponenten optellen",
-    explanation: "**Regel 1**: bij **vermenigvuldigen van machten met hetzelfde grondtal** worden de exponenten **opgeteld**.\n\n**Formule**: $a^m \\cdot a^n = a^{m+n}$\n\n**Bewijs (intuïtief)**:\n• 2² · 2³ = (2·2) · (2·2·2) = 2·2·2·2·2 = 2⁵\n• Inderdaad: 2 + 3 = 5.\n\n**Voorbeelden**:\n• 3² · 3⁴ = 3⁶ (= 729)\n• x³ · x⁵ = x⁸\n• 5 · 5⁷ = 5¹ · 5⁷ = 5⁸\n• a^2 · a^7 · a^3 = a^12 (alle exponenten optellen)\n\n**Belangrijke voorwaarde**: het grondtal moet **gelijk** zijn. \n• 2² · 3² ≠ 6² (zie volgende stap voor wat er wel mag).\n• 2² · 3² = 4 · 9 = 36, en 6² = 36 — toevallig gelijk hier maar dat is een ander principe.\n\n**Veel toegepast in formules**:\n• Oppervlakte van een vierkant met zijde x²: (x²)² = x⁴ (zie regel 3).\n• Volume van een kubus met ribbe x: x · x · x = x³.",
+    explanation: "**Regel 1**: bij **vermenigvuldigen van machten met hetzelfde grondtal** worden de exponenten **opgeteld**.\n\n**Formule**: $a^m \\cdot a^n = a^{m+n}$\n\n**Bewijs (intuïtief)**:\n• 2² · 2³ = (2·2) · (2·2·2) = 2·2·2·2·2 = 2⁵\n• Inderdaad: 2 + 3 = 5.\n\n**Voorbeelden**:\n• 3² · 3⁴ = 3⁶ (= 729)\n• x³ · x⁵ = x⁸\n• 5 · 5⁷ = 5¹ · 5⁷ = 5⁸\n• a^2 · a^7 · a^3 = a^12 (alle exponenten optellen)\n\n**Belangrijke voorwaarde**: het grondtal moet **gelijk** zijn. \n• 2² · 3² ≠ 5² (exponenten optellen mag niet bij verschillende grondtallen).\n• 2² · 3² = 4 · 9 = 36, en dat is wél 6² — maar dat volgt uit een ander principe (macht van een product, zie verderop).\n\n**Veel toegepast in formules**:\n• Oppervlakte van een vierkant met zijde x²: (x²)² = x⁴ (zie regel 3).\n• Volume van een kubus met ribbe x: x · x · x = x³.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">a^m · a^n = a^(m+n)</text>
@@ -227,7 +227,7 @@ const steps = [
     checks: [
       {
         q: "*Versimpel: y⁸ / y³.*",
-        options: ["y⁵", "y¹¹", "y², ²⁶⁶⁷", "y²⁴"],
+        options: ["y⁵", "y¹¹", "y³", "y²⁴"],
         answer: 0,
         wrongHints: [null, "Bij delen van machten met dezelfde basis — wat doe je met de exponenten?", "Geen correcte uitkomst. Welke bewerking met exponenten geldt bij delen?", "Dat is machtsmacht (³ keer toepassen). Hier delen we — andere regel."],
         uitlegPad: {
@@ -259,9 +259,9 @@ const steps = [
     checks: [
       {
         q: "*Versimpel: (x²)⁵.*",
-        options: ["x¹⁰", "x⁷", "x², ⁵", "x³²"],
+        options: ["x¹⁰", "x⁷", "x⁵", "x³²"],
         answer: 0,
-        wrongHints: [null, "x⁷ = x² · x⁵ (regel 1, optellen). Maar (x²)⁵ is macht-van-macht: 2 · 5.", "Geen geldige notatie.", "x³² is veel te groot. (x²)⁵ = x^(2·5) = x¹⁰."],
+        wrongHints: [null, "x⁷ = x² · x⁵ (regel 1, optellen). Maar (x²)⁵ is macht-van-macht: 2 · 5.", "Vergeet de exponent 2 binnen de haakjes niet: (x²)⁵ = x^(2·5).", "x³² is veel te groot. (x²)⁵ = x^(2·5) = x¹⁰."],
         uitlegPad: {
           stappen: [{ titel: "Regel 3: vermenigvuldigen", tekst: "(x²)⁵ = x^(2·5) = x¹⁰. Bij macht-van-macht: exponenten vermenigvuldigen." }],
           woorden: [{ woord: "machtsmacht", uitleg: "(a^m)^n = a^(m·n). Exponenten KEER." }],
@@ -438,7 +438,7 @@ const steps = [
   },
   {
     title: "Wetenschappelijke notatie",
-    explanation: "**Wetenschappelijke notatie** schrijft heel grote of kleine getallen kort: **a · 10^n**, waarbij a tussen 1 en 10 ligt (1 ≤ a < 10).\n\n**Voorbeelden grote getallen**:\n• 7.500 = 7,5 · 10³\n• 326.000 = 3,26 · 10⁵\n• 1.000.000.000 = 1 · 10⁹\n• 6.022 · 10²³ = getal van Avogadro (~aantal moleculen in 1 mol)\n\n**Voorbeelden kleine getallen**:\n• 0,005 = 5 · 10⁻³\n• 0,000042 = 4,2 · 10⁻⁵\n• 0,0000001 = 1 · 10⁻⁷\n\n**Hoe omzetten naar wetenschappelijke notatie**:\n1. Verschuif de komma zo dat er **één cijfer** vóór de komma staat (1-9).\n2. Tel het aantal **plekken** dat je verschoven hebt = de exponent.\n3. Verschoof je naar **links**? → positieve exponent (groot getal).\n4. Verschoof je naar **rechts**? → negatieve exponent (klein getal).\n\n**Voorbeeld**: 326.000 → 3,26 (komma 5 plekken naar links) → 3,26 · 10⁵ ✓\n**Voorbeeld**: 0,000042 → 4,2 (komma 5 plekken naar rechts) → 4,2 · 10⁻⁵ ✓\n\n**Waarom gebruiken we het?**\n• Compact bij grote/kleine getallen.\n• Vermijdt fouten in nullen tellen.\n• Standard in wetenschap, natuurkunde, scheikunde.\n\n**Op je rekenmachine**: vaak getoond als **3,26E5** (de E = · 10).",
+    explanation: "**Wetenschappelijke notatie** schrijft heel grote of kleine getallen kort: **a · 10^n**, waarbij a tussen 1 en 10 ligt (1 ≤ a < 10).\n\n**Voorbeelden grote getallen**:\n• 7.500 = 7,5 · 10³\n• 326.000 = 3,26 · 10⁵\n• 1.000.000.000 = 1 · 10⁹\n• 6,022 · 10²³ = getal van Avogadro (~aantal moleculen in 1 mol)\n\n**Voorbeelden kleine getallen**:\n• 0,005 = 5 · 10⁻³\n• 0,000042 = 4,2 · 10⁻⁵\n• 0,0000001 = 1 · 10⁻⁷\n\n**Hoe omzetten naar wetenschappelijke notatie**:\n1. Verschuif de komma zo dat er **één cijfer** vóór de komma staat (1-9).\n2. Tel het aantal **plekken** dat je verschoven hebt = de exponent.\n3. Verschoof je naar **links**? → positieve exponent (groot getal).\n4. Verschoof je naar **rechts**? → negatieve exponent (klein getal).\n\n**Voorbeeld**: 326.000 → 3,26 (komma 5 plekken naar links) → 3,26 · 10⁵ ✓\n**Voorbeeld**: 0,000042 → 4,2 (komma 5 plekken naar rechts) → 4,2 · 10⁻⁵ ✓\n\n**Waarom gebruiken we het?**\n• Compact bij grote/kleine getallen.\n• Vermijdt fouten in nullen tellen.\n• Standaard in wetenschap, natuurkunde, scheikunde.\n\n**Op je rekenmachine**: vaak getoond als **3,26E5** (de E = · 10).",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">wetenschappelijke notatie: a · 10^n</text>
@@ -552,7 +552,7 @@ const steps = [
         q: "*Versimpel: (3x⁴)² / (3x²)³.*",
         options: ["x²/3", "9x²", "3x²", "x⁵"],
         answer: 0,
-        wrongHints: [null, "Werk teller en noemer apart uit, dan pas delen — wat wordt de teller, wat de noemer?", "Versimpel de getalsverhouding — hoe ver deelt 9 in 27?", "Geen 5 als exponent — werk teller en noemer apart uit met de juiste regels."],
+        wrongHints: [null, "Werk teller en noemer apart uit, dan pas delen — wat wordt de teller, wat de noemer?", "Versimpel de getalsverhouding — hoe vaak past 9 in 27?", "Geen 5 als exponent — werk teller en noemer apart uit met de juiste regels."],
         uitlegPad: {
           stappen: [
             { titel: "Teller", tekst: "(3x⁴)² = 9x⁸." },
@@ -584,9 +584,9 @@ const steps = [
         q: "*Schrijf 1/16 als macht van 2.*",
         options: ["2⁻⁴", "-2⁴", "2⁻²", "2¹⁶"],
         answer: 0,
-        wrongHints: [null, "Een negatief teken vóór het getal maakt het negatief, niet een breuk. Hoe schrijf je 1/16 als macht van 2?", "Schrijf 4 als macht van 2 — en wat betekent dat dan voor 1/4?", "Veel te groot — welke macht van 2 geeft 16, en hoe gebruik je dat om 1/16 te schrijven?"],
+        wrongHints: [null, "Een negatief teken vóór het getal maakt het negatief, niet een breuk. Hoe schrijf je 1/16 als macht van 2?", "2⁻² = 1/4, niet 1/16. Welke macht van 2 geeft 16?", "Veel te groot — welke macht van 2 geeft 16, en hoe gebruik je dat om 1/16 te schrijven?"],
         uitlegPad: {
-          stappen: [{ titel: "16 = 2⁴", tekst: "16 = 2⁴ (kennis kwadratentabel). Dus 1/16 = 1/2⁴ = 2⁻⁴." }],
+          stappen: [{ titel: "16 = 2⁴", tekst: "16 = 2⁴ (machten van 2). Dus 1/16 = 1/2⁴ = 2⁻⁴." }],
           woorden: [{ woord: "1/a^n = a^-n", uitleg: "Reciproke = negatieve exp." }],
           theorie: "Stappen: schrijf noemer als macht. Dan toepassen negatieve-exponent-regel.",
           voorbeelden: [{ type: "andere", tekst: "1/8 = 1/2³ = 2⁻³. 1/4 = 2⁻². 1/32 = 2⁻⁵." }],
@@ -596,15 +596,15 @@ const steps = [
       },
       {
         q: "*Versimpel: (a²b³)⁴.*",
-        options: ["a⁸b¹²", "a⁶b⁷", "a⁸b¹²a", "a²b³⁴"],
+        options: ["a⁸b¹²", "a⁶b⁷", "a⁸b³", "a²b¹²"],
         answer: 0,
-        wrongHints: [null, "Bij macht-van-product wordt elk vermenigvuldigd, niet opgeteld. (a²)⁴ = a⁸ en (b³)⁴ = b¹².", "Onzin-notatie.", "Geen Ari-notatie. Pas regels stap voor stap toe."],
+        wrongHints: [null, "Bij macht-van-macht worden de exponenten vermenigvuldigd, niet opgeteld. (a²)⁴ = a⁸ en (b³)⁴ = b¹².", "Ook b³ krijgt de macht 4.", "Ook a² krijgt de macht 4."],
         uitlegPad: {
           stappen: [{ titel: "Beide gevierd", tekst: "(a²b³)⁴ = (a²)⁴ · (b³)⁴ = a⁸ · b¹² = a⁸b¹². Macht over product + machtsmacht." }],
           woorden: [{ woord: "combo", uitleg: "(ab)^n = a^n·b^n + (a^m)^n = a^(mn)." }],
           theorie: "Bij meerdere variabelen in haakjes: macht verdelen, dan elke macht-van-macht.",
           voorbeelden: [{ type: "andere", tekst: "(x²y)³ = x⁶y³. (a³b²)² = a⁶b⁴." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "a⁶b⁷ = optellen i.p.v. ×. Andere = onzin-notatie." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "a⁶b⁷ = optellen i.p.v. ×. a⁸b³ en a²b¹² = macht maar op één factor toegepast." }],
           niveaus: { basis: "a⁸b¹².", simpeler: "(a²)⁴ = a⁸, (b³)⁴ = b¹². Antwoord a⁸b¹²", nogSimpeler: "a⁸b¹²" },
         },
       },
@@ -612,7 +612,7 @@ const steps = [
       { q: "5² = ?", options: ["25","10","20","52"], answer: 0, wrongHints: [null,"Niet — niet 5+5.","Niet — niet 5×4.","Niet — niet cijfers samen."] },
       { q: "**a⁰** = ? (a ≠ 0)", options: ["1","0","a","Niet bepaald"], answer: 0, wrongHints: [null,"Niet bij a≠0.","Andere macht.","Wel bepaald."] },
       { q: "**a^1** = ?", options: ["a","1","0","a²"], answer: 0, wrongHints: [null,"Dat is a⁰.","Dat is a · 0.","Hogere macht."] },
-      { q: "**a^(−1)** = ?", options: ["1/a","−a","a²","Bestaat niet"], answer: 0, wrongHints: [null,"Niet — negatief teken in waarde.","Tegenovergesteld.","Wel bestaat."] },
+      { q: "**a^(−1)** = ?", options: ["1/a","−a","a²","Bestaat niet"], answer: 0, wrongHints: [null,"Niet — negatief teken in waarde.","Tegenovergesteld.","Bestaat wel."] },
       { q: "**a^m · a^n** = ?", options: ["a^(m+n)","a^(m·n)","a^(m−n)","2a^m"], answer: 0, wrongHints: [null,"Macht van macht.","Delen.","Niet."] },
       { q: "**(a^m)^n** = ?", options: ["a^(m·n)","a^(m+n)","a^(m−n)","m·n·a"], answer: 0, wrongHints: [null,"Vermenigvuldigen.","Delen.","Niet."] },
       { q: "**(ab)^n** = ?", options: ["a^n · b^n","a^n + b^n","(a+b)^n","ab^n"], answer: 0, wrongHints: [null,"Niet — vermenigvuldigen.","Geen relatie.","Onvolledig."] },

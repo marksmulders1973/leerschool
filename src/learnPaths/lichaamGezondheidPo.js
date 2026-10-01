@@ -75,7 +75,7 @@ function organenSvg() {
 <!-- Nieren -->
 <ellipse cx="270" cy="125" rx="12" ry="18" fill="${COLORS.blood}" opacity="0.7"/>
 <text x="270" y="130" text-anchor="middle" fill="#0e1014" font-size="9" font-family="Arial" font-weight="bold">nier</text>
-<text x="270" y="158" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">filtert urine</text>
+<text x="270" y="158" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">maakt urine</text>
 <text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Allemaal in de torso (romp)</text>
 </svg>`;
 }
@@ -124,11 +124,11 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Dijbeen = grootste", tekst: "Het **dijbeen** (de bovenkant van je been, tussen heup en knie) is het grootste, langste en sterkste bot in je lichaam — ongeveer **46 cm** bij een volwassene." },
-            { titel: "Waarom dijbeen zo groot?", tekst: "Het dijbeen draagt al je gewicht bij staan, lopen, springen. Hoe meer kracht een bot moet dragen, hoe groter en sterker het is. Het dijbeen kan zelfs auto-impact opvangen voor het breekt." },
+            { titel: "Waarom dijbeen zo groot?", tekst: "Het dijbeen draagt al je gewicht bij staan, lopen, springen. Hoe meer kracht een bot moet dragen, hoe groter en sterker het is. Er is heel veel kracht nodig om een dijbeen te breken." },
             { titel: "Geen schedel / wervelkolom", tekst: "Schedel = 22 botten samen (lijkt 1 bot maar is gefuseerd). Wervelkolom = 33 losse wervels op een kolom. Beide zijn dus geen 'één bot'." },
           ],
           woorden: [{ woord: "dijbeen", uitleg: "Bot tussen heup en knie — grootste van je lichaam." }],
-          theorie: "Toets-truc bot-grootte: dijbeen > opperarmbot > scheenbeen > kuitbeen. Allemaal lange botten in de extremiteiten.",
+          theorie: "Toets-truc bot-grootte: dijbeen > scheenbeen > kuitbeen > opperarmbot. Allemaal lange botten in de extremiteiten.",
           voorbeelden: [
             { type: "stap", tekst: "Bij een volwassene 1,80 m lang is het dijbeen ongeveer 46 cm = een kwart van je hele lengte!" },
             { type: "stap", tekst: "Tegenover dijbeen: stijgbeugel in oor = 3 mm = kleinste bot van het lichaam." },
@@ -150,7 +150,7 @@ const steps = [
           stappen: [
             { titel: "Schedel = beschermkap", tekst: "De **schedel** (Latijn: cranium) is het bot rond je hoofd. Functie: **bescherming van de hersenen** — het kwetsbaarste orgaan dat we hebben." },
             { titel: "Waarom hard?", tekst: "Hersenen zijn zacht (~consistentie van tofu). Zonder schedel zou een lichte tik al schade veroorzaken. Schedel is daarom 1 van de hardste botten in het lichaam." },
-            { titel: "Andere bescherming-organen", tekst: "Hart + longen → ribben + borstbeen (ribbenkast). Maag/lever/nieren → buikspieren + soms rib-onderkant. Heupen → bekkenbot. Elk vitaal orgaan heeft eigen bescherming." },
+            { titel: "Andere bescherming-organen", tekst: "Hart + longen → ribben + borstbeen (ribbenkast). Maag/lever/nieren → buikspieren + soms rib-onderkant. Blaas → bekken. Elk vitaal orgaan heeft eigen bescherming." },
           ],
           woorden: [
             { woord: "schedel", uitleg: "Bot rond hoofd — beschermt hersenen." },
@@ -158,7 +158,7 @@ const steps = [
           ],
           theorie: "Toets-truc: bot beschermt orgaan dat ernaast zit. Schedel ↔ hersenen. Ribbenkast ↔ hart+longen. Bekkenbot ↔ blaas+darmen.",
           voorbeelden: [
-            { type: "stap", tekst: "Fietshelm = extra bescherming op de schedel. Voor 12-jarigen wettelijk niet verplicht maar wel slim — schedel zelf is niet onverwoestbaar." },
+            { type: "stap", tekst: "Fietshelm = extra bescherming op de schedel. In Nederland niet wettelijk verplicht, maar wel slim — schedel zelf is niet onverwoestbaar." },
           ],
           basiskennis: [{ onderwerp: "Onthouden", uitleg: "Schedel = hersenen. Ribben = hart + longen." }],
           niveaus: {
@@ -245,7 +245,7 @@ const steps = [
         q: "**Rode bloedcellen** vervoeren ... ?",
         options: ["Zuurstof", "Afval", "Voedsel", "Niets"],
         answer: 0,
-        wrongHints: [null, "Witte bloedcellen ruimen afval op — niet de roden.", "Plasma vervoert voedingsstoffen — niet de bloedcellen zelf.", "Bloed vervoert wel iets — denk: wat heb je nodig om te ademen?"],
+        wrongHints: [null, "Rode bloedcellen hebben een andere hoofdtaak — wat heb je nodig om te ademen?", "Plasma vervoert voedingsstoffen — niet de bloedcellen zelf.", "Bloed vervoert wel iets — denk: wat heb je nodig om te ademen?"],
       },
       {
         q: "Welke spier is de **sterkste in verhouding tot grootte**?",
@@ -260,7 +260,7 @@ const steps = [
   {
     title: "De organen — wat doet elk?",
     explanation:
-      "Organen zijn **delen van je lichaam** met een speciale taak.\n\n**De belangrijkste organen** *(uit je hoofd!)*:\n\n• **Hersenen** — denken, voelen, besturen. In je hoofd.\n• **Hart** — pompt bloed. In je borst, iets links.\n• **Longen** — ademen *(zuurstof in, CO₂ uit)*. In je borst.\n• **Maag** — verteert eten *(eerste stap)*. Boven in de buik.\n• **Darmen** — neemt voedingsstoffen op + maakt poep. In de buik.\n• **Lever** — filtert bloed, maakt gal. Rechtsboven in buik.\n• **Nieren** — filteren urine uit bloed *(je hebt er 2)*. In de rug.\n• **Blaas** — slaat urine op. Onder in buik.\n• **Huid** — beschermt je hele lichaam. Grootste 'orgaan'.\n• **Ogen** — zien.\n• **Oren** — horen + evenwicht.\n• **Neus** — ruiken + ademen.\n• **Tong** — proeven + praten + slikken.\n\n**toetsvragen — kerntaak per orgaan**:\n*'Welk orgaan filtert bloed?'* → Lever (of nieren bij urine).\n*'Welk orgaan vermalst eten?'* → Maag.\n*'Welk orgaan pompt bloed?'* → Hart.\n*'Welk orgaan vat zuurstof op uit lucht?'* → Longen.\n\n**Zintuigen** *(5 stuks)*:\n• Zien — ogen.\n• Horen — oren.\n• Ruiken — neus.\n• Proeven — tong.\n• Voelen — huid.\n\n**Hoeveel organen?**\nNiet precies te zeggen — afhankelijk hoe je telt. Maar de **bovenstaande lijst** is wat je moet kennen voor de Doorstroomtoets.",
+      "Organen zijn **delen van je lichaam** met een speciale taak.\n\n**De belangrijkste organen** *(uit je hoofd!)*:\n\n• **Hersenen** — denken, voelen, besturen. In je hoofd.\n• **Hart** — pompt bloed. In je borst, iets links.\n• **Longen** — ademen *(zuurstof in, CO₂ uit)*. In je borst.\n• **Maag** — verteert eten *(eerste stap)*. Boven in de buik.\n• **Darmen** — nemen voedingsstoffen op + maken poep. In de buik.\n• **Lever** — filtert bloed, maakt gal. Rechtsboven in buik.\n• **Nieren** — filteren het bloed en maken urine *(je hebt er 2)*. In de rug.\n• **Blaas** — slaat urine op. Onder in buik.\n• **Huid** — beschermt je hele lichaam. Grootste 'orgaan'.\n• **Ogen** — zien.\n• **Oren** — horen + evenwicht.\n• **Neus** — ruiken + ademen.\n• **Tong** — proeven + praten + slikken.\n\n**toetsvragen — kerntaak per orgaan**:\n*'Welk orgaan filtert bloed?'* → Lever (of nieren bij urine).\n*'Welk orgaan kneedt en verteert eten?'* → Maag.\n*'Welk orgaan pompt bloed?'* → Hart.\n*'Welk orgaan vat zuurstof op uit lucht?'* → Longen.\n\n**Zintuigen** *(5 stuks)*:\n• Zien — ogen.\n• Horen — oren.\n• Ruiken — neus.\n• Proeven — tong.\n• Voelen — huid.\n\n**Hoeveel organen?**\nNiet precies te zeggen — afhankelijk hoe je telt. Maar de **bovenstaande lijst** is wat je moet kennen voor de Doorstroomtoets.",
     svg: organenSvg(),
     checks: [
       {
@@ -270,7 +270,7 @@ const steps = [
         wrongHints: [null, "Longen ademen.", "Lever filtert.", "Maag verteert."],
       },
       {
-        q: "Welk orgaan **vermalst eten**?",
+        q: "Welk orgaan **kneedt en verteert eten**?",
         options: ["Maag", "Hart", "Longen", "Hersenen"],
         answer: 0,
         wrongHints: [null, "Hart pompt bloed.", "Longen ademen.", "Hersenen denken."],
@@ -294,7 +294,7 @@ const steps = [
   {
     title: "Schijf van Vijf — gezond eten",
     explanation:
-      "De **Schijf van Vijf** is een Nederlandse manier om te leren wat **gezond** eten is. Elke dag moet je iets uit **alle 5 vakken** eten.\n\n**De 5 vakken**:\n1. **Groente + fruit** — vitamines + vezels (250g groente + 2 stuks fruit per dag).\n2. **Brood + graan + aardappel + pasta + rijst** — energie (koolhydraten).\n3. **Vis + peulvruchten + vlees + ei + noten** — eiwitten (bouwstof).\n4. **Zuivel + kaas** — calcium voor botten.\n5. **Smeer- + bereidingsvet** — onverzadigd vet (zoals olie + boter).\n\n**+ niet vergeten**: **water drinken** (~1,5 liter per dag).\n\n**Wat hoort NIET in de Schijf van Vijf?**\n• **Snoep + koek + frisdrank + chips** — heten 'extra's', mogen soms maar zijn niet voor elke dag.\n• **Veel zout, suiker, verzadigd vet** — niet gezond in grote hoeveelheden.\n\n**Toets-strikvraag** — *'Welke is groente?'*\n• Tomaat = groente *(Toets-realiteit, ook al is het biologisch een vrucht)*.\n• Aardappel = NIET in groente-vak, maar in koolhydraten-vak.\n• Banaan = fruit.\n• Pinda = peulvrucht (vak 3, bouwstof).\n\n**Andere belangrijke regels**:\n• **Eet langzaam** — geeft maag tijd om te zeggen 'genoeg!'.\n• **Niet te veel suiker** — slecht voor tanden + gewicht.\n• **Niet te veel zout** — slecht voor hart en nieren.\n• **Niet te veel verzadigd vet** *(boter, vet vlees)* — verstopt slagaders.\n• **Wel onverzadigd vet** *(olijfolie, noten, vis)* — gezond.\n\n**Wat is een 'koolhydraat'?**\nEnergie uit brood, pasta, rijst, aardappel. Je lichaam zet het om in suiker → energie om te bewegen + denken.",
+      "De **Schijf van Vijf** is een Nederlandse manier om te leren wat **gezond** eten is. Elke dag moet je iets uit **alle 5 vakken** eten.\n\n**De 5 vakken**:\n1. **Groente + fruit** — vitamines + vezels (250g groente + 2 stuks fruit per dag).\n2. **Brood + graan + aardappel + pasta + rijst** — energie (koolhydraten).\n3. **Vis + peulvruchten + vlees + ei + noten** — eiwitten (bouwstof).\n4. **Zuivel + kaas** — calcium voor botten.\n5. **Smeer- + bereidingsvet** — onverzadigd vet (zoals olie en zachte margarine).\n\n**+ niet vergeten**: **water drinken** (~1,5 liter per dag).\n\n**Wat hoort NIET in de Schijf van Vijf?**\n• **Snoep + koek + frisdrank + chips** — heten 'extra's', mogen soms maar zijn niet voor elke dag.\n• **Veel zout, suiker, verzadigd vet** — niet gezond in grote hoeveelheden.\n\n**Toets-strikvraag** — *'Welke is groente?'*\n• Tomaat = groente *(Toets-realiteit, ook al is het biologisch een vrucht)*.\n• Aardappel = NIET in groente-vak, maar in koolhydraten-vak.\n• Banaan = fruit.\n• Pinda = peulvrucht (vak 3, bouwstof).\n\n**Andere belangrijke regels**:\n• **Eet langzaam** — geeft maag tijd om te zeggen 'genoeg!'.\n• **Niet te veel suiker** — slecht voor tanden + gewicht.\n• **Niet te veel zout** — slecht voor hart en nieren.\n• **Niet te veel verzadigd vet** *(boter, vet vlees)* — verstopt slagaders.\n• **Wel onverzadigd vet** *(olijfolie, noten, vis)* — gezond.\n\n**Wat is een 'koolhydraat'?**\nEnergie uit brood, pasta, rijst, aardappel. Je lichaam zet het om in suiker → energie om te bewegen + denken.",
     checks: [
       {
         q: "Hoeveel vakken heeft de **Schijf van Vijf**?",
@@ -403,7 +403,7 @@ const steps = [
         wrongHints: [null, "Brood = vak 2.", "Appel = vak 1.", "Kaas = vak 4."],
       },
       {
-        q: "Hoeveel **bloedcellen-soorten** zijn er belangrijke?",
+        q: "Hoeveel belangrijke **soorten bloedcellen** zijn er?",
         options: ["3 (rood, wit, plaatjes)", "1 (alleen rood)", "5", "10"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel — 3 hoofdsoorten.", "Veel te veel."],
@@ -429,10 +429,10 @@ const steps = [
         wrongHints: [null, "Te weinig.", "Veel te weinig.", "Overdreven."],
       },
       {
-        q: "Wat is de **grootste 'orgaan'** van je lichaam?",
+        q: "Wat is het **grootste 'orgaan'** van je lichaam?",
         options: ["Huid", "Hart", "Lever", "Maag"],
         answer: 0,
-        wrongHints: [null, "Hart is een spier zo groot als een vuist — niet het grootste.", "Lever is een orgaan binnen — niet het grootst.", "Maag is een zak zo groot als een melon — niet het grootst."],
+        wrongHints: [null, "Hart is een spier zo groot als een vuist — niet het grootste.", "Lever is een orgaan binnen — niet het grootst.", "Maag is een rekbare zak — niet het grootst."],
       },
       { q: "Wat doet je **hart**?", options: ["Pompt bloed door je lichaam","Maakt voedsel klein","Filtert lucht","Denkt"], answer: 0, wrongHints: [null, "Dat is maag.", "Longen.", "Hersenen."] },
       { q: "Wat doen je **longen**?", options: ["Lucht inademen + zuurstof opnemen","Bloed pompen","Voedsel verteren","Denken"], answer: 0, wrongHints: [null, "Hart.", "Maag.", "Hersenen."] },
@@ -440,12 +440,12 @@ const steps = [
       { q: "Hoeveel **botten** heeft een volwassen mens ongeveer?", options: ["206","100","500","1.000"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Veel te veel."] },
       { q: "Welke voeding is goed voor **botten**?", options: ["Melk + zuivel (calcium)","Snoep","Cola","Chips"], answer: 0, wrongHints: [null, "Niet voor botten.", "Niet.", "Niet."] },
       { q: "Hoeveel **uur slaap** heeft een 10-jarige nodig?", options: ["9-11 uur","4-5 uur","12-14 uur","6 uur"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel (baby).", "Te weinig."] },
-      { q: "Wat heet **diabetes**?", options: ["Suikerziekte","Hartziekte","Botbreuk","Verkoudheid"], answer: 0, wrongHints: [null, "Hartziekte heeft eigen naam (bv. infarct).", "Botbreuk = fractuur, geen ziekte.", "Verkoudheid is een virus, geen suikerprobleem."] },
+      { q: "Wat heet **diabetes**?", options: ["Suikerziekte","Hartziekte","Botbreuk","Verkoudheid"], answer: 0, wrongHints: [null, "Hartziekte heeft eigen naam (bv. infarct).", "Botbreuk = fractuur, geen ziekte.", "Verkoudheid komt door een virus, geen suikerprobleem."] },
       { q: "Welke 5 **zintuigen** zijn er?", options: ["Zien/horen/ruiken/proeven/voelen","2","3","10"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."] },
-      { q: "Welke spier in je lichaam **werkt continu**?", options: ["Hartspier","Beenspier","Armspier","Niemand continu"], answer: 0, wrongHints: [null, "Beenspier rust 's nachts als je slaapt.", "Armspier rust 's nachts als je slaapt.", "Eén spier rust nooit — denk: wat moet 24/7 doorgaan?"] },
+      { q: "Welke spier in je lichaam **werkt continu**?", options: ["Hartspier","Beenspier","Armspier","Geen enkele spier"], answer: 0, wrongHints: [null, "Beenspier rust 's nachts als je slaapt.", "Armspier rust 's nachts als je slaapt.", "Eén spier rust nooit — denk: wat moet 24/7 doorgaan?"] },
       { q: "Wat is **transpireren** voor?", options: ["Lichaam koelen","Warm worden","Niet relevant","Spieren bouwen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Wel functie.", "Niet primair."] },
       { q: "Wat doe je bij een **wond** met bloeding?", options: ["Schoonspoelen + verband","Negeren","Schreeuwen","Likken"], answer: 0, wrongHints: [null, "Niet.", "Niet primair.", "Niet."] },
-      { q: "Welk **vitamine** krijg je van de zon?", options: ["D","C","A","B"], answer: 0, wrongHints: [null, "Fruit.", "Wortels.", "Volkoren."] },
+      { q: "Welke **vitamine** krijg je van de zon?", options: ["D","C","A","B"], answer: 0, wrongHints: [null, "Fruit.", "Wortels.", "Volkoren."] },
       { q: "Wat doen **witte bloedcellen**?", options: ["Afweer tegen ziekte","Zuurstof transporteren","Stollen","Niet relevant"], answer: 0, wrongHints: [null, "Dat zijn rode.", "Plaatjes.", "Wel."] },
       { q: "Hoeveel **liter water** moet een 10-jarige drinken per dag?", options: ["~1,5 liter","5 liter","0,5 liter","10 liter"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."] },
     ],

@@ -127,7 +127,7 @@ const steps = [
         q: "**1 km is hoeveel meter?**",
         options: ["1000","100","10","10.000"],
         answer: 0,
-        wrongHints: [null,"Dat is 1 m in cm — andere eenheid.","Te weinig. Denk: 1 km is veel groter dan 10 m.","Te veel. 1 km zit tussen 100 m (een sportveld) en oneindig."],
+        wrongHints: [null,"Dat is 1 m in cm — andere eenheid.","Te weinig. Denk: 1 km is veel groter dan 10 m.","Te veel — 10.000 m is 10 km."],
         uitlegPad: {
           stappen: [{ titel: "1 km = 1000 m", tekst: "Vaste regel: 1 km = 1000 m. Onthoud als kerngetal." }],
           woorden: [{ woord: "km", uitleg: "Kilometer. Kilo = 1000. Dus 1000 m." }],
@@ -143,7 +143,7 @@ const steps = [
   // STAP 2: Lengte
   {
     title: "Lengte — km, m, dm, cm, mm",
-    explanation: "Lengte gaat over **afstand**. Hier is het maten-trapje van groot naar klein:\n\n**km → hm → dam → m → dm → cm → mm**\n\nIeder stapje is **× 10** (omlaag) of **÷ 10** (omhoog).\n\n**Vaak gebruikte stappen**:\n• 1 km = **1000** m  *(afstanden tussen steden)*\n• 1 m = **100** cm  *(meubels, mensen)*\n• 1 m = **1000** mm  *(schroeven, papier-dikte)*\n• 1 cm = **10** mm  *(potlood-dikte)*\n\n**Voorbeelden om te onthouden**:\n• Een dubbeltje is ongeveer **15 mm** breed.\n• Een potlood is **15-20 cm** lang.\n• Een Nederlandse voordeur is **2 m** hoog.\n• De marathon is **42 km** lang.\n\n**Toets-truc**:\nAls je twijfelt, vraag jezelf af: *'Kan ik dit met een liniaal meten?'* Zo ja → cm of mm. *'Past het in mijn kamer?'* → m. *'Loop ik er meer dan een minuut over?'* → km.\n\n**Veel-voorkomende fout**:\nLeerlingen vergeten dat 1 m **niet** 10 cm is — het is **100** cm. Tussen m en cm zitten 2 stapjes (m → dm → cm), dus × 100, niet × 10.",
+    explanation: "Lengte gaat over **afstand**. Hier is het maten-trapje van groot naar klein:\n\n**km → hm → dam → m → dm → cm → mm**\n\nIeder stapje is **× 10** (omlaag) of **÷ 10** (omhoog).\n\n**Vaak gebruikte stappen**:\n• 1 km = **1000** m  *(afstanden tussen steden)*\n• 1 m = **100** cm  *(meubels, mensen)*\n• 1 m = **1000** mm  *(schroeven, papier-dikte)*\n• 1 cm = **10** mm  *(potlood-dikte)*\n\n**Voorbeelden om te onthouden**:\n• Een muntje van 10 cent is ongeveer **20 mm** breed.\n• Een potlood is **15-20 cm** lang.\n• Een Nederlandse voordeur is **2 m** hoog.\n• De marathon is **42 km** lang.\n\n**Toets-truc**:\nAls je twijfelt, vraag jezelf af: *'Kan ik dit met een liniaal meten?'* Zo ja → cm of mm. *'Past het in mijn kamer?'* → m. *'Loop ik er meer dan een minuut over?'* → km.\n\n**Veel-voorkomende fout**:\nLeerlingen vergeten dat 1 m **niet** 10 cm is — het is **100** cm. Tussen m en cm zitten 2 stapjes (m → dm → cm), dus × 100, niet × 10.",
     svg: trapjeSvg(["km","hm","dam","m","dm","cm","mm"], COLORS.meter, "Lengte-trapje (× 10 per stap)"),
     checks: [
       {
@@ -178,7 +178,7 @@ const steps = [
         q: "Een potlood is **18 cm**. Hoeveel **mm** is dat?",
         options: ["180","1,8","18","1800"],
         answer: 0,
-        wrongHints: [null,"Andersom — kleiner getal als je in mm zegt is raar (mm is kleinere eenheid, dus meer er van).","Dat is alleen het getal in dezelfde eenheid.","Te veel — heb je × 100 gedaan?"],
+        wrongHints: [null,"Andersom — mm is een kleinere eenheid, dus je krijgt een gróter getal.","Dat is alleen het getal in dezelfde eenheid.","Te veel — heb je × 100 gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "× 10", tekst: "1 cm = 10 mm. 18 cm × 10 = 180 mm." }],
           woorden: [{ woord: "cm → mm", uitleg: "1 stap op trapje = × 10." }],
@@ -194,7 +194,7 @@ const steps = [
   // STAP 3: Gewicht
   {
     title: "Gewicht — ton, kg, g, mg",
-    explanation: "Gewicht gaat over **hoe zwaar** iets is. Hier zijn de **belangrijkste 3 stappen**:\n\n**ton → kg → g → mg**\n\nLet op: tussen ton en kg, en tussen kg en g, en tussen g en mg zit telkens **× 1000** (drie stapjes ineens, niet × 10).\n\n**Vaak gebruikte stappen**:\n• 1 ton = **1000** kg  *(zware vrachtwagens)*\n• 1 kg = **1000** g  *(boodschappen)*\n• 1 g = **1000** mg  *(medicijnen)*\n\n**Voorbeelden om te onthouden**:\n• Een appel ≈ **200 g**.\n• Een pak melk = **1 kg** (= 1 L water-equivalent).\n• Een mens-volwassene = **60-90 kg**.\n• Een auto = **1-2 ton** *(1000-2000 kg)*.\n\n**Toets-truc**:\n• 'Ik kan het optillen met 1 vinger' → mg of g.\n• 'Ik kan het tillen, maar niet lang' → kg.\n• 'Ik heb een hijskraan nodig' → ton.\n\n**Veel-voorkomende fout**:\nLeerlingen denken dat kg → g is × 100 (zoals lengte). Bij gewicht is het **× 1000**! Dat is de belangrijkste verwarring.\n\n**Handige weet**:\n• 1 L water = **1 kg** *(precies, bij kamertemperatuur)*\n• 500 g = ½ kg = **'pondje'** *(spreektaal)*\n• 250 g = ¼ kg = **'kwart pondje'** *(in slagerij)*",
+    explanation: "Gewicht gaat over **hoe zwaar** iets is. Hier zijn de **belangrijkste 3 stappen**:\n\n**ton → kg → g → mg**\n\nLet op: tussen ton en kg, en tussen kg en g, en tussen g en mg zit telkens **× 1000** (drie stapjes ineens, niet × 10).\n\n**Vaak gebruikte stappen**:\n• 1 ton = **1000** kg  *(zware vrachtwagens)*\n• 1 kg = **1000** g  *(boodschappen)*\n• 1 g = **1000** mg  *(medicijnen)*\n\n**Voorbeelden om te onthouden**:\n• Een appel ≈ **200 g**.\n• Een pak melk = **1 kg** (= 1 L water-equivalent).\n• Een mens-volwassene = **60-90 kg**.\n• Een auto = **1-2 ton** *(1000-2000 kg)*.\n\n**Toets-truc**:\n• 'Ik kan het optillen met 1 vinger' → mg of g.\n• 'Ik kan het tillen, maar niet lang' → kg.\n• 'Ik heb een hijskraan nodig' → ton.\n\n**Veel-voorkomende fout**:\nLeerlingen denken dat kg → g is × 100 (zoals lengte). Bij gewicht is het **× 1000**! Dat is de belangrijkste verwarring.\n\n**Handige weet**:\n• 1 L water ≈ **1 kg**\n• 500 g = ½ kg = **'pondje'** *(spreektaal)*\n• 250 g = ¼ kg = **'half pond'** *(in slagerij)*",
     svg: trapjeSvg(["ton","100kg","10kg","kg","100g","10g","g","100mg","10mg","mg"], COLORS.gewicht, "Gewicht-trapje (× 10 per stap, ELK 1000-blok = 3 stappen)"),
     checks: [
       {
@@ -215,7 +215,7 @@ const steps = [
         q: "Een vrachtwagen weegt **3 ton**. Hoeveel **kg** is dat?",
         options: ["3000","300","3.000.000","30.000"],
         answer: 0,
-        wrongHints: [null,"Te weinig — hoeveel kg zitten er in 1 ton, en pas dat toe op 3 ton.","Veel te veel — dat zou g zijn.","Te veel — dat is meer dan een vrachtwagen."],
+        wrongHints: [null,"Te weinig — hoeveel kg zitten er in 1 ton, en pas dat toe op 3 ton.","Veel te veel — dat zou g zijn.","Te veel — heb je × 10.000 gedaan?"],
         uitlegPad: {
           stappen: [{ titel: "× 1000", tekst: "1 ton = 1000 kg. 3 × 1000 = 3000 kg." }],
           woorden: [{ woord: "ton", uitleg: "Grote gewichts-eenheid. 1 ton = 1000 kg." }],
@@ -280,7 +280,7 @@ const steps = [
         q: "Een theelepel siroop is **5 mL**. Hoeveel **cL**?",
         options: ["0,5","5","50","0,05"],
         answer: 0,
-        wrongHints: [null,"Te veel — 5 mL is minder dan 1 cL, dus de uitkomst moet kleiner dan 1 zijn.","Andere eenheid — dat is alleen het getal.","Veel te veel."],
+        wrongHints: [null,"Dat is alleen het getal in mL. 5 mL is minder dan 1 cL, dus de uitkomst moet kleiner dan 1 zijn.","Veel te veel — naar een grotere eenheid moet je delen.","Te weinig — heb je ÷ 100 gedaan in plaats van ÷ 10?"],
         uitlegPad: {
           stappen: [{ titel: "÷ 10", tekst: "1 cL = 10 mL. 5 mL = 5/10 = 0,5 cL." }],
           woorden: [{ woord: "mL → cL", uitleg: "Naar grotere eenheid (cL) = ÷ 10." }],
@@ -367,7 +367,7 @@ const steps = [
   // STAP 6: Omrekenen — de truc
   {
     title: "Omrekenen — komma verschuiven",
-    explanation: "Bij omrekenen tussen eenheden hoef je **niet altijd te rekenen**. Vaak verschuift de **komma** alleen.\n\n**De gouden regel**:\n• Eenheid **groter maken** *(bv. cm → m)* → komma **naar links**.\n• Eenheid **kleiner maken** *(bv. m → cm)* → komma **naar rechts**.\n• Per stapje op het trapje = 1 plek komma verschuiven.\n\n**Voorbeelden lengte**:\n• **350 cm** → m? Trapje cm → dm → m = **2 stappen** omhoog → komma 2 plaatsen naar links → **3,50 m**.\n• **2,5 km** → m? Trapje km → hm → dam → m = **3 stappen** omlaag → komma 3 plaatsen naar rechts → **2500 m**.\n\n**Voorbeelden gewicht**:\n• **1500 g** → kg? g → kg = 3 stappen omhoog → komma 3 naar links → **1,5 kg**.\n• **0,75 kg** → g? kg → g = 3 stappen omlaag → komma 3 naar rechts → **750 g**.\n\n**Voorbeelden inhoud**:\n• **750 mL** → L? mL → L = 3 stappen omhoog → **0,75 L**.\n• **1,2 L** → mL? L → mL = 3 stappen omlaag → **1200 mL**.\n\n**Toets-truc**:\nMaak voor jezelf een mini-tabel:\n```\nkm  hm  dam  m   dm  cm  mm\n```\nSchrijf het getal op de juiste plek en verschuif de komma.\n\n**Voorbeeld**:\n*'Hoeveel cm is 0,42 m?'*\n• Plaats 0,42 op de m-plek.\n• Schuif komma 2 plekken naar rechts (m → dm → cm).\n• Antwoord: **42 cm**.\n\n**Veel-voorkomende fout**:\nVergeten welke kant op te schuiven. Onthoud: groter eenheid → kleiner getal *(want minder van die grote)*. Kleinere eenheid → groter getal.",
+    explanation: "Bij omrekenen tussen eenheden hoef je **niet altijd te rekenen**. Vaak verschuift de **komma** alleen.\n\n**De gouden regel**:\n• Eenheid **groter maken** *(bv. cm → m)* → komma **naar links**.\n• Eenheid **kleiner maken** *(bv. m → cm)* → komma **naar rechts**.\n• Per stapje op het trapje = 1 plek komma verschuiven.\n\n**Voorbeelden lengte**:\n• **350 cm** → m? Trapje cm → dm → m = **2 stappen** omhoog → komma 2 plaatsen naar links → **3,50 m**.\n• **2,5 km** → m? Trapje km → hm → dam → m = **3 stappen** omlaag → komma 3 plaatsen naar rechts → **2500 m**.\n\n**Voorbeelden gewicht**:\n• **1500 g** → kg? g → kg = 3 stappen omhoog → komma 3 naar links → **1,5 kg**.\n• **0,75 kg** → g? kg → g = 3 stappen omlaag → komma 3 naar rechts → **750 g**.\n\n**Voorbeelden inhoud**:\n• **750 mL** → L? mL → L = 3 stappen omhoog → **0,75 L**.\n• **1,2 L** → mL? L → mL = 3 stappen omlaag → **1200 mL**.\n\n**Toets-truc**:\nMaak voor jezelf een mini-tabel:\n```\nkm  hm  dam  m   dm  cm  mm\n```\nSchrijf het getal op de juiste plek en verschuif de komma.\n\n**Voorbeeld**:\n*'Hoeveel cm is 0,42 m?'*\n• Plaats 0,42 op de m-plek.\n• Schuif komma 2 plekken naar rechts (m → dm → cm).\n• Antwoord: **42 cm**.\n\n**Veel-voorkomende fout**:\nVergeten welke kant op te schuiven. Onthoud: grotere eenheid → kleiner getal *(want minder van die grote)*. Kleinere eenheid → groter getal.",
     svg: `<svg viewBox="0 0 400 200">
 <rect x="0" y="0" width="400" height="200" fill="${COLORS.paper}"/>
 <text x="200" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">Komma verschuiven — voorbeeld</text>
@@ -399,7 +399,7 @@ const steps = [
         q: "**1750 g** in **kg**?",
         options: ["1,75","17,5","175","0,175"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je de komma maar 1 plek verschoven?","Veel te veel — heb je de komma helemaal niet verschoven?","Te weinig — heb je 4 plekken verschoven ipv 3?"],
+        wrongHints: [null,"Te veel — heb je de komma maar 2 plekken verschoven?","Veel te veel — heb je de komma maar 1 plek verschoven?","Te weinig — heb je 4 plekken verschoven ipv 3?"],
         uitlegPad: {
           stappen: [{ titel: "÷ 1000 = komma 3 links", tekst: "1750 g → kg = ÷ 1000 = komma 3 plekken links → 1,750 = 1,75 kg." }],
           woorden: [{ woord: "komma verschuiven", uitleg: "Snelle omrekenmethode zonder rekenen." }],
@@ -413,7 +413,7 @@ const steps = [
         q: "**0,8 L** in **mL**?",
         options: ["800","80","8000","8"],
         answer: 0,
-        wrongHints: [null,"Te weinig — L → mL is 3 stappen omlaag, dus komma 3 naar rechts.","Veel te veel — heb je 4 plekken verschoven?","Te weinig — heb je überhaupt verschoven?"],
+        wrongHints: [null,"Te weinig — L → mL is 3 stappen omlaag, dus komma 3 naar rechts.","Veel te veel — heb je 4 plekken verschoven?","Te weinig — heb je maar 1 plek verschoven?"],
         uitlegPad: {
           stappen: [{ titel: "× 1000 = komma 3 rechts", tekst: "0,8 L × 1000 = 800 mL. Komma 3 plekken naar rechts: 0,800 → 800." }],
           woorden: [{ woord: "L → mL", uitleg: "Naar kleinere eenheid = × 1000." }],
@@ -427,7 +427,7 @@ const steps = [
         q: "Reken **4500 mm** om naar **meter**. Hoeveel m is dat?",
         options: ["4,5 m","45 m","450 m","0,45 m"],
         answer: 0,
-        wrongHints: [null,"Te veel — heb je maar 2 plekken verschoven? mm → m is 3 stappen.","Veel te veel — heb je überhaupt verschoven?","Te weinig — heb je 4 stappen verschoven?"],
+        wrongHints: [null,"Te veel — heb je maar 2 plekken verschoven? mm → m is 3 stappen.","Veel te veel — heb je maar 1 plek verschoven?","Te weinig — heb je 4 stappen verschoven?"],
         uitlegPad: {
           stappen: [{ titel: "÷ 1000 = komma 3 links", tekst: "4500 mm → m = ÷ 1000 = komma 3 plekken links → 4,500 = 4,5 m." }],
           woorden: [{ woord: "mm → m", uitleg: "3 stappen op trapje (mm→cm→dm→m) = ÷ 1000." }],
@@ -443,13 +443,13 @@ const steps = [
   // STAP 7: Toets-redactiesommen
   {
     title: "Toets-redactiesommen — eenheden mixen",
-    explanation: "Op de Doorstroomtoets krijg je vaak **verhalen** waar je eenheden moet **omrekenen** vóór je kunt rekenen. Dat is de truc.\n\n**Toets-strategie in 4 stappen**:\n1. **Lees het verhaal** rustig en onderstreep getallen + eenheden.\n2. **Maak alles dezelfde eenheid** *(meestal de kleinste)*.\n3. **Reken** zoals een normale som.\n4. **Antwoord in de gevraagde eenheid** *(let op!)*.\n\n**Voorbeeld 1 — gewicht**:\n*'Mama koopt 3 zakken aardappels van 2,5 kg en een zak van 750 g. Wat is het totaal in kg?'*\n• Stap 1: getallen = 3 × 2,5 kg + 750 g.\n• Stap 2: alles in g = 3 × 2500 + 750 = 7500 + 750 = **8250 g**.\n• Stap 3: gevraagd in kg → **8,25 kg**.\n\n**Voorbeeld 2 — inhoud + verdelen**:\n*'Een fles bevat 1,5 L limonade. Je wilt glazen van 250 mL vullen. Hoeveel volle glazen krijg je?'*\n• Stap 1: getallen = 1,5 L en 250 mL.\n• Stap 2: alles in mL → 1,5 L = 1500 mL.\n• Stap 3: 1500 ÷ 250 = **6 glazen**.\n\n**Voorbeeld 3 — lengte + tijd**:\n*'Tom fietst 12 km in een halfuur. Hoeveel m per minuut?'*\n• Stap 1: 12 km in 30 min.\n• Stap 2: alles in m + min → 12.000 m in 30 min.\n• Stap 3: 12.000 ÷ 30 = **400 m per minuut**.\n\n**Veel-voorkomende fouten**:\n• Vergeten om eerst om te rekenen → telt 2,5 kg + 750 als getallen ipv eenheden.\n• Antwoord in verkeerde eenheid geven *(in kg gevraagd, in g geantwoord)*.\n• Decimaal en gehele getallen door elkaar halen.\n\n**Tip bij de Doorstroomtoets**:\nSchrijf altijd 2 dingen op vóór je rekent:\n1. Welke eenheid is de **kleinste**?\n2. In welke eenheid wordt het **antwoord** gevraagd?\n\nDat scheelt 90% van de fouten.",
+    explanation: "Op de Doorstroomtoets krijg je vaak **verhalen** waar je eenheden moet **omrekenen** vóór je kunt rekenen. Dat is de truc.\n\n**Toets-strategie in 4 stappen**:\n1. **Lees het verhaal** rustig en onderstreep getallen + eenheden.\n2. **Maak alles dezelfde eenheid** *(meestal de kleinste)*.\n3. **Reken** zoals een normale som.\n4. **Antwoord in de gevraagde eenheid** *(let op!)*.\n\n**Voorbeeld 1 — gewicht**:\n*'Mama koopt 3 zakken aardappels van 2,5 kg en een zak van 750 g. Wat is het totaal in kg?'*\n• Stap 1: getallen = 3 × 2,5 kg + 750 g.\n• Stap 2: alles in g = 3 × 2500 + 750 = 7500 + 750 = **8250 g**.\n• Stap 3: gevraagd in kg → **8,25 kg**.\n\n**Voorbeeld 2 — inhoud + verdelen**:\n*'Een fles bevat 1,5 L limonade. Je wilt glazen van 250 mL vullen. Hoeveel volle glazen krijg je?'*\n• Stap 1: getallen = 1,5 L en 250 mL.\n• Stap 2: alles in mL → 1,5 L = 1500 mL.\n• Stap 3: 1500 ÷ 250 = **6 glazen**.\n\n**Voorbeeld 3 — lengte + tijd**:\n*'Tom fietst 12 km in een halfuur. Hoeveel m per minuut?'*\n• Stap 1: 12 km in 30 min.\n• Stap 2: alles in m + min → 12.000 m in 30 min.\n• Stap 3: 12.000 ÷ 30 = **400 m per minuut**.\n\n**Veel-voorkomende fouten**:\n• Vergeten om eerst om te rekenen → telt 2,5 kg + 750 als getallen ipv eenheden.\n• Antwoord in verkeerde eenheid geven *(in kg gevraagd, in g geantwoord)*.\n• Decimaal en gehele getallen door elkaar halen.\n\n**Tip bij de Doorstroomtoets**:\nSchrijf altijd 2 dingen op vóór je rekent:\n1. Welke eenheid is de **kleinste**?\n2. In welke eenheid wordt het **antwoord** gevraagd?\n\nDat scheelt veel fouten.",
     checks: [
       {
         q: "Mama koopt **2 pakken meel van 750 g** en **1 pak van 1,5 kg**. Hoeveel **kg** in totaal?",
         options: ["3","3,5","2250","4,25"],
         answer: 0,
-        wrongHints: [null,"Te veel — let op: er zijn 2 pakken van 750 g, niet één. Welke bewerking gebruik je dan?","Dat is in g, niet kg.","Veel te veel — heb je extra getallen meegerekend?"],
+        wrongHints: [null,"Te veel — let op: er zijn 2 pakken van 750 g, niet één. Welke bewerking gebruik je dan?","Reken nog eens: hoeveel pakken van 750 g zijn er, en in welke eenheid wordt het antwoord gevraagd?","Veel te veel — heb je extra getallen meegerekend?"],
         uitlegPad: {
           stappen: [{ titel: "Eerst gelijke eenheid", tekst: "750 g = 0,75 kg. 2 × 0,75 + 1,5 = 1,5 + 1,5 = 3 kg." }],
           woorden: [{ woord: "redactiesom", uitleg: "Verhalende som met meerdere stappen + eenheid-omrekening." }],
@@ -477,7 +477,7 @@ const steps = [
         q: "Sven loopt **3 km** in **45 minuten**. Hoeveel **m per minuut**?",
         options: ["66,7","667","60","100"],
         answer: 0,
-        wrongHints: [null,"Te veel met factor 10 — heb je km vergeten om te zetten naar m?","Te weinig — denk: 1 km in 15 min, dus per minuut?","Klopt niet — reken 3000 m ÷ 45 min."],
+        wrongHints: [null,"Te veel met factor 10 — controleer: 3000 ÷ 45.","Te weinig — denk: 1 km in 15 min, dus per minuut?","Klopt niet — reken 3000 m ÷ 45 min."],
         uitlegPad: {
           stappen: [{ titel: "km → m → delen", tekst: "3 km = 3000 m. 3000 ÷ 45 = 66,7 m per min." }],
           woorden: [{ woord: "snelheid", uitleg: "Afstand ÷ tijd = snelheid per tijdseenheid." }],
@@ -491,7 +491,7 @@ const steps = [
         q: "Een zwembad meet **25 m × 10 m × 1,5 m**. Hoeveel **L water** past erin? *(1 m³ = 1000 L)*",
         options: ["375.000","375","3750","37.500"],
         answer: 0,
-        wrongHints: [null,"Te weinig — vergeet de omrekening van m³ naar L niet.","Te weinig — dat is alleen het volume in m³, maar gevraagd is in L.","Te weinig — bereken eerst het volume in m³ en reken dat daarna om naar L."],
+        wrongHints: [null,"Te weinig — dat is alleen het volume in m³, maar gevraagd is in L.","Te weinig — vergeet de omrekening van m³ naar L niet (× 1000).","Te weinig — bereken eerst het volume in m³ en reken dat daarna om naar L."],
         uitlegPad: {
           stappen: [{ titel: "Volume × 1000", tekst: "25×10×1,5 = 375 m³. × 1000 (L per m³) = 375.000 L." }],
           woorden: [{ woord: "m³", uitleg: "Kubieke meter. Volume-eenheid. 1 m³ = 1000 L." }],
@@ -527,7 +527,7 @@ const steps = [
         q: "Op de weegschaal: 3 appels **150 g** + 2 peren **180 g** = totaal hoeveel **g**?",
         options: ["810","330","450","630"],
         answer: 0,
-        wrongHints: [null,"Te weinig — heb je rekening gehouden met 3 appels en 2 peren?","Te weinig — heb je alleen de eerste appel + peer geteld?","Te weinig — heb je de 3 appels niet meegerekend?"],
+        wrongHints: [null,"Te weinig — heb je rekening gehouden met 3 appels en 2 peren?","Te weinig — heb je alleen de appels geteld?","Te weinig — heb je maar één peer meegerekend?"],
         uitlegPad: {
           stappen: [{ titel: "3 × 150 + 2 × 180", tekst: "Appels: 3 × 150 = 450. Peren: 2 × 180 = 360. Totaal: 450 + 360 = 810." }],
           woorden: [{ woord: "totaal-gewicht", uitleg: "Som van alle stuk-gewichten." }],
@@ -541,7 +541,7 @@ const steps = [
         q: "Een fles cola van **1,5 L** kost **€ 1,80**. Wat is de **prijs per mL**?",
         options: ["€ 0,0012","€ 1,20","€ 0,12","€ 0,012"],
         answer: 0,
-        wrongHints: [null,"Te veel — reken eerst de hoeveelheid om naar mL voordat je de prijs deelt.","Veel te veel — dat zou per L zijn.","Te veel — heb je 1 plek komma verkeerd?"],
+        wrongHints: [null,"Veel te veel — dat is de prijs per L, niet per mL.","Te veel — reken eerst de hoeveelheid om naar mL voordat je de prijs deelt.","Te veel — heb je 1 plek komma verkeerd?"],
         uitlegPad: {
           stappen: [{ titel: "L → mL → delen", tekst: "1,5 L = 1500 mL. €1,80 ÷ 1500 = €0,0012 per mL." }],
           woorden: [{ woord: "stuksprijs", uitleg: "Prijs per eenheid (hier mL)." }],
@@ -584,10 +584,10 @@ const steps = [
           niveaus: { basis: "Voordeur.", simpeler: "2,5 m = ongeveer hoogte van voordeur. Potlood is 15 cm.", nogSimpeler: "Deur" },
         },
       },
-      { q: "1 km = hoeveel m?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — 100 m is een sprint, geen kilometer.", "Veel te weinig — 10 m is tafeltennistafel-lengte.", "Te veel — dat is 10 km."] },
+      { q: "1 km = hoeveel m?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — 100 m is een sprint, geen kilometer.", "Veel te weinig — 10 m is ongeveer de lengte van een klaslokaal.", "Te veel — dat is 10 km."] },
       { q: "1 m = hoeveel cm?", options: ["100","10","1000","60"], answer: 0, wrongHints: [null, "Te weinig — een lat van 10 cm is geen meter.", "Dat is m → mm (×1000).", "60 is tijd (sec/min), geen lengtemaat."] },
       { q: "1 cm = hoeveel mm?", options: ["10","100","1","1000"], answer: 0, wrongHints: [null, "Dat is m → cm-verhouding, niet cm → mm.", "1 mm in 1 cm? Veel te weinig.", "Dat is km → m-verhouding."] },
-      { q: "1 kg = hoeveel g?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — hoeveel gram past in 1 kg? Denk aan de kilo-prefix.", "Veel te weinig — 10 g is een paperclip.", "Te veel — dat zou 10 kg zijn."] },
+      { q: "1 kg = hoeveel g?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — hoeveel gram past in 1 kg? Denk aan de kilo-prefix.", "Veel te weinig — 10 g is heel licht, zoals een paar muntjes.", "Te veel — dat zou 10 kg zijn."] },
       { q: "1 L = hoeveel mL?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — hoeveel milliliter zitten er in een liter? Denk aan de milli-prefix.", "Heel weinig — 10 mL is een lepel.", "Te veel — dat is 10 L (een emmer)."] },
       { q: "Zet om: **2,5 m** in cm", options: ["250","25","2500","0,025"], answer: 0, wrongHints: [null, "×10.", "×1000.", "Verkeerde kant."] },
       { q: "Zet om: **500 g** in kg", options: ["0,5","5","50","0,05"], answer: 0, wrongHints: [null, "Te veel — hoeveel g zitten er in 1 kg? Deel dan 500 g daardoor.", "Veel te veel.", "Te weinig — controleer: hoeveel gram is jouw antwoord?"] },
@@ -598,7 +598,7 @@ const steps = [
       { q: "Een sinaasappel weegt **ongeveer**?", options: ["150 g","150 kg","15 g","1,5 kg"], answer: 0, wrongHints: [null, "Veel te zwaar.", "Te licht.", "Te zwaar."] },
       { q: "Lengte van een **gymzaal** ongeveer?", options: ["20 m","2 m","200 m","2 cm"], answer: 0, wrongHints: [null, "Te klein.", "Te groot.", "Heel klein."] },
       { q: "1 **ton** = hoeveel kg?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — een ton is veel meer dan 100 kg. Denk aan een auto.", "Heel weinig — 10 kg is maar een kleine tas.", "Te veel — dat zou 10 ton zijn, zwaarder dan meerdere vrachtwagens."] },
-      { q: "1 **dl** = hoeveel mL?", options: ["100","10","1000","1"], answer: 0, wrongHints: [null, "Niet — dat is cl.", "Niet — ×10.", "Niet."] },
+      { q: "1 **dL** = hoeveel mL?", options: ["100","10","1000","1"], answer: 0, wrongHints: [null, "Niet — dat is 1 cL.", "Niet — dat is 1 L.", "Niet."] },
     ],
   },
 ];

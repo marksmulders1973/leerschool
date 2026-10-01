@@ -58,7 +58,7 @@ const steps = [
         q: "**75 mm** is hoeveel cm?",
         options: ["7,5 cm", "750 cm", "0,75 cm", "0,075 cm"],
         answer: 0,
-        wrongHints: [null, "Niet — × niet ÷.", "Te klein.", "Veel te klein."],
+        wrongHints: [null, "Niet — je moet delen, niet vermenigvuldigen.", "Te klein.", "Veel te klein."],
         uitlegPad: {
           stappen: [
             { titel: "Millimeter naar centimeter", tekst: "Millimeter is nog kleiner dan centimeter. Ga je naar een grotere eenheid, dan deel je." },
@@ -193,7 +193,7 @@ const steps = [
             { titel: "Reken om naar m²", tekst: "Bedenk hoeveel vierkante meter er in één hectare gaan, en vermenigvuldig dat met 2." },
           ],
           woorden: [{ woord: "hectare", uitleg: "Een grote oppervlakte-eenheid, ongeveer zo groot als anderhalf voetbalveld." }],
-          theorie: "De **hectare** (ha) is een handige eenheid voor grote oppervlaktes zoals velden en parken. Eén hectare komt overeen met een vierkant van honderd meter bij honderd meter. Een voetbalveld (~7140 m²) is ongeveer 1,4 hectare.",
+          theorie: "De **hectare** (ha) is een handige eenheid voor grote oppervlaktes zoals velden en parken. Eén hectare komt overeen met een vierkant van honderd meter bij honderd meter. Een voetbalveld (~7140 m²) is ongeveer 0,7 hectare.",
           voorbeelden: [{ type: "buiten", tekst: "Een boer met 5 hectare land rekent dat om naar vierkante meter om te weten hoeveel gewas erop past." }],
           basiskennis: [{ onderwerp: "Vierkant van 100 bij 100", uitleg: "Eén hectare is de oppervlakte van een vierkant van 100 meter bij 100 meter." }],
           niveaus: { basis: "2 × 10 000 = 20 000.", simpeler: "1 ha = 10 000 m².", nogSimpeler: "Hoeveel m² gaan er in 1 hectare? Vermenigvuldig dat met 2." },
@@ -263,7 +263,7 @@ const steps = [
         q: "Een driehoek met **schuine zijde 5** + basis 4 + hoogte 3 (rechthoekige driehoek). Opp?",
         options: ["6", "10", "12", "60"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet ½.", "Niet — niet schuine × basis.", "Niet — onmogelijk groot."],
+        wrongHints: [null, "Niet — de schuine zijde hoort niet in de formule.", "Niet — vergeet ½ niet.", "Niet — onmogelijk groot."],
         uitlegPad: {
           stappen: [
             { titel: "Welke maten heb je nodig?", tekst: "Voor de oppervlakte van een driehoek gebruik je alleen de basis en de hoogte — de schuine zijde is hier niet nodig." },
@@ -300,7 +300,7 @@ const steps = [
   {
     title: "Inhoud — kubus, balk, cilinder",
     explanation:
-      "**Inhoud** = hoeveel ruimte een 3D-figuur inneemt (binnen-volume).\n\n**Kubus** (alle zijden gelijk, zijde z):\n• Inhoud = **z × z × z = z³**.\n• Voorbeeld: zijde 4 cm → inhoud = 64 cm³.\n\n**Balk** (lengte L, breedte B, hoogte H):\n• Inhoud = **L × B × H**.\n• Voorbeeld: 5 × 3 × 2 = 30 cm³.\n\n**Cilinder** (straal r grondvlak, hoogte h):\n• Inhoud = **π × r² × h** (= grondvlak × hoogte).\n• Voorbeeld: r=3, h=10 → π × 9 × 10 = 282,6 cm³.\n\n**Inhoud-eenheden**:\n• **mm³** (kubieke millimeter).\n• **cm³** = 1000 mm³.\n• **dm³** = 1000 cm³.\n• **m³** = 1000 dm³ = 1 000 000 cm³.\n\n**Toets-tip**: tussen elke inhoud-eenheid is factor **1000** (niet 10 zoals lengte, niet 100 zoals oppervlakte). 3D = 10³.\n\n**Liter-relatie**:\n• **1 L = 1 dm³ = 1000 cm³ = 1000 mL**.\n• 1 m³ = 1000 L.\n• 1 cm³ = 1 mL.\n• Heel handig in praktijk: emmer 10 L = 10 dm³ = 10 000 cm³.\n\n**Voorbeelden CSE-stijl**:\n• Pak melk 1 L = 1 dm³. Hoeveel ml in 0,25 L? 250 ml.\n• Aquarium 50 cm × 30 cm × 25 cm. Inhoud? 37 500 cm³ = 37,5 L.\n• Cylinder-pot d=6 cm, h=10 cm. Inhoud? π × 3² × 10 = 282,6 cm³ ≈ 283 mL.\n\n**Veelgemaakte fouten**:\n• Inhoud-eenheden niet ÷ 100 of × 10, MAAR factor 1000.\n• Bij cilinder: r ipv d gebruiken voor formule.\n• Vergeet dat hoogte loodrecht op grondvlak staat.\n\n**Combinaties**:\n• Halve cilinder = ½ × π × r² × h.\n• L-vormige tank: opdelen in balken.",
+      "**Inhoud** = hoeveel ruimte een 3D-figuur inneemt (binnen-volume).\n\n**Kubus** (alle zijden gelijk, zijde z):\n• Inhoud = **z × z × z = z³**.\n• Voorbeeld: zijde 4 cm → inhoud = 64 cm³.\n\n**Balk** (lengte L, breedte B, hoogte H):\n• Inhoud = **L × B × H**.\n• Voorbeeld: 5 × 3 × 2 = 30 cm³.\n\n**Cilinder** (straal r grondvlak, hoogte h):\n• Inhoud = **π × r² × h** (= grondvlak × hoogte).\n• Voorbeeld: r=3, h=10 → π × 9 × 10 = 282,6 cm³.\n\n**Inhoud-eenheden**:\n• **mm³** (kubieke millimeter).\n• **cm³** = 1000 mm³.\n• **dm³** = 1000 cm³.\n• **m³** = 1000 dm³ = 1 000 000 cm³.\n\n**Toets-tip**: tussen elke inhoud-eenheid is factor **1000** (niet 10 zoals lengte, niet 100 zoals oppervlakte). 3D = 10³.\n\n**Liter-relatie**:\n• **1 L = 1 dm³ = 1000 cm³ = 1000 mL**.\n• 1 m³ = 1000 L.\n• 1 cm³ = 1 mL.\n• Heel handig in praktijk: emmer 10 L = 10 dm³ = 10 000 cm³.\n\n**Voorbeelden CSE-stijl**:\n• Pak melk 1 L = 1 dm³. Hoeveel ml in 0,25 L? 250 ml.\n• Aquarium 50 cm × 30 cm × 25 cm. Inhoud? 37 500 cm³ = 37,5 L.\n• Cilinder-pot d=6 cm, h=10 cm. Inhoud? π × 3² × 10 = 282,6 cm³ ≈ 283 mL.\n\n**Veelgemaakte fouten**:\n• Inhoud-eenheden niet ÷ 100 of × 10, MAAR factor 1000.\n• Bij cilinder: r ipv d gebruiken voor formule.\n• Vergeet dat hoogte loodrecht op grondvlak staat.\n\n**Combinaties**:\n• Halve cilinder = ½ × π × r² × h.\n• L-vormige tank: opdelen in balken.",
     checks: [
       {
         q: "Kubus met **zijde 5 cm**. Inhoud?",
@@ -431,7 +431,7 @@ const steps = [
         },
       },
       {
-        q: "Een rechthoekige zwembad **5 m × 3 m × 1 m**. Volgieten met **liter** water?",
+        q: "Een rechthoekig zwembad is **5 m × 3 m × 1 m**. Hoeveel **liter** water past erin?",
         options: ["15 000 L", "1500 L", "150 L", "150 000 L"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te weinig.", "Te veel."],

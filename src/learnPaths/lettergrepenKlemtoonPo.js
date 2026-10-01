@@ -105,7 +105,7 @@ const steps = [
           stappen: [{ titel: "Klinker = kern van een lettergreep", tekst: "Elke lettergreep heeft minstens één klinker (a, e, i, o, u). Zonder klinker kun je een stukje niet uitspreken als klap." }],
           niveaus: {
             basis: "Elke lettergreep heeft minstens één klinker.",
-            simpeler: "Hoe tel je lettergrepen? Teel de klinkers in een stukje.",
+            simpeler: "Hoe tel je lettergrepen? Tel de klinkers in een stukje.",
             nogSimpeler: "Heeft elke lettergreep een a, e, i, o of u erin?",
           },
         },
@@ -293,7 +293,7 @@ const steps = [
           "ja, overal",
         ],
         answer: 0,
-        wrongHints: [null, "Eén lettergreep split je niet — er is geen tweede stukje.", "Ook hier is geen tweede lettergreep om op af te breken.", "Afbreken kan alleen tussen lettergrepen."],
+        wrongHints: [null, "Eén lettergreep splits je niet — er is geen tweede stukje.", "Ook hier is geen tweede lettergreep om op af te breken.", "Afbreken kan alleen tussen lettergrepen."],
         uitlegPad: {
           stappen: [{ titel: "Eén lettergreep = niet afbreken", tekst: "'Zon' is één klap (1 lettergreep). Je kunt het niet afbreken." }],
           niveaus: {
@@ -304,15 +304,15 @@ const steps = [
         },
       },
       {
-        q: "Welke afbreking van 'bibliotheek' (bi-blio-theek) is goed?",
+        q: "Welke afbreking van 'bibliotheek' (bi-bli-o-theek) is goed?",
         options: ["bi-bliotheek", "bib-liothek", "biblio-teek", "bibliothe-ek"],
         answer: 0,
-        wrongHints: [null, "Dat knipt midden in de tweede lettergreep ('blio').", "Dat knipt de tweede lettergreep doormidden.", "Dat knipt midden in de klank 'theek'."],
+        wrongHints: [null, "Dat knipt midden in de tweede lettergreep ('bli').", "Let op de spelling: het is 'theek', met th.", "Dat knipt midden in de klank 'theek'."],
         uitlegPad: {
-          stappen: [{ titel: "bi-bliotheek", tekst: "Bibliotheek = bi-blio-theek. Je mag afbreken na de eerste lettergreep: bi-bliotheek." }],
+          stappen: [{ titel: "bi-bliotheek", tekst: "Bibliotheek = bi-bli-o-theek. Je mag afbreken na de eerste lettergreep: bi-bliotheek." }],
           niveaus: {
-            basis: "bi-blio-theek: breek af na 'bi' of na 'biblio'.",
-            simpeler: "Klap mee: bi — blio — theek. Je breekt af op zo'n grens.",
+            basis: "bi-bli-o-theek: breek af na 'bi', 'bibli' of 'biblio'.",
+            simpeler: "Klap mee: bi — bli — o — theek. Je breekt af op zo'n grens.",
             nogSimpeler: "Welke knipt af na de eerste lettergreep 'bi-'?",
           },
         },
@@ -353,7 +353,7 @@ const steps = [
         q: "Waar ligt de klemtoon in 'banaan' (ba-naan)?",
         options: ["op 'naan' (de tweede)", "op 'ba' (de eerste)", "op allebei evenveel", "er is geen klemtoon"],
         answer: 0,
-        wrongHints: [null, "Spreek uit: ba-NAAN, de nadruk valt achteraan.", "Niet de eerste — luister nog eens.", "Elk meerlettergrepig woord heeft een klemtoon."],
+        wrongHints: [null, "Spreek uit: ba-NAAN, de nadruk valt achteraan.", "Luister goed — de ene klap klinkt sterker.", "Elk meerlettergrepig woord heeft een klemtoon."],
         uitlegPad: {
           stappen: [{ titel: "ba-NAAN", tekst: "Je zegt 'baNAAN', met de nadruk op 'naan'. Daar ligt de klemtoon." }],
           niveaus: {
@@ -367,7 +367,7 @@ const steps = [
         q: "In 'tomaat' (to-maat), waar ligt de klemtoon?",
         options: ["op 'maat'", "op 'to'", "op allebei", "nergens"],
         answer: 0,
-        wrongHints: [null, "Spreek uit: to-MAAT.", "Niet 'to' — luister nog eens.", "Er is één klemtoon per woord."],
+        wrongHints: [null, "Spreek uit: to-MAAT.", "Luister goed — de ene klap klinkt sterker.", "Er is één klemtoon per woord."],
         uitlegPad: {
           stappen: [{ titel: "to-MAAT", tekst: "Je zegt 'toMAAT', met de nadruk op 'maat'." }],
           niveaus: {
@@ -414,7 +414,7 @@ const steps = [
         q: "In 'computer' (com-pu-ter), waar ligt de klemtoon?",
         options: ["op 'pu' (de tweede)", "op 'com' (de eerste)", "op 'ter' (de derde)", "op allebei de laatste twee"],
         answer: 0,
-        wrongHints: [null, "Spreek uit: com-PU-ter.", "Spreek uit: com-PU-ter — de nadruk valt niet vooraan.", "Er is maar één klemtoon."],
+        wrongHints: [null, "Spreek uit: com-PU-ter — de nadruk valt niet vooraan.", "Spreek uit: com-PU-ter.", "Er is maar één klemtoon."],
         uitlegPad: {
           stappen: [{ titel: "com-PU-ter", tekst: "Je zegt 'comPUter', met de nadruk op 'pu'. Dat is de tweede lettergreep." }],
           niveaus: {

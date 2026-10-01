@@ -1,6 +1,6 @@
-// Leerpad: Marktvormen + Markfalen — HAVO/VWO Economie
+// Leerpad: Marktvormen + Marktfalen — HAVO/VWO Economie
 // CSE-onderwerp havo-4/5 + vwo-4/5/6. Vraag-aanbod, marktvormen,
-// markfalen, overheidsingrijpen, inkomensverdeling.
+// marktfalen, overheidsingrijpen, inkomensverdeling.
 // 5 stappen × ~5 checks. Referentieniveau havo-3F / vwo-3S.
 
 const stepEmojis = ["📊", "🏪", "⚠️", "🏛️", "🏆"];
@@ -8,7 +8,7 @@ const stepEmojis = ["📊", "🏪", "⚠️", "🏛️", "🏆"];
 const chapters = [
   { letter: "A", title: "Vraag + aanbod + prijs", emoji: "📊", from: 0, to: 0 },
   { letter: "B", title: "4 Marktvormen", emoji: "🏪", from: 1, to: 1 },
-  { letter: "C", title: "Markfalen", emoji: "⚠️", from: 2, to: 2 },
+  { letter: "C", title: "Marktfalen", emoji: "⚠️", from: 2, to: 2 },
   { letter: "D", title: "Overheidsingrijpen", emoji: "🏛️", from: 3, to: 3 },
   { letter: "E", title: "Eindopdracht (Lorenz + Gini)", emoji: "🏆", from: 4, to: 4 },
 ];
@@ -62,7 +62,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — geen vraag-verandering.", "Niet — verschuiving, niet langs.", "Wel reactie."],
         uitlegPad: {
-          stappen: [{ titel: "Aanbod-shift", tekst: "Goede oogst = elke prijs nu hoger aanbod → curve naar rechts. Nieuwe evenwicht: lagere P, hogere Q. Boeren paradox: goede oogst kan tot **lager inkomen** leiden als vraag inelastisch is." }],
+          stappen: [{ titel: "Aanbod-shift", tekst: "Goede oogst = elke prijs nu hoger aanbod → curve naar rechts. Nieuw evenwicht: lagere P, hogere Q. Boerenparadox: goede oogst kan tot **lager inkomen** leiden als vraag inelastisch is." }],
           niveaus: { basis: "Aanbod-shift → P daalt.", simpeler: "Veel oogst = lagere prijs.", nogSimpeler: "Q↑P↓" },
         },
       },
@@ -94,7 +94,7 @@ const steps = [
         wrongHints: [null, "Niet — onder evenwicht is tekort.", "Wel effect.", "Niet — plafond houdt prijs vast."],
         uitlegPad: {
           stappen: [
-            { titel: "Onder evenwicht: Qd > Qs", tekst: "Met prijsplafond P_max < P*: bij die lage prijs willen veel mensen kopen (hoog Qd), weinig willen verkopen (laag Qs) → tekort. NL huurmarkt: gereguleerde sector → wachtlijsten + black-market. Vrije sector hogere prijzen." },
+            { titel: "Onder evenwicht: Qd > Qs", tekst: "Met prijsplafond P_max < P*: bij die lage prijs willen veel mensen kopen (hoog Qd), weinig willen verkopen (laag Qs) → tekort. NL huurmarkt: gereguleerde sector → wachtlijsten + zwarte markt. Vrije sector hogere prijzen." },
           ],
           niveaus: { basis: "Tekort.", simpeler: "Te lage prijs → meer vraag dan aanbod.", nogSimpeler: "Tekort" },
         },
@@ -106,10 +106,10 @@ const steps = [
   {
     title: "Vier marktvormen — concurrentie ↔ monopolie",
     explanation:
-      "**Marktvormen** verschillen in aantal aanbieders + productdifferentiatie + toetredingsbarrières.\n\n**1. Volkomen concurrentie**:\n• Heel veel kleine aanbieders + kopers.\n• Homogeen product (graan, aardappels).\n• Vrije toetreding/uittreding.\n• Volledige informatie.\n• Resultaat: prijs = marginale kosten = laagst mogelijk.\n• **Theoretisch ideaal**, in praktijk zeldzaam (landbouwgrondstoffen, aandelenmarkt benaderen).\n\n**2. Monopolistische concurrentie**:\n• Veel aanbieders maar **gedifferentieerd product** (merk, smaak, locatie).\n• Lage toetredingsdrempel.\n• Voorbeelden: restaurants, kappers, schoenenwinkels, kleding.\n• Bedrijf heeft beperkt prijszettings-vermogen door merken-loyaliteit.\n\n**3. Oligopolie**:\n• **Weinig grote aanbieders** (meestal 3-8).\n• Hoge toetredingsdrempels (investering, schaal).\n• Voorbeelden: supermarkten (AH, Jumbo, Lidl, Aldi, Plus), benzinepompen (Shell, BP, Esso, Total), telecom (KPN, VodafoneZiggo, T-Mobile).\n• Onderlinge afhankelijkheid: één bedrijf prijs daalt → anderen volgen.\n• Risico **kartelvorming** (prijsafspraken — illegaal).\n• Game-theory: 'prisoner's dilemma' tussen samenwerken + concurreren.\n\n**4. Monopolie**:\n• **Eén aanbieder**.\n• Geen substituten.\n• Toetredingsbarrières heel hoog.\n• Voorbeelden:\n  - Natuurlijk: ProRail (spoor-infrastructuur), waterleiding.\n  - Wettelijk: octrooien (Pfizer-medicijn), Postbus 51-zegels.\n  - Markt-: Microsoft Windows decennia (afnemend), De Beers diamant historisch.\n• **Marktmacht**: bedrijf kan prijs zetten boven marginale kosten → hoge winst, lage Q, **welvaartsverlies** voor maatschappij.\n\n**Vergelijking productie + prijs**:\n| | aantal | prijs | output |\n|---|---|---|---|\n| Volkomen | veel | laag | hoog |\n| Monopolistisch | veel | iets hoger | iets lager |\n| Oligopolie | weinig | hoger | lager |\n| Monopolie | één | hoogst | laagst |\n\n**Toetredingsbarrières**:\n• Schaalvoordelen (eerst groot bedrijf bouwen kost veel).\n• Octrooien + auteursrecht.\n• Netwerkeffecten (WhatsApp meer waardevol naarmate meer gebruikers).\n• Regulering (vergunningen, normen).\n• Kapitaalbehoefte (oliemaatschappij vereist miljarden).",
+      "**Marktvormen** verschillen in aantal aanbieders + productdifferentiatie + toetredingsbarrières.\n\n**1. Volkomen concurrentie**:\n• Heel veel kleine aanbieders + kopers.\n• Homogeen product (graan, aardappels).\n• Vrije toetreding/uittreding.\n• Volledige informatie.\n• Resultaat: prijs = marginale kosten = laagst mogelijk.\n• **Theoretisch ideaal**, in praktijk zeldzaam (landbouwgrondstoffen, aandelenmarkt benaderen).\n\n**2. Monopolistische concurrentie**:\n• Veel aanbieders maar **gedifferentieerd product** (merk, smaak, locatie).\n• Lage toetredingsdrempel.\n• Voorbeelden: restaurants, kappers, schoenenwinkels, kleding.\n• Bedrijf heeft beperkt prijszettings-vermogen door merken-loyaliteit.\n\n**3. Oligopolie**:\n• **Weinig grote aanbieders** (meestal 3-8).\n• Hoge toetredingsdrempels (investering, schaal).\n• Voorbeelden: supermarkten (AH, Jumbo, Lidl, Aldi, Plus), benzinepompen (Shell, BP, Esso, Total), telecom (KPN, VodafoneZiggo, T-Mobile).\n• Onderlinge afhankelijkheid: verlaagt één bedrijf de prijs → anderen volgen.\n• Risico **kartelvorming** (prijsafspraken — illegaal).\n• Speltheorie: 'prisoner's dilemma' (gevangenendilemma) tussen samenwerken + concurreren.\n\n**4. Monopolie**:\n• **Eén aanbieder**.\n• Geen substituten.\n• Toetredingsbarrières heel hoog.\n• Voorbeelden:\n  - Natuurlijk: ProRail (spoor-infrastructuur), waterleiding.\n  - Wettelijk: octrooien (Pfizer-medicijn), vroeger het postmonopolie op brieven.\n  - Markt-: Microsoft Windows decennia (afnemend), De Beers diamant historisch.\n• **Marktmacht**: bedrijf kan prijs zetten boven marginale kosten → hoge winst, lage Q, **welvaartsverlies** voor maatschappij.\n\n**Vergelijking productie + prijs**:\n| | aantal | prijs | output |\n|---|---|---|---|\n| Volkomen | veel | laag | hoog |\n| Monopolistisch | veel | iets hoger | iets lager |\n| Oligopolie | weinig | hoger | lager |\n| Monopolie | één | hoogst | laagst |\n\n**Toetredingsbarrières**:\n• Schaalvoordelen (eerst groot bedrijf bouwen kost veel).\n• Octrooien + auteursrecht.\n• Netwerkeffecten (WhatsApp meer waardevol naarmate meer gebruikers).\n• Regulering (vergunningen, normen).\n• Kapitaalbehoefte (oliemaatschappij vereist miljarden).",
     checks: [
       {
-        q: "Hoeveelheid supermarkt-ketens in Nederland: 5-7 grote. Welke marktvorm?",
+        q: "Nederland heeft 5-7 grote supermarktketens. Welke marktvorm?",
         options: ["Oligopolie", "Volkomen concurrentie", "Monopolie", "Monopolistische concurrentie"],
         answer: 0,
         wrongHints: [null, "Niet — niet veel kleinen.", "Niet — meer dan 1.", "Niet — niet zo gedifferentieerd."],
@@ -117,7 +117,7 @@ const steps = [
           stappen: [
             { titel: "Weinig grote spelers", tekst: "AH (35%), Jumbo (22%), Lidl (12%), Aldi, Plus, Coop. Hoge toetredingsdrempels: distributiecentra, lange-termijn-contracten met leveranciers. Onderlinge prijs-volgers. Typisch oligopolie." },
           ],
-          theorie: "Albert Heijn kartel-onderzoek 2008-2010 → boete ~€10 mln voor afspraken met concurrenten.",
+          theorie: "De ACM houdt de supermarktmarkt in de gaten: prijsafspraken tussen ketens zijn verboden.",
           niveaus: { basis: "Oligopolie.", simpeler: "5-7 grote bepalen markt.", nogSimpeler: "Oligopolie" },
         },
       },
@@ -166,7 +166,7 @@ const steps = [
             { titel: "Mededingingsautoriteit (ACM)", tekst: "EU + NL: prijsafspraken/marktverdeling tussen onafhankelijke bedrijven verboden onder mededingingsrecht. Boetes tot 10% wereldwijde omzet. Bekende boetes: liftbedrijven (€1 mld EU 2007), bierbrouwers (€273 mln NL 2007)." },
           ],
           theorie: "OPEC (olie-export-landen) is een kartel — maar landen vallen niet onder mededingingsrecht.",
-          niveaus: { basis: "Verboden prijsafspraken.", simpeler: "Stiekem geld-afspraken = illegaal.", nogSimpeler: "Kartel" },
+          niveaus: { basis: "Verboden prijsafspraken.", simpeler: "Stiekeme prijsafspraken = illegaal.", nogSimpeler: "Kartel" },
         },
       },
       {
@@ -175,21 +175,21 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — producten verschillen.", "Niet — niet weinig.", "Niet — veel restaurants."],
         uitlegPad: {
-          stappen: [{ titel: "Veel + gedifferentieerd", tekst: "Veel restaurants (geen oligopolie of monopolie), maar elk biedt iets unieks (sushi, italiaans, vegan). Klanten hebben merken-/keuken-voorkeur → restaurant kan iets boven gemiddelde prijs vragen. Lage toetreding (huur + vergunning)." }],
+          stappen: [{ titel: "Veel + gedifferentieerd", tekst: "Veel restaurants (geen oligopolie of monopolie), maar elk biedt iets unieks (sushi, Italiaans, vegan). Klanten hebben merken-/keuken-voorkeur → restaurant kan iets boven gemiddelde prijs vragen. Lage toetreding (huur + vergunning)." }],
           niveaus: { basis: "Monopolistische conc.", simpeler: "Veel + gedifferentieerd.", nogSimpeler: "Monopolistisch" },
         },
       },
     ],
   },
 
-  // ─── C. Markfalen ─────────────────────────────────────────
+  // ─── C. Marktfalen ─────────────────────────────────────────
   {
-    title: "Markfalen — wanneer markt niet werkt",
+    title: "Marktfalen — wanneer markt niet werkt",
     explanation:
-      "**Markfalen** = situatie waarin vrije markt geen efficiënt resultaat oplevert.\n\n**1. Externaliteiten** (externe effecten):\n• **Negatief**: kosten voor derden niet in prijs (vervuiling van fabriek, files door auto's, herrie).\n• **Positief**: baten voor derden niet beloond (onderwijs → samenleving wint, bijenhouder → buren-bestuiving).\n• Markt produceert TE VEEL van negatieve externaliteiten + TE WEINIG van positieve.\n• Oplossing: belasting (Pigouvian), subsidie, regelgeving.\n\n**Voorbeeld negatief**: fabrieks-CO₂. Producent betaalt geen klimaatschade → te veel productie + uitstoot. Oplossing: CO₂-belasting/heffing.\n\n**2. Collectieve goederen** (publieke goederen):\n• **Niet-uitsluitbaar** (iedereen kan gebruiken).\n• **Niet-rivaliserend** (mijn gebruik vermindert die van jou niet).\n• Voorbeelden: schoon leger, openbare verlichting, klimaat, kennis.\n• Markt levert ze NIET (geen winst — 'free riders'). Overheid moet voorzien.\n\n**3. Asymmetrische informatie**:\n• **Verkoper weet meer**: tweedehands auto-handelaar weet of er defecten zijn (Akerlof's 'lemons-probleem').\n• **Koper weet meer**: ziekteverzekering, klant kent eigen risico's beter dan verzekeraar (anti-selectie).\n• Oplossingen: APK, garanties, certificeringen, verzekeringsplicht.\n\n**4. Marktmacht** (monopolies):\n• Zie stap B — leidt tot hoger prijs + lagere productie dan optimaal.\n• Oplossing: mededingingsbeleid (ACM), opdelen van monopolisten (AT&T 1984, mogelijk Google?).\n\n**5. Inkomensongelijkheid** (deels markfalen, deels normatief):\n• Markt is efficiënt maar niet noodzakelijk rechtvaardig.\n• Sommige basis-behoeftes (gezondheidszorg, onderwijs) zouden volgens veel mensen onafhankelijk van inkomen moeten zijn.\n\n**6. Macro-economische instabiliteit**:\n• Conjunctuurcyclus, financiële crises (2008, 1929).\n• Markt kan tot 'animal spirits' (Keynes) → onnodige paniek + werkloosheid.\n• Oplossing: centrale bank rente-beleid + overheid fiscaal beleid.\n\n**Geen markfalen ≠ goede uitkomst**: efficiëntie is één criterium; rechtvaardigheid + duurzaamheid + welzijn zijn andere.",
+      "**Marktfalen** = situatie waarin vrije markt geen efficiënt resultaat oplevert.\n\n**1. Externaliteiten** (externe effecten):\n• **Negatief**: kosten voor derden niet in prijs (vervuiling van fabriek, files door auto's, herrie).\n• **Positief**: baten voor derden niet beloond (onderwijs → samenleving wint, bijenhouder → buren-bestuiving).\n• Markt produceert TE VEEL van negatieve externaliteiten + TE WEINIG van positieve.\n• Oplossing: belasting (Pigouvian), subsidie, regelgeving.\n\n**Voorbeeld negatief**: fabrieks-CO₂. Producent betaalt geen klimaatschade → te veel productie + uitstoot. Oplossing: CO₂-belasting/heffing.\n\n**2. Collectieve goederen** (publieke goederen):\n• **Niet-uitsluitbaar** (iedereen kan gebruiken).\n• **Niet-rivaliserend** (mijn gebruik vermindert die van jou niet).\n• Voorbeelden: defensie (leger), openbare verlichting, klimaat, kennis.\n• Markt levert ze NIET (geen winst — 'free riders'). Overheid moet voorzien.\n\n**3. Asymmetrische informatie**:\n• **Verkoper weet meer**: tweedehands auto-handelaar weet of er defecten zijn (Akerlof's 'lemons-probleem').\n• **Koper weet meer**: ziekteverzekering, klant kent eigen risico's beter dan verzekeraar (anti-selectie).\n• Oplossingen: APK, garanties, certificeringen, verzekeringsplicht.\n\n**4. Marktmacht** (monopolies):\n• Zie stap B — leidt tot hogere prijs + lagere productie dan optimaal.\n• Oplossing: mededingingsbeleid (ACM), opdelen van monopolisten (AT&T 1984, mogelijk Google?).\n\n**5. Inkomensongelijkheid** (deels marktfalen, deels normatief):\n• Markt is efficiënt maar niet noodzakelijk rechtvaardig.\n• Sommige basis-behoeftes (gezondheidszorg, onderwijs) zouden volgens veel mensen onafhankelijk van inkomen moeten zijn.\n\n**6. Macro-economische instabiliteit**:\n• Conjunctuurcyclus, financiële crises (2008, 1929).\n• Markt kan door 'animal spirits' (Keynes) leiden tot onnodige paniek + werkloosheid.\n• Oplossing: centrale bank rente-beleid + overheid fiscaal beleid.\n\n**Geen marktfalen ≠ goede uitkomst**: efficiëntie is één criterium; rechtvaardigheid + duurzaamheid + welzijn zijn andere.",
     checks: [
       {
-        q: "Een fabriek loost vervuiling in de rivier zonder kosten voor zichzelf. Type markfalen?",
+        q: "Een fabriek loost vervuiling in de rivier zonder kosten voor zichzelf. Type marktfalen?",
         options: [
           "Negatieve externaliteit",
           "Positieve externaliteit",
@@ -207,7 +207,7 @@ const steps = [
         },
       },
       {
-        q: "Welk is een **collectief goed**?",
+        q: "Wat is een **collectief goed**?",
         options: [
           "Nationaal defensie-leger",
           "Auto",
@@ -215,7 +215,7 @@ const steps = [
           "Bioscoop-kaartje"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — uitsluitbaar.", "Niet — uitsluitbaar + rival.", "Niet — uitsluitbaar (toegangsbewijs)."],
+        wrongHints: [null, "Niet — uitsluitbaar.", "Niet — uitsluitbaar + rivaliserend.", "Niet — uitsluitbaar (toegangsbewijs)."],
         uitlegPad: {
           stappen: [
             { titel: "Niet-uitsluitbaar + niet-rivaliserend", tekst: "Het leger beschermt iedereen of niemand — kan niet bepaalde inwoners uitsluiten. Mijn 'gebruik' (in leven blijven) vermindert die van mijn buren niet. Daarom moet overheid leger betalen via belasting — geen markt-oplossing." },
@@ -225,7 +225,7 @@ const steps = [
         },
       },
       {
-        q: "Tweedehands auto-handelaar verkoopt auto met verborgen gebreken. Type markfalen?",
+        q: "Tweedehands auto-handelaar verkoopt auto met verborgen gebreken. Type marktfalen?",
         options: [
           "Asymmetrische informatie (Akerlof's 'lemons')",
           "Externaliteit",
@@ -233,7 +233,7 @@ const steps = [
           "Collectief goed"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — info-asymmetrie hier kern.", "Niet — geen monopolie nodig.", "Niet — wel een privé-transactie."],
+        wrongHints: [null, "Niet — info-asymmetrie hier kern.", "Niet — geen monopolie nodig.", "Niet — het is juist een privé-transactie."],
         uitlegPad: {
           stappen: [
             { titel: "Akerlof 1970 (Nobel)", tekst: "Akerlof's 'The Market for Lemons': tweedehands auto-markt. Verkopers van slechte auto's ('lemons') verbergen gebreken; goede auto's halen niet hun waarde. Goede aanbieders trekken zich terug → markt 'rot van onderaf'." },
@@ -271,7 +271,7 @@ const steps = [
         wrongHints: [null, "Niet — niet op vermogen.", "Niet — BTW is consumentenbelasting.", "Niet — voor handel."],
         uitlegPad: {
           stappen: [
-            { titel: "Pigou 1920", tekst: "Belasting precies op activiteit met externaliteit, gelijk aan grootte schade. Voorbeeld: CO₂-heffing, accijns op sigaretten, congestion-charge London. Idee: prijs reflecteert nu **maatschappelijke** kosten → markt optimaliseert correct." },
+            { titel: "Pigou 1920", tekst: "Belasting precies op activiteit met externaliteit, gelijk aan grootte schade. Voorbeeld: CO₂-heffing, accijns op sigaretten, congestieheffing in Londen. Idee: prijs reflecteert nu **maatschappelijke** kosten → markt optimaliseert correct." },
           ],
           theorie: "Praktijk: schade exact kwantificeren is moeilijk → discussies over hoogte. Maar principe wijdverbreid.",
           niveaus: { basis: "Belasting = schade.", simpeler: "Belasting maakt vervuiling duurder.", nogSimpeler: "Pigou" },
@@ -284,7 +284,7 @@ const steps = [
   {
     title: "Overheidsingrijpen — instrumenten",
     explanation:
-      "**Waarom overheid ingrijpt** in markt:\n• Markfalen herstellen (zie C).\n• Inkomensherverdeling (sociale rechtvaardigheid).\n• Macro-economisch stabiliseren (recessie, inflatie).\n• Collectieve goederen leveren.\n\n**Instrumenten**:\n\n**1. Wet- + regelgeving**:\n• Mededingingswet (ACM).\n• Minimumloon, arbeidsrecht.\n• Productveiligheid + standaarden.\n• Vergunningen.\n\n**2. Belastingen**:\n• Inkomstenbelasting (progressief — herverdeling).\n• BTW (consumptie).\n• Vennootschapsbelasting.\n• Pigouvian heffingen (sigaretten, alcohol, CO₂).\n• Vermogensbelasting (NL: Box 3 — discussie).\n\n**3. Subsidies + uitkeringen**:\n• Onderwijs gratis.\n• AOW, WW, bijstand.\n• Zorg-toeslag, huur-toeslag.\n• Subsidies voor zonnepanelen, EV, isolatie.\n\n**4. Eigen productie**:\n• ProRail, NS, waterschappen, gemeentelijke vuilnis, post (vroeger PTT).\n• Discussie privatisering: 1990s-2000s veel geprivatiseerd (energie, post, treinen). Mixed resultaten.\n\n**5. Monetair beleid** (centrale bank, niet overheid direct):\n• ECB stelt rente in voor eurozone.\n• Hogere rente → minder lenen → minder vraag → inflatie daalt.\n• Lagere rente → meer lenen → economie stimulerend.\n• 2015-2022: rente bij 0% of negatief → 'gratis geld' tegen lage inflatie.\n• Sinds 2022: hoge inflatie → ECB rente snel omhoog (0% → 4%).\n\n**6. Fiscaal beleid**:\n• Anticyclisch (Keynesiaans): in recessie meer uitgeven + minder belasten; in hoogconjunctuur omgekeerd.\n• Procyclisch: omgekeerd (vaak politiek aantrekkelijker maar slecht).\n\n**Begrotingsregels EU**:\n• Stabiliteits + Groei Pact (1997): begrotingstekort < 3% BBP, staatsschuld < 60% BBP.\n• Vaak overschreden (Frankrijk + Italië structureel; NL meestal niet).\n\n**Trade-offs**:\n• Efficiëntie vs. rechtvaardigheid.\n• Vrije markt vs. zekerheid.\n• Belasting hoogte vs. arbeidsprikkels.\n• Centrale planning vs. innovatie.\n\nGeen 'juist' antwoord — politieke keuze.\n\n**Politieke spectrum**:\n• Liberaal/rechts: minder overheid, lagere belasting, vrije markt.\n• Sociaal-democratisch/links: meer overheid, herverdeling, sociale zekerheid.\n• Sinds 1980 (Reagan/Thatcher): rechts dominanter.\n• Sinds 2008: heroverwegingen, klimaat-uitdaging dwingt nieuwe rol overheid.",
+      "**Waarom overheid ingrijpt** in markt:\n• Marktfalen herstellen (zie C).\n• Inkomensherverdeling (sociale rechtvaardigheid).\n• Macro-economisch stabiliseren (recessie, inflatie).\n• Collectieve goederen leveren.\n\n**Instrumenten**:\n\n**1. Wet- + regelgeving**:\n• Mededingingswet (ACM).\n• Minimumloon, arbeidsrecht.\n• Productveiligheid + standaarden.\n• Vergunningen.\n\n**2. Belastingen**:\n• Inkomstenbelasting (progressief — herverdeling).\n• BTW (consumptie).\n• Vennootschapsbelasting.\n• Pigouvian heffingen (sigaretten, alcohol, CO₂).\n• Vermogensbelasting (NL: Box 3 — discussie).\n\n**3. Subsidies + uitkeringen**:\n• Onderwijs gratis.\n• AOW, WW, bijstand.\n• Zorg-toeslag, huur-toeslag.\n• Subsidies voor zonnepanelen, EV, isolatie.\n\n**4. Eigen productie**:\n• ProRail, NS, waterschappen, gemeentelijke vuilnis, post (vroeger PTT).\n• Discussie privatisering: 1990s-2000s veel geprivatiseerd (energie, post, treinen). Wisselende resultaten.\n\n**5. Monetair beleid** (centrale bank, niet overheid direct):\n• ECB stelt rente in voor eurozone.\n• Hogere rente → minder lenen → minder vraag → inflatie daalt.\n• Lagere rente → meer lenen → economie wordt gestimuleerd.\n• 2015-2022: rente bij 0% of negatief → 'gratis geld' tegen lage inflatie.\n• Sinds 2022: hoge inflatie → ECB rente snel omhoog (0% → 4%).\n\n**6. Fiscaal beleid**:\n• Anticyclisch (Keynesiaans): in recessie meer uitgeven + minder belasten; in hoogconjunctuur omgekeerd.\n• Procyclisch: omgekeerd (vaak politiek aantrekkelijker maar slecht).\n\n**Begrotingsregels EU**:\n• Stabiliteits + Groei Pact (1997): begrotingstekort < 3% BBP, staatsschuld < 60% BBP.\n• Vaak overschreden (Frankrijk + Italië structureel; NL meestal niet).\n\n**Trade-offs**:\n• Efficiëntie vs. rechtvaardigheid.\n• Vrije markt vs. zekerheid.\n• Belasting hoogte vs. arbeidsprikkels.\n• Centrale planning vs. innovatie.\n\nGeen 'juist' antwoord — politieke keuze.\n\n**Politiek spectrum**:\n• Liberaal/rechts: minder overheid, lagere belasting, vrije markt.\n• Sociaal-democratisch/links: meer overheid, herverdeling, sociale zekerheid.\n• Sinds 1980 (Reagan/Thatcher): rechts dominanter.\n• Sinds 2008: heroverwegingen, klimaat-uitdaging dwingt nieuwe rol overheid.",
     checks: [
       {
         q: "Wat is **progressieve belasting**?",
@@ -295,10 +295,10 @@ const steps = [
           "Alleen bedrijven betalen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is vlaktax.", "Niet — regressief, onbillijk.", "Niet — privé ook."],
+        wrongHints: [null, "Niet — dat is vlaktaks.", "Niet — regressief, onbillijk.", "Niet — privé ook."],
         uitlegPad: {
           stappen: [
-            { titel: "NL inkomstenbelasting 2024", tekst: "Schijf 1 (< €38.441): 36,97%.\nSchijf 2 (€38.441-76.817): 36,97%.\nSchijf 3 (> €76.817): 49,5%.\nHogere inkomens hogere %. Progressief = herverdeling. Tegen-vorm 'regressief' (lage inkomens hoger %) — BTW heeft regressief karakter want lage inkomens consumeren groter % van inkomen." },
+            { titel: "NL inkomstenbelasting 2024", tekst: "Schijf 1 (< €38.098): 36,97%.\nSchijf 2 (€38.098-75.518): 36,97%.\nSchijf 3 (> €75.518): 49,5%.\nHogere inkomens hogere %. Progressief = herverdeling. Tegen-vorm 'regressief' (lage inkomens hoger %) — BTW heeft regressief karakter want lage inkomens consumeren groter % van inkomen." },
           ],
           niveaus: { basis: "Hoger inkomen → hoger %.", simpeler: "Rijken procentueel meer.", nogSimpeler: "Progressief" },
         },
@@ -346,7 +346,7 @@ const steps = [
           stappen: [
             { titel: "Anticyclisch fiscaal", tekst: "In recessie: privé-uitgaven dalen → overheid moet gat vullen via meer uitgaven (infrastructuur, sociale wetten) + minder belasting → consumenten houden meer over → vraag stijgt → werk-herstel. Crisis 2008-2009 + 2020-COVID: Keynesiaanse pakketten." },
           ],
-          theorie: "Tegen-school: austerity (Hayek, Friedman): in recessie ook bezuinigen om schuld onder controle te houden. Praktijk: ECB-eurocrisis 2010-2015 gebruikte deels austerity → langere recessie Zuid-EU.",
+          theorie: "Tegen-school: austerity (Hayek, Friedman): in recessie ook bezuinigen om schuld onder controle te houden. Praktijk: tijdens de eurocrisis 2010-2015 werd deels bezuinigd (austerity) → langere recessie Zuid-EU.",
           niveaus: { basis: "Stimulerend.", simpeler: "Meer uitgaven, minder belasting.", nogSimpeler: "Keynes" },
         },
       },
@@ -362,7 +362,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld bedoeld.", "Tegenovergesteld.", "Onzin."],
         uitlegPad: {
           stappen: [
-            { titel: "Theorie vs praktijk", tekst: "Argument: privé-bedrijven competeren → efficiënter → lagere prijzen. Praktijk in NL: liberalisering 1998 (gas + elektriciteit). Wel keuze tussen aanbieders, maar netwerk-tarieven nog steeds gereguleerd (TenneT, Gasunie). 2022-crisis: gasprijzen schoten omhoog → kritiek op privatisering." },
+            { titel: "Theorie vs praktijk", tekst: "Argument: privé-bedrijven concurreren → efficiënter → lagere prijzen. Praktijk in NL: liberalisering 1998 (gas + elektriciteit). Wel keuze tussen aanbieders, maar netwerk-tarieven nog steeds gereguleerd (TenneT, Gasunie). 2022-crisis: gasprijzen schoten omhoog → kritiek op privatisering." },
           ],
           niveaus: { basis: "Marktwerking.", simpeler: "Concurrentie zou prijzen drukken.", nogSimpeler: "Markt" },
         },
@@ -374,10 +374,10 @@ const steps = [
   {
     title: "Eindopdracht — inkomensverdeling, Lorenz, Gini",
     explanation:
-      "**Inkomensverdeling** = hoe inkomen verdeeld is over bevolking.\n\n**Maten**:\n\n**1. Lorenz-curve**:\n• X-as: cumulatieve % bevolking (van armste naar rijkste).\n• Y-as: cumulatieve % inkomen.\n• Bij perfecte gelijkheid: rechte 45°-lijn (10% bevolking = 10% inkomen).\n• Bij ongelijkheid: curve onder de 45°-lijn.\n• Meer doorbuigend = ongelijker.\n\n**2. Gini-coëfficient** (afgeleid uit Lorenz):\n• 0 = perfecte gelijkheid.\n• 1 = perfecte ongelijkheid (1 persoon alles).\n• NL Gini: ~0,30 (na belasting + uitkeringen — relatief gelijk).\n• VS Gini: ~0,42.\n• Brazilië: ~0,53.\n• Zuid-Afrika: ~0,63 (meest ongelijk wereldwijd).\n\n**Belasting + uitkeringen** verminderen ongelijkheid significant:\n• NL bruto-inkomen Gini: ~0,45.\n• NL netto (na belasting + sociaal): ~0,29.\n• Verschil = effect van herverdeling.\n\n**Werkenden vs. niet-werkenden**:\n• Mediaan + percentielen.\n• Top 10% vs. onderste 10%.\n• Decielen-verdeling.\n\n**Wereldwijde ongelijkheid**:\n• 50% wereldbevolking heeft <5% van wereldvermogen.\n• Top 1% bezit ~50% wereldvermogen.\n• Trend sinds 1980s: stijgend (Piketty: r > g — rendement op kapitaal > economische groei → vermogen accumuleert in handen weinige).\n\n**Effecten ongelijkheid**:\n• Negatief:\n  - Sociale onrust + criminaliteit.\n  - Politieke polarisatie + populisme.\n  - Verlies van vertrouwen tussen klassen.\n  - Volksgezondheid: ongelijke landen scoren slechter (Wilkinson + Pickett, 'Spirit Level').\n  - Lagere economische groei (verspilde talenten in armoede).\n• Argument vóór enige ongelijkheid:\n  - Prikkels om hard te werken / risico te nemen.\n  - Beloning voor innovatie + ondernemerschap.\n\n**Beleidsopties** voor minder ongelijkheid:\n• Progressievere belasting.\n• Erfbelasting (NL: 10-20% boven vrijstelling).\n• Vermogensbelasting (NL: Box 3, discussie).\n• Minimumloon verhogen.\n• Basisinkomen experimenten (UBI).\n• Beter onderwijs voor lage inkomens.\n• Vakbond + cao versterken.\n\n**Mark wens: VWO eindexamen-relevant** — geweldige onderwerp voor essay-vraagjes 'evalueer ongelijkheid + beleidsmaatregelen'.",
+      "**Inkomensverdeling** = hoe inkomen verdeeld is over bevolking.\n\n**Maten**:\n\n**1. Lorenz-curve**:\n• X-as: cumulatieve % bevolking (van armste naar rijkste).\n• Y-as: cumulatieve % inkomen.\n• Bij perfecte gelijkheid: rechte 45°-lijn (10% bevolking = 10% inkomen).\n• Bij ongelijkheid: curve onder de 45°-lijn.\n• Meer doorbuigend = ongelijker.\n\n**2. Gini-coëfficiënt** (afgeleid uit Lorenz):\n• 0 = perfecte gelijkheid.\n• 1 = perfecte ongelijkheid (1 persoon alles).\n• NL Gini: ~0,30 (na belasting + uitkeringen — relatief gelijk).\n• VS Gini: ~0,42.\n• Brazilië: ~0,53.\n• Zuid-Afrika: ~0,63 (meest ongelijk wereldwijd).\n\n**Belasting + uitkeringen** verminderen ongelijkheid significant:\n• NL bruto-inkomen Gini: ~0,45.\n• NL netto (na belasting + sociaal): ~0,29.\n• Verschil = effect van herverdeling.\n\n**Werkenden vs. niet-werkenden**:\n• Mediaan + percentielen.\n• Top 10% vs. onderste 10%.\n• Decielen-verdeling.\n\n**Wereldwijde ongelijkheid**:\n• 50% wereldbevolking heeft <5% van wereldvermogen.\n• Top 1% bezit ~50% wereldvermogen.\n• Trend sinds 1980s: stijgend (Piketty: r > g — rendement op kapitaal > economische groei → vermogen accumuleert in handen weinige).\n\n**Effecten ongelijkheid**:\n• Negatief:\n  - Sociale onrust + criminaliteit.\n  - Politieke polarisatie + populisme.\n  - Verlies van vertrouwen tussen klassen.\n  - Volksgezondheid: ongelijke landen scoren slechter (Wilkinson + Pickett, 'Spirit Level').\n  - Lagere economische groei (verspilde talenten in armoede).\n• Argument vóór enige ongelijkheid:\n  - Prikkels om hard te werken / risico te nemen.\n  - Beloning voor innovatie + ondernemerschap.\n\n**Beleidsopties** voor minder ongelijkheid:\n• Progressievere belasting.\n• Erfbelasting (NL: 10-20% boven vrijstelling).\n• Vermogensbelasting (NL: Box 3, discussie).\n• Minimumloon verhogen.\n• Basisinkomen experimenten (UBI).\n• Beter onderwijs voor lage inkomens.\n• Vakbond + cao versterken.\n\n**VWO-eindexamen-relevant** — geschikt onderwerp voor essay-vragen 'evalueer ongelijkheid + beleidsmaatregelen'.",
     checks: [
       {
-        q: "**Gini-coëfficient** van 0 betekent:",
+        q: "**Gini-coëfficiënt** van 0 betekent:",
         options: [
           "Perfecte gelijkheid (iedereen zelfde inkomen)",
           "Perfecte ongelijkheid",
@@ -397,7 +397,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — tegenovergesteld.", "Niet — geen verband.", "Idem."],
         uitlegPad: {
-          stappen: [{ titel: "Verbuiging = ongelijkheid", tekst: "45°-lijn = perfecte verdeling. Lorenz-curve buigt naar onder als rijke top steeds groter % inkomen heeft. Oppervlak tussen 45°-lijn + Lorenz / oppervlak driehoek = Gini-coëfficient." }],
+          stappen: [{ titel: "Verbuiging = ongelijkheid", tekst: "45°-lijn = perfecte verdeling. Lorenz-curve buigt naar onder als rijke top steeds groter % inkomen heeft. Oppervlak tussen 45°-lijn + Lorenz / oppervlak driehoek = Gini-coëfficiënt." }],
           niveaus: { basis: "Meer afstand = meer ongelijk.", simpeler: "Verre Lorenz = ongelijker.", nogSimpeler: "Ver" },
         },
       },
@@ -430,7 +430,7 @@ const steps = [
         wrongHints: [null, "Niet — onderbouwing voor ongelijkheid.", "Wel — bekend mechanisme.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
-            { titel: "'Capital in 21e Century'", tekst: "Thomas Piketty, 2014: historisch r ~5% > g ~2-3%. Dus vermogen groeit sneller dan economie → bestaande rijken accumuleren ratio relatief. Verklaart trend stijgende ongelijkheid sinds 1980. Veel discussie + kritiek, maar invloedrijk." },
+            { titel: "'Kapitaal in de 21ste eeuw'", tekst: "Thomas Piketty, 2014: historisch r ~5% > g ~2-3%. Dus vermogen groeit sneller dan economie → bestaande vermogens groeien relatief sneller. Verklaart trend stijgende ongelijkheid sinds 1980. Veel discussie + kritiek, maar invloedrijk." },
           ],
           theorie: "Oplossing volgens Piketty: globale vermogensbelasting → moeilijk politiek.",
           niveaus: { basis: "Kapitaal > groei = concentratie.", simpeler: "Bezittingen groeien sneller dan economie.", nogSimpeler: "r>g" },
@@ -448,7 +448,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld — minder rust.", "Tegen — minder gezond.", "Niet relevant."],
         uitlegPad: {
           stappen: [
-            { titel: "Incentive-argument", tekst: "Als arts en kassière hetzelfde verdienen → wie wordt arts (lange dure studie + verantwoordelijkheid)? Sommige inkomensverschillen prikkelen tot inspanning + investering. Hoeveel ongelijkheid is 'gezond' is normatieve discussie — sociaal-democraten zien 0,25-0,30 als optimaal, libertaire 0,40+." },
+            { titel: "Incentive-argument", tekst: "Als arts en kassière hetzelfde verdienen → wie wordt arts (lange dure studie + verantwoordelijkheid)? Sommige inkomensverschillen prikkelen tot inspanning + investering. Hoeveel ongelijkheid 'gezond' is, is een normatieve discussie — daarover verschillen politieke stromingen sterk van mening." },
           ],
           niveaus: { basis: "Prikkels.", simpeler: "Beloning voor moeite.", nogSimpeler: "Prikkel" },
         },
@@ -461,18 +461,18 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const marktvormenHavoVwo = {
   id: "marktvormen-havo-vwo",
-  title: "Marktvormen + Markfalen (HAVO/VWO Economie)",
+  title: "Marktvormen + Marktfalen (HAVO/VWO Economie)",
   emoji: "🏪",
   level: "havo-vwo-4-5",
   subject: "economie",
   referentieNiveau: "havo-3F / vwo-3S",
-  sloThema: "Economie — Marktvormen + Markfalen + Inkomensverdeling (CSE-onderwerp)",
+  sloThema: "Economie — Marktvormen + Marktfalen + Inkomensverdeling (CSE-onderwerp)",
   prerequisites: [
     { id: "vraag-aanbod-economie", title: "Vraag + Aanbod basis", niveau: "havo-2F" },
     { id: "bbp-conjunctuur-economie", title: "BBP + Conjunctuur", niveau: "havo-3F" },
   ],
   intro:
-    "Marktvormen + Markfalen voor HAVO/VWO eindexamen — vraag+aanbod, prijselasticiteit, vier marktvormen, markfalen + externaliteiten, overheidsingrijpen, inkomensverdeling (Lorenz, Gini). 5 stappen × 5 vragen. ~15 min.",
+    "Marktvormen + Marktfalen voor HAVO/VWO eindexamen — vraag+aanbod, prijselasticiteit, vier marktvormen, marktfalen + externaliteiten, overheidsingrijpen, inkomensverdeling (Lorenz, Gini). 5 stappen × 5 vragen. ~15 min.",
   triggerKeywords: [
     "vraag", "aanbod", "evenwichtsprijs",
     "elasticiteit", "prijselasticiteit",
@@ -484,7 +484,7 @@ const marktvormenHavoVwo = {
     "monopolie", "marktmacht",
     "kartel", "ACM", "mededinging",
     "toetredingsbarrière",
-    "markfalen", "externaliteit",
+    "marktfalen", "externaliteit",
     "collectief goed", "publiek goed",
     "asymmetrische informatie", "Akerlof", "lemons",
     "Pigouvian", "Pigou", "CO2-heffing",
@@ -495,7 +495,7 @@ const marktvormenHavoVwo = {
     "Stabiliteit Groei Pact", "EU-begroting",
     "privatisering",
     "inkomensverdeling",
-    "Lorenz-curve", "Gini-coëfficient",
+    "Lorenz-curve", "Gini-coëfficiënt",
     "Piketty", "r>g",
     "ongelijkheid",
     "basisinkomen", "UBI",
