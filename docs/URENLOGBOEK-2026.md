@@ -44,6 +44,8 @@
 | wo 30 sep | 2 (git 03:30–05:15) | 💻✉️ niveaulijn fase 1 (v800), startpagina herschikt (v801-803), partner-rapport v1, vertaalknop start-kwartier (v804-807), update aan Hanneke, LinkedIn-post nieuwkomers (16 commits) |
 | wo 30 sep | 0,5 (chat 09:00–09:40) | 📋 dagrapport 30 sep (Supabase, mail-check, Meesterplan-PDF, docs) |
 | wo 30 sep | 3 (git/chat overdag) | 💻✉️ Gezinsstart voor ouders + e-mail-login + weekrapport vrijdag 16:00 (v808-809), Roemeens + Bulgaars als steuntalen (v810, verzoek Taalrijk), antwoord Heidi Schel (Taalrijk), avond-dagrapport |
+| wo 30 sep | 7 (git/chat 15:15–22:30) | 💳 CRON_SECRET + e-mail-login ingericht, klas-zinnen Hanneke, Stripe deel 1 + live (sleutel, prijzen, webhook, €1-proef met Mark), betaalknop aan, één prijs €39/12 mnd, Familie klikbaar op 20+ plekken, vroege vogel, voorwaarden.html, factuur KOR/logo/geldig-datums (v811-825, 27 commits) |
+| do 1 okt | 1 (chat 08:15–09:30) | 🔐 Stripe-login veiligstellen + 📋 dagrapport 1 okt |
 
 ## Week 39 (ma 21 sep – zo 27 sep) — ✅ GOEDGEKEURD door Mark 28 sep 2026 (uit git, 35 u)
 
@@ -169,7 +171,9 @@ maildata vanaf juni.
 | Offline 15% over die 591,5 | ~89 | | vuistregel Mark 28 aug; grote losse klussen (flyers posten, bellen) nog apart door Mark aan te vullen |
 | **Totaal t/m 23 aug (voorstel)** | **~790** | | 80 + 30 + 591,5 + 89 |
 
-**Doorrekening urencriterium 2026 (stand 30 sep):** ~790 t/m 23 aug + wk 35-39 goedgekeurd + wk 40 t/m wo ≈ **~981** (29 sep-stand 970 + 8 u sessie 29/30 sep + 3 u wo overdag). Nog ±244 u = ±19 u/week tot 31 dec. (Oude stand 16 sep: ~890.)
+**Doorrekening urencriterium 2026 (stand 1 okt):** ~989 (30-sep-stand ~981 + 7 u wo-avond + 1 u do-ochtend). Nog ±236 u = ±18 u/week tot 31 dec.
+
+**(oud) Doorrekening urencriterium 2026 (stand 30 sep):** ~790 t/m 23 aug + wk 35-39 goedgekeurd + wk 40 t/m wo ≈ **~981** (29 sep-stand 970 + 8 u sessie 29/30 sep + 3 u wo overdag). Nog ±244 u = ±19 u/week tot 31 dec. (Oude stand 16 sep: ~890.)
 Nog 15 weken × ~25-28 u = ~375-420 → **~1.265-1.310 → de 1.225 wordt gehaald**, mits het huidige ritme
 doorloopt tot eind december. Marge is klein (~40-85 u): offline klussen wél blijven loggen.
 
