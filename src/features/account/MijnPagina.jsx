@@ -17,6 +17,7 @@ import TrouweGastKaart from "./TrouweGastKaart.jsx";
 import "./avatarStorageShim.js";
 import AvatarKiezer from "./AvatarKiezer.jsx";
 import WieOefentEr from "./WieOefentEr.jsx";
+import FamilieTegels from "../familie/FamilieTegels.jsx";
 import DiplomaKast from "../../shared/ui/DiplomaKast.jsx";
 import OuderInzicht from "../ouder/OuderInzicht.jsx";
 import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
@@ -371,6 +372,7 @@ export default function MijnPagina({
   onWerkwoorden,
   onVandaagKwartier,
   onKwartiercheck,
+  onNaar,
   onGoVoortgang,
   onOuderDashboard,
   onHernoem,
@@ -2584,6 +2586,8 @@ export default function MijnPagina({
                 onOpenLes={onPickPath}
               />
             </div>
+            {/* Netflix-achtige tegels met alles uit Familie (Mark 1 okt 2026) — alleen op de eigen ouderpagina. */}
+            {rolKey === "ouder" && <FamilieTegels onNaar={onNaar} onOuderDashboard={onOuderDashboard} />}
             {/* ── Pakket + waitlist (Mark-keuze 13 aug: informeren + waitlist).
                 Alleen voor de leraar-rol; paywall staat UIT tot 2027. Ouders
                 zien sinds 14 aug de Familie-gate in het gedeelde <OuderInzicht>

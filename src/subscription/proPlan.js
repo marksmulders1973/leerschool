@@ -136,9 +136,9 @@ export const PRO_FEATURES = {
     label: "Weekrapport per mail",
     laag: "familie",
     blurb:
-      "Elke week een kort overzicht in je mail: wat je kind deed en waar het " +
+      "Elke vrijdag een kort overzicht in je mail: wat je kind deed en waar het " +
       "nog vastloopt.",
-    status: "binnenkort",
+    status: "live",
   },
   "exam-mode": {
     id: "exam-mode",

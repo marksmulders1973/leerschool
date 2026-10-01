@@ -1571,6 +1571,7 @@ export default function App() {
           onWerkwoorden={() => setPage("werkwoorden")}
           onVandaagKwartier={() => setPage("vandaag-kwartier")}
           onKwartiercheck={() => setPage("kwartiercheck")}
+          onNaar={(p) => setPage(p)}
           onGoCito={() => setPage("cito")}
           onGoVoortgang={() => setPage("my-mastery")}
           onVak={(subject) => {
