@@ -1607,25 +1607,35 @@ export default function MijnPagina({
             {/* Alle leerkracht-acties als snelkoppelingen (Mark 12 aug:
                 "staat alles waar een leraar iets mee kan op zijn pagina?") —
                 zelfde bestemmingen als het leerkracht-overzicht. */}
+            {/* Leerkracht-tegels (Mark 1 okt 2026: "kunnen deze keuzes dan onder leraar", zoals de
+                Netflix-tegels bij de ouder). Elke tegel opent echt iets; logo + export zitten in het
+                leerkracht-overzicht. */}
             {onLeerkrachtActie && (
-              <div style={{ display: "flex", gap: 7, flexWrap: "wrap", marginBottom: 10 }}>
+              <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 10, marginBottom: 12 }}>
                 {[
-                  { p: "create-quiz", label: "📝 Toets maken" },
-                  { p: "takenlijst-maker", label: "✅ Takenlijst klaarzetten" },
-                  { p: "werkblad", label: "🖨️ Werkblad printen" },
-                  { p: "teacher-progress", label: "📊 Scores & voortgang" },
-                  { p: "class-manager", label: "🏫 Mijn klassen" },
-                ].map((a) => (
+                  { p: "create-quiz", emoji: "📝", titel: "Toets maken", tekst: "Onbeperkt toetsen maken voor je klas, met je eigen (school)logo." },
+                  { p: "werkblad", emoji: "🖨️", titel: "Werkblad printen", tekst: "12 opgaven + antwoordblad, met QR om thuis verder te oefenen." },
+                  { p: "takenlijst-maker", emoji: "✅", titel: "Leerpaden klaarzetten", tekst: "Zet oefenwerk klaar met een deelcode. Gratis t/m zeker 2031." },
+                  { p: "teacher-progress", emoji: "📊", titel: "Voortgang per leerling", tekst: "Scores per leerling en per onderwerp." },
+                  { p: "digibord", emoji: "📺", titel: "Samen op het digibord", tekst: "Een setje van tien vragen klassikaal, zonder accounts." },
+                  { p: "class-manager", emoji: "🏫", titel: "Mijn klassen", tekst: "Klassen en deelcodes beheren." },
+                  { p: "@overzicht", emoji: "🏷️", titel: "Schoollogo instellen", tekst: "Je logo op toetsen en oefenbladen." },
+                  { p: "@overzicht", emoji: "📤", titel: "Resultaten exporteren", tekst: "Download de resultaten van je klas." },
+                ].map((a, i) => (
                   <button
-                    key={a.p}
-                    onClick={() => { track("mijn_leerkracht_actie", { actie: a.p }); onLeerkrachtActie(a.p); }}
+                    key={a.titel + i}
+                    type="button"
+                    onClick={() => { track("mijn_leerkracht_actie", { actie: a.p === "@overzicht" ? a.titel : a.p }); if (a.p === "@overzicht") onLeerkrachtHome(); else onLeerkrachtActie(a.p); }}
                     style={{
-                      padding: "8px 13px", borderRadius: 999, cursor: "pointer",
-                      border: "1px solid rgba(167,139,250,0.5)", background: "rgba(124,58,237,0.18)",
-                      color: "#d6ccff", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700,
+                      display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 4, textAlign: "left",
+                      padding: "12px 12px", minHeight: 112, borderRadius: 14, cursor: "pointer",
+                      border: "1px solid rgba(167,139,250,0.45)", background: "linear-gradient(160deg, rgba(124,58,237,0.22), rgba(255,255,255,0.03))",
+                      color: "var(--color-text)", fontFamily: "var(--font-body)",
                     }}
                   >
-                    {a.label}
+                    <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1 }}>{a.emoji}</span>
+                    <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, lineHeight: 1.25, color: "#e6ddff" }}>{a.titel}</span>
+                    <span style={{ fontSize: 12, lineHeight: 1.4, color: "var(--color-text-muted, #8899aa)" }}>{a.tekst}</span>
                   </button>
                 ))}
               </div>
