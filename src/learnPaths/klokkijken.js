@@ -82,7 +82,7 @@ ${label2 ? `<text x="300" y="218" text-anchor="middle" fill="${COLORS.warm}" fon
 const steps = [
   {
     title: "Wat is een klok?",
-    explanation: "Een **klok** vertelt hoe laat het is. Er zijn twee soorten:\n\n**1. Analoge klok** *(met wijzers)*\n• Een rond klokje met **12 cijfers** (1 t/m 12) langs de rand.\n• Twee **wijzers** (de kleine + de grote pijl).\n• Soms een derde dunne wijzer voor de seconden.\n\n**2. Digitale klok** *(met cijfers)*\n• Toont de tijd als getallen: 14:30, 09:45, etc.\n• Vooral op telefoons en magnetrons.\n• Geen wijzers nodig.\n\n**De wijzers van een analoge klok**:\n\n• **Kleine wijzer** = **uurwijzer**. Die zegt **hoeveel uur** het is. Beweegt langzaam.\n• **Grote wijzer** = **minutenwijzer**. Die zegt **hoeveel minuten** voorbij het uur. Beweegt sneller.\n• **Hele dunne wijzer** (als die er is) = **secondewijzer**. Beweegt het snelst.\n\n**Belangrijk**: kleine wijzer = uur. Grote wijzer = minuten.\n\n**Hoe lang duurt 1 wijzer-rondje?**\n• Uurwijzer: 1 rondje = **12 uur** (een hele halve dag).\n• Minutenwijzer: 1 rondje = **60 minuten = 1 uur**.\n• Secondewijzer: 1 rondje = **60 seconden = 1 minuut**.\n\n**1 uur = 60 minuten**. **1 dag = 24 uur**.\n\nDe meeste mensen lezen klokken tegenwoordig digitaal (op de telefoon). Maar analoog blijft handig — bijvoorbeeld stationsklokken en oude klokken.",
+    explanation: "Een **klok** vertelt hoe laat het is. Er zijn twee soorten:\n\n**1. Analoge klok** *(met wijzers)*\n• Een rond klokje met **12 cijfers** (1 t/m 12) langs de rand.\n• Twee **wijzers** (de kleine + de grote pijl).\n• Soms een derde dunne wijzer voor de seconden.\n\n**2. Digitale klok** *(met cijfers)*\n• Toont de tijd als getallen: 14:30, 09:45, etc.\n• Vooral op telefoons en magnetrons.\n• Geen wijzers nodig.\n\n**De wijzers van een analoge klok**:\n\n• **Kleine wijzer** = **uurwijzer**. Die zegt **hoeveel uur** het is. Beweegt langzaam.\n• **Grote wijzer** = **minutenwijzer**. Die zegt **hoeveel minuten** voorbij het uur. Beweegt sneller.\n• **Heel dunne wijzer** (als die er is) = **secondewijzer**. Beweegt het snelst.\n\n**Belangrijk**: kleine wijzer = uur. Grote wijzer = minuten.\n\n**Hoe lang duurt 1 wijzer-rondje?**\n• Uurwijzer: 1 rondje = **12 uur** (een halve dag).\n• Minutenwijzer: 1 rondje = **60 minuten = 1 uur**.\n• Secondewijzer: 1 rondje = **60 seconden = 1 minuut**.\n\n**1 uur = 60 minuten**. **1 dag = 24 uur**.\n\nDe meeste mensen lezen klokken tegenwoordig digitaal (op de telefoon). Maar analoog blijft handig — bijvoorbeeld stationsklokken en oude klokken.",
     svg: klokSvg(3, 0),
     checks: [
       {
@@ -103,7 +103,7 @@ const steps = [
         q: "Hoeveel minuten zitten er in 1 uur?",
         options: ["60","30","100","24"],
         answer: 0,
-        wrongHints: [null,"30 = halve uur.","Tijden gebruiken geen 100-systeem.","24 = uren in een dag."],
+        wrongHints: [null,"30 = een half uur.","Tijden gebruiken geen 100-systeem.","24 = uren in een dag."],
         uitlegPad: {
           stappen: [{ titel: "1 uur = 60 min", tekst: "Vaste regel: 1 uur = 60 minuten. 1 minuut = 60 seconden." }],
           woorden: [{ woord: "minuut", uitleg: "1/60 deel van een uur." }],
@@ -125,7 +125,7 @@ const steps = [
         svg: klokSvg(9, 0),
         options: ["9 uur","12 uur","kwart voor 9","3 uur"],
         answer: 0,
-        wrongHints: [null,"Kijk naar de kléíne wijzer — die zegt het uur. Wijst die naar 12?","De grote wijzer staat op 12 — dat betekent 0 minuten, een heel uur dus.","Naar welk getal wijst de kleine wijzer echt?"],
+        wrongHints: [null,"Kijk naar de kléine wijzer — die zegt het uur. Wijst die naar 12?","De grote wijzer staat op 12 — dat betekent 0 minuten, een heel uur dus.","Naar welk getal wijst de kleine wijzer echt?"],
         uitlegPad: {
           stappen: [{ titel: "Lees de klok af", tekst: "Grote wijzer op 12 = heel uur. Kleine wijzer wijst naar 9 → het is 9 uur." }],
           woorden: [{ woord: "aflezen", uitleg: "Van de klok 'lezen' hoe laat het is." }],
@@ -210,14 +210,14 @@ const steps = [
           theorie: "Bij elke 30 min schuift uurwijzer halverwege twee uurnummers.",
           voorbeelden: [{ type: "stand", tekst: "Half 8 (7:30): klein tussen 7 en 8. Half 9 (8:30): klein tussen 8 en 9." }],
           basiskennis: [{ onderwerp: "Voor het volgende", uitleg: "'Half 8' kijkt vooruit naar 8 — uurwijzer is op weg naar 8." }],
-          niveaus: { basis: "Tussen 7 en 8.", simpeler: "Half 8 = 7:30. Klein wijzer staat halverwege tussen 7 en 8 (niet meer op 7, nog niet op 8).", nogSimpeler: "7-8" },
+          niveaus: { basis: "Tussen 7 en 8.", simpeler: "Half 8 = 7:30. De kleine wijzer staat halverwege tussen 7 en 8 (niet meer op 7, nog niet op 8).", nogSimpeler: "7-8" },
         },
       },
       {
         q: "Hoe heet **half 3** in digitaal?",
         options: ["02:30 of 14:30","03:30 of 15:30","02:00 of 14:00","03:00 of 15:00"],
         answer: 0,
-        wrongHints: [null,"Half 3 betekent 30 min VÓÓR 3 — dus uur 2 nog.","Half 3 = met halve uur, niet uur 2 zelf.","Halve uur betekent dat de minuten ook 30 zijn."],
+        wrongHints: [null,"Half 3 betekent 30 min VÓÓR 3 — dus uur 2 nog.","Bij half 3 staan de minuten op 30, niet op 00.","Bij een half uur staan de minuten op 30."],
         uitlegPad: {
           stappen: [{ titel: "Half 3 = 2:30", tekst: "Half 3 = 30 min vóór 3 = uur 2 + 30 min = 02:30. 's Middags = 14:30." }],
           woorden: [{ woord: "half X = X-1:30", uitleg: "Half X = uur(X-1):30." }],
@@ -328,7 +328,7 @@ const steps = [
         },
       },
       {
-        q: "Als de grote wijzer op **2** staat: hoeveel minuten over heel uur?",
+        q: "Als de grote wijzer op **2** staat: hoeveel minuten is het dan over het hele uur?",
         options: ["10","2","20","12"],
         answer: 0,
         wrongHints: [null,"De grote wijzer is in minuten, niet uren.","Dat is bij wijzer op 4.","12 = positie van de wijzer, niet minuten."],
@@ -359,7 +359,7 @@ const steps = [
   },
   {
     title: "Digitale klok + 24-uurs format",
-    explanation: "Een **digitale klok** is veel makkelijker te lezen — de tijd staat al uitgeschreven.\n\n**Voorbeelden**:\n• **08:30** = half 9 's ochtends\n• **14:15** = kwart over 2 's middags\n• **22:45** = kwart voor 11 's avonds\n\n**Hoe lees je een digitale tijd?**\n• Voor de dubbele punt: het **uur**.\n• Na de dubbele punt: de **minuten**.\n\n**Twee formaten**:\n\n**12-uurs format** *(Engelse landen)*:\n• Loopt van 1 uur 's nachts tot 12 uur 's middags, dan weer van 1 tot 12 's avonds.\n• Gebruikt **AM** (voor 12) en **PM** (na 12).\n• Voorbeeld: 9:30 PM = 's avonds, 9:30 AM = 's ochtends.\n\n**24-uurs format** *(Europa, dus ook NL)*:\n• Loopt van 00:00 (middernacht) tot 23:59.\n• Geen AM/PM nodig.\n• 's Avonds 9 uur = **21:00**.\n• Middag: 12:00. Middernacht: 00:00.\n\n**Verschil tussen 12 en 24**:\n\n| 12-uurs | 24-uurs |\n|---|---|\n| 12:00 AM | 00:00 (middernacht) |\n| 06:30 AM | 06:30 |\n| 12:00 PM | 12:00 (middag) |\n| 03:00 PM | 15:00 |\n| 09:30 PM | 21:30 |\n| 11:59 PM | 23:59 |\n\n**Truc voor PM-tijden** (na 12 uur 's middags):\n• PM-tijd + 12 = 24-uurs tijd.\n• 5 PM + 12 = **17:00**.\n• 8:30 PM + 12 = **20:30**.\n\n**Wanneer welk format?**\n• Trein- en busschema's: **24-uurs**.\n• Weegelijke gesprekken: vaak '5 uur' zonder uitleg (men weet of 't ochtend of avond is).\n• Engelstalige films: **12-uurs** met AM/PM.",
+    explanation: "Een **digitale klok** is veel makkelijker te lezen — de tijd staat al uitgeschreven.\n\n**Voorbeelden**:\n• **08:30** = half 9 's ochtends\n• **14:15** = kwart over 2 's middags\n• **22:45** = kwart voor 11 's avonds\n\n**Hoe lees je een digitale tijd?**\n• Voor de dubbele punt: het **uur**.\n• Na de dubbele punt: de **minuten**.\n\n**Twee formaten**:\n\n**12-uurs format** *(Engelse landen)*:\n• Loopt van 1 uur 's nachts tot 12 uur 's middags, dan weer van 1 tot 12 's avonds.\n• Gebruikt **AM** (voor 12) en **PM** (na 12).\n• Voorbeeld: 9:30 PM = 's avonds, 9:30 AM = 's ochtends.\n\n**24-uurs format** *(Europa, dus ook NL)*:\n• Loopt van 00:00 (middernacht) tot 23:59.\n• Geen AM/PM nodig.\n• 's Avonds 9 uur = **21:00**.\n• Middag: 12:00. Middernacht: 00:00.\n\n**Verschil tussen 12 en 24**:\n\n| 12-uurs | 24-uurs |\n|---|---|\n| 12:00 AM | 00:00 (middernacht) |\n| 06:30 AM | 06:30 |\n| 12:00 PM | 12:00 (middag) |\n| 03:00 PM | 15:00 |\n| 09:30 PM | 21:30 |\n| 11:59 PM | 23:59 |\n\n**Truc voor PM-tijden** (na 12 uur 's middags):\n• PM-tijd + 12 = 24-uurs tijd.\n• 5 PM + 12 = **17:00**.\n• 8:30 PM + 12 = **20:30**.\n\n**Wanneer welk format?**\n• Trein- en busschema's: **24-uurs**.\n• Dagelijkse gesprekken: vaak '5 uur' zonder uitleg (men weet of 't ochtend of avond is).\n• Engelstalige films: **12-uurs** met AM/PM.",
     svg: klokSvg(14, 30, { showLabels: true }),
     checks: [
       {
@@ -377,10 +377,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel minuten staat **08:45**?",
+        q: "Wat betekent **08:45**?",
         options: ["45 minuten over 8 (kwart voor 9)","8 uur en 45 seconden","45 voor 8","Halve 9"],
         answer: 0,
-        wrongHints: [null,"Niet seconden — minuten.","45 voor 8 betekent dat je 45 minuten aftrekt van 8 uur — klopt dat met wat er staat?","Half 9 betekent dat het halverwege naar 9 is — maar welke uur staat er vóór de dubbele punt?"],
+        wrongHints: [null,"Niet seconden — minuten.","45 voor 8 betekent dat je 45 minuten aftrekt van 8 uur — klopt dat met wat er staat?","Half 9 betekent dat het halverwege naar 9 is — maar welk uur staat er vóór de dubbele punt?"],
         uitlegPad: {
           stappen: [{ titel: "08:45 = 45 min over 8", tekst: "Na : staat altijd MINUTEN. 45 = 45 minuten. Of: kwart voor 9." }],
           woorden: [{ woord: "08:45", uitleg: "8 uur en 45 minuten. Of kwart voor 9." }],
@@ -415,7 +415,7 @@ const steps = [
         q: "Hoe lang van **08:00** tot **14:00**?",
         options: ["6 uur","8 uur","12 uur","2 uur"],
         answer: 0,
-        wrongHints: [null,"Trek eind- en begintijd van elkaar af — klopt jouw aftreksom?","Te lang — klopt het dat het meer dan een halve dag is?","Te kort — hoe ver is het van 8 ochtend tot 2 middag?"],
+        wrongHints: [null,"Trek eind- en begintijd van elkaar af — klopt jouw aftreksom?","Te lang — klopt het dat het meer dan een halve dag is?","Te kort — hoe ver is het van 8 uur 's ochtends tot 2 uur 's middags?"],
         uitlegPad: {
           stappen: [{ titel: "Eind - begin", tekst: "14 - 8 = 6 uur. Minuten zijn beide 00 — niets extra." }],
           woorden: [{ woord: "tijdsverschil", uitleg: "Eindtijd min begintijd = duur." }],
@@ -429,7 +429,7 @@ const steps = [
         q: "Hoe lang van **15:30** tot **17:45**?",
         options: ["2 uur 15 minuten","2 uur","3 uur 15 min","1 uur 45 min"],
         answer: 0,
-        wrongHints: [null,"Plus 15 minuten extra.","Andere uur.","1 uur 45 = anders."],
+        wrongHints: [null,"Plus 15 minuten extra.","Ander aantal uren.","1 uur 45 = anders."],
         uitlegPad: {
           stappen: [{ titel: "Apart uren + minuten", tekst: "Uren: 17-15 = 2. Minuten: 45-30 = 15. Totaal: 2 uur 15 min." }],
           woorden: [{ woord: "tijdsverschil", uitleg: "Eind min begin, apart voor uren en minuten." }],
@@ -483,7 +483,7 @@ const steps = [
         wrongHints: [null,"Halverwege naar 9 betekent dat de kleine wijzer al voorbij 8 is — maar is dat hier het geval?","Die tijd in cijfers hoort bij een andere halfstand — kijk waar de kleine wijzer staat.","Bij dat tijdstip staat de grote wijzer niet op 6."],
         uitlegPad: {
           stappen: [{ titel: "Half + volgende uur", tekst: "Grote op 6 = half. Kleine net vóór 8 (tussen 7 en 8) = op weg naar 8 = half 8." }],
-          woorden: [{ woord: "half 8", uitleg: "= 7:30. Klein wijzer tussen 7 en 8." }],
+          woorden: [{ woord: "half 8", uitleg: "= 7:30. Kleine wijzer tussen 7 en 8." }],
           theorie: "NL halftruc: kijk naar volgende cijfer. Klein tussen 7 en 8 → half 8 (NIET half 7).",
           voorbeelden: [{ type: "stand", tekst: "Half 8 = 7:30. Klein tussen 7 en 8. Half 9 = 8:30. Klein tussen 8 en 9." }],
           basiskennis: [{ onderwerp: "Verwarring", uitleg: "Klein staat NA 7 (op weg naar 8) — daarom 'half 8', niet 'half 7'." }],
@@ -522,7 +522,7 @@ const steps = [
         q: "Hoeveel minuten = **3 kwartieren**?",
         options: ["45","30","60","15"],
         answer: 0,
-        wrongHints: [null,"Dat zijn maar 2 kwartieren — het gaat om 3.","Dat zijn 4 kwartieren — maar de vraag is over 3.","Dat is slechts 1 kwartier — vermenigvuldig dit nog met 3."],
+        wrongHints: [null,"Dat zijn maar 2 kwartieren — het gaat om 3.","Dat zijn 4 kwartieren — maar de vraag gaat over 3.","Dat is slechts 1 kwartier — vermenigvuldig dit nog met 3."],
         uitlegPad: {
           stappen: [{ titel: "3 × 15 = 45", tekst: "1 kwartier = 15 min. 3 × 15 = 45 minuten." }],
           woorden: [{ woord: "kwartier", uitleg: "15 minuten. 4 kwartieren = 1 uur." }],
@@ -553,13 +553,13 @@ const steps = [
       { q: "**21:00** in 12-uurs?", options: ["9:00 's avonds","9:00 's morgens","11:00 's avonds","1:00 's nachts"], answer: 0, wrongHints: [null, "Dat is 09:00.", "23:00.", "01:00."] },
       { q: "Hoeveel **minuten** in 1 uur?", options: ["60","100","30","24"], answer: 0, wrongHints: [null, "Niet — geen decimaal.", "Halve.", "Uren in dag."] },
       { q: "Hoeveel **seconden** in 1 minuut?", options: ["60","30","100","24"], answer: 0, wrongHints: [null, "Halve.", "Niet.", "Niet."] },
-      { q: "School begint 8:30, eindigt 14:45. Duur?", options: ["6 uur 15 min","6 uur","5 uur 45 min","7 uur"], answer: 0, wrongHints: [null, "Vergeet niet 15 min.", "Niet.", "Te veel."] },
-      { q: "Trein vertrekt 10:50, rijdt 1 uur 25 min. Aankomst?", options: ["12:15","11:50","12:25","11:25"], answer: 0, wrongHints: [null, "Alleen 1 uur.", "Niet — 25 min na 12.", "Te kort."] },
-      { q: "**12:00** noemen we?", options: ["Middag","Middernacht","Half 1","Avond"], answer: 0, wrongHints: [null, "Middernacht hoort bij 0:00 / 24:00, niet bij 12:00.", "Half 1 betekent halverwege het uur ná 12 — maar 12:00 is precies op het uur.", "Niet relevant."] },
-      { q: "Verschil tussen 9:15 en 9:45?", options: ["30 min","15 min","45 min","1 uur"], answer: 0, wrongHints: [null, "Niet zonder kijken.", "Niet.", "Niet."] },
+      { q: "School begint om 8:30 en eindigt om 14:45. Hoe lang duurt de schooldag?", options: ["6 uur 15 min","6 uur","5 uur 45 min","7 uur"], answer: 0, wrongHints: [null, "Vergeet niet 15 min.", "Niet.", "Te veel."] },
+      { q: "De trein vertrekt om 10:50 en rijdt 1 uur en 25 minuten. Hoe laat komt hij aan?", options: ["12:15","11:50","12:25","11:25"], answer: 0, wrongHints: [null, "Alleen 1 uur.", "Niet — 25 min na 12.", "Te kort."] },
+      { q: "Hoe noemen we **12:00**?", options: ["Middag","Middernacht","Half 1","Avond"], answer: 0, wrongHints: [null, "Middernacht hoort bij 0:00 / 24:00, niet bij 12:00.", "Half 1 betekent halverwege het uur ná 12 — maar 12:00 is precies op het uur.", "Niet relevant."] },
+      { q: "Hoeveel tijd zit er tussen 9:15 en 9:45?", options: ["30 min","15 min","45 min","1 uur"], answer: 0, wrongHints: [null, "Niet zonder kijken.", "Niet.", "Niet."] },
       { q: "Een **dag** heeft hoeveel uur?", options: ["24","12","60","48"], answer: 0, wrongHints: [null, "Halve dag.", "Minuten in uur.", "Twee dagen."] },
       { q: "Hoe laat is 'half 11'?", options: ["10:30","11:30","10:45","11:00"], answer: 0, wrongHints: [null, "Niet — vooruit kijken.", "Niet half.", "Niet half."] },
-      { q: "**15:30** = welke spreektaal?", options: ["Half 4 's middags","Half 5","Kwart over 3","Kwart voor 4"], answer: 0, wrongHints: [null, "Dat is 16:30.", "Dat is 15:15.", "Dat is 15:45."] },
+      { q: "Hoe zeg je **15:30** in spreektaal?", options: ["Half 4 's middags","Half 5","Kwart over 3","Kwart voor 4"], answer: 0, wrongHints: [null, "Dat is 16:30.", "Dat is 15:15.", "Dat is 15:45."] },
       { q: "Hoeveel uur tussen 22:00 en 06:00 's morgens?", options: ["8 uur","4 uur","12 uur","6 uur"], answer: 0, wrongHints: [null, "Niet — over middernacht.", "Niet — niet 12.", "Niet — vergeet middernacht."] },
       { q: "**5 voor half 3** = welke tijd?", options: ["14:25","14:35","2:35","2:25"], answer: 0, wrongHints: [null, "5 over half 3.", "12-uur (overdag bedoeld).", "Niet."] },
     ],

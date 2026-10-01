@@ -152,7 +152,7 @@ const steps = [
         q: "Hoeveel provincies heeft Nederland?",
         options: ["12","11","13","16"],
         answer: 0,
-        wrongHints: [null,"Net iets meer.","Net iets minder.","Veel te veel — denk aan onze landje."],
+        wrongHints: [null,"Net iets meer.","Net iets minder.","Veel te veel — denk aan ons landje."],
         uitlegPad: {
           stappen: [{ titel: "12 provincies", tekst: "Nederland heeft 12 provincies. Vanaf noord: Groningen, Friesland, Drenthe → Overijssel, Flevoland → Gelderland, Utrecht → Noord-Holland, Zuid-Holland, Zeeland → Noord-Brabant, Limburg." }],
           woorden: [{ woord: "provincie", uitleg: "Bestuurlijke regio binnen een land. Elk met eigen hoofdstad + provinciaal bestuur (Provinciale Staten)." }],
@@ -166,7 +166,7 @@ const steps = [
   },
   {
     title: "De 12 provincies",
-    explanation: "Nederland heeft **12 provincies**. Onthoud ze van **noord naar zuid**:\n\n**Noord** *(boven)*\n1. **Groningen** — uiterste noordoosten, gas-provincie\n2. **Friesland** — Friese taal, meren, schaatsen (Elfstedentocht)\n3. **Drenthe** — hunebedden, bossen\n\n**Midden**\n4. **Overijssel** — IJsselmeer-rand\n5. **Flevoland** — jongste provincie (1986), volledig op nieuwe land\n6. **Gelderland** — grootste provincie qua oppervlak\n7. **Utrecht** — kleinste (op Flevoland na)\n\n**West** *(aan zee)*\n8. **Noord-Holland** — Amsterdam, Texel\n9. **Zuid-Holland** — Rotterdam, Den Haag\n10. **Zeeland** — eilanden + Deltawerken\n\n**Zuid**\n11. **Noord-Brabant** — Eindhoven, carnaval\n12. **Limburg** — heuvels, alleen écht hoge stuk van NL\n\n**Geheugentrucje** ('Holland Heeft Beste Friese...'):\nEen makkelijke manier is steden in elke provincie kennen — die plaats je dan in je hoofd.\n\n**Bijzonderheden**:\n• **Flevoland** is **het nieuwst** — op land dat in de jaren '50-'60 uit de zee is gewonnen. Vroeger was dit allemaal **Zuiderzee**.\n• **Friesland** heeft een **eigen taal** (Fries) — officieel erkend als tweede landstaal.\n• **Limburg** heeft als enige echte **heuvels** — de hoogste 'berg' van NL ligt hier (Vaalserberg, 323 m).",
+    explanation: "Nederland heeft **12 provincies**. Onthoud ze van **noord naar zuid**:\n\n**Noord** *(boven)*\n1. **Groningen** — uiterste noordoosten, gas-provincie\n2. **Friesland** — Friese taal, meren, schaatsen (Elfstedentocht)\n3. **Drenthe** — hunebedden, bossen\n\n**Midden**\n4. **Overijssel** — IJsselmeer-rand\n5. **Flevoland** — jongste provincie (1986), volledig op nieuw land\n6. **Gelderland** — grootste provincie qua oppervlak\n7. **Utrecht** — kleinste (op Flevoland na)\n\n**West** *(aan zee)*\n8. **Noord-Holland** — Amsterdam, Texel\n9. **Zuid-Holland** — Rotterdam, Den Haag\n10. **Zeeland** — eilanden + Deltawerken\n\n**Zuid**\n11. **Noord-Brabant** — Eindhoven, carnaval\n12. **Limburg** — heuvels, enige écht hoge stuk van NL\n\n**Geheugentrucje** ('Holland Heeft Beste Friese...'):\nEen makkelijke manier is steden in elke provincie kennen — die plaats je dan in je hoofd.\n\n**Bijzonderheden**:\n• **Flevoland** is **het nieuwst** — op land dat in de jaren '50-'60 uit de zee is gewonnen. Vroeger was dit allemaal **Zuiderzee**.\n• **Friesland** heeft een **eigen taal** (Fries) — officieel erkend als tweede landstaal.\n• **Limburg** heeft als enige echte **heuvels** — de hoogste 'berg' van NL ligt hier (Vaalserberg, 323 m).",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -189,7 +189,7 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Drenthe is plat.","Gelderland heeft de Veluwe maar daar is de hoogste maar ~110m.","Friesland is ook plat."],
         uitlegPad: {
-          stappen: [{ titel: "Vaalserberg — 323 m, Limburg", tekst: "Vaalserberg = 323 m hoog. Ligt in Limburg, uiterste zuid-oosten van NL. Tegelijk 'Drielandenpunt' — hier raken NL, België én Duitsland elkaar. Hoogste punt NL — niet groots als alpen-berg, maar voor plat NL wel iets bijzonder." }],
+          stappen: [{ titel: "Vaalserberg — 323 m, Limburg", tekst: "Vaalserberg = 323 m hoog. Ligt in Limburg, uiterste zuid-oosten van NL. Tegelijk 'Drielandenpunt' — hier raken NL, België én Duitsland elkaar. Hoogste punt NL — niet groots als alpen-berg, maar voor plat NL wel iets bijzonders." }],
           woorden: [{ woord: "Vaalserberg", uitleg: "323 m hoog. Bij dorp Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen elkaar raken. Toerisme-trekker." }],
           theorie: "Limburg is enige NL-provincie met echte heuvels. Reden: Limburg ligt op uitloper van Belgische Ardennen — daar zit gesteente, niet zand zoals rest van NL. Vandaar relief.",
           voorbeelden: [{ type: "vergelijk", tekst: "Vaalserberg 323 m. Mont Blanc (Frankrijk) 4810 m — 15× hoger. Maar voor NL met gemiddeld -1 m onder zeeniveau is 323 m wel iets." }],
@@ -215,7 +215,7 @@ const steps = [
   },
   {
     title: "Hoofdsteden — deel 1 (Noord + Midden)",
-    explanation: "Elke provincie heeft een **hoofdstad** waar het provinciale bestuur zit. Hier de eerste 7:\n\n| Provincie | Hoofdstad |\n|---|---|\n| Groningen | **Groningen** *(stad heeft zelfde naam)* |\n| Friesland | **Leeuwarden** |\n| Drenthe | **Assen** |\n| Overijssel | **Zwolle** |\n| Flevoland | **Lelystad** |\n| Gelderland | **Arnhem** |\n| Utrecht | **Utrecht** *(stad = provincie)* |\n\n**Trucjes om te onthouden**:\n• **Provincie + hoofdstad zelfde naam**: Groningen, Utrecht. Makkelijk.\n• **Lelystad in Flevoland**: 'Lely' verwijst naar **Cornelis Lely** — de man die het plan maakte voor de Zuiderzeewerken (waardoor Flevoland kon ontstaan).\n• **Arnhem in Gelderland**: bekend van de **Slag om Arnhem** (WO2, 1944) — 'A Bridge Too Far'.\n• **Leeuwarden**: betekent 'leeuw-tuin' en heeft zelfs een leeuw in z'n wapen.\n\n**Zwolle** vs **Assen**: heel makkelijk te verwarren. Onthou:\n• **A**ssen → in **A**siaa... nee, in **A** van **A**ssen → **A** komt eerder in alfabet → noordelijker (Drenthe ligt boven Overijssel).\n• Of: **Z**wolle → **Z** = laatste letter, dus zuider van Drenthe.\n\nNiet helemaal kloppend trucje, maar werkt voor onthouden.",
+    explanation: "Elke provincie heeft een **hoofdstad** waar het provinciale bestuur zit. Hier de eerste 7:\n\n| Provincie | Hoofdstad |\n|---|---|\n| Groningen | **Groningen** *(stad heeft zelfde naam)* |\n| Friesland | **Leeuwarden** |\n| Drenthe | **Assen** |\n| Overijssel | **Zwolle** |\n| Flevoland | **Lelystad** |\n| Gelderland | **Arnhem** |\n| Utrecht | **Utrecht** *(stad = provincie)* |\n\n**Trucjes om te onthouden**:\n• **Provincie + hoofdstad zelfde naam**: Groningen, Utrecht. Makkelijk.\n• **Lelystad in Flevoland**: 'Lely' verwijst naar **Cornelis Lely** — de man die het plan maakte voor de Zuiderzeewerken (waardoor Flevoland kon ontstaan).\n• **Arnhem in Gelderland**: bekend van de **Slag om Arnhem** (WO2, 1944) — 'A Bridge Too Far'.\n• **Leeuwarden**: betekent 'leeuw-tuin' en heeft zelfs een leeuw in z'n wapen.\n\n**Zwolle** vs **Assen**: heel makkelijk te verwarren. Onthoud:\n• **A**ssen → in **A**siaa... nee, in **A** van **A**ssen → **A** komt eerder in alfabet → noordelijker (Drenthe ligt boven Overijssel).\n• Of: **Z**wolle → **Z** = laatste letter, dus zuidelijker dan Drenthe.\n\nNiet helemaal kloppend trucje, maar werkt voor onthouden.",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -264,7 +264,7 @@ const steps = [
   },
   {
     title: "Hoofdsteden — deel 2 (West + Zuid)",
-    explanation: "Hier de andere 5 hoofdsteden:\n\n| Provincie | Hoofdstad |\n|---|---|\n| Noord-Holland | **Haarlem** *(let op: niet Amsterdam!)* |\n| Zuid-Holland | **Den Haag** |\n| Zeeland | **Middelburg** |\n| Noord-Brabant | **'s-Hertogenbosch** *(of: Den Bosch)* |\n| Limburg | **Maastricht** |\n\n**Belangrijke valkuil**: **Amsterdam** is wel de **hoofdstad van Nederland** maar **NIET de hoofdstad van Noord-Holland**! De provincie Noord-Holland heeft **Haarlem** als hoofdstad. Vraagt vaak op het examen: \"Welke stad is hoofdstad van Noord-Holland?\" → Haarlem, niet Amsterdam.\n\n**Hetzelfde bij Zuid-Holland**: Rotterdam is groot maar niet de hoofdstad. **Den Haag** is dat.\n\n**'s-Hertogenbosch / Den Bosch**\n• Officiële naam: 's-Hertogenbosch (= 'het bos van de hertog').\n• Dagelijks gebruik: Den Bosch.\n• Beide goed.\n\n**Maastricht** — ligt **helemaal in het zuiden**, ingeklemd tussen België en Duitsland. Bekend van het **Verdrag van Maastricht** (1992) waarmee de Europese Unie werd opgericht.\n\n**Volledige lijst alle 12** *(om te oefenen)*:\n1. Groningen — Groningen\n2. Friesland — Leeuwarden\n3. Drenthe — Assen\n4. Overijssel — Zwolle\n5. Flevoland — Lelystad\n6. Gelderland — Arnhem\n7. Utrecht — Utrecht\n8. Noord-Holland — Haarlem\n9. Zuid-Holland — Den Haag\n10. Zeeland — Middelburg\n11. Noord-Brabant — 's-Hertogenbosch\n12. Limburg — Maastricht",
+    explanation: "Hier de andere 5 hoofdsteden:\n\n| Provincie | Hoofdstad |\n|---|---|\n| Noord-Holland | **Haarlem** *(let op: niet Amsterdam!)* |\n| Zuid-Holland | **Den Haag** |\n| Zeeland | **Middelburg** |\n| Noord-Brabant | **'s-Hertogenbosch** *(of: Den Bosch)* |\n| Limburg | **Maastricht** |\n\n**Belangrijke valkuil**: **Amsterdam** is wel de **hoofdstad van Nederland** maar **NIET de hoofdstad van Noord-Holland**! De provincie Noord-Holland heeft **Haarlem** als hoofdstad. Wordt vaak gevraagd op het examen: \"Welke stad is hoofdstad van Noord-Holland?\" → Haarlem, niet Amsterdam.\n\n**Hetzelfde bij Zuid-Holland**: Rotterdam is groot maar niet de hoofdstad. **Den Haag** is dat.\n\n**'s-Hertogenbosch / Den Bosch**\n• Officiële naam: 's-Hertogenbosch (= 'het bos van de hertog').\n• Dagelijks gebruik: Den Bosch.\n• Beide goed.\n\n**Maastricht** — ligt **helemaal in het zuiden**, ingeklemd tussen België en Duitsland. Bekend van het **Verdrag van Maastricht** (1992) waarmee de Europese Unie werd opgericht.\n\n**Volledige lijst alle 12** *(om te oefenen)*:\n1. Groningen — Groningen\n2. Friesland — Leeuwarden\n3. Drenthe — Assen\n4. Overijssel — Zwolle\n5. Flevoland — Lelystad\n6. Gelderland — Arnhem\n7. Utrecht — Utrecht\n8. Noord-Holland — Haarlem\n9. Zuid-Holland — Den Haag\n10. Zeeland — Middelburg\n11. Noord-Brabant — 's-Hertogenbosch\n12. Limburg — Maastricht",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -290,7 +290,7 @@ const steps = [
           stappen: [{ titel: "Middelburg — historische stad", tekst: "Middelburg is hoofdstad van Zeeland (provincie met eilanden). Ligt op Walcheren. ~50.000 inwoners, eeuwenoude stad uit Gouden Eeuw met grachten + abdij. Hier zit ook Provinciale Staten van Zeeland." }],
           woorden: [{ woord: "Middelburg", uitleg: "Hoofdstad Zeeland. Op eiland Walcheren. Historisch centrum + abdij." }, { woord: "Walcheren", uitleg: "Vroeger zelfstandig eiland Zeeland, nu via Deltawerken met vasteland verbonden." }],
           theorie: "Zeeland = 'zee-land' = veel eilanden + zee-armen. Sinds Deltawerken zijn meeste eilanden vast verbonden via dammen + bruggen. Middelburg historisch hart, andere steden ook belangrijk maar niet hoofdstad.",
-          voorbeelden: [{ type: "andere Zeeland-steden", tekst: "Vlissingen = grote haven + marine. Goes = Zuid-Beveland. Terneuzen = Zeeuws-Vlaanderen. Allemaal in Zeeland, niemand hoofdstad." }],
+          voorbeelden: [{ type: "andere Zeeland-steden", tekst: "Vlissingen = grote haven + marine. Goes = Zuid-Beveland. Terneuzen = Zeeuws-Vlaanderen. Allemaal in Zeeland, geen van alle hoofdstad." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Andere Zeeuwse steden zijn groter qua haven (Vlissingen, Terneuzen) maar Middelburg is bestuurlijk hart." }],
           niveaus: { basis: "Middelburg.", simpeler: "Zeeland → Middelburg (historische stad op Walcheren).", nogSimpeler: "Middelburg" },
         },
@@ -334,7 +334,7 @@ const steps = [
         q: "Wat heette het IJsselmeer **vroeger**?",
         options: ["Zuiderzee","Markermeer","Waddenzee","Noordzee"],
         answer: 0,
-        wrongHints: [null,"Markermeer is een klein deel ervan.","Waddenzee is een ander stuk water (boven de afsluitdijk).","Noordzee is de zee aan de westkant van NL."],
+        wrongHints: [null,"Markermeer is een klein deel ervan.","Waddenzee is een ander stuk water (boven de Afsluitdijk).","Noordzee is de zee aan de westkant van NL."],
         uitlegPad: {
           stappen: [{ titel: "Zuiderzee → IJsselmeer 1932", tekst: "Tot 1932 was er een grote zee in NL: de Zuiderzee. Open verbinding met Noordzee. In 1932 werd de Afsluitdijk gebouwd (32 km dijk Noord-Holland → Friesland). Daarmee werd Zuiderzee afgesloten van zee → werd zoetwater-meer → kreeg nieuwe naam: IJsselmeer (naar IJssel-rivier die erin uitmondt)." }],
           woorden: [{ woord: "Zuiderzee", uitleg: "Vroegere binnenzee NL. 5.000 km². Gevaarlijk: stormvloeden veroorzaakten regelmatig overstromingen." }, { woord: "Afsluitdijk", uitleg: "32 km lange dijk, gebouwd 1927-1932. Sluit IJsselmeer af van Noordzee." }, { woord: "Cornelis Lely", uitleg: "Ingenieur. Bedacht plan 1891. Werd uitgevoerd na zware storm 1916." }],
@@ -350,10 +350,10 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Drinkwater wordt elders gezuiverd.","Sommige werken kunnen wel stroom opwekken maar dat is niet het hoofddoel.","Niet de bedoeling van Deltawerken."],
         uitlegPad: {
-          stappen: [{ titel: "Na Watersnood 1953", tekst: "1 februari 1953: zware stormvloed. Zeeland + Zuid-Holland onder water. 1.836 doden + ~70.000 mensen evacuatie + 47.000 dieren dood. Politiek besluit: 'nooit meer'. Resultaat: Deltawerken (1958-1997) — serie van 13 dammen + stormvloedkeringen die zee-armen Zeeland afsluiten." }],
+          stappen: [{ titel: "Na Watersnood 1953", tekst: "1 februari 1953: zware stormvloed. Zeeland + Zuid-Holland onder water. 1.836 doden + ~70.000 mensen geëvacueerd + 47.000 dieren dood. Politiek besluit: 'nooit meer'. Resultaat: Deltawerken (1958-1997) — serie van 13 dammen + stormvloedkeringen die zee-armen Zeeland afsluiten." }],
           woorden: [{ woord: "Deltawerken", uitleg: "13 grote waterwerken Zeeland 1958-1997. Een van 7 wonderen moderne wereld (American Society of Civil Engineers)." }, { woord: "Oosterscheldekering", uitleg: "Bekendste Deltawerk. Beweegbare stormvloedkering. Alleen dicht bij hoog water." }, { woord: "Watersnoodramp", uitleg: "1953. Grootste natuurramp NL 20e eeuw. 1.836 doden." }],
-          theorie: "Deltawerken hebben dubbel doel: (1) HOOFDDOEL = bescherming tegen zee, (2) economische bonus = land verbonden via dammen, makkelijker verkeer. Maar veiligheid is rede #1.",
-          voorbeelden: [{ type: "schaal", tekst: "Oosterscheldekering 9 km lang, 62 schuiven die elk 350 ton wegen. Sluit bij extreme storm (~1× per paar jaar). Anders blijft 'open' voor zoutwater-getij." }],
+          theorie: "Deltawerken hebben dubbel doel: (1) HOOFDDOEL = bescherming tegen zee, (2) economische bonus = land verbonden via dammen, makkelijker verkeer. Maar veiligheid is reden #1.",
+          voorbeelden: [{ type: "schaal", tekst: "Oosterscheldekering 9 km lang, 62 schuiven die elk 350 ton wegen. Sluit bij extreme storm (~1× per paar jaar). Anders blijft hij open voor zoutwater-getij." }],
           basiskennis: [{ onderwerp: "Niet andere doelen", uitleg: "Geen drinkwater (komt uit duinen). Geen stroom (paar werken kleinschalig wel). Geen scheepvaart-versnelling (juist sluizen voor scheepvaart)." }],
           niveaus: { basis: "Bescherming overstroming.", simpeler: "Deltawerken = beschermen Zeeland tegen overstromingen, na 1953-ramp.", nogSimpeler: "Bescherming" },
         },
@@ -362,7 +362,7 @@ const steps = [
   },
   {
     title: "Landschap + Wadden­eilanden",
-    explanation: "**De vorm van het land**\n\nNederland is bijna helemaal **plat**. Maar er zijn wel verschillen:\n\n**Hoge zandgronden** *(midden-oost-zuid)*\n• Veluwe (Gelderland) — bossen, heide, hoogste punt ~110 m.\n• Drenthe — bossen, hunebedden.\n• Brabants Heuvelland — kleine heuvels.\n\n**Lage delen** *(west + noord)*\n• Polders en weilanden (vooral Zuid-Holland, Flevoland).\n• Hier is **26%** van het land **onder zeeniveau**.\n• Beschermd door dijken + duinen.\n\n**De heuvels van Limburg** *(zuid)*\n• Het **enige echte heuvelland** van NL.\n• Vaalserberg = **323 m** = hoogste punt van NL.\n• Geliefd voor wandelen en wielrennen.\n\n**5 Wadden­eilanden** *(noord, in Waddenzee)*\nVan west naar oost:\n1. **Texel** — bij Noord-Holland — grootste\n2. **Vlieland** — Friesland\n3. **Terschelling** — Friesland\n4. **Ameland** — Friesland\n5. **Schiermonnikoog** — Friesland — oostelijkste\n\nGeheugenezel: **'Toen Vroeg Truus Aan Schelden?'** (T-V-T-A-S = Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog).\n\n**Waddenzee**: door eb en vloed komt grote delen droog te liggen → **wadlopen** mogelijk. UNESCO Werelderfgoed sinds 2009.\n\n**Tulpen + bollen**\n• Vooral in Noord- en Zuid-Holland.\n• Bekendste: **Keukenhof** in Lisse — 7 miljoen tulpen, 32 hectare.\n• Bloeitijd: maart-mei.\n• Nederland is **grootste tulpen-exporteur ter wereld**.",
+    explanation: "**De vorm van het land**\n\nNederland is bijna helemaal **plat**. Maar er zijn wel verschillen:\n\n**Hoge zandgronden** *(midden-oost-zuid)*\n• Veluwe (Gelderland) — bossen, heide, hoogste punt ~110 m.\n• Drenthe — bossen, hunebedden.\n• Brabants Heuvelland — kleine heuvels.\n\n**Lage delen** *(west + noord)*\n• Polders en weilanden (vooral Zuid-Holland, Flevoland).\n• Hier is **26%** van het land **onder zeeniveau**.\n• Beschermd door dijken + duinen.\n\n**De heuvels van Limburg** *(zuid)*\n• Het **enige echte heuvelland** van NL.\n• Vaalserberg = **323 m** = hoogste punt van NL.\n• Geliefd voor wandelen en wielrennen.\n\n**5 Wadden­eilanden** *(noord, in Waddenzee)*\nVan west naar oost:\n1. **Texel** — bij Noord-Holland — grootste\n2. **Vlieland** — Friesland\n3. **Terschelling** — Friesland\n4. **Ameland** — Friesland\n5. **Schiermonnikoog** — Friesland — oostelijkste\n\nGeheugenezel: **'Toen Vroeg Truus Aan Schelden?'** (T-V-T-A-S = Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog).\n\n**Waddenzee**: door eb en vloed komen grote delen droog te liggen → **wadlopen** mogelijk. UNESCO Werelderfgoed sinds 2009.\n\n**Tulpen + bollen**\n• Vooral in Noord- en Zuid-Holland.\n• Bekendste: **Keukenhof** in Lisse — 7 miljoen tulpen, 32 hectare.\n• Bloeitijd: maart-mei.\n• Nederland is **grootste tulpen-exporteur ter wereld**.",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -388,7 +388,7 @@ const steps = [
           stappen: [{ titel: "~26% onder NAP", tekst: "Ongeveer 26% van NL ligt onder zeeniveau (= NAP, Normaal Amsterdams Peil). Vooral in west (Zuid-Holland, Noord-Holland, Flevoland). Diepste punt: Zuidplaspolder bij Rotterdam = -6,76 m NAP. Zonder dijken + gemalen zou dit deel van NL gewoon zee zijn." }],
           woorden: [{ woord: "NAP", uitleg: "Normaal Amsterdams Peil. NL-meetpunt voor zeespiegel, gebaseerd op gemiddeld waterpeil Amsterdam." }, { woord: "polder", uitleg: "Land onder zeeniveau, drooggehouden door dijken + gemalen." }, { woord: "Zuidplaspolder", uitleg: "Diepste polder NL. -6,76 m NAP. Bij Rotterdam." }],
           theorie: "Reden NL is bijzonder: groot deel hoort eigenlijk onder water. Door 1000+ jaar dijken bouwen + bedijking + droogmaling: bewoonbaar geworden. Vandaar 'water-management' is NL-specialiteit (Deltawerken export wereldwijd).",
-          voorbeelden: [{ type: "vergelijk", tekst: "Wereld: meeste landen 100% boven zeeniveau. NL: 26% onder. Bangladesh ook risicovol maar net niet onder. Maladiven (gemiddeld 1,5 m) bedreigd door zeespiegelstijging." }],
+          voorbeelden: [{ type: "vergelijk", tekst: "Wereld: meeste landen 100% boven zeeniveau. NL: 26% onder. Bangladesh ook risicovol maar net niet onder. Malediven (gemiddeld 1,5 m) bedreigd door zeespiegelstijging." }],
           basiskennis: [{ onderwerp: "Examen-feit", uitleg: "Klassieke Cito/Doorstroomtoets-vraag: ~26% van NL onder zeeniveau. Onthoud dit getal." }],
           niveaus: { basis: "~26%.", simpeler: "~26% (een kwart) van NL ligt onder zeeniveau, beschermd door dijken.", nogSimpeler: "26%" },
         },
@@ -400,7 +400,7 @@ const steps = [
         wrongHints: [null,"Mont Blanc is in Frankrijk!","Geen berg.","Tafelberg is in Zuid-Afrika of Suriname."],
         uitlegPad: {
           stappen: [{ titel: "Vaalserberg 323 m", tekst: "Hoogste punt NL = Vaalserberg, 322,4 m boven NAP. Ligt in Limburg, dorp Vaals. Drielandenpunt — hier raken NL, België én Duitsland elkaar. Niet groots als alpen-berg, maar voor plat NL relatief hoog." }],
-          woorden: [{ woord: "Vaalserberg", uitleg: "Hoogste punt NL. 322,4 m. Bij Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen samen komen. Bij Vaalserberg: NL+BE+DE." }],
+          woorden: [{ woord: "Vaalserberg", uitleg: "Hoogste punt NL. 322,4 m. Bij Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen samenkomen. Bij Vaalserberg: NL+BE+DE." }],
           theorie: "Hoogste punten andere landen ter vergelijking: Duitsland Zugspitze 2962 m. Frankrijk Mont Blanc 4810 m. NL Vaalserberg 323 m. NL is plat omdat we op delta-vlakte liggen (zand-sediment van rivieren).",
           voorbeelden: [{ type: "binnen NL", tekst: "Veluwe (Gelderland) hoogste ~110 m. Drenthe heuvels max ~50 m. Vaalserberg eenzaam de top met 323 m." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Mont Blanc = Frankrijk. Zuiderzeeweg = straatnaam (geen berg). Tafelberg = Zuid-Afrika of Suriname." }],
@@ -411,7 +411,7 @@ const steps = [
   },
   {
     title: "5 grootste steden + buurlanden",
-    explanation: "**De 5 grootste steden** van Nederland:\n\n1. **Amsterdam** *(Noord-Holland)* — ~880.000 inwoners. Hoofdstad. Grachten, Anne Frank Huis, Rijksmuseum.\n2. **Rotterdam** *(Zuid-Holland)* — ~660.000. Grootste **haven van Europa**. Modern wegens herbouw na bombardement WO2.\n3. **Den Haag** *(Zuid-Holland)* — ~560.000. **Regering en koning**, ambassades, Internationaal Gerechtshof.\n4. **Utrecht** *(Utrecht)* — ~365.000. Centraal gelegen, treinknooppunt, Domkerk.\n5. **Eindhoven** *(Noord-Brabant)* — ~240.000. Tech-stad (Philips, ASML).\n\nNa Eindhoven: Tilburg, Groningen, Almere, Breda, Nijmegen — allemaal rond 200.000.\n\n**Randstad**\nHet gebied tussen Amsterdam, Rotterdam, Den Haag en Utrecht heet de **Randstad**. Hier woont **40% van de Nederlanders** op slechts ~20% van het land. Het is **dichtstbevolkte gebied** van Europa.\n\n**Buurlanden**\nNederland grenst aan twee landen:\n\n**Duitsland** *(oost)*\n• Hoofdstad: Berlijn.\n• Bekendste grensovergangen: Enschede, Nijmegen, Maastricht.\n• Voertuigen: weg, trein.\n• Veel handel met NL.\n\n**België** *(zuid)*\n• Hoofdstad: Brussel (waar ook EU zit).\n• Drie talen: Nederlands (Vlaanderen), Frans (Wallonië), Duits (kleine groep).\n• Bekendste grensovergangen: Roosendaal, Eindhoven, Maastricht.\n• Aardige overeenkomsten: voetbal, taal (Nederlands).\n\n**Verschil NL en België**\n• België heeft een **koning + parlement met provincies** maar daarboven gewesten + gemeenschappen.\n• België is **Frans + Nederlandstalig** verdeeld — onze Vlaamse buren spreken Nederlands.",
+    explanation: "**De 5 grootste steden** van Nederland:\n\n1. **Amsterdam** *(Noord-Holland)* — ~880.000 inwoners. Hoofdstad. Grachten, Anne Frank Huis, Rijksmuseum.\n2. **Rotterdam** *(Zuid-Holland)* — ~660.000. Grootste **haven van Europa**. Modern wegens herbouw na bombardement WO2.\n3. **Den Haag** *(Zuid-Holland)* — ~560.000. **Regering en koning**, ambassades, Internationaal Gerechtshof.\n4. **Utrecht** *(Utrecht)* — ~365.000. Centraal gelegen, treinknooppunt, Domkerk.\n5. **Eindhoven** *(Noord-Brabant)* — ~240.000. Tech-stad (Philips, ASML).\n\nNa Eindhoven: Tilburg, Groningen, Almere, Breda, Nijmegen — allemaal rond 200.000.\n\n**Randstad**\nHet gebied tussen Amsterdam, Rotterdam, Den Haag en Utrecht heet de **Randstad**. Hier woont **40% van de Nederlanders** op slechts ~20% van het land. Het is het **dichtstbevolkte gebied** van Europa.\n\n**Buurlanden**\nNederland grenst aan twee landen:\n\n**Duitsland** *(oost)*\n• Hoofdstad: Berlijn.\n• Bekendste grensovergangen: Enschede, Nijmegen, Maastricht.\n• Verbindingen: weg, trein.\n• Veel handel met NL.\n\n**België** *(zuid)*\n• Hoofdstad: Brussel (waar ook EU zit).\n• Drie talen: Nederlands (Vlaanderen), Frans (Wallonië), Duits (kleine groep).\n• Bekendste grensovergangen: Roosendaal, Eindhoven, Maastricht.\n• Aardige overeenkomsten: voetbal, taal (Nederlands).\n\n**Verschil NL en België**\n• België heeft een **koning + parlement met provincies** maar daarboven gewesten + gemeenschappen.\n• België is **Frans + Nederlandstalig** verdeeld — onze Vlaamse buren spreken Nederlands.",
     svg: steden5Svg(),
     checks: [
       {
@@ -422,8 +422,8 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Rotterdam = #2", tekst: "Top-5 NL-steden naar inwoners: 1. Amsterdam ~880.000. 2. Rotterdam ~660.000. 3. Den Haag ~560.000. 4. Utrecht ~365.000. 5. Eindhoven ~240.000. Rotterdam vooral bekend om grootste haven van Europa." }],
           woorden: [{ woord: "Rotterdam", uitleg: "2e stad NL. Modern aanzicht door wederopbouw na bombardement WO2 1940." }, { woord: "Rotterdamse haven", uitleg: "Grootste haven Europa. ~470 km² (groter dan veel steden)." }],
-          theorie: "Bevolkingsranglijst kan iets schommelen door jaar. Rotterdam stabiel #2 al decennia. Den Haag #3 met regering. Utrecht #4 centraal. Eindhoven #5 tech-stad.",
-          voorbeelden: [{ type: "bijzonder", tekst: "Rotterdam was vroeger groter (jaren '60: bijna gelijk Amsterdam). Amsterdam groeide harder door dienstverlening + toerisme." }],
+          theorie: "Bevolkingsranglijst kan iets schommelen per jaar. Rotterdam stabiel #2 al decennia. Den Haag #3 met regering. Utrecht #4 centraal. Eindhoven #5 tech-stad.",
+          voorbeelden: [{ type: "bijzonder", tekst: "Rotterdam was vroeger groter (jaren '60: bijna even groot als Amsterdam). Amsterdam groeide harder door dienstverlening + toerisme." }],
           basiskennis: [{ onderwerp: "Niet andere positie", uitleg: "Den Haag 3e (regering). Utrecht 4e (transit). Eindhoven 5e (tech). Rotterdam 2e (haven)." }],
           niveaus: { basis: "Rotterdam.", simpeler: "Top-5: Amsterdam-Rotterdam-Den Haag-Utrecht-Eindhoven. R = 2e.", nogSimpeler: "Rotterdam" },
         },
@@ -469,7 +469,7 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Marken is een dorp, geen molenpark.","Volendam heeft enkele molens maar is bekend om visserij.","Schiphol is een vliegveld."],
         uitlegPad: {
-          stappen: [{ titel: "Kinderdijk — UNESCO 1997", tekst: "Kinderdijk = dorp in Zuid-Holland (bij Rotterdam). 19 windmolens uit 1740. UNESCO Werelderfgoed sinds 1997. Bekendste molenpark Nederland. Toeristen wereldwijd komen kijken. Molens pompten vroeger water uit polders weg — vandaar betreurd dorp ligt onder zeeniveau." }],
+          stappen: [{ titel: "Kinderdijk — UNESCO 1997", tekst: "Kinderdijk = dorp in Zuid-Holland (bij Rotterdam). 19 windmolens uit 1740. UNESCO Werelderfgoed sinds 1997. Bekendste molenpark Nederland. Toeristen wereldwijd komen kijken. Molens pompten vroeger water uit polders weg — want het dorp ligt onder zeeniveau." }],
           woorden: [{ woord: "Kinderdijk", uitleg: "19 molens uit 1740 op 1 plek. UNESCO. ~600.000 toeristen/jaar." }, { woord: "UNESCO Werelderfgoed", uitleg: "Lijst van waardevol cultureel/natuur-erfgoed wereldwijd. NL heeft 12 erfgoederen." }],
           theorie: "Andere NL-werelderfgoeden: Schokland, Beemster, Stelling van Amsterdam, Defensielijn, Waddenzee. Kinderdijk is meest gefotografeerd door Hollandse 'molen+wolk'-cliché.",
           voorbeelden: [{ type: "andere molens", tekst: "Zaanse Schans (Noord-Holland) heeft ook molens, maar nieuwer + minder. Kinderdijk = 19 originele." }],
@@ -485,7 +485,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Schiphol — 4e luchthaven Europa", tekst: "Schiphol = grootste luchthaven NL. In Haarlemmermeer (Noord-Holland), -3 m onder NAP (op drooggemalen polder!). ~70 miljoen passagiers/jaar. 4e drukste van Europa (na London Heathrow, Parijs CDG, Frankfurt). Wel ook treinstation onder de luchthaven, maar vliegveld is hoofdfunctie." }],
           woorden: [{ woord: "Schiphol", uitleg: "Internationale luchthaven NL. Gebouwd 1916 in Haarlemmermeer-polder." }, { woord: "KLM", uitleg: "NL-vliegmaatschappij. Schiphol-hub. Oudste luchtvaartmaatschappij wereld (1919)." }],
-          theorie: "Schiphol ligt LAGER dan zeeniveau (-3 m NAP) — uniek. Naam komt van schip-hol (oude scheepshaven Haarlemmermeer voor het werd drooggelegd 1852).",
+          theorie: "Schiphol ligt LAGER dan zeeniveau (-3 m NAP) — uniek. Naam komt van schip-hol (oude scheepshaven Haarlemmermeer voordat het in 1852 werd drooggelegd).",
           voorbeelden: [{ type: "vergelijk", tekst: "Eindhoven Airport ~7 mln/jaar. Rotterdam-The Hague ~2 mln. Schiphol 70 mln — verreweg grootste NL." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Treinstation = onderdeel maar niet hoofdfunctie. Geen haven (geen schepen). Geen stadion." }],
           niveaus: { basis: "Vliegveld.", simpeler: "Schiphol = grootste luchthaven NL, in Noord-Holland.", nogSimpeler: "Vliegveld" },
@@ -520,7 +520,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Zwolle = hoofdstad Overijssel", tekst: "Overijssel = provincie midden-oost NL. Hoofdstad: Zwolle. Stad ~130.000 inwoners. Aan de IJssel-rivier. Bekend van markt + historische binnenstad." }],
           woorden: [{ woord: "Zwolle", uitleg: "Hoofdstad Overijssel. ~130.000 inwoners. Hanze-stad sinds middeleeuwen." }],
-          theorie: "Trucje noordelijke 3 hoofdsteden: A(ssen)-Drenthe, Z(wolle)-Overijssel, L(eeuwarden)-Friesland. Alfabetische trucje werkt niet meer als je verder gaat — gewoon koppelen onthouden.",
+          theorie: "Trucje noordelijke 3 hoofdsteden: A(ssen)-Drenthe, Z(wolle)-Overijssel, L(eeuwarden)-Friesland. Het alfabetische trucje werkt niet meer als je verder gaat — gewoon koppelen onthouden.",
           voorbeelden: [{ type: "context", tekst: "Andere grote steden Overijssel: Enschede (~160.000) groter dan Zwolle, en Almelo + Hengelo. Maar Zwolle = hoofdstad door geschiedenis." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Arnhem = Gelderland. Assen = Drenthe. Haarlem = Noord-Holland. Allemaal eerder behandeld." }],
           niveaus: { basis: "Zwolle.", simpeler: "Overijssel → Zwolle.", nogSimpeler: "Zwolle" },
@@ -532,10 +532,10 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Donau en Main lopen niet door NL.","Theems is in Engeland.","Tigris is in het Midden-Oosten."],
         uitlegPad: {
-          stappen: [{ titel: "RMS — Rijn, Maas, Schelde", tekst: "Onthoud: R-M-S = Rijn, Maas, Schelde. Drie grote NL-rivieren. Allen komen uit buitenland, alle stromen naar Noordzee." }],
+          stappen: [{ titel: "RMS — Rijn, Maas, Schelde", tekst: "Onthoud: R-M-S = Rijn, Maas, Schelde. Drie grote NL-rivieren. Alle drie komen uit het buitenland en stromen naar de Noordzee." }],
           woorden: [{ woord: "Rijn", uitleg: "1230 km. Uit Zwitserland. Belangrijkste handelsrivier Europa." }, { woord: "Maas", uitleg: "925 km. Uit Frankrijk." }, { woord: "Schelde", uitleg: "350 km. Uit Frankrijk via België." }],
           theorie: "Vergelijk: Donau (Oost-Europa). Main (Duitsland, zijrivier Rijn). Theems (Engeland). Tigris (Midden-Oosten). Geen van deze door NL.",
-          voorbeelden: [{ type: "tip", tekst: "RMS = trucje. Of: 'Rijn Maas Schelde' afkort tot beginletters. R komt voor M komt voor S in alfabet." }],
+          voorbeelden: [{ type: "tip", tekst: "RMS = trucje. Of: 'Rijn Maas Schelde' afgekort tot beginletters. R komt voor M komt voor S in alfabet." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Donau + Main = Duitsland + Oost-EU. Theems = UK. Tigris = Irak. Alleen RMS = NL." }],
           niveaus: { basis: "Rijn, Maas, Schelde.", simpeler: "Drie NL-rivieren: R(ijn) M(aas) S(chelde).", nogSimpeler: "RMS" },
         },
@@ -560,7 +560,7 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Andersom — het is de jongste.","Flevoland is plat, niet hoog.","Wadden­eilanden zijn in Noord-Holland en Friesland."],
         uitlegPad: {
-          stappen: [{ titel: "Jongste provincie 1986", tekst: "Flevoland is uniek: jongste provincie (officieel sinds 1986) + helemaal op gewonnen land uit voormalige Zuiderzee. Polders drooggepompt vanaf 1942. Daarvoor zee — nu provincie met ~425.000 inwoners. Lely is hoofdstad." }],
+          stappen: [{ titel: "Jongste provincie 1986", tekst: "Flevoland is uniek: jongste provincie (officieel sinds 1986) + helemaal op gewonnen land uit voormalige Zuiderzee. Polders drooggepompt vanaf 1942. Daarvoor zee — nu provincie met ~425.000 inwoners. Lelystad is hoofdstad." }],
           woorden: [{ woord: "Flevoland", uitleg: "12e provincie sinds 1986. Op gewonnen land. ~425.000 inwoners." }],
           theorie: "Vergelijk: andere provincies bestaan al eeuwen. Friesland, Holland, Brabant = oeroud. Flevoland uitzondering — bewust gemaakt.",
           voorbeelden: [{ type: "tijdlijn", tekst: "1932 Afsluitdijk → 1942 eerste polder → 1957 + 1968 meer polders → 1986 officieel provincie." }],
@@ -574,7 +574,7 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Te weinig — meer dan dat.","Veel te veel — Nederland is een klein landje.","Veel te veel — denk aan een klein landje."],
         uitlegPad: {
-          stappen: [{ titel: "~17,9 miljoen NL'ers", tekst: "Nederland heeft 2026 ongeveer 17,9 miljoen inwoners. Bijna 18 miljoen. Klein land qua oppervlak (41.500 km²) maar dichtbevolkt: ~430 mensen per km². Een van dichtbevolkstste landen Europa." }],
+          stappen: [{ titel: "~17,9 miljoen NL'ers", tekst: "Nederland heeft 2026 ongeveer 17,9 miljoen inwoners. Bijna 18 miljoen. Klein land qua oppervlak (41.500 km²) maar dichtbevolkt: ~430 mensen per km². Een van de dichtstbevolkte landen van Europa." }],
           woorden: [{ woord: "bevolkingsdichtheid", uitleg: "Aantal mensen per km². NL = 430/km² (heel hoog)." }],
           theorie: "Groei NL: 1900 = 5 miljoen. 1950 = 10 miljoen. 2000 = 16 miljoen. 2026 = 17,9 miljoen. Voorspelling 2050: ~19,5 miljoen.",
           voorbeelden: [{ type: "vergelijk", tekst: "Duitsland 84 mln. België 11,7 mln. Frankrijk 68 mln. NL middelmaat. Maar dichtheid: NL > meeste Europese landen (uitgezonderd Malta, Monaco)." }],
@@ -586,14 +586,14 @@ const steps = [
       { q: "Welke stad is de **regeringsstad** van NL?", options: ["Den Haag","Amsterdam","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Hoofdstad.", "Niet.", "Niet."] },
       { q: "Hoeveel **provincies** heeft NL?", options: ["12","11","13","10"], answer: 0, wrongHints: [null, "Bijna.", "Te veel.", "Te weinig."] },
       { q: "Welke is een NL-provincie?", options: ["Friesland","Beieren","Vlaanderen","Bayern"], answer: 0, wrongHints: [null, "Duits.", "Belgisch.", "Duits."] },
-      { q: "Welke **rivier** stroomt door Rotterdam?", options: ["Nieuwe Maas / Maas","Rijn","IJssel","Amstel"], answer: 0, wrongHints: [null, "Splitsing nog niet op die punt.", "Andere richting.", "Door Amsterdam."] },
+      { q: "Welke **rivier** stroomt door Rotterdam?", options: ["Nieuwe Maas / Maas","Rijn","IJssel","Amstel"], answer: 0, wrongHints: [null, "Splitsing nog niet op dat punt.", "Andere richting.", "Door Amsterdam."] },
       { q: "Welke twee **landen** grenzen aan NL?", options: ["Duitsland + België","Frankrijk + DE","VK + BE","Italië + FR"], answer: 0, wrongHints: [null, "Niet — geen FR-grens.", "Niet — geen VK-grens.", "Niet."] },
       { q: "Welke **provincie** is hoofdstad-provincie (Amsterdam)?", options: ["Noord-Holland","Zuid-Holland","Utrecht","Flevoland"], answer: 0, wrongHints: [null, "Rotterdam/Den Haag daar.", "Anders.", "Anders."] },
       { q: "**Wadden** liggen?", options: ["Noorden — boven Friesland/Groningen","Zuiden","Westen","Oosten"], answer: 0, wrongHints: [null, "Niet.", "Niet exact.", "Niet."] },
       { q: "**IJsselmeer** ontstond door?", options: ["Afsluitdijk (1932)","Mensen-graven","Natuurlijk","Industrie"], answer: 0, wrongHints: [null, "Niet primair.", "Wel maar afgesloten 1932.", "Niet."] },
-      { q: "Welke **provincie** is nieuwste (jongste)?", options: ["Flevoland (1986)","Limburg","Zeeland","Groningen"], answer: 0, wrongHints: [null, "Limburg bestaat al eeuwen.", "Zeeland is een hele oude provincie.", "Groningen is een hele oude provincie."] },
+      { q: "Welke **provincie** is de nieuwste (jongste)?", options: ["Flevoland (1986)","Limburg","Zeeland","Groningen"], answer: 0, wrongHints: [null, "Limburg bestaat al eeuwen.", "Zeeland is een hele oude provincie.", "Groningen is een hele oude provincie."] },
       { q: "Hoogste **berg** in NL ligt in?", options: ["Limburg (Vaalserberg 322m)","Friesland","Zeeland","Noord-Holland"], answer: 0, wrongHints: [null, "Geen bergen.", "Niet hoog.", "Niet."] },
-      { q: "Welke provincie ligt het **meest noordelijk**?", options: ["Groningen","Limburg","Zeeland","Drenthe"], answer: 0, wrongHints: [null, "Limburg ligt in het zuiden.", "Zeeland ligt zuidwest.", "Drenthe ligt noord, maar er ligt nog iets bovenop."] },
+      { q: "Welke provincie ligt het **meest noordelijk**?", options: ["Groningen","Limburg","Zeeland","Drenthe"], answer: 0, wrongHints: [null, "Limburg ligt in het zuiden.", "Zeeland ligt zuidwest.", "Drenthe ligt noord, maar er ligt nog een provincie boven."] },
     ],
   },
 ];

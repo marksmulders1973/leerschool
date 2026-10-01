@@ -195,7 +195,7 @@ const steps = [
         q: "**60%** als kommagetal?",
         options: ["0,6","0,06","6","60"],
         answer: 0,
-        wrongHints: [null,"Komma 1 plek te ver — je hebt 2 plekken verschoven moeten doen, niet 3.","Geen procent meer — eerst delen door 100.","Geen kommagetal — eerst delen door 100."],
+        wrongHints: [null,"Komma 1 plek te ver — je had 2 plekken moeten verschuiven, niet 3.","Geen procent meer — eerst delen door 100.","Geen kommagetal — eerst delen door 100."],
       },
     ],
   },
@@ -266,7 +266,7 @@ const steps = [
         wrongHints: [null, "Te weinig — dat is wat je BESPAART, niet wat je betaalt. Trek af van €80.", "Te weinig — 25% van €80 = €20, dus je betaalt €80 − €20.", "Te veel — heb je überhaupt korting gepakt?"],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is de vraag?", tekst: "**Hoeveel BETAAL je?** Niet 'hoeveel bespaar je'. Lees rustig — De toets test of je dit verschil herkent." },
+            { titel: "Wat is de vraag?", tekst: "**Hoeveel BETAAL je?** Niet 'hoeveel bespaar je'. Lees rustig — de toets test of je dit verschil herkent." },
             { titel: "Manier 1: bereken korting, trek af", tekst: "Stap 1: 25% van €80. 25% = ¼. €80 ÷ 4 = **€20** korting.\nStap 2: nieuwe prijs = €80 − €20 = **€60**." },
             { titel: "Manier 2: direct 75% berekenen (snelste!)", tekst: "Als je 25% korting krijgt, betaal je nog **75%** (100% − 25%).\n75% van €80 = ¾ × €80 = €80 ÷ 4 × 3 = €20 × 3 = **€60**.\nZelfde antwoord, één stap minder!" },
           ],
@@ -376,7 +376,7 @@ const steps = [
         wrongHints: [null,"Te veel — €800 − €720 = €80; vergelijk dat met €800.","Klopt niet — dat verwart het betaalde bedrag met de korting.","Klopt niet — vergelijk €80 met €800, niet andersom."],
       },
       {
-        q: "In een doos zitten **40 chocoladekoekjes**. **30% van de koekjes is melk-chocolade**. Hoeveel zijn dat?",
+        q: "In een doos zitten **40 chocoladekoekjes**. **30% van de koekjes is van melkchocolade**. Hoeveel zijn dat?",
         options: ["12","30","10","8"],
         answer: 0,
         wrongHints: [null,"Dat is het percentage zelf — je moet het toepassen op het aantal koekjes.","Te weinig — 30% is flink meer dan een tiende.","Te weinig — bereken eerst 10% en gebruik dat als stapje."],
@@ -428,7 +428,7 @@ const steps = [
       { q: "10% van 50 = ?", options: ["5","10","50","0,5"], answer: 0, wrongHints: [null, "Niet — % zelf.", "Niet.", "Niet."] },
       { q: "25% van 80 = ?", options: ["20","25","40","2"], answer: 0, wrongHints: [null, "Dat is %.", "Helft.", "Niet."] },
       { q: "Trui van €40 met 20% korting = ?", options: ["€32","€20","€8","€40"], answer: 0, wrongHints: [null, "Niet — korting niet 50%.", "Dat is de korting.", "Geen korting?"] },
-      { q: "Welk decimaal getal is **0,5**?", options: ["50%","5%","½%","500%"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Veel meer."] },
+      { q: "Welk percentage is **0,5**?", options: ["50%","5%","½%","500%"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Veel meer."] },
       { q: "5% van 200 = ?", options: ["10","5","20","100"], answer: 0, wrongHints: [null, "Niet — % zelf.", "Niet.", "Helft."] },
       { q: "**Stijging** 50 → 75 is welk percentage?", options: ["50%","25%","20%","75%"], answer: 0, wrongHints: [null, "Stijging absoluut, niet %.", "Niet.", "Niet relevant."] },
       { q: "Welk percentage is **¼**?", options: ["25%","20%","½%","75%"], answer: 0, wrongHints: [null, "Vijfde.", "Niet.", "Drie kwart."] },

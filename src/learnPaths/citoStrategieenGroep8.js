@@ -80,7 +80,7 @@ function tijdSvg() {
 const steps = [
   {
     title: "Wat is de Doorstroomtoets?",
-    explanation: "Aan het einde van groep 8 maak je de **Doorstroomtoets** (vroeger heette dit de 'Eindtoets'). Sinds 2024 zijn er meerdere aanbieders: **Cito** (meest gebruikt), IEP, ROUTE 8, AMN. Je school kiest welke toets jullie maken.\n\nDeze toets:\n\n• **Test wat je in 8 jaar basisschool hebt geleerd** — rekenen, taal, soms ook wereldoriëntatie.\n• **Geeft een toetsadvies** voor je vervolg-niveau (vmbo / havo / vwo).\n• Wordt op **alle reguliere basisscholen** afgenomen.\n• Duurt **meerdere dagdelen**, gespreid over ~3 dagen in begin februari.\n\n**Belangrijk — regels sinds 2024**:\n\nJouw schooladvies wordt eerst gegeven (uiterlijk **eind januari**). Daarna maak je de Doorstroomtoets in **eerste of tweede week van februari**. Vervolgens geldt:\n\n• Toetsadvies **hoger** dan schooladvies → school **moet** het schooladvies heroverwegen (niet 'kan'). Vaak gaat advies dan omhoog.\n• Toetsadvies **lager** dan schooladvies → schooladvies blijft staan.\n\nDus: **toets kan alleen helpen, niet schaden**. Geen reden om bang te zijn dat je 'omlaag valt'.\n\n**Wat je niet hoeft te kunnen**:\n• Geen rekenmachine — alles uit het hoofd of op papier.\n• Kladpapier mag meestal wel — gebruik het!\n• Geen heel diepgaande wereldkennis — wel **basis**.\n\n**Wat je WEL moet kunnen**:\n• **Tekst lezen + samenvatten** in eigen woorden.\n• **Rekenen** met breuken, procenten, oppervlakte, volume, schaal, snelheid.\n• **Spellen + grammatica** — werkwoordsvormen, leestekens, hoofdletters.\n• **Studievaardigheden** — kaart aflezen, grafiek interpreteren, woordenboek-zoeken.\n\n**Stress over de toets?**\nVeel kinderen vinden het spannend. Tip: zie 't als een kans om te laten zien wat je kunt — niet als een examen waar je voor of tegen kan slagen. **Iedereen 'haalt' de toets** — er is geen zakken.\n\n**Goed nieuws**: je hoeft niet alles goed te hebben. Iedereen maakt fouten — dat is normaal.",
+    explanation: "Aan het einde van groep 8 maak je de **Doorstroomtoets** (vroeger heette dit de 'Eindtoets'). Sinds 2024 zijn er meerdere aanbieders: **Cito** (meest gebruikt), IEP, ROUTE 8, AMN. Je school kiest welke toets jullie maken.\n\nDeze toets:\n\n• **Test wat je in 8 jaar basisschool hebt geleerd** — rekenen, taal, soms ook wereldoriëntatie.\n• **Geeft een toetsadvies** voor je vervolg-niveau (vmbo / havo / vwo).\n• Wordt op **alle reguliere basisscholen** afgenomen.\n• Duurt **meerdere dagdelen**, gespreid over ~3 dagen in begin februari.\n\n**Belangrijk — regels sinds 2024**:\n\nJouw schooladvies wordt eerst gegeven (uiterlijk **eind januari**). Daarna maak je de Doorstroomtoets in de **eerste of tweede week van februari**. Vervolgens geldt:\n\n• Toetsadvies **hoger** dan schooladvies → school **moet** het schooladvies heroverwegen (niet 'kan'). Vaak gaat advies dan omhoog.\n• Toetsadvies **lager** dan schooladvies → schooladvies blijft staan.\n\nDus: **toets kan alleen helpen, niet schaden**. Geen reden om bang te zijn dat je 'omlaag valt'.\n\n**Wat je niet hoeft te kunnen**:\n• Geen rekenmachine — alles uit het hoofd of op papier.\n• Kladpapier mag meestal wel — gebruik het!\n• Geen heel diepgaande wereldkennis — wel **basis**.\n\n**Wat je WEL moet kunnen**:\n• **Tekst lezen + samenvatten** in eigen woorden.\n• **Rekenen** met breuken, procenten, oppervlakte, volume, schaal, snelheid.\n• **Spellen + grammatica** — werkwoordsvormen, leestekens, hoofdletters.\n• **Studievaardigheden** — kaart aflezen, grafiek interpreteren, woordenboek-zoeken.\n\n**Stress over de toets?**\nVeel kinderen vinden het spannend. Tip: zie 't als een kans om te laten zien wat je kunt — niet als een examen waarvoor je kunt slagen of zakken. **Iedereen 'haalt' de toets** — er is geen zakken.\n\n**Goed nieuws**: je hoeft niet alles goed te hebben. Iedereen maakt fouten — dat is normaal.",
     svg: onderdelenSvg(),
     checks: [
       {
@@ -95,7 +95,7 @@ const steps = [
           ],
           woorden: [
             { woord: "Doorstroomtoets", uitleg: "Toets eind groep 8, sinds 2024. Geeft advies voor middelbare school." },
-            { woord: "Voortgezet onderwijs (VO)", uitleg: "Officiele naam voor middelbare school." },
+            { woord: "Voortgezet onderwijs (VO)", uitleg: "Officiële naam voor middelbare school." },
           ],
           theorie: "Belangrijk: je krijgt eerst SCHOOLADVIES (januari), DAARNA de toets (februari). Toets kan advies HOGER bijstellen, niet lager.",
           voorbeelden: [{ type: "advies-flow", tekst: "Schooladvies vmbo-tl + de toets havo → school MOET heroverwegen. Andersom (advies havo + de toets vmbo) → advies blijft havo." }],
@@ -135,7 +135,7 @@ const steps = [
   },
   {
     title: "Welke onderdelen zitten erin?",
-    explanation: "De Doorstroomtoets heeft **3 hoofdonderdelen**:\n\n**1. Rekenen** *(~50 vragen)*\nWat verwacht je:\n• Optellen, aftrekken, vermenigvuldigen, delen — soms met grote getallen.\n• **Breuken**: optellen, vergelijken, vereenvoudigen.\n• **Procenten**: korting, btw, percentage van.\n• **Verhoudingen** + schaal: 'op een kaart 1:50.000...'\n• **Meten**: oppervlakte, omtrek, volume, gewicht, tijd.\n• **Snelheid**: km/u uitrekenen.\n• **Geld**: euro's en centen, kortingen, uitgaven.\n• **Patronen**: getallenrijen voortzetten.\n\n**2. Taal** *(~50 vragen)*\nWat verwacht je:\n• **Spelling**: d/t-regels, ei/ij, au/ou, hoofdletters, leestekens.\n• **Werkwoordsvormen**: hij wordt, ze loopt, jij werkt.\n• **Grammatica**: persoonlijk vnw (jij/jou/jouw), bijvoeglijk nw, lijdend voorwerp.\n• **Woordenschat**: synoniemen, antoniemen, betekenis van woorden.\n• **Begrijpend lezen**: lange teksten + vragen wat de tekst zegt of bedoelt.\n• **Stijlfiguren**: metafoor, personificatie, vergelijking.\n\n**3. Studievaardigheden** *(~25 vragen)*\nDe minst bekende onderdeel — gaat over **handige skills**:\n• **Woordenboek** of **register** zoeken (waar staat 'X' alfabetisch?).\n• **Kaart** of **grafiek** aflezen.\n• **Tabel** interpreteren.\n• **Inhoudsopgave** of **agenda** gebruiken.\n• **Zoektermen** kiezen voor internet.\n\n**4. (Optioneel) Wereldoriëntatie** *(~25 vragen)*\nNiet alle scholen doen dit, maar handig om te kennen:\n• **Aardrijkskunde**: NL provincies, EU, werelddelen, klimaat.\n• **Geschiedenis**: tijdvakken, WO2, oorlogen, oudheid, Renaissance.\n• **Natuur**: lichaam, dieren, planten, weer, ruimte.\n• **Burgerschap**: democratie, mensenrechten.\n\nIn totaal ~**125 vragen**, gespreid over **3 dagen**. Per dag dus ~40-45 vragen.",
+    explanation: "De Doorstroomtoets heeft **3 hoofdonderdelen**:\n\n**1. Rekenen** *(~50 vragen)*\nWat verwacht je:\n• Optellen, aftrekken, vermenigvuldigen, delen — soms met grote getallen.\n• **Breuken**: optellen, vergelijken, vereenvoudigen.\n• **Procenten**: korting, btw, percentage van.\n• **Verhoudingen** + schaal: 'op een kaart 1:50.000...'\n• **Meten**: oppervlakte, omtrek, volume, gewicht, tijd.\n• **Snelheid**: km/u uitrekenen.\n• **Geld**: euro's en centen, kortingen, uitgaven.\n• **Patronen**: getallenrijen voortzetten.\n\n**2. Taal** *(~50 vragen)*\nWat verwacht je:\n• **Spelling**: d/t-regels, ei/ij, au/ou, hoofdletters, leestekens.\n• **Werkwoordsvormen**: hij wordt, ze loopt, jij werkt.\n• **Grammatica**: persoonlijk vnw (jij/jou/jouw), bijvoeglijk nw, lijdend voorwerp.\n• **Woordenschat**: synoniemen, antoniemen, betekenis van woorden.\n• **Begrijpend lezen**: lange teksten + vragen wat de tekst zegt of bedoelt.\n• **Stijlfiguren**: metafoor, personificatie, vergelijking.\n\n**3. Studievaardigheden** *(~25 vragen)*\nHet minst bekende onderdeel — gaat over **handige skills**:\n• **Woordenboek** of **register** zoeken (waar staat 'X' alfabetisch?).\n• **Kaart** of **grafiek** aflezen.\n• **Tabel** interpreteren.\n• **Inhoudsopgave** of **agenda** gebruiken.\n• **Zoektermen** kiezen voor internet.\n\n**4. (Optioneel) Wereldoriëntatie** *(~25 vragen)*\nNiet alle scholen doen dit, maar handig om te kennen:\n• **Aardrijkskunde**: NL provincies, EU, werelddelen, klimaat.\n• **Geschiedenis**: tijdvakken, WO2, oorlogen, oudheid, Renaissance.\n• **Natuur**: lichaam, dieren, planten, weer, ruimte.\n• **Burgerschap**: democratie, mensenrechten.\n\nIn totaal ~**125 vragen**, gespreid over **3 dagen**. Per dag dus ~40-45 vragen.",
     svg: onderdelenSvg(),
     checks: [
       {
@@ -154,7 +154,7 @@ const steps = [
   },
   {
     title: "Tijd-management — pacing",
-    explanation: "Je hebt **niet onbeperkt tijd** — gemiddeld krijg je **~1 minuut per vraag**. Snelheid is belangrijk, maar niet ten koste van zorgvuldigheid.\n\n**De 3 fases per onderdeel** *(~50 vragen, ~50 minuten)*:\n\n**Fase 1 — Eerste 12-15 vragen** *(de makkelijke)*\nDe toets begint vaak met simpele vragen. Dit zijn de 'gratis' punten. **Doe ze snel** — 30 seconden per vraag — en bewaar tijd voor later. Niet **te snel** dat je dom-fouten maakt!\n\n**Fase 2 — Middelste 25-30 vragen** *(de gewone)*\nNormaal tempo. ~1 minuut per vraag. **Lees goed**, denk na, kies. **Twijfel je tussen 2 opties? Markeer en ga door** (zie volgende stap).\n\n**Fase 3 — Laatste 10-15 vragen** *(de zwaarste)*\nMoeilijkste vragen + tijd om twijfels te checken. **Niet panieken** als je hier ergens vastloopt — sla over en ga door.\n\n**De drie KEY-regels**:\n\n**1. Vastlopen? SKIP.**\nLiever 3 vragen verderop goed dan 5 minuten op 1 vraag dom-staren. Doorstroomtoetsen geven evenveel punten per vraag — een makkelijke is even waardevol als een moeilijke.\n\n**2. Bewaar 5 minuten voor controle.**\nAan het einde: ga snel terug naar de markeerd vragen. Vaak weet je het tweede keer wel.\n\n**3. Vul ALTIJD iets in.**\nGeen vraag leeg laten! Bij de Doorstroomtoets krijg je geen aftrek voor verkeerde antwoorden — alleen punten voor goede. Beter een gokje dan niets.\n\n**Trucje voor pacing**: kijk om de 10 vragen op de klok.\n• Vraag 10 → moet ~10 min bezig zijn.\n• Vraag 25 → ~25 min.\n• Vraag 40 → ~40 min.\n• Loop je voor: rustig aan + extra check.\n• Loop je achter: skip moeilijke en kom terug.",
+    explanation: "Je hebt **niet onbeperkt tijd** — gemiddeld krijg je **~1 minuut per vraag**. Snelheid is belangrijk, maar niet ten koste van zorgvuldigheid.\n\n**De 3 fases per onderdeel** *(~50 vragen, ~50 minuten)*:\n\n**Fase 1 — Eerste 12-15 vragen** *(de makkelijke)*\nDe toets begint vaak met simpele vragen. Dit zijn de 'gratis' punten. **Doe ze snel** — 30 seconden per vraag — en bewaar tijd voor later. Niet **zo snel** dat je dom-fouten maakt!\n\n**Fase 2 — Middelste 25-30 vragen** *(de gewone)*\nNormaal tempo. ~1 minuut per vraag. **Lees goed**, denk na, kies. **Twijfel je tussen 2 opties? Markeer en ga door** (zie volgende stap).\n\n**Fase 3 — Laatste 10-15 vragen** *(de zwaarste)*\nMoeilijkste vragen + tijd om twijfels te checken. **Niet panieken** als je hier ergens vastloopt — sla over en ga door.\n\n**De drie KEY-regels**:\n\n**1. Vastlopen? SKIP.**\nLiever 3 vragen verderop goed dan 5 minuten op 1 vraag dom-staren. Doorstroomtoetsen geven evenveel punten per vraag — een makkelijke is even waardevol als een moeilijke.\n\n**2. Bewaar 5 minuten voor controle.**\nAan het einde: ga snel terug naar de gemarkeerde vragen. Vaak weet je het de tweede keer wel.\n\n**3. Vul ALTIJD iets in.**\nGeen vraag leeg laten! Bij de Doorstroomtoets krijg je geen aftrek voor verkeerde antwoorden — alleen punten voor goede. Beter een gokje dan niets.\n\n**Trucje voor pacing**: kijk om de 10 vragen op de klok.\n• Vraag 10 → moet ~10 min bezig zijn.\n• Vraag 25 → ~25 min.\n• Vraag 40 → ~40 min.\n• Loop je voor: rustig aan + extra check.\n• Loop je achter: skip moeilijke en kom terug.",
     svg: tijdSvg(),
     checks: [
       {
@@ -234,7 +234,7 @@ const steps = [
         wrongHints: [null,"Als je gokt zonder eerst te denken: hoe groot is je kans dan?","Wat als je het antwoord eigenlijk al weet — sla je dat dan over?","Mag dat tijdens een toets? Wat kun je wél zelf doen?"],
         uitlegPad: {
           stappen: [
-            { titel: "Eerst denken, dan kijken", tekst: "Bedenk eerst zelf wat het antwoord IS. Dan vergelijk met opties." },
+            { titel: "Eerst denken, dan kijken", tekst: "Bedenk eerst zelf wat het antwoord IS. Vergelijk dan met de opties." },
             { titel: "Waarom?", tekst: "Foute opties zijn slim gemaakt om je te verwarren. Als je eerst kijkt, kies je sneller verkeerd." },
           ],
           woorden: [{ woord: "voor-bedenken", uitleg: "Antwoord eerst zelf bedenken voordat je opties leest." }],
@@ -369,7 +369,7 @@ const steps = [
   },
   {
     title: "Rekenen — slim aanpakken",
-    explanation: "Bij **rekenen-vragen** zit de truc vaak in **lezen wat er gevraagd wordt** + **schatten voordat je rekent**.\n\n**De 4-stappen-aanpak**:\n\n**Stap 1: Lees de vraag 2× rustig**\nWat staat er? Wat wordt gevraagd? Welke getallen zijn relevant?\n\n**Stap 2: Schat een redelijk antwoord**\nVoorbeeld: '12% van 85 = ?' \n• 10% van 85 = 8,5 \n• 12% is iets meer → ~10\n• Dus antwoord is rond 10. Optie '€95,20' (12% er bovenop) komt dichterbij dan '€97,00'.\n\nSchatten helpt **dom-foute antwoorden** uit te sluiten.\n\n**Stap 3: Reken zorgvuldig**\nGebruik kladpapier — niet uit het hoofd voor lastige sommen.\nSchrijf elke stap uit:\n```\n12% × 85\n= 0,12 × 85\n= 0,1 × 85 + 0,02 × 85\n= 8,5 + 1,7\n= 10,2\n85 + 10,2 = €95,20\n```\n\n**Stap 4: Check de eenheid**\n• Cm? Liter? Procent? Euro? Jaren?\n• Soms is het antwoord goed maar de **eenheid fout**.\n\n**Veel voorkomende valkuilen**:\n\n**1. Verschil tussen 'is' en 'wordt'**\n*\"Een prijs is €100. Hij wordt 20% **goedkoper**.\"* → -20%, nieuwe prijs €80.\n*\"Een prijs is €100. Hij **werd** met 20% verhoogd.\"* → +20%, nieuwe prijs €120.\n\n**2. Eenhedeb omrekenen**\n• 1 km = 1.000 m\n• 1 m = 100 cm = 1.000 mm\n• 1 m³ = 1.000 liter\n• 1 uur = 60 min = 3.600 sec\n• 1 jaar = 12 maand = 365 dag = ~52 week\n\n**3. Schaalberekening**\nKaart 1:50.000 betekent: 1 cm = 50.000 cm = 500 m = 0,5 km in werkelijkheid.\n• 4 cm op kaart = 4 × 0,5 = 2 km echt.\n• 8 cm = 4 km echt.\n\n**4. Procent uitrekenen**\n• 'X% van Y' = X/100 × Y\n• 10% van iets = deel door 10\n• 25% = deel door 4\n• 50% = de helft\n• 'X is hoeveel procent van Y' = X/Y × 100%\n\n**5. Snelheid (km/u)**\nSnelheid = afstand ÷ tijd\n• 150 km in 1,5 uur = 150 ÷ 1,5 = 100 km/u\n• 60 km in 30 min = 60 ÷ 0,5 = 120 km/u\n\n**Lastig met tijd**: minuten omzetten naar uren!\n• 30 min = 0,5 uur\n• 15 min = 0,25 uur\n• 45 min = 0,75 uur\n• 1 uur 15 min = 1,25 uur",
+    explanation: "Bij **rekenen-vragen** zit de truc vaak in **lezen wat er gevraagd wordt** + **schatten voordat je rekent**.\n\n**De 4-stappen-aanpak**:\n\n**Stap 1: Lees de vraag 2× rustig**\nWat staat er? Wat wordt gevraagd? Welke getallen zijn relevant?\n\n**Stap 2: Schat een redelijk antwoord**\nVoorbeeld: '12% van 85 = ?' \n• 10% van 85 = 8,5 \n• 12% is iets meer → ~10\n• Dus antwoord is rond 10. Optie '€95,20' (12% er bovenop) komt dichterbij dan '€97,00'.\n\nSchatten helpt **dom-foute antwoorden** uit te sluiten.\n\n**Stap 3: Reken zorgvuldig**\nGebruik kladpapier — niet uit het hoofd voor lastige sommen.\nSchrijf elke stap uit:\n```\n12% × 85\n= 0,12 × 85\n= 0,1 × 85 + 0,02 × 85\n= 8,5 + 1,7\n= 10,2\n85 + 10,2 = €95,20\n```\n\n**Stap 4: Check de eenheid**\n• Cm? Liter? Procent? Euro? Jaren?\n• Soms is het antwoord goed maar de **eenheid fout**.\n\n**Veelvoorkomende valkuilen**:\n\n**1. Verschil tussen 'is' en 'wordt'**\n*\"Een prijs is €100. Hij wordt 20% **goedkoper**.\"* → -20%, nieuwe prijs €80.\n*\"Een prijs is €100. Hij **werd** met 20% verhoogd.\"* → +20%, nieuwe prijs €120.\n\n**2. Eenheden omrekenen**\n• 1 km = 1.000 m\n• 1 m = 100 cm = 1.000 mm\n• 1 m³ = 1.000 liter\n• 1 uur = 60 min = 3.600 sec\n• 1 jaar = 12 maand = 365 dag = ~52 week\n\n**3. Schaalberekening**\nKaart 1:50.000 betekent: 1 cm = 50.000 cm = 500 m = 0,5 km in werkelijkheid.\n• 4 cm op kaart = 4 × 0,5 = 2 km echt.\n• 8 cm = 4 km echt.\n\n**4. Procent uitrekenen**\n• 'X% van Y' = X/100 × Y\n• 10% van iets = deel door 10\n• 25% = deel door 4\n• 50% = de helft\n• 'X is hoeveel procent van Y' = X/Y × 100%\n\n**5. Snelheid (km/u)**\nSnelheid = afstand ÷ tijd\n• 150 km in 1,5 uur = 150 ÷ 1,5 = 100 km/u\n• 60 km in 30 min = 60 ÷ 0,5 = 120 km/u\n\n**Lastig met tijd**: minuten omzetten naar uren!\n• 30 min = 0,5 uur\n• 15 min = 0,25 uur\n• 45 min = 0,75 uur\n• 1 uur 15 min = 1,25 uur",
     svg: tijdSvg(),
     checks: [
       {
@@ -437,7 +437,7 @@ const steps = [
             { type: "min", tekst: "€100, 20% goedkoper = €100 − €20 = €80." },
             { type: "plus", tekst: "€100, 20% verhoogd = €100 + €20 = €120." },
           ],
-          basiskennis: [{ onderwerp: "Richting eerst", uitleg: "Bepaal eerst HOGER of LAGER, dan reken pas." }],
+          basiskennis: [{ onderwerp: "Richting eerst", uitleg: "Bepaal eerst HOGER of LAGER, reken dan pas." }],
           niveaus: {
             basis: "Goedkoper = −, verhoogd = +.",
             simpeler: "Goedkoper = prijs gaat OMLAAG. Verhoogd = prijs gaat OMHOOG. Helemaal verschillend, ook al is het percentage gelijk.",
@@ -449,7 +449,7 @@ const steps = [
   },
   {
     title: "Eindopdracht — alle strategieën samen",
-    explanation: "Tijd om alle strategieën samen toe te passen!\n\n**Snelle samenvatting**:\n\n**Vóór de toets**:\n• Goed slapen — minimaal 8 uur.\n• Ontbijt eten — energie voor je hersenen.\n• Op tijd op school zijn.\n• Pen, gum, potlood mee.\n• **Geen extreem stress** — je bent voorbereid.\n\n**Tijdens de toets**:\n• **Skim** alles eerst (overzicht).\n• **Pacing**: ~1 minuut per vraag, kijk om de 10 vragen op klok.\n• **Vastlopen? SKIP** en kom terug.\n• **Niets leeg** laten — vul altijd iets in.\n• **Eliminatie** voor lastige meerkeuze.\n• **Schat** rekensommen voordat je gaat rekenen.\n• **Lees vragen 2×** — vooral 'NIET'-vragen.\n• Bewaar **5 min** voor controle.\n\n**Na de toets**:\n• **Niet stressen** — je hebt het beste gedaan wat je kon.\n• Toetsadvies komt **medio maart**. Ligt 't toetsadvies hoger dan je schooladvies, dan **moet** de school heroverwegen — vaak gaat advies dan omhoog.\n\n**Zelfvertrouwen-mantra**:\n*'Iedereen 'haalt' de toets. Mijn schooladvies komt eerst. De toets kan alleen helpen, niet schaden. Ik heb het voorbereid en ga gewoon mijn best doen.'*\n\n**Veel succes!**",
+    explanation: "Tijd om alle strategieën samen toe te passen!\n\n**Snelle samenvatting**:\n\n**Vóór de toets**:\n• Goed slapen — minimaal 8 uur.\n• Ontbijt eten — energie voor je hersenen.\n• Op tijd op school zijn.\n• Pen, gum, potlood mee.\n• **Geen extreme stress** — je bent voorbereid.\n\n**Tijdens de toets**:\n• **Skim** alles eerst (overzicht).\n• **Pacing**: ~1 minuut per vraag, kijk om de 10 vragen op klok.\n• **Vastlopen? SKIP** en kom terug.\n• **Niets leeg** laten — vul altijd iets in.\n• **Eliminatie** voor lastige meerkeuze.\n• **Schat** rekensommen voordat je gaat rekenen.\n• **Lees vragen 2×** — vooral 'NIET'-vragen.\n• Bewaar **5 min** voor controle.\n\n**Na de toets**:\n• **Niet stressen** — je hebt het beste gedaan wat je kon.\n• Toetsadvies komt **medio maart**. Ligt 't toetsadvies hoger dan je schooladvies, dan **moet** de school heroverwegen — vaak gaat advies dan omhoog.\n\n**Zelfvertrouwen-mantra**:\n*'Iedereen 'haalt' de toets. Mijn schooladvies komt eerst. De toets kan alleen helpen, niet schaden. Ik heb me voorbereid en ga gewoon mijn best doen.'*\n\n**Veel succes!**",
     svg: tijdSvg(),
     checks: [
       {
@@ -459,23 +459,23 @@ const steps = [
         wrongHints: [null,"Heb je tijd om alles opnieuw na te lopen — ook de makkelijke?","Wat als je dit doet en geen tijd meer hebt voor de twijfels?","Hoef je vragen die je zeker wist nog eens te bekijken?"],
         uitlegPad: {
           stappen: [
-            { titel: "Markeer tijdens", tekst: "Twijfel tijdens een vraag? Vink het vraagnummer op kladpapier. Ga snel verder." },
+            { titel: "Markeer tijdens", tekst: "Twijfel tijdens een vraag? Vink het vraagnummer aan op kladpapier. Ga snel verder." },
             { titel: "Aan einde controle", tekst: "Met overgebleven tijd kijk je alleen naar gemarkeerde twijfels. Niet alle 50 vragen." },
           ],
           woorden: [{ woord: "controleren", uitleg: "Antwoord nog eens checken op fouten." }],
           theorie: "Slimme controle = gericht. Alle 50 antwoorden herlezen = tijdverlies. Alleen jouw twijfels = geconcentreerd én haalbaar.",
-          voorbeelden: [{ type: "markeer", tekst: "Tijdens toets: vraag 7, 12, 23 = twijfel. Vink op kladpapier. Aan einde: 5 min over → check alleen 7, 12, 23." }],
+          voorbeelden: [{ type: "markeer", tekst: "Tijdens toets: vraag 7, 12, 23 = twijfel. Vink ze aan op kladpapier. Aan einde: 5 min over → check alleen 7, 12, 23." }],
           basiskennis: [{ onderwerp: "Tijd voor controle", uitleg: "Plan ~5 min over voor controle aan einde. Niet meer, niet minder." }],
           niveaus: {
             basis: "Markeer twijfels, check aan einde.",
-            simpeler: "Tijdens toets twijfel je bij sommige vragen. Schrijf die vraagnummers op kladpapier. Aan het eind, met overgebleven tijd, kijk je alleen die nog eens.",
+            simpeler: "Tijdens toets twijfel je bij sommige vragen. Schrijf die vraagnummers op kladpapier. Aan het eind, met overgebleven tijd, bekijk je alleen die nog eens.",
             nogSimpeler: "Markeer + check eind",
           },
         },
       },
       {
         q: "Welke houding is **goed** voor de Doorstroomtoets?",
-        options: ["Gewoon mijn best doen, ik ben voorbereid","Stress & paniek — er is veel afhankelijk","Alles vergeten en raden","Iemand anders laten meedoen"],
+        options: ["Gewoon mijn best doen, ik ben voorbereid","Stress & paniek — er hangt veel van af","Alles vergeten en raden","Iemand anders laten meedoen"],
         answer: 0,
         wrongHints: [null,"Wat doet stress met je hoofd: helpt het je denken of juist niet?","Werkt raden zonder iets uit het hoofd op te halen écht in jouw voordeel?","Mag iemand anders jouw toets maken? En wat zou dat zelfs als het mocht opleveren?"],
         uitlegPad: {
@@ -486,10 +486,10 @@ const steps = [
           woorden: [{ woord: "houding", uitleg: "Hoe je over iets denkt en jezelf erop voorbereidt." }],
           theorie: "Onderzoek: matige spanning helpt prestatie, hoge stress blokkeert. Doel = matige spanning (focus) niet hoge (paniek).\n\nTrucjes:\n- Goed slapen avond ervoor\n- Ontbijt eten\n- Diep ademhalen voor je begint\n- Mantra: 'ik doe gewoon mijn best'",
           voorbeelden: [{ type: "mantra", tekst: "Voor toets: zeg in jezelf 'ik ben voorbereid, ik doe mijn best, dat is genoeg'. Werkt." }],
-          basiskennis: [{ onderwerp: "De toets ≠ overleven", uitleg: "Toets = kans om te laten zien wat je kunt. Geen examen waar je voor zakt." }],
+          basiskennis: [{ onderwerp: "De toets ≠ overleven", uitleg: "Toets = kans om te laten zien wat je kunt. Geen examen waarvoor je kunt zakken." }],
           niveaus: {
             basis: "Rustig + best doen.",
-            simpeler: "Doorstroomtoets = kans om te laten zien wat je kunt. Niet doodstress over. Iedereen 'haalt' de toets (geen zakken). Doe gewoon je best.",
+            simpeler: "Doorstroomtoets = kans om te laten zien wat je kunt. Geen reden voor doodsstress. Iedereen 'haalt' de toets (geen zakken). Doe gewoon je best.",
             nogSimpeler: "Rustig + best",
           },
         },
@@ -553,7 +553,7 @@ const steps = [
             { titel: "Waarom doorpiekeren slecht is", tekst: "5 min op 1 vraag = 5 makkelijke vragen daarna missen. Slechte ruil." },
           ],
           woorden: [{ woord: "doorpiekeren", uitleg: "Eindeloos blijven nadenken zonder resultaat — vastlopen mentaal." }],
-          theorie: "Slimme strategieën: skip, gokken, eliminatie, markeren, schatten. Allemaal verstandig. NIET-slim: doorpiekeren / leeg laten / paniekeren.",
+          theorie: "Slimme strategieën: skip, gokken, eliminatie, markeren, schatten. Allemaal verstandig. NIET-slim: doorpiekeren / leeg laten / panieken.",
           voorbeelden: [{ type: "tijdverlies", tekst: "Vraag 8 = lastig. Doorpiekeren 5 min → vraag 9-15 niet gehaald. = 7 punten verloren voor misschien 1 punt." }],
           basiskennis: [{ onderwerp: "Tijd is kostbaar", uitleg: "Toets-tijd is strak. Elke minuut telt." }],
           niveaus: {
@@ -565,13 +565,13 @@ const steps = [
       },
       {
         q: "Wat doe je 's **avonds voor de Doorstroomtoets**?",
-        options: ["Rustig avond, vroeg slapen — geen last-minute studeren","Tot 1 uur 's nachts blokken","Niets — toets is morgen","Veel coffee drinken om wakker te blijven"],
+        options: ["Rustige avond, vroeg slapen — geen last-minute studeren","Tot 1 uur 's nachts blokken","Niets — toets is morgen","Veel koffie drinken om wakker te blijven"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — last-minute werkt averechts, brein moet rusten.", "Klopt deels maar 'niets' is te passief — bedoeling is bewust uitrusten.", "Cafeïne stoort slaap = brein werkt slechter."],
         uitlegPad: {
           stappen: [
             { titel: "Slaap = brein-prestatie", tekst: "Wetenschappers tonen: **goede nachtrust voor toets** = beter resultaat dan extra studeren. Brein verwerkt geleerde stof tijdens slaap. 10-12-jarigen hebben **9-10 uur** slaap nodig." },
-            { titel: "Avond-routine voor toets", tekst: "**Wel doen**:\n• Vroeg eten (geen zwaar maal)\n• Spullen klaar leggen (potlood, gum, bril, lunch)\n• Iets ontspannends — boek, tekenen, wandeling\n• In bed uiterlijk 21:00\n• Telefoon NIET in slaapkamer (blauw licht verstoort slaap)\n\n**Niet doen**:\n• Tot middernacht oefenen\n• Stress-gesprekken\n• Caffeïne (cola, ijskoffie)\n• Beeldscherm 1 uur voor slapen" },
+            { titel: "Avond-routine voor toets", tekst: "**Wel doen**:\n• Vroeg eten (geen zwaar maal)\n• Spullen klaar leggen (potlood, gum, bril, lunch)\n• Iets ontspannends — boek, tekenen, wandeling\n• In bed uiterlijk 21:00\n• Telefoon NIET in slaapkamer (blauw licht verstoort slaap)\n\n**Niet doen**:\n• Tot middernacht oefenen\n• Stress-gesprekken\n• Cafeïne (cola, ijskoffie)\n• Beeldscherm 1 uur voor slapen" },
             { titel: "Toets-feit: prestatie + slaap", tekst: "Onderzoek Universiteit Tilburg: kinderen die <8 uur slapen vóór toets scoorden **15% lager** dan goed-uitgeruste klasgenoten. Studeer-uren < slaap-uren in prestatie-impact. Daarom: **voorbereiding gebeurt WEKEN vooraf, niet avond ervoor**." },
           ],
           woorden: [
@@ -600,7 +600,7 @@ const steps = [
           woorden: [
             { woord: "markeren", uitleg: "Klein tekentje (rondje, kruisje) bij vraag-nummer om later terug te keren." },
             { woord: "eliminatie", uitleg: "Onmogelijke antwoorden uitsluiten om kans op juiste te verhogen." },
-            { woord: "schatting", uitleg: "Ongeveer-berekening om grove fout te vermijden + plausibele antwoord te vinden." },
+            { woord: "schatting", uitleg: "Ongeveer-berekening om grove fout te vermijden + een plausibel antwoord te vinden." },
           ],
           theorie: "Doorstroomtoets-strategie:\n1. **Begin** bij vraag 1, ga **op tempo**\n2. Vraag te lastig (>1 min)? **Schat + markeer + door**\n3. **Maak eerste ronde** rust + simpel\n4. **Tweede ronde** terug naar lastige\n5. **Laatste 5 min**: controleer alle antwoorden — niet blanco laten",
           voorbeelden: [
@@ -628,7 +628,7 @@ const steps = [
           ],
           theorie: "Wiskundige logica gokken:\n• 25% per vraag bij willekeur\n• 40 vragen × 25% = 10 punten gemiddeld zonder kennis\n• Met half-eliminatie: ~50% × N = veel meer punten\n\nBijdrage aan totaal-score: niet onderschatten.",
           voorbeelden: [
-            { type: "stap", tekst: "Vraag: 'Wat is Doorstroomtoets-datum 2027?' Opties: 1) jan, 2) april, 3) juni, 4) sept. De toets is altijd februari → eliminate 3+4. Gok 1 of 2 = 50% kans." },
+            { type: "stap", tekst: "Vraag: 'Wat is Doorstroomtoets-datum 2027?' Opties: 1) jan, 2) april, 3) juni, 4) sept. De toets is altijd februari → elimineer 3+4. Gok 1 of 2 = 50% kans." },
           ],
           basiskennis: [{ onderwerp: "Nooit blanco bij MC", uitleg: "Bij multiple-choice + geen strafpunten: gokken altijd beter dan blanco. Math achter de logica." }],
           niveaus: { basis: "Gok tussen 2.", simpeler: "Bij MC: weet je 2 opties zeker fout, gok tussen overgebleven 2 = 50% kans op punt. Beter dan leeg (0%).", nogSimpeler: "Gokken" },
@@ -641,7 +641,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld — cafeïne verhoogt hartslag = meer stress-gevoel.", "Niet — stress overdraagbaar op anderen.", "Geen tijd meer — vergroot stress."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is examen-stress?", tekst: "**Examen-stress** is normaal — lichaam maakt **adrenaline + cortisol** klaar voor 'vechten of vluchten'. Helpt wel scherp + alert. Te veel = verlamt + concentreert slecht.\n\nSymptomen:\n• Hart bonst snel\n• Zweten handen\n• Maag-gevoel ('vlinders')\n• Gedachten malen\n• Vergeten wat je wist" },
+            { titel: "Wat is examen-stress?", tekst: "**Examen-stress** is normaal — lichaam maakt **adrenaline + cortisol** klaar voor 'vechten of vluchten'. Helpt wel scherp + alert. Te veel = verlamt + concentreert slecht.\n\nSymptomen:\n• Hart bonst snel\n• Zwetende handen\n• Maag-gevoel ('vlinders')\n• Gedachten malen\n• Vergeten wat je wist" },
             { titel: "4-7-8 ademhalingstruc", tekst: "**4-7-8 techniek** (1 keer = 30 sec):\n1. Adem **4 sec** rustig in door neus\n2. Houd **7 sec** vast\n3. Adem **8 sec** uit door mond\n4. Herhaal 3-4×\n\nWaarom werkt het: vertraagt hartslag, kalmeert zenuwstelsel, verlaagt cortisol. Brein schakelt van 'paniek' naar 'denken'." },
             { titel: "Andere tips bij examen-stress", tekst: "**Direct vóór toets**:\n• 4-7-8 ademhaling\n• Schouders rondschudden\n• Korte wandeling buiten (frisse lucht)\n• Glas water (niet veel)\n• Positieve zelfspraak ('ik kan dit')\n• Klasgenoten vermijden die piekeren\n\n**Langere termijn**:\n• Voldoende slaap\n• Sport tijdens leerweek\n• Niet alles op laatste moment\n• Praten met ouder/leerkracht over zorgen" },
           ],
@@ -650,7 +650,7 @@ const steps = [
             { woord: "cortisol", uitleg: "Stress-hormoon. Helpt alert zijn, te veel = verlammend." },
             { woord: "4-7-8", uitleg: "Ademhalingstruc: 4 in, 7 vast, 8 uit. Kalmeert direct." },
           ],
-          theorie: "Stress-management voor de toets:\n• **Erkennen** dat stress normaal is\n• **Ademen** om kalmeren (4-7-8)\n• **Bewegen** om energie kwijt te raken\n• **Praten** als het te veel wordt\n\nNet als sport-prestatie: te gespannen = mindere prestatie. Iets stress = scherp. Veel = verlamd.",
+          theorie: "Stress-management voor de toets:\n• **Erkennen** dat stress normaal is\n• **Ademen** om te kalmeren (4-7-8)\n• **Bewegen** om energie kwijt te raken\n• **Praten** als het te veel wordt\n\nNet als sport-prestatie: te gespannen = mindere prestatie. Iets stress = scherp. Veel = verlamd.",
           voorbeelden: [
             { type: "stap", tekst: "Topsporters gebruiken 4-7-8 ademhalingsoefening ook vóór belangrijke wedstrijden — zelfde principe." },
           ],
@@ -672,7 +672,7 @@ const steps = [
       { q: "Bij **negatieve vraag** ('niet'/'behalve') wat doe je extra?", options: ["Onderstreep 'niet' / 'behalve'","Sla over","Random","Stop"], answer: 0, wrongHints: [null, "Niet zomaar.", "Risico.", "Niet — doorgaan."] },
       { q: "Hoe **controleer** je je antwoorden achteraf?", options: ["Doe de berekening anders / lees vraag opnieuw","Niet — eerste poging is altijd goed","Vraag aan buurman","Random aanpassen"], answer: 0, wrongHints: [null, "Niet altijd.", "Niet — spieken.", "Slechtste manier."] },
       { q: "Wat is een **mind-blank** tijdens toets?", options: ["Tijdelijk niet meer weten — diep ademhalen helpt","Defect papier","Stroomstoring","Eind toets"], answer: 0, wrongHints: [null, "Mind-blank zit in je hoofd, niet op je papier.", "Stroomstoring stopt het lokaal, niet je hoofd.", "Een mind-blank is een moment in de toets, geen einde."] },
-      { q: "Bij **groep 8** Doorstroomtoets gaat over?", options: ["Taal + rekenen + studievaardigheden","Alleen rekenen","Alleen geschiedenis","Engels"], answer: 0, wrongHints: [null, "Niet alleen rekenen.", "Niet hoofdvak.", "Geen Engels-onderdeel."] },
+      { q: "Waar gaat de Doorstroomtoets in **groep 8** over?", options: ["Taal + rekenen + studievaardigheden","Alleen rekenen","Alleen geschiedenis","Engels"], answer: 0, wrongHints: [null, "Niet alleen rekenen.", "Niet hoofdvak.", "Geen Engels-onderdeel."] },
     ],
   },
 ];
@@ -681,7 +681,7 @@ steps.forEach((s, i) => { s.emoji = stepEmojis[i]; });
 
 const citoStrategieenGroep8 = {
   id: "cito-strategieen-groep8",
-  title: "De toets Doorstroomtoets — strategieën voor groep 8",
+  title: "Doorstroomtoets — strategieën voor groep 8",
   emoji: "🎯",
   level: "groep8",
   subject: "cito",

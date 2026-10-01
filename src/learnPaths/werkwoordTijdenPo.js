@@ -22,7 +22,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is een werkwoord?",
-    explanation: "Een **werkwoord** zegt **wat iemand doet** (of wat er gebeurt).\n\n**Voorbeelden**:\n• Tom **loopt** naar school. → 'loopt' = werkwoord.\n• Het **regent** vandaag. → 'regent' = werkwoord.\n• Lisa **leest** een boek. → 'leest' = werkwoord.\n\n**Wat doet een werkwoord?**\n• Beschrijft een **handeling**: lopen, eten, schrijven, springen.\n• Beschrijft een **toestand**: zijn, hebben, blijven, zitten.\n• Beschrijft een **gebeurtenis**: regenen, sneeuwen, vallen.\n\n**Het hele werkwoord** = het werkwoord in z'n basisvorm. Eindigt vrijwel altijd op **-en**:\n• lopen, eten, schrijven, zijn, hebben, doen.\n\n**Het werkwoord verandert per persoon en tijd**:\n• Ik **loop** *(ik-vorm tegenwoordige tijd)*\n• Hij **loopt** *(hij/zij-vorm tegenwoordige tijd)*\n• Wij **liepen** *(verleden tijd)*\n\nIn dit pad leer je hoe werkwoorden **vervoegen** voor:\n• **Tegenwoordige tijd** (nu).\n• **Verleden tijd** (eerder).\n\n**Toets-tip**: het werkwoord is meestal het **drukste** woord in een zin — het 'doet'.",
+    explanation: "Een **werkwoord** zegt **wat iemand doet** (of wat er gebeurt).\n\n**Voorbeelden**:\n• Tom **loopt** naar school. → 'loopt' = werkwoord.\n• Het **regent** vandaag. → 'regent' = werkwoord.\n• Lisa **leest** een boek. → 'leest' = werkwoord.\n\n**Wat doet een werkwoord?**\n• Beschrijft een **handeling**: lopen, eten, schrijven, springen.\n• Beschrijft een **toestand**: zijn, hebben, blijven, zitten.\n• Beschrijft een **gebeurtenis**: regenen, sneeuwen, vallen.\n\n**Het hele werkwoord** = het werkwoord in z'n basisvorm. Eindigt vrijwel altijd op **-en**:\n• lopen, eten, schrijven, zijn, hebben, doen.\n\n**Het werkwoord verandert per persoon en tijd**:\n• Ik **loop** *(ik-vorm tegenwoordige tijd)*\n• Hij **loopt** *(hij/zij-vorm tegenwoordige tijd)*\n• Wij **liepen** *(verleden tijd)*\n\nIn dit pad leer je hoe je werkwoorden **vervoegt** in de:\n• **Tegenwoordige tijd** (nu).\n• **Verleden tijd** (eerder).\n\n**Toets-tip**: het werkwoord is meestal het **drukste** woord in een zin — het 'doet'.",
     checks: [
       {
         q: "Welk woord is een **werkwoord** in: *'Tom danst op het plein'*?",
@@ -56,13 +56,13 @@ const steps = [
         q: "Welke zin heeft **geen werkwoord**?",
         options: ["De auto rood en groot","De auto rijdt rood","Ik fiets snel","Lisa loopt"],
         answer: 0,
-        wrongHints: [null, "Bevat 'fiets' (als ww) of 'snel'.", "Bevat 'loopt' = werkwoord.", "Bevat 'rijdt' = werkwoord."],
+        wrongHints: [null, "Bevat 'rijdt' = werkwoord.", "Bevat 'fiets' (als ww) of 'snel'.", "Bevat 'loopt' = werkwoord."],
         uitlegPad: {
           stappen: [{ titel: "Welke zin is incompleet", tekst: "'De auto rood en groot' = geen werkwoord = geen echte zin." }],
           woorden: [{ woord: "geen werkwoord", uitleg: "Zin zonder werkwoord = onvolledig (geen actie of toestand-ww)." }],
           theorie: "Echte zin heeft minstens één werkwoord. 'Auto rood' mist 'is' (toestand-ww).",
           voorbeelden: [{ type: "test", tekst: "De auto rood ✗ → 'is' ontbreekt. De auto IS rood ✓." }],
-          basiskennis: [{ onderwerp: "Toestands-ww", uitleg: "'Is/zijn/wordt' zijn ook werkwoorden — zonder hen is zin incompleet." }],
+          basiskennis: [{ onderwerp: "Toestands-ww", uitleg: "'Is/zijn/wordt' zijn ook werkwoorden — zonder die woorden is de zin incompleet." }],
           niveaus: { basis: "Zin 1 = geen ww.", simpeler: "Zin 1 mist 'is' tussen auto en rood. De andere zinnen hebben rijdt/fiets/loopt = ww.", nogSimpeler: "Zin 1" },
         },
       },
@@ -71,7 +71,7 @@ const steps = [
 
   {
     title: "Tegenwoordige tijd — ik, jij, hij/zij",
-    explanation: "**Tegenwoordige tijd** = wat NU gebeurt of altijd gebeurt.\n\n**Vervoeg-regel**:\n• **ik** + **stam** *(zonder uitgang)*\n• **jij/u/hij/zij/het** + **stam + t**\n• **wij/jullie/zij (meervoud)** + **hele werkwoord**\n\n**Hoe vind je de stam?**\nNeem het hele werkwoord en haal **-en** weg.\n• lopen → loop\n• schrijven → schrijf\n• vallen → val\n• gaan → ga *(geen 'en'-uitgang)*\n\n**Voorbeeld — 'lopen'**:\n• ik **loop**\n• jij **loopt**\n• hij/zij/het **loopt**\n• wij/jullie/zij **lopen**\n\n**Voorbeeld — 'schrijven'**:\n• ik **schrijf**\n• jij **schrijft**\n• hij/zij **schrijft**\n• wij/jullie/zij **schrijven**\n\n**Belangrijke uitzonderingen**:\n• **Stam eindigt al op 't'**: niet nog een t erbij.\n  - 'praten' → stam 'praat' → hij **praat** *(geen 'praatt')*.\n• **Stam eindigt op 'd'**: wél nog een t.\n  - 'vinden' → stam 'vind' → hij **vindt**.\n\n**Toets-truc — kofschip-regel** (eigenlijk d/t-regel; zie aparte pad).\n\n**Vraag-vorm**: bij *'jij'* na werkwoord vervalt de t!\n• 'Loop jij?' *(niet 'loopt jij')*\n• 'Schrijf jij?' *(niet 'schrijft jij')*",
+    explanation: "**Tegenwoordige tijd** = wat NU gebeurt of altijd gebeurt.\n\n**Vervoeg-regel**:\n• **ik** + **stam** *(zonder uitgang)*\n• **jij/u/hij/zij/het** + **stam + t**\n• **wij/jullie/zij (meervoud)** + **hele werkwoord**\n\n**Hoe vind je de stam?**\nNeem het hele werkwoord en haal **-en** weg.\n• lopen → loop\n• schrijven → schrijf\n• vallen → val\n• gaan → ga *(geen 'en'-uitgang)*\n\n**Voorbeeld — 'lopen'**:\n• ik **loop**\n• jij **loopt**\n• hij/zij/het **loopt**\n• wij/jullie/zij **lopen**\n\n**Voorbeeld — 'schrijven'**:\n• ik **schrijf**\n• jij **schrijft**\n• hij/zij **schrijft**\n• wij/jullie/zij **schrijven**\n\n**Belangrijke uitzonderingen**:\n• **Stam eindigt al op 't'**: niet nog een t erbij.\n  - 'praten' → stam 'praat' → hij **praat** *(geen 'praatt')*.\n• **Stam eindigt op 'd'**: wél nog een t.\n  - 'vinden' → stam 'vind' → hij **vindt**.\n\n**Toets-truc — kofschip-regel** (eigenlijk d/t-regel; zie apart pad).\n\n**Vraag-vorm**: bij *'jij'* na werkwoord vervalt de t!\n• 'Loop jij?' *(niet 'loopt jij')*\n• 'Schrijf jij?' *(niet 'schrijft jij')*",
     checks: [
       {
         q: "Vervoeg *'spelen'* voor **'hij'** in tegenwoordige tijd:",
@@ -120,7 +120,7 @@ const steps = [
 
   {
     title: "Verleden tijd — zwakke werkwoorden",
-    explanation: "Werkwoorden zijn **zwak** of **sterk**. **Zwakke** zijn makkelijk: ze krijgen **-de** of **-te** in de verleden tijd.\n\n**Voor 1 persoon**:\n• stam + **-de** of **-te** *(naast 'kofschip-regel')*.\n\n**'t Kofschip-regel**: als de stam eindigt op een letter uit **t-k-f-s-ch-p**, dan is het **-te**. Anders **-de**.\n\n**Voorbeelden — -te (kofschip)**:\n• werken → werk-te → ik **werkte** *('k' in kofschip)*\n• kloppen → klop-te → ik **klopte** *('p')*\n• vissen → vis-te → ik **viste** *('s')*\n• rusten → rust-te → ik **rustte** *(stam eindigt op t — wél tweemaal t)*\n\n**Voorbeelden — -de (NIET in kofschip)**:\n• horen → hoor-de → ik **hoorde**\n• spelen → speel-de → ik **speelde**\n• leren → leer-de → ik **leerde**\n• landen → land-de → ik **landde** *(d eindigt op d — wel dubbel d)*\n\n**Voor meerdere personen** (wij/jullie/zij):\n• stam + **-den** of **-ten**.\n\nVoorbeelden:\n• Wij **werkten** *(meervoud van werkte)*\n• Zij **hoorden** *(meervoud van hoorde)*\n\n**toetsvraag-vorm**:\n*'Welke is correct in verleden tijd? \"Hij... gisteren hard.\" werkte / werkde'*\n• 'Werken' → stam 'werk' → eindigt op k → kofschip → **werkte**.",
+    explanation: "Werkwoorden zijn **zwak** of **sterk**. **Zwakke** zijn makkelijk: ze krijgen **-de** of **-te** in de verleden tijd.\n\n**Voor 1 persoon**:\n• stam + **-de** of **-te** *(volgens de 'kofschip-regel')*.\n\n**'t Kofschip-regel**: als de stam eindigt op een letter uit **t-k-f-s-ch-p**, dan is het **-te**. Anders **-de**.\n\n**Voorbeelden — -te (kofschip)**:\n• werken → werk-te → ik **werkte** *('k' in kofschip)*\n• kloppen → klop-te → ik **klopte** *('p')*\n• vissen → vis-te → ik **viste** *('s')*\n• rusten → rust-te → ik **rustte** *(stam eindigt op t — wél tweemaal t)*\n\n**Voorbeelden — -de (NIET in kofschip)**:\n• horen → hoor-de → ik **hoorde**\n• spelen → speel-de → ik **speelde**\n• leren → leer-de → ik **leerde**\n• landen → land-de → ik **landde** *(stam eindigt op d — wel dubbel d)*\n\n**Voor meerdere personen** (wij/jullie/zij):\n• stam + **-den** of **-ten**.\n\nVoorbeelden:\n• Wij **werkten** *(meervoud van werkte)*\n• Zij **hoorden** *(meervoud van hoorde)*\n\n**toetsvraag-vorm**:\n*'Welke is correct in verleden tijd? \"Hij... gisteren hard.\" werkte / werkde'*\n• 'Werken' → stam 'werk' → eindigt op k → kofschip → **werkte**.",
     checks: [
       {
         q: "**'Hij stopte de auto'** of **'Hij stopde de auto'**?",
@@ -169,7 +169,7 @@ const steps = [
 
   {
     title: "Verleden tijd — sterke werkwoorden",
-    explanation: "**Sterke werkwoorden** veranderen van **klinker** in de verleden tijd. Geen 'kofschip', maar een hele andere vorm.\n\n**Voorbeelden**:\n• lopen → ik **liep** (niet 'loopde')\n• schrijven → ik **schreef**\n• vallen → ik **viel**\n• gaan → ik **ging**\n• zien → ik **zag**\n• zijn → ik **was** *(meervoud: waren)*\n• hebben → ik **had** *(meervoud: hadden)*\n\n**Geen regel — uit het hoofd leren**.\n\n**Lijst belangrijke sterke werkwoorden** *(Toets-niveau)*:\n• zijn → was/waren\n• hebben → had/hadden\n• gaan → ging/gingen\n• komen → kwam/kwamen\n• doen → deed/deden\n• zien → zag/zagen\n• kijken → keek/keken\n• schrijven → schreef/schreven\n• lezen → las/lazen\n• eten → at/aten\n• drinken → dronk/dronken\n• lopen → liep/liepen\n• vallen → viel/vielen\n• vinden → vond/vonden\n• zitten → zat/zaten\n• staan → stond/stonden\n• kunnen → kon/konden\n• mogen → mocht/mochten\n• willen → wilde of wou / wilden\n• moeten → moest/moesten\n\n**Toets-tip**:\n• Bij twijfel: spreek de zin uit en vraag jezelf 'klinkt dit goed?'.\n• Sterke werkwoorden voelen meestal natuurlijk — als je 'liepde' zegt klinkt het meteen mis.\n• Onregelmatige zoals 'zijn' (was) en 'hebben' (had) zijn altijd uit het hoofd.",
+    explanation: "**Sterke werkwoorden** veranderen van **klinker** in de verleden tijd. Geen 'kofschip', maar een heel andere vorm.\n\n**Voorbeelden**:\n• lopen → ik **liep** (niet 'loopde')\n• schrijven → ik **schreef**\n• vallen → ik **viel**\n• gaan → ik **ging**\n• zien → ik **zag**\n• zijn → ik **was** *(meervoud: waren)*\n• hebben → ik **had** *(meervoud: hadden)*\n\n**Geen regel — uit het hoofd leren**.\n\n**Lijst belangrijke sterke werkwoorden** *(Toets-niveau)*:\n• zijn → was/waren\n• hebben → had/hadden\n• gaan → ging/gingen\n• komen → kwam/kwamen\n• doen → deed/deden\n• zien → zag/zagen\n• kijken → keek/keken\n• schrijven → schreef/schreven\n• lezen → las/lazen\n• eten → at/aten\n• drinken → dronk/dronken\n• lopen → liep/liepen\n• vallen → viel/vielen\n• vinden → vond/vonden\n• zitten → zat/zaten\n• staan → stond/stonden\n• kunnen → kon/konden\n• mogen → mocht/mochten\n• willen → wilde of wou / wilden\n• moeten → moest/moesten\n\n**Toets-tip**:\n• Bij twijfel: spreek de zin uit en vraag jezelf 'klinkt dit goed?'.\n• Sterke werkwoorden voelen meestal natuurlijk — als je 'liepde' zegt klinkt het meteen mis.\n• Onregelmatige zoals 'zijn' (was) en 'hebben' (had) leer je altijd uit het hoofd.",
     checks: [
       {
         q: "Verleden tijd van **'lopen'** voor 'ik':",
@@ -310,7 +310,7 @@ const steps = [
             { type: "vorm", tekst: "Werken: ik werk, hij werkt, wij werken." },
             { type: "vorm", tekst: "Lezen: ik lees, hij leest, wij lezen." },
           ],
-          basiskennis: [{ onderwerp: "Stam-op-s instinker", uitleg: "Stam eindigend op -s, -t, -d, -x of -z: gewoon t erbij. 'Hij racet', 'hij vist', 'hij rijdt'." }],
+          basiskennis: [{ onderwerp: "Stam-op-s instinker", uitleg: "Stam eindigend op -s, -d, -x of -z: gewoon t erbij. 'Hij racet', 'hij vist', 'hij rijdt'." }],
           niveaus: { basis: "fietst.", simpeler: "'Fietsen' → stam 'fiets'. Hij-vorm = stam + t = 'fietst'.", nogSimpeler: "Fietst" },
         },
       },
@@ -339,7 +339,7 @@ const steps = [
         },
       },
       {
-        q: "**'Lisa ____ het boek gisteren uit'** ('lezen', voltooid tegenwoordige tijd):",
+        q: "Welke vorm is de **voltooid tegenwoordige tijd** van 'lezen' bij *'Lisa'*?",
         options: ["heeft gelezen","las","leest","heeft geleest"],
         answer: 0,
         wrongHints: [null, "Dat is verleden tijd (VT), niet voltooid (VTT).", "Dat is tegenwoordige tijd.", "Niet correct — 'gelezen' is voltooid deelwoord (sterk ww), niet 'geleest'."],
@@ -370,7 +370,7 @@ const steps = [
         wrongHints: [null, "Niet correct — TT-uitgang is t, niet d. Schrijf zoals je hoort.", "Dat is de ik-vorm (ik vang) — hij hoort er t bij.", "Niet correct — geen klinkerwissel in TT (alleen in verleden)."],
         uitlegPad: {
           stappen: [
-            { titel: "Stam = vang", tekst: "Vangen → schrap -en → stam 'vang'. (Niet 'vang' met i — die klinkerwissel komt pas in verleden tijd: 'ving'.)" },
+            { titel: "Stam = vang", tekst: "Vangen → schrap -en → stam 'vang'. (Niet met een i — die klinkerwissel komt pas in de verleden tijd: 'ving'.)" },
             { titel: "TT 3e persoon: stam + t", tekst: "Hij/zij/de hond + stam + t = vang + t = **vangt**." },
             { titel: "Toets-spelregel: t of d?", tekst: "TT 3e persoon = ALTIJD t aan het eind. Bij stam op -d zoals 'rijd-en' → 'hij rijdt' (twee letters: de stam-d + extra t). Bij vangt: stam eindigt op -g, dus alleen t erbij." },
           ],
@@ -389,7 +389,7 @@ const steps = [
       },
       { q: "Werken — verleden tijd: 'hij ____'?", options: ["werkte","werkde","werk","werkten"], answer: 0, wrongHints: [null, "Niet — k zit in kofschip, dus -te.", "Geen verleden vorm.", "Meervoud."] },
       { q: "Spelen — verleden tijd: 'wij ____'?", options: ["speelden","speelde","speelten","spelen"], answer: 0, wrongHints: [null, "Dat is enkelvoud.", "Niet — l zit niet in kofschip.", "Tegenwoordige tijd."] },
-      { q: "Welke werkwoorden zijn de 't kofschip'-letters?", options: ["t-k-f-s-ch-p","t-k-h-s-d","a-e-i-o-u","b-d-g-w"], answer: 0, wrongHints: [null, "Niet — h en d horen er niet bij.", "Dat zijn klinkers.", "Andere letters."] },
+      { q: "Welke letters zijn de 't kofschip'-letters?", options: ["t-k-f-s-ch-p","t-k-h-s-d","a-e-i-o-u","b-d-g-w"], answer: 0, wrongHints: [null, "Niet — h en d horen er niet bij.", "Dat zijn klinkers.", "Andere letters."] },
       { q: "Ik **bak** brood. Stam = ?", options: ["bak","ba","bakk","bakken"], answer: 0, wrongHints: [null, "Te kort.", "Verdubbeling klopt niet hier.", "Hele werkwoord."] },
       { q: "Vul in: 'Wij ___ blij.' (zijn)", options: ["zijn","is","bent","waren"], answer: 0, wrongHints: [null, "Hij/zij-vorm.", "Jij-vorm.", "Verleden."] },
       { q: "Vul in: 'Jij ___ mooi.' (zijn)", options: ["bent","is","zijn","waren"], answer: 0, wrongHints: [null, "Hij/zij/het.", "Wij/jullie/zij.", "Verleden."] },
@@ -403,7 +403,7 @@ const steps = [
       { q: "Vul: 'Hij ___ veel boeken.' (lezen, tt)", options: ["leest","lees","lezen","las"], answer: 0, wrongHints: [null, "Ik.", "Hele.", "Verleden."] },
       { q: "Wat is een **regelmatig** werkwoord?", options: ["Volgt vaste regels (stam + te/de)","Onregelmatig","Modaal","Hulpwerkwoord"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet relevant.", "Niet."] },
       { q: "Wat is een **onregelmatig** werkwoord?", options: ["Klinker verandert in vt of vd","Volgt regels","Heeft stam +s","Modaal"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
-      { q: "**Wij waren** is van werkwoord?", options: ["zijn (verleden)","worden","weten","waren-zelf"], answer: 0, wrongHints: [null, "Andere.", "Andere.", "Niet eigen werkwoord."] },
+      { q: "**Wij waren** komt van welk werkwoord?", options: ["zijn (verleden)","worden","weten","waren-zelf"], answer: 0, wrongHints: [null, "Andere.", "Andere.", "Niet eigen werkwoord."] },
       { q: "Tegenwoordige tijd-meervoud 'kopen'?", options: ["kopen","koopt","koop","kocht"], answer: 0, wrongHints: [null, "Hij.", "Ik.", "Verleden."] },
       { q: "Verleden tijd 'hopen' (ik)?", options: ["hoopte","hoopde","hoop","hoopten"], answer: 0, wrongHints: [null, "Niet — p → t.", "Tegenwoordige tijd.", "Meervoud."] },
     ],

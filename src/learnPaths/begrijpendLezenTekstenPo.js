@@ -40,7 +40,7 @@ const tekst2 = `**Hoe maak je een goede paperclip-armband?**
 
 Met paperclips kun je een leuke armband maken die er heel anders uitziet dan je zou denken. Je hebt nodig: ongeveer twintig metalen paperclips, een stukje touw, en een schaar. Werk rustig — als je gehaast bent, gaan de clips uit elkaar.
 
-Begin met de eerste paperclip. Schuif er een tweede paperclip doorheen, zodat ze in elkaar haken. Doe dit voorzichtig: je wilt niet dat de eerste clip openbuigt. Doe dit nogmaals met een derde, vierde en vijfde paperclip. Trek lichtjes om te controleren dat de ketting niet losschiet.
+Begin met de eerste paperclip. Schuif er een tweede paperclip doorheen, zodat ze in elkaar haken. Doe dit voorzichtig: je wilt niet dat de eerste clip openbuigt. Doe dit nogmaals met een derde, vierde en vijfde paperclip. Trek lichtjes om te controleren of de ketting niet losschiet.
 
 Als je armband bijna lang genoeg is om om je pols te passen, stop dan. Meet het door de keten om je pols te leggen. Hij moet ruim zitten — je polsbeweging mag niet beperkt worden. Voeg eventueel nog een of twee paperclips toe.
 
@@ -68,7 +68,7 @@ In de eerste pauze zag iedereen om haar heen eten. Tom had een dubbele boterham 
 
 "Heb je geen brood mee?" vroeg hij.
 
-Sara knikte schaapachtig. Tom haalde meteen zijn boterham doormidden. "Hier," zei hij. "Ik heb genoeg."
+Sara knikte schaapachtig. Tom brak meteen zijn boterham doormidden. "Hier," zei hij. "Ik heb genoeg."
 
 Sara aarzelde. Ze wilde geen medelijden. Maar Tom legde de boterham gewoon op haar tafel en draaide zich om naar zijn eigen lunch. Hij maakte er geen punt van.
 
@@ -150,7 +150,7 @@ const steps = [
             { woord: "omtrek", uitleg: "De totale buitenkant-lengte van een rondje. Een groot wiel heeft een grotere omtrek." },
             { woord: "pedaalomwenteling", uitleg: "Eén keer rondtrappen met de pedalen." },
           ],
-          theorie: "**Inferentie-vragen herken je aan: 'waarom?', 'hoe komt het dat?', 'wat kun je afleiden?'**\n\nStrategie:\n1. Zoek in de tekst de relevante zin/alinea\n2. Lees wat er LETTERLIJK staat\n3. Vraag jezelf af: WAAR LEIDT DIT TOE?\n4. Het antwoord-optie dat aansluit bij die afleiding is het juiste.\n\nValstrikken: andere opties klinken plausibel maar zijn NIET in de tekst onderbouwd (bijv. 'omdat het mooier oogt' — klinkt logisch maar staat er niet).",
+          theorie: "**Inferentie-vragen herken je aan: 'waarom?', 'hoe komt het dat?', 'wat kun je afleiden?'**\n\nStrategie:\n1. Zoek in de tekst de relevante zin/alinea\n2. Lees wat er LETTERLIJK staat\n3. Vraag jezelf af: WAAR LEIDT DIT TOE?\n4. De antwoordoptie die aansluit bij die afleiding is het juiste.\n\nValstrikken: andere opties klinken plausibel maar zijn NIET in de tekst onderbouwd (bijv. 'omdat het mooier oogt' — klinkt logisch maar staat er niet).",
           voorbeelden: [
             { type: "afleiding", tekst: "Tekst zegt 'groot wiel = meer afstand per trap'. Logische afleiding: dus het ging sneller. Antwoord A past." },
             { type: "valstrik", tekst: "'Materiaal besparen' = klinkt slim, maar staat NERGENS in tekst. Bij begrijpend lezen: alleen wat je kunt onderbouwen." },
@@ -194,7 +194,7 @@ const steps = [
             { woord: "omwenteling", uitleg: "Eén volledige draai of rondje." },
             { woord: "samengesteld woord", uitleg: "Een lang woord gemaakt van 2 of meer kortere woorden geplakt. Bv. fiets+wiel, school+plein." },
           ],
-          theorie: "**Woordbetekenis-vragen — 3 strategieën:**\n\n1. **Splits**: lang woord? Splits in delen. Elk deel ken je vaak.\n2. **Context**: lees de zin ERVOOR en ERNA. Wat zou logisch zijn?\n3. **Eliminatie**: kruis af welke opties NIET kunnen (geen ban-deel = geen band).\n\nLet op: De toets kiest vaak 4 opties die WEL bestaan, maar maar 1 past bij de TEKST.",
+          theorie: "**Woordbetekenis-vragen — 3 strategieën:**\n\n1. **Splits**: lang woord? Splits in delen. Elk deel ken je vaak.\n2. **Context**: lees de zin ERVOOR en ERNA. Wat zou logisch zijn?\n3. **Eliminatie**: kruis af welke opties NIET kunnen (geen ban-deel = geen band).\n\nLet op: de toets kiest vaak 4 opties die WEL bestaan, maar maar 1 past bij de TEKST.",
           voorbeelden: [
             { type: "splits", tekst: "Pedaal + omwenteling = trappen + 1x rond = pedaal-trapje. Als je elk deel kent, ken je het hele woord." },
             { type: "context", tekst: "Tekst: '1 pedaalomwenteling met meer afstand'. Wat klopt: '1 keer trappen met de pedalen' (gaat over afstand met fietsen). De andere opties (band, automerk, rem) passen niet bij die zin." },
@@ -379,7 +379,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Vlak voor 'sluiting maken' staat 'meet om pols'.",
-            simpeler: "Stel je voor: jij maakt de armband zelf. Eerst hak je clips, dan check je of het past om je pols, DAARNA maak je het slot. 'Vlak voor het slot' = check je pols-maat = meten",
+            simpeler: "Stel je voor: jij maakt de armband zelf. Eerst haak je clips, dan check je of het past om je pols, DAARNA maak je het slot. 'Vlak voor het slot' = check je pols-maat = meten",
             nogSimpeler: "Voor sluiting = meten",
           },
         },
@@ -674,10 +674,10 @@ const steps = [
           ],
           woorden: [
             { woord: "schaapachtig", uitleg: "Verlegen, ongemakkelijk, niet-durven-kijken. Figuurlijk — geen echt schaap." },
-            { woord: "figuurlijk", uitleg: "Niet letterlijk bedoeld. Bv. 'het regent honden en katten' = het regent hard." },
+            { woord: "figuurlijk", uitleg: "Niet letterlijk bedoeld. Bv. 'het regent pijpenstelen' = het regent hard." },
             { woord: "letterlijk", uitleg: "Precies wat het woord zegt. 'Een rode appel' is een appel die rood is." },
           ],
-          theorie: "**Bij verhalen gebruikt schrijver vaak figuurlijk taalgebruik om gevoelens uit te drukken.**\n\nVoorbeelden:\n- 'schaapachtig' = verlegen / beschaamd\n- 'rood worden' = zich schamen\n- 'in de wolken' = heel blij\n- 'op zijn hondjes' = slecht gestemd\n\nLees de zin in CONTEXT — wat past bij wat de personage net heeft meegemaakt?",
+          theorie: "**Bij verhalen gebruikt de schrijver vaak figuurlijk taalgebruik om gevoelens uit te drukken.**\n\nVoorbeelden:\n- 'schaapachtig' = verlegen / beschaamd\n- 'rood worden' = zich schamen\n- 'in de wolken' = heel blij\n- 'met de handen in het haar zitten' = niet weten wat te doen\n\nLees de zin in CONTEXT — wat past bij wat het personage net heeft meegemaakt?",
           voorbeelden: [
             { type: "context", tekst: "Sara had geen brood, Tom vroeg of ze geen brood had. Ze wilde dat liever niet toegeven. Schaamtegevoel = daarom keek ze 'schaapachtig'." },
           ],
@@ -740,7 +740,7 @@ const steps = [
           "Een klein gebaar kan veel betekenen",
           "Vergeet je lunch nooit thuis",
           "Boterhammen smaken het lekkerst gedeeld",
-          "Lerarenmoeten meer eten geven aan leerlingen",
+          "Leraren moeten meer eten geven aan leerlingen",
         ],
         answer: 0,
         wrongHints: [
@@ -752,14 +752,14 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is een 'boodschap'?", tekst: "De LES of WIJSHEID die de schrijver wil overbrengen — wat blijft hangen na het verhaal." },
-            { titel: "Wat gebeurt er?", tekst: "Tom's KLEINE actie (halve boterham, geen drama) maakt voor Sara een GROTE indruk. Ze schrijft een dankbriefje. Tom schrijft terug." },
+            { titel: "Wat gebeurt er?", tekst: "Toms KLEINE actie (halve boterham, geen drama) maakt voor Sara een GROTE indruk. Ze schrijft een dankbriefje. Tom schrijft terug." },
             { titel: "Wat leert dit?", tekst: "Een kleine vriendelijkheid kan veel impact hebben →" },
             { titel: "Toets andere opties", tekst: "B 'vergeet je lunch nooit' = praktisch advies, geen wijsheid. C 'boterhammen lekker gedeeld' = klein detail. D 'leraren meer eten' = leraren zijn er niet." },
           ],
           woorden: [
             { woord: "boodschap", uitleg: "De diepe les of betekenis van een verhaal — wat de schrijver wil zeggen onder de oppervlakte." },
             { woord: "moraal", uitleg: "Een wijze les uit een verhaal of fabel." },
-            { woord: "thema", uitleg: "Het onderwerp dat door het hele verhaal speelt — bv. 'vriendschap', 'eerlijkheid', 'mut'." },
+            { woord: "thema", uitleg: "Het onderwerp dat door het hele verhaal speelt — bv. 'vriendschap', 'eerlijkheid', 'moed'." },
           ],
           theorie: "**Boodschap zoeken — vraag jezelf:**\n\n1. Wat is er VERANDERD aan het einde?\n2. Wie heeft IETS GELEERD?\n3. Wat zou een lezer mee naar huis moeten nemen?\n\nBoodschap is meestal ALGEMEEN ('vriendelijkheid loont'), niet specifiek ('vergeet je lunch niet').\n\nValstrik: opties die KLEINE feiten uit het verhaal zijn (zoals 'boterhammen smaken gedeeld') zijn meestal NIET de boodschap.",
           voorbeelden: [
@@ -875,11 +875,11 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is een argument?", tekst: "Een REDEN die het standpunt OPLOSSING ondersteunt. Bij betoog 'telefoons niet op school' = redenen waarom dat WAAR is." },
+            { titel: "Wat is een argument?", tekst: "Een REDEN die het standpunt ondersteunt. Bij betoog 'telefoons niet op school' = redenen waarom dat WAAR is." },
             { titel: "Toets opties", tekst: "A: 'notificaties = afleiding (onderzoek)' = ja, ondersteunt standpunt. B/C/D = wel feiten/meningen, MAAR niet over telefoons-in-klas." },
           ],
           woorden: [
-            { woord: "argument", uitleg: "Reden die je mening OPLOSSING bewijst." },
+            { woord: "argument", uitleg: "Reden die je mening bewijst." },
             { woord: "ondersteunen", uitleg: "Steunen, helpen onderbouwen." },
           ],
           theorie: "Een goed argument: (1) ondersteunt het standpunt + (2) is door tekst onderbouwd (bij voorkeur met onderzoek of feiten). Vaag-aandoende uitspraken ('iedereen heeft een mening') zijn GEEN argument.",
@@ -899,7 +899,7 @@ const steps = [
         q: "In het verhaal van Sara: het briefje en hartje van haar moeder laten vooral zien dat:",
         options: [
           "Sara's moeder dankbaarheid wil tonen voor Toms gebaar",
-          "Sara een nieuwe liefje heeft",
+          "Sara een nieuw liefje heeft",
           "Sara haar moeder boos heeft gemaakt",
           "De moeder Tom wil leren kennen",
         ],
@@ -962,7 +962,7 @@ const steps = [
           voorbeelden: [
             { type: "betoog-signaal", tekst: "Tekst 3: 'Ik ben van mening', 'Daarom: laat de telefoon thuis'. = mening + argumenten = betogend." },
           ],
-          basiskennis: [{ onderwerp: "Per tekstsoort andere vragen", uitleg: "toetsvragen verschillen per tekstsoort. Bij betoog → standpunt en argument. Bij verhaal → motieven en gevoelens." }],
+          basiskennis: [{ onderwerp: "Per tekstsoort andere vragen", uitleg: "Toetsvragen verschillen per tekstsoort. Bij betoog → standpunt en argument. Bij verhaal → motieven en gevoelens." }],
           niveaus: {
             basis: "Mening + argumenten = betogend. Tekst 'telefoons niet op school' is dat.",
             simpeler: "Welke tekst heeft een DUIDELIJKE MENING? 'Telefoons niet op school' is iemands mening. De andere zijn: feiten (fiets), stappen (paperclip), verhaal (Sara).",
@@ -1045,7 +1045,7 @@ const steps = [
             { woord: "tegenstelling", uitleg: "Onverwachte wending. Iets dat afwijkt van eerder gezegde." },
             { woord: "signaalwoord", uitleg: "Klein woord dat aangeeft wat schrijver doet (vergelijken, concluderen, voorbeelden)." },
           ],
-          theorie: "Tegenstellingen helpen toetsvragen:\n• 'Welke zin spreekt vorige tegen?' → zoek 'maar/echter'\n• 'Wat is wending in tekst?' → tegenstelling-signaal\n• 'Welke alinea afwijkt?' → kijk woord aan begin",
+          theorie: "Tegenstellingen helpen toetsvragen:\n• 'Welke zin spreekt vorige tegen?' → zoek 'maar/echter'\n• 'Wat is wending in tekst?' → tegenstelling-signaal\n• 'Welke alinea wijkt af?' → kijk woord aan begin",
           voorbeelden: [
             { type: "stap", tekst: "'Honden zijn aardig. MAAR sommige bijten.' Tegenstelling met 'maar'." },
           ],
@@ -1074,7 +1074,7 @@ const steps = [
             { type: "stap", tekst: "'Dieren reageren anders op kou dan mensen.' Voorspelling: hoe? Welke dieren? Voorbeelden komen." },
           ],
           basiskennis: [{ onderwerp: "Niet altijd correct", uitleg: "Voorspelling klopt niet altijd. Goed: je let extra op = brein actief." }],
-          niveaus: { basis: "Vervolg over fietsen vroeger/nu.", simpeler: "Eerste zin geeft thema (fietsen vroeger zwaar). Vervolg gaat erover door: hoe lichter werden, welke materialen, etc.", nogSimpeler: "Past bij thema" },
+          niveaus: { basis: "Vervolg over fietsen vroeger/nu.", simpeler: "Eerste zin geeft thema (fietsen vroeger zwaar). Vervolg gaat erover door: hoe ze lichter werden, welke materialen, etc.", nogSimpeler: "Past bij thema" },
         },
       },
       { q: "Welke vraag stel je het eerst bij een tekst om de **structuur** te zien?", options: ["Hoeveel alinea's heeft de tekst?","Hoe lang is de tekst?","Wat is de kleur van het papier?","Wie heeft de tekst gedrukt?"], answer: 0, wrongHints: [null, "Lengte zegt niets over structuur.", "Niet inhoudelijk.", "Niet relevant."] },

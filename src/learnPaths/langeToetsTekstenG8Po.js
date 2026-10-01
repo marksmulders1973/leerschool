@@ -122,7 +122,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is globaal lezen?", tekst: "Globaal lezen = een keer rustig doorlezen om te weten waar elk stuk over gaat. Je onthoud geen details — je maakt een plattegrond." },
+            { titel: "Wat is globaal lezen?", tekst: "Globaal lezen = een keer rustig doorlezen om te weten waar elk stuk over gaat. Je onthoudt geen details — je maakt een plattegrond." },
             { titel: "Wat heb je dan?", tekst: "Je weet: alinea 1 gaat over X, alinea 2 over Y. Dat is genoeg om bij elke vraag snel de goede alinea te vinden." },
             { titel: "Geen fotografie", tekst: "Je hoeft de tekst niet te fotograferen met je hersens. Details zoek je op — dat spaart energie voor het begrijpen." },
           ],
@@ -246,7 +246,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           ],
           niveaus: {
             basis: "Zoek in de alinea over het buitenbad naar het woord 'kilo'. Welk getal staat ervoor?",
-            simpeler: "Er staan meer getallen in de tekst. Jij zoekt het getal in de zin die over terug naar zee gaan gaat.",
+            simpeler: "Er staan meer getallen in de tekst. Jij zoekt het getal in de zin over teruggaan naar zee.",
             nogSimpeler: "Zoek de zin die begint met 'Pas als een dier...' en lees het getal.",
           },
         },
@@ -313,7 +313,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
           ],
           theorie: "**Verwijswoorden in lange teksten**\n\nIn een lange tekst staan veel personen en dingen door elkaar. De strategie blijft hetzelfde:\n1. Vind het verwijswoord.\n2. Zoek terug — meestal in de zin ervóór.\n3. Controleer: enkelvoud of meervoud? Persoon of ding? Klopt de betekenis?\n\nExtra tip voor lange teksten: blijf dicht bij het verwijswoord zoeken. Iemand die drie alinea's eerder genoemd werd, is bijna nooit het antwoord.",
           voorbeelden: [
-            { type: "invullen", tekst: "Vul je antwoord in op de plek van 'zij' en lees de zin opnieuw. De zin die logisch klinkt én klopt met de zin ervoor, wijst je het goede antwoord." },
+            { type: "invullen", tekst: "Vul je antwoord in op de plek van 'zij' en lees de zin opnieuw. De zin die logisch klinkt én klopt met de zin ervoor, geeft je het goede antwoord." },
           ],
           basiskennis: [
             { onderwerp: "Dichtbij zoeken", uitleg: "Het woord waar een verwijswoord naar wijst, staat bijna altijd vlak ervóór — vaak in de zin ervoor." },
@@ -365,7 +365,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
         },
       },
       {
-        q: "*\"Bel daarom altijd eerst de opvang; die stuurt een ervaren vrijwilliger...\"* — Naar wat verwijst 'die'?",
+        q: "*\"Bel daarom altijd eerst de opvang; die stuurt een ervaren vrijwilliger...\"* — Waarnaar verwijst 'die'?",
         options: ["De opvang", "De zeehond", "De moeder", "Het strand"],
         answer: 0,
         evidence: "Bel daarom altijd eerst de opvang; die stuurt een ervaren vrijwilliger om te kijken of hulp echt nodig is.",
@@ -489,7 +489,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
         answer: 0,
         wrongHints: [
           null,
-          "Er staat niet uit hoe adoptie werkt — er staat een oproep. Gaat dat over informatie geven of over de lezer bewegen?",
+          "Er wordt niet uitgelegd hoe adoptie werkt — er staat een oproep. Gaat dat over informatie geven of over de lezer bewegen?",
           "Is er iets grappigs aan deze zin? Of probeert de schrijver de lezer ergens van te overtuigen?",
           "Staat er een stappenplan met 1-2-3? Of is het één directe oproep?",
         ],
@@ -592,7 +592,7 @@ Zeven vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         },
       },
       {
-        q: "*\"'Daar!' riep ze, veel te hard. Opa grinnikte. 'Die telt. Eén.'\"* — Naar wat verwijst 'die'?",
+        q: "*\"'Daar!' riep ze, veel te hard. Opa grinnikte. 'Die telt. Eén.'\"* — Waarnaar verwijst 'die'?",
         options: [
           "De streep licht die net langs de hemel schoot",
           "De thermoskan met chocolademelk",
@@ -626,7 +626,7 @@ Zeven vragen. Hou vol — dit is precies de training die je nodig hebt!`,
           niveaus: {
             basis: "Lees de zin vóór 'Daar!': wat schoot er langs de hemel?",
             simpeler: "Opa begint te tellen: één. Waarvoor liggen ze buiten — wat hopen ze te zien en te tellen?",
-            nogSimpeler: "Zoek wat er vlak vóór Sanne's kreet aan de hemel gebeurde.",
+            nogSimpeler: "Zoek wat er vlak vóór Sannes kreet aan de hemel gebeurde.",
           },
         },
       },
@@ -799,13 +799,13 @@ Zeven vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         answer: 0,
         wrongHints: [
           null,
-          "De koude nachtlucht binnenlaten warm je niet op — wat is dan de reden dat Sanne het raam opent?",
+          "De koude nachtlucht binnenlaten warmt je niet op — wat is dan de reden dat Sanne het raam opent?",
           "Staat er iets in de tekst over dat Sanne bang is? Kijk naar waar ze aan het begin van het verhaal mee bezig is.",
           "De tekst noemt kilte, maar dat betekent niet dat ze het te warm heeft. Waarmee was Sanne aan het begin bezig?",
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Gebruik de context", tekst: "Aan het begin kijkt Sanne naar de meteoorshower. Raam opendoen = buiten dichterbij brengen. Wat wilde ze dan beter zien of beleven?" },
+            { titel: "Gebruik de context", tekst: "Aan het begin kijkt Sanne naar de vallende sterren. Raam opendoen = buiten dichterbij brengen. Wat wilde ze dan beter zien of beleven?" },
             { titel: "Te-ver-test", tekst: "'Bang voor het donker' staat nergens in de tekst. 'Te warm' wordt niet gesuggereerd. Blijf bij aanwijzingen die de tekst geeft." },
           ],
           niveaus: {
@@ -889,7 +889,7 @@ Nog twee vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk
         ],
         uitlegPad: {
           stappen: [
-            { titel: "Twee opties, beide plausibel", tekst: "Dat is de toetsmaker's fijnste truc: twee opties die allebei klinken als ze kloppen. Alleen wie de tekst heel precies leest, ziet het verschil." },
+            { titel: "Twee opties, beide plausibel", tekst: "Dat is de fijnste truc van de toetsmaker: twee opties die allebei klinken als ze kloppen. Alleen wie de tekst heel precies leest, ziet het verschil." },
             { titel: "Precies lezen", tekst: "Lees de zin met de aanwijzing woord voor woord. Staat er 'altijd', 'nooit', 'soms', 'sommige'? Die kleine woordjes maken het verschil." },
             { titel: "Check beide opties", tekst: "Vul elke optie in op de plek van de vraag en lees de zin terug. Welke klinkt exact zoals de tekst zegt?" },
           ],
@@ -919,11 +919,11 @@ Nog twee vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk
           stappen: [
             { titel: "Feitenvraag", tekst: "Het antwoord staat woord voor woord in de tekst. Jij zoekt het op — je hoeft niets extra te bedenken." },
             { titel: "Conclusievraag", tekst: "Je neemt feiten uit de tekst en combineert ze tot iets wat er niet letterlijk staat. Één stapje denken extra." },
-            { titel: "Waarom maakt dat uit?", tekst: "Bij een feitenvraag scan je naar het zoekwoord. Bij een conclusievraag lees je een alinea en redeneert je. Weet je welke soort het is, dan kies je de juiste aanpak." },
+            { titel: "Waarom maakt dat uit?", tekst: "Bij een feitenvraag scan je naar het zoekwoord. Bij een conclusievraag lees je een alinea en redeneer je. Weet je welke soort het is, dan kies je de juiste aanpak." },
           ],
           niveaus: {
-            basis: "Feit = opzoeken. Conclusie = feiten + één redeneersstap. Welke optie zegt dit?",
-            simpeler: "Hoe vaak staan de tekst en hoeveel moeten jij zelf denken — hangt dat af van wat voor vraag het is?",
+            basis: "Feit = opzoeken. Conclusie = feiten + één redeneerstap. Welke optie zegt dit?",
+            simpeler: "Hoeveel staat er letterlijk in de tekst en hoeveel moet je zelf bedenken — hangt dat af van wat voor vraag het is?",
             nogSimpeler: "Bij welk type vraag moet je zelf iets uitrekenen of bedenken?",
           },
         },
@@ -940,7 +940,7 @@ Nog twee vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk
         wrongHints: [
           null,
           "Reken je hier iets uit, of zoek je gewoon een getal in de tekst?",
-          "Gaat de vraag over het thema van het hele verhaal, of om één moment?",
+          "Gaat de vraag over het thema van het hele verhaal, of over één moment?",
           null,
         ],
         uitlegPad: {
@@ -989,7 +989,7 @@ Nog twee vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk
             { onderwerp: "Investeren aan het begin", uitleg: "Een paar minuten rustig lezen aan het begin bespaart je bij élke vraag zoektijd. Zo win je tijd, ook al voelt het eerst als extra werk." },
           ],
           niveaus: {
-            basis: "Wat lever(t) die eerste leesbeurt je op bij elke vraag daarna?",
+            basis: "Wat levert die eerste leesbeurt je op bij elke vraag daarna?",
             simpeler: "Je hoeft niets te onthouden bij het eerste lezen. Wat weet je daarna dan wél over de tekst?",
             nogSimpeler: "Denk aan de gymschoen in de gang: waarom vind je iets sneller als je weet in welke kamer het ligt?",
           },
@@ -1019,7 +1019,7 @@ Nog twee vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk
           niveaus: {
             basis: "Welke vragen leveren je zeker punten op? Doe die eerst — dan mis je ze sowieso niet.",
             simpeler: "Stel: je kunt 2 euro zeker pakken, of 1 euro proberen te verdienen met een moeilijk spelletje. Wat kies je als je weinig tijd hebt?",
-            nogSimpeler: "Als je twee gemakkelijke sommen kunt oplossen én één heel moeilijke, welke begin je dan mee?",
+            nogSimpeler: "Als je twee gemakkelijke sommen kunt oplossen én één heel moeilijke, waarmee begin je dan?",
           },
         },
       },

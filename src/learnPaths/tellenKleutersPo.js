@@ -182,7 +182,7 @@ const steps = [
         },
       },
       {
-        q: "Het dak van dit huisje 🏠 heeft een punt. Welke vorm lijkt dat?",
+        q: "Het dak van dit huisje 🏠 heeft een punt. Op welke vorm lijkt dat?",
         options: ["driehoek", "cirkel", "vierkant"],
         answer: 0,
         wrongHints: [null, "Is een dak met een punt rond?", "Kijk naar de punt bovenaan — welke vorm heeft ook zo'n punt?"],

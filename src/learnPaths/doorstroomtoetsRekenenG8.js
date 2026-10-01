@@ -49,7 +49,7 @@ function overzichtSvg() {
 <text x="232" y="157" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">verhaaltjes-sommen</text>
 <text x="232" y="169" text-anchor="middle" fill="${COLORS.text}" font-size="9" font-family="Arial">echte context</text>
 
-<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte Voorbeelden uit de toets: zie externe PDF onder elke stap</text>
+<text x="160" y="200" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">Voor échte voorbeelden uit de toets: zie externe PDF onder elke stap</text>
 </svg>`;
 }
 
@@ -58,7 +58,7 @@ const steps = [
   {
     title: "Breuken & decimalen — ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Wat verwacht je op de Doorstroomtoets?**\n\nBij rekenen krijg je vrijwel altijd 5-8 breuken-vragen + decimaal-vragen. De toets test:\n\n• **Optellen** met gelijke noemers (3/8 + 5/8) — makkelijk.\n• **Optellen** met ongelijke noemers (1/3 + 1/4) — eerst gelijknamig maken.\n• **Vergelijken**: welke is groter? 3/5 of 2/3?\n• **Decimaal omzetten**: 1/4 = 0,25 / 3/4 = 0,75 / 1/8 = 0,125.\n• **Vereenvoudigen**: 10/20 = 1/2 (kleinste vorm).\n\n**Truc voor optellen met ongelijke noemers**:\n1. Vind kleinste gemeenschappelijke noemer (KGN).\n2. Maak beide breuken gelijknamig.\n3. Tel tellers op, noemer blijft.\n\nVoorbeeld: 1/3 + 1/4 → KGN = 12 → 4/12 + 3/12 = 7/12.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie de toets.s gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor 5 oefenvragen?**",
+    explanation: "**Wat verwacht je op de Doorstroomtoets?**\n\nBij rekenen krijg je vrijwel altijd 5-8 breuken-vragen + decimaal-vragen. De toets test:\n\n• **Optellen** met gelijke noemers (3/8 + 5/8) — makkelijk.\n• **Optellen** met ongelijke noemers (1/3 + 1/4) — eerst gelijknamig maken.\n• **Vergelijken**: welke is groter? 3/5 of 2/3?\n• **Decimaal omzetten**: 1/4 = 0,25 / 3/4 = 0,75 / 1/8 = 0,125.\n• **Vereenvoudigen**: 10/20 = 1/2 (kleinste vorm).\n\n**Truc voor optellen met ongelijke noemers**:\n1. Vind kleinste gemeenschappelijke noemer (KGN).\n2. Maak beide breuken gelijknamig.\n3. Tel tellers op, noemer blijft.\n\nVoorbeeld: 1/3 + 1/4 → KGN = 12 → 4/12 + 3/12 = 7/12.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie het gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor 5 oefenvragen?**",
     svg: overzichtSvg(),
     checks: [
       {
@@ -127,7 +127,7 @@ const steps = [
         q: "**6/9 vereenvoudigen** — kleinste vorm?",
         options: ["2/3", "3/4", "6/9 al kleinst", "1/3"],
         answer: 0,
-        wrongHints: [null, "GGD van 6 en 9? Het is niet 2.", "Beide getallen kunnen door 3 gedeeld. Probeer.", "1/3 zou betekenen we delen iets weg dat er niet is."],
+        wrongHints: [null, "GGD van 6 en 9? Het is niet 2.", "Beide getallen kunnen door 3 gedeeld. Probeer.", "1/3 zou betekenen dat we iets wegdelen dat er niet is."],
         uitlegPad: {
           stappen: [{ titel: "Door GGD delen", tekst: "Vereenvoudigen = teller én noemer door zelfde getal delen. GGD (grootste gemene deler) van 6 en 9 is 3. Dus 6/9 = (6÷3)/(9÷3) = 2/3." }],
           woorden: [{ woord: "GGD", uitleg: "Grootste Gemene Deler. Grootste getal waar beide getallen door deelbaar zijn." }, { woord: "vereenvoudigen", uitleg: "Breuk in kleinste vorm zetten zonder waarde te veranderen." }],
@@ -335,7 +335,7 @@ const steps = [
             { type: "stap", tekst: "1/4 van 80 = 80 ÷ 4 = 20." },
             { type: "stap", tekst: "3/4 van 80 = 20 × 3 = 60." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Eerst delen door noemer, dan keer teller. Of: keer breuk, dan delen — beide werkt." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eerst delen door noemer, dan keer teller. Of: keer breuk, dan delen — beide werken." }],
           niveaus: {
             basis: "60 ÷ 2 = 30.",
             simpeler: "Helft van 60 = 60/2 = 30.",
@@ -404,7 +404,7 @@ const steps = [
             { titel: "Heel × breuk", tekst: "Vermenigvuldig met breuk: keer de teller, noemer blijft. 3 × 1/4 = 3/4." },
           ],
           woorden: [{ woord: "vermenigvuldigen breuk", uitleg: "Keer teller × heel getal. Noemer blijft." }],
-          theorie: "Toets-truc: 3 × 1/4 betekent '3 keer een kwartje' = 3/4. Visueel: 3 punten van een kwart pizza.",
+          theorie: "Toets-truc: 3 × 1/4 betekent '3 keer een kwartje' = 3/4. Visueel: 3 punten van elk een kwart pizza.",
           voorbeelden: [{ type: "stap", tekst: "4 × 1/2 = 4/2 = 2 hele." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "Als teller > noemer wordt: kun je het omzetten naar heel getal + breuk." }],
           niveaus: {
@@ -438,7 +438,7 @@ const steps = [
         q: "**0,1 × 0,1** is?",
         options: ["0,01", "0,1", "1", "0,2"],
         answer: 0,
-        wrongHints: [null, "Niet — komma 2 plekken naar links bij vermenigvuldiging 2 decimalen.", "Te groot.", "Niet vermenigvuldigen ≠ optellen."],
+        wrongHints: [null, "Niet — komma 2 plekken naar links bij vermenigvuldiging 2 decimalen.", "Te groot.", "Vermenigvuldigen ≠ optellen."],
       },
       {
         q: "Wat is **1/3 als procent** (afgerond)?",
@@ -629,7 +629,7 @@ const steps = [
   {
     title: "Procenten & verhoudingen — ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Procenten zijn de meest gevraagde categorie op de Doorstroomtoets.**\n\nVerwacht:\n• **% van bedrag**: 15% van €80 = ?\n• **Korting**: €40 met 25% korting = ?\n• **Procent uitrekenen**: 12 van de 60 = ?%\n• **Verhouding**: 'op 8 leerlingen 3 meiden' — schaal.\n• **Snelheid + tijd + afstand**: km/u uitrekenen.\n\n**Truc voor procenten**: % is 'per honderd'. 25% = 25/100 = 1/4. 50% = 1/2. 10% = 1/10. 1% = 1/100.\n\n**Snelle rekenmethode**:\n• 10% = deel door 10\n• 1% = deel door 100\n• 50% = deel door 2\n• Voor 25%: deel door 4\n\nVoorbeeld: 30% van €40 → 10% = €4, dus 30% = 3 × €4 = €12.\n\n**Verhouding**: 'op 8 leerlingen zijn 3 meiden' = 3 op 8 = 3/8 = 37,5%.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële Voorbeelden uit de toets in de [gratis PDF](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).",
+    explanation: "**Procenten zijn de meest gevraagde categorie op de Doorstroomtoets.**\n\nVerwacht:\n• **% van bedrag**: 15% van €80 = ?\n• **Korting**: €40 met 25% korting = ?\n• **Procent uitrekenen**: 12 van de 60 = ?%\n• **Verhouding**: 'op 8 leerlingen 3 meiden' — schaal.\n• **Snelheid + tijd + afstand**: km/u uitrekenen.\n\n**Truc voor procenten**: % is 'per honderd'. 25% = 25/100 = 1/4. 50% = 1/2. 10% = 1/10. 1% = 1/100.\n\n**Snelle rekenmethode**:\n• 10% = deel door 10\n• 1% = deel door 100\n• 50% = deel door 2\n• Voor 25%: deel door 4\n\nVoorbeeld: 30% van €40 → 10% = €4, dus 30% = 3 × €4 = €12.\n\n**Verhouding**: 'op 8 leerlingen zijn 3 meiden' = 3 op 8 = 3/8 = 37,5%.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden uit de toets in de [gratis PDF](https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf).",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">PROCENT-TRUCS</text>
 <rect x="20" y="40" width="135" height="35" rx="6" fill="${COLORS.paper}" stroke="${COLORS.good}" stroke-width="1.2"/>
@@ -715,7 +715,7 @@ const steps = [
         wrongHints: [null, "15 = aantal km, niet snelheid per uur.", "45 zou betekenen 22,5 km in 30 min — meer.", "7,5 zou betekenen halve afstand in dezelfde tijd."],
         uitlegPad: {
           stappen: [
-            { titel: "Verdubbelen", tekst: "30 minuten = halve uur. In half uur 15 km. In een heel uur: 15 × 2 = 30 km/u." },
+            { titel: "Verdubbelen", tekst: "30 minuten = een half uur. In een half uur 15 km. In een heel uur: 15 × 2 = 30 km/u." },
             { titel: "Algemene formule", tekst: "Snelheid = afstand ÷ tijd. Hier: 15 km ÷ 0,5 uur = 30 km/u." },
           ],
           woorden: [{ woord: "km/u", uitleg: "Kilometer per uur. Standaard snelheidsmaat." }, { woord: "snelheid", uitleg: "Hoeveel afstand per tijd. Afstand ÷ tijd." }],
@@ -801,20 +801,20 @@ const steps = [
         q: "Verhouding **rood : blauw = 2:3**. 15 blauwe knikkers — hoeveel rode?",
         options: ["10", "5", "15", "6"],
         answer: 0,
-        wrongHints: [null, "Dat is 1 deel.", "Dezelfde aantal als blauw — niet.", "Verkeerd berekend."],
+        wrongHints: [null, "Dat is 1 deel.", "Hetzelfde aantal als blauw — niet.", "Verkeerd berekend."],
       },
       {
         q: "**Hoeveel is 50% van 1/2**?",
         options: ["1/4", "1/2", "1", "0"],
         answer: 0,
-        wrongHints: [null, "Niet halveert.", "Dat is dubbel.", "Niet nul."],
+        wrongHints: [null, "Niet gehalveerd.", "Dat is dubbel.", "Niet nul."],
         uitlegPad: {
           stappen: [
             { titel: "50% = de helft", tekst: "50% betekent half. Dus 50% van 1/2 = de helft van 1/2." },
             { titel: "Halveer breuk", tekst: "Helft van 1/2 = 1/4 (verdubbel de noemer: 2 → 4)." },
           ],
           woorden: [{ woord: "halveren breuk", uitleg: "Teller × 1 en noemer × 2 (of teller ÷ 2 als even)." }],
-          theorie: "Toets-truc: % en breuken samen — schrijf % als breuk. 50% = 1/2. Dan × of × elkaar.",
+          theorie: "Toets-truc: % en breuken samen — schrijf % als breuk. 50% = 1/2. Dan vermenigvuldig je ze met elkaar.",
           voorbeelden: [{ type: "stap", tekst: "50% van 1/2 = 1/2 × 1/2 = 1/4. 25% van 1/2 = 1/4 × 1/2 = 1/8." }],
           basiskennis: [{ onderwerp: "Visualiseer", uitleg: "Pizza in 2 = halve. Half daarvan = kwart. Klopt." }],
           niveaus: {
@@ -834,7 +834,7 @@ const steps = [
         q: "Verhouding **2:5** opnieuw uitdrukken als breuk **van de kleinste in totaal**?",
         options: ["2/7", "2/5", "5/7", "1/3"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 2 op 5, niet totaal 7.", "Andere deel.", "Verkeerd."],
+        wrongHints: [null, "Niet — dat is 2 op 5, niet totaal 7.", "Ander deel.", "Verkeerd."],
       },
       {
         q: "**80% van 50** is?",
@@ -1192,7 +1192,7 @@ const steps = [
         ref: "S",
         options: ["10%", "40%", "4%", "11%"],
         answer: 0,
-        wrongHints: [null, "€40 is de stijging in euro's — de vraag is hoeveel procent dat van €400 is.", "4% van €400 zou maar €16 zijn.", "Pas op: je deelt door de óúde prijs (€400), niet door de nieuwe."],
+        wrongHints: [null, "€40 is de stijging in euro's — de vraag is hoeveel procent dat van €400 is.", "4% van €400 zou maar €16 zijn.", "Pas op: je deelt door de óude prijs (€400), niet door de nieuwe."],
         explanation: "Stijging = €40. Deel door de oude prijs: €40 / €400 = 0,10 = **10%**.",
       },
       {
@@ -1212,7 +1212,7 @@ const steps = [
         explanation: "1 croissant = €4,50 ÷ 3 = €1,50. Dan 5 × €1,50 = **€7,50**. (Verhoudingstabel!)",
       },
       {
-        q: "Van de 250 bezoekers van het schoolfeest is **40%** ouder. Hoeveel **ouders** waren er?",
+        q: "Van de 250 bezoekers van het schoolfeest is **40%** een ouder. Hoeveel **ouders** waren er?",
         ref: "1F",
         options: ["100", "40", "150", "210"],
         answer: 0,
@@ -1289,7 +1289,7 @@ const steps = [
   {
     title: "Meten & schaal — ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Meten zit altijd in de Doorstroomtoets.** Eenheden omrekenen + schaal lezen.\n\n**Lengte-trapje** (×10 per stap):\nkm → hm → dam → **m** → dm → cm → mm\n\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 m = 1000 mm\n• 1 cm = 10 mm\n\n**Gewicht** (idem ×10/×1000):\n• 1 kg = 1000 g\n• 1 g = 1000 mg\n• 1 ton = 1000 kg\n\n**Inhoud**:\n• 1 L = 10 dL = 100 cL = 1000 mL\n\n**Schaal**: getal op kaart × werkelijk.\nSchaal **1:200.000** betekent: 1 cm op kaart = 200.000 cm = 2 km in werkelijkheid.\n\n**Truc — komma verschuiven**:\nTussen mm en m zit 3 stappen → komma 3 plekken verschuiven.\n• mm → m: ÷ 1000 (komma 3 plekken links)\n• m → mm: × 1000 (komma 3 plekken rechts)\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Voor 'echte' voorbeelden: De toets.s PDF: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.",
+    explanation: "**Meten zit altijd in de Doorstroomtoets.** Eenheden omrekenen + schaal lezen.\n\n**Lengte-trapje** (×10 per stap):\nkm → hm → dam → **m** → dm → cm → mm\n\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 m = 1000 mm\n• 1 cm = 10 mm\n\n**Gewicht** (idem ×10/×1000):\n• 1 kg = 1000 g\n• 1 g = 1000 mg\n• 1 ton = 1000 kg\n\n**Inhoud**:\n• 1 L = 10 dL = 100 cL = 1000 mL\n\n**Schaal**: getal op kaart × werkelijk.\nSchaal **1:200.000** betekent: 1 cm op kaart = 200.000 cm = 2 km in werkelijkheid.\n\n**Truc — komma verschuiven**:\nTussen mm en m zitten 3 stappen → komma 3 plekken verschuiven.\n• mm → m: ÷ 1000 (komma 3 plekken links)\n• m → mm: × 1000 (komma 3 plekken rechts)\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Voor 'echte' voorbeelden: het gratis voorbeeldopgavenboekje (PDF): https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">LENGTE-TRAPJE</text>
 <text x="160" y="38" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">× 10 per stap, ÷ 10 omhoog</text>
@@ -1316,7 +1316,7 @@ const steps = [
           stappen: [{ titel: "× 1000", tekst: "km → m = 3 stappen op trapje = × 1000. 2,5 × 1000 = 2500 m. (Komma 3 plekken naar rechts: 2,500 → 2500)." }],
           woorden: [{ woord: "km → m", uitleg: "3 stappen op trapje = × 1000." }],
           theorie: "Formule: km × 1000 = m. Of: komma 3 plekken naar rechts schuiven.",
-          voorbeelden: [{ type: "fiets", tekst: "Wandeling 2,5 km = 2500 m. Een gemiddelde school-naar-huis-loopje." }],
+          voorbeelden: [{ type: "fiets", tekst: "Wandeling 2,5 km = 2500 m. Een gemiddeld school-naar-huis-loopje." }],
           basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "1 km = 1000 m (dat is een vaste). 2,5 km = 2 × 1000 + 0,5 × 1000 = 2000 + 500 = 2500." }],
           niveaus: { basis: "2500 m.", simpeler: "km × 1000 = m. 2,5 × 1000 = 2500.", nogSimpeler: "2500" },
         },
@@ -1363,7 +1363,7 @@ const steps = [
           woorden: [{ woord: "L → mL", uitleg: "× 1000 omdat 1 L = 1000 mL." }],
           theorie: "Inhoud-trapje: L → dL → cL → mL. Elke stap = × 10. L naar mL = 3 stappen = × 1000.",
           voorbeelden: [{ type: "vergelijken", tekst: "Pak melk = 1 L = 1000 mL. 2,5 L = 2,5 pakken melk = 2500 mL." }],
-          basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "2,5 L past in fles cola, in mL is 2500." }],
+          basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "2,5 L past in een grote fles cola; in mL is dat 2500." }],
           niveaus: { basis: "2500 mL.", simpeler: "2,5 L × 1000 = 2500 mL.", nogSimpeler: "2500" },
         },
       },
@@ -1498,7 +1498,7 @@ const steps = [
             { titel: "Komma 3 plekken", tekst: "× 1000 = komma 3 plekken naar rechts: 2,5 → 25 → 250 → 2500." },
           ],
           woorden: [{ woord: "milli / kilo", uitleg: "Milli = duizendste. Kilo = duizend. Tussen kg en g zit dus factor 1000." }],
-          theorie: "Toets-truc: tussen kg en g zit 3 stappen op het trapje. Komma 3 plekken verschuiven.",
+          theorie: "Toets-truc: tussen kg en g zitten 3 stappen op het trapje. Komma 3 plekken verschuiven.",
           voorbeelden: [
             { type: "stap", tekst: "0,5 kg = 500 g (komma 3 rechts: 0,500)." },
             { type: "stap", tekst: "1500 g = 1,5 kg (komma 3 links)." },
@@ -1582,7 +1582,7 @@ const steps = [
         q: "Een **kamer** is **5 m × 4 m**. Wat is de **oppervlakte**?",
         options: ["20 m²", "9 m²", "18 m²", "45 m²"],
         answer: 0,
-        wrongHints: [null, "Optelling, niet vermenigvuldiging.", "Omtrek halveerd.", "Niet."],
+        wrongHints: [null, "Optelling, niet vermenigvuldiging.", "Omtrek gehalveerd.", "Niet."],
       },
       {
         q: "**45 minuten** is hoeveel **uur** (in decimaal)?",
@@ -1592,7 +1592,7 @@ const steps = [
         wrongHints: [null, "Niet — direct delen door 100 werkt niet bij tijd (60 min/uur).", "Veel te veel — minder dan 1 uur.", "Veel te veel."],
         uitlegPad: {
           stappen: [
-            { titel: "Tijd ≠ getal", tekst: "Anders dan bij meters of euros: 60 minuten = 1 uur, niet 100. Dus 45 min ≠ 0,45 uur." },
+            { titel: "Tijd ≠ getal", tekst: "Anders dan bij meters of euro's: 60 minuten = 1 uur, niet 100. Dus 45 min ≠ 0,45 uur." },
             { titel: "Reken", tekst: "45 / 60 = 0,75. Of: 15 min = 1/4 uur = 0,25. 45 min = 3 × 0,25 = 0,75 uur." },
           ],
           woorden: [{ woord: "kwartier", uitleg: "15 minuten = 1/4 uur = 0,25 uur." }],
@@ -1837,7 +1837,7 @@ const steps = [
   {
     title: "Redactiesommen — eindopdracht ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Redactiesommen** = vragen verstopt in een verhaaltje. Vaak de moeilijkste op de Doorstroomtoets — niet door de wiskunde, maar omdat je moet uitvogelen WELKE wiskunde je nodig hebt.\n\n**Aanpak in 4 stappen**:\n\n**1. Lees rustig** — minstens 2 keer.\n**2. Onderstreep getallen** + **kringel het vraagteken**.\n**3. Bedenk** welke som hier zit (+, -, ×, ÷, %, gemiddelde, oppervlakte, etc.).\n**4. Reken + check** of het antwoord redelijk is.\n\n**Veelvoorkomende types**:\n• **Inkoop + winst**: 'kocht voor X, verkocht voor Y, winst?'\n• **Tijd + tarief**: 'verdient €10/u, werkt 3,5 u, totaal?'\n• **Verdelen**: '4 vrienden delen €60, ieder krijgt?'\n• **Snelheid**: '60 km in 1,5 uur, km/u?'\n• **Gemiddelde**: 'cijfers 6, 7, 8, gemiddeld?'\n\n**Examen-tip**: schrijf TUSSENSTAPPEN op. De toets geeft alleen punten voor goed antwoord — maar tussenstappen helpen JOU om geen domme fout te maken.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden: De toets.s PDF: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor de eindopdracht?** 5 gemixte redactiesommen.",
+    explanation: "**Redactiesommen** = vragen verstopt in een verhaaltje. Vaak de moeilijkste op de Doorstroomtoets — niet door de wiskunde, maar omdat je moet uitvogelen WELKE wiskunde je nodig hebt.\n\n**Aanpak in 4 stappen**:\n\n**1. Lees rustig** — minstens 2 keer.\n**2. Onderstreep getallen** + **kringel het vraagteken**.\n**3. Bedenk** welke som hier zit (+, -, ×, ÷, %, gemiddelde, oppervlakte, etc.).\n**4. Reken + check** of het antwoord redelijk is.\n\n**Veelvoorkomende types**:\n• **Inkoop + winst**: 'kocht voor X, verkocht voor Y, winst?'\n• **Tijd + tarief**: 'verdient €10/u, werkt 3,5 u, totaal?'\n• **Verdelen**: '4 vrienden delen €60, ieder krijgt?'\n• **Snelheid**: '60 km in 1,5 uur, km/u?'\n• **Gemiddelde**: 'cijfers 6, 7, 8, gemiddeld?'\n\n**Examen-tip**: schrijf TUSSENSTAPPEN op. De toets geeft alleen punten voor een goed antwoord — maar tussenstappen helpen JOU om geen domme fout te maken.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden: het gratis voorbeeldopgavenboekje (PDF): https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor de eindopdracht?** 5 gemixte redactiesommen.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">REDACTIE-AANPAK</text>
 <rect x="20" y="40" width="280" height="30" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
@@ -1881,7 +1881,7 @@ const steps = [
           woorden: [{ woord: "gemiddelde", uitleg: "Som van alle waarden gedeeld door aantal waarden." }],
           theorie: "Formule: gemiddelde = (a₁ + a₂ + ... + aₙ) ÷ n. Veel-gebruikt op rapport en in statistiek.",
           voorbeelden: [{ type: "check", tekst: "7,25 ligt tussen 6,5 en 8. Past in midden van de range. Klopt." }],
-          basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Gemiddelde 7,25 = 'voldoende met ruim marge'. Een 7,4 of hoger op rapport is mooi." }],
+          basiskennis: [{ onderwerp: "Realiteit-check", uitleg: "Gemiddelde 7,25 = 'voldoende met ruime marge'. Een 7,4 of hoger op rapport is mooi." }],
           niveaus: { basis: "7,25.", simpeler: "Totaal=29. ÷ 4 cijfers = 7,25.", nogSimpeler: "7,25" },
         },
       },
@@ -1906,7 +1906,7 @@ const steps = [
         q: "**Auto rijdt 90 km/u**. Hoe ver komt hij in **20 minuten**?",
         options: ["30 km", "45 km", "20 km", "60 km"],
         answer: 0,
-        wrongHints: [null, "45 = halve uur. 20 min is minder dan half uur.", "20 = de minuten, niet km. Andere eenheid.", "60 km zou bij ongeveer 40 minuten horen — en 20 minuten is minder. Te veel."],
+        wrongHints: [null, "45 = een half uur. 20 min is minder dan een half uur.", "20 = de minuten, niet km. Andere eenheid.", "60 km zou bij ongeveer 40 minuten horen — en 20 minuten is minder. Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Tijd in uren", tekst: "20 minuten = 20/60 uur = 1/3 uur." },
@@ -1920,7 +1920,7 @@ const steps = [
         },
       },
       {
-        q: "Op een klas van **28 leerlingen** krijgen **75% een voldoende**. Hoeveel **onvoldoendes**?",
+        q: "In een klas van **28 leerlingen** krijgen **75% een voldoende**. Hoeveel **onvoldoendes**?",
         options: ["7", "21", "75", "4"],
         answer: 0,
         wrongHints: [null, "21 = aantal VOLDOENDES (75% van 28).", "75 = het percentage, niet aantal.", "4 = ongeveer 14%. Reken opnieuw."],
@@ -2028,7 +2028,7 @@ const steps = [
             { woord: "deel-van-het-geheel", uitleg: "Deel ÷ geheel × 100 = %." },
             { woord: "vermenigvuldigen met 100", uitleg: "Komma 2 plaatsen naar rechts. 0,75 → 75." },
           ],
-          theorie: "Formule % bereken: (deel ÷ geheel) × 100. Bijvoorbeeld 18 van 24: (18/24) × 100 = 75%. Werkt voor alle 'hoeveel-procent-van'-vragen.",
+          theorie: "Formule % berekenen: (deel ÷ geheel) × 100. Bijvoorbeeld 18 van 24: (18/24) × 100 = 75%. Werkt voor alle 'hoeveel-procent-van'-vragen.",
           voorbeelden: [
             { type: "stap", tekst: "5 van 20 = 25%. (5÷20)×100." },
             { type: "stap", tekst: "12 van 30 = 40%. (12÷30)×100." },
@@ -2062,7 +2062,7 @@ const steps = [
           stappen: [
             { titel: "Deelsom", tekst: "Per stuk = totaal ÷ aantal. €36 ÷ 3 = €12 per boek." },
           ],
-          woorden: [{ woord: "per stuk", uitleg: "Wat 1 ding kost — total delen door aantal." }],
+          woorden: [{ woord: "per stuk", uitleg: "Wat 1 ding kost — totaal delen door aantal." }],
           theorie: "Redactiesom-truc: 'kost ... samen' + 'per X' = deelsom. Totaal ÷ aantal = prijs per item.",
           voorbeelden: [{ type: "stap", tekst: "5 ijsjes voor €10 → per ijsje €2. 4 boeken €24 → per boek €6." }],
           basiskennis: [{ onderwerp: "Check", uitleg: "€12 × 3 = €36 ✓. Realiteit-check helpt fouten vinden." }],
@@ -2113,7 +2113,7 @@ const steps = [
         wrongHints: [null, "Niet — 6 is het aantal, niet het percentage.", "Niet — reken 6/24 × 100.", "Te hoog."],
       },
       {
-        q: "Cijferslijst: **7, 8, 6, 9**. Wat is het **gemiddelde**?",
+        q: "Cijferlijst: **7, 8, 6, 9**. Wat is het **gemiddelde**?",
         options: ["7,5", "30", "8", "6,5"],
         answer: 0,
         wrongHints: [null, "Dat is de som, niet het gemiddelde.", "Niet — controleer: (7+8+6+9)/4.", "Niet."],
@@ -2191,7 +2191,7 @@ const steps = [
         wrongHints: [null, "Te weinig — 250 ÷ 100 × 6.", "Te veel.", "Te weinig."],
       },
       {
-        q: "**Klas** heeft **30 leerlingen**. **2/3 doet gym mee**. Hoeveel **leerlingen**?",
+        q: "**Klas** heeft **30 leerlingen**. **2/3 doet mee met gym**. Hoeveel **leerlingen**?",
         options: ["20", "10", "15", "25"],
         answer: 0,
         wrongHints: [null, "Niet — hoeveel is 2/3 van 30?", "Helft.", "Te veel."],
@@ -2359,7 +2359,7 @@ const steps = [
         explanation: "'s Middags = +12 uur. Half twee = 1:30 → 13:30.",
       },
       {
-        q: "**Open vraag**: hoeveel **minuten** zit in **1,5 uur**?",
+        q: "**Open vraag**: hoeveel **minuten** zitten in **1,5 uur**?",
         kind: "open",
         acceptedAnswers: ["90"],
         numericTolerance: 0,
@@ -2512,7 +2512,7 @@ const steps = [
         ref: "1F",
         options: ["€2,20", "€2,10", "€1,20", "€2,30"],
         answer: 0,
-        wrongHints: [null, "Kijk nog eens naar de centen: 35 + 85 is meer dan 100.", "Dat is minder dan het sap alleen al bijna — tel beide bedragen op.", "Net iets te veel — reken 35 + 85 cent nog eens na."],
+        wrongHints: [null, "Kijk nog eens naar de centen: 35 + 85 is meer dan 100.", "Dat is minder dan het sap alleen al — tel beide bedragen op.", "Net iets te veel — reken 35 + 85 cent nog eens na."],
         explanation: "€1,35 + €0,85: eerst de centen (35 + 85 = 120 cent = €1,20), dan €1 + €1,20 = **€2,20**.",
       },
       {
@@ -2600,7 +2600,7 @@ const steps = [
         ref: "1F",
         options: ["€2,65", "€3,65", "€2,75", "€3,35"],
         answer: 0,
-        wrongHints: [null, "Eén euro te veel — vul aan van €7,35 naar €8, dan naar €10.", "Tien cent te veel — van €7,35 naar €7,40 is maar 5 cent... klopt je aanvulling?", "Je hebt 35 cent terug gegeven in plaats van aangevuld tot de hele euro."],
+        wrongHints: [null, "Eén euro te veel — vul aan van €7,35 naar €8, dan naar €10.", "Tien cent te veel — van €7,35 naar €7,40 is maar 5 cent... klopt je aanvulling?", "Je hebt 35 cent teruggegeven in plaats van aangevuld tot de hele euro."],
         explanation: "Aanvullen: €7,35 + €0,65 = €8,00, dan + €2,00 = €10,00. Terug: **€2,65**.",
       },
       {
@@ -2761,7 +2761,7 @@ const steps = [
         ref: "1F",
         options: ["45 kilometer", "18 kilometer", "5 kilometer", "30 kilometer"],
         answer: 0,
-        wrongHints: [null, "Je hebt opgeteld — elke uur komen er 15 kilometer bíj, drie keer.", "Je hebt gedeeld — de afstand wordt juist groter naarmate je langer fietst.", "Dat is na 2 uur — er is nog een derde uur."],
+        wrongHints: [null, "Je hebt opgeteld — elk uur komen er 15 kilometer bíj, drie keer.", "Je hebt gedeeld — de afstand wordt juist groter naarmate je langer fietst.", "Dat is na 2 uur — er is nog een derde uur."],
         explanation: "3 uur × 15 km per uur = **45 kilometer**.",
       },
       {
@@ -2789,7 +2789,7 @@ const steps = [
         explanation: "November heeft **30** dagen (net als april, juni en september).",
       },
       {
-        q: "Dit jaar valt Lotte's verjaardag op een **vrijdag**. Op welke dag valt haar verjaardag **volgend jaar** (geen schrikkeljaar)?",
+        q: "Dit jaar valt Lottes verjaardag op een **vrijdag**. Op welke dag valt haar verjaardag **volgend jaar** (geen schrikkeljaar)?",
         ref: "S",
         options: ["zaterdag", "vrijdag", "zondag", "donderdag"],
         answer: 0,
@@ -2923,7 +2923,7 @@ const doorstroomtoetsRekenenG8 = {
     { id: "cijferend-rekenen", title: "Cijferend rekenen", niveau: "po-1F" },
   ],
   intro:
-    "~75 Doorstroomtoets-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte Voorbeelden uit de toets: gratis voorbeeldopgavenboekje op cito.nl. ~80 min totaal (4× ~20 min) — splits gerust in 4 dagelijkse kwartier-sessies.",
+    "~75 Doorstroomtoets-stijl oefenvragen rekenen — breuken, procenten, meten, redactiesommen. Géén kopieën, eigen vragen © Leerkwartier. Voor echte voorbeelden uit de toets: gratis voorbeeldopgavenboekje op cito.nl. ~80 min totaal (4× ~20 min) — splits gerust in 4 dagelijkse kwartier-sessies.",
   triggerKeywords: [
     "doorstroomtoets", "doorstroom", "doorstroomtoets rekenen",
     "cito", "cito-eindtoets", "cito eindtoets", "cito rekenen", "cito groep 8",

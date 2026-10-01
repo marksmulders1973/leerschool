@@ -129,7 +129,7 @@ const vragen = [
   },
   {
     id: "g7-kommagetallen-2b", concept: "g7-kommagetallen", niveau: 2,
-    vraag: "Bij verspringen springt Sanne 3,45 m. Ruben springt 2,9 m. Hoeveel meter sprong Sanne verder dan Ruben?",
+    vraag: "Bij verspringen springt Sanne 3,45 m. Ruben springt 2,9 m. Hoeveel meter springt Sanne verder dan Ruben?",
     opties: ["1,36 m", "0,55 m", "0,65 m", "1,55 m"],
     correct: 1,
   },

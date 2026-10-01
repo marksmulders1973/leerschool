@@ -31,7 +31,7 @@ const steps = [
   {
     title: "Getallen 0 t/m 20 — herkennen en tellen",
     explanation:
-      "Voor groep 3 is **getalbegrip 0-20** de basis van alle rekenen.\n\n**Tellen**:\n• 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.\n• 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n• Belangrijk: 11 en 12 zijn **uitzondering** (geen 'tienpunteen' of 'eenentien').\n\n**Cijfer vs hoeveelheid**:\n• **Cijfer** = teken: 5, 7, 12.\n• **Hoeveelheid** = aantal dingen: ●●●●● = 5 stippen.\n\n**Tien-structuur**:\n• Onze getallen werken in **groepen van tien**.\n• 13 = 1 tiental + 3 eenheden = 10 + 3.\n• 17 = 1 tiental + 7 eenheden = 10 + 7.\n\n**Onthoud**:\n• 'Tien' is een speciale stop — daar begint elk nieuw rij.\n• Na 20: 21, 22, 23 etc.",
+      "Voor groep 3 is **getalbegrip 0-20** de basis van alle rekenen.\n\n**Tellen**:\n• 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10.\n• 11, 12, 13, 14, 15, 16, 17, 18, 19, 20.\n• Belangrijk: 11 en 12 zijn **uitzonderingen** (geen 'tienpunteen' of 'eenentien').\n\n**Cijfer vs hoeveelheid**:\n• **Cijfer** = teken: 5, 7, 12.\n• **Hoeveelheid** = aantal dingen: ●●●●● = 5 stippen.\n\n**Tien-structuur**:\n• Onze getallen werken in **groepen van tien**.\n• 13 = 1 tiental + 3 eenheden = 10 + 3.\n• 17 = 1 tiental + 7 eenheden = 10 + 7.\n\n**Onthoud**:\n• 'Tien' is een speciale stop — daar begint elke nieuwe rij.\n• Na 20: 21, 22, 23 etc.",
     checks: [
       {
         q: "Welk getal komt **na 7**?",
@@ -94,7 +94,7 @@ const steps = [
   {
     title: "Optellen tot 10 — handig splitsen",
     explanation:
-      "**Optellen** = erbij doen.\n\n**Splitsen helpt**:\n• 5 = 1+4 = 2+3 = 0+5.\n• 10 = 1+9 = 2+8 = 3+7 = 4+6 = 5+5 = 6+4 = 7+3 = 8+2 = 9+1.\n\n**Dubbele** (super handig om snel uit te rekenen):\n• 1+1=2, 2+2=4, 3+3=6, 4+4=8, 5+5=10.\n• Onthoud deze — dan kun je sommen erom heen ook snel.\n\n**Truc 'bijna dubbele'**:\n• 4+5 = (4+4) + 1 = 8 + 1 = 9.\n• 3+4 = (3+3) + 1 = 6 + 1 = 7.\n\n**Plus 1, plus 2**:\n• X + 1 = volgend getal. 6 + 1 = 7. Heel snel.\n• X + 2 = volgende-volgende. 6 + 2 = 8.\n\n**Truc plus 0**:\n• X + 0 = X. 7 + 0 = 7. Niets erbij.\n\n**Volgorde maakt niet uit**:\n• 3 + 5 = 5 + 3 = 8. **Wisselen mag**.\n• Tip: zet **grootste getal eerst** en tel op met kleinste.",
+      "**Optellen** = erbij doen.\n\n**Splitsen helpt**:\n• 5 = 1+4 = 2+3 = 0+5.\n• 10 = 1+9 = 2+8 = 3+7 = 4+6 = 5+5 = 6+4 = 7+3 = 8+2 = 9+1.\n\n**Dubbele** (super handig om snel uit te rekenen):\n• 1+1=2, 2+2=4, 3+3=6, 4+4=8, 5+5=10.\n• Onthoud deze — dan kun je de sommen eromheen ook snel uitrekenen.\n\n**Truc 'bijna dubbele'**:\n• 4+5 = (4+4) + 1 = 8 + 1 = 9.\n• 3+4 = (3+3) + 1 = 6 + 1 = 7.\n\n**Plus 1, plus 2**:\n• X + 1 = volgend getal. 6 + 1 = 7. Heel snel.\n• X + 2 = volgende-volgende. 6 + 2 = 8.\n\n**Truc plus 0**:\n• X + 0 = X. 7 + 0 = 7. Niets erbij.\n\n**Volgorde maakt niet uit**:\n• 3 + 5 = 5 + 3 = 8. **Wisselen mag**.\n• Tip: zet **grootste getal eerst** en tel op met kleinste.",
     checks: [
       {
         q: "**5 + 3** = ?",
@@ -254,7 +254,7 @@ const steps = [
         },
       },
       {
-        q: "Tom heeft 9 stickers. Krijgt 4 erbij. Hoeveel nu?",
+        q: "Tom heeft 9 stickers. Hij krijgt er 4 bij. Hoeveel heeft hij nu?",
         options: ["13","12","14","5"],
         answer: 0,
         wrongHints: [null, "Te weinig — je hebt 3 erbij geteld, maar de som vraagt om 4.", "Te veel — je hebt 5 erbij geteld, maar de som vraagt om 4.", "Niet — dat is 9-4."],
@@ -265,7 +265,7 @@ const steps = [
         },
       },
       {
-        q: "**Welk getal komt eerst** in telrij: 13 of 17?",
+        q: "**Welk getal komt eerst** in de telrij: 13 of 17?",
         options: ["13","17","Tegelijk","Beide niet"],
         answer: 0,
         wrongHints: [null, "Niet — 17 komt later.", "Niet — verschillend.", "Wel — beide bestaan."],
@@ -309,17 +309,17 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te weinig — dat is 5+5.", "Te veel — 5+5+5+5.", "Niet."],
         uitlegPad: {
-          stappen: [{ titel: "Driemaal vijf", tekst: "5 + 5 = 10. 10 + 5 = **15**. Drie keer 5 = 15. Dit ga je later '5 × 3' noemen — vermenigvuldigen!" }],
+          stappen: [{ titel: "Driemaal vijf", tekst: "5 + 5 = 10. 10 + 5 = **15**. Drie keer 5 = 15. Dit ga je later '3 × 5' noemen — vermenigvuldigen!" }],
           niveaus: { basis: "15.", simpeler: "5+5+5 = 15.", nogSimpeler: "15" },
         },
       },
       {
-        q: "Anna heeft 12 snoepjes. Eet er 4 op. Hoeveel over?",
+        q: "Anna heeft 12 snoepjes. Ze eet er 4 op. Hoeveel heeft ze nog over?",
         options: ["8","6","9","10"],
         answer: 0,
         wrongHints: [null, "Te weinig — je hebt te veel afgetrokken.", "Te veel — je hebt 3 afgetrokken in plaats van 4.", "Te veel — je hebt 2 afgetrokken in plaats van 4."],
         uitlegPad: {
-          stappen: [{ titel: "Eten op = min", tekst: "'Eet op' → min-som. 12 - 4 = 12 - 2 - 2 = 10 - 2 = **8**." }],
+          stappen: [{ titel: "Opeten = min", tekst: "'Eet op' → min-som. 12 - 4 = 12 - 2 - 2 = 10 - 2 = **8**." }],
           niveaus: { basis: "12-4 = 8.", simpeler: "12-4 = 8 snoepjes over.", nogSimpeler: "8" },
         },
       },

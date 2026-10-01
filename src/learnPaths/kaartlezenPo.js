@@ -72,7 +72,7 @@ const steps = [
 
   {
     title: "Kompasroos — windrichtingen",
-    explanation: "**Kompasroos** = symbool dat **windrichtingen** aanwijst.\n\n**4 hoofdrichtingen**:\n• **N** = Noord (boven)\n• **Z** = Zuid (onder)\n• **O** = Oost (rechts)\n• **W** = West (links)\n\n**Engelse versie**:\n• N (north), S (south), E (east), W (west).\n• 'S' staat dus voor Zuid op Engelse kaarten.\n\n**Tussenrichtingen**:\n• **NO** = Noordoost (boven-rechts)\n• **ZO** = Zuidoost (onder-rechts)\n• **ZW** = Zuidwest (onder-links)\n• **NW** = Noordwest (boven-links)\n\n**Trucje om te onthouden**:\n*'**N**ooit **O**p **Z**ondag **W**erken'* — N-O-Z-W tegen de klok in (bovenaan beginnen, dan oost, zuid, west).\n\n**Op een kaart**:\n• **Boven** = Noord (meestal).\n• **Onder** = Zuid.\n• **Rechts** = Oost.\n• **Links** = West.\n\n**toetsvraag-typen**:\n• 'Welke richting ligt stad X t.o.v. stad Y?'\n• 'Loop je naar het noorden, kom je aan bij...?'\n\n**Voorbeeld**:\nAmsterdam ligt **noord** van Rotterdam (zit hogerop op de kaart).\nRotterdam ligt dus **zuid** van Amsterdam.\n\n**Toets-tip**:\nKijk altijd waar de **N-pijl** wijst. Soms is 'noord' niet boven (op vakantie-kaarten of plattegronden).",
+    explanation: "**Kompasroos** = symbool dat **windrichtingen** aanwijst.\n\n**4 hoofdrichtingen**:\n• **N** = Noord (boven)\n• **Z** = Zuid (onder)\n• **O** = Oost (rechts)\n• **W** = West (links)\n\n**Engelse versie**:\n• N (north), S (south), E (east), W (west).\n• 'S' staat dus voor Zuid op Engelse kaarten.\n\n**Tussenrichtingen**:\n• **NO** = Noordoost (boven-rechts)\n• **ZO** = Zuidoost (onder-rechts)\n• **ZW** = Zuidwest (onder-links)\n• **NW** = Noordwest (boven-links)\n\n**Trucje om te onthouden**:\n*'**N**ooit **O**p **Z**ondag **W**erken'* — N-O-Z-W met de klok mee (bovenaan beginnen, dan oost, zuid, west).\n\n**Op een kaart**:\n• **Boven** = Noord (meestal).\n• **Onder** = Zuid.\n• **Rechts** = Oost.\n• **Links** = West.\n\n**toetsvraag-typen**:\n• 'In welke richting ligt stad X t.o.v. stad Y?'\n• 'Loop je naar het noorden, kom je aan bij...?'\n\n**Voorbeeld**:\nAmsterdam ligt **ten noorden** van Rotterdam (zit hogerop op de kaart).\nRotterdam ligt dus **ten zuiden** van Amsterdam.\n\n**Toets-tip**:\nKijk altijd waar de **N-pijl** wijst. Soms is 'noord' niet boven (op vakantie-kaarten of plattegronden).",
     checks: [
       {
         q: "Op een normale kaart, **N** ligt aan de:",
@@ -84,22 +84,22 @@ const steps = [
           woorden: [{ woord: "windrichtingen", uitleg: "N (Noord), Z (Zuid), O (Oost), W (West)." }],
           theorie: "Conventie wereldkaarten: N altijd boven (tenzij draai-pijl iets anders zegt).",
           voorbeelden: [{ type: "kompas", tekst: "Boven=N, onder=Z, rechts=O, links=W." }],
-          basiskennis: [{ onderwerp: "Ezelsbrug", uitleg: "'Nooit Op Zondag Werken' — N-O-Z-W tegen klok in vanaf boven." }],
+          basiskennis: [{ onderwerp: "Ezelsbrug", uitleg: "'Nooit Op Zondag Werken' — N-O-Z-W met de klok mee vanaf boven." }],
           niveaus: { basis: "Bovenkant.", simpeler: "Op kaart staat N (Noord) ALTIJD boven (standaard).", nogSimpeler: "Boven" },
         },
       },
       {
         q: "Amsterdam ligt **boven** Rotterdam op de kaart. Dus Amsterdam ligt:",
-        options: ["Noord van Rotterdam","Zuid van Rotterdam","Oost van Rotterdam","West van Rotterdam"],
+        options: ["Ten noorden van Rotterdam","Ten zuiden van Rotterdam","Ten oosten van Rotterdam","Ten westen van Rotterdam"],
         answer: 0,
         wrongHints: [null,"Andersom.","Dat is rechts.","Dat is links."],
         uitlegPad: {
-          stappen: [{ titel: "Boven = Noord", tekst: "Boven op kaart = Noord. Amsterdam boven Rotterdam = Amsterdam Noord van Rotterdam." }],
-          woorden: [{ woord: "X ligt Noord van Y", uitleg: "X ligt hogerop op kaart dan Y." }],
+          stappen: [{ titel: "Boven = Noord", tekst: "Boven op kaart = Noord. Amsterdam boven Rotterdam = Amsterdam ten noorden van Rotterdam." }],
+          woorden: [{ woord: "X ligt ten noorden van Y", uitleg: "X ligt hogerop op kaart dan Y." }],
           theorie: "Richting-aanduiding: hoger op kaart = noordelijker.",
-          voorbeelden: [{ type: "feit", tekst: "Amsterdam (hoger op kaart) is Noord van Rotterdam (lager)." }],
+          voorbeelden: [{ type: "feit", tekst: "Amsterdam (hoger op kaart) ligt ten noorden van Rotterdam (lager)." }],
           basiskennis: [{ onderwerp: "NL-feit", uitleg: "Amsterdam (provincie Noord-Holland) ligt boven Rotterdam (Zuid-Holland)." }],
-          niveaus: { basis: "Noord van Rotterdam.", simpeler: "Amsterdam BOVEN Rotterdam → Amsterdam ligt NOORD van Rotterdam.", nogSimpeler: "Noord" },
+          niveaus: { basis: "Ten noorden van Rotterdam.", simpeler: "Amsterdam BOVEN Rotterdam → Amsterdam ligt TEN NOORDEN van Rotterdam.", nogSimpeler: "Noord" },
         },
       },
       {
@@ -135,7 +135,7 @@ const steps = [
 
   {
     title: "Schaal — werkelijke afstanden",
-    explanation: "**Schaal** = verhouding tussen **afstand op de kaart** en **werkelijke afstand**.\n\n**Voorbeeld**:\n• Schaal **1:100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt.\n• 100.000 cm = 1.000 m = **1 km**.\n• Dus 1 cm op kaart = 1 km in het echt.\n\n**Andere schalen**:\n• 1:50.000 → 1 cm = 0,5 km = 500 m.\n• 1:25.000 → 1 cm = 250 m.\n• 1:1.000.000 → 1 cm = 10 km.\n\n**Hoe rekenen**:\n1. Meet de afstand op de kaart in cm.\n2. Vermenigvuldig met de schaal.\n3. Reken om naar km of m.\n\n**Voorbeeld**:\nSchaal 1:100.000. Afstand op kaart = 5 cm.\n• 5 cm × 100.000 = 500.000 cm.\n• 500.000 cm = 5.000 m = **5 km**.\n\n**Schaalbalk**:\nSommige kaarten hebben een **balk** met streepjes en getallen, bijv:\n```\n0  1  2  3  4 km\n|--|--|--|--|\n```\nDan meet je hoe vaak die balk past tussen 2 punten.\n\n**Soorten kaarten + schaal**:\n• **Plattegrond huis**: 1:50 of 1:100 (heel klein gebied).\n• **Stadsplan**: 1:10.000.\n• **Wegenkaart provincie**: 1:200.000.\n• **Wereldkaart**: 1:50.000.000.\n\n**Toets-tip**:\nGroter getal achter de ':' = **kleiner** stuk wereld zichtbaar. 1:1.000.000 toont meer dan 1:1.000.",
+    explanation: "**Schaal** = verhouding tussen **afstand op de kaart** en **werkelijke afstand**.\n\n**Voorbeeld**:\n• Schaal **1:100.000** betekent: 1 cm op de kaart = 100.000 cm in het echt.\n• 100.000 cm = 1.000 m = **1 km**.\n• Dus 1 cm op kaart = 1 km in het echt.\n\n**Andere schalen**:\n• 1:50.000 → 1 cm = 0,5 km = 500 m.\n• 1:25.000 → 1 cm = 250 m.\n• 1:1.000.000 → 1 cm = 10 km.\n\n**Hoe rekenen**:\n1. Meet de afstand op de kaart in cm.\n2. Vermenigvuldig met de schaal.\n3. Reken om naar km of m.\n\n**Voorbeeld**:\nSchaal 1:100.000. Afstand op kaart = 5 cm.\n• 5 cm × 100.000 = 500.000 cm.\n• 500.000 cm = 5.000 m = **5 km**.\n\n**Schaalbalk**:\nSommige kaarten hebben een **balk** met streepjes en getallen, bijv:\n```\n0  1  2  3  4 km\n|--|--|--|--|\n```\nDan meet je hoe vaak die balk past tussen 2 punten.\n\n**Soorten kaarten + schaal**:\n• **Plattegrond huis**: 1:50 of 1:100 (heel klein gebied).\n• **Stadsplan**: 1:10.000.\n• **Wegenkaart provincie**: 1:200.000.\n• **Wereldkaart**: 1:50.000.000.\n\n**Toets-tip**:\nGroter getal achter de ':' = **groter** stuk wereld zichtbaar. 1:1.000.000 toont meer dan 1:1.000.",
     checks: [
       {
         q: "Schaal **1:100.000**. 1 cm op kaart = ___ in het echt.",
@@ -198,7 +198,7 @@ const steps = [
 
   {
     title: "Legenda — symbolen interpreteren",
-    explanation: "**Legenda** = uitleg van de **symbolen en kleuren** op de kaart.\n\n**Standaard-symbolen**:\n• **Blauwe lijn** = rivier of beek\n• **Blauwe vlek** = meer of zee\n• **Rode lijn** = hoofdweg / snelweg\n• **Zwarte lijn** = spoorlijn (vaak met streepjes)\n• **Stippeltjes** = wandelpad of fietspad\n• **Driehoekje** = berg of camping\n• **Vierkantje** = gebouw of station\n• **Cirkel** = stad (groter = grotere stad)\n• **Boom-tekentje** = bos\n• **Kerk-tekentje** = kerk\n• **Vliegtuig** = vliegveld\n• **Anker** = haven\n\n**Op atlas-kaarten** (politieke):\n• **Lijn met stippen** = landgrens.\n• **Dubbele lijn** = provincie-grens.\n• **Ster** = hoofdstad.\n• **Punt** = gewone stad.\n\n**toetsvraag-typen**:\n• 'Wat betekent dit symbool?' → kijk in legenda.\n• 'Hoeveel campings staan er op de kaart?' → tel driehoekjes.\n• 'Welke kaart-symbool staat voor X?' → matchen.\n\n**Toets-tip**:\nLegenda staat meestal in een **hoek** of langs de **rand** van de kaart. Als je een symbool niet herkent, **eerst legenda checken**, niet gokken.\n\n**Voorbeeld-vraag**:\n*'Op de kaart staat 5 keer een kerk-tekentje. Hoeveel kerken staan er in dit gebied?'*\n→ 5 (gewoon tellen).",
+    explanation: "**Legenda** = uitleg van de **symbolen en kleuren** op de kaart.\n\n**Standaard-symbolen**:\n• **Blauwe lijn** = rivier of beek\n• **Blauwe vlek** = meer of zee\n• **Rode lijn** = hoofdweg / snelweg\n• **Zwarte lijn** = spoorlijn (vaak met streepjes)\n• **Stippeltjes** = wandelpad of fietspad\n• **Driehoekje** = berg of camping\n• **Vierkantje** = gebouw of station\n• **Cirkel** = stad (groter = grotere stad)\n• **Boom-tekentje** = bos\n• **Kerk-tekentje** = kerk\n• **Vliegtuig** = vliegveld\n• **Anker** = haven\n\n**Op atlas-kaarten** (politieke):\n• **Lijn met stippen** = landgrens.\n• **Dubbele lijn** = provincie-grens.\n• **Ster** = hoofdstad.\n• **Punt** = gewone stad.\n\n**toetsvraag-typen**:\n• 'Wat betekent dit symbool?' → kijk in legenda.\n• 'Hoeveel campings staan er op de kaart?' → tel driehoekjes.\n• 'Welk kaart-symbool staat voor X?' → matchen.\n\n**Toets-tip**:\nLegenda staat meestal in een **hoek** of langs de **rand** van de kaart. Als je een symbool niet herkent, **eerst legenda checken**, niet gokken.\n\n**Voorbeeld-vraag**:\n*'Op de kaart staat 5 keer een kerk-tekentje. Hoeveel kerken staan er in dit gebied?'*\n→ 5 (gewoon tellen).",
     checks: [
       {
         q: "Welke vorm hoort meestal bij het kaart-symbool voor een **camping**?",
@@ -237,7 +237,7 @@ const steps = [
           stappen: [{ titel: "Ster = hoofdstad", tekst: "Op landkaart: ster (★) markeert de hoofdstad van een land." }],
           woorden: [{ woord: "hoofdstad", uitleg: "Belangrijkste stad van een land. Met ster gemarkeerd." }],
           theorie: "Atlas-symbolen: ster = hoofdstad. Punt = gewone stad. Lijn-stippen = grens.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Amsterdam ★ (NL hoofdstad). Berlin ★ (Duitsland)." }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Amsterdam ★ (NL hoofdstad). Berlijn ★ (Duitsland)." }],
           basiskennis: [{ onderwerp: "Hoofdstad in legenda", uitleg: "Atlas-legenda toont ster-symbool als 'hoofdstad'." }],
           niveaus: { basis: "Hoofdstad.", simpeler: "Ster ★ op atlas = hoofdstad (belangrijkste stad).", nogSimpeler: "Hoofdstad" },
         },
@@ -365,7 +365,7 @@ const steps = [
           ],
           theorie: "Kaart-onderdelen toetsstof:\n• **Titel** — wat\n• **Schaal** — hoe groot\n• **Legenda** — wat betekenen tekens\n• **Windroos** — richting\n• **Coördinaten** — locatie precies (vakjes A1, B2 of GPS)\n\nElk onderdeel onmisbaar.",
           voorbeelden: [
-            { type: "stap", tekst: "ANWB-kaart legenda: rood lijn = snelweg, geel = autoweg, zwart = kleine weg, blauw = water." },
+            { type: "stap", tekst: "ANWB-kaart legenda: rode lijn = snelweg, geel = autoweg, zwart = kleine weg, blauw = water." },
             { type: "stap", tekst: "Atlas-kaart: lichter blauw = ondiep water, donkerder = dieper. Tonen we via kleur-verloop." },
           ],
           basiskennis: [{ onderwerp: "Altijd kijken", uitleg: "Toets-tip: kijk EERST legenda voor je een kaart-vraag beantwoordt. Anders kun je symbolen verkeerd interpreteren." }],
@@ -411,7 +411,7 @@ const steps = [
             { woord: "windroos", uitleg: "Kompas-symbool op kaart dat 4-16 richtingen aangeeft." },
             { woord: "noord-pijl", uitleg: "Symbool dat naar noord wijst. Vaak vereenvoudigde windroos." },
           ],
-          theorie: "Windroos NOZW + tussenrichtingen:\n• 4 hoofdrichtingen: N, O, Z, W\n• 8 tussen: N-NO-O-ZO-Z-ZW-W-NW\n• 16 (precisie): NNO, ONO, OZO, ZZO, etc.\n\nEzelsbruggetje: 'Nooit Op Zaterdag Werken' = N-O-Z-W kloksrond.",
+          theorie: "Windroos NOZW + tussenrichtingen:\n• 4 hoofdrichtingen: N, O, Z, W\n• 8 tussen: N-NO-O-ZO-Z-ZW-W-NW\n• 16 (precisie): NNO, ONO, OZO, ZZO, etc.\n\nEzelsbruggetje: 'Nooit Op Zaterdag Werken' = N-O-Z-W met de klok mee.",
           voorbeelden: [
             { type: "stap", tekst: "Atlas-kaarten: windroos altijd zichtbaar in legenda." },
             { type: "stap", tekst: "Op stadsplattegrond Amsterdam centraal: noord-pijl helpt om noordkant Amstel te vinden." },
@@ -427,7 +427,7 @@ const steps = [
         wrongHints: [null, "Niet — foto's apart (Google Street View wel).", "Niet — film is video.", "Niet — geen berichten-app."],
         uitlegPad: {
           stappen: [
-            { titel: "Digitaal vs papier", tekst: "Een **digitale kaart** (Google Maps, Apple Maps, ANWB-app, BuienRadar) is net als papieren kaart maar:\n• **Inzoomen + uitzoomen** mogelijk (schaal verandert)\n• **Eigen locatie** via GPS zichtbaar (blauw stip)\n• **Live verkeer** + werk-zaamheden\n• **Route-planning** automatisch\n• **Spraak-aanwijzingen** ('Sla links af')\n\nMaar **basis is hetzelfde**: gebied + symbolen + schaal." },
+            { titel: "Digitaal vs papier", tekst: "Een **digitale kaart** (Google Maps, Apple Maps, ANWB-app, BuienRadar) is net als papieren kaart maar:\n• **Inzoomen + uitzoomen** mogelijk (schaal verandert)\n• **Eigen locatie** via GPS zichtbaar (blauwe stip)\n• **Live verkeer** + werkzaamheden\n• **Route-planning** automatisch\n• **Spraak-aanwijzingen** ('Sla links af')\n\nMaar **basis is hetzelfde**: gebied + symbolen + schaal." },
             { titel: "Hoe weet je telefoon waar je bent?", tekst: "**GPS** (Global Positioning System) = ~30 satellieten rond aarde. Je telefoon ontvangt signaal van ≥3 satellieten + berekent positie (driehoek-meting). Nauwkeurigheid: **3-10 meter**.\n\nDriehoeksmeting-truc: als satelliet 1 zegt 'je bent 100 km van mij', satelliet 2 zegt 'je bent 120 km van mij', dan ben je op kruispunt van 2 cirkels. Met 3 satellieten = precies 1 punt." },
             { titel: "Toets-feit: GPS-eigenaardig­heid", tekst: "**Belangrijke feitjes**:\n• GPS gemaakt door **VS-leger** in 1970s\n• Sinds 2000 vrij beschikbaar voor iedereen\n• EU heeft eigen versie: **Galileo** (sinds 2016)\n• China: **BeiDou**\n• Rusland: **GLONASS**\n• Modernste telefoons gebruiken meerdere systemen samen voor extra precisie\n• Werkt OOK zonder internet (alleen kaart-data moet je downloaden)" },
           ],
@@ -456,10 +456,10 @@ const steps = [
       { q: "Op kaart 1 cm bij schaal 1:25.000 = ?", options: ["250 m","2,5 km","25 m","2.500 m"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Dat is 2,5 km."] },
       { q: "Welke richting wijst de **rode kant** van een kompasnaald?", options: ["Noord","Zuid","Oost","Onder"], answer: 0, wrongHints: [null, "Dat is wit/andere kant.", "Niet relevant.", "Niet."] },
       { q: "Een **plattegrond** is?", options: ["Kaart van klein gebied (huis/school)","Wereldkaart","Atlas","Geen kaart"], answer: 0, wrongHints: [null, "Veel groter.", "Boek met veel kaarten.", "Wel een kaart."] },
-      { q: "Hoe verkort je **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null, "Dat is kilo-gram.", "Niet bestaand.", "Niet."] },
+      { q: "Wat is de afkorting van **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null, "Dat is kilo-gram.", "Niet bestaand.", "Niet."] },
       { q: "Welke richting zit **tegenover** zuidoost?", options: ["Noordwest","Noordoost","Zuidwest","Zuid"], answer: 0, wrongHints: [null, "Draai beide helften om: zuid→noord én oost→west.", "De zuid/noord-helft draait wél, maar de oost/west-helft ook.", "Tegenover een diagonaal ligt weer een diagonaal, geen rechte richting."] },
       { q: "Wat doe je bij een **schaalbalk** op kaart?", options: ["Meten met liniaal om afstand te weten","Niets","Tekenen","Tellen"], answer: 0, wrongHints: [null, "Wel iets.", "Niet — meten.", "Niet relevant."] },
-      { q: "Tegen welke schaal is een atlas-NL-kaart meestal?", options: ["1:500.000 of meer","1:10","1:100","1:50"], answer: 0, wrongHints: [null, "Bij die schaalverhouding zou één centimeter op de kaart maar een heel klein stukje in werkelijkheid zijn — past heel Nederland dan op één kaart?", "Ook bij die schaalverhouding kom je er niet mee — hoe groot moet het tweede getal zijn voor een landskaart?", "Hoe groter het tweede getal van de schaal, hoe meer werkelijk gebied op de kaart past."] },
+      { q: "Welke schaal heeft een atlas-kaart van NL meestal?", options: ["1:500.000 of meer","1:10","1:100","1:50"], answer: 0, wrongHints: [null, "Bij die schaalverhouding zou één centimeter op de kaart maar een heel klein stukje in werkelijkheid zijn — past heel Nederland dan op één kaart?", "Ook bij die schaalverhouding kom je er niet mee — hoe groot moet het tweede getal zijn voor een landskaart?", "Hoe groter het tweede getal van de schaal, hoe meer werkelijk gebied op de kaart past."] },
     ],
   },
 ];

@@ -323,14 +323,14 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Eerst checken", tekst: "Schokkend nieuws zonder bron eerst controleren bij een betrouwbare bron, anders verspreid je misschien nepnieuws." }],
           niveaus: {
-            basis: "Check schokkend nieuws zonder bron eerst ergens betrouwbaars.",
+            basis: "Check schokkend nieuws zonder bron eerst bij een betrouwbare bron.",
             simpeler: "Doorsturen of eerst checken? Eerst checken.",
             nogSimpeler: "Geloof je nieuws zonder bron meteen?",
           },
         },
       },
       {
-        q: "Twee betrouwbare bronnen zeggen iets verschillends. Wat is verstandig?",
+        q: "Twee betrouwbare bronnen zeggen verschillende dingen. Wat is verstandig?",
         options: [
           "nog een bron erbij zoeken en voorzichtig zijn",
           "de eerste maar geloven",
@@ -343,7 +343,7 @@ const steps = [
           stappen: [{ titel: "Derde bron", tekst: "Als bronnen elkaar tegenspreken, zoek je een extra bron en blijf je voorzichtig met de conclusie." }],
           niveaus: {
             basis: "Bij tegenspraak: extra bron zoeken en voorzichtig zijn.",
-            simpeler: "Wat doe je als bronnen het oneens zijn? Nog een checken.",
+            simpeler: "Wat doe je als bronnen het oneens zijn? Nog een bron checken.",
             nogSimpeler: "Helpt een derde bron als twee elkaar tegenspreken?",
           },
         },

@@ -46,7 +46,7 @@ const steps = [
         q: "Wat rijmt op **muis** 🐭?",
         options: ["huis 🏠", "kaas 🧀", "poes 🐈", "boom 🌳"],
         answer: 0,
-        wrongHints: [null, "Een muis is er dol op — maar luister: klinkt het einde hetzelfde als *muis*?", "Zeg ze hardop: muis... poes... Eindigen ze op hetzelfde stukje?", "Luister goed naar het einde van elk woord — welke klinkt als *uis*?"],
+        wrongHints: [null, "Een muis is er dol op — maar luister: klinkt het einde hetzelfde als *muis*?", "Zeg ze hardop: muis... poes... Eindigen ze op hetzelfde stukje?", "Luister goed naar het einde van elk woord — welk woord klinkt als *uis*?"],
         uitlegPad: {
           stappen: [{ titel: "Zoek het *uis*-stukje", tekst: "M-**uis** 🐭 en h-**uis** 🏠 — allebei *uis*! Zeg het maar hardop, dan hoor je het. 👂" }],
           voorbeelden: [{ type: "voorbeeld", tekst: "Een muis in een huis — dat rijmt én is een grappig zinnetje! 😄" }],

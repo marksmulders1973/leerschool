@@ -104,7 +104,7 @@ const steps = [
   {
     title: "Wat is een tafel (vermenigvuldigen)?",
     explanation:
-      "Een **tafel** is een **rijtje vermenigvuldigingen** met hetzelfde getal.\n\n**Voorbeeld — tafel van 3**:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• ...tot 10 × 3 = 30.\n\nElk antwoord is **3 meer** dan de vorige *(stappen van 3)*.\n\n**Wat betekent 'keer'?**\n• **3 × 4** = **3 keer 4** = 4 + 4 + 4 = 12.\n• **5 × 2** = 5 keer 2 = 2 + 2 + 2 + 2 + 2 = 10.\n\nDus 'keer' is **hetzelfde optellen, maar korter**.\n\n**Waarom tafels leren?**\nBij **redactiesommen** *(verhaaltjes-sommen)* en **rekenen op grote getallen** heb je tafels nodig:\n• 4 zakjes met 6 koekjes = 4 × 6 = 24 koekjes.\n• 1 boek kost €7, 5 boeken kosten 5 × €7 = €35.\n\n**Belangrijke regel**:\nDe volgorde **maakt niet uit**:\n• 3 × 4 = 12.\n• 4 × 3 = 12.\nDit heet de **wisselregel** (of 'commutatief').\n\n**Toets-truc — 'rooster' tekenen**:\nBij 4 × 6 stel je voor: 4 rijen van 6 vakjes. Totaal = 4 × 6 = 24 vakjes. Helpt om 'keer' te visualiseren.",
+      "Een **tafel** is een **rijtje vermenigvuldigingen** met hetzelfde getal.\n\n**Voorbeeld — tafel van 3**:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• ...tot 10 × 3 = 30.\n\nElk antwoord is **3 meer** dan het vorige *(stappen van 3)*.\n\n**Wat betekent 'keer'?**\n• **3 × 4** = **3 keer 4** = 4 + 4 + 4 = 12.\n• **5 × 2** = 5 keer 2 = 2 + 2 + 2 + 2 + 2 = 10.\n\nDus 'keer' is **hetzelfde optellen, maar korter**.\n\n**Waarom tafels leren?**\nBij **redactiesommen** *(verhaaltjes-sommen)* en **rekenen met grote getallen** heb je tafels nodig:\n• 4 zakjes met 6 koekjes = 4 × 6 = 24 koekjes.\n• 1 boek kost €7, 5 boeken kosten 5 × €7 = €35.\n\n**Belangrijke regel**:\nDe volgorde **maakt niet uit**:\n• 3 × 4 = 12.\n• 4 × 3 = 12.\nDit heet de **wisselregel** (of 'commutatief').\n\n**Toets-truc — 'rooster' tekenen**:\nBij 4 × 6 stel je voor: 4 rijen van 6 vakjes. Totaal = 4 × 6 = 24 vakjes. Helpt om 'keer' te visualiseren.",
     svg: groepjesSvg(),
     checks: [
       {
@@ -134,7 +134,7 @@ const steps = [
             { woord: "wisselregel", uitleg: "Bij × maakt volgorde niet uit." },
             { woord: "vermenigvuldigen", uitleg: "Keer doen, hetzelfde getal vaak optellen." },
           ],
-          theorie: "Toets-truc — gebruik de wisselregel om makkelijker te rekenen. **7 × 3** voelt soms lastig, maar **3 × 7** ('drie keer zeven') is iets vertrouwder. Beide = 21. Kies de versie die voor jou snelste werkt.",
+          theorie: "Toets-truc — gebruik de wisselregel om makkelijker te rekenen. **7 × 3** voelt soms lastig, maar **3 × 7** ('drie keer zeven') is iets vertrouwder. Beide = 21. Kies de versie die voor jou het snelst werkt.",
           voorbeelden: [
             { type: "stap", tekst: "8 × 2 = 2 × 8 = 16. Vaak weet je '2 keer 8' sneller dan '8 keer 2'." },
             { type: "stap", tekst: "Let op: wisselregel werkt NIET bij delen of aftrekken! 10 − 3 ≠ 3 − 10." },
@@ -221,7 +221,7 @@ const steps = [
           woorden: [{ woord: "verdubbelen", uitleg: "Een getal bij zichzelf optellen — × 2." }],
           theorie: "Toets-truc tafel-2: gewoon dubbel. 7 × 2 = 7 + 7 = 14. 5 × 2 = 10. Werkt makkelijk uit het hoofd.",
           voorbeelden: [{ type: "stap", tekst: "9 × 2 = 9 + 9. Schrijf het op je vingers als nodig: 2-4-6-8-10-12-14-16-18 = 9 stapjes." }],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel-2 leer je als eerste echte tafel — de basis voor alle anderen." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Tafel-2 leer je als eerste echte tafel — de basis voor alle andere." }],
           niveaus: {
             basis: "9 × 2 = 18 (9 + 9).",
             simpeler: "9 + 9 = 18.",
@@ -242,7 +242,7 @@ const steps = [
   {
     title: "Basis-tafels — 3 en 4",
     explanation:
-      "Na de makkelijke tafels komen 3 en 4.\n\n**Tafel van 3** — stappen van 3:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• 6 × 3 = 18\n• 7 × 3 = 21\n• 8 × 3 = 24\n• 9 × 3 = 27\n• 10 × 3 = 30.\n\n**Tafel van 4** — stappen van 4 (= 2 × van tafel 2):\n• 1 × 4 = 4\n• 2 × 4 = 8\n• 3 × 4 = 12\n• 4 × 4 = 16\n• 5 × 4 = 20\n• 6 × 4 = 24\n• 7 × 4 = 28\n• 8 × 4 = 32\n• 9 × 4 = 36\n• 10 × 4 = 40.\n\n**Toets-truc — tafel van 4 via 2**:\nElk antwoord in tafel-4 is **dubbel** van tafel-2.\n• Tafel-2: 2, 4, 6, 8, 10, ...\n• Tafel-4: 4, 8, 12, 16, 20, ... *(dubbele)*.\n\n**Oefen-tip**:\nLeer eerst tafel-3 en tafel-4 als rij op (3, 6, 9, 12, 15...) en (4, 8, 12, 16, 20...). Net als versjes. Dan kun je je rij opzeggen en vinden waar het antwoord staat.",
+      "Na de makkelijke tafels komen 3 en 4.\n\n**Tafel van 3** — stappen van 3:\n• 1 × 3 = 3\n• 2 × 3 = 6\n• 3 × 3 = 9\n• 4 × 3 = 12\n• 5 × 3 = 15\n• 6 × 3 = 18\n• 7 × 3 = 21\n• 8 × 3 = 24\n• 9 × 3 = 27\n• 10 × 3 = 30.\n\n**Tafel van 4** — stappen van 4 (= het dubbele van tafel 2):\n• 1 × 4 = 4\n• 2 × 4 = 8\n• 3 × 4 = 12\n• 4 × 4 = 16\n• 5 × 4 = 20\n• 6 × 4 = 24\n• 7 × 4 = 28\n• 8 × 4 = 32\n• 9 × 4 = 36\n• 10 × 4 = 40.\n\n**Toets-truc — tafel van 4 via 2**:\nElk antwoord in tafel-4 is **dubbel** van tafel-2.\n• Tafel-2: 2, 4, 6, 8, 10, ...\n• Tafel-4: 4, 8, 12, 16, 20, ... *(dubbele)*.\n\n**Oefen-tip**:\nLeer eerst tafel-3 en tafel-4 als rijtje uit je hoofd (3, 6, 9, 12, 15...) en (4, 8, 12, 16, 20...). Net als versjes. Dan kun je je rij opzeggen en vinden waar het antwoord staat.",
     checks: [
       {
         q: "**4 × 3** = ?",
@@ -313,7 +313,7 @@ const steps = [
           woorden: [
             { woord: "splitsen", uitleg: "Eén grote som in 2 kleinere makkelijkere stukken delen." },
           ],
-          theorie: "Toets-onthoud-tip: '8 × 7 = 56' — zeg het hardop, als een rijmpje. Of: **'56 = 7 × 8'** (5-6 in volgorde komt na 7-8). Sommige juffen leren dit als 'mooie reeks': 5-6-7-8.",
+          theorie: "Toets-onthoud-tip: '8 × 7 = 56' — zeg het hardop, als een rijmpje. Of: **'56 = 7 × 8'** (5-6 in volgorde komt vóór 7-8). Sommige juffen leren dit als 'mooie reeks': 5-6-7-8.",
           voorbeelden: [
             { type: "stap", tekst: "Met wisselregel: 8 × 7 = 7 × 8. Zeg het zoals jij het makkelijkst onthoudt." },
             { type: "stap", tekst: "Niet 48 (= 6 × 8 of 8 × 6). Niet 64 (= 8 × 8). Goed: **56**." },

@@ -34,7 +34,7 @@ export const KWARTIERCHECK_VRAGEN = [
   },
   {
     id: "tafels-3a", concept: "tafels", niveau: 3,
-    vraag: "Een bakker maakt elke dag 7 broden in 9 soorten. In een werkweek (5 dagen) hoeveel broden maakt hij?",
+    vraag: "Een bakker bakt elke dag 9 soorten brood, van elke soort 7 broden. Hoeveel broden bakt hij in een werkweek (5 dagen)?",
     opties: ["315", "350", "360", "270"],
     correct: 0,
   },
@@ -113,7 +113,7 @@ export const KWARTIERCHECK_VRAGEN = [
   },
   {
     id: "procenten-2c", concept: "procenten", niveau: 2,
-    vraag: "Dezelfde voetbalschoenen zijn in twee winkels in de aanbieding. Winkel A: van € 50 voor 20% korting. Winkel B: van € 45 met € 4 korting. Welke uitspraak klopt?",
+    vraag: "Dezelfde voetbalschoenen zijn in twee winkels in de aanbieding. Winkel A: van € 50 met 20% korting. Winkel B: van € 45 met € 4 korting. Welke uitspraak klopt?",
     opties: [
       "Winkel B is € 1 goedkoper.",
       "Winkel A is € 1 goedkoper.",

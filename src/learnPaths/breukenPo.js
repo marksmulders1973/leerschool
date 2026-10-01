@@ -51,7 +51,7 @@ const steps = [
     svg: pizzaSvg(3, 4, COLORS.pizza1, "drie kwart pizza"),
     checks: [
       {
-        q: "**3/8** van een pizza — welke pizza is **niet opgegeten**?",
+        q: "**3/8** van een pizza is opgegeten — welk deel is **niet opgegeten**?",
         options: ["5/8","3/8","8/8","1/8"],
         answer: 0,
         wrongHints: [null,"Dat is wat opgegeten is — vraag is 't tegenovergestelde.","8/8 = alles. Hoe kan dat als al 3/8 op is?","Te weinig — als 3/8 op is, blijft er meer over."],
@@ -82,11 +82,11 @@ const steps = [
         q: "Bij een pizza in **6 stukken** eet je **4**. Welke **breuk** is dat?",
         options: ["4/6","6/4","4/10","2/6"],
         answer: 0,
-        wrongHints: [null,"Andersom — teller is wat je eet (4), noemer is totaal (6).","Niet optellen — de noemer is alleen het totaal stukken (6).","2/6 is maar 2 stukken van de 6 — jij at er 4."],
+        wrongHints: [null,"Andersom — teller is wat je eet (4), noemer is totaal (6).","Niet optellen — de noemer is alleen het totaal aantal stukken (6).","2/6 is maar 2 stukken van de 6 — jij at er 4."],
         uitlegPad: {
           stappen: [{ titel: "Wat boven, wat onder", tekst: "TELLER (boven) = wat je hebt = 4. NOEMER (onder) = totaal = 6. → 4/6." }],
           woorden: [{ woord: "teller", uitleg: "Bovenste getal van breuk = aantal dat je hebt." }, { woord: "noemer", uitleg: "Onderste getal = totaal aantal stukken." }],
-          theorie: "Breuk = aantal je hebt / totaal. Teller boven, noemer onder.",
+          theorie: "Breuk = aantal dat je hebt / totaal. Teller boven, noemer onder.",
           voorbeelden: [{ type: "test", tekst: "Pizza 6 stukken (=noemer 6). Eet 4 (=teller 4). Breuk = 4/6." }],
           basiskennis: [{ onderwerp: "2/3 is hetzelfde", uitleg: "4/6 kun je vereenvoudigen tot 2/3 — dezelfde hoeveelheid. De toets vraagt hier letterlijk 4 van de 6 stukken." }],
           niveaus: { basis: "4/6.", simpeler: "Teller (boven) = wat je eet = 4. Noemer (onder) = totaal = 6. = 4/6", nogSimpeler: "4/6" },
@@ -107,7 +107,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Helft van 1000", tekst: "1 L = 1000 mL. Halve = 1/2. 1000 ÷ 2 = 500 mL." }],
           woorden: [{ woord: "half", uitleg: "1/2 = de helft. Bv. half uur = 30 min, halve liter = 500 mL." }],
-          theorie: "Practijkbreuken: half = ÷2. Kwart = ÷4. Tiende = ÷10.",
+          theorie: "Praktijkbreuken: half = ÷2. Kwart = ÷4. Tiende = ÷10.",
           voorbeelden: [{ type: "praktijk", tekst: "1/2 L = 500 mL. 1/4 L = 250 mL. 1/10 L = 100 mL." }],
           basiskennis: [{ onderwerp: "1 L = 1000 mL", uitleg: "Liter ÷ 1000 = milliliter. Onthoud deze omrekening." }],
           niveaus: { basis: "500 mL.", simpeler: "1 L = 1000 mL. De helft = 1000 ÷ 2 = 500 mL.", nogSimpeler: "500" },
@@ -117,7 +117,7 @@ const steps = [
         q: "**Twee-derde uur** = ? minuten?",
         options: ["40","30","45","20"],
         answer: 0,
-        wrongHints: [null,"Te weinig — dat is een halve uur.","Te veel — dat is drie-kwart uur.","Te weinig — dat is een derde uur."],
+        wrongHints: [null,"Te weinig — dat is een half uur.","Te veel — dat is drie-kwart uur.","Te weinig — dat is een derde uur."],
         uitlegPad: {
           stappen: [{ titel: "Stap 1+2", tekst: "1/3 uur = 60÷3 = 20 min. 2/3 = 2 × 20 = 40 min." }],
           woorden: [{ woord: "twee-derde", uitleg: "2/3 = 2 × 1/3. Eerst 1/3, dan keer 2." }],
@@ -137,7 +137,7 @@ const steps = [
           woorden: [{ woord: "drie-kwart", uitleg: "3/4 = 3 × 1/4. Eerst 1/4, dan keer 3." }],
           theorie: "X/Y van getal: deel ÷Y, keer ×X. Hier: 24÷4 ×3.",
           voorbeelden: [{ type: "stap", tekst: "1/4 van 24 = 6. 2/4 = 12. 3/4 = 18. 4/4 = 24." }],
-          basiskennis: [{ onderwerp: "Tabel 4", uitleg: "24÷4 = 6 (uit tafel van 6: 4×6=24)." }],
+          basiskennis: [{ onderwerp: "Tafel van 4", uitleg: "24÷4 = 6 (uit tafel van 6: 4×6=24)." }],
           niveaus: { basis: "18 leerlingen.", simpeler: "1/4 van 24 = 24÷4 = 6. Drie-kwart = 3×6 = 18.", nogSimpeler: "18" },
         },
       },
@@ -146,7 +146,7 @@ const steps = [
 
   {
     title: "Vereenvoudigen + gelijke breuken",
-    explanation: "Veel breuken zien er **anders uit** maar zijn **gelijk**. Net als verhoudingen kun je breuken **vereenvoudigen**.\n\n**Voorbeelden van gelijke breuken**:\n• 1/2 = 2/4 = 3/6 = 4/8 = 50/100\n• 1/3 = 2/6 = 3/9 = 4/12\n• 2/4 = 1/2 *(door 2 vereenvoudigd)*\n• 6/8 = 3/4 *(door 2 vereenvoudigd)*\n• 4/12 = 1/3 *(door 4 vereenvoudigd)*\n\n**Truc**: deel teller én noemer door hetzelfde getal.\n\n• **6/9** → ÷ 3 → **2/3**\n• **8/12** → ÷ 4 → **2/3**\n• **15/20** → ÷ 5 → **3/4**\n• **10/100** → ÷ 10 → **1/10**\n\n**Toets-tip**:\nKijk altijd naar de **grootste gemeenschappelijke deler**. Dat scheelt stappen.\n\n**Voorbeeld**: 12/18.\n• Beide deelbaar door 2 → 6/9.\n• Beide deelbaar door 3 → 2/3. *(eindresultaat)*\n\nOf in één stap: beide deelbaar door 6 → 2/3.\n\n**Veel-voorkomende fout**:\nAlleen teller of alleen noemer delen. Dan klopt de breuk niet meer. Doe altijd **beide**.\n\n**Pittige toetsvraag**: *'Welke breuk is gelijk aan 4/6?'* Antwoorden zoals 2/3, 8/12, 6/9 zijn allemaal correct — maar De toets vraagt meestal de **vereenvoudigde** vorm.",
+    explanation: "Veel breuken zien er **anders uit** maar zijn **gelijk**. Net als verhoudingen kun je breuken **vereenvoudigen**.\n\n**Voorbeelden van gelijke breuken**:\n• 1/2 = 2/4 = 3/6 = 4/8 = 50/100\n• 1/3 = 2/6 = 3/9 = 4/12\n• 2/4 = 1/2 *(door 2 vereenvoudigd)*\n• 6/8 = 3/4 *(door 2 vereenvoudigd)*\n• 4/12 = 1/3 *(door 4 vereenvoudigd)*\n\n**Truc**: deel teller én noemer door hetzelfde getal.\n\n• **6/9** → ÷ 3 → **2/3**\n• **8/12** → ÷ 4 → **2/3**\n• **15/20** → ÷ 5 → **3/4**\n• **10/100** → ÷ 10 → **1/10**\n\n**Toets-tip**:\nKijk altijd naar de **grootste gemeenschappelijke deler**. Dat scheelt stappen.\n\n**Voorbeeld**: 12/18.\n• Beide deelbaar door 2 → 6/9.\n• Beide deelbaar door 3 → 2/3. *(eindresultaat)*\n\nOf in één stap: beide deelbaar door 6 → 2/3.\n\n**Veel-voorkomende fout**:\nAlleen teller of alleen noemer delen. Dan klopt de breuk niet meer. Doe altijd **beide**.\n\n**Pittige toetsvraag**: *'Welke breuk is gelijk aan 4/6?'* Antwoorden zoals 2/3, 8/12, 6/9 zijn allemaal correct — maar de toets vraagt meestal de **vereenvoudigde** vorm.",
     checks: [
       {
         q: "**12/16** vereenvoudigd?",
@@ -235,7 +235,7 @@ const steps = [
           woorden: [{ woord: "vereenvoudigen na", uitleg: "Antwoord altijd zo simpel mogelijk maken." }],
           theorie: "Aftrekken bij gelijke noemer: tellers aftrekken, dan vereenvoudigen.",
           voorbeelden: [{ type: "stap", tekst: "5/6 - 2/6 = 3/6 = 1/2 (beide ÷3)." }],
-          basiskennis: [{ onderwerp: "De toets wil simpelste vorm", uitleg: "Antwoord 3/6 is goed, maar De toets vraagt vereenvoudigde: 1/2." }],
+          basiskennis: [{ onderwerp: "De toets wil simpelste vorm", uitleg: "Antwoord 3/6 is goed, maar de toets vraagt de vereenvoudigde vorm: 1/2." }],
           niveaus: { basis: "1/2.", simpeler: "5/6 - 2/6 = 3/6. Vereenvoudig: 3 en 6 beide ÷3 → 1/2.", nogSimpeler: "1/2" },
         },
       },
@@ -244,7 +244,7 @@ const steps = [
 
   {
     title: "Vermenigvuldigen — een breuk × een heel getal",
-    explanation: "Een breuk vermenigvuldigen met een heel getal is **simpeler dan optellen**: je vermenigvuldigt alleen de **teller**.\n\n**Voorbeeld**:\n• 3 × 1/4 = **3/4**.\n• 5 × 1/2 = 5/2 = **2½**.\n• 4 × 2/3 = 8/3 = **2⅔**.\n\n**Visueel**: 3 × 1/4 betekent: 3 kwartjes pizza = drie-kwart pizza.\n\n**'Wat is X/Y van iets'** — de Toets-favoriet:\n*'Hoeveel is 3/4 van 20?'*\n\n**Aanpak 1 — eerst delen, dan keer**:\n• 20 ÷ 4 = 5 *(één-kwart)*\n• 5 × 3 = **15**\n\n**Aanpak 2 — eerst keer, dan delen**:\n• 20 × 3 = 60\n• 60 ÷ 4 = **15**\n\nBeide kloppen — de eerste is meestal handiger want je werkt met kleinere getallen.\n\n**Voorbeelden uit de toets**:\n*'2/3 van 30 leerlingen werkt mee'* → 30 ÷ 3 × 2 = **20 leerlingen**.\n*'3/8 van een pak van 800 g'* → 800 ÷ 8 × 3 = **300 g**.\n*'1/5 van € 25'* → 25 ÷ 5 = **€ 5**.\n\n**Toets-truc — 'breuk van iets' met grote getallen**:\nGa altijd via de **eenheids-breuk** (1/4, 1/3, 1/5, etc.). Dan tel je gewoon op.\n\nVoorbeeld: *'3/7 van 84'*\n• 1/7 van 84 = 84 ÷ 7 = 12.\n• 3/7 = 3 × 12 = **36**.",
+    explanation: "Een breuk vermenigvuldigen met een heel getal is **simpeler dan optellen**: je vermenigvuldigt alleen de **teller**.\n\n**Voorbeeld**:\n• 3 × 1/4 = **3/4**.\n• 5 × 1/2 = 5/2 = **2½**.\n• 4 × 2/3 = 8/3 = **2⅔**.\n\n**Visueel**: 3 × 1/4 betekent: 3 kwartjes pizza = drie-kwart pizza.\n\n**'Wat is X/Y van iets'** — de toets-favoriet:\n*'Hoeveel is 3/4 van 20?'*\n\n**Aanpak 1 — eerst delen, dan keer**:\n• 20 ÷ 4 = 5 *(één-kwart)*\n• 5 × 3 = **15**\n\n**Aanpak 2 — eerst keer, dan delen**:\n• 20 × 3 = 60\n• 60 ÷ 4 = **15**\n\nBeide kloppen — de eerste is meestal handiger want je werkt met kleinere getallen.\n\n**Voorbeelden uit de toets**:\n*'2/3 van 30 leerlingen werkt mee'* → 30 ÷ 3 × 2 = **20 leerlingen**.\n*'3/8 van een pak van 800 g'* → 800 ÷ 8 × 3 = **300 g**.\n*'1/5 van € 25'* → 25 ÷ 5 = **€ 5**.\n\n**Toets-truc — 'breuk van iets' met grote getallen**:\nGa altijd via de **eenheids-breuk** (1/4, 1/3, 1/5, etc.). Dan tel je gewoon op.\n\nVoorbeeld: *'3/7 van 84'*\n• 1/7 van 84 = 84 ÷ 7 = 12.\n• 3/7 = 3 × 12 = **36**.",
     checks: [
       {
         q: "**3/4 van 20** = ?",
@@ -264,7 +264,7 @@ const steps = [
         q: "**1/3 van 60 minuten** = ?",
         options: ["20","30","15","45"],
         answer: 0,
-        wrongHints: [null,"Te veel — dat is half uur.","Te weinig — dat is een kwart.","Veel te veel — dat is drie-kwart."],
+        wrongHints: [null,"Te veel — dat is een half uur.","Te weinig — dat is een kwart.","Veel te veel — dat is drie-kwart."],
         uitlegPad: {
           stappen: [{ titel: "Deel door 3", tekst: "1/3 van 60 = 60÷3 = 20." }],
           woorden: [{ woord: "1/3", uitleg: "Een derde = 1 van 3 gelijke delen." }],
@@ -436,7 +436,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Teller=op, noemer=totaal", tekst: "Op = 5 (teller). Totaal = 8 (noemer). → 5/8." }],
           woorden: [{ woord: "opgegeten-breuk", uitleg: "Aantal opgegeten / totaal aantal." }],
-          theorie: "Klassieke breuk-vraag: teller (boven) = aantal je hebt/eet, noemer (onder) = totaal.",
+          theorie: "Klassieke breuk-vraag: teller (boven) = aantal dat je hebt/eet, noemer (onder) = totaal.",
           voorbeelden: [{ type: "stap", tekst: "5 op van 8 totaal = 5/8 op. 3/8 over." }],
           basiskennis: [{ onderwerp: "Niet optellen", uitleg: "5+8=13 ❌. Noemer is alleen totaal-aantal stukken (8)." }],
           niveaus: { basis: "5/8.", simpeler: "Op = 5 (boven). Totaal = 8 (onder). → 5/8 opgegeten.", nogSimpeler: "5/8" },

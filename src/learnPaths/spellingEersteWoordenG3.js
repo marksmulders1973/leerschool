@@ -150,7 +150,7 @@ const steps = [
         },
       },
       {
-        q: "Hoe schrijf je het woord voor een **hele grote man uit een sprookje**?",
+        q: "Hoe schrijf je het woord voor een **heel grote man uit een sprookje**?",
         options: ["reus", "rus", "roes", "ruis"],
         answer: 0,
         wrongHints: [null, "Daar mist een letter — luister naar de klank in het midden.", "Dat is de oe-klank — luister nog eens.", "Dat is de ui-klank — luister nog eens."],

@@ -23,7 +23,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is een hoofdgedachte?",
-    explanation: "**Hoofdgedachte** = waar de tekst **vooral over gaat**. De **kernboodschap** in 1 of 2 zinnen samengevat.\n\n**Voorbeeld** — een tekst over voetbal:\n*'Voetbal is wereldwijd de populairste sport. Miljoenen mensen kijken WK-finales. Er zijn voetbal-clubs in elk land. Kinderen beginnen al jong met voetballen op school.'*\n\n**Hoofdgedachte**: *'Voetbal is een populaire sport over de hele wereld.'*\n\n**Niet de hoofdgedachte**:\n• 'Kinderen beginnen jong met voetballen' — dat is een **detail**, geen hoofdpunt.\n• 'WK-finales worden bekeken door miljoenen' — ook detail.\n\n**Verschil hoofdgedachte vs onderwerp**:\n• **Onderwerp** = waar gaat het over? *(1 woord/zin: 'voetbal')*.\n• **Hoofdgedachte** = wat zegt de tekst over dat onderwerp? *(volle zin)*.\n\n**Hoofdgedachte staat vaak**:\n1. **In de eerste zin** van de alinea.\n2. **In de laatste zin** als samenvatting.\n3. **In de titel** of kop.\n\n**toetsvraag-typen**:\n• 'Wat is de hoofdgedachte van deze tekst?'\n• 'Welke zin geeft het beste de hoofdgedachte weer?'\n• 'Welk antwoord beschrijft het hoofdpunt?'\n\n**Toets-tip**:\nVraag jezelf: *'Wat zou ik vertellen aan iemand die de tekst niet heeft gelezen?'* — dat is de hoofdgedachte.",
+    explanation: "**Hoofdgedachte** = waar de tekst **vooral over gaat**. De **kernboodschap** in 1 of 2 zinnen samengevat.\n\n**Voorbeeld** — een tekst over voetbal:\n*'Voetbal is wereldwijd de populairste sport. Miljoenen mensen kijken WK-finales. Er zijn voetbal-clubs in elk land. Kinderen beginnen al jong met voetballen op school.'*\n\n**Hoofdgedachte**: *'Voetbal is een populaire sport over de hele wereld.'*\n\n**Niet de hoofdgedachte**:\n• 'Kinderen beginnen jong met voetballen' — dat is een **detail**, geen hoofdpunt.\n• 'WK-finales worden bekeken door miljoenen' — ook detail.\n\n**Verschil hoofdgedachte vs onderwerp**:\n• **Onderwerp** = waar gaat het over? *(1 woord/zin: 'voetbal')*.\n• **Hoofdgedachte** = wat zegt de tekst over dat onderwerp? *(hele zin)*.\n\n**Hoofdgedachte staat vaak**:\n1. **In de eerste zin** van de alinea.\n2. **In de laatste zin** als samenvatting.\n3. **In de titel** of kop.\n\n**toetsvraag-typen**:\n• 'Wat is de hoofdgedachte van deze tekst?'\n• 'Welke zin geeft het beste de hoofdgedachte weer?'\n• 'Welk antwoord beschrijft het hoofdpunt?'\n\n**Toets-tip**:\nVraag jezelf: *'Wat zou ik vertellen aan iemand die de tekst niet heeft gelezen?'* — dat is de hoofdgedachte.",
     checks: [
       {
         q: "Wat is een **hoofdgedachte**?",
@@ -49,7 +49,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Truc", uitleg: "Stel: 'Wat zou de schrijver in één zin zeggen?' Dat is de hoofdgedachte." }],
           niveaus: {
             basis: "Hoofdgedachte = kernboodschap van de hele tekst.",
-            simpeler: "Wat zou je in 1 zin tegen vriend zeggen = hoofdgedachte.",
+            simpeler: "Wat zou je in 1 zin tegen een vriend zeggen = hoofdgedachte.",
             nogSimpeler: "Kern in 1 zin.",
           },
         },
@@ -121,12 +121,12 @@ const steps = [
         q: "Waar **vind je vaak** de hoofdgedachte in een tekst?",
         options: ["Titel of eerste zin","Midden van zin 5","Helemaal niet","In de plaatjes"],
         answer: 0,
-        wrongHints: [null,"Niet specifiek genoeg.","Wel — in titel/eerste zin.","Plaatjes ondersteunen, niet de hoofd."],
+        wrongHints: [null,"Niet specifiek genoeg.","Wel — in titel/eerste zin.","Plaatjes ondersteunen, niet de hoofdgedachte."],
         uitlegPad: {
           stappen: [
             { titel: "Schrijvers zetten hoofdgedachte vaak vooraan", tekst: "Veel schrijvers beginnen met hun belangrijkste boodschap — dan weet de lezer waar het over gaat. Daarom: vaak in **titel + eerste alinea**." },
             { titel: "Kijk ook naar de laatste alinea", tekst: "Goede schrijvers HERHALEN de hoofdgedachte in de conclusie, soms in andere bewoording. Dus eerste én laatste alinea zijn beide goede zoek-plekken." },
-            { titel: "Toets-strategie", tekst: "Bij Toets-leesbegrip: lees eerst titel, dan EERSTE ZIN van elke alinea. Dat zijn de 'topic-sentences'. Vat samen → dat is meestal de hoofdgedachte." },
+            { titel: "Toets-strategie", tekst: "Bij toets-leesbegrip: lees eerst titel, dan EERSTE ZIN van elke alinea. Dat zijn de 'topic-sentences'. Vat samen → dat is meestal de hoofdgedachte." },
           ],
           woorden: [
             { woord: "topic-sentence", uitleg: "Eerste zin van een alinea — samenvatting van wat erin staat." },
@@ -160,7 +160,7 @@ const steps = [
             { woord: "topic-sentence", uitleg: "Eerste zin van alinea, vaak de hoofdgedachte." },
             { woord: "bewijs", uitleg: "Zinnen die de hoofdgedachte ondersteunen (onderzoek, voorbeelden)." },
           ],
-          theorie: "Toets-leesstrategie hoofdgedachte:\n1. Lees zin 1 — kandidaat hoofdgedachte.\n2. Lezen volgende zinnen: bewijzen ze zin 1? Dan is zin 1 = hoofd.\n3. Antwoord MOET uit tekst komen, niet eigen kennis.",
+          theorie: "Toets-leesstrategie hoofdgedachte:\n1. Lees zin 1 — kandidaat hoofdgedachte.\n2. Lees de volgende zinnen: bewijzen ze zin 1? Dan is zin 1 = hoofd.\n3. Antwoord MOET uit tekst komen, niet eigen kennis.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst: 'Sporten is gezond. Het versterkt je hart. Het verbetert je humeur.' → hoofdgedachte = 'sporten is gezond'." },
             { type: "stap", tekst: "Tekst: 'Plastic in zee is een probleem. 8 miljoen ton komt erin per jaar. Dieren stikken erin.' → hoofdgedachte = 'plastic in zee is een probleem'." },
@@ -190,7 +190,7 @@ const steps = [
           ],
           theorie: "Toets-truc detail vs hoofdgedachte: lees elke optie + vraag 'klopt dit voor de HELE tekst, of slechts 1 zin?'. Als alleen voor 1 zin → detail. Als voor hele tekst → hoofdgedachte.",
           voorbeelden: [
-            { type: "stap", tekst: "Tekst over fietsen. Detail: 'Mijn oom fietst 20 km'. Hoofd: 'fietsen is gezond'. De hoofd dekt de hele tekst, de detail is 1 anekdote." },
+            { type: "stap", tekst: "Tekst over fietsen. Detail: 'Mijn oom fietst 20 km'. Hoofd: 'fietsen is gezond'. De hoofdgedachte dekt de hele tekst, het detail is 1 anekdote." },
             { type: "stap", tekst: "Pas op: 'Wat tekst herhaalt over alle alinea's' KLINKT als de hoofdgedachte want = rode draad. Niet weggooien als afleider!" },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Hoofd = ALLE alinea's. Detail = 1 alinea / 1 zin. Detail-opties zijn val-strikken bij de Doorstroomtoets." }],
@@ -206,7 +206,7 @@ const steps = [
 
   {
     title: "Hoofdzaken vs bijzaken",
-    explanation: "**Hoofdzaak** = belangrijke informatie. **Bijzaak** = extra detail.\n\n**Hoe verschil zien**:\n• **Hoofdzaak**: ondersteunt direct de hoofdgedachte.\n• **Bijzaak**: leuk detail, maar niet essentieel.\n\n**Voorbeeld** — over hond:\n*'De hond is een trouwe huisdier. Hij beschermt zijn baasje en speelt graag. De buurman heeft ook een hond, een witte bouvier van 4 jaar oud. Honden eten meestal brokjes.'*\n\n**Hoofdzaken**:\n• Hond is trouwe huisdier.\n• Hij beschermt zijn baasje.\n• Hij speelt graag.\n\n**Bijzaken** *(weglaten kan)*:\n• 'Buurman heeft een witte bouvier van 4 jaar' — leuk detail, maar niet over 'hond als huisdier'.\n• 'Honden eten brokjes' — wel waar, maar gaat naast het hoofdpunt.\n\n**Truc — kun je het schrappen?**\nLees de tekst zonder een zin. Verandert de hoofdboodschap? Nee → bijzaak. Ja → hoofdzaak.\n\n**Soorten bijzaken**:\n1. **Voorbeelden** *(soms hoofdzaak, soms bij)*.\n2. **Anecdotes** — verhaaltjes (bij).\n3. **Cijfers en details** — extra info (bij).\n4. **Zijwegen** — info die het onderwerp ietsje raakt (bij).\n\n**toetsvraag-typen**:\n• 'Welke zin is een **bijzaak**?'\n• 'Welke informatie is **NIET** essentieel?'\n• 'Welk feit kun je **weglaten** zonder de boodschap te verliezen?'",
+    explanation: "**Hoofdzaak** = belangrijke informatie. **Bijzaak** = extra detail.\n\n**Hoe verschil zien**:\n• **Hoofdzaak**: ondersteunt direct de hoofdgedachte.\n• **Bijzaak**: leuk detail, maar niet essentieel.\n\n**Voorbeeld** — over hond:\n*'De hond is een trouw huisdier. Hij beschermt zijn baasje en speelt graag. De buurman heeft ook een hond, een witte bouvier van 4 jaar oud. Honden eten meestal brokjes.'*\n\n**Hoofdzaken**:\n• Hond is trouw huisdier.\n• Hij beschermt zijn baasje.\n• Hij speelt graag.\n\n**Bijzaken** *(weglaten kan)*:\n• 'Buurman heeft een witte bouvier van 4 jaar' — leuk detail, maar niet over 'hond als huisdier'.\n• 'Honden eten brokjes' — wel waar, maar gaat naast het hoofdpunt.\n\n**Truc — kun je het schrappen?**\nLees de tekst zonder een zin. Verandert de hoofdboodschap? Nee → bijzaak. Ja → hoofdzaak.\n\n**Soorten bijzaken**:\n1. **Voorbeelden** *(soms hoofdzaak, soms bij)*.\n2. **Anekdotes** — verhaaltjes (bij).\n3. **Cijfers en details** — extra info (bij).\n4. **Zijwegen** — info die het onderwerp ietsje raakt (bij).\n\n**toetsvraag-typen**:\n• 'Welke zin is een **bijzaak**?'\n• 'Welke informatie is **NIET** essentieel?'\n• 'Welk feit kun je **weglaten** zonder de boodschap te verliezen?'",
     checks: [
       {
         q: "Tekst: 'Fietsen is gezond. Het is goed voor je hart en je spieren. Mijn oom Henk fietst elke dag 20 km.'\n\n**Welke zin is een bijzaak**?",
@@ -216,23 +216,23 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Hoofdzaak vs bijzaak — schrap-test", tekst: "**Truc**: lees de tekst zonder die ene zin. Verandert de hoofdboodschap?\n• **Verandert NIET** → bijzaak (kan weg)\n• **Verandert WEL** → hoofdzaak (essentieel)" },
-            { titel: "Pas toe op deze tekst", tekst: "Zonder 'Mijn oom Henk fietst elke dag 20 km' lees je nog steeds: 'Fietsen is gezond. Het is goed voor hart en spieren.' → boodschap verandert niet → het is een **bijzaak** (anecdote)." },
+            { titel: "Pas toe op deze tekst", tekst: "Zonder 'Mijn oom Henk fietst elke dag 20 km' lees je nog steeds: 'Fietsen is gezond. Het is goed voor hart en spieren.' → boodschap verandert niet → het is een **bijzaak** (anekdote)." },
             { titel: "Waarom de andere zinnen hoofdzaak zijn", tekst: "• 'Fietsen is gezond' = de hoofdgedachte zelf — niet schrapbaar.\n• 'Goed voor hart' = bewijs dat fietsen gezond is — schrappen verzwakt boodschap.\n• 'Goed voor spieren' = ander bewijs — idem.\nDie 3 dragen samen de boodschap." },
           ],
           woorden: [
             { woord: "hoofdzaak", uitleg: "Zin die direct de hoofdgedachte ondersteunt — essentieel." },
-            { woord: "bijzaak", uitleg: "Detail/anecdote — leuk, maar kan weg." },
+            { woord: "bijzaak", uitleg: "Detail/anekdote — leuk, maar kan weg." },
             { woord: "schrap-test", uitleg: "Truc: lees zonder die zin — verandert de boodschap?" },
           ],
-          theorie: "Toets-truc hoofd-bij: bijzaken zijn vaak:\n• **Anecdotes** ('mijn oom...', 'ik herinner me...')\n• **Specifieke voorbeelden** met eigennamen\n• **Cijfers/details** die over 1 geval gaan\nHoofdzaken zijn algemeen + dekken het hoofdthema.",
+          theorie: "Toets-truc hoofd-bij: bijzaken zijn vaak:\n• **Anekdotes** ('mijn oom...', 'ik herinner me...')\n• **Specifieke voorbeelden** met eigennamen\n• **Cijfers/details** die over 1 geval gaan\nHoofdzaken zijn algemeen + dekken het hoofdthema.",
           voorbeelden: [
-            { type: "stap", tekst: "*'Honden zijn loyaal. Ze beschermen je. Mijn buurman heeft een Labrador.'* → 'buurman/Labrador' = bijzaak (anecdote)." },
+            { type: "stap", tekst: "*'Honden zijn loyaal. Ze beschermen je. Mijn buurman heeft een Labrador.'* → 'buurman/Labrador' = bijzaak (anekdote)." },
             { type: "stap", tekst: "*'Lezen is goed. Het ontwikkelt je woordenschat. Ik las gisteren een boek over piraten.'* → 'gisteren piraten-boek' = bijzaak." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Eigennaam (Henk, Anna, buurman) + specifieke daad = bijna altijd bijzaak (anecdote)." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eigennaam (Henk, Anna, buurman) + specifieke daad = bijna altijd bijzaak (anekdote)." }],
           niveaus: {
             basis: "'Mijn oom Henk...' = bijzaak (schrap-test bevestigt).",
-            simpeler: "Eigennaam + specifieke daad = anecdote = bijzaak.",
+            simpeler: "Eigennaam + specifieke daad = anekdote = bijzaak.",
             nogSimpeler: "Oom Henk = bijzaak",
           },
         },
@@ -241,7 +241,7 @@ const steps = [
         q: "Hoofdzaak of bijzaak: **'Beren slapen 's winters'**? *(in een tekst over winterslaap)*.",
         options: ["Hoofdzaak","Bijzaak","Geen van beide","Geen tekst"],
         answer: 0,
-        wrongHints: [null,"Klopt — feit gaat direct over winterslaap = het hoofd-onderwerp.","Wel relevant.","Wel."],
+        wrongHints: [null,"Nee — feit gaat direct over winterslaap = het hoofdonderwerp.","Wel relevant.","Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is het onderwerp van de tekst?", tekst: "De tekst gaat over **winterslaap**. Dat is het hoofdonderwerp. Elke zin die DIRECT over winterslaap gaat = **hoofdzaak**. Elke zin die alleen zijdelings gerelateerd is = **bijzaak**." },
@@ -282,7 +282,7 @@ const steps = [
           ],
           theorie: "Toets-truc voor lange teksten met veel zinnen:\n1. Lees zin\n2. Mentaal schrappen\n3. Verandert kern-boodschap? → hoofd\n4. Geen verandering? → bijzaak\nWerkt voor ALLE tekstsoorten (informatief, betogend, verhalend, instructief).",
           voorbeelden: [
-            { type: "stap", tekst: "*'Lezen is goed. Het ontwikkelt woordenschat. Mijn buurjongen leest nooit.'* → zin 3 schrappen verandert boodschap niet → bijzaak (negatieve anecdote)." },
+            { type: "stap", tekst: "*'Lezen is goed. Het ontwikkelt woordenschat. Mijn buurjongen leest nooit.'* → zin 3 schrappen verandert boodschap niet → bijzaak (negatieve anekdote)." },
             { type: "stap", tekst: "*'Bewegen is gezond. Het versterkt hart en spieren. Onderzoekers raden 1 uur per dag aan.'* → alle 3 zinnen versterken elkaar → ALLE 3 hoofdzaak." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Schrap-test = de mentale truc. Niet woorden tellen, kleur kijken of plaatje — gewoon zin mentaal weghalen + check boodschap." }],
@@ -298,7 +298,7 @@ const steps = [
 
   {
     title: "Samenvatting maken",
-    explanation: "**Samenvatten** = de tekst korter maken zonder de hoofdboodschap te verliezen.\n\n**Goede samenvatting bevat**:\n1. **Hoofdgedachte** (1 zin).\n2. **Hoofdzaken** *(belangrijke punten)*.\n3. **In eigen woorden** (niet kopiëren).\n4. **Korter dan origineel** *(meestal ~25-30%)*.\n\n**Goede samenvatting bevat NIET**:\n• Bijzaken / details.\n• Voorbeelden (tenzij essentieel).\n• Eigen mening (alleen wat tekst zegt).\n• Letterlijke kopie van zinnen.\n\n**Stappen om samen te vatten**:\n1. **Lees** de hele tekst eerst.\n2. **Onderstreep** hoofdpunten in elke alinea.\n3. **Schrap** bijzaken.\n4. **Schrijf** in 3-5 zinnen wat de tekst zegt.\n5. **Controleer**: klopt jouw samenvatting met origineel?\n\n**Voorbeeld**:\n**Tekst**: *'Vrienden zijn belangrijk. Ze geven je steun in moeilijke tijden. Mijn vriend Jan heeft me geholpen toen ik mijn fiets kwijt was. Vrienden vieren ook leuke momenten met je. Onderzoek toont dat mensen met vrienden langer leven.'*\n\n**Samenvatting**: *'Vrienden zijn belangrijk: ze geven steun, vieren leuke momenten, en mensen met vrienden leven zelfs langer.'*\n\n*(Zit niet in: 'mijn vriend Jan en de fiets' — dat is een bijzaak/anecdote)*.\n\n**Toets-tip**:\nGoede samenvatting kan **opnieuw uitgelegd** worden door iemand die de tekst niet kent. Test: leg de samenvatting voor → snapt iemand het?",
+    explanation: "**Samenvatten** = de tekst korter maken zonder de hoofdboodschap te verliezen.\n\n**Goede samenvatting bevat**:\n1. **Hoofdgedachte** (1 zin).\n2. **Hoofdzaken** *(belangrijke punten)*.\n3. **In eigen woorden** (niet kopiëren).\n4. **Korter dan origineel** *(meestal ~25-30%)*.\n\n**Goede samenvatting bevat NIET**:\n• Bijzaken / details.\n• Voorbeelden (tenzij essentieel).\n• Eigen mening (alleen wat tekst zegt).\n• Letterlijke kopie van zinnen.\n\n**Stappen om samen te vatten**:\n1. **Lees** de hele tekst eerst.\n2. **Onderstreep** hoofdpunten in elke alinea.\n3. **Schrap** bijzaken.\n4. **Schrijf** in 3-5 zinnen wat de tekst zegt.\n5. **Controleer**: klopt jouw samenvatting met origineel?\n\n**Voorbeeld**:\n**Tekst**: *'Vrienden zijn belangrijk. Ze geven je steun in moeilijke tijden. Mijn vriend Jan heeft me geholpen toen ik mijn fiets kwijt was. Vrienden vieren ook leuke momenten met je. Onderzoek toont dat mensen met vrienden langer leven.'*\n\n**Samenvatting**: *'Vrienden zijn belangrijk: ze geven steun, vieren leuke momenten, en mensen met vrienden leven zelfs langer.'*\n\n*(Zit niet in: 'mijn vriend Jan en de fiets' — dat is een bijzaak/anekdote)*.\n\n**Toets-tip**:\nGoede samenvatting kan **opnieuw uitgelegd** worden door iemand die de tekst niet kent. Test: leg de samenvatting voor → snapt iemand het?",
     checks: [
       {
         q: "Wat hoort **NIET** in een goede samenvatting?",
@@ -307,7 +307,7 @@ const steps = [
         wrongHints: [null, "Hoort wel — kern van de samenvatting.", "Hoort wel — belangrijke punten.", "Hoort wel — eigen woorden voorkomen kopiëren."],
         uitlegPad: {
           stappen: [
-            { titel: "Samenvatting = wat de tekst zegt", tekst: "Een goede samenvatting bevat:\n✓ **Hoofdgedachte** (kern in 1 zin)\n✓ **Hoofdzaken** (belangrijke punten)\n✓ **Eigen woorden** (niet kopiëren)\n\nWat NIET:\n✗ **Eigen mening** (wat JIJ ervan vindt — hoort er niet in)\n✗ **Bijzaken** (anecdotes)\n✗ **Letterlijke kopie** uit tekst" },
+            { titel: "Samenvatting = wat de tekst zegt", tekst: "Een goede samenvatting bevat:\n✓ **Hoofdgedachte** (kern in 1 zin)\n✓ **Hoofdzaken** (belangrijke punten)\n✓ **Eigen woorden** (niet kopiëren)\n\nWat NIET:\n✗ **Eigen mening** (wat JIJ ervan vindt — hoort er niet in)\n✗ **Bijzaken** (anekdotes)\n✗ **Letterlijke kopie** uit tekst" },
             { titel: "Waarom geen mening?", tekst: "Een samenvatting is **objectief**: het vertelt wat de schrijver zegt. Niet wat jij ervan vindt. Mening hoort thuis in een **recensie** of **mening-stuk**, niet in samenvatting." },
             { titel: "Voorbeeld: WEL vs NIET", tekst: "**Tekst**: 'Klimaatverandering is een probleem. Zeespiegel stijgt 3 mm per jaar.'\n\n**Goede samenvatting**: 'Volgens de tekst is klimaatverandering een probleem: de zeespiegel stijgt jaarlijks 3 mm.'\n\n**Foute samenvatting**: 'Klimaatverandering is een groot probleem en wij moeten dringend iets doen!' (= je eigen mening, niet wat tekst zegt)." },
           ],
@@ -338,7 +338,7 @@ const steps = [
           stappen: [
             { titel: "Samen-vatten = korter maken", tekst: "Het woord **'samenvatten'** zegt het al: vat de tekst SAMEN in een korter geheel. Een samenvatting die even lang of langer is, is geen samenvatting." },
             { titel: "Hoe kort precies?", tekst: "Vuistregel: **~25-30% van origineel**. Een tekst van 400 woorden → samenvatting van 100-120 woorden. Een tekst van 1000 woorden → 250-300 woorden samenvatting.\n\nKan korter (10-20% voor heel beknopt) maar zelden langer dan 30%." },
-            { titel: "Waarom dit percentage?", tekst: "Bij 25-30% behoud je:\n✓ Hoofdgedachte (essentieel)\n✓ Hoofdzaken (meestal 3-5 punten)\n✓ Eigen woorden\n\nMaar je verwijdert:\n✗ Bijzaken / anecdotes\n✗ Voorbeelden (tenzij essentieel)\n✗ Herhalingen" },
+            { titel: "Waarom dit percentage?", tekst: "Bij 25-30% behoud je:\n✓ Hoofdgedachte (essentieel)\n✓ Hoofdzaken (meestal 3-5 punten)\n✓ Eigen woorden\n\nMaar je verwijdert:\n✗ Bijzaken / anekdotes\n✗ Voorbeelden (tenzij essentieel)\n✗ Herhalingen" },
           ],
           woorden: [
             { woord: "samenvatten", uitleg: "Kort maken zonder hoofdboodschap te verliezen." },
@@ -366,22 +366,22 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is de hoofdgedachte?", tekst: "De tekst gaat over **water drinken en gezondheid**. De 3 belangrijke punten:\n• Mensen drinken water voor gezondheid\n• Water spoelt afvalstoffen weg\n• Water zorgt voor hydratatie\nDeze 3 horen samen → dit is de **hoofdgedachte**." },
-            { titel: "Spot de anecdote", tekst: "De zin **'Mijn opa drinkt 2 liter per dag'** is een **anecdote**:\n• **'Mijn opa'** = eigennaam / persoonlijk persoon → signaal voor BIJzaak\n• **'2 liter per dag'** = specifiek getal over één persoon → niet algemeen geldig\n\nDeze zin gaat NIET over water-in-het-algemeen, maar over één specifieke opa. → bijzaak → schrappen uit samenvatting." },
-            { titel: "Eigennaam-truc + getal-truc", tekst: "Twee betrouwbare signalen voor bijzaak:\n1. **Eigennaam** ('mijn opa', 'mijn buurman', 'meester Jan', 'mijn fiets'): de schrijver geeft een persoonlijk voorbeeld. Voorbeelden = bijzaak.\n2. **Specifiek getal** ('2 liter', '5 jaar oud', '3 keer per week'): vaak een detail over één geval, niet algemene regel.\nCombo eigennaam + specifiek getal = bijna altijd **anecdote → bijzaak**." },
+            { titel: "Spot de anekdote", tekst: "De zin **'Mijn opa drinkt 2 liter per dag'** is een **anekdote**:\n• **'Mijn opa'** = een persoonlijk voorbeeld over één bepaald persoon → signaal voor BIJzaak\n• **'2 liter per dag'** = specifiek getal over één persoon → niet algemeen geldig\n\nDeze zin gaat NIET over water-in-het-algemeen, maar over één specifieke opa. → bijzaak → schrappen uit samenvatting." },
+            { titel: "Voorbeeld-truc + getal-truc", tekst: "Twee betrouwbare signalen voor bijzaak:\n1. **Persoonlijk voorbeeld of naam** ('mijn opa', 'mijn buurman', 'meester Jan'): de schrijver geeft een persoonlijk voorbeeld. Voorbeelden = bijzaak.\n2. **Specifiek getal** ('2 liter', '5 jaar oud', '3 keer per week'): vaak een detail over één geval, niet algemene regel.\nCombo persoonlijk voorbeeld + specifiek getal = bijna altijd **anekdote → bijzaak**." },
           ],
           woorden: [
-            { woord: "anecdote", uitleg: "Klein persoonlijk verhaaltje als illustratie, geen algemene regel." },
+            { woord: "anekdote", uitleg: "Klein persoonlijk verhaaltje als illustratie, geen algemene regel." },
             { woord: "samenvatting", uitleg: "Korte versie van een tekst met alleen de hoofdpunten." },
           ],
           theorie: "Schrap-regels voor samenvatting:\n• Eigennamen (mijn opa, juf Linda, mijn neef) → meestal weg\n• Specifieke getallen (2 liter, 7 jaar oud) → vaak weg, behalve als ze de hoofdgedachte zijn\n• Persoonlijke voorbeelden → weg, behoud algemene regel\n• Herhalingen → 1× houden\n• Voorbeelden ('zoals X, Y, Z') → houden of weg afhankelijk van belang",
           voorbeelden: [
-            { type: "stap", tekst: "Tekst over slaap: 'Mensen slapen 7-9 uur. Mijn broertje slaapt 12 uur.' → broertje = anecdote = weg." },
-            { type: "stap", tekst: "Tekst over sport: 'Sporten is gezond. Mijn meester loopt elke dag.' → meester = anecdote = weg." },
+            { type: "stap", tekst: "Tekst over slaap: 'Mensen slapen 7-9 uur. Mijn broertje slaapt 12 uur.' → broertje = anekdote = weg." },
+            { type: "stap", tekst: "Tekst over sport: 'Sporten is gezond. Mijn meester loopt elke dag.' → meester = anekdote = weg." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Test: vervang 'mijn opa' door 'Pieter' of 'mijn buurman'. Verandert er iets aan de boodschap? Nee → was bijzaak." }],
           niveaus: {
-            basis: "Opa-zin = anecdote = niet in samenvatting.",
-            simpeler: "'Mijn opa' is een eigennaam → persoonlijk voorbeeld → bijzaak → niet meenemen in samenvatting.",
+            basis: "Opa-zin = anekdote = niet in samenvatting.",
+            simpeler: "'Mijn opa' is een persoonlijk voorbeeld → bijzaak → niet meenemen in samenvatting.",
             nogSimpeler: "Opa-zin weg",
           },
         },
@@ -427,33 +427,33 @@ const steps = [
         answer: 0,
         uitlegPad: {
           stappen: [
-            { titel: "Algemeen vs persoonlijk", tekst: "In een tekst over **algemene** onderwerpen (gezond eten) zijn:\n• **Hoofdzaken** = algemene feiten ('groenten geven vitaminen', 'fruit is gezond')\n• **Bijzaken** = persoonlijke anecdotes ('mijn moeder', 'gisteren')" },
-            { titel: "Pas toe op opties", tekst: "• **'Mijn moeder kookt elke maandag pasta'** → persoonlijke anecdote → **bijzaak** ✓\n• **'Groenten geven vitaminen'** → algemeen feit → hoofdzaak\n• **'Fruit is gezond'** → algemeen feit → hoofdzaak\n• **'Suiker is ongezond'** → algemeen feit → hoofdzaak" },
+            { titel: "Algemeen vs persoonlijk", tekst: "In een tekst over **algemene** onderwerpen (gezond eten) zijn:\n• **Hoofdzaken** = algemene feiten ('groenten geven vitaminen', 'fruit is gezond')\n• **Bijzaken** = persoonlijke anekdotes ('mijn moeder', 'gisteren')" },
+            { titel: "Pas toe op opties", tekst: "• **'Mijn moeder kookt elke maandag pasta'** → persoonlijke anekdote → **bijzaak** ✓\n• **'Groenten geven vitaminen'** → algemeen feit → hoofdzaak\n• **'Fruit is gezond'** → algemeen feit → hoofdzaak\n• **'Suiker is ongezond'** → algemeen feit → hoofdzaak" },
             { titel: "Signaalwoorden voor bijzaken", tekst: "Bijzaken hebben vaak:\n• **Eigennamen** ('moeder', 'oom Henk', 'Anna')\n• **Specifieke tijden** ('elke maandag', 'gisteren', 'twee weken geleden')\n• **Concrete details** die slechts 1 persoon betreffen\n\nHoofdzaken zijn breed + algemeen + dekken het thema." },
           ],
           woorden: [
-            { woord: "anecdote", uitleg: "Persoonlijk verhaaltje binnen tekst — meestal bijzaak." },
+            { woord: "anekdote", uitleg: "Persoonlijk verhaaltje binnen tekst — meestal bijzaak." },
             { woord: "algemeen feit", uitleg: "Geldt voor iedereen — meestal hoofdzaak." },
           ],
-          theorie: "Toets-truc bijzaak-herkenning in algemene teksten:\n• Eigennaam + actie = bijna altijd anecdote = bijzaak\n• 'Mijn / mijn oom / gisteren' = signaalwoorden bijzaak\n• Algemeen feit zonder personen = hoofdzaak",
+          theorie: "Toets-truc bijzaak-herkenning in algemene teksten:\n• Eigennaam + actie = bijna altijd anekdote = bijzaak\n• 'Mijn / mijn oom / gisteren' = signaalwoorden bijzaak\n• Algemeen feit zonder personen = hoofdzaak",
           voorbeelden: [
             { type: "stap", tekst: "Tekst over honden: 'Honden zijn loyaal' = hoofd. 'Mijn buurman heeft een Labrador' = bijzaak." },
             { type: "stap", tekst: "Tekst over fietsen: 'Fietsen is gezond' = hoofd. 'Oom Henk fietst 20 km per dag' = bijzaak." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Eigennaam + specifieke daad = anecdote = bijzaak. Algemeen feit zonder personen = hoofdzaak." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Eigennaam + specifieke daad = anekdote = bijzaak. Algemeen feit zonder personen = hoofdzaak." }],
           niveaus: {
-            basis: "'Mijn moeder kookt pasta' = anecdote = bijzaak.",
-            simpeler: "Algemene feiten = hoofd. Persoonlijke anecdotes met eigennaam = bijzaak.",
-            nogSimpeler: "Moeder + pasta = anecdote",
+            basis: "'Mijn moeder kookt pasta' = anekdote = bijzaak.",
+            simpeler: "Algemene feiten = hoofd. Persoonlijke anekdotes met eigennaam = bijzaak.",
+            nogSimpeler: "Moeder + pasta = anekdote",
           },
         },
         wrongHints: [null,"Dit gaat over gezond eten in het algemeen — een hoofdzaak.","Een algemeen feit over het onderwerp — dat is een hoofdzaak.","Algemene info over gezond eten — hoofdzaak. Welke zin gaat over één persoon?"],
       },
       {
-        q: "Wat is **NIET** een goed samenvattings-strategie?",
+        q: "Wat is **NIET** een goede samenvattingsstrategie?",
         options: ["Letterlijk kopiëren van zinnen","Eigen woorden","Hoofdpunten kiezen","Kort houden"],
         answer: 0,
-        wrongHints: [null, "Wel goed — eigen woorden = begrip.", "Wel goed — hoofdpunten = essentie.", "Wel goed — samenvatting moet korter dan origineel."],
+        wrongHints: [null, "Wel goed — eigen woorden = begrip.", "Wel goed — hoofdpunten = essentie.", "Wel goed — samenvatting moet korter zijn dan het origineel."],
         uitlegPad: {
           stappen: [
             { titel: "Waarom NIET letterlijk kopiëren?", tekst: "Een **samenvatting** moet laten zien dat je de tekst zelf hebt **begrepen**. Als je zinnen letterlijk overschrijft, laat je alleen zien dat je kunt **kopiëren** — niet dat je weet wat er staat." },
@@ -513,7 +513,7 @@ const steps = [
         wrongHints: [null, "Voetnoten = bronvermelding, niet hoofd.", "Plaatjes ondersteunen wel, maar zijn niet de tekst zelf.", "Bibliografie = bronnenlijst aan het einde, geen inhoud."],
         uitlegPad: {
           stappen: [
-            { titel: "Waar plaats een schrijver de hoofdgedachte?", tekst: "Schrijvers willen dat de lezer **snel begrijpt** waarover de tekst gaat. Daarom zetten ze de hoofdgedachte op een **opvallende plek**:\n• **Titel** — meteen zichtbaar bovenaan\n• **Eerste zin** (van eerste alinea) — opening\n• Soms herhaald in **laatste zin/alinea** als conclusie" },
+            { titel: "Waar plaatst een schrijver de hoofdgedachte?", tekst: "Schrijvers willen dat de lezer **snel begrijpt** waarover de tekst gaat. Daarom zetten ze de hoofdgedachte op een **opvallende plek**:\n• **Titel** — meteen zichtbaar bovenaan\n• **Eerste zin** (van eerste alinea) — opening\n• Soms herhaald in **laatste zin/alinea** als conclusie" },
             { titel: "Waarom NIET in voetnoten/plaatjes/bibliografie?", tekst: "• **Voetnoten** = extra info met bron-vermelding, onderaan pagina. Geen hoofdgedachte.\n• **Plaatjes** = ondersteuning bij tekst, geen tekst zelf. Een grafiek kan illustreren, niet uitleggen wat de tekst zegt.\n• **Bibliografie** = lijst van geraadpleegde boeken/sites. Geen inhoud, alleen bronnen." },
             { titel: "Toets-truc: 3-plekken-check", tekst: "Als je snel de hoofdgedachte zoekt, check in deze volgorde:\n1. **Titel** — bevat vaak het hoofd-onderwerp\n2. **Eerste zin** — vaak meteen de stelling\n3. **Laatste zin** — vaak de conclusie\nBij Toets-tijdsdruk kun je vaak 80% van de hoofdgedachte vinden via deze 3 plekken zonder de hele tekst te lezen." },
           ],
@@ -550,12 +550,12 @@ const steps = [
             { woord: "specifiek detail", uitleg: "Heel precieze info over één deel — vaak een bijzaak." },
             { woord: "kern-info", uitleg: "Hoofdpunt zonder welke je de boodschap niet begrijpt." },
           ],
-          theorie: "Signalen voor bijzaak (herhaling):\n• Eigennamen ('Mijn oom', 'meester Jan')\n• Specifieke getallen ('2 jaar', '20 km', '7 uur')\n• Voorbeeld-zinnen ('Bijvoorbeeld...', 'Zoals...')\n• Anecdote-zinnen ('Eens kwam ik...', 'Mijn buurman zei...')\n• Heel concrete plek/tijd ('In Alaska in 2019')\n\nVuistregel: hoe specifieker hoe vaker bijzaak.",
+          theorie: "Signalen voor bijzaak (herhaling):\n• Eigennamen ('Mijn oom', 'meester Jan')\n• Specifieke getallen ('2 jaar', '20 km', '7 uur')\n• Voorbeeld-zinnen ('Bijvoorbeeld...', 'Zoals...')\n• Anekdote-zinnen ('Eens kwam ik...', 'Mijn buurman zei...')\n• Heel concrete plek/tijd ('In Alaska in 2019')\n\nVuistregel: hoe specifieker hoe vaker bijzaak.",
           voorbeelden: [
             { type: "stap", tekst: "Tekst over honden: 'Honden zijn loyaal. Hun staart wiebelt 60× per minuut.' → staart-getal = bijzaak." },
             { type: "stap", tekst: "Tekst over fietsen: 'Fietsen is gezond. De Tour duurt 21 dagen.' → 21 dagen = bijzaak." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Specifiek getal in zin? Hoogstwaarschijnlijk bijzaak (tenzij getal ZELF kern is, bv. 'water bestaat voor 70% uit waterstof' in chemie-tekst)." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Specifiek getal in zin? Hoogstwaarschijnlijk bijzaak (tenzij getal ZELF kern is, bv. '70% van de aarde is bedekt met water' in een tekst over de aarde; chemie-tekst)." }],
           niveaus: {
             basis: "Training 2 jaar = specifiek detail = bijzaak.",
             simpeler: "Schrap zin 3 → boodschap (honden helpen blinden) blijft hetzelfde → zin 3 = bijzaak.",
@@ -582,7 +582,7 @@ const steps = [
           theorie: "**Toets-aanpak hoofdgedachte vinden** (3 plaatsen):\n1. **Titel** — vaak hoofdthema\n2. **Eerste zin** of eerste alinea — vaak introductie van hoofdgedachte\n3. **Laatste alinea** — vaak conclusie met signaalwoorden\n\nKijk waar signaalwoorden 'dus/daarom/kortom' staan = vaak hoofdgedachte daar.",
           voorbeelden: [
             { type: "stap", tekst: "'Kinderen leren beter na ontbijt. Wetenschappers bewezen dit. Daarom: ALTIJD ontbijten voor school.' → hoofdgedachte = laatste zin met 'daarom'." },
-            { type: "stap", tekst: "'Plastic vervuilt zeeën. Diereet plastic. Kortom: minder plastic kopen.' → 'kortom' wijst op hoofdgedachte." },
+            { type: "stap", tekst: "'Plastic vervuilt zeeën. Dieren eten plastic. Kortom: minder plastic kopen.' → 'kortom' wijst op hoofdgedachte." },
           ],
           basiskennis: [{ onderwerp: "Niet 'maar'", uitleg: "Tegenstelling-signaalwoorden (maar, hoewel) wijzen op nuance — niet conclusie. Toets-instinker." }],
           niveaus: { basis: "Dus / daarom / kortom.", simpeler: "Signaalwoorden voor conclusie aan einde tekst: 'dus', 'daarom', 'kortom', 'samengevat'. Daar staat vaak hoofdgedachte.", nogSimpeler: "Dus/daarom" },
@@ -608,7 +608,7 @@ const steps = [
             { type: "stap", tekst: "Tekst over fietshelm met 'daarom adviseren artsen helm' → hoofdgedachte = 'fietshelm dragen is verstandig'." },
           ],
           basiskennis: [{ onderwerp: "Hoofdgedachte = 1 zin", uitleg: "Hoofdgedachte is altijd kort + duidelijk samen te vatten in 1 zin. Geen ingewikkelde opties." }],
-          niveaus: { basis: "Mobielverbod positief.", simpeler: "'Dus' wijst op conclusie. Laatste zin: mobielverbod is goede zaak. Hoofdgedachte = dat =", nogSimpeler: "Verbod is goed" },
+          niveaus: { basis: "Mobielverbod positief.", simpeler: "'Dus' wijst op conclusie. Laatste zin: mobielverbod is goede zaak. Hoofdgedachte = dat.", nogSimpeler: "Verbod is goed" },
         },
       },
       {
@@ -620,7 +620,7 @@ const steps = [
           stappen: [
             { titel: "Doel van samenvatten", tekst: "Een **samenvatting** vat in **eigen woorden** + **kort** een tekst samen. Hoort:\n• **20-30% van origineel** (vuistregel)\n• Alle **hoofdpunten** bevatten\n• Geen **details / voorbeelden** uitgebreid\n• Geen **eigen mening** toevoegen\n• Lopende tekst (geen lijst)" },
             { titel: "Wat is TE LANG?", tekst: "Te lang = **>40-50% van origineel**. Dan ben je niet meer aan het samenvatten maar **herschrijven**. Veel mensen doen dit fout:\n• Schrijven alle voorbeelden over\n• Citeren te veel\n• Houden alle bijzaken erin\n\n**Doel samenvatting**: lezer KAN tekst overslaan + toch hoofdgedachte begrijpen. Te lang = doel mislukt." },
-            { titel: "Toets-tip: aanpak", tekst: "**Samenvatten-stappenplan**:\n1. **Lees** tekst 2× — eerst overzicht, dan details\n2. **Markeer** hoofdgedachte + hoofdpunten\n3. **Negeer** voorbeelden + details + bijzaken\n4. **Herschrijf** in eigen woorden — kort\n5. **Check** lengte: 20-30% van origineel?\n6. **Lees terug**: snapt iemand het zonder het origineel?\n\nBij voor de toets: vaak **specifieke woordlimiet** (bv. 'maximaal 50 woorden')." },
+            { titel: "Toets-tip: aanpak", tekst: "**Samenvatten-stappenplan**:\n1. **Lees** tekst 2× — eerst overzicht, dan details\n2. **Markeer** hoofdgedachte + hoofdpunten\n3. **Negeer** voorbeelden + details + bijzaken\n4. **Herschrijf** in eigen woorden — kort\n5. **Check** lengte: 20-30% van origineel?\n6. **Lees terug**: snapt iemand het zonder het origineel?\n\nLet op bij de toets: vaak een **specifieke woordlimiet** (bv. 'maximaal 50 woorden')." },
           ],
           woorden: [
             { woord: "samenvatting", uitleg: "Korte versie van tekst met alleen hoofdpunten. 20-30% origineel." },
