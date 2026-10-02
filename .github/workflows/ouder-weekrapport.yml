@@ -44,7 +44,7 @@ jobs:
         run: |
           UUR=$(TZ=Europe/Amsterdam date +%H)
           echo "Amsterdam-uur: $UUR"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$UUR" -ge 16 ] && [ "$UUR" -le 21 ]; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || { [ "$UUR" -ge 16 ] && [ "$UUR" -le 21 ]; }; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
       - name: Weekrapporten versturen
         if: steps.tijd.outputs.go == '1'
         env:
