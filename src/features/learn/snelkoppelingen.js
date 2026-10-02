@@ -27,6 +27,8 @@ export const SNELKOPPELINGEN = [
     woorden: ["handen", "handen opsteken", "abcd", "a b c d", "kaartjes", "stemkaarten", "klassikaal", "digibord toets", "procent goed", "hele klas"] },
   { id: "imposter", emoji: "🎮", label: "Wie is de bedrieger?", uitleg: "Game in het park: taken zijn sommen, één speler doet alsof. ☰ → 🎮.", pad: "/dierentuin",
     woorden: ["bedrieger", "wie is de bedrieger", "imposter", "impostor", "wie is de imposter", "game", "among us", "verrader", "bots", "spelleider"] },
+  { id: "nieuwkomers-handleiding", emoji: "🌍", label: "Handleiding nieuwkomers (taalklas)", uitleg: "klassikaal en zelf oefenen, opbouw en planning voor drie weken", pad: "/nieuwkomers-handleiding.html",
+    woorden: ["handleiding", "taalklas", "nt2", "nieuwkomers", "lesplan", "isk", "nieuwkomersklas", "anderstalig"] },
   { id: "voor-leerkrachten", emoji: "🏫", label: "Voor leerkrachten (gratis voor scholen)", uitleg: "wat je gratis krijgt, hoe je begint en veelgestelde vragen", pad: "/voor-leerkrachten.html",
     woorden: ["leerkracht", "leerkrachten", "juf", "meester", "school", "scholen", "gratis voor scholen", "docent", "klas", "verwerkersovereenkomst"] },
   { id: "schooladvies", emoji: "🎓", label: "Voorlopig schooladvies", uitleg: "kijkmoment groep 7, tl/havo/vwo, data en wat je kunt doen", pad: "/voorlopig-schooladvies.html",
