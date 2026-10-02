@@ -84,9 +84,12 @@ export const KLASZINNEN = [
   // ── Regels in de klas (2 okt 2026) — plaatjes: Mulberry Symbols (quiet, work_2, group_work, whisper, think, work_book, queue) ──
   { id: "stil", zin: "Ik ben stil.", plaatje: P("stil-zijn"), thema: "Regels in de klas",
     vertaling: {en: "I am quiet.",ar: "أنا هادئ.",uk: "Я тихий.",tr: "Sessizim.",ro: "Stau liniștit.",bg: "Тих съм."} },
+  // Vinger opsteken: Mulberry heeft geen duidelijk plaatje → door Grok gemaakt in Mulberry-stijl (Mark 2 okt 2026: "kun jij inloggen met grok en maken"; bewuste uitzondering op geen-AI-plaatjes).
+  { id: "vinger-op", zin: "Ik steek mijn vinger op.", plaatje: "/picto/vinger-opsteken.png", thema: "Regels in de klas", groep: "tafel",
+    vertaling: { en: "I put my finger up.", ar: "أرفع إصبعي.", uk: "Я піднімаю руку.", tr: "Parmağımı kaldırırım.", ro: "Ridic degetul.", bg: "Вдигам пръст." } },
   { id: "luister-juf", zin: "Ik luister naar de juf.", plaatje: P("luisteren"), thema: "Regels in de klas",
     vertaling: {en: "I listen to the teacher.",ar: "أستمع إلى المعلمة.",uk: "Я слухаю вчительку.",tr: "Öğretmeni dinliyorum.",ro: "O ascult pe doamna învățătoare.",bg: "Слушам учителката."} },
-  { id: "zelf-werken", zin: "Ik werk zelf.", plaatje: P("zelf-werken"), thema: "Regels in de klas",
+  { id: "zelf-werken", zin: "Ik werk zelf.", plaatje: P("zelf-werken"), thema: "Regels in de klas", groep: "tafel",
     vertaling: {en: "I work on my own.",ar: "أعمل بنفسي.",uk: "Я працюю сам.",tr: "Kendi başıma çalışıyorum.",ro: "Lucrez singur.",bg: "Работя сам."} },
   { id: "samenwerken", zin: "We werken samen.", plaatje: P("samenwerken"), thema: "Regels in de klas",
     vertaling: {en: "We work together.",ar: "نعمل معًا.",uk: "Ми працюємо разом.",tr: "Birlikte çalışıyoruz.",ro: "Lucrăm împreună.",bg: "Работим заедно."} },
