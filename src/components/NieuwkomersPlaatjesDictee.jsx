@@ -13,6 +13,7 @@ import { track } from "../utils.js";
 import { plaatjeVan } from "../learnPaths/nieuwkomersPicto.js";
 import { VERTALINGEN } from "../learnPaths/nieuwkomersVertalingen.js";
 import { zeg, zegInTaal, heeftStem, stopZeggen, ZEG } from "../shared/voorleesModus.js";
+import { PuntenUitslag, Ster } from "./nieuwkomersPunten.jsx";
 
 const RONDE = 6;
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
@@ -69,7 +70,6 @@ export default function NieuwkomersPlaatjesDictee({ thema, taal = "nl" }) {
   const PUNT = 10;
   const [punten, setPunten] = useState(0);
   const maxPunten = useMemo(() => ronde.reduce((n, w) => n + (splits(w)?.kaal.length || 0) * PUNT, 0), [ronde]);
-  const [uitslag, setUitslag] = useState(null); // { record, nieuw }
   const klaar = i >= ronde.length;
   const woord = ronde[i];
   const delen = woord ? splits(woord) : null;
@@ -85,13 +85,6 @@ export default function NieuwkomersPlaatjesDictee({ thema, taal = "nl" }) {
   useEffect(() => { if (klaar) return undefined; const t = setTimeout(vraag, 350); return () => { clearTimeout(t); stopZeggen(); }; }, [i, ronde, echteStand]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!klaar) return;
-    const recKey = `lk_nkd_record_${thema.id}`;
-    let oud = 0; try { oud = Number(localStorage.getItem(recKey)) || 0; } catch { /* */ }
-    const nieuw = punten > oud;
-    if (nieuw) { try { localStorage.setItem(recKey, String(punten)); } catch { /* */ } }
-    setUitslag({ record: Math.max(oud, punten), nieuw: nieuw && oud > 0 });
-    const pct = maxPunten ? punten / maxPunten : 0;
-    zeg(`Je hebt ${punten} van de ${maxPunten} punten verdiend. ${pct >= 0.9 ? "Super gedaan!" : pct >= 0.6 ? "Goed bezig!" : "Goed geoefend!"}`);
     try { track("nk_dictee_klaar", { thema: thema.id, stand: echteStand, goed: score.current, totaal: ronde.length, typen: typen ? 1 : 0, punten, max: maxPunten }); } catch { /* */ }
   }, [klaar]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -99,16 +92,13 @@ export default function NieuwkomersPlaatjesDictee({ thema, taal = "nl" }) {
     return (
       <div style={{ ...S.kaart, textAlign: "center" }}>
         <div style={{ fontSize: 26, fontWeight: 800 }}>{k.klaar}</div>
-        <div style={{ fontSize: 40, fontWeight: 900, color: "#e0a800", marginTop: 6 }}>{punten} <span style={{ fontSize: 18, color: "#0f2a44" }}>/ {maxPunten}</span></div>
-        <div style={{ fontSize: 17, fontWeight: 800, marginTop: 2 }} dir="auto">{k.uit.replace("{a}", punten).replace("{b}", maxPunten)}</div>
-        <div style={{ fontSize: 16, marginTop: 4 }} dir="auto">{k.lof[maxPunten && punten / maxPunten >= 0.9 ? 0 : maxPunten && punten / maxPunten >= 0.6 ? 1 : 2]}</div>
-        {uitslag && <div style={{ fontSize: 14, marginTop: 6, color: uitslag.nieuw ? "#2e9d57" : "#5a6a86", fontWeight: uitslag.nieuw ? 800 : 600 }} dir="auto">{uitslag.nieuw ? k.nieuw + " " : ""}{k.rec.replace("{r}", uitslag.record)}</div>}
+        <PuntenUitslag punten={punten} max={maxPunten} taal={taal} recordKey={`lk_nkd_record_${thema.id}`} />
         <div style={{ display: "flex", justifyContent: "center", gap: 6, margin: "12px 0", flexWrap: "wrap" }} aria-label={`${score.current} van ${ronde.length} goed`}>
           {ronde.map((_, n) => (
             <svg key={n} width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" fill={n < score.current ? "#f5b800" : "#dfe5ee"} /></svg>
           ))}
         </div>
-        <button type="button" onClick={() => { score.current = 0; setPunten(0); setUitslag(null); setRonde(maakRonde()); setI(0); }} style={{ ...S.knop, background: "#2e9d57", color: "#fff" }}>{k.nogEens}</button>
+        <button type="button" onClick={() => { score.current = 0; setPunten(0); setRonde(maakRonde()); setI(0); }} style={{ ...S.knop, background: "#2e9d57", color: "#fff" }}>{k.nogEens}</button>
       </div>
     );
   }
@@ -206,7 +196,7 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
         <span style={{ fontSize: 14, opacity: 0.7 }}>{nr} / {totaal}</span>
         <span style={{ fontSize: 16, fontWeight: 900, color: "#b07d00", background: "#fff7d6", border: "1.5px solid #e0a800", borderRadius: 999, padding: "4px 12px" }} aria-label={`${punten + liveZelf * 10} ${ptLabel}`}>
-          ⭐ {punten + liveZelf * 10}
+          <Ster maat={16} /> {punten + liveZelf * 10}
         </span>
         <button type="button" onClick={onVraag} aria-label="Luister nog eens" style={{ ...S.knop, background: "#ffd166", padding: "8px 14px", display: "inline-flex" }}><Luidspreker /></button>
       </div>

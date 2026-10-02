@@ -16,6 +16,15 @@ export const PUNTEN_TEKST = {
   bg: { pt: "точки", uit: "Спечели {a} от {b} точки!", rec: "Твоят рекорд: {r} точки", nieuw: "Нов рекорд!", lof: ["Супер!", "Браво!", "Добре се упражни! Опитай пак."] },
 };
 
+/** Getekende ster (geen emoji als icoon, Mark 11 sep 2026). */
+export function Ster({ maat = 18, kleur = "#f5b800" }) {
+  return (
+    <svg width={maat} height={maat} viewBox="0 0 24 24" aria-hidden="true" style={{ verticalAlign: "-0.15em" }}>
+      <path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" fill={kleur} />
+    </svg>
+  );
+}
+
 const lofNr = (punten, max) => (max && punten / max >= 0.9 ? 0 : max && punten / max >= 0.6 ? 1 : 2);
 
 /** Kleine teller die tijdens de oefening meeloopt. */
@@ -24,7 +33,7 @@ export function PuntenTeller({ punten, taal = "nl" }) {
   return (
     <span aria-label={`${punten} ${t.pt}`}
       style={{ fontSize: 16, fontWeight: 900, color: "#b07d00", background: "#fff7d6", border: "1.5px solid #e0a800", borderRadius: 999, padding: "4px 12px" }}>
-      ⭐ {punten}
+      <Ster maat={16} /> {punten}
     </span>
   );
 }
@@ -36,6 +45,8 @@ export function PuntenUitslag({ punten, max, taal = "nl", recordKey }) {
   useEffect(() => {
     let oud = 0; try { oud = Number(localStorage.getItem(recordKey)) || 0; } catch { /* */ }
     if (punten > oud) { try { localStorage.setItem(recordKey, String(punten)); } catch { /* */ } }
+    // totaal voor "Mijn punten" op de nieuwkomers-pagina
+    try { localStorage.setItem("lk_nk_punten_totaal", String((Number(localStorage.getItem("lk_nk_punten_totaal")) || 0) + punten)); window.dispatchEvent(new Event("lk-nk-punten")); } catch { /* */ }
     setRec({ record: Math.max(oud, punten), nieuw: punten > oud && oud > 0 });
     zeg(`Je hebt ${punten} van de ${max} punten verdiend. ${PUNTEN_TEKST.nl.lof[lofNr(punten, max)].replace(" Probeer het nog eens.", "")}`);
   }, []); // eslint-disable-line react-hooks/exhaustive-deps

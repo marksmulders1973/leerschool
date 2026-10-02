@@ -7,6 +7,7 @@
 // een tik op een vraag (of het knopje bij een antwoord) toont dezelfde zin in de eigen
 // taal (SteunTik.jsx leest localStorage `lk_steuntaal`). Geen vertaling van de app: steun.
 import { PICTO_BRON } from "../learnPaths/nieuwkomersPicto.js";
+import NieuwkomersMijnPunten from "./NieuwkomersMijnPunten.jsx";
 import { Fragment, lazy, Suspense, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { track } from "../utils.js";
@@ -287,6 +288,9 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOversta
           <Steun veld="intro" />
           <div style={{ marginTop: 8, fontSize: 14, fontWeight: 600 }}><VoorleesBlok tekst={`${t.kop}. ${t.sub} ${t.intro}`} /></div>
         </div>
+
+        {/* Mijn punten (2 okt 2026): totaal, records, diploma's + "Laat zien aan de juf" */}
+        {!luister && !tredeTest && !herhaal && <NieuwkomersMijnPunten taal={taal} />}
 
         {!luister && !tredeTest && !herhaal && (() => {
           const lk = LUISTER_KOP[taal] || LUISTER_KOP.nl;
