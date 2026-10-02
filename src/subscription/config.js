@@ -36,14 +36,11 @@ export const FEATURE_GATES = {
   "unlimited-paths": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
   "voorkennis-keten": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
   "parent-dashboard": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
-  "school-dashboard": [TIERS.TEACHER_PRO],
   "generate-questions": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
-  // Werkbladen printen = Pro (leerkracht); digitaal oefenen via deelcode/QR
-  // blijft gratis t/m zeker 2031, doorrol (docs/LEERKRACHT-WERKBLAD-PLAN.md Fase 3).
-  "werkblad-print": [TIERS.TEACHER_PRO],
-  // 9 aug id-sync met proPlan PRO_FEATURES: zonder gate laat useSubscription
-  // een feature bij live paywall gewoon door ("niet-gegate = vrij").
-  "teacher-tools": [TIERS.TEACHER_PRO],
+  // 2 okt 2026 (Mark): scholen gratis — gegarandeerd t/m 2031. De gates
+  // "school-dashboard", "werkblad-print" en "teacher-tools" zijn weg:
+  // niet-gegate = vrij, dus ook bij een live paywall betaalt geen leerkracht
+  // voor klas-oefenen, toetsen, werkbladen, voortgang, logo of export.
   "weekrapport": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
   "kwartierplan": [TIERS.PARENT_PRO, TIERS.TEACHER_PRO],
 };
@@ -62,6 +59,8 @@ export const FREE_QUOTA = {
 // Definitief vaststellen vóór de Stripe-koppeling jan 2027. NIET hard in UI
 // tonen — proPlan.js (LAGEN) is de bron van waarheid voor prijs-copy.
 // Mapping op TIERS: familie = parent_pro, leerkracht (Pro) = teacher_pro.
+// Sinds 2 okt 2026 betalen alleen gezinnen (Familie) en organisaties die
+// Familie-plekken voor gezinnen kopen; scholen zijn gratis t/m 2031.
 export const PRICING = {
   // Maandplan € 4,95 GESCHRAPT (Mark 22 sep 2026): doorlopend botst met "stopt vanzelf".
   // Seizoenspas GESCHRAPT (Mark 30 sep 2026): één product, 12 maanden vanaf betalen, € 39.
@@ -71,8 +70,9 @@ export const PRICING = {
   // De twee constanten blijven staan voor de paywall-infra, maar worden nergens meer getoond.
   teacher_monthly: { price: 6.95, currency: "EUR", interval: "maand", label: "(niet aangeboden) Pro bijlesdocent — per maand" },
   teacher_yearly: { price: 59, currency: "EUR", interval: "jaar", label: "(niet aangeboden) Pro bijlesdocent — per jaar" },
-  // Schoollicentie: prijs OP AANVRAAG, komt uit de eerste schoolgesprekken (was €99/klas).
-  teacher_school: { price: null, currency: "EUR", interval: "school/jaar", label: "Schoollicentie — op aanvraag" },
+  // Schoollicentie VERVALLEN (Mark 2 okt 2026): scholen gratis, gegarandeerd t/m 2031
+  // (was "op aanvraag", daarvoor €99/klas). Sleutel blijft voor de paywall-infra.
+  teacher_school: { price: 0, currency: "EUR", interval: "school/jaar", label: "School — gratis, gegarandeerd t/m 2031" },
   // Partner: gemeente of stichting koopt het Familie-pakket PER GEZIN (tot 3 kinderen),
   // niet per kind — zelfde eenheid als thuis (Mark 22 sep 2026: "klinkt ook beter").
   // Staffel: 10-99 gezinnen €34,50 · 100-249 €24,95 · 250+ in overleg; minimaal 10;

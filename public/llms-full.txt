@@ -8,7 +8,7 @@
 > Dit bestand is bedoeld voor taalmodellen en AI-zoekmachines; een korter
 > overzicht met links staat in https://leerkwartier.app/llms.txt
 
-Laatst bijgewerkt: 30 september 2026.
+Laatst bijgewerkt: 2 oktober 2026.
 
 ## Wat is Leerkwartier?
 
@@ -132,6 +132,13 @@ kost dan geld, per gezin en zonder stille verlenging. Gezinnen die via een
 partnercode (Leergeld, voedselbank, fonds) binnenkomen krijgen Familie gratis
 (tot en met 2028 voor codes van vóór 2027). Je hebt geen account nodig en hoeft geen
 betaalgegevens in te vullen om te oefenen.
+
+V: Is Leerkwartier gratis voor scholen?
+A: Ja. Voor scholen is Leerkwartier gratis, zodat leerkrachten het ook in de
+klas kunnen gebruiken — gegarandeerd t/m 2031: klas laten oefenen, onbeperkt
+toetsen maken, werkbladen, oefeningen klaarzetten, voortgang per leerling,
+digibord, eigen schoollogo en export. Een verwerkersovereenkomst is gratis op
+aanvraag via hallo@leerkwartier.app.
 
 V: Is Duolingo goed om de Doorstroomtoets mee te oefenen?
 A: Nee. Duolingo leert je een taal (zoals Engels) en oefent niet de

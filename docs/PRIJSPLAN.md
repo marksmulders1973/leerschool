@@ -1,5 +1,9 @@
 # Prijsplan Leerkwartier — drie lagen + tegoed
 
+> ✅ **BESLUIT 2 okt 2026 (Mark): scholen gratis — gegarandeerd t/m 2031.** "Voor scholen is Leerkwartier gratis, zodat leerkrachten het ook in de klas kunnen gebruiken." Gratis voor leerkrachten/scholen: klas laten oefenen, onbeperkt toetsen maken, werkbladen, oefeningen klaarzetten, voortgang per leerling, digibord, eigen schoollogo en export. Verwerkersovereenkomst gratis op aanvraag. De schoollicentie ("op aanvraag") en de "5 gezins-plekken thuis cadeau per klas" vervallen.
+> **Waarom:** scholen zijn het acquisitiekanaal, geen inkomstenbron — de licentie had 0 klanten en schrok directies af. **Model:** school/juf gratis → kinderen oefenen ook thuis → gezin kiest Familie (€ 39 per gezin, 12 maanden). Gemeenten en stichtingen betalen Familie voor gezinnen met een krappe beurs (partner-staffel ongewijzigd). Betaald blijven dus alléén Familie en organisaties die Familie-plekken voor gezinnen kopen.
+> **Code:** interne ids (`teacher_pro`, laag `leerkracht`) blijven; toets-limiet, upgrade-knoppen en de gates `school-dashboard`/`werkblad-print`/`teacher-tools` zijn weg. Alles in §3 hieronder over de schoollicentie en gezins-plekken is **historie**.
+
 > ✅ **BESLUIT 30 sep 2026 (Mark): één product — Familie € 39 per gezin, 12 maanden vanaf de dag van betalen, één keer betalen, stopt vanzelf; verlengen € 31 (zelf kiezen na mail). De Seizoenspas (€ 24,95, vaste einddatum 31 juli) is GESCHRAPT.** Reden: 12 maanden vanaf afsluiten is eerlijker (geen €24,95 voor 2 maanden in mei), twee producten van 12 maanden kannibaliseren elkaar, € 39 houdt marge bij AI-kosten (Charley op Opus) en past bij partnerprijs € 34,50/kind. Lagere instap = kortingscode (kassa ondersteunt het). Alles hieronder over de Seizoenspas is historie.
 >
 > ✅ **Kinderen per gezin (Mark 30 sep 2026):** Familie = tot 3 kinderen; meer kinderen → mailen, regelen we zonder meerprijs (grens beschermt tegen één betaling voor een hele klas, niet tegen grote gezinnen). Niet technisch afgedwongen, alleen afgesproken; geldt ook voor partners (per gezin).
@@ -152,7 +156,9 @@ is geen bewezen vraag voor een verbruiks-product. Besluit-gate: **niet
 bouwen in de Stripe-scope van jan 2027**; alleen heroverwegen als de
 najaar-meting échte vraag laat zien. Cadeaukaart-flow idem on-hold.
 
-### 3. Schoollicentie — de school is de koper (herijkt 7 aug 2026, Pro geschrapt 22 sep 2026)
+### 3. Schoollicentie — de school is de koper (herijkt 7 aug 2026, Pro geschrapt 22 sep 2026) — 🗄️ HISTORIE
+
+> 🗄️ **Vervallen per 2 okt 2026: scholen zijn gratis t/m 2031 (zie besluit bovenaan).** Deze sectie blijft staan als achtergrond.
 > **🔴 Besluit Mark 22 sep 2026:** "Pro" als consumentenlaag is **geschrapt**. Naar buiten
 > zijn er twee lagen: **Gratis** en **Familie**. De school krijgt op de prijzenpagina één
 > regel ("Bent u een school?") en een **schoollicentie op aanvraag** — de prijs komt uit de
@@ -350,7 +356,7 @@ als losse vraag).
   Stripe test-mode · **jan 2027** live. Niet in december pas starten. NB: grote
   charitatieve fondsen gaan hiermee op slot (bewust geaccepteerd, zie
   SUBSIDIE-PLAN); Esther (OP) t.z.t. informeren over het KvK-nummer.
-- [ ] **School-koop-route bouwen:** betalen op factuur (scholen hebben geen
+- [ ] ~~**School-koop-route bouwen:**~~ (vervallen 2 okt 2026 — scholen gratis; alleen de verwerkersovereenkomst blijft nodig, gratis op aanvraag) betalen op factuur (scholen hebben geen
   creditcard), verwerkersovereenkomst-sjabloon (DPA — staat op de
   privacy-todo), juf-A4 "vraag het je directeur".
 - [ ] Najaar 2026: 2-3 gratis pilot-scholen werven (referenties voor voorjaar 2027).

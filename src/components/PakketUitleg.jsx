@@ -168,7 +168,7 @@ export default function PakketUitleg({ open, onClose }) {
           }}>✕</button>
         </div>
         <p style={{ margin: "0 0 4px", fontSize: 14, color: "rgba(255,255,255,0.8)", lineHeight: 1.5 }}>
-          <strong style={{ color: "var(--color-text-strong)" }}>Oefenen en uitleg zijn gratis — en dat blijft zo.</strong> Wil je meer, dan kún je kiezen.
+          <strong style={{ color: "var(--color-text-strong)" }}>Oefenen en uitleg zijn gratis, gegarandeerd t/m 2031.</strong> Wil je meer, dan kún je kiezen.
         </p>
 
         {/* Jouw pakket nu */}
@@ -221,15 +221,16 @@ export default function PakketUitleg({ open, onClose }) {
           >
             <FamilieAfsluiten plek="pakketuitleg" variant="knop" style={{ marginTop: 10 }} />
           </TierKaart>
+          {/* 2 okt 2026 (Mark): schoollicentie vervallen — scholen gratis t/m 2031. */}
           <TierKaart
-            emoji="🏫" naam="Schoollicentie" voorWie="voor scholen"
-            prijs="op aanvraag — factuur en verwerkersovereenkomst; de prijs bepalen we samen met de school"
+            emoji="🏫" naam="School" voorWie="voor scholen"
+            prijs="gratis — gegarandeerd t/m 2031, zodat leerkrachten het ook in de klas kunnen gebruiken"
             items={[
-              "Lesgeven met je klas blijft gratis t/m zeker 2031 (deelcode)",
-              "Schooldashboard: overzicht per klas + export",
-              "Je eigen (school)logo op toetsen en werkbladen",
+              "De klas laten oefenen en oefeningen klaarzetten",
               "Onbeperkt toetsen maken en werkbladen printen",
-              "Licentie op maat voor de school, met factuur en verwerkersovereenkomst",
+              "Voortgang per leerling + export, ook op het digibord",
+              "Je eigen schoollogo op toetsen en werkbladen",
+              "Verwerkersovereenkomst gratis op aanvraag",
               "Nooit reclame",
             ]}
             kleur={LAAG_KLEUREN.leerkracht}

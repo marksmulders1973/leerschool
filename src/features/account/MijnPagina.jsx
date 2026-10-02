@@ -245,7 +245,7 @@ const ROL_UITLEG = {
 // kale "gratis", wel "in 2026 gratis". Bron: docs/PRIJSPLAN.md.
 const TIER_PITCH = {
   ouder: { naam: "Familie", punten: ["weekrapport per e-mail", "examen-simulatie", "Kwartierplan per kind", "tot 3 kinderen onder één account (meer? mail ons, zonder meerprijs)"] },
-  teacher: { naam: "de schoollicentie", punten: ["onbeperkt toetsen klaarzetten", "klasrapportage", "je eigen logo op de toetsen"] },
+  // teacher: vervallen 2 okt 2026 — scholen gratis t/m 2031, dus geen betaalde laag om te pitchen.
 };
 
 // ── Lege staat: bezoeker zonder naam (Mark 11 sep 2026) ──────────────────────
@@ -1028,7 +1028,7 @@ export default function MijnPagina({
   // Abonnement-info. PAYWALL staat uit → tier "free", en dat zeggen we
   // eerlijk gekwalificeerd: "in 2026 is alles open" (geen kale gratis-claim).
   const tier = subscription?.tier || "free";
-  const tierLabel = tier === "parent_pro" ? "Familie" : tier === "teacher_pro" ? "Schoollicentie" : "Gratis";
+  const tierLabel = tier === "parent_pro" ? "Familie" : tier === "teacher_pro" ? "School" : "Gratis"; // "School" sinds 2 okt 2026 (gratis t/m 2031)
   const geldigTot = subscription?.valid_until
     ? new Date(subscription.valid_until).toLocaleDateString("nl-NL", { day: "numeric", month: "long", year: "numeric" })
     : null;

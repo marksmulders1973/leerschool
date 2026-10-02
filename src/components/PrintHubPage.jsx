@@ -106,7 +106,7 @@ const PRO = [
     page: "werkblad",
     emoji: "🖨️",
     titel: "Klassenset-werkbladen (met je logo)",
-    tekst: "Voor leerkrachten: per onderwerp een A4-werkblad (opgaven + antwoordblad) met een QR-code waarmee de klas thuis gratis verder oefent. De losse werkbladen zijn gratis; met Pro zet je je eigen logo erop en print je een hele klassenset.",
+    tekst: "Voor leerkrachten: per onderwerp een A4-werkblad (opgaven + antwoordblad) met een QR-code waarmee de klas thuis gratis verder oefent. Zet je eigen schoollogo erop en print een hele klassenset — voor scholen gratis, gegarandeerd t/m 2031.",
     accent: "#26c6da",
   },
 ];
@@ -198,22 +198,25 @@ export default function PrintHubPage({ setPage } = {}) {
         ))}
       </div>
 
-      {/* ── Laag 3: Pro ────────────────────────────────────────── */}
-      <SlotKop kleur="#26c6da" titel="Voor de klas — met een schoollicentie" chip="Schoollicentie" />
+      {/* ── Laag 3: voor de klas — gratis voor scholen (2 okt 2026, was schoollicentie) ── */}
+      <div style={{ display: "flex", alignItems: "center", gap: 8, margin: "0 0 4px" }}>
+        <h2 style={{ fontSize: 15, fontWeight: 800, color: "var(--color-text, #e8edf5)", margin: 0 }}>Voor de klas</h2>
+        <GratisBadge size="sm" />
+      </div>
       <p style={{ color: "var(--color-text-muted, #8899aa)", margin: "0 0 12px", fontSize: 13, lineHeight: 1.55 }}>
-        Voor leerkrachten. Losse werkbladen zijn gratis; een <strong style={{ color: "#4dd0e1" }}>schoollicentie</strong> voegt je eigen logo
-        en een hele klassenset toe (vanaf 2027).
+        Voor leerkrachten. Voor scholen is Leerkwartier gratis, zodat je het ook in de klas kunt gebruiken — gegarandeerd t/m 2031,
+        ook met je eigen schoollogo en een hele klassenset.
       </p>
       <div style={{ display: "flex", flexDirection: "column", gap: 12, marginBottom: 24 }}>
         {PRO.map((p) => (
-          <Tegel key={p.page} p={p} slot chip="Schoollicentie" onClick={() => kies(p.page)} />
+          <Tegel key={p.page} p={p} onClick={() => kies(p.page)} />
         ))}
       </div>
 
       <div style={{ textAlign: "center", marginBottom: 22 }}>
         <a href="/abonnement.html" onClick={() => track("printhub_naar_abonnement")}
           style={{ color: "var(--color-text-muted, #8899aa)", fontSize: 13, textDecoration: "underline" }}>
-          Wat zit er in Familie en de schoollicentie? →
+          Wat zit er in Familie? →
         </a>
       </div>
 

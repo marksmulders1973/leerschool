@@ -5,7 +5,7 @@ import { BRAND } from "../../brand.js";
 import { formatDate, daysUntil, shuffle } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
-import ProBadge, { GratisBadge } from "../../subscription/ProBadge.jsx";
+import { GratisBadge } from "../../subscription/ProBadge.jsx";
 import { shuffleOpties } from "../../shared/shuffleOpties.js";
 import LeraarKlaarzet from "./LeraarKlaarzet.jsx";
 import KlasParkcode from "./KlasParkcode.jsx";
@@ -377,44 +377,14 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
           </div>
         )}
 
-        {/* Quiz limiet banner */}
-        {!isTeacherPro && (
-          <div style={{ marginBottom: 12, padding: "10px 14px", borderRadius: 12, background: quizLimitReached ? "rgba(255,107,53,0.15)" : "rgba(255,255,255,0.04)", border: `1px solid ${quizLimitReached ? "rgba(255,107,53,0.4)" : "rgba(255,255,255,0.1)"}`, display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
-            <div>
-              <span style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-display)", fontSize: 13, color: quizLimitReached ? "#ff8c42" : "rgba(255,255,255,0.5)", fontWeight: 700 }}>
-                {quizLimitReached ? "⚠️ Limiet bereikt" : `📝 ${quizCount}/${quizLimit} toetsen`}
-                <ProBadge feature="teacher-tools" showFree={false} onInfo={onUpgrade} />
-              </span>
-              {!quizLimitReached && <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.3)", marginTop: 1 }}>Onbeperkt toetsen hoort straks bij de schoollicentie — nu gratis tot {quizLimit}</div>}
-            </div>
-            {/* Pro = blauw in de tier-kleurtaal (9 aug; was oranje) */}
-            <button onClick={onUpgrade} style={{ padding: "6px 12px", borderRadius: 8, border: "none", background: quizLimitReached ? "#1e88e5" : "rgba(66,165,245,0.2)", color: quizLimitReached ? "#fff" : "#8ec9ff", fontFamily: "var(--font-display)", fontSize: 12, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
-              {quizLimitReached ? "Upgrade →" : "Onbeperkt met schoollicentie"}
-            </button>
-          </div>
-        )}
-        {isTeacherPro && trialDaysLeft !== null && trialDaysLeft > 0 && (
-          <div style={{ marginBottom: 12, padding: "10px 14px", borderRadius: 10, background: "rgba(0,200,83,0.08)", border: "1px solid rgba(0,200,83,0.25)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 8 }}>
-            <div>
-              <span style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "var(--color-brand-primary-100)", fontWeight: 700 }}>🎁 Gratis proefperiode actief</span>
-              <div style={{ fontFamily: "var(--font-body)", fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 1 }}>
-                Nog {trialDaysLeft} {trialDaysLeft === 1 ? "dag" : "dagen"} resterend
-              </div>
-            </div>
-            <button onClick={onUpgrade} style={{ padding: "5px 10px", borderRadius: 8, border: "none", background: "rgba(0,200,83,0.2)", color: "var(--color-brand-primary-100)", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap" }}>
-              Abonnement →
-            </button>
-          </div>
-        )}
-        {isTeacherPro && (trialDaysLeft === null || trialDaysLeft === 0) && (
-          <div style={{ marginBottom: 12, padding: "8px 14px", borderRadius: 10, background: "rgba(66,165,245,0.08)", border: "1px solid rgba(66,165,245,0.25)", display: "flex", alignItems: "center", gap: 8 }}>
-            <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#64b5f6", display: "inline-block" }} />
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "#8ec9ff", fontWeight: 700 }}>Schoollicentie — onbeperkt toetsen</span>
-          </div>
-        )}
+        {/* 2 okt 2026 (Mark): scholen gratis — geen toets-limiet, geen
+            proefperiode en geen upgrade-knoppen meer voor leerkrachten. */}
+        <div style={{ marginBottom: 12, padding: "8px 14px", borderRadius: 10, background: "rgba(66,165,245,0.08)", border: "1px solid rgba(66,165,245,0.25)", display: "flex", alignItems: "center", gap: 8 }}>
+          <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#64b5f6", display: "inline-block" }} />
+          <span style={{ fontFamily: "var(--font-display)", fontSize: 13, color: "#8ec9ff", fontWeight: 700 }}>Voor scholen gratis — onbeperkt toetsen, gegarandeerd t/m 2031</span>
+        </div>
 
-        {/* Schoollogo blok */}
-        {isTeacherPro ? (
+        {/* Schoollogo blok — gratis voor elke leerkracht (2 okt 2026) */}
           <div style={{ marginBottom: 16, padding: "12px 14px", borderRadius: 14, background: "rgba(66,165,245,0.07)", border: "1px solid rgba(66,165,245,0.25)", display: "flex", alignItems: "center", gap: 12 }}>
             {schoolLogoUrl ? (
               <img src={schoolLogoUrl} alt="Schoollogo" style={{ height: 44, maxWidth: 100, objectFit: "contain", borderRadius: 6, background: "var(--color-text-strong)", padding: 4 }} />
@@ -437,20 +407,11 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
               <button onClick={() => onLogoUpdate?.("")} style={{ background: "none", border: "none", color: "rgba(255,255,255,0.3)", fontSize: 18, cursor: "pointer", padding: 0, lineHeight: 1 }}>×</button>
             )}
           </div>
-        ) : (
-          <div style={{ marginBottom: 16, padding: "10px 14px", borderRadius: 12, background: "rgba(66,165,245,0.05)", border: "1px dashed rgba(66,165,245,0.2)", display: "flex", alignItems: "center", justifyContent: "space-between", gap: 10 }}>
-            <span style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.35)", display: "inline-flex", alignItems: "center", gap: 6 }}>
-              <span aria-hidden="true" style={{ width: 7, height: 7, borderRadius: "50%", background: "#64b5f6", display: "inline-block", flexShrink: 0 }} />
-              🏫 Eigen schoollogo op toetsen — schoollicentie
-            </span>
-            <button onClick={onUpgrade} style={{ padding: "5px 10px", borderRadius: 8, border: "none", background: "rgba(66,165,245,0.2)", color: "#8ec9ff", fontFamily: "var(--font-display)", fontSize: 11, fontWeight: 700, cursor: "pointer" }}>Upgrade →</button>
-          </div>
-        )}
 
         <div style={styles.actionRow}>
-          <button style={{ ...styles.bigButton, background: quizLimitReached ? "rgba(255,255,255,0.06)" : "linear-gradient(135deg, var(--color-brand-primary), #00e676)", opacity: quizLimitReached ? 0.7 : 1 }} onClick={onCreateQuiz}>
+          <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, var(--color-brand-primary), #00e676)" }} onClick={onCreateQuiz}>
             <span style={{ fontSize: 28 }}>📝</span>
-            <span style={{ fontWeight: 700 }}>{quizLimitReached ? "🔒 Nieuwe Toets" : "Nieuwe Toets"}</span>
+            <span style={{ fontWeight: 700 }}>Nieuwe Toets</span>
           </button>
           <button style={{ ...styles.bigButton, background: "linear-gradient(135deg, var(--color-brand-primary), #00a844)" }} onClick={onViewProgress}>
             <span style={{ fontSize: 28 }}>📊</span>

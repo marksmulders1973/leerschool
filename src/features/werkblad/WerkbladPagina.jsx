@@ -23,7 +23,6 @@ import { saveQuiz } from "../../data/repos/quizzesRepo.js";
 import { TAKENLIJST_TYPE } from "../../data/takenlijst.js";
 import PaywallGate from "../../subscription/PaywallGate.jsx";
 import { GratisBadge } from "../../subscription/ProBadge.jsx";
-import { PRO_MODEL } from "../../subscription/proPlan.js";
 
 // Snelkeuzes = de tien Toets-kern-struikelonderwerpen uit het bouwplan, zodat
 // een leerkracht in één tik klaar is zonder te hoeven zoeken.
@@ -274,13 +273,13 @@ export default function WerkbladPagina({ onClose, userId, authUser = null }) {
 
         {pathId && (
           items.length > 0 ? (
-            // Printen = straks Pro (leerkracht); digitaal oefenen via de
-            // deelcode hieronder blijft gratis t/m zeker 2031 (belofte
-            // schuift telkens op — nooit >5 jaar vooruit beloven).
+            // 2 okt 2026 (Mark): scholen gratis — printen is niet meer
+            // gegate (FEATURE_GATES zonder "werkblad-print"), gegarandeerd
+            // t/m 2031 (belofte schuift telkens op — nooit >5 jaar vooruit).
             <PaywallGate feature="werkblad-print" authUser={authUser}>
               <PrintKnoppen trackPrefix="werkblad" trackProps={{ pad: pathId }} />
               <div style={{ fontSize: 11.5, color: "var(--color-text-muted, #8899aa)", marginTop: 6 }}>
-                {PRO_MODEL.kort} (schoollicentie) · de deelcode hieronder blijft gratis t/m zeker 2031
+                Voor scholen gratis, ook met je eigen schoollogo — gegarandeerd t/m 2031
               </div>
             </PaywallGate>
           ) : (

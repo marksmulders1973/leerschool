@@ -286,7 +286,7 @@ function PartnerStrook() {
 
 // ── Juf-strook (/klas, idee AM) ───────────────────────────────────
 // Onderaan, gedempt: stoort de leerling niet, maar de leerkracht die
-// meekijkt ziet meteen de vervolgstap. Eerste lead voor de schoollicentie.
+// meekijkt ziet meteen de vervolgstap. (Scholen gratis sinds 2 okt 2026 — school = ingang naar gezinnen.)
 function JufStrook({ groep, stap, onGa }) {
   return (
     <div style={{ marginTop: 18, padding: "12px 14px", borderRadius: 12, background: "var(--color-bg-surface)", border: "1px dashed var(--color-border-soft)", fontSize: 13.5, lineHeight: 1.5, color: "var(--color-text-muted)" }}>

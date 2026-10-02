@@ -10,7 +10,7 @@
 //
 // Plannen (docs/PRIJSPLAN.md; 30 sep 2026: Seizoenspas geschrapt → één product Familie € 39, 12 maanden). Oud: Seizoenspas € 24,95 éénmalig (geldig
 // t/m 31 juli van het toetsjaar, stopt vanzelf) en Familie € 39 per jaar.
-// School: licentie op aanvraag, via factuur. Maandplan GESCHRAPT (Mark 22 sep
+// School: GRATIS sinds 2 okt 2026 (t/m 2031) — geen schoollicentie meer. Maandplan GESCHRAPT (Mark 22 sep
 // 2026): twee smaken, allebei eenmalig — er is geen Stripe-abonnement meer.
 //
 // Jaar = ÉÉNMALIG (Mark 22 sep 2026): geen stille verlenging, nooit. 365 dagen

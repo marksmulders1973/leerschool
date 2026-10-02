@@ -8,7 +8,7 @@
 //
 // Het principe (2026-07-25): DE BETAALVORM VOLGT DE WAARDEVORM.
 //  - Doorlopende waarde (voortgang volgen, rapporten, logo op toetsen)
-//    → een klein abonnement: FAMILIE (per gezin) of een SCHOOLLICENTIE (school).
+//    → FAMILIE (per gezin). (Schoollicentie vervallen — zie 2 okt 2026 hieronder.)
 //  - Verbruikswaarde (extra AI-bijles-tijd) → los KWARTIER-TEGOED.
 //    ⛔ ON-HOLD (Mark 8 aug: "waarschijnlijk een slecht idee"; herbevestigd
 //    13 aug "geen losse eindjes") — uit ALLE gebruikers-teksten; alleen terug
@@ -18,7 +18,13 @@
 //    Ooievaarspas, voedselbanken) geven het Familie-niveau gratis.
 //    ⚖️ Ooievaarspas = BLIJVEND gratis Familie, zonder plekken-limiet —
 //    schriftelijk toegezegd aan gemeente Den Haag (getekend formulier
-//    26 jul 2026). De schoollicentie valt buiten die toezegging.
+//    26 jul 2026).
+//  - 2 okt 2026 (Mark): SCHOLEN GRATIS — gegarandeerd t/m 2031. Alles wat een
+//    leerkracht met de klas doet (oefenen, onbeperkt toetsen, werkbladen,
+//    klaarzetten, voortgang per leerling, digibord, eigen schoollogo, export)
+//    is gratis; verwerkersovereenkomst gratis op aanvraag. Betaald blijven
+//    alleen Familie (thuis) en organisaties die Familie-plekken voor gezinnen
+//    kopen. Interne ids (laag "leerkracht", tier teacher_pro) blijven staan.
 //    Zie partnerCode.js (partnerFamilieTot) + useSubscription.js (partnerGrant).
 //
 // Nu (2026) staat ALLES gratis open. We labelen de betaalde extra's alvast met
@@ -28,7 +34,8 @@
 
 import { track } from "../utils.js";
 
-// De twee betaalde lagen. Richtprijzen — definitief vóór de lancering.
+// De lagen. Familie = betaald (richtprijs, definitief vóór de lancering);
+// leerkracht = scholen, gratis t/m 2031 (2 okt 2026).
 export const LAGEN = {
   familie: {
     id: "familie",
@@ -50,13 +57,16 @@ export const LAGEN = {
   // school?") en een licentie OP AANVRAAG — de prijs komt uit de eerste
   // schoolgesprekken, niet uit een kaartje. Bijlesdocent-Pro (€ 6,95) vervalt:
   // nul klanten, alleen complexiteit.
+  // 2 okt 2026 (Mark): schoollicentie VERVALLEN — scholen gratis, gegarandeerd
+  // t/m 2031 (0 klanten, schrok directies af; school = de ingang naar gezinnen).
+  // Id "leerkracht" blijft voor kleuren/badges.
   leerkracht: {
     id: "leerkracht",
-    naam: "Schoollicentie",
+    naam: "School",
     icon: "🏫",
     wie: "voor scholen",
-    prijs: "op aanvraag — factuur en verwerkersovereenkomst; de prijs bepalen we samen met de school",
-    kort: "Schooldashboard over alle groepen, eigen schoollogo op toetsen en klasrapportage — voor leerkrachten blijft lesgeven met Leerkwartier gratis",
+    prijs: "gratis — gegarandeerd t/m 2031 · verwerkersovereenkomst gratis op aanvraag",
+    kort: "Voor scholen is Leerkwartier gratis, zodat leerkrachten het ook in de klas kunnen gebruiken — gegarandeerd t/m 2031",
   },
   // (Kwartier-tegoed verwijderd uit de etalage — ON-HOLD, zie kop van dit
   // bestand. LAAG_KLEUREN.tegoed blijft staan voor als hij ooit terugkomt.)
@@ -89,11 +99,11 @@ export const PRO_MODEL = {
   uitleg:
     "De basis (oefenen + uitleg op 3 niveaus) blijft gratis — gegarandeerd " +
     "t/m 2031, en die belofte verlengen we telkens — ook voor " +
-    "leerkrachten die met hun klas oefenen. " +
-    "Vanaf 2027 zijn er twee extra's: Familie (één klein bedrag per gezín — " +
-    "voortgang volgen, weekrapport, hele toets oefenen met de klok; € 39 voor " +
-    "12 maanden, één keer betalen, stopt vanzelf) en voor scholen " +
-    "een schoollicentie op aanvraag (schooldashboard, eigen logo op toetsen, klasrapportage).",
+    "leerkrachten die met hun klas oefenen. Voor scholen is Leerkwartier " +
+    "gratis (gegarandeerd t/m 2031), zodat leerkrachten het ook in de klas " +
+    "kunnen gebruiken. Vanaf 2027 is er één extra voor thuis: Familie (één " +
+    "klein bedrag per gezín — voortgang volgen, weekrapport, hele toets " +
+    "oefenen met de klok; € 39 voor 12 maanden, één keer betalen, stopt vanzelf).",
 };
 
 // De betaalde extra's. `laag`: 'familie' | 'leerkracht' | 'tegoed'.
@@ -195,25 +205,12 @@ export const PRO_FEATURES = {
     icon: "🏫",
     label: "Schooldashboard",
     laag: "leerkracht",
-    blurb: "Voortgang van je hele klas in één overzicht, met export voor het rapportgesprek.",
+    blurb: "Voortgang van je hele klas in één overzicht, met export voor het rapportgesprek. Voor scholen gratis, gegarandeerd t/m 2031.",
     status: "binnenkort",
   },
-  // Gezins-plekken cadeau (Mark 15 aug 2026): een school-abonnement geeft de
-  // school Familie-plekken om thúís uit te delen aan gezinnen die een steuntje
-  // kunnen gebruiken — kansengelijkheid. Loopt op de partner-code-rails
-  // (max_uses per code). Publieke copy bewust warm/niet-stigmatiserend: nooit
-  // "probleemgezin", wél "gezinnen die een steuntje kunnen gebruiken".
-  "gezins-plekken": {
-    id: "gezins-plekken",
-    icon: "🤝",
-    label: "Gezins-plekken thuis cadeau",
-    laag: "leerkracht",
-    blurb:
-      "Bij een schoollicentie horen 5 Familie-plekken per klas die de school " +
-      "thuis kan weggeven — bedoeld voor gezinnen die een steuntje kunnen " +
-      "gebruiken. Zo oefent elk kind ook thuis mee.",
-    status: "binnenkort",
-  },
+  // (Gezins-plekken cadeau (15 aug 2026) VERVALLEN op 2 okt 2026: hoorde bij
+  // de betaalde schoollicentie, die er niet meer is. Gezinnen met een krappe
+  // beurs krijgen Familie via gemeenten/stichtingen — partner-codes.)
   "generate-questions": {
     id: "generate-questions",
     icon: "✏️",
@@ -229,21 +226,20 @@ export const PRO_FEATURES = {
     laag: "leerkracht",
     blurb:
       "Print het werkblad (12 opgaven + antwoordblad) met je eigen " +
-      "(school)logo erop. Digitaal oefenen via de deelcode blijft gratis " +
-      "t/m zeker 2031.",
+      "(school)logo erop. Voor scholen gratis, gegarandeerd t/m 2031.",
     status: "live",
   },
   "teacher-tools": {
     id: "teacher-tools",
     icon: "🏫",
-    label: "Leerkracht-extra's",
+    label: "Alles voor de klas",
     laag: "leerkracht",
     blurb:
       "Je eigen (school)logo op toetsen en oefenbladen, onbeperkt toetsen " +
       "maken, onbeperkt werkbladen printen (12 opgaven + antwoordblad, met " +
-      "QR om thuis verder te oefenen), voortgang per leerling inzien en " +
-      "resultaten exporteren — voor je hele klas. Leerpaden klaarzetten " +
-      "blijft gratis t/m zeker 2031.",
+      "QR om thuis verder te oefenen), oefeningen klaarzetten, voortgang per " +
+      "leerling inzien en resultaten exporteren — voor je hele klas. Voor " +
+      "scholen gratis, gegarandeerd t/m 2031.",
     status: "live",
   },
 };
@@ -258,7 +254,8 @@ export const PRO_GRATIS_BASIS = [
   "Echte VMBO-examens inzien én downloaden als PDF",
   "Printbare oefenbladen mee naar huis (oefenpakket, leesladder, tafels, dictees)",
   "Vraag van de dag & het scorebord",
-  "Leerkrachten: leerpaden klaarzetten voor je klas via een deelcode",
+  // 2 okt 2026: scholen gratis t/m 2031 — de klas-kant hoort bij de basis.
+  "Leerkrachten en scholen: alles voor de klas — oefeningen klaarzetten, onbeperkt toetsen, werkbladen, voortgang per leerling, digibord en eigen schoollogo",
 ];
 
 export function getProFeature(id) {

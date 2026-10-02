@@ -247,7 +247,8 @@ const pruneOudeLeertijd = () => {
   } catch { /* negeer */ }
 };
 
-const FREE_QUIZ_LIMIT = 20;
+// Toets-limiet voor leerkrachten vervallen (2 okt 2026: scholen gratis t/m 2031).
+const FREE_QUIZ_LIMIT = Infinity;
 
 const fonts = `
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Fredoka:wght@400;500;600;700&display=swap');
@@ -999,9 +1000,11 @@ export default function App() {
     const diff = 30 - Math.floor((Date.now() - started.getTime()) / 86400000);
     return diff > 0 ? diff : 0;
   })();
-  const isOnTrial = trialDaysLeft !== null && trialDaysLeft > 0;
-  const isTeacherPro = isLaunchPromoActive() || isOnTrial || subscription?.tier === "teacher_pro";
-  const quizLimitReached = !isTeacherPro && quizzes.length >= FREE_QUIZ_LIMIT;
+  // 2 okt 2026 (Mark): scholen gratis — gegarandeerd t/m 2031. Leerkrachten
+  // krijgen alles voor de klas (onbeperkt toetsen, eigen schoollogo) zonder
+  // licentie; de oude toets-limiet (FREE_QUIZ_LIMIT) geldt niet meer.
+  const isTeacherPro = true;
+  const quizLimitReached = false;
 
   const createQuiz = (quiz) => {
     const newQuiz = {

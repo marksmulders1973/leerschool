@@ -87,7 +87,7 @@ export default function StudentHome({ userName, userLevel, userSchoolType, quizz
   const pakketLabel = !sub.paywallActive
     ? "Gratis"
     : sub.tier === TIERS.TEACHER_PRO
-    ? "Schoollicentie"
+    ? "School" // 2 okt 2026: scholen gratis t/m 2031 (was "Schoollicentie")
     : sub.tier === TIERS.PARENT_PRO
     ? "Familie"
     : "Gratis";

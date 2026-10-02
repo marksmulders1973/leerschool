@@ -40,30 +40,12 @@ const PLANS = [
       { text: "Nooit reclame" },
     ],
   },
-  {
-    id: "school",
-    tier: "teacher_pro",
-    icon: "🏫",
-    label: "School",
-    price: "op aanvraag",
-    period: "factuur · verwerkersovereenkomst",
-    color: LAAG_KLEUREN.leerkracht.dot,
-    bg: LAAG_KLEUREN.leerkracht.vlak,
-    border: LAAG_KLEUREN.leerkracht.rand,
-    tag: "Op factuur",
-    features: [
-      { text: "Alle leerkrachten van de school onder één beheer" },
-      { text: "Schooldashboard over alle groepen (directie/IB'er)" },
-      { text: "School-logo op toetsen en oefenbladen" },
-      { text: "Klasrapportage + export" },
-      { text: "Verwerkersovereenkomst, factuur-betaling en support" },
-      { text: "Nooit reclame" },
-    ],
-  },
+  // School-plan VERVALLEN (Mark 2 okt 2026): scholen gratis, gegarandeerd t/m 2031 —
+  // geen keuze-kaart, geen proefperiode meer voor leerkrachten.
 ];
 
 export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin, onTrialStarted, subscription }) {
-  const [selected, setSelected] = useState(defaultPlan || "teacher_pro");
+  const [selected, setSelected] = useState(PLANS.some(p => p.id === defaultPlan) ? defaultPlan : "parent_pro");
   const [email, setEmail] = useState(authUser?.email || "");
   const [sent, setSent] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -117,8 +99,8 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
           </div>
           <div style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
             {/* Elk laag-woord in z'n eigen tier-kleur — hier leert de bezoeker de kleurtaal */}
-            De basis blijft gratis t/m zeker 2031. Daarnaast komen er twee extra's: <strong style={{ color: LAAG_KLEUREN.familie.tekst }}>Familie</strong> (één
-            klein bedrag per gezín). Bent u een school? Dan is er een <strong style={{ color: LAAG_KLEUREN.leerkracht.tekst }}>schoollicentie</strong> op aanvraag.
+            De basis blijft gratis t/m zeker 2031. Daarnaast komt er één extra voor thuis: <strong style={{ color: LAAG_KLEUREN.familie.tekst }}>Familie</strong> (één
+            klein bedrag per gezín). Bent u een school? Voor <strong style={{ color: LAAG_KLEUREN.leerkracht.tekst }}>scholen</strong> is {BRAND.name} gratis — gegarandeerd t/m 2031 — zodat leerkrachten het ook in de klas kunnen gebruiken.
           </div>
         </div>
 
@@ -144,7 +126,8 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
               <span aria-hidden="true" style={{ width: 8, height: 8, borderRadius: "50%", background: kleur.dot, display: "inline-block", flexShrink: 0 }} />
               {laag.icon} {laag.naam}
               <span style={{ fontFamily: "var(--font-body)", fontSize: 11, fontWeight: 700, color: "rgba(255,255,255,0.45)" }}>{laag.wie}</span>
-              <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, color: "#69f0ae" }}>nu nog gratis</span>
+              {/* 2 okt 2026: school = gratis t/m 2031, geen "nu nog" */}
+              <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 11.5, fontWeight: 700, color: "#69f0ae" }}>{laag.id === "leerkracht" ? "gratis t/m 2031" : "nu nog gratis"}</span>
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>{laag.prijs}</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
@@ -154,7 +137,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
                     <span aria-hidden="true" style={{ fontSize: 17 }}>{f.icon}</span>
                     <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "var(--color-text-strong)" }}>{f.label}</span>
                     <span style={{ marginLeft: "auto", fontFamily: "var(--font-body)", fontSize: 10.5, fontWeight: 700, color: f.status === "live" ? "#69f0ae" : "rgba(255,255,255,0.4)" }}>
-                      {f.status === "live" ? "✓ nu gratis" : "binnenkort"}
+                      {f.status === "live" ? (laag.id === "leerkracht" ? "✓ gratis" : "✓ nu gratis") : "binnenkort"}
                     </span>
                   </div>
                   <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>{f.blurb}</div>
@@ -174,7 +157,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             Nu (per-kwartier-model, paywall uit) verbergen we de oude
             maand/jaar-prijzen om geen tegenstrijdige belofte te doen. */}
         {PAYWALL_ACTIVE && (<>
-        {/* Plan selector — één rij: Familie / School (Pro-bijlesdocent geschrapt 22 sep 2026) */}
+        {/* Plan selector — alleen Familie (Pro-bijlesdocent geschrapt 22 sep, School gratis sinds 2 okt 2026) */}
         <div style={{ display: "flex", gap: 6, marginBottom: 8 }}>
           {PLANS.map(p => (
             <button key={p.id} onClick={() => setSelected(p.id)} style={{
@@ -191,9 +174,9 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             </button>
           ))}
         </div>
-        {/* School-first-regel (PRIJSPLAN §3): de juf zelf betaalt nooit. */}
+        {/* Scholen gratis (Mark 2 okt 2026): de juf en de school betalen nooit. */}
         <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 16, lineHeight: 1.5 }}>
-          Leerkracht met je eigen klas? Lesgeven met {BRAND.name} blijft gratis t/m zeker 2031. De schoollicentie is voor scholen die meer willen (dashboard over alle groepen, logo, rapportage) — prijs op aanvraag.
+          Leerkracht of school? Voor scholen is {BRAND.name} gratis, zodat leerkrachten het ook in de klas kunnen gebruiken — gegarandeerd t/m 2031. Een verwerkersovereenkomst krijgt u gratis op aanvraag.
         </div>
 
         {/* Plan detail kaart */}
@@ -302,7 +285,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
               🔔 Ontvang een berichtje bij lancering
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.4)", marginBottom: 12 }}>
-              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis; daarnaast komt er een Familie-pakket per gezín (eenmalig betalen, het stopt vanzelf — nooit stiekem doorlopen) en een schoollicentie voor scholen (op aanvraag). We sturen je één berichtje als het zover is.
+              Leerkwartier is gratis &amp; onbeperkt t/m 2026. Vanaf 2027 blijft de basis gratis; daarnaast komt er een Familie-pakket per gezín (eenmalig betalen, het stopt vanzelf — nooit stiekem doorlopen). Voor scholen is {BRAND.name} gratis, gegarandeerd t/m 2031. We sturen je één berichtje als het zover is.
             </div>
             <input
               type="email"
