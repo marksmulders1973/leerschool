@@ -3973,6 +3973,30 @@
     "estimatedMinutes": 20
   },
   {
+    "id": "in-de-klas-2-nieuwkomers",
+    "file": "./inDeKlas2Nieuwkomers.js",
+    "title": "In de klas 2 — zelf werken en fijne gevoelens (nieuwkomers)",
+    "subject": "taal",
+    "level": "groep3-4",
+    "emoji": "📒",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Mondelinge taalvaardigheid — schooltaal",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "in de klas",
+      "schooltaal",
+      "zelfstandig werken",
+      "ik ben klaar",
+      "gevoelens",
+      "nt2"
+    ],
+    "intro": "Zelf aan het werk, wat je doet als je klaar bent, wat je doet als de juf bezig is, en hoe je zegt dat je je fijn voelt. Met steun in je eigen taal. ~10 min.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "in-de-klas-nieuwkomers",
     "file": "./inDeKlasNieuwkomers.js",
     "title": "In de klas — Nederlands voor de eerste weken (nieuwkomers)",
