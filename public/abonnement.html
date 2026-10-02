@@ -83,6 +83,31 @@
   nav.lk-breadcrumb { font-size: .85em; opacity: .7; margin-bottom: 1.5em; }
   nav.lk-breadcrumb a { color: #80deea; }
   footer { margin-top: 3em; padding-top: 1.5em; border-top: 1px solid #2a3f5f; font-size: .85em; opacity: .75; }
+  /* Bovenblok (2 okt 2026) */
+  .lk-top { display: grid; grid-template-columns: 1fr 280px; gap: 18px; align-items: center; margin: .5em 0 1.2em; padding: 22px 22px 18px; border-radius: 18px; border: 2px solid rgba(255,213,79,.55); background: linear-gradient(135deg, rgba(255,213,79,.12), rgba(30,45,70,.7)); }
+  .lk-top h1 { font-size: 2em; margin: .2em 0 .3em; }
+  .lk-prijs-rij { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .lk-prijs-groot { font-size: 2.6em; font-weight: 900; color: #fff; line-height: 1; }
+  .lk-prijs-uitleg { font-size: .95em; opacity: .9; line-height: 1.35; }
+  .lk-per-maand { display: inline-block; margin-top: 4px; padding: 2px 10px; border-radius: 999px; background: #ffd54f; color: #0b1224; font-weight: 800; font-size: .9em; }
+  .lk-vink { list-style: none; padding: 0; margin: 6px 0 14px; }
+  .lk-vink li { position: relative; padding: 5px 0 5px 30px; font-size: 1.02em; }
+  .lk-vink li::before { content: "✓"; position: absolute; left: 0; top: 4px; width: 21px; height: 21px; border-radius: 50%; background: #00c853; color: #fff; font-weight: 900; font-size: 13px; display: flex; align-items: center; justify-content: center; }
+  #koop-blok button { width: 100%; max-width: 380px; padding: 15px 18px; border-radius: 14px; border: none; background: #ffd54f; color: #0b1224; font-size: 1.1em; font-weight: 900; cursor: pointer; box-shadow: 0 4px 0 #c9a227; }
+  #koop-blok button:active { transform: translateY(2px); box-shadow: 0 2px 0 #c9a227; }
+  .lk-onder-knop { margin-top: 8px; font-size: .92em; font-weight: 700; color: #69f0ae; }
+  #koop-msg { margin-top: 6px; font-size: .9em; }
+  .lk-klein { margin: 10px 0 0; font-size: .8em; opacity: .75; }
+  .lk-klein a { color: inherit; }
+  .lk-top-beeld { text-align: center; }
+  .lk-top-beeld img { width: 150%; max-width: 420px; height: auto; margin: -60px -25% -50px; }
+  .lk-beeld-tekst { margin-top: 8px; font-size: .9em; font-weight: 700; opacity: .9; }
+  .lk-minder { margin: 0 0 1.4em; padding: 14px 18px; border-radius: 12px; border: 1px solid rgba(0,200,83,.35); background: rgba(0,200,83,.06); font-size: .95em; }
+  .lk-minder strong { color: #69f0ae; display: block; margin-bottom: 2px; }
+  .lk-minder a { color: #69f0ae; }
+  .lk-meer { margin: 1.2em 0; background: rgba(30,45,70,.4); border: 1px solid #2a3f5f; border-radius: 12px; padding: 14px 18px; }
+  .lk-meer summary { font-weight: 800; cursor: pointer; color: #00d4ff; }
+  @media (max-width: 640px) { .lk-top { grid-template-columns: 1fr; padding: 18px 16px; } .lk-top-beeld { order: -1; } .lk-top-beeld img { width: 100%; max-width: 300px; margin: -50px auto -40px; } .lk-top h1 { font-size: 1.6em; } }
 </style>
 </head>
 <body>
@@ -91,115 +116,99 @@
   <a href="/">Leerkwartier</a> › Prijzen &nbsp;·&nbsp; <a href="/gratis.html">Wat is gratis?</a>
 </nav>
 
-<header>
-  <h1>Leerkwartier — prijzen</h1>
-</header>
+<!-- Opbouw 2 okt 2026 (Mark: "kunnen we hier nog iets van leren?" na het bekijken van een prijspagina
+     elders): één grote kop, meteen de knop, vijf korte vinkjes, "eerst proberen" onder de knop, de prijs
+     per maand klein erbij, en onderaan "Minder te besteden?". Oude uitleg ingeklapt onder "Meer uitleg". -->
+<section class="lk-top" id="familie">
+  <div class="lk-top-tekst">
+    <span class="lk-tier tier-familie">Familie — voor thuis</span>
+    <header><h1>Alles voor thuis, voor het hele gezin</h1></header>
+    <div class="lk-prijs-rij">
+      <span class="lk-prijs-groot">€ 39</span>
+      <span class="lk-prijs-uitleg">voor 12 maanden, per gezin<br><span class="lk-per-maand">slechts € 3,25 per maand</span></span>
+    </div>
+    <ul class="lk-vink">
+      <li>Zie hoe je kind ervoor staat</li>
+      <li>Elke vrijdag een weekrapport met wat je thuis kunt doen</li>
+      <li>Onbeperkt uitleg van Charley, je AI-buddy</li>
+      <li>Dictee met de woorden van school</li>
+      <li>Voor het hele gezin, tot 3 kinderen</li>
+      <li>Geen abonnement: het stopt vanzelf</li>
+    </ul>
+    <div id="koop-blok">
+      <button type="button" class="koop" data-plan="jaar">Kies Familie — € 39</button>
+    </div>
+    <div class="lk-onder-knop">Tot 1 januari 2027 gratis · daarna 14 dagen geld terug</div>
+    <div id="koop-msg"></div>
+    <p class="lk-klein">Nooit reclame. Betalen met iDEAL/Wero of kaart, je krijgt een factuur per mail.
+      Code gekregen van je gemeente of een organisatie? <a href="/">Vul die eerst in</a>, dan hoef je niet te betalen.
+      Met betalen ga je akkoord met onze <a href="/voorwaarden.html">voorwaarden</a>.</p>
+  </div>
+  <div class="lk-top-beeld">
+    <img src="/maatjes/charley-ai.png" alt="Charley, de AI-buddy van Leerkwartier" width="480" height="510">
+    <div class="lk-beeld-tekst">Hoi, ik ben Charley!<br>Ik leg het uit tot je het snapt.</div>
+  </div>
+</section>
 
-<div class="lk-hero">
-  <strong>📣 Alles gratis tot januari 2027.</strong>
-  <p style="margin: .5em 0 0">
-    Leerkwartier is in 2026 helemaal kosteloos te gebruiken — alle 163 leerpaden,
-    de AI-leerassistent, echte VMBO-examenvragen, examen-modus en de Cito-Doorstroomtoets-simulatie.
-    Geen account nodig, geen verborgen kosten.
-  </p>
-  <p style="margin: .5em 0 0; font-size: .9em; opacity: .85">
-    Vanaf <strong>januari 2027</strong> komt er één betaalde extra voor thuis: <strong>Familie</strong> (één klein
-    bedrag per gezín: €39 voor 12 maanden, één keer betalen en het stopt vanzelf).
-    Bent u een school? Dan is er een schoollicentie op aanvraag. Bestaande gebruikers krijgen vooraf bericht en mogen 30 dagen gratis proberen.
-  </p>
+<div class="lk-minder">
+  <strong>Minder te besteden?</strong>
+  Veel gemeenten, voedselbanken en stichtingen hebben een afspraak met Leerkwartier en geven een code. Vraag ernaar, of
+  <a href="mailto:hallo@leerkwartier.app?subject=Familie%20met%20een%20krappe%20beurs">mail ons</a>: we zoeken samen een oplossing.
+  Oefenen is en blijft gratis, gegarandeerd tot en met 2031.
 </div>
-
-<h2>Wat krijg je nu — gratis</h2>
-<ul class="lk-features">
-  <li>Alle 163 leerpaden voor groep 3 t/m VMBO-4, HAVO/VWO</li>
-  <li>61 authentieke VMBO-examenvragen (economie, Engels, geschiedenis) met didactische uitleg</li>
-  <li>AI-leerassistent — vraag uitleg in je eigen woorden</li>
-  <li>Cito-Doorstroomtoets-simulatie (60-min, 50 vragen)</li>
-  <li>OBLITERATOR-spel als beloning</li>
-  <li>Geen advertenties, geen account-verplichting</li>
-</ul>
-
-<h2>Toekomstige plannen (vanaf januari 2027)</h2>
 
 <div class="lk-grid">
   <div class="lk-card">
     <span class="lk-tier tier-gratis">Gratis</span>
-    <div class="lk-price">€0<small> — t/m zeker 2031</small></div>
+    <div class="lk-price">€ 0<small> — gegarandeerd t/m 2031</small></div>
     <ul class="lk-features">
-      <li><strong>Oefenen voor de Doorstroomtoets blijft gratis</strong> — gegarandeerd t/m 2031, en die garantie verlengen we telkens</li>
-      <li>3 leerpaden per dag</li>
-      <li>Authentieke examenvragen lezen</li>
-      <li>OBLITERATOR-spel</li>
-      <li>AI-bijles: kleine basis-portie per dag</li>
-      <li class="no">Geen examen-modus</li>
+      <li>Elke dag oefenen voor de Doorstroomtoets</li>
+      <li>Uitleg bij elke vraag</li>
+      <li>Een kleine portie AI-uitleg per dag</li>
+      <li>Geen account nodig</li>
       <li><strong>Nooit reclame</strong></li>
     </ul>
-  </div>
-  <div class="lk-card featured" id="familie">
-    <span class="lk-tier tier-familie">Familie — per gezin</span>
-    <div class="lk-price">€39<small> — 12 maanden, per gezin</small></div>
-    <p style="margin: 4px 0; font-size: .85em; opacity: .8">
-      Eén keer betalen, 12 maanden geldig vanaf de dag dat je betaalt — en het
-      <strong>stopt vanzelf</strong>. Geen abonnement, geen kleine lettertjes.
-      Eén prijs per gezín, niet per kind: voor het hele gezin, tot 3 kinderen.
-      Meer kinderen? <a href="mailto:hallo@leerkwartier.app?subject=Familie%20voor%20meer%20dan%203%20kinderen" style="color:inherit">Mail ons</a>, dan regelen we het zonder meerprijs. Nog een jaar erbij? Dat kies je zelf,
-      voor €31.
-    </p>
-    <p style="margin: 6px 0; font-size: .85em; padding: 8px 10px; border-radius: 10px; background: rgba(255,213,79,.12); border: 1px solid rgba(255,213,79,.35)">
-      🐦 <strong>Vroege vogel:</strong> tot 1 januari 2027 is alles nog gratis. Sluit je nu al af,
-      dan gaan je 12 maanden pas in op <strong>1 januari 2027</strong>, zodat je hele 2027 gedekt bent.
-      Je betaalt dus nooit voor maanden die toch al gratis zijn.
-    </p>
-    <ul class="lk-features">
-      <li>Ouder-dashboard met de voortgang van je kinderen (tot 3)</li>
-      <li>Weekrapport per mail</li>
-      <li>Onbeperkt oefenen</li>
-      <li>Examen-simulatie met tijdklok + eindrapport</li>
-      <li>Kwartierplan — persoonlijk stappenplan</li>
-      <li>Dictee met de woorden van school (Charley leest ze voor)</li>
-      <li><strong>Nooit reclame</strong></li>
-    </ul>
-    <div id="koop-blok" style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
-      <button type="button" class="koop" data-plan="jaar" style="flex:1 1 200px;padding:11px 12px;border-radius:12px;border:none;background:linear-gradient(135deg,#2e9e4f,#1f7a3a);color:#fff;font-weight:800;cursor:pointer">Familie — € 39 voor 12 maanden</button>
-    </div>
-    <div id="koop-msg" style="margin-top:8px;font-size:.9em;opacity:.9"></div>
-    <p style="margin:8px 0 0;font-size:.8em;opacity:.75">Code gekregen van je gemeente of een organisatie? <a href="/" style="color:inherit">Vul die eerst in</a>, dan hoef je niet te betalen. <strong>14 dagen bedenktijd:</strong> niet tevreden? Mail ons binnen 14 dagen en je krijgt alles terug, zonder vragen. Je krijgt bij elke betaling een factuur per mail. Er is niets om op te zeggen: het stopt vanzelf. Betalen met iDEAL/Wero of kaart. Met betalen ga je akkoord met onze <a href="/voorwaarden.html" style="color:inherit">voorwaarden</a>.</p>
   </div>
   <div class="lk-card">
     <span class="lk-tier tier-pro">Bent u een school?</span>
     <div class="lk-price">Schoollicentie<small> — op aanvraag</small></div>
     <ul class="lk-features">
-      <li>Schooldashboard: overzicht over alle groepen</li>
-      <li>Eigen (school)logo op toetsen en oefenbladen</li>
-      <li>Onbeperkt toetsen maken + export</li>
-      <li>🤝 5 gezins-plekken thuis cadeau — voor gezinnen die een steuntje kunnen gebruiken</li>
-      <li>Betalen op factuur + verwerkersovereenkomst</li>
+      <li>Overzicht over alle groepen</li>
+      <li>Eigen schoollogo op toetsen en oefenbladen</li>
+      <li>5 gezins-plekken thuis cadeau</li>
       <li>Voor leerkrachten blijft lesgeven met Leerkwartier gratis</li>
-      <li><strong>Nooit reclame</strong></li>
-      <li>Prijs bepalen we samen met de school — mail <a href="mailto:hallo@leerkwartier.app" style="color:inherit">hallo@leerkwartier.app</a></li>
+      <li>Mail <a href="mailto:hallo@leerkwartier.app" style="color:inherit">hallo@leerkwartier.app</a></li>
     </ul>
   </div>
 </div>
+<p style="text-align:center;font-size:.9em;opacity:.8">Gemeente, stichting of andere organisatie? <a href="/voor-organisaties.html">Kijk hier</a>.</p>
 
-<div style="max-width: 640px; margin: 1.2em auto 0; padding: 14px 18px; border: 1px solid rgba(0,200,83,.35); border-radius: 12px; background: rgba(0,200,83,.06)">
-  <strong style="color:#69f0ae">🤝 Code gekregen van uw gemeente of een organisatie?</strong>
-  <p style="margin: .4em 0 0; font-size: .92em; opacity: .9">
-    Heeft uw gemeente of een organisatie (bijvoorbeeld Stichting Leergeld, een voedselbank of een stadspas)
-    een afspraak met Leerkwartier? Gebruik dan de code die u van hen kreeg: dan krijgt uw gezin het
-    Familie-pakket via die afspraak en hoeft u hier niets af te sluiten.
-    <a href="/" style="color:#69f0ae">Code invullen →</a> · <a href="/voor-organisaties.html" style="color:#69f0ae">Voor organisaties →</a>
-  </p>
-</div>
-
-<p style="text-align: center; opacity: .75; font-size: .9em; margin-top: 1em">
-  Bovenstaande indeling is voorlopig; definitieve prijzen volgen vóór de lancering in januari 2027.
-</p>
+<details class="lk-meer">
+  <summary>Meer uitleg over Familie</summary>
+  <p>🐦 <strong>Vroege vogel:</strong> tot 1 januari 2027 is alles nog voor iedereen gratis. Sluit je nu al af,
+    dan gaan je 12 maanden pas in op <strong>1 januari 2027</strong>. Je betaalt dus nooit voor maanden die toch al gratis zijn.</p>
+  <p><strong>Eén keer betalen, het stopt vanzelf.</strong> Er is niets om op te zeggen. Vóór het einde krijg je een mailtje;
+    wil je door, dan kies je zelf voor een nieuw jaar, voor € 31.</p>
+  <p><strong>Per gezin, niet per kind:</strong> tot 3 kinderen. Meer kinderen?
+    <a href="mailto:hallo@leerkwartier.app?subject=Familie%20voor%20meer%20dan%203%20kinderen">Mail ons</a>, dan regelen we het zonder meerprijs.</p>
+  <p><strong>14 dagen bedenktijd:</strong> niet tevreden? Mail ons binnen 14 dagen en je krijgt alles terug, zonder vragen.</p>
+  <p><strong>Alles in Familie:</strong></p>
+  <ul class="lk-features">
+    <li>Ouder-dashboard met de voortgang van je kinderen (tot 3)</li>
+    <li>Weekrapport per mail, elke vrijdag</li>
+    <li>Onbeperkt oefenen en onbeperkt uitleg van Charley</li>
+    <li>Examen-simulatie met tijdklok en eindrapport</li>
+    <li>Dictee met de woorden van school (Charley leest ze voor)</li>
+    <li>Oefenboekje op maat, koelkast-weekschema en een kaart voor thuis</li>
+    <li class="no">Kwartierplan, een persoonlijk stappenplan (binnenkort)</li>
+    <li><strong>Nooit reclame</strong></li>
+  </ul>
+</details>
 
 <div class="lk-waitlist" id="waitlist">
-  <h2 style="margin-top: 0">📬 Hoor het als eerste</h2>
+  <h2 style="margin-top: 0">📬 Liever eerst rustig nadenken?</h2>
   <p style="margin: .5em 0">
-    Krijg een mailtje wanneer Familie live gaat — plus 30 dagen gratis om
-    het uit te proberen.
+    Laat je e-mailadres achter. Vóór 1 januari krijg je één mailtje met wat Familie voor jouw gezin doet. Geen spam.
   </p>
   <form id="waitlist-form">
     <input type="email" name="email" placeholder="je@email.nl" required aria-label="E-mailadres">
