@@ -136,6 +136,7 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
   const [stapLidwoord, setStapLidwoord] = useState(false);
   const [status, setStatus] = useState(null);    // null | "fout" | "goed"
   const [lidFout, setLidFout] = useState(null);
+  const [lidGoed, setLidGoed] = useState(false); // Mark 2 okt 2026: na tikken direct groen/rood zien
   const hint = fouten >= 1 ? letters[0] : null;
   const klokTegels = useRef(new Set()); // tegels die het klokje neerlegde (tellen niet mee voor punten)
   const verdiend = useRef(0);
@@ -181,9 +182,10 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
   useEffect(() => { if (!typen && vol && status == null && !stapLidwoord) controleer(); }, [gekozen]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const kiesLidwoord = (lw) => {
+    if (lidGoed) return;
     if (lw === delen.lidwoord) {
       zeg(`${ZEG.goed} ${woord}.`);
-      setLidFout(null);
+      setLidGoed(true);
       setTimeout(() => onKlaar(fouten === 0 && lidFout == null && hulp === 0, verdiend.current), 1400);
     } else {
       setLidFout(lw);
@@ -251,10 +253,16 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
           <div style={{ fontSize: 30, fontWeight: 800, marginBottom: 10 }}>… {delen.kaal}</div>
           <div style={{ fontSize: 15, marginBottom: 8 }}>{k.welk}</div>
           <div style={{ display: "flex", justifyContent: "center", gap: 14 }}>
-            {["de", "het"].map((lw) => (
-              <button key={lw} type="button" onClick={() => kiesLidwoord(lw)}
-                style={{ ...S.knop, fontSize: 26, padding: "12px 26px", background: lidFout === lw ? "#fdecea" : "#eef4ff", color: "#0f2a44", border: `2px solid ${lidFout === lw ? "#e53935" : "#9db8e8"}` }}>{lw}</button>
-            ))}
+            {["de", "het"].map((lw) => {
+              const goed = lidGoed && lw === delen.lidwoord;
+              const fout = !lidGoed && lidFout === lw;
+              return (
+                <button key={lw} type="button" onClick={() => kiesLidwoord(lw)} aria-pressed={goed || fout}
+                  style={{ ...S.knop, fontSize: 26, padding: "12px 26px", transition: "background .15s, transform .15s",
+                    background: goed ? "#2e9d57" : fout ? "#e53935" : "#eef4ff", color: goed || fout ? "#fff" : "#0f2a44",
+                    border: `2px solid ${goed ? "#1f7a42" : fout ? "#b3261e" : "#9db8e8"}`, transform: goed || fout ? "scale(1.06)" : "none" }}>{lw}</button>
+              );
+            })}
           </div>
         </div>
       )}
