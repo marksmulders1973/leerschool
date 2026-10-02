@@ -6,12 +6,21 @@ name: Ouder-weekrapport (vrijdag 16:00)
 # en sturen alleen als het in Amsterdam echt 16 uur is (zomer-/wintertijd). Het endpoint stempelt
 # admin_meta, dus dubbel versturen kan sowieso niet.
 #
+# 2 okt 2026: de eerste echte vrijdag ging NIET uit — GitHub sloeg beide geplande runs over
+# (de uptime-bewaking op */5 draait in de praktijk ook maar een paar keer per dag). Daarom nu
+# zes startmomenten tussen 14:00 en 16:40 UTC en een venster van 16:00-18:59 Amsterdam: de
+# eerste run die in het venster valt verstuurt, de rest stuit op de datumstempel.
+#
 # Vereist GitHub-secret CRON_SECRET (dezelfde waarde als de Vercel env-var CRON_SECRET).
 
 on:
   schedule:
     - cron: "0 14 * * 5"
+    - cron: "30 14 * * 5"
     - cron: "0 15 * * 5"
+    - cron: "30 15 * * 5"
+    - cron: "10 16 * * 5"
+    - cron: "40 16 * * 5"
   workflow_dispatch:
     inputs:
       echt:
@@ -28,12 +37,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Alleen om 16:00 Amsterdam (of handmatig)
+      - name: Alleen tussen 16:00 en 18:59 Amsterdam (of handmatig)
         id: tijd
         run: |
           UUR=$(TZ=Europe/Amsterdam date +%H)
           echo "Amsterdam-uur: $UUR"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$UUR" = "16" ]; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$UUR" = "16" ] || [ "$UUR" = "17" ] || [ "$UUR" = "18" ]; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
       - name: Weekrapporten versturen
         if: steps.tijd.outputs.go == '1'
         env:
