@@ -33,8 +33,8 @@ const vergelijken = [
   } }),
   v("Lina heeft 2 appels. Tom heeft 6 appels. Wie heeft minder?", ["Lina", "Tom", "Ze hebben evenveel."], 0, "Minder = het kleinere getal. Welk getal is kleiner: 2 of 6?"),
   v("Noor heeft 4 pennen. Adam heeft 4 pennen. Wat is waar?", ["Ze hebben evenveel.", "Noor heeft meer.", "Adam heeft meer."], 0, "Kijk naar de twee getallen. Zijn ze hetzelfde?"),
-  v("Wie heeft de meeste boeken? Eva 3, Omar 8, Mila 5.", ["Omar", "Eva", "Mila"], 0, "De meeste = het allergrootste getal van de drie."),
-  v("Wie heeft de minste stickers? Jan 7, Sara 2, Yusuf 4.", ["Sara", "Jan", "Yusuf"], 0, "De minste = het allerkleinste getal van de drie."),
+  v("Eva heeft 3 boeken. Omar heeft 8 boeken. Mila heeft 5 boeken. Wie heeft de meeste boeken?", ["Omar", "Eva", "Mila"], 0, "De meeste = het allergrootste getal van de drie."),
+  v("Jan heeft 7 stickers. Sara heeft 2 stickers. Yusuf heeft 4 stickers. Wie heeft de minste stickers?", ["Sara", "Jan", "Yusuf"], 0, "De minste = het allerkleinste getal van de drie."),
 ];
 
 const samenWegOver = [

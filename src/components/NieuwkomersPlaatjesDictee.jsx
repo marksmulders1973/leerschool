@@ -136,6 +136,24 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
   const invoer = typen ? getypt.trim().toLowerCase() : gekozen.map((n) => tegels[n].c).join("");
   const vol = typen ? invoer.length > 0 : gekozen.length === letters.length;
 
+  // ⏱️ Klokje (Mark 2 okt 2026: "steeds 3 seconden, dan geeft de computer de eerste letter, dan de tweede…"):
+  // tikt het kind 3 seconden niets, dan legt de app de volgende goede letter neer. Klopt wat er staat niet,
+  // dan haalt hij eerst de laatste letter weg. Een woord met hulp telt niet als ster, wel gewoon als klaar.
+  const [hulp, setHulp] = useState(0);
+  const KLOK_MS = 3000;
+  const klokLoopt = !typen && !stapLidwoord && status == null && !vol;
+  useEffect(() => {
+    if (!klokLoopt) return undefined;
+    const t = setTimeout(() => {
+      const goedTotNu = gekozen.every((n, idx) => tegels[n].c === letters[idx]);
+      if (!goedTotNu) { setGekozen((g) => g.slice(0, -1)); return; }
+      const nodig = letters[gekozen.length];
+      const idx = tegels.findIndex((tg, n) => tg.c === nodig && !gekozen.includes(n));
+      if (idx >= 0) { setGekozen((g) => [...g, idx]); setHulp((h) => h + 1); }
+    }, KLOK_MS);
+    return () => clearTimeout(t);
+  }, [gekozen, klokLoopt]); // eslint-disable-line react-hooks/exhaustive-deps
+
   const controleer = () => {
     if (invoer === delen.kaal.toLowerCase()) {
       setStatus("goed");
@@ -156,7 +174,7 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
     if (lw === delen.lidwoord) {
       zeg(`${ZEG.goed} ${woord}.`);
       setLidFout(null);
-      setTimeout(() => onKlaar(fouten === 0 && lidFout == null), 1400);
+      setTimeout(() => onKlaar(fouten === 0 && lidFout == null && hulp === 0), 1400);
     } else {
       setLidFout(lw);
       zeg(`Nee, het is ${woord}.`);
@@ -186,6 +204,16 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
               return <span key={n} style={S.vak(st)}>{c}</span>;
             })}
           </div>
+          {klokLoopt && (
+            <div style={{ display: "flex", justifyContent: "center", marginTop: -4, marginBottom: 8 }} aria-hidden="true">
+              <style>{`@keyframes lkKlok { from { stroke-dashoffset: 0; } to { stroke-dashoffset: 62.8; } }`}</style>
+              <svg key={`klok-${gekozen.length}`} width="26" height="26" viewBox="0 0 24 24">
+                <circle cx="12" cy="12" r="10" fill="none" stroke="#e3e9f2" strokeWidth="3" />
+                <circle cx="12" cy="12" r="10" fill="none" stroke="#f5b800" strokeWidth="3" strokeLinecap="round"
+                  strokeDasharray="62.8" transform="rotate(-90 12 12)" style={{ animation: `lkKlok ${KLOK_MS}ms linear forwards` }} />
+              </svg>
+            </div>
+          )}
           {typen ? (
             <div style={{ textAlign: "center" }}>
               {hint && <div style={{ fontSize: 14, marginBottom: 6 }}>{hint}…</div>}

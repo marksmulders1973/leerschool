@@ -3422,14 +3422,7 @@ const NIEUWKOMERS_STEUN = {
   "ro": "Adam are mai multe.",
   "bg": "Адам има повече."
  },
- "Wie heeft de meeste boeken? Eva 3, Omar 8, Mila 5.": {
-  "en": "Who has the most books? Eva 3, Omar 8, Mila 5.",
-  "ar": "من عنده أكثر الكتب؟ إيفا 3، عمر 8، ميلا 5.",
-  "uk": "У кого найбільше книжок? Єва 3, Омар 8, Міла 5.",
-  "tr": "En çok kitap kimde? Eva 3, Omar 8, Mila 5.",
-  "ro": "Cine are cele mai multe cărți? Eva 3, Omar 8, Mila 5.",
-  "bg": "Кой има най-много книги? Ева 3, Омар 8, Мила 5."
- },
+ "Eva heeft 3 boeken. Omar heeft 8 boeken. Mila heeft 5 boeken. Wie heeft de meeste boeken?": {"en":"Eva has 3 books. Omar has 8 books. Mila has 5 books. Who has the most books?","ar":"إيفا عندها 3 كتب. عمر عنده 8 كتب. ميلا عندها 5 كتب. من عنده أكثر عدد من الكتب؟","uk":"У Еви 3 книжки. В Омара 8 книжок. У Міли 5 книжок. У кого найбільше книжок?","tr":"Eva'nın 3 kitabı var. Omar'ın 8 kitabı var. Mila'nın 5 kitabı var. En çok kitap kimde?","ro":"Eva are 3 cărți. Omar are 8 cărți. Mila are 5 cărți. Cine are cele mai multe cărți?","bg":"Ева има 3 книги. Омар има 8 книги. Мила има 5 книги. Кой има най-много книги?"},
  "De meeste = het allergrootste getal van de drie.": {
   "en": "The most = the biggest number of the three.",
   "ar": "الأكثر (de meeste) = أكبر عدد من الثلاثة.",
@@ -3462,14 +3455,7 @@ const NIEUWKOMERS_STEUN = {
   "ro": "Mila",
   "bg": "Мила"
  },
- "Wie heeft de minste stickers? Jan 7, Sara 2, Yusuf 4.": {
-  "en": "Who has the fewest stickers? Jan 7, Sara 2, Yusuf 4.",
-  "ar": "من عنده أقل الملصقات؟ يان 7، سارة 2، يوسف 4.",
-  "uk": "У кого найменше наліпок? Ян 7, Сара 2, Юсуф 4.",
-  "tr": "En az çıkartma kimde? Jan 7, Sara 2, Yusuf 4.",
-  "ro": "Cine are cele mai puține abțibilduri? Jan 7, Sara 2, Yusuf 4.",
-  "bg": "Кой има най-малко стикери? Ян 7, Сара 2, Юсуф 4."
- },
+ "Jan heeft 7 stickers. Sara heeft 2 stickers. Yusuf heeft 4 stickers. Wie heeft de minste stickers?": {"en":"Jan has 7 stickers. Sara has 2 stickers. Yusuf has 4 stickers. Who has the fewest stickers?","ar":"يان عنده 7 ملصقات. سارة عندها ملصقان. يوسف عنده 4 ملصقات. من عنده أقل عدد من الملصقات؟","uk":"У Яна 7 наліпок. У Сари 2 наліпки. У Юсуфа 4 наліпки. У кого найменше наліпок?","tr":"Jan'ın 7 çıkartması var. Sara'nın 2 çıkartması var. Yusuf'un 4 çıkartması var. En az çıkartma kimde?","ro":"Jan are 7 abțibilduri. Sara are 2 abțibilduri. Yusuf are 4 abțibilduri. Cine are cele mai puține abțibilduri?","bg":"Ян има 7 стикера. Сара има 2 стикера. Юсуф има 4 стикера. Кой има най-малко стикери?"},
  "De minste = het allerkleinste getal van de drie.": {
   "en": "The fewest = the smallest number of the three.",
   "ar": "الأقل (de minste) = أصغر عدد من الثلاثة.",

@@ -689,11 +689,18 @@
           // Tijdens actief gebruik → wachten tot de app naar de achtergrond gaat
           // (bij een PWA op de telefoon gebeurt dat zodra je wegklikt/scherm sluit),
           // met een vangnet-timer voor het geval dat lang uitblijft.
+          // 2 okt 2026 (Mark: "code invullen moet ik 2 keer doen"): wegnavigeren (bv. de codebalk springt naar
+          // /nieuwkomers) maakt de pagina ook "hidden". Een klaarstaande update herlaadde dan de OUDE url en
+          // brak de sprong af. Tijdens wegnavigeren dus nooit herladen — de nieuwe pagina laadt toch de nieuwe versie.
+          let navigeert = false;
+          window.addEventListener("beforeunload", () => { navigeert = true; });
+          window.addEventListener("pagehide", () => { navigeert = true; });
+          window.addEventListener("pageshow", () => { navigeert = false; }); // terug uit de bfcache: weer normaal
           let reloaded = false;
           navigator.serviceWorker.addEventListener("controllerchange", () => {
             if (reloaded) return;
             reloaded = true;
-            const doReload = () => { try { window.location.reload(); } catch (e) {} };
+            const doReload = () => { if (navigeert) return; try { window.location.reload(); } catch (e) {} };
             // NOOIT herladen tijdens een lopende toets/quiz (audit 16-07): de
             // toets-state is in-memory — een deploy tijdens de 60-min
             // Doorstroomtoets-simulatie gooide anders de hele toets weg.
