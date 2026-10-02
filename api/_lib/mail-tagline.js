@@ -34,12 +34,12 @@ export function familieUrl(plek) {
 
 export function familieRegelText(plek, nu = Date.now()) {
   const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
-  return `Meer uit Leerkwartier halen? Familie: € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.${vroeg} ${familieUrl(plek)}`;
+  return `Meer uit Leerkwartier halen? Kies Familie: € 39 voor 12 maanden, per gezin — geen abonnement, stopt vanzelf.${vroeg} ${familieUrl(plek)}`;
 }
 
 export function familieRegelHtml(plek, { kleur = "#9fb0c6", link = "#ffd54f", nu = Date.now() } = {}) {
   const vroeg = nu < FAMILIE_START_MS ? " Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027." : "";
   return `<p style="font-size:12.5px;line-height:1.6;color:${kleur};margin:0 0 12px;text-align:center;">` +
-    `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Familie: € 39 voor 12 maanden, per gezin</a> — geen abonnement, stopt vanzelf.${vroeg}` +
+    `Meer uit Leerkwartier halen? <a href="${familieUrl(plek)}" style="color:${link};font-weight:700;">Kies Familie: € 39 voor 12 maanden, per gezin</a> — geen abonnement, stopt vanzelf.${vroeg}` +
     `</p>`;
 }

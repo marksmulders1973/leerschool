@@ -2618,7 +2618,7 @@ export default function MijnPagina({
                 </div>
                 <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", lineHeight: 1.5 }}>
                   {authUser?.id
-                    ? "Tik op een naam — je ziet dan meteen de oefentijd en waar dat kind nog aan moet werken. Wil je iemand ook op je eigen telefoon volgen? Koppel hem hieronder met een code."
+                    ? "Tik op een naam — je ziet dan meteen de oefentijd en waar dat kind nog aan moet werken. Wil je iemand ook op je eigen telefoon volgen? Koppel hem hieronder met een code. Zet de juf of meester iets klaar? Met de koppelcode van school ziet je kind dat thuis ook."
                     : "Tik op een naam — je ziet dan meteen de oefentijd en waar dat kind nog aan moet werken. Wil je dit ook op je eigen telefoon zien, met elke maandag een weekrapport? Log in of maak gratis een account — zie hieronder."}
                 </div>
               </Card>

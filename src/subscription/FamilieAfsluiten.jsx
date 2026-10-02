@@ -84,7 +84,7 @@ function FamilieAfsluitenInhoud({ plek, variant = "link", kind = false, tekst, s
 
   const href = familieHref(plek);
   const klik = () => track("familie_klik", { plek: plek || "app", variant });
-  const label = tekst || (variant === "link" ? `Familie afsluiten (${FAMILIE_PRIJS}) →` : `Familie afsluiten — ${FAMILIE_PRIJS}`);
+  const label = tekst || (variant === "link" ? `Kies Familie (${FAMILIE_PRIJS}) →` : `Kies Familie — ${FAMILIE_PRIJS}`);
   const vroeg = voorLancering()
     ? "Tot 1 januari is alles gratis. Sluit je nu af, dan gaan je 12 maanden pas in op 1 januari 2027."
     : "Eén keer betalen, stopt vanzelf. Per gezin, niet per kind.";

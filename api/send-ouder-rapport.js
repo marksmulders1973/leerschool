@@ -291,6 +291,10 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, too
         <a href="${reageerMailto}" style="display:block;text-align:center;background:rgba(255,255,255,0.06);border:1.5px solid #9fb0c6;color:#e8edf5;text-decoration:none;font-weight:800;font-size:14px;padding:10px;border-radius:10px;">✉️ Reageer op dit rapport</a>
         <p style="font-size:11.5px;line-height:1.5;color:#7d8aa0;margin:8px 0 0;">Of stuur gewoon een antwoord op deze mail; die komt aan bij hallo@leerkwartier.app.</p>
       </div>`;
+  // 💬 Eén zin over Leerkwartier, mét toestemming (Mark 2 okt 2026, les uit een prijspagina elders: echte
+  // beoordelingen tonen). Alleen voornaam, alleen als de ouder "ja" zegt; nooit verzonnen.
+  const meningMailto = `mailto:hallo@leerkwartier.app?subject=${encodeURIComponent("Wat ik van Leerkwartier vind")}&body=${encodeURIComponent("Wat ik van Leerkwartier vind (één zin is genoeg):\n\n\n\nMag Leerkwartier deze zin op de website zetten, met alleen mijn voornaam? ja / nee\nMijn voornaam: \n")}`;
+  const meningHtml = `<p style="font-size:13px;line-height:1.6;color:#cdd6e5;margin:0 0 22px;text-align:center;">💬 Wat vind jij van Leerkwartier? <a href="${meningMailto}" style="color:#ffd54f;font-weight:700;">Vertel het in één zin</a> — met jouw toestemming zetten we hem (alleen met je voornaam) op de site.</p>`;
   const html = `<!doctype html><html lang="nl"><body style="margin:0;background:#0a0f1e;font-family:-apple-system,Segoe UI,Roboto,sans-serif;color:#e8edf5;">
   <div style="max-width:520px;margin:0 auto;padding:28px 22px;">
     <div style="font-size:22px;font-weight:800;color:#fff;margin-bottom:6px;">Leerkwartier</div>
@@ -300,12 +304,13 @@ function maakRapportMail(parentEmail, kindSecties, niveauSectie, vriendCode, too
     ${niveauSectie ? `<div style="background:#f4f7fb;color:#1c2840;border-radius:12px;padding:4px 16px 14px;margin-bottom:20px;">${niveauSectie}</div>` : ""}
     <a href="${dashboard}" style="display:block;text-align:center;background:rgba(0,200,83,0.10);border:1.5px solid #00C853;color:#69f0ae;text-decoration:none;font-weight:800;font-size:15px;padding:12px;border-radius:12px;margin-bottom:22px;">📈 Bekijk alles in het ouder-dashboard →</a>
     ${reageerHtml}
+    ${meningHtml}
     ${deelHtml}
     ${toonFamilie ? familieRegelHtml("ouder-rapport") : ""}
     ${mailTaglineHtml()}
     <p style="font-size:12px;line-height:1.6;color:#7d8aa0;margin:0;">Je krijgt dit rapport omdat je op leerkwartier.app een kind aan je account koppelde. Liever geen rapport meer? Zet in het <a href="${dashboard}" style="color:#9fb0c6;">ouder-dashboard</a> de weekmail per kind uit (📩-knopje bij je kind) — de koppeling en je inzicht blijven gewoon bestaan.</p>
   </div></body></html>`;
-  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever iets anders of persoonlijker? Beantwoord deze mail (hallo@leerkwartier.app), Mark leest elk bericht zelf.\n\n${deelText}${toonFamilie ? `\n\n${familieRegelText("ouder-rapport")}` : ""}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
+  const text = `Leerkwartier — wekelijks ouder-rapport\n\n${kindSecties.map((s) => s.text).join("\n")}\nAlles bekijken: ${dashboard}\n\nLiever iets anders of persoonlijker? Beantwoord deze mail (hallo@leerkwartier.app), Mark leest elk bericht zelf.\n\nWat vind jij van Leerkwartier? Vertel het in één zin door te antwoorden; met jouw toestemming zetten we hem (alleen met je voornaam) op de site.\n\n${deelText}${toonFamilie ? `\n\n${familieRegelText("ouder-rapport")}` : ""}\n\nLiever geen rapport meer? Zet de weekmail per kind uit in het ouder-dashboard (koppeling blijft bestaan).`;
   return { onderwerp, html, text };
 }
 
