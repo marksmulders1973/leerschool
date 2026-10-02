@@ -1,3 +1,5 @@
+> ✅ **BESLUIT 2 okt 2026 (Mark): nieuwkomers-pakket = eigen betaald product.** Gratis t/m 31-12-2028 (belofte stond al op /nieuwkomers), vanaf 2029 een betaald pakket per school per jaar, te betalen uit de DUO-bekostiging eerste opvang (zie docs/NIEUWKOMERS-GELD.md). Prijs ruim vooraf bekend, nooit automatisch verlengd. De gewone app blijft gratis voor scholen t/m 2031. Uitleg publiek: voor-leerkrachten.html#gratis-voor-scholen.
+
 # Prijsplan Leerkwartier — drie lagen + tegoed
 
 > ✅ **BESLUIT 2 okt 2026 (Mark): scholen gratis — gegarandeerd t/m 2031.** "Voor scholen is Leerkwartier gratis, zodat leerkrachten het ook in de klas kunnen gebruiken." Gratis voor leerkrachten/scholen: klas laten oefenen, onbeperkt toetsen maken, werkbladen, oefeningen klaarzetten, voortgang per leerling, digibord, eigen schoollogo en export. Verwerkersovereenkomst gratis op aanvraag. De schoollicentie ("op aanvraag") en de "5 gezins-plekken thuis cadeau per klas" vervallen.
