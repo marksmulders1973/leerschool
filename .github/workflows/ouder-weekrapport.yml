@@ -8,8 +8,10 @@ name: Ouder-weekrapport (vrijdag 16:00)
 #
 # 2 okt 2026: de eerste echte vrijdag ging NIET uit — GitHub sloeg beide geplande runs over
 # (de uptime-bewaking op */5 draait in de praktijk ook maar een paar keer per dag). Daarom nu
-# zes startmomenten tussen 14:00 en 16:40 UTC en een venster van 16:00-18:59 Amsterdam: de
+# zes startmomenten tussen 14:00 en 16:40 UTC en een venster vanaf 16:00 Amsterdam: de
 # eerste run die in het venster valt verstuurt, de rest stuit op de datumstempel.
+# Zelfde avond bleek de 16:40-UTC-start pas om 20:57 Amsterdam te draaien (2 u 17 min te laat)
+# -> venster verruimd naar 16:00-21:59.
 #
 # Vereist GitHub-secret CRON_SECRET (dezelfde waarde als de Vercel env-var CRON_SECRET).
 
@@ -37,12 +39,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Alleen tussen 16:00 en 18:59 Amsterdam (of handmatig)
+      - name: Alleen tussen 16:00 en 21:59 Amsterdam (of handmatig)
         id: tijd
         run: |
           UUR=$(TZ=Europe/Amsterdam date +%H)
           echo "Amsterdam-uur: $UUR"
-          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$UUR" = "16" ] || [ "$UUR" = "17" ] || [ "$UUR" = "18" ]; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ] || [ "$UUR" -ge 16 ] && [ "$UUR" -le 21 ]; then echo "go=1" >> "$GITHUB_OUTPUT"; else echo "go=0" >> "$GITHUB_OUTPUT"; fi
       - name: Weekrapporten versturen
         if: steps.tijd.outputs.go == '1'
         env:
