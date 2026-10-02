@@ -16,6 +16,7 @@ import { ZIN_THEMAS, zinnenVan } from "../learnPaths/nieuwkomersZinnen.js";
 import { zeg, zegInTaal, heeftStem, stopZeggen, ZEG } from "../shared/voorleesModus.js";
 import LuisterKnop from "../shared/ui/LuisterKnop.jsx";
 import NieuwkomersPlaatjesDictee from "./NieuwkomersPlaatjesDictee.jsx";
+import { PUNT, PuntenTeller, PuntenUitslag } from "./nieuwkomersPunten.jsx";
 
 const RONDE = 8;
 const schud = (a) => { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
@@ -128,12 +129,14 @@ function maakRonde(items) {
   });
 }
 
-function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false }) {
+function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false, taal = "nl" }) {
   const [ronde, setRonde] = useState(() => maakRonde(items));
   const [i, setI] = useState(0);
   const [gekozen, setGekozen] = useState(null);
   const [fouten, setFouten] = useState(0);        // pogingen fout bij deze vraag
   const score = useRef(0);
+  // ⭐ Punten (Mark 2 okt 2026): 10 per plaatje dat in één keer goed is gekozen.
+  const [punten, setPunten] = useState(0);
   const v = ronde[i];
   const klaar = i >= ronde.length;
 
@@ -145,15 +148,14 @@ function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false }) {
 
   useEffect(() => {
     if (!klaar) return;
-    zeg(`${ZEG.klaar} ${score.current} van ${ronde.length}.`);
-    try { track("nk_luister_klaar", { thema: themaId, soort: zin ? "zinnen" : "woorden", goed: score.current, totaal: ronde.length }); } catch { /* */ }
+    try { track("nk_luister_klaar", { thema: themaId, soort: zin ? "zinnen" : "woorden", goed: score.current, totaal: ronde.length, punten }); } catch { /* */ }
   }, [klaar]); // eslint-disable-line react-hooks/exhaustive-deps
 
   const kies = (w) => {
     if (gekozen === v.doel) return;
     setGekozen(w);
     if (w === v.doel) {
-      if (fouten === 0) score.current += 1;
+      if (fouten === 0) { score.current += 1; setPunten((p) => p + PUNT); }
       zeg(`${ZEG.goed} ${v.doel}.`);
       setTimeout(() => { setI((x) => x + 1); setGekozen(null); setFouten(0); }, 1600);
     } else {
@@ -169,6 +171,7 @@ function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false }) {
         <Kop tekst={titel} onTerug={onTerug} terugLabel={k.terug} />
         <div style={{ ...S.kaart, textAlign: "center" }}>
           <div style={{ fontSize: 26, fontWeight: 800 }}>{k.klaar}</div>
+          <PuntenUitslag punten={punten} max={ronde.length * PUNT} taal={taal} recordKey={`lk_nkl_record_${themaId}`} />
           <div style={{ display: "flex", justifyContent: "center", gap: 6, margin: "12px 0", flexWrap: "wrap" }} aria-label={`${score.current} van ${ronde.length} goed`}>
             {ronde.map((_, n) => (
               <svg key={n} width="30" height="30" viewBox="0 0 24 24" aria-hidden="true">
@@ -176,7 +179,7 @@ function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false }) {
               </svg>
             ))}
           </div>
-          <button type="button" onClick={() => { score.current = 0; setRonde(maakRonde(items)); setI(0); setGekozen(null); setFouten(0); }} style={{ ...S.knop, background: "#2e9d57", color: "#fff" }}>{k.nogEens}</button>
+          <button type="button" onClick={() => { score.current = 0; setPunten(0); setRonde(maakRonde(items)); setI(0); setGekozen(null); setFouten(0); }} style={{ ...S.knop, background: "#2e9d57", color: "#fff" }}>{k.nogEens}</button>
         </div>
       </div>
     );
@@ -193,6 +196,7 @@ function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false }) {
           </svg>
         </button>
         <span style={{ fontSize: 15, opacity: 0.8 }}>{i + 1} / {ronde.length}</span>
+        <PuntenTeller punten={punten} taal={taal} />
       </div>
       <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 12 }}>
         {v.opties.map((w) => {
@@ -235,11 +239,11 @@ export default function NieuwkomersLuisterKies({ taal = "nl", beginSoort = "kies
       const items = zinItems(thema);
       return zinDeel === "kaarten"
         ? <Kaarten titel={thema.thema} items={items} k={k} onTerug={terug} taal={taal} zin />
-        : <LuisterEnKies themaId={`zin-${thema.id}`} titel={thema.thema} items={items} k={k} onTerug={terug} zin />;
+        : <LuisterEnKies themaId={`zin-${thema.id}`} titel={thema.thema} items={items} k={k} onTerug={terug} zin taal={taal} />;
     }
     const items = woordItems(thema);
     return soort === "kaarten"
-      ? <Kaarten titel={thema.thema} items={items} k={k} onTerug={terug} />
+      ? <Kaarten titel={thema.thema} items={items} k={k} onTerug={terug} taal={taal} />
       : <LuisterEnKies themaId={thema.id} titel={thema.thema} items={items} k={k} onTerug={terug} />;
   }
 

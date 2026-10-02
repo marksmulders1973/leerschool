@@ -24,13 +24,13 @@ const splits = (woord) => { const m = String(woord).match(/^(de|het)\s+([a-z]+)$
 // Ontbreekt een woord of taal, dan is er geen eigen-taal-stand voor dat woord.
 
 const KOP = {
-  nl: { nl: "Nederlands", eigen: "Mijn taal", typen: "Zelf typen", tegels: "Letters", welk: "de of het?", nogEens: "Nog een keer", klaar: "Klaar!", check: "Klaar" },
-  en: { nl: "Dutch", eigen: "My language", typen: "Type it", tegels: "Letters", welk: "de or het?", nogEens: "Again", klaar: "Done!", check: "Done" },
-  ar: { nl: "الهولندية", eigen: "لغتي", typen: "اكتب بنفسك", tegels: "حروف", welk: "de أو het؟", nogEens: "مرة أخرى", klaar: "انتهيت!", check: "تمّ" },
-  uk: { nl: "Нідерландська", eigen: "Моя мова", typen: "Набрати самому", tegels: "Літери", welk: "de чи het?", nogEens: "Ще раз", klaar: "Готово!", check: "Готово" },
-  tr: { nl: "Hollandaca", eigen: "Benim dilim", typen: "Kendin yaz", tegels: "Harfler", welk: "de mi het mi?", nogEens: "Bir daha", klaar: "Bitti!", check: "Tamam" },
-  ro: { nl: "Olandeză", eigen: "Limba mea", typen: "Scrie singur", tegels: "Litere", welk: "de sau het?", nogEens: "Încă o dată", klaar: "Gata!", check: "Gata" },
-  bg: { nl: "Нидерландски", eigen: "Моят език", typen: "Напиши сам", tegels: "Букви", welk: "de или het?", nogEens: "Още веднъж", klaar: "Готово!", check: "Готово" },
+  nl: { nl: "Nederlands", eigen: "Mijn taal", typen: "Zelf typen", tegels: "Letters", welk: "de of het?", nogEens: "Nog een keer", klaar: "Klaar!", check: "Klaar", pt: "punten", uit: "Je hebt {a} van de {b} punten verdiend!", rec: "Je record: {r} punten", nieuw: "Nieuw record!", lof: ["Super gedaan!","Goed bezig!","Goed geoefend! Probeer het nog eens."] },
+  en: { nl: "Dutch", eigen: "My language", typen: "Type it", tegels: "Letters", welk: "de or het?", nogEens: "Again", klaar: "Done!", check: "Done", pt: "points", uit: "You earned {a} of {b} points!", rec: "Your record: {r} points", nieuw: "New record!", lof: ["Great job!","Well done!","Good practice! Try again."] },
+  ar: { nl: "الهولندية", eigen: "لغتي", typen: "اكتب بنفسك", tegels: "حروف", welk: "de أو het؟", nogEens: "مرة أخرى", klaar: "انتهيت!", check: "تمّ", pt: "نقاط", uit: "لقد ربحت {a} من {b} نقطة!", rec: "رقمك القياسي: {r} نقطة", nieuw: "رقم قياسي جديد!", lof: ["عمل رائع!","أحسنت!","تدريب جيد! حاول مرة أخرى."] },
+  uk: { nl: "Нідерландська", eigen: "Моя мова", typen: "Набрати самому", tegels: "Літери", welk: "de чи het?", nogEens: "Ще раз", klaar: "Готово!", check: "Готово", pt: "балів", uit: "Ти заробив {a} з {b} балів!", rec: "Твій рекорд: {r} балів", nieuw: "Новий рекорд!", lof: ["Чудово!","Молодець!","Гарне тренування! Спробуй ще раз."] },
+  tr: { nl: "Hollandaca", eigen: "Benim dilim", typen: "Kendin yaz", tegels: "Harfler", welk: "de mi het mi?", nogEens: "Bir daha", klaar: "Bitti!", check: "Tamam", pt: "puan", uit: "{b} puanın {a} tanesini kazandın!", rec: "Rekorun: {r} puan", nieuw: "Yeni rekor!", lof: ["Harika!","Aferin!","İyi çalıştın! Bir daha dene."] },
+  ro: { nl: "Olandeză", eigen: "Limba mea", typen: "Scrie singur", tegels: "Litere", welk: "de sau het?", nogEens: "Încă o dată", klaar: "Gata!", check: "Gata", pt: "puncte", uit: "Ai câștigat {a} din {b} puncte!", rec: "Recordul tău: {r} puncte", nieuw: "Record nou!", lof: ["Super!","Bravo!","Ai exersat bine! Mai încearcă o dată."] },
+  bg: { nl: "Нидерландски", eigen: "Моят език", typen: "Напиши сам", tegels: "Букви", welk: "de или het?", nogEens: "Още веднъж", klaar: "Готово!", check: "Готово", pt: "точки", uit: "Спечели {a} от {b} точки!", rec: "Твоят рекорд: {r} точки", nieuw: "Нов рекорд!", lof: ["Супер!","Браво!","Добре се упражни! Опитай пак."] },
 };
 
 const S = {
@@ -65,6 +65,11 @@ export default function NieuwkomersPlaatjesDictee({ thema, taal = "nl" }) {
   const [ronde, setRonde] = useState(maakRonde);
   const [i, setI] = useState(0);
   const score = useRef(0);
+  // ⭐ Punten (Mark 2 okt 2026): 10 per letter die het kind zelf goed legt, vóór het klokje. Klok-letters = 0, fout = 0 (geen minpunten).
+  const PUNT = 10;
+  const [punten, setPunten] = useState(0);
+  const maxPunten = useMemo(() => ronde.reduce((n, w) => n + (splits(w)?.kaal.length || 0) * PUNT, 0), [ronde]);
+  const [uitslag, setUitslag] = useState(null); // { record, nieuw }
   const klaar = i >= ronde.length;
   const woord = ronde[i];
   const delen = woord ? splits(woord) : null;
@@ -80,20 +85,30 @@ export default function NieuwkomersPlaatjesDictee({ thema, taal = "nl" }) {
   useEffect(() => { if (klaar) return undefined; const t = setTimeout(vraag, 350); return () => { clearTimeout(t); stopZeggen(); }; }, [i, ronde, echteStand]); // eslint-disable-line react-hooks/exhaustive-deps
   useEffect(() => {
     if (!klaar) return;
-    zeg(`${ZEG.klaar} ${score.current} van ${ronde.length}.`);
-    try { track("nk_dictee_klaar", { thema: thema.id, stand: echteStand, goed: score.current, totaal: ronde.length, typen: typen ? 1 : 0 }); } catch { /* */ }
+    const recKey = `lk_nkd_record_${thema.id}`;
+    let oud = 0; try { oud = Number(localStorage.getItem(recKey)) || 0; } catch { /* */ }
+    const nieuw = punten > oud;
+    if (nieuw) { try { localStorage.setItem(recKey, String(punten)); } catch { /* */ } }
+    setUitslag({ record: Math.max(oud, punten), nieuw: nieuw && oud > 0 });
+    const pct = maxPunten ? punten / maxPunten : 0;
+    zeg(`Je hebt ${punten} van de ${maxPunten} punten verdiend. ${pct >= 0.9 ? "Super gedaan!" : pct >= 0.6 ? "Goed bezig!" : "Goed geoefend!"}`);
+    try { track("nk_dictee_klaar", { thema: thema.id, stand: echteStand, goed: score.current, totaal: ronde.length, typen: typen ? 1 : 0, punten, max: maxPunten }); } catch { /* */ }
   }, [klaar]); // eslint-disable-line react-hooks/exhaustive-deps
 
   if (klaar) {
     return (
       <div style={{ ...S.kaart, textAlign: "center" }}>
         <div style={{ fontSize: 26, fontWeight: 800 }}>{k.klaar}</div>
+        <div style={{ fontSize: 40, fontWeight: 900, color: "#e0a800", marginTop: 6 }}>{punten} <span style={{ fontSize: 18, color: "#0f2a44" }}>/ {maxPunten}</span></div>
+        <div style={{ fontSize: 17, fontWeight: 800, marginTop: 2 }} dir="auto">{k.uit.replace("{a}", punten).replace("{b}", maxPunten)}</div>
+        <div style={{ fontSize: 16, marginTop: 4 }} dir="auto">{k.lof[maxPunten && punten / maxPunten >= 0.9 ? 0 : maxPunten && punten / maxPunten >= 0.6 ? 1 : 2]}</div>
+        {uitslag && <div style={{ fontSize: 14, marginTop: 6, color: uitslag.nieuw ? "#2e9d57" : "#5a6a86", fontWeight: uitslag.nieuw ? 800 : 600 }} dir="auto">{uitslag.nieuw ? k.nieuw + " " : ""}{k.rec.replace("{r}", uitslag.record)}</div>}
         <div style={{ display: "flex", justifyContent: "center", gap: 6, margin: "12px 0", flexWrap: "wrap" }} aria-label={`${score.current} van ${ronde.length} goed`}>
           {ronde.map((_, n) => (
             <svg key={n} width="30" height="30" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.8l2.8 5.8 6.3.9-4.6 4.4 1.1 6.3L12 17.2l-5.6 3 1.1-6.3L2.9 9.5l6.3-.9z" fill={n < score.current ? "#f5b800" : "#dfe5ee"} /></svg>
           ))}
         </div>
-        <button type="button" onClick={() => { score.current = 0; setRonde(maakRonde()); setI(0); }} style={{ ...S.knop, background: "#2e9d57", color: "#fff" }}>{k.nogEens}</button>
+        <button type="button" onClick={() => { score.current = 0; setPunten(0); setUitslag(null); setRonde(maakRonde()); setI(0); }} style={{ ...S.knop, background: "#2e9d57", color: "#fff" }}>{k.nogEens}</button>
       </div>
     );
   }
@@ -113,13 +128,13 @@ export default function NieuwkomersPlaatjesDictee({ thema, taal = "nl" }) {
       </div>
       <Opgave key={`${i}-${woord}-${typen}`} woord={woord} delen={delen} k={k} typen={typen}
         eigenWoord={echteStand === "eigen" ? eigenWoord : null} toonEigen={echteStand === "eigen" && !stemOk}
-        nr={i + 1} totaal={ronde.length} onVraag={vraag}
-        onKlaar={(zonderFout) => { if (zonderFout) score.current += 1; setI((x) => x + 1); }} />
+        nr={i + 1} totaal={ronde.length} onVraag={vraag} punten={punten} ptLabel={k.pt}
+        onKlaar={(zonderFout, verdiend) => { if (zonderFout) score.current += 1; setPunten((p) => p + (verdiend || 0)); setI((x) => x + 1); }} />
     </div>
   );
 }
 
-function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onVraag, onKlaar }) {
+function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onVraag, onKlaar, punten = 0, ptLabel = "punten" }) {
   const letters = useMemo(() => [...delen.kaal.toLowerCase()], [delen.kaal]);
   const tegels = useMemo(() => {
     const extra = schud([...ABC].filter((c) => !letters.includes(c))).slice(0, 2);
@@ -132,6 +147,10 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
   const [status, setStatus] = useState(null);    // null | "fout" | "goed"
   const [lidFout, setLidFout] = useState(null);
   const hint = fouten >= 1 ? letters[0] : null;
+  const klokTegels = useRef(new Set()); // tegels die het klokje neerlegde (tellen niet mee voor punten)
+  const verdiend = useRef(0);
+  // live: letters die het kind zelf op de goede plek legde (nog niet "verdiend" tot het woord klopt)
+  const liveZelf = status === "goed" || stapLidwoord ? verdiend.current / 10 : typen ? 0 : gekozen.filter((n, idx) => tegels[n].c === letters[idx] && !klokTegels.current.has(n)).length;
 
   const invoer = typen ? getypt.trim().toLowerCase() : gekozen.map((n) => tegels[n].c).join("");
   const vol = typen ? invoer.length > 0 : gekozen.length === letters.length;
@@ -149,7 +168,7 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
       if (!goedTotNu) { setGekozen((g) => g.slice(0, -1)); return; }
       const nodig = letters[gekozen.length];
       const idx = tegels.findIndex((tg, n) => tg.c === nodig && !gekozen.includes(n));
-      if (idx >= 0) { setGekozen((g) => [...g, idx]); setHulp((h) => h + 1); }
+      if (idx >= 0) { klokTegels.current.add(idx); setGekozen((g) => [...g, idx]); setHulp((h) => h + 1); }
     }, KLOK_MS);
     return () => clearTimeout(t);
   }, [gekozen, klokLoopt]); // eslint-disable-line react-hooks/exhaustive-deps
@@ -157,6 +176,7 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
   const controleer = () => {
     if (invoer === delen.kaal.toLowerCase()) {
       setStatus("goed");
+      verdiend.current = (typen ? letters.length : gekozen.filter((n) => !klokTegels.current.has(n)).length) * 10;
       zeg(`${ZEG.goed} ${delen.kaal}.`);
       setTimeout(() => { setStapLidwoord(true); zeg(`De ${delen.kaal}, of het ${delen.kaal}?`); }, 1300);
       return;
@@ -166,7 +186,7 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
     try { track("nk_dictee_fout", { woord, pogingen: f }); } catch { /* */ }
     if (f >= 2) zeg(`Luister goed. ${delen.kaal}.`, { rate: 0.6 });
     else zeg("Nog niet. Probeer het nog eens.");
-    setTimeout(() => { setStatus(null); setGekozen([]); setGetypt(""); }, 1100);
+    setTimeout(() => { setStatus(null); setGekozen([]); setGetypt(""); klokTegels.current = new Set(); }, 1100);
   };
   useEffect(() => { if (!typen && vol && status == null && !stapLidwoord) controleer(); }, [gekozen]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -174,7 +194,7 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
     if (lw === delen.lidwoord) {
       zeg(`${ZEG.goed} ${woord}.`);
       setLidFout(null);
-      setTimeout(() => onKlaar(fouten === 0 && lidFout == null && hulp === 0), 1400);
+      setTimeout(() => onKlaar(fouten === 0 && lidFout == null && hulp === 0, verdiend.current), 1400);
     } else {
       setLidFout(lw);
       zeg(`Nee, het is ${woord}.`);
@@ -185,6 +205,9 @@ function Opgave({ woord, delen, k, typen, eigenWoord, toonEigen, nr, totaal, onV
     <div style={S.kaart}>
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 4 }}>
         <span style={{ fontSize: 14, opacity: 0.7 }}>{nr} / {totaal}</span>
+        <span style={{ fontSize: 16, fontWeight: 900, color: "#b07d00", background: "#fff7d6", border: "1.5px solid #e0a800", borderRadius: 999, padding: "4px 12px" }} aria-label={`${punten + liveZelf * 10} ${ptLabel}`}>
+          ⭐ {punten + liveZelf * 10}
+        </span>
         <button type="button" onClick={onVraag} aria-label="Luister nog eens" style={{ ...S.knop, background: "#ffd166", padding: "8px 14px", display: "inline-flex" }}><Luidspreker /></button>
       </div>
       <img src={plaatjeVan(woord)} alt="" style={{ width: 170, height: 170, objectFit: "contain", display: "block", margin: "0 auto" }} />
