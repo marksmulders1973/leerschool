@@ -1,3 +1,4 @@
+> ✅ **BESLUIT 2 okt 2026 avond (Mark): nieuwkomers-pakket is ook GRATIS voor scholen (t/m 2031).** Vervangt het besluit hieronder. Reden: de grote concurrent geeft scholen alles gratis en "alleen nieuwkomersscholen betalen" is niet uit te leggen. Verdienen = Familie voor ouders + gemeenten/partners die voor gezinnen betalen (gemeenteplan, Ooievaarspas). Een school betaalt nooit.
 > ✅ **BESLUIT 2 okt 2026 (Mark): nieuwkomers-pakket = eigen betaald product.** Gratis t/m 31-12-2028 (belofte stond al op /nieuwkomers), vanaf 2029 een betaald pakket per school per jaar, te betalen uit de DUO-bekostiging eerste opvang (zie docs/NIEUWKOMERS-GELD.md). Prijs ruim vooraf bekend, nooit automatisch verlengd. De gewone app blijft gratis voor scholen t/m 2031. Uitleg publiek: voor-leerkrachten.html#gratis-voor-scholen.
 
 # Prijsplan Leerkwartier — drie lagen + tegoed

@@ -83,7 +83,7 @@ const T = {
     // 29 sep 2026: de oude zin ("overal een knop Lees voor") klopte niet → nu wat er echt is.
     voorlees: "Kun je nog niet (goed) lezen? Zet bovenaan de knop 'Ik kan nog niet (goed) lezen' aan. Dan leest de app de vragen voor. Tik op een luidspreker: dan hoor je het nog een keer.",
     luisterTip: "Tik op een luidspreker: dan hoor je wat er staat.",
-    juf: "Voor de leerkracht: alles op deze pagina is gratis, ook op het digibord, gegarandeerd tot en met 31 december 2028. Zet de code WELKOMNIEUWKOMER op het bord; ieder kind komt dan hier.",
+    juf: "Voor de leerkracht: alles op deze pagina is gratis, ook op het digibord, gegarandeerd tot en met 2031. Zet de code WELKOMNIEUWKOMER op het bord; ieder kind komt dan hier.",
     terug: "← Terug",
     herhaalKop: "Vandaag herhalen",
     herhaalUitleg: "Woorden en zinnen van eerder. Zo onthoud je ze.",
