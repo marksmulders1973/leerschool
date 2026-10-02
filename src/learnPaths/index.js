@@ -253,6 +253,7 @@ import woorden2Nieuwkomers from "./woorden2Nieuwkomers.js";
 import rekenenTot100Nieuwkomers from "./rekenenTot100Nieuwkomers.js";
 import inDeKlasNieuwkomers from "./inDeKlasNieuwkomers.js";
 import inDeKlas2Nieuwkomers from "./inDeKlas2Nieuwkomers.js";
+import woorden3Nieuwkomers from "./woorden3Nieuwkomers.js";
 import woordenNieuwkomers from "./woordenNieuwkomers.js";
 import continentenWereldPo from "./continentenWereldPo.js";
 import lichaamGezondheidPo from "./lichaamGezondheidPo.js";
@@ -467,6 +468,7 @@ export const ALL_LEARN_PATHS = {
   "rekenen-tot-100-nieuwkomers": rekenenTot100Nieuwkomers,
   "in-de-klas-nieuwkomers": inDeKlasNieuwkomers,
   "in-de-klas-2-nieuwkomers": inDeKlas2Nieuwkomers,
+  "woorden-3-nieuwkomers": woorden3Nieuwkomers,
   "woorden-nieuwkomers": woordenNieuwkomers,
   "continenten-wereld-po": continentenWereldPo,
   "lichaam-gezondheid-po": lichaamGezondheidPo,

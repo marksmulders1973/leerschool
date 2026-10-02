@@ -9184,6 +9184,31 @@
     "estimatedMinutes": 15
   },
   {
+    "id": "woorden-3-nieuwkomers",
+    "file": "./woorden3Nieuwkomers.js",
+    "title": "Woorden 3 — kleuren, vormen, tijd en praten (nieuwkomers)",
+    "subject": "taal",
+    "level": "groep3-4",
+    "emoji": "🎨",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Woordenschat — schooltaalwoorden (LOWAN)",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "kleuren",
+      "vormen",
+      "groot klein",
+      "gisteren vandaag",
+      "schooltaal",
+      "lowan",
+      "nt2"
+    ],
+    "intro": "Kleuren, vormen, groot en klein, waar en wanneer, en woorden om te denken en te vertellen. Met steun in je eigen taal. ~15 min.",
+    "stepCount": 5,
+    "checkCount": 27,
+    "chapterCount": 5,
+    "estimatedMinutes": 15
+  },
+  {
     "id": "woorden-nieuwkomers",
     "file": "./woordenNieuwkomers.js",
     "title": "Woorden — je eerste Nederlandse woorden (nieuwkomers)",

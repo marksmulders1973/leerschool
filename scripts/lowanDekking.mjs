@@ -64,6 +64,9 @@ function komtVoor(w) {
     if (stam.endsWith("z")) { kandidaten.add(stam.slice(0, -1) + "s"); kandidaten.add(stam.slice(0, -1) + "st"); }
   }
   for (const k of kandidaten) if (tokens.has(k)) return true;
+  // Scheidbare werkwoorden: "Ik steek mijn vinger op" telt voor opsteken, "Ik denk even na" voor nadenken.
+  const pre = ["op", "na", "neer", "uit", "af", "mee", "om", "aan", "in"].find((p) => w.startsWith(p) && w.length > p.length + 3);
+  if (pre && tokens.has(pre) && komtVoor(w.slice(pre.length))) return true;
   return false;
 }
 
