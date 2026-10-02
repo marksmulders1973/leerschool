@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Klassenregels met plaatjes om te printen — Leerkwartier</title>
+<meta name="description" content="Gratis klassenregels met plaatjes voor de taalklas en nieuwkomers: ik ben stil, ik werk zelf, we werken samen, ik praat zachtjes en meer. Print op A4 en hang op in de klas.">
+<link rel="canonical" href="https://leerkwartier.app/klassenregels.html">
+<meta name="robots" content="index,follow">
+<style>
+  :root { color-scheme: light; }
+  body { margin: 0; background: #f4f6fb; color: #13203a; font-family: "Segoe UI", system-ui, sans-serif; }
+  main { max-width: 900px; margin: 0 auto; padding: 20px 16px 40px; }
+  .kop { display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap; }
+  h1 { font-size: 26px; margin: 4px 0; }
+  .uitleg { font-size: 15px; margin: 4px 0 14px; color: #3a4a66; }
+  .knop { display: inline-block; padding: 11px 18px; border-radius: 12px; background: #ffd54f; color: #13203a; font-weight: 900; text-decoration: none; border: none; cursor: pointer; font-size: 15px; }
+  .raster { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+  .kaart { background: #fff; border: 3px solid #13203a; border-radius: 16px; padding: 12px 10px 14px; text-align: center; break-inside: avoid; }
+  .kaart img { width: 100%; max-width: 170px; height: 150px; object-fit: contain; }
+  .kaart div { font-size: 22px; font-weight: 800; margin-top: 6px; line-height: 1.2; }
+  .bron { font-size: 11.5px; color: #5a6a86; margin-top: 14px; }
+  .terug { font-size: 13px; }
+  @media (max-width: 640px) { .raster { grid-template-columns: repeat(2, 1fr); } .kaart div { font-size: 18px; } }
+  @media print {
+    @page { size: A4; margin: 10mm; }
+    body { background: #fff; } main { padding: 0; max-width: none; }
+    .geenprint { display: none; }
+    .raster { grid-template-columns: repeat(3, 1fr); gap: 6mm; }
+    .kaart img { height: 40mm; } .kaart div { font-size: 16pt; }
+  }
+</style>
+</head>
+<body>
+<main>
+<div class="kop">
+  <div>
+    <h1>Regels in de klas</h1>
+    <p class="uitleg geenprint">Voor de taalklas en nieuwkomers. Print op A4 en hang op, of knip de kaartjes los. In de app staan dezelfde zinnen met voorlezen en vertaling: <a href="/nieuwkomers">leerkwartier.app/nieuwkomers</a> → Kijken en luisteren → Zinnen.</p>
+  </div>
+  <button class="knop geenprint" onclick="window.print()">Printen</button>
+</div>
+
+<div class="raster">
+  <div class="kaart"><img src="/picto/stil-zijn.svg" alt=""><div>Ik ben stil.</div></div>
+  <div class="kaart"><img src="/picto/luisteren.svg" alt=""><div>Ik luister naar de juf.</div></div>
+  <div class="kaart"><img src="/picto/zelf-werken.svg" alt=""><div>Ik werk zelf.</div></div>
+  <div class="kaart"><img src="/picto/samenwerken.svg" alt=""><div>We werken samen.</div></div>
+  <div class="kaart"><img src="/picto/fluisteren.svg" alt=""><div>Ik praat zachtjes.</div></div>
+  <div class="kaart"><img src="/picto/nadenken.svg" alt=""><div>Ik denk even na.</div></div>
+  <div class="kaart"><img src="/picto/vragen.svg" alt=""><div>Mag ik iets vragen?</div></div>
+  <div class="kaart"><img src="/picto/werkboek.svg" alt=""><div>Ik pak mijn werkboek.</div></div>
+  <div class="kaart"><img src="/picto/klaar.svg" alt=""><div>Ik ben klaar.</div></div>
+  <div class="kaart"><img src="/picto/in-de-rij.svg" alt=""><div>Ik sta in de rij.</div></div>
+  <div class="kaart"><img src="/picto/opruimen.svg" alt=""><div>Ik ruim op.</div></div>
+  <div class="kaart"><img src="/picto/handen-wassen.svg" alt=""><div>Ik was mijn handen.</div></div>
+</div>
+
+<p class="bron">Plaatjes: Mulberry Symbols door Steve Lee (mulberrysymbols.org), licentie CC BY-SA 4.0. Leerkwartier — Een kwartier per dag leren, een leven lang slimmer. leerkwartier.app</p>
+<p class="terug geenprint"><a href="/nieuwkomers-handleiding.html">← Handleiding voor de taalklas</a> · <a href="/voor-leerkrachten.html">Voor leerkrachten</a></p>
+</main>
+</body>
+</html>

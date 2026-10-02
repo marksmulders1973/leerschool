@@ -26,6 +26,7 @@ export const ZIN_THEMAS = [
   { id: "in-de-klas", thema: "In de klas" },
   { id: "samen-spelen", thema: "Samen spelen" },
   { id: "hoe-voel-ik-me", thema: "Hoe voel ik me" },
+  { id: "regels-klas", thema: "Regels in de klas" }, // 2 okt 2026: klassenregels met plaatje (wens taalklas-docent)
 ];
 
 export const KLASZINNEN = [
@@ -80,6 +81,29 @@ export const KLASZINNEN = [
     vertaling: { en: "I am hungry.", ar: "أنا جائع.", uk: "Я хочу їсти.", tr: "Açım.", ro: "Mi-e foame.", bg: "Гладен съм." } },
   { id: "dorst", zin: "Ik heb dorst.", plaatje: P("dorst"), thema: "Hoe voel ik me", groep: "denkwolk",
     vertaling: { en: "I am thirsty.", ar: "أنا عطشان.", uk: "Я хочу пити.", tr: "Susadım.", ro: "Mi-e sete.", bg: "Жаден съм." } },
+  // ── Regels in de klas (2 okt 2026) — plaatjes: Mulberry Symbols (quiet, work_2, group_work, whisper, think, work_book, queue) ──
+  { id: "stil", zin: "Ik ben stil.", plaatje: P("stil-zijn"), thema: "Regels in de klas",
+    vertaling: {en: "I am quiet.",ar: "أنا هادئ.",uk: "Я тихий.",tr: "Sessizim.",ro: "Stau liniștit.",bg: "Тих съм."} },
+  { id: "luister-juf", zin: "Ik luister naar de juf.", plaatje: P("luisteren"), thema: "Regels in de klas",
+    vertaling: {en: "I listen to the teacher.",ar: "أستمع إلى المعلمة.",uk: "Я слухаю вчительку.",tr: "Öğretmeni dinliyorum.",ro: "O ascult pe doamna învățătoare.",bg: "Слушам учителката."} },
+  { id: "zelf-werken", zin: "Ik werk zelf.", plaatje: P("zelf-werken"), thema: "Regels in de klas",
+    vertaling: {en: "I work on my own.",ar: "أعمل بنفسي.",uk: "Я працюю сам.",tr: "Kendi başıma çalışıyorum.",ro: "Lucrez singur.",bg: "Работя сам."} },
+  { id: "samenwerken", zin: "We werken samen.", plaatje: P("samenwerken"), thema: "Regels in de klas",
+    vertaling: {en: "We work together.",ar: "نعمل معًا.",uk: "Ми працюємо разом.",tr: "Birlikte çalışıyoruz.",ro: "Lucrăm împreună.",bg: "Работим заедно."} },
+  { id: "zachtjes", zin: "Ik praat zachtjes.", plaatje: P("fluisteren"), thema: "Regels in de klas",
+    vertaling: {en: "I talk quietly.",ar: "أتكلم بهدوء.",uk: "Я говорю тихо.",tr: "Sessizce konuşuyorum.",ro: "Vorbesc încet.",bg: "Говоря тихо."} },
+  { id: "nadenken", zin: "Ik denk even na.", plaatje: P("nadenken"), thema: "Regels in de klas",
+    vertaling: {en: "I think for a moment.",ar: "أفكر قليلًا.",uk: "Я трохи подумаю.",tr: "Biraz düşünüyorum.",ro: "Mă gândesc puțin.",bg: "Помислям малко."} },
+  { id: "werkboek", zin: "Ik pak mijn werkboek.", plaatje: P("werkboek"), thema: "Regels in de klas", groep: "boek",
+    vertaling: {en: "I get my workbook.",ar: "آخذ كتاب التمارين.",uk: "Я беру свій робочий зошит.",tr: "Çalışma kitabımı alıyorum.",ro: "Îmi iau caietul de lucru.",bg: "Вземам работната си тетрадка."} },
+  { id: "lees-boek", zin: "Ik lees een boek.", plaatje: P("lezen"), thema: "Regels in de klas", groep: "boek",
+    vertaling: {en: "I read a book.",ar: "أقرأ كتابًا.",uk: "Я читаю книжку.",tr: "Kitap okuyorum.",ro: "Citesc o carte.",bg: "Чета книга."} },
+  { id: "klaar", zin: "Ik ben klaar.", plaatje: P("klaar"), thema: "Regels in de klas",
+    vertaling: {en: "I am done.",ar: "انتهيت.",uk: "Я закінчив.",tr: "Bitirdim.",ro: "Am terminat.",bg: "Готов съм."} },
+  { id: "rij", zin: "Ik sta in de rij.", plaatje: P("in-de-rij"), thema: "Regels in de klas",
+    vertaling: {en: "I stand in line.",ar: "أقف في الطابور.",uk: "Я стою в черзі.",tr: "Sırada duruyorum.",ro: "Stau la rând.",bg: "Стоя на опашката."} },
+  { id: "opruimen", zin: "Ik ruim op.", plaatje: P("opruimen"), thema: "Regels in de klas",
+    vertaling: {en: "I tidy up.",ar: "أرتّب.",uk: "Я прибираю.",tr: "Topluyorum.",ro: "Fac ordine.",bg: "Разтребвам."} },
 ];
 
 // Zinnen waarvan de vertaling NIEUW is (niet uit het leerpad "In de klas"): nakijken door een
@@ -89,6 +113,7 @@ export const NAKIJKEN_ZINNEN = [
   "Mag ik een pen?", "Mag ik iets vragen?", "Waar is mijn tas?",
   "Mag ik mijn handen wassen?", "Mag ik mijn jas pakken?", "Stop, ik wil dat niet.",
   "Mag ik schommelen?", "Mag ik de bal?", "Ik moet overgeven.", "Ik ben ziek.", "Ik heb dorst.",
+  "Ik ben stil.", "Ik luister naar de juf.", "Ik werk zelf.", "We werken samen.", "Ik praat zachtjes.", "Ik denk even na.", "Ik pak mijn werkboek.", "Ik lees een boek.", "Ik ben klaar.", "Ik sta in de rij.", "Ik ruim op.",
 ];
 
 /** Zinnen van één thema, in de volgorde hierboven. */
