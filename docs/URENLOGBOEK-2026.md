@@ -47,6 +47,7 @@
 | wo 30 sep | 7 (git/chat 15:15–22:30) | 💳 CRON_SECRET + e-mail-login ingericht, klas-zinnen Hanneke, Stripe deel 1 + live (sleutel, prijzen, webhook, €1-proef met Mark), betaalknop aan, één prijs €39/12 mnd, Familie klikbaar op 20+ plekken, vroege vogel, voorwaarden.html, factuur KOR/logo/geldig-datums (v811-825, 27 commits) |
 | do 1 okt | 1 (chat 08:15–09:30) | 🔐 Stripe-login veiligstellen + 📋 dagrapport 1 okt |
 | do 1 okt | 6 (git/chat 09:30–20:00, met pauzes) | 💻 btw-correctie KOR, voorwaarden/privacy, Stripe-voettekst + logo, taalcontrole hele app (~7.000 fixes via helpers + nalopen, foute antwoorden hersteld), deploy-blokkade opgelost, nieuwkomers apart, Mijn pagina: Wie oefent er? (6 plekken), kind/ouder/leerkracht vereenvoudigd + tegels, Kwartiercheck-plek, quotes naar voor-organisaties (31 commits, v826-853) |
+| vr 2 okt | 3 (chat 06:20–09:45) | 💻 prijspagina vernieuwd (lessen concurrent-site), scholen gratis + leerkrachtenpagina, nieuwkomers: In de klas 2, Woorden 3, handleiding, LOWAN-dekking 66→81%, klassenregels-printvel + Grok-plaatje, nieuwkomers-geld onderzocht + 2028-afspraak, code-fout (update tijdens navigeren), dictee-klokje + punten, Mijn punten; mail taalklas-docent (v858-870) |
 
 ## Week 39 (ma 21 sep – zo 27 sep) — ✅ GOEDGEKEURD door Mark 28 sep 2026 (uit git, 35 u)
 
@@ -172,7 +173,7 @@ maildata vanaf juni.
 | Offline 15% over die 591,5 | ~89 | | vuistregel Mark 28 aug; grote losse klussen (flyers posten, bellen) nog apart door Mark aan te vullen |
 | **Totaal t/m 23 aug (voorstel)** | **~790** | | 80 + 30 + 591,5 + 89 |
 
-**Doorrekening urencriterium 2026 (stand 1 okt avond):** ~995 (30-sep-stand ~981 + 7 u wo-avond + 1 u do-ochtend + 6 u do overdag). Nog ±230 u = ±18 u/week tot 31 dec.
+**Doorrekening urencriterium 2026 (stand 2 okt ochtend):** ~998 (stand 1 okt avond ~995 + 3 u vr-ochtend). Nog ±227 u = ±18 u/week tot 31 dec.
 
 **(oud) Doorrekening urencriterium 2026 (stand 30 sep):** ~790 t/m 23 aug + wk 35-39 goedgekeurd + wk 40 t/m wo ≈ **~981** (29 sep-stand 970 + 8 u sessie 29/30 sep + 3 u wo overdag). Nog ±244 u = ±19 u/week tot 31 dec. (Oude stand 16 sep: ~890.)
 Nog 15 weken × ~25-28 u = ~375-420 → **~1.265-1.310 → de 1.225 wordt gehaald**, mits het huidige ritme
