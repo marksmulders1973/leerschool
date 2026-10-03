@@ -61,7 +61,7 @@ export const STEUNTALEN = [
 
 const T = {
   nl: {
-    kop: "Nieuwkomer-pakket",
+    kop: "Leerkwartier, het startpunt voor nieuwkomers", // Mark 3 okt 2026
     sub: "Gratis. Geen account. Korte zinnen. Elke som met uitleg.",
     taalvraag: "Welke taal spreek je thuis?",
     taaluitleg: "Alles blijft Nederlands. Tik op een zin of op het knopje bij een antwoord. Dan zie je jouw taal.",
