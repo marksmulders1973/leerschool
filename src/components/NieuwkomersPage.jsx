@@ -125,7 +125,7 @@ const T = {
     tipRollen: ["leerkracht", "ouder", "leerling"],
     tipVoorbeeld: "Bijvoorbeeld: deze Arabische zin klopt niet · wij missen de taal Tigrinya · graag meer rekenen",
     tipStuur: "Verstuur",
-    tipDank: "Dank je wel! Mark leest elke tip. Wil je een antwoord? Mail naar hallo@leerkwartier.app.",
+    tipDank: "Dank je wel! We lezen elke tip. Wil je een antwoord? Mail naar hallo@leerkwartier.app.",
     deelTekst: "Gratis Nederlands leren voor nieuwkomers, met hulp in de eigen taal (Arabisch, Oekraïens, Turks, Roemeens, Bulgaars, Engels). Zonder account.",
     deelKopieer: "Deel of kopieer link",
     deelGekopieerd: "Link gekopieerd",

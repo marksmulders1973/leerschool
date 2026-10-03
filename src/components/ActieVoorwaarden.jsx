@@ -127,7 +127,7 @@ export default function ActieVoorwaarden({ onBack, onHome, onDank }) {
             Actievoorwaarden
           </summary>
           <ul style={{ fontFamily: "var(--font-body)", fontSize: 13.5, lineHeight: 1.6, color: "rgba(255,255,255,0.8)", paddingLeft: 18, marginTop: 12 }}>
-            <li><strong>Organisator:</strong> Mark Smulders, Leerkwartier (leerkwartier.app).</li>
+            <li><strong>Organisator:</strong> Leerkwartier (leerkwartier.app, KvK 42176244).</li>
             <li><strong>Deelname is gratis</strong> en zonder aankoopverplichting.</li>
             <li><strong>Hoe meedoen:</strong> deel je persoonlijke link. Elke nieuwe aanmelding voor de gratis oefenmail via jouw link = één lot.</li>
             <li><strong>Actieperiode:</strong> tot en met 31 december 2026.</li>

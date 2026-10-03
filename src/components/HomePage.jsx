@@ -122,7 +122,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
     const t = setInterval(check, 5 * 60 * 1000);
     return () => { stop = true; clearInterval(t); };
   }, []);
-  const isAdmin = (authUser?.email || "").toLowerCase() === "mark-smulders@hotmail.com";
+  const isAdmin = (authUser?.email || "").toLowerCase() === "hallo@leerkwartier.app";
   const [name, setName] = useState(userName);
   const [visitorCount, setVisitorCount] = useState(null);
   // (Park-tokens-haak in de voet weg 30 sep 2026 — zie de voet-links onderaan.)
@@ -1295,7 +1295,7 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <button onClick={sluitFeedback} aria-label="Sluiten" style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 22, cursor: "pointer" }}>×</button>
               </div>
               <p style={{ color: "rgba(255,255,255,0.65)", fontSize: 12, marginBottom: 10, lineHeight: 1.4 }}>
-                Heb je een idee, een fout gevonden of werkt iets niet? Schrijf het hier — Mark leest alle tips zelf.
+                Heb je een idee, een fout gevonden of werkt iets niet? Schrijf het hier — we lezen alle tips zelf.
               </p>
               <div style={{
                 background: "rgba(255,152,0,0.1)", border: "1px solid rgba(255,152,0,0.35)",
