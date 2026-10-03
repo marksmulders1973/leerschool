@@ -1297,7 +1297,7 @@ export default function OuderInzicht({ authUser, subscription, onUpgrade, onLogi
           {/* Kwartierplan (sessie 1, 2026-07-07): doel + startfoto. Bewust
               BOVEN de scores — juist bij een vers gekoppeld kind zonder
               scores is dit de logische eerste actie voor de ouder. */}
-          <KwartierplanSectie authUser={authUser} childName={selectedChild} />
+          <KwartierplanSectie authUser={authUser} childName={selectedChild} linkId={selectedChildVerified?.id || null} />
 
           {/* 🏆 Diploma-kast van dit kind (12 aug): zelfde kast als op /mijn,
               gevoed uit de al geladen childScores — ouder ziet en print de

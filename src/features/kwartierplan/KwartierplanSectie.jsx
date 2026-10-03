@@ -2,14 +2,22 @@
 //
 // Flow voor de ouder: (1) doel zetten — "voor welk niveau gaan jullie
 // oefenen?", (2) startfoto laten maken door het kind, (3) het persoonlijke
-// dag-plan (sessie 2, teaser onderaan). Positieve toon, verplichte
+// weekplan (stap 3, 3 okt 2026: 5 kwartiertjes, met één tik klaarzetten). Positieve toon, verplichte
 // realiteits-disclaimers (geen "je haalt het wel/niet" — ontwerp-doc).
 
 import { useState, useEffect, useRef } from "react";
 import useFocusTrap from "../../shared/hooks/useFocusTrap.js";
 import { loadKwartierplan, saveGoal } from "./kwartierplanRepo.js";
-import { PIJLERS } from "./startfotoBuilder.js";
+import { PIJLERS, weekplanUitFoto } from "./startfotoBuilder.js";
 import Startfoto from "./Startfoto.jsx";
+import { haalKlaargezetVoorLink, zetKlaar, KLAARGEZET_EVENT } from "../../shared/ouderKlaargezet.js";
+import { track } from "../../utils.js";
+
+// Stap 3 (3 okt 2026, "maak alles goed en af"): het weekplan. Vijf kwartiertjes
+// ma-vr uit de aanbevolen paden van de startfoto (zwakste onderdeel eerst). De
+// ouder zet de week met één tik klaar; de lessen staan dan op de pagina van het
+// kind en hier verschijnt een vinkje zodra een les af is (ouder_klaargezet.gedaan).
+
 
 export const TARGET_LEVELS = [
   { id: "vmbo-bb", label: "VMBO basis (BB)" },
@@ -76,7 +84,7 @@ function DoelModal({ childName, goal, onSave, onClose }) {
           <button onClick={onClose} aria-label="Sluiten" style={{ background: "none", border: "none", color: "rgba(255,255,255,0.5)", fontSize: 22, cursor: "pointer", minWidth: "var(--tap-target-min, 44px)", minHeight: "var(--tap-target-min, 44px)" }}>×</button>
         </div>
         <p style={{ fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.6)", lineHeight: 1.5, margin: "0 0 4px" }}>
-          Voor welk niveau gaan jullie oefenen? Dit stuurt de startfoto en straks het dag-plan.
+          Voor welk niveau gaan jullie oefenen? Dit stuurt de startfoto en het weekplan.
         </p>
 
         <label style={label} htmlFor="kwp-level">Niveau waar jullie voor oefenen</label>
@@ -119,12 +127,22 @@ function DoelModal({ childName, goal, onSave, onClose }) {
   );
 }
 
-export default function KwartierplanSectie({ authUser, childName }) {
+export default function KwartierplanSectie({ authUser, childName, linkId = null }) {
   const [goal, setGoal] = useState(null);
   const [laatsteFoto, setLaatsteFoto] = useState(null);
   const [geladen, setGeladen] = useState(false);
   const [toonDoelModal, setToonDoelModal] = useState(false);
   const [toonStartfoto, setToonStartfoto] = useState(false);
+  const [klaargezet, setKlaargezet] = useState([]);
+  const [bezig, setBezig] = useState(false);
+  const herlaadKlaar = () => { if (linkId) haalKlaargezetVoorLink(linkId, "ouder").then(setKlaargezet); };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  useEffect(() => {
+    setKlaargezet([]); herlaadKlaar();
+    const h = () => herlaadKlaar();
+    window.addEventListener(KLAARGEZET_EVENT, h);
+    return () => window.removeEventListener(KLAARGEZET_EVENT, h);
+  }, [linkId]);
 
   // Race-guard (bug-jacht 7/7): bij snel kind-wisselen mag een trage response
   // van het vórige kind de state van het nieuwe kind niet overschrijven.
@@ -156,8 +174,8 @@ export default function KwartierplanSectie({ authUser, childName }) {
         📋 Kwartierplan voor {childName}
       </div>
       <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.6)", lineHeight: 1.5, marginBottom: 14 }}>
-        Samen gericht oefenen: zet een doel, maak een startfoto, en Leerkwartier bouwt
-        daar een 15-minuten-per-dag-plan omheen.
+        Samen gericht oefenen: zet een doel, maak een startfoto, en Leerkwartier maakt
+        daar een weekplan van vijf kwartiertjes van.
       </div>
 
       {/* Stap 1 — doel */}
@@ -207,18 +225,64 @@ export default function KwartierplanSectie({ authUser, childName }) {
         </button>
       </div>
 
-      {/* Stap 3 — teaser */}
-      <div style={{ display: "flex", alignItems: "center", gap: 12, padding: "10px 0 2px", borderTop: "1px solid rgba(255,255,255,0.06)", opacity: 0.55 }}>
-        <span style={{ fontSize: 20 }} aria-hidden="true">🗓️</span>
-        <div style={{ flex: 1 }}>
-          <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "var(--color-text-strong)" }}>
-            Stap 3 — het dag-plan
+      {/* Stap 3 — het weekplan */}
+      {(() => {
+        const plan = weekplanUitFoto(laatsteFoto);
+        const status = new Map(klaargezet.map((k) => [k.path_id, k]));
+        const alKlaar = plan.length > 0 && plan.every((d) => status.has(d.id));
+        const gedaan = plan.filter((d) => status.get(d.id)?.gedaan).length;
+        return (
+          <div style={{ padding: "10px 0 2px", borderTop: "1px solid rgba(255,255,255,0.06)" }}>
+            <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+              <span style={{ fontSize: 20 }} aria-hidden="true">🗓️</span>
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div style={{ fontFamily: "var(--font-display)", fontSize: 13.5, fontWeight: 700, color: "var(--color-text-strong)" }}>
+                  {plan.length ? `Weekplan — ${alKlaar ? `${gedaan} van ${plan.length} gedaan` : "5 kwartiertjes"}` : "Stap 3 — het weekplan"}
+                </div>
+                <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.5)", marginTop: 1 }}>
+                  {plan.length
+                    ? (alKlaar ? `Staat klaar op de pagina van ${childName}. Een vinkje = les af.` : "Eén les per dag, wat het lastigst ging eerst.")
+                    : "Maak eerst de startfoto; daaruit komt het plan."}
+                </div>
+              </div>
+              {plan.length > 0 && linkId && !alKlaar && (
+                <button
+                  disabled={bezig}
+                  onClick={async () => {
+                    setBezig(true);
+                    for (const d of plan) { await zetKlaar(linkId, { id: d.id, titel: d.titel, emoji: d.emoji }, "ouder"); }
+                    try { track("kwartierplan_week_klaargezet", { aantal: plan.length }); } catch { /* */ }
+                    herlaadKlaar(); setBezig(false);
+                  }}
+                  style={{ padding: "9px 14px", borderRadius: 10, border: "1px solid rgba(255,213,79,0.5)", background: "rgba(255,213,79,0.15)", color: "#ffd54f", fontFamily: "var(--font-display)", fontSize: 12.5, fontWeight: 700, cursor: "pointer", whiteSpace: "nowrap", minHeight: "var(--tap-target-min, 44px)" }}
+                >
+                  {bezig ? "Bezig…" : "Zet de week klaar"}
+                </button>
+              )}
+            </div>
+            {plan.length > 0 && (
+              <div style={{ display: "grid", gap: 4, margin: "8px 0 2px 32px" }}>
+                {plan.map((d) => {
+                  const k = status.get(d.id);
+                  return (
+                    <div key={d.id} style={{ display: "flex", alignItems: "center", gap: 8, fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.75)" }}>
+                      <span style={{ width: 24, fontWeight: 800, color: "#ffd54f" }}>{d.dag}</span>
+                      <span aria-hidden="true">{d.emoji}</span>
+                      <span style={{ flex: 1, minWidth: 0 }}>{d.titel}</span>
+                      <span style={{ fontSize: 11.5, fontWeight: 800, color: k?.gedaan ? "#69f0ae" : "rgba(255,255,255,0.35)" }}>{k?.gedaan ? "✓ gedaan" : k ? "klaargezet" : ""}</span>
+                    </div>
+                  );
+                })}
+                {!linkId && (
+                  <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginTop: 2 }}>
+                    Koppel {childName} met de koppelcode, dan zet je de week met één tik klaar en zie je wat af is.
+                  </div>
+                )}
+              </div>
+            )}
           </div>
-          <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.5)", marginTop: 1 }}>
-            Automatisch 15-min-plan uit de startfoto + seintje als het gedaan is — komt in de volgende update.
-          </div>
-        </div>
-      </div>
+        );
+      })()}
 
       {toonDoelModal && (
         <DoelModal

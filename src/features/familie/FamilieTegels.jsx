@@ -8,11 +8,8 @@ import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
 import { track } from "../../utils.js";
 
 // Nog in de maak — sinds 3 okt 2026 als één regel onder de tegels.
-const BINNENKORT = [
-  { emoji: "⏱️", titel: "Hele toets met de klok", tekst: "Een volledige oefentoets met tijdklok en eindrapport." },
-  { emoji: "🧭", titel: "Kwartierplan", tekst: "Een persoonlijk stappenplan van kwartiertjes per week." },
-  { emoji: "🔗", titel: "Voorkennis-keten", tekst: "Per vraag zien welke basiskennis eronder ligt." },
-];
+// 3 okt 2026: leeg — hele toets met de klok en Kwartierplan zijn af, voorkennis-keten is gratis.
+const BINNENKORT = [];
 
 const tegelStijl = {
   display: "flex", flexDirection: "column", alignItems: "flex-start", gap: 4, textAlign: "left",
@@ -47,9 +44,11 @@ export default function FamilieTegels({ onNaar, onOuderDashboard }) {
         ))}
       </div>
       {/* 3 okt 2026: wat nog komt als één regel, niet als grijze tegels (te veel "binnenkort"). */}
-      <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", margin: "10px 0 0 2px", lineHeight: 1.5 }}>
-        In 2027 komt erbij: {BINNENKORT.map((f) => f.titel.toLowerCase()).join(", ")}.
-      </div>
+      {BINNENKORT.length > 0 && (
+        <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", margin: "10px 0 0 2px", lineHeight: 1.5 }}>
+          In 2027 komt erbij: {BINNENKORT.map((f) => f.titel.toLowerCase()).join(", ")}.
+        </div>
+      )}
       <FamilieAfsluiten plek="mijn-ouder-tegels" variant="regel" style={{ marginTop: 12 }} />
     </div>
   );

@@ -37,6 +37,7 @@ import ExamenBronBanner from "../../shared/ui/ExamenBronBanner.jsx";
 import VoorleesBlok from "../../shared/ui/VoorleesBlok.jsx";
 import ExamenPadBanner from "../../shared/ui/ExamenPadBanner.jsx";
 import VoorkennisKeten from "../../shared/ui/VoorkennisKeten.jsx";
+import { haalKlaargezetVoorKind, markeerGedaan } from "../../shared/ouderKlaargezet.js";
 import KwartierPauze, { saveResume, loadResume, clearResume } from "./KwartierPauze.jsx";
 import BronTekstInteractief from "./BronTekstInteractief.jsx";
 import { actieveBuddyPersona } from "../zoo/buddies.js";
@@ -523,6 +524,19 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   useEffect(() => {
     if (mode === "allDone") clearResume(player);
   }, [mode, player]);
+  // 3 okt 2026 (Kwartierplan stap 3): pad af → klaargezette les van ouder of juf
+  // vanzelf op "gedaan", zodat de ouder het vinkje ziet zonder dat het kind
+  // zelf hoeft af te vinken. Stil falen: dit is comfort, geen vereiste.
+  useEffect(() => {
+    if (mode !== "allDone" || naamloos || !pathId) return;
+    let stop = false;
+    haalKlaargezetVoorKind(player).then((rijen) => {
+      if (stop) return;
+      rijen.filter((it) => it.path_id === pathId && !it.gedaan)
+        .forEach((it) => { markeerGedaan(it.id, player, true, it.bron).catch(() => {}); });
+    }).catch(() => {});
+    return () => { stop = true; };
+  }, [mode, player, pathId, naamloos]);
   // SH3 — exact hervatten: kom je binnen op dezelfde plek (zelfde pad + stap),
   // zet dan de bewaarde vraag-positie terug zodra het pad geladen is. Alleen
   // binnen bereik — content kan gewijzigd zijn. NB de checks-volgorde is

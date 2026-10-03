@@ -424,7 +424,15 @@ export default function CitoLeerpadToets({ onBack, onHome, onPickPath, subjectFi
           {/* P0-2 (4-agent-audit 2026-05-18): niveau-advies-banner bij volledige
               50-vragen-simulatie. Score% → indicatie vmbo-bb/kb/tl/havo/vwo.
               Disclaimer: 1 oefen-score = geen advies. */}
-          {simulatieMode && score?.total?.total >= 30 && (() => {
+          {/* 3 okt 2026: geen niveau-indicatie als minder dan 30 vragen beantwoord zijn
+              (vroeg gestopt) — dan een eerlijke regel in plaats van "past bij …". */}
+          {simulatieMode && score?.total?.total >= 30 && answered < 30 && (
+            <div style={{ ...cardStyle(), marginBottom: 14, fontFamily: "var(--font-body)", fontSize: 14, lineHeight: 1.5, color: "rgba(255,255,255,0.8)" }}>
+              Je hebt {answered} van de {questions.length} vragen beantwoord. Dat is te weinig voor een indicatie van het niveau.
+              Maak de toets een keer helemaal af; je ziet hieronder al wel hoe het per onderdeel ging.
+            </div>
+          )}
+          {simulatieMode && score?.total?.total >= 30 && answered >= 30 && (() => {
             const pct = score.total.pct;
             let advies, kleur, emoji, uitleg;
             if (pct >= 85) {

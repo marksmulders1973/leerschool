@@ -81,3 +81,11 @@ export function aanbevolenPaden(perPijlerScores) {
   if (volgorde[1]) paden.push(...padenVoorPijler(volgorde[1].id, 2));
   return paden.slice(0, 5);
 }
+
+// Kwartierplan stap 3 (3 okt 2026): weekplan ma-vr uit de aanbevolen paden van de
+// startfoto — één kwartier per dag, zwakste onderdeel eerst (volgorde van aanbevolenPaden).
+const WEEKDAGEN = ["Ma", "Di", "Wo", "Do", "Vr"];
+export function weekplanUitFoto(foto) {
+  const paden = Array.isArray(foto?.recommended_paths) ? foto.recommended_paths.filter((p) => p && p.id) : [];
+  return paden.slice(0, 5).map((p, i) => ({ dag: WEEKDAGEN[i], id: p.id, titel: p.title || p.titel || "Les", emoji: p.emoji || "📚" }));
+}

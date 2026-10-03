@@ -159,7 +159,8 @@ export const PRO_FEATURES = {
       "Oefen een examen onder echte omstandigheden — met tijdklok en een " +
       "eindrapport dat per onderdeel laat zien wat je nog moet oefenen. " +
       "(Oefenen mét uitleg blijft gewoon gratis.)",
-    status: "binnenkort",
+    // 3 okt 2026: live — Stap 3 op /cito opent weer CitoLeerpadToets simulatieMode.
+    status: "live",
   },
   "kwartierplan": {
     id: "kwartierplan",
@@ -169,7 +170,8 @@ export const PRO_FEATURES = {
     blurb:
       "Een persoonlijk stappenplan: we kijken waar je staat, maken een " +
       "weekplan van kwartiertjes en houden bij hoe het gaat.",
-    status: "binnenkort",
+    // 3 okt 2026: live — doel + startfoto + weekplan (5 kwartiertjes, klaarzetten, vinkjes).
+    status: "live",
   },
   "dictee-school": {
     id: "dictee-school",
@@ -201,7 +203,10 @@ export const PRO_FEATURES = {
     label: "Voorkennis-keten",
     laag: "familie",
     blurb: "Zie per examenvraag welke basiskennis eronder ligt — en oefen precies de zwakste schakel eerst.",
-    status: "binnenkort",
+    status: "live",
+    // 3 okt 2026: werkt al sinds mei in de leerpaden en is GRATIS (oefen-modus) →
+    // niet als Familie-extra tonen; staat nu in PRO_GRATIS_BASIS.
+    verborgen: true,
   },
   "school-dashboard": {
     id: "school-dashboard",
@@ -210,6 +215,8 @@ export const PRO_FEATURES = {
     laag: "leerkracht",
     blurb: "Voortgang van je hele klas in één overzicht, met export voor het rapportgesprek. Voor scholen gratis, gegarandeerd t/m 2031.",
     status: "binnenkort",
+    // 3 okt 2026: niet tonen — voortgang per leerling + export zit al in "Alles voor de klas".
+    verborgen: true,
   },
   // (Gezins-plekken cadeau (15 aug 2026) VERVALLEN op 2 okt 2026: hoorde bij
   // de betaalde schoollicentie, die er niet meer is. Gezinnen met een krappe
@@ -254,6 +261,7 @@ export const PRO_GRATIS_BASIS = [
   "Uitleg op 3 niveaus (basis / simpeler / nog simpeler)",
   "De gratis Doorstroomtoets-oefentoets + je score",
   "Echte examenvragen oefenen mét uitleg",
+  "Voorkennis-keten: per examenvraag zien welke basiskennis eronder ligt",
   "Echte VMBO-examens inzien én downloaden als PDF",
   "Printbare oefenbladen mee naar huis (oefenpakket, leesladder, tafels, dictees)",
   "Vraag van de dag & het scorebord",

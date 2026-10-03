@@ -10,5 +10,7 @@ export const FEATURES = [
   { nr: 6, emoji: "🎉", titel: "Trots-momenten", tekst: "Een positief seintje bij mijlpalen — verschijnt vanzelf tijdens het oefenen.", status: "klaar", page: "trots" },
   { nr: 7, emoji: "👨‍👩‍👧", titel: "Gezin — tot 3 kinderen", tekst: "Koppel tot 3 kinderen op één account — elk een eigen overzicht, samen oefenen.", status: "klaar", page: "ouder-dashboard" },
   { nr: 9, emoji: "📋", titel: "Dictee met de woorden van school", tekst: "Plak de dicteewoorden van deze week erin; Charley leest ze voor en je kind oefent precies wat vrijdag op school komt.", status: "klaar", page: "dictee" },
+  { nr: 10, emoji: "⏱️", titel: "Hele toets met de klok", tekst: "50 vragen in 60 minuten, zoals de echte Doorstroomtoets — met score per onderdeel en uitleg bij elke fout.", status: "klaar", page: "cito" },
+  { nr: 11, emoji: "🧭", titel: "Kwartierplan", tekst: "Doel kiezen, startfoto maken en een weekplan van vijf kwartiertjes — je ziet wat af is.", status: "klaar", page: "ouder-dashboard" },
   { nr: 8, emoji: "🏅", titel: "Printbaar diploma", tekst: "Een certificaat bij het afronden van een onderwerp — kind blij, en jij trots.", status: "klaar", page: "diploma" },
 ];

@@ -617,8 +617,12 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
 
         {/* ── Stap 3 + Bonus + Op papier ── (verplaatst tot ná Stap 2 op
             4 aug — de stap-nummers volgen nu ook visueel 1 → 2 → 3). */}
+        {/* 3 okt 2026: Stap 3 opent weer de échte simulatie (CitoLeerpadToets, 50 vragen,
+            60 min klok, score per onderdeel, niveau-indicatie). Sinds 1 sep liep deze knop
+            naar een gewone quiz zonder klok: bij het weghalen van de Bonus-tegel werd
+            aangenomen dat Stap 3 al de simulatie was — dat was niet zo. */}
         <button
-          onClick={startSimulatie}
+          onClick={() => { if (onStartLeerpadToets) { SoundEngine.play("click"); onStartLeerpadToets(true); } else startSimulatie(); }}
           style={{
             textAlign: "left", borderRadius: 18,
             border: "2px solid rgba(255,107,53,0.4)",
@@ -640,9 +644,8 @@ export default function CitoPage({ onStart, onBack, onHome, citoProgress = [], o
 
         {/* "✨ Bonus — korte oefentoets"-tegel verwijderd (Mark 1 sep 2026):
             de knop riep onStartLeerpadToets(true) aan — de simulatie-vlag —
-            en kwam dus op precies hetzelfde 50-vragen-scherm uit als Stap 3
-            hierboven, terwijl de tekst "30 vragen" beloofde. Misleidend
-            duplicaat; Stap 3 is de enige ingang. */}
+            terwijl de tekst "30 vragen" beloofde. Stap 3 is nu de enige
+            ingang naar die simulatie (3 okt 2026). */}
 
         {onPrintPakket && (
           <button
