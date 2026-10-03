@@ -451,7 +451,7 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
 
         {/* 🌍 Brug naar het nieuwkomers-pakket (3 okt 2026, tip via Mark): wie de gewone
             app kent, moet in één tik bij de taalklas-kant kunnen. */}
-        <a href="/nieuwkomers" onClick={() => { try { track("leerkracht_naar_nieuwkomers"); } catch { /* */ } }}
+        <a href="/nieuwkomers" onClick={() => { try { track("juf_naar_nieuwkomers", { plek: "teacher-home" }); } catch { /* */ } }}
           style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, padding: "12px 14px", borderRadius: 14, background: "rgba(255,183,77,0.07)", border: "1px solid rgba(255,183,77,0.35)", color: "inherit", textDecoration: "none" }}>
           <span aria-hidden="true" style={{ fontSize: 26 }}>🌍</span>
           <span style={{ flex: 1 }}>

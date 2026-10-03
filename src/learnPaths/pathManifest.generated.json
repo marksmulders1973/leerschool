@@ -5846,6 +5846,32 @@
     "estimatedMinutes": 25
   },
   {
+    "id": "opdrachtwoorden-nieuwkomers",
+    "file": "./opdrachtwoordenNieuwkomers.js",
+    "title": "Opdrachtwoorden — wat moet ik doen op mijn blad? (nieuwkomers)",
+    "subject": "taal",
+    "level": "groep3-4",
+    "emoji": "✏️",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Mondelinge taalvaardigheid — schooltaal",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "opdrachtwoorden",
+      "instructietaal",
+      "omcirkel",
+      "onderstreep",
+      "vul in",
+      "werkblad",
+      "schooltaal",
+      "nt2"
+    ],
+    "intro": "Omcirkel, onderstreep, kruis aan, vul in, reken uit, vergelijk: de woorden die op elk werkblad staan. Als je die kent, kun je ook in de gewone app verder. Met steun in je eigen taal. ~10 min.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
+    "estimatedMinutes": 10
+  },
+  {
     "id": "oppervlakte-omtrek-po",
     "file": "./oppervlakteOmtrekPo.js",
     "title": "Oppervlakte en omtrek — rechthoek, driehoek, cirkel",
@@ -6773,6 +6799,30 @@
     "stepCount": 3,
     "checkCount": 15,
     "chapterCount": 3,
+    "estimatedMinutes": 10
+  },
+  {
+    "id": "rekenverhaaltjes-nieuwkomers",
+    "file": "./rekenverhaaltjesNieuwkomers.js",
+    "title": "Rekenverhaaltjes — sommen in woorden (nieuwkomers)",
+    "subject": "rekenen",
+    "level": "groep3-4",
+    "emoji": "📖",
+    "referentieNiveau": "voor 1F",
+    "sloThema": "Rekentaal — contextsommen (verhaaltjessommen)",
+    "triggerKeywords": [
+      "nieuwkomers",
+      "rekenverhaaltjes",
+      "verhaaltjessommen",
+      "redactiesommen",
+      "verschil",
+      "meer dan",
+      "nt2"
+    ],
+    "intro": "Sommen in woorden, zoals in de gewone rekenles: erbij, weg, meer dan, het verschil, dubbel en de helft. Met steun in je eigen taal. ~10 min.",
+    "stepCount": 4,
+    "checkCount": 20,
+    "chapterCount": 4,
     "estimatedMinutes": 10
   },
   {

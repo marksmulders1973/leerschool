@@ -302,6 +302,15 @@ function JufStrook({ groep, stap, onGa }) {
         style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--color-brand-primary)", fontWeight: 700, fontSize: 13.5, fontFamily: "inherit" }}>
         Klascode maken →
       </button>
+      {/* 3 okt 2026 (Mark): leerkrachten subtiel wijzen op het startpunt voor nieuwkomers —
+          alleen in deze juf-strook, nooit in de kind-schermen. */}
+      <div style={{ marginTop: 8 }}>
+        <strong style={{ color: "var(--color-text)" }}>🌍 Nieuwkomer in je klas?</strong> Er is een eigen startpunt met voorlezen en steun in zes talen.{" "}
+        <button type="button" onClick={() => { track("juf_naar_nieuwkomers", { plek: "klas-strook", groep }); onGa("nieuwkomers"); }}
+          style={{ background: "none", border: "none", padding: 0, cursor: "pointer", color: "var(--color-brand-primary)", fontWeight: 700, fontSize: 13.5, fontFamily: "inherit" }}>
+          Naar het startpunt →
+        </button>
+      </div>
     </div>
   );
 }

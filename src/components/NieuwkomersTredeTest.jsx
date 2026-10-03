@@ -23,6 +23,12 @@ const GRENS = 0.8;
 const TREDES = {
   1: { paden: TREDE_1_PADEN, perPad: 5, naam: "Trede 1 · Welkom", onderdelen: "In de klas · Woorden · Rekentaal · Rekenen tot 20" },
   2: { paden: ["letters-klanken-nieuwkomers", "woorden-2-nieuwkomers"], perPad: 7, spelling: 6, naam: "Trede 2 · Letters en woorden", onderdelen: "Letters en klanken · Meer woorden · Dictee" },
+  // 3 okt 2026 — het brugtestje: 3+3 vragen uit de twee brug-onderdelen + 10 vragen uit de GEWONE
+  // app (groep 3-4, zonder vertaling, alleen vragen die op zichzelf staan). 80% goed = klaar voor
+  // de gewone Leerkwartier; de overstap start dan op dit niveau, niet op de leeftijd.
+  3: { paden: ["opdrachtwoorden-nieuwkomers", "rekenverhaaltjes-nieuwkomers"], perPad: 3,
+       gewoon: [["getallen-tot-20-po", 3], ["taal-leren-lezen-g3", 3], ["taal-woorden-zinnen-g4", 2], ["spelling-eerste-woorden-g3", 2]],
+       naam: "Trede 3 · De brug naar de klas", onderdelen: "Opdrachtwoorden · Rekenverhaaltjes · vragen uit de gewone app" },
 };
 
 // "Welk woord is goed geschreven?" — uit de dicteezinnen (DICTEE[NK_GROEP]). Foute opties zijn
@@ -71,6 +77,8 @@ const TEST_STEUN = {
   "Niet goed": { en: "Not correct", ar: "غير صحيح", uk: "Неправильно", tr: "Doğru değil", ro: "Greșit", bg: "Грешно" },
   "Volgende": { en: "Next", ar: "التالي", uk: "Далі", tr: "Sonraki", ro: "Următoarea", bg: "Напред" },
   "Gehaald! Trede 1 is klaar.": { en: "Passed! Step 1 is done.", ar: "نجحت! الدرجة 1 انتهت.", uk: "Склав! Сходинка 1 пройдена.", tr: "Geçtin! 1. basamak bitti.", ro: "Ai reușit! Treapta 1 e gata.", bg: "Успя! Стъпало 1 е готово." },
+  "Gehaald! Trede 3 is klaar.": { en: "Passed! Step 3 is done. You are ready for the normal Leerkwartier.", ar: "نجحت! الدرجة 3 انتهت. أنت جاهز لـ Leerkwartier العادي.", uk: "Склав! Сходинка 3 пройдена. Ти готовий до звичайного Leerkwartier.", tr: "Geçtin! 3. basamak bitti. Normal Leerkwartier için hazırsın.", ro: "Ai reușit! Treapta 3 e gata. Ești gata pentru Leerkwartier obișnuit.", bg: "Успя! Стъпало 3 е готово. Готов си за обикновения Leerkwartier." },
+  "Trede 3 · De brug naar de klas": { en: "Step 3 · The bridge to the class", ar: "الدرجة 3 · الجسر إلى الصف", uk: "Сходинка 3 · Міст до класу", tr: "3. basamak · Sınıfa köprü", ro: "Treapta 3 · Podul spre clasă", bg: "Стъпало 3 · Мостът към класа" },
   "Gehaald! Trede 2 is klaar.": { en: "Passed! Step 2 is done.", ar: "نجحت! الدرجة 2 انتهت.", uk: "Склав! Сходинка 2 пройдена.", tr: "Geçtin! 2. basamak bitti.", ro: "Ai reușit! Treapta 2 e gata.", bg: "Успя! Стъпало 2 е готово." },
   "Bijna! Oefen nog even en probeer het over een paar dagen opnieuw.": { en: "Almost! Practise a bit more and try again in a few days.", ar: "تقريبًا! تدرّب قليلًا وحاول مرة أخرى بعد بضعة أيام.", uk: "Майже! Потренуйся ще трохи й спробуй знову через кілька днів.", tr: "Neredeyse! Biraz daha çalış ve birkaç gün sonra tekrar dene.", ro: "Aproape! Mai exersează puțin și încearcă din nou peste câteva zile.", bg: "Почти! Поупражнявай се още малко и опитай пак след няколко дни." },
   "De vragen die je miste, komen morgen terug bij herhalen.": { en: "The questions you missed come back tomorrow in practice again.", ar: "الأسئلة التي أخطأت فيها تعود غدًا في المراجعة.", uk: "Запитання, які ти пропустив, повернуться завтра в повторенні.", tr: "Kaçırdığın sorular yarın tekrarda geri gelir.", ro: "Întrebările greșite revin mâine la repetare.", bg: "Въпросите, които сбърка, се връщат утре при повторението." },
@@ -116,6 +124,19 @@ export default function NieuwkomersTredeTest({ trede = 1, instap = false, onKlaa
         for (const { c, stap } of schud(alle).slice(0, perPad)) {
           const volgorde = schud(c.options.map((_, i) => i));
           lijst.push({ pad: id, stap, origAntwoord: c.options[c.answer], check: { ...c, options: volgorde.map((i) => c.options[i]), answer: volgorde.indexOf(c.answer) } });
+        }
+      }
+      // Brugtestje: vragen uit de gewone app (geen steunTeksten → geen vertaling, zoals daar).
+      for (const [id, n] of (c.gewoon || [])) {
+        let p = null;
+        try { p = await getLearnPath(id); } catch { /* */ }
+        if (!p) continue;
+        const alle = (p.steps || []).flatMap((st, stap) => (st.checks || [])
+          .filter((x) => Array.isArray(x.options) && x.options.length > 1 && typeof x.answer === "number" && !x.svg && !x.kind && !x.image && !x.audio)
+          .map((x) => ({ c: x, stap })));
+        for (const { c: x, stap } of schud(alle).slice(0, n)) {
+          const volgorde = schud(x.options.map((_, i) => i));
+          lijst.push({ pad: id, stap, origAntwoord: x.options[x.answer], check: { ...x, steun: undefined, steunOpties: undefined, options: volgorde.map((i) => x.options[i]), answer: volgorde.indexOf(x.answer) } });
         }
       }
       if (spelling) {

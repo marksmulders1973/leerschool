@@ -1,8 +1,11 @@
 import { useMemo, useState } from "react";
 import pathManifest from "../learnPaths/pathManifest.generated.json";
-import { generateCode } from "../utils.js";
+import { generateCode, track } from "../utils.js";
 import { saveQuiz } from "../data/repos/quizzesRepo.js";
 import { TAKENLIJST_TYPE } from "../data/takenlijst.js";
+
+// Zoekwoorden waarbij een leerkracht waarschijnlijk een nieuwkomer/anderstalige leerling heeft.
+export const NK_ZOEK = /nieuwkom|anderstal|nt2|taalklas|nederlands leren|eerste woorden|woordenschat groep 3|lezen groep 3|oekra|arabisch|vluchtel|isk|okan/i;
 
 // TakenlijstMaker — leerkracht-kant van Brian's takenlijst-idee (2026-06-28).
 // De leerkracht geeft een titel, kiest een paar leerpaden uit het manifest, en
@@ -137,6 +140,13 @@ export default function TakenlijstMaker({ onClose, userId, onWerkblad }) {
         {/* Zoek + toevoegen */}
         <label style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.85)" }}>Taak toevoegen</label>
         <input value={zoek} onChange={(e) => setZoek(e.target.value)} placeholder="Zoek een onderwerp… bv. breuken, spelling, kaartlezen" style={{ ...inputStyle, margin: "6px 0 8px" }} />
+        {/* 3 okt 2026: zoekt de leerkracht op taal voor beginners/nieuwkomers → één tip-regel naar het startpunt. */}
+        {NK_ZOEK.test(zoek.trim()) && (
+          <a href="/nieuwkomers" onClick={() => { try { track("juf_naar_nieuwkomers", { plek: "takenlijst-zoek" }); } catch { /* */ } }}
+            style={{ display: "block", marginBottom: 8, fontSize: 12.5, color: "#ffcc80", textDecoration: "none" }}>
+            🌍 Nieuwkomer in je klas? Er is een eigen startpunt met voorlezen en steun in zes talen →
+          </a>
+        )}
         {resultaten.length > 0 && (
           <div style={{ display: "flex", flexDirection: "column", gap: 6, maxHeight: 260, overflowY: "auto", marginBottom: 14 }}>
             {resultaten.map((p) => (

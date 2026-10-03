@@ -373,6 +373,10 @@ export default function WerkbladPagina({ onClose, userId, authUser = null }) {
                   {it.uitleg && <span style={{ color: "#555" }}> · {it.uitleg}</span>}
                 </div>
               ))}
+              {/* 3 okt 2026: alleen op het antwoordblad (vel van de leerkracht), nooit op het leerlingvel. */}
+              <div style={{ marginTop: 10, fontSize: 12, color: "#555" }}>
+                🌍 Nieuwkomer in je klas? Er is een eigen startpunt met voorlezen en steun in zes talen: <b>leerkwartier.app/nieuwkomers</b>
+              </div>
               {voet}
             </div>
           )}

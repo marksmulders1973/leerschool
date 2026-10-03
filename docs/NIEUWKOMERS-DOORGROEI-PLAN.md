@@ -6,7 +6,7 @@ worden: gratis minimaal 2028." **Status: in uitvoering — zie § 0 Voortgang.**
 
 ## 0. Voortgang (bijwerken na elke stap — staat ook in docs/NOG-NALOPEN.md → dagrapport)
 
-**Nu: stap 6 van 7 klaar → stap 7 (klasoverzicht juf, betaald) is 🔒 geblokkeerd tot KvK + verwerkersovereenkomst + 5-10 echte taalklassen. Tussendoor: verfijnen (zie § 8).**
+**Nu: stap 6 van 7 klaar (+ 6b brug en doelen, 3 okt) → stap 7 (klasoverzicht juf, betaald) is 🔒 geblokkeerd tot KvK + verwerkersovereenkomst + 5-10 echte taalklassen. Tussendoor: verfijnen (zie § 8).**
 
 | Stap | Wat | Status |
 |---|---|---|
@@ -16,6 +16,7 @@ worden: gratis minimaal 2028." **Status: in uitvoering — zie § 0 Voortgang.**
 | 4 | Letters en klanken = trede 2 "Letters en woorden" + trede-testje 2 | ✅ v754-755 (27 sep): pad `letters-klanken-nieuwkomers` (klank vooraan · hakken/plakken · aa/oo/oe) + kopje Trede 2 (Letters en klanken + Dictee) + trede-testje 2 (12 vragen uit het pad + 8 "welk woord is goed geschreven?" uit het dictee, afleiders zijn géén echte woorden: tsa/tass). Gehaalde tredes per trede in `lk_nk_tredes` |
 | 5 | Instap-testje (bepaalt start-trede) | ✅ v756 (27 sep): blauwe kaart "Nieuw hier?" bovenaan (alleen zolang geen instap/trede gedaan); blok 1 = 6 vragen trede 1 (<5 goed → trede 1), blok 2 = 6 vragen trede 2 (<5 → trede 2, anders Verder oefenen); label "← Hier begin je" + pagina scrollt erheen; niets afgevinkt. `lk_nk_instap`, events nk_instap_*, nieuwkomers.sql blok 10. 3 scenario's lokaal getest |
 | 6 | Overstap-knop naar de gewone app (trede 4) | ✅ v757 (27 sep): kaart "Klaar voor de gewone Leerkwartier?" onderaan /nieuwkomers, groep 3-8 kiezen → groep vastgezet (zoals Mijn pagina) → start-kwartier; groen omrand na trede 2 of instap "Verder"; eerlijk: daar geen vertaalknop. Event nk_overstap |
+| 6b | Brug + doelen (3 okt 2026, Mark "bouw alles zelfstandig") | ✅ v877: trede 3 "De brug naar de klas" (Opdrachtwoorden + Rekenverhaaltjes, 40 vragen, 6 steuntalen) · brugtestje (6 brug + 10 gewone groep 3-4-vragen zonder vertaling, 80%) · kaart "Wat kan ik al?" (doelen per trede, vinkje na testje) · overstap na trede 3 = één knop "Start in de gewone Leerkwartier" op testniveau (groep 4), vertaalknop blijft in start-kwartier (lk_nieuwkomer) · juf-regels op /klas-strook, antwoordblad werkblad, takenlijst-zoek, zoekbalk, leerkrachten-omgeving (event juf_naar_nieuwkomers {plek}) |
 | 7 | Klasoverzicht juf (betaalde kant) | 🔒 pas na KvK + verwerkersovereenkomst + 5-10 echte taalklassen |
 
 Meten: `docs/sql/nieuwkomers.sql` blok 8 (trede-testje: geopend → gestart → klaar → geslaagd → geprint).
