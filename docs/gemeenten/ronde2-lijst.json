@@ -1,0 +1,92 @@
+[
+ {
+  "gemeente": "Amsterdam",
+  "email": null,
+  "regeling": "de Stadspas",
+  "bron": "https://stadspas.amsterdam.nl/contact"
+ },
+ {
+  "gemeente": "Utrecht",
+  "email": null,
+  "regeling": "de U-pas",
+  "bron": "https://www.u-pas.nl/contact/formulier"
+ },
+ {
+  "gemeente": "Eindhoven",
+  "email": null,
+  "regeling": "de Meedoenbijdrage",
+  "bron": "https://www.eindhoven.nl/contactformulier"
+ },
+ {
+  "gemeente": "Groningen",
+  "email": "stadjerspas@groningen.nl",
+  "regeling": "de Stadjerspas",
+  "bron": "https://stadjerspas.gemeente.groningen.nl/contact/"
+ },
+ {
+  "gemeente": "Nijmegen",
+  "email": null,
+  "regeling": "de Meedoenregeling",
+  "bron": "https://formulier.nijmegen.nl/contactformulier/startpagina/"
+ },
+ {
+  "gemeente": "Breda",
+  "email": null,
+  "regeling": "het Jeugdfonds Sport & Cultuur",
+  "bron": "https://www.breda.nl/e-mailformulier-zonder-digid"
+ },
+ {
+  "gemeente": "Almere",
+  "email": "info@almere.nl",
+  "regeling": "de regeling \"Alle kinderen en jongeren doen mee\"",
+  "bron": "https://organisaties.overheid.nl/28393/Gemeente_Almere"
+ },
+ {
+  "gemeente": "Enschede",
+  "email": "postbus20@enschede.nl",
+  "regeling": "het Kindpakket",
+  "bron": "https://organisaties.overheid.nl/25100/Gemeente_Enschede"
+ },
+ {
+  "gemeente": "Haarlemmermeer",
+  "email": "info@haarlemmermeer.nl",
+  "regeling": "het Kindpakket",
+  "bron": "https://organisaties.overheid.nl/25768/Gemeente_Haarlemmermeer"
+ },
+ {
+  "gemeente": "Zoetermeer",
+  "email": "Antwoord@zoetermeer.nl",
+  "regeling": "het Kindpakket Zoetermeer",
+  "bron": "https://organisaties.overheid.nl/28493/Gemeente_Zoetermeer"
+ },
+ {
+  "gemeente": "Boxtel",
+  "email": "schoolspullenpas@boxtel.nl",
+  "regeling": "de Schoolspullenpas",
+  "bron": "https://www.boxtel.nl/schoolspullenpas"
+ },
+ {
+  "gemeente": "Apeldoorn",
+  "email": null,
+  "regeling": "de Kidskaart",
+  "bron": "https://www.apeldoorn.nl/contact-burgerzaken"
+ },
+ {
+  "gemeente": "Amersfoort",
+  "email": "cpi@amersfoort.nl",
+  "regeling": "het Kindpakket",
+  "bron": "https://www.amersfoort.nl/regelingen-bij-een-laag-inkomen-voor-inwoners-van-amersfoort"
+ },
+ {
+  "gemeente": "Leiden",
+  "email": null,
+  "regeling": "het Kindtegoed van de Sleutelpas",
+  "bron": "https://sleutelpas.nl/contact"
+ },
+ {
+  "gemeente": "'s-Hertogenbosch",
+  "email": "info@klantenservice-bosschepas.nl",
+  "regeling": "de Bossche Pas",
+  "bron": "https://www.s-hertogenbosch.nl/bosschepas/"
+ }
+]
