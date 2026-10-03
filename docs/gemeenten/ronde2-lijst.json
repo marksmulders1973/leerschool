@@ -88,5 +88,209 @@
   "email": "info@klantenservice-bosschepas.nl",
   "regeling": "de Bossche Pas",
   "bron": "https://www.s-hertogenbosch.nl/bosschepas/"
+ },
+ {
+  "gemeente": "Haarlem",
+  "email": "antwoord@haarlem.nl",
+  "regeling": "de HaarlemPas",
+  "bron": "organisaties.overheid.nl/38688/Gemeente_Haarlem"
+ },
+ {
+  "gemeente": "Zwolle",
+  "email": "postbus@zwolle.nl",
+  "regeling": "de Kindregeling",
+  "bron": "zwolle.nl/werk-en-inkomen/extras-voor-kinderen/kindregeling"
+ },
+ {
+  "gemeente": "Maastricht",
+  "email": "Post-SocialeZaken@maastricht.nl",
+  "regeling": "het Kindpakket",
+  "bron": "socialezaken-mh.nl/contact-en-openingstijden"
+ },
+ {
+  "gemeente": "Ede",
+  "email": "consulenten@ede.nl",
+  "regeling": "het Kindpakket",
+  "bron": "ede.nl/ondersteuning-werk-inkomen/inkomensregelingen-kinderen"
+ },
+ {
+  "gemeente": "Westland",
+  "email": "info@gemeentewestland.nl",
+  "regeling": "het Kindpakket",
+  "bron": "gemeentewestland.nl"
+ },
+ {
+  "gemeente": "Alphen aan den Rijn",
+  "email": "gemeente@alphenaandenrijn.nl",
+  "regeling": "de Bijdrage voor schoolgaande kinderen",
+  "bron": "alphenaandenrijn.nl"
+ },
+ {
+  "gemeente": "Delft",
+  "email": "pacttegenarmoede@delft.nl",
+  "regeling": "de regeling \"Jij doet mee!\"",
+  "bron": "delft.nl/jij-doet-mee"
+ },
+ {
+  "gemeente": "Emmen",
+  "email": "gemeente@emmen.nl",
+  "regeling": "de Doe Mee webshop",
+  "bron": "gemeente.emmen.nl/doe-mee-webshop"
+ },
+ {
+  "gemeente": "Deventer",
+  "email": "gemeente@deventer.nl",
+  "regeling": "Stichting Leergeld",
+  "bron": "deventer.nl"
+ },
+ {
+  "gemeente": "Venlo",
+  "email": null,
+  "regeling": "het Kindpakket",
+  "bron": "https://www.venlo.nl/contact"
+ },
+ {
+  "gemeente": "Helmond",
+  "email": "zorgpoort@helmond.nl",
+  "regeling": "het Kindpakket",
+  "bron": "helmond.nl/1/minima/Speciaal-voor-kinderen-tot-18-jaar"
+ },
+ {
+  "gemeente": "Purmerend",
+  "email": "info@purmerend.nl",
+  "regeling": "de Kindregeling",
+  "bron": "purmerend.nl/meerdoen-kindregeling"
+ },
+ {
+  "gemeente": "Amstelveen",
+  "email": "sociaalloket@amstelveen.nl",
+  "regeling": "het Kindpakket",
+  "bron": "amstelveen.nl/kindpakket-voor-schooljaar-2026-2027-aanvragen"
+ },
+ {
+  "gemeente": "Oss",
+  "email": "Gemeente@oss.nl",
+  "regeling": "de regeling \"Meedoen is belangrijk\"",
+  "bron": "loket.oss.nl/meedoen-is-belangrijk"
+ },
+ {
+  "gemeente": "Hilversum",
+  "email": "sociaalplein@hilversum.nl",
+  "regeling": "het Kindpakket",
+  "bron": "hilversum.nl/sociaal-plein/inkomen-toeslagen/kindpakket"
+ },
+ {
+  "gemeente": "Land van Cuijk",
+  "email": "inkomensondersteuning@landvancuijk.nl",
+  "regeling": "het Kindpakket",
+  "bron": "gemeentelandvancuijk.nl/kindpakket"
+ },
+ {
+  "gemeente": "Sittard-Geleen",
+  "email": "info@sittard-geleen.nl",
+  "regeling": "de regeling \"Sam& voor alle kinderen\"",
+  "bron": "sittard-geleen.nl/zorg/voor-elkaar/sam-voor-alle-kinderen"
+ },
+ {
+  "gemeente": "Hoeksche Waard",
+  "email": "gir@gemeentehw.nl",
+  "regeling": "de regeling voor maatschappelijke participatie",
+  "bron": "gemeentehw.nl"
+ },
+ {
+  "gemeente": "Dijk en Waard",
+  "email": "sociaaldomein@dijkenwaard.nl",
+  "regeling": "de DijkenwaardPas",
+  "bron": "dijkenwaard.nl"
+ },
+ {
+  "gemeente": "Súdwest-Fryslân",
+  "email": "info@gemeentesudwestfryslan.nl",
+  "regeling": "het Kindpakket",
+  "bron": "sudwestfryslan.nl/onderwerp/bijdrageregeling-minima-kindpakket"
+ },
+ {
+  "gemeente": "Nissewaard",
+  "email": "minimaregeling@nissewaard.nl",
+  "regeling": "de Kindtoeslag",
+  "bron": "nissewaard.nl"
+ },
+ {
+  "gemeente": "Meierijstad",
+  "email": "info@meierijstad.nl",
+  "regeling": "de Meedoenregeling",
+  "bron": "meierijstad.nl"
+ },
+ {
+  "gemeente": "Hengelo",
+  "email": "gemeente@hengelo.nl",
+  "regeling": "het Kindpakket",
+  "bron": "hengelo.nl"
+ },
+ {
+  "gemeente": "Roosendaal",
+  "email": "info@roosendaal.nl",
+  "regeling": "de Meedoenregeling",
+  "bron": "roosendaal.nl/subsidie-armoede"
+ },
+ {
+  "gemeente": "Gouda",
+  "email": "gemeente@gouda.nl",
+  "regeling": "het Kindpakket",
+  "bron": "gouda.nl/kindpakket"
+ },
+ {
+  "gemeente": "Vlaardingen",
+  "email": null,
+  "regeling": "de regelingen voor kinderen",
+  "bron": "https://www.vlaardingen.nl/Contact"
+ },
+ {
+  "gemeente": "Hoorn",
+  "email": "rondkomen@hoorn.nl",
+  "regeling": "het Kindpakket",
+  "bron": "hoorn.nl/laag-inkomen/kindpakket"
+ },
+ {
+  "gemeente": "Almelo",
+  "email": "socialezaken@almelo.nl",
+  "regeling": "het Jeugdfonds Sport & Cultuur",
+  "bron": "almelo.nl/uitkering-werk-en-bijstand/contact-met-sociale-zaken"
+ },
+ {
+  "gemeente": "Voorne aan Zee",
+  "email": "gemeente@voorneaanzee.nl",
+  "regeling": "het Kindpakket",
+  "bron": "voorneaanzee.nl/kindpakket"
+ },
+ {
+  "gemeente": "Veenendaal",
+  "email": "veenendaal@minimaregelingen.nl",
+  "regeling": "de Veenendaalpas",
+  "bron": "veenendaal.nl"
+ },
+ {
+  "gemeente": "Assen",
+  "email": "info@assen.nl",
+  "regeling": "het Kindpakket",
+  "bron": "assen.nl/kindpakket-assen-ieder-kind-doet-mee"
+ },
+ {
+  "gemeente": "Bergen op Zoom",
+  "email": "stadskantoor@bergenopzoom.nl",
+  "regeling": "de Meedoenregeling",
+  "bron": "lokaleregelgeving.overheid.nl/CVDR762117"
+ },
+ {
+  "gemeente": "Velsen",
+  "email": "info@velsen.nl",
+  "regeling": "de regeling \"Ieder kind doet mee\"",
+  "bron": "velsen.nl/ieder-kind-doet-mee"
+ },
+ {
+  "gemeente": "Capelle aan den IJssel",
+  "email": "gemeente@capelleaandenijssel.nl",
+  "regeling": "het Kindpakket",
+  "bron": "capelleaandenijssel.nl/kindpakket"
  }
 ]
