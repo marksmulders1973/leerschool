@@ -51,5 +51,21 @@ KvK 42176244
 - Boxtel: alleen met toestemming van Wereldschool Taalrijk: " In Boxtel wordt de app al gebruikt in een taalklas voor nieuwkomers." Zonder toestemming: leeg.
 - overige: leeg.
 
-## Lijst
-(wordt gevuld met de adressen die de onderzoeks-agent op officiële gemeentepagina's vond — alleen letterlijk gevonden adressen)
+## Lijst (3 okt 2026, adressen letterlijk van officiële pagina's — bron per regel in de agent-uitvoer)
+| # | Gemeente | Adres | {REGELING} | Opmerking |
+|---|---|---|---|---|
+| 1 | Amsterdam | formulier stadspas.amsterdam.nl/contact | de Stadspas | formulier (Mark) |
+| 2 | Utrecht | formulier u-pas.nl/contact/formulier | de U-pas | formulier (Mark) |
+| 3 | Eindhoven | formulier eindhoven.nl/contactformulier | de Meedoenbijdrage | formulier (Mark) |
+| 4 | Groningen | stadjerspas@groningen.nl | de Stadjerspas | mail |
+| 5 | Nijmegen | formulier formulier.nijmegen.nl/contactformulier | de Meedoenregeling | formulier (Mark) |
+| 6 | Breda | formulier breda.nl/e-mailformulier-zonder-digid | het Jeugdfonds Sport & Cultuur | formulier (Mark) |
+| 7 | Almere | info@almere.nl | de regeling "Alle kinderen en jongeren doen mee" | mail; regeling wordt mogelijk een stadspas |
+| 8 | Enschede | postbus20@enschede.nl | het Kindpakket | mail; LOKAAL-zin (Leergeld) |
+| 9 | Haarlemmermeer | info@haarlemmermeer.nl | het Kindpakket | mail; LOKAAL-zin (Leergeld) |
+| 10 | Zoetermeer | Antwoord@zoetermeer.nl | het Kindpakket Zoetermeer | mail |
+| 11 | Boxtel | schoolspullenpas@boxtel.nl | de Schoolspullenpas | mail; adres is van de pas zelf, vraag om door te sturen |
+| 12 | Apeldoorn | formulier apeldoorn.nl/contact-burgerzaken | de Kidskaart | formulier (Mark) |
+| 13 | Amersfoort | cpi@amersfoort.nl | het Kindpakket | mail |
+| 14 | Leiden | formulier sleutelpas.nl/contact | het Kindtegoed van de Sleutelpas | formulier (Mark) |
+| 15 | 's-Hertogenbosch | info@klantenservice-bosschepas.nl | de Bossche Pas | mail; klantenservice, vraag om door te sturen |
