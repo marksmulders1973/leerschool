@@ -4,7 +4,7 @@ Status: wacht op Marks "stuur maar" op deze tekst. Alleen naar gemeenten die op 
 gereageerd (lijst + verzendlog in GEMEENTE-MAILS-OKT-2026.md). Iedereen krijgt dezelfde tekst — gelijke
 behandeling (Mark 3 okt: "omdat we nu niet alle gemeentes hetzelfde behandelen?"). Den Haag/Ooievaarspas is
 een ander product (stadspas-vriendschap), geen proef van 50 gezinnen.
-Afzender: hallo@leerkwartier.app, als antwoord op de mail van 1 okt (zelfde onderwerp met "Re:"), geen bijlage.
+Afzender: hallo@leerkwartier.app, als antwoord op de mail van 1 okt (zelfde onderwerp met "Re:"). Bijlage: docs/gemeenten/Privacy-voor-gemeenten.pdf (Mark 3 okt: "begeleidend briefje mee sturen en benoemen dat we met Den Haag werken").
 Alkmaar, Rotterdam, Dordrecht: via hetzelfde contactformulier, plaktekst = tekst hieronder.
 
 Besluit achter het aanbod (3 okt): géén gratis jaar (dan valt de betaalbeslissing pas in de begroting van 2028),
@@ -35,6 +35,10 @@ U kunt gratis beginnen. De proef loopt zonder kosten tot 1 april 2027, voor maxi
 - De gezinnen krijgen het Familie-pakket: zien hoe hun kind ervoor staat, elke vrijdag een kort weekrapport, en onbeperkt uitleg van het AI-bijlesmaatje.
 - In januari en in maart krijgt u een overzicht: hoeveel gezinnen de code gebruiken en hoeveel er oefenen. Nooit gegevens van een kind.
 - In maart beslist u of u doorgaat: dan kost het € 1.725 per jaar voor 50 gezinnen. Zegt u niets, dan stopt het vanzelf. Het gewone oefenen blijft voor deze gezinnen altijd gratis.
+
+Waar ik trots op ben: vanaf 1 januari 2027 is Leerkwartier Vriend van de Ooievaarspas van de gemeente Den Haag (samen met Leidschendam-Voorburg en Rijswijk). Het is onze eerste grote partner.
+
+Ons privacystuk voor gemeenten stuur ik nogmaals mee als bijlage. De voorwaarden voor organisaties staan op leerkwartier.app/voorwaarden-organisaties.html.
 
 Wilt u meedoen? Een korte reactie op deze mail is genoeg; dan stuur ik de code.
 
