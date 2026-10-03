@@ -495,7 +495,7 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOversta
             <button type="button" onClick={async () => {
               const url = "https://leerkwartier.app/nieuwkomers?utm_source=deellink";
               try { track("nk_deel", { kanaal: "kopie", taal }); } catch { /* */ }
-              try { if (navigator.share) { await navigator.share({ title: "Nieuwkomer-pakket", text: t.deelTekst, url }); return; } } catch { return; }
+              try { if (navigator.share) { await navigator.share({ title: "Leerkwartier, het startpunt voor nieuwkomers", text: t.deelTekst, url }); return; } } catch { return; }
               try { await navigator.clipboard.writeText(url); setGekopieerd(true); setTimeout(() => setGekopieerd(false), 2500); } catch { /* */ }
             }} style={{ background: "#ffd166", color: "#3a2600", border: "none", borderRadius: 999, padding: "8px 14px", fontWeight: 800, fontSize: 14, cursor: "pointer" }}>
               {gekopieerd ? "✓ " + t.deelGekopieerd : t.deelKopieer}

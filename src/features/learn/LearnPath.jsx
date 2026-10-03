@@ -1051,9 +1051,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                   <div style={{ fontSize: 16, color: C.text }}>{sess.correct} van de {sess.tries} goed</div>
                 </SteunTekst>
               )}
-              <SteunTekst nl="Terug naar het Nieuwkomer-pakket" knop>
+              <SteunTekst nl="Terug naar het startpunt" knop>
                 <button onClick={() => { window.location.href = "/nieuwkomers"; }} style={btnPrimary()}>
-                  <MetLuister aan={luisterStand} tekst="Terug naar het Nieuwkomer-pakket">Terug naar het Nieuwkomer-pakket</MetLuister>
+                  <MetLuister aan={luisterStand} tekst="Terug naar het startpunt">Terug naar het startpunt</MetLuister>
                 </button>
               </SteunTekst>
               <SteunTekst nl="Nog een keer" knop>

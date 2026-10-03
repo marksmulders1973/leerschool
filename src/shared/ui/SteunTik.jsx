@@ -63,7 +63,7 @@ export const UI_STEUN = {
   "Terug naar paden": { en: "Back to the lessons", ar: "العودة إلى الدروس", uk: "Назад до уроків", tr: "Derslere geri dön", ro: "Înapoi la lecții", bg: "Обратно към уроците" },
   "Andere stap kiezen": { en: "Choose another part", ar: "اختر جزءًا آخر", uk: "Вибери іншу частину", tr: "Başka bir bölüm seç", ro: "Alege altă parte", bg: "Избери друга част" },
   "Goed gedaan! Je bent klaar.": { en: "Well done! You are finished.", ar: "أحسنت! لقد انتهيت.", uk: "Молодець! Ти закінчив.", tr: "Aferin! Bitirdin.", ro: "Bravo! Ai terminat.", bg: "Браво! Готов си." },
-  "Terug naar het Nieuwkomer-pakket": { en: "Back to the Newcomer pack", ar: "العودة إلى حزمة القادمين الجدد", uk: "Назад до пакета для новоприбулих", tr: "Yeni gelenler paketine geri dön", ro: "Înapoi la pachetul pentru nou-veniți", bg: "Обратно към пакета за новодошли" },
+  "Terug naar het startpunt": { en: "Back to the starting point", ar: "العودة إلى نقطة البداية", uk: "Назад до стартової сторінки", tr: "Başlangıç noktasına geri dön", ro: "Înapoi la punctul de pornire", bg: "Обратно към началната точка" },
   "Nog een keer": { en: "One more time", ar: "مرة أخرى", uk: "Ще раз", tr: "Bir kez daha", ro: "Încă o dată", bg: "Още веднъж" },
   "Denk eerst hierover": { en: "Think about this first", ar: "فكّر في هذا أولًا", uk: "Спочатку подумай про це", tr: "Önce bunu düşün", ro: "Gândește-te mai întâi la asta", bg: "Първо помисли за това" },
   "Begin bij deel 1": { en: "Start with part 1", ar: "ابدأ بالجزء 1", uk: "Почни з частини 1", tr: "1. bölümle başla", ro: "Începe cu partea 1", bg: "Започни с част 1" },
