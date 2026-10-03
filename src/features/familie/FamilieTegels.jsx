@@ -7,7 +7,7 @@ import { FEATURES } from "./familieFeatures.js";
 import FamilieAfsluiten from "../../subscription/FamilieAfsluiten.jsx";
 import { track } from "../../utils.js";
 
-// Nog in de maak (eerlijk benoemd, niet aantikbaar).
+// Nog in de maak — sinds 3 okt 2026 als één regel onder de tegels.
 const BINNENKORT = [
   { emoji: "⏱️", titel: "Hele toets met de klok", tekst: "Een volledige oefentoets met tijdklok en eindrapport." },
   { emoji: "🧭", titel: "Kwartierplan", tekst: "Een persoonlijk stappenplan van kwartiertjes per week." },
@@ -45,16 +45,10 @@ export default function FamilieTegels({ onNaar, onOuderDashboard }) {
             <span style={{ marginTop: "auto", fontSize: 11, fontWeight: 800, color: "#69f0ae" }}>✓ nu te proberen</span>
           </button>
         ))}
-        {BINNENKORT.map((f) => (
-          <div key={f.titel} aria-label={`${f.titel}: binnenkort`} style={{
-            ...tegelStijl, border: "1px dashed rgba(255,255,255,0.18)", background: "rgba(255,255,255,0.02)", color: "rgba(255,255,255,0.45)",
-          }}>
-            <span aria-hidden="true" style={{ fontSize: 24, lineHeight: 1, opacity: 0.6 }}>{f.emoji}</span>
-            <span style={{ fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, lineHeight: 1.25 }}>{f.titel}</span>
-            <span style={{ fontSize: 12, lineHeight: 1.4 }}>{f.tekst}</span>
-            <span style={{ marginTop: "auto", fontSize: 11, fontWeight: 800 }}>binnenkort</span>
-          </div>
-        ))}
+      </div>
+      {/* 3 okt 2026: wat nog komt als één regel, niet als grijze tegels (te veel "binnenkort"). */}
+      <div style={{ fontSize: 12, color: "var(--color-text-muted, #8899aa)", margin: "10px 0 0 2px", lineHeight: 1.5 }}>
+        In 2027 komt erbij: {BINNENKORT.map((f) => f.titel.toLowerCase()).join(", ")}.
       </div>
       <FamilieAfsluiten plek="mijn-ouder-tegels" variant="regel" style={{ marginTop: 12 }} />
     </div>

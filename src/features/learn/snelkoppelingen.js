@@ -33,6 +33,8 @@ export const SNELKOPPELINGEN = [
     woorden: ["handleiding", "taalklas", "nt2", "nieuwkomers", "lesplan", "isk", "nieuwkomersklas", "anderstalig"] },
   { id: "voor-leerkrachten", emoji: "🏫", label: "Voor leerkrachten (gratis voor scholen)", uitleg: "wat je gratis krijgt, hoe je begint en veelgestelde vragen", pad: "/voor-leerkrachten.html",
     woorden: ["leerkracht", "leerkrachten", "juf", "meester", "school", "scholen", "gratis voor scholen", "docent", "klas", "verwerkersovereenkomst"] },
+  { id: "contact", emoji: "✉️", label: "Contact", uitleg: "mail de maker: hallo@leerkwartier.app", pad: "/contact.html",
+    woorden: ["contact", "mail", "e-mail", "vraag", "hulp", "kvk", "klacht", "geld terug", "bereiken"] },
   { id: "schooladvies", emoji: "🎓", label: "Voorlopig schooladvies", uitleg: "kijkmoment groep 7, tl/havo/vwo, data en wat je kunt doen", pad: "/voorlopig-schooladvies.html",
     woorden: ["schooladvies", "advies", "voorlopig advies", "kijkmoment", "tl", "havo", "vwo", "mavo", "niveau groep 7", "brugklas advies"] },
   { id: "doorstroomtoets", emoji: "🎯", label: "Doorstroomtoets oefentoets", uitleg: "Oefentoets in de stijl van de Doorstroomtoets, met uitleg bij elke fout.", pad: "/doorstroomtoets-oefentoets",

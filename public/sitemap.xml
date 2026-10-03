@@ -2204,6 +2204,7 @@
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url><loc>https://leerkwartier.app/contact.html</loc><lastmod>2026-10-03</lastmod><changefreq>yearly</changefreq><priority>0.4</priority></url>
   <url><loc>https://leerkwartier.app/voorwaarden.html</loc><lastmod>2026-09-30</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://leerkwartier.app/voorwaarden-organisaties.html</loc><lastmod>2026-10-01</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://leerkwartier.app/voor-leerkrachten.html</loc><lastmod>2026-10-02</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>

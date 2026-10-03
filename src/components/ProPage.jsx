@@ -6,7 +6,7 @@ import { BRAND } from "../brand.js";
 import { track } from "../utils.js";
 import { PAYWALL_ACTIVE } from "../subscription/config.js";
 import FamilieAfsluiten from "../subscription/FamilieAfsluiten.jsx";
-import { PRO_FEATURES, PRO_GRATIS_BASIS, PRO_MODEL, LAGEN, LAAG_KLEUREN } from "../subscription/proPlan.js";
+import { PRO_GRATIS_BASIS, PRO_MODEL, LAGEN, LAAG_KLEUREN, zichtbareFeatures } from "../subscription/proPlan.js";
 
 // T1-sync 10 aug 2026: dit (dormant, achter PAYWALL_ACTIVE) blok toonde nog
 // het oude model (Ouder €5,99 / Leerkracht €9,95 / School S-M-L €29-79 met
@@ -131,7 +131,7 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 11.5, color: "rgba(255,255,255,0.45)", marginBottom: 8 }}>{laag.prijs}</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              {Object.values(PRO_FEATURES).filter((f) => f.laag === laag.id).map((f) => (
+              {zichtbareFeatures(laag.id).live.map((f) => (
                 <div key={f.id} style={{ borderRadius: 14, border: `1px solid ${kleur.rand}`, background: kleur.vlak, padding: "12px 14px" }}>
                   <div style={{ display: "flex", alignItems: "center", gap: 8, marginBottom: 4 }}>
                     <span aria-hidden="true" style={{ fontSize: 17 }}>{f.icon}</span>
@@ -144,6 +144,11 @@ export default function ProPage({ onBack, onHome, authUser, defaultPlan, onLogin
                 </div>
               ))}
             </div>
+            {zichtbareFeatures(laag.id).komt.length > 0 && (
+              <div style={{ marginTop: 8, fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.5)", lineHeight: 1.5 }}>
+                In 2027 komt erbij: {zichtbareFeatures(laag.id).komt.map((f) => f.label.toLowerCase()).join(", ")}.
+              </div>
+            )}
             {laag.id === "familie" && (
               <FamilieAfsluiten plek="propagina" variant="knop" style={{ marginTop: 10 }} />
             )}

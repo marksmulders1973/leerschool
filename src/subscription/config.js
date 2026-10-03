@@ -46,6 +46,9 @@ export const FEATURE_GATES = {
 };
 
 // Quota voor free-tier (alleen relevant als PAYWALL_ACTIVE = true).
+// ⚠️ 3 okt 2026: pathsPerDay botst met de publieke belofte "oefenen zonder daglimiet,
+// gratis t/m 2031" (abonnement.html, PRO_GRATIS_BASIS). Vóór PAYWALL_ACTIVE = true eerst
+// met Mark beslissen: limiet eruit (Infinity) of de belofte aanpassen.
 export const FREE_QUOTA = {
   pathsPerDay: 3,
   // T3-besluit 9 aug 2026: gratis = kleine basis-portie AI-bijles per dag

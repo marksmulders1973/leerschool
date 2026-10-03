@@ -191,6 +191,9 @@ export const PRO_FEATURES = {
     laag: "familie",
     blurb: "Zoveel onderwerpen per dag oefenen als je wilt — zonder daglimiet.",
     status: "binnenkort",
+    // 3 okt 2026: niet tonen — botste met "Onbeperkt oefenen" in PRO_GRATIS_BASIS
+    // (tip andere AI via Mark: te veel "binnenkort" in Familie). Alleen gate-id.
+    verborgen: true,
   },
   "voorkennis-keten": {
     id: "voorkennis-keten",
@@ -257,6 +260,12 @@ export const PRO_GRATIS_BASIS = [
   // 2 okt 2026: scholen gratis t/m 2031 — de klas-kant hoort bij de basis.
   "Leerkrachten en scholen: alles voor de klas — oefeningen klaarzetten, onbeperkt toetsen, werkbladen, voortgang per leerling, digibord en eigen schoollogo",
 ];
+
+// 3 okt 2026: wat in de lijst komt (live) en wat als één regel "komt erbij" (binnenkort).
+export function zichtbareFeatures(laagId) {
+  const alle = Object.values(PRO_FEATURES).filter((f) => f.laag === laagId && !f.verborgen);
+  return { live: alle.filter((f) => f.status === "live"), komt: alle.filter((f) => f.status !== "live") };
+}
 
 export function getProFeature(id) {
   return PRO_FEATURES[id] || null;
