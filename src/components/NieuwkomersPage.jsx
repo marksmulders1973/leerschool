@@ -140,9 +140,22 @@ const T = {
 };
 
 export function leesSteuntaal() { try { return localStorage.getItem(STEUNTAAL_KEY) || "nl"; } catch { return "nl"; } }
+// 3 okt 2026: ?taal=uk|ar|tr|ro|bg|en (vanaf de taalpagina's voor ouders, nieuwkomers-<taal>.html)
+// zet de steuntaal meteen — de ouder hoeft hem niet zelf te zoeken.
+function startTaal() {
+  try {
+    const q = new URLSearchParams(window.location.search).get("taal");
+    if (q && ["nl", "en", "ar", "uk", "tr", "ro", "bg"].includes(q)) {
+      localStorage.setItem(STEUNTAAL_KEY, q);
+      if (q !== "nl") localStorage.setItem("lk_nieuwkomer", "1");
+      return q;
+    }
+  } catch { /* */ }
+  return leesSteuntaal();
+}
 
 export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOverstap }) {
-  const [taal, setTaal] = useState(leesSteuntaal);
+  const [taal, setTaal] = useState(startTaal);
   const [herhaal, setHerhaal] = useState(false);
   // Kijken en luisteren heeft een eigen adres (/nieuwkomers?kijken=kies): de terugknop van de telefoon
   // brengt je dan terug naar /nieuwkomers i.p.v. van de pagina af (kliktocht 30 sep 2026), en een juf

@@ -64,10 +64,12 @@ function injectSwVersion() {
 // daarheen; de app zelf start precies hetzelfde (zelfde scripts, de router leest het pad).
 const ROUTE_SHELLS = {
   nieuwkomers: {
-    titel: 'Nieuwkomer-pakket — gratis Nederlands leren, met vertaling in je eigen taal | Leerkwartier',
-    omschrijving: 'Voor kinderen die net Nederlands leren: zinnen voor in de klas, woorden, letters en klanken, dictee, rekentaal en rekenen. Met testjes en een diploma. Tik op een zin voor de vertaling in Engels, Arabisch, Oekraïens of Turks. Gratis t/m 31 december 2028, geen account.',
+    // 3 okt 2026: nieuwe naam + drie treden + 2031; ld = gestructureerde gegevens voor Google en AI-assistenten.
+    titel: 'Leerkwartier, het startpunt voor nieuwkomers — gratis Nederlands leren met hulp in je eigen taal',
+    omschrijving: 'Voor kinderen die net Nederlands leren: in drie treden van klaszinnen, eerste woorden en rekentaal naar de gewone klas. Met voorlezen, testjes, diploma en vertaling in Engels, Arabisch, Oekraïens, Turks, Roemeens of Bulgaars. Gratis, geen account.',
+    ld: { '@context': 'https://schema.org', '@type': 'LearningResource', name: 'Leerkwartier, het startpunt voor nieuwkomers', url: 'https://leerkwartier.app/nieuwkomers', inLanguage: ['nl', 'en', 'ar', 'uk', 'tr', 'ro', 'bg'], isAccessibleForFree: true, educationalLevel: 'basisonderwijs, nieuwkomers 6-12 jaar', learningResourceType: 'oefenapp', teaches: 'Nederlands als tweede taal (NT2): schooltaal, eerste woorden, letters en klanken, rekentaal', audience: { '@type': 'EducationalAudience', educationalRole: ['student', 'teacher', 'parent'] }, provider: { '@type': 'Organization', name: 'Leerkwartier', url: 'https://leerkwartier.app' }, subjectOf: 'https://leerkwartier.app/nieuwkomers-nederlands-leren.html' },
     // Eigen deelafbeelding (27 sep 2026, Mark: "een nieuwkomer-link die ik via WhatsApp en LinkedIn kan sturen").
-    beeld: { url: 'https://leerkwartier.app/social/nieuwkomers-deel.png', b: 1200, h: 630, alt: 'Nieuwkomer-pakket van Leerkwartier: Nederlands leren met hulp in je eigen taal' },
+    beeld: { url: 'https://leerkwartier.app/social/nieuwkomers-deel.png', b: 1200, h: 630, alt: 'Leerkwartier, het startpunt voor nieuwkomers: Nederlands leren met hulp in je eigen taal' },
   },
   klassikaal: {
     titel: 'Klassikaal op het digibord — quiz met A-B-C-D-kaartjes, zonder accounts | Leerkwartier',
@@ -86,7 +88,7 @@ function routeShells() {
     closeBundle() {
       let html
       try { html = readFileSync(resolve('dist/index.html'), 'utf8') } catch { return }
-      for (const [route, { titel, omschrijving, beeld }] of Object.entries(ROUTE_SHELLS)) {
+      for (const [route, { titel, omschrijving, beeld, ld }] of Object.entries(ROUTE_SHELLS)) {
         const t = esc(titel), o = esc(omschrijving), url = `https://leerkwartier.app/${route}`
         let out = html
           .replace(/<title>[^<]*<\/title>/, `<title>${t}</title>`)
@@ -107,6 +109,8 @@ function routeShells() {
             .replace(/(<meta property="og:image:alt" content=")[^"]*(")/, `$1${esc(beeld.alt)}$2`)
             .replace(/(<meta name="twitter:image" content=")[^"]*(")/, `$1${beeld.url}$2`)
         }
+        if (ld) out = out.replace('</head>', `<script type="application/ld+json">${JSON.stringify(ld)}</script>
+</head>`)
         writeFileSync(resolve(`dist/_shell-${route}.html`), out)
       }
       // eslint-disable-next-line no-console
