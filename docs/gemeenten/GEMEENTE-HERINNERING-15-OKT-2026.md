@@ -23,7 +23,8 @@ Wat de app kan, in het kort:
 
 - Oefenen voor groep 3 tot en met 8: rekenen, taal, spelling en begrijpend lezen. Bij een fout antwoord legt de app uit waarom, op drie niveaus.
 - Groep 8: oefenen voor de Doorstroomtoets, ook een hele oefentoets met de klok en een overzicht per onderdeel.
-- Charley, het AI-bijlesmaatje, legt in gewone taal uit wat een kind niet snapt.
+- Een AI-assistent, Charley, die in gewone taal uitlegt wat een kind niet snapt.
+- Leren in een rondje, tot een kind het echt begrijpt: fout antwoord → uitleg → een korte les over het onderwerp → terug naar dezelfde vraag.
 - Voor ouders of verzorgers: een overzicht van hoe het kind ervoor staat en elke vrijdag een kort weekrapport.
 - Voor kinderen die net Nederlands leren: een eigen startpunt met voorlezen en steun in zes talen.
 - Werkt op elke telefoon, tablet of computer. Niets installeren, geen reclame, en kinderen hebben geen account nodig.
