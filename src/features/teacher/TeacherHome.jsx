@@ -2,13 +2,14 @@ import { useState, useEffect } from "react";
 import styles from "../../styles.js";
 import { SUBJECTS, LEVELS, SAMPLE_QUESTIONS } from "../../constants.js";
 import { BRAND } from "../../brand.js";
-import { formatDate, daysUntil, shuffle, track } from "../../utils.js";
+import { formatDate, daysUntil, shuffle } from "../../utils.js";
 import Header from "../../components/Header.jsx";
 import supabase from "../../supabase.js";
 import { GratisBadge } from "../../subscription/ProBadge.jsx";
 import { shuffleOpties } from "../../shared/shuffleOpties.js";
 import LeraarKlaarzet from "./LeraarKlaarzet.jsx";
 import KlasParkcode from "./KlasParkcode.jsx";
+import NieuwkomersJufKaart from "./NieuwkomersJufKaart.jsx";
 
 export default function TeacherHome({ userName, authUser, onLogin, quizzes, classes, onDigibord, onCreateQuiz, onCreateTakenlijst, onMaakWerkblad, onViewProgress, onManageClasses, onKlaarzetten, onOpenLes, onBack, onHome, onStartQuiz, onDeleteQuiz, onDuplicateQuiz, quizLimitReached, quizCount, quizLimit, isTeacherPro, onUpgrade, schoolLogoUrl, onLogoUpdate, trialDaysLeft, onRondleiding }) {
   const [completions, setCompletions] = useState({});
@@ -449,19 +450,9 @@ export default function TeacherHome({ userName, authUser, onLogin, quizzes, clas
           </button>
         )}
 
-        {/* 🌍 Brug naar het nieuwkomers-pakket (3 okt 2026, tip via Mark): wie de gewone
+        {/* 🌍 Startpunt voor nieuwkomers (3 okt 2026, tip via Mark): code + QR + digibord; wie de gewone
             app kent, moet in één tik bij de taalklas-kant kunnen. */}
-        <a href="/nieuwkomers" onClick={() => { try { track("juf_naar_nieuwkomers", { plek: "teacher-home" }); } catch { /* */ } }}
-          style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 16, padding: "12px 14px", borderRadius: 14, background: "rgba(255,183,77,0.07)", border: "1px solid rgba(255,183,77,0.35)", color: "inherit", textDecoration: "none" }}>
-          <span aria-hidden="true" style={{ fontSize: 26 }}>🌍</span>
-          <span style={{ flex: 1 }}>
-            <span style={{ display: "block", fontFamily: "var(--font-display)", fontSize: 14, fontWeight: 800, color: "#ffcc80" }}>Nieuwkomers in de klas?</span>
-            <span style={{ display: "block", fontFamily: "var(--font-body)", fontSize: 12, color: "rgba(255,255,255,0.55)", lineHeight: 1.45 }}>
-              Eerste Nederlandse woorden en klaszinnen, met voorlezen en steun in zes talen. Ook gratis.
-            </span>
-          </span>
-          <span style={{ fontFamily: "var(--font-display)", fontSize: 13, fontWeight: 800, color: "#ffcc80" }}>Open →</span>
-        </a>
+        <NieuwkomersJufKaart />
 
         {/* 🏫 Parkcode voor de klas (Mark 9 sep 2026): samen bouwen in één 3D-park, tot 100 leerlingen */}
         <KlasParkcode authUser={authUser} />
