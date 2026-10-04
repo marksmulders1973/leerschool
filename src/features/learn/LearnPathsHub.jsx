@@ -1,5 +1,6 @@
 import { useState, useEffect, useMemo } from "react";
 import supabase from "../../supabase";
+import { track } from "../../utils.js";
 import pathManifest from "../../learnPaths/pathManifest.generated.json";
 import { zoekSnelkoppelingen } from "./snelkoppelingen.js";
 import { CURRICULA, curriculumTotalSteps } from "../../curricula";
@@ -387,6 +388,43 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     if (effectiveVo) return ALL_PATHS_MANIFEST.filter((p) => isVoLevel(p.level));
     return ALL_PATHS_MANIFEST;
   }, [effectivePo, effectiveVo, showAllLevels]);
+
+  // 🔥 Vaak geoefend (Mark 4 okt 2026, "zoals 'meest bekeken' bij YouTube"): bovenaan de Leren-pagina
+  // twee onderdelen die andere kinderen de laatste 30 dagen écht oefenden (vragen gemaakt, unieke echte
+  // apparaten via RPC populaire_paden) + één "Probeer ook" dat nog weinig gekozen wordt, zodat de lijst
+  // niet vastroest. Per groep als die bekend is. Nooit namen of ranglijsten van kinderen.
+  const [populairePaden, setPopulairePaden] = useState([]);
+  useEffect(() => {
+    let weg = false;
+    try { const c = JSON.parse(sessionStorage.getItem("lk_populaire_paden") || "null"); if (Array.isArray(c)) setPopulairePaden(c); } catch { /* */ }
+    supabase.rpc("populaire_paden", { dagen: 30 }).then(({ data }) => {
+      if (weg || !Array.isArray(data)) return;
+      setPopulairePaden(data);
+      try { sessionStorage.setItem("lk_populaire_paden", JSON.stringify(data)); } catch { /* */ }
+    }).catch(() => { /* geen strook */ });
+    return () => { weg = true; };
+  }, []);
+  const vaakGeoefend = useMemo(() => {
+    const inBereik = (p) => {
+      if (!p || /^opwarm/.test(p.id)) return false;
+      if (!allPaths.includes(p)) return false;
+      const g = poGroupFilter;
+      if (!g) return true;
+      const r = poGroupRange(p.level);
+      return !r || (g >= r[0] && g <= r[1]);
+    };
+    const telling = new Map(populairePaden.map((r) => [r.pad, Number(r.kinderen) || 0]));
+    const top = populairePaden
+      .filter((r) => Number(r.kinderen) >= 3)
+      .map((r) => ALL_PATHS_BY_ID[r.pad])
+      .filter(inBereik)
+      .slice(0, 2);
+    if (top.length < 2) return null;
+    const kandidaten = allPaths.filter((p) => inBereik(p) && !top.includes(p) && (telling.get(p.id) || 0) < 3);
+    const dag = Math.floor(Date.now() / 86400000);
+    const ontdek = kandidaten.length ? kandidaten[dag % kandidaten.length] : null;
+    return { top: top.map((p) => ({ p, n: telling.get(p.id) || 0 })), ontdek };
+  }, [populairePaden, allPaths, poGroupFilter]);
 
   // Reset de "toon alle niveaus"-keuze zodra alle entry-filters leeg zijn, zodat
   // de vak-grid niet onbedoeld VO-vakken toont aan een basisschool-leerling.
@@ -789,6 +827,41 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
           })()}
         </div>
 
+        {!filterActief && !klaarzetVoor && vaakGeoefend && (
+          <div style={{ padding: "0 18px 14px" }}>
+            <div style={{ background: "rgba(255,138,61,.10)", border: "1px solid rgba(255,138,61,.45)", borderRadius: 16, padding: "12px 12px 10px" }}>
+              <div style={{ fontWeight: 800, fontSize: 15, marginBottom: 8 }}>
+                🔥 Vaak geoefend door andere kinderen{poGroupFilter ? ` in groep ${poGroupFilter}` : ""}
+              </div>
+              <div style={{ display: "grid", gap: 8 }}>
+                {vaakGeoefend.top.map(({ p, n }, i) => (
+                  <button key={p.id} type="button"
+                    onClick={() => { try { track("vaak_geoefend_klik", { pad: p.id, plek: i + 1, soort: "populair", groep: poGroupFilter || null }); } catch { /* */ } onPickPath(p.id); }}
+                    style={{ display: "flex", alignItems: "center", gap: 10, width: "100%", textAlign: "left", background: "rgba(255,255,255,.06)", border: "1px solid rgba(255,255,255,.14)", borderRadius: 12, padding: "10px 12px", color: "inherit", cursor: "pointer", fontFamily: "inherit" }}>
+                    <span style={{ fontSize: 22 }} aria-hidden="true">{p.emoji || "📘"}</span>
+                    <span style={{ flex: 1, minWidth: 0 }}>
+                      <span style={{ display: "block", fontWeight: 700, fontSize: 14.5 }}>{p.title}</span>
+                      <span style={{ display: "block", fontSize: 12, color: C.muted }}>{n} kinderen oefenden dit deze maand</span>
+                    </span>
+                    <span aria-hidden="true" style={{ opacity: .5 }}>›</span>
+                  </button>
+                ))}
+                {vaakGeoefend.ontdek && (
+                  <button type="button"
+                    onClick={() => { try { track("vaak_geoefend_klik", { pad: vaakGeoefend.ontdek.id, plek: 3, soort: "ontdek", groep: poGroupFilter || null }); } catch { /* */ } onPickPath(vaakGeoefend.ontdek.id); }}
+                    style={{ display: "flex", alignItems: "center", gap: 10, width: "100%", textAlign: "left", background: "transparent", border: "1px dashed rgba(255,255,255,.25)", borderRadius: 12, padding: "10px 12px", color: "inherit", cursor: "pointer", fontFamily: "inherit" }}>
+                    <span style={{ fontSize: 22 }} aria-hidden="true">{vaakGeoefend.ontdek.emoji || "📘"}</span>
+                    <span style={{ flex: 1, minWidth: 0 }}>
+                      <span style={{ display: "block", fontSize: 12, color: C.muted }}>Probeer ook</span>
+                      <span style={{ display: "block", fontWeight: 700, fontSize: 14.5 }}>{vaakGeoefend.ontdek.title}</span>
+                    </span>
+                    <span aria-hidden="true" style={{ opacity: .5 }}>›</span>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
         {/* ─── RESULTATEN of VAK-GRID ─── */}
         {filterActief ? (
           <div style={{ padding: "0 14px 32px" }}>
