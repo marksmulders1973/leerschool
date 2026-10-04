@@ -88,6 +88,16 @@
   ],
   "redirects": [
     {
+      "source": "/ooievaarspas",
+      "destination": "/?partner=OOIEVAAR2027",
+      "permanent": false
+    },
+    {
+      "source": "/ooievaarspas.html",
+      "destination": "/?partner=OOIEVAAR2027",
+      "permanent": false
+    },
+    {
       "source": "/:pad([^.]+)\\.",
       "destination": "/:pad",
       "permanent": false
