@@ -11,6 +11,7 @@ import NieuwkomersMijnPunten from "./NieuwkomersMijnPunten.jsx";
 import { Fragment, lazy, Suspense, useEffect, useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 import { track } from "../utils.js";
+import supabase from "../supabase.js";
 import VoorleesBlok from "../shared/ui/VoorleesBlok.jsx";
 import LuisterKnop from "../shared/ui/LuisterKnop.jsx";
 import VoorleesSchakelaar from "../shared/ui/VoorleesSchakelaar.jsx";
@@ -157,6 +158,20 @@ function startTaal() {
 export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOverstap }) {
   const [taal, setTaal] = useState(startTaal);
   const [herhaal, setHerhaal] = useState(false);
+  // ⭐ Vaak gekozen (Mark 4 okt 2026): "wat andere kinderen het leukst of meest passend vonden" bovenaan.
+  // Telling = unieke echte apparaten per tegel, laatste 60 dagen (RPC nieuwkomers_populair, events_mens).
+  // De trap (treden 1-3) blijft in leervolgorde staan; dit is een extra strook erboven.
+  const [populair, setPopulair] = useState([]);
+  useEffect(() => {
+    let weg = false;
+    try { const c = JSON.parse(sessionStorage.getItem("lk_nk_populair") || "null"); if (Array.isArray(c)) setPopulair(c); } catch { /* */ }
+    supabase.rpc("nieuwkomers_populair", { dagen: 60 }).then(({ data }) => {
+      if (weg || !Array.isArray(data)) return;
+      setPopulair(data);
+      try { sessionStorage.setItem("lk_nk_populair", JSON.stringify(data)); } catch { /* */ }
+    }).catch(() => { /* geen strook */ });
+    return () => { weg = true; };
+  }, []);
   // Kijken en luisteren heeft een eigen adres (/nieuwkomers?kijken=kies): de terugknop van de telefoon
   // brengt je dan terug naar /nieuwkomers i.p.v. van de pagina af (kliktocht 30 sep 2026), en een juf
   // kan het scherm direct delen.
@@ -442,6 +457,33 @@ export default function NieuwkomersPage({ onLeerpad, onPagina, onHome, onOversta
               <div style={{ fontSize: 26, fontWeight: 900, opacity: .5 }}>›</div>
             </button>
           )}
+          {(() => {
+            const top = populair.filter((p) => Number(p.apparaten) >= 2)
+              .map((p) => ({ p, i: t.tegels.findIndex((x) => x.id === p.id) })).filter((x) => x.i >= 0).slice(0, 3);
+            if (top.length < 2) return null;
+            return (
+              <div style={{ background: "rgba(255,213,79,.14)", border: "2px solid rgba(255,213,79,.55)", borderRadius: 18, padding: "12px 12px 10px" }}>
+                <div style={{ fontWeight: 900, fontSize: 17, marginBottom: 8, display: "flex", alignItems: "center", gap: 8 }}>
+                  <span style={{ flex: 1 }}>⭐ Andere kinderen kozen vaak</span>
+                  <LuisterKnop tekst={`Andere kinderen kozen vaak: ${top.map(({ i }) => t.tegels[i].titel).join(", ")}.`} maat={34} />
+                </div>
+                <div style={{ display: "grid", gridTemplateColumns: `repeat(${top.length}, 1fr)`, gap: 8 }}>
+                  {top.map(({ i }) => {
+                    const tegel = t.tegels[i];
+                    return (
+                      <button key={tegel.id} type="button" onClick={() => { try { track("nk_populair_klik", { id: tegel.id, plek: i + 1 }); } catch { /* */ } open(tegel); }} style={{
+                        background: "rgba(255,255,255,.96)", color: "#0f2a44", border: "none", borderRadius: 14, padding: "12px 6px",
+                        cursor: "pointer", fontFamily: "inherit", fontWeight: 900, fontSize: 16, lineHeight: 1.2, boxShadow: "0 6px 16px rgba(0,0,0,.22)",
+                      }}>
+                        {tegel.titel}
+                        {taal !== "nl" && s.tegels?.[i] && <span dir={rtl ? "rtl" : "ltr"} lang={taal} style={{ display: "block", fontSize: 13, fontWeight: 700, color: "#6b4a00", marginTop: 4 }}>{s.tegels[i][0]}</span>}
+                      </button>
+                    );
+                  })}
+                </div>
+              </div>
+            );
+          })()}
           {doelenKaart()}
           {t.tegels.map((tegel, i) => (
             <Fragment key={tegel.id}>
