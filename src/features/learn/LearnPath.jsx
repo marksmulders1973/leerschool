@@ -1674,13 +1674,21 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                       background: "rgba(91,134,184,0.05)",
                       border: "1px solid rgba(91,134,184,0.25)",
                       borderRadius: 8,
-                      fontSize: 13,
-                      lineHeight: 1.55,
+                      fontSize: stapLeesTekst ? 17 : 13,
+                      lineHeight: stapLeesTekst ? 1.6 : 1.55,
                       maxHeight: "45vh",
                       overflowY: "auto",
                       color: "var(--color-text)",
                     }}
                   >
+                    {/* Voorleesknop bovenin de leestekst (Mark 4 okt 2026: "die tekst kan ik niet laten voorlezen").
+                        Eigen knop in het kader, niet nog een "Lees voor" onderin naast die van de vraag. */}
+                    {stapLeesTekst && (
+                      <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+                        <LuisterKnop tekst={String(stapLeesTekst).replace(/\*\*/g, "")} maat={38} label="Lees de tekst voor" />
+                        <span style={{ fontSize: 13, fontWeight: 700, color: "#5b86b8" }}>Lees de tekst voor</span>
+                      </div>
+                    )}
                     <MdInline text={stapLeesTekst || step.explanation} />
                   </div>
                 )}

@@ -4,6 +4,7 @@
 // laten zien: hulp bij elke vraag, printpakketten, het 3D-park, echte toetsen
 // en examens. Altijd te stoppen (knop rechtsboven) → persoonlijke pagina.
 // Zie docs/ACTIVATIE-NULMETING-SEP2026.md voor het waarom.
+import LuisterKnop from "../../shared/ui/LuisterKnop.jsx";
 import { lazy, Suspense, useEffect, useMemo, useRef, useState } from "react";
 import Button from "../../shared/ui/Button.jsx";
 import Card from "../../shared/ui/Card.jsx";
@@ -107,9 +108,14 @@ export function VraagKaart({ vraag, nummer, totaal, onBeantwoord, onVerder, bron
       </div>
       {vraag.leesTekst && (
         // Leesvraag uit een leerpad: de tekst hoort erbij (Mark 29 sep 2026, "ik zie geen tekst").
-        <div style={{ maxHeight: "45vh", overflowY: "auto", padding: "10px 12px", marginBottom: 12, borderRadius: 12, background: "rgba(255,255,255,0.05)", border: "1px solid var(--color-border-soft)", fontSize: 15, lineHeight: 1.55 }}>
-          <div style={{ fontSize: 12.5, fontWeight: 800, color: "var(--color-text-muted)", marginBottom: 6 }}>📖 Lees eerst de tekst</div>
-          {String(vraag.leesTekst).split(/\n\s*\n/).map((p, k) => <p key={k} style={{ margin: "0 0 8px" }}><MdInline text={p} /></p>)}
+        <div style={{ maxHeight: "45vh", overflowY: "auto", padding: "10px 12px", marginBottom: 12, borderRadius: 12, background: "rgba(255,255,255,0.05)", border: "1px solid var(--color-border-soft)", fontSize: 17, lineHeight: 1.6 }}>
+          <div style={{ fontSize: 13, fontWeight: 800, color: "var(--color-text-muted)", marginBottom: 6 }}>📖 Lees eerst de tekst</div>
+          {/* Voorlezen + grotere letters (Mark 4 okt 2026): eigen knop in het kader. */}
+          <div style={{ display: "flex", alignItems: "center", gap: 10, marginBottom: 8 }}>
+            <LuisterKnop tekst={String(vraag.leesTekst).replace(/\*\*/g, "")} maat={38} label="Lees de tekst voor" />
+            <span style={{ fontSize: 13, fontWeight: 700, color: "#5b86b8" }}>Lees de tekst voor</span>
+          </div>
+          {String(vraag.leesTekst).split(/\n\s*\n/).map((p, k) => <p key={k} style={{ margin: "0 0 10px" }}><MdInline text={p} /></p>)}
         </div>
       )}
       <p style={S.vraag}><MdInline text={vraag.q} /></p>
