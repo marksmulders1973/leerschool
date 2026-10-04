@@ -206,6 +206,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Training 1 — een lange informatieve tekst",
+    leesTekst: tekstZeehonden, // gaat mee naar Kwartier van vandaag / losse oefenvragen
     explanation: tekstZeehonden + `
 
 Dit is 'm: een tekst zo lang als op de echte toets, met zeven vragen van allerlei soorten door elkaar — een feitje opzoeken, een verwijswoord, de hoofdgedachte, een woord uit de tekst en een conclusie.
@@ -511,6 +512,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
   // ── Stap 3 ──────────────────────────────────────────────────────
   {
     title: "Training 2 — een lang verhaal",
+    leesTekst: tekstSterren, // gaat mee naar Kwartier van vandaag / losse oefenvragen
     explanation: tekstSterren + `
 
 Training twee! Op de echte toets krijg je ook verhalen — en daar stellen ze nét andere vragen bij: over gevoelens, over waaróm iemand iets doet, en over wat je uit het einde kunt afleiden. Ook dit verhaal is zo lang als op de echte toets.

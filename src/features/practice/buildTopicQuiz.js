@@ -40,14 +40,16 @@ export async function buildTopicQuiz({ pathId, aantal = null, shuffleQuestions =
   const alle = pad.steps || [];
   const stappen = stapIndexen ? alle.filter((_, i) => stapIndexen.includes(i)) : alleenEersteStappen ? alle.slice(0, alleenEersteStappen) : alle;
   const alleChecks = stappen.flatMap((s) => {
-    const metTekst = STAP_MET_TEKST.test(String(s.explanation || ""));
+    // `s.leesTekst` (4 okt 2026, meldingen lange-toets-teksten-g8-po): een stap kan zijn leestekst
+    // ook expliciet meegeven — dan hangt het niet af van een zinnetje in de uitleg.
+    const metTekst = !!s.leesTekst || STAP_MET_TEKST.test(String(s.explanation || ""));
     return (s.checks || []).map((c) => ({ ...c, svg: c.svg || ((stapPlaatje === "altijd" || VERWIJST_NAAR_PLAATJE.test(String(c.q || ""))) ? s.svg : null) || null,
       // Vraag hoort bij een leestekst in de stap-uitleg (kliktest 26 sep 2026: "Wat heb je nodig om de
       // armband te maken?" stond zonder tekst op het digibord). Klassikaal slaat zulke vragen over.
       stapTekst: metTekst || undefined,
       // Mark 29 sep 2026 (Kwartier van vandaag): "Wat betekent 'pedaalomwenteling' in deze tekst?" zonder
       // tekst → de tekst gaat nu mee (zonder de slotregel "Beantwoord de 4 vragen…", die klopt los niet).
-      leesTekst: metTekst ? String(s.explanation).split(/\n\s*\n/).filter((p) => !/^\*.*beantwoord de \d+ vragen/i.test(p.trim())).join("\n\n") : undefined,
+      leesTekst: s.leesTekst ? String(s.leesTekst) : metTekst ? String(s.explanation).split(/\n\s*\n/).filter((p) => !/^\*.*beantwoord de \d+ vragen/i.test(p.trim())).join("\n\n") : undefined,
       stapIdx: alle.indexOf(s) }));
   });
   const valide = alleChecks.filter(

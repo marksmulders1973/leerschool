@@ -659,6 +659,11 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // 🌍 Nieuwkomerpaden (`steunTeksten`): álle teksten tikbaar in de eigen taal (Mark 24 sep).
   const steunMap = useMemo(() => (path?.steunTeksten ? maakSteunMap(UI_STEUN, path.steunTeksten) : null), [path]);
   const vraagEerst = !steunMap && !isExamenPad;
+  // 📖 Leestekst-stap (Mark 4 okt 2026, twee meldingen "ik snap niet waar de tekst ligt"): bij vraag-eerst
+  // zat de leestekst achter "Terug naar de tekst" (dicht). Heeft de stap een leestekst, dan staat die nu
+  // standaard open boven elke vraag — met alleen de tekst, zonder de uitleg eromheen.
+  const stapLeesTekst = step?.leesTekst || (/(op basis van (de|het) (tekst|verhaal)|lees (eerst |nog eens |nogmaals )?(de|het) (tekst|verhaal)|beantwoord de \d+ vragen)/i.test(String(step?.explanation || "")) ? step.explanation : null);
+  useEffect(() => { setShowTekstHerlees(!!stapLeesTekst); }, [stepIdx, stapLeesTekst]);
   const wrongPerStep = useMemo(() => adaptPathWrongMap(pathId), [pathId, stepIdx, mode, attempts]);
 
   // Veel leerpaden hebben de juiste optie op index 0 staan; door per check
@@ -1676,7 +1681,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
                       color: "var(--color-text)",
                     }}
                   >
-                    <MdInline text={step.explanation} />
+                    <MdInline text={stapLeesTekst || step.explanation} />
                   </div>
                 )}
               </div>
