@@ -104,7 +104,7 @@ const ONBOARDING_STEPS = [
 // gewoon bestaan (gebeuren bij Start gratis / account).
 // (De gele Deel-actie-knop "nog X van 50 plekken" stond hier tot 6 sep 2026 — Mark: "dat kan ook wel weg".)
 
-export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina, onKlas }) {
+export default function HomePage({ onSelectRole, onBack, userName, setUserName, setUserLevel, setUserSchoolType, pendingCode, authUser, onGoogleLogin, onLogout, onSaveProfile, onOnboardingStart, onOuderDashboard, onAdminFeedback, onAdminStats, onActie, onOefenpakket, onPrinten, onKwartiercheck, onDagvraag, onPlayObliterator, onPro, onFamilie, onLearnPath, onLearnPathsHub, onMyMastery, onPickPath, onSearchPaths, onMijnPagina, onKlas, onNieuwkomers }) {
   // Idee AR (23 sep 2026): klasgolf-schakelaar. Ziet de server ≥15 nieuwe apparaten
   // binnen 10 minuten op een schooldag (RPC klasgolf_actief), dan toont home het
   // volgende uur bovenaan de klas-strook → /klas. Geen nieuwe voordeur; het blokje
@@ -1050,24 +1050,51 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             rustiger eerste scherm). Stond hier direct onder de hero en concurreerde
             met de hoofd-CTA + de "doe één vraag"-kaart. */}
 
+        {/* Onderkant startpagina herschikt (Mark 4 okt 2026: "logischer, nu zijn de
+            verhoudingen scheef en gaan ruimtes onbenut"): eerst de nieuwkomer-ingang
+            (een kind-actie), dan de eigen cijfers in drie gelijke kolommen, dan drie
+            gelijke tegels, dan delen/volgen in twee gelabelde rijen. */}
+        {step === "role" && onNieuwkomers && (
+          <div className="lk-content-wide" style={{ margin: "0 auto 14px", maxWidth: 520 }}>
+            <button
+              type="button"
+              onClick={() => { track("home_nieuwkomer_knop"); onNieuwkomers(); }}
+              style={{
+                width: "100%", display: "flex", alignItems: "center", gap: 14,
+                padding: "14px 16px", borderRadius: 16, cursor: "pointer", textAlign: "left",
+                background: "linear-gradient(135deg, rgba(0,212,255,0.16), rgba(0,200,83,0.12))",
+                border: "1.5px solid rgba(0,212,255,0.45)", color: "#fff",
+                fontFamily: "var(--font-body)",
+              }}
+            >
+              <span aria-hidden="true" style={{ fontSize: 30, lineHeight: 1 }}>🌍</span>
+              <span style={{ flex: 1, minWidth: 0 }}>
+                <span style={{ display: "block", fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 18 }}>Ik ben nieuwkomer</span>
+                <span style={{ display: "block", fontSize: 13, color: "rgba(255,255,255,0.72)", marginTop: 2 }}>Nederlands leren, met voorlezen en hulp in zes talen</span>
+              </span>
+              <span aria-hidden="true" style={{ fontSize: 20, color: "#00d4ff" }}>→</span>
+            </button>
+          </div>
+        )}
+
         {/* Eigen-bewijs-strip (verbeterplan 2026-06-10, S7): eigen cijfers + maker-
-            verhaal i.p.v. klacht-quotes over concurrenten. Vóór de oefenpakket-kaart
-            (Mark 2026-06-14): eerst vertrouwen opbouwen, dán de lead-magnet. */}
+            verhaal i.p.v. klacht-quotes over concurrenten. 4 okt 2026: drie gelijke
+            kolommen (getal boven, woord eronder) — wikkelde eerst 2+1 met gaten. */}
         {step === "role" && (
           <div className="lk-content-wide" style={{
             margin: "0 auto 18px", maxWidth: 520,
             background: "rgba(255,255,255,0.05)",
             border: "1px solid rgba(255,255,255,0.14)", borderRadius: 16,
-            padding: "14px 18px", textAlign: "center",
+            padding: "14px 12px", textAlign: "center",
           }}>
             <div style={{
-              display: "flex", justifyContent: "center", gap: 22, flexWrap: "wrap",
-              fontFamily: "var(--font-body)", fontSize: 13, color: "rgba(255,255,255,0.85)",
-              marginBottom: 10,
+              display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 6,
+              fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.8)",
+              marginBottom: 10, lineHeight: 1.25,
             }}>
-              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>500+</strong> bezoekers/maand</span>
-              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>7.000+</strong> oefenvragen</span>
-              <span><strong style={{ color: "#ffd54f", fontSize: 16 }}>48</strong> echte examens</span>
+              <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>500+</strong>bezoekers per maand</div>
+              <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>7.000+</strong>oefenvragen</div>
+              <div><strong style={{ display: "block", color: "#ffd54f", fontSize: 20 }}>48</strong>echte examens</div>
             </div>
             <div style={{ fontFamily: "var(--font-body)", fontSize: 12.5, color: "rgba(255,255,255,0.65)", lineHeight: 1.5 }}>
               Gebouwd door één vader met een kind in het examenjaar — geen marketingmachine,
@@ -1112,19 +1139,65 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
         {/* "Zo werkt Leerkwartier" (UspDemo) verwijderd van de home (Mark 2026-06-14):
             de proefvraag bovenaan laat het al zien; component bewaard in UspDemo.jsx. */}
 
-        {/* Deel/volg-blok VERKLEIND (Mark 11 aug 2026: "home moet rust
-            uitstralen; ons Threads-blok e.d. kan misschien verkleind worden").
-            Was: grote deel-knoppen + 5 volg-links met tekstlabels. Nu: één rij
-            kleine icoon-knopjes met korte kop; zelfde functionaliteit + tracking,
-            labels in title/aria-label. */}
+        {/* Tegels + delen/volgen (4 okt 2026 herschikt). Voorheen één rij "Deel of volg
+            ons" met 7 rondjes waarin WhatsApp en Facebook dubbel leken; nu twee
+            gelabelde rijen: delen (stuurt een link door) en volgen (onze kanalen). */}
         {step === "role" && (
           <div className="lk-content-wide" style={{
-            marginTop: 20,
-            display: "flex", flexDirection: "column", alignItems: "center", gap: 10,
+            margin: "0 auto", maxWidth: 520,
+            display: "flex", flexDirection: "column", alignItems: "stretch", gap: 18,
             fontFamily: "var(--font-body)", fontSize: 12,
           }}>
-            <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", gap: 7 }}>
-            <span style={{ color: "rgba(255,255,255,0.55)", marginRight: 3 }}>Deel of volg ons</span>
+            <style>{`
+              .lk-voet-tegel { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 4px;
+                min-height: 64px; padding: 10px 6px; border-radius: 14px; cursor: pointer; text-decoration: none;
+                background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.14);
+                color: rgba(255,255,255,0.9); font-family: var(--font-body); font-size: 13px; font-weight: 600; line-height: 1.2; text-align: center; }
+              .lk-voet-tegel:hover { background: rgba(255,255,255,0.09); }
+              .lk-voet-icoon { font-size: 20px; line-height: 1; }
+              .lk-voet-rij { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+              .lk-voet-rij > div { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px; }
+              .lk-voet-kop { color: rgba(255,255,255,0.55); font-size: 12px; }
+            `}</style>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
+            <button
+              type="button"
+              className="lk-voet-tegel"
+              onClick={() => handleFeatureClick("leerkrachten")}
+            >
+              <span aria-hidden="true" className="lk-voet-icoon">👩‍🏫</span>
+              Voor leerkrachten
+            </button>
+            {/* Prijs-ingang op de home (Mark 31 jul): eerlijk + vindbaar dat de
+                basis gratis is en wat de optionele extra's kosten. Opent ProPage. */}
+            {onPro && (
+              <button
+                type="button"
+                className="lk-voet-tegel"
+                onClick={() => { track("home_cta_prijzen"); onPro(); }}
+              >
+                <span aria-hidden="true" className="lk-voet-icoon">💶</span>
+                Wat kost het?
+              </button>
+            )}
+            {/* "Familie-extra's (bèta)" + "Mijn Park / Ga naar je park" weg uit de
+                voet (30 sep 2026, rust): bereikbaar via Mijn pagina, de balk
+                (Spelletje) en de zoekbalk (snelkoppelingen "park", "familie"). */}
+            {/* Bedank-pagina (Mark 16 jul 2026): organisaties die gezinnen op
+                Leerkwartier wijzen — eerste vermelding (VB Rotterdam) live,
+                dus nu vindbaar vanaf de home. Statische pagina → gewone <a>. */}
+            <a
+              href="/bedankt.html"
+              className="lk-voet-tegel"
+            >
+              <span aria-hidden="true" className="lk-voet-icoon">🤝</span>
+              Zij helpen mee
+            </a>
+            </div>
+            <div style={{ display: "flex", flexDirection: "column", gap: 12 }}>
+            <div className="lk-voet-rij">
+              <span className="lk-voet-kop">Deel met een ander</span>
+              <div>
             <button
               type="button"
               aria-label="Deel via WhatsApp"
@@ -1154,8 +1227,11 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
                 <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
               </svg>
             </button>
-            {/* Volg-ons-links: icoon-only, tekstlabels in title/aria-label. */}
-            <span style={{ color: "rgba(255,255,255,0.25)", alignSelf: "center" }}>·</span>
+              </div>
+            </div>
+            <div className="lk-voet-rij">
+              <span className="lk-voet-kop">Volg ons</span>
+              <div>
             <a
               href="https://www.facebook.com/leerkwartier"
               target="_blank" rel="noopener noreferrer"
@@ -1203,49 +1279,10 @@ export default function HomePage({ onSelectRole, onBack, userName, setUserName, 
             >
               <svg width="14" height="14" viewBox="0 0 24 24" fill="#25D366"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-1.043 1.45.886zm9.882-5.747c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
             </a>
+              </div>
             </div>
-            {/* "Tip aan de maker" weg uit hero-rij (Mark 2026-05-18): past niet
-                bij ICP-conversie-homepage. Modal-state + LearnPathsHub-trigger
-                blijven bestaan; alleen de homepage-knop is verwijderd. */}
-            {/* Maand 1 snoei (visie-bewaker 2026-05-10): leerkracht-link verplaatst
-                van hero-tegel naar footer. Niet ICP, maar route blijft bereikbaar. */}
-            {/* "Voor ouders & verzorgers"-footer-link verwijderd (rust-snoei
-                11 aug 2026): exact dezelfde actie als de grote ouder-knop
-                hogerop deze pagina — dubbele CTA weg, route blijft bereikbaar. */}
+            </div>
             <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", gap: 14 }}>
-            <button
-              type="button"
-              style={{ background: "none", border: "none", color: "#00897b", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
-              onClick={() => handleFeatureClick("leerkrachten")}
-            >
-              <span>👩‍🏫</span>
-              Voor leerkrachten
-            </button>
-            {/* Prijs-ingang op de home (Mark 31 jul): eerlijk + vindbaar dat de
-                basis gratis is en wat de optionele extra's kosten. Opent ProPage. */}
-            {onPro && (
-              <button
-                type="button"
-                style={{ background: "none", border: "none", color: "#00c853", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5 }}
-                onClick={() => { track("home_cta_prijzen"); onPro(); }}
-              >
-                <span aria-hidden="true">💶</span>
-                Wat kost het?
-              </button>
-            )}
-            {/* "Familie-extra's (bèta)" + "Mijn Park / Ga naar je park" weg uit de
-                voet (30 sep 2026, rust): bereikbaar via Mijn pagina, de balk
-                (Spelletje) en de zoekbalk (snelkoppelingen "park", "familie"). */}
-            {/* Bedank-pagina (Mark 16 jul 2026): organisaties die gezinnen op
-                Leerkwartier wijzen — eerste vermelding (VB Rotterdam) live,
-                dus nu vindbaar vanaf de home. Statische pagina → gewone <a>. */}
-            <a
-              href="/bedankt.html"
-              style={{ color: "#34d399", cursor: "pointer", padding: "4px 6px", display: "inline-flex", alignItems: "center", gap: 5, textDecoration: "none" }}
-            >
-              <span>🤝</span>
-              Zij helpen mee
-            </a>
             {isAdmin && onAdminFeedback && (
               <button
                 type="button"

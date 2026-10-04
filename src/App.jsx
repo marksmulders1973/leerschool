@@ -1824,6 +1824,7 @@ export default function App() {
           onOefenpakket={() => setPage("oefenpakket")} onPrinten={() => setPage("printen")}
           onKwartiercheck={() => setPage("kwartiercheck")}
           onKlas={() => setPage("klas")} /* idee AR: klasgolf-strook */
+          onNieuwkomers={() => setPage("nieuwkomers")}
           onDagvraag={() => setPage("vandaag")}
           onPlayObliterator={() => setPage("zoo")}
           onPro={() => setPage("pro")}
@@ -2731,13 +2732,14 @@ export default function App() {
           onHome={goHome}
         />
       )}
-    <footer style={{ textAlign: "center", padding: "16px 0 24px", fontSize: 12, color: "rgba(255,255,255,0.25)" }}>
-      <a href="/over.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Over {BRAND.name}</a>
-      ·
-      <a href="/weekpakket.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>📬 Weekpakket</a>
-      ·
-      <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.3)", textDecoration: "none", margin: "0 8px" }}>Privacybeleid</a>
-      · © Leerkwartier · KvK 42176244
+    {/* Voet wikkelt netjes (4 okt 2026: op de telefoon werd "© Leerkwartier · KvK" afgeknipt). */}
+    <footer style={{ textAlign: "center", padding: "16px 16px 72px", fontSize: 12, color: "rgba(255,255,255,0.3)", lineHeight: 1.8 }}>
+      <div style={{ display: "flex", flexWrap: "wrap", justifyContent: "center", columnGap: 16 }}>
+        <a href="/over.html" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Over {BRAND.name}</a>
+        <a href="/weekpakket.html" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>📬 Weekpakket</a>
+        <a href="/privacy.html" style={{ color: "rgba(255,255,255,0.4)", textDecoration: "none" }}>Privacybeleid</a>
+      </div>
+      <div>© Leerkwartier · KvK 42176244</div>
     </footer>
     </Suspense>
     </main>
