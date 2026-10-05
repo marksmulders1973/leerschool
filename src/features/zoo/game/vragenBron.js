@@ -21,7 +21,7 @@ const SUBJECTS = {
   rekenen: ["rekenen", "cito"],
   taal: ["taal", "spelling"],
   lezen: ["begrijpend-lezen"],
-  wereld: ["aardrijkskunde", "geschiedenis", "natuur", "wereldorientatie", "biologie", "verkeer"],
+  wereld: ["aardrijkskunde", "geschiedenis", "natuur", "wereldorientatie", "biologie"], // VERKEER_OFFLINE
 };
 const PADEN = Array.isArray(manifest) ? manifest : manifest.paths || Object.values(manifest);
 

@@ -69,7 +69,7 @@ export const SUBJECT_FOR_LEVEL = {
   groep3:  ["rekenen", "taal", "natuur"],
   groep4:  ["rekenen", "taal", "natuur"],
   groep5:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "spelling", "begrijpend-lezen"],
-  groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "spelling", "begrijpend-lezen", "verkeer", "cito"],
+  groep7:  ["rekenen", "taal", "aardrijkskunde", "geschiedenis", "natuur", "engels", "spelling", "begrijpend-lezen", "cito"], // 🚧 Verkeer tijdelijk offline (Mark 5 okt 2026: "haal verkeer er voorlopig uit") tot de inhoud vakinhoudelijk is gecontroleerd. Terugzetten: zoek op VERKEER_OFFLINE.
   klas1:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "mens-maatschappij", "levensbeschouwing"],
   klas3:   ["wiskunde", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "nask", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "levensbeschouwing"],
   klas5:   ["wiskunde", "wiskunde-a", "wiskunde-b", "nederlands", "aardrijkskunde", "geschiedenis", "biologie", "natuurkunde", "scheikunde", "economie", "beco", "engels", "duits", "frans", "spaans", "latijn", "grieks", "maatschappijleer", "maw"],

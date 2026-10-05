@@ -35,10 +35,11 @@ export const VAKKEN_PER_GROEP = {
   1: ["rekenen", "taal"],
   2: ["rekenen", "taal"],
   3: ["rekenen", "taal", "spelling"],
-  4: ["rekenen", "taal", "spelling", "begrijpend-lezen", "natuur", "verkeer"],
-  5: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "natuur", "aardrijkskunde", "geschiedenis", "verkeer"],
-  6: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "natuur", "aardrijkskunde", "geschiedenis", "verkeer"],
-  7: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "studievaardigheden", "natuur", "aardrijkskunde", "geschiedenis", "verkeer"],
+  // 🚧 Verkeer tijdelijk offline (Mark 5 okt 2026: "haal verkeer er voorlopig uit") tot de inhoud vakinhoudelijk is gecontroleerd. Terugzetten: zoek op VERKEER_OFFLINE.
+  4: ["rekenen", "taal", "spelling", "begrijpend-lezen", "natuur"],
+  5: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "natuur", "aardrijkskunde", "geschiedenis"],
+  6: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "natuur", "aardrijkskunde", "geschiedenis"],
+  7: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "studievaardigheden", "natuur", "aardrijkskunde", "geschiedenis"],
   8: ["rekenen", "taal", "spelling", "begrijpend-lezen", "engels", "studievaardigheden", "natuur", "aardrijkskunde", "geschiedenis"],
 };
 

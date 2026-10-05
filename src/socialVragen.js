@@ -915,6 +915,7 @@ export const SOCIAL_VRAGEN = {
 export function getSocialVraag(id) {
   if (!id) return null;
   const v = SOCIAL_VRAGEN[id];
+  if (v?.vak === "verkeer") return null; // VERKEER_OFFLINE (5 okt 2026)
   return v ? { id, ...shuffleOptiesSeeded(v, id) } : null;
 }
 
@@ -922,7 +923,7 @@ export function getSocialVraag(id) {
 // vraag, die per dag door de pool rouleert. Gebruikt door VraagVanDeDag (in-app)
 // én de /vandaag-funnel-URL (deelbaar op social).
 export function vraagVanVandaagId() {
-  const ids = Object.keys(SOCIAL_VRAGEN);
+  const ids = Object.keys(SOCIAL_VRAGEN).filter((k) => SOCIAL_VRAGEN[k].vak !== "verkeer"); // VERKEER_OFFLINE
   if (!ids.length) return null;
   const d = new Date();
   const dagNr = Math.floor(Date.UTC(d.getFullYear(), d.getMonth(), d.getDate()) / 86400000);

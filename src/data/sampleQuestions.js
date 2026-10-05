@@ -3944,3 +3944,6 @@ for (const vak of Object.values(SAMPLE_QUESTIONS)) {
     vak.groep4 = vak.groep3;
   }
 }
+
+// 🚧 Verkeer tijdelijk offline (Mark 5 okt 2026: "haal verkeer er voorlopig uit") tot de inhoud vakinhoudelijk is gecontroleerd. Terugzetten: zoek op VERKEER_OFFLINE.
+delete SAMPLE_QUESTIONS.verkeer;

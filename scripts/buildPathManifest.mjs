@@ -94,6 +94,8 @@ async function main() {
       const BUCKETS = [5, 10, 15, 20, 25, 30, 45, 60, 90];
       let estimatedMinutes = Math.ceil(rawMin / 15) * 15;
       for (const b of BUCKETS) { if (rawMin <= b) { estimatedMinutes = b; break; } }
+      // VERKEER_OFFLINE (5 okt 2026): verkeerspaden tijdelijk uit de app tot ze vakinhoudelijk zijn nagekeken.
+      if (["verkeer-veilig-op-straat-g4", "verkeersregels-veiligheid-po", "voorrang-basis-po", "vvn-verkeersexamen-po"].includes(p.id)) continue;
       manifest.push({
         id: p.id,
         file: `./${file}`,  // gebruikt door pathLoaders.js voor static id→loader-mapping

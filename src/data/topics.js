@@ -838,3 +838,6 @@ export const EIGEN_TOPIC_SUGGESTIONS = [
   "Klimaatverandering", "Pesten", "Gezonde voeding", "Media & internet",
   "Verkeersregels", "Digitale veiligheid", "Financiën & sparen", "Eerste hulp bij brand",
 ];
+
+// 🚧 Verkeer tijdelijk offline (Mark 5 okt 2026: "haal verkeer er voorlopig uit") tot de inhoud vakinhoudelijk is gecontroleerd. Terugzetten: zoek op VERKEER_OFFLINE.
+delete TOPIC_QUESTIONS.verkeer;
