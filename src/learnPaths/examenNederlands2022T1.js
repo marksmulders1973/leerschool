@@ -281,6 +281,7 @@ const steps = [
 const path = {
   id: "examen-nederlands-2022-t1",
   subject: "taal",
+  level: "vmbo-gt-4", // 5 okt 2026: zonder level viel dit eindexamen bij klas 1
   title: "Examen Nederlands 2022 — tijdvak 1 (VMBO-GL/TL)",
   shortTitle: "Examen Nederlands 2022-T1",
   description: "6 echte examenvragen Nederlands VMBO-GL/TL 2022 tijdvak 1, met didactische uitleg + leerpad-link bij elke fout.",
