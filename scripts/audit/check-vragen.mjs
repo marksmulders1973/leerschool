@@ -56,6 +56,12 @@ function controleer(c, waar) {
       if (Number.isFinite(gek) && Math.abs(uit - gek) > 1e-6) fouten.push(`${waar}: ${qk} → app zegt ${c.options[c.answer]}, moet ${uit}`);
       sommen++;
     }
+    // Tijden die 12 uur verschillen (14:25 en 2:25) zijn allebei goed als de vraag niet zegt of het 's middags is.
+    { const tijd = (o) => { const t = String(o).match(/^\s*(\d{1,2}):(\d{2})\s*$/); return t && +t[2] < 60 && +t[1] < 24 ? ((+t[1] % 12) * 60 + +t[2]) : null; };
+      const tg = tijd(c.options[c.answer]);
+      // Dagdeel is duidelijk als de vraag het noemt of zelf al een 24-uurstijd (13:00-23:59) gebruikt.
+      const dagdeel = /middag|avond|ochtend|morgen|nacht|24-uur|12-uur/i.test(String(c.q || "")) || /(^|[^\d])(1[3-9]|2[0-3]):\d{2}/.test(String(c.q || ""));
+      if (tg !== null && !dagdeel && c.options.filter((o, i) => i !== c.answer && tijd(o) === tg).length) fouten.push(`${waar}: tijd staat er ook in 12-uursvorm bij ${JSON.stringify(c.options)} — «${String(c.q).slice(0, 80)}»`); }
     const m = String(c.q || "").match(SOM);
     if (m) {
       sommen++;
