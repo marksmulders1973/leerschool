@@ -1,3 +1,36 @@
+# 🔴🔴 KWALITEIT EERST — totale audit (sinds 5 okt 2026) · BOVENAAN ELK DAGRAPPORT tot alles ✅
+
+Mark 5 okt: "ik heb zo vaak gevraagd of de app goed is … nu klik ik even en vind er zo 15. dit kan ik zo toch
+niet verkopen?" Doel: **≥ 98% klopt, aantoonbaar gemeten.** Plan: `docs/AUDIT-PLAN-OKT-2026.md` ·
+vakdekking: `docs/VAKKEN-DEKKING-OKT-2026.md`. Regel: nooit "het is goed" zonder getal (gecontroleerd / fout / opgelost / niet getest).
+
+## Q. Stappen (in volgorde)
+
+| # | Stap | Wie | Status |
+|---|------|-----|--------|
+| Q1 | ~25 nachtfouten Mark 4-5 okt (WhatsApp "Leerkwartier tips") opgelost — v889-v896 | Claude | ✅ |
+| Q2 | **Verkeer staat OFFLINE** (v893, `VERKEER_OFFLINE`) — pas terug na regel-voor-regel controle (RVV/VVN) **én akkoord Mark** | Claude → Mark | 🔴 |
+| Q3 | Automatische controle `npm run audit:vragen`: 17.259 vragen, 522 sommen → 0 fout; vóór elke content-push draaien | Claude | ✅ |
+| Q4 | Werkwoorden-zinnenbank 102 zinnen nagekeken (3 verbeterd) | Claude | ✅ |
+| Q5 | **AI-vragenopslag (~321 vragen) één voor één nakijken** — steekproef werkwoorden: 8 van 23 fout (gewist). Daarna controle-stap vóór opslaan in `api/generate-questions` | Claude (di 6 okt) | ⏳ |
+| Q6 | **Tegelgetal /leren telt alle klassen, lijst toont eigen klas** (Duits "3" → klas 2 ziet 0) — tegel = eigen klas | Claude (di) | ⏳ |
+| Q7 | Rekenen inhoudelijk (redactiesommen, uitleg-getallen vs vraag) | Claude | ⏳ |
+| Q8 | Taal / spelling / begrijpend lezen inhoudelijk (twee goede antwoorden = fout) | Claude | ⏳ |
+| Q9 | Overige vakken (WO, Engels, VO) — steekproef eerst | Claude | ⏳ |
+| Q10 | Kliktest als kind (g4, g8, klas 1), ouder, nieuwkomer — telefoon, plaatjes geblokkeerd, **expres fout antwoorden** | Claude | ⏳ |
+| Q11 | Eindmeting 200 willekeurige items → foutpercentage (doel ≤ 2%) | Claude | ⏳ |
+| Q12 | Gaten aanvullen: spelling + Engels groep 6-8, wiskunde klas 4, Nederlands klas 2 (pas ná audit-methode) | Claude | ⏳ |
+
+## Mark beslist
+| # | Vraag | Status |
+|---|-------|--------|
+| M1 | Uitleg in leerpad staat nu **altijd open** (jouw wens 5 okt) — botst met "vraag eerst" (29 sep). Overal open, of alleen bij korte uitleg? | ❓ |
+| M2 | Groep 1-2: bewust klein houden of aanvullen? | ❓ |
+| M3 | Volgorde dinsdag: AI-opslag + verkeer eerst (voorstel) — met meerdere agents tegelijk ("gebruik een workflow") | ❓ |
+| M4 | Sams pagina even nakijken: 3 vak-tegels + knop "Maak je blokjes af (extra)" (niet door Claude live getest) | ❓ |
+
+---
+
 # 🔍 Nog nalopen — digibord + nieuwkomers (sinds 25 sep 2026)
 
 Mark 25 sep: "digibord en nieuwkomers hebben we tegelijk gedaan en beide is nog niet af — zet ze in het
