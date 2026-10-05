@@ -355,6 +355,48 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
     }
   };
 
+  // 🔎 Controle-stap (audit 5 okt 2026): in de vragenopslag bleek 29% van de AI-vragen fout of dubbelzinnig
+  // ("Hoofdstad van Noord-Holland = Amsterdam", "3x + 5 = 20 → x = 8", twee goede antwoorden, <cite>-tags).
+  // Eerst mechanisch filteren, dan lost een sterker model elke vraag zelf op. Alleen vragen met precies één
+  // goed antwoord dat gelijk is aan het onze gaan door. Fail closed: lukt de controle niet, dan gaat er niets door.
+  const controleerVragen = async (qs) => {
+    const schoon = (Array.isArray(qs) ? qs : []).filter((q) => {
+      if (!q || typeof q.q !== "string" || !Array.isArray(q.options) || q.options.length < 2) return false;
+      if (typeof q.answer !== "number" || q.answer < 0 || q.answer >= q.options.length) return false;
+      const alles = [q.q, ...q.options, q.explanation || ""].join(" ");
+      if (/<\/?cite|<\/?[a-z]+[^>]*>(?![^<]*<\/svg)/i.test(alles.replace(/<svg[\s\S]*<\/svg>/gi, ""))) return false;
+      const norm = q.options.map((o) => String(o).replace(/\s+/g, " ").trim());
+      return new Set(norm).size === norm.length;
+    });
+    if (!schoon.length) return [];
+    const lijst = schoon.map((q, i) => `${i}. ${q.q}\n${q.options.map((o, j) => `   ${String.fromCharCode(65 + j)}) ${o}`).join("\n")}`).join("\n\n");
+    try {
+      const resp = await callAnthropic({
+        model: "claude-opus-5",
+        max_tokens: 4000,
+        output_config: { effort: "medium" },
+        system: "Je bent een strenge Nederlandse vakdocent die toetsvragen voor kinderen nakijkt. Los elke vraag zelf op, zonder hulp van een voorgegeven antwoord. Antwoord uitsluitend met een JSON-array.",
+        messages: [{ role: "user", content: `Vak: ${subject} · niveau: ${level}\n\nLos elke vraag zelf op. Geef per vraag een object {"i": nummer, "juist": letter van het enige goede antwoord of null, "eenduidig": true als precies één optie goed is en de vraag zonder plaatje/tekst te beantwoorden is, "taal_ok": true als vraag en opties correct Nederlands zijn en passen bij het vak}.
+
+${lijst}` }],
+      });
+      let tekst = "";
+      for (const blok of resp.content || []) if (blok.type === "text" && blok.text) tekst += blok.text;
+      const m = tekst.replace(/```json|```/g, "").match(/\[[\s\S]*\]/);
+      if (!m) return [];
+      const oordeel = JSON.parse(m[0]);
+      return schoon.filter((q, i) => {
+        const o = oordeel.find((x) => Number(x?.i) === i);
+        if (!o || o.eenduidig !== true || o.taal_ok !== true || typeof o.juist !== "string") return false;
+        // svg-vragen (tellen in een plaatje) kan de controleur niet zien → alleen als hij het eens is én eenduidig zegt.
+        return o.juist.trim().toUpperCase().charCodeAt(0) - 65 === q.answer;
+      });
+    } catch (e) {
+      console.warn("Vraag-controle faalde, niets doorgelaten:", e?.message);
+      return [];
+    }
+  };
+
   try {
     let data;
     try {
@@ -371,7 +413,9 @@ KWALITEITSCONTROLE — doe dit STAP VOOR STAP voor elke vraag VOORDAT je de JSON
       }
     }
 
-    const questions = parseQuestions(data);
+    const ruw = parseQuestions(data);
+    const questions = await controleerVragen(ruw);
+    if (!questions.length) throw new Error("Geen vragen kwamen door de controle");
 
     for (const q of questions) {
       if (Array.isArray(q.options) && typeof q.answer === 'number' && q.answer >= 0 && q.answer < q.options.length) {
