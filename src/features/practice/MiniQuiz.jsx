@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import { recordAnswerForPath } from "../mastery/mastery.js";
 import { fetchPoolQuestions, poolRowToQuestion } from "./aiPool.js";
+import { shuffleOpties } from "../../shared/shuffleOpties.js";
 import Button from "../../shared/ui/Button.jsx";
 import { SteunVraag, SteunOptie } from "../../shared/ui/SteunTik.jsx";
 import MeldFout from "../../shared/ui/MeldFout.jsx";
+import MdInline from "../../shared/ui/MdInline.jsx";
 
 // Drempel voor "voldoende beheersing" — 2/3 of meer → mag verder.
 // Dit is bewust niet 100%: één foutje moet niet verlammend werken.
@@ -25,6 +27,7 @@ export default function MiniQuiz({
   level,
   topicLabel,
   count = 3,
+  eigenVragen = null,
   onClose,
   pathId = null,
   playerName = null,
@@ -49,6 +52,14 @@ export default function MiniQuiz({
         // identieke pad+stap-vragen dagelijks opnieuw gegenereerd werden én
         // meetelden in de gedeelde dagcap (503 voor iedereen als die op is).
         // Zelfde patroon als de quiz-start in App.jsx: pool → AI → terug de pool in.
+        // Audit 5 okt 2026: in de AI-vragenopslag bleek ~1 op de 3 vragen fout (o.a. "Hij fietst naar
+        // school gisteren" als goed, "3x + 5 = 20 → x = 8"). Heeft het leerpad zelf nagekeken vragen,
+        // dan gebruiken we díé (geschud), en pas als die er niet zijn de opslag/AI.
+        const eigen = (eigenVragen || []).filter((c) => !c.disabled && Array.isArray(c.options) && c.options.length >= 2 && typeof c.answer === "number");
+        if (eigen.length >= 2) {
+          setQuestions(eigen.slice().sort(() => Math.random() - 0.5).slice(0, count).map((c) => shuffleOpties({ ...c, q: c.q })));
+          return;
+        }
         const pool = await fetchPoolQuestions(subj, lvl, topicLabel, null, count);
         if (cancelled) return;
         if (pool.length >= count) {
@@ -173,7 +184,7 @@ export default function MiniQuiz({
               lineHeight: "var(--line-height-snug)",
             }}
           >
-            {current.q}
+            <MdInline text={String(current.q || "")} />
           </div>
           </SteunVraag>
           {current.options.map((opt, i) => {
@@ -189,7 +200,7 @@ export default function MiniQuiz({
                 disabled={showResult}
                 style={optionStyle(showAsCorrect, showAsWrong, showResult)}
               >
-                {opt}
+                <MdInline text={String(opt)} />
               </button>
               </SteunOptie>
             );
@@ -218,6 +229,12 @@ export default function MiniQuiz({
               >
                 {isCorrectChoice ? "✅ Goed!" : "❌ Niet helemaal"}
               </div>
+              {!isCorrectChoice && !current.explanation && (
+                <div style={{ fontSize: "var(--font-size-sm)", color: "var(--color-text)", lineHeight: "var(--line-height-normal)" }}>
+                  {current.wrongHints?.[selected] ? <MdInline text={String(current.wrongHints[selected])} /> : null}{" "}
+                  Het goede antwoord is: <strong><MdInline text={String(current.options[current.answer])} /></strong>.
+                </div>
+              )}
               {current.explanation && (
                 <div
                   style={{

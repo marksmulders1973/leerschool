@@ -2241,6 +2241,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
               level={path.level || "klas1-vwo"}
               topicLabel={`${path.title} — ${step.title}`}
               count={3}
+              eigenVragen={step.checks || null}
               onClose={() => setShowMiniQuiz(false)}
               pathId={path.id}
               playerName={userName}
