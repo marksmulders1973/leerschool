@@ -374,9 +374,9 @@ const steps = [
       },
       {
         q: "**Australië** is een continent én een ... ?",
-        options: ["Land", "Stad", "Eiland", "Berg"],
+        options: ["Land", "Stad", "Oceaan", "Berg"],
         answer: 0,
-        wrongHints: [null, "Niet alleen een stad — veel groter.", "Wel groot omringd door water, maar denk aan een politieke entiteit.", "Geen berg — geen losstaande bergtop."],
+        wrongHints: [null, "Veel groter dan een stad — er liggen grote steden ín, zoals Sydney.", "Een oceaan is water; Australië is land.", "Geen berg — het is een heel werelddeel."],
       },
       {
         q: "**Antarctica** is bekend om ... ?",
@@ -397,7 +397,7 @@ const steps = [
       { q: "Welke landen-groep ligt in **Oceanië**?", options: ["Australië + Nieuw-Zeeland + eilanden","NL + BE + DE","China + Japan","Brazilië + Argentinië"], answer: 0, wrongHints: [null, "Europa.", "Azië.", "Zuid-Amerika."] },
       { q: "Welk continent is dichtstbevolkt?", options: ["Azië","Afrika","Europa","Antarctica"], answer: 0, wrongHints: [null, "Tweede.", "Europa is vol, maar heeft minder mensen per km² dan Azië.", "Geen bewoning."] },
       { q: "Tijdzones-feit: hoeveel uur verschil **NL ↔ Sydney**?", options: ["+8 tot +10 uur","+5","Geen verschil","−8"], answer: 0, wrongHints: [null, "Te weinig.", "Wel verschil.", "Verkeerde richting."] },
-      { q: "Welk continent ligt deels op **noordelijk** + deels **zuidelijk** halfrond?", options: ["Afrika (en ZAm)","Antarctica","Europa","Azië"], answer: 0, wrongHints: [null, "Volledig zuid.", "Volledig noord.", "Voor 95% noord."] },
+      { q: "Welk continent ligt deels op **noordelijk** + deels **zuidelijk** halfrond?", options: ["Afrika (en ZAm)","Antarctica","Europa","Noord-Amerika"], answer: 0, wrongHints: [null, "Antarctica ligt helemaal op het zuidelijk halfrond.", "Europa ligt helemaal op het noordelijk halfrond.", "Noord-Amerika ligt helemaal op het noordelijk halfrond."] },
     ],
   },
 ];
