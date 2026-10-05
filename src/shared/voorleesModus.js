@@ -39,16 +39,52 @@ export function stopZeggen() {
 }
 
 /** Spreek een korte tekst uit (rustig tempo). Geeft een stop-functie terug. */
-export function zeg(tekst, { rate = 0.9, onEnd } = {}) {
+export function zeg(tekst, { rate = 0.9, onEnd, onWoord } = {}) {
   const t = String(tekst ?? "").trim();
   if (!t || typeof window === "undefined" || !window.speechSynthesis) { onEnd && onEnd(false); return () => {}; }
   stopZeggen();
   const stop = spreekMetMeelezen(t, {
     rate,
     pitch: 1.05,
+    onWoord,
     onEnd: (gelukt) => { if (stopHuidige === stop) stopHuidige = null; onEnd && onEnd(gelukt); },
   });
   stopHuidige = stop;
+  return stop;
+}
+
+// ── Zin in stukjes (Mark + nieuwkomers-directeur, 5 okt 2026: "het gaat nu erg snel") ──
+// Zoals een NT2-juf het doet: 1) de hele zin in gewoon tempo (zo klinkt het in de klas),
+// 2) woord voor woord met een pauze ertussen, 3) de hele zin nog eens, iets langzamer.
+// Niet trager dan 0,8: daaronder gaat de telefoonstem vervormen. `onWoord(i)` krijgt de
+// index van het woord dat nu klinkt (−1 = niets), voor het oplichten in de kaart.
+// Geeft een stop-functie terug; stopZeggen() onderbreekt de hele reeks.
+export function zegInStukjes(zin, { onWoord, onEnd } = {}) {
+  const t = String(zin ?? "").trim();
+  const woorden = t.split(/\s+/).filter(Boolean);
+  if (!t || typeof window === "undefined" || !window.speechSynthesis) { onEnd && onEnd(false); return () => {}; }
+  let gestopt = false;
+  let timer = null;
+  let stopStap = null;
+  const woord = (i) => { try { onWoord && onWoord(i); } catch { /* */ } };
+  const stop = () => { gestopt = true; if (timer) clearTimeout(timer); if (stopStap) { try { stopStap(); } catch { /* */ } } woord(-1); };
+  const wacht = (ms, f) => { if (gestopt) return; timer = setTimeout(() => { if (!gestopt) f(); }, ms); };
+  const spreek = (tekst, rate, opties, daarna) => {
+    if (gestopt) return;
+    stopStap = spreekMetMeelezen(tekst, { rate, pitch: 1.05, ...opties, onEnd: () => { stopStap = null; if (!gestopt) daarna(); } });
+  };
+  const klaar = () => { woord(-1); stopHuidige = null; onEnd && onEnd(true); };
+  const stap3 = () => spreek(t, 0.8, { onWoord: woord }, klaar);
+  const stapWoorden = (i) => {
+    if (i >= woorden.length) { woord(-1); return wacht(600, stap3); }
+    woord(i);
+    // los woord: zonder leesteken, zodat "vragen?" niet als vraagintonatie op één woord klinkt
+    spreek(woorden[i].replace(/[?!.,;:]+$/g, ""), 0.85, {}, () => wacht(450, () => stapWoorden(i + 1)));
+  };
+  stopZeggen();
+  stopHuidige = stop;
+  // Eén woord? Dan heeft opdelen geen zin: gewoon tempo, dan langzaam.
+  spreek(t, 0.9, { onWoord: woord }, () => wacht(500, () => (woorden.length > 1 ? stapWoorden(0) : stap3())));
   return stop;
 }
 

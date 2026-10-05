@@ -13,7 +13,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import { track } from "../utils.js";
 import { WOORDKAARTEN, plaatjeVan, PICTO_BRON } from "../learnPaths/nieuwkomersPicto.js";
 import { ZIN_THEMAS, zinnenVan } from "../learnPaths/nieuwkomersZinnen.js";
-import { zeg, zegInTaal, heeftStem, stopZeggen, ZEG } from "../shared/voorleesModus.js";
+import { zeg, zegInTaal, heeftStem, stopZeggen, ZEG, zegInStukjes } from "../shared/voorleesModus.js";
 import LuisterKnop from "../shared/ui/LuisterKnop.jsx";
 import NieuwkomersPlaatjesDictee from "./NieuwkomersPlaatjesDictee.jsx";
 import { PUNT, PuntenTeller, PuntenUitslag } from "./nieuwkomersPunten.jsx";
@@ -81,15 +81,32 @@ function Kaarten({ titel, items, k, onTerug, taal = "nl", zin = false }) {
   const [i, setI] = useState(0);
   const item = items[i];
   const stem = useStem(taal);
-  useEffect(() => { const t = setTimeout(() => zeg(item.tekst), 250); return () => { clearTimeout(t); stopZeggen(); }; }, [item.tekst]);
+  // 🐢 Zinkaart (5 okt 2026, directeur WereldKidz: "het gaat nu erg snel"): bij het verschijnen de
+  // reeks zin → woord voor woord → zin langzaam (zegInStukjes), met het klinkende woord opgelicht.
+  // Een tik daarna zegt alléén de zin, langzaam — anders hoort een kind bij elke tik de hele reeks.
+  // Woordkaarten: gewoon het woord, iets rustiger (0,85).
+  const [woordIdx, setWoordIdx] = useState(-1);
+  const [reeksGedaan, setReeksGedaan] = useState(false);
+  const reeks = () => { setReeksGedaan(false); zegInStukjes(item.tekst, { onWoord: setWoordIdx, onEnd: () => { setWoordIdx(-1); setReeksGedaan(true); } }); };
+  useEffect(() => {
+    setWoordIdx(-1); setReeksGedaan(false);
+    const t = setTimeout(() => (zin ? reeks() : zeg(item.tekst, { rate: 0.85 })), 250);
+    return () => { clearTimeout(t); stopZeggen(); };
+  }, [item.tekst]); // eslint-disable-line react-hooks/exhaustive-deps
+  const tik = () => { if (!zin) zeg(item.tekst, { rate: 0.85 }); else if (reeksGedaan) zeg(item.tekst, { rate: 0.8, onWoord: setWoordIdx, onEnd: () => setWoordIdx(-1) }); else reeks(); };
   const ga = (d) => setI((x) => (x + d + items.length) % items.length);
   const eigen = zin && taal !== "nl" ? item.vertaling?.[taal] : null;
+  const woorden = item.tekst.split(/\s+/);
   return (
     <div>
       <Kop tekst={titel} onTerug={onTerug} terugLabel={k.terug} />
-      <button type="button" onClick={() => zeg(item.tekst)} aria-label={`Luister: ${item.tekst}`} style={{ ...S.kaart, width: "100%", border: "none", cursor: "pointer", display: "block" }}>
+      <button type="button" onClick={tik} aria-label={`Luister: ${item.tekst}`} style={{ ...S.kaart, width: "100%", border: "none", cursor: "pointer", display: "block" }}>
         <img src={item.plaatje} alt="" style={S.plaatje(zin ? 200 : 220)} />
-        <div style={{ fontSize: zin ? 26 : 30, lineHeight: 1.2, fontWeight: 800, marginTop: 10, textAlign: "center" }}>{item.tekst}</div>
+        <div style={{ fontSize: zin ? 26 : 30, lineHeight: 1.2, fontWeight: 800, marginTop: 10, textAlign: "center" }}>
+          {zin ? woorden.map((w, wi) => (
+            <span key={wi} style={{ display: "inline-block", padding: "0 4px", borderRadius: 8, background: woordIdx === wi ? "#ffd166" : "transparent", transition: "background 120ms" }}>{w}</span>
+          )) : item.tekst}
+        </div>
       </button>
       {eigen && (
         // De zin in de eigen taal, klein onder de kaart. Tik = voorlezen in die taal (als het toestel die stem heeft).
@@ -142,7 +159,7 @@ function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false, taal = 
 
   useEffect(() => {
     if (klaar || !v) return undefined;
-    const t = setTimeout(() => zeg(v.doel), 300);
+    const t = setTimeout(() => zeg(v.doel, { rate: 0.85 }), 300);
     return () => { clearTimeout(t); stopZeggen(); };
   }, [i, ronde]); // eslint-disable-line react-hooks/exhaustive-deps
 
@@ -156,12 +173,12 @@ function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false, taal = 
     setGekozen(w);
     if (w === v.doel) {
       if (fouten === 0) { score.current += 1; setPunten((p) => p + PUNT); }
-      zeg(`${ZEG.goed} ${v.doel}.`);
+      zeg(`${ZEG.goed} ${v.doel}.`, { rate: 0.85 });
       setTimeout(() => { setI((x) => x + 1); setGekozen(null); setFouten(0); }, 1600);
     } else {
       // fout: zeg het nog eens, kind mag opnieuw kiezen (leren, geen toets)
       setFouten((f) => f + 1);
-      zeg(zin ? `Nee. Dat is: ${w} Luister: ${v.doel}` : `Nee, dat is ${w}. Luister: ${v.doel}.`);
+      zeg(zin ? `Nee. Dat is: ${w} Luister: ${v.doel}` : `Nee, dat is ${w}. Luister: ${v.doel}.`, { rate: 0.85 });
     }
   };
 
@@ -189,7 +206,7 @@ function LuisterEnKies({ themaId, titel, items, k, onTerug, zin = false, taal = 
     <div>
       <Kop tekst={titel} onTerug={onTerug} terugLabel={k.terug} />
       <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 12, marginBottom: 12 }}>
-        <button type="button" onClick={() => zeg(v.doel)} aria-label="Luister nog eens"
+        <button type="button" onClick={() => zeg(v.doel, { rate: 0.85 })} aria-label="Luister nog eens"
           style={{ ...S.knop, background: "#ffd166", color: "#3a2600", display: "inline-flex", alignItems: "center", gap: 8, fontSize: 18 }}>
           <svg width="30" height="30" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="#3a2600" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M4 9.5h3.5L12 5.5v13l-4.5-4H4z" fill="#3a2600" /><path d="M15.5 9a4 4 0 0 1 0 6" /><path d="M18.5 6.5a7.5 7.5 0 0 1 0 11" />
