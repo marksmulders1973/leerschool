@@ -105,10 +105,10 @@ const steps = [
         wrongHints: [null, "Dat is het maximum, niet het gemiddelde.", "Dat is het minimum.", "Dat is de modus, niet het gemiddelde."],
       },
       {
-        q: "Het gemiddelde van **5, 7, 9** kan NIET zijn ... ?",
+        q: "Een gemiddelde ligt altijd tussen het kleinste en het grootste getal. Welk getal kan dus **nooit** het gemiddelde van een rij tussen **5 en 9** zijn?",
         options: ["3", "6", "7", "8"],
         answer: 0,
-        wrongHints: [null, "Klopt wel — 6 kan tussen 5 en 9 liggen.", "Klopt wel — 7 is precies tussen 5 en 9.", "Klopt wel — 8 kan tussen 5 en 9 liggen."],
+        wrongHints: [null, "6 ligt tussen 5 en 9 — dat kán het gemiddelde zijn (bv. van 5 en 7).", "7 ligt tussen 5 en 9 — dat kán (bv. van 5, 7 en 9).", "8 ligt tussen 5 en 9 — dat kán (bv. van 7 en 9)."],
         uitlegPad: {
           stappen: [
             { titel: "Tussen min en max", tekst: "Gemiddelde ligt altijd tussen het laagste (5) en het hoogste (9) getal. 3 ligt eronder. 6/7/8 liggen ertussen, dus die kunnen wél." },
@@ -362,9 +362,9 @@ const steps = [
       },
       {
         q: "Cijfers: 7, 7, 7, 7, **2** (iemand was ziek). Welk getal geeft een **eerlijker beeld** van de klas?",
-        options: ["Mediaan (7)", "Gemiddelde (6)", "Modus (7)", "Niet uit te leggen"],
+        options: ["Mediaan (7)", "Gemiddelde (6)", "Het laagste cijfer (2)", "Niet uit te leggen"],
         answer: 0,
-        wrongHints: [null, "Gemiddelde is verlaagd door 1 uitschieter (2). Mediaan filtert dat eruit.", "Modus is ook 7 — maar de vraag is wat 'eerlijker' is. Bij 1 uitschieter is mediaan beter.", "Wél — een uitschieter beïnvloedt gemiddelde maar niet mediaan."],
+        wrongHints: [null, "Gemiddelde is verlaagd door 1 uitschieter (2). Mediaan filtert dat eruit.", "Juist die 2 is de uitschieter — die zegt weinig over de rest van de klas.", "Wél — een uitschieter beïnvloedt gemiddelde maar niet mediaan."],
       },
     ],
   },

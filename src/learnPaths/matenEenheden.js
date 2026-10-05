@@ -524,7 +524,7 @@ const steps = [
         },
       },
       {
-        q: "Op de weegschaal: 3 appels **150 g** + 2 peren **180 g** = totaal hoeveel **g**?",
+        q: "Op de weegschaal: 3 appels van **elk 150 g** + 2 peren van **elk 180 g**. Hoeveel **g** samen?",
         options: ["810","330","450","630"],
         answer: 0,
         wrongHints: [null,"Te weinig — heb je rekening gehouden met 3 appels en 2 peren?","Te weinig — heb je alleen de appels geteld?","Te weinig — heb je maar één peer meegerekend?"],
