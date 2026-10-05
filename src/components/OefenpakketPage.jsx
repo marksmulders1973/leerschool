@@ -525,8 +525,8 @@ export default function OefenpakketPage({ setPage } = {}) {
             De Doorstroomtoets (sinds 2024 — vroeger de Eindtoets) wordt
             gemaakt in groep 8, van eind januari tot half februari (in 2027:
             25 januari t/m 12 februari). Hij test
-            rekenen, taal en studievaardigheden. Dit werkboek oefent precies die
-            onderdelen, in dezelfde stijl.
+            lezen, taalverzorging en rekenen. Dit werkboek oefent die
+            onderdelen in dezelfde stijl, plus studievaardigheden (kaart, tabel, grafiek) als extra.
           </Alinea>
           <Alinea titel="Hoe pak je het aan?">
             Niet alles in één keer. Een kwartier per dag werkt aantoonbaar beter

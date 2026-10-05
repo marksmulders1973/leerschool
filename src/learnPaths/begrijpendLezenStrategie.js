@@ -112,7 +112,7 @@ const steps = [
           ],
           theorie: "Doorstroomtoets test of je een ECHTE tekst kunt begrijpen — dus geen losse zinnetjes maar verhalen, krantenartikelen, instructies.",
           voorbeelden: [{ type: "Toets-format", tekst: "Tekst over 'gezond ontbijt' (250 woorden) → 4 vragen: hoofdgedachte, detail, woordbetekenis, conclusie." }],
-          basiskennis: [{ onderwerp: "De toets = breed", uitleg: "De toets test rekenen, taal, studievaardigheden — niet alleen lezen." }],
+          basiskennis: [{ onderwerp: "De toets = breed", uitleg: "De toets test lezen, taalverzorging en rekenen — niet alleen lezen." }],
           niveaus: {
             basis: "De toets = lange teksten + vragen.",
             simpeler: "Stel je voor: je krijgt een artikel uit de krant en daarna een paar vragen over wat erin stond. Dat is wat de toets doet bij begrijpend lezen.",
