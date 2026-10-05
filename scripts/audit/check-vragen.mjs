@@ -47,6 +47,15 @@ function controleer(c, waar) {
     { const goedW = waarden[c.answer]; const vereenvoudig = /eenvoudig/i.test(String(c.q || ""));
       if (goedW !== null && !vereenvoudig && waarden.filter((w) => w === goedW).length > 1)
         fouten.push(`${waar}: het goede antwoord staat er nog eens in een andere vorm (${JSON.stringify(c.options)}) — «${String(c.q).slice(0, 90)}»`); }
+    // "25% van 80" — alleen korte vragen waarin precies één zo'n stukje staat (geen korting/rente-verhalen).
+    const qk = String(c.q || "").replace(/\*/g, "");
+    const pv = [...qk.matchAll(/(\d+(?:,\d+)?)\s*%\s*van\s*(?:€\s*)?(\d[\d.]*(?:,\d+)?)/gi)];
+    if (pv.length === 1 && qk.length < 90 && !/korting|erbij|meer|minder|rente|btw|stijg|daal|over|blijft|miljoen|miljard|duizend/i.test(qk)) {
+      const uit = (num(pv[0][1]) / 100) * num(pv[0][2]);
+      const gek = num(String(c.options[c.answer]).replace(/[€a-z\s]/gi, ""));
+      if (Number.isFinite(gek) && Math.abs(uit - gek) > 1e-6) fouten.push(`${waar}: ${qk} → app zegt ${c.options[c.answer]}, moet ${uit}`);
+      sommen++;
+    }
     const m = String(c.q || "").match(SOM);
     if (m) {
       sommen++;
