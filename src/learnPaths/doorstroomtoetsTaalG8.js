@@ -16,7 +16,7 @@ const COLORS = {
   taal: "#ba68c8",
 };
 
-const stepEmojis = ["📖", "🧠", "✏️", "🏆"];
+const stepEmojis = ["📖", "🧠", "✏️", "📝", "🏆"];
 
 const chapters = [
   { letter: "A", title: "Woordenschat", emoji: "📖", from: 0, to: 0 },
@@ -634,7 +634,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Geen verband.", "Geen verband."],
       },
       {
-        q: "Welk **bijvoeglijk naamwoord** past bij **'snel'**?",
+        q: "Welk **bijvoeglijk naamwoord** betekent hetzelfde als **'snel'**?",
         options: ["rap", "lang", "veel", "ver"],
         answer: 0,
         wrongHints: [null, "Geen synoniem voor snel.", "Geen.", "Andere dimensie — afstand niet snelheid."],
@@ -955,7 +955,7 @@ const steps = [
       },
       {
         q: "*'Het boek is **niet** alleen spannend.'* Welke uitspraak klopt dan **niet**?",
-        options: ["Het boek is alleen spannend (NIET klopt)", "Het boek is ook leerzaam (zou kunnen)", "Het boek is een roman (mogelijk)", "Niet te zeggen"],
+        options: ["Het boek is alleen spannend", "Het boek is ook leerzaam", "Het boek is een roman", "Niet te zeggen"],
         answer: 0,
         wrongHints: [null, "Mogelijk waar.", "Mogelijk waar.", "Wel te zeggen — let op 'niet alleen'."],
       },
@@ -1575,7 +1575,7 @@ const steps = [
         q: "Welk woord schrijf je **met 'ei'**?",
         options: ["trein", "vlijtig", "lijden", "blijven"],
         answer: 0,
-        wrongHints: [null, "Vlijtig komt van 'vlijt' — net als 'pijn' met lange ij.", null, "Vraag jezelf af welke spelling hoort bij 'spoorvervoer'."],
+        wrongHints: [null, "Vlijtig komt van 'vlijt' — net als 'pijn' met lange ij.", null, "Blijven is een werkwoord — werkwoorden met deze klank hebben bijna altijd de lange ij."],
         uitlegPad: {
           stappen: [
             { titel: "Geen regel, uit hoofd", tekst: "Voor ei/ij bestaat geen makkelijke regel — woorden moet je uit hoofd kennen." },
@@ -1693,7 +1693,7 @@ const steps = [
         q: "Welke zin is **goed**?",
         options: ["Ik antwoordde 'ja'.", "Ik antwoorde 'ja'.", "Ik anwoordde 'ja'.", "Ik antwoorden 'ja'."],
         answer: 0,
-        wrongHints: [null, "Spelfout: dubbele d nodig.", "Spelfout in stam.", "Meervoud — vraag is ik (enkelvoud)."],
+        wrongHints: [null, "De stam 'antwoord' eindigt al op een d — wat komt er in de verleden tijd nog achter?", "Spelfout in stam.", "Meervoud — vraag is ik (enkelvoud)."],
       },
       {
         q: "**'gisteren ___ ik thuis'** — werkwoord?",
@@ -1756,7 +1756,7 @@ const steps = [
         wrongHints: [null, "Niet — 'pj' bestaat niet zo.", "Met c, niet k.", "Eén t."],
       },
       {
-        q: "*'Het kind **... drie ijsjes gegeten.'* Welk werkwoord?",
+        q: "*'Het kind **... drie ijsjes gegeten.'* Welk werkwoord (tegenwoordige tijd)?",
         options: ["heeft", "hebben", "hebt", "had"],
         answer: 0,
         wrongHints: [null, "Meervoud.", "2e persoon.", "Verleden tijd — gevraagd is de voltooid tegenwoordige tijd."],
@@ -1838,7 +1838,7 @@ const steps = [
             { titel: "Wanneer?", tekst: "Sinds 1995 schrijven we 'tussen-n' als het eerste woord een meervouds-'en' heeft." },
           ],
           woorden: [{ woord: "tussen-n", uitleg: "Extra letter 'en' tussen 2 woorden bij samenstelling." }],
-          theorie: "Toets-truc: woorden zoals 'pannenkoek', 'rozenstruik', 'boekenkast' — altijd met tussen-n. Bij twijfel: kan eerste woord ook 'enen' krijgen (pannen, rozen, boeken)? Ja → tussen-n.",
+          theorie: "Toets-truc: woorden zoals 'pannenkoek', 'rozenstruik', 'boekenkast' — altijd met tussen-n. Bij twijfel: kan het eerste woord een meervoud op '-en' krijgen (pannen, rozen, boeken)? Ja → tussen-n.",
           voorbeelden: [
             { type: "stap", tekst: "boek + kast = boekenkast (boekens? boeken? → boeken → tussen-n)." },
             { type: "stap", tekst: "zon + brand = zonnebrand (alleen -e: er is maar één zon)." },
@@ -2087,9 +2087,9 @@ const steps = [
       },
       {
         q: "Welke zin heeft **komma's op de goede plek**?",
-        options: ["Ik kocht appels, peren en druiven.", "Ik kocht appels peren, en druiven.", "Ik kocht appels, peren, druiven.", "Ik kocht, appels peren en druiven."],
+        options: ["Ik kocht appels, peren en druiven.", "Ik kocht appels peren, en druiven.", "Ik kocht appels, peren, en druiven.", "Ik kocht, appels peren en druiven."],
         answer: 0,
-        wrongHints: [null, "Geen komma's vóór elk woord — alleen tussen items.", "Geen komma vóór de allerlaatste — daar staat 'en'.", "Geen komma ná het werkwoord."],
+        wrongHints: [null, "Geen komma's vóór elk woord — alleen tussen items.", "Vóór 'en' komt bij een opsomming geen komma.", "Geen komma ná het werkwoord."],
         uitlegPad: {
           stappen: [
             { titel: "Komma + en", tekst: "Bij een opsomming staat tussen de eerste items een komma, en vóór het laatste item gebruik je 'en' (zonder komma)." },
@@ -2118,7 +2118,7 @@ const steps = [
         wrongHints: [null, "Heeft een werkwoord — is dus een echte zin.", "Werkwoord aanwezig + ook nog 'snel' als bijwoord.", "Werkwoord + voorzetselgroep — alles aanwezig."],
       },
       {
-        q: "*'Ik ga naar buiten ___ het regent.'* Welk woord past?",
+        q: "*'Ik wil naar buiten, ___ het regent.'* Welk woord geeft hier een **tegenstelling** aan?",
         options: ["maar", "omdat", "en", "als"],
         answer: 0,
         wrongHints: [null, "'Omdat' = reden. Past dat hier? Buiten gaan vanwege regen is raar.", "'En' is opsommend, niet tegenstellend.", "'Als' geeft voorwaarde. Voelt deze zin als een voorwaarde of als een tegenstelling?"],
@@ -2127,11 +2127,11 @@ const steps = [
         q: "*Mama zei tegen Lisa* ___ 'Ga je tanden poetsen.' Welk leesteken past?",
         options: ["dubbele punt :", "punt .", "komma ,", "uitroepteken !"],
         answer: 0,
-        wrongHints: [null, "Een punt sluit een zin af; het kondigt niets aan.", "Komma kan ook maar dubbele punt is correcter bij directe rede.", "Geen sterke emotie hier."],
+        wrongHints: [null, "Een punt sluit een zin af; het kondigt niets aan.", "Een komma is een pauze binnen de zin — welk leesteken kondigt aan dat iemand iets gaat zeggen?", "Geen sterke emotie hier."],
       },
       {
         q: "Welke zin heeft een **fout** met komma's?",
-        options: ["Ik wandel, en ik fiets.", "Ik wandel en ik fiets.", "Ik wandel, omdat het mooi weer is.", "Ik wandel, maar ik fiets niet."],
+        options: ["Ik wandel en, ik fiets.", "Ik wandel en ik fiets.", "Ik wandel, omdat het mooi weer is.", "Ik wandel, maar ik fiets niet."],
         answer: 0,
         wrongHints: [null, "Goed — geen komma nodig.", "Goed — komma vóór 'omdat' (samengestelde zin).", "Goed — komma vóór 'maar' (tegenstelling)."],
       },
@@ -2364,7 +2364,7 @@ const steps = [
         q: "*'Tom is moe ___ hij heeft hard gewerkt.'* Welk **voegwoord** past?",
         options: ["omdat", "maar", "of", "dus"],
         answer: 0,
-        wrongHints: [null, "Geen tegenstelling — moe + hard gewerkt past samen.", "Geen keuze.", "Letterlijk past 'dus' ook, maar dan staat de reden vooraan, niet erna."],
+        wrongHints: [null, "Geen tegenstelling — moe + hard gewerkt past samen.", "Geen keuze.", "'Dus' leidt een gevolg in. Is 'hard gewerkt' het gevolg van moe zijn, of juist de reden?"],
       },
       {
         q: "Welke zin gebruikt een **hoofdletter goed**?",
@@ -2412,7 +2412,7 @@ const steps = [
         q: "*'Ik vind ___ ijs lekker.'* Welk **lidwoord**?",
         options: ["het", "de", "een", "die"],
         answer: 0,
-        wrongHints: [null, "Niet — 'ijs' is een 'het'-woord.", "Met een specifiek ijs in de context: 'het' is logischer.", "Aanwijzend, geen lidwoord."],
+        wrongHints: [null, "Niet — 'ijs' is een 'het'-woord.", "'Een' is onbepaald — hier gaat het om één bepaald ijsje. Welk bepaald lidwoord hoort bij 'ijs'?", "Aanwijzend, geen lidwoord."],
       },
       {
         q: "*'De kat ___ van Marieke.'* Welk werkwoord (tegenwoordig)?",
@@ -2421,7 +2421,7 @@ const steps = [
         wrongHints: [null, "Meervoud — hier 1 kat.", "1e persoon.", "Verleden."],
       },
       {
-        q: "Welk **leesteken** scheidt 2 delen van een zin met dezelfde betekenis (bv 'Tom kookte: pasta, pizza, pannenkoeken')?",
+        q: "Welk **leesteken** kondigt een opsomming aan (bv *'Tom kookte ___ pasta, pizza, pannenkoeken'*)?",
         options: ["Dubbele punt", "Vraagteken", "Uitroepteken", "Punt"],
         answer: 0,
         wrongHints: [null, "Vraagteken sluit alleen vragen af.", "Niet voor opsomming.", "Sluit zin, geen lijst-intro."],
@@ -2604,7 +2604,7 @@ const steps = [
       {
         q: "Welke zin is een **vraagzin** met het juiste leesteken?",
         ref: "1F",
-        options: ["Weet jij hoe laat de bus komt?", "Weet jij hoe laat de bus komt.", "Jij weet hoe laat de bus komt?", "Weet jij hoe laat de bus komt!"],
+        options: ["Weet jij hoe laat de bus komt?", "Weet jij hoe laat de bus komt.", "Jij weet hoe laat de bus komt.", "Weet jij hoe laat de bus komt!"],
         answer: 0,
         wrongHints: [null, "De zin vráágt iets — welk leesteken hoort daarbij?", "De woordvolgorde is hier van een gewone zin, geen vraag.", "Een uitroepteken is voor uitroepen, niet voor vragen."],
         explanation: "Vraagzin: werkwoord vooraan ('Weet jij…') + **vraagteken** aan het eind.",

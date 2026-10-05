@@ -1,0 +1,164 @@
+[
+  {
+    "waar": "aardrijkskunde.groep5[6]",
+    "oud": "{ q: \"Wat is de naam van het bekende Nederlandse landaanwinning-project?\", options: [\"Polders\", \"Waddengebied\", \"Veengebied\", \"Deltawerken\"], answer: 0, explanation: \"Polders zijn drooggelegde gebieden.\" },",
+    "nieuw": "{ q: \"Hoe heet het grote project waarbij Nederland land won uit de Zuiderzee?\", options: [\"Zuiderzeewerken\", \"Waddengebied\", \"Veengebied\", \"Deltawerken\"], answer: 0, explanation: \"De Zuiderzeewerken: de Afsluitdijk (1932) en de inpoldering van o.a. de Noordoostpolder en Flevoland.\" },",
+    "reden": "'Polders' is geen projectnaam; vraag was vaag en het antwoord niet verdedigbaar. Nu een echt project (Zuiderzeewerken)."
+  },
+  {
+    "waar": "aardrijkskunde.groep5[9]",
+    "oud": "explanation: \"Gelderland is de grootste provincie.\"",
+    "nieuw": "explanation: \"Gelderland is de grootste provincie als je naar het land kijkt. Tel je het water mee, dan is Friesland groter.\"",
+    "reden": "Uitleg was onvolledig: qua totale oppervlakte (incl. water) is Friesland groter; schoolantwoord blijft Gelderland (landoppervlak)."
+  },
+  {
+    "waar": "aardrijkskunde.groep5[10]",
+    "oud": "options: [\"Drielandenpunt\", \"Utrechtse Heuvelrug\", \"Veluwe\", \"Vaalserberg\"]",
+    "nieuw": "options: [\"Sint-Pietersberg\", \"Utrechtse Heuvelrug\", \"Veluwe\", \"Vaalserberg\"]",
+    "reden": "Het Drielandenpunt ligt op de top van de Vaalserberg: twee opties waren goed."
+  },
+  {
+    "waar": "aardrijkskunde.groep5[20]",
+    "oud": "{ q: \"Welke rivier stroomt door Utrecht?\", options: [\"IJssel\", \"Maas\", \"Rijn\", \"Vecht\"]",
+    "nieuw": "{ q: \"Welke rivier stroomt door de provincie Utrecht?\", options: [\"IJssel\", \"Maas\", \"Schelde\", \"Vecht\"]",
+    "reden": "De Rijn (Kromme Rijn, Nederrijn/Lek, Oude Rijn) stroomt ook door Utrecht: twee opties waren goed. Rijn vervangen door Schelde."
+  },
+  {
+    "waar": "aardrijkskunde.groep5[29]",
+    "oud": "options: [\"de Nederlanden = historisch gebied incl. België en Luxemburg; Nederland = huidige staat\", ",
+    "nieuw": "options: [\"Nederland = historisch gebied incl. België en Luxemburg; de Nederlanden = huidige staat\", ",
+    "reden": "Optie 0 en optie 3 zeiden precies hetzelfde (alleen omgedraaid): twee goede opties. Optie 0 is nu de foute omkering."
+  },
+  {
+    "waar": "aardrijkskunde.groep5[33]",
+    "oud": "{ q: \"Wat is de Rijn in Nederland?\", options: [\"Een grensrivier met Duitsland\", \"Een meer\", \"De langste rivier van Nederland\", \"Een kanaal\"], answer: 0, explanation: \"De Rijn is een van de grootste rivieren die Nederland binnenkomen vanuit Duitsland.\" },",
+    "nieuw": "{ q: \"Bij welke plaats komt de Rijn Nederland binnen?\", options: [\"Lobith\", \"Maastricht\", \"Vlissingen\", \"Den Helder\"], answer: 0, explanation: \"De Rijn komt bij Lobith (Gelderland) vanuit Duitsland Nederland binnen.\" },",
+    "reden": "'Grensrivier met Duitsland' klopt niet (de Rijn loopt niet langs de grens, hij steekt die over) en 'langste rivier van Nederland' was een verdedigbare tweede optie. Vervangen door de klassieke Lobith-vraag."
+  },
+  {
+    "waar": "aardrijkskunde.groep5[34]",
+    "oud": "\"Prins Alexanderpolder\"], answer: 3, explanation: \"De Prins Alexanderpolder (ca. -7 meter NAP) is het laagste punt.\"",
+    "nieuw": "\"Zuidplaspolder\"], answer: 3, explanation: \"De Zuidplaspolder bij Nieuwerkerk aan den IJssel (ca. -6,8 meter NAP) is het laagste punt van Nederland.\"",
+    "reden": "Het laagste punt van Nederland ligt in de Zuidplaspolder (Nieuwerkerk aan den IJssel, -6,76 m NAP), niet in de Prins Alexanderpolder."
+  },
+  {
+    "waar": "aardrijkskunde.groep7[23]",
+    "oud": "{ q: \"Door welk land stroomt de Amazone?\", ",
+    "nieuw": "{ q: \"Door welk land stroomt het grootste deel van de Amazone?\", ",
+    "reden": "De Amazone stroomt ook door Peru en Colombia (beide als optie): meerdere goede antwoorden. Vraag aangescherpt."
+  },
+  {
+    "waar": "aardrijkskunde.groep7[33]",
+    "oud": "{ q: \"Wat is de hoofdstad van Zuid-Afrika?\", ",
+    "nieuw": "{ q: \"Wat is de regeringshoofdstad (uitvoerende hoofdstad) van Zuid-Afrika?\", ",
+    "reden": "Zuid-Afrika heeft drie hoofdsteden; Kaapstad (wetgevend) stond ook als optie. Vraag aangescherpt naar Pretoria."
+  },
+  {
+    "waar": "aardrijkskunde.groep7[41]",
+    "oud": "{ q: \"Welk land heeft het meeste zoet water?\", options: [\"Canada\", \"China\", \"VS\", \"Brazilië\"], answer: 0, explanation: \"Canada heeft het meeste zoet water, gevolgd door Rusland en Brazilië.\" },",
+    "nieuw": "{ q: \"Welk land heeft de meeste meren ter wereld?\", options: [\"Canada\", \"China\", \"VS\", \"Brazilië\"], answer: 0, explanation: \"Canada heeft de meeste meren ter wereld — meer dan alle andere landen samen.\" },",
+    "reden": "Bronafhankelijk: Brazilië heeft de grootste hernieuwbare zoetwatervoorraad, Rusland het grootste meervolume (Baikal). 'Meeste meren = Canada' is wél eenduidig."
+  },
+  {
+    "waar": "aardrijkskunde.groep8[5]",
+    "oud": "options: [\"De Vaalserberg\", \"De Veluwezoom\", \"De Sint-Pietersberg\", \"Het Drielandenpunt\"]",
+    "nieuw": "options: [\"De Vaalserberg\", \"De Veluwezoom\", \"De Sint-Pietersberg\", \"De Holterberg\"]",
+    "reden": "Het Drielandenpunt is de top van de Vaalserberg: twee goede opties."
+  },
+  {
+    "waar": "aardrijkskunde.groep8[18]",
+    "oud": "{ q: \"Wat zijn 'de drie polen' van de aarde?\", options: [\"Noordpool, Zuidpool en Mount Everest (hoogtepool)\", \"Drie magnetische punten\", \"Drie continenten\", \"Drie evenaarsgebieden\"], answer: 0, explanation: \"Naast Noord- en Zuidpool wordt soms ook de top van Mount Everest 'derde pool' genoemd vanwege de extreme omgeving.\" },",
+    "nieuw": "{ q: \"Welk gebied wordt wel 'de derde pool' van de aarde genoemd?\", options: [\"De Himalaya en het Tibetaans Plateau, met heel veel gletsjerijs\", \"De Sahara\", \"Het Amazonegebied\", \"De Noordzee\"], answer: 0, explanation: \"Na de Noordpool en de Zuidpool ligt in de Himalaya en op het Tibetaans Plateau het meeste ijs op aarde — daarom 'de derde pool'.\" },",
+    "reden": "'Derde pool' slaat op het Himalaya/Tibet-gebied (meeste ijs buiten de poolgebieden), niet op de top van de Everest als 'hoogtepool'. Feitelijk gecorrigeerd."
+  },
+  {
+    "waar": "geschiedenis.groep5[9]",
+    "oud": "explanation: \"Columbus ontdekte Amerika in 1492.\"",
+    "nieuw": "explanation: \"Columbus bereikte in 1492 Amerika; voor Europeanen was dat een 'ontdekking', al woonden er al lang mensen.\"",
+    "reden": "Verouderde formulering 'ontdekte Amerika'; nu zoals de methodes het tegenwoordig brengen."
+  },
+  {
+    "waar": "geschiedenis.groep5[18]",
+    "oud": "\"Denkbeeldige grens west-West tijdens Koude Oorlog\"",
+    "nieuw": "\"De grens tussen Noord- en Zuid-Korea\"",
+    "reden": "Afleider was een typefout-kloon van het goede antwoord ('west-West'); nu een echte foute optie."
+  },
+  {
+    "waar": "geschiedenis.groep5[39]",
+    "oud": "\"Het Nederlandse parlement, opgericht in 1848\"",
+    "nieuw": "\"Het Nederlandse parlement, sinds 1848 rechtstreeks gekozen\"",
+    "reden": "De Tweede Kamer bestaat sinds 1815; 1848 (Thorbecke) bracht de rechtstreekse verkiezing. Goede optie bevatte een feitfout."
+  },
+  {
+    "waar": "geschiedenis.groep7[30]",
+    "oud": "{ q: \"Wanneer werd Nederland bevrijd in WO2?\", ",
+    "nieuw": "{ q: \"Wanneer was heel Nederland bevrijd in WO2?\", ",
+    "reden": "Optie '1944 (deels)' was ook waar (het zuiden); met 'heel Nederland' is alleen 1945 goed."
+  },
+  {
+    "waar": "natuur.groep3[9]",
+    "oud": "{ q: \"Wat doet een boom in de winter?\", options: [\"Groeit het snelst\", \"Zaadjes maken\", \"Verliest zijn bladeren\", \"Groeit het snelst of Zaadjes maken\"], answer: 2, explanation: \"De meeste bomen verliezen hun bladeren in de herfst/winter.\" },",
+    "nieuw": "{ q: \"Wat doet een boom in de winter?\", options: [\"Groeit het snelst\", \"Zaadjes maken\", \"Rusten, zonder bladeren\", \"Bloeien\"], answer: 2, explanation: \"In de herfst vallen de bladeren; in de winter rust de boom en is hij kaal.\" },",
+    "reden": "Bladeren vallen in de herfst (vraag [1] in dezelfde set zegt dat ook); 'verliest zijn bladeren' in de winter sprak dat tegen."
+  },
+  {
+    "waar": "natuur.groep3[27]",
+    "oud": "{ q: \"Welk seizoen is het als de bladeren groen zijn en bloemen bloeien?\", ",
+    "nieuw": "{ q: \"In welk seizoen komen de blaadjes weer aan de bomen en gaan de eerste bloemen bloeien?\", ",
+    "reden": "Groene bladeren + bloeiende bloemen geldt ook voor de zomer (stond als optie): twee goede antwoorden."
+  },
+  {
+    "waar": "natuur.groep3[35]",
+    "oud": "options: [\"Kreeft\", \"Schildpad\", \"Slak\", \"Krab\"]",
+    "nieuw": "options: [\"Kreeft\", \"Muis\", \"Slak\", \"Krab\"]",
+    "reden": "Een schildpad kruipt ook langzaam en 'draagt zijn huis mee' (schild): twee goede opties."
+  },
+  {
+    "waar": "natuur.groep3[48]",
+    "oud": "options: [\"Kat\", \"Hond\", \"Vis\", \"Uil\"]",
+    "nieuw": "options: [\"Kip\", \"Hond\", \"Vis\", \"Uil\"]",
+    "reden": "Een kat ziet ook heel goed in het donker: twee goede opties. Kip (ziet slecht in het donker) ervoor in de plaats."
+  },
+  {
+    "waar": "natuur.groep3[49]",
+    "oud": "{ q: \"Wat is een kiemdraad bij een zaadje?\", ",
+    "nieuw": "{ q: \"Wat is een kiempje bij een zaadje?\", ",
+    "reden": "'Kiemdraad' is geen bestaand begrip; het heet een kiem/kiempje (kiemworteltje + kiemsprietje, zoals de uitleg al zegt)."
+  },
+  {
+    "waar": "natuur.groep5[27]",
+    "oud": "{ q: \"Welke planeet heeft ringen?\", ",
+    "nieuw": "{ q: \"Welke planeet is beroemd om zijn grote, duidelijk zichtbare ringen?\", ",
+    "reden": "Jupiter (als optie) heeft ook ringen, al zijn ze vaag: vraag aangescherpt zodat alleen Saturnus goed is."
+  },
+  {
+    "waar": "natuur.groep7[6]",
+    "oud": "options: [\"Chemische reactie\", \"Diffusie van water door een halfdoorlaatbare membraan\", \"Condensatie\", \"Diffusie van lucht door een halfdoorlaatbare membraan\"]",
+    "nieuw": "options: [\"Chemische reactie\", \"Diffusie van water door een halfdoorlaatbaar membraan\", \"Condensatie\", \"Diffusie van lucht door een halfdoorlaatbaar membraan\"]",
+    "reden": "Taalfout: 'het membraan', dus 'een halfdoorlaatbaar membraan'."
+  },
+  {
+    "waar": "natuur.groep7[16]",
+    "oud": "{ q: \"Wat is een symbiose?\", options: [\"Concurrentie waarbij beide partijen voordeel hebben\", \"Concurrentie\", \"Samenwerking waarbij beide partijen voordeel hebben\", \"Parasitisme\"], answer: 2, explanation: \"Bv. bijen bestuiven bloemen; bloemen geven nectar.\" },",
+    "nieuw": "{ q: \"Wat is mutualisme (een vorm van symbiose)?\", options: [\"Concurrentie waarbij beide partijen voordeel hebben\", \"Concurrentie\", \"Samenwerking waarbij beide partijen voordeel hebben\", \"Parasitisme\"], answer: 2, explanation: \"Mutualisme: samenleven waarbij beide soorten voordeel hebben. Bv. bijen bestuiven bloemen; bloemen geven nectar.\" },",
+    "reden": "Sprak vraag [48] in dezelfde set tegen (symbiose = 'minstens één heeft baat', incl. parasitisme). Hier ging het om mutualisme; nu consistent."
+  },
+  {
+    "waar": "natuur.groep7[37]",
+    "oud": "\"Een proces waarbij moleculen hergroeperen en nieuwe stoffen met andere eigenschappen ontstaan\"",
+    "nieuw": "\"Een proces waarbij een stof alleen van kleur of vorm verandert zonder dat er iets nieuws ontstaat\"",
+    "reden": "Afleider verschilde maar één woord van het goede antwoord ('moleculen' i.p.v. 'atomen') en was voor een leerling niet te onderscheiden: feitelijk twee goede opties."
+  },
+  {
+    "waar": "natuur.groep8[13]",
+    "oud": "{ q: \"Hoe heet onze melkweg?\", ",
+    "nieuw": "{ q: \"Hoe heet het sterrenstelsel waarin de zon en de aarde staan?\", ",
+    "reden": "De vraag gaf het antwoord weg ('melkweg' in de vraag, 'De Melkweg' als optie)."
+  },
+  {
+    "waar": "natuur.groep8[19]",
+    "oud": "{ q: \"Wat zijn de drie aggregatietoestanden van water?\", options: [\"IJs, water, damp\", \"Vast, vloeibaar, gas\", \"IJs, regen, sneeuw\", \"IJs, water, damp + Vast, vloeibaar, gas zijn allebei correct\"], answer: 3, explanation: \"Beide formuleringen kloppen: vaste vorm (ijs), vloeibaar (water) en gasvormig (waterdamp).\" },",
+    "nieuw": "{ q: \"Wat zijn de drie aggregatietoestanden van water?\", options: [\"IJs, water en waterdamp\", \"IJs, regen en sneeuw\", \"Zout, zoet en brak\", \"Warm, koud en lauw\"], answer: 0, explanation: \"Vast (ijs), vloeibaar (water) en gas (waterdamp) zijn de drie toestanden van water.\" },",
+    "reden": "Twee opties waren goed en de vierde optie was 'allebei correct' — instinker die niets toetst. Nu één eenduidig goed antwoord."
+  }
+]

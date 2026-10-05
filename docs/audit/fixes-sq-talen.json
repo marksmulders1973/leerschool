@@ -1,0 +1,92 @@
+[
+  {
+    "waar": "engels.groep7[21]",
+    "oud": "\"worked in de natuur\"",
+    "nieuw": "\"worked\"",
+    "reden": "Afleider bevat Nederlandse restjes ('in de natuur') — onzinoptie; 'worked' blijft fout (present perfect continuous is vereist)."
+  },
+  {
+    "waar": "engels.groep7[24]",
+    "oud": "\"Zodra\", \"Bovendien onder bepaalde omstandigheden\"",
+    "nieuw": "\"Zodra\", \"Bovendien\"",
+    "reden": "Afleider 'Bovendien onder bepaalde omstandigheden' is een onzinnige aangeplakte zin; 'Bovendien' volstaat als foute optie."
+  },
+  {
+    "waar": "engels.groep7[28]",
+    "oud": "gerund (leaVING)",
+    "nieuw": "gerund (leaving)",
+    "reden": "Typefout met vreemde hoofdletters in de explanation."
+  },
+  {
+    "waar": "engels.groep7[34]",
+    "oud": "\"'lie' = liggen (onovergankelijk); 'Lay' = neerleggen (overgankelijk)\"",
+    "nieuw": "\"'Lay' = liggen (onovergankelijk); 'lie' = neerleggen (overgankelijk)\"",
+    "reden": "Optie 0 zei precies hetzelfde als het juiste antwoord (optie 2), alleen in omgekeerde volgorde — twee goede opties. Nu omgedraaid, dus fout."
+  },
+  {
+    "waar": "engels.groep7[38]",
+    "oud": "\"Een bijzin, Een infinitief en Een gerund met een voltooid/onvoltooid deelwoord\"",
+    "nieuw": "\"Een bijzin\"",
+    "reden": "Onzinnige samengeplakte afleider; 'Een bijzin' is een normale foute optie."
+  },
+  {
+    "waar": "engels.groep7[42]",
+    "oud": "\"Theoretisch onder bepaalde omstandigheden\", \"Filosofisch\", \"Abstractief\"",
+    "nieuw": "\"Theoretisch\", \"Filosofisch\", \"Abstract\"",
+    "reden": "Afleider met aangeplakte onzin + 'Abstractief' is geen Nederlands woord (moet 'Abstract')."
+  },
+  {
+    "waar": "engels.groep7[44]",
+    "oud": "\"Personificatie in de moderne taal- en letterkunde\"",
+    "nieuw": "\"Personificatie\"",
+    "reden": "Onzinnige aangeplakte toevoeging aan de afleider."
+  },
+  {
+    "waar": "engels.groep7[46]",
+    "oud": "\"Tijdsaspect, Woordvolgorde en Spelling bij het onderwerp in getal\"",
+    "nieuw": "\"Spelling\"",
+    "reden": "Afleider is een samenraapsel van andere opties plus een stuk van het goede antwoord; vervangen door een schone foute optie."
+  },
+  {
+    "waar": "engels.groep7[47]",
+    "oud": "\"Optimistisch, Vriendelijk en Naïef over menselijke motieven\"",
+    "nieuw": "\"Naïef\"",
+    "reden": "Afleider is een samenraapsel van andere opties plus een stuk van het goede antwoord; vervangen door 'Naïef'."
+  },
+  {
+    "waar": "engels.groep7[48]",
+    "oud": "\"Grammaticaal gelijkvormige structuren achter ritme en nadruk\"",
+    "nieuw": "\"Een vergelijking met 'like'\"",
+    "reden": "Afleider was bijna identiek aan het goede antwoord ('achter' i.p.v. 'voor') — verwarrend en feitelijk half goed; vervangen door een duidelijk foute optie (simile)."
+  },
+  {
+    "waar": "duits.groep5[2]",
+    "oud": "options: [\"ein, zwei, drei\", \"uno, dos, tres\", \"un, deux, trois\", \"one, two, three\"], answer: 0, explanation: \"Ein, zwei, drei = één, twee, drie.\"",
+    "nieuw": "options: [\"eins, zwei, drei\", \"uno, dos, tres\", \"un, deux, trois\", \"one, two, three\"], answer: 0, explanation: \"Eins, zwei, drei = één, twee, drie.\"",
+    "reden": "Bij tellen is het 'eins', niet 'ein' ('ein' is alleen het lidwoord/telwoord vóór een zelfstandig naamwoord). Juiste optie én explanation gecorrigeerd."
+  },
+  {
+    "waar": "duits.groep5[11]",
+    "oud": "options: [\"Thee\", \"Water\", \"Melk\", \"lucht\"]",
+    "nieuw": "options: [\"Thee\", \"Water\", \"Melk\", \"Lucht\"]",
+    "reden": "Enige optie zonder hoofdletter — valt op als 'anders' en is inconsistent."
+  },
+  {
+    "waar": "duits.groep7[45]",
+    "oud": "\"'Sie' = formeel (met hoofdletter); 'Du' = informeel\"",
+    "nieuw": "\"'Du' = formeel; 'Sie' = informeel\"",
+    "reden": "Optie 2 zei precies hetzelfde als het goede antwoord (optie 0), alleen in omgekeerde volgorde — twee goede opties. Nu omgedraaid, dus fout."
+  },
+  {
+    "waar": "frans.groep5[12]",
+    "oud": "options: [\"Melk\", \"Wijn\", \"lucht\", \"Water\"]",
+    "nieuw": "options: [\"Melk\", \"Wijn\", \"Lucht\", \"Water\"]",
+    "reden": "Enige optie zonder hoofdletter — inconsistent."
+  },
+  {
+    "waar": "frans.groep7[43]",
+    "oud": "q: \"Quel est le pluriel de 'un beau jardin'?\", options: [\"des beaux jardins\", \"des beaux jardin\", \"des belle jardins\", \"des beau jardins\"], answer: 0, explanation: \"Mannelijk meervoud bijvoeglijk naamwoord: beau → beaux jardins.\"",
+    "nieuw": "q: \"Quel est le pluriel de 'le beau jardin'?\", options: [\"les beaux jardins\", \"les beaux jardin\", \"les belle jardins\", \"les beau jardins\"], answer: 0, explanation: \"Mannelijk meervoud bijvoeglijk naamwoord: le beau jardin → les beaux jardins.\"",
+    "reden": "In correct Frans wordt 'des' vóór een voorgeplaatst bijvoeglijk naamwoord 'de' ('de beaux jardins'); 'des beaux jardins' is formeel fout. Met het bepaald lidwoord ('le' → 'les') blijft de vraag eenduidig over beau → beaux."
+  }
+]

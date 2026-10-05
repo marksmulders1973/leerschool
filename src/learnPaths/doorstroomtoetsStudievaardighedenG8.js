@@ -1266,7 +1266,7 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek?",
         options: ["'appel' (vóór 'auto')", "'auto' (vóór 'appel')", "Beide gelijk", "Niet uit te leggen"],
         answer: 0,
-        wrongHints: [null, "Andersom — kijk naar 2e letter.", "Verschillende woorden.", "Wel — alfabetisch."],
+        wrongHints: [null, "Beide beginnen met een a — kijk naar de 2e letter: p of u, welke komt eerder in het alfabet?", "Verschillende woorden.", "Wel — alfabetisch."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk letter voor letter", tekst: "Beide woorden beginnen met 'a'. Dan: 'appel' = a-p, 'auto' = a-u. In alfabet: p (16e letter) komt vóór u (21e letter)." },
@@ -1321,7 +1321,7 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek: 'kat' of 'kater'?",
         options: ["kat", "kater", "Beide gelijk", "Geen van beide"],
         answer: 0,
-        wrongHints: [null, "Niet — kat staat eerst.", "Niet gelijk.", "Wel — een staat eerst."],
+        wrongHints: [null, "De eerste drie letters zijn gelijk — welke regel geldt dan voor het kortere woord?", "Niet gelijk.", "Wel — een staat eerst."],
         uitlegPad: {
           stappen: [
             { titel: "Vergelijk letter voor letter", tekst: "k-a-t en k-a-t-e-r. Eerste 3 letters gelijk. Bij 'kat' stopt het woord, bij 'kater' komt nog 'er'." },
@@ -1424,7 +1424,7 @@ const steps = [
           ],
           theorie: "Toets-tip: gebruik altijd hoofdwoorden om snel een woord op te zoeken. Eerst pagina vinden via hoofdwoorden, dan in die pagina precies zoeken.",
           voorbeelden: [
-            { type: "stap", tekst: "Hoofdwoorden 'auto' en 'avond'. Zoek je 'augustus'? A-U-G past tussen A-U-T en A-V → ja." },
+            { type: "stap", tekst: "Hoofdwoorden 'auto' en 'avond'. Zoek je 'avocado'? A-V-O-C past tussen A-U-T en A-V-O-N → ja." },
             { type: "stap", tekst: "Hoofdwoorden 'paard' en 'piano'. Zoek je 'plant'? P-L past niet tussen P-A en P-I → nee, andere pagina." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Bladeren wordt snel: kijk eerst naar hoofdwoorden, niet hele pagina's." }],
@@ -1735,7 +1735,7 @@ const steps = [
             { titel: "Stappenplan-logica", tekst: "Voor elk stappenplan: vraag jezelf 'wat moet ik weten/hebben voor ik kan beginnen?'." },
             { titel: "Recept eerst", tekst: "Zonder recept weet je niet welke ingrediënten, hoeveelheden, of stappen nodig zijn." },
           ],
-          woorden: [{ woord: "stappenplan", tekst: "Volgorde van handelingen om een doel te bereiken." }],
+          woorden: [{ woord: "stappenplan", uitleg: "Volgorde van handelingen om een doel te bereiken." }],
           theorie: "Toets-tip: bij volgorde-vragen, denk 'wat is logisch ZONDER de volgende stap?' — kan je bakken zonder recept? Nee.",
           voorbeelden: [{ type: "stap", tekst: "Volgorde taart: 1. Recept lezen → 2. Ingrediënten verzamelen → 3. Mengen → 4. Bakken → 5. Afkoelen → 6. Eten." }],
           basiskennis: [{ onderwerp: "Logica eerst", uitleg: "Stappen die NIETS weten over volgende = beginstappen." }],
@@ -2255,7 +2255,7 @@ const steps = [
         q: "Welk woord komt **eerst** in het woordenboek: **'tabel'**, **'tafel'** of **'taart'**?",
         options: ["taart", "tabel", "tafel", "Alle drie gelijk"],
         answer: 0,
-        wrongHints: [null, "Kijk derde letter: ta**a** vs ta**b** vs ta**f** — a komt eerst.", "Idem — niet vooraan.", "Verschillende woorden."],
+        wrongHints: [null, "Kijk naar de derde letter: ta-**b**-. Is er een woord met een derde letter die nog eerder in het alfabet komt?", "Kijk naar de derde letter: ta-**f**-. Komt f vooraan in het alfabet?", "Verschillende woorden."],
         uitlegPad: {
           stappen: [
             { titel: "Alfabet bij gelijk begin", tekst: "Begin gelijk ('ta')? Kijk naar de volgende letter. 'a' komt eerst, dan 'b', dan 'f'." },
@@ -2338,7 +2338,7 @@ const steps = [
         q: "Bij **tabel sorteren op alfabet**: welk woord komt **eerst**?",
         options: ["aap", "boom", "kat", "muis"],
         answer: 0,
-        wrongHints: [null, "Niet — a komt voor b.", "Niet.", "Niet."],
+        wrongHints: [null, "Vergelijk de eerste letters: komt de b het eerst in het alfabet?", "Niet.", "Niet."],
       },
       {
         q: "**Stappenplan brandweer**: 1) sirene 2) rijden 3) blussen. Stap **na rijden**?",
@@ -2350,7 +2350,7 @@ const steps = [
         q: "Bij **stappenschema 'taart bakken'** komt 'pan in oven zetten' ___ 'beslag mengen'?",
         options: ["Erna", "Ervoor", "Tegelijk", "Niet"],
         answer: 0,
-        wrongHints: [null, "Niet — eerst beslag, dan pan in oven.", "Beslag eerst.", "Wel — heel relevant."],
+        wrongHints: [null, "Kun je een pan in de oven zetten als er nog niets in zit?", "Kun je mengen en in de oven zetten op hetzelfde moment?", "Wel — heel relevant."],
       },
       {
         q: "Een **kaart van de wereld** is geprojecteerd op een **platte vorm**. Welke **vertekening** zie je vaak?",

@@ -1,0 +1,104 @@
+[
+  {
+    "waar": "regel 512 · redactiesommen tijd",
+    "oud": "{ q: \"Een evenement begint op 14 april en duurt 12 dagen. Op welke datum eindigt het?\"",
+    "nieuw": "{ q: \"Een evenement begint op 14 april. Precies 12 dagen later is het afgelopen. Op welke datum is dat?\"",
+    "reden": "Dubbelzinnig: 'duurt 12 dagen' vanaf 14 april eindigt inclusief geteld op 25 april, 14+12 geeft 26 april; beide staan als optie. Nieuwe formulering maakt 26 april (answer 1) eenduidig."
+  },
+  {
+    "waar": "regel 694 · cito studievaardigheden (voetbalstand, rij FC Zon)",
+    "oud": "<text x=\"215\" y=\"40\" font-size=\"9\" fill=\"#ccc\" font-family=\"sans-serif\">1</text>",
+    "nieuw": "<text x=\"215\" y=\"40\" font-size=\"9\" fill=\"#ccc\" font-family=\"sans-serif\">0</text>",
+    "reden": "Tabel klopt niet: FC Zon G4 W3 V1 = 9 punten, maar er staat 10. Met V0 (dus 1 gelijkspel) is het 3×3+1 = 10."
+  },
+  {
+    "waar": "regel 694 · cito studievaardigheden (voetbalstand, rij Dynamo)",
+    "oud": "<text x=\"215\" y=\"60\" font-size=\"9\" fill=\"#ccc\" font-family=\"sans-serif\">2</text>",
+    "nieuw": "<text x=\"215\" y=\"60\" font-size=\"9\" fill=\"#ccc\" font-family=\"sans-serif\">0</text>",
+    "reden": "Tabel klopt niet: Dynamo G4 W2 V2 = 6 punten, maar er staat 8. Met V0 (2 gelijke spelen) is het 2×3+2 = 8."
+  },
+  {
+    "waar": "regel 706 · cito studievaardigheden (staafdiagram dierentuin)",
+    "oud": "<text x=\"113\" y=\"22\" font-size=\"8\" fill=\"#ffd700\" text-anchor=\"middle\" font-family=\"sans-serif\">+70</text>",
+    "nieuw": "",
+    "reden": "Het plaatje toont het antwoord '+70' letterlijk; de vraag geeft het antwoord weg."
+  },
+  {
+    "waar": "regel 712 · cito studievaardigheden (lijngrafiek websitebezoekers, lijn)",
+    "oud": "points=\"55,86 98,76 140,82 183,62 228,44\"",
+    "nieuw": "points=\"55,86 98,76 140,70 183,62 228,44\"",
+    "reden": "Antwoord is 'Steeds stijgend', maar de lijn daalt van week 2 (y=76) naar week 3 (y=82). Week 3 nu tussen week 2 en 4 zodat de lijn echt elke week stijgt."
+  },
+  {
+    "waar": "regel 712 · cito studievaardigheden (lijngrafiek websitebezoekers, punt week 3)",
+    "oud": "<circle cx=\"140\" cy=\"82\" r=\"3.5\" fill=\"#f59e0b\"/>",
+    "nieuw": "<circle cx=\"140\" cy=\"70\" r=\"3.5\" fill=\"#f59e0b\"/>",
+    "reden": "Hoort bij de lijncorrectie hierboven: punt week 3 op dezelfde hoogte als de nieuwe lijn."
+  },
+  {
+    "waar": "regel 735 · cito studievaardigheden (tijdlijn Anne Frank)",
+    "oud": "<text x=\"85\" y=\"30\" font-size=\"8\" fill=\"#ffd700\" text-anchor=\"middle\" font-family=\"sans-serif\">13 jaar</text>",
+    "nieuw": "",
+    "reden": "Het plaatje toont het antwoord '13 jaar' letterlijk; het kind hoeft niets meer te berekenen."
+  },
+  {
+    "waar": "regel 736 · cito studievaardigheden (schooldag tijdlijn)",
+    "oud": "<text x=\"121\" y=\"33\" font-size=\"8\" fill=\"#ccc\" text-anchor=\"middle\" font-family=\"sans-serif\">15 min</text>",
+    "nieuw": "",
+    "reden": "Het plaatje toont het antwoord '15 min' letterlijk boven de pauze; de tijden 10:15 en 10:30 staan er al."
+  },
+  {
+    "waar": "regel 738 · cito studievaardigheden (tijdlijn leven)",
+    "oud": "<text x=\"112\" y=\"30\" font-size=\"8\" fill=\"#ffd700\" text-anchor=\"middle\" font-weight=\"bold\" font-family=\"sans-serif\">30 jaar</text>",
+    "nieuw": "",
+    "reden": "Het plaatje toont het antwoord '30 jaar' letterlijk; de vraag geeft het antwoord weg."
+  },
+  {
+    "waar": "regel 741 · cito studievaardigheden (metrokaart, label Centrum)",
+    "oud": "<text x=\"100\" y=\"70\" font-size=\"7\" fill=\"#aaa\" text-anchor=\"middle\" font-family=\"sans-serif\">stop 1</text>",
+    "nieuw": "",
+    "reden": "De labels 'stop 1/2/3' tellen de stops al voor; het antwoord (3 stops) staat letterlijk in het plaatje."
+  },
+  {
+    "waar": "regel 741 · cito studievaardigheden (metrokaart, label Stn. Zuid)",
+    "oud": "<text x=\"180\" y=\"70\" font-size=\"7\" fill=\"#aaa\" text-anchor=\"middle\" font-family=\"sans-serif\">stop 2</text>",
+    "nieuw": "",
+    "reden": "Zie 'stop 1': telt het antwoord voor."
+  },
+  {
+    "waar": "regel 741 · cito studievaardigheden (metrokaart, label Ziekenhuis)",
+    "oud": "<text x=\"260\" y=\"70\" font-size=\"7\" fill=\"#ccc\" text-anchor=\"middle\" font-family=\"sans-serif\">stop 3 </text>",
+    "nieuw": "",
+    "reden": "'stop 3' bij het Ziekenhuis is letterlijk het antwoord."
+  },
+  {
+    "waar": "regel 742 · cito studievaardigheden (kompasroos, positie stad B)",
+    "oud": "<circle cx=\"80\" cy=\"90\" r=\"10\" fill=\"#f59e0b\" opacity=\"0.8\"/><text x=\"80\" y=\"94\" font-size=\"9\" fill=\"#fff\" text-anchor=\"middle\" font-family=\"sans-serif\">B</text><line x1=\"50\" y1=\"65\" x2=\"80\" y2=\"80\" stroke=\"#ffd700\" stroke-width=\"1.5\" stroke-dasharray=\"3,2\"/>",
+    "nieuw": "<circle cx=\"50\" cy=\"95\" r=\"10\" fill=\"#f59e0b\" opacity=\"0.8\"/><text x=\"50\" y=\"99\" font-size=\"9\" fill=\"#fff\" text-anchor=\"middle\" font-family=\"sans-serif\">B</text><line x1=\"50\" y1=\"65\" x2=\"50\" y2=\"85\" stroke=\"#ffd700\" stroke-width=\"1.5\" stroke-dasharray=\"3,2\"/>",
+    "reden": "Stad B lag rechtsonder (zuidoost) van A, terwijl het antwoord 'Zuid' moet zijn. B staat nu recht onder A."
+  },
+  {
+    "waar": "regel 742 · cito studievaardigheden (kompasroos, verklaptekst)",
+    "oud": "<text x=\"170\" y=\"110\" font-size=\"8\" fill=\"#ccc\" text-anchor=\"middle\" font-family=\"sans-serif\">B ligt ten Zuiden van A </text>",
+    "nieuw": "",
+    "reden": "De tekst 'B ligt ten Zuiden van A' in het plaatje is letterlijk het antwoord."
+  },
+  {
+    "waar": "regel 747 · cito studievaardigheden (beslisboom outfits)",
+    "oud": "<text x=\"130\" y=\"114\" font-size=\"8\" fill=\"#ffd700\" text-anchor=\"middle\" font-family=\"sans-serif\">2 × 2 = 4 outfits </text>",
+    "nieuw": "",
+    "reden": "Het plaatje toont de berekening én het antwoord '2 × 2 = 4 outfits' letterlijk."
+  },
+  {
+    "waar": "regel 750 · cito studievaardigheden (Venn sport & muziek)",
+    "oud": "<text x=\"130\" y=\"112\" font-size=\"7.5\" fill=\"#ccc\" text-anchor=\"middle\" font-family=\"sans-serif\">8+5+4=17</text>",
+    "nieuw": "",
+    "reden": "Het plaatje toont de som '8+5+4=17' letterlijk; de vraag geeft het antwoord weg."
+  },
+  {
+    "waar": "regel 803 · cito groep8-taal (_realTaal8, persoonsvorm)",
+    "oud": "options: [\"wanneer\", \"geweest\", \"zeggen\", \"ben\"]",
+    "nieuw": "options: [\"wanneer\", \"geweest\", \"vakantie\", \"ben\"]",
+    "reden": "Optie 'zeggen' komt niet in de zin voor ('Wanneer ben je voor het laatst op vakantie geweest?'); bij 'Wat is de persoonsvorm?' moet elke optie een woord uit de zin zijn. Antwoord blijft 'ben' (index 3)."
+  }
+]

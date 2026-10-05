@@ -58,7 +58,7 @@ const steps = [
   {
     title: "Breuken & decimalen — ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Wat verwacht je op de Doorstroomtoets?**\n\nBij rekenen krijg je vrijwel altijd 5-8 breuken-vragen + decimaal-vragen. De toets test:\n\n• **Optellen** met gelijke noemers (3/8 + 5/8) — makkelijk.\n• **Optellen** met ongelijke noemers (1/3 + 1/4) — eerst gelijknamig maken.\n• **Vergelijken**: welke is groter? 3/5 of 2/3?\n• **Decimaal omzetten**: 1/4 = 0,25 / 3/4 = 0,75 / 1/8 = 0,125.\n• **Vereenvoudigen**: 10/20 = 1/2 (kleinste vorm).\n\n**Truc voor optellen met ongelijke noemers**:\n1. Vind kleinste gemeenschappelijke noemer (KGN).\n2. Maak beide breuken gelijknamig.\n3. Tel tellers op, noemer blijft.\n\nVoorbeeld: 1/3 + 1/4 → KGN = 12 → 4/12 + 3/12 = 7/12.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie het gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor 5 oefenvragen?**",
+    explanation: "**Wat verwacht je op de Doorstroomtoets?**\n\nBij rekenen krijg je vrijwel altijd 5-8 breuken-vragen + decimaal-vragen. De toets test:\n\n• **Optellen** met gelijke noemers (3/8 + 5/8) — makkelijk.\n• **Optellen** met ongelijke noemers (1/3 + 1/4) — eerst gelijknamig maken.\n• **Vergelijken**: welke is groter? 3/5 of 2/3?\n• **Decimaal omzetten**: 1/4 = 0,25 / 3/4 = 0,75 / 1/8 = 0,125.\n• **Vereenvoudigen**: 10/20 = 1/2 (kleinste vorm).\n\n**Truc voor optellen met ongelijke noemers**:\n1. Vind kleinste gemeenschappelijke noemer (KGN).\n2. Maak beide breuken gelijknamig.\n3. Tel tellers op, noemer blijft.\n\nVoorbeeld: 1/3 + 1/4 → KGN = 12 → 4/12 + 3/12 = 7/12.\n\n**Bron**: dit pad bevat eigen oefenvragen in stijl van Cito/IEP. Voor officiële voorbeelden zie het gratis voorbeeldopgavenboekje: https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor de oefenvragen?**",
     svg: overzichtSvg(),
     checks: [
       {
@@ -176,7 +176,7 @@ const steps = [
         q: "Wat is **2/3 − 1/6**?",
         options: ["1/2", "1/3", "1/6", "2/6"],
         answer: 0,
-        wrongHints: [null, "Maak eerst gelijke noemers (zesden) en trek dan af.", "Dat is maar één deel; je houdt meer over na 2/3.", "Bijna — maar deze breuk kun je nog kleiner schrijven."],
+        wrongHints: [null, "Maak eerst gelijke noemers (zesden) en trek dan af.", "Dat is maar één deel; je houdt meer over na 2/3.", "2/6 is hetzelfde als 1/3 — maak eerst van 2/3 zesden en trek dan af."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: gelijke noemers maken", tekst: "Je kunt alleen breuken aftrekken met DEZELFDE noemer. 2/3 en 1/6 hebben niet dezelfde — eerst gelijknamig maken." },
@@ -216,13 +216,13 @@ const steps = [
         q: "Wat is **2/5 + 1/10**?",
         options: ["1/2", "3/15", "3/10", "1/7"],
         answer: 0,
-        wrongHints: [null, "Tellers + noemers samen — fout.", "Niet vereenvoudigd.", "Niet."],
+        wrongHints: [null, "Tellers + noemers samen — fout.", "Heb je 2/5 wel omgerekend naar tienden voordat je optelde?", "Niet."],
       },
       {
         q: "**1,25 als breuk** (eenvoudigst)?",
         options: ["5/4", "1 1/5", "125/10", "12/5"],
         answer: 0,
-        wrongHints: [null, "1 1/5 is 1,2 — net te weinig. 1,25 = 1 1/4 = 5/4.", "125/10 is 12,5 — tien keer te groot. Het moet 125/100 zijn, en dat is 5/4.", "12/5 is 2,4 — te groot."],
+        wrongHints: [null, "1 1/5 is 1,2 — net te weinig.", "125/10 is 12,5 — tien keer te groot. Hoeveel honderdsten is 1,25?", "12/5 is 2,4 — te groot."],
       },
       {
         q: "**Helft van 0,8**?",
@@ -275,7 +275,7 @@ const steps = [
         ref: "S",
         options: ["1/3", "4/4", "1/6", "2/3"],
         answer: 0,
-        wrongHints: [null, "Niet zo.", "Te klein.", "Te groot."],
+        wrongHints: [null, "Dat is 1 heel — meer dan waar je mee begon.", "Te klein — schrijf 1/2 eerst als zesden.", "Te groot."],
       },
       {
         q: "Schrijf **2 1/2 als onechte breuk** (teller groter).",
@@ -317,7 +317,7 @@ const steps = [
         q: "**0,5 + 0,5** is?",
         options: ["1", "0,10", "0,55", "10"],
         answer: 0,
-        wrongHints: [null, "Niet zo — 'plakken' is geen optellen.", "Tel de tienden op: 5 tienden + 5 tienden = 10 tienden = 1.", "Veel te groot."],
+        wrongHints: [null, "Niet zo — 'plakken' is geen optellen.", "Dat is cijfers 'plakken' — tel de tienden echt bij elkaar op.", "Veel te groot."],
       },
       {
         q: "Wat is **1/2 van 60**?",
@@ -392,7 +392,7 @@ const steps = [
         q: "**1/4 + 1/2 + 1/4** is?",
         options: ["1", "1/8", "3/4", "1/2"],
         answer: 0,
-        wrongHints: [null, "Veel te klein.", "1/2 vergeten op te tellen.", "Plus nog 1/4 missend."],
+        wrongHints: [null, "Veel te klein.", "Eén van de kwarten vergeten op te tellen.", "De 1/2 in het midden vergeten."],
       },
       {
         q: "Wat is **3 × 1/4**?",
@@ -572,7 +572,7 @@ const steps = [
         ref: "1F",
         options: ["1/4", "1/3", "3/4", "1/12"],
         answer: 0,
-        wrongHints: [null, "3/12 — vereenvoudig: deel teller en noemer door 3.", "Dat zou 9 van de 12 punten zijn.", "Dat is maar één punt."],
+        wrongHints: [null, "Je at 3 van de 12 punten — is dat echt een derde van de pizza?", "Dat zou 9 van de 12 punten zijn.", "Dat is maar één punt."],
         explanation: "3 van de 12 = 3/12 = **1/4** (teller en noemer ÷ 3).",
       },
       {
@@ -588,7 +588,7 @@ const steps = [
         ref: "S",
         options: ["2/3", "6/27", "5/9", "2/27"],
         answer: 0,
-        wrongHints: [null, "6/9 kan eenvoudiger — deel teller en noemer door 3.", "Je vermenigvuldigt alleen de téller met 3, niet de noemer.", "Optellen van 3 en 2/9 is iets anders dan vermenigvuldigen."],
+        wrongHints: [null, "Je vermenigvuldigt alleen de téller met 3, niet de noemer.", "3 + 2 = 5 is optellen — hier moet je vermenigvuldigen.", "De noemer blijft 9 — alleen de teller verandert."],
         explanation: "3 × 2/9 = 6/9 = **2/3** (vereenvoudigd).",
       },
       {
@@ -596,7 +596,7 @@ const steps = [
         ref: "S",
         options: ["3", "0,3", "30", "0,8"],
         answer: 0,
-        wrongHints: [null, "Hoe vaak past 0,4 in 1,2? Tel maar: 0,4 — 0,8 — 1,2.", "Maak er een makkelijke som van: beide getallen ×10.", "Dat is aftrekken (1,2 − 0,4), geen delen."],
+        wrongHints: [null, "Hoe vaak past 0,4 in 1,2? Dat is meer dan één keer.", "Maak er een makkelijke som van: beide getallen ×10.", "Dat is aftrekken (1,2 − 0,4), geen delen."],
         explanation: "Truc: beide ×10 → 12 ÷ 4 = **3**. Hoe vaak past 0,4 in 1,2? Drie keer.",
       },
       {
@@ -874,7 +874,7 @@ const steps = [
         q: "Een product was **€50, nu €30**. **% korting**?",
         options: ["40%", "20%", "60%", "30%"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Dat is wat je betaalt %."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "€30 is het nieuwe bedrag in euro's — niet het percentage korting."],
       },
       {
         q: "**10% van 350** is?",
@@ -947,7 +947,7 @@ const steps = [
         q: "**Verhouding** appels : peren = **3 : 2**. Bij **12 appels**: hoeveel **peren**?",
         options: ["8", "6", "4", "10"],
         answer: 0,
-        wrongHints: [null, "12 ÷ 2 — let op verhouding 3:2.", "Deel eerst 12 door 3 om het aantal sets te vinden, keer dan 2.", "Niet."],
+        wrongHints: [null, "12 ÷ 2 — let op verhouding 3:2.", "Dat is het aantal sets van 3 appels — maar hoeveel peren horen bij elke set?", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Verhouding-stappen", tekst: "Verhouding 3:2 betekent: voor elke 3 appels horen 2 peren. Zoek hoeveel sets van 3 er in 12 zitten." },
@@ -983,7 +983,7 @@ const steps = [
         q: "**Verhouding** suiker : meel = **1 : 4**. Bij **500 g meel**: hoeveel **suiker**?",
         options: ["125 g", "100 g", "250 g", "500 g"],
         answer: 0,
-        wrongHints: [null, "Te weinig — niet 100, maar 500÷4.", "Te veel — meer dan helft.", "Te veel."],
+        wrongHints: [null, "Te weinig — hoeveel delen meel horen bij 1 deel suiker?", "Te veel — meer dan helft.", "Te veel."],
       },
       {
         q: "**10% van 250** is?",
@@ -1013,7 +1013,7 @@ const steps = [
         q: "**Verhouding melk : water = 2 : 5**. Bij **15 L water**: hoeveel **melk**?",
         options: ["6 L", "3 L", "10 L", "30 L"],
         answer: 0,
-        wrongHints: [null, "Te weinig — reken: 15 ÷ 5 × 2.", "Te veel — meer dan water.", "Veel te veel."],
+        wrongHints: [null, "Te weinig — dat is maar één deel; melk heeft er twee.", "Te veel — meer dan water.", "Veel te veel."],
       },
       {
         q: "Een **boek** kost €15, in de zomer **5% goedkoper**. Wat is de **korting**?",
@@ -1052,7 +1052,7 @@ const steps = [
         q: "Een **broek** van **€40** is **15% afgeprijsd**. Wat is de **nieuwe prijs**?",
         options: ["€34", "€36", "€25", "€46"],
         answer: 0,
-        wrongHints: [null, "Bijna — 15% van €40 = €6, dus €40-€6=€34, niet €36.", "Te veel korting.", "Verhoogd, niet afgeprijsd."],
+        wrongHints: [null, "Bijna — 15% van €40 is geen €4. Reken 10% + 5% uit.", "Te veel korting.", "Verhoogd, niet afgeprijsd."],
         uitlegPad: {
           stappen: [
             { titel: "2-stappen", tekst: "Stap 1: 15% van €40 = €6. Stap 2: €40 − €6 = €34." },
@@ -1085,7 +1085,7 @@ const steps = [
         q: "**Recept** voor 4 personen: 200 g pasta. Voor **6 personen**?",
         options: ["300 g", "250 g", "400 g", "150 g"],
         answer: 0,
-        wrongHints: [null, "Te weinig — bereken 200/4 × 6.", "Veel te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig — hoeveel gram is het per persoon?", "Veel te veel.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Per persoon eerst", tekst: "200 g / 4 personen = 50 g per persoon." },
@@ -1127,13 +1127,13 @@ const steps = [
         q: "**Hoeveel is 75% van 200**?",
         options: ["150", "125", "75", "100"],
         answer: 0,
-        wrongHints: [null, "Te weinig — bereken 200 × 0,75.", "Niet.", "Helft, dat is 50%."],
+        wrongHints: [null, "Te weinig — 75% is drie kwart van het getal.", "Niet.", "Helft, dat is 50%."],
       },
       {
         q: "**Een prijs ging van €40 naar €50**. Hoeveel **procent stijging**?",
         options: ["25%", "10%", "20%", "50%"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is €10 verschil.", "Bereken (10/40) × 100 — welk percentage komt eruit?", "Te veel."],
+        wrongHints: [null, "Niet — dat is €10 verschil.", "Je deelt het verschil door de óude prijs (€40), niet door de nieuwe.", "Te veel."],
       },
       {
         q: "**Verhouding 2:7** = ___ totaal-delen?",
@@ -1264,7 +1264,7 @@ const steps = [
         ref: "S",
         options: ["12", "20", "15", "10"],
         answer: 0,
-        wrongHints: [null, "Dat zijn de blauwe (3 delen).", "Dat is de helft — maar de verhouding is niet 1 : 1.", "Een deel is 6 knikkers — rood heeft er twéé."],
+        wrongHints: [null, "Dat zijn de blauwe (3 delen).", "Dat is de helft — maar de verhouding is niet 1 : 1.", "Te weinig — hoeveel knikkers is één deel als 5 delen samen 30 zijn?"],
         explanation: "2 + 3 = 5 delen → 1 deel = 30 ÷ 5 = 6. Rood = 2 × 6 = **12**.",
       },
       {
@@ -1582,7 +1582,7 @@ const steps = [
         q: "Een **kamer** is **5 m × 4 m**. Wat is de **oppervlakte**?",
         options: ["20 m²", "9 m²", "18 m²", "45 m²"],
         answer: 0,
-        wrongHints: [null, "Optelling, niet vermenigvuldiging.", "Omtrek gehalveerd.", "Niet."],
+        wrongHints: [null, "Optelling, niet vermenigvuldiging.", "Dat is de omtrek (rondom), niet de oppervlakte.", "Niet."],
       },
       {
         q: "**45 minuten** is hoeveel **uur** (in decimaal)?",
@@ -1613,7 +1613,7 @@ const steps = [
         q: "**Omtrek** van een rechthoek (8 m × 3 m)?",
         options: ["22 m", "11 m", "24 m", "16 m"],
         answer: 0,
-        wrongHints: [null, "Niet — reken 2 × (8 + 3) eerst uit.", "Dat is de oppervlakte.", "Dat is 2 × 8."],
+        wrongHints: [null, "Dat is maar de helft van de rand — een rechthoek heeft vier zijden.", "Dat is de oppervlakte.", "Dat is 2 × 8."],
       },
       {
         q: "**Volume** van een doos **3 cm × 4 cm × 5 cm**?",
@@ -1757,7 +1757,7 @@ const steps = [
         ref: "1F",
         options: ["9:55", "9:15", "10:15", "9:45"],
         answer: 0,
-        wrongHints: [null, "70 minuten is meer dan een half uur.", "Dat zou 90 minuten zijn.", "Dat is precies één uur — er komen nog 10 minuten bij."],
+        wrongHints: [null, "70 minuten is meer dan een half uur.", "Dat zou 90 minuten zijn.", "Dat is precies één uur later — maar de les duurt langer dan een uur."],
         explanation: "8:45 + 60 min = 9:45, + 10 min = **9:55**.",
       },
       {
@@ -1772,7 +1772,7 @@ const steps = [
         q: "**0,75 uur** = hoeveel minuten?",
         options: ["45 minuten", "75 minuten", "30 minuten", "55 minuten"],
         answer: 0,
-        wrongHints: [null, "Pas op: 0,75 uur is geen 75 minuten — een uur heeft 60 minuten.", "Dat is een half uur (0,5 uur).", "Reken: 0,75 × 60."],
+        wrongHints: [null, "Pas op: 0,75 uur is geen 75 minuten — een uur heeft 60 minuten.", "Dat is een half uur (0,5 uur).", "Te veel — 0,75 is driekwart, niet bijna een heel uur."],
         explanation: "0,75 = driekwart → driekwart van 60 minuten = **45 minuten**.",
       },
       {
@@ -1780,7 +1780,7 @@ const steps = [
         ref: "S",
         options: ["15 minuten", "12 minuten", "20 minuten", "30 minuten"],
         answer: 0,
-        wrongHints: [null, "Bijna — 3 km is een kwart van 12 km. Wat is een kwart van 60 minuten?", "Dan zou hij 9 km in een uur lopen.", "Dat is voor 6 km."],
+        wrongHints: [null, "Bijna — welk deel van 12 km is 3 km? Neem datzelfde deel van een uur.", "Dan zou hij 9 km in een uur lopen.", "Dat is voor 6 km."],
         explanation: "3 km = 1/4 van 12 km → 1/4 van 60 minuten = **15 minuten**.",
       },
       {
@@ -1796,7 +1796,7 @@ const steps = [
         ref: "S",
         options: ["72 liter", "130 liter", "7,2 liter", "720 liter"],
         answer: 0,
-        wrongHints: [null, "60 + 30 + 40 optellen geeft geen inhoud — vermenigvuldig de drie maten.", "Eén komma-plek mis — deel 72.000 cm³ door 1.000.", "Tien keer te veel — check de nullen."],
+        wrongHints: [null, "60 + 30 + 40 optellen geeft geen inhoud — vermenigvuldig de drie maten.", "Eén komma-plek mis — hoeveel cm³ gaat er in één liter?", "Tien keer te veel — check de nullen."],
         explanation: "Inhoud = 60 × 30 × 40 = 72.000 cm³ = 72.000 ÷ 1.000 = **72 liter**.",
       },
       {
@@ -1812,7 +1812,7 @@ const steps = [
         ref: "S",
         options: ["4 cm", "40 cm", "4 mm", "1 cm"],
         answer: 0,
-        wrongHints: [null, "400 cm ÷ 100 — check je nullen.", "Dat zou schaal 1 : 1.000 zijn.", "Dan was de schaal 1 : 400."],
+        wrongHints: [null, "Dat zou bij schaal 1 : 10 horen — check je nullen.", "Dat zou schaal 1 : 1.000 zijn.", "Dan was de schaal 1 : 400."],
         explanation: "4 m = 400 cm. Op schaal 1 : 100: 400 ÷ 100 = **4 cm**.",
       },
       {
@@ -1837,7 +1837,7 @@ const steps = [
   {
     title: "Redactiesommen — eindopdracht ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Redactiesommen** = vragen verstopt in een verhaaltje. Vaak de moeilijkste op de Doorstroomtoets — niet door de wiskunde, maar omdat je moet uitvogelen WELKE wiskunde je nodig hebt.\n\n**Aanpak in 4 stappen**:\n\n**1. Lees rustig** — minstens 2 keer.\n**2. Onderstreep getallen** + **kringel het vraagteken**.\n**3. Bedenk** welke som hier zit (+, -, ×, ÷, %, gemiddelde, oppervlakte, etc.).\n**4. Reken + check** of het antwoord redelijk is.\n\n**Veelvoorkomende types**:\n• **Inkoop + winst**: 'kocht voor X, verkocht voor Y, winst?'\n• **Tijd + tarief**: 'verdient €10/u, werkt 3,5 u, totaal?'\n• **Verdelen**: '4 vrienden delen €60, ieder krijgt?'\n• **Snelheid**: '60 km in 1,5 uur, km/u?'\n• **Gemiddelde**: 'cijfers 6, 7, 8, gemiddeld?'\n\n**Examen-tip**: schrijf TUSSENSTAPPEN op. De toets geeft alleen punten voor een goed antwoord — maar tussenstappen helpen JOU om geen domme fout te maken.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden: het gratis voorbeeldopgavenboekje (PDF): https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor de eindopdracht?** 5 gemixte redactiesommen.",
+    explanation: "**Redactiesommen** = vragen verstopt in een verhaaltje. Vaak de moeilijkste op de Doorstroomtoets — niet door de wiskunde, maar omdat je moet uitvogelen WELKE wiskunde je nodig hebt.\n\n**Aanpak in 4 stappen**:\n\n**1. Lees rustig** — minstens 2 keer.\n**2. Onderstreep getallen** + **kringel het vraagteken**.\n**3. Bedenk** welke som hier zit (+, -, ×, ÷, %, gemiddelde, oppervlakte, etc.).\n**4. Reken + check** of het antwoord redelijk is.\n\n**Veelvoorkomende types**:\n• **Inkoop + winst**: 'kocht voor X, verkocht voor Y, winst?'\n• **Tijd + tarief**: 'verdient €10/u, werkt 3,5 u, totaal?'\n• **Verdelen**: '4 vrienden delen €60, ieder krijgt?'\n• **Snelheid**: '60 km in 1,5 uur, km/u?'\n• **Gemiddelde**: 'cijfers 6, 7, 8, gemiddeld?'\n\n**Examen-tip**: schrijf TUSSENSTAPPEN op. De toets geeft alleen punten voor een goed antwoord — maar tussenstappen helpen JOU om geen domme fout te maken.\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Officiële voorbeelden: het gratis voorbeeldopgavenboekje (PDF): https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.\n\n**Klaar voor de eindopdracht?** Gemixte redactiesommen.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">REDACTIE-AANPAK</text>
 <rect x="20" y="40" width="280" height="30" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
@@ -1872,7 +1872,7 @@ const steps = [
         q: "Lisa heeft toets-cijfers **6,5 / 7 / 7,5 / 8**. Wat is haar **gemiddelde**?",
         options: ["7,25", "7", "7,5", "29"],
         answer: 0,
-        wrongHints: [null, "7 zou betekenen alle cijfers waren 7. Klopt niet.", "7,5 = mediaan ongeveer, niet gemiddelde.", "29 = som, niet gemiddelde."],
+        wrongHints: [null, "7 zou betekenen alle cijfers waren 7. Klopt niet.", "Niet alle cijfers zijn 7,5 of hoger — tel eerst alles op en deel door 4.", "29 = som, niet gemiddelde."],
         uitlegPad: {
           stappen: [
             { titel: "Som", tekst: "6,5 + 7 + 7,5 + 8 = 29. Tel alle cijfers op." },
@@ -2188,7 +2188,7 @@ const steps = [
         q: "**De auto verbruikt 6 L op 100 km.** Hoeveel **liter op 250 km**?",
         options: ["15 L", "12 L", "20 L", "10 L"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 250 ÷ 100 × 6.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te weinig — hoeveel keer 100 km is 250 km?", "Te veel.", "Te weinig."],
       },
       {
         q: "**Klas** heeft **30 leerlingen**. **2/3 doet mee met gym**. Hoeveel **leerlingen**?",
@@ -2370,7 +2370,7 @@ const steps = [
         ref: "1F",
         options: ["€1,25", "€3,75", "€2,25", "€0,75"],
         answer: 0,
-        wrongHints: [null, "Dat is wat de schriften sámen kosten — de vraag is wat ze terugkrijgt.", "3 × €1,25 = €3,75; trek dát van €5 af.", "Check de aftrekking: €5,00 − €3,75."],
+        wrongHints: [null, "Dat is wat de schriften sámen kosten — de vraag is wat ze terugkrijgt.", "Reken de aftrekking nog eens na: €5,00 min de totale prijs van de schriften.", "Net te weinig — check de aftrekking nog eens."],
         explanation: "3 × €1,25 = €3,75. Terug: €5,00 − €3,75 = **€1,25**.",
       },
       {
@@ -2378,7 +2378,7 @@ const steps = [
         ref: "S",
         options: ["9", "8", "10", "6"],
         answer: 0,
-        wrongHints: [null, "Deel 53 door 6: er blijven kinderen over — waar slapen die?", "Eén te veel — reken 9 × 6 maar na.", "Dan passen er maar 36 kinderen."],
+        wrongHints: [null, "Deel 53 door 6: er blijven kinderen over — waar slapen die?", "Eén te veel — tel na hoeveel plekken je dan hebt; dat is meer dan nodig.", "Dan passen er maar 36 kinderen."],
         explanation: "53 ÷ 6 = 8 rest 5 → je hebt een **9e tent** nodig voor de laatste 5 kinderen. Bij 'hoeveel nodig' rond je áltijd naar boven af.",
         uitlegPad: {
           stappen: [
@@ -2400,7 +2400,7 @@ const steps = [
         ref: "1F",
         options: ["€38", "€46", "€44", "€36"],
         answer: 0,
-        wrongHints: [null, "Dat is 4 × €11,50 — je vergeet de korting.", "Dat is alleen de korting eraf bij het totaal van €46... reken na: 4 × €9,50.", "Net te weinig — het kaartje kost €9,50, niet €9."],
+        wrongHints: [null, "Dat is 4 × €11,50 — je vergeet de korting.", "Je hebt maar één keer €2 korting afgetrokken — maar elk van de 4 kaartjes krijgt €2 korting.", "Net te weinig — het kaartje kost €9,50, niet €9."],
         explanation: "Per kaartje: €11,50 − €2 = €9,50. Dan 4 × €9,50 = **€38**.",
       },
       {
@@ -2408,7 +2408,7 @@ const steps = [
         ref: "S",
         options: ["28", "46", "18", "40"],
         answer: 0,
-        wrongHints: [null, "Dat is het totaal — de vraag gaat alleen over de gewone tweewielers.", "6 driewielers hebben samen 6 × 3 wielen — trek die van 46 af.", "Check: 14 × 2 wielen."],
+        wrongHints: [null, "Dat is het totaal — de vraag gaat alleen over de gewone tweewielers.", "Dat zijn de wielen van de driewielers (6 × 3) — de vraag gaat over de andere 14.", "Te veel — elk gewoon voertuig heeft maar 2 wielen."],
         explanation: "14 gewone voertuigen × 2 wielen = **28 wielen**. (Controle: 28 + 6 × 3 = 28 + 18 = 46 ✓)",
       },
       {
@@ -2416,7 +2416,7 @@ const steps = [
         ref: "S",
         options: ["€13", "€15", "€19", "€11"],
         answer: 0,
-        wrongHints: [null, "€45 ÷ 3 — maar haal eerst Jins extra €6 van het totaal af.", "Dat zou €13 + €6 zijn — de vraag is het basisbedrag.", "Check: 3 × €11 + €6 = €39, geen €45."],
+        wrongHints: [null, "€45 ÷ 3 — maar haal eerst Jins extra €6 van het totaal af.", "Dat is het bedrag mét Jins extra — de vraag is het basisbedrag.", "Check: 3 × €11 + €6 = €39, geen €45."],
         explanation: "€45 − €6 = €39 → €39 ÷ 3 = **€13** per persoon (Jin krijgt €13 + €6 = €19).",
       },
       {
@@ -2424,7 +2424,7 @@ const steps = [
         ref: "S",
         options: ["1 uur en 27 minuten", "1 uur en 33 minuten", "2 uur en 27 minuten", "87 uur"],
         answer: 0,
-        wrongHints: [null, "Reken in stappen: van 10:48 naar 11:00 is 12 min, dan nog 1 uur en 15 min.", "Van 10:48 tot 12:48 zou 2 uur zijn — de trein is er eerder.", "Minuten en uren door elkaar — 87 minuten is 1 uur en 27 minuten."],
+        wrongHints: [null, "Reken in stappen: eerst van 10:48 tot 11:00, dan verder tot 12:15.", "Van 10:48 tot 12:48 zou 2 uur zijn — de trein is er eerder.", "Minuten en uren door elkaar — een reis van 87 uur zou bijna 4 dagen duren."],
         explanation: "10:48 → 11:00 = 12 min. 11:00 → 12:15 = 1 uur 15 min. Samen: **1 uur en 27 minuten**.",
       },
       {
@@ -2432,7 +2432,7 @@ const steps = [
         ref: "1F",
         options: ["€4,20", "€5,60", "€2,80", "€4,90"],
         answer: 0,
-        wrongHints: [null, "Dat is 2 × €2,80 — zonder de actie.", "Dat is maar één brood.", "Halve prijs van €2,80 is €1,40 — tel opnieuw op."],
+        wrongHints: [null, "Dat is 2 × €2,80 — zonder de actie.", "Dat is maar één brood.", "Halve prijs is de hélft van €2,80 — niet driekwart."],
         explanation: "1e brood €2,80 + 2e brood €1,40 (halve prijs) = **€4,20**.",
       },
       {
@@ -2440,7 +2440,7 @@ const steps = [
         ref: "S",
         options: ["8", "7", "9", "6"],
         answer: 0,
-        wrongHints: [null, "Deel 180 door 25: er blijven bladzijden over — die tellen ook mee.", "Eén te veel: na 8 avonden is het boek al uit.", "Dan heeft ze pas 150 bladzijden gelezen."],
+        wrongHints: [null, "Deel 180 door 25: er blijven bladzijden over — die tellen ook mee.", "Te veel — reken na hoeveel bladzijden ze dan al gelezen zou hebben.", "Dan heeft ze pas 150 bladzijden gelezen."],
         explanation: "7 avonden × 25 = 175 bladzijden — nog 5 over → avond **8** leest ze het uit.",
       },
       {
@@ -2448,7 +2448,7 @@ const steps = [
         ref: "S",
         options: ["€4,50", "€7,50", "€3,00", "€117"],
         answer: 0,
-        wrongHints: [null, "Eerst het tekort: €195 − €78. Deel dát door 26.", "Dat zou €195 ÷ 26 zijn — maar er is al €78 gespaard.", "Dat is het tekort zélf, niet het bedrag per kind."],
+        wrongHints: [null, "Eerst het tekort: €195 − €78. Deel dát door 26.", "Dat is €78 ÷ 26 — maar je moet het tekort verdelen, niet wat al gespaard is.", "Dat is het tekort zélf, niet het bedrag per kind."],
         explanation: "Tekort: €195 − €78 = €117. Per kind: €117 ÷ 26 = **€4,50**.",
       },
       {
@@ -2456,7 +2456,7 @@ const steps = [
         ref: "S",
         options: ["19", "25", "57", "38"],
         answer: 0,
-        wrongHints: [null, "Samen zijn ze 4 'delen' (1 voor Daan + 3 voor opa). Deel 76 door 4.", "Dat is de leeftijd van opa min een paar jaar — reken met delen.", "Dat is de helft — maar opa is geen 2 keer maar 3 keer zo oud."],
+        wrongHints: [null, "Daan is 1 deel, opa 3 delen — hoeveel delen zijn dat samen?", "Dat is veel te oud voor Daan — opa is de oudste.", "Dat is de helft — maar opa is geen 2 keer maar 3 keer zo oud."],
         explanation: "Daan = 1 deel, opa = 3 delen → samen 4 delen = 76 jaar → 1 deel = **19 jaar** (opa is 57).",
       },
       {
@@ -2464,7 +2464,7 @@ const steps = [
         ref: "S",
         options: ["10 keer", "4 keer", "2,5 keer", "6 keer"],
         answer: 0,
-        wrongHints: [null, "Eerst de prijs per flesje uit de doos: €6 ÷ 24.", "€6 ÷ 24 = €0,25 — hoeveel keer past dat in €2,50?", "Vergelijk per flesje, niet per doos."],
+        wrongHints: [null, "Eerst de prijs per flesje uit de doos: €6 ÷ 24.", "Vergelijk de prijs van één flesje uit de doos met €2,50 — het verschil is groter.", "Vergelijk per flesje, niet per doos."],
         explanation: "Doos: €6 ÷ 24 = €0,25 per flesje. Festival: €2,50 ÷ €0,25 = **10 keer** zo duur.",
       },
       {
@@ -2520,7 +2520,7 @@ const steps = [
         ref: "1F",
         options: ["€1,40", "€2,40", "€1,60", "€2,60"],
         answer: 0,
-        wrongHints: [null, "Vul aan: van €3,60 naar €4 is 40 cent, van €4 naar €5 is... hoeveel samen?", "60 cent terug klopt niet — hoeveel is er van €3,60 tot €4,00?", "Dat is te veel — check je aftrekking met aanvullen."],
+        wrongHints: [null, "Eén euro te veel — vul aan van €3,60 naar €4, dan naar €5.", "60 cent terug klopt niet — hoeveel is er van €3,60 tot €4,00?", "Dat is te veel — check je aftrekking met aanvullen."],
         explanation: "Aanvullen: €3,60 + €0,40 = €4,00, dan + €1,00 = €5,00. Wisselgeld = €0,40 + €1,00 = **€1,40**.",
       },
       {
@@ -2745,7 +2745,7 @@ const steps = [
         ref: "1F",
         options: ["35 minuten", "45 minuten", "25 minuten", "75 minuten"],
         answer: 0,
-        wrongHints: [null, "Van 8:37 naar 9:00 is 23 minuten — tel dan verder tot 9:12.", "Te weinig — alleen van 8:37 naar 9:00 is al meer dan 20 minuten.", "Je rekent alsof 100 minuten in een uur gaan — het zijn er 60."],
+        wrongHints: [null, "Te veel — tel eerst van 8:37 tot 9:00, en dan verder tot 9:12.", "Te weinig — alleen van 8:37 naar 9:00 is al meer dan 20 minuten.", "Je rekent alsof 100 minuten in een uur gaan — het zijn er 60."],
         explanation: "8:37 → 9:00 = 23 min. 9:00 → 9:12 = 12 min. Samen **35 minuten**.",
       },
       {
@@ -2769,7 +2769,7 @@ const steps = [
         ref: "S",
         options: ["1,5 uur", "1 uur en 20 minuten", "2 uur", "30 minuten"],
         answer: 0,
-        wrongHints: [null, "Na 1 uur is hij 60 km ver; de overige 30 km is een hálf uur, geen 20 minuten.", "In 2 uur zou hij 120 km rijden — dat is te ver.", "In 30 minuten rijdt hij maar 30 km."],
+        wrongHints: [null, "Te kort — na 1 uur is hij 60 km ver; de overige 30 km kost meer dan 20 minuten.", "In 2 uur zou hij 120 km rijden — dat is te ver.", "In 30 minuten rijdt hij maar 30 km."],
         explanation: "Eerste 60 km = 1 uur. Resterende 30 km = half uur. Samen **1,5 uur**.",
       },
       {
@@ -2777,7 +2777,7 @@ const steps = [
         ref: "1F",
         options: ["2 april", "33 maart", "26 maart", "1 april"],
         answer: 0,
-        wrongHints: [null, "Maart heeft maar 31 dagen — na 31 maart begint april.", "Dat is 2 weken later, geen 3.", "Eén dag te vroeg: maart heeft 31 dagen, geen 30."],
+        wrongHints: [null, "Maart heeft maar 31 dagen — na 31 maart begint april.", "Dat is 2 weken later, geen 3.", "Eén dag te vroeg — tel nog eens precies 21 dagen door vanaf 12 maart."],
         explanation: "3 weken = 21 dagen. 12 + 21 = 33, maar maart heeft 31 dagen → 33 − 31 = **2 april**.",
       },
       {
@@ -2785,7 +2785,7 @@ const steps = [
         ref: "1F",
         options: ["30", "31", "28", "29"],
         answer: 0,
-        wrongHints: [null, "Denk aan het rijmpje: 'april, juni, september, november...'", "Dat is februari in een gewoon jaar.", "Dat is februari in een schrikkeljaar."],
+        wrongHints: [null, "Denk aan het rijmpje van de maanden met 30 dagen — hoort november daarbij?", "Dat is februari in een gewoon jaar.", "Dat is februari in een schrikkeljaar."],
         explanation: "November heeft **30** dagen (net als april, juni en september).",
       },
       {
@@ -2841,7 +2841,7 @@ const steps = [
         ref: "S",
         options: ["1 uur en 26 minuten", "1 uur en 13 minuten", "48 minuten", "1 uur en 36 minuten"],
         answer: 0,
-        wrongHints: [null, "De 13 minuten wachten op het overstapstation horen óók bij de reis.", "Dat zijn alleen de twee treinritten los — de hele reis loopt van 10:24 tot 11:50.", "Tien minuten te veel — tel van 10:24 via 11:00 naar 11:50."],
+        wrongHints: [null, "De 13 minuten wachten op het overstapstation horen óók bij de reis.", "Veel te kort — de hele reis loopt van 10:24 tot 11:50, dat is meer dan een uur.", "Tien minuten te veel — tel van 10:24 via 11:00 naar 11:50."],
         explanation: "Van 10:24 tot 11:50: 10:24 → 11:24 = 1 uur, 11:24 → 11:50 = 26 min. Totaal **1 uur en 26 minuten**.",
       },
       {
@@ -2865,7 +2865,7 @@ const steps = [
         ref: "1F",
         options: ["vrijdag 24 juli", "donderdag 24 juli", "vrijdag 25 juli", "zaterdag 24 juli"],
         answer: 0,
-        wrongHints: [null, "10 dagen is een hele week (zelfde dag) plus 3 dagen. Dinsdag plus 3 is niet donderdag.", "De datum: 14 + 10 — reken nog eens.", "Dinsdag + 3 dagen — tel op je vingers: woensdag, donderdag..."],
+        wrongHints: [null, "10 dagen is een hele week (zelfde dag) plus 3 dagen. Dinsdag plus 3 is niet donderdag.", "De datum: 14 + 10 — reken nog eens.", "Dinsdag + 3 dagen — tel nog eens precies op je vingers."],
         explanation: "Datum: 14 + 10 = 24 juli. Dag: dinsdag + 7 = dinsdag, + 3 = **vrijdag 24 juli**.",
       },
       {

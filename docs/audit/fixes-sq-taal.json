@@ -1,0 +1,134 @@
+[
+  {
+    "waar": "taal.groep12[7]",
+    "oud": "q: \"Welke letter hoor je in 'maan'?\"",
+    "nieuw": "q: \"Met welke letter begint 'maan'?\"",
+    "reden": "Twee opties goed: zowel m als n hoor je in 'maan'. Vraag nu naar de beginletter, zoals de uitleg al zegt."
+  },
+  {
+    "waar": "taal.groep12[23]",
+    "oud": "q: \"Welke letter hoor je in 'appel'?\"",
+    "nieuw": "q: \"Met welke letter begint 'appel'?\"",
+    "reden": "Twee opties goed: a en e zitten allebei in 'appel'. Vraag naar de beginletter."
+  },
+  {
+    "waar": "taal.groep12[30]",
+    "oud": "q: \"Welke letter hoor je in 'tand'?\"",
+    "nieuw": "q: \"Met welke letter begint 'tand'?\"",
+    "reden": "Twee opties goed: t en d hoor je allebei in 'tand'. Vraag naar de beginletter."
+  },
+  {
+    "waar": "taal.groep12[34]",
+    "oud": "q: \"Welke letter hoor je in 'neus'?\"",
+    "nieuw": "q: \"Met welke letter begint 'neus'?\"",
+    "reden": "Twee opties goed: n en s hoor je allebei in 'neus'. Vraag naar de beginletter."
+  },
+  {
+    "waar": "taal.groep12[44]",
+    "oud": "q: \"Welke letter hoor je in 'geit'?\"",
+    "nieuw": "q: \"Met welke letter begint 'geit'?\"",
+    "reden": "Twee opties goed: g en t hoor je allebei in 'geit'. Vraag naar de beginletter."
+  },
+  {
+    "waar": "taal.groep12[48]",
+    "oud": "q: \"Welke letter hoor je in 'lamp'?\"",
+    "nieuw": "q: \"Met welke letter begint 'lamp'?\"",
+    "reden": "Drie opties goed: l, m en p hoor je allemaal in 'lamp'. Vraag naar de beginletter."
+  },
+  {
+    "waar": "taal.groep3[9]",
+    "oud": "options: [\"sneeuw\", \"wind\", \"zon\", \"regen\"]",
+    "nieuw": "options: [\"boom\", \"wind\", \"zon\", \"regen\"]",
+    "reden": "Dubbelzinnig: sneeuw is ook water uit de lucht. Afleider vervangen."
+  },
+  {
+    "waar": "taal.groep3[26]",
+    "oud": "\"de hond blaft.\", \"De hond Blaft.\"",
+    "nieuw": "\"de hond blaft.\", \"de hond Blaft.\"",
+    "reden": "Twee opties goed: 'De hond Blaft.' begint ook met een hoofdletter. Afleider nu met kleine letter aan het begin."
+  },
+  {
+    "waar": "taal.groep3[30]",
+    "oud": "      { q: \"Welke zin is correct?\", options: [\"Zij loop naar de winkel.\", \"Zij loopten naar de winkel.\", \"Zij lopen naar de winkel.\", \"Zij loopt naar de winkel.\"], answer: 2, explanation: \"Bij 'zij (meervoud)' gebruik je de meervoudsvorm: lopen.\" },",
+    "nieuw": "      { q: \"Welke zin is correct?\", options: [\"De kinderen loop naar de winkel.\", \"De kinderen loopten naar de winkel.\", \"De kinderen lopen naar de winkel.\", \"De kinderen loopt naar de winkel.\"], answer: 2, explanation: \"Bij 'de kinderen' (meervoud) gebruik je de meervoudsvorm: lopen.\" },",
+    "reden": "Twee opties goed: 'Zij loopt' (zij = één meisje) en 'Zij lopen' (zij = meervoud) zijn allebei correct. Onderwerp vervangen door 'De kinderen'."
+  },
+  {
+    "waar": "taal.groep3[46]",
+    "oud": "\"Wat een mooie nacht.\"",
+    "nieuw": "\"Wat een mooie nacht!\"",
+    "reden": "Twee opties eindigden op een punt (nacht. en dag.). Afleider krijgt een uitroepteken."
+  },
+  {
+    "waar": "taal.groep5[19]",
+    "oud": "options: [\"regen\", \"maan\", \"ster\", \"zon\"]",
+    "nieuw": "options: [\"regen\", \"wolk\", \"wind\", \"zon\"]",
+    "reden": "Dubbelzinnig: 'De maan schijnt' en 'De ster schijnt' kloppen ook. Afleiders vervangen."
+  },
+  {
+    "waar": "taal.groep5[26]",
+    "oud": "options: [\"kalven\", \"kalvers\", \"kalveren\", \"kalvers of kalven\"]",
+    "nieuw": "options: [\"kalfen\", \"kalvers\", \"kalveren\", \"kalfs\"]",
+    "reden": "Twee opties goed: Woordenlijst/Van Dale geven naast 'kalveren' ook 'kalven' als meervoud. Afleider 'kalven' vervangen."
+  },
+  {
+    "waar": "taal.groep5[31]",
+    "oud": "      { q: \"Welk lidwoord hoort bij 'huis'?\", options: [\"een of het\", \"een of de\", \"de\", \"het\"], answer: 3, explanation: \"'Het huis' — 'huis' is een onzijdig woord (het-woord).\" },",
+    "nieuw": "      { q: \"Welk lidwoord hoort bij 'huis': de of het?\", options: [\"de\", \"het\", \"allebei\", \"geen van beide\"], answer: 1, explanation: \"'Het huis' — 'huis' is een onzijdig woord (het-woord).\" },",
+    "reden": "Dubbelzinnig: 'een huis' én 'het huis' kloppen, dus optie 'een of het' was ook goed. Vraag beperkt tot de/het."
+  },
+  {
+    "waar": "taal.groep7[25]",
+    "oud": "\"Zij loopt snel. onder bepaalde omstandigheden\"",
+    "nieuw": "\"Zij loopt snel.\"",
+    "reden": "Verminkte optietekst ('onder bepaalde omstandigheden' erachter geplakt)."
+  },
+  {
+    "waar": "taal.groep7[27]",
+    "oud": "\"Een verkleinwoord, Een werkwoordsuitgang en Een prefix (voorvoegsel) dat bijvoeglijke naamwoorden vormt\"",
+    "nieuw": "\"Een verkleinwoord\"",
+    "reden": "Verminkte optietekst (drie afleiders aan elkaar geplakt)."
+  },
+  {
+    "waar": "taal.groep7[28]",
+    "oud": "\"Een woord gevormd met achter- of achtervoegsel van een basiswoord\"",
+    "nieuw": "\"Een verkleinwoord\"",
+    "reden": "Verminkte optietekst ('achter- of achtervoegsel') die bijna gelijk is aan het goede antwoord."
+  },
+  {
+    "waar": "taal.groep7[30]",
+    "oud": "\"Het lijdend voorwerp dat aangeeft hoe, wanneer, waar of waarom iets gebeurt\"",
+    "nieuw": "\"Het onderwerp\"",
+    "reden": "Verminkte optietekst (afleider en goed antwoord aan elkaar geplakt, verwarrend)."
+  },
+  {
+    "waar": "taal.groep7[43]",
+    "oud": "\"De auto is langzamer dan de fiets.\"",
+    "nieuw": "\"De auto is even snel als de fiets.\"",
+    "reden": "Twee opties goed: 'langzamer' is óók een comparatief (vergrotende trap). Afleider vervangen."
+  },
+  {
+    "waar": "taal.groep7[48]",
+    "oud": "\"Herhaling aan einde en einde van een zin of alinea\"",
+    "nieuw": "\"Herhaling van de beginklank van woorden\"",
+    "reden": "Verminkte optietekst ('einde en einde')."
+  },
+  {
+    "waar": "taal.groep8[6]",
+    "oud": "options: [\"zwemt\", \"zwemmen\", \"zwommen\", \"gezwommen\"]",
+    "nieuw": "options: [\"zwemt\", \"zwemmen\", \"zwemmend\", \"gezwommen\"]",
+    "reden": "Twee opties goed: 'De kinderen zwommen in het zwembad' (verleden tijd) is ook een correcte zin. Afleider vervangen."
+  },
+  {
+    "waar": "taal.groep8[23]",
+    "oud": "      { q: \"Welk teken hoort op de stippen: 'Pas op___ er ligt een plas!'?\", options: [\".\", \",\", \":\", \"!\"], answer: 3, explanation: \"Een uitroep krijgt een uitroepteken.\" },",
+    "nieuw": "      { q: \"Welk teken hoort op de stippen: 'Pas op___ Er ligt een plas!'?\", options: [\".\", \",\", \":\", \"!\"], answer: 3, explanation: \"Na 'Pas op!' begint een nieuwe zin met een hoofdletter (Er), dus hier hoort een uitroepteken. Bij een komma zou 'er' met een kleine letter doorlopen.\" },",
+    "reden": "Dubbelzinnig: met kleine letter 'er' was de komma ('Pas op, er ligt een plas!') zelfs de beste keuze. Hoofdletter 'Er' maakt het uitroepteken eenduidig; uitleg aangepast."
+  },
+  {
+    "waar": "spelling.groep5[13]",
+    "oud": "      { q: \"Welke spelling is correct?\", options: [\"Hij kooktd lekker.\", \"Hij kookdt lekker.\", \"Hij kookt lekker.\", \"Hij kookte lekker.\"], answer: 2, explanation: \"Tegenwoordige tijd: stam 'kook' + t = kookt. 'Kookte' is verleden tijd.\" },",
+    "nieuw": "      { q: \"Welke spelling is correct?\", options: [\"Hij kooktd lekker.\", \"Hij kookdt lekker.\", \"Hij kookt lekker.\", \"Hij koockt lekker.\"], answer: 2, explanation: \"Tegenwoordige tijd: stam 'kook' + t = kookt.\" },",
+    "reden": "Twee opties goed: 'Hij kookte lekker.' is correct gespeld (verleden tijd). Afleider vervangen door een echte spelfout."
+  }
+]

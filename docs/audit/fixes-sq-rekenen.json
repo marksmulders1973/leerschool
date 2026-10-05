@@ -1,0 +1,80 @@
+[
+  {
+    "waar": "rekenen.groep12[51]",
+    "oud": "{ q: \"Hoeveel eendjes zie je?\", options: [\"3\", \"4\", \"2\", \"1\"], answer: 0,",
+    "nieuw": "{ q: \"Hoeveel eendjes zie je?\", options: [\"3\", \"4\", \"2\", \"1\"], answer: 2,",
+    "reden": "FOUT ANTWOORD: de svg toont 2 eendjes en de uitleg zegt 'Dat zijn er 2', maar answer 0 wijst naar optie '3'. Juiste index = 2 ('2')."
+  },
+  {
+    "waar": "rekenen.groep4[48]",
+    "oud": "5 × 5 = 25 (tafel van 5). Dit is al behandeld maar is een andere opstelling.",
+    "nieuw": "5 × 5 = 25 (tafel van 5).",
+    "reden": "Uitleg bevat interne maker-opmerking ('Dit is al behandeld maar is een andere opstelling') die het kind te zien krijgt. (Vraag is bovendien een dubbel van groep4[8] — zie verslag.)"
+  },
+  {
+    "waar": "rekenen.groep7[34]",
+    "oud": "Wat is de oppervlakte van een driehoek met basis 14 en hoogte 8?",
+    "nieuw": "Wat is de oppervlakte van een driehoek met basis 14 cm en hoogte 8 cm?",
+    "reden": "Gegeven ontbreekt: de vraag noemt geen eenheid, de opties staan in cm²."
+  },
+  {
+    "waar": "rekenen.groep8[10]",
+    "oud": "options: [\"4/6\", \"1/2\", \"2/3\", \"1/3\"]",
+    "nieuw": "options: [\"1/6\", \"1/2\", \"2/3\", \"1/3\"]",
+    "reden": "Twee afleiders waren gelijk aan elkaar (4/6 = 2/3); verwarrend voor het kind. Antwoord 1/2 (index 1) blijft juist."
+  },
+  {
+    "waar": "cito.groep7[48]",
+    "oud": "options: [\"Maas\", \"Rijn\", \"Amstel\", \"Oude Rijn\"]",
+    "nieuw": "options: [\"Maas\", \"IJssel\", \"Amstel\", \"Oude Rijn\"]",
+    "reden": "Dubbelzinnig: 'Rijn' én 'Oude Rijn' zijn allebei verdedigbaar (de Oude Rijn is een Rijntak door Utrecht). Afleider 'Rijn' vervangen door 'IJssel'; antwoord 'Oude Rijn' (index 3) blijft."
+  },
+  {
+    "waar": "cito.groep8[11]",
+    "oud": "options: [\"musea\", \"museums\", \"museen\", \"museumsn\"], answer: 0, explanation: \"'Museum' heeft als meervoud 'musea' (Latijns meervoud).\"",
+    "nieuw": "options: [\"musea\", \"museumen\", \"museen\", \"museumsn\"], answer: 0, explanation: \"'Museum' heeft als meervoud 'musea' (Latijns meervoud). Ook 'museums' is officieel toegestaan.\"",
+    "reden": "Twee goede opties: volgens de Woordenlijst (Groene Boekje) zijn 'musea' én 'museums' allebei correct. Afleider 'museums' vervangen door niet-bestaand 'museumen'."
+  },
+  {
+    "waar": "cito.groep8[12]",
+    "oud": "options: [\"crisissen\", \"crisen\", \"crises\", \"crisises\"], answer: 2, explanation: \"'Crisis' heeft als meervoud 'crises' (Griekse/Latijnse afkomst).\"",
+    "nieuw": "options: [\"crisisen\", \"crisen\", \"crises\", \"crisises\"], answer: 2, explanation: \"'Crisis' heeft als meervoud 'crises' (Griekse/Latijnse afkomst). Ook 'crisissen' is officieel toegestaan.\"",
+    "reden": "Twee goede opties: de Woordenlijst geeft 'crises' én 'crisissen'. Afleider 'crisissen' vervangen door niet-bestaand 'crisisen'."
+  },
+  {
+    "waar": "cito.groep8[23]",
+    "oud": "Egypte grenst in het noorden aan de Middellandse Zee en in het zuiden aan de Sahara-woestijn.",
+    "nieuw": "Egypte ligt in Noord-Afrika: in het noorden ligt de Middellandse Zee en het grootste deel van het land is Sahara-woestijn.",
+    "reden": "Uitleg feitelijk scheef: de Sahara is geen zuidgrens van Egypte, de woestijn beslaat het grootste deel van het land zelf."
+  },
+  {
+    "waar": "cito.groep8[30]",
+    "oud": "Hoe heet de periode van 1000-1500 in de Europese geschiedenis?",
+    "nieuw": "Hoe heet de periode van ongeveer 500 tot 1500 in de Europese geschiedenis?",
+    "reden": "Vraag (1000-1500) sprak de eigen uitleg tegen (500 tot 1500). Middeleeuwen = ±500-1500; vraag gelijkgetrokken met de uitleg."
+  },
+  {
+    "waar": "cito.groep8[85]",
+    "oud": "options: [\"man\", \"kat\", \"ka·meel\", \"boek\"]",
+    "nieuw": "options: [\"man\", \"kat\", \"kameel\", \"boek\"]",
+    "reden": "Het lettergreep-puntje stond alleen in het juiste antwoord en gaf het weg."
+  },
+  {
+    "waar": "cito.groep8[87]",
+    "oud": "options: [\"b.v.\", \"bv.\", \"bv\", \"bijv.\"], answer: 3, explanation: \"Officieel: 'bijv.' — algemeen geaccepteerd. 'b.v.' is verouderd.\"",
+    "nieuw": "options: [\"b.v.\", \"bijvb.\", \"bv\", \"bijv.\"], answer: 3, explanation: \"'Bijv.' is de gangbare afkorting (ook 'bv.' mag volgens de Taalunie). 'b.v.' is de afkorting van besloten vennootschap.\"",
+    "reden": "Twee goede opties: de Taalunie keurt zowel 'bijv.' als 'bv.' goed. Afleider 'bv.' vervangen; uitleg klopte ook niet ('b.v.' is niet verouderd maar iets anders)."
+  },
+  {
+    "waar": "cito.groep8[91]",
+    "oud": "'Witte sneeuw' (sneeuw is altijd wit). 'Ronde cirkel'. 'Bovenste verdieping'.",
+    "nieuw": "'Witte sneeuw' (sneeuw is altijd wit). 'Ronde cirkel'. 'Nat water'.",
+    "reden": "Uitleg gaf een fout voorbeeld: 'bovenste verdieping' is geen pleonasme (er zijn meerdere verdiepingen). Vervangen door 'nat water'."
+  },
+  {
+    "waar": "cito.groep8[122]",
+    "oud": "\"Ik ga met u mee.\"",
+    "nieuw": "\"Ik ga met jei mee.\"",
+    "reden": "Twee goede opties: 'Ik ga met u mee.' is óók correct Nederlands. Afleider vervangen door spelfout 'jei'; antwoord 'Ik ga met je mee.' (index 0) blijft."
+  }
+]

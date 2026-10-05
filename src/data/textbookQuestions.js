@@ -181,7 +181,7 @@ export const TEXTBOOK_QUESTIONS = {
     3: [
       // Spelling
       { q: "Welke is GOED gespeld?", options: ["Wijze man", "Weize man", "Wyze man", "Waize man"], answer: 0, explanation: "'Wijze' krijgt 'ij' (lange ij). Truc: bij twijfel ei/ij — denk aan een ander woord met dezelfde klank in dezelfde stam ('wijsheid' → ij)." },
-      { q: "Hoe schrijf je het werkwoord 'hij ____' (voltooid: gefietst)?", options: ["fietst", "fietsd", "fietz", "fiest"], answer: 0, explanation: "Tegenwoordige tijd, hij/zij + werkwoord-stam (fiets) + t = 'fietst'. Let op: 't kofschip gebruik je alleen voor de verleden tijd en het voltooid deelwoord (gefietst)." },
+      { q: "Hoe schrijf je 'fietsen' in de tegenwoordige tijd bij 'hij'? Hij ____ elke dag naar school.", options: ["fietst", "fietsd", "fietz", "fiest"], answer: 0, explanation: "Tegenwoordige tijd, hij/zij + werkwoord-stam (fiets) + t = 'fietst'. Let op: 't kofschip gebruik je alleen voor de verleden tijd en het voltooid deelwoord (gefietst)." },
       { q: "Wanneer gebruik je een HOOFDLETTER?", options: ["Aan het begin van een zin en bij namen", "Alleen als het mooi staat", "Bij elk werkwoord", "Nooit aan het begin"], answer: 0, explanation: "Hoofdletters horen aan het begin van een zin, bij eigennamen (Sara, Amsterdam), en bij sommige titels." },
       { q: "Welk leesteken sluit een VRAAGZIN af?", options: ["?", ".", "!", ","], answer: 0, explanation: "Een vraag eindigt met een vraagteken (?). Punt = mededeling, uitroepteken = uitroep, komma = pauze in zin." },
       { q: "Welke is GOED?", options: ["Hij wordt boos.", "Hij word boos.", "Hij wort boos.", "Hij wordd boos."], answer: 0, explanation: "Hij wordt — stam (word) + t (3e persoon enkelvoud), dus 'wordt'. Bij 'ik' schrijf je alleen de stam: 'ik word'." },
@@ -334,7 +334,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Hoeveel is 1/2 van 18?", options: ["9", "10", "8", "6"], answer: 0, explanation: "Helft van 18: 18 / 2 = 9." },
       { q: "Welke breuk is kleiner: 1/4 of 1/8?", options: ["1/8", "1/4", "Gelijk", "Niet bepaalbaar"], answer: 0, explanation: "Hoe groter de noemer (8 > 4), hoe kleiner de breuk: het stuk taart is in meer stukjes verdeeld. 1/8 < 1/4." },
       { q: "Hoeveel is 3/8 + 2/8?", options: ["5/8", "5/16", "1/8", "6/8"], answer: 0, explanation: "Dezelfde noemer (8) → tel tellers op: 3+2=5. → 5/8." },
-      { q: "Welk getal is 0,5 als breuk?", options: ["1/2", "1/5", "5/10 (zonder vereenvoudiging) — beide juist", "5/100"], answer: 0, explanation: "0,5 = 5/10 = 1/2 (vereenvoudigd). De simpelste vorm: 1/2." },
+      { q: "Welk getal is 0,5 als breuk?", options: ["1/2", "1/5", "2/5", "5/100"], answer: 0, explanation: "0,5 = 5/10 = 1/2 (vereenvoudigd). De simpelste vorm: 1/2." },
     ],
     4: [
       { q: "Hoeveel seconden in 5 minuten?", options: ["300", "60", "500", "120"], answer: 0, explanation: "1 min = 60 sec. 5 × 60 = 300." },
@@ -417,7 +417,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Welke zin werkt het beste als CONCLUSIE?", options: ["Daarom denk ik dat we minder plastic moeten gebruiken.", "Plastic is een soort kunststof.", "Tot snel!", "Ik weet het niet."], answer: 0, explanation: "Conclusie sluit af met de hoofdgedachte. 'Daarom denk ik...' rondt een betoog af." },
     ],
     3: [
-      { q: "Hoe schrijf je 'Hij ____' (verleden tijd: leerde)?", options: ["leerde", "leert", "leeerde", "leerd"], answer: 0, explanation: "Leren in de verleden tijd: stam (leer) + de = leerde. 't kofschip → 'r' niet in het kofschip → -de." },
+      { q: "Hoe schrijf je de verleden tijd van 'leren' bij 'hij'? Hij ____ gisteren voor de toets.", options: ["leerde", "leert", "leeerde", "leerd"], answer: 0, explanation: "Leren in de verleden tijd: stam (leer) + de = leerde. 't kofschip → 'r' niet in het kofschip → -de." },
       { q: "Welke is GOED?", options: ["pijn doet", "pyn doet", "peijn doet", "pien doet"], answer: 0, explanation: "Pijn = lange ij. Truc: bij twijfel kijk naar de stam — 'pijn' heeft altijd ij." },
       { q: "Welke is GOED gespeld?", options: ["accommodatie", "akommodatie", "accomodatie", "akkommodatie"], answer: 0, explanation: "Accommodatie heeft TWEE c's én TWEE m's. Officieel woordenboek-spelling." },
       { q: "Welk werkwoord eindigt op '-T' in 'Jij ___'?", options: ["jij werkt", "jij werk", "jij werkd", "jij werkte"], answer: 0, explanation: "Jij + tegenwoordige tijd: stam + t. Jij werkt. (Bij ik: alleen stam: ik werk.)" },
@@ -426,7 +426,7 @@ export const TEXTBOOK_QUESTIONS = {
     4: [
       { q: "Wat is een ANTONIEM?", options: ["Tegenovergesteld woord", "Hetzelfde woord", "Een grap", "Een werkwoord"], answer: 0, explanation: "Antoniem = woord met tegenovergestelde betekenis (zwart ↔ wit). Synoniem = (bijna) hetzelfde." },
       { q: "Wat betekent 'INTEGER'?", options: ["Eerlijk en betrouwbaar", "Vermoeid", "Boos", "Slim"], answer: 0, explanation: "Integer = eerlijk, betrouwbaar, met principes. Vaak gebruikt voor karakter ('integere politicus')." },
-      { q: "Wat betekent 'BAGATELLISEREN'?", options: ["Iets onbelangrijk maken/doen lijken", "Belangrijk maken", "Vergeten", "Onthouden"], answer: 0, explanation: "Bagatel = klein onderdeel. Bagatelliseren = doen alsof iets onbelangrijk is — vaak negatief gebruikt." },
+      { q: "Wat betekent 'BAGATELLISEREN'?", options: ["Iets onbelangrijk maken/doen lijken", "Belangrijk maken", "Vergeten", "Onthouden"], answer: 0, explanation: "Bagatel = kleinigheid. Bagatelliseren = doen alsof iets onbelangrijk is — vaak negatief gebruikt." },
       { q: "Welk woorddeel past in 'Het regent ____stelen, dus we bleven thuis.'?", options: ["pijp-en", "uit-en", "in-en", "om-en"], answer: 0, explanation: "Uitdrukking 'het regent pijpenstelen'. 'Pijp-en' (op zoek naar 'pijpenstelen') past." },
       { q: "Een SAMENGESTELD WOORD bestaat uit?", options: ["Twee of meer woorden samen", "Eén lang woord", "Een werkwoord", "Een buitenlands woord"], answer: 0, explanation: "Bv. 'huis-deur' = huis + deur = samengesteld. 'Voetbalveld' = voetbal + veld + (extra: bal+veld)." },
     ],
@@ -480,7 +480,7 @@ export const TEXTBOOK_QUESTIONS = {
   // 3=Teksten lezen, 4=Schrijven, 5=Spelling.
   "vll": {
     0: [
-      { q: "Welke letter hoor je in 'maan'?", options: ["m", "n", "f", "k"], answer: 0, explanation: "Maan begint met de klank 'm'. Luister: m-aa-n." },
+      { q: "Met welke letter begint 'maan'?", options: ["m", "n", "f", "k"], answer: 0, explanation: "Maan begint met de klank 'm'. Luister: m-aa-n." },
       { q: "Welke 2 letters samen klinken als 'oo'?", options: ["oo", "ao", "uo", "io"], answer: 0, explanation: "Twee o's samen = lange 'oo' klank. Bv. boom, mooi." },
       { q: "Welk woord begint met de klank 'b'?", options: ["bal", "appel", "olifant", "uil"], answer: 0, explanation: "Bal begint met b (b-a-l). De andere beginnen met andere klanken." },
     ],
@@ -618,7 +618,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     3: [
       { q: "Een rechte hoek is hoeveel graden?", options: ["90°", "180°", "45°", "360°"], answer: 0, explanation: "Rechte hoek = 90° (kwart cirkel). Gestrekt = 180°, vol = 360°." },
-      { q: "Een spiegel-as in een vierkant gaat door?", options: ["Twee tegenoverliggende zijden", "Eén hoekpunt", "Het midden van een zijde", "Geen, een vierkant heeft er geen"], answer: 0, explanation: "Een vierkant heeft 4 spiegel-assen: 2 door midden van zijden, 2 langs diagonalen." },
+      { q: "Hoeveel spiegel-assen (symmetrie-assen) heeft een vierkant?", options: ["4", "2", "1", "8"], answer: 0, explanation: "Een vierkant heeft 4 spiegel-assen: 2 door de middens van tegenoverliggende zijden, 2 langs de diagonalen." },
       { q: "Welke hoek is STOMP?", options: ["110°", "60°", "90°", "30°"], answer: 0, explanation: "Stomp = tussen 90° en 180°. 110° valt erbinnen. 60°/30° = scherp, 90° = recht." },
       { q: "Hoeveel symmetrie-assen heeft een gelijkzijdige driehoek?", options: ["3", "1", "2", "6"], answer: 0, explanation: "3 spiegel-assen: één per hoekpunt naar het midden van de overstaande zijde." },
     ],
@@ -699,7 +699,7 @@ export const TEXTBOOK_QUESTIONS = {
     4: [
       { q: "Welke is een vraagwoord-zin?", options: ["Waar zit je hotel?", "Het hotel is mooi.", "Loop snel.", "Wat een leuke reis!"], answer: 0, explanation: "Vraagwoord-zin begint met w-woord (wie/wat/waar/wanneer/waarom/welke/hoe). 'Waar' = vraag." },
       { q: "Wat is een SAMENVATTING?", options: ["Korte versie van het belangrijkste", "Een lange uitleg", "Een verhaal", "Een lijst"], answer: 0, explanation: "Samenvatting = de hoofdpunten in eigen woorden, korter. Geen details." },
-      { q: "'Ik bezocht musea' — verleden tijd van?", options: ["bezoeken", "bezitten", "beklimmen", "besteden"], answer: 0, explanation: "Bezocht = verleden tijd onregelmatig werkwoord 'bezoeken'. (Stam bezoek + vt-uitgang -te / -de + onregelmatigheid → bezocht.)" },
+      { q: "'Ik bezocht musea' — verleden tijd van?", options: ["bezoeken", "bezitten", "beklimmen", "besteden"], answer: 0, explanation: "Bezocht = verleden tijd van het onregelmatige (sterke) werkwoord 'bezoeken': bezoeken – bezocht – bezocht. Net als zoeken – zocht. Geen -te of -de, dus 't kofschip geldt hier niet." },
     ],
     5: [
       { q: "Welk type tekst is een KRANTEN-ARTIKEL?", options: ["Informatief / nieuws", "Verhalend", "Betogend", "Instructief"], answer: 0, explanation: "Krantenartikel = feiten over actuele gebeurtenissen → informatief." },
@@ -750,7 +750,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     1: [
       { q: "Wat betekent 'sister'?", options: ["Zus", "Broer", "Moeder", "Tante"], answer: 0, explanation: "Sister = zus. Brother = broer, mother = moeder, aunt = tante." },
-      { q: "'I have ___ brother.' (1 broer)", options: ["a", "an", "one", "the"], answer: 0, explanation: "Onbepaald lidwoord 'a' voor medeklinker (b van brother). 'An' voor klinker (an apple)." },
+      { q: "'I have ___ brother.' (1 broer)", options: ["a", "an", "some", "the"], answer: 0, explanation: "Onbepaald lidwoord 'a' voor medeklinker (b van brother). 'An' voor klinker (an apple)." },
       { q: "Wat is meervoud van 'child'?", options: ["children", "childs", "childes", "child"], answer: 0, explanation: "Onregelmatig meervoud: child → children. (Niet childs.)" },
     ],
     2: [
@@ -1002,7 +1002,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat was de HOLOCAUST?", options: ["Systematische moord op ~6 miljoen joden door nazi's", "Een veldslag", "Een bombardement", "Een verdrag"], answer: 0, explanation: "Sjoa: nazi-Duitsland 1941-1945 vermoordde joden + Roma + andere groepen in concentratie- en vernietigingskampen." },
     ],
     9: [
-      { q: "Wanneer eindigde de Koude Oorlog?", options: ["~1989-1991 (val Berlijnse Muur + uiteenvallen Sovjet-Unie)", "1945", "1962", "2001"], answer: 0, explanation: "Berlijnse Muur viel 1989, Sovjet-Unie uiteen 1991. Rusland werd weer kapitalistisch." },
+      { q: "Wanneer eindigde de Koude Oorlog?", options: ["~1989-1991 (val Berlijnse Muur + uiteenvallen Sovjet-Unie)", "1945", "1962", "2001"], answer: 0, explanation: "Berlijnse Muur viel 1989, Sovjet-Unie uiteen 1991. Rusland stapte over van communisme naar een markteconomie." },
       { q: "Wat is GLOBALISERING?", options: ["Wereldwijde verbinding van economie + cultuur", "Reis-eindje", "Een soort verdrag", "Een ramp"], answer: 0, explanation: "Sinds ~1990: snelle uitbreiding internationale handel + internet + multinationals. Wereld wordt 'kleiner'." },
     ],
   },
@@ -1154,7 +1154,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "'My job ___ interesting.'", options: ["is", "are", "am", "was"], answer: 0, explanation: "Enkelvoud (my job) + tegenwoordige tijd → IS. 'Are' bij meervoud (jobs are)." },
     ],
     3: [
-      { q: "'I love ___ tennis.' (tennis spelen)", options: ["playing", "play", "to play", "played"], answer: 0, explanation: "Na werkwoorden als love/like/enjoy/hate → -ing vorm: playing, eating, watching." },
+      { q: "'I love ___ tennis.' (tennis spelen)", options: ["playing", "play", "plays", "played"], answer: 0, explanation: "Na werkwoorden als love/like/enjoy/hate → -ing vorm: playing, eating, watching." },
       { q: "Welke sport heet 'football' in UK + 'soccer' in US?", options: ["Voetbal", "American football", "Rugby", "Hockey"], answer: 0, explanation: "Voetbal = football (UK) / soccer (US, omdat football daar = American football)." },
     ],
     4: [
@@ -1311,7 +1311,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     2: [
       { q: "Wat is PARLEMENTAIRE democratie?", options: ["Volk kiest vertegenwoordigers (Tweede Kamer) die wetten maken", "Eén leider beslist", "Geen verkiezingen", "Een religieuze staat"], answer: 0, explanation: "Volk → 2e Kamer → kabinet (premier + ministers). 1e Kamer keurt af/goed. Onafhankelijke rechtspraak." },
-      { q: "Wat is COALITIE?", options: ["Samenwerking tussen partijen om regering te vormen", "Een politieke partij", "Een religie", "Een militair bondgenootschap"], answer: 0, explanation: "In NL nooit één partij meerderheid → onderhandelen over regeerakkoord (bv. PVV+VVD+NSC+BBB)." },
+      { q: "Wat is COALITIE?", options: ["Samenwerking tussen partijen om regering te vormen", "Een politieke partij", "Een religie", "Een militair bondgenootschap"], answer: 0, explanation: "In NL haalt nooit één partij de meerderheid → partijen onderhandelen over een regeerakkoord (bv. kabinet-Schoof in 2024: PVV+VVD+NSC+BBB)." },
     ],
     3: [
       { q: "Wat is PLURIFORME samenleving?", options: ["Samenleving met veel culturen, religies, leefstijlen", "Iedereen hetzelfde", "Eén religie alleen", "Een wijk"], answer: 0, explanation: "NL: ~18 mln inwoners met diverse achtergronden, religies, talen. Voordelen + uitdagingen (integratie, sociale cohesie)." },
@@ -1363,10 +1363,10 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     3: [
       { q: "Welke is GOED gespeld?", options: ["restaurant", "ristaurant", "restaurand", "restourant"], answer: 0, explanation: "Restaurant — Frans leenwoord met die exacte spelling. Onthouden of opzoeken." },
-      { q: "Hij ___ 't hard. (verleden tijd)", options: ["liep", "loop", "lopen", "lopend"], answer: 0, explanation: "Verleden tijd van 'lopen' = liep (onregelmatig sterk werkwoord)." },
+      { q: "Hij ___ hard naar huis. (verleden tijd)", options: ["liep", "loop", "lopen", "lopend"], answer: 0, explanation: "Verleden tijd van 'lopen' = liep (onregelmatig sterk werkwoord)." },
     ],
     4: [
-      { q: "Wat betekent 'genereus'?", options: ["Vrijgevig", "Gierig", "Snel", "Slim"], answer: 0, explanation: "Genereus (uit Latijn 'genus' = adel) → mild, gul, ruimhartig. Tegenovergesteld: gierig." },
+      { q: "Wat betekent 'genereus'?", options: ["Vrijgevig", "Gierig", "Snel", "Slim"], answer: 0, explanation: "Genereus (uit Latijn 'generosus' = van edele afkomst, edelmoedig) → mild, gul, ruimhartig. Tegenovergesteld: gierig." },
       { q: "Wat is het ANTONIEM van 'optimistisch'?", options: ["Pessimistisch", "Realistisch", "Vrolijk", "Zorgeloos"], answer: 0, explanation: "Optimistisch (positief verwachten) ↔ pessimistisch (negatief). Realistisch is neutraal/middel." },
     ],
     5: [
@@ -1381,7 +1381,7 @@ export const TEXTBOOK_QUESTIONS = {
   // ── All Right! — Engels alt Stepping Stones ─────────────────────────
   "all-right": {
     0: [
-      { q: "How do you say 'hallo' in English?", options: ["Hello", "Hola", "Hallo", "Bonjour"], answer: 0, explanation: "Hello (UK/US). Hi is informeler. Hola = Spaans, Bonjour = Frans." },
+      { q: "How do you say 'hallo' in English?", options: ["Hello", "Hola", "Ciao", "Bonjour"], answer: 0, explanation: "Hello (UK/US). Hi is informeler. Hola = Spaans, Ciao = Italiaans, Bonjour = Frans." },
       { q: "'I ___ a student.'", options: ["am", "is", "are", "be"], answer: 0, explanation: "I + am. He/she/it + is. You/we/they + are. 'Be' is infinitief." },
     ],
     1: [
@@ -1393,7 +1393,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "'I usually ___ at 7 am.'", options: ["wake up", "wakes up", "waking up", "woke up"], answer: 0, explanation: "I + werkwoord-stam. Voor he/she/it + 's' (wakes up). Verleden: woke up." },
     ],
     3: [
-      { q: "Wat betekent 'reading'?", options: ["Lezen (-ing vorm)", "Een stad in UK", "Beide!", "Kijken"], answer: 0, explanation: "Reading = lezen (-ing-vorm). Ook stadje in Engeland. Hier: lezen-werkwoord." },
+      { q: "Wat betekent 'reading' in 'I like reading'?", options: ["Lezen (-ing vorm)", "Rennen", "Schrijven", "Kijken"], answer: 0, explanation: "Reading = lezen (-ing-vorm van 'to read'). Running = rennen, writing = schrijven, watching = kijken." },
       { q: "Welke hobby is 'gaming'?", options: ["Computerspelletjes", "Tuinieren", "Koken", "Fietsen"], answer: 0, explanation: "Gaming = video- of computerspelletjes spelen. Populaire moderne hobby." },
     ],
     4: [
@@ -1564,7 +1564,7 @@ export const TEXTBOOK_QUESTIONS = {
       { q: "Wat is JIT (just in time)?", options: ["Voorraad pas inkopen wanneer nodig", "Eens per jaar inkopen", "Te veel hebben", "Niets inkopen"], answer: 0, explanation: "JIT = Toyota-methode. Minimaliseert voorraadkosten. Risico: leveringsproblemen → productiestop." },
     ],
     3: [
-      { q: "Wat is een ARBEIDSCONTRACT?", options: ["Schriftelijke overeenkomst werknemer-werkgever", "Een verzekering", "Loonstrook", "Pensioen"], answer: 0, explanation: "Bevat afspraken over functie, loon, uren, opzegtermijn. Verplicht in NL bij vast werk." },
+      { q: "Wat is een ARBEIDSCONTRACT?", options: ["Schriftelijke overeenkomst werknemer-werkgever", "Een verzekering", "Loonstrook", "Pensioen"], answer: 0, explanation: "Bevat afspraken over functie, loon, uren, opzegtermijn. In NL hoeft een arbeidsovereenkomst niet op papier (mondeling geldt ook), maar schriftelijk is verstandig als bewijs." },
     ],
     4: [
       { q: "Wat zijn de 4 P's van marketing?", options: ["Product, Prijs, Plaats, Promotie", "People, Place, Profit, Promotion", "Plan, Plot, Price, Promotion", "alleen Product en Prijs"], answer: 0, explanation: "Klassieke marketing-mix (McCarthy 1960): Product (wat), Prijs (hoeveel), Plaats (waar), Promotie (hoe communiceer je)." },
@@ -1620,7 +1620,7 @@ export const TEXTBOOK_QUESTIONS = {
   "zingeving": {
     0: [
       { q: "Wat is een LEVENSVRAAG?", options: ["Vraag over zin van leven, dood, geluk, etc.", "Wiskundige vraag", "Sportvraag", "Toetsvraag"], answer: 0, explanation: "Levensvragen: 'waarom besta ik?', 'wat is goed?', 'wat na de dood?'. Religies + filosofie zoeken antwoorden." },
-      { q: "Wat is een WERELDGODSDIENST?", options: ["Christendom", "Voetbal", "Politiek", "Schaak"], answer: 0, explanation: "5 grote: christendom, islam, hindoeïsme, boeddhisme, jodendom. Plus traditionele/inheemse religies." },
+      { q: "Welke van deze is een WERELDGODSDIENST?", options: ["Christendom", "Voetbal", "Politiek", "Schaak"], answer: 0, explanation: "5 grote: christendom, islam, hindoeïsme, boeddhisme, jodendom. Plus traditionele/inheemse religies." },
     ],
     1: [
       { q: "Wat is ETHIEK?", options: ["Studie van goed en kwaad / morele keuzes", "Studie van planten", "Studie van kunst", "Studie van geld"], answer: 0, explanation: "Ethiek (van Grieks 'ethos'): wat is juist gedrag? Kant, Mill, Aristoteles. Ook in beroep: medische ethiek, bedrijfsethiek." },
