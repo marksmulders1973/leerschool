@@ -978,8 +978,9 @@ export default function MijnPagina({
     };
     klaargezet.filter((k) => k.reden !== "nulmeting").forEach((k) => voeg(k.pad, k.reden));
     // Mark 5 okt 2026: "stel altijd 3 vakken voor". Zonder gekozen groep gaf niveauPaden niets → 1 tegel.
-    // Dan rekenen we met groep 6 (midden van de Doorstroomtoets-groepen) tot het kind een groep kiest.
-    const basis = niveauPaden(niveau || { soort: "groep", nr: 6 }).filter((p) => !/-nieuwkomers$/.test(p.id));
+    // Dan rekenen we met groep 6 (midden van de Doorstroomtoets-groepen), of klas 1 voor de middelbare
+    // school, tot het kind een groep of klas kiest.
+    const basis = niveauPaden(niveau || (kiesSoort === "klas" ? { soort: "klas", nr: 1 } : { soort: "groep", nr: 6 })).filter((p) => !/-nieuwkomers$/.test(p.id));
     const ongemeten = basis.filter((p) => (byId[p.id]?.level || "unmeasured") === "unmeasured");
     const dag = Math.floor(Date.now() / 86400000);
     // Doorstroomtoets-kern eerst (rekenen, taal, spelling, begrijpend lezen); andere vakken alleen als aanvulling.
@@ -997,7 +998,7 @@ export default function MijnPagina({
     // Nog geen 3? Vul aan met al geoefende onderwerpen (herhalen), ook uit andere vakken.
     for (const p of basis) { if (uit.length >= 3) break; voeg(p, "herhalen"); }
     return uit;
-  }, [records, niveau, klaargezet]);
+  }, [records, niveau, klaargezet, kiesSoort]);
 
   // Doorstroomtoets-countdown (groep 7/8).
   const countdown = useMemo(() => {
@@ -1777,7 +1778,7 @@ export default function MijnPagina({
                     </div>
                     {resume && (
                       <div style={{ fontSize: 12.5, color: "var(--color-text-muted, #8899aa)", marginBottom: 8 }}>
-                        Je was bezig met: <strong style={{ color: "var(--color-text)" }}>{resume.path.emoji ? `${resume.path.emoji} ` : ""}{resume.path.title}</strong>
+                        Laatst geoefend: <strong style={{ color: "var(--color-text)" }}>{resume.path.emoji ? `${resume.path.emoji} ` : ""}{resume.path.title}</strong>
                       </div>
                     )}
                     {/* ⭐ Vandaag-motor (Mark 10 sep 2026, "bouw de motor"): één knop die het
@@ -1833,7 +1834,7 @@ export default function MijnPagina({
                               boxShadow: "0 3px 0 rgba(0,0,0,0.25)",
                             }}
                           >
-                            {bezig ? "▶ Verder met je kwartier" : gedaan ? "▶ Nog een kwartier" : "▶ Start je kwartier van vandaag"}
+                            {bezig ? (klaarVandaag ? "▶ Maak je blokjes af (extra)" : "▶ Verder met je kwartier") : gedaan ? "▶ Nog een kwartier" : "▶ Start je kwartier van vandaag"}
                           </button>
                           {onderwerpTegels.length > 0 && onPickPath && (
                             <div style={{ marginTop: 12 }}>
