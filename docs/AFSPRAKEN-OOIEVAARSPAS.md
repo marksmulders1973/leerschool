@@ -97,3 +97,15 @@ Een Ooievaarspas-kind krijgt `parent_pro` — **Familie-niveau, niet gratis-nive
 ➡️ **Regel vóór het bouwen: de dagbundel is gelijk voor iedereen met Familie-niveau**
 (betalend én pashouder); het verschil zit alleen tussen *gratis* en *Familie*. Die ene
 bundelhoogte bepaalt daarmee direct de Ooievaarspas-exposure — kies hem bewust.
+
+## 🏅 Logo-toestemming — 5 oktober 2026
+
+- **Gevraagd (Mark, 5 okt 14:14, thread 19fc7e1f67bc3765):** mag het Ooievaarspas-logo op het
+  welkomstscherm dat pashouders zien na code OOIEVAAR2027 / de QR-code? (PDF van het scherm mee.)
+- **Antwoord (Esther Versluis, 5 okt 14:43, bericht 1a10c16e13bc18a5):** *"Je mag bijgaand logo
+  plaatsen."* Bijlage = het officiële gele OP-icoon (image001.png, 128×128).
+- **Verwerkt:** bestand opgeslagen als `public/drukwerk/logo-ooievaarspas-esther.png`; het ere-scherm
+  (`src/components/CodeBalk.jsx`, `OP_LOGO`) toont sinds **v917** dit bestand in plaats van onze eigen
+  uitgeknipte ooievaar. **Alleen dít bestand gebruiken** voor de Ooievaarspas; geen eigen bewerking.
+- **Plaatsing op hun kanalen:** Esther levert de tekst aan bij de website-/socials-collega's met het
+  verzoek te plaatsen **vanaf 1 november 2026** (mail 5 okt 08:40).

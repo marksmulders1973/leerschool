@@ -100,8 +100,10 @@ function naamVoor(code) {
 // 🏅 Logo's in het ere-scherm — ALLEEN partners waarvan het logo al met hun
 // akkoord op co-branded materiaal staat (flyers/bedankpagina). Nieuwe partner?
 // Eerst toestemming vragen ("mogen we uw logo in ons welkom-scherm tonen?"),
-// dan regel erbij. Ooievaarspas bewust nog zonder logo (komt via het
-// tekst-formulier van de gemeente).
+// dan regel erbij. Ooievaarspas: 5 okt 2026 schriftelijk akkoord van bureau
+// Ooievaarspas ("Je mag bijgaand logo plaatsen") — hún bestand, niet onze
+// uitgeknipte ooievaar (op-ooievaar.svg bleef alleen voor de flyer bestaan).
+export const OP_LOGO = "/drukwerk/logo-ooievaarspas-esther.png";
 export const PARTNER_LOGOS = {
   VBROTTERDAM2027: "/drukwerk/logo-voedselbank-rotterdam.svg",
   ALKMAAR2027: "/drukwerk/logo-voedselbank-alkmaar.png",
@@ -124,7 +126,7 @@ function EerScherm({ code, onVerder }) {
   const naam = naamVoor(code);
   const isOP = code.startsWith("OOIEVAAR");
   const isEN = code.startsWith("SABA"); // Saba-gezinnen zijn Engelstalig → Engels ere-scherm
-  const logo = isOP ? "/drukwerk/op-ooievaar.svg" : (PARTNER_LOGOS[code] || null);
+  const logo = isOP ? OP_LOGO : (PARTNER_LOGOS[code] || null);
   const blijvend = isOP; // uit de code zelf, zodat óók de preview-weergave klopt
   const donker = isOP;
   const tekstKleur = donker ? "#dce5ee" : "#3a4658";
@@ -143,9 +145,9 @@ function EerScherm({ code, onVerder }) {
             </div>
           </div>
           {logo && (isOP ? (
-            <div style={{ width: 74, height: 74, borderRadius: "50%", background: "#fff", display: "grid", placeItems: "center", boxShadow: "0 3px 12px rgba(0,0,0,0.25)", flexShrink: 0 }}>
-              <img src={logo} alt={naam || "partner"} style={{ maxHeight: 48, maxWidth: 56, objectFit: "contain" }} />
-            </div>
+            // Het gemeente-bestand is zelf al een geel afgerond vierkant (app-icoon):
+            // vullend tonen, geen witte cirkel eromheen (die botste met de gele hoeken).
+            <img src={logo} alt="Ooievaarspas" width={74} height={74} style={{ width: 74, height: 74, borderRadius: 18, objectFit: "cover", boxShadow: "0 3px 12px rgba(0,0,0,0.25)", flexShrink: 0 }} />
           ) : (
             // wit kader dat meegroeit: brede logo's (zoals VB Rotterdam) blijven
             // leesbaar, vierkante (zoals QWL Saba) blijven mooi compact
