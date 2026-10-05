@@ -12,7 +12,7 @@ vakdekking: `docs/VAKKEN-DEKKING-OKT-2026.md`. Regel: nooit "het is goed" zonder
 | Q2 | **Verkeer staat OFFLINE** (v893, `VERKEER_OFFLINE`) — pas terug na regel-voor-regel controle (RVV/VVN) **én akkoord Mark** | Claude → Mark | 🔴 |
 | Q3 | Automatische controle `npm run audit:vragen`: 17.259 vragen, 522 sommen → 0 fout; vóór elke content-push draaien | Claude | ✅ |
 | Q4 | Werkwoorden-zinnenbank 102 zinnen nagekeken (3 verbeterd) | Claude | ✅ |
-| Q5 | **AI-vragenopslag (~321 vragen) één voor één nakijken** — steekproef werkwoorden: 8 van 23 fout (gewist). Daarna controle-stap vóór opslaan in `api/generate-questions` | Claude (di 6 okt) | ⏳ |
+| Q5 | ✅ 5 okt: alle 329 AI-vragen nagekeken → **95 fout gewist (29%)**, 238 over (1× nagekeken). "Test wat je net leerde" gebruikt nu eerst padvragen (v897). Nieuwe AI-vragen gaan door een controle met een sterker model, fail closed (v898, live getest: 4 van 5 door). Open: `used_count` staat overal op 0 → bereik van foute vragen niet te meten; tweede controleronde van de 238 | Claude | 🟡 |
 | Q6 | **Tegelgetal /leren telt alle klassen, lijst toont eigen klas** (Duits "3" → klas 2 ziet 0) — tegel = eigen klas | Claude (di) | ⏳ |
 | Q7 | Rekenen inhoudelijk (redactiesommen, uitleg-getallen vs vraag) | Claude | ⏳ |
 | Q8 | Taal / spelling / begrijpend lezen inhoudelijk (twee goede antwoorden = fout) | Claude | ⏳ |
