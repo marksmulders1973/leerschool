@@ -131,7 +131,7 @@ ${silhouet(0.13)}
 const steps = [
   {
     title: "Wat is Nederland?",
-    explanation: "**Nederland** is ons land — een klein landje in West-Europa aan de Noordzee. Officieel: **Koninkrijk der Nederlanden** (Nederland + Aruba + Curaçao + Sint-Maarten + 3 BES-eilanden in de Cariben).\n\n**Belangrijke feiten**:\n• **Hoofdstad**: Amsterdam (waar de koning werkt: Den Haag)\n• **Inwoners**: ~17,9 miljoen (2026)\n• **Oppervlakte**: ~41.500 km²\n• **Buurlanden**: Duitsland (oost) + België (zuid) + Noordzee (west + noord)\n• **Hoogste punt**: Vaalserberg in Limburg (323 m)\n• **Laagste punt**: ~7 m onder zeeniveau (Zuidplaspolder bij Rotterdam)\n• **Munt**: euro (€)\n• **Taal**: Nederlands (in Friesland ook Fries)\n• **Koning**: Willem-Alexander (sinds 2013)\n\n**Speciaal aan Nederland**:\n• **Heel plat** — bijna alles ligt onder of vlak boven zeeniveau\n• **Veel water**: rivieren, kanalen, meren, polders\n• **Dichtbevolkt** — een van de drukste landen ter wereld\n• **26% van het land ligt onder zeeniveau** — dijken en gemalen houden het droog\n• **Bekend om**: tulpen, klompen, molens, kaas, fietsen, voetbal\n\nIn dit pad leer je de **12 provincies**, hun **hoofdsteden**, de grote **rivieren** en **steden** van Nederland.",
+    explanation: "**Nederland** is ons land — een klein landje in West-Europa aan de Noordzee. Officieel: **Koninkrijk der Nederlanden** (Nederland + Aruba + Curaçao + Sint-Maarten + 3 BES-eilanden in de Cariben).\n\n**Belangrijke feiten**:\n• **Hoofdstad**: Amsterdam (waar de koning werkt: Den Haag)\n• **Inwoners**: ruim 18 miljoen\n• **Oppervlakte**: ~41.500 km²\n• **Buurlanden**: Duitsland (oost) + België (zuid) + Noordzee (west + noord)\n• **Hoogste punt**: Vaalserberg in Limburg (322 m)\n• **Laagste punt**: ~7 m onder zeeniveau (Zuidplaspolder bij Rotterdam)\n• **Munt**: euro (€)\n• **Taal**: Nederlands (in Friesland ook Fries)\n• **Koning**: Willem-Alexander (sinds 2013)\n\n**Speciaal aan Nederland**:\n• **Heel plat** — bijna alles ligt onder of vlak boven zeeniveau\n• **Veel water**: rivieren, kanalen, meren, polders\n• **Dichtbevolkt** — een van de drukste landen ter wereld\n• **26% van het land ligt onder zeeniveau** — dijken en gemalen houden het droog\n• **Bekend om**: tulpen, klompen, molens, kaas, fietsen, voetbal\n\nIn dit pad leer je de **12 provincies**, hun **hoofdsteden**, de grote **rivieren** en **steden** van Nederland.",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -166,7 +166,7 @@ const steps = [
   },
   {
     title: "De 12 provincies",
-    explanation: "Nederland heeft **12 provincies**. Onthoud ze van **noord naar zuid**:\n\n**Noord** *(boven)*\n1. **Groningen** — uiterste noordoosten, gas-provincie\n2. **Friesland** — Friese taal, meren, schaatsen (Elfstedentocht)\n3. **Drenthe** — hunebedden, bossen\n\n**Midden**\n4. **Overijssel** — IJsselmeer-rand\n5. **Flevoland** — jongste provincie (1986), volledig op nieuw land\n6. **Gelderland** — grootste provincie qua oppervlak\n7. **Utrecht** — kleinste (op Flevoland na)\n\n**West** *(aan zee)*\n8. **Noord-Holland** — Amsterdam, Texel\n9. **Zuid-Holland** — Rotterdam, Den Haag\n10. **Zeeland** — eilanden + Deltawerken\n\n**Zuid**\n11. **Noord-Brabant** — Eindhoven, carnaval\n12. **Limburg** — heuvels, enige écht hoge stuk van NL\n\n**Geheugentrucje** ('Holland Heeft Beste Friese...'):\nEen makkelijke manier is steden in elke provincie kennen — die plaats je dan in je hoofd.\n\n**Bijzonderheden**:\n• **Flevoland** is **het nieuwst** — op land dat in de jaren '50-'60 uit de zee is gewonnen. Vroeger was dit allemaal **Zuiderzee**.\n• **Friesland** heeft een **eigen taal** (Fries) — officieel erkend als tweede landstaal.\n• **Limburg** heeft als enige echte **heuvels** — de hoogste 'berg' van NL ligt hier (Vaalserberg, 323 m).",
+    explanation: "Nederland heeft **12 provincies**. Onthoud ze van **noord naar zuid**:\n\n**Noord** *(boven)*\n1. **Groningen** — uiterste noordoosten, gas-provincie\n2. **Friesland** — Friese taal, meren, schaatsen (Elfstedentocht)\n3. **Drenthe** — hunebedden, bossen\n\n**Midden**\n4. **Overijssel** — IJsselmeer-rand\n5. **Flevoland** — jongste provincie (1986), volledig op nieuw land\n6. **Gelderland** — grootste provincie qua oppervlak\n7. **Utrecht** — kleinste (op Flevoland na)\n\n**West** *(aan zee)*\n8. **Noord-Holland** — Amsterdam, Texel\n9. **Zuid-Holland** — Rotterdam, Den Haag\n10. **Zeeland** — eilanden + Deltawerken\n\n**Zuid**\n11. **Noord-Brabant** — Eindhoven, carnaval\n12. **Limburg** — heuvels, enige écht hoge stuk van NL\n\n**Geheugentrucje** ('Holland Heeft Beste Friese...'):\nEen makkelijke manier is steden in elke provincie kennen — die plaats je dan in je hoofd.\n\n**Bijzonderheden**:\n• **Flevoland** is **het nieuwst** — op land dat in de jaren '50-'60 uit de zee is gewonnen. Vroeger was dit allemaal **Zuiderzee**.\n• **Friesland** heeft een **eigen taal** (Fries) — officieel erkend als tweede landstaal.\n• **Limburg** heeft als enige echte **heuvels** — de hoogste 'berg' van NL ligt hier (Vaalserberg, 322 m).",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -189,19 +189,19 @@ const steps = [
         answer: 0,
         wrongHints: [null,"Drenthe is plat.","Gelderland heeft de Veluwe maar daar is de hoogste maar ~110m.","Friesland is ook plat."],
         uitlegPad: {
-          stappen: [{ titel: "Vaalserberg — 323 m, Limburg", tekst: "Vaalserberg = 323 m hoog. Ligt in Limburg, uiterste zuid-oosten van NL. Tegelijk 'Drielandenpunt' — hier raken NL, België én Duitsland elkaar. Hoogste punt NL — niet groots als alpen-berg, maar voor plat NL wel iets bijzonders." }],
-          woorden: [{ woord: "Vaalserberg", uitleg: "323 m hoog. Bij dorp Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen elkaar raken. Toerisme-trekker." }],
+          stappen: [{ titel: "Vaalserberg — 322 m, Limburg", tekst: "Vaalserberg = 322 m hoog. Ligt in Limburg, uiterste zuid-oosten van NL. Tegelijk 'Drielandenpunt' — hier raken NL, België én Duitsland elkaar. Hoogste punt NL — niet groots als alpen-berg, maar voor plat NL wel iets bijzonders." }],
+          woorden: [{ woord: "Vaalserberg", uitleg: "322 m hoog. Bij dorp Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen elkaar raken. Toerisme-trekker." }],
           theorie: "Limburg is enige NL-provincie met echte heuvels. Reden: Limburg ligt op uitloper van Belgische Ardennen — daar zit gesteente, niet zand zoals rest van NL. Vandaar relief.",
-          voorbeelden: [{ type: "vergelijk", tekst: "Vaalserberg 323 m. Mont Blanc (Frankrijk) 4810 m — 15× hoger. Maar voor NL met gemiddeld -1 m onder zeeniveau is 323 m wel iets." }],
+          voorbeelden: [{ type: "vergelijk", tekst: "Vaalserberg 322 m. Mont Blanc (Frankrijk) 4810 m — 15× hoger. Maar voor NL met gemiddeld -1 m onder zeeniveau is 322 m wel iets." }],
           basiskennis: [{ onderwerp: "Niet andere provincies", uitleg: "Drenthe = plat, alleen kleine heuvels. Veluwe Gelderland = max 110 m (laag). Friesland = plat." }],
-          niveaus: { basis: "Limburg.", simpeler: "Vaalserberg (323 m, hoogste NL) ligt in Limburg, zuid-oost.", nogSimpeler: "Limburg" },
+          niveaus: { basis: "Limburg.", simpeler: "Vaalserberg (322 m, hoogste NL) ligt in Limburg, zuid-oost.", nogSimpeler: "Limburg" },
         },
       },
       {
-        q: "Welke provincie heeft een eigen erkende taal?",
+        q: "Welke provincie heeft naast Nederlands een **tweede officiële taal**?",
         options: ["Friesland","Limburg","Zeeland","Utrecht"],
         answer: 0,
-        wrongHints: [null,"Limburg heeft een dialect maar geen officiële landstaal.","Zeeland heeft ook een dialect, niet officieel.","Utrecht heeft alleen Nederlands."],
+        wrongHints: [null,"Het Limburgs is wel erkend als streektaal, maar het Fries is een officiële taal — net als het Nederlands.","Zeeland heeft ook een dialect, niet officieel.","Utrecht heeft alleen Nederlands."],
         uitlegPad: {
           stappen: [{ titel: "Fries = officiële landstaal", tekst: "Friesland heeft naast Nederlands ook FRIES als officiële landstaal (Rijkswet 1956). Fries-sprekers (~470.000) kunnen zelfs in Friesland naar Friestalige scholen, kranten lezen in Fries. Andere NL-provincies hebben dialect (Limburgs, Zeeuws) — niet officieel erkend." }],
           woorden: [{ woord: "Fries", uitleg: "Aparte taal (geen NL-dialect). Lijkt op Oud-Engels. Naast Engels meest verwante taal aan Nederlands." }, { woord: "dialect vs taal", uitleg: "Dialect = variant van een taal. Taal = officieel apart. Fries = TAAL (politiek besluit, niet pure linguïstiek)." }],
@@ -362,7 +362,7 @@ const steps = [
   },
   {
     title: "Landschap + Wadden­eilanden",
-    explanation: "**De vorm van het land**\n\nNederland is bijna helemaal **plat**. Maar er zijn wel verschillen:\n\n**Hoge zandgronden** *(midden-oost-zuid)*\n• Veluwe (Gelderland) — bossen, heide, hoogste punt ~110 m.\n• Drenthe — bossen, hunebedden.\n• Brabants Heuvelland — kleine heuvels.\n\n**Lage delen** *(west + noord)*\n• Polders en weilanden (vooral Zuid-Holland, Flevoland).\n• Hier is **26%** van het land **onder zeeniveau**.\n• Beschermd door dijken + duinen.\n\n**De heuvels van Limburg** *(zuid)*\n• Het **enige echte heuvelland** van NL.\n• Vaalserberg = **323 m** = hoogste punt van NL.\n• Geliefd voor wandelen en wielrennen.\n\n**5 Wadden­eilanden** *(noord, in Waddenzee)*\nVan west naar oost:\n1. **Texel** — bij Noord-Holland — grootste\n2. **Vlieland** — Friesland\n3. **Terschelling** — Friesland\n4. **Ameland** — Friesland\n5. **Schiermonnikoog** — Friesland — oostelijkste\n\nGeheugenezel: **'Toen Vroeg Truus Aan Schelden?'** (T-V-T-A-S = Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog).\n\n**Waddenzee**: door eb en vloed komen grote delen droog te liggen → **wadlopen** mogelijk. UNESCO Werelderfgoed sinds 2009.\n\n**Tulpen + bollen**\n• Vooral in Noord- en Zuid-Holland.\n• Bekendste: **Keukenhof** in Lisse — 7 miljoen tulpen, 32 hectare.\n• Bloeitijd: maart-mei.\n• Nederland is **grootste tulpen-exporteur ter wereld**.",
+    explanation: "**De vorm van het land**\n\nNederland is bijna helemaal **plat**. Maar er zijn wel verschillen:\n\n**Hoge zandgronden** *(midden-oost-zuid)*\n• Veluwe (Gelderland) — bossen, heide, hoogste punt ~110 m.\n• Drenthe — bossen, hunebedden.\n• Brabants Heuvelland — kleine heuvels.\n\n**Lage delen** *(west + noord)*\n• Polders en weilanden (vooral Zuid-Holland, Flevoland).\n• Hier is **26%** van het land **onder zeeniveau**.\n• Beschermd door dijken + duinen.\n\n**De heuvels van Limburg** *(zuid)*\n• Het **enige echte heuvelland** van NL.\n• Vaalserberg = **322 m** = hoogste punt van NL.\n• Geliefd voor wandelen en wielrennen.\n\n**5 Wadden­eilanden** *(noord, in Waddenzee)*\nVan west naar oost:\n1. **Texel** — bij Noord-Holland — grootste\n2. **Vlieland** — Friesland\n3. **Terschelling** — Friesland\n4. **Ameland** — Friesland\n5. **Schiermonnikoog** — Friesland — oostelijkste\n\nGeheugenezel: **'Toen Vroeg Truus Aan Schelden?'** (T-V-T-A-S = Texel, Vlieland, Terschelling, Ameland, Schiermonnikoog).\n\n**Waddenzee**: door eb en vloed komen grote delen droog te liggen → **wadlopen** mogelijk. UNESCO Werelderfgoed sinds 2009.\n\n**Tulpen + bollen**\n• Vooral in Noord- en Zuid-Holland.\n• Bekendste: **Keukenhof** in Lisse — 7 miljoen tulpen, 32 hectare.\n• Bloeitijd: maart-mei.\n• Nederland is **grootste tulpen-exporteur ter wereld**.",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -395,16 +395,16 @@ const steps = [
       },
       {
         q: "Wat is het **hoogste punt** van Nederland?",
-        options: ["Vaalserberg (323m, Limburg)","Mont Blanc","Zuiderzeeweg","Tafelberg"],
+        options: ["Vaalserberg (322 m, Limburg)","Mont Blanc","Zuiderzeeweg","Tafelberg"],
         answer: 0,
         wrongHints: [null,"Mont Blanc is in Frankrijk!","Geen berg.","Tafelberg is in Zuid-Afrika of Suriname."],
         uitlegPad: {
-          stappen: [{ titel: "Vaalserberg 323 m", tekst: "Hoogste punt NL = Vaalserberg, 322,4 m boven NAP. Ligt in Limburg, dorp Vaals. Drielandenpunt — hier raken NL, België én Duitsland elkaar. Niet groots als alpen-berg, maar voor plat NL relatief hoog." }],
+          stappen: [{ titel: "Vaalserberg 322 m", tekst: "Hoogste punt NL = Vaalserberg, 322,4 m boven NAP. Ligt in Limburg, dorp Vaals. Drielandenpunt — hier raken NL, België én Duitsland elkaar. Niet groots als alpen-berg, maar voor plat NL relatief hoog." }],
           woorden: [{ woord: "Vaalserberg", uitleg: "Hoogste punt NL. 322,4 m. Bij Vaals, Limburg." }, { woord: "Drielandenpunt", uitleg: "Plek waar 3 landen samenkomen. Bij Vaalserberg: NL+BE+DE." }],
-          theorie: "Hoogste punten andere landen ter vergelijking: Duitsland Zugspitze 2962 m. Frankrijk Mont Blanc 4810 m. NL Vaalserberg 323 m. NL is plat omdat we op delta-vlakte liggen (zand-sediment van rivieren).",
-          voorbeelden: [{ type: "binnen NL", tekst: "Veluwe (Gelderland) hoogste ~110 m. Drenthe heuvels max ~50 m. Vaalserberg eenzaam de top met 323 m." }],
+          theorie: "Hoogste punten andere landen ter vergelijking: Duitsland Zugspitze 2962 m. Frankrijk Mont Blanc 4810 m. NL Vaalserberg 322 m. NL is plat omdat we op delta-vlakte liggen (zand-sediment van rivieren).",
+          voorbeelden: [{ type: "binnen NL", tekst: "Veluwe (Gelderland) hoogste ~110 m. Drenthe heuvels max ~50 m. Vaalserberg eenzaam de top met 322 m." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Mont Blanc = Frankrijk. Zuiderzeeweg = straatnaam (geen berg). Tafelberg = Zuid-Afrika of Suriname." }],
-          niveaus: { basis: "Vaalserberg 323m.", simpeler: "Hoogste NL = Vaalserberg (323 m, Limburg).", nogSimpeler: "Vaalserberg" },
+          niveaus: { basis: "Vaalserberg 322 m.", simpeler: "Hoogste NL = Vaalserberg (322 m, Limburg).", nogSimpeler: "Vaalserberg" },
         },
       },
     ],
@@ -509,7 +509,7 @@ const steps = [
   },
   {
     title: "Eindopdracht — combineer alles",
-    explanation: "Tijd om alles te combineren!\n\n**Snelle check provincie + hoofdstad** (3-staps-trucje):\n• Provincie + hoofdstad zelfde naam? → Groningen, Utrecht.\n• Eindigt op -land? → Friesland (Leeuwarden), Gelderland (Arnhem), Flevoland (Lelystad), Zeeland (Middelburg).\n• Eindigt op -e? → Drenthe (Assen).\n• 'Brabant'? → Noord-Brabant ('s-Hertogenbosch).\n• 'Holland'? → Noord-Holland (Haarlem!), Zuid-Holland (Den Haag).\n• Overijssel → Zwolle.\n• Limburg → Maastricht.\n\n**Top tips voor het examen**:\n• Hoofdstad van NEDERLAND = Amsterdam.\n• Hoofdstad van Noord-Holland = HAARLEM (NIET Amsterdam!).\n• Regering zit in Den Haag.\n• Grootste haven = Rotterdam.\n• 12 provincies, 5 Wadden­eilanden, 3 grote rivieren (Rijn, Maas, Schelde).\n• 26% van NL onder zeeniveau.\n• Vaalserberg = hoogste (323 m, Limburg).\n• Buurlanden: Duitsland (oost) + België (zuid).\n• Randstad = Amsterdam-Rotterdam-Den Haag-Utrecht.\n\nVeel succes!",
+    explanation: "Tijd om alles te combineren!\n\n**Snelle check provincie + hoofdstad** (3-staps-trucje):\n• Provincie + hoofdstad zelfde naam? → Groningen, Utrecht.\n• Eindigt op -land? → Friesland (Leeuwarden), Gelderland (Arnhem), Flevoland (Lelystad), Zeeland (Middelburg).\n• Eindigt op -e? → Drenthe (Assen).\n• 'Brabant'? → Noord-Brabant ('s-Hertogenbosch).\n• 'Holland'? → Noord-Holland (Haarlem!), Zuid-Holland (Den Haag).\n• Overijssel → Zwolle.\n• Limburg → Maastricht.\n\n**Top tips voor het examen**:\n• Hoofdstad van NEDERLAND = Amsterdam.\n• Hoofdstad van Noord-Holland = HAARLEM (NIET Amsterdam!).\n• Regering zit in Den Haag.\n• Grootste haven = Rotterdam.\n• 12 provincies, 5 Wadden­eilanden, 3 grote rivieren (Rijn, Maas, Schelde).\n• 26% van NL onder zeeniveau.\n• Vaalserberg = hoogste (322 m, Limburg).\n• Buurlanden: Duitsland (oost) + België (zuid).\n• Randstad = Amsterdam-Rotterdam-Den Haag-Utrecht.\n\nVeel succes!",
     svg: nederlandKaartSvg(),
     checks: [
       {
@@ -570,16 +570,16 @@ const steps = [
       },
       {
         q: "Hoeveel inwoners heeft Nederland ongeveer (2026)?",
-        options: ["~17,9 miljoen","~5 miljoen","~50 miljoen","~150 miljoen"],
+        options: ["~18 miljoen","~5 miljoen","~50 miljoen","~150 miljoen"],
         answer: 0,
         wrongHints: [null,"Te weinig — meer dan dat.","Veel te veel — Nederland is een klein landje.","Veel te veel — denk aan een klein landje."],
         uitlegPad: {
-          stappen: [{ titel: "~17,9 miljoen NL'ers", tekst: "Nederland heeft 2026 ongeveer 17,9 miljoen inwoners. Bijna 18 miljoen. Klein land qua oppervlak (41.500 km²) maar dichtbevolkt: ~430 mensen per km². Een van de dichtstbevolkte landen van Europa." }],
+          stappen: [{ titel: "~18 miljoen NL'ers", tekst: "Nederland heeft ruim 18 miljoen inwoners (die grens ging in 2024 over). Klein land qua oppervlak (41.500 km²) maar dichtbevolkt: ~430 mensen per km². Een van de dichtstbevolkte landen van Europa." }],
           woorden: [{ woord: "bevolkingsdichtheid", uitleg: "Aantal mensen per km². NL = 430/km² (heel hoog)." }],
-          theorie: "Groei NL: 1900 = 5 miljoen. 1950 = 10 miljoen. 2000 = 16 miljoen. 2026 = 17,9 miljoen. Voorspelling 2050: ~19,5 miljoen.",
+          theorie: "Groei NL: 1900 = 5 miljoen. 1950 = 10 miljoen. 2000 = 16 miljoen. 2024 = 18 miljoen. Voorspelling 2050: ~19,5 miljoen.",
           voorbeelden: [{ type: "vergelijk", tekst: "Duitsland 84 mln. België 11,7 mln. Frankrijk 68 mln. NL middelmaat. Maar dichtheid: NL > meeste Europese landen (uitgezonderd Malta, Monaco)." }],
           basiskennis: [{ onderwerp: "Niet andere getallen", uitleg: "5 miljoen = wereld-historisch (NL rond 1900). 50 mln = veel te veel. 150 mln = onmogelijk voor klein landje." }],
-          niveaus: { basis: "~17,9 miljoen.", simpeler: "NL inwoners 2026 ≈ 17,9 miljoen (bijna 18 mln).", nogSimpeler: "17,9 mln" },
+          niveaus: { basis: "~18 miljoen.", simpeler: "Nederland heeft ruim 18 miljoen inwoners.", nogSimpeler: "18 mln" },
         },
       },
       { q: "Wat is de **hoofdstad** van Nederland?", options: ["Amsterdam","Den Haag","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Regeringsstad, geen hoofdstad.", "Grootste haven.", "Niet."] },
