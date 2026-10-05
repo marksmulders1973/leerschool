@@ -315,9 +315,9 @@ const steps = [
       },
       {
         q: "**0,5 + 0,5** is?",
-        options: ["1", "0,10", "0,1", "10"],
+        options: ["1", "0,10", "0,55", "10"],
         answer: 0,
-        wrongHints: [null, "Niet zo — 'plakken' is geen optellen.", "0,5 + 0,5 is groter dan 0,1.", "Veel te groot."],
+        wrongHints: [null, "Niet zo — 'plakken' is geen optellen.", "Tel de tienden op: 5 tienden + 5 tienden = 10 tienden = 1.", "Veel te groot."],
       },
       {
         q: "Wat is **1/2 van 60**?",

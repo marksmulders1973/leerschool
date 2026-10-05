@@ -328,7 +328,7 @@ const steps = [
         },
       },
       { q: "Rond 347 af op tiental.", options: ["350","340","300","400"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5, afronden omhoog.", "Dat is honderdtal.", "Te ver — dat is ook geen tiental van 347."] },
-      { q: "Rond 6,82 af op heel getal.", options: ["7","6","6,8","7,0"], answer: 0, wrongHints: [null, "Niet — afronden omhoog.", "Dat is op 1 decimaal.", "Niet — geen decimaal nodig."] },
+      { q: "Rond 6,82 af op heel getal.", options: ["7","6","6,8","8"], answer: 0, wrongHints: [null, "Na de komma staat een 8 — dat is 5 of meer, dus omhoog.", "Dat is afgerond op 1 decimaal, niet op een heel getal.", "Te ver: 6,82 ligt veel dichter bij 7 dan bij 8."] },
       { q: "Ongeveer hoeveel is 198 + 403?", options: ["~600","~700","~500","~1000"], answer: 0, wrongHints: [null, "Te hoog.", "Te laag.", "Veel te hoog."] },
       { q: "Rond 4.567 af op honderdtal", options: ["4.600","4.500","4.000","5.000"], answer: 0, wrongHints: [null, "Niet.", "Te ver.", "Te ver."] },
       { q: "Rond 0,72 af op tienden", options: ["0,7","0,8","1,0","0,72"], answer: 0, wrongHints: [null, "Niet — 2 < 5.", "Te ver.", "Niet afgerond."] },

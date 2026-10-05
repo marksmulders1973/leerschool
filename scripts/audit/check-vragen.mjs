@@ -37,6 +37,9 @@ function controleer(c, waar) {
     const vraag = String(c.q || "").replace(/\*\*/g, "").toLowerCase();
     if (vraag.length < 220 && !/lees de tekst|in de tekst|volgens de tekst/.test(vraag) && juist.split(/\s+/).length >= 2 && juist.length >= 8 && vraag.includes(juist) && !c.options.some((o, i) => i !== c.answer && vraag.includes(String(o).replace(/\*\*/g, "").trim().toLowerCase())))
       weggegeven.push(`${waar}: "${c.q}" → antwoord "${c.options[c.answer]}" staat in de vraag`);
+    // Getallen die hetzelfde zijn (0,1 = 0,10 = ,1): twee "verschillende" opties met dezelfde waarde.
+    const waarden = c.options.map((o) => (/^\s*-?\d+([.,]\d+)?\s*$/.test(String(o)) ? Number(String(o).replace(/\.(?=\d{3}\b)/g, "").replace(",", ".")) : null));
+    if (waarden.filter((w) => w !== null).length !== new Set(waarden.filter((w) => w !== null)).size) fouten.push(`${waar}: twee opties hebben dezelfde waarde ${JSON.stringify(c.options)} → ${JSON.stringify(waarden)}`);
     const m = String(c.q || "").match(SOM);
     if (m) {
       sommen++;

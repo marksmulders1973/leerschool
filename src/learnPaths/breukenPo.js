@@ -452,7 +452,7 @@ const steps = [
       { q: "Vereenvoudig: ⁶⁄₉ = ?", options: ["⅔","½","¾","⅓"], answer: 0, wrongHints: [null, "Niet — geen gemeen.", "Niet.", "Niet."] },
       { q: "Welke is **kleinst**: ¼, ½, of ¾?", options: ["¼","½","¾","Gelijk"], answer: 0, wrongHints: [null, "Helft.", "Grootste.", "Niet."] },
       { q: "Hoeveel **kwarten** zijn in 1 geheel?", options: ["4","2","8","3"], answer: 0, wrongHints: [null, "Twee halven.", "Achtsten misschien?", "Derden."] },
-      { q: "1/10 als decimaal?", options: ["0,1","0,01","1,0","0,10 (?)"], answer: 0, wrongHints: [null, "Dat is ¹⁄₁₀₀.", "Dat is heel.", "Niet zinvol vraagteken."] },
+      { q: "1/10 als decimaal?", options: ["0,1","0,01","1,0","10,0"], answer: 0, wrongHints: [null, "Dat is ¹⁄₁₀₀ (een honderdste).", "Dat is 1 heel.", "Dat is tien hele — veel te veel."] },
       { q: "¾ als decimaal?", options: ["0,75","0,34","0,43","0,8"], answer: 0, wrongHints: [null, "Cijfers gehusseld.", "Cijfers gehusseld.", "Niet."] },
       { q: "Welke breuk is **gelijk** aan 0,5?", options: ["½","⅕","¼","⅓"], answer: 0, wrongHints: [null, "Vijfde.", "Kwart = 0,25.", "Derde ≈ 0,33."] },
       { q: "2/5 + 1/5 = ?", options: ["3/5","3/10","2/25","⅕"], answer: 0, wrongHints: [null, "Niet — noemer blijft.", "Niet — noemer blijft.", "Niet."] },
