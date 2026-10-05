@@ -480,7 +480,7 @@ const steps = [
         q: "Op een **wereldkaart** is **Nederland** vrij **klein** omdat...",
         options: ["De schaal heel klein is (1:30 miljoen ofzo)", "Nederland niet bestaat", "Het wegens vergissing weg is gelaten", "Niet relevant"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wel — schaal verklaart."],
+        wrongHints: [null, "Niet.", "Niet.", "Er is wél een reden — welke?"],
       },
       {
         q: "Welke richting ligt **tussen Noord en Oost**?",
@@ -751,7 +751,7 @@ const steps = [
         wrongHints: [null, "Te veel.", "Te weinig.", "Dat is totaal."],
       },
       {
-        q: "Staafdiagram laat zien dat **3e klas** 25 leerlingen heeft, **4e klas** 30. Welk type grafiek **vergelijkt het beste**?",
+        q: "Je wilt laten zien dat de **3e klas** 25 leerlingen heeft en de **4e klas** 30. Welk type grafiek **vergelijkt zulke groepen het beste**?",
         options: ["Staafdiagram", "Lijngrafiek", "Cirkeldiagram", "Tijdlijn"],
         answer: 0,
         wrongHints: [null, "Lijngrafiek toont verandering door tijd.", "Cirkel = verdeling van geheel.", "Niet voor vergelijken aantallen."],
@@ -898,7 +898,7 @@ const steps = [
         q: "Cirkeldiagram: blauw 25%, geel 25%, **rest** = ?",
         options: ["50%", "25%", "100%", "75%"],
         answer: 0,
-        wrongHints: [null, "Niet helft.", "Niet alles.", "Te veel."],
+        wrongHints: [null, "Je hebt maar één stuk genomen — tel eerst alle bekende stukken op en trek dat van 100 af.", "Niet alles.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Cirkel = altijd 100%", tekst: "Een cirkeldiagram is samen altijd 100%. Wat we kennen + wat we niet kennen = 100." },
@@ -1478,7 +1478,7 @@ const steps = [
         q: "Welk woord staat **eerder** in het woordenboek: **kabel** of **kaak**?",
         options: ["kaak", "kabel", "Beide gelijk", "Geen idee"],
         answer: 0,
-        wrongHints: [null, "Onjuist — kijk naar 2e letter: 'kaa-' vs 'kab-'. a komt voor b.", "Geen — verschillende woorden.", "Wel — alfabetisch."],
+        wrongHints: [null, "Tot en met 'ka' zijn ze gelijk — vergelijk de derde letter.", "Geen — verschillende woorden.", "Wel — alfabetisch."],
       },
       {
         q: "In een **atlas-index** staat: 'Madrid ... 22 C4'. Wat betekent **C4**?",
@@ -1550,7 +1550,7 @@ const steps = [
         q: "Welk woord komt **eerst** in het woordenboek: **'water'** of **'wijn'**?",
         options: ["water", "wijn", "Beide", "Geen idee"],
         answer: 0,
-        wrongHints: [null, "Onjuist — kijk 2e letter: w-a vs w-i. a komt voor i.", "Geen — alfabetisch.", "Wel — alfabetisch."],
+        wrongHints: [null, "Beide beginnen met w — vergelijk de tweede letter.", "Geen — alfabetisch.", "Wel — alfabetisch."],
       },
       {
         q: "**Wikipedia** is een ___?",
@@ -1625,11 +1625,11 @@ const steps = [
         },
       },
       {
-        q: "In het woordenboek staat: **'fi-LO-so-fie'**. Wat geven de streepjes en hoofdletters aan?",
+        q: "In het woordenboek staat: **'fi-lo-so-FIE'**. Wat geven de streepjes en hoofdletters aan?",
         options: ["De lettergrepen en de klemtoon", "De spelling van het meervoud", "Hoe oud het woord is", "Dat het een leenwoord is"],
         answer: 0,
         wrongHints: [null, "Het meervoud staat apart vermeld (vaak als '-ën' of 'mv.').", "De leeftijd van woorden staat niet in een gewoon woordenboek.", "Herkomst staat soms vermeld, maar niet met streepjes."],
-        explanation: "Streepjes = **lettergrepen** (fi-lo-so-fie), hoofdletters = de **klemtoon** (op LO). Zo weet je hoe je het uitspreekt.",
+        explanation: "Streepjes = **lettergrepen** (fi-lo-so-fie), hoofdletters = de **klemtoon** (op FIE). Zo weet je hoe je het uitspreekt.",
       },
       {
         q: "Achter een woord staat **'(mv. musea)'**. Wat betekent dat?",
