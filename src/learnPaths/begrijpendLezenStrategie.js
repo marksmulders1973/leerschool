@@ -643,7 +643,7 @@ const steps = [
         q: "Wat doe je bij een vraag met **'volgens de tekst'**?",
         options: ["Antwoord ALLEEN baseren op wat in tekst staat","Eigen mening geven","Algemene kennis gebruiken","Tekst negeren"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — bij 'volgens de tekst' mag je GEEN eigen mening geven.", "Niet — je moet juist alleen die tekst gebruiken.", "Tegenovergesteld — tekst is essentieel."],
+        wrongHints: [null, "Vraagt 'volgens de tekst' naar wat jij vindt, of naar wat de schrijver zegt?", "Telt wat je toevallig al wist, als de vraag naar de tekst verwijst?", "Kun je 'volgens de tekst' beantwoorden zonder de tekst te gebruiken?"],
         uitlegPad: {
           stappen: [
             { titel: "'Volgens de tekst'-signaal", tekst: "Bij toetsvragen met **'volgens de tekst'** of **'wat zegt de tekst over X'**: je moet je antwoord BASEREN op precies wat er staat. Niet wat jij denkt of weet uit eigen ervaring." },

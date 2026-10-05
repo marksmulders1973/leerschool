@@ -309,10 +309,10 @@ const steps = [
         wrongHints: [null, "Kleur, past niet.", "Temperatuur, past niet.", "Grootte, past niet."],
       },
       {
-        q: "Welk woord past? *'Het ___ ijsje smolt in de zon.'*",
-        options: ["koude", "boze", "snelle", "blauwe"],
+        q: "Welk woord past? *'De ___ soep brandde mijn tong.'*",
+        options: ["hete", "koude", "boze", "snelle"],
         answer: 0,
-        wrongHints: [null, "IJsjes hebben geen gemoedstoestand.", "Snelheid past niet bij ijsje smelten.", "Kleur kan, maar denk: WAAROM smelt het in de zon?"],
+        wrongHints: [null, "Koude soep brandt niet — hoe moet soep zijn om je tong te branden?", "Soep heeft geen gevoelens.", "Snelheid past niet bij soep."],
       },
       {
         q: "Welk woord past? *'Lisa was ___ omdat haar huisdier weg was.'*",
@@ -321,15 +321,15 @@ const steps = [
         wrongHints: [null, "Tegenstelling — vrolijk past niet bij 'huisdier weg'.", "Past niet bij gevoel over verlies.", "Past niet bij verlies."],
       },
       {
-        q: "Welk woord past het **best**? *'De ___ man stak de straat over.'*",
-        options: ["oude", "snelle", "kleine", "blauwe"],
+        q: "Welk woord past het **best**? *'De ___ man stak langzaam en voorzichtig de straat over.'*",
+        options: ["oude", "snelle", "haastige", "blauwe"],
         answer: 0,
-        wrongHints: [null, "Kan, maar denk: oversteken is een rustige actie — welke leeftijd past?", "Kan, maar 'kleine man' is minder gangbaar.", "Mensen krijgen niet vaak een kleur-adjectief in het Nederlands."],
+        wrongHints: [null, "Lees de hele zin: hij steekt lángzaam over — past 'snel' daarbij?", "Haastig en langzaam gaan niet samen.", "Mensen krijgen niet zomaar een kleur in het Nederlands."],
         uitlegPad: {
           stappen: [
             { titel: "Welke woorden zijn 'normaal' bij 'man'?", tekst: "Bij een persoon zoals 'man' zijn sommige bijvoeglijke naamwoorden veel gangbaarder dan andere. Denk aan: **oude/jonge man**, **lange/kleine man**, **dikke/dunne man**. **Snelle man** of **blauwe man** zijn raar." },
-            { titel: "Lees de hele zin", tekst: "*'De ___ man stak de straat over.'* — wat doet die man? Hij STEEKT DE STRAAT OVER. Dat is een rustige activiteit, geen sport. Daarom past 'oude' het beste — denk aan een oudere meneer die voorzichtig oversteekt." },
-            { titel: "Waarom niet de andere opties?", tekst: "• **Snelle** — kan, maar 'snel een straat oversteken' is geen vast beeld. Hardlopers zijn op de baan, niet op straat. \n• **Kleine** — bestaat ('kleine man'), maar veel minder gangbaar dan 'oude man'. \n• **Blauwe** — kleur bij persoon? Zelden ('blauwe Smurf' misschien). Onnatuurlijk." },
+            { titel: "Lees de hele zin", tekst: "*'De ___ man stak langzaam en voorzichtig de straat over.'* — wat doet die man? Hij steekt LANGZAAM en VOORZICHTIG over. Daarom past 'oude' het beste — denk aan een oudere meneer die rustig oversteekt." },
+            { titel: "Waarom niet de andere opties?", tekst: "• **Snelle** en **haastige** — botsen met 'langzaam en voorzichtig' in dezelfde zin. \n• **Blauwe** — kleur bij persoon? Zelden ('blauwe Smurf' misschien). Onnatuurlijk." },
           ],
           woorden: [
             { woord: "gangbaar", uitleg: "Wat normaal of vaak wordt gezegd in het Nederlands." },
@@ -394,9 +394,9 @@ const steps = [
         wrongHints: [null, "Past niet bij goed cijfer.", "Past niet bij gevoel.", "Past niet bij goed nieuws."],
       },
       { q: "Synoniem van **groot**?", options: ["enorm","klein","leeg","laag"], answer: 0, wrongHints: [null, "Tegenstelling.", "Niet over grootte.", "Anders."] },
-      { q: "Tegenstelling van **snel**?", options: ["langzaam","vlug","direct","kort"], answer: 0, wrongHints: [null, "Synoniem.", "Synoniem.", "Niet snelheid."] },
+      { q: "Tegenstelling van **snel**?", options: ["langzaam","vlug","direct","kort"], answer: 0, wrongHints: [null, "Synoniem.", "Direct = meteen, niet het tegenovergestelde.", "Niet snelheid."] },
       { q: "Synoniem van **mooi**?", options: ["prachtig","lelijk","klein","oud"], answer: 0, wrongHints: [null, "Tegenstelling.", "Niets met mooi.", "Niets met mooi."] },
-      { q: "Tegenstelling van **vol**?", options: ["leeg","gevuld","volop","ruim"], answer: 0, wrongHints: [null, "Synoniem.", "Synoniem.", "Andere betekenis."] },
+      { q: "Tegenstelling van **vol**?", options: ["leeg","gevuld","volop","ruim"], answer: 0, wrongHints: [null, "Synoniem.", "Volop = heel veel, niet het tegenovergestelde.", "Andere betekenis."] },
       { q: "Synoniem van **hard**?", options: ["luid","zacht","stil","klein"], answer: 0, wrongHints: [null, "Tegenstelling.", "Tegenstelling.", "Niet."] },
       { q: "Tegenstelling van **rijk**?", options: ["arm","duur","groot","mooi"], answer: 0, wrongHints: [null, "Niet.", "Niet relevant.", "Niet."] },
       { q: "Synoniem van **belangrijk**?", options: ["essentieel","onbelangrijk","klein","saai"], answer: 0, wrongHints: [null, "Tegenstelling.", "Niet.", "Niet."] },

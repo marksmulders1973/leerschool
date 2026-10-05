@@ -287,9 +287,9 @@ const steps = [
       },
       {
         q: "Welke **WO2-jaartallen** kloppen?",
-        options: ["1940-1945 voor NL","1914-1918","1939-1945 wereldwijd, 1940-1945 NL","Alle drie kloppen"],
+        options: ["1940-1944 voor NL","1914-1918","1939-1945 wereldwijd, 1940-1945 NL","Alle drie kloppen"],
         answer: 2,
-        wrongHints: ["Klopt voor Nederland, maar de oorlog begon elders al eerder.", "Dat zijn de jaren van WO1.", null, "Kijk nog eens naar 1914-1918: welke oorlog was dat?"],
+        wrongHints: ["Bijna — in welk jaar werd Nederland bevrijd?", "Dat zijn de jaren van WO1.", null, "Kijk nog eens naar 1914-1918: welke oorlog was dat?"],
         uitlegPad: {
           stappen: [{ titel: "WO1 vs WO2", tekst: "**WO1**: 1914-1918 (NL **neutraal**, niet bezet). **WO2**: 1939-1945 wereldwijd, **NL 1940-1945** bezet (Duitse inval 10 mei 1940 → bevrijding 5 mei 1945)." }],
           niveaus: { basis: "WO2 duurde wereldwijd van 1939 tot 1945; in Nederland van 1940 tot 1945.", simpeler: "Wereld 1939-1945, Nederland 1940-1945.", nogSimpeler: "1939/1940 tot 1945." },

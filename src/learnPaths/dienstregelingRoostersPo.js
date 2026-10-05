@@ -46,7 +46,7 @@ const steps = [
         q: "Je staat om 9:30 op het station Utrecht. De treinen vertrekken om 9:10, 9:40 en 10:10. Hoe lang moet je wachten op de volgende trein?",
         options: ["10 minuten", "30 minuten", "20 minuten", "40 minuten"],
         answer: 0,
-        wrongHints: [null, "Dat is de tijd tot de trein dáárna.", "Kijk welke trein als eerste ná 9:30 komt.", "Te lang — er komt al eerder een trein."],
+        wrongHints: [null, "Reken van 9:30 tot de eerstvolgende vertrektijd — zo lang is dat niet.", "Kijk welke trein als eerste ná 9:30 komt.", "Te lang — er komt al eerder een trein."],
         uitlegPad: {
           stappen: [{ titel: "Tot de eerstvolgende vertrektijd", tekst: "De trein van 9:10 is al weg. De volgende is 9:40. Van 9:30 tot 9:40 = 10 minuten wachten." }],
           niveaus: {
@@ -333,7 +333,7 @@ const steps = [
         q: "De bieb sluit om 17:00. De bus erheen duurt 20 minuten en vertrekt om 16:30, 16:50 en 17:10. Welke bus moet je uiterlijk nemen om de bieb nog open te treffen?",
         options: ["die van 16:30", "die van 16:50", "die van 17:10", "het lukt niet meer"],
         answer: 0,
-        wrongHints: [null, "Tel bij die vertrektijd 20 minuten op — hoe laat kom je aan, en is de bieb dan nog open?", "Tel bij die vertrektijd 20 minuten op — kom je dan nog vóór sluitingstijd aan?", "Met de vroegste bus kom je nog op tijd — maar check het ook voor de andere bussen."],
+        wrongHints: [null, "Tel bij die vertrektijd 20 minuten op — hoe laat kom je aan, en is de bieb dan nog open?", "Tel bij die vertrektijd 20 minuten op — kom je dan nog vóór sluitingstijd aan?", "Tel bij de vroegste vertrektijd 20 minuten op — ben je dan nog vóór 17:00 bij de bieb?"],
         uitlegPad: {
           stappen: [{ titel: "Vertrek + reistijd = aankomst", tekst: "16:30 + 20 = 16:50 (op tijd). 16:50 + 20 = 17:10 (net dicht). Dus uiterlijk de bus van 16:30." }],
           niveaus: {

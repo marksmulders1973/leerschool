@@ -276,13 +276,13 @@ const steps = [
         },
       },
       {
-        q: "Welk **land** ligt **noordelijk** van Nederland?",
+        q: "Welk **buurland** grenst aan de **noordkant** van Nederland?",
         options: ["Geen (Noordzee)", "België", "Duitsland", "Frankrijk"],
         answer: 0,
         wrongHints: [null, "België ligt ZUIDEN van NL.", "Duitsland ligt OOSTEN.", "Frankrijk ligt veel zuidelijker."],
         uitlegPad: {
           stappen: [
-            { titel: "NL buurlanden + windstreken", tekst: "Nederland heeft maar **2 landen-buren**:\n• **België** in het **zuiden**\n• **Duitsland** in het **oosten**\n\nIn het **noorden** + **westen** ligt de **Noordzee**. Aan de andere kant van de Noordzee: **Engeland/Schotland**." },
+            { titel: "NL buurlanden + windstreken", tekst: "Nederland heeft maar **2 landen-buren**:\n• **België** in het **zuiden**\n• **Duitsland** in het **oosten**\n\nIn het **noorden** + **westen** ligt de **Noordzee**. Aan de overkant van de Noordzee: **Engeland/Schotland** (westen) en **Noorwegen** (noorden)." },
             { titel: "Windstreken in NL", tekst: "De toets vraagt vaak naar **windstreken**:\n• **N** (noord) — boven NL\n• **Z** (zuid) — onder NL\n• **W** (west) — links\n• **O** (oost) — rechts\n\nHandig ezelsbruggetje: 'Nooit Op Zaterdag Werken' = **N**-**O**-**Z**-**W** (klokrond)." },
             { titel: "Toets-feit: NL ligt LAAG", tekst: "Nederland betekent letterlijk **'lage landen'**. Veel onder zeespiegel (Zuid-Holland tot 6 meter onder NAP). Daarom: dijken + dammen + Deltawerken. Hoogste punt = **Vaalserberg** (322 m, hoek Limburg waar NL-BE-DE elkaar raken). Weinig bergen, maar wel veel water + dijken." },
           ],

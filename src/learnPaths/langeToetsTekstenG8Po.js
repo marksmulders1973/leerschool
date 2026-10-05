@@ -209,7 +209,7 @@ Test je plan met de twee vragen hieronder — daarna begint de echte training.`,
     leesTekst: tekstZeehonden, // gaat mee naar Kwartier van vandaag / losse oefenvragen
     explanation: tekstZeehonden + `
 
-Dit is 'm: een tekst zo lang als op de echte toets, met zeven vragen van allerlei soorten door elkaar — een feitje opzoeken, een verwijswoord, de hoofdgedachte, een woord uit de tekst en een conclusie.
+Dit is 'm: een tekst zo lang als op de echte toets, met acht vragen van allerlei soorten door elkaar — een feitje opzoeken, een verwijswoord, de hoofdgedachte, een woord uit de tekst en een conclusie.
 
 **Gebruik je plan:**
 1. Je hebt de tekst nu één keer gelezen — je plattegrond is klaar.
@@ -480,7 +480,7 @@ Neem de tijd om terug te bladeren — opzoeken hoort erbij. Succes!`,
         },
       },
       {
-        q: "In de tekst staat: *'Adopteer een zeehond en help mee aan hun herstel.'* Welk tekstdoel heeft deze zin?",
+        q: "Stel dat de opvang op een poster zet: *'Adopteer een zeehond en help mee aan zijn herstel!'* Welk tekstdoel heeft die zin?",
         options: [
           "Overtuigen — de lezer aanzetten om iets te doen",
           "Informeren — uitleggen hoe adoptie werkt",
@@ -522,7 +522,7 @@ Training twee! Op de echte toets krijg je ook verhalen — en daar stellen ze n�
 2. Zoek per vraag de goede plek in het verhaal terug.
 3. Blijf nergens hangen; overslaan en terugkomen mag altijd.
 
-Zeven vragen. Hou vol — dit is precies de training die je nodig hebt!`,
+Acht vragen. Hou vol — dit is precies de training die je nodig hebt!`,
     checks: [
       {
         q: "Hoe laat klopte opa op de deur van Sanne?",
@@ -791,7 +791,7 @@ Zeven vragen. Hou vol — dit is precies de training die je nodig hebt!`,
         },
       },
       {
-        q: "In het verhaal staat: *'Sanne stond op en deed het raam open, de kilte van de nacht naar binnen latend.'* Wat kun je hieruit het beste afleiden?",
+        q: "Stel dat de eerste alinea nog een zin had: *'Sanne stond op en deed het raam open, de kilte van de nacht naar binnen latend.'* Wat kun je daaruit het beste afleiden?",
         options: [
           "Sanne wilde de sterren beter kunnen zien of horen",
           "Sanne wilde de kamer verwarmen",
@@ -823,7 +823,7 @@ Zeven vragen. Hou vol — dit is precies de training die je nodig hebt!`,
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Terugkijken — wat neem je mee naar de echte toets?",
-    explanation: `Twee lange teksten, veertien vragen — dat is een flinke leestraining! Precies het uithoudingsvermogen dat je op de echte Doorstroomtoets nodig hebt.
+    explanation: `Twee lange teksten, zestien vragen — dat is een flinke leestraining! Precies het uithoudingsvermogen dat je op de echte Doorstroomtoets nodig hebt.
 
 Even terugkijken op je aanpak, want díé neem je mee:
 
@@ -833,7 +833,7 @@ Even terugkijken op je aanpak, want díé neem je mee:
 
 **3. Elk vraagtype heeft zijn eigen truc.** Feitje? Scannen op het zoekwoord. Verwijswoord? Terugzoeken en controleren. Hoofdgedachte? De alinea-test. Onbekend woord? De zinnen eromheen. Conclusie? Eén klein stapje verder dan de tekst, nooit tien.
 
-Nog twee vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk je straks: "Zo'n lange tekst? Die heb ik al vaker gedaan."`,
+Nog een paar vragen over je aanpak — dan zit dit deel erop. Op de echte toets denk je straks: "Zo'n lange tekst? Die heb ik al vaker gedaan."`,
     checks: [
       {
         q: "Je twijfelt bij een vraag over de tekst. Wat is de beste actie?",

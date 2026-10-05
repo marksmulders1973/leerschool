@@ -558,7 +558,7 @@ Soms heb je alleen de lijst nodig, soms alleen de tekst — en bij de moeilijkst
 
 — Entree (per persoon): € 3,00
 — Ponyritje (één rondje door de wei): € 2,00
-— Ponyles (30 minuten): € 7,50
+— Ponyles (30 minuten, per kind): € 7,50
 — Speurtocht (per groepje van maximaal 5 kinderen): € 10,00
 
 In de folder van 't Hoefje staat ook: *"Wie jarig is, mag die dag gratis naar binnen. De speurtocht betaal je één keer per groepje, niet per kind."*
@@ -688,7 +688,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
         uitlegPad: {
           stappen: [
             { titel: "Zoek de juiste rij", tekst: "Het gaat om een ponyLÉS, niet een ponyRÍTJE. Zoek de les-regel: '€ 7,50'." },
-            { titel: "Check de eenheid", tekst: "Bij de ponyles staat geen 'per groepje'. Bij de speurtocht stond dat er wél. Dus de ponyles is per persoon." },
+            { titel: "Check de eenheid", tekst: "Bij de ponyles staat tussen de haakjes 'per kind'. Bij de speurtocht stond juist 'per groepje'. Dus de ponyles betaal je per persoon." },
             { titel: "Reken per kind", tekst: "Drie kinderen × € 7,50 = € 22,50 samen. Per kind: € 7,50." },
           ],
           niveaus: {

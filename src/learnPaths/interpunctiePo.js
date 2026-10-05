@@ -60,7 +60,7 @@ const steps = [
   {
     title: "Wat is interpunctie?",
     explanation:
-      "**Interpunctie** is alles wat geen letter is in een zin: **leestekens** en **hoofdletters**.\n\n**Waarom zijn leestekens belangrijk?**\nLeestekens helpen je **goed lezen**. Ze laten zien:\n• waar een zin begint en eindigt,\n• of het een vraag of uitroep is,\n• of er een korte pauze in een zin zit,\n• wat iemand zegt.\n\n**De 5 belangrijkste leestekens**:\n• **.** punt — einde van een gewone zin.\n• **?** vraagteken — einde van een vraag.\n• **!** uitroepteken — verbazing of bevel.\n• **,** komma — korte pauze, of opsomming.\n• ' **'** aanhalingstekens — wat iemand zegt.\n\n**Hoofdletters** gebruik je:\n• Aan **begin van een zin**.\n• Bij **namen van mensen** *(Anna, Lisa, Tom)*.\n• Bij **namen van plaatsen** *(Amsterdam, Frankrijk)*.\n• Bij **dagen en maanden** gebruik je in het Nederlands géén hoofdletter *(maandag, januari)*.\n\n**Voorbeeld zonder interpunctie**:\n*'mijn naam is tom ik woon in utrecht waar woon jij'*\n\n**Met interpunctie**:\n*'Mijn naam is Tom. Ik woon in Utrecht. Waar woon jij?'*\n\nVeel makkelijker te lezen! Daar is interpunctie voor.",
+      "**Interpunctie** = de **leestekens** in een zin én het juiste gebruik van **hoofdletters**.\n\n**Waarom zijn leestekens belangrijk?**\nLeestekens helpen je **goed lezen**. Ze laten zien:\n• waar een zin begint en eindigt,\n• of het een vraag of uitroep is,\n• of er een korte pauze in een zin zit,\n• wat iemand zegt.\n\n**De 5 belangrijkste leestekens**:\n• **.** punt — einde van een gewone zin.\n• **?** vraagteken — einde van een vraag.\n• **!** uitroepteken — verbazing of bevel.\n• **,** komma — korte pauze, of opsomming.\n• ' **'** aanhalingstekens — wat iemand zegt.\n\n**Hoofdletters** gebruik je:\n• Aan **begin van een zin**.\n• Bij **namen van mensen** *(Anna, Lisa, Tom)*.\n• Bij **namen van plaatsen** *(Amsterdam, Frankrijk)*.\n• Bij **dagen en maanden** gebruik je in het Nederlands géén hoofdletter *(maandag, januari)*.\n\n**Voorbeeld zonder interpunctie**:\n*'mijn naam is tom ik woon in utrecht waar woon jij'*\n\n**Met interpunctie**:\n*'Mijn naam is Tom. Ik woon in Utrecht. Waar woon jij?'*\n\nVeel makkelijker te lezen! Daar is interpunctie voor.",
     svg: leestekensSvg(),
     checks: [
       {
@@ -248,7 +248,7 @@ const steps = [
         },
       },
       {
-        q: "*'Ik ga naar buiten ___ het regent'.* Welke komma + woord?",
+        q: "*'Ik ga tóch naar buiten ___ het regent'.* Welke komma + woord?",
         options: [", maar", ", omdat", "en", "—"],
         answer: 0,
         wrongHints: [null, "'Omdat' geeft reden — dan ga je juist NIET naar buiten.", "'En' opsommend — geen tegenstelling.", "Streepje is voor heel andere reden."],
@@ -277,7 +277,7 @@ const steps = [
         q: "*'Lisa zei ___ ik kom morgen.'* Welk leesteken op de plek?",
         options: [": (dubbele punt)", ", (komma)", ". (punt)", "geen leesteken"],
         answer: 0,
-        wrongHints: [null, "Komma kan ook, maar dubbele punt is standaard bij de Doorstroomtoets.", "Punt sluit zin te vroeg af.", "Wel leesteken nodig."],
+        wrongHints: [null, "Een komma is een pauze in de zin — welk teken kondigt aan wat iemand gaat zeggen?", "Punt sluit zin te vroeg af.", "Wel leesteken nodig."],
       },
     ],
   },
@@ -286,7 +286,7 @@ const steps = [
   {
     title: "Aanhalingstekens — wat iemand zegt",
     explanation:
-      "**Aanhalingstekens** zijn de tekens '' of \"\" — ze geven aan **wat iemand zegt**.\n\n**Voorbeeld**:\n*'Mama zei: **\"Ga je tanden poetsen.\"**'*\n\nDe woorden tussen de aanhalingstekens zijn precies wat mama zei.\n\n**Toets-stappenplan voor directe rede**:\n1. Wie zegt iets? Bijv. 'Mama zegt'.\n2. **Dubbele punt** (:) na 'zegt' / 'zei' / 'roept'.\n3. **Aanhalingsteken openen** (\").\n4. Hoofdletter aan het begin van wat hij/zij zegt.\n5. Leesteken aan eind van het gezegde (binnen aanhalingstekens).\n6. **Aanhalingsteken sluiten** (\").\n\n**Voorbeeld goed**:\n*'Tom roept: \"Pas op!\"'*\n• Komma/dubbele punt na 'roept': → ':' (dubbele punt is standaard).\n• Hoofdletter bij 'Pas'.\n• Uitroepteken binnen aanhalingstekens.\n\n**In het echt zie je vaak deze 3 varianten**:\n• \"Hier de tekst.\" *(Engelse stijl)*\n• 'Hier de tekst.' *(NL informeel)*\n• „Hier de tekst.\" *(NL formeel, in boeken)*\n\nBij de toets is de eerste meestal goed. Wat belangrijk is: **begin én eind hetzelfde type** aanhalingsteken.\n\n**Veel-voorkomende fout**:\n• Aanhalingstekens vergeten te sluiten.\n• Geen dubbele punt vóór de aanhaling.\n• Geen hoofdletter bij 1e woord van de aanhaling.\n• Leesteken (.!?) buiten de aanhalingstekens i.p.v. binnen.",
+      "**Aanhalingstekens** zijn de tekens '' of \"\" — ze geven aan **wat iemand zegt**.\n\n**Voorbeeld**:\n*'Mama zei: **\"Ga je tanden poetsen.\"**'*\n\nDe woorden tussen de aanhalingstekens zijn precies wat mama zei.\n\n**Toets-stappenplan voor directe rede**:\n1. Wie zegt iets? Bijv. 'Mama zegt'.\n2. **Dubbele punt** (:) na 'zegt' / 'zei' / 'roept'.\n3. **Aanhalingsteken openen** (\").\n4. Hoofdletter aan het begin van wat hij/zij zegt.\n5. Leesteken aan eind van het gezegde (binnen aanhalingstekens).\n6. **Aanhalingsteken sluiten** (\").\n\n**Voorbeeld goed**:\n*'Tom roept: \"Pas op!\"'*\n• Komma/dubbele punt na 'roept': → ':' (dubbele punt is standaard).\n• Hoofdletter bij 'Pas'.\n• Uitroepteken binnen aanhalingstekens.\n\n**In het echt zie je vaak deze 3 varianten**:\n• \"Hier de tekst.\" *(dubbele aanhalingstekens)*\n• 'Hier de tekst.' *(enkele aanhalingstekens, veel in boeken)*\n• „Hier de tekst.\" *(oudere stijl)*\n\nAlle drie zijn goed Nederlands; bij de toets zie je meestal de eerste. Wat belangrijk is: **begin én eind hetzelfde type** aanhalingsteken.\n\n**Veel-voorkomende fout**:\n• Aanhalingstekens vergeten te sluiten.\n• Geen dubbele punt vóór de aanhaling.\n• Geen hoofdletter bij 1e woord van de aanhaling.\n• Leesteken (.!?) buiten de aanhalingstekens i.p.v. binnen.",
     checks: [
       {
         q: "Welke schrijfwijze is **correct**?",
@@ -342,7 +342,7 @@ const steps = [
         wrongHints: [null, "Punt past niet bij vraag.", "Niet boos genoeg.", "Komma sluit niet af."],
       },
       {
-        q: "*'Ik kocht ___ peren ___ druiven ___ bananen.'* Welke komma's?",
+        q: "*'Ik kocht appels ___ peren ___ druiven ___ bananen.'* Welke komma's?",
         options: [", , en", "en en en", ", en ,", ", , ,"],
         answer: 0,
         wrongHints: [null, "Te veel 'en'.", "Verkeerde plek.", "Geen komma vóór laatste — daar 'en'."],
@@ -363,7 +363,7 @@ const steps = [
         q: "*'tom zei: ___ ___ ___'* met inhoud 'ik kom morgen'. Wat staat tussen?",
         options: ["\"Ik kom morgen.\"", "Ik kom morgen.", "\"ik kom morgen\"", "'Ik kom morgen'"],
         answer: 0,
-        wrongHints: [null, "Mist aanhalingstekens.", "Mist hoofdletter + punt binnen aanhalingstekens.", "Enkele aanhalingstekens minder standaard."],
+        wrongHints: [null, "Mist aanhalingstekens.", "Mist hoofdletter + punt binnen aanhalingstekens.", "Kijk naar het einde: waar is het leesteken van de zin gebleven?"],
       },
       { q: "Welke zin heeft de **juiste komma**?", options: ["Ik kocht brood, kaas en melk.","Ik kocht brood kaas en melk.","Ik kocht, brood kaas en melk.","Ik kocht brood, kaas en, melk."], answer: 0, wrongHints: [null, "Komma's ontbreken.", "Verkeerde positie.", "Komma vóór 'en' niet bij opsomming."] },
       { q: "Welk **leesteken** sluit een vraag af?", options: ["Vraagteken (?)","Punt (.)","Komma (,)","Uitroepteken (!)"], answer: 0, wrongHints: [null, "Niet vraag.", "Niet einde.", "Uitroep."] },
@@ -378,7 +378,7 @@ const steps = [
       { q: "Welke zin heeft een **fout vraagteken**?", options: ["Ik ga slapen?","Ga je mee?","Hoe heet je?","Waar is mijn boek?"], answer: 0, wrongHints: [null, "Dit is een échte vraag — het vraagteken klopt. Welke zin vraagt eigenlijk niets?", "Een echte vraag; vraagteken hoort hier. Zoek de zin die een mededeling is.", "Dit is een vraag. Welke zin vraagt niets maar eindigt tóch met een vraagteken?"] },
       { q: "Welke **hoofdletter** is fout?", options: ["Ik Eet brood","Ik eet brood","Ik eet brood.","Eet jij brood?"], answer: 0, wrongHints: [null, "Hier staan de hoofdletters goed. Zoek de zin met een hoofdletter midden in de zin.", "Deze klopt. Welke zin heeft een hoofdletter waar dat niet hoort?", "Hoofdletter aan het begin is goed. Zoek de verkeerd geplaatste hoofdletter."] },
       { q: "Wat staat tussen **haakjes ()**?", options: ["Extra info / verduidelijking","Vraag","Naam","Niet relevant"], answer: 0, wrongHints: [null, "Vraagteken.", "Niet specifiek.", "Wel."] },
-      { q: "Welke zin heeft de **juiste komma's** rond bijzin?", options: ["De man, die rent, is moe.","De man die rent, is moe.","De man die rent is moe.","De man, die rent is moe."], answer: 0, wrongHints: [null, "Mist openings-komma.", "Geen komma's.", "Mist sluitkomma."] },
+      { q: "Welke zin heeft de **juiste komma's** rond de extra informatie?", options: ["Mijn opa, die 80 is, fietst nog elke dag.","Mijn opa die 80 is, fietst nog elke dag.","Mijn opa die 80 is fietst nog elke dag.","Mijn opa, die 80 is fietst nog elke dag."], answer: 0, wrongHints: [null, "Mist de komma vóór de extra informatie.", "De extra informatie ('die 80 is') hoort tussen komma's.", "Mist de komma ná de extra informatie."] },
       { q: "Welke afkorting krijgt **geen** hoofdletter?", options: ["bv.","NL","EU","VS"], answer: 0, wrongHints: [null, "Land = hoofdletter.", "Land/instituut.", "Land."] },
       { q: "Welke zin heeft de **juiste interpunctie**?", options: ["Wat een mooie dag!","Wat een mooie dag.","wat een mooie dag!","Wat een mooie dag?"], answer: 0, wrongHints: [null, "Niet emotie.", "Begin-hoofdletter mist.", "Geen vraag."] },
     ],

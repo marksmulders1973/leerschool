@@ -279,10 +279,10 @@ const steps = [
         q: "Een **dijk** is waarvoor?",
         options: ["Houden water tegen — beschermt land tegen overstroming", "Genereert elektriciteit", "Voor schepen om aan te leggen", "Drinkwater filteren"],
         answer: 0,
-        wrongHints: [null, "Niet — andere techniek (waterkracht­centrale).", "Niet — dat is een haven/pier.", "Niet — dat is waterzuivering."],
+        wrongHints: [null, "Niet — andere techniek (waterkrachtcentrale).", "Niet — dat is een haven/pier.", "Niet — dat is waterzuivering."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is een dijk?", tekst: "Een **dijk** is een **wal van klei + zand + soms stenen** die water tegen­houdt. Beschermt land achter de dijk tegen overstroming.\n\nNederland heeft **duizenden kilometers dijken**. Reden: ongeveer een kwart van NL ligt **onder zeespiegel**. Zonder dijken: groot deel van NL onder water." },
+            { titel: "Wat is een dijk?", tekst: "Een **dijk** is een **wal van klei + zand + soms stenen** die water tegenhoudt. Beschermt land achter de dijk tegen overstroming.\n\nNederland heeft **duizenden kilometers dijken**. Reden: ongeveer een kwart van NL ligt **onder zeespiegel**. Zonder dijken: groot deel van NL onder water." },
             { titel: "Soorten dijken in NL", tekst: "• **Zeedijken** — beschermen tegen Noordzee + Waddenzee (bv. Afsluitdijk)\n• **Rivierdijken** — bij Rijn, Maas, Waal, IJssel\n• **Polderdijken** — rond drooggemaakt land (Haarlemmermeer)\n• **Duinen** — natuurlijke 'dijken' van zand langs kust\n\nBeroemde dijken: **Afsluitdijk** (1932, 32 km) + **Deltawerken** (jaren 50-90, beschermen Zuid-Holland/Zeeland)." },
             { titel: "Toets-feit: Watersnood 1953", tekst: "Op **31 januari / 1 februari 1953** brak een ramp uit:\n• Storm + extreem springtij\n• Dijken in Zeeland + Zuid-Holland braken\n• **1.836 mensen verdronken**\n• zo'n 165.000 ha land onder water\n• tienduizenden dieren dood\n\nGevolg: **Deltawerken** gebouwd om dit nooit meer te laten gebeuren. Officieel klaar in 1997. Beschermt nu tegen zeer zware stormen." },
           ],
@@ -308,9 +308,9 @@ const steps = [
         wrongHints: [null, "Zout water → onbruikbaar zonder ontzilting (duur, niet in NL).", "Te onbetrouwbaar voor heel land.", "Niet — NL maakt eigen drinkwater."],
         uitlegPad: {
           stappen: [
-            { titel: "Bron 1: grondwater (60% in NL)", tekst: "**Grondwater** is water dat onder de grond zit — eeuwen geleden in de bodem gezakt. **Diep, schoon, beschermd** door zandlagen die als natuurlijk filter werken.\n\nWaterbedrijven pompen het op uit **diepe putten** (50-300 meter diep) in heide­gebieden + bossen. Er is meestal maar weinig zuivering nodig." },
+            { titel: "Bron 1: grondwater (60% in NL)", tekst: "**Grondwater** is water dat onder de grond zit — eeuwen geleden in de bodem gezakt. **Diep, schoon, beschermd** door zandlagen die als natuurlijk filter werken.\n\nWaterbedrijven pompen het op uit **diepe putten** (50-300 meter diep) in heidegebieden + bossen. Er is meestal maar weinig zuivering nodig." },
             { titel: "Bron 2: oppervlaktewater (40% in NL)", tekst: "**Oppervlaktewater** = water uit rivieren, meren, duinen. Bv. **Rijn** + **Maas** + **IJsselmeer**.\n\nDit water is **viezer** dan grondwater (industrie, landbouw, riool). Daarom **veel meer zuivering** nodig. Vooral in west-NL (Den Haag, Rotterdam) gebruikt omdat grondwater daar zout is door zeenabijheid." },
-            { titel: "Toets-feit: zuivering-stappen", tekst: "Zuivering van rivierwater tot drinkwater:\n1. **Voorfilter** (zand, grind verwijderen)\n2. **Beluchting** (zuurstof toevoegen)\n3. **Coagulatie** (chemisch — vuil klontert)\n4. **Zandfilter** (microben)\n5. **Actief-kool-filter** (geur/smaak)\n6. **Chloor** of **UV** (desinfectie)\n7. **Drinkwater** naar leiding\n\nKost ~€1-2 per 1000 liter — Nederlands drinkwater hoort bij het schoonste ter wereld." },
+            { titel: "Toets-feit: zuivering-stappen", tekst: "Zuivering van rivierwater tot drinkwater:\n1. **Voorfilter** (zand, grind verwijderen)\n2. **Beluchting** (zuurstof toevoegen)\n3. **Coagulatie** (chemisch — vuil klontert)\n4. **Zandfilter** (microben)\n5. **Actief-kool-filter** (geur/smaak)\n6. **UV-licht** of **ozon** (desinfectie — in NL vrijwel zonder chloor)\n7. **Drinkwater** naar leiding\n\nKost ~€1-2 per 1000 liter — Nederlands drinkwater hoort bij het schoonste ter wereld." },
           ],
           woorden: [
             { woord: "grondwater", uitleg: "Water in de bodem, diep onder grond. Schoonste bron." },

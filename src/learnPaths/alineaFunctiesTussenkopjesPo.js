@@ -928,7 +928,7 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
         },
       },
       {
-        q: "Boven welke alinea van de vuurtoren-tekst past het kopje **'Licht als reservelijn'**?",
+        q: "Boven welke alinea van de vuurtoren-tekst past het kopje **'Licht als reserve'**?",
         options: [
           "Boven alinea 4",
           "Boven alinea 1",
@@ -939,18 +939,18 @@ Neem de tijd om steeds even terug te lezen in de tekst — dat opzoeken hoort bi
         wrongHints: [
           null,
           "Alinea 1 maakt je kennis met vuurtorens in het algemeen. Is een reservelicht daar het hoofdonderwerp?",
-          "Alinea 2 gaat over hoe het licht werkt. Past 'reservelijn' daarboven?",
+          "Alinea 2 gaat over hoe het licht werkt. Past 'reserve' daarboven?",
           null,
         ],
         uitlegPad: {
           stappen: [
             { titel: "Zoek het woord 'reservelicht'", tekst: "Scan de tekst op het woord 'reservelicht'. Je vindt het in alinea 4: 'Ze zijn een reservelicht voor als de techniek uitvalt.'" },
-            { titel: "Check de rest van alinea 4", tekst: "Alinea 4 gaat over de situatie van nu: computers, satellieten, en vuurtorens als reservelicht. Het kopje 'Licht als reservelijn' dekt het hoofd-idee van die alinea." },
+            { titel: "Check de rest van alinea 4", tekst: "Alinea 4 gaat over de situatie van nu: computers, satellieten, en vuurtorens als reservelicht. Het kopje 'Licht als reserve' past bij die alinea." },
             { titel: "Pas-test", tekst: "Zou dit kopje boven alinea 1, 2 of 3 passen? Nee: bij alinea 1 gaat het over het algemene nut, bij 2 over het flits-mechanisme, bij 3 over de wachter. Alleen alinea 4 gaat over de reserverol." },
           ],
           niveaus: {
             basis: "Zoek het woord 'reservelicht' in de tekst. In welke alinea staat het?",
-            simpeler: "Een 'reservelijn' spring je in als het échte systeem uitvalt. Welke alinea gaat over de rol van de vuurtoren nu satellieten bestaan?",
+            simpeler: "Een 'reserve' gebruik je als het échte systeem uitvalt. Welke alinea gaat over de rol van de vuurtoren nu satellieten bestaan?",
             nogSimpeler: "Lees alinea 4 nog eens. Welk kopje past bij 'computers bedienen de lamp' én 'reservelicht als de techniek uitvalt'?",
           },
         },

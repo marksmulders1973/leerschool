@@ -66,6 +66,21 @@ export function normaliseerBedragen(tekst) {
       (_, euro, cent) => bedragNaarWoord(euro, cent));
 }
 
+// ── Kale bedragen in een geld-tekst (Mark 5 okt 2026) ─────────────────
+// Charley zei "van 3,45 naar 4,00" en de stem las "vier komma nul nul". Staat er
+// ergens in dezelfde tekst een euroteken, "euro" of "cent", dan is een getal met
+// precies twee decimalen vrijwel zeker een bedrag → euroteken ervoor, zodat
+// normaliseerBedragen er "vier euro" van maakt. Het teken komt ín het token
+// (geen spatie), dus de woordtelling voor het meelezen blijft gelijk; op het
+// scherm blijft "4,00" staan. Zonder geld-context blijft "0,25" gewoon "nul komma
+// vijfentwintig" (breuken/kommagetallen).
+const GELD_CONTEXT = /€|\beuro'?s?\b|\bcent\b/i;
+const KAAL_BEDRAG = /(?<![€\d.,])(\d{1,3}(?:\.\d{3})*|\d+),(\d{2})(?![\d.,]?\d)(?!\s?euro)/g;
+export function markeerGeld(tekst) {
+  const t = String(tekst ?? "");
+  return GELD_CONTEXT.test(t) ? t.replace(KAAL_BEDRAG, "€$1,$2") : t;
+}
+
 // ── De ziekte ALS letter voor letter (Mark 29 sep 2026) ──────────────
 // De stem las de spierziekte ALS voor als het woordje "als". Alleen de ziekte
 // wordt gespeld; "ALS" in hoofdletters staat in de app óók als nadruk ("het
@@ -84,7 +99,7 @@ export function markeerZiekteAls(tekst) {
 }
 
 export function maakMeeleesPlan(tekst) {
-  const tokens = markeerZiekteAls(tekst).split(/(\s+)/);
+  const tokens = markeerGeld(markeerZiekteAls(tekst)).split(/(\s+)/);
   let gesproken = "";
   const grenzen = []; // per gesproken woord: { start, eind, woordIdx }
   let woordIdx = -1;
@@ -326,7 +341,7 @@ export function woordIndexBijChar(plan, charIndex) {
 }
 
 export function schoonVoorSpraak(tekst) {
-  return normaliseerBedragen(markeerZiekteAls(tekst))
+  return normaliseerBedragen(markeerGeld(markeerZiekteAls(tekst)))
     // de ziekte ALS: letter voor letter ("aa el es"), zie markeerZiekteAls
     .replace(/ALS\u2063/g, "aa el es")
     // markdown-tekens (bestond al in de losse speak()-functies)

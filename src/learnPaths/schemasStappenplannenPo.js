@@ -95,10 +95,10 @@ const steps = [
     explanation: "**Stappenplan** = lijst stappen in **volgorde**.\n\n**Voorbeeld — pannenkoeken**:\n1. Pak een kom.\n2. Doe meel, melk, ei in de kom.\n3. Mix totdat het glad is.\n4. Verhit boter in de pan.\n5. Schenk beslag in de pan.\n6. Bak 2 minuten per kant.\n\n**Stap-volgorde is belangrijk**:\n• Je kunt niet 'bakken' (stap 6) zonder eerst de **kom** te pakken.\n• Stappen dwingen een **logische volgorde** af.\n\n**toetsvraag-typen**:\n• 'Wat doe je vóór stap X?' → stap (X-1).\n• 'Wat doe je na stap Y?' → stap (Y+1).\n• 'Welke stap mist?' → kijk welke logische stap ontbreekt.\n• 'Mag je stap A en B verwisselen?' → check of de tweede de eerste nodig heeft.\n\n**Voorbeeld — verwisselbaar?**\n• Stap 2 ('meel') en stap 3 ('mix') — kun je niet wisselen, je moet eerst meel hebben voordat je kunt mixen.\n• Stap 1 en stap 4 ('kom' en 'pan') — wel wisselbaar (onafhankelijk).\n\n**Tip — Toets-stappen**:\nLees ALLE stappen voordat je een vraag beantwoordt. Vaak gaat de vraag over volgorde of het MISSEN van een stap.\n\n**Belangrijke woorden in stappen**:\n• 'eerst', 'vervolgens', 'dan', 'daarna', 'ten slotte'.\n• Deze woorden geven volgorde aan.",
     checks: [
       {
-        q: "Stap-recept: 1) Kom pakken. 2) Meel + melk doen. 3) Mixen. 4) Bakken.\n\nWat doe je **vóór mixen**?",
+        q: "Stap-recept: 1) Kom pakken. 2) Meel + melk doen. 3) Mixen. 4) Bakken.\n\nWat doe je **direct vóór mixen**?",
         options: ["Meel + melk doen","Bakken","Kom pakken","Niets"],
         answer: 0,
-        wrongHints: [null,"Komt na mixen.","Klopt ook (stap 1) — maar de stap DIRECT vóór is anders.","Wel iets — je moet eerst ingrediënten erin doen."],
+        wrongHints: [null,"Komt na mixen.","Dat is stap 1 — maar welke stap staat DIRECT vóór mixen?","Wel iets — kijk welke stap vlak vóór mixen staat."],
       },
       {
         q: "Stappen: 1) Spullen pakken. 2) Boterhammen smeren. 3) Inpakken. 4) Naar school.\n\n**Welke stap mist** als je beleg op je boterham wil?",
@@ -260,7 +260,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een beslisboom?", tekst: "Een **beslisboom** is een schema waarmee je via **JA/NEE-vragen** of **getallen-vergelijkingen** tot een conclusie komt.\n\nVoorbeeld:\n```\nIs score ≥ 546? → JA → VWO\n                  → NEE → Is score ≥ 536? → JA → HAVO\n                                            → NEE → VMBO\n```\n\nVeel gebruikt bij: schooladvies, medische diagnose, kledings-keuze (warm/koud), recept-keuze." },
             { titel: "Stap voor stap: score 540", tekst: "Voor score **540** gaan we door de boom:\n1. Is 540 ≥ 546? **NEE** (540 < 546, geen VWO)\n2. Is 540 ≥ 536? **JA** (540 > 536) → **HAVO** ✓\n\nDe regels:\n• 525-535: **VMBO-GL/TL**\n• 536-545: **HAVO**\n• 546+: **VWO**\n\n540 zit in 536-545 → HAVO." },
-            { titel: "Toets-feit: schooladvies in NL", tekst: "**Belangrijk**: dit voorbeeld is VERZONNEN. Echt schooladvies hangt af van **veel factoren**:\n• Oordeel van de leerkracht en school\n• Doorstroomtoets-score\n• Motivatie + werkhouding\n• Sociale + emotionele ontwikkeling\n\nHet **schooladvies van de school** is leidend. Scoort een kind op de Doorstroomtoets hoger, dan moet de school het advies heroverwegen (soms wordt het hoger)." },
+            { titel: "Toets-feit: schooladvies in NL", tekst: "**Belangrijk**: dit voorbeeld is VERZONNEN. Echt schooladvies hangt af van **veel factoren**:\n• Oordeel van de leerkracht en school\n• Doorstroomtoets-score\n• Motivatie + werkhouding\n• Sociale + emotionele ontwikkeling\n\nHet **schooladvies van de school** is leidend. Scoort een kind op de Doorstroomtoets hoger, dan moet de school het advies naar boven bijstellen (tenzij dat niet in het belang van het kind is)." },
           ],
           woorden: [
             { woord: "beslisboom", uitleg: "Schema dat via vragen of getal-vergelijkingen tot een keuze leidt." },

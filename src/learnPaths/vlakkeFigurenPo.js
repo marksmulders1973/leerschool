@@ -410,7 +410,7 @@ const steps = [
       { q: "Som van 3 hoeken in een driehoek?", options: ["180°","90°","360°","270°"], answer: 0, wrongHints: [null, "Eén hoek.", "Cirkel.", "Niet."] },
       { q: "Som van 4 hoeken in een vierhoek?", options: ["360°","180°","270°","90°"], answer: 0, wrongHints: [null, "Driehoek.", "Niet.", "Eén hoek."] },
       { q: "**Tegels** 1 m × 1 m. Vloer 3 × 4 m. Hoeveel tegels?", options: ["12","7","4","16"], answer: 0, wrongHints: [null, "Niet — niet som.", "Niet.", "Te veel."] },
-      { q: "Een **vierhoek** met 2 paar parallelle zijden = ?", options: ["Parallellogram","Cirkel","Driehoek","Vierkant"], answer: 0, wrongHints: [null, "Geen hoeken.", "Geen vier zijden.", "Wel maar specifieker."] },
+      { q: "Een **vierhoek** met 2 paar parallelle zijden = ?", options: ["Parallellogram","Cirkel","Driehoek","Trapezium"], answer: 0, wrongHints: [null, "Geen hoeken.", "Geen vier zijden.", "Een trapezium heeft maar één paar evenwijdige zijden."] },
       { q: "**Symmetrie-as** van een vierkant?", options: ["4 assen","2 assen","1 as","Geen"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Wel symmetrisch."] },
     ],
   },

@@ -131,7 +131,7 @@ const steps = [
             { woord: "Champollion", uitleg: "Frans wetenschapper die in 1822 hiërogliefen ontcijferde." },
             { woord: "Steen van Rosetta", uitleg: "Steen uit 196 v.Chr. met zelfde tekst in 3 schriften. Sleutel tot Egyptische taal." },
           ],
-          theorie: "Belangrijke schrift-systemen oudheid (toetsstof):\n• **Hiërogliefen** (Egypte, 3000 v.Chr.)\n• **Spijkerschrift** (Mesopotamië, ~3200 v.Chr.) — wigvormige tekens in klei\n• **Grieks alfabet** (Griekenland, ~800 v.Chr.) — basis voor Latijn + ons alfabet\n• **Romeinse cijfers** (I, V, X, L, C, D, M) — nog gebruikt voor klok + pausen-namen\n• **Chinees schrift** (ook ~3000 v.Chr., nog steeds gebruikt!)",
+          theorie: "Belangrijke schrift-systemen oudheid (toetsstof):\n• **Hiërogliefen** (Egypte, 3000 v.Chr.)\n• **Spijkerschrift** (Mesopotamië, ~3200 v.Chr.) — wigvormige tekens in klei\n• **Grieks alfabet** (Griekenland, ~800 v.Chr.) — basis voor Latijn + ons alfabet\n• **Romeinse cijfers** (I, V, X, L, C, D, M) — nog gebruikt voor klok + pausen-namen\n• **Chinees schrift** (~1200 v.Chr., nog steeds gebruikt!)",
           voorbeelden: [
             { type: "feit", tekst: "Onze letter 'A' komt via Grieks 'alpha' uit Fenicisch 'aleph' = os. De vorm leek vroeger op een omgekeerde ossenkop." },
             { type: "feit", tekst: "Cleopatra (laatste farao, gestorven 30 v.Chr.) sprak Grieks als hoofdtaal, niet Egyptisch — koningshuis was Grieks (Ptolemaeën-dynastie)." },

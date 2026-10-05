@@ -36,7 +36,7 @@ const steps = [
       },
       {
         q: "Hoeveel **slaap** bij puberteit?",
-        options: ["9-10 uur", "3 uur", "12+ uur", "Geen"],
+        options: ["8-10 uur", "3 uur", "12+ uur", "Geen"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel.", "Wel."],
       },

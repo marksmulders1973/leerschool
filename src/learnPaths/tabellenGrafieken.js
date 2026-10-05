@@ -136,7 +136,7 @@ const steps = [
         q: "Welke vorm voor **'aantal leerlingen per maand een jaar lang'**?",
         options: ["Lijngrafiek","Cirkeldiagram","Staafdiagram","Tabel zonder iets"],
         answer: 0,
-        wrongHints: [null,"Cirkel = delen-van-geheel, niet verloop in tijd.","Staaf werkt ook, maar lijn is voor verloop in tijd nóg duidelijker.","Tabel is goed voor exacte getallen, maar je ziet het verloop slecht."],
+        wrongHints: [null,"Cirkel = delen-van-geheel, niet verloop in tijd.","Staaf werkt ook, maar welke vorm laat een verloop door het jaar het duidelijkst zien?","Tabel is goed voor exacte getallen, maar je ziet het verloop slecht."],
         uitlegPad: {
           stappen: [{ titel: "Lijn = tijd", tekst: "Verloop over tijd (12 maanden) → lijngrafiek. Lijn maakt de TREND zichtbaar: stijgt of daalt het door het jaar? Veel beter dan staafdiagram voor tijdverloop." }],
           woorden: [{ woord: "lijngrafiek", uitleg: "Grafiek met punten verbonden door lijn. Toont VERLOOP/VERANDERING in tijd." }, { woord: "trend", uitleg: "Algemene richting (stijgt/daalt/blijft gelijk)." }],

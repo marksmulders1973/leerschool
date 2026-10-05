@@ -116,7 +116,7 @@ const steps = [
         q: "Wat ontdekte Newton **over licht**?",
         options: ["Wit licht bestaat uit kleuren (prisma)", "Niets", "Snelheid", "Bestaat niet"],
         answer: 0,
-        wrongHints: [null, "Wel.", "Einstein.", "Wel."],
+        wrongHints: [null, "Wel.", "De lichtsnelheid werd door een ander gemeten: de Deen Ole Rømer (1676).", "Wel."],
       },
     ],
   },
@@ -155,7 +155,7 @@ const steps = [
       },
       {
         q: "Welk schip nam Darwin?",
-        options: ["HMS Beagle", "Titanic", "Eindracht", "Sail Amsterdam"],
+        options: ["HMS Beagle", "Titanic", "Eendracht", "Sail Amsterdam"],
         answer: 0,
         wrongHints: [null, "Veel later.", "Niet.", "Niet expeditie."],
       },
@@ -335,7 +335,7 @@ const steps = [
         q: "Wie was **eerste vrouw met Nobelprijs** (1903)?",
         options: ["Marie Curie", "Florence Nightingale", "Rosalind Franklin", "Ada Lovelace"],
         answer: 0,
-        wrongHints: [null, "Verpleegkunde-pionier maar geen Nobel.", "DNA-onderzoek maar geen Nobel toegekend (te vroeg overleden + plagiaat).", "Eerste programmeur (1840s), vóór Nobel bestond."],
+        wrongHints: [null, "Verpleegkunde-pionier maar geen Nobel.", "DNA-onderzoek maar geen Nobel toegekend (te vroeg overleden; haar werk werd zonder erkenning gebruikt).", "Eerste programmeur (1840s), vóór Nobel bestond."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Marie Curie?", tekst: "**Marie Skłodowska-Curie** *(1867-1934)*. Geboren in Polen, werkte vooral in Frankrijk. Wetenschapper in **natuurkunde + chemie**. Werkte vaak met haar man Pierre Curie." },
@@ -364,7 +364,7 @@ const steps = [
       { q: "Wie ontdekten de **DNA-structuur** (samen)?", options: ["Watson + Crick (met Rosalind Franklin)","Einstein","Newton","Galileo"], answer: 0, wrongHints: [null, "Niet biologie.", "Niet.", "Niet."] },
       { q: "Wie was bekend van **chimpansee-onderzoek**?", options: ["Jane Goodall","Curie","Newton","Einstein"], answer: 0, wrongHints: [null, "Niet biologie.", "Niet.", "Niet."] },
       { q: "Wie bedacht de **telefoon**?", options: ["Alexander Graham Bell","Edison","Tesla","Newton"], answer: 0, wrongHints: [null, "Andere uitvindingen.", "Wisselstroom.", "Niet."] },
-      { q: "Wie kraakte de **enigma-code** in WO2?", options: ["Alan Turing","Einstein","Curie","Newton"], answer: 0, wrongHints: [null, "Einstein deed natuurkunde, niet codekraken.", "Curie was scheikundige, geen codekraker.", "Newton leefde 250 jaar vóór WO2."] },
+      { q: "Wie kraakte de **enigma-code** in WO2?", options: ["Alan Turing","Einstein","Curie","Newton"], answer: 0, wrongHints: [null, "Einstein deed natuurkunde, niet codekraken.", "Curie was scheikundige, geen codekraker.", "Newton leefde ruim 200 jaar vóór WO2."] },
       { q: "Wie was de **eerste mens op de maan**?", options: ["Neil Armstrong","Yuri Gagarin","Buzz Aldrin","Curie"], answer: 0, wrongHints: [null, "Eerste in ruimte.", "Met Armstrong, niet eerste.", "Niet."] },
       { q: "Wie schreef *Origin of Species*?", options: ["Charles Darwin","Newton","Einstein","Curie"], answer: 0, wrongHints: [null, "Newton = natuurkunde + zwaartekracht.", "Einstein = relativiteit, natuurkunde.", "Curie = radioactiviteit."] },
       { q: "Wie ontwikkelde de **fiets** (eerste vorm)?", options: ["Karl Drais (Duits)","Edison","Tesla","Newton"], answer: 0, wrongHints: [null, "Edison = gloeilamp + fonograaf.", "Tesla = wisselstroom + elektriciteit.", "Newton = zwaartekracht, geen voertuig."] },

@@ -94,7 +94,7 @@ const steps = [
         q: "Welk getal is het **kleinst**: 0, −1, +5, −10?",
         options: ["−10","−1","0","+5"],
         answer: 0,
-        wrongHints: [null,"Niet de kleinste — −10 is verder van nul aan min-kant.","Niet de kleinste.","De grootste."],
+        wrongHints: [null,"Niet de kleinste — er is een getal dat nog verder van nul aan de min-kant ligt.","Niet de kleinste.","De grootste."],
         uitlegPad: {
           stappen: [{ titel: "Verste links", tekst: "Op getalslijn: verste links = kleinst. −10 ligt het verst links." }],
           woorden: [{ woord: "kleinst", uitleg: "Verste naar links op getalslijn (= meest negatief)." }],
@@ -130,7 +130,7 @@ const steps = [
         q: "**−3 + 5** = ?",
         options: ["+2","−2","−8","+8"],
         answer: 0,
-        wrongHints: [null,"Andersom — 5 stappen rechts vanaf −3 brengt je op +2.","Te ver naar links — controleer richting.","Te ver naar rechts."],
+        wrongHints: [null,"Andersom — loop 5 stappen naar rechts vanaf −3: kom je onder of boven nul uit?","Te ver naar links — controleer richting.","Te ver naar rechts."],
         uitlegPad: {
           stappen: [{ titel: "Naar rechts", tekst: "Begin op −3. 5 stappen rechts: −3→−2→−1→0→1→2." }],
           woorden: [{ woord: "optellen vanaf negatief", uitleg: "Plus = naar rechts. Vanaf −3 + 5 → +2." }],
@@ -291,7 +291,7 @@ const steps = [
         q: "Welk getal is het **grootst**: −8, −2, 0, −15?",
         options: ["0","−2","−8","−15"],
         answer: 0,
-        wrongHints: [null,"Tweede — 0 is groter.","Niet — 0 en −2 zijn beide groter.","Kleinste."],
+        wrongHints: [null,"Er ligt nog een getal rechts van −2 op de getalslijn.","Er liggen nog getallen rechts van −8.","Kleinste."],
         uitlegPad: {
           stappen: [{ titel: "Verste rechts", tekst: "Op getalslijn: rechts = groter. 0 ligt rechts van alle negatieven." }],
           woorden: [{ woord: "grootst", uitleg: "Verste rechts op getalslijn." }],

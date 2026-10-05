@@ -208,7 +208,7 @@ Een goed nieuwsbericht beantwoordt al deze vragen. Jij gebruikt ze als een **vra
         },
       },
       {
-        q: "*\"De elfjarige Noa uit Vissersdam won gisteren het NK schaken voor kinderen.\"* — Op welke twee gouden vragen geeft deze ene zin antwoord?",
+        q: "*\"De elfjarige Noa uit Vissersdam won het NK schaken voor kinderen.\"* — Op welke twee gouden vragen geeft deze ene zin antwoord?",
         options: [
           "Wie en wat",
           "Waar en waarom",

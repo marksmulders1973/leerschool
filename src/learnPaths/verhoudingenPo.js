@@ -163,7 +163,7 @@ const steps = [
         q: "**3 broden = € 6**. Wat kosten **5 broden**?",
         options: ["€ 10","€ 9","€ 12","€ 8"],
         answer: 0,
-        wrongHints: [null,"Te weinig — eerst per brood: € 6 ÷ 3 = €2. Dus 5 × €2.","Te veel — dat is de prijs van 6 broden.","Te weinig."],
+        wrongHints: [null,"Te weinig — reken eerst uit wat 1 brood kost en neem dat 5 keer.","Te veel — dat is de prijs van 6 broden.","Te weinig."],
         uitlegPad: {
           stappen: [{ titel: "Via 1 brood", tekst: "1 brood: €6÷3 = €2. 5 broden: 5 × €2 = €10." }],
           woorden: [{ woord: "stuksprijs", uitleg: "Prijs per 1 stuk = totaal ÷ aantal." }],
@@ -428,7 +428,7 @@ const steps = [
         q: "Een **muur van 4 m²** kost **€ 12** verf. Hoeveel verf nodig voor **muur van 10 m²**?",
         options: ["€ 30","€ 20","€ 25","€ 40"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer prijs per m².", "Te weinig — heb je 10×€3 of 10×€2,50?", "Te veel — controleer hoeveelheid per m²."],
+        wrongHints: [null, "Te weinig — controleer prijs per m².", "Te weinig — bereken eerst de prijs per m² en vermenigvuldig dan met 10.", "Te veel — controleer hoeveelheid per m²."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: prijs per m²", tekst: "€ 12 voor 4 m² → 12 ÷ 4 = **€ 3 per m²**. Dit is de **eenheidsprijs**." },

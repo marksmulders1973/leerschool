@@ -334,10 +334,10 @@ const steps = [
         },
       },
       {
-        q: "Waarschijnlijk wordt het morgen mooi weer. — Welk woord wijst op een mening?",
-        options: ["Waarschijnlijk", "morgen", "mooi", "weer"],
+        q: "Waarschijnlijk wordt het morgen droog. — Welk woord wijst op een mening?",
+        options: ["Waarschijnlijk", "morgen", "droog", "het"],
         answer: 0,
-        wrongHints: [null, "'Morgen' is een tijdaanduiding — feit.", "Dat het mooi is kun je zien, maar 'waarschijnlijk' maakt de hele zin onzeker.", "'Weer' is gewoon het onderwerp."],
+        wrongHints: [null, "'Morgen' is een tijdaanduiding — feit.", "Of het droog is, kun je morgen gewoon zien — dat is te controleren.", "'Het' is een gewoon woordje, geen oordeel."],
         uitlegPad: {
           stappen: [{ titel: "'Waarschijnlijk' = onzekerheid/mening", tekst: "'Waarschijnlijk' geeft aan dat iemand dit denkt maar niet zeker weet. Dat is een mening-signaalwoord." }],
           niveaus: {

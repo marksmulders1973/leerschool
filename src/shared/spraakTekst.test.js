@@ -113,3 +113,14 @@ describe("maakMeeleesPlan + woordIndexBijChar (karaoke-meelezen)", () => {
     expect(woordIndexBijChar(plan, 5)).toBe(-1);
   });
 });
+
+describe("kale bedragen in een geld-tekst (Mark 5 okt 2026)", () => {
+  it("leest 4,00 en 10,00 als euro's zodra de tekst over geld gaat", () => {
+    const plan = maakMeeleesPlan("Je hebt een briefje van € 10 en koopt iets van € 3,45. Eerst van 3,45 naar 4,00, dan van 4,00 naar 10,00. Hoeveel cent?");
+    expect(plan.gesproken).toContain("van drie euro vijfenveertig naar vier euro, dan van vier euro naar tien euro.");
+    expect(plan.gesproken).not.toContain("komma nul nul");
+  });
+  it("laat kommagetallen zonder geld-context met rust", () => {
+    expect(schoonVoorSpraak("0,25 is hetzelfde als 1/4.")).toBe("0,25 is hetzelfde als 1/4.");
+  });
+});

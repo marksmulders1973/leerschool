@@ -288,7 +288,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
   // ── Stap 2: oefentekst diepzee ────────────────────────────────────
   {
     title: "Oefentekst — leven in de diepzee",
-    explanation: tekstDiepzee + "\n\n*In deze tekst staan vijf lastige woorden. Gebruik de vier trucs uit stap 1: kijk om het woord heen, zoek voorbeelden, let op tegenstellingen, of haal het woord uit elkaar. Beantwoord de 5 vragen.*",
+    explanation: tekstDiepzee + "\n\n*In deze tekst staan vijf lastige woorden. Gebruik de vier trucs uit stap 1: kijk om het woord heen, zoek voorbeelden, let op tegenstellingen, of haal het woord uit elkaar. Beantwoord de 7 vragen.*",
     checks: [
       {
         q: "Wat betekent *'het krioelt er van het leven'* in deze tekst?",
@@ -529,7 +529,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         wrongHints: [
           null,
           "Er staat niets over gif. Wat doen de kleine diertjes als ze het lichtje zien?",
-          "Het aanhangsel ís het lokaas, maar ze zijn niet hetzelfde. Wat doet het lokaas?",
+          "Het aanhangsel wordt hier als lokaas gebrúíkt — maar de vraag is wat het woord 'lokaas' betekent. Wat doet het met de kleine diertjes?",
           "De vis ziet niets — hij lokt anderen. Wat doet het lichtje met de kleine diertjes?",
         ],
         uitlegPad: {
@@ -785,7 +785,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
   // ── Stap 4: Doorstroomtoets-mix vulkanen ──────────────────────────
   {
     title: "Doorstroomtoets-mix — vulkanen",
-    explanation: tekstVulkanen + "\n\n*Dit is de generale repetitie: vijf vragen precies zoals op de Doorstroomtoets. Gebruik alle vier de trucs door elkaar. Lees eerst de hele tekst, lees dan per vraag de zin met het woord nog één keer terug.*",
+    explanation: tekstVulkanen + "\n\n*Dit is de generale repetitie: zeven vragen precies zoals op de Doorstroomtoets. Gebruik alle vier de trucs door elkaar. Lees eerst de hele tekst, lees dan per vraag de zin met het woord nog één keer terug.*",
     checks: [
       {
         q: "Wat betekent *'magma'* in deze tekst?",

@@ -308,9 +308,9 @@ const steps = [
       },
       {
         q: "Een **kikkervisje** wordt later ... ?",
-        options: ["Kikker", "Vis", "Pad", "Salamander"],
+        options: ["Kikker", "Vis", "Hagedis", "Salamander"],
         answer: 0,
-        wrongHints: [null, "Zwemt wel, maar krijgt later poten en kruipt op het land — geen echte vis.", "Pad is een ander amfibie — komt uit andere eitjes.", "Salamander is een ander amfibie."],
+        wrongHints: [null, "Zwemt wel, maar krijgt later poten en kruipt op het land — geen echte vis.", "Hagedis is een reptiel — komt uit een ei op het land, niet uit het water.", "Salamander is een ander amfibie."],
       },
       {
         q: "Welk dier is een **amfibie**?",

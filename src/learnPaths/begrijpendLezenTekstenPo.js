@@ -344,7 +344,7 @@ const steps = [
       },
       {
         // letterlijk — volgorde
-        q: "Welke stap doe je vóórdat je de sluiting maakt?",
+        q: "Welke stap doe je vlak vóórdat je de sluiting maakt?",
         options: [
           "Meten of de keten om je pols past",
           "De paperclips verven met nagellak",
@@ -789,14 +789,14 @@ const steps = [
         options: [
           "Dat klopt — het is een uniek Nederlands kenmerk",
           "Dat klopt voor heel Europa, niet alleen Nederland",
-          "De tekst noemt geen aantallen",
+          "De tekst zegt hier niets over",
           "Alleen in Amsterdam is dat zo",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "De tekst zegt expliciet 'uniek in de wereld' — dus alleen Nederland.",
-          "De laatste zin geeft juist dat aantal aan.",
+          "Wat zegt de tekst precies: geldt dit voor meer landen, of is het 'uniek'?",
+          "Lees de laatste alinea nog eens — daar staat iets over fietsen en inwoners.",
           "Geen specifieke stad — de tekst spreekt over heel Nederland.",
         ],
         uitlegPad: {

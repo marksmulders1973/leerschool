@@ -206,7 +206,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Kijk naar de werkwoorden", tekst: "'Knip', 'vouw', 'plak' — drie opdrachten, elk aan het begin van een zin. Die werkwoorden vertellen jou wat je moet doen." },
-            { titel: "Kijk naar de volgorde", tekst: "'Daarna', 'dan' — de stappen staan op volgorde. Dat is typisch voor een handleiding of bouwinstructie." },
+            { titel: "Kijk naar de volgorde", tekst: "'Daarna' — de stappen staan op volgorde. Dat is typisch voor een handleiding of bouwinstructie." },
             { titel: "Welk doel?", tekst: "Stappen geven in een vaste volgorde zodat jij iets kunt maken = instrueren." },
           ],
           niveaus: {
@@ -898,8 +898,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er staan feiten in (wie won, wat kozen ze), maar het doel is niet om dingen uit te leggen — het is om het leuk te maken om te lezen.",
-          "Het is geen reclame voor pizza. Wat doet dit stukje met de lezer — informeren of laten lachen/genieten?",
+          "Er staan feiten in (wie won, wat kozen ze) — maar leer je hier iets nieuws over spelling, of lees je wat een klas beleefde?",
+          "Probeert het stukje je ergens van te overtuigen? Staat er een mening of een oproep in?",
           "Staan er stappen of instructies in? Of gaat het over wat er is gebeurd?",
         ],
         uitlegPad: {

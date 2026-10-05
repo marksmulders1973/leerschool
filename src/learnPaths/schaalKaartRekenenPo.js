@@ -574,7 +574,7 @@ const steps = [
           "Vermenigvuldig altijd met het schaalgetal",
         ],
         answer: 0,
-        wrongHints: [null, "Dat is stap 3 — eerst de richting bepalen.", "Delen is alleen voor echt → kaart.", "Vermenigvuldigen is alleen voor kaart → echt."],
+        wrongHints: [null, "Omzetten naar km is pas de laatste stap — wat moet je éérst weten?", "Delen is alleen voor echt → kaart.", "Vermenigvuldigen is alleen voor kaart → echt."],
         uitlegPad: {
           stappen: [
             { titel: "Denk aan de twee richtingen", tekst: "Bij elke schaalvraag kun je maar twee kanten op: van de kaart naar de werkelijkheid, of van de werkelijkheid naar de kaart." },

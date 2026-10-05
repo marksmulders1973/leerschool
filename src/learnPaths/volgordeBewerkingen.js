@@ -92,7 +92,7 @@ const steps = [
         q: "Wat doe je **eerst** als er + en × in een som staan?",
         options: ["Vermenigvuldigen","Optellen","Maakt niet uit","Van links naar rechts"],
         answer: 0,
-        wrongHints: [null,"Andersom — × is sterker dan +.","Wel uit — er is een vaste regel.","Niet bij rekenen — er is een volgorde-regel."],
+        wrongHints: [null,"Andersom — welke van de twee is de sterkere bewerking?","Wel uit — er is een vaste regel.","Niet bij rekenen — er is een volgorde-regel."],
         uitlegPad: {
           stappen: [{ titel: "× sterker", tekst: "Vermenigvuldigen (×) gaat altijd vóór optellen (+). Vaste regel." }],
           woorden: [{ woord: "sterkte", uitleg: "× en ÷ zijn 'sterker' dan + en −. Doen ze eerst." }],
@@ -145,7 +145,7 @@ const steps = [
         q: "**6 × 2 + 4 × 3** = ?",
         options: ["24","36","48","20"],
         answer: 0,
-        wrongHints: [null,"Welke twee onderdelen pak je eerst — beide ×? Doe ze los van elkaar.","Niet (6×2+4)×3 — × bindt sterker dan + zonder haakjes.","Te weinig — heb je beide × meegenomen?"],
+        wrongHints: [null,"Dat zou 6×(2+4) zijn — maar er staan geen haakjes. Pak eerst beide × los van elkaar.","Te veel — dat zou (6×2+4)×3 zijn; zonder haakjes bindt × sterker dan +.","Te weinig — heb je beide × meegenomen?"],
         uitlegPad: {
           stappen: [{ titel: "Beide × eerst", tekst: "Eerst beide ×: 6×2=12, 4×3=12. Dan +: 12+12=24." }],
           woorden: [{ woord: "× bindt", uitleg: "× verbindt twee getallen sterker dan + ze van elkaar scheidt." }],
@@ -431,7 +431,7 @@ const steps = [
         q: "**Welke is sterker dan +?**",
         options: ["× (vermenigvuldigen)","− (aftrekken)","Geen — gelijk","( (haakje)"],
         answer: 0,
-        wrongHints: [null,"− is even sterk als +.","× komt voor +.","Haakje is geen bewerking maar groep."],
+        wrongHints: [null,"− is even sterk als +.","Wel — er is een vaste volgorde-regel.","Haakje is geen bewerking maar groep."],
         uitlegPad: {
           stappen: [{ titel: "× sterker", tekst: "× en ÷ zijn sterker dan + en −. + en − zijn even sterk." }],
           woorden: [{ woord: "sterkte", uitleg: "Welke bewerking gaat eerst in volgorde-regel." }],

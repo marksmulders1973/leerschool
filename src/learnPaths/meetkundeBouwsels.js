@@ -401,7 +401,7 @@ const steps = [
       { q: "Volume van een kubus met **ribbe 3 cm**?", options: ["27 cm³","9 cm³","6 cm³","12 cm³"], answer: 0, wrongHints: [null, "Oppervlakte van 1 vlak.", "Niet.", "Omtrek vlak."] },
       { q: "Volume balk **5 × 4 × 2** cm?", options: ["40 cm³","11 cm³","20 cm³","80 cm³"], answer: 0, wrongHints: [null, "Som.", "2 dimensies.", "×2 fout."] },
       { q: "Een **kubus** heeft hoeveel ribben?", options: ["12","8","6","4"], answer: 0, wrongHints: [null, "Hoekpunten.", "Vlakken.", "Niet."] },
-      { q: "Een **kubus** heeft hoeveel **vlakken**?", options: ["6","4","8","12"], answer: 0, wrongHints: [null, "Niet — 6 vlakken.", "Hoekpunten.", "Ribben."] },
+      { q: "Een **kubus** heeft hoeveel **vlakken**?", options: ["6","4","8","12"], answer: 0, wrongHints: [null, "Te weinig — tel ook de boven- en onderkant mee.", "Hoekpunten.", "Ribben."] },
       { q: "1 dm³ = hoeveel L?", options: ["1","100","1000","10"], answer: 0, wrongHints: [null, "Te veel — denk aan de directe omzetting dm³ ↔ liter.", "Te veel — dat is cm³ per liter.", "Te veel — komma 1 plek verkeerd."] },
       { q: "Aquarium 50×30×40 cm. Volume in cm³?", options: ["60.000","12.000","120","6000"], answer: 0, wrongHints: [null, "Te weinig — controleer 50 × 30 × 40.", "Veel te weinig — vergeet je een nul?", "Komma 1 plek verkeerd."] },
       { q: "1 m³ = hoeveel L?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — komma verkeerd.", "Veel te weinig — denk groot, 1 m³ = veel liters.", "Te veel — komma 1 plek verkeerd."] },

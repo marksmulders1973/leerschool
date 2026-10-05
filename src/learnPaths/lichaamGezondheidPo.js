@@ -294,7 +294,7 @@ const steps = [
   {
     title: "Schijf van Vijf — gezond eten",
     explanation:
-      "De **Schijf van Vijf** is een Nederlandse manier om te leren wat **gezond** eten is. Elke dag moet je iets uit **alle 5 vakken** eten.\n\n**De 5 vakken**:\n1. **Groente + fruit** — vitamines + vezels (250g groente + 2 stuks fruit per dag).\n2. **Brood + graan + aardappel + pasta + rijst** — energie (koolhydraten).\n3. **Vis + peulvruchten + vlees + ei + noten** — eiwitten (bouwstof).\n4. **Zuivel + kaas** — calcium voor botten.\n5. **Smeer- + bereidingsvet** — onverzadigd vet (zoals olie en zachte margarine).\n\n**+ niet vergeten**: **water drinken** (~1,5 liter per dag).\n\n**Wat hoort NIET in de Schijf van Vijf?**\n• **Snoep + koek + frisdrank + chips** — heten 'extra's', mogen soms maar zijn niet voor elke dag.\n• **Veel zout, suiker, verzadigd vet** — niet gezond in grote hoeveelheden.\n\n**Toets-strikvraag** — *'Welke is groente?'*\n• Tomaat = groente *(Toets-realiteit, ook al is het biologisch een vrucht)*.\n• Aardappel = NIET in groente-vak, maar in koolhydraten-vak.\n• Banaan = fruit.\n• Pinda = peulvrucht (vak 3, bouwstof).\n\n**Andere belangrijke regels**:\n• **Eet langzaam** — geeft maag tijd om te zeggen 'genoeg!'.\n• **Niet te veel suiker** — slecht voor tanden + gewicht.\n• **Niet te veel zout** — slecht voor hart en nieren.\n• **Niet te veel verzadigd vet** *(boter, vet vlees)* — verstopt slagaders.\n• **Wel onverzadigd vet** *(olijfolie, noten, vis)* — gezond.\n\n**Wat is een 'koolhydraat'?**\nEnergie uit brood, pasta, rijst, aardappel. Je lichaam zet het om in suiker → energie om te bewegen + denken.",
+      "De **Schijf van Vijf** is een Nederlandse manier om te leren wat **gezond** eten is. Elke dag moet je iets uit **alle 5 vakken** eten.\n\n**De 5 vakken**:\n1. **Groente + fruit** — vitamines + vezels (250g groente + 2 stuks fruit per dag).\n2. **Brood + graan + aardappel + pasta + rijst** — energie (koolhydraten).\n3. **Zuivel, noten, vis, peulvruchten, vlees + ei** — eiwitten (bouwstof) + calcium voor botten.\n4. **Smeer- + bereidingsvet** — onverzadigd vet (zoals olie en zachte margarine).\n5. **Dranken** — water, thee en koffie zonder suiker (~1,5 liter per dag).\n\n**Wat hoort NIET in de Schijf van Vijf?**\n• **Snoep + koek + frisdrank + chips** — heten 'extra's', mogen soms maar zijn niet voor elke dag.\n• **Veel zout, suiker, verzadigd vet** — niet gezond in grote hoeveelheden.\n\n**Toets-strikvraag** — *'Welke is groente?'*\n• Tomaat = groente *(Toets-realiteit, ook al is het biologisch een vrucht)*.\n• Aardappel = NIET in groente-vak, maar in koolhydraten-vak.\n• Banaan = fruit.\n• Pinda = peulvrucht (vak 3, bouwstof).\n\n**Andere belangrijke regels**:\n• **Eet langzaam** — geeft maag tijd om te zeggen 'genoeg!'.\n• **Niet te veel suiker** — slecht voor tanden + gewicht.\n• **Niet te veel zout** — slecht voor hart en nieren.\n• **Niet te veel verzadigd vet** *(boter, vet vlees)* — verstopt slagaders.\n• **Wel onverzadigd vet** *(olijfolie, noten, vis)* — gezond.\n\n**Wat is een 'koolhydraat'?**\nEnergie uit brood, pasta, rijst, aardappel. Je lichaam zet het om in suiker → energie om te bewegen + denken.",
     checks: [
       {
         q: "Hoeveel vakken heeft de **Schijf van Vijf**?",
@@ -304,8 +304,8 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "De naam zegt het al — 'Vijf'", tekst: "De **Schijf van Vijf** heet zo omdat hij **5 vakken** heeft. Vandaar 'Vijf' in de naam. Elke dag eet je iets uit alle 5 vakken om gezond te blijven." },
-            { titel: "De 5 vakken kort", tekst: "1) **Groente + fruit** (vitamines)\n2) **Brood/aardappel/pasta/rijst** (energie)\n3) **Vis/vlees/ei/noten/peulvruchten** (eiwit, bouwstof)\n4) **Zuivel + kaas** (calcium, sterke botten)\n5) **Smeer- + bereidingsvet** (gezond vet, bv. olijfolie)." },
-            { titel: "Extra: water", tekst: "Naast de 5 vakken hoort ook **water drinken** erbij — ~1,5 liter per dag. Water is geen 'vak' maar onmisbaar voor je lichaam." },
+            { titel: "De 5 vakken kort", tekst: "1) **Groente + fruit** (vitamines)\n2) **Brood/aardappel/pasta/rijst** (energie)\n3) **Zuivel/noten/vis/peulvruchten/vlees/ei** (eiwit + calcium, bouwstof)\n4) **Smeer- + bereidingsvet** (gezond vet, bv. olijfolie)\n5) **Dranken** (water, thee, koffie zonder suiker)." },
+            { titel: "Vak 5 = drinken", tekst: "Water drinken is dus óók een vak van de Schijf: **~1,5 liter per dag** water, thee of koffie zonder suiker. Frisdrank en sap horen er niet bij." },
           ],
           woorden: [
             { woord: "Schijf van Vijf", uitleg: "Nederlandse richtlijn voor gezond eten, met 5 vakken." },
@@ -334,7 +334,7 @@ const steps = [
         q: "Wat is NIET in de Schijf van Vijf?",
         options: ["Snoep", "Brood", "Melk", "Sla"],
         answer: 0,
-        wrongHints: [null, "Brood is koolhydraat (vak 2).", "Melk is zuivel (vak 4).", "Sla is groente (vak 1)."],
+        wrongHints: [null, "Brood zit in het brood/graan-vak.", "Melk zit in het zuivel-vak.", "Sla zit in het groente/fruit-vak."],
       },
       {
         q: "Hoeveel **water** moet je drinken per dag?",
@@ -352,10 +352,10 @@ const steps = [
       "Naast eten zijn er andere dingen die belangrijk zijn voor **gezond blijven**.\n\n**Hygiëne — schoonhouden**:\n• **Handen wassen** vóór eten + na toilet + na buiten zijn. Met **zeep**, **20 seconden**. Hierdoor minder ziektes.\n• **Tanden poetsen** 2× per dag, 2 minuten lang. Voorkomt gaatjes.\n• **Douchen** of in bad — minimaal een paar keer per week.\n• **Schone kleren** — bacteriën gaan in vuile kleren groeien.\n• **Niezen in elleboog** — om druppeltjes niet rond te slingeren.\n\n**Slaap**:\n• Kinderen *(6-12 jr)*: **9-11 uur** per nacht.\n• Tieners: 8-10 uur.\n• Volwassenen: 7-9 uur.\n• Tijdens slaap **herstelt** het lichaam + verwerken hersenen wat je geleerd hebt.\n• **Te weinig slaap** = moe, niet goed kunnen leren, vaker ziek.\n\n**Sporten + bewegen**:\n• **Elke dag** minimaal 1 uur bewegen voor kinderen.\n• Voorbeelden: fietsen naar school, voetbal, dansen, zwemmen, springen.\n• Voordelen:\n  - Sterkere spieren + botten.\n  - Betere conditie.\n  - Beter slapen.\n  - Vrolijker gevoel *(geluksstofjes in de hersenen)*.\n• **Te lang stilzitten** = niet gezond.\n\n**Beeldscherm-tijd**:\n• Niet te veel TV / tablet / telefoon.\n• Vooral niet vlak voor slapengaan *(blauw licht houdt je wakker)*.\n• Ouders geven vaak een limiet — bv. 1-2 uur op een schooldag.\n\n**toetsvraag**: 'Waarom handen wassen?' → om bacteriën weg te krijgen en ziekte te voorkomen.",
     checks: [
       {
-        q: "Hoe **lang** moet je handen wassen?",
+        q: "Hoe lang moet je je handen **minstens** wassen (met zeep)?",
         options: ["~20 seconden", "5 seconden", "1 minuut", "Zo kort mogelijk"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang.", "Niet zo kort — minstens 20 sec."],
+        wrongHints: [null, "Te kort.", "Mag, maar het advies noemt een kortere minimumtijd.", "Niet zo kort — er is een minimum."],
       },
       {
         q: "Hoeveel **uur slaap** heeft een kind van **10** ongeveer nodig?",
@@ -400,7 +400,7 @@ const steps = [
         q: "Welke is NIET in de Schijf van Vijf?",
         options: ["Chips", "Volkorenbrood", "Appel", "Kaas"],
         answer: 0,
-        wrongHints: [null, "Brood = vak 2.", "Appel = vak 1.", "Kaas = vak 4."],
+        wrongHints: [null, "Brood = brood/graan-vak.", "Appel = groente/fruit-vak.", "Kaas = zuivel-vak."],
       },
       {
         q: "Hoeveel belangrijke **soorten bloedcellen** zijn er?",

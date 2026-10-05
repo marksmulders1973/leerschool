@@ -79,7 +79,7 @@ const steps = [
             { type: "stap", tekst: "Eten geeft je energie. Niet 'jij maakt energie', maar: voedsel-energie wordt omgezet in spier-energie." },
             { type: "stap", tekst: "Auto: benzine (chemisch) → ontploft in motor (warmte+beweging) → wielen draaien (kinetisch)." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij elke vraag 'maakt het energie?' is het antwoord: nee, omzet. Behalve in atomaire reactor — daar wordt massa omgezet in energie (Einstein E=mc²)." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Bij elke vraag 'maakt het energie?' is het antwoord: nee, omzetten. Ook in een kernreactor wordt niets 'gemaakt': daar wordt massa omgezet in energie (Einstein E=mc²)." }],
           niveaus: {
             basis: "Energie wordt niet gemaakt, alleen omgezet (wet van behoud).",
             simpeler: "Windmolen ZET wind om in stroom. Niet 'maken'.",
@@ -109,7 +109,7 @@ const steps = [
           stappen: [
             { titel: "Wat is het Groningen-gasveld?", tekst: "Het **Groningen-gasveld** (vooral onder Slochteren) is een van de **grootste aardgasvelden ter wereld**. Ontdekt in 1959, bracht NL miljarden euro's op. Veel huizen kookten + verwarmden op Gronings gas." },
             { titel: "Probleem: aardbevingen", tekst: "Door het wegpompen van gas zakt de bodem en ontstaan **aardbevingen**. Tienduizenden Groningse huizen kregen scheuren. Mensen werden bang, sommigen moesten verhuizen. Grote schade + protest." },
-            { titel: "Sluiting 2024", tekst: "Na jarenlange afbouw heeft de NL-regering besloten het veld **per 1 oktober 2023 dicht** te draaien (laatste productie in 2024). NL moet nu gas importeren uit andere landen (Noorwegen, VS, Qatar)." },
+            { titel: "Sluiting 2024", tekst: "Na jarenlange afbouw heeft de NL-regering besloten het veld **per 1 oktober 2023 dicht** te draaien (definitief gesloten in april 2024). NL moet nu gas importeren uit andere landen (Noorwegen, VS, Qatar)." },
           ],
           woorden: [
             { woord: "Slochteren", uitleg: "Plaats in Groningen waar gas in 1959 werd ontdekt." },

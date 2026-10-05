@@ -135,7 +135,7 @@ const steps = [
           woorden: [{ woord: "U-vorm", uitleg: "Beleefde aanspreekvorm in NL: u (jij) en uw (jouw)." }],
           theorie: "Toets-regel: formele brief → altijd u/uw. Informele brief → je/jouw of jij.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Formeel: 'Hoe gaat het met u?' Informeel: 'Hoe gaat het met jou?'" }],
-          basiskennis: [{ onderwerp: "Hoofdletter U", uitleg: "U met hoofdletter is extra-beleefd (bv. aan koningshuis). Normaal kleine 'u'." }],
+          basiskennis: [{ onderwerp: "Kleine letter u", uitleg: "In brieven schrijf je 'u' altijd met een kleine letter. Alleen in religieuze teksten (voor God) zie je een hoofdletter U." }],
           niveaus: { basis: "Formeel = u.", simpeler: "Beleefd → u en uw (niet jij/je).", nogSimpeler: "U-vorm = formeel." },
         },
       },
@@ -385,7 +385,7 @@ const steps = [
         wrongHints: [null, "Schoolboek geeft geen mening — feiten.", "Niet — niet bedoeld als grap.", "Niet — geen stappen."],
         uitlegPad: {
           stappen: [{ titel: "Schoolboek = feiten", tekst: "Schoolboek-paragraaf geeft feiten (data, mensen, gebeurtenissen). Geen mening, geen reclame, geen stappen. → Informeren." }],
-          niveaus: { basis: "Schoolboek = informeren.", simpeler: "Feiten zonder mening = Informeren.", nogSimpeler: "I van OBIA." },
+          niveaus: { basis: "Schoolboek = informeren.", simpeler: "Feiten zonder mening = Informeren.", nogSimpeler: "B van OBIA (beschrijven/informeren)." },
         },
       },
       {

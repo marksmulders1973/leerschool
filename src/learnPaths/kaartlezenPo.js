@@ -307,9 +307,9 @@ const steps = [
       },
       {
         q: "Schaal 1:25.000. **1 cm** = ___ m.",
-        options: ["250 m","25 m","2.500 m","2,5 km"],
+        options: ["250 m","25 m","2.500 m","25 km"],
         answer: 0,
-        wrongHints: [null,"Reken opnieuw — 1 cm op kaart × 25.000 = ?","Te groot — kijk welke eenheid de vraag wil.","Klopt qua afstand maar fout uitgedrukt — let op of het antwoord in m of km moet."],
+        wrongHints: [null,"Reken opnieuw — 1 cm op kaart × 25.000 = ?","Dat is tien keer te veel — 25.000 cm is hoeveel meter?","Veel te veel — 25.000 cm is geen 25 kilometer."],
         uitlegPad: {
           stappen: [{ titel: "1 × 25.000", tekst: "1 cm × 25.000 = 25.000 cm = 250 m." }],
           woorden: [{ woord: "1:25.000", uitleg: "Wandelroute-schaal — 4× zo gedetailleerd als 1:100.000." }],
@@ -458,7 +458,7 @@ const steps = [
       { q: "Een **plattegrond** is?", options: ["Kaart van klein gebied (huis/school)","Wereldkaart","Atlas","Geen kaart"], answer: 0, wrongHints: [null, "Veel groter.", "Boek met veel kaarten.", "Wel een kaart."] },
       { q: "Wat is de afkorting van **kilometer**?", options: ["km","kg","kn","kml"], answer: 0, wrongHints: [null, "Dat is kilo-gram.", "Niet bestaand.", "Niet."] },
       { q: "Welke richting zit **tegenover** zuidoost?", options: ["Noordwest","Noordoost","Zuidwest","Zuid"], answer: 0, wrongHints: [null, "Draai beide helften om: zuid→noord én oost→west.", "De zuid/noord-helft draait wél, maar de oost/west-helft ook.", "Tegenover een diagonaal ligt weer een diagonaal, geen rechte richting."] },
-      { q: "Wat doe je bij een **schaalbalk** op kaart?", options: ["Meten met liniaal om afstand te weten","Niets","Tekenen","Tellen"], answer: 0, wrongHints: [null, "Wel iets.", "Niet — meten.", "Niet relevant."] },
+      { q: "Wat doe je bij een **schaalbalk** op kaart?", options: ["Meten met liniaal om afstand te weten","Niets","Tekenen","Inkleuren"], answer: 0, wrongHints: [null, "Wel iets.", "Niet — meten.", "Kleuren helpt je niet om een afstand te weten."] },
       { q: "Welke schaal heeft een atlas-kaart van NL meestal?", options: ["1:500.000 of meer","1:10","1:100","1:50"], answer: 0, wrongHints: [null, "Bij die schaalverhouding zou één centimeter op de kaart maar een heel klein stukje in werkelijkheid zijn — past heel Nederland dan op één kaart?", "Ook bij die schaalverhouding kom je er niet mee — hoe groot moet het tweede getal zijn voor een landskaart?", "Hoe groter het tweede getal van de schaal, hoe meer werkelijk gebied op de kaart past."] },
     ],
   },

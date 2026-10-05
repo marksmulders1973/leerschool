@@ -191,7 +191,7 @@ const steps = [
       {
         q: "Een renner gaat **50 km met 25 km/h** + **50 km met 50 km/h**. Gemiddelde?",
         options: [
-          "33,3 km/h (NIET 37,5!)",
+          "33,3 km/h",
           "37,5 km/h",
           "75 km/h",
           "25 km/h"
@@ -513,7 +513,7 @@ const steps = [
       {
         q: "Trein om 14:30 vertrek, ongeveer 250 km met 100 km/h. Aankomst?",
         options: [
-          "17:00 (2,5 uur later)",
+          "17:00",
           "16:00",
           "18:00",
           "15:00"

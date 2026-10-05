@@ -155,9 +155,9 @@ const steps = [
       },
       {
         q: "Je zoekt **'oligarchie'** op in het woordenboek. Bij welk woord staat het het DICHTST in de buurt?",
-        options: ["oliebol","monarchie","democratie","oligine"],
+        options: ["oliebol","monarchie","democratie","oven"],
         answer: 0,
-        wrongHints: [null, "Niet — begint met 'm', andere bladzijde.", "Niet — begint met 'd'.", "Niet bestaand woord."],
+        wrongHints: [null, "Niet — begint met 'm', andere bladzijde.", "Niet — begint met 'd'.", "Begint wel met 'o', maar de tweede letter is anders — verder weg."],
         uitlegPad: {
           stappen: [{ titel: "Eerste 3 letters vergelijken", tekst: "**'oli'** is de start. Op de bladzijde 'oliebol — olijfboom' zou 'oligarchie' staan. Andere woorden met 'mon-', 'dem-' staan op compleet andere bladzijden." }],
           niveaus: { basis: "Oliebol — zelfde start.", simpeler: "'Oli'-woorden bij elkaar.", nogSimpeler: "Oliebol" },
@@ -170,7 +170,7 @@ const steps = [
   {
     title: "Inhoudsopgave & index — info zoeken in boek",
     explanation:
-      "In een boek (encyclopedie, schoolboek, naslagwerk) zoek je niet alfabetisch door alles. Je gebruikt **inhoudsopgave** (vooraan) of **index** (achteraan).\n\n**Inhoudsopgave** (vooraan):\n• Lijst van **hoofdstukken** + paginanummer.\n• Geeft **overzicht** van wat er IN het boek staat.\n• Bv. 'Hoofdstuk 3 — Romeinen ... blz 45'.\n\n**Index** = **trefwoordenregister** (achteraan):\n• **Alfabetische** lijst van trefwoorden + paginanummers.\n• Geeft snel toegang tot **specifieke onderwerpen**.\n• Bv. 'Caesar ... 47, 89-91, 156'.\n\n**Welke gebruik je wanneer?**\n• Wil je weten of het boek **GEHEEL over X gaat** → inhoudsopgave.\n• Wil je weten **WAAR een specifiek woord staat** → index.\n• Bv. werkstuk Romeinen, je hebt Wikipedia + boek. In boek 'Caesar' opzoeken → **index**.\n\n**toetsvraag-favoriet**: bij encyclopedie of schoolboek vraag de Doorstroomtoets vaak: 'In welk hoofdstuk vind je info over X?' (= inhoudsopgave-vaardigheid) of 'Op welke bladzijde vind je een gegeven feit?' (= index).\n\n**Bibliotheek-klassen** *(bonus, vaak een toetsvraag)*: in de bib hebben boeken classificatie-nummers (bv. 870 voor geschiedenis NL, 580 voor planten). Maar voor groep 8 voldoende: **fictie** (verhalen) staat op **schrijver alfabetisch**, **non-fictie** (waar gebeurd) op **onderwerp-nummer**.",
+      "In een boek (encyclopedie, schoolboek, naslagwerk) zoek je niet alfabetisch door alles. Je gebruikt **inhoudsopgave** (vooraan) of **index** (achteraan).\n\n**Inhoudsopgave** (vooraan):\n• Lijst van **hoofdstukken** + paginanummer.\n• Geeft **overzicht** van wat er IN het boek staat.\n• Bv. 'Hoofdstuk 3 — Romeinen ... blz 45'.\n\n**Index** = **trefwoordenregister** (achteraan):\n• **Alfabetische** lijst van trefwoorden + paginanummers.\n• Geeft snel toegang tot **specifieke onderwerpen**.\n• Bv. 'Caesar ... 47, 89-91, 156'.\n\n**Welke gebruik je wanneer?**\n• Wil je weten of het boek **GEHEEL over X gaat** → inhoudsopgave.\n• Wil je weten **WAAR een specifiek woord staat** → index.\n• Bv. werkstuk Romeinen, je hebt Wikipedia + boek. In boek 'Caesar' opzoeken → **index**.\n\n**toetsvraag-favoriet**: bij encyclopedie of schoolboek vraag de Doorstroomtoets vaak: 'In welk hoofdstuk vind je info over X?' (= inhoudsopgave-vaardigheid) of 'Op welke bladzijde vind je een gegeven feit?' (= index).\n\n**Bibliotheek-klassen** *(bonus, vaak een toetsvraag)*: in de bib hebben informatieve boeken een nummer per onderwerp (geschiedenis, planten, techniek...). Maar voor groep 8 voldoende: **fictie** (verhalen) staat op **schrijver alfabetisch**, **non-fictie** (waar gebeurd) op **onderwerp-nummer**.",
     checks: [
       {
         q: "Welk **deel van een boek** geeft een lijst van hoofdstukken vooraf?",

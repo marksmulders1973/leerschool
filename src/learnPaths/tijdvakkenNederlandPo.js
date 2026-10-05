@@ -56,10 +56,10 @@ const steps = [
       },
       {
         q: "Welke Romeinse stad lag in Nederland?",
-        options: ["Nijmegen", "Amsterdam", "Rotterdam", "Utrecht"],
+        options: ["Nijmegen", "Amsterdam", "Rotterdam", "Groningen"],
         answer: 0,
         evidence: "Belangrijkste Nederlandse Romeinse stad: Nijmegen (Noviomagus).",
-        wrongHints: [null, "Bestond toen nog niet — pas in de Middeleeuwen ontstaan.", "Bestond toen nog niet.", "Wel een Romeinse nederzetting (Trajectum), maar Nijmegen was groter."],
+        wrongHints: [null, "Bestond toen nog niet — pas in de Middeleeuwen ontstaan.", "Bestond toen nog niet.", "Ligt ver boven de Rijn — daar kwamen de Romeinen niet."],
         uitlegPad: {
           stappen: [{ titel: "Nijmegen = Noviomagus", tekst: "Belangrijkste Romeinse stad in NL: Nijmegen (Latijn: Noviomagus). Oudste stad van Nederland." }],
           woorden: [{ woord: "Noviomagus", uitleg: "Latijnse naam voor Nijmegen. 'Nieuwe markt'." }],
@@ -248,7 +248,7 @@ const steps = [
         options: ["Ja", "Nee, vocht aan kant Geallieerden", "Nee, vocht aan kant Duitsland", "Bestond niet"],
         answer: 0,
         evidence: "Nederland was neutraal, maar economisch zwaar geraakt.",
-        wrongHints: [null, "Nee — Nederland deed niet mee.", "Nee — Nederland deed niet mee.", "Bestond wel — als koninkrijk."],
+        wrongHints: [null, "Kijk nog eens naar het verschil tussen WO1 en WO2 — in welke oorlog werd Nederland wél bezet?", "Kijk nog eens naar het verschil tussen WO1 en WO2 — in welke oorlog werd Nederland wél bezet?", "Bestond wel — al sinds 1815 als koninkrijk."],
         uitlegPad: {
           stappen: [{ titel: "WO1 = neutraal", tekst: "Nederland deed NIET mee aan WO1 (1914-1918). Wel zwaar economisch geraakt." }],
           woorden: [{ woord: "neutraal", uitleg: "Geen partij kiezen. Niet vechten." }],

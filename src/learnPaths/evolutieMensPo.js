@@ -156,7 +156,7 @@ const steps = [
             { woord: "Australopithecus", uitleg: "Vroege mens-achtige (4-2 miljoen jaar geleden)." },
             { woord: "hominide", uitleg: "Familie waar mens + voorouders bij horen." },
           ],
-          theorie: "Toets-feit Lucy:\n• 3,2 miljoen jaar oud.\n• Ongeveer 1 meter lang.\n• Liep rechtop (bewijs uit bekken + been-botten).\n• Klein brein (~400 cc — vergelijk: moderne mens ~1400 cc).\n• Vrouwelijk skelet, ~25 jaar oud bij overlijden.",
+          theorie: "Toets-feit Lucy:\n• 3,2 miljoen jaar oud.\n• Ongeveer 1 meter lang.\n• Liep rechtop (bewijs uit bekken + been-botten).\n• Klein brein (~400 cc — vergelijk: moderne mens ~1400 cc).\n• Vrouwelijk skelet, volwassen bij overlijden.",
           voorbeelden: [
             { type: "stap", tekst: "Of Lucy zelf onze directe voorouder is, weten we niet zeker. Onze stamlijn ging via Homo habilis → Homo erectus → Homo sapiens." },
             { type: "stap", tekst: "Origineel skelet ligt in het Nationaal Museum van Ethiopië. Replica's wereldwijd." },

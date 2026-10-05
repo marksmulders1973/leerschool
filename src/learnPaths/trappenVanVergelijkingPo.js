@@ -82,7 +82,7 @@ const steps = [
         q: "Welke rij klopt helemaal? (stellend – vergrotend – overtreffend)",
         options: ["koud – kouder – koudst", "koud – koudst – kouder", "kouder – koud – koudst", "koud – koude – koudste"],
         answer: 0,
-        wrongHints: [null, "De vergrotende (-er) komt altijd vóór de overtreffende (-st).", "De stellende trap is de gewone basisvorm.", "Dat zijn geen trappen van vergelijking — dat zijn vormen met een buigings-e."],
+        wrongHints: [null, "De vergrotende (-er) komt altijd vóór de overtreffende (-st).", "De stellende trap is de gewone basisvorm.", "'Koude' is geen trap — dat is 'koud' met een buigings-e. De vorm met -er ontbreekt."],
         uitlegPad: {
           stappen: [{ titel: "Gewoon – meer – meest", tekst: "De volgorde is altijd: stellend (koud), vergrotend (kouder, -er), overtreffend (koudst, -st)." }],
           niveaus: {
@@ -110,7 +110,7 @@ const steps = [
         q: "Wat is de vergrotende trap van 'slim'?",
         options: ["slimmer", "slimst", "slim", "slimste"],
         answer: 0,
-        wrongHints: [null, "Dat is de overtreffende trap.", "Dat is de stellende trap.", "Dat is 'slim' met een buigings-e, geen trap."],
+        wrongHints: [null, "Dat is de overtreffende trap.", "Dat is de stellende trap.", "Dat is de overtreffende trap (met een -e erachter), niet de vergrotende."],
         uitlegPad: {
           stappen: [{ titel: "slim + -mer", tekst: "De vergrotende trap van 'slim' is 'slimmer'. De m verdubbelt omdat de klank kort is." }],
           niveaus: {
@@ -153,7 +153,7 @@ const steps = [
         q: "Bij de vergrotende trap hoort vaak het woordje...",
         options: ["dan", "het", "als", "zeer"],
         answer: 0,
-        wrongHints: [null, "Dat hoort meer bij de overtreffende trap ('het snelst').", "'Groter als' is fout; het is 'groter dan'.", "Dat versterkt alleen, het hoort niet bij de trap."],
+        wrongHints: [null, "Dat hoort meer bij de overtreffende trap ('het snelst').", "Veel mensen zeggen dit, maar het is niet het juiste woordje bij een vergelijking.", "Dat versterkt alleen, het hoort niet bij de trap."],
         uitlegPad: {
           stappen: [{ titel: "'groter dan'", tekst: "De vergrotende trap gaat samen met 'dan': groter dan, sneller dan." }],
           niveaus: {
@@ -262,7 +262,7 @@ const steps = [
         q: "Vul in: *Dit is de ___ berg van Nederland.* (hoog)",
         options: ["hoogste", "hoger", "hoog", "hoogst"],
         answer: 0,
-        wrongHints: [null, "Dat is de vergrotende trap (met 'dan').", "Dat is de gewone vorm.", "Bij 'de … berg' hoort er een -e bij: hoogste."],
+        wrongHints: [null, "Dat is de vergrotende trap (met 'dan').", "Dat is de gewone vorm.", "Bijna — vóór een zelfstandig naamwoord ('de … berg') komt er nog een letter achter."],
         uitlegPad: {
           stappen: [{ titel: "het meest → -st(e)", tekst: "Eén berg is het hoogst van allemaal → overtreffende trap. Bij 'de berg' wordt het 'de hoogste berg'." }],
           niveaus: {
@@ -410,7 +410,7 @@ const steps = [
         q: "Maak de rij af: weinig – minder – ___",
         options: ["minst", "weinigst", "minder", "minste"],
         answer: 0,
-        wrongHints: [null, "'Weinigst' bestaat niet — dit is onregelmatig.", "Dat is de vergrotende trap (al gegeven).", "Bij een rij zonder lidwoord schrijf je 'minst'."],
+        wrongHints: [null, "'Weinigst' bestaat niet — dit is onregelmatig.", "Dat is de vergrotende trap (al gegeven).", "In een rijtje zonder lidwoord (de/het) komt er geen -e achter."],
         uitlegPad: {
           stappen: [{ titel: "Onregelmatig: weinig → minder → minst", tekst: "'Weinig' is onregelmatig: minder (vergrotend), minst (overtreffend)." }],
           niveaus: {

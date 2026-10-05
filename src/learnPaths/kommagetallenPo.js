@@ -92,7 +92,7 @@ const steps = [
         q: "Wat betekent de **2** in 4,**2**?",
         options: ["2 tienden (2/10)", "2 honderden", "2 eenheden", "2 tientallen"],
         answer: 0,
-        wrongHints: [null, "Cijfers ná komma zijn juist 'stukjes' — niet honderden.", "Vóór de komma staat 4. Na de komma 2 = tienden.", "Te groot — ná de komma worden cijfers kleiner."],
+        wrongHints: [null, "Cijfers ná komma zijn juist 'stukjes' — niet honderden.", "Eenheden staan vóór de komma — de 2 staat erachter.", "Te groot — ná de komma worden cijfers kleiner."],
         uitlegPad: {
           stappen: [
             { titel: "Eerste plek ná komma = tienden", tekst: "In 4,2 staat de 2 op de eerste plek ná de komma. Dat is de tienden-plek. Dus 2/10 = 0,2." },
@@ -159,7 +159,7 @@ const steps = [
           stappen: [
             { titel: "Komma's uitlijnen", tekst: "7,80 - 3,25. Komma's recht onder elkaar. 80 - 25 = 55 (cijfers ná komma). 7 - 3 = 4. Antwoord: 4,55." },
           ],
-          woorden: [{ woord: "uitlijnen", tekst: "Komma's recht boven elkaar zetten zoals in een kolom." }],
+          woorden: [{ woord: "uitlijnen", uitleg: "Komma's recht boven elkaar zetten zoals in een kolom." }],
           theorie: "Aftrekken met kommagetallen werkt zoals gewoon aftrekken, mits komma's uitgelijnd zijn.",
           voorbeelden: [{ type: "stap", tekst: "7,80 - 3,25 = 4,55." }],
           basiskennis: [{ onderwerp: "Vul aan met nullen", uitleg: "Als getallen niet gelijk aantal decimalen hebben, vul aan met 0." }],
@@ -397,7 +397,7 @@ const steps = [
       { q: "0,2 × 5 = ?", options: ["1","10","0,1","0,7"], answer: 0, wrongHints: [null, "Komma vergeten.", "Niet.", "Niet."] },
       { q: "Welke is groter: 0,5 of 0,15?", options: ["0,5","0,15","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — 'meer cijfers' ≠ groter.", "Niet.", "Wel — vergelijken."] },
       { q: "Schrijf ½ als kommagetal", options: ["0,5","0,2","0,1","0,05"], answer: 0, wrongHints: [null, "Dat is ⅕.", "Dat is ¹⁄₁₀.", "Dat is ¹⁄₂₀."] },
-      { q: "1,25 € + 0,75 € = ?", options: ["2,00 €","1,50","2,25","20,00"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Komma weg."] },
+      { q: "€ 1,25 + € 0,75 = ?", options: ["€ 2,00","€ 1,50","€ 2,25","€ 20,00"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Komma weg."] },
       { q: "Rond 7,38 af op één decimaal", options: ["7,4","7,3","7,0","8,0"], answer: 0, wrongHints: [null, "Niet — 8 ≥ 5.", "Te ver.", "Te ver."] },
       { q: "0,8 × 10 = ?", options: ["8","80","0,08","0,8"], answer: 0, wrongHints: [null, "Te veel.", "Andersom.", "Niet veranderd."] },
       { q: "Welke is het kleinst: 0,4 / 0,04 / 0,44?", options: ["0,04","0,4","0,44","Gelijk"], answer: 0, wrongHints: [null, "Tiende.", "Groter.", "Niet — andere getallen."] },

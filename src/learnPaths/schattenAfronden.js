@@ -266,7 +266,7 @@ const steps = [
         q: "Een **klas van 24 kinderen** krijgt elk een trakteerzakje van **€ 2,15**. **Past het in € 50 budget**?",
         options: ["Nee, net niet — precies €51,60","Ja, precies — schat €48","Nee, ruim te duur","Geen idee zonder rekenmachine"],
         answer: 0,
-        wrongHints: [null, "Te optimistisch — schat: 24 × €2,15 ≈ 24 × €2 = €48, + 24 × €0,15 = €3,60 erbij = €51,60. NET niet.", "Te pessimistisch — schat eerst: 24 × €2 = €48.", "Wel — schat altijd eerst voor budget-vragen."],
+        wrongHints: [null, "Te optimistisch — je vergeet de 15 cent per zakje: 24 × €0,15 komt er nog bovenop.", "Te pessimistisch — schat eerst: 24 × €2 = €48.", "Wel — schat altijd eerst voor budget-vragen."],
         uitlegPad: {
           stappen: [
             { titel: "Schatten voor budget-check", tekst: "Bij 'past het in budget?'-vragen schat je eerst grof. 24 × €2,15." },
@@ -336,7 +336,7 @@ const steps = [
       { q: "Schat: 4,9 × 5,1 ≈ ?", options: ["~25","~9","~10","~50"], answer: 0, wrongHints: [null, "Dat lijkt op ongeveer 4 + 5 — er staat kéér. Rond beide af naar 5.", "Dat is 4,9 + 5,1 — maar er staat kéér, niet plus! Hoeveel is 5 × 5?", "Te hoog — rond allebei af naar 5 en reken 5 × 5."] },
       { q: "Rond af op duizendtal: 12.567", options: ["13.000","12.000","12.500","10.000"], answer: 0, wrongHints: [null, "Niet — 5 ≥ 5.", "Honderdtal-niveau.", "Te ver."] },
       { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
-      { q: "Schat hoogte mens 1,72 m", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Niet — 172 < 175.", "Geen schatting.", "Te laag."] },
+      { q: "Een mens is 1,72 m lang. Afgerond op hele tientallen cm is dat ongeveer…", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Niet — 172 < 175.", "Dat is niet afgerond.", "Te laag."] },
       { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€21"], answer: 0, wrongHints: [null, "Niet.", "Geen afronding.", "Te ver — 19,80 ligt dicht bij 20."] },
       { q: "Wanneer **schatten** ipv exact?", options: ["Bij snelle controle of als precisie niet hoeft","Altijd","Nooit","Alleen in winkel"], answer: 0, wrongHints: [null, "Niet altijd nuttig.", "Wel handig.", "Niet alleen daar."] },
       { q: "10 × ~9 ≈ wat?", options: ["~90","~100","~10","~900"], answer: 0, wrongHints: [null, "Niet — geen exact 10×10.", "Te weinig.", "Te veel."] },

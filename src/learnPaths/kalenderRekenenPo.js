@@ -181,7 +181,7 @@ const steps = [
         q: "Is **2024** een schrikkeljaar?",
         options: ["Ja", "Nee", "Hangt af", "Weet niet"],
         answer: 0,
-        wrongHints: [null, "Reken nogmaals.", "Eenduidig — wel.", "2024 is wél schrikkeljaar."],
+        wrongHints: [null, "Reken nogmaals.", "Het is eenduidig — gebruik de deel-door-4-truc.", "Je kunt het uitrekenen: is 2024 deelbaar door 4?"],
         uitlegPad: {
           stappen: [
             { titel: "De 'deel door 4'-truc", tekst: "**Vuistregel**: een jaar is een **schrikkeljaar** als het deelbaar is door **4**. Test 2024: 2024 ÷ 4 = 506 (rond getal, geen rest) → **schrikkeljaar**." },

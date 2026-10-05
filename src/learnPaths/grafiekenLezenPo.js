@@ -177,7 +177,7 @@ const steps = [
         q: "Welke grafiek toont **hoe iets verandert door de tijd**?",
         options: ["Lijngrafiek", "Cirkeldiagram", "Staafdiagram", "Tabel"],
         answer: 0,
-        wrongHints: [null, "Cirkel toont verdeling op één moment, geen verandering.", "Staaf vergelijkt groepen, niet tijdsverloop. Lijn is beter voor 'door de tijd'.", "Tabel is getallen, geen plaatje van verandering."],
+        wrongHints: [null, "Cirkel toont verdeling op één moment, geen verandering.", "Staaf vergelijkt groepen op één moment, niet een verloop door de tijd.", "Tabel is getallen, geen plaatje van verandering."],
         uitlegPad: {
           stappen: [
             { titel: "Elk grafiektype heeft een doel", tekst: "Vier types grafiek, elk voor een andere vraag:\n• **Lijngrafiek** = verandering over **tijd** (temperatuur door de dag)\n• **Staafdiagram** = **vergelijken** van groepen (regen per maand)\n• **Cirkeldiagram** = **verdeling** van een geheel (sport-keuze in klas)\n• **Tabel** = exacte **getallen** netjes geordend" },
@@ -207,7 +207,7 @@ const steps = [
         q: "Welke grafiek laat goed zien **welk deel van het totaal** iets is?",
         options: ["Cirkeldiagram", "Lijngrafiek", "Staafdiagram", "Tijdlijn"],
         answer: 0,
-        wrongHints: [null, "Lijn toont verandering, geen verdeling.", "Staaf kan ook, maar cirkel toont **deel-van-geheel** het duidelijkst.", "Tijdlijn is voor jaartallen, geen verdeling."],
+        wrongHints: [null, "Lijn toont verandering, geen verdeling.", "Staaf vergelijkt hoogtes, maar laat niet in één oogopslag zien hoe groot een stuk van het geheel is.", "Tijdlijn is voor jaartallen, geen verdeling."],
         uitlegPad: {
           stappen: [
             { titel: "Cirkeldiagram = de hele taart", tekst: "Een **cirkeldiagram** (ook **taartdiagram** of **pie chart**) is een cirkel verdeeld in stukken. De hele cirkel = **100%** = het geheel. Elk stuk is een **percentage** daarvan." },

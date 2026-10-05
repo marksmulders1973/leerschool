@@ -256,7 +256,7 @@ In deze stap oefen je met korte situaties. Vraag jezelf steeds: *welke aanwijzin
   // ── Stap 2 ──────────────────────────────────────────────────────
   {
     title: "Gevoelens en bedoelingen afleiden",
-    explanation: tekstNoor + "\n\n*In verhalen staat bijna nooit letterlijk hoe iemand zich voelt. De schrijver laat het zíén: slikken, aarzelen, wegkijken. Beantwoord de 4 vragen — zoek steeds de aanwijzingen waaruit het blijkt.*",
+    explanation: tekstNoor + "\n\n*In verhalen staat bijna nooit letterlijk hoe iemand zich voelt. De schrijver laat het zíén: slikken, aarzelen, wegkijken. Beantwoord de 6 vragen — zoek steeds de aanwijzingen waaruit het blijkt.*",
     checks: [
       {
         q: "Hoe voelt Noor zich als ze in haar lege kamer staat?",
@@ -735,7 +735,7 @@ Kies bij twijfel altijd de **voorzichtigste** conclusie die alle aanwijzingen ge
   // ── Stap 4 ──────────────────────────────────────────────────────
   {
     title: "Doorstroomtoets-mix — de mussentekst",
-    explanation: tekstMussen + "\n\n*Dit is een tekst zoals op de Doorstroomtoets. De 5 vragen hieronder zijn allemaal afleid-vragen: het antwoord staat nergens letterlijk. Verzamel aanwijzingen, doe de wijs-test, en kies de conclusie die je kunt onderbouwen.*",
+    explanation: tekstMussen + "\n\n*Dit is een tekst zoals op de Doorstroomtoets. De 9 vragen hieronder zijn allemaal afleid-vragen: het antwoord staat nergens letterlijk. Verzamel aanwijzingen, doe de wijs-test, en kies de conclusie die je kunt onderbouwen.*",
     checks: [
       {
         q: "Waarom zijn er in Zonnehof waarschijnlijk zo weinig mussen?",

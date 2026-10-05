@@ -193,25 +193,25 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
         },
       },
       {
-        q: "*\"Mijn fiets stond voor de deur. Die was leeg.\"* — Naar wat verwijst 'die'?",
-        options: ["De fiets (de band was leeg)", "De deur", "Mijn", "De straat"],
+        q: "*\"Mijn fiets stond voor de deur. Die was lek.\"* — Naar wat verwijst 'die'?",
+        options: ["De fiets (de band was lek)", "De deur", "Mijn", "De straat"],
         answer: 0,
         wrongHints: [
           null,
-          "Kan een deur 'leeg' zijn? Zoek iets dat leeg kan zijn vlak vóór 'die'.",
-          "'Mijn' is geen zelfstandig ding dat leeg kan zijn. Zoek het dichtstbijzijnde woord dat past.",
+          "Kan een deur 'lek' zijn? Zoek iets dat lek kan zijn vlak vóór 'die'.",
+          "'Mijn' is geen zelfstandig ding dat lek kan zijn. Zoek het dichtstbijzijnde woord dat past.",
           null,
         ],
         uitlegPad: {
           stappen: [
             { titel: "Zoek terug", tekst: "Vlak voor 'die' staat 'de deur' en daarvoor 'fiets'. Twee kandidaten." },
-            { titel: "Controleer betekenis", tekst: "Vul in: 'De deur was leeg' — een deur kan niet leeg zijn. 'De fiets was leeg' — een band kan leeg zijn! Dus 'die' wijst naar de fiets (de band ervan)." },
+            { titel: "Controleer betekenis", tekst: "Vul in: 'De deur was lek' — een deur kan niet lek zijn. 'De fiets was lek' — een fietsband kan lek zijn! Dus 'die' wijst naar de fiets (de band ervan)." },
             { titel: "Let op", tekst: "Soms staat het dichtstbijzijnde woord er bewust als valstrik. De betekenis beslist." },
           ],
           niveaus: {
-            basis: "Wat kan er leeg zijn: een fiets(band) of een deur? Dat bepaalt waarnaar 'die' wijst.",
-            simpeler: "Vul beide kandidaten in: 'de fiets was leeg' of 'de deur was leeg'. Welke zin klopt?",
-            nogSimpeler: "Wat van een fiets kan leeg zijn? Zou dat hier bedoeld worden?",
+            basis: "Wat kan er lek zijn: een fiets(band) of een deur? Dat bepaalt waarnaar 'die' wijst.",
+            simpeler: "Vul beide kandidaten in: 'de fiets was lek' of 'de deur was lek'. Welke zin klopt?",
+            nogSimpeler: "Wat van een fiets kan lek zijn? Zou dat hier bedoeld worden?",
           },
         },
       },

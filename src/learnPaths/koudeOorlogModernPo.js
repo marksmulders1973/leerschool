@@ -107,7 +107,7 @@ const steps = [
         q: "Welke Nederlander is sinds 2024 **secretaris-generaal van de NAVO**?",
         options: ["Mark Rutte", "Wilders", "Schoof", "Niemand"],
         answer: 0,
-        wrongHints: [null, "PVV.", "Premier.", "Wel."],
+        wrongHints: [null, "Partijleider in de Tweede Kamer, geen NAVO-functie.", "Volgde Rutte op als premier in Den Haag — niet bij de NAVO in Brussel.", "Er is wél een Nederlander benoemd — wie was tot 2024 heel lang premier?"],
       },
     ],
   },

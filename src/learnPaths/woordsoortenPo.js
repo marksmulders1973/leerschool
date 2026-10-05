@@ -267,7 +267,7 @@ const steps = [
         q: "*'De rode auto rijdt snel.'* — welk woord is een **werkwoord**?",
         options: ["rijdt","auto","rode","snel"],
         answer: 0,
-        wrongHints: [null,"Zelfst. naamwoord.","Bijvoeglijk naamwoord.","Bijwoord/bijvoeglijk."],
+        wrongHints: [null,"Zelfst. naamwoord.","Bijvoeglijk naamwoord.","Bijwoord — zegt hoe de auto rijdt."],
         uitlegPad: {
           stappen: [{ titel: "Wat doet de auto?", tekst: "Auto rijdt = doe-actie. Rijdt = werkwoord (vervoegd: hij rijdt)." }],
           woorden: [{ woord: "rijdt", uitleg: "3e persoon van 'rijden'. Werkwoord." }],
@@ -307,16 +307,16 @@ const steps = [
       },
       {
         q: "*'Tom rent **snel** naar huis.'* — welk soort woord is 'snel'?",
-        options: ["bijwoord/bijvoeglijk","werkwoord","lidwoord","voornaamwoord"],
+        options: ["bijwoord","werkwoord","lidwoord","voornaamwoord"],
         answer: 0,
         wrongHints: [null,"Geen werkwoord.","Geen 'de/het/een'.","Geen verwijzer."],
         uitlegPad: {
-          stappen: [{ titel: "Hoe rent hij?", tekst: "Snel beschrijft HOE hij rent → bijwoord (bij ww). Of bijvoeglijk." }],
+          stappen: [{ titel: "Hoe rent hij?", tekst: "Snel beschrijft HOE hij rent → het hoort bij het werkwoord → bijwoord. Vóór een zelfstandig naamwoord ('de snelle auto') zou het bijvoeglijk zijn." }],
           woorden: [{ woord: "bijwoord", uitleg: "Beschrijft een werkwoord (hoe doet iemand iets). 'Snel rennen'." }],
           theorie: "Snel kan beide: bijvoeglijk (de snelle auto) of bijwoord (snel rennen).",
           voorbeelden: [{ type: "verschil", tekst: "De snelle auto (bij zelfst nw = bijvoeglijk). Hij rent snel (bij ww = bijwoord)." }],
           basiskennis: [{ onderwerp: "Niet lidwoord/werkwoord", uitleg: "Snel is geen de/het/een, geen actie." }],
-          niveaus: { basis: "bijwoord/bijvoeglijk.", simpeler: "Snel beschrijft hoe Tom rent (bij werkwoord) = bijwoord (of bijvoeglijk in andere zinnen).", nogSimpeler: "Snel" },
+          niveaus: { basis: "bijwoord.", simpeler: "Snel beschrijft hoe Tom rent (bij het werkwoord) = bijwoord.", nogSimpeler: "Bijwoord" },
         },
       },
       {

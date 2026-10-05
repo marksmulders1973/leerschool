@@ -64,7 +64,7 @@ const steps = [
           theorie: "Toets-tip afvalscheiding NL: GFT (rot), PMD (plastic+metaal+drank), papier, glas, restafval. Sommige gemeenten ook batterijen + chemisch afval (KCA). Goed scheiden = minder restafval = goedkoper + groener.",
           voorbeelden: [
             { type: "stap", tekst: "Bananenschil → GFT. Plastic verpakking → PMD. Glasflesje → glasbak." },
-            { type: "stap", tekst: "Niet in GFT: vleesresten (trekken ratten), kattengrit, plastic zakken (zelfs biologische)." },
+            { type: "stap", tekst: "Niet in GFT: kattengrit, luiers, plastic zakken (ook 'biologisch afbreekbare'). Vlees- en visresten mogen in Nederland wél in de GFT-bak." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "GFT = uit natuur = kan rotten. Plastic + glas + metaal = niet in GFT (rotten niet)." }],
           niveaus: {
@@ -244,7 +244,7 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "Wat hoort in **GFT-bak**?", options: ["Schillen + tuinafval", "Plastic", "Glas", "Batterij"], answer: 0, wrongHints: [null, "PMD.", "Glasbak.", "KCA."] },
-      { q: "Wat is **statiegeld** op plastic fles?", options: ["€0,25 (sinds 2021)", "Niks", "€10", "€1"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te veel."] },
+      { q: "Wat is **statiegeld** op een grote plastic fles (1 liter of meer)?", options: ["€0,25", "Niks", "€10", "€1"], answer: 0, wrongHints: [null, "Wel.", "Te veel.", "Te veel."] },
       { q: "**Beste optie** Ladder van Lansink?", options: ["Voorkomen (geen afval)", "Verbranden", "Storten", "Recyclen"], answer: 0, wrongHints: [null, "Slecht.", "Slechtste.", "Goed maar niet beste."] },
       { q: "**Plastic fles** vergaat in?", options: ["~450 jr", "1 maand", "10 dagen", "Eeuwig"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet exact."] },
       { q: "Wie startte **Ocean Cleanup**?", options: ["Boyan Slat", "Verstappen", "Cruijff", "Geen NL'er"], answer: 0, wrongHints: [null, "F1.", "Voetbal.", "Wel NL!"] },
@@ -257,16 +257,16 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is PMD?", tekst: "**PMD** staat voor:\n• **P** = **Plastic** verpakkingen (flesjes shampoo, yoghurtbakje, plastic zak)\n• **M** = **Metaal** verpakkingen (soepblik, drinkblikje, deksels)\n• **D** = **Drankkartons** (melk, sap, soms soep)\n\nVroeger waren plastic + blik aparte bakken — sinds 2014 in NL samen in **oranje PMD-bak** (sommige gemeenten gebruiken zakken)." },
-            { titel: "Wat hoort NIET in PMD?", tekst: "• **Folie** zonder verpakking (folielap zwerfvuil → restafval)\n• **Plastic speelgoed** → kringloop of restafval\n• **Plastic kledinghanger** → restafval\n• **Plastic met etensresten** → restafval (vies)\n• **Piepschuim** → soms PMD, soms restafval (gemeente-afhankelijk)\n• **Tube** met tandpasta → restafval (vermengd metaal/plastic)" },
+            { titel: "Wat hoort NIET in PMD?", tekst: "• **Plastic dat geen verpakking is** (tuinstoel, emmer) → milieustraat of restafval\n• **Plastic speelgoed** → kringloop of restafval\n• **Plastic kledinghanger** → restafval\n• **Plastic met etensresten** → restafval (vies)\n• **Piepschuim** → soms PMD, soms restafval (gemeente-afhankelijk)\n• **Tube** met tandpasta → restafval (vermengd metaal/plastic)" },
             { titel: "Toets-feit: NL afvalsysteem", tekst: "Nederland heeft **5-7 afvalbakken** per huis (gemeente verschilt):\n• **Grijs** = restafval\n• **Groen / GFT** = groente/fruit/tuin\n• **Oranje / PMD** = plastic/metaal/drank\n• **Blauw** = papier + karton\n• **Glasbak** (in wijk)\n• **Textielcontainer** (in wijk)\n• **KCA** = klein chemisch afval (verf, batterijen — supermarkt of milieustraat)\n\nNL recyclet een groot deel van de plastic flessen en het glas." },
           ],
           woorden: [
             { woord: "PMD", uitleg: "Plastic + Metaal + Drankkartons. Sinds 2014 samen in oranje bak." },
             { woord: "KCA", uitleg: "Klein Chemisch Afval. Batterijen, verf, medicijnen, olie. Niet in restafval." },
             { woord: "milieustraat", uitleg: "Inzamelplek voor groot afval + KCA. Elke gemeente heeft minstens 1." },
-            { woord: "scheidings­percentage", uitleg: "Hoeveel % afval correct gescheiden wordt. NL: ruim 60%." },
+            { woord: "scheidingspercentage", uitleg: "Hoeveel % afval correct gescheiden wordt. NL: ruim 60%." },
           ],
-          theorie: "**Volgorde van afval-verwerking** (NL beleid):\n1. **Recyclen** — beste verwerking, na voorkomen en hergebruiken (PMD/papier/glas/GFT)\n2. **Verbranden met energie­winning** — restafval naar afval­energie­centrale (AEC), wekt elektriciteit op\n3. **Storten** — slechtste optie, alleen wat anders niet kan\n\nNL stort minder dan 1% van afval — een van de laagste percentages in EU.",
+          theorie: "**Volgorde van afval-verwerking** (NL beleid):\n1. **Recyclen** — beste verwerking, na voorkomen en hergebruiken (PMD/papier/glas/GFT)\n2. **Verbranden met energiewinning** — restafval naar afvalenergiecentrale (AEC), wekt elektriciteit op\n3. **Storten** — slechtste optie, alleen wat anders niet kan\n\nNL stort minder dan 1% van afval — een van de laagste percentages in EU.",
           voorbeelden: [
             { type: "feit", tekst: "Plastic uit de PMD-bak kan een paar keer gerecycled worden voordat het te zwak wordt." },
             { type: "feit", tekst: "Wist je: 1 kg plastic recyclen bespaart 2 kg CO₂ vs nieuwe plastic maken." },

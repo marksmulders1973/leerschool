@@ -118,7 +118,7 @@ const steps = [
     checks: [
       {
         q: "Hoe **exacte zin** zoeken in Google?",
-        options: ["Met aanhalingstekens 'zin'", "Hoofdletters", "Veel spaties", "Niet mogelijk"],
+        options: ["Met aanhalingstekens (\"zin\")", "Hoofdletters", "Veel spaties", "Niet mogelijk"],
         answer: 0,
         wrongHints: [null, "Maakt niets uit.", "Niet.", "Wel mogelijk."],
       },
@@ -202,7 +202,7 @@ const steps = [
         q: "Wat is **phishing**?",
         options: ["Nep-email om gegevens te stelen", "Spel", "Vis vangen", "Soort virus"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Letterlijk niet.", "Bij sommige varianten."],
+        wrongHints: [null, "Niet.", "Letterlijk niet.", "Geen programma dat je computer besmet — het probeert jóú te misleiden."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is phishing?", tekst: "**Phishing** = 'hengelen' (visserij in Engels) naar persoonlijke gegevens. Een **nep-email**, **nep-sms** of **nep-website** doet alsof het van je bank, postNL of school is — maar is van een **oplichter**." },
@@ -269,7 +269,7 @@ const steps = [
           theorie: "Veelvoorkomende phishing-soorten in NL:\n• **Postnl-pakket**: 'pakket niet bezorgd, betaal kosten'\n• **Belastingdienst-teruggave**: 'je krijgt geld terug, vul gegevens in'\n• **Bank**: 'verdachte activiteit, log in om te controleren'\n• **Marktplaats**: 'koper wil tikkie' (verkoper-fraude)\n• **Whatsapp**: 'mam ik heb mijn telefoon kapot, kan jij geld overmaken?'\n\nIn 2024+ ook **AI-stem-fraude**: oplichter belt met AI-stem van familie.",
           voorbeelden: [
             { type: "feit", tekst: "In Nederland verliezen mensen samen **~€100 miljoen per jaar** aan online oplichting. Ouderen + kinderen kwetsbaarder." },
-            { type: "feit", tekst: "Politie + Fraudehelpdesk (0800-2112) helpen je als je toch ingetrapt bent." },
+            { type: "feit", tekst: "Politie + Fraudehelpdesk (fraudehelpdesk.nl) helpen je als je toch ingetrapt bent." },
           ],
           basiskennis: [{ onderwerp: "Banken bellen niet", uitleg: "Echte bank, Belastingdienst, of Postnl vraagt NOOIT per mail/sms om je wachtwoord. ALTIJD nep als het wel gevraagd wordt." }],
           niveaus: { basis: "Nep-mail", simpeler: "Phishing = nep-mail die doet alsof het van bank/Postnl is. Wil wachtwoord/bankgegevens stelen. Niet klikken.", nogSimpeler: "Oplichting-mail" },
@@ -327,7 +327,7 @@ const steps = [
       },
       { q: "Wat is een **sterk wachtwoord**?", options: ["Lang + cijfers + tekens + niet je naam","Je verjaardag","Naam huisdier","123456"], answer: 0, wrongHints: [null, "Te makkelijk te vinden online.", "Gemakkelijk te raden.", "Top 1 gehackt wachtwoord."] },
       { q: "Wat is **phishing**?", options: ["Nep-mail om je wachtwoord te stelen","Een vissport","Een online-spel","Een browser"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet.", "Niet."] },
-      { q: "Welke site heeft **HTTPS**?", options: ["Veiligere verbinding (slotje in browser)","Snellere verbinding","Geen kosten","Geen reclame"], answer: 0, wrongHints: [null, "Snelheid los van HTTP/HTTPS.", "Niets met kosten.", "Niets met reclame."] },
+      { q: "Wat heeft een site met **HTTPS**?", options: ["Veiligere verbinding (slotje in browser)","Snellere verbinding","Geen kosten","Geen reclame"], answer: 0, wrongHints: [null, "Snelheid los van HTTP/HTTPS.", "Niets met kosten.", "Niets met reclame."] },
       { q: "Wat doet een **AI-hallucinatie**?", options: ["De AI verzint iets dat niet klopt","De AI hoort geluiden","De AI ziet kleuren","De AI maakt foto's"], answer: 0, wrongHints: [null, "AI heeft geen oren — alleen tekst.", "AI heeft geen ogen voor kleur — alleen pixels.", "AI kan plaatjes maken, maar zo heet 'hallucinatie' niet."] },
       { q: "Wat is **2FA** (twee-factor-authenticatie)?", options: ["Extra check naast wachtwoord (bv. SMS-code)","Twee wachtwoorden","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Niet exact.", "Wel.", "Niet."] },
       { q: "Wat is **cyberpesten**?", options: ["Pesten via internet/sociale media","Niet bestaand","Game","Reclame"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
@@ -343,7 +343,7 @@ const steps = [
       { q: "Wat is **bron-controle** bij zoeken?", options: ["Checken of bron betrouwbaar is","Klakkeloos overnemen","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Wel.", "Niet."] },
       { q: "Welke leeftijd voor **TikTok** officieel?", options: ["13+","8+","18+","Geen grens"], answer: 0, wrongHints: [null, "Te laag.", "Niet wettelijk.", "Wel grens."] },
       { q: "Wat is een **back-up**?", options: ["Kopie van bestanden voor noodgeval","Origineel","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Wel.", "Niet."] },
-      { q: "Welke kleur slotje in browser betekent **veilig**?", options: ["Groen / gesloten","Rood","Niet relevant","Geel"], answer: 0, wrongHints: [null, "Gevaar.", "Wel.", "Soms waarschuwing."] },
+      { q: "Welk **teken** in de adresbalk hoort bij een veilige **HTTPS**-verbinding?", options: ["Een gesloten slotje","Een rood 'Niet veilig'-label","Niet relevant","Een geel uitroepteken"], answer: 0, wrongHints: [null, "Dat is juist een waarschuwing.", "Wel relevant — de browser laat het zien.", "Dat is een waarschuwing, geen veilig-teken."] },
     ],
   },
 ];

@@ -153,16 +153,16 @@ const steps = [
       },
       {
         q: "Antoniem van **'beginnen'**?",
-        options: ["eindigen","starten","openen","stoppen"],
+        options: ["eindigen","starten","openen","vergeten"],
         answer: 0,
-        wrongHints: [null,"Synoniem van beginnen, geen tegenstelling.","Synoniem van beginnen.","Lijkt qua betekenis, maar er is een preciezer woord."],
+        wrongHints: [null,"Synoniem van beginnen, geen tegenstelling.","Synoniem van beginnen.","Heeft niets met begin of einde te maken."],
         uitlegPad: {
           stappen: [{ titel: "Beginnen ↔ eindigen", tekst: "Beginnen = start. Tegenovergesteld = eindigen, afronden." }],
           woorden: [{ woord: "eindigen", uitleg: "Tot een einde komen — antoniem van beginnen." }],
-          theorie: "Tijd-paar: beginnen ↔ eindigen. Stoppen lijkt erop maar is breder. Starten/openen = synoniem.",
+          theorie: "Tijd-paar: beginnen ↔ eindigen (ook: stoppen, ophouden). Starten/openen = synoniem.",
           voorbeelden: [{ type: "anti", tekst: "De film begint om 8 ↔ de film eindigt om 10." }],
-          basiskennis: [{ onderwerp: "Best passende antoniem", uitleg: "Bij twee-keuze (eindigen/stoppen): kies degene die EXACT tegenovergesteld is." }],
-          niveaus: { basis: "Beginnen ↔ eindigen.", simpeler: "Begin ↔ eind. Starten en openen zijn synoniemen — kun je niet kiezen. Stoppen kan ook, maar 'eindigen' is preciezer.", nogSimpeler: "Eindigen" },
+          basiskennis: [{ onderwerp: "Synoniem-val", uitleg: "Starten en openen lijken misschien op een antwoord, maar ze betekenen hetzelfde als beginnen — dus géén tegenstelling." }],
+          niveaus: { basis: "Beginnen ↔ eindigen.", simpeler: "Begin ↔ eind. Starten en openen zijn synoniemen — kun je niet kiezen. Vergeten heeft er niets mee te maken.", nogSimpeler: "Eindigen" },
         },
       },
       {
@@ -334,13 +334,13 @@ const steps = [
         },
       },
       {
-        q: "Wat betekent het **spreekwoord** 'De kat uit de boom kijken'?",
+        q: "Wat betekent de **uitdrukking** 'De kat uit de boom kijken'?",
         options: ["Eerst afwachten + observeren voor je iets doet","Letterlijk naar een kat in boom kijken","Boos worden","Slapen"],
         answer: 0,
         wrongHints: [null, "Niet letterlijk — spreekwoorden zijn figuurlijk.", "Niet — geen woedend gedrag.", "Niet — geen slaap-betekenis."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat is een spreekwoord?", tekst: "Een **spreekwoord** is een **vaste uitdrukking** met een **figuurlijke** (= overdrachtelijke) betekenis. Je begrijpt het niet door de woorden letterlijk te nemen.\n\nVoorbeeld: 'de kat uit de boom kijken' = NIET letterlijk naar een kat staren. Wel: **'voorzichtig afwachten + kijken hoe een situatie zich ontwikkelt voordat je actie onderneemt'**." },
+            { titel: "Wat is een uitdrukking?", tekst: "Een **uitdrukking** (en ook een **spreekwoord**) is een **vaste woordgroep** met een **figuurlijke** (= overdrachtelijke) betekenis. Je begrijpt het niet door de woorden letterlijk te nemen.\n\nVoorbeeld: 'de kat uit de boom kijken' = NIET letterlijk naar een kat staren. Wel: **'voorzichtig afwachten + kijken hoe een situatie zich ontwikkelt voordat je actie onderneemt'**." },
             { titel: "Toets-truc: letterlijk vs figuurlijk", tekst: "Bij elke spreekwoord-vraag: vraag jezelf 'wat is de **figuurlijke** betekenis?'\n\nMeer voorbeelden:\n• **'Boter bij de vis'** = direct betalen (niet letterlijk over eten)\n• **'Gras over laten groeien'** = vergeten, voorbij laten gaan\n• **'Iemand om de tuin leiden'** = bedriegen, misleiden\n• **'Door de zure appel heen bijten'** = iets vervelends doen wat moet\n• **'Met de deur in huis vallen'** = direct ter zake komen" },
             { titel: "Toets-feit: in NL veel 'dieren-spreekwoorden'", tekst: "Veel Nederlandse spreekwoorden gebruiken dieren:\n• 'Een kat in de zak kopen' (slecht koopje)\n• 'Een gegeven paard niet in de bek kijken' (geen kritiek op een cadeau)\n• 'De koe bij de horens vatten' (probleem aanpakken)\n• 'Vissen achter het net' (te laat zijn)\n• 'Een wolf in schaapskleren' (slecht persoon die zich aardig voordoet)\n\nVoor de toets hoef je niet alles te kennen — wel: weten dat spreekwoord = figuurlijk + kunnen achterhalen uit context." },
           ],
@@ -419,7 +419,7 @@ const steps = [
       { q: "*Context*: 'De vissers haalden de buit binnen.' Wat betekent 'buit'?", options: ["Vangst / gevonden spullen","Boot","Net","Water"], answer: 0, wrongHints: [null, "Een boot is vervoer, geen buit.", "Een net is gereedschap, geen buit.", "Water is omgeving, geen buit."] },
       { q: "Synoniem van **mooi**?", options: ["prachtig","lelijk","slim","groot"], answer: 0, wrongHints: [null, "Antoniem.", "Andere betekenis.", "Niet."] },
       { q: "*Context*: 'Hij is een fanatiek voetballer.' Fanatiek =?", options: ["Heel toegewijd","Lui","Onverschillig","Bang"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Niet."] },
-      { q: "Wat betekent **discreet**?", options: ["Stil + voorzichtig","Luid","Boos","Onzeker"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
+      { q: "Wat betekent **discreet**?", options: ["Onopvallend en voorzichtig (kan een geheim bewaren)","Luid","Boos","Onzeker"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
       { q: "Antoniem van **vroeg**?", options: ["laat","snel","wakker","nu"], answer: 0, wrongHints: [null, "Andere as.", "Niet over tijd-startmoment.", "Niet."] },
       { q: "**Verbazing** lijkt op?", options: ["verrassing","boosheid","verveling","angst"], answer: 0, wrongHints: [null, "Andere emotie.", "Niet.", "Niet."] },
       { q: "*Context*: 'Het was een schitterend feest.' Schitterend = ?", options: ["geweldig","saai","kort","duur"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },

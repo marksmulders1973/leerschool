@@ -144,7 +144,7 @@ const steps = [
         q: "Wat is **VI**?",
         options: ["6", "4", "7", "11"],
         answer: 0,
-        wrongHints: [null, "Dat zou aftrekken zijn (I vóór V).", "Reken nog eens: 5 + 1.", "Dat zou twee X'en zijn."],
+        wrongHints: [null, "Dat zou aftrekken zijn (I vóór V).", "Reken nog eens: 5 + 1.", "Dat zou XI zijn (X en dan I)."],
         uitlegPad: {
           stappen: [{ titel: "5 + 1", tekst: "I staat ná V, dus optellen: 5 + 1 = 6." }],
           niveaus: {
@@ -353,7 +353,7 @@ const steps = [
         q: "Een boek heeft hoofdstuk **XIV**. Welk hoofdstuk is dat?",
         options: ["14", "16", "11", "9"],
         answer: 0,
-        wrongHints: [null, "Let op: IV is 4, niet 6.", "Dat zou XVI zijn.", "Dat zou IX zijn."],
+        wrongHints: [null, "Let op: IV is 4, niet 6.", "Dat zou XI zijn.", "Dat zou IX zijn."],
         uitlegPad: {
           stappen: [{ titel: "10 + 4", tekst: "X = 10, IV = 4 (5 − 1). Samen 10 + 4 = 14." }],
           niveaus: {

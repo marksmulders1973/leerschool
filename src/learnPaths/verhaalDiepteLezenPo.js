@@ -233,9 +233,9 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         },
       },
       {
-        q: "*\"Hij liep extra langzaam en hield de doos met twee handen vast, alsof er een baby'tje in zat.\"* — Waarom loopt Ties zo langzaam?",
+        q: "*\"Ties liep extra langzaam en hield de doos met het cadeau met twee handen vast, alsof er een baby'tje in zat.\"* — Waarom loopt Ties zo langzaam?",
         options: [
-          "Hij wil de vaas beschermen en niets laten vallen",
+          "Hij wil het cadeau in de doos beschermen en niets laten vallen",
           "Hij is moe van het lopen",
           "Hij wil te laat op school aankomen",
           "De doos is te zwaar om snel te dragen",
@@ -250,8 +250,8 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
         uitlegPad: {
           stappen: [
             { titel: "Lees de vergelijking", tekst: "'Alsof er een baby'tje in zat' — baby'tjes zijn kwetsbaar. Je loopt langzaam en voorzichtig om ze niet te laten vallen." },
-            { titel: "Koppel aan de situatie", tekst: "In de doos zit de vaas: het cadeau waarvoor de hele klas gespaard heeft. Als die breekt, is het voor niets geweest." },
-            { titel: "Conclusie", tekst: "Ties loopt langzaam om de vaas veilig te houden — zorgzaam, niet moe of te laat." },
+            { titel: "Koppel aan de situatie", tekst: "In de doos zit een cadeau. De vergelijking met een baby'tje laat zien dat het kwetsbaar is: als het breekt, is het weg." },
+            { titel: "Conclusie", tekst: "Ties loopt langzaam om het cadeau veilig te houden — zorgzaam, niet moe of te laat." },
           ],
           niveaus: {
             basis: "Waarom loop je langzaam als je iets kwetsbaars draagt — om te rusten of om het te beschermen?",

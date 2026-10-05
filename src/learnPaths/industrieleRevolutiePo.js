@@ -321,7 +321,7 @@ const steps = [
       { q: "Welke energiebron werd dominant in Industriële Revolutie?", options: ["Steenkool","Wind","Zon","Niet relevant"], answer: 0, wrongHints: [null, "Eerder.", "Later.", "Wel."] },
       { q: "Wat is **kolonisatie** in deze tijd?", options: ["Andere landen onder controle nemen voor grondstoffen","Vrede","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Wel.", "Niet."] },
       { q: "**Karl Marx** schreef over?", options: ["Arbeidersbeweging / kapitalisme","Astronomie","Sport","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Welke transportuitvinding kwam in de Industriële Revolutie?", options: ["Stoomtrein + stoomschip","Auto met benzine","Vliegtuig","Internet"], answer: 0, wrongHints: [null, "Later.", "Veel later.", "Veel later."] },
+      { q: "Welke transportuitvinding kwam in de Industriële Revolutie?", options: ["Stoomtrein + stoomschip","Ruimteraket","Straalvliegtuig","Internet"], answer: 0, wrongHints: [null, "Veel later (20e eeuw).", "Veel later.", "Veel later."] },
       { q: "Wat zijn **slechte gevolgen** Industriële Revolutie?", options: ["Vervuiling + lange werkdagen","Niet bestaand","Te veel vrije tijd","Niet relevant"], answer: 0, wrongHints: [null, "Wel.", "Tegenovergesteld.", "Niet."] },
       { q: "Wat zijn **goede gevolgen**?", options: ["Betere voeding, kleding goedkoper, vooruitgang","Niets","Te veel oorlog","Niet relevant"], answer: 0, wrongHints: [null, "Wel goede.", "Niet hoofdgevolg.", "Wel."] },
       { q: "Wanneer kwam **NL-industrialisering**?", options: ["~1850-1900","1500","2000","Voor jaar 1"], answer: 0, wrongHints: [null, "Te vroeg.", "Te laat.", "Onmogelijk."] },
