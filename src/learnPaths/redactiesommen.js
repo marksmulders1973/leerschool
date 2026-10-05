@@ -27,17 +27,17 @@ const steps = [
     checks: [
       {
         q: "Welk woord zegt vaak: **vermenigvuldigen**?",
-        options: ["per","verschil","over","samen"],
+        options: ["keer","verschil","over","samen"],
         answer: 0,
         wrongHints: [null,"'Verschil' = aftrekken.","'Over' = aftrekken.","'Samen' = optellen."],
         uitlegPad: {
           stappen: [
             { titel: "Signaalwoorden bij redactiesommen", tekst: "Bij verhaaltjes-sommen geven bepaalde woorden hints welke **bewerking** je moet doen. Leer ze uit hoofd!" },
-            { titel: "'Per' = vermenigvuldigen", tekst: "'Per' (of 'elk', 'voor elke') betekent dat iets MEERDERE keren voorkomt. Bv: '€3 per glas, 5 glazen' → 3 × 5 = €15." },
+            { titel: "'Keer' en 'elk' = vermenigvuldigen", tekst: "'Keer', 'elk' of 'voor elke' betekent dat iets meerdere keren voorkomt. Bv: '5 glazen van elk €3' → 5 × 3 = €15. Let op: 'per' kan twee kanten op — '€3 per glas, 5 glazen' is keer, maar '€15 verdelen, hoeveel per persoon?' is delen. Lees dus altijd de hele zin." },
             { titel: "Andere signaalwoorden", tekst: "**Samen / totaal** = optellen. **Verschil / over / minder** = aftrekken. **Per / elk** = vermenigvuldigen. **Verdeeld / gedeeld** = delen." },
           ],
           woorden: [
-            { woord: "per", uitleg: "Hint voor vermenigvuldigen (× aantal)." },
+            { woord: "per", uitleg: "Kan keer of delen zijn: '€3 per glas, 5 glazen' = keer; 'hoeveel per persoon?' = delen." },
             { woord: "elk", uitleg: "Synoniem van 'per' — ook keer-bewerking." },
           ],
           theorie: "Toets-truc redactiesommen: zoek het SIGNAAL-woord. Dat bepaalt welke bewerking. Lees vraag rustig, onderstreep cijfers + signaalwoorden, kies dan bewerking.",
