@@ -263,11 +263,25 @@ export function useSteun(nl) {
 
 // Elke tekst tikbaar. `nl` = de Nederlandse tekst (of direct {en,ar,uk,tr}).
 // `knop`: children is een knop → taalknopje ernaast i.p.v. het blok tikbaar maken.
-export function SteunTekst({ nl, knop, inline, soort = "tekst", children }) {
+// `altijd` (5 okt 2026): eigen taal meteen eronder, zonder tik en zonder pil. Alleen voor
+// wegwijs-teksten (padoverzicht: intro, hoofdstuktitels, startknop) — een Arabisch kind
+// haakte binnen 11 s af op een overzicht dat alleen Nederlands + 17 "AR"-pilletjes toonde.
+// De leerstof zelf (vragen, antwoorden, uitleg) blijft tik-voor-je-taal.
+export function SteunTekst({ nl, knop, inline, altijd, soort = "tekst", children }) {
   const steun = useSteun(nl);
   const taal = leesSteuntaal();
   const tekst = steunTekst(steun, taal);
   if (!tekst) return children ?? null;
+  if (altijd && (knop || inline)) {
+    // Knop of korte regel: eigen taal er direct naast, zonder geel vak (past in één regel).
+    return (
+      <span style={{ display: "inline-flex", alignItems: "center", gap: 8, flexWrap: "wrap" }}>
+        {children}
+        <span dir={taal === "ar" ? "rtl" : "ltr"} lang={taal} style={{ fontSize: 14, fontWeight: 700, opacity: 0.9 }}>{tekst}</span>
+      </span>
+    );
+  }
+  if (altijd) return <div>{children}<Regel tekst={tekst} taal={taal} /></div>;
   if (knop || inline) return <TikNaast tekst={tekst} taal={taal} soort={soort} inline={inline}>{children}</TikNaast>;
   return <TikBlok tekst={tekst} taal={taal} soort={soort}>{children}</TikBlok>;
 }

@@ -703,6 +703,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   const uitlegSpraak = spreekTekst(step?.explanation);
   useVanzelfZeggen(uitlegSpraak ? [spreekTekst(stripExamenVraagPrefix(step.title)), uitlegSpraak].filter(Boolean).join(". ") : "", vanzelf && mode === "reading");
   useVanzelfZeggen(ZEG.klaar, vanzelf && mode === "allDone");
+  // Overzicht (5 okt 2026): ook het eerste scherm van een pad klinkt vanzelf als de stand aanstaat —
+  // daarvoor was dit het enige stille scherm tussen /nieuwkomers (spreekt) en de vragen (spreken).
+  useVanzelfZeggen(path?.intro ? [spreekTekst(stripExamenVraagPrefix(path.title || "")), spreekTekst(path.intro)].filter(Boolean).join(". ") : "", vanzelf && mode === "overview");
   // VoorleesBlok ("🔊 Lees voor") spreekt buiten zeg() om. Tikt het kind erop terwijl de vanzelf-stem
   // nog praat, dan die eerst netjes stoppen — anders start die na de onderbreking opnieuw en praten ze door elkaar.
   const stopVanzelfBijLeesVoor = (e) => {
@@ -2261,6 +2264,15 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
 }
 
 function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPickStep, onBack, onHome, loaded, wrongPerStep, hervat = null, luisterStand = false }) {
+  // 🌍 Nieuwkomerpad (5 okt 2026, meting: kind met steuntaal Arabisch opende "In de klas" en was
+  // binnen 11 s terug op /nieuwkomers zonder één vraag): het overzicht toonde alleen Nederlands,
+  // geen voorlees-schakelaar en 17 tik-pilletjes. Nu: eigen taal meteen onder intro, startknop en
+  // hoofdstuktitels (`altijd`) + dezelfde schakelaar als op het stapscherm en /nieuwkomers.
+  const nieuwkomer = !!useContext(SteunCtx);
+  const startKnopNl = hervat || completedSteps.size > 0 ? "Doorgaan" : "Begin bij deel 1";
+  const startKnopSteun = useSteun(startKnopNl);
+  const steunTaal = leesSteuntaal();
+  const startKnopEigen = nieuwkomer && steunTaal !== "nl" ? (startKnopSteun?.[steunTaal] || startKnopSteun?.en || null) : null;
   // Sneltrack: detecteer een examenstijl-stap zodat leerlingen die morgen
   // toets hebben direct naar de kern kunnen springen (audit 2026-05-06,
   // 14-jr-havo-feedback "ik scroll, ik wil niet lezen, ik heb morgen toets").
@@ -2273,6 +2285,9 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
       <Header onBack={onBack} onHome={onHome} title={korteTitel(path)} emoji={path.emoji} />
 
       <div style={{ padding: "16px 18px 8px" }}>
+        {nieuwkomer && (
+          <div style={{ marginBottom: 12 }}><VoorleesSchakelaar compact /></div>
+        )}
         {/* Mark feedback 2026-05-12: pad-intro bij examen-paden moet
             'gele-markeerstift-look' krijgen. Detecteer aan id-prefix.
             Mark 18 jul: overal met veel tekst een voorlees-knop → ook hier. */}
@@ -2281,12 +2296,13 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
             {path.id && path.id.startsWith("examen-") ? (
               <ExamenPadBanner intro={path.intro} padTitle={path.title} />
             ) : (
-              <SteunTekst nl={path.intro}><p style={{ color: C.text, fontSize: 14, lineHeight: 1.5, margin: "4px 0 14px" }}>
+              <SteunTekst nl={path.intro} altijd={nieuwkomer}><p style={{ color: C.text, fontSize: 14, lineHeight: 1.5, margin: nieuwkomer ? "4px 0 0" : "4px 0 14px" }}>
                 {path.intro}
               </p></SteunTekst>
             )}
           </VoorleesBlok>
         )}
+        {nieuwkomer && path.intro && <div style={{ height: 14 }} />}
 
         <div style={{ display: "flex", justifyContent: "space-between", marginBottom: 6, fontSize: 13, color: C.muted }}>
           <SteunTekst nl={UI_GETAL.delenKlaar(completedSteps.size, path.steps.length)} inline><span>{completedSteps.size} van {path.steps.length} delen voltooid</span></SteunTekst>
@@ -2338,7 +2354,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
         )}
 
         {loaded && firstUnfinishedIdx !== null && (
-          <SteunTekst nl={hervat || completedSteps.size > 0 ? "Doorgaan" : "Begin bij deel 1"} knop><button
+          <SteunTekst nl={startKnopEigen ? null : startKnopNl} knop><button
             onClick={() => (hervat ? onPickStep(hervat.stepIdx, hervat.checkIdx) : onPickStep(firstUnfinishedIdx))}
             style={{
               ...btnPrimary(),
@@ -2357,6 +2373,10 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
               ? `🚀 Begin bij deel 1`
               : `▶ Doorgaan: deel ${firstUnfinishedIdx + 1} — ${path.steps[firstUnfinishedIdx].title}`}
             </MetLuister>
+            {/* Nieuwkomerpad: eigen taal ín de knop (niet als los vak eronder). */}
+            {startKnopEigen && (
+              <span dir={steunTaal === "ar" ? "rtl" : "ltr"} lang={steunTaal} style={{ display: "block", marginTop: 6, fontSize: 14, fontWeight: 700, opacity: 0.92 }}>{startKnopEigen}</span>
+            )}
           </button></SteunTekst>
         )}
         {loaded && firstUnfinishedIdx === null && (
@@ -2410,7 +2430,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                   <div style={{ fontSize: 12.5, fontWeight: 700, letterSpacing: 0.3, color: allDone ? C.good : C.accent, textTransform: "uppercase", marginBottom: 2 }}>
                     <SteunTekst nl={UI_GETAL.hoofdstuk(chIdx + 1)} inline><span>Hoofdstuk {chIdx + 1}</span></SteunTekst>
                   </div>
-                  <SteunTekst nl={ch.title}><div style={{ fontFamily: "var(--font-display)", fontSize: 17, lineHeight: 1.3, color: "var(--color-text-strong)" }}>
+                  <SteunTekst nl={ch.title} altijd={nieuwkomer}><div style={{ fontFamily: "var(--font-display)", fontSize: 17, lineHeight: 1.3, color: "var(--color-text-strong)" }}>
                     {stripInternalCodes(ch.title)}
                   </div></SteunTekst>
                   {(() => {
@@ -2518,7 +2538,7 @@ function Overview({ path, completedSteps, firstUnfinishedIdx, progressPct, onPic
                         </span>
                       )}
                       <span style={{ flex: 1, color: done ? C.muted : "var(--color-text-strong)", fontWeight: isNext || enkelDeel ? 700 : 500 }}>
-                        {enkelDeel ? <SteunTekst nl={done ? "Nog een keer" : "Begin"} inline><span>{done ? "Nog een keer" : "Begin"}</span></SteunTekst> : s.title}
+                        {enkelDeel ? <SteunTekst nl={done ? "Nog een keer" : "Begin"} inline altijd={nieuwkomer}><span>{done ? "Nog een keer" : "Begin"}</span></SteunTekst> : s.title}
                       </span>
                       {wrongCount > 0 && (
                         <span
