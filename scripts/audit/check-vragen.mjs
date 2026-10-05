@@ -38,8 +38,15 @@ function controleer(c, waar) {
     if (vraag.length < 220 && !/lees de tekst|in de tekst|volgens de tekst/.test(vraag) && juist.split(/\s+/).length >= 2 && juist.length >= 8 && vraag.includes(juist) && !c.options.some((o, i) => i !== c.answer && vraag.includes(String(o).replace(/\*\*/g, "").trim().toLowerCase())))
       weggegeven.push(`${waar}: "${c.q}" → antwoord "${c.options[c.answer]}" staat in de vraag`);
     // Getallen die hetzelfde zijn (0,1 = 0,10 = ,1): twee "verschillende" opties met dezelfde waarde.
-    const waarden = c.options.map((o) => (/^\s*-?\d+([.,]\d+)?\s*$/.test(String(o)) ? Number(String(o).replace(/\.(?=\d{3}\b)/g, "").replace(",", ".")) : null));
-    if (waarden.filter((w) => w !== null).length !== new Set(waarden.filter((w) => w !== null)).size) fouten.push(`${waar}: twee opties hebben dezelfde waarde ${JSON.stringify(c.options)} → ${JSON.stringify(waarden)}`);
+    const waarde = (o) => { const t = String(o).replace(/\*/g, "").trim();
+      let m2 = t.match(/^(-?\d+)\s*\/\s*(\d+)$/); if (m2 && +m2[2]) return +m2[1] / +m2[2];
+      m2 = t.match(/^(-?\d+(?:,\d+)?)\s*%$/); if (m2) return Number(m2[1].replace(",", ".")) / 100;
+      if (/^\s*-?\d+([.,]\d+)?\s*$/.test(t)) return Number(t.replace(/\.(?=\d{3}\b)/g, "").replace(",", "."));
+      return null; };
+    const waarden = c.options.map(waarde).map((w) => (w === null ? null : Math.round(w * 1e9) / 1e9));
+    { const goedW = waarden[c.answer]; const vereenvoudig = /eenvoudig/i.test(String(c.q || ""));
+      if (goedW !== null && !vereenvoudig && waarden.filter((w) => w === goedW).length > 1)
+        fouten.push(`${waar}: het goede antwoord staat er nog eens in een andere vorm (${JSON.stringify(c.options)}) — «${String(c.q).slice(0, 90)}»`); }
     const m = String(c.q || "").match(SOM);
     if (m) {
       sommen++;

@@ -227,7 +227,7 @@ const steps = [
       },
       {
         q: "**5/6 − 2/6** = ?",
-        options: ["1/2","3/12","3/6","2/6"],
+        options: ["1/2","3/12","7/6","2/6"],
         answer: 0,
         wrongHints: [null,"Niet beide aftrekken — alleen de tellers, de noemer blijft 6.","Klopt qua som maar nog niet vereenvoudigd — maak kleiner.","Verkeerde aftrekking — reken 5 − 2 in de teller."],
         uitlegPad: {

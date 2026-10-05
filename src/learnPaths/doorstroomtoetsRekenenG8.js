@@ -220,9 +220,9 @@ const steps = [
       },
       {
         q: "**1,25 als breuk** (eenvoudigst)?",
-        options: ["5/4", "1 1/4", "125/100", "12,5/10"],
+        options: ["5/4", "1 1/5", "125/10", "12/5"],
         answer: 0,
-        wrongHints: [null, "Klopt ook (gemengd), maar 5/4 is breuk.", "Niet vereenvoudigd.", "Niet eens een breuk."],
+        wrongHints: [null, "1 1/5 is 1,2 — net te weinig. 1,25 = 1 1/4 = 5/4.", "125/10 is 12,5 — tien keer te groot. Het moet 125/100 zijn, en dat is 5/4.", "12/5 is 2,4 — te groot."],
       },
       {
         q: "**Helft van 0,8**?",
