@@ -14,8 +14,8 @@ vakdekking: `docs/VAKKEN-DEKKING-OKT-2026.md`. Regel: nooit "het is goed" zonder
 | Q4 | Werkwoorden-zinnenbank 102 zinnen nagekeken (3 verbeterd) | Claude | ✅ |
 | Q5 | ✅ 5 okt: alle 329 AI-vragen nagekeken → **95 fout gewist (29%)**, 238 over (1× nagekeken). "Test wat je net leerde" gebruikt nu eerst padvragen (v897). Nieuwe AI-vragen gaan door een controle met een sterker model, fail closed (v898, live getest: 4 van 5 door). Open: `used_count` staat overal op 0 → bereik van foute vragen niet te meten; tweede controleronde van de 238 | Claude | 🟡 |
 | Q6 | ✅ v899: tegel toont "X voor jouw klas · Y in totaal" (lijst valt bij 0 al terug op alle klassen) — Mark: even bekijken | Claude | ✅ |
-| Q7 | Rekenen inhoudelijk (redactiesommen, uitleg-getallen vs vraag) | Claude | ⏳ |
-| Q8 | Taal / spelling / begrijpend lezen inhoudelijk (twee goede antwoorden = fout) | Claude | ⏳ |
+| Q7 | 🟡 Rekenen — nacht 5→6 okt zelf nagerekend: breuken-po (46 ✅), omzetten breuk/procent/komma (26 ✅), geld (48, 2 verbeterd), deelsommen-met-rest (31 ✅), redactiesommen (40, "per"-tegenstrijdigheid opgelost), belasting (btw-bedragen realistisch). Audit rekent nu ook procentsommen en breuk/komma/procent-gelijkheid na → 10 vragen waar het goede antwoord onvereenvoudigd als "fout" stond + "1/10 = 0,10" opgelost (v903-v906). Nog: cijferend-rekenen + tafels (laden niet in het auditscript, .jsx) en de rest | Claude | 🟡 |
+| Q8 | 🟡 Taal — nagekeken: spelling-overige (47, 4 verbeterd o.a. onzichtbaar streepje), werkwoordspelling d/t (**'t kofschip stond met h — fout, opgelost**), werkwoord-tijden (2 eenduidig gemaakt), ei/ij-au/ou (4 rommel-opties weg), Engelse grammatica + woordenschat (lidwoord-vragen eenduidig), Cito-strategieën (**Doorstroomtoets = lezen, taalverzorging, rekenen**, niet studievaardigheden — ook op 5 webpagina's gecorrigeerd, bron Cito). Nog: begrijpend lezen (lange teksten) en de rest | Claude | 🟡 |
 | Q9 | Overige vakken (WO, Engels, VO) — steekproef eerst | Claude | ⏳ |
 | Q10 | Kliktest als kind (g4, g8, klas 1), ouder, nieuwkomer — telefoon, plaatjes geblokkeerd, **expres fout antwoorden** | Claude | ⏳ |
 | Q11 | Eindmeting 200 willekeurige items → foutpercentage (doel ≤ 2%) | Claude | ⏳ |
@@ -27,6 +27,7 @@ vakdekking: `docs/VAKKEN-DEKKING-OKT-2026.md`. Regel: nooit "het is goed" zonder
 | M1 | Uitleg in leerpad staat nu **altijd open** (jouw wens 5 okt) — botst met "vraag eerst" (29 sep). Overal open, of alleen bij korte uitleg? | ❓ |
 | M2 | Groep 1-2: bewust klein houden of aanvullen? | ❓ |
 | M3 | Volgorde dinsdag: AI-opslag + verkeer eerst (voorstel) — met meerdere agents tegelijk ("gebruik een workflow") | ❓ |
+| M5 | **Drukwerk-flyers** (±20 in public/drukwerk) zeggen "oefen-Doorstroomtoets (rekenen, taal, studievaardigheden)" — klopt als beschrijving van óns materiaal, maar bij nieuwe druk liever "lezen, taalverzorging, rekenen". Niet aangepast (drukwerk = eerst tonen) | ❓ |
 | M4 | Sams pagina even nakijken: 3 vak-tegels + knop "Maak je blokjes af (extra)" (niet door Claude live getest) | ❓ |
 
 ---
