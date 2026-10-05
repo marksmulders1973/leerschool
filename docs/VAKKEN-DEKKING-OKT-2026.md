@@ -6,8 +6,8 @@ Opnieuw tellen: `node scripts/audit/vakken-per-niveau.mjs`
 - Het vak-overzicht (CITO-pillen + vak-tegels) verschijnt **altijd** op /leren, maar gefilterd op **basisschool óf middelbare school**
   (rol "leerling" of groep → basisschool; rol "student" of klas → middelbaar; bezoeker zonder rol → basisschool, schakelaar bovenaan).
 - **Probleem 1 — tegel belooft meer dan de lijst geeft:** het getal op de tegel ("Duits 3 onderwerpen") telt **alle klassen samen**.
-  Tik je erop, dan staat de lijst standaard op **je eigen klas** → een klas-2-leerling ziet bij Duits 0, bij Informatica 0, bij Economie 0.
-  Voorstel: tegel telt "voor jouw klas" (en grijs/"nog niet voor jouw klas" bij 0), of lijst toont bij 0 meteen de andere klassen met uitleg.
+  Tik je erop, dan staat de lijst op **je eigen klas** (heeft het vak niets voor jouw klas, dan toont hij alle klassen — correctie 5 okt: je ziet dus nooit 0).
+  ✅ Opgelost v899: tegel zegt nu bv. "4 voor jouw klas · 33 in totaal" of "nog niets voor jouw klas · 3 in andere".
 - **Probleem 2 — opgelost 5 okt:** 8 eindexamens Nederlands (vmbo) hadden geen level → stonden bij klas 1 (8 van de 12 "brugklas"-onderwerpen Nederlands waren eindexamens). Nu `vmbo-gt-4`.
 
 ## Middelbare school — onderwerpen per vak per klas

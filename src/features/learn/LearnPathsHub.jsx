@@ -531,8 +531,15 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
     const subjectStats = {};
     allPaths.forEach((p) => {
       const subj = p.subject || "wiskunde";
-      if (!subjectStats[subj]) subjectStats[subj] = { count: 0, total: 0, done: 0 };
+      if (!subjectStats[subj]) subjectStats[subj] = { count: 0, total: 0, done: 0, mine: 0 };
       subjectStats[subj].count += 1;
+      // Q6 audit 5 okt 2026: de tegel telde alle klassen, de lijst toont je eigen klas → nu beide.
+      if (effectivePo && myPoGroup) {
+        const r = poGroupRange(p.level);
+        if (!r || (myPoGroup >= r[0] && myPoGroup <= r[1])) subjectStats[subj].mine += 1;
+      } else if (!effectivePo && myBucket && parseLevel(p.level).bucketKey === myBucket) {
+        subjectStats[subj].mine += 1;
+      }
       subjectStats[subj].total += (p.stepCount ?? 0);
       subjectStats[subj].done += progressByPath[p.id]?.size || 0;
     });
@@ -1105,7 +1112,11 @@ export default function LearnPathsHub({ userName, authUser, userLevel = null, us
                       {meta.title}
                     </div>
                     <div style={{ fontSize: 11, color: C.muted, lineHeight: 1.3 }}>
-                      {stats.count} onderwerp{stats.count === 1 ? "" : "en"}
+                      {(effectivePo ? myPoGroup : myBucket) && stats.mine !== stats.count
+                        ? (stats.mine > 0
+                          ? `${stats.mine} voor jouw ${effectivePo ? "groep" : "klas"} · ${stats.count} in totaal`
+                          : `nog niets voor jouw ${effectivePo ? "groep" : "klas"} · ${stats.count} in andere`)
+                        : `${stats.count} onderwerp${stats.count === 1 ? "" : "en"}`}
                       {hasProgress && ` · ${pct}%`}
                     </div>
                     {hasProgress && (
