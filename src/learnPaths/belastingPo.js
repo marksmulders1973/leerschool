@@ -317,8 +317,8 @@ const steps = [
         wrongHints: [null, "Dat hoge tarief is voor de meeste andere spullen.", "Zoveel belasting zou eten wel heel duur maken.", "Dan zou alles dubbel zo duur zijn — te veel."],
       },
       {
-        q: "Een knuffel kost **€10**. Daarvan is **€1** btw. Hoeveel is voor de **knuffel zelf**?",
-        options: ["€9", "€11", "€1", "€10"],
+        q: "Een knuffel kost **€10**. Daarvan is **€1,74** btw. Hoeveel is voor de **knuffel zelf**?",
+        options: ["€8,26", "€11,74", "€1,74", "€10"],
         answer: 0,
         wrongHints: [null, "De btw zit er al in — je telt hem er niet nóg eens bij.", "Dat is alleen de btw, niet de knuffel.", "Daar zit de btw nog in; haal die er eerst af."],
         uitlegPad: {
@@ -416,8 +416,8 @@ const steps = [
         wrongHints: [null, "Dat lage tarief is juist voor eten en drinken.", "Er zit wél btw op, dus niet 0.", "Dat zou alles dubbel zo duur maken."],
       },
       {
-        q: "Een bal kost **€20**, daarvan is **€2** btw. De bal **zelf**?",
-        options: ["€18", "€22", "€2", "€20"],
+        q: "Een bal kost **€20**, daarvan is **€3,47** btw. De bal **zelf**?",
+        options: ["€16,53", "€23,47", "€3,47", "€20"],
         answer: 0,
         wrongHints: [null, "De btw zit er al in — niet nog eens optellen.", "Dat is alleen de btw.", "Daar zit de btw nog in."],
       },
