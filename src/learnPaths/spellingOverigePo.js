@@ -477,7 +477,7 @@ const steps = [
       },
       {
         q: "Welk woord is **correct geschreven**?",
-        options: ["fietspomp","fiets-pomp","fiets pomp","Fietspomp"],
+        options: ["fietspomp","fiets-pomp","fiets pomp","fietspompp"],
         answer: 0,
         wrongHints: [null, "Niet — streepje meestal niet bij gewone samenstelling.", "Niet — spatie maakt 2 woorden.", "Niet — hoofdletter alleen aan zinbegin."],
         uitlegPad: {
@@ -494,7 +494,7 @@ const steps = [
       },
       {
         q: "Welk woord heeft de **correcte hoofdletter**?",
-        options: ["Nederland","nederland","NEDERLAND","Neder­land"],
+        options: ["Nederland","nederland","NEDERLAND","NederLand"],
         answer: 0,
         wrongHints: [null, "Niet — landnamen NIET met kleine letter.", "Niet — alleen 1 hoofdletter aan begin.", "Niet — geen streepje midden in landnaam."],
         uitlegPad: {
@@ -554,8 +554,8 @@ const steps = [
       { q: "Hoe schrijf je: 'natuurlijk' / 'natuurlik' / 'natuurlic'?", options: ["natuurlijk","natuurlik","natuurlic","naturalijk"], answer: 0, wrongHints: [null, "Niet — j-k blijft.", "Niet — geen c.", "Niet — verkeerd grond-woord."] },
       { q: "Hoe schrijf je: 'kritisch' / 'kritich' / 'kritis'?", options: ["kritisch","kritich","kritiec","kritis"], answer: 0, wrongHints: [null, "Niet — de s ontbreekt.", "Niet.", "Niet."] },
       { q: "Welke is goed: 'voetbalveld' of 'voetbal-veld'?", options: ["voetbalveld","voetbal-veld","voet-bal-veld","voet balveld"], answer: 0, wrongHints: [null, "Geen streepje nodig.", "Niet.", "Niet."] },
-      { q: "Hoofdletter: 'Mijn moeder komt uit ___.'", options: ["Nederland","nederland","Nederland (?)","NEDERLAND"], answer: 0, wrongHints: [null, "Niet — land krijgt hoofdletter.", "Niet — geen vraag.", "Niet — niet alles hoofdletter."] },
-      { q: "Hoofdletter: 'we zien elkaar op ___.'", options: ["maandag","Maandag","MAANDAG","maan dag"], answer: 0, wrongHints: [null, "Niet — dagen in NL klein.", "Niet.", "Niet."] },
+      { q: "Hoofdletter: 'Mijn moeder komt uit ___.'", options: ["Nederland","nederland","Neder land","NEDERLAND"], answer: 0, wrongHints: [null, "Niet — land krijgt hoofdletter.", "Niet — geen vraag.", "Niet — niet alles hoofdletter."] },
+      { q: "Hoofdletter: 'We zien elkaar op ___.'", options: ["maandag","Maandag","MAANDAG","maan dag"], answer: 0, wrongHints: [null, "Niet — dagen in NL klein.", "Niet.", "Niet."] },
       { q: "Welke zin heeft de **juiste hoofdletter** voor namen?", options: ["Mijn vriend Tim komt morgen.","mijn vriend tim komt morgen.","Mijn Vriend Tim komt morgen.","mijn vriend tim Komt morgen."], answer: 0, wrongHints: [null, "Geen hoofdletter aan begin zin.", "Vriend ≠ naam.", "Komt ≠ naam."] },
       { q: "Welk woord is goed: 'mogelik' / 'mogelijk' / 'moglijk'?", options: ["mogelijk","mogelik","moglijk","mogeleijk"], answer: 0, wrongHints: [null, "Niet — j-k samen.", "Verkeerde klinker.", "Niet."] },
       { q: "Welke is goed: 'huisdier' of 'huis dier' of 'huis-dier'?", options: ["huisdier","huis dier","huis-dier","huisdir"], answer: 0, wrongHints: [null, "Niet — uit elkaar.", "Niet — geen streepje.", "Niet."] },

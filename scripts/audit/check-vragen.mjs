@@ -29,7 +29,8 @@ function controleer(c, waar) {
     checks++;
     if (!Array.isArray(c.options) || typeof c.answer !== "number") return;
     if (c.answer < 0 || c.answer >= c.options.length) fouten.push(`${waar}: antwoord-index ${c.answer} bestaat niet`);
-    const norm = c.options.map((o) => String(o).replace(/\*\*/g, "").replace(/\s+/g, " ").trim());
+    // Onzichtbare tekens (zacht afbreekstreepje, zero-width) maken twee opties op het scherm gelijk.
+    const norm = c.options.map((o) => String(o).replace(/[­​-‍⁠﻿]/g, "").replace(/\*\*/g, "").replace(/\s+/g, " ").trim());
     if (new Set(norm).size < norm.length) fouten.push(`${waar}: dubbele opties ${JSON.stringify(c.options)}`);
     // Antwoord weggegeven: het goede antwoord (≥ 2 woorden) staat letterlijk in de vraag, en de foute opties niet.
     const juist = String(c.options[c.answer] ?? "").replace(/\*\*/g, "").trim().toLowerCase();
