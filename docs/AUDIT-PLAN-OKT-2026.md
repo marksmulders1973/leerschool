@@ -22,6 +22,7 @@ Doel: **≥ 98% van alles wat een kind of ouder ziet klopt**, aantoonbaar gemete
 ## Delen (in volgorde van risico)
 | # | Deel | Omvang (5 okt) | Hoe |
 |---|------|----------------|-----|
+| 0b | ✅ Automatische controle (`npm run audit:vragen`) | 17.259 vragen | 5 okt: 0 ongeldige antwoord-indexen, 0 dubbele opties, 522 sommen nagerekend → 0 fout (met zelftest); 1 vraag gaf antwoord weg (Achterhuis) → opgelost. Beperking: alleen kale sommen; redactiesommen, AI-opslag en inhoud niet |
 | 0 | ✅ Werkwoorden-zinnenbank | 102 zinnen | 5 okt gedaan: 101 goed, 3 verbeterd (hou, zin "gebouwde hut", tip bvd) |
 | 1 | AI-vragenopslag (`ai_question_pool`) | ~321 vragen | Elke vraag zelf oplossen, foute wissen. Daarna in `api/generate-questions` een controle-stap vóór opslaan |
 | 2 | Verkeer (veiligheid!) | 4 leerpaden + vraag van de dag | Regel voor regel tegen RVV/VVN-bron; pas terug na akkoord Mark |
