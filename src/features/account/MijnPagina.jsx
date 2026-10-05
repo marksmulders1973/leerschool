@@ -977,10 +977,14 @@ export default function MijnPagina({
       uit.push({ pad, reden });
     };
     klaargezet.filter((k) => k.reden !== "nulmeting").forEach((k) => voeg(k.pad, k.reden));
-    const paden = niveauPaden(niveau).filter((p) => !/-nieuwkomers$/.test(p.id) && (byId[p.id]?.level || "unmeasured") === "unmeasured");
+    // Mark 5 okt 2026: "stel altijd 3 vakken voor". Zonder gekozen groep gaf niveauPaden niets → 1 tegel.
+    // Dan rekenen we met groep 6 (midden van de Doorstroomtoets-groepen) tot het kind een groep kiest.
+    const basis = niveauPaden(niveau || { soort: "groep", nr: 6 }).filter((p) => !/-nieuwkomers$/.test(p.id));
+    const ongemeten = basis.filter((p) => (byId[p.id]?.level || "unmeasured") === "unmeasured");
     const dag = Math.floor(Date.now() / 86400000);
     // Doorstroomtoets-kern eerst (rekenen, taal, spelling, begrijpend lezen); andere vakken alleen als aanvulling.
     const KERN = ["rekenen", "taal", "spelling", "begrijpend-lezen"];
+    const paden = ongemeten;
     const alle = [...new Set(paden.map((p) => p.subject))];
     const kern = alle.filter((v) => KERN.includes(v));
     const vakken = kern.length >= 3 ? kern : [...kern, ...alle.filter((v) => !KERN.includes(v))];
@@ -990,6 +994,8 @@ export default function MijnPagina({
       const vanVak = paden.filter((p) => p.subject === vak);
       if (vanVak.length) voeg(vanVak[dag % vanVak.length], "nieuw");
     }
+    // Nog geen 3? Vul aan met al geoefende onderwerpen (herhalen), ook uit andere vakken.
+    for (const p of basis) { if (uit.length >= 3) break; voeg(p, "herhalen"); }
     return uit;
   }, [records, niveau, klaargezet]);
 
@@ -1831,7 +1837,7 @@ export default function MijnPagina({
                           </button>
                           {onderwerpTegels.length > 0 && onPickPath && (
                             <div style={{ marginTop: 12 }}>
-                              <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Of leer iets nieuws:</div>
+                              <div style={{ fontSize: 12.5, fontWeight: 700, color: "var(--color-text-muted, #8899aa)", marginBottom: 6 }}>Leerkwartier adviseert nu: {onderwerpTegels.map(({ pad }) => (vakMeta(pad.subject).titel || pad.subject).toLowerCase()).join(", ").replace(/^./, (c) => c.toUpperCase())}. Welke kies je?</div>
                               <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 8 }}>
                                 {onderwerpTegels.map(({ pad, reden }) => (
                                   <button key={pad.id} type="button"
@@ -1843,6 +1849,12 @@ export default function MijnPagina({
                                   </button>
                                 ))}
                               </div>
+                              {onGoLeren && (
+                                <button type="button" onClick={() => { try { track("mijn_onderwerp_anders", { groep }); } catch { /* */ } onGoLeren(); }}
+                                  style={{ display: "block", margin: "6px auto 0", background: "none", border: "none", color: "var(--color-text-muted, #8899aa)", textDecoration: "underline", cursor: "pointer", fontSize: 12.5 }}>
+                                  of zoek iets anders
+                                </button>
+                              )}
                             </div>
                           )}
                           <button

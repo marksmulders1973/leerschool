@@ -40,6 +40,7 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
   const [step, setStep] = useState(_prefBook ? 3 : prefilledCategory ? 2 : 1);
   const [category, setCategory] = useState(prefilledCategory || "");
   const [selectedBook, setSelectedBook] = useState(_prefBook);
+  const [kapotteOmslagen, setKapotteOmslagen] = useState({}); // omslagen die niet laden → vak-icoon
   const [customBook, setCustomBook] = useState("");
   const [showCustomInput, setShowCustomInput] = useState(false);
   const [deel, setDeel] = useState("");
@@ -586,7 +587,11 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                     ✨ Boeken voor jouw niveau staan bovenaan
                   </p>
                 )}
-                <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 14, marginBottom: 16 }}>
+                {/* Kleine blokjes i.p.v. grote omslagen (Mark 5 okt 2026: "die lege boeken slaat nergens
+                    op"). Op o.a. werk-pc's met Remote Browser Isolation laden de omslagen niet → dan
+                    bleven grote lege kaarten over. Nu: klein plaatje + naam; laadt het plaatje niet,
+                    dan het vak-icoon. */}
+                <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fill, minmax(150px, 1fr))", gap: 8, marginBottom: 16 }}>
                   {[...TEXTBOOKS[category]]
                     .sort((a, b) => {
                       const aMatch = schoolTypeMatchesBook(a.name, userSchoolType) ? 1 : 0;
@@ -595,38 +600,25 @@ export default function TextbookQuiz({ onStart, onBack, onHome, userRole, userLe
                       return a.name.localeCompare(b.name, "nl");
                     })
                     .map((book) => {
-                      const coverPath = BOOK_COVERS[book.name] ? BOOK_COVERS[book.name]("") : null;
+                      const coverPath = BOOK_COVERS[book.name] && !kapotteOmslagen[book.name] ? BOOK_COVERS[book.name]("") : null;
                       const isSelected = selectedBook?.id === book.id;
                       const isMatch = schoolTypeMatchesBook(book.name, userSchoolType);
                       const matchColor = { mavo: "#f59e0b", havo: "#3b82f6", vwo: "#8b5cf6", gym: "#ec4899" }[userSchoolType] || "#00d4ff";
                       return (
                         <button key={book.id} onClick={() => { SoundEngine.play("click"); setSelectedBook(book); setCustomBook(""); setShowCustomInput(false); if (book.defaultLevel) setLevel(book.defaultLevel); else if (!book.autoLevel) setLevel(initLevel || ""); setStep(3); }} style={{
-                          background: "transparent", border: "none", padding: 0, cursor: "pointer",
-                          display: "flex", flexDirection: "column", alignItems: "center", gap: 8,
+                          display: "flex", alignItems: "center", gap: 10, padding: "8px 10px", minHeight: 60,
+                          background: isSelected ? "rgba(0,230,118,0.12)" : "#1e2d45", cursor: "pointer", textAlign: "left",
+                          borderRadius: 12, border: isSelected ? "2px solid #00e676" : isMatch ? `2px solid ${matchColor}88` : "2px solid #2a3f5f",
                         }}>
-                          <div style={{
-                            width: "100%", aspectRatio: "3/4", borderRadius: 12, overflow: "hidden",
-                            border: isSelected ? "3px solid #00e676" : isMatch ? `2px solid ${matchColor}88` : "3px solid transparent",
-                            boxShadow: isSelected ? "0 0 0 2px var(--color-brand-primary)60, 0 4px 16px rgba(0,200,83,0.3)" : isMatch ? `0 2px 12px ${matchColor}44` : "0 2px 10px rgba(0,0,0,0.4)",
-                            position: "relative",
-                          }}>
+                          <div style={{ width: 34, height: 44, flexShrink: 0, borderRadius: 6, overflow: "hidden", background: "#16233a", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 20 }}>
                             {coverPath ? (
-                              <img src={coverPath} alt={book.name} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-                            ) : (
-                              <div style={{ width: "100%", height: "100%", background: "#1e2d45", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 40 }}>
-                                {book.icon}
-                              </div>
-                            )}
-                            {isSelected && (
-                              <div style={{ position: "absolute", top: 6, right: 6, background: "var(--color-brand-primary)", borderRadius: "50%", width: 26, height: 26, display: "flex", alignItems: "center", justifyContent: "center", fontSize: 15, fontWeight: 700 }}>✓</div>
-                            )}
-                            {!isSelected && isMatch && (
-                              <div style={{ position: "absolute", top: 6, left: 6, background: matchColor, borderRadius: 6, padding: "2px 6px", fontSize: 10, fontWeight: 700, color: "var(--color-text-strong)", fontFamily: "var(--font-display)" }}>
-                                Jouw niveau
-                              </div>
-                            )}
+                              <img src={coverPath} alt="" onError={() => setKapotteOmslagen((k) => ({ ...k, [book.name]: true }))} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                            ) : book.icon}
                           </div>
-                          <span style={{ fontSize: 12, color: isSelected ? "#00e676" : isMatch ? matchColor : "#8eaadb", fontWeight: isSelected || isMatch ? 700 : 500, textAlign: "center", lineHeight: 1.3 }}>{book.name}</span>
+                          <span style={{ display: "flex", flexDirection: "column", gap: 2, minWidth: 0 }}>
+                            <span style={{ fontSize: 13, color: isSelected ? "#00e676" : "var(--color-text-strong)", fontWeight: 700, lineHeight: 1.25 }}>{isSelected ? "✓ " : ""}{book.name}</span>
+                            {isMatch && !isSelected && <span style={{ fontSize: 10.5, color: matchColor, fontWeight: 700 }}>Jouw niveau</span>}
+                          </span>
                         </button>
                       );
                     })}
