@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "Welke munten samen maken **€ 1,75**?",
-        options: ["1 × €1 + 1 × 50c + 1 × 20c + 1 × 5c","1 × €2 + 1 × 25c","3 × 50c + 1 × 25c","1 × €1 + 7 × 10c"],
+        options: ["1 × €1 + 1 × 50c + 1 × 20c + 1 × 5c","1 × €2 + 1 × 25c","3 × 50c + 1 × 20c","1 × €1 + 7 × 10c"],
         answer: 0,
-        wrongHints: [null, "Geen 25-cent-munt in Nederland.", "Geen 25-cent-munt in Nederland.", "Tel: 7 × 10c — kom je dan op 75c?"],
+        wrongHints: [null, "Er bestaat geen munt van 25 cent, en €2 is al meer dan €1,75.", "Tel na: 3 × 50c = €1,50, plus 20c = €1,70 — net te weinig.", "Tel: 7 × 10c = 70c, dus samen €1,70 — net te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "NL-munten kennen", tekst: "In Nederland bestaan deze munten: 1c, 2c, 5c, 10c, 20c, 50c, €1, €2. Géén 25-cent." },
@@ -475,7 +475,7 @@ const steps = [
       { q: "1 sticker kost €0,20. 10 stickers?", options: ["€2,00","€0,20","€20,00","€10"], answer: 0, wrongHints: [null, "Per stuk.", "Komma fout.", "Aantal."] },
       { q: "Hoeveel cent zit in **€1,75**?", options: ["175","75","17,5","1,75"], answer: 0, wrongHints: [null, "Vergeet 100.", "Niet zo.", "In €."] },
       { q: "**€10 − €3,45** = ?", options: ["€6,55","€7,55","€6,45","€7"], answer: 0, wrongHints: [null, "Niet — kijk goed naar het cent-deel bij de aftrekking.", "Niet.", "Komma vergeten."] },
-      { q: "Voordeligst: 3 × €4 OF 1× €11?", options: ["1× €11","3× €4","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — duurder.", "Niet — verschil €1.", "Wel — vergelijken."] },
+      { q: "Je wilt 3 pakken sap. Los kost een pak €4, een voordeelpak met 3 pakken kost €11. Wat is voordeliger?", options: ["het voordeelpak van €11","3 losse pakken","even duur","niet te zeggen"], answer: 0, wrongHints: [null, "3 × €4 = €12 — dat is €1 duurder dan €11.", "€12 en €11 zijn niet hetzelfde.", "Je kunt het uitrekenen: 3 × €4 = €12."] },
       { q: "10% korting op €40 = nieuwe prijs?", options: ["€36","€30","€4","€39"], answer: 0, wrongHints: [null, "Niet — 10% niet 25%.", "Dat is korting.", "Niet — 10% niet 2,5%."] },
       { q: "Spaarpot €8,50 + €1,25 = ?", options: ["€9,75","€9,25","€8,75","€10"], answer: 0, wrongHints: [null, "Tel de centen los op: 50 + 25 cent, hoeveel is dat samen? Klopt jouw uitkomst dan nog?", "Heb je de hele euro's meegeteld? 8 + 1 euro erbij, en dan pas de centen.", "Dat lijkt naar boven afgerond. Reken de centen precies: 50 + 25 cent."] },
       { q: "Welke is **goedkoper** per stuk: 3×€6 OF 5×€8?", options: ["3×€6 (€2/stuk)","5×€8 (€1,60/stuk)","Gelijk","Niet te zeggen"], answer: 1, wrongHints: ["€2 per stuk — dat is juist duurder dan €1,60.",null,"Niet gelijk — €2 vs €1,60 scheelt €0,40 per stuk.","Wél te zeggen — reken de prijs per stuk (8 ÷ 5)."] },

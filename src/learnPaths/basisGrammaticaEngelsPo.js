@@ -24,7 +24,7 @@ const steps = [
     explanation: "In het Engels gebruik je **a** of **an** voor 'een':\n\n• **a** vóór medeklinker-klank: a book, a cat, a dog, a tree, a house\n• **an** vóór klinker-klank: an apple, an egg, an idea, an orange, an umbrella\n\n**Let op klanken**, niet letters:\n• an hour (h is stom — klinker-klank) ✓\n• a university (u klinkt als 'jou' — medeklinker-klank) ✓\n\n**Voor meervoud** geen lidwoord:\n• a book → books (geen 'a books')\n• an apple → apples",
     checks: [
       {
-        q: "Welk lidwoord komt voor **apple**?",
+        q: "Welk lidwoord voor **één** apple — **a** of **an**?",
         options: ["an", "a", "the", "geen"],
         answer: 0,
         wrongHints: [null, "Niet — 'apple' begint met klinkerklank.", "Wel mogelijk maar de vraag is over 'een' (a/an).", "Wel — 'een appel'."],
@@ -37,7 +37,7 @@ const steps = [
           niveaus: { basis: "an.", simpeler: "Apple begint met klinker → an apple.", nogSimpeler: "an = klinker." },
         },
       },
-      { q: "Welk lidwoord komt voor **book**?", options: ["a", "an", "the", "any"], answer: 0, wrongHints: [null, "Niet — book begint met medeklinker.", "Niet vraag.", "Niet — any = enig."] },
+      { q: "Welk lidwoord voor **één** book — **a** of **an**?", options: ["a", "an", "the", "any"], answer: 0, wrongHints: [null, "Niet — book begint met medeklinker.", "Niet vraag.", "Niet — any = enig."] },
       { q: "Welke is **fout**?", options: ["a egg", "an egg", "a book", "an apple"], answer: 0, wrongHints: [null, "Kijk: 'an' + klinker — past dat?", "'a' + medeklinker — controleer of dat klopt.", "Kijk hoe het woord begint en welk lidwoord ervoor staat."] },
       { q: "*'Het meisje heeft een hond.'* → 'She has __ dog.'", options: ["a", "an", "the", "no"], answer: 0, wrongHints: [null, "Dog begint met medeklinker.", "Wel mogelijk maar 'een' vraagt om a/an.", "Niet — geen ontkenning."] },
       { q: "*'I have an orange.'* — Welke vertaling?", options: ["Ik heb een sinaasappel.", "Ik heb sinaasappels.", "De sinaasappel is van mij.", "Ik heb geen sinaasappel."], answer: 0, wrongHints: [null, "Niet — 'an' is enkelvoud.", "Andere zinsbouw.", "Geen ontkenning."] },
