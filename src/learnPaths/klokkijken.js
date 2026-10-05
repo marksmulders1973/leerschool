@@ -561,7 +561,7 @@ const steps = [
       { q: "Hoe laat is 'half 11'?", options: ["10:30","11:30","10:45","11:00"], answer: 0, wrongHints: [null, "Niet — vooruit kijken.", "Niet half.", "Niet half."] },
       { q: "Hoe zeg je **15:30** in spreektaal?", options: ["Half 4 's middags","Half 5","Kwart over 3","Kwart voor 4"], answer: 0, wrongHints: [null, "Dat is 16:30.", "Dat is 15:15.", "Dat is 15:45."] },
       { q: "Hoeveel uur tussen 22:00 en 06:00 's morgens?", options: ["8 uur","4 uur","12 uur","6 uur"], answer: 0, wrongHints: [null, "Niet — over middernacht.", "Niet — niet 12.", "Niet — vergeet middernacht."] },
-      { q: "**5 voor half 3** = welke tijd?", options: ["14:25","14:35","2:35","2:25"], answer: 0, wrongHints: [null, "5 over half 3.", "12-uur (overdag bedoeld).", "Niet."] },
+      { q: "**5 voor half 3** = welke tijd?", options: ["14:25","14:35","2:35","15:25"], answer: 0, wrongHints: [null, "Dat is 5 óver half 3.", "Dat is 5 óver half 3, en dan 's nachts.", "Dat is 5 voor half 4."] },
     ],
   },
 ];

@@ -144,9 +144,9 @@ const steps = [
       },
       {
         q: "Stel: 100 leerlingen op school — **45** zijn meisjes. Welk percentage is dat?",
-        options: ["45%","50%","55%","45 per 100"],
+        options: ["45%","50%","55%","4,5%"],
         answer: 0,
-        wrongHints: [null,"Niet automatisch de helft — tel rustig.","Te veel — als 45 meisjes en 55 jongens, hoeveel meisjes is dat?","Klopt qua betekenis, maar bekijk ook de %-notatie."],
+        wrongHints: [null,"Niet automatisch de helft — tel rustig.","Te veel — als 45 meisjes en 55 jongens, hoeveel meisjes is dat?","Dat is tien keer te weinig: 45 van de 100 is 45%."],
       },
     ],
   },
