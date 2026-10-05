@@ -578,7 +578,7 @@ const werkwoordsspellingDT = {
   id: "werkwoordsspelling-dt",
   title: "Werkwoordsspelling — d/t en 't kofschip",
   emoji: "✍️",
-  level: "groep5-7",
+  level: "groep5-8", // Mark 5 okt 2026: groep 8 had maar 1 spelling-pad; d/t hoort bij de Doorstroomtoets
   subject: "spelling",
   referentieNiveau: "1F/1S",
   sloThema: "Taalverzorging — werkwoordsspelling d/t",
