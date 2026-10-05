@@ -344,7 +344,7 @@ const steps = [
       },
       {
         // letterlijk — volgorde
-        q: "Wat doe je VLAK voordat je de sluiting maakt?",
+        q: "Welke stap doe je vóórdat je de sluiting maakt?",
         options: [
           "Meten of de keten om je pols past",
           "De paperclips verven met nagellak",
