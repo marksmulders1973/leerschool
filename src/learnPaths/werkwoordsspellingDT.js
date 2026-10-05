@@ -275,23 +275,23 @@ const steps = [
   },
   {
     title: "Verleden tijd zwakke werkwoorden — 't kofschip",
-    explanation: "**Verleden tijd** vorm je bij **zwakke werkwoorden** (95% van alle werkwoorden) door **-de of -te** achter de stam te zetten.\n\nWELKE? Dat hangt af van de **laatste medeklinker van de stam**:\n\n**Geheugenezel: 't kofschip**\nAls de stam eindigt op een van deze 7 medeklinkers — **t, k, f, s, ch, h, p** — dan krijgt 'ie **-te** of **-ten**.\n\nAlle andere medeklinkers (en klinkers) → **-de** of **-den**.\n\n*\"'t kofschip\"* is een woord-trucje om de letters te onthouden:\n• 't = t\n• k\n• o (klinker, telt niet)\n• f\n• s\n• ch\n• i (klinker, telt niet)\n• p\n\nDe **klinkers o + i tellen NIET** — alleen de medeklinkers.\n\n**Voorbeelden** (eindigt op t-kofschip-letter → -te/-ten):\n\n| Werkwoord | Stam | Verleden tijd |\n|---|---|---|\n| werken | werk (k) | werk**te** / werk**ten** |\n| stoppen | stop (p) | stop**te** / stop**ten** |\n| fietsen | fiets (s) | fiets**te** / fiets**ten** |\n| straffen | straf (f) | straf**te** / straf**ten** |\n| lachen | lach (ch) | lach**te** / lach**ten** |\n\n**Voorbeelden** (eindigt NIET op kofschip-letter → -de/-den):\n\n| Werkwoord | Stam | Verleden tijd |\n|---|---|---|\n| leren | leer (r) | leer**de** / leer**den** |\n| spelen | speel (l) | speel**de** / speel**den** |\n| dromen | droom (m) | droom**de** / droom**den** |\n| reizen | reis... wacht, eindigt op **z**? Nee, op **s** | reis**de** / reis**den** ❌ MOEILIJK |\n\n**Pas op met 'verzen' (z) vs 'reizen' (z)**: bij 'reizen' is stam **reis** (NIET met z, want eind-z wordt s). Maar de oorspronkelijke z telt voor 't kofschip — dus reisde (-de) niet reiste.\n\n**Lastige gevallen** met geluid-trucje:\nLuister wat de stam eindigt OP IN HET WERKWOORDSGELUID. Niet de geschreven letter — de uitspraak.\n• 'verhuizen' → uitspraak eindigt op 'z'-klank → **verhuisde**\n• 'leven' → uitspraak eindigt op 'v' → **leefde** (let op: f komt van v in geluid)\n• 'beloven' → uitspraak eindigt op 'v' → **beloofde**",
+    explanation: "**Verleden tijd** vorm je bij **zwakke werkwoorden** (95% van alle werkwoorden) door **-de of -te** achter de stam te zetten.\n\nWELKE? Dat hangt af van de **laatste medeklinker van de stam**:\n\n**Geheugenezel: 't kofschip**\nAls de stam eindigt op een van deze medeklinkers — **t, k, f, s, ch, p** — dan krijgt 'ie **-te** of **-ten**.\n\nAlle andere medeklinkers (en klinkers) → **-de** of **-den**.\n\n*\"'t kofschip\"* is een woord-trucje om de letters te onthouden:\n• 't = t\n• k\n• o (klinker, telt niet)\n• f\n• s\n• ch\n• i (klinker, telt niet)\n• p\n\nDe **klinkers o + i tellen NIET** — alleen de medeklinkers.\n\n**Voorbeelden** (eindigt op t-kofschip-letter → -te/-ten):\n\n| Werkwoord | Stam | Verleden tijd |\n|---|---|---|\n| werken | werk (k) | werk**te** / werk**ten** |\n| stoppen | stop (p) | stop**te** / stop**ten** |\n| fietsen | fiets (s) | fiets**te** / fiets**ten** |\n| straffen | straf (f) | straf**te** / straf**ten** |\n| lachen | lach (ch) | lach**te** / lach**ten** |\n\n**Voorbeelden** (eindigt NIET op kofschip-letter → -de/-den):\n\n| Werkwoord | Stam | Verleden tijd |\n|---|---|---|\n| leren | leer (r) | leer**de** / leer**den** |\n| spelen | speel (l) | speel**de** / speel**den** |\n| dromen | droom (m) | droom**de** / droom**den** |\n| reizen | reis... wacht, eindigt op **z**? Nee, op **s** | reis**de** / reis**den** ❌ MOEILIJK |\n\n**Pas op met 'verzen' (z) vs 'reizen' (z)**: bij 'reizen' is stam **reis** (NIET met z, want eind-z wordt s). Maar de oorspronkelijke z telt voor 't kofschip — dus reisde (-de) niet reiste.\n\n**Lastige gevallen** met geluid-trucje:\nLuister wat de stam eindigt OP IN HET WERKWOORDSGELUID. Niet de geschreven letter — de uitspraak.\n• 'verhuizen' → uitspraak eindigt op 'z'-klank → **verhuisde**\n• 'leven' → uitspraak eindigt op 'v' → **leefde** (let op: f komt van v in geluid)\n• 'beloven' → uitspraak eindigt op 'v' → **beloofde**",
     svg: tKofschipSvg(),
     checks: [
       {
-        q: "Welke 7 medeklinkers zitten in **'t kofschip**?",
-        options: ["t, k, f, s, ch, h, p","t, k, o, f, s, c, h","b, c, d, e, f, g, h","Het is een trein"],
+        q: "Welke medeklinkers zitten in **'t kofschip**?",
+        options: ["t, k, f, s, ch, p","t, k, o, f, s, ch, i, p","b, d, g, v, z, l","Het is een trein"],
         answer: 0,
         wrongHints: [null,"Klinkers o, i tellen niet mee.","Niet alfabetisch — specifieke letters.","Het is een spelling-truc!"],
         uitlegPad: {
           stappen: [
-            { titel: "'t kofschip", tekst: "Geheugenezel: 't k o f s ch i p. Klinkers (o, i) tellen NIET. Medeklinkers: t, k, f, s, ch, h, p." },
+            { titel: "'t kofschip", tekst: "Geheugenezel: 't k o f s ch i p. Klinkers (o, i) tellen NIET. Medeklinkers: t, k, f, s, ch, p (de ch telt als één klank)." },
           ],
           woorden: [{ woord: "geheugenezel", uitleg: "Trucje om iets te onthouden via een woord of zinnetje." }],
-          theorie: "'t kofschip = de 7 medeklinkers waarop een werkwoordstam kan eindigen voor -te (verleden tijd). Anders -de.",
+          theorie: "'t kofschip = de medeklinkers t, k, f, s, ch en p waarop een werkwoordstam kan eindigen voor -te (verleden tijd). Anders -de.",
           voorbeelden: [{ type: "letters", tekst: "t (zetten → zette), k (werken → werkte), f (straffen → strafte), s (fietsen → fietste), ch (lachen → lachte), p (stoppen → stopte)." }],
           basiskennis: [{ onderwerp: "h verschijnt zelden", uitleg: "h aan einde van stam zeldzaam (lach is met ch, niet h alleen)." }],
-          niveaus: { basis: "'t kofschip = t,k,f,s,ch,h,p.", simpeler: "De 7 medeklinkers in 't kofschip zijn: t, k, f, s, ch, h, p. Klinkers (o, i) doen niet mee.", nogSimpeler: "tkfsch(h)p" },
+          niveaus: { basis: "'t kofschip = t, k, f, s, ch, p.", simpeler: "De medeklinkers in 't kofschip zijn: t, k, f, s, ch en p. Klinkers (o, i) doen niet mee.", nogSimpeler: "t k f s ch p" },
         },
       },
       {
@@ -322,7 +322,7 @@ const steps = [
             { titel: "Vorm", tekst: "Leer + de = leerde. Verleden tijd." },
           ],
           woorden: [{ woord: "-de uitgang", uitleg: "Voor stammen die NIET op kofschip-letter eindigen." }],
-          theorie: "Niet-kofschip → -de. R zit niet in 't kofschip (alleen t,k,f,s,ch,h,p).",
+          theorie: "Niet-kofschip → -de. R zit niet in 't kofschip (alleen t, k, f, s, ch, p).",
           voorbeelden: [{ type: "de", tekst: "leren → leerde, spelen → speelde, dromen → droomde." }],
           basiskennis: [{ onderwerp: "R niet kofschip", uitleg: "R, L, M, N, klinkers — geen kofschip → -de." }],
           niveaus: { basis: "r niet in kofschip → leerde.", simpeler: "Stam leer eindigt op r. R zit NIET in 't kofschip. Dus -de: leerde.", nogSimpeler: "Niet-kofschip = -de = leerde" },
@@ -587,7 +587,7 @@ const werkwoordsspellingDT = {
     { id: "woordsoorten-po", title: "Woordsoorten", niveau: "po-1F" },
   ],
   intro:
-    "De d/t-regels: tegenwoordige tijd (stam + t bij hij/zij), verleden tijd ('t kofschip — t,k,f,s,ch,h,p → -te), voltooid deelwoord (ge-stam-t/d). Plus de klassieke valkuil word vs wordt. Voor groep 5-7 — examenstof.",
+    "De d/t-regels: tegenwoordige tijd (stam + t bij hij/zij), verleden tijd ('t kofschip — t, k, f, s, ch, p → -te), voltooid deelwoord (ge-stam-t/d). Plus de klassieke valkuil word vs wordt. Voor groep 5-7 — examenstof.",
   triggerKeywords: [
     "werkwoordsspelling","d/t","dt-regel","dt regels","kofschip","t kofschip","'t kofschip",
     "tegenwoordige tijd werkwoord","verleden tijd zwak werkwoord",
