@@ -18,7 +18,7 @@ const TIP_PER_TIJD = {
   tt: "zeg de zin in je hoofd met 'lopen' erin. Hoor je 'loopt'? Dan krijgt het werkwoord een t.",
   vt: "is het meer dan één (wij, de kinderen, de koks)? Dan komt er een n achter: wachtten, proefden.",
   vd: "zet er 'ik heb' of 'ik ben' voor en gebruik 't kofschip: gewerkt, gespeeld.",
-  bvd: "het is het voltooid deelwoord + e: de gebakken taart, de verbrande koekjes.",
+  bvd: "neem het voltooid deelwoord. Eindigt het op -en (gebakken, vergeten)? Dan blijft het zo. Anders komt er een e achter (verbrand → de verbrande koekjes).",
 };
 // Vergat het kind alleen de meervouds-n (wachtte i.p.v. wachtten)? Zeg dat dan eerst.
 function meervoudTip(item, getypt) {
