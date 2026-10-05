@@ -131,7 +131,9 @@ function ProfielKaart({ bestaand, onKlaar, onTerug, vasteRol = null }) {
     onKlaar({ naam: n, role: echteRol, level: role === "teacher" || role === "ouder" ? (role === "teacher" ? level : "") : level, leeftijd: role === "leerling" ? leeftijd : "", vakken });
   };
 
-  const veld = { width: "100%", padding: "11px 12px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.2)", background: "rgba(255,255,255,0.06)", color: "#fff", fontSize: 16, fontFamily: "var(--font-body)" };
+  const veld = { width: "100%", padding: "11px 12px", borderRadius: 12, border: "1px solid rgba(255,255,255,0.2)", background: "#1e2d45", color: "#fff", colorScheme: "dark", fontSize: 16, fontFamily: "var(--font-body)" };
+  // colorScheme + dichte achtergrond (Mark 5 okt 2026): met een doorzichtige achtergrond tekende o.a. een
+  // werk-pc (Remote Browser Isolation) de uitklaplijst wit-op-wit → de leeftijden waren onzichtbaar.
   const label = { display: "block", fontSize: 13, fontWeight: 700, color: "rgba(255,255,255,0.75)", margin: "14px 0 6px" };
 
   return (

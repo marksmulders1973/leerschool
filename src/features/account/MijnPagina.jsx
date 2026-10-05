@@ -2101,7 +2101,7 @@ export default function MijnPagina({
                     fontFamily: "var(--font-display)",
                   }}
                 >
-                  Alle onderwerpen bekijken →
+                  Bekijk al je onderwerpen →
                 </button>
               )}
             </Card>

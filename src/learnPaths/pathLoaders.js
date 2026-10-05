@@ -43,8 +43,23 @@ export async function getLearnPath(id) {
   const loader = _idToLoader[id];
   if (!loader) return null;
   const data = await loader();
+  ruimNietszeggendeHintsOp(data);
   _resolved.set(id, data);
   return data;
+}
+
+// Mark 5 okt 2026: "Niet helemaal. Niet." — ruim 1.200 foutmeldingen in de leerpaden zijn alleen
+// "Niet." / "Nee." / "Fout.". Die zeggen het kind niets. Leeg maken → elk scherm valt dan terug op
+// zijn eigen hulp (het juiste antwoord of "kijk nog eens naar de uitleg").
+const NIETSZEGGEND = /^\s*(niet|nee|fout|niet helemaal|helaas)\s*[.!]?\s*$/i;
+function ruimNietszeggendeHintsOp(pad) {
+  try {
+    for (const stap of pad?.steps || []) {
+      for (const c of stap.checks || []) {
+        if (Array.isArray(c.wrongHints)) c.wrongHints = c.wrongHints.map((h) => (typeof h === "string" && NIETSZEGGEND.test(h) ? null : h));
+      }
+    }
+  } catch { /* data-vorm onbekend: laat staan */ }
 }
 
 export function hasLearnPath(id) {

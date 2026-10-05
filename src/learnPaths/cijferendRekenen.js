@@ -502,7 +502,7 @@ const steps = [
       { q: "**240 ÷ 12** = ?", options: ["20","12","24","30"], answer: 0, wrongHints: [null, "Dat is de deler.", "Te laag.", "Te hoog."] },
       { q: "Rond af: **23,7** op een heel getal", options: ["24","23","23,7","20"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5.", "Dat is niet afgerond.", "Te ver."] },
       { q: "Wat is **17 × 6**?", options: ["102","112","104","92"], answer: 0, wrongHints: [null, "Niet — controleer.", "Niet.", "Te laag."] },
-      { q: "**1.234 + 567** = ?", options: ["1.801","1.701","1.811","1.901"], answer: 0, wrongHints: [null, "Niet — onthouden vergeten.", "Niet.", "Niet."] },
+      { q: "**1.234 + 567** = ?", options: ["1.801","1.701","1.811","1.901"], answer: 0, wrongHints: [null, "Te weinig: bij 3 + 6 + 1 heb je het onthoudje van 4 + 7 = 11 vergeten.", "Te veel: tel de tientallen nog eens. 3 + 6 + 1 = 10, dus je schrijft 0 en onthoudt 1.", "Te veel: tel de honderdtallen nog eens. 2 + 5 + 1 = 8, niet 9."] },
       { q: "**1.000 − 245** = ?", options: ["755","855","655","745"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — bijna."] },
       { q: "**45 × 11** = ?", options: ["495","450","405","550"], answer: 0, wrongHints: [null, "Dat is ×10.", "Niet.", "Niet."] },
       { q: "**100 ÷ 25** = ?", options: ["4","5","2","10"], answer: 0, wrongHints: [null, "Tel op in stappen van 25: 25, 50, 75, 100 — hoeveel sprongen zijn dat precies?", "2 keer 25 is pas 50 — is dat al 100? Blijf verder tellen.", "10 keer 25 zou 250 zijn, veel te veel — welk getal keer 25 geeft precies 100?"] },

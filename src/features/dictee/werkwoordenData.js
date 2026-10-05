@@ -67,7 +67,7 @@ export const ZINNEN = [
   { zin: "Het ___ vorige week dat de stroom uitviel.", inf: "gebeuren", tijd: "vt", vorm: "gebeurde" },
   { zin: "De kok ___ de soep en deed er zout bij.", inf: "proeven", tijd: "vt", vorm: "proefde", tip: "Stam proef (v wordt f); f staat in 't kofschip? Nee — het gaat om de klank vóór -en: proeVen, dus -de." },
   { zin: "Oma ___ een sjaal voor de winter.", inf: "breien", tijd: "vt", vorm: "breide" },
-  { zin: "De boer ___ elke ochtend om zes uur de koeien.", inf: "melken", tijd: "vt", vorm: "molk", ook: ["melkte"], tip: "Sterk werkwoord: melken → molk (melkte mag ook)." },
+  { zin: "De boer ___ elke ochtend om zes uur de koeien.", inf: "melken", tijd: "vt", vorm: "melkte", ook: ["molk"], tip: "Verleden tijd: melkte (molk mag ook, maar zeg je bijna niet meer). 'melkt' is tegenwoordige tijd — en het gebeurde vroeger." },
   { zin: "Wij ___ na een lange vlucht op Schiphol.", inf: "landen", tijd: "vt", vorm: "landden", tip: "Stam land + den = landden, met twee d's." },
   { zin: "Mijn broer ___ gisteravond urenlang door de stad.", inf: "zwerven", tijd: "vt", vorm: "zwierf", tip: "Sterk werkwoord: zwerven → zwierf." },
   { zin: "De juf ___ de klas in vier groepjes.", inf: "verdelen", tijd: "vt", vorm: "verdeelde" },

@@ -11,6 +11,20 @@ import { spreekMetMeelezen } from "../../shared/spraakTekst.js";
 import { track } from "../../utils.js";
 import { recordAnswerForPath, recordRefAnswer } from "../mastery/mastery.js";
 import { vergelijk } from "./dicteeData.js";
+import MeldFout from "../../shared/ui/MeldFout.jsx";
+
+// Onderaan-tip per soort vorm (Mark 5 okt 2026: de 'lopen'-tip stond ook bij verleden tijd).
+const TIP_PER_TIJD = {
+  tt: "zeg de zin in je hoofd met 'lopen' erin. Hoor je 'loopt'? Dan krijgt het werkwoord een t.",
+  vt: "is het meer dan één (wij, de kinderen, de koks)? Dan komt er een n achter: wachtten, proefden.",
+  vd: "zet er 'ik heb' of 'ik ben' voor en gebruik 't kofschip: gewerkt, gespeeld.",
+  bvd: "het is het voltooid deelwoord + e: de gebakken taart, de verbrande koekjes.",
+};
+// Vergat het kind alleen de meervouds-n (wachtte i.p.v. wachtten)? Zeg dat dan eerst.
+function meervoudTip(item, getypt) {
+  const g = String(getypt || "").trim().toLowerCase(), v = String(item.vorm || "").toLowerCase();
+  return v.endsWith("n") && g === v.slice(0, -1) ? "Het onderwerp is meervoud, dus er komt een n achter. " : "";
+}
 import { VORMEN, REGELS, kiesTest, vervoeg, parseWerkwoorden } from "./werkwoordenData.js";
 import { kwartierBlokVan, blokKlaar } from "../vandaag/kwartier.js";
 
@@ -250,7 +264,8 @@ export default function WerkwoordenPage({ userName = "", userLevel = "", onTerug
   useEffect(() => () => stopAlles(), []);
   const zeg = (tekst) => { stopAlles(); if (!kanSpreken()) return; setSpreekt(true); stopRef.current = spreekMetMeelezen(tekst, { rate: 0.92, onEnd: () => setSpreekt(false) }); };
 
-  useEffect(() => { if (fase === "test" && item) { setInvoer(""); setStatus("typen"); setTimeout(() => inputRef.current?.focus(), 60); } }, [fase, idx, item]);
+  const [hoofdletterTip, setHoofdletterTip] = useState(false);
+  useEffect(() => { if (fase === "test" && item) { setInvoer(""); setStatus("typen"); setHoofdletterTip(false); setTimeout(() => inputRef.current?.focus(), 60); } }, [fase, idx, item]);
 
   const start = (lijst, b = "bank") => {
     const gekozen = lijst || kiesTest(aantal, vormenKeuze);
@@ -260,6 +275,11 @@ export default function WerkwoordenPage({ userName = "", userLevel = "", onTerug
   const controleer = () => {
     if (!item || !invoer.trim() || status !== "typen") return;
     const r = vergelijk(invoer, item.vorm, item.ook);
+    // Mark 5 okt 2026: "word" werd fout gerekend omdat het "Word" moest zijn. Hier toetsen we de
+    // werkwoordsvorm, niet de hoofdletter: goed rekenen, wel even zeggen dat er een hoofdletter hoort.
+    const alleenHoofdletter = !r.goed && invoer.trim().toLowerCase() === item.vorm.toLowerCase();
+    if (alleenHoofdletter) r.goed = true;
+    setHoofdletterTip(alleenHoofdletter);
     setStatus(r.goed ? "goed" : "fout");
     setUitkomst((u) => [...u.slice(0, idx), { goed: r.goed, getypt: invoer.trim(), letters: r.letters }]);
     try { track("ww_antwoord", { tijd: item.tijd, goed: r.goed ? 1 : 0, eigen: item.eigen ? 1 : 0 }); track("question_answered", { bron: "werkwoorden", subject: "spelling", is_correct: r.goed }); } catch { /* */ }
@@ -394,11 +414,11 @@ export default function WerkwoordenPage({ userName = "", userLevel = "", onTerug
         {delen[1]}
         <span style={{ display: "inline-block", marginLeft: 8, color: "#1f4fa8", font: "600 15px system-ui", whiteSpace: "nowrap" }}>{hintTekst(item)}</span>
       </div>
-      {status === "goed" && <div style={{ color: "#146c43", fontWeight: 800, margin: "-4px 0 10px" }}>✅ Goed zo!</div>}
+      {status === "goed" && <div style={{ color: "#146c43", fontWeight: 800, margin: "-4px 0 10px" }}>✅ Goed zo!{hoofdletterTip && <span style={{ fontWeight: 600, color: "#445" }}> Let op: aan het begin van een zin schrijf je een hoofdletter ({item.vorm}).</span>}</div>}
       {status === "fout" && (
         <div style={{ background: "#fff5f5", border: "1px solid #f3c9c9", borderRadius: 12, padding: "10px 12px", margin: "-4px 0 10px", fontSize: 14.5, lineHeight: 1.5 }}>
           <span style={{ color: "#b42318", fontWeight: 800 }}>Bijna!</span> Het is <b>{item.vorm}</b>. Jij schreef: <span style={{ textDecoration: "line-through" }}>{u?.getypt}</span>.<br />
-          <span style={{ color: "#445" }}>{item.tip ? item.tip + " " : ""}{REGELS[item.tijd]}</span>
+          <span style={{ color: "#445" }}>{meervoudTip(item, u?.getypt)}{item.tip ? item.tip + " " : ""}{REGELS[item.tijd]}</span>
         </div>
       )}
       <form onSubmit={(e) => { e.preventDefault(); controleer(); }} style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
@@ -415,7 +435,8 @@ export default function WerkwoordenPage({ userName = "", userLevel = "", onTerug
       <div style={{ display: "flex", gap: 4, marginTop: 14 }}>
         {items.map((_, i) => <div key={i} style={{ flex: 1, height: 6, borderRadius: 3, background: uitkomst[i] ? (uitkomst[i].goed ? "#146c43" : "#b42318") : i === idx ? "#8a939c" : "#e3e8ee" }} />)}
       </div>
-      <p style={{ color: "#778", fontSize: 12.5, marginTop: 12 }}>Tip: zeg de zin in je hoofd met 'lopen' erin. Hoor je 'loopt'? Dan krijgt het werkwoord een t.</p>
+      <p style={{ color: "#778", fontSize: 12.5, marginTop: 12 }}>Tip: {TIP_PER_TIJD[item.tijd] || TIP_PER_TIJD.tt}</p>
+      <MeldFout bron="werkwoorden" licht check={{ q: `${item.zin} (${item.inf})`, answer: item.vorm }} />
     </div>
   );
 }

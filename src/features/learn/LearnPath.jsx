@@ -663,7 +663,9 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
   // zat de leestekst achter "Terug naar de tekst" (dicht). Heeft de stap een leestekst, dan staat die nu
   // standaard open boven elke vraag — met alleen de tekst, zonder de uitleg eromheen.
   const stapLeesTekst = step?.leesTekst || (/(op basis van (de|het) (tekst|verhaal)|lees (eerst |nog eens |nogmaals )?(de|het) (tekst|verhaal)|beantwoord de \d+ vragen)/i.test(String(step?.explanation || "")) ? step.explanation : null);
-  useEffect(() => { setShowTekstHerlees(!!stapLeesTekst); }, [stepIdx, stapLeesTekst]);
+  // Mark 5 okt 2026 (verkeer groep 4): "ook hier moet ik eerst de tekst openen, zet de tekst gewoon
+  // altijd open". Sindsdien staat de uitleg van de stap standaard open boven de vraag; dichtklappen kan.
+  useEffect(() => { setShowTekstHerlees(true); }, [stepIdx, stapLeesTekst]);
   const wrongPerStep = useMemo(() => adaptPathWrongMap(pathId), [pathId, stepIdx, mode, attempts]);
 
   // Veel leerpaden hebben de juiste optie op index 0 staan; door per check
@@ -767,7 +769,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
     setSelected(null);
     setAttempts(1);
     setShowUitlegPad(false);
-    setShowTekstHerlees(false);
+    setShowTekstHerlees(true);
     // Hervatten bij een latere vraag (kliktocht 29 sep 2026): in vraag-eerst-modus staat checkIdx
     // meteen goed; bij uitleg-eerst pakt "Naar de vragen" 'm op via resumeCheckIdxRef.
     resumeCheckIdxRef.current = vanafVraag > 0 ? vanafVraag : null;
@@ -864,7 +866,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
           setCheckIdx(checkIdx + 1);
           setSelected(null);
           setAttempts(1);
-          setShowTekstHerlees(false);
+          setShowTekstHerlees(true);
         } else {
           completeStep();
         }
@@ -899,7 +901,7 @@ export default function LearnPath({ pathId, initialStepIdx, userName, authUser, 
       setCheckIdx(checkIdx + 1);
       setSelected(null);
       setAttempts(1);
-      setShowTekstHerlees(false);
+      setShowTekstHerlees(true);
       setMode("checking");
     } else {
       completeStep();
