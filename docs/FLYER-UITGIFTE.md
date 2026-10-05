@@ -21,6 +21,7 @@
 | Voedselbank Rotterdam | VBROTTERDAM2027 | scherm | digitaal | 14 jul | 300 | draait op supermarkt-schermen |
 | Buurtgezinnen | BUURTGEZINNEN2027 | ? | digitaal | 21 aug | 100 | Froukje (belafspraak do 27 aug) |
 | Voedselbank Alkmaar | ALKMAAR2027 | ? | digitaal+print | 18 jul | 100 | verspreidt flyer in september |
+| Voedselbank Almelo | ALMELO2027 | Rita van Oosterom (secretaris) | digitaal (link in bedankmail) | 5 okt | — | 5 okt: na verhuizing; overleg intake-vrijwilligers + flyer uitdelen; fysiek pas op hun vraag |
 | Voedselbank Dongen | DONGEN2027 | ? | digitaal | 14 aug | 50 | vroeg zelf om flyer |
 | Voedselbank Zaanstreek | ZAANSTREEK2027 | ? | digitaal | 11 aug | 100 | via uitdeelpunt-medewerkers |
 | Leergeld Haarlemmermeer (Spark Fest) | HAARLEMMERMEER2027 | 1000 | print | 23 jul | 1000 | goodybags 18 okt — nog te drukken |

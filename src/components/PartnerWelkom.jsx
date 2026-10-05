@@ -61,6 +61,7 @@ export const PARTNER_NAMEN_KORT = {
 export const PARTNER_NAMEN = {
   AANZET2027: "Bibliotheek AanZet",
   ALKMAAR2027: "Voedselbank Alkmaar",
+  ALMELO2027: "Voedselbank Almelo", // 5 okt 2026: secretaris pakt het na de verhuizing op (intake + flyer)
   ALMERE2027: "de nieuwe bibliotheek in Almere",
   AMSTELLAND2027: "Bibliotheek Amstelland",
   APELDOORN2027: "Leergeld Apeldoorn-Voorst",

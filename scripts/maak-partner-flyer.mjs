@@ -30,6 +30,7 @@ const ORGS = [
   // 14 aug 2026: Voedselbank Dongen (voorzitter Monique Balemans) vroeg zelf
   // per mail wat ze nodig heeft om mee te doen — digitale flyer met eigen code.
   { code: "DONGEN2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" },
+  { code: "ALMELO2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" }, // 5 okt 2026
   // 10 sep 2026: beide vroegen zelf het oefenpakket aan (dag van de Kinderhulp-nieuwsbrief).
   { code: "LEUDAL2027", kaderKop: "Voor de gezinnen die u helpt betekent dat:" },
   { code: "ICHTHUS2027", kaderKop: "Voor de gezinnen op uw vijf scholen betekent dat:" },

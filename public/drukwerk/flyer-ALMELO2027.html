@@ -65,7 +65,6 @@
   <link rel="canonical" href="https://leerkwartier.app/leergeld-flyer.html" />
 </head>
 <body>
-  <div class="print-knop"><button onclick="window.print()">🖨️ Print deze flyer / opslaan als PDF</button></div>
   <div class="deel-balk">
     <span class="label">📲 Digitaal delen (geen druk- of portokosten):</span>
     <a class="deelknop deel-wa" id="deel-wa" href="#" target="_blank" rel="noopener">WhatsApp</a>
@@ -84,19 +83,19 @@
     <p>Oefenboeken kosten €27 tot €40. Bijles kost €37 per uur. Onderzoeksjournalistiek liet zien dat betaalde toetstraining de kansenongelijkheid rond de Doorstroomtoets vergroot. <strong>Leerkwartier is het gratis alternatief:</strong> een Nederlandse leer-app waar kinderen uit groep 6, 7 en 8 élke dag kunnen oefenen voor de Doorstroomtoets — zonder kosten, zonder account, zonder reclame.</p>
 
     <div class="kader">
-      <strong id="kader-kop">Voor gezinnen voor wie oefenboeken of bijles te duur zijn, betekent dat:</strong> volwaardige toetsvoorbereiding zonder dat er iets aangevraagd, betaald of verantwoord hoeft te worden. Het werkt direct, op elke telefoon, tablet of (bibliotheek)computer.
+      <strong id="kader-kop">Voor de gezinnen die u helpt betekent dat:</strong> volwaardige toetsvoorbereiding zonder dat er iets aangevraagd, betaald of verantwoord hoeft te worden. Het werkt direct, op elke telefoon, tablet of (bibliotheek)computer.
     </div>
 
     <!-- 🤲 Partner-QR: verschijnt alleen op flyers met ?partner=CODE in de URL.
          De QR (public/qr/<CODE>.png, maak met scripts/maak-partner-qr.mjs)
          opent de app mét code → scan is traceerbaar per partner en het gezin
          houdt ook in 2027 gratis toegang. -->
-    <div class="qr-blok" id="qr-blok">
-      <img id="qr-img" src="" alt="QR-code naar leerkwartier.app" />
+    <div class="qr-blok aan" id="qr-blok">
+      <img id="qr-img" src="data:image/png;base64,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" alt="QR-code naar leerkwartier.app" />
       <div>
         <h2>🎁 Cadeau bij deze flyer</h2>
-        <p><strong>Scan de QR-code met de camera van uw telefoon</strong> — de app opent direct, er hoeft niets geïnstalleerd te worden. Uw code <span class="qr-code-badge" id="qr-code-tekst"></span> wordt automatisch geactiveerd: daarmee krijgt uw gezin ook het Familie-pakket <strong>gratis, tot en met 31 december 2028</strong>. Oefenen zelf is altijd gratis, gegarandeerd tot en met 2031.</p>
-        <p class="qr-url">Scannen lukt niet? Typ dan in de browser: <span id="qr-url-tekst"></span></p>
+        <p><strong>Scan de QR-code met de camera van uw telefoon</strong> — de app opent direct, er hoeft niets geïnstalleerd te worden. Uw code <span class="qr-code-badge" id="qr-code-tekst">ALMELO2027</span> wordt automatisch geactiveerd: daarmee krijgt uw gezin ook het Familie-pakket <strong>gratis, tot en met 31 december 2028</strong>. Oefenen zelf is altijd gratis, gegarandeerd tot en met 2031.</p>
+        <p class="qr-url">Scannen lukt niet? Typ dan in de browser: <span id="qr-url-tekst">leerkwartier.app/?partner=ALMELO2027</span></p>
       </div>
     </div>
 
@@ -137,40 +136,5 @@
       Vragen van uw stichting beantwoord ik persoonlijk. Materiaal (flyers, teksten voor nieuwsbrief of site) lever ik graag op maat aan — ook dat kost niets.
     </div>
   </div>
-  <script>
-    // Zelfde code-regels als src/features/referral/partnerCode.js.
-    (function () {
-      var p = new URLSearchParams(location.search).get("partner");
-      var code = (p || "").trim().toUpperCase();
-      if (!code || !/^[A-Z0-9-]{3,20}$/.test(code)) return;
-      var url = "leerkwartier.app/?partner=" + code;
-      document.getElementById("qr-img").src = "/qr/" + code + ".png";
-      document.getElementById("qr-code-tekst").textContent = code;
-      document.getElementById("qr-url-tekst").textContent = url;
-      document.getElementById("qr-blok").classList.add("aan");
-      // Flyer gaat ook naar voedselbanken en bibliotheken — kop neutraal maken.
-      document.getElementById("kader-kop").textContent = "Voor de gezinnen die deze flyer krijgen betekent dat:";
-    })();
-
-    // 📲 Digitaal delen — WhatsApp, kopieer-link en QR tonen. Verdwijnt bij printen.
-    (function () {
-      var shareUrl = (location.protocol === "https:")
-        ? location.href
-        : "https://leerkwartier.app/leergeld-flyer.html";
-      var tekst = "Gratis oefenen voor de Doorstroomtoets — voor élk gezin, zonder kosten, zonder account. Kijk op Leerkwartier: ";
-      var wa = document.getElementById("deel-wa");
-      if (wa) wa.href = "https://wa.me/?text=" + encodeURIComponent(tekst + shareUrl);
-      var kopie = document.getElementById("deel-kopie");
-      if (kopie) kopie.addEventListener("click", function () {
-        var klaar = function () { kopie.textContent = "✅ Gekopieerd!"; setTimeout(function(){ kopie.textContent = "🔗 Kopieer link"; }, 2000); };
-        if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(shareUrl).then(klaar, function(){ window.prompt("Kopieer de link:", shareUrl); });
-        } else { window.prompt("Kopieer de link:", shareUrl); }
-      });
-      var qrKnop = document.getElementById("deel-qr");
-      var qrBlok = document.getElementById("qr-toon");
-      if (qrKnop && qrBlok) qrKnop.addEventListener("click", function () { qrBlok.classList.toggle("aan"); });
-    })();
-  </script>
-</body>
+  </body>
 </html>
