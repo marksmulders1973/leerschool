@@ -448,7 +448,7 @@ const steps = [
       { q: "10 × 8 = ?", options: ["80","18","100","800"], answer: 0, wrongHints: [null, "Som.", "10×10.", "Te veel."] },
       { q: "2 × 12 = ?", options: ["24","14","20","6"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Helft."] },
       { q: "Tafel-truc: 5 × even getal eindigt op?", options: ["0","5","1","2"], answer: 0, wrongHints: [null, "Bij oneven.", "Niet.", "Niet."] },
-      { q: "Welke truc helpt bij **9-tafel**?", options: ["Stappen van −1 in tientallen, +1 in eenheden","Tafel optellen","Niet relevant","Per stuk leren"], answer: 0, wrongHints: [null, "Niet specifiek.", "Wel handig.", "Werkt traag."] },
+      { q: "Welke truc helpt bij **9-tafel**?", options: ["Elke stap: tientallen +1, eenheden −1 (9, 18, 27, 36 …)","Elke stap: tientallen −1, eenheden +1","Er is geen truc","Alles gewoon uit je hoofd leren"], answer: 0, wrongHints: [null, "Andersom: van 9 naar 18 gaat het tiental omhoog (0 → 1) en de eenheid omlaag (9 → 8).", "Er is wel een handige truc — kijk naar 9, 18, 27.", "Uit je hoofd mag, maar de truc helpt je controleren."] },
       { q: "6 × 8 = ?", options: ["48","14","56","42"], answer: 0, wrongHints: [null, "Som.", "7×8.", "6×7."] },
       { q: "11 × 11 = ?", options: ["121","111","112","144"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "12×12."] },
       { q: "12 × 4 = ?", options: ["48","16","44","36"], answer: 0, wrongHints: [null, "Som.", "Niet.", "12×3."] },

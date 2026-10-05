@@ -299,9 +299,9 @@ const steps = [
       },
       {
         q: "**78 ÷ 6 — wat is de uitkomst (met of zonder rest)?**",
-        options: ["13","12 rest 6","13 rest 0","12"],
+        options: ["13","12 rest 6","13 rest 1","12"],
         answer: 0,
-        wrongHints: [null,"Niet correct — als er een rest van 6 is, kun je dan nog een keer delen? Hoeveel past er nog in die rest?","Klopt qua getal, maar 'rest 0' hoef je meestal niet erbij te zetten.","Te weinig — doe een proef: jouw antwoord keer 6 geeft niet 78. Welk getal keer 6 geeft precies 78?"],
+        wrongHints: [null,"Als er een rest van 6 is, past de 6 er nog één keer in — dus 13, zonder rest.","Kijk nog eens: 13 × 6 = 78 precies, er blijft niets over.","Te weinig: 12 × 6 = 72, er blijven nog 6 over — dat is nog één keer 6."],
         uitlegPad: {
           stappen: [
             { titel: "Reken", tekst: "13×6=78 (precies). Geen rest. Antwoord: 13." },
@@ -506,7 +506,7 @@ const steps = [
       { q: "**1.000 − 245** = ?", options: ["755","855","655","745"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — bijna."] },
       { q: "**45 × 11** = ?", options: ["495","450","405","550"], answer: 0, wrongHints: [null, "Dat is ×10.", "Niet.", "Niet."] },
       { q: "**100 ÷ 25** = ?", options: ["4","5","2","10"], answer: 0, wrongHints: [null, "Tel op in stappen van 25: 25, 50, 75, 100 — hoeveel sprongen zijn dat precies?", "2 keer 25 is pas 50 — is dat al 100? Blijf verder tellen.", "10 keer 25 zou 250 zijn, veel te veel — welk getal keer 25 geeft precies 100?"] },
-      { q: "Hoeveel **honderdtallen** in 4.567?", options: ["5","4","6","7"], answer: 0, wrongHints: [null, "Dat is duizendtal.", "Dat is tiental.", "Dat is eenheid."] },
+      { q: "Welk **cijfer** staat op de plek van de **honderdtallen** in 4.567?", options: ["5","4","6","7"], answer: 0, wrongHints: [null, "De 4 staat op de plek van de duizendtallen.", "De 6 staat op de plek van de tientallen.", "De 7 staat op de plek van de eenheden."] },
     ],
   },
   // F. Oefenronde plus & min (11 aug 2026, zelfde didactiek als tafels/topografie):
