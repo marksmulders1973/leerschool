@@ -387,9 +387,9 @@ const steps = [
     checks: [
       {
         q: "Welk dier slaapt **winterslaap**?",
-        options: ["egel", "kraai", "ree", "vleermuis (deels)"],
+        options: ["egel", "kraai", "ree", "merel"],
         answer: 0,
-        wrongHints: [null, "Kraai blijft actief in de winter.", "Ree blijft actief, zoekt eten in bos.", "Klopt deels — maar dit is niet het bekendste voorbeeld in NL."],
+        wrongHints: [null, "Kraai blijft actief in de winter.", "Ree blijft actief, zoekt eten in bos.", "De merel blijft de hele winter wakker en zoekt eten."],
         uitlegPad: {
           stappen: [{ titel: "Egel = winterslaap", tekst: "Egel is klassiek winterslaap-dier. Slaapt nov-april in nest van bladeren." }],
           woorden: [{ woord: "winterslaap", uitleg: "Lichaamstemperatuur daalt, bewegingen bijna nul. Bespaart energie." }],
@@ -639,7 +639,7 @@ const steps = [
       { q: "Wat doet een **trekvogel** in de winter?", options: ["Vliegt naar warmer land","Slaapt","Verandert kleur","Niets"], answer: 0, wrongHints: [null, "Niet vogel.", "Niet trekvogel.", "Wel migratie."] },
       { q: "Wat is **winterslaap**?", options: ["Langdurige rust met lage activiteit","Korte slaap","Wakker blijven","Vlucht"], answer: 0, wrongHints: [null, "Niet — lang.", "Tegengestelde.", "Trekvogels."] },
       { q: "Welk dier houdt **winterslaap** in NL?", options: ["Egel","Vos","Konijn","Eekhoorn"], answer: 0, wrongHints: [null, "Blijft actief.", "Blijft actief.", "Blijft actief — eet van zijn wintervoorraad."] },
-      { q: "Welk seizoen is meestal **droogst**?", options: ["Zomer","Winter","Lente","Herfst"], answer: 0, wrongHints: [null, "Vaak nat.", "Variabel.", "Vaak nat."] },
+      { q: "Welk seizoen is in Nederland meestal het **droogst**?", options: ["Lente","Winter","Zomer","Herfst"], answer: 0, wrongHints: [null, "In de winter valt er vaker regen dan in de lente.", "Verrassend: in de zomer valt juist veel regen, door onweersbuien.", "De herfst is vaak het natst."] },
       { q: "Wat doet een **kikkervisje** in de lente?", options: ["Groeit uit tot kikker","Slaapt","Verstopt","Vliegt"], answer: 0, wrongHints: [null, "Het is juist actief: zwemmen + groeien.", "Het zwemt rond in het water, niet verborgen.", "Kikkers zijn geen vliegers."] },
       { q: "Welke vogel **trekt** in de herfst weg uit NL?", options: ["Ooievaar","Mus","Merel","Spreeuw"], answer: 0, wrongHints: [null, "Mussen blijven heel jaar in NL — standvogel.", "Merels blijven hier — bij voederplankjes zie je ze 's winters ook.", "Spreeuwen blijven grotendeels — standvogel."] },
       { q: "Een **knop** aan een tak verschijnt in welk seizoen?", options: ["Lente","Zomer","Herfst","Winter"], answer: 0, wrongHints: [null, "Volgroeide bladeren.", "Bladeren weg.", "Geen bladeren."] },
