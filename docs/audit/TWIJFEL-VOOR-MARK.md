@@ -30,3 +30,26 @@ Niet gewijzigd; nakijkers vonden ze verdedigbaar maar discutabel. Per regel: pad
 
 ## Patroon (geen fout, wel aandacht)
 - Veel paden hebben wrongHints met categorie-labels ("Opsomming.", "Som.", "Niet.") → weinig didactische waarde (eliminatie-leak-stijl); zachte koppeltekens (U+00AD) in enkele uitlegteksten.
+
+# Ronde 2 (5-6 okt) — aanvullingen
+
+## Patroon om in één keer aan te pakken (geen losse fouten)
+- topics.js (voorlichting/puberteit/pesten/klimaat/media) en oefenbank groep 5/7: ~60 afleiders zijn "X of Y"-plaksels of "foute optie + staart van het goede antwoord"; ~45 keer verraadt de langste/netste optie het antwoord. Niet fout, wel knullig en raadbaar → bulk-herschrijven als aparte klus.
+- Studievaardigheden-plaatjes in topics.js: bij 15+ vragen staat de waarde al in de opties ("Eindhoven (16°C)") of in het plaatje; weggeef-patroon. Bewust (plaatjes geblokkeerd) of opschonen?
+- _realRek8: 21 van 23 vragen hebben answer-index 3 (prima als de app schudt).
+
+## Verouderd / feiten
+- topics r.171 pesten: "anti-pestlijn 0800-2567890" niet te bevestigen → Kindertelefoon 0800-0432?
+- topics r.131 EHBO: "10-15 m afstand bij elektrisch ongeluk" vaag (hoogspanning ≥18-20 m; huishoudstroom = stroom uit).
+- cito.groep8[59] meeste tijdzones = Rusland (11); Frankrijk met overzee 12.
+- cito.groep8[106] rivier bij Rotterdam = Maas (schoolconventie; Nieuwe Maas is grotendeels Rijnwater).
+- aardrijkskunde.groep7[6] grootste woestijn = Antarctica (technisch juist, kinderen leren Sahara).
+- Doorstroomtoets rekenen g8: intro "~75 vragen, 4× ~20 min" en kop-SVG "4 stappen" kloppen niet bij 6 stappen/264 vragen.
+- doorstroomtoets-taal stap 4-uitleg: kapotte tekenreeks "Aanhalingstekens *''*\*"; stap 3 verwijst naar "[spelling-ei-ij-au-ou pad]" als platte tekst.
+
+## Niveau past niet bij groep
+- engels.groep7 (litotes, third conditional) en maatschappijleer.groep7 (Locke, dualisme): VO-bovenbouw-niveau onder een groep-7-label.
+- geschiedenis.groep7[37] Maagdenburger Confessie; topics r.82 "genitaliën"-vraag herhaalt het antwoord.
+
+## Dubbel
+- rekenen.groep4[8]=[48] (5×5); aardrijkskunde.groep7[30]/[32] = [14]/[25]; duits.groep7[49]=[39]; frans.groep5[48]/[49]; Doorstroomtoets rekenen: 4 dubbele sommen (stap 1 v17/v44, 2 v14/v30, 3 v13/v22, 4 v13/v21).

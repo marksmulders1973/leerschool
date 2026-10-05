@@ -146,10 +146,10 @@ Aantal = vragen in het pad (`steps[].checks`), geteld 5 okt 2026. Paden met .jsx
 | groep8 | begrijpend-lezen | lange-toets-teksten-g8-po | 26 | ✅ ronde 1 (E2), 5 okt |  |
 | groep8 | cito | cito-strategieen-groep8 | 40 | ✅ nacht 5→6 okt |  |
 | groep8 | rekenen | brugklas-orientatie | 40 | ✅ nacht 5→6 okt |  |
-| groep8 | rekenen | doorstroomtoets-rekenen-g8 | 264 | ⏳ |  |
-| groep8 | rekenen | doorstroomtoets-studievaardigheden-g8 | 330 | ⏳ |  |
+| groep8 | rekenen | doorstroomtoets-rekenen-g8 | 264 | ✅ ronde 2, 5-6 okt | 264 / 45 |
+| groep8 | rekenen | doorstroomtoets-studievaardigheden-g8 | 330 | ✅ ronde 2, 5-6 okt | 330 / 15 |
 | groep8 | studievaardigheden | onderwijs-niveaus-vmbo-havo-vwo | 26 | ✅ ronde 1 (B), 5 okt |  |
-| groep8 | taal | doorstroomtoets-taal-g8 | 237 | ⏳ |  |
+| groep8 | taal | doorstroomtoets-taal-g8 | 237 | ✅ ronde 2, 5-6 okt | 237 / 14 |
 | havo-vwo-4-5 | aardrijkskunde | atmosfeer-klimaat-havo-vwo | 25 | ⏳ |  |
 | havo-vwo-4-5 | aardrijkskunde | energie-hulpbronnen-havo-vwo | 25 | ⏳ |  |
 | havo-vwo-4-5 | aardrijkskunde | globalisering-havo-vwo | 25 | ⏳ |  |
@@ -359,4 +359,4 @@ Aantal = vragen in het pad (`steps[].checks`), geteld 5 okt 2026. Paden met .jsx
 | vwo | klassieke-talen | latijn-vwo | 25 | ⏳ |  |
 | vwo | wiskunde | wiskunde-d-vwo | 25 | ⏳ |  |
 
-Totaal: 353 paden, 9712 vragen in paden (geteld). Daarnaast losse banken: sampleQuestions.js, textbookQuestions.js, topics.js (samen ~7.500 vragen) en ai_question_pool (238 over na 5 okt).
+Totaal: 353 paden, 9712 vragen in paden (geteld). Losse banken (ronde 2, 5-6 okt): sampleQuestions.js PO-deel ✅ 1.749 / 77 hersteld (VO-deel klas1-6 ⏳ ~1.980); textbookQuestions.js ✅ 816 / 17; topics.js ✅ 661 / 43 (rest van dat bestand verwijst naar sampleQuestions); ai_question_pool 238 over (2e ronde ⏳).
