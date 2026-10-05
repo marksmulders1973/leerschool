@@ -1,0 +1,202 @@
+{
+ "stadjerspas@groningen.nl": {
+  "gemeente": "Groningen",
+  "id": "01a10adc-c3e2-7db4-960b-0554d5b05a2c",
+  "op": "2026-10-05T07:00:02.780Z"
+ },
+ "info@almere.nl": {
+  "gemeente": "Almere",
+  "id": "01a10adc-d045-74ba-a96e-73329e9dbaec",
+  "op": "2026-10-05T07:00:06.342Z"
+ },
+ "postbus20@enschede.nl": {
+  "gemeente": "Enschede",
+  "id": "01a10adc-def2-73fc-b7d7-1056a2f7d6c7",
+  "op": "2026-10-05T07:00:10.117Z"
+ },
+ "info@haarlemmermeer.nl": {
+  "gemeente": "Haarlemmermeer",
+  "id": "01a10adc-ea6b-792c-aeb0-271bff74103b",
+  "op": "2026-10-05T07:00:12.452Z"
+ },
+ "Antwoord@zoetermeer.nl": {
+  "gemeente": "Zoetermeer",
+  "id": "01a10adc-f2b4-78e2-b883-d9ea0bb4dbc2",
+  "op": "2026-10-05T07:00:14.446Z"
+ },
+ "schoolspullenpas@boxtel.nl": {
+  "gemeente": "Boxtel",
+  "id": "01a10adc-fdc9-7277-aeaa-bba5976e6bc8",
+  "op": "2026-10-05T07:00:17.840Z"
+ },
+ "cpi@amersfoort.nl": {
+  "gemeente": "Amersfoort",
+  "id": "01a10add-075c-7e94-9b3a-82935eed13b5",
+  "op": "2026-10-05T07:00:19.641Z"
+ },
+ "info@klantenservice-bosschepas.nl": {
+  "gemeente": "'s-Hertogenbosch",
+  "id": "01a10add-0e74-760a-82d2-32fa6bd5d449",
+  "op": "2026-10-05T07:00:21.479Z"
+ },
+ "antwoord@haarlem.nl": {
+  "gemeente": "Haarlem",
+  "id": "01a10add-1572-70f8-acac-de28f85c1a51",
+  "op": "2026-10-05T07:00:23.330Z"
+ },
+ "postbus@zwolle.nl": {
+  "gemeente": "Zwolle",
+  "id": "01a10add-1ca2-7756-9d39-846a5430e376",
+  "op": "2026-10-05T07:00:25.139Z"
+ },
+ "Post-SocialeZaken@maastricht.nl": {
+  "gemeente": "Maastricht",
+  "id": "01a10add-23cf-77ac-a5e7-9c95c0b1fb94",
+  "op": "2026-10-05T07:00:26.935Z"
+ },
+ "consulenten@ede.nl": {
+  "gemeente": "Ede",
+  "id": "01a10add-2ab7-72c4-995e-8928ff307ce0",
+  "op": "2026-10-05T07:00:28.773Z"
+ },
+ "info@gemeentewestland.nl": {
+  "gemeente": "Westland",
+  "id": "01a10add-31fe-72c4-b094-1b8463a297f3",
+  "op": "2026-10-05T07:00:30.774Z"
+ },
+ "gemeente@alphenaandenrijn.nl": {
+  "gemeente": "Alphen aan den Rijn",
+  "id": "01a10add-39b6-784e-945c-7348fa724bf3",
+  "op": "2026-10-05T07:00:32.625Z"
+ },
+ "pacttegenarmoede@delft.nl": {
+  "gemeente": "Delft",
+  "id": "01a10add-40f7-7922-ab70-98b8edefc4ba",
+  "op": "2026-10-05T07:00:34.491Z"
+ },
+ "gemeente@emmen.nl": {
+  "gemeente": "Emmen",
+  "id": "01a10add-4840-751e-9e0d-bbe60f81fc0e",
+  "op": "2026-10-05T07:00:36.280Z"
+ },
+ "gemeente@deventer.nl": {
+  "gemeente": "Deventer",
+  "id": "01a10add-4f42-779b-a27e-42681c771f4a",
+  "op": "2026-10-05T07:00:38.059Z"
+ },
+ "zorgpoort@helmond.nl": {
+  "gemeente": "Helmond",
+  "id": "01a10add-564f-7a26-91a4-b4372529112b",
+  "op": "2026-10-05T07:00:39.913Z"
+ },
+ "info@purmerend.nl": {
+  "gemeente": "Purmerend",
+  "id": "01a10add-5d6b-7b99-9b8a-8314ac9c7f6a",
+  "op": "2026-10-05T07:00:41.714Z"
+ },
+ "sociaalloket@amstelveen.nl": {
+  "gemeente": "Amstelveen",
+  "id": "01a10add-6472-792d-8245-1ff34cb7162c",
+  "op": "2026-10-05T07:00:43.562Z"
+ },
+ "Gemeente@oss.nl": {
+  "gemeente": "Oss",
+  "id": "01a10add-6bac-7ef6-92bc-cb14e500514e",
+  "op": "2026-10-05T07:00:45.427Z"
+ },
+ "sociaalplein@hilversum.nl": {
+  "gemeente": "Hilversum",
+  "id": "01a10add-72f8-7688-9d0a-20d416273626",
+  "op": "2026-10-05T07:00:47.367Z"
+ },
+ "inkomensondersteuning@landvancuijk.nl": {
+  "gemeente": "Land van Cuijk",
+  "id": "01a10add-7a8b-717f-9fb2-81a0bb060dd8",
+  "op": "2026-10-05T07:00:49.452Z"
+ },
+ "info@sittard-geleen.nl": {
+  "gemeente": "Sittard-Geleen",
+  "id": "01a10add-82b0-7a04-b511-303860311ea3",
+  "op": "2026-10-05T07:00:51.318Z"
+ },
+ "gir@gemeentehw.nl": {
+  "gemeente": "Hoeksche Waard",
+  "id": "01a10add-8a12-742e-8b00-ecd21bb62d5d",
+  "op": "2026-10-05T07:00:53.126Z"
+ },
+ "sociaaldomein@dijkenwaard.nl": {
+  "gemeente": "Dijk en Waard",
+  "id": "01a10add-9107-7ec1-a5d2-86e52ccd53bb",
+  "op": "2026-10-05T07:00:54.934Z"
+ },
+ "info@gemeentesudwestfryslan.nl": {
+  "gemeente": "Súdwest-Fryslân",
+  "id": "01a10add-9810-76a0-83bd-2f754e7beb07",
+  "op": "2026-10-05T07:00:56.809Z"
+ },
+ "minimaregeling@nissewaard.nl": {
+  "gemeente": "Nissewaard",
+  "id": "01a10add-9f5c-7132-95d9-fd5ec4817f8e",
+  "op": "2026-10-05T07:00:58.585Z"
+ },
+ "info@meierijstad.nl": {
+  "gemeente": "Meierijstad",
+  "id": "01a10add-a650-7bce-a72e-1031ba2aaf55",
+  "op": "2026-10-05T07:01:00.468Z"
+ },
+ "gemeente@hengelo.nl": {
+  "gemeente": "Hengelo",
+  "id": "01a10add-adb9-7ee6-84f9-b8d3ff2c140e",
+  "op": "2026-10-05T07:01:02.299Z"
+ },
+ "info@roosendaal.nl": {
+  "gemeente": "Roosendaal",
+  "id": "01a10add-b4d1-7518-a730-cba18ec6d9a4",
+  "op": "2026-10-05T07:01:04.201Z"
+ },
+ "gemeente@gouda.nl": {
+  "gemeente": "Gouda",
+  "id": "01a10add-bc3e-7392-be52-c54bdd9e94bc",
+  "op": "2026-10-05T07:01:06.007Z"
+ },
+ "rondkomen@hoorn.nl": {
+  "gemeente": "Hoorn",
+  "id": "01a10add-c353-7764-8614-079b750985be",
+  "op": "2026-10-05T07:01:07.828Z"
+ },
+ "socialezaken@almelo.nl": {
+  "gemeente": "Almelo",
+  "id": "01a10add-ca6a-7ac0-bbec-9ae494589635",
+  "op": "2026-10-05T07:01:09.633Z"
+ },
+ "gemeente@voorneaanzee.nl": {
+  "gemeente": "Voorne aan Zee",
+  "id": "01a10add-d178-757f-9da8-3b29ccad434f",
+  "op": "2026-10-05T07:01:11.720Z"
+ },
+ "veenendaal@minimaregelingen.nl": {
+  "gemeente": "Veenendaal",
+  "id": "01a10add-d996-7802-b5d8-69105ac1663b",
+  "op": "2026-10-05T07:01:13.535Z"
+ },
+ "info@assen.nl": {
+  "gemeente": "Assen",
+  "id": "01a10add-e0b8-7d88-bc39-9c30f52bd134",
+  "op": "2026-10-05T07:01:15.360Z"
+ },
+ "stadskantoor@bergenopzoom.nl": {
+  "gemeente": "Bergen op Zoom",
+  "id": "01a10add-e7d1-7f3a-9bc8-f02090d98ffc",
+  "op": "2026-10-05T07:01:17.409Z"
+ },
+ "info@velsen.nl": {
+  "gemeente": "Velsen",
+  "id": "01a10add-efd4-73c8-9ff4-35bcb4e30b81",
+  "op": "2026-10-05T07:01:19.289Z"
+ },
+ "gemeente@capelleaandenijssel.nl": {
+  "gemeente": "Capelle aan den IJssel",
+  "id": "01a10add-f72e-7a21-9c25-b0f27d138e72",
+  "op": "2026-10-05T07:01:21.168Z"
+ }
+}

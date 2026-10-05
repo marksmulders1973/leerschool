@@ -17,9 +17,9 @@ Aantal = vragen in het pad (`steps[].checks`), geteld 5 okt 2026. Paden met .jsx
 | ? | ? | topografie-europa-landen-po | (jsx) | ✅ nacht 5→6 okt |  |
 | ? | ? | topografie-nederland-provincies-po | (jsx) | ✅ nacht 5→6 okt |  |
 | ? | ? | topografie-wereld-werelddelen-po | (jsx) | ✅ nacht 5→6 okt |  |
-| groep1-2 | taal | rijmen-letters-kleuters-po | 25 | 🔄 ronde 1 (F), 5 okt |  |
+| groep1-2 | taal | rijmen-letters-kleuters-po | 25 | ✅ ronde 1 (F), 5 okt |  |
 | groep3 | spelling | spelling-eerste-woorden-g3 | 20 | ✅ nacht 5→6 okt |  |
-| groep3 | taal | taal-leren-lezen-g3 | 20 | 🔄 ronde 1 (F), 5 okt |  |
+| groep3 | taal | taal-leren-lezen-g3 | 20 | ✅ ronde 1 (F), 5 okt |  |
 | groep3-4 | rekenen | rekenen-tot-20-nieuwkomers | 25 | ✅ 24 sep–3 okt bij bouw |  |
 | groep3-4 | rekenen | rekentaal-nieuwkomers | 15 | ✅ 24 sep–3 okt bij bouw |  |
 | groep3-4 | rekenen | rekenverhaaltjes-nieuwkomers | 20 | ✅ 24 sep–3 okt bij bouw |  |
@@ -31,124 +31,124 @@ Aantal = vragen in het pad (`steps[].checks`), geteld 5 okt 2026. Paden met .jsx
 | groep3-4 | taal | woorden-3-nieuwkomers | 27 | ✅ 24 sep–3 okt bij bouw |  |
 | groep3-4 | taal | woorden-nieuwkomers | 25 | ✅ 24 sep–3 okt bij bouw |  |
 | groep3-5 | rekenen | klokkijken | 45 | ✅ nacht 5→6 okt |  |
-| groep4-5 | begrijpend-lezen | korte-teksten-snappen-g4 | 20 | 🔄 ronde 1 (E1), 5 okt |  |
+| groep4-5 | begrijpend-lezen | korte-teksten-snappen-g4 | 20 | ✅ ronde 1 (E1), 5 okt |  |
 | groep4-5 | rekenen | rekenen-tot-100-nieuwkomers | 25 | ✅ 24 sep–3 okt bij bouw |  |
-| groep4-5 | taal | taal-woorden-zinnen-g4 | 21 | 🔄 ronde 1 (F), 5 okt |  |
+| groep4-5 | taal | taal-woorden-zinnen-g4 | 21 | ✅ ronde 1 (F), 5 okt |  |
 | groep4-6 | spelling | spelling-ei-ij-au-ou | 40 | ✅ nacht 5→6 okt |  |
-| groep4-7 | natuur | dieren-seizoenen-natuur | 40 | 🔄 ronde 1 (H1), 5 okt |  |
-| groep5-6 | geschiedenis | geschiedenis-vroeger-en-nu-g5 | 20 | 🔄 ronde 1 (F), 5 okt |  |
-| groep5-7 | rekenen | volgorde-bewerkingen | 40 | 🔄 ronde 1 (A), 5 okt |  |
-| groep5-7 | taal | interpunctie-po | 40 | 🔄 ronde 1 (C), 5 okt |  |
-| groep5-7 | taal | synoniemen-tegenstellingen-po | 40 | 🔄 ronde 1 (C), 5 okt |  |
-| groep5-8 | aardrijkskunde | kaartlezen-po | 40 | 🔄 ronde 1 (F), 5 okt |  |
-| groep5-8 | begrijpend-lezen | begrijpend-lezen-strategie | 40 | 🔄 ronde 1 (E1), 5 okt |  |
-| groep5-8 | begrijpend-lezen | begrijpend-lezen-teksten-po | 40 | 🔄 ronde 1 (E1), 5 okt |  |
-| groep5-8 | begrijpend-lezen | samenvatten-hoofdgedachte-po | 40 | 🔄 ronde 1 (E1), 5 okt |  |
-| groep5-8 | natuur | dierenklassen-po | 40 | 🔄 ronde 1 (H1), 5 okt |  |
-| groep5-8 | natuur | sterren-planeten | 40 | 🔄 ronde 1 (H1), 5 okt |  |
+| groep4-7 | natuur | dieren-seizoenen-natuur | 40 | ✅ ronde 1 (H1), 5 okt |  |
+| groep5-6 | geschiedenis | geschiedenis-vroeger-en-nu-g5 | 20 | ✅ ronde 1 (F), 5 okt |  |
+| groep5-7 | rekenen | volgorde-bewerkingen | 40 | ✅ ronde 1 (A), 5 okt |  |
+| groep5-7 | taal | interpunctie-po | 40 | ✅ ronde 1 (C), 5 okt |  |
+| groep5-7 | taal | synoniemen-tegenstellingen-po | 40 | ✅ ronde 1 (C), 5 okt |  |
+| groep5-8 | aardrijkskunde | kaartlezen-po | 40 | ✅ ronde 1 (F), 5 okt |  |
+| groep5-8 | begrijpend-lezen | begrijpend-lezen-strategie | 40 | ✅ ronde 1 (E1), 5 okt |  |
+| groep5-8 | begrijpend-lezen | begrijpend-lezen-teksten-po | 40 | ✅ ronde 1 (E1), 5 okt |  |
+| groep5-8 | begrijpend-lezen | samenvatten-hoofdgedachte-po | 40 | ✅ ronde 1 (E1), 5 okt |  |
+| groep5-8 | natuur | dierenklassen-po | 40 | ✅ ronde 1 (H1), 5 okt |  |
+| groep5-8 | natuur | sterren-planeten | 40 | ✅ ronde 1 (H1), 5 okt |  |
 | groep5-8 | rekenen | breuken-po | 40 | ✅ nacht 5→6 okt |  |
 | groep5-8 | rekenen | geld-rekenen | 40 | ✅ nacht 5→6 okt |  |
-| groep5-8 | rekenen | negatieve-getallen-po | 40 | 🔄 ronde 1 (A), 5 okt |  |
+| groep5-8 | rekenen | negatieve-getallen-po | 40 | ✅ ronde 1 (A), 5 okt |  |
 | groep5-8 | rekenen | procenten-po | 40 | ✅ nacht 5→6 okt |  |
 | groep5-8 | rekenen | redactiesommen-pad | 40 | ✅ nacht 5→6 okt |  |
-| groep5-8 | rekenen | schatten-afronden | 40 | 🔄 ronde 1 (B), 5 okt |  |
-| groep5-8 | rekenen | verhoudingen-po | 40 | 🔄 ronde 1 (B), 5 okt |  |
-| groep5-8 | rekenen | vlakke-figuren-po | 40 | 🔄 ronde 1 (B), 5 okt |  |
+| groep5-8 | rekenen | schatten-afronden | 40 | ✅ ronde 1 (B), 5 okt |  |
+| groep5-8 | rekenen | verhoudingen-po | 40 | ✅ ronde 1 (B), 5 okt |  |
+| groep5-8 | rekenen | vlakke-figuren-po | 40 | ✅ ronde 1 (B), 5 okt |  |
 | groep5-8 | spelling | spelling-overige-po | 40 | ✅ nacht 5→6 okt |  |
 | groep5-8 | spelling | werkwoordsspelling-dt | 40 | ✅ nacht 5→6 okt |  |
-| groep5-8 | taal | dichten-poezie-rijmen-po | 40 | 🔄 ronde 1 (C), 5 okt |  |
-| groep5-8 | taal | schemas-stappenplannen-po | 40 | 🔄 ronde 1 (C), 5 okt |  |
+| groep5-8 | taal | dichten-poezie-rijmen-po | 40 | ✅ ronde 1 (C), 5 okt |  |
+| groep5-8 | taal | schemas-stappenplannen-po | 40 | ✅ ronde 1 (C), 5 okt |  |
 | groep5-8 | taal | werkwoord-tijden-po | 40 | ✅ nacht 5→6 okt |  |
-| groep5-8 | taal | woordenschat-po | 40 | 🔄 ronde 1 (C), 5 okt |  |
-| groep5-8 | taal | woordsoorten-po | 40 | 🔄 ronde 1 (C), 5 okt |  |
+| groep5-8 | taal | woordenschat-po | 40 | ✅ ronde 1 (C), 5 okt |  |
+| groep5-8 | taal | woordsoorten-po | 40 | ✅ ronde 1 (C), 5 okt |  |
 | groep6-8 | aardrijkskunde | topografie-nederland | 40 | ✅ nacht 5→6 okt |  |
-| groep6-8 | aardrijkskunde | vulkanen-po | 21 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | aardrijkskunde | water-erfgoed-nederland-po | 40 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | aardrijkskunde | werelddelen-landen-po | 40 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | begrijpend-lezen | alinea-functies-tussenkopjes-po | 26 | 🔄 ronde 1 (E1), 5 okt |  |
-| groep6-8 | begrijpend-lezen | brief-email-lezen-po | 26 | 🔄 ronde 1 (E1), 5 okt |  |
-| groep6-8 | begrijpend-lezen | feiten-details-opzoeken-po | 26 | 🔄 ronde 1 (E1), 5 okt |  |
-| groep6-8 | begrijpend-lezen | nieuwsbericht-lezen-po | 26 | 🔄 ronde 1 (E1), 5 okt |  |
-| groep6-8 | begrijpend-lezen | schema-tekst-combi-po | 26 | 🔄 ronde 1 (E1), 5 okt |  |
-| groep6-8 | begrijpend-lezen | tekstdoel-schrijversdoel-po | 26 | 🔄 ronde 1 (E2), 5 okt |  |
-| groep6-8 | begrijpend-lezen | tekstverbanden-oorzaak-gevolg-po | 26 | 🔄 ronde 1 (E2), 5 okt |  |
-| groep6-8 | begrijpend-lezen | verwijswoorden-begrijpend-lezen-po | 26 | 🔄 ronde 1 (E2), 5 okt |  |
-| groep6-8 | begrijpend-lezen | woordbetekenis-context-po | 26 | 🔄 ronde 1 (E2), 5 okt |  |
+| groep6-8 | aardrijkskunde | vulkanen-po | 21 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | aardrijkskunde | water-erfgoed-nederland-po | 40 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | aardrijkskunde | werelddelen-landen-po | 40 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | begrijpend-lezen | alinea-functies-tussenkopjes-po | 26 | ✅ ronde 1 (E1), 5 okt |  |
+| groep6-8 | begrijpend-lezen | brief-email-lezen-po | 26 | ✅ ronde 1 (E1), 5 okt |  |
+| groep6-8 | begrijpend-lezen | feiten-details-opzoeken-po | 26 | ✅ ronde 1 (E1), 5 okt |  |
+| groep6-8 | begrijpend-lezen | nieuwsbericht-lezen-po | 26 | ✅ ronde 1 (E1), 5 okt |  |
+| groep6-8 | begrijpend-lezen | schema-tekst-combi-po | 26 | ✅ ronde 1 (E1), 5 okt |  |
+| groep6-8 | begrijpend-lezen | tekstdoel-schrijversdoel-po | 26 | ✅ ronde 1 (E2), 5 okt |  |
+| groep6-8 | begrijpend-lezen | tekstverbanden-oorzaak-gevolg-po | 26 | ✅ ronde 1 (E2), 5 okt |  |
+| groep6-8 | begrijpend-lezen | verwijswoorden-begrijpend-lezen-po | 26 | ✅ ronde 1 (E2), 5 okt |  |
+| groep6-8 | begrijpend-lezen | woordbetekenis-context-po | 26 | ✅ ronde 1 (E2), 5 okt |  |
 | groep6-8 | engels | basis-grammatica-engels-po | 40 | ✅ nacht 5→6 okt |  |
 | groep6-8 | engels | woordenschat-engels-po | 45 | ⏳ |  |
-| groep6-8 | geschiedenis | bekende-boeken-literatuur-po | 40 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | geschiedenis | industriele-revolutie-po | 40 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | geschiedenis | klassieke-muziek-po | 25 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | geschiedenis | nederlandse-kunstenaars-po | 25 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | geschiedenis | olympische-spelen-po | 24 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | geschiedenis | ontdekkingsreizen-po | 40 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | geschiedenis | oudheid-egyptenaren-grieken-romeinen-po | 40 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | geschiedenis | politiek-democratie-po | 40 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | geschiedenis | tijdvakken-nederland-po | 40 | 🔄 ronde 1 (G), 5 okt |  |
-| groep6-8 | natuur | bekende-wetenschappers-po | 40 | 🔄 ronde 1 (H1), 5 okt |  |
-| groep6-8 | natuur | energiebronnen-po | 40 | 🔄 ronde 1 (H1), 5 okt |  |
-| groep6-8 | natuur | evolutie-mens-po | 40 | 🔄 ronde 1 (H1), 5 okt |  |
-| groep6-8 | natuur | gezonde-voeding-po | 40 | 🔄 ronde 1 (H2), 5 okt |  |
-| groep6-8 | natuur | lichaam-gezondheid-po | 40 | 🔄 ronde 1 (H2), 5 okt |  |
-| groep6-8 | natuur | recyclen-afval-po | 40 | 🔄 ronde 1 (H2), 5 okt |  |
+| groep6-8 | geschiedenis | bekende-boeken-literatuur-po | 40 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | geschiedenis | industriele-revolutie-po | 40 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | geschiedenis | klassieke-muziek-po | 25 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | geschiedenis | nederlandse-kunstenaars-po | 25 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | geschiedenis | olympische-spelen-po | 24 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | geschiedenis | ontdekkingsreizen-po | 40 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | geschiedenis | oudheid-egyptenaren-grieken-romeinen-po | 40 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | geschiedenis | politiek-democratie-po | 40 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | geschiedenis | tijdvakken-nederland-po | 40 | ✅ ronde 1 (G), 5 okt |  |
+| groep6-8 | natuur | bekende-wetenschappers-po | 40 | ✅ ronde 1 (H1), 5 okt |  |
+| groep6-8 | natuur | energiebronnen-po | 40 | ✅ ronde 1 (H1), 5 okt |  |
+| groep6-8 | natuur | evolutie-mens-po | 40 | ✅ ronde 1 (H1), 5 okt |  |
+| groep6-8 | natuur | gezonde-voeding-po | 40 | ✅ ronde 1 (H2), 5 okt |  |
+| groep6-8 | natuur | lichaam-gezondheid-po | 40 | ✅ ronde 1 (H2), 5 okt |  |
+| groep6-8 | natuur | recyclen-afval-po | 40 | ✅ ronde 1 (H2), 5 okt |  |
 | groep6-8 | natuur | ruimtevaart-po | 24 | ⏳ |  |
-| groep6-8 | natuur | toestand-stoffen-po | 40 | 🔄 ronde 1 (H2), 5 okt |  |
-| groep6-8 | natuur | waterkringloop-po | 40 | 🔄 ronde 1 (H2), 5 okt |  |
+| groep6-8 | natuur | toestand-stoffen-po | 40 | ✅ ronde 1 (H2), 5 okt |  |
+| groep6-8 | natuur | waterkringloop-po | 40 | ✅ ronde 1 (H2), 5 okt |  |
 | groep6-8 | natuur | weersvoorspelling-po | 40 | ⏳ |  |
 | groep6-8 | rekenen | belasting-po | 26 | ✅ nacht 5→6 okt |  |
-| groep6-8 | rekenen | financiele-vorming-po | 40 | 🔄 ronde 1 (A), 5 okt |  |
-| groep6-8 | rekenen | grafieken-lezen-po | 40 | 🔄 ronde 1 (A), 5 okt |  |
-| groep6-8 | rekenen | kalender-rekenen-po | 40 | 🔄 ronde 1 (A), 5 okt |  |
-| groep6-8 | rekenen | kommagetallen-po | 40 | 🔄 ronde 1 (A), 5 okt |  |
+| groep6-8 | rekenen | financiele-vorming-po | 40 | ✅ ronde 1 (A), 5 okt |  |
+| groep6-8 | rekenen | grafieken-lezen-po | 40 | ✅ ronde 1 (A), 5 okt |  |
+| groep6-8 | rekenen | kalender-rekenen-po | 40 | ✅ ronde 1 (A), 5 okt |  |
+| groep6-8 | rekenen | kommagetallen-po | 40 | ✅ ronde 1 (A), 5 okt |  |
 | groep6-8 | rekenen | maten-eenheden | 42 | ✅ nacht 5→6 okt |  |
 | groep6-8 | rekenen | maten-omtrek-oppervlakte-po | 25 | ✅ nacht 5→6 okt |  |
-| groep6-8 | rekenen | meetkunde-bouwsels | 40 | 🔄 ronde 1 (A), 5 okt |  |
-| groep6-8 | rekenen | tabellen-grafieken | 40 | 🔄 ronde 1 (A), 5 okt |  |
-| groep6-8 | rekenen | tijd-snelheid-afstand-po | 25 | 🔄 ronde 1 (A), 5 okt |  |
-| groep6-8 | rekenen | tijdsduur-rekenen-po | 40 | 🔄 ronde 1 (A), 5 okt |  |
-| groep6-8 | rekenen | winst-rekenen-po | 26 | 🔄 ronde 1 (A), 5 okt |  |
-| groep6-8 | taal | informatiebronnen-po | 25 | 🔄 ronde 1 (C), 5 okt |  |
-| groep6-8 | taal | schrijven-teksten-po | 25 | 🔄 ronde 1 (C), 5 okt |  |
-| groep6-8 | taal | spreekwoorden-uitdrukkingen-po | 40 | 🔄 ronde 1 (C), 5 okt |  |
-| groep6-8 | wereldorientatie | algoritmen-programmeren-po | 40 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | wereldorientatie | beroepen-werk-po | 40 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | wereldorientatie | digitale-geletterdheid-po | 40 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | wereldorientatie | eetcultuur-nederland-po | 25 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | wereldorientatie | emoties-sociaal-po | 24 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | wereldorientatie | godsdiensten-culturen-po | 25 | 🔄 ronde 1 (I), 5 okt |  |
-| groep6-8 | wereldorientatie | kritisch-denken-po | 40 | 🔄 ronde 1 (I), 5 okt |  |
-| groep7-8 | begrijpend-lezen | conclusies-trekken-po | 26 | 🔄 ronde 1 (E2), 5 okt |  |
-| groep7-8 | begrijpend-lezen | verhaal-diepte-lezen-po | 26 | 🔄 ronde 1 (E2), 5 okt |  |
-| groep7-8 | geschiedenis | koude-oorlog-modern-po | 24 | 🔄 ronde 1 (G), 5 okt |  |
-| groep7-8 | natuur | pubertijd-groei-po | 25 | 🔄 ronde 1 (H2), 5 okt |  |
+| groep6-8 | rekenen | meetkunde-bouwsels | 40 | ✅ ronde 1 (A), 5 okt |  |
+| groep6-8 | rekenen | tabellen-grafieken | 40 | ✅ ronde 1 (A), 5 okt |  |
+| groep6-8 | rekenen | tijd-snelheid-afstand-po | 25 | ✅ ronde 1 (A), 5 okt |  |
+| groep6-8 | rekenen | tijdsduur-rekenen-po | 40 | ✅ ronde 1 (A), 5 okt |  |
+| groep6-8 | rekenen | winst-rekenen-po | 26 | ✅ ronde 1 (A), 5 okt |  |
+| groep6-8 | taal | informatiebronnen-po | 25 | ✅ ronde 1 (C), 5 okt |  |
+| groep6-8 | taal | schrijven-teksten-po | 25 | ✅ ronde 1 (C), 5 okt |  |
+| groep6-8 | taal | spreekwoorden-uitdrukkingen-po | 40 | ✅ ronde 1 (C), 5 okt |  |
+| groep6-8 | wereldorientatie | algoritmen-programmeren-po | 40 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | wereldorientatie | beroepen-werk-po | 40 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | wereldorientatie | digitale-geletterdheid-po | 40 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | wereldorientatie | eetcultuur-nederland-po | 25 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | wereldorientatie | emoties-sociaal-po | 24 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | wereldorientatie | godsdiensten-culturen-po | 25 | ✅ ronde 1 (I), 5 okt |  |
+| groep6-8 | wereldorientatie | kritisch-denken-po | 40 | ✅ ronde 1 (I), 5 okt |  |
+| groep7-8 | begrijpend-lezen | conclusies-trekken-po | 26 | ✅ ronde 1 (E2), 5 okt |  |
+| groep7-8 | begrijpend-lezen | verhaal-diepte-lezen-po | 26 | ✅ ronde 1 (E2), 5 okt |  |
+| groep7-8 | geschiedenis | koude-oorlog-modern-po | 24 | ✅ ronde 1 (G), 5 okt |  |
+| groep7-8 | natuur | pubertijd-groei-po | 25 | ✅ ronde 1 (H2), 5 okt |  |
 | groep7-8 | rekenen | deelsommen-met-rest-po | 26 | ✅ nacht 5→6 okt |  |
 | groep7-8 | rekenen | gemiddelden-statistiek-po | 40 | ✅ nacht 5→6 okt |  |
-| groep7-8 | rekenen | meten-gewicht-inhoud-tijd-po | 26 | 🔄 ronde 1 (B), 5 okt |  |
+| groep7-8 | rekenen | meten-gewicht-inhoud-tijd-po | 26 | ✅ ronde 1 (B), 5 okt |  |
 | groep7-8 | rekenen | omzetten-breuk-procent-komma-po | 26 | ✅ nacht 5→6 okt |  |
-| groep7-8 | rekenen | romeinse-cijfers-po | 26 | 🔄 ronde 1 (B), 5 okt |  |
-| groep7-8 | rekenen | schaal-kaart-rekenen-po | 26 | 🔄 ronde 1 (B), 5 okt |  |
-| groep7-8 | studievaardigheden | alfabet-woordenboek-po | 25 | 🔄 ronde 1 (F), 5 okt |  |
-| groep7-8 | studievaardigheden | betrouwbaarheid-bronnen-po | 25 | 🔄 ronde 1 (F), 5 okt |  |
-| groep7-8 | studievaardigheden | dienstregeling-roosters-po | 25 | 🔄 ronde 1 (F), 5 okt |  |
-| groep7-8 | studievaardigheden | folder-bon-advertentie-po | 25 | 🔄 ronde 1 (F), 5 okt |  |
-| groep7-8 | studievaardigheden | inhoudsopgave-register-po | 25 | 🔄 ronde 1 (F), 5 okt |  |
-| groep7-8 | studievaardigheden | plattegrond-legenda-po | 25 | 🔄 ronde 1 (F), 5 okt |  |
-| groep7-8 | taal | feit-mening-po | 26 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | taal | leestekens-hoofdletters-po | 26 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | taal | lettergrepen-klemtoon-po | 26 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | taal | samenstellingen-tussenletters-po | 26 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | taal | signaalwoorden-verbanden-po | 25 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | taal | soorten-teksten-po | 28 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | taal | trappen-van-vergelijking-po | 28 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | taal | verwijswoorden-po | 25 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | taal | zinsontleding-onderwerp-persoonsvorm-po | 28 | 🔄 ronde 1 (D), 5 okt |  |
-| groep7-8 | wereldorientatie | wereldorientatie-mix-po | 25 | 🔄 ronde 1 (B), 5 okt |  |
-| groep8 | begrijpend-lezen | lange-toets-teksten-g8-po | 26 | 🔄 ronde 1 (E2), 5 okt |  |
+| groep7-8 | rekenen | romeinse-cijfers-po | 26 | ✅ ronde 1 (B), 5 okt |  |
+| groep7-8 | rekenen | schaal-kaart-rekenen-po | 26 | ✅ ronde 1 (B), 5 okt |  |
+| groep7-8 | studievaardigheden | alfabet-woordenboek-po | 25 | ✅ ronde 1 (F), 5 okt |  |
+| groep7-8 | studievaardigheden | betrouwbaarheid-bronnen-po | 25 | ✅ ronde 1 (F), 5 okt |  |
+| groep7-8 | studievaardigheden | dienstregeling-roosters-po | 25 | ✅ ronde 1 (F), 5 okt |  |
+| groep7-8 | studievaardigheden | folder-bon-advertentie-po | 25 | ✅ ronde 1 (F), 5 okt |  |
+| groep7-8 | studievaardigheden | inhoudsopgave-register-po | 25 | ✅ ronde 1 (F), 5 okt |  |
+| groep7-8 | studievaardigheden | plattegrond-legenda-po | 25 | ✅ ronde 1 (F), 5 okt |  |
+| groep7-8 | taal | feit-mening-po | 26 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | taal | leestekens-hoofdletters-po | 26 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | taal | lettergrepen-klemtoon-po | 26 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | taal | samenstellingen-tussenletters-po | 26 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | taal | signaalwoorden-verbanden-po | 25 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | taal | soorten-teksten-po | 28 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | taal | trappen-van-vergelijking-po | 28 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | taal | verwijswoorden-po | 25 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | taal | zinsontleding-onderwerp-persoonsvorm-po | 28 | ✅ ronde 1 (D), 5 okt |  |
+| groep7-8 | wereldorientatie | wereldorientatie-mix-po | 25 | ✅ ronde 1 (B), 5 okt |  |
+| groep8 | begrijpend-lezen | lange-toets-teksten-g8-po | 26 | ✅ ronde 1 (E2), 5 okt |  |
 | groep8 | cito | cito-strategieen-groep8 | 40 | ✅ nacht 5→6 okt |  |
 | groep8 | rekenen | brugklas-orientatie | 40 | ✅ nacht 5→6 okt |  |
 | groep8 | rekenen | doorstroomtoets-rekenen-g8 | 264 | ⏳ |  |
 | groep8 | rekenen | doorstroomtoets-studievaardigheden-g8 | 330 | ⏳ |  |
-| groep8 | studievaardigheden | onderwijs-niveaus-vmbo-havo-vwo | 26 | 🔄 ronde 1 (B), 5 okt |  |
+| groep8 | studievaardigheden | onderwijs-niveaus-vmbo-havo-vwo | 26 | ✅ ronde 1 (B), 5 okt |  |
 | groep8 | taal | doorstroomtoets-taal-g8 | 237 | ⏳ |  |
 | havo-vwo-4-5 | aardrijkskunde | atmosfeer-klimaat-havo-vwo | 25 | ⏳ |  |
 | havo-vwo-4-5 | aardrijkskunde | energie-hulpbronnen-havo-vwo | 25 | ⏳ |  |
