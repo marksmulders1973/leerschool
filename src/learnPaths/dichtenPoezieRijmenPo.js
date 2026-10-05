@@ -160,9 +160,9 @@ const steps = [
       },
       {
         q: "Wat is **versmaat**?",
-        options: ["Vast aantal lettergrepen per regel", "Rijm", "Onderwerp", "Couplet"],
+        options: ["Een vast ritme van klemtonen in de regels", "Rijm", "Onderwerp", "Couplet"],
         answer: 0,
-        wrongHints: [null, "Wel maar specifiek dit.", "Niet maatvoering.", "Niet specifiek."],
+        wrongHints: [null, "Rijm gaat over klanken aan het eind; versmaat over het ritme.", "Het onderwerp is waar het gedicht over gaat.", "Een couplet is een groepje regels."],
       },
     ],
   },
