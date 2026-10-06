@@ -81,7 +81,7 @@ const steps = [
       },
       {
         q: "*'Veel jongeren willen vegetariër worden. ___ weten ze vaak niet hoe.'* Welk woord past?",
-        options: ["Echter", "Daarom", "Bijvoorbeeld", "En"],
+        options: ["Toch", "Daarom", "Bijvoorbeeld", "En"],
         answer: 0,
         wrongHints: [null, "Geen gevolg.", "Geen voorbeeld.", "Geen toevoeging."],
       },
@@ -265,7 +265,7 @@ const steps = [
         wrongHints: [null, "Detail.", "Detail.", "Niet primair."],
       },
       {
-        q: "Schrijver gebruikt **'Volgens onderzoek van TU Delft ...'**. Welk argument-type?",
+        q: "Schrijver gebruikt **'Volgens hoogleraar Jansen van de TU Delft ...'**. Welk argument-type?",
         options: ["Autoriteit", "Emotioneel", "Praktisch", "Voorbeeld"],
         answer: 0,
         wrongHints: [null, "Geen emotie.", "Niet praktisch.", "Wel bron, maar specifiek autoriteit."],
@@ -280,7 +280,7 @@ const steps = [
         q: "*'Anna kocht een fiets. **Deze** was duur.'* Wat is **deze**?",
         options: ["De fiets", "Anna", "Een andere fiets", "Niet duidelijk"],
         answer: 0,
-        wrongHints: [null, "Anna is persoon, geen 'deze'.", "Maar 1 fiets genoemd.", "Wel duidelijk."],
+        wrongHints: [null, "Kan een persoon 'duur' zijn?", "Maar 1 fiets genoemd.", "Wel duidelijk."],
       },
     ],
   },

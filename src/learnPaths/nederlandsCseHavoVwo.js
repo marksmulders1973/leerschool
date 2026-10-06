@@ -18,7 +18,7 @@ const chapters = [
   { letter: "A", title: "Examen-format Nederlands", emoji: "📰", from: 0, to: 0 },
   { letter: "B", title: "Tekststructuur + alinea-functies", emoji: "🧩", from: 1, to: 1 },
   { letter: "C", title: "Argumentatie + drogredenen", emoji: "❓", from: 2, to: 2 },
-  { letter: "D", title: "Samenvatten (VWO)", emoji: "📝", from: 3, to: 3 },
+  { letter: "D", title: "Samenvatten", emoji: "📝", from: 3, to: 3 },
   { letter: "E", title: "Eindopdracht", emoji: "🏆", from: 4, to: 4 },
 ];
 
@@ -27,15 +27,15 @@ const steps = [
   {
     title: "Examen-format Nederlands CSE",
     explanation:
-      "**CSE Nederlands** HAVO/VWO test **leesvaardigheid** + (VWO) **samenvatten**. Schrijfvaardigheid + presenteren = SE.\n\n**Tijdsduur**:\n• HAVO: 3 uur.\n• VWO: 3 uur.\n\n**Aantal teksten**:\n• HAVO: 1-2 lange teksten (~1500-2500 woorden totaal).\n• VWO: 1 lange tekst (~2000-2500 woorden) + samenvatting-opdracht.\n\n**Tekstsoorten**:\n• Argumentatieve teksten (debat, opinie).\n• Beschouwingen (verkenning thema).\n• Informatieve artikelen.\n• Bron-stukken (kranten: Volkskrant, NRC, Trouw, vakbladen).\n• Onderwerpen: maatschappij, wetenschap-populair, ethiek, cultuur, actualiteit.\n\n**Tekst-niveau**:\n• HAVO: B2.\n• VWO: C1.\n\n**Vraagtypes**:\n• **Multiple choice** (4 opties): hoofdgedachte, alinea-functie, woordbetekenis-in-context.\n• **Open vraag**: 'wat bedoelt schrijver met X?', 'geef argument voor stelling Y'.\n• **Citaat**: regelnummer + eerste woorden.\n• **Tekststructuur**: 'hoe verhouden alinea's zich?'.\n• **Argumentatie**: 'is dit een drogreden?', 'wat is de logische structuur?'.\n• **VWO Samenvatting**: hoofdtekst inkorten tot ~250 woorden.\n\n**Hulpmiddelen toegestaan**:\n• **Nederlands woordenboek** (Van Dale, Prisma).\n• Synoniemenwoordenboek.\n• Niet digitaal.\n\n**Strategie**:\n• 3 uur ÷ 2 teksten HAVO = ~1,5u/tekst.\n• Eerst tekst grondig lezen + structuur noteren.\n• Daarna vragen.\n• Op het eind alles nakijken.\n• Bij VWO: laat tijd voor samenvatting (~45 min).\n\n**Score + cijfer**:\n• Eindcijfer = (CSE + SE) / 2.\n• Slagen vergt 5,5+ + maximaal 1 keer onvoldoende in kernvakken (Nederlands KERNVAK voor allen).\n• N-term bepaalt cijfer-conversie achteraf — milde normering bij moeilijk examen.\n\n**Belang CSE Nederlands**:\n• Verplicht eindexamen-vak voor iedereen.\n• Cruciaal voor studie + werk (alle vervolgopleidingen).\n• Leesvaardigheid in NL daalt zorgwekkend (PISA-onderzoek), maatschappelijk debat.",
+      "**CSE Nederlands** HAVO/VWO test **leesvaardigheid**, inclusief **samenvatten** (havo én vwo). Schrijfvaardigheid + presenteren = SE.\n\n**Tijdsduur**:\n• HAVO: 3 uur.\n• VWO: 3 uur.\n\n**Aantal teksten**:\n• HAVO: 1-2 lange teksten (~1500-2500 woorden totaal).\n• VWO: 1-2 lange teksten (~2000-2500 woorden totaal).\n\n**Tekstsoorten**:\n• Argumentatieve teksten (debat, opinie).\n• Beschouwingen (verkenning thema).\n• Informatieve artikelen.\n• Bron-stukken (kranten: Volkskrant, NRC, Trouw, vakbladen).\n• Onderwerpen: maatschappij, wetenschap-populair, ethiek, cultuur, actualiteit.\n\n**Referentieniveau lezen**:\n• HAVO: 3F.\n• VWO: 4F.\n\n**Vraagtypes**:\n• **Multiple choice** (4 opties): hoofdgedachte, alinea-functie, woordbetekenis-in-context.\n• **Open vraag**: 'wat bedoelt schrijver met X?', 'geef argument voor stelling Y'.\n• **Citaat**: regelnummer + eerste woorden.\n• **Tekststructuur**: 'hoe verhouden alinea's zich?'.\n• **Argumentatie**: 'is dit een drogreden?', 'wat is de logische structuur?'.\n• **Samenvattingsvraag** (havo + vwo): (een deel van) de tekst samenvatten binnen een opgegeven maximum aantal woorden.\n\n**Hulpmiddelen toegestaan**:\n• **Papieren woordenboek Nederlands** (eentalig, bv. Van Dale).\n• Niet digitaal.\n\n**Strategie**:\n• 3 uur ÷ 2 teksten HAVO = ~1,5u/tekst.\n• Eerst tekst grondig lezen + structuur noteren.\n• Daarna vragen.\n• Op het eind alles nakijken.\n• Houd tijd over voor de samenvattingsvragen.\n\n**Score + cijfer**:\n• Eindcijfer = (CSE + SE) / 2.\n• Slagen vergt 5,5+ + maximaal 1 keer onvoldoende in kernvakken (Nederlands KERNVAK voor allen).\n• N-term bepaalt cijfer-conversie achteraf — milde normering bij moeilijk examen.\n\n**Belang CSE Nederlands**:\n• Verplicht eindexamen-vak voor iedereen.\n• Cruciaal voor studie + werk (alle vervolgopleidingen).\n• Leesvaardigheid in NL daalt zorgwekkend (PISA-onderzoek), maatschappelijk debat.",
     checks: [
       {
         q: "Wat test CSE Nederlands?",
-        options: ["Leesvaardigheid (+ samenvatting VWO)","Alleen spreken","Alleen schrijven","Alleen luisteren"],
+        options: ["Leesvaardigheid (incl. samenvatten)","Alleen spreken","Alleen schrijven","Alleen luisteren"],
         answer: 0,
         wrongHints: [null, "Niet — dat is SE.", "Niet — SE.", "Niet — SE."],
         uitlegPad: {
-          stappen: [{ titel: "Lezen + samenvatten", tekst: "**CSE Nederlands** = leesvaardigheid (HAVO + VWO) + **samenvatten** (VWO). Schrijfvaardigheid (essay/betoog), spreken, luisteren, literatuur = SE." }],
+          stappen: [{ titel: "Lezen + samenvatten", tekst: "**CSE Nederlands** = leesvaardigheid, inclusief **samenvattingsvragen** (HAVO + VWO). Schrijfvaardigheid (essay/betoog), spreken, luisteren, literatuur = SE." }],
           niveaus: { basis: "Lezen + samenvatten.", simpeler: "CSE NL = lezen+samenv", nogSimpeler: "Lezen" },
         },
       },
@@ -45,28 +45,28 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te kort.", "Te kort.", "Te lang."],
         uitlegPad: {
-          stappen: [{ titel: "Drie uur", tekst: "**CSE Nederlands HAVO + VWO: 3 uur**. Bij dyslexie/dyscalculie 30 min extra. Plus woordenboeken-tijd." }],
+          stappen: [{ titel: "Drie uur", tekst: "**CSE Nederlands HAVO + VWO: 3 uur**. Met een verklaring (bv. dyslexie) kan de school maximaal 30 min verlenging geven." }],
           niveaus: { basis: "3 uur.", simpeler: "3u", nogSimpeler: "3" },
         },
       },
       {
-        q: "Welk **tekstniveau** verwacht VWO?",
-        options: ["C1","A2","B1","B2"],
+        q: "Welk **referentieniveau** lezen hoort bij het VWO-examen Nederlands?",
+        options: ["4F","1F","2F","3F"],
         answer: 0,
-        wrongHints: [null, "Veel te laag.", "Te laag.", "HAVO."],
+        wrongHints: [null, "Veel te laag — dat is basisschool-niveau.", "Te laag — dat is ongeveer vmbo-niveau.", "Dat is het niveau voor havo."],
         uitlegPad: {
-          stappen: [{ titel: "CEFR-niveaus", tekst: "**VWO Nederlands: C1** ('competente taalgebruiker'): complexe argumentatieve teksten met implicaties + nuance + abstract denken. **HAVO: B2** (vaardig taalgebruiker). NL als moedertaal bouwt boven die CEFR-niveaus uit." }],
-          niveaus: { basis: "C1.", simpeler: "VWO = C1", nogSimpeler: "C1" },
+          stappen: [{ titel: "Referentieniveaus", tekst: "Voor Nederlands als schooltaal gebruik je de **referentieniveaus** (1F t/m 4F). **VWO: 4F** — complexe betogende teksten met nuance en abstracte redeneringen. **HAVO: 3F**. 1F/2F horen bij basisschool en vmbo." }],
+          niveaus: { basis: "4F.", simpeler: "VWO = 4F", nogSimpeler: "4F" },
         },
       },
       {
-        q: "Mag je een **synoniemenwoordenboek** gebruiken op CSE Nederlands?",
-        options: ["Ja","Nee","Alleen HAVO","Alleen VWO"],
+        q: "Welk hulpmiddel mag je gebruiken bij het **CSE Nederlands**?",
+        options: ["Een papieren woordenboek Nederlands","Je telefoon","Je eigen aantekeningen","Een vertaalapp"],
         answer: 0,
-        wrongHints: [null, "Wel toegestaan.", "Niet onderscheid.", "Niet onderscheid."],
+        wrongHints: [null, "Digitale apparaten zijn niet toegestaan.", "Eigen aantekeningen mogen niet mee de examenzaal in.", "Digitale hulpmiddelen zijn niet toegestaan."],
         uitlegPad: {
-          stappen: [{ titel: "Papieren hulpmiddelen", tekst: "**CSE Nederlands**: papieren NL-woordenboek + synoniemenwoordenboek toegestaan. **Niet**: digitaal, vertaalapp, telefoon, eigen aantekeningen. Synoniemen-woordenboek vooral handig voor samenvatting (VWO)." }],
-          niveaus: { basis: "Ja.", simpeler: "Synoniemenwb = mag", nogSimpeler: "Ja" },
+          stappen: [{ titel: "Papieren hulpmiddelen", tekst: "**CSE Nederlands**: een papieren woordenboek Nederlands is toegestaan (leerlingen met een andere moedertaal mogen ook een woordenboek Nederlands–eigen taal gebruiken). **Niet**: digitaal, vertaalapp, telefoon, eigen aantekeningen." }],
+          niveaus: { basis: "Papieren woordenboek.", simpeler: "Woordenboek NL = mag", nogSimpeler: "Woordenboek" },
         },
       },
       {
@@ -110,7 +110,7 @@ const steps = [
         },
       },
       {
-        q: "Welk **tekststructuur-patroon** past bij 'probleem → oplossing'?",
+        q: "Een tekst schetst eerst een misstand, bespreekt daarna mogelijke maatregelen en beveelt er één aan. Welk **tekststructuur-patroon**?",
         options: ["Probleem-oplossing-structuur","Chronologisch","Vergelijkend","Voor-en-tegen"],
         answer: 0,
         wrongHints: [null, "Niet hier.", "Niet primair.", "Anders gericht."],
@@ -179,7 +179,7 @@ const steps = [
         },
       },
       {
-        q: "Correlatie ≠ causatie — welke drogreden is dit verwant?",
+        q: "Correlatie ≠ causatie — met welke drogreden is dit verwant?",
         options: ["Post hoc (vals causaal verband)","Ad hominem","Stroman","Hellend vlak"],
         answer: 0,
         wrongHints: [null, "Persoon.", "Vertekening.", "Kettingdrogreden."],
@@ -203,18 +203,18 @@ const steps = [
 
   // ─── D. Samenvatten (VWO) ──────────────────────────────────
   {
-    title: "Samenvatten (VWO-CSE-onderdeel)",
+    title: "Samenvatten (CSE havo + vwo)",
     explanation:
-      "**Samenvatting** = een onderdeel van **VWO-CSE Nederlands**. Niet op HAVO. Vergt eigen geoefende techniek.\n\n**Eis**:\n• Hoofdtekst (~2000 woorden) → samenvatting **~250 woorden** (±10%).\n• Goede Nederlandse zinnen.\n• Geen citaten, eigen formulering.\n• Hoofdgedachte + hoofdargumenten dekken.\n• Geen voorbeelden / details / uitweidingen.\n\n**Methode** (stap voor stap):\n\n**Stap 1: Tekst grondig lezen** (~20 min):\n• Eerst snel doorlezen voor overzicht.\n• Daarna grondig: streep hoofdzinnen aan.\n\n**Stap 2: Structuur analyseren**:\n• Welk tekstpatroon? (probleem-oplossing / voor-tegen / chronologisch).\n• Hoofdgedachte vinden (vaak inleiding of slot).\n• Argument-lijst (5-7 punten).\n• Tegenargument + weerlegging (als aanwezig).\n• Conclusie.\n\n**Stap 3: Eigen schema**:\n• Op klad: kerngedachten in trefwoorden.\n• Niet zinnen overschrijven — concepten.\n• Bv:\n  ```\n  Inleiding: probleem klimaatverandering\n  Arg 1: CO2 uit fossiel\n  Arg 2: industrie 30% emissies\n  Tegenarg: kerncentrales-gevaar\n  Weerlegging: minder gevaar dan klimaatschade\n  Conclusie: overstap nodig\n  ```\n\n**Stap 4: Schrijven** (~25 min):\n• Eerste zin: kernzin / hoofdgedachte.\n• Logische volgorde behouden.\n• Verbindingswoorden gebruiken (echter, daarom, bovendien).\n• Korte zinnen.\n• Eigen woorden — geen citaten.\n• Voorbeelden + details weg, tenzij essentieel.\n• Mening auteur duidelijk maken (objectief weergeven, niet je eigen mening).\n\n**Stap 5: Checken** (~5 min):\n• Woordenaantal (~225-275 woorden, niet onder/over).\n• Hoofdpunten allemaal?\n• Geen voorbeelden meer?\n• Lopende NL-zinnen?\n• Eigen woorden (geen kopiëren)?\n• Spelling / interpunctie.\n\n**Veel-gemaakte fouten**:\n• **Te veel details** (voorbeelden, anekdotes uit tekst).\n• **Te lang** (>275 woorden).\n• **Citaten gebruiken** ipv eigen woorden.\n• **Eigen mening** toevoegen (samenvatting = weergeven, niet beoordelen).\n• **Hoofdgedachte missen**.\n• **Geen verbinding tussen punten** — losse zinnen.\n• **Slechte zinsbouw** (lange, complexe zinnen).\n\n**Beoordelings-criteria**:\n• Inhoud (hoofdpunten gedekt): 60%.\n• Taalverzorging (zinsbouw + woordgebruik + spelling): 40%.\n• Aantal woorden binnen marge.\n\n**Tip Toets-gangbaar onderwerp**:\n• Klimaat, gender, AI, migratie, opvoeding, taal-degeneratie, geluk-economie, populisme.\n• Lees recente Nederlandse opiniestukken (Volkskrant, NRC) als oefening.\n\n**Voorbeeld**:\n\nHoofdtekst: 2000-woord-artikel over AI-impact op werk.\nKern: AI maakt sommige beroepen overbodig maar creëert nieuwe; overheid moet omscholing faciliteren.\n\nSamenvatting (~250 w):\n*'Kunstmatige intelligentie verandert werk fundamenteel. Routinematige taken in administratie, klantenservice en zelfs juridisch werk kunnen door AI worden overgenomen. Dit betekent niet automatisch massa-werkloosheid: nieuwe beroepen ontstaan rond AI-onderhoud, ethische supervisie en creatieve toepassingen. Wel ligt een tweedeling op de loer tussen hoogopgeleide profiteurs en laaggeschoolde verliezers. Auteur betoogt dat de overheid actief moet inzetten op omscholing en levenslang leren. Bestaande sociale vangnetten zoals werkloosheidsuitkeringen volstaan niet — nodig is bredere financiering van beroepsonderwijs voor volwassenen. Tegenstanders stellen dat de markt zelf wel oplossingen vindt, maar de auteur wijst op de snelheid van AI-ontwikkeling die individuele aanpassing onmogelijk maakt. Internationale ervaringen, zoals het Deense flexicurity-model, tonen aan dat een combinatie van flexibele arbeidsmarkt en sterke sociale steun werkt. Voor Nederland zou dit betekenen: meer scholingsbudgetten, betere certificaatherkenning en bredere zekerheid voor zzp'ers. Conclusie: zonder actief beleid dreigt AI vooral bestaande ongelijkheden te versterken; met de juiste maatregelen kan het juist tot meer welvaart en interessanter werk leiden.'* (~225 woorden)",
+      "**Samenvatten** = een onderdeel van het **CSE Nederlands** op havo én vwo: je krijgt samenvattingsvragen met een **opgegeven maximum aantal woorden** (wat daarboven staat, telt niet mee). Een lange samenvatting van een hele tekst (~250 woorden) oefen je vooral voor het schoolexamen — de techniek is dezelfde.\n\n**Eis (oefen-samenvatting)**:\n• Hoofdtekst (~2000 woorden) → samenvatting **~250 woorden** (±10%).\n• Goede Nederlandse zinnen.\n• Geen citaten, eigen formulering.\n• Hoofdgedachte + hoofdargumenten dekken.\n• Geen voorbeelden / details / uitweidingen.\n\n**Methode** (stap voor stap):\n\n**Stap 1: Tekst grondig lezen** (~20 min):\n• Eerst snel doorlezen voor overzicht.\n• Daarna grondig: streep hoofdzinnen aan.\n\n**Stap 2: Structuur analyseren**:\n• Welk tekstpatroon? (probleem-oplossing / voor-tegen / chronologisch).\n• Hoofdgedachte vinden (vaak inleiding of slot).\n• Argument-lijst (5-7 punten).\n• Tegenargument + weerlegging (als aanwezig).\n• Conclusie.\n\n**Stap 3: Eigen schema**:\n• Op klad: kerngedachten in trefwoorden.\n• Niet zinnen overschrijven — concepten.\n• Bv:\n  ```\n  Inleiding: probleem klimaatverandering\n  Arg 1: CO2 uit fossiel\n  Arg 2: industrie 30% emissies\n  Tegenarg: kerncentrales-gevaar\n  Weerlegging: minder gevaar dan klimaatschade\n  Conclusie: overstap nodig\n  ```\n\n**Stap 4: Schrijven** (~25 min):\n• Eerste zin: kernzin / hoofdgedachte.\n• Logische volgorde behouden.\n• Verbindingswoorden gebruiken (echter, daarom, bovendien).\n• Korte zinnen.\n• Eigen woorden — geen citaten.\n• Voorbeelden + details weg, tenzij essentieel.\n• Mening auteur duidelijk maken (objectief weergeven, niet je eigen mening).\n\n**Stap 5: Checken** (~5 min):\n• Woordenaantal (~225-275 woorden, niet onder/over).\n• Hoofdpunten allemaal?\n• Geen voorbeelden meer?\n• Lopende NL-zinnen?\n• Eigen woorden (geen kopiëren)?\n• Spelling / interpunctie.\n\n**Veel-gemaakte fouten**:\n• **Te veel details** (voorbeelden, anekdotes uit tekst).\n• **Te lang** (>275 woorden).\n• **Citaten gebruiken** ipv eigen woorden.\n• **Eigen mening** toevoegen (samenvatting = weergeven, niet beoordelen).\n• **Hoofdgedachte missen**.\n• **Geen verbinding tussen punten** — losse zinnen.\n• **Slechte zinsbouw** (lange, complexe zinnen).\n\n**Beoordeling op het CSE**:\n• Punten voor de juiste hoofdpunten (volgens het correctievoorschrift).\n• Boven het maximum aantal woorden telt je antwoord niet meer mee.\n• Taalfouten kunnen aftrek opleveren — schrijf verzorgd.\n\n**Tip Toets-gangbaar onderwerp**:\n• Klimaat, gender, AI, migratie, opvoeding, taal-degeneratie, geluk-economie, populisme.\n• Lees recente Nederlandse opiniestukken (Volkskrant, NRC) als oefening.\n\n**Voorbeeld**:\n\nHoofdtekst: 2000-woord-artikel over AI-impact op werk.\nKern: AI maakt sommige beroepen overbodig maar creëert nieuwe; overheid moet omscholing faciliteren.\n\nSamenvatting (~250 w):\n*'Kunstmatige intelligentie verandert werk fundamenteel. Routinematige taken in administratie, klantenservice en zelfs juridisch werk kunnen door AI worden overgenomen. Dit betekent niet automatisch massa-werkloosheid: nieuwe beroepen ontstaan rond AI-onderhoud, ethische supervisie en creatieve toepassingen. Wel ligt een tweedeling op de loer tussen hoogopgeleide profiteurs en laaggeschoolde verliezers. Auteur betoogt dat de overheid actief moet inzetten op omscholing en levenslang leren. Bestaande sociale vangnetten zoals werkloosheidsuitkeringen volstaan niet — nodig is bredere financiering van beroepsonderwijs voor volwassenen. Tegenstanders stellen dat de markt zelf wel oplossingen vindt, maar de auteur wijst op de snelheid van AI-ontwikkeling die individuele aanpassing onmogelijk maakt. Internationale ervaringen, zoals het Deense flexicurity-model, tonen aan dat een combinatie van flexibele arbeidsmarkt en sterke sociale steun werkt. Voor Nederland zou dit betekenen: meer scholingsbudgetten, betere certificaatherkenning en bredere zekerheid voor zzp'ers. Conclusie: zonder actief beleid dreigt AI vooral bestaande ongelijkheden te versterken; met de juiste maatregelen kan het juist tot meer welvaart en interessanter werk leiden.'* (~225 woorden)",
     checks: [
       {
-        q: "**Aantal woorden** in VWO-samenvatting?",
-        options: ["~250 (225-275)","100","500","1000"],
+        q: "Wat staat er bij een **samenvattingsvraag** op het CSE altijd vermeld?",
+        options: ["Een maximum aantal woorden","Een minimum van 500 woorden","Hoeveel citaten je moet gebruiken","Welk woordenboek je moet gebruiken"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang.", "Te lang."],
+        wrongHints: [null, "Samenvatten = juist kort en bondig.", "Bij samenvatten gebruik je juist je eigen woorden.", "Dat heeft niets met de vraag zelf te maken."],
         uitlegPad: {
-          stappen: [{ titel: "10% van origineel", tekst: "**VWO-samenvatting CSE**: ~250 woorden (±10% = 225-275). Originele tekst meestal ~2000-2500 w. Te kort = punten kwijt. Te lang = ook punten kwijt. **Eerst tellen + dan inleveren**." }],
-          niveaus: { basis: "250.", simpeler: "Samenv = 250 w", nogSimpeler: "250" },
+          stappen: [{ titel: "Let op de grens", tekst: "Bij samenvattingsvragen op het CSE (havo + vwo) staat altijd een **maximum aantal woorden**. Wat je daarboven schrijft, wordt niet beoordeeld. **Eerst tellen + dan inleveren**." }],
+          niveaus: { basis: "Maximum aantal woorden.", simpeler: "Er staat een woordgrens bij", nogSimpeler: "Maximum" },
         },
       },
       {
@@ -243,12 +243,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — inhoud eerst.", "Wel taal maar niet primair.", "Niet."],
         uitlegPad: {
-          stappen: [{ titel: "Inhoud > vorm", tekst: "**Inhoud (60%)** > taalverzorging (40%). Eerst zorgen dat alle hoofdpunten erin staan, daarna verbeteren van zinsbouw + woordkeus. Details + voorbeelden weg, tenzij essentieel voor begrip hoofdpunt." }],
+          stappen: [{ titel: "Inhoud > vorm", tekst: "**Inhoud** eerst: de punten krijg je voor de juiste hoofdpunten. Eerst zorgen dat alle hoofdpunten erin staan, daarna verbeteren van zinsbouw + woordkeus. Details + voorbeelden weg, tenzij essentieel voor begrip hoofdpunt." }],
           niveaus: { basis: "Hoofdpunten.", simpeler: "Inhoud > vorm", nogSimpeler: "Hoofdpunten" },
         },
       },
       {
-        q: "Strategie samenvatting in **45 minuten**:",
+        q: "Je hebt **45 minuten** voor een oefen-samenvatting van een hele tekst. Goede tijdsverdeling?",
         options: ["20 min lezen+schema, 25 min schrijven, 5 min check","Alle 45 min schrijven","Direct schrijven","30 min lezen, 15 schrijven"],
         answer: 0,
         wrongHints: [null, "Niet — eerst denken.", "Niet — eerst lezen.", "Niet — te weinig tijd voor schrijven."],
@@ -307,13 +307,13 @@ const steps = [
         },
       },
       {
-        q: "**Beoordelings-criterium** samenvatting VWO:",
-        options: ["Inhoud 60%, taal 40%","Alleen inhoud","Alleen taal","Geen criteria"],
+        q: "Je antwoord op een samenvattingsvraag is **langer dan het maximum** aantal woorden. Wat gebeurt er?",
+        options: ["Het deel na het maximum wordt niet beoordeeld","Je krijgt extra punten","Het hele antwoord telt dubbel","Niets, lengte maakt niet uit"],
         answer: 0,
-        wrongHints: [null, "Beide tellen.", "Beide tellen.", "Wel criteria."],
+        wrongHints: [null, "Langer is niet beter — waarom zou er anders een grens staan?", "Waarom zou er een grens staan als langer beter is?", "Er staat niet voor niets een maximum bij."],
         uitlegPad: {
-          stappen: [{ titel: "Twee componenten", tekst: "**Samenvatting**: inhoud (alle hoofdpunten gedekt) telt **60%**, taalverzorging (zinsbouw + woordkeus + spelling) **40%**. Plus woordenaantal binnen marge. Goede balans: eerst zorgen dat de hoofdpunten erin staan, daarna de taal verzorgen." }],
-          niveaus: { basis: "60/40.", simpeler: "Inhoud+taal = 60+40", nogSimpeler: "60/40" },
+          stappen: [{ titel: "Boven de grens telt niet", tekst: "Bij samenvattingsvragen staat een **maximum aantal woorden**. Het deel van je antwoord dat daarboven valt, wordt **niet beoordeeld** — ook niet als daar een hoofdpunt in staat. Dus: hoofdpunten eerst, kort formuleren, tellen." }],
+          niveaus: { basis: "Telt niet mee.", simpeler: "Boven de grens = niet beoordeeld", nogSimpeler: "Telt niet" },
         },
       },
     ],
@@ -336,7 +336,7 @@ const nederlandsCseHavoVwo = {
     { id: "betoog-beschouwing-havo-vwo", title: "Betoog/beschouwing/uiteenzetting", niveau: "havo4-5-vwo" },
   ],
   intro:
-    "Nederlands CSE HAVO/VWO leesvaardigheid + samenvatten. Examen-format (3u, B2/C1, kernvak), tekststructuur + alinea-functies (concessio/weerlegging/conclusie + signaalwoorden), argumentatie + drogredenen (ad hominem/stroman/hellend vlak/cirkel + post hoc), samenvatten VWO (~250w in 45 min). ~15-20 min.",
+    "Nederlands CSE HAVO/VWO leesvaardigheid + samenvatten. Examen-format (3u, 3F/4F, kernvak), tekststructuur + alinea-functies (concessio/weerlegging/conclusie + signaalwoorden), argumentatie + drogredenen (ad hominem/stroman/hellend vlak/cirkel + post hoc), samenvatten (woordgrens). ~15-20 min.",
   triggerKeywords: [
     "Nederlands CSE",
     "leesvaardigheid Nederlands",
