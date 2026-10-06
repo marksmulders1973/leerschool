@@ -8,7 +8,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
 import { join } from "node:path";
 
 const root = process.cwd();
-const DOEL = { "sq-": "src/data/sampleQuestions.js", "topics-": "src/data/topics.js" };
+const DOEL = { "sq-vo-": "src/data/sampleQuestions.js", "sq-": "src/data/sampleQuestions.js", "topics-": "src/data/topics.js" };
 const map = join(root, "docs", "audit");
 const alleen = process.argv[2] || null;
 const lijsten = readdirSync(map).filter((f) => f.startsWith("fixes-") && f.endsWith(".json") && (!alleen || f === `fixes-${alleen}.json`));

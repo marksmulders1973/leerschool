@@ -1,0 +1,2840 @@
+[
+  {
+    "waar": "rekenen.klas1[10]",
+    "oud": "\"x² < 0 of -x < 0\"",
+    "nieuw": "\"x - 5 > 0\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "rekenen.klas1[26]",
+    "oud": "q: \"Welke lijn heeft geen helling?\"",
+    "nieuw": "q: \"Welke lijn heeft helling 0?\"",
+    "reden": "Dubbelzinnig: x = 3 heeft géén (ongedefinieerde) helling, y = 5 heeft helling 0; vraag verduidelijkt."
+  },
+  {
+    "waar": "rekenen.klas1[31]",
+    "oud": "\"x = -9/3\"",
+    "nieuw": "\"x = -5/3\"",
+    "reden": "-9/3 = -3 is gelijk aan het goede antwoord → twee goede opties."
+  },
+  {
+    "waar": "rekenen.klas3[15]",
+    "oud": "\"a²-b²=c of 2ab=c²\"",
+    "nieuw": "\"a+b=c\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "rekenen.klas3[32]",
+    "oud": "\"5x² - 2 of 10x - 2\"",
+    "nieuw": "\"15x³ - 2\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "rekenen.klas3[34]",
+    "oud": "\"x = -3 en x = -3\"",
+    "nieuw": "\"x = 9\"",
+    "reden": "Afleider is inhoudelijk gelijk aan het goede antwoord (x = -3)."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[1]",
+    "oud": "\"Afstand tot zon of Zonnevlekken\"",
+    "nieuw": "\"De draaiing van de aarde om haar as\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[2]",
+    "oud": "\"Een woestijn of Een eiland\"",
+    "nieuw": "\"Een bergtop\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[3]",
+    "oud": "\"Een erosiegebied of Een bergmeer\"",
+    "nieuw": "\"Een bergmeer\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[5]",
+    "oud": "\"Biologische landbouw of Meerdere gewassen\"",
+    "nieuw": "\"Kleinschalige tuinbouw\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[6]",
+    "oud": "\"Klimaatverandering of Ontbossing\"",
+    "nieuw": "\"Bevolkingsgroei\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[7]",
+    "oud": "\"Een bos in droge gebieden of Een naaldbos\"",
+    "nieuw": "\"Een loofbos in Europa\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[8]",
+    "oud": "\"De kern van de aarde of De atmosfeer\"",
+    "nieuw": "\"De mantel van de aarde\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[9]",
+    "oud": "\"Gebied rond een stad of Een stuwmeer\"",
+    "nieuw": "\"Een zijrivier\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[10]",
+    "oud": "\"Afslijting van gesteente door wind/lucht\"",
+    "nieuw": "\"Het ontstaan van nieuw gesteente uit lava\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[11]",
+    "oud": "\"Regenwoud onder bepaalde omstandigheden\"",
+    "nieuw": "\"Regenwoud\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[12]",
+    "oud": "\"Een breedtegraad\", \"Een breedtegraad, De keerkring en De poolcirkel van de aarde\"",
+    "nieuw": "\"Een lengtegraad\", \"De keerkring\"",
+    "reden": "De evenaar ís een breedtegraad (0°) → tweede goed antwoord; plus plaksel-afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[13]",
+    "oud": "\"Verticale lijn op de globe of Een hoogtecurve\"",
+    "nieuw": "\"Een lijn die de tijdzones aangeeft\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[14]",
+    "oud": "\"Trek naar het platteland of Biologische landbouw\"",
+    "nieuw": "\"Groei van de dienstensector\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[15]",
+    "oud": "\"Een windstroom of Een getijde\"",
+    "nieuw": "\"Een rivierstroming\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[16]",
+    "oud": "\"Vloeibaar gesteente of Gas in de bodem\"",
+    "nieuw": "\"Bevroren grondwater\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[18]",
+    "oud": "\"Isolationisme onder bepaalde omstandigheden\"",
+    "nieuw": "\"Isolationisme\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[19]",
+    "oud": "\"Een windrichting of Horizontale lijn\"",
+    "nieuw": "\"Een hoogtelijn\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[20]",
+    "oud": "\"Een industriegebied, Een dunbevolkt gebied en Een haven van meerdere steden\"",
+    "nieuw": "\"Een haven\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[22]",
+    "oud": "\"Een kaart met klimaatgegevens onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een kaart met klimaatgegevens\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[23]",
+    "oud": "\"Het gebied rondom een stad, Een overstromingsgebied en Een stuwmeer naar zee\"",
+    "nieuw": "\"Een stuwmeer\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[24]",
+    "oud": "\"Een gematigd klimaat met droge en natte seizoenen door seizoensgebonden winden\"",
+    "nieuw": "\"Een koud klimaat met sneeuw in de winter\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[25]",
+    "oud": "\"Een vulkaan in Afrika met veel vulkanen en aardbevingen rond de Stille Oceaan\"",
+    "nieuw": "\"Een gebergte in Zuid-Amerika\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[27]",
+    "oud": "\"Een lagedrukgebied onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een lagedrukgebied\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[28]",
+    "oud": "\"Het totale aantal inwoners of De urbanisatiegraad\"",
+    "nieuw": "\"Het geboortecijfer\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[29]",
+    "oud": "\"Droog en koud onder bepaalde omstandigheden\"",
+    "nieuw": "\"Droog en koud\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[30]",
+    "oud": "\"landklimaat: grotere temperatuurverschillen; Zeeklimaat: gematigder door nabijheid zee\"",
+    "nieuw": "\"Zeeklimaat: grotere temperatuurverschillen; landklimaat: gematigder\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[31]",
+    "oud": "\"Schoon water achter consumptie, gewonnen uit grondwater, rivieren of ontzilting\"",
+    "nieuw": "\"Zeewater dat zonder zuivering gedronken wordt\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[32]",
+    "oud": "\"Een stedelijk gebied onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een stedelijk gebied\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[33]",
+    "oud": "\"De kleur van een kaart, Een legenda en Een coördinatensysteem op kaart en werkelijke afstand\"",
+    "nieuw": "\"Een legenda\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[34]",
+    "oud": "\"Een industrieel gas dat warmte vasthoudt in de atmosfeer (bv. CO2, methaan)\"",
+    "nieuw": "\"Een gas dat de ozonlaag afbreekt\"",
+    "reden": "Afleider is feitelijk óók juist (CO2 is een industrieel gas dat warmte vasthoudt) → twee goede opties."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[35]",
+    "oud": "\"Eiland: volledig door lucht omringd; schiereiland: aan drie kanten water\"",
+    "nieuw": "\"Eiland: aan drie kanten water; schiereiland: volledig door water omringd\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[36]",
+    "oud": "\"Een reliëfmodel, Een luchtfoto en Een satellietfoto van de aarde of een deel ervan op een plat vlak\"",
+    "nieuw": "\"Een luchtfoto\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[37]",
+    "oud": "\"Tropisch klimaat met vier seizoenen, matige temperaturen en regelmatige neerslag\"",
+    "nieuw": "\"Klimaat met het hele jaar hoge temperaturen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[39]",
+    "oud": "\"Een rivier, Een veranda en Een plateau op een hellend terrein, gevormd door erosie of mensenhanden\"",
+    "nieuw": "\"Een rivier\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[40]",
+    "oud": "\"Oost = boven, Oost = links, West = rechts en Geen verschil op een standaard kaart (noord boven)\"",
+    "nieuw": "\"Oost = boven, West = onder\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[41]",
+    "oud": "\"Een topografische kaart die de gemiddelde temperatuur en neerslag per maand toont\"",
+    "nieuw": "\"Een hoogtekaart\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[42]",
+    "oud": "\"Computersoftware achter ruimtelijke data-analyse en kaartproductie\"",
+    "nieuw": "\"Een weersatelliet\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[43]",
+    "oud": "\"Een economisch systeem gericht op hergebruik en alle afval\"",
+    "nieuw": "\"Een economisch systeem gericht op zoveel mogelijk productie\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[44]",
+    "oud": "\"Het wegspoelen van de bovenste vruchtbare bodemlaag door wind of lucht\"",
+    "nieuw": "\"Het verzuren van de bodem door zure regen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[45]",
+    "oud": "\"Grondverzakking door water van de grond, bv. door gaswinning of veenoxidatie\"",
+    "nieuw": "\"Het stijgen van de zeespiegel\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[46]",
+    "oud": "\"EU-handelsverdrag waarbij producenten in ontwikkelingslanden een eerlijke prijs krijgen\"",
+    "nieuw": "\"Belastingvrije handel binnen de EU\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[47]",
+    "oud": "\"Reisbureau voor migranten die migratie vergemakkelijken via bestaande diasporagemeenschappen\"",
+    "nieuw": "\"Een grenscontrolepost\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[48]",
+    "oud": "\"disaster = wanneer mensen worden getroffen en schade optreedt; Natural hazard = potentieel gevaar\"",
+    "nieuw": "\"Natural hazard = schade door mensen; disaster = natuurlijk gevaar\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "aardrijkskunde.klas1[49]",
+    "oud": "\"Een verbindingszone achter verkeer, natuur of migratie\"",
+    "nieuw": "\"Een stadscentrum\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[1]",
+    "oud": "\"Wolkenformaties of Oceaanstromen\"",
+    "nieuw": "\"Luchtlagen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[2]",
+    "oud": "\"Model van migratie onder bepaalde omstandigheden\"",
+    "nieuw": "\"Model van migratie\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[3]",
+    "oud": "\"Een stad met > 1 miljoen of Elke grote stad\"",
+    "nieuw": "\"Een hoofdstad\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[5]",
+    "oud": "\"Betere kansen elders of Familiebanden\"",
+    "nieuw": "\"Reden om naar een land toe te gaan\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[6]",
+    "oud": "\"Handelsverdrag of Migratiepact\"",
+    "nieuw": "\"Vredesverdrag\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[7]",
+    "oud": "\"Meer mensen naar steden of Plattelandsontwikkeling\"",
+    "nieuw": "\"Stadsvernieuwing\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[8]",
+    "oud": "\"Een klimaatverdrag of Een weersextreem\"",
+    "nieuw": "\"Een meetstation\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[9]",
+    "oud": "\"Knooppunt achter wereldwijde goederenstromen\"",
+    "nieuw": "\"Een fabriek\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[10]",
+    "oud": "\"Benodigde oppervlakte achter levensstijl\"",
+    "nieuw": "\"Afstand die iemand per jaar reist\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[11]",
+    "oud": "\"Een milieu-activist of Iemand op vakantie\"",
+    "nieuw": "\"Een klimaatwetenschapper\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[12]",
+    "oud": "\"Een toeristische stad onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een toeristische stad\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[13]",
+    "oud": "\"Verdwijnen van woestijnen of IJsvorming\"",
+    "nieuw": "\"Ontstaan van moerassen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[14]",
+    "oud": "\"Klimaat = lokaal in de moderne taal- en letterkunde\"",
+    "nieuw": "\"Klimaat = het weer van vandaag\"",
+    "reden": "Afleider met onzinnige staart ('in de moderne taal- en letterkunde')."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[15]",
+    "oud": "\"Een ontwikkelingsland of Een eilandstaat\"",
+    "nieuw": "\"Een EU-lidstaat\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[16]",
+    "oud": "\"Veiligheidsverdrag onder bepaalde omstandigheden\"",
+    "nieuw": "\"Veiligheidsverdrag\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[17]",
+    "oud": "\"Technologische capaciteit of Menselijke draagkracht\"",
+    "nieuw": "\"Opslagcapaciteit van een stuwmeer\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[18]",
+    "oud": "\"Gassen in een kas onder bepaalde omstandigheden\"",
+    "nieuw": "\"Gassen in een tuinderskas\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[19]",
+    "oud": "\"Een industriepark onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een industriepark\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[20]",
+    "oud": "\"Binnenland vs. kust, Noord vs. Zuid en Stadscentrum vs. buitenwijk tussen ontwikkelde kernen en afhankelijke randgebieden\"",
+    "nieuw": "\"Noord vs. Zuid\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[21]",
+    "oud": "\"Een irrigatiesysteem, Een landbouwinstrument en Een rivier in Afrika van landbouw\"",
+    "nieuw": "\"Een irrigatiesysteem\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[23]",
+    "oud": "\"Pull = armoede, push = welvaart of Beide zijn economisch\"",
+    "nieuw": "\"Push = trekt mensen aan; pull = drijft mensen weg\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[24]",
+    "oud": "\"Economische geografie van geografie op politieke macht en internationale betrekkingen\"",
+    "nieuw": "\"De politiek van een gemeente\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[25]",
+    "oud": "\"Biodiversiteitsbehoud van broeikasgasuitstoot door geïndustrialiseerde landen\"",
+    "nieuw": "\"Bescherming van de ozonlaag\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[26]",
+    "oud": "\"Een laag-aardse baan waarbij de satelliet gelijke omlooptijd heeft als de aardrotatie\"",
+    "nieuw": "\"Een baan rond de maan\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[27]",
+    "oud": "\"Economische groei ten koste van milieu die voldoet aan huidige behoeften zonder toekomstige generaties te benadelen\"",
+    "nieuw": "\"Economische groei zonder regels\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[29]",
+    "oud": "\"Een zwevende industrie die niet gebonden is aan grondstoffen of markten en zich vrij kan vestigen\"",
+    "nieuw": "\"Industrie die alleen bij havens kan zitten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[30]",
+    "oud": "\"Centraal geplande productie, Massaproductie en Industriële revolutie van bedrijven\"",
+    "nieuw": "\"Massaproductie aan de lopende band\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[31]",
+    "oud": "\"Stadsuitbreiding van een stadswijk waardoor de prijzen stijgen en oorspronkelijke bewoners worden verdreven\"",
+    "nieuw": "\"Verval van een stadswijk\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[32]",
+    "oud": "\"Een lokaal productienetwerk waarbij verschillende landen bijdragen aan een product\"",
+    "nieuw": "\"Een nationale productieketen binnen één land\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[33]",
+    "oud": "\"Groeiende steden met structurele bevolkings- en economische krimp\"",
+    "nieuw": "\"Steden met snelle bevolkingsgroei\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[34]",
+    "oud": "\"Geografische coördinaten, Eigendomsrechten en Vestigingsplaatsfactoren van mensen aan een bepaalde plek\"",
+    "nieuw": "\"Eigendomsrechten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[36]",
+    "oud": "\"Een stad die digitale technologie gebruikt achter efficiënt bestuur en duurzaamheid\"",
+    "nieuw": "\"Een stad zonder auto's\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[37]",
+    "oud": "\"non-renewable: eindige voorraad (fossiele brandstoffen); Renewable: hernieuwbaar (zon, wind)\"",
+    "nieuw": "\"Renewable: eindige voorraad; non-renewable: hernieuwbaar\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[38]",
+    "oud": "\"Een exportoverschot, Milieuschade door mijnbouw en Rijkdom door grondstoffen dat grondstofrijke landen vaak arm blijven door corruptie en conflict\"",
+    "nieuw": "\"Een exportoverschot\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[40]",
+    "oud": "\"Voedselreserves van een land waarbij alle mensen altijd toegang hebben tot genoeg veilig en voedzaam voedsel\"",
+    "nieuw": "\"Voedsel bewaren in de koelkast\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[41]",
+    "oud": "\"Een nationale economie met gunstigere economische regelgeving om investering te trekken\"",
+    "nieuw": "\"Een natuurreservaat\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[42]",
+    "oud": "\"Stadsvernieuwing, Gentrification en Densificatie van steden in de omliggende gebieden\"",
+    "nieuw": "\"Densificatie (verdichting)\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[43]",
+    "oud": "\"Een parallelle valuta, Zwarte markt alleen en De nachteconomie die niet geregistreerd worden bij belasting of overheid\"",
+    "nieuw": "\"De nachteconomie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[44]",
+    "oud": "\"Waterverontreiniging waarbij de watervraag de beschikbare watervoorraden overstijgt\"",
+    "nieuw": "\"Een overstroming\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[45]",
+    "oud": "\"vluchtelingen: gedwongen door geweld, vervolging of ramp; Migratie: vrije keuze\"",
+    "nieuw": "\"Migratie: altijd binnen één land; vluchtelingen: altijd naar een ander land\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[46]",
+    "oud": "\"Weerstand tegen verandering van een systeem (stad, ecosysteem) om te herstellen van verstoringen\"",
+    "nieuw": "\"De hoogte van een dijk\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[47]",
+    "oud": "\"Industrievestiging over hoe steden hiërarchisch zijn gerangschikt op basis van verzorgingsgebied\"",
+    "nieuw": "\"Theorie over klimaatzones\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[48]",
+    "oud": "\"Terugkeer van migranten of Buitenlandse hulp\"",
+    "nieuw": "\"Belasting op import\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "aardrijkskunde.klas3[49]",
+    "oud": "\"Een demografische curve dat milieuvervuiling eerst toeneemt bij economische groei, daarna afneemt\"",
+    "nieuw": "\"Een bevolkingspiramide\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[1]",
+    "oud": "\"Schrijfster na de oorlog of Verzetsheldin\"",
+    "nieuw": "\"Een Nederlandse koningin\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[2]",
+    "oud": "[\"Filosofische stroming 18e eeuw\", \"Industriële revolutie\", \"Uitvinding elektriciteit\", \"Uitvinding elektriciteit of Industriële revolutie\"]",
+    "nieuw": "[\"Filosofische stroming 18e eeuw\", \"Industriële revolutie\", \"Uitvinding elektriciteit\", \"Een kunststroming\"]",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[4]",
+    "oud": "\"Letterlijk een koude oorlog of Een handelsoorlog\"",
+    "nieuw": "\"Een oorlog in de poolgebieden\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[5]",
+    "oud": "\"Wetenschappelijk onderzoek van gebieden door Europese mogendheden\"",
+    "nieuw": "\"Een religieuze beweging\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[6]",
+    "oud": "\"laatste internationale vredesconferentie (1899)\"",
+    "nieuw": "\"Oprichting van de Volkenbond\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[7]",
+    "oud": "\"Nieuwe kolonies stichten of Volksverhuizing\"",
+    "nieuw": "\"Oprichting van de VN\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[9]",
+    "oud": "\"Nazi-Duitsland of Oost-Duitsland\"",
+    "nieuw": "\"Het Duitse Keizerrijk\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[14]",
+    "oud": "\"Absolute staatsmacht over geen levensgebieden\"",
+    "nieuw": "\"Een staat zonder leger\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[17]",
+    "oud": "\"Spaanse veroveringen in Amerika onder bepaalde omstandigheden\"",
+    "nieuw": "\"Spaanse veroveringen in Amerika\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "geschiedenis.klas1[18]",
+    "oud": "\"Een kerkelijk document of Eerste Britse grondwet\"",
+    "nieuw": "\"Een pauselijke bul\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[20]",
+    "oud": "\"Einde van de onafhankelijkheidsoorlog of Begin van de Burgeroorlog\"",
+    "nieuw": "\"De Amerikaanse grondwet\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[22]",
+    "oud": "\"Leider van de Russische Revolutie of Russische generaal in WO1\"",
+    "nieuw": "\"De laatste tsaar van Rusland\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[23]",
+    "oud": "\"Een oorlog, Een epidemie en Een politieke crisis na beurskrach Wall Street\"",
+    "nieuw": "\"Een oorlog\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[25]",
+    "oud": "\"Hitlers zelfmoord in de bunker of De aanval op Polen\"",
+    "nieuw": "\"De landing in Normandië\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[26]",
+    "oud": "\"Een astronomische ontdekking of Geschiedkundig experiment\"",
+    "nieuw": "\"Een scheikundig experiment met zwavel\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[27]",
+    "oud": "\"laatste beursgenoteerde naamloze vennootschap ter wereld (1602)\"",
+    "nieuw": "\"Eerste bank ter wereld\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[28]",
+    "oud": "\"Slag in de Mexicaans-Amerikaanse Oorlog als uitzondering\"",
+    "nieuw": "\"Slag in de Mexicaans-Amerikaanse Oorlog\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "geschiedenis.klas1[30]",
+    "oud": "\"1870 of 1848\"",
+    "nieuw": "\"1870\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[33]",
+    "oud": "\"Een vulkaanuitbarsting die 30-60% van de bevolking doodde en Europa sociaal en economisch transformeerde\"",
+    "nieuw": "\"Een oorlog tussen Engeland en Frankrijk\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[34]",
+    "oud": "\"Een joodse religieuze dag door de nazi's georganiseerde pogrom waarbij Joodse winkels en synagogen werden verwoest\"",
+    "nieuw": "\"Een nachtelijk bombardement op Berlijn\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[35]",
+    "oud": "\"Alleen Frans, Leidde alleen tot Napoleons oorlogen en Versterkte het absolutisme door heel Europa\"",
+    "nieuw": "\"Bleef beperkt tot Frankrijk\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[37]",
+    "oud": "\"Een handelsoorlog tussen China en Japan of Een rebellie van Chinese boeren\"",
+    "nieuw": "\"Een burgeroorlog in Japan\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[38]",
+    "oud": "\"Schafte belastingen af van de Engelse koning ten gunste van de adel\"",
+    "nieuw": "\"Gaf de koning absolute macht\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[39]",
+    "oud": "\"Beide a en d zijn correct\"",
+    "nieuw": "\"Einde van zowel de Tachtigjarige als de Dertigjarige Oorlog\"",
+    "reden": "Opties zijn niet gelabeld a-d, dus 'a en d' is voor de leerling onleesbaar; goede antwoord uitgeschreven."
+  },
+  {
+    "waar": "geschiedenis.klas1[40]",
+    "oud": "\"autocratie en mensenrechten in Noord-Afrika en het Midden-Oosten\"",
+    "nieuw": "\"Herstel van de monarchieën\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[41]",
+    "oud": "\"Alleen economisch, Minimaal en Alleen militair van 100.000+ Joden, Hongerwinter en grote schade\"",
+    "nieuw": "\"Minimaal\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[42]",
+    "oud": "\"Einde van de industriële revolutie van Europa op basis van machtsevenwicht en restauratie\"",
+    "nieuw": "\"Oprichting van de Europese Unie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[43]",
+    "oud": "\"Een economische hervorming om kapitalistische en traditionele elementen te vernietigen\"",
+    "nieuw": "\"Een democratische hervorming\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[44]",
+    "oud": "\"Neutrale informatie, Staatsmedia en Nepnieuws om publieke opinie te sturen\"",
+    "nieuw": "\"Een reclamecampagne voor producten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[45]",
+    "oud": "\"Een epidemie, Een toevallige ramp en Een oorlogsslachting van Armeniërs (1915-1923) door het Ottomaanse Rijk\"",
+    "nieuw": "\"Een epidemie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[46]",
+    "oud": "\"Systeem van grensbewaking, muren en prikkeldraad dat West en west-Europa scheidde\"",
+    "nieuw": "\"Een muur rond Moskou\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[47]",
+    "oud": "\"Alleen militair aanwezig die Europa hielp herbouwen, NATO oprichtte en de Koude Oorlog leidde\"",
+    "nieuw": "\"Neutrale toeschouwer\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas1[49]",
+    "oud": "\"Strijd achter gelijke rechten van vrouwen, arbeiders en minderheden\"",
+    "nieuw": "\"Afschaffing van het parlement\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[0]",
+    "oud": "[\"Uitvinding elektriciteit\", \"Uitvinding elektriciteit of Industriële revolutie\", \"18e-eeuwse filosofische stroming\", \"Industriële revolutie\"]",
+    "nieuw": "[\"Uitvinding elektriciteit\", \"Een kunststroming\", \"18e-eeuwse filosofische stroming\", \"Industriële revolutie\"]",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[2]",
+    "oud": "\"Archeologisch onderzoek over historische interpretaties\"",
+    "nieuw": "\"Een politiek debat in het parlement\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[3]",
+    "oud": "\"Oprichting VN als uitzondering\"",
+    "nieuw": "\"Oprichting VN\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "geschiedenis.klas3[4]",
+    "oud": "\"Een encyclopedie of Een recent boek\"",
+    "nieuw": "\"Een documentaire van nu\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[5]",
+    "oud": "\"Isolationisme, Aanvalsbeleid en Vredesverdrag om oorlog te vermijden\"",
+    "nieuw": "\"Isolationisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[7]",
+    "oud": "\"Ottomaanse expansie, Westerse expansie en Russische expansie naar oostelijke territoria\"",
+    "nieuw": "\"Westerse expansie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[8]",
+    "oud": "\"Correcte datering of Historische bron\"",
+    "nieuw": "\"Een oude munt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[9]",
+    "oud": "\"Slag in de Stille Oceaan of D-Day landing\"",
+    "nieuw": "\"Slag om Engeland\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[10]",
+    "oud": "\"Economische hulp onder bepaalde omstandigheden\"",
+    "nieuw": "\"Economische hulp aan Japan\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "geschiedenis.klas3[11]",
+    "oud": "\"Braziliaans industrialisatieplan of Sovjet-ruimteprogramma\"",
+    "nieuw": "\"Een Amerikaans ruimteprogramma\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[12]",
+    "oud": "\"Vredesverdrag na WO1 onder bepaalde omstandigheden\"",
+    "nieuw": "\"Vredesverdrag na WO1\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "geschiedenis.klas3[13]",
+    "oud": "\"Imperialisme of Kolonialisme\"",
+    "nieuw": "\"Globalisering\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[14]",
+    "oud": "\"Militair plan WO2 om Duitsland herstelbetalingen WO1 te laten betalen\"",
+    "nieuw": "\"Plan voor de Berlijnse luchtbrug\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[15]",
+    "oud": "\"Nationalistisch China of Keizerlijk China\"",
+    "nieuw": "\"Taiwan\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[16]",
+    "oud": "\"Vulkaanramp of Hongersnood\"",
+    "nieuw": "\"Een oorlog\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[17]",
+    "oud": "\"Politieke organisatie of Wetenschapsinstituut\"",
+    "nieuw": "\"Een kunstacademie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[18]",
+    "oud": "\"Biografisch onderzoek of Economische analyse\"",
+    "nieuw": "\"Het dateren van vondsten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[19]",
+    "oud": "\"Honderdjarige Oorlog onder bepaalde omstandigheden\"",
+    "nieuw": "\"Slag uit de Honderdjarige Oorlog\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "geschiedenis.klas3[21]",
+    "oud": "\"Ondersteunde de koning door gebrek aan politieke macht en economische nood\"",
+    "nieuw": "\"Leidde het leger\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[22]",
+    "oud": "\"Militaire alliantie van Europese machtsbalans en diplomatie na Napoleon\"",
+    "nieuw": "\"Een Europees parlement\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[23]",
+    "oud": "\"Japanse invasie, Russisch-Chinese oorlog en Boerenopstand in China tegen buitenlandse invloed\"",
+    "nieuw": "\"Japanse invasie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[24]",
+    "oud": "\"Voerde parlementaire democratie in of Schafte de monarchie af\"",
+    "nieuw": "\"Gaf alle burgers stemrecht\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[25]",
+    "oud": "\"Het beleid om andere landen te veroveren en te beheersen achter economisch/politiek gewin\"",
+    "nieuw": "\"Vreedzame samenwerking tussen landen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[26]",
+    "oud": "\"Vertraging van kennisverspreiding van ideeën, bijbels en wetenschappelijke kennis\"",
+    "nieuw": "\"Het einde van de Reformatie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[27]",
+    "oud": "\"Een Scandinavisch koninkrijk, Een Oosters keizerrijk en Een Italiaanse stadsstaat dat over meerdere eeuwen grote invloed had\"",
+    "nieuw": "\"Een Oosters keizerrijk\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[28]",
+    "oud": "\"Alleen de moord op Franz Ferdinand van nationalisme, allianties, imperialisme en de moord op Franz Ferdinand\"",
+    "nieuw": "\"Alleen economische concurrentie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[29]",
+    "oud": "\"functionalisten: het groeide door bureaucratische dynamiek; Intentionalisten: Hitler had het altijd gepland\"",
+    "nieuw": "\"Intentionalisten: het groeide spontaan; functionalisten: Hitler had het altijd gepland\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "geschiedenis.klas3[30]",
+    "oud": "\"Enorme rijkdom achter Europese handelshuizen, banken en koloniale mogendheden\"",
+    "nieuw": "\"Geen economisch effect\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[31]",
+    "oud": "\"Een koloniale overeenkomst met Turkije om het Midden-Oosten na WO1 te verdelen\"",
+    "nieuw": "\"Een wapenstilstand met Duitsland\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[32]",
+    "oud": "\"Luthers geschriften konden massaal worden verspreid, wat de verlichting versnelde\"",
+    "nieuw": "\"De drukpers bestond nog niet tijdens de Reformatie\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[33]",
+    "oud": "\"Geschiedenis van voormalige kolonies die koloniale perspectieven deconstrueert en andere stemmen centraal stelt\"",
+    "nieuw": "\"Geschiedenis geschreven door kolonisatoren\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[34]",
+    "oud": "\"Democratisering van Duitsland van Duitsland → economische crisis → opkomst van het nationaal-socialisme\"",
+    "nieuw": "\"Militaire overwinning van Duitsland\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[35]",
+    "oud": "\"Prehistorische geschiedenis van getuigenissen en interviews als historische bron\"",
+    "nieuw": "\"Het bestuderen van oude kaarten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[36]",
+    "oud": "\"Symbool van het einde van het einde van apartheid en transitie naar democratie\"",
+    "nieuw": "\"Begin van een burgeroorlog\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[37]",
+    "oud": "\"Een religieuze oorlog, WO3 en Een economisch conflict met genocide in Bosnië en Kosovo\"",
+    "nieuw": "\"Een oorlog tussen Griekenland en Turkije\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[38]",
+    "oud": "\"Politieke geschiedenis centraal, Militaire geschiedenis en Biografische benadering op langetermijnstructuren, geografie en dagelijks leven\"",
+    "nieuw": "\"Militaire geschiedenis\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[39]",
+    "oud": "\"Einde van de Koude Oorlog van ontspanning tussen VS en USSR in de jaren 1970\"",
+    "nieuw": "\"Begin van de Koude Oorlog\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[40]",
+    "oud": "\"Economisch beleid, Militaire regels en Religieuze wetgeving van Joden uit het Duitse staatsburgerschap en sociale leven\"",
+    "nieuw": "\"Militaire regels\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[41]",
+    "oud": "\"Een anti-oorlogs verhaal dat Duitsland WO1 verloor door verraad van socialisten en Joden aan het thuisfront\"",
+    "nieuw": "\"Een Britse propagandacampagne\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[42]",
+    "oud": "\"VS en USSR steunden rivaliserende bevrijdingsbewegingen achter eigen invloed\"",
+    "nieuw": "\"Geen enkel effect\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[43]",
+    "oud": "\"Calvinisme ondersteunde Spanje, Religie speelde geen rol en Geen relatie aan de katholieke Spaanse Habsburgers\"",
+    "nieuw": "\"Geen relatie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[44]",
+    "oud": "\"Het besef dat mensen gevormd worden door het toekomende en dat het verleden anders was\"",
+    "nieuw": "\"Het uit het hoofd leren van jaartallen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[45]",
+    "oud": "\"Versterking van het feodalisme van Arabische kennis, handel en goederen → bijdrage aan de Renaissance\"",
+    "nieuw": "\"Het einde van de handel met het Oosten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[46]",
+    "oud": "\"De Amerikaanse onafhankelijkheid, Een burgeroorlog en Een Franse revolutie naar constitutionele monarchie in Engeland\"",
+    "nieuw": "\"Een burgeroorlog\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[47]",
+    "oud": "\"Einde van de Italiaanse Oorlogen dat de hugenoten godsdienstvrijheid gaf in Frankrijk\"",
+    "nieuw": "\"Verbod op het protestantisme in Frankrijk\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "geschiedenis.klas3[49]",
+    "oud": "\"Verbond west en West via handel, kennisuitwisseling en culturele contacten\"",
+    "nieuw": "\"Een zeeroute rond Afrika\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[0]",
+    "oud": "\"Een vitamine of Een type cel\"",
+    "nieuw": "\"Een hormoon\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[2]",
+    "oud": "\"neutronen en neutronen\"",
+    "nieuw": "\"Neutronen en elektronen\"",
+    "reden": "Afleider is een typefout/dubbeling ('neutronen en neutronen')."
+  },
+  {
+    "waar": "natuur.klas1[3]",
+    "oud": "\"Een vergelijking onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een vergelijking\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas1[4]",
+    "oud": "\"Overzicht van geen chemische elementen\"",
+    "nieuw": "\"Overzicht van alle planeten\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[5]",
+    "oud": "\"Eiwitproductie onder bepaalde omstandigheden\"",
+    "nieuw": "\"Eiwitproductie\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas1[12]",
+    "oud": "\"Dichtheid onder bepaalde omstandigheden\"",
+    "nieuw": "\"Dichtheid\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas1[15]",
+    "oud": "\"Verbinding = één soort atoom onder bepaalde omstandigheden\"",
+    "nieuw": "\"Verbinding = één soort atoom\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas1[16]",
+    "oud": "\"Zwaartekrachtsveld onder bepaalde omstandigheden\"",
+    "nieuw": "\"Zwaartekrachtsveld\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas1[17]",
+    "oud": "\"reflectie = terugkaatsing; Brekingsindex = lichtafbuiging in medium\"",
+    "nieuw": "\"Brekingsindex = geluidssnelheid; reflectie = lichtabsorptie\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "natuur.klas1[19]",
+    "oud": "\"Een waterbeweging onder bepaalde omstandigheden\"",
+    "nieuw": "\"Alleen een beweging van water\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas1[21]",
+    "oud": "\"Een ordening van geen elementen op atoomnummer\"",
+    "nieuw": "\"Een ordening van sterren op helderheid\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[23]",
+    "oud": "\"De frequentie van een golf of De snelheid van een golf\"",
+    "nieuw": "\"De hoogte van een golf\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[24]",
+    "oud": "\"diercel niet; Plantencel heeft celwand, vacuole en chloroplasten\"",
+    "nieuw": "\"Diercel heeft chloroplasten; plantencel niet\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "natuur.klas1[25]",
+    "oud": "[\"Hertz (Hz)\", \"Newton of Joule\", \"Meter\", \"Newton\"]",
+    "nieuw": "[\"Hertz (Hz)\", \"Joule\", \"Meter\", \"Newton\"]",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[26]",
+    "oud": "\"Steen aan de oppervlakte of Een bergketen\"",
+    "nieuw": "\"Een wolkenlaag\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[27]",
+    "oud": "\"Zuren geven H⁺-radicalen af; basen nemen H⁺ op of geven OH⁻ af\"",
+    "nieuw": "\"Zuren en basen zijn chemisch hetzelfde\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[28]",
+    "oud": "\"Perfect isolator dat onder bepaalde omstandigheden stroom geleidt\"",
+    "nieuw": "\"Een materiaal dat alleen warmte geleidt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[29]",
+    "oud": "\"Energie opslaan en doorgeven achter celprocessen\"",
+    "nieuw": "\"Zuurstof vervoeren\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[30]",
+    "oud": "\"Gratis voordelen van ecosystemen achter de mens (schone lucht, water, bestuiving)\"",
+    "nieuw": "\"Een abonnement op een natuurtijdschrift\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[31]",
+    "oud": "\"Windenergie, Kernenergie en Een hernieuwbare energiebron dat miljoenen jaren geleden leefde\"",
+    "nieuw": "\"Windenergie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[32]",
+    "oud": "\"lucht en opgeloste stoffen opslaan en de cel stevig houden\"",
+    "nieuw": "\"Zuurstof produceren\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[33]",
+    "oud": "\"Wanneer producten gelijk zijn aan reactanten, Een gestopte reactie en Wanneer een reactie klaar is is aan de teruggaande reactie\"",
+    "nieuw": "\"Een gestopte reactie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[34]",
+    "oud": "\"Een lichaamscel, Een stamcel en Een bloedcel met de helft van het chromosoomaantal\"",
+    "nieuw": "\"Een stamcel\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[35]",
+    "oud": "\"Een geluidsspectrum van elektromagnetische straling van radiogolven tot gammastraling\"",
+    "nieuw": "\"Een regenboog\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[36]",
+    "oud": "\"Het uiterlijk van een organisme als begrip in de taalkunde\"",
+    "nieuw": "\"Het uiterlijk van een organisme\"",
+    "reden": "Afleider met onzinnige staart ('als begrip in de taalkunde')."
+  },
+  {
+    "waar": "natuur.klas1[37]",
+    "oud": "\"Een chemische verbinding van metalen door chemische reactie met de omgeving (roesten)\"",
+    "nieuw": "\"Het smelten van metalen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[40]",
+    "oud": "\"Elektrische lading van een elektrische stroom door een veranderend magneetveld\"",
+    "nieuw": "\"Het opslaan van lading in een batterij\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[41]",
+    "oud": "\"Het aardmagneetveld van gassen rondom de aarde (troposfeer, stratosfeer, etc.)\"",
+    "nieuw": "\"De oceanen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[42]",
+    "oud": "\"Een afkorting die de soorten en aantallen moleculen in een molecuul weergeeft\"",
+    "nieuw": "\"Een afkorting voor de kleur van een stof\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[44]",
+    "oud": "\"Een spier, Een inwendig skelet en Een orgaan van het lichaam\"",
+    "nieuw": "\"Een spier\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[45]",
+    "oud": "\"Zwaartekracht, F=ma en Energiebehoud heeft een even grote maar tegengestelde reactiekracht\"",
+    "nieuw": "\"F = m × a\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[46]",
+    "oud": "\"Een chemische reactie met verschillende eigenschappen van elkaar scheiden (filtreren, destilleren)\"",
+    "nieuw": "\"Stoffen laten reageren tot een nieuwe stof\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[47]",
+    "oud": "\"Hernieuwbaar = steenkool wordt voortdurend aangevuld (zon, wind). Niet-hernieuwbaar: raakt op (fossiel)\"",
+    "nieuw": "\"Hernieuwbaar = aardgas\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[48]",
+    "oud": "\"Een bacterie, Een virus en Een schimmel dat niet plant, dier of schimmel is\"",
+    "nieuw": "\"Een virus\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas1[49]",
+    "oud": "\"Bacteriën zijn levende weefsels; virussen zijn niet-levend en hebben een gastheercel nodig om zich te vermenigvuldigen\"",
+    "nieuw": "\"Bacteriën hebben een gastheercel nodig; virussen niet\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[1]",
+    "oud": "\"Energie ontstaat uit niets of Energie neemt toe\"",
+    "nieuw": "\"Energie neemt altijd toe\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[2]",
+    "oud": "\"Reductiedeling achter geslachtscellen\"",
+    "nieuw": "\"Deling van bacteriën\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[3]",
+    "oud": "\"Stukje rna dat codeert voor een eiwit\"",
+    "nieuw": "\"Een eiwit in de celkern\"",
+    "reden": "Afleider is dubbelzinnig: mRNA codeert óók voor een eiwit; vervangen."
+  },
+  {
+    "waar": "natuur.klas3[4]",
+    "oud": "\"Hormoonproductie onder bepaalde omstandigheden\"",
+    "nieuw": "\"Hormoonproductie\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas3[5]",
+    "oud": "\"Stof die reactie remt onder bepaalde omstandigheden\"",
+    "nieuw": "\"Stof die reactie remt\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas3[7]",
+    "oud": "\"Een chromosoom of Een eiwit\"",
+    "nieuw": "\"Een organel\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[8]",
+    "oud": "\"Een elektron in de praktijk\"",
+    "nieuw": "\"Een elektron\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas3[10]",
+    "oud": "\"Energie beschikbaar achter nuttig werk\"",
+    "nieuw": "\"Warmte-energie\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[12]",
+    "oud": "\"Licht dat wordt uitgezonden of Kleurspectrumanalyse\"",
+    "nieuw": "\"De temperatuur van een ster\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[13]",
+    "oud": "\"Relativiteitstheorie onder bepaalde omstandigheden\"",
+    "nieuw": "\"Relativiteitstheorie\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas3[14]",
+    "oud": "\"Druk-volume relatie onder bepaalde omstandigheden\"",
+    "nieuw": "\"Druk-volume relatie\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas3[16]",
+    "oud": "\"Spontane chemische reactie of Batterijwerking\"",
+    "nieuw": "\"Verbranding\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[17]",
+    "oud": "\"Tijd om 100% radioactief te vervallen of Vervallingsenergie\"",
+    "nieuw": "\"Tijd om 25% te vervallen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[19]",
+    "oud": "\"Reflectie van geluid van frequentie door beweging bron/ontvanger\"",
+    "nieuw": "\"Absorptie van licht\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[20]",
+    "oud": "\"Een DNA-streng onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een DNA-streng\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "natuur.klas3[21]",
+    "oud": "\"pH = log([HA]/[A⁻]) of pH = -log[H⁺] + pOH\"",
+    "nieuw": "\"pH = pKa × [A⁻]/[HA]\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[22]",
+    "oud": "\"SN2: één stap, backside attack; SN1: twee stappen, carbokation-tussenproduct\"",
+    "nieuw": "\"SN1: één stap, backside attack; SN2: twee stappen, carbokation-tussenproduct\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "natuur.klas3[23]",
+    "oud": "\"Cl⁻ veroorzaakt depolarisatie, K⁺ stroomt naar binnen en Na⁺ stroomt naar buiten naar binnen (depolarisatie) dan K⁺ naar buiten (repolarisatie)\"",
+    "nieuw": "\"K⁺ stroomt naar binnen (depolarisatie) dan Na⁺ naar buiten (repolarisatie)\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[26]",
+    "oud": "\"Een gat in de atmosfeer met zulke sterke zwaartekracht dat zelfs licht niet kan ontsnappen\"",
+    "nieuw": "\"Een uitgedoofde ster zonder zwaartekracht\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[27]",
+    "oud": "\"Thermodynamische entropie of Klassieke baanbeweging\"",
+    "nieuw": "\"De zwaartekracht tussen planeten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[29]",
+    "oud": "\"Aeroob: met waterstof, veel ATP. Anaeroob: zonder zuurstof, weinig ATP.\"",
+    "nieuw": "\"Beide leveren evenveel ATP\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[30]",
+    "oud": "\"Elektronen clusteren in de kern als onderdeel van de grammaticale analyse\"",
+    "nieuw": "\"Elektronen clusteren allemaal in de kern\"",
+    "reden": "Afleider met onzinnige staart ('als onderdeel van de grammaticale analyse')."
+  },
+  {
+    "waar": "natuur.klas3[31]",
+    "oud": "\"Celbeschadiging of Celdeling\"",
+    "nieuw": "\"Celgroei\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[32]",
+    "oud": "\"Zuur-base titratie, Precipitatie-reactie en Zoutvorming om concentratie te bepalen\"",
+    "nieuw": "\"Zoutvorming\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[33]",
+    "oud": "\"De maximale depolarisatie waarbij een actie-potentiaal onvermijdelijk ontstaat\"",
+    "nieuw": "\"De rustpotentiaal van -70 mV\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[34]",
+    "oud": "\"Activeringsenergie-principe, Wet van massawerking en Hoe concentratie pH beïnvloedt om een verandering te compenseren\"",
+    "nieuw": "\"Wet van massawerking\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[35]",
+    "oud": "\"Een RNA-virus dat zijn RNA omzet in rna via reverse transcriptase\"",
+    "nieuw": "\"Een virus dat alleen planten infecteert\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[36]",
+    "oud": "\"beta: elektron/positron; gamma: elektromagnetische straling; Alfa: heliumkern\"",
+    "nieuw": "\"Alfa: elektron; beta: heliumkern; gamma: neutron\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "natuur.klas3[37]",
+    "oud": "\"Een activator dat de enzymwerking vermindert of blokkeert\"",
+    "nieuw": "\"Een co-enzym\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[38]",
+    "oud": "\"F = GMm/r² of F = qvB\"",
+    "nieuw": "\"F = m × a\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[39]",
+    "oud": "\"Verandering in genexpressie zonder rna-sequentie te wijzigen\"",
+    "nieuw": "\"Verandering van het aantal chromosomen\"",
+    "reden": "Afleider is dubbelzinnig: epigenetische modificatie wijzigt óók geen RNA-sequentie; vervangen."
+  },
+  {
+    "waar": "natuur.klas3[41]",
+    "oud": "\"Een reeks van drie basen in mRNA die achter een aminozuur coderen\"",
+    "nieuw": "\"Een reeks van drie aminozuren\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[42]",
+    "oud": "\"Celbewegingen aansturen of Eiwitten aanmaken\"",
+    "nieuw": "\"Fotosynthese uitvoeren\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[43]",
+    "oud": "\"E = IR, P = I²R en F = BIL is evenredig met de veranderingssnelheid van de magnetische flux\"",
+    "nieuw": "\"E = IR\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[45]",
+    "oud": "\"Een genregulatiesysteem in E. coli achter lactosemetabolisme\"",
+    "nieuw": "\"Een enzym dat lactose afbreekt in de darm\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[46]",
+    "oud": "\"Deeltjes zijn golfachtig van een deeltje kunnen niet tegelijk exact bekend zijn\"",
+    "nieuw": "\"Licht beweegt altijd even snel\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[47]",
+    "oud": "\"Een hormoon in het bloed, Een elektrisch signaal en Een zenuwcel die signalen overdraagt tussen neuronen\"",
+    "nieuw": "\"Een zenuwcel\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[48]",
+    "oud": "\"Een maat achter de wanorde of het aantal micro-toestanden van een systeem\"",
+    "nieuw": "\"De temperatuur van een systeem\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "natuur.klas3[49]",
+    "oud": "\"Het membraan is alleen voor water, Het membraan is ondoorlaatbaar en Het membraan laat alles door van grootte, lading en vetoplosbaarheid\"",
+    "nieuw": "\"Het membraan laat alles door\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[0]",
+    "oud": "\"Een politieke stroming of Een Europees verdrag\"",
+    "nieuw": "\"Een drietal politieke partijen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[1]",
+    "oud": "\"Hetzelfde als democratie waarbij overheid en burgers aan rechtsregels gebonden zijn\"",
+    "nieuw": "\"Staat waar alleen burgers aan de wet gebonden zijn\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[2]",
+    "oud": "\"Belasting betalen onder bepaalde omstandigheden\"",
+    "nieuw": "\"Belasting betalen\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[3]",
+    "oud": "\"Rechten voor politici onder bepaalde omstandigheden\"",
+    "nieuw": "\"Rechten voor politici\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[4]",
+    "oud": "\"Een partijprogramma, Een beleidsnota en Een wet van ideeën over de gewenste samenleving\"",
+    "nieuw": "\"Een wet\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[5]",
+    "oud": "\"informeel = ongeschreven gedragsregels; Formeel = wettelijk vastgelegd\"",
+    "nieuw": "\"Formeel = ongeschreven; informeel = wettelijk vastgelegd\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas1[6]",
+    "oud": "\"Een socialistische staat onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een socialistische staat\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[8]",
+    "oud": "\"De wet over gemeenten die de staatsinrichting en grondrechten vastlegt\"",
+    "nieuw": "\"Een wet die alleen voor de koning geldt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[9]",
+    "oud": "\"Eén cultuur is dominant van meerdere culturen met gelijke erkenning\"",
+    "nieuw": "\"Het verbieden van andere culturen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[10]",
+    "oud": "\"rechts: vrijheid, markt, traditie; Links: gelijkheid, staatsinmenging\"",
+    "nieuw": "\"Links: vrijheid, markt, traditie; rechts: gelijkheid, staatsinmenging\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas1[11]",
+    "oud": "\"Iemand die druk uitoefent op politici achter een belang\"",
+    "nieuw": "\"Iemand die stemmen telt bij verkiezingen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[12]",
+    "oud": "\"Wetten maken, Propaganda verspreiden en De overheid steunen van macht en publiek debat faciliteren\"",
+    "nieuw": "\"Wetten maken\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[13]",
+    "oud": "\"Koning heeft absolute macht onder bepaalde omstandigheden\"",
+    "nieuw": "\"Koning heeft absolute macht\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[14]",
+    "oud": "\"Subsidies voor gemeenten, Europese belasting en Centralisatie op het laagst mogelijke niveau\"",
+    "nieuw": "\"Centralisatie van alle macht\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[15]",
+    "oud": "\"Een grondwet van instituties en regels waarmee een samenleving wordt bestuurd\"",
+    "nieuw": "\"Een lijst van politici\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[16]",
+    "oud": "\"Het kabinet steunen onder bepaalde omstandigheden\"",
+    "nieuw": "\"Het kabinet altijd steunen\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[17]",
+    "oud": "\"Gelijkheid voor de wet onder bepaalde omstandigheden\"",
+    "nieuw": "\"Gelijkheid voor de wet\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[18]",
+    "oud": "\"Volledig opgaan in een andere cultuur onder bepaalde omstandigheden\"",
+    "nieuw": "\"Terugkeren naar het land van herkomst\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[19]",
+    "oud": "\"Nadruk op vrijheid en markt onder bepaalde omstandigheden\"",
+    "nieuw": "\"Nadruk op vrijheid en markt\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[20]",
+    "oud": "\"Globalisme, Internationalisme en Socialisme op het belang en de eigenheid van de eigen natie\"",
+    "nieuw": "\"Globalisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[21]",
+    "oud": "\"Een presidentieel stelsel waarbij de regering verantwoording aflegt aan het parlement\"",
+    "nieuw": "\"Een stelsel waarbij de koning de regering benoemt en controleert\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[22]",
+    "oud": "\"relativisme: elke cultuur op eigen merites beoordelen; Etnocentrisme: eigen cultuur als maatstaf\"",
+    "nieuw": "\"Etnocentrisme: elke cultuur op eigen merites beoordelen; relativisme: eigen cultuur als maatstaf\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas1[23]",
+    "oud": "\"Het Europese Hof, De Europese ministerraad en Het Europese parlement van de EU\"",
+    "nieuw": "\"Het Europese Hof van Justitie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[24]",
+    "oud": "\"soft power: culturele aantrekkingskracht en diplomatie; Hard power: militaire/economische dwang\"",
+    "nieuw": "\"Hard power: cultuur; soft power: militaire dwang\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas1[25]",
+    "oud": "\"Socialisatie van kinderen waarbij iemand na straf terugkeert in de samenleving\"",
+    "nieuw": "\"Het opleggen van een gevangenisstraf\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[26]",
+    "oud": "\"Het bedrijfsleven van vrijwillige organisaties tussen overheid en individu (ngo's, kerken, clubs)\"",
+    "nieuw": "\"Het leger\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[27]",
+    "oud": "\"Een partijprogramma, Een wet en Een politicusprofiel van politieke overtuigingen over hoe de samenleving moet worden ingericht\"",
+    "nieuw": "\"Een wet\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[28]",
+    "oud": "\"Descriptief: beschrijft wat is; normatief: schrijft achter wat moet zijn\"",
+    "nieuw": "\"Descriptief: een mening; normatief: een feit\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[29]",
+    "oud": "\"Democratie, Technocratie en Aristocratie waarbij één persoon of kleine groep onbeperkte macht heeft\"",
+    "nieuw": "\"Democratie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[30]",
+    "oud": "\"Mensen in gelijke gevallen worden gelijk behandeld, tenzij er reden is achter onderscheid\"",
+    "nieuw": "\"Alleen Nederlanders worden gelijk behandeld\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[31]",
+    "oud": "\"Democratie, Corruptie en Anarchie met vaste regels, hiërarchie en procedures\"",
+    "nieuw": "\"Anarchie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[32]",
+    "oud": "\"EU-beleid toepassen, Subsidies verdelen en Belastingheffing in de overheidslaag uitgevoerd\"",
+    "nieuw": "\"Belastingheffing door de EU\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[33]",
+    "oud": "\"Directe democratie die streeft naar brede overeenstemming en samenwerking\"",
+    "nieuw": "\"Democratie waarin de grootste partij alles beslist\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[34]",
+    "oud": "\"juridisch: wat de wet vereist; Moreel: wat je ethisch verplicht bent\"",
+    "nieuw": "\"Moreel: wat de wet vereist; juridisch: wat je ethisch verplicht bent\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas1[35]",
+    "oud": "\"Staatsgestuurde economie waarbij vraag en aanbod de prijzen bepalen zonder staatsinmenging\"",
+    "nieuw": "\"Economie zonder geld\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[36]",
+    "oud": "\"Een religieuze beweging die rede, vrijheid en gelijkheid centraal stelde\"",
+    "nieuw": "\"Een 20e-eeuwse kunstbeweging\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[38]",
+    "oud": "\"Migranten kiezen bewust te migreren; vluchtelingen zijn gedwongen te vluchten achter gevaar\"",
+    "nieuw": "\"Migranten en vluchtelingen hebben dezelfde juridische status\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[39]",
+    "oud": "\"Sociale mobiliteit van de samenleving in klassen, status en macht\"",
+    "nieuw": "\"Het verhuizen naar een andere wijk\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[40]",
+    "oud": "\"Een dictatuur met wetten die zowel democratisch bestuurd wordt als gebonden is aan rechtsregels\"",
+    "nieuw": "\"Een staat zonder grondwet\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[42]",
+    "oud": "\"Nationalisme, EU-beleid en Wereldregering om mondiale problemen aan te pakken\"",
+    "nieuw": "\"EU-beleid\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[43]",
+    "oud": "\"Actief: stemmen; passief: je kandidaat stellen achter een verkiezingsfunctie\"",
+    "nieuw": "\"Actief: demonstreren; passief: thuisblijven\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[44]",
+    "oud": "\"Een Europees verdrag van fundamentele rechtsregels van een staat (grondwet)\"",
+    "nieuw": "\"Een verkiezingsprogramma\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[45]",
+    "oud": "\"politiestaat: willekeurig optreden van de overheid; Rechtsstaat: iedereen gebonden aan wet\"",
+    "nieuw": "\"Rechtsstaat: willekeurig optreden; politiestaat: iedereen gebonden aan wet\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas1[46]",
+    "oud": "\"Werktijden verdelen onder bepaalde omstandigheden\"",
+    "nieuw": "\"Werktijden verdelen\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas1[47]",
+    "oud": "\"Formeel: gelijke regels achter iedereen; materieel: gelijke kansen en uitkomsten\"",
+    "nieuw": "\"Formeel: gelijke uitkomsten; materieel: gelijke regels\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[48]",
+    "oud": "\"Een bestuursvorm, Een economisch systeem en Een waterbeheersmodel tussen overheid, werkgevers en vakbonden\"",
+    "nieuw": "\"Een bestuursvorm van de waterschappen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas1[49]",
+    "oud": "\"Dictatuur: absolute macht één persoon; autoritair: beperkt pluralisme maar alle totale controle\"",
+    "nieuw": "\"Dictatuur: geen macht; autoritair: volledige democratie\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[0]",
+    "oud": "\"Eén macht in drie kamers van machten: parlement, kabinet, rechter onafhankelijk\"",
+    "nieuw": "\"Drie politieke partijen in de regering\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[1]",
+    "oud": "\"Sociale zekerheid, Rousseau's theorie en Arbeidsovereenkomst van onwetendheid'\"",
+    "nieuw": "\"Sociale zekerheid\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[2]",
+    "oud": "\"Tekort aan parlementsleden onder bepaalde omstandigheden\"",
+    "nieuw": "\"Tekort aan parlementsleden\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas3[3]",
+    "oud": "\"Representatieve democratie onder bepaalde omstandigheden\"",
+    "nieuw": "\"Representatieve democratie\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas3[4]",
+    "oud": "\"Negatief = vrijheid van inmenging; negatief = vrijheid om iets te kunnen\"",
+    "nieuw": "\"Negatief = vrijheid om iets te kunnen; positief = vrijheid van inmenging\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[5]",
+    "oud": "\"Democratie via technologie onder bepaalde omstandigheden\"",
+    "nieuw": "\"Democratie via technologie\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas3[6]",
+    "oud": "\"materieel = ook inhoud rechtvaardig; Formeel = regels gevolgd\"",
+    "nieuw": "\"Formeel = inhoud rechtvaardig; materieel = alleen regels gevolgd\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas3[7]",
+    "oud": "\"Politiek systeem van samenleving in religieuze/ideologische blokken\"",
+    "nieuw": "\"Een bouwstijl met zuilen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[8]",
+    "oud": "\"Socialisme, Democratie en Nationalisme op 'het volk' tegenover 'de elite'\"",
+    "nieuw": "\"Socialisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[9]",
+    "oud": "\"Eenheidsstaat met gedecentraliseerde deelstaten met eigen bevoegdheden\"",
+    "nieuw": "\"Staat zonder centrale regering\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[10]",
+    "oud": "\"Financiële controle onder bepaalde omstandigheden\"",
+    "nieuw": "\"Financiële controle\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas3[11]",
+    "oud": "\"integratie = meedoen mét eigen identiteit; Assimilatie = eigen cultuur opgeven\"",
+    "nieuw": "\"Assimilatie = meedoen mét eigen identiteit; integratie = eigen cultuur opgeven\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas3[12]",
+    "oud": "\"Feesten en tradities, Media en Kunst over politiek in een samenleving\"",
+    "nieuw": "\"Media\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[13]",
+    "oud": "\"De media, De overheid en Het bedrijfsleven tussen overheid en individu (vakbonden, ngo's, kerk)\"",
+    "nieuw": "\"De media\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[14]",
+    "oud": "\"Grondrecht tussen burger en staat onder bepaalde omstandigheden\"",
+    "nieuw": "\"Grondrecht dat alleen geldt tussen burger en staat\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas3[15]",
+    "oud": "\"Een politiek systeem onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een politiek systeem\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas3[16]",
+    "oud": "\"Internationaal recht van een staat binnen zijn eigen grenzen\"",
+    "nieuw": "\"Het recht van de EU om wetten op te leggen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[17]",
+    "oud": "\"Politieke betrokkenheid van politici en het politieke systeem\"",
+    "nieuw": "\"Vertrouwen in de rechter\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[18]",
+    "oud": "\"Een rechtsfilosoof die moraal combineert met recht of Iemand die voor rechtvaardigheid strijdt\"",
+    "nieuw": "\"Een rechter die alleen op gevoel oordeelt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[19]",
+    "oud": "\"democratie = volksbestuur — kunnen samengaan; Rechtsstaat = gebonden aan rechtsregels\"",
+    "nieuw": "\"Rechtsstaat = volksbestuur; democratie = gebonden aan rechtsregels\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas3[20]",
+    "oud": "\"Discriminatie door individuen in de moderne taal- en letterkunde\"",
+    "nieuw": "\"Discriminatie door individuen\"",
+    "reden": "Afleider met onzinnige staart ('in de moderne taal- en letterkunde')."
+  },
+  {
+    "waar": "maatschappijleer.klas3[22]",
+    "oud": "\"Actieve politieke deelname onder bepaalde omstandigheden\"",
+    "nieuw": "\"Actieve politieke deelname\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "maatschappijleer.klas3[23]",
+    "oud": "\"socialisme: gelijkheid en collectiviteit; Liberalisme: individuele vrijheid en markt centraal\"",
+    "nieuw": "\"Liberalisme: gelijkheid en collectiviteit; socialisme: individuele vrijheid en markt\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas3[24]",
+    "oud": "\"Bedrijven, Deel van de overheid en Politieke partijen die maatschappelijke doelen nastreven (Amnesty, Rode Kruis)\"",
+    "nieuw": "\"Bedrijven\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[25]",
+    "oud": "\"Universeel: achter iedereen altijd; relatief: afhankelijk van cultuur/context\"",
+    "nieuw": "\"Universeel: alleen in oorlogstijd; relatief: alleen in vredestijd\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[26]",
+    "oud": "\"Een dagboek van een politicus van onderwerpen waaraan een regering of politieke organisatie prioriteit geeft\"",
+    "nieuw": "\"De zittingsdagen van het parlement\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[27]",
+    "oud": "\"Hetzelfde, Communitarisme = individualisme en Liberalisme: gemeenschap centraal boven individuele vrijheid\"",
+    "nieuw": "\"Ze zijn hetzelfde\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[28]",
+    "oud": "\"Een Amerikaans principe dat niet voor Europa geldt of Een letterlijke muur\"",
+    "nieuw": "\"Een grens tussen kerkelijke gebouwen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[29]",
+    "oud": "\"civielrechtelijk: partijen claimen van elkaar; Strafrechtelijk: staat vervolgt wegens strafbaar feit\"",
+    "nieuw": "\"Strafrechtelijk: partijen claimen van elkaar; civielrechtelijk: staat vervolgt\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas3[30]",
+    "oud": "\"Klassiek liberalisme, Sociaal-democratie en Socialisme die de vrije markt, deregulering en beperkte overheid centraal stelt\"",
+    "nieuw": "\"Socialisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[31]",
+    "oud": "\"confederatie: soevereine staten werken vrijwillig samen; Federatie: sterke centrale staat\"",
+    "nieuw": "\"Federatie: losse samenwerking van staten; confederatie: sterke centrale staat\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "maatschappijleer.klas3[32]",
+    "oud": "\"Partijsplitsing van wisselend stemgedrag van kiezers tussen partijen over tijd\"",
+    "nieuw": "\"Het aantal zetels in het parlement\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[33]",
+    "oud": "\"Conservatisme, Socialisme en Anarchisme die maximale individuele vrijheid en minimale staatsinmenging bepleit\"",
+    "nieuw": "\"Socialisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[34]",
+    "oud": "\"Democratisch mandaat, Legaliteit en Wettelijkheid dat het gezag het recht heeft te regeren\"",
+    "nieuw": "\"Legaliteit\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[35]",
+    "oud": "\"Een wiskundige vergelijking dat collectieve voorkeuren bij meerderheidsstemming cyclisch/inconsistent kunnen zijn\"",
+    "nieuw": "\"Een kiesdrempel\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[36]",
+    "oud": "\"Een coup, Burgeroorlog en Staatsfaillissement van democratische normen en rechtsstaatwaarborgen door gekozen leiders\"",
+    "nieuw": "\"Een militaire coup\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[37]",
+    "oud": "\"Cultureel kapitaal, Economisch kapitaal en Menselijk kapitaal van wederkerigheid in een gemeenschap die samenwerking bevorderen\"",
+    "nieuw": "\"Cultureel kapitaal\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[38]",
+    "oud": "\"Biologie van geslacht, Seksualiteitskunde en Vrouwenstudies dat gender als sociaal construct analyseert\"",
+    "nieuw": "\"Vrouwenstudies alleen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[39]",
+    "oud": "\"Modernisme, Liberalisme en Realisme die grote verhalen en objectieve waarheden in twijfel trekt\"",
+    "nieuw": "\"Realisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[40]",
+    "oud": "\"Collectief bezit werkt altijd dat gemeenschappelijke goederen worden overgebruikt door individueel eigenbelang\"",
+    "nieuw": "\"Een toneelstuk over boeren\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[41]",
+    "oud": "\"Politiek voor burgers op de belangen van specifieke groepen op basis van gedeelde identiteit\"",
+    "nieuw": "\"Politiek gericht op economische groei\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[42]",
+    "oud": "\"Een raam in het parlement dat politiek acceptabel wordt geacht door het grote publiek\"",
+    "nieuw": "\"Een kiesdistrict\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[43]",
+    "oud": "\"Liberale theorie, Constructivisme en Idealisme dat staten in een anarchistisch systeem streven naar veiligheid via machtsbalans\"",
+    "nieuw": "\"Idealisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[44]",
+    "oud": "\"Materialisme dat internationale normen, identiteiten en structuren sociaal geconstrueerd zijn\"",
+    "nieuw": "\"Realisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[46]",
+    "oud": "\"Een staat die zijn basisfuncties niet minder kan vervullen: veiligheid, recht, economie\"",
+    "nieuw": "\"Een staat die failliet is verklaard door de bank\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[47]",
+    "oud": "\"Globalisering waarbij voormalige kolonies politieke onafhankelijkheid verwierven (20e eeuw)\"",
+    "nieuw": "\"Het stichten van nieuwe kolonies\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[48]",
+    "oud": "\"Militaire strategie waarbij een kwestie als existentiële bedreiging wordt geframed om bijzondere maatregelen te rechtvaardigen\"",
+    "nieuw": "\"Het beveiligen van computersystemen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "maatschappijleer.klas3[49]",
+    "oud": "\"distributief: eerlijkheid in verdeling van goederen; Commutatief: eerlijkheid in ruil/transacties\"",
+    "nieuw": "\"Commutatief: eerlijkheid in verdeling; distributief: eerlijkheid in ruil\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "biologie.klas1[0]",
+    "oud": "\"Eiwitten uitscheiden onder bepaalde omstandigheden\"",
+    "nieuw": "\"Eiwitten uitscheiden\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[2]",
+    "oud": "\"Celkern of Celwand\"",
+    "nieuw": "\"Celkern\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[4]",
+    "oud": "\"geen levende wezens én hun leefomgeving samen\"",
+    "nieuw": "\"Alleen het water en de bodem in een gebied\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[6]",
+    "oud": "\"Dieren die planten eten onder bepaalde omstandigheden\"",
+    "nieuw": "\"Dieren die planten eten\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[9]",
+    "oud": "\"Een spijsverteringsorgaan of Een zenuwstelsel\"",
+    "nieuw": "\"Een bloedvat\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[10]",
+    "oud": "\"Alles wat je eet die het lichaam energie of bouwstoffen levert\"",
+    "nieuw": "\"Alleen vitamines\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[11]",
+    "oud": "\"Alleen mechanisch, Alleen chemisch en Via bloedvaten met enzymen)\"",
+    "nieuw": "\"Via de bloedvaten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[12]",
+    "oud": "\"Hormonen aanmaken onder bepaalde omstandigheden\"",
+    "nieuw": "\"Zuurstof opnemen\"",
+    "reden": "Plaksel-staart én deels juist (nieren maken EPO/renine aan) → vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[13]",
+    "oud": "\"geen individuen van dezelfde soort in een gebied\"",
+    "nieuw": "\"Alle planten in een gebied\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[14]",
+    "oud": "\"Spiercel als uitzondering\"",
+    "nieuw": "\"Spiercel\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[15]",
+    "oud": "\"Energie opslaan of Eiwitten maken\"",
+    "nieuw": "\"Afval afbreken\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[16]",
+    "oud": "\"Concurrentie waarbij beide soorten voordeel hebben\"",
+    "nieuw": "\"Een roofdier dat een prooi eet\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[17]",
+    "oud": "\"Fotosynthese onder bepaalde omstandigheden\"",
+    "nieuw": "\"Fotosynthese\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[18]",
+    "oud": "\"Een koolhydraat onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een koolhydraat\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[19]",
+    "oud": "\"Een bewuste handeling, Een hormoon en Een hersenfunctie op een prikkel via het ruggenmerg\"",
+    "nieuw": "\"Een hormoon\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[20]",
+    "oud": "\"De lymfeknooppunten van hart en bloedvaten dat bloed door het lichaam pompt\"",
+    "nieuw": "\"Het zenuwstelsel\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[21]",
+    "oud": "\"Stevigheid, beweging, bescherming van systemen en aanmaak bloedcellen\"",
+    "nieuw": "\"Alleen stevigheid en beweging\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[22]",
+    "oud": "\"Spierweefsel onder bepaalde omstandigheden\"",
+    "nieuw": "\"Spierweefsel\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[23]",
+    "oud": "\"Een neurotransmitter onder bepaalde omstandigheden\"",
+    "nieuw": "\"Een neurotransmitter\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[24]",
+    "oud": "\"Aeroob = met waterstof, meer ATP; anaeroob = zonder zuurstof, minder ATP en melkzuur\"",
+    "nieuw": "\"Beide leveren evenveel ATP\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[25]",
+    "oud": "\"Bloed filteren (zoals nieren) onder bepaalde omstandigheden\"",
+    "nieuw": "\"Urine produceren\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[26]",
+    "oud": "\"Weefsel dat signalen geleidt of Weefsel dat organen omhult\"",
+    "nieuw": "\"Weefsel dat vet opslaat\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[27]",
+    "oud": "\"Zuurstof transporteren onder bepaalde omstandigheden\"",
+    "nieuw": "\"Zuurstof transporteren\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[28]",
+    "oud": "\"Actief transport tegen concentratieverval in of Transport via bloedvaten\"",
+    "nieuw": "\"Opname van licht door bladgroen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[29]",
+    "oud": "\"Lever onder bepaalde omstandigheden\"",
+    "nieuw": "\"Lever\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas1[30]",
+    "oud": "\"Beweging van lucht door een semipermeabel membraan naar een hogere opgeloste-stof concentratie\"",
+    "nieuw": "\"Verdamping van water uit bladeren\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[31]",
+    "oud": "\"waterstof vervoeren via hemoglobine\"",
+    "nieuw": "\"Bloedplaatjes aanmaken\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[33]",
+    "oud": "\"Hormonen aanmaken voor de groei of Bloed pompen door het lichaam\"",
+    "nieuw": "\"Gal aanmaken voor de vetvertering\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[34]",
+    "oud": "\"Een bewuste beweging via de grote hersenen waarbij het ruggenmerg de prikkel verwerkt zonder hersenactiviteit\"",
+    "nieuw": "\"Een langzame reactie die dagen duurt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[35]",
+    "oud": "\"Gasuitwisseling tussen water en bloed mogelijk maken\"",
+    "nieuw": "\"Bloed naar het hart pompen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[36]",
+    "oud": "\"Twee spieren die gelijktijdig samentrekken of Een spier en een pees die samenwerken\"",
+    "nieuw": "\"Twee spieren in verschillende ledematen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[38]",
+    "oud": "\"Insuline om vetten op te slaan of Speeksel met amylase\"",
+    "nieuw": "\"Maagzuur om vetten op te lossen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[39]",
+    "oud": "\"geen levende organismen samen met hun niet-levende omgeving als functioneel geheel\"",
+    "nieuw": "\"Een groep dieren van dezelfde soort\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[40]",
+    "oud": "\"Fotosynthese uitvoeren: lichtenergie omzetten in chemische energie (fructose)\"",
+    "nieuw": "\"Zuurstof opnemen uit de bodem\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[42]",
+    "oud": "\"Er is geen verschil in genetische variatie tussen de methoden of Aseksueel geeft meer genetische variatie dan seksueel\"",
+    "nieuw": "\"Beide vormen hebben altijd twee ouders nodig\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[44]",
+    "oud": "\"Voedsel in kleinere stukken breken met zuurstof\"",
+    "nieuw": "\"Voedsel kauwen en vermalen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[45]",
+    "oud": "\"Een netwerk van symbioses tussen soorten of Een lijst van voedselkeuzes van mensen\"",
+    "nieuw": "\"Een lijst van ingrediënten in een recept\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[46]",
+    "oud": "\"Bacteriën zijn eencellige organismen met eigen stofwisseling; virussen zijn geen weefsels en vermeerderen zich via gastheercellen\"",
+    "nieuw": "\"Bacteriën hebben een gastheercel nodig; virussen niet\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[47]",
+    "oud": "\"lucht en mineralen opnemen uit onverteerd voedsel; ontlasting vormen\"",
+    "nieuw": "\"Gal produceren en opslaan\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas1[49]",
+    "oud": "\"Er is geen functioneel verschil tussen beide strategieën of Endothermen zijn koudbloedig, ectothermen warmbloedig\"",
+    "nieuw": "\"Endothermen leven alleen in water; ectothermen op land\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[0]",
+    "oud": "\"Mutaties, Crossing-over en Eigenschappen mengen van geslachtscellen\"",
+    "nieuw": "\"Mutaties\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[1]",
+    "oud": "\"Een gemuteerd gen dat tot uiting komt ook als er slechts 1 kopie aanwezig is\"",
+    "nieuw": "\"Een allel dat alleen tot uiting komt bij 2 kopieën\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[2]",
+    "oud": "\"Reductiedeling voor geslachtscellen onder bepaalde omstandigheden\"",
+    "nieuw": "\"Reductiedeling voor geslachtscellen\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "biologie.klas3[3]",
+    "oud": "\"Mitose met mutatie die gameten vormt met de helft van het chromosoomaantal\"",
+    "nieuw": "\"Celdeling van bacteriën\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[4]",
+    "oud": "\"Twee chromosomen met genen achter dezelfde eigenschappen (één van vader, één van moeder)\"",
+    "nieuw": "\"Twee chromosomen die allebei van de vader komen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[5]",
+    "oud": "\"Aanpassing van individuen van allelefrequenties in een populatie over generaties\"",
+    "nieuw": "\"Groei van één organisme\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[6]",
+    "oud": "\"Kweekkeuze door mensen, Mutatie en Toevalsprocessen met voordelige eigenschappen\"",
+    "nieuw": "\"Mutatie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[7]",
+    "oud": "\"Een vitaminesoort, Een lipide en Een hormoon die reacties versnelt\"",
+    "nieuw": "\"Een lipide\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[8]",
+    "oud": "\"RNA is enkelstrengs en bevat uracil; rna is dubbelstrengs en bevat thymine\"",
+    "nieuw": "\"RNA is dubbelstrengs en bevat thymine; DNA is enkelstrengs en bevat uracil\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[9]",
+    "oud": "\"Evolutie, Celdeling en Groei van een stabiele inwendige toestand (o.a. temperatuur, bloedsuiker)\"",
+    "nieuw": "\"Groei\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[10]",
+    "oud": "\"Bloedsuiker verhogen, Vetafbraak en Groei stimuleren door glucoseopname te stimuleren\"",
+    "nieuw": "\"Vetafbraak\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[11]",
+    "oud": "\"Een stukje rna dat codeert voor een eiwit of functie\"",
+    "nieuw": "\"Een eiwit in de celkern\"",
+    "reden": "Afleider is dubbelzinnig: mRNA codeert óók voor een eiwit; vervangen."
+  },
+  {
+    "waar": "biologie.klas3[12]",
+    "oud": "\"Een permanente verandering in de rna-volgorde\"",
+    "nieuw": "\"Een tijdelijke verandering in de celvorm\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[13]",
+    "oud": "\"Sneller, door geheugen-B- en T-weefsels van de eerste infectie\"",
+    "nieuw": "\"Sneller, omdat het lichaam meer rode bloedcellen heeft\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[14]",
+    "oud": "\"Alleen planten aanwezig waarbij populaties schommelen rond een gemiddelde\"",
+    "nieuw": "\"Alle populaties groeien onbeperkt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[16]",
+    "oud": "\"Eiwitten aanmaken, Afval afbreken en DNA opslaan van de cel)\"",
+    "nieuw": "\"DNA opslaan\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[17]",
+    "oud": "\"endotherm = eigen temperatuurregeling; Ectotherm = lichaamstemperatuur afhankelijk van omgeving\"",
+    "nieuw": "\"Ectotherm = eigen temperatuurregeling; endotherm = afhankelijk van omgeving\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "biologie.klas3[18]",
+    "oud": "\"DNA-kopiëren waarbij genetische informatie wordt omgezet in een functioneel product (eiwit)\"",
+    "nieuw": "\"Het verdubbelen van chromosomen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[19]",
+    "oud": "\"De genetische samenstelling van een organisme of Een chromosoom\"",
+    "nieuw": "\"Een gen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[20]",
+    "oud": "\"Celdeling sturen, ATP aanmaken en DNA kopiëren van mRNA-instructies\"",
+    "nieuw": "\"ATP aanmaken\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[21]",
+    "oud": "\"Een reeks van drie basen in mRNA die codeert achter één aminozuur\"",
+    "nieuw": "\"Een reeks van drie aminozuren in een eiwit\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[22]",
+    "oud": "\"Een hybride soort van een soort met genetisch onderscheidbare kenmerken\"",
+    "nieuw": "\"Een uitgestorven soort\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[23]",
+    "oud": "\"Sensorisch en motorisch alleen in de moderne taal- en letterkunde\"",
+    "nieuw": "\"Sensorisch en motorisch alleen\"",
+    "reden": "Afleider met onzinnige staart ('in de moderne taal- en letterkunde')."
+  },
+  {
+    "waar": "biologie.klas3[24]",
+    "oud": "\"Voordelen die de natuur de mens gratis levert (schoon lucht, lucht, bestuiving)\"",
+    "nieuw": "\"Diensten die mensen aan de natuur leveren (bomen planten)\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[25]",
+    "oud": "\"RNA-pol maakt mRNA (transcriptie); rna-pol kopieert DNA (replicatie)\"",
+    "nieuw": "\"Beide enzymen maken eiwitten\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[27]",
+    "oud": "\"Een eiwit aangemaakt door B-weefsels dat antigenen bindt en neutraliseert\"",
+    "nieuw": "\"Een eiwit aangemaakt door rode bloedcellen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[28]",
+    "oud": "\"B-weefsels en cytotoxische T-cellen activeren en coördineren de immuunrespons\"",
+    "nieuw": "\"Ziekteverwekkers direct opeten (fagocytose)\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[29]",
+    "oud": "\"Primair is de eerste reactie op een antigeen; secundair is sneller en sterker door geheugen-weefsels\"",
+    "nieuw": "\"Primair is sneller en sterker; secundair is trager\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[30]",
+    "oud": "\"Een antilichaam dat via injectie passieve immuniteit geeft of Een antibioticum tegen bacteriële infecties\"",
+    "nieuw": "\"Een pijnstiller tegen koorts\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[31]",
+    "oud": "\"passief = eigen antilichamen aanmaken na blootstelling; passief = kant-en-klare antilichamen ontvangen\"",
+    "nieuw": "\"Actief = kant-en-klare antilichamen ontvangen; passief = eigen antilichamen aanmaken\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[32]",
+    "oud": "\"De scheiding van homologe chromosomen naar dochtercellen of De vorming van vier haploïde gameten\"",
+    "nieuw": "\"De vorming van vier haploïde gameten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[33]",
+    "oud": "\"Een type eiwit gecodeerd door DNA of Een mutatie in het DNA-molecuul\"",
+    "nieuw": "\"Een mutatie in het DNA-molecuul\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[34]",
+    "oud": "\"De verzameling van geen allelen van alle individuen in een populatie\"",
+    "nieuw": "\"Het aantal chromosomen van één individu\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[35]",
+    "oud": "\"Migratie van individuen tussen populaties of Gerichte selectie van gunstige allelen\"",
+    "nieuw": "\"Mutatie door straling\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[36]",
+    "oud": "\"fenotype is de waarneembare eigenschap die door genen en omgeving bepaald wordt; Genotype is de genetische samenstelling\"",
+    "nieuw": "\"Genotype wordt alleen door de omgeving bepaald; fenotype alleen door genen\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "biologie.klas3[37]",
+    "oud": "\"Een organisme dat via selectief fokken is verbeterd of Een organisme dat door mutatie is veranderd\"",
+    "nieuw": "\"Een organisme dat gekloond is\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[38]",
+    "oud": "\"RNA-streng synthetiseren complementair aan het rna-template\"",
+    "nieuw": "\"Aminozuren aan elkaar koppelen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[39]",
+    "oud": "\"De fusie van twee mRNA-moleculen tot een hybride of De duplicatie van genen op een chromosoom\"",
+    "nieuw": "\"Het verwijderen van exons uit het DNA\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[40]",
+    "oud": "\"De fusie van twee cellen tot een syncytium of Celdood door extern letsel of gifstoffen\"",
+    "nieuw": "\"Ongecontroleerde celdeling (kanker)\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[41]",
+    "oud": "\"Drie typen volwassen weefsels met dezelfde oorsprong of Drie fases van celdeling na bevruchting\"",
+    "nieuw": "\"Drie lagen van de huid\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[42]",
+    "oud": "\"Diffusie van neurotransmitters door een synaps of De absorptie van vitaminen in de dunne darm\"",
+    "nieuw": "\"Het transport van zuurstof in het bloed\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[43]",
+    "oud": "\"Ongedifferentieerde weefsels die kunnen zelfvernieuwen en uitgroeien tot gespecialiseerde celtypen\"",
+    "nieuw": "\"Cellen die alleen in planten voorkomen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[44]",
+    "oud": "\"Soortvorming door geografische isolatie van populaties of Soortvorming door migratie naar een nieuw gebied\"",
+    "nieuw": "\"Soortvorming door kruising van twee soorten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[45]",
+    "oud": "\"De theorie dat multicellulariteit meerdere malen onafhankelijk is ontstaan of De theorie dat eukaryoten zijn geëvolueerd uit archaeen door fusie\"",
+    "nieuw": "\"De theorie dat virussen de eerste levensvormen waren\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[46]",
+    "oud": "\"De populatiedichtheid van een soort in een gebied of De geografische locatie waar een soort leeft\"",
+    "nieuw": "\"Het nest of hol van een dier\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[47]",
+    "oud": "\"Twee soorten kunnen dezelfde niche tijdelijk delen zonder problemen of Predatie elimineert altijd de zwakste concurrent in een ecosysteem\"",
+    "nieuw": "\"Roofdieren eten altijd eerst de grootste prooi\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[48]",
+    "oud": "\"Accumulatie van nutriënten in planten; verdunning bij hogere trofische niveaus of Concentratie van CO2 in de atmosfeer door verbrandingsprocessen\"",
+    "nieuw": "\"Opslag van energie in vetweefsel bij winterslaap\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "biologie.klas3[49]",
+    "oud": "\"K-strategen groeien snel en produceren veel nakomelingen; r-strategen weinig of K-selectie komt voor in instabiele omgevingen; r-selectie in stabiele\"",
+    "nieuw": "\"K-strategen leven alleen op het land; r-strategen in water\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[0]",
+    "oud": "\"De export minus import van goederen en diensten geproduceerd in een land per jaar\"",
+    "nieuw": "\"De staatsschuld gedeeld door het aantal inwoners\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[1]",
+    "oud": "\"Toename van de werkloosheid of Waardestijging van de munt\"",
+    "nieuw": "\"Waardestijging van de munt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[3]",
+    "oud": "\"Geplande productie door de overheid of De staat bepaalt alle prijzen\"",
+    "nieuw": "\"Een economie zonder geld (ruilhandel)\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[4]",
+    "oud": "\"Mensen die beschikbaar zijn én passief zoeken naar betaald werk maar dat niet vinden\"",
+    "nieuw": "\"Mensen met een deeltijdbaan\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[5]",
+    "oud": "\"Winst na belasting, Loonkosten en Inkoopprijs van grondstoffen/halffabricaten\"",
+    "nieuw": "\"Loonkosten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[6]",
+    "oud": "\"Veel aanbieders op een markt of Vrije concurrentie\"",
+    "nieuw": "\"Twee aanbieders die samenwerken\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[8]",
+    "oud": "\"Begrotingen van lidstaten controleren of Handel reguleren\"",
+    "nieuw": "\"Belastingen innen in de EU\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[9]",
+    "oud": "\"Absoluut productievoordeel, Handelsoverschot en Goedkoopste productie met de laagste opportuniteitskosten relatief t.o.v. andere goederen\"",
+    "nieuw": "\"Handelsoverschot\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[10]",
+    "oud": "\"Overzicht van geen economische transacties van een land met het buitenland\"",
+    "nieuw": "\"Het saldo op de betaalrekening van de staat\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[11]",
+    "oud": "\"Economische groei > 5% onder bepaalde omstandigheden\"",
+    "nieuw": "\"Economische groei > 5%\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "economie.klas3[12]",
+    "oud": "\"Hoe sterk aanbieders reageren op prijsverandering of De omvang van de markt\"",
+    "nieuw": "\"De maximale prijs van een product\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[14]",
+    "oud": "\"Alleen rekeneenheid in de moderne taal- en letterkunde\"",
+    "nieuw": "\"Alleen rekeneenheid\"",
+    "reden": "Afleider met onzinnige staart ('in de moderne taal- en letterkunde')."
+  },
+  {
+    "waar": "economie.klas3[15]",
+    "oud": "\"Als de vrije markt alle optimale uitkomst bereikt (bijv. externe effecten, publieke goederen)\"",
+    "nieuw": "\"Als de vrije markt juist de beste uitkomst bereikt\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[16]",
+    "oud": "\"Buitenlandse investeringen van economische activiteit die bij derden terechtkomen\"",
+    "nieuw": "\"Winst die bij aandeelhouders terechtkomt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[17]",
+    "oud": "\"Volkomen concurrentie die de markt domineren en elkaars gedrag beïnvloeden\"",
+    "nieuw": "\"Veel kleine aanbieders zonder invloed op de prijs\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[18]",
+    "oud": "\"Nominaal = geldbedrag; reëel = gecorrigeerd achter inflatie (koopkracht)\"",
+    "nieuw": "\"Nominaal = na belasting; reëel = voor belasting\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[19]",
+    "oud": "\"Hogere kosten bij meer productie of Gelijke kosten ongeacht schaal\"",
+    "nieuw": "\"Lagere omzet bij grotere productie\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[20]",
+    "oud": "\"Een maatstaf achter prijsveranderingen van een mandje goederen dat consumenten kopen\"",
+    "nieuw": "\"Een lijst van de duurste producten\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[21]",
+    "oud": "\"Belastingeffect, Effect van monopolie en Rente-effect tot een grotere totale economische activiteit\"",
+    "nieuw": "\"Rente-effect\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[22]",
+    "oud": "\"Micro = individuele spelers; macro = de gehele economie (BBP, werkloosheid, deflatie)\"",
+    "nieuw": "\"Micro = de wereldeconomie; macro = één huishouden\"",
+    "reden": "Afleider is inhoudelijk óók juist (deflatie hoort bij macro) → twee goede opties."
+  },
+  {
+    "waar": "economie.klas3[23]",
+    "oud": "\"Export > import: een land verkoopt minder dan het inkoopt uit het buitenland\"",
+    "nieuw": "\"Een land heeft meer schulden dan bezittingen\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[24]",
+    "oud": "\"ontwikkeling = breder, ook welzijn en gelijkheid; Groei = toename BBP\"",
+    "nieuw": "\"Groei = ook welzijn en gelijkheid; ontwikkeling = alleen toename BBP\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "economie.klas3[26]",
+    "oud": "\"De waarde van het beste alternatief dat je opgeeft achter een keuze\"",
+    "nieuw": "\"De kosten van een gemiste kans op de beurs\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[27]",
+    "oud": "\"Een overheidsgebouw dat niet-uitsluitbaar en niet-rivaliserend is (bv. defensie, vuurtoren)\"",
+    "nieuw": "\"Een goed dat de overheid met winst verkoopt\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[28]",
+    "oud": "\"Lage werkloosheid onder bepaalde omstandigheden\"",
+    "nieuw": "\"Lage werkloosheid\"",
+    "reden": "Afleider met staart 'onder bepaalde omstandigheden'/'als uitzondering'/'in de praktijk' (plaksel); staart weg."
+  },
+  {
+    "waar": "economie.klas3[29]",
+    "oud": "\"De totale waarde van geen goederen en diensten geproduceerd in een land in een jaar\"",
+    "nieuw": "\"De totale waarde van alle bezittingen van een land\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[30]",
+    "oud": "\"De factor waarmee de belastingen moeten stijgen bij hogere overheidsuitgaven of Het aantal keren dat de geldhoeveelheid groeit door bankwezen\"",
+    "nieuw": "\"Het percentage inflatie per jaar\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[31]",
+    "oud": "\"structureel door mismatches tussen vraag en aanbod van arbeid; Conjuncturele werkloosheid is tijdelijk door economische neergang\"",
+    "nieuw": "\"Conjunctureel door mismatches op de arbeidsmarkt; structureel door tijdelijke neergang\"",
+    "reden": "Twee goede antwoorden: afleider is inhoudelijk gelijk aan het goede antwoord (alleen volgorde omgedraaid); vervangen."
+  },
+  {
+    "waar": "economie.klas3[32]",
+    "oud": "\"Belastinguitstel via staatsleningen heeft geen effect op consumptie als burgers sparen achter toekomstige belasting\"",
+    "nieuw": "\"Staatsleningen verhogen altijd de consumptie\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[34]",
+    "oud": "\"Economische effecten van klimaatverandering op exportprijzen die terechtkomen bij derden die niet bij de transactie betrokken zijn\"",
+    "nieuw": "\"Kosten die een bedrijf maakt voor export\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[35]",
+    "oud": "\"Een land kan alle goederen goedkoper produceren dan andere landen of Een land importeert alleen goederen die het zelf niet kan maken\"",
+    "nieuw": "\"Een land heeft meer grondstoffen dan andere landen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[37]",
+    "oud": "\"Een maatstaf achter inkomensongelijkheid (0 = volledige gelijkheid, 1 = maximale ongelijkheid)\"",
+    "nieuw": "\"Een maatstaf voor werkloosheid (0 = iedereen werkt, 1 = niemand werkt)\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[38]",
+    "oud": "\"De overdracht van inflatie van het ene land naar het andere of De financiering van staatsleningen via de obligatiemarkt\"",
+    "nieuw": "\"Het overmaken van geld tussen banken\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[39]",
+    "oud": "\"Het verschil tussen vraag en aanbod bij gegeven prijs of De minimumprijs waarbij vraag nul wordt\"",
+    "nieuw": "\"De prijs waarbij vraag en aanbod gelijk zijn\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[40]",
+    "oud": "\"Een situatie waarbij alle speler zijn resultaat kan verbeteren door eenzijdig van strategie te veranderen\"",
+    "nieuw": "\"Een situatie waarbij elke speler zijn resultaat kan verbeteren door eenzijdig van strategie te veranderen\"",
+    "reden": "Typefout in afleider ('alle speler')."
+  },
+  {
+    "waar": "economie.klas3[41]",
+    "oud": "\"Monetair beleid van centrale banken om inflatie te beheersen of Overheidsbeleid gericht op deregulering en privatisering\"",
+    "nieuw": "\"Beleid om de overheidsuitgaven altijd te verlagen\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[42]",
+    "oud": "\"Beleid gericht op vraagstimulering via overheidsuitgaven of De studie van prijsvorming op aanbodzijde van de markt\"",
+    "nieuw": "\"Beleid om de lonen te verhogen via de vakbond\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[43]",
+    "oud": "\"Het onvermogen van de overheid om belasting te innen of Een begroting die structureel in tekort is\"",
+    "nieuw": "\"Het verlies van een verkiezing door de regering\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[44]",
+    "oud": "\"Wisselkoers is de prijs van een valuta in een andere valuta; depreciatie maakt export goedkoper achter buitenlanders\"",
+    "nieuw": "\"Wisselkoers is de rente op spaargeld; depreciatie maakt export duurder\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[45]",
+    "oud": "\"Nominaal BBP meet in lopende prijzen; reëel BBP corrigeert achter prijsstijgingen door constante basisprijzen te gebruiken\"",
+    "nieuw": "\"Nominaal BBP corrigeert voor inflatie; reëel BBP niet\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[47]",
+    "oud": "\"Mededingingsbeleid via anti-kartelmaatregelen of Monetair beleid van de centrale bank\"",
+    "nieuw": "\"Beleid om de wisselkoers vast te zetten\"",
+    "reden": "Afleider is onleesbaar plaksel ('X of Y' / opsomming + staart van het goede antwoord); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[48]",
+    "oud": "\"Het overzicht van geen economische transacties tussen een land en de rest van de wereld\"",
+    "nieuw": "\"Het overzicht van alle belastinginkomsten van een land\"",
+    "reden": "Afleider is garbled bijna-kopie van het goede antwoord (één woord vervangen/verkeerd); vervangen door echte afleider."
+  },
+  {
+    "waar": "economie.klas3[49]",
+    "oud": "\"Wanneer een partij bij een transactie minder informatie heeft dan de andere partij\"",
+    "nieuw": "\"Wanneer beide partijen precies dezelfde informatie hebben\"",
+    "reden": "Afleider is inhoudelijk óók juist (asymmetrie = de ene partij heeft minder dan de andere) → twee goede opties."
+  }
+]
