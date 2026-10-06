@@ -97,9 +97,9 @@ const steps = [
     checks: [
       {
         q: "**'small'** in vergrotende trap?",
-        options: ["smaller", "smallest", "more small", "smaller than"],
+        options: ["smaller", "smallest", "more small", "more smaller"],
         answer: 0,
-        wrongHints: [null, "Overtreffend.", "Niet voor kort woord.", "Klopt maar zonder 'than'."],
+        wrongHints: [null, "Overtreffend.", "Niet voor kort woord.", "Dubbel: óf 'more' óf '-er', nooit allebei."],
       },
       {
         q: "**'cheap'** in overtreffende trap?",
