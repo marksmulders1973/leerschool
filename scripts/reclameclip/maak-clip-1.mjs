@@ -190,8 +190,12 @@ const V1 = {
       font-size:64px;font-weight:700">${o}</div>`).join("")}
     <div id="tik" style="position:absolute;left:780px;top:1060px;width:120px;height:120px;margin:-60px 0 0 -60px;border-radius:50%;
       border:8px solid #fff"></div>
+    <div id="kruis" style="position:absolute;left:560px;top:980px;width:440px;height:160px;display:flex;align-items:center;justify-content:flex-end;
+      padding-right:26px;font-size:88px;font-weight:700;color:var(--oranje)">✗</div>
+    <div id="vink" style="position:absolute;left:80px;top:980px;width:440px;height:160px;display:flex;align-items:center;justify-content:flex-end;
+      padding-right:26px;font-size:88px;font-weight:700;color:var(--navy)">✓</div>
     <div id="a-hint" class="abs c" style="top:1370px;font-size:44px;color:var(--oranje);font-weight:700;padding:0 80px">
-      Dat is de korting. Hoeveel betaal je?</div>
+      € 20 is de korting, niet wat je betaalt.</div>
   </div>
   <div id="b" class="abs" style="top:0;bottom:0">
     <div id="b-kop" class="abs c" style="top:410px;font-size:44px;color:var(--zacht)">€&nbsp;80 · 25% korting · hoeveel betaal je?</div>
@@ -218,29 +222,35 @@ const V1 = {
   render: `
   const eo=eindkaart(t,15.5);
   zet('minilogo',1-eo);
-  const A=1-inF(t,6.0,.6);
+  const A=1-inF(t,6.6,.6);
   zet('a',A);
   zet('a-pil',inF(t,0,.5),30);
   zet('a-vraag',inF(t,.1,.6),50);
   for(let i=0;i<4;i++) zet('opt'+i,inF(t,1.3+i*.35,.5),40);
-  // tik op € 20 (fout) op 3.6 s
+  // tik op € 20 (fout) op 3.6 s → rood + kruis; op 5.2 s licht € 60 groen op met vinkje
+  // (Mark 6 okt: in 20 s leek de korting het antwoord — fout en goed nu allebei zichtbaar)
   const tk=tussen(t,3.4,4.3,.25); const tikEl=$('tik'); tikEl.style.opacity=tk*.9;
   tikEl.style.transform='scale('+(0.6+0.6*cl((t-3.4)/.9))+')';
   const fout=inF(t,3.75,.3); const o1=$('opt1');
   o1.style.background='rgb('+Math.round(18+(140-18)*fout)+','+Math.round(52+(70-52)*fout)+','+Math.round(87+(40-87)*fout)+')';
   o1.style.borderColor=fout>.5?'var(--oranje)':'rgba(255,255,255,.18)';
+  zet('kruis',inF(t,3.95,.3),0,0.8+0.2*cl((t-3.95)/.3));
   zet('a-hint',inF(t,4.1,.5),20);
-  zet('b',inF(t,6.2,.6)*(1-eo));
-  zet('b-kop',inF(t,6.3,.6),20); zet('b-titel',inF(t,6.5,.6),20);
-  for(let i=0;i<3;i++) zet('stap'+i,inF(t,7.2+i*2.0,.6),50);
-  zet('b-goed',inF(t,13.3,.6),30,1+.04*Math.sin(cl((t-13.3)/1.2)*Math.PI));
+  const goed=inF(t,5.2,.4); const o0=$('opt0');
+  o0.style.background=goed>.5?'var(--lime)':'var(--navy2)'; o0.style.color=goed>.5?'var(--navy)':'#fff';
+  o0.style.borderColor=goed>.5?'var(--lime)':'rgba(255,255,255,.18)';
+  zet('vink',goed,0,0.8+0.2*cl((t-5.2)/.4));
+  zet('b',inF(t,6.8,.6)*(1-eo));
+  zet('b-kop',inF(t,6.9,.6),20); zet('b-titel',inF(t,7.1,.6),20);
+  for(let i=0;i<3;i++) zet('stap'+i,inF(t,7.7+i*1.9,.6),50);
+  zet('b-goed',inF(t,13.5,.6),30,1+.04*Math.sin(cl((t-13.5)/1.2)*Math.PI));
   `,
 };
 
 // ── V2 "Ouder" ──
 const KLOK_R = 300;
 const V2 = {
-  id: "v2", naam: "Ouder", eindStart: 15.5,
+  id: "v2", naam: "Ouder", eindStart: 14.0,
   html: `${MINILOGO}
   <div id="a" class="abs" style="top:0;bottom:0">
     <div id="r0" class="abs c" style="top:520px;font-size:76px;line-height:1.25;padding:0 80px">Oefenboeken kosten<br><b>€&nbsp;30</b>.</div>
@@ -267,20 +277,19 @@ const V2 = {
   </div>
   ${EIND_HTML}`,
   render: `
-  const eo=eindkaart(t,15.5);
+  // Mark 6 okt: de kaarten over oefenboeken/bijles eruit ("mooi vanaf de klok") → de klok opent de clip.
+  const eo=eindkaart(t,14.0);
   zet('minilogo',1-eo);
-  zet('a',1-inF(t,8.6,.6));
-  zet('r0',inF(t,0,.6),50); zet('r1',inF(t,3.1,.7),50);
-  zet('r2',inF(t,5.9,.7),50,1+.03*Math.sin(cl((t-5.9)/1.4)*Math.PI));
-  zet('k',inF(t,9.0,.6)*(1-eo));
-  zet('k-kop',inF(t,9.1,.6),30);
-  const f=ease((t-9.8)/4.0);             // 0 → 1 = 0 → 15 minuten
+  zet('a',0);
+  zet('k',inF(t,0,.6)*(1-eo));
+  zet('k-kop',inF(t,.2,.6),30);
+  const f=ease((t-1.4)/8.0);             // 0 → 1 = 0 → 15 minuten, rustig over 8 s
   const hoek=f*Math.PI/2, r=${KLOK_R - 10};
   const x=r*Math.sin(hoek), y=-r*Math.cos(hoek);
   $('taart').setAttribute('d', f<=0.0001 ? '' : 'M0 0 L0 '+(-r)+' A'+r+' '+r+' 0 0 1 '+x.toFixed(2)+' '+y.toFixed(2)+' Z');
   $('wijzer').setAttribute('transform','rotate('+(f*90).toFixed(3)+')');
-  zet('k-min',inF(t,9.4,.5),20); $('k-min').textContent=Math.round(f*15)+' minuten';
-  zet('k-klaar',inF(t,14.0,.6),20);
+  zet('k-min',inF(t,1.0,.5),20); $('k-min').textContent=Math.round(f*15)+' minuten';
+  zet('k-klaar',inF(t,10.2,.6),20);
   `,
 };
 
