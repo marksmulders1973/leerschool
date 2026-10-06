@@ -1,0 +1,62 @@
+{
+  "packageId": "app.leerkwartier.twa",
+  "host": "leerkwartier.app",
+  "name": "Leerkwartier",
+  "launcherName": "Leerkwartier",
+  "display": "standalone",
+  "orientation": "portrait",
+  "themeColor": "#00C853",
+  "themeColorDark": "#00C853",
+  "navigationColor": "#00C853",
+  "navigationColorDark": "#00C853",
+  "navigationDividerColor": "#00000000",
+  "navigationDividerColorDark": "#00000000",
+  "backgroundColor": "#0A1220",
+  "enableNotifications": false,
+  "startUrl": "/",
+  "iconUrl": "https://leerkwartier.app/icons/icon-512-v3.png",
+  "maskableIconUrl": "https://leerkwartier.app/icons/icon-maskable-512-v4.png",
+  "splashScreenFadeOutDuration": 300,
+  "signingKey": {
+    "path": "./GEEN-SLEUTEL-HIER-signeer-lokaal.keystore",
+    "alias": "leerkwartier"
+  },
+  "appVersionName": "1.0.0",
+  "appVersion": "1.0.0",
+  "appVersionCode": 1,
+  "shortcuts": [
+    {
+      "name": "Mijn pagina",
+      "shortName": "Mijn pagina",
+      "url": "/mijn",
+      "chosenIconUrl": "https://leerkwartier.app/icons/icon-192-v3.png"
+    },
+    {
+      "name": "Vandaag",
+      "shortName": "Vandaag",
+      "url": "/vandaag",
+      "chosenIconUrl": "https://leerkwartier.app/icons/icon-192-v3.png"
+    },
+    {
+      "name": "Nieuwkomers",
+      "shortName": "Nieuwkomers",
+      "url": "/nieuwkomers",
+      "chosenIconUrl": "https://leerkwartier.app/icons/icon-192-v3.png"
+    }
+  ],
+  "generatorApp": "bubblewrap-cli",
+  "webManifestUrl": "https://leerkwartier.app/manifest.json",
+  "fallbackType": "customtabs",
+  "features": {},
+  "alphaDependencies": {
+    "enabled": false
+  },
+  "enableSiteSettingsShortcut": true,
+  "isChromeOSOnly": false,
+  "isMetaQuest": false,
+  "fullScopeUrl": "https://leerkwartier.app/",
+  "minSdkVersion": 21,
+  "fingerprints": [],
+  "additionalTrustedOrigins": [],
+  "retainedBundles": []
+}

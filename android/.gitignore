@@ -1,0 +1,15 @@
+# Bouw-uitvoer en caches
+build/
+app/build/
+.gradle/
+local.properties
+*.iml
+.idea/
+# Sleutels horen NOOIT in git — de maker signeert lokaal
+*.jks
+*.keystore
+*.p12
+*.pem
+keystore.properties
+# Gesigneerde uitvoer niet committen
+uit/*-signed.*
