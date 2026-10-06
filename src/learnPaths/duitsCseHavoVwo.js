@@ -136,7 +136,7 @@ const steps = [
         q: "Voorzetsel **für** vraagt:",
         options: ["Akkusativ","Dativ","Genitiv","Geen naamval"],
         answer: 0,
-        wrongHints: [null, "Niet — vaste Akk.", "Niet — vaste Akk.", "Wel naamval."],
+        wrongHints: [null, "Niet — für hoort bij het rijtje voorzetsels met één vaste naamval. Welke?", "Niet — für staat niet in het Dativ-rijtje (aus, bei, mit, nach, seit, von, zu).", "Wel naamval."],
         uitlegPad: {
           stappen: [{ titel: "FUDGOB-Akkusativ-set", tekst: "**Für, durch, gegen, ohne, um, bis** vragen altijd Akkusativ. Memo: *für **mich***, *ohne **dich***, *gegen **ihn***. Geen wisseling met beweging/plaats." }],
           niveaus: { basis: "Akkusativ.", simpeler: "für = Akk", nogSimpeler: "Akk" },

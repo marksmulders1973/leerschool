@@ -1,0 +1,9 @@
+[
+{"waar":"taal.groep12[47]","oud":"explanation: \"Een olifant is het grootste dier.\"","nieuw":"explanation: \"Van deze vier dieren is de olifant het grootst.\"","reden":"feitfout in uitleg: de olifant is niet het grootste dier (blauwe vinvis)"},
+{"waar":"natuur.groep5[46]","oud":"\"Botten zijn van eiwit; kraakbeen van vet of Kraakbeen zit alleen in het hoofd\"","nieuw":"\"Kraakbeen zit alleen in het hoofd\"","reden":"plaksel-afleider X of Y"},
+{"waar":"cito.groep8 (Donau)","oud":"\"Elbe of Oder\"","nieuw":"\"Elbe\"","reden":"plaksel-afleider X of Y"},
+{"waar":"cito.groep8 (apartheid)","oud":"\"Een juridisch systeem, Een economisch systeem en Een politiek systeem waarbij mensen gescheiden werden op basis van huidskleur\"","nieuw":"\"Een democratisch systeem waarin iedereen gelijke rechten had\"","reden":"plaksel-afleider A, B en C + staart (bijna-kopie goede antwoord)"},
+{"waar":"cito.groep8 (exotische soort)","oud":"\"Een zeldzame inheemse soort die buiten zijn oorspronkelijk leefgebied terechtkomt door menselijk handelen\"","nieuw":"\"Een soort die alleen in tropische landen leeft\"","reden":"plaksel-afleider (bijna-kopie goede antwoord)"},
+{"waar":"cito.groep8 (Einsatzgruppen)","oud":"\"Spionage-eenheden die Joden en anderen massaal vermoordden in bezet gebied\"","nieuw":"\"Eenheden die gewonde soldaten verzorgden\"","reden":"plaksel-afleider (bijna-kopie goede antwoord)"},
+{"waar":"cito.groep8-gemengd (tijdzones)","oud":"q: \"Welk land heeft de meeste tijdzones?\"","nieuw":"q: \"Welk van deze landen heeft de meeste tijdzones?\"","reden":"feitelijk onjuist zoals gesteld: Frankrijk (met overzeese gebieden, 12) heeft er meer dan Rusland (11)"}
+]
