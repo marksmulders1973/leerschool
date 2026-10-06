@@ -56,7 +56,7 @@ const steps = [
         q: "Welke tekst is een **uiteenzetting**?",
         options: ["Wikipedia-artikel over fotosynthese","Opinie-stuk over euthanasie","Verkiezings-toespraak","Roman-fragment"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is beschouwing.", "Niet — dat is betoog.", "Niet — dat is verhaal/literatuur."],
+        wrongHints: [null, "Niet — een opiniestuk geeft een mening of een afweging.", "Niet — dat is betoog.", "Niet — dat is verhaal/literatuur."],
         uitlegPad: {
           stappen: [{ titel: "Wikipedia = informeren", tekst: "**Uiteenzetting** = informatieve tekst zonder mening. Wikipedia-artikelen, schoolboek-paragrafen, instructies horen hier. Doel: **kennis overdragen**." }],
           theorie: "Toets-truc: titel 'Wat is X?' of 'Hoe werkt Y?' → uiteenzetting.",
@@ -106,13 +106,13 @@ const steps = [
       },
       {
         q: "Welke is de **sterkste stelling** voor een betoog?",
-        options: ["'Vanaf groep 8 moet schooladvies door de leerling zelf gegeven worden'","'School is belangrijk'","'Het is hier warm'","'Misschien moeten kinderen leren'"],
+        options: ["'Vanaf groep 8 moet schooladvies door de leerling zelf gegeven worden'","'School is voor iedereen heel erg belangrijk'","'Het is vandaag in het klaslokaal erg warm'","'Misschien moeten kinderen op school meer dingen leren'"],
         answer: 0,
         wrongHints: [null, "Niet — niet discussieerbaar.", "Niet — geen meningsstelling.", "Niet — te vaag."],
         uitlegPad: {
-          stappen: [{ titel: "Concreet + discussieerbaar", tekst: "Goede stelling = specifiek (welke groep, welke actie) + discussieerbaar (mensen kunnen oneens zijn) + niet vanzelfsprekend. Eerste optie scoort op alle 3." }],
+          stappen: [{ titel: "Concreet + discussieerbaar", tekst: "Goede stelling = specifiek (welke groep, welke actie) + discussieerbaar (mensen kunnen oneens zijn) + niet vanzelfsprekend. De stelling over het schooladvies scoort op alle 3." }],
           theorie: "Toets-patroon: vermijd 'is belangrijk' (te vaag), 'wel/niet doen' zonder context, of vanzelfsprekendheden.",
-          niveaus: { basis: "Eerste optie.", simpeler: "Concreet + discussieerbaar", nogSimpeler: "Eerste" },
+          niveaus: { basis: "De stelling over het schooladvies.", simpeler: "Concreet + discussieerbaar", nogSimpeler: "Schooladvies" },
         },
       },
       {
@@ -201,13 +201,13 @@ const steps = [
       },
       {
         q: "Welk argument is het **sterkst** voor 'sport is goed'?",
-        options: ["WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen","Iedereen weet dat sporten goed is","Mijn vader zegt het","Sport is leuk"],
+        options: ["WHO-onderzoek toont 30% minder hart- en vaatziekten bij actieve mensen","Iedereen weet toch allang dat sporten goed is","Mijn vader zegt het en die sport elke dag","Sport is gewoon heel erg leuk om te doen"],
         answer: 0,
         wrongHints: [null, "Niet — generalisatie zonder bewijs.", "Niet — autoriteit zonder relevantie.", "Te vaag + alleen emotie."],
         uitlegPad: {
           stappen: [{ titel: "Feit-argument > rest", tekst: "**WHO-onderzoek + getallen** = feit-argument. Concreet, controleerbaar, bewezen. Andere opties zijn drogredenen (generalisatie / autoriteit / emotie)." }],
           theorie: "Toets-patroon: bij meerkeuze-vraag 'sterkste argument' → kies optie met BRON + CIJFERS / onderzoek.",
-          niveaus: { basis: "Eerste optie.", simpeler: "Onderzoek + cijfers = sterk", nogSimpeler: "Eerste" },
+          niveaus: { basis: "Het WHO-onderzoek.", simpeler: "Onderzoek + cijfers = sterk", nogSimpeler: "Onderzoek" },
         },
       },
     ],
@@ -243,7 +243,7 @@ const steps = [
       },
       {
         q: "Wat is een **understatement**?",
-        options: ["Bewust afzwakken (verzachten)","Bewust overdrijven","Vraag stellen","Beeldspraak"],
+        options: ["Bewust afzwakken","Bewust overdrijven","Vraag stellen","Beeldspraak"],
         answer: 0,
         wrongHints: [null, "Niet — dat is hyperbool.", "Niet — dat is retorische vraag.", "Niet — dat is metafoor."],
         uitlegPad: {
@@ -265,7 +265,7 @@ const steps = [
       },
       {
         q: "*'Vrijheid, gelijkheid, broederschap.'* — welk stijlmiddel?",
-        options: ["Drieslag (tricolon)","Anafoor","Climax","Antithese"],
+        options: ["Drieslag","Anafoor","Climax","Antithese"],
         answer: 0,
         wrongHints: [null, "Bijna — anafoor is herhaling, hier 3 verschillende woorden.", "Bijna — climax stijgt in intensiteit.", "Niet — antithese is tegenstelling."],
         uitlegPad: {
@@ -287,7 +287,7 @@ const steps = [
         q: "*'Alle moderne muziek is vreselijk, want dat zegt mijn opa.'* — drogreden:",
         options: ["Autoriteits-misbruik + generalisatie","Vals dilemma","Stroman","Goed argument"],
         answer: 0,
-        wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen verdraaiing.", "Niet — twee drogredenen tegelijk."],
+        wrongHints: [null, "Niet — geen of-of-keuze.", "Niet — geen verdraaiing.", "Niet — zou jij dit als bewijs accepteren?"],
         uitlegPad: {
           stappen: [{ titel: "Dubbel: opa + alle", tekst: "**Twee drogredenen**: (1) opa is geen muziek-expert → autoriteits-misbruik. (2) 'Alle moderne muziek' → generalisatie. Combinatie maakt argument extra zwak." }],
           niveaus: { basis: "Autoriteit + generalisatie.", simpeler: "Opa + alle = twee drogredenen", nogSimpeler: "Drogreden" },

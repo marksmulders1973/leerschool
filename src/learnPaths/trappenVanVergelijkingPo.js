@@ -351,12 +351,12 @@ const steps = [
         q: "Bij welke zin hoort de overtreffende trap?",
         options: [
           "Dit is de langste straat van de stad.",
-          "De Keizersgracht is langer dan de Prinsengracht.",
+          "Deze straat is langer dan die straat.",
           "De straat is lang.",
           "Die straat is bijna even lang.",
         ],
         answer: 0,
-        wrongHints: [null, "Dat is een vergelijking van twee dingen → vergrotende trap.", "Dat is de stellende trap.", "Dat is geen trap van vergelijking."],
+        wrongHints: [null, "Dat is een vergelijking van twee dingen → vergrotende trap.", "Dat is de stellende trap.", "Hier staat de gewone vorm 'lang' — is iets het meest van allemaal?"],
         uitlegPad: {
           stappen: [{ titel: "'de …ste van' = overtreffend", tekst: "'De langste straat van de stad' — dat is het meest van allemaal → overtreffende trap." }],
           niveaus: {

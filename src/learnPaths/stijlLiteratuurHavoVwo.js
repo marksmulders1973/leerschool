@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Stijlfiguren — figuurlijk taalgebruik herkennen",
     explanation:
-      "**Stijlfiguur** = bewuste afwijking van letterlijke taal voor effect.\n\n**Belangrijkste types**:\n\n**Beeldspraak**:\n• **Vergelijking**: 'haar ogen zijn ALS sterren'. Met signaalwoord (als, lijkt, gelijk).\n• **Metafoor**: 'haar ogen zijn sterren'. Zonder signaalwoord — beeld vervangt zaak.\n• **Personificatie**: levenloos krijgt menselijke eigenschap. 'De zon LACHTE'.\n• **Synesthesie**: zintuigen door elkaar. 'EEN ZOETE klank', 'EEN WARME kleur'.\n\n**Klankfiguren**:\n• **Alliteratie**: zelfde beginklank — 'wonderlijke wereld'.\n• **Assonantie**: zelfde klinker — 'ik dwaal door donk're dalen'.\n• **Onomatopee** (klanknabootsing): 'kwaak', 'tikketak'.\n\n**Herhaling**:\n• **Anafoor**: zelfde woorden aan begin van regels.\n• **Refrein**: terugkerende regel/strofe.\n• **Climax**: opbouwende reeks van zwakker naar sterker. 'Ik kwam, ik zag, ik overwon.'\n• **Tautologie**: dubbel — 'enkel en alleen'.\n• **Pleonasme**: overbodige versterking — 'witte sneeuw'.\n\n**Contrast**:\n• **Antithese**: tegenstellingen samen — 'rijk en arm', 'leven en dood'.\n• **Paradox**: schijnbare tegenstrijdigheid — 'ik weet dat ik niets weet' (Socrates).\n• **Oxymoron**: contrast in 2 woorden — 'oorverdovende stilte'.\n\n**Vertekening**:\n• **Hyperbool**: overdrijving — 'ik heb het wel duizend keer gezegd'.\n• **Eufemisme**: verzachting — 'heengaan' voor sterven.\n• **Litotes**: dubbel-ontkenning of zachte uitdrukking — 'niet slecht' = goed.\n• **Understatement**: kleinmaken voor effect — 'het regent een beetje' (= plenst).\n• **Ironie**: bedoelt tegenovergestelde van wat je zegt.\n• **Sarcasme**: ironie met agressieve toon.\n\n**Beeldend**:\n• **Metonymia**: woord vervangen door verwant — 'het Witte Huis besluit' (= president). 'Ik drink een glas' (= inhoud, niet glas zelf).\n• **Synecdoche** (vorm metonymia): deel staat voor geheel of omgekeerd — 'er staat geen ziel op straat' (= mens), '10 monden te voeden' (= mensen).\n• **Retorische vraag**: vraag zonder antwoord-verwachting — 'wie zou dat niet willen?'.\n\n**Examen-tip**: bij de vraag 'welke stijlfiguur?' altijd 2 dingen doen:\n1. Letterlijk lezen — wat staat er?\n2. Welke afwijking van letterlijk → welk type?",
+      "**Stijlfiguur** = bewuste afwijking van letterlijke taal voor effect.\n\n**Belangrijkste types**:\n\n**Beeldspraak**:\n• **Vergelijking**: 'haar ogen zijn ALS sterren'. Met signaalwoord (als, lijkt, gelijk).\n• **Metafoor**: 'haar ogen zijn sterren'. Zonder signaalwoord — beeld vervangt zaak.\n• **Personificatie**: levenloos krijgt menselijke eigenschap. 'De zon LACHTE'.\n• **Synesthesie**: zintuigen door elkaar. 'EEN ZOETE klank', 'EEN WARME kleur'.\n\n**Klankfiguren**:\n• **Alliteratie**: zelfde beginklank — 'wonderlijke wereld'.\n• **Assonantie**: zelfde klinker — 'zwaar en traag gaan de paarden'.\n• **Onomatopee** (klanknabootsing): 'kwaak', 'tikketak'.\n\n**Herhaling**:\n• **Anafoor**: zelfde woorden aan begin van regels.\n• **Refrein**: terugkerende regel/strofe.\n• **Climax**: opbouwende reeks van zwakker naar sterker. 'Ik kwam, ik zag, ik overwon.'\n• **Tautologie**: dubbel — 'enkel en alleen'.\n• **Pleonasme**: overbodige versterking — 'witte sneeuw'.\n\n**Contrast**:\n• **Antithese**: tegenstellingen samen — 'rijk en arm', 'leven en dood'.\n• **Paradox**: schijnbare tegenstrijdigheid — 'ik weet dat ik niets weet' (Socrates).\n• **Oxymoron**: contrast in 2 woorden — 'oorverdovende stilte'.\n\n**Vertekening**:\n• **Hyperbool**: overdrijving — 'ik heb het wel duizend keer gezegd'.\n• **Eufemisme**: verzachting — 'heengaan' voor sterven.\n• **Litotes**: dubbel-ontkenning of zachte uitdrukking — 'niet slecht' = goed.\n• **Understatement**: kleinmaken voor effect — 'het regent een beetje' (= plenst).\n• **Ironie**: bedoelt tegenovergestelde van wat je zegt.\n• **Sarcasme**: ironie met agressieve toon.\n\n**Beeldend**:\n• **Metonymia**: woord vervangen door verwant — 'het Witte Huis besluit' (= president). 'Ik drink een glas' (= inhoud, niet glas zelf).\n• **Synecdoche** (vorm metonymia): deel staat voor geheel of omgekeerd — 'er staat geen ziel op straat' (= mens), '10 monden te voeden' (= mensen).\n• **Retorische vraag**: vraag zonder antwoord-verwachting — 'wie zou dat niet willen?'.\n\n**Examen-tip**: bij de vraag 'welke stijlfiguur?' altijd 2 dingen doen:\n1. Letterlijk lezen — wat staat er?\n2. Welke afwijking van letterlijk → welk type?",
     checks: [
       {
         q: "'De wind FLUISTERDE door de bomen.' Welke stijlfiguur?",
@@ -27,7 +27,7 @@ const steps = [
         wrongHints: [null, "Niet — geen beeld-vervanging.", "Niet — niet overdreven.", "Niet — geen herhaling beginklank."],
         uitlegPad: {
           stappen: [{ titel: "Levenloos = menselijk", tekst: "De wind kan niet écht fluisteren (alleen levende wezens kunnen dat). Levenloos voorwerp (wind) krijgt menselijke eigenschap (fluisteren) → **personificatie**. Onderscheid van metafoor: bij metafoor zou wind iets ANDERS zijn, niet menselijk doen." }],
-          niveaus: { basis: "Personificatie.", simpeler: "Wind doet menselijk = personificatie.", nogSimpeler: "Person." },
+          niveaus: { basis: "Personificatie.", simpeler: "Wind doet menselijk = personificatie.", nogSimpeler: "Personificatie" },
         },
       },
       {
@@ -37,7 +37,7 @@ const steps = [
         wrongHints: [null, "Niet — geen 'als'.", "Wordt hier vooral iets overdreven, of wordt de ene zaak door een beeld vervangen?", "Niet — tanden niet menselijk gemaakt."],
         uitlegPad: {
           stappen: [{ titel: "Geen signaalwoord = metafoor", tekst: "Bij **vergelijking**: 'haar tanden zijn ALS parels' (met als/gelijk/zoals). Bij **metafoor**: 'haar tanden ZIJN parels' (zonder signaalwoord — beeld vervangt zaak direct). Sterk beeld + compact." }],
-          niveaus: { basis: "Metafoor.", simpeler: "Geen 'als' = metafoor.", nogSimpeler: "Meta" },
+          niveaus: { basis: "Metafoor.", simpeler: "Geen 'als' = metafoor.", nogSimpeler: "Metafoor" },
         },
       },
       {
@@ -83,7 +83,7 @@ const steps = [
     checks: [
       {
         q: "**Van den Vos Reynaerde** komt uit welke periode?",
-        options: ["Middeleeuwen (~1260)", "Renaissance", "Romantiek", "20e eeuw"],
+        options: ["Middeleeuwen", "Renaissance", "Romantiek", "20e eeuw"],
         answer: 0,
         wrongHints: [null, "Niet — al ver vóór.", "Veel later.", "Veel later."],
         uitlegPad: {
@@ -93,7 +93,7 @@ const steps = [
       },
       {
         q: "**Max Havelaar** is geschreven door:",
-        options: ["Multatuli (Douwes Dekker)", "Vondel", "Mulisch", "Reve"],
+        options: ["Multatuli", "Vondel", "Mulisch", "Reve"],
         answer: 0,
         wrongHints: [null, "Niet — eerder.", "Niet — naoorlogs.", "Niet — naoorlogs."],
         uitlegPad: {
@@ -107,7 +107,7 @@ const steps = [
       {
         q: "**Tachtigers** (1880s) waren bekend om:",
         options: [
-          "'Vorm is inhoud' — kunst om de kunst",
+          "Kunst om de kunst",
           "Politieke pamfletten",
           "Religieuze poëzie",
           "Wetenschap"
@@ -140,7 +140,7 @@ const steps = [
       },
       {
         q: "**Gysbreght van Aemstel** is van:",
-        options: ["Vondel (Renaissance, 1637)", "Bredero", "Hooft", "Bilderdijk"],
+        options: ["Vondel", "Bredero", "Hooft", "Bilderdijk"],
         answer: 0,
         wrongHints: [null, "Niet — Bredero meer komedie.", "Niet — Hooft sonnetten + historiografie.", "Niet — later."],
         uitlegPad: {
@@ -172,10 +172,10 @@ const steps = [
       {
         q: "Wat is **personaal perspectief**?",
         options: [
-          "3e persoon verteller die binnen één hoofdpersonage blijft",
-          "1e persoon ('ik')",
-          "Alwetende verteller",
-          "Geen verteller"
+          "Hij/zij-verteller vanuit één personage",
+          "Ik-verteller (1e persoon)",
+          "Hij/zij-verteller die alles weet",
+          "Geen verteller, alleen dialoog"
         ],
         answer: 0,
         wrongHints: [null, "Niet — dat is ik-perspectief.", "Niet — dat is auctoriaal.", "Niet — er is wel verteller."],
@@ -205,13 +205,13 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is sonnet.", "Niet — geen vaste lengte.", "Wel onderwerp."],
         uitlegPad: {
-          stappen: [{ titel: "Vrijheid in vorm", tekst: "Moderne poëzie sinds eind 19e eeuw: niet langer gebonden aan klassieke metriek. Whitman ('Leaves of Grass' 1855) pionier. Ritme komt uit zin-bouw + adempauze, niet uit voorgeschreven jamben." }],
+          stappen: [{ titel: "Vrijheid in vorm", tekst: "Moderne poëzie sinds de 19e eeuw: niet langer gebonden aan klassieke metriek. Whitman ('Leaves of Grass' 1855) pionier. Ritme komt uit zin-bouw + adempauze, niet uit voorgeschreven jamben." }],
           niveaus: { basis: "Geen vaste vorm.", simpeler: "Geen rijm-regel.", nogSimpeler: "Vrij" },
         },
       },
       {
         q: "Welke versvoet is **jambe**?",
-        options: ["Kort-Lang (ta-DAH)", "Lang-Kort", "Kort-Kort-Lang", "Lang-Lang"],
+        options: ["Kort-Lang", "Lang-Kort", "Kort-Kort-Lang", "Lang-Lang"],
         answer: 0,
         wrongHints: [null, "Niet — dat is trochee.", "Niet — dat is anapest.", "Niet — meestal niet 'lang-lang'."],
         uitlegPad: {
@@ -231,7 +231,7 @@ const steps = [
       {
         q: "Wat is het **thema** van een verhaal?",
         options: [
-          "De universele gedachte/idee (bv. liefde, dood, identiteit)",
+          "De centrale gedachte of het hoofdidee",
           "De plotsamenvatting",
           "De hoofdpersoon",
           "De plaats van handeling"
@@ -248,11 +248,11 @@ const steps = [
         options: [
           "Via daden/dialoog laten zien wat personage is",
           "Verteller zegt direct wat personage is",
-          "Personage karakteriseert zichzelf",
+          "Een samenvatting van wat het personage meemaakt",
           "Lezer bedenkt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is direct.", "Niet specifiek — kan ook indirect.", "Niet — auteur geeft signalen."],
+        wrongHints: [null, "Niet — dat is direct.", "Niet — dat is de plot, geen karakterisering.", "Niet — auteur geeft signalen."],
         uitlegPad: {
           stappen: [{ titel: "'Show don't tell'", tekst: "Krachtiger dan direct: lezer trekt zelf conclusie uit handelingen. 'Jan pakt het laatste stuk taart zonder vragen' → wij snappen: egoïstisch. Meer literair dan: 'Jan was een egoïst'." }],
           niveaus: { basis: "Via daden.", simpeler: "Tonen, niet zeggen.", nogSimpeler: "Tonen" },
@@ -261,7 +261,7 @@ const steps = [
       {
         q: "**Vertelde tijd** is:",
         options: [
-          "Hoeveel tijd er in het verhaal verloopt (bv. 1 dag, 20 jaar)",
+          "Hoeveel tijd er in het verhaal verloopt",
           "Hoeveel pagina's er zijn",
           "Wanneer het boek geschreven is",
           "Hoe lang lezer over boek doet"
@@ -278,7 +278,7 @@ const steps = [
       {
         q: "Een **rond personage** is:",
         options: [
-          "Complex, ontwikkelt zich, meerdere eigenschappen",
+          "Complex en ontwikkelt zich",
           "Eén dominante eigenschap",
           "Bijfiguur",
           "Antagonist"
@@ -293,7 +293,7 @@ const steps = [
       {
         q: "**Raamvertelling** is:",
         options: [
-          "Verhaal IN een verhaal (vertel-situatie omkadert verteld verhaal)",
+          "Verhaal in een verhaal",
           "Verhaal op één plek",
           "Verhaal zonder einde",
           "Verhaal met flashback"
@@ -318,7 +318,7 @@ const steps = [
     checks: [
       {
         q: "**'De avond is ongemak'** (Marieke Lucas Rijneveld) won welke prijs?",
-        options: ["Booker International 2020", "Nobelprijs", "Pulitzer", "Hugo-prijs"],
+        options: ["International Booker Prize", "Nobelprijs", "Pulitzer", "Hugo-prijs"],
         answer: 0,
         wrongHints: [null, "Niet — die is voor een heel oeuvre, niet één roman.", "Niet — Amerikaans.", "Niet — SF/fantasy."],
         uitlegPad: {
@@ -361,9 +361,9 @@ const steps = [
       },
       {
         q: "'Het regende katten en honden' is een:",
-        options: ["Hyperbool", "Personificatie", "Metafoor", "Litotes"],
+        options: ["Hyperbool", "Personificatie", "Oxymoron", "Litotes"],
         answer: 0,
-        wrongHints: [null, "Niet — geen menselijking.", "Er zit wel een beeld in — maar wat doet de zin vooral met de hoeveelheid regen?", "Tegenovergesteld."],
+        wrongHints: [null, "Niet — geen menselijking.", "Staan er twee tegenstrijdige woorden naast elkaar?", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Sterke overdrijving", tekst: "Het regent niet ECHT katten + honden — overdrijving voor 'het regent enorm hard'. Engelse uitdrukking ('it's raining cats and dogs'), in NL minder gebruikelijk. Primair: hyperbool. Een uitdrukking als deze noem je 'idioom' of 'cliché' als vaste taalvorm." }],
           niveaus: { basis: "Hyperbool.", simpeler: "Overdrijving.", nogSimpeler: "Hyperbool" },
@@ -372,7 +372,7 @@ const steps = [
       {
         q: "Een **open einde** is:",
         options: [
-          "Slot zonder definitieve oplossing — lezer mag invullen",
+          "Slot dat de lezer zelf invult",
           "Slot dat alles oplost",
           "Geen slot",
           "Twist"

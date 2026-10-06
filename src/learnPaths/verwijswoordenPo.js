@@ -123,7 +123,7 @@ const steps = [
     explanation:
       "De verwijswoorden **hij, zij (ze), het, hem, haar** verwijzen naar een persoon of ding dat eerder genoemd is.\n\n" +
       "• **hij / hem** — een man of een 'de'-woord: *de stoel → hij.*\n" +
-      "• **zij / ze / haar** — een vrouw of meerdere: *Lisa → zij.*\n" +
+      "• **zij / ze** — een vrouw of meerdere; **haar** — een vrouw: *Lisa → zij.*\n" +
       "• **het** — een 'het'-woord: *het boek → het.*\n\n" +
       "Let op: in één zin kunnen er twee verwijswoorden staan die naar verschillende dingen wijzen:\n" +
       "*Opa heeft een fiets. **Hij** gebruikt **hem** elke dag.* → 'Hij' = opa, 'hem' = de fiets.",
@@ -144,9 +144,9 @@ const steps = [
       },
       {
         q: "*Lisa leest een boek. Zij vindt het spannend.* Waar verwijst 'het' naar?",
-        options: ["het boek", "Lisa", "spannend", "het lezen"],
+        options: ["het boek", "Lisa", "spannend", "niemand"],
         answer: 0,
-        wrongHints: [null, "Lisa is een persoon; 'het' is hier een ding.", "Dat is hoe ze het vindt, geen ding.", "Net niet — wat vindt ze spannend?"],
+        wrongHints: [null, "Lisa is een persoon; 'het' is hier een ding.", "Dat is hoe ze het vindt, geen ding.", "Er wordt wél iets genoemd: kijk in de zin ervoor."],
         uitlegPad: {
           stappen: [{ titel: "Wat vindt ze spannend?", tekst: "Ze vindt het boek spannend. 'Het' verwijst naar het boek (een 'het'-woord)." }],
           niveaus: {
