@@ -71,7 +71,7 @@ erbij100[0].uitlegPad = {
   stappen: [
     { titel: "Eerst de tientallen", tekst: "34 + 20. Tel eerst de **tientallen**: 34 + 20 = **54**." },
     { titel: "Dan de eenheden", tekst: "34 + 5. Tel de **eenheden** erbij: 34 + 5 = **39**. De 3 blijft staan." },
-    { titel: "Met sprongen", tekst: "Spring met 10: 34, 44, 54. Spring met 1: 54, 55, 56." },
+    { titel: "Met sprongen", tekst: "Spring met 10: 34, 44, 54. Spring met 1: 55, 56, 57." },
   ],
   woorden: [{ woord: "sprong van 10", uitleg: "Tien erbij in één keer." }],
   theorie: "Tientallen erbij: het eerste cijfer wordt groter. Eenheden erbij: het tweede cijfer.",
@@ -105,13 +105,17 @@ eraf100[0].uitlegPad = {
 const overTiental = [];
 for (let i = 0; i < 5; i++) {
   if (i % 2 === 0) {
-    const a = tussen(15, 85); const e = a % 10; const b = tussen(10 - e + (e === 0 ? 1 : 0), 9); const goed = a + b;
+    let a = tussen(15, 85);
+    for (let p = 0; p < 20 && a % 10 < 2; p++) a = tussen(15, 85); // nakijkronde 6 okt 2026: ronde getallen gaven "40 + 10" (niet over het tiental)
+    const e = a % 10; const b = tussen(11 - e, 9); const goed = a + b; // echt over het tiental heen
     const o = opties(goed, [goed - 10, goed + 10, goed - 1]);
-    overTiental.push({ q: `**${a} + ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, b === 10 - e ? `Maak het tiental vol: ${e} + ${b} = 10. Welk tiental komt na ${a}?` : `Maak eerst het tiental vol: ${a} + ${10 - e} = ${a + 10 - e}. Dan nog ${b - (10 - e)} erbij.`) });
+    overTiental.push({ q: `**${a} + ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, b === 10 - e ? `Maak het tiental vol: ${e} + ${b} = 10. Welk tiental komt na ${a}?` : `Maak eerst het tiental vol: hoeveel moet er bij ${a} om ${a + 10 - e} te krijgen? Doe daarna de rest van ${b} erbij.`) });
   } else {
-    const a = tussen(21, 95); const e = a % 10; const b = tussen(e + 1, 9); const goed = a - b;
+    let a = tussen(21, 95);
+    for (let p = 0; p < 20 && (a % 10 === 0 || a % 10 === 9); p++) a = tussen(21, 95); // eenheid 9 gaf "min 10" (geen overgang)
+    const e = a % 10; const b = tussen(e + 1, 9); const goed = a - b;
     const o = opties(goed, [goed + 10, goed - 10, goed + 1]);
-    overTiental.push({ q: `**${a} − ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Ga eerst naar het tiental: ${a} − ${e} = ${a - e}. Dan nog ${b - e} eraf.`) });
+    overTiental.push({ q: `**${a} − ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Ga eerst terug naar ${a - e}. Hoeveel van de ${b} moet je daarna nog eraf halen?`) });
   }
 }
 overTiental[0].uitlegPad = {
