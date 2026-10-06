@@ -157,7 +157,7 @@ const steps = [
         q: "Bij ∫ **2x · cos(x²) dx** — welke techniek?",
         options: ["Substitutie u=x²","Partiële integratie","Direct macht-regel","Niet integreerbaar"],
         answer: 0,
-        wrongHints: [null, "Niet — geen product van twee aparte functies.", "Niet — kettingvorm aanwezig.", "Wel — via substitutie."],
+        wrongHints: [null, "Kijk eerst: is 2x precies de afgeleide van het binnenste deel x²? Dan is er een snellere techniek.", "Niet — kettingvorm aanwezig.", "Wel — via substitutie."],
         uitlegPad: {
           stappen: [{ titel: "Substitutie-cue: f(g(x))·g'(x)", tekst: "**Substitutie**. u=x², du=2x dx. ∫ 2x·cos(x²) dx → ∫ cos(u) du = sin(u) + C = **sin(x²) + C**. De 2x naast cos(x²) is de afgeleide van het binnen-deel x². Klassieke substitutie-vorm." }],
           niveaus: { basis: "Substitutie u=x².", simpeler: "2x·cos(x²) = substitutie", nogSimpeler: "Subst" },
@@ -289,7 +289,7 @@ const steps = [
       },
       {
         q: "Bereken **∫[1 tot 2] 1/x dx**.",
-        options: ["ln(2) ≈ 0,693","1","ln(2)−ln(1)+1","Niet bepaald"],
+        options: ["ln(2)","1","ln(2)−ln(1)+1","Niet bepaald"],
         answer: 0,
         wrongHints: [null, "Niet — dan vergeet je ln-primitief.", "Niet — bij een bepaalde integraal komt er geen +C of +1 bij.", "Wel bepaald."],
         uitlegPad: {
@@ -313,7 +313,7 @@ const steps = [
       },
       {
         q: "Snelheid v(t) = t² − 4 m/s. **Verplaatsing tussen t=0 en t=3**?",
-        options: ["−3 m (terugverplaatst)","9 m","12 m","Onmogelijk"],
+        options: ["−3 m","9 m","12 m","Onmogelijk"],
         answer: 0,
         wrongHints: [null, "Niet — negatief deel telt mee.", "Niet — onjuist.", "Wel mogelijk."],
         uitlegPad: {
