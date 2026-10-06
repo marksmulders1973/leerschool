@@ -143,7 +143,7 @@ const steps = [
         q: "Hoe haal je **zout uit zeewater**?",
         options: ["Indampen (verdampen)", "Filtreren", "Bezinken", "Chromatografie"],
         answer: 0,
-        wrongHints: [null, "Zout zit opgelost.", "Zout niet zwaarder dan water.", "Geen kleuren."],
+        wrongHints: [null, "Zout zit opgelost.", "Opgelost zout zakt niet vanzelf naar de bodem.", "Geen kleuren."],
       },
       {
         q: "Hoe haal je **alcohol uit wijn**?",
@@ -195,7 +195,7 @@ const steps = [
       },
       {
         q: "Olie drijft op water omdat ... ?",
-        options: ["Olie lagere dichtheid heeft", "Olie warmer is", "Olie heller is", "Toeval"],
+        options: ["Olie lagere dichtheid heeft", "Olie warmer is", "Olie helderder is", "Toeval"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet primair.", "Geen toeval — natuurwet."],
       },
@@ -249,7 +249,7 @@ const steps = [
     checks: [
       {
         q: "Welke is een **pure stof**?",
-        options: ["Citroenzuur (1 stof)", "Soep", "Lucht", "Brons"],
+        options: ["Citroenzuur", "Soep", "Lucht", "Brons"],
         answer: 0,
         wrongHints: [null, "Mengsel.", "Mengsel gassen.", "Mengsel metalen."],
       },

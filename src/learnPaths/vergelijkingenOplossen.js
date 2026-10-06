@@ -333,7 +333,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Wat is de eerste stap bij 4(x + 2) = 16?*",
+        q: "*Wat is volgens het standaard-stappenplan de eerste stap bij 4(x + 2) = 16?*",
         options: ["Haakjes openen → 4x + 8 = 16","Beide kanten delen door 4","Beide kanten −2","Beide kanten ·4"],
         answer: 0,
         wrongHints: [null, "Pas wel mogelijk maar niet de eerste stap. Wat zit er om de x aan de linkerkant?", "Aftrekken werkt niet zolang er nog haakjes om x staan.", "Vermenigvuldigen maakt het juist groter — niet de standaard eerste stap."],
@@ -590,7 +590,7 @@ const steps = [
       },
       {
         q: "*Een fietsenmaker rekent 25 euro voor inspectie + 8 euro per uur werk. Voor de hele klus betaalde je 65 euro. Hoeveel uur werk?*",
-        options: ["5 uur (25 + 8u = 65)","8 uur","3 uur","10 uur"],
+        options: ["5 uur","8 uur","3 uur","10 uur"],
         answer: 0,
         wrongHints: [null, "Vul 8 uur in de formule — geeft het totaal dan precies 65 euro?", "Vul 3 uur in de formule — geeft het totaal dan precies 65 euro?", "Vul 10 uur in de formule — geeft het totaal dan precies 65 euro?"],
         uitlegPad: {
@@ -622,7 +622,7 @@ const steps = [
           niveaus: { basis: "4.", simpeler: "2x=8 → x=4.", nogSimpeler: "4" },
         },
       },
-      { q: "Los op: x + 7 = 12", options: ["x = 5","x = 19","x = 7","x = 12"], answer: 0, wrongHints: [null, "Niet — aftrekken, niet optellen.", "Niet — x niet 7.", "Niet — beide kanten −7."] },
+      { q: "Los op: x + 7 = 12", options: ["x = 5","x = 19","x = 7","x = 12"], answer: 0, wrongHints: [null, "Niet — aftrekken, niet optellen.", "Niet — x niet 7.", "Niet — x staat nog niet alleen; welke bewerking haalt de +7 weg?"] },
       { q: "Los op: 3x = 21", options: ["x = 7","x = 18","x = 24","x = 63"], answer: 0, wrongHints: [null, "Niet — delen, niet aftrekken.", "Niet — optellen klopt niet.", "Niet — vermenigvuldigen klopt niet."] },
       { q: "Los op: 2x − 3 = 11", options: ["x = 7","x = 4","x = 5","x = 8"], answer: 0, wrongHints: [null, "Niet — vergeet +3 eerst.", "Niet.", "Niet."] },
     ],

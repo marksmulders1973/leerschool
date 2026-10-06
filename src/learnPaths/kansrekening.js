@@ -160,7 +160,7 @@ const steps = [
           null,
           "Welke kans betekent 'zeker' — 0 of 1?",
           "50% komt overeen met welke breuk? Niet hetzelfde als 'zeker'.",
-          "Kans 1 = altijd. Past dat bij wat de vraag stelt?",
+          "Kijk naar de schaal van 0 tot 1: aan welk uiteinde zit kans 1, en wat betekent dat uiteinde?",
         ],
         uitlegPad: {
           stappen: [{ titel: "P = 1 = zeker", tekst: "Een gebeurtenis met kans 1 gebeurt altijd, 100%." }],
@@ -251,7 +251,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "1/8 zou betekenen één specifieke combinatie. Maar precies 2× kop kan op 3 manieren: KKM, KMK, MKK.",
+          "1/8 zou betekenen één specifieke combinatie. Maar precies 2× kop kan op meer dan één volgorde — schrijf alle volgordes uit.",
           "1/3 is geen logische kans bij munten (noemer 8).",
           "Tel hoeveel manieren je precies 2× kop kunt gooien bij 3 worpen — is dat 2 of meer?",
         ],
@@ -336,9 +336,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Optellen geldt voor verschillende paden (of-kans). Bij één pad = vermenigvuldigen.",
+          "Optellen hoort bij een óf-situatie (verschillende paden). Hier gaat het om één pad met takken ná elkaar — welke bewerking past daarbij?",
           "Aftrekken hoort niet in standaard kansrekening met bomen.",
-          "De grootste kans zegt niets over een pad. Pad-kans = product van takken.",
+          "De grootste kans zegt niets over een pad. Kijk hoe je de takken van één pad combineert.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Vermenigvuldigen langs pad", tekst: "Pad-kans = kans tak 1 × kans tak 2 × ..." }],
@@ -393,7 +393,7 @@ const steps = [
         wrongHints: [
           null,
           "Let op: bij twee onafhankelijke worpen tel je de uitkomsten niet op — wat doe je dan wel?",
-          "2/6 = optellen — maar voor en-kans vermenigvuldig je: 1/6 · 1/6.",
+          "2/6 lijkt op optellen — maar het is een én-kans (eerst 3 én daarna 5). Welke bewerking hoort daarbij?",
           "1/6 zou kans op één getal bij één dobbelsteen zijn.",
         ],
         uitlegPad: {
@@ -425,12 +425,12 @@ const steps = [
     checks: [
       {
         q: "*Bij 4 muntworpen — wat is de kans op precies 1× kop?*",
-        options: ["4/16 = 1/4", "1/16", "1/4 (zonder berekening)", "4/4 = 1"],
+        options: ["4/16 = 1/4", "1/16", "1/8", "4/4 = 1"],
         answer: 0,
         wrongHints: [
           null,
-          "1/16 = één specifieke combinatie. Maar 'precies 1× kop' kan op 4 manieren (KMMM, MKMM, MMKM, MMMK).",
-          "Niet zomaar raden — tel hoeveel paden precies 1× kop geven bij 4 worpen, en reken dan de kans.",
+          "1/16 = één specifieke combinatie. Maar 'precies 1× kop' kan op meer plekken in de rij staan — schrijf alle volgordes uit.",
+          "Hoeveel combinaties zijn er in totaal bij 4 worpen? Dat is je noemer. Tel daarna hoeveel paden precies 1× kop geven.",
           "Een kans van 1 betekent zekerheid — is precies 1× kop bij 4 worpen écht zeker?",
         ],
         uitlegPad: {
@@ -469,7 +469,7 @@ const steps = [
         wrongHints: [
           null,
           "1/6 zou kans op één getal zijn. Hier zijn er drie uitsluitende uitkomsten.",
-          "2/6 = twee uitkomsten. Hier zijn er drie (2, 4, 6).",
+          "2/6 hoort bij twee uitkomsten. Tel nog eens hoeveel uitkomsten de vraag noemt.",
           "Een kans van 1 betekent zekerheid — is een getal 2, 4 of 6 gooien bij een dobbelsteen écht zeker?",
         ],
         uitlegPad: {
@@ -576,7 +576,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is één pad (zoals KMM). Maar 1× kop kan op 3 manieren: KMM, MKM, MMK.",
+          "Dat is één pad (zoals KMM). Maar de ene kop kan op verschillende plekken in de rij staan — schrijf alle volgordes uit.",
           "Bij munt-worpen zijn er altijd een macht van 2 mogelijkheden — klopt 1/3 dan als noemer?",
           "1/2 is de kans bij één worp — maar hoeveel paden geven precies 1× kop bij 3 worpen? Tel ze op.",
         ],
@@ -595,7 +595,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is kans OP 1. Het complement is 1 − 1/6.",
+          "Dat is de kans OP een 1. De vraag wil juist het tegenovergestelde — hoeveel vlakken zijn géén 1?",
           "Een kans van 1 betekent zekerheid — is 'niet 1' gooien bij een dobbelsteen écht zeker?",
           "Een kans van 0 betekent onmogelijk — kan 'niet 1' bij een dobbelsteen echt nooit voorkomen?",
         ],
@@ -631,9 +631,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Met terugleggen zou dat zijn. Maar 'zonder terugleggen' = na de eerste keer pakken heb je nog 4 chocolade en 7 totaal.",
-          "Optellen ipv vermenigvuldigen — voor en-kans: vermenigvuldig.",
-          "Wel goed te bepalen — gewoon stap voor stap (eerste 5/8, daarna 4/7).",
+          "Dat zou kloppen mét terugleggen. Maar 'zonder terugleggen': hoeveel chocolade-bonbons en hoeveel bonbons in totaal zijn er nog over na de eerste keer pakken?",
+          "Optellen in plaats van vermenigvuldigen — dit is een én-kans (eerste én tweede). Welke bewerking hoort daarbij?",
+          "Wel goed te bepalen — bekijk de eerste en de tweede trekking apart en let op wat er na de eerste trekking overblijft.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Zonder terugleggen", tekst: "Eerste: 5/8. Daarna: 4/7. Product: 5/8 × 4/7 = 20/56 = 5/14." }],
@@ -681,7 +681,7 @@ const steps = [
           null,
           "1/2 is een ruwe schatting maar niet exact — bereken via complement.",
           "1/4 = 4/16 is de kans op precies 1 keer kop — maar 'minstens 2' betekent 2, 3 of 4 keer kop.",
-          "5/16 is de kans op hoogstens 1 keer kop (0 of 1 keer). 'Minstens 2' betekent 2 óf meer — gebruik het complement.",
+          "Dat is precies het tegenovergestelde van wat gevraagd wordt. 'Minstens 2' betekent 2 óf meer — welke uitkomsten vallen daar níét onder?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 − P(0) − P(1)", tekst: "1 − 1/16 − 4/16 = 11/16." }],
@@ -787,9 +787,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Na de eerste rode trekking blijven er 2 rode over (was 3), niet 3.",
-          "Optellen werkt niet voor 'na elkaar'-kansen. Vermenigvuldigen.",
-          "'Zonder terugleggen' — totaal verandert. Niet 8 maar 7 na de eerste.",
+          "Na de eerste rode trekking ligt die knikker niet meer in de zak — hoeveel rode zijn er dan nog over?",
+          "Optellen werkt niet voor 'na elkaar'-kansen. Welke bewerking hoort bij een én-kans?",
+          "'Zonder terugleggen' — het totaal verandert na de eerste trekking. Hoeveel knikkers zitten er dan nog in de zak?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Zonder terugleggen: 3/8 × 2/7", tekst: "Eerst 3/8 (3 rood op 8). Daarna 2/7 (2 rood op 7)." }],
@@ -806,7 +806,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Na de eerste blauwe blijven er 4 blauwe over (was 5).",
+          "Na de eerste blauwe ligt die knikker niet meer in de zak — hoeveel blauwe zijn er dan nog over?",
           "Niet optellen voor 'na elkaar'-kansen.",
           "Zonder terugleggen — totaal is 7 in tweede trekking.",
         ],
@@ -821,13 +821,13 @@ const steps = [
       },
       {
         q: "Wat is **P(precies één rood)**?",
-        options: ["15/28", "30/56", "Allebei (gelijk)", "3/28"],
-        answer: 2,
+        options: ["15/28", "15/56", "9/56", "3/28"],
+        answer: 0,
         wrongHints: [
-          "Dit klopt qua waarde, maar kun je deze breuk nog verder vereenvoudigen?",
-          "Klopt qua waarde maar nog te vereenvoudigen.",
           null,
-          "Dat is P(beide rood). Voor 'precies één' tel je P(R,B) + P(B,R) op.",
+          "Dat is maar één volgorde (rood-dan-blauw óf blauw-dan-rood). Welke andere volgorde geeft óók precies één rood?",
+          "Controleer het aantal knikkers bij de tweede trekking — er is er één uit de zak.",
+          "Dat is de kans op twee rode. 'Precies één rood' is een andere gebeurtenis.",
         ],
         uitlegPad: {
           stappen: [{ titel: "P(RB) + P(BR)", tekst: "P(R,B) = 3/8 × 5/7 = 15/56. P(B,R) = 5/8 × 3/7 = 15/56. Som: 30/56 = 15/28." }],

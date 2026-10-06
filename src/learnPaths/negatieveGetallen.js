@@ -470,7 +470,7 @@ const steps = [
       { q: "**Verschil** tussen −7 °C en +5 °C?", options: ["12 °C","2 °C","−12 °C","−2 °C"], answer: 0, wrongHints: [null, "Te weinig — vergeet niet de stappen onder nul.", "Niet — verschil = afstand, altijd positief.", "Idem."] },
       { q: "Reken: 10 − 4 × 3", options: ["−2","18","6","30"], answer: 0, wrongHints: [null, "Eerst −, dan × — verkeerde volgorde.", "Je bent de × 3 vergeten.", "Geen haakjes — × eerst."] },
       { q: "Wat is het **tegenovergestelde** van −9?", options: ["+9","−9","0","18"], answer: 0, wrongHints: [null, "Zelfde getal.", "0 is het tegenovergestelde van 0.", "Alleen het teken verandert, niet de grootte."] },
-      { q: "Een lift gaat 3 verdiepingen omlaag vanaf etage 1. Welke etage?", options: ["−2","2","−1","4"], answer: 0, wrongHints: [null, "Tegenovergesteld — omlaag = min.", "Slechts 2 omlaag.", "Optellen ipv aftrekken."] },
+      { q: "Een lift gaat 3 verdiepingen omlaag vanaf etage 1. Welke etage?", options: ["−2","2","−1","4"], answer: 0, wrongHints: [null, "Tegenovergesteld — omlaag = min.", "Slechts 2 omlaag.", "Optellen in plaats van aftrekken."] },
       { q: "**(−5) + 3** = ?", options: ["−2","−8","2","8"], answer: 0, wrongHints: [null,"Andersom — +3 gaat naar rechts.","Andersom.","Tegenovergesteld."] },
       { q: "**(−4) × 2** = ?", options: ["−8","8","−2","−6"], answer: 0, wrongHints: [null,"Min × plus = min.","Onvolledig.","Optellen."] },
       { q: "**3 − (−5)** = ?", options: ["8","−2","2","−8"], answer: 0, wrongHints: [null,"Twee minnen = plus.","Onjuist.","Andersom."] },

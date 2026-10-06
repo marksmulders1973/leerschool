@@ -371,7 +371,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "5 = c². Je moet nog √ toepassen: c = √5 (niet rond).",
+          "Dat is c², nog niet c. Welke bewerking moet je nog doen om c te krijgen?",
           "Optelling is niet Pythagoras — kwadrateer a en b eerst, dan tel je op.",
           "Reken na: wat geeft 1² + 2²? Vergeet dan niet de wortel te nemen.",
         ],
@@ -431,9 +431,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "24 is bijna de langste maar niet helemaal. De schuine zijde is altijd de **langste** — dus 25.",
+          "24 is bijna de langste, maar niet helemaal. De schuine zijde is altijd de **langste** — vergelijk de drie getallen nog eens.",
           "7 is de kortste. De schuine zijde is altijd de langste van de drie.",
-          "Het maakt wél uit. De schuine zijde is altijd de langste — hier 25.",
+          "Het maakt wél uit. De schuine zijde is altijd de langste — welk getal is dat hier?",
         ],
       },
     ],

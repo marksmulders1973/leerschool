@@ -65,7 +65,7 @@ const steps = [
         q: "Op **hoogste punt** van een verticaal omhoog-geworpen bal: v = ?",
         options: ["0","Maximaal","Onbepaald","Negatief"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel bepaald.", "Niet — gewoon 0 op precies dat moment."],
+        wrongHints: [null, "Tegenovergesteld.", "Wel bepaald.", "Niet — pas ná de top beweegt de bal weer omlaag. Wat gebeurt er precies op het keerpunt?"],
         uitlegPad: {
           stappen: [{ titel: "Snelheid keert om", tekst: "Bal stijgt → snelheid daalt door zwaartekracht → bereikt nul precies op hoogste punt → daarna negatief (terug). Op de **top** is v = 0. Versnelling blijft wel g (-9,81 m/s²) — zwaartekracht blijft." }],
           niveaus: { basis: "0.", simpeler: "Top = v=0", nogSimpeler: "0" },
@@ -229,7 +229,7 @@ const steps = [
         q: "Twee karren botsen + plakken samen. Welke behoudswet **altijd**?",
         options: ["Impuls","Kinetische energie","Beide","Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — plastisch verliest kinetische.", "Niet — energie niet bij plastisch.", "Wel impuls."],
+        wrongHints: [null, "Niet — bij plakken gaat er bewegingsenergie verloren aan warmte en vervorming.", "Niet — één van de twee gaat bij plastisch botsen juist verloren.", "Niet — er is wél een grootheid die bij elke botsing zonder externe kracht behouden blijft."],
         uitlegPad: {
           stappen: [{ titel: "Impulsbehoud universeel", tekst: "**Impulsbehoud** geldt in **elke** botsing (zonder externe kracht). Kinetische energie-behoud alleen bij **elastische** botsing. Plastische (plakken) verliest E_k aan warmte + vervorming." }],
           niveaus: { basis: "Impuls.", simpeler: "Botsing = impulsbehoud", nogSimpeler: "Impuls" },

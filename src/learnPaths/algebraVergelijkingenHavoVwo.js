@@ -127,7 +127,7 @@ const steps = [
         q: "Wat is de oplossing van **2x + 5 = 2x + 8**?",
         options: ["Geen oplossing", "x = 0", "x = 3", "x = oneindig"],
         answer: 0,
-        wrongHints: [null, "Wel iets, namelijk: geen oplossing.", "Niet correct.", "Niet — geen oneindig."],
+        wrongHints: [null, "Vul x = 0 in: wordt links dan echt gelijk aan rechts?", "Vul x = 3 in: wordt links dan echt gelijk aan rechts?", "Breng alle x naar één kant — wat blijft er dan over, en is dat ooit waar?"],
         uitlegPad: {
           stappen: [
             { titel: "Tegenspraak", tekst: "Verplaats x: 2x − 2x = 8 − 5 → 0 = 3. **Vals voor elke x**. Daarom: GEEN oplossing. Visueel: 2 evenwijdige lijnen (zelfde helling, ander snijpunt-y) snijden nooit." },
@@ -265,7 +265,7 @@ const steps = [
           "Geen oplossing"
         ],
         answer: 0,
-        wrongHints: [null, "Wel maar oneindig veel.", "Idem.", "Tegenovergesteld."],
+        wrongHints: [null, "Dit punt voldoet wel, maar is het het enige? Vermenigvuldig de eerste vergelijking met 2 en vergelijk met de tweede.", "Vul het in: voldoet dit punt aan beide vergelijkingen? En vermenigvuldig de eerste vergelijking eens met 2.", "Vermenigvuldig de eerste vergelijking met 2 en vergelijk met de tweede — spreken ze elkaar tegen?"],
         uitlegPad: {
           stappen: [
             { titel: "Tweede = 2× eerste", tekst: "4x + 6y = 2(2x + 3y) = 2·12 = 24. **Beide vergelijkingen zijn IDENTIEK** → één lijn → oneindig veel oplossingen op die lijn." },

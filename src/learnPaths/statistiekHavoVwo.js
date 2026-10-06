@@ -67,7 +67,7 @@ const steps = [
         q: "Wat is de **modus** van: 2, 4, 4, 4, 7, 8?",
         options: ["4","2","8","Geen modus"],
         answer: 0,
-        wrongHints: [null, "Niet — 2 komt 1 keer voor.", "Niet — komt 1 keer.", "Er is wél een modus — 4 komt 3 keer voor."],
+        wrongHints: [null, "Niet — 2 komt 1 keer voor.", "Niet — komt 1 keer.", "Er is wél een modus — tel hoe vaak elke waarde voorkomt."],
         uitlegPad: {
           stappen: [{ titel: "Vaakst voorkomend", tekst: "Aantal keren: 2 → 1x, 4 → **3x**, 7 → 1x, 8 → 1x. Modus = waarde met hoogste frequentie = **4**." }],
           woorden: [{ woord: "modus", uitleg: "Meest voorkomende waarde in dataset." }],
@@ -251,7 +251,7 @@ const steps = [
         q: "Regressielijn **y = 2x + 5**. Wat is y als **x = 10**?",
         options: ["25","20","15","30"],
         answer: 0,
-        wrongHints: [null, "Niet — je hebt de +5 vergeten. Vul x in en voer beide termen uit.", "Niet — je hebt alleen +5 gebruikt zonder de 2x-term.", "Te veel — welke x is er ingevuld? Controleer de berekening stap voor stap."],
+        wrongHints: [null, "Niet — de formule heeft twee termen; heb je ze allebei gebruikt?", "Niet — je hebt alleen +5 gebruikt zonder de 2x-term.", "Te veel — welke x is er ingevuld? Controleer de berekening stap voor stap."],
         uitlegPad: {
           stappen: [{ titel: "Substitueren", tekst: "y = 2·10 + 5 = 20 + 5 = **25**." }],
           theorie: "Lineaire vergelijking: y = ax + b. a = helling, b = y-snijpunt.",

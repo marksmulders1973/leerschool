@@ -202,7 +202,7 @@ const steps = [
         q: "Wat is √36?",
         options: ["6", "9", "18", "1296"],
         answer: 0,
-        wrongHints: [null, "Hoe kom je aan 9? Reken: welk getal kwadraat is 36? 6 · 6 = ?", "Je hebt 36 ÷ 2 gedaan. Maar wortel zoekt het getal dat **in het kwadraat** 36 geeft.", "1296 is 36². Andersom — dat is kwadrateren, niet wortel trekken."],
+        wrongHints: [null, "Hoe kom je aan 9? Reken: welk getal in het kwadraat geeft precies 36?", "Je hebt 36 ÷ 2 gedaan. Maar wortel zoekt het getal dat **in het kwadraat** 36 geeft.", "1296 is 36². Andersom — dat is kwadrateren, niet wortel trekken."],
         uitlegPad: {
           stappen: [{ titel: "6 × 6 = 36", tekst: "Welk getal² = 36? 6, want 6×6=36. √36 = 6. Uit kwadratentabel direct te zien." }],
           woorden: [{ woord: "perfect kwadraat", uitleg: "Getal dat is kwadraat van geheel getal. 36 = 6² → perfect kwadraat." }],
@@ -353,9 +353,9 @@ const steps = [
     checks: [
       {
         q: "Wat is √72 / √8?",
-        options: ["3", "9", "√64", "√9"],
+        options: ["3", "9", "√64", "√80"],
         answer: 0,
-        wrongHints: [null, "Heb je de deling onder de wortel gedaan? Bereken eerst 72 gedeeld door 8, dan de wortel van het resultaat.", "Aftrekken (72 − 8) is niet de regel — bij delen van wortels geldt √a / √b = √(a/b).", "Je bent al bijna klaar. Er staat nog een wortel voor een getal — trek die ook."],
+        wrongHints: [null, "Heb je de deling onder de wortel gedaan? Bereken eerst 72 gedeeld door 8, dan de wortel van het resultaat.", "Aftrekken (72 − 8) is niet de regel — bij delen van wortels geldt √a / √b = √(a/b).", "Optellen (72 + 8) is niet de regel — bij delen van wortels geldt √a / √b = √(a/b)."],
         uitlegPad: {
           stappen: [
             { titel: "Regel: √a/√b = √(a/b)", tekst: "Wortels delen: √72/√8 = √(72/8) = √9." },
@@ -700,10 +700,10 @@ const steps = [
         },
       },
       { q: "Bereken: 6² = ?", options: ["36","12","18","30"], answer: 0, wrongHints: [null, "Niet — niet 2×6.", "Niet — niet 3×6.", "Niet."] },
-      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null, "Dat kwadraat geeft 64, niet 81 — probeer het volgende getal.", "Dat kwadraat geeft 49, nog verder ervan — probeer een getal dichter bij tien.", "Je zoekt een getal dat mét zichzelf vermenigvuldigd 81 geeft, niet een verdubbeling."] },
+      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null, "Dat kwadraat geeft 64, niet 81 — welk getal maal zichzelf komt wél op 81 uit?", "Dat kwadraat geeft 49, nog verder ervan — probeer een getal dichter bij tien.", "Je zoekt een getal dat mét zichzelf vermenigvuldigd 81 geeft, niet een verdubbeling."] },
       { q: "Bereken: √144 = ?", options: ["12","11","14","72"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Helft."] },
       { q: "Wat is **√2** ongeveer?", options: ["1,41","1,5","2","1"], answer: 0, wrongHints: [null, "Te hoog.", "Wortel ≠ getal.", "Te laag."] },
-      { q: "Is **π** rationaal of irrationaal?", options: ["Irrationaal","Rationaal","Geheel","Natuurlijk"], answer: 0, wrongHints: [null, "Niet — π is irrationaal.", "Niet.", "Niet."] },
+      { q: "Is **π** rationaal of irrationaal?", options: ["Irrationaal","Rationaal","Geheel","Natuurlijk"], answer: 0, wrongHints: [null, "Niet — kun je π als een breuk schrijven, of gaan de decimalen oneindig door zonder patroon?", "Niet.", "Niet."] },
       { q: "Bereken **5² + 12²**", options: ["169","144","25","60"], answer: 0, wrongHints: [null,"Alleen 12².","Alleen 5².","Niet."] },
       { q: "Hoeveel is **(−4)²**?", options: ["16","−16","−8","8"], answer: 0, wrongHints: [null,"Minus × minus = plus.","Verkeerd.","Verkeerd."] },
       { q: "Wat is **√0**?", options: ["0","1","Bestaat niet","∞"], answer: 0, wrongHints: [null,"√1 = 1.","Wel bestaat.","Niet relevant."] },

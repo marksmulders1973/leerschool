@@ -33,7 +33,7 @@ const steps = [
         q: "Wat is ∫ **x² dx**?",
         options: ["x³/3 + C","2x + C","x²/2 + C","x³ + C"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afgeleide.", "Verkeerde noemer.", "Mist /3."],
+        wrongHints: [null, "Niet — dat is afgeleide.", "Verkeerde noemer.", "Niet — differentieer je antwoord: krijg je x² terug?"],
         uitlegPad: {
           stappen: [{ titel: "Macht-regel", tekst: "∫ x^n dx = **x^(n+1) / (n+1) + C**. Hier n=2 → x³/3 + C. Check: d/dx(x³/3) = 3x²/3 = x². ✓" }],
           theorie: "Voor ∫ x^n: macht +1, gedeeld door nieuwe macht. Spiegelt differentiatie-regel.",
@@ -44,7 +44,7 @@ const steps = [
         q: "Wat is ∫ **6x dx**?",
         options: ["3x² + C","6x² + C","6 + C","x² + 6 + C"],
         answer: 0,
-        wrongHints: [null, "Mist /2.", "Niet — dat is afgeleide-achtig.", "Niet correct."],
+        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 6x terug?", "Niet — dat is afgeleide-achtig.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Constante voor integraal", tekst: "∫ 6x dx = 6 · ∫ x dx = 6 · x²/2 + C = **3x² + C**. Check: d/dx(3x²) = 6x. ✓" }],
           niveaus: { basis: "3x² + C.", simpeler: "6·x²/2 = 3x² + C", nogSimpeler: "3x²+C" },
@@ -54,7 +54,7 @@ const steps = [
         q: "Wat is ∫ **sin(x) dx**?",
         options: ["−cos(x) + C","cos(x) + C","−sin(x) + C","tan(x) + C"],
         answer: 0,
-        wrongHints: [null, "Mist het minteken.", "Niet — dat is de afgeleide van cos(x).", "Niet — andere functie."],
+        wrongHints: [null, "Niet — differentieer je antwoord: krijg je sin(x) terug?", "Niet — dat is de afgeleide van cos(x).", "Niet — andere functie."],
         uitlegPad: {
           stappen: [{ titel: "Goniometrische tabel", tekst: "**∫ sin(x) dx = −cos(x) + C**. Reden: d/dx(−cos x) = −(−sin x) = sin x. ✓\n\nVergelijk: ∫ cos(x) dx = sin(x) + C (zonder min)." }],
           theorie: "Toets-favoriet-val: min-teken vergeten. Onthoud: sin → −cos, cos → +sin.",
@@ -65,7 +65,7 @@ const steps = [
         q: "Wat is ∫ **1/x dx**?",
         options: ["ln|x| + C","1/x² + C","−1/x + C","x + C"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afgeleide.", "Niet correct.", "Niet — niet via macht-regel hier."],
+        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 1/x terug?", "Niet correct.", "Niet — niet via macht-regel hier."],
         uitlegPad: {
           stappen: [{ titel: "Uitzondering n=−1", tekst: "Bij ∫ x^n dx geldt **n ≠ −1**. Voor n=−1 (oftewel 1/x): **∫ 1/x dx = ln|x| + C**. Absolute waarde omdat ln voor negatieve waarden niet bestaat." }],
           theorie: "Onthoud uit hoofd: e^x → e^x, 1/x → ln|x|, sin → −cos, cos → sin.",
@@ -95,7 +95,7 @@ const steps = [
         q: "Bereken **∫[0 tot 3] 2x dx**.",
         options: ["9","6","3","18"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer F(b)−F(a).", "Niet — dat is afgeleide-waarde.", "Niet — te groot."],
+        wrongHints: [null, "Niet — controleer F(b)−F(a).", "Niet — dat is alleen de bovengrens.", "Niet — te groot."],
         uitlegPad: {
           stappen: [{ titel: "F(b)−F(a)", tekst: "∫ 2x dx = x². ∫[0,3] 2x dx = [x²] van 0 tot 3 = 3² − 0² = **9**." }],
           theorie: "Eerst primitieve, dan invullen b en a, dan aftrekken.",
@@ -167,7 +167,7 @@ const steps = [
         q: "Wat is ∫ **e^(2x) dx**?",
         options: ["e^(2x)/2 + C","e^(2x) + C","2·e^(2x) + C","e^x + C"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet niet te delen door 2.", "Niet — dat is afgeleide.", "Niet — andere functie."],
+        wrongHints: [null, "Niet — differentieer je antwoord: de kettingregel geeft een extra factor.", "Niet — dat is afgeleide.", "Niet — andere functie."],
         uitlegPad: {
           stappen: [{ titel: "Lineaire substitutie", tekst: "∫ e^(ax+b) dx = **e^(ax+b)/a + C**. Hier a=2: ∫ e^(2x) dx = **e^(2x)/2 + C**. Check: d/dx(e^(2x)/2) = 2·e^(2x)/2 = e^(2x). ✓" }],
           niveaus: { basis: "e^(2x)/2 + C.", simpeler: "e^(ax) → e^(ax)/a", nogSimpeler: "/2" },
@@ -188,7 +188,7 @@ const steps = [
         q: "Wat is ∫ **(2x+1)³ dx**?",
         options: ["(2x+1)⁴/8 + C","(2x+1)⁴/4 + C","3(2x+1)² + C","(2x+1)⁴ + C"],
         answer: 0,
-        wrongHints: [null, "Mist /2 door binnen-afgeleide.", "Niet — andere regel.", "Mist deling."],
+        wrongHints: [null, "Niet — denk aan de kettingregel: de afgeleide van 2x+1 speelt mee.", "Niet — andere regel.", "Niet — differentieer je antwoord en vergelijk met (2x+1)³."],
         uitlegPad: {
           stappen: [{ titel: "Lineaire substitutie", tekst: "∫ (ax+b)^n dx = **(ax+b)^(n+1) / [a·(n+1)] + C**. Hier a=2, n=3: (2x+1)⁴ / (2·4) = **(2x+1)⁴/8 + C**. Check: d/dx((2x+1)⁴/8) = 4(2x+1)³·2/8 = (2x+1)³. ✓" }],
           niveaus: { basis: "(2x+1)⁴/8 + C.", simpeler: "Macht+1, gedeeld door [a·nieuwe macht]", nogSimpeler: "/8" },
@@ -251,7 +251,7 @@ const steps = [
         q: "**Versnelling a(t) = 6t**, v₀ = 2. Wat is v(t)?",
         options: ["3t² + 2","6t² + 2","6 + 2","t³ + 2"],
         answer: 0,
-        wrongHints: [null, "Mist /2.", "Niet integraal.", "Niet correct."],
+        wrongHints: [null, "Niet — differentieer je antwoord: krijg je 6t terug?", "Niet integraal.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "v = ∫a dt + v₀", tekst: "v(t) = ∫ 6t dt + v₀ = 3t² + C. Begin-conditie: v(0)=2 → C=2. **v(t) = 3t² + 2**." }],
           niveaus: { basis: "3t²+2.", simpeler: "∫6t = 3t² + v₀", nogSimpeler: "3t²+2" },
@@ -281,7 +281,7 @@ const steps = [
         q: "Wat is ∫ **3x² + 4x − 5 dx**?",
         options: ["x³ + 2x² − 5x + C","6x + 4 + C","x³ + 4x² − 5x + C","3x³ + 4x² − 5 + C"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is afgeleide.", "Mist /2 bij 4x.", "Niet correct (waar zijn /3, /2?)."],
+        wrongHints: [null, "Niet — dat is afgeleide.", "Niet — controleer de primitieve van de term 4x.", "Niet — controleer elke term door te differentiëren."],
         uitlegPad: {
           stappen: [{ titel: "Term voor term", tekst: "∫ 3x² = x³, ∫ 4x = 2x², ∫ −5 = −5x. Totaal: **x³ + 2x² − 5x + C**." }],
           niveaus: { basis: "x³+2x²−5x+C.", simpeler: "Per term primitief", nogSimpeler: "x³+2x²−5x+C" },
@@ -291,7 +291,7 @@ const steps = [
         q: "Bereken **∫[1 tot 2] 1/x dx**.",
         options: ["ln(2) ≈ 0,693","1","ln(2)−ln(1)+1","Niet bepaald"],
         answer: 0,
-        wrongHints: [null, "Niet — dan vergeet je ln-primitief.", "Klopt half (eerste term goed, +1 niet).", "Wel bepaald."],
+        wrongHints: [null, "Niet — dan vergeet je ln-primitief.", "Niet — bij een bepaalde integraal komt er geen +C of +1 bij.", "Wel bepaald."],
         uitlegPad: {
           stappen: [{ titel: "ln-primitief", tekst: "∫ 1/x dx = ln|x|. ∫[1,2] 1/x dx = ln(2) − ln(1) = ln(2) − 0 = **ln(2)** ≈ 0,693." }],
           theorie: "ln(1) = 0 altijd onthouden.",

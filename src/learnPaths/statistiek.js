@@ -410,7 +410,7 @@ const steps = [
         },
       },
       { q: "Modus van 3, 5, 5, 7, 9, 5, 2?", options: ["5","3","9","7"], answer: 0, wrongHints: [null,"3 komt 1× voor. Welke komt vaakst?","9 komt 1× voor.","7 komt 1× voor. Welke 3× voor?"] },
-      { q: "Mediaan van 2, 4, 6, 8?", options: ["5","4","6","20"], answer: 0, wrongHints: [null,"Even aantal — neem GEMIDDELDE van 2 middelste (4 en 6).","Niet — neem gemiddelde van 2 middelste.","Dat is som."] },
+      { q: "Mediaan van 2, 4, 6, 8?", options: ["5","4","6","20"], answer: 0, wrongHints: [null,"Even aantal — neem het GEMIDDELDE van de 2 middelste getallen.","Niet — neem gemiddelde van 2 middelste.","Dat is som."] },
       { q: "Bereik van 12, 5, 18, 9, 3?", options: ["15","18","12","3"], answer: 0, wrongHints: [null, "Max alleen.", "Niet.", "Min alleen."] },
       { q: "Gemiddelde van 10, 20, 30?", options: ["20","60","10","30"], answer: 0, wrongHints: [null, "Dat is som.", "Min.", "Max."] },
       { q: "Wanneer is mediaan zinvoller dan gemiddelde?", options: ["Bij grote uitschieters","Bij weinig getallen","Bij even aantal","Bij oneven aantal"], answer: 0, wrongHints: [null, "Niet — beide werken bij elk aantal.", "Niet — speelt geen rol.", "Niet — speelt geen rol."] },
@@ -479,7 +479,7 @@ const steps = [
         q: "Wat is de **mediaan**?",
         options: ["7", "6,6", "6", "8"],
         answer: 0,
-        wrongHints: [null, "Dat is het gemiddelde, niet de mediaan. Mediaan = middelste waarde.", "Te laag. Cumulatief is de 10e en 11e leerling beide bij cijfer 7.", "Te hoog. De middelste leerlingen zaten op een 7."],
+        wrongHints: [null, "Dat is het gemiddelde, niet de mediaan. Mediaan = middelste waarde.", "Te laag. Tel cumulatief op: bij welk cijfer kom je de 10e en 11e leerling tegen?", "Te hoog. Tel cumulatief vanaf het laagste cijfer tot je bij de 10e en 11e leerling bent."],
         uitlegPad: {
           stappen: [
             { titel: "Middelste positie", tekst: "20 leerlingen (even) → mediaan = gemiddelde van 10e + 11e cijfer in sortering." },
