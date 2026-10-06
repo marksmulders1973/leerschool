@@ -40,7 +40,7 @@ const steps = [
         q: "**Hitler werd Rijkskanselier** op:",
         options: ["30 januari 1933", "1 sept 1939", "9 nov 1923", "1 mei 1945"],
         answer: 0,
-        wrongHints: [null, "Niet — start WO2.", "Niet — München-putsch (mislukt).", "Niet — zijn dood."],
+        wrongHints: [null, "Niet — start WO2.", "Niet — München-putsch (mislukt).", "Niet — toen was Hitler al dood (30 april 1945)."],
         uitlegPad: {
           stappen: [{ titel: "Wettelijk aan macht", tekst: "Hitler kwam legaal aan de macht (NSDAP grootste partij na 1932-verkiezingen). Hindenburg benoemde hem Rijkskanselier 30 jan 1933. Binnen maanden: brand Rijksdag, machtigingswet, eenpartij-staat. Geen gewelddadige greep, maar legaal aan de macht komen en dan het systeem afbreken." }],
           niveaus: { basis: "30-1-1933.", simpeler: "Begin 1933.", nogSimpeler: "1933" },
@@ -105,7 +105,7 @@ const steps = [
         q: "Nederland werd door DE bezet in:",
         options: ["Mei 1940 (10-14 mei)", "September 1939", "Juni 1941", "Juli 1944"],
         answer: 0,
-        wrongHints: [null, "Niet — DE viel Polen aan.", "Niet — USSR-invasie.", "Niet — bevrijding Zuid."],
+        wrongHints: [null, "Niet — DE viel Polen aan.", "Niet — USSR-invasie.", "Niet — toen was Nederland al vier jaar bezet."],
         uitlegPad: {
           stappen: [
             { titel: "5-daagse oorlog", tekst: "10 mei 1940 vroeg ochtend: DE valt NL aan (Westfeldzug). 14 mei: Rotterdam-bombardement → NL capituleert om verdere steden te sparen. Koningin + regering naar Londen. Beneluxlanden + FR allemaal in 6 weken bezet — Blitzkrieg-succes." },
@@ -425,7 +425,7 @@ const steps = [
         q: "**Welke genocide sinds WO2** vond plaats in 1994?",
         options: ["Rwanda (~800k in 100 dagen)", "Bosnië", "Cambodja", "Geen"],
         answer: 0,
-        wrongHints: [null, "Iets vroeger 1992-95.", "1975-79.", "Wel."],
+        wrongHints: [null, "De genocide van Srebrenica was in juli 1995.", "1975-79.", "Wel."],
         uitlegPad: {
           stappen: [
             { titel: "Hutu vs Tutsi", tekst: "Apr 1994: Hutu-extremisten begonnen systematische slachting Tutsi-bevolking + gematigde Hutu. ~800 000 doden in 100 dagen via machetes + geweren. VN-vredesmacht trok zich grotendeels terug. Internationale gemeenschap verzuimde. Belangrijke les: 'Nooit Weer' is geen automatische garantie. Sindsdien meer aandacht voor preventie genocide." },
