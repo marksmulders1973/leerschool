@@ -108,9 +108,9 @@ const steps = [
       },
       {
         q: "Welke stad **was eerst Nederlands** maar werd later New York?",
-        options: ["Nieuw-Amsterdam", "Nieuw-Rotterdam", "Nieuw-Utrecht", "Vlissingen"],
+        options: ["Nieuw-Amsterdam", "Nieuw-Rotterdam", "Nieuw-Zwolle", "Middelburg"],
         answer: 0,
-        wrongHints: [null, "Bestond niet.", "Bestond niet.", "Echte plaats in Zeeland."],
+        wrongHints: [null, "Bestond niet.", "Bestond niet.", "Echte stad in Zeeland, niet in Amerika."],
       },
     ],
   },
