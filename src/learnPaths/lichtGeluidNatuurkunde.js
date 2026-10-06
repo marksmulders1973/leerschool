@@ -98,7 +98,7 @@ const steps = [
         q: "Wat hoor je in **vacuüm**?",
         options: ["Niets", "Hetzelfde", "Sneller geluid", "Meer geluid"],
         answer: 0,
-        wrongHints: [null, "Geen medium = geen geluid.", "Geen geluid mogelijk.", "Geen geluid mogelijk."],
+        wrongHints: [null, "Bedenk: wat heeft geluid nodig om zich te verplaatsen? Is dat er in vacuüm?", "Sneller? Bedenk eerst óf geluid zich hier überhaupt kan verplaatsen.", "Meer? Bedenk eerst óf geluid zich hier überhaupt kan verplaatsen."],
       },
     ],
   },
@@ -119,13 +119,13 @@ const steps = [
         q: "Hoe gaat licht **door lucht**?",
         options: ["In een rechte lijn", "In een cirkel", "In zigzag", "Krom"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Niet in gewone lucht — licht gaat rechtdoor."],
+        wrongHints: [null, "Niet.", "Niet.", "Niet in gewone lucht — denk aan hoe een schaduw ontstaat."],
       },
       {
         q: "Wat is een **echte lichtbron**?",
         options: ["Iets dat zelf licht maakt (zon, lamp)", "Iets dat licht weerkaatst", "Beide", "Donker"],
         answer: 0,
-        wrongHints: [null, "Dat is verlicht voorwerp.", "Specifieker: alleen die zelf produceren.", "Geen licht."],
+        wrongHints: [null, "Dat is een verlicht voorwerp.", "Specifieker — het is er maar één van de twee; let op het woord 'bron'.", "Geen licht."],
       },
       {
         q: "Wat is een **lichtjaar**?",
@@ -240,7 +240,7 @@ const steps = [
         q: "Wat maakt **laserstraal** speciaal?",
         options: ["1 golflengte + in fase, heel sterk", "Onzichtbaar", "Geluid", "Hard"],
         answer: 0,
-        wrongHints: [null, "Wel zichtbaar (de straal).", "Geen geluid.", "Wel sterk, maar specifiek mono+coherent."],
+        wrongHints: [null, "Wel zichtbaar (de straal).", "Geen geluid.", "Sterk is maar een gevolg — wat is er bijzonder aan het licht zelf?"],
       },
       {
         q: "**3 sec tussen bliksem en donder** = afstand?",
@@ -279,7 +279,7 @@ const steps = [
         q: "Welke kleur weerkaatst een **gele citroen**?",
         options: ["Geel", "Wit", "Zwart", "Alle behalve geel"],
         answer: 0,
-        wrongHints: [null, "Niet wit.", "Zwart absorbeert alles.", "Tegenovergesteld."],
+        wrongHints: [null, "Niet wit.", "Zwart absorbeert alles.", "Welke kleur komt bij je oog aan: wat wordt opgenomen of wat wordt teruggekaatst?"],
       },
       {
         q: "Wat is **UV-licht**?",

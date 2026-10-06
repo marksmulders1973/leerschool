@@ -171,7 +171,7 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "Verschil is +25, +37.5, +56.25 (niet constant). Reken factor: 75/50 = 1.5, 112.5/75 = 1.5, 168.75/112.5 = 1.5 (wel constant).",
+          "Kijk naar de verschillen: +25, +37.5, +56.25 — is dat constant? Probeer dan eens nieuw ÷ oud.",
           "Constant = geen groei. Hier is wel groei.",
           "Wel te bepalen — kijk naar verschillen of factoren.",
         ],
@@ -362,9 +362,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "Dat zou *lineair* zijn (200·3). Bij verdubbelen vermenigvuldig je elke uur opnieuw met 2 — hoe vaak doe je dat bij t=3?",
-          "Lijkt geen logische berekening. Tip: 200 vermenigvuldigen met 2, drie keer achter elkaar.",
-          "Dat zou kloppen voor t=2. Maar de vraag is t=3 — één keer extra met 2 vermenigvuldigen.",
+          "Dat zou *lineair* zijn (200·3). Bij verdubbelen vermenigvuldig je elk jaar opnieuw met 2 — hoe vaak doe je dat bij t=3?",
+          "Lijkt geen logische berekening. Verdubbelen = keer 2, en dat elk jaar opnieuw.",
+          "Dat is na 2 jaar. De vraag gaat over 3 jaar — er mist nog een stap.",
         ],
         uitlegPad: {
           stappen: [{ titel: "N(t) = 200·2^t", tekst: "N(3) = 200·2³ = 200·8 = 1600." }],
@@ -402,9 +402,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "Dat is lineair: 1000 + 3·50 = 1150 (zonder rente over rente). Exponentieel: 1000·1.05³ = 1157.63.",
-          "Dat is 1000 + 15 = 1015 (1.5% in totaal). Maar 5% per jaar gedurende 3 jaar = 15.7%.",
-          "Veel te veel — 1500 = +50%, niet +15.7%.",
+          "Dat is lineair: 1000 + 3·50 (zonder rente over rente). Bij een spaarrekening krijg je ook rente over de rente — reken met een factor per jaar.",
+          "Dat is maar 1,5% in totaal. Het is 5% per jaar, drie jaar lang — en elk jaar over een iets groter bedrag.",
+          "Veel te veel — 1500 zou 50% groei zijn. Hoeveel procent komt er in drie jaar ongeveer bij?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Samengestelde rente", tekst: "Rente over rente: 1000·1.05·1.05·1.05 = 1157.63." }],
@@ -444,9 +444,9 @@ ${pts.map(p => `<circle cx="${toX(p.x)}" cy="${toY(p.y)}" r="3" fill="${COLORS.a
         answer: 0,
         wrongHints: [
           null,
-          "Dat is N(1). N(2) = 100 · 1.5² = 100 · 2.25 = 225.",
-          "Dat is 100 · 3 (lineair). Reken: 100 · 1.5².",
-          "Te groot. 100 · 1.5² = 225, niet 450 (dat zou 1.5·100·3 zijn).",
+          "Dat is N(1) — maar er wordt naar N(2) gevraagd. Vul t = 2 in op de macht.",
+          "Dat is 100 · 3 (lineair). Hier staat t in de exponent: hoeveel is 1.5²?",
+          "Te groot. Reken eerst 1.5² uit, dan pas ×100.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Invullen", tekst: "N(2) = 100·1.5² = 100·2.25 = 225." }],
@@ -488,8 +488,8 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Dat is lineair: 800 - 3·80 = 560. Exponentieel: 800 · 0.9³ = 800 · 0.729 = 583.2.",
-          "Dat is 800 - 3·800·0.1 = 800 - 240 = 560 (lineair). Niet exponentieel.",
+          "Dat is lineair: 800 − 3·80. Bij 10% afname per jaar vermenigvuldig je elk jaar met een factor kleiner dan 1.",
+          "240 is wat er lineair af zou gaan (3·80), niet wat er overblijft — en lineair is hier sowieso niet de goede aanpak.",
           "Verkeerde rekening — komma verkeerd?",
         ],
         uitlegPad: {
@@ -572,7 +572,7 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "0.08 is de fractie. De groeifactor is 1 + p = 1.08.",
+          "0.08 is alleen de fractie van de groei. Het oude deel (100%) telt ook mee in de factor.",
           "0.92 = 8% afname. Hier juist groei.",
           "g = 8 zou 700% groei zijn — veel te veel.",
         ],
@@ -595,9 +595,9 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Dat is 50 · 10 (verkeerde berekening). 50 · 2⁵ = 50 · 32 = 1600.",
+          "Dat is 50 · 10 — maar 2⁵ is niet 10. Reken de macht eerst apart uit.",
           "Dat is 2⁵ zonder de 50.",
-          "Dat is 50 · 5 (lineair). Maar 2⁵ = 32, niet 5.",
+          "Dat is 50 · 5 (lineair). De 5 hoort in de exponent, niet als factor.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Reken 2⁵", tekst: "2⁵ = 32. 50·32 = 1600." }],
@@ -618,9 +618,9 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Dat is na 1 halveringstijd. 20 jaar = 4 halveringen: 200/2/2/2/2 = 12.5.",
+          "Dat is na 1 halveringstijd. Hoeveel halveringen van 5 jaar passen er in 20 jaar?",
           "Nooit 0 bij exponentiële afname — dichtbij maar nooit precies 0.",
-          "Dat is lineair (200 - 4·40 = 40). Exponentieel: 200·(0.5)⁴.",
+          "Dat is lineair (200 − 4·40). Bij halveren deel je telkens door 2 — niet steeds hetzelfde getal eraf.",
         ],
         uitlegPad: {
           stappen: [{ titel: "20÷5 = 4 halveringen", tekst: "200→100→50→25→12.5." }],
@@ -641,8 +641,8 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Dat is lineair (5000 + 10·150 = 6500). Bij rente over rente: 5000·1.03¹⁰ = 6720.",
-          "Dat is na 1 jaar. Bij 10 jaar: 5000·1.03¹⁰ ≈ 6720.",
+          "Dat is lineair (5000 + 10·150). Bij rente over rente groeit de rente elk jaar mee — gebruik een factor per jaar.",
+          "Dat is na 1 jaar. Het gaat om 10 jaar — vul t = 10 in op de macht.",
           "Veel te veel — 3% per jaar geeft niet 200% groei in 10 jaar.",
         ],
         uitlegPad: {
@@ -681,7 +681,7 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Bijna goed maar: 'jaar 5' is 4 stappen ná jaar 1, niet 5. Reken N(4) = 200·1.04⁴.",
+          "Bijna goed, maar hoeveel stappen zit jaar 5 ná jaar 1? Tel de stappen, niet het jaartal.",
           "Dat is lineair. Bij 4% per jaar moet je vermenigvuldigen.",
           "Veel te veel — dat zou 300% groei zijn.",
         ],
@@ -709,8 +709,8 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "1.12 = groei 12%. Hier is afname → g = 1 - 0.12 = 0.88.",
-          "Lineair. Exponentieel: 5000·0.88⁵.",
+          "1.12 hoort bij 12% gróei. Hier gaat het om afname — welke factor hoort daarbij?",
+          "Lineair. Bij een percentage per jaar vermenigvuldig je elk jaar met dezelfde factor.",
           "Onlogische berekening. Bij afname per jaar gebruik je de formule met g^t.",
         ],
         uitlegPad: {
@@ -737,9 +737,9 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Dat is product zonder macht. Bij verdubbelingstijd: 25 jaar = 5 verdubbelingen → 2⁵ = 32.",
-          "Lineair (verkeerd). Exponentieel: 100·2⁵ = 3200.",
-          "Onjuist. Bij verdubbelingstijd 5 jaar is 25 jaar = 5 verdubbelingen.",
+          "Dat is een product zonder macht. Hoeveel verdubbelingen van 5 jaar passen er in 25 jaar?",
+          "Lineair (verkeerd). Elke verdubbeling is ×2, en dat een aantal keer achter elkaar.",
+          "Onjuist. Tel eerst hoeveel verdubbelingstijden er in 25 jaar passen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "25÷5 = 5 verdubbelingen", tekst: "100·2⁵ = 100·32 = 3200." }],
@@ -777,8 +777,8 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Lineair, geen rente over rente. Spaarrekening = exponentieel: 2000·1.06¹² ≈ 4024.",
-          "1.72 zou 72% groei zijn na 12 jaar. Maar 1.06¹² ≈ 2.012 → 2000·2.012 ≈ €4024.",
+          "Lineair, geen rente over rente. Een spaarrekening is exponentieel: factor per jaar, 12 jaar lang.",
+          "1.72 is 12 × 0.06 erbij — dat is weer lineair. Bij rente over rente wordt de totale factor groter dan 1.72.",
           "Dat is alleen rente (€1440), niet eindbedrag. Eindbedrag = begin + groei.",
         ],
         uitlegPad: {
@@ -805,9 +805,9 @@ ${pts.filter((p, i) => i % 2 === 0).map(p => `<circle cx="${toX(p.x)}" cy="${toY
         answer: 0,
         wrongHints: [
           null,
-          "Dat is na 1 halveringstijd. 15 uur = 3 halveringen: 200·(0.5)³ = 25.",
+          "Dat is na 1 halveringstijd. Hoeveel halveringen van 5 uur passen er in 15 uur?",
           "Cafeïne wordt nooit precies 0. Dichtbij maar niet 0.",
-          "Onjuist. Reken: 15/5 = 3 halveringen, 200·(1/2)³ = 25.",
+          "Onjuist. Deel de totale tijd door de halveringstijd en halveer zo vaak.",
         ],
         uitlegPad: {
           stappen: [{ titel: "15÷5 = 3 halveringen", tekst: "200→100→50→25 mg." }],

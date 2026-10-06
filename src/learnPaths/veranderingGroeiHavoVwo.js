@@ -70,7 +70,7 @@ const steps = [
         q: "Tussen (1, 5) en (4, 14). **Helling b**?",
         options: ["3","9","2","4,5"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen Δy, niet ÷Δx.", "Niet correct.", "Niet — 9/3=3."],
+        wrongHints: [null, "Niet — alleen Δy, niet ÷Δx.", "Niet correct.", "Niet — deel Δy door Δx, niet door iets anders."],
         uitlegPad: {
           stappen: [{ titel: "b = Δy/Δx", tekst: "b = (14−5) / (4−1) = 9/3 = **3**." }],
           niveaus: { basis: "3.", simpeler: "9/3=3", nogSimpeler: "3" },

@@ -92,7 +92,7 @@ const steps = [
       {
         q: "Een lichtstraal in water (n=1,33) bereikt het oppervlak met **50°**. Wat gebeurt?",
         options: [
-          "Totale interne reflectie (50° > θ_g ≈ 48,8°)",
+          "Totale interne reflectie — niets komt uit het water",
           "Breekt en komt uit, hoek ~37°",
           "Breekt en komt uit, hoek ~90°",
           "Reflecteert volledig én breekt"

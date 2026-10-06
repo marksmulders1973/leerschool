@@ -95,7 +95,7 @@ const steps = [
         q: "Een massa-veer-systeem heeft T = 0,5 s. Je **verdubbelt de massa**. Nieuwe T?",
         options: ["0,71 s", "1,0 s", "0,25 s", "0,5 s"],
         answer: 0,
-        wrongHints: [null, "Niet — T hangt af van √m, niet van m. Verdubbelen van m geeft factor √2.", "Niet — dat zou kwart-versie zijn.", "Niet — er verandert wel iets."],
+        wrongHints: [null, "Niet — T hangt niet rechtstreeks van m af. Kijk in de formule T = 2π·√(m/C) wat er met T gebeurt als m verdubbelt.", "Niet — dat zou kwart-versie zijn.", "Niet — er verandert wel iets."],
         uitlegPad: {
           stappen: [
             { titel: "T ~ √m", tekst: "T = 2π·√(m/C). Verdubbelen van m geeft factor √2 ≈ 1,41 op T. Dus T_nieuw = 0,5 × √2 ≈ **0,71 s**." },

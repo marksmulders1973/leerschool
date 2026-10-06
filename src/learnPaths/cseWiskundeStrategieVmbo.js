@@ -155,9 +155,9 @@ const steps = [
       },
       {
         q: "Veiligste manier om **25% van X** te rekenen?",
-        options: ["× 0,25", "× 25%", "÷ 4", "Alles werkt"],
+        options: ["× 0,25", "× 25%", "× 25", "Alles werkt"],
         answer: 0,
-        wrongHints: [null, "%-knop niet uniform.", "Klopt qua antwoord, maar omslachtiger.", "%-knop kan fout gaan."],
+        wrongHints: [null, "%-knop niet uniform.", "Dat maakt het getal 25 keer zo groot — procent betekent 'per honderd'.", "%-knop kan fout gaan."],
       },
       {
         q: "Bij goniometrie op rekenmachine — welke modus?",

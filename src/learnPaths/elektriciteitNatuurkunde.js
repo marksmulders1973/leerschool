@@ -317,7 +317,7 @@ const steps = [
           "Te hoog — dat zou hoogspanning zijn.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "230 V in NL", tekst: "Standaard stopcontact in Nederland (en heel Europa) levert 230 V wisselspanning. In de VS is dit 110 V — andere stekkers nodig daar." }],
+          stappen: [{ titel: "230 V in NL", tekst: "Standaard stopcontact in Nederland (en heel Europa) levert 230 V wisselspanning. In de VS is dit 120 V — andere stekkers nodig daar." }],
           woorden: [{ woord: "wisselspanning", uitleg: "+ en − wisselen 50× per sec" }],
           theorie: "Vroeger 220 V, nu 230 V. Levensgevaarlijk bij direct contact.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Telefoonoplader: 230 V uit muur → 5 V naar telefoon" }],
@@ -512,7 +512,7 @@ const steps = [
           null,
           "Spanning splitst juist over de verbruikers.",
           "Weerstand kan per onderdeel verschillen.",
-          "Wel degelijk iets — de stroom door elk is gelijk.",
+          "Wel degelijk iets — alle stroom gaat door één en hetzelfde pad. Wat blijft dan overal hetzelfde?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Serie = stroom overal gelijk", tekst: "In een serieschakeling gaan alle elektronen door dezelfde baan, dus dezelfde I door elk onderdeel. Spanning verdeelt zich, stroom blijft gelijk." }],
@@ -531,7 +531,7 @@ const steps = [
           null,
           "Stroomsterkte splitst juist.",
           "Weerstand kan per tak verschillen.",
-          "Wel — de spanning over elke tak is gelijk aan de bron.",
+          "Wel — elke tak zit rechtstreeks tussen + en − van de bron. Wat is dan voor elke tak hetzelfde?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Parallel = spanning overal gelijk", tekst: "In een parallelschakeling heeft elke tak zijn eigen pad tussen + en −. Spanning over elke tak = bron-spanning. Stroom splitst zich." }],
@@ -554,7 +554,7 @@ const steps = [
         wrongHints: [
           null,
           "Bij parallel zou dit kloppen, maar in serie...",
-          "De kring is gebroken — alles ligt stil.",
+          "Is er in een serieschakeling nog een ander pad voor de stroom als één lamp de kring onderbreekt?",
           "Geen ontploffing — gewoon stilstand.",
         ],
         uitlegPad: {
@@ -772,7 +772,7 @@ const steps = [
         wrongHints: [
           null,
           "Dat zou parallel geven (R-totaal lager dan elk).",
-          "In serie tellen ze op.",
+          "Twee weerstanden achter elkaar in één pad — blijft de totale weerstand dan gelijk aan één ervan?",
           "Te veel — in serie tel je op, je vermenigvuldigt niet.",
         ],
         uitlegPad: {

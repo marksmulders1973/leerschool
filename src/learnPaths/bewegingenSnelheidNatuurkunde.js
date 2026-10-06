@@ -101,7 +101,7 @@ const steps = [
         q: "Auto rijdt **60 km in 1 uur** — wat is de **gemiddelde snelheid**?",
         options: ["60 km/u", "30 km/u", "120 km/u", "1 km/u"],
         answer: 0,
-        wrongHints: [null, "Helft, niet correct.", "Verdubbeld, niet correct.", "Te traag."],
+        wrongHints: [null, "Niet — kijk nog eens naar de afstand en de tijd.", "Niet — kijk nog eens naar de afstand en de tijd.", "Te traag."],
       },
       {
         q: "Hoeveel **m/s** is **36 km/u**?",
@@ -122,13 +122,13 @@ const steps = [
         q: "Hoe **reken je m/s om naar km/u**?",
         options: ["× 3,6", "÷ 3,6", "× 60", "÷ 60"],
         answer: 0,
-        wrongHints: [null, "Andersom.", "Wel verband maar specifiek 3,6.", "Andersom."],
+        wrongHints: [null, "Andersom.", "Wel verband maar specifiek 3,6.", "Niet — 60 hoort bij minuten; hier gaat het om meters én uren samen."],
       },
       {
         q: "**20 m/s** = ... km/u?",
         options: ["72", "20", "36", "180"],
         answer: 0,
-        wrongHints: [null, "Geen omrekening.", "Helft.", "Verkeerd."],
+        wrongHints: [null, "Geen omrekening.", "Niet — met welke factor reken je m/s om naar km/u?", "Verkeerd."],
       },
       {
         q: "**100 km/u** ≈ ... m/s?",
@@ -176,7 +176,7 @@ const steps = [
         wrongHints: [null, "Dat is de snelheid, niet de versnelling.", "Tijd, niet versnelling.", "Komma verkeerd."],
       },
       {
-        q: "**Zwaartekracht** op aarde ongeveer?",
+        q: "**Zwaartekrachtversnelling** (valversnelling) op aarde ongeveer?",
         options: ["~10 m/s²", "~1 m/s²", "~100 m/s²", "0 m/s²"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel.", "Wel zwaartekracht."],
@@ -272,7 +272,7 @@ const steps = [
         q: "**60 km in 30 min**. Snelheid?",
         options: ["120 km/u", "30 km/u", "60 km/u", "2 km/u"],
         answer: 0,
-        wrongHints: [null, "Helft.", "Niet verhouding.", "Te weinig."],
+        wrongHints: [null, "Niet — 30 minuten is geen 30 uur. Hoeveel uur is 30 min?", "Niet — de 60 km is niet in een heel uur gereden.", "Te weinig."],
       },
       {
         q: "**5 m/s** in km/u?",
