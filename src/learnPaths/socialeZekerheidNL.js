@@ -272,9 +272,9 @@ const steps = [
       },
       {
         q: "Wat is de **Toeslagenaffaire** (2019-2021)?",
-        options: ["Belastingdienst beschuldigde onterecht ouders van fraude","Schandaal in kabinet Rutte over auto's","Affaire Eurovisie","Bouw-fraude"],
+        options: ["Belastingdienst beschuldigde onterecht ouders van fraude","Ministers gaven te veel geld uit aan dienstauto's","Omroep gaf geld van het Songfestival verkeerd uit","Bouwbedrijven maakten verboden prijsafspraken"],
         answer: 0,
-        wrongHints: [null, "Niet — auto's geen rol.", "Niet relevant.", "Niet — andere context."],
+        wrongHints: [null, "Auto's speelden geen rol. Kijk naar het woord 'toeslagen' in de naam.", "Wat heeft het Songfestival met toeslagen te maken?", "Dat was de bouwfraude rond 2001 — een andere affaire."],
         uitlegPad: {
           stappen: [{ titel: "Toeslagenaffaire = grote staat-schande", tekst: "Belastingdienst beschuldigde tienduizenden ouders onterecht van **kinderopvangtoeslag-fraude** (vaak mensen met een dubbele nationaliteit / migratie-achtergrond). Moesten tienduizenden euro's terugbetalen. Veel gezinnen geruïneerd — schuldenproblemen, scheidingen, uithuisplaatsingen kinderen. **Kabinet Rutte III** trad af **15 januari 2021** na kritisch onderzoeksrapport." }],
           theorie: "Toets-actueel: toeslagenaffaire = een van de grootste overheidsschandalen. Excuses + €30.000 compensatie per ouder. Rutte bleef wel premier.",

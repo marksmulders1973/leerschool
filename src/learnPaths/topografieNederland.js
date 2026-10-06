@@ -470,8 +470,8 @@ const steps = [
         wrongHints: [null,"Marken is een dorp, geen molenpark.","Volendam heeft enkele molens maar is bekend om visserij.","Schiphol is een vliegveld."],
         uitlegPad: {
           stappen: [{ titel: "Kinderdijk — UNESCO 1997", tekst: "Kinderdijk = dorp in Zuid-Holland (bij Rotterdam). 19 windmolens uit 1740. UNESCO Werelderfgoed sinds 1997. Bekendste molenpark Nederland. Toeristen wereldwijd komen kijken. Molens pompten vroeger water uit polders weg — want het dorp ligt onder zeeniveau." }],
-          woorden: [{ woord: "Kinderdijk", uitleg: "19 molens uit 1740 op 1 plek. UNESCO. ~600.000 toeristen/jaar." }, { woord: "UNESCO Werelderfgoed", uitleg: "Lijst van waardevol cultureel/natuur-erfgoed wereldwijd. NL heeft 12 erfgoederen." }],
-          theorie: "Andere NL-werelderfgoeden: Schokland, Beemster, Stelling van Amsterdam, Defensielijn, Waddenzee. Kinderdijk is meest gefotografeerd door Hollandse 'molen+wolk'-cliché.",
+          woorden: [{ woord: "Kinderdijk", uitleg: "19 molens uit 1740 op 1 plek. UNESCO. ~600.000 toeristen/jaar." }, { woord: "UNESCO Werelderfgoed", uitleg: "Lijst van waardevol cultureel/natuur-erfgoed wereldwijd. Het Koninkrijk der Nederlanden heeft 13 erfgoederen." }],
+          theorie: "Andere NL-werelderfgoeden: Schokland, Beemster, Hollandse Waterlinies (met de Stelling van Amsterdam), Waddenzee. Kinderdijk is meest gefotografeerd door Hollandse 'molen+wolk'-cliché.",
           voorbeelden: [{ type: "andere molens", tekst: "Zaanse Schans (Noord-Holland) heeft ook molens, maar nieuwer + minder. Kinderdijk = 19 originele." }],
           basiskennis: [{ onderwerp: "Niet andere", uitleg: "Marken = vissersdorp. Volendam = klederdracht/vissers. Schiphol = vliegveld." }],
           niveaus: { basis: "Kinderdijk.", simpeler: "19 oude molens UNESCO = Kinderdijk, Zuid-Holland.", nogSimpeler: "Kinderdijk" },

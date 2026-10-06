@@ -633,9 +633,9 @@ const steps = [
       },
       {
         q: "Wat is een **flexitariër**?",
-        options: ["Iemand die minder vlees eet, maar niet helemaal geen", "Veganist", "Vegetariër", "Iemand die alleen vis eet"],
+        options: ["Iemand die minder vlees eet, maar niet helemaal geen", "Iemand die helemaal geen dierlijke producten eet", "Iemand die geen vlees en geen vis eet", "Iemand die geen vlees eet, maar wel vis"],
         answer: 0,
-        wrongHints: [null, "Veganist eet helemaal geen dierlijke producten.", "Een vegetariër eet helemaal geen vlees.", "Dat is een pescatariër."],
+        wrongHints: [null, "Dat is een veganist.", "Dat is een vegetariër.", "Dat is een pescatariër."],
         uitlegPad: {
           stappen: [{ titel: "Tussen vleeseter en vegetariër", tekst: "Flexitariër = letterlijk 'flexibele vegetariër'. Eet WEL vlees, maar BEWUST minder (bv. 2-3× per week ipv elke dag). Doel: milieu-impact verlagen + gezondheid + dierenwelzijn — zonder rigoureus al het vlees op te geven. Populairste 'duurzame eet-stijl' in NL." }],
           woorden: [{ woord: "flexitariër", uitleg: "Eet minder vlees, niet helemaal geen. Compromis." }, { woord: "vegetariër", uitleg: "Eet GEEN vlees + GEEN vis. Wel zuivel + eieren." }, { woord: "veganist", uitleg: "Eet GEEN dierlijke producten. Geen vlees/vis/zuivel/eieren/honing." }, { woord: "pescatariër", uitleg: "Eet WEL vis, GEEN vlees. Tussen vegetariër + vleeseter." }],

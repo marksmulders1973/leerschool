@@ -411,7 +411,7 @@ const steps = [
         q: "Welk hulpwerkwoord bij **manger**?",
         options: ["avoir", "être", "Beide kunnen", "Geen"],
         answer: 0,
-        wrongHints: [null, "Manger = activiteit met object → avoir.", "Manger gaat altijd met avoir.", "Passé composé heeft hulpwerkwoord."],
+        wrongHints: [null, "Être hoort bij een klein groepje werkwoorden van beweging of verandering (aller, venir, naître…). Hoort manger daarbij?", "Een werkwoord heeft in de passé composé meestal één vast hulpwerkwoord. Welke groep is de grote standaardgroep?", "Passé composé heeft hulpwerkwoord."],
         uitlegPad: {
           stappen: [{ titel: "Manger → avoir", tekst: "Eten = activiteit met object → avoir." }],
           woorden: [{ woord: "lijdend voorwerp", uitleg: "wat eet je? = object" }],

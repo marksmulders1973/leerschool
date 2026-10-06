@@ -134,9 +134,9 @@ const steps = [
       },
       {
         q: "Wat is 0,75 als breuk (zo eenvoudig mogelijk)?",
-        options: ["¾", "7/5", "75/10", "3/10"],
+        options: ["3/4", "7/5", "75/10", "3/10"],
         answer: 0,
-        wrongHints: [null, "Dat is meer dan 1.", "Dat is 7,5 — veel te groot. Denk aan kwarten.", "Dat is 0,3, niet 0,75."],
+        wrongHints: [null, "Dat is meer dan 1.", "Dat is 7,5 — veel te groot. Hoeveel cijfers staan er achter de komma?", "Dat is 0,3, niet 0,75."],
         uitlegPad: {
           stappen: [
             { titel: "Schrijf als honderdsten", tekst: "0,75 heeft twee cijfers achter de komma, dus dat zijn 75 honderdsten: 75/100." },

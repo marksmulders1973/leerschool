@@ -46,26 +46,26 @@ const steps = [
     interactiveComponent: Wereldbol,
     checks: [
       {
-        q: "Hoeveel **continenten** leer je op een Nederlandse school?",
+        q: "Je telt **Noord- en Zuid-Amerika apart** en je telt **Antarctica** mee. Hoeveel **continenten** zijn er dan?",
         options: ["7", "5", "6", "8"],
         answer: 0,
-        wrongHints: [null, "Soms wordt 5 gezegd, maar controleer welk aantal standaard gehanteerd wordt in de geografie.", "Sommige landen tellen anders, maar wat zegt de standaard-indeling in de Nederlandse schoolgeografie?", "Niet 8."],
+        wrongHints: [null, "5 hoort bij een oude indeling met Amerika als één geheel en zonder Antarctica. Tel opnieuw.", "Heb je beide Amerika's én Antarctica meegeteld?", "Niet 8."],
         uitlegPad: {
           stappen: [
-            { titel: "De 7 continenten — op de Nederlandse school", tekst: "In Nederland leer je dat er **7 continenten** zijn. Die hebben we hier voor de Doorstroomtoets nodig: Noord-Amerika, Zuid-Amerika, Europa, Afrika, Azië, Oceanië, Antarctica." },
-            { titel: "Waarom soms 5 of 6?", tekst: "In sommige andere landen tellen ze anders. Bv. **Noord + Zuid-Amerika als 1** (= 6 totaal) of **Europa + Azië als 1 'Eurazië'** (= 6 totaal). In Nederland: **altijd 7**." },
+            { titel: "De 7 continenten — op de Nederlandse school", tekst: "In deze les (en in de meeste schoolboeken) tel je **7 continenten**: Noord-Amerika, Zuid-Amerika, Europa, Afrika, Azië, Oceanië, Antarctica." },
+            { titel: "Waarom soms 5 of 6?", tekst: "In sommige andere landen tellen ze anders. Bv. **Noord + Zuid-Amerika als 1** (= 6 totaal) of **Europa + Azië als 1 'Eurazië'** (= 6 totaal). In deze les tellen we er **7**." },
             { titel: "Onthoud-truc", tekst: "Tel mee op je vingers: 1) N-Amerika, 2) Z-Amerika, 3) Europa, 4) Afrika, 5) Azië, 6) Oceanië, 7) Antarctica. **7 vingers** — 1 hand + 2 erbij." },
           ],
           woorden: [
             { woord: "continent", uitleg: "Groot stuk land op de aarde." },
             { woord: "Antarctica", uitleg: "Het zuid-pool-continent, alleen ijs en pinguïns." },
           ],
-          theorie: "Toets-feit: in Nederland is het antwoord ALTIJD 7 continenten. Andere systemen bestaan, maar zijn niet wat de toets vraagt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
+          theorie: "Er bestaan verschillende indelingen (5, 6 of 7). In deze les en in de meeste schoolboeken tel je 7 continenten. Lees bij een toetsvraag altijd goed welke indeling bedoeld wordt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
           voorbeelden: [
             { type: "stap", tekst: "Trek de wereldkaart in je hoofd: Amerika links (Noord boven, Zuid onder = 2), Europa + Afrika in midden (= 2), Azië rechts (= 1), Australië/Oceanië onder Azië (= 1), Antarctica onderin (= 1). Totaal 7." },
-            { type: "stap", tekst: "Veel-fout: 5 zeggen (oude indeling). Op de toets altijd 7." },
+            { type: "stap", tekst: "Veel-fout: 5 zeggen (oude indeling zonder Antarctica en met één Amerika)." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Zegt iemand '5 continenten'? Dat is verouderd. Op de Doorstroomtoets = 7. Schrijf dit getal vet in je hoofd." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Zegt iemand '5 continenten'? Dan telt die Amerika als één geheel en laat Antarctica weg. Met beide Amerika's en Antarctica erbij kom je op 7." }],
           niveaus: {
             basis: "7 continenten.",
             simpeler: "Tel ze op: N-Am, Z-Am, Europa, Afrika, Azië, Oceanië, Antarctica. 7.",

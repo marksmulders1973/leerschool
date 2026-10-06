@@ -80,7 +80,7 @@ const steps = [
         q: "Welke letter komt vlak vóór de S?",
         options: ["T", "R", "U", "Q"],
         answer: 1,
-        wrongHints: ["T komt juist ná S.", null, "U komt later.", "Q komt eerder dan R."],
+        wrongHints: ["T komt juist ná S.", null, "U komt later.", "Q staat niet direct naast S. Zeg het alfabet op vanaf P."],
         uitlegPad: {
           stappen: [{ titel: "…Q R S T…", tekst: "In het alfabet komt vlak vóór de S de R (… Q R S T …)." }],
           niveaus: {

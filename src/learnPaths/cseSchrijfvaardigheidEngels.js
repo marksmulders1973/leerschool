@@ -169,10 +169,10 @@ const steps = [
         wrongHints: [null, "Te veel.", "Geen kernpunt.", "Geen kernpunt."],
       },
       {
-        q: "**Plagiat** vermijden hoe?",
-        options: ["Eigen woorden + zinsbouw", "Letterlijk overnemen", "Wijzig 1 woord", "Latere alinea's pakken"],
+        q: "Hoe vermijd je **plagiaat**?",
+        options: ["Eigen woorden + zinsbouw", "Letterlijk overnemen", "Wijzig 1 woord", "Alleen latere alinea's overnemen"],
         answer: 0,
-        wrongHints: [null, "Plagiat.", "Nog steeds plagiat.", "Niet de regel."],
+        wrongHints: [null, "Dat is juist plagiaat.", "Nog steeds plagiaat.", "Overnemen blijft overnemen, welke alinea ook."],
       },
       {
         q: "Een **samenvatting** is meestal hoeveel **korter** dan het origineel?",

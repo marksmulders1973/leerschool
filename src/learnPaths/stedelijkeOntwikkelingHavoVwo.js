@@ -240,9 +240,9 @@ const steps = [
         q: "**Lagos** (Nigeria) is bijzonder door:",
         options: [
           "Een van de snelst groeiende megacities ter wereld",
-          "Oudste stad",
-          "Hoogste BBP",
-          "Beste OV"
+          "Een van de oudste steden ter wereld",
+          "Het hoogste inkomen per inwoner van Afrika",
+          "Het beste openbaar vervoer van Afrika"
         ],
         answer: 0,
         wrongHints: [null, "Niet — er zijn veel oudere steden.", "Niet — laag BBP/capita.", "Niet — files zijn extreem."],

@@ -137,9 +137,9 @@ const steps = [
       },
       {
         q: "Klopt het dat vmbo een **'laag' niveau** is?",
-        options: ["Nee — het is praktisch en leidt naar veel beroepen", "Ja, het is voor wie niets kan", "Ja, je leert er niets", "Ja, er komt niets na"],
+        options: ["Nee — het is praktisch en leidt naar veel beroepen", "Ja — het is alleen voor wie niets kan", "Nee — vmbo en havo zijn precies hetzelfde", "Ja — na het vmbo kun je niet verder leren"],
         answer: 0,
-        wrongHints: [null, "Niet waar.", "Niet waar.", "Niet waar — mbo komt erna."],
+        wrongHints: [null, "Niet waar.", "Kijk naar wat het vmbo anders doet dan de havo.", "Niet waar — denk aan wat er na het vmbo komt."],
       },
       {
         q: "Welke vmbo-leerweg heeft **het meest praktijk** van de vier?",

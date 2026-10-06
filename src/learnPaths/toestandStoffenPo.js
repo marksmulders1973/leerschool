@@ -380,7 +380,7 @@ const steps = [
         q: "Wat **vult een gas**?",
         options: ["De hele ruimte", "Onderkant van ruimte", "Bovenkant", "Niets"],
         answer: 0,
-        wrongHints: [null, "Vloeistof doet dat.", "Hangt af van zwaarte, maar normaal gas verspreidt zich helemaal.", "Wel iets."],
+        wrongHints: [null, "Vloeistof doet dat.", "Gasdeeltjes bewegen snel alle kanten op. Blijven ze dan alleen boven hangen?", "Wel iets."],
       },
       {
         q: "**Stoom** is welke toestand?",

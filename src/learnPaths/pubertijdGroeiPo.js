@@ -46,9 +46,9 @@ const steps = [
       },
       {
         q: "Wat zijn **hormonen**?",
-        options: ["Stoffen die signalen geven in lichaam", "Vitaminen", "Bot", "Spier"],
+        options: ["Stoffen die signalen geven in je lichaam", "Stoffen die je alleen via je eten binnenkrijgt", "Harde delen die je lichaam steun geven", "Weefsel waarmee je lichaam beweegt"],
         answer: 0,
-        wrongHints: [null, "Anders.", "Niet.", "Niet."],
+        wrongHints: [null, "Dat zijn vitaminen. Hormonen maakt je lichaam zelf.", "Dat zijn botten. Hormonen reizen door je bloed.", "Dat zijn spieren. Hormonen reizen door je bloed."],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn hormonen?", tekst: "**Hormonen** zijn chemische stoffen die jouw lichaam zelf maakt. Ze werken als **signaal-stoffen**: ze sturen instructies van het ene orgaan naar het andere via het bloed." },
