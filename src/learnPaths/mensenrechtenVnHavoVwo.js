@@ -33,7 +33,7 @@ const steps = [
       {
         q: "**1e generatie mensenrechten** zijn:",
         options: [
-          "Burger + politieke (vrijheid, gelijkheid, eerlijk proces)",
+          "Burger- en politieke rechten",
           "Economische rechten",
           "Collectieve rechten",
           "Geen onderscheid"
@@ -48,7 +48,7 @@ const steps = [
       {
         q: "**EVRM** (Europees Verdrag) wordt afgedwongen door:",
         options: [
-          "Europees Hof voor de Rechten van de Mens (Straatsburg)",
+          "Europees Hof voor de Rechten van de Mens",
           "VN-Veiligheidsraad",
           "Internationaal Strafhof Den Haag",
           "Geen rechtbank"
@@ -63,7 +63,7 @@ const steps = [
       {
         q: "**Convention on the Rights of the Child** (CRC):",
         options: [
-          "Kinderrechten-verdrag 1989, bijna alle landen geratificeerd",
+          "Kinderrechtenverdrag uit 1989",
           "Volwassenen-verdrag",
           "Bestaat niet",
           "Alleen Europees"
@@ -138,7 +138,7 @@ const steps = [
       },
       {
         q: "Huidige **VN-Secretaris-Generaal**:",
-        options: ["António Guterres (Portugees, sinds 2017)", "Ban Ki-moon", "Kofi Annan", "Kanselier Merkel"],
+        options: ["António Guterres", "Ban Ki-moon", "Kofi Annan", "Kanselier Merkel"],
         answer: 0,
         wrongHints: [null, "Vorige (2007-16).", "Vorige (1997-06).", "Niet VN."],
         uitlegPad: {
@@ -163,12 +163,12 @@ const steps = [
   {
     title: "Internationale rechtspraak — ICC + Tribunalen",
     explanation:
-      "**Drie hoofd-internationale rechtbanken**:\n\n**1. Internationaal Gerechtshof (ICJ)** Den Haag:\n• VN-hoofd-orgaan (zie stap B).\n• Tussen STATEN: grenzen, verdragen, etc.\n• Bekende zaken: Zuid-Afrika vs Israel (genocide-aanklacht Gaza), Bosnië vs Servië (Srebrenica, 2007).\n\n**2. Internationaal Strafhof (ICC)** Den Haag:\n• Onafhankelijk van VN, opgericht 2002 (Statuut van Rome 1998).\n• Berecht INDIVIDUEN voor:\n  - Oorlogsmisdaden.\n  - Misdaden tegen de menselijkheid.\n  - Genocide.\n  - Agressie-misdrijf.\n• 124 staten lid (NL, EU, etc.). **NIET-leden**: VS, China, Rusland, India, Israel.\n• Arrestatiebevelen lopen ondertussen voor Poetin (Oekraïne deportatie kinderen) + Netanyahu (Gaza-conflict).\n• Probleem: ICC heeft geen eigen politie → afhankelijk van staten om verdachten te arresteren.\n\n**3. Ad-hoc tribunalen** (specifiek conflict):\n• **ICTY** (1993-2017): Joegoslavië-tribunaal Den Haag. Berechtte Milošević, Karadžić, Mladić.\n• **ICTR** (1994-2015): Rwanda-tribunaal Arusha. Berechtte hutu-leiders voor genocide.\n• **Speciale rechtbanken** Sierra Leone, Cambodja, Libanon.\n\n**Geschiedenis**:\n• Vóór 1945: weinig internationaal recht-handhaving.\n• **Neurenberg-processen** (1945-46): eerste keer dat staatsleiders berecht werden voor oorlogsmisdaden. Beginsel: 'orders volgen' geen verdediging.\n• 1948 Genocideverdrag.\n• 1949 Geneefse Conventies (4 verdragen + protocollen) over oorlogsrecht: bescherming krijgsgevangenen, gewonden, burgers, medisch personeel.\n\n**Bekende cases**:\n• **Adolf Eichmann** (Israel 1961): organisator van de deportaties voor de Endlösung. Geëxecuteerd.\n• **Milošević** (ICTY): stierf in cel 2006 voor uitspraak.\n• **Charles Taylor** (Sierra Leone): ex-president Liberia, 50 j voor oorlogsmisdaden.\n• **Karadžić + Mladić**: Bosnisch-Servische leiders, levenslang voor Srebrenica.\n• **Lubanga** (DRC): eerste ICC-veroordeling (2012) voor kindsoldaten.\n\n**Genocide-criteria** (1948-verdrag):\n• Doel: hele etnische, raciale, nationale of religieuze groep VERNIETIGEN.\n• Niet alle massamoord = genocide (vereist 'special intent' = dolus specialis).\n• Bewezen: Holocaust, Rwanda, Srebrenica.\n• Discussie: Armeense 1915 (Turkije ontkent), Oeigoeren-huidig (China ontkent).\n\n**Universele jurisdictie**:\n• Sommige misdrijven (genocide, marteling) zo ernstig dat ELKE staat ze mag berechten, ongeacht waar gepleegd.\n• Spaanse rechter Garzón probeerde Pinochet (Chili) te berechten 1998.\n• Vandaag NL-rechtbanken: Syrische ex-officieren voor martelingen.\n\n**Beperkingen**:\n• Trage processen (jaren lang).\n• Hoge kosten.\n• Politiek beïnvloed (sommige verdachten beschermd door eigen staat).\n• Selectieve uitvoering (vooral Afrikaanse verdachten, ICC bekritiseerd).\n• Geen tanden: VS + China + Rusland erkennen ICC niet.",
+      "**Drie hoofd-internationale rechtbanken**:\n\n**1. Internationaal Gerechtshof (ICJ)** Den Haag:\n• VN-hoofd-orgaan (zie stap 2).\n• Tussen STATEN: grenzen, verdragen, etc.\n• Bekende zaken: Zuid-Afrika vs Israel (genocide-aanklacht Gaza), Bosnië vs Servië (Srebrenica, 2007).\n\n**2. Internationaal Strafhof (ICC)** Den Haag:\n• Onafhankelijk van VN, opgericht 2002 (Statuut van Rome 1998).\n• Berecht INDIVIDUEN voor:\n  - Oorlogsmisdaden.\n  - Misdaden tegen de menselijkheid.\n  - Genocide.\n  - Agressie-misdrijf.\n• 124 staten lid (NL, EU, etc.). **NIET-leden**: VS, China, Rusland, India, Israel.\n• Arrestatiebevelen lopen ondertussen voor Poetin (Oekraïne deportatie kinderen) + Netanyahu (Gaza-conflict).\n• Probleem: ICC heeft geen eigen politie → afhankelijk van staten om verdachten te arresteren.\n\n**3. Ad-hoc tribunalen** (specifiek conflict):\n• **ICTY** (1993-2017): Joegoslavië-tribunaal Den Haag. Berechtte Milošević, Karadžić, Mladić.\n• **ICTR** (1994-2015): Rwanda-tribunaal Arusha. Berechtte hutu-leiders voor genocide.\n• **Speciale rechtbanken** Sierra Leone, Cambodja, Libanon.\n\n**Geschiedenis**:\n• Vóór 1945: weinig internationaal recht-handhaving.\n• **Neurenberg-processen** (1945-46): eerste keer dat staatsleiders berecht werden voor oorlogsmisdaden. Beginsel: 'orders volgen' geen verdediging.\n• 1948 Genocideverdrag.\n• 1949 Geneefse Conventies (4 verdragen + protocollen) over oorlogsrecht: bescherming krijgsgevangenen, gewonden, burgers, medisch personeel.\n\n**Bekende cases**:\n• **Adolf Eichmann** (Israel 1961): organisator van de deportaties voor de Endlösung. Geëxecuteerd.\n• **Milošević** (ICTY): stierf in cel 2006 voor uitspraak.\n• **Charles Taylor** (Sierra Leone): ex-president Liberia, 50 j voor oorlogsmisdaden.\n• **Karadžić + Mladić**: Bosnisch-Servische leiders, levenslang voor Srebrenica.\n• **Lubanga** (DRC): eerste ICC-veroordeling (2012) voor kindsoldaten.\n\n**Genocide-criteria** (1948-verdrag):\n• Doel: een nationale, etnische, raciale of religieuze groep geheel of gedeeltelijk VERNIETIGEN.\n• Niet alle massamoord = genocide (vereist 'special intent' = dolus specialis).\n• Bewezen: Holocaust, Rwanda, Srebrenica.\n• Discussie: Armeense 1915 (Turkije ontkent), Oeigoeren-huidig (China ontkent).\n\n**Universele jurisdictie**:\n• Sommige misdrijven (genocide, marteling) zo ernstig dat ELKE staat ze mag berechten, ongeacht waar gepleegd.\n• Spaanse rechter Garzón probeerde Pinochet (Chili) te berechten 1998.\n• Vandaag NL-rechtbanken: Syrische ex-officieren voor martelingen.\n\n**Beperkingen**:\n• Trage processen (jaren lang).\n• Hoge kosten.\n• Politiek beïnvloed (sommige verdachten beschermd door eigen staat).\n• Selectieve uitvoering (vooral Afrikaanse verdachten, ICC bekritiseerd).\n• Geen tanden: VS + China + Rusland erkennen ICC niet.",
     checks: [
       {
         q: "Wat doet **ICC** (International Criminal Court)?",
         options: [
-          "Berecht INDIVIDUEN voor oorlogsmisdaden, genocide, etc.",
+          "Berecht personen voor oorlogsmisdaden",
           "Beslecht staten-conflicten",
           "Maakt VN-wetten",
           "Bewaakt grenzen"
@@ -200,7 +200,7 @@ const steps = [
       {
         q: "**Geneefse Conventies** (1949) regelen:",
         options: [
-          "Oorlogsrecht — bescherming krijgsgevangenen, gewonden, burgers",
+          "Oorlogsrecht",
           "Handel",
           "Klimaat",
           "Mensenrechten algemeen"
@@ -215,7 +215,7 @@ const steps = [
       {
         q: "**Genocide-definitie** vereist:",
         options: [
-          "Special intent — doel hele etnische/religieuze groep vernietigen",
+          "Opzet om een etnische of religieuze groep te vernietigen",
           "Veel doden",
           "Etnisch geweld",
           "Politieke conflicten"
@@ -234,7 +234,7 @@ const steps = [
         options: [
           "Sommige misdrijven zo erg dat elke staat ze mag berechten",
           "Alleen eigen burger",
-          "Niet bestaat",
+          "Bestaat niet",
           "VN beslist altijd"
         ],
         answer: 0,
@@ -258,7 +258,7 @@ const steps = [
       {
         q: "**Oeigoeren** (China-Xinjiang) volgens westerse bronnen:",
         options: [
-          ">1 miljoen in 're-educatiekampen' — westerse bronnen noemen het genocide",
+          "Meer dan 1 miljoen vastgehouden in kampen",
           "Vrijheid",
           "Normale werkomstandigheden",
           "Geen probleem"
@@ -275,7 +275,7 @@ const steps = [
       {
         q: "**ICC-arrestatiebevel Poetin** (maart 2023) voor:",
         options: [
-          "Deportatie ~20 000 Oekraïense kinderen naar Rusland",
+          "Deportatie van Oekraïense kinderen",
           "Cyberaanvallen",
           "Sancties",
           "Verkiezingen"
@@ -284,7 +284,7 @@ const steps = [
         wrongHints: [null, "Apart.", "Wel sancties maar geen ICC-criterium.", "Niet."],
         uitlegPad: {
           stappen: [
-            { titel: "Oorlogsmisdaad gedocumenteerd", tekst: "Tijdens Oekraïne-oorlog: Russische troepen brachten Oekraïense kinderen naar Rusland → 'heropvoeding' tot Russen. Onder Genocide-verdrag een vorm van etnische uitwissing. Poetin kan niet meer zonder risico reizen naar ICC-leden." },
+            { titel: "Oorlogsmisdaad gedocumenteerd", tekst: "Tijdens Oekraïne-oorlog: Russische troepen brachten Oekraïense kinderen naar Rusland → 'heropvoeding' tot Russen. Het ICC noemt dit de oorlogsmisdaad 'onrechtmatige deportatie'; of het ook genocide is, is nog discussie. Poetin kan niet meer zonder risico reizen naar ICC-leden." },
           ],
           niveaus: { basis: "Kinder-deportatie.", simpeler: "Oekraïense kinderen ontvoerd.", nogSimpeler: "Kinderen" },
         },
@@ -357,7 +357,7 @@ const steps = [
       {
         q: "**Toeslagenaffaire** is voorbeeld van:",
         options: [
-          "Massa-schending door discriminatie + onjuiste fraude-beschuldigingen",
+          "Discriminatie en onterechte fraudebeschuldigingen",
           "Slecht weer",
           "Goed beleid",
           "Geen issue"
@@ -374,13 +374,13 @@ const steps = [
       {
         q: "**Urgenda-zaak** (2019):",
         options: [
-          "Rechter dwong NL tot 25% CO₂-reductie 2020 — wereldwijde primeur",
+          "Rechter dwong de staat tot meer CO₂-reductie",
           "Verloor",
           "Geen klimaat-zaak",
-          "Te vroeg"
+          "Shell moest van de rechter minder uitstoten"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel.", "Niet."],
+        wrongHints: [null, "Tegenovergesteld.", "Wel.", "Dat was een andere zaak (Milieudefensie tegen Shell). Wie was hier de gedaagde?"],
         uitlegPad: {
           stappen: [
             { titel: "Mensenrechten + klimaat", tekst: "Urgenda Foundation klaagde staat aan: klimaatbeleid te zwak schendt zorgplicht onder EVRM (recht op leven + familie-leven, gezondheid). Rechter gaf Urgenda gelijk → NL MOET 25% CO₂-reductie 2020. Eerste wereldwijde precedent klimaat-rechtszaak tegen staat. Inspiratie voor Duitsland, Frankrijk, Pakistan, etc." },
@@ -391,7 +391,7 @@ const steps = [
       {
         q: "**College voor de Rechten van de Mens** (NL):",
         options: [
-          "Onafhankelijk instituut dat klachten over discriminatie beoordeelt",
+          "Instituut dat discriminatieklachten beoordeelt",
           "Politie",
           "Rechter",
           "Geen functie"

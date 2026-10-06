@@ -40,7 +40,7 @@ const steps = [
       },
       {
         q: "Wat is in Python de uitkomst van **`\"3\" + \"4\"`** (let op de aanhalingstekens)?",
-        options: ["\"34\" (tekst geplakt)", "7", "12", "Een foutmelding"],
+        options: ["\"34\"", "7", "12", "Een foutmelding"],
         answer: 0,
         wrongHints: [null, "7 zou het zijn bij getallen: 3 + 4.", "12 is vermenigvuldigen, en het zijn geen getallen.", "Het mag gewoon — wat doet + met twee stukken tekst?"],
         uitlegPad: {
@@ -89,7 +89,7 @@ const steps = [
       },
       {
         q: "Wanneer wordt het blok onder **`if leeftijd >= 18:`** uitgevoerd?",
-        options: ["Als de voorwaarde True is (leeftijd 18 of hoger)", "Altijd", "Nooit", "Alleen bij tekst"],
+        options: ["Als de voorwaarde True is", "Altijd", "Nooit", "Alleen bij tekst"],
         answer: 0,
         wrongHints: [null, "Niet altijd — alleen als de voorwaarde klopt.", "Het wordt wél uitgevoerd als de voorwaarde waar is.", "Het gaat om de getal-voorwaarde, niet om tekst."],
         uitlegPad: {
@@ -99,7 +99,7 @@ const steps = [
       },
       {
         q: "`if leeftijd >= 12 **and** leeftijd < 20:` is waar als…",
-        options: ["Beide voorwaarden waar zijn (12 t/m 19)", "Eén van beide waar is", "Geen van beide waar is", "Altijd"],
+        options: ["Beide voorwaarden waar zijn", "Eén van beide waar is", "Geen van beide waar is", "Altijd"],
         answer: 0,
         wrongHints: [null, "Dat zou 'or' zijn, niet 'and'.", "Dan is het juist False.", "Niet altijd — alleen in het bereik 12-19."],
         uitlegPad: {
@@ -148,7 +148,7 @@ const steps = [
       },
       {
         q: "Wanneer kies je een **while**-loop in plaats van een for-loop?",
-        options: ["Als je niet vooraf weet hoe vaak (afhankelijk van een voorwaarde)", "Als je over een lijst loopt", "Als je precies 10 keer iets doet", "while bestaat niet"],
+        options: ["Als je niet vooraf weet hoe vaak", "Als je over een lijst loopt", "Als je precies 10 keer iets doet", "while bestaat niet"],
         answer: 0,
         wrongHints: [null, "Over een lijst lopen is juist een for-loop.", "Een vast aantal keren past beter bij for.", "while bestaat zeker wel."],
         uitlegPad: {
@@ -178,7 +178,7 @@ const steps = [
       },
       {
         q: "Je wilt iets **precies 10 keer** doen. Welke loop past het best?",
-        options: ["Een for-loop (bv. range(10))", "Een while zonder stopvoorwaarde", "Geen loop — 10× overtypen", "Een functie"],
+        options: ["Een for-loop", "Een while zonder stopvoorwaarde", "Geen loop — 10× overtypen", "Een functie"],
         answer: 0,
         wrongHints: [null, "Een while zonder stopvoorwaarde wordt oneindig.", "Overtypen is juist wat een loop voorkomt.", "Een functie herhaalt op zichzelf niets."],
         uitlegPad: {
@@ -227,7 +227,7 @@ const steps = [
       },
       {
         q: "In **`def begroet(naam):`** is **`naam`** een…",
-        options: ["Parameter (de input voor de functie)", "return-waarde", "Foutmelding", "Datatype"],
+        options: ["Parameter", "return-waarde", "Foutmelding", "Datatype"],
         answer: 0,
         wrongHints: [null, "De return-waarde komt juist úit de functie.", "Het is geen fout.", "Een datatype is bv. int of string."],
         uitlegPad: {
@@ -237,7 +237,7 @@ const steps = [
       },
       {
         q: "Het programma draait wél, maar geeft het **verkeerde antwoord**. Wat voor fout is dat?",
-        options: ["Een logische fout (bug)", "Een syntaxfout", "Een netwerkfout", "Geen fout"],
+        options: ["Een logische fout", "Een syntaxfout", "Een netwerkfout", "Geen fout"],
         answer: 0,
         wrongHints: [null, "Bij een syntaxfout start het programma juist niet.", "Het ligt niet aan het netwerk.", "Een verkeerd antwoord is wel degelijk een fout."],
         uitlegPad: {

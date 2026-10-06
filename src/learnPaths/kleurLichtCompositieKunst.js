@@ -147,7 +147,7 @@ const steps = [
     checks: [
       {
         q: "Welke techniek suggereert **diepte** in een plat schilderij?",
-        options: ["Overlapping (wat ervoor staat lijkt dichterbij)", "Alles even groot maken", "Alleen één kleur gebruiken", "Het doek kantelen"],
+        options: ["Overlapping", "Alles even groot maken", "Alleen één kleur gebruiken", "Het doek kantelen"],
         answer: 0,
         wrongHints: [null, "Even groot maakt het juist vlakker.", "Eén kleur helpt diepte niet.", "Het ophangen verandert de diepte-illusie niet."],
         uitlegPad: {
@@ -167,7 +167,7 @@ const steps = [
       },
       {
         q: "Hoe analyseer je een kunstwerk met beeldaspecten?",
-        options: ["Benoem wat je ziet (kleur/licht/compositie) en koppel het aan het effect", "Alleen zeggen of je het mooi vindt", "Raden wat het kostte", "Tellen hoeveel kleuren er zijn"],
+        options: ["Benoem wat je ziet en koppel het aan het effect", "Alleen zeggen of je het mooi vindt", "Raden wat het kostte", "Tellen hoeveel kleuren er zijn"],
         answer: 0,
         wrongHints: [null, "'Mooi/niet mooi' is een mening, geen analyse.", "De prijs hoort niet bij beeldanalyse.", "Tellen alleen zegt niets over de werking."],
         uitlegPad: {

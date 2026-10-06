@@ -30,7 +30,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen het **internet** en het **web** (www)?",
-        options: ["Internet = de infrastructuur; web = één dienst erop (websites)", "Ze zijn precies hetzelfde", "Het web is groter dan het internet", "Het web bestaat uit kabels, internet uit sites"],
+        options: ["Internet = de infrastructuur; web = één dienst erop", "Ze zijn precies hetzelfde", "Het web is groter dan het internet", "Het web bestaat uit kabels, internet uit sites"],
         answer: 0,
         wrongHints: [null, "Er is wel degelijk verschil.", "Kan een dienst groter zijn dan het netwerk waar hij overheen loopt?", "Kijk nog eens: welk van de twee is de fysieke infrastructuur?"],
         uitlegPad: {
@@ -60,7 +60,7 @@ const steps = [
       },
       {
         q: "In het **client–server**-model: wat doet de **client**?",
-        options: ["Vraagt iets op (bv. je browser of telefoon)", "Levert de webpagina", "Staat altijd aan als krachtige server", "Verbindt de kabels"],
+        options: ["Vraagt iets op bij de server", "Levert de webpagina", "Staat altijd aan als krachtige server", "Verbindt de kabels"],
         answer: 0,
         wrongHints: [null, "Leveren is juist de rol van de server.", "Altijd-aan en krachtig is de server.", "Kabels verbinden is niet de rol van een client."],
         uitlegPad: {
@@ -99,7 +99,7 @@ const steps = [
       },
       {
         q: "Waarom is er **IPv6** gekomen naast IPv4?",
-        options: ["IPv4-adressen raken op (te weinig)", "IPv6 is mooier om te lezen", "IPv4 is verboden", "Voor betere kleuren"],
+        options: ["IPv4-adressen raken op", "IPv6 is mooier om te lezen", "IPv4 is verboden", "Voor betere kleuren"],
         answer: 0,
         wrongHints: [null, "Leesbaarheid was niet de reden — IPv6 is juist langer/complexer.", "IPv4 wordt nog volop gebruikt.", "Kleuren hebben hier niets mee te maken."],
         uitlegPad: {
@@ -148,7 +148,7 @@ const steps = [
       },
       {
         q: "Wat is een **protocol** in een netwerk?",
-        options: ["Een afspraak/'taal' voor communicatie tussen apparaten", "Een soort kabel", "Een wachtwoord", "Een website"],
+        options: ["Een afspraak voor communicatie", "Een soort kabel", "Een wachtwoord", "Een website"],
         answer: 0,
         wrongHints: [null, "Een protocol is een afspraak, geen fysieke kabel.", "Het is geen wachtwoord.", "Een website is iets anders."],
         uitlegPad: {
@@ -178,7 +178,7 @@ const steps = [
       },
       {
         q: "Wat gebeurt er als een **pakketje kwijtraakt** onderweg?",
-        options: ["Het wordt opnieuw gestuurd (TCP regelt dat)", "Het hele internet valt uit", "Het bericht is voorgoed weg", "Niets — pakketjes raken nooit kwijt"],
+        options: ["Het wordt opnieuw gestuurd", "Het hele internet valt uit", "Het bericht is voorgoed weg", "Niets — pakketjes raken nooit kwijt"],
         answer: 0,
         wrongHints: [null, "Eén verloren pakketje legt het internet niet plat.", "Denk aan de volgnummers — merkt de ontvanger dat er een ontbreekt?", "Pakketjes kunnen wel degelijk kwijtraken."],
         uitlegPad: {
@@ -207,7 +207,7 @@ const steps = [
       },
       {
         q: "Wat betekent het **slotje 🔒 / HTTPS** in de adresbalk?",
-        options: ["Je verbinding met de site is versleuteld (beveiligd)", "De site is gratis", "De site is populair", "De site is van de overheid"],
+        options: ["Je verbinding met de site is versleuteld", "De site is gratis", "De site is populair", "De site is van de overheid"],
         answer: 0,
         wrongHints: [null, "Het zegt niets over de prijs.", "Het zegt niets over populariteit.", "Iedere site kan HTTPS hebben, niet alleen de overheid."],
         uitlegPad: {
@@ -217,7 +217,7 @@ const steps = [
       },
       {
         q: "In de URL `https://leerkwartier.app/cito` is **`leerkwartier.app`** het…",
-        options: ["Domein (wordt via DNS een IP)", "Protocol", "Pad naar een pagina", "Wachtwoord"],
+        options: ["Domein", "Protocol", "Pad naar een pagina", "Wachtwoord"],
         answer: 0,
         wrongHints: [null, "Het protocol is het `https`-deel.", "Het pad is `/cito`.", "Er staat geen wachtwoord in een gewone URL."],
         uitlegPad: {

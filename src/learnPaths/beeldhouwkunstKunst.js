@@ -20,7 +20,7 @@ const steps = [
     checks: [
       {
         q: "Wat is het kenmerkende verschil tussen beeldhouwkunst en schilderkunst?",
-        options: ["Beeldhouwkunst is 3D (ruimtelijk), schilderkunst 2D (plat)", "Beeldhouwkunst gebruikt geen kleur", "Schilderkunst is altijd groter", "Er is geen verschil"],
+        options: ["Beeldhouwkunst is 3D, schilderkunst 2D", "Beeldhouwkunst gebruikt geen kleur", "Schilderkunst is altijd groter", "Er is geen verschil"],
         answer: 0,
         wrongHints: [null, "Beelden kunnen wél kleur hebben (bv. beschilderd).", "Formaat is niet het onderscheid.", "Er is wel een verschil — denk aan hoe je elk kunstwerk bekijkt."],
         uitlegPad: {
@@ -79,7 +79,7 @@ const steps = [
       },
       {
         q: "Wat is een **readymade**?",
-        options: ["Een bestaand voorwerp tot kunst verklaard (bv. Duchamp)", "Een marmeren beeld", "Een schildertechniek", "Een soort lijm"],
+        options: ["Een bestaand voorwerp tot kunst verklaard", "Een marmeren beeld", "Een schildertechniek", "Een soort lijm"],
         answer: 0,
         wrongHints: [null, "Een readymade is juist géén zelf-gehakt beeld.", "Het is geen schildertechniek.", "Geen materiaal — een idee/concept."],
         uitlegPad: {
@@ -98,7 +98,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **contrapost** in een (Grieks) beeld?",
-        options: ["Het gewicht op één been, waardoor het lichaam licht draait en leeft", "Twee beelden naast elkaar", "Een beeld zonder armen", "Een beeld van brons"],
+        options: ["Het gewicht op één been, met een licht gedraaid lichaam", "Twee beelden naast elkaar", "Een beeld zonder armen", "Een beeld van brons"],
         answer: 0,
         wrongHints: [null, "Het gaat om de houding van één figuur.", "Niet over ontbrekende armen.", "Niet over het materiaal."],
         uitlegPad: {
@@ -157,7 +157,7 @@ const steps = [
       },
       {
         q: "Waarom zijn sommige **standbeelden** onderwerp van discussie?",
-        options: ["Bv. wie een standbeeld verdient, en koloniale figuren", "Omdat ze van brons zijn", "Omdat ze in een museum staan", "Standbeelden geven nooit discussie"],
+        options: ["Ze kunnen omstreden personen eren", "Omdat ze van brons zijn", "Omdat ze in een museum staan", "Standbeelden geven nooit discussie"],
         answer: 0,
         wrongHints: [null, "Het materiaal is niet het twistpunt.", "Standbeelden staan juist vaak buiten.", "Er is wel degelijk discussie."],
         uitlegPad: {

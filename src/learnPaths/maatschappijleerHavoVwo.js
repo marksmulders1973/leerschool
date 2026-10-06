@@ -42,7 +42,7 @@ const steps = [
       },
       {
         q: "**Trias politica** is bedacht door:",
-        options: ["Montesquieu (1748)","Karl Marx","John Locke","Rousseau"],
+        options: ["Montesquieu","Karl Marx","John Locke","Rousseau"],
         answer: 0,
         wrongHints: [null, "Niet — Marx kwam later.", "Locke beïnvloedde wel maar Montesquieu formaliseerde.", "Niet."],
         uitlegPad: {
@@ -56,8 +56,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is regering.", "Te breed.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Regering vs kabinet", tekst: "**Regering** = koning + ministers + staatssecretarissen. **Kabinet** = alleen ministers + staatssecretarissen (zonder koning). Hoofd: **minister-president** (premier). Kabinet vergadert vrijdagen in 'Trêveszaal' (Den Haag). Beslissingen bij meerderheid + collegiale verantwoordelijkheid." }],
-          niveaus: { basis: "Ministers.", simpeler: "Kabinet = ministers", nogSimpeler: "Ministers + staatssecretarissen" },
+          stappen: [{ titel: "Regering vs kabinet", tekst: "**Regering** = koning + ministers + staatssecretarissen. **Kabinet** = alleen ministers + staatssecretarissen (zonder koning). Hoofd: **minister-president** (premier). De ministerraad (alleen de ministers) vergadert op vrijdag in de Trêveszaal (Den Haag). Beslissingen bij meerderheid + collegiale verantwoordelijkheid." }],
+          niveaus: { basis: "Ministers + staatssecretarissen.", simpeler: "Kabinet = ministers + staatssecretarissen", nogSimpeler: "Ministers + staatssecretarissen" },
         },
       },
       {
@@ -131,11 +131,11 @@ const steps = [
       },
       {
         q: "**Toeslagenaffaire** illustreert:",
-        options: ["Indirecte discriminatie door overheid","Goede uitvoering belastingen","Migratiebeleid","Sociaal vangnet"],
+        options: ["Discriminatie door de overheid","Goede uitvoering belastingen","Migratiebeleid","Sociaal vangnet"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet relevant."],
         uitlegPad: {
-          stappen: [{ titel: "Etnisch profileren", tekst: "**Toeslagenaffaire (2005-2019)**: belastingdienst beschuldigde ~26.000 ouders van fraude met kinderopvang-toeslag. Ouders met migratie-achtergrond (vooral Surinaams + Turks-Marokkaans) **disproportioneel** geraakt door indirecte discriminatie via algoritme dat 'risico-profielen' creëerde. Hoge boetes + schuld → financiële drama's. Kabinet-Rutte III viel 2021. Symbool van rechtsstaat-falen + structurele discriminatie." }],
+          stappen: [{ titel: "Etnisch profileren", tekst: "**Toeslagenaffaire (2005-2019)**: belastingdienst beschuldigde ~26.000 ouders van fraude met kinderopvang-toeslag. Ouders met migratie-achtergrond (vooral Surinaams + Turks-Marokkaans) **disproportioneel** geraakt door discriminatie via algoritme dat 'risico-profielen' creëerde. Hoge boetes + schuld → financiële drama's. Kabinet-Rutte III viel 2021. Symbool van rechtsstaat-falen + structurele discriminatie." }],
           niveaus: { basis: "Discriminatie.", simpeler: "Toeslagen = discr", nogSimpeler: "Discriminatie" },
         },
       },
@@ -150,7 +150,7 @@ const steps = [
     checks: [
       {
         q: "**Klassieke grondrechten** beschermen burger:",
-        options: ["Tegen overheid (vrijheid)","Voor overheid","Tegen andere burgers alleen","Tegen EU"],
+        options: ["Tegen de overheid","Voor overheid","Tegen andere burgers alleen","Tegen EU"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Niet primair."],
         uitlegPad: {
@@ -210,7 +210,7 @@ const steps = [
     checks: [
       {
         q: "**Witteboorden-criminaliteit** wordt gepleegd door:",
-        options: ["'Nette' mensen in functies (fraude, omkoping)","Tieners","Daklozen","Buitenlandse groepen"],
+        options: ["'Nette' mensen in hun beroep","Tieners","Daklozen","Buitenlandse groepen"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet specifiek."],
         uitlegPad: {
@@ -250,7 +250,7 @@ const steps = [
       },
       {
         q: "**Subjectieve veiligheid** is:",
-        options: ["Hoe veilig je je voelt (kan ≠ objectief)","Aantal misdrijven","Politie-cijfers","Cameratoezicht"],
+        options: ["Hoe veilig je je voelt","Aantal misdrijven","Politie-cijfers","Cameratoezicht"],
         answer: 0,
         wrongHints: [null, "Objectief.", "Objectief.", "Niet relevant."],
         uitlegPad: {
@@ -279,7 +279,7 @@ const steps = [
       },
       {
         q: "Hoe wordt **NPO** gefinancierd?",
-        options: ["Belasting (publiek)","Alleen reclame","Donaties","Aandeelhouders"],
+        options: ["Belasting","Alleen reclame","Donaties","Aandeelhouders"],
         answer: 0,
         wrongHints: [null, "Niet — beperkte reclame.", "Niet — institutioneel.", "Niet — geen aandelen."],
         uitlegPad: {
@@ -299,7 +299,7 @@ const steps = [
       },
       {
         q: "**Vierde macht** is een ander woord voor:",
-        options: ["Onafhankelijke media (waakhond democratie)","Politie","Leger","EU"],
+        options: ["Onafhankelijke media","Politie","Leger","EU"],
         answer: 0,
         wrongHints: [null, "De politie hoort bij de uitvoerende macht — wie contróleert de macht zonder zelf te regeren?", "Het leger voert uit — wie houdt politici kritisch in de gaten en onthult schandalen?", "Geen instantie of verbond — denk aan wie misstanden openbaar maakt."],
         uitlegPad: {
