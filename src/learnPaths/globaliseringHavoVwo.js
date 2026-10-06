@@ -24,12 +24,12 @@ const steps = [
         q: "**Globalisering** heeft welke 4 dimensies?",
         options: [
           "Economisch, cultureel, politiek, technologisch",
-          "Alleen economisch",
-          "Sport + kunst + reizen + werk",
-          "Geen onderscheid"
+          "Lokaal, regionaal, nationaal, mondiaal",
+          "Landbouw, industrie, diensten, handel",
+          "Sport, kunst, reizen, werk"
         ],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Niet de 4 categorieën.", "Wel."],
+        wrongHints: [null, "Dat zijn schaalniveaus, geen dimensies van globalisering.", "Dat zijn economische sectoren — maar globalisering is meer dan economie alleen.", "Dat zijn losse voorbeelden, geen hoofdcategorieën."],
         uitlegPad: {
           stappen: [{ titel: "Holistische analyse", tekst: "Globalisering is breed verschijnsel met economische (handel, MNCs), culturele (Hollywood, taal), politieke (VN, EU) en technologische (internet, containers) facetten. Niet één daarvan verklaart alles." }],
           niveaus: { basis: "Eco/cult/pol/tech.", simpeler: "4 hoofdgebieden.", nogSimpeler: "4 dim" },

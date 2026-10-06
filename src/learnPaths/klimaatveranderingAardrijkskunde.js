@@ -194,9 +194,9 @@ const steps = [
     checks: [
       {
         q: "Waarom is **NL kwetsbaar**?",
-        options: ["Veel onder zeeniveau + dichtbevolkt", "Berg-land", "Tropisch", "Verre noord"],
+        options: ["Een groot deel ligt onder zeeniveau en er wonen veel mensen", "Er liggen veel hoge bergen met smeltende gletsjers", "Het heeft een tropisch klimaat met zware orkanen", "Het ligt zo ver noordelijk dat de bevroren bodem ontdooit"],
         answer: 0,
-        wrongHints: [null, "Geen bergen.", "Gematigd.", "Niet zo extreem."],
+        wrongHints: [null, "Nederland is juist heel plat.", "Nederland heeft een gematigd zeeklimaat.", "Bevroren bodem (permafrost) vind je veel noordelijker, niet in Nederland."],
       },
       {
         q: "**NL klimaatakkoord** doel 2030?",

@@ -202,7 +202,7 @@ const steps = [
     checks: [
       {
         q: "Welke vorm hoort meestal bij het kaart-symbool voor een **camping**?",
-        options: ["Een driehoekje (tent-vorm)","Een kruisje","Een rechthoek","Een anker"],
+        options: ["Een driehoekje","Een kruisje","Een rechthoek","Een anker"],
         answer: 0,
         wrongHints: [null,"Kruisje hoort bij kerk.","Rechthoek hoort bij station/gebouw.","Anker hoort bij haven."],
         uitlegPad: {

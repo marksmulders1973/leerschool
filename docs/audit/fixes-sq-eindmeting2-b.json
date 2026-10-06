@@ -1,0 +1,14 @@
+[
+ {
+  "waar": "SAMPLE_QUESTIONS.natuur.klas3[40]",
+  "oud": "\"Endotherm: warmte opnemen (ΔH > 0); exotherm: warmte afstaan (ΔH < 0)\", \"Endotherm: warmte afstaan\", \"Endotherm en exotherm zijn synoniemen voor dezelfde reactie\", \"Exotherm: warmte opnemen\"]",
+  "nieuw": "\"Endotherm: neemt warmte op; exotherm: staat warmte af\", \"Endotherm: staat warmte af; exotherm: neemt warmte op\", \"Endotherm: gebeurt in water; exotherm: gebeurt in lucht\", \"Endotherm: reactie gaat snel; exotherm: reactie gaat langzaam\"]",
+  "reden": "weggegeven: alleen het goede antwoord noemde beide begrippen (+ΔH-toelichting) en was veel langer; nu vier parallelle opties."
+ },
+ {
+  "waar": "SAMPLE_QUESTIONS.duits.groep5[17]",
+  "oud": "{ q: \"Wat betekent 'Auto'?\", options: [\"Bus\", \"Auto\", \"Fiets\", \"Trein\"], answer: 1, explanation: \"'Auto' = auto (zelfde woord!).\" }",
+  "nieuw": "{ q: \"Wat betekent 'Fahrrad'?\", options: [\"Bus\", \"Auto\", \"Fiets\", \"Trein\"], answer: 2, explanation: \"'Fahrrad' = fiets (fahren = rijden, Rad = wiel).\" }",
+  "reden": "weggegeven: het antwoord ('Auto') stond letterlijk in de vraag; nu een woord dat je echt moet kennen."
+ }
+]

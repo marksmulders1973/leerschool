@@ -937,7 +937,7 @@ export const TEXTBOOK_QUESTIONS = {
     ],
     1: [
       { q: "Welk plantendeel haalt water uit de grond?", options: ["Wortels", "Bladeren", "Bloemen", "Stengel"], answer: 0, explanation: "Wortels nemen water + voedingsstoffen op uit aarde. Stengel transporteert. Bladeren = fotosynthese." },
-      { q: "Wat is FOTOSYNTHESE?", options: ["Plant maakt suiker met zonlicht + CO₂ + water", "Plant slaapt 's nachts", "Bloeien", "Fruit dragen"], answer: 0, explanation: "6 CO₂ + 6 H₂O + zonlicht → glucose (C₆H₁₂O₆) + 6 O₂. Gebeurt vooral in bladeren (chlorofyl)." },
+      { q: "Wat is FOTOSYNTHESE?", options: ["Plant maakt suiker met zonlicht + CO₂ + water", "Plant neemt water en zouten op via de wortels", "Plant maakt zaden na bestuiving door insecten", "Plant verbrandt suiker met zuurstof tot energie"], answer: 0, explanation: "6 CO₂ + 6 H₂O + zonlicht → glucose (C₆H₁₂O₆) + 6 O₂. Gebeurt vooral in bladeren (chlorofyl)." },
       { q: "Welke plant heeft GEEN bloemen?", options: ["Mos", "Roos", "Paardenbloem", "Tulp"], answer: 0, explanation: "Mossen + varens hebben geen bloemen of zaden — ze planten zich voort via sporen." },
     ],
     2: [

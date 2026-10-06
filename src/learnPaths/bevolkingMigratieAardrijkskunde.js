@@ -176,9 +176,9 @@ const steps = [
       },
       {
         q: "Wat is een **vluchteling**?",
-        options: ["Iemand die vlucht voor oorlog/vervolging", "Toerist", "Werknemer", "Student"],
+        options: ["Iemand die zijn land moet verlaten door oorlog of vervolging", "Iemand die een paar weken op vakantie gaat naar een ander land", "Iemand die naar een ander land verhuist voor beter betaald werk", "Iemand die een jaar in het buitenland gaat studeren"],
         answer: 0,
-        wrongHints: [null, "Geen vluchteling.", "Economische migrant.", "Tijdelijke migrant."],
+        wrongHints: [null, "Een toerist gaat na de vakantie gewoon terug naar huis.", "Dat is een economische migrant: die kiest zelf om te vertrekken.", "Een student vertrekt vrijwillig en voor een tijdje."],
       },
       {
         q: "Wat is **interne migratie**?",

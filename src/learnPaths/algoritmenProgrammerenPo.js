@@ -45,10 +45,10 @@ const steps = [
         },
       },
       {
-        q: "Wat doet **GPS** *(Global Positioning System — plaats-bepaling via satellieten)*-app?",
-        options: ["Kortste pad-algoritme (Dijkstra)", "Sportscore", "Gewicht", "Niet bestaand"],
+        q: "Een navigatie-app met **GPS** *(Global Positioning System — plaats-bepaling via satellieten)* zoekt de snelste route. Wat gebruikt de app daarvoor?",
+        options: ["Een algoritme dat de kortste route berekent", "Een algoritme dat foto's op datum sorteert", "Een stappenteller die je passen telt", "Een weegschaal die je gewicht meet"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wel."],
+        wrongHints: [null, "Foto's sorteren helpt niet om een route te vinden.", "Een stappenteller telt wat je al liep — plant hij ook een route?", "Gewicht zegt niets over de weg naar je bestemming."],
       },
       {
         q: "Wie was **Edsger Dijkstra**?",

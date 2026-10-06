@@ -599,7 +599,7 @@ const steps = [
         wrongHints: [
           null,
           "Veel te veel — controleer P = U × I.",
-          "Te veel — dat zou een waterkoker zijn.",
+          "Te veel — 230 V × 2,3 A is ruim 500 W, vijf keer zoveel als deze lamp.",
           "Te veel — bij zo'n hoge stroomsterkte zou het vermogen enorm zijn. Kijk of die waarde logisch is voor een gloeilamp.",
         ],
         uitlegPad: {

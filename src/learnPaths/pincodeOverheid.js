@@ -399,9 +399,9 @@ const steps = [
       },
       {
         q: "Wat is een **staatsobligatie**?",
-        options: ["Lening-papiertje: investeerder leent de staat geld, met rente", "Een staatsbedrijf", "Belasting op staatsbezit", "Subsidie aan investeerders"],
+        options: ["Een lening aan de staat waarover je rente krijgt", "Een aandeel in een bedrijf van de staat", "Een belasting die je betaalt over je spaargeld", "Een subsidie die de staat aan bedrijven geeft"],
         answer: 0,
-        wrongHints: [null, "Niet een bedrijf.", "Geen belasting.", "Tegendeel — investeerder krijgt rente."],
+        wrongHints: [null, "Een aandeel maakt je mede-eigenaar. Is een obligatie eigendom, of iets anders?", "Een belasting móét je betalen; een obligatie koop je vrijwillig.", "Bij een subsidie geeft de staat geld weg. Wie geeft bij een obligatie geld aan wie?"],
         uitlegPad: {
           stappen: [{ titel: "Lening van investeerder aan staat", tekst: "Investeerder (pensioenfonds, bank, individu) leent geld aan de staat. Krijgt vooraf afgesproken RENTE per jaar + na X jaar het bedrag terug. Documentatie heet 'obligatie'." }],
           woorden: [{ woord: "staatsobligatie", uitleg: "Schuldpapier uitgegeven door de overheid. Looptijd 5-30 jaar, vaste rente." }, { woord: "kapitaalmarkt", uitleg: "Markt waar staten + bedrijven geld lenen door obligaties uit te geven." }],

@@ -112,9 +112,9 @@ const steps = [
     checks: [
       {
         q: "Wie is **Boeddha**?",
-        options: ["Siddhartha Gautama, stichter boeddhisme", "God", "Profeet", "Heerser"],
+        options: ["Siddhartha Gautama, een Indiase prins die een nieuwe leer begon", "Een hindoegod met een olifantenkop", "Een profeet die de Koran doorgaf", "Een Chinese keizer die de Grote Muur liet bouwen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen God.", "Niet.", "Niet."],
+        wrongHints: [null, "Dat is Ganesha, een god uit het hindoeïsme.", "Dat is Mohammed, de profeet van de islam.", "Boeddha was geen keizer en kwam niet uit China."],
       },
       {
         q: "Wat is **karma**?",
