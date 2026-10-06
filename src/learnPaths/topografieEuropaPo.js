@@ -50,12 +50,12 @@ const steps = [
       },
       {
         q: "Welk land ligt deels in Europa én deels in Azië?",
-        options: ["Turkije", "Rusland", "Beide A en B", "Frankrijk"],
+        options: ["Turkije", "Rusland", "Turkije én Rusland", "Frankrijk"],
         answer: 2,
-        wrongHints: ["Turkije ligt voor het grootste deel in Azië, maar Istanbul is deels Europees — dus deel A klopt. Maar er is meer.", "Rusland ligt deels in Europa (westkant tot Oeral) en deels in Azië (oostkant tot de Grote Oceaan) — dus B klopt ook. Maar...", null, "Frankrijk ligt volledig in Europa (op overzeese gebieden na)."],
+        wrongHints: ["Turkije ligt voor het grootste deel in Azië, maar Istanbul is deels Europees. Is Turkije het enige land dat op twee werelddelen ligt?", "Rusland ligt deels in Europa (westkant tot Oeral) en deels in Azië (oostkant tot de Grote Oceaan). Is Rusland het enige land dat op twee werelddelen ligt?", null, "Frankrijk ligt volledig in Europa (op overzeese gebieden na)."],
         explanation: "**Zowel Rusland als Turkije** liggen op 2 werelddelen. Rusland: Europa (Moskou + Sint-Petersburg) + Azië (Vladivostok + Siberië). Turkije: Europa (Istanbul-Europees deel) + Azië (Ankara + rest).",
         uitlegPad: compact(
-          "2 landen op 2 continenten: Rusland (Europa-Azië via Oeral) + Turkije (Europa-Azië via Bosporus in Istanbul). Egypte ligt in Afrika, maar Sinaï-schiereiland telt soms als Azië.",
+          "Bekende landen op 2 continenten: Rusland (Europa-Azië via Oeral) + Turkije (Europa-Azië via Bosporus in Istanbul). Egypte ligt in Afrika, maar Sinaï-schiereiland telt soms als Azië.",
           { basis: "Beide.", simpeler: "Rusland EN Turkije liggen in 2 werelddelen.", nogSimpeler: "Beide" },
           [{ woord: "Bosporus", uitleg: "Zeestraat door Istanbul — scheidt Europa van Azië." }],
         ),
