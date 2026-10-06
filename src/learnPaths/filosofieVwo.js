@@ -76,7 +76,7 @@ const steps = [
         q: "**Kant** onderscheidde *Fenomeen* van *Ding-an-sich*. Wat kunnen we kennen?",
         options: ["Fenomenen (wat we waarnemen)","Ding-an-sich rechtstreeks","Beide","Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — fundamenteel verborgen.", "Niet — alleen fenomenen.", "Wel iets."],
+        wrongHints: [null, "Niet — fundamenteel verborgen.", "Niet — één van de twee blijft voor ons verborgen.", "Wel iets."],
         uitlegPad: {
           stappen: [{ titel: "Beperkte kennis", tekst: "**Kant**: zintuigen + categorieën-denken (oorzaak/ruimte/tijd) leveren **fenomeen** (wat verschijnt). Werkelijkheid zelf (**Ding-an-sich, noumenon**) blijft principieel **onkenbaar**. We kennen alleen 'gefilterde' versie." }],
           theorie: "Compromis tussen rationalisme (Descartes — kennis vanuit denken) en empirisme (Locke/Hume — alleen uit ervaring).",
@@ -195,14 +195,14 @@ const steps = [
         },
       },
       {
-        q: "**Peter Singer** introduceerde term:",
-        options: ["Speciecism (soortisme)","Categorische imperatief","Tabula rasa","Trolleyprobleem"],
+        q: "**Peter Singer** maakte welke term bekend?",
+        options: ["Speciesisme (soortisme)","Categorische imperatief","Tabula rasa","Trolleyprobleem"],
         answer: 0,
         wrongHints: [null, "Niet — Kant.", "Niet — Locke.", "Niet — Foot."],
         uitlegPad: {
-          stappen: [{ titel: "Dier-ethiek", tekst: "**Peter Singer** (1946-) Australisch filosoof, *Animal Liberation* (1975). **Speciecism / soortisme** = discriminatie op basis van soort, analoog aan racisme of seksisme. Stelling: lijdenscapaciteit = wat telt, niet soort. Implicatie: vleeseten moreel problematisch." }],
+          stappen: [{ titel: "Dier-ethiek", tekst: "**Peter Singer** (1946-) Australisch filosoof, *Animal Liberation* (1975). **Speciesisme / soortisme** (term bedacht door Richard Ryder, 1970) = discriminatie op basis van soort, analoog aan racisme of seksisme. Stelling: lijdenscapaciteit = wat telt, niet soort. Implicatie: vleeseten moreel problematisch." }],
           theorie: "Singer is utilitarist — toepassing utilitarisme op dieren. Tegenstander Tom Regan: dieren-rechten-theorie (deontologisch).",
-          niveaus: { basis: "Speciecism.", simpeler: "Singer = speciecism", nogSimpeler: "A." },
+          niveaus: { basis: "Speciesisme.", simpeler: "Singer = speciesisme", nogSimpeler: "A." },
         },
       },
     ],
@@ -279,7 +279,7 @@ const steps = [
         q: "**Aristoteles' deugd** ligt volgens hem:",
         options: ["Tussen twee uitersten (gulden middenweg)","Aan extreme kant","Bij meerderheid","Bij God"],
         answer: 0,
-        wrongHints: [null, "Niet — deugd ligt in midden.", "Niet — niet democratisch.", "Niet — humanistisch."],
+        wrongHints: [null, "Niet — juist de uitersten zag Aristoteles als ondeugd.", "Niet — niet democratisch.", "Niet — humanistisch."],
         uitlegPad: {
           stappen: [{ titel: "Gulden middenweg", tekst: "**Aristoteles**: deugd = **mediocritas / golden mean** tussen twee uitersten. Moed = tussen lafheid (te weinig) en roekeloosheid (te veel). Vrijgevigheid = tussen gierigheid en verkwisting. Niet voor elke handeling — sommige daden (zoals moord of diefstal) hebben geen 'midden' en zijn altijd fout." }],
           niveaus: { basis: "Midden.", simpeler: "Aristoteles = midden", nogSimpeler: "Midden" },
@@ -319,7 +319,7 @@ const steps = [
         q: "**Nietzsches** beroemde uitspraak 'God is dood' betekent:",
         options: ["Einde transcendente moraal — mensen moeten zelf waarden scheppen","God is letterlijk gestorven","God bestaat niet","Atheïsme verplicht"],
         answer: 0,
-        wrongHints: [null, "Niet — metaforisch.", "Klopt impliciet maar de uitspraak gaat verder.", "Niet — culturele observatie."],
+        wrongHints: [null, "Niet — metaforisch.", "Niet — Nietzsche beschrijft wat er met het geloof in onze cultuur gebeurt.", "Niet — culturele observatie."],
         uitlegPad: {
           stappen: [{ titel: "Cultureel feit", tekst: "**Nietzsche** in *Die fröhliche Wissenschaft* (1882): 'Gott ist tot'. Geen feitelijke claim — **cultuurdiagnose**: na Verlichting + wetenschap geloven westerse mensen niet meer in God. Probleem: traditionele moraal hing aan God. Wat nu? Nietzsche zelf: schep eigen waarden (Übermensch).\n\nMisbruikt door Nazi's; Nietzsche zelf was tegen antisemitisme + nationalisme." }],
           niveaus: { basis: "Einde moraal.", simpeler: "God dood = einde moraal", nogSimpeler: "A." },
