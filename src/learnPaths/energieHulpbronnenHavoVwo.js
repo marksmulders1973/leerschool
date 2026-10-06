@@ -83,7 +83,7 @@ const steps = [
         wrongHints: [null, "Niet — geavanceerde techniek.", "Tegenovergesteld.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
-            { titel: "VS-revolutie", tekst: "Hydraulic fracturing: water + zand + chemicaliën onder hoge druk → schalie-gesteente barst → gas/olie stroomt vrij. Maakt VS sinds 2018 grootste olie- + gasproducent. Controverse: grondwater-vervuiling, methaan-lek, aardbevingen (Oklahoma). NL: alleen Groningen heeft conventionele winning, geen fracking." },
+            { titel: "VS-revolutie", tekst: "Hydraulic fracturing: water + zand + chemicaliën onder hoge druk → schalie-gesteente barst → gas/olie stroomt vrij. Maakt VS sinds 2018 grootste olie- + gasproducent. Controverse: grondwater-vervuiling, methaan-lek, aardbevingen (Oklahoma). NL: winning was conventioneel (Groningen + kleine velden); schaliegas via fracking is hier nooit toegestaan." },
           ],
           niveaus: { basis: "Hoge druk water in gesteente.", simpeler: "Steen barst → gas eruit.", nogSimpeler: "Frack" },
         },
@@ -388,7 +388,7 @@ const steps = [
         wrongHints: [null, "Wel doel.", "Niet realistisch 2030.", "Te weinig."],
         uitlegPad: {
           stappen: [
-            { titel: "Stevig + bindend", tekst: "Ambitieus doel: bijna halveren in 11 jaar. Gerelateerd aan EU-Green-Deal-55%-doel. Vereist grootschalige actie alle sectoren. NL was 2024 ongeveer op 30% reductie sinds 1990 → versnelling nodig." },
+            { titel: "Stevig + bindend", tekst: "Ambitieus doel: bijna halveren in 11 jaar. Gerelateerd aan EU-Green-Deal-55%-doel. Vereist grootschalige actie alle sectoren. NL zat in 2024 op ruim 35% reductie sinds 1990 → versnelling nodig." },
           ],
           niveaus: { basis: "49%.", simpeler: "Bijna halveren 2030.", nogSimpeler: "49%" },
         },
@@ -422,7 +422,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Hele dag.", "Ook stad."],
         uitlegPad: {
           stappen: [
-            { titel: "Onverwacht knelpunt", tekst: "Tweede helft 2024: bedrijven die zonneparken willen bouwen krijgen 'geen aansluiting' van netbeheerder. Stroomnet ontworpen voor centrale grote centrales, niet vele kleine bronnen + grote vraag-pieken (EV-laadstations). TenneT investeert €100 mld+ tot 2050. Sociale + economische impact (industrie kan niet uitbreiden)." },
+            { titel: "Onverwacht knelpunt", tekst: "Sinds ca. 2021: bedrijven die zonneparken willen bouwen krijgen 'geen aansluiting' van netbeheerder. Stroomnet ontworpen voor centrale grote centrales, niet vele kleine bronnen + grote vraag-pieken (EV-laadstations). TenneT investeert €100 mld+ tot 2050. Sociale + economische impact (industrie kan niet uitbreiden)." },
           ],
           niveaus: { basis: "Net vol.", simpeler: "Stroomnet kan niet aan.", nogSimpeler: "Net vol" },
         },
