@@ -80,9 +80,9 @@ const steps = [
       },
       {
         q: "*'I would like to **___** about your job advert.'* Welk woord?",
-        options: ["enquire", "ask", "look", "say"],
+        options: ["enquire", "request", "look", "say"],
         answer: 0,
-        wrongHints: [null, "Te informeel.", "Niet juist.", "Niet juist."],
+        wrongHints: [null, "Na 'request' komt geen 'about' — je request iets direct.", "Niet juist.", "Niet juist."],
       },
       {
         q: "*'Yours sincerely'* gebruik je in een formele brief als je ___?",
@@ -316,7 +316,7 @@ const steps = [
         wrongHints: [null, "Veelgemaakte fout.", "Geen Engels.", "Slechts één klopt."],
       },
       {
-        q: "*'**Open question**: write a polite opening to a formal email.'* Typ 3 woorden.",
+        q: "*'**Open question**: write a polite opening to a formal email (name unknown).'* Typ de aanhef.",
         kind: "open",
         acceptedAnswers: ["dear sir madam", "dear sir/madam", "dear sir or madam", "to whom it may concern"],
         explanation: "Formal opening: 'Dear Sir or Madam' (when name unknown) or 'To whom it may concern'.",
@@ -324,7 +324,7 @@ const steps = [
       {
         q: "*'**Open question**: how do you end a formal email when you don't know the name?'*",
         kind: "open",
-        acceptedAnswers: ["yours faithfully", "yours sincerely"],
+        acceptedAnswers: ["yours faithfully"],
         explanation: "'Yours faithfully' bij onbekende naam, 'Yours sincerely' bij bekende.",
       },
     ],
