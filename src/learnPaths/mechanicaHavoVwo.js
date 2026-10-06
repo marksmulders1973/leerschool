@@ -123,7 +123,7 @@ const steps = [
       },
       {
         q: "Je springt van een trampoline. Welke wet beschrijft dat trampoline jou omhoog duwt?",
-        options: ["Derde Newton (actie-reactie)","Eerste Newton","Tweede Newton alleen","Pythagoras"],
+        options: ["Derde Newton","Eerste Newton","Tweede Newton alleen","Pythagoras"],
         answer: 0,
         wrongHints: [null, "Niet — die gaat over evenwicht.", "Niet primair — wel meegerekend.", "Niet relevant."],
         uitlegPad: {
@@ -135,7 +135,7 @@ const steps = [
         q: "Object op **helling van 30°**, m = 5 kg, geen wrijving. Versnelling langs helling? (g=10)",
         options: ["5 m/s²","10 m/s²","2,5 m/s²","8,7 m/s²"],
         answer: 0,
-        wrongHints: [null, "Niet — alleen component.", "Niet — halve g eerder.", "Niet — fout component (cos)."],
+        wrongHints: [null, "Niet — alleen component.", "Niet — welk deel van g werkt langs de helling?", "Niet — fout component (cos)."],
         uitlegPad: {
           stappen: [{ titel: "a = g·sin(α)", tekst: "Component zwaartekracht langs helling: F_// = m·g·sin(α). Versnelling: **a = g·sin(α) = 10·sin(30°) = 10·0,5 = 5 m/s²**.\n\n(Massa valt weg in formule.)" }],
           theorie: "Memo: 30° → sin=0,5, cos=0,866. 45° → beide 0,707. 60° → sin=0,866, cos=0,5.",
@@ -250,9 +250,9 @@ const steps = [
       },
       {
         q: "**Airbag** in auto vermindert letsel door:",
-        options: ["Botstijd verlengen → kracht verlagen","Energie absorberen","Snelheid stoppen","Geen invloed"],
+        options: ["Botstijd verlengen → kracht verlagen","Je massa verkleinen","Snelheid stoppen","Geen invloed"],
         answer: 0,
-        wrongHints: [null, "Indirect — primair via tijd.", "Niet — de snelheid wordt hoe dan ook nul; het gaat om hoe snel.", "Wel veel invloed."],
+        wrongHints: [null, "Niet — je massa blijft gewoon gelijk.", "Niet — de snelheid wordt hoe dan ook nul; het gaat om hoe snel.", "Wel veel invloed."],
         uitlegPad: {
           stappen: [{ titel: "F = Δp/Δt", tekst: "**Airbag** rekt botstijd Δt op (van milliseconden naar 0,1-0,5 s). Bij vaste Δp (snelheidsverandering): grotere Δt → **kleinere F** op lichaam. Voorkomt levensgevaarlijke krachten op hoofd/borst." }],
           theorie: "Zelfde principe: kreukel-zone, helm, door je knieën zakken bij het landen na een sprong.",

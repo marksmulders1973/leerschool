@@ -53,9 +53,9 @@ const steps = [
       },
       {
         q: "**Eenheid neerslag**?",
-        options: ["mm (1 mm = 1 L/m²)", "kg", "Liter", "meter"],
+        options: ["mm", "kg", "km/u", "meter"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Wel maar specifiek mm.", "Te groot."],
+        wrongHints: [null, "Niet.", "Dat is een eenheid voor snelheid.", "Te groot."],
         uitlegPad: {
           stappen: [
             { titel: "Neerslag = water uit lucht", tekst: "**Neerslag** is alle water dat uit de lucht valt: regen, sneeuw, hagel, motregen. Meteorologen meten dit in **millimeter (mm)**." },
@@ -151,9 +151,9 @@ const steps = [
       },
       {
         q: "Wat is **Beaufort 12**?",
-        options: ["Orkaan (>32 m/s)", "Windstil", "Matig", "Sneeuwstorm"],
+        options: ["Orkaan", "Windstil", "Matig", "Sneeuwstorm"],
         answer: 0,
-        wrongHints: [null, "0.", "3-5.", "Wel zwaar weer."],
+        wrongHints: [null, "0.", "3-4.", "Wel zwaar weer."],
       },
       {
         q: "Hoge druk (H) = ?",
@@ -246,9 +246,9 @@ const steps = [
       { q: "**Weer vs klimaat**: weer = ?", options: ["Nu / vandaag", "Gemiddelde jaren", "Geen verschil", "Niet bekend"], answer: 0, wrongHints: [null, "Klimaat.", "Wel.", "Wel."] },
       { q: "**KNMI** zit in?", options: ["De Bilt", "Den Haag", "Amsterdam", "Rotterdam"], answer: 0, wrongHints: [null, "Den Haag is de regeringsstad, niet de plek van het KNMI.", "De hoofdstad, maar niet waar het weerinstituut zit.", "De havenstad, niet waar het KNMI zit."] },
       { q: "**Hoge druk (H)** = ?", options: ["Goed weer", "Regen", "Storm", "Onweer"], answer: 0, wrongHints: [null, "Lage druk.", "Wind.", "Lage druk."] },
-      { q: "**Beaufort 12** = ?", options: ["Orkaan (>32 m/s)", "Windstil", "Matige wind", "Sneeuwstorm"], answer: 0, wrongHints: [null, "0.", "5.", "Niet specifiek."] },
+      { q: "**Beaufort 12** = ?", options: ["Orkaan", "Windstil", "Matige wind", "Sneeuwstorm"], answer: 0, wrongHints: [null, "0.", "3.", "Niet specifiek."] },
       { q: "**Eenheid neerslag**?", options: ["mm", "kg", "graden", "m³"], answer: 0, wrongHints: [null, "Niet.", "Temp.", "Niet."] },
-      { q: "Hoe ver vooruit kun je **redelijk voorspellen**?", options: ["~7 dagen redelijk", "1 maand exact", "1 jaar", "Niet mogelijk"], answer: 0, wrongHints: [null, "Onmogelijk.", "Onmogelijk.", "Wel."] },
+      { q: "Hoe ver vooruit kun je **redelijk voorspellen**?", options: ["Ongeveer een week", "1 maand exact", "1 jaar", "Niet mogelijk"], answer: 0, wrongHints: [null, "Onmogelijk.", "Onmogelijk.", "Wel."] },
       {
         q: "Wat is **klimaatverandering**?",
         options: ["Aarde wordt langzaam warmer door meer CO₂", "Wisseling van weer per dag", "Wisseling van seizoenen", "Een weer-app"],
@@ -343,7 +343,7 @@ const steps = [
       { q: "Wat is **smog**?", options: ["Mengsel mist + luchtvervuiling","Sneeuw","Mooi weer","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Tegengestelde.", "Wel."] },
       { q: "Welk weer geeft een **lage druk** vaak?", options: ["Bewolkt/regen","Mooi weer","Sneeuw","Niet bestaand"], answer: 0, wrongHints: [null, "Hoge druk.", "Niet primair.", "Wel."] },
       { q: "Wat doet een **buienradar**?", options: ["Toont waar regen valt + bewegingsrichting","Voorspelt temperatuur","Toont wind","Niet relevant"], answer: 0, wrongHints: [null, "Niet primair.", "Niet primair.", "Wel."] },
-      { q: "Welke **afkortingen** gebruik je voor windrichtingen?", options: ["N, O, Z, W (Noord, Oost, Zuid, West)","ABCD","Random","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Welke **afkortingen** gebruik je voor windrichtingen?", options: ["N, O, Z, W","A, B, C, D","L, R, V, A","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Links/rechts hangt af van hoe je staat — een windrichting niet.", "Wel."] },
       { q: "Welke maanden zijn meestal **warmst** in NL?", options: ["Juni-augustus","December-februari","Maart-mei","September-november"], answer: 0, wrongHints: [null, "Winter.", "Lente.", "Herfst."] },
     ],
   },

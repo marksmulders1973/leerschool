@@ -147,9 +147,9 @@ const steps = [
       },
       {
         q: "²³⁸U vervalt via α + 2β⁻ naar:",
-        options: ["²³⁴U (Z=92, A=234)", "²³⁴Th (Z=90)", "²³⁰Pa", "²³⁸Pu"],
+        options: ["²³⁴U (Z=92)", "²³⁴Th (Z=90)", "²³⁰Pa", "²³⁸Pu"],
         answer: 0,
-        wrongHints: [null, "Niet — de twee β-vervallen verhogen Z ook nog — tel alles samen op.", "Niet — controleer of A klopt na alle vervallen.", "Niet — Pu heeft een hoger atoomnummer dan U, dat kan niet het gevolg zijn van verval."],
+        wrongHints: [null, "Niet — de twee β-vervallen verhogen Z ook nog — tel alles samen op.", "Niet — controleer of A klopt na alle vervallen.", "Niet — tel na: wat doen één α en twee β⁻ samen met Z en met A?"],
         uitlegPad: {
           stappen: [
             { titel: "Som van veranderingen", tekst: "α: Z−2, A−4. β⁻: Z+1, A=0 (per stuk). Twee β⁻: Z+2.\n\nStart: U-238 (Z=92, A=238).\nNa α: Z=90, A=234 (Th-234).\nNa 1 β: Z=91, A=234 (Pa-234).\nNa 2 β: Z=92, A=234 (U-234).\n\nEindkern: **U-234** — isotoop van het oorspronkelijke uranium maar lichter." },
@@ -220,7 +220,7 @@ const steps = [
       {
         q: "Activiteit A is **evenredig** met:",
         options: [
-          "Aantal radioactieve kernen N (op dat moment)",
+          "Aantal radioactieve kernen N",
           "Massa van het hele monster",
           "Volume van het monster",
           "Temperatuur"
@@ -327,7 +327,7 @@ const steps = [
     checks: [
       {
         q: "**Equivalente dosis** H = ?",
-        options: ["Q · D (kwaliteitsfactor × geabsorbeerde dosis)", "D / Q", "Q + D", "Alleen D"],
+        options: ["Q · D", "D / Q", "Q + D", "Alleen D"],
         answer: 0,
         wrongHints: [null, "Niet — Q komt MAAL D.", "Niet — geen optelling.", "Niet — Q-factor wel meenemen."],
         uitlegPad: {
