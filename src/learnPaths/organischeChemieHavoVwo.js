@@ -34,7 +34,7 @@ const steps = [
         q: "Hoeveel **bindingen** maakt koolstof normaal?",
         options: ["4","1","2","Wisselt sterk"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is waterstof.", "Niet — dat is zuurstof.", "Niet — koolstof is stabiel 4."],
+        wrongHints: [null, "Niet — dat is waterstof.", "Niet — dat is zuurstof.", "Niet — koolstof maakt steeds hetzelfde vaste aantal bindingen."],
         uitlegPad: {
           stappen: [{ titel: "4 valentie-elektronen", tekst: "Koolstof heeft **4 elektronen** in buitenste schil. Wil naar 8 (octet) → deelt 4 met andere atomen → **4 covalente bindingen**. Altijd. Stabiel." }],
           woorden: [{ woord: "valentie-elektron", uitleg: "Elektron in buitenste schil — bepaalt binding-gedrag." }, { woord: "covalente binding", uitleg: "Gedeelde elektronenparen tussen atomen." }],
@@ -46,7 +46,7 @@ const steps = [
         q: "Wat is de **molecuulformule** van methaan?",
         options: ["CH₄","CH₃","C₂H₆","CO₂"],
         answer: 0,
-        wrongHints: [null, "Niet — onmogelijk (3 H + 1 C zou C 1 binding open laten).", "Niet — dat is ethaan.", "Niet — dat is koolstofdioxide (geen koolstof-waterstof)."],
+        wrongHints: [null, "Niet — tel hoeveel bindingen koolstof moet maken.", "Niet — dat is ethaan.", "Niet — dat is koolstofdioxide (geen koolstof-waterstof)."],
         uitlegPad: {
           stappen: [{ titel: "1 C + 4 H = methaan", tekst: "**Methaan** = simpelste alkaan. 1 koolstof + 4 waterstof = CH₄. Structuur: tetraëdrisch (4 H rond C, hoeken 109,5°)." }],
           theorie: "Aardgas = grotendeels methaan. Geur (rotte eieren) is toegevoegd voor veiligheid — methaan zelf reukloos.",
@@ -55,7 +55,7 @@ const steps = [
       },
       {
         q: "Welk atoom heeft **1 binding** in organische verbindingen?",
-        options: ["H (waterstof)","C","O","N"],
+        options: ["H (waterstof)","C (koolstof)","O (zuurstof)","N (stikstof)"],
         answer: 0,
         wrongHints: [null, "Niet — 4 bindingen.", "Niet — 2 bindingen.", "Niet — 3 bindingen."],
         uitlegPad: {
@@ -79,7 +79,7 @@ const steps = [
         q: "Welke binding-soorten kan koolstof vormen?",
         options: ["Enkele, dubbele, drievoudige","Alleen enkele","Alleen dubbele","Onbeperkt veel"],
         answer: 0,
-        wrongHints: [null, "Niet — ook C=C en C≡C.", "Niet — ook enkele.", "Niet — max 3 (octetregel)."],
+        wrongHints: [null, "Niet — denk aan etheen en ethyn.", "Niet — denk aan ethaan.", "Niet — koolstof kan maar een beperkt aantal elektronenparen met één atoom delen."],
         uitlegPad: {
           stappen: [{ titel: "Enkele/dubbele/drievoudige", tekst: "Koolstof kan delen: **1 paar** (enkele, C-C), **2 paren** (dubbele, C=C), **3 paren** (drievoudige, C≡C). Voorbeeld: ethaan (enkel), etheen (dubbel), ethyn (drievoudig)." }],
           niveaus: { basis: "Drie soorten.", simpeler: "1, 2 of 3 paren", nogSimpeler: "1-2-3" },
@@ -129,9 +129,9 @@ const steps = [
       },
       {
         q: "Hoeveel **isomeren** heeft butaan C₄H₁₀?",
-        options: ["2 (n-butaan + iso-butaan)","1","3","Onbeperkt"],
+        options: ["2","1","3","Onbeperkt"],
         answer: 0,
-        wrongHints: [null, "Niet — minstens 2.", "Niet — 3 isomeren heeft C₅H₁₂.", "Niet — beperkt."],
+        wrongHints: [null, "Niet — denk ook aan een vertakte keten.", "Niet — 3 isomeren heeft C₅H₁₂.", "Niet — beperkt."],
         uitlegPad: {
           stappen: [{ titel: "Twee isomeren C₄H₁₀", tekst: "1) **n-Butaan**: rechte keten CH₃-CH₂-CH₂-CH₃. 2) **2-Methylpropaan** (iso-butaan): vertakt. Zelfde formule, andere structuur." }],
           woorden: [{ woord: "isomeer", uitleg: "Verbinding met dezelfde molecuulformule maar verschillende structuur." }],
@@ -238,7 +238,7 @@ const steps = [
         q: "**Koolmonoxide (CO)** is gevaarlijk omdat:",
         options: ["Het is reukloos + dodelijk","Het ruikt slecht","Het maakt veel rook","Het is brandbaar"],
         answer: 0,
-        wrongHints: [null, "Niet — onruikbaar = gevaar.", "Niet — onzichtbaar.", "Wel brandbaar maar dat is niet hoofd-gevaar."],
+        wrongHints: [null, "Niet — zou je CO dan op tijd opmerken?", "Niet — onzichtbaar.", "Wel brandbaar maar dat is niet hoofd-gevaar."],
         uitlegPad: {
           stappen: [{ titel: "CO bindt aan hemoglobine", tekst: "**CO** bindt 200× sterker aan hemoglobine dan zuurstof. Hemoglobine kan geen O₂ meer vervoeren → verstikking. **Reukloos + smaakloos** → slachtoffer merkt niets, valt in slaap, sterft. Slecht geventileerde geisers = klassieke oorzaak." }],
           theorie: "Toets-actueel: een CO-melder wordt sterk aangeraden in elke woning met een gasapparaat. In NL overlijden elk jaar mensen aan CO-vergiftiging.",
@@ -252,7 +252,7 @@ const steps = [
         wrongHints: [null, "Niet — dat heeft -OH erbij.", "Niet — zelfde uitgangsstof.", "Niet — minder koolstof."],
         uitlegPad: {
           stappen: [{ titel: "Additie aan dubbele binding", tekst: "**Additie**: C=C neemt H₂ op → C-C (enkele binding). C₂H₄ (etheen, onverzadigd) + H₂ → **C₂H₆** (ethaan, verzadigd)." }],
-          theorie: "Toets-patroon: onverzadigde verbindingen (=C= of ≡C≡) kunnen ADDITIE ondergaan. Verzadigde alleen substitutie.",
+          theorie: "Toets-patroon: onverzadigde verbindingen (C=C of C≡C) kunnen ADDITIE ondergaan. Verzadigde alleen substitutie.",
           niveaus: { basis: "Ethaan.", simpeler: "Etheen + H₂ = ethaan", nogSimpeler: "Ethaan" },
         },
       },
@@ -332,7 +332,7 @@ const steps = [
         q: "Wat is **bio-ethanol**?",
         options: ["Ethanol uit plantaardige bron (maïs, suikerriet)","Synthetische alcohol","Een nieuw vak","Methaan-derivaat"],
         answer: 0,
-        wrongHints: [null, "Niet — biologisch (uit organisch).", "Niet relevant.", "Niet — uit suiker, niet methaan."],
+        wrongHints: [null, "Niet — waar wijst het voorvoegsel 'bio' op?", "Niet relevant.", "Niet — bio-ethanol wordt niet uit aardgas gemaakt."],
         uitlegPad: {
           stappen: [{ titel: "Bio = uit levende organismen", tekst: "**Bio-ethanol** = ethanol gemaakt door **fermentatie** van suikers (uit maïs, suikerriet, etc.) door gist. Hernieuwbaar maar nadeel: concurreert met voedsel-landbouw. Gebruikt als brandstof-bijmenging (E10, E85)." }],
           niveaus: { basis: "Uit planten.", simpeler: "Bio-ethanol = uit plant-suiker", nogSimpeler: "Plant" },
