@@ -14,7 +14,7 @@
 ## Workflow
 
 - **Git**: na code-wijzigingen automatisch `git add` + `commit` + `push` zonder te vragen (Mark gaf doorlopende toestemming).
-- **Versienummer mee-ophogen**: `src/versie.js` (`BOUW_VERSIE`) bij elke push-batch met 1 omhoog — het stempeltje in de app is Mark's snelle check of hij naar de nieuwste versie kijkt. Vergeten op 15 jul (46 bleef staan bij ~20 pushes) → voortaan onderdeel van elke commit-routine.
+- **Versie bijwerken bij elke push** (`src/versie.js`): `BOUW_VERSIE` met 1 omhoog (intern telnummer, nooit terug naar 1) én `BOUW_STEMPEL` op de datum van vandaag ("6 okt"; tweede uitrol die dag "6 okt b", derde "6 okt c"). Het stempel is Mark's snelle check of hij naar de nieuwste versie kijkt; sinds 6 okt 2026 een datum omdat "versie 923" voor bezoekers als "923 keer iets mis" leest. Vergeten op 15 jul (46 bleef staan bij ~20 pushes) → voortaan onderdeel van elke commit-routine. Liefst **één uitrol per dag**, goed getest (drie uitrollen op één avond lieten de PWA op Marks telefoon vastlopen, 5 okt).
 - **Niet skippen**: nooit `--no-verify`, geen amend van gepushte commits, geen force-push naar main.
 - **Klaar-voor-gebruik signaal**: bij langer werk altijd "klaar voor gebruik" als afsluiting, zodat Mark weet wanneer hij kan testen.
 - **Bij vage bug-melding**: eerst 1-2 gerichte reproductie-vragen, niet blind fixen.
