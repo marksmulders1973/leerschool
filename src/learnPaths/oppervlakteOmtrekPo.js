@@ -52,7 +52,7 @@ const steps = [
         q: "Een vloer is 6 m × 4 m. Hoeveel **tegels van 1 m² heb je nodig** om de hele vloer te bedekken?",
         options: ["10 tegels", "20 tegels", "24 tegels", "10 m²"],
         answer: 2,
-        wrongHints: ["Denk: tel je de zijden op of vermenigvuldig je ze? Hoeveel zijden heeft een rechthoek?", "Dat is de omtrek (rondje langs de rand). Voor oppervlakte gebruik je een andere bewerking.", null, "Antwoord moet aantal tegels zijn (een getal), niet m²."],
+        wrongHints: ["Je telde de zijden op — maar tegels bedekken het vlak. Welke bewerking hoort daarbij?", "Dat is de omtrek (rondje langs de rand). Voor oppervlakte gebruik je een andere bewerking.", null, "Antwoord moet aantal tegels zijn (een getal), niet m²."],
         explanation: "**Oppervlakte = lengte × breedte** = 6 × 4 = **24 m²**. Bij tegels van 1 m² = 24 tegels.",
         uitlegPad: compact(
           "Oppervlakte rechthoek = L × B. Tegels 1m²: aantal = totale oppervlakte.",
@@ -75,7 +75,7 @@ const steps = [
         q: "Je legt **gras** in een rechthoekig veldje van **5 m × 3 m**. Hoeveel m² gras heb je nodig?",
         options: ["15 m²", "8 m²", "16 m²", "15 m"],
         answer: 0,
-        wrongHints: [null, "Optellen geeft de omtrek — gras bedekt het vlak, dus welke bewerking hoort daarbij?", "Dat is de omtrek (de rand) — maar voor gras heb je het vlak binnenin nodig.", "Eenheid moet m² zijn."],
+        wrongHints: [null, "Je telde de twee maten op — gras bedekt het vlak, dus welke bewerking hoort daarbij?", "Dat is de omtrek (de rand) — maar voor gras heb je het vlak binnenin nodig.", "Eenheid moet m² zijn."],
         uitlegPad: compact(
           "Gras = oppervlakte = L×B = 5×3 = 15 m².",
           { basis: "5 × 3 = 15 m².", simpeler: "Gras = vlak = 5×3.", nogSimpeler: "15" },
@@ -141,7 +141,7 @@ const steps = [
         q: "Een vierkant heeft een omtrek van **52 cm**. Hoe lang is **één zijde**?",
         options: ["13 cm", "26 cm", "48 cm", "4 cm"],
         answer: 0,
-        wrongHints: [null, "Dat is de helft van de omtrek — maar hoeveel zijden heeft een vierkant?", "Dat is 52 − 4 — dat is geen wiskundige formule voor omtrek.", "Je bent door 13 gedeeld in plaats van door 4."],
+        wrongHints: [null, "Dat is de helft van de omtrek — maar hoeveel zijden heeft een vierkant?", "Dat is 52 − 4 — dat is geen wiskundige formule voor omtrek.", "Je deelde door het verkeerde getal — hoeveel zijden heeft een vierkant?"],
         explanation: "Vierkant: omtrek = 4 × zijde → zijde = 52 ÷ 4 = **13 cm**.",
         uitlegPad: compact(
           "Zijde = omtrek ÷ 4 = 52 ÷ 4 = 13 cm.",
@@ -208,7 +208,7 @@ const steps = [
         q: "Een rechthoek heeft een oppervlakte van **48 m²** en een breedte van **6 m**. Hoe lang is de **lengte**?",
         options: ["8 m", "42 m", "4 m", "288 m"],
         answer: 0,
-        wrongHints: [null, "Dat is 48 − 6 — voor oppervlakte geldt een andere bewerking.", "Let op: bij een driehoek deel je (basis × hoogte) nog door 2.", "Dat is 48×6 — je deelt juist, niet vermenigvuldigt."],
+        wrongHints: [null, "Dat is 48 − 6 — voor oppervlakte geldt een andere bewerking.", "Je deelde nog eens door 2 — bij een rechthoek is lengte × breedte al de hele oppervlakte.", "Dat is 48×6 — je deelt juist, niet vermenigvuldigt."],
         explanation: "Opp = L × B → L = Opp ÷ B = 48 ÷ 6 = **8 m**. Check: 8×6=48 ✓.",
         uitlegPad: compact(
           "L = Opp ÷ B = 48 ÷ 6 = 8 m.",
@@ -294,7 +294,7 @@ const steps = [
         q: "Een cirkel heeft een **straal van 4 cm**. Wat is de **omtrek**? (Gebruik π ≈ 3,14)",
         options: ["12,56 cm", "25,12 cm", "50,24 cm", "12,56 cm²"],
         answer: 1,
-        wrongHints: ["12,56 = π × 4 (vergeten ×2 — gebruikt straal, formule is π×d = π×2r).", null, "50,24 = π × 4 × 4 = π × r² — dat is de oppervlakte, niet de omtrek.", "Eenheid omtrek = cm, niet cm²."],
+        wrongHints: ["Dat is π × straal — hoort in de omtrek-formule de straal of de diameter?", null, "50,24 = π × 4 × 4 = π × r² — dat is de oppervlakte, niet de omtrek.", "Eenheid omtrek = cm, niet cm²."],
         explanation: "**Omtrek = 2 × π × r** = 2 × 3,14 × 4 = 6,28 × 4 = **25,12 cm**. (Of: d = 2×4 = 8 cm, π×d = 3,14×8 = 25,12.)",
         uitlegPad: compact(
           "Omtrek cirkel = 2πr = πd. r=4: 2×3,14×4 = 25,12 cm.",
@@ -307,7 +307,7 @@ const steps = [
         options: ["3,14 m²", "0,785 m²", "1,57 m²", "0,5 m²"],
         answer: 1,
         wrongHints: ["Dat is π × diameter — welke formule geeft oppervlakte (niet omtrek)?", null, "Dat is π × straal — welke maat moet je nog in het kwadraat nemen?", "Dat is de helft van de diameter — geen oppervlakte-formule. Welke maat gebruik je in de oppervlakte-formule?"],
-        explanation: "**Diameter = 1 m, dus straal = 0,5 m**. Oppervlakte = π × r² = 3,14 × 0,5² = 3,14 × 0,25 = **0,785 m²** (= 7850 cm²).",
+        explanation: "**Diameter = 1 m, dus straal = 0,5 m**. Oppervlakte = π × r² = 3,14 × 0,5² = 3,14 × 0,25 = **0,785 m²** (= 7.850 cm²).",
         uitlegPad: compact(
           "Diameter=1m → straal=0,5m. Oppervlakte=πr²=3,14×0,5²=3,14×0,25=0,785 m².",
           { basis: "π × 0,25 = 0,785 m².", simpeler: "Halveer eerst de diameter (1m → 0,5m). Dan π × 0,5² = 0,785.", nogSimpeler: "0,785" },
@@ -318,8 +318,8 @@ const steps = [
         q: "Hoeveel is π (pi) **afgerond op 2 decimalen**?",
         options: ["3,12", "3,14", "3,16", "3,18"],
         answer: 1,
-        wrongHints: ["Net te laag. π begint met 3,14...", null, "Net te hoog.", "Te hoog. π is iets kleiner dan 3,16."],
-        explanation: "**π ≈ 3,14** (op 2 decimalen). Volledig: 3,14159265... Voor de Doorstroomtoets gebruik je meestal 3,14. Op rekenmachine = π-knop.",
+        wrongHints: ["Net te laag — ken je de eerste cijfers van π?", null, "Net te hoog.", "Te hoog."],
+        explanation: "**π ≈ 3,14** (op 2 decimalen). Volledig: 3,14159265... Op school reken je meestal met 3,14. Op rekenmachine = π-knop.",
         uitlegPad: compact(
           "π = 3,14159... Op 2 decimalen: 3,14. Pi-dag = 14 maart (3-14 datum-notatie).",
           { basis: "3,14.", simpeler: "Pi = 3,14 op 2 decimalen.", nogSimpeler: "3,14" },
@@ -359,7 +359,7 @@ const steps = [
       },
       {
         q: "Een ronde **pizza** heeft een **diameter van 30 cm**. Hoeveel cm² is de pizza? (π ≈ 3,14)",
-        options: ["94,2 cm²", "188,4 cm²", "706,5 cm²", "2826 cm²"],
+        options: ["94,2 cm²", "188,4 cm²", "706,5 cm²", "2.826 cm²"],
         answer: 2,
         wrongHints: ["Dat is de omtrek van de pizza, niet de oppervlakte. Welke formule geeft oppervlakte?", "Foute formule — voor de oppervlakte van een cirkel gebruik je π × r². Welke maat is r?", null, "Je hebt de diameter gekwadrateerd — maar de formule vraagt de straal. Wat is het verschil tussen straal en diameter?"],
         explanation: "**Diameter = 30, straal = 15**. Oppervlakte = π × r² = 3,14 × 15² = 3,14 × 225 = **706,5 cm²**. Toets-trap: pas op voor diameter ipv straal!",
