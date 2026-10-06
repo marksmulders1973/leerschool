@@ -442,7 +442,7 @@ const steps = [
         },
       },
       { q: "Bereken: 2 + 3 × 4 = ?", options: ["14","20","24","9"], answer: 0, wrongHints: [null, "Niet — eerst keer.", null, null] },
-      { q: "Bereken: (2 + 3) × 4 = ?", options: ["20","14","9","24"], answer: 0, wrongHints: [null, "Niet — haakjes forceren volgorde.", "Niet — vermenigvuldigen eerst klopt niet hier.", null] },
+      { q: "Bereken: (2 + 3) × 4 = ?", options: ["20","14","9","24"], answer: 0, wrongHints: [null, "Niet — haakjes forceren volgorde.", "Niet — je telt alles op, maar er staat ook een keer-teken.", null] },
       { q: "Bereken: 12 − 6 ÷ 2 = ?", options: ["9","3","6","2"], answer: 0, wrongHints: [null, "Niet — denk na welke bewerking je als eerste moet doen: − of ÷?", null, null] },
       { q: "Bereken: 5 × (3 + 4) = ?", options: ["35","19","27","9"], answer: 0, wrongHints: [null, "Niet — haakjes prioriteit.", null, null] },
       { q: "Bereken: 100 − 30 × 2 = ?", options: ["40","140","70","60"], answer: 0, wrongHints: [null, "Niet — × eerst.", null, null] },

@@ -337,7 +337,7 @@ const steps = [
       { q: "Welke schaal meet **temperatuur** in NL?", options: ["Celsius","Fahrenheit","Kelvin","Beaufort"], answer: 0, wrongHints: [null, "VS-stelsel.", "Wetenschap.", "Wind."] },
       { q: "Welk **instrument** meet luchtdruk?", options: ["Barometer","Thermometer","Anemometer","Hygrometer"], answer: 0, wrongHints: [null, "Temperatuur.", "Wind.", "Vocht."] },
       { q: "Wat doet een **anemometer**?", options: ["Wind meten","Temperatuur","Luchtdruk","Vochtigheid"], answer: 0, wrongHints: [null, "Thermometer.", "Barometer.", "Hygrometer."] },
-      { q: "Een **hittegolf** in NL = ?", options: ["≥5 dagen ≥25°C met 3 ≥30°C","1 dag warm","1 week zon","Niet bestaand"], answer: 0, wrongHints: [null, "Te kort.", "Niet specifiek.", "Wel."] },
+      { q: "Een **hittegolf** in NL = ?", options: ["≥5 dagen ≥25°C met 3 ≥30°C","≥3 dagen ≥25°C met 1 ≥30°C","≥1 dag ≥30°C met 1 ≥35°C","≥7 dagen zon met 3 ≥20°C"], answer: 0, wrongHints: [null, "Te kort — een hittegolf duurt langer.", "Eén hete dag is nog geen hittegolf.", "Het gaat om de temperatuur, niet alleen om zon."] },
       { q: "Wat doet een **front** in weer?", options: ["Grens tussen luchtmassa's","Niets","Wolk","Zon"], answer: 0, wrongHints: [null, "Wel.", "Onderdeel.", "Niet."] },
       { q: "**Code rood** bij KNMI betekent?", options: ["Extreem gevaarlijk weer","Mooi weer","Een dag wachten","Niet relevant"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Wel."] },
       { q: "Wat is **smog**?", options: ["Mengsel mist + luchtvervuiling","Sneeuw","Mooi weer","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Tegengestelde.", "Wel."] },

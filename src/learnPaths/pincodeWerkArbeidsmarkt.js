@@ -486,7 +486,7 @@ const steps = [
       },
       {
         q: "Wat is de **beroepsbevolking**?",
-        options: ["Mensen 15-75 die willen + kunnen werken (werkend + zoekend)", "Alle inwoners NL", "Alleen werkenden", "Alleen werklozen"],
+        options: ["Werkenden + werkzoekenden van 15-75 jaar", "Alle inwoners van Nederland", "Alleen de werkenden van 15-75 jaar", "Alleen de werkzoekenden van 15-75 jaar"],
         answer: 0,
         wrongHints: [null, "Niet alle inwoners.", "Ook werkloze zoekenden tellen mee.", "Werkenden ook."],
         uitlegPad: {

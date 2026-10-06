@@ -771,7 +771,7 @@ const steps = [
           stappen: [{ titel: "Hoe meer, hoe zwaarder", tekst: "Bij progressieve belasting STIJGT het BELASTING-percentage met je inkomen. €30k betaalt 37%, €100k betaalt 49% over hoogste schijf. Resultaat: hoge inkomens leveren relatief meer in." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt met inkomen. Hoe hoger je inkomen, hoe hoger % belasting." }, { woord: "vlaktaks", uitleg: "Iedereen betaalt zelfde percentage, ongeacht inkomen. (Tegengesteld aan progressief.)" }],
           theorie: "NL inkomstenbelasting (rond 2024): tot ~€75k ongeveer 37%, daarboven 49,50%. Gevolg: rijken betalen relatief meer → netto-verschil tussen rijk en arm wordt kleiner.",
-          voorbeelden: [{ type: "rekensom", tekst: "Sterk vereenvoudigd, zonder heffingskortingen: A verdient €30k bruto → ~€11k IB → netto €19k. B verdient €100k → ~€38k IB → netto €62k. Bruto-verschil €70k → netto-verschil €43k. Verkleind door progressie." }],
+          voorbeelden: [{ type: "rekensom", tekst: "Sterk vereenvoudigd, zonder heffingskortingen: A verdient €30k bruto → ~€11k IB → netto €19k. B verdient €100k → ~€40k IB → netto €60k. Bruto-verschil €70k → netto-verschil €41k. Verkleind door progressie." }],
           basiskennis: [{ onderwerp: "Niet 'lagere betalen meer'", uitleg: "Bij progressief betalen LAGERE inkomens een kleiner %, niet meer. Bij regressief (zoals btw) dragen lagere inkomens relatief zwaarder." }],
           niveaus: { basis: "Hoger % bij hoger inkomen.", simpeler: "Wie meer verdient, betaalt een groter PERCENTAGE belasting. Dat trekt netto-inkomens dichter naar elkaar toe.", nogSimpeler: "Meer = meer %" },
         },

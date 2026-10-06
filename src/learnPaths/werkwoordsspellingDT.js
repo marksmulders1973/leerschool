@@ -339,7 +339,7 @@ const steps = [
         q: "**'Ik heb ____'** — voltooid deelwoord van **werken**:",
         options: ["gewerkt","gewerkd","gewerken","gewerk"],
         answer: 0,
-        wrongHints: [null,"k zit in kofschip → -t niet -d.","Dat is een werkwoord-vorm, niet voltooid deelwoord.","Mist de uitgang."],
+        wrongHints: [null,"Op welke letter eindigt de stam 'werk'? Zit die letter in 't kofschip?","Een voltooid deelwoord eindigt hier niet op -en. Denk aan ge + stam + ...","Mist de uitgang."],
         uitlegPad: {
           stappen: [
             { titel: "Voltooid deelwoord-formule", tekst: "ge + stam + t/d. Stam werk eindigt op k = kofschip → +t. Resultaat: gewerkt." },

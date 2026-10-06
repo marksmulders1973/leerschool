@@ -168,7 +168,7 @@ const steps = [
       },
       {
         q: "Wat doet een **router**?",
-        options: ["Kiest per kruispunt de beste weg voor de pakketjes", "Bewaart je bestanden blijvend", "Vertaalt namen naar IP-adressen", "Versleutelt je wachtwoorden"],
+        options: ["Stuurt pakketjes de goede kant op","Bewaart je bestanden blijvend", "Vertaalt namen naar IP-adressen", "Versleutelt je wachtwoorden"],
         answer: 0,
         wrongHints: [null, "Bewaren doet de opslag.", "Namen vertalen doet DNS.", "Versleutelen hoort bij HTTPS."],
         uitlegPad: {

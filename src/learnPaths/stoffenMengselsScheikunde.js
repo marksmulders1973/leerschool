@@ -203,7 +203,7 @@ const steps = [
         q: "Welke is een **chemische** eigenschap?",
         options: ["Brandbaarheid", "Dichtheid", "Smeltpunt", "Kleur"],
         answer: 0,
-        wrongHints: [null, "Dichtheid meet je zonder de stof te veranderen — bij welke eigenschap ontstaat een níéuwe stof?", "Na smelten is het nog dezelfde stof (ijs → water) — bij welke eigenschap verandert de stof zelf?", "Kleur zie je zonder iets te doen — chemisch = de stof verandert erbij. Wat gebeurt er bij verbranden?"],
+        wrongHints: [null, "Dichtheid meet je zonder de stof te veranderen — bij welke eigenschap ontstaat een níéuwe stof?", "Na smelten is het nog dezelfde stof (ijs → water) — bij welke eigenschap verandert de stof zelf?", "Kleur zie je zonder iets te doen — chemisch = de stof verandert erbij. Welke eigenschap merk je pas als de stof verandert in een andere stof?"],
       },
     ],
   },

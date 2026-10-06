@@ -365,7 +365,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Mist aanhalingstekens.", "Mist hoofdletter + punt binnen aanhalingstekens.", "Kijk naar het einde: waar is het leesteken van de zin gebleven?"],
       },
-      { q: "Welke zin heeft de **juiste komma**?", options: ["Ik kocht brood, kaas en melk.","Ik kocht brood kaas en melk.","Ik kocht, brood kaas en melk.","Ik kocht brood, kaas en, melk."], answer: 0, wrongHints: [null, "Komma's ontbreken.", "Verkeerde positie.", "Komma vóór 'en' niet bij opsomming."] },
+      { q: "Welke zin heeft de **juiste komma**?", options: ["Ik kocht brood, kaas en melk.","Ik kocht brood kaas en melk.","Ik kocht, brood kaas en melk.","Ik kocht brood, kaas en, melk."], answer: 0, wrongHints: [null, "Komma's ontbreken.", "Verkeerde positie.", "Kijk goed naar het woordje 'en': hoort daar een komma bij in een opsomming?"] },
       { q: "Welk **leesteken** sluit een vraag af?", options: ["Vraagteken (?)","Punt (.)","Komma (,)","Uitroepteken (!)"], answer: 0, wrongHints: [null, "Niet vraag.", "Niet einde.", "Uitroep."] },
       { q: "Welk **leesteken** voor een uitroep?", options: ["!","?",".",","], answer: 0, wrongHints: [null, "Vraag.", "Mededeling.", "Niet einde."] },
       { q: "Wanneer **hoofdletter** in midden van zin?", options: ["Bij namen (van personen/plaatsen)","Altijd","Nooit","Alleen na komma"], answer: 0, wrongHints: [null, "Niet altijd.", "Wel soms.", "Niet alleen daar."] },
