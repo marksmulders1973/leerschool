@@ -26,7 +26,7 @@ const steps = [
       "Onze **buurlanden** zijn:\n" +
       "• In het **oosten**: **Duitsland** (het grootste buurland).\n" +
       "• In het **zuiden**: **België**.\n" +
-      "Aan de **westkant** ligt de **Noordzee**, en daar weer achter het **Verenigd Koninkrijk** (een eiland).",
+      "Aan de **westkant** ligt de **Noordzee**, en daar weer achter het **Verenigd Koninkrijk** (vooral op een eiland).",
     illustrationComponent: OverzichtEU,
     interactiveComponent: check("noem", "Duitsland"),
     checks: [
@@ -111,7 +111,7 @@ const steps = [
   {
     title: "Het noorden: Scandinavië",
     explanation:
-      "Bovenin Europa ligt **Scandinavië**: **Noorwegen**, **Zweden** en **Finland**. Koud, veel bos en meren, en in de winter soms het **noorderlicht**.\n\n" +
+      "Bovenin Europa ligt **Scandinavië** (**Noorwegen**, **Zweden** en **Denemarken**) en daarnaast **Finland**. Koud, veel bos en meren, en in de winter soms het **noorderlicht**.\n\n" +
       "**Noorwegen** is langgerekt langs de westkust, met diepe inhammen van zee: **fjorden**. Welk land is geel gemaakt?",
     interactiveComponent: check("noem", "Noorwegen"),
     checks: [
