@@ -78,7 +78,7 @@ const steps = [
       },
       {
         q: "Welke regio heette **'Balkan-kruidvat'**?",
-        options: ["Zuidoost-Europa (Servië, Bulgarije, etc.)", "Noord-Europa", "Spanje", "Engeland"],
+        options: ["Zuidoost-Europa", "Noord-Europa", "Spanje", "Engeland"],
         answer: 0,
         wrongHints: [null, "Daar bleef het juist rustig — in welk deel van Europa werd Frans Ferdinand vermoord?", "Spanje bleef in WO1 zelfs neutraal — zoek de regio vol spanningen tussen jonge staten.", "Engeland ligt geïsoleerd op een eiland — welk gebied had rivaliserende volken dicht op elkaar?"],
       },
@@ -89,7 +89,7 @@ const steps = [
   {
     title: "Begin — moord op Frans Ferdinand (28 juni 1914)",
     explanation:
-      "De oorlog begon met **één moordaanslag** in Sarajevo.\n\n**Wat gebeurde er?**\n• **28 juni 1914**: **Aartshertog Frans Ferdinand** van Oostenrijk-Hongarije bezocht **Sarajevo** *(Bosnië, toen deel van Oostenrijk-Hongarije)*.\n• Werd doodgeschoten door **Gavrilo Princip**, een 19-jarige Servische nationalist *(deel van groep 'Zwarte Hand')*.\n• Princip wilde Slavische volken bevrijden van Oostenrijkse heerschappij.\n• Tegelijk werd Frans Ferdinands vrouw Sophie ook doodgeschoten.\n\n**Wat gebeurde daarna?**\nKlein conflict werd snel groot door allianties:\n\n1. **28 juli 1914**: Oostenrijk-Hongarije verklaart Servië oorlog.\n2. **1 augustus**: Duitsland verklaart Rusland oorlog *(Rusland steunde Servië)*.\n3. **3 augustus**: Duitsland verklaart Frankrijk oorlog.\n4. **4 augustus**: Duitsland valt **België** binnen *(deel van 'Schlieffenplan' — snel via België naar Frankrijk)*. België was **neutraal** — schending! Engeland verklaart Duitsland oorlog.\n\n**In een week** was heel Europa in oorlog.\n\n**Schlieffenplan** *(Duits oorlogsplan)*:\nDuitsland wilde **eerst Frankrijk verslaan** (snel, via België), daarna Rusland aanvallen. Mislukte: Frankrijk + Engeland stopten Duitsland bij de **Marne** *(sep 1914)*. Daarna ging het over in **loopgravenoorlog**.\n\n**Wat dachten mensen?**\n• De meeste politici en burgers dachten: *'tegen Kerst zijn we thuis'*.\n• In plaats van een **paar maanden** duurde de oorlog **ruim 4 jaar**.\n• Met **ongekende verschrikkingen**.\n\n**Belangrijke termen**:\n• **Aartshertog** = troonopvolger van Oostenrijk-Hongarije.\n• **Sarajevo** = hoofdstad Bosnië *(nu Bosnië-Herzegovina)*.\n• **Schlieffenplan** = Duits aanvalsplan via België naar Frankrijk.\n• **Neutraal** = niet in oorlog, geen kant kiezen.",
+      "De oorlog begon met **één moordaanslag** in Sarajevo.\n\n**Wat gebeurde er?**\n• **28 juni 1914**: **Aartshertog Frans Ferdinand** van Oostenrijk-Hongarije bezocht **Sarajevo** *(Bosnië, toen deel van Oostenrijk-Hongarije)*.\n• Werd doodgeschoten door **Gavrilo Princip**, een 19-jarige Servische nationalist *(deel van groep 'Zwarte Hand')*.\n• Princip wilde Slavische volken bevrijden van Oostenrijkse heerschappij.\n• Tegelijk werd Frans Ferdinands vrouw Sophie ook doodgeschoten.\n\n**Wat gebeurde daarna?**\nKlein conflict werd snel groot door allianties:\n\n1. **28 juli 1914**: Oostenrijk-Hongarije verklaart Servië oorlog.\n2. **1 augustus**: Duitsland verklaart Rusland oorlog *(Rusland steunde Servië)*.\n3. **3 augustus**: Duitsland verklaart Frankrijk oorlog.\n4. **4 augustus**: Duitsland valt **België** binnen *(deel van 'Schlieffenplan' — snel via België naar Frankrijk)*. België was **neutraal** — schending! Engeland verklaart Duitsland oorlog.\n\n**In een week** was heel Europa in oorlog.\n\n**Schlieffenplan** *(Duits oorlogsplan)*:\nDuitsland wilde **eerst Frankrijk verslaan** (snel, via België), daarna Rusland aanvallen. Mislukte: Frankrijk + Engeland stopten Duitsland bij de **Marne** *(sep 1914)*. Daarna ging het over in **loopgravenoorlog**.\n\n**Wat dachten mensen?**\n• De meeste politici en burgers dachten: *'tegen Kerst zijn we thuis'*.\n• In plaats van een **paar maanden** duurde de oorlog **ruim 4 jaar**.\n• Met **ongekende verschrikkingen**.\n\n**Belangrijke termen**:\n• **Aartshertog** = titel van een prins uit het Oostenrijkse keizershuis. Frans Ferdinand was de troonopvolger.\n• **Sarajevo** = hoofdstad Bosnië *(nu Bosnië-Herzegovina)*.\n• **Schlieffenplan** = Duits aanvalsplan via België naar Frankrijk.\n• **Neutraal** = niet in oorlog, geen kant kiezen.",
     checks: [
       {
         q: "Wanneer werd **Frans Ferdinand vermoord**?",
@@ -99,13 +99,13 @@ const steps = [
       },
       {
         q: "In welke stad gebeurde de **moord**?",
-        options: ["Sarajevo (Bosnië)", "Wenen", "Belgrado", "Berlijn"],
+        options: ["Sarajevo", "Wenen", "Belgrado", "Berlijn"],
         answer: 0,
         wrongHints: [null, "Hoofdstad Oostenrijk-Hongarije zelf.", "Hoofdstad Servië.", "Hoofdstad Duitsland."],
       },
       {
         q: "Welk **plan** had Duitsland om snel te winnen?",
-        options: ["Schlieffenplan (via België naar Frankrijk)", "Marshallplan", "Morgenthauplan", "Dawes-plan"],
+        options: ["Schlieffenplan", "Marshallplan", "Morgenthauplan", "Dawes-plan"],
         answer: 0,
         wrongHints: [null, "Was na WO2.", "Was in WO2.", "Was 1924 — economisch herstel."],
         uitlegPad: {
@@ -147,7 +147,7 @@ const steps = [
       },
       {
         q: "Welk **nieuw wapen** werd in WO1 voor het eerst gebruikt?",
-        options: ["Tank (1916)", "Pistool", "Kanon", "Zwaard"],
+        options: ["Tank", "Pistool", "Kanon", "Zwaard"],
         answer: 0,
         wrongHints: [null, "Pistolen bestonden al eeuwen — wat was er in 1916 splinternieuw?", "Kanonnen stonden er al in de tijd van Napoleon — welk wapen moest de loopgraven-impasse breken?", "Zwaarden zijn middeleeuws — denk aan gloednieuwe techniek uit 1916."],
       },
@@ -203,7 +203,7 @@ const steps = [
   {
     title: "Einde + Verdrag van Versailles",
     explanation:
-      "Op **11 november 1918** om **11 uur 's morgens** stopte de oorlog. **Wapenstilstand** ondertekend in een trein bij **Compiègne** *(Frankrijk)*.\n\n**Waarom verloor Duitsland?**\n• **Lenteoffensief 1918 mislukte** — ondanks troepen uit het oosten.\n• **VS deden mee** vanaf 1917 — verse troepen + middelen.\n• Honger in Duitsland zelf *(Engelse blokkade)*.\n• Muiterij in Duitse marine.\n• **Duitse revolutie** *(november 1918)* — keizer Wilhelm II vluchtte naar NL.\n• Duitse regering wilde wapenstilstand.\n\n**Doden**: ongeveer:\n• **9 miljoen soldaten** gesneuveld.\n• **7 miljoen burgers** doodgegaan *(meest door honger + griep + ziekte)*.\n• Totaal **~17 miljoen doden**.\n• Plus de **Spaanse griep** *(1918-1920)*: 50-100 miljoen doden wereldwijd, deels door verzwakte oorlog-bevolking.\n\n**Verdrag van Versailles (28 juni 1919)**:\nVredesverdrag — opgesteld door de overwinnaars *(Frankrijk + Engeland + VS + Italië)*.\n\n**Wat moest Duitsland?**\n1. **Schuld erkennen** — clausule dat Duitsland alleen schuldig was aan de oorlog.\n2. **Herstelbetalingen** — enorm bedrag aan geallieerden *(132 miljard goudmark)*.\n3. **Verlies grondgebied** — Elzas-Lotharingen terug aan Frankrijk, koloniën weg.\n4. **Beperkt leger** — max 100.000 soldaten, geen tanks, geen vliegtuigen, geen U-boten.\n5. **Rijnland gedemilitariseerd** — geen Duitse troepen vlak bij Frankrijk.\n\n**Duitsland was woedend**:\n• Voelde verdrag als **'diktat'** *(opgelegd, niet onderhandeld)*.\n• Duitsland mocht niet meeonderhandelen.\n• Hyperinflatie + werkloosheid in jaren '20.\n• **Voedingsbodem voor extremisme** → Hitler nazi-partij in jaren '20-30.\n\n**Volkenbond**:\n• Opgericht **1920** — eerste poging tot internationale samenwerking voor vrede.\n• Bedacht door VS-president **Wilson**.\n• Maar: VS zelf deed niet mee *(Senaat weigerde)*.\n• Verzwakt door afwezigheid grote machten.\n• Voorloper van **VN** *(1945)*.\n\n**Nieuwe landen na WO1**:\nGrote rijken vallen uiteen:\n• **Oostenrijk-Hongarije** → Oostenrijk, Hongarije, Tsjechoslowakije, Joegoslavië.\n• **Ottomaanse Rijk** → Turkije + Frans/Brits-bestuurd Midden-Oosten *(latere Israël/Palestina, Syrië, Irak, Libanon)*.\n• **Russische Rijk** → Sovjet-Unie.\n• **Duitse Rijk** → Weimar-republiek.\n\nVeel huidige problemen in Midden-Oosten + Balkan komen voort uit deze grenslijnen.\n\n**Toets-feitje**:\n*'De oorlog die alle oorlogen moest beëindigen'* *(H.G. Wells)*. **Twintig jaar later** brak WO2 uit. Versailles gold als te streng — voedingsbodem voor wraak.",
+      "Op **11 november 1918** om **11 uur 's morgens** stopte de oorlog. **Wapenstilstand** ondertekend in een trein bij **Compiègne** *(Frankrijk)*.\n\n**Waarom verloor Duitsland?**\n• **Lenteoffensief 1918 mislukte** — ondanks troepen uit het oosten.\n• **VS deden mee** vanaf 1917 — verse troepen + middelen.\n• Honger in Duitsland zelf *(Engelse blokkade)*.\n• Muiterij in Duitse marine.\n• **Duitse revolutie** *(november 1918)* — keizer Wilhelm II vluchtte naar NL.\n• Duitse regering wilde wapenstilstand.\n\n**Doden**: ongeveer:\n• **~10 miljoen soldaten** gesneuveld.\n• **7 miljoen burgers** doodgegaan *(meest door honger + griep + ziekte)*.\n• Totaal **~17 miljoen doden**.\n• Plus de **Spaanse griep** *(1918-1920)*: 50-100 miljoen doden wereldwijd, deels door verzwakte oorlog-bevolking.\n\n**Verdrag van Versailles (28 juni 1919)**:\nVredesverdrag — opgesteld door de overwinnaars *(Frankrijk + Engeland + VS + Italië)*.\n\n**Wat moest Duitsland?**\n1. **Schuld erkennen** — clausule dat Duitsland alleen schuldig was aan de oorlog.\n2. **Herstelbetalingen** — enorm bedrag aan geallieerden *(132 miljard goudmark)*.\n3. **Verlies grondgebied** — Elzas-Lotharingen terug aan Frankrijk, koloniën weg.\n4. **Beperkt leger** — max 100.000 soldaten, geen tanks, geen vliegtuigen, geen U-boten.\n5. **Rijnland gedemilitariseerd** — geen Duitse troepen vlak bij Frankrijk.\n\n**Duitsland was woedend**:\n• Voelde verdrag als **'diktat'** *(opgelegd, niet onderhandeld)*.\n• Duitsland mocht niet meeonderhandelen.\n• Hyperinflatie + werkloosheid in jaren '20.\n• **Voedingsbodem voor extremisme** → Hitler nazi-partij in jaren '20-30.\n\n**Volkenbond**:\n• Opgericht **1920** — eerste poging tot internationale samenwerking voor vrede.\n• Bedacht door VS-president **Wilson**.\n• Maar: VS zelf deed niet mee *(Senaat weigerde)*.\n• Verzwakt door afwezigheid grote machten.\n• Voorloper van **VN** *(1945)*.\n\n**Nieuwe landen na WO1**:\nGrote rijken vallen uiteen:\n• **Oostenrijk-Hongarije** → Oostenrijk, Hongarije, Tsjechoslowakije, Joegoslavië.\n• **Ottomaanse Rijk** → Turkije + Frans/Brits-bestuurd Midden-Oosten *(latere Israël/Palestina, Syrië, Irak, Libanon)*.\n• **Russische Rijk** → Sovjet-Unie.\n• **Duitse Rijk** → Weimar-republiek.\n\nVeel huidige problemen in Midden-Oosten + Balkan komen voort uit deze grenslijnen.\n\n**Toets-feitje**:\n*'De oorlog die alle oorlogen moest beëindigen'* *(H.G. Wells)*. **Twintig jaar later** brak WO2 uit. Versailles gold als te streng — voedingsbodem voor wraak.",
     checks: [
       {
         q: "Wanneer eindigde **WO1**?",
@@ -219,15 +219,15 @@ const steps = [
       },
       {
         q: "Wat moest Duitsland in **Verdrag van Versailles**?",
-        options: ["Schuld erkennen + herstelbetalen + leger inkrimpen", "Helemaal niet veel", "Helft van land afstaan", "Toetreden tot Frankrijk"],
+        options: ["Herstelbetalingen doen", "Helemaal niet veel", "Helft van land afstaan", "Toetreden tot Frankrijk"],
         answer: 0,
         wrongHints: [null, "Wél veel.", "Niet de helft.", "Niet toetreden."],
       },
       {
         q: "Welke **rijken vielen uiteen** na WO1?",
-        options: ["Oostenrijk-Hongarije én Ottomaanse Rijk én Russisch", "Alleen Russisch", "Alleen Duitsland", "Geen"],
+        options: ["Oostenrijk-Hongarije en Ottomaanse Rijk", "Alleen het Russische Rijk", "Alleen het Britse Rijk", "Geen enkel rijk"],
         answer: 0,
-        wrongHints: [null, "Niet alleen Rusland.", "Duitsland bleef bestaan (in andere vorm).", "Wel — meerdere."],
+        wrongHints: [null, "Viel het Russische Rijk als enige uiteen?", "Het Britse Rijk bleef na WO1 bestaan en werd zelfs groter.", "Kijk naar de nieuwe landen die na 1918 op de kaart kwamen."],
       },
     ],
   },
