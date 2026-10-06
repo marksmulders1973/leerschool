@@ -5,7 +5,7 @@
 // Gebruik: node scripts/audit/tel-herschrijf.mjs <bestand> [ref=origin/audit3/integratie] [--voorbeelden N] [--json uit.json]
 import { execSync } from "node:child_process";
 import fs from "node:fs"; import os from "node:os"; import path from "node:path"; import { pathToFileURL } from "node:url";
-const [file, ref = "origin/audit3/integratie"] = process.argv.slice(2).filter((a) => !a.startsWith("--"));
+const argv = process.argv.slice(2); const [file, ref = "origin/audit3/integratie"] = argv.filter((a, i) => !a.startsWith("--") && argv[i - 1] !== "--json");
 const oudTekst = execSync(`git show ${ref}:${file}`, { encoding: "utf8", maxBuffer: 1 << 28 });
 const nieuwTekst = fs.readFileSync(file, "utf8");
 const O = oudTekst.split("\n"), N = nieuwTekst.split("\n");
