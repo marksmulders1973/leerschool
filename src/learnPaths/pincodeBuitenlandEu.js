@@ -28,7 +28,7 @@ const steps = [
   // ─── Stap 1: Internationale handel ───────────────────────
   {
     title: "Internationale handel — import en export",
-    explanation: "**Internationale handel**: landen kopen en verkopen aan elkaar.\n\n**Export**: NL verkoopt iets aan het buitenland (paprika's, machines, kaas, ASML-chips, Heineken)\n**Import**: NL koopt iets uit het buitenland (olie, koffie, smartphones, fruit uit Spanje)\n\n**Handelsbalans** = export − import\n• **Overschot**: meer export dan import (NL heeft dit meestal)\n• **Tekort**: meer import dan export\n\n**Cijfers NL 2023**:\n• Export: ~€700 miljard\n• Import: ~€650 miljard\n• Handelsoverschot ~€50 miljard\n• 60-70% van export gaat naar EU-landen\n\n**Waarom handelen?**\n\n**Comparatief voordeel** (kern-economie!): elk land is goed in iets anders. Wij kunnen kaas maken, Saoedi-Arabië olie pompen. **Door te ruilen worden we ALLEBEI rijker** — zelfs als 1 land 'beter' is in alles (Ricardo, 1817).\n\n**Schaalvoordelen**: meer afzet = lagere kosten per stuk. Een ASML-machine van €200 mln is alleen rendabel met wereldwijde markt.\n\n**Variatie**: zonder import geen koffie, banaan, avocado in NL. Onze keuken is dankzij import.\n\n**Specialisatie**: NL is super in zuivel, hightech, agro-tech, water-management.\n\n**Nederland als handelsland**:\n• **Rotterdam** = grootste haven van Europa (~470 mln ton goederen/jaar)\n• **Schiphol** = belangrijke vrachtluchthaven (Europa's #4)\n• **Re-export**: spullen komen NL binnen, gaan via NL door naar Duitsland of UK (~50% van NL-export!)\n• Geografisch midden Europa = logistiek voordeel\n\n**Voor- en nadelen handel**:\n• ✓ Goedkopere producten voor consumenten\n• ✓ Meer keuze\n• ✓ Banen in export-sectoren\n• ✗ Banen verloren in sectoren die niet kunnen concurreren\n• ✗ Afhankelijkheid (corona toonde aan: medicijnen uit India, chips uit Taiwan)\n• ✗ Milieu-impact transport\n\n**Belangrijk recent**:\n• China werd grote producent → veel westerse banen verdwenen\n• Nu: 'reshoring' (productie terughalen) wegens afhankelijkheid\n• Geopolitiek (China, Rusland, USA) verstoort handel",
+    explanation: "**Internationale handel**: landen kopen en verkopen aan elkaar.\n\n**Export**: NL verkoopt iets aan het buitenland (paprika's, machines, kaas, ASML-chips, Heineken)\n**Import**: NL koopt iets uit het buitenland (olie, koffie, smartphones, fruit uit Spanje)\n\n**Handelsbalans** = export − import\n• **Overschot**: meer export dan import (NL heeft dit meestal)\n• **Tekort**: meer import dan export\n\n**Cijfers NL 2023**:\n• Export: ~€700 miljard\n• Import: ~€650 miljard\n• Handelsoverschot ~€50 miljard\n• 60-70% van export gaat naar EU-landen\n\n**Waarom handelen?**\n\n**Comparatief voordeel** (kern-economie!): elk land is goed in iets anders. Wij kunnen kaas maken, Saoedi-Arabië olie pompen. **Door te ruilen worden we ALLEBEI rijker** — zelfs als 1 land 'beter' is in alles (Ricardo, 1817).\n\n**Schaalvoordelen**: meer afzet = lagere kosten per stuk. Een ASML-machine van €200 mln is alleen rendabel met wereldwijde markt.\n\n**Variatie**: zonder import geen koffie, banaan, avocado in NL. Onze keuken is dankzij import.\n\n**Specialisatie**: NL is super in zuivel, hightech, agro-tech, water-management.\n\n**Nederland als handelsland**:\n• **Rotterdam** = grootste haven van Europa (~440 mln ton goederen/jaar)\n• **Schiphol** = belangrijke vrachtluchthaven (Europa's #4)\n• **Re-export**: spullen komen NL binnen, gaan via NL door naar Duitsland of UK (~50% van NL-export!)\n• Geografisch midden Europa = logistiek voordeel\n\n**Voor- en nadelen handel**:\n• ✓ Goedkopere producten voor consumenten\n• ✓ Meer keuze\n• ✓ Banen in export-sectoren\n• ✗ Banen verloren in sectoren die niet kunnen concurreren\n• ✗ Afhankelijkheid (corona toonde aan: medicijnen uit India, chips uit Taiwan)\n• ✗ Milieu-impact transport\n\n**Belangrijk recent**:\n• China werd grote producent → veel westerse banen verdwenen\n• Nu: 'reshoring' (productie terughalen) wegens afhankelijkheid\n• Geopolitiek (China, Rusland, USA) verstoort handel",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">NL HANDEL</text>
 <rect x="100" y="50" width="120" height="50" rx="6" fill="${COLORS.paper}" stroke="${COLORS.warm}" stroke-width="1.5"/>
@@ -97,7 +97,7 @@ const steps = [
           stappen: [{ titel: "Logistiek = sleutel", tekst: "Rotterdam = grootste haven Europa. Schiphol = top-5 vrachtluchthaven. NL ligt midden in Europa." }],
           woorden: [{ woord: "handelsland", uitleg: "Land waar veel handel doorheen gaat — niet per se eigen productie." }],
           theorie: "Geografie + infrastructuur maken NL aantrekkelijk als doorvoerland. ~50% van export = re-export (binnen-uit doorgevoerd).",
-          voorbeelden: [{ type: "feit", tekst: "Rotterdam ~470 mln ton goederen/jaar. Bloemen Aalsmeer = wereldhandel." }],
+          voorbeelden: [{ type: "feit", tekst: "Rotterdam ~440 mln ton goederen/jaar. Bloemen Aalsmeer = wereldhandel." }],
           basiskennis: [{ onderwerp: "Niet eigen productie", uitleg: "NL is geen 'productie-gigant' maar wel 'handels-hub'." }],
           niveaus: { basis: "Havens + ligging.", simpeler: "NL heeft Rotterdam (grootste haven EU) + Schiphol + ligt midden in Europa = ideaal voor handel.", nogSimpeler: "Havens" },
         },
@@ -260,7 +260,7 @@ const steps = [
         q: "Hoeveel landen zitten in de EU?",
         options: ["27", "20", "50", "12"],
         answer: 0,
-        wrongHints: [null, "Dat lijkt op de eurozone (nu 21 landen), niet de EU.", "Te veel.", "Zo groot was de EEG rond 1986; nu 27."],
+        wrongHints: [null, "Dat lijkt op de eurozone (nu 21 landen), niet de EU.", "Te veel.", "Zo groot was de EEG rond 1986; sindsdien zijn er veel landen bijgekomen."],
         uitlegPad: {
           stappen: [{ titel: "27 sinds Brexit", tekst: "EU = 27 landen. Was 28 met UK, na Brexit (2020) = 27." }],
           woorden: [{ woord: "EU", uitleg: "Europese Unie. Politieke + economische samenwerking 27 Europese landen." }],
@@ -434,7 +434,7 @@ const steps = [
         q: "Wat is een **vrije zwevende koers**?",
         options: ["Markt bepaalt — overheid grijpt niet in", "Overheid bepaalt vast", "Geen koers", "Crypto"],
         answer: 0,
-        wrongHints: [null, "Dat is gereguleerd.", "Wel een koers.", "Iets anders."],
+        wrongHints: [null, "Als de overheid de koers vastzet, heet dat een vaste koers.", "Wel een koers.", "Iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Markt bepaalt", tekst: "Vrije zwevende koers = vraag/aanbod bepaalt prijs. Overheid grijpt niet in." }],
           woorden: [{ woord: "zwevende koers", uitleg: "Koers beweegt vrij op markt — geen vaste waarde." }],
@@ -523,9 +523,9 @@ const steps = [
       },
       {
         q: "**Containers** waren cruciaal voor globalisering omdat:",
-        options: ["Gestandaardiseerd → veel goederen snel + goedkoop transporteren", "Mooi", "Goedkoop", "Verboden"],
+        options: ["Gestandaardiseerd → veel goederen snel + goedkoop transporteren", "Mooi", "Klein en licht", "Verboden"],
         answer: 0,
-        wrongHints: [null, "Standaardisatie is de sleutel.", "Te beperkt.", "Niet verboden."],
+        wrongHints: [null, "Uiterlijk maakt voor transport niets uit.", "Containers zijn juist groot en zwaar — waar zit het voordeel dan?", "Niet verboden."],
         uitlegPad: {
           stappen: [{ titel: "Standaard maat", tekst: "Container = standaard maat (20ft/40ft). Past op schip, trein, vrachtwagen — geen overpakken nodig." }],
           woorden: [{ woord: "containerisatie", uitleg: "Gebruik van gestandaardiseerde containers voor transport. Begin: 1956." }],
