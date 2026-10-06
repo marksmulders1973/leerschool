@@ -115,16 +115,16 @@ const steps = [
   // ─── A. Wat is erfelijkheid ───────────────
   {
     title: "Wat is erfelijkheid?",
-    explanation: "**Erfelijkheid** is hoe **eigenschappen** van ouders aan kinderen doorgegeven worden. Dat je oogkleur, haarkleur en zelfs sommige karaktereigenschappen lijken op die van je ouders — dat komt door erfelijkheid.\n\n**Voorbeelden van erfelijke eigenschappen**:\n• Oogkleur (blauw, bruin, groen)\n• Haarkleur en -type\n• Lengte (deels — voeding speelt ook mee)\n• Bloedgroep (A, B, AB, O)\n• Of je tong kunt rollen\n• Wel/niet sproeten\n• Sommige ziektes (sikkelcelanemie, hemofilie)\n\n**Niet erfelijk** (komt door omgeving/leefstijl):\n• Welke taal je spreekt\n• Of je goed bent in voetbal\n• Wat je gewicht is (deels — genen geven aanleg)\n• Een gebroken been\n• Of je rookt\n\n**Hoe wordt erfelijke informatie doorgegeven?**\nVia **DNA** in de **eicel** van je moeder en de **zaadcel** van je vader. Bij bevruchting versmelten die twee → een nieuwe combinatie.\n\nDaarom ben je voor de helft 'mama' en voor de helft 'papa' qua DNA. Niet 50/50 op uiterlijk omdat dominant/recessief speelt — daar gaan we straks naar kijken.\n\n**Genetica** = de wetenschap die erfelijkheid bestudeert.\n**Genoom** = al het DNA van een organisme (= ~3 miljard letters bij de mens).\n**Stamboom** = schema van familieleden, vaak gebruikt om erfelijke ziektes te traceren.",
+    explanation: "**Erfelijkheid** is hoe **eigenschappen** van ouders aan kinderen doorgegeven worden. Dat je oogkleur, haarkleur en zelfs sommige karaktereigenschappen lijken op die van je ouders — dat komt door erfelijkheid.\n\n**Voorbeelden van erfelijke eigenschappen**:\n• Oogkleur (blauw, bruin, groen)\n• Haarkleur en -type\n• Lengte (deels — voeding speelt ook mee)\n• Bloedgroep (A, B, AB, O)\n• Of je vrije of vastgegroeide oorlellen hebt\n• Wel/niet sproeten\n• Sommige ziektes (sikkelcelanemie, hemofilie)\n\n**Niet erfelijk** (komt door omgeving/leefstijl):\n• Welke taal je spreekt\n• Of je goed bent in voetbal\n• Wat je gewicht is (deels — genen geven aanleg)\n• Een gebroken been\n• Of je rookt\n\n**Hoe wordt erfelijke informatie doorgegeven?**\nVia **DNA** in de **eicel** van je moeder en de **zaadcel** van je vader. Bij bevruchting versmelten die twee → een nieuwe combinatie.\n\nDaarom ben je voor de helft 'mama' en voor de helft 'papa' qua DNA. Niet 50/50 op uiterlijk omdat dominant/recessief speelt — daar gaan we straks naar kijken.\n\n**Genetica** = de wetenschap die erfelijkheid bestudeert.\n**Genoom** = al het DNA van een organisme (= ~3 miljard letters bij de mens).\n**Stamboom** = schema van familieleden, vaak gebruikt om erfelijke ziektes te traceren.",
     svg: dnaSvg(),
     checks: [
       {
         q: "Wat is **erfelijkheid**?",
         options: [
           "Doorgeven van eigenschappen via genen van ouders aan kinderen",
-          "Een ziekte",
-          "De kleur van je haar",
-          "Hoe lang je leeft",
+          "Een ziekte die in sommige families vaker voorkomt",
+          "De kleur van je haar en de kleur van je ogen",
+          "Hoe lang je leeft en hoe gezond je blijft",
         ],
         answer: 0,
         wrongHints: [
@@ -137,7 +137,7 @@ const steps = [
           stappen: [{ titel: "Erfelijkheid = via genen", tekst: "Eigenschappen gaan van ouders naar kinderen via DNA. Bij bevruchting komen eicel + zaadcel samen — kind krijgt 50% DNA van mama, 50% van papa." }],
           woorden: [{ woord: "gen", uitleg: "stukje DNA met info voor één eigenschap" }],
           theorie: "Erfelijkheid betreft het PROCES van overdracht, niet de eigenschap zelf.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Oogkleur, bloedgroep en tong-rollen worden geërfd via genen" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Oogkleur, bloedgroep en haarkleur worden geërfd via genen" }],
           basiskennis: [{ onderwerp: "DNA in geslachtscellen", uitleg: "eicel + zaadcel dragen genen" }],
           niveaus: { basis: "Doorgeven via genen.", simpeler: "Eigenschappen erven.", nogSimpeler: "Lijkt op ouders." },
         },
@@ -148,19 +148,19 @@ const steps = [
           "Welke taal je spreekt",
           "Oogkleur",
           "Bloedgroep",
-          "Of je tong kunt rollen",
+          "Je haarkleur",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Oogkleur wordt geërfd via genen.",
           "Bloedgroep is bekend erfelijke eigenschap.",
-          "Tong-rollen volgt een dominant/recessief patroon.",
+          "Haarkleur erf je via genen van je ouders.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Taal leer je, niet erf je", tekst: "Taal is een vaardigheid die je leert van je omgeving — niet via DNA. Een baby van Nederlandse ouders in China leert Chinees, geen Nederlands." }],
           woorden: [{ woord: "aangeleerd", uitleg: "via ervaring/oefening" }],
-          theorie: "Niet erfelijk: taal, sport, voorkeur. Wel erfelijk: oogkleur, bloed, tong-rollen.",
+          theorie: "Niet erfelijk: taal, sport, voorkeur. Wel erfelijk: oogkleur, bloedgroep, haarkleur.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Eeneiige tweelingen in andere landen → andere talen" }],
           basiskennis: [{ onderwerp: "aanleg vs vaardigheid", uitleg: "aanleg erfelijk, vaardigheid aangeleerd" }],
           niveaus: { basis: "Taal.", simpeler: "Taal leer je.", nogSimpeler: "Niet in DNA." },
@@ -176,13 +176,13 @@ const steps = [
     svg: dnaSvg(),
     checks: [
       {
-        q: "Hoeveel chromosomen heeft een mens?",
-        options: ["46 (= 23 paren)", "23", "92", "100"],
+        q: "Hoeveel chromosomen zitten er in een lichaamscel van een mens?",
+        options: ["46", "23", "92", "100"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is het aantal paren, niet het totale aantal chromosomen — elk paar bestaat uit twee losse chromosomen.",
-          "Te veel — 23 paren × 2 = 46, niet 92.",
+          "Te veel — tel hoeveel paren er zijn en hoeveel chromosomen er in één paar zitten.",
           "Te veel.",
         ],
         uitlegPad: {
@@ -198,9 +198,9 @@ const steps = [
         q: "Wat is een **gen**?",
         options: [
           "Stukje DNA dat een eigenschap bepaalt",
-          "Een hele cel",
-          "Een chromosoompaar",
-          "Een eiwit",
+          "Een hele cel met een kern",
+          "Een paar van twee chromosomen",
+          "Een eiwit dat in de cel werkt",
         ],
         answer: 0,
         wrongHints: [
@@ -246,13 +246,13 @@ const steps = [
     checks: [
       {
         q: "Iemand met genotype **Bb** heeft welk fenotype? *(B = bruin dominant, b = blauw recessief)*",
-        options: ["Bruine ogen", "Blauwe ogen", "Groene ogen", "Geen ogen"],
+        options: ["Bruine ogen", "Blauwe ogen", "Groene ogen", "Half bruin, half blauw"],
         answer: 0,
         wrongHints: [
           null,
           "B is dominant — die bepaalt het fenotype.",
-          "Niet relevant in dit gen.",
-          "Iedereen heeft ogen, jij hebt humor.",
+          "Groen komt in dit voorbeeld niet voor — er zijn alleen de allelen B en b.",
+          "Bij dominant en recessief mengen de kleuren niet — welk allel wint?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Dominant wint", tekst: "Bb betekent: één bruin-allel (B, dominant) + één blauw-allel (b, recessief). Dominant overheerst → bruine ogen. Blauw-allel zit erbij maar zie je niet." }],
@@ -266,10 +266,10 @@ const steps = [
       {
         q: "Wat betekent **homozygoot**?",
         options: [
-          "Beide allelen voor een gen zijn hetzelfde (AA of aa)",
-          "Beide allelen zijn verschillend",
-          "Je hebt 1 allel",
-          "Je hebt geen genen",
+          "Beide allelen voor een gen zijn hetzelfde",
+          "Beide allelen voor een gen zijn verschillend",
+          "Je hebt maar 1 allel voor een gen",
+          "Je hebt voor dat gen geen allelen",
         ],
         answer: 0,
         wrongHints: [
@@ -337,7 +337,7 @@ const steps = [
       {
         q: "Twee bruinogige ouders krijgen een blauwogig kind. Wat moet wel zo zijn?",
         options: [
-          "Beide ouders zijn heterozygoot (Bb)",
+          "Beide ouders zijn heterozygoot",
           "Eén ouder heeft blauwe ogen",
           "Het kind heeft een mutatie",
           "Onmogelijk — moet bruin zijn",
@@ -392,7 +392,7 @@ const steps = [
       {
         q: "Waarom komt **kleurenblindheid** vaker voor bij mannen?",
         options: [
-          "Mannen hebben maar 1 X-chromosoom (geen back-up)",
+          "Mannen hebben maar 1 X-chromosoom",
           "Mannen hebben slechtere ogen",
           "Het is door testosteron",
           "Mannen kijken meer schermen",
@@ -444,7 +444,7 @@ const steps = [
       {
         q: "Twee gezonde ouders krijgen een kind met cystische fibrose (recessieve ziekte). Welke conclusie?",
         options: [
-          "Beide ouders zijn dragers (Ff)",
+          "Beide ouders zijn drager",
           "Eén ouder is patiënt zonder dat te weten",
           "Het kind heeft een mutatie",
           "Onmogelijk — kan niet",
@@ -469,7 +469,7 @@ const steps = [
   },
   {
     title: "Erfelijke ziektes — wat zijn ze en wat eraan te doen",
-    explanation: "**Erfelijke ziektes** zijn ziektes die door **kapotte genen** ontstaan en doorgegeven kunnen worden via DNA.\n\n**Drie hoofdtypen erfelijke ziektes**:\n\n**1. Autosomaal recessief**\n• Allel op gewoon chromosoom (niet X/Y).\n• Beide ouders moeten drager zijn voor een ziek kind.\n• Voorbeelden:\n  - **Cystische fibrose (CF)**: taai slijm in longen → ademhalingsproblemen.\n  - **Sikkelcelanemie**: misvormde rode bloedcellen — vooral bij Afrikaanse afkomst.\n  - **Tay-Sachs**: zenuwafwijking — vooral bij Asjkenazische joden.\n  - **Fenylketonurie (PKU)**: kan eiwit niet verwerken — wordt nu standaard getest bij baby's.\n\n**2. Autosomaal dominant**\n• Eén ziek allel is genoeg → 50% kans op overdracht aan kind.\n• Vaak zichtbaar in elke generatie.\n• Voorbeelden:\n  - **Ziekte van Huntington**: hersenen takelen langzaam af, treedt op rond 40+.\n  - **Marfan-syndroom**: lange dunne ledematen, hartproblemen.\n\n**3. X-gebonden recessief** (komt vaker bij mannen voor)\n• Allel op X-chromosoom.\n• Mannen vaak ziek; vrouwen vaak draagster.\n• Voorbeelden:\n  - **Hemofilie**: bloed stolt niet (beroemd: Europese koningshuizen, de zoon van tsaar Nicolaas II).\n  - **Spierziekte van Duchenne**: spierverval bij jongens.\n  - **Kleurenblindheid**: rood-groen verwisselen.\n\n**Wat is er aan te doen?**\n\n*Genezing meestal niet mogelijk* (genen kun je niet zomaar veranderen). Maar wel:\n• **Symptomen verlichten**: medicijnen, fysiotherapie, dieet.\n• **Vroeg ontdekken**: de hielprik bij baby's test in NL op ruim 25 aandoeningen.\n• **Genetisch advies** voor stellen die kinderwens hebben.\n• **Pre-implantatie diagnostiek** (PGD): bij IVF kunnen embryo's gescreend worden.\n• **Gentherapie** (nieuw, experimenteel): kapotte genen vervangen.\n\n**Erfelijk vs aangeboren vs verworven**\n• **Erfelijk** = via DNA van ouders.\n• **Aangeboren** = vanaf geboorte aanwezig (kan erfelijk OF door zwangerschap, bv. door alcohol).\n• **Verworven** = ontstaat tijdens leven (bv. infectie, ongeluk).\n\nDus elke erfelijke ziekte is aangeboren, maar niet elke aangeboren ziekte is erfelijk.",
+    explanation: "**Erfelijke ziektes** zijn ziektes die door **kapotte genen** ontstaan en doorgegeven kunnen worden via DNA.\n\n**Drie hoofdtypen erfelijke ziektes**:\n\n**1. Autosomaal recessief**\n• Allel op gewoon chromosoom (niet X/Y).\n• Beide ouders moeten drager zijn voor een ziek kind.\n• Voorbeelden:\n  - **Cystische fibrose (CF)**: taai slijm in longen → ademhalingsproblemen.\n  - **Sikkelcelanemie**: misvormde rode bloedcellen — vooral bij Afrikaanse afkomst.\n  - **Tay-Sachs**: zenuwafwijking — vooral bij Asjkenazische joden.\n  - **Fenylketonurie (PKU)**: kan een bouwsteen van eiwit (fenylalanine) niet afbreken — wordt nu standaard getest bij baby's.\n\n**2. Autosomaal dominant**\n• Eén ziek allel is genoeg → 50% kans op overdracht aan kind.\n• Vaak zichtbaar in elke generatie.\n• Voorbeelden:\n  - **Ziekte van Huntington**: hersenen takelen langzaam af, treedt op rond 40+.\n  - **Marfan-syndroom**: lange dunne ledematen, hartproblemen.\n\n**3. X-gebonden recessief** (komt vaker bij mannen voor)\n• Allel op X-chromosoom.\n• Mannen vaak ziek; vrouwen vaak draagster.\n• Voorbeelden:\n  - **Hemofilie**: bloed stolt niet (beroemd: Europese koningshuizen, de zoon van tsaar Nicolaas II).\n  - **Spierziekte van Duchenne**: spierverval bij jongens.\n  - **Kleurenblindheid**: rood-groen verwisselen.\n\n**Wat is er aan te doen?**\n\n*Genezing meestal niet mogelijk* (genen kun je niet zomaar veranderen). Maar wel:\n• **Symptomen verlichten**: medicijnen, fysiotherapie, dieet.\n• **Vroeg ontdekken**: de hielprik bij baby's test in NL op ruim 25 aandoeningen.\n• **Genetisch advies** voor stellen die kinderwens hebben.\n• **Pre-implantatie diagnostiek** (PGD): bij IVF kunnen embryo's gescreend worden.\n• **Gentherapie** (nieuw, experimenteel): kapotte genen vervangen.\n\n**Erfelijk vs aangeboren vs verworven**\n• **Erfelijk** = via DNA van ouders.\n• **Aangeboren** = vanaf geboorte aanwezig (kan erfelijk OF door zwangerschap, bv. door alcohol).\n• **Verworven** = ontstaat tijdens leven (bv. infectie, ongeluk).\n\nDus elke erfelijke ziekte is aangeboren, maar niet elke aangeboren ziekte is erfelijk.",
     svg: punnettSvg("Ff", "Ff", "F", "f"),
     checks: [
       {
@@ -499,16 +499,16 @@ const steps = [
       {
         q: "Wat is het verschil tussen **erfelijk** en **aangeboren**?",
         options: [
-          "Erfelijk = via DNA van ouders; aangeboren = vanaf geboorte (kan ook door zwangerschap)",
-          "Synoniem — geen verschil",
-          "Erfelijk komt later, aangeboren bij geboorte",
-          "Erfelijk is zwaarder dan aangeboren",
+          "Erfelijk = via DNA van ouders; aangeboren = aanwezig vanaf de geboorte",
+          "Geen verschil — het zijn twee woorden voor hetzelfde",
+          "Erfelijk = door een ongeluk; aangeboren = via DNA van ouders",
+          "Erfelijk is altijd ernstiger dan aangeboren",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Wel verschil — niet alle aangeboren is erfelijk.",
-          "Erfelijk is bij geboorte al aanwezig (in DNA).",
+          "Precies omgedraaid — waar komt een erfelijke eigenschap vandaan?",
           "Geen verschil in zwaarte — verschillende oorzaken.",
         ],
         uitlegPad: {
@@ -532,7 +532,7 @@ const steps = [
       {
         q: "Wie ontdekten in 1953 de dubbele helix-structuur van DNA?",
         options: [
-          "Watson + Crick (op basis van foto's van Rosalind Franklin)",
+          "Watson en Crick",
           "Mendel + Darwin",
           "Marie Curie",
           "Albert Einstein",
@@ -557,15 +557,15 @@ const steps = [
         q: "Wat is **CRISPR**?",
         options: [
           "Een 'genetische schaar' om DNA precies te bewerken",
-          "Een soort virus",
-          "Een DNA-test van Apple",
-          "Een ziekte",
+          "Een virus dat cellen ziek maakt",
+          "Een DNA-test om vaderschap aan te tonen",
+          "Een erfelijke ziekte van het bloed",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Geen virus — een molecuul-systeem.",
-          "Niet van een bedrijf — een wetenschappelijke ontdekking.",
+          "Een vaderschapstest vergelijkt DNA — maar knipt het niet.",
           "Geen ziekte — een tool.",
         ],
         uitlegPad: {
@@ -672,14 +672,14 @@ const steps = [
           niveaus: { basis: "23.", simpeler: "Helft van 46.", nogSimpeler: "Twee-twee opgesteld." },
         },
       },
-      { q: "Twee heterozygote ouders (Aa × Aa). Kans dominant fenotype kind?", options: ["75%","50%","25%","100%"], answer: 0, wrongHints: [null,"Niet — maak een Punnett-vierkant en tel hoeveel uitkomsten dominant fenotype geven.","Te laag — hoeveel van de vier Punnett-vakjes tonen een recessief fenotype?","Niet — bij Aa × Aa is er één combinatie (aa) met een recessief fenotype; tel goed."] },
-      { q: "**Cystische fibrose** is een recessieve aandoening. Beide ouders Aa. Kans op ziek kind?", options: ["25%","50%","75%","100%"], answer: 0, wrongHints: [null,"Niet — alleen aa is ziek, 1 van 4.","Niet — 3 van 4 zijn gezond.","Niet — gezonde dragers mogelijk."] },
-      { q: "Wat is het verschil tussen **genotype** en **fenotype**?", options: ["Genotype = DNA-code; fenotype = zichtbaar kenmerk","Andersom","Hetzelfde","Geen van beide"], answer: 0, wrongHints: [null,"Andersom — denk: gen = letter, fen = uiterlijk.","Wel verschil — kenmerk zichtbaar vs erfelijke code.","Wel — leer de twee uit elkaar."] },
+      { q: "Twee heterozygote ouders (Aa × Aa). Kans dominant fenotype kind?", options: ["75%","50%","25%","100%"], answer: 0, wrongHints: [null,"Niet — maak een Punnett-vierkant en tel hoeveel uitkomsten dominant fenotype geven.","Te laag — hoeveel van de vier Punnett-vakjes tonen een recessief fenotype?","Niet — kan er bij Aa × Aa ook een kind met twee recessieve allelen ontstaan?"] },
+      { q: "**Cystische fibrose** is een recessieve aandoening. Beide ouders Aa. Kans op ziek kind?", options: ["25%","50%","75%","100%"], answer: 0, wrongHints: [null,"Te hoog — maak een Punnett-vierkant: welke combinatie is ziek, en in hoeveel vakjes staat die?","Te hoog — dragers (Aa) zijn niet ziek.","Niet — gezonde dragers mogelijk."] },
+      { q: "Wat is het verschil tussen **genotype** en **fenotype**?", options: ["Genotype = DNA-code; fenotype = zichtbaar kenmerk","Genotype = zichtbaar kenmerk; fenotype = DNA-code","Genotype en fenotype betekenen hetzelfde","Genotype = bij mannen; fenotype = bij vrouwen"], answer: 0, wrongHints: [null,"Precies omgedraaid — geno hoort bij genen, feno bij wat je ziet.","Wel verschil — kenmerk zichtbaar vs erfelijke code.","Heeft dit iets met man of vrouw te maken?"] },
       { q: "**Dominante allel** wordt geschreven als?", options: ["Hoofdletter (A)","Kleine letter (a)","Cijfer","Geen symbool"], answer: 0, wrongHints: [null,"Recessief.","Niet relevant.","Wel symbool."] },
       { q: "**Recessief allel** wordt geschreven als?", options: ["Kleine letter (a)","Hoofdletter (A)","Cijfer","Geen symbool"], answer: 0, wrongHints: [null,"Dominant.","Niet relevant.","Wel."] },
-      { q: "**Homozygoot** betekent?", options: ["Beide allelen gelijk (AA of aa)","Beide verschillend","1 allel","Geen allelen"], answer: 0, wrongHints: [null,"Heterozygoot.","Onmogelijk in diploïd.","Onmogelijk."] },
-      { q: "**Heterozygoot** = ?", options: ["Aa (verschillende allelen)","AA","aa","Helemaal niets"], answer: 0, wrongHints: [null,"Homozygoot dominant.","Homozygoot recessief.","Onmogelijk."] },
-      { q: "Aantal chromosomen in **mensenlichaamscel** (geen geslachtscel)?", options: ["46 (23 paar)","23","48","100"], answer: 0, wrongHints: [null,"Geslachtscel.","Niet voor mensen.","Te veel."] },
+      { q: "**Homozygoot** betekent?", options: ["Beide allelen gelijk","Beide verschillend","1 allel","Geen allelen"], answer: 0, wrongHints: [null,"Heterozygoot.","Onmogelijk in diploïd.","Onmogelijk."] },
+      { q: "**Heterozygoot** = ?", options: ["Aa","AA","aa","Helemaal niets"], answer: 0, wrongHints: [null,"Homozygoot dominant.","Homozygoot recessief.","Onmogelijk."] },
+      { q: "Aantal chromosomen in **mensenlichaamscel** (geen geslachtscel)?", options: ["46","23","48","100"], answer: 0, wrongHints: [null,"Geslachtscel.","Niet voor mensen.","Te veel."] },
       { q: "Een **Punnett-vierkant** wordt gebruikt om?", options: ["Kruisingen + kansen tonen","Cellen tekenen","DNA-volgorde","Sterftecijfer"], answer: 0, wrongHints: [null,"Niet primair.","Niet primair.","Niet."] },
       { q: "**XX** in mensen = ?", options: ["Vrouwelijk","Mannelijk","Onbepaald","Niet relevant"], answer: 0, wrongHints: [null,"XY.","Wel bekend.","Wel."] },
       { q: "**XY** in mensen = ?", options: ["Mannelijk","Vrouwelijk","Onbepaald","Niet relevant"], answer: 0, wrongHints: [null,"XX.","Wel bekend.","Wel."] },

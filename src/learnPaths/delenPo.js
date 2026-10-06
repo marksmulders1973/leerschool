@@ -214,7 +214,7 @@ const steps = [
             { titel: "Wat als je vastloopt?", tekst: "Tafel-3 niet helemaal uit je hoofd? Bouw stappen van 3: 3+3=6, +3=9, +3=12, +3=15, +3=18, +3=21, +3=24. **8 stappen** = 8 keer 3 = 24. Antwoord: 8." },
           ],
           woorden: [
-            { woord: "tafel terugzoeken", tekst: "Bij delen: welke factor maakt het deeltal? = antwoord." },
+            { woord: "tafel terugzoeken", uitleg: "Bij delen: welke factor maakt het deeltal? = antwoord." },
           ],
           theorie: "Toets-truc voor delen door 3: tafel-3 is een veel-voorkomende. Leer hem **uit het hoofd**: 3, 6, 9, 12, 15, 18, 21, 24, 27, 30. Bij elke ÷3 vraag → tel waar het getal staat.",
           voorbeelden: [
@@ -274,7 +274,7 @@ const steps = [
         q: "**11 ÷ 3** = ?",
         options: ["3 rest 2", "4 rest 1", "3 rest 1", "Onmogelijk"],
         answer: 0,
-        wrongHints: [null, "Dat is te veel — hoeveel maal 3 past nét niet meer in 11?", "Klopt het getal maal 3 precies in 11, of blijft er iets over?", "Wel mogelijk."],
+        wrongHints: [null, "Dat is te veel — hoeveel maal 3 past nét niet meer in 11?", "Reken na: hoeveel is 3 groepjes van 3, en hoeveel scheelt dat met 11?", "Wel mogelijk."],
       },
       {
         q: "**17 ÷ 5** = ?",
@@ -418,11 +418,11 @@ const steps = [
       { q: "**Rest** bij 30 ÷ 4 = ?", options: ["2","1","4","0"], answer: 0, wrongHints: [null, "Niet.", "Te veel.", "Niet — wel rest."] },
       { q: "Welke is **deeltafel** van 10: 10/10 = ?", options: ["1","10","100","0"], answer: 0, wrongHints: [null, "Hoe vaak past 10 in 10? Dat is niet 10 keer.", "Delen maakt kleiner, niet groter.", "Een getal door zichzelf delen is niet 0 — er past wél iets in."] },
       { q: "**24 ÷ 6** = ?", options: ["4","6","8","3"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Niet."] },
-      { q: "Welk getal **deelt** 48 in 8 gelijk?", options: ["6","8","4","12"], answer: 0, wrongHints: [null, "Aantal groepen.", "Niet.", "Niet."] },
+      { q: "Je verdeelt **48** in **8 gelijke groepjes**. Hoeveel zitten er in elk groepje?", options: ["6","8","4","12"], answer: 0, wrongHints: [null, "Aantal groepen.", "Niet.", "Niet."] },
       { q: "100 ÷ 25 = ?", options: ["4","25","5","10"], answer: 0, wrongHints: [null, "Deler.", "Niet.", "Niet."] },
       { q: "Wat is **omgekeerde** van delen?", options: ["Vermenigvuldigen","Aftrekken","Optellen","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
       { q: "**Halveren** is delen door?", options: ["2","½","4","10"], answer: 0, wrongHints: [null, "Vermenigvuldigen met.", "Kwarten.", "Niet."] },
-      { q: "**Eerlijk verdelen** 18 koeken over 6 kinderen?", options: ["3 per kind","12","6","18"], answer: 0, wrongHints: [null, "Dat is 18 − 6, geen deling.", "Aantal kinderen.", "Dat is het totaal."] },
+      { q: "**Eerlijk verdelen** 18 koeken over 6 kinderen?", options: ["3","12","6","18"], answer: 0, wrongHints: [null, "Dat is 18 − 6, geen deling.", "Aantal kinderen.", "Dat is het totaal."] },
     ],
   },
   // G. Oefenronde (11 aug 2026, zelfde didactiek als topografie "Ken ze alle 12"):

@@ -74,7 +74,7 @@ const steps = [
       },
       {
         q: "**5% nominale BBP-groei**, **3% inflatie** → reële groei?",
-        options: ["~2%", "8%", "5%", "3%"],
+        options: ["2%", "8%", "5%", "3%"],
         answer: 0,
         wrongHints: [null, "Onlogisch.", "Nominaal.", "Inflatie alleen."],
       },
@@ -85,10 +85,10 @@ const steps = [
         wrongHints: [null, "Niet — geen vermenigvuldiging.", "Niet relevant.", "Niet primair."],
       },
       {
-        q: "Welk land heeft een **hoger BBP**: NL (€1.000 mld) of Duitsland (€4.000 mld)?",
-        options: ["Duitsland", "Nederland", "Gelijk", "Niet te zeggen"],
+        q: "NL: BBP €1.000 mld, 18 mln inwoners. Duitsland: BBP €4.000 mld, 84 mln inwoners. Welk land heeft het hoogste **BBP per hoofd**?",
+        options: ["Nederland", "Duitsland", "Gelijk", "Niet te zeggen"],
         answer: 0,
-        wrongHints: [null, "Lager getal.", "Verschillende getallen.", "Wel te zeggen."],
+        wrongHints: [null, "Duitsland heeft het grootste totaal — maar heb je ook gedeeld door het aantal inwoners?", "Reken beide uit: BBP ÷ inwoners.", "Je hebt alle cijfers om het uit te rekenen."],
       },
     ],
   },
@@ -114,13 +114,13 @@ const steps = [
       },
       {
         q: "Wat gebeurt bij **opgang**?",
-        options: ["Lonen + prijzen stijgen, werkloosheid daalt", "Lonen dalen", "BBP daalt", "Bedrijven failliet"],
+        options: ["Lonen + prijzen stijgen, werkloosheid daalt", "Lonen dalen, werkloosheid stijgt", "BBP daalt twee kwartalen op rij", "Veel bedrijven gaan failliet"],
         answer: 0,
         wrongHints: [null, "Bij neergang.", "Bij neergang.", "Bij depressie."],
       },
       {
         q: "Welke crisis was in **2008**?",
-        options: ["Financiële (bank-)crisis (Lehman)", "Olie-crisis", "COVID", "Dot-com"],
+        options: ["Financiële crisis", "Oliecrisis", "COVID-crisis", "Dotcom-crisis"],
         answer: 0,
         wrongHints: [null, "1973.", "2020.", "2000-2002."],
       },
@@ -153,7 +153,7 @@ const steps = [
       },
       {
         q: "Wat is **hyperinflatie**?",
-        options: ["Extreme inflatie (>50% per maand)", "Beetje inflatie", "Deflatie", "Geen inflatie"],
+        options: ["Extreem hoge inflatie", "Een klein beetje inflatie", "Prijzen die dalen", "Prijzen die gelijk blijven"],
         answer: 0,
         wrongHints: [null, "Te mild.", "Tegenovergesteld.", "Niet."],
       },
@@ -168,9 +168,9 @@ const steps = [
     checks: [
       {
         q: "**4 soorten werkloosheid** zijn?",
-        options: ["Frictie / conjunctureel / structureel / seizoen", "Hoog / midden / laag / nul", "1F / 2F / 3F / 4F", "Geen 4 soorten"],
+        options: ["Frictie / conjunctureel / structureel / seizoen", "Hoog / midden / laag / nul", "Jong / oud / tijdelijk / vast", "Vrijwillig / betaald / zwart / parttime"],
         answer: 0,
-        wrongHints: [null, "Niet de classificatie.", "Niet werkloosheid.", "Wel 4 hoofdsoorten."],
+        wrongHints: [null, "Niet de classificatie.", "Kijk naar de óórzaak van de werkloosheid.", "Kijk naar de óórzaak van de werkloosheid."],
       },
       {
         q: "Werkloosheid van **mijnwerkers nadat mijnen sluiten** — welke?",
@@ -186,7 +186,7 @@ const steps = [
       },
       {
         q: "**WW-uitkering** is voor wie?",
-        options: ["Onvrijwillig werklozen met arbeidsverleden", "Iedereen", "Studenten", "Pensionado's"],
+        options: ["Onvrijwillig werklozen met arbeidsverleden", "Iedereen boven de 18 jaar", "Studenten zonder bijbaan", "Gepensioneerden boven de AOW-leeftijd"],
         answer: 0,
         wrongHints: [null, "Niet iedereen.", "Studenten apart.", "Pensioen apart."],
       },
@@ -197,29 +197,29 @@ const steps = [
   {
     title: "Overheid + ECB — wat doen ze?",
     explanation:
-      "Overheid + centrale banken kunnen **economisch beleid** voeren om conjunctuur of inflatie bij te sturen.\n\n**2 hoofdsoorten beleid**:\n\n**1. Begrotingsbeleid (fiscaal)** — door **overheid (regering)**:\n• **Belastingen** verhogen of verlagen.\n• **Uitgaven** verhogen of verlagen.\n\n**2. Monetair beleid** — door **centrale bank (ECB voor euro-zone)**:\n• **Rente** verhogen of verlagen.\n• **Geld bijdrukken** (Quantitative Easing) of geld inhouden.\n\n**Bij recessie (anti-cyclisch)**:\n• **Overheid**: belastingen omlaag + uitgaven omhoog *(infrastructuur, sociale zekerheid)* → mensen meer geld → meer consumeren → bedrijven verkopen meer.\n• **ECB**: rente omlaag → goedkoper lenen → meer investeren + kopen.\n• Risico: **staatsschuld** stijgt + inflatie kan komen.\n\n**Bij oververhitting (anti-cyclisch)**:\n• **Overheid**: belastingen omhoog + uitgaven omlaag → minder consumeren.\n• **ECB**: rente omhoog → lenen duurder → minder uitgeven.\n• Risico: kan recessie veroorzaken.\n\n**Pro-cyclisch beleid** *(meebewegend, vermijden!)*:\nAls overheid in recessie ook nog gaat besparen → versterkt de recessie. **Slecht idee**, hoewel soms politiek nodig (Griekenland jaren 2010 — bezuinigingen tijdens crisis = meer ellende).\n\n**Keynesiaans beleid**:\nVernoemd naar **John Maynard Keynes** *(econoom 1883-1946)*:\n• In recessie: overheid moet **uitgeven** om vraag te creëren.\n• In opgang: overheid moet **sparen** om buffer op te bouwen.\n• Anti-cyclisch beleid is Keynesiaans.\n\n**ECB — Europese Centrale Bank**:\n• Hoofdzetel: **Frankfurt**.\n• Verantwoordelijk voor: **euro + monetair beleid** in eurozone (21 landen).\n• **President** (2024): **Christine Lagarde** *(Frans)*.\n• Hoofd-doel: **prijsstabiliteit** *(inflatie rond 2%)*.\n• **Onafhankelijk** van politiek → geen overheid die haar zin kan doordrukken.\n\n**ECB-rente**:\n• De rente die ECB rekent aan banken voor leningen.\n• Banken passen daarmee hun eigen rente aan voor consumenten.\n• 2021-2022: rente 0% → goedkoop lenen → veel inflatie kwam.\n• 2023: rente naar 4-4,5% om inflatie te remmen.\n• 2024: rente weer omlaag.\n\n**Quantitative Easing (QE)**:\n• ECB koopt **staatsschulden** op → drukt zo geld in de economie.\n• Tijdens financiële crisis + COVID gebruikt.\n• Risico: hoge inflatie als overdaad.\n\n**Toets-stappenplan — wat doet overheid bij...**:\n*'... recessie?'* → belastingen omlaag + uitgaven omhoog.\n*'... oververhitting?'* → belastingen omhoog + uitgaven omlaag.\n*'... hoge inflatie?'* → ECB-rente omhoog.\n*'... deflatie?'* → ECB-rente omlaag, QE.\n\n**Begrotingstekort + staatsschuld**:\n• **Tekort** = wat de overheid in een jaar méér uitgeeft dan ze binnenkrijgt.\n• **Staatsschuld** = totaal van alle tekorten samen.\n• **EU-norm**: tekort max 3% BBP. Staatsschuld max 60% BBP *(Maastricht-criteria)*.\n• NL in 2024: tekort ~2%, schuld ~45% — binnen norm.\n• Veel landen overschrijden: Italië (135%), Frankrijk (110%), Griekenland (160%).\n\n**Toets-feitje**:\nDe **ECB-president** wordt voor 8 jaar benoemd, NIET herkozen. Onafhankelijkheid groot. Eerste was **Wim Duisenberg** *(NL)*.",
+      "Overheid + centrale banken kunnen **economisch beleid** voeren om conjunctuur of inflatie bij te sturen.\n\n**2 hoofdsoorten beleid**:\n\n**1. Begrotingsbeleid (fiscaal)** — door **overheid (regering)**:\n• **Belastingen** verhogen of verlagen.\n• **Uitgaven** verhogen of verlagen.\n\n**2. Monetair beleid** — door **centrale bank (ECB voor euro-zone)**:\n• **Rente** verhogen of verlagen.\n• **Geld bijdrukken** (Quantitative Easing) of geld inhouden.\n\n**Bij recessie (anti-cyclisch)**:\n• **Overheid**: belastingen omlaag + uitgaven omhoog *(infrastructuur, sociale zekerheid)* → mensen meer geld → meer consumeren → bedrijven verkopen meer.\n• **ECB**: rente omlaag → goedkoper lenen → meer investeren + kopen.\n• Risico: **staatsschuld** stijgt + inflatie kan komen.\n\n**Bij oververhitting (anti-cyclisch)**:\n• **Overheid**: belastingen omhoog + uitgaven omlaag → minder consumeren.\n• **ECB**: rente omhoog → lenen duurder → minder uitgeven.\n• Risico: kan recessie veroorzaken.\n\n**Pro-cyclisch beleid** *(meebewegend, vermijden!)*:\nAls overheid in recessie ook nog gaat besparen → versterkt de recessie. **Slecht idee**, hoewel soms politiek nodig (Griekenland jaren 2010 — bezuinigingen tijdens crisis = meer ellende).\n\n**Keynesiaans beleid**:\nVernoemd naar **John Maynard Keynes** *(econoom 1883-1946)*:\n• In recessie: overheid moet **uitgeven** om vraag te creëren.\n• In opgang: overheid moet **sparen** om buffer op te bouwen.\n• Anti-cyclisch beleid is Keynesiaans.\n\n**ECB — Europese Centrale Bank**:\n• Hoofdzetel: **Frankfurt**.\n• Verantwoordelijk voor: **euro + monetair beleid** in eurozone (21 landen).\n• **President** (2024): **Christine Lagarde** *(Frans)*.\n• Hoofd-doel: **prijsstabiliteit** *(inflatie rond 2%)*.\n• **Onafhankelijk** van politiek → geen overheid die haar zin kan doordrukken.\n\n**ECB-rente**:\n• De rente die ECB rekent aan banken voor leningen.\n• Banken passen daarmee hun eigen rente aan voor consumenten.\n• 2021-2022: rente 0% → goedkoop lenen → veel inflatie kwam.\n• 2023: rente naar 4-4,5% om inflatie te remmen.\n• 2024: rente weer omlaag.\n\n**Quantitative Easing (QE)**:\n• ECB koopt **staatsschulden** op → drukt zo geld in de economie.\n• Tijdens financiële crisis + COVID gebruikt.\n• Risico: hoge inflatie als overdaad.\n\n**Toets-stappenplan — wat doet overheid bij...**:\n*'... recessie?'* → belastingen omlaag + uitgaven omhoog.\n*'... oververhitting?'* → belastingen omhoog + uitgaven omlaag.\n*'... hoge inflatie?'* → ECB-rente omhoog.\n*'... deflatie?'* → ECB-rente omlaag, QE.\n\n**Begrotingstekort + staatsschuld**:\n• **Tekort** = wat de overheid in een jaar méér uitgeeft dan ze binnenkrijgt.\n• **Staatsschuld** = totaal van alle tekorten samen.\n• **EU-norm**: tekort max 3% BBP. Staatsschuld max 60% BBP *(Maastricht-criteria)*.\n• NL in 2024: tekort ~1%, schuld ~45% — binnen norm.\n• Veel landen overschrijden: Italië (135%), Frankrijk (110%), Griekenland (160%).\n\n**Toets-feitje**:\nDe **ECB-president** wordt voor 8 jaar benoemd, NIET herkozen. Onafhankelijkheid groot. Eerste was **Wim Duisenberg** *(NL)*.",
     checks: [
       {
         q: "Wat is **monetair beleid**?",
-        options: ["Door centrale bank — rente + geld", "Door overheid — belasting", "Door bedrijven", "Particulier"],
+        options: ["Door centrale bank — rente + geld", "Door overheid — belasting", "Door bedrijven — prijzen", "Door burgers — sparen"],
         answer: 0,
         wrongHints: [null, "Dat is begrotingsbeleid.", "Niet beleid-makers.", "Niet beleid."],
       },
       {
         q: "Wat doet overheid bij **recessie**?",
-        options: ["Belasting omlaag + uitgaven omhoog", "Belasting omhoog", "Beide omlaag", "Niets"],
+        options: ["Belasting omlaag + uitgaven omhoog", "Belasting omhoog + uitgaven omlaag", "Belasting omhoog + uitgaven omhoog", "Niets, de markt herstelt zich"],
         answer: 0,
-        wrongHints: [null, "Verkeerde richting.", "Helpt niet.", "Wel iets — anti-cyclisch."],
+        wrongHints: [null, "Verkeerde richting — dat remt de economie juist af.", "Hogere belasting haalt geld uit de economie.", "Wel iets — anti-cyclisch."],
       },
       {
         q: "Welke is **Keynesiaans**?",
-        options: ["Anti-cyclisch (regering springt in bij recessie)", "Geen overheid", "Pro-cyclisch", "Alleen rente"],
+        options: ["Anti-cyclisch beleid", "Geen overheidsingrijpen", "Pro-cyclisch beleid", "Alleen de rente aanpassen"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Anti-Keynesiaans.", "Niet alleen rente."],
       },
       {
         q: "Wat is **EU-norm** voor staatsschuld?",
-        options: ["Max 60% BBP", "Max 30%", "Max 100%", "Geen norm"],
+        options: ["Max 60% BBP", "Max 30% BBP", "Max 100% BBP", "Geen norm"],
         answer: 0,
         wrongHints: [null, "Te streng.", "Te ruim.", "Wel norm."],
       },
@@ -246,7 +246,7 @@ const steps = [
       },
       {
         q: "**ECB-doel** voor inflatie?",
-        options: ["~2%", "0%", "5%", "10%"],
+        options: ["2%", "0%", "5%", "10%"],
         answer: 0,
         wrongHints: [null, "Deflatie risico.", "Te hoog.", "Veel te hoog."],
       },
@@ -270,7 +270,7 @@ const steps = [
       },
       {
         q: "Welke organisatie meet **inflatie in NL**?",
-        options: ["CBS (Centraal Bureau voor Statistiek)", "ECB", "Tweede Kamer", "ANWB"],
+        options: ["CBS (Centraal Bureau voor de Statistiek)", "ECB (Europese Centrale Bank)", "Tweede Kamer", "ANWB (Algemene Nederlandse Wielrijders-Bond)"],
         answer: 0,
         wrongHints: [null, "Eurozone-bank.", "Politiek.", "Auto-club."],
       },
@@ -300,21 +300,21 @@ const steps = [
       },
       {
         q: "**ECB-rente verhogen** — gevolg?",
-        options: ["Lenen duurder, inflatie remmen", "Lenen goedkoper", "Inflatie omhoog", "Niets"],
+        options: ["Lenen duurder, inflatie remmen", "Lenen goedkoper, meer bestedingen", "Inflatie gaat juist omhoog", "Er verandert niets"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel iets."],
       },
       {
         q: "Een **stijgende lijn op BBP-grafiek over jaar 2024-2025** wijst op?",
-        options: ["Hoogconjunctuur / herstel", "Recessie", "Inflatie", "Werkloosheid"],
+        options: ["Hoogconjunctuur / herstel", "Recessie", "Krimp van de economie", "Stijgende werkloosheid"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Andersoortig.", "Andersoortig."],
+        wrongHints: [null, "Tegenovergesteld.", "Een stijgende lijn is geen krimp.", "Bij groei daalt de werkloosheid meestal juist."],
       },
       {
         q: "Wat is **stagflatie**?",
-        options: ["Hoge inflatie + lage groei + werkloosheid tegelijk", "Hoge groei", "Lage rente", "Recessie alleen"],
+        options: ["Hoge inflatie + lage groei + werkloosheid tegelijk", "Hoge groei + lage inflatie tegelijk", "Lage rente + hoge groei tegelijk", "Alleen een daling van het BBP"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Geen volledige term."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Er hoort ook iets met prijzen bij."],
       },
       {
         q: "Welke **combinatie van cijfers** geeft het beste beeld van de economische gezondheid?",
@@ -324,9 +324,9 @@ const steps = [
       },
       {
         q: "**Hyperinflatie 1923 Duitsland** — wat gebeurde er?",
-        options: ["Geld werd bijna waardeloos", "Inflatie was laag", "Iedereen rijk", "Niet relevant"],
+        options: ["Geld werd bijna waardeloos", "De inflatie was juist heel laag", "Iedereen werd er rijk van", "Prijzen bleven jaren gelijk"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel relevant."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Kijk naar het woord hyper-inflatie."],
       },
       {
         q: "**Krimp BBP 2 kwartalen achter elkaar** = ___?",

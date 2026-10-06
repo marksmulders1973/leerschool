@@ -271,7 +271,7 @@ const steps = [
     checks: [
       {
         q: "*'Ik vind voetbal de mooiste sport, want het houdt je gezond.'* Welk argument-soort?",
-        options: ["Feit (gezondheid is bewijsbaar)","Voorbeeld","Gevoel","Autoriteit"],
+        options: ["Feit","Voorbeeld","Gevoel","Autoriteit"],
         answer: 0,
         wrongHints: [null, "Geen concreet geval — algemeen 'gezond houden'.", "'Gezond' is bewijsbaar in onderzoek, geen alleen-gevoel.", "Geen expert wordt aangehaald."],
         uitlegPad: {
@@ -299,7 +299,7 @@ const steps = [
       },
       {
         q: "Welke zin is een **voorbeeld-argument** voor 'lezen is belangrijk'?",
-        options: ["Ik las laatst een boek over de oceaan en weet nu wat plankton is.","Ik vind lezen het leukst.","Mijn juf zegt dat lezen belangrijk is.","Iedereen leest."],
+        options: ["Ik las laatst een boek over de oceaan en weet nu wat plankton is.","Ik vind lezen het allerleukste wat er is om te doen.","Mijn juf zegt altijd dat lezen heel belangrijk is voor later.","Iedereen in de hele wereld leest elke dag een boek."],
         answer: 0,
         wrongHints: [null, "Dat is een mening, geen voorbeeld.", "Dat is autoriteit-argument (juf zegt).", "Dat is generaliseren — drogreden."],
         uitlegPad: {
@@ -327,7 +327,7 @@ const steps = [
       },
       {
         q: "*'Of je bent VOOR een uniform op school, of je bent tegen vrijheid.'* — drogreden?",
-        options: ["Vals dilemma (geen tussenweg)","Generaliseren","Persoonlijke aanval","Goed argument"],
+        options: ["Vals dilemma","Generaliseren","Persoonlijke aanval","Goed argument"],
         answer: 0,
         wrongHints: [null, "Geen 'iedereen-uitspraak' — wel een nep-keuze.", "Geen aanval op een persoon.", "Niet — wel degelijk een drogreden."],
         uitlegPad: {
@@ -360,9 +360,9 @@ const steps = [
       },
       {
         q: "Hoe begin je een formele e-mail aan iemand wiens **achternaam je niet weet**?",
-        options: ["Geachte heer/mevrouw","Hoi","Beste","Hey"],
+        options: ["Geachte heer/mevrouw","Hoi","Lieve","Hey"],
         answer: 0,
-        wrongHints: [null, "Niet — informeel.", "Twijfelachtig — 'Beste' kan formeel maar voelt minder beleefd zonder naam.", "Niet — veel te informeel."],
+        wrongHints: [null, "Niet — informeel.", "Niet — 'Lieve' gebruik je voor familie en vrienden.", "Niet — veel te informeel."],
         uitlegPad: {
           stappen: [{ titel: "Algemene formele aanhef", tekst: "Zonder naam → 'Geachte heer/mevrouw' is het veiligste. 'Beste' werkt ook maar minder formeel-genoeg voor instanties." }],
           niveaus: { basis: "Geachte heer/mevrouw.", simpeler: "Naam onbekend + formeel = 'Geachte heer/mevrouw'.", nogSimpeler: "Geachte." },
@@ -390,7 +390,7 @@ const steps = [
       },
       {
         q: "*'Iedereen wil meer huiswerk, dus de school moet het verplichten.'* — wat klopt niet?",
-        options: ["'Iedereen' is generaliseren — drogreden","De zin is grammaticaal fout","De school heeft geen recht","Te lange zin"],
+        options: ["Er wordt gegeneraliseerd","De zin is grammaticaal fout","De school heeft geen recht","De zin is te lang"],
         answer: 0,
         wrongHints: [null, "Niet — grammaticaal klopt het.", "Niet de kwestie hier — kijk naar 'iedereen'.", "Niet — lengte is geen probleem."],
         uitlegPad: {

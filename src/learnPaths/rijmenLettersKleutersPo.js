@@ -120,7 +120,7 @@ const steps = [
         q: "Met welke klank begint **appel** 🍎?",
         options: ["a", "b", "s", "m"],
         answer: 0,
-        wrongHints: [null, "Zeg het langzaam: aaa-ppel. Welke klank hoor je het allereerst?", "Ssss klinkt als een slang — hoor je dat aan het begin van *appel*?", "Mmm zeg je bij lekker eten — maar hoor je dat vooraan in *appel*?"],
+        wrongHints: [null, "Zeg het heel langzaam en luister naar de allereerste klank. Hoor je een *b*?", "Ssss klinkt als een slang — hoor je dat aan het begin van *appel*?", "Mmm zeg je bij lekker eten — maar hoor je dat vooraan in *appel*?"],
         uitlegPad: {
           stappen: [{ titel: "Zeg het langzaam", tekst: "Zeg heel langzaam: **aaa**-ppel 🍎. De allereerste klank die je hoort is de **a**! 👂" }],
           niveaus: {
@@ -134,7 +134,7 @@ const steps = [
         q: "Met welke klank begint **slang** 🐍?",
         options: ["s", "k", "b", "o"],
         answer: 0,
-        wrongHints: [null, "Zeg het langzaam: sss-lang. Welke klank hoor je eerst?", "Zeg *slang* hardop — hoor je een *b* aan het begin?", "Zeg het nog eens langzaam — begint het met *o*?"],
+        wrongHints: [null, "Zeg het heel langzaam — hoor je een *k* aan het begin?", "Zeg *slang* hardop — hoor je een *b* aan het begin?", "Zeg het nog eens langzaam — begint het met *o*?"],
         uitlegPad: {
           stappen: [{ titel: "Sss als een slang", tekst: "Zeg langzaam: **sss**-lang 🐍. Hoor je dat? Het klinkt zelfs als een slang: sssss! De eerste klank is de **s**. 👂" }],
           niveaus: {
@@ -251,7 +251,7 @@ const steps = [
         q: "Welke letter staat vooraan in **maan** 🌙?",
         options: ["m", "n", "a", "b"],
         answer: 0,
-        wrongHints: [null, "Bijna — tel de boogjes van de eerste letter nog eens!", "Die letter zit wél in *maan*, maar niet vooraan. Kijk naar de allereerste letter.", "Zeg het woord langzaam: mmm-aan. Kijk dan naar de eerste letter."],
+        wrongHints: [null, "Bijna — tel de boogjes van de eerste letter nog eens!", "Die letter zit wél in *maan*, maar niet vooraan. Kijk naar de allereerste letter.", "Zeg het woord langzaam en kijk dan naar de allereerste letter."],
         uitlegPad: {
           stappen: [{ titel: "Eerste letter = eerste klank", tekst: "Zeg langzaam: **mmm**-aan 🌙. Je hoort de *m* — en kijk: **m**-a-a-n, daar staat hij vooraan! Horen en zien horen bij elkaar. 👂👀" }],
           niveaus: {

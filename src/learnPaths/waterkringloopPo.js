@@ -20,7 +20,7 @@ const steps = [
         q: "Hoeveel **zoet water** op aarde (totaal water)?",
         options: ["~3%", "50%", "97%", "99%"],
         answer: 0,
-        wrongHints: [null, "Veel meer.", "Zout water.", "Te hoog."],
+        wrongHints: [null, "Veel te veel.", "Zout water.", "Te hoog."],
         uitlegPad: {
           stappen: [
             { titel: "97% zout / 3% zoet", tekst: "Van al het water op aarde is **97% ZOUT** water (zeeën + oceanen). Slechts **3% is ZOET** water — dat is waar we van drinken, koken, douchen." },
@@ -157,9 +157,9 @@ const steps = [
       },
       {
         q: "Hoeveel **kleuren** in regenboog?",
-        options: ["7 (ROYGBIV)", "3", "10", "Oneindig"],
+        options: ["7", "3", "10", "5"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Wel onderscheidbaar 7."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Iets te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "7 kleuren in vaste volgorde", tekst: "Een regenboog heeft altijd **7 kleuren** in dezelfde volgorde, van **buitenste** (rood) naar **binnenste** (violet):\n1. **Rood**\n2. **Oranje**\n3. **Geel**\n4. **Groen**\n5. **Blauw**\n6. **Indigo** (donkerblauw)\n7. **Violet** (paars)" },
@@ -246,8 +246,8 @@ const steps = [
       { q: "**Verdamping** = ?", options: ["Vloeibaar → damp", "Damp → vloeibaar", "Bevriezen", "Smelten"], answer: 0, wrongHints: [null, "Condensatie.", "Niet.", "Niet."] },
       { q: "Welke **wolk** = onweer?", options: ["Cumulonimbus", "Cirrus", "Stratus", "Altocumulus"], answer: 0, wrongHints: [null, "Cirrus zijn dunne ijsveertjes hoog in de lucht — zoek de torenhoge stapelwolk.", "Stratus is een grijze, saaie laag — onweer komt uit een wolk die omhoog tórent.", "Middelhoge schapenwolkjes — welke wolk groeit uit tot een reusachtige toren?"] },
       { q: "Hoeveel **zoet water** op aarde?", options: ["~3%", "50%", "100%", "97%"], answer: 0, wrongHints: [null, "Niet.", "Wel water maar zout.", "Zout."] },
-      { q: "**Polder** = ?", options: ["Drooggemaakt land", "Bergweide", "Meer", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wanneer was de **Afsluitdijk** klaar?", options: ["1932 (sloot Zuiderzee af)", "1953", "1900", "Nooit"], answer: 0, wrongHints: [null, "Watersnood.", "Te vroeg.", "Wel."] },
+      { q: "**Polder** = ?", options: ["Drooggemaakt land", "Bergweide", "Meer", "Een soort dijk"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Een dijk ligt om de polder heen."] },
+      { q: "Wanneer was de **Afsluitdijk** klaar?", options: ["1932", "1953", "1900", "Nooit"], answer: 0, wrongHints: [null, "Watersnood.", "Te vroeg.", "Wel."] },
       { q: "Hoeveel **kleuren** regenboog?", options: ["7", "3", "10", "1"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Niet."] },
       {
         q: "Welke 4 hoofdstappen vormen samen de **waterkringloop**?",
@@ -277,7 +277,7 @@ const steps = [
       },
       {
         q: "Een **dijk** is waarvoor?",
-        options: ["Houden water tegen — beschermt land tegen overstroming", "Genereert elektriciteit", "Voor schepen om aan te leggen", "Drinkwater filteren"],
+        options: ["Water tegenhouden", "Genereert elektriciteit", "Voor schepen om aan te leggen", "Drinkwater filteren"],
         answer: 0,
         wrongHints: [null, "Niet — andere techniek (waterkrachtcentrale).", "Niet — dat is een haven/pier.", "Niet — dat is waterzuivering."],
         uitlegPad: {
@@ -303,7 +303,7 @@ const steps = [
       },
       {
         q: "**Waar komt drinkwater in NL** vandaan?",
-        options: ["Vooral grondwater + oppervlaktewater (rivier/duinen), gezuiverd", "Direct uit zee zonder zuivering", "Alleen regenwater opvangen", "Geïmporteerd uit het buitenland"],
+        options: ["Vooral uit grondwater en rivieren", "Direct uit zee zonder zuivering", "Alleen regenwater opvangen", "Geïmporteerd uit het buitenland"],
         answer: 0,
         wrongHints: [null, "Zout water → onbruikbaar zonder ontzilting (duur, niet in NL).", "Te onbetrouwbaar voor heel land.", "Niet — NL maakt eigen drinkwater."],
         uitlegPad: {
@@ -326,25 +326,25 @@ const steps = [
           niveaus: { basis: "Grond + oppervlaktewater.", simpeler: "NL drinkwater = 60% grondwater (diep onder grond) + 40% rivierwater. Beide goed gezuiverd in waterzuiveringsinstallaties.", nogSimpeler: "Grond + rivier, gezuiverd" },
         },
       },
-      { q: "Wat is **verdamping**?", options: ["Water wordt waterdamp (gas)","Water wordt ijs","Water valt naar beneden","Water vriest"], answer: 0, wrongHints: [null, "Dat is bevriezen.", "Dat is neerslag.", "Bevriezen."] },
-      { q: "Wat is **condensatie**?", options: ["Waterdamp wordt water (vloeistof)","IJs wordt water","Water wordt gas","Niets"], answer: 0, wrongHints: [null, "Dat is smelten.", "Verdamping.", "Wel iets."] },
+      { q: "Wat is **verdamping**?", options: ["Water wordt waterdamp (gas)", "Water wordt ijs", "Water valt naar beneden", "IJs wordt water"], answer: 0, wrongHints: [null, "Dat is bevriezen.", "Dat is neerslag.", "Dat is smelten."] },
+      { q: "Wat is **condensatie**?", options: ["Waterdamp wordt water", "IJs wordt water", "Water wordt gas", "Niets"], answer: 0, wrongHints: [null, "Dat is smelten.", "Verdamping.", "Wel iets."] },
       { q: "Welk soort wolken brengt onweer?", options: ["Cumulonimbus","Cirrus","Cumulus","Stratus"], answer: 0, wrongHints: [null, "IJskristallen, geen onweer.", "Mooi weer.", "Grijze grond-laag."] },
       { q: "Wanneer was de **Watersnoodramp**?", options: ["1953","1900","2000","1700"], answer: 0, wrongHints: [null, "Te vroeg.", "Te recent.", "Niet."] },
       { q: "Hoeveel % van de aarde is **bedekt met water**?", options: ["~71%","30%","100%","50%"], answer: 0, wrongHints: [null, "Land.", "Niet alles.", "Niet."] },
-      { q: "Welk water is **zoet**?", options: ["Rivier + meer","Zee","Oceaan","Niet bestaand"], answer: 0, wrongHints: [null, "Zout.", "Zout.", "Wel."] },
-      { q: "Wat is **regenwater**?", options: ["Neerslag uit wolken","Grondwater","Niet relevant","Drinkwater direct"], answer: 0, wrongHints: [null, "Wel onderdeel kringloop.", "Wel.", "Niet zonder zuivering."] },
+      { q: "Welk water is **zoet**?", options: ["Rivier + meer", "Zee", "Oceaan", "Water in de Dode Zee"], answer: 0, wrongHints: [null, "Zout.", "Zout.", "Daar zit juist extra veel zout in."] },
+      { q: "Wat is **regenwater**?", options: ["Neerslag uit wolken", "Grondwater", "Zeewater", "Drinkwater direct"], answer: 0, wrongHints: [null, "Wel onderdeel kringloop.", "Zeewater is zout; regen niet.", "Niet zonder zuivering."] },
       { q: "Wat is **neerslag**?", options: ["Regen + sneeuw + hagel","Alleen regen","Alleen sneeuw","Wolken"], answer: 0, wrongHints: [null, "Te beperkt.", "Te beperkt.", "Vormt neerslag."] },
-      { q: "Wat is **sneeuw**?", options: ["IJskristallen (bevroren water)","IJskoud water","Niet relevant","Hagel"], answer: 0, wrongHints: [null, "Vloeibaar.", "Wel.", "Andere vorm."] },
-      { q: "Wat is **hagel**?", options: ["IJsballetjes uit onweerswolken","Sneeuw","Regen","Niet relevant"], answer: 0, wrongHints: [null, "Andere vorm.", "Vloeibaar.", "Wel."] },
+      { q: "Wat is **sneeuw**?", options: ["IJskristallen", "IJskoud water", "Bevroren dauw", "Hagel"], answer: 0, wrongHints: [null, "Vloeibaar.", "Dat is rijp.", "Andere vorm."] },
+      { q: "Wat is **hagel**?", options: ["IJsballetjes uit onweerswolken", "Sneeuw", "Regen", "Bevroren dauw"], answer: 0, wrongHints: [null, "Andere vorm.", "Vloeibaar.", "Dat is rijp; dat valt niet uit de lucht."] },
       { q: "Hoe ziet een **regenboog** eruit?", options: ["7 kleuren","1 kleur","Zwart-wit","Onzichtbaar"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel zichtbaar."] },
-      { q: "Wat is **mist**?", options: ["Kleine waterdruppels in lucht (lage wolk)","Sneeuw","Regen","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wanneer zie je **dauw**?", options: ["Ochtend op gras","Middag","Nacht in lucht","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Wel 's nachts maar zichtbaar bij ochtend.", "Wel."] },
-      { q: "Welke vier **fases** in de waterkringloop?", options: ["Verdamping → condensatie → neerslag → afstroming","Alleen regen","2 fases","6 fases"], answer: 0, wrongHints: [null, "Te simpel.", "Te weinig.", "Te veel."] },
+      { q: "Wat is **mist**?", options: ["Kleine waterdruppels in de lucht", "Sneeuw", "Regen", "Rook"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Rook komt van vuur."] },
+      { q: "Wanneer zie je **dauw**?", options: ["Ochtend op gras", "Middag", "Nacht in lucht", "In de winter in huis"], answer: 0, wrongHints: [null, "Niet.", "Wel 's nachts maar zichtbaar bij ochtend.", "Dauw vormt zich buiten."] },
+      { q: "Welke vier **fases** in de waterkringloop?", options: ["Verdamping → condensatie → neerslag → afstroming", "Regen → zon → wind → sneeuw", "Smelten → stollen → regen → zee", "Condensatie → verdamping → afstroming → neerslag"], answer: 0, wrongHints: [null, "Zon en wind helpen, maar het gaat om wat het water doet.", "Smelten en stollen zijn geen vaste stappen van de kringloop.", "Kan damp condenseren voordat water verdampt is?"] },
       { q: "Wat is **grondwater**?", options: ["Water dat in de bodem zit","Regenwater","Wolken","Drinkwater"], answer: 0, wrongHints: [null, "Wel onderdeel.", "Niet.", "Soms uit grondwater gemaakt."] },
-      { q: "Wat is **afstroming**?", options: ["Water dat over land naar rivier stroomt","Verdamping","Wolken","Niet relevant"], answer: 0, wrongHints: [null, "Andere fase.", "Niet.", "Wel."] },
-      { q: "Welke **rivier** stroomt door Nederland?", options: ["Rijn (Lek/Waal)","Donau","Amazone","Nijl"], answer: 0, wrongHints: [null, "Duitsland-Oost-Europa.", "Zuid-Amerika.", "Afrika."] },
-      { q: "Hoeveel van je **lichaam** is water?", options: ["~60% lichaamsgewicht","10%","100%","30%"], answer: 0, wrongHints: [null, "Te weinig.", "Onmogelijk.", "Te weinig."] },
-      { q: "Wat is **vervuild water**?", options: ["Bevat schadelijke stoffen","Schoon","Drinkbaar","Niet relevant"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Wel."] },
+      { q: "Wat is **afstroming**?", options: ["Water dat over land naar rivier stroomt", "Verdamping", "Wolken", "Water dat bevriest"], answer: 0, wrongHints: [null, "Andere fase.", "Niet.", "Dat is stollen."] },
+      { q: "Welke **rivier** stroomt door Nederland?", options: ["Rijn", "Donau", "Amazone", "Nijl"], answer: 0, wrongHints: [null, "Duitsland-Oost-Europa.", "Zuid-Amerika.", "Afrika."] },
+      { q: "Hoeveel van je **lichaam** is water?", options: ["~60%", "10%", "100%", "30%"], answer: 0, wrongHints: [null, "Te weinig.", "Onmogelijk.", "Te weinig."] },
+      { q: "Wat is **vervuild water**?", options: ["Bevat schadelijke stoffen", "Schoon", "Drinkbaar", "Zout water"], answer: 0, wrongHints: [null, "Tegengestelde.", "Tegengestelde.", "Zout is niet altijd vervuiling."] },
     ],
   },
 ];

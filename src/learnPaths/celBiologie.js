@@ -416,7 +416,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       {
         q: "Wat gebeurt er in chloroplasten?",
         options: [
-          "Fotosynthese — zonlicht omzetten in suiker",
+          "Fotosynthese",
           "Energie verbranden",
           "DNA verdubbelen",
           "Voedsel verteren",
@@ -834,10 +834,10 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       { q: "**Celwand** (stevig + niet flexibel) vind je in?", options: ["Planten","Dieren","Niet — bestaat niet","Alleen bacteriën"], answer: 0, wrongHints: [null,"Dier heeft alleen celmembraan.","Wel — onderdeel plantcel.","Onvolledig."] },
       { q: "Welke is de **kleinste eenheid van leven**?", options: ["Cel","Atoom","Molecuul","Weefsel"], answer: 0, wrongHints: [null,"Geen leven.","Geen leven.","Te groot — bestaat uit cellen."] },
       { q: "**Fotosynthese** vindt plaats in?", options: ["Chloroplast","Mitochondrium","Celkern","Ribosoom"], answer: 0, wrongHints: [null,"Daar verbranding.","Daar DNA.","Daar eiwit-synthese."] },
-      { q: "**DNA** zit in?", options: ["Celkern","Cytoplasma","Celmembraan","Buiten cel"], answer: 0, wrongHints: [null,"Vloeistof rondom organel.","Buitenkant.","Niet."] },
-      { q: "Bacteriën zijn?", options: ["Prokaryoten (geen kern)","Eukaryoten","Geen levende wezens","Planten"], answer: 0, wrongHints: [null,"Andersom.","Wel levend.","Geen plant."] },
-      { q: "Een **virus** is...?", options: ["Geen levende cel — pakketje DNA/RNA","Een soort bacterie","Een plantcel","Een dier"], answer: 0, wrongHints: [null,"Een bacterie is een echte, levende cel die zichzelf kan delen — kan een virus dat zelfstandig, zonder gastheer?","Een plantcel heeft een celwand en kan fotosynthese doen — heeft een virus zulke celonderdelen?","Een dier is opgebouwd uit miljarden cellen — is een virus zo'n groot organisme?"] },
-      { q: "**Open vraag**: hoeveel chromosomen heeft een normale menselijke cel? (typ getal)", kind: "open", acceptedAnswers: ["46"], numericTolerance: 0, explanation: "Mensen hebben 46 chromosomen (23 paren) in elke lichaamscel." },
+      { q: "In een plant- of dierlijke cel zit het **DNA** vooral in?", options: ["Celkern","Cytoplasma","Celmembraan","Buiten cel"], answer: 0, wrongHints: [null,"Cytoplasma is de vloeistof waarin de organellen zweven — is dat de bewaarplek van het DNA?","Het membraan is de buitenkant — wordt het erfelijk materiaal daar bewaard?","Erfelijk materiaal buiten de cel — kan de cel er dan bij?"] },
+      { q: "Bacteriën zijn?", options: ["Prokaryoten","Eukaryoten","Geen levende wezens","Planten"], answer: 0, wrongHints: [null,"Andersom.","Wel levend.","Geen plant."] },
+      { q: "Een **virus** is...?", options: ["Geen cel, wel erfelijk materiaal","Een kleine soort bacterie","Een heel kleine plantcel","Een piepklein dier"], answer: 0, wrongHints: [null,"Een bacterie is een echte, levende cel die zichzelf kan delen — kan een virus dat zelfstandig, zonder gastheer?","Een plantcel heeft een celwand en kan fotosynthese doen — heeft een virus zulke celonderdelen?","Een dier is opgebouwd uit miljarden cellen — is een virus zo'n groot organisme?"] },
+      { q: "**Open vraag**: hoeveel chromosomen heeft een normale menselijke lichaamscel? (typ getal)", kind: "open", acceptedAnswers: ["46"], numericTolerance: 0, explanation: "Mensen hebben 46 chromosomen (23 paren) in elke lichaamscel." },
       { q: "**Open vraag**: hoe heet het proces waarbij planten suiker maken uit CO₂ + water + licht?", kind: "open", acceptedAnswers: ["fotosynthese"], explanation: "Fotosynthese: CO₂ + H₂O + lichtenergie → glucose + O₂." },
     ],
   },

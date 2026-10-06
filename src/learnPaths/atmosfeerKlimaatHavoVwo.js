@@ -34,12 +34,12 @@ const steps = [
         q: "Wat doet de **ozonlaag** (in stratosfeer)?",
         options: [
           "Beschermt tegen schadelijke UV-straling",
-          "Houdt warmte vast",
+          "Houdt regenwolken tegen",
           "Maakt zuurstof aan",
-          "Verkoelt aarde"
+          "Zorgt voor wind"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair functie.", "Niet — al bestaande O₂.", "Niet specifiek."],
+        wrongHints: [null, "Niet — wolken zitten lager, in de troposfeer.", "Niet — al bestaande O₂.", "Niet — wind ontstaat door drukverschillen."],
         uitlegPad: {
           stappen: [
             { titel: "O₃ absorbeert UV", tekst: "Ozon (O₃) absorbeert UV-fotonen → splitsen + samenstellen continu → UV blijft in atmosfeer + minder dringt door naar aarde. Cruciaal voor DNA-bescherming alle leven." },
@@ -51,10 +51,10 @@ const steps = [
       {
         q: "**Broeikaseffect** wordt veroorzaakt door:",
         options: [
-          "Atmosfeer houdt door aarde-uitgezonden warmte (IR) vast",
-          "Zonnestraling die direct opwarmt",
-          "Vulkanen",
-          "Magnetisme"
+          "Atmosfeer houdt door de aarde uitgezonden warmte vast",
+          "Zonnestraling die het aardoppervlak direct opwarmt",
+          "Vulkanen die warme gassen uitstoten",
+          "Het magnetisch veld dat warmte vasthoudt"
         ],
         answer: 0,
         wrongHints: [null, "Niet — verschil tussen inkomend + uitgaand.", "Geen broeikas-mechanisme.", "Niet relevant."],
@@ -67,7 +67,7 @@ const steps = [
       },
       {
         q: "Hoeveel **% CO₂** zit in atmosfeer (2024)?",
-        options: ["~0,042% (= 420 ppm)", "~21%", "~78%", "~1%"],
+        options: ["~0,04%", "~21%", "~78%", "~1%"],
         answer: 0,
         wrongHints: [null, "Niet — dat is O₂.", "Niet — dat is N₂.", "Hoger dan werkelijk."],
         uitlegPad: {
@@ -104,7 +104,7 @@ const steps = [
     checks: [
       {
         q: "**Luchtdruk op zee-niveau** is standaard:",
-        options: ["~1013 hPa (= 1 atm)", "~500 hPa", "~2000 hPa", "Variabel zonder norm"],
+        options: ["~1013 hPa", "~500 hPa", "~2000 hPa", "Variabel zonder norm"],
         answer: 0,
         wrongHints: [null, "Niet — te laag.", "Niet — te hoog.", "Niet — wel standaard."],
         uitlegPad: {
@@ -115,7 +115,7 @@ const steps = [
       {
         q: "Een **anticycloon (hoge druk)** in NL betekent meestal:",
         options: [
-          "Mooi weer (zonnig, droog, weinig wind)",
+          "Droog en vaak zonnig weer",
           "Slecht weer met regen",
           "Stormachtig weer",
           "Sneeuw"
@@ -166,10 +166,10 @@ const steps = [
       {
         q: "**Föhn-wind** is:",
         options: [
-          "Warm + droog aan lij-zijde berg (lucht gestegen + condensatie aan loef-zijde, dan gedaald)",
-          "Koude zeewind",
-          "Sneeuwstorm",
-          "Tropische cycloon"
+          "Warme, droge valwind aan de lijzijde van een berg",
+          "Koude wind die van zee naar land waait",
+          "Sneeuwstorm hoog in de bergen",
+          "Tropische cycloon boven warme zee"
         ],
         answer: 0,
         wrongHints: [null, "Niet — föhn warm.", "Niet — föhn warm.", "Niet — kleine schaal."],
@@ -193,7 +193,7 @@ const steps = [
       {
         q: "Een **koudefront** brengt vaak:",
         options: [
-          "Korte intense buien + onweer + cumulonimbus",
+          "Korte, hevige buien en soms onweer",
           "Langdurige motregen",
           "Mist",
           "Helder zonnig weer"
@@ -257,7 +257,7 @@ const steps = [
       {
         q: "**Orkaan** vereist als energiebron:",
         options: [
-          "Warme oceaan (>26 °C)",
+          "Warm oceaanwater",
           "Koude poolregio",
           "Bergen",
           "Woestijn"
@@ -295,10 +295,10 @@ const steps = [
       {
         q: "**Atacama-woestijn** (Chili) is droog door:",
         options: [
-          "Koude Humboldt-stroom voor kust + regenschaduw Andes",
-          "Hoge breedte",
-          "Geen wind",
-          "Vulkanisme"
+          "Koude Humboldt-stroom voor de kust + regenschaduw van de Andes",
+          "Ligging op hoge breedte, dicht bij de pool",
+          "Er waait daar vrijwel nooit wind",
+          "Veel vulkanen die de grond uitdrogen"
         ],
         answer: 0,
         wrongHints: [null, "Niet — relatief tropisch.", "Wel wind, maar droog.", "Geen relatie."],
@@ -312,7 +312,7 @@ const steps = [
       {
         q: "**Golfstroom** beïnvloedt het klimaat van:",
         options: [
-          "Noordwest-Europa (mildert winter aanzienlijk)",
+          "Noordwest-Europa",
           "Zuid-Amerika",
           "Australië",
           "Geen invloed op land"
@@ -329,7 +329,7 @@ const steps = [
       {
         q: "Tropisch **regenwoud** (Af-klimaat) vereist:",
         options: [
-          "Hele jaar warm (>18°C) + veel regen",
+          "Het hele jaar warm en veel regen",
           "Koud + droog",
           "Wisselende seizoenen",
           "Hoogte boven 3000 m"
@@ -344,7 +344,7 @@ const steps = [
       {
         q: "**Thermohaliene circulatie** wordt gedreven door:",
         options: [
-          "Verschillen in temperatuur + zoutgehalte (dichtheid) van water",
+          "Verschillen in temperatuur en zoutgehalte van water",
           "Wind alleen",
           "Coriolis-effect",
           "Magnetisme"
@@ -370,7 +370,7 @@ const steps = [
     checks: [
       {
         q: "**Belangrijkste broeikasgas** door menselijke activiteit:",
-        options: ["CO₂ (uit fossiele brandstoffen)", "Waterdamp", "Ozon", "Stikstof"],
+        options: ["CO₂", "Waterdamp", "Ozon", "Stikstof"],
         answer: 0,
         wrongHints: [null, "Waterdamp is wel een broeikasgas, maar de hoeveelheid hangt af van de temperatuur — niet van wat de mens uitstoot.", "Niet — ozon-laag herstelt.", "Niet — N₂ inert."],
         uitlegPad: {
@@ -411,9 +411,9 @@ const steps = [
         q: "**Tipping point** in klimaat betekent:",
         options: [
           "Onomkeerbare drempel waarna verandering zichzelf versterkt",
-          "Belasting op CO₂",
-          "Politiek besluit",
-          "Tijdelijke fluctuatie"
+          "Een belasting die je per ton CO₂ betaalt",
+          "Een politiek besluit om uitstoot te stoppen",
+          "Een tijdelijke schommeling die vanzelf herstelt"
         ],
         answer: 0,
         wrongHints: [null, "Niet — fysisch concept.", "Niet — natuurlijk verschijnsel.", "Tegenovergesteld."],
@@ -429,12 +429,12 @@ const steps = [
         q: "Nederland is **bijzonder kwetsbaar** voor klimaatverandering omdat:",
         options: [
           "26% land onder zeeniveau + dichtbevolkte kust",
-          "Te koud klimaat",
-          "Geen overheidsbeleid",
-          "Geen wetenschap"
+          "Het klimaat is te koud voor de meeste gewassen",
+          "Er is geen enkel overheidsbeleid voor klimaat",
+          "Er wordt in NL geen klimaatonderzoek gedaan"
         ],
         answer: 0,
-        wrongHints: [null, "Onjuist klimaat.", "Wel beleid (klimaatakkoord 2019).", "Onzin."],
+        wrongHints: [null, "Onjuist klimaat.", "Wel beleid (klimaatakkoord 2019).", "Juist veel onderzoek (bijvoorbeeld KNMI en Deltares)."],
         uitlegPad: {
           stappen: [
             { titel: "Geografie + bevolking", tekst: "NL ligt grotendeels in delta + onder zeeniveau (Randstad, Flevoland). Met zeespiegelstijging + extreme stormvloeden vereist veel investering in dijken + het Deltaprogramma (na advies Deltacommissie 2008). Plus dichte stedelijke bevolking → hittegolf-stress." },

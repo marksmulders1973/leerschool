@@ -121,9 +121,9 @@ const steps = [
       },
       {
         q: "**3 × 4** = **4 × 3** — klopt dat?",
-        options: ["Ja, wisselregel", "Nee", "Soms", "Hangt af"],
+        options: ["Ja, altijd", "Nee", "Soms", "Hangt af"],
         answer: 0,
-        wrongHints: [null, "Wel waar — reken 3 × 4 én 4 × 3 en vergelijk.", "Altijd, niet soms.", "Eenduidig — altijd."],
+        wrongHints: [null, "Wel waar — reken 3 × 4 én 4 × 3 en vergelijk.", "Probeer het ook met andere getallen — kom je dan ooit iets anders uit?", "Waar zou het van afhangen? Reken 3 × 4 en 4 × 3 eens uit."],
         uitlegPad: {
           stappen: [
             { titel: "Wat zegt de wisselregel?", tekst: "Bij **vermenigvuldigen** (keer) maakt de **volgorde niet uit**. 3 × 4 geeft hetzelfde antwoord als 4 × 3. Dit heet de **wisselregel**." },
@@ -189,7 +189,7 @@ const steps = [
         q: "**6 × 5** = ?",
         options: ["30", "25", "11", "35"],
         answer: 0,
-        wrongHints: [null, "Één stap te weinig — tel eens hoe vaak 5 je optelt.", "Je hebt opgeteld in plaats van vermenigvuldigd.", "Één stap te veel — tel eens hoe vaak 5 je optelt."],
+        wrongHints: [null, "Eén stap te weinig — tel eens hoe vaak 5 je optelt.", "Je hebt opgeteld in plaats van vermenigvuldigd.", "Eén stap te veel — tel eens hoe vaak 5 je optelt."],
         uitlegPad: {
           stappen: [
             { titel: "Tafel van 5 — telstap", tekst: "Tel in stappen van 5: 5, 10, 15, 20, 25, **30**. Dat was 6 stapjes — dus 6 × 5 = **30**." },
@@ -211,7 +211,7 @@ const steps = [
         q: "**9 × 2** = ?",
         options: ["18", "11", "20", "16"],
         answer: 0,
-        wrongHints: [null, "Je hebt opgeteld in plaats van vermenigvuldigd.", "Één stap te veel — tel eens hoe vaak 2 je optelt.", "Één stap te weinig — tel eens hoe vaak 2 je optelt."],
+        wrongHints: [null, "Je hebt opgeteld in plaats van vermenigvuldigd.", "Eén stap te veel — tel eens hoe vaak 2 je optelt.", "Eén stap te weinig — tel eens hoe vaak 2 je optelt."],
         uitlegPad: {
           stappen: [
             { titel: "Tafel van 2 = verdubbelen", tekst: "Elke × 2 = het andere getal **dubbel**. **9 × 2 = 9 + 9 = 18**." },
@@ -448,7 +448,7 @@ const steps = [
       { q: "10 × 8 = ?", options: ["80","18","100","800"], answer: 0, wrongHints: [null, "Som.", "10×10.", "Te veel."] },
       { q: "2 × 12 = ?", options: ["24","14","20","6"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Helft."] },
       { q: "Tafel-truc: 5 × even getal eindigt op?", options: ["0","5","1","2"], answer: 0, wrongHints: [null, "Bij oneven.", "Niet.", "Niet."] },
-      { q: "Welke truc helpt bij **9-tafel**?", options: ["Elke stap: tientallen +1, eenheden −1 (9, 18, 27, 36 …)","Elke stap: tientallen −1, eenheden +1","Er is geen truc","Alles gewoon uit je hoofd leren"], answer: 0, wrongHints: [null, "Andersom: van 9 naar 18 gaat het tiental omhoog (0 → 1) en de eenheid omlaag (9 → 8).", "Er is wel een handige truc — kijk naar 9, 18, 27.", "Uit je hoofd mag, maar de truc helpt je controleren."] },
+      { q: "Welke truc helpt bij **9-tafel**?", options: ["Elke stap: tientallen +1, eenheden −1","Elke stap: tientallen −1, eenheden +1","Er is geen truc","Alles gewoon uit je hoofd leren"], answer: 0, wrongHints: [null, "Andersom: van 9 naar 18 gaat het tiental omhoog (0 → 1) en de eenheid omlaag (9 → 8).", "Er is wel een handige truc — kijk naar 9, 18, 27.", "Uit je hoofd mag, maar de truc helpt je controleren."] },
       { q: "6 × 8 = ?", options: ["48","14","56","42"], answer: 0, wrongHints: [null, "Som.", "7×8.", "6×7."] },
       { q: "11 × 11 = ?", options: ["121","111","112","144"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "12×12."] },
       { q: "12 × 4 = ?", options: ["48","16","44","36"], answer: 0, wrongHints: [null, "Som.", "Niet.", "12×3."] },

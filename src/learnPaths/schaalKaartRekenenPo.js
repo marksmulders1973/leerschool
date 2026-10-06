@@ -131,7 +131,7 @@ const steps = [
         q: "Schaal 1 : 10.000 — 1 cm op de kaart is hoeveel meter in het echt?",
         options: ["100 m", "10 m", "1.000 m", "10.000 m"],
         answer: 0,
-        wrongHints: [null, "Te weinig — 10.000 cm is meer dan 10 m.", "Te veel — deel 10.000 door 100 om naar meters te gaan.", "Dat zijn centimeters, niet meters."],
+        wrongHints: [null, "Te weinig — 10.000 cm is meer dan 10 m.", "Te veel — hoeveel cm gaan er in 1 m?", "Dat zijn centimeters, niet meters."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst het schaalgetal", tekst: "Bij schaal 1 : 10.000 hoort bij elke centimeter op de kaart tienduizend centimeter in het echt." },
@@ -166,7 +166,7 @@ const steps = [
         q: "Schaal 1 : 100. Op de kaart is iets 5 cm. Hoeveel cm is dat in het echt?",
         options: ["500 cm", "50 cm", "105 cm", "5 cm"],
         answer: 0,
-        wrongHints: [null, "Reken: 5 × 100.", "Niet optellen — vermenigvuldigen met de schaal.", "Dat is de kaart-afstand zelf."],
+        wrongHints: [null, "Je vermenigvuldigde met 10 — kijk nog eens naar het schaalgetal.", "Niet optellen — vermenigvuldigen met de schaal.", "Dat is de kaart-afstand zelf."],
         uitlegPad: {
           stappen: [
             { titel: "Welke kant op?", tekst: "Je gaat van de kaart naar de werkelijkheid, dus vermenigvuldig je met het schaalgetal." },
@@ -187,7 +187,7 @@ const steps = [
         q: "Schaal 1 : 1.000. Op de kaart 3 cm. Hoeveel meter in het echt?",
         options: ["30 m", "3 m", "300 m", "3.000 m"],
         answer: 0,
-        wrongHints: [null, "Reken 3 × 1.000 cm en dan naar meter.", "Vergeet de schaal niet.", "Je vergat cm naar m om te rekenen."],
+        wrongHints: [null, "Te weinig — controleer de omrekening van cm naar m.", "Te veel — hoeveel cm gaan er in 1 m?", "Je vergat cm naar m om te rekenen."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig eerst", tekst: "Neem de kaart-afstand in centimeter en vermenigvuldig die met het schaalgetal om de echte afstand in centimeter te krijgen." },
@@ -206,7 +206,7 @@ const steps = [
       },
       {
         q: "Schaal 1 : 100.000. Op de kaart 4 cm. Hoeveel km in het echt?",
-        options: ["4 km", "40 km", "400 m", "0,4 km"],
+        options: ["4 km", "40 km", "40 m", "0,4 km"],
         answer: 0,
         wrongHints: [null, "Te veel — reken cm goed naar km.", "Te weinig.", "Te weinig — het is meerdere kilometers."],
         uitlegPad: {
@@ -229,7 +229,7 @@ const steps = [
         q: "Schaal 1 : 50.000. Op de kaart 2 cm. Hoeveel km in het echt?",
         options: ["1 km", "2 km", "0,5 km", "10 km"],
         answer: 0,
-        wrongHints: [null, "Reken: 2 × 50.000 cm en dan naar km.", "Net niet — 100.000 cm is 1 km.", "Veel te veel."],
+        wrongHints: [null, "Te veel — bij 1 : 50.000 is 1 cm géén hele km.", "Net niet — 100.000 cm is 1 km.", "Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig eerst in centimeter", tekst: "Neem de kaart-afstand keer vijftigduizend om de echte afstand in centimeter te krijgen." },
@@ -250,7 +250,7 @@ const steps = [
         q: "Schaal 1 : 25.000. Op de kaart 8 cm. Hoeveel km is dat in het echt?",
         options: ["2 km", "8 km", "0,2 km", "20 km"],
         answer: 0,
-        wrongHints: [null, "Reken: 8 × 25.000 cm en zet om naar km.", "Te weinig — reken de cm goed om.", "Te veel — controleer hoeveel km bij 1 cm hoort."],
+        wrongHints: [null, "Te veel — bij 1 : 25.000 is 1 cm géén hele km.", "Te weinig — reken de cm goed om.", "Te veel — controleer hoeveel km bij 1 cm hoort."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst vermenigvuldigen", tekst: "Neem de kaart-afstand keer het schaalgetal om de echte afstand in centimeter uit te rekenen." },
@@ -271,7 +271,7 @@ const steps = [
         q: "Schaal 1 : 100. Op de kaart staat een weg van 12 cm. Hoe lang is de weg in het echt in meter?",
         options: ["12 m", "1,2 m", "120 m", "1.200 m"],
         answer: 0,
-        wrongHints: [null, "Reken 12 × 100 cm en zet om naar meter.", "Reken 12 × 100 eerst in cm.", "Controleer de omrekening van cm naar m."],
+        wrongHints: [null, "Te weinig — controleer hoeveel cm er in 1 m gaan.", "Te veel — controleer de omrekening van cm naar m.", "Dat zijn centimeters, niet meters."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig met het schaalgetal", tekst: "Neem de lengte op de kaart keer honderd om de echte lengte in centimeter te krijgen." },
@@ -304,7 +304,7 @@ const steps = [
         q: "Schaal 1 : 100. Een muur is in het echt 300 cm. Hoe lang is hij op de kaart?",
         options: ["3 cm", "30 cm", "300 cm", "0,3 cm"],
         answer: 0,
-        wrongHints: [null, "Deel door 100, je deelde door 10.", "Dat is de echte lengte.", "Te klein — deel door 100, niet door 1.000."],
+        wrongHints: [null, "Je deelde door 10 — kijk nog eens naar het schaalgetal.", "Dat is de echte lengte.", "Te klein — je deelde door een te groot getal."],
         uitlegPad: {
           stappen: [
             { titel: "Andere richting, andere bewerking", tekst: "Je gaat nu van de werkelijkheid naar de kaart, dus deel je door het schaalgetal in plaats van te vermenigvuldigen." },
@@ -325,7 +325,7 @@ const steps = [
         q: "Schaal 1 : 1.000. Een weg is 50 m lang. Hoe lang op de kaart?",
         options: ["5 cm", "50 cm", "0,5 cm", "500 cm"],
         answer: 0,
-        wrongHints: [null, "Reken 50 m eerst naar cm (5.000), dan ÷ 1.000.", "Je vergat door de schaal te delen.", "Te klein."],
+        wrongHints: [null, "Te veel — hoeveel cm is 50 m precies?", "Te klein — hoeveel cm is 50 m precies?", "Te veel — vergeet niet door het schaalgetal te delen."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst naar centimeter", tekst: "Zet de echte lengte om naar centimeter, want het schaalgetal werkt met centimeters." },
@@ -346,7 +346,7 @@ const steps = [
         q: "Schaal 1 : 100.000. De afstand tussen twee dorpen is 5 km. Hoe lang op de kaart?",
         options: ["5 cm", "50 cm", "0,5 cm", "500 cm"],
         answer: 0,
-        wrongHints: [null, "Reken: hoeveel cm zijn 5 km bij deze schaal? Begin met 1 km.", "Te groot — kijk goed naar de schaalverhouding.", "Te klein — je mist een factor."],
+        wrongHints: [null, "Reken: hoeveel cm zijn 5 km bij deze schaal? Begin met 1 km.", "Te klein — hoeveel cm op de kaart hoort bij 1 km?", "Veel te groot — vergeet niet door het schaalgetal te delen."],
         uitlegPad: {
           stappen: [
             { titel: "De vuistregel toepassen", tekst: "Bij schaal 1 : 100.000 is elke kilometer in het echt gelijk aan één centimeter op de kaart." },
@@ -388,7 +388,7 @@ const steps = [
         q: "Schaal 1 : 200. Een schutting is in het echt 600 cm. Hoe lang is hij op de kaart?",
         options: ["3 cm", "30 cm", "120 cm", "0,3 cm"],
         answer: 0,
-        wrongHints: [null, "Deel door 200, niet door 20.", "Vergeet niet door de schaal te delen.", "Te klein — deel door 200, niet door 2.000."],
+        wrongHints: [null, "Je deelde door 20 — kijk nog eens naar het schaalgetal.", "Vergeet niet door de schaal te delen.", "Te klein — je deelde door een te groot getal."],
         uitlegPad: {
           stappen: [
             { titel: "Andere richting", tekst: "De echte lengte is gegeven, dus je gaat nu van het echt naar de kaart: dan deel je." },
@@ -409,7 +409,7 @@ const steps = [
         q: "Schaal 1 : 50.000. Twee dorpen liggen 10 km uit elkaar. Hoe ver is dat op de kaart?",
         options: ["20 cm", "10 cm", "2 cm", "100 cm"],
         answer: 0,
-        wrongHints: [null, "Reken: 10 km = hoeveel cm? Deel dat door 50.000.", "Te klein — hoeveel cm zijn 10 km?", "Veel te veel."],
+        wrongHints: [null, "Te weinig — bij 1 : 50.000 hoort 1 km niet bij 1 cm.", "Te klein — hoeveel cm zijn 10 km?", "Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst naar centimeter", tekst: "Zet de tien kilometer om naar centimeter, zodat je met het schaalgetal kunt rekenen." },
@@ -441,7 +441,7 @@ const steps = [
     checks: [
       {
         q: "Op een kaart (schaal 1 : 100.000) is de route 7 cm. Hoeveel km moet je echt fietsen?",
-        options: ["7 km", "70 km", "0,7 km", "700 m"],
+        options: ["7 km", "70 km", "0,7 km", "70 m"],
         answer: 0,
         wrongHints: [null, "Te veel — reken eerst hoeveel kilometer één cm op de kaart voorstelt.", "Te weinig — zet de schaal om: hoeveel kilometer hoort bij één cm?", "Te weinig — het zijn meerdere kilometers."],
         uitlegPad: {
@@ -464,7 +464,7 @@ const steps = [
         q: "Schaal 1 : 200. Op de kaart is een gebouw 6 cm. Hoeveel meter is het in het echt?",
         options: ["12 m", "1,2 m", "120 m", "6 m"],
         answer: 0,
-        wrongHints: [null, "Reken 6 × 200 cm en dan naar meter.", "Te klein — reken nog eens.", "Te groot."],
+        wrongHints: [null, "Te weinig — controleer de omrekening van cm naar m.", "Te veel — controleer de omrekening van cm naar m.", "Te weinig — vergeet niet met het schaalgetal te vermenigvuldigen."],
         uitlegPad: {
           stappen: [
             { titel: "Bepaal de richting", tekst: "Je gaat van de kaart naar het echt, dus vermenigvuldig je met het schaalgetal." },
@@ -485,7 +485,7 @@ const steps = [
         q: "Schaal 1 : 1.000. Een speeltuin is in het echt 80 m breed. Hoe breed op de kaart?",
         options: ["8 cm", "80 cm", "0,8 cm", "800 cm"],
         answer: 0,
-        wrongHints: [null, "Reken 80 m naar cm (8.000), dan ÷ 1.000.", "Je vergat door de schaal te delen.", "Te klein."],
+        wrongHints: [null, "Te veel — hoeveel cm is 80 m precies?", "Te klein — hoeveel cm is 80 m precies?", "Te veel — vergeet niet door het schaalgetal te delen."],
         uitlegPad: {
           stappen: [
             { titel: "Bepaal de richting", tekst: "De echte breedte is gegeven, dus je rekent van het echt naar de kaart en dus deel je." },
@@ -506,7 +506,7 @@ const steps = [
         q: "Twee steden liggen 3 km uit elkaar. Op een kaart staan ze 6 cm uit elkaar. Welke schaal heeft de kaart?",
         options: ["1 : 50.000", "1 : 100.000", "1 : 5.000", "1 : 500.000"],
         answer: 0,
-        wrongHints: [null, "Reken: hoeveel cm is 3 km? Deel dat door het aantal cm op de kaart.", "Veel te klein — hoe groot wordt het tweede getal als je deelt?", "Te groot — reken 3 km om naar cm en deel door 6."],
+        wrongHints: [null, "Dan zou 1 cm precies 1 km zijn — klopt dat met 6 cm voor 3 km?", "Veel te klein — hoe groot wordt het tweede getal als je deelt?", "Te groot — hoeveel cm is 3 km precies?"],
         uitlegPad: {
           stappen: [
             { titel: "Zet de echte afstand om", tekst: "Reken de drie kilometer eerst om naar centimeter, zodat je met de kaartafstand kunt vergelijken." },
@@ -527,7 +527,7 @@ const steps = [
         q: "Op een kaart (schaal 1 : 100.000) is een rivier 3,5 cm lang. Hoe lang is de rivier echt?",
         options: ["3,5 km", "35 km", "0,35 km", "350 km"],
         answer: 0,
-        wrongHints: [null, "Reken: 3,5 × 100.000 cm en zet dat om naar km.", "Te weinig — reken de schaalfactor goed.", "Veel te veel."],
+        wrongHints: [null, "Te veel — hoeveel km hoort bij 1 cm op deze kaart?", "Te weinig — reken de schaalfactor goed.", "Veel te veel."],
         uitlegPad: {
           stappen: [
             { titel: "De vuistregel bij deze schaal", tekst: "Bij schaal 1 : 100.000 komt elke centimeter op de kaart overeen met één kilometer in het echt." },
@@ -548,7 +548,7 @@ const steps = [
         q: "Een tuin is in het echt 15 m breed. Op de bouwtekening (schaal 1 : 500) is hij op de kaart … breed.",
         options: ["3 cm", "30 cm", "0,3 cm", "15 cm"],
         answer: 0,
-        wrongHints: [null, "Reken 15 m naar cm (1.500), dan ÷ 500.", "Te klein — deel door 500, niet door 5.000.", "Dat is de echte breedte in meter, niet de kaart-breedte."],
+        wrongHints: [null, "Te veel — hoeveel cm is 15 m precies?", "Te klein — je deelde door een te groot getal.", "Dat is de echte breedte in meter, niet de kaart-breedte."],
         uitlegPad: {
           stappen: [
             { titel: "Bepaal de richting", tekst: "De echte breedte is gegeven, dus je gaat van het echt naar de kaart en dus deel je door het schaalgetal." },
@@ -568,10 +568,10 @@ const steps = [
       {
         q: "Welke stap doe je ALTIJD als eerste bij een schaalvraag?",
         options: [
-          "Bepaal de richting: van kaart naar echt (×) of van echt naar kaart (÷)?",
-          "Zet het antwoord direct om naar km",
-          "Deel altijd door het schaalgetal",
-          "Vermenigvuldig altijd met het schaalgetal",
+          "Bepalen of je van kaart naar echt rekent of andersom",
+          "Het antwoord meteen omzetten naar km",
+          "Altijd delen door het schaalgetal",
+          "Altijd vermenigvuldigen met het schaalgetal",
         ],
         answer: 0,
         wrongHints: [null, "Omzetten naar km is pas de laatste stap — wat moet je éérst weten?", "Delen is alleen voor echt → kaart.", "Vermenigvuldigen is alleen voor kaart → echt."],
@@ -595,7 +595,7 @@ const steps = [
         q: "Schaal 1 : 10. Een maquette van een huis is 30 cm breed. Hoe breed is het echte huis?",
         options: ["3 m", "30 m", "0,3 m", "300 m"],
         answer: 0,
-        wrongHints: [null, "Reken 30 × 10 cm en zet dan om naar meter.", "Te klein — vergeet niet te vermenigvuldigen met 10.", "Veel te groot."],
+        wrongHints: [null, "Te veel — hoeveel cm gaan er in 1 m?", "Te klein — vergeet niet te vermenigvuldigen met 10.", "Veel te groot."],
         uitlegPad: {
           stappen: [
             { titel: "Bepaal de richting", tekst: "De maquette is de kaart-kant, dus je gaat van de kaart naar het echt en vermenigvuldig je." },

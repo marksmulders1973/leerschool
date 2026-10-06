@@ -65,7 +65,7 @@ const steps = [
       {
         q: "Een glas water in een warme kamer. Wat gebeurt op den duur?",
         options: [
-          "Water + kamer komen op zelfde T (thermisch evenwicht)",
+          "Water en kamer krijgen dezelfde T",
           "Water blijft koud, kamer warm",
           "Water wordt steeds kouder",
           "Niets verandert"
@@ -84,7 +84,7 @@ const steps = [
   {
     title: "Warmte + soortelijke warmte + faseovergangen",
     explanation:
-      "**Warmte Q** = energie die stroomt door temperatuurverschil. Eenheid: joule (J). 1 calorie = 4,2 J (oude eenheid).\n\n**Soortelijke warmte c** (specifieke warmtecapaciteit):\n**Q = m · c · ΔT**\n• m = massa (kg).\n• c = soortelijke warmte (J/(kg·K)) — eigenschap van het materiaal.\n• ΔT = temperatuurverandering (K of °C; verschillen zijn gelijk).\n\n**Waarden c** (te onthouden):\n• **Water: 4180 J/(kg·K)** — heel hoog → water is uitstekende warmtebuffer.\n• IJs: 2100 J/(kg·K).\n• Lucht: ~1000 J/(kg·K).\n• Aluminium: 900.\n• IJzer: 450.\n• Beton: 880.\n\n**Voorbeeld**: 1 kg water 1 °C opwarmen kost 4180 J. 1 kg ijzer slechts 450 J — daarom voelt ijzer 'kouder' (trekt snel warmte uit hand).\n\n**Faseovergangen** (smelten/verdampen/condenseren/stollen):\n• Tijdens faseovergang verandert T **NIET**, ondanks dat je energie blijft toevoegen.\n• Alle energie gaat in **breken van bindingen** tussen moleculen.\n\n**Smeltwarmte L_s** (kJ/kg):\n• Q = m · L_s.\n• Water: L_s = 334 kJ/kg (ijs → water, allebei 0 °C).\n\n**Verdampingswarmte L_v** (kJ/kg):\n• Q = m · L_v.\n• Water: L_v = 2260 kJ/kg (water → stoom, beide 100 °C).\n• Heel hoog → daarom koelt zweten (zweet verdampt → onttrekt warmte).\n\n**Energie-berekening met faseovergang**:\nVoorbeeld: 1 kg ijs van −20 °C naar stoom van 120 °C:\n1. Opwarmen ijs −20 → 0 °C: Q₁ = 1 · 2100 · 20 = 42 000 J.\n2. Smelten ijs → water bij 0 °C: Q₂ = 1 · 334 000 = 334 000 J.\n3. Opwarmen water 0 → 100 °C: Q₃ = 1 · 4180 · 100 = 418 000 J.\n4. Verdampen water → stoom bij 100 °C: Q₄ = 1 · 2 260 000 = 2 260 000 J.\n5. Opwarmen stoom 100 → 120 °C: Q₅ = 1 · 2000 · 20 = 40 000 J.\n• Totaal: ~3 094 000 J = 3,1 MJ.\n\n**Verdamping > opwarmen**: stap 4 alleen al is groter dan alle anderen samen!",
+      "**Warmte Q** = energie die stroomt door temperatuurverschil. Eenheid: joule (J). 1 calorie = 4,2 J (oude eenheid).\n\n**Soortelijke warmte c** (specifieke warmtecapaciteit):\n**Q = m · c · ΔT**\n• m = massa (kg).\n• c = soortelijke warmte (J/(kg·K)) — eigenschap van het materiaal.\n• ΔT = temperatuurverandering (K of °C; verschillen zijn gelijk).\n\n**Waarden c** (te onthouden):\n• **Water: 4180 J/(kg·K)** — heel hoog → water is uitstekende warmtebuffer.\n• IJs: 2100 J/(kg·K).\n• Lucht: ~1000 J/(kg·K).\n• Aluminium: 900.\n• IJzer: 450.\n• Beton: 880.\n\n**Voorbeeld**: 1 kg water 1 °C opwarmen kost 4180 J. 1 kg ijzer slechts 450 J.\n\n**Faseovergangen** (smelten/verdampen/condenseren/stollen):\n• Tijdens faseovergang verandert T **NIET**, ondanks dat je energie blijft toevoegen.\n• Alle energie gaat in **breken van bindingen** tussen moleculen.\n\n**Smeltwarmte L_s** (kJ/kg):\n• Q = m · L_s.\n• Water: L_s = 334 kJ/kg (ijs → water, allebei 0 °C).\n\n**Verdampingswarmte L_v** (kJ/kg):\n• Q = m · L_v.\n• Water: L_v = 2260 kJ/kg (water → stoom, beide 100 °C).\n• Heel hoog → daarom koelt zweten (zweet verdampt → onttrekt warmte).\n\n**Energie-berekening met faseovergang**:\nVoorbeeld: 1 kg ijs van −20 °C naar stoom van 120 °C:\n1. Opwarmen ijs −20 → 0 °C: Q₁ = 1 · 2100 · 20 = 42 000 J.\n2. Smelten ijs → water bij 0 °C: Q₂ = 1 · 334 000 = 334 000 J.\n3. Opwarmen water 0 → 100 °C: Q₃ = 1 · 4180 · 100 = 418 000 J.\n4. Verdampen water → stoom bij 100 °C: Q₄ = 1 · 2 260 000 = 2 260 000 J.\n5. Opwarmen stoom 100 → 120 °C: Q₅ = 1 · 2000 · 20 = 40 000 J.\n• Totaal: ~3 094 000 J = 3,1 MJ.\n\n**Verdamping > opwarmen**: stap 4 alleen al is groter dan alle anderen samen!",
     checks: [
       {
         q: "Hoeveel energie nodig om **0,50 kg water** van 20 °C naar 90 °C op te warmen? (c = 4180 J/(kg·K))",
@@ -115,7 +115,7 @@ const steps = [
       {
         q: "Waarom voelt **metaal kouder** dan hout, ondanks dezelfde T (kamer)?",
         options: [
-          "Metaal heeft veel hogere warmtegeleiding + lagere soortelijke warmte",
+          "Metaal geleidt warmte veel beter dan hout",
           "Metaal is kouder dan hout zelf",
           "Hout reflecteert warmte",
           "Optische illusie"
@@ -123,8 +123,8 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — meet maar, beide kamer-T.", "Niet — geen reflectie hier.", "Niet — fysisch verschil."],
         uitlegPad: {
-          stappen: [{ titel: "Warmte stroomt snel uit hand", tekst: "Metaal geleidt warmte goed → onttrekt snel warmte aan je hand → koud-gevoel. Hout is een isolator → warmte blijft → voelt minder koud. Lagere c metaal = sneller op-en-neer in T (warmte-flow groot)." }],
-          niveaus: { basis: "Geleiding + lage c.", simpeler: "Metaal slokt warmte uit hand.", nogSimpeler: "Geleiding" },
+          stappen: [{ titel: "Warmte stroomt snel uit hand", tekst: "Metaal geleidt warmte goed → onttrekt snel warmte aan je hand → koud-gevoel. Hout is een isolator → warmte blijft → voelt minder koud." }],
+          niveaus: { basis: "Goede warmtegeleiding.", simpeler: "Metaal slokt warmte uit hand.", nogSimpeler: "Geleiding" },
         },
       },
       {
@@ -140,7 +140,7 @@ const steps = [
       {
         q: "Waarom **koelt zweten** je lichaam?",
         options: [
-          "Verdamping onttrekt veel energie (verdampingswarmte)",
+          "Verdampen van zweet kost veel energie",
           "Zout reageert met huid",
           "Zweten verlaagt bloeddruk",
           "Zweten geeft koud gevoel maar koelt niet echt"
@@ -175,7 +175,7 @@ const steps = [
       {
         q: "Een **spuitbus in vuur**: waarom ontploft hij?",
         options: [
-          "T stijgt → p stijgt (vaste V) → wand begeeft",
+          "De druk van het gas stijgt",
           "Verf reageert met vlam",
           "Vacuüm trekt wand naar binnen",
           "Magnetisme van vuur"
@@ -247,7 +247,7 @@ const steps = [
       },
       {
         q: "Welk transport-type voor zon naar aarde?",
-        options: ["Straling — geen medium nodig", "Geleiding", "Convectie", "Alle drie even sterk"],
+        options: ["Straling", "Geleiding", "Convectie", "Alle drie even sterk"],
         answer: 0,
         wrongHints: [null, "Niet — vacuüm tussen.", "Niet — geen lucht-stroming door ruimte.", "Onjuist — alleen straling kan door vacuüm."],
         uitlegPad: {
@@ -259,7 +259,7 @@ const steps = [
       {
         q: "Een **fietspomp** wordt warm bij pompen. Welk proces?",
         options: [
-          "Adiabatische compressie (W in → ΔU stijgt → T stijgt)",
+          "Adiabatische compressie",
           "Convectie",
           "Geleiding van warmte uit lucht",
           "Stralingswarmte"
@@ -286,13 +286,13 @@ const steps = [
       {
         q: "Een warmtepomp levert 4 kJ warmte voor elke 1 kJ elektriciteit. Wat is dat?",
         options: [
-          "COP = 4 (coefficient of performance)",
+          "Een COP van 4",
           "Rendement van 4%",
           "Een vermogen van 4 kW",
           "Een warmteverlies van 4 kJ"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — COP kan >1 (haalt warmte uit buitenlucht).", "Niet — vermogen is energie per seconde; hier gaat het om een verhouding.", "Niet — de pomp wint juist warmte."],
+        wrongHints: [null, "Niet — 4 kJ uit 1 kJ is méér dan 100%; hoe heet die verhouding bij een warmtepomp?", "Niet — vermogen is energie per seconde; hier gaat het om een verhouding.", "Niet — de pomp wint juist warmte."],
         uitlegPad: {
           stappen: [{ titel: "COP = Q_warm / W_elek", tekst: "Warmtepomp doet geen tovenarij: 3 kJ komen uit buiten-omgeving, 1 kJ doet pomp-werk. Totaal 4 kJ binnen. Daarom veel zuiniger dan elektrisch kacheltje (COP ≈ 1)." }],
           basiskennis: [
@@ -312,7 +312,7 @@ const steps = [
     checks: [
       {
         q: "Een gas wordt **isotherm** uitgezet. ΔU?",
-        options: ["0 (isotherm = T constant)", "Maximaal", "−Q", "+W"],
+        options: ["0", "Maximaal", "−Q", "+W"],
         answer: 0,
         wrongHints: [null, "Niet — isotherm betekent constante temperatuur; wat zegt dat over de inwendige energie?", "Niet — let op het teken: bij uitzetten doet het gas arbeid, maar wat is ΔU bij constante temperatuur?", "Niet — de eerste hoofdwet verbindt ΔU, Q en W; welk van de drie is nul bij een isotherme verandering?"],
         uitlegPad: {
@@ -333,7 +333,7 @@ const steps = [
       {
         q: "Heteluchtballon stijgt op. Onderliggende fysica?",
         options: [
-          "Hete lucht heeft lagere dichtheid → opwaartse Archimedes-kracht",
+          "Hete lucht is lichter dan koude lucht",
           "Vlam duwt ballon omhoog",
           "Wind blaast ballon omhoog",
           "Anti-zwaartekracht"
@@ -350,7 +350,7 @@ const steps = [
       {
         q: "Een **thermoskan** houdt thee warm door:",
         options: [
-          "Vacuüm + reflecterende wanden = blokkeert alle 3 transport-typen",
+          "Vacuüm en spiegelende wanden",
           "Alleen isolatie tegen geleiding",
           "Alleen tegen convectie",
           "Magnetisch verbod warmte"

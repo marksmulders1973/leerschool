@@ -74,7 +74,7 @@ const steps = [
         q: "Trein A vertrekt om 9:25 uit Amersfoort, trein C om 10:25. Hoeveel later rijdt trein C?",
         options: ["1 uur", "30 minuten", "45 minuten", "2 uur"],
         answer: 0,
-        wrongHints: [null, "Reken: 9:25 tot 10:25.", "Reken nog eens precies.", "Te veel — het is maar één uur verschil."],
+        wrongHints: [null, "Reken: 9:25 tot 10:25.", "Reken nog eens precies.", "Te veel — vergelijk alleen de uren van 9:25 en 10:25."],
         uitlegPad: {
           stappen: [{ titel: "Verschil tussen vertrektijden", tekst: "Van 9:25 tot 10:25 is precies 60 minuten = 1 uur." }],
           niveaus: {
@@ -190,7 +190,7 @@ const steps = [
         q: "Gym staat op maandag het 3e uur en op woensdag het 1e uur. Hoe vaak heb je deze week (ma–wo) gym?",
         options: ["2 keer", "3 keer", "1 keer", "4 keer"],
         answer: 0,
-        wrongHints: [null, "Tel alleen de dagen waar gym écht staat.", "Er zijn meer dan dat genoemd.", "Er zijn er twee genoemd, niet meer of minder."],
+        wrongHints: [null, "Tel alleen de dagen waar gym écht staat.", "Er zijn meer dan dat genoemd.", "Tel nog eens op hoeveel dagen gym genoemd wordt."],
         uitlegPad: {
           stappen: [{ titel: "Tel de gym-dagen", tekst: "Maandag (1×) en woensdag (1×) = 2 keer gym." }],
           niveaus: {

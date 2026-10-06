@@ -222,14 +222,14 @@ const steps = [
           "Massa van producten = massa van reactanten",
           "Massa neemt altijd toe",
           "Massa verdwijnt bij verbranding",
-          "Massa is altijd 1 gram",
+          "Alleen gassen hebben massa",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Niet altijd toe — blijft gelijk.",
-          "Andersom — massa blijft.",
-          "Niet één bepaald getal — totaal blijft gelijk.",
+          "Niet — komen er bij een reactie atomen bij?",
+          "Niet — waar zouden de atomen dan heen gaan?",
+          "Niet — alle stoffen hebben massa; wat gebeurt er met het totaal?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Massa blijft", tekst: "Atomen verdwijnen niet — totale massa blijft gelijk." }],
@@ -501,9 +501,9 @@ const steps = [
     svg: reactieSvg("Fe + CuSO₄", "FeSO₄ + Cu", true),
     checks: [
       {
-        q: "Bij welk type reactie ontleedt één stof in meerdere?",
+        q: "Bij welk type reactie valt één stof uiteen in meerdere stoffen?",
         options: [
-          "Ontledings-reactie (decompositie)",
+          "Ontledings-reactie",
           "Synthese-reactie",
           "Verdringings-reactie",
           "Verbranding",
@@ -558,7 +558,7 @@ const steps = [
       {
         q: "Wat is een **exotherme** reactie?",
         options: [
-          "Energie komt vrij (warmte/licht)",
+          "Energie komt vrij",
           "Energie wordt opgenomen",
           "Geen energie verandering",
           "Reactie gaat heel snel",
@@ -582,17 +582,17 @@ const steps = [
       {
         q: "Wat doet een **katalysator**?",
         options: [
-          "Maakt reactie sneller zonder zelf op te raken",
-          "Maakt reactie warmer",
-          "Stopt de reactie",
-          "Verandert de reactanten",
+          "Versnelt de reactie",
+          "Levert extra warmte aan de reactie",
+          "Remt de reactie af",
+          "Wordt zelf opgebruikt in de reactie",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Niet vooral over warmte.",
-          "Andersom — versnelt.",
-          "De katalysator zelf verandert niet.",
+          "Niet — kijk wat er met de activeringsenergie gebeurt.",
+          "Niet — de katalysator is na afloop nog helemaal over.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Katalysator", tekst: "Versnelt reactie zonder zelf op te raken. Verlaagt activerings-energie." }],
@@ -639,7 +639,7 @@ const steps = [
       {
         q: "Welk type reactie is **2 H₂O₂ → 2 H₂O + O₂**?",
         options: [
-          "Ontleding (decompositie)",
+          "Ontleding",
           "Synthese",
           "Verdringing",
           "Zuur-base",
@@ -737,7 +737,7 @@ const steps = [
           stappen: [
             { titel: "3 hoofdfasen", tekst: "Een stof kan in **3 fasen** (toestanden) bestaan:\n• **Vast** (s = solid): atomen vast op plek, vorm + volume vast (ijs, hout, metaal)\n• **Vloeibaar** (l = liquid): atomen kunnen bewegen, vorm aanpassen aan vat, volume vast (water, olie)\n• **Gas** (g): atomen bewegen vrij, vorm + volume vullen vat (lucht, stoom)\n\n4e fase: **plasma** — geïoniseerd gas, in zon + bliksem + neon-lampen." },
             { titel: "Faseovergangen", tekst: "Tussen fasen 6 overgangen:\n• Vast → Vloeibaar = **smelten**\n• Vloeibaar → Vast = **stollen/vriezen**\n• Vloeibaar → Gas = **verdampen/koken**\n• Gas → Vloeibaar = **condenseren**\n• Vast → Gas = **sublimeren** (droog ijs CO₂)\n• Gas → Vast = **rijpen/depositie** (waterdamp → ijskristal)" },
-            { titel: "Toets-tip: water", tekst: "Water = enige veel-voorkomende stof die natuurlijk in **alle 3 fasen** op aarde voorkomt:\n• **IJs** (gletsjers, ijsklontjes, sneeuw)\n• **Water** (oceaan, regen)\n• **Damp** (wolken, stoom)\n\nDaarom is de waterkringloop continu: zon verdampt → wolk → regen → terug." },
+            { titel: "Toets-tip: water", tekst: "Water = enige veel-voorkomende stof die natuurlijk in **alle 3 fasen** op aarde voorkomt:\n• **IJs** (gletsjers, ijsklontjes, sneeuw)\n• **Water** (oceaan, regen)\n• **Waterdamp** (onzichtbaar in de lucht)\n\nDaarom is de waterkringloop continu: zon verdampt → wolk → regen → terug." },
           ],
           woorden: [
             { woord: "aggregatietoestand", uitleg: "Fase (vast/vloeibaar/gas) van een stof." },
@@ -778,7 +778,7 @@ const steps = [
       },
       {
         q: "Wat is een **pH-waarde**?",
-        options: ["Mate van zuur/base (schaal 0-14)","Temperatuur","Gewicht","Druk"],
+        options: ["Mate van zuurgraad","Temperatuur","Gewicht","Druk"],
         answer: 0,
         wrongHints: [null, "Niet — temperatuur is Celsius.", "Niet — gewicht is gram/kg.", "Niet — druk is Pascal/bar."],
         uitlegPad: {
@@ -804,12 +804,12 @@ const steps = [
       { q: "**H₂O** is de formule voor?", options: ["Water","Waterstofgas","Zuurstofgas","Zout"], answer: 0, wrongHints: [null,"Dat is H₂.","Dat is O₂.","Dat is NaCl."] },
       { q: "**O₂** is de formule voor?", options: ["Zuurstofgas","Water","Waterstof","Ozon"], answer: 0, wrongHints: [null,"H₂O.","H₂.","O₃."] },
       { q: "**CO₂** is?", options: ["Koolstofdioxide","Koolstofmonoxide","Calcium","Waterstof"], answer: 0, wrongHints: [null,"Dat is CO.","Symbool Ca.","Niet."] },
-      { q: "**NaCl** is?", options: ["Keukenzout (natriumchloride)","Suiker","Water","Zoutzuur"], answer: 0, wrongHints: [null,"Dat is C₁₂H₂₂O₁₁.","Dat is H₂O.","Dat is HCl."] },
+      { q: "**NaCl** is?", options: ["Keukenzout","Suiker","Water","Zoutzuur"], answer: 0, wrongHints: [null,"Dat is C₁₂H₂₂O₁₁.","Dat is H₂O.","Dat is HCl."] },
       { q: "Bij **verbranding** komt iets vrij — wat?", options: ["Warmte + licht","Alleen kou","Alleen geluid","Niets"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Niet primair.","Wel iets."] },
       { q: "Wat is een **chemische reactie**?", options: ["Stoffen veranderen in nieuwe stoffen","Stoffen blijven gelijk","Alleen smelten","Alleen koken"], answer: 0, wrongHints: [null,"Geen reactie.","Faseovergang.","Faseovergang."] },
-      { q: "**Reactie-pijl** (→) wijst van...?", options: ["Reactanten naar producten","Producten naar reactanten","Niets","Niet relevant"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Wel.","Wel."] },
-      { q: "Welke is een **base**?", options: ["NaOH (natronloog)","HCl","H₂SO₄","Citroensap"], answer: 0, wrongHints: [null,"HCl (zoutzuur) staat in water H⁺-ionen af — hoort dat bij een base of juist bij een zuur?","H₂SO₄ heet zwavelzúur en geeft ook H⁺-ionen af — het woorddeel '-zuur' verklapt het al. Is dat een base?","Citroensap smaakt scherp en heeft een pH onder de 7 — past dat bij een base?"] },
-      { q: "**Open vraag**: noem 1 voorbeeld van een verbrandingsreactie.", kind: "open", acceptedAnswers: ["hout branden", "gas branden", "kaars", "kaars branden", "brandweer", "vuur", "houtvuur", "kaars-vlam", "auto-motor", "verbrandingsmotor"], explanation: "Verbrandingsreactie: stof + zuurstof → CO₂ + H₂O + energie. Voorbeelden: kaars, hout, benzine in motor." },
+      { q: "**Reactie-pijl** (→) wijst van...?", options: ["Reactanten naar producten","Producten naar reactanten","Heen en terug tegelijk","Van zuur naar base"], answer: 0, wrongHints: [null,"Tegenovergesteld.","Niet — daarvoor gebruik je een dubbele pijl (⇌).","Niet — de pijl geldt voor elke soort reactie."] },
+      { q: "Welke is een **base**?", options: ["NaOH","HCl","H₂SO₄","Citroensap"], answer: 0, wrongHints: [null,"HCl (zoutzuur) staat in water H⁺-ionen af — hoort dat bij een base of juist bij een zuur?","H₂SO₄ heet zwavelzúur en geeft ook H⁺-ionen af — het woorddeel '-zuur' verklapt het al. Is dat een base?","Citroensap smaakt scherp en heeft een pH onder de 7 — past dat bij een base?"] },
+      { q: "**Open vraag**: noem 1 voorbeeld van een verbrandingsreactie.", kind: "open", acceptedAnswers: ["hout branden", "gas branden", "kaars", "kaars branden", "vuur", "houtvuur", "kaars-vlam", "auto-motor", "verbrandingsmotor"], explanation: "Verbrandingsreactie: stof + zuurstof → CO₂ + H₂O + energie. Voorbeelden: kaars, hout, benzine in motor." },
       { q: "**Open vraag**: wat is de pH-waarde van neutraal (puur) water? (typ getal)", kind: "open", acceptedAnswers: ["7"], numericTolerance: 0, explanation: "Neutraal water heeft pH = 7." },
     ],
   },

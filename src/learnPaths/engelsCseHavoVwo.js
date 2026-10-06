@@ -109,9 +109,9 @@ const steps = [
         q: "Een artikel gebruikt veel woorden als 'consequently', 'notwithstanding', 'whereupon'. Wat is het **register**?",
         options: ["Formal/academic","Informal","Slang","Mixed"],
         answer: 0,
-        wrongHints: [null, "Niet — Latijnse woorden = formeel.", "Niet — slang gebruikt korte woorden.", "Niet — consistent formal."],
+        wrongHints: [null, "Kijk naar de lengte en deftigheid van deze woorden.", "Niet — slang gebruikt korte woorden.", "Zie je ook spreektaal-woorden tussen deze woorden?"],
         uitlegPad: {
-          stappen: [{ titel: "Lange Latin-words = academisch", tekst: "**Consequently** (vs 'so'), **notwithstanding** (vs 'although'), **whereupon** (vs 'then'). Allemaal van **Latijns-Franse oorsprong** = formeel/academic register. Tegenovergesteld: 'cuz', 'gonna' = informeel/slang." }],
+          stappen: [{ titel: "Lange Latin-words = academisch", tekst: "**Consequently** (vs 'so'), **notwithstanding** (vs 'despite'), **whereupon** (vs 'then'). Allemaal lange, deftige woorden (consequently komt uit het Latijn-Frans; notwithstanding en whereupon zijn ouderwets-plechtig) = formeel/academic register. Tegenovergesteld: 'cuz', 'gonna' = informeel/slang." }],
           woorden: [{ woord: "register", uitleg: "Formaliteit-niveau van taal (formal / neutral / informal)." }],
           theorie: "Engelse taal heeft 2 lagen: Germaans (kortere woorden, informeler) en Latijns/Frans (langere, formeler). Buy vs purchase. Help vs assist. Sweat vs perspire.",
           niveaus: { basis: "Formal.", simpeler: "Lange Latin-woorden = formal", nogSimpeler: "Formal" },
@@ -160,7 +160,7 @@ const steps = [
     checks: [
       {
         q: "Wat doe je het EERST bij een lange tekst?",
-        options: ["Titel + eerste/laatste alinea lezen (pre-read)","Hele tekst lezen","Vragen invullen","Woordenboek pakken"],
+        options: ["Titel + eerste/laatste alinea lezen","Hele tekst lezen","Vragen invullen","Woordenboek pakken"],
         answer: 0,
         wrongHints: [null, "Te langzaam.", "Niet — eerst overzicht.", "Niet — eerst lezen."],
         uitlegPad: {
@@ -181,7 +181,7 @@ const steps = [
       },
       {
         q: "Hoe schrijf je een **open vraag-antwoord** op HAVO/VWO?",
-        options: ["NL volledige zin met 2-3 bewijspunten uit tekst","Engels woord-voor-woord","Alleen trefwoord","Lang essay"],
+        options: ["NL zin met bewijs uit de tekst","Engels woord-voor-woord","Alleen trefwoord","Lang essay"],
         answer: 0,
         wrongHints: [null, "Niet — open vragen meestal in NL.", "Te kort — geen volledig antwoord.", "Te lang — overbodig."],
         uitlegPad: {
@@ -192,9 +192,9 @@ const steps = [
       },
       {
         q: "Wat doe je als je een **onbekend woord** tegenkomt in lange tekst?",
-        options: ["Eerst context + 1-2 zinnen rond lezen","Direct woordenboek","Woord overslaan + door","Vraag overslaan"],
+        options: ["Eerst context + 1-2 zinnen rond lezen","Direct woordenboek","Hele tekst opnieuw lezen","Vraag overslaan"],
         answer: 0,
-        wrongHints: [null, "Niet — kost veel tijd.", "Soms wel — maar eerst context.", "Niet voor de vraag overslaan."],
+        wrongHints: [null, "Niet — kost veel tijd.", "Niet — dat kost veel te veel tijd.", "Niet voor de vraag overslaan."],
         uitlegPad: {
           stappen: [{ titel: "Context > woordenboek", tekst: "**Eerst context lezen** (zin met onbekend woord + 1-2 ervoor/erna). Vaak kun je betekenis raden uit context. Pas als context niet helpt: woordenboek (30-60 sec verlies). Direct woordenboek = tijd-verlies." }],
           theorie: "Toets-tip: ~80% van onbekende woorden is uit context te raden bij HAVO/VWO-leerlingen.",
@@ -203,9 +203,9 @@ const steps = [
       },
       {
         q: "Welke **valstrik** is het meest schadelijk bij HAVO/VWO lang examen?",
-        options: ["Eind-haasten (laatste vragen in 5 min)","Te traag lezen","Markeren","Klok kijken"],
+        options: ["Eind-haasten","Signaalwoorden omcirkelen","Markeren","Klok kijken"],
         answer: 0,
-        wrongHints: [null, "Niet — wel risico maar minder dan eind-haasten.", "Markeren is JUIST strategie.", "Klok kijken is goed."],
+        wrongHints: [null, "Dat is juist een goede strategie.", "Markeren is JUIST strategie.", "Klok kijken is goed."],
         uitlegPad: {
           stappen: [{ titel: "Eind-haasten = punten missen", tekst: "Klassieke val: leerling besteedt te veel tijd aan begin → laatste 10-15 vragen in 10 min → veel punten missen. **Voorkom door tijd-check elke 2 vragen** + markeren bij twijfel + door." }],
           theorie: "Toets-strategie: berekening hoeveel tijd je hebt per pagina/tekst → blijf daaronder.",
@@ -287,7 +287,7 @@ const steps = [
     checks: [
       {
         q: "*'Notwithstanding the criticism, the experiment yielded valuable results.'* Wat doet 'notwithstanding'?",
-        options: ["Concessie/contrast (ondanks)","Versterking","Reden","Voorbeeld"],
+        options: ["Concessie/contrast","Versterking","Reden","Voorbeeld"],
         answer: 0,
         wrongHints: [null, "Niet.", "Niet — geen oorzaak.", "Niet."],
         uitlegPad: {

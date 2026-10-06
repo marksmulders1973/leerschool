@@ -117,7 +117,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Rode bloedcellen zijn te groot voor lymfevaten — blijven in bloedbaan.",
+          "Rode bloedcellen kunnen niet door de haarvatwand — ze blijven in de bloedbaan.",
           "Plaatjes blijven ook in bloed — alleen witte cellen kunnen door vaatwand.",
         ],
         explanation: "Alleen witte bloedcellen kunnen door de wand van haarvaten heen kruipen (diapedese). Zo komen ze in weefselvocht en daarmee in lymfe.",
@@ -179,7 +179,7 @@ const steps = [
   {
     title: "Ademhaling — luchtweg + gaswisseling",
     explanation:
-      "Met **ademhaling** halen we zuurstof binnen en stoten CO₂ af.\n\n**Luchtweg — volgorde**:\n1. **Neus / mond** *(filteren + opwarmen + bevochtigen lucht)*\n2. **Keel** *(farynx)*\n3. **Strottenhoofd** *(larynx — met stembanden)*\n4. **Luchtpijp** *(trachea — grote centrale buis)*\n5. **Bronchiën** *(2 hoofdtakken, 1 per long)*\n6. **Bronchiolen** *(steeds kleinere vertakkingen)*\n7. **Longblaasjes** *(alveolen — eindstation)*\n\nDe eerste 6 zijn **alleen transport**. Pas in de longblaasjes vindt **gaswisseling** plaats.\n\n**Longblaasjes — alveolen**:\n• ~300 miljoen in totaal.\n• Wand: **1 cel dik**, omringd door dichte haarvaten.\n• Hier wisselt O₂ ↔ CO₂ tussen lucht en bloed via diffusie.\n• Totaal oppervlak: ~70 m² *(ongeveer een halve tennisbaan!)*.\n\n**In + uit ademen**:\n• **Inademen**: middenrif zakt + ribben omhoog → borstkas groter → lucht in.\n• **Uitademen**: middenrif omhoog + ribben omlaag → borstkas kleiner → lucht eruit.\n• **Middenrif** *(diafragma)* = grote spier onder longen — belangrijkste ademspier.\n\n**Wat doet bloed bij gaswisseling?**\n• Bloed komt aan in longen met veel CO₂ + weinig O₂ *(via longslagader)*.\n• In longblaasjes: O₂ naar bloed, CO₂ naar lucht.\n• Bloed gaat weer richting hart met veel O₂ + weinig CO₂ *(via longader)*.\n• Daarna door hart het lichaam in.\n\n**Vluchtige stoffen** *(zoals alcohol)* kunnen óók via longblaasjes terug naar uitgeademde lucht → daarom werkt een **blaastest**.",
+      "Met **ademhaling** halen we zuurstof binnen en stoten CO₂ af.\n\n**Luchtweg — volgorde**:\n1. **Neus / mond** *(filteren + opwarmen + bevochtigen lucht)*\n2. **Keel** *(farynx)*\n3. **Strottenhoofd** *(larynx — met stembanden)*\n4. **Luchtpijp** *(trachea — grote centrale buis)*\n5. **Bronchiën** *(2 hoofdtakken, 1 per long)*\n6. **Bronchiolen** *(steeds kleinere vertakkingen)*\n7. **Longblaasjes** *(alveolen — eindstation)*\n\nDe eerste 6 zijn **alleen transport**. Pas in de longblaasjes vindt **gaswisseling** plaats.\n\n**Longblaasjes — alveolen**:\n• ~300 miljoen in totaal.\n• Wand: **1 cel dik**, omringd door dichte haarvaten.\n• Hier wisselt O₂ ↔ CO₂ tussen lucht en bloed via diffusie.\n• Totaal oppervlak: ~70 m² *(groter dan een flink klaslokaal!)*.\n\n**In + uit ademen**:\n• **Inademen**: middenrif zakt + ribben omhoog → borstkas groter → lucht in.\n• **Uitademen**: middenrif omhoog + ribben omlaag → borstkas kleiner → lucht eruit.\n• **Middenrif** *(diafragma)* = grote spier onder longen — belangrijkste ademspier.\n\n**Wat doet bloed bij gaswisseling?**\n• Bloed komt aan in longen met veel CO₂ + weinig O₂ *(via longslagader)*.\n• In longblaasjes: O₂ naar bloed, CO₂ naar lucht.\n• Bloed gaat weer richting hart met veel O₂ + weinig CO₂ *(via longader)*.\n• Daarna door hart het lichaam in.\n\n**Vluchtige stoffen** *(zoals alcohol)* kunnen óók via longblaasjes terug naar uitgeademde lucht → daarom werkt een **blaastest**.",
     checks: [
       {
         q: "Waar vindt de gaswisseling plaats?",
@@ -213,7 +213,7 @@ const steps = [
       },
       {
         q: "Welke spier is het belangrijkste voor de ademhaling?",
-        options: ["Middenrif (diafragma)", "Hart", "Tussenribspieren alleen", "Buikspieren"],
+        options: ["Middenrif", "Hart", "Tussenribspieren alleen", "Buikspieren"],
         answer: 0,
         wrongHints: [
           null,
@@ -237,7 +237,7 @@ const steps = [
       },
       {
         q: "Hoe groot is het totale oppervlak van alle longblaasjes ongeveer?",
-        options: ["~70 m² (ongeveer een halve tennisbaan)", "~1 m²", "~10.000 m²", "~10 cm²"],
+        options: ["~70 m²", "~1 m²", "~10.000 m²", "~10 cm²"],
         answer: 0,
         wrongHints: [
           null,
@@ -421,7 +421,7 @@ const steps = [
       },
       {
         q: "Waar in de longen vindt gaswisseling plaats?",
-        options: ["In de longblaasjes (alveolen)", "In de bronchiën", "In de luchtpijp", "In de neusholte"],
+        options: ["In de longblaasjes", "In de bronchiën", "In de luchtpijp", "In de neusholte"],
         answer: 0,
         wrongHints: [null, "Bronchiën = transport.", "Luchtpijp = transport.", "Neus = filter + opwarmen."],
         explanation: "Longblaasjes zijn de enige plek waar O₂ + CO₂ kunnen oversteken tussen lucht en bloed.",

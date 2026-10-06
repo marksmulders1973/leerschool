@@ -160,13 +160,13 @@ ${[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13].slice(0, 14).map((_, i) => {
       {
         q: "Wat zijn isotopen?",
         options: [
-          "Atomen van hetzelfde element met verschillend aantal neutronen",
-          "Twee verschillende elementen",
-          "Atomen zonder elektronen",
-          "Nieuwe stoffen",
+          "Zelfde element, ander aantal neutronen",
+          "Verschillende elementen, zelfde massa",
+          "Atomen die elektronen kwijt zijn",
+          "Atomen met een ander aantal protonen",
         ],
         answer: 0,
-        wrongHints: [null, "Twee verschillende elementen = verschillend aantal protonen.", "Een atoom dat elektronen heeft afgegeven of opgenomen heet een ion — dat is iets anders dan een isotoop.", "Geen nieuwe stof — zelfde element."],
+        wrongHints: [null, "Twee verschillende elementen = verschillend aantal protonen.", "Een atoom dat elektronen heeft afgegeven of opgenomen heet een ion — dat is iets anders dan een isotoop.", "Niet — een ander aantal protonen geeft een ander element."],
         uitlegPad: {
           stappen: [{ titel: "Zelfde Z, andere A", tekst: "Isotopen: hetzelfde element, ander aantal neutronen." }],
           woorden: [{ woord: "isotoop", uitleg: "= variant van element" }],
@@ -214,7 +214,7 @@ ${[0, 1, 2, 3, 4, 5, 6, 7].map(i => {
       {
         q: "Waarom is helium stabiel?",
         options: [
-          "Schil 1 (K) is vol met 2 elektronen",
+          "Zijn enige schil is vol",
           "Het heeft geen elektronen",
           "Het heeft veel protonen",
           "Helium is een metaal",
@@ -356,7 +356,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         options: [
           "Atoom dat elektronen heeft afgegeven",
           "Atoom dat elektronen heeft opgenomen",
-          "Atoom met meer protonen",
+          "Atoom dat er protonen bij kreeg",
           "Atoom met meer neutronen",
         ],
         answer: 0,
@@ -470,11 +470,11 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         options: [
           "CO₂ en water + warmte",
           "Alleen rook",
-          "Goud",
+          "Waterstof en koolstof",
           "Niets",
         ],
         answer: 0,
-        wrongHints: [null, "Niet — bij volledige verbranding ontstaat geen rook; welke atomen zitten in methaan en zuurstof?", "Goud kan niet zomaar ontstaan.", "Er gebeurt zeker iets — verbranding."],
+        wrongHints: [null, "Niet — bij volledige verbranding ontstaat geen rook; welke atomen zitten in methaan en zuurstof?", "Niet — methaan reageert met zuurstof; waar blijven de zuurstofatomen?", "Er gebeurt zeker iets — verbranding."],
         uitlegPad: {
           stappen: [{ titel: "Verbranding methaan", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O + warmte." }],
           woorden: [{ woord: "verbranding", uitleg: "stof + O₂ + warmte" }],
@@ -517,7 +517,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       {
         q: "Wat klopt over **edelgassen**?",
         options: [
-          "Buitenste schil is vol → zeer stabiel, reageert nauwelijks",
+          "Ze reageren nauwelijks",
           "Heel reactief",
           "Allemaal metalen",
           "Komen niet voor in lucht",
@@ -551,7 +551,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Een atoom geeft een elektron af. Wat is de lading?",
         options: ["+1", "−1", "0", "−2"],
         answer: 0,
-        wrongHints: [null, "Bij afgeven verlies je een minlading → wordt positiever.", "Bij afgeven verandert de lading wél.", "Niet — hoeveel elektronen gaan er weg, en welke lading heeft een elektron?"],
+        wrongHints: [null, "Niet — welke lading heeft het elektron dat vertrekt?", "Bij afgeven verandert de lading wél.", "Niet — hoeveel elektronen gaan er weg, en welke lading heeft een elektron?"],
         uitlegPad: {
           stappen: [{ titel: "E- afgeven = +1", tekst: "Verlies van 1 e- (negatief) → +1 lading." }],
           woorden: [{ woord: "lading", uitleg: "verschil tussen + en - in atoom" }],
@@ -563,9 +563,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       },
       {
         q: "Wat is een **atoomkern**?",
-        options: ["Centrum atoom met protonen + neutronen","Buitenste laag","Elektron-wolk","Niets"],
+        options: ["Het midden van het atoom","Buitenste laag","Elektron-wolk","Een groep atomen"],
         answer: 0,
-        wrongHints: [null, "Niet — buitenste laag = elektronen-wolk.", "Niet — elektronen zitten BUITEN de kern.", "Niet — kern bestaat zeker."],
+        wrongHints: [null, "Niet — buitenste laag = elektronen-wolk.", "Niet — elektronen zitten BUITEN de kern.", "Niet — een groep gebonden atomen is een molecuul."],
         uitlegPad: {
           stappen: [
             { titel: "Atoom-structuur", tekst: "Een atoom bestaat uit **3 onderdelen**:\n• **Proton** (+) — in kern, positief geladen\n• **Neutron** (0) — in kern, geen lading\n• **Elektron** (−) — buiten kern, negatief geladen\n\n**Kern** = centrum waarin protonen + neutronen zitten. Heel klein (1/10.000 van atoom-doorsnee) maar **99,9% van massa**." },
@@ -588,9 +588,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       },
       {
         q: "Wat is het **periodiek systeem**?",
-        options: ["Tabel met alle ~118 elementen geordend","Klok","Soort grafiek","Wetboek"],
+        options: ["Tabel van alle elementen","Tabel van alle moleculen","Lijst van alle mengsels","Tabel van alle stoffen op aarde"],
         answer: 0,
-        wrongHints: [null, "Niet — geen tijd-meting.", "Niet — wel TABEL maar geen gewone grafiek.", "Niet — geen juridisch document."],
+        wrongHints: [null, "Niet — moleculen zijn combinaties; wat staat er in elk vakje?", "Niet — mengsels staan er niet in.", "Niet — er zijn miljoenen stoffen, maar het systeem heeft ~118 vakjes."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is periodiek systeem?", tekst: "Het **periodiek systeem der elementen** is een **tabel** met alle bekende **chemische elementen** (atomen) gerangschikt op:\n• **Rijen (periodes)** — toenemend atoomnummer\n• **Kolommen (groepen)** — gelijkende eigenschappen\n\nIn totaal ~**118 elementen** (2024). Eerste 92 in natuur, rest in lab gemaakt." },
@@ -612,9 +612,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       },
       {
         q: "Wat is een **isotoop**?",
-        options: ["Atoom met zelfde protonen maar ander aantal neutronen","Heel groot atoom","Negatief geladen","Niet bestaand"],
+        options: ["Zelfde element, ander aantal neutronen","Atoom met extra elektronen","Atoom met ander aantal protonen","Twee atomen aan elkaar"],
         answer: 0,
-        wrongHints: [null, "Niet — isotopen ≠ groot/klein per se.", "Niet — neutronen zijn neutraal.", "Niet — wel echt fenomeen."],
+        wrongHints: [null, "Niet — dan heb je een ion.", "Niet — dan is het een ander element.", "Niet — dat is een molecuul."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een isotoop?", tekst: "**Isotopen** zijn atomen van **HETZELFDE element** met **VERSCHILLEND aantal neutronen**. Aantal protonen blijft gelijk (anders ander element).\n\nVoorbeeld koolstof:\n• **C-12** (6 p + 6 n) — meest voorkomend, stabiel\n• **C-13** (6 p + 7 n) — stabiel, ~1% van koolstof\n• **C-14** (6 p + 8 n) — radioactief, vervalt over tijd" },

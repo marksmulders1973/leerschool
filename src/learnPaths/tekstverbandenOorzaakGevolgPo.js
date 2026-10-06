@@ -438,24 +438,24 @@ Let op: één gebeurtenis kan tegelijk een gevolg én een oorzaak zijn! De lekke
         },
       },
       {
-        q: "Waarom ging Milan na schooltijd naar de dierenarts? (Lees de tekst van stap 2 nog eens.)",
+        q: "Waarom gingen Milan en juf Karin na schooltijd samen aan de slag?",
         options: [
-          "Dat deed hij niet — hij ging samen met juf Karin de band plakken",
-          "Om nieuwe banden te kopen",
-          "Om zijn fiets af te geven bij de fietsenmaker",
-          "Om een pomp te lenen van de dierenarts",
+          "Omdat de lekke band geplakt moest worden",
+          "Omdat Milan nieuwe banden wilde kopen",
+          "Omdat de fiets naar de fietsenmaker moest",
+          "Omdat Milan een pomp moest lenen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Staat er iets over nieuwe banden kopen in de tekst? Zoek wat er na schooltijd in de tekst staat.",
           null,
-          "De pomp is een detail van eerder — wát ging Milan na school daadwerkelijk doen met juf Karin?",
+          "De pomp is een detail van eerder — wát gingen Milan en de juf na school daadwerkelijk doen?",
         ],
         uitlegPad: {
           stappen: [
             { titel: "Lees het goede stukje van de tekst", tekst: "De vraag gaat over 'na schooltijd'. Zoek in de tekst het stukje dat begint met 'Na schooltijd'." },
-            { titel: "Wat staat er?", tekst: "Na schooltijd gingen ze aan de slag. Ze duwden de binnenband onder water. Dus Milan ging de band plakken, niet naar een dierenarts." },
+            { titel: "Wat staat er?", tekst: "Na schooltijd gingen ze aan de slag. Ze duwden de binnenband onder water. Dus ze gingen samen de lekke band plakken." },
             { titel: "Controleer je antwoord", tekst: "De oorzaak van het na-schoolse werk is de lekke band; het gevolg is dat ze hem samen plakten." },
           ],
           niveaus: {
@@ -815,7 +815,7 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
       {
         q: "Waardoor kwam het dat de oude kastanjeboom omviel?",
         options: [
-          "Het hout was van binnen zacht geworden en de storm rukte hard aan de boom",
+          "Het hout was zacht en de storm was te zwaar",
           "De conciërge zaagde de stam in schijven",
           "Het fietsenhok stond in de weg",
           "Buurman Ties is timmerman",
@@ -855,7 +855,7 @@ Let op de valstrikken die je nu kent: de oorzaak kan achteraan in de zin staan, 
       {
         q: "Waardoor konden de kinderen hun fietsen maandag niet neerzetten?",
         options: [
-          "Het fietsenhok was flink beschadigd door de omgevallen boom",
+          "Het fietsenhok was flink beschadigd",
           "Alle fietsen waren kapotgewaaid",
           "De ouders hadden een bericht gekregen",
           "Buurman Ties was het hok aan het schilderen",

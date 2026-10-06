@@ -27,7 +27,7 @@ const steps = [
         q: "Welk lidwoord voor **één** apple — **a** of **an**?",
         options: ["an", "a", "the", "geen"],
         answer: 0,
-        wrongHints: [null, "Niet — 'apple' begint met klinkerklank.", "Wel mogelijk maar de vraag is over 'een' (a/an).", "Wel — 'een appel'."],
+        wrongHints: [null, "Niet — 'apple' begint met klinkerklank.", "Wel mogelijk maar de vraag is over 'een' (a/an).", "Er staat 'één' — dan heb je wél een lidwoord nodig."],
         uitlegPad: {
           stappen: [{ titel: "Klinker = an", tekst: "'Apple' begint met de 'a'-klank (klinker), dus 'an apple'. Andere voorbeelden: an egg, an orange, an idea." }],
           woorden: [{ woord: "an", uitleg: "een — vóór klinkerklank" }, { woord: "a", uitleg: "een — vóór medeklinkerklank" }],
@@ -37,7 +37,7 @@ const steps = [
           niveaus: { basis: "an.", simpeler: "Apple begint met klinker → an apple.", nogSimpeler: "an = klinker." },
         },
       },
-      { q: "Welk lidwoord voor **één** book — **a** of **an**?", options: ["a", "an", "the", "any"], answer: 0, wrongHints: [null, "Niet — book begint met medeklinker.", "Niet vraag.", "Niet — any = enig."] },
+      { q: "Welk lidwoord voor **één** book — **a** of **an**?", options: ["a", "an", "the", "any"], answer: 0, wrongHints: [null, "Niet — book begint met medeklinker.", "'the' = de/het, niet 'een'.", "Niet — any = enig."] },
       { q: "Welke is **fout**?", options: ["a egg", "an egg", "a book", "an apple"], answer: 0, wrongHints: [null, "Kijk: 'an' + klinker — past dat?", "'a' + medeklinker — controleer of dat klopt.", "Kijk hoe het woord begint en welk lidwoord ervoor staat."] },
       { q: "*'Het meisje heeft een hond.'* → 'She has __ dog.'", options: ["a", "an", "the", "no"], answer: 0, wrongHints: [null, "Dog begint met medeklinker.", "Wel mogelijk maar 'een' vraagt om a/an.", "Niet — geen ontkenning."] },
       { q: "*'I have an orange.'* — Welke vertaling?", options: ["Ik heb een sinaasappel.", "Ik heb sinaasappels.", "De sinaasappel is van mij.", "Ik heb geen sinaasappel."], answer: 0, wrongHints: [null, "Niet — 'an' is enkelvoud.", "Andere zinsbouw.", "Geen ontkenning."] },
@@ -51,7 +51,7 @@ const steps = [
       { q: "Meervoud van **box**?", options: ["boxes", "boxs", "boxies", "box"], answer: 0, wrongHints: [null, "Niet — eindigt op x → -es.", "Niet bestaand.", "Wel meervoud."] },
       { q: "Meervoud van **baby**?", options: ["babies", "babys", "babes", "baby"], answer: 0, wrongHints: [null, "Niet — y na medeklinker → -ies.", "Niet.", "Wel meervoud."] },
       { q: "Meervoud van **child**?", options: ["children", "childs", "childes", "childies"], answer: 0, wrongHints: [null, "Niet — onregelmatig.", "Bestaat niet.", "Niet."] },
-      { q: "Meervoud van **fish**?", options: ["fish", "fishes", "fishies", "fishs"], answer: 0, wrongHints: [null, "Soms ook 'fishes' (verschillende soorten) maar standaard 'fish'.", "Niet primair.", "Niet bestaand."] },
+      { q: "Meervoud van **fish**?", options: ["fish", "fishen", "fishies", "fishs"], answer: 0, wrongHints: [null, "Engels maakt geen meervoud met -en zoals het Nederlands.", "Niet bestaand.", "Niet bestaand."] },
     ],
   },
   {

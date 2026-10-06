@@ -167,7 +167,7 @@ const steps = [
     checks: [
       {
         q: "Welk klimaat heeft Spanje?",
-        options: ["Mediterraan (subtropisch)", "Tropisch regenwoud", "Poolklimaat", "Landklimaat"],
+        options: ["Mediterraan", "Tropisch regenwoud", "Poolklimaat", "Landklimaat"],
         answer: 0,
         wrongHints: [null, "Spanje ligt veel noordelijker dan de evenaar.", "Spanje is zeker niet zo koud.", "Landklimaat heeft extreme winters — Spanje heeft milde winters."],
         uitlegPad: {
@@ -208,7 +208,7 @@ const steps = [
     checks: [
       {
         q: "Welk klimaat heeft Nederland?",
-        options: ["Gematigd zeeklimaat (Cfb)", "Tropisch", "Mediterraan", "Landklimaat"],
+        options: ["Gematigd zeeklimaat", "Tropisch", "Mediterraan", "Landklimaat"],
         answer: 0,
         wrongHints: [null, "Tropisch = bij evenaar.", "Mediterraan heeft droge zomers — NL niet.", "Landklimaat heeft veel extremere winters."],
         uitlegPad: {
@@ -382,7 +382,7 @@ const steps = [
         wrongHints: [null, "Vulkanen stoten ook iets uit, maar veel minder dan menselijke uitstoot.", "Aarde draait niet sneller.", "Zon-uitstraling is vrijwel constant gebleven."],
         uitlegPad: {
           stappen: [{ titel: "Mensen + broeikasgassen", tekst: "Klimaatverandering = aarde warmer (sinds 1850 +1,2°C). Hoofdoorzaak: MENSEN stoten broeikasgassen uit (CO2, methaan, lachgas). Bronnen: fossiele brandstoffen (kolen+olie+gas), ontbossing, veeteelt (koeien-methaan), industrie. Gevolg: meer warmte vastgehouden in atmosfeer." }],
-          woorden: [{ woord: "broeikaseffect", uitleg: "Gassen in atmosfeer houden warmte vast (als deken). Natuurlijk maar nu versterkt." }, { woord: "CO2", uitleg: "Kooldioxide. Belangrijkste broeikasgas. Vrij bij verbranden fossiele brandstoffen." }, { woord: "methaan", uitleg: "CH4. Sterker broeikasgas dan CO2 (25× warmer per molecuul). Van veeteelt + lekkende gas-pijpen." }],
+          woorden: [{ woord: "broeikaseffect", uitleg: "Gassen in atmosfeer houden warmte vast (als deken). Natuurlijk maar nu versterkt." }, { woord: "CO2", uitleg: "Kooldioxide. Belangrijkste broeikasgas. Vrij bij verbranden fossiele brandstoffen." }, { woord: "methaan", uitleg: "CH4. Sterker broeikasgas dan CO2 (per kilo ~25× sterker, gerekend over 100 jaar). Van veeteelt + lekkende gas-pijpen." }],
           theorie: "IPCC (wetenschappelijk panel): 95%+ zeker dat klimaatverandering door mensen komt. Vulkanen stoten ~1% van menselijke CO2 uit. Zon-uitstraling vrijwel vast.",
           voorbeelden: [{ type: "cijfers", tekst: "Mensen stoten 35 miljard ton CO2/jaar uit. Alle vulkanen samen: 0,3 mrd ton. Mensen 100× meer." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "Vulkanen klein. Aarde draait NIET sneller. Zon vrijwel constante uitstraling (volgens metingen)." }],
@@ -391,15 +391,15 @@ const steps = [
       },
       {
         q: "Wat is een gevolg van klimaatverandering?",
-        options: ["Zeespiegel stijgt door smeltend ijs","Maan wordt groter","Aarde wordt platter","Er komen meer dinosauriërs"],
+        options: ["Zeespiegel stijgt door smeltend ijs","Er komt minder CO₂ in de lucht","De zeespiegel daalt doordat ijs aangroeit","Overal op aarde wordt het kouder"],
         answer: 0,
-        wrongHints: [null, "Maan blijft hetzelfde.", "Onzin.", "Onzin."],
+        wrongHints: [null, "CO₂ is juist de oorzaak — neemt die af of toe?", "Wordt het warmer of kouder? Wat doet ijs dan?", "Klimaatverandering betekent vooral opwarming."],
         uitlegPad: {
           stappen: [{ titel: "Zeespiegel stijgt", tekst: "Klimaatverandering veroorzaakt: (1) smeltend ijs op land (Groenland + Antarctica) → meer water in zee. (2) Uitzetten zeewater (warm = meer volume). Resultaat: zeespiegel stijgt ~3-4 mm/jaar. Tegen 2100: +30-100 cm. Lage landen (NL, Bangladesh, Malediven) bedreigd." }],
           woorden: [{ woord: "zeespiegelstijging", uitleg: "Niveau zee gaat omhoog. Door smelt + warmere-water-uitzet." }, { woord: "Akkoord van Parijs", uitleg: "VN-klimaatakkoord 2015. Doel: max 1,5-2°C opwarming." }],
           theorie: "Andere gevolgen: meer extreem weer (hittegolven, stormen, droogtes), klimaatzones schuiven op, soorten sterven uit, oogst-problemen, migratie. Allemaal effecten van die +1,2°C nu.",
           voorbeelden: [{ type: "concreet", tekst: "Sinds 1900 zeespiegel +20 cm. Versnelt: 1900-1990 = 1,4 mm/jaar. Nu: 4 mm/jaar. NL beschermt zich met versterkte dijken." }],
-          basiskennis: [{ onderwerp: "Niet anders", uitleg: "Maan + aarde vorm = onveranderd. Geen dinosauriërs (al 66 mln jaar uitgestorven)." }],
+          basiskennis: [{ onderwerp: "Niet anders", uitleg: "CO₂ neemt juist toe. IJs smelt (geen aangroei) → zee stijgt. Gemiddeld wordt het warmer, niet kouder." }],
           niveaus: { basis: "Zeespiegel stijgt.", simpeler: "Gevolg klimaatverandering = zeespiegel stijgt door smeltend ijs.", nogSimpeler: "Zee stijgt" },
         },
       },
@@ -435,7 +435,7 @@ const steps = [
       },
       {
         q: "Welk klimaat: \"Vier seizoenen, zachte winters, regen door het hele jaar\"?",
-        options: ["Gematigd zeeklimaat (Cfb)", "Tropisch", "Woestijn", "IJsklimaat"],
+        options: ["Gematigd zeeklimaat", "Tropisch", "Woestijn", "IJsklimaat"],
         answer: 0,
         wrongHints: [null, "Tropisch heeft geen seizoenen.", "Woestijn = bijna geen regen.", "IJsklimaat = onder 0°C."],
         uitlegPad: {
@@ -449,7 +449,7 @@ const steps = [
       },
       {
         q: "Welk klimaat: \"Heel droog, overdag heet, 's nachts koud\"?",
-        options: ["Woestijnklimaat (BW)", "Gematigd", "Tropisch regenwoud", "Toendra"],
+        options: ["Woestijnklimaat", "Gematigd", "Tropisch regenwoud", "Toendra"],
         answer: 0,
         wrongHints: [null, "Gematigd heeft niet zulke extreme dag/nacht-verschillen.", "Regenwoud is altijd nat.", "Toendra is gewoon koud, niet 's nachts ijskoud / overdag heet."],
         uitlegPad: {
@@ -477,9 +477,9 @@ const steps = [
       },
       {
         q: "Wat is een **moesson**?",
-        options: ["Seizoens-wind met droog/nat-wisseling (vooral Azië)","Stevige storm","Bergwind","Soort regenboog"],
+        options: ["Seizoenswind die een natte en een droge tijd brengt","Zware storm boven de oceaan","Warme, droge wind die van de bergen af waait","Koude wind uit het noorden in de winter"],
         answer: 0,
-        wrongHints: [null, "Niet — wel kan moesson stormen geven, maar fenomeen ≠ storm.", "Niet — andere wind-soort (föhn bv.).", "Niet — een regenboog is licht, geen wind."],
+        wrongHints: [null, "Niet — wel kan moesson stormen geven, maar fenomeen ≠ storm.", "Niet — andere wind-soort (föhn bv.).", "Denk aan India: wat gebeurt er daar in de natte tijd van het jaar?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een moesson?", tekst: "**Moesson** is een **seizoens-wind** die elke 6 maanden van richting verandert. Veroorzaakt twee duidelijke seizoenen:\n• **Droge moesson** — wind uit binnenland, geen regen\n• **Natte moesson** — wind uit zee, veel regen + overstromingen" },
@@ -501,7 +501,7 @@ const steps = [
       },
       {
         q: "Wat zijn **klimaatzones** Köppen?",
-        options: ["Indeling van klimaten in 5 hoofdgroepen (A-B-C-D-E)","Soorten wolken","Wind-snelheid","Soort temperatuur"],
+        options: ["Indeling van klimaten in hoofdgroepen","Indeling van wolken in soorten","Schaal voor windkracht","Schaal voor temperatuur"],
         answer: 0,
         wrongHints: [null, "Niet — wolken zijn cirrus/cumulus/etc.", "Niet — wind heeft Beaufort-schaal.", "Niet — temperatuur is Celsius/Fahrenheit."],
         uitlegPad: {
@@ -525,9 +525,9 @@ const steps = [
       },
       {
         q: "Wat is een **broeikaseffect**?",
-        options: ["Gassen in atmosfeer houden zonnewarmte vast — opwarming","Glazen kas voor planten","Klimaatzone","Soort wolk"],
+        options: ["Gassen in de lucht houden warmte vast","Glazen kas voor planten","Gat in de ozonlaag door gassen","Zonlicht dat door wolken wordt teruggekaatst"],
         answer: 0,
-        wrongHints: [null, "Niet letterlijk (wel waar woord vandaan komt) — fenomeen breder.", "Niet — broeikaseffect = proces, geen zone.", "Niet — geen weersverschijnsel."],
+        wrongHints: [null, "Niet letterlijk (wel waar woord vandaan komt) — fenomeen breder.", "Dat is een ander probleem (de ozonlaag) — wat houdt de warmte vast?", "Wolken kaatsen licht terug — maar wat houdt de warmte bij de aarde vast?"],
         uitlegPad: {
           stappen: [
             { titel: "Hoe werkt broeikaseffect?", tekst: "**Broeikaseffect** = natuurlijk proces waarbij gassen in atmosfeer **zonnewarmte vasthouden**, vergelijkbaar met glas in een broeikas.\n\n**Stappen**:\n1. Zon stuurt warmte naar aarde\n2. Aarde absorbeert + straalt warmte terug (infrarood)\n3. **Broeikasgassen** (CO₂, methaan, waterdamp) absorberen die infrarood-straling\n4. Warmte blijft in atmosfeer → aarde warmer\n\nZonder broeikaseffect: aarde zou gemiddeld -18°C zijn. Met natuurlijk effect: +15°C. Daarmee leven mogelijk." },
@@ -548,20 +548,20 @@ const steps = [
         },
       },
       { q: "Welk klimaat heeft NL?", options: ["Gematigd zeeklimaat","Tropisch","Woestijn","Toendra"], answer: 0, wrongHints: [null, "Te warm.", "Te droog.", "Te koud."] },
-      { q: "**Tropisch klimaat** is rond?", options: ["De evenaar","Polen","Gematigde zone","Woestijn"], answer: 0, wrongHints: [null, "Te koud.", "Niet tropisch.", "Wel warm maar droog."] },
+      { q: "**Tropisch klimaat** is rond?", options: ["De evenaar","De polen","Gematigde zone","Woestijn"], answer: 0, wrongHints: [null, "Te koud.", "Niet tropisch.", "Wel warm maar droog."] },
       { q: "**Woestijnklimaat** is vooral?", options: ["Droog","Nat","Koud","Tropisch"], answer: 0, wrongHints: [null, "Niet.", "Soms wel koud.", "Niet."] },
       { q: "Waarmee meet je **temperatuur**?", options: ["Thermometer","Barometer","Anemometer","Hygrometer"], answer: 0, wrongHints: [null, "Luchtdruk.", "Wind.", "Vochtigheid."] },
-      { q: "Welk klimaat heeft de **Sahara**?", options: ["Woestijn (heet + droog)","Tropisch","Toendra","Bergklimaat"], answer: 0, wrongHints: [null, "Niet droog.", "Te koud.", "Niet."] },
-      { q: "Wat is **klimaat** versus **weer**?", options: ["Klimaat = lange termijn (30+ jaar); weer = nu","Hetzelfde","Klimaat = dag; weer = maand","Niet relevant"], answer: 0, wrongHints: [null, "Wel verschil.", "Andersom.", "Wel."] },
+      { q: "Welk klimaat heeft de **Sahara**?", options: ["Woestijn","Tropisch","Toendra","Bergklimaat"], answer: 0, wrongHints: [null, "Niet droog.", "Te koud.", "Niet."] },
+      { q: "Wat is **klimaat** versus **weer**?", options: ["Klimaat = lange termijn (30+ jaar); weer = nu","Hetzelfde, alleen een ander woord","Klimaat = dag; weer = maand","Klimaat = temperatuur; weer = regen"], answer: 0, wrongHints: [null, "Wel verschil.", "Andersom.", "Beide gaan over temperatuur én regen — waar zit het verschil dan?"] },
       { q: "Welk **gas** is hoofd-broeikasgas?", options: ["CO₂","O₂","N₂","H₂"], answer: 0, wrongHints: [null, "Zuurstof.", "Stikstof.", "Waterstof."] },
-      { q: "Waarvan is het **smelten van poolijs** een gevolg?", options: ["Klimaatopwarming","Maan","Industrie alleen","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Onderdeel daarvan, niet alleen.", "Wel."] },
+      { q: "Waarvan is het **smelten van poolijs** een gevolg?", options: ["Klimaatopwarming","Een koudere zon","Industrie alleen","Meer sneeuwval"], answer: 0, wrongHints: [null, "Een koudere zon zou het ijs juist laten groeien.", "Onderdeel daarvan, niet alleen.", "Meer sneeuw maakt het ijs juist dikker."] },
       { q: "In welke klimaatzone vind je **toendra**?", options: ["Subpolair / koud","Tropisch","Woestijn","Gematigd"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
-      { q: "Wat is een **moesson**?", options: ["Seizoenswind met regen (vooral Azië)","Storm","Aardbeving","Niet relevant"], answer: 0, wrongHints: [null, "Niet specifiek.", "Niet relevant.", "Wel."] },
+      { q: "Wat is een **moesson**?", options: ["Seizoenswind met regen (vooral Azië)","Storm","Droge wind uit de woestijn","Koude wind uit het noorden"], answer: 0, wrongHints: [null, "Niet specifiek.", "Denk aan India in de zomer: is het daar dan droog?", "Denk aan Azië: wat gebeurt er in de natte tijd?"] },
       { q: "Op welk continent ligt het **Amazone-regenwoud**?", options: ["Zuid-Amerika","Afrika","Azië","Australië"], answer: 0, wrongHints: [null, "Heeft Congo-regenwoud.", "Heeft Borneo-regenwoud.", "Australië is vooral woestijn en savanne."] },
       { q: "Wat is een **gevolg** van klimaatopwarming?", options: ["Zeespiegel-stijging","Lagere temperatuur","Meer ijs","Minder droogte"], answer: 0, wrongHints: [null, "Opwarming betekent dat het gemiddeld juist warmer wordt — daalt de temperatuur dan?", "Als het warmer wordt smelt het ijs op de polen — komt er dan meer of minder ijs?", "Door hogere temperaturen verdampt er meer water en worden sommige gebieden juist droger — klopt 'minder' dan?"] },
-      { q: "Welk type **regen** komt door bergen?", options: ["Stuwingsregen","Convectieregen","Frontale regen","Geen regen"], answer: 0, wrongHints: [null, "Door warmte.", "Door front.", "Wel regen."] },
-      { q: "Wat doet de **Golfstroom**?", options: ["Transporteert warm water van de tropen naar Europa","Koud water","Niet relevant","Niet bestaand"], answer: 0, wrongHints: [null, "Niet primair.", "Wel.", "Wel."] },
-      { q: "Wat zijn de **Köppen**-zones?", options: ["Internationale klimaat-classificatie","Niet bestaand","Mode-stijlen","Politiek"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
+      { q: "Welk type **regen** komt door bergen?", options: ["Stuwingsregen","Convectieregen","Frontale regen","Motregen"], answer: 0, wrongHints: [null, "Door warmte.", "Door front.", "Motregen zegt iets over de druppels, niet over hoe regen ontstaat."] },
+      { q: "Wat doet de **Golfstroom**?", options: ["Transporteert warm water van de tropen naar Europa","Transporteert koud water van de polen naar Europa","Transporteert warm water van Europa naar de tropen","Zorgt voor eb en vloed langs de kust"], answer: 0, wrongHints: [null, "Dan zou het in NL juist kouder zijn — is het hier mild of koud?", "Andersom — waar is het zeewater het warmst?", "Eb en vloed komen door de maan."] },
+      { q: "Wat zijn de **Köppen**-zones?", options: ["Internationale klimaat-classificatie","Indeling van gesteenten","Schaal voor de sterkte van aardbevingen","Indeling van tijdzones"], answer: 0, wrongHints: [null, "Gesteenten worden anders ingedeeld — het gaat hier over het weer op lange termijn.", "Dat is de schaal van Richter.", "Tijdzones gaan over de klok, niet over het weer."] },
     ],
   },
 ];

@@ -57,19 +57,19 @@ const steps = [
     checks: [
       {
         q: "Wanneer was de **Gouden Eeuw**?",
-        options: ["17e eeuw (1600-1700)", "16e eeuw", "18e eeuw", "19e eeuw"],
+        options: ["17e eeuw", "16e eeuw", "18e eeuw", "19e eeuw"],
         answer: 0,
         wrongHints: [null, "Net iets te vroeg.", "Te laat.", "Veel te laat."],
       },
       {
         q: "Waarom was Nederland in de 17e eeuw zo rijk?",
-        options: ["Handel + tolerantie + goede ligging", "Olie", "Goud uit eigen mijnen", "Verovering van Europa"],
+        options: ["Handel", "Olie", "Goud uit eigen mijnen", "Verovering van Europa"],
         answer: 0,
         wrongHints: [null, "Geen olie in 17e eeuw.", "Geen goudmijnen in NL.", "Nederland heerste niet over Europa."],
       },
       {
         q: "Welke vorm van regering had Nederland in de Gouden Eeuw?",
-        options: ["Republiek (geen koning)", "Koninkrijk", "Keizerrijk", "Stadstaat"],
+        options: ["Republiek", "Koninkrijk", "Keizerrijk", "Stadstaat"],
         answer: 0,
         wrongHints: [null, "Pas vanaf 1815 koninkrijk.", "Geen keizer.", "Geen losse stadstaat."],
       },
@@ -90,9 +90,9 @@ const steps = [
     checks: [
       {
         q: "Wat betekent **VOC**?",
-        options: ["Verenigde Oostindische Compagnie", "Volkswagen Oude Cars", "Vrije Oranjes Compagnie", "Vlaamse Oost Coalitie"],
+        options: ["Verenigde Oostindische Compagnie", "Verenigde Oostzee Compagnie", "Vrije Oranjes Compagnie", "Vlaamse Oost Coalitie"],
         answer: 0,
-        wrongHints: [null, "Volkswagen werd pas in 1937 opgericht, eeuwen na de Gouden Eeuw.", "Niet bestaande organisatie.", "Vlaanderen had geen aparte compagnie in de Gouden Eeuw."],
+        wrongHints: [null, "De VOC voer niet naar de Oostzee, maar veel verder weg.", "Niet bestaande organisatie.", "Vlaanderen had geen aparte compagnie in de Gouden Eeuw."],
       },
       {
         q: "Wanneer werd de **VOC opgericht**?",
@@ -141,9 +141,9 @@ const steps = [
       },
       {
         q: "**Waarom** waren Amsterdamse huizen **smal en hoog**?",
-        options: ["Belasting was op breedte", "Geen ruimte", "Modetrend", "Beter tegen wind"],
+        options: ["Belasting was op breedte", "Bevel van de koning", "Modetrend", "Beter tegen wind"],
         answer: 0,
-        wrongHints: [null, "Ruimte was er wel.", "Geen mode-reden.", "Geen wind-reden."],
+        wrongHints: [null, "Had de Republiek wel een koning?", "Geen mode-reden.", "Geen wind-reden."],
         uitlegPad: {
           stappen: [
             { titel: "Belasting-truc", tekst: "De gemeente belastte huizen op de breedte van de gevel. Daarom bouwden rijke kooplieden hun huizen smal maar wel hoog (en diep, want diepte werd niet belast). Spaarde geld." },
@@ -170,7 +170,7 @@ const steps = [
     checks: [
       {
         q: "Welk **bedrijf** was vooral betrokken bij slavernij?",
-        options: ["WIC (West-Indische Compagnie)", "VOC", "ING", "Royal Dutch"],
+        options: ["WIC", "VOC", "ING", "Royal Dutch"],
         answer: 0,
         wrongHints: [null, "VOC vooral Indonesië, maar WIC was specifiek trans-Atlantisch.", "Modern bedrijf.", "Modern bedrijf."],
       },
@@ -215,7 +215,7 @@ const steps = [
       },
       {
         q: "Hoe **redde** Nederland zich in 1672?",
-        options: ["Waterlinie + de Ruyter + diplomatie", "Vluchten naar Engeland", "Geld geven", "Verloren"],
+        options: ["Met de Waterlinie", "Vluchten naar Engeland", "Geld geven", "Verloren"],
         answer: 0,
         wrongHints: [null, "Geen vlucht.", "Niet de hoofdoplossing.", "Niet helemaal verloren — kwam er bovenop."],
       },
@@ -236,9 +236,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **VOC**?",
-        options: ["Verenigde Oostindische Compagnie", "Vrije Oranje-Coalitie", "Volkswagen Oost-Coalitie", "Vereniging Olie-Centra"],
+        options: ["Verenigde Oostindische Compagnie", "Vrije Oranje-Coalitie", "Verenigde Oranje Compagnie", "Vereniging Olie-Centra"],
         answer: 0,
-        wrongHints: [null, "Geen politieke coalitie, maar een handelsbedrijf.", "Volkswagen werd pas in 1937 opgericht, niet in 1602.", "Olie was geen Gouden Eeuw-handelsproduct."],
+        wrongHints: [null, "Geen politieke coalitie, maar een handelsbedrijf.", "De naam verwijst niet naar de Oranjes, maar naar het gebied waar gehandeld werd.", "Olie was geen Gouden Eeuw-handelsproduct."],
       },
       {
         q: "Wie schilderde **De Nachtwacht**?",
@@ -247,8 +247,8 @@ const steps = [
         wrongHints: [null, "Andere schilder.", "20e eeuw.", "15e eeuw."],
       },
       {
-        q: "Welk **eiland was kort Nederlands** maar werd New York?",
-        options: ["Nieuw-Amsterdam (Manhattan)", "Nieuw-Sicilië", "Nieuw-Madagaskar", "Nieuw-Cuba"],
+        q: "Welke **nederzetting was kort Nederlands** maar werd New York?",
+        options: ["Nieuw-Amsterdam", "Nieuw-Sicilië", "Nieuw-Madagaskar", "Nieuw-Cuba"],
         answer: 0,
         wrongHints: [null, "Sicilië is een Italiaans eiland in de Middellandse Zee.", "Madagaskar is een Afrikaans eiland, geen NL-kolonie.", "Cuba was Spaans, geen NL-kolonie."],
       },

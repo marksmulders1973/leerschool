@@ -27,7 +27,7 @@ const steps = [
       {
         q: "Je zoekt informatie over gezond eten. Welke bron is het meest betrouwbaar?",
         options: [
-          "het Voedingscentrum (deskundigen over voeding)",
+          "het Voedingscentrum",
           "een reclame van een snoepmerk",
           "een willekeurige post van een onbekende",
           "een vriend die het ergens hoorde",
@@ -393,16 +393,16 @@ const steps = [
   {
     title: "In het echt — welke bron vertrouw je?",
     explanation:
-      "Bij de Doorstroomtoets (en bij een werkstuk) moet je de **beste bron kiezen**. Vraag je steeds af:\n\n" +
+      "Bij een werkstuk of spreekbeurt moet je de **beste bron kiezen**. Vraag je steeds af:\n\n" +
       "1. **Wie** zegt het — een deskundige/officiële bron of een onbekende?\n" +
       "2. **Wil** de bron iets verkopen (reclame) of objectief informeren?\n" +
       "3. **Klopt** het met andere bronnen, en is het **actueel**?\n\n" +
-      "Officiële bronnen (overheid, KNMI, encyclopedie, museum) controleren hun informatie en zijn daarom vaak het betrouwbaarst.",
+      "Officiële bronnen (overheid, KNMI — het Koninklijk Nederlands Meteorologisch Instituut, encyclopedie, museum) controleren hun informatie en zijn daarom vaak het betrouwbaarst.",
     checks: [
       {
         q: "Je maakt een werkstuk over het weer en klimaat. Welke bron is het best?",
         options: [
-          "het KNMI (het officiële weerinstituut)",
+          "het weerinstituut KNMI",
           "een mening op een forum",
           "een advertentie voor regenjassen",
           "een grappig weer-meme",

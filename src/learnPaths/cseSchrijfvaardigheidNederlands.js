@@ -96,7 +96,7 @@ const steps = [
   {
     title: "Betoog + opiniestuk",
     explanation:
-      "Een **betoog** is een tekst waarin je een **standpunt** verdedigt met **argumenten** om de lezer te overtuigen.\n\n**Structuur betoog** *(uit het hoofd!)*:\n\n**1. Inleiding**:\n• Onderwerp.\n• Je **stelling** *(standpunt)*.\n• Wat je gaat bespreken.\n\nVoorbeeld:\n*'Moeten scholen een langere zomervakantie krijgen? Naar mijn mening is dit een goede zaak omdat leerlingen rust nodig hebben.'*\n\n**2. Middenstuk** *(2-3 alinea's met argumenten)*:\n\n**Argument 1** *(sterkste)*:\n• Stel argument.\n• Onderbouw met **bewijs**: feit / voorbeeld / statistiek.\n• 'Ten eerste, ...'.\n\n**Argument 2**:\n• Tweede reden.\n• 'Daarnaast ...' / 'Bovendien ...'.\n\n**Argument 3 (optioneel)**:\n• Derde reden.\n• 'Ten slotte ...'.\n\n**3. Tegenwerping + weerlegging** *(sterker betoog)*:\n• 'Sommigen beweren dat ...'.\n• Waarom dit niet (helemaal) klopt.\n• 'In werkelijkheid is het echter zo dat ...'.\n\n**4. Slot**:\n• Samenvatting van argumenten.\n• Versterking van stelling.\n• Soms: oproep tot actie.\n\nVoorbeeld slot:\n*'Kortom, een langere zomervakantie zou leerlingen ten goede komen. Het is tijd om dit serieus te overwegen.'*\n\n**Soorten argumenten** *(uit het hoofd!)*:\n\n**1. Feitelijk** — gebaseerd op data/onderzoek.\n• 'Volgens het CBS rookt 20% van de Nederlanders.'\n• 'Een studie van de Universiteit Utrecht laat zien dat ...'.\n\n**2. Emotioneel** — appel op gevoel.\n• 'Denk aan de kinderen die ...'.\n• 'Het is hartverscheurend dat ...'.\n\n**3. Moreel** — wat is goed/fout?\n• 'Het is oneerlijk dat ...'.\n• 'We hebben de plicht om ...'.\n\n**4. Praktisch** — werkt het of niet?\n• 'In Frankrijk werkt deze regel goed.'\n\n**5. Autoriteit** — iemand met gezag.\n• 'Volgens de minister ...'.\n• 'De WHO adviseert ...'.\n\n**6. Voorbeeld** — illustratie.\n• 'Een voorbeeld is ...'.\n\n**Signaalwoorden** voor betoog *(uit het hoofd)*:\n\n• **Eerst noemen**: ten eerste, allereerst, om te beginnen.\n• **Toevoegen**: daarnaast, bovendien, ook, verder.\n• **Tegenovergesteld**: echter, daarentegen, maar, hoewel.\n• **Reden**: omdat, want, doordat, vanwege.\n• **Gevolg**: dus, daarom, vandaar, zodoende.\n• **Voorbeeld**: zoals, bijvoorbeeld, neem nou.\n• **Conclusie**: kortom, samenvattend, alles afwegend.\n\n**Betogend vs beschouwend** — verschil:\n• **Betogend**: **kiest 1 kant** + verdedigt.\n• **Beschouwend**: **weegt pro + contra** zonder duidelijke conclusie.\n\nBij CSE: meestal **betogend gevraagd** *(stel je standpunt + verdedig)*.\n\n**Toets-tips**:\n• **Houd je aan woordaantal** *(meestal 200-300 woorden)*.\n• **Sterk eindigen** met conclusie.\n• **Tegenwerping** is +punten — toont diepte.\n• **Spelling + grammatica** check.",
+      "Een **betoog** is een tekst waarin je een **standpunt** verdedigt met **argumenten** om de lezer te overtuigen.\n\n**Structuur betoog** *(uit het hoofd!)*:\n\n**1. Inleiding**:\n• Onderwerp.\n• Je **stelling** *(standpunt)*.\n• Wat je gaat bespreken.\n\nVoorbeeld:\n*'Moeten scholen een langere zomervakantie krijgen? Naar mijn mening is dit een goede zaak omdat leerlingen rust nodig hebben.'*\n\n**2. Middenstuk** *(2-3 alinea's met argumenten)*:\n\n**Argument 1** *(sterkste)*:\n• Stel argument.\n• Onderbouw met **bewijs**: feit / voorbeeld / statistiek.\n• 'Ten eerste, ...'.\n\n**Argument 2**:\n• Tweede reden.\n• 'Daarnaast ...' / 'Bovendien ...'.\n\n**Argument 3 (optioneel)**:\n• Derde reden.\n• 'Ten slotte ...'.\n\n**3. Tegenwerping + weerlegging** *(sterker betoog)*:\n• 'Sommigen beweren dat ...'.\n• Waarom dit niet (helemaal) klopt.\n• 'In werkelijkheid is het echter zo dat ...'.\n\n**4. Slot**:\n• Samenvatting van argumenten.\n• Versterking van stelling.\n• Soms: oproep tot actie.\n\nVoorbeeld slot:\n*'Kortom, een langere zomervakantie zou leerlingen ten goede komen. Het is tijd om dit serieus te overwegen.'*\n\n**Soorten argumenten** *(uit het hoofd!)*:\n\n**1. Feitelijk** — gebaseerd op data/onderzoek.\n• 'Volgens het CBS rookt 20% van de Nederlanders.'\n• 'Een studie van de Universiteit Utrecht laat zien dat ...'.\n\n**2. Emotioneel** — appel op gevoel.\n• 'Denk aan de kinderen die ...'.\n• 'Het is hartverscheurend dat ...'.\n\n**3. Moreel** — wat is goed/fout?\n• 'Het is oneerlijk dat ...'.\n• 'We hebben de plicht om ...'.\n\n**4. Praktisch** — werkt het of niet?\n• 'In Frankrijk werkt deze regel goed.'\n\n**5. Autoriteit** — iemand met gezag.\n• 'Volgens de minister ...'.\n• 'De WHO adviseert ...'.\n\n**6. Voorbeeld** — illustratie.\n• 'Een voorbeeld is ...'.\n\n**Signaalwoorden** voor betoog *(uit het hoofd)*:\n\n• **Eerst noemen**: ten eerste, allereerst, om te beginnen.\n• **Toevoegen**: daarnaast, bovendien, ook, verder.\n• **Tegenovergesteld**: echter, daarentegen, maar, hoewel.\n• **Reden**: omdat, want, aangezien, namelijk, vanwege. (*Doordat* geeft een oorzaak aan.)\n• **Gevolg**: dus, daarom, vandaar, zodoende.\n• **Voorbeeld**: zoals, bijvoorbeeld, neem nou.\n• **Conclusie**: kortom, samenvattend, alles afwegend.\n\n**Betogend vs beschouwend** — verschil:\n• **Betogend**: **kiest 1 kant** + verdedigt.\n• **Beschouwend**: **weegt pro + contra** zonder duidelijke conclusie.\n\nBij CSE: meestal **betogend gevraagd** *(stel je standpunt + verdedig)*.\n\n**Toets-tips**:\n• **Houd je aan woordaantal** *(meestal 200-300 woorden)*.\n• **Sterk eindigen** met conclusie.\n• **Tegenwerping** is +punten — toont diepte.\n• **Spelling + grammatica** check.",
     checks: [
       {
         q: "Wat is een **stelling** in betoog?",
@@ -165,7 +165,7 @@ const steps = [
         q: "Welke tijd vooral bij **verslagen**?",
         options: ["Verleden tijd", "Tegenwoordige", "Toekomst", "Voorwaardelijk"],
         answer: 0,
-        wrongHints: [null, "Soms, voor levendigheid.", "Bijna nooit.", "Geen tijd-categorie."],
+        wrongHints: [null, "Soms, voor levendigheid.", "Bijna nooit.", "Die vorm (zou ...) gebruik je voor iets wat niet echt gebeurd is."],
       },
       {
         q: "Wat is **'show, don't tell'**?",
@@ -221,7 +221,7 @@ const steps = [
       {
         q: "*'**Open vraag**: noem 1 signaalwoord voor reden in het Nederlands.'*",
         kind: "open",
-        acceptedAnswers: ["omdat", "want", "aangezien", "namelijk"],
+        acceptedAnswers: ["omdat", "want", "aangezien", "namelijk", "vanwege", "immers"],
         explanation: "Reden-signalen: omdat, want, aangezien, namelijk. (Doordat geeft een oorzaak aan, geen reden.)",
       },
       {
@@ -304,7 +304,7 @@ const steps = [
       },
       {
         q: "Welk **perspectief** is *'Tom liep door de straat. Hij was moe.'*?",
-        options: ["Hij/zij-perspectief (personaal)", "Ik-perspectief", "Alwetend", "Geen"],
+        options: ["Hij/zij-perspectief", "Ik-perspectief", "Alwetend", "Geen"],
         answer: 0,
         wrongHints: [null, "Niet 'ik'.", "Geen meerdere personages-inzicht.", "Wel iets."],
       },

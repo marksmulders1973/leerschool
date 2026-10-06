@@ -43,7 +43,7 @@ const steps = [
       {
         q: "Een **longslagader** bevat:",
         options: [
-          "Zuurstof-ARM bloed (gaat naar longen voor O₂)",
+          "Zuurstofarm bloed",
           "Zuurstofrijk bloed",
           "Geen bloed",
           "Voedingsstoffen alleen"
@@ -60,13 +60,13 @@ const steps = [
       {
         q: "**Sinusknoop** zit in:",
         options: [
-          "Rechterboezem — natuurlijke pacemaker",
+          "Rechterboezem",
           "Linkerkamer",
           "Hersens",
           "Longen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — daar AV-knoop voor kamers.", "Hersenen kunnen het tempo bijsturen, maar de impuls ontstaat in het hart zelf.", "Niet."],
+        wrongHints: [null, "Niet — de kamers trekken pas ná de boezems samen.", "Hersenen kunnen het tempo bijsturen, maar de impuls ontstaat in het hart zelf.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Eigen ritme", tekst: "Sinusknoop genereert elektrische impuls 60-100/min spontaan. Impuls → boezems samentrekken → AV-knoop vertraging 0,1 s → kamers samentrekken. Bij defect: pacemaker-implantaat met batterij in borstkas geeft elektrische pulsen." },
@@ -111,7 +111,7 @@ const steps = [
       {
         q: "**Aderen** hebben kleppen vooral in:",
         options: [
-          "Benen (om terugstroming tegen zwaartekracht te voorkomen)",
+          "Benen",
           "Hoofd",
           "Slagaders",
           "Haarvaten"
@@ -138,7 +138,7 @@ const steps = [
       {
         q: "**Atherosclerose** = ?",
         options: [
-          "Vetafzetting in slagaderwand → vernauwing",
+          "Vetafzetting in de slagaderwand",
           "Aderwand-zwakte",
           "Hartritmestoornis",
           "Bloedstolling"
@@ -155,7 +155,7 @@ const steps = [
       {
         q: "**Spataders** ontstaan door:",
         options: [
-          "Aderkleppen die niet meer sluiten → bloed hoopt op in benen",
+          "Aderkleppen die niet goed sluiten",
           "Slagaders te smal",
           "Hartinfarct",
           "Allergie"
@@ -180,7 +180,7 @@ const steps = [
     checks: [
       {
         q: "**Hemoglobine** bindt:",
-        options: ["O₂ (zuurstof)", "CO₂ uitsluitend", "Glucose", "Vet"],
+        options: ["O₂", "CO₂ uitsluitend", "Glucose", "Vet"],
         answer: 0,
         wrongHints: [null, "Wel deels, maar O₂ primair.", "Niet — glucose zit opgelost in plasma.", "Niet."],
         uitlegPad: {
@@ -206,13 +206,13 @@ const steps = [
       {
         q: "**O-negatief** bloed is:",
         options: [
-          "Universele donor — kan aan iedereen gegeven worden",
+          "Universele donor",
           "Universele ontvanger",
           "Alleen geschikt voor mensen met bloedgroep O",
-          "Krimpt"
+          "De zeldzaamste bloedgroep"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is AB+.", "Denk aan welke antigenen O-negatief bloed mist.", "Onzin."],
+        wrongHints: [null, "Niet — dat is AB+.", "Denk aan welke antigenen O-negatief bloed mist.", "Nee — AB-negatief is veel zeldzamer. Waarom is O-negatief zo gewild?"],
         uitlegPad: {
           stappen: [
             { titel: "Geen antigenen → geen reactie", tekst: "O = geen A/B-antigenen. Negatief = geen Rh-antigen. Lichaam ontvanger ziet niets vreemds → geen afweer. Daarom gebruikt men het in noodgevallen als de bloedgroep onbekend is. NL: ~6% bevolking. Bloedbanken doen continu campagne voor O-negatief donoren." },
@@ -223,7 +223,7 @@ const steps = [
       {
         q: "**Hemofilie** is:",
         options: [
-          "Erfelijke ziekte met te trage bloedstolling, vooral jongens",
+          "Erfelijke stollingsziekte",
           "Bloedkanker",
           "Te dik bloed",
           "Bloedgroep-mismatch"
@@ -265,17 +265,17 @@ const steps = [
     checks: [
       {
         q: "Gasuitwisseling vindt plaats in:",
-        options: ["Longblaasjes (alveoli)", "Luchtpijp", "Neus", "Bronchiolen"],
+        options: ["Longblaasjes", "Luchtpijp", "Neus", "Bronchiolen"],
         answer: 0,
         wrongHints: [null, "Niet — geen uitwisseling daar.", "Niet — geen.", "Niet — alleen geleiding."],
         uitlegPad: {
-          stappen: [{ titel: "~300 mln longblaasjes", tekst: "Alveoli zijn eindstation: wand 1 cel dik, omgeven door haarvaten. O₂ diffundeert in, CO₂ uit. Totaal oppervlak ~70 m² per persoon (ongeveer een halve tennisbaan). Daarom enorme efficiëntie." }],
+          stappen: [{ titel: "~300 mln longblaasjes", tekst: "Alveoli zijn eindstation: wand 1 cel dik, omgeven door haarvaten. O₂ diffundeert in, CO₂ uit. Totaal oppervlak ~70 m² per persoon (ongeveer een badmintonveld). Daarom enorme efficiëntie." }],
           niveaus: { basis: "Alveoli.", simpeler: "Longblaasjes.", nogSimpeler: "Alveoli" },
         },
       },
       {
         q: "**Diafragma** beweegt tijdens **inademen**:",
-        options: ["Naar BENEDEN (samentrekken)", "Naar boven", "Niet", "Zijwaarts"],
+        options: ["Naar beneden", "Naar boven", "Niet", "Zijwaarts"],
         answer: 0,
         wrongHints: [null, "Niet — dat is uitademen.", "Wel — actief.", "Niet."],
         uitlegPad: {
@@ -286,7 +286,7 @@ const steps = [
       {
         q: "Wij ademen voornamelijk op:",
         options: [
-          "CO₂-niveau in bloed (niet O₂)",
+          "CO₂-niveau in het bloed",
           "O₂-tekort",
           "Spier-vermoeidheid",
           "Hersengolven"
@@ -356,7 +356,7 @@ const steps = [
       {
         q: "Het **mediterrane dieet** is goed omdat:",
         options: [
-          "Veel groenten/vis/noten/olijfolie + weinig vlees → lager hart-vaatrisico",
+          "Veel plantaardig en gezonde vetten",
           "Veel vlees",
           "Veel suiker",
           "Geen relatie"
@@ -373,7 +373,7 @@ const steps = [
       {
         q: "**Roken stoppen**: risico hart-vaatziekte daalt:",
         options: [
-          "~50% binnen 1 jaar, bijna naar nooit-roker na 15 jaar",
+          "Flink, al binnen een jaar",
           "Direct naar nul",
           "Pas na 30 jaar",
           "Nooit"
@@ -391,7 +391,7 @@ const steps = [
       {
         q: "Een **AED** is:",
         options: [
-          "Automatische Externe Defibrillator — schok hart bij stilstand",
+          "Automatische Externe Defibrillator",
           "Adem-Eerste-Devies",
           "Allergie-Eet-Dieet",
           "Anti-Drugs"

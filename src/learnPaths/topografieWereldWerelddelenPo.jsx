@@ -27,10 +27,10 @@ const steps = [
     interactiveComponent: Wereldbol,
     checks: [
       {
-        q: "Hoeveel werelddelen (continenten) heeft de aarde?",
+        q: "Hoeveel werelddelen (continenten) leer je op een Nederlandse school?",
         options: ["7", "5", "3", "10"],
         answer: 0,
-        wrongHints: [null, "Bijna — tel Antarctica ook mee.", "Het zijn er meer.", "Zoveel zijn het er niet."],
+        wrongHints: [null, "Te weinig — tel Antarctica en beide Amerika's mee.", "Het zijn er meer.", "Zoveel zijn het er niet."],
         uitlegPad: { stappen: [{ titel: "7 werelddelen", tekst: "Afrika, Europa, Azië, Noord-Amerika, Zuid-Amerika, Oceanië en Antarctica = samen 7." }],
           niveaus: { basis: "De aarde heeft 7 werelddelen.", simpeler: "Tel ze: Afrika, Europa, Azië, Noord-Amerika, Zuid-Amerika, Oceanië, Antarctica.", nogSimpeler: "Zeven." } },
       },

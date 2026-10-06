@@ -121,7 +121,7 @@ const steps = [
       {
         q: "Hoe ontstaat een **regenboog**?",
         options: [
-          "Breking + interne reflectie + breking in waterdruppels, verschillend per kleur",
+          "Breking en weerkaatsing in regendruppels",
           "Reflectie tegen wolken",
           "Diffractie achter wolk-rand",
           "Dispersie door luchtdruppels"
@@ -196,7 +196,7 @@ const steps = [
       {
         q: "Een **bolle lens** als vergrootglas: voorwerp **dichter dan f**. Beeld?",
         options: [
-          "Virtueel + rechtop + vergroot (aan dezelfde kant als het voorwerp)",
+          "Virtueel + rechtop + vergroot",
           "Reëel + omgekeerd + vergroot",
           "Reëel + rechtop + verkleind",
           "Virtueel + omgekeerd"
@@ -292,7 +292,7 @@ const steps = [
       {
         q: "Een ster-spectrum is **naar rood verschoven**. Wat betekent dit?",
         options: [
-          "De ster beweegt van ons af (Doppler-roodverschuiving)",
+          "De ster beweegt van ons af",
           "De ster is letterlijk rood gekleurd",
           "De ster is dichtbij",
           "De ster is in vacuüm"
@@ -359,7 +359,7 @@ const steps = [
       {
         q: "Een **microscoop** vergroot met:",
         options: [
-          "Objectief × oculair (twee lenzen)",
+          "Twee lenzen: objectief en oculair",
           "Eén grote lens",
           "Spiegel + lens",
           "Alleen virtuele beelden"

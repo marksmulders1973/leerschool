@@ -88,7 +88,7 @@ const steps = [
       },
       {
         q: "*'Geef je antwoord in 1 decimaal'* — wat betekent **1 decimaal**?",
-        options: ["1 cijfer na de komma (bv 4,7)", "1 cijfer voor de komma", "Alleen 1 getal", "Geen komma"],
+        options: ["1 cijfer na de komma", "1 cijfer voor de komma", "Alleen 1 getal", "Geen komma"],
         answer: 0,
         wrongHints: [null, "Decimalen staan juist ná de komma.", "Onvolledig.", "Wel met komma."],
       },
@@ -161,7 +161,7 @@ const steps = [
       },
       {
         q: "Bij goniometrie op rekenmachine — welke modus?",
-        options: ["Degree (graden) — standaard CSE", "Radian", "Float", "Modus maakt niet uit"],
+        options: ["Degree (graden)", "Radian (radialen)", "Float", "Modus maakt niet uit"],
         answer: 0,
         wrongHints: [null, "Voor hogere wiskunde.", "Display-mode, niet relevant.", "Het maakt wél uit — de verkeerde modus geeft fouten."],
       },
@@ -172,14 +172,14 @@ const steps = [
         wrongHints: [null, "Niet zichtbaar later.", "Slecht idee.", "Wel doen."],
       },
       {
-        q: "Een **fout-knop** op rekenmachine herstelt ___?",
+        q: "De **DEL**-knop (wissen) op een rekenmachine wist ___?",
         options: ["Laatst ingevoerde teken", "Hele som", "Geheugen", "Niets"],
         answer: 0,
         wrongHints: [null, "Daarvoor 'AC'/'C'.", "Daarvoor 'M-clear'.", "Wel iets."],
       },
       {
         q: "Bij **wortel-berekening** op de calculator: druk je eerst √ of getal?",
-        options: ["√, dan getal (of typ getal-eerst en daarna √ — afhankelijk van model)", "Doet er niet toe", "Alleen getal", "Alleen √"],
+        options: ["Dat hangt af van je model — probeer het vooraf uit", "Doet er niet toe, elk model rekent het goed", "Alleen getal", "Alleen √"],
         answer: 0,
         wrongHints: [null, "Doet er WEL toe.", "Mist de wortel-handeling.", "Mist het getal."],
       },
@@ -194,7 +194,7 @@ const steps = [
     checks: [
       {
         q: "**Pythagoras** geldt voor welke driehoek?",
-        options: ["Rechthoekige (met 90°)", "Gelijkzijdige", "Stompe", "Elke driehoek"],
+        options: ["Rechthoekige", "Gelijkzijdige", "Stompe", "Elke driehoek"],
         answer: 0,
         wrongHints: [null, "Voor gelijkzijdige andere regels.", "Niet hier.", "Niet — alleen rechthoekige."],
       },
@@ -206,7 +206,7 @@ const steps = [
       },
       {
         q: "Formule volume **kubus** met zijde z?",
-        options: ["z³ (z × z × z)", "z²", "6 × z²", "z"],
+        options: ["z³", "z²", "6 × z²", "z"],
         answer: 0,
         wrongHints: [null, "Dat is oppervlak 1 vlak.", "Totaal oppervlak alle vlakken.", "Dat is alleen de lengte van één zijde."],
       },
@@ -217,7 +217,7 @@ const steps = [
         wrongHints: [null, "Verhouding.", "Ruimte.", "Statistiek."],
       },
       {
-        q: "Formule **oppervlakte rechthoek** (lengte × breedte)?",
+        q: "Formule **oppervlakte rechthoek** (l = lengte, b = breedte)?",
         options: ["l × b", "l + b", "2 × (l + b)", "l²"],
         answer: 0,
         wrongHints: [null, "Optelling, geen oppervlak.", "Omtrek.", "Vierkant."],
@@ -246,7 +246,7 @@ const steps = [
     checks: [
       {
         q: "CSE Wiskunde VMBO duurt **hoe lang**?",
-        options: ["120 min (2 uur)", "60 min", "180 min", "30 min"],
+        options: ["120 min", "60 min", "180 min", "30 min"],
         answer: 0,
         wrongHints: [null, "Te kort.", "Te lang.", "Te kort."],
       },
@@ -258,7 +258,7 @@ const steps = [
       },
       {
         q: "Bij **meerkeuze** en niet zeker — wat doe je?",
-        options: ["Iets invullen (gokken)", "Leeglaten", "Vraag overslaan", "Buurman kopiëren"],
+        options: ["Toch iets invullen", "Leeglaten", "Vraag overslaan", "Buurman kopiëren"],
         answer: 0,
         wrongHints: [null, "Levert 0 op.", "Wel terug, maar uiteindelijk invullen.", "Spieken = uitsluiting."],
       },
@@ -291,7 +291,7 @@ const steps = [
     checks: [
       {
         q: "**Dag voor examen** — wat is belangrijkst?",
-        options: ["Goede slaap (8 uur)", "All-nighter leren", "Geen ontbijt", "Examen-paniek"],
+        options: ["Goed slapen", "All-nighter leren", "Geen ontbijt", "Examen-paniek"],
         answer: 0,
         wrongHints: [null, "Verlies van scherpte.", "Energie nodig.", "Niet helpend."],
       },
@@ -327,13 +327,13 @@ const steps = [
       },
       {
         q: "**Wat neem je mee** naar het CSE wiskunde-examen (VMBO)?",
-        options: ["Gewone rekenmachine + passer + geodriehoek + potlood/pen", "Telefoon", "Computer", "Niets"],
+        options: ["Rekenmachine, geodriehoek en pen", "Telefoon", "Computer", "Niets"],
         answer: 0,
         wrongHints: [null, "Verboden!", "Niet toegestaan.", "Wel materiaal."],
       },
       {
         q: "Op het examen mag je **geen grafische rekenmachine** voor VMBO. Wat dan wel?",
-        options: ["Gewone (wetenschappelijke) rekenmachine", "Helemaal niets", "Telefoon-calculator", "Slim horloge"],
+        options: ["Wetenschappelijke rekenmachine", "Helemaal niets", "Telefoon-calculator", "Slim horloge"],
         answer: 0,
         wrongHints: [null, "Wel iets.", "Verboden.", "Verboden."],
       },

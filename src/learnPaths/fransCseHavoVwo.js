@@ -97,7 +97,7 @@ const steps = [
         wrongHints: [null, "Goed voor detail-vraag.", "Te traag.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Top + bottom = hoofd", tekst: "**Hoofdgedachte** staat meestal in **eerste of laatste alinea** (thesis-zin of conclusie). Daar gericht lezen. Detail-vragen vergen scanning op kernwoord." }],
-          niveaus: { basis: "Eerst + laatst.", simpeler: "Hoofdgedachte = top+bottom", nogSimpeler: "A." },
+          niveaus: { basis: "Eerst + laatst.", simpeler: "Hoofdgedachte = top+bottom", nogSimpeler: "Eerste + laatste" },
         },
       },
       {
@@ -154,7 +154,7 @@ const steps = [
     checks: [
       {
         q: "*Sans doute* betekent:",
-        options: ["Waarschijnlijk (niet zeker)","Zonder enige twijfel","Misschien","Twijfelend"],
+        options: ["Waarschijnlijk", "Zonder enige twijfel", "Misschien", "Twijfelend"],
         answer: 0,
         wrongHints: [null, "Faux ami! Niet 100%.", "Te zwak.", "Niet correct."],
         uitlegPad: {
@@ -190,17 +190,17 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Imparfait = was-aan-het-eten", tekst: "**Imparfait**: doorlopende of gewoonte-handeling in verleden. *Je mangeais quand il a téléphoné* = Ik was aan het eten toen hij belde. **Passé composé** voor voltooide: *J'ai mangé* = Ik heb gegeten." }],
           theorie: "Toets-patroon: tijdlijn-vragen door tijden interpreteren.",
-          niveaus: { basis: "Doorlopend.", simpeler: "Imparfait = bezig/gewoonte", nogSimpeler: "A." },
+          niveaus: { basis: "Doorlopend.", simpeler: "Imparfait = bezig/gewoonte", nogSimpeler: "Doorlopend" },
         },
       },
       {
         q: "Een alinea midden in een betoog begint met *certes, il est vrai que...* Welke functie heeft die alinea waarschijnlijk?",
-        options: ["Tegenargument (concession)","Inleiding","Conclusie","Geen functie"],
+        options: ["Tegenargument erkennen", "Inleiding", "Conclusie", "Voorbeeld"],
         answer: 0,
-        wrongHints: [null, "Niet — die staat aan het begin.", "Niet — die staat aan het eind.", "Wel functie."],
+        wrongHints: [null, "Niet — die staat aan het begin.", "Niet — die staat aan het eind.", "Niet — *certes* geeft geen voorbeeld maar een toegeving."],
         uitlegPad: {
           stappen: [{ titel: "Concession-alinea", tekst: "In argumentatieve teksten komt vaak een **tegenargument-alinea** (concession): 'sommigen zeggen X, maar...'. Auteur erkent kritisch geluid, weerlegt het, versterkt eigen positie. Signaal-woorden: *certes, il est vrai que, on pourrait dire que*." }],
-          niveaus: { basis: "Tegenargument.", simpeler: "Certes... = concession", nogSimpeler: "A." },
+          niveaus: { basis: "Tegenargument.", simpeler: "Certes... = concession", nogSimpeler: "Toegeving" },
         },
       },
     ],
@@ -214,7 +214,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **laïcité**?",
-        options: ["Staats-secularisme (religieuze neutraliteit)","Liefde voor Frankrijk","Onderwijssysteem","Belasting"],
+        options: ["Staats-secularisme", "Liefde voor Frankrijk", "Onderwijssysteem", "Belasting"],
         answer: 0,
         wrongHints: [null, "Dat zou 'amour de la France' zijn.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
@@ -227,10 +227,10 @@ const steps = [
         q: "**Le Monde** is welke krant?",
         options: ["Kwaliteits-krant, links-liberaal","Rechts-extreem","Sport-krant","Tabloid"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — algemeen nieuws.", "Niet — Le Monde is geen sensatiekrant."],
+        wrongHints: [null, "Niet — Le Monde staat eerder links van het midden.", "Niet — algemeen nieuws.", "Niet — Le Monde is geen sensatiekrant."],
         uitlegPad: {
           stappen: [{ titel: "Krant van referentie", tekst: "**Le Monde** = belangrijkste kwaliteits-krant Frankrijk. Centrum-links, oprichting 1944. Internationale invloed. CSE-bron-favoriet. Tegenstellingen: Le Figaro (rechts), Libération (links)." }],
-          niveaus: { basis: "Kwaliteits-krant.", simpeler: "Le Monde = kwaliteitskrant", nogSimpeler: "A." },
+          niveaus: { basis: "Kwaliteits-krant.", simpeler: "Le Monde = kwaliteitskrant", nogSimpeler: "Kwaliteitskrant" },
         },
       },
       {
@@ -250,7 +250,7 @@ const steps = [
         wrongHints: [null, "Niet — dat zou *quartier chic* zijn.", "Niet — banlieue is rand.", "Niet — buiten stad maar urbaan."],
         uitlegPad: {
           stappen: [{ titel: "Banlieue = sociale kwestie", tekst: "**Banlieue** = letterlijk 'voorstad'. In Franse context vaak **sociaal kwetsbare wijk** rond grote steden (Parijs, Lyon, Marseille). Veel woningbouw uit jaren '60-70, hoge werkloosheid, soms etnische spanning. Onderwerp van politieke debatten + rellen (2005, 2023)." }],
-          niveaus: { basis: "Sociaal-kwetsbaar.", simpeler: "Banlieue = arme voorstad", nogSimpeler: "A." },
+          niveaus: { basis: "Sociaal-kwetsbaar.", simpeler: "Banlieue = arme voorstad", nogSimpeler: "Kwetsbare voorstad" },
         },
       },
       {
@@ -275,9 +275,9 @@ const steps = [
     checks: [
       {
         q: "*Actuellement* betekent:",
-        options: ["Momenteel","Daadwerkelijk","Vandaag","Vroeger"],
+        options: ["Momenteel", "Daadwerkelijk", "Binnenkort", "Vroeger"],
         answer: 0,
-        wrongHints: [null, "Faux ami met EN 'actually'.", "Niet — *aujourd'hui*.", "Tegenovergesteld."],
+        wrongHints: [null, "Faux ami met EN 'actually'.", "Niet — dat is *bientôt*.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [{ titel: "Faux ami met EN", tekst: "**Actuellement** = momenteel / op dit moment / tegenwoordig. **Niet** 'actually' (daadwerkelijk) = *en fait, vraiment*. Toets-favoriete val voor leerlingen die ook Engels leren." }],
           niveaus: { basis: "Momenteel.", simpeler: "Actuellement = nu", nogSimpeler: "Nu" },
@@ -290,27 +290,27 @@ const steps = [
         wrongHints: [null, "Niet — dat is *ensuite*.", "Niet — dat is *donc*.", "Klinkt zo maar nee."],
         uitlegPad: {
           stappen: [{ titel: "Tegenstelling", tekst: "**En revanche** = daarentegen, anderzijds. Markeert contrast tussen 2 ideeën. Synoniemen: *par contre, à l'inverse*." }],
-          niveaus: { basis: "Daarentegen.", simpeler: "En revanche = daarentegen", nogSimpeler: "A." },
+          niveaus: { basis: "Daarentegen.", simpeler: "En revanche = daarentegen", nogSimpeler: "Daarentegen" },
         },
       },
       {
         q: "**Annie Ernaux** is:",
-        options: ["Frans schrijfster, Nobelprijs 2022","Politica","Zangeres","Sportster"],
+        options: ["Schrijfster", "Politica", "Zangeres", "Sportster"],
         answer: 0,
         wrongHints: [null, "Niet — ze zat nooit in de politiek.", "Niet — ze is niet bekend van muziek.", "Niet — ze is niet bekend van sport."],
         uitlegPad: {
           stappen: [{ titel: "Recent Nobel", tekst: "**Annie Ernaux** (geb. 1940) won **Nobelprijs Literatuur 2022**. Autobiografische romans over werkende klasse, vrouwelijke ervaring. Bekendste werken: *La Place*, *Les Années*, *L'Événement*. Vaak in CSE-teksten over hedendaagse Franse literatuur." }],
-          niveaus: { basis: "Schrijfster Nobel.", simpeler: "Ernaux = schrijver-Nobel", nogSimpeler: "A." },
+          niveaus: { basis: "Schrijfster Nobel.", simpeler: "Ernaux = schrijver-Nobel", nogSimpeler: "Schrijfster" },
         },
       },
       {
         q: "Tijdens **CSE** mag je:",
-        options: ["Een tweetalig woordenboek gebruiken (geen eigen aantekeningen)","Telefoon","Vertaal-app","Internet"],
+        options: ["Een tweetalig woordenboek", "Telefoon", "Vertaal-app", "Internet"],
         answer: 0,
         wrongHints: [null, "Een telefoon kan online en foto's opslaan — zou dat eerlijk zijn bij een examen dat jóuw kennis toetst?", "Een vertaal-app doet het denkwerk voor je — mag zoiets dan bij een táálexamen?", "Met internet kun je alles opzoeken — blijft een examen dan nog een eerlijke test?"],
         uitlegPad: {
           stappen: [{ titel: "Alleen woordenboeken", tekst: "**Toegestaan**: een papieren tweetalig woordenboek (Frans-Nederlands / Nederlands-Frans). **Verboden**: telefoon, smartwatch, tablet, internet, vertaal-app, eigen aantekeningen, andere boeken. Bij overtreding: examen ongeldig." }],
-          niveaus: { basis: "Tweetalig woordenboek.", simpeler: "Alleen een woordenboek", nogSimpeler: "A." },
+          niveaus: { basis: "Tweetalig woordenboek.", simpeler: "Alleen een woordenboek", nogSimpeler: "Woordenboek" },
         },
       },
       {

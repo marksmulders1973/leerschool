@@ -103,16 +103,21 @@ eraf10[0].uitlegPad = {
 
 // STAP 4 — over de 10 heen
 const over10 = [];
+const over10Gehad = new Set(); // nakijkronde 6 okt 2026: "8 + 8" stond er twee keer in
 for (let i = 0; i < 5; i++) {
   const erbijSom = i % 2 === 0;
   if (erbijSom) {
-    const a = tussen(5, 9); const b = tussen(11 - a, 9);
+    let a = tussen(5, 9); let b = tussen(11 - a, 9);
+    for (let p = 0; p < 20 && over10Gehad.has(`${a}+${b}`); p++) { a = tussen(5, 9); b = tussen(11 - a, 9); }
+    over10Gehad.add(`${a}+${b}`);
     const o = opties(a + b, [a + b - 1, a + b + 1, a + b - 10]);
-    over10.push({ q: `**${a} + ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Maak eerst 10: ${a} + ${10 - a} = 10. Dan nog ${b - (10 - a)} erbij.`) });
+    over10.push({ q: `**${a} + ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Maak eerst 10: hoeveel moet er bij ${a} om 10 te krijgen? Doe daarna de rest van ${b} erbij.`) });
   } else {
-    const a = tussen(11, 18); const b = tussen(a - 9, 9);
+    let a = tussen(11, 18); let b = tussen(a - 9, 9);
+    for (let p = 0; p < 20 && over10Gehad.has(`${a}-${b}`); p++) { a = tussen(11, 18); b = tussen(a - 9, 9); }
+    over10Gehad.add(`${a}-${b}`);
     const o = opties(a - b, [a - b + 1, a - b - 1, a - b + 10]);
-    over10.push({ q: `**${a} − ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Ga eerst naar 10: ${a} − ${a - 10} = 10. Dan nog ${b - (a - 10)} eraf.`) });
+    over10.push({ q: `**${a} − ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Ga eerst terug naar 10: hoeveel moet er van ${a} af om 10 te krijgen? Haal daarna de rest van ${b} eraf.`) });
   }
 }
 over10[0].uitlegPad = {

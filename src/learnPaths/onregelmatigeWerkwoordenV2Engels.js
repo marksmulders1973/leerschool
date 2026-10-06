@@ -106,8 +106,8 @@ const steps = [
         wrongHints: [
           null,
           "Dat is V1 (infinitive) — verleden tijd is anders.",
-          "Geen Engels — Nederlands.",
-          "Geen Engels.",
+          "Geen Engelse vorm — let op de uitgang.",
+          "Dat is een Nederlands woord, geen vorm van walk.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Regelmatig +ed", tekst: "walk + ed = walked." }],
@@ -150,7 +150,7 @@ const steps = [
           "Na have/has/had",
           "Bij tegenwoordige tijd",
           "Als basisvorm",
-          "Bij hulpwerkwoorden",
+          "Na will/can/must",
         ],
         answer: 0,
         wrongHints: [
@@ -321,7 +321,7 @@ const steps = [
           "Eat is onregelmatig.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "eat-ate-eaten", tekst: "V3 = eaten (groep 5, -en eind)." }],
+          stappen: [{ titel: "eat-ate-eaten", tekst: "V3 = eaten (-en aan het eind)." }],
           woorden: [{ woord: "eaten", uitleg: "V3 van eat" }],
           theorie: "Veel V3 eindigt op -en/-n.",
           voorbeelden: [{ type: "voorbeeld", tekst: "I have eaten breakfast" }],
@@ -495,7 +495,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [{ titel: "win = i-o-o", tekst: "Win-won-won. V2 = V3 = won." }],
-          woorden: [{ woord: "i-o-o groep", uitleg: "win, spin, dig, stick, hang" }],
+          woorden: [{ woord: "i-o-o groep", uitleg: "win → won (verwant: dig → dug, stick → stuck met u)" }],
           theorie: "ABB-patroon met klinker-o in V2/V3.",
           voorbeelden: [{ type: "voorbeeld", tekst: "win→won, dig→dug" }],
           basiskennis: [{ onderwerp: "ABB", uitleg: "minder werk dan i-a-u" }],
@@ -514,7 +514,7 @@ const steps = [
         ],
         uitlegPad: {
           stappen: [{ titel: "write-wrote-written", tekst: "V3 = written (-en eind)." }],
-          woorden: [{ woord: "groep 5", uitleg: "V3 op -en" }],
+          woorden: [{ woord: "-en-groep", uitleg: "V3 op -en" }],
           theorie: "Write/ride/drive/rise: i-o-i+en patroon.",
           voorbeelden: [{ type: "voorbeeld", tekst: "write→wrote→written" }],
           basiskennis: [{ onderwerp: "-tt", uitleg: "verdubbeling van t" }],
@@ -555,7 +555,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Onregelmatig — geen -ed. V3 = read (uitgesproken als 'red').",
+          "Onregelmatig — geen -ed. Denk aan het AAA-patroon.",
           "Geen Engelse spelling — wel zo uitgesproken.",
           "-ing vorm past hier niet (geen continuous).",
         ],
@@ -621,7 +621,7 @@ const steps = [
           woorden: [{ woord: "broke", uitleg: "V2 van break" }],
           theorie: "Past simple bij vast tijdstip → V2.",
           voorbeelden: [{ type: "voorbeeld", tekst: "He broke his arm last week" }],
-          basiskennis: [{ onderwerp: "groep 5", uitleg: "V3 = broken" }],
+          basiskennis: [{ onderwerp: "-en-groep", uitleg: "V3 = broken" }],
           niveaus: { basis: "broke.", simpeler: "V2 = broke.", nogSimpeler: "broke." },
         },
       },

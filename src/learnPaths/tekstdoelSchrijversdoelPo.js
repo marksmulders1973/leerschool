@@ -822,7 +822,7 @@ const steps = [
       {
         q: "Aan welke aanwijzing zie je het DUIDELIJKST dat deze tekst niet voor volwassenen is geschreven?",
         options: [
-          "De schrijver gebruikt overal 'jij' en legt moeilijke dingen meteen uit",
+          "De schrijver spreekt de lezer steeds aan met 'jij'",
           "De tekst gaat over een dier",
           "De tekst heeft vier alinea's",
           "De tekst heeft een titel met een streepje",
@@ -891,7 +891,7 @@ const steps = [
         q: "Een schoolkrant publiceert dit stukje: *\"Vorige week won onze klas de spellingscompetitie. We mochten van de meester kiezen: pizza of patat. We kozen pizza — en die was heerlijk!\"* Wat is het tekstdoel?",
         options: [
           "Amuseren — een leuk verhaal vertellen",
-          "Informeren — feiten geven over spellen",
+          "Informeren — uitleggen hoe een spellingscompetitie werkt",
           "Overtuigen — pizza is beter dan patat",
           "Instrueren — uitleggen hoe je snel spelt",
         ],

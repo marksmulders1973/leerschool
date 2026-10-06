@@ -156,7 +156,7 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
       {
         q: "Wat doet een verwijswoord in een tekst?",
         options: [
-          "Het wijst naar iemand of iets dat (meestal eerder) in de tekst genoemd is",
+          "Het wijst naar iemand of iets uit de tekst",
           "Het maakt de zin extra lang en moeilijk",
           "Het geeft de mening van de schrijver",
           "Het is altijd de naam van een persoon",
@@ -194,12 +194,12 @@ Vul je gevonden antwoord in op de plek van het verwijswoord. Klinkt de zin dan n
       },
       {
         q: "*\"Mijn fiets stond voor de deur. Die was lek.\"* — Naar wat verwijst 'die'?",
-        options: ["De fiets (de band was lek)", "De deur", "Mijn", "De straat"],
+        options: ["De fiets", "De deur", "De bel", "De straat"],
         answer: 0,
         wrongHints: [
           null,
           "Kan een deur 'lek' zijn? Zoek iets dat lek kan zijn vlak vóór 'die'.",
-          "'Mijn' is geen zelfstandig ding dat lek kan zijn. Zoek het dichtstbijzijnde woord dat past.",
+          "Er wordt helemaal geen bel genoemd. Zoek terug naar iets dat lek kan zijn.",
           null,
         ],
         uitlegPad: {
@@ -371,7 +371,7 @@ Let op: het antwoord is meestal het **laatst genoemde** woord dat past. In *"Fen
       },
       {
         q: "*\"Snuffel kreeg elke dag een brokje. Fenna verstopte er een pilletje in.\"* — Naar wat verwijst 'er'?",
-        options: ["In het brokje (de plek waar het pilletje in gaat)", "De dierenarts", "Het doosje", "Fenna's vader"],
+        options: ["Het brokje", "De dierenarts", "Het doosje", "Fenna's vader"],
         answer: 0,
         wrongHints: [
           null,
@@ -472,7 +472,7 @@ De strategie blijft hetzelfde: vind het verwijswoord, zoek (terug óf vooruit), 
       {
         q: "*\"Mees vergat zijn gymtas. Dat gebeurt hem wel vaker.\"* — Naar wat verwijst 'dat'?",
         options: [
-          "Dat Mees zijn gymtas vergat (de hele gebeurtenis)",
+          "Dat Mees zijn gymtas vergat",
           "De gymtas",
           "Mees",
           "De gymles",

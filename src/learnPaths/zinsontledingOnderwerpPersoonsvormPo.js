@@ -28,7 +28,7 @@ const steps = [
         q: "Wat is de persoonsvorm? *De kinderen spelen buiten.*",
         options: ["spelen", "kinderen", "buiten", "De"],
         answer: 0,
-        wrongHints: [null, "Dat is geen werkwoord — wie of wat doet iets?", "Dat zegt wáár, niet wat er gebeurt.", "Een lidwoord verandert nooit met de tijd."],
+        wrongHints: [null, "Dat zijn wie het doen — welk woord zegt wat ze dóén?", "Dat zegt wáár, niet wat er gebeurt.", "Een lidwoord verandert nooit met de tijd."],
         uitlegPad: {
           stappen: [{ titel: "Verander de tijd", tekst: "Zet de zin in de verleden tijd: 'De kinderen speelden buiten.' Het woord dat verandert is 'spelen' → de persoonsvorm." }],
           niveaus: {
@@ -114,9 +114,9 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Dat is het onderwerp.", "Dat zegt wanneer.", "Dat zegt waarheen, geen werkwoord."],
         uitlegPad: {
-          stappen: [{ titel: "Vraagzin: pv staat vooraan", tekst: "In een vraagzin staat de persoonsvorm altijd vooraan. 'Gaan' staat vooraan → persoonsvorm." }],
+          stappen: [{ titel: "Ja/nee-vraag: pv staat vooraan", tekst: "In een ja/nee-vraag staat de persoonsvorm altijd vooraan. 'Gaan' staat vooraan → persoonsvorm." }],
           niveaus: {
-            basis: "In een vraagzin staat de persoonsvorm als eerste woord.",
+            basis: "In een ja/nee-vraag staat de persoonsvorm als eerste woord.",
             simpeler: "Welk woord staat helemaal vooraan in deze vraag?",
             nogSimpeler: "Gaan staat vooraan: is dat het werkwoord?",
           },
@@ -275,7 +275,7 @@ const steps = [
         q: "Vul goed in: *Het meisje en haar broer ___ in de tuin.*",
         options: ["spelen", "speelt", "speelde", "spelend"],
         answer: 0,
-        wrongHints: [null, "Twee personen samen ('en') — is dat enkelvoud of meervoud?", "Dat is verleden tijd; de zin is in de tegenwoordige tijd.", "Dat is geen persoonsvorm."],
+        wrongHints: [null, "Twee personen samen ('en') — is dat enkelvoud of meervoud?", "Ook in de verleden tijd telt het aantal: is 'speelde' enkelvoud of meervoud?", "Dat is geen persoonsvorm."],
         uitlegPad: {
           stappen: [{ titel: "'A en B' is samen meervoud", tekst: "Het meisje én haar broer = twee personen = meervoud, dus 'spelen'." }],
           niveaus: {
@@ -341,7 +341,7 @@ const steps = [
         q: "Vul goed in: *Mijn broer en ik ___ elke avond samen tv.* (kijken)",
         options: ["kijken", "kijkt", "kijkend", "keek"],
         answer: 0,
-        wrongHints: [null, "Mijn broer én ik zijn samen twee personen → meervoud.", "Dat is geen persoonsvorm.", "Dat is de verleden tijd; de zin is in de tegenwoordige tijd."],
+        wrongHints: [null, "Mijn broer én ik zijn samen twee personen → meervoud.", "Dat is geen persoonsvorm.", "Ook in de verleden tijd telt het aantal: is 'keek' enkelvoud of meervoud?"],
         uitlegPad: {
           stappen: [{ titel: "'A en ik' = meervoud", tekst: "'Mijn broer en ik' zijn samen twee personen → meervoud → 'kijken' (niet 'kijkt')." }],
           niveaus: {

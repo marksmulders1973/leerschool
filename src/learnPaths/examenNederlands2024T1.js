@@ -99,7 +99,7 @@ const steps = [
         "De geschiedenis van Engeland gaat verloren door erosie en stijgende zeespiegel.",
         "De kustlijn van Engeland erodeert door klimaatverandering en er moeten maatregelen worden getroffen.",
         "Engelse dorpen verdwijnen omdat de Britse regering geen maatregelen neemt, anders dan Nederland.",
-        "Erosie is een eeuwenoud proces dat sneller gaat — er moet nagedacht worden over WAT beschermd moet worden.",
+        "Erosie is een eeuwenoud proces dat sneller gaat — er moet nagedacht worden over wat beschermd moet worden.",
       ],
       answer: 3,
       wrongHints: [

@@ -246,7 +246,7 @@ const steps = [
         q: "*Vandaag is de schoolreis. Eerst rijdt de bus naar de dierentuin. Daar ziet groep 4 de apen en de olifanten. Lena vindt de apen het leukst, want ze doen gek. Daarna eet iedereen een broodje in het gras. Ten slotte rijdt de bus weer terug naar school.*\n\nWat doet groep 4 **ná** het kijken naar de dieren?",
         options: ["een broodje eten", "naar huis gaan", "zwemmen", "nog een keer naar de apen"],
         answer: 0,
-        wrongHints: [null, "Dat is pas op het allerlaatst.", "Staat dat in de tekst?", "Staat dat in de tekst?"],
+        wrongHints: [null, "Staat dat er echt? Kijk wat er na de dieren komt.", "Staat dat in de tekst?", "Staat dat in de tekst?"],
         uitlegPad: {
           stappen: [{ titel: "Volgorde-woord 'daarna'", tekst: "*Daarna eet iedereen een broodje.* Het woordje **daarna** zegt: dit komt na de dieren." }],
           niveaus: { basis: "Na de dieren: broodje eten.", simpeler: "Welke zin begint met 'Daarna'?", nogSimpeler: "broodje eten" },

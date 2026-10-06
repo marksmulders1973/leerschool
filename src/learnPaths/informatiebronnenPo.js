@@ -99,7 +99,7 @@ const steps = [
   {
     title: "Woordenboek — alfabetisch zoeken",
     explanation:
-      "In een woordenboek staan woorden **alfabetisch**: van A naar Z. De toets test of je snel kunt zoeken.\n\n**Alfabetische volgorde — Toets-regels**:\n1. Eerst kijken naar de **eerste letter** van het woord.\n2. Gelijke eerste letter? → vergelijk **tweede letter**.\n3. Gelijke tweede ook? → derde letter, etc.\n\n**Voorbeeld**: 'banaan' komt voor 'beer' (a komt vóór e in 'b**a**naan' vs 'b**e**er').\n\n**Toets-bladzijde-truc**: bovenaan elke bladzijde staan **trefwoorden** (eerste + laatste woord op die bladzijde). Bv. 'baan — bever'. Het gezochte woord 'banaan' valt daarbinnen → die bladzijde.\n\n**Trefwoord vinden**:\n• 'kat' opzoeken? → 'k' → 'ka...' → 'kat'.\n• Hoofdvorm gebruiken: 'liep' → kijken bij 'lopen' (hele werkwoord). 'kinderen' → 'kind' (enkelvoud).\n\n**Toets-letters die op elkaar lijken**:\n• Geen onderscheid IJ vs Y in oudere woordenboeken — kijk bij I.\n• Ons (Nederlandse) alfabet: A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z (26 letters).",
+      "In een woordenboek staan woorden **alfabetisch**: van A naar Z. De toets test of je snel kunt zoeken.\n\n**Alfabetische volgorde — Toets-regels**:\n1. Eerst kijken naar de **eerste letter** van het woord.\n2. Gelijke eerste letter? → vergelijk **tweede letter**.\n3. Gelijke tweede ook? → derde letter, etc.\n\n**Voorbeeld**: 'banaan' komt voor 'beer' (a komt vóór e in 'b**a**naan' vs 'b**e**er').\n\n**Toets-bladzijde-truc**: bovenaan elke bladzijde staan **trefwoorden** (eerste + laatste woord op die bladzijde). Bv. 'baan — bever'. Het gezochte woord 'banaan' valt daarbinnen → die bladzijde.\n\n**Trefwoord vinden**:\n• 'kat' opzoeken? → 'k' → 'ka...' → 'kat'.\n• Hoofdvorm gebruiken: 'liep' → kijken bij 'lopen' (hele werkwoord). 'kinderen' → 'kind' (enkelvoud).\n\n**Toets-letters die op elkaar lijken**:\n• De IJ zoek je in het woordenboek bij de I (als i + j). Alleen in sommige oude lijsten, zoals telefoonboeken, stond de IJ bij de Y.\n• Ons (Nederlandse) alfabet: A-B-C-D-E-F-G-H-I-J-K-L-M-N-O-P-Q-R-S-T-U-V-W-X-Y-Z (26 letters).",
     checks: [
       {
         q: "In het woordenboek: welk woord komt **eerst** alfabetisch?",
@@ -186,7 +186,7 @@ const steps = [
       },
       {
         q: "Je zoekt in een geschiedenisboek **alles over 'Karel V'**. Welk deel kun je het beste raadplegen?",
-        options: ["Index — daar staan alle pagina's met Karel V","Inhoudsopgave","Glossarium","Voorwoord"],
+        options: ["Index","Inhoudsopgave","Glossarium","Voorwoord"],
         answer: 0,
         wrongHints: [null, "Inhoudsopgave noemt hoofdstuk, maar index alle plekken.", "Glossarium is betekenis, geen plek-vinder.", "Voorwoord is niet zoek-tool."],
         uitlegPad: {
@@ -208,7 +208,7 @@ const steps = [
       },
       {
         q: "In een bibliotheek vind je **een spannende roman over een speurder**. Waar zoek je?",
-        options: ["Bij fictie — alfabetisch op schrijver","Bij non-fictie","Bij naslag","Bij stripboeken"],
+        options: ["Bij fictie","Bij non-fictie","Bij naslag","Bij stripboeken"],
         answer: 0,
         wrongHints: [null, "Non-fictie = waar gebeurd. Roman = verzonnen.", "Naslag = woordenboeken/encyclopedieën.", "Niet — geen strip."],
         uitlegPad: {
@@ -241,7 +241,7 @@ const steps = [
     checks: [
       {
         q: "Welke bron is **het meest betrouwbaar** voor info over de Tweede Wereldoorlog?",
-        options: ["NIOD-website (Nederlands oorlogsinstituut)","Random YouTube-vlogger","TikTok-post zonder bron","Anonieme blog"],
+        options: ["Website van oorlogsinstituut NIOD","Video van een willekeurige vlogger","TikTok-filmpje zonder bron","Blog zonder naam van de schrijver"],
         answer: 0,
         wrongHints: [null, "Vlogger = vaak mening, geen historicus.", "TikTok zonder bron = onbetrouwbaar.", "Anoniem = wie schreef? Niet te checken."],
         uitlegPad: {
@@ -322,7 +322,7 @@ const steps = [
         q: "Welk woord komt **derde** alfabetisch: kraan, krant, kralen?",
         options: ["krant","kraan","kralen","alle drie"],
         answer: 0,
-        wrongHints: [null, "Dat is de eerste — kraan < kralen < krant.", "Bijna — dat is de tweede. Vergelijk de 4e letter: kraan < kralen < krant.", "Niet — er IS een volgorde."],
+        wrongHints: [null, "Niet de derde — vergelijk de 4e letter van alle drie de woorden.", "Bijna — vergelijk de 4e letter van alle drie de woorden nog eens.", "Niet — er IS een volgorde."],
         uitlegPad: {
           stappen: [{ titel: "4e letter vergelijken bij gelijke 1-3", tekst: "Alle 3 beginnen met 'kra'. Kijk 4e letter: kra**a**n (a) < kra**l**en (l) < kra**n**t (n). A<L<N → kraan, kralen, krant. Derde = krant." }],
           niveaus: { basis: "Krant derde.", simpeler: "Volgorde: kraan, kralen, krant → 3e = krant.", nogSimpeler: "Krant" },
@@ -330,9 +330,9 @@ const steps = [
       },
       {
         q: "Een tekst zegt: *'Wist je dat de maan eigenlijk een spiegel is? Deel deze waarheid!'* Wat doe je?",
-        options: ["Niet delen, niet geloven — geen bron + raar","Direct delen op WhatsApp","Mailen naar de juf","Op Wikipedia zetten"],
+        options: ["Niet delen en eerst controleren","Direct delen op WhatsApp","Doorsturen naar je vrienden","Op Wikipedia zetten"],
         answer: 0,
-        wrongHints: [null, "Niet — fake news verspreiden!", "Niet voor je gecheckt hebt.", "Niet bewerken zonder bron."],
+        wrongHints: [null, "Niet — fake news verspreiden!", "Niet — zo verspreid je het ongecontroleerd verder.", "Niet bewerken zonder bron."],
         uitlegPad: {
           stappen: [{ titel: "Fake news-signaal", tekst: "Sensationele 'wist je dat' + 'deel!' + onlogische claim ('maan = spiegel') + geen bronvermelding = **fake news**. Niet delen, niet geloven, eerst check via NASA of wetenschapssite." }],
           niveaus: { basis: "Niet delen.", simpeler: "Geen bron + 'deel!' = fake.", nogSimpeler: "Fake" },

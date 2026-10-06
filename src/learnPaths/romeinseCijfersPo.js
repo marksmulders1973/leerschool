@@ -144,7 +144,7 @@ const steps = [
         q: "Wat is **VI**?",
         options: ["6", "4", "7", "11"],
         answer: 0,
-        wrongHints: [null, "Dat zou aftrekken zijn (I vóór V).", "Reken nog eens: 5 + 1.", "Dat zou XI zijn (X en dan I)."],
+        wrongHints: [null, "Dat zou aftrekken zijn (I vóór V).", "Te groot — tel nog eens wat V en I samen waard zijn.", "Dat zou XI zijn (X en dan I)."],
         uitlegPad: {
           stappen: [{ titel: "5 + 1", tekst: "I staat ná V, dus optellen: 5 + 1 = 6." }],
           niveaus: {
@@ -156,9 +156,9 @@ const steps = [
       },
       {
         q: "Wat is **XV**?",
-        options: ["15", "5", "20", "115"],
+        options: ["15", "5", "20", "105"],
         answer: 0,
-        wrongHints: [null, "Vergeet de X niet (10).", "Dat zou XX zijn.", "Plak de getallen niet aan elkaar."],
+        wrongHints: [null, "Vergeet de X niet (10).", "Dat zou XX zijn.", "Plak de getallen niet aan elkaar — tel ze op."],
         uitlegPad: {
           stappen: [{ titel: "10 + 5", tekst: "X = 10, V = 5. V staat erachter, dus 10 + 5 = 15." }],
           niveaus: {
@@ -186,7 +186,7 @@ const steps = [
         q: "Wat is **LX**?",
         options: ["60", "40", "55", "15"],
         answer: 0,
-        wrongHints: [null, "X staat ná L, dus optellen, niet aftrekken.", "Reken: 50 + 10.", "Dat zou XV zijn."],
+        wrongHints: [null, "X staat ná L, dus optellen, niet aftrekken.", "Te weinig — hoeveel is X waard?", "Dat zou XV zijn."],
         uitlegPad: {
           stappen: [{ titel: "50 + 10", tekst: "L = 50, X = 10. X staat erachter, dus 50 + 10 = 60." }],
           niveaus: {
@@ -200,7 +200,7 @@ const steps = [
         q: "Wat is **VIII**?",
         options: ["8", "9", "3", "7"],
         answer: 0,
-        wrongHints: [null, "Dat zou IX zijn.", "Dat zijn drie I'tjes alleen.", "Reken: 5 + 1 + 1 + 1."],
+        wrongHints: [null, "Dat zou IX zijn.", "Dat zijn drie I'tjes alleen.", "Tel de I'tjes achter de V nog eens."],
         uitlegPad: {
           stappen: [{ titel: "5 + 3", tekst: "V = 5, III = 3. V staat links van de I's, dus optellen: 5 + 3 = 8." }],
           niveaus: {
@@ -270,7 +270,7 @@ const steps = [
         q: "Hoe schrijf je **40** in Romeinse cijfers?",
         options: ["XL", "LX", "XXXX", "VL"],
         answer: 0,
-        wrongHints: [null, "Dat is 60 (optellen).", "Vier dezelfde letters mag niet.", "Zo werkt aftrekken niet — gebruik X vóór L."],
+        wrongHints: [null, "Dat is 60 (optellen).", "Vier dezelfde letters mag niet.", "Zo werkt aftrekken niet — een V zet je nooit vóór een grotere letter."],
         uitlegPad: {
           stappen: [{ titel: "50 − 10", tekst: "40 = 50 − 10 = X vóór L = XL." }],
           niveaus: {
@@ -284,7 +284,7 @@ const steps = [
         q: "Wat is **XC**?",
         options: ["90", "110", "40", "85"],
         answer: 0,
-        wrongHints: [null, "Dat zou CX zijn (optellen).", "Dat is XL.", "Zo werkt het niet — het is 100 − 10."],
+        wrongHints: [null, "Dat zou CX zijn (optellen).", "Dat is XL.", "Kleiner vóór groter: tel je dan op of trek je af?"],
         uitlegPad: {
           stappen: [{ titel: "100 − 10", tekst: "X staat vóór C, dus aftrekken: 100 − 10 = 90." }],
           niveaus: {
@@ -312,7 +312,7 @@ const steps = [
         q: "Wat is **CD**?",
         options: ["400", "600", "100", "440"],
         answer: 0,
-        wrongHints: [null, "Dat zou DC zijn (optellen: 500 + 100).", "Dat is alleen een C.", "Reken: 500 − 100."],
+        wrongHints: [null, "Dat zou DC zijn (optellen: 500 + 100).", "Dat is alleen een C.", "Er staan maar twee letters — kleiner vóór groter: optellen of aftrekken?"],
         uitlegPad: {
           stappen: [{ titel: "500 − 100", tekst: "C staat vóór D (C is kleiner dan D), dus aftrekken: 500 − 100 = 400." }],
           niveaus: {
@@ -339,7 +339,7 @@ const steps = [
         q: "Wat is **MM**?",
         options: ["2000", "1000", "2200", "3000"],
         answer: 0,
-        wrongHints: [null, "Dat is maar één M.", "Plak de getallen niet aan elkaar.", "Dat zou MMM zijn."],
+        wrongHints: [null, "Dat is maar één M.", "Elke M is precies 1000 — er komt niets bij.", "Dat zou MMM zijn."],
         uitlegPad: {
           stappen: [{ titel: "1000 + 1000", tekst: "M = 1000. Twee M'en achter elkaar: 1000 + 1000 = 2000." }],
           niveaus: {
@@ -364,12 +364,12 @@ const steps = [
         },
       },
       {
-        q: "Op een ouderwetse klok staat bij het cijfer 4 het symbool **IV**. Hoe laat wijst de wijzer als hij daar staat?",
+        q: "Op een ouderwetse klok wijst de kleine wijzer precies naar **IV** en de grote wijzer naar **XII**. Hoe laat is het?",
         options: ["4 uur", "6 uur", "9 uur", "1 uur"],
         answer: 0,
         wrongHints: [null, "VI zou 6 zijn; hier staat IV.", "Dat is IX.", "Dat is I."],
         uitlegPad: {
-          stappen: [{ titel: "IV = 4", tekst: "IV betekent 5 − 1 = 4. De wijzer staat dus op 4 uur." }],
+          stappen: [{ titel: "IV = 4", tekst: "IV betekent 5 − 1 = 4. De kleine wijzer wijst dus naar 4: het is 4 uur." }],
           niveaus: {
             basis: "IV = 4, dus 4 uur.",
             simpeler: "Kleine I links van V → 5 − 1.",
@@ -395,7 +395,7 @@ const steps = [
         q: "Op een gebouw staat **MCMXCIX**. Dat is het bouwjaar. Welk jaar is dat?",
         options: ["1999", "1899", "2009", "1909"],
         answer: 0,
-        wrongHints: [null, "Splits het van links naar rechts op. Let op: een kleiner teken vóór een groter teken betekent aftrekken (zoals CM en IX).", "Reken de stukjes één voor één uit.", "CM is 900, niet 800."],
+        wrongHints: [null, "Kijk nog eens naar CM: staat de C vóór of ná de M?", "Reken de stukjes één voor één uit.", "Je mist een stukje — hoeveel is XC?"],
         uitlegPad: {
           stappen: [{ titel: "Stukje voor stukje", tekst: "M (1000) + CM (900) + XC (90) + IX (9) = 1.999." }],
           niveaus: {

@@ -180,7 +180,7 @@ const steps = [
         q: "Welke richting heeft zwaartekracht op aarde?",
         options: ["Verticaal naar beneden", "Verticaal omhoog", "Naar het oosten", "Geen vaste richting"],
         answer: 0,
-        wrongHints: [null, "Dan zou je niet vallen.", "Heeft niets met windrichting te maken.", "Naar middelpunt aarde — dat is naar beneden."],
+        wrongHints: [null, "Dan zou je niet vallen.", "Heeft niets met windrichting te maken.", "Ze heeft wél een vaste richting — waar vallen dingen naartoe?"],
         uitlegPad: {
           stappen: [{ titel: "Naar beneden = naar middelpunt aarde", tekst: "Zwaartekracht trekt alles naar het middelpunt van de aarde. Voor ons op het oppervlak = recht naar beneden (verticaal)." }],
           woorden: [{ woord: "verticaal", uitleg: "loodrecht op aardoppervlak" }],
@@ -225,7 +225,7 @@ const steps = [
         q: "In welke richting werkt wrijving?",
         options: ["Tegen de bewegingsrichting in", "In de bewegingsrichting", "Naar boven", "Geen vaste richting"],
         answer: 0,
-        wrongHints: [null, "Dan zou wrijving juist versnellen — onlogisch.", "Niet altijd verticaal.", "Wrijving heeft wél een vaste richting (tegen beweging)."],
+        wrongHints: [null, "Dan zou wrijving juist versnellen — onlogisch.", "Niet altijd verticaal.", "Wrijving heeft wél een vaste richting — wat doet wrijving met je snelheid?"],
         uitlegPad: {
           stappen: [{ titel: "Wrijving = tegen beweging in", tekst: "Wrijving werkt altijd tegenovergesteld aan de bewegingsrichting. Beweeg je naar rechts, dan werkt wrijving naar links. Daarom remt het je af." }],
           woorden: [{ woord: "Fw", uitleg: "symbool wrijvingskracht" }],
@@ -272,7 +272,7 @@ const steps = [
         q: "Een veer met C = 100 N/m wordt 0,30 m uitgerekt. Wat is Fv?",
         options: ["30 N", "100 N", "0,30 N", "330 N"],
         answer: 0,
-        wrongHints: [null, "Dat is C — je moet vermenigvuldigen met u.", "Te klein — je moet C en u vermenigvuldigen, niet delen.", "Optellen i.p.v. vermenigvuldigen."],
+        wrongHints: [null, "Dat is C — je moet vermenigvuldigen met u.", "Te klein — dat is alleen u; vermenigvuldig nog met C.", "Te groot — je deelde C door u in plaats van te vermenigvuldigen."],
         uitlegPad: {
           stappen: [{ titel: "Fv = C × u = 100 × 0,30 = 30 N", tekst: "Wet van Hooke: veerkracht = veerconstante × uitwijking. 100 N/m × 0,30 m = 30 N." }],
           woorden: [{ woord: "veerconstante C", uitleg: "hoe stug de veer is (N/m)" }],
@@ -341,7 +341,7 @@ const steps = [
       {
         q: "Waarom vlieg je naar voren als de auto remt?",
         options: [
-          "Je lichaam wil door met dezelfde snelheid (traagheid)",
+          "Je lichaam wil door met dezelfde snelheid",
           "Een kracht duwt je naar voren",
           "De auto versnelt",
           "Door de zwaartekracht",
@@ -410,7 +410,7 @@ const steps = [
   },
   {
     title: "Newton 3 — Actie = reactie",
-    explanation: "**Wet van Newton 3**: als voorwerp A een kracht op voorwerp B uitoefent, oefent voorwerp B een **even grote tegengestelde kracht** uit op A.\n\nKortweg: **actie = -reactie**.\n\n**Voorbeelden**:\n• Schaatser duwt de muur weg → muur duwt schaatser even hard terug → schaatser glijdt achteruit.\n• Een raket stoot heet gas naar beneden → gas duwt raket omhoog.\n• Je voet duwt op de grond bij lopen → grond duwt je voet terug omhoog → je beweegt vooruit.\n• Geweer afvuren: kogel naar voren → geweer wordt teruggeduwd ('terugslag').\n\n**Belangrijk**: actie en reactie werken op **verschillende voorwerpen**. Daarom heffen ze elkaar niet op (zoals krachten op één voorwerp soms wel doen).",
+    explanation: "**Wet van Newton 3**: als voorwerp A een kracht op voorwerp B uitoefent, oefent voorwerp B een **even grote tegengestelde kracht** uit op A.\n\nKortweg: **actie = -reactie**.\n\n**Voorbeelden**:\n• Schaatser duwt de muur weg → muur duwt schaatser even hard terug → schaatser glijdt achteruit.\n• Een raket stoot heet gas naar beneden → gas duwt raket omhoog.\n• Je voet duwt de grond naar achteren bij lopen → grond duwt je voet naar voren → je beweegt vooruit.\n• Geweer afvuren: kogel naar voren → geweer wordt teruggeduwd ('terugslag').\n\n**Belangrijk**: actie en reactie werken op **verschillende voorwerpen**. Daarom heffen ze elkaar niet op (zoals krachten op één voorwerp soms wel doen).",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="40" y="80" width="50" height="40" fill="${COLORS.mass}" stroke="${COLORS.text}" stroke-width="2"/>
 <text x="65" y="105" text-anchor="middle" fill="#fff" font-size="10" font-family="Arial">A</text>
@@ -541,9 +541,9 @@ const steps = [
       { q: "Eenheid van **kracht** is?", options: ["Newton (N)","Kilo (kg)","Meter (m)","Watt (W)"], answer: 0, wrongHints: [null,"Massa.","Lengte.","Vermogen."] },
       { q: "**Wrijving** werkt meestal ___ de bewegingsrichting?", options: ["Tegen","Mee","Loodrecht","Geen relatie"], answer: 0, wrongHints: [null,"Wrijving remt af.","Niet primair.","Wel relatie."] },
       { q: "Twee personen trekken aan touw: 10 N links, 15 N rechts. **Netto kracht** = ?", options: ["5 N rechts","25 N","5 N links","0 N"], answer: 0, wrongHints: [null,"Som — alleen bij dezelfde richting.","Verkeerde richting.","Niet gelijk."] },
-      { q: "**Zwaartekracht-versnelling** op aarde is ongeveer?", options: ["~10 m/s² (preciezer 9,81)","~5 m/s²","~100 m/s²","0 m/s²"], answer: 0, wrongHints: [null,"Te laag.","Te hoog.","Zwaartekracht bestaat."] },
+      { q: "**Zwaartekracht-versnelling** op aarde is ongeveer?", options: ["~10 m/s²","~5 m/s²","~100 m/s²","0 m/s²"], answer: 0, wrongHints: [null,"Te laag.","Te hoog.","Zwaartekracht bestaat."] },
       { q: "**Normaalkracht** werkt waar?", options: ["Loodrecht op het oppervlak","In bewegingsrichting","Tegen wrijving","Niet"], answer: 0, wrongHints: [null,"Dat is voortstuw-kracht.","Andere kracht.","Wel."] },
-      { q: "De **derde wet van Newton** zegt?", options: ["Actie = reactie (gelijk + tegengesteld)","Massa = constant","Snelheid maakt kracht","Geen wet"], answer: 0, wrongHints: [null,"Behoud massa — geen Newton 3.","F=ma niet zo.","Wel."] },
+      { q: "De **derde wet van Newton** zegt?", options: ["Actie = reactie","Massa = constant","Snelheid maakt kracht","Geen wet"], answer: 0, wrongHints: [null,"Behoud massa — geen Newton 3.","F=ma niet zo.","Wel."] },
       { q: "Een **veerkracht** is bv. de kracht in een ___?", options: ["Uitgerekt elastiek","Een blok hout","Een steen","Niets"], answer: 0, wrongHints: [null,"Niet elastisch.","Niet elastisch.","Wel iets."] },
       { q: "**Open vraag**: bereken zwaartekracht op 8 kg (g=10). Typ getal in Newton.", kind: "open", acceptedAnswers: ["80"], numericTolerance: 0, explanation: "Fz = m × g = 8 × 10 = 80 N." },
       { q: "**Open vraag**: massa 4 kg, versnelling 5 m/s². Hoe groot is F (in Newton)?", kind: "open", acceptedAnswers: ["20"], numericTolerance: 0, explanation: "F = m × a = 4 × 5 = 20 N." },

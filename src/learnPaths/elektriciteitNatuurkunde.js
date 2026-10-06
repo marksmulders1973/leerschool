@@ -257,7 +257,7 @@ const steps = [
       {
         q: "Wat is **kortsluiting**?",
         options: [
-          "Stroom kan terug naar de bron zonder verbruiker → hele grote stroom",
+          "Stroom gaat terug naar de bron zonder verbruiker",
           "Een stroomkring zonder spanningsbron",
           "Een hele lange draad",
           "Een lamp die kapot is",
@@ -265,7 +265,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Geen spanningsbron = open kring, niet kortsluiting.",
+          "Zonder spanningsbron loopt er helemaal geen stroom — dus ook geen kortsluiting.",
           "Lengte van draad heeft niets met kortsluiting te maken.",
           "Een kapotte lamp geeft alleen open kring.",
         ],
@@ -314,7 +314,7 @@ const steps = [
           null,
           "12 V is een auto-accu, geen stopcontact.",
           "1,5 V is een AA-batterij.",
-          "Te hoog — dat zou hoogspanning zijn.",
+          "Te hoog — zoveel spanning komt niet uit een gewoon stopcontact.",
         ],
         uitlegPad: {
           stappen: [{ titel: "230 V in NL", tekst: "Standaard stopcontact in Nederland (en heel Europa) levert 230 V wisselspanning. In de VS is dit 120 V — andere stekkers nodig daar." }],
@@ -335,7 +335,7 @@ const steps = [
       {
         q: "Hoe meet je **stroomsterkte**?",
         options: [
-          "Met een ampèremeter in serie (in de kring)",
+          "Met een ampèremeter in serie",
           "Met een voltmeter parallel",
           "Met een thermometer",
           "Met een liniaal",
@@ -411,14 +411,14 @@ const steps = [
           "Een dikkere doorsnede",
           "Langer maken",
           "Een dunnere doorsnede",
-          "Vergulden met goud",
+          "De draad verwarmen",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Langer = méér weerstand.",
           "Dunner = méér weerstand.",
-          "Goud werkt wel goed maar het is niet de manier.",
+          "Warmer metaal heeft juist méér weerstand.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Dikker = minder weerstand", tekst: "Een dikkere draad (grotere doorsnede) heeft minder weerstand. Meer 'ruimte' voor elektronen om langs te stromen." }],
@@ -545,7 +545,7 @@ const steps = [
       {
         q: "Bij een **serieschakeling**: als 1 lamp stukgaat, wat gebeurt er met de rest?",
         options: [
-          "Alle lampen gaan uit (kring is verbroken)",
+          "Alle lampen gaan uit",
           "Niks, ze blijven branden",
           "Alleen de 2e lamp gaat uit",
           "De batterij ontploft",
@@ -623,10 +623,10 @@ const steps = [
       {
         q: "Wat doet een **aardlekschakelaar**?",
         options: [
-          "Schakelt razendsnel uit als stroom weglekt naar de aarde (bv. via een mens)",
-          "Filtert vuile stroom",
-          "Verlaagt de spanning",
-          "Maakt de stroom sterker",
+          "Schakelt uit als er stroom weglekt naar de aarde",
+          "Filtert storingen uit de stroom",
+          "Verlaagt de spanning naar een veilig niveau",
+          "Maakt de stroom sterker voor zware apparaten",
         ],
         answer: 0,
         wrongHints: [
@@ -647,17 +647,17 @@ const steps = [
       {
         q: "Waarom hebben metalen apparaten een **aardingdraad**?",
         options: [
-          "Veiligheid: bij interne sluiting gaat stroom via aarde weg ipv via de gebruiker",
-          "Het maakt het apparaat sneller",
-          "Voor de geluidskwaliteit",
-          "Om kortsluiting te veroorzaken",
+          "Bij een defect gaat stroom via de aarde weg, niet via jou",
+          "Zodat het apparaat minder stroom verbruikt",
+          "Zodat het apparaat sneller opwarmt",
+          "Om de spanning boven 230 V te brengen",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Geen invloed op snelheid.",
-          "Geluidskwaliteit komt elders vandaan.",
-          "Andersom — voorkomt juist gevaar.",
+          "Door de aardingdraad loopt normaal geen stroom — dus geen invloed op verbruik.",
+          "Hoe snel iets opwarmt hangt af van het vermogen, niet van de aarding.",
+          "De spanning blijft 230 V — waarvoor dient die extra draad dan als er iets kapotgaat?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Aarding leidt sluiting weg", tekst: "Als binnenin een apparaat een draad de metalen behuizing raakt → behuizing onder spanning. De aardingdraad leidt die stroom DIRECT weg naar de aarde → aardlek detecteert lek → schakelt uit. Zonder aarding zou JIJ de aarde-route zijn." }],
@@ -672,21 +672,21 @@ const steps = [
   },
   {
     title: "Energie + kosten — kilowattuur (kWh)",
-    explanation: "**Energie** is **vermogen × tijd** — het totaal dat een apparaat gebruikt.\n\n**Formule**:\n\n**E = P × t**\n\n• **E** = energie (joule of kWh)\n• **P** = vermogen (W of kW)\n• **t** = tijd (s of u)\n\n**Officiële eenheid**: joule (J). Maar voor stroom thuis gebruiken we **kilowattuur (kWh)**.\n\n**Wat is 1 kWh?**\nEen apparaat van **1.000 watt (1 kW)** dat **1 uur** aan staat verbruikt **1 kWh**.\n\n**Voorbeelden**:\n• Spaarlamp 10 W, 10 uur aan: 10 × 10 = 100 Wh = **0,1 kWh**.\n• Waterkoker 2.000 W, 5 minuten (= 1/12 uur): 2.000 × 1/12 ≈ 167 Wh = **0,17 kWh**.\n• Wasmachine 2.000 W, 2 uur warm wassen: 2.000 × 2 = 4.000 Wh = **4 kWh**.\n\n**Wat kost het?**\nIn 2026 in NL: **stroomprijs ~0,30 € per kWh** (varieert per leverancier en jaar — was eerder ~0,22 €, ging in energiecrisis 2022 omhoog).\n\n**Voorbeelden kosten**:\n• Wasmachine 4 kWh × 0,30 € = **€ 1,20** per wasbeurt.\n• Vriezer 365 dagen × 24u × 100 W = ~876 kWh per jaar × 0,30 € = **~€ 263 per jaar**.\n• Tv 100 W, 5 uur per dag, 365 dagen = 182,5 kWh × 0,30 € = **~€ 55 per jaar**.\n\n**Energie besparen**\n• **Vervang gloeilampen door LED** — een LED van 8 W geeft evenveel licht als gloeilamp 60 W. Bespaart ~85%.\n• **Apparaten echt uit, niet stand-by** — stand-by-modus blijft watts trekken.\n• **A++++-apparaten kopen** (energielabel) — gebruiken minder dan oude apparaten.\n• **Was op 30 °C** ipv 60 °C — bespaart de helft van de stroom (verwarmen kost het meeste).\n\n**De stroommeter**\nIn elke woning hangt een **slimme meter** die het kWh-verbruik per kwartier doorgeeft aan de leverancier. Daarop is je rekening gebaseerd.",
+    explanation: "**Energie** is **vermogen × tijd** — het totaal dat een apparaat gebruikt.\n\n**Formule**:\n\n**E = P × t**\n\n• **E** = energie (joule of kWh)\n• **P** = vermogen (W of kW)\n• **t** = tijd (s of u)\n\n**Officiële eenheid**: joule (J). Maar voor stroom thuis gebruiken we **kilowattuur (kWh)**.\n\n**Wat is 1 kWh?**\nEen apparaat van **1.000 watt (1 kW)** dat **1 uur** aan staat verbruikt **1 kWh**.\n\n**Voorbeelden**:\n• Spaarlamp 10 W, 10 uur aan: 10 × 10 = 100 Wh = **0,1 kWh**.\n• Waterkoker 2.000 W, 5 minuten (= 1/12 uur): 2.000 × 1/12 ≈ 167 Wh = **0,17 kWh**.\n• Wasmachine 2.000 W, 2 uur warm wassen: 2.000 × 2 = 4.000 Wh = **4 kWh**.\n\n**Wat kost het?**\nIn 2026 in NL: **stroomprijs ~0,30 € per kWh** (varieert per leverancier en jaar — was eerder ~0,22 €, ging in energiecrisis 2022 omhoog).\n\n**Voorbeelden kosten**:\n• Wasmachine 4 kWh × 0,30 € = **€ 1,20** per wasbeurt.\n• Vriezer 365 dagen × 24u × 100 W = ~876 kWh per jaar × 0,30 € = **~€ 263 per jaar**.\n• Tv 100 W, 5 uur per dag, 365 dagen = 182,5 kWh × 0,30 € = **~€ 55 per jaar**.\n\n**Energie besparen**\n• **Vervang gloeilampen door LED** — een LED van 8 W geeft evenveel licht als gloeilamp 60 W. Bespaart ~85%.\n• **Apparaten echt uit, niet stand-by** — stand-by-modus blijft watts trekken.\n• **Zuinige apparaten kopen** (energielabel A of B) — gebruiken minder dan oude apparaten.\n• **Was op 30 °C** ipv 60 °C — bespaart de helft van de stroom (verwarmen kost het meeste).\n\n**De stroommeter**\nIn de meeste woningen hangt een **slimme meter** die het kWh-verbruik per kwartier doorgeeft aan de leverancier. Daarop is je rekening gebaseerd.",
     svg: basisSchakelingSvg(true),
     checks: [
       {
         q: "Wat is **1 kWh**?",
         options: [
           "Een apparaat van 1 kW dat 1 uur aan staat",
-          "Een apparaat dat 1 km/u beweegt",
+          "Een apparaat van 1 kW dat 1 minuut aan staat",
           "1 kilometer per uur",
           "1.000 watt vermogen",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Niets met snelheid — dit is energie.",
+          "Kijk goed naar de tijd: hoe lang hoort het apparaat aan te staan?",
           "Niets met snelheid.",
           "Dat is 1 kW (vermogen), niet kWh (energie).",
         ],
@@ -707,7 +707,7 @@ const steps = [
           null,
           "Veel te veel — vergeet niet 30 minuten om te rekenen naar uren, en daarna Wh naar kWh.",
           "Te veel — dan zou de waterkoker een heel uur aan staan.",
-          "Te weinig — controleer met 2.000 × 0,5.",
+          "Te weinig — hoeveel uur is 30 minuten, en hoeveel Wh gaat er in een kWh?",
         ],
         uitlegPad: {
           stappen: [{ titel: "2000 W × 0,5 u = 1000 Wh = 1 kWh", tekst: "30 minuten = 0,5 uur. 2000 W × 0,5 h = 1000 Wh = 1 kWh. Reken altijd in uren voor kWh." }],

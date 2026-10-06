@@ -93,7 +93,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de **Verlichting**?",
-        options: ["18e-eeuwse filosofie van rede + vrijheid + mensenrechten", "Een religieuze beweging", "Een oorlog", "Een schilderstijl"],
+        options: ["Een denkstroming over rede en vrijheid", "Een religieuze beweging", "Een oorlog", "Een schilderstijl"],
         answer: 0,
         wrongHints: [null, "Juist tegenkracht voor traditionele religie.", "Geen oorlog.", "Geen kunststijl."],
       },
@@ -105,9 +105,9 @@ const steps = [
       },
       {
         q: "Welke revolutie **inspireerde** Frankrijk?",
-        options: ["Amerikaanse (1776)", "Russische", "Chinese", "Engelse"],
+        options: ["Amerikaanse", "Russische", "Chinese", "Mexicaanse"],
         answer: 0,
-        wrongHints: [null, "Veel later.", "Veel later.", "Eerder + andere reden."],
+        wrongHints: [null, "Veel later.", "Veel later.", "Veel later — in de 20e eeuw."],
       },
       {
         q: "Wat maakte de **winter 1788-1789** moeilijk?",
@@ -132,7 +132,7 @@ const steps = [
       },
       {
         q: "Wat was de **Bastille**?",
-        options: ["Koninklijke gevangenis + wapenkamer", "Paleis", "Kerk", "Schoolgebouw"],
+        options: ["Gevangenis", "Paleis", "Kerk", "Schoolgebouw"],
         answer: 0,
         wrongHints: [null, "Niet paleis.", "Niet kerk.", "Niet school."],
       },
@@ -191,7 +191,7 @@ const steps = [
       },
       {
         q: "Wat zijn **sans-culottes**?",
-        options: ["Arme Parijzenaars (zonder kniebroek)", "Generaals", "Koningsfamilie", "Buitenlandse soldaten"],
+        options: ["Arme Parijzenaars", "Generaals", "Koningsfamilie", "Buitenlandse soldaten"],
         answer: 0,
         wrongHints: [null, "Niet militair.", "Niet de koningsfamilie.", "Niet buitenlands."],
       },
@@ -202,11 +202,11 @@ const steps = [
   {
     title: "Napoleon Bonaparte — keizer + verspreiding revolutie",
     explanation:
-      "**Napoleon Bonaparte** *(1769-1821)* was een Corsicaanse generaal die opklom dankzij de revolutie.\n\n**Carrière**:\n• Geboren op **Corsica** *(net deel van Frankrijk geworden)*.\n• Werd **militair officier**.\n• Profiteerde van revolutie — adel was weg, dus 'gewone' getalenteerden konden hoger komen.\n• Won **veel veldslagen** in Italië en Egypte (1796-1799).\n• 1799: **coup d'état** *(staatsgreep)* — werd 1e Consul *(de facto dictator)*.\n• **1804**: kroonde zichzelf **Keizer van Frankrijk** in Notre-Dame de Paris *(in plaats van zich door de paus te laten kronen, zette Napoleon de kroon zelf op)*.\n\n**Wat deed Napoleon?**\n• Voerde de **Code Napoléon** in *(1804)* — modern Frans wetboek dat in heel Europa werd overgenomen. Basis nog van veel huidige rechtssystemen incl. Nederland.\n• Beheerde **administratie professioneel** *(banen op talent i.p.v. afkomst)*.\n• Maakte **prefecten** *(door hem benoemde regio-bestuurders)*.\n• Sloot **Concordaat met paus** *(1801)* — Kerk werd door staat erkend maar onder staatscontrole.\n• Verspreidde het **metrieke stelsel** (meter, kilogram — kwam uit de revolutie).\n\n**Veroveringen**:\n• Versloeg **Oostenrijk, Pruisen, Italië, Spanje** in vele veldslagen.\n• Op piek (~1810): **heerste over bijna heel Europa** + bondgenoten.\n• **Nederland werd 1810-1813 deel van Frankrijk** *(Lodewijk Napoleon, broer van keizer, was koning van Holland 1806-1810)*.\n\n**Invloed van Napoleon op Nederland**:\n• Burgerlijke staat *(geboorte/huwelijk/dood in officiële registers)* — bestaat nog steeds.\n• Achternamen verplicht *(daarvoor velen alleen voornaam + 'zoon van X')*.\n• Kadaster *(officieel grondbezit-register)*.\n• Code Civil → Nederlands Burgerlijk Wetboek.\n• Veel **administratie-systemen** die we nog gebruiken.\n\n**Einde Napoleon**:\n• **1812**: Russische winter-veldtocht ramp — 500.000 → 100.000 soldaten over.\n• **1813**: verslagen bij Leipzig.\n• **1814**: abdicatie + verbanning naar **Elba** *(Italiaans eiland)*.\n• **1815**: terug — '**de honderd dagen**' — maar verloor definitief bij de **Slag bij Waterloo** *(18 juni 1815)* tegen Engelsen (Wellington) + Pruisen (Blücher).\n• Verbannen naar **Sint-Helena** *(eiland midden in Atlantische Oceaan)*.\n• **Stierf daar in 1821**.\n\n**Waterloo** ligt in het huidige België.\n\n**Wat blijft van Napoleon?**\n• Naam beroemd *(positief én negatief)*.\n• Veel **Europese administratie-systemen** zijn van hem.\n• Inspireerde **nationalisme** *(volken in Europa wilden eigen staat)*.\n• Verspreidde **revolutionaire ideeën** *(gelijkheid, mensenrechten)* over heel Europa via veroveringen.",
+      "**Napoleon Bonaparte** *(1769-1821)* was een Corsicaanse generaal die opklom dankzij de revolutie.\n\n**Carrière**:\n• Geboren op **Corsica** *(net deel van Frankrijk geworden)*.\n• Werd **militair officier**.\n• Profiteerde van revolutie — adel was weg, dus 'gewone' getalenteerden konden hoger komen.\n• Won **veel veldslagen** in Italië en Egypte (1796-1799).\n• 1799: **coup d'état** *(staatsgreep)* — werd 1e Consul *(de facto dictator)*.\n• **1804**: kroonde zichzelf **Keizer van Frankrijk** in Notre-Dame de Paris *(in plaats van zich door de paus te laten kronen, zette Napoleon de kroon zelf op)*.\n\n**Wat deed Napoleon?**\n• Voerde de **Code Napoléon** in *(1804)* — modern Frans wetboek dat in heel Europa werd overgenomen. Basis nog van veel huidige rechtssystemen incl. Nederland.\n• Beheerde **administratie professioneel** *(banen op talent i.p.v. afkomst)*.\n• Maakte **prefecten** *(door hem benoemde regio-bestuurders)*.\n• Sloot **Concordaat met paus** *(1801)* — Kerk werd door staat erkend maar onder staatscontrole.\n• Verspreidde het **metrieke stelsel** (meter, kilogram — kwam uit de revolutie).\n\n**Veroveringen**:\n• Versloeg **Oostenrijk, Pruisen en Rusland** in vele veldslagen en bezette Italië en Spanje.\n• Op piek (~1810): **heerste over bijna heel Europa** + bondgenoten.\n• **Nederland werd 1810-1813 deel van Frankrijk** *(Lodewijk Napoleon, broer van keizer, was koning van Holland 1806-1810)*.\n\n**Invloed van Napoleon op Nederland**:\n• Burgerlijke stand *(geboorte/huwelijk/dood in officiële registers)* — bestaat nog steeds.\n• Achternamen verplicht *(daarvoor velen alleen voornaam + 'zoon van X')*.\n• Kadaster *(officieel grondbezit-register)*.\n• Code Civil → Nederlands Burgerlijk Wetboek.\n• Veel **administratie-systemen** die we nog gebruiken.\n\n**Einde Napoleon**:\n• **1812**: Russische winter-veldtocht ramp — 500.000 → 100.000 soldaten over.\n• **1813**: verslagen bij Leipzig.\n• **1814**: abdicatie + verbanning naar **Elba** *(Italiaans eiland)*.\n• **1815**: terug — '**de honderd dagen**' — maar verloor definitief bij de **Slag bij Waterloo** *(18 juni 1815)* tegen Engelsen (Wellington) + Pruisen (Blücher).\n• Verbannen naar **Sint-Helena** *(eiland midden in Atlantische Oceaan)*.\n• **Stierf daar in 1821**.\n\n**Waterloo** ligt in het huidige België.\n\n**Wat blijft van Napoleon?**\n• Naam beroemd *(positief én negatief)*.\n• Veel **Europese administratie-systemen** zijn van hem.\n• Inspireerde **nationalisme** *(volken in Europa wilden eigen staat)*.\n• Verspreidde **revolutionaire ideeën** *(gelijkheid, mensenrechten)* over heel Europa via veroveringen.",
     checks: [
       {
         q: "Wie was **Napoleon Bonaparte**?",
-        options: ["Generaal + later keizer van Frankrijk", "Russische tsaar", "Koning Engeland", "Paus"],
+        options: ["Keizer van Frankrijk", "Russische tsaar", "Koning Engeland", "Paus"],
         answer: 0,
         wrongHints: [null, "Niet Russisch.", "Niet Engels.", "Niet paus."],
       },
@@ -224,20 +224,20 @@ const steps = [
       },
       {
         q: "Welke Nederlandse **administratie** komt van Napoleon?",
-        options: ["Burgerlijke staat + achternamen + kadaster", "Belasting", "Politie", "Brandweer"],
+        options: ["Burgerlijke stand", "Belasting", "Politie", "Brandweer"],
         answer: 0,
         wrongHints: [null, "Heersers hieven al eeuwen vóór Napoleon belasting — is dat echt iets wat híj als nieuwe administratie invoerde?", "Ordehandhaving bestond al lang voor 1800 in steden — kwam dat pas met Napoleon?", "Mensen blusten al eeuwenlang samen branden — is dat een Napoleontische vernieuwing van het bestuur?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is bijzonder", tekst: "Napoleon dwong administratie-vernieuwingen door die nog steeds in NL bestaan." },
-            { titel: "Voorbeelden", tekst: "Burgerlijke staat (officieel register geboorte/huwelijk/dood), achternamen (verplicht), kadaster (grondbezit-registratie)." },
+            { titel: "Voorbeelden", tekst: "Burgerlijke stand (officieel register geboorte/huwelijk/dood), achternamen (verplicht), kadaster (grondbezit-registratie)." },
           ],
           woorden: [{ woord: "kadaster", uitleg: "Officieel register van grondbezit en huizen." }],
           theorie: "Napoleon moderniseerde Europa met centrale administratie.",
           voorbeelden: [{ type: "stap", tekst: "Voor Napoleon hadden veel mensen alleen 'Jan zoon van Klaas' — sindsdien achternaam verplicht." }],
           basiskennis: [{ onderwerp: "Lange invloed", uitleg: "Napoleon zat maar ~15 jaar aan de macht, maar systemen leven door tot vandaag." }],
           niveaus: {
-            basis: "Burgerlijke staat, achternamen, kadaster.",
+            basis: "Burgerlijke stand, achternamen, kadaster.",
             simpeler: "Napoleon dwong nieuwe administratie door in NL (1810-1813): officiële geboorte/huwelijksregisters, verplichte achternamen, grondbezit-register. Nog steeds in gebruik.",
             nogSimpeler: "Achternamen + kadaster",
           },

@@ -251,7 +251,7 @@ const steps = [
         q: "Wat deed **Maarten Luther** in 1517?",
         options: ["Plakte 95 stellingen op de kerkdeur als protest", "Ontdekte Amerika", "Werd koning van Nederland", "Vond de boekdrukkunst uit"],
         answer: 0,
-        wrongHints: [null, "Dat was Columbus, in 1492.", "Nederland had toen nog geen koning — was deel van het Spaanse rijk.", "Boekdrukkunst was eerder, ~1450 (Gutenberg)."],
+        wrongHints: [null, "Dat was Columbus, in 1492.", "Nederland had toen nog geen eigen koning — het hoorde bij het rijk van keizer Karel V.", "Boekdrukkunst was eerder, ~1450 (Gutenberg)."],
         uitlegPad: {
           stappen: [{ titel: "95 stellingen Wittenberg", tekst: "31 oktober 1517: Maarten Luther (Duits monnik) plakt 95 stellingen op de slotkerkdeur in Wittenberg. Protest tegen aflaten-handel + corruptie katholieke kerk. Begin van REFORMATIE." }],
           woorden: [{ woord: "95 stellingen", uitleg: "Luthers lijst van bezwaren tegen katholieke praktijken. Schriftelijk protest." }, { woord: "aflaten", uitleg: "Pauselijke 'vergevingsbriefjes' tegen betaling — Luther vond dit corrupt." }, { woord: "Reformatie", uitleg: "Kerk-hervormingsbeweging 16e eeuw. Splitsing katholiek vs protestants." }],
@@ -284,7 +284,7 @@ const steps = [
     checks: [
       {
         q: "Wat was de **VOC**?",
-        options: ["Vereenigde Oost-Indische Compagnie — handelsbedrijf in Azië", "Een politieke partij in Nederland", "Het Romeinse leger", "Een protestantse kerk"],
+        options: ["Een handelsbedrijf dat handel dreef in Azië", "Een politieke partij in Nederland", "Het Romeinse leger", "Een protestantse kerk"],
         answer: 0,
         wrongHints: [null, "Politieke partijen zoals nu kwamen pas in de 19e eeuw — tijdvak 8.", "Romeinen = tijdvak 2.", "VOC was een handelsbedrijf, geen kerk."],
         uitlegPad: {
@@ -471,9 +471,9 @@ const steps = [
       },
       {
         q: "In welk tijdvak hoort **Columbus' ontdekking van Amerika** (1492)?",
-        options: ["Tijdvak 5", "Tijdvak 6", "Tijdvak 4", "Tijdvak 7"],
+        options: ["Tijdvak 5", "Tijdvak 6", "Tijdvak 3", "Tijdvak 7"],
         answer: 0,
-        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 4 eindigt rond 1500. Welk tijdvak heeft 'ontdekkingsreizen' als kenmerk?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
+        wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 3 = vroege middeleeuwen (500-1000). Welk tijdvak heeft 'ontdekkingsreizen' als kenmerk?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
         uitlegPad: {
           stappen: [{ titel: "1492 → kenmerk tijdvak 5", tekst: "1492 ligt op de grens tussen tijdvak 4 (Steden+staten, 1000-1500) en tijdvak 5 (Ontdekkers+hervormers, 1500-1600). Maar 'ontdekkingsreizen' is het BELANGRIJKSTE kenmerk van tijdvak 5. Dus Columbus = tijdvak 5." }],
           woorden: [{ woord: "Columbus", uitleg: "Christoffel Columbus. Italiaans-Spaans zeevaarder. Landde 12 oktober 1492 op de Bahama's." }, { woord: "ontdekkingsreizen", uitleg: "Europese zeevaarders zochten zee-route naar Azië, vonden Amerika + omzeilden Afrika. ~1490-1600." }],

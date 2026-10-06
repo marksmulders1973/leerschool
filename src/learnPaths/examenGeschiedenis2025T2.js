@@ -339,7 +339,7 @@ const steps = [
             { woord: "Fluwelen Revolutie", uitleg: "Vreedzame omverwerping communisme Tsjechoslowakije 1989." },
             { woord: "Gorbatsjov", uitleg: "Laatste Sovjet-leider 1985-1991, gaf landen vrijheid (Glasnost/Perestrojka)." },
           ],
-          theorie: "Toets-truc datum-vraag: 1991 = einde Koude Oorlog. Schrap optie A (EU-uitbreiding kwam pas 2004). Schrap B (Russische invloed groeide juist niet, maar kromp). Schrap D (fascisme al weg in 1945). Blijft over: C — communisme verdween.",
+          theorie: "Toets-truc datum-vraag: 1991 = einde Koude Oorlog. Schrap de EU-uitbreiding (kwam pas 2004). Schrap de Russische invloed (groeide juist niet, maar kromp). Schrap het fascisme (al weg in 1945). Blijft over: het communisme verdween.",
           voorbeelden: [
             { type: "feit", tekst: "Václav Havel — toneelschrijver-dissident — werd na de Fluwelen Revolutie eerste niet-communistische president van Tsjechoslowakije (1989-1992)." },
             { type: "feit", tekst: "Lech Wałęsa — Poolse elektricien + Solidarność-leider — werd president Polen (1990-1995). Nobelprijs voor de Vrede in 1983." },

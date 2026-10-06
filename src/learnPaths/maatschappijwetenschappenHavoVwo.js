@@ -28,7 +28,7 @@ const steps = [
   {
     title: "Politiek + macht",
     explanation:
-      "**Maatschappijwetenschappen HAVO/VWO** (afgekort MAW) onderzoekt samenleving via 4 hoofdconcepten: **politiek, binding, vorming, verhouding**.\n\n**Kernconcept Politiek**:\n• **Politiek** = bindende besluiten nemen voor samenleving (Easton: 'gezaghebbende toedeling van waarden').\n• **Macht** = vermogen anderen iets te laten doen wat ze anders niet zouden doen.\n• **Gezag** = legitieme macht (aanvaard door betrokkenen).\n• Max Weber: drie soorten gezag:\n  - **Traditioneel** (koning erft).\n  - **Charismatisch** (persoonlijke uitstraling: Mandela, Churchill).\n  - **Rationeel-legaal** (op basis van regels: ministers, ambtenaren).\n\n**Politieke systemen**:\n\n**Democratie**:\n• Volk kiest leiders + heeft inspraak.\n• **Directe democratie** (Athene, Zwitserse referenda).\n• **Representatieve democratie** (NL: kiezen volksvertegenwoordigers).\n• Kenmerken: vrije + eerlijke verkiezingen, scheiding der machten, persvrijheid, rechtsstaat.\n\n**Autoritair** / **dictatuur**:\n• Macht bij één persoon of groep, geen vrije verkiezingen.\n• Voorbeelden: China (Xi), Rusland (Poetin), Iran, NK.\n\n**Hybride regimes** (gedeeltelijk democratisch):\n• Hongarije (Orbán), Turkije (Erdoğan).\n• Verkiezingen, maar pers + rechters onder druk.\n\n**Nederlands politiek systeem**:\n• **Constitutionele monarchie**: Koning ceremonieel, regering politiek.\n• **Parlementaire democratie**: regering legt rekenschap af aan parlement.\n• **Coalitie-regering**: meerdere partijen vormen meerderheid (NL nooit één-partij-meerderheid).\n• **Tweekamerstelsel**:\n  - **Tweede Kamer** (150 leden, direct gekozen) — wetten + controle regering.\n  - **Eerste Kamer / Senaat** (75 leden, indirect via Provinciale Staten) — toetst kwaliteit wetten.\n• **Politieke partijen** (2024-25): VVD, D66, PvdA-GL, CDA, PVV, BBB, NSC, FvD, SP, CU, SGP, Volt, DENK, BVNL.\n• **Coalitie-Schoof** (vanaf juli 2024): PVV + VVD + NSC + BBB. In juni 2025 stapte de PVV eruit.\n\n**Politieke ideologieën**:\n• **Liberalisme**: vrijheid individu, minimale staat. VVD.\n• **Sociaal-democratie**: gelijke kansen + sociale zekerheid. PvdA-GL.\n• **Christen-democratie**: gemeenschap + traditie. CDA, CU.\n• **Conservatisme**: behoud + voorzichtige verandering.\n• **Populisme**: 'het volk vs elite'. PVV, BBB, FvD.\n• **Socialisme**: gelijkheid + collectief eigendom. SP.\n• **Groen**: milieu + duurzaamheid. GL.\n\n**Politieke participatie**:\n• **Stemmen** (basisniveau).\n• **Demonstreren** (Klimaatmars, Boerenprotest).\n• **Lidmaatschap politieke partij** (gedaald: ~2% volwassen NL'ers).\n• **Lobbyen** (organisaties beïnvloeden beleid).\n• **Burgerinitiatief** (40.000 handtekeningen → behandeling parlement).\n• **Referendum** (NL afgeschaft 2018, behalve correctief lokaal).\n\n**Pressiegroepen + belangenorganisaties**:\n• **Vakbonden** (FNV, CNV): arbeidsbelangen.\n• **Werkgevers** (VNO-NCW): bedrijfsleven.\n• **Milieubeweging** (Greenpeace, Milieudefensie).\n• **Mensenrechten** (Amnesty).\n• **Boerenbelangen** (LTO, recent BBB als partij).\n\n**Macht-bronnen**:\n• **Formele macht**: ambt / functie.\n• **Geld / economisch**: rijkdom.\n• **Kennis / expertise**.\n• **Informatie / media**.\n• **Aantal mensen** (massa-beweging).\n• **Geweld / fysiek**.\n\n**Politieke besluitvorming-modellen**:\n• **Rationeel model**: beste alternatief op basis analyse.\n• **Incrementeel** (Lindblom): kleine aanpassingen op bestaand beleid ('muddling through').\n• **Garbage can** (Cohen, March, Olsen): problemen, oplossingen, deelnemers ontmoeten elkaar toevallig.\n• **Beleidsnetwerken**: belangengroepen + ambtenaren + politici verweven.",
+      "**Maatschappijwetenschappen HAVO/VWO** (afgekort MAW) onderzoekt samenleving via 4 hoofdconcepten: **vorming, verhouding, binding, verandering** (politiek en macht vallen vooral onder verhouding).\n\n**Kernconcept Politiek**:\n• **Politiek** = bindende besluiten nemen voor samenleving (Easton: 'gezaghebbende toedeling van waarden').\n• **Macht** = vermogen anderen iets te laten doen wat ze anders niet zouden doen.\n• **Gezag** = legitieme macht (aanvaard door betrokkenen).\n• Max Weber: drie soorten gezag:\n  - **Traditioneel** (koning erft).\n  - **Charismatisch** (persoonlijke uitstraling: Mandela, Churchill).\n  - **Rationeel-legaal** (op basis van regels: ministers, ambtenaren).\n\n**Politieke systemen**:\n\n**Democratie**:\n• Volk kiest leiders + heeft inspraak.\n• **Directe democratie** (Athene, Zwitserse referenda).\n• **Representatieve democratie** (NL: kiezen volksvertegenwoordigers).\n• Kenmerken: vrije + eerlijke verkiezingen, scheiding der machten, persvrijheid, rechtsstaat.\n\n**Autoritair** / **dictatuur**:\n• Macht bij één persoon of groep, geen vrije verkiezingen.\n• Voorbeelden: China (Xi), Rusland (Poetin), Iran, NK.\n\n**Hybride regimes** (gedeeltelijk democratisch):\n• Hongarije (Orbán), Turkije (Erdoğan).\n• Verkiezingen, maar pers + rechters onder druk.\n\n**Nederlands politiek systeem**:\n• **Constitutionele monarchie**: Koning ceremonieel, regering politiek.\n• **Parlementaire democratie**: regering legt rekenschap af aan parlement.\n• **Coalitie-regering**: meerdere partijen vormen meerderheid (NL nooit één-partij-meerderheid).\n• **Tweekamerstelsel**:\n  - **Tweede Kamer** (150 leden, direct gekozen) — wetten + controle regering.\n  - **Eerste Kamer / Senaat** (75 leden, indirect via Provinciale Staten) — toetst kwaliteit wetten.\n• **Politieke partijen** (2024-25): VVD, D66, PvdA-GL, CDA, PVV, BBB, NSC, FvD, SP, CU, SGP, Volt, DENK, BVNL.\n• **Coalitie-Schoof** (vanaf juli 2024): PVV + VVD + NSC + BBB. In juni 2025 stapte de PVV eruit.\n\n**Politieke ideologieën**:\n• **Liberalisme**: vrijheid individu, minimale staat. VVD.\n• **Sociaal-democratie**: gelijke kansen + sociale zekerheid. PvdA-GL.\n• **Christen-democratie**: gemeenschap + traditie. CDA, CU.\n• **Conservatisme**: behoud + voorzichtige verandering.\n• **Populisme**: 'het volk vs elite'. PVV, BBB, FvD.\n• **Socialisme**: gelijkheid + collectief eigendom. SP.\n• **Groen**: milieu + duurzaamheid. GL.\n\n**Politieke participatie**:\n• **Stemmen** (basisniveau).\n• **Demonstreren** (Klimaatmars, Boerenprotest).\n• **Lidmaatschap politieke partij** (gedaald: ~2% volwassen NL'ers).\n• **Lobbyen** (organisaties beïnvloeden beleid).\n• **Burgerinitiatief** (40.000 handtekeningen → behandeling parlement).\n• **Referendum** (landelijk raadgevend referendum afgeschaft 2018; lokale referenda bestaan nog).\n\n**Pressiegroepen + belangenorganisaties**:\n• **Vakbonden** (FNV, CNV): arbeidsbelangen.\n• **Werkgevers** (VNO-NCW): bedrijfsleven.\n• **Milieubeweging** (Greenpeace, Milieudefensie).\n• **Mensenrechten** (Amnesty).\n• **Boerenbelangen** (LTO, recent BBB als partij).\n\n**Macht-bronnen**:\n• **Formele macht**: ambt / functie.\n• **Geld / economisch**: rijkdom.\n• **Kennis / expertise**.\n• **Informatie / media**.\n• **Aantal mensen** (massa-beweging).\n• **Geweld / fysiek**.\n\n**Politieke besluitvorming-modellen**:\n• **Rationeel model**: beste alternatief op basis analyse.\n• **Incrementeel** (Lindblom): kleine aanpassingen op bestaand beleid ('muddling through').\n• **Garbage can** (Cohen, March, Olsen): problemen, oplossingen, deelnemers ontmoeten elkaar toevallig.\n• **Beleidsnetwerken**: belangengroepen + ambtenaren + politici verweven.",
     checks: [
       {
         q: "Max Weber's **drie soorten gezag** zijn:",
@@ -62,7 +62,7 @@ const steps = [
       },
       {
         q: "Wat is een **burgerinitiatief**?",
-        options: ["40.000 handtekeningen → parlement behandelt","Verplicht stemmen","Een wet over burgers","Belasting initiatief"],
+        options: ["Met handtekeningen een onderwerp op de Kamer-agenda zetten","Verplicht stemmen","Een wet over burgers","Belasting initiatief"],
         answer: 0,
         wrongHints: [null, "Niet — NL niet verplicht.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
@@ -111,7 +111,7 @@ const steps = [
       },
       {
         q: "**Affectieve polarisatie** is:",
-        options: ["Niet inhoudelijk maar emotionele afkeer andere groep","Geweld","Verkiezingen","Migratie"],
+        options: ["Emotionele afkeer van de andere groep","Geweld","Verkiezingen","Migratie"],
         answer: 0,
         wrongHints: [null, "Kan gevolg zijn — niet hetzelfde.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
@@ -147,7 +147,7 @@ const steps = [
   {
     title: "Vorming + verandering — hoe ontstaan + veranderen samenlevingen?",
     explanation:
-      "**Kernconcept Vorming + Verandering** = hoe individu socialiseert + hoe samenleving zich ontwikkelt.\n\n**Op individueel niveau** (zie ook 'binding'):\n• **Socialisatie** vormt individu tot lid samenleving.\n• **Identiteitsontwikkeling**: hoe ontwikkel je 'wie ben ik?' over leven.\n• **Levensloop-perspectief**: kindertijd → adolescentie → volwassen → ouderdom. Sociale verwachtingen elke fase.\n\n**Op samenleving-niveau**:\n\n**Maatschappelijke veranderingen** (modernisering):\n• **Industrialisatie** (~1750-1900): van landbouw naar fabrieken.\n• **Urbanisatie**: mensen trekken naar steden.\n• **Secularisatie**: religie verliest invloed op maatschappij.\n• **Individualisering**: nadruk op individu boven groep.\n• **Globalisering**: wereldwijde verbondenheid (sinds ~1970).\n• **Digitalisering**: informatie-revolutie (sinds ~1990).\n• **Vergrijzing**: meer ouderen, minder werkenden.\n\n**Theorieën maatschappelijke verandering**:\n\n**Karl Marx**: dialectiek + materialisme.\n• Productieverhoudingen veranderen → maatschappij verandert.\n• Klassen-strijd drijft historie.\n• Feodalisme → kapitalisme → communisme.\n\n**Max Weber** (1864-1920):\n• 'Protestantse ethiek + de geest van het kapitalisme' (1905).\n• Calvinisme + werkethiek → ontstaan modern kapitalisme.\n• Rationalisering = sleutel-proces modernisering.\n• 'IJzeren kooi' van bureaucratie.\n\n**Émile Durkheim**:\n• Modernisering vergroot complexiteit + arbeidsdeling.\n• Risico: anomie (normloosheid).\n\n**Theodor Adorno + Frankfurter Schule**:\n• Kritiek op massacultuur + cultuurindustrie.\n• Modernisering kan barbarij opleveren (Holocaust als 'product' moderniteit).\n\n**Anthony Giddens** (1938-):\n• Late moderniteit / reflexieve moderniteit.\n• Globalisering + risico-maatschappij.\n• Detraditionalisering: ouders/kerk/buren minder bepalend.\n\n**Ulrich Beck**:\n• *Risikogesellschaft* (1986).\n• Moderne maatschappij produceert eigen risico's (klimaat, kernenergie, financiële crises).\n\n**Pierre Bourdieu** (1930-2002):\n• **Habitus**: aangeleerde manier van denken/voelen/handelen door omgeving.\n• **Sociaal kapitaal**: netwerken.\n• **Cultureel kapitaal**: kennis, smaak, opleiding (geërfd van ouders).\n• Reproductie van klasse via onderwijs.\n\n**Generatie-verschillen** (Toets-patroon):\n• **Stille generatie** (1928-45): WO2-trauma, sober.\n• **Boomers** (1946-64): wederopbouw, optimisme.\n• **Gen X** (1965-80): individualisering, 'no future' jaren '80.\n• **Millennials** (1981-96): digitale revolutie, financiële crisis 2008.\n• **Gen Z** (1997-2012): smartphone-natives, klimaat-angst, COVID-puberteit.\n• **Gen Alpha** (2013-): post-COVID, AI-natives.\n\n**Veranderend onderwijs (NL)**:\n• Tot 1960s: standsverschillen sterk in school-toegang.\n• Mammoetwet 1968 (Cals): integreerde middelbaar.\n• Stijgende deelname: 1960 ~10% HBO/WO → 2024 ~50%.\n• Maar **stapeling stopt**: minder doorstroom dan vroeger.\n\n**Veranderend gezin**:\n• Klassiek: man en vrouw getrouwd, kinderen.\n• Modern: echtscheidingen (~30-35%), samenwonen, eenoudergezinnen, regenbooggezinnen, kinderloos.\n• Vrouwen werken: 1960 ~25% → 2024 ~80% (vaak deeltijd).\n• Vaders meer betrokken bij zorg (geboorteverlof verhoogd 2019-2020).\n\n**Veranderende religie (NL)**:\n• 1960: ~80% kerkelijk.\n• 2024: ~50% onkerkelijk.\n• 'Ietsisme': geloof in 'iets', niet specifieke godsdienst.\n• Islam ~5% (groei door migratie + hoger geboortecijfer).\n• Hindoeïsme, Boeddhisme groeien op kleine schaal.\n\n**Veranderende media**:\n• 1990: tv + krant dominant.\n• 2024: internet + social media (TikTok, Instagram, YouTube).\n• Vertrouwen in traditionele media gedaald.\n• Fake news + filterbubbels.\n• AI-gegenereerde content versterkt problemen.\n\n**Klimaat als nieuwe variabele**:\n• Klimaatverandering = mens-veroorzaakt.\n• Beleidsuitdaging eeuw 21.\n• Tegenstellingen: pro-klimaat (jongeren, GL, D66) vs sceptisch (delen van PVV/BBB-aanhang).",
+      "**Kernconcept Vorming + Verandering** = hoe individu socialiseert + hoe samenleving zich ontwikkelt.\n\n**Op individueel niveau** (zie ook 'binding'):\n• **Socialisatie** vormt individu tot lid samenleving.\n• **Identiteitsontwikkeling**: hoe ontwikkel je 'wie ben ik?' over leven.\n• **Levensloop-perspectief**: kindertijd → adolescentie → volwassen → ouderdom. Sociale verwachtingen elke fase.\n\n**Op samenleving-niveau**:\n\n**Maatschappelijke veranderingen** (modernisering):\n• **Industrialisatie** (~1750-1900): van landbouw naar fabrieken.\n• **Urbanisatie**: mensen trekken naar steden.\n• **Secularisatie**: religie verliest invloed op maatschappij.\n• **Individualisering**: nadruk op individu boven groep.\n• **Globalisering**: wereldwijde verbondenheid (sinds ~1970).\n• **Digitalisering**: informatie-revolutie (sinds ~1990).\n• **Vergrijzing**: meer ouderen, minder werkenden.\n\n**Theorieën maatschappelijke verandering**:\n\n**Karl Marx**: dialectiek + materialisme.\n• Productieverhoudingen veranderen → maatschappij verandert.\n• Klassen-strijd drijft historie.\n• Feodalisme → kapitalisme → communisme.\n\n**Max Weber** (1864-1920):\n• 'Protestantse ethiek + de geest van het kapitalisme' (1905).\n• Calvinisme + werkethiek → ontstaan modern kapitalisme.\n• Rationalisering = sleutel-proces modernisering.\n• 'IJzeren kooi' van bureaucratie.\n\n**Émile Durkheim**:\n• Modernisering vergroot complexiteit + arbeidsdeling.\n• Risico: anomie (normloosheid).\n\n**Theodor Adorno + Frankfurter Schule**:\n• Kritiek op massacultuur + cultuurindustrie.\n• Modernisering kan barbarij opleveren (Holocaust als 'product' moderniteit).\n\n**Anthony Giddens** (1938-):\n• Late moderniteit / reflexieve moderniteit.\n• Globalisering + risico-maatschappij.\n• Detraditionalisering: ouders/kerk/buren minder bepalend.\n\n**Ulrich Beck**:\n• *Risikogesellschaft* (1986).\n• Moderne maatschappij produceert eigen risico's (klimaat, kernenergie, financiële crises).\n\n**Pierre Bourdieu** (1930-2002):\n• **Habitus**: aangeleerde manier van denken/voelen/handelen door omgeving.\n• **Sociaal kapitaal**: netwerken.\n• **Cultureel kapitaal**: kennis, smaak, opleiding (geërfd van ouders).\n• Reproductie van klasse via onderwijs.\n\n**Generatie-verschillen** (Toets-patroon):\n• **Stille generatie** (1928-45): WO2-trauma, sober.\n• **Boomers** (1946-64): wederopbouw, optimisme.\n• **Gen X** (1965-80): individualisering, 'no future' jaren '80.\n• **Millennials** (1981-96): digitale revolutie, financiële crisis 2008.\n• **Gen Z** (1997-2012): smartphone-natives, klimaat-angst, COVID-puberteit.\n• **Gen Alpha** (2013-): post-COVID, AI-natives.\n\n**Veranderend onderwijs (NL)**:\n• Tot 1960s: standsverschillen sterk in school-toegang.\n• Mammoetwet 1968 (Cals): integreerde middelbaar.\n• Stijgende deelname: 1960 ~10% HBO/WO → 2024 ~50%.\n• Maar **stapeling stopt**: minder doorstroom dan vroeger.\n\n**Veranderend gezin**:\n• Klassiek: man en vrouw getrouwd, kinderen.\n• Modern: echtscheidingen (~30-35%), samenwonen, eenoudergezinnen, regenbooggezinnen, kinderloos.\n• Vrouwen werken: 1960 ~25% → 2024 ~80% (vaak deeltijd).\n• Vaders meer betrokken bij zorg (geboorteverlof verhoogd 2019-2020).\n\n**Veranderende religie (NL)**:\n• 1960: ~80% kerkelijk.\n• 2024: ruim de helft onkerkelijk (~55%).\n• 'Ietsisme': geloof in 'iets', niet specifieke godsdienst.\n• Islam ~5% (groei door migratie + hoger geboortecijfer).\n• Hindoeïsme, Boeddhisme groeien op kleine schaal.\n\n**Veranderende media**:\n• 1990: tv + krant dominant.\n• 2024: internet + social media (TikTok, Instagram, YouTube).\n• Vertrouwen in traditionele media gedaald.\n• Fake news + filterbubbels.\n• AI-gegenereerde content versterkt problemen.\n\n**Klimaat als nieuwe variabele**:\n• Klimaatverandering = mens-veroorzaakt.\n• Beleidsuitdaging eeuw 21.\n• Tegenstellingen: pro-klimaat (jongeren, GL, D66) vs sceptisch (delen van PVV/BBB-aanhang).",
     checks: [
       {
         q: "**Secularisatie** betekent:",
@@ -155,7 +155,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Niet."],
         uitlegPad: {
-          stappen: [{ titel: "Religie naar privé", tekst: "**Secularisatie**: religie verliest publieke invloed; wordt privé-zaak. NL: 1960 ~80% kerkelijk → 2024 ~50% onkerkelijk. Verzuiling (1900-1960) afgebroken. Vroeger eigen scholen, omroep, kranten per zuil." }],
+          stappen: [{ titel: "Religie naar privé", tekst: "**Secularisatie**: religie verliest publieke invloed; wordt privé-zaak. NL: 1960 ~80% kerkelijk → 2024 ruim de helft onkerkelijk (~55%). Verzuiling (1900-1960) afgebroken. Vroeger eigen scholen, omroep, kranten per zuil." }],
           niveaus: { basis: "Religie kwijnt.", simpeler: "Secul = religie minder", nogSimpeler: "Religie kwijnt" },
         },
       },
@@ -171,7 +171,7 @@ const steps = [
       },
       {
         q: "**Bourdieu's** habitus is:",
-        options: ["Aangeleerde manier van denken/voelen door omgeving","Geld","Klederdracht","Habitat (woonomgeving)"],
+        options: ["Aangeleerde manier van denken en doen","Geld","Klederdracht","Habitat (woonomgeving)"],
         answer: 0,
         wrongHints: [null, "Niet — wel verwante concepten.", "Niet — slechts uitdrukking.", "Klinkt zo maar nee."],
         uitlegPad: {
@@ -182,7 +182,7 @@ const steps = [
       },
       {
         q: "**Beck's risikogesellschaft** zegt dat moderne maatschappij:",
-        options: ["Eigen nieuwe risico's produceert (klimaat, kern, financiën)","Geen risico's heeft","Alleen oude risico's","Veilig is"],
+        options: ["Zelf nieuwe risico's produceert","Geen risico's heeft","Alleen oude risico's","Veilig is"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet — beide.", "Niet."],
         uitlegPad: {
@@ -222,7 +222,7 @@ const steps = [
       },
       {
         q: "**EVRM** verschilt van **UVRM** doordat:",
-        options: ["EVRM is juridisch bindend (Hof Straatsburg)","UVRM is bindend","Geen verschil","UVRM is Europees"],
+        options: ["EVRM is juridisch bindend","UVRM is bindend","Geen verschil","UVRM is Europees"],
         answer: 0,
         wrongHints: [null, "Niet — UVRM moreel, niet bindend.", "Wel verschil.", "Niet — UVRM is wereldwijd."],
         uitlegPad: {
@@ -243,7 +243,7 @@ const steps = [
       },
       {
         q: "De **Toeslagenaffaire** illustreert vooral falen van:",
-        options: ["Rechtsstaat (overheid onterecht beschuldigde burgers)","Verkiezingen","NAVO","EU"],
+        options: ["Rechtsstaat","Verkiezingen","NAVO","EU"],
         answer: 0,
         wrongHints: [null, "Niet — vond plaats binnen normale verkiezingen.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
@@ -293,7 +293,7 @@ const steps = [
       },
       {
         q: "**Anomie** (Durkheim) is:",
-        options: ["Normloosheid bij snelle maatschappelijke verandering","Een tropische ziekte","Een woord-grap","Belastingvorm"],
+        options: ["Normloosheid","Een tropische ziekte","Een woord-grap","Belastingvorm"],
         answer: 0,
         wrongHints: [null, "Geen ziekte — al voelt het wel als een 'kwaal' van de samenleving. Wat valt er weg?", "Durkheim was bloedserieus — 'a-nomie' = zonder 'nomos' (wet/norm). Wat betekent dat?", "Niets met geld — het gaat over regels en houvast die verdwijnen."],
         uitlegPad: {
@@ -303,7 +303,7 @@ const steps = [
       },
       {
         q: "**Scheiding der machten** voorkomt:",
-        options: ["Tirannie (concentratie macht)","Belastingontduiking","Klimaatverandering","Migratie"],
+        options: ["Tirannie","Belastingontduiking","Klimaatverandering","Migratie"],
         answer: 0,
         wrongHints: [null, "Niet — apart probleem.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {
@@ -313,7 +313,7 @@ const steps = [
       },
       {
         q: "Wat is **populisme** als ideologie?",
-        options: ["'Het volk vs elite' — zuiver volk tegen corrupte top","Religieus extremisme","Communisme","Liberalisme"],
+        options: ["Volk tegenover elite","Religieus extremisme","Communisme","Liberalisme"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet."],
         uitlegPad: {

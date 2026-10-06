@@ -167,7 +167,7 @@ const steps = [
         q: "Hoeveel provincies heeft Nederland?",
         options: ["12", "10", "11", "14"],
         answer: 0,
-        wrongHints: [null, "Tel de noordelijke drie er ook bij.", "Eentje vergeten — denk aan de jongste, uit het water gewonnen.", "Zo veel zijn het er niet."],
+        wrongHints: [null, "Te weinig — tel ze nog eens van noord naar zuid.", "Eentje vergeten — denk aan de jongste, uit het water gewonnen.", "Zo veel zijn het er niet."],
         uitlegPad: {
           stappen: [{ titel: "Nederland = 12 provincies", tekst: "Van Groningen bovenin tot Limburg onderin: Nederland heeft 12 provincies." }],
           niveaus: {

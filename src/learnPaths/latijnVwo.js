@@ -40,11 +40,11 @@ const steps = [
       },
       {
         q: "**Caesar** wordt klassiek uitgesproken als:",
-        options: ["Kaesar","Tsesar","Cijzer","Caisar"],
+        options: ["Kaesar","Tsjezar","Cijzer","Sesar"],
         answer: 0,
-        wrongHints: [null, "Kerkelijk Latijn.", "Engels.", "Niet."],
+        wrongHints: [null, "Kerkelijk Latijn.", "Engels.", "Klinkt een C in klassiek Latijn ooit als s?"],
         uitlegPad: {
-          stappen: [{ titel: "C = K", tekst: "**Klassiek Latijn** (Erasmus-uitspraak): C = altijd K. Caesar = **Kaesar** (Kai-sar). Vandaar Duitse 'Kaiser' + Russische 'Tsar' (verwerving). **Kerkelijk Latijn**: C voor e/i = ch → Tsesar. Op gymnasium wordt klassieke uitspraak geleerd." }],
+          stappen: [{ titel: "C = K", tekst: "**Klassiek Latijn** (Erasmus-uitspraak): C = altijd K. Caesar = **Kaesar** (Kai-sar). Vandaar Duitse 'Kaiser' + Russische 'Tsar' (verwerving). **Kerkelijk Latijn**: C voor e/i = tsj → Tsjezar. Op gymnasium wordt klassieke uitspraak geleerd." }],
           niveaus: { basis: "Kaesar.", simpeler: "C = K = Kaesar", nogSimpeler: "Kaesar." },
         },
       },
@@ -85,7 +85,7 @@ const steps = [
   {
     title: "Naamvallen — 6 vormen",
     explanation:
-      "**Latijn heeft 6 naamvallen** (vs Duits 4, Nederlands 0). Naamval bepaalt **functie** van zelfstandig naamwoord in zin → eindigingen veranderen.\n\n**De 6 naamvallen**:\n\n**1. Nominatief (Nom)**:\n• Functie: **onderwerp** ('wie/wat doet?').\n• Vraag: Wie/wat?\n• Vorm voor enkelvoud + meervoud verschillend.\n• *Caesar venit* = Caesar komt. (Caesar = nominatief).\n\n**2. Genitief (Gen)**:\n• Functie: **bezit** ('van wie?').\n• Vraag: Van wie/waarvan?\n• *Liber Caesaris* = Het boek van Caesar.\n• Vergelijkbaar met Engels 's of NL 'van'.\n\n**3. Datief (Dat)**:\n• Functie: **meewerkend voorwerp** ('aan/voor wie?').\n• Vraag: Aan wie? Voor wie?\n• *Dono Caesari* = Ik geef aan Caesar.\n• Vergelijkbaar met NL voor/aan.\n\n**4. Accusatief (Acc)**:\n• Functie: **lijdend voorwerp** ('wie/wat ondergaat?').\n• Vraag: Wie/wat?\n• *Video Caesarem* = Ik zie Caesar.\n• Ook richting bij beweging: *eo Romam* = Ik ga naar Rome.\n\n**5. Ablatief (Abl)**:\n• Functie: **omstandigheid** (door/met/in/uit).\n• Vraag: Waardoor/waarmee/waarin/waaruit?\n• *Cum Caesare* = Met Caesar.\n• *Romae* = In Rome (locatie kan ook locatief zijn).\n• *Gladio* = Met het zwaard.\n• Veelzijdig — vele functies.\n\n**6. Vocatief (Voc)**:\n• Functie: **aanspreken**.\n• 'Brutus, jij ook?'\n• In meeste woorden gelijk aan nominatief, behalve bij sommige zelfst. naamwoorden -us → -e.\n• 'O Caesar!' (anders dan 'Caesar venit').\n• Beroemd: 'Et tu, Brute?' (vocatief van Brutus, met regelmatige -e-uitgang).\n\n**Latijnse declinaties** (5 hoofd-groepen zelfst. naamwoorden):\n\n**1e declinatie** (meestal vrouwelijk, eindigt op -a):\n```\nNom: puella (meisje)\nGen: puellae\nDat: puellae\nAcc: puellam\nAbl: puella (lange a)\nVoc: puella\n```\nMeervoud: puellae / puellarum / puellis / puellas / puellis.\n\n**2e declinatie** (meestal mannelijk -us / onzijdig -um):\n```\nNom: dominus (heer) — neutrum: bellum (oorlog)\nGen: domini — belli\nDat: domino — bello\nAcc: dominum — bellum\nAbl: domino — bello\nVoc: domine — bellum\n```\n\n**3e declinatie** (gemengd, divers):\n```\nNom: rex (koning) — homo (mens)\nGen: regis — hominis\nDat: regi — homini\nAcc: regem — hominem\nAbl: rege — homine\n```\n\n**4e** (zeldzamer, -us mannelijk): manus (hand).\n\n**5e** (zeldzaamst, -es): dies (dag), res (zaak).\n\n**Bijvoeglijke naamwoorden**:\n• Stemmen overeen met zelfstandig naamwoord in **geslacht, getal, naamval**.\n• Bonus magister (goede meester) — beide nominatief mannelijk enkelvoud.\n• Bonum bellum (goede oorlog) — beide nom onzijdig enkelvoud.\n• Boni magistri (goede meesters) — beide nom mannelijk meervoud.\n\n**Geen artikelen**:\n• Latijn heeft **geen lidwoorden** (geen 'de/het').\n• Context bepaalt.\n• Romaanse talen ontwikkelden ze later: il/la (IT), le/la (FR), el/la (SP).\n\n**Vrije woordvolgorde**:\n• Door naamvallen weet je functie → volgorde flexibel.\n• 'Caesar Brutum videt' = 'Brutum Caesar videt' = 'Videt Caesar Brutum' betekenen allemaal hetzelfde: Caesar ziet Brutus.\n• Maar stijl + emfase wel verschillend.\n• Gewone volgorde: SVO of SOV (laatste vooral, werkwoord aan einde).",
+      "**Latijn heeft 6 naamvallen** (vs Duits 4, Nederlands 0). Naamval bepaalt **functie** van zelfstandig naamwoord in zin → eindigingen veranderen.\n\n**De 6 naamvallen**:\n\n**1. Nominatief (Nom)**:\n• Functie: **onderwerp** ('wie/wat doet?').\n• Vraag: Wie/wat?\n• Vorm voor enkelvoud + meervoud verschillend.\n• *Caesar venit* = Caesar komt. (Caesar = nominatief).\n\n**2. Genitief (Gen)**:\n• Functie: **bezit** ('van wie?').\n• Vraag: Van wie/waarvan?\n• *Liber Caesaris* = Het boek van Caesar.\n• Vergelijkbaar met Engels 's of NL 'van'.\n\n**3. Datief (Dat)**:\n• Functie: **meewerkend voorwerp** ('aan/voor wie?').\n• Vraag: Aan wie? Voor wie?\n• *Dono Caesari* = Ik geef aan Caesar.\n• Vergelijkbaar met NL voor/aan.\n\n**4. Accusatief (Acc)**:\n• Functie: **lijdend voorwerp** ('wie/wat ondergaat?').\n• Vraag: Wie/wat?\n• *Video Caesarem* = Ik zie Caesar.\n• Ook richting bij beweging: *eo Romam* = Ik ga naar Rome.\n\n**5. Ablatief (Abl)**:\n• Functie: **omstandigheid** (door/met/in/uit).\n• Vraag: Waardoor/waarmee/waarin/waaruit?\n• *Cum Caesare* = Met Caesar.\n• *Romae* = In Rome (let op: dat is eigenlijk een aparte vorm, de locatief).\n• *Gladio* = Met het zwaard.\n• Veelzijdig — vele functies.\n\n**6. Vocatief (Voc)**:\n• Functie: **aanspreken**.\n• 'Brutus, jij ook?'\n• In meeste woorden gelijk aan nominatief, behalve bij sommige zelfst. naamwoorden -us → -e.\n• 'O Caesar!' (anders dan 'Caesar venit').\n• Beroemd: 'Et tu, Brute?' (vocatief van Brutus, met regelmatige -e-uitgang).\n\n**Latijnse declinaties** (5 hoofd-groepen zelfst. naamwoorden):\n\n**1e declinatie** (meestal vrouwelijk, eindigt op -a):\n```\nNom: puella (meisje)\nGen: puellae\nDat: puellae\nAcc: puellam\nAbl: puella (lange a)\nVoc: puella\n```\nMeervoud: puellae / puellarum / puellis / puellas / puellis.\n\n**2e declinatie** (meestal mannelijk -us / onzijdig -um):\n```\nNom: dominus (heer) — neutrum: bellum (oorlog)\nGen: domini — belli\nDat: domino — bello\nAcc: dominum — bellum\nAbl: domino — bello\nVoc: domine — bellum\n```\n\n**3e declinatie** (gemengd, divers):\n```\nNom: rex (koning) — homo (mens)\nGen: regis — hominis\nDat: regi — homini\nAcc: regem — hominem\nAbl: rege — homine\n```\n\n**4e** (zeldzamer, meestal mannelijk op -us; uitzondering: manus (hand) is vrouwelijk).\n\n**5e** (zeldzaamst, -es): dies (dag), res (zaak).\n\n**Bijvoeglijke naamwoorden**:\n• Stemmen overeen met zelfstandig naamwoord in **geslacht, getal, naamval**.\n• Bonus magister (goede meester) — beide nominatief mannelijk enkelvoud.\n• Bonum bellum (goede oorlog) — beide nom onzijdig enkelvoud.\n• Boni magistri (goede meesters) — beide nom mannelijk meervoud.\n\n**Geen artikelen**:\n• Latijn heeft **geen lidwoorden** (geen 'de/het').\n• Context bepaalt.\n• Romaanse talen ontwikkelden ze later: il/la (IT), le/la (FR), el/la (SP).\n\n**Vrije woordvolgorde**:\n• Door naamvallen weet je functie → volgorde flexibel.\n• 'Caesar Brutum videt' = 'Brutum Caesar videt' = 'Videt Caesar Brutum' betekenen allemaal hetzelfde: Caesar ziet Brutus.\n• Maar stijl + emfase wel verschillend.\n• Gewone volgorde: SVO of SOV (laatste vooral, werkwoord aan einde).",
     checks: [
       {
         q: "Hoeveel **naamvallen** heeft het Latijn?",
@@ -129,11 +129,11 @@ const steps = [
       },
       {
         q: "**'Et tu, Brute?'** — welke naamval van Brutus?",
-        options: ["Vocatief (aanspreken)","Nominatief","Accusatief","Genitief"],
+        options: ["Vocatief","Nominatief","Accusatief","Genitief"],
         answer: 0,
         wrongHints: [null, "Niet — geen onderwerp.", "Niet — geen lijd vw.", "Niet — geen bezit."],
         uitlegPad: {
-          stappen: [{ titel: "Aanroep", tekst: "**'Et tu, Brute?'** = 'En jij, Brutus?' (laatste woorden Caesar bij moord). **Vocatief** voor aanspreken. Bij 2e declinatie -us → -e in vocatief: Brutus → **Brute**. Caesar → Caesar (vocatief = nominatief)." }],
+          stappen: [{ titel: "Aanroep", tekst: "**'Et tu, Brute?'** = 'En jij, Brutus?' (volgens Shakespeare Caesars laatste woorden). **Vocatief** voor aanspreken. Bij 2e declinatie -us → -e in vocatief: Brutus → **Brute**. Caesar → Caesar (vocatief = nominatief)." }],
           theorie: "Beroemde regel uit Shakespeares *Julius Caesar* (1599) — Latijn meebehouden door auteur voor effect.",
           niveaus: { basis: "Vocatief.", simpeler: "Brute = vocatief", nogSimpeler: "Vocatief." },
         },
@@ -145,11 +145,11 @@ const steps = [
   {
     title: "Werkwoorden — vervoeging + tijden",
     explanation:
-      "**Latijnse werkwoorden** verbuigen voor persoon + getal + tijd + wijs + genus (actief/passief). Veel vormen.\n\n**4 hoofdvervoegings-groepen** (conjugaties):\n\n**1e conjugatie**: stam eindigt op **-a** (amare = liefhebben).\n• ama-re (infinitief).\n• Praesens-stam: ama-.\n• Voorbeeld: amō (ik heb lief), amās (jij), amat (hij/zij), amāmus (wij), amātis (jullie), amant (zij).\n\n**2e conjugatie**: -e (monēre = waarschuwen).\n• mone-ō, mone-s, mone-t, mone-mus, mone-tis, mone-nt.\n\n**3e conjugatie**: -e (kort) — divers.\n• regere = regeren. reg-o, reg-is, reg-it...\n\n**4e conjugatie**: -i (audire = horen).\n• audi-o, audi-s, audi-t...\n\n**Persoonsuitgangen** (presens actief, vrij universeel):\n```\nIk:       -o / -m\nJij:      -s\nHij/zij:  -t\nWij:      -mus\nJullie:   -tis\nZij:      -nt\n```\n\n**Belangrijkste tijden**:\n\n**Praesens** (tegenwoordig): hij doet nu.\n• Stam + persoonsuitgang.\n• *Amat* = hij heeft lief.\n\n**Imperfectum** (onvoltooid verleden): hij was doende / hij deed.\n• Stam + **-bā-** + uitgang.\n• *Amabat* = hij was aan het liefhebben / had lief.\n\n**Perfectum** (voltooid verleden): hij heeft gedaan / hij deed.\n• Eigen perfect-stam + speciale uitgangen.\n• *Amavit* = hij heeft liefgehad / heeft lief gehad.\n• 4 hoofdvormen-systeem: amare, amo, amavi, amatus.\n\n**Plusquamperfectum** (voltooid verleden in verleden):\n• Perfect-stam + -era- + uitgang.\n• *Amaverat* = hij had liefgehad.\n\n**Futurum** (toekomend): hij zal doen.\n• Stam + -bi- (1+2 conj) / -e- (3+4 conj) + uitgang.\n• *Amabit* = hij zal liefhebben.\n\n**Futurum exactum** (voltooid toekomend): hij zal hebben gedaan.\n\n**Wijzen**:\n• **Indicativus** (mededelend): gewoon stellend.\n• **Coniunctivus** (aanvoegend, **subjunctief**): wens, twijfel, mogelijkheid, na bepaalde voegwoorden.\n• **Imperativus** (gebiedend): bevel.\n  - Enkelvoud: stam (ama! = heb lief!).\n  - Meervoud: stam + -te (amate!).\n• **Infinitivus**: onbepaald (amare = liefhebben).\n\n**Actief vs Passief**:\n• **Actief**: onderwerp doet. *Caesar amat puellam* = Caesar heeft het meisje lief.\n• **Passief**: onderwerp ondergaat. *Puella amatur* = Het meisje wordt liefgehad.\n• Passief-uitgangen anders: -or, -ris, -tur, -mur, -mini, -ntur.\n\n**4 hoofdvormen** van elk werkwoord (uit hoofd leren!):\n• amare, amo, amavi, amatus (1e conj).\n• monēre, moneo, monui, monitus (2e).\n• regere, rego, rexi, rectus (3e).\n• audire, audio, audivi, auditus (4e).\n• facere, facio, feci, factus (3e -io, onregelmatig).\n• esse, sum, fui, futurus (zijn — onregelmatig).\n• ferre, fero, tuli, latus (dragen — onregelmatig).\n• ire, eo, ii/ivi, itus (gaan — onregelmatig).\n\n**Onregelmatige werkwoorden**:\n• **Esse** (zijn): sum, es, est, sumus, estis, sunt.\n• **Posse** (kunnen): possum, potes, potest...\n• **Velle** (willen): volo, vis, vult...\n• **Ferre** (dragen): fero, fers, fert...\n\n**Participia** (deelwoorden):\n• Praes act: amans (= liefhebbend).\n• Perf pass: amatus (= geliefd / lief gehad).\n• Fut act: amaturus (= zullende liefhebben).\n• Functioneren als bijvoeglijk naamwoord — verbuigen mee.\n\n**toetsvraag-patroon**:\n• Identificeer werkwoord + analyseer (persoon, getal, tijd, wijs).\n• Vertaal zin met juiste tijd.\n• Herken stam-veranderingen (perfect-stam vs presens-stam).",
+      "**Latijnse werkwoorden** verbuigen voor persoon + getal + tijd + wijs + genus (actief/passief). Veel vormen.\n\n**4 hoofdvervoegings-groepen** (conjugaties):\n\n**1e conjugatie**: stam eindigt op **-a** (amare = liefhebben).\n• ama-re (infinitief).\n• Praesens-stam: ama-.\n• Voorbeeld: amō (ik heb lief), amās (jij), amat (hij/zij), amāmus (wij), amātis (jullie), amant (zij).\n\n**2e conjugatie**: -e (monēre = waarschuwen).\n• mone-ō, mone-s, mone-t, mone-mus, mone-tis, mone-nt.\n\n**3e conjugatie**: -e (kort) — divers.\n• regere = regeren. reg-o, reg-is, reg-it...\n\n**4e conjugatie**: -i (audire = horen).\n• audi-o, audi-s, audi-t...\n\n**Persoonsuitgangen** (presens actief, vrij universeel):\n```\nIk:       -o / -m\nJij:      -s\nHij/zij:  -t\nWij:      -mus\nJullie:   -tis\nZij:      -nt\n```\n\n**Belangrijkste tijden**:\n\n**Praesens** (tegenwoordig): hij doet nu.\n• Stam + persoonsuitgang.\n• *Amat* = hij heeft lief.\n\n**Imperfectum** (onvoltooid verleden): hij was doende / hij deed.\n• Stam + **-bā-** + uitgang.\n• *Amabat* = hij was aan het liefhebben / had lief.\n\n**Perfectum** (voltooide tijd): hij heeft gedaan / hij deed.\n• Eigen perfect-stam + speciale uitgangen.\n• *Amavit* = hij heeft liefgehad / heeft lief gehad.\n• 4 hoofdvormen-systeem: amare, amo, amavi, amatus.\n\n**Plusquamperfectum** (voltooid verleden in verleden):\n• Perfect-stam + -era- + uitgang.\n• *Amaverat* = hij had liefgehad.\n\n**Futurum** (toekomend): hij zal doen.\n• Stam + -bi- (1+2 conj) / -e- (3+4 conj) + uitgang.\n• *Amabit* = hij zal liefhebben.\n\n**Futurum exactum** (voltooid toekomend): hij zal hebben gedaan.\n\n**Wijzen**:\n• **Indicativus** (mededelend): gewoon stellend.\n• **Coniunctivus** (aanvoegend, **subjunctief**): wens, twijfel, mogelijkheid, na bepaalde voegwoorden.\n• **Imperativus** (gebiedend): bevel.\n  - Enkelvoud: stam (ama! = heb lief!).\n  - Meervoud: stam + -te (amate!).\n• **Infinitivus**: onbepaald (amare = liefhebben).\n\n**Actief vs Passief**:\n• **Actief**: onderwerp doet. *Caesar amat puellam* = Caesar heeft het meisje lief.\n• **Passief**: onderwerp ondergaat. *Puella amatur* = Het meisje wordt liefgehad.\n• Passief-uitgangen anders: -or, -ris, -tur, -mur, -mini, -ntur.\n\n**4 hoofdvormen** van elk werkwoord (uit hoofd leren!):\n• amare, amo, amavi, amatus (1e conj).\n• monēre, moneo, monui, monitus (2e).\n• regere, rego, rexi, rectus (3e).\n• audire, audio, audivi, auditus (4e).\n• facere, facio, feci, factus (3e -io, onregelmatig).\n• esse, sum, fui, futurus (zijn — onregelmatig).\n• ferre, fero, tuli, latus (dragen — onregelmatig).\n• ire, eo, ii/ivi, itus (gaan — onregelmatig).\n\n**Onregelmatige werkwoorden**:\n• **Esse** (zijn): sum, es, est, sumus, estis, sunt.\n• **Posse** (kunnen): possum, potes, potest...\n• **Velle** (willen): volo, vis, vult...\n• **Ferre** (dragen): fero, fers, fert...\n\n**Participia** (deelwoorden):\n• Praes act: amans (= liefhebbend).\n• Perf pass: amatus (= geliefd / lief gehad).\n• Fut act: amaturus (= zullende liefhebben).\n• Functioneren als bijvoeglijk naamwoord — verbuigen mee.\n\n**toetsvraag-patroon**:\n• Identificeer werkwoord + analyseer (persoon, getal, tijd, wijs).\n• Vertaal zin met juiste tijd.\n• Herken stam-veranderingen (perfect-stam vs presens-stam).",
     checks: [
       {
         q: "**Amat** is welke vorm?",
-        options: ["3e persoon enkelvoud praesens","2e persoon","1e meervoud","Imperatief"],
+        options: ["3e persoon enkelvoud","2e persoon","1e meervoud","Imperatief"],
         answer: 0,
         wrongHints: [null, "Dat zou amas zijn.", "Dat is amamus.", "Dat is ama!"],
         uitlegPad: {
@@ -159,7 +159,7 @@ const steps = [
       },
       {
         q: "Welke tijd is **amabat**?",
-        options: ["Imperfectum (onvolt verl)","Praesens","Futurum","Perfectum"],
+        options: ["Imperfectum","Praesens","Futurum","Perfectum"],
         answer: 0,
         wrongHints: [null, "Praesens = amat.", "Futurum = amabit.", "Perf = amavit."],
         uitlegPad: {
@@ -179,7 +179,7 @@ const steps = [
       },
       {
         q: "Welk werkwoord is **'zijn'**?",
-        options: ["esse (sum, es, est)","amare","facere","ferre"],
+        options: ["esse","amare","facere","ferre"],
         answer: 0,
         wrongHints: [null, "Liefhebben.", "Maken.", "Dragen."],
         uitlegPad: {
@@ -228,7 +228,7 @@ const steps = [
       },
       {
         q: "Wie was de eerste **Romeinse keizer**?",
-        options: ["Augustus (Octavianus)","Caesar","Nero","Constantijn"],
+        options: ["Augustus","Caesar","Nero","Constantijn"],
         answer: 0,
         wrongHints: [null, "Niet — werd dictator, niet keizer.", "Veel later.", "Vroeg-christelijke keizer veel later."],
         uitlegPad: {
@@ -287,7 +287,7 @@ const steps = [
       },
       {
         q: "Wat is **Pax Romana**?",
-        options: ["Periode relatieve vrede (27 v.Chr.-180 n.Chr.)","Vredesakkoord","Tempel","Sport"],
+        options: ["Periode van relatieve vrede","Vredesakkoord","Tempel","Sport"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet relevant."],
         uitlegPad: {

@@ -19,7 +19,7 @@ const steps = [
     checks: [
       {
         q: "Wie schilderde **De Nachtwacht**?",
-        options: ["Rembrandt (1642)", "Vermeer", "Van Gogh", "Mondriaan"],
+        options: ["Rembrandt", "Vermeer", "Van Gogh", "Mondriaan"],
         answer: 0,
         wrongHints: [null, "Klein-werk schilder.", "Veel later.", "Veel later."],
       },
@@ -31,7 +31,7 @@ const steps = [
       },
       {
         q: "Wie schilderde **Het Meisje met de Parel**?",
-        options: ["Vermeer (~1665)", "Rembrandt", "Van Gogh", "Hals"],
+        options: ["Vermeer", "Rembrandt", "Van Gogh", "Hals"],
         answer: 0,
         wrongHints: [null, "Andere.", "Veel later.", "Andere."],
       },
@@ -58,10 +58,10 @@ const steps = [
         q: "Hoeveel schilderijen verkocht hij **tijdens leven**?",
         options: ["1 schilderij", "Honderden", "Nul", "Duizend"],
         answer: 0,
-        wrongHints: [null, "Veel minder.", "Wel 1.", "Niet."],
+        wrongHints: [null, "Veel minder.", "Lees nog eens over 'De Rode Wijngaard'.", "Niet."],
       },
       {
-        q: "Welk **beroemd schilderij**?",
+        q: "Welk **beroemd schilderij** is van Van Gogh?",
         options: ["Zonnebloemen", "Nachtwacht", "Meisje met Parel", "Watermolen"],
         answer: 0,
         wrongHints: [null, "Rembrandt.", "Vermeer.", "Niet."],
@@ -93,7 +93,7 @@ const steps = [
       },
       {
         q: "Wat is **De Stijl**?",
-        options: ["Kunstbeweging 1917 (Mondriaan/Doesburg)", "Schilderij", "Kleur", "Museum"],
+        options: ["Kunstbeweging", "Schilderij", "Kleur", "Museum"],
         answer: 0,
         wrongHints: [null, "Niet één.", "Niet.", "Niet."],
       },
@@ -112,7 +112,7 @@ const steps = [
     checks: [
       {
         q: "Wie bedacht **Nijntje**?",
-        options: ["Dick Bruna (1955)", "Anton Pieck", "Mondriaan", "Van Gogh"],
+        options: ["Dick Bruna", "Anton Pieck", "Mondriaan", "Van Gogh"],
         answer: 0,
         wrongHints: [null, "Efteling.", "Abstract.", "Veel eerder."],
       },
@@ -147,8 +147,8 @@ const steps = [
       { q: "Wie bedacht **Nijntje**?", options: ["Dick Bruna", "Pieck", "Mondriaan", "Hals"], answer: 0, wrongHints: [null, "Efteling.", "Niet.", "Niet."] },
       { q: "**Grootste museum** NL?", options: ["Rijksmuseum Amsterdam", "Mauritshuis", "Bonnefanten", "Eftelingmuseum"], answer: 0, wrongHints: [null, "Klein.", "Niet grootst.", "Pretpark."] },
       { q: "Wie schreef de boeken **'Pluk van de Petteflet'** en **'Jip en Janneke'**?", options: ["Annie M.G. Schmidt", "Dick Bruna", "Anton Pieck", "Rembrandt"], answer: 0, wrongHints: [null, "Hij maakte Nijntje, niet deze boeken.", "Pretpark.", "Schilder."] },
-      { q: "**Van Gogh** werd pas na zijn dood beroemd. Hoe **verkocht** hij zijn schilderijen toen hij leefde?", options: ["Bijna niet — slechts één in zijn leven", "Heel veel", "Hij gaf ze gratis weg", "Hij maakte er geen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Hij maakte er duizenden."] },
-      { q: "Bij welke **kunststroming** hoort **Mondriaan**?", options: ["De Stijl (abstract)", "Impressionisme", "Realisme", "Romantiek"], answer: 0, wrongHints: [null, "Niet — Monet.", "Niet — andere stroming.", "Niet."] },
+      { q: "**Van Gogh** werd pas na zijn dood beroemd. Hoe **verkocht** hij zijn schilderijen toen hij leefde?", options: ["Bijna niet — slechts één in zijn leven", "Heel veel, aan rijke kopers", "Hij gaf ze allemaal gratis weg", "Hij maakte er helemaal geen"], answer: 0, wrongHints: [null, "Tegenovergesteld.", "Niet primair.", "Hij maakte er duizenden."] },
+      { q: "Bij welke **kunststroming** hoort **Mondriaan**?", options: ["De Stijl", "Impressionisme", "Realisme", "Romantiek"], answer: 0, wrongHints: [null, "Niet — Monet.", "Niet — andere stroming.", "Niet."] },
     ],
   },
 ];

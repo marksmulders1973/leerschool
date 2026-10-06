@@ -110,7 +110,7 @@ const steps = [
         q: "**Rond af op 1000: 4500**",
         options: ["5000","4000","4500","5500"],
         answer: 0,
-        wrongHints: [null,"5 in honderden → naar boven (regel).","Niet afgerond.","Te veel — afgerond op 1000 is 5000, niet 5500."],
+        wrongHints: [null,"5 in honderden → naar boven (regel).","Niet afgerond.","Te veel — bij afronden op 1000 eindigt het getal op 000."],
       },
     ],
   },
@@ -123,7 +123,7 @@ const steps = [
         q: "**Schat 198 + 412** (afgerond op 100):",
         options: ["600","500","700","400"],
         answer: 0,
-        wrongHints: [null,"Te weinig — reken: hoeveel is 200 + 400?","Te veel — controleer afronding.","Veel te weinig."],
+        wrongHints: [null,"Te weinig — rond elk getal af op honderdtallen en tel ze dan op.","Te veel — controleer afronding.","Veel te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Stap 1: rond elk getal af op 100", tekst: "198 → ligt vlakbij 200 (cijfer in tien = 9 = omhoog) → **200**. 412 → ligt vlakbij 400 (cijfer in tien = 1 = omlaag) → **400**." },
@@ -176,10 +176,10 @@ const steps = [
         q: "Een rit duurt **2 uur 47 min**. Afgerond op kwartiers — hoeveel?",
         options: ["2 uur 45 min","3 uur","2 uur 30 min","3 uur 15 min"],
         answer: 0,
-        wrongHints: [null,"Te veel — afronden op kwartiers betekent: 47 min wordt 45.","Te weinig — 47 wordt 45, niet 30.","Te veel."],
+        wrongHints: [null,"Te veel — welk kwartier (0, 15, 30 of 45 minuten) ligt het dichtst bij 47 minuten?","Te weinig — 47 minuten ligt dichter bij een ander kwartier.","Te veel."],
       },
       {
-        q: "**€ 49,80 + € 24,30** — schat:",
+        q: "**€ 49,80 + € 24,30** — schat (rond af op hele euro's):",
         options: ["€ 74","€ 70","€ 80","€ 75"],
         answer: 0,
         wrongHints: [null,"Te weinig — rond elk bedrag af op hele euro's en tel op.","Te veel — controleer schatting.","Te veel — klopt jouw schatting van beide bedragen?"],
@@ -205,15 +205,15 @@ const steps = [
       },
       {
         q: "Een biljet van **€ 50** voor boodschappen van **€ 12,40 + € 8,30 + € 25,80**. **Past 't?**",
-        options: ["Ja, net — schat ~47","Ja, ruim genoeg","Nee, te veel","Onmogelijk te zeggen"],
+        options: ["Ja, het past","Nee, je komt ruim € 10 tekort","Nee, je komt net iets tekort","Onmogelijk te zeggen"],
         answer: 0,
-        wrongHints: [null,"Niet ruim — het is kort op de 50.","Het past wél — de som is ongeveer 46.","Wel te zeggen — schat de som (12 + 8 + 26)."],
+        wrongHints: [null,"Schat de som: rond elk bedrag af op hele euro's en tel op.","Schat nog eens: rond elk bedrag af en tel op — is dat meer of minder dan € 50?","Wel te zeggen — schat de som."],
       },
       {
         q: "**Schat 612 ÷ 7**:",
         options: ["~87","~100","~70","~120"],
         answer: 0,
-        wrongHints: [null,"Te veel — controleer: 600 ÷ 7 ≈ 86.","Te weinig — controleer: 600 ÷ 7 ≈ 86.","Te veel."],
+        wrongHints: [null,"Te veel — 7 × 100 is al 700, en dat is meer dan 612.","Te weinig — 7 × 70 is maar 490, dat is ver onder 612.","Te veel."],
       },
       {
         q: "**Rond 2849 af op 100**:",
@@ -225,7 +225,7 @@ const steps = [
         q: "**Schat: 19,80 × 4** (in winkel zonder rekenmachine):",
         options: ["~80","~70","~90","~50"],
         answer: 0,
-        wrongHints: [null, "Te weinig — rond 19,80 omhoog (bijna 20), niet omlaag.", "Te veel — 4 × €20 is precies €80, antwoord net daaronder.", "Veel te weinig."],
+        wrongHints: [null, "Te weinig — rond 19,80 omhoog (bijna 20), niet omlaag.", "Te veel — rond 19,80 af op een heel getal en reken dan × 4.", "Veel te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "Wanneer schat je?", tekst: "Bij winkel-vragen zonder rekenmachine: rond eerst af naar makkelijk getal, daarna rekenen." },
@@ -311,7 +311,7 @@ const steps = [
         q: "**€ 7,99** is bijna **€ 8**. Wat is **5 × € 7,99** ongeveer?",
         options: ["~€ 40","~€ 35","~€ 45","~€ 50"],
         answer: 0,
-        wrongHints: [null, "Te weinig — €8 × 5 = €40, niet €35.", "Te veel — €8 × 5 = €40, niet €45.", "Te veel — controleer: 5 × €8 = €40."],
+        wrongHints: [null, "Te weinig — reken met €8 in plaats van €7,99.", "Te veel — reken met €8 en neem dat 5 keer.", "Te veel — hoeveel is 5 × €8?"],
         uitlegPad: {
           stappen: [
             { titel: "Bijna-rond-getal-truc", tekst: "€7,99 ≈ €8 (1 cent verschil)." },
@@ -338,12 +338,12 @@ const steps = [
       { q: "Hoeveel is **±1.000 + ±2.000**?", options: ["~3.000","~3.500","~2.500","~5.000"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
       { q: "Een mens is 1,72 m lang. Afgerond op hele tientallen cm is dat ongeveer…", options: ["~170 cm","~180 cm","~172 cm","~150 cm"], answer: 0, wrongHints: [null, "Niet — 172 < 175.", "Dat is niet afgerond.", "Te laag."] },
       { q: "Rond €19,80 af op euro", options: ["€20","€19","€19,80","€21"], answer: 0, wrongHints: [null, "Niet.", "Geen afronding.", "Te ver — 19,80 ligt dicht bij 20."] },
-      { q: "Wanneer **schatten** ipv exact?", options: ["Bij snelle controle of als precisie niet hoeft","Altijd","Nooit","Alleen in winkel"], answer: 0, wrongHints: [null, "Niet altijd nuttig.", "Wel handig.", "Niet alleen daar."] },
+      { q: "Wanneer **schatten** ipv exact?", options: ["Bij snelle controle of als precisie niet hoeft","Altijd, ook als het precies moet","Nooit, precies rekenen is altijd beter","Alleen als je in de winkel staat"], answer: 0, wrongHints: [null, "Niet altijd nuttig.", "Wel handig.", "Niet alleen daar."] },
       { q: "10 × ~9 ≈ wat?", options: ["~90","~100","~10","~900"], answer: 0, wrongHints: [null, "Niet — geen exact 10×10.", "Te weinig.", "Te veel."] },
       { q: "Hoeveel is 998 + 1.005 ongeveer?", options: ["~2.000","~3.000","~1.500","~10.000"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Veel te veel."] },
       { q: "Het cijfer na de afrondplek is een 5. Wat doe je?", options: ["Naar boven","Naar beneden","Willekeurig","Niet afronden"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Je rondt wél af."] },
       { q: "11,3 + 8,9 schatten = ?", options: ["~20","~30","~10","~25"], answer: 0, wrongHints: [null, "Te veel.", "Te weinig.", "Niet."] },
-      { q: "Verschil tussen 'schatten' en 'afronden'?", options: ["Schatten = ruw idee; afronden = exact geregeld op getal","Hetzelfde","Geen verschil","Afronden is moeilijker"], answer: 0, wrongHints: [null, "Wel verschil.", "Wel verschil.", "Beide makkelijk."] },
+      { q: "Verschil tussen 'schatten' en 'afronden'?", options: ["Schatten = ruw idee; afronden = vaste regel per cijfer","Ze betekenen precies hetzelfde","Schatten is altijd preciezer dan afronden","Afronden doe je alleen met geld"], answer: 0, wrongHints: [null, "Wel verschil.", "Schatten is juist een ruwe inschatting.", "Afronden kan met elk getal."] },
       { q: "Rond 0,49 af op heel getal", options: ["0","1","0,5","49"], answer: 0, wrongHints: [null, "Niet — onder 0,5.", "Niet — heel getal.", "Niet."] },
     ],
   },

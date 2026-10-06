@@ -116,7 +116,7 @@ Heb je een getal nodig? Lijst! Wil je weten wat er mag of geldt? Tekst! Probeer 
       {
         q: "Is de bibliotheek op maandag open tot 20.00 uur?",
         options: [
-          "Nee — op maandag is de bibliotheek alleen open tot 17.00 uur",
+          "Nee, op maandag sluit hij al om 17.00 uur",
           "Ja, op maandag is hij tot 20.00 uur open",
           "Ja, net als op vrijdag",
           "Nee, op maandag is hij de hele dag dicht",
@@ -676,12 +676,12 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
       },
       {
         q: "Drie kinderen doen samen één ponyles bij 't Hoefje. Wat betalen ze per kind?",
-        options: ["€ 7,50 per kind (de les is per persoon)", "€ 2,50 per kind", "€ 7,50 in totaal", "€ 10,00 in totaal"],
+        options: ["€ 7,50 per kind", "€ 2,50 per kind", "€ 7,50 in totaal", "€ 10,00 in totaal"],
         answer: 0,
-        evidence: "Ponyles (30 minuten): € 7,50",
+        evidence: "Ponyles (30 minuten, per kind): € 7,50",
         wrongHints: [
           null,
-          "Kijk naar wat er op de ponyles-regel staat: is er een eenheid zoals 'per groepje' of staat er niets speciaals?",
+          "Kijk wat er op de ponyles-regel tussen de haakjes staat: 'per groepje' of 'per kind'?",
           "Vergelijk de ponyles-regel met de speurtocht-regel: staat er ook 'per groepje' bij de ponyles?",
           null,
         ],
@@ -692,7 +692,7 @@ Zet je valkuilen-bril op en probeer de vragen hieronder.`,
             { titel: "Reken per kind", tekst: "Drie kinderen × € 7,50 = € 22,50 samen. Per kind: € 7,50." },
           ],
           niveaus: {
-            basis: "De ponyles heeft geen groepjes-prijs. Wat kost de les per persoon?",
+            basis: "De ponyles heeft geen groepjes-prijs maar een prijs per kind. Wat kost de les per persoon?",
             simpeler: "Vergelijk ponyles en speurtocht: bij welke staat er 'per groepje' en bij welke niet?",
             nogSimpeler: "Lees de ponyles-regel precies. Is er een groepjeskorting, of betaalt ieder kind apart?",
           },

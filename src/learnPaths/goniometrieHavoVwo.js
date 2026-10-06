@@ -143,9 +143,9 @@ const steps = [
     checks: [
       {
         q: "Een driehoek heeft a=10, b=14, hoek C=90°. Cosinusregel geeft c² = ?",
-        options: ["296", "100+196−280=16", "−196", "Niet te bepalen"],
+        options: ["296", "16", "156", "Niet te bepalen"],
         answer: 0,
-        wrongHints: [null, "Verfijn — wat is cos 90°?", "Niet — controleer teken.", "Wel."],
+        wrongHints: [null, "Verfijn — wat is cos 90°?", "Je rekent alsof cos C = 0,5 — maar hoek C is 90°.", "Wel — alle gegevens voor de cosinusregel zijn er."],
         uitlegPad: {
           stappen: [{ titel: "cos 90° = 0", tekst: "c² = 10² + 14² − 2·10·14·0 = 100 + 196 = 296. c = √296 ≈ 17,2. Bij C=90° vervalt cosinusregel naar **Pythagoras**." }],
           theorie: "Cosinusregel is een super-Pythagoras voor elke hoek.",
@@ -189,7 +189,7 @@ const steps = [
       },
       {
         q: "Driehoek met a=5, b=7, c=8. Cosinusregel: cos C = ?",
-        options: ["1/7 ≈ 0,143", "0,500", "1", "−0,143"],
+        options: ["0,143", "0,500", "1", "−0,143"],
         answer: 0,
         wrongHints: [null, "Niet — geen 60°.", "Niet — controleer formule.", "Wel positief."],
         uitlegPad: {

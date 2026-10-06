@@ -42,30 +42,30 @@ const steps = [
   {
     title: "De 7 continenten",
     explanation:
-      "De wereld is verdeeld in **7 continenten** *(grote stukken land)*.\n\n**De 7 continenten** *(uit je hoofd!)*:\n1. **Noord-Amerika** — Canada, VS, Mexico.\n2. **Zuid-Amerika** — Brazilië, Argentinië, Peru.\n3. **Europa** — Nederland, Frankrijk, Duitsland.\n4. **Afrika** — Egypte, Zuid-Afrika, Marokko.\n5. **Azië** — China, India, Japan.\n6. **Oceanië** — Australië, Nieuw-Zeeland.\n7. **Antarctica** — geen land, alleen ijs en pinguïns.\n\n**Grootste en kleinste**:\n• **Grootste continent**: Azië (44 miljoen km²).\n• **Kleinste continent**: Oceanië *(of Australië — geldt als één)*.\n• **Koudste**: Antarctica.\n• **Heetste**: Afrika (Sahara-woestijn).\n• **Meeste mensen**: Azië (~4,7 miljard mensen).\n\n**Wonderfeitje — Antarctica**:\n• Niemand woont er permanent.\n• Het is een echte ijswoestijn — temperatuur -50 °C tot -80 °C.\n• Enige 'inwoners': pinguïns, zeehonden, onderzoekers in stations.\n\n**Truc om de continenten te onthouden**:\n**N**ederland-noord, **N**ederland-zuid?\n• **N**oord-Amerika — **Z**uid-Amerika.\n• **E**uropa, **A**zië, **A**frika.\n• **O**ceanië, **A**ntarctica.\nKun je ook onthouden als: 'N, Z, E, A, A, O, A'.",
+      "De wereld is verdeeld in **7 continenten** *(grote stukken land)*.\n\n**De 7 continenten** *(uit je hoofd!)*:\n1. **Noord-Amerika** — Canada, VS, Mexico.\n2. **Zuid-Amerika** — Brazilië, Argentinië, Peru.\n3. **Europa** — Nederland, Frankrijk, Duitsland.\n4. **Afrika** — Egypte, Zuid-Afrika, Marokko.\n5. **Azië** — China, India, Japan.\n6. **Oceanië** — Australië, Nieuw-Zeeland.\n7. **Antarctica** — geen land, alleen ijs en pinguïns.\n\n**Grootste en kleinste**:\n• **Grootste continent**: Azië (44 miljoen km²).\n• **Kleinste continent**: Oceanië *(of Australië — geldt als één)*.\n• **Koudste**: Antarctica.\n• **Heetste**: Afrika (Sahara-woestijn).\n• **Meeste mensen**: Azië (~4,7 miljard mensen).\n\n**Wonderfeitje — Antarctica**:\n• Niemand woont er permanent.\n• Het is een echte ijswoestijn — in het binnenland in de winter vaak −50 °C tot −80 °C.\n• Enige 'inwoners': pinguïns, zeehonden, onderzoekers in stations.\n\n**Truc om de continenten te onthouden**:\n**N**ederland-noord, **N**ederland-zuid?\n• **N**oord-Amerika — **Z**uid-Amerika.\n• **E**uropa, **A**zië, **A**frika.\n• **O**ceanië, **A**ntarctica.\nKun je ook onthouden als: 'N, Z, E, A, A, O, A'.",
     interactiveComponent: Wereldbol,
     checks: [
       {
-        q: "Hoeveel **continenten** zijn er?",
+        q: "Je telt **Noord- en Zuid-Amerika apart** en je telt **Antarctica** mee. Hoeveel **continenten** zijn er dan?",
         options: ["7", "5", "6", "8"],
         answer: 0,
-        wrongHints: [null, "Soms wordt 5 gezegd, maar controleer welk aantal standaard gehanteerd wordt in de geografie.", "Sommige landen tellen anders, maar wat zegt de standaard-indeling in de Nederlandse schoolgeografie?", "Niet 8."],
+        wrongHints: [null, "5 hoort bij een oude indeling met Amerika als één geheel en zonder Antarctica. Tel opnieuw.", "Heb je beide Amerika's én Antarctica meegeteld?", "Niet 8."],
         uitlegPad: {
           stappen: [
-            { titel: "De 7 continenten — op de Nederlandse school", tekst: "In Nederland leer je dat er **7 continenten** zijn. Die hebben we hier voor de Doorstroomtoets nodig: Noord-Amerika, Zuid-Amerika, Europa, Afrika, Azië, Oceanië, Antarctica." },
-            { titel: "Waarom soms 5 of 6?", tekst: "In sommige andere landen tellen ze anders. Bv. **Noord + Zuid-Amerika als 1** (= 6 totaal) of **Europa + Azië als 1 'Eurazië'** (= 6 totaal). In Nederland: **altijd 7**." },
+            { titel: "De 7 continenten — op de Nederlandse school", tekst: "In deze les (en in de meeste schoolboeken) tel je **7 continenten**: Noord-Amerika, Zuid-Amerika, Europa, Afrika, Azië, Oceanië, Antarctica." },
+            { titel: "Waarom soms 5 of 6?", tekst: "In sommige andere landen tellen ze anders. Bv. **Noord + Zuid-Amerika als 1** (= 6 totaal) of **Europa + Azië als 1 'Eurazië'** (= 6 totaal). In deze les tellen we er **7**." },
             { titel: "Onthoud-truc", tekst: "Tel mee op je vingers: 1) N-Amerika, 2) Z-Amerika, 3) Europa, 4) Afrika, 5) Azië, 6) Oceanië, 7) Antarctica. **7 vingers** — 1 hand + 2 erbij." },
           ],
           woorden: [
             { woord: "continent", uitleg: "Groot stuk land op de aarde." },
             { woord: "Antarctica", uitleg: "Het zuid-pool-continent, alleen ijs en pinguïns." },
           ],
-          theorie: "Toets-feit: in Nederland is het antwoord ALTIJD 7 continenten. Andere systemen bestaan, maar zijn niet wat de toets vraagt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
+          theorie: "Er bestaan verschillende indelingen (5, 6 of 7). In deze les en in de meeste schoolboeken tel je 7 continenten. Lees bij een toetsvraag altijd goed welke indeling bedoeld wordt. Onthoud: 2 Amerika's apart + 4 oude continenten + Antarctica = 7.",
           voorbeelden: [
             { type: "stap", tekst: "Trek de wereldkaart in je hoofd: Amerika links (Noord boven, Zuid onder = 2), Europa + Afrika in midden (= 2), Azië rechts (= 1), Australië/Oceanië onder Azië (= 1), Antarctica onderin (= 1). Totaal 7." },
-            { type: "stap", tekst: "Veel-fout: 5 zeggen (oude indeling). Op de toets altijd 7." },
+            { type: "stap", tekst: "Veel-fout: 5 zeggen (oude indeling zonder Antarctica en met één Amerika)." },
           ],
-          basiskennis: [{ onderwerp: "Truc", uitleg: "Zegt iemand '5 continenten'? Dat is verouderd. Op de Doorstroomtoets = 7. Schrijf dit getal vet in je hoofd." }],
+          basiskennis: [{ onderwerp: "Truc", uitleg: "Zegt iemand '5 continenten'? Dan telt die Amerika als één geheel en laat Antarctica weg. Met beide Amerika's en Antarctica erbij kom je op 7." }],
           niveaus: {
             basis: "7 continenten.",
             simpeler: "Tel ze op: N-Am, Z-Am, Europa, Afrika, Azië, Oceanië, Antarctica. 7.",
@@ -104,7 +104,7 @@ const steps = [
           stappen: [
             { titel: "Azië = grootste", tekst: "**Azië** is veruit het grootste continent — bijna een derde van alle landoppervlakte op aarde. Bekende landen: China, India, Japan, Rusland, Indonesië." },
             { titel: "Rangorde van groot naar klein", tekst: "1) Azië 2) Afrika 3) Noord-Amerika 4) Zuid-Amerika 5) Antarctica 6) Europa 7) Oceanië (Australië)." },
-            { titel: "Verwarring", tekst: "Veel mensen denken dat Afrika het grootst is omdat het op de kaart groot oogt — maar Azië is groter. (Kaarten vertekenen vaak ronde aarde naar plat → polen lijken groter dan ze zijn.)" },
+            { titel: "Verwarring", tekst: "Veel mensen denken dat Afrika het grootst is — maar Azië is groter. (Op veel wereldkaarten lijkt Afrika zelfs kleiner dan het is: kaarten vertekenen de ronde aarde naar plat → gebieden bij de polen lijken groter dan ze zijn.)" },
           ],
           woorden: [{ woord: "Azië", uitleg: "Grootste continent met meer dan de helft van de wereldbevolking." }],
           theorie: "Onthoud: A → A → N: Azië-Afrika-Noord-Amerika. Top 3.",
@@ -157,9 +157,9 @@ const steps = [
     checks: [
       {
         q: "Hoeveel **oceanen** zijn er?",
-        options: ["5", "4", "6", "3"],
+        options: ["5", "7", "6", "3"],
         answer: 0,
-        wrongHints: [null, "Te weinig — vergeet niet de 2 polen.", "Te veel.", "Te weinig."],
+        wrongHints: [null, "Te veel — dat is het aantal continenten.", "Te veel.", "Te weinig — vergeet de 2 IJszeeën bij de polen niet."],
       },
       {
         q: "Welke oceaan is **grootst**?",
@@ -208,7 +208,7 @@ const steps = [
   {
     title: "Beroemde landen op elk continent",
     explanation:
-      "**Per continent een paar landen** om te kennen *(de toets stelt vaak: 'in welk continent ligt X?')*.\n\n**Europa**:\n• Nederland, België, Frankrijk, Duitsland, Spanje, Italië, Engeland (UK), Portugal, Polen, Griekenland, Zweden, Noorwegen, Denemarken, Finland.\n\n**Azië**:\n• China, India, Japan, Indonesië, Thailand, Vietnam, Turkije, Iran, Saoedi-Arabië, Israël, Filipijnen, Pakistan.\n\n**Afrika**:\n• Egypte, Marokko, Zuid-Afrika, Nigeria, Kenia, Ethiopië, Tanzania, Algerije.\n\n**Noord-Amerika**:\n• Verenigde Staten (VS), Canada, Mexico, Cuba.\n\n**Zuid-Amerika**:\n• Brazilië, Argentinië, Chili, Peru, Colombia, Venezuela.\n\n**Oceanië**:\n• Australië, Nieuw-Zeeland, Fiji, Papoea-Nieuw-Guinea.\n\n**🌍 Tik op de wereldbol** op een land — dan vragen we welk land het is, of wat de hoofdstad is. Draai en zoom om het goede land te vinden.\n\n**toetsvragen**:\n*'In welk continent ligt Brazilië?'* → Zuid-Amerika.\n*'In welk continent ligt China?'* → Azië.\n*'In welk continent ligt Egypte?'* → Afrika.\n\n**Trucs voor onthouden**:\n• **Europa** klein maar veel landen — Nederland, Frankrijk, Duitsland zijn buren.\n• **Azië** groot — China en India zijn de 2 grootste landen *(qua mensen)*.\n• **Afrika** — Egypte (piramiden) is bovenaan, Zuid-Afrika onderaan.\n• **Amerika's** — Noord/Zuid via Mexico.\n\n**Veel-voorkomende fout**:\nDenken dat **Turkije** en **Rusland** in Europa liggen. Beide liggen voor het grootste deel in Azië *(maar hebben een klein stuk in Europa)*. Voor de Doorstroomtoets: meestal Azië.",
+      "**Per continent een paar landen** om te kennen *(de toets stelt vaak: 'in welk continent ligt X?')*.\n\n**Europa**:\n• Nederland, België, Frankrijk, Duitsland, Spanje, Italië, Engeland (UK), Portugal, Polen, Griekenland, Zweden, Noorwegen, Denemarken, Finland.\n\n**Azië**:\n• China, India, Japan, Indonesië, Thailand, Vietnam, Turkije, Iran, Saoedi-Arabië, Israël, Filipijnen, Pakistan.\n\n**Afrika**:\n• Egypte, Marokko, Zuid-Afrika, Nigeria, Kenia, Ethiopië, Tanzania, Algerije.\n\n**Noord-Amerika**:\n• Verenigde Staten (VS), Canada, Mexico, Cuba.\n\n**Zuid-Amerika**:\n• Brazilië, Argentinië, Chili, Peru, Colombia, Venezuela.\n\n**Oceanië**:\n• Australië, Nieuw-Zeeland, Fiji, Papoea-Nieuw-Guinea.\n\n**🌍 Tik op de wereldbol** op een land — dan vragen we welk land het is, of wat de hoofdstad is. Draai en zoom om het goede land te vinden.\n\n**toetsvragen**:\n*'In welk continent ligt Brazilië?'* → Zuid-Amerika.\n*'In welk continent ligt China?'* → Azië.\n*'In welk continent ligt Egypte?'* → Afrika.\n\n**Trucs voor onthouden**:\n• **Europa** klein maar veel landen — Nederland, Frankrijk, Duitsland zijn buren.\n• **Azië** groot — China en India zijn de 2 grootste landen *(qua mensen)*.\n• **Afrika** — Egypte (piramiden) is bovenaan, Zuid-Afrika onderaan.\n• **Amerika's** — Noord/Zuid via Mexico.\n\n**Veel-voorkomende fout**:\nDenken dat **Turkije** en **Rusland** helemaal in Europa liggen. Beide liggen in twee werelddelen: het grootste deel in Azië, een kleiner stuk in Europa.",
     interactiveComponent: LandBol,
     checks: [
       {
@@ -260,7 +260,7 @@ const steps = [
     checks: [
       {
         q: "Hoeveel uur draait de aarde om z'n eigen as?",
-        options: ["24 uur (een dag)", "12 uur", "60 uur", "365 uur"],
+        options: ["24 uur", "12 uur", "60 uur", "365 uur"],
         answer: 0,
         wrongHints: [null, "Te weinig — dat zou een halve dag zijn.", "Veel te lang.", "Dat zou een jaar zijn."],
       },
@@ -384,20 +384,20 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Te koud voor regenwoud.", "Geen steden — onbewoond.", "Geen lange rivieren — ijs."],
       },
-      { q: "Hoeveel **continenten** zijn er?", options: ["7","5","8","6"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Bijna."] },
+      { q: "Hoeveel **continenten** telt de indeling die je op school leert?", options: ["7","5","8","6"], answer: 0, wrongHints: [null, "Te weinig — tel Antarctica en beide Amerika's mee.", "Te veel.", "Bijna — tel Noord- en Zuid-Amerika apart."] },
       { q: "Op welk continent ligt **Egypte**?", options: ["Afrika","Azië","Europa","Oceanië"], answer: 0, wrongHints: [null, "Te ver oost — Sinaï is wel deels Azië, maar het grootste deel niet.", "Te ver noord — Egypte ligt zuidelijker.", "Heel ver weg."] },
       { q: "Op welk continent ligt **China**?", options: ["Azië","Afrika","Europa","Noord-Amerika"], answer: 0, wrongHints: [null, "Te ver westen + zuid.", "Te ver westen.", "Te ver naar het westen — andere oceaan."] },
       { q: "Welk continent is het **kleinst** (in oppervlakte)?", options: ["Oceanië/Australië","Antarctica","Europa","Zuid-Amerika"], answer: 0, wrongHints: [null, "Groter.", "Groter.", "Veel groter."] },
       { q: "Welk continent heeft de **Sahara**?", options: ["Afrika","Azië","Australië","Antarctica"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel woestijn, niet Sahara."] },
       { q: "Welk continent heeft de **Amazone-rivier**?", options: ["Zuid-Amerika","Afrika","Azië","Oceanië"], answer: 0, wrongHints: [null, "Wel grote rivieren, niet Amazone.", "Niet.", "Niet."] },
-      { q: "Tussen welke 2 continenten ligt de **Atlantische Oceaan**?", options: ["Amerika ↔ Europa/Afrika","Azië ↔ Australië","NAm ↔ ZAm","Niet."], answer: 0, wrongHints: [null, "Stille Oceaan.", "Geen oceaan tussen.", "Wel."] },
+      { q: "Tussen welke continenten ligt de **Atlantische Oceaan**?", options: ["Amerika ↔ Europa/Afrika","Azië ↔ Australië","Noord-Amerika ↔ Zuid-Amerika","Europa ↔ Azië"], answer: 0, wrongHints: [null, "Kijk op de kaart: daar ligt een andere oceaan.", "Die twee liggen aan elkaar vast — geen oceaan ertussen.", "Die twee liggen aan elkaar vast — geen oceaan ertussen."] },
       { q: "Welk continent ligt rond de **noordpool**?", options: ["Niet één continent — vooral water","Antarctica","Europa","Azië"], answer: 0, wrongHints: [null, "Dat is zuidpool.", "Wel deels, geen continent op pool.", "Wel deels."] },
       { q: "Op welk werelddeel ligt **Nederland**?", options: ["Europa","Azië","Afrika","Amerika"], answer: 0, wrongHints: [null, "Te ver oost.", "Te ver zuid.", "Te ver west — andere oceaan."] },
       { q: "Welk continent heeft de **Mount Everest**?", options: ["Azië","Afrika","Zuid-Amerika","Noord-Amerika"], answer: 0, wrongHints: [null, "Wel bergen, niet Everest.", "Wel de Andes, maar niet de Everest.", "Wel bergen, niet hoogste."] },
-      { q: "Welke landen-groep ligt in **Oceanië**?", options: ["Australië + Nieuw-Zeeland + eilanden","NL + BE + DE","China + Japan","Brazilië + Argentinië"], answer: 0, wrongHints: [null, "Europa.", "Azië.", "Zuid-Amerika."] },
+      { q: "Welke landen-groep ligt in **Oceanië**?", options: ["Australië + Nieuw-Zeeland + eilanden","Nederland + België + Duitsland","China + Japan","Brazilië + Argentinië"], answer: 0, wrongHints: [null, "Europa.", "Azië.", "Zuid-Amerika."] },
       { q: "Welk continent is dichtstbevolkt?", options: ["Azië","Afrika","Europa","Antarctica"], answer: 0, wrongHints: [null, "Tweede.", "Europa is vol, maar heeft minder mensen per km² dan Azië.", "Geen bewoning."] },
       { q: "Tijdzones-feit: hoeveel uur verschil **NL ↔ Sydney**?", options: ["+8 tot +10 uur","+5","Geen verschil","−8"], answer: 0, wrongHints: [null, "Te weinig.", "Wel verschil.", "Verkeerde richting."] },
-      { q: "Welk continent ligt deels op **noordelijk** + deels **zuidelijk** halfrond?", options: ["Afrika (en ZAm)","Antarctica","Europa","Noord-Amerika"], answer: 0, wrongHints: [null, "Antarctica ligt helemaal op het zuidelijk halfrond.", "Europa ligt helemaal op het noordelijk halfrond.", "Noord-Amerika ligt helemaal op het noordelijk halfrond."] },
+      { q: "Welk continent ligt deels op **noordelijk** + deels **zuidelijk** halfrond?", options: ["Afrika","Antarctica","Europa","Noord-Amerika"], answer: 0, wrongHints: [null, "Antarctica ligt helemaal op het zuidelijk halfrond.", "Europa ligt helemaal op het noordelijk halfrond.", "Noord-Amerika ligt helemaal op het noordelijk halfrond."] },
     ],
   },
 ];

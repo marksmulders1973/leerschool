@@ -30,7 +30,7 @@ const steps = [
         q: "Waar zijn de **hunebedden** te vinden?",
         options: ["Drenthe", "Limburg", "Friesland", "Zeeland"],
         answer: 0,
-        wrongHints: [null, "Niet in het zuiden — de hunebedden liggen in het noordoosten.", "Naast Drenthe, maar daar zijn ze niet.", "Geen hunebedden daar."],
+        wrongHints: [null, "Niet in het zuiden — zoek in het noorden van ons land.", "Naast Drenthe, maar daar zijn ze niet.", "Geen hunebedden daar."],
         uitlegPad: {
           stappen: [{ titel: "Drenthe = noordoost", tekst: "Hunebedden liggen in Drenthe (noordoost-NL). Stenen graven uit ~3000 v.Chr." }],
           woorden: [{ woord: "hunebed", uitleg: "Stenen graf uit Trechterbeker-cultuur (~3000 v.Chr.)." }],
@@ -49,7 +49,7 @@ const steps = [
           stappen: [{ titel: "Rijn = Limes", tekst: "Romeinse rijksgrens heette Limes. Volgde de Rijn door Nederland." }],
           woorden: [{ woord: "Limes", uitleg: "Latijn voor 'grens'. Officiële rijksgrens van Romeinse Rijk." }],
           theorie: "Rijn = noordgrens Romeinse Rijk. Boven Rijn = Germanië (vrij). Onder = Romeins.",
-          voorbeelden: [{ type: "feit", tekst: "Forten langs Rijn: Nijmegen, Utrecht (Trajectum), Katwijk." }],
+          voorbeelden: [{ type: "feit", tekst: "Forten langs de Rijn: Utrecht (Trajectum), Woerden, Katwijk." }],
           basiskennis: [{ onderwerp: "Werelderfgoed", uitleg: "Limes is sinds 2021 UNESCO werelderfgoed." }],
           niveaus: { basis: "Rijn.", simpeler: "Romeinse rijksgrens (Limes) volgde de Rijn — die liep dwars door NL.", nogSimpeler: "Rijn" },
         },
@@ -99,7 +99,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Karel = 800", tekst: "Karel de Grote werd in 800 gekroond tot keizer door Paus Leo III." }],
           woorden: [{ woord: "Karel de Grote", uitleg: "742-814. Frankisch koning, daarna keizer (800). Bracht christendom + onderwijs." }],
-          theorie: "Anker-jaar 800 = kroning Karel. Onthoud als startpunt middeleeuwen.",
+          theorie: "Anker-jaar 800 = kroning Karel. Onthoud als anker in de vroege middeleeuwen.",
           voorbeelden: [{ type: "feit", tekst: "Karel breidde zijn rijk uit over West-Europa. Hoofdstad Aken." }],
           basiskennis: [{ onderwerp: "Niet de andere drie", uitleg: "Floris V (1296), Willem v Oranje (1584), Napoleon (1804) — allemaal eeuwen later." }],
           niveaus: { basis: "Karel de Grote.", simpeler: "Karel de Grote (Frankisch koning) werd in 800 keizer. Andere opties leefden eeuwen later.", nogSimpeler: "Karel" },
@@ -142,7 +142,7 @@ const steps = [
         q: "Wat was de **Hanze**?",
         options: ["Een handelsverbond van steden", "Een leger", "Een godsdienst", "Een soort kasteel"],
         answer: 0,
-        wrongHints: [null, "Geen militaire organisatie.", "Niet — handel.", "Geen gebouw."],
+        wrongHints: [null, "Geen militaire organisatie.", "Geen geloof — waarvoor werkten de steden samen?", "Geen gebouw."],
         uitlegPad: {
           stappen: [{ titel: "Hanze = handel", tekst: "Hanze = verbond van handelssteden in Noord-Europa. Samenwerken = veiligere handel." }],
           woorden: [{ woord: "Hanze", uitleg: "Middeleeuws handelsverbond. NL Hanzesteden: Deventer, Zwolle, Kampen, Zutphen." }],
@@ -160,17 +160,17 @@ const steps = [
     explanation: "**Tachtigjarige Oorlog** *(1568 — 1648)*:\n• Nederlanden in opstand tegen Spaanse koning **Filips II**.\n• Aanleiding: **godsdienst** *(protestant ↔ katholiek)*, **belasting**, **verlies van rechten**.\n• Leider: **Willem van Oranje** *('vader des vaderlands')*.\n• 1581: **Plakkaat van Verlatinghe** *(verklaring dat Filips niet meer onze koning is — eerste \"onafhankelijkheidsverklaring\")*.\n• 1584: Willem vermoord in Delft.\n• 1648: **Vrede van Münster** — Republiek officieel onafhankelijk.\n\n**De Republiek** *(1588-1795)*:\n• Geen koning! 7 provincies bestuurd door **Staten-Generaal** + **stadhouder**.\n• Belangrijkste stadhouders uit huis Oranje-Nassau.\n\n**Gouden Eeuw** *(17e eeuw)*:\n• **VOC** *(1602)* en **WIC** *(1621)*: handelscompagnieën met Azië en Amerika.\n• Amsterdam = grootste handelsstad ter wereld.\n• Schilderkunst: **Rembrandt**, **Vermeer**, **Frans Hals**.\n• Wetenschap: **Christiaan Huygens** *(slingerklok)*, **Antoni van Leeuwenhoek** *(microscoop)*.\n• Tegelijk: **slavenhandel** door WIC — donkere kant van de Gouden Eeuw.\n\n**Toets-tip**: jaartallen onthouden via verhaal: '1568 begon, 1648 vrede = 80 jaar oorlog'.",
     checks: [
       {
-        q: "Hoe lang duurde de **Tachtigjarige Oorlog**?",
-        options: ["80 jaar (1568-1648)", "30 jaar (1618-1648)", "10 jaar", "100 jaar"],
+        q: "In welke jaren was de **Tachtigjarige Oorlog**?",
+        options: ["1568-1648", "1618-1648", "1568-1598", "1648-1728"],
         answer: 0,
-        wrongHints: [null, "Dat is de Dertigjarige Oorlog (Duits-Europees).", "Veel langer.", "Iets te lang."],
+        wrongHints: [null, "Dat is de Dertigjarige Oorlog (Duits-Europees).", "Reken uit hoeveel jaar dat is — past dat bij de naam?", "Dat is wel 80 jaar, maar in 1648 was de oorlog juist voorbij."],
         uitlegPad: {
           stappen: [{ titel: "1648 - 1568 = 80", tekst: "Begin 1568 (eerste opstand) — eind 1648 (Vrede van Münster). 80 jaar." }],
           woorden: [{ woord: "Tachtigjarige Oorlog", uitleg: "1568-1648. NL opstand tegen Spanje voor onafhankelijkheid + godsdienstvrijheid." }],
           theorie: "Naam zegt het: tachtig + jaar. Reken: 1648 - 1568 = 80.",
           voorbeelden: [{ type: "ankers", tekst: "1568 = begin (Slag bij Heiligerlee). 1648 = einde (Vrede van Münster)." }],
           basiskennis: [{ onderwerp: "Niet 30-jarig", uitleg: "Dertigjarige Oorlog (1618-1648) was een Europese oorlog in Duitsland — ander conflict." }],
-          niveaus: { basis: "80 jaar.", simpeler: "Tachtigjarige Oorlog = 80 jaar. Van 1568 tot 1648 (Vrede van Münster).", nogSimpeler: "80" },
+          niveaus: { basis: "1568-1648 (80 jaar).", simpeler: "Tachtigjarige Oorlog = 80 jaar. Van 1568 tot 1648 (Vrede van Münster).", nogSimpeler: "1568-1648" },
         },
       },
       {
@@ -205,13 +205,13 @@ const steps = [
       {
         q: "Wat was de **VOC**?",
         options: [
-          "Verenigde Oost-Indische Compagnie — handel met Azië",
-          "Een leger",
+          "Een handelsbedrijf",
+          "Een universiteit",
           "Een kerk",
           "Een familienaam",
         ],
         answer: 0,
-        wrongHints: [null, "Niet militair maar commercieel.", "Niet religieus.", "Geen familienaam."],
+        wrongHints: [null, "Geen school — waar voeren de VOC-schepen heen, en waarom?", "Niet religieus.", "Geen familienaam."],
         uitlegPad: {
           stappen: [{ titel: "VOC = handel Azië", tekst: "Verenigde Oost-Indische Compagnie (1602). Eerste multinational ter wereld voor handel met Azië." }],
           woorden: [{ woord: "VOC", uitleg: "Verenigde Oost-Indische Compagnie. Handel in specerijen, thee, zijde." }],
@@ -323,7 +323,7 @@ const steps = [
       },
       {
         q: "In welke **eeuw** was de Gouden Eeuw?",
-        options: ["17e eeuw (1600-1700)", "16e eeuw", "18e eeuw", "15e eeuw"],
+        options: ["17e eeuw", "16e eeuw", "18e eeuw", "15e eeuw"],
         answer: 0,
         wrongHints: [null, "Begin van de Tachtigjarige Oorlog — net iets te vroeg voor 'goud'.", "Periode van verval (pruikentijd).", "Middeleeuwen."],
         uitlegPad: {
@@ -351,7 +351,7 @@ const steps = [
       },
       {
         q: "**Snelle volgorde-check**: 1648 = ?",
-        options: ["Vrede van Münster (einde Tachtigjarige Oorlog)", "Begin Gouden Eeuw", "Begin WO1", "Bataafse Republiek"],
+        options: ["Vrede van Münster", "Begin Gouden Eeuw", "Begin WO1", "Bataafse Republiek"],
         answer: 0,
         wrongHints: [null, "Gouden Eeuw begon eerder (rond 1600).", "WO1 was 1914.", "Bataafse Republiek was 1795."],
         uitlegPad: {
@@ -406,7 +406,7 @@ const steps = [
             { woord: "verzet", uitleg: "Illegaal werk tegen bezetter (kranten, onderduik, sabotage)." },
             { woord: "bevrijding", uitleg: "Einde bezetting. Voor NL: 5 mei 1945." },
           ],
-          theorie: "WO2-Toets-kerntermen:\n• 10 mei 1940 — invasie\n• 1942-1944 — Holocaust intensiveert\n• 1944 Hongerwinter\n• 5 mei 1945 — bevrijding\n• 4+5 mei nu = nationale herdenkings­dagen\n• Anne Frank Huis (Amsterdam) — symbool",
+          theorie: "WO2-Toets-kerntermen:\n• 10 mei 1940 — invasie\n• 1942-1944 — Holocaust intensiveert\n• 1944 Hongerwinter\n• 5 mei 1945 — bevrijding\n• 4+5 mei nu = nationale herdenkingsdagen\n• Anne Frank Huis (Amsterdam) — symbool",
           voorbeelden: [
             { type: "stap", tekst: "Op 4 mei (Dodenherdenking) staan we 2 minuten stil voor WO2-slachtoffers. 5 mei = Bevrijdingsdag (feest)." },
           ],
@@ -442,16 +442,16 @@ const steps = [
       { q: "**Anne Frank** zat in onderduik in?", options: ["Amsterdam","Den Haag","Rotterdam","Utrecht"], answer: 0, wrongHints: [null, "Niet de regeringsstad — denk aan het Achterhuis aan een gracht.", "Niet de havenstad — het Achterhuis staat er nog als museum.", "Niet Utrecht — Anne hield haar dagboek bij in het Achterhuis."] },
       { q: "**Tachtigjarige Oorlog** begon in welk jaar?", options: ["1568","1648","1500","1600"], answer: 0, wrongHints: [null, "Eind.", "Te vroeg.", "Te laat."] },
       { q: "**Gouden Eeuw** is welke eeuw?", options: ["17e eeuw","16e","18e","19e"], answer: 0, wrongHints: [null, "80jr oorlog.", "Te laat.", "Industrieel."] },
-      { q: "Welke **kolonie** had NL het langst?", options: ["Indonesië","Brazilië","India","Vietnam"], answer: 0, wrongHints: [null, "Kort, ~30 jr.", "Niet NL-kolonie.", "Niet NL."] },
+      { q: "Welke **kolonie** had NL het langst?", options: ["Indonesië","Brazilië","Australië","Vietnam"], answer: 0, wrongHints: [null, "Kort, zo'n 25 jaar.", "Nederlanders ontdekten er wel kusten, maar maakten er geen kolonie.", "Niet NL."] },
       { q: "Wie was de **eerste koning** van NL?", options: ["Willem I","Willem-Alexander","Beatrix","Juliana"], answer: 0, wrongHints: [null, "Huidige.", "Vorige.", "Eerder."] },
       { q: "**Bevrijdingsdag NL** = welke datum?", options: ["5 mei","4 mei","27 april","11 nov"], answer: 0, wrongHints: [null, "Dodenherdenking.", "Koningsdag.", "WO1 wapenstilstand."] },
-      { q: "**Romeinen** in NL — wat lag op de Rijn?", options: ["Limes (verdedigingslinie)","De Hanze","Hunebedden","Niets"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel iets."] },
-      { q: "Wanneer kwam **Napoleon** in NL?", options: ["~1795-1813","1815-1830","1900-1918","1940-1945"], answer: 0, wrongHints: [null, "Daarna.", "Veel later.", "WO2."] },
-      { q: "Wat is de **Vrede van Münster** (1648)?", options: ["Einde 80jr-oorlog (NL onafhankelijk)","Begin WO1","Oprichting VOC","Niet bekend"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet.", "Wel bekend."] },
+      { q: "**Romeinen** in NL — wat lag op de Rijn?", options: ["De Limes","De Hanze","Hunebedden","De Afsluitdijk"], answer: 0, wrongHints: [null, "De Hanze was een handelsverbond uit de middeleeuwen.", "Die liggen in Drenthe en zijn veel ouder.", "Die is pas in de 20e eeuw gebouwd."] },
+      { q: "Wanneer was de **Franse tijd** in NL?", options: ["1795-1813","1815-1830","1900-1918","1940-1945"], answer: 0, wrongHints: [null, "Daarna.", "Veel later.", "WO2."] },
+      { q: "Wat is de **Vrede van Münster** (1648)?", options: ["Einde Tachtigjarige Oorlog","Begin WO1","Oprichting VOC","Begin Gouden Eeuw"], answer: 0, wrongHints: [null, "WO1 begon pas in 1914.", "De VOC werd in 1602 opgericht.", "De Gouden Eeuw begon al rond 1600."] },
       { q: "**Eerste WO** in NL — was NL?", options: ["Neutraal","Bezet","Aanvaller","Bondgenoot"], answer: 0, wrongHints: [null, "WO2.", "Niet.", "Niet."] },
-      { q: "**EU-lidmaatschap NL** sinds?", options: ["Begin EEG/EU (1957/1993)","1900","1965","2010"], answer: 0, wrongHints: [null, "Te vroeg.", "Niet exact.", "Veel later."] },
-      { q: "Wie waren de **eerste bewoners** van NL?", options: ["Jagers-verzamelaars (steentijd)","Romeinen","Vikingen","Spanjaarden"], answer: 0, wrongHints: [null, "Veel later.", "Wel geweest.", "Niet eerste."] },
-      { q: "Welke koningin **regeerde lang** in NL (bijna 58 jaar)?", options: ["Wilhelmina (1890-1948)","Juliana","Beatrix","Máxima"], answer: 0, wrongHints: [null, "Korter.", "Korter.", "Wel koningin, maar regeert niet zelf."] },
+      { q: "Sinds welk jaar is NL lid van de **EEG** (Europese Economische Gemeenschap, nu EU)?", options: ["1957","1900","1973","2010"], answer: 0, wrongHints: [null, "Te vroeg.", "In 1973 kwamen o.a. Engeland en Denemarken erbij — NL was er al eerder bij.", "Veel later."] },
+      { q: "Wie waren de **eerste bewoners** van NL?", options: ["Jagers-verzamelaars","Romeinen","Vikingen","Spanjaarden"], answer: 0, wrongHints: [null, "Veel later.", "Wel geweest.", "Niet eerste."] },
+      { q: "Welke koningin **regeerde lang** in NL (bijna 58 jaar)?", options: ["Wilhelmina","Juliana","Beatrix","Máxima"], answer: 0, wrongHints: [null, "Korter.", "Korter.", "Wel koningin, maar regeert niet zelf."] },
       { q: "**Watersnoodramp** Zeeland = welk jaar?", options: ["1953","1900","1945","1980"], answer: 0, wrongHints: [null, "Te vroeg — het was ná de Tweede Wereldoorlog.", "1945 is het eind van de oorlog; de ramp kwam een paar jaar later.", "Te laat — het was in de jaren '50."] },
     ],
   },

@@ -131,7 +131,7 @@ const steps = [
       },
       {
         q: "Welke afsluiting past bij een **informeel berichtje aan een vriend**?",
-        options: ["Cheers / See you / Take care", "Yours sincerely", "Yours faithfully", "Best regards"],
+        options: ["Take care", "Yours sincerely", "Yours faithfully", "Best regards"],
         answer: 0,
         wrongHints: [null, "Formeel.", "Formeel.", "Half-formeel."],
       },
@@ -169,10 +169,10 @@ const steps = [
         wrongHints: [null, "Te veel.", "Geen kernpunt.", "Geen kernpunt."],
       },
       {
-        q: "**Plagiat** vermijden hoe?",
-        options: ["Eigen woorden + zinsbouw", "Letterlijk overnemen", "Wijzig 1 woord", "Latere alinea's pakken"],
+        q: "Hoe vermijd je **plagiaat**?",
+        options: ["Eigen woorden + zinsbouw", "Letterlijk overnemen", "Wijzig 1 woord", "Alleen latere alinea's overnemen"],
         answer: 0,
-        wrongHints: [null, "Plagiat.", "Nog steeds plagiat.", "Niet de regel."],
+        wrongHints: [null, "Dat is juist plagiaat.", "Nog steeds plagiaat.", "Overnemen blijft overnemen, welke alinea ook."],
       },
       {
         q: "Een **samenvatting** is meestal hoeveel **korter** dan het origineel?",
@@ -301,7 +301,7 @@ const steps = [
         q: "**Their** vs **There** — welke is van bezit?",
         options: ["Their", "There", "Beide", "Geen"],
         answer: 0,
-        wrongHints: [null, "Plek (daar).", "Verschillende functies.", "Wel — their."],
+        wrongHints: [null, "Plek (daar).", "Verschillende functies.", "Eén van de twee is wél bezittelijk."],
       },
       {
         q: "Een **samenvatting** is ... ?",

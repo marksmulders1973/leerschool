@@ -89,13 +89,13 @@ const steps = [
       },
       {
         q: "**Bevolkingsgroei** wordt gemeten via?",
-        options: ["Geboorten − sterften + (immigratie − emigratie)", "Alleen geboortes", "Alleen sterftes", "Random"],
+        options: ["Geboorten − sterften + (immigratie − emigratie)", "Alleen geboortes", "Alleen sterftes", "Alleen immigratie − emigratie"],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Tegenovergesteld effect.", "Geen formule."],
+        wrongHints: [null, "Onvolledig.", "Tegenovergesteld effect.", "Onvolledig — er worden ook mensen geboren en er sterven mensen."],
       },
       {
         q: "Een **bevolkingspiramide** met smalle top + brede basis duidt op?",
-        options: ["Jonge bevolking + hoge geboorte (ontwikkelingsland)", "Vergrijzing", "Krimpend land", "Migratie"],
+        options: ["Jonge bevolking met veel geboorten", "Vergrijzing", "Krimpend land", "Migratie"],
         answer: 0,
         wrongHints: [null, "Andersom — brede top.", "Andere oorzaak.", "Niet direct."],
       },
@@ -116,7 +116,7 @@ const steps = [
       },
       {
         q: "Waar wonen weinig mensen?",
-        options: ["Woestijnen + poolgebieden + hooggebergte", "Kustgebieden", "Rivierdalen", "Vlaktes"],
+        options: ["Woestijnen", "Kustgebieden", "Rivierdalen", "Vlaktes"],
         answer: 0,
         wrongHints: [null, "Aan de kust wonen juist veel mensen — water + handel.", "Rivierdalen zijn vruchtbaar, dus dichtbevolkt.", "Vlaktes zijn handig voor steden en landbouw."],
       },
@@ -143,9 +143,9 @@ const steps = [
       },
       {
         q: "Wat is de **Randstad**?",
-        options: ["Amsterdam + Rotterdam + Den Haag + Utrecht + omgeving", "Heel Nederland", "Alleen Amsterdam", "Een buurland"],
+        options: ["De vier grote steden in het westen + omgeving", "Alle steden langs de grens", "Alleen Amsterdam en omgeving", "De provincies in het noorden"],
         answer: 0,
-        wrongHints: [null, "Niet heel NL.", "Slechts deel.", "Geen buurland."],
+        wrongHints: [null, "Kijk naar het westen van het land, niet naar de grens.", "Slechts deel.", "Kijk naar het westen, niet naar het noorden."],
       },
       {
         q: "**Verstedelijking** (urbanisatie) = ?",
@@ -203,7 +203,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **push-factor**?",
-        options: ["Reden om weg te gaan (oorlog, armoede)", "Reden om aan te komen", "Reden om te blijven", "Reden om te bezoeken"],
+        options: ["Reden om weg te gaan", "Reden om aan te komen", "Reden om te blijven", "Reden om te bezoeken"],
         answer: 0,
         wrongHints: [null, "Dat is pull.", "Tegengesteld.", "Niet specifiek migratie."],
       },
@@ -215,13 +215,13 @@ const steps = [
       },
       {
         q: "Wat is **brain drain**?",
-        options: ["Hoogopgeleiden verlaten arme landen", "Onderwijs in zee", "Vergeetachtigheid", "Te veel werk"],
+        options: ["Hoogopgeleiden verlaten arme landen", "Hoogopgeleiden keren terug naar hun geboorteland", "Laagopgeleiden trekken naar rijke landen", "Studenten gaan een half jaar op uitwisseling"],
         answer: 0,
-        wrongHints: [null, "Geen geografie-onderwerp.", "Geen migratie-term.", "Geen migratie-term."],
+        wrongHints: [null, "Dan wint het land juist kennis — 'drain' betekent wegvloeien.", "Het gaat om 'brains' — wie zijn dat?", "Tijdelijk, en ze komen terug — wat stroomt er bij brain drain weg?"],
       },
       {
         q: "Wat is de **belangrijkste push-factor** voor Syrische vluchtelingen?",
-        options: ["Oorlog (2011-)", "Klimaat", "Werkloosheid", "Onderwijs"],
+        options: ["Oorlog", "Klimaat", "Werkloosheid", "Onderwijs"],
         answer: 0,
         wrongHints: [null, "Droogte speelde wel mee, maar was dat de reden dat miljoenen mensen in korte tijd moesten vluchten?", "Speelt mee.", "Niet hoofd-push."],
       },
@@ -253,10 +253,10 @@ const steps = [
         wrongHints: [null, "Niet AZC.", "Niet AZC.", "Niet NL."],
       },
       {
-        q: "Welke groep kwam na **2022**?",
-        options: ["Oekraïners (oorlog Rusland)", "Marokkanen", "Surinamers", "Polen"],
+        q: "Welke **nieuwe groep** kwam vanaf **2022** in grote aantallen naar Nederland?",
+        options: ["Oekraïners", "Marokkanen", "Surinamers", "Hugenoten"],
         answer: 0,
-        wrongHints: [null, "Eerder gastarbeiders.", "1975+.", "Sinds 2004 EU."],
+        wrongHints: [null, "Eerder gastarbeiders.", "1975+.", "Veel eerder — rond 1685."],
       },
     ],
   },
@@ -305,9 +305,9 @@ const steps = [
       },
       {
         q: "**Push-factoren** zorgen ervoor dat mensen ___?",
-        options: ["Weggaan uit hun land", "Naar een land komen", "Niets doen", "Sterven"],
+        options: ["Weggaan uit hun land", "Naar een land komen", "In hun land blijven", "Op vakantie gaan"],
         answer: 0,
-        wrongHints: [null, "Dat zijn pull-factoren.", "Niet relevant.", "Te zwaar."],
+        wrongHints: [null, "Dat zijn pull-factoren.", "Push betekent duwen — blijf je dan?", "Vakantie is tijdelijk, geen migratie."],
       },
       {
         q: "Welke is een **pull-factor** voor migratie?",

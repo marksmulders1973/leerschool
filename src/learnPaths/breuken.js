@@ -307,8 +307,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij optellen met zelfde noemer: wat doe je met de tellers, en wat met de noemers?",
           "Niet beide optellen — alleen tellers veranderen, de noemer blijft hetzelfde.",
+          "Bij optellen met zelfde noemer: wat doe je met de tellers, en wat met de noemers?",
           "Niet vermenigvuldigen. Bij optellen tel je de tellers samen, de noemer blijft.",
         ],
         uitlegPad: {
@@ -595,7 +595,7 @@ const steps = [
         wrongHints: [
           null,
           "Maak beide breuken gelijknamig (noemer 15) en vergelijk dan de tellers.",
-          "Niet even groot. ⅗ ≈ 0,6 en ⅔ ≈ 0,67 — net iets verschillend.",
+          "Niet even groot. Reken beide om naar een kommagetal en vergelijk ze.",
           "Breuken zijn altijd vergelijkbaar — maak gelijknamig en vergelijk tellers.",
         ],
         uitlegPad: {
@@ -631,7 +631,7 @@ const steps = [
     checks: [
       {
         q: "Reken uit: ½ + ⅓ × ⅙.",
-        options: ["¹⁰⁄₁₈ (= ⁵⁄₉)", "¹⁄₁₈", "⁵⁄₃", "⁵⁄₆"],
+        options: ["⁵⁄₉", "¹⁄₁₈", "⁵⁄₃", "⁵⁄₆"],
         answer: 0,
         wrongHints: [
           null,
@@ -646,7 +646,7 @@ const steps = [
           voorbeelden: [{ type: "voorbeeld", tekst: "½ = ⁹⁄₁₈ (× 9/9)" }],
           basiskennis: [{ onderwerp: "vereenvoudigen", uitleg: "¹⁰⁄₁₈ = ⁵⁄₉" }],
           niveaus: {
-            basis: "Eerst ⅓×⅙ = ¹⁄₁₈. Dan ½ + ¹⁄₁₈ = ¹⁰⁄₁₈.",
+            basis: "Eerst ⅓×⅙ = ¹⁄₁₈. Dan ½ + ¹⁄₁₈ = ¹⁰⁄₁₈ = ⁵⁄₉.",
             simpeler: "Doe eerst keer-som. Daarna plus.",
             nogSimpeler: "Keer-som eerst.",
           },

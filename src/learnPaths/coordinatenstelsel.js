@@ -360,7 +360,7 @@ const steps = [
       },
       {
         q: "*Het punt (0, 5) ligt:*",
-        options: ["op de y-as (geen kwadrant)","in kwadrant I","in kwadrant II","in de oorsprong"],
+        options: ["op de y-as","in kwadrant I","in kwadrant II","in de oorsprong"],
         answer: 0,
         wrongHints: [null, "Welk kwadrant heeft een positieve x? Bekijk de x-coördinaat van dit punt.", "Kwadrant II vereist een NEGATIEVE x. Klopt dat hier?", "De oorsprong is (0, 0). Wat is hier y? Past dat bij 'oorsprong'?"],
         uitlegPad: {
@@ -465,7 +465,7 @@ const steps = [
     checks: [
       {
         q: "*Je hebt punten (0,0), (1,3), (2,6), (3,9). Liggen die op een rechte lijn?*",
-        options: ["Ja — y stijgt elke stap met 3 (constant)","Nee — y stijgt onregelmatig","Nee — ze liggen op een parabool","Niet genoeg informatie"],
+        options: ["Ja — y stijgt steeds met 3","Nee — y stijgt onregelmatig","Nee — ze liggen op een parabool","Niet genoeg informatie"],
         answer: 0,
         wrongHints: [null, "Bekijk de y-waardes achter elkaar — is de stap van de ene naar de andere altijd even groot?", "Een parabool heeft niet-constante verschillen. Kijk of dat hier zo is.", "De gegevens zijn voldoende om dit te bepalen — kijk naar het patroon."],
         uitlegPad: {
@@ -559,7 +559,7 @@ const steps = [
       },
       {
         q: "*Een punt heeft coördinaten (4, 0). Waar ligt het?*",
-        options: ["Op de x-as, 4 rechts van de oorsprong","In kwadrant I","Op de y-as","In de oorsprong"],
+        options: ["Op de x-as","In kwadrant I","Op de y-as","In de oorsprong"],
         answer: 0,
         wrongHints: [null, "Kwadrant I vereist dat y groter is dan nul — wat is y bij dit punt?", "Op de y-as moet x nul zijn — klopt dat hier?", "De oorsprong heeft beide coördinaten gelijk aan nul — klopt dat hier?"],
         uitlegPad: {
@@ -573,7 +573,7 @@ const steps = [
       },
       {
         q: "*Drie punten: (0,0), (2,4), (4,8). Liggen ze op een rechte lijn?*",
-        options: ["Ja — y stijgt elke stap met 4 (constant)","Nee — onregelmatige stappen","Nee — ze vormen een driehoek","Niet te bepalen"],
+        options: ["Ja — y stijgt steeds met 4","Nee — onregelmatige stappen","Nee — ze vormen een driehoek","Niet te bepalen"],
         answer: 0,
         wrongHints: [null, "Kijk naar de y-waardes — is de toename van de ene naar de andere steeds gelijk?", "Drie punten vormen alleen een driehoek als ze NIET op één lijn liggen. Wat denk je hier?", "Wel — als je weet hoe je naar de stappen in y moet kijken, kun je dit bepalen."],
         uitlegPad: {

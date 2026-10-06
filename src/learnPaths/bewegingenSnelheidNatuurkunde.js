@@ -122,7 +122,7 @@ const steps = [
         q: "Hoe **reken je m/s om naar km/u**?",
         options: ["× 3,6", "÷ 3,6", "× 60", "÷ 60"],
         answer: 0,
-        wrongHints: [null, "Andersom.", "Wel verband maar specifiek 3,6.", "Niet — 60 hoort bij minuten; hier gaat het om meters én uren samen."],
+        wrongHints: [null, "Andersom.", "Niet — denk aan 1000 m in een km en 3600 s in een uur.", "Niet — 60 hoort bij minuten; hier gaat het om meters én uren samen."],
       },
       {
         q: "**20 m/s** = ... km/u?",
@@ -183,7 +183,7 @@ const steps = [
       },
       {
         q: "Welke factor maakt **remweg** veel langer?",
-        options: ["Snelheid (kwadratisch effect)", "Kleur auto", "Weersomstandigheden alleen", "Bestuurders gewicht"],
+        options: ["Snelheid", "Kleur auto", "Weersomstandigheden alleen", "Bestuurders gewicht"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Speelt mee maar niet kwadratisch.", "Niet hoofdfactor."],
       },
@@ -210,7 +210,7 @@ const steps = [
       },
       {
         q: "Hoe bereken je **snelheid** uit een afstand-tijd-grafiek?",
-        options: ["Helling van de lijn (Δy ÷ Δx)", "Lengte van lijn", "Y-waarde", "X-waarde"],
+        options: ["De helling van de lijn", "Lengte van lijn", "Y-waarde", "X-waarde"],
         answer: 0,
         wrongHints: [null, "Niet relevant.", "Dat is afstand.", "Dat is tijd."],
       },
@@ -227,7 +227,7 @@ const steps = [
   {
     title: "Praktijk — auto, atletiek, ruimte",
     explanation:
-      "**Snelheids-feitjes voor alledag**:\n\n**1. Auto + verkeer**:\n• Stad: **50 km/u** (NL max).\n• Buiten bebouwde kom: **80 km/u**.\n• Provinciale weg: **80-100 km/u**.\n• Snelweg dag: **100 km/u** *(sinds 2020)*. Avond + nacht: **130 km/u** *(19-6 uur)*.\n• Boete bij overschrijden — hoe harder, hoe hoger de boete.\n• **Tunnel-snelheid** controle met camera's.\n\n**2. Wereldrecords atletiek**:\n• **100 m sprint** (man): Usain Bolt 9,58 sec → ~37 km/u.\n• **100 m sprint** (vrouw): Florence Griffith-Joyner 10,49 sec → ~34 km/u.\n• **Marathon**: ~21 km/u gemiddeld.\n• **Wielrennen tour**: 40 km/u gemiddeld in vlakke etappe.\n\n**3. Dieren**:\n• Jachtluipaard: ~120 km/u (kort).\n• Paard: ~70 km/u.\n• Hond (greyhound): ~70 km/u.\n• Mens topsnelheid: ~37 km/u.\n• Slak: ~0,05 km/u.\n\n**4. Geluid**:\n• In **lucht** *(20°C)*: 343 m/s = 1.235 km/u.\n• In **water**: ~1.500 m/s.\n• In **staal**: ~5.000 m/s.\n• **Mach 1** = snelheid van geluid. Concorde vloog Mach 2 (twee keer de geluidssnelheid).\n• **Knal**: vliegtuig sneller dan geluid → 'sonic boom'.\n\n**5. Licht**:\n• 300.000 km/s = 1.080.000.000 km/u.\n• Niets gaat sneller in heelal.\n• Aarde-Maan in 1,3 sec.\n• Aarde-Zon in 8,3 min.\n• Aarde-Mars in 3-22 min *(afh. baan)*.\n\n**6. Ruimte**:\n• Aarde draait om as: 1.670 km/u (op evenaar).\n• Aarde om zon: 107.000 km/u.\n• ISS (Internationaal ruimtestation): 28.000 km/u → 90 min per omloop.\n• Voyager 1 (verste sonde): 17 km/s = 61.000 km/u.\n\n**7. Vliegtuig**:\n• Commercieel (Boeing 737): ~900 km/u.\n• Concorde (gestopt): 2.180 km/u.\n• Straaljager F-16: ~2.400 km/u.\n• SR-71 Blackbird (record): 3.530 km/u.\n\n**Toets-voorbeeld**:\n*'Een trein rijdt 240 km in 2 uur. Snelheid?'*\n→ 240 ÷ 2 = 120 km/u.\n\n*'Auto: 100 km/u. Hoeveel m/s?'*\n→ 100 ÷ 3,6 ≈ 28 m/s.\n\n*'In hoeveel min legt licht 1 lichtminuut af?'*\n→ 1 minuut *(definitie!)* — licht legt 1 lichtminuut per minuut af.\n\n**Toets-feitje**:\nDe **G-kracht** van super-versnelling is meetbaar:\n• Normaal staan = 1 G.\n• Achtbaan-piek = 4-5 G.\n• Straaljager-piloot = tot 9 G.\n• Apollo-launch = 4 G.\n• Daarboven = bewustzijn verliezen.",
+      "**Snelheids-feitjes voor alledag**:\n\n**1. Auto + verkeer**:\n• Stad: **50 km/u** (NL max).\n• Buiten bebouwde kom: **80 km/u**.\n• Provinciale weg: **80-100 km/u**.\n• Snelweg dag: **100 km/u** *(sinds 2020)*. Avond + nacht: **130 km/u** *(19-6 uur)*.\n• Boete bij overschrijden — hoe harder, hoe hoger de boete.\n• **Tunnel-snelheid** controle met camera's.\n\n**2. Wereldrecords atletiek**:\n• **100 m sprint** (man): Usain Bolt 9,58 sec → ~37 km/u.\n• **100 m sprint** (vrouw): Florence Griffith-Joyner 10,49 sec → ~34 km/u.\n• **Marathon**: ~21 km/u gemiddeld.\n• **Wielrennen tour**: 40 km/u gemiddeld in vlakke etappe.\n\n**3. Dieren**:\n• Jachtluipaard: ~120 km/u (kort).\n• Paard: ~70 km/u.\n• Hond (greyhound): ~70 km/u.\n• Mens topsnelheid: ~37 km/u.\n• Slak: ~0,05 km/u.\n\n**4. Geluid**:\n• In **lucht** *(20°C)*: 343 m/s = 1.235 km/u.\n• In **water**: ~1.500 m/s.\n• In **staal**: ~5.000 m/s.\n• **Mach 1** = snelheid van geluid. Concorde vloog Mach 2 (twee keer de geluidssnelheid).\n• **Knal**: vliegtuig sneller dan geluid → 'sonic boom'.\n\n**5. Licht**:\n• 300.000 km/s = 1.080.000.000 km/u.\n• Niets gaat sneller in heelal.\n• Aarde-Maan in 1,3 sec.\n• Aarde-Zon in 8,3 min.\n• Aarde-Mars in 3-22 min *(afh. baan)*.\n\n**6. Ruimte**:\n• Aarde draait om as: 1.670 km/u (op evenaar).\n• Aarde om zon: 107.000 km/u.\n• ISS (Internationaal ruimtestation): 28.000 km/u → 90 min per omloop.\n• Voyager 1 (verste sonde): 17 km/s = 61.000 km/u.\n\n**7. Vliegtuig**:\n• Commercieel (Boeing 737): ~900 km/u.\n• Concorde (gestopt): 2.180 km/u.\n• Straaljager F-16: ~2.400 km/u.\n• SR-71 Blackbird (record): 3.530 km/u.\n\n**Toets-voorbeeld**:\n*'Een trein rijdt 240 km in 2 uur. Snelheid?'*\n→ 240 ÷ 2 = 120 km/u.\n\n*'Auto: 100 km/u. Hoeveel m/s?'*\n→ 100 ÷ 3,6 ≈ 28 m/s.\n\n*'In hoeveel min legt licht 1 lichtminuut af?'*\n→ 1 minuut *(definitie!)* — licht legt 1 lichtminuut per minuut af.\n\n**Toets-feitje**:\nDe **G-kracht** van super-versnelling is meetbaar:\n• Normaal staan = 1 G.\n• Achtbaan-piek = 4-5 G.\n• Straaljager-piloot = tot 9 G.\n• Apollo-launch = 4 G.\n• Ver boven 9 G = bewustzijn verliezen.",
     checks: [
       {
         q: "**100 km/u** op snelweg in NL — wanneer?",
@@ -266,7 +266,7 @@ const steps = [
         q: "**v = ?** in basis-formule.",
         options: ["s ÷ t", "s × t", "s + t", "s - t"],
         answer: 0,
-        wrongHints: [null, "Geeft afstand.", "Geen formule.", "Geen formule."],
+        wrongHints: [null, "Vermenigvuldigen geeft geen snelheid.", "Geen formule.", "Geen formule."],
       },
       {
         q: "**60 km in 30 min**. Snelheid?",
@@ -300,9 +300,9 @@ const steps = [
       },
       {
         q: "**Versnelling 0** betekent?",
-        options: ["Constante snelheid (of stilstand)", "Stoppen", "Heel snel", "Niet bewegen"],
+        options: ["Constante snelheid (of stilstand)", "Stoppen", "Heel snel", "Steeds sneller gaan"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Tegenovergesteld.", "Niet noodzakelijk."],
+        wrongHints: [null, "Stoppen is afremmen: dan verandert je snelheid.", "Niet noodzakelijk — snelheid en versnelling zijn verschillende dingen.", "Dan is er juist wél versnelling."],
       },
       {
         q: "Formule **afstand = ?** (bij constante snelheid)",

@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Voedselweb + energiestroom",
     explanation:
-      "**Ecosysteem** = leefgemeenschap (alle planten/dieren/microben) + abiotisch milieu (lucht, water, bodem).\n\n**Trofische niveaus** (van zon naar top):\n• **Producenten (P)** — planten, algen: maken eigen voedsel via fotosynthese.\n• **Consumenten 1e orde (C1)** — herbivoren (haas, koe).\n• **Consumenten 2e orde (C2)** — carnivoren (vos eet haas).\n• **Consumenten 3e orde (C3)** — toppredatoren (havik eet vos).\n• **Reducenten (R)** — bacteriën + schimmels: breken dode stof af → nutriënten terug naar bodem.\n\n**Voedselketen** = lineair pad (gras → haas → vos → adelaar).\n**Voedselweb** = vervlochten netwerk van vele ketens.\n\n**Energiestroom — '10%-regel'**:\nVan elk trofisch niveau gaat ~**10% van energie** naar volgend niveau. 90% verloren als:\n• Ademhaling (warmte).\n• Niet-eetbare delen (botten, haren).\n• Uitwerpselen.\n\n**Gevolg**: piramide-vorm.\n• 10 000 kg planten →\n• 1 000 kg herbivoren →\n• 100 kg carnivoren →\n• 10 kg toppredatoren.\n\nDaarom zijn toppredatoren altijd zeldzaam + is vegetarisch eten energie-efficiënter dan vlees eten (vee eet veel plant voor weinig vlees-energie).\n\n**Zelfde, voor stof (mineralen)**: KRINGLOOP — niet verloren maar circulerend (zie stap C).\n\n**Niche** = ecologische functie + plek van soort. Twee soorten kunnen niet exact dezelfde niche bezetten zonder concurrentie.\n\n**Voorbeelden ecosystemen**:\n• Bos: gelaagd (kruidlaag, struiklaag, boomlaag).\n• Vijver: thermische gelaagdheid, planktonbasis.\n• Tropisch koraalrif: hoogste biodiversiteit per m².\n• Toendra: laag, traag, weinig soorten.",
+      "**Ecosysteem** = leefgemeenschap (alle planten/dieren/microben) + abiotisch milieu (lucht, water, bodem).\n\n**Trofische niveaus** (van zon naar top):\n• **Producenten (P)** — planten, algen: maken eigen voedsel via fotosynthese.\n• **Consumenten 1e orde (C1)** — herbivoren (haas, koe).\n• **Consumenten 2e orde (C2)** — carnivoren (vos eet haas).\n• **Consumenten 3e orde (C3)** — toppredatoren (adelaar eet vos).\n• **Reducenten (R)** — bacteriën + schimmels: breken dode stof af → nutriënten terug naar bodem.\n\n**Voedselketen** = lineair pad (gras → haas → vos → adelaar).\n**Voedselweb** = vervlochten netwerk van vele ketens.\n\n**Energiestroom — '10%-regel'**:\nVan elk trofisch niveau gaat ~**10% van energie** naar volgend niveau. 90% verloren als:\n• Ademhaling (warmte).\n• Niet-eetbare delen (botten, haren).\n• Uitwerpselen.\n\n**Gevolg**: piramide-vorm.\n• 10 000 kg planten →\n• 1 000 kg herbivoren →\n• 100 kg carnivoren →\n• 10 kg toppredatoren.\n\nDaarom zijn toppredatoren altijd zeldzaam + is vegetarisch eten energie-efficiënter dan vlees eten (vee eet veel plant voor weinig vlees-energie).\n\n**Zelfde, voor stof (mineralen)**: KRINGLOOP — niet verloren maar circulerend (zie stap 3).\n\n**Niche** = ecologische functie + plek van soort. Twee soorten kunnen niet exact dezelfde niche bezetten zonder concurrentie.\n\n**Voorbeelden ecosystemen**:\n• Bos: gelaagd (kruidlaag, struiklaag, boomlaag).\n• Vijver: thermische gelaagdheid, planktonbasis.\n• Tropisch koraalrif: hoogste biodiversiteit per m².\n• Toendra: laag, traag, weinig soorten.",
     checks: [
       {
         q: "Wat is een **producent** in een ecosysteem?",
@@ -37,7 +37,7 @@ const steps = [
       },
       {
         q: "Energie-verlies per trofische stap is ongeveer:",
-        options: ["90% (slechts ~10% gaat door)", "10%", "50%", "99%"],
+        options: ["90%", "10%", "50%", "99%"],
         answer: 0,
         wrongHints: [null, "Niet — andersom.", "Niet — er gaat veel meer verloren.", "Te veel."],
         uitlegPad: {
@@ -57,20 +57,20 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — een producent maakt zelf voedsel.", "Niet — eet vlees.", "Niet — vos is geen schimmel."],
         uitlegPad: {
-          stappen: [{ titel: "Trofische niveau", tekst: "Gras → P. Haas (eet plant) → C1. Vos (eet haas = C1) → **C2**. Een havik die vossen eet zou C3 zijn." }],
+          stappen: [{ titel: "Trofische niveau", tekst: "Gras → P. Haas (eet plant) → C1. Vos (eet haas = C1) → **C2**. Een adelaar die vossen eet zou C3 zijn." }],
           niveaus: { basis: "C2.", simpeler: "Vos eet planteneter → niveau 3 = C2.", nogSimpeler: "C2" },
         },
       },
       {
         q: "Welke groep is **essentieel** om dode plant + dier-resten terug te brengen in de kringloop?",
         options: [
-          "Reducenten (bacteriën + schimmels)",
+          "Reducenten",
           "Producenten",
           "Consumenten",
           "Toppredatoren"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — die verbruiken organisch.", "Niet — die eten ander organisch.", "Niet — top, niet afbraak."],
+        wrongHints: [null, "Niet — die maken juist organische stof.", "Niet — die eten ander organisch.", "Niet — top, niet afbraak."],
         uitlegPad: {
           stappen: [
             { titel: "R = afbraak → mineralen", tekst: "Reducenten breken dode stof af → maken anorganische mineralen vrij (N, P, K). Zonder R: voedingsstoffen zouden vastzitten in lijken; planten zouden geen nutriënten hebben → ecosysteem stort in." },
@@ -90,7 +90,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — relevant maar geen reden.", "Hoe hoog een vogel vliegt, zegt niets over zijn plek in de voedselpiramide.", "Niet — beleid, niet ecologie."],
         uitlegPad: {
-          stappen: [{ titel: "Energie-piramide", tekst: "Met 10% over per niveau: na 4 niveaus is er 0,001 (= 0,1%) van originele zonne-energie over. Te weinig om een groot dier te voeden. Daarom adelaars zeldzaam + groot territorium." }],
+          stappen: [{ titel: "Energie-piramide", tekst: "Met 10% over per niveau: na 4 niveaus is er 0,001 (= 0,1%) van de energie in de producenten over. Te weinig om een groot dier te voeden. Daarom adelaars zeldzaam + groot territorium." }],
           niveaus: { basis: "Energie op.", simpeler: "Niet genoeg eten meer hoger.", nogSimpeler: "Energie-grens" },
         },
       },
@@ -101,7 +101,7 @@ const steps = [
   {
     title: "Populatie-dynamica + draagkracht",
     explanation:
-      "**Populatie** = groep individuen van zelfde soort op zelfde plek.\n\n**Populatie-groei** door 4 factoren:\n• **G**eboren + **I**mmigratie → groei.\n• **S**terfte + **E**migratie → afname.\n• Δ populatie = (G + I) − (S + E).\n\n**Exponentiële groei** (J-curve):\n• Bij overvloed voedsel + geen beperkingen: dN/dt = r·N.\n• N(t) = N₀ · e^(r·t).\n• Bacteriën in vers medium, invasieve soorten in nieuw gebied.\n• Korte termijn — niet duurzaam.\n\n**Logistische groei** (S-curve):\n• Met **draagkracht K** (carrying capacity): dN/dt = r·N·(1−N/K).\n• Beneden K: groei. Bij K: stabiel. Boven K: krimp.\n• Realistischer voor de meeste populaties.\n\n**Wat bepaalt K?**\n• Voedsel.\n• Ruimte.\n• Predatoren.\n• Ziekten.\n• Klimaat.\n• Concurrentie.\n\n**Predator-prooi-cycli** (Lotka-Volterra):\n• Veel prooi → predator populatie stijgt.\n• Meer predatoren → prooi populatie daalt.\n• Minder prooi → predator populatie daalt.\n• Minder predatoren → prooi populatie stijgt.\n• Cyclus → oscillerend evenwicht (klassiek: lynx-haas in Canada, periode ~10 jaar).\n\n**Concurrentie**:\n• Inter-specifiek: tussen verschillende soorten (concurrentie-uitsluitings-principe: 2 soorten met identieke niche kunnen niet samen leven).\n• Intra-specifiek: binnen zelfde soort (territorium, paartjes).\n\n**Densiteit-afhankelijke factoren**: werken sterker bij hoge populatie (voedseltekort, ziekten, parasieten).\n**Densiteit-onafhankelijke factoren**: werken bij elke densiteit (storm, vorst, brand).\n\n**Voorbeelden invasieve soorten**:\n• Halsbandparkiet in NL: groei zonder lokale predatoren.\n• Konijn in Australië: exponentieel → ecologische ramp.\n• Mens: K continu verhoogd via technologie (zie stap E).",
+      "**Populatie** = groep individuen van zelfde soort op zelfde plek.\n\n**Populatie-groei** door 4 factoren:\n• **G**eboren + **I**mmigratie → groei.\n• **S**terfte + **E**migratie → afname.\n• Δ populatie = (G + I) − (S + E).\n\n**Exponentiële groei** (J-curve):\n• Bij overvloed voedsel + geen beperkingen: dN/dt = r·N.\n• N(t) = N₀ · e^(r·t).\n• Bacteriën in vers medium, invasieve soorten in nieuw gebied.\n• Korte termijn — niet duurzaam.\n\n**Logistische groei** (S-curve):\n• Met **draagkracht K** (carrying capacity): dN/dt = r·N·(1−N/K).\n• Beneden K: groei. Bij K: stabiel. Boven K: krimp.\n• Realistischer voor de meeste populaties.\n\n**Wat bepaalt K?**\n• Voedsel.\n• Ruimte.\n• Predatoren.\n• Ziekten.\n• Klimaat.\n• Concurrentie.\n\n**Predator-prooi-cycli** (Lotka-Volterra):\n• Veel prooi → predator populatie stijgt.\n• Meer predatoren → prooi populatie daalt.\n• Minder prooi → predator populatie daalt.\n• Minder predatoren → prooi populatie stijgt.\n• Cyclus → oscillerend evenwicht (klassiek: lynx-haas in Canada, periode ~10 jaar).\n\n**Concurrentie**:\n• Inter-specifiek: tussen verschillende soorten (concurrentie-uitsluitings-principe: 2 soorten met identieke niche kunnen niet samen leven).\n• Intra-specifiek: binnen zelfde soort (territorium, paartjes).\n\n**Densiteit-afhankelijke factoren**: werken sterker bij hoge populatie (voedseltekort, ziekten, parasieten).\n**Densiteit-onafhankelijke factoren**: werken bij elke densiteit (storm, vorst, brand).\n\n**Voorbeelden invasieve soorten**:\n• Halsbandparkiet in NL: groei zonder lokale predatoren.\n• Konijn in Australië: exponentieel → ecologische ramp.\n• Mens: K continu verhoogd via technologie (zie stap 5).",
     checks: [
       {
         q: "Wat is **draagkracht K** van een ecosysteem?",
@@ -137,7 +137,7 @@ const steps = [
       {
         q: "Lynx en haas vertonen klassieke **predator-prooi-cyclus**. Wat gebeurt **vóór** lynx-piek?",
         options: [
-          "Haas-populatie piekt (veel prooi → lynx kan groeien)",
+          "Haas-populatie piekt",
           "Haas-populatie daalt",
           "Lynx-piek komt eerst",
           "Beide tegelijk piek"
@@ -205,7 +205,7 @@ const steps = [
       {
         q: "**Pioniersoorten** in primaire successie zijn vaak:",
         options: [
-          "Korstmossen + algen — kunnen op kale rots leven",
+          "Korstmossen en algen",
           "Grote bomen",
           "Grazende dieren",
           "Vlinders + insecten"
@@ -220,7 +220,7 @@ const steps = [
       {
         q: "**Stikstoffixatie** wordt vooral gedaan door:",
         options: [
-          "Bacteriën (rhizobia + cyanobacteriën) + bliksem",
+          "Bacteriën en bliksem",
           "Alle planten direct uit lucht",
           "Mensen via Haber-Bosch alleen",
           "Vissen"
@@ -237,7 +237,7 @@ const steps = [
       },
       {
         q: "Een **climaxgemeenschap** in Nederland is:",
-        options: ["Loofbos (eik/beuk)", "Tropisch regenwoud", "Toendra", "Woestijn"],
+        options: ["Loofbos", "Tropisch regenwoud", "Toendra", "Woestijn"],
         answer: 0,
         wrongHints: [null, "Niet — verkeerd klimaat.", "Niet — te koud.", "Niet — te droog."],
         uitlegPad: {
@@ -246,15 +246,15 @@ const steps = [
         },
       },
       {
-        q: "Verbranden van **fossiele brandstoffen** verstoort welke kringloop?",
+        q: "Verbranden van **fossiele brandstoffen** verstoort vooral welke kringloop?",
         options: [
-          "Koolstof (CO₂ stijgt in atmosfeer)",
+          "Koolstof",
           "Stikstof",
           "Fosfor",
           "Water"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — verbranding geeft geen N₂.", "Niet — geen P bij verbranding.", "Niet — al wel water-damp, maar primaire impact is CO₂."],
+        wrongHints: [null, "Verbranding geeft ook wat stikstofoxiden, maar welk gas komt er véél meer vrij?", "Niet — geen P bij verbranding.", "Niet — al wel water-damp, maar primaire impact is CO₂."],
         uitlegPad: {
           stappen: [
             { titel: "Vastgelegd C → atmosferisch C", tekst: "Kolen/olie/gas = miljoenen-jaren oude plant-C, opgesloten onder de grond. Verbranding zet snel om naar CO₂ → atmosfeer 0,03% (preindustrieel) → 0,042% (2024). Versterkt broeikaseffect → opwarming." },
@@ -285,7 +285,7 @@ const steps = [
       {
         q: "Een **ecosysteemdienst** is:",
         options: [
-          "Natuurlijke functie waarvan mens profiteert (bv. bestuiving)",
+          "Natuurlijke functie waarvan de mens profiteert",
           "Service van overheid",
           "Internet-dienst",
           "Schoonmaak-service voor parken"
@@ -318,7 +318,7 @@ const steps = [
       {
         q: "**Stikstof-overschot** in NL bedreigt biodiversiteit doordat:",
         options: [
-          "Heide + voedselarme gebieden krijgen overdaad N → grassen + brandnetels verdringen zeldzame soorten",
+          "Snelle groeiers verdringen zeldzame planten",
           "N₂ is giftig voor planten",
           "N maakt de bodem droger",
           "N verlaagt CO₂"
@@ -384,7 +384,7 @@ const steps = [
       {
         q: "**Eutrofiëring** van een meer is:",
         options: [
-          "Overmaat nutriënten → algen-bloei → zuurstoftekort → vis-sterfte",
+          "Overmaat aan voedingsstoffen in het water",
           "Uitdroging van meer",
           "Stijging van pH",
           "Vermindering van planten"
@@ -402,7 +402,7 @@ const steps = [
       {
         q: "Het **6e massa-uitsterven** is uniek omdat:",
         options: [
-          "Veroorzaakt door één soort (mens), niet door asteroïde/klimaat",
+          "Het wordt veroorzaakt door de mens",
           "Het al gestopt is",
           "Het is een goede zaak",
           "Het is bedacht"
@@ -418,7 +418,7 @@ const steps = [
       {
         q: "Wat is de **effectiefste** persoonlijke actie tegen klimaat- + biodiversiteit-crisis?",
         options: [
-          "Significant minder vlees + auto + vliegen + minder kinderen krijgen (de top 4)",
+          "Minder vlees eten, autorijden en vliegen",
           "Recyclen flessen",
           "Plastic rietjes vermijden",
           "LED-lampen kopen"

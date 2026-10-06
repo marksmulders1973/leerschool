@@ -40,7 +40,7 @@ const steps = [
       },
       {
         q: "Bij **social engineering** valt de aanvaller vooral aan op…",
-        options: ["De mens (manipulatie)", "De stroomvoorziening", "De printer", "De kleur van het scherm"],
+        options: ["De mens", "De stroomvoorziening", "De printer", "De kleur van het scherm"],
         answer: 0,
         wrongHints: [null, "Het gaat om mensen misleiden, niet om stroom.", "Niet de hardware, maar de gebruiker.", "Beeldscherm heeft er niets mee te maken."],
         uitlegPad: {
@@ -50,9 +50,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen een **virus** en een **worm**?",
-        options: ["Een worm verspreidt zichzelf over netwerken; een virus heeft een gastbestand nodig", "Ze zijn precies hetzelfde", "Een virus is ongevaarlijk, een worm niet", "Een worm is antivirussoftware"],
+        options: ["Een worm verspreidt zichzelf over netwerken; een virus heeft een gastbestand nodig", "Ze zijn precies hetzelfde", "Een virus verspreidt zichzelf over netwerken; een worm heeft een gastbestand nodig", "Een worm is antivirussoftware"],
         answer: 0,
-        wrongHints: [null, "Er is wél verschil in hóé ze zich verspreiden.", "Beide kunnen schade doen — het gaat om de verspreiding.", "Een worm is juist malware, geen bescherming."],
+        wrongHints: [null, "Er is wél verschil in hóé ze zich verspreiden.", "Andersom: welke van de twee wacht tot jij een bestand uitvoert?", "Een worm is juist malware, geen bescherming."],
         uitlegPad: {
           stappen: [{ titel: "Zelf verspreiden of niet", tekst: "Een **virus** verstopt zich in een bestand/programma en verspreidt zich pas als jij het **uitvoert**. Een **worm** verspreidt **zichzelf** over netwerken, zonder dat je iets hoeft te doen — daardoor gaat een worm vaak veel sneller rond." }],
           niveaus: { basis: "Worm verspreidt zichzelf.", simpeler: "Worm = zelfverspreidend", nogSimpeler: "A." },
@@ -79,7 +79,7 @@ const steps = [
     checks: [
       {
         q: "Wat maakt een wachtwoord het sterkst?",
-        options: ["Lengte (een lange zin) + uniek per site", "Eén kort woord met een hoofdletter", "Je naam met een cijfer", "Hetzelfde wachtwoord overal"],
+        options: ["Een lange zin, uniek per site", "Eén kort woord met een hoofdletter", "Je naam met een cijfer", "Hetzelfde wachtwoord overal"],
         answer: 0,
         wrongHints: [null, "Kort is juist zwak, ook met hoofdletter.", "Je naam is makkelijk te raden.", "Overal hetzelfde is het gevaarlijkst."],
         uitlegPad: {
@@ -89,7 +89,7 @@ const steps = [
       },
       {
         q: "Wat is **tweestapsverificatie (2FA)**?",
-        options: ["Een tweede bewijs naast je wachtwoord (bv. code of vinger)", "Twee keer hetzelfde wachtwoord", "Een dubbel zo lang wachtwoord", "Twee gebruikersnamen"],
+        options: ["Een tweede bewijs naast je wachtwoord", "Twee keer hetzelfde wachtwoord", "Een dubbel zo lang wachtwoord", "Twee gebruikersnamen"],
         answer: 0,
         wrongHints: [null, "Niet hetzelfde twee keer — een ánder soort bewijs.", "Het is een tweede stap, geen langer wachtwoord.", "Het gaat om bewijs, niet om twee namen."],
         uitlegPad: {
@@ -99,7 +99,7 @@ const steps = [
       },
       {
         q: "Hoe hoort een goede website je wachtwoord op te slaan?",
-        options: ["Als hash (onomkeerbaar omgezet), niet als gewone tekst", "Gewoon als leesbare tekst", "Als een foto", "Helemaal niet — onthouden uit het hoofd"],
+        options: ["Als hash, niet als gewone tekst", "Gewoon als leesbare tekst", "Als een foto", "Helemaal niet — onthouden uit het hoofd"],
         answer: 0,
         wrongHints: [null, "Leesbaar bewaren is juist onveilig (lekt het, dan ligt alles open).", "Een foto van je wachtwoord is geen opslagmethode.", "De site moet 'm wel kunnen controleren — dus opslaan, maar als hash."],
         uitlegPad: {
@@ -134,7 +134,7 @@ const steps = [
   {
     title: "Encryptie — versleuteling",
     explanation:
-      "**Encryptie** (versleuteling) maakt data onleesbaar voor iedereen zonder de juiste **sleutel**. Zo blijft informatie geheim, ook als iemand het onderschept.\n\n• **Klare tekst** (plaintext) → met een **sleutel** → **cijfertekst** (onleesbaar) → met de sleutel weer terug → klare tekst.\n\n**Twee soorten:**\n• **Symmetrische encryptie**: **één** sleutel voor zowel versleutelen als ontsleutelen. Snel, maar: hoe geef je die sleutel veilig aan de ander?\n• **Asymmetrische encryptie** (publieke-sleutel): een **paar** sleutels — een **publieke sleutel** (mag iedereen hebben) om te versleutelen, en een geheime **privésleutel** om te ontsleutelen. Hiermee kun je veilig communiceren met iemand die je nog nooit een sleutel hebt gegeven.\n\n**Waar kom je dit tegen?**\n• **HTTPS** (het slotje 🔒): je browser en de server zetten met asymmetrische encryptie veilig een gedeelde sleutel op, en versleutelen daarna het verkeer. Niemand onderweg kan meelezen.\n• Versleutelde chat (WhatsApp), versleutelde harde schijven, wachtwoord-hashes.\n\n**Kernidee:** zonder de juiste sleutel is versleutelde data praktisch onleesbaar — ook voor een krachtige computer.",
+      "**Encryptie** (versleuteling) maakt data onleesbaar voor iedereen zonder de juiste **sleutel**. Zo blijft informatie geheim, ook als iemand het onderschept.\n\n• **Klare tekst** (plaintext) → met een **sleutel** → **cijfertekst** (onleesbaar) → met de sleutel weer terug → klare tekst.\n\n**Twee soorten:**\n• **Symmetrische encryptie**: **één** sleutel voor zowel versleutelen als ontsleutelen. Snel, maar: hoe geef je die sleutel veilig aan de ander?\n• **Asymmetrische encryptie** (publieke-sleutel): een **paar** sleutels — een **publieke sleutel** (mag iedereen hebben) om te versleutelen, en een geheime **privésleutel** om te ontsleutelen. Hiermee kun je veilig communiceren met iemand die je nog nooit een sleutel hebt gegeven.\n\n**Waar kom je dit tegen?**\n• **HTTPS** (het slotje 🔒): je browser en de server zetten met asymmetrische encryptie veilig een gedeelde sleutel op, en versleutelen daarna het verkeer. Niemand onderweg kan meelezen.\n• Versleutelde chat (WhatsApp), versleutelde harde schijven. (Wachtwoord-hashes zijn géén encryptie: daar is geen sleutel om terug te rekenen.)\n\n**Kernidee:** zonder de juiste sleutel is versleutelde data praktisch onleesbaar — ook voor een krachtige computer.",
     checks: [
       {
         q: "Wat doet **encryptie**?",
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen een **firewall** en **antivirus**?",
-        options: ["Een firewall filtert netwerkverkeer; antivirus spoort malware op je apparaat op", "Ze doen precies hetzelfde", "Een firewall is zelf een virus", "Antivirus versnelt je wifi"],
+        options: ["Een firewall filtert netwerkverkeer; antivirus spoort malware op je apparaat op", "Een firewall spoort malware op je apparaat op; antivirus filtert netwerkverkeer", "Een firewall is zelf een virus", "Antivirus versnelt je wifi"],
         answer: 0,
-        wrongHints: [null, "Ze vullen elkaar aan, maar doen iets anders.", "Een firewall beschermt juist.", "Antivirus gaat over malware, niet snelheid."],
+        wrongHints: [null, "Andersom: wie bewaakt de poort naar het netwerk, en wie zoekt op je apparaat zelf?", "Een firewall beschermt juist.", "Antivirus gaat over malware, niet snelheid."],
         uitlegPad: {
           stappen: [{ titel: "Poortwachter vs. speurhond", tekst: "Een **firewall** is de poortwachter: hij bepaalt welk **netwerkverkeer** binnen/buiten mag. **Antivirus** is de speurhond op je apparaat zelf: hij spoort **malware** op en ruimt die op. Samen dekken ze verschillende risico's af." }],
           niveaus: { basis: "Firewall = verkeer, antivirus = malware.", simpeler: "Poort vs. speurhond", nogSimpeler: "A." },
@@ -237,7 +237,7 @@ const steps = [
       },
       {
         q: "Volgens de **AVG** mag een organisatie…",
-        options: ["Alleen persoonsgegevens verzamelen die echt nodig zijn (dataminimalisatie)", "Alle gegevens verzamelen die ze maar wil", "Je gegevens nooit laten inzien", "Je gegevens altijd doorverkopen"],
+        options: ["Alleen persoonsgegevens verzamelen die echt nodig zijn", "Alle gegevens verzamelen die ze maar wil", "Je gegevens nooit laten inzien", "Je gegevens altijd doorverkopen"],
         answer: 0,
         wrongHints: [null, "Juist niet — de AVG wil dat organisaties zuinig zijn met gegevens.", "Je hebt recht op inzage.", "Doorverkopen mag niet zomaar."],
         uitlegPad: {

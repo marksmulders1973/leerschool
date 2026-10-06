@@ -144,7 +144,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
       {
         q: "*\"'Dat lukt jou toch nooit,' zei haar zus lachend.\"* — Welk woord verandert de betekenis van wat de zus zegt?",
         options: [
-          "'Lachend' — ze zegt het als grap, niet om te kwetsen",
+          "'Lachend' — het is plagerig bedoeld",
           "'Nooit' — het is een absolute uitspraak",
           "'Toch' — dat klinkt zeker",
           "'Jou' — ze bedoelt het persoonlijk",
@@ -235,7 +235,7 @@ Oefen maar met de zinnen hieronder. Bij elke zin geldt: het gevoel staat er niet
       {
         q: "*\"Ties liep extra langzaam en hield de doos met het cadeau met twee handen vast, alsof er een baby'tje in zat.\"* — Waarom loopt Ties zo langzaam?",
         options: [
-          "Hij wil het cadeau in de doos beschermen en niets laten vallen",
+          "Hij wil het cadeau beschermen",
           "Hij is moe van het lopen",
           "Hij wil te laat op school aankomen",
           "De doos is te zwaar om snel te dragen",
@@ -480,7 +480,7 @@ Beantwoord nu de vragen over het verhaal hierboven.`,
       {
         q: "*\"Je hoeft niet, hoor!\" roept Milan nu. Maar dat is niet waar.\"* — Wat weet de lezer hierdoor over Noa?",
         options: [
-          "Noa voelt een sterke innerlijke drang om te springen",
+          "Noa wil het van zichzelf doen",
           "Noa is bang voor Milan",
           "Noa denkt dat de badmeester het zegt",
           "Noa wil het zwembad verlaten",
@@ -571,7 +571,7 @@ Beantwoord daarna de vragen. Denk steeds: wat betekent het écht, en wat voel ik
       {
         q: "*\"De zon zakt als een gloeiende munt / langzaam in de spaarpot van de nacht.\"* — Wat wordt hier met elkaar vergeleken?",
         options: [
-          "De ondergaande zon met een munt die in een spaarpot glijdt",
+          "De zakkende zon met een munt",
           "Een munt met een spaarpot",
           "De nacht met de zon",
           "Geld verdienen met slapen gaan",
@@ -806,7 +806,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
       {
         q: "Is dit een ik-verhaal of een hij/zij-verhaal?",
         options: [
-          "Een hij/zij-verhaal: een verteller buiten het verhaal vertelt over Ties en de anderen",
+          "Een hij/zij-verhaal: een verteller vertelt over Ties",
           "Een ik-verhaal: Ties vertelt het zelf",
           "Een ik-verhaal: juf Karin vertelt het zelf",
           "Een hij/zij-verhaal: Fleur vertelt alles wat zij denkt",
@@ -966,7 +966,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
       {
         q: "*\"Op de laatste schooldag mocht Ties de vaas naar school brengen.\"* — Wat zegt het woord 'mocht' over hoe de klas dit besliste?",
         options: [
-          "De klas koos Ties speciaal uit voor die taak",
+          "Ties kreeg die speciale taak toegewezen",
           "Ties dwong de klas om hem de vaas te laten brengen",
           "Ties kocht de vaas zelf",
           "Ties had de vaas per ongeluk mee",
@@ -994,7 +994,7 @@ Pak bij elke vraag de vaste aanpak: lees de vraag goed, zoek de juiste zin op in
       {
         q: "*\"Iedereen boog naar voren. Toen werd het doodstil.\"* — Wat gebeurt hier met de sfeer in de klas?",
         options: [
-          "De sfeer slaat om: van verwachtingsvol naar geschrokken",
+          "Van verwachtingsvol naar geschrokken",
           "Het blijft de hele tijd even gezellig",
           "De kinderen vallen in slaap",
           "Iedereen wordt boos op juf Karin",

@@ -17,7 +17,7 @@ const steps = [
       "**Werelddelen / continenten** = grote landmassa's op aarde.\n\nDe **7 werelddelen** *(in volgorde van groot naar klein)*:\n\n**1. Azië** *(44 mln km², 60% wereldbevolking)*:\n• Grootste werelddeel.\n• ~4,8 miljard mensen.\n• Land: Mount Everest *(hoogste berg)*, woestijnen, regenwouden.\n• Beroemde landen: China, India, Japan, Indonesië.\n\n**2. Afrika** *(30 mln km², 1,4 miljard mensen)*:\n• Wieg van mensheid *(oudste mens-fossielen)*.\n• Sahara *(grootste woestijn)*.\n• Nijl *(langste rivier)*.\n• 54 landen.\n\n**3. Noord-Amerika** *(24 mln km², 580 mln mensen)*:\n• Vooral VS + Canada + Mexico.\n• Grote rotsbergen, Niagara, woestijnen, prairies.\n\n**4. Zuid-Amerika** *(18 mln km², 430 mln mensen)*:\n• Amazone-regenwoud *(grootste ter wereld)*.\n• Andes-bergen *(2e hoogste keten)*.\n• Brazilië, Argentinië, Chili.\n\n**5. Antarctica** *(14 mln km², geen permanente bewoners)*:\n• Bevroren land om Zuidpool.\n• Tot -89°C koud.\n• Geen landen *(wetenschap-stations)*.\n• ~70% van wereld-zoetwater *(in ijs)*.\n\n**6. Europa** *(10 mln km², 750 mln mensen)*:\n• Op één na kleinste continent.\n• 50 landen.\n• Vele talen + culturen.\n• EU *(27 landen)*.\n\n**7. Oceanië / Australië** *(9 mln km², 45 mln mensen)*:\n• Kleinste werelddeel.\n• Australië + Nieuw-Zeeland + eilanden Pacific.\n\n**Geheugensteun** *(volgorde grootte)*:\n*A-A-N-Z-A-E-O* = Azië-Afrika-NoordAmerika-ZuidAmerika-Antarctica-Europa-Oceanië.\n\n**5 oceanen** *(in volgorde van groot)*:\n\n**1. Stille Oceaan / Pacific** *(165 mln km²)*: tussen Azië + Amerika. Grootste!\n**2. Atlantische Oceaan** *(106 mln km²)*: tussen Amerika + Europa/Afrika.\n**3. Indische Oceaan** *(75 mln km²)*: tussen Afrika + Azië + Australië.\n**4. Zuidelijke Oceaan** *(20 mln km²)*: rond Antarctica.\n**5. Noordelijke IJszee / Arctische Oceaan** *(14 mln km²)*: rond Noordpool.\n\n**Vergelijken**:\n• Land: 30% van aardoppervlak.\n• Water: 70%.\n• Stille Oceaan alleen al groter dan alle land samen!\n\n**Verschil tussen continent + land**:\n• **Continent** = grote landmassa.\n• **Land** = politieke eenheid met grenzen + regering.\n• 1 continent kan vele landen hebben.\n• Bv. Europa = 50 landen.\n\n**Wereldbevolking**:\n• **8,1 miljard** mensen *(2024)*.\n• Groeit nog steeds — maar trager.\n• Verwacht piek rond **10 miljard** *(2080)*.\n• Daarna langzame daling *(minder geboorten)*.\n\n**Toets-feitje**:\n**Rusland** = grootste land ter wereld qua oppervlak *(17 mln km²)*. Strekt over **11 tijdzones** — als het 12 uur 's middags is in Moskou, is het al 7 uur 's avonds in Vladivostok.",
     checks: [
       {
-        q: "Hoeveel **werelddelen**?",
+        q: "Hoeveel **werelddelen** leer je op een Nederlandse school?",
         options: ["7", "5", "10", "3"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
@@ -58,17 +58,17 @@ const steps = [
         wrongHints: [null, "Tweede.", "Derde.", "Vijfde."],
       },
       {
-        q: "Hoeveel **wereldbevolking** 2024?",
+        q: "Hoeveel mensen wonen er op de wereld (2024)?",
         options: ["~8 miljard", "1 miljard", "100 miljard", "500 miljoen"],
         answer: 0,
-        wrongHints: [null, "Veel minder.", "Onmogelijk.", "Te weinig."],
+        wrongHints: [null, "Veel te weinig.", "Onmogelijk.", "Te weinig."],
       },
     ],
   },
   {
     title: "Europa + Azië",
     explanation:
-      "**EUROPA** 🇪🇺:\n\nNL ligt hier. **50 landen** + ~750 miljoen mensen.\n\n**EU (Europese Unie)**:\n• Sinds **1957** *(toen EEG)*.\n• **27 landen** lid *(2024)*.\n• Open grenzen *(Schengen)*.\n• **Euro** *(€)* sinds 2002.\n• Brussel = hoofdkwartier.\n\n**Grote Europese landen + hoofdsteden**:\n• **Frankrijk** *(Parijs)* — 65 mln mensen.\n• **Duitsland** *(Berlijn)* — 84 mln, grootste EU-land.\n• **Italië** *(Rome)* — 59 mln.\n• **Spanje** *(Madrid)* — 47 mln.\n• **Polen** *(Warschau)* — 38 mln.\n• **Verenigd Koninkrijk** *(Londen)* — 67 mln *(geen EU sinds Brexit 2020)*.\n• **Nederland** *(Amsterdam — hoofdstad, Den Haag — regering)* — 17,9 mln.\n• **België** *(Brussel)* — 11,7 mln.\n• **Rusland** *(Moskou)* — grootste land, deels Europa-deels Azië.\n\n**Skandinavië**:\n• **Noorwegen** *(Oslo)*, **Zweden** *(Stockholm)*, **Denemarken** *(Kopenhagen)*, **Finland** *(Helsinki)*, **IJsland** *(Reykjavik)*.\n• Welvarende landen, koud, sociaal.\n\n**Andere**:\n• Portugal, Griekenland, Ierland, Oostenrijk, Zwitserland *(buiten EU)*, Tsjechië, Hongarije, Roemenië, etc.\n\n**Bekende meren + rivieren**:\n• **Donau** *(2.860 km, door 10 landen)*.\n• **Volga** *(3.530 km, in Rusland, langste Europa)*.\n• **Rijn** *(door NL en 5 landen)*.\n• **Theems** *(Engeland)*.\n• **Seine** *(Frankrijk)*.\n\n**Bekende bergen**:\n• **Alpen** *(o.a. Frankrijk/Italië/Zwitserland)*: **Mont Blanc** 4810 m hoogste.\n• **Pyreneeën** *(Spanje/Frankrijk)*.\n• **Karpaten** *(Oost-Europa)*.\n• **Kaukasus** *(Rusland/Georgië)*: Elbrus 5642 m, Europa's hoogste berg.\n\n**AZIË** 🌏:\n\n**~4,8 miljard** mensen *(60% wereldbevolking!)* + 48 landen.\n\n**Grote Aziatische landen + hoofdsteden**:\n• **China** *(Beijing)* — 1,41 miljard mensen, 2e van wereld.\n• **India** *(New Delhi)* — 1,43 miljard, grootste land qua mensen *(sinds 2023)*.\n• **Indonesië** *(Jakarta)* — 280 mln, oud-NL-kolonie.\n• **Pakistan** *(Islamabad)*, **Bangladesh** *(Dhaka)*.\n• **Japan** *(Tokio)* — 125 mln, eilanden.\n• **Filipijnen** *(Manila)*.\n• **Vietnam, Thailand, Maleisië**.\n• **Rusland** *(deels)*.\n\n**Midden-Oosten** *(Azië)*:\n• **Saoedi-Arabië** *(Riyad)* — Mekka + Medina.\n• **Iran** *(Teheran)*.\n• **Israël** *(Jeruzalem)*, **Palestina**.\n• **Turkije** *(Ankara)* — deels Azië-deels Europa.\n• **Verenigde Arabische Emiraten** *(Abu Dhabi, Dubai)*.\n\n**Beroemde plekken**:\n• **Mount Everest** *(8.849 m, Nepal/Tibet)* — hoogste berg.\n• **Dode Zee** *(Israël)* — laagste punt op land *(-430 m)*.\n• **Gobi-woestijn** *(China/Mongolië)*.\n• **Yangtze** *(China)* — 3e langste rivier wereldwijd.\n• **Taj Mahal** *(India, 17e eeuw)*.\n• **Grote Muur China** *(20.000+ km)*.\n\n**Religies in Azië**:\n• Boeddhisme, hindoeïsme, islam, christendom, jodendom — allemaal **ontstaan** in Azië!\n\n**Toets-feitje**:\nDe **Stille Oceaan** *(Pacific)* is zo groot dat alle continenten samen er in zouden passen — met nog ruimte over. Genoemd '**stille**' door Magellan in 1520 omdat hij rustig water vond — vaak is hij juist niet stil.",
+      "**EUROPA** 🇪🇺:\n\nNL ligt hier. **50 landen** + ~750 miljoen mensen.\n\n**EU (Europese Unie)**:\n• Sinds **1957** *(toen EEG)*.\n• **27 landen** lid *(2024)*.\n• Open grenzen *(Schengen)*.\n• **Euro** *(€)* sinds 2002.\n• Brussel = hoofdkwartier.\n\n**Grote Europese landen + hoofdsteden**:\n• **Frankrijk** *(Parijs)* — 65 mln mensen.\n• **Duitsland** *(Berlijn)* — 84 mln, grootste EU-land.\n• **Italië** *(Rome)* — 59 mln.\n• **Spanje** *(Madrid)* — 47 mln.\n• **Polen** *(Warschau)* — 38 mln.\n• **Verenigd Koninkrijk** *(Londen)* — 67 mln *(geen EU sinds Brexit 2020)*.\n• **Nederland** *(Amsterdam — hoofdstad, Den Haag — regering)* — 18 mln.\n• **België** *(Brussel)* — 11,7 mln.\n• **Rusland** *(Moskou)* — grootste land, deels Europa-deels Azië.\n\n**Skandinavië**:\n• **Noorwegen** *(Oslo)*, **Zweden** *(Stockholm)*, **Denemarken** *(Kopenhagen)*, **Finland** *(Helsinki)*, **IJsland** *(Reykjavik)*.\n• Welvarende landen, koud, sociaal.\n\n**Andere**:\n• Portugal, Griekenland, Ierland, Oostenrijk, Zwitserland *(buiten EU)*, Tsjechië, Hongarije, Roemenië, etc.\n\n**Bekende meren + rivieren**:\n• **Donau** *(2.860 km, door 10 landen)*.\n• **Volga** *(3.530 km, in Rusland, langste Europa)*.\n• **Rijn** *(door NL en 5 landen)*.\n• **Theems** *(Engeland)*.\n• **Seine** *(Frankrijk)*.\n\n**Bekende bergen**:\n• **Alpen** *(o.a. Frankrijk/Italië/Zwitserland)*: **Mont Blanc** 4810 m hoogste.\n• **Pyreneeën** *(Spanje/Frankrijk)*.\n• **Karpaten** *(Oost-Europa)*.\n• **Kaukasus** *(Rusland/Georgië)*: Elbrus 5642 m, Europa's hoogste berg.\n\n**AZIË** 🌏:\n\n**~4,8 miljard** mensen *(60% wereldbevolking!)* + 48 landen.\n\n**Grote Aziatische landen + hoofdsteden**:\n• **China** *(Beijing)* — 1,41 miljard mensen, 2e van wereld.\n• **India** *(New Delhi)* — 1,43 miljard, grootste land qua mensen *(sinds 2023)*.\n• **Indonesië** *(Jakarta)* — 280 mln, oud-NL-kolonie.\n• **Pakistan** *(Islamabad)*, **Bangladesh** *(Dhaka)*.\n• **Japan** *(Tokio)* — 125 mln, eilanden.\n• **Filipijnen** *(Manila)*.\n• **Vietnam, Thailand, Maleisië**.\n• **Rusland** *(deels)*.\n\n**Midden-Oosten** *(Azië)*:\n• **Saoedi-Arabië** *(Riyad)* — Mekka + Medina.\n• **Iran** *(Teheran)*.\n• **Israël** *(Jeruzalem)*, **Palestina**.\n• **Turkije** *(Ankara)* — deels Azië-deels Europa.\n• **Verenigde Arabische Emiraten** *(Abu Dhabi, Dubai)*.\n\n**Beroemde plekken**:\n• **Mount Everest** *(8.849 m, Nepal/Tibet)* — hoogste berg.\n• **Dode Zee** *(Israël)* — laagste punt op land *(-430 m)*.\n• **Gobi-woestijn** *(China/Mongolië)*.\n• **Yangtze** *(China)* — 3e langste rivier wereldwijd.\n• **Taj Mahal** *(India, 17e eeuw)*.\n• **Grote Muur China** *(20.000+ km)*.\n\n**Religies in Azië**:\n• Boeddhisme, hindoeïsme, islam, christendom, jodendom — allemaal **ontstaan** in Azië!\n\n**Toets-feitje**:\nDe **Stille Oceaan** *(Pacific)* is zo groot dat alle continenten samen er in zouden passen — met nog ruimte over. Genoemd '**stille**' door Magellan in 1520 omdat hij rustig water vond — vaak is hij juist niet stil.",
     checks: [
       {
         q: "Hoofdstad van **Frankrijk**?",
@@ -79,7 +79,7 @@ const steps = [
           stappen: [
             { titel: "Wat is een hoofdstad?", tekst: "De **hoofdstad** is de belangrijkste stad van een land. Vaak zit daar de regering, het parlement en koning/president." },
             { titel: "Parijs van Frankrijk", tekst: "**Parijs** is de hoofdstad van Frankrijk. Beroemde monumenten: **Eiffeltoren** (300 m hoog, gebouwd 1889), **Louvre** (museum), **Notre-Dame** (kathedraal)." },
-            { titel: "Lyon, Marseille, Bordeaux", tekst: "Dit zijn andere grote Franse steden, maar geen hoofdstad. Marseille = haven Middellandse Zee. Lyon = 2e stad. Bordeaux = wijn-streek." },
+            { titel: "Lyon, Marseille, Bordeaux", tekst: "Dit zijn andere grote Franse steden, maar geen hoofdstad. Marseille = haven Middellandse Zee. Lyon = grote stad aan de Rhône. Bordeaux = wijn-streek." },
           ],
           woorden: [
             { woord: "hoofdstad", uitleg: "Belangrijkste stad waar regering zit." },
@@ -100,13 +100,13 @@ const steps = [
       },
       {
         q: "**Grootste land** qua bevolking 2024?",
-        options: ["India (~1,43 miljard)", "China", "VS", "Rusland"],
+        options: ["India", "China", "VS", "Rusland"],
         answer: 0,
         wrongHints: [null, "Recent niet meer.", "Veel minder.", "Veel minder."],
       },
       {
         q: "**Hoogste berg** ter wereld?",
-        options: ["Mount Everest (Nepal)", "Mont Blanc", "Kilimanjaro", "Aconcagua"],
+        options: ["Mount Everest", "Mont Blanc", "Kilimanjaro", "Aconcagua"],
         answer: 0,
         wrongHints: [null, "Europa.", "Afrika.", "Zuid-Amerika."],
         uitlegPad: {
@@ -176,7 +176,7 @@ const steps = [
       },
       {
         q: "**Langste rivier** ter wereld?",
-        options: ["Nijl (Egypte, 6650 km)", "Amazone", "Yangtze", "Mississippi"],
+        options: ["Nijl", "Amazone", "Yangtze", "Mississippi"],
         answer: 0,
         wrongHints: [null, "Tweede — Amazone.", "Derde — China.", "Vierde — VS."],
         uitlegPad: {
@@ -244,7 +244,7 @@ const steps = [
     title: "Eind-toets — wereld mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Hoeveel **werelddelen**?", options: ["7", "5", "10", "3"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
+      { q: "Hoeveel **werelddelen** telt de indeling die je op school leert?", options: ["7", "5", "10", "3"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
       { q: "**Grootste** werelddeel?", options: ["Azië", "Afrika", "Europa", "Australië"], answer: 0, wrongHints: [null, "Tweede.", "Klein.", "Kleinst."] },
       { q: "**Hoogste berg** ter wereld?", options: ["Mount Everest", "Mont Blanc", "Kilimanjaro", "Aconcagua"], answer: 0, wrongHints: [null, "Europa.", "Afrika.", "Zuid-Amerika."] },
       { q: "Hoofdstad **Frankrijk**?", options: ["Parijs", "Lyon", "Berlijn", "Madrid"], answer: 0, wrongHints: [null, "Niet.", "Duitsland.", "Spanje."] },
@@ -277,7 +277,7 @@ const steps = [
       },
       {
         q: "Welk **buurland** grenst aan de **noordkant** van Nederland?",
-        options: ["Geen (Noordzee)", "België", "Duitsland", "Frankrijk"],
+        options: ["Geen enkel land", "België", "Duitsland", "Frankrijk"],
         answer: 0,
         wrongHints: [null, "België ligt ZUIDEN van NL.", "Duitsland ligt OOSTEN.", "Frankrijk ligt veel zuidelijker."],
         uitlegPad: {
@@ -291,7 +291,7 @@ const steps = [
             { woord: "NAP", uitleg: "Normaal Amsterdams Peil — referentiepunt voor hoogte in NL." },
             { woord: "Vaalserberg", uitleg: "Hoogste punt vasteland NL: 322 m boven zeespiegel. Drielandenpunt." },
           ],
-          theorie: "NL ligging in Europa:\n• Buurland N: **Noordzee** (geen land)\n• Buurland O: **Duitsland** (grens ~570 km)\n• Buurland Z: **België** (grens ~450 km)\n• Buurland W: **Noordzee**\n• NL-eilanden: Wadden­eilanden + Caribische delen (Aruba/Curaçao/Bonaire/Sint Maarten)",
+          theorie: "NL ligging in Europa:\n• Buurland N: **Noordzee** (geen land)\n• Buurland O: **Duitsland** (grens ~570 km)\n• Buurland Z: **België** (grens ~450 km)\n• Buurland W: **Noordzee**\n• NL-eilanden: Waddeneilanden + Caribische delen (Aruba/Curaçao/Bonaire/Sint Maarten)",
           voorbeelden: [
             { type: "feit", tekst: "Vanuit Den Haag is het ~600 km naar Berlijn (DE) maar ~150 km naar Brussel (BE)." },
             { type: "feit", tekst: "Caribische deel: Aruba, Curaçao, Sint Maarten zijn LANDEN binnen het Koninkrijk NL. Bonaire/Saba/Sint Eustatius zijn 'bijzondere gemeentes'." },
@@ -302,7 +302,7 @@ const steps = [
       },
       {
         q: "Wat is een **continent**?",
-        options: ["Heel groot stuk land — 7 werelddelen", "Een land", "Een berg", "Een zee"],
+        options: ["Een heel groot stuk land", "Een land", "Een berg", "Een zee"],
         answer: 0,
         wrongHints: [null, "Een continent BEVAT landen, IS niet een land.", "Niet — wel staan er bergen OP continenten.", "Niet — tegenovergesteld: continent = land, oceaan = water."],
         uitlegPad: {
@@ -334,16 +334,16 @@ const steps = [
       { q: "Hoofdstad van **Italië**?", options: ["Rome","Milaan","Napels","Venetië"], answer: 0, wrongHints: [null, "Wel grote stad in noord-Italië, maar geen hoofdstad.", "Wel grote zuid-stad, maar geen hoofdstad.", "Wel beroemd watertoerisme, maar geen hoofdstad."] },
       { q: "Hoofdstad van **Verenigd Koninkrijk**?", options: ["Londen","Manchester","Edinburgh","Liverpool"], answer: 0, wrongHints: [null, "Niet.", "Schotland-hoofdstad.", "Niet."] },
       { q: "Hoofdstad van **VS**?", options: ["Washington D.C.","New York","Los Angeles","Chicago"], answer: 0, wrongHints: [null, "Grootste, geen hoofdstad.", "Niet.", "Niet."] },
-      { q: "Hoofdstad van **Rusland**?", options: ["Moskou","Sint-Petersburg","Kiev","Niet relevant"], answer: 0, wrongHints: [null, "Andere stad.", "Oekraïne.", "Wel."] },
+      { q: "Hoofdstad van **Rusland**?", options: ["Moskou","Sint-Petersburg","Kiev","Minsk"], answer: 0, wrongHints: [null, "Andere stad.", "Oekraïne.", "Wit-Rusland."] },
       { q: "Hoofdstad van **Japan**?", options: ["Tokio","Kyoto","Osaka","Seoul"], answer: 0, wrongHints: [null, "Vorige.", "Niet.", "Zuid-Korea."] },
-      { q: "Hoofdstad van **China**?", options: ["Peking (Beijing)","Shanghai","Hong Kong","Niet relevant"], answer: 0, wrongHints: [null, "Grootste, geen hoofdstad.", "Andere.", "Wel."] },
-      { q: "Hoofdstad van **Brazilië**?", options: ["Brasília","Rio de Janeiro","São Paulo","Niet relevant"], answer: 0, wrongHints: [null, "Vroeger.", "Grootste.", "Wel."] },
+      { q: "Hoofdstad van **China**?", options: ["Peking","Shanghai","Hong Kong","Taipei"], answer: 0, wrongHints: [null, "Grootste, geen hoofdstad.", "Andere.", "Taiwan."] },
+      { q: "Hoofdstad van **Brazilië**?", options: ["Brasília","Rio de Janeiro","São Paulo","Lima"], answer: 0, wrongHints: [null, "Vroeger.", "Grootste.", "Peru."] },
       { q: "Welke woestijn is in **Afrika**?", options: ["Sahara","Gobi","Mojave","Atacama"], answer: 0, wrongHints: [null, "Azië.", "VS.", "Zuid-Amerika."] },
       { q: "Welke is **grootste** Europese stad?", options: ["Moskou","Londen","Parijs","Madrid"], answer: 0, wrongHints: [null, "Tweede.", "Niet.", "Niet."] },
       { q: "Welk land heeft **Acropolis**?", options: ["Griekenland","Italië","Egypte","Turkije"], answer: 0, wrongHints: [null, "Romeins erfgoed.", "Egyptisch.", "Niet."] },
-      { q: "Welke **brug** is bekend in San Francisco?", options: ["Golden Gate","Tower Bridge","Brooklyn","Niet bekend"], answer: 0, wrongHints: [null, "Londen.", "NY.", "Wel."] },
+      { q: "Welke **brug** is bekend in San Francisco?", options: ["Golden Gate","Tower Bridge","Brooklyn","Erasmusbrug"], answer: 0, wrongHints: [null, "Londen.", "New York.", "Rotterdam."] },
       { q: "**Taj Mahal** ligt in?", options: ["India","Egypte","China","Japan"], answer: 0, wrongHints: [null, "Egypte heeft piramides, geen Taj Mahal.", "China heeft de Muur, geen Taj Mahal.", "Japan heeft Fuji, geen Taj Mahal."] },
-      { q: "**Christus de Verlosser**-standbeeld ligt in?", options: ["Rio de Janeiro (Brazilië)","Madrid","Niet bekend","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Wel."] },
+      { q: "**Christus de Verlosser**-standbeeld ligt in?", options: ["Rio de Janeiro","Madrid","Rome","Buenos Aires"], answer: 0, wrongHints: [null, "Spanje — daar staat hij niet.", "Italië — daar staat hij niet.", "Argentinië — daar staat hij niet."] },
     ],
   },
 ];

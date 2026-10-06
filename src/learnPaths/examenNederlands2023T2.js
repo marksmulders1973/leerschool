@@ -199,7 +199,7 @@ const steps = [
         { id: "cse-leesvaardigheid-nederlands", title: "Leesvaardigheid Nederlands", niveau: "VMBO-GT eindexamen", why: "schrijfdoel + precisie in formulering — kern" },
       ],
       uitlegPad: compact(
-        "4 doelen: INFORMEREN, OVERTUIGEN, AMUSEREN, ACTIVEREN. Hier: feiten + onderzoek + geen mening = informeren. PAS OP nuance: 'HOOFDoorzaak' (alle insectendood door licht) ≠ 'EEN belangrijke oorzaak' (licht is één van de oorzaken). Tekst zegt het laatste.",
+        "4 doelen: INFORMEREN, OVERTUIGEN, AMUSEREN, ACTIVEREN. Hier: feiten + onderzoek + geen mening = informeren. PAS OP nuance: 'HOOFDoorzaak' (de allerbelangrijkste oorzaak) ≠ 'EEN belangrijke oorzaak' (licht is één van de oorzaken). Tekst zegt het laatste.",
         {
           basis: "Informeren + EEN oorzaak (niet DE).",
           simpeler: "B is voorzichtig geformuleerd: 'nieuwe, waarschijnlijk belangrijke'. Dat matcht de tekst.",

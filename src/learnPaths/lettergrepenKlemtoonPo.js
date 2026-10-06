@@ -41,10 +41,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel lettergrepen heeft 'banaan' (ba-naan)?",
+        q: "Hoeveel lettergrepen heeft 'banaan'?",
         options: ["2", "3", "1", "4"],
         answer: 0,
-        wrongHints: [null, "Klap mee: ba-naan, dat zijn er minder.", "Het zijn er meer dan één.", "Zo veel klappen hoor je niet."],
+        wrongHints: [null, "Klap nog eens mee en tel — het zijn er minder.", "Het zijn er meer dan één.", "Zo veel klappen hoor je niet."],
         uitlegPad: {
           stappen: [{ titel: "ba-naan", tekst: "Ba (1) en naan (2): twee klappen, dus 2 lettergrepen." }],
           niveaus: {
@@ -55,10 +55,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel lettergrepen heeft 'olifant' (o-li-fant)?",
+        q: "Hoeveel lettergrepen heeft 'olifant'?",
         options: ["3", "2", "4", "1"],
         answer: 0,
-        wrongHints: [null, "Klap mee: o-li-fant, dat is er eentje meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
+        wrongHints: [null, "Klap nog eens mee en tel — het zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
         uitlegPad: {
           stappen: [{ titel: "o-li-fant", tekst: "O (1), li (2), fant (3): drie klappen, dus 3 lettergrepen." }],
           niveaus: {
@@ -83,10 +83,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel lettergrepen heeft 'chocola' (cho-co-la)?",
+        q: "Hoeveel lettergrepen heeft 'chocola'?",
         options: ["3", "2", "4", "1"],
         answer: 0,
-        wrongHints: [null, "Klap mee: cho-co-la, er zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
+        wrongHints: [null, "Klap nog eens mee en tel — het zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
         uitlegPad: {
           stappen: [{ titel: "cho-co-la", tekst: "Cho (1), co (2), la (3): drie klappen, dus 3 lettergrepen." }],
           niveaus: {
@@ -98,7 +98,7 @@ const steps = [
       },
       {
         q: "Wat heeft elke lettergreep minimaal één van?",
-        options: ["een klinker (a, e, i, o, u)", "een medeklinker", "een hoofdletter", "een leesteken"],
+        options: ["een klinker", "een medeklinker", "een hoofdletter", "een leesteken"],
         answer: 0,
         wrongHints: [null, "Een medeklinker is niet verplicht — 'a' is zelf al een lettergreep.", "Hoofdletters hebben er niets mee te maken.", "Leestekens horen bij zinnen, niet bij lettergrepen."],
         uitlegPad: {
@@ -168,10 +168,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel lettergrepen heeft 'computer' (com-pu-ter)?",
+        q: "Hoeveel lettergrepen heeft 'computer'?",
         options: ["3", "2", "4", "1"],
         answer: 0,
-        wrongHints: [null, "Klap mee: com-pu-ter, dat is er eentje meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
+        wrongHints: [null, "Klap nog eens mee en tel — het zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
         uitlegPad: {
           stappen: [{ titel: "com-pu-ter", tekst: "Com (1), pu (2), ter (3): drie klappen, dus 3 lettergrepen." }],
           niveaus: {
@@ -304,7 +304,7 @@ const steps = [
         },
       },
       {
-        q: "Welke afbreking van 'bibliotheek' (bi-bli-o-theek) is goed?",
+        q: "Welke afbreking van 'bibliotheek' is goed?",
         options: ["bi-bliotheek", "bib-liothek", "biblio-teek", "bibliothe-ek"],
         answer: 0,
         wrongHints: [null, "Dat knipt midden in de tweede lettergreep ('bli').", "Let op de spelling: het is 'theek', met th.", "Dat knipt midden in de klank 'theek'."],
@@ -353,7 +353,7 @@ const steps = [
         q: "Waar ligt de klemtoon in 'banaan' (ba-naan)?",
         options: ["op 'naan' (de tweede)", "op 'ba' (de eerste)", "op allebei evenveel", "er is geen klemtoon"],
         answer: 0,
-        wrongHints: [null, "Spreek uit: ba-NAAN, de nadruk valt achteraan.", "Luister goed — de ene klap klinkt sterker.", "Elk meerlettergrepig woord heeft een klemtoon."],
+        wrongHints: [null, "Zeg het woord hardop: welk stukje klinkt harder en langer?", "Luister goed — de ene klap klinkt sterker.", "Elk meerlettergrepig woord heeft een klemtoon."],
         uitlegPad: {
           stappen: [{ titel: "ba-NAAN", tekst: "Je zegt 'baNAAN', met de nadruk op 'naan'. Daar ligt de klemtoon." }],
           niveaus: {
@@ -367,7 +367,7 @@ const steps = [
         q: "In 'tomaat' (to-maat), waar ligt de klemtoon?",
         options: ["op 'maat'", "op 'to'", "op allebei", "nergens"],
         answer: 0,
-        wrongHints: [null, "Spreek uit: to-MAAT.", "Luister goed — de ene klap klinkt sterker.", "Er is één klemtoon per woord."],
+        wrongHints: [null, "Zeg het woord hardop: welk stukje klinkt harder en langer?", "Luister goed — de ene klap klinkt sterker.", "Er is één klemtoon per woord."],
         uitlegPad: {
           stappen: [{ titel: "to-MAAT", tekst: "Je zegt 'toMAAT', met de nadruk op 'maat'." }],
           niveaus: {
@@ -400,7 +400,7 @@ const steps = [
         q: "Waar ligt de klemtoon in 'tafel' (ta-fel)?",
         options: ["op 'ta' (de eerste)", "op 'fel' (de tweede)", "op allebei evenveel", "er is geen klemtoon"],
         answer: 0,
-        wrongHints: [null, "Spreek uit: TÁ-fel, de nadruk valt vooraan.", "Luister goed — de ene klap klinkt sterker.", "Elk woord met meer lettergrepen heeft een klemtoon."],
+        wrongHints: [null, "Zeg het woord hardop: welk stukje klinkt harder en langer?", "Luister goed — de ene klap klinkt sterker.", "Elk woord met meer lettergrepen heeft een klemtoon."],
         uitlegPad: {
           stappen: [{ titel: "TÁ-fel", tekst: "Je zegt 'TÁfel', met de nadruk op 'ta'. Daar ligt de klemtoon." }],
           niveaus: {
@@ -414,7 +414,7 @@ const steps = [
         q: "In 'computer' (com-pu-ter), waar ligt de klemtoon?",
         options: ["op 'pu' (de tweede)", "op 'com' (de eerste)", "op 'ter' (de derde)", "op allebei de laatste twee"],
         answer: 0,
-        wrongHints: [null, "Spreek uit: com-PU-ter — de nadruk valt niet vooraan.", "Spreek uit: com-PU-ter.", "Er is maar één klemtoon."],
+        wrongHints: [null, "Zeg het woord hardop: klinkt 'com' echt het hardst?", "Zeg het woord hardop: klinkt 'ter' echt het hardst?", "Er is maar één klemtoon."],
         uitlegPad: {
           stappen: [{ titel: "com-PU-ter", tekst: "Je zegt 'comPUter', met de nadruk op 'pu'. Dat is de tweede lettergreep." }],
           niveaus: {
@@ -425,10 +425,10 @@ const steps = [
         },
       },
       {
-        q: "Hoeveel lettergrepen heeft 'ziekenhuis' (zie-ken-huis)?",
+        q: "Hoeveel lettergrepen heeft 'ziekenhuis'?",
         options: ["3", "2", "4", "1"],
         answer: 0,
-        wrongHints: [null, "Klap mee: zie-ken-huis, er zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
+        wrongHints: [null, "Klap nog eens mee en tel — het zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan één."],
         uitlegPad: {
           stappen: [{ titel: "zie-ken-huis", tekst: "Zie (1), ken (2), huis (3): drie klappen, dus 3 lettergrepen." }],
           niveaus: {
@@ -442,7 +442,7 @@ const steps = [
         q: "Waar ligt de klemtoon in 'vakantie' (va-kan-tie)?",
         options: ["op 'kan' (de tweede)", "op 'va' (de eerste)", "op 'tie' (de derde)", "op allebei de buitenste lettergrepen"],
         answer: 0,
-        wrongHints: [null, "Spreek uit: va-KÁN-tie — de nadruk valt niet vooraan.", "Spreek uit: va-KÁN-tie.", "Er is maar één klemtoon."],
+        wrongHints: [null, "Zeg het woord hardop: klinkt 'va' echt het hardst?", "Zeg het woord hardop: klinkt 'tie' echt het hardst?", "Er is maar één klemtoon."],
         uitlegPad: {
           stappen: [{ titel: "va-KÁN-tie", tekst: "Je zegt 'vaKÁNtie', met de nadruk op 'kan'. Dat is de tweede lettergreep." }],
           niveaus: {

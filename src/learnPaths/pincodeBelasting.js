@@ -50,7 +50,7 @@ const steps = [
     checks: [
       {
         q: "Welke belasting zit verstopt in de prijs van een glas frisdrank?",
-        options: ["BTW (indirect)", "Inkomstenbelasting", "Vennootschapsbelasting", "Erfbelasting"],
+        options: ["BTW", "Inkomstenbelasting", "Vennootschapsbelasting", "Erfbelasting"],
         answer: 0,
         wrongHints: [null, "IB betaal je over loon.", "VPB is voor BV's over winst.", "Erfbelasting alleen bij erven."],
         uitlegPad: {
@@ -64,7 +64,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **belasting** en **premie**?",
-        options: ["Premie heeft specifiek doel; belasting gaat naar algemene pot", "Premie is altijd hoger", "Belasting is alleen voor rijken", "Geen verschil"],
+        options: ["Premie heeft specifiek doel; belasting gaat naar algemene pot", "Premie is altijd hoger dan belasting", "Belasting betalen alleen rijke mensen", "Er is geen enkel verschil tussen beide"],
         answer: 0,
         wrongHints: [null, "Hoogte verschilt per regeling.", "Iedereen betaalt belasting.", "Wel verschil — qua doel."],
         uitlegPad: {
@@ -78,7 +78,7 @@ const steps = [
       },
       {
         q: "**AOW-premie** — wat is het?",
-        options: ["Premie — voor latere ouderdomsuitkering", "Algemene belasting", "Een toeslag", "Korting op IB"],
+        options: ["Premie — voor latere ouderdomsuitkering", "Algemene belasting voor de overheid", "Een toeslag die je ontvangt", "Een korting op je inkomstenbelasting"],
         answer: 0,
         wrongHints: [null, "Heeft specifiek doel.", "Niet hetzelfde als toeslag.", "Geen korting."],
         uitlegPad: {
@@ -92,7 +92,7 @@ const steps = [
       },
       {
         q: "**Erfbelasting** — direct of indirect?",
-        options: ["Direct (op basis wat je krijgt)", "Indirect", "Premie", "Geen belasting"],
+        options: ["Direct", "Indirect", "Premie", "Geen belasting"],
         answer: 0,
         wrongHints: [null, "Geen prijs.", "Geen specifiek doel.", "Bestaat zeker."],
         uitlegPad: {
@@ -162,7 +162,7 @@ const steps = [
         q: "Een fiets kost €330 inclusief 21% BTW. Wat is de prijs **zonder BTW**?",
         options: ["€272,73", "€260,70", "€309,30", "€110"],
         answer: 0,
-        wrongHints: [null, "Niet 21% van €330 aftrekken — delen door 1,21.", "Net niet — €330 / 1,21.", "Dat is alleen het BTW-bedrag."],
+        wrongHints: [null, "Niet 21% van €330 aftrekken — de 21% gaat over de prijs zónder btw.", "Net niet — €330 is 121% van de prijs zonder btw. Reken terug naar 100%.", "Veel te laag — de btw is maar een klein deel van de prijs."],
         uitlegPad: {
           stappen: [{ titel: "Delen door 1,21", tekst: "Inclusief = excl × 1,21. Andersom: excl = incl / 1,21. €330 / 1,21 = €272,73 zonder BTW. BTW-deel: €330 − €272,73 = €57,27." }],
           woorden: [{ woord: "exclusief BTW", uitleg: "Prijs vóór BTW erbij komt. Wat verkoper zelf overhoudt." }, { woord: "rekentruc", uitleg: "Incl → excl: delen door 1,21 (bij 21%) of 1,09 (bij 9%)." }],
@@ -188,7 +188,7 @@ const steps = [
       },
       {
         q: "Welk BTW-tarief geldt voor **boodschappen**?",
-        options: ["9% (laag)", "21%", "0%", "25%"],
+        options: ["9%", "21%", "0%", "25%"],
         answer: 0,
         wrongHints: [null, "21% is voor andere dingen.", "0% is alleen export/zorg.", "25% bestaat niet als NL-tarief."],
         uitlegPad: {
@@ -230,7 +230,7 @@ const steps = [
       },
       {
         q: "Een ondernemer ontvangt **€1.000 omzet inclusief 9% BTW**. Hoeveel BTW houdt hij apart?",
-        options: ["Ongeveer €83", "€90", "€100", "€9"],
+        options: ["€83", "€90", "€100", "€9"],
         answer: 0,
         wrongHints: [null, "Niet 9% van €1.000 — dat is incl.", "Te veel.", "Te weinig."],
         uitlegPad: {
@@ -321,7 +321,7 @@ const steps = [
       },
       {
         q: "Wanneer moet je IB-aangifte uiterlijk doen?",
-        options: ["Voor 1 mei (of na uitstel)", "1 januari", "31 december", "Geen deadline"],
+        options: ["Vóór 1 mei", "Vóór 1 januari", "Vóór 31 december", "Er is geen deadline"],
         answer: 0,
         wrongHints: [null, "Te vroeg.", "Te laat — de deadline valt al in het voorjaar.", "Wel deadline."],
         uitlegPad: {
@@ -335,14 +335,14 @@ const steps = [
       },
       {
         q: "**Box 3** belasting gaat over:",
-        options: ["Spaargeld + beleggingen boven vrijstelling", "Werk-inkomen", "Aandelen in BV", "Erfenis"],
+        options: ["Spaargeld + beleggingen boven vrijstelling", "Inkomen uit werk en eigen woning", "Aandelen in je eigen BV", "Een erfenis die je krijgt"],
         answer: 0,
         wrongHints: [null, "Werk = Box 1.", "Ab = Box 2.", "Erfbelasting is apart."],
         uitlegPad: {
           stappen: [{ titel: "Vermogen-box", tekst: "Box 3 = belasting over VERMOGEN: spaargeld + beleggingen + tweede huis − schulden. Vrijstelling 2024: ~€57k per persoon. Daarboven belast op fictief rendement." }],
           woorden: [{ woord: "Box 3", uitleg: "Vermogensrendementsheffing. Belasting over fictief rendement op vermogen boven vrijstelling." }, { woord: "vrijstelling", uitleg: "Bedrag waarboven Box 3-belasting wordt geheven. 2024: ~€57k per persoon." }],
-          theorie: "Tarief: ~36% over fictief rendement. Voor 2024 ~6% fictief op aandelen, ~1,3% op spaargeld → effectief 0,5-2% van vermogen per jaar. Box 3 staat politiek onder druk vanwege onrechtvaardigheid (rente was 0% maar fictief 6%).",
-          voorbeelden: [{ type: "spaarder", tekst: "Spaargeld €100k − vrijstelling €57k = €43k belast. Fictief 1,3% rendement = €559. Belast 36% = €201 Box 3 / jr." }],
+          theorie: "Tarief: ~36% over fictief rendement. Voor 2024 ~6% fictief op aandelen, ~1,4% op spaargeld → effectief 0,5-2% van vermogen per jaar. Box 3 staat politiek onder druk vanwege onrechtvaardigheid (rente was 0% maar fictief 6%).",
+          voorbeelden: [{ type: "spaarder", tekst: "Spaargeld €100k − vrijstelling €57k = €43k belast. Fictief 1,4% rendement = €602. Belast 36% = €217 Box 3 / jr." }],
           basiskennis: [{ onderwerp: "Niet werk", uitleg: "Werk-inkomen = box 1. BV-aandelen = box 2. Erf = aparte erfbelasting." }],
           niveaus: { basis: "Spaargeld + beleggingen boven vrijstelling.", simpeler: "Box 3 = belasting over je vermogen (spaargeld/beleggingen) boven ~€57k vrijstelling.", nogSimpeler: "Vermogen = box 3" },
         },
@@ -374,7 +374,7 @@ const steps = [
     checks: [
       {
         q: "**Arbeidskorting** krijg je als:",
-        options: ["Je arbeidsinkomen verdient (een baan of zelfstandig)", "Je geen werk hebt", "Je gepensioneerd bent", "Je student bent"],
+        options: ["Je met werk een inkomen verdient", "Je geen werk hebt", "Je gepensioneerd bent", "Je student bent zonder bijbaan"],
         answer: 0,
         wrongHints: [null, "Geen werk = geen arbeidskorting.", "Pensioen ≠ arbeid.", "Studie zonder bijbaan ook niet."],
         uitlegPad: {
@@ -430,7 +430,7 @@ const steps = [
       },
       {
         q: "Wat is de **uitfasering** van een heffingskorting?",
-        options: ["Korting wordt kleiner naarmate je inkomen stijgt", "Korting groeit", "Korting blijft gelijk", "Korting verdwijnt na 1 jaar"],
+        options: ["Korting wordt kleiner naarmate je inkomen stijgt", "Korting wordt groter naarmate je inkomen stijgt", "Korting blijft gelijk, wat je ook verdient", "Korting verdwijnt na één jaar"],
         answer: 0,
         wrongHints: [null, "Tegendeel.", "Wel verandering.", "Niet jaarlijks weg."],
         uitlegPad: {
@@ -444,7 +444,7 @@ const steps = [
       },
       {
         q: "**Werk loont** betekent in deze context:",
-        options: ["Door arbeidskorting is netto-effect van werken positief", "Iedereen verdient hetzelfde", "Werk is verplicht", "Werk is altijd zwaar"],
+        options: ["Door arbeidskorting is netto-effect van werken positief", "Iedereen verdient hetzelfde loon", "Iedereen is verplicht om te werken", "Werken is altijd zwaar en vermoeiend"],
         answer: 0,
         wrongHints: [null, "Niet iedereen.", "Niet verplicht.", "Niet wat de term betekent."],
         uitlegPad: {
@@ -509,7 +509,7 @@ const steps = [
       },
       {
         q: "Wat ging er mis bij de **toeslagenaffaire**?",
-        options: ["~26.000 ouders ten onrechte beschuldigd, jaren financiële nood", "Te veel toeslagen uitbetaald", "Toeslagen afgeschaft", "Niets"],
+        options: ["~26.000 ouders ten onrechte beschuldigd, jaren financiële nood", "Er werden veel te veel toeslagen uitbetaald", "Alle toeslagen werden afgeschaft", "Er ging eigenlijk niets mis"],
         answer: 0,
         wrongHints: [null, "Niet kwestie van te veel.", "Toeslagen bestaan nog.", "Wel groot schandaal."],
         uitlegPad: {
@@ -537,7 +537,7 @@ const steps = [
       },
       {
         q: "Wie krijgt **kinderopvangtoeslag**?",
-        options: ["Werkende/studerende ouders die opvang/crèche gebruiken", "Iedere ouder", "Alleen alleenstaanden", "Geen ouders"],
+        options: ["Werkende/studerende ouders die opvang/crèche gebruiken", "Iedere ouder, ook zonder opvang", "Alleen alleenstaande ouders", "Ouders krijgen hem nooit"],
         answer: 0,
         wrongHints: [null, "Niet zonder werk.", "Ook stellen kunnen hem krijgen — gezinsvorm is niet de voorwaarde.", "Wel ouders."],
         uitlegPad: {
@@ -551,7 +551,7 @@ const steps = [
       },
       {
         q: "**Niet-gebruik** van toeslagen — wat is het probleem?",
-        options: ["~10-20% van rechthebbenden vraagt niet aan", "Iedereen vraagt te veel aan", "Toeslagen zijn ongezond", "Niets"],
+        options: ["~10-20% van rechthebbenden vraagt niet aan", "Iedereen vraagt veel te veel aan", "Toeslagen zijn slecht voor je gezondheid", "Er is eigenlijk geen enkel probleem"],
         answer: 0,
         wrongHints: [null, "Tegendeel.", "Geen gezondheidsissue.", "Wel een probleem."],
         uitlegPad: {
@@ -595,7 +595,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Legaal maar discutabel", tekst: "Ontwijking = via SLIMME constructies binnen de wet minder belasting betalen. Niet strafbaar, wel moreel omstreden. Bedrijven verschuiven winst naar lage-belasting-landen." }],
           woorden: [{ woord: "belastingontwijking", uitleg: "Legaal vermijden van belasting via wets-mazen of internationale constructies." }, { woord: "agressieve tax planning", uitleg: "Extreme vorm van ontwijking via creatieve constructies." }],
-          theorie: "Bekend: Apple parkeert winst via Ierland (~12,5% VPB) ipv VS/NL (25%+). Starbucks 'leent' royalty's tussen dochters om winst te verschuiven. Legaal maar publiek negatief.",
+          theorie: "Bekend: Apple parkeert winst via Ierland (~12,5% VPB) ipv VS (21%) of NL (25,8%). Starbucks 'leent' royalty's tussen dochters om winst te verschuiven. Legaal maar publiek negatief.",
           voorbeelden: [{ type: "MNC", tekst: "Multinationals: winst-verschuiving naar Bermuda/Ierland. Legaal, miljarden minder VPB." }, { type: "particulier", tekst: "Familiebedrijf in BV-structuur om erfbelasting te verlagen. Legaal." }],
           basiskennis: [{ onderwerp: "Niet ontduiking", uitleg: "Ontwijking = legaal. Ontduiking = illegaal (verzwijgen)." }],
           niveaus: { basis: "Legaal mazen gebruiken.", simpeler: "Ontwijking = slim binnen de wet minder belasting. Moreel grijs gebied.", nogSimpeler: "Legaal slim" },
@@ -603,7 +603,7 @@ const steps = [
       },
       {
         q: "Wat is **belastingontduiking**?",
-        options: ["Bewust niet aangeven of verzwijgen — illegaal", "Slim gebruik mazen", "Hetzelfde als ontwijking", "Brave belastingbetaling"],
+        options: ["Bewust niet aangeven of verzwijgen — illegaal", "Slim gebruik maken van mazen — legaal", "Precies hetzelfde als ontwijking", "Op tijd en eerlijk belasting betalen"],
         answer: 0,
         wrongHints: [null, "Dat is ontwijking, legaal.", "Verschil is wel/niet legaal.", "Tegendeel."],
         uitlegPad: {
@@ -617,7 +617,7 @@ const steps = [
       },
       {
         q: "Een tuinman die contant betaald wordt zonder factuur:",
-        options: ["Mogelijk zwart geld — geen belasting/BTW betaald", "Gewone betaling", "Nieuwe wet", "Een toeslag"],
+        options: ["Mogelijk zwart geld — geen belasting/BTW betaald", "Een gewone, nette betaling", "Een nieuwe wet voor tuinmannen", "Een toeslag van de overheid"],
         answer: 0,
         wrongHints: [null, "Wel verdacht.", "Niet wat wet betekent.", "Geen toeslag."],
         uitlegPad: {
@@ -631,7 +631,7 @@ const steps = [
       },
       {
         q: "Wat zijn de **Panama Papers**?",
-        options: ["Lekken van documenten over geheime offshore-bedrijven (2016)", "Een belasting", "Een nieuw verdrag", "Een soort contract"],
+        options: ["Gelekte documenten over geheime offshore-bedrijven", "Een nieuwe belasting in Panama", "Een nieuw verdrag tussen landen", "Een soort contract voor bedrijven"],
         answer: 0,
         wrongHints: [null, "Geen belasting.", "Geen verdrag — onthulling.", "Niet contractueel."],
         uitlegPad: {
@@ -645,7 +645,7 @@ const steps = [
       },
       {
         q: "Waarom is **eerlijke belasting** belangrijk?",
-        options: ["Solidariteit + financiering overheid + eerlijke markt", "Niemand vindt het belangrijk", "Alleen voor rijken", "Alleen tijdens crisis"],
+        options: ["Solidariteit + financiering overheid + eerlijke markt", "Niemand vindt het eigenlijk belangrijk", "Het is alleen belangrijk voor rijken", "Het is alleen belangrijk tijdens een crisis"],
         answer: 0,
         wrongHints: [null, "Wel belangrijk.", "Voor iedereen.", "Altijd."],
         uitlegPad: {
@@ -659,9 +659,9 @@ const steps = [
       },
       {
         q: "Een **belastingparadijs** is:",
-        options: ["Land met zeer lage belasting + geheimhouding", "Land waar geen belasting bestaat", "Een vakantiebestemming", "Een soort verzekering"],
+        options: ["Land met zeer lage belasting + geheimhouding", "Land met hoge belasting en strenge controle", "Een populaire vakantiebestemming", "Een soort verzekering"],
         answer: 0,
-        wrongHints: [null, "Vaak nog wel iets, maar laag.", "Niet specifiek vakantie.", "Geen verzekering."],
+        wrongHints: [null, "Tegendeel — daar zou niemand zijn geld parkeren.", "Niet specifiek vakantie.", "Geen verzekering."],
         uitlegPad: {
           stappen: [{ titel: "Lage belasting + geheim", tekst: "Belastingparadijs = land met (1) zeer lage of geen belasting voor bepaalde inkomsten, (2) geheimhouding (banken hoeven niet te delen met andere landen). Lokt geld + bedrijven aan." }],
           woorden: [{ woord: "belastingparadijs", uitleg: "Land waar belasting laag is + transparantie minimaal. Aantrekkelijk voor ontwijking." }, { woord: "BEPS", uitleg: "Base Erosion and Profit Shifting. OESO-programma tegen belastingontwijking via paradijzen." }],
@@ -699,7 +699,7 @@ const steps = [
     checks: [
       {
         q: "Wanneer doe je **aangifte inkomstenbelasting**?",
-        options: ["Vóór 1 mei elk jaar", "1 januari", "31 december", "Vrije keuze"],
+        options: ["Vóór 1 mei elk jaar", "Vóór 1 januari elk jaar", "Vóór 31 december elk jaar", "Wanneer je zelf wilt"],
         answer: 0,
         wrongHints: [null, "Te vroeg.", "Te laat.", "Wel deadline."],
         uitlegPad: {
@@ -727,7 +727,7 @@ const steps = [
       },
       {
         q: "Hoe lang heb je om **bezwaar** te maken?",
-        options: ["6 weken na de aanslag", "1 dag", "1 jaar", "Onbeperkt"],
+        options: ["6 weken na de aanslag", "1 dag na de aanslag", "1 jaar na de aanslag", "Onbeperkt lang"],
         answer: 0,
         wrongHints: [null, "Te kort.", "Te lang.", "Wel termijn."],
         uitlegPad: {
@@ -741,7 +741,7 @@ const steps = [
       },
       {
         q: "Wat gebeurt bij **opzettelijk te laag aangeven (fraude)**?",
-        options: ["Boete tot 100% + mogelijk strafrecht", "Geen sanctie", "Korting", "Een waarschuwing"],
+        options: ["Boete tot 100% + mogelijk strafrecht", "Geen enkele sanctie", "Een korting op de aanslag", "Alleen een waarschuwingsbrief"],
         answer: 0,
         wrongHints: [null, "Wel sanctie.", "Tegendeel.", "Vaak veel meer dan waarschuwing."],
         uitlegPad: {
@@ -755,7 +755,7 @@ const steps = [
       },
       {
         q: "Hoe lang moet je administratie **bewaren**?",
-        options: ["7 jaar (wettelijke bewaarplicht)", "1 jaar", "1 maand", "Niet"],
+        options: ["7 jaar", "1 jaar", "1 maand", "Niet"],
         answer: 0,
         wrongHints: [null, "Te kort.", "Veel te kort.", "Wel verplicht."],
         uitlegPad: {
@@ -769,7 +769,7 @@ const steps = [
       },
       {
         q: "**Toeslagenaffaire**: wat ging mis?",
-        options: ["Algoritme markeerde ouders ten onrechte als fraudeur", "Te veel toeslagen uitbetaald", "Toeslagen afgeschaft", "Niets bijzonders"],
+        options: ["Algoritme markeerde ouders ten onrechte als fraudeur", "Er werden veel te veel toeslagen uitbetaald", "Alle toeslagen werden afgeschaft", "Er ging niets bijzonders mis"],
         answer: 0,
         wrongHints: [null, "Probleem was juist te veel terugvordering.", "Bestaan nog.", "Echt schandaal."],
         uitlegPad: {

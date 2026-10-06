@@ -52,9 +52,9 @@ const steps = [
       },
       {
         q: "Hoe heet de opening **bovenop** een vulkaan?",
-        options: ["De krater", "De magmakamer", "De kraterpijp", "De kom"],
+        options: ["De krater", "De magmakamer", "De kraterpijp", "De lavastroom"],
         answer: 0,
-        wrongHints: [null, "Die zit juist diep ónder de berg.", "Dat is de 'schoorsteen' ín de berg, niet de opening erbovenop.", null],
+        wrongHints: [null, "Die zit juist diep ónder de berg.", "Dat is de 'schoorsteen' ín de berg, niet de opening erbovenop.", "Dat is lava die over de helling stroomt, geen opening."],
       },
       {
         q: "Waarom wordt een vulkaan bij elke uitbarsting een stukje **groter**?",
@@ -77,7 +77,7 @@ const steps = [
     checks: [
       {
         q: "Waarom liggen de meeste vulkanen op de **randen** van aardplaten?",
-        options: ["Daar kan magma omhoog komen waar de platen botsen of uit elkaar schuiven", "Daar is de grond het zachtst", "Daar regent het het meest", "Omdat de platen daar het dikst zijn"],
+        options: ["Daar kan magma omhoog komen waar de platen botsen of uit elkaar schuiven", "Daar is de grond het zachtst en het makkelijkst te doorboren", "Daar regent het het meest, zodat er meer water in de grond zit", "Omdat de platen daar het dikst en het zwaarst zijn"],
         answer: 0,
         wrongHints: [null, "Bijna goed gedacht, maar het gaat om wat de platen dóén op die randen.", "Regen heeft niets met magma te maken.", "Op een dikke plaat komt magma juist moeilijker omhoog."],
         uitlegPad: {
@@ -180,9 +180,9 @@ const steps = [
       },
       {
         q: "Welke uitbarsting geeft de **grootste knal**?",
-        options: ["Dikke, stroperige lava met veel gas", "Dunne lava die rustig stroomt", "Een vulkaan zonder gas", "Een vulkaan onder water"],
+        options: ["Dikke, stroperige lava met veel gas", "Dunne lava die rustig stroomt", "Een vulkaan zonder gas", "Een vulkaan met bijna geen magma"],
         answer: 0,
-        wrongHints: [null, "Rustig stromen = weinig gas = weinig knal.", "Zonder gas is er niets dat kan knallen.", null],
+        wrongHints: [null, "Rustig stromen = weinig gas = weinig knal.", "Zonder gas is er niets dat kan knallen.", "Zonder magma is er weinig dat naar buiten kan schieten."],
       },
     ],
   },
@@ -243,7 +243,7 @@ const steps = [
     checks: [
       { q: "Gesmolten steen dat **buiten** de vulkaan stroomt heet…", options: ["Lava", "Magma", "As", "Gas"], answer: 0, wrongHints: [null, "Dat is de naam ónder de grond.", "As is fijn stof, geen vloeibaar steen.", "Gas is onzichtbaar en niet vloeibaar."] },
       { q: "De ketting van vulkanen rondom de Grote Oceaan heet…", options: ["De Ring van Vuur", "De Vuurlinie", "De Lavaketen", "De Aardplaat"], answer: 0, wrongHints: [null, null, "Klinkt logisch, maar zo heet hij niet.", "Een aardplaat is een stuk aardkorst, geen ketting van vulkanen."] },
-      { q: "Wat maakt een uitbarsting **explosief**?", options: ["Veel gas in dik magma", "Veel water in de krater", "Een hoge berg", "Weinig lava"], answer: 0, wrongHints: [null, "Denk aan de prik in de cola, niet aan water.", "De hoogte van de berg zegt niets over de knal.", null] },
+      { q: "Wat maakt een uitbarsting **explosief**?", options: ["Veel gas in dik magma", "Veel bomen op de helling", "Een hoge berg", "Weinig lava"], answer: 0, wrongHints: [null, "Bomen op de helling zeggen niets over wat er ín de berg gebeurt.", "De hoogte van de berg zegt niets over de knal.", null] },
       { q: "Welk **voordeel** hebben vulkanen voor boeren?", options: ["De as maakt de grond vruchtbaar", "De lava geeft schaduw", "Er valt meer regen", "De grond wordt harder"], answer: 0, wrongHints: [null, "Schaduw is geen voordeel voor gewassen. Denk aan mest.", "Regen komt van wolken, niet van de vulkaan.", "Harde grond is juist slecht voor planten."] },
       { q: "Wat betekent het als een vulkaan **slapend** is?", options: ["Hij is lang niet uitgebarsten, maar kan dat nog wel", "Hij kan nooit meer uitbarsten", "Hij barst elke nacht uit", "Hij is nog nooit uitgebarsten"], answer: 0, wrongHints: [null, "Dat heet een 'dode' of uitgedoofde vulkaan.", null, "Slapend betekent dat hij het vroeger wél deed."] },
     ],

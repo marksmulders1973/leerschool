@@ -23,7 +23,7 @@ const chapters = [
 const steps = [
   {
     title: "Wat is leven?",
-    explanation: "Sommige dingen **leven**, andere niet. Levende dingen zijn anders dan stenen of water.\n\n**Wat alle levende wezens doen** (zes kenmerken):\n1. **Eten** — voedsel opnemen.\n2. **Ademen** — zuurstof gebruiken.\n3. **Groeien** — groter worden.\n4. **Bewegen** — al is het maar inwendig (planten ook!).\n5. **Reageren** — op licht, warmte, gevaar.\n6. **Voortplanten** — nieuwe wezens maken.\n\n**Vier groepen levende wezens**:\n• **Mensen** — wij!\n• **Dieren** — hond, vogel, vis, mier.\n• **Planten** — bomen, gras, bloemen.\n• **Schimmels en bacteriën** — paddenstoelen, gist, bacteriën.\n\n**Niet levend**: stenen, water, wolken, plastic, metalen. Die ademen niet, eten niet, groeien niet zelf.\n\n**Leuk weetje**: een ei is wel levend — de baby-vogel groeit erin.",
+    explanation: "Sommige dingen **leven**, andere niet. Levende dingen zijn anders dan stenen of water.\n\n**Wat alle levende wezens doen** (zes kenmerken):\n1. **Eten** — voedsel opnemen.\n2. **Ademen** — zuurstof gebruiken.\n3. **Groeien** — groter worden.\n4. **Bewegen** — al is het maar inwendig (planten ook!).\n5. **Reageren** — op licht, warmte, gevaar.\n6. **Voortplanten** — nieuwe wezens maken.\n\n**Vier groepen levende wezens**:\n• **Mensen** — wij!\n• **Dieren** — hond, vogel, vis, mier.\n• **Planten** — bomen, gras, bloemen.\n• **Schimmels en bacteriën** — paddenstoelen, gist, bacteriën.\n\n**Niet levend**: stenen, water, wolken, plastic, metalen. Die ademen niet, eten niet, groeien niet zelf.\n\n**Leuk weetje**: een ei waar een kuiken in groeit, is wel levend.",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="14" font-family="Arial" font-weight="bold">leven = 6 kenmerken</text>
 <text x="20" y="55" fill="${COLORS.text}" font-size="11" font-family="Arial">1. eten 🍴</text>
@@ -56,7 +56,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet alle dieren praten.", "Vissen lopen niet, planten ook niet.", "Niet alle dieren zingen."],
         uitlegPad: {
-          stappen: [{ titel: "Ademen = universeel", tekst: "Alles wat leeft heeft zuurstof nodig — ook planten en bacteriën." }],
+          stappen: [{ titel: "Ademen = universeel", tekst: "Dieren en planten hebben allemaal zuurstof nodig — ook een plant ademt." }],
           woorden: [{ woord: "ademen", uitleg: "Zuurstof opnemen, kooldioxide afgeven." }],
           theorie: "6 levenskenmerken die ALLE wezens delen: eten, ademen, groeien, bewegen, reageren, voortplanten.",
           voorbeelden: [{ type: "lijst", tekst: "Mens ademt met longen. Vis met kieuwen. Plant via blaadjes." }],
@@ -70,7 +70,7 @@ const steps = [
   // B
   {
     title: "Zoogdieren — wat zijn dat?",
-    explanation: "**Zoogdieren** (of: zogenden) zijn de groep waar **wij ook bij horen**. Kenmerken:\n\n• **Vacht of haren** op het lichaam.\n• **Warm bloed** — lichaamstemperatuur is altijd ~37 °C.\n• **Levend baren** — geen eieren leggen.\n• **Zogen**: moeder geeft melk aan haar baby.\n• **Ademen met longen** (ook bij walvissen!).\n• **Zorgen voor jongen** — vaak lang.\n\n**Voorbeelden**:\n• Op land: hond, kat, koe, paard, leeuw, mens, olifant, beer, muis.\n• In water: walvis, dolfijn, zeehond, zeekoe.\n• In de lucht: vleermuis (enige zoogdier dat kan vliegen!).\n\n**Niet alle zoogdieren zien er hetzelfde uit**, maar deze 6 kenmerken delen ze allemaal.\n\n**Leuk weetje**: het kleinste zoogdier is de hommelvleermuis (~2 g). Het grootste is de blauwe vinvis (~150.000 kg).",
+    explanation: "**Zoogdieren** (of: zogenden) zijn de groep waar **wij ook bij horen**. Kenmerken:\n\n• **Vacht of haren** op het lichaam.\n• **Warm bloed** — lichaamstemperatuur is altijd ~37 °C.\n• **Levend baren** — geen eieren leggen.\n• **Zogen**: moeder geeft melk aan haar baby.\n• **Ademen met longen** (ook bij walvissen!).\n• **Zorgen voor jongen** — vaak lang.\n\n**Voorbeelden**:\n• Op land: hond, kat, koe, paard, leeuw, mens, olifant, beer, muis.\n• In water: walvis, dolfijn, zeehond, zeekoe.\n• In de lucht: vleermuis (enige zoogdier dat kan vliegen!).\n\n**Niet alle zoogdieren zien er hetzelfde uit**, maar deze kenmerken delen ze bijna allemaal (het vogelbekdier legt bijvoorbeeld wél eieren).\n\n**Leuk weetje**: het kleinste zoogdier is de hommelvleermuis (~2 g). Het grootste is de blauwe vinvis (~150.000 kg).",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="40" width="260" height="50" rx="8" fill="${COLORS.zoog}" opacity="0.18" stroke="${COLORS.zoog}" stroke-width="2"/>
 <text x="150" y="68" text-anchor="middle" fill="${COLORS.zoog}" font-size="14" font-family="Arial" font-weight="bold">ZOOGDIEREN 🐶</text>
@@ -206,7 +206,7 @@ const steps = [
       },
       {
         q: "Wat is een **spin**?",
-        options: ["Geen insect — 8 poten", "Een insect", "Een reptiel", "Een vogel"],
+        options: ["Geen insect", "Een insect", "Een reptiel", "Een vogel"],
         answer: 0,
         wrongHints: [null, "Spinnen zijn aparte groep (spinachtigen).", "Spinnen hebben geen schubben.", "Spinnen hebben geen veren."],
         uitlegPad: {
@@ -445,7 +445,7 @@ const steps = [
           "Plant ademt water in",
         ],
         answer: 0,
-        wrongHints: [null, "Niets met fotograferen.", "Suiker verbranden is juist het omgekeerde van fotosynthese.", "Niet zo eenvoudig."],
+        wrongHints: [null, "Niets met fotograferen.", "Suiker verbranden is juist het omgekeerde van fotosynthese.", "Water komt via de wortels binnen — wat doet de plant met het licht?"],
         uitlegPad: {
           stappen: [{ titel: "Foto + synthese", tekst: "Foto=licht. Synthese=maken. Plant maakt suiker uit zonlicht (+ water + CO2)." }],
           woorden: [{ woord: "fotosynthese", uitleg: "Plant maakt voedsel via zonlicht. Geeft zuurstof af." }],
@@ -580,7 +580,7 @@ const steps = [
       },
       {
         q: "Wat doen **bijen** voor planten?",
-        options: ["Bestuiven (stuifmeel verplaatsen)", "Eten ze op", "Beschermen ze", "Maken zaden"],
+        options: ["Bestuiven", "Eten ze op", "Beschermen ze", "Maken zaden"],
         answer: 0,
         wrongHints: [null, "Bijen eten honing, ze eten geen planten op.", "Beschermen doen ze niet direct.", "Bijen maken honing, geen zaden."],
         uitlegPad: {
@@ -594,9 +594,9 @@ const steps = [
       },
       {
         q: "Welke vorm heeft een **kikker** als baby?",
-        options: ["kikkervisje (in water)", "kuiken", "rups", "ei direct kikker"],
+        options: ["kikkervisje", "kuiken", "rups", "pop"],
         answer: 0,
-        wrongHints: [null, "Kuiken = vogel.", "Rups = vlinder.", "Eerst kikkervisje fase."],
+        wrongHints: [null, "Kuiken = vogel.", "Rups = vlinder.", "Een pop hoort bij insecten zoals de vlinder."],
         uitlegPad: {
           stappen: [{ titel: "Kikkervisje = baby kikker", tekst: "Kikker-cyclus: ei → kikkervisje (in water, met staart) → kikker met poten → volwassen." }],
           woorden: [{ woord: "kikkervisje", uitleg: "Baby-kikker met staart, leeft in water, ademt met kieuwen." }],
@@ -622,7 +622,7 @@ const steps = [
       },
       {
         q: "Wat doet een **plant met zonlicht**?",
-        options: ["Maakt zelf voedsel (fotosynthese)", "Wordt warmer", "Krijgt kleur", "Slaapt"],
+        options: ["Maakt zelf voedsel", "Wordt warmer", "Krijgt kleur", "Slaapt"],
         answer: 0,
         wrongHints: [null, "Wordt wel warmer, maar dat is een bijproduct.", "Krijgt wel kleur, maar dat is niet het hoofddoel.", "Planten slapen niet."],
         uitlegPad: {
@@ -640,12 +640,12 @@ const steps = [
       { q: "Wat is **winterslaap**?", options: ["Langdurige rust met lage activiteit","Korte slaap","Wakker blijven","Vlucht"], answer: 0, wrongHints: [null, "Niet — lang.", "Tegengestelde.", "Trekvogels."] },
       { q: "Welk dier houdt **winterslaap** in NL?", options: ["Egel","Vos","Konijn","Eekhoorn"], answer: 0, wrongHints: [null, "Blijft actief.", "Blijft actief.", "Blijft actief — eet van zijn wintervoorraad."] },
       { q: "Welk seizoen is in Nederland meestal het **droogst**?", options: ["Lente","Winter","Zomer","Herfst"], answer: 0, wrongHints: [null, "In de winter valt er vaker regen dan in de lente.", "Verrassend: in de zomer valt juist veel regen, door onweersbuien.", "De herfst is vaak het natst."] },
-      { q: "Wat doet een **kikkervisje** in de lente?", options: ["Groeit uit tot kikker","Slaapt","Verstopt","Vliegt"], answer: 0, wrongHints: [null, "Het is juist actief: zwemmen + groeien.", "Het zwemt rond in het water, niet verborgen.", "Kikkers zijn geen vliegers."] },
+      { q: "Wat doet een **kikkervisje** in de lente?", options: ["Groeit uit tot kikker","Slaapt","Verstopt zich","Vliegt"], answer: 0, wrongHints: [null, "Het is juist actief: zwemmen + groeien.", "Het zwemt rond in het water, niet verborgen.", "Kikkers zijn geen vliegers."] },
       { q: "Welke vogel **trekt** in de herfst weg uit NL?", options: ["Ooievaar","Mus","Merel","Koolmees"], answer: 0, wrongHints: [null, "Mussen blijven heel jaar in NL — standvogel.", "Merels blijven hier — bij voederplankjes zie je ze 's winters ook.", "Koolmezen blijven het hele jaar — je ziet ze 's winters bij de pindakaaspot."] },
       { q: "In welk seizoen gaan de **knoppen** aan een tak open (lopen ze uit)?", options: ["Lente","Zomer","Herfst","Winter"], answer: 0, wrongHints: [null, "Dan zijn de bladeren al volgroeid.", "Dan vallen de bladeren juist.", "Dan zitten de knoppen nog dicht te wachten."] },
       { q: "Welk seizoen heeft **kortste dagen** in NL?", options: ["Winter","Zomer","Lente","Herfst"], answer: 0, wrongHints: [null, "Langste dagen.", "Half.", "Korter dan zomer."] },
-      { q: "Wat is een **standvogel**?", options: ["Vogel die hele jaar in NL blijft","Trekvogel","Insecten-eter","Niet bestaand"], answer: 0, wrongHints: [null, "Tegengestelde.", "Wel onderdeel.", "Wel."] },
-      { q: "Wat doet een **rups** uiteindelijk?", options: ["Wordt vlinder","Sterft direct","Wordt bij","Niets"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel iets."] },
+      { q: "Wat is een **standvogel**?", options: ["Vogel die het hele jaar in NL blijft","Vogel die in de winter wegtrekt","Vogel die alleen insecten eet","Vogel die niet kan vliegen"], answer: 0, wrongHints: [null, "Dat is juist een trekvogel.", "Wat een vogel eet, heeft niets met 'stand' te maken.", "Kunnen vliegen heeft niets met 'stand' te maken."] },
+      { q: "Wat doet een **rups** uiteindelijk?", options: ["Wordt vlinder","Sterft direct","Wordt bij","Wordt spin"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Spinnen hebben geen rups-fase."] },
     ],
   },
 ];

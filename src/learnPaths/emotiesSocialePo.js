@@ -18,9 +18,9 @@ const steps = [
     checks: [
       {
         q: "Hoeveel **basis-emoties** (Ekman)?",
-        options: ["6 (blij/verdrietig/boos/bang/walg/verbaasd)", "2", "100", "Geen"],
+        options: ["6", "2", "100", "12"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Wel."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."],
       },
       {
         q: "Wat te doen bij **boosheid**?",
@@ -30,15 +30,15 @@ const steps = [
       },
       {
         q: "Wat is een **ik-boodschap**?",
-        options: ["Eigen gevoel uiten ('Ik voel...')", "Verwijt aan ander", "Geen mening", "Schreeuwen"],
+        options: ["Eigen gevoel uiten", "Verwijt aan ander", "Geen mening", "Schreeuwen"],
         answer: 0,
         wrongHints: [null, "Jij-boodschap.", "Wel mening.", "Niet."],
       },
       {
         q: "Hoeveel **slaap** bij puberteit?",
-        options: ["8-10 uur", "3 uur", "12+ uur", "Geen"],
+        options: ["8-10 uur", "3 uur", "12+ uur", "6 uur"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Wel."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
       },
     ],
   },
@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Wat is **liefdesverdriet**?",
-        options: ["Pijn van afgewezen liefde", "Spel", "Ziekte", "Niet bestaand"],
+        options: ["Pijn van afgewezen liefde", "Spel", "Ziekte", "Heimwee"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet specifiek.", "Wel."],
+        wrongHints: [null, "Niet.", "Niet specifiek.", "Heimwee is verlangen naar huis."],
       },
       {
         q: "**Vriendschap + leven**?",

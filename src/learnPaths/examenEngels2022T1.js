@@ -153,7 +153,7 @@ const steps = [
         "It shows how Justin Lester hopes to boost his popularity in Wellington.",
       ],
       answer: 2,
-      wrongHints: ["Tekst zegt niet dat dit Manaaki Day uniek MAAKT — een van vele ideeën.", "'Manaaki' is Maori voor 'kindness', maar staat er dat de toys-zin uit de Maori-traditie komt? Lees de woorden direct na de quote.", null, "Staat er in de tekst iets over de populariteit van de burgemeester? Lees de woorden direct na de quote."],
+      wrongHints: ["Staat er dat déze zin Manaaki Day uniek maakt? Lees de woorden direct na de quote.", "'Manaaki' is Maori voor 'kindness', maar staat er dat de toys-zin uit de Maori-traditie komt? Lees de woorden direct na de quote.", null, "Staat er in de tekst iets over de populariteit van de burgemeester? Lees de woorden direct na de quote."],
       explanation: "Tekst: 'taking **Eddie's ideas** of how to encourage and celebrate charitable acts. For example, **\"We can buy toys for children that don't have any,\" Eddie wrote.**' De quote is Eddie's suggestie.",
       examenBron: BRON_LABEL(14),
       bronLink: BRON_LINK,
@@ -224,7 +224,7 @@ const steps = [
         { id: "begrijpend-lezen-strategie", title: "Begrijpend lezen strategie", niveau: "po-2F", why: "waarom-vraag + match met quote in tekst — kern-truc" },
       ],
       uitlegPad: compact(
-        "Joe's confusion zit in de combo: kostprijs $0.30, verkoopprijs $4, en influencer eist het GRATIS — alleen op claim van 100k volgers. Joe ziet dat niet als business: 'pay me, that's how this works'.",
+        "Joe's confusion zit in de combo: kostprijs $0,30, verkoopprijs $4, en influencer eist het GRATIS — alleen op claim van 100k volgers. Joe ziet dat niet als business: 'pay me, that's how this works'.",
         { basis: "Verbaasd over gratis-vraag voor goedkope cone.", simpeler: "Joe maakt voor 30 cent en verkoopt voor $4 — waarom zou hij gratis weggeven?", nogSimpeler: "Gratis vs cost" },
         [{ woord: "confused", uitleg: "In de war, verbaasd." }, { woord: "encounter", uitleg: "Ontmoeting." }],
       ),

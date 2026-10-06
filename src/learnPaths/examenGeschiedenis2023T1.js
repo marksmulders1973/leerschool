@@ -231,7 +231,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wat is populisme?", tekst: "**Populisme** = stelt 'volk' tegenover 'elite'. Vaak met sterke leider die zegt 'iedereen' te begrijpen. Simpele oplossingen voor ingewikkelde problemen. Wij/zij-denken (volk tegen elite, NL tegen buitenland, etc.)." },
-            { titel: "NL populistische partijen", tekst: "**LPF** (2002, Pim Fortuyn) — eerste grote NL-populist. Vermoord vóór verkiezingen, partij won 26 zetels.\n**PVV** (2006, Geert Wilders) — focus immigratie + EU. Won de verkiezingen van 2023 (37 zetels).\n**FvD** (2016, Thierry Baudet) — populistisch + complot-affiniteit.\n**BBB** (2019, Caroline van der Plas) — boeren-populisme tegen stikstof-aanpak." },
+            { titel: "NL populistische partijen", tekst: "**LPF** (2002, Pim Fortuyn) — eerste grote NL-populist. Vermoord vóór verkiezingen, partij won 26 zetels.\n**PVV** (2006, Geert Wilders) — focus immigratie + EU. Won de verkiezingen van 2023 (37 zetels).\n**FvD** (2016, Thierry Baudet) — populistisch + tegen de EU.\n**BBB** (2019, Caroline van der Plas) — boeren-populisme tegen stikstof-aanpak." },
             { titel: "Niet alleen NL", tekst: "Populisme is wereldwijd: Trump (VS), Le Pen (Frankrijk), Orbán (Hongarije), Milei (Argentinië). Heeft veel verschijningsvormen — links + rechts." },
           ],
           woorden: [

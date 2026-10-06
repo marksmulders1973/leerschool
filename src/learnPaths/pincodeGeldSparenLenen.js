@@ -153,7 +153,7 @@ const steps = [
     checks: [
       {
         q: "Je koopt een hoodie van €60 via **Klarna 'achteraf betalen'**. Wat gebeurt er economisch gezien?",
-        options: ["Je hebt een lening van €60 die je over 14-30 dagen moet terugbetalen", "Je krijgt korting", "Je hoeft nooit meer te betalen", "Klarna betaalt het voor je als cadeau"],
+        options: ["Je leent eigenlijk €60 van Klarna", "Je krijgt korting", "Je hoeft nooit meer te betalen", "Klarna betaalt het voor je als cadeau"],
         answer: 0,
         wrongHints: [null, "Korting krijg je niet — alleen uitstel.", "Niet betalen = boete, deurwaarder, BKR-registratie.", "Klarna verdient eraan, dat is geen cadeau."],
         uitlegPad: {
@@ -169,7 +169,7 @@ const steps = [
         q: "Welke betaalwijze is **direct** geld van je rekening af?",
         options: ["Pinnen", "Creditcard", "Achteraf betalen", "Geen van deze"],
         answer: 0,
-        wrongHints: [null, "Creditcard wordt pas later afgeschreven.", "Achteraf is letterlijk later betalen.", "Pinnen is meteen — controleer je app."],
+        wrongHints: [null, "Creditcard wordt pas later afgeschreven.", "Achteraf is letterlijk later betalen.", "Kijk nog eens: één van deze betaalwijzen gaat wél meteen van je rekening."],
         uitlegPad: {
           stappen: [{ titel: "Pin = nu", tekst: "Pinbetaling = bedrag gaat DIRECT van je rekening af (zie je in je bank-app). Creditcard + achteraf gaan LATER van je rekening — vorm van uitstel." }],
           woorden: [{ woord: "pinnen", uitleg: "Directe overschrijving bij betaling — geld is binnen seconden weg." }, { woord: "creditcard", uitleg: "Bank betaalt eerst, factureert je 1× per maand. Bij te laat: hoge rente." }],
@@ -181,7 +181,7 @@ const steps = [
       },
       {
         q: "Waarom is contactloos onder €50 'gevaarlijker' dan pinnen?",
-        options: ["Geen pincode nodig — bij verlies kan iemand makkelijk uitgeven", "Het werkt niet altijd", "Het is duurder", "Je bent verplicht extra fooi te geven"],
+        options: ["Er is geen pincode nodig", "Het werkt niet altijd", "Het is duurder", "Je bent verplicht extra fooi te geven"],
         answer: 0,
         wrongHints: [null, "Werkt juist heel betrouwbaar.", "Zelfde prijs als pinnen.", "Fooi is geen onderdeel van de betaling."],
         uitlegPad: {
@@ -195,7 +195,7 @@ const steps = [
       },
       {
         q: "Wanneer kun je een creditcard echt nuttig vinden?",
-        options: ["Online of in het buitenland — extra zekerheid en aankoop-bescherming", "Voor dagelijkse boodschappen want het is veiliger", "Als je geen pinpas hebt", "Om gratis geld te krijgen"],
+        options: ["Bij online aankopen of in het buitenland", "Voor dagelijkse boodschappen want het is veiliger", "Als je geen pinpas hebt", "Om gratis geld te krijgen"],
         answer: 0,
         wrongHints: [null, "Voor dagelijks gebruik is pin veiliger en goedkoper.", "Iedereen heeft wel een pinpas via je bank.", "Creditcard geeft GEEN gratis geld — je betaalt het terug."],
         uitlegPad: {
@@ -276,7 +276,7 @@ const steps = [
       },
       {
         q: "Waarom betaalt een bank jou rente op je spaargeld?",
-        options: ["De bank kan jouw geld weer uitlenen aan anderen, daar verdient zij aan", "Uit dankbaarheid", "Het is verplicht door de wet", "Geld is duurder geworden"],
+        options: ["Zij leent jouw geld duurder uit aan anderen", "Uit dankbaarheid", "Het is verplicht door de wet", "Geld is duurder geworden"],
         answer: 0,
         wrongHints: [null, "Bank doet het uit eigenbelang.", "Hoogte van rente is geen wettelijke plicht.", "Geld 'duurder worden' is geen reden — bank verdient aan uitlenen."],
         uitlegPad: {
@@ -290,7 +290,7 @@ const steps = [
       },
       {
         q: "Anna spaart **€2.500 voor haar rijbewijs**. Welk type rekening is geschikt?",
-        options: ["Een spaarrekening — ze haalt het er pas later af", "Een hypotheekrekening", "Een creditcard-rekening", "Een doorlopend krediet"],
+        options: ["Een spaarrekening", "Een hypotheekrekening", "Een creditcard-rekening", "Een doorlopend krediet"],
         answer: 0,
         wrongHints: [null, "Hypotheek is voor een huis kopen.", "Creditcard is voor uitgeven, niet sparen.", "Doorlopend krediet is een lening, niet een spaarrekening."],
         uitlegPad: {
@@ -373,7 +373,7 @@ const steps = [
       },
       {
         q: "Wat is het **verschil tussen sparen en beleggen**?",
-        options: ["Sparen is veilig met lage rente; beleggen kan meer opleveren maar ook verlies", "Geen verschil", "Beleggen is altijd veiliger", "Sparen levert altijd verlies"],
+        options: ["Sparen is veilig met lage rente; beleggen kan meer opleveren maar ook verlies", "Geen verschil: allebei zijn even veilig en leveren evenveel op", "Beleggen is altijd veiliger en levert altijd meer op", "Sparen levert altijd verlies op, beleggen nooit"],
         answer: 0,
         wrongHints: [null, "Wel groot verschil.", "Tegendeel.", "Sparen is veilig."],
         uitlegPad: {
@@ -421,7 +421,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Mandje aandelen", tekst: "ETF = Exchange Traded Fund. Je koopt 1 'fonds' dat bestaat uit honderden/duizenden aandelen. Spreiding ingebouwd — als 1 bedrijf failliet, blijven andere 499 over." }],
           woorden: [{ woord: "ETF", uitleg: "Beleggingsfonds dat 1-op-1 een index volgt (bv. wereld-index = MSCI World)." }, { woord: "spreiding", uitleg: "Risico verlagen door over veel beleggingen tegelijk te verdelen — niet alles in 1 mand." }],
-          theorie: "ETF voordeel voor beginners: (1) automatisch gespreid, (2) lage kosten (~0,2%/jr), (3) makkelijk te kopen via DEGIRO/BUX. Wereld-ETF = bekendste keuze — volgt 2.000+ grote bedrijven wereldwijd.",
+          theorie: "ETF voordeel voor beginners: (1) automatisch gespreid, (2) lage kosten (~0,2%/jr), (3) makkelijk te kopen via DEGIRO/BUX. Wereld-ETF = bekendste keuze — volgt meer dan duizend grote bedrijven wereldwijd.",
           voorbeelden: [{ type: "VWCE", tekst: "VWCE = Vanguard FTSE All-World ETF. 1 koop = stukje eigenaarschap in 3.000+ bedrijven uit 47 landen." }],
           basiskennis: [{ onderwerp: "Niet hetzelfde als aandeel", uitleg: "1 aandeel = 1 bedrijf. 1 ETF-eenheid = stukje van veel bedrijven tegelijk." }],
           niveaus: { basis: "Verzameling aandelen.", simpeler: "ETF = beleggingsmandje met veel aandelen tegelijk. Spreiding = minder risico.", nogSimpeler: "Mandje" },
@@ -429,7 +429,7 @@ const steps = [
       },
       {
         q: "**Vuistregel** voordat je gaat beleggen:",
-        options: ["Eerst een buffer sparen (3-6 mnd lasten)", "Direct alles inleggen", "Crypto is altijd eerst", "Lenen om te beleggen"],
+        options: ["Eerst een buffer sparen", "Direct alles inleggen", "Crypto is altijd eerst", "Lenen om te beleggen"],
         answer: 0,
         wrongHints: [null, "Te risicovol zonder buffer.", "Crypto is hoog risico.", "Heel risicovol — beter niet."],
         uitlegPad: {
@@ -443,7 +443,7 @@ const steps = [
       },
       {
         q: "**Crypto** als belegging:",
-        options: ["Heel hoog risico, kan 50-90% dalen, geen DGS-garantie", "Veilig en gegarandeerd", "Levert vast 10% per jaar", "Wettelijk verzekerd"],
+        options: ["Heel hoog risico, zonder garantie", "Veilig en gegarandeerd", "Levert vast 10% per jaar", "Wettelijk verzekerd"],
         answer: 0,
         wrongHints: [null, "Tegendeel — heel volatiel.", "Geen garantie.", "Geen verzekering."],
         uitlegPad: {
@@ -499,7 +499,7 @@ const steps = [
       },
       {
         q: "Wat is **geldschepping door banken**?",
-        options: ["Door uitlenen + opnieuw storten neemt geldhoeveelheid in economie toe", "Banken drukken geld bij", "Belastingdienst maakt geld", "Niemand kan geld scheppen"],
+        options: ["Banken vergroten de geldhoeveelheid door uit te lenen", "Banken drukken geld bij", "Belastingdienst maakt geld", "Niemand kan geld scheppen"],
         answer: 0,
         wrongHints: [null, "Drukt ECB, niet commerciële banken.", "Belastingdienst int.", "Centrale + commerciële banken kunnen dat wel."],
         uitlegPad: {
@@ -513,7 +513,7 @@ const steps = [
       },
       {
         q: "Wat is een **bank run**?",
-        options: ["Veel klanten halen tegelijk hun geld op — bank kan failliet gaan", "Bank organiseert een hardloopevenement", "Bank heeft promotie", "Klanten lopen weg uit boosheid"],
+        options: ["Veel klanten halen tegelijk hun geld op", "Bank organiseert een hardloopevenement", "Bank heeft promotie", "Klanten lopen weg uit boosheid"],
         answer: 0,
         wrongHints: [null, "Letterlijke betekenis is verkeerd hier.", "Geen reclame.", "Niet figuurlijk weglopen — geld weghalen."],
         uitlegPad: {
@@ -555,7 +555,7 @@ const steps = [
       },
       {
         q: "Wanneer **'rolt' geld snel** door de economie?",
-        options: ["Bij hoogconjunctuur — mensen geven uit, bedrijven investeren", "Bij recessie", "Wanneer geen geld bestaat", "Altijd even snel"],
+        options: ["Bij hoogconjunctuur", "Bij recessie", "Wanneer geen geld bestaat", "Altijd even snel"],
         answer: 0,
         wrongHints: [null, "Tegendeel.", "Onzin.", "Verschilt per economie."],
         uitlegPad: {
@@ -569,9 +569,9 @@ const steps = [
       },
       {
         q: "Stort jij **€1.000** op de bank. Wat gebeurt er ongeveer?",
-        options: ["Bank houdt ~5% (€50) als reserve, leent ~€950 uit", "Geld blijft op jouw rekening, niets gebeurt", "Bank betaalt je vraagprijs", "Bank kan jouw geld nooit aanraken"],
+        options: ["Bank houdt ~5% (€50) als reserve, leent ~€950 uit", "Geld blijft op jouw rekening, niets gebeurt", "Bank leent de volle €1.000 meteen uit", "Bank kan jouw geld nooit aanraken"],
         answer: 0,
-        wrongHints: [null, "Niet 'niets' — bank verdient eraan.", "Geen vraagprijs.", "Bank gebruikt het wel — dat is hun businessmodel."],
+        wrongHints: [null, "Niet 'niets' — bank verdient eraan.", "Kan de bank dan nog opnames van andere klanten betalen?", "Bank gebruikt het wel — dat is hun businessmodel."],
         uitlegPad: {
           stappen: [{ titel: "Storten = uitlenen", tekst: "Bij storten: bank houdt 5% kasreserve (€50), leent 95% (€950) uit. Op jouw rekening staat nog steeds €1.000, maar dat geld doet 'dubbel werk' — jij ziet het + bank leent het uit." }],
           woorden: [{ woord: "kasreserve", uitleg: "Percentage dat bank aanhoudt om opnames te kunnen doen (deels verplicht via ECB-regels)." }],
@@ -701,7 +701,7 @@ const steps = [
     checks: [
       {
         q: "Welke uitgave is een **vaste uitgave**?",
-        options: ["Spotify-abonnement (elke maand zelfde bedrag)", "Boodschappen", "Een nieuwe broek", "Bioscoop-bezoek"],
+        options: ["Spotify-abonnement", "Boodschappen", "Een nieuwe broek", "Bioscoop-bezoek"],
         answer: 0,
         wrongHints: [null, "Boodschappen wisselen per maand → variabel.", "Een broek is incidenteel, niet maandelijks.", "Bioscoop wisselt — niet elke maand precies hetzelfde."],
         uitlegPad: {
@@ -715,7 +715,7 @@ const steps = [
       },
       {
         q: "Inkomsten **€350**, uitgaven **€420** in een maand. Wat is je situatie?",
-        options: ["Tekort van €70 — je teert in op spaargeld of staat rood", "Overschot van €70", "Het maakt niet uit", "Je krijgt €70 toeslag"],
+        options: ["Een tekort van €70", "Overschot van €70", "Het maakt niet uit", "Je krijgt €70 toeslag"],
         answer: 0,
         wrongHints: [null, "Andersom — uitgaven zijn hoger.", "Het maakt heel veel uit — kan tot schulden leiden.", "Toeslagen krijg je niet automatisch bij tekort."],
         uitlegPad: {
@@ -771,7 +771,7 @@ const steps = [
       },
       {
         q: "Wat is een **buffer** op je spaarrekening?",
-        options: ["Geld voor onverwachte uitgaven (telefoon stuk, fiets gestolen)", "Verplicht door de bank", "Een soort lening", "Cashback van Klarna"],
+        options: ["Geld voor onverwachte uitgaven", "Verplicht door de bank", "Een soort lening", "Cashback van Klarna"],
         answer: 0,
         wrongHints: [null, "Niet verplicht maar verstandig.", "Geen lening — eigen geld.", "Geen cadeau — spaargeld is van jou."],
         uitlegPad: {
@@ -870,7 +870,7 @@ const steps = [
       },
       {
         q: "Wanneer is lenen meestal **zinvol**?",
-        options: ["Voor een huis of opleiding (lang meegaan, leveren waarde op)", "Voor een vakantie", "Voor een nieuwe telefoon", "Voor kleren"],
+        options: ["Voor een huis of een opleiding", "Voor een vakantie", "Voor een nieuwe telefoon", "Voor kleren"],
         answer: 0,
         wrongHints: [null, "Vakantie levert geen geld op — eerst sparen.", "Telefoon: spaar liever.", "Kleren: niet lenen."],
         uitlegPad: {
@@ -939,7 +939,7 @@ const steps = [
       },
       {
         q: "Wat is **onderpand** bij een hypotheek?",
-        options: ["Het huis — bij niet betalen verkoopt de bank het", "Een spaarrekening", "Een verzekering", "Een toeslag"],
+        options: ["Het huis zelf", "Een spaarrekening", "Een verzekering", "Een toeslag"],
         answer: 0,
         wrongHints: [null, "Spaarrekening is iets anders.", "Verzekering kan helpen, maar onderpand = het huis zelf.", "Toeslagen hebben hier niets mee te maken."],
         uitlegPad: {
@@ -981,9 +981,9 @@ const steps = [
       },
       {
         q: "Welke kosten komen **bovenop** de huisprijs bij koop?",
-        options: ["Notaris, taxatie, advies en eventueel overdrachtsbelasting", "Alleen extra rente", "Niets", "Een huis-cadeau"],
+        options: ["Notaris, taxatie, advies en eventueel overdrachtsbelasting", "Alleen extra rente", "Niets", "Alleen de makelaar van de verkoper"],
         answer: 0,
-        wrongHints: [null, "Rente is wel kost, maar niet bij koop — gedurende lening.", "Echt veel bijkomende kosten — denk al gauw €5.000 of meer.", "Geen cadeau — koop is duur."],
+        wrongHints: [null, "Rente is wel kost, maar niet bij koop — gedurende lening.", "Echt veel bijkomende kosten — denk al gauw €5.000 of meer.", "Die makelaar wordt betaald door de verkoper, niet door jou."],
         uitlegPad: {
           stappen: [{ titel: "K.k. = kosten koper", tekst: "'Kosten koper' (k.k.) bij huiskoop: notaris (~€2.000), taxatie (~€500), hypotheekadvies (~€2.500), overdrachtsbelasting (2% van huis, 0% voor starters <35). Snel €5-10k extra." }],
           woorden: [{ woord: "kosten koper", uitleg: "Eenmalige extra kosten naast huisprijs bij koop. Moet je zelf betalen, niet meegefinancierd." }, { woord: "overdrachtsbelasting", uitleg: "Belasting bij huiskoop. 2% standaard, 0% voor starters tot 35 + huis onder de grens (2024: €510k)." }],
@@ -995,7 +995,7 @@ const steps = [
       },
       {
         q: "Waarom is een **buffer** op de spaarrekening nuttig als je een hypotheek hebt?",
-        options: ["Bij werkloosheid of ziekte kun je nog enkele maanden de hypotheek betalen", "Banken eisen het", "Spaargeld levert hypotheek-korting op", "Het is verboden om geen buffer te hebben"],
+        options: ["Om bij baanverlies de hypotheek te kunnen blijven betalen", "Banken eisen het", "Spaargeld levert hypotheek-korting op", "Het is verboden om geen buffer te hebben"],
         answer: 0,
         wrongHints: [null, "Banken adviseren het wel, eisen meestal niet.", "Geen automatische korting.", "Geen verbod, wel verstandig."],
         uitlegPad: {

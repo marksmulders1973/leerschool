@@ -18,15 +18,15 @@ const steps = [
     checks: [
       {
         q: "Welke is **typisch NL-stamppot**?",
-        options: ["Hutspot (wortel+ui)", "Sushi", "Pasta", "Pizza"],
+        options: ["Hutspot", "Sushi", "Pasta", "Pizza"],
         answer: 0,
         wrongHints: [null, "Japans.", "Italiaans.", "Italiaans."],
       },
       {
         q: "Wat is **Hollandse Nieuwe**?",
-        options: ["Eerste haring van seizoen (mei/juni)", "Soort kaas", "Vlees", "Niet bestaand"],
+        options: ["De eerste haring van het seizoen", "Een soort kaas", "Een nieuw soort brood", "Een nieuwe aardappel"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wel."],
+        wrongHints: [null, "Denk aan de visboer, niet de kaasboer.", "Denk aan de visboer, niet de bakker.", "Denk aan de visboer, niet de groenteboer."],
       },
       {
         q: "Bij **geboorte baby** eet je?",
@@ -36,9 +36,9 @@ const steps = [
       },
       {
         q: "Hoeveel **kaas per persoon NL** per jaar?",
-        options: ["~14 kg", "1 kg", "100 kg", "Geen"],
+        options: ["~14 kg", "1 kg", "100 kg", "50 kg"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Te veel.", "Wel."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."],
       },
     ],
   },
@@ -49,9 +49,9 @@ const steps = [
     checks: [
       {
         q: "Welke is een **typisch NL-vis**?",
-        options: ["Haring", "Sushi-tonijn", "Steur", "Niet specifiek"],
+        options: ["Haring", "Sushi-tonijn", "Steur", "Zwaardvis"],
         answer: 0,
-        wrongHints: [null, "Japans.", "Russisch.", "Wel."],
+        wrongHints: [null, "Japans.", "Russisch.", "Zwaardvis leeft in warme zeeën."],
       },
       {
         q: "Welke kaas heeft **rood waxlaagje**?",
@@ -61,28 +61,28 @@ const steps = [
       },
       {
         q: "Wat is **vla**?",
-        options: ["Zoete-pap NL-uitvinding", "Vis", "Soort brood", "Kaas"],
+        options: ["Een zoet toetje, een soort pap", "Vis", "Soort brood", "Kaas"],
         answer: 0,
         wrongHints: [null, "Vla eet je met een lepel als toetje — komt het uit de zee?", "Kun je vla snijden of smeren, zoals brood?", "Kaas is hartig en stevig — vla juist niet. Wat is het dan wel?"],
       },
       {
         q: "Wat is **hagelslag**?",
-        options: ["Chocolade-hagel op brood (NL-uitvinding 1936)", "Snoep", "Vis", "Kaas"],
+        options: ["Chocoladekorrels op brood", "Een soort drop", "Vis", "Kaas"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet.", "Niet."],
+        wrongHints: [null, "Drop is zwart en taai — hagelslag strooi je.", "Niet.", "Niet."],
       },
     ],
   },
   {
     title: "Vreemde invloeden — Indonesisch, Surinaams, modern",
     explanation:
-      "Door **koloniaal verleden** + migratie heeft NL-eten veel invloeden.\n\n**Indonesisch** 🍛 *(grote invloed, sinds VOC + Nederlands-Indië)*:\n\n• **Rijsttafel** = NL-uitvinding! Combinatie van 20+ Indonesische gerechten.\n• **Nasi goreng** *(gebakken rijst)*.\n• **Bami goreng** *(gebakken noedels)*.\n• **Saté** *(spiesjes met pindasaus)*.\n• **Gado-gado** *(groentesalade met pindasaus)*.\n• **Sambal** *(pittige saus)*.\n• **Pisang goreng** *(gefrituurde banaan)*.\n• **Loempia** *(gefrituurde rol met groente)*.\n• Toko's *(Indonesische supermarkten)* in elke stad.\n\n**Surinaams** 🍲:\n\n• **Roti** *(plat brood met gevulde groenten of vlees)*.\n• **Bara** *(gefrituurd erwten-meel)*.\n• **Pom** *(gerecht met pomtaijer-knol)*.\n• **Bakabana** *(gefrituurde banaan)*.\n• **Pikien** *(jonge vis)*.\n• In Amsterdam-Zuidoost veel Surinaamse restaurants.\n\n**Antilliaans** 🌴:\n\n• **Pastechi** *(gefrituurd pasteitje met vlees)*.\n• **Kibbeling**-versies.\n• **Funchi** *(maïs-pap)*.\n\n**Turks** 🥙:\n\n• **Döner** + **kebab**.\n• **Lahmacun** *(Turkse pizza)*.\n• **Köfte** *(gehakt)*.\n• **Baklava** *(zoet)*.\n• In elke stad — populair fastfood.\n\n**Marokkaans**:\n\n• **Tajine** *(stoofschotel)*.\n• **Couscous**.\n• **Harira** *(soep)*.\n• **Pannenkoekjes** *(msemmen)*.\n• **Harira** eet je vaak bij het breken van het vasten tijdens de **Ramadan**.\n\n**Aziatisch** *(China, Vietnam, Thailand)*:\n\n• **Chinese restaurants** sinds de jaren 1920 *(eerst voor zeemannen in Rotterdam)*.\n• **Babi pangang** *(NL-Chinees gerecht)*.\n• **Tjap tjoy**, **foe yong hai** *(beide bedacht voor NL-smaak)*.\n• **Sushi** populair sinds de jaren 2000.\n• **Pho** *(Vietnamese soep)*.\n• **Thaise curry's**.\n\n**Italiaans** 🍕:\n\n• **Pizza** + **pasta** universeel.\n• Pizza-ketens overal.\n• Bezorging populair.\n\n**Mediterraan**:\n\n• **Falafel + hummus** *(Israëlisch/Libanees)*.\n• **Wraps**.\n• Verspreid door heel NL.\n\n**Multiculturele steden**:\n\nIn Amsterdam, Rotterdam, Den Haag, Utrecht kun je in 1 wijk eten van **20+ landen**. Onderdeel van NL-cultuur geworden.\n\n**Trends 2024**:\n\n• **Plant-based** *(plantaardig)* — Beyond Meat, vegan kaas.\n• **Bowls + buddha bowls** *(quinoa + groente + saus)*.\n• **Sushi** populair (sinds 2010).\n• **Smoothies + acai-bowls**.\n• **Avocado-toast** *(Instagram-eten)*.\n• **Korea-Pop-eten**: bibimbap, k-bbq.\n• **Wereldwinkel** *(eerlijke handel)*.\n\n**Eet-trends voor klimaat**:\n• Minder vlees *(vooral rood)*.\n• Plantaardige eiwitten *(soja, tempeh, peulvruchten)*.\n• Lokaal + seizoensgebonden *(geen ananas in januari)*.\n• Te Goed Om Weg Te Gooien-apps tegen verspilling.\n\n**Feestdagen + eten**:\n\n• **Oudejaarsavond**: oliebollen + appelflappen.\n• **Pasen**: lamsvlees + paaseieren.\n• **Kerst**: gourmetten / kalkoen.\n• **Koningsdag**: BBQ + tompoes *(oranje)*.\n• **Sinterklaas**: pepernoten + chocoladeletter + speculaas.\n• **Suikerfeest** *(eind Ramadan)*: zoetigheid.\n\n**Toets-feitje**:\nDe **rijsttafel** zoals we die in NL kennen, bestaat **niet** in Indonesië zelf. Hij werd bedacht door Nederlanders in koloniaal Nederlands-Indië *(eind 19e eeuw)* om vele Indonesische gerechten ineens te serveren. In Indonesië eet men 1 of 2 gerechten per maaltijd. Echte rijsttafel = **NL-Indische uitvinding**.",
+      "Door **koloniaal verleden** + migratie heeft NL-eten veel invloeden.\n\n**Indonesisch** 🍛 *(grote invloed, sinds VOC + Nederlands-Indië)*:\n\n• **Rijsttafel** = NL-uitvinding! Combinatie van 20+ Indonesische gerechten.\n• **Nasi goreng** *(gebakken rijst)*.\n• **Bami goreng** *(gebakken noedels)*.\n• **Saté** *(spiesjes met pindasaus)*.\n• **Gado-gado** *(groentesalade met pindasaus)*.\n• **Sambal** *(pittige saus)*.\n• **Pisang goreng** *(gefrituurde banaan)*.\n• **Loempia** *(gefrituurde rol met groente)*.\n• Toko's *(Indonesische supermarkten)* in elke stad.\n\n**Surinaams** 🍲:\n\n• **Roti** *(plat brood met gevulde groenten of vlees)*.\n• **Bara** *(gefrituurd erwten-meel)*.\n• **Pom** *(gerecht met pomtaijer-knol)*.\n• **Bakabana** *(gefrituurde banaan)*.\n• **Pikien** *(jonge vis)*.\n• In Amsterdam-Zuidoost veel Surinaamse restaurants.\n\n**Antilliaans** 🌴:\n\n• **Pastechi** *(gefrituurd pasteitje met vlees)*.\n• **Kibbeling**-versies.\n• **Funchi** *(maïs-pap)*.\n\n**Turks** 🥙:\n\n• **Döner** + **kebab**.\n• **Lahmacun** *(Turkse pizza)*.\n• **Köfte** *(gehakt)*.\n• **Baklava** *(zoet)*.\n• In elke stad — populair fastfood.\n\n**Marokkaans**:\n\n• **Tajine** *(stoofschotel)*.\n• **Couscous**.\n• **Harira** *(soep)*.\n• **Pannenkoekjes** *(msemmen)*.\n• **Harira** eet je vaak bij het breken van het vasten tijdens de **Ramadan**.\n\n**Aziatisch** *(China, Vietnam, Thailand)*:\n\n• **Chinese restaurants** sinds de jaren 1920 *(eerst voor zeemannen in Rotterdam)*.\n• **Babi pangang** *(NL-Chinees gerecht)*.\n• **Tjap tjoy**, **foe yong hai** *(beide bedacht voor NL-smaak)*.\n• **Sushi** populair sinds de jaren 2000.\n• **Pho** *(Vietnamese soep)*.\n• **Thaise curry's**.\n\n**Italiaans** 🍕:\n\n• **Pizza** + **pasta** universeel.\n• Pizza-ketens overal.\n• Bezorging populair.\n\n**Mediterraan**:\n\n• **Falafel + hummus** *(Israëlisch/Libanees)*.\n• **Wraps**.\n• Verspreid door heel NL.\n\n**Multiculturele steden**:\n\nIn Amsterdam, Rotterdam, Den Haag, Utrecht kun je in 1 wijk eten van **20+ landen**. Onderdeel van NL-cultuur geworden.\n\n**Trends 2024**:\n\n• **Plant-based** *(plantaardig)* — Beyond Meat, vegan kaas.\n• **Bowls + buddha bowls** *(quinoa + groente + saus)*.\n• **Sushi** nog steeds populair.\n• **Smoothies + acai-bowls**.\n• **Avocado-toast** *(Instagram-eten)*.\n• **Korea-Pop-eten**: bibimbap, k-bbq.\n• **Wereldwinkel** *(eerlijke handel)*.\n\n**Eet-trends voor klimaat**:\n• Minder vlees *(vooral rood)*.\n• Plantaardige eiwitten *(soja, tempeh, peulvruchten)*.\n• Lokaal + seizoensgebonden *(geen ananas in januari)*.\n• Te Goed Om Weg Te Gooien-apps tegen verspilling.\n\n**Feestdagen + eten**:\n\n• **Oudejaarsavond**: oliebollen + appelflappen.\n• **Pasen**: lamsvlees + paaseieren.\n• **Kerst**: gourmetten / kalkoen.\n• **Koningsdag**: BBQ + tompoes *(oranje)*.\n• **Sinterklaas**: pepernoten + chocoladeletter + speculaas.\n• **Suikerfeest** *(eind Ramadan)*: zoetigheid.\n\n**Toets-feitje**:\nDe **rijsttafel** zoals we die in NL kennen, bestaat **niet** in Indonesië zelf. Hij werd bedacht door Nederlanders in koloniaal Nederlands-Indië *(eind 19e eeuw)* om vele Indonesische gerechten ineens te serveren. In Indonesië eet men 1 of 2 gerechten per maaltijd. Echte rijsttafel = **NL-Indische uitvinding**.",
     checks: [
       {
         q: "Wat is **rijsttafel**?",
-        options: ["NL-Indische uitvinding met veel Indo-gerechten", "Tafel uit hout", "Sushi-tafel", "Bestaat niet"],
+        options: ["Maaltijd met veel kleine Indonesische gerechten", "Een Surinaams rijstgerecht", "Een Japanse sushi-schotel", "Een Chinese rijstsoep"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet.", "Wel."],
+        wrongHints: [null, "Let op het land én op het aantal gerechten.", "Let op het land én op het aantal gerechten.", "Let op het land én op het aantal gerechten."],
       },
       {
         q: "Welke is **Surinaams**?",
@@ -98,7 +98,7 @@ const steps = [
       },
       {
         q: "Wat eten **Surinamers** vaak?",
-        options: ["Roti met kip + aardappel + boontjes", "Stamppot", "Sushi", "Pizza"],
+        options: ["Roti", "Stamppot", "Sushi", "Pizza"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet.", "Niet."],
       },
@@ -109,17 +109,17 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "Welke is **typisch Hollands**?", options: ["Stamppot + haring", "Sushi", "Pizza", "Tajine"], answer: 0, wrongHints: [null, "Japans.", "Italiaans.", "Marokkaans."] },
-      { q: "Wat is **hagelslag**?", options: ["Chocolade-hagel op brood (NL)", "Vis", "Vlees", "Kaas"], answer: 0, wrongHints: [null, "Komt niet uit de zee — je strooit het op je boterham. Wat is het?", "Geen dierlijk beleg — denk aan iets zoets om te strooien.", "Kaas snijd je in plakken — hagelslag strooi je. Waarvan is het gemaakt?"] },
+      { q: "Wat is **hagelslag**?", options: ["Chocoladekorrels op brood", "Vis", "Vlees", "Kaas"], answer: 0, wrongHints: [null, "Komt niet uit de zee — je strooit het op je boterham. Wat is het?", "Geen dierlijk beleg — denk aan iets zoets om te strooien.", "Kaas snijd je in plakken — hagelslag strooi je. Waarvan is het gemaakt?"] },
       { q: "Welke is **Indonesisch**?", options: ["Saté", "Roti", "Tajine", "Pizza"], answer: 0, wrongHints: [null, "Surinaams.", "Marokkaans.", "Italiaans."] },
-      { q: "**Goudse kaas** komt uit?", options: ["Gouda (NL)", "Italië", "Frankrijk", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Brie wel.", "Wel."] },
-      { q: "**Vis** aanbevolen aantal per week?", options: ["1 keer (omega-3)", "Dagelijks", "Nooit", "Maandelijks"], answer: 0, wrongHints: [null, "Te veel.", "Wel.", "Te weinig."] },
-      { q: "**Stroopwafel** uit?", options: ["Gouda (1810)", "Amsterdam", "Frankrijk", "Indonesië"], answer: 0, wrongHints: [null, "In de hoofdstad kwamen ze pas later — waar stond de éérste stroopwafelbakker?", "Oer-Hollandse uitvinding — zit je wel in het goede land?", "Denk aan een Hollandse bakkersstad, niet aan Azië."] },
+      { q: "**Goudse kaas** komt uit?", options: ["Gouda", "Italië", "Frankrijk", "België"], answer: 0, wrongHints: [null, "Niet.", "Brie wel.", "Kijk goed naar de naam van de kaas."] },
+      { q: "**Vis** aanbevolen aantal per week?", options: ["1 keer", "Dagelijks", "Nooit", "Maandelijks"], answer: 0, wrongHints: [null, "Te veel.", "Vis is juist gezond.", "Te weinig."] },
+      { q: "**Stroopwafel** uit?", options: ["Gouda", "Amsterdam", "Frankrijk", "Indonesië"], answer: 0, wrongHints: [null, "In de hoofdstad kwamen ze pas later — waar stond de éérste stroopwafelbakker?", "Oer-Hollandse uitvinding — zit je wel in het goede land?", "Denk aan een Hollandse bakkersstad, niet aan Azië."] },
       { q: "Welk NL-gerecht eet je vaak op **5 december (Sinterklaas)**?", options: ["Pepernoten", "Pizza", "Sushi", "Curry"], answer: 0, wrongHints: [null, "Italiaans.", "Japans.", "Aziatisch."] },
       { q: "**Boerenkool** wordt vaak gemengd met aardappel tot ___?", options: ["Stamppot", "Soep", "Salade", "Brood"], answer: 0, wrongHints: [null, "Niet primair.", "Niet relevant.", "Niet primair."] },
       { q: "Welke **drank** drinken NL-kinderen vaak bij ontbijt?", options: ["Melk of jus d'orange", "Bier", "Koffie zwart", "Wijn"], answer: 0, wrongHints: [null, "Geen kinderdrank!", "Niet voor kinderen.", "Geen kinderdrank!"] },
-      { q: "Wat is **Surinaamse roti**?", options: ["Pannenkoek-achtig brood met curry-vulling", "Een soort kaas", "Een fruit", "Soep"], answer: 0, wrongHints: [null, "Niet — roti is brood.", "Geen fruit.", "Geen soep."] },
-      { q: "Hoeveel maaltijden per dag eet **gemiddelde NL'er**?", options: ["3 (ontbijt, lunch, avondeten)", "1", "6", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."] },
-      { q: "Wat zijn **bitterballen**?", options: ["Gefrituurde balletjes met ragout (NL-borrel)", "Snoep", "Vis", "Fruit"], answer: 0, wrongHints: [null, "Geen snoep.", "Geen vis.", "Geen fruit."] },
+      { q: "Wat is **Surinaamse roti**?", options: ["Plat brood met kerrie-vulling", "Een soort kaas", "Een fruit", "Soep"], answer: 0, wrongHints: [null, "Is roti een zuivelproduct?", "Geen fruit.", "Geen soep."] },
+      { q: "Hoeveel maaltijden per dag eet **gemiddelde NL'er**?", options: ["3", "1", "6", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."] },
+      { q: "Wat zijn **bitterballen**?", options: ["Gefrituurde ragoutballetjes", "Snoep", "Vis", "Fruit"], answer: 0, wrongHints: [null, "Geen snoep.", "Geen vis.", "Geen fruit."] },
       { q: "**Drop** is een typische NL-snoep met smaak van ___?", options: ["Zoethout-extract", "Chocolade", "Fruit", "Karamel"], answer: 0, wrongHints: [null, "Andere smaak.", "Andere snoep.", "Niet primair."] },
     ],
   },

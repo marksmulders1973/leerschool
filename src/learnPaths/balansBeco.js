@@ -37,12 +37,12 @@ const steps = [
         q: "Wat is een **onderneming**?",
         options: [
           "Organisatie die producten/diensten verkoopt om winst te maken",
-          "Een bank",
+          "Een vereniging zonder winstdoel",
           "Een privépersoon",
           "De overheid",
         ],
         answer: 0,
-        wrongHints: [null, "Bank is wel een soort onderneming, maar niet alle ondernemingen.", "Een privépersoon doet niet automatisch zaken.", "Overheid maakt geen winst — geen onderneming."],
+        wrongHints: [null, "Een vereniging heeft geen winstdoel — past dat bij een onderneming?", "Een privépersoon doet niet automatisch zaken.", "Overheid maakt geen winst — geen onderneming."],
         uitlegPad: {
           stappen: [{ titel: "Onderneming = winst-doel", tekst: "Een onderneming is een organisatie die producten of diensten verkoopt om winst te maken. Privé-personen + overheid horen er niet bij." }],
           woorden: [{ woord: "winstdoel", uitleg: "doel om meer geld terug te krijgen dan uitgegeven" }],
@@ -311,10 +311,10 @@ const steps = [
           "Winst = Opbrengsten − Kosten",
           "Winst = Opbrengsten + Kosten",
           "Winst = Activa − Passiva",
-          "Winst = Eigen vermogen × 2",
+          "Winst = Kosten − Opbrengsten",
         ],
         answer: 0,
-        wrongHints: [null, "Optellen geeft geen winst.", "Dat is geen winstformule.", "Onzin."],
+        wrongHints: [null, "Optellen geeft geen winst.", "Dat is geen winstformule.", "Andersom — dan krijg je in een goed jaar een negatief getal."],
         uitlegPad: {
           stappen: [{ titel: "Winst = Opbrengsten − Kosten", tekst: "Winst is wat overblijft van de opbrengsten (omzet, etc.) nadat alle kosten zijn afgetrokken. Positief = winst. Negatief = verlies." }],
           woorden: [{ woord: "resultaat", uitleg: "ander woord voor winst (of verlies)" }],
@@ -590,13 +590,13 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
       },
       {
         q: "Wat is **liquiditeit**?",
-        options: ["Snel kunnen omzetten naar geld (kas + bank)","Hoeveelheid winst","Hoeveel je verdient","Tijd op kantoor"],
+        options: ["Hoe snel je bezit kunt omzetten in geld","Hoeveelheid winst","Hoeveel je verdient","Hoeveel eigen vermogen je hebt"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is winst.", "Niet — dat is inkomen.", "Niet — geen tijd-meting."],
+        wrongHints: [null, "Niet — dat is winst.", "Niet — dat is inkomen.", "Niet — eigen vermogen zegt hoe je bezit gefinancierd is, niet hoe snel je aan geld komt."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is liquiditeit?", tekst: "**Liquiditeit** = **mate waarin bezittingen snel naar geld omgezet kunnen worden**. Belangrijk voor bedrijven om rekeningen te betalen.\n\n**Liquide volgorde** (snelst naar langzaamst):\n• **Kas** (direct beschikbaar)\n• **Bank** (binnen 1 dag)\n• **Vorderingen** (klanten betalen binnen 30-60 dagen)\n• **Voorraad** (moet eerst verkocht)\n• **Gebouwen** (kost maanden om te verkopen)" },
-            { titel: "Liquiditeitsratio's", tekst: "Bedrijven berekenen **liquiditeit-ratio's** om gezondheid te checken:\n• **Current Ratio** = vlottende activa ÷ kortlopende schulden. Streven: >1.0 (kan schulden betalen)\n• **Quick Ratio** = (vlottende activa - voorraad) ÷ kortlopende schulden. Strenger\n• **Kas-ratio** = kas + bank ÷ kortlopende schulden\n\nLage ratio = bedrijf kan rekeningen niet betalen = faillissement-risico." },
+            { titel: "Liquiditeitsratio's", tekst: "Bedrijven berekenen **liquiditeit-ratio's** om gezondheid te checken:\n• **Current Ratio** = vlottende activa ÷ kortlopende schulden. Streven: >1,0 (kan schulden betalen)\n• **Quick Ratio** = (vlottende activa - voorraad) ÷ kortlopende schulden. Strenger\n• **Kas-ratio** = (kas + bank) ÷ kortlopende schulden\n\nLage ratio = bedrijf kan rekeningen niet betalen = faillissement-risico." },
             { titel: "Toets-feit: bedrijven failliet", tekst: "Veel bedrijven gaan **failliet** ondanks winst! Reden: te lage liquiditeit. Voorbeeld:\n• Winst van €100.000\n• Maar al je geld zit in voorraad\n• Geen geld om huur/lonen te betalen\n• Failliet\n\nLes voor de toets: winst ≠ liquiditeit. **Cashflow is koning**." },
           ],
           woorden: [
@@ -639,7 +639,7 @@ ${[1, 2, 3, 4, 5].map(i => `<rect x="${40 + (i - 1) * 44}" y="90" width="44" hei
       { q: "Welke is een **vast actief**?", options: ["Gebouw","Voorraad","Banksaldo","Klant-vordering"], answer: 0, wrongHints: [null, "Vlottend.", "Liquide.", "Vlottend."] },
       { q: "Welke is een **vlottend actief**?", options: ["Voorraad","Gebouw","Machine","Auto"], answer: 0, wrongHints: [null, "Een gebouw staat er over tien jaar nog — vlottend betekent: binnen een jaar om te zetten in geld.", "Machines gaan jaren mee — welk bezit wisselt juist steeds?", "Ook een bedrijfsauto gebruik je jarenlang — wat verkoop je juist dóór?"] },
       { q: "Welke is een **schuld op lange termijn**?", options: ["Hypotheek","Crediteur","Belasting","Salaris"], answer: 0, wrongHints: [null, "Een leverancier wil binnen weken betaald worden — is dat lang of kort?", "Belasting betaal je binnen het jaar — kort dus.", "Salaris betaal je elke maand — welke schuld loopt tientallen jaren?"] },
-      { q: "Een **balans** bestaat uit welke 2 kanten?", options: ["Activa (links) + Passiva (rechts)","Inkomsten + Uitgaven","Winst + Verlies","Debiteuren + Crediteuren"], answer: 0, wrongHints: [null, "Inkomsten en uitgaven horen bij de resultatenrekening — de balans is een fóto van bezit en financiering.", "Winst en verlies staan op de W&V-rekening, niet op de balans.", "Dat zijn maar twee losse posten — welke twéé volledige kanten heeft de balans?"] },
+      { q: "Een **balans** bestaat uit welke 2 kanten?", options: ["Activa + Passiva","Inkomsten + Uitgaven","Winst + Verlies","Debiteuren + Crediteuren"], answer: 0, wrongHints: [null, "Inkomsten en uitgaven horen bij de resultatenrekening — de balans is een fóto van bezit en financiering.", "Winst en verlies staan op de W&V-rekening, niet op de balans.", "Dat zijn maar twee losse posten — welke twéé volledige kanten heeft de balans?"] },
       { q: "Balanstotaal **links = rechts** moet altijd ___?", options: ["Gelijk zijn","Verschillen","Links groter","Rechts groter"], answer: 0, wrongHints: [null, "Elke euro bezit is ergens mee betaald (eigen of geleend geld) — kunnen de kanten dan verschillen?", "Alles wat links staat (bezit) is gefinancierd door iets van rechts — wat betekent dat voor de totalen?", "Elk bezit heeft een financieringsbron — vergelijk de totalen nog eens."] },
       { q: "**Eigen vermogen** = ?", options: ["Activa − Vreemd vermogen","Activa + Schulden","Schulden alleen","Winst alleen"], answer: 0, wrongHints: [null, "Optellen maakt het groter — maar schulden zijn juist níét van jou. Erbij of eraf?", "Schulden zijn precies het deel dat níét van het bedrijf zelf is.", "Winst is een resultaat over een periode — eigen vermogen is een stánd op de balans."] },
       { q: "**Winst & Verliesrekening** toont?", options: ["Opbrengsten − kosten over een periode","Bezittingen op balans-datum","Schulden alleen","Eigen vermogen"], answer: 0, wrongHints: [null, "Bezittingen op één moment = een foto (balans). Welk overzicht is juist een fílm over een periode?", "Schulden staan op de balans — de W&V gaat over verdienen en uitgeven.", "Eigen vermogen is een balans-post — wat laat de W&V-rekening wél zien?"] },

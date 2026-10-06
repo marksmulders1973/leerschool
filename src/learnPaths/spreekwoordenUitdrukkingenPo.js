@@ -21,9 +21,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **figuurlijk**?",
-        options: ["Woorden betekenen iets anders dan letterlijk", "Letterlijk", "Beeld in boek", "Niet bestaand"],
+        options: ["Woorden betekenen iets anders dan er staat", "Woorden betekenen precies wat er staat", "Woorden zijn heel moeilijk gespeld", "Woorden komen uit een andere taal"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Nee, het gaat om taal.", "Figuurlijk taalgebruik bestaat wel."],
+        wrongHints: [null, "Dat is letterlijk.", "Nee, het gaat om betekenis, niet om spelling.", "Nee, het gaat om betekenis, niet om de taal."],
         uitlegPad: {
           stappen: [
             { titel: "Twee manieren om iets te zeggen", tekst: "Bij **letterlijk** taalgebruik betekenen de woorden EXACT wat er staat. Bij **figuurlijk** taalgebruik bedoel je iets ANDERS — een soort woordbeeld." },
@@ -49,9 +49,9 @@ const steps = [
       },
       {
         q: "*'Het regent pijpenstelen'* — wat betekent?",
-        options: ["Het regent heel hard", "Pijpen vallen uit lucht", "Het sneeuwt", "Geen idee"],
+        options: ["Het regent heel hard", "Er vallen pijpen uit de lucht", "Het sneeuwt", "Het regent een klein beetje"],
         answer: 0,
-        wrongHints: [null, "Letterlijk = nee.", null, "Probeer."],
+        wrongHints: [null, "Letterlijk kan dat niet — denk figuurlijk.", "Het gaat over regen, niet over sneeuw.", "Andersom — pijpenstelen zijn juist lang en dik."],
         uitlegPad: {
           stappen: [
             { titel: "Klassieke Nederlandse uitdrukking", tekst: "'Het regent pijpenstelen' is een beroemde **uitdrukking** in NL. **Letterlijk** zou het betekenen: er vallen lange pijpen (zoals oude tabakspijpen) uit de lucht. Onmogelijk! Dus: **figuurlijk**." },
@@ -77,9 +77,9 @@ const steps = [
       },
       {
         q: "Wat is een **vergelijking**?",
-        options: ["'Zo X als Y'-zin", "Boek", "Letterlijk", "Som"],
+        options: ["Een zin als 'zo sterk als een beer'", "Een zin als 'hij is een beer'", "Een zin als 'wie wat bewaart, heeft wat'", "Een zin als 'ik eet een appel'"],
         answer: 0,
-        wrongHints: [null, null, "Niet primair.", null],
+        wrongHints: [null, "Dat is een metafoor — er staat geen 'als'.", "Dat is een spreekwoord met een les.", "Dat is letterlijk taalgebruik."],
       },
       {
         q: "*'Ze is een engel'* — wat voor soort beeldspraak?",
@@ -119,9 +119,9 @@ const steps = [
     checks: [
       {
         q: "*'Een appeltje met iemand te schillen hebben'* — wat?",
-        options: ["Iets uit te praten", "Appel eten", "Boos zijn", "Niet weten"],
+        options: ["Iets uit te praten", "Samen een appel eten", "Iemand iets cadeau geven", "Iemand helpen met koken"],
         answer: 0,
-        wrongHints: [null, "Letterlijk = nee.", "Wel iets in die richting.", "Probeer."],
+        wrongHints: [null, "Letterlijk gedacht — denk figuurlijk.", "Nee — het gaat om iets wat nog besproken moet worden.", "Letterlijk gedacht — het gaat niet om eten."],
         uitlegPad: {
           stappen: [
             { titel: "Letterlijk = raar", tekst: "Letterlijk een appel schillen met iemand kan natuurlijk wel, maar zou raar zijn als uitdrukking. Dus: figuurlijk!" },
@@ -176,15 +176,15 @@ const steps = [
       },
       {
         q: "*'De koe bij de horens vatten'* — wat?",
-        options: ["Probleem direct aanpakken", "Boerderij", "Koe kopen", "Letterlijk koe"],
+        options: ["Een probleem direct aanpakken", "Een probleem uit de weg gaan", "Heel sterk zijn", "Een dier vastpakken"],
         answer: 0,
-        wrongHints: [null, null, null, "Figuurlijk."],
+        wrongHints: [null, "Andersom — wie de koe bij de horens vat, loopt niet weg.", "Niet — het gaat om hoe je iets aanpakt.", "Dat is letterlijk — denk figuurlijk."],
       },
       {
         q: "*'Wolf in schaapskleren'* — wat?",
-        options: ["Slecht persoon doet aardig", "Echte wolf", "Schaap", "Verkleden"],
+        options: ["Een slecht persoon die aardig doet", "Een aardig persoon die eng lijkt", "Iemand die heel bang is", "Iemand die zich verkleedt voor een feest"],
         answer: 0,
-        wrongHints: [null, "Figuurlijk.", null, "Wel maar figuurlijk."],
+        wrongHints: [null, "Andersom — wie lijkt hier aardig?", "Niet — het gaat om iemand die anders is dan hij lijkt.", "Dat is te letterlijk gedacht."],
       },
     ],
   },
@@ -195,9 +195,9 @@ const steps = [
     checks: [
       {
         q: "*'Rome is niet op één dag gebouwd'* — wat is les?",
-        options: ["Grote dingen kosten tijd", "Geschiedenis", "Reis naar Rome", "Bouwbedrijf"],
+        options: ["Grote dingen kosten tijd", "Rome is een heel oude stad", "Je moet snel werken om klaar te komen", "Bouwen is zwaar werk"],
         answer: 0,
-        wrongHints: [null, "Niet primair — het is een SPREEKWOORD, niet feiten.", null, null],
+        wrongHints: [null, "Dat is een feit, geen les.", "Andersom — haast is hier niet de les.", "Niet — het gaat niet echt over bouwen."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een spreekwoord?", tekst: "Een **spreekwoord** = korte volkswijsheid met een **les** (moraal). Niet bedoeld als letterlijk feit, maar als algemene WIJSHEID die geldt voor allerlei situaties." },
@@ -223,21 +223,21 @@ const steps = [
       },
       {
         q: "*'Goedkoop is duurkoop'* — wat?",
-        options: ["Goedkope dingen breken snel", "Alles duur", "Letterlijk", "Onmogelijk"],
+        options: ["Goedkoop kopen kost je uiteindelijk meer", "Dure dingen zijn altijd slecht", "Je moet altijd het goedkoopste kopen", "Duur kopen is zonde van je geld"],
         answer: 0,
-        wrongHints: [null, null, "Figuurlijk.", "Wel."],
+        wrongHints: [null, "Niet — het gaat over goedkope dingen.", "Andersom — wat gebeurt er met goedkope spullen?", "Andersom — wat kost goedkoop je uiteindelijk?"],
       },
       {
         q: "*'Vele handen maken licht werk'* — les?",
-        options: ["Samen gaat het makkelijker", "Licht uit", "Werk in donker", "Niet bestaand"],
+        options: ["Samen gaat het makkelijker", "Werk gaat sneller als je het alleen doet", "Licht werk kun je met één hand doen", "Hoe meer mensen, hoe meer ruzie"],
         answer: 0,
-        wrongHints: [null, null, null, "Wel."],
+        wrongHints: [null, "Andersom — kijk naar 'vele handen'.", "Te letterlijk — het gaat niet om licht of zwaar tillen.", "Niet — het spreekwoord is juist positief over samen."],
       },
       {
         q: "*'Hoge bomen vangen veel wind'* — wat betekent?",
-        options: ["Bekende mensen krijgen veel kritiek", "Letterlijk bomen", "Storm", "Niet bekend"],
+        options: ["Bekende mensen krijgen veel kritiek", "Grote bomen waaien snel om", "Bekende mensen krijgen veel hulp", "Wie groot is, is sterk"],
         answer: 0,
-        wrongHints: [null, "Figuurlijk.", null, "Wel."],
+        wrongHints: [null, "Dat is letterlijk — denk figuurlijk.", "Niet — wat 'vangen' hoge bomen: iets fijns of iets lastigs?", "Niet — het gaat om opvallen en wat je dan over je heen krijgt."],
       },
     ],
   },
@@ -248,25 +248,25 @@ const steps = [
     checks: [
       {
         q: "Marie kreeg 's morgens een rapport met 1 zes — verdrietig. 's Middags kreeg ze een lieve brief van oma. Spreekwoord?",
-        options: ["Na regen komt zonneschijn", "Goedkoop is duurkoop", "Vele handen", "Hoge bomen"],
+        options: ["Na regen komt zonneschijn", "Goedkoop is duurkoop", "Vele handen maken licht werk", "Hoge bomen vangen veel wind"],
         answer: 0,
-        wrongHints: [null, "Niet over geld.", "Niet over samen.", null],
+        wrongHints: [null, "Niet over geld.", "Niet over samen.", "Niet over kritiek."],
       },
       {
         q: "Tien klasgenoten ruimden samen het lokaal — duurde 10 min ipv 1 uur. Spreekwoord?",
-        options: ["Vele handen maken licht werk", "Beter laat dan nooit", "Op rozen zitten", "Hoge bomen"],
+        options: ["Vele handen maken licht werk", "Beter laat dan nooit", "Op rozen zitten", "Hoge bomen vangen veel wind"],
         answer: 0,
         wrongHints: [null, "Niet over tijd.", null, null],
       },
       {
         q: "Tom kocht 6 paar goedkope schoenen — alle 6 binnen 2 maanden kapot. Spreekwoord?",
-        options: ["Goedkoop is duurkoop", "Vele vrienden", "Op rozen", "Vele handen"],
+        options: ["Goedkoop is duurkoop", "Een goede buur is beter dan een verre vriend", "Op rozen zitten", "Vele handen maken licht werk"],
         answer: 0,
         wrongHints: [null, "Gaat dit verhaal over vrienden? Kijk wat Tom overkomt met zijn géld.", "Zit Tom lekker op rozen, of gaat het juist mis? Zoek het spreekwoord over kopen.", "Er helpt hier niemand mee — het gaat over goedkoop kopen en wat dat kost."],
       },
       {
         q: "Anna's broer was wereldberoemd → kreeg veel haatmail + kritiek. Spreekwoord?",
-        options: ["Hoge bomen vangen veel wind", "Goedkoop is duurkoop", "Beter laat dan nooit", "Vele handen"],
+        options: ["Hoge bomen vangen veel wind", "Goedkoop is duurkoop", "Beter laat dan nooit", "Vele handen maken licht werk"],
         answer: 0,
         wrongHints: [null, "Er wordt niets gekocht — het gaat om iemand die hoog en zichtbaar staat en daardoor kritiek 'vangt'.", "Komt hier iemand te laat? Zoek het spreekwoord over opvallen en kritiek krijgen.", "Er wordt niet samengewerkt — wie opvalt, krijgt hier iets over zich heen."],
       },
@@ -279,27 +279,27 @@ const steps = [
     checks: [
       {
         q: "Hoe vaak komen **spreekwoord/uitdrukking-vragen** op de Doorstroomtoets ongeveer voor?",
-        options: ["Een paar vragen (klein deel)", "Helft", "Alle", "Geen"],
+        options: ["Een paar vragen", "De helft van alle vragen", "Bijna alle vragen", "Geen enkele vraag"],
         answer: 0,
-        wrongHints: [null, "Veel minder.", null, "Wel."],
+        wrongHints: [null, "Veel minder.", "Veel minder.", "Ze komen wel voor."],
       },
       {
         q: "Hoe werkt **letterlijk uitsluiten** bij de Doorstroomtoets?",
-        options: ["Antwoord met figuurlijk = vaak goed", "Letterlijk is goed", "Beide", "Geen verschil"],
+        options: ["Je streept de letterlijke betekenis weg", "Je kiest juist de letterlijke betekenis", "Je streept de figuurlijke betekenis weg", "Je kiest het langste antwoord"],
         answer: 0,
-        wrongHints: [null, "Bijna nooit.", null, "Wel."],
+        wrongHints: [null, "Letterlijk is bijna nooit goed bij uitdrukkingen.", "Andersom.", "Niet — lengte zegt niets."],
       },
       {
         q: "*'Iemand met de neus op de feiten drukken'* — wat?",
-        options: ["Wijzen op fout/probleem", "Vechten", "Letterlijk", "Niet bekend"],
+        options: ["Iemand op een fout wijzen", "Iemand pijn doen", "Iemand iets laten ruiken", "Iemand een geheim vertellen"],
         answer: 0,
-        wrongHints: [null, "Niet — geen geweld.", "Figuurlijk.", "Wel."],
+        wrongHints: [null, "Niet — geen geweld.", "Dat is te letterlijk.", "Niet — het gaat om iets wat iemand liever niet wil zien."],
       },
       {
         q: "Bij **onbekend** spreekwoord — wat doen?",
-        options: ["Kijk naar kern-woorden + context", "Maar gokken", "Skippen", "Vraag hulp"],
+        options: ["Kijk naar de kernwoorden en de context", "Zomaar een antwoord gokken", "De vraag leeg laten", "Het eerste antwoord kiezen"],
         answer: 0,
-        wrongHints: [null, "Beter slim gokken.", null, "Niet op toets."],
+        wrongHints: [null, "Gok liever slim: gebruik eerst wat je wél weet.", "Niet — leeg is altijd fout.", "Niet — lees eerst alle opties."],
       },
     ],
   },
@@ -307,26 +307,26 @@ const steps = [
     title: "Eind-toets — uitdrukking mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "*'Twee vliegen in één klap'* — wat?", options: ["Twee dingen tegelijk lukken", "Letterlijk vliegen", "Boos", "Sneller"], answer: 0, wrongHints: [null, "Figuurlijk.", null, "Wel maar specifiek."] },
-      { q: "*'Beter een vogel in de hand dan tien in de lucht'* — les?", options: ["Wat je hebt is meer waard dan onzekerheid", "Vogels", "Tellen", "Vliegen"], answer: 0, wrongHints: [null, "Het gaat niet écht over vogels — wat 'heb je in de hand' en wat 'vliegt nog rond'?", "Tel niet, vergelijk: iets zékers tegenover iets onzekers.", null] },
-      { q: "Wat is **figuurlijk taalgebruik**?", options: ["Woorden in andere betekenis", "Letterlijk", "Spelling", "Som"], answer: 0, wrongHints: [null, "Tegenovergesteld.", null, null] },
-      { q: "*'Op rozen zitten'* — wat?", options: ["Het heel goed hebben", "Letterlijk", "Pijn", "Tuinieren"], answer: 0, wrongHints: [null, "Figuurlijk.", "Tegenovergesteld.", null] },
-      { q: "*'Onbekend maakt onbemind'* — les?", options: ["Wat je niet kent, vind je niet mooi", "Onbekend", "Geheim", "Mind games"], answer: 0, wrongHints: [null, "Dat is maar de helft — wat dóét onbekendheid volgens het spreekwoord met hoe je iets vindt?", "Het gaat niet om geheimen — 'onbemind' zegt iets over mooi of niet mooi vinden.", null] },
-      { q: "Wat is een **vergelijking**?", options: ["'Zo X als Y'-zin", "Som", "Spreekwoord", "Verhaal"], answer: 0, wrongHints: [null, null, "Niet primair.", null] },
-      { q: "*'De **kogel** is door de kerk.'* Wat betekent dit?", options: ["Definitief besluit genomen","Geweld","Religieuze actie","Sport"], answer: 0, wrongHints: [null, "Letterlijk lezen.", "Niet hoofdbetekenis.", null] },
-      { q: "*'Vele handen maken licht werk.'* — betekenis?", options: ["Samen gaat het makkelijker","Veel handen wegen niets","Licht zien","Niets"], answer: 0, wrongHints: [null, "Letterlijk gelezen.", "Niet bedoeld.", "Wel."] },
-      { q: "*'Aan zijn lot overlaten.'* — betekenis?", options: ["Iemand niet helpen","Lot kopen","Loten trekken","Spelen"], answer: 0, wrongHints: [null, "Letterlijk.", null, null] },
-      { q: "Wat is een **figuurlijke uitdrukking**?", options: ["Niet letterlijk, beeldspraak","Letterlijk","Wiskundige formule","Tekening"], answer: 0, wrongHints: [null, "Tegenstelling.", null, null] },
-      { q: "*'Iemand iets onder de neus wrijven.'* — betekenis?", options: ["Iemand er steeds aan herinneren","Iemand schoonmaken","Iemand kietelen","Niet relevant"], answer: 0, wrongHints: [null, "Letterlijk.", null, "Wel."] },
-      { q: "*'Op één lijn zitten.'* — betekenis?", options: ["Eens zijn","Wachten in een rij","Sport","Niet relevant"], answer: 0, wrongHints: [null, "Letterlijk.", null, "Wel."] },
-      { q: "*'De druppel die de emmer doet overlopen.'* — betekenis?", options: ["Laatste reden waardoor je boos wordt","Letterlijk water","Klein probleem","Goed nieuws"], answer: 0, wrongHints: [null, "Letterlijk.", "Het is wel klein, maar wát doet die laatste druppel?", null] },
-      { q: "*'Een kat in de zak kopen.'* — betekenis?", options: ["Iets kopen dat tegenvalt","Echte kat kopen","Niet relevant","Goedkoop"], answer: 0, wrongHints: [null, "Letterlijk.", "Wel uitdrukking.", "Niet primair."] },
-      { q: "*'Een appeltje voor de dorst.'* — betekenis?", options: ["Geld bewaren voor later","Letterlijk fruit","Recept","Niet relevant"], answer: 0, wrongHints: [null, "Letterlijk.", null, "Wel."] },
-      { q: "*'Met de neus in de boter vallen.'* — betekenis?", options: ["Net op tijd komen voor iets goeds","Niet relevant","Verlies","Vies worden"], answer: 0, wrongHints: [null, "Wel.", "Tegengestelde.", "Letterlijk."] },
-      { q: "*'Boontje komt om zijn loontje.'* — betekenis?", options: ["Wie kwaad doet, krijgt straf","Boontjes kopen","Niet relevant","Eten geven"], answer: 0, wrongHints: [null, "Letterlijk.", "Wel.", null] },
-      { q: "*'Een open deur intrappen.'* — betekenis?", options: ["Iets zeggen dat iedereen al weet","Inbraak","Voetbal","Letterlijk"], answer: 0, wrongHints: [null, "Letterlijk.", null, "Niet bedoeld."] },
-      { q: "*'Met twee maten meten.'* — betekenis?", options: ["Iets oneerlijk beoordelen","Wiskunde doen","Meten","Niet relevant"], answer: 0, wrongHints: [null, "Letterlijk.", "Letterlijk.", "Wel."] },
-      { q: "*'Knollen voor citroenen verkopen.'* — betekenis?", options: ["Mensen bedriegen","Markt","Niet relevant","Recept"], answer: 0, wrongHints: [null, "Letterlijk.", "Wel.", null] },
+      { q: "*'Twee vliegen in één klap'* — wat?", options: ["Twee dingen tegelijk bereiken", "Twee vliegen tegelijk doodslaan", "Twee keer dezelfde fout maken", "Iets heel snel doen"], answer: 0, wrongHints: [null, "Dat is letterlijk.", "Niet — het gaat juist om iets wat lukt.", "Niet — het gaat om twee dingen met één actie."] },
+      { q: "*'Beter een vogel in de hand dan tien in de lucht'* — les?", options: ["Wat je zeker hebt, is meer waard dan iets onzekers", "Je moet zo veel mogelijk verzamelen", "Vogels moet je vrij laten", "Wie veel wil, krijgt ook veel"], answer: 0, wrongHints: [null, "Niet — de tien in de lucht heb je nog niet.", "Het gaat niet écht over vogels.", "Andersom — wat is het risico als je te veel wilt?"] },
+      { q: "Wat is **figuurlijk taalgebruik**?", options: ["Woorden in een andere betekenis", "Woorden precies zoals ze staan", "Woorden zonder spelfouten", "Woorden uit een andere taal"], answer: 0, wrongHints: [null, "Dat is letterlijk.", "Het gaat om betekenis, niet om spelling.", "Het gaat om betekenis, niet om de taal."] },
+      { q: "*'Op rozen zitten'* — wat?", options: ["Het heel goed hebben", "Het heel moeilijk hebben", "Op een stekelige plek zitten", "Van bloemen houden"], answer: 0, wrongHints: [null, "Andersom.", "Dat is letterlijk.", "Niet — het gaat om hoe het met je gaat."] },
+      { q: "*'Onbekend maakt onbemind'* — les?", options: ["Wat je niet kent, vind je niet mooi", "Wat je niet kent, is nieuw en spannend", "Je moet geheimen bewaren", "Onbekende mensen zijn altijd gemeen"], answer: 0, wrongHints: [null, "Andersom — 'onbemind' betekent: niet geliefd.", "Het gaat niet om geheimen — 'onbemind' zegt iets over mooi of niet mooi vinden.", "Te sterk — het gaat over wat je vindt van iets onbekends."] },
+      { q: "Wat is een **vergelijking**?", options: ["Beeldspraak met 'zo ... als'", "Beeldspraak zonder 'als'", "Een volkswijsheid met een les", "Een zin die je letterlijk neemt"], answer: 0, wrongHints: [null, "Dat is een metafoor.", "Dat is een spreekwoord.", "Dat is juist geen beeldspraak."] },
+      { q: "*'De **kogel** is door de kerk.'* Wat betekent dit?", options: ["Er is definitief een besluit genomen", "Er is iets kapotgeschoten", "De kerkdienst is begonnen", "Het besluit is nog niet genomen"], answer: 0, wrongHints: [null, "Letterlijk gelezen.", "Niet — het gaat niet om de kerk.", "Andersom."] },
+      { q: "*'Vele handen maken licht werk.'* — betekenis?", options: ["Samen gaat het makkelijker", "Veel handen wegen samen weinig", "Met veel lampen zie je beter", "Alleen werken gaat het snelst"], answer: 0, wrongHints: [null, "Letterlijk gelezen.", "Niet bedoeld.", "Andersom."] },
+      { q: "*'Aan zijn lot overlaten.'* — betekenis?", options: ["Iemand niet helpen", "Een lot uit de loterij kopen", "Iemand goed verzorgen", "Iemand laten winnen"], answer: 0, wrongHints: [null, "Letterlijk.", "Andersom.", "Niet — het gaat om iemand alleen laten."] },
+      { q: "Wat is een **figuurlijke uitdrukking**?", options: ["Een zin die je niet letterlijk moet nemen", "Een zin die je precies zo moet nemen", "Een rekenformule met woorden", "Een tekening bij een tekst"], answer: 0, wrongHints: [null, "Tegenstelling.", "Niet — het gaat om taal.", "Niet — het gaat om taal, niet om plaatjes."] },
+      { q: "*'Iemand iets onder de neus wrijven.'* — betekenis?", options: ["Iemand verwijtend op een fout wijzen", "Iemand schoonmaken", "Iemand kietelen", "Iemand een compliment geven"], answer: 0, wrongHints: [null, "Letterlijk.", null, "Andersom — het is juist niet aardig bedoeld."] },
+      { q: "*'Op één lijn zitten.'* — betekenis?", options: ["Eens zijn", "Wachten in een rij", "Ruzie hebben", "Naast elkaar in de bus zitten"], answer: 0, wrongHints: [null, "Letterlijk.", "Andersom.", "Dat is letterlijk."] },
+      { q: "*'De druppel die de emmer doet overlopen.'* — betekenis?", options: ["Laatste reden waardoor je boos wordt", "Water dat over de rand stroomt", "Een groot ongeluk", "Goed nieuws"], answer: 0, wrongHints: [null, "Letterlijk.", "Niet — het is juist iets kleins, maar wát doet die laatste druppel?", null] },
+      { q: "*'Een kat in de zak kopen.'* — betekenis?", options: ["Iets kopen dat tegenvalt", "Een echte kat kopen", "Een cadeau voor een huisdier kopen", "Iets heel goedkoops kopen"], answer: 0, wrongHints: [null, "Letterlijk.", "Letterlijk gedacht.", "Niet — het gaat erom dat je niet goed keek wat je kocht."] },
+      { q: "*'Een appeltje voor de dorst.'* — betekenis?", options: ["Geld bewaren voor later", "Een appel voor als je dorst hebt", "Iets lekkers voor tussendoor", "Al je geld meteen uitgeven"], answer: 0, wrongHints: [null, "Letterlijk.", "Te letterlijk.", "Andersom."] },
+      { q: "*'Met de neus in de boter vallen.'* — betekenis?", options: ["Net op tijd komen voor iets goeds", "Te laat komen", "Verlies lijden", "Vies worden"], answer: 0, wrongHints: [null, "Andersom — je komt juist op het goede moment.", "Tegengestelde.", "Letterlijk."] },
+      { q: "*'Boontje komt om zijn loontje.'* — betekenis?", options: ["Wie kwaad doet, krijgt straf", "Bonen kopen op de markt", "Wie hard werkt, krijgt meer loon", "Je moet je groente opeten"], answer: 0, wrongHints: [null, "Letterlijk.", "Niet — het gaat om iets slechts dat terugkomt.", "Te letterlijk."] },
+      { q: "*'Een open deur intrappen.'* — betekenis?", options: ["Iets zeggen dat iedereen al weet", "Inbreken in een huis", "Ergens boos binnenkomen", "Iets heel nieuws vertellen"], answer: 0, wrongHints: [null, "Letterlijk.", "Niet — het gaat om wat je zegt.", "Andersom."] },
+      { q: "*'Met twee maten meten.'* — betekenis?", options: ["Iets oneerlijk beoordelen", "Iets twee keer nameten", "Iedereen precies gelijk behandelen", "Twee dingen tegelijk doen"], answer: 0, wrongHints: [null, "Letterlijk.", "Andersom.", "Niet — het gaat om eerlijk beoordelen."] },
+      { q: "*'Knollen voor citroenen verkopen.'* — betekenis?", options: ["Mensen bedriegen", "Groente verkopen op de markt", "Eerlijk zaken doen", "Heel goedkoop verkopen"], answer: 0, wrongHints: [null, "Letterlijk.", "Andersom.", "Niet — het gaat erom dat iets anders is dan beloofd."] },
     ],
   },
 ];

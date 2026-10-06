@@ -21,14 +21,9 @@ const steps = [
     checks: [
       {
         q: "**Verdrag van Versailles** (1919) gaf Duitsland:",
-        options: [
-          "Schuld + sancties + beperking leger + herstelbetalingen",
-          "Beloningen",
-          "Gelijkwaardige behandeling",
-          "Niets"
-        ],
+        options: ["Schuld, sancties en herstelbetalingen", "Beloningen en nieuwe kolonies", "Gelijkwaardige behandeling", "Extra grondgebied in het oosten"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel veel."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Tegenovergesteld — Duitsland verloor juist grond."],
         uitlegPad: {
           stappen: [
             { titel: "Vernederend voor Duitsland", tekst: "DE moest 'oorlogsschuld' accepteren (artikel 231), 132 mld goudmark betalen, leger inkrimpen tot 100k man, kolonies + grondgebied verliezen. Werd als 'Diktat' ervaren. Voedde later extremisme + Hitlers belofte 'recht doen'. Veel historici zien het als een van de oorzaken van WO2." },
@@ -48,14 +43,9 @@ const steps = [
       },
       {
         q: "**Lebensraum** = ?",
-        options: [
-          "Leefruimte voor 'Arisch ras' — expansie naar Oost-Europa",
-          "Vrije markt",
-          "Religieuze tolerantie",
-          "Geen ideologie"
-        ],
+        options: ["Leefruimte in Oost-Europa", "Vrije markt", "Religieuze tolerantie", "Koloniën in Afrika"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet — Hitler zocht land dichter bij Duitsland."],
         uitlegPad: {
           stappen: [
             { titel: "Rechtvaardiging invasie", tekst: "Hitler: DE bevolking groeit, heeft meer ruimte nodig. Oost-Europa (Polen, Oekraïne, Rusland) zou herkoloniseerd worden als DE leefruimte. Slaven 'inferieur' → onderdrukken of uitroeien. Argument voor invasie 1941 USSR (Operatie Barbarossa)." },
@@ -65,14 +55,9 @@ const steps = [
       },
       {
         q: "**München-akkoord (1938)**:",
-        options: [
-          "UK/FR geven Sudetenland aan Hitler — appeasement",
-          "Oorlogsverklaring",
-          "Vredesakkoord WO2-einde",
-          "Olympische Spelen"
-        ],
+        options: ["Sudetenland naar Duitsland", "Oorlogsverklaring", "Vredesakkoord WO2-einde", "Olympische Spelen"],
         answer: 0,
-        wrongHints: [null, "Niet — uitstel.", "Niet — WO2 was toen nog niet begonnen.", "Onzin."],
+        wrongHints: [null, "Niet — uitstel.", "Niet — WO2 was toen nog niet begonnen.", "Niet — de Spelen in Duitsland waren in 1936 in Berlijn."],
         uitlegPad: {
           stappen: [
             { titel: "Appeasement faalde", tekst: "Chamberlain (UK) + Daladier (FR) hoopten oorlog te vermijden door Hitler Sudetenland te geven. Hitler beloofde verdere expansie te staken. 11 maanden later: invasie Polen. Klassieke les: dictatoriale agressie niet sussen via concessies. 'Peace for our time' werd ironie." },
@@ -82,7 +67,7 @@ const steps = [
       },
       {
         q: "**WO2 begon** met DE-invasie van:",
-        options: ["Polen (1 sept 1939)", "Frankrijk", "USSR", "Nederland"],
+        options: ["Polen", "Frankrijk", "USSR", "Nederland"],
         answer: 0,
         wrongHints: [null, "Niet — mei 1940.", "Niet — juni 1941.", "Niet — mei 1940."],
         uitlegPad: {
@@ -103,7 +88,7 @@ const steps = [
     checks: [
       {
         q: "Nederland werd door DE bezet in:",
-        options: ["Mei 1940 (10-14 mei)", "September 1939", "Juni 1941", "Juli 1944"],
+        options: ["Mei 1940", "September 1939", "Juni 1941", "Juli 1944"],
         answer: 0,
         wrongHints: [null, "Niet — DE viel Polen aan.", "Niet — USSR-invasie.", "Niet — toen was Nederland al vier jaar bezet."],
         uitlegPad: {
@@ -115,14 +100,9 @@ const steps = [
       },
       {
         q: "**Stalingrad** (1942-43):",
-        options: [
-          "Een van de bloedigste slagen ooit, ~2 mln slachtoffers, DE verliest — keerpunt oost",
-          "DE wint",
-          "Geen militair belang",
-          "Sovjet-stad zonder strijd"
-        ],
+        options: ["Duitse nederlaag, keerpunt in het oosten", "Duitse overwinning", "Slag zonder militair belang", "Stad die zonder strijd viel"],
         answer: 0,
-        wrongHints: [null, "Stalingrad staat juist bekend als een zware nederlaag voor Duitsland — wie hield uiteindelijk stand?", "Een slag met ~2 miljoen slachtoffers was allesbehalve onbelangrijk — waarom noemen historici dit een keerpunt?", "Er werd juist maandenlang huis-voor-huis gevochten in de stad — 'zonder strijd' klopt hier zeker niet."],
+        wrongHints: [null, "Kijk naar wie aan het eind van de slag nog stond — en wie zich moest overgeven.", "Een slag met ~2 miljoen slachtoffers was allesbehalve onbelangrijk — waarom noemen historici dit een keerpunt?", "Er werd juist maandenlang huis-voor-huis gevochten in de stad — 'zonder strijd' klopt hier zeker niet."],
         uitlegPad: {
           stappen: [
             { titel: "Hitler-megalomanie", tekst: "Hitler wilde Stalingrad (naar Stalin genoemd) ten koste van alles. Sovjets vochten om elke straat. Winter 1942-43: 6e Leger DE omsingeld, geen ontsnapping toegestaan. Februari 1943 capitulatie. ~800 000 DE verliezen + ~1,2 mln Sovjet. Daarna USSR op offensief. Keerpunt aan oostfront." },
@@ -132,12 +112,7 @@ const steps = [
       },
       {
         q: "**D-Day** (6 juni 1944):",
-        options: [
-          "Geallieerde landing Normandië, ~160 000 troepen 1 dag",
-          "Pearl Harbor",
-          "Bevrijding Auschwitz",
-          "Hiroshima"
-        ],
+        options: ["Landing in Normandië", "Pearl Harbor", "Bevrijding Auschwitz", "Hiroshima"],
         answer: 0,
         wrongHints: [null, "Niet — dec 1941.", "Niet — jan 1945.", "Niet — aug 1945."],
         uitlegPad: {
@@ -149,14 +124,9 @@ const steps = [
       },
       {
         q: "**Hongerwinter** (1944-45):",
-        options: [
-          "West-NL bezet, geen voedsel-toelevering, ~20 000 doden",
-          "Korte winter",
-          "Italiaanse hongersnood",
-          "Geen relatie WO2"
-        ],
+        options: ["Hongersnood in bezet West-NL", "Korte, zachte winter", "Italiaanse hongersnood", "Hongersnood in Rusland"],
         answer: 0,
-        wrongHints: [null, "Niet — wel ernstig.", "Niet.", "Wel."],
+        wrongHints: [null, "Niet — wel ernstig.", "Niet.", "Die grote Russische hongersnood was al rond 1921."],
         uitlegPad: {
           stappen: [
             { titel: "Wraak voor spoorwegstaking", tekst: "Sept 1944: NL-spoorwegen staakten om geallieerde-bevrijding te steunen. DE blokkeerde voedsel-toelevering aan WEST-NL (Randstad). Strenge winter + bezetting → mensen aten tulpenbollen + suikerbieten + brandnetels. ~20 000 doden, vooral ouderen. Foto's hongerige kinderen wereldwijd bekend." },
@@ -166,7 +136,7 @@ const steps = [
       },
       {
         q: "**V-E Day** (Victory Europe) is:",
-        options: ["8 mei 1945 — DE-capitulatie", "5 mei 1945", "6 juni 1944", "15 augustus 1945"],
+        options: ["8 mei 1945", "5 mei 1945", "6 juni 1944", "15 augustus 1945"],
         answer: 0,
         wrongHints: [null, "NL-specifieke bevrijdingsdag.", "Niet — D-Day.", "Niet — V-J Day (Japan)."],
         uitlegPad: {
@@ -204,14 +174,9 @@ const steps = [
       },
       {
         q: "**Wannsee-conferentie** (jan 1942):",
-        options: [
-          "Nazi-plan voor systematische uitroeiing alle Europese joden (Endlösung)",
-          "Vredesakkoord",
-          "Olympische Spelen plan",
-          "Economie-overleg"
-        ],
+        options: ["Nazi-plan om alle Europese joden te doden", "Vredesakkoord", "Plan voor Olympische Spelen", "Overleg over oorlogseconomie"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Onzin.", "Onzin."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet — de Spelen in Berlijn waren al in 1936.", "Niet — het ging over iets veel gruwelijkers."],
         uitlegPad: {
           stappen: [
             { titel: "Bureaucratie van moord", tekst: "Heydrich + 14 hoge nazi-ambtenaren bij Wannsee-meer Berlijn. Lijst 11 mln joden + organisatorische uitvoering. Bewijst: Holocaust was PLAN, niet impuls. Wannsee-villa nu Gedenkstätte. Notities (Eichmann) ontdekt na oorlog — onmiskenbaar bewijs." },
@@ -221,12 +186,7 @@ const steps = [
       },
       {
         q: "**Anne Frank** stierf:",
-        options: [
-          "Bergen-Belsen, feb 1945, tyfus (15 jaar oud)",
-          "Auschwitz",
-          "Westerbork",
-          "Amsterdam"
-        ],
+        options: ["Bergen-Belsen", "Auschwitz", "Westerbork", "Amsterdam"],
         answer: 0,
         wrongHints: [null, "Wel geweest, niet gestorven daar.", "Idem.", "Onderdook daar, niet gestorven."],
         uitlegPad: {
@@ -238,12 +198,7 @@ const steps = [
       },
       {
         q: "**Februaristaking** (25-26 feb 1941):",
-        options: [
-          "Amsterdammers protesteerden tegen jodenvervolging — uniek openlijk massaprotest in bezet West-Europa",
-          "Voor hogere lonen",
-          "Voor koningin",
-          "Tegen voedsel-tekort"
-        ],
+        options: ["Protest tegen jodenvervolging", "Voor hogere lonen", "Voor de koningin", "Tegen voedseltekort"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet hoofdreden.", "Niet."],
         uitlegPad: {
@@ -255,14 +210,9 @@ const steps = [
       },
       {
         q: "**Oskar Schindler** redde:",
-        options: [
-          "~1100 joden door werk in eigen fabriek (DE-zakenman)",
-          "Niemand",
-          "Hele dorpen",
-          "Alleen familie"
-        ],
+        options: ["~1100 joden", "Niemand", "Hele dorpen", "Alleen zijn eigen familie"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Te veel.", "Niet — vreemden."],
+        wrongHints: [null, "Tegenovergesteld.", "Te veel.", "Niet — hij redde vooral vreemden."],
         uitlegPad: {
           stappen: [
             { titel: "Film 'Schindler's List' 1993", tekst: "DE-zakenman + NSDAP-lid. Maakte aanvankelijk winst met joodse dwangarbeiders. Geleidelijk veranderde mening → kostte fortuin om hen veilig te houden. Met zijn 'lijst' redde hij ~1100 mensen van de dood. Stierf arm 1974, begraven op de Sionsberg in Jeruzalem. Film Spielberg won 7 Oscars." },
@@ -281,12 +231,7 @@ const steps = [
     checks: [
       {
         q: "**Pearl Harbor** = aanval van:",
-        options: [
-          "Japan op Amerikaanse vloot, Hawaii, 7 dec 1941",
-          "DE op USSR",
-          "VS op Japan",
-          "China op Japan"
-        ],
+        options: ["Japan op de VS", "Duitsland op de USSR", "VS op Japan", "China op Japan"],
         answer: 0,
         wrongHints: [null, "Niet — Barbarossa.", "Tegenovergesteld.", "Niet — Japan viel China binnen."],
         uitlegPad: {
@@ -322,7 +267,7 @@ const steps = [
       },
       {
         q: "**Indonesië-onafhankelijkheid** uitgeroepen op:",
-        options: ["17 aug 1945 (Soekarno + Hatta)", "15 aug 1945", "8 mei 1945", "27 dec 1949"],
+        options: ["17 aug 1945", "15 aug 1945", "8 mei 1945", "27 dec 1949"],
         answer: 0,
         wrongHints: [null, "Niet — Japan capituleert die dag.", "Niet — V-E day Europe.", "Niet — NL-erkenning."],
         uitlegPad: {
@@ -334,14 +279,9 @@ const steps = [
       },
       {
         q: "**Bloedbad van Nanjing** (dec 1937):",
-        options: [
-          "Japanse troepen vermoordden ~300k Chinezen in 6 weken — oorlogsmisdaad",
-          "Chinese overwinning",
-          "Vrede getekend",
-          "Geen relevant feit"
-        ],
+        options: ["Japanse massamoord op Chinezen", "Chinese overwinning", "Vrede getekend", "Japanse nederlaag tegen de VS"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel zeer relevant."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet — de VS was in 1937 nog niet in oorlog met Japan."],
         uitlegPad: {
           stappen: [
             { titel: "'Rape of Nanking'", tekst: "Toen Japanse leger de Chinese hoofdstad Nanjing innam: massamoord + verkrachting van Chinese burgers + krijgsgevangenen. Schattingen 200-300k doden in 6 weken. Eén van ergste oorlogsmisdaden 20e eeuw. Belangrijke reden voor naoorlogse anti-Japan-sentiment in China. Sommige Japanse nationalisten ontkennen schaal nog steeds — diplomatiek spanningsveld." },
@@ -360,12 +300,7 @@ const steps = [
     checks: [
       {
         q: "**Marshall-plan** was:",
-        options: [
-          "$13 mld VS-hulp voor wederopbouw West-Europa (1948-52)",
-          "Militair plan",
-          "Energie-plan",
-          "Russische ontwikkelingshulp"
-        ],
+        options: ["Amerikaanse hulp voor wederopbouw", "Militair plan", "Energie-plan", "Russische ontwikkelingshulp"],
         answer: 0,
         wrongHints: [null, "Niet militair.", "Niet specifiek.", "Tegenovergesteld."],
         uitlegPad: {
@@ -384,7 +319,7 @@ const steps = [
           "Geen rechtszitting"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Onjuist.", "Wel."],
+        wrongHints: [null, "Tegenovergesteld.", "Onjuist.", "Er waren juist grote rechtszaken in Neurenberg."],
         uitlegPad: {
           stappen: [
             { titel: "Individuele verantwoordelijkheid", tekst: "Klassiek beginsel: ook ambtenaren + soldaten zijn verantwoordelijk voor hun handelingen. Eichmann probeerde dit verweer ('ich war nur ein kleines Rädchen') — werd verworpen. Vandaag basis voor het Internationaal Strafhof in Den Haag (ICC) waar oorlogsmisdaden berecht worden." },
@@ -394,7 +329,7 @@ const steps = [
       },
       {
         q: "**Israël** werd onafhankelijk in:",
-        options: ["1948 (14 mei)", "1939", "1945", "1967"],
+        options: ["1948", "1939", "1945", "1967"],
         answer: 0,
         wrongHints: [null, "Niet — start WO2.", "Niet — einde WO2.", "Niet — Zesdaagse Oorlog."],
         uitlegPad: {
@@ -406,14 +341,9 @@ const steps = [
       },
       {
         q: "**Europese integratie** (EGKS → EU) had als hoofddoel:",
-        options: [
-          "Oorlog tussen EU-landen onmogelijk maken via economische verwevenheid",
-          "Geld verdienen",
-          "Engels verspreiden",
-          "Religie"
-        ],
+        options: ["Vrede door economische samenwerking", "Eén Europees leger vormen", "Engels verspreiden", "Eén godsdienst voor Europa"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet de bedoeling.", "Niet."],
+        wrongHints: [null, "Dat Europese leger kwam er juist níét — waarom deelden landen hun kolen en staal?", "Niet de bedoeling.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Schuman + Monnet", tekst: "1951: kolen + staal-industrie (oorlogsbasis) onder gemeenschappelijk bestuur Schumanplan. Idee: landen die handel + economie delen, gaan geen oorlog meer voeren. Werkt: geen oorlog meer tussen EU-leden sinds 1945. Nobelvredesprijs 2012 voor EU." },
@@ -423,9 +353,9 @@ const steps = [
       },
       {
         q: "**Welke genocide sinds WO2** vond plaats in 1994?",
-        options: ["Rwanda (~800k in 100 dagen)", "Bosnië", "Cambodja", "Geen"],
+        options: ["Rwanda", "Bosnië", "Cambodja", "Darfur"],
         answer: 0,
-        wrongHints: [null, "De genocide van Srebrenica was in juli 1995.", "1975-79.", "Wel."],
+        wrongHints: [null, "De genocide van Srebrenica was in juli 1995.", "1975-79.", "Darfur was vanaf 2003."],
         uitlegPad: {
           stappen: [
             { titel: "Hutu vs Tutsi", tekst: "Apr 1994: Hutu-extremisten begonnen systematische slachting Tutsi-bevolking + gematigde Hutu. ~800 000 doden in 100 dagen via machetes + geweren. VN-vredesmacht trok zich grotendeels terug. Internationale gemeenschap verzuimde. Belangrijke les: 'Nooit Weer' is geen automatische garantie. Sindsdien meer aandacht voor preventie genocide." },

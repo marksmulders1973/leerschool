@@ -42,7 +42,7 @@ const steps = [
           stappen: [
             { titel: "Wat doet een begroting?", tekst: "Een PLAN VOORAF voor je geld. Helpt om te zien of je rondkomt, voor je in de problemen zit." },
             { titel: "Wat staat erin?", tekst: "INKOMSTEN (loon, uitkering, zakgeld) + UITGAVEN (huur, eten, kleding). Verwacht voor de komende periode." },
-            { titel: "Loop opties langs", tekst: "A: 'plan voor meer inkomsten' — te beperkt, begroting is niet alleen verdienen ✗. B: 'plan om te bezuinigen' — te beperkt, een begroting is een OVERZICHT, geen besluit ✗. C: 'bezittingen + schulden' = vermogen-overzicht, niet inkomsten/uitgaven ✗. D: 'verwachte inkomsten + uitgaven' ✓." },
+            { titel: "Loop opties langs", tekst: "'Plan voor meer inkomsten' — te beperkt, begroting is niet alleen verdienen ✗. 'Plan om te bezuinigen' — te beperkt, een begroting is een OVERZICHT, geen besluit ✗. 'Bezittingen + schulden' = vermogen-overzicht, niet inkomsten/uitgaven ✗. 'Verwachte inkomsten + uitgaven' ✓." },
           ],
           woorden: [
             { woord: "begroting", uitleg: "Plan vooraf van inkomsten + uitgaven over een periode (week/maand/jaar)." },
@@ -216,7 +216,7 @@ const steps = [
           stappen: [
             { titel: "Wat betekent modaal?", tekst: "Modus = wat het MEEST voorkomt. Modaal inkomen = inkomen dat het MEEST verdiend wordt in NL." },
             { titel: "Niet hetzelfde als...", tekst: "Gemiddelde (alle inkomens opgeteld / aantal). Mediaan (middelste). Modaal = vaakst voorkomende, los van extreem rijk/arm." },
-            { titel: "Loop opties langs", tekst: "A: minimumloon ✗. B: gemiddeld inkomen ✗ (verschilt). C: meest voorkomend ✓. D: netto inkomen loondienst (te vaag) ✗." },
+            { titel: "Loop opties langs", tekst: "Minimumloon ✗. Gemiddeld inkomen ✗ (verschilt). Meest voorkomend ✓. Netto inkomen loondienst (te vaag) ✗." },
           ],
           woorden: [
             { woord: "modaal", uitleg: "Modus uit statistiek = wat het VAAKST voorkomt. NL ~€44.000 bruto/jaar (2024)." },

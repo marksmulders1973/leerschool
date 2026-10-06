@@ -46,9 +46,9 @@ const steps = [
       },
       {
         q: "Wat zijn **hormonen**?",
-        options: ["Stoffen die signalen geven in lichaam", "Vitaminen", "Bot", "Spier"],
+        options: ["Stoffen die signalen geven in je lichaam", "Stoffen die je alleen via je eten binnenkrijgt", "Harde delen die je lichaam steun geven", "Weefsel waarmee je lichaam beweegt"],
         answer: 0,
-        wrongHints: [null, "Anders.", "Niet.", "Niet."],
+        wrongHints: [null, "Dat zijn vitaminen. Hormonen maakt je lichaam zelf.", "Dat zijn botten. Hormonen reizen door je bloed.", "Dat zijn spieren. Hormonen reizen door je bloed."],
         uitlegPad: {
           stappen: [
             { titel: "Wat zijn hormonen?", tekst: "**Hormonen** zijn chemische stoffen die jouw lichaam zelf maakt. Ze werken als **signaal-stoffen**: ze sturen instructies van het ene orgaan naar het andere via het bloed." },
@@ -152,7 +152,7 @@ const steps = [
       },
       {
         q: "Waarom heb je in de puberteit **stemmingswisselingen**?",
-        options: ["Het emotie-deel van je brein ontwikkelt eerst, het verstandige deel later", "Door wat je eet", "Er is geen oorzaak", "Door het weer"],
+        options: ["Je brein is nog volop in ontwikkeling", "Door wat je eet", "Er is geen oorzaak", "Door het weer"],
         answer: 0,
         wrongHints: [null, "Eten is niet de hoofdoorzaak.", "Er is wél een oorzaak — kijk naar je brein.", "Het weer is niet de oorzaak."],
       },
@@ -182,7 +182,7 @@ const steps = [
       { q: "Tot welke leeftijd **brein ontwikkelt**?", options: ["~25 jr", "12 jr", "8 jr", "60 jr"], answer: 0, wrongHints: [null, "Te jong.", "Te jong.", "Te oud."] },
       {
         q: "Wat is een **groeispurt**?",
-        options: ["Periode waarin je snel langer wordt (soms 10+ cm/jaar)", "Pijn in benen", "Trainen om te groeien", "Eten voor groei"],
+        options: ["Periode waarin je snel langer wordt", "Pijn in benen", "Trainen om te groeien", "Eten voor groei"],
         answer: 0,
         wrongHints: [null, "Groeipijnen bestaan WEL maar dat is iets anders.", "Niet — groei is genetisch + hormonaal.", "Eten helpt maar IS niet de groeispurt zelf."],
         uitlegPad: {
@@ -207,7 +207,7 @@ const steps = [
       },
       {
         q: "Wat helpt **botten sterk** maken tijdens groei?",
-        options: ["Calcium (melk/kaas/broccoli) + vitamine D + bewegen", "Veel zoetigheid", "Lang stilzitten", "Niet eten"],
+        options: ["Calcium, vitamine D en bewegen", "Veel zoetigheid", "Lang stilzitten", "Niet eten"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — zoetigheid bouwt geen sterke botten op.", "Niet — bewegen is juist nodig voor sterke botten.", "Tegenovergesteld — voeding is essentieel."],
         uitlegPad: {
@@ -232,7 +232,7 @@ const steps = [
       },
       {
         q: "Het **brein in puberteit** — wat is uniek?",
-        options: ["Beslissings-deel ontwikkelt zich laatst — daardoor soms impulsief", "Brein krimpt", "Brein groeit niet meer", "Brein verandert niet"],
+        options: ["Het beslissings-deel wordt als laatste klaar", "Brein krimpt", "Brein groeit niet meer", "Brein verandert niet"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — brein verandert juist sterk.", "Tegenovergesteld — veel groei in puberteit.", "Tegenovergesteld."],
         uitlegPad: {
@@ -257,7 +257,7 @@ const steps = [
       },
       { q: "Hoeveel uur **slaap** heeft een **tiener** ongeveer nodig per nacht?", options: ["8-10 uur", "4-5 uur", "12-14 uur", "Zo min mogelijk"], answer: 0, wrongHints: [null, "Te weinig — slaap is belangrijk in puberteit.", "Te veel.", "Onjuist."] },
       { q: "Welke **hormonen** spelen vooral een rol bij **jongens in de puberteit**?", options: ["Testosteron", "Oestrogeen", "Insuline", "Adrenaline"], answer: 0, wrongHints: [null, "Speelt vooral bij meisjes een grote rol.", "Bloedsuiker.", "Stress."] },
-      { q: "Wat is **acne** (jeugdpuistjes)?", options: ["Ontstoken talgklieren in de huid", "Een ziekte van de longen", "Schade aan tanden", "Een verkleuring van de ogen"], answer: 0, wrongHints: [null, "Niet — komt op huid.", "Niet bij huid.", "Niet bij huid."] },
+      { q: "Wat is **acne** (jeugdpuistjes)?", options: ["Ontstoken talgklieren in de huid", "Een ziekte van de longen", "Schade aan tanden", "Een verkleuring van de ogen"], answer: 0, wrongHints: [null, "Puistjes zitten niet in je longen — waar zie je ze?", "Tanden hebben er niets mee te maken.", "Ogen hebben er niets mee te maken."] },
       { q: "Wat is **belangrijk** om gezond door de puberteit te komen?", options: ["Gezond eten, sport, voldoende slaap", "Alleen games spelen", "Niet leren", "Stress hebben"], answer: 0, wrongHints: [null, "Niet primair gezond.", "Onjuist.", "Tegenovergesteld."] },
     ],
   },

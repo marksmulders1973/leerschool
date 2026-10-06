@@ -46,7 +46,7 @@ ${lines}
 const steps = [
   {
     title: "Wat is cijferend rekenen?",
-    explanation: "**Cijferend rekenen** is het rekenen onder elkaar in **kolommen** — net zoals je het op papier doet. Het werkt voor grote getallen waar 'uit het hoofd' niet meer lukt.\n\n**De truc**: zet getallen **netjes onder elkaar** zodat eenheden, tientallen, honderdtallen elk in hun eigen kolom staan.\n\n**Vergelijking**:\n• Hoofdrekenen: 23 + 14 = 37 *(snel uit je hoofd)*.\n• Cijferend: 487 + 326 = ? *(handig om op te schrijven)*.\n\n**De vier basis-bewerkingen** die je kunt cijferen:\n• **Optellen** (+) — kolomsgewijs, met onthouden bij 10.\n• **Aftrekken** (−) — kolomsgewijs, met lenen.\n• **Vermenigvuldigen** (×) — cijfer voor cijfer, met onthouden.\n• **Delen** (:) — bus-bewerking of staartdeling.\n\n**Belangrijk om te onthouden**:\n• Werk altijd van **rechts naar links** (eenheden eerst, dan tientallen, dan honderdtallen).\n• Schrijf netjes onder elkaar — anders gaat het mis.\n• Bij optellen onthoud je een 'overschietje'. Bij aftrekken leen je van de buurman.\n\n**Toets-context**:\nVeel toetsvragen vragen om grote berekeningen die je écht moet **opschrijven**. Cijferen kost tijd maar is **betrouwbaar**.",
+    explanation: "**Cijferend rekenen** is het rekenen onder elkaar in **kolommen** — net zoals je het op papier doet. Het werkt voor grote getallen waar 'uit het hoofd' niet meer lukt.\n\n**De truc**: zet getallen **netjes onder elkaar** zodat eenheden, tientallen, honderdtallen elk in hun eigen kolom staan.\n\n**Vergelijking**:\n• Hoofdrekenen: 23 + 14 = 37 *(snel uit je hoofd)*.\n• Cijferend: 487 + 326 = ? *(handig om op te schrijven)*.\n\n**De vier basis-bewerkingen** die je kunt cijferen:\n• **Optellen** (+) — kolomsgewijs, met onthouden bij 10.\n• **Aftrekken** (−) — kolomsgewijs, met lenen.\n• **Vermenigvuldigen** (×) — cijfer voor cijfer, met onthouden.\n• **Delen** (:) — bus-bewerking of staartdeling.\n\n**Belangrijk om te onthouden**:\n• Bij optellen, aftrekken en vermenigvuldigen werk je van **rechts naar links** (eenheden eerst, dan tientallen, dan honderdtallen). Bij delen juist van links naar rechts.\n• Schrijf netjes onder elkaar — anders gaat het mis.\n• Bij optellen onthoud je een 'overschietje'. Bij aftrekken leen je van de buurman.\n\n**Toets-context**:\nVeel toetsvragen vragen om grote berekeningen die je écht moet **opschrijven**. Cijferen kost tijd maar is **betrouwbaar**.",
     checks: [
       {
         q: "Wanneer is **cijferend rekenen handig**?",
@@ -63,7 +63,7 @@ const steps = [
         },
       },
       {
-        q: "Bij cijferend rekenen werk je **van** ... **naar** ...",
+        q: "Bij cijferend **optellen** werk je **van** ... **naar** ...",
         options: ["Rechts naar links","Links naar rechts","Boven naar onder","Maakt niet uit"],
         answer: 0,
         wrongHints: [null,"Andersom — eenheden gaan eerst.","Niet horizontaal — kolomsgewijs.","Het maakt wél uit — anders gaat het overschietje fout."],
@@ -140,7 +140,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Stappen", tekst: "5+7=12. 8+6+1=15. 9+5+1=15. 4+1+1=6. Antwoord 6552." },
-            { titel: "Schat", tekst: "5000+1500=6500. 6552 past. Andere opties (6452, 5552) zijn te ver van schatting." },
+            { titel: "Schat", tekst: "5000+1500=6500. 6552 past. 5552 valt door de schatting meteen af; of het 6452 of 6552 is, zie je pas door nauwkeurig te cijferen." },
           ],
           woorden: [{ woord: "schatting", uitleg: "Grof berekenen om te checken of antwoord realistisch is." }],
           theorie: "Bij grote sommen: schat eerst, reken nauwkeurig, vergelijk.",
@@ -294,14 +294,14 @@ const steps = [
           theorie: "Bij delen: zoek welk getal × deler = origineel. ÷9 → zoek in 9-tafel.",
           voorbeelden: [{ type: "tafel", tekst: "9×5=45 → 9×50=450. Dus 450÷9=50." }],
           basiskennis: [{ onderwerp: "Tafels", uitleg: "9-tafel: 9, 18, 27, 36, 45, 54..." }],
-          niveaus: { basis: "9×50=450 → 450÷9=50.", simpeler: "Welk getal × 9 = 450? Probeer: 50×9=450 ✓. Direct A.", nogSimpeler: "50" },
+          niveaus: { basis: "9×50=450 → 450÷9=50.", simpeler: "Welk getal × 9 = 450? Probeer: 50×9=450 ✓.", nogSimpeler: "50" },
         },
       },
       {
         q: "**78 ÷ 6 — wat is de uitkomst (met of zonder rest)?**",
         options: ["13","12 rest 6","13 rest 1","12"],
         answer: 0,
-        wrongHints: [null,"Als er een rest van 6 is, past de 6 er nog één keer in — dus 13, zonder rest.","Kijk nog eens: 13 × 6 = 78 precies, er blijft niets over.","Te weinig: 12 × 6 = 72, er blijven nog 6 over — dat is nog één keer 6."],
+        wrongHints: [null,"Een rest moet altijd kleiner zijn dan de deler. Kan een rest van 6 bij delen door 6?","Doe een proef: vermenigvuldig je uitkomst met 6 en kijk wat er echt overblijft.","Doe een proef: hoeveel is jouw antwoord keer 6, en hoeveel van de 78 blijft er dan over?"],
         uitlegPad: {
           stappen: [
             { titel: "Reken", tekst: "13×6=78 (precies). Geen rest. Antwoord: 13." },
@@ -376,7 +376,7 @@ const steps = [
         q: "Een fietsenstalling heeft **rij A: 47 fietsen** en **rij B: 68 fietsen**. **Verschil**?",
         options: ["21","115","20","27"],
         answer: 0,
-        wrongHints: [null,"Niet samenvoegen — 'verschil' = aftrekken.","Te weinig — controleer: 68−47.","Te veel — heb je 68−40 gedaan?"],
+        wrongHints: [null,"Niet samenvoegen — 'verschil' = aftrekken.","Te weinig — controleer: 68−47.","Te veel — reken de eenheden nog eens na."],
         uitlegPad: {
           stappen: [
             { titel: "Welke bewerking?", tekst: "'Verschil' = aftrekken. 68 − 47." },
@@ -502,7 +502,7 @@ const steps = [
       { q: "**240 ÷ 12** = ?", options: ["20","12","24","30"], answer: 0, wrongHints: [null, "Dat is de deler.", "Te laag.", "Te hoog."] },
       { q: "Rond af: **23,7** op een heel getal", options: ["24","23","23,7","20"], answer: 0, wrongHints: [null, "Niet — 7 ≥ 5.", "Dat is niet afgerond.", "Te ver."] },
       { q: "Wat is **17 × 6**?", options: ["102","112","104","92"], answer: 0, wrongHints: [null, "Niet — controleer.", "Niet.", "Te laag."] },
-      { q: "**1.234 + 567** = ?", options: ["1.801","1.701","1.811","1.901"], answer: 0, wrongHints: [null, "Te weinig: bij 3 + 6 + 1 heb je het onthoudje van 4 + 7 = 11 vergeten.", "Te veel: tel de tientallen nog eens. 3 + 6 + 1 = 10, dus je schrijft 0 en onthoudt 1.", "Te veel: tel de honderdtallen nog eens. 2 + 5 + 1 = 8, niet 9."] },
+      { q: "**1.234 + 567** = ?", options: ["1.801","1.701","1.811","1.901"], answer: 0, wrongHints: [null, "Te weinig — heb je het onthoudje uit de tientallen meegeteld bij de honderdtallen?", "Te veel — tel de tientallen-kolom nog eens na.", "Te veel — tel de honderdtallen-kolom nog eens na."] },
       { q: "**1.000 − 245** = ?", options: ["755","855","655","745"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet — bijna."] },
       { q: "**45 × 11** = ?", options: ["495","450","405","550"], answer: 0, wrongHints: [null, "Dat is ×10.", "Niet.", "Niet."] },
       { q: "**100 ÷ 25** = ?", options: ["4","5","2","10"], answer: 0, wrongHints: [null, "Tel op in stappen van 25: 25, 50, 75, 100 — hoeveel sprongen zijn dat precies?", "2 keer 25 is pas 50 — is dat al 100? Blijf verder tellen.", "10 keer 25 zou 250 zijn, veel te veel — welk getal keer 25 geeft precies 100?"] },

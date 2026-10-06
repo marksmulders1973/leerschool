@@ -20,7 +20,7 @@ const chapters = [
 const steps = [
   {
     title: "Duits — drie geslachten",
-    explanation: "In het Duits heeft elk zelfstandig naamwoord een **geslacht**: mannelijk, vrouwelijk of onzijdig. Dit bepaalt welk **lidwoord** je gebruikt:\n\n• **der** = mannelijk *(der Mann = de man)*\n• **die** = vrouwelijk *(die Frau = de vrouw)*\n• **das** = onzijdig *(das Kind = het kind)*\n• **die** = meervoud *(de Männer, de Frauen, de Kinder)*\n\n**In het Nederlands** hebben we 'de' en 'het' — geen drie geslachten zoals Duits.\n\n**Probleem**: het geslacht is in het Duits niet altijd logisch.\n• das Mädchen *(meisje, onzijdig!)* \n• die Sonne *(zon, vrouwelijk)* \n• der Mond *(maan, mannelijk)*\n\nJe moet daarom het **lidwoord erbij leren** wanneer je een woord leert.\n\n**Truc**: leer woorden ALTIJD met lidwoord:\n❌ Tisch *(tafel)* \n✓ **der** Tisch",
+    explanation: "In het Duits heeft elk zelfstandig naamwoord een **geslacht**: mannelijk, vrouwelijk of onzijdig. Dit bepaalt welk **lidwoord** je gebruikt:\n\n• **der** = mannelijk *(der Mann = de man)*\n• **die** = vrouwelijk *(die Frau = de vrouw)*\n• **das** = onzijdig *(das Kind = het kind)*\n• **die** = meervoud *(die Männer, die Frauen, die Kinder)*\n\n**In het Nederlands** hebben we 'de' en 'het' — geen drie geslachten zoals Duits.\n\n**Probleem**: het geslacht is in het Duits niet altijd logisch.\n• das Mädchen *(meisje, onzijdig!)* \n• die Sonne *(zon, vrouwelijk)* \n• der Mond *(maan, mannelijk)*\n\nJe moet daarom het **lidwoord erbij leren** wanneer je een woord leert.\n\n**Truc**: leer woorden ALTIJD met lidwoord:\n❌ Tisch *(tafel)* \n✓ **der** Tisch",
     svg: `<svg viewBox="0 0 300 180">
 <rect x="20" y="40" width="80" height="80" rx="10" fill="${COLORS.mas}" opacity="0.30" stroke="${COLORS.mas}" stroke-width="2"/>
 <text x="60" y="70" text-anchor="middle" fill="${COLORS.mas}" font-size="14" font-family="Arial" font-weight="bold">der</text>
@@ -55,7 +55,7 @@ const steps = [
         q: "Welk lidwoord hoort bij **Mädchen** (meisje)?",
         options: ["das", "die", "der", "den"],
         answer: 0,
-        wrongHints: [null, "Klinkt logisch (meisje = vrouwelijk?), maar in Duits is 'Mädchen' onzijdig — door de uitgang -chen.", "Mannelijk — past niet.", "Naamval, geen basis-lidwoord."],
+        wrongHints: [null, "Klinkt logisch (meisje = vrouwelijk?), maar in het Duits bepaalt hier de uitgang -chen het geslacht. Welk geslacht hoort daarbij?", "Mannelijk — past niet.", "Naamval, geen basis-lidwoord."],
         uitlegPad: {
           stappen: [{ titel: "-chen = das", tekst: "Mädchen eindigt op -chen → onzijdig → das." }],
           woorden: [{ woord: "-chen / -lein", uitleg: "verkleinwoorden → altijd das" }],
@@ -85,7 +85,7 @@ const steps = [
         q: "Welk geslacht heeft **Zeitung** (krant)?",
         options: ["Vrouwelijk", "Mannelijk", "Onzijdig", "Meervoud"],
         answer: 0,
-        wrongHints: [null, "Niet — eindigt op -ung = vrouwelijk.", "Niet — -ung is vrouwelijk.", "Het is enkelvoud."],
+        wrongHints: [null, "Kijk naar de uitgang -ung: welk geslacht hoort daarbij?", "Kijk naar de uitgang -ung en zoek die op in het rijtje uit de uitleg.", "Het is enkelvoud."],
         uitlegPad: {
           stappen: [{ titel: "-ung = die", tekst: "Zeitung eindigt op -ung → vrouwelijk → die." }],
           woorden: [{ woord: "-ung -heit -keit", uitleg: "vrouwelijke uitgangen" }],
@@ -99,7 +99,7 @@ const steps = [
         q: "Wat is het geslacht van **Häuschen** (huisje)?",
         options: ["Onzijdig (das)", "Mannelijk (der)", "Vrouwelijk (die)", "Meervoud"],
         answer: 0,
-        wrongHints: [null, "Niet — verkleinwoord op -chen is altijd onzijdig.", "Niet — -chen is altijd das.", "Enkelvoud."],
+        wrongHints: [null, "Kijk naar de uitgang -chen: welk geslacht hebben verkleinwoorden?", "Häuschen is een verkleinwoord. Welk lidwoord hoort bij -chen?", "Enkelvoud."],
         uitlegPad: {
           stappen: [{ titel: "-chen = das", tekst: "Häuschen eindigt op -chen → onzijdig." }],
           woorden: [{ woord: "verkleinwoord", uitleg: "kleinere versie van iets" }],
@@ -195,7 +195,7 @@ const steps = [
         q: "Hoe zeg je \"mijn kind\"?",
         options: ["mein Kind", "meine Kind", "meinen Kind", "meines Kind"],
         answer: 0,
-        wrongHints: [null, "Kind = onzijdig (das) → mein, niet meine.", "Naamvalsvorm.", "Naamvalsvorm."],
+        wrongHints: [null, "Welk geslacht heeft Kind? Krijgt dat geslacht een -e achter mein?", "Naamvalsvorm.", "Naamvalsvorm."],
         uitlegPad: {
           stappen: [{ titel: "mein Kind", tekst: "Kind = onzijdig (das) → mein (geen e)." }],
           woorden: [{ woord: "onzijdig", uitleg: "das-woorden → mein" }],
@@ -321,7 +321,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "\"Mit ___ Auto\" — welke vorm is goed?",
         options: ["mit dem Auto", "mit das Auto", "mit den Auto", "mit der Auto"],
         answer: 0,
-        wrongHints: [null, "Mit eist datief.", "Den is mannelijk accusatief. Mit eist datief, en Auto is onzijdig.", "Vrouwelijk vorm."],
+        wrongHints: [null, "Mit eist datief.", "Den is mannelijk accusatief. Welke naamval eist mit, en welk geslacht heeft Auto?", "Vrouwelijk vorm."],
         uitlegPad: {
           stappen: [{ titel: "Mit + datief", tekst: "Mit dem Auto. Mit eist altijd datief; Auto onzijdig → dem." }],
           woorden: [{ woord: "mit", uitleg: "voorzetsel + datief" }],
@@ -370,7 +370,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
           "des Vaters + dem Brief",
         ],
         answer: 0,
-        wrongHints: [null, "Vader = aan wie (datief), brief = wat (acc).", "Brief is lijdend, vader is meewerkend.", "Genitief past hier niet."],
+        wrongHints: [null, "Wie ontvangt iets en wat wordt er gegeven? Welke naamval hoort bij elk?", "Brief is lijdend, vader is meewerkend.", "Genitief past hier niet."],
         uitlegPad: {
           stappen: [{ titel: "Dat + Acc samen", tekst: "Er gibt dem Vater (aan wie) den Brief (wat)." }],
           woorden: [{ woord: "geven", uitleg: "geven = dat + acc tegelijk" }],
@@ -384,7 +384,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "Welke vorm bij 'ohne' (zonder) + Mutter?",
         options: ["ohne die Mutter", "ohne der Mutter", "ohne dem Mutter", "ohne den Mutter"],
         answer: 0,
-        wrongHints: [null, "ohne = acc; vrouwelijk acc = die.", "ohne = acc, niet dat.", "ohne = acc, niet mannelijk."],
+        wrongHints: [null, "Welke naamval eist ohne? Denk aan het rijtje DFGOU.", "ohne = acc, niet dat.", "ohne = acc, niet mannelijk."],
         uitlegPad: {
           stappen: [{ titel: "Ohne + acc", tekst: "Ohne eist acc; vrouwelijk acc = die." }],
           woorden: [{ woord: "DFGOU", uitleg: "durch, für, gegen, ohne, um → acc" }],
@@ -427,7 +427,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "\"Mit ___ Lehrerin (v) gehe ich nach Hause.\"",
         options: ["der Lehrerin", "die Lehrerin", "den Lehrerin", "dem Lehrerin"],
         answer: 0,
-        wrongHints: [null, "Mit eist dat — vrouwelijk dat = der.", "Mit = dat, niet acc.", "Mit = dat; mannelijk dat = dem; maar Lehrerin is vrouwelijk."],
+        wrongHints: [null, "Welke naamval eist mit? En hoe ziet het lidwoord er dan uit bij een vrouwelijk woord?", "Mit = dat, niet acc.", "Mit = dat; mannelijk dat = dem; maar Lehrerin is vrouwelijk."],
         uitlegPad: {
           stappen: [{ titel: "Mit + dat vrouw", tekst: "Mit der Lehrerin. Mit=dat; vrouw dat=der." }],
           woorden: [{ woord: "Lehrerin", uitleg: "vrouwelijke leraar" }],
@@ -441,7 +441,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "\"Ich helfe ___ Kind (o).\"",
         options: ["dem Kind", "das Kind", "den Kind", "der Kind"],
         answer: 0,
-        wrongHints: [null, "Helfen eist dat — onzijdig dat = dem, niet das.", "Mannelijk acc — niet juist.", "Vrouwelijk — Kind is onzijdig."],
+        wrongHints: [null, "Welke naamval eist helfen? Das hoort bij een andere naamval.", "Mannelijk acc — niet juist.", "Vrouwelijk — Kind is onzijdig."],
         uitlegPad: {
           stappen: [{ titel: "Helfen + dat", tekst: "Ich helfe dem Kind. Helfen eist altijd dat." }],
           woorden: [{ woord: "datief-werkwoord", uitleg: "helfen, danken, gefallen, gehören" }],
@@ -455,7 +455,7 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
         q: "Hoe zeg je \"voor de moeder\" (für + Mutter)?",
         options: ["für die Mutter", "für der Mutter", "für dem Mutter", "für den Mutter"],
         answer: 0,
-        wrongHints: [null, "Für = acc; vrouwelijk acc = die.", "Für = acc, niet dat.", "Vrouwelijk acc, niet mannelijk."],
+        wrongHints: [null, "Für hoort bij DFGOU. Welke naamval is dat, en hoe ziet die eruit bij een vrouwelijk woord?", "Für = acc, niet dat.", "Vrouwelijk acc, niet mannelijk."],
         uitlegPad: {
           stappen: [{ titel: "Für + acc vrouw", tekst: "Für die Mutter. Für=acc; vrouw acc=die." }],
           woorden: [{ woord: "für", uitleg: "voor, eist acc" }],
@@ -473,9 +473,9 @@ ${["Nom", "Gen", "Dat", "Acc"].map((nv, i) => {
       { q: "Hoeveel naamvallen heeft het **Duits**?", options: ["4","2","3","6"], answer: 0, wrongHints: [null,"Te weinig.","Te weinig.","Zes naamvallen heeft bijvoorbeeld het Latijn — het Duits heeft er minder."] },
       { q: "**Nominatief** = ___?", options: ["Onderwerp van de zin","Lijdend voorwerp","Meewerkend voorwerp","Bezit"], answer: 0, wrongHints: [null,"Dat is Akkusativ.","Dat is Dativ.","Dat is Genitiv."] },
       { q: "**Akkusativ** = ___?", options: ["Lijdend voorwerp","Onderwerp","Meewerkend","Bezit"], answer: 0, wrongHints: [null,"Nominativ.","Dativ.","Genitiv."] },
-      { q: "**Dativ** = ___?", options: ["Meewerkend voorwerp / na bepaalde voorzetsels","Onderwerp","Lijdend voorwerp","Bezit"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Genitiv."] },
-      { q: "**Genitiv** wordt vooral gebruikt voor?", options: ["Bezit (das Buch des Vaters)","Onderwerp","Lijdend","Meewerkend"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Dativ."] },
-      { q: "Lidwoord **vrouwelijk** verandert van NOM naar ACC?", options: ["die → die (blijft)","der → den","das → das","die → den"], answer: 0, wrongHints: [null,"Mannelijk.","Onzijdig.","Niet vrouwelijk."] },
+      { q: "**Dativ** = ___?", options: ["Meewerkend voorwerp","Onderwerp","Lijdend voorwerp","Bezit"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Genitiv."] },
+      { q: "**Genitiv** wordt vooral gebruikt voor?", options: ["Bezit","Onderwerp","Lijdend","Meewerkend"], answer: 0, wrongHints: [null,"Nominativ.","Akkusativ.","Dativ."] },
+      { q: "Lidwoord **vrouwelijk** verandert van NOM naar ACC?", options: ["die → die","der → den","das → das","die → den"], answer: 0, wrongHints: [null,"Mannelijk.","Onzijdig.","Niet vrouwelijk."] },
       { q: "**Mit** = welke naamval?", options: ["Dativ","Akkusativ","Nominativ","Genitiv"], answer: 0, wrongHints: [null,"für=Akk.","Nominativ is voor het onderwerp, niet na een voorzetsel.","Voor bezit, niet 'mit'."] },
       { q: "**Open vraag**: in welke naamval staat 'den' (mannelijk)?", kind: "open", acceptedAnswers: ["akkusativ", "accusatief", "acc", "akkusatief"], explanation: "Mannelijk lidwoord 'der' wordt 'den' in Akkusativ." },
       { q: "**Open vraag**: noem 1 voorzetsel dat altijd Dativ vraagt.", kind: "open", acceptedAnswers: ["mit", "von", "zu", "bei", "nach", "aus", "seit"], explanation: "Vaste Dativ-voorzetsels: mit, von, zu, bei, nach, aus, seit." },

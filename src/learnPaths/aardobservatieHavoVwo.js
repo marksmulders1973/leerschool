@@ -41,10 +41,10 @@ const steps = [
         },
       },
       {
-        q: "**Richter-schaal** is **logaritmisch** — Magnitude 7 is hoeveel sterker dan 5?",
+        q: "**Richter-schaal** is **logaritmisch** — hoeveel keer zo groot is de uitslag (amplitude) op de seismograaf bij magnitude 7 als bij magnitude 5?",
         options: ["100×","2×","10×","1000×"],
         answer: 0,
-        wrongHints: [null, "Niet — de schaal is logaritmisch, niet lineair.", "Niet — hoeveel stappen verschil is er, en wat betekent elke stap op een logaritmische schaal?", "Niet correct."],
+        wrongHints: [null, "Niet — de schaal is logaritmisch, niet lineair.", "Niet — hoeveel stappen verschil is er, en wat betekent elke stap op een logaritmische schaal?", "Dat klopt ongeveer voor de vrijgekomen energie — maar hier wordt naar de uitslag gevraagd."],
         uitlegPad: {
           stappen: [{ titel: "10× per stap", tekst: "Richter is logaritmisch: **elke stap = 10× sterker amplitude**. M5 → M7 = 2 stappen = **10² = 100×** sterker (amplitude). Energie ~32× per stap → 32² = ~1000× meer energie.\n\nDaarom: M9 verwoest hele kuststreken, M6 voelbaar maar beperkt." }],
           niveaus: { basis: "100×.", simpeler: "2 stappen = 10²=100×", nogSimpeler: "100" },
@@ -73,11 +73,11 @@ const steps = [
       },
       {
         q: "Wat veroorzaakte de **2004 Sumatra-tsunami**?",
-        options: ["Onderzeese aardbeving (M9,1)","Vulkaan-uitbarsting","Storm","Aardverschuiving op land"],
+        options: ["Onderzeese aardbeving","Vulkaan-uitbarsting","Storm","Aardverschuiving op land"],
         answer: 0,
         wrongHints: [null, "Niet — geen vulkaan-tsunami.", "Niet — storm geen tsunami.", "Niet — verkeerde locatie."],
         uitlegPad: {
-          stappen: [{ titel: "Megathrust-aardbeving", tekst: "**26 dec 2004**: M9,1 aardbeving voor kust Sumatra → zeebodem enkele meters omhoog → tsunami → 230.000 doden in 14 landen. Subductie-grens Indische plaat onder Eurazische. Slechtste natuurramp 21e eeuw." }],
+          stappen: [{ titel: "Megathrust-aardbeving", tekst: "**26 dec 2004**: M9,1 aardbeving voor kust Sumatra → zeebodem enkele meters omhoog → tsunami → 230.000 doden in 14 landen. Subductie-grens Indische plaat onder Eurazische. Een van de dodelijkste natuurrampen van de 21e eeuw." }],
           theorie: "Vergelijkbare gebeurtenissen: Chili 1960 (M9,5, sterkste ooit gemeten), Japan 2011 (M9,0 + Fukushima), Alaska 1964.",
           niveaus: { basis: "Onderzeese aardbeving.", simpeler: "M9 = onderzeese beving", nogSimpeler: "Beving" },
         },
@@ -109,7 +109,7 @@ const steps = [
         wrongHints: [null, "Te laag.", "Te hoog.", "Veel te hoog."],
         uitlegPad: {
           stappen: [{ titel: "Een kwart onder zeeniveau", tekst: "Ongeveer **26%** NL ligt onder NAP. Vooral west-NL (Holland, Flevoland, Zeeland). Zonder dijken zou groot deel onder water staan. Daarom NL-investeringen in waterveiligheid extreem hoog vergeleken andere landen." }],
-          theorie: "NAP = Nieuw Amsterdams Peil. Referentie sinds 17e eeuw, gebaseerd op het gemiddelde hoogwater (zomervloed) van het IJ.",
+          theorie: "NAP = Normaal Amsterdams Peil. Referentie sinds 17e eeuw, gebaseerd op het gemiddelde hoogwater (zomervloed) van het IJ.",
           niveaus: { basis: "26%.", simpeler: "~kwart NL onder NAP", nogSimpeler: "26" },
         },
       },
@@ -290,7 +290,7 @@ const steps = [
       },
       {
         q: "Wat is een **Day Zero**-scenario?",
-        options: ["Stad zonder drinkwater (Kaapstad 2018)","Eerste dag opwarming","Begin oorlog","Aardbeving"],
+        options: ["Dag dat een stad zonder kraanwater komt","Eerste dag opwarming","Begin oorlog","Aardbeving"],
         answer: 0,
         wrongHints: [null, "'Day Zero' telt af naar de dag dat iets óp is — wat raakt er op in een droge stad?", "Geen militaire term — denk aan de kranen in Kaapstad in 2018.", "Geen plotselinge ramp — het is een dag waar je maandenlang naartoe telt. Wat raakt op?"],
         uitlegPad: {

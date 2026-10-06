@@ -79,7 +79,7 @@ const steps = [
         { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "hoofdgedachte-vraag — zoek welke optie het hele artikel samenvat" },
       ],
       uitlegPad: compactUitleg(
-        "'Planned signalling work will be postponed' = onderhoud wordt uitgesteld. Reden: rugby-fans moeten naar de wedstrijd kunnen reizen. Antwoord D vat dit samen: 'Work at rail systems will be delayed'.",
+        "'Planned signalling work will be postponed' = onderhoud wordt uitgesteld. Reden: rugby-fans moeten naar de wedstrijd kunnen reizen. Het juiste antwoord vat dit samen: 'Work at rail systems will be delayed'.",
         { basis: "Onderhoud uitgesteld voor rugby-fans.", simpeler: "Engineering works uitgesteld zodat fans kunnen reizen.", nogSimpeler: "Work delayed" },
       ),
     }],
@@ -108,7 +108,7 @@ const steps = [
         { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "'doel van campagne'-vraag — zoek werkwoorden 'to create / aim / protect'" },
       ],
       uitlegPad: compactUitleg(
-        "'Create a national register' + 'protect them from being cut down' = lijst aanleggen om bijzondere bomen te behouden. Optie A = directe parafrase.",
+        "'Create a national register' + 'protect them from being cut down' = lijst aanleggen om bijzondere bomen te behouden. Het juiste antwoord is een directe parafrase.",
         { basis: "Lijst aanleggen + behouden.", simpeler: "Register van bijzondere bomen + bescherming tegen kappen.", nogSimpeler: "Register + behouden" },
       ),
     }],
@@ -165,7 +165,7 @@ const steps = [
         { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "synonieme parafrase: 'native wildlife sharing space' = 'native wildlife living together'" },
       ],
       uitlegPad: compactUitleg(
-        "'Native bears and wolves... once again sharing space.' = inheemse beren en wolven leven weer in dezelfde ruimte. Het Wild Place Project brengt deze oorspronkelijke fauna terug bij elkaar. Geen captivity-verbetering (= A), geen breeding-programma (= C).",
+        "'Native bears and wolves... once again sharing space.' = inheemse beren en wolven leven weer in dezelfde ruimte. Het Wild Place Project brengt deze oorspronkelijke fauna terug bij elkaar. Geen captivity-verbetering, geen breeding-programma.",
         { basis: "Native wildlife samenleven.", simpeler: "Beren + wolven (inheems) weer in zelfde gebied — na 1000 jaar.", nogSimpeler: "Native together" },
       ),
     }],
@@ -223,7 +223,7 @@ const steps = [
         { id: "cse-leesvaardigheid-engels", title: "CSE Engels leesvaardigheid", niveau: "VMBO-GT eindexamen", why: "'point made by X'-vraag — zoek het directe citaat + de parafrase in de opties" },
       ],
       uitlegPad: compactUitleg(
-        "90% success rate + 'most fires... controlled before they become catastrophic' = de meeste vuren in Canadese wildernis worden geblust voor er ernstige schade is. Optie D = directe parafrase.",
+        "90% success rate + 'most fires... controlled before they become catastrophic' = de meeste vuren in Canadese wildernis worden geblust voor er ernstige schade is. Het juiste antwoord is een directe parafrase.",
         { basis: "Meeste vuren snel onder controle.", simpeler: "Bergen: 90% success rate, meeste vuren geblust voor catastrofe.", nogSimpeler: "Snel onder controle" },
       ),
     }],

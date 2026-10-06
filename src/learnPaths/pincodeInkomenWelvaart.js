@@ -80,7 +80,7 @@ const steps = [
         q: "Brood dat je in de winkel koopt om vandaag op te eten:",
         options: ["Consumptiegoed", "Kapitaalgoed", "Vrij goed", "Productiegoed"],
         answer: 0,
-        wrongHints: [null, "Kapitaalgoed = waarmee je iets ANDERS maakt.", "Brood kost geld, dus niet vrij.", "Geen standaardterm in Pincode."],
+        wrongHints: [null, "Kapitaalgoed = waarmee je iets ANDERS maakt.", "Brood kost geld, dus niet vrij.", "Eet je het brood op, of maak je er iets anders mee?"],
         uitlegPad: {
           stappen: [{ titel: "Direct gebruiken of meer maken?", tekst: "Consumptiegoed = jij EET het zelf op / gebruikt het direct. Kapitaalgoed = je MAAKT er iets ANDERS mee. Brood eet je op → consumptie." }],
           woorden: [{ woord: "consumptiegoed", uitleg: "Direct gebruikt door consument (brood, kleding, snoep)." }, { woord: "kapitaalgoed", uitleg: "Gebruikt om IETS ANDERS te maken (oven, vrachtwagen, machine)." }],
@@ -180,7 +180,7 @@ const steps = [
       },
       {
         q: "Een **vrachtauto** van een transportbedrijf is welke productiefactor?",
-        options: ["Kapitaal (vast kapitaal)", "Arbeid", "Natuur", "Ondernemerschap"],
+        options: ["Kapitaal", "Arbeid", "Natuur", "Ondernemerschap"],
         answer: 0,
         wrongHints: [null, "Arbeid = werk van mensen.", "Natuur = grondstoffen, niet voertuigen.", "Ondernemerschap = beslissingen, niet voertuigen."],
         uitlegPad: {
@@ -208,7 +208,7 @@ const steps = [
       },
       {
         q: "Wat is **vlottend kapitaal**?",
-        options: ["Voorraden en kasgeld die snel vervangen worden", "Een gebouw", "Een vrachtauto", "De bakker zelf"],
+        options: ["Voorraden en kasgeld", "Een gebouw", "Een vrachtauto", "De bakker zelf"],
         answer: 0,
         wrongHints: [null, "Gebouw = vast kapitaal.", "Vrachtauto = vast kapitaal.", "De ondernemer is geen kapitaal."],
         uitlegPad: {
@@ -222,7 +222,7 @@ const steps = [
       },
       {
         q: "De ondernemer **draagt risico**. Wat is daarvoor de beloning?",
-        options: ["Winst (of verlies)", "Loon", "Pacht", "Niets"],
+        options: ["Winst", "Loon", "Pacht", "Niets"],
         answer: 0,
         wrongHints: [null, "Loon = voor arbeid van werknemer.", "Pacht = voor natuur (grond).", "Risico nemen levert in geld iets op (of kost iets)."],
         uitlegPad: {
@@ -236,7 +236,7 @@ const steps = [
       },
       {
         q: "Welke productiefactor levert een **mijnbouwbedrijf vooral**?",
-        options: ["Natuur (grondstoffen)", "Arbeid alleen", "Kapitaal alleen", "Ondernemerschap alleen"],
+        options: ["Natuur", "Arbeid alleen", "Kapitaal alleen", "Ondernemerschap alleen"],
         answer: 0,
         wrongHints: [null, "Mijnbouw heeft alle 4 nodig — maar wat haalt een mijn uit de grond?", "Idem.", "Idem."],
         uitlegPad: {
@@ -269,7 +269,7 @@ const steps = [
     checks: [
       {
         q: "Iemand verhuurt een appartement en ontvangt **€1200 huur**. Welk soort inkomen is dat?",
-        options: ["Primair (uit kapitaal/natuur)", "Secundair", "Brutoloon", "Toeslag"],
+        options: ["Primair", "Secundair", "Brutoloon", "Toeslag"],
         answer: 0,
         wrongHints: [null, "Secundair = zonder productiefactor te leveren.", "Loon = voor arbeid.", "Toeslag krijg je van de overheid."],
         uitlegPad: {
@@ -372,7 +372,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **mediaan**-inkomen?",
-        options: ["Het middelste inkomen — helft verdient meer, helft minder", "Het hoogste inkomen", "Gemiddelde inkomen", "Minimumloon"],
+        options: ["Het middelste inkomen", "Het hoogste inkomen", "Gemiddelde inkomen", "Minimumloon"],
         answer: 0,
         wrongHints: [null, "Mediaan = midden, niet hoogste.", "Gemiddelde wordt door extremen vertekend.", "Minimum is wettelijke ondergrens."],
         uitlegPad: {
@@ -400,9 +400,9 @@ const steps = [
       },
       {
         q: "Een land heeft **Gini = 0,55**. Wat zegt dat?",
-        options: ["Aanzienlijke ongelijkheid", "Perfect gelijk", "Iedereen heeft hetzelfde", "Geen mensen meer"],
+        options: ["Aanzienlijke ongelijkheid", "Perfect gelijk", "Iedereen heeft hetzelfde", "Kleine ongelijkheid, net als in Nederland"],
         answer: 0,
-        wrongHints: [null, "Gini 0 = perfect gelijk.", "Tegenovergesteld.", "Onzin-antwoord."],
+        wrongHints: [null, "Gini 0 = perfect gelijk.", "Tegenovergesteld.", "Nederland zit rond 0,28 — is 0,55 dan klein?"],
         uitlegPad: {
           stappen: [{ titel: "Gini-schaal", tekst: "Gini 0 = perfect gelijk (iedereen evenveel). Gini 1 = volledig ongelijk (1 persoon heeft alles). 0,55 ligt richting de bovenkant — aanzienlijke ongelijkheid." }],
           woorden: [{ woord: "Gini-coëfficiënt", uitleg: "Maatstaf voor inkomensongelijkheid op schaal 0 (gelijk) tot 1 (volledig ongelijk)." }],
@@ -442,13 +442,13 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **gemiddelde** en **mediane** inkomen?",
-        options: ["Gemiddelde wordt door enkele extremen omhoog getrokken", "Geen verschil", "Mediaan is altijd hoger", "Gemiddelde is voor mannen, mediaan voor vrouwen"],
+        options: ["Gemiddelde wordt door enkele extremen omhoog getrokken", "Geen verschil", "Mediaan is altijd hoger", "Mediaan wordt door enkele extremen omhoog getrokken"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Gemiddelde is meestal hoger.", "Geen geslacht-onderscheid."],
+        wrongHints: [null, "Wel verschil.", "Gemiddelde is meestal hoger.", "Welke van de twee verandert als er één miljonair bij komt?"],
         uitlegPad: {
           stappen: [{ titel: "Twee maatstaven", tekst: "Gemiddelde = alle inkomens optellen + delen door aantal. Mediaan = middelste in gesorteerde rij. Extreem hoge inkomens trekken het GEMIDDELDE op, maar de MEDIAAN blijft gelijk." }],
           woorden: [{ woord: "gemiddelde", uitleg: "Som / aantal. Gevoelig voor extremen." }, { woord: "mediaan", uitleg: "Middelste waarde. Robuust tegen extremen." }],
-          theorie: "Voorbeeld: een CEO van €10mln onder 9 mensen met €30k verandert: GEMIDDELDE springt van €30k naar €1mln. MEDIAAN blijft €30k. Daarom gebruiken overheden vaak mediaan voor 'modaal inkomen NL'.",
+          theorie: "Voorbeeld: een CEO van €10mln onder 9 mensen met €30k verandert: GEMIDDELDE springt van €30k naar €1mln. MEDIAAN blijft €30k. Daarom gebruikt het CBS vaak de mediaan om iets te zeggen over 'de gewone Nederlander'.",
           voorbeelden: [{ type: "NL", tekst: "NL gemiddelde inkomen ~€42k, mediaan ~€36k. Verschil van €6k door enkele zeer rijken." }],
           basiskennis: [{ onderwerp: "Welke nemen?", uitleg: "Voor 'de meeste mensen' → mediaan. Voor totale opbrengst belasting → gemiddelde." }],
           niveaus: { basis: "Extremen trekken gemiddelde op.", simpeler: "Gemiddelde wordt door enkele heel-hoge inkomens omhoog getrokken. Mediaan blijft eerlijk.", nogSimpeler: "Extremen" },
@@ -549,9 +549,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **nominale** en **reële** loonstijging?",
-        options: ["Reëel = nominale stijging min inflatie (echte koopkracht)", "Geen verschil", "Nominaal is altijd hoger dan reëel", "Reëel is voor mannen"],
+        options: ["Reëel = nominale stijging min inflatie", "Geen verschil", "Nominaal is altijd hoger dan reëel", "Reëel is vóór belasting, nominaal erna"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Nominaal kan ook lager zijn dan reëel (bij deflatie).", "Geen geslacht-onderscheid."],
+        wrongHints: [null, "Wel verschil.", "Nominaal kan ook lager zijn dan reëel (bij deflatie).", "Vóór en na belasting is bruto en netto — hier gaat het om prijsstijging."],
         uitlegPad: {
           stappen: [{ titel: "Twee verschillende metingen", tekst: "Nominaal = wat in EURO'S op je strookje verandert (+3%). Reëel = wat je echt meer KAN KOPEN (+3% − 2% inflatie = +1% reëel)." }],
           woorden: [{ woord: "nominaal", uitleg: "In geldbedragen, zonder rekening te houden met inflatie." }, { woord: "reëel", uitleg: "Gecorrigeerd voor inflatie. Vertelt over werkelijke koopkracht." }],
@@ -582,9 +582,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **BBP** in eenvoudige bewoording?",
-        options: ["Totale waarde van alle productie in NL in 1 jaar", "Belasting per Nederlander", "Bijbaan + Pensioen Beleid", "Brutoloon van iedereen samen"],
+        options: ["Totale waarde van alle productie in NL in 1 jaar", "Belasting per Nederlander", "Totale waarde van alle export van NL in 1 jaar", "Brutoloon van iedereen samen"],
         answer: 0,
-        wrongHints: [null, "Geen belasting-term.", "Geen Nederlandse term.", "Bruto loon is een onderdeel, maar BBP omvat ook winst, belasting, etc."],
+        wrongHints: [null, "Geen belasting-term.", "Export is maar één deel van wat er wordt geproduceerd.", "Bruto loon is een onderdeel, maar BBP omvat ook winst, belasting, etc."],
         uitlegPad: {
           stappen: [{ titel: "BBP = totale productie", tekst: "Bruto Binnenlands Product = ALLES wat in NL geproduceerd wordt in 1 jaar, opgeteld in euro's. NL: ~€1.000 miljard." }],
           woorden: [{ woord: "BBP", uitleg: "Bruto Binnenlands Product. Totale waarde productie in 1 jaar." }, { woord: "productie", uitleg: "Alles wat gemaakt + geleverd wordt: goederen + diensten." }],
@@ -596,7 +596,7 @@ const steps = [
       },
       {
         q: "Wat telt **NIET mee** in het BBP?",
-        options: ["Vrijwilligerswerk in een buurthuis", "Loon van een leraar", "Huur van een woning", "Verkoop van een auto"],
+        options: ["Vrijwilligerswerk in een buurthuis", "Loon van een leraar", "Huur van een woning", "Verkoop van een nieuwe auto"],
         answer: 0,
         wrongHints: [null, "Loon = inkomen, telt mee.", "Huur = vermogensinkomen, telt mee.", "Verkoop = transactie, telt mee."],
         uitlegPad: {
@@ -610,7 +610,7 @@ const steps = [
       },
       {
         q: "**BBP per hoofd** vergelijkt:",
-        options: ["Welvaart tussen landen (totaal BBP / aantal inwoners)", "Inkomen van rijken", "Belasting per persoon", "Aantal banen per persoon"],
+        options: ["Welvaart tussen landen", "Inkomen van rijken", "Belasting per persoon", "Aantal banen per persoon"],
         answer: 0,
         wrongHints: [null, "Niet specifiek rijken.", "Niet belasting.", "Geen banen-cijfer."],
         uitlegPad: {
@@ -708,7 +708,7 @@ const steps = [
       },
       {
         q: "Wie krijgt **AOW**?",
-        options: ["Iedereen vanaf pensioenleeftijd (~67) die in NL heeft gewoond", "Alleen mensen die werken", "Alleen ondernemers", "Alleen wie geen vermogen heeft"],
+        options: ["Iedereen vanaf de pensioenleeftijd", "Alleen mensen die werken", "Alleen ondernemers", "Alleen wie geen vermogen heeft"],
         answer: 0,
         wrongHints: [null, "Werk is geen voorwaarde.", "Ondernemerschap is geen voorwaarde voor AOW.", "Vermogen geen vereiste."],
         uitlegPad: {
@@ -749,29 +749,29 @@ const steps = [
         },
       },
       {
-        q: "Sanne (25) studeert niet, verliest haar kleine bijbaan en heeft geen ander inkomen. Welke uitkering?",
+        q: "Sanne (25) studeert niet, werkte pas een paar weken in een bijbaan, verliest die en heeft geen ander inkomen. Welke uitkering?",
         options: ["Bijstand (vangnet via gemeente)", "AOW", "WW (werkloosheidswet)", "WIA"],
         answer: 0,
         wrongHints: [null, "AOW pas vanaf 67.", "WW vereist eerder werkverleden + minimum aantal weken.", "WIA = arbeidsongeschiktheid."],
         uitlegPad: {
-          stappen: [{ titel: "Voor wie welke uitkering?", tekst: "Bijstand = laatste vangnet voor wie GEEN ander inkomen en geen recht op WW/WIA heeft. Wie alleen een klein bijbaantje had, komt meestal niet aan de WW-eis — bijstand is wat overblijft." }],
+          stappen: [{ titel: "Voor wie welke uitkering?", tekst: "Bijstand = laatste vangnet voor wie GEEN ander inkomen en geen recht op WW/WIA heeft. Wie pas een paar weken werkte, komt niet aan de WW-eis — bijstand is wat overblijft." }],
           woorden: [{ woord: "bijstand", uitleg: "Vangnet via gemeente voor wie geen ander inkomen heeft. Sociaal minimum." }, { woord: "WW", uitleg: "Tijdelijke uitkering na ontslag — vereist eerder werk + premie-betaling." }, { woord: "WIA", uitleg: "Arbeidsongeschiktheidsuitkering bij ziekte > 2 jaar." }],
-          theorie: "Volgorde van vangnet: eerst kijken naar verzekeringen (WW/WIA) → werkverleden? Anders → bijstand via gemeente. Wie kort of weinig werkte, haalt meestal niet de WW-eis (mín. 26 weken gewerkt).",
-          voorbeelden: [{ type: "WW", tekst: "Volwassene 5 jaar in dienst, ontslagen → WW (~70% laatste loon, max 24 mnd)." }, { type: "bijstand", tekst: "Sanne (bijbaantje 10u/wk) verliest haar baan → onvoldoende WW-rechten → bijstand. Let op: wie studiefinanciering kan krijgen, heeft géén recht op bijstand." }],
+          theorie: "Volgorde van vangnet: eerst kijken naar verzekeringen (WW/WIA) → werkverleden? Anders → bijstand via gemeente. Wie kort werkte, haalt de WW-eis niet (mín. 26 van de laatste 36 weken gewerkt).",
+          voorbeelden: [{ type: "WW", tekst: "Volwassene 5 jaar in dienst, ontslagen → WW (~70% laatste loon, max 24 mnd)." }, { type: "bijstand", tekst: "Sanne (pas een paar weken een bijbaantje) verliest haar baan → onvoldoende WW-rechten → bijstand. Let op: wie studiefinanciering kan krijgen, heeft géén recht op bijstand." }],
           basiskennis: [{ onderwerp: "Niet AOW", uitleg: "AOW pas vanaf pensioenleeftijd ~67. Sanne is ver van AOW-leeftijd." }],
           niveaus: { basis: "Bijstand.", simpeler: "Sanne heeft te weinig gewerkt voor WW. Bijstand is het laatste vangnet via gemeente.", nogSimpeler: "Vangnet" },
         },
       },
       {
         q: "Hoe maakt **progressieve belasting** inkomens gelijker?",
-        options: ["Hoger inkomen → hoger percentage belasting → minder verschil netto", "Iedereen betaalt hetzelfde", "Lagere inkomens betalen meer", "Geen invloed"],
+        options: ["Hogere inkomens betalen een hoger percentage", "Iedereen betaalt hetzelfde", "Lagere inkomens betalen meer", "Geen invloed"],
         answer: 0,
         wrongHints: [null, "Dat is vlaktaks.", "Tegenovergesteld.", "Wel grote invloed."],
         uitlegPad: {
           stappen: [{ titel: "Hoe meer, hoe zwaarder", tekst: "Bij progressieve belasting STIJGT het BELASTING-percentage met je inkomen. €30k betaalt 37%, €100k betaalt 49% over hoogste schijf. Resultaat: hoge inkomens leveren relatief meer in." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt met inkomen. Hoe hoger je inkomen, hoe hoger % belasting." }, { woord: "vlaktaks", uitleg: "Iedereen betaalt zelfde percentage, ongeacht inkomen. (Tegengesteld aan progressief.)" }],
           theorie: "NL inkomstenbelasting (rond 2024): tot ~€75k ongeveer 37%, daarboven 49,50%. Gevolg: rijken betalen relatief meer → netto-verschil tussen rijk en arm wordt kleiner.",
-          voorbeelden: [{ type: "rekensom", tekst: "A verdient €30k bruto → ~€11k IB → netto €19k. B verdient €100k → ~€38k IB → netto €62k. Bruto-verschil €70k → netto-verschil €43k. Verkleind door progressie." }],
+          voorbeelden: [{ type: "rekensom", tekst: "Sterk vereenvoudigd, zonder heffingskortingen: A verdient €30k bruto → ~€11k IB → netto €19k. B verdient €100k → ~€40k IB → netto €60k. Bruto-verschil €70k → netto-verschil €41k. Verkleind door progressie." }],
           basiskennis: [{ onderwerp: "Niet 'lagere betalen meer'", uitleg: "Bij progressief betalen LAGERE inkomens een kleiner %, niet meer. Bij regressief (zoals btw) dragen lagere inkomens relatief zwaarder." }],
           niveaus: { basis: "Hoger % bij hoger inkomen.", simpeler: "Wie meer verdient, betaalt een groter PERCENTAGE belasting. Dat trekt netto-inkomens dichter naar elkaar toe.", nogSimpeler: "Meer = meer %" },
         },

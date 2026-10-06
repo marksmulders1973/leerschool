@@ -52,9 +52,9 @@ const steps = [
       },
       {
         q: "Welk woord past? *Mijn broer is sterk, ___ niet zo snel.*",
-        options: ["maar", "en", "want", "dus"],
+        options: ["maar", "of", "want", "dus"],
         answer: 0,
-        wrongHints: [null, "Dat zou er gewoon iets bij optellen; hier staat een tegenstelling.", "Dat geeft een reden.", "Dat geeft een gevolg."],
+        wrongHints: [null, "Dat geeft een keuze; hier staat een tegenstelling.", "Dat geeft een reden.", "Dat geeft een gevolg."],
         uitlegPad: {
           stappen: [{ titel: "Sterk ↔ niet snel = tegenstelling", tekst: "Sterk zijn en niet snel zijn botsen een beetje met elkaar. Dat vraagt om 'maar'." }],
           niveaus: {

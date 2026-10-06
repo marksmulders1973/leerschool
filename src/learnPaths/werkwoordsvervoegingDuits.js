@@ -73,7 +73,7 @@ const steps = [
       },
       {
         q: "Welk verschil tussen **'sie'** en **'Sie'**?",
-        options: ["sie = zij, Sie = u (formeel)", "Geen verschil", "Verkeerd gespeld", "sie = man, Sie = vrouw"],
+        options: ["sie = zij, Sie = u", "Geen verschil", "Verkeerd gespeld", "sie = man, Sie = vrouw"],
         answer: 0,
         wrongHints: [null, "Wel verschil.", "Beide correct.", "Niet."],
       },

@@ -293,7 +293,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
       {
         q: "Wat betekent *'het krioelt er van het leven'* in deze tekst?",
         options: [
-          "Er is heel veel leven, overal wemelt het van de dieren",
+          "Er leven overal heel veel dieren",
           "Het leven is er gevaarlijk",
           "De dieren maken er veel geluid",
           "Er is bijna geen leven te vinden",
@@ -521,7 +521,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         options: [
           "Iets waarmee je een prooi naar je toe lokt",
           "Een giftige stof die dieren verlamt",
-          "Het aanhangsel op de kop van de vis",
+          "Plankton waar de vis zelf van leeft",
           "De manier waarop de vis in het donker ziet",
         ],
         answer: 0,
@@ -529,7 +529,7 @@ In deze stap oefen je elke truc met één losse zin. Er zit zelfs een verzonnen 
         wrongHints: [
           null,
           "Er staat niets over gif. Wat doen de kleine diertjes als ze het lichtje zien?",
-          "Het aanhangsel wordt hier als lokaas gebrúíkt — maar de vraag is wat het woord 'lokaas' betekent. Wat doet het met de kleine diertjes?",
+          "De kleine diertjes dénken dat het plankton is — maar is het dat ook? Wat doet het lichtje met hen?",
           "De vis ziet niets — hij lokt anderen. Wat doet het lichtje met de kleine diertjes?",
         ],
         uitlegPad: {
@@ -947,7 +947,7 @@ Let op: de toetsenmakers zetten de *andere* betekenis vaak tussen de antwoorden 
       {
         q: "Wat betekent *'onvoorspelbaar'* in deze tekst?",
         options: [
-          "Je weet nooit zeker van tevoren wat er gaat gebeuren",
+          "Nooit zeker van tevoren te weten",
           "Heel gevaarlijk voor de omgeving",
           "Niet te meten met apparaten",
           "Al heel lang niet meer uitgebarsten",

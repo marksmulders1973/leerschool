@@ -123,7 +123,7 @@ const steps = [
       },
       {
         q: "Wat is een **echte lichtbron**?",
-        options: ["Iets dat zelf licht maakt (zon, lamp)", "Iets dat licht weerkaatst", "Beide", "Donker"],
+        options: ["Iets dat zelf licht maakt", "Iets dat licht weerkaatst", "Beide", "Donker"],
         answer: 0,
         wrongHints: [null, "Dat is een verlicht voorwerp.", "Specifieker — het is er maar één van de twee; let op het woord 'bron'.", "Geen licht."],
       },
@@ -156,7 +156,7 @@ const steps = [
       },
       {
         q: "Welke lens voor **bijziend** (ver wazig)?",
-        options: ["Holle lens (negatief)", "Bolle lens", "Vlakke lens", "Cilindrisch"],
+        options: ["Holle lens", "Bolle lens", "Vlakke lens", "Cilindrisch"],
         answer: 0,
         wrongHints: [null, "Voor verziend.", "Geen lens.", "Voor astigmatisme."],
         uitlegPad: {
@@ -165,8 +165,8 @@ const steps = [
             { titel: "Oplossing: holle lens", tekst: "Een holle (negatieve) brillen-lens duwt het licht eerst uit elkaar, voor het de ooglens bereikt. Dan komt het samen op het netvlies → scherp ver." },
           ],
           woorden: [{ woord: "bijziend (myopie)", uitleg: "Dichtbij scherp, ver weg wazig." }, { woord: "holle lens", uitleg: "Lens dunner in het midden, dikker aan de rand." }],
-          theorie: "Holle lens = divergerend = sterkte negatief (bv. -2.0 diopter).",
-          voorbeelden: [{ type: "stap", tekst: "Bril sterkte -3.0 = correctie voor bijziendheid." }],
+          theorie: "Holle lens = divergerend = sterkte negatief (bv. -2,0 diopter).",
+          voorbeelden: [{ type: "stap", tekst: "Bril sterkte -3,0 = correctie voor bijziendheid." }],
           basiskennis: [{ onderwerp: "Diopter", uitleg: "Eenheid van brillen-sterkte. Negatief = bijziend, positief = verziend." }],
           niveaus: {
             basis: "Holle lens.",
@@ -211,9 +211,9 @@ const steps = [
       },
       {
         q: "Wat is **UV-straling**?",
-        options: ["Onzichtbaar boven violet (zonnebrand)", "Soort radio", "Geluid", "Pijn"],
+        options: ["Onzichtbaar licht voorbij violet", "Onzichtbaar licht onder rood", "Zichtbaar paars licht", "Geluid boven 20.000 Hz"],
         answer: 0,
-        wrongHints: [null, "Lagere frequentie.", "Geen licht.", "Niet."],
+        wrongHints: [null, "Onder rood zit een ander soort straling — welke?", "Paars kun je zien. Kun je UV ook zien?", "Geluid boven 20.000 Hz heet ultrasoon — dat is geen licht."],
       },
     ],
   },
@@ -226,21 +226,21 @@ const steps = [
     checks: [
       {
         q: "Wat maakt een **hogere toon** op gitaar?",
-        options: ["Kortere/strakkere/dunnere snaar", "Langere snaar", "Plastic snaar", "Niets"],
+        options: ["Snaar korter of strakker", "Snaar langer of slapper", "Snaar dikker maken", "Harder tokkelen"],
         answer: 0,
-        wrongHints: [null, "Lager.", "Materiaal heeft effect maar niet primair.", "Wel iets."],
+        wrongHints: [null, "Een lange, slappe snaar trilt juist langzaam.", "Een dikke snaar is zwaarder — trilt die sneller of langzamer?", "Harder tokkelen verandert hoe hard het klinkt, niet hoe hoog."],
       },
       {
         q: "Hoe ontstaat een **regenboog**?",
-        options: ["Zonlicht door regendruppels breekt in kleuren", "Magie", "Toeval", "Wolken kleuren"],
+        options: ["Zonlicht breekt in regendruppels", "Wolken kleuren het zonlicht", "Zonlicht weerkaatst op de zee", "Regenwater bevat kleurstof"],
         answer: 0,
-        wrongHints: [null, "Geen magie.", "Wetenschappelijk verklaarbaar.", "Wolken hebben geen eigen kleur normaal."],
+        wrongHints: [null, "Wolken zijn wit of grijs — waar wordt het licht dan gesplitst?", "Je ziet ook regenbogen boven land.", "Regenwater is kleurloos — waar komen de kleuren dan vandaan?"],
       },
       {
         q: "Wat maakt **laserstraal** speciaal?",
-        options: ["1 golflengte + in fase, heel sterk", "Onzichtbaar", "Geluid", "Hard"],
+        options: ["Eén golflengte, golven in fase", "Alle kleuren door elkaar", "Sneller dan gewoon licht", "Buigt om hoeken heen"],
         answer: 0,
-        wrongHints: [null, "Wel zichtbaar (de straal).", "Geen geluid.", "Sterk is maar een gevolg — wat is er bijzonder aan het licht zelf?"],
+        wrongHints: [null, "Alle kleuren door elkaar is gewoon wit licht.", "Alle licht gaat in vacuüm even snel.", "Ook laserlicht gaat in een rechte lijn."],
       },
       {
         q: "**3 sec tussen bliksem en donder** = afstand?",
@@ -283,9 +283,9 @@ const steps = [
       },
       {
         q: "Wat is **UV-licht**?",
-        options: ["Onzichtbaar boven violet (zonnebrand)", "Soort kleur", "Geluid", "Verboden"],
+        options: ["Onzichtbaar licht voorbij violet", "Onzichtbaar licht onder rood", "Een soort geluid", "Een felle tint paars"],
         answer: 0,
-        wrongHints: [null, "Niet zichtbaar.", "Geen geluid.", "Niet verboden, wel schadelijk."],
+        wrongHints: [null, "Onder rood heet die straling anders.", "UV is straling, geen trilling van lucht.", "Een tint paars kun je zien — UV ook?"],
       },
       {
         q: "Mens hoort **frequenties** tot ... ?",

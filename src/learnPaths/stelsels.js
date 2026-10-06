@@ -110,7 +110,7 @@ const steps = [
     checks: [
       {
         q: "*Stelsel: x + y = 5 én x + y = 7. Hoeveel oplossingen?*",
-        options: ["Geen — de vergelijkingen spreken elkaar tegen","Eén","Oneindig veel","Twee"],
+        options: ["Geen","Eén","Oneindig veel","Twee"],
         answer: 0,
         wrongHints: [null, "Kan x + y tegelijk 5 én 7 zijn? Wat zegt dat over het aantal oplossingen?", "Oneindig veel zou alleen kunnen als de vergelijkingen feitelijk hetzelfde zijn. Hier zeggen ze iets verschillends.", "Een lineair stelsel heeft 1, 0 of oneindig veel oplossingen — nooit precies 2."],
         uitlegPad: {
@@ -311,7 +311,7 @@ const steps = [
     checks: [
       {
         q: "*Stelsel: 2x + 5y = 19 en 3x + 2y = 12. Met welke vermenigvuldiging kun je x elimineren?*",
-        options: ["Verg. 1 ·3 en verg. 2 ·2 (beide krijgen 6x)","Verg. 1 ·2 en verg. 2 ·3","Beide ·5","Beide ·1"],
+        options: ["Verg. 1 ·3 en verg. 2 ·2","Verg. 1 ·2 en verg. 2 ·3","Beide ·5","Beide ·1"],
         answer: 0,
         wrongHints: [null, "Dat zou 4x in 1 en 9x in 2 geven — niet gelijk.", "Beide ·5 geeft 10x in 1 en 15x in 2 — niet gelijk.", "Geen verandering. De x-coëfficiënten blijven 2 en 3 — niet gelijk."],
         uitlegPad: {
@@ -379,7 +379,7 @@ const steps = [
     checks: [
       {
         q: "*Bij optellen krijg je: 0 = 5. Wat betekent dat?*",
-        options: ["Geen oplossing — vergelijkingen zijn tegenstrijdig","Oneindig veel oplossingen","x = 5","Je hebt een rekenfout gemaakt"],
+        options: ["Geen oplossing","Oneindig veel oplossingen","x = 5","Je hebt een rekenfout gemaakt"],
         answer: 0,
         wrongHints: [null, "Oneindig veel zou een uitkomst geven van nul is nul. Wat zegt een onmogelijke bewering over het stelsel?", "Dit is geen waarde voor x — het is een bewering over het stelsel zelf. Wat betekent het als een bewering nooit waar kan zijn?", "Niet per se — dit kan een geldige uitkomst zijn. Wat zegt een bewering die nooit waar is over de twee lijnen van het stelsel?"],
         uitlegPad: {
@@ -518,7 +518,7 @@ const steps = [
     checks: [
       {
         q: "*Los op: 3x + 2y = 18 en 5x − 2y = 14. Welk paar?*",
-        options: ["(4, 3)", "(3, 4,5)", "(2, 6)", "(5, 1,5)"],
+        options: ["(4; 3)", "(3; 4,5)", "(2; 6)", "(5; 1,5)"],
         answer: 0,
         wrongHints: [null, "Dit paar klopt in de eerste vergelijking — maar werkt het ook in de tweede?", "Dit paar klopt in de eerste vergelijking — maar werkt het ook in de tweede?", "Dit paar klopt in de eerste vergelijking — maar werkt het ook in de tweede?"],
         uitlegPad: {
@@ -552,7 +552,7 @@ const steps = [
       },
       {
         q: "*Stelsel: 2x − y = 4 en 4x − 2y = 8. Aantal oplossingen?*",
-        options: ["Oneindig veel — vergelijking 2 is 2× vergelijking 1","Eén","Geen","Twee"],
+        options: ["Oneindig veel","Eén","Geen","Twee"],
         answer: 0,
         wrongHints: [null, "Vermenigvuldig vergelijking 1 met 2 en vergelijk met vergelijking 2 — wat valt je op?", "Geen oplossing zou tegenstrijdige vergelijkingen betekenen. Vermenigvuldig vergelijking 1 met 2 — spreken ze elkaar dan tegen?", "Een lineair stelsel heeft 0, 1 of oneindig — niet precies 2."],
         uitlegPad: {
@@ -610,7 +610,7 @@ const steps = [
           niveaus: { basis: "€2,50.", simpeler: "k=2, b=2,50. Broodje €2,50.", nogSimpeler: "€2,50" },
         },
       },
-      { q: "Een **stelsel** heeft hoeveel onbekenden?", options: ["Meestal 2 (of meer)","1","0","Oneindig"], answer: 0, wrongHints: [null, "Dat is gewone vergelijking.", "Niet.", "Niet algemeen."] },
+      { q: "Een **stelsel** heeft hoeveel onbekenden?", options: ["2 of meer","1","0","Oneindig"], answer: 0, wrongHints: [null, "Dat is gewone vergelijking.", "Niet.", "Niet algemeen."] },
       { q: "Welke methode lost stelsel op door optellen/aftrekken?", options: ["Eliminatie","Substitutie","Factorisatie","Grafiek"], answer: 0, wrongHints: [null, "Andere methode (één vervangen).", "Niet relevant.", "Niet specifiek."] },
       { q: "Stelsel x+y=5 en x−y=1. Wat is x?", options: ["3","2","4","1"], answer: 0, wrongHints: [null, "Dat is de andere onbekende, niet x. Tel de vergelijkingen eens op.", "Niet.", "Niet."] },
       { q: "Grafisch: snijpunt twee lijnen = ?", options: ["Oplossing van stelsel","Niets","Y-as","X-as"], answer: 0, wrongHints: [null, "Wel iets.", "Niet relevant.", "Niet relevant."] },

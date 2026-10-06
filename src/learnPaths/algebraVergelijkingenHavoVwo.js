@@ -183,7 +183,7 @@ const steps = [
       },
       {
         q: "Wat is de discriminant van **x² − 2x + 5 = 0**?",
-        options: ["−16 (geen reële oplossing)", "4", "16", "−4"],
+        options: ["−16", "4", "16", "−4"],
         answer: 0,
         wrongHints: [null, "Niet — controleer −4ac.", "Niet — controleer tekens.", "Niet."],
         uitlegPad: {
@@ -257,15 +257,15 @@ const steps = [
         },
       },
       {
-        q: "Stelsel **2x + 3y = 12, 4x + 6y = 24**. Wat?",
+        q: "Stelsel **2x + 3y = 12, 4x + 6y = 24**. Hoeveel oplossingen heeft dit stelsel?",
         options: [
-          "Oneindig veel oplossingen (zelfde lijn)",
-          "x=2, y=4",
-          "x=3, y=2",
+          "Oneindig veel oplossingen",
+          "Precies één: x=2, y=4",
+          "Precies één: x=2, y=3",
           "Geen oplossing"
         ],
         answer: 0,
-        wrongHints: [null, "Dit punt voldoet wel, maar is het het enige? Vermenigvuldig de eerste vergelijking met 2 en vergelijk met de tweede.", "Vul het in: voldoet dit punt aan beide vergelijkingen? En vermenigvuldig de eerste vergelijking eens met 2.", "Vermenigvuldig de eerste vergelijking met 2 en vergelijk met de tweede — spreken ze elkaar tegen?"],
+        wrongHints: [null, "Vul het in: voldoet dit punt aan beide vergelijkingen? En vermenigvuldig de eerste vergelijking eens met 2.", "Vul het in: voldoet dit punt aan beide vergelijkingen? En vermenigvuldig de eerste vergelijking eens met 2.", "Vermenigvuldig de eerste vergelijking met 2 en vergelijk met de tweede — spreken ze elkaar tegen?"],
         uitlegPad: {
           stappen: [
             { titel: "Tweede = 2× eerste", tekst: "4x + 6y = 2(2x + 3y) = 2·12 = 24. **Beide vergelijkingen zijn IDENTIEK** → één lijn → oneindig veel oplossingen op die lijn." },
@@ -335,7 +335,7 @@ const steps = [
       {
         q: "Een abonnement kost **€20 + €0,15 per gesprek**. Hoeveel gesprekken bij budget **€50**?",
         options: [
-          "Max 200 gesprekken",
+          "Max 200",
           "Max 30",
           "Max 70",
           "Max 100"

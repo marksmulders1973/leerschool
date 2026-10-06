@@ -23,7 +23,7 @@ const steps = [
       {
         q: "Welke is **aspecifieke** afweer?",
         options: [
-          "Huid (fysieke barrière)",
+          "Huid",
           "Antilichamen tegen specifiek virus",
           "T-cellen herkennen specifieke antigenen",
           "Immuun-geheugen"
@@ -53,7 +53,7 @@ const steps = [
       {
         q: "**Koorts** is een immuunmechanisme dat:",
         options: [
-          "Hogere lichaamstemperatuur → minder gunstig voor pathogenen + sneller afweer",
+          "Ziekteverwekkers remt en de afweer versnelt",
           "Direct virussen doodt",
           "Antilichamen aanmaakt",
           "Geen functie heeft"
@@ -70,7 +70,7 @@ const steps = [
       {
         q: "**Rood + warm + gezwollen + pijn** op infectie-plek is:",
         options: [
-          "Ontstekingsreactie (vasodilatatie + meer bloedvloei)",
+          "Ontstekingsreactie",
           "Antilichaam-reactie",
           "T-cel-aanval",
           "Allergie"
@@ -121,7 +121,7 @@ const steps = [
       {
         q: "**T-helper-cellen** (CD4+) zijn cruciaal omdat ze:",
         options: [
-          "B-cellen + andere T-cellen activeren (dirigent)",
+          "B-cellen en andere T-cellen activeren",
           "Direct pathogenen eten",
           "Antilichamen maken",
           "Bloed-stolling regelen"
@@ -155,7 +155,7 @@ const steps = [
       {
         q: "Wat is **secundaire immuunrespons**?",
         options: [
-          "Bij hercontact met zelfde antigeen: sneller + krachtiger door geheugencellen",
+          "Snellere, sterkere reactie bij hercontact",
           "Eerste reactie op pathogeen",
           "Allergische reactie",
           "Auto-immuun"
@@ -213,7 +213,7 @@ const steps = [
       {
         q: "**Groepsimmuniteit** beschermt vooral:",
         options: [
-          "Mensen die niet zelf gevaccineerd kunnen worden (baby, kanker-patiënten)",
+          "Niet-vaccineerbare mensen",
           "Gevaccineerden",
           "Alleen kinderen",
           "Niemand"
@@ -231,7 +231,7 @@ const steps = [
       {
         q: "**mRNA-vaccins** (Pfizer, Moderna) werken door:",
         options: [
-          "mRNA codeert voor antigeen → eigen cellen maken het + immuun-respons",
+          "Eigen cellen maken zelf het antigeen",
           "Levend virus injecteren",
           "Antilichaam direct geven",
           "Bloed-transfusie"
@@ -249,7 +249,7 @@ const steps = [
       {
         q: "**Pokken** zijn:",
         options: [
-          "Uitgeroeid wereldwijd (laatste geval 1977)",
+          "Wereldwijd uitgeroeid",
           "Nog wijdverbreid",
           "Onbestrijdbaar",
           "Niet besmettelijk"
@@ -266,13 +266,13 @@ const steps = [
       {
         q: "**Baby's** krijgen passieve immuniteit via:",
         options: [
-          "Placenta (IgG) + moedermelk (IgA)",
+          "Placenta en moedermelk",
           "Eigen aanmaak vanaf dag 1",
           "Vaccinaties bij geboorte",
           "Niets — alleen via vaccins"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — eigen pas later op gang.", "Sommige (HepB) wel, maar passieve = moeder.", "Wel passieve van moeder."],
+        wrongHints: [null, "Niet — eigen pas later op gang.", "Een vaccin laat de baby zélf antilichamen maken — is dat passief?", "Wel passieve van moeder."],
         uitlegPad: {
           stappen: [
             { titel: "Moeder-bescherming eerste maanden", tekst: "Tijdens zwangerschap passeren IgG-antilichamen placenta → baby beschermd tegen wat moeder immuun voor is. Eerste maanden moedermelk geeft extra IgA. Dat verdwijnt na ~6-12 mnd → daarom vaccinaties dan starten." },
@@ -309,7 +309,7 @@ const steps = [
       {
         q: "**Anafylaxie** is:",
         options: [
-          "Levensgevaarlijke allergische reactie (bloeddruk-val, luchtweg-zwelling)",
+          "Levensgevaarlijke allergische reactie",
           "Milde allergie",
           "Auto-immuun",
           "Bacterie-infectie"
@@ -326,7 +326,7 @@ const steps = [
       {
         q: "**Hygiëne-hypothese** suggereert:",
         options: [
-          "Minder vroege blootstelling aan microben → meer allergie + auto-immuun later",
+          "Te schoon opgroeien geeft meer allergie",
           "Hygiëne voorkomt allergie",
           "Schoonmaken is altijd goed",
           "Geen verband"
@@ -344,7 +344,7 @@ const steps = [
       {
         q: "**HIV** veroorzaakt AIDS doordat:",
         options: [
-          "T-helper-cellen worden vernietigd → hele immuunsysteem instort",
+          "T-helpercellen worden vernietigd",
           "Bacteriële infectie",
           "Allergische reactie",
           "Auto-immuun"
@@ -361,7 +361,7 @@ const steps = [
       {
         q: "**Coeliakie** is een auto-immuunziekte. Welke stof is de trigger?",
         options: [
-          "Gluten (in tarwe, gerst, rogge)",
+          "Gluten",
           "Lactose",
           "Pinda's",
           "Stuifmeel"
@@ -388,7 +388,7 @@ const steps = [
       {
         q: "Een virus met **R₀ = 2** zonder maatregelen:",
         options: [
-          "Groeit exponentieel — pandemie-potentieel",
+          "Groeit exponentieel",
           "Sterft uit",
           "Stabiel aantal besmettingen",
           "Heeft geen invloed"
@@ -432,7 +432,7 @@ const steps = [
       {
         q: "Bij **orgaantransplantatie**: waarom HLA-matching?",
         options: [
-          "HLA-moleculen markeren cellen als 'zelf'; mismatch = afstoting",
+          "Om afstoting van het orgaan te voorkomen",
           "HLA = bloedgroep",
           "Niet belangrijk",
           "Alleen voor cosmetisch"
@@ -450,7 +450,7 @@ const steps = [
       {
         q: "**CAR-T-therapie** voor kanker:",
         options: [
-          "T-cellen van de patiënt genetisch gewijzigd om kanker te herkennen + ingespoten",
+          "Eigen T-cellen die kanker leren herkennen",
           "Bestralingstherapie",
           "Chirurgie",
           "Antibiotica"

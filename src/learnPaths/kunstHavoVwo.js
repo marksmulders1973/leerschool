@@ -51,7 +51,7 @@ const steps = [
       },
       {
         q: "**Perspectief** in schilderkunst werd uitgevonden door:",
-        options: ["Brunelleschi (~1420 Florence)","Caravaggio","Rembrandt","Picasso"],
+        options: ["Brunelleschi","Caravaggio","Rembrandt","Picasso"],
         answer: 0,
         wrongHints: [null, "Veel later.", "Veel later.", "20e eeuw."],
         uitlegPad: {
@@ -72,7 +72,7 @@ const steps = [
       },
       {
         q: "Wat is **humanisme** in Renaissance-zin?",
-        options: ["Mens centraal (vs middeleeuwse God-centrum)","Mensenrechten-beweging","Helpen-organisatie","Geen religie"],
+        options: ["Mens centraal","Mensenrechten-beweging","Helpen-organisatie","Geen religie"],
         answer: 0,
         wrongHints: [null, "Niet — komt later, andere betekenis.", "Niet relevant.", "Niet — wel religie + mens."],
         uitlegPad: {
@@ -150,7 +150,7 @@ const steps = [
     checks: [
       {
         q: "**De Stijl** beweging stamt uit:",
-        options: ["Nederland (Mondriaan + Rietveld)","Italië","Duitsland","Frankrijk"],
+        options: ["Nederland","Italië","Duitsland","Frankrijk"],
         answer: 0,
         wrongHints: [null, "Niet relevant.", "Niet — Bauhaus.", "Niet — fauvisme/kubisme."],
         uitlegPad: {
@@ -180,17 +180,17 @@ const steps = [
       },
       {
         q: "Welke beweging is **abstract** + **geometrisch**?",
-        options: ["Kubisme / De Stijl","Romantiek","Realisme","Renaissance"],
+        options: ["De Stijl","Romantiek","Realisme","Renaissance"],
         answer: 0,
         wrongHints: [null, "Emotie + natuur.", "Werkelijkheid.", "Klassieke idealen."],
         uitlegPad: {
-          stappen: [{ titel: "20e eeuw breekt vorm op", tekst: "**Kubisme** (Picasso/Braque 1907+) + **De Stijl** (Mondriaan 1917+) + **Suprematisme** (Malevich 1915) gingen geometrisch abstract. Mondriaan: alleen rechthoeken + primaire kleuren. Kubisme: objecten ontleed in vlakken vanuit meerdere perspectieven tegelijk. Tegenstelling met figuratief realisme van eerdere eeuwen." }],
-          niveaus: { basis: "Kubisme / Stijl.", simpeler: "Geom abstract = 20e eeuw", nogSimpeler: "Kubisme / Stijl." },
+          stappen: [{ titel: "20e eeuw breekt vorm op", tekst: "**De Stijl** (Mondriaan 1917+) en **Suprematisme** (Malevich 1915) gingen volledig geometrisch abstract; het **Kubisme** (Picasso/Braque 1907+) was de opmaat, maar bleef herkenbare objecten tonen. Mondriaan: alleen rechthoeken + primaire kleuren. Kubisme: objecten ontleed in vlakken vanuit meerdere perspectieven tegelijk. Tegenstelling met figuratief realisme van eerdere eeuwen." }],
+          niveaus: { basis: "De Stijl.", simpeler: "Geom abstract = 20e eeuw", nogSimpeler: "De Stijl." },
         },
       },
       {
         q: "**Surrealisme** wordt geïnspireerd door:",
-        options: ["Onbewuste + dromen (Freud)","Politiek","Wetenschap","Industrie"],
+        options: ["Onbewuste + dromen","Politiek","Wetenschap","Industrie"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet — dat is futurisme."],
         uitlegPad: {
@@ -288,7 +288,7 @@ const steps = [
       },
       {
         q: "**Bauhaus** was:",
-        options: ["Designschool DE 1919-1933","Renaissance-paleis","Kerk","Galerij"],
+        options: ["Designschool","Renaissance-paleis","Kerk","Galerij"],
         answer: 0,
         wrongHints: [null, "Niet relevant.", "Niet relevant.", "Niet primair."],
         uitlegPad: {
@@ -298,7 +298,7 @@ const steps = [
       },
       {
         q: "Welk werk verwijst naar de **Spaanse Burgeroorlog**?",
-        options: ["Guernica (Picasso, 1937)","Demoiselles d'Avignon","Mona Lisa","Nachtwacht"],
+        options: ["Guernica","Demoiselles d'Avignon","Mona Lisa","Nachtwacht"],
         answer: 0,
         wrongHints: [null, "Eerder Picasso-werk, geen oorlog.", "Renaissance.", "NL Gouden Eeuw."],
         uitlegPad: {

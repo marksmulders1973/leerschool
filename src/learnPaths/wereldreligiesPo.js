@@ -84,7 +84,7 @@ const steps = [
         q: "In welk gebouw komen christenen samen om te bidden?",
         options: ["moskee", "kerk", "tempel", "synagoge"],
         answer: 1,
-        wrongHints: ["Andere religie. Denk aan een toren (klokkentoren of kruis).", null, null, null],
+        wrongHints: ["Een moskee hoort bij een andere religie. Welk gebouw hoort bij de Bijbel?", null, null, null],
         explanation: "**Kerk** = christelijk gebedshuis. Grote kerken heten **kathedraal** of **basiliek**. Hoofd-rooms-katholieke kerk = Sint-Pietersbasiliek in Vaticaan, Rome.",
         uitlegPad: compact(
           "Gebouwen-tabel: KERK/KATHEDRAAL = christendom. MOSKEE = islam. TEMPEL = hindoeïsme. PAGODE/TEMPEL = boeddhisme. SYNAGOGE = jodendom.",
@@ -168,7 +168,7 @@ const steps = [
       },
       {
         q: "Wie was Siddhartha Gautama (later bekend als Boeddha)?",
-        options: ["Indiase prins die verlichting zocht en stichter van het boeddhisme werd", "Egyptische farao", "Romeinse keizer", "Chinese filosoof"],
+        options: ["Indiase prins die verlichting zocht en stichter van het boeddhisme werd", "Egyptische farao die een grote piramide liet bouwen", "Romeinse keizer die het christendom toestond", "Chinese filosoof die het taoïsme begon"],
         answer: 0,
         wrongHints: [null, "Boeddha was Indiaas, niet Egyptisch.", "Boeddha was geen Romein (~5 eeuwen vóór Romeinse keizerrijk).", "Lao Tzu was Chinese filosoof (taoïsme) — niet boeddhisme."],
         explanation: "**Siddhartha Gautama** (~563-483 v.Chr.) = Indiaas/Nepalese prins. Verliet zijn paleis om antwoord te zoeken op het lijden. Mediteerde onder bodhi-boom en bereikte 'verlichting' (=Boeddha). Onderwees het 8-voudige pad.",

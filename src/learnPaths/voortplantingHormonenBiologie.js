@@ -343,7 +343,7 @@ const steps = [
       {
         q: "Wat doet de **schildklier**?",
         options: [
-          "Regelt de stofwisseling (hoe snel je energie verbrandt)",
+          "Regelt de stofwisseling",
           "Maakt insuline",
           "Maakt zaadcellen",
           "Filtert je bloed",
@@ -395,7 +395,7 @@ const steps = [
       {
         q: "Hoeveel eicellen heeft een meisje **bij geboorte** ongeveer?",
         options: [
-          "1-2 miljoen (alle die ze ooit zal hebben)",
+          "1-2 miljoen",
           "0 — die maakt ze later aan",
           "100",
           "Een handjevol",
@@ -477,7 +477,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Veel te weinig — voor één bevruchting hoeft maar één zaadcel, maar er zijn er miljoenen die zwemmen.",
+          "Veel te weinig — de meeste zaadcellen sterven onderweg, dus er moeten er enorm veel vertrekken.",
           "Te weinig.",
           "Te veel — niet zo'n groot aantal.",
         ],
@@ -501,7 +501,7 @@ const steps = [
     checks: [
       {
         q: "Op welke dag van de cyclus vindt de **eisprong** ongeveer plaats?",
-        options: ["Dag 14 (midden van cyclus)", "Dag 1", "Dag 28", "Elke dag"],
+        options: ["Dag 14", "Dag 1", "Dag 28", "Elke dag"],
         answer: 0,
         wrongHints: [
           null,
@@ -540,10 +540,10 @@ const steps = [
       {
         q: "Wat gebeurt er als er **geen** bevruchting plaatsvindt?",
         options: [
-          "Progesteron daalt, slijmvlies komt los → menstruatie",
-          "Niets, de cyclus stopt",
-          "De eicel wordt opnieuw gebruikt",
-          "Het lichaam slaat de eicel op",
+          "Progesteron daalt en het slijmvlies komt los",
+          "Er gebeurt niets meer: de cyclus stopt",
+          "De eicel wordt de volgende cyclus opnieuw gebruikt",
+          "Het lichaam slaat de eicel op voor later",
         ],
         answer: 0,
         wrongHints: [
@@ -594,7 +594,7 @@ const steps = [
       },
       {
         q: "Hoe lang duurt een gemiddelde zwangerschap?",
-        options: ["~9 maanden (40 weken)", "~3 maanden", "~1 jaar", "~6 maanden"],
+        options: ["~9 maanden", "~3 maanden", "~1 jaar", "~6 maanden"],
         answer: 0,
         wrongHints: [
           null,
@@ -668,7 +668,7 @@ const steps = [
         options: [
           "De eerste menstruatie van een meisje",
           "Een aandoening van de eierstokken",
-          "Het einde van de menstruatiecyclus (menopauze)",
+          "Het einde van de vruchtbare periode",
           "Een soort hormoon",
         ],
         answer: 0,
@@ -718,7 +718,7 @@ const steps = [
       {
         q: "Wat doet **insuline**?",
         options: [
-          "Verlaagt bloedsuiker (laat glucose in cellen)",
+          "Verlaagt bloedsuiker",
           "Verhoogt bloedsuiker",
           "Bestrijdt infecties",
           "Maakt zaadcellen",
@@ -743,9 +743,9 @@ const steps = [
         q: "Wat is het verschil tussen **diabetes type 1** en **type 2**?",
         options: [
           "Type 1: geen insuline meer; type 2: cellen reageren slecht op insuline",
-          "Type 1 is licht, type 2 is zwaar",
-          "Type 2 is besmettelijk, type 1 niet",
-          "Geen verschil",
+          "Type 1 is een lichte vorm, type 2 een zware vorm",
+          "Type 2 is besmettelijk, type 1 is niet besmettelijk",
+          "Geen verschil — twee namen voor hetzelfde",
         ],
         answer: 0,
         wrongHints: [
@@ -774,9 +774,9 @@ const steps = [
         q: "Wat is de **fight-or-flight**-response?",
         options: [
           "Lichaam maakt zich klaar voor actie via adrenaline",
-          "Slapen na een drukke dag",
-          "Insuline na het eten",
-          "Spijsvertering",
+          "Het lichaam komt tot rust na een drukke dag",
+          "De alvleesklier maakt insuline na het eten",
+          "Het lichaam verteert het eten extra snel",
         ],
         answer: 0,
         wrongHints: [
@@ -797,7 +797,7 @@ const steps = [
       {
         q: "Wat doet schildklierhormoon vooral?",
         options: [
-          "Regelt stofwisselingssnelheid (energie verbranden)",
+          "Regelt de stofwisselingssnelheid",
           "Maakt zaadcellen",
           "Bestrijdt bacteriën",
           "Reguleert slaap",
@@ -831,9 +831,9 @@ const steps = [
         q: "Hoe wordt **diabetes type 1** behandeld?",
         options: [
           "Dagelijks insuline injecteren of via pomp",
-          "Alleen dieet",
-          "Operatie aan de alvleesklier",
-          "Antibiotica",
+          "Alleen met een speciaal dieet",
+          "Met een operatie aan de alvleesklier",
+          "Met een kuur antibiotica",
         ],
         answer: 0,
         wrongHints: [
@@ -855,9 +855,9 @@ const steps = [
         q: "Wat is **PCOS**?",
         options: [
           "Een syndroom met hormonale onbalans bij vrouwen",
-          "Een soort virus",
-          "Een type huidziekte",
-          "Een vitaminetekort",
+          "Een besmettelijke ziekte door een virus",
+          "Een huidziekte met veel uitslag",
+          "Een tekort aan vitamines bij vrouwen",
         ],
         answer: 0,
         wrongHints: [
@@ -926,9 +926,9 @@ const steps = [
         q: "Wat doet **progesteron**?",
         options: [
           "Houdt het slijmvlies in de baarmoeder in stand",
-          "Verlaagt bloedsuiker",
-          "Maakt zaadcellen",
-          "Reguleert slaap",
+          "Verlaagt de bloedsuiker na het eten",
+          "Zorgt voor de aanmaak van zaadcellen",
+          "Regelt het slaap-waakritme",
         ],
         answer: 0,
         wrongHints: [

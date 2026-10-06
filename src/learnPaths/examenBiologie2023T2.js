@@ -177,7 +177,7 @@ const steps = [
         "cytoplasma",
       ],
       answer: 0,
-      wrongHints: [null, "Celmembraan zit IN ALLE cellen (ook bacteriën). Niet onderscheidend.", "Bacteriën HEBBEN ook celwand (zelfs een dikkere). Niet onderscheidend.", "Cytoplasma zit IN ALLE cellen. Niet onderscheidend."],
+      wrongHints: [null, "Celmembraan zit IN ALLE cellen (ook bacteriën). Niet onderscheidend.", "Bacteriën HEBBEN ook een celwand. Niet onderscheidend.", "Cytoplasma zit IN ALLE cellen. Niet onderscheidend."],
       explanation: "**Bacteriën = prokaryoot** (geen celkern, DNA los in cytoplasma). **Algen = eukaryoot** (mét celkern, DNA daarin). Alle andere onderdelen (membraan, wand, cytoplasma) komen bij beide voor. Verschil = de **celkern**.",
       examenBron: BRON_LABEL(40),
       bronLink: BRON_LINK,

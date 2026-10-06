@@ -57,8 +57,8 @@ const deel2 = [
       basiskennis: [{ onderwerp: "Truc", uitleg: "Gym hoort bij gymzaal." }],
       niveaus: { basis: "Gym is in de gymzaal.", simpeler: "Sport op school = gymzaal.", nogSimpeler: "Gymzaal." },
     } }),
-  v("De bel gaat. Wat betekent dat?", ["De pauze begint of is klaar.", "Je moet naar huis.", "Er is brand.", "Je krijgt eten."], 0, "De bel zegt: nu begint of eindigt iets.",
-    { en: "The bell rings. What does that mean?", ar: "يرنّ الجرس. ماذا يعني ذلك؟", uk: "Дзвонить дзвінок. Що це означає?", tr: "Zil çalıyor. Bu ne anlama gelir?", ro: "Sună clopoțelul. Ce înseamnă asta?", bg: "Звънецът бие. Какво означава това?" }),
+  v("Het is 10 uur. De bel gaat. Wat betekent dat?", ["De pauze begint of is klaar.", "Je moet naar huis.", "Er is brand.", "Je krijgt eten."], 0, "De bel zegt: nu begint of eindigt iets.",
+    { en: "It is 10 o'clock. The bell rings. What does that mean?", ar: "الساعة العاشرة. يرنّ الجرس. ماذا يعني ذلك؟", uk: "Десята година. Дзвонить дзвінок. Що це означає?", tr: "Saat on. Zil çalıyor. Bu ne anlama gelir?", ro: "Este ora zece. Sună clopoțelul. Ce înseamnă asta?", bg: "Десет часът е. Звънецът бие. Какво означава това?" }),
   // Kliktest 26 sep 2026: "deur" en "stoel" konden ook kloppen → raam en bord.
   v("Je jas hangt aan de…", ["kapstok", "tafel", "raam", "bord"], 0, "Jassen hangen aan een haak.",
     { en: "Your coat hangs on the…", ar: "معطفك معلّق على…", uk: "Твоя куртка висить на…", tr: "Montun … asılı.", ro: "Geaca ta atârnă pe…", bg: "Якето ти виси на…" }),

@@ -33,7 +33,7 @@ const steps = [
         q: "Wat is past simple van **play**?",
         options: ["played", "plaied", "playd", "playyed"],
         answer: 0,
-        wrongHints: [null, "klinker + y → gewoon +ed.", "+ed, niet +d.", "Geen verdubbeling."],
+        wrongHints: [null, "Klinker + y — verandert de y dan wel?", "+ed, niet +d.", "Geen verdubbeling."],
         uitlegPad: {
           stappen: [{ titel: "play → played", tekst: "Klinker + y: gewoon +ed → played." }],
           woorden: [{ woord: "regelmatig", uitleg: "basis + -ed" }],
@@ -47,7 +47,7 @@ const steps = [
         q: "Wat is past simple van **stop**?",
         options: ["stopped", "stoped", "stopd", "stopt"],
         answer: 0,
-        wrongHints: [null, "Korte klank + medeklinker → verdubbeling: stopped.", "+ed, niet +d.", "Geen Engelse uitgang."],
+        wrongHints: [null, "Korte klank + één medeklinker aan het eind — wat gebeurt er dan met die medeklinker?", "+ed, niet +d.", "Geen Engelse uitgang."],
         uitlegPad: {
           stappen: [{ titel: "stop → stopped", tekst: "Korte klank + medeklinker → verdubbel: stopped." }],
           woorden: [{ woord: "verdubbeling", uitleg: "extra letter bij korte klank" }],
@@ -89,7 +89,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["She didn't go to school.", "She didn't went to school.", "She not go to school.", "She didn't goes to school."],
         answer: 0,
-        wrongHints: [null, "Didn't + basisvorm = go.", "Niet alleen 'not' — je hebt didn't nodig.", "Geen -s na didn't."],
+        wrongHints: [null, "Na didn't komt de basisvorm — is 'went' dat?", "Niet alleen 'not' — je hebt didn't nodig.", "Geen -s na didn't."],
         uitlegPad: {
           stappen: [{ titel: "Didn't + basisvorm", tekst: "She didn't go — niet 'didn't went'." }],
           woorden: [{ woord: "didn't", uitleg: "= did not" }],
@@ -161,7 +161,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "Welke is **goed**? — *I ___ that film three times.* (see)",
+        q: "Welke is **goed**? — *I ___ that film three times so far.* (see)",
         options: ["have seen", "saw", "have see", "have saw"],
         answer: 0,
         wrongHints: [null, "'Three times' = ervaring → perfect.", "Na 'have' moet V3.", "V2 past niet na 'have'."],
@@ -178,7 +178,7 @@ const steps = [
         q: "Welke is **goed**? — *We ___ here since 2018.* (live)",
         options: ["have lived", "lived", "are living", "live"],
         answer: 0,
-        wrongHints: [null, "Past simple past niet bij 'since'.", "Continuous past hier minder goed.", "Present simple past niet bij 'since'."],
+        wrongHints: [null, "Past simple past niet bij 'since'.", "Bij 'since' gebruik je geen present continuous.", "Present simple past niet bij 'since'."],
         uitlegPad: {
           stappen: [{ titel: "Since + perfect", tekst: "We have lived here since 2018." }],
           woorden: [{ woord: "since", uitleg: "sinds (een tijdstip)" }],
@@ -206,9 +206,9 @@ const steps = [
     checks: [
       {
         q: "Welke is **goed**?",
-        options: ["I have already eaten.", "I already have eaten.", "I have eaten yet.", "Already I have eaten."],
+        options: ["I have already eaten.", "I already eaten have.", "I have eaten yet.", "Already I have eaten."],
         answer: 0,
-        wrongHints: [null, "Engelse zinsvolgorde plaatst already binnenin.", "'Yet' hoort bij een vraag of ontkenning, niet bij een positieve zin.", "'Already' niet vooraan."],
+        wrongHints: [null, "Kijk naar de volgorde: waar staat have ten opzichte van eaten?", "'Yet' hoort bij een vraag of ontkenning, niet bij een positieve zin.", "'Already' niet vooraan."],
         uitlegPad: {
           stappen: [{ titel: "have + already + V3", tekst: "I have already eaten. Already tussen have en V3." }],
           woorden: [{ woord: "already", uitleg: "al, midden in de zin" }],
@@ -270,7 +270,7 @@ const steps = [
         },
       },
       {
-        q: "Welke is goed? — *I ___ him three times this week.* (see)",
+        q: "Welke is goed? — *I ___ him three times so far this week.* (see)",
         options: ["have seen", "saw", "see", "have see"],
         answer: 0,
         wrongHints: [null, "Simple past niet bij 'this week' (nog bezig).", "Tegenwoordige tijd.", "Na 'have' moet V3 = seen."],
@@ -400,9 +400,9 @@ const steps = [
       },
       {
         q: "*___ you ever ___ a snake?* (see)",
-        options: ["Have / seen", "Did / see", "Have / saw", "Do / see"],
+        options: ["Have / seen", "Did / saw", "Have / saw", "Do / see"],
         answer: 0,
-        wrongHints: [null, "Did is voor simple zonder 'ever'.", "V2 past niet na have.", "Do is voor present, en 'ever' eist perfect."],
+        wrongHints: [null, "Na did komt de basisvorm — en 'ever' wijst op ervaring tot nu.", "V2 past niet na have.", "Do is voor present, en 'ever' eist perfect."],
         uitlegPad: {
           stappen: [{ titel: "Ever = perfect", tekst: "Have you ever seen a snake? Ever signaleert perfect." }],
           woorden: [{ woord: "ever", uitleg: "ooit (ervaring)" }],
@@ -469,9 +469,9 @@ const steps = [
       },
       {
         q: "*I ___ my homework already. Can I go now?*",
-        options: ["have finished", "finished", "did finish", "finishing"],
+        options: ["have finished", "has finished", "have finish", "finishing"],
         answer: 0,
-        wrongHints: [null, "'Already' is een signaalwoord — bij welke tijd hoort dat?", "'Did finish' is alleen voor nadruk; en let op het signaalwoord.", "Geen werkwoordvorm."],
+        wrongHints: [null, "I → have, niet has.", "Na have hoort V3, niet de basisvorm.", "Geen werkwoordvorm."],
         uitlegPad: {
           stappen: [{ titel: "Gevolg nu = perfect", tekst: "I have finished my homework. Can I go now? Gevolg in heden → perfect." }],
           woorden: [{ woord: "gevolg", uitleg: "actie heeft effect nu" }],
@@ -502,7 +502,7 @@ const steps = [
       { q: "**Past perfect** vorm?", options: ["had + V3","was + V-ing","V2","will have V3"], answer: 0, wrongHints: [null,"Past continuous.","Past simple.","Future perfect."] },
       { q: "*'I ___ TV when the phone rang.'* — past continuous?", options: ["was watching","watched","have watched","will watch"], answer: 0, wrongHints: [null,"Past simple.","Present perfect.","Future."] },
       { q: "*'When she arrived, the film ___ already started.'* — past perfect?", options: ["had","has","is","was"], answer: 0, wrongHints: [null,"Present perfect.","Present.","Past simple."] },
-      { q: "**Signaalwoord 'while'** past meestal bij?", options: ["Past continuous (gelijktijdige actie)","Past simple alleen","Present perfect","Future"], answer: 0, wrongHints: [null,"Niet primair.","Anders.","Niet."] },
+      { q: "**Signaalwoord 'while'** past meestal bij?", options: ["Past continuous","Past simple alleen","Present perfect","Future"], answer: 0, wrongHints: [null,"Niet primair.","Anders.","Niet."] },
       { q: "Verschil **'I lived'** vs **'I have lived'**?", options: ["Lived = afgerond verleden; have lived = link met nu","Geen verschil","Beide present","Beide future"], answer: 0, wrongHints: [null,"Wel verschil.","Niet.","Niet."] },
       { q: "**Open vraag**: past simple van 'study'?", kind: "open", acceptedAnswers: ["studied"], explanation: "study → studied (y na medeklinker → ied)." },
       { q: "**Open vraag**: vul aan 'Last year, I __ to Spain.' (go)", kind: "open", acceptedAnswers: ["went"], explanation: "go → went (onregelmatig)." },
