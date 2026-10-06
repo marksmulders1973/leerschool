@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 // Bouw-stempel (sinds 2 jul 2026, Mark: "zo zie ik of ik naar de laatste versie kijk").
 //
 // Twee waarden, bij ELKE push allebei bijwerken:
@@ -10,11 +9,3 @@
 //   dag = "6 okt", tweede = "6 okt b", derde "6 okt c".
 export const BOUW_VERSIE = 925;
 export const BOUW_STEMPEL = "6 okt";
-=======
-// Bouw-versienummer (tijdelijk, tijdens de park-bouwfase — Mark 2 jul).
-// Claude hoogt dit bij ELKE push met 1 op en meldt het nummer in de chat;
-// het stempeltje rechtsboven toont het. Zo zie je in één oogopslag of je
-// naar de laatste versie kijkt. Weghalen na de bouwfase: dit bestand +
-// het stempel-blokje in main.jsx.
-export const BOUW_VERSIE = 925;
->>>>>>> origin/audit3/rest
