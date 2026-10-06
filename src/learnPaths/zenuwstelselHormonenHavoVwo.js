@@ -42,7 +42,7 @@ const steps = [
       },
       {
         q: "Welk hersendeel regelt **coördinatie + evenwicht**?",
-        options: ["Kleine hersenen (cerebellum)","Grote hersenen","Hersenstam","Tussenhersenen"],
+        options: ["Kleine hersenen","Grote hersenen","Hersenstam","Tussenhersenen"],
         answer: 0,
         wrongHints: [null, "Niet — bewuste handelingen.", "Niet — vitale functies.", "Niet — schakeling + hormonen."],
         uitlegPad: {
@@ -75,7 +75,7 @@ const steps = [
       },
       {
         q: "Welk neuron stuurt prikkel **van CZS naar spier**?",
-        options: ["Motorisch (motorneuron)","Sensorisch","Schakelneuron","Bipolair"],
+        options: ["Motorisch","Sensorisch","Schakelneuron","Bipolair"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld richting.", "Niet — binnen CZS.", "Niet relevant."],
         uitlegPad: {
@@ -178,7 +178,7 @@ const steps = [
       },
       {
         q: "Welk hormoon stuurt **stofwisseling**?",
-        options: ["Thyroxine (T4) van schildklier","Insuline","Oestrogeen","Adrenaline"],
+        options: ["Thyroxine","Insuline","Oestrogeen","Adrenaline"],
         answer: 0,
         wrongHints: [null, "Niet — alleen bloedsuiker.", "Niet — geslachtskenmerken.", "Niet — acute stress."],
         uitlegPad: {
@@ -239,7 +239,7 @@ const steps = [
       },
       {
         q: "Welk hormoon **bewaart water** in nieren?",
-        options: ["ADH (vasopressine)","Insuline","Adrenaline","Oestrogeen"],
+        options: ["ADH","Insuline","Adrenaline","Oestrogeen"],
         answer: 0,
         wrongHints: [null, "Niet — bloedsuiker.", "Niet — acute stress.", "Niet relevant."],
         uitlegPad: {
@@ -249,7 +249,7 @@ const steps = [
       },
       {
         q: "Hoe reageert lichaam bij **lage bloedsuiker**?",
-        options: ["Glucagon → lever breekt glycogeen af","Insuline","Geen actie","Slapen"],
+        options: ["Glucagon","Insuline","Geen actie","Slapen"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — verlaagt suiker.", "Wel actie.", "Niet relevant."],
         uitlegPad: {
@@ -299,7 +299,7 @@ const steps = [
       },
       {
         q: "Iemand heeft constant koud + voelt traag + komt aan. Welke klier?",
-        options: ["Schildklier (te weinig thyroxine)","Bijnier","Hypofyse","Pancreas"],
+        options: ["Schildklier","Bijnier","Hypofyse","Pancreas"],
         answer: 0,
         wrongHints: [null, "Niet — andere symptomen.", "Kan indirect meespelen, maar maakt zelf niet het hormoon dat de stofwisseling regelt.", "Niet — bloedsuiker-symptomen."],
         uitlegPad: {

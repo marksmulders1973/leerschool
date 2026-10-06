@@ -120,7 +120,7 @@ const steps = [
         q: "Wat is **fotosynthese**?",
         options: ["Planten maken voedsel met zonlicht", "Planten eten dieren", "Planten ademen 's nachts uit", "Planten groeien zonder licht"],
         answer: 0,
-        wrongHints: [null, "Planten zijn geen vleeseters meestal.", "Verkeerd om — dat is omgekeerd.", "Wel licht nodig voor fotosynthese."],
+        wrongHints: [null, "Planten zijn geen vleeseters meestal.", "Dat is ademhaling, geen fotosynthese. Wat maakt een plant met zonlicht?", "Wel licht nodig voor fotosynthese."],
       },
       {
         q: "Welke **3 dingen** heeft een plant nodig voor fotosynthese?",
@@ -136,7 +136,7 @@ const steps = [
       },
       {
         q: "Waarom zijn **bladeren groen**?",
-        options: ["Door chlorofyl (de groene kleurstof)", "Door zonlicht", "Door water", "Toeval"],
+        options: ["Door chlorofyl", "Door zonlicht", "Door water", "Toeval"],
         answer: 0,
         wrongHints: [null, "Zonlicht is wit/geel.", "Water is doorzichtig.", "Geen toeval — biologische reden."],
       },
@@ -157,9 +157,9 @@ const steps = [
       },
       {
         q: "Wat doet een plant **'s nachts**?",
-        options: ["Ademt zuurstof in (weinig)", "Doet fotosynthese", "Groeit niet", "Verandert in dier"],
+        options: ["Ademt zuurstof in", "Doet fotosynthese", "Groeit niet", "Geeft zuurstof af"],
         answer: 0,
-        wrongHints: [null, "Geen zonlicht = geen fotosynthese.", "Planten groeien soms juist 's nachts.", "Nee."],
+        wrongHints: [null, "Geen zonlicht = geen fotosynthese.", "Planten groeien soms juist 's nachts.", "Zuurstof afgeven hoort bij fotosynthese — en wat heeft die nodig?"],
       },
       {
         q: "Wat is **NPK**?",
@@ -243,13 +243,13 @@ const steps = [
       },
       {
         q: "Wat gebeurt als planten **allemaal verdwijnen**?",
-        options: ["Zuurstof zou opraken (langzaam)", "Niets", "Meer dieren", "Aarde wordt groener"],
+        options: ["De zuurstof zou opraken", "Niets", "Meer dieren", "Aarde wordt groener"],
         answer: 0,
         wrongHints: [null, "Wel iets — heel veel.", "Dieren afhankelijk van planten voor voedsel.", "Andersom."],
       },
       {
         q: "Geven planten **'s nachts** ook zuurstof af?",
-        options: ["Nee (geen zonlicht)", "Ja, evenveel", "Ja, dubbel", "Ja, maar minder dan overdag"],
+        options: ["Nee", "Ja, evenveel", "Ja, dubbel", "Ja, maar minder dan overdag"],
         answer: 0,
         wrongHints: [null, "Niet evenveel.", "Niet meer.", "Wat heeft een plant nodig om zuurstof te maken — en is dat er 's nachts?"],
       },
@@ -293,7 +293,7 @@ const steps = [
   {
     title: "Eindopdracht — fotosynthese-mix",
     explanation:
-      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: fotosynthese, plant-onderdelen, ademhaling, voedselketens.\n\nVeel succes!",
+      "Mix-toets. Door elkaar: fotosynthese, plant-onderdelen, ademhaling, voedselketens.\n\nVeel succes!",
     checks: [
       {
         q: "Welke **3 dingen** gebruikt een plant in fotosynthese?",
@@ -309,25 +309,25 @@ const steps = [
       },
       {
         q: "**Chlorofyl** zit in:",
-        options: ["Chloroplasten (in bladcellen)", "Wortelhaar", "Boomstam", "Stuifmeel"],
+        options: ["Chloroplasten", "Wortelhaar", "Boomstam", "Stuifmeel"],
         answer: 0,
         wrongHints: [null, "Bevat geen chlorofyl.", "Stam vooral hout, weinig chlorofyl.", "Stuifmeel is voor voortplanting."],
       },
       {
         q: "Een **kikker** eet vliegen. Kikker is dan een ...?",
-        options: ["Consument (carnivoor)", "Producent", "Herbivoor", "Afbreker"],
+        options: ["Carnivoor", "Producent", "Herbivoor", "Afbreker"],
         answer: 0,
         wrongHints: [null, "Geen plant.", "Geen plant-eter.", "Geen afbreker."],
       },
       {
         q: "**Wanneer geven planten zuurstof af**?",
-        options: ["Overdag (in zonlicht)", "'s Nachts", "Alleen 's zomers", "Nooit"],
+        options: ["Overdag", "'s Nachts", "Alleen 's zomers", "Nooit"],
         answer: 0,
         wrongHints: [null, "Geen zonlicht 's nachts.", "Ook 's winters wel als zon schijnt.", "Wel — anders geen O₂ op aarde."],
       },
       {
         q: "Een **den** *(naaldboom)* verliest in de herfst ... ?",
-        options: ["Niet al zijn naalden (blijft groen)", "Alle naalden tegelijk", "Alleen in zomer", "Nooit naalden"],
+        options: ["Niet al zijn naalden", "Alle naalden tegelijk", "Alleen in zomer", "Nooit naalden"],
         answer: 0,
         wrongHints: [null, "Niet allemaal tegelijk.", "Nee, behouden zomer en winter.", "Verliezen wel beetje per jaar."],
       },

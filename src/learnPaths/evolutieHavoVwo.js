@@ -38,7 +38,7 @@ const steps = [
       {
         q: "Pepermot-evolutie in 19e eeuw: licht → donker. Door wat?",
         options: [
-          "Roet maakte bomen donker → lichte motten beter zichtbaar → opgegeten → donkere overleven",
+          "Selectie door vogels op roetzwarte bomen",
           "Motten 'wilden' donker worden",
           "Selectie door vrouwelijke motten",
           "Toeval zonder selectie"
@@ -55,7 +55,7 @@ const steps = [
       {
         q: "**Darwiniaanse fitness** betekent:",
         options: [
-          "Reproductief succes (aantal levensvatbare nakomelingen)",
+          "Reproductief succes",
           "Fysieke kracht",
           "Snelheid",
           "Intelligentie"
@@ -70,7 +70,7 @@ const steps = [
       {
         q: "Galapagos-vinken hebben **verschillende snavels** per eiland. Waarom?",
         options: [
-          "Aanpassing aan beschikbaar voedsel per eiland (zaden, insecten, etc.)",
+          "Aanpassing aan het voedsel per eiland",
           "Toeval",
           "Vinken kiezen hun snavel-vorm",
           "Elke eilandvink stamt af van een andere vogelsoort"
@@ -88,7 +88,7 @@ const steps = [
       {
         q: "Een vogelpaar krijgt 8 jongen, maar er is maar voedsel voor 2. Wat gebeurt er volgens Darwin?",
         options: [
-          "Concurrentie: de best aangepaste jongen hebben de grootste overlevingskans",
+          "De best aangepaste jongen overleven het vaakst",
           "Iedereen overleeft",
           "Niemand overleeft",
           "De ouders kiezen bewust welke jongen overleven"
@@ -112,7 +112,7 @@ const steps = [
       {
         q: "De meeste **mutaties** zijn:",
         options: [
-          "Neutraal of schadelijk; slechts klein deel gunstig",
+          "Neutraal of schadelijk",
           "Allemaal gunstig",
           "Allemaal schadelijk",
           "Bewust gekozen"
@@ -144,7 +144,7 @@ const steps = [
       {
         q: "Een **kleine populatie** loopt risico op:",
         options: [
-          "Verlies van genetische variatie → vatbaarheid uitsterving",
+          "Verlies van genetische variatie",
           "Te veel variatie",
           "Mutaties uitgesloten",
           "Geen evolutie mogelijk"
@@ -160,7 +160,7 @@ const steps = [
       },
       {
         q: "Frequentie van gen-a in populatie is q = 0,2. Frequentie van **homozygoot aa**?",
-        options: ["0,04 (= 4%)", "0,2", "0,32", "2q = 0,4"],
+        options: ["0,04", "0,2", "0,32", "2q = 0,4"],
         answer: 0,
         wrongHints: [null, "Niet — dat is allel-frequentie.", "Niet — dat is de frequentie van de heterozygoten (2pq).", "Niet — geen relatie."],
         uitlegPad: {
@@ -173,7 +173,7 @@ const steps = [
       {
         q: "**Gene flow** is:",
         options: [
-          "Migratie van individuen brengt nieuwe allelen naar populatie",
+          "Uitwisseling van allelen door migratie",
           "Genen die door cel stromen",
           "Mutaties die zich verspreiden",
           "DNA-replicatie"
@@ -197,7 +197,7 @@ const steps = [
       {
         q: "**Genetische drift** werkt sterker in:",
         options: [
-          "Kleine populaties (toeval-effect groter)",
+          "Kleine populaties",
           "Grote populaties",
           "Bij sterke selectie",
           "Bij hoge mutatie-snelheid"
@@ -227,7 +227,7 @@ const steps = [
       {
         q: "**Cheetah's** hebben weinig genetische variatie. Oorzaak?",
         options: [
-          "Bottleneck (drastische populatie-krimp in verleden)",
+          "Een flessenhals in het verleden",
           "Inteelt door menselijke ingreep",
           "Stichter-effect",
           "Sympatrische soortvorming"
@@ -244,7 +244,7 @@ const steps = [
       {
         q: "Een **muildier** (paard × ezel) is onvruchtbaar. Welk isolatie-mechanisme?",
         options: [
-          "Post-zygotisch (na bevruchting)",
+          "Post-zygotisch",
           "Pre-zygotisch",
           "Habitat-isolatie",
           "Gedragsisolatie"
@@ -261,7 +261,7 @@ const steps = [
       {
         q: "**Co-evolutie** voorbeeld:",
         options: [
-          "Orchidee met lange spoor + nachtvlinder met lange tong, samen geëvolueerd",
+          "Orchidee en nachtvlinder met lange tong",
           "Eenzaam mos in toendra",
           "Genetische drift in klein dorp",
           "Mutatie in DNA"
@@ -288,7 +288,7 @@ const steps = [
       {
         q: "**Homologe organen** zijn:",
         options: [
-          "Zelfde structuur, andere functie (bv. voorpoot mens/walvis/vleermuis)",
+          "Zelfde structuur, andere functie",
           "Andere structuur, zelfde functie",
           "Identieke functie + structuur",
           "Functieloos"
@@ -303,7 +303,7 @@ const steps = [
       {
         q: "**Vleugel vleermuis** + **vleugel libel** zijn:",
         options: [
-          "Analoog (zelfde functie, andere oorsprong)",
+          "Analoog",
           "Homoloog",
           "Rudimentair",
           "Identiek"
@@ -349,7 +349,7 @@ const steps = [
       {
         q: "Een **moleculaire klok** gebruikt:",
         options: [
-          "Voorspelbaar tempo van DNA-mutaties om datering tussen soorten te bepalen",
+          "Het mutatietempo van DNA",
           "Echt uurwerk-mechanisme",
           "Aantal organen",
           "Hartslag"
@@ -375,7 +375,7 @@ const steps = [
       {
         q: "**Lactose-tolerantie** bij Noord-Europeanen is voorbeeld van:",
         options: [
-          "Recente menselijke evolutie door selectie (na koeien-domesticatie)",
+          "Recente menselijke evolutie door selectie",
           "Aangeleerd gedrag",
           "Cultureel verschijnsel zonder genen",
           "Toeval"
@@ -408,7 +408,7 @@ const steps = [
       {
         q: "Een **theorie** in wetenschap (zoals evolutie-theorie) betekent:",
         options: [
-          "Best-onderbouwde verklaring uit alle data — NIET een gok",
+          "Een goed onderbouwde verklaring",
           "Een gok of speculatie",
           "Iets onbewezen",
           "Tegenovergesteld van feit"
@@ -442,7 +442,7 @@ const steps = [
       {
         q: "Volgens **2e thermodynamica-wet**: entropie neemt toe in gesloten systeem. Argument 'dit verbiedt evolutie' is:",
         options: [
-          "Onjuist — aarde is OPEN systeem (zon-energie), 2e wet niet van toepassing op subsystemen",
+          "Onjuist — de aarde krijgt energie van de zon",
           "Correct — evolutie verbroken",
           "Niet relevant",
           "Bewijst evolutie"
