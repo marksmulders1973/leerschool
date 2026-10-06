@@ -217,7 +217,7 @@ const steps = [
           "Niets",
         ],
         answer: 0,
-        wrongHints: [null, "Bij hogere prijs is aanbod groot, vraag klein → overschot, geen tekort.", "Andersom — overschot duwt prijs juist terug.", "Markt zoekt evenwicht — er gebeurt wel wat."],
+        wrongHints: [null, "Kijk bij een hoge prijs: willen kopers dan veel of weinig? En verkopers?", "Andersom — wat doen verkopers met spullen die blijven liggen?", "Markt zoekt evenwicht — er gebeurt wel wat."],
         uitlegPad: {
           stappen: [{ titel: "Te hoge prijs = overschot", tekst: "Bij prijs boven evenwicht: verkopers willen veel leveren (aanbod groot), kopers willen weinig (vraag klein) → overschot. Prijs daalt vanzelf om weer evenwicht te bereiken." }],
           woorden: [{ woord: "overschot", uitleg: "aanbod > vraag" }],
@@ -271,7 +271,7 @@ const steps = [
           "Prijs thee stijgt automatisch ook",
         ],
         answer: 0,
-        wrongHints: [null, "Substituut: koffie duur → thee aantrekkelijker, dus méér thee.", "Het zijn substituten — wel verbonden.", "Het effect zit in de vraag, niet automatisch in prijs."],
+        wrongHints: [null, "Koffie en thee zijn vervangers — waar stappen koffiedrinkers op over?", "Het zijn substituten — wel verbonden.", "Het effect zit in de vraag, niet automatisch in prijs."],
         uitlegPad: {
           stappen: [{ titel: "Substituut-effect", tekst: "Koffie en thee zijn substituten (vervangers). Koffie duurder → mensen kiezen vaker thee → vraag naar thee stijgt." }],
           woorden: [{ woord: "substituut", uitleg: "vervangend product" }],
@@ -323,7 +323,7 @@ const steps = [
           "Alleen vraagverandering",
         ],
         answer: 0,
-        wrongHints: [null, "Subsidie verlaagt kosten → meer aanbod, niet minder.", "Subsidie maakt produceren goedkoper.", "Subsidie aan producent = aanbodfactor."],
+        wrongHints: [null, "Subsidie verlaagt de kosten — kunnen producenten dan meer of minder leveren?", "Subsidie maakt produceren goedkoper.", "Subsidie aan producent = aanbodfactor."],
         uitlegPad: {
           stappen: [{ titel: "Subsidie verlaagt kosten → meer aanbod", tekst: "Een subsidie aan zonnepanelen-producenten verlaagt de kosten. Bij elke prijs kunnen ze meer leveren met winst → aanbodlijn naar rechts." }],
           woorden: [{ woord: "subsidie", uitleg: "overheidsgeld om iets te stimuleren" }],
@@ -377,7 +377,7 @@ const steps = [
           "Prijs stijgt, hoeveelheid daalt",
         ],
         answer: 0,
-        wrongHints: [null, "Aanbodverschuiving = tegengestelde richting (P en Q).", "Dat is bij aanbod naar links.", "Dat is bij vraag naar rechts."],
+        wrongHints: [null, "Aanbodverschuiving = tegengestelde richting (P en Q).", "Beide dalen hoort bij minder vraag, niet bij meer aanbod.", "Dat hoort bij minder aanbod, niet bij meer."],
         uitlegPad: {
           stappen: [{ titel: "Aanbod↑ → P↓ en Q↑", tekst: "Aanbodlijn naar rechts (bv. door betere technologie): bij elke prijs wordt meer aangeboden. Nieuw evenwicht: LAGERE prijs en HOGERE hoeveelheid." }],
           woorden: [{ woord: "tegengestelde richting", uitleg: "P daalt, Q stijgt" }],
@@ -412,7 +412,7 @@ const steps = [
           "Aardbeien houden niet van zon",
         ],
         answer: 0,
-        wrongHints: [null, "Vraag is meestal best stabiel — aanbod schommelt seizoensgewijs.", "Niet seizoensgebonden zo.", "Niet de hoofdreden."],
+        wrongHints: [null, "Vraag is meestal best stabiel — aanbod schommelt seizoensgewijs.", "Niet seizoensgebonden zo.", "Zon is juist goed voor aardbeien — wanneer wordt er geoogst?"],
         uitlegPad: {
           stappen: [{ titel: "Schaars aanbod = hogere prijs", tekst: "In januari zijn aardbeien NIET in seizoen → import nodig, weinig aanbod → hoge prijs. In juni: vol Nederlands seizoen → veel aanbod → lage prijs." }],
           woorden: [{ woord: "seizoen", uitleg: "tijd van het jaar" }],
@@ -431,7 +431,7 @@ const steps = [
           "De zaal is gratis",
         ],
         answer: 0,
-        wrongHints: [null, "Belasting is een kleinere factor.", "Hoge vraag alleen verklaart het niet — het aanbod is ook beperkt.", "Zaalkosten zijn een aanbodfactor."],
+        wrongHints: [null, "Belasting is een kleinere factor.", "Hoge vraag alleen verklaart het niet — kijk ook naar de andere kant van de markt.", "Zaalkosten zijn een aanbodfactor."],
         uitlegPad: {
           stappen: [{ titel: "Veel vraag + beperkt aanbod = hoge prijs", tekst: "Taylor Swift kan maar X stadions/avonden vullen — vast aanbod. Miljoenen fans willen tickets → enorme vraag. Resultaat: hoge prijs." }],
           woorden: [{ woord: "beperkt aanbod", uitleg: "fysieke limiet (zaalcapaciteit)" }],
@@ -464,7 +464,7 @@ const steps = [
           "Beide stijgen",
         ],
         answer: 0,
-        wrongHints: [null, "Aanbod ↑ = prijs ↓ + Q ↑.", "Dat zou bij vraag ↑ kunnen.", "Aanbod ↑ → meer Q, niet minder."],
+        wrongHints: [null, "Wat doen verkopers als ze opeens veel meer tomaten hebben dan normaal?", "Beide dalen hoort bij minder vraag, niet bij meer aanbod.", "Beide stijgen hoort bij meer vraag — hier verandert het aanbod."],
         uitlegPad: {
           stappen: [{ titel: "Meer aanbod tomaten → prijs daalt", tekst: "Goede oogst = aanbodlijn naar rechts. Bij elke prijs meer beschikbaar → producenten verlagen prijs om alles te verkopen. P daalt, Q stijgt." }],
           woorden: [{ woord: "aanbodschok", uitleg: "plotselinge aanbodsverandering" }],
@@ -483,7 +483,7 @@ const steps = [
           "Prijs daalt",
         ],
         answer: 0,
-        wrongHints: [null, "Vraag ↑ = P ↑ + Q ↑.", "Markt verandert wel.", "Hogere vraag = hogere prijs, niet lagere."],
+        wrongHints: [null, "Meer kopers voor dezelfde fietsen — wordt het dan goedkoper?", "Markt verandert wel.", "Denk aan wat verkopers doen als veel meer mensen hetzelfde willen kopen."],
         uitlegPad: {
           stappen: [{ titel: "Meer vraag fietsen → P+ Q+", tekst: "Iedereen wil opeens fietsen kopen = vraaglijn naar rechts. Bij gelijk aanbod betekent dit hogere prijs en meer verkocht. Allebei stijgen samen." }],
           woorden: [{ woord: "vraagschok", uitleg: "plotselinge vraagverandering" }],
@@ -554,7 +554,7 @@ const steps = [
         q: "Wat gebeurt met **prijs** als de **vraag stijgt** (aanbod gelijk)?",
         options: ["Prijs stijgt","Prijs daalt","Niets","Aanbod stopt"],
         answer: 0,
-        wrongHints: [null, "Niet — meer vraag = prijs OMHOOG (niet omlaag).", "Niet — markt reageert direct.", "Niet — aanbod blijft gelijk per aanname."],
+        wrongHints: [null, "Niet — meer kopers voor hetzelfde aantal producten: wordt het dan goedkoper?", "Niet — markt reageert direct.", "Niet — aanbod blijft gelijk per aanname."],
         uitlegPad: {
           stappen: [
             { titel: "Wet: meer vraag = hoger prijs", tekst: "Als **vraag stijgt** maar aanbod gelijk blijft:\n• Meer kopers willen zelfde aantal producten\n• Schaarste ontstaat\n• Verkopers kunnen meer vragen\n• **Prijs stijgt**\n\nVoorbeeld: bij hete zomer → meer vraag naar airco's → prijs stijgt." },
@@ -575,7 +575,7 @@ const steps = [
       },
       {
         q: "Welke factor **verschuift** de vraaglijn?",
-        options: ["Verandering in inkomen, smaak, of bevolking","Productie­kosten","Lonen van werknemers","Belasting op productie"],
+        options: ["Verandering in inkomen, smaak, of bevolking","Productiekosten","Lonen van werknemers","Belasting op productie"],
         answer: 0,
         wrongHints: [null, "Niet — dat verschuift AANBOD-lijn, niet vraag.", "Niet — ook aanbod-factor.", "Niet — ook aanbod-factor."],
         uitlegPad: {
@@ -622,9 +622,9 @@ const steps = [
       },
       {
         q: "Wat is een **substituut**?",
-        options: ["Vervanger product (boter → margarine)","Iets unieks","Productie­machine","Belasting"],
+        options: ["Vervanger product (boter → margarine)","Iets unieks","Productiemachine","Belasting"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — substituut IS vervanger.", "Niet — machine maakt, geen vervanger.", "Niet — onafhankelijk concept."],
+        wrongHints: [null, "Tegenovergesteld — iets unieks heeft juist geen alternatief.", "Niet — machine maakt, geen vervanger.", "Niet — onafhankelijk concept."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een substituut?", tekst: "**Substituut** = **alternatief product dat dezelfde behoefte vervult**. Als prijs van product A stijgt, schakelen consumenten naar substituut B.\n\nVoorbeelden:\n• Boter ↔ margarine\n• Coca-Cola ↔ Pepsi\n• Trein ↔ auto (voor reizen)\n• Koffie ↔ thee\n• iPhone ↔ Samsung Galaxy" },
