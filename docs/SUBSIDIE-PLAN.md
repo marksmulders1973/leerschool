@@ -186,3 +186,8 @@ Quiet toegevoegd (1 okt).
 Bronnen (nagekeken 12 sep 2026): cbf.nl/organisaties/nationaal-fonds-kinderhulp ·
 leergeld.nl/effectiviteit · rijksoverheid.nl (voortgang aanpak geldzorgen, armoede en schulden) ·
 mkbservicedesk.nl (innovatiesubsidies).
+
+## 🇪🇺 ESF+ — vraag Mark 6 okt 2026 (LinkedIn-post Voedselbank Enschede-Haaksbergen over "Europees Sociaal Fonds")
+- Wat de voedselbanken krijgen = **ESF+ onderdeel "Meest Gedepriveerde Personen" (MDP, vroeger FEAD)**: Europees geld voor voedsel/basisgoederen, in NL landelijk via Voedselbanken Nederland en SZW. **Niet** voor leermiddelen of software; alleen voor de erkende voedselhulp-keten. Direct aanvragen door Leerkwartier: nee.
+- Het andere NL-deel van ESF+ (arbeidsmarkt/kansen voor kwetsbare groepen) loopt via de **35 arbeidsmarktregio's (centrumgemeenten)**, niet via losse initiatieven; alleen haalbaar als partner in een gemeentelijk project (past bij het gemeente-betaalt-plan, Den Haag/Zoetermeer). Nog uitzoeken: of "sociale innovatie"/kinderarmoede-calls open zijn (uitvoeringsorganisatie: Uitvoering Van Beleid, SZW).
+- Praktischer sporen (zelfde doelgroep, wél open voor kleine initiatieven): SIDN fonds (staat al in dit plan), VSBfonds (kansengelijkheid/onderwijs), Oranje Fonds (sociale initiatieven), Fonds 21 (jongeren & onderwijs), Stichting Kinderpostzegels, Jeugdeducatiefonds (JEF2027 loopt al). **Morgen (7 okt) bespreken:** welke 2 eerst, en of de KvK-inschrijving (eenmanszaak) een belemmering is — veel fondsen eisen een stichting/ANBI (zie het SIDN→Stichting-spoor hierboven).
