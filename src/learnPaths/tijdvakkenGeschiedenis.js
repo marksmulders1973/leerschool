@@ -63,7 +63,7 @@ const steps = [
   // ─── A. Intro ───────────────
   {
     title: "Wat zijn tijdvakken?",
-    explanation: "De geschiedenis is heel lang — duizenden jaren. Om er overzicht in te krijgen, hebben historici de geschiedenis verdeeld in **10 tijdvakken**, elk met een **kenmerkende naam**.\n\nDe 10 tijdvakken (van vroeger naar nu):\n\n| # | Naam | Periode |\n|---|---|---|\n| 1 | Jagers en boeren | tot 3000 v.Chr. |\n| 2 | Grieken en Romeinen | 3000 v.Chr. – 500 |\n| 3 | Monniken en ridders | 500 – 1000 |\n| 4 | Steden en staten | 1000 – 1500 |\n| 5 | Ontdekkers en hervormers | 1500 – 1600 |\n| 6 | Regenten en vorsten | 1600 – 1700 |\n| 7 | Pruiken en revoluties | 1700 – 1800 |\n| 8 | Burgers en stoommachines | 1800 – 1900 |\n| 9 | Wereldoorlogen | 1900 – 1950 |\n| 10 | Televisie en computer | 1950 – nu |\n\nDe namen zijn een **geheugenhulp**: ze vertellen meteen iets typisch uit dat tijdvak.\n\n**Waarom belangrijk?** Met deze 10 tijdvakken kun je elke gebeurtenis in de juiste tijd plaatsen. Op een examen krijg je vaak vragen als: 'In welk tijdvak hoort de Tachtigjarige Oorlog?' Antwoord: tijdvak 6 (Regenten en vorsten, 1568-1648).",
+    explanation: "De geschiedenis is heel lang — duizenden jaren. Om er overzicht in te krijgen, hebben historici de geschiedenis verdeeld in **10 tijdvakken**, elk met een **kenmerkende naam**.\n\nDe 10 tijdvakken (van vroeger naar nu):\n\n| # | Naam | Periode |\n|---|---|---|\n| 1 | Jagers en boeren | tot 3000 v.Chr. |\n| 2 | Grieken en Romeinen | 3000 v.Chr. – 500 |\n| 3 | Monniken en ridders | 500 – 1000 |\n| 4 | Steden en staten | 1000 – 1500 |\n| 5 | Ontdekkers en hervormers | 1500 – 1600 |\n| 6 | Regenten en vorsten | 1600 – 1700 |\n| 7 | Pruiken en revoluties | 1700 – 1800 |\n| 8 | Burgers en stoommachines | 1800 – 1900 |\n| 9 | Wereldoorlogen | 1900 – 1950 |\n| 10 | Televisie en computer | 1950 – nu |\n\nDe namen zijn een **geheugenhulp**: ze vertellen meteen iets typisch uit dat tijdvak.\n\n**Waarom belangrijk?** Met deze 10 tijdvakken kun je elke gebeurtenis in de juiste tijd plaatsen. Op een examen krijg je vaak vragen als: 'In welk tijdvak hoort de Tachtigjarige Oorlog?' Antwoord: tijdvak 5 (Ontdekkers en hervormers) — de opstand begint in 1568.",
     svg: tijdlijnSvg(),
     checks: [
       {
@@ -107,7 +107,7 @@ const steps = [
         q: "Wat veranderde tijdens de **landbouwrevolutie**?",
         options: ["Mensen gingen op één plek wonen en akkers bewerken", "Mensen ontdekten elektriciteit", "Romeinen veroverden Nederland", "De boekdrukkunst werd uitgevonden"],
         answer: 0,
-        wrongHints: [null, "Elektriciteit is veel later — pas in tijdvak 8.", "Romeinen kwamen in tijdvak 2.", "Boekdrukkunst = ~1450, dat is tijdvak 5."],
+        wrongHints: [null, "Elektriciteit is veel later — pas in tijdvak 8.", "Romeinen kwamen in tijdvak 2.", "Boekdrukkunst = ~1450, dat is tijdvak 4."],
         uitlegPad: {
           stappen: [{ titel: "Rondtrekkend → vast", tekst: "Landbouwrevolutie (~10.000 v.Chr.) = mensen stoppen met rondtrekken en gaan VAST WONEN. Ze verbouwen graan + houden vee. Eerste dorpen ontstaan." }],
           woorden: [{ woord: "landbouwrevolutie", uitleg: "Overgang van jacht-verzameling naar landbouw + veeteelt." }, { woord: "neolithicum", uitleg: "Jonge steentijd — periode van landbouwrevolutie." }],
@@ -179,7 +179,7 @@ const steps = [
         q: "Wat is het **feodale stelsel**?",
         options: ["Koning geeft land aan ridders, die hem in ruil daarvoor beschermen", "Iedereen mag stemmen voor de koning", "Het systeem van Romeinse legerkampen", "Een soort handelsroute"],
         answer: 0,
-        wrongHints: [null, "Stemmen kwam pas veel later (Athene tijdvak 2, of moderne democratie tijdvak 8+).", "Romeinse legerkampen = tijdvak 2.", "Een handelsroute is iets anders."],
+        wrongHints: [null, "Stemmen speelde hier geen rol — dat kwam pas met de moderne democratie (tijdvak 8+).", "Romeinse legerkampen = tijdvak 2.", "Een handelsroute is iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Land voor bescherming", tekst: "Feodaal stelsel = piramide. Koning bovenaan → geeft LEEN (stuk land) aan ridder/leenheer → die ridder belooft trouw + leveren van soldaten in oorlog. Boeren onderaan werken op het land in ruil voor bescherming." }],
           woorden: [{ woord: "feodaal stelsel", uitleg: "Middeleeuws systeem van wederzijdse verplichtingen: land tegen trouw + bescherming." }, { woord: "leenheer", uitleg: "Persoon die land in leen GEEFT (boven in piramide)." }, { woord: "leenman", uitleg: "Persoon die land in leen ONTVANGT en trouw belooft." }, { woord: "horige", uitleg: "Boer aan het land gebonden — niet vrij om weg te gaan." }],
@@ -300,7 +300,7 @@ const steps = [
         q: "Wie was **Lodewijk XIV**?",
         options: ["Absolute koning van Frankrijk ('Zonnekoning')", "Engelse koning", "Nederlandse stadhouder", "Spaanse keizer"],
         answer: 0,
-        wrongHints: [null, "Engelse koningen heetten in deze tijd vaak Charles of James.", "Stadhouders waren Oranjes (Willem III bv.).", "Spanje had koningen, maar Lodewijk was Frans."],
+        wrongHints: [null, "Engelse koningen heetten in deze tijd vaak Charles of James.", "Stadhouders waren Oranjes (Willem III bv.).", "Spanje had koningen, geen keizers — en Lodewijk regeerde niet in Spanje."],
         uitlegPad: {
           stappen: [{ titel: "Zonnekoning Frankrijk", tekst: "Lodewijk XIV (1638-1715) = absolute koning van Frankrijk, 72 jaar geregeerd. Symbool: zon. Quote: \"L'État, c'est moi\" (de staat, dat ben ik). Bouwde paleis Versailles als statussymbool." }],
           woorden: [{ woord: "Lodewijk XIV", uitleg: "Franse koning 1643-1715. Symbool van absolute monarchie." }, { woord: "absolute monarchie", uitleg: "Koning heeft ALLE macht, geen parlement, geen beperkingen." }, { woord: "Versailles", uitleg: "Reusachtig paleis bij Parijs. Symbool van Lodewijks macht + adel onder controle." }],
@@ -471,7 +471,7 @@ const steps = [
       },
       {
         q: "In welk tijdvak hoort **Columbus' ontdekking van Amerika** (1492)?",
-        options: ["Tijdvak 5 — Ontdekkers", "Tijdvak 6", "Tijdvak 4", "Tijdvak 7"],
+        options: ["Tijdvak 5", "Tijdvak 6", "Tijdvak 4", "Tijdvak 7"],
         answer: 0,
         wrongHints: [null, "Tijdvak 6 begint pas in 1600 — 1492 valt daar buiten.", "Tijdvak 4 eindigt rond 1500. Welk tijdvak heeft 'ontdekkingsreizen' als kenmerk?", "Tijdvak 7 gaat over de Verlichting en revoluties — dat past niet bij Columbus."],
         uitlegPad: {
@@ -485,7 +485,7 @@ const steps = [
       },
       {
         q: "In welk tijdvak hoort **Anne Frank**?",
-        options: ["Tijdvak 9 — Wereldoorlogen", "Tijdvak 8", "Tijdvak 10", "Tijdvak 7"],
+        options: ["Tijdvak 9", "Tijdvak 8", "Tijdvak 10", "Tijdvak 7"],
         answer: 0,
         wrongHints: [null, "Tijdvak 8 hoort bij de 19e eeuw — Anne Frank leefde in de 20e eeuw.", "Tijdvak 10 begint ná WO2. Anne Frank overleed tijdens de oorlog — in welk tijdvak valt WO2?", "Tijdvak 7 gaat over de 18e eeuw — dat is lang vóór Anne Franks tijd."],
         uitlegPad: {
