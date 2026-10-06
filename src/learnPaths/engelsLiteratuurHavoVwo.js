@@ -18,7 +18,7 @@ const steps = [
   {
     title: "Periodes Engelse literatuur — kort overzicht",
     explanation:
-      "**Belangrijkste perioden**:\n\n**1. Old English** (450-1100): Beowulf (epos), Angelsaksische poëzie.\n**2. Middle English** (1100-1500): Chaucer's 'Canterbury Tales' (~1387) — eerste literaire werk in spreektaal-Engels.\n**3. Renaissance/Early Modern** (1500-1660):\n• Shakespeare (1564-1616) — toneel + sonnetten.\n• Christopher Marlowe — 'Doctor Faustus'.\n• John Donne — metafysische poëzie.\n• John Milton — 'Paradise Lost' (1667).\n\n**4. Restoration + 18e eeuw** (1660-1798):\n• Rede + satire.\n• Jonathan Swift — 'Gulliver's Travels' (1726) — politieke satire.\n• Daniel Defoe — 'Robinson Crusoe' (1719) — eerste 'roman' in moderne zin.\n• Jane Austen (1775-1817) — 'Pride and Prejudice', 'Emma'.\n\n**5. Romantic period** (1798-1832):\n• Reactie op rationele Verlichting; nadruk op natuur, gevoel, individu.\n• William Wordsworth + Samuel Taylor Coleridge — 'Lyrical Ballads' 1798.\n• Lord Byron, P.B. Shelley, John Keats — 'Romantic poets'.\n• Mary Shelley — 'Frankenstein' (1818) — eerste science-fiction.\n\n**6. Victorian** (1837-1901):\n• Industrialisatie + sociale ongelijkheid.\n• Charles Dickens — 'Oliver Twist', 'Great Expectations', 'A Tale of Two Cities'.\n• Brontë-zusters — 'Jane Eyre' (Charlotte), 'Wuthering Heights' (Emily).\n• Thomas Hardy — 'Tess of the d'Urbervilles'.\n• Robert Louis Stevenson — 'Jekyll and Hyde'.\n• Lewis Carroll — 'Alice in Wonderland'.\n\n**7. Modernism** (1900-1945):\n• Experimenteel, gebroken vorm, stream-of-consciousness.\n• Virginia Woolf — 'Mrs Dalloway', 'To the Lighthouse'.\n• James Joyce (Ier) — 'Ulysses' (1922).\n• T.S. Eliot — 'The Waste Land' (1922).\n• D.H. Lawrence, Joseph Conrad, E.M. Forster.\n\n**8. Postmodern + Contemporary** (1945-nu):\n• George Orwell — '1984', 'Animal Farm'.\n• Salman Rushdie, Ian McEwan, Zadie Smith, Kazuo Ishiguro (Nobel 2017).\n• Margaret Atwood (Can) — 'Handmaid's Tale'.\n• J.K. Rowling — 'Harry Potter'.\n\n**Belangrijke prijzen**:\n• **Booker Prize** (1969) — beste roman in het Engels.\n• **Pulitzer** (Amerikaans).\n• **Nobel Literature** — wereldwijd.",
+      "**Belangrijkste perioden**:\n\n**1. Old English** (450-1100): Beowulf (epos), Angelsaksische poëzie.\n**2. Middle English** (1100-1500): Chaucer's 'Canterbury Tales' (~1387) — eerste literaire werk in spreektaal-Engels.\n**3. Renaissance/Early Modern** (1500-1660):\n• Shakespeare (1564-1616) — toneel + sonnetten.\n• Christopher Marlowe — 'Doctor Faustus'.\n• John Donne — metafysische poëzie.\n• John Milton — 'Paradise Lost' (1667).\n\n**4. Restoration + 18e eeuw** (1660-1798):\n• Rede + satire.\n• Jonathan Swift — 'Gulliver's Travels' (1726) — politieke satire.\n• Daniel Defoe — 'Robinson Crusoe' (1719) — eerste 'roman' in moderne zin.\n\n**5. Romantic period** (1798-1832):\n• Reactie op rationele Verlichting; nadruk op natuur, gevoel, individu.\n• Jane Austen (1775-1817) — 'Pride and Prejudice' (1813), 'Emma' — romans uit deze periode, al schreef ze zelf niet 'romantisch'.\n• William Wordsworth + Samuel Taylor Coleridge — 'Lyrical Ballads' 1798.\n• Lord Byron, P.B. Shelley, John Keats — 'Romantic poets'.\n• Mary Shelley — 'Frankenstein' (1818) — eerste science-fiction.\n\n**6. Victorian** (1837-1901):\n• Industrialisatie + sociale ongelijkheid.\n• Charles Dickens — 'Oliver Twist', 'Great Expectations', 'A Tale of Two Cities'.\n• Brontë-zusters — 'Jane Eyre' (Charlotte), 'Wuthering Heights' (Emily).\n• Thomas Hardy — 'Tess of the d'Urbervilles'.\n• Robert Louis Stevenson — 'Jekyll and Hyde'.\n• Lewis Carroll — 'Alice in Wonderland'.\n\n**7. Modernism** (1900-1945):\n• Experimenteel, gebroken vorm, stream-of-consciousness.\n• Virginia Woolf — 'Mrs Dalloway', 'To the Lighthouse'.\n• James Joyce (Ier) — 'Ulysses' (1922).\n• T.S. Eliot — 'The Waste Land' (1922).\n• D.H. Lawrence, Joseph Conrad, E.M. Forster.\n\n**8. Postmodern + Contemporary** (1945-nu):\n• George Orwell — '1984', 'Animal Farm'.\n• Salman Rushdie, Ian McEwan, Zadie Smith, Kazuo Ishiguro (Nobel 2017).\n• Margaret Atwood (Can) — 'Handmaid's Tale'.\n• J.K. Rowling — 'Harry Potter'.\n\n**Belangrijke prijzen**:\n• **Booker Prize** (1969) — beste roman in het Engels.\n• **Pulitzer** (Amerikaans).\n• **Nobel Literature** — wereldwijd.",
     checks: [
       {
         q: "Wie schreef **'Pride and Prejudice'**?",
@@ -52,7 +52,7 @@ const steps = [
         wrongHints: [null, "Niet — kwam later.", "Niet — Amerikaans subgenre.", "Niet — proza."],
         uitlegPad: {
           stappen: [
-            { titel: "Mary Shelley, 1818", tekst: "Mary Shelley schreef Frankenstein op 18-jarige leeftijd. Wetenschapper Victor Frankenstein creëert monster uit dode lichaamsdelen + reanimeert via elektriciteit. Pionier sci-fi door wetenschap als plot-driver, niet magie." },
+            { titel: "Mary Shelley, 1818", tekst: "Mary Shelley begon op 18-jarige leeftijd aan Frankenstein. Wetenschapper Victor Frankenstein creëert monster uit dode lichaamsdelen + reanimeert via elektriciteit. Pionier sci-fi door wetenschap als plot-driver, niet magie." },
           ],
           niveaus: { basis: "SF.", simpeler: "Eerste sciencefiction.", nogSimpeler: "SF" },
         },
@@ -66,7 +66,7 @@ const steps = [
           "Beste filmscript"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — niet alleen US.", "Niet — alleen roman.", "Onzin."],
+        wrongHints: [null, "Niet — niet alleen US.", "Niet — alleen roman.", "Niet — het gaat om boeken."],
         uitlegPad: {
           stappen: [{ titel: "Sinds 1969", tekst: "Prestigieuze prijs voor roman in Engels. Sinds 2014 ook van Amerikaanse auteurs. Daarnaast: **Booker International** voor vertaalde werken (Marieke Lucas Rijneveld won die 2020 met 'De avond is ongemak')." }],
           niveaus: { basis: "Roman in Engels.", simpeler: "Beste Engelstalige roman.", nogSimpeler: "Booker" },
@@ -114,7 +114,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — dat is regels per sonnet.", "Niet — dat is aantal toneelstukken.", "Niet — minder."],
         uitlegPad: {
-          stappen: [{ titel: "154 stuks", tekst: "Uitgegeven 1609 in één bundel. Eerste 126: aan de 'Fair Youth' (een mooie jonge man). 127-154: aan de 'Dark Lady'. Alle 14 regels in ABAB CDCD EFEF GG = 'Shakespearean sonnet'." }],
+          stappen: [{ titel: "154 stuks", tekst: "Uitgegeven 1609 in één bundel. Eerste 126: aan de 'Fair Youth' (een mooie jonge man). 127-154: aan de 'Dark Lady'. Vrijwel allemaal 14 regels in ABAB CDCD EFEF GG = 'Shakespearean sonnet'." }],
           niveaus: { basis: "154.", simpeler: "154 sonnetten.", nogSimpeler: "154" },
         },
       },
@@ -122,7 +122,7 @@ const steps = [
         q: "**Macbeth** is een:",
         options: ["Tragedy", "Comedy", "History", "Sonnet"],
         answer: 0,
-        wrongHints: [null, "Niet — eindigt slecht.", "Wel historisch maar dramatisch genre = tragedy.", "Niet — toneelstuk."],
+        wrongHints: [null, "Niet — eindigt slecht.", "Er komt een Schotse koning in voor — maar kijk hoe het afloopt voor de hoofdpersoon.", "Niet — toneelstuk."],
         uitlegPad: {
           stappen: [{ titel: "Schots koningschap door moord", tekst: "Macbeth + Lady Macbeth manipuleren elkaar tot moord op koning Duncan. Resultaat: schuldgevoel, waanzin, ondergang van beiden. Klassieke tragedy: ambitie + hubris → val. Geïnspireerd door echte Schotse historie (deels)." }],
           niveaus: { basis: "Tragedy.", simpeler: "Tragedie.", nogSimpeler: "Tragedy" },
@@ -140,7 +140,7 @@ const steps = [
         wrongHints: [null, "Wel metrum.", "Niet — geen vast rijm-vereiste.", "Niet — wel structuur."],
         uitlegPad: {
           stappen: [
-            { titel: "Standaard Engelse poëzie", tekst: "Pent = 5, jambe = ta-DAH. Voorbeeld: 'Shall I com-PARE thee TO a SUM-mer's DAY?' (5 maal ta-DAH). Natuurlijk Engels accentpatroon → klinkt vloeiend. Shakespeare's dialogen meestal in blank verse (iambic pentameter zonder rijm)." },
+            { titel: "Standaard Engelse poëzie", tekst: "Pent = 5, jambe = ta-DAH. Voorbeeld: 'shall-I · com-PARE · thee-TO · a-SUM · mer's-DAY' (5 maal ta-DAH; klemtoon op I, PARE, TO, SUM, DAY). Natuurlijk Engels accentpatroon → klinkt vloeiend. Shakespeare's dialogen meestal in blank verse (iambic pentameter zonder rijm)." },
           ],
           niveaus: { basis: "5 jamben.", simpeler: "10 lettergrepen ta-DAH.", nogSimpeler: "5×ta-DAH" },
         },
@@ -208,7 +208,7 @@ const steps = [
         wrongHints: [null, "Niet — die schreef Wuthering Heights.", "Niet — andere stijl + tijdperk.", "Niet — Frankenstein."],
         uitlegPad: {
           stappen: [
-            { titel: "Drie Brontë-zussen", tekst: "**Charlotte**: Jane Eyre (1847).\n**Emily**: Wuthering Heights (1847).\n**Anne**: Tenant of Wildfell Hall.\nAlle drie schreven onder MANNELIJK pseudoniem (Currer, Ellis, Acton Bell) wegens vrouwen-vooroordeel. Alle vroeg gestorven (tuberculose)." },
+            { titel: "Drie Brontë-zussen", tekst: "**Charlotte**: Jane Eyre (1847).\n**Emily**: Wuthering Heights (1847).\n**Anne**: Tenant of Wildfell Hall.\nAlle drie schreven onder MANNELIJK pseudoniem (Currer, Ellis, Acton Bell) wegens vrouwen-vooroordeel. Alle drie stierven jong." },
           ],
           niveaus: { basis: "Charlotte.", simpeler: "Charlotte Brontë.", nogSimpeler: "Charlotte" },
         },

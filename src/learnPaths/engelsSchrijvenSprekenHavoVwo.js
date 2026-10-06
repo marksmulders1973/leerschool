@@ -61,9 +61,9 @@ const steps = [
       },
       {
         q: "Welke is **fout** Engels?",
-        options: ["'I have 16 years'","I am 16 years old","I was born in 2008","I study Spanish"],
+        options: ["I have 16 years","I am 16 years old","I was born in 2008","I study Spanish"],
         answer: 0,
-        wrongHints: [null, "Deze zin is prima Engels — zoek de zin die 'have' gebruikt bij een leeftijd.", "Prima Engels — welke zin gebruikt 'have' waar het niet hoort?", "Correct Engels — welke optie is een letterlijke vertaling uit het Nederlands?"],
+        wrongHints: [null, "Deze zin is goed Engels — lees de andere zinnen nog eens kritisch.", "Ook dit is goed Engels — welke zin klinkt als een letterlijke vertaling?", "Correct Engels — kijk nog eens naar de andere zinnen."],
         uitlegPad: {
           stappen: [{ titel: "Be + age, niet have", tekst: "**'I have 16 years' = WRONG**. Zo zeg je het in het Frans + Spaans ('j'ai 16 ans'), niet in het Engels. Engels: **'I am 16 (years old)'**. Met 'be' + leeftijd, niet 'have'.\n\nAndere klassieke NL-fouten:\n• 'I am born in' → 'I was born in'.\n• 'Become' (worden) vaak verward met 'krijgen' (= get).\n• 'Eventually' = uiteindelijk, niet 'eventueel'." }],
           niveaus: { basis: "I have 16 years.", simpeler: "Have age = fout", nogSimpeler: "'have' + leeftijd = fout" },
@@ -129,8 +129,8 @@ const steps = [
         },
       },
       {
-        q: "**'Looking forward to hearing'** — wat is correct?",
-        options: ["Looking forward to hearing FROM you","Looking forward HEARING you","Look forward TO HEAR","Looking forward HEAR"],
+        q: "Welke afsluitzin van een e-mail is **correct** Engels?",
+        options: ["Looking forward to hearing from you","Looking forward hearing you","Look forward to hear from you","Looking forward hear from you"],
         answer: 0,
         wrongHints: [null, "Niet — TO ontbreekt.", "Niet — niet gerund.", "Niet — niet gerund."],
         uitlegPad: {
@@ -179,9 +179,9 @@ const steps = [
       },
       {
         q: "**Active voice** is beter dan passive omdat:",
-        options: ["Directer + sterker","Korter","Engelser","Geen verschil"],
+        options: ["Directer + sterker","Formeler","Engelser","Geen verschil"],
         answer: 0,
-        wrongHints: [null, "Klopt deels maar primair direct.", "Niet — beide bestaan.", "Wel verschil."],
+        wrongHints: [null, "Niet — passive klinkt vaak juist formeler.", "Niet — beide bestaan.", "Wel verschil."],
         uitlegPad: {
           stappen: [{ titel: "Voorbeeld", tekst: "**Active** (sterk): 'Researchers found that social media affects mental health.'\n**Passive** (zwakker): 'It was found by researchers that mental health is affected by social media.'\n\nActive is **directer + korter + duidelijker** wie doet wat. Passive heeft plaats (bv. wetenschappelijk gerelateerd, of als doel = focus) maar **niet als default**. Engelse stijlgidsen (Strunk + White) verdedigen active." }],
           niveaus: { basis: "Direct.", simpeler: "Active = direct", nogSimpeler: "A." },
@@ -193,7 +193,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Veel te kort.", "Te lang.", "Wel verwachting."],
         uitlegPad: {
-          stappen: [{ titel: "Concreet beperkt", tekst: "**HAVO**: ~250-300 woorden. **VWO**: ~350-400 woorden. Korter = onvoldoende uitwerking, langer = padding. School-specifiek verschilt licht. **Plan: 4 alinea's** met intro + 2-3 argumenten + conclusie. Per alinea ~60-80 woorden." }],
+          stappen: [{ titel: "Concreet beperkt", tekst: "**HAVO**: ~250-300 woorden. **VWO**: ~350-400 woorden. Korter = onvoldoende uitwerking, langer = padding. School-specifiek verschilt licht. **Plan: 4-5 alinea's** met intro + 2-3 argumenten + conclusie. Per alinea ~60-80 woorden." }],
           niveaus: { basis: "250-300.", simpeler: "HAVO = 300w", nogSimpeler: "A." },
         },
       },
@@ -204,7 +204,7 @@ const steps = [
   {
     title: "Spreekvaardigheid Engels",
     explanation:
-      "**Spreekvaardigheid** wordt op SE getoetst. Vaak 2 vormen:\n\n**Monoloog**: leerling spreekt zelfstandig over thema. 3-5 min.\n**Dialoog**: gesprek met examinator over thema's. ~10 min.\n\n**Veel-voorkomende thema's**:\n• Eigen toekomst (studie, beroep, dromen).\n• Cultuur + media (boek, film, serie, muziek).\n• Maatschappij (klimaat, technologie, migratie, gender).\n• Nederland (typische cultuur uitleggen).\n• Internationale onderwerpen.\n• Eigen interesses + hobby's.\n\n**Beoordeling**:\n• **Inhoud**: relevantie, diepgang, structuur.\n• **Taalbeheersing**: woordkeus, grammatica, vloeiendheid.\n• **Uitspraak**: helderheid, intonatie.\n• **Interactie**: bij dialoog — reageren, vragen, doorgaan.\n\n**Strategieën**:\n\n**1. Niet uit hoofd leren**:\n• Examinator merkt het.\n• Gesprek kan zijwegen ingaan — dan loop je vast met een voorbereide tekst.\n• Wel: **structuur + woordenschat-zinnen** voorbereiden.\n\n**2. Speech-fillers**:\nWanneer je tijd nodig hebt:\n• 'Well, let me think...'\n• 'That's an interesting question...'\n• 'I would say that...'\n• 'You know, I believe...'\n• 'Actually, ...'\n\n**3. Paraphrasing**:\nAls je woord niet weet:\n• 'It's like a... [omschrijving]'.\n• 'It's similar to ...'\n• 'I can't remember the exact word but...'\n• 'In Dutch we say... I think in English it would be...'\n\n**4. Mening uitdrukken**:\n• 'In my opinion, ...'\n• 'I believe / I think / I feel that...'\n• 'It seems to me that...'\n• 'From my perspective, ...'\n\n**5. Eens / oneens**:\n• Eens: 'I agree with you', 'That's a good point', 'Exactly!', 'Absolutely'.\n• Oneens (beleefd): 'I see your point, but...', 'However, I think...', 'I'm not sure I agree...'\n\n**6. Vragen stellen**:\n• 'What do you think about ...?'\n• 'Could you tell me more about ...?'\n• 'Why do you say that?'\n• 'How would you describe ...?'\n\n**Uitspraak-tips**:\n• **Th-klanken**: th in 'think, three, throw' (stemloos) vs 'this, that, the' (stemhebbend). NL'ers verwarren vaak met 'd' of 's'.\n• **W vs V**: 'wine' (W = halfklinker) vs 'vine' (V = stemhebbende fricatief). NL'ers verwisselen.\n• **Stemloze + stemhebbende eind-medeklinkers**: 'bed' (d stemhebbend) vs 'bet' (t stemloos). NL'ers maken van deze d een t aan het eind van een woord = klassieke fout.\n• **Klemtoon op juiste lettergreep**: 'PHOtograph, phoTOgrapher, photoGRAPHic'. Verandert per vorm.\n\n**Klinkers waar NL'ers struikelen**:\n• **i:** (lang, in 'bee, see') vs **ɪ** (kort, in 'bit, sit'). 'Sheet' ≠ 'shit' — uitspraak cruciaal!\n• **æ** (in 'cat, hat') — bestaat niet in NL, klank tussen a en e.\n• **ə** (schwa, in 'about, sofa') — onbeklemtoonde klinker, vaak ingeslikt.\n\n**Intonatie**:\n• Engelse intonatie is levendiger dan de Nederlandse.\n• Vraag-zinnen stijgen aan eind (yes-no vragen).\n• Statements dalen.\n• Belang van **vloeiende** spraak boven perfecte.\n\n**Veelgemaakte fouten** spreektaal:\n• 'How looks she?' → 'How does she look?'\n• 'I have seen her yesterday' → 'I saw her yesterday' (past simple, niet present perfect bij specifieke tijd).\n• 'Make a question' → 'ask a question'.\n• 'On the foto' → 'in the photo'.\n• 'In the weekend' → 'at the weekend' (UK) / 'on the weekend' (VS).\n• 'Last weekend was nice' → vermijd Nederlands letterlijk vertalen.\n\n**Voorbereiding**:\n• Lees Engelstalig nieuws regelmatig (BBC, Guardian, NYT).\n• Kijk Engelstalige series ZONDER ondertitels (of Engelse ondertitels).\n• Luister naar podcasts.\n• Spreek hardop tegen jezelf — gewoon doen.\n• Spreek met Engelstaligen indien mogelijk.\n• Schrijf NIET uit, oefen wel structuren + key vocabulary.\n\n**Op de examen-dag**:\n• Adem rustig.\n• Glimlach (klinkt door in stem).\n• Maak oogcontact (in fysiek examen).\n• Spreek niet te snel.\n• Maak gebruik van speech-fillers bij vastlopen.\n• Beter een goed onderwerp uitwerken dan veel onderwerpen oppervlakkig.",
+      "**Spreekvaardigheid** wordt op SE getoetst. Vaak 2 vormen:\n\n**Monoloog**: leerling spreekt zelfstandig over thema. 3-5 min.\n**Dialoog**: gesprek met examinator over thema's. ~10 min.\n\n**Veel-voorkomende thema's**:\n• Eigen toekomst (studie, beroep, dromen).\n• Cultuur + media (boek, film, serie, muziek).\n• Maatschappij (klimaat, technologie, migratie, gender).\n• Nederland (typische cultuur uitleggen).\n• Internationale onderwerpen.\n• Eigen interesses + hobby's.\n\n**Beoordeling**:\n• **Inhoud**: relevantie, diepgang, structuur.\n• **Taalbeheersing**: woordkeus, grammatica, vloeiendheid.\n• **Uitspraak**: helderheid, intonatie.\n• **Interactie**: bij dialoog — reageren, vragen, doorgaan.\n\n**Strategieën**:\n\n**1. Niet uit hoofd leren**:\n• Examinator merkt het.\n• Gesprek kan zijwegen ingaan — dan loop je vast met een voorbereide tekst.\n• Wel: **structuur + woordenschat-zinnen** voorbereiden.\n\n**2. Speech-fillers**:\nWanneer je tijd nodig hebt:\n• 'Well, let me think...'\n• 'That's an interesting question...'\n• 'I would say that...'\n• 'You know, I believe...'\n• 'Actually, ...'\n\n**3. Paraphrasing**:\nAls je woord niet weet:\n• 'It's like a... [omschrijving]'.\n• 'It's similar to ...'\n• 'I can't remember the exact word but...'\n• 'In Dutch we say... I think in English it would be...'\n\n**4. Mening uitdrukken**:\n• 'In my opinion, ...'\n• 'I believe / I think / I feel that...'\n• 'It seems to me that...'\n• 'From my perspective, ...'\n\n**5. Eens / oneens**:\n• Eens: 'I agree with you', 'That's a good point', 'Exactly!', 'Absolutely'.\n• Oneens (beleefd): 'I see your point, but...', 'However, I think...', 'I'm not sure I agree...'\n\n**6. Vragen stellen**:\n• 'What do you think about ...?'\n• 'Could you tell me more about ...?'\n• 'Why do you say that?'\n• 'How would you describe ...?'\n\n**Uitspraak-tips**:\n• **Th-klanken**: th in 'think, three, throw' (stemloos) vs 'this, that, the' (stemhebbend). NL'ers verwarren vaak met 'd' of 's'.\n• **W vs V**: 'wine' (W = halfklinker) vs 'vine' (V = stemhebbende fricatief). NL'ers verwisselen.\n• **Stemloze + stemhebbende eind-medeklinkers**: 'bed' (d stemhebbend) vs 'bet' (t stemloos). NL'ers maken van deze d een t aan het eind van een woord = klassieke fout.\n• **Klemtoon op juiste lettergreep**: 'PHOtograph, phoTOgrapher, photoGRAPHic'. Verandert per vorm.\n\n**Klinkers waar NL'ers struikelen**:\n• **i:** (lang, in 'bee, see') vs **ɪ** (kort, in 'bit, sit'). 'Sheet' ≠ 'shit' — uitspraak cruciaal!\n• **æ** (in 'cat, hat') — bestaat niet in NL, klank tussen a en e.\n• **ə** (schwa, in 'about, sofa') — onbeklemtoonde klinker, vaak ingeslikt.\n\n**Intonatie**:\n• Engelse intonatie is levendiger dan de Nederlandse.\n• Vraag-zinnen stijgen aan eind (yes-no vragen).\n• Statements dalen.\n• Belang van **vloeiende** spraak boven perfecte.\n\n**Veelgemaakte fouten** spreektaal:\n• 'How looks she?' → 'How does she look?'\n• 'I have seen her yesterday' → 'I saw her yesterday' (past simple, niet present perfect bij specifieke tijd).\n• 'Make a question' → 'ask a question'.\n• 'On the foto' → 'in the photo'.\n• 'In the weekend' → 'at the weekend' (UK) / 'on the weekend' (VS).\n\n**Voorbereiding**:\n• Lees Engelstalig nieuws regelmatig (BBC, Guardian, NYT).\n• Kijk Engelstalige series ZONDER ondertitels (of Engelse ondertitels).\n• Luister naar podcasts.\n• Spreek hardop tegen jezelf — gewoon doen.\n• Spreek met Engelstaligen indien mogelijk.\n• Schrijf NIET uit, oefen wel structuren + key vocabulary.\n\n**Op de examen-dag**:\n• Adem rustig.\n• Glimlach (klinkt door in stem).\n• Maak oogcontact (in fysiek examen).\n• Spreek niet te snel.\n• Maak gebruik van speech-fillers bij vastlopen.\n• Beter een goed onderwerp uitwerken dan veel onderwerpen oppervlakkig.",
     checks: [
       {
         q: "Welke is een goede **speech filler** (tijd-koper)?",
@@ -218,9 +218,9 @@ const steps = [
       },
       {
         q: "Welke is **fout** Engels?",
-        options: ["'I have seen her yesterday'","I saw her yesterday","I have seen her","I will see her tomorrow"],
+        options: ["I have seen her yesterday","I saw her yesterday","I have seen her","I will see her tomorrow"],
         answer: 0,
-        wrongHints: [null, "'Yesterday' + verleden tijd klopt juist — zoek de zin waar de tijdsvorm bótst met het tijdstip.", "Present perfect zónder tijdstip is prima — waar gaat het mis mét een tijdstip erbij?", "Toekomst + 'tomorrow' klopt — welke zin mengt voltooide tijd met een verleden tijdstip?"],
+        wrongHints: [null, "Deze zin is goed Engels — let bij de andere zinnen op tijdsvorm én tijdstip.", "Deze zin is goed Engels — kijk nog eens kritisch naar de andere zinnen.", "Deze zin is goed Engels — past bij elke zin de tijdsvorm bij het tijdstip?"],
         uitlegPad: {
           stappen: [{ titel: "Past simple bij specifieke tijd", tekst: "**Fout**: 'I have seen her yesterday'. Reden: **'yesterday' is specifieke tijd in verleden** → vereist past simple, niet present perfect. Correct: **'I saw her yesterday'**.\n\nRegel: present perfect bij **onbepaalde tijd** ('I have seen her') of voor doorgaand effect. Past simple bij **specifieke tijd**. Toets-klassieker — NL'ers verwarren vaak." }],
           niveaus: { basis: "Have seen yesterday.", simpeler: "PP+yesterday=fout", nogSimpeler: "A." },
@@ -267,9 +267,9 @@ const steps = [
     checks: [
       {
         q: "Welke is **correct Engels**?",
-        options: ["She works hard","She work hard","She is work hard","She does work hard"],
+        options: ["She works hard","She work hard","She is work hard","She working hard"],
         answer: 0,
-        wrongHints: [null, "Niet — 3e p ev = -s.", "Niet zinvol.", "Wel mogelijk maar emphatic, niet standaard."],
+        wrongHints: [null, "Niet — let op de 3e persoon enkelvoud.", "Niet zinvol.", "Niet — hier ontbreekt de persoonsvorm."],
         uitlegPad: {
           stappen: [{ titel: "3e p ev = -s", tekst: "**She works hard** — 3e persoon enkelvoud present simple krijgt **-s** aan einde werkwoord. 'She work hard' is fout. 'She does work hard' is grammaticaal correct maar **emphatic** (nadruk: ze werkt wél hard, in tegenstelling tot ...) — niet de neutrale standaardvorm." }],
           niveaus: { basis: "Works.", simpeler: "She works", nogSimpeler: "A." },
@@ -289,7 +289,7 @@ const steps = [
         q: "**'It's important TO ___'** — wat volgt?",
         options: ["Infinitief (study, work, etc.)","Gerund (-ing)","Past simple","Past participle"],
         answer: 0,
-        wrongHints: [null, "Niet — 'to' is infinitief-marker.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet — kijk welke rol 'to' hier heeft: voorzetsel of deel van het werkwoord?", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "TO + infinitief", tekst: "**'It's important TO study'** — 'to' als infinitief-marker wordt gevolgd door **bare infinitive** (eerste vorm werkwoord). Verschil met 'TO + gerund' (waar 'to' voorzetsel is): 'I look forward TO studying' (hier gerund). Truc: kun je na 'to' 'this' of een zelfstandig naamwoord zetten ('I look forward to this')? Dan is 'to' een voorzetsel → gerund. Anders → infinitief." }],
           niveaus: { basis: "Infinitief.", simpeler: "Important to + inf", nogSimpeler: "A." },
@@ -299,7 +299,7 @@ const steps = [
         q: "**'My CV is ___ (attach)'** — welke vorm?",
         options: ["attached","attaching","to attach","attach"],
         answer: 0,
-        wrongHints: [null, "Niet — passieve toestand.", "Niet — niet doel.", "Niet — verbuigd."],
+        wrongHints: [null, "Niet — het CV doet zelf niets.", "Niet — niet doel.", "Niet — na 'is' hoort hier een andere vorm."],
         uitlegPad: {
           stappen: [{ titel: "Passief past participle", tekst: "**'My CV is attached'** = passief: CV wordt **bijgevoegd** (door iemand/iets). Past participle (3e vorm) = 'attached'. Volledig: 'My CV is attached to this email'. Of formeler: 'Please find my CV attached'." }],
           niveaus: { basis: "Attached.", simpeler: "Is attached", nogSimpeler: "A." },
