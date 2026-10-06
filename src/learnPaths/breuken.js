@@ -46,13 +46,13 @@ const steps = [
     checks: [
       {
         q: "Een taart is in 8 gelijke stukken gesneden. Je eet 3 stukken. Welk deel heb je gegeten?",
-        options: ["⅜", "⅓", "⁸⁄₃", "8/3"],
+        options: ["⅜", "⅓", "⁸⁄₃", "⅝"],
         answer: 0,
         wrongHints: [
           null,
           "⅓ zou 1 van 3 stukken zijn. Hier zijn er 8 stukken in totaal, en je hebt 3 gegeten.",
-          "Je hebt het omgedraaid. Bovenaan: gegeten stukken (3). Onderaan: totaal (8). Dus 3/8.",
-          "Andersom: bovenaan staat hoeveel je hebt (3), onderaan het totaal (8). Dus ⅜.",
+          "Je hebt het omgedraaid. Wat hoort bovenaan: het aantal gegeten stukken of het totaal?",
+          "⅝ is het deel dat je níét hebt gegeten. Welk deel heb je wél gegeten?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Boven = jij, onder = totaal", tekst: "3 gegeten van 8 = ⅜." }],
@@ -176,23 +176,23 @@ const steps = [
     checks: [
       {
         q: "Welke breuk is gelijk aan ⅓?",
-        options: ["⁴⁄₁₂", "⅔", "²⁄₆", "Beide ²⁄₆ en ⁴⁄₁₂"],
-        answer: 3,
+        options: ["⁴⁄₁₀", "⅔", "²⁄₆", "³⁄₆"],
+        answer: 2,
         wrongHints: [
-          "⁴⁄₁₂ klopt als gelijkwaardige breuk — maar is er nog een andere breuk in de lijst die ook gelijk is aan ⅓?",
+          "Je hebt de teller met 4 vermenigvuldigd. Is de noemer dan ook met 4 vermenigvuldigd?",
           "⅔ is twee derde, niet één derde.",
-          "²⁄₆ klopt als gelijkwaardige breuk — maar is er nog een andere breuk in de lijst die ook gelijk is aan ⅓?",
           null,
+          "³⁄₆ is de helft. Is ⅓ evenveel als de helft?",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Boven én onder × hetzelfde", tekst: "⅓ × 2/2 = ²⁄₆. ⅓ × 4/4 = ⁴⁄₁₂. Beide gelijk aan ⅓." }],
+          stappen: [{ titel: "Boven én onder × hetzelfde", tekst: "⅓ × 2/2 = ²⁄₆. Ook ⅓ × 4/4 = ⁴⁄₁₂ is gelijk aan ⅓." }],
           woorden: [{ woord: "gelijkwaardig", uitleg: "andere getallen, zelfde waarde" }],
           theorie: "Teller × n en noemer × n = zelfde breuk (want n/n = 1).",
           voorbeelden: [{ type: "voorbeeld", tekst: "½ = ²⁄₄ = ³⁄₆ = ⁴⁄₈" }],
           basiskennis: [{ onderwerp: "check", uitleg: "deel: 2÷6 = 4÷12 = 1÷3" }],
           niveaus: {
-            basis: "²⁄₆ én ⁴⁄₁₂ = beide ⅓.",
-            simpeler: "1×2/3×2 = 2/6. 1×4/3×4 = 4/12.",
+            basis: "²⁄₆ = ⅓ (boven en onder × 2).",
+            simpeler: "1×2 = 2 boven, 3×2 = 6 onder: 2/6.",
             nogSimpeler: "Verdubbel boven en onder: blijft hetzelfde.",
           },
         },
@@ -421,13 +421,13 @@ const steps = [
     checks: [
       {
         q: "Reken uit: ¾ × ⅓.",
-        options: ["¼", "³⁄₁₂ (= ¼)", "²⁄₇", "Beide ¼ en ³⁄₁₂"],
-        answer: 3,
+        options: ["¼", "⁴⁄₇", "¹³⁄₁₂", "⁹⁄₄"],
+        answer: 0,
         wrongHints: [
-          "¼ is het vereenvoudigde antwoord. Maar de directe uitkomst van 3·1 boven en 4·3 onder staat óók in de lijst — kijk naar ³⁄₁₂.",
-          "³⁄₁₂ is de directe uitkomst. Maar dat is hetzelfde als ¼ — die staat óók in de lijst.",
-          "Bij breuken vermenigvuldigen tel je de tellers en noemers niet op — hoe reken je het dan wél uit?",
           null,
+          "Bij breuken vermenigvuldigen tel je de tellers en noemers niet op — hoe reken je het dan wél uit?",
+          "Je hebt de breuken opgeteld. Hier moet je vermenigvuldigen.",
+          "Je hebt de tweede breuk omgedraaid — dat doe je alleen bij delen.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Teller × teller, noemer × noemer", tekst: "¾ × ⅓ = (3·1)/(4·3) = ³⁄₁₂ = ¼." }],
@@ -512,7 +512,7 @@ const steps = [
         wrongHints: [
           null,
           "Je hebt eerst opgeteld in plaats van vermenigvuldigd — welke bewerking heeft voorrang bij volgorde van bewerkingen?",
-          "²⁄₅ is alleen het resultaat van ½ × ⅖ — maar je vergeet de + ⅓ nog te verwerken.",
+          "Reken ½ × ⅖ nog eens na (teller × teller, noemer × noemer) — en vergeet daarna de + ⅓ niet.",
           "Reken stap voor stap: welke bewerking doe je eerst, en wat is het resultaat van die stap?",
         ],
         uitlegPad: {
@@ -637,7 +637,7 @@ const steps = [
           null,
           "Dat is alleen ⅓ × ⅙ = ¹⁄₁₈. Je vergeet de + ½.",
           "Te groot — ½ is maar 0,5 en je telt iets kleins op.",
-          "Eerst vermenigvuldigen: ⅓ × ⅙ = ¹⁄₁₈. Dan ½ + ¹⁄₁₈ = ⁹⁄₁₈ + ¹⁄₁₈ = ¹⁰⁄₁₈.",
+          "⁵⁄₆ is ½ + ⅓ — maar welke bewerking moet je eerst doen: × of +?",
         ],
         uitlegPad: {
           stappen: [{ titel: "× voor +", tekst: "Eerst ⅓×⅙ = ¹⁄₁₈. Dan ½ + ¹⁄₁₈ = ⁹⁄₁₈ + ¹⁄₁₈ = ¹⁰⁄₁₈." }],
@@ -663,7 +663,7 @@ const steps = [
       { q: "Welke breuk is groter: ⅓ of ¼?", options: ["⅓","¼","Gelijk","Niet te zeggen"], answer: 0, wrongHints: [null, "Niet — andersom.", "Niet — verschillend.", "Wel te zeggen — vergelijk de noemers."] },
       { q: "1 − ⅖ = ?", options: ["⅗","⅖","⅘","½"], answer: 0, wrongHints: [null, "Andersom.", "Niet.", "Niet."] },
       { q: "Wat is **¼ als procent**?", options: ["25%","14%","40%","20%"], answer: 0, wrongHints: [null, "Niet zomaar cijfers.", "Niet — denk na: hoeveel procent is de helft, en hoe verhoudt een kwart zich daartoe?", "Niet."] },
-      { q: "Wat is **⅗ als procent**?", options: ["60%","35%","53%","30%"], answer: 0, wrongHints: [null, "Cijfers gehusseld.", "Niet primair.", "Helft."] },
+      { q: "Wat is **⅗ als procent**?", options: ["60%","35%","53%","30%"], answer: 0, wrongHints: [null, "Cijfers gehusseld.", "Niet — reken 3 ÷ 5 uit en zet dat om naar procent.", "Hoeveel procent is ⅕? En ⅗ is drie keer zoveel."] },
       { q: "½ × 4 = ?", options: ["2","½","¼","4½"], answer: 0, wrongHints: [null, "Niet — vermenigvuldig met heel.", "Niet — kleiner dan heel.", "Niet."] },
       { q: "Welke breuk = ½?", options: ["²⁄₄","⅔","⅓","¾"], answer: 0, wrongHints: [null, "Te groot.", "Te klein.", "Te groot."] },
       { q: "**Open vraag**: vereenvoudig **8/12** (typ als breuk a/b).", kind: "open", acceptedAnswers: ["2/3", "2 / 3"], explanation: "8 en 12 zijn beide deelbaar door 4: 8/12 = 2/3." },

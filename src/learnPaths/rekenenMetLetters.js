@@ -52,7 +52,7 @@ const steps = [
         wrongHints: [
           null,
           "4 zou tellen als de losse 4 in 4x ook een term zou zijn. Maar 4x is samen één term.",
-          "Vergeet niet de constante (de losse 7) als derde term.",
+          "Heb je de losse 7 ook meegeteld? Ook een getal zonder letter is een term.",
           "7 is een getal binnen één term — niet het aantal termen.",
         ],
         uitlegPad: {
@@ -131,7 +131,7 @@ const steps = [
           null,
           "Welke termen mag je samentrekken — alles, of alleen termen met dezelfde letter?",
           "Heb je beide x-termen meegenomen? Tel óf trek de coëfficiënten van x-en bij elkaar op.",
-          "Niet alles in 1 hoop — getallen apart, x-en apart, x²-termen apart.",
+          "Niet alles op één hoop — getallen apart, x-en apart.",
         ],
         uitlegPad: {
           stappen: [
@@ -190,8 +190,8 @@ const steps = [
         wrongHints: [
           null,
           "Heb je de 5 met BEIDE termen vermenigvuldigd — 2x én 3?",
+          "Niet optellen — de 5 vóór de haakjes betekent vermenigvuldigen. Wat is 5 keer 2x, en 5 keer 3?",
           "Heb je de 2 binnen de haakjes meegenomen? 5 keer 2x is niet hetzelfde als 5x.",
-          "Allebei de termen krijgen de 5 — niet alleen de 3 of de 2.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Distributief met min", tekst: "5(2x−3) = 5·2x − 5·3 = 10x − 15." }],
@@ -224,8 +224,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "De min draait beide tekens om. −x is goed, maar −3 wordt **+3** (min × min).",
-          "De min draait elk teken om: x → −x én −3 → +3.",
+          "De min draait béíde tekens om. Wat gebeurt er met het teken vóór de 3?",
+          "De min draait élk teken om — ook dat van de x.",
           "Je hebt het minteken weggelaten. Het maakt wél uit voor het resultaat.",
         ],
         uitlegPad: {
@@ -345,7 +345,7 @@ const steps = [
           null,
           "Middelste term vergeten — de formule (a−b)² geeft drie termen. Hoe bereken je de middelste?",
           "Dat is (x+5)(x−5). Maar (x−5)² = (x−5)(x−5) geeft **drie** termen.",
-          "De eindterm b² is altijd positief, ook als de oorspronkelijke b negatief was. (−5)² = +25.",
+          "Kijk naar het teken van de laatste term: kan een kwadraat negatief zijn?",
         ],
         uitlegPad: {
           stappen: [{ titel: "(a−b)²-formule", tekst: "(x−5)² = x² − 2·x·5 + 5² = x² − 10x + 25. b² blijft positief (kwadraat)." }],
@@ -377,9 +377,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Bij +/− merkwaardig product is het a² − b². Hier −36 (min, niet plus).",
+          "Werk (y + 6)(y − 6) uit: wat is 6 · (−6)?",
           "Geen middelste term bij (a+b)(a−b) — die heffen elkaar op.",
-          "Geen middelste term hier; alleen y² − b².",
+          "Werk het product helemaal uit: wat gebeurt er met de twee middelste termen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "(a+b)(a−b) = a²−b²", tekst: "(y+6)(y−6) = y² − 6² = y² − 36. Slechts 2 termen — middelste valt weg." }],
@@ -616,7 +616,7 @@ const steps = [
           null,
           "Werk beide uitdrukkingen apart uit, tel daarna alles bij elkaar op — kijk goed wat de constanten samen geven.",
           "Wat geeft de constante van het eerste deel bij de constante van het tweede deel? Heffen ze elkaar op?",
-          "Je hebt alleen één van de twee uitgewerkt. Combineer beide: 2x² ipv x² (twee x²-termen).",
+          "Je hebt maar één van de twee delen uitgewerkt. Werk ook het tweede deel uit en tel alles op.",
         ],
         uitlegPad: {
           stappen: [
@@ -637,8 +637,8 @@ const steps = [
       { q: "Vereenvoudig: 4x + 2x − 3x = ?", options: ["3x","9x","3","x³"], answer: 0, wrongHints: [null, "Niet — niet plus.", "Letter blijft.", "Niet."] },
       { q: "Wat is 3x · 2x = ?", options: ["6x²","6x","5x","9x"], answer: 0, wrongHints: [null, "Vergeet niet kwadraat.", "Niet — vermenigvuldigen, niet optellen.", "Niet."] },
       { q: "Vereenvoudig: (2x)² = ?", options: ["4x²","2x²","4x","2x⁴"], answer: 0, wrongHints: [null, "Vergeet 2 ook kwadrateren.", "Vergeet x²", "Niet."] },
-      { q: "Vereenvoudig: x² · x³ = ?", options: ["x⁵","x⁶","x²ˣ³","x²·³"], answer: 0, wrongHints: [null, "Niet — niet vermenigvuldigen.", "Niet — vorm.", "Niet."] },
-      { q: "Werk haakjes weg: −(x − 5) = ?", options: ["−x + 5","−x − 5","x − 5","−x · 5"], answer: 0, wrongHints: [null, "Niet — −x klopt maar +5.", "Niet — min eraf.", "Niet."] },
+      { q: "Vereenvoudig: x² · x³ = ?", options: ["x⁵","x⁶","2x⁵","x²³"], answer: 0, wrongHints: [null, "Niet — de exponenten vermenigvuldig je hier niet.", "Er komt geen 2 voor de x — je vermenigvuldigt x-en met elkaar.", "Zet de exponenten niet naast elkaar — wat doe je ermee bij vermenigvuldigen?"] },
+      { q: "Werk haakjes weg: −(x − 5) = ?", options: ["−x + 5","−x − 5","x − 5","−x · 5"], answer: 0, wrongHints: [null, "Niet — −x klopt, maar wat gebeurt er met het teken van de 5?", "Niet — min eraf.", "Niet."] },
       { q: "Bereken voor x=2: 3x + 1", options: ["7","6","4","2"], answer: 0, wrongHints: [null, "Vergeet +1.", "Niet.", "Niet."] },
     ],
   },
