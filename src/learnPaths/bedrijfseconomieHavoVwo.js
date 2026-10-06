@@ -180,9 +180,9 @@ const steps = [
       },
       {
         q: "**Cashflow** kan negatief zijn terwijl bedrijf winst maakt. Waarom?",
-        options: ["Klanten hebben nog niet betaald","Onmogelijk","Door dividend","Door belasting"],
+        options: ["Klanten hebben nog niet betaald","Onmogelijk","Doordat de kosten daalden","Door belasting"],
         answer: 0,
-        wrongHints: [null, "Wel mogelijk.", "Speelt rol maar niet primair.", "Mogelijk maar niet hoofd-reden."],
+        wrongHints: [null, "Wel mogelijk.", "Dalende kosten laten juist méér geld over.", "Belasting is een kostenpost die al in de winst zit — dat verklaart het verschil niet."],
         uitlegPad: {
           stappen: [{ titel: "Winst ≠ cash", tekst: "**Winst** is boekhoudkundig (omzet − kosten), maar **cashflow** is werkelijk geld. Als klanten op factuur kopen (op rekening) maar nog niet betaald → winst staat in boek maar geen cash. Bedrijven kunnen failliet ondanks 'winstgevend' zijn. **'Cash is king'** — focus op kasstroom." }],
           theorie: "Klassieker: snel-groeiende bedrijven (groot werkkapitaal nodig) komen vaak in cash-tekort. Daarom externe financiering nodig.",
