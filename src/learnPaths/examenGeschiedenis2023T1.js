@@ -30,7 +30,7 @@ const steps = [
           "Tweede Kamerleden worden GEKOZEN, niet door de koning benoemd. Vóór 1848 koos de Provinciale Staten ze, daarna de kiezers zelf.",
           null,
           "Voorzitter Eerste Kamer is een Kamerlid — de koning was dat nooit.",
-          "De koning is GEEN Kamerlid en is dat ook niet geworden in 1848 (kreeg juist ceremoniële rol).",
+          "De koning is GEEN Kamerlid en is dat in 1848 ook niet geworden.",
         ],
         explanation: "Vóór 1848 had de koning veel politieke macht: benoemde ministers, kon wetten weigeren. Met **Grondwet 1848 (Thorbecke)** werd de koning onschendbaar én verloor hij politieke macht. Ministers werden verantwoording schuldig aan het parlement. Koning kreeg ceremoniële + symbolische rol. NL = constitutionele monarchie.",
         examenBron: BRON(1),
@@ -49,7 +49,7 @@ const steps = [
             { woord: "Thorbecke", uitleg: "Liberaal staatsman, schreef Grondwet 1848." },
             { woord: "ministeriële verantwoordelijkheid", uitleg: "Ministers leggen verantwoording af aan het parlement, niet aan de koning." },
           ],
-          theorie: "1848 = scheidslijn: voor → absolute koning. Na → koning ceremonieel + parlement politiek.",
+          theorie: "1848 = scheidslijn: voor → koning met veel politieke macht. Na → koning ceremonieel + parlement politiek.",
           voorbeelden: [{ type: "stap", tekst: "Het portret van Willem II in de Eerste Kamer was bijna een afscheid — kort daarna verloor hij het grootste deel van zijn macht. Symbolisch + tragisch tegelijk." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "1848 = koning verliest macht. Onthoud dat jaartal!" }],
           niveaus: {
@@ -122,8 +122,8 @@ const steps = [
         answer: 3,
         wrongHints: [
           "1887 + Caoutchouc-artikel = grondwetswijziging die kiesrecht uitbreidde (\"Caoutchouc\" = \"rubber\" = flexibel). NIET de schoolstrijd-oplossing.",
-          "1887 = te vroeg en Pacificatie was in 1917 (niet 1887).",
-          "1917 jaar klopt, maar Caoutchouc-artikel ging over KIESRECHT (1887), niet schoolstrijd.",
+          "Klopt het jaartal 1887 bij de Pacificatie? Wanneer werd dat compromis gesloten?",
+          "Waar ging het Caoutchouc-artikel over: kiesrecht of onderwijs? En in welk jaar kwam het?",
           null,
         ],
         explanation: "**Pacificatie van 1917** = groot nationaal compromis tussen liberalen, socialisten en confessionelen. Twee zaken tegelijk geregeld: (1) **algemeen mannenkiesrecht** (liberalen + socialisten kregen wat ze wilden) (2) **gelijke financiering bijzonder onderwijs** (confessionelen kregen hun zin). Vrouwenkiesrecht volgde in 1919.",
