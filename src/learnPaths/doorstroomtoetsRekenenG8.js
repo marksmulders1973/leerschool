@@ -353,7 +353,7 @@ const steps = [
         q: "Wat is **0,7 − 0,3**?",
         options: ["0,4", "0,10", "0,04", "4"],
         answer: 0,
-        wrongHints: [null, "Niet zo — komma op verkeerde plek.", "Komma-fout.", "100× te groot."],
+        wrongHints: [null, "Niet zo — komma op verkeerde plek.", "Komma-fout.", "10× te groot — let op de komma."],
       },
       {
         q: "**1/2 + 1/3** is?",
@@ -444,7 +444,7 @@ const steps = [
         q: "Wat is **1/3 als procent** (afgerond)?",
         options: ["33%", "13%", "30%", "3%"],
         answer: 0,
-        wrongHints: [null, "Niet zomaar de cijfers herschrijven.", "Niet — 1/3 ≈ 0,33.", "Veel te weinig."],
+        wrongHints: [null, "Niet zomaar de cijfers herschrijven.", "30% is 3/10 — is 1/3 daar iets boven of onder?", "Veel te weinig."],
       },
       {
         q: "**1,25 + 0,75** is?",
@@ -462,18 +462,18 @@ const steps = [
         q: "**1/2 × 1/2** is?",
         options: ["1/4", "1", "2/2", "1/2"],
         answer: 0,
-        wrongHints: [null, "Veel te groot.", "Niet vermenigvuldigen, dat is een dubbelvorm van 1.", "Tussenstap."],
+        wrongHints: [null, "Veel te groot.", "Niet vermenigvuldigen, dat is een dubbelvorm van 1.", "Dat is waar je mee begon — je neemt nog de helft van die helft."],
         uitlegPad: {
           stappen: [
             { titel: "Breuk × breuk", tekst: "Tellers vermenigvuldigen, noemers vermenigvuldigen. 1/2 × 1/2 = (1×1)/(2×2) = 1/4." },
           ],
           woorden: [{ woord: "vermenigvuldigen breuken", uitleg: "Teller × teller / noemer × noemer." }],
-          theorie: "Toets-truc: bij breuk×breuk wordt het altijd KLEINER (omdat je een deel pakt van een deel).",
+          theorie: "Toets-truc: bij twee breuken kleiner dan 1 wordt de uitkomst altijd KLEINER (omdat je een deel pakt van een deel).",
           voorbeelden: [{ type: "stap", tekst: "1/3 × 1/2 = 1/6. 'helft van een derde'." }],
           basiskennis: [{ onderwerp: "Visueel", uitleg: "Een halve pizza, daarvan de helft = een kwart pizza." }],
           niveaus: {
             basis: "1/4.",
-            simpeler: "1×1/2×2 = 1/4.",
+            simpeler: "(1×1)/(2×2) = 1/4.",
             nogSimpeler: "1/4",
           },
         },
@@ -712,7 +712,7 @@ const steps = [
         ref: "S",
         options: ["30 km/u", "15 km/u", "45 km/u", "7,5 km/u"],
         answer: 0,
-        wrongHints: [null, "15 = aantal km, niet snelheid per uur.", "45 zou betekenen 22,5 km in 30 min — meer.", "7,5 zou betekenen halve afstand in dezelfde tijd."],
+        wrongHints: [null, "15 = aantal km, niet snelheid per uur.", "45 zou betekenen 22,5 km in 30 min — meer.", "Dan zou Tom in een héél uur maar 7,5 km halen — hij fietst in een half uur al 15 km."],
         uitlegPad: {
           stappen: [
             { titel: "Verdubbelen", tekst: "30 minuten = een half uur. In een half uur 15 km. In een heel uur: 15 × 2 = 30 km/u." },
@@ -831,10 +831,10 @@ const steps = [
         wrongHints: [null, "Verkeerde berekening.", "Niet — dat is wat je betaalt.", "Iets te veel."],
       },
       {
-        q: "Verhouding **2:5** opnieuw uitdrukken als breuk **van de kleinste in totaal**?",
+        q: "De verhouding is **2 : 5**. Welk deel van het **totaal** hoort bij de **2**? Schrijf als breuk.",
         options: ["2/7", "2/5", "5/7", "1/3"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 2 op 5, niet totaal 7.", "Ander deel.", "Verkeerd."],
+        wrongHints: [null, "Dat vergelijkt de twee delen met elkaar — hoeveel delen zijn er samen?", "Ander deel.", "Verkeerd."],
       },
       {
         q: "**80% van 50** is?",
@@ -899,7 +899,7 @@ const steps = [
             { titel: "Optellen bij prijs", tekst: "Eindprijs = €100 (basis) + €21 (BTW) = €121." },
           ],
           woorden: [
-            { woord: "BTW", uitleg: "Belasting Toegevoegde Waarde. Overheidsheffing op verkoop (21% standaard in NL, 9% laag tarief)." },
+            { woord: "BTW", uitleg: "Belasting over de Toegevoegde Waarde. Overheidsheffing op verkoop (21% standaard in NL, 9% laag tarief)." },
             { woord: "eindprijs", uitleg: "Wat de klant betaalt: basisprijs + BTW." },
           ],
           theorie: "BTW-formule: eindprijs = basisprijs × (1 + BTW%/100). Voor 21%: × 1,21.",
@@ -1013,7 +1013,7 @@ const steps = [
         q: "**Verhouding melk : water = 2 : 5**. Bij **15 L water**: hoeveel **melk**?",
         options: ["6 L", "3 L", "10 L", "30 L"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is maar één deel; melk heeft er twee.", "Te veel — meer dan water.", "Veel te veel."],
+        wrongHints: [null, "Te weinig — dat is maar één deel; melk heeft er twee.", "Te veel — hoeveel liter is één deel als 5 delen water samen 15 L zijn?", "Veel te veel."],
       },
       {
         q: "Een **boek** kost €15, in de zomer **5% goedkoper**. Wat is de **korting**?",
@@ -1184,13 +1184,13 @@ const steps = [
         ref: "1F",
         options: ["800 ml", "200 ml", "500 ml", "50 ml"],
         answer: 0,
-        wrongHints: [null, "Dan zou de verhouding 1 : 1 zijn.", "Tel je het totaal? De vraag gaat alleen over het water.", "Dan zit er méér siroop dan water in — klopt dat met 1 : 4?"],
+        wrongHints: [null, "Dan zou de verhouding 1 : 1 zijn.", "Bij 1 : 4 is er 4 keer zoveel water als siroop — is 500 ml 4 keer 200 ml?", "Dan zit er méér siroop dan water in — klopt dat met 1 : 4?"],
         explanation: "Per deel siroop horen 4 delen water: 200 ml × 4 = **800 ml** water.",
       },
       {
         q: "Een fiets kostte **€400** en kost nu **€440**. Met hoeveel **procent** is de prijs gestegen?",
         ref: "S",
-        options: ["10%", "40%", "4%", "11%"],
+        options: ["10%", "40%", "4%", "9%"],
         answer: 0,
         wrongHints: [null, "€40 is de stijging in euro's — de vraag is hoeveel procent dat van €400 is.", "4% van €400 zou maar €16 zijn.", "Pas op: je deelt door de óude prijs (€400), niet door de nieuwe."],
         explanation: "Stijging = €40. Deel door de oude prijs: €40 / €400 = 0,10 = **10%**.",
@@ -1289,7 +1289,7 @@ const steps = [
   {
     title: "Meten & schaal — ~20 min",
     refOnderdeel: "rekenen",
-    explanation: "**Meten zit altijd in de Doorstroomtoets.** Eenheden omrekenen + schaal lezen.\n\n**Lengte-trapje** (×10 per stap):\nkm → hm → dam → **m** → dm → cm → mm\n\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 m = 1000 mm\n• 1 cm = 10 mm\n\n**Gewicht** (idem ×10/×1000):\n• 1 kg = 1000 g\n• 1 g = 1000 mg\n• 1 ton = 1000 kg\n\n**Inhoud**:\n• 1 L = 10 dL = 100 cL = 1000 mL\n\n**Schaal**: getal op kaart × werkelijk.\nSchaal **1:200.000** betekent: 1 cm op kaart = 200.000 cm = 2 km in werkelijkheid.\n\n**Truc — komma verschuiven**:\nTussen mm en m zitten 3 stappen → komma 3 plekken verschuiven.\n• mm → m: ÷ 1000 (komma 3 plekken links)\n• m → mm: × 1000 (komma 3 plekken rechts)\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Voor 'echte' voorbeelden: het gratis voorbeeldopgavenboekje (PDF): https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.",
+    explanation: "**Meten zit altijd in de Doorstroomtoets.** Eenheden omrekenen + schaal lezen.\n\n**Lengte-trapje** (×10 per stap):\nkm → hm → dam → **m** → dm → cm → mm\n\n• 1 km = 1000 m\n• 1 m = 100 cm\n• 1 m = 1000 mm\n• 1 cm = 10 mm\n\n**Gewicht** (idem ×10/×1000):\n• 1 kg = 1000 g\n• 1 g = 1000 mg\n• 1 ton = 1000 kg\n\n**Inhoud**:\n• 1 L = 10 dL = 100 cL = 1000 mL\n\n**Schaal**: afstand op de kaart × schaalgetal = afstand in werkelijkheid.\nSchaal **1:200.000** betekent: 1 cm op kaart = 200.000 cm = 2 km in werkelijkheid.\n\n**Truc — komma verschuiven**:\nTussen mm en m zitten 3 stappen → komma 3 plekken verschuiven.\n• mm → m: ÷ 1000 (komma 3 plekken links)\n• m → mm: × 1000 (komma 3 plekken rechts)\n\n**Bron**: eigen oefenvragen in stijl van Cito/IEP. Voor 'echte' voorbeelden: het gratis voorbeeldopgavenboekje (PDF): https://cito.nl/media/41vbqo2t/lib_doorstroomtoets_voorbeeldopgavenboekje.pdf.",
     svg: `<svg viewBox="0 0 320 200">
 <text x="160" y="20" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">LENGTE-TRAPJE</text>
 <text x="160" y="38" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial">× 10 per stap, ÷ 10 omhoog</text>
@@ -1325,7 +1325,7 @@ const steps = [
         q: "**350 g** in **kg**?",
         options: ["0,35 kg", "3,5 kg", "35 kg", "0,035 kg"],
         answer: 0,
-        wrongHints: [null, "Te veel — 3,5 kg is 3500 g.", "Veel te veel — 35 kg is bijna een hele tas mest.", "Te weinig — hoeveel gram is 0,035 kg?"],
+        wrongHints: [null, "Te veel — 3,5 kg is 3500 g.", "Veel te veel — 35 kg weegt ongeveer een kind van 10 jaar.", "Te weinig — hoeveel gram is 0,035 kg?"],
         uitlegPad: {
           stappen: [{ titel: "÷ 1000", tekst: "g → kg = ÷ 1000. 350 ÷ 1000 = 0,35 kg. Komma 3 plekken naar links: 350 → 35,0 → 3,50 → 0,350." }],
           woorden: [{ woord: "g → kg", uitleg: "÷ 1000 omdat 1 kg = 1000 g." }],
@@ -1339,7 +1339,7 @@ const steps = [
         q: "Op kaart met **schaal 1:50.000** is afstand **4 cm**. Werkelijk?",
         options: ["2 km", "20 km", "200 m", "200 km"],
         answer: 0,
-        wrongHints: [null, "20 km zou 40 cm op kaart zijn.", "200 m is te weinig — heb je vergeten te delen?", "Veel te veel — 200 km is een lange reis."],
+        wrongHints: [null, "20 km zou 40 cm op kaart zijn.", "200 m is te weinig — hoeveel cm gaan er in één meter?", "Veel te veel — 200 km is een lange reis."],
         uitlegPad: {
           stappen: [
             { titel: "Schaal toepassen", tekst: "Schaal 1:50.000 = 1 cm op kaart = 50.000 cm in werkelijkheid." },
@@ -1357,7 +1357,7 @@ const steps = [
         q: "Hoeveel **mL** zit in **2,5 L**?",
         options: ["2500 mL", "250 mL", "25 mL", "25.000 mL"],
         answer: 0,
-        wrongHints: [null, "Te weinig — hoeveel liter is 250 mL?", "Veel te weinig — 25 mL is een eetlepel.", "Te veel — heb je 4 stappen verschoven?"],
+        wrongHints: [null, "Te weinig — hoeveel liter is 250 mL?", "Veel te weinig — 25 mL is nog geen twee eetlepels.", "Te veel — heb je 4 stappen verschoven?"],
         uitlegPad: {
           stappen: [{ titel: "× 1000", tekst: "L → mL = × 1000. 2,5 × 1000 = 2500 mL. Komma 3 plekken naar rechts: 2,500 → 2500." }],
           woorden: [{ woord: "L → mL", uitleg: "× 1000 omdat 1 L = 1000 mL." }],
@@ -1515,7 +1515,7 @@ const steps = [
         q: "Op een **kaart 1:50.000** is iets **2 cm**. Werkelijk?",
         options: ["1 km", "100 m", "5 km", "20 km"],
         answer: 0,
-        wrongHints: [null, "Bijna goed — let op cm naar m of km.", "Te veel.", "Te veel."],
+        wrongHints: [null, "Te weinig — hoeveel cm zitten er in één meter?", "Te veel.", "Te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Schaal-vergelijking", tekst: "Schaal 1:50.000 betekent: 1 cm op kaart = 50.000 cm werkelijk." },
@@ -1619,7 +1619,7 @@ const steps = [
         q: "**Volume** van een doos **3 cm × 4 cm × 5 cm**?",
         options: ["60 cm³", "12 cm³", "15 cm³", "47 cm³"],
         answer: 0,
-        wrongHints: [null, "Maar 2 zijden vermenigvuldigd.", "Maar 2 zijden vermenigvuldigd.", "Optellen, geen vermenigvuldigen."],
+        wrongHints: [null, "Maar 2 zijden vermenigvuldigd.", "Maar 2 zijden vermenigvuldigd.", "Dat zijn drie zijvlakken opgeteld (12 + 15 + 20) — voor inhoud vermenigvuldig je alle drie de maten."],
         uitlegPad: {
           stappen: [
             { titel: "Volume = l × b × h", tekst: "Bij een doos vermenigvuldig je lengte × breedte × hoogte. Eenheid: cm³ (kubieke centimeter)." },
@@ -1691,13 +1691,13 @@ const steps = [
         q: "**Klok wijst 14:30**. Hoeveel **uur na 12:00**?",
         options: ["2,5 uur", "2 uur", "30 min", "14,5 uur"],
         answer: 0,
-        wrongHints: [null, "Vergeten halve uur.", "Niet — alleen minuten gaven.", "Niet — vanaf 12:00, niet 0:00."],
+        wrongHints: [null, "Vergeten halve uur.", "Je telt alleen de minuten — vergeet de hele uren niet.", "Niet — vanaf 12:00, niet 0:00."],
       },
       {
-        q: "**Cilinder** is een ___?",
-        options: ["3D-figuur als een blik soep", "Vlak figuur", "Cirkel", "Driehoek"],
+        q: "Een **cilinder** (de vorm van een blik soep) is een ___?",
+        options: ["Ruimtefiguur (3D)", "Vlakke figuur (2D)", "Cirkel", "Driehoek"],
         answer: 0,
-        wrongHints: [null, "3D heeft volume.", "Cirkel is 2D, cilinder 3D.", "Verkeerd."],
+        wrongHints: [null, "Een blik soep kun je vullen — heeft een plat figuur een inhoud?", "Cirkel is 2D, cilinder 3D.", "Verkeerd."],
       },
       {
         q: "**3,5 km** = hoeveel meter?",
@@ -1940,7 +1940,7 @@ const steps = [
         q: "Een glas frisdrank kost €1,80. Hoeveel betaal je voor **5 glazen**?",
         options: ["€9,00", "€7,20", "€10,00", "€1,80"],
         answer: 0,
-        wrongHints: [null, "Dat is 4 × €1,80.", "Te veel — komma vergeten?", "Dat is 1 glas."],
+        wrongHints: [null, "Dat is 4 × €1,80.", "Te veel — heb je €1,80 afgerond naar €2?", "Dat is 1 glas."],
         uitlegPad: {
           stappen: [
             { titel: "Vermenigvuldig", tekst: "5 × €1,80 = €9,00." },
@@ -1961,7 +1961,7 @@ const steps = [
         q: "Tom legt om de **15 minuten** een nieuwe pot bloemen. Hoeveel **per uur**?",
         options: ["4 potten", "15 potten", "60 potten", "1 pot"],
         answer: 0,
-        wrongHints: [null, "Niet — 15 was tijdsinterval.", "Veel te veel.", "Te weinig — minder dan 15 min/pot."],
+        wrongHints: [null, "Niet — 15 was tijdsinterval.", "Veel te veel.", "Te weinig — hoeveel keer past een kwartier in een uur?"],
       },
       {
         q: "Een fietstas weegt **leeg 800 g**. Met **2 kg** boodschappen erin — totaal?",
@@ -2081,7 +2081,7 @@ const steps = [
       },
       {
         q: "**Reis 60 km** met **45 km/u**. Tijd?",
-        options: ["1u20 (1,33 u)", "1 uur", "2 uur", "45 min"],
+        options: ["1 uur 20 min", "1 uur", "2 uur", "45 min"],
         answer: 0,
         wrongHints: [null, "Te kort — zou 45 km zijn.", "Te lang.", "Te kort."],
       },
@@ -2245,7 +2245,7 @@ const steps = [
         },
       },
       {
-        q: "**Auto rijdt 5 minuten**. Verbruikt **0,5 L per minuut**. Hoeveel **brandstof totaal**?",
+        q: "**Een kraan staat 5 minuten open**. Er stroomt **0,5 L per minuut** uit. Hoeveel **water totaal**?",
         options: ["2,5 L", "5 L", "0,5 L", "10 L"],
         answer: 0,
         wrongHints: [null, "Niet — reken 5 × 0,5 nog eens na.", "Per 1 minuut.", "Te veel."],
@@ -2263,7 +2263,7 @@ const steps = [
         wrongHints: [null, "Dat is €18 gedeeld door 2 — het zijn er drie.", "Dat is het hele bedrag, nog niet gedeeld.", "Dat is €18 gedeeld door 6 — het zijn er drie."],
       },
       {
-        q: "**Bordje** met **€12,50** + **fooi 10%**. Hoeveel **fooi**?",
+        q: "Een **rekening** van **€12,50** + **fooi 10%**. Hoeveel **fooi**?",
         options: ["€1,25", "€1,50", "€2,50", "€12,50"],
         answer: 0,
         wrongHints: [null, "Bijna — reken nog eens 10% × €12,50 uit.", "Te veel — 20% i.p.v. 10%?", "Dat is het hele bedrag, niet alleen de fooi."],
@@ -2303,7 +2303,7 @@ const steps = [
         },
       },
       {
-        q: "**Bij €25 betaal je €30 terug** (met €5 rente). **Rente in procent**?",
+        q: "Je **leent €25** en **betaalt €30 terug** (dus €5 rente). Hoeveel **procent rente** is dat?",
         options: ["20%", "5%", "30%", "25%"],
         answer: 0,
         wrongHints: [null, "Niet — bedrag, niet %.", "Niet.", "Niet."],
@@ -2347,7 +2347,7 @@ const steps = [
         explanation: "0,5 × 0,5 = 0,25. Of: helft van een half = een kwart.",
       },
       {
-        q: "**Open vraag**: een trein vertrekt om **9:30** en rijdt **2 uur**. Wanneer komt hij aan? (typ als 11:30)",
+        q: "**Open vraag**: een trein vertrekt om **9:30** en rijdt **2 uur**. Wanneer komt hij aan? (typ bv. 10:15)",
         kind: "open",
         acceptedAnswers: ["11:30", "11.30", "11u30"],
         explanation: "9:30 + 2 uur = 11:30.",
@@ -2472,7 +2472,7 @@ const steps = [
         ref: "S",
         options: ["11:05", "11:50", "12:35", "10:45"],
         answer: 0,
-        wrongHints: [null, "Twee stappen terug: trek eerst 2:30 van 14:20 af, en dan nóg de reistijd.", "Dat is alleen het inchecken — de autorit moet er nog vanaf.", "Dat is alleen de reistijd eraf — het inchecken mist."],
+        wrongHints: [null, "Dat is alleen het inchecken — de reis naar het vliegveld moet er nog vanaf.", "Twee stappen terug: trek eerst 2:30 van 14:20 af, en dan nóg de reistijd.", "Te vroeg — tel vanaf 14:20 de twee stappen nog eens precies terug."],
         explanation: "Inchecken: 14:20 − 2:30 = 11:50. Van huis: 11:50 − 0:45 = **11:05**.",
       },
       {
@@ -2480,7 +2480,7 @@ const steps = [
         ref: "1F",
         options: ["450 gram", "500 gram", "600 gram", "350 gram"],
         answer: 0,
-        wrongHints: [null, "Reken eerst per persoon (300 ÷ 4 gram), keer dan 6.", "Dat zou voor 8 personen zijn.", "50 gram per extra persoon is te weinig — reken per persoon."],
+        wrongHints: [null, "Reken eerst per persoon (300 ÷ 4 gram), keer dan 6.", "Dat zou voor 8 personen zijn.", "Te weinig — voor 2 personen extra heb je meer dan 50 gram nodig. Reken per persoon."],
         explanation: "300 g ÷ 4 = 75 g per persoon → 6 × 75 g = **450 gram**.",
       },
       {
@@ -2552,7 +2552,7 @@ const steps = [
         ref: "1F",
         options: ["€4,50", "€4,30", "€3,60", "€2,80"],
         answer: 0,
-        wrongHints: [null, "Bijna — 2 × €1,80 = €3,60, en dan nog een halve kilo erbij. Hoeveel is een halve kilo?", "Dat is precies 2 kilo — de halve kilo mist nog.", "Optellen in plaats van vermenigvuldigen? De prijs is per kilo."],
+        wrongHints: [null, "Optellen in plaats van vermenigvuldigen? De prijs is per kilo.", "Dat is precies 2 kilo — de halve kilo mist nog.", "Te weinig — 2 kilo kost al meer dan dit."],
         explanation: "2 kilo = 2 × €1,80 = €3,60. Halve kilo = €0,90. Samen €3,60 + €0,90 = **€4,50**.",
       },
       {
@@ -2789,7 +2789,7 @@ const steps = [
         explanation: "November heeft **30** dagen (net als april, juni en september).",
       },
       {
-        q: "Dit jaar valt Lottes verjaardag op een **vrijdag**. Op welke dag valt haar verjaardag **volgend jaar** (geen schrikkeljaar)?",
+        q: "Dit jaar valt Lottes verjaardag op een **vrijdag**. Op welke dag valt haar verjaardag **volgend jaar**? (Er zit geen 29 februari tussen.)",
         ref: "S",
         options: ["zaterdag", "vrijdag", "zondag", "donderdag"],
         answer: 0,
@@ -2815,10 +2815,10 @@ const steps = [
       {
         q: "Op de digitale klok staat **17:45**. Hoe zeg je dat?",
         ref: "1F",
-        options: ["kwart voor 6 's avonds", "kwart over 6 's avonds", "kwart voor 5 's middags", "half 6 's avonds"],
+        options: ["kwart voor 6", "kwart over 6", "kwart voor 5", "half 6"],
         answer: 0,
         wrongHints: [null, "45 minuten ná het hele uur is 15 minuten vóór het volgende uur.", "17:45 is ná 17:00, dus het gaat richting 6 uur, niet richting 5.", "Half 6 zou 17:30 zijn."],
-        explanation: "17:45 = 15 minuten vóór 18:00 = **kwart voor 6 's avonds**.",
+        explanation: "17:45 = 15 minuten vóór 18:00 = **kwart voor 6** (aan het eind van de middag).",
       },
       {
         q: "Yara fietst in **2 uur** naar oma: **24 kilometer**. Wat was haar gemiddelde snelheid?",
