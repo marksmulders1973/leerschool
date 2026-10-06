@@ -73,10 +73,10 @@ const steps = [
           "Aanpassing aan beschikbaar voedsel per eiland (zaden, insecten, etc.)",
           "Toeval",
           "Vinken kiezen hun snavel-vorm",
-          "Eilanden hebben verschillende klimaat"
+          "Elke eilandvink stamt af van een andere vogelsoort"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — wel patroon.", "Onmogelijk.", "Klimaat speelt rol maar voedsel is hoofdverklaring."],
+        wrongHints: [null, "Niet — wel patroon.", "Onmogelijk.", "Nee — de vinken hebben juist één gemeenschappelijke voorouder."],
         uitlegPad: {
           stappen: [
             { titel: "Adaptieve radiatie", tekst: "Eén voorouder-vink kwam op archipel. Op verschillende eilanden: ander voedsel beschikbaar. Selectie favoriseert snavels per habitat. In ~3 mln jaar: 15+ soorten. Klassiek voorbeeld dat Darwin tot zijn theorie bracht." },
@@ -86,15 +86,15 @@ const steps = [
         },
       },
       {
-        q: "Een populatie heeft 4 nakomelingen-paren met max 2 overlevers per paar. Wat gebeurt?",
+        q: "Een vogelpaar krijgt 8 jongen, maar er is maar voedsel voor 2. Wat gebeurt er volgens Darwin?",
         options: [
-          "Selectie: helft sterft, sterkste overleven",
+          "Concurrentie: de best aangepaste jongen hebben de grootste overlevingskans",
           "Iedereen overleeft",
           "Niemand overleeft",
-          "Eigenaar populatie kiest"
+          "De ouders kiezen bewust welke jongen overleven"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — overproductie geeft selectie.", "Geen reden voor totaal-verlies.", "Onzin."],
+        wrongHints: [null, "Niet — overproductie geeft selectie.", "Geen reden voor totaal-verlies.", "Is selectie een bewuste keuze?"],
         uitlegPad: {
           stappen: [{ titel: "Voorwaarde 3: overproductie", tekst: "Darwin's inzicht (geïnspireerd door Malthus): organismen produceren altijd meer nakomelingen dan omgeving aankan. Daardoor: concurrentie + selectie. Niet alle nakomelingen overleven → die met betere variatie hebben hogere kans → evolutie." }],
           niveaus: { basis: "Selectie door overschot.", simpeler: "Te veel baby's → niet alle overleven.", nogSimpeler: "Selectie" },
@@ -160,9 +160,9 @@ const steps = [
       },
       {
         q: "Frequentie van gen-a in populatie is q = 0,2. Frequentie van **homozygoot aa**?",
-        options: ["q² = 0,04 (= 4%)", "0,2", "0,4", "2q = 0,4"],
+        options: ["0,04 (= 4%)", "0,2", "0,32", "2q = 0,4"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is allel-frequentie.", "Niet — dat is heterozygoot.", "Niet — geen relatie."],
+        wrongHints: [null, "Niet — dat is allel-frequentie.", "Niet — dat is de frequentie van de heterozygoten (2pq).", "Niet — geen relatie."],
         uitlegPad: {
           stappen: [
             { titel: "Hardy-Weinberg q²", tekst: "Frequentie aa = q² = 0,2² = **0,04 = 4%**. Heterozygoot 2pq = 2·0,8·0,2 = 0,32 = 32%. AA = p² = 0,64 = 64%. Som: 100%. ✓" },
@@ -233,7 +233,7 @@ const steps = [
           "Sympatrische soortvorming"
         ],
         answer: 0,
-        wrongHints: [null, "Niet primair — gevolg, niet oorzaak.", "Mogelijk maar bottleneck is specifieker.", "Niet relevant."],
+        wrongHints: [null, "Niet primair — gevolg, niet oorzaak.", "Nee — er heeft geen kleine groep een nieuw gebied gekoloniseerd.", "Niet relevant."],
         uitlegPad: {
           stappen: [
             { titel: "Klassiek voorbeeld", tekst: "DNA-analyse toont dat de cheetah-populatie ~10 000 j geleden heel klein was (mss ~7 individuen). Reden onbekend (mss ijstijd-einde + grote zoogdier-uitsterving). Vandaag: alle cheetah's bijna identiek genetisch → gevoelig voor virussen + lage vruchtbaarheid." },
@@ -294,7 +294,7 @@ const steps = [
           "Functieloos"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is analoog.", "Mogelijk maar specifiek.", "Niet — dat is rudimentair."],
+        wrongHints: [null, "Niet — dat is analoog.", "Nee — het gaat om gemeenschappelijke afkomst, niet om gelijke functie.", "Niet — dat is rudimentair."],
         uitlegPad: {
           stappen: [{ titel: "Gemeenschappelijke voorouder bewijs", tekst: "Vleermuis-vleugel + walvis-flipper + paard-poot + mens-hand: zelfde botten in verschillende verhoudingen. Onmogelijk te verklaren zonder gemeenschappelijke voorouder. Klassiek bewijs Darwin." }],
           niveaus: { basis: "Zelfde structuur, andere functie.", simpeler: "Zelfde basis-skelet, ander gebruik.", nogSimpeler: "Homoloog" },
@@ -399,7 +399,7 @@ const steps = [
         wrongHints: [null, "Niet — specifieke selectie.", "Onmogelijk.", "Tegenovergesteld — heeft balans."],
         uitlegPad: {
           stappen: [
-            { titel: "Balanced polymorphism", tekst: "HbS heterozygoot (HbS/HbA): mild + malaria-beschermd → hoge fitness in malaria-gebied. Homozygoot HbS/HbS: sikkel-cel-anemie → lage fitness. Selectie houdt allel-frequentie in evenwicht ~30% Afrika. Buiten malaria-gebied: allel verdwijnt." },
+            { titel: "Balanced polymorphism", tekst: "HbS heterozygoot (HbS/HbA): mild + malaria-beschermd → hoge fitness in malaria-gebied. Homozygoot HbS/HbS: sikkel-cel-anemie → lage fitness. Selectie houdt de allel-frequentie in evenwicht (in delen van Afrika is tot ~30% van de mensen drager). Buiten malaria-gebied: allel verdwijnt." },
           ],
           theorie: "Andere balanced polymorphism: cystische fibrose dragers mss beschermd tegen tyfus + cholera (controversieel).",
           niveaus: { basis: "Heterozygoot voordeel.", simpeler: "Half-en-half krijgt voordeel.", nogSimpeler: "Heterozygoot" },
