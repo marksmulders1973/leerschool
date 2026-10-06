@@ -60,7 +60,7 @@ const steps = [
         q: "Een **webshop in handgemaakte sieraden** — welk type onderneming?",
         options: ["Productie (je maakt zelf)", "Handel", "Diensten", "Geen van deze"],
         answer: 0,
-        wrongHints: [null, "Handel = inkopen en doorverkopen zonder zelf te maken.", "Diensten = iets ongrijpbaars (kapsel, advies).", "Het past wel — sieraden maken is productie."],
+        wrongHints: [null, "Handel = inkopen en doorverkopen zonder zelf te maken.", "Diensten = iets ongrijpbaars (kapsel, advies).", "Het past wel in één van de drie types — maak je zelf iets, verkoop je door, of lever je een dienst?"],
         uitlegPad: {
           stappen: [{ titel: "Zelf maken?", tekst: "Handgemaakte sieraden → jij maakt ze ZELF. Dat is productie. Webshop is alleen het kanaal." }],
           woorden: [{ woord: "productie", uitleg: "Iets NIEUWS maken: bakker (brood), kleermaker (kleding), sieraden-maker." }, { woord: "handel", uitleg: "Iets INGEKOCHT doorverkopen zonder zelf te maken: winkel, supermarkt." }, { woord: "dienst", uitleg: "Iets onstoffelijks leveren: kapsel, IT-advies, taxi-rit." }],
@@ -402,7 +402,7 @@ const steps = [
         q: "Een ondernemer heeft omzet **€2.000**, vaste kosten **€500**, variabele kosten **€800**. Wat is de winst?",
         options: ["€700", "€1.500", "€1.200", "€500"],
         answer: 0,
-        wrongHints: [null, "Vergeet niet ALLE kosten af te trekken.", "Variabele kosten ook aftrekken.", "Niet alle vaste kosten zijn afgetrokken."],
+        wrongHints: [null, "Vergeet niet ALLE kosten af te trekken.", "Je trok alleen de variabele kosten af — de vaste kosten ook.", "Dat is alleen het bedrag van de vaste kosten, niet de winst."],
         uitlegPad: {
           stappen: [{ titel: "Winst-formule", tekst: "Winst = Omzet − Totale Kosten. Totale Kosten = Vast + Variabel. €2.000 − (€500 + €800) = €700." }],
           woorden: [{ woord: "omzet", uitleg: "Aantal × prijs. Totaal binnenkomend geld." }, { woord: "totale kosten", uitleg: "Vaste + variabele kosten samen." }, { woord: "winst", uitleg: "Omzet minus totale kosten. Positief = winst, negatief = verlies." }],
@@ -430,7 +430,7 @@ const steps = [
         q: "Het **break-even-punt** is wanneer:",
         options: ["Omzet = totale kosten (geen winst, geen verlies)", "Winst maximaal", "Verkoop maximaal", "De ondernemer stopt"],
         answer: 0,
-        wrongHints: [null, "Maximale winst zit hoger dan break-even.", "Aantal zegt niets — break-even gaat over geld.", "Stoppen is geen economisch begrip."],
+        wrongHints: [null, "Maximale winst zit hoger dan break-even.", "Bij break-even verkoop je niet het maximum — denk aan winst en verlies.", "Stoppen is geen economisch begrip."],
         uitlegPad: {
           stappen: [{ titel: "Quitte draaien", tekst: "Break-even-punt (BEP) = de hoeveelheid waar omzet PRECIES gelijk is aan totale kosten. Boven BEP = winst. Onder BEP = verlies." }],
           woorden: [{ woord: "break-even-punt", uitleg: "Punt waar omzet = kosten. Engels 'break even' = quitte spelen." }, { woord: "dekkingsbijdrage", uitleg: "Verkoopprijs − variabele kosten per stuk. Wat overblijft om vaste kosten te dekken." }],
@@ -458,13 +458,13 @@ const steps = [
         q: "**Brutowinstmarge** voor een friet van €5 met inkoop €1,50?",
         options: ["70%", "30%", "350%", "100%"],
         answer: 0,
-        wrongHints: [null, "Dat is de inkoopprijs als percentage van de verkoopprijs.", "Dat is de prijs als percentage van inkoop.", "Verkoopprijs zelf is niet de marge."],
+        wrongHints: [null, "Dat is de inkoopprijs als percentage van de verkoopprijs.", "Een marge kan niet boven 100% van de verkoopprijs liggen — deel door de verkoopprijs.", "Verkoopprijs zelf is niet de marge."],
         uitlegPad: {
           stappen: [{ titel: "Marge-formule", tekst: "Brutowinstmarge = (verkoopprijs − inkoopprijs) / verkoopprijs × 100%. Hier: (5 − 1,50) / 5 = 3,50/5 = 0,70 = 70%." }],
           woorden: [{ woord: "brutowinstmarge", uitleg: "Percentage van de verkoopprijs dat overblijft na inkoop (vóór vaste kosten + belasting)." }],
           theorie: "Marge zegt: 'van elke verkoop-euro, hoeveel houd je over voor jezelf'. Hoge marge (70%) = veel ruimte voor vaste kosten + winst. Lage marge (15%) = je moet veel volume draaien.",
           voorbeelden: [{ type: "hoge marge", tekst: "Friet 70%: per €5 verkoop houd je €3,50 over." }, { type: "lage marge", tekst: "Supermarkt-A-merken: marge ~5-15%. Vandaar dat ze huismerken pushen (hogere marge)." }],
-          basiskennis: [{ onderwerp: "Niet inkoop/verkoop swap", uitleg: "30% is inkoop / verkoop. 350% is verkoop als % van inkoop. Marge gaat over WINST als % van VERKOOP." }],
+          basiskennis: [{ onderwerp: "Niet inkoop/verkoop swap", uitleg: "30% is inkoop / verkoop. Een uitkomst boven 100% (zoals 350%) kan niet: de marge is een deel van de verkoopprijs. Marge gaat over WINST als % van VERKOOP." }],
           niveaus: { basis: "3,50/5 × 100 = 70%.", simpeler: "Verkoopprijs €5. Inkoopprijs €1,50. Winst €3,50. Dat is €3,50 op €5 = 70% van de verkoopprijs.", nogSimpeler: "70%" },
         },
       },
@@ -738,7 +738,7 @@ const steps = [
         q: "Bij welke rechtsvorm is de eigenaar **NIET privé aansprakelijk**?",
         options: ["BV", "Eenmanszaak", "VOF", "Allemaal"],
         answer: 0,
-        wrongHints: [null, "Eenmanszaak: privé wel aansprakelijk.", "VOF: nog erger — ook voor de andere vennoot.", "Niet allemaal — alleen BV."],
+        wrongHints: [null, "Eenmanszaak: privé wel aansprakelijk.", "VOF: nog erger — ook voor de andere vennoot.", "Niet allemaal — bij welke rechtsvorm is het bedrijf een aparte rechtspersoon?"],
         uitlegPad: {
           stappen: [{ titel: "BV = aparte 'persoon'", tekst: "Een BV is een RECHTSPERSOON — juridisch een aparte entiteit met eigen vermogen. Faillissement BV ≠ jouw privé-vermogen. Bij eenmanszaak en VOF wél." }],
           woorden: [{ woord: "BV", uitleg: "Besloten Vennootschap. Rechtspersoon. Eigenaars maximaal aansprakelijk tot ingelegd aandelenkapitaal." }, { woord: "privé aansprakelijk", uitleg: "Met je eigen huis, auto, spaargeld verantwoordelijk voor bedrijfsschulden." }],
@@ -766,7 +766,7 @@ const steps = [
         q: "Welke belasting betaalt een **BV**?",
         options: ["Vennootschapsbelasting (VPB)", "Inkomstenbelasting", "Alleen BTW", "Geen"],
         answer: 0,
-        wrongHints: [null, "Eigenaars BV betalen IB over loon, BV zelf VPB.", "BTW betalen alle ondernemingen.", "BV's betalen wél belasting."],
+        wrongHints: [null, "De eigenaar betaalt IB over zijn loon — maar welke belasting betaalt de BV zelf over haar winst?", "BTW betalen alle ondernemingen.", "BV's betalen wél belasting."],
         uitlegPad: {
           stappen: [{ titel: "BV = aparte belasting", tekst: "Omdat BV een aparte 'persoon' is, betaalt BV zelf vennootschapsbelasting (VPB) over de winst — niet de eigenaar zelf." }],
           woorden: [{ woord: "VPB", uitleg: "Vennootschapsbelasting. Belasting op winst van BV's en NV's." }, { woord: "IB", uitleg: "Inkomstenbelasting. Voor natuurlijke personen (zoals eenmanszaak-eigenaar)." }],
@@ -794,7 +794,7 @@ const steps = [
         q: "Bij welk winst-niveau wordt een **BV vaak interessanter** dan eenmanszaak?",
         options: ["Boven ongeveer €100.000 winst per jaar", "Vanaf €1 winst", "Pas bij €1 miljoen", "Nooit"],
         answer: 0,
-        wrongHints: [null, "Onder €100k is eenmanszaak (met aftrek) voordeliger.", "Te hoog — al ruim voor €1 miljoen omslagpunt.", "BV kan zeker voordeliger worden."],
+        wrongHints: [null, "Bij een kleine winst is een eenmanszaak (met aftrekposten) juist voordeliger.", "Te hoog — al ruim voor €1 miljoen omslagpunt.", "BV kan zeker voordeliger worden."],
         uitlegPad: {
           stappen: [{ titel: "Omslagpunt rond €100k", tekst: "Onder €100k winst: eenmanszaak met zelfstandigenaftrek + MKB-winstvrijstelling = lagere belasting dan BV. Boven: VPB-tarief van BV wint." }],
           woorden: [{ woord: "omslagpunt", uitleg: "Punt waar één rechtsvorm fiscaal voordeliger wordt dan de andere." }, { woord: "zelfstandigenaftrek", uitleg: "Aftrekpost voor eenmanszaak-eigenaren — alleen geldig bij genoeg gewerkte uren." }],
@@ -878,7 +878,7 @@ const steps = [
         q: "Hoeveel BTW zit in een product van **€121 inclusief 21% BTW**?",
         options: ["€21", "€25,41", "€121", "€100"],
         answer: 0,
-        wrongHints: [null, "Niet 21% van €121 — dat is fout. Reken: €121/1,21 = €100, dus €21 BTW.", "Dat is de hele prijs.", "Dat is exclusief BTW."],
+        wrongHints: [null, "Niet 21% van €121 — de 21% gaat over het bedrag zónder BTW. Reken eerst terug met €121 / 1,21.", "Dat is de hele prijs.", "Dat is exclusief BTW."],
         uitlegPad: {
           stappen: [{ titel: "Eerst excl, dan verschil", tekst: "Inclusief / 1,21 = exclusief. €121 / 1,21 = €100. BTW = incl − excl = €121 − €100 = €21." }],
           woorden: [{ woord: "BTW-berekening incl", uitleg: "BTW = incl − (incl / (1 + tarief))." }],
