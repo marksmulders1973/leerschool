@@ -499,8 +499,8 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Stam = woon. Zit de **n** in 't kofschip?",
-          "Toets: 't k o f s ch p. Zit n erbij?",
-          "Dat lijkt op een ander woord (gewond = verwond). Goed kijken naar de stam: woon → ge + woon + ?",
+          "Dat is een ander woord (gewond = verwond). Kijk goed naar de stam: woon → ge + woon + ?",
+          "Dat is verleden tijd. Na 'heb' komt een voltooid deelwoord: ge + stam + ?",
         ],
         uitlegPad: {
           stappen: [{ titel: "ge + woon + d", tekst: "Woon eindigt op n (NIET in kofschip) → +d = gewoond." }],
@@ -599,7 +599,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
           null,
           "Doe de truc: vervang door werkt of gewerkt. \"Wat werkt er?\" of \"Wat gewerkt er?\" — wat klinkt als tegenwoordige tijd?",
           "Verleden tijd — maar de zin zegt \"nu\". Toets de tijd!",
-          "Hele werkwoord — past niet bij \"wat\" als pv. Zoek de tegenwoordige tijd ik-vorm-+-t.",
+          "Hele werkwoord — past niet bij \"wat\" als pv. Welke vorm hoort bij één ding ('wat') in de tegenwoordige tijd?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Gebeurt — geen 'is/heeft'", tekst: "'Wat gebeurt er?' — tt, geen hulpwerkwoord → -t." }],
@@ -617,8 +617,8 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Truc: vervang door werkt / gewerkt. \"Er is iets vreemds gewerkt\" — is dat tegenwoordige tijd of voltooid?",
-          "Tegenwoordige tijd — maar de zin gebruikt \"is\". Wat hoort er na \"is\"?",
-          "Verleden tijd. Maar \"is + ___\" → wat past?",
+          "Verleden tijd — maar de zin gebruikt \"is\". Wat hoort er na \"is\"?",
+          "Dat is alleen de stam. Maar \"is + ___\" → wat past?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Gebeurd — met 'is'", tekst: "'Is gebeurd' = voltooid → -d." }],
@@ -676,8 +676,8 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Bij **hij** = stam + t. Wat is de stam van vinden?",
-          "Dat is de ik-vorm. Bij hij komt er een -t bij.",
           "Verleden tijd, maar de zin staat in tegenwoordige tijd (\"altijd\").",
+          "Dat is het hele werkwoord (meervoud). Bij hij: stam + ?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Hij vindt — wel t", tekst: "Stam vind + t = vindt (lopen-test: hij loopt)." }],
@@ -695,7 +695,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Vinden is sterk. Wat is de voltooide vorm? Denk aan: hij heeft ge___.",
-          "Niet bestaand woord. Vinden is sterk: gebruik niet ge + stam + d/t.",
+          "Dat is tegenwoordige tijd (hij-vorm). Na \"heeft\" komt een voltooid deelwoord.",
           "Tegenwoordige tijd. Maar er staat \"heeft\" — dan moet er een voltooid deelwoord komen.",
         ],
         uitlegPad: {
@@ -732,7 +732,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Bij **wij** = meervoud. Wat gebruik je dan?",
-          "Dat is jij/hij-vorm. Hier is het meervoud.",
+          "Dat is de ik-vorm (de stam). Hier is het meervoud.",
           "Voltooid deelwoord, maar er staat geen hulpwerkwoord in de zin.",
         ],
         uitlegPad: {
@@ -820,8 +820,8 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Na \"is\" komt een voltooid deelwoord. Welke uitgang krijgt dat?",
-          "Tegenwoordige tijd. Maar er staat \"is\" — wat hoort daar achter?",
-          "Verleden tijd, maar bij \"is\" hoort een voltooid deelwoord.",
+          "Verleden tijd. Maar er staat \"is\" — wat hoort daar achter?",
+          "Hele werkwoord, maar bij \"is\" hoort een voltooid deelwoord.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Is gebeurd", tekst: "Na 'is' → voltooid → gebeurd (met -d)." }],
@@ -857,9 +857,9 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         answer: 0,
         wrongHints: [
           null,
-          "Doen is sterk. Wat is de verleden tijd? Denk aan: gisteren ___.",
           "Tegenwoordige tijd. Maar de zin zegt \"gisteren\".",
-          "Niet bestaand woord. Sterke werkwoorden krijgen geen extra t.",
+          "Bestaat niet. Doen is sterk: in de verleden tijd komt er geen extra -t bij.",
+          "Voltooid deelwoord, maar er staat geen \"heeft\" in de zin.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Deed — sterk vt", tekst: "Doen is sterk: doen→deed→gedaan." }],
