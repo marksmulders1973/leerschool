@@ -144,7 +144,7 @@ const steps = [
         q: "Vanaf welke leeftijd mag je stemmen in Nederland?",
         options: ["18 jaar", "16 jaar", "21 jaar", "25 jaar"],
         answer: 0,
-        wrongHints: [null, "16 mag bij sommige jongerenraden, niet officieel.", "21 was vroeger.", "Nooit zo hoog geweest."],
+        wrongHints: [null, "16 mag bij sommige jongerenraden, niet officieel.", "21 was vroeger.", "Dat was de grens rond 1917 — nu ligt hij een stuk lager."],
         uitlegPad: {
           stappen: [{ titel: "18+ stemt", tekst: "Vanaf 18 jaar mag je in NL stemmen voor alle verkiezingen: Tweede Kamer, gemeente, provincie, EU, waterschap. Sinds 1972 leeftijd 18 (was 21). Discussie nu over verlagen naar 16 — nog niet door." }],
           woorden: [{ woord: "kiesgerechtigde leeftijd", uitleg: "Minimum leeftijd om te mogen stemmen." }],
@@ -181,7 +181,7 @@ const steps = [
         q: "Wie bedacht de **Trias Politica**?",
         options: ["Montesquieu", "Thorbecke", "Willem van Oranje", "Plato"],
         answer: 0,
-        wrongHints: [null, "Thorbecke schreef de NL grondwet 1848.", "Willem van Oranje = Tachtigjarige Oorlog.", "Plato dacht ook over staat, maar Trias Politica = Montesquieu."],
+        wrongHints: [null, "Thorbecke schreef de NL grondwet 1848.", "Willem van Oranje = Tachtigjarige Oorlog.", "Plato leefde in de Griekse oudheid — dit idee komt uit de Verlichting (18e eeuw)."],
         uitlegPad: {
           stappen: [{ titel: "Montesquieu 1748", tekst: "Charles-Louis de Montesquieu, Frans Verlichtings-filosoof. Boek 'De l'esprit des lois' (1748). Bedacht idee: macht moet in 3 delen om misbruik te voorkomen. Werd basis van moderne democratieën (VS-grondwet 1787, Frans 1791, NL via Thorbecke 1848)." }],
           woorden: [{ woord: "Montesquieu", uitleg: "Frans denker 1689-1755. Verlichting. Trias Politica is zijn belangrijkste idee." }],
@@ -195,7 +195,7 @@ const steps = [
         q: "Welke macht **maakt** wetten?",
         options: ["Wetgevende macht", "Uitvoerende macht", "Rechtsprekende macht", "Koninklijke macht"],
         answer: 0,
-        wrongHints: [null, "Uitvoerend voert uit.", "Rechtsprekend oordeelt.", "Koning heeft geen wetgevende macht in NL."],
+        wrongHints: [null, "Uitvoerend voert uit.", "Rechtsprekend oordeelt.", "Een 'koninklijke macht' bestaat niet in de Trias Politica."],
         uitlegPad: {
           stappen: [{ titel: "Wet-gevend = wet-maken", tekst: "Wetgevende macht maakt wetten. In NL: Tweede Kamer + Eerste Kamer + regering samen. Wet wordt voorgesteld, besproken, gestemd, getekend door Koning (formaliteit), gepubliceerd. Daarna is het wet." }],
           woorden: [{ woord: "wetgevend", uitleg: "Het maken van wetten. Latijn legis = wet, ferre = dragen/maken." }],
@@ -209,14 +209,14 @@ const steps = [
   },
   {
     title: "Tweede Kamer — het parlement",
-    explanation: "De **Tweede Kamer** is het belangrijkste orgaan van de Nederlandse democratie. Hier worden wetten gemaakt en de regering gecontroleerd.\n\n**Feiten**:\n• **150 zetels** (kamerleden).\n• Gekozen door het volk, **om de 4 jaar**.\n• Vergadert in Den Haag, **Binnenhof**.\n• Voorzitter: de **Kamervoorzitter**.\n\n**Wat doet de Tweede Kamer?**\n• **Wetten maken**: voorstel → debat → stemmen.\n• **Regering controleren**: vragen stellen aan ministers.\n• **Begroting goedkeuren**: hoe geeft Nederland geld uit?\n\n**Politieke partijen** in 2025-2026 (~15 partijen): VVD, D66, PVV, GL-PvdA, CDA, JA21, SP, ChristenUnie, SGP, FvD, BBB, Volt, etc.\n\n**Coalitie**: meestal vormen meerdere partijen samen een meerderheid (>75 zetels) en regeren samen. Dat wordt vastgelegd in een **regeerakkoord**.\n\n**Oppositie**: partijen die niet meeregeren — zij controleren extra streng.",
+    explanation: "De **Tweede Kamer** is het belangrijkste orgaan van de Nederlandse democratie. Hier worden wetten gemaakt en de regering gecontroleerd.\n\n**Feiten**:\n• **150 zetels** (kamerleden).\n• Gekozen door het volk, **om de 4 jaar**.\n• Vergadert in Den Haag, **Binnenhof** (tijdens de verbouwing tijdelijk aan de Bezuidenhoutseweg).\n• Voorzitter: de **Kamervoorzitter**.\n\n**Wat doet de Tweede Kamer?**\n• **Wetten maken**: voorstel → debat → stemmen.\n• **Regering controleren**: vragen stellen aan ministers.\n• **Begroting goedkeuren**: hoe geeft Nederland geld uit?\n\n**Politieke partijen** in 2025-2026 (~15 partijen): VVD, D66, PVV, GL-PvdA, CDA, JA21, SP, ChristenUnie, SGP, FvD, BBB, Volt, etc.\n\n**Coalitie**: meestal vormen meerdere partijen samen een meerderheid (>75 zetels) en regeren samen. Dat wordt vastgelegd in een **regeerakkoord**.\n\n**Oppositie**: partijen die niet meeregeren — zij controleren extra streng.",
     svg: tweedeKamerSvg(),
     checks: [
       {
         q: "Hoeveel zetels heeft de Tweede Kamer?",
         options: ["150", "75", "100", "200"],
         answer: 0,
-        wrongHints: [null, "Dit is het aantal van de Eerste Kamer — niet de Tweede.", "Te weinig — dit zou geen evenwichtige verhouding zijn.", "Te veel — dit aantal komt nergens in NL voor."],
+        wrongHints: [null, "Dit is het aantal van de Eerste Kamer — niet de Tweede.", "Dat was het aantal vóór 1956 — sindsdien zijn het er meer.", "Te veel — dit aantal komt nergens in NL voor."],
         uitlegPad: {
           stappen: [{ titel: "150 zetels", tekst: "Tweede Kamer heeft 150 zetels sinds 1956. Daarvoor 100. Aantal staat vast in grondwet. Voor meerderheid: 76+ zetels nodig. Coalitie vormt vaak meerderheid (meestal 3-4 partijen samen)." }],
           woorden: [{ woord: "zetel", uitleg: "Plek in parlement. Elk lid heeft 1 zetel." }, { woord: "meerderheid", uitleg: "Meer dan helft. Voor 150 zetels: 76+." }],
@@ -456,7 +456,7 @@ const steps = [
         q: "Vanaf welke leeftijd ID-plicht in NL?",
         options: ["14 jaar", "12 jaar", "16 jaar", "18 jaar"],
         answer: 0,
-        wrongHints: [null, "Te jong.", "Niet 16 — 14.", "ID-plicht begint eerder dan stemrecht."],
+        wrongHints: [null, "Te jong.", "Te oud — de plicht begint al eerder.", "ID-plicht begint eerder dan stemrecht."],
         uitlegPad: {
           stappen: [{ titel: "ID vanaf 14 jaar", tekst: "Sinds 2005 (Wet op de Identificatieplicht): elke NL'er vanaf 14 jaar moet legitimatie kunnen tonen bij politie-controle. ID-bewijs = paspoort, identiteitskaart of rijbewijs. Bij niet-tonen: boete €100+." }],
           woorden: [{ woord: "ID-plicht", uitleg: "Verplichting om je te kunnen identificeren met geldig document." }, { woord: "legitimatie", uitleg: "Officieel document dat bewijst wie je bent." }],
@@ -549,25 +549,25 @@ const steps = [
       },
       {
         q: "Welke uitspraak is **juist**?",
-        options: ["De Koning ondertekent wetten formeel","De Koning maakt zelf wetten","De Koning kan ministers ontslaan","De Koning leidt de Tweede Kamer"],
+        options: ["De Koning ondertekent wetten formeel","De Koning maakt zelf wetten","De Koning stemt mee in de Tweede Kamer","De Koning leidt de Tweede Kamer"],
         answer: 0,
-        wrongHints: [null, "Wetten maakt de Tweede Kamer.", "Koning kan ministers niet ontslaan.", "Tweede Kamer heeft eigen voorzitter."],
+        wrongHints: [null, "Wetten maakt de Tweede Kamer.", "De Koning is geen Kamerlid en stemt nergens mee.", "Tweede Kamer heeft eigen voorzitter."],
         uitlegPad: {
-          stappen: [{ titel: "Koning ondertekent — meer niet", tekst: "Constitutionele monarchie: Koning ondertekent wetten als formaliteit (laatste handeling, kan niet weigeren). Daarbuiten: ceremonieel werk, vertegenwoordigt NL, wekelijks overleg met premier. Geen wetgevende macht. Geen ministerieel ontslag-recht. Leidt geen Kamer (Tweede Kamer heeft eigen voorzitter)." }],
+          stappen: [{ titel: "Koning ondertekent — meer niet", tekst: "Constitutionele monarchie: Koning ondertekent wetten als formaliteit (laatste handeling, kan niet weigeren). Daarbuiten: ceremonieel werk, vertegenwoordigt NL, wekelijks overleg met premier. Geen wetgevende macht. Stemt niet mee in de Kamer. Leidt geen Kamer (Tweede Kamer heeft eigen voorzitter)." }],
           woorden: [{ woord: "formele handtekening", uitleg: "Ondertekening zonder politieke macht. Verplichte handeling." }],
-          theorie: "'De Koning is onschendbaar, ministers zijn verantwoordelijk' (art. 42 Grondwet). Koning kan geen politieke uitspraken doen, geen wetten maken, geen ministers ontslaan. Alle politieke macht bij gekozen Kamer + regering.",
-          voorbeelden: [{ type: "wel/niet", tekst: "WEL: ondertekenen wetten, troonrede uitspreken (door regering geschreven), buitenlandse bezoeken. NIET: wetten maken, beslissen, partijen kiezen, ministers ontslaan." }],
-          basiskennis: [{ onderwerp: "Niet andere", uitleg: "Wetten maken = Tweede Kamer (niet Koning). Ministers ontslaan = formeel kan Koning dit niet zonder Kamer. Tweede Kamer leiden = Kamervoorzitter." }],
+          theorie: "'De Koning is onschendbaar, ministers zijn verantwoordelijk' (art. 42 Grondwet). Koning kan geen politieke uitspraken doen, geen wetten maken, niet op eigen houtje ministers ontslaan. Alle politieke macht bij gekozen Kamer + regering.",
+          voorbeelden: [{ type: "wel/niet", tekst: "WEL: ondertekenen wetten, troonrede uitspreken (door regering geschreven), buitenlandse bezoeken. NIET: wetten maken, beslissen, partijen kiezen, op eigen houtje ministers ontslaan." }],
+          basiskennis: [{ onderwerp: "Niet andere", uitleg: "Wetten maken = Tweede Kamer (niet Koning). Meestemmen in de Kamer = alleen Kamerleden, niet de Koning. Tweede Kamer leiden = Kamervoorzitter." }],
           niveaus: { basis: "Ondertekent formeel.", simpeler: "Koning doet alleen formaliteiten: wetten ondertekenen, ceremonieel.", nogSimpeler: "Formaliteit" },
         },
       },
       {
-        q: "In welk gebouw vergadert de Tweede Kamer?",
+        q: "Welk gebouwencomplex is de vaste thuisbasis van de Tweede Kamer?",
         options: ["Binnenhof, Den Haag", "Paleis op de Dam", "Vredespaleis", "Catshuis"],
         answer: 0,
         wrongHints: [null, "Paleis op de Dam = koninklijk paleis Amsterdam.", "Vredespaleis = Internationaal Gerechtshof.", "Catshuis = ambtswoning premier."],
         uitlegPad: {
-          stappen: [{ titel: "Binnenhof — 800 jaar oud", tekst: "Tweede Kamer vergadert in Binnenhof, Den Haag. Eeuwenoud complex (ouder dan NL als land). Sinds renovatie 2021-2027 tijdelijk in andere gebouwen (Bezuidenhoutseweg). Maar STAATSRECHTELIJK is Binnenhof de plek. Ridderzaal hier (waar koning Troonrede uitspreekt op Prinsjesdag)." }],
+          stappen: [{ titel: "Binnenhof — 800 jaar oud", tekst: "Tweede Kamer vergadert in Binnenhof, Den Haag. Eeuwenoud complex (ouder dan NL als land). Sinds 2021 door de renovatie tijdelijk in een ander gebouw (Bezuidenhoutseweg), nog jaren. Maar STAATSRECHTELIJK is Binnenhof de plek. Ridderzaal hier (waar de koning normaal de Troonrede uitspreekt op Prinsjesdag)." }],
           woorden: [{ woord: "Binnenhof", uitleg: "Historisch parlements- en regeringscomplex Den Haag." }, { woord: "Ridderzaal", uitleg: "Belangrijkste zaal Binnenhof. Troonrede Prinsjesdag." }, { woord: "Prinsjesdag", uitleg: "3e dinsdag september. Koning houdt Troonrede. Opening parlementair jaar." }],
           theorie: "Andere bekende gebouwen Den Haag: Paleis Huis ten Bosch (koning woont), Catshuis (ambtswoning premier), Vredespaleis (Internationaal Gerechtshof/ICJ + Permanent Hof van Arbitrage). Allemaal verschillende functies.",
           voorbeelden: [{ type: "andere", tekst: "Paleis op de Dam (Amsterdam) = officieel paleis Koning voor ceremoniën. Niet politiek. Catshuis (Den Haag) = werkresidentie premier." }],
@@ -593,9 +593,9 @@ const steps = [
       { q: "Wie is **staatshoofd** van Nederland?", options: ["Koning Willem-Alexander","Mark Rutte","Dilan Yesilgöz","Frans Timmermans"], answer: 0, wrongHints: [null,"Vroegere premier.","Politicus.","Politicus."] },
       { q: "Wat doet de **Eerste Kamer**?", options: ["Wetten controleren die Tweede Kamer al heeft aangenomen","Wetten zelf maken","Belasting heffen","Niets relevants"], answer: 0, wrongHints: [null,"Dat doet Tweede Kamer.","Belastingdienst.","Wel relevant."] },
       { q: "Hoeveel zetels heeft de **Tweede Kamer** in Nederland?", options: ["150","75","100","200"], answer: 0, wrongHints: [null,"Eerste Kamer.","Niet.","Te veel."] },
-      { q: "Wat is een **coalitie**?", options: ["Samenwerking van meerdere partijen om kabinet te vormen","Eén partij die alles bestuurt","Een politieke partij","Tegenstanders"], answer: 0, wrongHints: [null,"In NL kan dat niet — geen partij heeft meerderheid.","Veel breder concept.","Tegenovergesteld."] },
+      { q: "Wat is een **coalitie**?", options: ["Samenwerking van meerdere partijen om kabinet te vormen","Eén partij die alles bestuurt","Een politieke partij","Tegenstanders"], answer: 0, wrongHints: [null,"Komt in NL vrijwel nooit voor — geen partij haalt alleen een meerderheid.","Veel breder concept.","Tegenovergesteld."] },
       { q: "**Trias politica** verdeelt macht in?", options: ["3 (wetgevend, uitvoerend, rechterlijk)","2","4","Geen"], answer: 0, wrongHints: [null,"Onvolledig.","Te veel.","Wel."] },
-      { q: "**Demonstreren** is in NL een grondrecht. Op basis van welk recht?", options: ["Vrijheid van meningsuiting/vereniging","Niets","Toegestaan zonder reden","Geheim"], answer: 0, wrongHints: [null,"Wel grondrecht.","Niet primair.","Niet."] },
+      { q: "**Demonstreren** is in NL een grondrecht. Op basis van welk recht?", options: ["Recht op vergadering en betoging","Niets","Toegestaan zonder reden","Geheim"], answer: 0, wrongHints: [null,"Wel grondrecht.","Niet primair.","Niet."] },
       { q: "Wie kiezen de **Tweede Kamer**?", options: ["Nederlandse burgers ≥18 jaar","Alleen koning","Provincies","Bedrijven"], answer: 0, wrongHints: [null,"Niet — democratie.","Provinciale Staten kiezen Eerste Kamer.","Niet."] },
       { q: "**Open vraag**: hoeveel jaar zit een Tweede Kamer-periode normaal? (typ getal)", kind: "open", acceptedAnswers: ["4"], numericTolerance: 0, explanation: "Standaard zittingstermijn Tweede Kamer = 4 jaar." },
       { q: "**Open vraag**: noem 1 grondrecht in NL.", kind: "open", acceptedAnswers: ["vrijheid van meningsuiting", "godsdienstvrijheid", "vrijheid van vereniging", "vrijheid van demonstratie", "kiesrecht", "gelijkheid", "onderwijs", "privacy", "gezondheid", "discriminatieverbod"], explanation: "Bv. vrijheid van meningsuiting, godsdienstvrijheid, kiesrecht, gelijkheid, privacy." },
