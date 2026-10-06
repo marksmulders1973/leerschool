@@ -111,7 +111,7 @@ const steps = [
       },
       {
         q: "Hoe heet het meer dat door de Afsluitdijk ontstond?",
-        options: ["IJsselmeer","Markermeer","Zuiderzee","Wadden­zee"],
+        options: ["IJsselmeer","Markermeer","Zuiderzee","Waddenzee"],
         answer: 0,
         wrongHints: [null, "Onderdeel van IJsselmeer (via Houtribdijk gescheiden 1976).", "Oude naam — werd IJsselmeer na 1932.", "Aparte zee — Waddenzee blijft."],
         uitlegPad: {
