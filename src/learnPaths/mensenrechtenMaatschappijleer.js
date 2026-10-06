@@ -103,9 +103,9 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen **recht** en **plicht**?",
-        options: ["Recht = wat je mag, plicht = wat je moet", "Beide hetzelfde", "Recht = voor kinderen, plicht = volwassenen", "Geen verschil"],
+        options: ["Recht = wat je mag, plicht = wat je moet", "Beide hetzelfde", "Recht = voor kinderen, plicht = volwassenen", "Recht = verplicht, plicht = vrijwillig"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Niet leeftijdsgebonden.", "Wel verschil."],
+        wrongHints: [null, "Wel verschil.", "Niet leeftijdsgebonden.", "Denk aan belasting betalen: mag dat, of moet dat?"],
       },
       {
         q: "Welke historische gebeurtenis was **direct aanleiding** voor moderne mensenrechten?",
@@ -219,7 +219,7 @@ const steps = [
         wrongHints: [null, "Niet klassiek.", "Niet alleen sociaal.", "Wel — recent."],
       },
       {
-        q: "Hoeveel jaar moet je in NL **verplicht naar school**?",
+        q: "Van welke tot welke leeftijd geldt in NL de **leerplicht**?",
         options: ["5-16 jaar", "0-18 jaar", "3-12 jaar", "Geen verplichting"],
         answer: 0,
         wrongHints: [null, "Niet vanaf 0.", "Niet die periode.", "Wel — leerplicht."],
@@ -246,7 +246,7 @@ const steps = [
         wrongHints: [null, "Niet.", "Wel toeslagen-context maar fout.", "Wel relevant."],
       },
       {
-        q: "Hoeveel kinderen werken wereldwijd ongeveer?",
+        q: "Hoeveel kinderen werkten wereldwijd ongeveer in 2020 (ILO)?",
         options: ["~160 miljoen", "~10.000", "~1 miljard", "~1.000"],
         answer: 0,
         wrongHints: [null, "Veel te weinig.", "Te veel.", "Veel te weinig."],
@@ -286,9 +286,9 @@ const steps = [
       },
       {
         q: "Waar kun je in NL **klagen over de overheid**?",
-        options: ["Nationale Ombudsman", "Burgemeester", "School", "Bibliotheek"],
+        options: ["Nationale Ombudsman", "Politieke partij", "School", "Bibliotheek"],
         answer: 0,
-        wrongHints: [null, "Wel maar specifiek de Ombudsman.", "Niet voor overheid-klachten.", "Geen klachten-instituut."],
+        wrongHints: [null, "Een partij kan je mening meenemen, maar behandelt geen klachten over de overheid.", "Niet voor overheid-klachten.", "Geen klachten-instituut."],
       },
     ],
   },
