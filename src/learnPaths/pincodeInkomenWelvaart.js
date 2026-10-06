@@ -66,7 +66,7 @@ const steps = [
         q: "**Lucht** is een voorbeeld van:",
         options: ["Vrij goed", "Schaars goed", "Kapitaalgoed", "Consumptiegoed"],
         answer: 0,
-        wrongHints: [null, "Lucht is gratis en in overvloed.", "Met een kapitaalgoed maak je iets anders.", "Consumptie kan, maar 'vrij' is specifieker."],
+        wrongHints: [null, "Lucht is gratis en in overvloed.", "Met een kapitaalgoed maak je iets anders.", "Een consumptiegoed is een schaars goed dat je koopt — is lucht schaars?"],
         uitlegPad: {
           stappen: [{ titel: "Vrij of schaars?", tekst: "Vrij goed = GRATIS en in OVERVLOED beschikbaar. Schaars = kost geld of moeite. Lucht ademen kost niks en is overal → vrij goed." }],
           woorden: [{ woord: "vrij goed", uitleg: "Gratis + onbeperkt: lucht, zonlicht, zeewater (voor zwemmen)." }, { woord: "schaars goed", uitleg: "Kost geld of moeite om te krijgen. Alles in de winkel." }],
@@ -238,7 +238,7 @@ const steps = [
         q: "Welke productiefactor levert een **mijnbouwbedrijf vooral**?",
         options: ["Natuur (grondstoffen)", "Arbeid alleen", "Kapitaal alleen", "Ondernemerschap alleen"],
         answer: 0,
-        wrongHints: [null, "Mijnbouw heeft alle 4 nodig — maar de output IS natuur.", "Idem.", "Idem."],
+        wrongHints: [null, "Mijnbouw heeft alle 4 nodig — maar wat haalt een mijn uit de grond?", "Idem.", "Idem."],
         uitlegPad: {
           stappen: [{ titel: "Wat KOMT uit een mijn?", tekst: "Mijnbouw haalt steenkool, ijzererts, koper, goud uit de grond → dat is NATUUR (grondstoffen)." }],
           woorden: [{ woord: "natuur", uitleg: "Productiefactor: alles wat de NATUUR biedt — grond, lucht, water, grondstoffen." }, { woord: "grondstof", uitleg: "Ruw materiaal uit de natuur dat je bewerkt tot eindproduct." }],
@@ -710,7 +710,7 @@ const steps = [
         q: "Wie krijgt **AOW**?",
         options: ["Iedereen vanaf pensioenleeftijd (~67) die in NL heeft gewoond", "Alleen mensen die werken", "Alleen ondernemers", "Alleen wie geen vermogen heeft"],
         answer: 0,
-        wrongHints: [null, "Werk is geen voorwaarde.", "AOW geldt voor iedereen.", "Vermogen geen vereiste."],
+        wrongHints: [null, "Werk is geen voorwaarde.", "Ondernemerschap is geen voorwaarde voor AOW.", "Vermogen geen vereiste."],
         uitlegPad: {
           stappen: [{ titel: "AOW = basis voor IEDEREEN", tekst: "AOW is een basis-pensioen dat IEDEREEN krijgt vanaf de pensioenleeftijd (~67), ongeacht werk-historie of vermogen. Voorwaarde: hier gewoond hebben." }],
           woorden: [{ woord: "AOW", uitleg: "Algemene Ouderdomswet. Basis-pensioen voor iedereen vanaf pensioenleeftijd." }, { woord: "pensioenleeftijd", uitleg: "Leeftijd waarop AOW ingaat. Stijgt mee met levensverwachting (~67 in 2024)." }],
@@ -749,17 +749,17 @@ const steps = [
         },
       },
       {
-        q: "Een student verliest haar bijbaan en heeft geen ander inkomen. Welke uitkering?",
+        q: "Sanne (25) studeert niet, verliest haar kleine bijbaan en heeft geen ander inkomen. Welke uitkering?",
         options: ["Bijstand (vangnet via gemeente)", "AOW", "WW (werkloosheidswet)", "WIA"],
         answer: 0,
         wrongHints: [null, "AOW pas vanaf 67.", "WW vereist eerder werkverleden + minimum aantal weken.", "WIA = arbeidsongeschiktheid."],
         uitlegPad: {
-          stappen: [{ titel: "Voor wie welke uitkering?", tekst: "Bijstand = laatste vangnet voor wie GEEN ander inkomen en geen recht op WW/WIA heeft. Studenten met bijbaan komen meestal niet aan WW-uren — bijstand is wat overblijft." }],
+          stappen: [{ titel: "Voor wie welke uitkering?", tekst: "Bijstand = laatste vangnet voor wie GEEN ander inkomen en geen recht op WW/WIA heeft. Wie alleen een klein bijbaantje had, komt meestal niet aan de WW-eis — bijstand is wat overblijft." }],
           woorden: [{ woord: "bijstand", uitleg: "Vangnet via gemeente voor wie geen ander inkomen heeft. Sociaal minimum." }, { woord: "WW", uitleg: "Tijdelijke uitkering na ontslag — vereist eerder werk + premie-betaling." }, { woord: "WIA", uitleg: "Arbeidsongeschiktheidsuitkering bij ziekte > 2 jaar." }],
-          theorie: "Volgorde van vangnet: eerst kijken naar verzekeringen (WW/WIA) → werkverleden? Anders → bijstand via gemeente. Student met klein bijbaantje haalt meestal niet de WW-eis (mín. 26 weken gewerkt).",
-          voorbeelden: [{ type: "WW", tekst: "Volwassene 5 jaar in dienst, ontslagen → WW (~70% laatste loon, max 24 mnd)." }, { type: "bijstand", tekst: "Student met bijbaantje (10u/wk) verliest baan → onvoldoende WW-rechten → bijstand." }],
-          basiskennis: [{ onderwerp: "Niet AOW", uitleg: "AOW pas vanaf pensioenleeftijd ~67. Student is ver van AOW-leeftijd." }],
-          niveaus: { basis: "Bijstand.", simpeler: "Student heeft te weinig werkjaren voor WW. Bijstand is het laatste vangnet via gemeente.", nogSimpeler: "Vangnet" },
+          theorie: "Volgorde van vangnet: eerst kijken naar verzekeringen (WW/WIA) → werkverleden? Anders → bijstand via gemeente. Wie kort of weinig werkte, haalt meestal niet de WW-eis (mín. 26 weken gewerkt).",
+          voorbeelden: [{ type: "WW", tekst: "Volwassene 5 jaar in dienst, ontslagen → WW (~70% laatste loon, max 24 mnd)." }, { type: "bijstand", tekst: "Sanne (bijbaantje 10u/wk) verliest haar baan → onvoldoende WW-rechten → bijstand. Let op: wie studiefinanciering kan krijgen, heeft géén recht op bijstand." }],
+          basiskennis: [{ onderwerp: "Niet AOW", uitleg: "AOW pas vanaf pensioenleeftijd ~67. Sanne is ver van AOW-leeftijd." }],
+          niveaus: { basis: "Bijstand.", simpeler: "Sanne heeft te weinig gewerkt voor WW. Bijstand is het laatste vangnet via gemeente.", nogSimpeler: "Vangnet" },
         },
       },
       {
