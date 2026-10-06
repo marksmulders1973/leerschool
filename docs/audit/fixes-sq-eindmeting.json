@@ -1,0 +1,13 @@
+[
+{"waar":"taal.groep3[38]","oud":"options: [\"lelijk in de praktijk\", \"groot\"","nieuw":"options: [\"lelijk\", \"groot\"","reden":"plaksel-staart 'in de praktijk'"},
+{"waar":"taal.groep7[20]","oud":"\"Een zin met meerdere persoonsvormen of Een zin zonder werkwoord\"","nieuw":"\"Een zin die altijd met een vraagteken eindigt\"","reden":"plaksel-afleider X of Y"},
+{"waar":"aardrijkskunde.groep5[15]","oud":"\"Groningen of Zwolle\"","nieuw":"\"Assen\"","reden":"plaksel-afleider X of Y"},
+{"waar":"geschiedenis.groep5[4]","oud":"\"Bevrijding van Amsterdam of Begin WO1\"","nieuw":"\"Begin van de Eerste Wereldoorlog\"","reden":"plaksel-afleider X of Y"},
+{"waar":"natuur.groep4[19]","oud":"\"Bladeren of Vlees\"","nieuw":"\"Vis\"","reden":"plaksel-afleider X of Y"},
+{"waar":"duits.groep5[22]","oud":"\"Ich habe zehn Jahre. of Ich bin zehn.\"","nieuw":"\"Ich habe zehn Jahre alt.\"","reden":"plaksel-afleider X of Y"},
+{"waar":"duits.groep7[28]","oud":"options: [\"Gebruiken\", \"Gebruiken of Geven\", \"Kopen\", \"Nodig hebben\"]","nieuw":"options: [\"Breken\", \"Geven\", \"Kopen\", \"Nodig hebben\"]","reden":"plaksel-afleider + 'gebruiken' is ook een betekenis van brauchen (Duden: gebrauchen) → twee goede opties"},
+{"waar":"natuur (covalente binding)","oud":"\"Overdracht van elektronen van elektronen tussen twee atomen\"","nieuw":"\"Aantrekking tussen metaalionen en vrije elektronen\"","reden":"verminkte plaksel-afleider"},
+{"waar":"geschiedenis (Nachtwacht)","oud":"\"Van Gogh of Vermeer\"","nieuw":"\"Frans Hals\"","reden":"plaksel-afleider X of Y"},
+{"waar":"taal (metoniem)","oud":"\"Een woord dat staat achter iets anders\"","nieuw":"\"Een tegenstelling\"","reden":"bijna-kopie van het goede antwoord"},
+{"waar":"natuur (magnetisme)","oud":"\"Wrijving tussen metaaloppervlakken of Elektrische lading van deeltjes\"","nieuw":"\"De zwaartekracht van de aarde\"","reden":"plaksel-afleider X of Y"}
+]
