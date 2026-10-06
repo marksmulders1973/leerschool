@@ -64,7 +64,7 @@ const steps = [
   {
     title: "Tekst-strategie — eerst kijken, dan lezen",
     explanation:
-      "Bij CSE Nederlands krijg je **lange teksten** en moet je in beperkte tijd **vragen beantwoorden**. Werken zonder strategie kost tijd + fouten.\n\n**De Toets-leesstrategie** *(uit het hoofd!)*:\n\n**1. Skim** (~30 sec):\n• Lees **titel** + **subtitels**.\n• Lees **eerste alinea** + **laatste alinea**.\n• Lees **eerste zin** van elke alinea *(topic sentence)*.\n• Bekijk **plaatjes + tabellen**.\nDoel: wat is **hoofdonderwerp**?\n\n**2. Lees vragen** (~1 min):\n• Begrijp wat **elke vraag vraagt** voordat je gaat lezen.\n• Onderstreep **trefwoorden** in vragen.\n• Sorteer vragen: makkelijke eerst, lastige later.\n\n**3. Scan** voor antwoorden:\n• Zoek **trefwoorden** uit vraag terug in tekst.\n• Lees alleen die **alinea** + zinnen vlak ervoor/erna.\n• Niet alles helemaal lezen!\n\n**4. Antwoord opschrijven**:\n• **Open vraag**: in eigen woorden, beknopt.\n• **Meerkeuze**: streep onmogelijke opties door, kies beste.\n\n**5. Controle** (~2 min aan eind):\n• Klopt elk antwoord nog?\n• Heb je alle vragen?\n\n**Nederlandse signaalwoorden — top 6 groepen**:\n\n**Toevoegen** (+): en, ook, bovendien, daarnaast, verder.\n**Tegenstelling** (↔): maar, echter, toch, niettemin, hoewel, ondanks.\n**Gevolg** (→): dus, daarom, daardoor, zodoende, bijgevolg.\n**Reden** (∵): omdat, want, doordat, vanwege.\n**Voorbeeld** (📋): zoals, bijvoorbeeld, bijv., onder andere.\n**Conclusie** (✓): kortom, samenvattend, alles bij elkaar, dus.\n\n**Toets-truc — signaalwoord = hint over wat volgt**:\n• 'Maar' / 'Echter' → tegenovergesteld komt.\n• 'Omdat' → reden komt.\n• 'Daarom' / 'Dus' → conclusie / gevolg.\n• 'Zoals' → voorbeeld komt.\n\n**Voorbeeld**:\n*'Veel jongeren willen vegetariër worden. Ze weten echter vaak niet hoe.'*\n→ 'Echter' = tegenstelling. Verwacht: ondanks de wens, lukt het niet *(weten niet hoe)*.\n\n**Toets-tip — examenstress**:\n• **Lees rustig** — fouten komen door haast.\n• Tijd-bewust **maar niet jagen**: 90 min voor 35-45 vragen = ~2 min/vraag.\n• **Lastige vraag overslaan** + later terugkomen.",
+      "Bij CSE Nederlands krijg je **lange teksten** en moet je in beperkte tijd **vragen beantwoorden**. Werken zonder strategie kost tijd + fouten.\n\n**De Toets-leesstrategie** *(uit het hoofd!)*:\n\n**1. Skim** (~30 sec):\n• Lees **titel** + **subtitels**.\n• Lees **eerste alinea** + **laatste alinea**.\n• Lees **eerste zin** van elke alinea *(topic sentence)*.\n• Bekijk **plaatjes + tabellen**.\nDoel: wat is **hoofdonderwerp**?\n\n**2. Lees vragen** (~1 min):\n• Begrijp wat **elke vraag vraagt** voordat je gaat lezen.\n• Onderstreep **trefwoorden** in vragen.\n• Sorteer vragen: makkelijke eerst, lastige later.\n\n**3. Scan** voor antwoorden:\n• Zoek **trefwoorden** uit vraag terug in tekst.\n• Lees alleen die **alinea** + zinnen vlak ervoor/erna.\n• Niet alles helemaal lezen!\n\n**4. Antwoord opschrijven**:\n• **Open vraag**: in eigen woorden, beknopt.\n• **Meerkeuze**: streep onmogelijke opties door, kies beste.\n\n**5. Controle** (~2 min aan eind):\n• Klopt elk antwoord nog?\n• Heb je alle vragen?\n\n**Nederlandse signaalwoorden — top 6 groepen**:\n\n**Toevoegen** (+): en, ook, bovendien, daarnaast, verder.\n**Tegenstelling** (↔): maar, echter, toch, niettemin, hoewel, ondanks.\n**Gevolg** (→): dus, daarom, daardoor, zodoende, bijgevolg.\n**Reden / oorzaak** (∵): omdat, want, doordat, vanwege.\n**Voorbeeld** (📋): zoals, bijvoorbeeld, bijv., onder andere.\n**Conclusie** (✓): kortom, samenvattend, alles bij elkaar, dus.\n\n**Toets-truc — signaalwoord = hint over wat volgt**:\n• 'Maar' / 'Echter' → tegenovergesteld komt.\n• 'Omdat' → reden komt.\n• 'Daarom' / 'Dus' → conclusie / gevolg.\n• 'Zoals' → voorbeeld komt.\n\n**Voorbeeld**:\n*'Veel jongeren willen vegetariër worden. Ze weten echter vaak niet hoe.'*\n→ 'Echter' = tegenstelling. Verwacht: ondanks de wens, lukt het niet *(weten niet hoe)*.\n\n**Toets-tip — examenstress**:\n• **Lees rustig** — fouten komen door haast.\n• Tijd-bewust **maar niet jagen**: 90 min voor 35-45 vragen = ~2 min/vraag.\n• **Lastige vraag overslaan** + later terugkomen.",
     svg: signaalwoordenSvg(),
     checks: [
       {
@@ -141,7 +141,7 @@ const steps = [
       },
       {
         q: "Wat is **'dit'** in *'Het regende. De weg was glad. **Dit** veroorzaakte ongelukken.'*?",
-        options: ["De hele situatie (regen + gladde weg)", "Alleen regen", "Alleen gladde weg", "De ongelukken"],
+        options: ["Regen én gladde weg samen", "Alleen regen", "Alleen gladde weg", "De ongelukken"],
         answer: 0,
         wrongHints: [null, "Te beperkt.", "Te beperkt.", "Dat is gevolg, niet 'dit'."],
         uitlegPad: {
@@ -200,7 +200,7 @@ const steps = [
       },
       {
         q: "Wat is een **tegenwerping**?",
-        options: ["Argument tegen de stelling (van tegenstander)", "Argument voor", "Een feit", "Een vraag"],
+        options: ["Argument tegen de stelling", "Argument voor", "Een feit", "Een vraag"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet specifiek argument-type.", "Geen tegenwerping."],
       },
@@ -215,13 +215,13 @@ const steps = [
     checks: [
       {
         q: "Wat is de **bedoeling** van een **reclame**?",
-        options: ["Activeren (iets kopen/doen)", "Informeren", "Amuseren", "Beschouwen"],
+        options: ["Activeren", "Informeren", "Amuseren", "Beschouwen"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Soms maar niet primair.", "Niet."],
       },
       {
         q: "Wat is de **bedoeling** van een **schoolboek-tekst**?",
-        options: ["Informeren (leren)", "Activeren", "Amuseren", "Verkopen"],
+        options: ["Informeren", "Activeren", "Amuseren", "Verkopen"],
         answer: 0,
         wrongHints: [null, "Niet primair.", "Niet primair.", "Niet."],
       },

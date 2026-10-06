@@ -143,7 +143,7 @@ const steps = [
         null,
         "Te smal — ouders spelen een rol, maar de tekst legt het niet 'puur' bij hen; school en samenleving doen ook mee.",
       ],
-      explanation: "De hoofdgedachte draagt de hele tekst: gebruik leidt tot lagere prestaties, een verbod is in NL lastig, dus de nadruk ligt op het AANLEREN van verantwoord gebruik (door school én ouders). Antwoord C dekt dat het breedst.",
+      explanation: "De hoofdgedachte draagt de hele tekst: gebruik leidt tot lagere prestaties, scholen bepalen in NL zelf of ze een verbod willen, dus de nadruk ligt op het AANLEREN van verantwoord gebruik (door school én ouders). Antwoord C dekt dat het breedst.",
       examenBron: BRON_LABEL(13),
       bronLink: BRON_LINK,
       bronTekst: tekst1,

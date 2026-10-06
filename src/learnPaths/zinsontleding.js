@@ -167,22 +167,22 @@ const steps = [
       {
         q: "*Welke zin is grammaticaal correct?*",
         options: [
-          "De groep kinderen wacht bij de bushalte.",
-          "De groep kinderen wachten bij de bushalte.",
-          "De groep kinderen wachtte zal bij de bushalte.",
-          "De groep van de kinderen wachten bij de bushalte.",
+          "De groep wacht bij de bushalte.",
+          "De groep wachten bij de bushalte.",
+          "De groep wachtten bij de bushalte.",
+          "De groepen wacht bij de bushalte.",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "'Groep' is enkelvoud (één groep), dus pv ook enkelvoud: 'wacht'.",
-          "'Wachtte zal' is geen correcte werkwoordsvolgorde.",
-          "Onderwerp blijft 'de groep' = enkelvoud, dus pv ook enkelvoud (wacht).",
+          "Is 'de groep' enkelvoud of meervoud? Past de pv daarbij?",
+          "'Wachtten' is meervoud. Is 'de groep' één groep of meer?",
+          "'Groepen' is meervoud. Welk getal moet de pv dan hebben?",
         ],
         uitlegPad: {
           stappen: [{ titel: "'Groep' = enkelvoud", tekst: "Eén groep, dus pv enkelvoud: wacht (niet wachten)." }],
           woorden: [{ woord: "hoeveelheidsaanduiding", uitleg: "groep, aantal, deel, hoop" }],
-          theorie: "Hoofdwoord (groep) bepaalt getal, niet 'kinderen'.",
+          theorie: "Het onderwerp (één groep = enkelvoud) bepaalt het getal van de pv.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Een groep wacht. Een aantal kinderen wachten." }],
           basiskennis: [{ onderwerp: "d/t-bron", uitleg: "veel d/t-fouten ontstaan hier" }],
           niveaus: { basis: "wacht.", simpeler: "Groep = enkelvoud.", nogSimpeler: "wacht." },
@@ -713,9 +713,9 @@ const steps = [
       {
         q: "*Hoeveel persoonsvormen staan er in: \"Toen ik thuiskwam, lag de hond al te slapen.\"?*",
         options: [
-          "Twee (kwam + lag)",
+          "Twee (thuiskwam + lag)",
           "Een (lag)",
-          "Drie (kwam + lag + slapen)",
+          "Drie (thuiskwam + lag + slapen)",
           "Vier",
         ],
         answer: 0,
@@ -726,12 +726,12 @@ const steps = [
           "Te veel. Tel alleen werkwoorden die echt vervoegd zijn naar persoon en tijd.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Twee deelzinnen, twee pv", tekst: "Toen ik thuiskwam (bijzin: kwam) + lag de hond (hoofdzin: lag) = 2 pv." }],
+          stappen: [{ titel: "Twee deelzinnen, twee pv", tekst: "Toen ik thuiskwam (bijzin: thuiskwam) + lag de hond (hoofdzin: lag) = 2 pv." }],
           woorden: [{ woord: "samengestelde zin", uitleg: "hoofdzin + bijzin" }],
           theorie: "Elke deelzin heeft eigen pv.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Bijzinnen met toen/omdat/als = eigen pv" }],
           basiskennis: [{ onderwerp: "te slapen", uitleg: "= infinitief, geen pv" }],
-          niveaus: { basis: "Twee: kwam + lag.", simpeler: "Hoofd + bijzin.", nogSimpeler: "Twee pv." },
+          niveaus: { basis: "Twee: thuiskwam + lag.", simpeler: "Hoofd + bijzin.", nogSimpeler: "Twee pv." },
         },
       },
       {

@@ -356,7 +356,7 @@ const steps = [
   },
   {
     title: "au vs ou — net zo lastig",
-    explanation: "**au** en **ou** klinken ook **precies hetzelfde**. Net als bij ei/ij: woordbeeld leren is de enige weg.\n\n**Ou is veel vaker voorkomend dan au.** Bij twijfel = ou een goede gok.\n\n**Veelvoorkomende au-woorden** (om te leren):\n• auto, augustus, applaus, blauw, flauw, paus, restaurant, saus, taupe, trauma\n• En ook: nautisch, klauw, lauw, gauw, pauw, rauw, dauw\n\n**Veelvoorkomende ou-woorden**:\n• oud, ouder, koud, vrouw, mouw, hout, goud, fout, schouder, bouwen, vouwen, houden, jou, nou, zou, zout, touw, trouw, woud\n• En ook: bouw, kous, rouwen, hou, bout, gouden, houtwol\n\n**Trucjes**:\n\n**1. Familie-truc**: woorden uit dezelfde familie hebben dezelfde spelling.\n• oud → ouder, oudst, oudheid (allemaal ou)\n• vouwen → opvouwen, vouwfiets (allemaal ou)\n\n**2. Werkwoorden -ouwen / -auwen**:\n• Vaak ou: bouwen, vouwen, houwen, schouwen, trouwen\n• Soms au: kauwen, miauwen\n\n**Beruchte fouten**:\n• \"gauw\" en \"blauw\" — met au\n• \"kabouter\" — met ou\n• \"saus\" en \"paus\" — met au\n\n**Tip**: bij twijfel, schrijf het **op** en kijk of het 'er goed uitziet'. Soms gebruiken je hersenen het woordbeeld zonder dat je de regel kent.",
+    explanation: "**au** en **ou** klinken ook **precies hetzelfde**. Net als bij ei/ij: woordbeeld leren is de enige weg.\n\n**Ou is veel vaker voorkomend dan au.** Bij twijfel = ou een goede gok.\n\n**Veelvoorkomende au-woorden** (om te leren):\n• auto, augustus, applaus, blauw, flauw, paus, saus, trauma\n• En ook: nautisch, klauw, lauw, gauw, pauw, rauw, dauw\n\n**Veelvoorkomende ou-woorden**:\n• oud, ouder, koud, vrouw, mouw, hout, goud, fout, schouder, bouwen, vouwen, houden, jou, nou, zou, zout, touw, trouw, woud\n• En ook: bouw, kous, rouwen, hou, bout, gouden, houtwol\n\n**Trucjes**:\n\n**1. Familie-truc**: woorden uit dezelfde familie hebben dezelfde spelling.\n• oud → ouder, oudst, oudheid (allemaal ou)\n• vouwen → opvouwen, vouwfiets (allemaal ou)\n\n**2. Werkwoorden -ouwen / -auwen**:\n• Vaak ou: bouwen, vouwen, houwen, schouwen, trouwen\n• Soms au: kauwen, miauwen\n\n**Beruchte fouten**:\n• \"gauw\" en \"blauw\" — met au\n• \"kabouter\" — met ou\n• \"saus\" en \"paus\" — met au\n\n**Tip**: bij twijfel, schrijf het **op** en kijk of het 'er goed uitziet'. Soms gebruiken je hersenen het woordbeeld zonder dat je de regel kent.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">au = ou (klinken hetzelfde!)</text>
@@ -389,7 +389,7 @@ const steps = [
             { titel: "Bekend au-woord", tekst: "Auto is een van de meest gebruikte au-woorden. Onthouden! Geen w erin." },
           ],
           woorden: [{ woord: "leenwoord", uitleg: "Woord uit andere taal (auto = automobiel, Latijn). Vaak met au." }],
-          theorie: "Veel au-woorden komen uit Latijn/Frans: auto, augustus, paus, restaurant, applaus. Anders meestal ou.",
+          theorie: "Veel au-woorden komen uit Latijn/Frans: auto, augustus, paus, applaus. Anders meestal ou.",
           voorbeelden: [{ type: "au-woord", tekst: "auto, augustus, paus, applaus, blauw, saus — leren als rijtje." }],
           basiskennis: [{ onderwerp: "Geen W", tekst: "Bij au + klinker komt geen w. 'Auto' = au + to, geen 'auwto'.", uitleg: "Bij au + klinker komt geen w. 'Auto' = au + to, geen 'auwto'." }],
           niveaus: {
@@ -447,7 +447,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Hoe spel je het woord voor 'iets dat in de stad door het water loopt'?*",
+        q: "*Hoe spel je het woord voor 'een vaart met water die dwars door de stad loopt'?*",
         options: ["gracht", "graht", "graggt", "grakt"],
         answer: 0,
         wrongHints: [
@@ -477,7 +477,7 @@ const steps = [
   // ─── C. Samenstellingen ───────────────────────────────
   {
     title: "Aaneen of los?",
-    explanation: "Een veelgemaakte fout: schrijf je *autobandenservice* als één woord, of *auto banden service* met spaties? In het Nederlands geldt:\n\n**HOOFDREGEL**: samenstellingen schrijf je **aan elkaar**.\n\n**Voorbeelden**:\n• schoolboek (niet \"school boek\")\n• fietsenrek (niet \"fietsen rek\")\n• zomervakantie (niet \"zomer vakantie\")\n• wereldkampioenschap\n• schoenfabriek\n• telefoonabonnement\n\n**Verschil met Engels**: in het Engels schrijf je samenstellingen vaak los (school book, swimming pool). In het Nederlands aan elkaar (schoolboek, zwembad).\n\n**Wanneer mag je een KOPPELTEKEN gebruiken?**\n\n**1. Bij klinker-botsing** (twee gelijke klinkers naast elkaar door samenstelling):\n• zee-egel (niet zeeegel)\n• na-apen\n• auto-onderdeel\n\n**2. Bij ondoorzichtige samenstellingen** (lezer raakt verward):\n• auto-immuun (= auto + immuun, niet 'autoim-muun')\n\n**3. Bij eigennamen + soortnamen**:\n• Afrika-expert\n• Ajax-supporter\n\n**4. Bij afkortingen en woordgroepen**:\n• kinder-tv-programma (= kinderprogramma op tv)\n• ja-knikker\n\n**5. Bij combinatie met cijfers of letters**:\n• 50-jarige, B-merk, 5-stappenplan\n\n**Beruchte fouten**:\n• \"te vinden\" → twee woorden ✓ (werkwoord met 'te')\n• \"tevreden\" → één woord ✓ (bijvoeglijk naamwoord)\n• \"in plaats van\" → drie woorden ✓\n• \"vanwege\" → één woord ✓\n\n**Twijfel?** Spellingcontrole van Word/Google Docs is vaak goed bij dit soort woorden.",
+    explanation: "Een veelgemaakte fout: schrijf je *autobandenservice* als één woord, of *auto banden service* met spaties? In het Nederlands geldt:\n\n**HOOFDREGEL**: samenstellingen schrijf je **aan elkaar**.\n\n**Voorbeelden**:\n• schoolboek (niet \"school boek\")\n• fietsenrek (niet \"fietsen rek\")\n• zomervakantie (niet \"zomer vakantie\")\n• wereldkampioenschap\n• schoenfabriek\n• telefoonabonnement\n\n**Verschil met Engels**: in het Engels schrijf je samenstellingen vaak los (school book, swimming pool). In het Nederlands aan elkaar (schoolboek, zwembad).\n\n**Wanneer mag je een KOPPELTEKEN gebruiken?**\n\n**1. Bij klinker-botsing** (twee gelijke klinkers naast elkaar door samenstelling):\n• zee-egel (niet zeeegel)\n• na-apen\n• auto-onderdeel\n\n**2. Bij ondoorzichtige samenstellingen** (lezer raakt verward):\n• auto-immuun (= auto + immuun, niet 'autoim-muun')\n\n**3. Bij eigennamen met een klinkerbotsing**:\n• Afrika-expert (a + e)\n• Maar zonder botsing gewoon aaneen: Ajaxsupporter, Nobelprijs\n\n**4. Bij afkortingen en woordgroepen**:\n• kinder-tv-programma (= kinderprogramma op tv)\n• ja-knikker\n\n**5. Bij combinatie met cijfers of letters**:\n• 50-jarige, B-merk, 5-stappenplan\n\n**Beruchte fouten**:\n• \"te vinden\" → twee woorden ✓ (werkwoord met 'te')\n• \"tevreden\" → één woord ✓ (bijvoeglijk naamwoord)\n• \"in plaats van\" → drie woorden ✓\n• \"vanwege\" → één woord ✓\n\n**Twijfel?** Spellingcontrole van Word/Google Docs is vaak goed bij dit soort woorden.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">samenstellingen → aan elkaar</text>
@@ -730,13 +730,13 @@ const steps = [
       },
       {
         q: "*Wat is het verkleinwoord van 'auto'?*",
-        options: ["autootje", "autotje", "autoje", "autootjepje"],
+        options: ["autootje", "autotje", "autoje", "auto'tje"],
         answer: 0,
         wrongHints: [
           null,
           "Spreek 'autotje' uit: blijft de o dan lang klinken?",
           "Na een klinker past -je niet goed. En blijft de o dan lang?",
-          "-tjepje bestaat niet — combinatie van twee uitgangen.",
+          "Een apostrof vóór -tje zie je bij woorden als baby'tje. Bij auto gaat het anders: wat doe je met de o?",
         ],
         uitlegPad: {
           stappen: [

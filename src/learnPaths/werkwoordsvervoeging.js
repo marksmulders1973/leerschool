@@ -751,7 +751,7 @@ Hij <tspan fill="${COLORS.good}" font-weight="bold">werkte</tspan> hard.
         wrongHints: [
           null,
           "Stam = woon. Zit n in 't kofschip ('t k o f s ch p)? Welke uitgang dan?",
-          "Verkeerde uitgang. Toets de stam-eindletter aan 't kofschip.",
+          "Wond is een ander woord (van winden). Wat is de stam van wonen, en welke uitgang krijgt die?",
           "Voltooid deelwoord, maar er staat geen \"heeft\" in de zin.",
         ],
         uitlegPad: {
