@@ -137,7 +137,7 @@ const steps = [
         q: "**De Moivre**: (1+i)⁴ = ?",
         options: ["−4","4","16","2i"],
         answer: 0,
-        wrongHints: [null, "Niet — bereken (1+i)² eerst en pas dan nogmaals de kwadraat toe.", "Niet — let op het teken: wat doet i² met het teken als je (1+i)² nog een keer kwadrateert?", "Niet correct — werk stap voor stap uit."],
+        wrongHints: [null, "Niet — let op het teken: wat doet i² met het teken als je (1+i)² nog een keer kwadrateert?", "Niet — bereken (1+i)² eerst en pas dan nogmaals de kwadraat toe.", "Niet correct — werk stap voor stap uit."],
         uitlegPad: {
           stappen: [
             { titel: "Polair (1+i) = √2 e^(iπ/4)", tekst: "|1+i| = √2, arg = π/4." },
@@ -158,7 +158,7 @@ const steps = [
     checks: [
       {
         q: "Matrix-vermenigvuldiging is:",
-        options: ["NIET commutatief (A·B ≠ B·A)","Wel commutatief","Niet bestaand","Altijd nul"],
+        options: ["Niet commutatief","Wel commutatief","Niet bestaand","Altijd nul"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Wel bestaand.", "Niet."],
         uitlegPad: {
@@ -170,7 +170,7 @@ const steps = [
         q: "**Determinant** van [[2,3],[1,4]]?",
         options: ["5","11","8","6"],
         answer: 0,
-        wrongHints: [null, "Niet — controleer.", "Niet — ad+bc?", "Niet correct."],
+        wrongHints: [null, "Niet — ad + bc? Let op het minteken.", "Niet — je vergeet bc af te trekken.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "ad − bc", tekst: "**det([[a,b],[c,d]]) = ad − bc** = 2·4 − 3·1 = 8 − 3 = **5**." }],
           niveaus: { basis: "5.", simpeler: "ad−bc = 8−3 = 5", nogSimpeler: "5" },
@@ -178,7 +178,7 @@ const steps = [
       },
       {
         q: "Wanneer is matrix **niet inverteerbaar**?",
-        options: ["det = 0 (singulier)","det = 1","Vierkant","Diagonaal"],
+        options: ["det = 0","det = 1","Vierkant","Diagonaal"],
         answer: 0,
         wrongHints: [null, "Niet — wel inverteerbaar.", "Voorwaarde maar niet doorslaggevend.", "Wel inverteerbaar (als geen nul-diagonaal)."],
         uitlegPad: {
@@ -227,9 +227,9 @@ const steps = [
       },
       {
         q: "**Gauss-eliminatie** is voor:",
-        options: ["Stelsels lineaire vergelijkingen oplossen","Eigenwaarden vinden","Matrix transponeren","Determinant rekenen"],
+        options: ["Stelsels lineaire vergelijkingen oplossen","Eigenwaarden vinden","Matrix transponeren","Wortels van een polynoom vinden"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Andere operatie.", "Indirect via."],
+        wrongHints: [null, "Niet primair.", "Andere operatie.", "Daar gebruik je de abc-formule of ontbinden, geen rij-operaties."],
         uitlegPad: {
           stappen: [{ titel: "Systematische methode", tekst: "**Gauss-eliminatie**: methode om stelsel lineaire vergelijkingen systematisch op te lossen door rij-operaties (vermenigvuldigen, optellen, verwisselen). Reduceer naar **bovendriehoek-vorm**, dan terugsubstitutie. Carl Friedrich Gauss (1777-1855) — werd grootste wiskundige zijn tijd genoemd." }],
           niveaus: { basis: "Stelsels.", simpeler: "Gauss = stelsel oplossen", nogSimpeler: "Stelsels oplossen." },
@@ -239,7 +239,7 @@ const steps = [
         q: "**Eigenvector** v van A vervult:",
         options: ["A·v = λ·v","A·v = 0","A = λ·v","A·v + λ = 0"],
         answer: 0,
-        wrongHints: [null, "Niet — eigenvector ≠ 0.", "Niet zinvol.", "Niet correct."],
+        wrongHints: [null, "Dat is alleen het speciale geval λ = 0.", "Niet zinvol.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "Karakteristieke vergelijking", tekst: "**Eigenvector v** van matrix A: **A·v = λ·v** voor scalair λ. v wordt door A op zichzelf afgebeeld (alleen geschaald met λ). λ = **eigenwaarde**. Vinden: oplossen det(A − λI) = 0.\n\nToepassing: PCA, PageRank, Markov-stabiel, trillingen." }],
           niveaus: { basis: "A·v = λv.", simpeler: "Eig: A·v = λv", nogSimpeler: "A·v = λ·v" },
@@ -295,7 +295,7 @@ const steps = [
         },
       },
       {
-        q: "Welke matrix maakt **dubbele schaling**?",
+        q: "Welke matrix beeldt elk punt (x, y) af op **(2x, 2y)**?",
         options: ["[[2,0],[0,2]]","[[1,1],[1,1]]","[[0,2],[2,0]]","[[1,0],[0,2]]"],
         answer: 0,
         wrongHints: [null, "Niet — geen schaling.", "Spiegelt in y = x én schaalt.", "Alleen y-schaling."],
@@ -308,7 +308,7 @@ const steps = [
         q: "Hoeveel **n-de wortels** heeft complex getal z (z ≠ 0)?",
         options: ["n verschillende","1","2","Oneindig"],
         answer: 0,
-        wrongHints: [null, "Niet — meer.", "Niet — n stuks.", "Niet — eindig."],
+        wrongHints: [null, "Niet — meer.", "Niet — alleen bij n = 2.", "Niet — eindig."],
         uitlegPad: {
           stappen: [{ titel: "Regelmatige n-hoek", tekst: "**Elk complex getal z ≠ 0 heeft precies n n-de wortels**. Ze vormen een regelmatige n-hoek op cirkel rond oorsprong (met straal |z|^(1/n)). Bv. 4 vierde wortels uit 1: 1, i, −1, −i (op hoeken 90° apart). Fundamenteel verschil met reëel: x² = 4 heeft 2 reële oplossingen (±2), x² = −4 heeft 0 reële maar 2 complexe (±2i)." }],
           niveaus: { basis: "n.", simpeler: "n wortels", nogSimpeler: "n" },
@@ -316,9 +316,9 @@ const steps = [
       },
       {
         q: "**Fundamentele stelling algebra**:",
-        options: ["Polynoom graad n heeft n complexe wortels","Geen wortels","Reële wortels altijd","Eén wortel"],
+        options: ["Polynoom graad n heeft n complexe wortels","Polynoom graad n heeft n reële wortels","Polynoom graad n heeft hooguit één wortel","Polynoom graad n heeft geen complexe wortels"],
         answer: 0,
-        wrongHints: [null, "Niet correct.", "Niet altijd.", "Niet."],
+        wrongHints: [null, "Niet altijd reëel — denk aan x² + 1 = 0.", "Niet — een kwadratische vergelijking heeft er vaak twee.", "Niet — juist in ℂ heeft elk polynoom wortels."],
         uitlegPad: {
           stappen: [{ titel: "Carl Friedrich Gauss 1799", tekst: "**Fundamentele Stelling Algebra**: elk polynoom van graad **n ≥ 1** (met complexe coëfficiënten) heeft **precies n complexe wortels** (met multipliciteit). Bewezen door **Gauss** in 1799 (proefschrift, 22 jaar oud!). Reden om ℝ uit te breiden naar ℂ: alle polynomen factoriseerbaar in lineaire factoren. Onmisbaar voor algebra + complexe analyse." }],
           niveaus: { basis: "n wortels.", simpeler: "Polynoom n = n wortels", nogSimpeler: "n wortels." },
