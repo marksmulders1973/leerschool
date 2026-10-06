@@ -133,7 +133,7 @@ const steps = [
         q: "Wereld-armoede (<$2,15/dag) is sinds 1990:",
         options: ["Sterk afgenomen (1,9 mld → ~700 mln)","Verdubbeld","Stabiel","Verviervoudigd"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — sterk gedaald.", "Niet relevant."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet stabiel — denk aan wat de groei van China en India sinds 1990 deed.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "China-effect vooral", tekst: "**Wereld-extreme armoede** (Wereldbank-definitie < $2,15/dag): 1990 ~1,9 mld → 2020 ~700 mln. **Sterke daling**. Vooral door China (sinds 1980 800+ mln uit armoede) + India + andere groeilanden. Maar absolute aantal nog hoog + Sub-Sahara stagneert. **SDG-doel 'nul armoede 2030'** lijkt onhaalbaar." }],
           niveaus: { basis: "Afgenomen.", simpeler: "Armoede ↓", nogSimpeler: "↓" },
@@ -242,7 +242,7 @@ const steps = [
         q: "Welke is China's **demografische uitdaging**?",
         options: ["Vergrijzing + bevolkingsdaling","Te veel jongeren","Migratie-tekort","Geen probleem"],
         answer: 0,
-        wrongHints: [null, "Niet — daling vooral.", "Wel issue maar niet primair.", "Wel groot probleem."],
+        wrongHints: [null, "Denk aan de nawerking van het 1-kind-beleid: krijgt China veel of weinig jongeren?", "Wel issue maar niet primair.", "Wel groot probleem."],
         uitlegPad: {
           stappen: [{ titel: "1-kind-beleid-nawerking", tekst: "China **1-kind-beleid 1979-2015** voorkwam volgens de overheid ~400 mln geboorten. Nu **gevolgen**: vergrijzing (ouder dan VS), beroepsbevolking krimpt, **bevolking daalt sinds 2022**. Verlate 2-kind- en 3-kind-beleid hielpen weinig. 'China wordt oud voordat het rijk wordt' — uitdaging." }],
           theorie: "Toetsvraag-patroon: vergelijk China demografisch met India of NL.",
@@ -272,7 +272,7 @@ const steps = [
         q: "Wereldhandel groeit sinds 1950:",
         options: ["Sneller dan wereld-BBP","Trager","Gelijk","Krimpt"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — sneller.", "Niet — wel groeit."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet gelijk — vergelijk de groei van containervervoer met de groei van de economie.", "Niet — wel groeit."],
         uitlegPad: {
           stappen: [{ titel: "Globalisering-effect", tekst: "**Wereldhandel groeit sneller dan BBP** sinds 1950, vooral 1990-2008 (Chinese opkomst + WTO). Tijdelijk afgevlakt door 2008-crisis + Trump-tarieven 2018+. Recent (post-COVID + Russisch-Oekraïens) iets meer re-shoring → mogelijk einde 'hyperglobalisatie'." }],
           niveaus: { basis: "Sneller dan BBP.", simpeler: "Handel > BBP-groei", nogSimpeler: "Sneller." },

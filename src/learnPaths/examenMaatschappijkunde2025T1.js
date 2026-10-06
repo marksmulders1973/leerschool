@@ -177,7 +177,7 @@ const steps = [
         "het slachtoffer",
       ],
       answer: 1,
-      wrongHints: ["Advocaat = verdedigt de VERDACHTE. Leest niet de aanklacht voor — die is gericht tegen zijn cliënt.", null, "Rechter = LEIDT de zitting + spreekt vonnis. Aanklacht voorlezen is taak OvJ.", "Slachtoffer = mag wel verklaring afleggen, maar leest niet de officiële aanklacht voor."],
+      wrongHints: ["Advocaat = verdedigt de VERDACHTE. Leest niet de aanklacht voor — die is gericht tegen zijn cliënt.", null, "Rechter = LEIDT de zitting + spreekt het vonnis. Wie treedt in de rechtszaal op als aanklager namens de staat?", "Slachtoffer = mag wel verklaring afleggen, maar leest niet de officiële aanklacht voor."],
       explanation: "**Officier van justitie** (OvJ) is de aanklager namens de staat. Leest TENLASTELEGGING voor (= 'u wordt verdacht van...') aan begin van rechtszitting. Later in zitting volgt zijn REQUISITOIR met strafeis.",
       examenBron: BRON_LABEL(33),
       bronLink: BRON_LINK,

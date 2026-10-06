@@ -138,8 +138,8 @@ const steps = [
       ],
       answer: 2,
       wrongHints: [
-        "Te stellig — de tekst roept niet op tot een verbod zoals Frankrijk; in NL kan dat niet eens landelijk.",
-        "Te smal — dit is één detail (geen landelijk verbod mogelijk), niet de boodschap van de hele tekst.",
+        "Te stellig — de tekst roept niet op tot een verbod zoals in Frankrijk.",
+        "Klopt niet — de tekst zegt niet dat een landelijk verbod onmogelijk is (scholen mogen het nu zelf bepalen), en dit is niet de boodschap van de hele tekst.",
         null,
         "Te smal — ouders spelen een rol, maar de tekst legt het niet 'puur' bij hen; school en samenleving doen ook mee.",
       ],

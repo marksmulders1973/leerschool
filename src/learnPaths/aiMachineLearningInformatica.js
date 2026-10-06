@@ -81,7 +81,7 @@ const steps = [
         q: "Wat is het verschil tussen **machine learning** en klassiek programmeren?",
         options: ["Bij ML leert de computer regels uit data; bij klassiek schrijft de mens de regels", "Er is geen verschil", "ML gebruikt geen computer", "Klassiek programmeren leert uit data"],
         answer: 0,
-        wrongHints: [null, "Er is een wezenlijk verschil.", "ML draait juist op computers.", "Andersom: ML leert uit data, klassiek niet."],
+        wrongHints: [null, "Er is een wezenlijk verschil.", "ML draait juist op computers.", "Kijk wie bij klassiek programmeren de regels bedenkt."],
         uitlegPad: {
           stappen: [{ titel: "Regels schrijven vs leren", tekst: "Bij **klassiek programmeren** schrijft de **mens de regels**. Bij **machine learning** geef je veel **voorbeelden (data)** en **leert het systeem zelf de patronen/regels** eruit. Je programmeert het leerproces, niet de regels." }],
           niveaus: { basis: "ML leert uit data.", simpeler: "ML = leren uit voorbeelden", nogSimpeler: "A." },

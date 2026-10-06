@@ -103,8 +103,8 @@ const steps = [
       ],
       answer: 3,
       wrongHints: [
-        "Te smal + emotioneel — tekst gaat niet vooral over 'geschiedenis verliezen' maar over keuzes.",
-        "Te eenzijdig — tekst geeft GEEN opdracht ('er moeten maatregelen'), maar stelt VRAAG ('wat verdient bescherming?').",
+        "Te smal + emotioneel — draait de hele tekst echt om 'geschiedenis verliezen'?",
+        "Te eenzijdig — roept de tekst echt op tot maatregelen? Kijk hoe de slot-alinea eindigt.",
         "Te smal — Britse-vs-Nederlandse vergelijking is 1 detail, niet de kerngedachte.",
         null,
       ],
@@ -144,7 +144,7 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Advies = 'doe X'. Slot bevat een tip maar de KERN is een eindoordeel uit de onderzoeken.",
+        "Advies = 'doe X'. Er staat een tip in het slot, maar is dat de belangrijkste functie van de hele alinea?",
         null,
         "Samenvatting = ALLES kort herhalen. Slot trekt 1 conclusie, niet een lijstje.",
         "Toekomstverwachting = wat ER GAAT gebeuren. Slot zegt wat NU geldt.",
@@ -187,7 +187,7 @@ const steps = [
       wrongHints: [
         "Te vrij — niemand begint muziek MAKEN door deze advertentie. Het gaat om GELD geven.",
         null,
-        "Informeren = lezer iets LEREN. Hier wil de advertentie ACTIE: kijk op de site. = activeren, niet informeren.",
+        "Informeren = lezer iets LEREN. Is dat wat de advertentie vooral wil, of wil ze dat je iets DOET?",
         "Te smal — informeren over BESTAAN is geen activatie. De advertentie WIL dat je actie onderneemt.",
       ],
       explanation: "Advertentie = BIJNA ALTIJD activeren (oproep tot actie). Hier: 'Kijk op cultuurfonds.nl/nalaten of vraag onze brochure aan.' Concrete oproep.",
@@ -268,8 +268,8 @@ const steps = [
       ],
       answer: 3,
       wrongHints: [
-        "Te smal — Facebook-storing is alleen aanleiding (alinea 1). De tekst gaat verder over VERSLAVING.",
-        "Te smal — storing zelf is geen onderwerp van de hele tekst; verslaving wel.",
+        "Te smal — de Facebook-storing is alleen de aanleiding (alinea 1). Waar gaan de andere alinea's over?",
+        "Te smal — gaat de héle tekst over storingen, of waren die alleen het begin?",
         "Te smal — Instagram is 1 van de apps. Tekst noemt ook WhatsApp + Facebook.",
         null,
       ],

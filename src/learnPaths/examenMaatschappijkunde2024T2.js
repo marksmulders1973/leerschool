@@ -50,7 +50,7 @@ const steps = [
             { woord: "agendavorming", uitleg: "Hoe onderwerp op politieke agenda komt." },
           ],
           theorie: "Onthoud volgorde: agenderen → voorbereiden → bepalen → uitvoeren.",
-          voorbeelden: [{ type: "stap", tekst: "Klimaatwet 2019 in NL: protesten (agendavorming 2018-2019) → ministers schrijven wet → 2e Kamer stemt voor (beleidsbepaling) → uitvoering door provincies + bedrijven (beleidsuitvoering)." }],
+          voorbeelden: [{ type: "stap", tekst: "Klimaatwet 2019 in NL: klimaat in het nieuws + protesten (agendavorming) → Kamerleden van zeven partijen schrijven samen de wet → 2e Kamer stemt voor (beleidsbepaling) → uitvoering door provincies + bedrijven (beleidsuitvoering)." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Stemming = bepaling = fase 3." }],
           niveaus: {
             basis: "Fase 3 beleidsbepaling.",
@@ -99,7 +99,7 @@ const steps = [
             { woord: "amendement", uitleg: "Wijziging in bestaand wetsvoorstel." },
           ],
           theorie: "Onthoud: nieuw = initiatief. Wijzigen = amendement. Verzoek = motie. Geld = budget.",
-          voorbeelden: [{ type: "stap", tekst: "Initiatiefwet Pulsvisserij door PvdD (2014) = recht van initiatief gebruikt." }],
+          voorbeelden: [{ type: "stap", tekst: "Klimaatwet (2019): Kamerleden van zeven partijen dienden samen deze initiatiefwet in = recht van initiatief gebruikt." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Initiatief = INI = INitieert iets nieuws." }],
           niveaus: {
             basis: "Recht van initiatief.",
@@ -199,7 +199,7 @@ const steps = [
             { woord: "recidive", uitleg: "Opnieuw plegen van misdaad na vrijlating." },
           ],
           theorie: "**Doel-trio**: vergelding (kijk achteruit) + afschrikking (huidig) + resocialisatie (toekomst). Beveiliging soms apart genoemd.",
-          voorbeelden: [{ type: "stap", tekst: "Skandinavische gevangenissen leggen meer nadruk op resocialisatie (school, therapie) → lagere recidive." }],
+          voorbeelden: [{ type: "stap", tekst: "Scandinavische gevangenissen leggen meer nadruk op resocialisatie (school, therapie) → lagere recidive." }],
           basiskennis: [{ onderwerp: "Truc", uitleg: "RE-socialiseren = OPNIEUW deel maken van samenleving." }],
           niveaus: {
             basis: "Resocialisatie.",

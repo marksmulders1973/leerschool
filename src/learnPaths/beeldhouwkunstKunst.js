@@ -22,7 +22,7 @@ const steps = [
         q: "Wat is het kenmerkende verschil tussen beeldhouwkunst en schilderkunst?",
         options: ["Beeldhouwkunst is 3D (ruimtelijk), schilderkunst 2D (plat)", "Beeldhouwkunst gebruikt geen kleur", "Schilderkunst is altijd groter", "Er is geen verschil"],
         answer: 0,
-        wrongHints: [null, "Beelden kunnen wél kleur hebben (bv. beschilderd).", "Formaat is niet het onderscheid.", "Er is een duidelijk verschil: dimensies."],
+        wrongHints: [null, "Beelden kunnen wél kleur hebben (bv. beschilderd).", "Formaat is niet het onderscheid.", "Er is wel een verschil — denk aan hoe je elk kunstwerk bekijkt."],
         uitlegPad: {
           stappen: [{ titel: "Eromheen lopen", tekst: "**Beeldhouwkunst** is **driedimensionaal (3D)** — je kunt er **omheen** lopen. Een **schilderij** is tweedimensionaal (2D, plat). Daardoor spelen bij sculptuur massa, volume en standpunt een rol die een schilderij niet heeft." }],
           niveaus: { basis: "3D vs 2D.", simpeler: "Beeld = 3D", nogSimpeler: "A." },
@@ -42,7 +42,7 @@ const steps = [
         q: "Waarom speelt het **standpunt** een grote rol bij een vrijstaand beeld?",
         options: ["Het beeld verandert terwijl je eromheen loopt", "Beelden mag je niet bekijken", "Er is altijd maar één juiste kant", "Standpunt heeft geen invloed"],
         answer: 0,
-        wrongHints: [null, "Beelden zijn juist bedoeld om te bekijken.", "Juist niet één kant — daarom loop je eromheen.", "Het heeft veel invloed."],
+        wrongHints: [null, "Beelden zijn juist bedoeld om te bekijken.", "Is er bij een vrijstaand beeld echt maar één voorkant?", "Het heeft veel invloed."],
         uitlegPad: {
           stappen: [{ titel: "Geen 'voorkant'", tekst: "Bij een **vrijstaand beeld** is er niet één 'juiste' kant: het **verandert** terwijl je eromheen loopt. Daarom denkt een beeldhouwer in alle aanzichten tegelijk — en doet ook de **negatieve ruimte** (gaten, openingen) mee in het ontwerp." }],
           niveaus: { basis: "Verandert al lopend.", simpeler: "Eromheen = ander beeld", nogSimpeler: "A." },

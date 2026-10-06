@@ -134,7 +134,7 @@ const steps = [
   // ─── Stap 2: Arbeidsovereenkomst en regels ─────────────
   {
     title: "Arbeidsovereenkomst — wat staat erin?",
-    explanation: "Een **arbeidsovereenkomst** is het contract tussen werkgever en werknemer. Wettelijk verplichte items:\n\n**Persoonsgegevens**:\n• Naam + adres werkgever\n• Naam + adres werknemer\n• Geboortedatum\n\n**Werk**:\n• Functie en taken\n• Plek van werken (kantoor, thuis, beide)\n• Datum van indiensttreding\n• Onbepaalde of bepaalde tijd (en zo ja, hoe lang)\n\n**Tijd**:\n• Aantal uren per week\n• Werktijden\n• **Proeftijd** (max 1 maand bij contract &lt; 2 jr; max 2 maanden bij contract ≥ 2 jr)\n\n**Loon**:\n• Brutoloon per maand of uur\n• Wanneer betaald (meestal eind v/d maand)\n• Vakantiegeld + vakantiedagen\n• Extra's: bonus, 13e maand, reiskostenvergoeding\n\n**Rechten en verplichtingen**:\n• CAO van toepassing (zo ja, welke)\n• Pensioenregeling\n• Geheimhoudingsplicht\n• Concurrentiebeding (mag niet meteen bij concurrent werken na ontslag)\n• Opzegtermijn\n\n**Proeftijd**:\n• Eerste periode waarin beide partijen ZONDER reden mogen stoppen\n• Schriftelijk overeengekomen\n• Bij contract &lt; 6 mnd: GEEN proeftijd toegestaan\n\n**Beëindiging arbeidsovereenkomst**:\n• Zelf opzeggen (met opzegtermijn)\n• Werkgever ontslaat (heeft sterke reden + UWV/rechter nodig)\n• Met wederzijds goedvinden (vaststellingsovereenkomst, vaak met vergoeding)\n• Tijdelijk contract loopt af\n• Met pensioen gaan\n• Faillissement werkgever\n\n**Transitievergoeding**: bij ontslag (vanaf dag 1) heb je recht op een vergoeding — ongeveer 1/3 maandloon per jaar dienst.",
+    explanation: "Een **arbeidsovereenkomst** is het contract tussen werkgever en werknemer. Wettelijk verplichte items:\n\n**Persoonsgegevens**:\n• Naam + adres werkgever\n• Naam + adres werknemer\n• Geboortedatum\n\n**Werk**:\n• Functie en taken\n• Plek van werken (kantoor, thuis, beide)\n• Datum van indiensttreding\n• Onbepaalde of bepaalde tijd (en zo ja, hoe lang)\n\n**Tijd**:\n• Aantal uren per week\n• Werktijden\n• **Proeftijd** (max 1 maand bij contract < 2 jr; max 2 maanden bij contract ≥ 2 jr)\n\n**Loon**:\n• Brutoloon per maand of uur\n• Wanneer betaald (meestal eind v/d maand)\n• Vakantiegeld + vakantiedagen\n• Extra's: bonus, 13e maand, reiskostenvergoeding\n\n**Rechten en verplichtingen**:\n• CAO van toepassing (zo ja, welke)\n• Pensioenregeling\n• Geheimhoudingsplicht\n• Concurrentiebeding (mag niet meteen bij concurrent werken na ontslag)\n• Opzegtermijn\n\n**Proeftijd**:\n• Eerste periode waarin beide partijen ZONDER reden mogen stoppen\n• Schriftelijk overeengekomen\n• Bij contract van 6 mnd of korter: GEEN proeftijd toegestaan\n\n**Beëindiging arbeidsovereenkomst**:\n• Zelf opzeggen (met opzegtermijn)\n• Werkgever ontslaat (heeft sterke reden + UWV/rechter nodig)\n• Met wederzijds goedvinden (vaststellingsovereenkomst, vaak met vergoeding)\n• Tijdelijk contract loopt af\n• Met pensioen gaan\n• Faillissement werkgever\n\n**Transitievergoeding**: bij ontslag (vanaf dag 1) heb je recht op een vergoeding — ongeveer 1/3 maandloon per jaar dienst.",
     svg: `<svg viewBox="0 0 320 220">
 <text x="160" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">ARBEIDSOVEREENKOMST</text>
 <rect x="30" y="40" width="260" height="40" rx="6" fill="${COLORS.paper}" stroke="${COLORS.vraag}" stroke-width="1.2"/>
@@ -160,12 +160,12 @@ const steps = [
         answer: 0,
         wrongHints: [null, "2 mnd alleen bij ≥2 jaar.", "Veel te lang.", "Wel proeftijd toegestaan bij 1 jaar."],
         uitlegPad: {
-          stappen: [{ titel: "Proeftijd-tabel", tekst: "Contract < 6 mnd: GEEN proeftijd. 6 mnd-2 jr (incl 1 jaar): max 1 mnd. ≥ 2 jr of onbepaalde tijd: max 2 mnd. Schriftelijk vastleggen." }],
+          stappen: [{ titel: "Proeftijd-tabel", tekst: "Contract van 6 mnd of korter: GEEN proeftijd. Langer dan 6 mnd en korter dan 2 jr (incl 1 jaar): max 1 mnd. ≥ 2 jr of onbepaalde tijd: max 2 mnd. Schriftelijk vastleggen." }],
           woorden: [{ woord: "proeftijd", uitleg: "Periode waarin werkgever EN werknemer zonder reden mogen stoppen." }],
           theorie: "Doel: beide partijen kunnen kijken of het bevalt zonder vol contract-risico. Werkt wederzijds — ook werknemer mag zonder reden weg. Niet schriftelijk = geen proeftijd geldig.",
           voorbeelden: [{ type: "1 jaar contract", tekst: "Werkgever schrijft '1 mnd proeftijd' in contract → werknemer kan in eerste maand zonder reden weg, werkgever ook." }, { type: "3 mnd contract", tekst: "Geen proeftijd toegestaan! Te kort contract." }],
           basiskennis: [{ onderwerp: "Niet 2 mnd", uitleg: "2 maanden alleen bij contract ≥ 2 jaar. Bij 1 jaar = 1 maand max." }],
-          niveaus: { basis: "1 maand bij 1-jaar contract.", simpeler: "Contract van 6mnd-2jr → max 1 maand proeftijd.", nogSimpeler: "1 mnd" },
+          niveaus: { basis: "1 maand bij 1-jaar contract.", simpeler: "Contract langer dan 6 mnd en korter dan 2 jr → max 1 maand proeftijd.", nogSimpeler: "1 mnd" },
         },
       },
       {
@@ -415,7 +415,7 @@ const steps = [
           stappen: [{ titel: "Meer pensioen = minder werkers", tekst: "Vergrijzing = meer ouderen, meer mensen met pensioen. Wie de pensioenleeftijd bereikt, verlaat de werkende bevolking → aanbod van arbeid daalt → aanbodcurve schuift NAAR LINKS." }],
           woorden: [{ woord: "vergrijzing", uitleg: "Demografische trend: groter aandeel ouderen in samenleving. NL al jaren bezig." }, { woord: "verschuiving aanbodcurve", uitleg: "Hele curve schuift naar links (minder aanbod) of rechts (meer)." }],
           theorie: "Effect: bij elk loonniveau zijn er minder werkers beschikbaar. Lonen stijgen, krapte. Combineert met de andere trends: AOW-leeftijd omhoog, vraag naar zorg omhoog (juist door vergrijzing). Stress in arbeidsmarkt.",
-          voorbeelden: [{ type: "NL 2026", tekst: "Bijna 1 op 5 NL'ers is 65+. Pensioneren > nieuwe instromers → krimpende beroepsbevolking → krapte." }],
+          voorbeelden: [{ type: "NL 2026", tekst: "Ruim 1 op 5 NL'ers is 65+. Pensioneren > nieuwe instromers → krimpende beroepsbevolking → krapte." }],
           basiskennis: [{ onderwerp: "Niet 'meer'", uitleg: "Vergrijzing betekent MINDER aanbod, niet meer. Tegendeel van immigratie-effect." }],
           niveaus: { basis: "Naar links.", simpeler: "Meer mensen met pensioen → minder werkers beschikbaar → aanbodcurve naar links.", nogSimpeler: "Minder werkers" },
         },

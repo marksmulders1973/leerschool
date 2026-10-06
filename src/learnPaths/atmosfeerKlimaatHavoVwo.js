@@ -263,7 +263,7 @@ const steps = [
           "Woestijn"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Geen orkanen.", "Verkoeling-bron."],
+        wrongHints: [null, "Tegenovergesteld.", "Geen orkanen.", "Daar verdampt nauwelijks water — waar haalt een orkaan zijn energie vandaan?"],
         uitlegPad: {
           stappen: [
             { titel: "Latente warmte uit verdamping", tekst: "Warme oceaan: water verdampt → waterdamp omhoog → condenseert → geeft latente warmte vrij → drijft opwaartse luchtstroom → cyclonale spiraal. Daarom orkanen vooral tropisch eind zomer (warmste water). Verdwijnt boven land of koud water (geen energiebron meer)." },
@@ -287,7 +287,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — geen droge zomers.", "Niet — niet streng winter.", "Niet — wel >0 winter."],
         uitlegPad: {
-          stappen: [{ titel: "Mild + nat hele jaar", tekst: "Cfb: gematigd (C), zonder droog seizoen (f), warmste maand <22°C maar koudste >−3°C (b). NL klassieker — door zee-invloed mild jaarrond." }],
+          stappen: [{ titel: "Mild + nat hele jaar", tekst: "Cfb: gematigd (C), zonder droog seizoen (f), warmste maand <22°C en minstens 4 maanden >10°C (b). NL klassieker — door zee-invloed mild jaarrond." }],
           theorie: "Zonder Golfstroom: NL Df (continentaal, strenge winter zoals St-Petersburg).",
           niveaus: { basis: "Cfb.", simpeler: "Zee-klimaat: mild + nat.", nogSimpeler: "Cfb" },
         },
@@ -335,7 +335,7 @@ const steps = [
           "Hoogte boven 3000 m"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — constant.", "Niet — hoogte → klimaat-verandering."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet — constant.", "Niet — hoe hoger, hoe kouder."],
         uitlegPad: {
           stappen: [{ titel: "Af = altijd nat + warm", tekst: "Amazone, Congo, Borneo, Sumatra: bijna evenaar + constante warmte (~25°C) + 2000+ mm regen/jaar. Hoogste biodiversiteit + grootste netto-fotosynthese ter aarde." }],
           niveaus: { basis: "Warm + nat.", simpeler: "Altijd warm + regen.", nogSimpeler: "Warm/nat" },
@@ -372,7 +372,7 @@ const steps = [
         q: "**Belangrijkste broeikasgas** door menselijke activiteit:",
         options: ["CO₂ (uit fossiele brandstoffen)", "Waterdamp", "Ozon", "Stikstof"],
         answer: 0,
-        wrongHints: [null, "Waterdamp natuurlijk; CO₂ menselijk.", "Niet — ozon-laag herstelt.", "Niet — N₂ inert."],
+        wrongHints: [null, "Waterdamp is wel een broeikasgas, maar de hoeveelheid hangt af van de temperatuur — niet van wat de mens uitstoot.", "Niet — ozon-laag herstelt.", "Niet — N₂ inert."],
         uitlegPad: {
           stappen: [{ titel: "CO₂ + lange levensduur", tekst: "CO₂ blijft eeuwen in atmosfeer. CH₄ veel sterker maar afgebroken in ~12 j. CO₂ is de hoofd-driver van langetermijn opwarming. Pre-industrieel 280 ppm → 2024: 420 ppm." }],
           niveaus: { basis: "CO₂.", simpeler: "Koolstof-dioxide uit kolen + olie.", nogSimpeler: "CO₂" },
@@ -384,10 +384,10 @@ const steps = [
           "Mitigatie = oorzaak aanpakken; adaptatie = met gevolgen omgaan",
           "Beide hetzelfde",
           "Mitigatie = klein, adaptatie = groot",
-          "Tegenovergesteld"
+          "Mitigatie = dijken bouwen; adaptatie = CO₂ verminderen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — verschillende strategieën.", "Niet — schaal onafhankelijk.", "Tegenovergesteld is fout."],
+        wrongHints: [null, "Niet — verschillende strategieën.", "Niet — schaal onafhankelijk.", "Draai het eens om: welke aanpak pakt de oorzaak (de uitstoot) aan?"],
         uitlegPad: {
           stappen: [
             { titel: "Twee aanpakken", tekst: "**Mitigatie**: CO₂-uitstoot verminderen → klimaat-verandering beperken (zon/wind, EV, etc.).\n**Adaptatie**: zelfs met mitigatie blijft opwarming → samenleving aanpassen (hogere dijken, droogte-resistente gewassen, koeler bouwen).\nBeide nodig — niet of/of." },

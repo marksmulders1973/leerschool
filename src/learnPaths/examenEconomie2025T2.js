@@ -100,7 +100,7 @@ const steps = [
           stappen: [
             { titel: "Wanneer wil een werkgever loon verhogen?", tekst: "Als hij het kan BETALEN. Dat kan als de werknemer méér gaat opleveren — dus als de productiviteit stijgt." },
             { titel: "Wat is arbeidsproductiviteit?", tekst: "Hoeveel een werknemer per uur produceert. Als die stijgt = werkgever krijgt meer voor zelfde loon." },
-            { titel: "Verband loon-productiviteit", tekst: "Productiviteit ↑ MEER dan loon ↑ → werkgever houdt meer over → kan loon verhogen. Productiviteit ↓ minder → werkgever lijdt verlies." },
+            { titel: "Verband loon-productiviteit", tekst: "Productiviteit ↑ MEER dan loon ↑ → werkgever houdt meer over → kan loon verhogen. Stijgt de productiviteit MINDER dan het loon → werkgever houdt minder over (winst krimpt)." },
           ],
           woorden: [
             { woord: "arbeidsproductiviteit", uitleg: "Hoeveel een werknemer per tijdseenheid produceert. Bv. 100 stuks/uur." },
@@ -141,8 +141,8 @@ const steps = [
         answer: 3,
         wrongHints: [
           "Denivellering = verschillen GROTER worden — past niet bij hogere korting voor laag.",
-          "Inconsistent — verandering in voordeel lage inkomens = nivellering, niet denivellering.",
-          "Inconsistent — nivellering = inkomensverschillen kleiner, niet 'voordeel hoge inkomens'.",
+          "Worden de verschillen tussen hoge en lage inkomens groter of kleiner als de lage inkomens er het meest op vooruitgaan?",
+          "Wie krijgt hier de hoogste korting — en wie heeft daar dus het meeste voordeel van?",
           null,
         ],
         explanation: "**Nivellering** = inkomensverschillen worden KLEINER. **Denivellering** = inkomensverschillen worden GROTER. Een hogere korting voor lage inkomens = lage inkomens houden relatief meer over = verschil tussen arm en rijk wordt kleiner = NIVELLERING in voordeel van lage inkomens.",

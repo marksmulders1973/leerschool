@@ -69,7 +69,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Herverdelen via belasting", tekst: "Inkomensverdeling = overheid verkleint verschillen tussen arm en rijk. Methode: hoge inkomens belasten + lage inkomens steunen (toeslagen, uitkeringen)." }],
           woorden: [{ woord: "inkomensverdeling", uitleg: "Overheidstaak: ongelijkheid tussen arm en rijk verkleinen via belasting + uitkeringen." }, { woord: "progressieve belasting", uitleg: "Hoger inkomen → hoger %. Maakt netto-verschillen kleiner." }],
-          theorie: "NL is wereldwijd één van de meest gelijke landen (Gini ~0,28) DOOR sterke herverdeling: IB-schijven 37-49%, AOW, bijstand, zorgtoeslag, huurtoeslag.",
+          theorie: "NL is wereldwijd één van de meest gelijke landen (Gini ~0,28) DOOR sterke herverdeling: IB-schijven ~36-49,5%, AOW, bijstand, zorgtoeslag, huurtoeslag.",
           voorbeelden: [{ type: "praktijk", tekst: "Iemand met €100k brutosalaris betaalt veel IB → financiert AOW + toeslagen voor lager-betaalden." }],
           basiskennis: [{ onderwerp: "Niet 'loon verhogen'", uitleg: "Overheid bepaalt geen lonen (behalve minimumloon). Banen + spaargeld zijn ook geen overheidsverdeling." }],
           niveaus: { basis: "Belasting + toeslagen voor herverdelen.", simpeler: "Inkomensverdeling = overheid haalt belasting van rijken + helpt armen met toeslagen.", nogSimpeler: "Herverdelen" },
@@ -172,14 +172,14 @@ const steps = [
         q: "Wie verzorgt **jeugdzorg** (sinds 2015)?",
         options: ["De gemeente", "De Rijksoverheid", "De provincie", "Niemand"],
         answer: 0,
-        wrongHints: [null, "Was vroeger Rijk, sinds 2015 gedecentraliseerd.", "Provincie heeft andere taken.", "Wel verzorgd."],
+        wrongHints: [null, "Lag vroeger bij Rijk en provincie, sinds 2015 gedecentraliseerd.", "Provincie heeft andere taken.", "Wel verzorgd."],
         uitlegPad: {
-          stappen: [{ titel: "Decentralisatie 2015", tekst: "In 2015 ging jeugdzorg van Rijk → gemeente. Idee: gemeente is dichter bij gezinnen, kan beter maatwerk leveren. Praktijk: gemeenten kregen minder geld dan nodig." }],
+          stappen: [{ titel: "Decentralisatie 2015", tekst: "In 2015 ging jeugdzorg van Rijk en provincie → gemeente. Idee: gemeente is dichter bij gezinnen, kan beter maatwerk leveren. Praktijk: gemeenten kregen minder geld dan nodig." }],
           woorden: [{ woord: "jeugdzorg", uitleg: "Hulp aan jongeren + gezinnen met problemen: gedragsproblemen, opvoedhulp, soms uithuisplaatsing." }, { woord: "decentralisatie", uitleg: "Taken van Rijk overdragen naar lagere overheid (provincie/gemeente)." }],
           theorie: "Drie grote decentralisaties van 2015: jeugdzorg, WMO (zorg voor ouderen/zieken), Participatiewet (bijstand). Bedoeling: efficiëntie + maatwerk. Werkelijkheid: gemeenten financieel in problemen.",
           voorbeelden: [{ type: "praktijk", tekst: "Gezin met probleemkind belt gemeente → consulent komt → toewijzing hulp via lokaal jeugdzorg-team." }],
-          basiskennis: [{ onderwerp: "Sinds 2015 lokaal", uitleg: "Voor 2015 was jeugdzorg landelijk. Nu lokaal — gevolg: 340 verschillende systemen in NL." }],
-          niveaus: { basis: "Gemeente sinds 2015.", simpeler: "Sinds 2015 doet de gemeente jeugdzorg, niet meer het Rijk.", nogSimpeler: "Gemeente" },
+          basiskennis: [{ onderwerp: "Sinds 2015 lokaal", uitleg: "Voor 2015 lag jeugdzorg bij Rijk en provincie. Nu lokaal — gevolg: 340 verschillende systemen in NL." }],
+          niveaus: { basis: "Gemeente sinds 2015.", simpeler: "Sinds 2015 doet de gemeente jeugdzorg, niet meer Rijk en provincie.", nogSimpeler: "Gemeente" },
         },
       },
       {
@@ -399,7 +399,7 @@ const steps = [
       },
       {
         q: "Wat is een **staatsobligatie**?",
-        options: ["Lening-papiertje van de staat aan investeerder, met rente", "Een staatsbedrijf", "Belasting op staatsbezit", "Subsidie aan investeerders"],
+        options: ["Lening-papiertje: investeerder leent de staat geld, met rente", "Een staatsbedrijf", "Belasting op staatsbezit", "Subsidie aan investeerders"],
         answer: 0,
         wrongHints: [null, "Niet een bedrijf.", "Geen belasting.", "Tegendeel — investeerder krijgt rente."],
         uitlegPad: {

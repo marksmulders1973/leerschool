@@ -72,7 +72,7 @@ const steps = [
         q: "Bij welke groep ben je **privé aansprakelijk** voor de schulden?",
         options: ["Eenmanszaak en VOF (geen rechtspersoon)", "BV en NV (rechtspersoon)", "Alleen de NV", "Bij geen enkele rechtsvorm"],
         answer: 0,
-        wrongHints: [null, "Bij een rechtspersoon ben je juist beperkt aansprakelijk.", "De NV beschermt je privé-vermogen juist.", "Bij eenmanszaak en VOF loop je wél privé risico."],
+        wrongHints: [null, "Bij een rechtspersoon ben je juist beperkt aansprakelijk.", "De NV beschermt je privé-vermogen juist.", "Er zijn wél rechtsvormen waarbij je privé risico loopt."],
         uitlegPad: {
           stappen: [{ titel: "Geen rechtspersoon = privé risico", tekst: "Bij een eenmanszaak en VOF ben jij juridisch hetzelfde als het bedrijf. Schuldeisers kunnen daarom aan je privé-vermogen komen." }],
           woorden: [{ woord: "privé aansprakelijk", uitleg: "Met je eigen huis, auto en spaargeld verantwoordelijk voor de bedrijfsschulden." }, { woord: "rechtspersoon", uitleg: "Een bedrijf dat juridisch los staat van de eigenaar (BV, NV). Beschermt je privé-vermogen." }],
@@ -330,7 +330,7 @@ const steps = [
         q: "Welke twee rechtsvormen zijn een **rechtspersoon** met beperkte aansprakelijkheid?",
         options: ["BV en NV", "Eenmanszaak en VOF", "Eenmanszaak en BV", "VOF en NV"],
         answer: 0,
-        wrongHints: [null, "Eenmanszaak en VOF zijn juist géén rechtspersoon.", "De eenmanszaak is geen rechtspersoon.", "De VOF is geen rechtspersoon."],
+        wrongHints: [null, "Staat bij deze vormen het bedrijf juridisch los van de eigenaar?", "De eenmanszaak is geen rechtspersoon.", "De VOF is geen rechtspersoon."],
         uitlegPad: {
           stappen: [{ titel: "De rechtspersonen", tekst: "Alleen de BV en de NV zijn een rechtspersoon. Daardoor zijn de eigenaren beperkt aansprakelijk — ze verliezen alleen hun inleg." }],
           woorden: [{ woord: "rechtspersoon", uitleg: "Bedrijf dat juridisch los staat van de eigenaar: BV en NV." }, { woord: "beperkte aansprakelijkheid", uitleg: "Je verliest alleen je inleg, niet je privé-vermogen." }],

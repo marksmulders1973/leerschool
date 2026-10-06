@@ -72,13 +72,13 @@ const steps = [
       {
         q: "**Stoïcisme** leert:",
         options: [
-          "Aanvaard wat je niet kunt veranderen; controle wat je WEL kunt",
+          "Aanvaard wat je niet kunt veranderen; beheers wat je WEL kunt",
           "Vermijd alle gevoelens",
-          "Voorname leven",
+          "Zoek zoveel mogelijk genot",
           "Materialisme"
         ],
         answer: 0,
-        wrongHints: [null, "Niet vermijden — beheersen.", "Niet specifiek.", "Tegenovergesteld."],
+        wrongHints: [null, "Niet vermijden — beheersen.", "Niet — dat lijkt meer op hedonisme.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
             { titel: "Stoa-school Athene", tekst: "Marcus Aurelius (Romeinse keizer): 'Meditaties' — dagboek met stoïsche reflecties. Epictetus: 'Wat in onze macht ligt: oordeel, neiging. Buiten onze macht: lichaam, bezit, reputatie.' Vandaag heropleving als 'modern stoicism' + self-help (Tim Ferriss e.a.)." },
@@ -213,7 +213,7 @@ const steps = [
           "Maximaliseer plezier"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — Kant seculier.", "Niet — utilitarisme."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet — Kant baseert de plicht op de rede, niet op geloof.", "Niet — utilitarisme."],
         uitlegPad: {
           stappen: [
             { titel: "Universaliseren", tekst: "Voorbeeld liegen: als IEDEREEN zou liegen, werkt taal niet → tegenstrijdig → liegen verboden. Niet liegen omdat je gepakt wordt, maar omdat het logisch onmogelijk algemeen kan worden. Strenge plichtethiek." },
@@ -451,15 +451,15 @@ const steps = [
         },
       },
       {
-        q: "**Vier hoofdwaarden** westerse ethiek:",
+        q: "Welk rijtje wordt vaak genoemd als **hoofdwaarden** van de westerse ethiek?",
         options: [
           "Vrijheid, gelijkheid, solidariteit, verantwoordelijkheid",
           "Macht, geld, rust, plezier",
           "God, koning, vaderland",
-          "Geen vaste set"
+          "Eer, gehoorzaamheid, traditie, orde"
         ],
         answer: 0,
-        wrongHints: [null, "Niet ethisch.", "Tegenovergesteld Verlichting.", "Wel set."],
+        wrongHints: [null, "Niet ethisch.", "Tegenovergesteld Verlichting.", "Dat past eerder bij de oude standensamenleving."],
         uitlegPad: {
           stappen: [
             { titel: "Frankrijk-trio uitgebreid", tekst: "Franse Revolutie: 'Liberté, égalité, fraternité' (vrijheid, gelijkheid, broederschap = solidariteit). Plus moderne toevoeging 'verantwoordelijkheid'. Politiek liberaal: focus op vrijheid. Sociaal-democratisch: gelijkheid. Conservatief: verantwoordelijkheid. Communautair: solidariteit. Geen recept maar balans." },

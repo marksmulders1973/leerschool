@@ -164,9 +164,9 @@ const steps = [
     checks: [
       {
         q: "Wat is een **algoritme** op social media?",
-        options: ["Programma dat kiest wat jij ziet", "Mens die beslist", "Toeval", "App zelf"],
+        options: ["Programma dat kiest wat jij ziet", "Mens die beslist", "Toeval", "Volgorde waarin posts geplaatst zijn"],
         answer: 0,
-        wrongHints: [null, "Geen mens primair.", "Bewust gekozen.", "App + algoritme."],
+        wrongHints: [null, "Geen mens primair.", "Bewust gekozen.", "Dan zag je alles op tijd — maar je feed wordt juist voor je uitgekozen."],
       },
       {
         q: "Wat is een **filterbubbel**?",
@@ -226,9 +226,9 @@ const steps = [
     checks: [
       {
         q: "Wat doe je bij **cyberpesten**?",
-        options: ["Niet reageren, bewijs bewaren, melden", "Terug pesten", "Negeren en alleen blijven", "Wachtwoord delen"],
+        options: ["Niet reageren, bewijs bewaren, melden", "Terug pesten", "Je account meteen verwijderen", "Wachtwoord delen"],
         answer: 0,
-        wrongHints: [null, "Werkt averechts.", "Praat met iemand.", "Gevaarlijk."],
+        wrongHints: [null, "Werkt averechts.", "Dan raak je ook je bewijs kwijt — en stopt de pester er niet door.", "Gevaarlijk."],
       },
       {
         q: "**Kindertelefoon**-nummer?",

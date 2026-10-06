@@ -135,7 +135,7 @@ const steps = [
         q: "Hoeveel % NL-Joden werd vermoord in Holocaust?",
         options: ["~75%","~10%","~25%","~95%"],
         answer: 0,
-        wrongHints: [null, "Veel te laag.", "Veel te laag.", "Niet helemaal — nog hoger."],
+        wrongHints: [null, "Veel te laag.", "Veel te laag.", "Te hoog — maar het was wel het hoogste percentage van West-Europa."],
         uitlegPad: {
           stappen: [{ titel: "Tragisch hoog %", tekst: "Van ~140.000 NL-Joden werden **~104.000 vermoord (~75%)**. **Hoogste percentage West-Europa**. Redenen: efficiënte NL-administratie (registratie 1941), goede coöperatie politie, geografisch weinig ontsnappingsmogelijkheden, weinig verzet eerst. Anne Frank een van velen." }],
           theorie: "Vergelijking: België 40%, Frankrijk 25%, Denemarken 1% (door succesvolle redding-actie). Toets-favoriet: 'leg uit waarom % NL hoger dan BE/DK'.",
@@ -155,7 +155,7 @@ const steps = [
         q: "Wat is de **'IJzeren Gordijn'** (Churchill 1946)?",
         options: ["Symbolische scheiding tussen West + Oost-Europa","Echte muur Berlijn","Wapen","Beleid"],
         answer: 0,
-        wrongHints: [null, "Specifiek — IJG is bredere term.", "Niet relevant.", "Geen beleid, maar beeldspraak."],
+        wrongHints: [null, "Specifiek — IJG is bredere term.", "Niet relevant.", "Geen beleid — Churchill beschreef iets anders."],
         uitlegPad: {
           stappen: [{ titel: "Fulton-rede 1946", tekst: "**Winston Churchill** in Fulton, Missouri (5 maart 1946): 'From Stettin in the Baltic to Trieste in the Adriatic, an iron curtain has descended across the continent.' Beschreef ideologische scheiding tussen door USSR gedomineerd Oost-Europa + vrije West-Europa. **Berlijnse Muur 1961** later fysieke manifestatie." }],
           niveaus: { basis: "Symbolische scheiding.", simpeler: "IJG = Oost-West scheiding", nogSimpeler: "Grens Oost-West" },
@@ -244,7 +244,7 @@ const steps = [
         q: "**Srebrenica 1995** is NL-trauma omdat:",
         options: ["NL Dutchbat-troepen konden 8.372 moslims niet beschermen tegen Servische troepen","NL was schuldig","NL won","Geen NL betrokken"],
         answer: 0,
-        wrongHints: [null, "Niet — geen actieve dader.", "Niet relevant.", "Wel — Dutchbat."],
+        wrongHints: [null, "Niet — geen actieve dader.", "Niet relevant.", "Wel — er waren wel Nederlanders bij betrokken."],
         uitlegPad: {
           stappen: [{ titel: "Falen 'safe area'", tekst: "**Srebrenica juli 1995**: Bosnische enclave was 'VN safe area' onder bescherming van **Nederlands bataljon (Dutchbat)** (~600 lichtbewapend). Servische troepen onder generaal **Mladić** drongen door, Dutchbat kon niet stoppen → **8.372 moslim-mannen + jongens vermoord** in dagen. Grootste massamoord Europa na WO2. NIOD-rapport 2002 → kabinet-Kok treedt af. Mladić in 2017 levenslang ICTY. Trauma + schaamte NL." }],
           theorie: "Toets-favoriet: 'leg uit waarom Srebrenica NL-trauma'. Antwoord: NL faalde mensen te beschermen, hoewel mandaat te zwak was.",

@@ -101,7 +101,7 @@ const steps = [
         q: "Waarom splits je gegevens op in meerdere gekoppelde tabellen?",
         options: ["Om dubbele gegevens (redundantie) te voorkomen", "Om de database trager te maken", "Omdat één tabel niet mag", "Om meer wachtwoorden te hebben"],
         answer: 0,
-        wrongHints: [null, "Het maakt het juist beter, niet trager.", "Eén tabel mag prima — opsplitsen is een keuze tegen dubbele data.", "Wachtwoorden hebben er niets mee te maken."],
+        wrongHints: [null, "Het maakt het juist beter, niet trager.", "Eén tabel mag prima — opsplitsen is een bewuste keuze. Welk probleem los je ermee op?", "Wachtwoorden hebben er niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "Eén keer opschrijven", tekst: "Door op te splitsen (normaliseren) schrijf je elk gegeven **maar één keer** op (de naam 'Sara' staat alleen in Leerlingen). Verandert er iets? Eén plek aanpassen. Dat voorkomt **dubbele gegevens** en fouten." }],
           niveaus: { basis: "Geen dubbele data.", simpeler: "Opsplitsen = geen dubbel", nogSimpeler: "A." },
@@ -121,7 +121,7 @@ const steps = [
         q: "Twee leerlingen heten allebei 'Sara'. Hoe houdt de database ze uit elkaar?",
         options: ["Via hun unieke primaire sleutel (id)", "Dat kan de database niet", "Via de kleur van de rij", "Via hun wachtwoord"],
         answer: 0,
-        wrongHints: [null, "Juist hiervoor bestaat de primaire sleutel.", "Rijen hebben geen kleur als kenmerk.", "Een wachtwoord is geen record-identificatie."],
+        wrongHints: [null, "Dat kan wél — denk aan het veld dat in elke tabel voor ieder record anders is.", "Rijen hebben geen kleur als kenmerk.", "Een wachtwoord is geen record-identificatie."],
         uitlegPad: {
           stappen: [{ titel: "Dezelfde naam, ander id", tekst: "Namen kunnen dubbel voorkomen, maar de **primaire sleutel (id)** is **uniek**. Sara #1 en Sara #2 hebben een verschillend id, dus de database (en foreign keys) verwijzen altijd naar precies de juiste leerling." }],
           niveaus: { basis: "Uniek id.", simpeler: "Id houdt ze uit elkaar", nogSimpeler: "A." },
@@ -209,7 +209,7 @@ const steps = [
         q: "Waarom is bij **UPDATE** en **DELETE** een **WHERE** zo belangrijk?",
         options: ["Zonder WHERE pas je álle records aan / wis je alles", "Anders werkt de query niet", "Het maakt de query mooier", "WHERE versnelt de database"],
         answer: 0,
-        wrongHints: [null, "De query werkt juist wél — op álles, en dat is het gevaar.", "Het gaat om veiligheid, niet om uiterlijk.", "Snelheid is hier niet het punt."],
+        wrongHints: [null, "De query werkt zonder WHERE gewoon — maar op welke records dan?", "Het gaat om veiligheid, niet om uiterlijk.", "Snelheid is hier niet het punt."],
         uitlegPad: {
           stappen: [{ titel: "Geen WHERE = alles", tekst: "**WHERE** bepaalt wélke records geraakt worden. Vergeet je 'm bij UPDATE of DELETE, dan wordt **élk** record aangepast of gewist. `DELETE FROM Leerlingen;` = alle leerlingen weg. Daarom altijd eerst de WHERE controleren." }],
           niveaus: { basis: "Anders raak je alles.", simpeler: "Zonder WHERE = alles", nogSimpeler: "A." },

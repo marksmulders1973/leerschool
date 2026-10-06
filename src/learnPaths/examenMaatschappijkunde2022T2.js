@@ -157,7 +157,7 @@ const steps = [
         "de hoofdstraffen en de maatregelen",
       ],
       answer: 0,
-      wrongHints: [null, "Maatregel = bv. TBS, schadevergoeding, onttrekking. Rijontzegging is GEEN maatregel — wel een bijkomende straf.", "Gevangenisstraf is GEEN maatregel — wel een hoofdstraf. Rijontzegging is GEEN maatregel — wel een bijkomende straf."],
+      wrongHints: [null, "Een maatregel (bv. TBS) is bedoeld voor bescherming of herstel. Is 3 maanden cel zo'n maatregel?", "Een maatregel (bv. TBS) is bedoeld voor bescherming of herstel. Is een rijontzegging een maatregel, of een extra straf?"],
       explanation: "**3 categorieën sancties**: 1) HOOFDSTRAFFEN (gevangenisstraf / hechtenis / taakstraf / geldboete), 2) BIJKOMENDE STRAFFEN (ontzegging rijbevoegdheid / ontzetting uit ambt / verbeurdverklaring), 3) MAATREGELEN (TBS / schadevergoeding / onttrekking aan het verkeer). Gevangenisstraf = hoofdstraf, rijontzegging = bijkomend.",
       examenBron: BRON_LABEL(26),
       bronLink: BRON_LINK,
@@ -228,7 +228,7 @@ const steps = [
         { id: "nederlandse-staat-maatschappijleer", title: "Nederlandse staat", niveau: "VMBO-GT eindexamen", why: "slachtoffer-rechten — kern" },
       ],
       uitlegPad: compact(
-        "Slachtoffer-rechten in NL: 1) SPREEKRECHT op de zitting (sinds 2005, verbreed 2016 naar familie), 2) SCHADEVERGOEDING via voeging als benadeelde partij, 3) INZAGE in dossier (beperkt), 4) BEGELEIDING door Slachtofferhulp Nederland. NIET: straf bepalen of rechter kiezen.",
+        "Slachtoffer-rechten in NL: 1) SPREEKRECHT op de zitting (sinds 2005; in 2016 verbreed: je mag nu over alles spreken, ook over de straf), 2) SCHADEVERGOEDING via voeging als benadeelde partij, 3) INZAGE in dossier (beperkt), 4) BEGELEIDING door Slachtofferhulp Nederland. NIET: straf bepalen of rechter kiezen.",
         { basis: "Slachtoffer-recht = spreken op zitting.", simpeler: "Slachtoffer mag aan rechter vertellen wat de dader hem heeft aangedaan.", nogSimpeler: "Spreken" },
         [{ woord: "spreekrecht", uitleg: "Recht slachtoffer/nabestaande om op rechtszitting te spreken." }, { woord: "Slachtofferhulp NL", uitleg: "Organisatie die slachtoffers begeleidt." }],
       ),

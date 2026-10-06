@@ -30,7 +30,7 @@ const steps = [
       "**Verlichting** (~1690-1789, Frans *Siècle des Lumières*, Engels *Enlightenment*) = intellectuele beweging die **rede + wetenschap** boven traditie + geloof zette.\n\n**Kernideeën**:\n• **Rede** (raison) als hoogste autoriteit — niet kerk of koning.\n• **Wetenschappelijke methode** als kennismodel (Newton-fysica, observatie + experimenteren).\n• **Vooruitgangsgeloof**: maatschappij + mens kunnen verbeterd worden via kennis.\n• **Tolerantie** in religie + denken.\n• **Universele mensenrechten** (vroege vorm).\n• **Onderwijs voor allen** (theoretisch).\n• Scheiding **kerk en staat**.\n\n**Voorlopers (17e eeuw)**:\n• **Descartes**: methodische twijfel + denken.\n• **Spinoza** (Amsterdam): God = natuur, kritiek bijbel.\n• **John Locke**: empirisme + natuurrechten.\n• **Isaac Newton**: wetten universum berekenbaar.\n• Wetenschappelijke revolutie 1600-1700.\n\n**Hoofdfiguren Verlichting**:\n\n**Voltaire** (1694-1778, Frankrijk):\n• Felle criticus kerk + onderdrukking.\n• 'Écrasez l'infâme' (verpletter de schande, doelend op kerk).\n• Verdediger tolerantie + meningsuiting.\n• Roman *Candide* (1759).\n\n**Montesquieu** (1689-1755, Frankrijk):\n• *De l'esprit des lois* (1748).\n• **Trias politica**: scheiding der machten (wetgevend, uitvoerend, rechterlijk).\n• Inspireerde Amerikaanse + Franse grondwetten.\n\n**Jean-Jacques Rousseau** (1712-1778, Genève/Frankrijk):\n• *Du contrat social* (1762).\n• 'De mens is vrij geboren, maar overal in ketenen.'\n• **Volonté générale** (algemene wil).\n• Inspirator Franse Revolutie + romantiek.\n\n**Diderot** (1713-1784):\n• *Encyclopédie* (1751-1772): 28 delen, 70.000 artikelen door 140 auteurs.\n• Doel: alle menselijke kennis verzamelen + toegankelijk maken.\n• Gecensureerd door kerk + koning.\n\n**Immanuel Kant** (1724-1804, Pruisen):\n• *Was ist Aufklärung?* (1784): 'Verlichting is de uitgang van de mens uit zijn zelfveroorzaakte onmondigheid.'\n• **Sapere aude** = 'Durf te denken!'.\n\n**Adam Smith** (1723-1790, Schotland):\n• *Wealth of Nations* (1776).\n• Vrije markt + onzichtbare hand → algemene welvaart.\n• Klassiek liberalisme + economie.\n\n**Cesare Beccaria** (1738-1794, Italië):\n• *Dei delitti e delle pene* (1764).\n• Pleidooi tegen marteling + doodstraf.\n• Strafrecht moet preventief + proportioneel.\n\n**Mary Wollstonecraft** (1759-1797, Engeland):\n• *A Vindication of the Rights of Woman* (1792).\n• Vroege feministische tekst — vrouwen verdienen onderwijs + rechten.\n• Moeder van Mary Shelley (auteur *Frankenstein*).\n\n**Verspreiding ideeën**:\n• **Salons** (Parijs): bijeenkomsten van denkers + adel + burgerij.\n• **Koffiehuizen** (Londen, Amsterdam, Wenen).\n• **Genootschappen** + academies (Royal Society Londen 1660, Académie française 1635).\n• **Pamfletten + tijdschriften**: lage drukkosten + alfabetisering.\n• **Vrijmetselaars-loges**: verlichtings-idealen praktijk.\n\n**'Verlicht despotisme'** (1750-1800):\n• Sommige monarchen omhelsden Verlichting maar bleven absolute heersers.\n• Voorbeelden:\n  - **Frederik II 'De Grote'** (Pruisen): tolerantie, hervormingen, maar absolute macht.\n  - **Jozef II** (Habsburg): opheffing lijfeigenschap, religieuze tolerantie.\n  - **Catharina II 'De Grote'** (Rusland): briefcontact met Voltaire + Diderot, maar tirannieke regeerder.\n• Verschil met echte democratie: top-down, niet vanuit volk.\n\n**Tegenstanders Verlichting**:\n• Katholieke Kerk (kritiek op kerk + bijbel).\n• Absolute monarchen (kritiek op macht).\n• Conservatieve filosofen later: **Edmund Burke** (*Reflections on the Revolution in France*, 1790) — voorzichtigheid + traditie boven radicale rede.\n\n**Erfenis Verlichting**:\n• Moderne mensenrechten, democratie, scheiding kerk-staat.\n• Wetenschap-cultuur (universiteit, peer review).\n• Onderwijs voor allen (formeel).\n• Tolerantie + multiculturalisme.\n• **Kritiek**: Verlichting was vooral westers + mannelijk + bezittend. Slavernij + kolonialisme bleven vaak buiten beeld. Postkoloniale kritiek 20e eeuw.",
     checks: [
       {
-        q: "Welke Verlichter formuleerde **'Sapere aude' (Durf te denken)**?",
+        q: "Welke Verlichter maakte **'Sapere aude' (Durf te denken)** tot motto van de Verlichting?",
         options: ["Kant","Voltaire","Rousseau","Locke"],
         answer: 0,
         wrongHints: [null, "Niet — andere bijdragen.", "Niet — *volonté générale*.", "Eerder, empirisme."],
@@ -164,7 +164,7 @@ const steps = [
         q: "Hoeveel **standen** in ancien régime?",
         options: ["Drie","Twee","Vier","Acht"],
         answer: 0,
-        wrongHints: [null, "Te weinig.", "Niet — drie.", "Te veel."],
+        wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."],
         uitlegPad: {
           stappen: [{ titel: "Drie standen", tekst: "Ancien régime: **drie standen**.\n• 1e stand: geestelijkheid (~1%).\n• 2e stand: adel (~2%, privileges).\n• 3e stand: rest (~97%): burgerij, boeren, arbeiders.\n\n3e stand droeg belasting, 1e + 2e niet. Onrechtvaardig gevonden — een van oorzaken Revolutie." }],
           niveaus: { basis: "3.", simpeler: "3 standen", nogSimpeler: "3" },
@@ -176,7 +176,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — kwam later.", "Niet — was zelf slachtoffer.", "Niet — zelf onthoofd."],
         uitlegPad: {
-          stappen: [{ titel: "Idealist + dictator", tekst: "**Maximilien Robespierre** leidde het Comité van Openbaar Welzijn 1793-94. **Schrikbewind**: duizenden geëxecuteerd om revolutie te beschermen. Idealist + extreem. Zelf onthoofd op 28 juli 1794 (9 Thermidor) — einde Terreur." }],
+          stappen: [{ titel: "Idealist + dictator", tekst: "**Maximilien Robespierre** leidde het Comité van Openbaar Welzijn 1793-94. **Schrikbewind**: duizenden geëxecuteerd om revolutie te beschermen. Idealist + extreem. Zelf onthoofd op 28 juli 1794 (10 Thermidor) — einde Terreur." }],
           niveaus: { basis: "Robespierre.", simpeler: "Terreur = Robespierre", nogSimpeler: "Robespierre." },
         },
       },
@@ -253,9 +253,9 @@ const steps = [
       },
       {
         q: "Wat besliste **Congres van Wenen 1814-15** voor NL?",
-        options: ["Verenigd Koninkrijk der Nederlanden (NL+BE)","Onafhankelijkheid","Bij Frankrijk","Republiek Holland"],
+        options: ["Verenigd Koninkrijk der Nederlanden (NL+BE)","Ingelijfd bij Pruisen","Bij Frankrijk","Republiek Holland"],
         answer: 0,
-        wrongHints: [null, "Niet — wel onafhankelijk maar samen met BE.", "Niet — Napoleon-tijdperk afgelopen.", "Niet — koninkrijk."],
+        wrongHints: [null, "Niet — Pruisen kreeg wel gebied in het Rijnland, maar Nederland niet.", "Niet — Napoleon-tijdperk afgelopen.", "Niet — de tijd van de Republiek kwam niet terug."],
         uitlegPad: {
           stappen: [{ titel: "Buffer tegen FR", tekst: "**Congres van Wenen**: NL + BE samengevoegd tot **Verenigd Koninkrijk der Nederlanden** onder koning **Willem I** (1815). Bedoeld als sterke buffer tegen Frankrijk. Hield maar tot 1830 — **Belgische Revolutie** maakt België onafhankelijk." }],
           theorie: "Toets-patroon: Willem I bestuurde met Napoleontische bestuursmodellen. Belgen vonden hem te calvinistisch + autoritair.",

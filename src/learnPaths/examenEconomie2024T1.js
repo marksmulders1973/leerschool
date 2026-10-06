@@ -52,9 +52,9 @@ const steps = [
         answer: 2,
         wrongHints: [
           "Niet elk EU-land gebruikt de euro. Zweden hoort er niet bij — denk waarom.",
-          "Een land heeft maar één wettig betaalmiddel.",
+          "Kun je in een Zweedse winkel wettig met euro's betalen? Welke munt gebruikt Zweden?",
           null,
-          "Zweden gebruikt geen euro — alleen de kroon is wettig betaalmiddel.",
+          "Is de euro in Zweden eigenlijk wel een wettig betaalmiddel?",
         ],
         explanation: "Zweden is wel lid van de EU, maar NIET van de eurozone (EMU). Het land betaalt met de Zweedse kroon (SEK). Andere EU-landen zonder euro zijn bv. Denemarken, Polen, Tsjechië en Hongarije.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 2",
@@ -69,15 +69,15 @@ const steps = [
             { titel: "EU ≠ EMU", tekst: "Niet elk EU-land heeft de euro. EU-lidmaatschap betekent vrij verkeer; EMU = eurozone (gemeenschappelijke munt)." },
             { titel: "Welke landen hebben euro?", tekst: "20 van de 27 EU-landen (2024; sinds 2026 21 met Bulgarije), o.a. NL, BE, DE, FR, ES, IT, AT, IE, PT, GR." },
             { titel: "Welke EU-landen hebben GEEN euro?", tekst: "Denemarken, Zweden, Polen, Tsjechië, Hongarije, Roemenië (en tot 2026 ook Bulgarije). Zweden hoort daarbij — gebruikt de kroon." },
-            { titel: "Wettig betaalmiddel", tekst: "Een land heeft maar 1 wettig betaalmiddel. In Zweden = de kroon. Niet samen met de euro." },
+            { titel: "Wettig betaalmiddel", tekst: "In Zweden is alleen de kroon wettig betaalmiddel. De euro is daar geen officieel geld." },
           ],
           woorden: [
             { woord: "EU", uitleg: "Europese Unie — politieke + economische samenwerking van 27 landen. Vrij verkeer van personen, goederen, diensten, kapitaal." },
             { woord: "EMU", uitleg: "Economische en Monetaire Unie — de groep EU-landen die de euro gebruiken (20 in 2024)." },
-            { woord: "wettig betaalmiddel", uitleg: "Geld dat verkopers verplicht moeten accepteren als betaling. Per land 1 valuta." },
+            { woord: "wettig betaalmiddel", uitleg: "Geld dat verkopers verplicht moeten accepteren als betaling. Meestal de eigen munt van het land." },
             { woord: "Zweedse kroon", uitleg: "Munteenheid van Zweden, afkorting SEK. ~€0,09 per kroon (2024)." },
           ],
-          theorie: "**EU vs EMU:**\n\n• **EU** = politiek-economische unie, 27 landen\n• **EMU** = monetair pact, 20 landen met euro\n\n**Voorwaarden om bij EMU te horen:**\n• Lage inflatie (~max 1,5% boven EU-gemiddelde)\n• Begrotingstekort < 3% BBP\n• Staatsschuld < 60% BBP\n• Stabiele wisselkoers tegen euro (2 jr lid van ERM-II)\n\nZweden voldoet aan de meeste criteria, maar koos er BEWUST voor om de kroon te houden (referendum 2003) en doet daarom niet mee aan ERM-II.",
+          theorie: "**EU vs EMU:**\n\n• **EU** = politiek-economische unie, 27 landen\n• **EMU** = monetair pact, 20 landen met euro\n\n**Voorwaarden om bij EMU te horen:**\n• Lage inflatie (max 1,5%-punt boven het gemiddelde van de 3 EU-landen met de laagste inflatie)\n• Begrotingstekort < 3% BBP\n• Staatsschuld < 60% BBP\n• Stabiele wisselkoers tegen euro (2 jr lid van ERM-II)\n\nZweden voldoet aan de meeste criteria, maar koos er BEWUST voor om de kroon te houden (referendum 2003) en doet daarom niet mee aan ERM-II.",
           voorbeelden: [
             { type: "EU-lid + euro", tekst: "Italië = EU + EMU → betaalt met euro." },
             { type: "EU-lid, géén euro", tekst: "Zweden, Denemarken, Polen = EU maar eigen valuta." },
@@ -134,9 +134,9 @@ const steps = [
             { woord: "monopolie", uitleg: "1 aanbieder beheerst de markt (bv. ProRail voor spoor)." },
             { woord: "oligopolie", uitleg: "Een paar grote aanbieders (bv. supermarkten AH/Jumbo/Lidl/Aldi/Plus, telecomproviders)." },
             { woord: "monopolistische concurrentie", uitleg: "VEEL aanbieders met heterogeen product (bv. kappers, restaurants)." },
-            { woord: "volkomen concurrentie", uitleg: "Veel aanbieders met homogeen product (bv. tarwemarkt, ruwe olie)." },
+            { woord: "volkomen concurrentie", uitleg: "Veel aanbieders met homogeen product (bv. tarwemarkt, groenteveiling)." },
           ],
-          theorie: "**Marktvorm bepaal je in 2 stappen:**\n\n1. Hoeveel aanbieders? 1 / paar / veel\n2. Product hetzelfde of verschillend? homogeen / heterogeen\n\n| Aanbieders | Homogeen | Heterogeen |\n|---|---|---|\n| 1 | – | monopolie |\n| Paar | – | oligopolie |\n| Veel | volkomen concurrentie | monopolistische concurrentie |\n\nPublieke omroepen: paar + heterogeen → oligopolie.",
+          theorie: "**Marktvorm bepaal je in 2 stappen:**\n\n1. Hoeveel aanbieders? 1 / paar / veel\n2. Product hetzelfde of verschillend? homogeen / heterogeen\n\n| Aanbieders | Homogeen | Heterogeen |\n|---|---|---|\n| 1 | monopolie | monopolie |\n| Paar | oligopolie | oligopolie |\n| Veel | volkomen concurrentie | monopolistische concurrentie |\n\nPublieke omroepen: paar aanbieders → oligopolie (hier met heterogeen product).",
           voorbeelden: [
             { type: "oligopolie", tekst: "Telecomproviders NL: KPN, Vodafone, T-Mobile/Odido — 3-4 grote spelers." },
             { type: "oligopolie", tekst: "Supermarktketens: AH, Jumbo, Lidl, Aldi, Plus — 5 grote spelers." },
@@ -230,7 +230,7 @@ const steps = [
         wrongHints: [
           "Bij meer inkomsten dan uitgaven daalt de staatsschuld juist.",
           null,
-          "Stijging inkomsten + gelijke uitgaven = overschot = schuld DAALT.",
+          "Meer inkomsten bij gelijke uitgaven maakt een tekort juist kleiner. Is dat een reden dat de schuld blijft stijgen?",
         ],
         explanation: "Staatsschuld stijgt als de overheid jaar na jaar méér uitgeeft dan ze binnenkrijgt (begrotingstekort). Dat tekort moet bijgeleend worden — dus de schuld groeit. Italië heeft al jaren een groot tekort + hoge schuld (~140% BBP, ver boven de EMU-norm van 60%).",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 30",
@@ -244,17 +244,17 @@ const steps = [
           stappen: [
             { titel: "Wat is staatsschuld?", tekst: "Het totaal aan geld dat de overheid GELEEND heeft en nog moet terugbetalen." },
             { titel: "Wanneer GROEIT de staatsschuld?", tekst: "Als de overheid in een jaar MEER uitgeeft dan ze binnenkrijgt (begrotingstekort). Het tekort wordt geleend → schuld stijgt." },
-            { titel: "Loop opties langs", tekst: "Inkomsten > uitgaven = overschot = schuld DAALT ✗. Inkomsten < uitgaven = tekort = schuld STIJGT ✓. Inkomsten gestegen + uitgaven gelijk = overschot = schuld DAALT ✗." },
+            { titel: "Loop opties langs", tekst: "Inkomsten > uitgaven = overschot = schuld DAALT ✗. Inkomsten < uitgaven = tekort = schuld STIJGT ✓. Inkomsten gestegen + uitgaven gelijk = tekort wordt kleiner (of overschot) = geen reden voor stijging ✗." },
           ],
           woorden: [
-            { woord: "staatsschuld", uitleg: "Totaal geleend door de overheid. NL ~€500 mld in 2024 (~50% BBP). Italië ~€2.700 mld (~140% BBP)." },
+            { woord: "staatsschuld", uitleg: "Totaal geleend door de overheid. NL ~€480 mld in 2024 (~45% BBP). Italië ~€2.900 mld (~135% BBP)." },
             { woord: "begrotingstekort", uitleg: "Wanneer overheidsuitgaven > -inkomsten in een jaar. Tekort wordt bijgeleend = staatsschuld stijgt." },
             { woord: "begrotingsoverschot", uitleg: "Wanneer inkomsten > uitgaven. Met overschot kan overheid schulden aflossen." },
             { woord: "EMU-norm", uitleg: "Eurozone-regel: tekort < 3% BBP, schuld < 60% BBP. Veel landen voldoen niet (Italië, Frankrijk, België)." },
           ],
           theorie: "**Schuld-dynamiek:**\n\nElk jaar: schuld_nieuw = schuld_oud + tekort_dit_jaar\n\n• Tekort > 0 (uitgaven > inkomsten) → schuld GROEIT\n• Overschot > 0 (inkomsten > uitgaven) → schuld DAALT\n• Tekort = 0 → schuld blijft gelijk\n\n**Italië-context:** al decennia tekort, dus schuld blijft groeien. Hoge schuld → veel rente betalen → minder ruimte voor uitgaven → vicieuze cirkel.",
           voorbeelden: [
-            { type: "tekort", tekst: "Italië 2023: inkomsten €890 mld, uitgaven €1.020 mld → tekort €130 mld → schuld stijgt met €130 mld." },
+            { type: "tekort", tekst: "Italië 2023: uitgaven ruim €150 mld hoger dan de inkomsten (tekort ~7% BBP) → dat tekort wordt geleend → schuld stijgt." },
             { type: "overschot", tekst: "NL 2018: inkomsten > uitgaven → klein overschot → staatsschuld in % BBP daalde." },
           ],
           basiskennis: [
@@ -371,7 +371,7 @@ const steps = [
           ],
           theorie: "**Werkloosheid-types:**\n\n| Type | Oorzaak | Voorbeeld |\n|---|---|---|\n| Conjunctureel | recessie / economische dip | tijdens corona-lockdowns |\n| Structureel | tech-verandering, verplaatsing | textielfabrieken naar Bangladesh |\n| Frictie | tussen 2 banen | net afgestudeerd, zoekt baan |\n\n**Aanbod vs vraag op arbeidsmarkt:**\n• Werknemers BIEDEN arbeid aan (= arbeidsaanbod)\n• Werkgevers VRAGEN arbeid (= arbeidsvraag)\n\nBedrijf verdwijnt → minder werkgevers → minder vraag naar arbeid? Of minder banen aangeboden? Het examen-correctievoorschrift kiest 'aanbodkant' = de aanbodzijde van de productie (er wordt minder geproduceerd in NL).",
           voorbeelden: [
-            { type: "structureel", tekst: "Philips verplaatste in 2010 fabrieken naar Polen → 1.000 banen weg in NL → die werknemers vinden niet zomaar nieuw werk = structureel." },
+            { type: "structureel", tekst: "Een fabriek verplaatst de productie naar Polen → 1.000 banen weg in NL → die werknemers vinden niet zomaar nieuw werk = structureel." },
             { type: "conjunctureel", tekst: "2008 financiële crisis → bedrijven minder orders → tijdelijk minder personeel nodig. Bij herstel: weer aanwerven." },
           ],
           basiskennis: [

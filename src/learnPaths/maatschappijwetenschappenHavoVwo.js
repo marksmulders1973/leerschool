@@ -71,7 +71,7 @@ const steps = [
         },
       },
       {
-        q: "**Coalitie-Schoof** (juli 2024) bestaat uit:",
+        q: "**Coalitie-Schoof** (juli 2024) bestond uit:",
         options: ["PVV + VVD + NSC + BBB","VVD + D66 + CDA + CU","PvdA + GL + SP","CDA alleen"],
         answer: 0,
         wrongHints: [null, "Vorige Rutte-IV.", "Nooit zo.", "Niet — coalitie."],

@@ -404,8 +404,8 @@ const steps = [
         wrongHints: [
           null,
           "Andersom — vrouwen maken geen nieuwe eicellen aan, in tegenstelling tot mannen met zaadcellen.",
-          "Veel meer — 1-2 miljoen.",
-          "Veel meer — miljoenen.",
+          "Veel meer — de voorraad bij geboorte is enorm groot.",
+          "Veel meer — denk in een heel andere orde van grootte.",
         ],
         uitlegPad: {
           stappen: [{ titel: "1-2 miljoen bij geboorte", tekst: "Een baby-meisje heeft al haar eicellen aangelegd: ~1-2 miljoen. Daarvan komen er ~400 tot rijping in haar leven (1 per cyclus van puberteit tot menopauze)." }],
@@ -458,7 +458,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Er is wel degelijk een reden — temperatuur.",
+          "Er is wel degelijk een reden — denk aan wat zaadcellen nodig hebben om goed te groeien.",
           "Plassen heeft niets met de teelballen te maken.",
           "Niets met zwaartekracht.",
         ],
@@ -525,7 +525,7 @@ const steps = [
         wrongHints: [
           null,
           "Veel te lang — een eicel sterft snel af zonder bevruchting.",
-          "Te lang — alleen ~24 uur.",
+          "Te lang — een eicel leeft na de eisprong veel korter.",
           "Niet onbeperkt — eicel sterft af.",
         ],
         uitlegPad: {
@@ -580,7 +580,7 @@ const steps = [
         wrongHints: [
           null,
           "Niet allemaal — eicel sluit na de eerste die binnenkomt.",
-          "Slechts één — DNA versmelt 1-op-1.",
+          "Veel te veel — denk aan wat de eicel doet zodra er een zaadcel binnen is.",
           "Wel degelijk een zaadcel nodig.",
         ],
         uitlegPad: {
@@ -599,8 +599,8 @@ const steps = [
         wrongHints: [
           null,
           "Te kort — dat is het einde van het 1e trimester.",
-          "Te lang — 9 maanden is gemiddeld.",
-          "Te kort — 9 maanden is gemiddeld.",
+          "Te lang — tel de drie trimesters bij elkaar op.",
+          "Te kort — tel de drie trimesters bij elkaar op.",
         ],
         uitlegPad: {
           stappen: [{ titel: "9 maanden = 40 weken", tekst: "Een gemiddelde zwangerschap duurt ~40 weken, gerekend vanaf de laatste menstruatie. Verdeeld in 3 trimesters van ~3 maanden." }],
@@ -693,7 +693,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "De hersenen blijven nog 9 jaar daarna ontwikkelen.",
+          "Veel langer — ook na je tienerjaren gaat de ontwikkeling door.",
           "Veel langer.",
           "Tegen die tijd is het meeste klaar.",
         ],

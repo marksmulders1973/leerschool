@@ -101,7 +101,7 @@ const steps = [
         q: "Met hoeveel bouwstenen kun je in principe élk algoritme bouwen?",
         options: ["3 (sequentie, selectie, herhaling)", "1", "10", "Oneindig veel"],
         answer: 0,
-        wrongHints: [null, "Met alleen volgorde kun je geen keuzes of herhaling maken.", "Het zijn er minder — de drie basisbouwstenen.", "Juist niet — drie is genoeg."],
+        wrongHints: [null, "Met alleen volgorde kun je geen keuzes of herhaling maken.", "Het zijn er minder — tel de bouwstenen uit deze stap.", "Juist niet — een klein, vast aantal bouwstenen is genoeg."],
         uitlegPad: {
           stappen: [{ titel: "Drie is genoeg", tekst: "Met **sequentie** (volgorde), **selectie** (keuze) en **herhaling** (loop) kun je elk algoritme opbouwen. Dit heet 'gestructureerd programmeren'. Functies/variabelen maken het overzichtelijker, maar de basis blijft deze drie." }],
           niveaus: { basis: "3 bouwstenen.", simpeler: "Sequentie/selectie/herhaling = 3", nogSimpeler: "A." },

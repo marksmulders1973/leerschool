@@ -120,7 +120,7 @@ const steps = [
         q: "Wat is de **derderegel / gulden snede** in compositie?",
         options: ["Belangrijke elementen op ongeveer ⅓ plaatsen, niet in het midden", "Alles precies in het midden", "Het beeld in drie kleuren maken", "Drie figuren afbeelden"],
         answer: 0,
-        wrongHints: [null, "Juist níét in het midden — dat is het hele idee.", "Het gaat over plaatsing, niet over kleuren.", "Niet over het aantal figuren."],
+        wrongHints: [null, "Oogt alles pal in het midden levendig, of juist een beetje saai?", "Het gaat over plaatsing, niet over kleuren.", "Niet over het aantal figuren."],
         uitlegPad: {
           stappen: [{ titel: "Niet saai in het midden", tekst: "De **derderegel/gulden snede**: plaats belangrijke elementen op ongeveer **een derde** van het beeld (op de snijpunten van denkbeeldige derde-lijnen). Dat oogt vaak levendiger en prettiger dan alles pal in het midden." }],
           niveaus: { basis: "Op ⅓.", simpeler: "Belangrijkste ding op ⅓", nogSimpeler: "Niet in het midden." },

@@ -190,7 +190,7 @@ const steps = [
       wrongHints: [
         "'In kaart brengen' = ONDERZOEK doen naar leesmotivatie. De tekst doet geen onderzoek — beschrijft acties.",
         null,
-        "Te smal — leden werven is een GEVOLG. Het echte doel is jongeren LATEN LEZEN.",
+        "Te smal — gaat de tekst over ledenaantallen, of over iets wat de bieb bij jongeren wil bereiken?",
         "Te smal — scholen worden 1× genoemd (Davelaar). Het is vooral BIEB-actie (hiphopdans, leesclub).",
       ],
       explanation: "De tekst gaat over hiphoplessen in de bieb, schoolbieb-acties, Onderwijsraad-advies — allemaal MANIEREN om jongeren weer aan het lezen te krijgen. Bibliotheek + school zijn de MIDDELEN, lezen is het DOEL.",
@@ -231,7 +231,7 @@ const steps = [
       wrongHints: [
         null,
         "Oorzaak-gevolg = 'A gebeurde, DUS B'. Hier: 'we WILLEN A, daarvoor doen we B' = anders.",
-        "Probleem-oplossing = 'er IS een probleem (X), dus we doen Y'. Hier wordt geen probleem GENOEMD.",
+        "Probleem-oplossing = 'er IS een probleem (X), dus we doen Y'. In déze zin wordt geen probleem GENOEMD.",
         "Voorwaarde = 'ALS A, DAN B'. Hier geen 'als-dan' constructie.",
       ],
       explanation: "Signaalwoord: **'Om ... te ...'** = klassiek doel-middel. Doel = 'voor de toekomst veilig stellen'. Middel = 'investeren'. Antwoord A. (Truc: 'om' aan het begin van een bijzin = altijd doel.)",
@@ -271,10 +271,10 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Conclusie = eindoordeel na een redenering. Tweede zin is geen oordeel, maar een direct effect.",
+        "Conclusie = eindoordeel na een redenering. Geeft de tweede zin een oordeel?",
         null,
         "Opsomming = 'A én B én C'. Hier 2 zinnen, geen 'én'-relatie.",
-        "Reden = WAAROM iets gebeurt. Dat staat in zin 1 (omdat ouders minder lezen). Vraag is wat ZIN 2 is.",
+        "Reden = WAAROM iets gebeurt. Legt zin 2 uit waaróm ouders minder lezen?",
       ],
       explanation: "Signaalwoord: **'zo'** in zin 2 = 'op die manier, daardoor'. Zin 1 = oorzaak (ouders lezen minder thuis). Zin 2 = gevolg (kinderen missen voorbeeld). Klassiek oorzaak → gevolg.",
       examenBron: BRON_LABEL(28),

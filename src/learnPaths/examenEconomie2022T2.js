@@ -35,7 +35,7 @@ const steps = [
         "verborgen werkloosheid",
       ],
       answer: 2,
-      wrongHints: ["Conjunctureel = afhankelijk van conjunctuur (op/neer met economie). Verplaatsing van industrie is geen tijdelijke dip — wat is het wel?", "Seizoen = weer-afhankelijk werk (ijsverkoper, strandtent). Textielindustrie is jaarrond — past niet.", null, "Verborgen werkloosheid = mensen die wel kunnen werken maar niet zoeken. Hier zijn mensen ontslagen door verplaatsing — dat is openlijk."],
+      wrongHints: ["Conjunctureel = afhankelijk van conjunctuur (op/neer met economie). Verplaatsing van industrie is geen tijdelijke dip — wat is het wel?", "Seizoen = weer-afhankelijk werk (ijsverkoper, strandtent). Textielindustrie is jaarrond — past niet.", null, "Verborgen werkloosheid = mensen die wel werk willen, maar niet als werkzoekende geregistreerd staan. Hier zijn mensen ontslagen door verplaatsing — dat is zichtbaar."],
       explanation: "**Structurele werkloosheid** = werkloosheid door blijvende veranderingen in de economie. Textielproductie verplaatste structureel van NL → lage-lonenlanden (Bangladesh, China). Banen kwamen niet terug, dus geen tijdelijke dip (conjunctureel) maar permanent (structureel).",
       examenBron: BRON_LABEL(5),
       bronLink: BRON_LINK,
@@ -45,7 +45,7 @@ const steps = [
         { id: "pincode-werk-arbeidsmarkt", title: "Pincode werk & arbeidsmarkt", niveau: "VMBO-GT eindexamen", why: "soorten werkloosheid + arbeidsmarkt — kern van deze vraag" },
       ],
       uitlegPad: compact(
-        "4 soorten werkloosheid: STRUCTUREEL (blijvende verandering — bv. fabriek dicht, banen niet terug), CONJUNCTUREEL (tijdelijk, met op/neer economie), SEIZOEN (weer/seizoen-afhankelijk), VERBORGEN (kan werken maar zoekt niet). Textiel → Bangladesh = blijvend = structureel.",
+        "4 soorten werkloosheid: STRUCTUREEL (blijvende verandering — bv. fabriek dicht, banen niet terug), CONJUNCTUREEL (tijdelijk, met op/neer economie), SEIZOEN (weer/seizoen-afhankelijk), VERBORGEN (wil wel werken, maar staat niet als werkzoekende geregistreerd). Textiel → Bangladesh = blijvend = structureel.",
         { basis: "Structurele werkloosheid.", simpeler: "Textiel-banen weg + komen niet terug → blijvende verandering = structureel.", nogSimpeler: "Structureel" },
         [{ woord: "structurele werkloosheid", uitleg: "Door blijvende verandering in economie." }, { woord: "conjunctureel", uitleg: "Tijdelijk, met economische op/neer." }],
       ),

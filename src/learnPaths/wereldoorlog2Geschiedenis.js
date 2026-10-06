@@ -393,7 +393,7 @@ const steps = [
         q: "Wat was de **NSB**?",
         options: ["Nederlandse pro-Duitse partij die met bezetters samenwerkte", "Een Nederlands verzetsblad", "Naam van een concentratiekamp", "Een Engels leger"],
         answer: 0,
-        wrongHints: [null, "Verzetsbladen waren *Het Parool*, *Trouw*, *Vrij Nederland*.", "Nederlandse kampen heetten Westerbork, Vught.", "NSB was juist Nederlands en pro-Duits."],
+        wrongHints: [null, "Verzetsbladen waren *Het Parool*, *Trouw*, *Vrij Nederland*.", "Nederlandse kampen heetten Westerbork, Vught.", "Een leger was het niet — let op de 'B' van Beweging."],
         uitlegPad: {
           stappen: [{ titel: "NSB — Nederlandse nazi-partij", tekst: "NSB = Nationaal-Socialistische Beweging. Opgericht 1931 door Anton Mussert. Geïnspireerd op Duitse NSDAP (Hitler). Voor de bezetting: kleine partij (~50.000 leden). Tijdens bezetting: groeide tot ~100.000 leden, werd ENIGE toegestane partij in bezet NL. Werkten openlijk samen met Duitsers." }],
           woorden: [{ woord: "NSB", uitleg: "Nationaal-Socialistische Beweging. NL nazi-partij 1931-1945. Leider: Anton Mussert." }, { woord: "Mussert", uitleg: "Anton Mussert (1894-1946). NSB-leider. Na oorlog berecht en geëxecuteerd 1946." }, { woord: "collaborateur", uitleg: "Iemand die met bezetter samenwerkte. NSB-leden golden als collaborateurs." }],
@@ -521,7 +521,7 @@ const steps = [
         q: "Wat is het verschil tussen **4 mei** en **5 mei**?",
         options: ["4 mei = herdenken (doden); 5 mei = vieren (vrijheid)", "4 mei = vieren; 5 mei = herdenken", "Beide hetzelfde — twee dagen vrij", "4 mei = oorlog begint; 5 mei = oorlog eindigt"],
         answer: 0,
-        wrongHints: [null, "Andersom — eerst herdenken, dan vieren.", "Ze hebben elk hun eigen betekenis.", "Geen — die data zijn allemaal in 1945."],
+        wrongHints: [null, "Denk aan de avond met twee minuten stilte — is dat feest of rouw?", "Ze hebben elk hun eigen betekenis.", "Geen — die data zijn allemaal in 1945."],
         uitlegPad: {
           stappen: [{ titel: "4 mei = stil, 5 mei = feest", tekst: "4 mei = NL Dodenherdenking. 20:00-20:02 twee minuten stilte voor doden van WO2 + latere conflicten (waaronder VN-missies). Vlag halfstok. Plechtig. 5 mei = Bevrijdingsdag. Vlag in top. Festivals in elke provincie, oranje, feest. Vandaag bewust achter elkaar: eerst pijn benoemen, dan vieren." }],
           woorden: [{ woord: "Dodenherdenking", uitleg: "4 mei. NL-traditie sinds 1946. Centrale plechtigheid op de Dam in Amsterdam met koninklijk paar." }, { woord: "Bevrijdingsdag", uitleg: "5 mei. Sinds 1990 jaarlijkse nationale feestdag. Voor: om de 5 jaar." }, { woord: "twee minuten stilte", uitleg: "20:00-20:02 op 4 mei. Heel NL stopt: treinen rijden niet, tv stil, mensen op straat staan stil." }],
@@ -558,7 +558,7 @@ const steps = [
         q: "Wat was **Westerbork**?",
         options: ["Doorgangskamp in Drenthe waar NL-joden naartoe werden gebracht voor transport", "Een verzetsorganisatie", "Een Duits eindkamp", "Een Engels vliegveld"],
         answer: 0,
-        wrongHints: [null, "Westerbork was een gevangenkamp, geen verzetsgroep.", "Bijna — maar Westerbork was juist het *doorgangs*kamp; vermoord werd vooral in Auschwitz/Sobibor in Polen.", "Westerbork lag in Drenthe (NL), geen Engels vliegveld."],
+        wrongHints: [null, "Westerbork was een gevangenkamp, geen verzetsgroep.", "Bijna — maar vermoord werd vooral in kampen in bezet Polen. Welke rol had dit kamp in Drenthe dan?", "Westerbork lag in Drenthe (NL), geen Engels vliegveld."],
         uitlegPad: {
           stappen: [{ titel: "Westerbork — laatste halte NL-joden", tekst: "Kamp Westerbork lag in Drenthe (NL). Oorspronkelijk gebouwd 1939 voor Duits-joodse vluchtelingen. Vanaf juli 1942: Duitsers maakten het 'Polizeiliches Durchgangslager' = doorgangskamp. Elke dinsdag vertrok trein vol joden + Sinti naar Auschwitz of Sobibor. Totaal: ~107.000 NL-joden via Westerbork gedeporteerd, ~5.000 overleefden." }],
           woorden: [{ woord: "Westerbork", uitleg: "Doorgangskamp Drenthe 1942-1945. Anne Frank verbleef hier bijna 4 weken voordat ze naar Auschwitz ging." }, { woord: "doorgangskamp", uitleg: "Tijdelijk kamp voor transport naar elders. Niet zelf 'eindkamp' — moord vond elders plaats." }, { woord: "deportatie", uitleg: "Gedwongen wegvoeren van mensen, vaak per trein." }],
@@ -658,9 +658,9 @@ const steps = [
       },
       {
         q: "Wat was er **eerst**: Anne Frank in onderduik óf D-Day?",
-        options: ["Anne Frank in onderduik (vanaf 1942) — D-Day was juni 1944", "D-Day eerst — Anne Frank dook later onder", "Tegelijk in 1944", "Beide kort na de oorlog"],
+        options: ["Anne Frank in onderduik eerst — D-Day kwam later", "D-Day eerst — Anne Frank dook later onder", "Tegelijk in 1944", "Beide kort na de oorlog"],
         answer: 0,
-        wrongHints: [null, "Andersom — onderduik 1942, D-Day 1944.", "Onderduik begon al in 1942, eerder.", "Beide tijdens de oorlog, niet erna."],
+        wrongHints: [null, "Zoek beide jaartallen op: wanneer dook Anne onder, en wanneer was D-Day?", "Begon de onderduik echt pas in 1944? Zoek het startjaar op.", "Beide tijdens de oorlog, niet erna."],
         uitlegPad: {
           stappen: [{ titel: "Volgorde: Anne 1942 → D-Day 1944", tekst: "Anne Frank dook 6 juli 1942 onder in het Achterhuis Prinsengracht 263 Amsterdam. D-Day was 6 juni 1944. Verschil: bijna 2 jaar. Anne werd 4 augustus 1944 ontdekt — toen liepen geallieerden net Frankrijk in na D-Day. Te laat voor haar." }],
           woorden: [{ woord: "Achterhuis", uitleg: "Verborgen ruimte achter Otto Franks kantoor. Anne + 7 anderen woonden er 25 maanden." }, { woord: "tijdsverband", uitleg: "Volgorde van gebeurtenissen vaststellen. Standaard-examen-vaardigheid geschiedenis." }],

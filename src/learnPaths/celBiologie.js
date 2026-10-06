@@ -214,13 +214,13 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
       },
       {
         q: "Welke cel heeft géén kern?",
-        options: ["Bacteriecel", "Plantcel", "Spiercel", "Bloedplaatje (uitzondering)"],
+        options: ["Bacteriecel", "Plantcel", "Spiercel", "Zenuwcel"],
         answer: 0,
         wrongHints: [
           null,
           "Plantcellen hebben wél een kern.",
           "Spiercellen zijn dierlijke cellen — die hebben een kern.",
-          "Het klopt dat bloedplaatjes geen kern hebben — maar dat is een speciale uitzondering bij dieren. Welke hele groep cellen heeft systematisch geen kern?",
+          "Zenuwcellen zijn dierlijke cellen — die hebben wél een kern.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Bacterie = geen kern", tekst: "Bacteriën horen bij de prokaryoten: hun DNA zweeft los, niet in een afgesloten kern. Plant en dier (eukaryoten) hebben wel een kern." }],
@@ -653,7 +653,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           "Schimmels zijn eukaryoot.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Prokaryoot = bacterie", tekst: "Pro = voor, karyoot = kern. Prokaryoot betekent letterlijk 'voor de kern' — een levensvorm zonder echte celkern. Alleen bacteriën zijn prokaryoot." }],
+          stappen: [{ titel: "Prokaryoot = bacterie", tekst: "Pro = voor, karyoot = kern. Prokaryoot betekent letterlijk 'voor de kern' — een levensvorm zonder echte celkern. Bacteriën zijn de bekendste prokaryoten." }],
           woorden: [{ woord: "eukaryoot", uitleg: "wel kern — plant, dier, schimmel" }],
           theorie: "Twee groepen: prokaryoot (bacterie) vs eukaryoot (al het andere).",
           voorbeelden: [{ type: "voorbeeld", tekst: "Mens, eikenboom, paddenstoel: eukaryoot. E. coli: prokaryoot" }],
@@ -708,14 +708,14 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
         q: "Wat moet er **vóór** celdeling gebeuren?",
         options: [
           "Het DNA wordt verdubbeld",
-          "De cel groeit tot 2× zo groot",
+          "Al het water verlaat de cel",
           "Het DNA wordt afgebroken",
           "Het celmembraan verdwijnt",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "De cel groeit ook, maar dat is niet het belangrijkste — de twee dochtercellen moeten allebei volledig DNA krijgen.",
+          "Zonder water kan een cel niet werken — wat moet er juist gekopieerd worden zodat beide dochtercellen alles krijgen?",
           "Dan krijgen de dochtercellen geen DNA. Dat is fataal voor de cel.",
           "Het celmembraan blijft juist bestaan.",
         ],
@@ -829,7 +829,7 @@ ${Array.from({ length: 5 }, (_, i) => Array.from({ length: 4 }, (_, j) => `<elli
           niveaus: { basis: "Plant + dier + energie.", simpeler: "Beide hebben mito.", nogSimpeler: "Energie-maker." },
         },
       },
-      { q: "Wat is het verschil tussen een **prokaryoot** en een **eukaryoot**?", options: ["Prokaryoot heeft GEEN kern, eukaryoot WEL","Prokaryoot is een plant, eukaryoot een dier","Eukaryoot is kleiner","Geen verschil"], answer: 0, wrongHints: [null,"Niet over plant vs dier.","Andersom — eukaryoot is groter.","Wel — kern of niet."] },
+      { q: "Wat is het verschil tussen een **prokaryoot** en een **eukaryoot**?", options: ["Prokaryoot heeft GEEN kern, eukaryoot WEL","Prokaryoot is een plant, eukaryoot een dier","Eukaryoot is kleiner","Geen verschil"], answer: 0, wrongHints: [null,"Niet over plant vs dier.","Andersom — eukaryoot is groter.","Er is wel degelijk een verschil — kijk naar waar het DNA zit."] },
       { q: "Welk organel zit **alleen in plantcellen**?", options: ["Chloroplast","Mitochondrium","Celkern","Ribosoom"], answer: 0, wrongHints: [null,"Mitochondriën leveren energie in bijna álle cellen — zitten die alleen in planten of ook in dieren?","De celkern met het DNA vind je in zowel plant- als dierlijke cellen — is dat dan typisch voor alleen planten?","Ribosomen maken eiwitten in elke cel, plant én dier — past 'alleen in plantcellen' daarbij?"] },
       { q: "**Celwand** (stevig + niet flexibel) vind je in?", options: ["Planten","Dieren","Niet — bestaat niet","Alleen bacteriën"], answer: 0, wrongHints: [null,"Dier heeft alleen celmembraan.","Wel — onderdeel plantcel.","Onvolledig."] },
       { q: "Welke is de **kleinste eenheid van leven**?", options: ["Cel","Atoom","Molecuul","Weefsel"], answer: 0, wrongHints: [null,"Geen leven.","Geen leven.","Te groot — bestaat uit cellen."] },

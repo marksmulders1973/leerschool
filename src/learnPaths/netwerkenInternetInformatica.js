@@ -32,7 +32,7 @@ const steps = [
         q: "Wat is het verschil tussen het **internet** en het **web** (www)?",
         options: ["Internet = de infrastructuur; web = één dienst erop (websites)", "Ze zijn precies hetzelfde", "Het web is groter dan het internet", "Het web bestaat uit kabels, internet uit sites"],
         answer: 0,
-        wrongHints: [null, "Er is wel degelijk verschil.", "Andersom: het web is een deel van wat over internet loopt.", "Verwisseld: de kabels zijn het internet."],
+        wrongHints: [null, "Er is wel degelijk verschil.", "Kan een dienst groter zijn dan het netwerk waar hij overheen loopt?", "Kijk nog eens: welk van de twee is de fysieke infrastructuur?"],
         uitlegPad: {
           stappen: [{ titel: "Web = één dienst", tekst: "Het **internet** is de **infrastructuur** (kabels, routers). Het **web** (websites) is **één van de diensten** die daarover loopt — net als e-mail, videobellen en streaming. Dus: het web zit óp het internet, niet andersom." }],
           niveaus: { basis: "Internet = kabels, web = sites.", simpeler: "Web is een dienst óp internet", nogSimpeler: "Web zit óp internet" },
@@ -140,7 +140,7 @@ const steps = [
         q: "Hoe gaat data over internet?",
         options: ["Opgeknipt in kleine pakketjes", "Altijd als één groot geheel", "Alleen als tekst", "Nooit via routers"],
         answer: 0,
-        wrongHints: [null, "Juist niet als geheel — het wordt opgeknipt.", "Ook beeld en geluid gaan zo (als bits in pakketjes).", "Routers zijn juist essentieel."],
+        wrongHints: [null, "Juist niet — denk aan wat routers onderweg doorsturen.", "Ook beeld en geluid gaan zo (als bits in pakketjes).", "Routers zijn juist essentieel."],
         uitlegPad: {
           stappen: [{ titel: "Opknippen en weer samenvoegen", tekst: "Data wordt in kleine **pakketjes** geknipt. Elk pakketje heeft afzender, ontvanger en een **volgnummer**, reist via **routers** (mogelijk verschillende routes), en wordt bij de ontvanger met de volgnummers weer in de juiste volgorde gezet. Kwijt? Opnieuw sturen." }],
           niveaus: { basis: "In pakketjes.", simpeler: "Data = pakketjes", nogSimpeler: "Pakketjes" },
@@ -180,7 +180,7 @@ const steps = [
         q: "Wat gebeurt er als een **pakketje kwijtraakt** onderweg?",
         options: ["Het wordt opnieuw gestuurd (TCP regelt dat)", "Het hele internet valt uit", "Het bericht is voorgoed weg", "Niets — pakketjes raken nooit kwijt"],
         answer: 0,
-        wrongHints: [null, "Eén verloren pakketje legt het internet niet plat.", "TCP zorgt juist voor herzending.", "Pakketjes kunnen wel degelijk kwijtraken."],
+        wrongHints: [null, "Eén verloren pakketje legt het internet niet plat.", "Denk aan de volgnummers — merkt de ontvanger dat er een ontbreekt?", "Pakketjes kunnen wel degelijk kwijtraken."],
         uitlegPad: {
           stappen: [{ titel: "TCP houdt de tel bij", tekst: "**TCP** controleert of alle pakketjes (met hun **volgnummers**) compleet aankomen. Ontbreekt er één, dan vraagt het om **herzending**. Daarom komt je bericht toch heel aan, ook al ging er onderweg eentje verloren — het internet is zo robuust." }],
           niveaus: { basis: "Opnieuw sturen.", simpeler: "Kwijt = opnieuw", nogSimpeler: "Opnieuw sturen" },
@@ -239,7 +239,7 @@ const steps = [
         q: "Wat stuurt je **browser** naar de server om een pagina op te halen?",
         options: ["Een HTTP-request", "Een IP-adres om te bewaren", "Een DNS-tabel", "Een back-up"],
         answer: 0,
-        wrongHints: [null, "Het IP gebruikt hij om te verbinden, maar hij stuurt een request.", "DNS is een eerdere, aparte stap.", "Een back-up heeft er niets mee te maken."],
+        wrongHints: [null, "Het IP gebruikt hij om te verbinden — maar wat vraagt hij dan aan de server?", "DNS is een eerdere, aparte stap.", "Een back-up heeft er niets mee te maken."],
         uitlegPad: {
           stappen: [{ titel: "Vraag en antwoord", tekst: "Je browser (de **client**) stuurt een **HTTP-request** ('geef mij pagina /cito'). De server stuurt een **HTTP-response** terug: de HTML, plaatjes enzovoort. Je browser zet die code om in de pagina die je ziet. Bij HTTPS is dat verkeer versleuteld." }],
           niveaus: { basis: "Een HTTP-request.", simpeler: "Browser stuurt request", nogSimpeler: "Request" },

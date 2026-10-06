@@ -139,7 +139,7 @@ const steps = [
         q: "Bij **MS** is welk deel beschadigd?",
         options: ["Myelineschede","Cellichaam","Synaps","Dendriet"],
         answer: 0,
-        wrongHints: [null, "Niet primair — myeline eerst.", "Niet primair.", "Niet primair."],
+        wrongHints: [null, "Niet primair — denk aan de isolatielaag die de geleiding versnelt.", "Niet primair.", "Niet primair."],
         uitlegPad: {
           stappen: [{ titel: "MS = myeline aangetast", tekst: "**Multiple Sclerose**: auto-immuun-aandoening waarbij eigen afweersysteem myeline rond axonen afbreekt. Gevolgen: tragere geleiding, fouten, klachten als spierzwakte, vermoeidheid, visusproblemen. Toets-eindexamen-classic." }],
           theorie: "Onderscheid: MS = myeline. ALS = motorneuron-cellichaam. Parkinson = dopamine-neuronen. Alzheimer = hippocampus-cellen.",
@@ -301,7 +301,7 @@ const steps = [
         q: "Iemand heeft constant koud + voelt traag + komt aan. Welke klier?",
         options: ["Schildklier (te weinig thyroxine)","Bijnier","Hypofyse","Pancreas"],
         answer: 0,
-        wrongHints: [null, "Niet — andere symptomen.", "Wel indirect, maar bron is schildklier.", "Niet — bloedsuiker-symptomen."],
+        wrongHints: [null, "Niet — andere symptomen.", "Kan indirect meespelen, maar maakt zelf niet het hormoon dat de stofwisseling regelt.", "Niet — bloedsuiker-symptomen."],
         uitlegPad: {
           stappen: [{ titel: "Hypothyreoïdie", tekst: "Symptomen passen bij **hypothyreoïdie** (te weinig schildklier-thyroxine): trage stofwisseling → koud, vermoeid, gewichtstoename, droge huid, depressief. Behandeling: synthetische T4 (levothyroxine) dagelijks." }],
           theorie: "Tegengesteld: hyperthyreoïdie = te veel = warm, rusteloos, mager, hartkloppingen.",

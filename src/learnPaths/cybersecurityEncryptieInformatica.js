@@ -75,7 +75,7 @@ const steps = [
   {
     title: "Wachtwoorden, 2FA & hashing",
     explanation:
-      "Je eerste verdediging is goed **inloggen**.\n\n**Sterke wachtwoorden:**\n• **Lang** is belangrijker dan ingewikkeld — een lange zin ('paardvliegtgroenover!') is sterker én makkelijker te onthouden dan 'P@ss1'.\n• **Uniek per site** — hergebruik je één wachtwoord overal en lekt één site, dan liggen ze allemaal open.\n• Een **wachtwoordmanager** onthoudt sterke, unieke wachtwoorden voor je.\n\n**Tweestapsverificatie (2FA / MFA):**\nNaast je wachtwoord een **tweede bewijs**: een code via een app/sms, of je vingerafdruk. Zelfs als iemand je wachtwoord heeft, komt hij er niet in zonder die tweede stap. **De belangrijkste extra beveiliging die je kunt aanzetten.**\n\n**Hashing — hoe sites wachtwoorden bewaren:**\nEen goede site bewaart je wachtwoord **nooit als gewone tekst**. Hij slaat een **hash** op: een onomkeerbare versleuteling. \n• Dezelfde invoer → altijd dezelfde hash.\n• Uit de hash kun je het wachtwoord **niet terugrekenen**.\n• Bij inloggen wordt je invoer opnieuw gehasht en vergeleken.\nLekt de database, dan zien hackers alleen hashes, niet je echte wachtwoord. (Daarom kan een goede site je wachtwoord ook niet 'opsturen', alleen resetten.)",
+      "Je eerste verdediging is goed **inloggen**.\n\n**Sterke wachtwoorden:**\n• **Lang** is belangrijker dan ingewikkeld — een lange zin ('paardvliegtgroenover!') is sterker én makkelijker te onthouden dan 'P@ss1'.\n• **Uniek per site** — hergebruik je één wachtwoord overal en lekt één site, dan liggen ze allemaal open.\n• Een **wachtwoordmanager** onthoudt sterke, unieke wachtwoorden voor je.\n\n**Tweestapsverificatie (2FA / MFA):**\nNaast je wachtwoord een **tweede bewijs**: een code via een app/sms, of je vingerafdruk. Zelfs als iemand je wachtwoord heeft, komt hij er niet in zonder die tweede stap. **De belangrijkste extra beveiliging die je kunt aanzetten.**\n\n**Hashing — hoe sites wachtwoorden bewaren:**\nEen goede site bewaart je wachtwoord **nooit als gewone tekst**. Hij slaat een **hash** op: een onomkeerbare omzetting (geen echte versleuteling — er bestaat geen sleutel om terug te rekenen).\n• Dezelfde invoer → altijd dezelfde hash.\n• Uit de hash kun je het wachtwoord **niet terugrekenen**.\n• Bij inloggen wordt je invoer opnieuw gehasht en vergeleken.\nLekt de database, dan zien hackers alleen hashes, niet je echte wachtwoord. (Daarom kan een goede site je wachtwoord ook niet 'opsturen', alleen resetten.)",
     checks: [
       {
         q: "Wat maakt een wachtwoord het sterkst?",
@@ -99,11 +99,11 @@ const steps = [
       },
       {
         q: "Hoe hoort een goede website je wachtwoord op te slaan?",
-        options: ["Als hash (onomkeerbaar versleuteld), niet als gewone tekst", "Gewoon als leesbare tekst", "Als een foto", "Helemaal niet — onthouden uit het hoofd"],
+        options: ["Als hash (onomkeerbaar omgezet), niet als gewone tekst", "Gewoon als leesbare tekst", "Als een foto", "Helemaal niet — onthouden uit het hoofd"],
         answer: 0,
         wrongHints: [null, "Leesbaar bewaren is juist onveilig (lekt het, dan ligt alles open).", "Een foto van je wachtwoord is geen opslagmethode.", "De site moet 'm wel kunnen controleren — dus opslaan, maar als hash."],
         uitlegPad: {
-          stappen: [{ titel: "Hashing", tekst: "Een goede site bewaart een **hash**: een **onomkeerbare** versleuteling. Dezelfde invoer → dezelfde hash, maar je kunt het wachtwoord er niet uit terugrekenen. Lekt de database, dan zien hackers alleen hashes. Daarom kan een goede site je wachtwoord ook niet 'opsturen', alleen laten resetten." }],
+          stappen: [{ titel: "Hashing", tekst: "Een goede site bewaart een **hash**: een **onomkeerbare** omzetting (anders dan encryptie is er geen sleutel om terug te gaan). Dezelfde invoer → dezelfde hash, maar je kunt het wachtwoord er niet uit terugrekenen. Lekt de database, dan zien hackers alleen hashes. Daarom kan een goede site je wachtwoord ook niet 'opsturen', alleen laten resetten." }],
           niveaus: { basis: "Als hash.", simpeler: "Wachtwoord = als hash bewaren", nogSimpeler: "A." },
         },
       },
@@ -150,7 +150,7 @@ const steps = [
         q: "Bij **asymmetrische encryptie** zijn er…",
         options: ["Twee sleutels: een publieke en een privé", "Eén sleutel voor alles", "Helemaal geen sleutels", "Een sleutel per letter"],
         answer: 0,
-        wrongHints: [null, "Eén sleutel = symmetrisch, niet asymmetrisch.", "Zonder sleutel is er geen encryptie.", "Niet per letter — per persoon een sleutelpaar."],
+        wrongHints: [null, "Eén sleutel = symmetrisch, niet asymmetrisch.", "Zonder sleutel is er geen encryptie.", "Niet per letter — wat zegt 'asymmetrisch' (ongelijk) over de sleutels?"],
         uitlegPad: {
           stappen: [{ titel: "Publiek + privé", tekst: "**Asymmetrische encryptie** gebruikt een **sleutelpaar**: een **publieke sleutel** (mag iedereen hebben) om te versleutelen, en een geheime **privésleutel** om te ontsleutelen. Zo kun je veilig communiceren met iemand zonder vooraf een geheime sleutel te delen. **Symmetrisch** gebruikt juist één gedeelde sleutel." }],
           niveaus: { basis: "Publieke + privé.", simpeler: "Asymmetrisch = 2 sleutels", nogSimpeler: "A." },
@@ -239,7 +239,7 @@ const steps = [
         q: "Volgens de **AVG** mag een organisatie…",
         options: ["Alleen persoonsgegevens verzamelen die echt nodig zijn (dataminimalisatie)", "Alle gegevens verzamelen die ze maar wil", "Je gegevens nooit laten inzien", "Je gegevens altijd doorverkopen"],
         answer: 0,
-        wrongHints: [null, "Juist niet — alleen wat nodig is.", "Je hebt recht op inzage.", "Doorverkopen mag niet zomaar."],
+        wrongHints: [null, "Juist niet — de AVG wil dat organisaties zuinig zijn met gegevens.", "Je hebt recht op inzage.", "Doorverkopen mag niet zomaar."],
         uitlegPad: {
           stappen: [{ titel: "Zo min mogelijk, met een doel", tekst: "De **AVG** eist **dataminimalisatie**: verzamel alleen wat je echt nodig hebt, en gebruik het alleen voor het doel waarvoor je het kreeg (**doelbinding**). Jij hebt recht op **inzage, correctie en verwijdering** van je gegevens." }],
           niveaus: { basis: "Alleen wat nodig is.", simpeler: "AVG = zuinig met data", nogSimpeler: "A." },

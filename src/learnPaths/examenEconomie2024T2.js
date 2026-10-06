@@ -52,7 +52,7 @@ const steps = [
           theorie: "**Wat doet wat met nationaal inkomen?**\n\n• **Export** (NL verkoopt aan buitenland) → geld komt NL binnen → NL-inkomen STIJGT\n• **Import** (NL koopt buitenland) → geld gaat eruit → NL-inkomen DAALT (relatief)\n• **Toerisme**: buitenlandse toerist in NL = export van diensten = NL-inkomen STIJGT\n\nVoor Kameroen geldt het omgekeerd. Een NL-toerist die in Kameroen Cola koopt = export van diensten voor Kameroen.",
           voorbeelden: [
             { type: "export goederen", tekst: "NL verkoopt bloemen aan Duitsland → Duits geld → NL → NL-inkomen stijgt." },
-            { type: "export diensten", tekst: "Duits gezin gaat skiën in NL bergen (theoretisch 😉) → geeft Duits geld uit in NL → export van diensten." },
+            { type: "export diensten", tekst: "Duits gezin huurt een vakantiehuisje aan de Zeeuwse kust → geeft Duits geld uit in NL → export van diensten." },
             { type: "Kameroen", tekst: "NL-toerist Sarah betaalt Kameroense hotelhouder voor 5 nachten → geld stroomt NL → Kameroen → KAM-inkomen stijgt." },
           ],
           basiskennis: [
@@ -167,10 +167,10 @@ const steps = [
           ],
           theorie: "**Marketingmix (4 P's):**\n\n• **Product** = wat verkoop je? (kwaliteit, variatie)\n• **Prijs** = hoeveel kost het? (premium, korting)\n• **Plaats** = waar verkoop je? (winkel, online)\n• **Promotie** = hoe maak je het bekend? (reclame)\n\nPincode-uitbreiding: Personeel (wie levert het) + Presentatie (uiterlijk).\n\nGlamping = upgrade van het PRODUCT (wat de klant krijgt). Niet de prijs, niet de plaats waar Arjun verkoopt.",
           voorbeelden: [
-            { type: "product", tekst: "AH introduceert vegan rookworst → product-aanpassing." },
-            { type: "prijs", tekst: "Lidl: alles 10% korting met app → prijsbeleid." },
-            { type: "plaats", tekst: "Bol opent 4 fysieke winkels → plaatsbeleid." },
-            { type: "promotie", tekst: "Coca-Cola TikTok-campagne → promotiebeleid." },
+            { type: "product", tekst: "Een supermarkt brengt vegan rookworst op de markt → product-aanpassing." },
+            { type: "prijs", tekst: "Een supermarkt geeft 10% korting met de app → prijsbeleid." },
+            { type: "plaats", tekst: "Een webwinkel opent ook fysieke winkels → plaatsbeleid." },
+            { type: "promotie", tekst: "Een frisdrankmerk start een TikTok-campagne → promotiebeleid." },
           ],
           basiskennis: [
             { onderwerp: "Doelgroep", uitleg: "Voor wie is je product bedoeld? Marketing past aan op die groep (campinggasten = gezin met behoefte aan comfort)." },
@@ -283,7 +283,7 @@ const steps = [
           theorie: "**Soorten ontwikkelingshulp:**\n\n| Type | Hoe lang | Wat | Wie |\n|---|---|---|---|\n| Noodhulp | Kort (weken) | Acuut overleven | Rode Kruis, UNICEF |\n| Bilateraal | Mid-lang | Project-financiering | Overheden |\n| Multilateraal | Mid-lang | Via VN/Wereldbank | VN, IMF, WB |\n| Structureel | Lang (jaren) | Eerlijke kansen | NGO's, Fairtrade |\n\nFairtrade past bij STRUCTUREEL — gericht op duurzame inkomensverbetering, niet op acute crises.",
           voorbeelden: [
             { type: "noodhulp", tekst: "Aardbeving Turkije 2023 → Rode Kruis stuurt voedsel + tenten = noodhulp." },
-            { type: "structureel", tekst: "Fairtrade-cacaoboer in Ivoorkust krijgt 20% meer per kilo dan marktprijs → kan kinderen naar school sturen → langdurige verbetering." },
+            { type: "structureel", tekst: "Fairtrade-cacaoboer in Ivoorkust krijgt een gegarandeerde minimumprijs plus een premie → kan kinderen naar school sturen → langdurige verbetering." },
           ],
           basiskennis: [
             { onderwerp: "Particulier vs publiek", uitleg: "Particuliere hulp = van privé-personen, bedrijven, NGO's. Publieke = van overheden. Fairtrade = particulier (consumenten kopen)." },

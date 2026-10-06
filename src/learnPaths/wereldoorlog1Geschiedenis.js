@@ -62,7 +62,7 @@ const steps = [
         q: "Wat betekent de M in **MAIN-oorzaken** WO1?",
         options: ["Militarisme", "Macht", "Marokko", "Marshall"],
         answer: 0,
-        wrongHints: [null, "Wel deels, maar M = militarisme.", "Marokko was 1 incident, niet de hoofdcategorie.", "Marshall plan was na WO2."],
+        wrongHints: [null, "Macht speelde mee, maar de M staat voor iets met legers en wapens.", "Marokko was 1 incident, niet de hoofdcategorie.", "Marshall plan was na WO2."],
       },
       {
         q: "Welke landen vormden de **Triple Entente**?",
@@ -176,7 +176,7 @@ const steps = [
         q: "Was **Nederland in oorlog** in WO1?",
         options: ["Nee — neutraal", "Ja — met Duitsland", "Ja — met Engeland", "Onbekend"],
         answer: 0,
-        wrongHints: [null, "Niet — neutraal.", "Niet — neutraal.", "Wel bekend."],
+        wrongHints: [null, "Nederland vocht niet tegen Duitsland — denk aan het verschil met België.", "Nederland koos geen kant — wat deed koningin Wilhelmina?", "Dat is wel bekend — kijk naar wat Wilhelmina wilde."],
       },
       {
         q: "Hoeveel **Belgische vluchtelingen** kwamen naar NL?",
@@ -224,7 +224,7 @@ const steps = [
         wrongHints: [null, "Wél veel.", "Niet de helft.", "Niet toetreden."],
       },
       {
-        q: "Welk **rijk viel uiteen** na WO1?",
+        q: "Welke **rijken vielen uiteen** na WO1?",
         options: ["Oostenrijk-Hongarije én Ottomaanse Rijk én Russisch", "Alleen Russisch", "Alleen Duitsland", "Geen"],
         answer: 0,
         wrongHints: [null, "Niet alleen Rusland.", "Duitsland bleef bestaan (in andere vorm).", "Wel — meerdere."],

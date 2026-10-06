@@ -277,7 +277,7 @@ const steps = [
           null,
           "Ze blijven bewegen, maar één moet wel onder de ander.",
           "Andersom — de oceanische is zwaarder en zinkt onder.",
-          "Niet versmelten, maar de zwaardere zinkt eronder.",
+          "Platen versmelten niet — denk aan het verschil in gewicht tussen de twee soorten platen.",
         ],
       },
       {
@@ -431,7 +431,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Het diepste punt heet hypocentrum (of focus). Epicentrum ligt aan het oppervlak.",
+          "Het punt diep onder de grond heet hypocentrum (of focus) — waar ligt het epicentrum dan?",
           "Een vulkaan is iets anders.",
           "De schade-zone is het gevolg, niet de definitie.",
         ],
@@ -443,7 +443,7 @@ const steps = [
         wrongHints: [
           null,
           "Het is logaritmisch — geen kleine stap maar een hele schaal.",
-          "Te veel — elk punt is 10× (niet 100×).",
+          "Te veel — hoeveel keer sterker is één stap op de schaal?",
           "Veel meer dan 2× — denk aan logaritmische schaal.",
         ],
       },
@@ -546,7 +546,7 @@ const steps = [
           null,
           "Een oorlog verandert het weer niet wereldwijd.",
           "Een ijstijd duurt duizenden jaren, niet één jaar.",
-          "Geen meteoriet — wel een vulkaan.",
+          "Er is geen inslagkrater uit die tijd — welke ramp in 1815 blies veel as de lucht in?",
         ],
       },
     ],
@@ -622,7 +622,7 @@ const steps = [
         wrongHints: [
           null,
           "Subductie is convergent — IJsland ligt op een rug, niet trog.",
-          "Geen schuif — twee platen gaan juist uit elkaar.",
+          "Bij een schuifgrens ontstaan vooral aardbevingen, geen vulkanen op een rug.",
           "Wel degelijk een plaatgrens — daarom de vulkanen.",
         ],
       },

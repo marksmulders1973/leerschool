@@ -258,7 +258,7 @@ const steps = [
   {
     title: "2e Industriële Revolutie (1870-1914)",
     explanation:
-      "**Tweede revolutie** = nieuwe technologieën + meer landen industrialiseren.\n\n**Kern-uitvindingen**:\n• **Elektriciteit**:\n  - Edison's gloeilamp 1879.\n  - Tesla's wisselstroom-systeem 1888.\n  - Eerste centrale 1882 (NYC).\n  - Steden verlicht, fabrieken niet meer aan stoom gebonden.\n• **Verbrandingsmotor**:\n  - Otto 4-takt 1876.\n  - Diesel 1893.\n  - Auto: Benz 1886.\n• **Chemische industrie**:\n  - Synthetische kleurstoffen (BASF, Bayer in Duitsland).\n  - Kunstmest (basis Haber-Bosch 1909).\n  - Plastic (bakeliet 1907).\n• **Communicatie**:\n  - Telegraaf (Morse 1837).\n  - Telefoon (Bell 1876).\n  - Radio (Marconi 1895).\n• **Productie**:\n  - Lopende band (Ford 1913): T-Ford-auto in 90 min ipv 12 uur.\n  - Taylor's scientific management: tijdsstudies + standaardisatie.\n\n**Industrialiserende landen**:\n• Duitsland: na eenwording 1871 → snel industrieel. Krupp staal, BASF chemie. Anti-Brits.\n• VS: na burgeroorlog 1865 → enorme groei. Rockefeller olie, Carnegie staal, JP Morgan bank.\n• Japan: Meiji-restauratie 1868 → industrialiseert razendsnel (eerste niet-Europese industrieland).\n• Rusland: traag, vooral spoorwegen + textiel. Rev. 1917 toen ze vastliepen.\n• Nederland: laat (Philips 1891, Hoogovens 1918).\n\n**Imperialisme + globalisering** (1870-1914):\n• Europese landen jagen op Afrika + Azië voor grondstoffen + afzetmarkten.\n• Berlijn-Conferentie 1884-85: verdeling Afrika.\n• Wereldhandel groeit 3× tussen 1870-1914.\n• Goederen + mensen + kapitaal stromen vrij — eerste globalisatie-golf.\n\n**Spanning + WO1**:\n• Industriële capaciteit → reusachtige legers + wapenfabrieken.\n• Duitsland haalt Britse industriële macht in → geopolitieke spanningen.\n• 1914: industriële oorlog (mitrailleur, gifgas, tank, vliegtuig) → 17 miljoen doden.\n\n**Tweede industriële revolutie eindigt** met WO1 (1914-1918) en Spaanse griep + Grote Depressie 1929-1939. Daarna herstel → derde revolutie (computers, vanaf 1950s).",
+      "**Tweede revolutie** = nieuwe technologieën + meer landen industrialiseren.\n\n**Kern-uitvindingen**:\n• **Elektriciteit**:\n  - Edison's gloeilamp 1879.\n  - Tesla's wisselstroom-systeem 1888.\n  - Eerste centrale 1882 (NYC).\n  - Steden verlicht, fabrieken niet meer aan stoom gebonden.\n• **Verbrandingsmotor**:\n  - Otto 4-takt 1876.\n  - Diesel 1893.\n  - Auto: Benz 1886.\n• **Chemische industrie**:\n  - Synthetische kleurstoffen (BASF, Bayer in Duitsland).\n  - Kunstmest (basis Haber-Bosch 1909).\n  - Plastic (bakeliet 1907).\n• **Communicatie**:\n  - Telegraaf (Morse 1837).\n  - Telefoon (Bell 1876).\n  - Radio (Marconi 1895).\n• **Productie**:\n  - Lopende band (Ford 1913): T-Ford-auto in 90 min ipv 12 uur.\n  - Taylor's scientific management: tijdsstudies + standaardisatie.\n\n**Industrialiserende landen**:\n• Duitsland: na eenwording 1871 → snel industrieel. Krupp staal, BASF chemie. Anti-Brits.\n• VS: na burgeroorlog 1865 → enorme groei. Rockefeller olie, Carnegie staal, JP Morgan bank.\n• Japan: Meiji-restauratie 1868 → industrialiseert razendsnel (eerste niet-westerse industrieland).\n• Rusland: traag, vooral spoorwegen + textiel. Rev. 1917 toen ze vastliepen.\n• Nederland: laat (Philips 1891, Hoogovens 1918).\n\n**Imperialisme + globalisering** (1870-1914):\n• Europese landen jagen op Afrika + Azië voor grondstoffen + afzetmarkten.\n• Berlijn-Conferentie 1884-85: verdeling Afrika.\n• Wereldhandel groeit 3× tussen 1870-1914.\n• Goederen + mensen + kapitaal stromen vrij — eerste globalisatie-golf.\n\n**Spanning + WO1**:\n• Industriële capaciteit → reusachtige legers + wapenfabrieken.\n• Duitsland haalt Britse industriële macht in → geopolitieke spanningen.\n• 1914: industriële oorlog (mitrailleur, gifgas, tank, vliegtuig) → 17 miljoen doden.\n\n**Tweede industriële revolutie eindigt** met WO1 (1914-1918) en Spaanse griep + Grote Depressie 1929-1939. Daarna herstel → derde revolutie (computers, vanaf 1950s).",
     checks: [
       {
         q: "**Lopende band** voor auto-productie was door:",
@@ -284,7 +284,7 @@ const steps = [
       {
         q: "**Meiji-restauratie** (1868) in Japan:",
         options: [
-          "Razendsnelle modernisering — eerste niet-Europese industrieland",
+          "Razendsnelle modernisering — eerste niet-westerse industrieland",
           "Boeren-revolutie",
           "Religieuze hervorming",
           "Oorlog tegen China"
@@ -310,7 +310,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — die was 1919.", "Onzin.", "Onzin."],
         uitlegPad: {
-          stappen: [{ titel: "'Scramble for Africa'", tekst: "Bismarck bracht 14 Europese landen samen om koloniaal Afrika-verdeling te formaliseren. Lijnen op kaart getrokken zonder rekening met inheemse etnische groepen. Veel huidige conflicten hebben hier wortels (Rwanda, Soedan, etc.)." }],
+          stappen: [{ titel: "'Scramble for Africa'", tekst: "Bismarck bracht 14 landen (vooral Europese) samen om koloniaal Afrika-verdeling te formaliseren. Lijnen op kaart getrokken zonder rekening met inheemse etnische groepen. Veel huidige conflicten hebben hier wortels (Rwanda, Soedan, etc.)." }],
           theorie: "1914: 90% Afrika in Europese handen (uitzondering: Liberia + Ethiopië).",
           niveaus: { basis: "Verdeling Afrika.", simpeler: "Europa pakt Afrika op vergadertafel.", nogSimpeler: "Berlijn-Conferentie" },
         },
@@ -342,10 +342,10 @@ const steps = [
           "Geïndustrialiseerde landen (UK, Duitsland) — gebeurde NIET",
           "Rusland — gebeurde wel",
           "China",
-          "Frankrijk"
+          "Latijns-Amerika"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Marx zag Rusland niet als rijp (te agrarisch).", "Wel 1949, na Marx.", "Niet — 1789 was burgerlijk."],
+        wrongHints: [null, "Niet — Marx zag Rusland niet als rijp (te agrarisch).", "Wel 1949, na Marx.", "Niet — daar waren in Marx' tijd nauwelijks fabrieken."],
         uitlegPad: {
           stappen: [
             { titel: "Marx had het mis", tekst: "Marx zag socialisme als logisch eindstadium van kapitalisme → revolutie zou eerst in industrieel-meest-ontwikkelde landen komen (UK, Duitsland). In praktijk: 1917 Rusland (vooral agrarisch), 1949 China (idem). UK + DE losten kwesties op via vakbond + welvaartsstaat. Voorspelling: fout. Analyse-werktuig: nog steeds gebruikt in sociologie." },

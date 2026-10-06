@@ -62,7 +62,7 @@ const steps = [
       {
         q: "De democratische leiders zijn door de tekenaar afgebeeld als laf. Welk argument voor deze mening is in de tekening te herkennen?",
         options: [
-          "De leiders hebben de communistische regering van de Sovjet-Unie",
+          "De leiders hebben de communistische regering van de Sovjet-Unie erkend.",
           "De leiders hebben de Vrede van Versailles getekend.",
           "De leiders verzetten zich niet tegen Hitlers machtsuitbreiding.",
           "De leiders zijn economisch afhankelijk van Duitsland.",
@@ -106,7 +106,7 @@ const steps = [
           "De Duitse politiek voor meer Lebensraum moest een succes worden.",
           "Duitsland wilde lid worden van de Volkenbond.",
           "Een nieuwe oorlog met Duitsland moest voorkomen worden.",
-          "Groot-Brittanni' wilde dat Duitsland het Verdrag van Versailles tekende.",
+          "Groot-Brittannië wilde dat Duitsland het Verdrag van Versailles tekende.",
         ],
         answer: 2,
         wrongHints: [
@@ -249,7 +249,7 @@ const steps = [
           theorie: "Koude Oorlog tijdlijn: 1949 DDR + NAVO. 1961 Berlijnse Muur. 1962 Cubacrisis. 1968 Praagse Lente.",
           voorbeelden: [{ type: "feit", tekst: "Kennedy zette een marine-blokkade in. Chroesjtsjov haalde raketten weg na onderhandelingen." }],
           basiskennis: [{ onderwerp: "Datum-truc", uitleg: "1962 = Cubacrisis. Andere opties: 1961 (Muur), 1949 (DDR), 1968 (Praag)." }],
-          niveaus: { basis: "Cubacrisis.", simpeler: "1962 + kernoorlog dichtbij = Cubacrisis (Sovjet-raketten op Cuba, 90 km van VS).", nogSimpeler: "Cubacrisis" },
+          niveaus: { basis: "Cubacrisis.", simpeler: "1962 + kernoorlog dichtbij = Cubacrisis (Sovjet-raketten op Cuba, zo'n 150 km van de VS).", nogSimpeler: "Cubacrisis" },
         },
       },
     ],

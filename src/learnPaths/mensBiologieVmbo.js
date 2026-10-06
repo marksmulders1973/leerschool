@@ -69,7 +69,7 @@ const steps = [
         wrongHints: [
           null,
           "Bewust denken = grote hersenen.",
-          "Fijne motoriek = kleine hersenen.",
+          "Fijne motoriek regelen de grote en kleine hersenen, niet de hersenstam.",
           "Reflexen lopen via ruggenmerg.",
         ],
         explanation: "De hersenstam regelt automatische vitale functies: ademen, hartslag, slikken, lichaamstemperatuur.",
@@ -143,7 +143,7 @@ const steps = [
         wrongHints: [
           null,
           "Het hart pompt bloed, niet lymfe — lymfe heeft eigen mechanisme.",
-          "Diafragma helpt ademen, niet lymfestroom.",
+          "Het middenrif alleen verklaart het niet — wat voorkomt dat lymfe terugstroomt?",
           "Zwaartekracht werkt op alles — verklaart geen eenrichting.",
         ],
         explanation: "Lymfe heeft geen pomp. Stroming komt van spier-bewegingen (lopen, ademen) die lymfevaten samenknijpen + kleppen die terugstromen voorkomen.",
@@ -156,7 +156,7 @@ const steps = [
           null,
           "Witte cellen = afweer, niet transport.",
           "Plaatjes = stolling.",
-          "Plasma is vocht — vervoert opgeloste stoffen maar niet O₂.",
+          "Plasma vervoert maar heel weinig O₂ — de meeste zuurstof zit gebonden in cellen.",
         ],
         explanation: "Rode bloedcellen (erytrocyten) bevatten hemoglobine, dat zich aan zuurstof bindt. Vandaar de rode kleur.",
       },
@@ -179,7 +179,7 @@ const steps = [
   {
     title: "Ademhaling — luchtweg + gaswisseling",
     explanation:
-      "Met **ademhaling** halen we zuurstof binnen en stoten CO₂ af.\n\n**Luchtweg — volgorde**:\n1. **Neus / mond** *(filteren + opwarmen + bevochtigen lucht)*\n2. **Keel** *(farynx)*\n3. **Strottenhoofd** *(larynx — met stembanden)*\n4. **Luchtpijp** *(trachea — grote centrale buis)*\n5. **Bronchiën** *(2 hoofdtakken, 1 per long)*\n6. **Bronchiolen** *(steeds kleinere vertakkingen)*\n7. **Longblaasjes** *(alveolen — eindstation)*\n\nDe eerste 6 zijn **alleen transport**. Pas in de longblaasjes vindt **gaswisseling** plaats.\n\n**Longblaasjes — alveolen**:\n• ~300 miljoen per long.\n• Wand: **1 cel dik**, omringd door dichte haarvaten.\n• Hier wisselt O₂ ↔ CO₂ tussen lucht en bloed via diffusie.\n• Totaal oppervlak: ~70 m² *(ongeveer een halve tennisbaan!)*.\n\n**In + uit ademen**:\n• **Inademen**: middenrif zakt + ribben omhoog → borstkas groter → lucht in.\n• **Uitademen**: middenrif omhoog + ribben omlaag → borstkas kleiner → lucht eruit.\n• **Middenrif** *(diafragma)* = grote spier onder longen — belangrijkste ademspier.\n\n**Wat doet bloed bij gaswisseling?**\n• Bloed komt aan in longen met veel CO₂ + weinig O₂ *(via longslagader)*.\n• In longblaasjes: O₂ naar bloed, CO₂ naar lucht.\n• Bloed gaat weer richting hart met veel O₂ + weinig CO₂ *(via longader)*.\n• Daarna door hart het lichaam in.\n\n**Vluchtige stoffen** *(zoals alcohol)* kunnen óók via longblaasjes terug naar uitgeademde lucht → daarom werkt een **blaastest**.",
+      "Met **ademhaling** halen we zuurstof binnen en stoten CO₂ af.\n\n**Luchtweg — volgorde**:\n1. **Neus / mond** *(filteren + opwarmen + bevochtigen lucht)*\n2. **Keel** *(farynx)*\n3. **Strottenhoofd** *(larynx — met stembanden)*\n4. **Luchtpijp** *(trachea — grote centrale buis)*\n5. **Bronchiën** *(2 hoofdtakken, 1 per long)*\n6. **Bronchiolen** *(steeds kleinere vertakkingen)*\n7. **Longblaasjes** *(alveolen — eindstation)*\n\nDe eerste 6 zijn **alleen transport**. Pas in de longblaasjes vindt **gaswisseling** plaats.\n\n**Longblaasjes — alveolen**:\n• ~300 miljoen in totaal.\n• Wand: **1 cel dik**, omringd door dichte haarvaten.\n• Hier wisselt O₂ ↔ CO₂ tussen lucht en bloed via diffusie.\n• Totaal oppervlak: ~70 m² *(ongeveer een halve tennisbaan!)*.\n\n**In + uit ademen**:\n• **Inademen**: middenrif zakt + ribben omhoog → borstkas groter → lucht in.\n• **Uitademen**: middenrif omhoog + ribben omlaag → borstkas kleiner → lucht eruit.\n• **Middenrif** *(diafragma)* = grote spier onder longen — belangrijkste ademspier.\n\n**Wat doet bloed bij gaswisseling?**\n• Bloed komt aan in longen met veel CO₂ + weinig O₂ *(via longslagader)*.\n• In longblaasjes: O₂ naar bloed, CO₂ naar lucht.\n• Bloed gaat weer richting hart met veel O₂ + weinig CO₂ *(via longader)*.\n• Daarna door hart het lichaam in.\n\n**Vluchtige stoffen** *(zoals alcohol)* kunnen óók via longblaasjes terug naar uitgeademde lucht → daarom werkt een **blaastest**.",
     checks: [
       {
         q: "Waar vindt de gaswisseling plaats?",
@@ -413,10 +413,10 @@ const steps = [
         explanation: "Grote hersenen = cortex = bewust denken, willekeurige bewegingen, geheugen.",
       },
       {
-        q: "Wat zit er in lymfevloeistof?",
-        options: ["Alleen witte bloedcellen", "Rode + witte + plaatjes", "Plasma + plaatjes", "Niets — lymfe is leeg"],
+        q: "Welke bloedcellen zitten er in lymfevloeistof?",
+        options: ["Alleen witte bloedcellen", "Rode + witte + plaatjes", "Alleen bloedplaatjes", "Geen enkele bloedcel"],
         answer: 0,
-        wrongHints: [null, "Rode cellen + plaatjes blijven in bloedbaan.", "Plasma is bloed-vocht, geen lymfe-bestanddeel.", "Lymfe heeft wel inhoud — witte cellen + weefselvocht."],
+        wrongHints: [null, "Rode cellen + plaatjes blijven in bloedbaan.", "Plaatjes blijven in de bloedbaan.", "Er kruipen wel cellen door de haarvatwand — welke?"],
         explanation: "Lymfe = weefselvocht teruggevoerd. Alleen witte cellen kunnen door haarvatwand kruipen → enige bloeddeel in lymfe.",
       },
       {

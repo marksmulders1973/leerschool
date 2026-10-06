@@ -77,7 +77,7 @@ const steps = [
         q: "Wie was **Karel de Grote**?",
         options: ["Koning Frankenrijk + keizer rond 800", "Pestslachtoffer", "Ridder", "Kunstenaar"],
         answer: 0,
-        wrongHints: [null, "Niet specifiek.", "Was meer dan ridder.", "Geen kunstenaar."],
+        wrongHints: [null, "Niet — de grote pest kwam pas eeuwen later.", "Was meer dan ridder.", "Geen kunstenaar."],
       },
     ],
   },
@@ -135,9 +135,9 @@ const steps = [
       },
       {
         q: "Waar gingen de kruisvaarders **heen**?",
-        options: ["Heilige Land (Jeruzalem)", "Amerika", "China", "Afrika"],
+        options: ["Heilige Land (Jeruzalem)", "Amerika", "China", "Engeland"],
         answer: 0,
-        wrongHints: [null, "Nog niet ontdekt.", "Niet kruistochten.", "Niet specifiek."],
+        wrongHints: [null, "Nog niet ontdekt.", "Niet kruistochten.", "Niet — daar kwamen juist veel kruisvaarders vandaan."],
       },
       {
         q: "Wie won uiteindelijk **Jeruzalem terug** voor de moslims in 1187?",
@@ -182,9 +182,9 @@ const steps = [
       },
       {
         q: "Hoe word je **meester** in een gilde?",
-        options: ["Leerjongen → gezel → meester", "Geld betalen", "Op zoek gaan", "Toets doen"],
+        options: ["Leerjongen → gezel → meester", "Geld betalen", "Op zoek gaan", "Door de koning benoemd worden"],
         answer: 0,
-        wrongHints: [null, "Niet alleen geld.", "Niet zoeken.", "Werk + leer-jaren."],
+        wrongHints: [null, "Niet alleen geld.", "Niet zoeken.", "Niet — het gilde bepaalde zelf wie meester werd."],
       },
       {
         q: "Wat betekent 'stadslucht maakt **vrij**'?",
@@ -205,7 +205,7 @@ const steps = [
         q: "Wat was de **Zwarte Dood**?",
         options: ["Pest-pandemie (1347-1352)", "Heks-jacht", "Oorlog", "Klimaatverandering"],
         answer: 0,
-        wrongHints: [null, "Niet de pest.", "Geen oorlog.", "Wel beetje, maar pest is de Zwarte Dood."],
+        wrongHints: [null, "Niet de pest.", "Geen oorlog.", "Niet — denk aan iets waaraan miljoenen mensen in korte tijd stierven."],
       },
       {
         q: "Hoeveel **% van Europa** stierf aan pest?",

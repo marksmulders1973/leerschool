@@ -143,10 +143,10 @@ const steps = [
       ],
       answer: 2,
       wrongHints: [
-        "Te smal + onjuist — tekst noemt geen historische dalende lijn, maar HOE jongeren NU denken.",
+        "Te smal — dat jongeren slechter spellen wordt kort genoemd, maar is dat waar de hele tekst over gaat?",
         "Te smal — datingsite is 1 van de contexten (peiling NRC), maar de tekst zegt veel meer.",
         null,
-        "Te smal + verkeerd accent — tekst gaat over WAT jongeren VINDEN van fouten, niet welke fouten ze MAKEN.",
+        "Te smal + verkeerd accent — gaat de tekst vooral over welke fouten jongeren op sociale media MAKEN?",
       ],
       explanation: "De tekst combineert ONDERZOEK (Vandekerckhove + NRC-peiling) met wat jongeren VINDEN van spelfouten. Antwoord C is breed genoeg om beide te dekken — 'onderzoek wat jongeren van spelfouten vinden'. Antwoord B is té smal (alleen datingsite).",
       examenBron: BRON_LABEL(18),
@@ -225,7 +225,7 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Te specifiek — Independer wil ALLE verzekeringen via zich verkocht hebben, niet alleen beugel-verzekeringen.",
+        "Te specifiek — gaat de oproep alleen over verzekeringen die beugels vergoeden?",
         null,
         "Informeren ≠ doel van een advertentie. Advertentie WIL actie.",
         "Informeren ≠ doel van een advertentie. Independer verkoopt geen eigen verzekeringen, vergelijkt ze.",
@@ -266,7 +266,7 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Te smal — tekst noemt ZOWEL nadelen (plastic) ALS voordelen (biobased) — een ONTWIKKELING.",
+        "Te smal — de tekst noemt niet alleen nadelen (plastic), maar ook biobased alternatieven.",
         null,
         "Overhalen = mening + aansporing. Tekst neemt geen kant — beschrijft.",
         "Overhalen = mening + aansporing. Tekst is genuanceerd — geen 'koop alleen X' boodschap.",

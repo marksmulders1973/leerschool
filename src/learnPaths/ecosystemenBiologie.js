@@ -91,7 +91,7 @@ const steps = [
         q: "Een **populatie** is?",
         options: ["Alle organismen van 1 soort in 1 gebied", "1 soort wereldwijd", "Alle dieren samen", "Eén dier"],
         answer: 0,
-        wrongHints: [null, "Veel breder dan populatie.", "Onvolledig — meerdere soorten.", "Te specifiek."],
+        wrongHints: [null, "Veel breder dan populatie.", "Te ruim — dat zijn meerdere soorten.", "Te specifiek."],
       },
       {
         q: "Een **levensgemeenschap** is?",
@@ -106,7 +106,7 @@ const steps = [
   {
     title: "3 rollen: producent, consument, afbreker",
     explanation:
-      "Levende wezens in een ecosysteem hebben **3 hoofdrollen** *(uit je hoofd!)*.\n\n**1. Producenten** 🌱\n• **Planten + algen + cyanobacteriën**.\n• Maken **zelf voedsel** uit zonlicht, water en CO₂ (fotosynthese).\n• Heten ook **autotrofen** *(zelf-voedend)*.\n• Vormen **basis** van elke voedselketen.\n\n**Voorbeelden**: gras, bomen, algen, mos, kelp.\n\n**2. Consumenten** 🐰🦊\n• **Dieren** die andere organismen eten.\n• Heten ook **heterotrofen** *(andere-voedend)*.\n\n**Subgroepen**:\n• **1e consument = herbivoor** = eet planten *(koe, konijn, ree)*.\n• **2e consument = carnivoor** = eet herbivoren *(vos, valk)*.\n• **3e consument = toproofdier** = eet andere carnivoren *(leeuw, orka, haai)*.\n• **Omnivoor** = beide *(mens, beer, varken)*.\n• **Aaseter** = eet dode dieren *(gier, hyena)*.\n\n**3. Afbrekers** 🍄\n• **Schimmels + bacteriën + sommige kleine dieren** *(wormen, pissebedden)*.\n• Eten **dode planten en dieren** + uitwerpselen.\n• **Breken** complex materiaal af tot **voedingsstoffen** voor planten.\n• Zonder afbrekers zou de aarde vol liggen met lijken + afval.\n\n**Belang van afbrekers**:\n• Maken **mineralen** vrij *(stikstof, fosfor, kalium)*.\n• Planten nemen die op met hun wortels.\n• Cyclus is rond — niets gaat verloren.\n\n**Voorbeeld kringloop**:\n1. **Plant** groeit met zonlicht + voedingsstoffen uit grond.\n2. **Konijn** eet plant.\n3. **Vos** eet konijn.\n4. Vos sterft → **schimmel + bacterie** breken af.\n5. **Voedingsstoffen** komen terug in grond.\n6. **Nieuwe plant** groeit. Cyclus rond!\n\n**toetsvragen**:\n*'Welke rol heeft een schimmel?'* → afbreker.\n*'Wat doet een producent?'* → maakt zelf voedsel uit zonlicht.\n*'Eet een leeuw planten?'* → nee, carnivoor.\n\n**Belangrijke termen**:\n• **Autotroof** = zelf voedsel maken (planten).\n• **Heterotroof** = ander voedsel eten (dieren + schimmels).\n• **Decompositie** = afbraak van dood materiaal.",
+      "Levende wezens in een ecosysteem hebben **3 hoofdrollen** *(uit je hoofd!)*.\n\n**1. Producenten** 🌱\n• **Planten + algen + cyanobacteriën**.\n• Maken **zelf voedsel** uit zonlicht, water en CO₂ (fotosynthese).\n• Heten ook **autotrofen** *(zelf-voedend)*.\n• Vormen **basis** van elke voedselketen.\n\n**Voorbeelden**: gras, bomen, algen, mos, kelp.\n\n**2. Consumenten** 🐰🦊\n• **Dieren** die andere organismen eten.\n• Heten ook **heterotrofen** *(andere-voedend)*.\n\n**Subgroepen**:\n• **1e consument = herbivoor** = eet planten *(koe, konijn, ree)*.\n• **2e consument = carnivoor** = eet herbivoren *(vos, valk)*.\n• **3e consument = toproofdier** = eet andere carnivoren *(orka, haai, havik)*.\n• **Omnivoor** = beide *(mens, beer, varken)*.\n• **Aaseter** = eet dode dieren *(gier, hyena)*.\n\n**3. Afbrekers** 🍄\n• **Schimmels + bacteriën + sommige kleine dieren** *(wormen, pissebedden)*.\n• Eten **dode planten en dieren** + uitwerpselen.\n• **Breken** complex materiaal af tot **voedingsstoffen** voor planten.\n• Zonder afbrekers zou de aarde vol liggen met lijken + afval.\n\n**Belang van afbrekers**:\n• Maken **mineralen** vrij *(stikstof, fosfor, kalium)*.\n• Planten nemen die op met hun wortels.\n• Cyclus is rond — niets gaat verloren.\n\n**Voorbeeld kringloop**:\n1. **Plant** groeit met zonlicht + voedingsstoffen uit grond.\n2. **Konijn** eet plant.\n3. **Vos** eet konijn.\n4. Vos sterft → **schimmel + bacterie** breken af.\n5. **Voedingsstoffen** komen terug in grond.\n6. **Nieuwe plant** groeit. Cyclus rond!\n\n**toetsvragen**:\n*'Welke rol heeft een schimmel?'* → afbreker.\n*'Wat doet een producent?'* → maakt zelf voedsel uit zonlicht.\n*'Eet een leeuw planten?'* → nee, carnivoor.\n\n**Belangrijke termen**:\n• **Autotroof** = zelf voedsel maken (planten).\n• **Heterotroof** = ander voedsel eten (dieren + schimmels).\n• **Decompositie** = afbraak van dood materiaal.",
     checks: [
       {
         q: "Welke is een **producent**?",
@@ -332,7 +332,7 @@ const steps = [
       {
         q: "**Open vraag**: noem 1 voorbeeld van een **producent**.",
         kind: "open",
-        acceptedAnswers: ["plant", "boom", "gras", "alg", "fotosynthese", "planten", "bomen"],
+        acceptedAnswers: ["plant", "boom", "gras", "alg", "algen", "planten", "bomen"],
         explanation: "Producenten zijn organismen die zelf voedsel maken via fotosynthese: planten, bomen, gras, algen.",
       },
     ],

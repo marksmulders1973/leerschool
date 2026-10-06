@@ -223,7 +223,7 @@ const steps = [
         q: "Wat is de **belangrijkste push-factor** voor Syrische vluchtelingen?",
         options: ["Oorlog (2011-)", "Klimaat", "Werkloosheid", "Onderwijs"],
         answer: 0,
-        wrongHints: [null, "Speelt wel mee maar oorlog primair.", "Speelt mee.", "Niet hoofd-push."],
+        wrongHints: [null, "Droogte speelde wel mee, maar was dat de reden dat miljoenen mensen in korte tijd moesten vluchten?", "Speelt mee.", "Niet hoofd-push."],
       },
     ],
   },

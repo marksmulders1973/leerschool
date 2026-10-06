@@ -42,7 +42,7 @@ const steps = [
           stappen: [
             { titel: "Wat krijgt het huishouden?", tekst: "De gemeente geeft GELD aan huishoudens die zonnepanelen kopen. Dat heet een subsidie." },
             { titel: "Moet het huishouden ervoor werken?", tekst: "Nee. Geen werk, geen huis verhuren, geen geld op de bank. Het is een uitkering van de overheid." },
-            { titel: "Welke 4 inkomenssoorten zijn er?", tekst: "Loon (arbeid), winst/rente/dividend (bezit/vermogen), én overdrachten (cadeau van overheid). Een subsidie hoort bij de laatste." },
+            { titel: "Welke 4 inkomenssoorten zijn er?", tekst: "Loon (arbeid), rente/huur/dividend (bezit of vermogen), winst (ondernemen) én overdrachten (cadeau van overheid). Een subsidie hoort bij de laatste." },
           ],
           woorden: [
             { woord: "subsidie", uitleg: "Geld dat de overheid geeft om iets te stimuleren (bv. zonnepanelen, isolatie, kinderopvang)." },
@@ -84,9 +84,9 @@ const steps = [
         ],
         answer: 3,
         wrongHints: [
-          "Niet de NL-overheid — die heft niets als de import naar BE gaat. De BE-overheid heft, en de BE-importeur betaalt.",
-          "Niet de NL-overheid — de heffing is van BE. Importeur in BE betaalt.",
-          "Belgische importeur betaalt eerst, klopt — maar uiteindelijk komt het bij de BE-eindkoper terecht (BE-consument koopt het immers in BE).",
+          "Niet de NL-overheid — die heft niets als de import naar BE gaat. Welke overheid heft dan, en wie haalt de boter over de grens?",
+          "Niet de NL-overheid — betaalt een overheid zelf de heffing die ze oplegt? Denk aan wie de boter het land in haalt.",
+          "Het eerste deel klopt. Maar in welk land staat de winkel waar de geïmporteerde boter uiteindelijk verkocht wordt?",
           null,
         ],
         explanation: "Importheffing geheven door BE → wordt betaald door BE-importeur (die haalt boter uit NL). Die importeur rekent de heffing door in zijn verkoopprijs aan de uiteindelijke BE-consument. Dus: Belgische importeur betaalt eerst, BE-consument betaalt indirect via hogere boterprijs. De Nederlandse overheid heeft hier niets mee te maken.",
@@ -238,7 +238,7 @@ const steps = [
             { woord: "monopolistische concurrentie", uitleg: "Veel aanbieders maar elke aanbieder heeft een uniek product. Bv. kledingmerken, kappers, restaurants." },
             { woord: "oligopolie", uitleg: "Een paar grote aanbieders. Bv. supermarkt-ketens, telecomproviders." },
           ],
-          theorie: "**4 marktvormen:**\n\n| | Veel aanbieders | Weinig | 1 |\n|---|---|---|---|\n| **Homogeen** | volkomen concurrentie | — | — |\n| **Heterogeen** | monopolistische concurrentie | oligopolie | monopolie |\n\nK2 bv: veel aanbieders + heterogeen → vak linksonder = monopolistische concurrentie.",
+          theorie: "**4 marktvormen:**\n\n| | Veel aanbieders | Weinig | 1 |\n|---|---|---|---|\n| **Homogeen** | volkomen concurrentie | oligopolie | monopolie |\n| **Heterogeen** | monopolistische concurrentie | oligopolie | monopolie |\n\nBij weinig of één aanbieder maakt homogeen/heterogeen voor de naam niet uit. K2 bv: veel aanbieders + heterogeen → vak linksonder = monopolistische concurrentie.",
           voorbeelden: [
             { type: "monopolistisch", tekst: "Frietzaken in jouw stad: er zijn er 20, maar elke patatzaak heeft iets unieks (saus, type frietjes, sfeer)." },
             { type: "oligopolie", tekst: "Supermarktketens NL: AH, Jumbo, Lidl, Aldi, Plus — paar grote spelers." },
@@ -271,9 +271,9 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "Tegendeel — door schaalvoordelen daalt de kostprijs per stuk, niet de marge.",
+          "Wat gebeurt er met de vaste kosten per product als je méér gaat maken?",
           null,
-          "Niet als de kostprijs daalt door schaalvoordelen.",
+          "Blijft de kostprijs per stuk echt gelijk als de vaste kosten over meer producten verdeeld worden?",
         ],
         explanation: "Bij productie-uitbreiding ontstaan vaak SCHAALVOORDELEN: vaste kosten verdeeld over meer producten = lagere kostprijs per stuk. Als de verkoopprijs gelijk blijft maar de kostprijs daalt, stijgt de winstmarge per product (verkoopprijs − kostprijs).",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 1, vraag 42",

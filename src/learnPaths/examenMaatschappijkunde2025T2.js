@@ -95,7 +95,7 @@ const steps = [
       ],
       answer: 3,
       wrongHints: ["Niet de koning, maar de MINISTERS zijn politiek verantwoordelijk ('de koning is onschendbaar, de minister verantwoordelijk').", "Tegenovergesteld — grondwet veranderen kan ALLEEN met instemming van beide Kamers (zelfs 2x = 'in 2 lezingen').", "Tegenovergesteld — de koning ondertekent WEL Koninklijke Besluiten (samen met minister).", null],
-      explanation: "**Constitutionele monarchie** = koning bestaat, maar zijn macht is BEPERKT door de constitutie (grondwet). NL sinds 1848 (Thorbecke). Koning = onschendbaar staatshoofd, ministers = politiek verantwoordelijk. Echte beslissingen worden door kabinet+parlement genomen.",
+      explanation: "**Constitutionele monarchie** = koning bestaat, maar zijn macht is BEPERKT door de constitutie (grondwet). NL heeft sinds 1814/1815 een grondwet; sinds 1848 (Thorbecke) geldt de ministeriële verantwoordelijkheid. Koning = onschendbaar staatshoofd, ministers = politiek verantwoordelijk. Echte beslissingen worden door kabinet+parlement genomen.",
       examenBron: BRON_LABEL(12),
       bronLink: BRON_LINK,
       leerpadLink: { id: "nederlandse-staat-maatschappijleer", title: "Nederlandse staat & monarchie" },

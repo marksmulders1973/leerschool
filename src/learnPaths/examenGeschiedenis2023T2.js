@@ -98,7 +98,7 @@ const steps = [
         "rassenleer en censuur",
       ],
       answer: 1,
-      wrongHints: ["Censuur = persvrijheid-onderdrukking. Niet zichtbaar in de tekening — geen kranten/boeken.", null, "Rassenleer (jodenvervolging) is niet WAT in de tekening centraal staat — wel geweren/soldaten = militair.", "Geen rassenleer + geen censuur — wel militaire dreiging (soldaten/geweren) + indoctrinatie (boodschap)."],
+      wrongHints: ["Censuur = persvrijheid-onderdrukking. Niet zichtbaar in de tekening — geen kranten/boeken.", null, "Rassenleer (jodenvervolging) is niet WAT in de tekening centraal staat — wel geweren/soldaten = militair.", "Kijk nog eens goed: zie je in de tekening iets over rassen, of over kranten en boeken die verboden worden?"],
       explanation: "Tekening 1938 toont: Duitse SOLDATEN met geweren (= **militarisme** = leger-cultus, oorlog-paraatheid) + Hitler die 'kapperszaak' runt waar Britse leeuw vrijwillig komt zitten (= **indoctrinatie** = mensen overtuigen via beelden/symbolen). Geen rassenleer (Joden), geen censuur (pers).",
       examenBron: BRON_LABEL(20),
       bronLink: BRON_LINK,

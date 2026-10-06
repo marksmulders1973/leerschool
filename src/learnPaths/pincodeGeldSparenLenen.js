@@ -485,9 +485,9 @@ const steps = [
     checks: [
       {
         q: "Wat doet een bank met **jouw spaargeld**?",
-        options: ["Klein deel houdt ze in kas, rest leent ze uit aan anderen", "Bewaart het in een kluis", "Geeft het terug bij vraag", "Belegt alles in aandelen"],
+        options: ["Klein deel houdt ze in kas, rest leent ze uit aan anderen", "Bewaart het in een kluis", "Stuurt het door naar de Belastingdienst", "Belegt alles in aandelen"],
         answer: 0,
-        wrongHints: [null, "Niet meer in kluis — modern bankieren leent uit.", "Klein deel ja, niet alles.", "Banken beleggen sommig wel, maar voornamelijk uitlenen."],
+        wrongHints: [null, "Niet meer in kluis — modern bankieren leent uit.", "De Belastingdienst beheert geen spaargeld van klanten.", "Banken beleggen sommig wel, maar voornamelijk uitlenen."],
         uitlegPad: {
           stappen: [{ titel: "Bank = uitlenen-machine", tekst: "Bank houdt ~5% in kasreserve (om dagelijkse opnames te kunnen doen). De rest LEEN ze uit aan andere klanten voor hypotheek, bedrijfslening, persoonlijke lening." }],
           woorden: [{ woord: "kasreserve", uitleg: "Klein percentage dat bank in kas houdt voor opnames. Een klein deel is verplicht (ECB-regel); banken houden zelf ook buffers aan." }, { woord: "uitlenen", uitleg: "Geld van spaarders aan leners geven tegen hogere rente — kern van bankmodel." }],

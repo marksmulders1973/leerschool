@@ -169,7 +169,7 @@ const steps = [
       },
       {
         q: "Wat heeft een plant **NIET nodig**?",
-        options: ["Eigen voedsel van buitenaf", "Zonlicht", "Water", "CO₂"],
+        options: ["Kant-en-klare suiker van buitenaf", "Zonlicht", "Water", "CO₂"],
         answer: 0,
         wrongHints: [null, "Een plant vangt met zijn bladeren zonlicht om zijn eigen eten te maken. Zou hij zonder licht dan wel kunnen groeien?", "Denk aan wat je een plant elke week geeft zodat hij niet verwelkt. Kan hij dat missen?", "Planten nemen dit gas uit de lucht op om suiker van te maken. De vraag is wat een plant NIET nodig heeft — hoort dit daarbij?"],
         uitlegPad: {
@@ -231,9 +231,9 @@ const steps = [
     checks: [
       {
         q: "Wat geven planten **overdag** AF?",
-        options: ["Zuurstof", "CO₂", "Water", "Niets"],
+        options: ["Zuurstof", "CO₂", "Suiker", "Niets"],
         answer: 0,
-        wrongHints: [null, "Nemen ze juist OP.", "Verdampen wel water maar O₂ is wat we bedoelen.", "Geven wel iets af."],
+        wrongHints: [null, "Nemen ze juist OP.", "Die suiker houden ze zelf als voedsel.", "Geven wel iets af."],
       },
       {
         q: "Wat produceert het **meeste zuurstof** voor de hele aarde?",
@@ -242,16 +242,16 @@ const steps = [
         wrongHints: [null, "Bekende bijnaam 'longen van de aarde', maar oceanen leveren meer.", "Bossen leveren veel — maar minder dan de oceanen.", "Mensen ademen zuurstof IN, produceren het niet."],
       },
       {
-        q: "Wat gebeurt als planten **alle verdwijnen**?",
+        q: "Wat gebeurt als planten **allemaal verdwijnen**?",
         options: ["Zuurstof zou opraken (langzaam)", "Niets", "Meer dieren", "Aarde wordt groener"],
         answer: 0,
         wrongHints: [null, "Wel iets — heel veel.", "Dieren afhankelijk van planten voor voedsel.", "Andersom."],
       },
       {
         q: "Geven planten **'s nachts** ook zuurstof af?",
-        options: ["Nee (geen zonlicht)", "Ja, evenveel", "Ja, dubbel", "Nee, ze maken juist CO₂"],
+        options: ["Nee (geen zonlicht)", "Ja, evenveel", "Ja, dubbel", "Ja, maar minder dan overdag"],
         answer: 0,
-        wrongHints: [null, "Niet evenveel.", "Niet meer.", "Klopt qua CO₂, maar de vraag gaat over zuurstof: waarom maken ze 's nachts geen O₂?"],
+        wrongHints: [null, "Niet evenveel.", "Niet meer.", "Wat heeft een plant nodig om zuurstof te maken — en is dat er 's nachts?"],
       },
     ],
   },
@@ -326,8 +326,8 @@ const steps = [
         wrongHints: [null, "Geen zonlicht 's nachts.", "Ook 's winters wel als zon schijnt.", "Wel — anders geen O₂ op aarde."],
       },
       {
-        q: "**Naaldbomen** *(zoals dennen)* verliezen ... ?",
-        options: ["Geen naalden in herfst (altijdgroen)", "Alle naalden tegelijk", "Alleen in zomer", "Nooit naalden"],
+        q: "Een **den** *(naaldboom)* verliest in de herfst ... ?",
+        options: ["Niet al zijn naalden (blijft groen)", "Alle naalden tegelijk", "Alleen in zomer", "Nooit naalden"],
         answer: 0,
         wrongHints: [null, "Niet allemaal tegelijk.", "Nee, behouden zomer en winter.", "Verliezen wel beetje per jaar."],
       },

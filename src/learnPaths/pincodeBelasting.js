@@ -218,7 +218,7 @@ const steps = [
         q: "**Overdrachtsbelasting** voor een starter (jonger dan 35) bij koop huis < €500k:",
         options: ["0%", "2%", "6%", "21%"],
         answer: 0,
-        wrongHints: [null, "Was vroeger 2%, nu 0% voor starters.", "Gold tot 2011.", "BTW-tarief, niet overdracht."],
+        wrongHints: [null, "Dat is het gewone tarief — geldt er voor jonge starters een uitzondering?", "Gold tot 2011.", "BTW-tarief, niet overdracht."],
         uitlegPad: {
           stappen: [{ titel: "Startersregeling", tekst: "Sinds 2021: starters tot 35 jaar + huis onder de woningwaarde-grens (2024: €510k) → 0% overdrachtsbelasting. Eenmalig. Doel: starters helpen op de huizenmarkt." }],
           woorden: [{ woord: "startersregeling", uitleg: "Vrijstelling overdrachtsbelasting voor 18-35-jarige starters." }, { woord: "overdrachtsbelasting", uitleg: "Belasting bij koop bestaande woning. 2% standaard, 0% starters, hoger tarief voor beleggers (2023-2025: 10,4%; vanaf 2026: 8%)." }],
@@ -267,7 +267,7 @@ const steps = [
         q: "Wat betekent **progressief** in inkomstenbelasting?",
         options: ["Hoger inkomen → hoger percentage in hoogste schijf", "Belasting elk jaar hoger", "Iedereen evenveel", "Belasting daalt met inkomen"],
         answer: 0,
-        wrongHints: [null, "Progressief = stijgend BINNEN 1 jaar.", "Dat is vlaktaks.", "Dat zou degressief zijn."],
+        wrongHints: [null, "Progressief = stijgend BINNEN 1 jaar.", "Dat is vlaktaks.", "Dat zou regressief zijn."],
         uitlegPad: {
           stappen: [{ titel: "Trapsgewijs stijgen", tekst: "Progressief = belasting-percentage STIJGT met hoger inkomen. NL: tot ~€75k = 36,97%, daarboven 49,5%. Wie meer verdient draagt zwaarder bij." }],
           woorden: [{ woord: "progressieve belasting", uitleg: "Tarief stijgt mee met inkomen. Sterke schouders zwaarder belast." }, { woord: "vlaktaks", uitleg: "Iedereen zelfde percentage. Tegenovergesteld systeem." }],
@@ -323,7 +323,7 @@ const steps = [
         q: "Wanneer moet je IB-aangifte uiterlijk doen?",
         options: ["Voor 1 mei (of na uitstel)", "1 januari", "31 december", "Geen deadline"],
         answer: 0,
-        wrongHints: [null, "Te vroeg.", "Te laat — vóór 1 mei.", "Wel deadline."],
+        wrongHints: [null, "Te vroeg.", "Te laat — de deadline valt al in het voorjaar.", "Wel deadline."],
         uitlegPad: {
           stappen: [{ titel: "1 mei standaard", tekst: "Aangifte over jaar X moet vóór 1 mei van jaar X+1. Bij uitstel (kan via 'verlenging'): tot 1 sept. Bij belastingadviseur: vaak tot eind jaar X+1." }],
           woorden: [{ woord: "IB-aangifte", uitleg: "Jaarlijkse opgave van inkomen + aftrekposten + correctie van loonheffing." }, { woord: "uitstel", uitleg: "Verzoek bij Belastingdienst om later in te dienen." }],
@@ -390,7 +390,7 @@ const steps = [
         q: "Wie krijgt de **algemene heffingskorting**?",
         options: ["Iedereen, maar daalt bij hoger inkomen", "Alleen rijken", "Alleen werknemers", "Niemand"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Voor iedereen.", "Bestaat zeker."],
+        wrongHints: [null, "Tegendeel.", "Ook wie geen loon heeft, bijvoorbeeld met AOW of een uitkering, kan hem krijgen.", "Bestaat zeker."],
         uitlegPad: {
           stappen: [{ titel: "Iedereen, dalend", tekst: "Algemene heffingskorting (AHK) krijgt IEDEREEN met inkomen. Bij laag inkomen max (~€3.300/jr). Daalt geleidelijk bij stijgend inkomen. Boven ~€75k: €0." }],
           woorden: [{ woord: "algemene heffingskorting", uitleg: "Basis-heffingskorting voor iedereen. Wordt uitgefaseerd bij hoog inkomen." }, { woord: "uitfasering", uitleg: "Korting wordt kleiner naarmate inkomen hoger wordt." }],
@@ -497,7 +497,7 @@ const steps = [
         q: "Wie krijgt **kinderbijslag**?",
         options: ["Iedere ouder met kind, ongeacht inkomen", "Alleen lage inkomens", "Alleen werkenden", "Alleen alleenstaanden"],
         answer: 0,
-        wrongHints: [null, "Onafhankelijk van inkomen.", "Onafhankelijk van werk.", "Voor alle ouders."],
+        wrongHints: [null, "Kijk of het bedrag afhangt van wat je verdient.", "Onafhankelijk van werk.", "Of je alleen of samen opvoedt, maakt voor het recht niet uit."],
         uitlegPad: {
           stappen: [{ titel: "Universeel — geen toets", tekst: "Kinderbijslag (AKW) = vast bedrag per kwartaal per kind. IEDERE ouder krijgt dit, ongeacht inkomen, werksituatie, gezinsvorm. Strikt geen 'toeslag' maar volksverzekering." }],
           woorden: [{ woord: "AKW", uitleg: "Algemene Kinderbijslagwet. Iedere ouder krijgt het, betaald uit de algemene middelen." }, { woord: "kindgebonden budget", uitleg: "Aanvullend op kinderbijslag, WEL inkomensafhankelijk. Voor lage/midden-inkomens." }],
@@ -539,7 +539,7 @@ const steps = [
         q: "Wie krijgt **kinderopvangtoeslag**?",
         options: ["Werkende/studerende ouders die opvang/crèche gebruiken", "Iedere ouder", "Alleen alleenstaanden", "Geen ouders"],
         answer: 0,
-        wrongHints: [null, "Niet zonder werk.", "Niet leeftijd-gebonden.", "Wel ouders."],
+        wrongHints: [null, "Niet zonder werk.", "Ook stellen kunnen hem krijgen — gezinsvorm is niet de voorwaarde.", "Wel ouders."],
         uitlegPad: {
           stappen: [{ titel: "Twee voorwaarden", tekst: "Kinderopvangtoeslag krijg je als (1) je kind naar formele opvang/crèche/BSO gaat én (2) BEIDE ouders werken of studeren. Anders geen recht." }],
           woorden: [{ woord: "kinderopvangtoeslag", uitleg: "Tegemoetkoming in kinderopvangkosten voor werkende/studerende ouders." }, { woord: "formele opvang", uitleg: "Geregistreerde kinderopvang (in LRK-register). Oma die oppast telt niet (tenzij als geregistreerde gastouder)." }],

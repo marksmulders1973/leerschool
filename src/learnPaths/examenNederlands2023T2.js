@@ -103,7 +103,7 @@ const steps = [
       answer: 0,
       wrongHints: [
         null,
-        "Persoonlijke noot = MENING/ANEKDOTE van de schrijver zelf. Alinea 14 trekt rationeel een conclusie.",
+        "Persoonlijke noot = MENING/ANEKDOTE van de schrijver zelf. Vertelt de schrijver in alinea 14 iets over zichzelf?",
         "Toekomstverwachting = wat ER GAAT gebeuren. Alinea 14 spreekt over hoe je het NU aanpakt.",
         "Geen nieuwe info — alinea 14 vat samen wat eerder werd gezegd.",
       ],
@@ -145,7 +145,7 @@ const steps = [
       wrongHints: [
         "Samenvatting = ALLE punten kort herhalen. Alinea 1 noemt 1 issue.",
         "Conclusie = eindoordeel na redenering. Alinea 1 staat AAN HET BEGIN, niet na.",
-        "Een voorbeeld werkt één concreet geval uit. Alinea 1 noemt landen en een probleem, maar werkt dat niet uit als voorbeeld.",
+        "Een voorbeeld werkt één concreet geval uit. Alinea 1 noemt wel landen, maar werkt er geen uit als voorbeeld.",
         null,
       ],
       explanation: "Alinea 1 noemt: 'overal ter wereld dramatische achteruitgang van insecten' + 'ook kunstlicht is oorzaak'. Dat IS het centrale probleem dat de hele tekst behandelt.",
@@ -227,7 +227,7 @@ const steps = [
       wrongHints: [
         null,
         "Te smal — de meeste lezers weten niet eens precies hoe muskietennetten werken. De advertentie verklaart het kort.",
-        "Te oppervlakkig — kerstcadeaus geven kan iedereen, het GOEDE DOEL is de kern.",
+        "Te oppervlakkig — kerstcadeaus geven kan iedereen; waar gaat het geld van dit 'kerstpakket' eigenlijk naartoe?",
         "Letterlijk inpakken = vrijwilligerswerk. De advertentie vraagt om GELD, niet om handen.",
       ],
       explanation: "Tekst: 'Geef een kerstpakket waarmee je levens redt' + Artsen zonder Grenzen + medische zorg redden + €25 voor 10 netten. Hele framing = mensen die GELD willen geven aan een goed doel rond Kerstmis.",
@@ -266,10 +266,10 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Te smal — de tekst noemt geen cijfers over hoeveelheid; gaat over AANPAK.",
+        "Te smal — de tekst noemt geen cijfers over de hoeveelheid zwerfafval.",
         null,
         "Overtuigen = mening. Tekst beschrijft + nuanceert (zelfs psychologen ingeschakeld), neemt geen stelling 'McDonald's is goed'.",
-        "Overtuigen lezer = aansporing voor de LEZER. Tekst gaat over wat MCDONALD'S doet, niet wat jij moet doen.",
+        "Overtuigen lezer = aansporing voor de LEZER. Spoort de tekst jou aan om zelf iets te doen?",
       ],
       explanation: "Tekst beschrijft: McDonald's wil zwerfafval aanpakken, gebruikt psychologen, beloont schone klanten, neemt verpakkingen terug. Allemaal AANPAK-info zonder mening. = informeren over hoe ze omgaan met afval.",
       examenBron: BRON_LABEL(33),

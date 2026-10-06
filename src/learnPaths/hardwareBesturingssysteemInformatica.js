@@ -91,7 +91,7 @@ const steps = [
         q: "Wat ben je kwijt als je de computer uitzet **zonder op te slaan**?",
         options: ["Het werk dat alleen in het RAM stond", "Alles op je SSD", "Het besturingssysteem", "Niets, alles is altijd veilig"],
         answer: 0,
-        wrongHints: [null, "De SSD is niet-vluchtig — die blijft bewaard.", "Het OS staat op opslag en blijft.", "Niet-opgeslagen werk in RAM ben je wél kwijt."],
+        wrongHints: [null, "De SSD is niet-vluchtig — die blijft bewaard.", "Het OS staat op opslag en blijft.", "Denk aan het vluchtige geheugen — wat blijft daar over zonder stroom?"],
         uitlegPad: {
           stappen: [{ titel: "RAM is vluchtig", tekst: "**RAM** is **vluchtig**: zonder stroom is het leeg. Werk dat je nog niet hebt **opgeslagen** (en dus alleen in RAM stond) ben je kwijt. Wat op de **SSD/HDD** staat (niet-vluchtig) blijft bewaard." }],
           niveaus: { basis: "Niet-opgeslagen werk in RAM.", simpeler: "RAM weg = niet-opgeslagen werk", nogSimpeler: "Niet-opgeslagen werk in RAM" },
@@ -101,7 +101,7 @@ const steps = [
         q: "Wat is waar over de **geheugenhiërarchie**?",
         options: ["Dichter bij de CPU = sneller maar kleiner", "Opslag is sneller dan RAM", "RAM is groter dan opslag", "Cache is het traagst"],
         answer: 0,
-        wrongHints: [null, "Andersom: opslag is juist langzamer dan RAM.", "Opslag is juist veel groter dan RAM.", "Cache is juist het snelst."],
+        wrongHints: [null, "Andersom: opslag is juist langzamer dan RAM.", "Opslag is juist veel groter dan RAM.", "Cache zit juist ín de CPU — is die dan traag?"],
         uitlegPad: {
           stappen: [{ titel: "Snel & klein vs traag & groot", tekst: "Hoe **dichter bij de CPU**, hoe **sneller maar kleiner**: registers/cache (in de CPU) → RAM → opslag (SSD/HDD). Data reist van opslag naar RAM naar de CPU. De cache is supersnel maar piepklein; opslag is groot maar traag." }],
           niveaus: { basis: "Dichterbij = sneller, kleiner.", simpeler: "Bij CPU = sneller+kleiner", nogSimpeler: "Dichterbij = sneller, kleiner" },
@@ -160,7 +160,7 @@ const steps = [
         q: "Welk besturingssysteem is **open source** (broncode openbaar)?",
         options: ["Linux", "Windows", "macOS", "Geen enkel OS"],
         answer: 0,
-        wrongHints: [null, "Windows is gesloten (closed source).", "macOS is grotendeels gesloten.", "Linux is juist een bekend open-source-OS."],
+        wrongHints: [null, "Windows is gesloten (closed source).", "macOS is grotendeels gesloten.", "Er bestaan wél open-source-besturingssystemen — welke draait vaak gratis op servers?"],
         uitlegPad: {
           stappen: [{ titel: "Code openbaar", tekst: "**Linux** (en Android, dat erop bouwt) is **open source**: de broncode is openbaar, iedereen mag meekijken/aanpassen, vaak gratis. **Windows** en **macOS** zijn **gesloten** — de code is eigendom van het bedrijf." }],
           niveaus: { basis: "Linux.", simpeler: "Open source = Linux", nogSimpeler: "Linux" },
@@ -229,7 +229,7 @@ const steps = [
         q: "Je hernoemt `foto.jpg` naar `foto.txt`. Wat gebeurt er met de inhoud?",
         options: ["De echte inhoud blijft hetzelfde — alleen de naam verandert", "Het wordt automatisch een tekstbestand", "Het bestand wordt gewist", "Het wordt kleiner"],
         answer: 0,
-        wrongHints: [null, "De extensie hernoemen verandert de data niet.", "Hernoemen wist niets.", "De grootte blijft gelijk."],
+        wrongHints: [null, "Is een extensie een deel van de naam, of van de data zelf?", "Hernoemen wist niets.", "De grootte blijft gelijk."],
         uitlegPad: {
           stappen: [{ titel: "Naam ≠ inhoud", tekst: "De **extensie** is maar een **label**. Hernoem je `foto.jpg` naar `foto.txt`, dan blijven de bytes exact hetzelfde — het is nog steeds een afbeelding. Alleen opent je computer het nu met het verkeerde programma, waardoor het als 'onzin' oogt." }],
           niveaus: { basis: "Inhoud blijft gelijk.", simpeler: "Naam wijzigen ≠ inhoud", nogSimpeler: "Inhoud blijft gelijk" },

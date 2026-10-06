@@ -58,7 +58,7 @@ const steps = [
         q: "Wat staat **BBP** voor?",
         options: ["Bruto Binnenlands Product", "Belasting Bedrijf Particulieren", "Bank Bestuur Persoon", "Begin Buiten Politiek"],
         answer: 0,
-        wrongHints: [null, "Belasting is iets anders — BBP meet wat een land in een jaar máákt. Welke woorden passen daarbij?", "Geen bank-term — de eerste B staat voor 'bruto'. Wat meet het?", "Niets met politiek — het meet de totale productie ín een land."],
+        wrongHints: [null, "Belasting is iets anders — BBP meet wat een land in een jaar máákt. Welke woorden passen daarbij?", "Geen bank-term — denk aan wat een land in een jaar maakt. Wat meet het?", "Niets met politiek — het meet de totale productie ín een land."],
       },
       {
         q: "Wat wordt **NIET** in BBP gerekend?",
@@ -131,7 +131,7 @@ const steps = [
   {
     title: "Inflatie + koopkracht",
     explanation:
-      "**Inflatie** = **prijzen stijgen** in de economie. Eenheid: **% per jaar**.\n\n**Voorbeeld**:\n• 2022 inflatie NL: ~10% *(door energie-crisis)*.\n• 2024 inflatie NL: ~3%.\n• ECB-doel: **~2% per jaar** *(stabiel + lichte groei)*.\n\n**3 soorten inflatie** *(uit het hoofd!)*:\n\n**1. Vraag-inflatie** *(demand-pull)*:\n• Te veel **vraag** voor het aanbod.\n• Mensen willen kopen, voorraad raakt op → prijzen stijgen.\n• Bv. tijdens COVID-herstel: iedereen wilde weer reizen.\n\n**2. Kosten-inflatie** *(cost-push)*:\n• **Kosten** stijgen voor bedrijven → prijzen omhoog.\n• Bv. gas duurder → energie duurder → alles duurder.\n• Bv. lonen omhoog → producten omhoog.\n\n**3. Geïmporteerde inflatie**:\n• **Buitenland** wordt duurder → wij betalen meer voor invoer.\n• Bv. olie wereldwijd omhoog → benzine NL omhoog.\n\n**Koopkracht**:\n• **Koopkracht** = wat je voor je geld kunt kopen.\n• **Reëel inkomen** = je loon **gecorrigeerd voor inflatie**.\n\nVoorbeeld:\n• Je loon stijgt 4%.\n• Inflatie is 3%.\n• **Koopkracht stijgt 1%** *(je kunt iets meer kopen)*.\n\n• Loon stijgt 2%, inflatie 5% → **koopkracht daalt 3%** *(armer in praktijk)*.\n\n**Hyperinflatie** *(>50% per maand)*:\nExtreme inflatie waarbij **geld bijna waardeloos** wordt.\n• **Duitsland 1923** (Weimar): brood kostte miljarden mark.\n• **Zimbabwe 2008**: 89,7 sextiljoen % inflatie per jaar.\n• **Venezuela 2018**: 1.000.000% per jaar.\n• Oorzaak vaak: **geld bijdrukken** door overheid om schulden te betalen.\n\n**Deflatie** *(tegenovergesteld)*:\nPrijzen **dalen** → klinkt goed maar is **gevaarlijk**:\n• Mensen wachten met kopen (volgende maand goedkoper).\n• Bedrijven verkopen minder → failliet.\n• **Spiraal omlaag** mogelijk.\n• Japan kampt al decennia met deflatie.\n\n**Hoe inflatie meten?**\n**CPI** *(Consumer Price Index — Consumenten-prijsindex)*:\n• Mandje van **gebruikelijke producten** *(brood, melk, benzine, etc.)*.\n• Vergelijk prijs nu vs prijs jaar terug.\n• % verschil = inflatie.\n\nIn NL meet **CBS** dit maandelijks.\n\n**toetsvragen**:\n*'Loon 5%, inflatie 3% — koopkracht?'* → +2%.\n*'Wat is hyperinflatie?'* → extreme inflatie >50% per maand.\n*'Wat is deflatie?'* → prijzen dalen.",
+      "**Inflatie** = **prijzen stijgen** in de economie. Eenheid: **% per jaar**.\n\n**Voorbeeld**:\n• 2022 inflatie NL: ~10% *(door energie-crisis)*.\n• 2024 inflatie NL: ~3%.\n• ECB-doel: **~2% per jaar** *(stabiel + lichte groei)*.\n\n**3 soorten inflatie** *(uit het hoofd!)*:\n\n**1. Vraag-inflatie** *(demand-pull)*:\n• Te veel **vraag** voor het aanbod.\n• Mensen willen kopen, voorraad raakt op → prijzen stijgen.\n• Bv. tijdens COVID-herstel: iedereen wilde weer reizen.\n\n**2. Kosten-inflatie** *(cost-push)*:\n• **Kosten** stijgen voor bedrijven → prijzen omhoog.\n• Bv. gas duurder → energie duurder → alles duurder.\n• Bv. lonen omhoog → producten omhoog.\n\n**3. Geïmporteerde inflatie**:\n• **Buitenland** wordt duurder → wij betalen meer voor invoer.\n• Bv. olie wereldwijd omhoog → benzine NL omhoog.\n\n**Koopkracht**:\n• **Koopkracht** = wat je voor je geld kunt kopen.\n• **Reëel inkomen** = je loon **gecorrigeerd voor inflatie**.\n\nVoorbeeld:\n• Je loon stijgt 4%.\n• Inflatie is 3%.\n• **Koopkracht stijgt 1%** *(je kunt iets meer kopen)*.\n\n• Loon stijgt 2%, inflatie 5% → **koopkracht daalt 3%** *(armer in praktijk)*.\n\n**Hyperinflatie** *(>50% per maand)*:\nExtreme inflatie waarbij **geld bijna waardeloos** wordt.\n• **Duitsland 1923** (Weimar): brood kostte miljarden mark.\n• **Zimbabwe 2008**: 89,7 sextiljoen % inflatie per jaar.\n• **Venezuela 2018**: 1.000.000% per jaar.\n• Oorzaak vaak: **geld bijdrukken** door overheid om schulden te betalen.\n\n**Deflatie** *(tegenovergesteld)*:\nPrijzen **dalen** → klinkt goed maar is **gevaarlijk**:\n• Mensen wachten met kopen (volgende maand goedkoper).\n• Bedrijven verkopen minder → failliet.\n• **Spiraal omlaag** mogelijk.\n• Japan kampte decennia lang met deflatie.\n\n**Hoe inflatie meten?**\n**CPI** *(Consumer Price Index — Consumenten-prijsindex)*:\n• Mandje van **gebruikelijke producten** *(brood, melk, benzine, etc.)*.\n• Vergelijk prijs nu vs prijs jaar terug.\n• % verschil = inflatie.\n\nIn NL meet **CBS** dit maandelijks.\n\n**toetsvragen**:\n*'Loon 5%, inflatie 3% — koopkracht?'* → +2%.\n*'Wat is hyperinflatie?'* → extreme inflatie >50% per maand.\n*'Wat is deflatie?'* → prijzen dalen.",
     checks: [
       {
         q: "Wat is **inflatie**?",
@@ -141,9 +141,9 @@ const steps = [
       },
       {
         q: "Welke is **vraag-inflatie**?",
-        options: ["Te veel vraag, te weinig aanbod", "Hoge productiekosten", "Buitenland duurder", "Te veel geld"],
+        options: ["Te veel vraag, te weinig aanbod", "Hoge productiekosten", "Buitenland duurder", "Olie wordt wereldwijd goedkoper"],
         answer: 0,
-        wrongHints: [null, "Dat is kosten-inflatie.", "Dat is geïmporteerd.", "Indirect."],
+        wrongHints: [null, "Dat is kosten-inflatie.", "Dat is geïmporteerd.", "Goedkopere olie drukt prijzen juist omlaag."],
       },
       {
         q: "**Loon 3%, inflatie 5%** — koopkracht?",
@@ -236,7 +236,7 @@ const steps = [
         q: "BBP staat voor?",
         options: ["Bruto Binnenlands Product", "Bedrijfs Beleid Plan", "Begroting Boek Politie", "Bank Bank Product"],
         answer: 0,
-        wrongHints: [null, "Geen bedrijfsterm — het gaat over een heel lánd. Wat produceert een land?", "Niets met politie — denk aan 'binnenlands': alles wat binnen de grenzen gemaakt wordt.", "Twee keer 'bank' zou vreemd zijn — de middelste B staat voor 'binnenlands'."],
+        wrongHints: [null, "Geen bedrijfsterm — het gaat over een heel lánd. Wat produceert een land?", "Niets met politie — het gaat over alles wat een land in een jaar maakt.", "Twee keer 'bank' zou vreemd zijn — het gaat over de productie van een heel land."],
       },
       {
         q: "Welke is een **conjunctuurfase**?",
@@ -317,7 +317,7 @@ const steps = [
         wrongHints: [null, "Tegenovergesteld.", "Niet relevant.", "Geen volledige term."],
       },
       {
-        q: "Wat is een **kerncijfer voor economische gezondheid**?",
+        q: "Welke **combinatie van cijfers** geeft het beste beeld van de economische gezondheid?",
         options: ["BBP-groei + inflatie + werkloosheid", "Alleen BBP", "Alleen inflatie", "Alleen bevolkingsaantal"],
         answer: 0,
         wrongHints: [null, "Onvolledig.", "Onvolledig.", "Niet primair economisch."],
@@ -342,9 +342,9 @@ const steps = [
       },
       {
         q: "**Conjunctuur-cyclus** duurt typisch ___?",
-        options: ["7-10 jaar", "1 jaar", "100 jaar", "Geen vaste lengte"],
+        options: ["7-10 jaar", "1 jaar", "100 jaar", "1 maand"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Te lang.", "Wel typische lengte."],
+        wrongHints: [null, "Te kort.", "Te lang.", "Veel te kort — één hele golf duurt jaren."],
       },
       {
         q: "**Open vraag**: hoeveel % is **3% nominale loongroei − 5% inflatie** voor koopkracht?",

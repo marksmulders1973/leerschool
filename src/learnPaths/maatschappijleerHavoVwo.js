@@ -71,10 +71,10 @@ const steps = [
         },
       },
       {
-        q: "**Coalitie Schoof** (juli 2024) bestaat uit:",
+        q: "**Coalitie Schoof** (juli 2024) bestond uit:",
         options: ["PVV + VVD + NSC + BBB","CDA + PvdA","D66 + VVD","Eén partij meerderheid"],
         answer: 0,
-        wrongHints: [null, "Niet deze coalitie.", "Niet deze coalitie.", "Onmogelijk NL."],
+        wrongHints: [null, "Niet deze coalitie.", "Niet deze coalitie.", "Komt in NL vrijwel nooit voor."],
         uitlegPad: {
           stappen: [{ titel: "Eerste PVV-deelname", tekst: "**Kabinet-Schoof** vanaf 2 juli 2024: 4-partij-coalitie **PVV + VVD + NSC + BBB**. **Premier**: Dick Schoof (extra-parlementair, geen partij). Eerste keer PVV in regering. Compromis-akkoord 'Hoofdlijnenakkoord'. Omstreden + spanningen rond migratie + EU-positie. In juni 2025 stapte de PVV eruit." }],
           niveaus: { basis: "4 partijen.", simpeler: "Schoof = PVV/VVD/NSC/BBB", nogSimpeler: "PVV/VVD/NSC/BBB" },

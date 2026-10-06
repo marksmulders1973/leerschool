@@ -84,11 +84,11 @@ const steps = [
         options: [
           "Energie-verliezen maken hoger niveau onmogelijk te ondersteunen",
           "Adelaars zijn de grootste vogels",
-          "Geen eten meer boven",
+          "Adelaars kunnen het hoogst vliegen",
           "Adelaars zijn beschermd"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — relevant maar geen reden.", "Tautologisch.", "Niet — beleid, niet ecologie."],
+        wrongHints: [null, "Niet — relevant maar geen reden.", "Hoe hoog een vogel vliegt, zegt niets over zijn plek in de voedselpiramide.", "Niet — beleid, niet ecologie."],
         uitlegPad: {
           stappen: [{ titel: "Energie-piramide", tekst: "Met 10% over per niveau: na 4 niveaus is er 0,001 (= 0,1%) van originele zonne-energie over. Te weinig om een groot dier te voeden. Daarom adelaars zeldzaam + groot territorium." }],
           niveaus: { basis: "Energie op.", simpeler: "Niet genoeg eten meer hoger.", nogSimpeler: "Energie-grens" },
@@ -309,7 +309,7 @@ const steps = [
           "Geen probleem"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin — snelheid is gewoon hetzelfde.", "Niet — kleur niet gerelateerd.", "Wel — kwetsbaarheid stijgt."],
+        wrongHints: [null, "Onzin — snelheid is gewoon hetzelfde.", "Niet — kleur niet gerelateerd.", "Wel degelijk een probleem — wat gebeurt er als er een nieuwe ziekte opduikt?"],
         uitlegPad: {
           stappen: [{ titel: "Variatie = adaptatie-potentieel", tekst: "Met weinig genetische variatie zijn er weinig 'opties' bij nieuwe selectie-druk (nieuwe ziekte, klimaatwijziging). Bij identieke genen kan één virus de hele populatie wegvagen. Aardappel-Ierland 1845: monocultuur → Phytophthora → ramp." }],
           niveaus: { basis: "Minder adaptatie.", simpeler: "Genetisch arm → kwetsbaar.", nogSimpeler: "Kwetsbaar" },
@@ -320,11 +320,11 @@ const steps = [
         options: [
           "Heide + voedselarme gebieden krijgen overdaad N → grassen + brandnetels verdringen zeldzame soorten",
           "N₂ is giftig voor planten",
-          "N veroorzaakt zure regen",
+          "N maakt de bodem droger",
           "N verlaagt CO₂"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — vrijwel inert gas.", "N kan ook leiden tot zure regen maar dat is indirect.", "Geen relatie."],
+        wrongHints: [null, "Niet — vrijwel inert gas.", "Stikstof verandert vooral de voedselrijkdom van de bodem, niet het vochtgehalte.", "Geen relatie."],
         uitlegPad: {
           stappen: [{ titel: "N-arme habitats lijden", tekst: "Heide, veen, kustduinen zijn van nature N-arm. Soorten daar aangepast aan armoede. Stikstof-depositie (uit veehouderij + verkeer) → vergrassing → biodiversiteit-verlies. Daarom: 'stikstof-crisis' in NL (boerenprotesten 2019+)." }],
           niveaus: { basis: "N verstoort N-arme habitats.", simpeler: "Te veel mest → zeldzame planten verdwijnen.", nogSimpeler: "N-overschot" },
@@ -370,7 +370,7 @@ const steps = [
         },
       },
       {
-        q: "Een dier-pop. groeit van 100 naar 200 in 1 jaar (zonder beperking). Wat is de **groeiratio r** per jaar?",
+        q: "Een dier-pop. groeit van 100 naar 200 in 1 jaar (zonder beperking). Wat is de **groeiratio r** per jaar in het model N(t) = N₀ · e^(r·t)?",
         options: ["~0,69", "1,0", "2,0", "0,5"],
         answer: 0,
         wrongHints: [null, "Niet — dat is volledig nieuwgeboren-aantal.", "Niet — dat is factor van verdubbeling.", "Niet — half-tempo."],
