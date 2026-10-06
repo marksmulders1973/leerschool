@@ -107,7 +107,7 @@ for (let i = 0; i < 5; i++) {
   if (i % 2 === 0) {
     const a = tussen(15, 85); const e = a % 10; const b = tussen(10 - e + (e === 0 ? 1 : 0), 9); const goed = a + b;
     const o = opties(goed, [goed - 10, goed + 10, goed - 1]);
-    overTiental.push({ q: `**${a} + ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, `Maak eerst het tiental vol: ${a} + ${10 - e} = ${a + 10 - e}. Dan nog ${b - (10 - e)} erbij.`) });
+    overTiental.push({ q: `**${a} + ${b} =** ?`, options: o.options, answer: o.answer, wrongHints: hints(o.answer, b === 10 - e ? `Maak het tiental vol: ${e} + ${b} = 10. Welk tiental komt na ${a}?` : `Maak eerst het tiental vol: ${a} + ${10 - e} = ${a + 10 - e}. Dan nog ${b - (10 - e)} erbij.`) });
   } else {
     const a = tussen(21, 95); const e = a % 10; const b = tussen(e + 1, 9); const goed = a - b;
     const o = opties(goed, [goed + 10, goed - 10, goed + 1]);

@@ -60,7 +60,7 @@ const steps = [
         wrongHints: [
           null,
           "Koffie is een ding, geen werkwoord.",
-          "Heerlijk is een bijvoeglijk naamwoord (omschrijft iets), geen werkwoord.",
+          "Heerlijk zegt hoe de koffie smaakt — het is geen werkwoord.",
           "Vandaag is een tijdsaanduiding, geen werkwoord.",
         ],
         uitlegPad: {
@@ -615,7 +615,7 @@ const steps = [
           null,
           "Vandaag = bepaling van tijd (wanneer?).",
           "Een feest = lv (wat werd er georganiseerd?).",
-          "Ons = mv (voor wie werd het feest georganiseerd?).",
+          "(Voor) ons zegt voor wie het feest is — niet wie het organiseerde.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Wie heeft georganiseerd?", tekst: "Wie heeft georganiseerd? mijn moeder = onderwerp." }],

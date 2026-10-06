@@ -253,7 +253,7 @@ const steps = [
           null,
           "Coëfficiënten mag je juist veranderen om te balanceren.",
           "Coëfficiënten mag je wél veranderen.",
-          "Indices mag je niet veranderen.",
+          "Niet — één van de twee getallen hoort bij de stof zelf.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Index = vast", tekst: "De kleine cijfertjes (zoals 2 in H₂) horen bij het molecuul zelf en mag je nooit veranderen." }],
@@ -275,13 +275,13 @@ const steps = [
     checks: [
       {
         q: "Hoeveel atomen zitten er in **H₂SO₄**?",
-        options: ["7 (2 H + 1 S + 4 O)", "3", "10", "8"],
+        options: ["7", "3", "10", "8"],
         answer: 0,
         wrongHints: [
           null,
           "Veel meer — tel alle indices op.",
-          "Te veel — alleen 7.",
-          "Bijna goed maar niet 8 — controleer 2+1+4.",
+          "Te veel — tel per element nog eens na.",
+          "Net te veel — een element zonder index telt als 1 atoom.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Tel alle indices op", tekst: "H₂SO₄: 2 H + 1 S + 4 O = 7 atomen." }],
@@ -313,11 +313,11 @@ const steps = [
       },
       {
         q: "Welke vorm gebruik je voor zuurstof in een reactievergelijking?",
-        options: ["O₂ (twee-atomig)", "O", "O₃", "O₄"],
+        options: ["O₂", "O", "O₃", "O₄"],
         answer: 0,
         wrongHints: [
           null,
-          "Zuurstof komt als paar voor in de natuur — O₂.",
+          "Niet — komt zuurstof als los atoom voor?",
           "O₃ is ozon (speciaal), niet de gewone vorm.",
           "Bestaat niet als gewone vorm.",
         ],
@@ -433,7 +433,7 @@ const steps = [
           theorie: "Indices niet veranderen, alleen coëfficiënten.",
           voorbeelden: [{ type: "voorbeeld", tekst: "CH₄ + O₂ → CO₂ + H₂O: eerst C en H, dan O" }],
           basiskennis: [{ onderwerp: "geen coëfficiënt = 1", uitleg: "default '1' voor molecuul" }],
-          niveaus: { basis: "Coëfficiënten aanpassen.", simpeler: "Indices laten.", nogSimpeler: "Vóór, niet achter." },
+          niveaus: { basis: "Eerst atomen tellen.", simpeler: "Tel per element links en rechts.", nogSimpeler: "Eerst tellen." },
         },
       },
     ],
@@ -446,7 +446,7 @@ const steps = [
       {
         q: "Balanceer: N₂ + H₂ → NH₃. Wat zijn de coëfficiënten?",
         options: [
-          "1, 3, 2 (N₂ + 3 H₂ → 2 NH₃)",
+          "1, 3, 2",
           "1, 2, 1",
           "2, 6, 4",
           "1, 1, 1",
@@ -455,7 +455,7 @@ const steps = [
         wrongHints: [
           null,
           "Tel: links 2 N, 4 H. Rechts 1 N, 3 H. Niet kloppend.",
-          "Wel kloppend, maar niet kleinste — deel door 2.",
+          "Wel kloppend, maar dit zijn niet de kleinste gehele getallen.",
           "Links 2 N, 2 H. Rechts 1 N, 3 H. Niet kloppend.",
         ],
         uitlegPad: {
@@ -567,7 +567,7 @@ const steps = [
         wrongHints: [
           null,
           "Andersom — dat is endotherm.",
-          "Wel verandering, energie komt vrij.",
+          "Niet — bij deze reactie verandert er wel iets aan de energie.",
           "Snelheid is iets anders dan energie-verandering.",
         ],
         uitlegPad: {
@@ -615,7 +615,7 @@ const steps = [
       {
         q: "Balanceer: Mg + O₂ → MgO. Wat zijn de coëfficiënten?",
         options: [
-          "2, 1, 2 (2 Mg + O₂ → 2 MgO)",
+          "2, 1, 2",
           "1, 1, 1",
           "1, 2, 2",
           "2, 2, 1",
@@ -690,14 +690,14 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet als enkel atoom — als paar.",
+          "Niet — komt zuurstof als los atoom voor?",
           "O₃ is ozon, speciaal geval.",
           "Wel degelijk in de formule.",
         ],
         uitlegPad: {
           stappen: [{ titel: "O₂ — twee-atomig", tekst: "Zuurstof komt in de natuur altijd als O₂ voor (twee atomen aan elkaar). Schrijf nooit alleen 'O'." }],
           woorden: [{ woord: "twee-atomig", uitleg: "molecuul met 2 atomen aaneengeplakt" }],
-          theorie: "Sommige gassen komen als paar: H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂.",
+          theorie: "Sommige elementen komen als paar: H₂, N₂, O₂, F₂, Cl₂, Br₂, I₂.",
           voorbeelden: [{ type: "voorbeeld", tekst: "Lucht bevat O₂ (zuurstof) en N₂ (stikstof) — beide paren" }],
           basiskennis: [{ onderwerp: "gas-elementen", uitleg: "gassen op zichzelf zijn vaak twee-atomig" }],
           niveaus: { basis: "O₂.", simpeler: "Altijd als paar.", nogSimpeler: "Twee aan elkaar." },
@@ -705,7 +705,7 @@ const steps = [
       },
       {
         q: "Wat is een **chemische reactie**?",
-        options: ["Stoffen veranderen in andere stoffen","Stoffen worden warm","Verkleurd","Volume verandert"],
+        options: ["Stoffen veranderen in andere stoffen","Stoffen worden warm","Stoffen verkleuren","Volume verandert"],
         answer: 0,
         wrongHints: [null, "Niet primair — soms wel maar niet definitie.", "Niet primair — gevolg, geen definitie.", "Niet primair — natuurkunde, geen chemie."],
         uitlegPad: {

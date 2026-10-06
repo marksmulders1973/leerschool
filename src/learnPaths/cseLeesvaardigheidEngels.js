@@ -178,7 +178,7 @@ const steps = [
         wrongHints: [null, "Zelfde — geen tegenstelling.", "Kan ook negatief maar 'morose' = stiller, niet boos.", "Ander type negatief gevoel."],
       },
       {
-        q: "*'unhappy'** — wat betekent **un-**?",
+        q: "*'unhappy'* — wat betekent **un-**?",
         options: ["niet", "veel", "zonder", "opnieuw"],
         answer: 0,
         wrongHints: [null, "Geen 'veel'.", "Dat is -less.", "Dat is re-."],
@@ -300,7 +300,7 @@ const steps = [
         },
       },
       {
-        q: "*'Sarah likes Tom. **She** told **him** a joke.'* Waar verwijst **'her'** naar als die werd gebruikt?",
+        q: "*'Sarah likes Tom. **She** told **him** a joke.'* Waar verwijst **'she'** naar?",
         options: ["Sarah", "Tom", "Joke", "Iemand anders"],
         answer: 0,
         wrongHints: [null, "Mannelijk — 'him'.", "Geen persoon.", "Niet — staat in zin."],
@@ -371,8 +371,8 @@ const steps = [
       {
         q: "*'**Open question**: which 1-word **synonym** of 'happy' starts with 'j'?'*",
         kind: "open",
-        acceptedAnswers: ["joyful", "jolly"],
-        explanation: "Joyful of jolly. Beide betekenen heel blij.",
+        acceptedAnswers: ["joyful", "jolly", "jubilant", "joyous"],
+        explanation: "Joyful, joyous, jolly of jubilant (zie stap 3). Ze betekenen allemaal (heel) blij.",
       },
       {
         q: "*'**Open question**: complete the sentence — 'I __ to school every day.'* (typ het werkwoord)",

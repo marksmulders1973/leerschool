@@ -238,7 +238,7 @@ ${[0, 1, 2, 3, 4, 5, 6, 7].map(i => {
     title: "Periodiek systeem — overzicht",
     explanation: "Het **periodiek systeem** is een tabel met alle ~118 elementen, geordend op **atoomnummer**.\n\n**Indeling**:\n• **Periodes** (rijen): 7 rijen. Een periode = aantal schillen dat het atoom heeft.\n• **Groepen** (kolommen): 18 kolommen. Elementen in dezelfde groep hebben hetzelfde aantal **buitenste elektronen** → vergelijkbare eigenschappen.\n\n**Belangrijke groepen**:\n• Groep 1: **alkalimetalen** (Li, Na, K) — heel reactief, 1 buitenste elektron.\n• Groep 2: **aardalkalimetalen** (Be, Mg, Ca) — 2 buitenste e⁻.\n• Groep 17: **halogenen** (F, Cl, Br, I) — heel reactief, 7 buitenste e⁻.\n• Groep 18: **edelgassen** (He, Ne, Ar, Kr) — buitenste schil vol → niet reactief.\n\n**Drie hoofdgroepen**:\n• **Metalen** (links + midden): glanzend, geleidend (Fe, Cu, Au).\n• **Niet-metalen** (rechts): vaak gas of zacht (O, N, C, S).\n• **Halfmetalen** (trapje rond Si, Ge): tussenvorm.",
     svg: `<svg viewBox="0 0 300 180">
-<rect x="20" y="20" width="40" height="40" rx="4" fill="${COLORS.metal}" opacity="0.55"/>
+<rect x="20" y="20" width="40" height="40" rx="4" fill="${COLORS.nonmetal}" opacity="0.55"/>
 <text x="40" y="42" text-anchor="middle" fill="#fff" font-size="11" font-family="Arial">H</text>
 <text x="40" y="55" text-anchor="middle" fill="#fff" font-size="9" font-family="Arial">1</text>
 <rect x="240" y="20" width="40" height="40" rx="4" fill="${COLORS.gas}" opacity="0.55"/>
@@ -371,7 +371,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         },
       },
       {
-        q: "Welk metaal vormt vaak Na⁺?",
+        q: "Welk element vormt het ion Na⁺?",
         options: ["Natrium", "Goud", "Chloor", "Stikstof"],
         answer: 0,
         wrongHints: [null, "Goud vormt Au⁺ of Au³⁺.", "Chloor is geen metaal — wordt Cl⁻.", "Stikstof is niet-metaal."],
@@ -447,15 +447,15 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
 </svg>`,
     checks: [
       {
-        q: "Wat is **wet van behoud van atomen**?",
+        q: "Wat zegt de **wet van behoud van atomen**?",
         options: [
           "Aantal atomen links en rechts is gelijk",
           "Atomen verdwijnen tijdens reactie",
           "Massa wordt gemaakt",
-          "Bij reacties verdwijnen alle atomen",
+          "Er ontstaan nieuwe soorten atomen",
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — atomen verdwijnen niet.", "Massa wordt niet gemaakt.", "Onjuist — massa blijft behouden."],
+        wrongHints: [null, "Tegenovergesteld — atomen verdwijnen niet.", "Massa wordt niet gemaakt.", "Niet — bij een chemische reactie verandert het soort atoom niet."],
         uitlegPad: {
           stappen: [{ titel: "Atomen tellen", tekst: "Links en rechts dezelfde atomen — alleen in andere combinaties." }],
           woorden: [{ woord: "wet van behoud", uitleg: "Lavoisier, ~1789" }],
@@ -474,7 +474,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
           "Niets",
         ],
         answer: 0,
-        wrongHints: [null, "Rook bestaat uit deeltjes — bij volledige verbranding krijg je CO₂ + H₂O.", "Goud kan niet zomaar ontstaan.", "Er gebeurt zeker iets — verbranding."],
+        wrongHints: [null, "Niet — bij volledige verbranding ontstaat geen rook; welke atomen zitten in methaan en zuurstof?", "Goud kan niet zomaar ontstaan.", "Er gebeurt zeker iets — verbranding."],
         uitlegPad: {
           stappen: [{ titel: "Verbranding methaan", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O + warmte." }],
           woorden: [{ woord: "verbranding", uitleg: "stof + O₂ + warmte" }],
@@ -551,7 +551,7 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
         q: "Een atoom geeft een elektron af. Wat is de lading?",
         options: ["+1", "−1", "0", "−2"],
         answer: 0,
-        wrongHints: [null, "Bij afgeven verlies je een minlading → wordt positiever.", "Bij afgeven verandert de lading wél.", "Maar één elektron weg = +1."],
+        wrongHints: [null, "Bij afgeven verlies je een minlading → wordt positiever.", "Bij afgeven verandert de lading wél.", "Niet — hoeveel elektronen gaan er weg, en welke lading heeft een elektron?"],
         uitlegPad: {
           stappen: [{ titel: "E- afgeven = +1", tekst: "Verlies van 1 e- (negatief) → +1 lading." }],
           woorden: [{ woord: "lading", uitleg: "verschil tussen + en - in atoom" }],
@@ -637,9 +637,9 @@ ${[0, 1, 2, 3, 4, 5, 6].map(i => `<rect x="${20 + i * 30}" y="80" width="28" hei
       { q: "Wat is de **lading** van een **proton**?", options: ["+1","-1","0","+2"], answer: 0, wrongHints: [null, "Elektron.", "Neutron.", "Niet."] },
       { q: "Wat is de **lading** van een **neutron**?", options: ["0","+1","-1","+2"], answer: 0, wrongHints: [null, "Proton.", "Elektron.", "Niet."] },
       { q: "Wat is de **lading** van een **elektron**?", options: ["-1","+1","0","+2"], answer: 0, wrongHints: [null, "Proton.", "Neutron.", "Niet."] },
-      { q: "Welk deeltje bevindt zich in de **kern** van het atoom?", options: ["Proton + neutron","Alleen elektron","Alleen proton","Alle drie"], answer: 0, wrongHints: [null, "Elektronen zijn in schillen.", "Onvolledig.", "Onjuist."] },
-      { q: "Het **atoomnummer** = aantal ___?", options: ["protonen","neutronen","elektronen","atomen"], answer: 0, wrongHints: [null, "Massagetal − atoomnummer.", "Bij neutraal atoom = aantal protonen.", "Niet."] },
-      { q: "Het **massagetal** = ?", options: ["protonen + neutronen","alleen protonen","alleen elektronen","protonen × neutronen"], answer: 0, wrongHints: [null, "Atoomnummer.", "Niet.", "Niet primair."] },
+      { q: "Welke deeltjes bevinden zich in de **kern** van het atoom?", options: ["Proton + neutron","Alleen elektron","Alleen proton","Alle drie"], answer: 0, wrongHints: [null, "Elektronen zijn in schillen.", "Onvolledig.", "Onjuist."] },
+      { q: "Het **atoomnummer** = aantal ___?", options: ["protonen","neutronen","elektronen","atomen"], answer: 0, wrongHints: [null, "Massagetal − atoomnummer.", "Niet — het aantal elektronen kan veranderen (bij ionen), het atoomnummer niet.", "Niet."] },
+      { q: "Het **massagetal** = ?", options: ["protonen + neutronen","alleen protonen","alleen elektronen","protonen × neutronen"], answer: 0, wrongHints: [null, "Atoomnummer.", "Niet.", "Niet — je telt op, je vermenigvuldigt niet."] },
       { q: "Hoeveel **elektronen** passen in de **eerste schil** (K)?", options: ["2","8","18","32"], answer: 0, wrongHints: [null, "Tweede schil.", "Derde schil.", "Vierde schil."] },
       { q: "Hoeveel **elektronen** passen in de **tweede schil** (L)?", options: ["8","2","18","32"], answer: 0, wrongHints: [null, "Eerste.", "Derde.", "Vierde."] },
       { q: "**Open vraag**: hoeveel protonen heeft koolstof (C)?", kind: "open", acceptedAnswers: ["6"], numericTolerance: 0, explanation: "Koolstof = C = atoomnummer 6 = 6 protonen." },

@@ -25,7 +25,7 @@ const steps = [
         q: "Molaire massa van **CO₂**? (C: 12, O: 16)",
         options: ["44 g/mol", "28 g/mol", "32 g/mol", "60 g/mol"],
         answer: 0,
-        wrongHints: [null, "Niet — vergeet de twee O's niet.", "Niet — dat is O₂.", "Niet — let op koolstof-deel."],
+        wrongHints: [null, "Niet — vergeet de twee O's niet.", "Niet — dat is O₂.", "Niet — tel het aantal O-atomen nog eens."],
         uitlegPad: {
           stappen: [{ titel: "Som atoommassa's", tekst: "M(CO₂) = M(C) + 2·M(O) = 12 + 2·16 = **44 g/mol**." }],
           niveaus: { basis: "12+32=44 g/mol.", simpeler: "C + 2 O = 12+32 = 44.", nogSimpeler: "44" },
@@ -45,7 +45,7 @@ const steps = [
         q: "Bij STP (0 °C, 1 atm): hoeveel L heeft **2 mol stikstofgas (N₂)**?",
         options: ["44,8 L", "22,4 L", "11,2 L", "2,8 L"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is 1 mol.", "Niet — half.", "Onmogelijk."],
+        wrongHints: [null, "Niet — dat is 1 mol.", "Niet — half.", "Niet — gebruik het molair volume bij STP."],
         uitlegPad: {
           stappen: [{ titel: "V = n · V_mol", tekst: "V = 2 · 22,4 = **44,8 L**. Alle ideale gassen nemen hetzelfde volume per mol bij STP — onafhankelijk van stof." }],
           theorie: "Bij 25 °C i.p.v. 0 °C: gebruik 24,5 L/mol.",
@@ -84,10 +84,10 @@ const steps = [
       "**Wet van behoud van massa** (Lavoisier 1789): in een chemische reactie verandert massa niet — atomen kunnen alleen herschikken.\n\n**Gevolg**: aantal atomen LINKS = aantal atomen RECHTS van pijl.\n\n**Vorm reactievergelijking**:\nA + B → C + D\n• A, B = uitgangsstoffen (reactanten).\n• C, D = reactieproducten.\n• Pijl = 'reageert tot'.\n• Dubbelpijl (⇌): evenwichtsreactie.\n\n**Balanceren-procedure**:\n1. Schrijf ongebalanceerde vergelijking.\n2. Tel atomen per element links + rechts.\n3. Voeg **coëfficiënten** vóór formules toe (NIET binnen formules!) om gelijk te maken.\n4. Begin met meest complexe molecuul. Houd O + H meestal laatste.\n5. Controleer alle atomen.\n\n**Voorbeeld 1 — methaan-verbranding**:\nCH₄ + O₂ → CO₂ + H₂O\nOngebalanceerd: 1C, 4H, 2O ↔ 1C, 2H, 3O.\nStap: 2 H₂O voor 4 H → CH₄ + O₂ → CO₂ + 2 H₂O.\nNu: 1C, 4H, 2O ↔ 1C, 4H, 4O.\nO mismatch: 2 O₂ voor 4 O → **CH₄ + 2 O₂ → CO₂ + 2 H₂O**. ✓\n\n**Voorbeeld 2 — synthese ammoniak**:\nN₂ + H₂ → NH₃\nGebalanceerd: **N₂ + 3 H₂ → 2 NH₃**.\n\n**Soorten reacties**:\n• **Verbranding**: stof + O₂ → oxiden (+ H₂O bij organische).\n• **Synthese**: A + B → AB.\n• **Ontleding**: AB → A + B.\n• **Substitutie**: AB + C → AC + B.\n• **Neutralisatie**: zuur + base → zout + water.\n\n**Toestandssymbolen**:\n• (s) = vast.\n• (l) = vloeibaar.\n• (g) = gas.\n• (aq) = aqua (in water opgelost).\n• Bv: HCl(aq) + NaOH(aq) → NaCl(aq) + H₂O(l).\n\n**Cito/CSE-vraag-types**:\n• Coëfficiënten invullen.\n• Ongebalanceerde vergelijking afmaken.\n• Verbranding-formules organische stoffen.",
     checks: [
       {
-        q: "Balanceer: ** ___ H₂ + ___ O₂ → ___ H₂O** — kleinste gehele coëfficienten?",
+        q: "Balanceer: **___ H₂ + ___ O₂ → ___ H₂O** — kleinste gehele coëfficiënten?",
         options: ["2, 1, 2", "1, 1, 1", "1, 2, 2", "2, 2, 2"],
         answer: 0,
-        wrongHints: [null, "Niet — links 2 O, rechts maar 1 O.", "Niet — links 2 H + 4 O, rechts 4 H + 2 O.", "Niet — niet kleinste."],
+        wrongHints: [null, "Niet — links 2 O, rechts maar 1 O.", "Niet — links 2 H + 4 O, rechts 4 H + 2 O.", "Niet — tel de O-atomen links en rechts."],
         uitlegPad: {
           stappen: [{ titel: "2 H₂ + 1 O₂ → 2 H₂O", tekst: "Links: 4H, 2O. Rechts: 4H, 2O. ✓\nWatersynthese (knalgas-explosie)." }],
           niveaus: { basis: "2,1,2.", simpeler: "Twee H₂ + één O₂ → twee H₂O.", nogSimpeler: "2-1-2" },
@@ -125,7 +125,7 @@ const steps = [
         q: "**Neutralisatie**: HCl + NaOH → ___ + ___?",
         options: ["NaCl + H₂O", "NaH + ClOH", "Na + HCl + OH", "2 NaCl"],
         answer: 0,
-        wrongHints: [null, "Niet — combinaties bestaan zo niet.", "Niet — molecuul vorm.", "Niet — geen Na+Cl los."],
+        wrongHints: [null, "Niet — combinaties bestaan zo niet.", "Niet — molecuul vorm.", "Niet — waar blijven de H- en O-atomen?"],
         uitlegPad: {
           stappen: [
             { titel: "Zuur + base → zout + water", tekst: "HCl(aq) + NaOH(aq) → **NaCl(aq) + H₂O(l)**. Klassiek neutralisatie-patroon — zuur en base heffen elkaar op." },
@@ -157,7 +157,7 @@ const steps = [
         q: "Reactie: **N₂ + 3 H₂ → 2 NH₃** (Haber-Bosch). Hoeveel mol NH₃ uit **6 mol H₂** (overmaat N₂)?",
         options: ["4 mol", "6 mol", "2 mol", "12 mol"],
         answer: 0,
-        wrongHints: [null, "Niet — H₂ is limiterend.", "Niet — half.", "Niet — te veel."],
+        wrongHints: [null, "Niet — kijk naar de molverhouding H₂ : NH₃.", "Niet — half.", "Niet — te veel."],
         uitlegPad: {
           stappen: [
             { titel: "Mol-verhouding 3 H₂ : 2 NH₃", tekst: "n(NH₃) = 6 · (2/3) = **4 mol**. Met N₂ in overmaat is H₂ limiterend." },
@@ -170,7 +170,7 @@ const steps = [
         q: "Hoeveel **g CaCO₃** nodig om door zoutzuur **44 g CO₂** te maken? (CaCO₃ + 2 HCl → CaCl₂ + CO₂ + H₂O, M_CaCO₃=100, M_CO₂=44)",
         options: ["100 g", "200 g", "44 g", "50 g"],
         answer: 0,
-        wrongHints: [null, "Niet — 1:1 verhouding.", "Niet — dat is massa CO₂.", "Te weinig."],
+        wrongHints: [null, "Niet — controleer de molverhouding CaCO₃ : CO₂.", "Niet — dat is massa CO₂.", "Te weinig."],
         uitlegPad: {
           stappen: [
             { titel: "1:1 CaCO₃:CO₂", tekst: "n(CO₂) = 44/44 = 1 mol. Verhouding 1:1 → 1 mol CaCO₃ → m = 1·100 = **100 g**." },
@@ -192,7 +192,7 @@ const steps = [
         q: "Bij **2 mol H₂ + 3 mol O₂** (2H₂ + O₂ → 2 H₂O): welke is limiterend?",
         options: ["H₂", "O₂", "Beide gelijk", "Geen — overmaat beide"],
         answer: 0,
-        wrongHints: [null, "Niet — er is veel meer O₂ dan nodig.", "Niet — verhouding klopt niet.", "Niet — een is meer dan nodig."],
+        wrongHints: [null, "Niet — reken uit hoeveel mol O₂ je nodig hebt voor 2 mol H₂.", "Niet — verhouding klopt niet.", "Niet — een is meer dan nodig."],
         uitlegPad: {
           stappen: [
             { titel: "Verhouding 2:1, gegeven 2:3", tekst: "Voor 2 mol H₂ heb je 1 mol O₂ nodig. Je hebt 3 mol O₂ = overmaat. **H₂ is limiterend** — het loopt eerder op. Resultaat: 2 mol H₂O + 2 mol O₂ over." },
@@ -201,10 +201,10 @@ const steps = [
         },
       },
       {
-        q: "Bij ideale verbranding 1 mol methaan: hoeveel **L CO₂** ontstaat? (STP, 22,4 L/mol)",
+        q: "Bij volledige verbranding van 1 mol methaan: hoeveel **L CO₂** ontstaat? (STP, 22,4 L/mol)",
         options: ["22,4 L", "44,8 L", "11,2 L", "1 L"],
         answer: 0,
-        wrongHints: [null, "Niet — 1:1.", "Niet — half.", "Verkeerde eenheid."],
+        wrongHints: [null, "Niet — kijk naar de molverhouding CH₄ : CO₂.", "Niet — half.", "Verkeerde eenheid."],
         uitlegPad: {
           stappen: [
             { titel: "1:1 CH₄:CO₂", tekst: "CH₄ + 2 O₂ → CO₂ + 2 H₂O. 1 mol CH₄ → 1 mol CO₂ → V = 1 · 22,4 = **22,4 L** bij STP." },
@@ -266,10 +266,10 @@ const steps = [
           "Geoxideerd (van 0 naar +3)",
           "Gereduceerd",
           "Verzuurd",
-          "Bevriezen"
+          "Opgelost"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — Fe geeft elektronen.", "Onjuist concept.", "Onzin."],
+        wrongHints: [null, "Niet — neemt Fe elektronen op of staat het ze af?", "Onjuist concept.", "Niet — er verandert iets aan de elektronen van Fe."],
         uitlegPad: {
           stappen: [{ titel: "Fe → Fe³⁺ in roest", tekst: "In Fe(OH)₃ of Fe₂O₃ heeft Fe oxidatiegetal +3. Ging van 0 (metaal) naar +3 = oxidatie. O₂ is hier oxidator (wordt zelf gereduceerd van 0 naar −2 in OH⁻)." }],
           theorie: "Voorkoming roest: galvaniseren (zinklaag → 'offert zich op', beschermt Fe), schilderen (lucht buiten houden), of een beschermend laagje van een ander metaal.",
@@ -327,7 +327,7 @@ const steps = [
           "Hangt af van katalysator"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — minder mol = rechts in dit geval.", "Onjuist — Le Chatelier reageert.", "Katalysator verandert evenwicht niet."],
+        wrongHints: [null, "Niet — aan welke kant staan minder mol gasdeeltjes?", "Onjuist — Le Chatelier reageert.", "Katalysator verandert evenwicht niet."],
         uitlegPad: {
           stappen: [
             { titel: "Le Chatelier — minder mol", tekst: "Links: 1+3 = 4 mol gas. Rechts: 2 mol. Hogere druk → evenwicht naar zijde met minder mol → **rechts** (meer NH₃). Daarom werkt Haber-Bosch op 200 atm." },

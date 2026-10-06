@@ -609,13 +609,13 @@ ${["be / am-is-are", "have / has", "do / does", "go / goes"].map((v, i) => `
       },
       {
         q: "Welke vorm hoort hier? — *I ___ a strange noise last night.* (hear)",
-        options: ["heard", "heared", "hear", "heared up"],
+        options: ["heard", "heared", "hear", "heart"],
         answer: 0,
         wrongHints: [
           null,
           "Hear is onregelmatig — V2 is heard, geen -ed-spelling.",
           "V1 — past niet bij 'last night'.",
-          "Geen werkwoord-vorm.",
+          "Let op: dit is een ander woord (= hart), geen vorm van 'hear'.",
         ],
         uitlegPad: {
           stappen: [{ titel: "hear-heard-heard", tekst: "Last night I heard. V2 = heard (geen -ed-spelling)." }],

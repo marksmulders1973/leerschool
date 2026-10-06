@@ -1,0 +1,1190 @@
+[
+  {
+    "waar": "rekenen.klas3[21]",
+    "oud": "{ q: \"Los op: x² - 9 = 0\", options: [\"x = 4 of x = -4\", \"x = -3\", \"x = 3\", \"x = 3 of x = -3\"], answer: 3, explanation: \"(x-3)(x+3) = 0 → x = 3 of x = -3.\" },",
+    "nieuw": "{ q: \"Los op: x² - 9 = 0\", options: [\"x = 4 of x = -4\", \"x = 9 of x = -9\", \"x = 3\", \"x = 3 of x = -3\"], answer: 3, explanation: \"(x-3)(x+3) = 0 → x = 3 of x = -3.\" },",
+    "reden": "goede antwoord was een plaksel van opties 2 en 3; afleider vervangen"
+  },
+  {
+    "waar": "taal.groep12[21]",
+    "oud": "{ q: \"Welk woord is een meubel?\", options: [\"tafel\", \"boom\", \"hond\", \"boom of hond\"], answer: 0, explanation: \"Een tafel is een meubel.\" },",
+    "nieuw": "{ q: \"Welk woord is een meubel?\", options: [\"tafel\", \"boom\", \"hond\", \"fiets\"], answer: 0, explanation: \"Een tafel is een meubel.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep12[38]",
+    "oud": "{ q: \"Welk woord is een sport?\", options: [\"tafel\", \"tafel of boek\", \"boek\", \"voetbal\"], answer: 3, explanation: \"Voetbal is een sport.\" },",
+    "nieuw": "{ q: \"Welk woord is een sport?\", options: [\"tafel\", \"appel\", \"boek\", \"voetbal\"], answer: 3, explanation: \"Voetbal is een sport.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep12[47]",
+    "oud": "{ q: \"Welk dier is het grootst?\", options: [\"mier\", \"olifant\", \"muis\", \"mier of muis\"], answer: 1, explanation: \"Een olifant is het grootste dier.\" },",
+    "nieuw": "{ q: \"Welk dier is het grootst?\", options: [\"mier\", \"olifant\", \"muis\", \"kat\"], answer: 1, explanation: \"Een olifant is het grootste dier.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[6]",
+    "oud": "{ q: \"Welk woord is fout gespeld?\", options: [\"boom\", \"boom of maan\", \"maan\", \"fiest\"], answer: 3, explanation: \"Het is 'fiets', niet 'fiest'.\" },",
+    "nieuw": "{ q: \"Welk woord is fout gespeld?\", options: [\"boom\", \"vis\", \"maan\", \"fiest\"], answer: 3, explanation: \"Het is 'fiets', niet 'fiest'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[7]",
+    "oud": "{ q: \"Wat is het meervoud van 'kind'?\", options: [\"kindjes\", \"kindes\", \"kindjes of kindes\", \"kinderen\"], answer: 3, explanation: \"'Kinderen' is het meervoud van 'kind'.\" },",
+    "nieuw": "{ q: \"Wat is het meervoud van 'kind'?\", options: [\"kindjes\", \"kindes\", \"kinden\", \"kinderen\"], answer: 3, explanation: \"'Kinderen' is het meervoud van 'kind'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[16]",
+    "oud": "{ q: \"Welke zin heeft een fout?\", options: [\"De kat slaapt lekker.\", \"Zij fietst naar huis.\", \"De kat slaapt lekker. of Zij fietst naar huis.\", \"Het kind spelen buiten.\"], answer: 3, explanation: \"'Het kind speelt', niet 'spelen'.\" },",
+    "nieuw": "{ q: \"Welke zin heeft een fout?\", options: [\"De kat slaapt lekker.\", \"Zij fietst naar huis.\", \"Ik lees een boek.\", \"Het kind spelen buiten.\"], answer: 3, explanation: \"'Het kind speelt', niet 'spelen'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[18]",
+    "oud": "{ q: \"Welk woord schrijf je met een hoofdletter?\", options: [\"nederland\", \"vrijdag\", \"vrijdag of winter\", \"winter\"], answer: 0, explanation: \"Landen schrijf je met een hoofdletter: Nederland.\" },",
+    "nieuw": "{ q: \"Welk woord schrijf je met een hoofdletter?\", options: [\"nederland\", \"vrijdag\", \"school\", \"winter\"], answer: 0, explanation: \"Landen schrijf je met een hoofdletter: Nederland.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[23]",
+    "oud": "{ q: \"Wat betekent 'snel'?\", options: [\"groot\", \"langzaam of groot\", \"langzaam\", \"hard/vlug\"], answer: 3, explanation: \"'Snel' betekent vlug of hard.\" },",
+    "nieuw": "{ q: \"Wat betekent 'snel'?\", options: [\"groot\", \"zwaar\", \"langzaam\", \"hard/vlug\"], answer: 3, explanation: \"'Snel' betekent vlug of hard.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[33]",
+    "oud": "{ q: \"Wat betekent 'koud'?\", options: [\"droog onder bepaalde omstandigheden\", \"warm\", \"nat\", \"niet warm/laag in temperatuur\"], answer: 3, explanation: \"'Koud' is het tegenovergestelde van warm.\" },",
+    "nieuw": "{ q: \"Wat betekent 'koud'?\", options: [\"droog\", \"warm\", \"nat\", \"niet warm/laag in temperatuur\"], answer: 3, explanation: \"'Koud' is het tegenovergestelde van warm.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[35]",
+    "oud": "{ q: \"Wat is het meervoud van 'ei'?\", options: [\"eies\", \"eies of eien\", \"eien\", \"eieren\"], answer: 3, explanation: \"'Eieren' is het meervoud van 'ei'.\" },",
+    "nieuw": "{ q: \"Wat is het meervoud van 'ei'?\", options: [\"eies\", \"eiers\", \"eien\", \"eieren\"], answer: 3, explanation: \"'Eieren' is het meervoud van 'ei'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[43]",
+    "oud": "{ q: \"Wat betekent 'zacht'?\", options: [\"snel\", \"groot onder bepaalde omstandigheden\", \"hard\", \"niet hard, zacht aanvoelend\"], answer: 3, explanation: \"'Zacht' is het tegenovergestelde van hard.\" },",
+    "nieuw": "{ q: \"Wat betekent 'zacht'?\", options: [\"snel\", \"groot\", \"hard\", \"niet hard, zacht aanvoelend\"], answer: 3, explanation: \"'Zacht' is het tegenovergestelde van hard.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep3[48]",
+    "oud": "{ q: \"Wat betekent 'luid'?\", options: [\"groot in de natuur\", \"stil\", \"hard van geluid\", \"snel\"], answer: 2, explanation: \"'Luid' betekent hard of met veel geluid.\" },",
+    "nieuw": "{ q: \"Wat betekent 'luid'?\", options: [\"groot\", \"stil\", \"hard van geluid\", \"snel\"], answer: 2, explanation: \"'Luid' betekent hard of met veel geluid.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[8]",
+    "oud": "{ q: \"Wat is het juiste meervoud van 'ei'?\", options: [\"eien of eies\", \"eien\", \"eies\", \"eieren\"], answer: 3, explanation: \"'Eieren' is het meervoud van 'ei'.\" },",
+    "nieuw": "{ q: \"Wat is het juiste meervoud van 'ei'?\", options: [\"eiers\", \"eien\", \"eies\", \"eieren\"], answer: 3, explanation: \"'Eieren' is het meervoud van 'ei'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[10]",
+    "oud": "{ q: \"Wat is een werkwoord?\", options: [\"tafel of groot\", \"tafel\", \"rennen\", \"groot\"], answer: 2, explanation: \"Een werkwoord geeft een actie of toestand aan.\" },",
+    "nieuw": "{ q: \"Wat is een werkwoord?\", options: [\"blauw\", \"tafel\", \"rennen\", \"groot\"], answer: 2, explanation: \"Een werkwoord geeft een actie of toestand aan.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[13]",
+    "oud": "{ q: \"Wat betekent 'grappig'?\", options: [\"saai\", \"verdrietig\", \"verdrietig of saai\", \"leuk/komisch\"], answer: 3, explanation: \"'Grappig' betekent leuk of komisch.\" },",
+    "nieuw": "{ q: \"Wat betekent 'grappig'?\", options: [\"saai\", \"verdrietig\", \"boos\", \"leuk/komisch\"], answer: 3, explanation: \"'Grappig' betekent leuk of komisch.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[18]",
+    "oud": "{ q: \"Wat is het meervoud van 'kind'?\", options: [\"kindjes\", \"kinderen\", \"kindes\", \"kindjes of kindes\"], answer: 1, explanation: \"'Kinderen' is het onregelmatige meervoud.\" },",
+    "nieuw": "{ q: \"Wat is het meervoud van 'kind'?\", options: [\"kindjes\", \"kinderen\", \"kindes\", \"kinden\"], answer: 1, explanation: \"'Kinderen' is het onregelmatige meervoud.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[20]",
+    "oud": "{ q: \"Wat is een samengesteld woord?\", options: [\"een werkwoord\", \"een werkwoord + bijvoeglijk naamwoord\", \"twee woorden die samen één nieuw woord vormen\", \"een werkwoord + bijvoeglijk naamwoord of een werkwoord\"], answer: 2, explanation: \"Bv: 'zonnebril' = zon + bril. Twee woorden vormen één nieuw woord.\" },",
+    "nieuw": "{ q: \"Wat is een samengesteld woord?\", options: [\"een werkwoord\", \"een werkwoord + bijvoeglijk naamwoord\", \"twee woorden die samen één nieuw woord vormen\", \"een woord met een hoofdletter\"], answer: 2, explanation: \"Bv: 'zonnebril' = zon + bril. Twee woorden vormen één nieuw woord.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[22]",
+    "oud": "{ q: \"Wat is het verschil tussen 'er' en 'daar'?\", options: [\"'Daar' is onbepaald\", \"'Er' wijst naar een specifieke plek\", \"'Er' wijst naar een specifieke plek of 'Daar' is onbepaald\", \"'Er' is onbepaald, 'daar' wijst naar een specifieke plek\"], answer: 3, explanation: \"'Er staat een fiets.' vs. 'De fiets staat daar.' — 'er' is onbepaald.\" },",
+    "nieuw": "{ q: \"Wat is het verschil tussen 'er' en 'daar'?\", options: [\"'Daar' is onbepaald\", \"'Er' wijst naar een specifieke plek\", \"Er is geen verschil\", \"'Er' is onbepaald, 'daar' wijst naar een specifieke plek\"], answer: 3, explanation: \"'Er staat een fiets.' vs. 'De fiets staat daar.' — 'er' is onbepaald.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[24]",
+    "oud": "{ q: \"Wat is het verschil tussen een werkwoord en een bijwoord?\", options: [\"Een werkwoord beschrijft hoe iets gedaan wordt of Een bijwoord is een soort werkwoord\", \"Een bijwoord is een soort werkwoord\", \"Een werkwoord drukt een actie uit; een bijwoord geeft informatie over de actie\", \"Een werkwoord beschrijft hoe iets gedaan wordt\"], answer: 2, explanation: \"'Rennen' = werkwoord. 'Snel' (als 'snel rennen') = bijwoord.\" },",
+    "nieuw": "{ q: \"Wat is het verschil tussen een werkwoord en een bijwoord?\", options: [\"Er is geen verschil\", \"Een bijwoord is een soort werkwoord\", \"Een werkwoord drukt een actie uit; een bijwoord geeft informatie over de actie\", \"Een werkwoord beschrijft hoe iets gedaan wordt\"], answer: 2, explanation: \"'Rennen' = werkwoord. 'Snel' (als 'snel rennen') = bijwoord.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[29]",
+    "oud": "{ q: \"Welke zin heeft een d/t-fout?\", options: [\"Het kind speeld buiten.\", \"Wij lopen naar huis.\", \"Hij fietst elke dag.\", \"Wij lopen naar huis. of Hij fietst elke dag.\"], answer: 0, explanation: \"'Speeld' is fout — het voltooid deelwoord is 'gespeeld', en tegenwoordige tijd is 'speelt'.\" },",
+    "nieuw": "{ q: \"Welke zin heeft een d/t-fout?\", options: [\"Het kind speeld buiten.\", \"Wij lopen naar huis.\", \"Hij fietst elke dag.\", \"De hond blaft hard.\"], answer: 0, explanation: \"'Speeld' is fout — het voltooid deelwoord is 'gespeeld', en tegenwoordige tijd is 'speelt'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[38]",
+    "oud": "{ q: \"Welke zin gebruikt de verleden tijd?\", options: [\"Ik loop naar school. of Hij fietst elke dag.\", \"Zij speelde gisteren.\", \"Ik loop naar school.\", \"Hij fietst elke dag.\"], answer: 1, explanation: \"'Speelde' is de verleden tijd van 'spelen'.\" },",
+    "nieuw": "{ q: \"Welke zin gebruikt de verleden tijd?\", options: [\"Wij eten een appel.\", \"Zij speelde gisteren.\", \"Ik loop naar school.\", \"Hij fietst elke dag.\"], answer: 1, explanation: \"'Speelde' is de verleden tijd van 'spelen'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[39]",
+    "oud": "{ q: \"Wat is een lidwoord?\", options: [\"'rennen', 'lopen' of 'groot', 'klein'\", \"'rennen', 'lopen'\", \"'de', 'het', 'een'\", \"'groot', 'klein'\"], answer: 2, explanation: \"Lidwoorden staan voor zelfstandige naamwoorden: de kat, het huis, een fiets.\" },",
+    "nieuw": "{ q: \"Wat is een lidwoord?\", options: [\"'ik', 'jij'\", \"'rennen', 'lopen'\", \"'de', 'het', 'een'\", \"'groot', 'klein'\"], answer: 2, explanation: \"Lidwoorden staan voor zelfstandige naamwoorden: de kat, het huis, een fiets.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[46]",
+    "oud": "{ q: \"Wat is een synoniem van 'verdrietig'?\", options: [\"blij\", \"bedroefd\", \"boos\", \"blij of boos\"], answer: 1, explanation: \"'Bedroefd' heeft dezelfde betekenis als 'verdrietig'.\" },",
+    "nieuw": "{ q: \"Wat is een synoniem van 'verdrietig'?\", options: [\"blij\", \"bedroefd\", \"boos\", \"moe\"], answer: 1, explanation: \"'Bedroefd' heeft dezelfde betekenis als 'verdrietig'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep5[49]",
+    "oud": "{ q: \"Welk woord is een werkwoord?\", options: [\"tafel of groot\", \"springen\", \"tafel\", \"groot\"], answer: 1, explanation: \"'Springen' is een werkwoord — het beschrijft een actie.\" },",
+    "nieuw": "{ q: \"Welk woord is een werkwoord?\", options: [\"blauw\", \"springen\", \"tafel\", \"groot\"], answer: 1, explanation: \"'Springen' is een werkwoord — het beschrijft een actie.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep7[10]",
+    "oud": "{ q: \"Wat is de persoonsvorm in: 'Zij fietst naar huis'?\", options: [\"fietst\", \"naar of huis\", \"naar\", \"huis\"], answer: 0, explanation: \"'Fietst' is het vervoegde werkwoord.\" },",
+    "nieuw": "{ q: \"Wat is de persoonsvorm in: 'Zij fietst naar huis'?\", options: [\"fietst\", \"Zij\", \"naar\", \"huis\"], answer: 0, explanation: \"'Fietst' is het vervoegde werkwoord.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep7[23]",
+    "oud": "{ q: \"Wat is een persoonlijk voornaamwoord?\", options: [\"'rennen', 'lopen'\", \"'rennen', 'lopen' of 'groot', 'klein'\", \"'ik', 'jij', 'hij', 'wij'\", \"'groot', 'klein'\"], answer: 2, explanation: \"Persoonlijke voornaamwoorden verwijzen naar personen: ik, jij, hij, zij, wij, jullie, zij.\" },",
+    "nieuw": "{ q: \"Wat is een persoonlijk voornaamwoord?\", options: [\"'rennen', 'lopen'\", \"'de', 'het', 'een'\", \"'ik', 'jij', 'hij', 'wij'\", \"'groot', 'klein'\"], answer: 2, explanation: \"Persoonlijke voornaamwoorden verwijzen naar personen: ik, jij, hij, zij, wij, jullie, zij.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep7[24]",
+    "oud": "{ q: \"Wat is een bepaling van tijd?\", options: [\"Een bijvoeglijk naamwoord\", \"Een bijvoeglijk naamwoord of Het lijdend voorwerp\", \"Het lijdend voorwerp\", \"Een zinsdeel dat aangeeft wanneer iets gebeurt\"], answer: 3, explanation: \"Bv: 'Gisteren fietste ik naar school.' — 'gisteren' is de bepaling van tijd.\" },",
+    "nieuw": "{ q: \"Wat is een bepaling van tijd?\", options: [\"Een bijvoeglijk naamwoord\", \"Een zinsdeel dat aangeeft waar iets gebeurt\", \"Het lijdend voorwerp\", \"Een zinsdeel dat aangeeft wanneer iets gebeurt\"], answer: 3, explanation: \"Bv: 'Gisteren fietste ik naar school.' — 'gisteren' is de bepaling van tijd.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep7[39]",
+    "oud": "{ q: \"Wat is het verschil tussen 'als' en 'dan' in vergelijkingen?\", options: [\"'Dan' bij gelijkheid onder bepaalde omstandigheden\", \"Beide kunnen alles\", \"Geen verschil\", \"'Als' bij gelijkheid; 'dan' bij ongelijkheid\"], answer: 3, explanation: \"'Zo groot als jij.' (gelijk) vs. 'Groter dan jij.' (ongelijk).\" },",
+    "nieuw": "{ q: \"Wat is het verschil tussen 'als' en 'dan' in vergelijkingen?\", options: [\"'Dan' gebruik je alleen bij tijd\", \"Beide kunnen alles\", \"Geen verschil\", \"'Als' bij gelijkheid; 'dan' bij ongelijkheid\"], answer: 3, explanation: \"'Zo groot als jij.' (gelijk) vs. 'Groter dan jij.' (ongelijk).\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep7[44]",
+    "oud": "{ q: \"Wat is een superlatief?\", options: [\"Geen vergelijking of Vergrotende trap\", \"Vergrotende trap\", \"Geen vergelijking\", \"Overtreffende trap\"], answer: 3, explanation: \"Superlatief = overtreffende trap: 'het snelst', 'de mooiste'.\" },",
+    "nieuw": "{ q: \"Wat is een superlatief?\", options: [\"Stellende trap\", \"Vergrotende trap\", \"Geen vergelijking\", \"Overtreffende trap\"], answer: 3, explanation: \"Superlatief = overtreffende trap: 'het snelst', 'de mooiste'.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "taal.groep7[46]",
+    "oud": "{ q: \"Wat is een prolepsis?\", options: [\"Vooruitwijzing in een verhaal (flash-forward)\", \"Terugblik in een verhaal onder bepaalde omstandigheden\", \"Een cliffhanger\", \"Een inleiding\"], answer: 0, explanation: \"Prolepsis = anticipatie: vooruitwijzen naar een later moment in het verhaal.\" },",
+    "nieuw": "{ q: \"Wat is een prolepsis?\", options: [\"Vooruitwijzing in een verhaal (flash-forward)\", \"Terugblik in een verhaal (flashback)\", \"Een cliffhanger\", \"Een inleiding\"], answer: 0, explanation: \"Prolepsis = anticipatie: vooruitwijzen naar een later moment in het verhaal.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[8]",
+    "oud": "{ q: \"Wat is een polder?\", options: [\"Een rivier\", \"Een berg\", \"Drooggelegd stuk land\", \"Een rivier of Een berg\"], answer: 2, explanation: \"Een polder is land gewonnen op het water.\" },",
+    "nieuw": "{ q: \"Wat is een polder?\", options: [\"Een rivier\", \"Een berg\", \"Drooggelegd stuk land\", \"Een duin\"], answer: 2, explanation: \"Een polder is land gewonnen op het water.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[13]",
+    "oud": "{ q: \"Wat is de Afsluitdijk?\", options: [\"Een brug\", \"Een snelweg onder bepaalde omstandigheden\", \"Een dijk die de Zuiderzee afsluit\", \"Een kanaal\"], answer: 2, explanation: \"De Afsluitdijk (1932) sloot de Zuiderzee af.\", imageSearch: \"Afsluitdijk\" },",
+    "nieuw": "{ q: \"Wat is de Afsluitdijk?\", options: [\"Een brug\", \"Een tunnel\", \"Een dijk die de Zuiderzee afsluit\", \"Een kanaal\"], answer: 2, explanation: \"De Afsluitdijk (1932) sloot de Zuiderzee af.\", imageSearch: \"Afsluitdijk\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[19]",
+    "oud": "{ q: \"Wat is een kustlijn?\", options: [\"De grens tussen land en zee\", \"Een bergketen of Een rivier\", \"Een bergketen\", \"Een rivier\"], answer: 0, explanation: \"De kustlijn is de grens tussen land en water.\" },",
+    "nieuw": "{ q: \"Wat is een kustlijn?\", options: [\"De grens tussen land en zee\", \"De grens tussen twee landen\", \"Een bergketen\", \"Een rivier\"], answer: 0, explanation: \"De kustlijn is de grens tussen land en water.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[22]",
+    "oud": "{ q: \"Wat is de Delta?\", options: [\"Een vliegveld onder bepaalde omstandigheden\", \"Een meer\", \"Een berg\", \"Laaglandgebied bij de riviermonding\"], answer: 3, explanation: \"De Nederlandse delta is het mondingsgebied van Rijn, Maas en Schelde.\" },",
+    "nieuw": "{ q: \"Wat is de Delta?\", options: [\"Een vliegveld\", \"Een meer\", \"Een berg\", \"Laaglandgebied bij de riviermonding\"], answer: 3, explanation: \"De Nederlandse delta is het mondingsgebied van Rijn, Maas en Schelde.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[31]",
+    "oud": "{ q: \"Wat is een estuarium?\", options: [\"De trechtervormige monding van een rivier\", \"Een meer\", \"Een polder\", \"Een binnenzee onder bepaalde omstandigheden\"], answer: 0, explanation: \"De Westerschelde is een estuarium — getijden beïnvloeden de waterstand.\" },",
+    "nieuw": "{ q: \"Wat is een estuarium?\", options: [\"De trechtervormige monding van een rivier\", \"Een meer\", \"Een polder\", \"Een binnenzee\"], answer: 0, explanation: \"De Westerschelde is een estuarium — getijden beïnvloeden de waterstand.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[35]",
+    "oud": "{ q: \"Wat is het laagste punt van Nederland?\", options: [\"Vaalserberg\", \"Haarlemmermeer\", \"Haarlemmermeer of Vaalserberg\", \"Zuidplaspolder\"], answer: 3, explanation: \"De Zuidplaspolder bij Nieuwerkerk aan den IJssel (ca. -6,8 meter NAP) is het laagste punt van Nederland.\" },",
+    "nieuw": "{ q: \"Wat is het laagste punt van Nederland?\", options: [\"Vaalserberg\", \"Haarlemmermeer\", \"Lelystad\", \"Zuidplaspolder\"], answer: 3, explanation: \"De Zuidplaspolder bij Nieuwerkerk aan den IJssel (ca. -6,8 meter NAP) is het laagste punt van Nederland.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[39]",
+    "oud": "{ q: \"Wat is het verschil tussen een meander en een hoefijzermeer?\", options: [\"Meander = een stilstaand meer\", \"Hoefijzermeer = een meander in beweging of Meander = een stilstaand meer\", \"Meander = bocht in rivier; hoefijzermeer = afgesneden meander\", \"Hoefijzermeer = een meander in beweging\"], answer: 2, explanation: \"Een meander slingert; als de bocht afgesneden wordt, ontstaat een hoefijzermeer.\" },",
+    "nieuw": "{ q: \"Wat is het verschil tussen een meander en een hoefijzermeer?\", options: [\"Meander = een stilstaand meer\", \"Meander = een waterval in een rivier\", \"Meander = bocht in rivier; hoefijzermeer = afgesneden meander\", \"Hoefijzermeer = een meander in beweging\"], answer: 2, explanation: \"Een meander slingert; als de bocht afgesneden wordt, ontstaat een hoefijzermeer.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[44]",
+    "oud": "{ q: \"Wat is het Groene Hart?\", options: [\"Een bos in Gelderland\", \"Een polder bij Friesland onder bepaalde omstandigheden\", \"Het open landelijke gebied in het hart van de Randstad\", \"Een nationaal park\"], answer: 2, explanation: \"Het Groene Hart: open landelijk gebied omringd door Amsterdam, Utrecht, Rotterdam en Den Haag.\" },",
+    "nieuw": "{ q: \"Wat is het Groene Hart?\", options: [\"Een bos in Gelderland\", \"Een polder in Friesland\", \"Het open landelijke gebied in het hart van de Randstad\", \"Een nationaal park\"], answer: 2, explanation: \"Het Groene Hart: open landelijk gebied omringd door Amsterdam, Utrecht, Rotterdam en Den Haag.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep5[47]",
+    "oud": "{ q: \"Wat is een waterschap?\", options: [\"Een overheidsorgaan dat waterbeheer regelt\", \"Een polder\", \"Een provincie\", \"Een visserijorganisatie onder bepaalde omstandigheden\"], answer: 0, explanation: \"Waterschappen beheren de waterkwaliteit, dijken en peilbeheer in Nederland.\" },",
+    "nieuw": "{ q: \"Wat is een waterschap?\", options: [\"Een overheidsorgaan dat waterbeheer regelt\", \"Een polder\", \"Een provincie\", \"Een visserijorganisatie\"], answer: 0, explanation: \"Waterschappen beheren de waterkwaliteit, dijken en peilbeheer in Nederland.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep7[2]",
+    "oud": "{ q: \"Wat is het grootste land ter wereld?\", options: [\"China\", \"Rusland\", \"Canada\", \"Canada of China\"], answer: 1, explanation: \"Rusland: 17,1 miljoen km².\" },",
+    "nieuw": "{ q: \"Wat is het grootste land ter wereld?\", options: [\"China\", \"Rusland\", \"Canada\", \"Verenigde Staten\"], answer: 1, explanation: \"Rusland: 17,1 miljoen km².\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep7[16]",
+    "oud": "{ q: \"Welke zee ligt tussen Europa en Afrika?\", options: [\"Arabische Zee\", \"Middellandse Zee\", \"Zwarte Zee\", \"Arabische Zee of Zwarte Zee\"], answer: 1, explanation: \"De Middellandse Zee.\", imageSearch: \"Middellandse Zee\" },",
+    "nieuw": "{ q: \"Welke zee ligt tussen Europa en Afrika?\", options: [\"Arabische Zee\", \"Middellandse Zee\", \"Zwarte Zee\", \"Noordzee\"], answer: 1, explanation: \"De Middellandse Zee.\", imageSearch: \"Middellandse Zee\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep7[31]",
+    "oud": "{ q: \"Wat is de Amazone?\", options: [\"De grootste rivier ter wereld naar watervolume\", \"Een zeestroom\", \"Een stadsnaam\", \"Een berg in Peru onder bepaalde omstandigheden\"], answer: 0, explanation: \"De Amazone in Zuid-Amerika heeft het grootste afvoervolume van alle rivieren.\" },",
+    "nieuw": "{ q: \"Wat is de Amazone?\", options: [\"De grootste rivier ter wereld naar watervolume\", \"Een zeestroom\", \"Een stadsnaam\", \"Een berg in Peru\"], answer: 0, explanation: \"De Amazone in Zuid-Amerika heeft het grootste afvoervolume van alle rivieren.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep7[35]",
+    "oud": "{ q: \"Wat is de Gobi?\", options: [\"Een woestijn in Azië\", \"Een gebergte of Een rivier\", \"Een rivier\", \"Een gebergte\"], answer: 0, explanation: \"De Gobi is een grote woestijn in China en Mongolië.\" },",
+    "nieuw": "{ q: \"Wat is de Gobi?\", options: [\"Een woestijn in Azië\", \"Een meer\", \"Een rivier\", \"Een gebergte\"], answer: 0, explanation: \"De Gobi is een grote woestijn in China en Mongolië.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "aardrijkskunde.groep7[40]",
+    "oud": "{ q: \"Wat is de hoofdstad van Argentinië?\", options: [\"São Paulo of Santiago\", \"São Paulo\", \"Santiago\", \"Buenos Aires\"], answer: 3, explanation: \"Buenos Aires is de hoofdstad van Argentinië.\" },",
+    "nieuw": "{ q: \"Wat is de hoofdstad van Argentinië?\", options: [\"Lima\", \"São Paulo\", \"Santiago\", \"Buenos Aires\"], answer: 3, explanation: \"Buenos Aires is de hoofdstad van Argentinië.\" },",
+    "reden": "plaksel-afleider vervangen door een korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[2]",
+    "oud": "q: \"Wat is de VOC?\", options: [\"Een handelscompagnie\", \"Een leger\", \"Een school\", \"Een school of Een leger\"]",
+    "nieuw": "q: \"Wat is de VOC?\", options: [\"Een handelscompagnie\", \"Een leger\", \"Een school\", \"Een kerk\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[5]",
+    "oud": "q: \"Wie was Adolf Hitler?\", options: [\"Italiaans dictator\", \"Italiaans dictator of Russische tsaar\", \"Leider nazi-Duitsland\", \"Russische tsaar\"]",
+    "nieuw": "q: \"Wie was Adolf Hitler?\", options: [\"Italiaans dictator\", \"Duitse keizer\", \"Leider nazi-Duitsland\", \"Russische tsaar\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[7]",
+    "oud": "q: \"Wat zijn de piramides van Gizeh?\", options: [\"Middeleeuwse burchten\", \"Romeinse koepels\", \"Oude Egyptische grafmonumenten\", \"Middeleeuwse burchten of Romeinse koepels\"]",
+    "nieuw": "q: \"Wat zijn de piramides van Gizeh?\", options: [\"Middeleeuwse burchten\", \"Romeinse koepels\", \"Oude Egyptische grafmonumenten\", \"Oude Griekse tempels\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[8]",
+    "oud": "q: \"Wat was de Steentijd?\", options: [\"Een periode met veel oorlogen onder bepaalde omstandigheden\", \"De Oudheid\", \"Vroegste periode van de mensheid, gereedschap van steen\", \"De Middeleeuwen\"]",
+    "nieuw": "q: \"Wat was de Steentijd?\", options: [\"De tijd van de eerste fabrieken\", \"De Oudheid\", \"Vroegste periode van de mensheid, gereedschap van steen\", \"De Middeleeuwen\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[14]",
+    "oud": "q: \"Wat was de rol van de NSB in WO2?\", options: [\"Nederlandse nazi-collaborateurs\", \"Hulporganisatie\", \"Joodse organisatie of Hulporganisatie\", \"Joodse organisatie\"]",
+    "nieuw": "q: \"Wat was de rol van de NSB in WO2?\", options: [\"Nederlandse nazi-collaborateurs\", \"Hulporganisatie\", \"Een verzetsgroep\", \"Joodse organisatie\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[15]",
+    "oud": "q: \"Wat was de Berlijnse Muur?\", options: [\"Een historische verdedigingswal\", \"Een historische verdedigingswal of Een grens bij de Rijn\", \"Een grens bij de Rijn\", \"Muur die Berlijn verdeelde (1961-1989)\"]",
+    "nieuw": "q: \"Wat was de Berlijnse Muur?\", options: [\"Een historische verdedigingswal\", \"Een muur rond een kasteel\", \"Een grens bij de Rijn\", \"Muur die Berlijn verdeelde (1961-1989)\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[19]",
+    "oud": "q: \"Wat is een feodale samenleving?\", options: [\"Een koninkrijk onder bepaalde omstandigheden\", \"Een democratie\", \"Een stadsstaat\", \"Een samenleving met leenheren en lijfeigenen\"]",
+    "nieuw": "q: \"Wat is een feodale samenleving?\", options: [\"Een samenleving zonder koning of adel\", \"Een democratie\", \"Een stadsstaat\", \"Een samenleving met leenheren en lijfeigenen\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[20]",
+    "oud": "q: \"Wie was Rembrandt van Rijn?\", options: [\"Een beroemde Nederlandse schilder uit de Gouden Eeuw\", \"Een zeeheld\", \"Een politicus\", \"Een ontdekkingsreiziger onder bepaalde omstandigheden\"]",
+    "nieuw": "q: \"Wie was Rembrandt van Rijn?\", options: [\"Een beroemde Nederlandse schilder uit de Gouden Eeuw\", \"Een zeeheld\", \"Een politicus\", \"Een ontdekkingsreiziger\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[21]",
+    "oud": "q: \"Wat waren de kruistochten?\", options: [\"Militaire tochten van christenen naar het Heilige Land\", \"Ontdekkingsreizen naar Amerika\", \"Handelsexpedities naar Azië\", \"Ontdekkingsreizen naar Amerika of Handelsexpedities naar Azië\"]",
+    "nieuw": "q: \"Wat waren de kruistochten?\", options: [\"Militaire tochten van christenen naar het Heilige Land\", \"Ontdekkingsreizen naar Amerika\", \"Handelsexpedities naar Azië\", \"Oorlogen tussen Nederland en Spanje\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[22]",
+    "oud": "q: \"Wat is de Renaissance?\", options: [\"Een politieke beweging\", \"Een oorlog\", \"Een godsdienstige stroming in de moderne taal- en letterkunde\", \"Culturele en artistieke hergeboorte in Europa (14e-17e eeuw)\"]",
+    "nieuw": "q: \"Wat is de Renaissance?\", options: [\"Een politieke beweging\", \"Een oorlog\", \"Een godsdienstige stroming\", \"Culturele en artistieke hergeboorte in Europa (14e-17e eeuw)\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[24]",
+    "oud": "q: \"Wat was de rol van de kerk in de Middeleeuwen?\", options: [\"Alleen religie, geen politiek\", \"Alleen in Italië van belang\", \"Alleen religie, geen politiek of Alleen in Italië van belang\", \"Enorme religieuze, politieke en culturele macht in Europa\"]",
+    "nieuw": "q: \"Wat was de rol van de kerk in de Middeleeuwen?\", options: [\"Alleen religie, geen politiek\", \"Alleen in Italië van belang\", \"Bijna geen invloed\", \"Enorme religieuze, politieke en culturele macht in Europa\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[26]",
+    "oud": "q: \"Wat was de Spaanse Armada?\", options: [\"Een Spaanse piratengroep onder bepaalde omstandigheden\", \"Een koloniale expeditie\", \"Een handelsvloot\", \"De Spaanse vloot die Engeland wilde veroveren (1588)\"]",
+    "nieuw": "q: \"Wat was de Spaanse Armada?\", options: [\"Een Spaanse piratengroep\", \"Een koloniale expeditie\", \"Een handelsvloot\", \"De Spaanse vloot die Engeland wilde veroveren (1588)\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[33]",
+    "oud": "q: \"Wie was Koningin Beatrix?\", options: [\"Een schrijfster\", \"Eerste Nederlandse koningin\", \"De moeder van koning Willem-Alexander\", \"Eerste Nederlandse koningin of Een schrijfster\"]",
+    "nieuw": "q: \"Wie was Koningin Beatrix?\", options: [\"Een schrijfster\", \"Eerste Nederlandse koningin\", \"De moeder van koning Willem-Alexander\", \"Een Engelse prinses\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[34]",
+    "oud": "q: \"Wat waren concentratiekampen in WO2?\", options: [\"Buitenlandse ambassades\", \"Schuilkelders\", \"Buitenlandse ambassades of Schuilkelders\", \"Gevangenenkampen van de nazi's\"]",
+    "nieuw": "q: \"Wat waren concentratiekampen in WO2?\", options: [\"Buitenlandse ambassades\", \"Schuilkelders\", \"Ziekenhuizen voor soldaten\", \"Gevangenenkampen van de nazi's\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[38]",
+    "oud": "q: \"Wie was Mata Hari?\", options: [\"Een schilderes\", \"Een Nederlandse schrijfster of Een schilderes\", \"Een Nederlandse schrijfster\", \"Een Nederlandse danseres en spion uit WO1\"]",
+    "nieuw": "q: \"Wie was Mata Hari?\", options: [\"Een schilderes\", \"Een koningin\", \"Een Nederlandse schrijfster\", \"Een Nederlandse danseres en spion uit WO1\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[39]",
+    "oud": "q: \"Wat is de Tweede Kamer in historisch perspectief?\", options: [\"Een koninklijk paleis onder bepaalde omstandigheden\", \"Een museum\", \"Een rechtbank\", \"Het Nederlandse parlement, sinds 1848 rechtstreeks gekozen\"]",
+    "nieuw": "q: \"Wat is de Tweede Kamer in historisch perspectief?\", options: [\"Een koninklijk paleis\", \"Een museum\", \"Een rechtbank\", \"Het Nederlandse parlement, sinds 1848 rechtstreeks gekozen\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[46]",
+    "oud": "q: \"Wie was Isaac Newton?\", options: [\"Een Frans dichter\", \"Een Griekse filosoof\", \"Een Britse wetenschapper die de zwaartekracht beschreef\", \"Een Italiaanse kunstenaar onder bepaalde omstandigheden\"]",
+    "nieuw": "q: \"Wie was Isaac Newton?\", options: [\"Een Frans dichter\", \"Een Griekse filosoof\", \"Een Britse wetenschapper die de zwaartekracht beschreef\", \"Een Italiaanse kunstenaar\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[47]",
+    "oud": "q: \"Wat was de industriële revolutie een gevolg van?\", options: [\"Nieuwe uitvindingen, steenkool en de stoommachine\", \"Politieke hervormingen\", \"Religieuze veranderingen\", \"Religieuze veranderingen of Politieke hervormingen\"]",
+    "nieuw": "q: \"Wat was de industriële revolutie een gevolg van?\", options: [\"Nieuwe uitvindingen, steenkool en de stoommachine\", \"Politieke hervormingen\", \"Religieuze veranderingen\", \"Een grote oorlog in Europa\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep5[49]",
+    "oud": "q: \"Wat was de Magna Carta (1215)?\", options: [\"Een Italiaans handelsverdrag of Een militaire overeenkomst\", \"Een Italiaans handelsverdrag\", \"Een document dat de macht van de Engelse koning beperkte\", \"Een militaire overeenkomst\"]",
+    "nieuw": "q: \"Wat was de Magna Carta (1215)?\", options: [\"Een oude landkaart van Engeland\", \"Een Italiaans handelsverdrag\", \"Een document dat de macht van de Engelse koning beperkte\", \"Een militaire overeenkomst\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[3]",
+    "oud": "q: \"Wat was de Industriële Revolutie?\", options: [\"Politieke revolutie\", \"Een artistieke beweging\", \"Overgang naar fabrieksproductie (18e-19e eeuw)\", \"Een artistieke beweging of Politieke revolutie\"]",
+    "nieuw": "q: \"Wat was de Industriële Revolutie?\", options: [\"Politieke revolutie\", \"Een artistieke beweging\", \"Overgang naar fabrieksproductie (18e-19e eeuw)\", \"Een nieuwe godsdienst\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[5]",
+    "oud": "q: \"Wat was de Koude Oorlog?\", options: [\"Een letterlijke koude oorlog of Een handelsoorlog\", \"Een handelsoorlog\", \"Een letterlijke koude oorlog\", \"Politieke spanning VS vs Sovjet-Unie\"]",
+    "nieuw": "q: \"Wat was de Koude Oorlog?\", options: [\"Een oorlog op de Noordpool\", \"Een handelsoorlog\", \"Een letterlijke koude oorlog\", \"Politieke spanning VS vs Sovjet-Unie\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[7]",
+    "oud": "q: \"Wat was de Holocaust?\", options: [\"Systematische moord op 6 miljoen Joden door nazi's\", \"Een epidemie\", \"Een vulkaanuitbarsting onder bepaalde omstandigheden\", \"Een hongersnood\"]",
+    "nieuw": "q: \"Wat was de Holocaust?\", options: [\"Systematische moord op 6 miljoen Joden door nazi's\", \"Een epidemie\", \"Een vulkaanuitbarsting\", \"Een hongersnood\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[8]",
+    "oud": "q: \"Wie was Martin Luther King Jr.?\", options: [\"Een militaire leider of Een Duitse theoloog\", \"Een militaire leider\", \"Een Duitse theoloog\", \"Amerikaanse burgerrechtenactivist\"]",
+    "nieuw": "q: \"Wie was Martin Luther King Jr.?\", options: [\"Een Amerikaanse president\", \"Een militaire leider\", \"Een Duitse theoloog\", \"Amerikaanse burgerrechtenactivist\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[9]",
+    "oud": "q: \"Wat was de Slag om de Atlantische Oceaan?\", options: [\"Strijd om bevoorradingsroutes WO2\", \"Een piratenoorlog\", \"Een piratenoorlog of Een handelsoorlog\", \"Een handelsoorlog\"]",
+    "nieuw": "q: \"Wat was de Slag om de Atlantische Oceaan?\", options: [\"Strijd om bevoorradingsroutes WO2\", \"Een piratenoorlog\", \"Een zeeslag uit de Gouden Eeuw\", \"Een handelsoorlog\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[12]",
+    "oud": "q: \"Wat was de Perestrojka?\", options: [\"Russische militaire doctrine of Een Russische revolutie\", \"Russische militaire doctrine\", \"Een Russische revolutie\", \"Gorbatsjovs hervormingsprogramma\"]",
+    "nieuw": "q: \"Wat was de Perestrojka?\", options: [\"Een Russisch ruimteprogramma\", \"Russische militaire doctrine\", \"Een Russische revolutie\", \"Gorbatsjovs hervormingsprogramma\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[15]",
+    "oud": "q: \"Welk verdrag beëindigde WO1?\", options: [\"Verdrag van Utrecht\", \"Verdrag van Utrecht of Verdrag van Parijs\", \"Verdrag van Versailles\", \"Verdrag van Parijs\"]",
+    "nieuw": "q: \"Welk verdrag beëindigde WO1?\", options: [\"Verdrag van Utrecht\", \"Verdrag van Maastricht\", \"Verdrag van Versailles\", \"Verdrag van Parijs\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[17]",
+    "oud": "q: \"Wie was Mahatma Gandhi?\", options: [\"Pakistans eerste president of Indiaas militair leider\", \"Pakistans eerste president\", \"Indiaas militair leider\", \"Leider van geweldloze onafhankelijkheidsstrijd India\"]",
+    "nieuw": "q: \"Wie was Mahatma Gandhi?\", options: [\"Britse onderkoning van India\", \"Pakistans eerste president\", \"Indiaas militair leider\", \"Leider van geweldloze onafhankelijkheidsstrijd India\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[22]",
+    "oud": "q: \"Wat was de Tachtigjarige Oorlog?\", options: [\"Nederlandse Opstand tegen Spanje (1568-1648)\", \"Een burgeroorlog in Engeland\", \"Een Napoleon-oorlog\", \"Een burgeroorlog in Engeland of Een Napoleon-oorlog\"]",
+    "nieuw": "q: \"Wat was de Tachtigjarige Oorlog?\", options: [\"Nederlandse Opstand tegen Spanje (1568-1648)\", \"Een burgeroorlog in Engeland\", \"Een Napoleon-oorlog\", \"Een oorlog tussen Nederland en Engeland\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[27]",
+    "oud": "q: \"Wat betekende dekolonisatie voor Afrika?\", options: [\"Afrikaanse landen werden onafhankelijk na WO2\", \"Meer Europese controle\", \"Economische integratie met Europa of Meer Europese controle\", \"Economische integratie met Europa\"]",
+    "nieuw": "q: \"Wat betekende dekolonisatie voor Afrika?\", options: [\"Afrikaanse landen werden onafhankelijk na WO2\", \"Meer Europese controle\", \"Afrika werd één groot land\", \"Economische integratie met Europa\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[31]",
+    "oud": "q: \"Wat was de Slag bij Arnhem?\", options: [\"Mislukte geallieerde luchtlandingsoperatie in september 1944\", \"Strijd aan het Oostfront in de moderne taal- en letterkunde\", \"D-Day landing\", \"Bevrijding van Amsterdam\"]",
+    "nieuw": "q: \"Wat was de Slag bij Arnhem?\", options: [\"Mislukte geallieerde luchtlandingsoperatie in september 1944\", \"Strijd aan het Oostfront\", \"D-Day landing\", \"Bevrijding van Amsterdam\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[32]",
+    "oud": "q: \"Wat was de functie van de guillotine in de Franse Revolutie?\", options: [\"Een executiemachine die werd gebruikt bij de Terreur\", \"Een machtsinstrument van de kerk\", \"Een symbool van de monarchie\", \"Een machtsinstrument van de kerk of Een symbool van de monarchie\"]",
+    "nieuw": "q: \"Wat was de functie van de guillotine in de Franse Revolutie?\", options: [\"Een executiemachine die werd gebruikt bij de Terreur\", \"Een machtsinstrument van de kerk\", \"Een symbool van de monarchie\", \"Een machine om graan te snijden\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[46]",
+    "oud": "q: \"Wat was de Cubaanse Revolutie (1959)?\", options: [\"Een democratische revolutie\", \"Een militaire coup door Batista of Een democratische revolutie\", \"Fidel Castro's communistische machtsovername in Cuba\", \"Een militaire coup door Batista\"]",
+    "nieuw": "q: \"Wat was de Cubaanse Revolutie (1959)?\", options: [\"Een democratische revolutie\", \"Een opstand tegen Spanje\", \"Fidel Castro's communistische machtsovername in Cuba\", \"Een militaire coup door Batista\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "geschiedenis.groep7[49]",
+    "oud": "q: \"Wie was Charles Darwin en wat was zijn bijdrage?\", options: [\"Een Britse naturalist die de evolutietheorie beschreef\", \"Een astronoom die planeten ontdekte\", \"Een fysicus die kernenergie ontdekte\", \"Een fysicus die kernenergie ontdekte of Een astronoom die planeten ontdekte\"]",
+    "nieuw": "q: \"Wie was Charles Darwin en wat was zijn bijdrage?\", options: [\"Een Britse naturalist die de evolutietheorie beschreef\", \"Een astronoom die planeten ontdekte\", \"Een fysicus die kernenergie ontdekte\", \"Een zeevaarder die Amerika ontdekte\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep3[2]",
+    "oud": "q: \"Wat eten vlinders?\", options: [\"Vis\", \"Wormen in de natuur\", \"Nectar van bloemen\", \"Gras\"]",
+    "nieuw": "q: \"Wat eten vlinders?\", options: [\"Vis\", \"Wormen\", \"Nectar van bloemen\", \"Gras\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep3[14]",
+    "oud": "q: \"Welk dier leeft in de grond?\", options: [\"Zwaan\", \"Vlinder\", \"Vlinder of Zwaan\", \"Regenworm\"]",
+    "nieuw": "q: \"Welk dier leeft in de grond?\", options: [\"Zwaan\", \"Vlinder\", \"Mus\", \"Regenworm\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep3[17]",
+    "oud": "q: \"Wat eet een konijn?\", options: [\"Gras en groenten\", \"Insecten\", \"Wormen\", \"Insecten of Wormen\"]",
+    "nieuw": "q: \"Wat eet een konijn?\", options: [\"Gras en groenten\", \"Insecten\", \"Wormen\", \"Vis\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep3[18]",
+    "oud": "q: \"Wat is een rups?\", options: [\"Een volwassen vlinder\", \"Een insectenlarve die geen vlinder wordt\", \"Een jonge vlinder vóór de vlindertransformatie\", \"Een insectenlarve die geen vlinder wordt of Een volwassen vlinder\"]",
+    "nieuw": "q: \"Wat is een rups?\", options: [\"Een volwassen vlinder\", \"Een soort slak\", \"Een jonge vlinder, nog vóór de pop\", \"Een soort worm\"]",
+    "reden": "plaksel-afleider vervangen; opties gelijk van vorm/niet ook goed gemaakt"
+  },
+  {
+    "waar": "natuur.groep3[20]",
+    "oud": "q: \"Welke kleur heeft een spiegel als hij licht ontvangt?\", options: [\"Rood\", \"Zwart onder bepaalde omstandigheden\", \"Hij kaatst het licht terug\", \"Geel\"]",
+    "nieuw": "q: \"Wat doet een spiegel met licht?\", options: [\"Hij maakt het rood\", \"Hij slikt het op\", \"Hij kaatst het licht terug\", \"Hij maakt het geel\"]",
+    "reden": "vraag rijmde niet met de opties (kleur vs. wat een spiegel doet); plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.groep3[28]",
+    "oud": "q: \"Wat doet een vlinder met bloemen?\", options: [\"Drinkt nectar en helpt bij bestuiving\", \"Beschermt de bloemen of Eet de bloemen op\", \"Beschermt de bloemen\", \"Eet de bloemen op\"]",
+    "nieuw": "q: \"Wat doet een vlinder met bloemen?\", options: [\"Drinkt nectar en helpt bij bestuiving\", \"Maakt de bloemen kapot\", \"Beschermt de bloemen\", \"Eet de bloemen op\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep3[32]",
+    "oud": "q: \"Wat is de functie van de bek bij een vogel?\", options: [\"Eten en drinken\", \"Ruiken\", \"Horen\", \"Ruiken of Horen\"]",
+    "nieuw": "q: \"Wat is de functie van de bek bij een vogel?\", options: [\"Eten en drinken\", \"Ruiken\", \"Horen\", \"Zien\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep3[40]",
+    "oud": "q: \"Wat is een paddenstoel?\", options: [\"Een insect\", \"Een schimmel\", \"Een insect of Een plant\", \"Een plant\"]",
+    "nieuw": "q: \"Wat is een paddenstoel?\", options: [\"Een insect\", \"Een schimmel\", \"Een dier\", \"Een plant\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep3[44]",
+    "oud": "q: \"Wat doet een kikker met zijn tong?\", options: [\"Zwemt\", \"Klautert onder bepaalde omstandigheden\", \"Geluiden\", \"Eet insecten door ze te vangen\"]",
+    "nieuw": "q: \"Wat doet een kikker met zijn tong?\", options: [\"Hij zwemt ermee\", \"Hij ruikt ermee\", \"Hij kwaakt ermee\", \"Hij vangt er insecten mee\"]",
+    "reden": "plaksel-afleider vervangen; opties gelijk van vorm/niet ook goed gemaakt"
+  },
+  {
+    "waar": "natuur.groep5[2]",
+    "oud": "q: \"Wat is fotosynthese?\", options: [\"Energie maken uit licht\", \"Bloemen plukken of Water drinken\", \"Water drinken\", \"Bloemen plukken\"]",
+    "nieuw": "q: \"Wat is fotosynthese?\", options: [\"Energie maken uit licht\", \"Bladeren laten vallen\", \"Water drinken\", \"Bloemen plukken\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[5]",
+    "oud": "q: \"Wat is een zoogdier?\", options: [\"Een dier dat eieren legt\", \"Een koudbloedig dier\", \"Een dier dat zijn jong zoogt\", \"Een dier dat eieren legt of Een koudbloedig dier\"]",
+    "nieuw": "q: \"Wat is een zoogdier?\", options: [\"Een dier dat eieren legt\", \"Een koudbloedig dier\", \"Een dier dat zijn jong zoogt\", \"Een dier met veren\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[8]",
+    "oud": "q: \"Wat doet een thermometer?\", options: [\"Gewicht meten of Afstand meten\", \"Gewicht meten\", \"Afstand meten\", \"Temperatuur meten\"]",
+    "nieuw": "q: \"Wat doet een thermometer?\", options: [\"Tijd meten\", \"Gewicht meten\", \"Afstand meten\", \"Temperatuur meten\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[12]",
+    "oud": "q: \"Welke planeet is het dichtst bij de zon?\", options: [\"Mercurius\", \"Venus of Aarde\", \"Venus\", \"Aarde\"]",
+    "nieuw": "q: \"Welke planeet is het dichtst bij de zon?\", options: [\"Mercurius\", \"Mars\", \"Venus\", \"Aarde\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[13]",
+    "oud": "q: \"Wat is een carnivoor?\", options: [\"Vleesetend dier\", \"Alleseter\", \"Planteneter of Alleseter\", \"Planteneter\"]",
+    "nieuw": "q: \"Wat is een carnivoor?\", options: [\"Vleesetend dier\", \"Alleseter\", \"Koudbloedig dier\", \"Planteneter\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[17]",
+    "oud": "q: \"Wat is een voedselketen?\", options: [\"Een supermarkt\", \"Een supermarkt of Een boerderij\", \"Wie wat eet in de natuur\", \"Een boerderij\"]",
+    "nieuw": "q: \"Wat is een voedselketen?\", options: [\"Een supermarkt\", \"Een rij winkels\", \"Wie wat eet in de natuur\", \"Een boerderij\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[20]",
+    "oud": "q: \"Wat is een magneet?\", options: [\"Een voorwerp dat ijzer en staal aantrekt\", \"Een chemische stof\", \"Een elektrisch apparaat of Een chemische stof\", \"Een elektrisch apparaat\"]",
+    "nieuw": "q: \"Wat is een magneet?\", options: [\"Een voorwerp dat ijzer en staal aantrekt\", \"Een chemische stof\", \"Een soort batterij\", \"Een elektrisch apparaat\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[23]",
+    "oud": "q: \"Wat is een omnivoor?\", options: [\"Een plantenetend dier of Een vleesetend dier\", \"Een dier dat zowel planten als dieren eet\", \"Een plantenetend dier\", \"Een vleesetend dier\"]",
+    "nieuw": "q: \"Wat is een omnivoor?\", options: [\"Een dier dat in het water leeft\", \"Een dier dat zowel planten als dieren eet\", \"Een plantenetend dier\", \"Een vleesetend dier\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[24]",
+    "oud": "q: \"Wat doet het hart bij mensen?\", options: [\"Voedsel verteren\", \"Hormonen aanmaken\", \"Hormonen aanmaken of Voedsel verteren\", \"Bloed rondpompen door het lichaam\"]",
+    "nieuw": "q: \"Wat doet het hart bij mensen?\", options: [\"Voedsel verteren\", \"Hormonen aanmaken\", \"Lucht inademen\", \"Bloed rondpompen door het lichaam\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[27]",
+    "oud": "q: \"Welke planeet is beroemd om zijn grote, duidelijk zichtbare ringen?\", options: [\"Jupiter of Venus\", \"Saturnus\", \"Venus\", \"Jupiter\"]",
+    "nieuw": "q: \"Welke planeet is beroemd om zijn grote, duidelijk zichtbare ringen?\", options: [\"Mars\", \"Saturnus\", \"Venus\", \"Jupiter\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[30]",
+    "oud": "q: \"Wat is een paddenstoel?\", options: [\"Een schimmel die sporen verspreidt via de hoed\", \"Een plant die in de schaduw groeit of Een soort mos dat op bomen groeit\", \"Een soort mos dat op bomen groeit\", \"Een plant die in de schaduw groeit\"]",
+    "nieuw": "q: \"Wat is een paddenstoel?\", options: [\"Een schimmel die sporen verspreidt via de hoed\", \"Een bloem zonder blaadjes\", \"Een soort mos dat op bomen groeit\", \"Een plant die in de schaduw groeit\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[30]",
+    "oud": "\"Paddenstoelen zijn de vruchtlichamen van schimmels. Ze verspreiden sporen en leven van dood organisch materiaal (detritivoor/decomponent).\"",
+    "nieuw": "\"Paddenstoelen zijn de vruchtlichamen van schimmels. Ze verspreiden sporen en leven van dood organisch materiaal (het zijn afbrekers of opruimers).\"",
+    "reden": "uitleg: \"detritivoor\" geldt voor dieren; paddenstoelen zijn afbrekers"
+  },
+  {
+    "waar": "natuur.groep5[32]",
+    "oud": "q: \"Wat is het verschil tussen warmbloedige en koudbloedige dieren?\", options: [\"Warmbloedigen reguleren eigen lichaamstemperatuur; koudbloedigen zijn afhankelijk van de omgeving\", \"Warmbloedigen leven in warmte, koudbloedigen in kou of Koudbloedigen zijn altijd groter dan warmbloedigen\", \"Warmbloedigen leven in warmte, koudbloedigen in kou\", \"Koudbloedigen zijn altijd groter dan warmbloedigen\"]",
+    "nieuw": "q: \"Wat is het verschil tussen warmbloedige en koudbloedige dieren?\", options: [\"Warmbloedigen reguleren eigen lichaamstemperatuur; koudbloedigen zijn afhankelijk van de omgeving\", \"Warmbloedigen hebben meer bloed dan koudbloedigen\", \"Warmbloedigen leven in warmte, koudbloedigen in kou\", \"Koudbloedigen zijn altijd groter dan warmbloedigen\"]",
+    "reden": "plaksel-afleider vervangen door korte, plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[34]",
+    "oud": "q: \"Wat is een zoogdier?\", options: [\"Een dier dat koelbloedig is en in groepen leeft\", \"Een dier dat eieren legt en schubben heeft\", \"Een gewerveld dier dat jongen zoogt met moedermelk en meestal haar heeft\", \"Een dier dat koelbloedig is en in groepen leeft of Een dier dat eieren legt en schubben heeft\"], answer: 2, explanation: \"Zoogdieren: gewerveld, warmbloedig, haar/vacht, jongen gevoed met moedermelk. Voorbeelden: hond, walvis, vleermuis, mens.\"",
+    "nieuw": "q: \"Wat is een zoogdier?\", options: [\"Een dier dat koelbloedig is en in groepen leeft\", \"Een dier dat eieren legt en schubben heeft\", \"Een gewerveld dier dat jongen zoogt met moedermelk en meestal haar heeft\", \"Een dier dat altijd in het water leeft\"], answer: 2, explanation: \"Zoogdieren: gewerveld, warmbloedig, haar/vacht, jongen gevoed met moedermelk. Voorbeelden: hond, walvis, vleermuis, mens.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep5[36]",
+    "oud": "q: \"Wat is het verschil tussen een carnivoor, herbivoor en omnivoor?\", options: [\"Naar de plek in de voedselketen als producent\", \"Naar het aantal poten dat ze hebben\", \"Naar de plek in de voedselketen als producent of Naar het aantal poten dat ze hebben\", \"Herbivoor eet planten; carnivoor eet dieren; omnivoor eet beide\"], answer: 3, explanation: \"Herbivoor (planteneters): konijn, koe. Carnivoor (vleeseters): leeuw, uil. Omnivoor (alleseters): mens, vos, beer.\"",
+    "nieuw": "q: \"Wat is het verschil tussen een carnivoor, herbivoor en omnivoor?\", options: [\"Herbivoor eet dieren; carnivoor eet planten; omnivoor eet beide\", \"Ze verschillen alleen in grootte\", \"Herbivoor eet beide; carnivoor eet planten; omnivoor eet dieren\", \"Herbivoor eet planten; carnivoor eet dieren; omnivoor eet beide\"], answer: 3, explanation: \"Herbivoor (planteneters): konijn, koe. Carnivoor (vleeseters): leeuw, uil. Omnivoor (alleseters): mens, vos, beer.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; opties 1-2 pasten niet bij de vraag (antwoord op een andere vraag)"
+  },
+  {
+    "waar": "natuur.groep5[39]",
+    "oud": "q: \"Wat is het verschil tussen een slak en een naaktslak?\", options: [\"Een slak heeft een huisje (schelp); een naaktslak niet\", \"Een naaktslak heeft een klein huisje van binnen\", \"Een slak leeft in water, een naaktslak op land\", \"Een naaktslak heeft een klein huisje van binnen of Een slak leeft in water, een naaktslak op land\"], answer: 0, explanation: \"Slak: weekdier met spiraalvormige schelp. Naaktslak: weekdier zonder schelp. Beide eten plantaardig materiaal en zijn kwetsbaar voor uitdroging.\"",
+    "nieuw": "q: \"Wat is het verschil tussen een slak en een naaktslak?\", options: [\"Een slak heeft een huisje (schelp); een naaktslak niet\", \"Een naaktslak heeft geen voelsprieten\", \"Een slak leeft in water, een naaktslak op land\", \"Een naaktslak is een jonge slak\"], answer: 0, explanation: \"Slak: weekdier met spiraalvormige schelp. Naaktslak: weekdier zonder schelp. Beide eten plantaardig materiaal en zijn kwetsbaar voor uitdroging.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; optie 2 was half waar (veel naaktslakken hebben een restje schelp onder de huid)"
+  },
+  {
+    "waar": "natuur.groep5[48]",
+    "oud": "q: \"Wat is een kelk, meeldraden en stamper bij een bloem?\", options: [\"Kleuren van de bloemblaadjes die insecten aantrekken\", \"Kleuren van de bloemblaadjes die insecten aantrekken of Onderdelen van het blad die fotosynthese uitvoeren\", \"Kelk = beschermt knop; meeldraden = maken stuifmeel (mannelijk); stamper = maakt zaden (vrouwelijk)\", \"Onderdelen van het blad die fotosynthese uitvoeren\"], answer: 2, explanation: \"Bloem: kelk (groene blaadjes die knop beschermen), kroonbladen (aantrekkelijk voor insecten), meeldraden (stuifmeel = mannelijk), stamper (bevat eitje = vrouwelijk).\"",
+    "nieuw": "q: \"Wat zijn de kelk, de meeldraden en de stamper bij een bloem?\", options: [\"Kleuren van de bloemblaadjes die insecten aantrekken\", \"Delen van de wortel die water opnemen\", \"Kelk = beschermt knop; meeldraden = maken stuifmeel (mannelijk); stamper = maakt zaden (vrouwelijk)\", \"Onderdelen van het blad die fotosynthese uitvoeren\"], answer: 2, explanation: \"Bloem: kelk (groene blaadjes die knop beschermen), kroonbladen (aantrekkelijk voor insecten), meeldraden (stuifmeel = mannelijk), stamper (bevat eitje = vrouwelijk).\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; vraagzin grammaticaal hersteld"
+  },
+  {
+    "waar": "natuur.groep5[49]",
+    "oud": "q: \"Wat is het verschil tussen prooi en predator?\", options: [\"Prooi en predator zijn altijd van dezelfde soort\", \"Prooi is het roofdier; predator is het slachtoffer\", \"Prooi is het roofdier; predator is het slachtoffer of Prooi en predator zijn altijd van dezelfde soort\", \"Predator is het roofdier dat jaagt; prooi is het dier dat gevangen wordt\"], answer: 3, explanation: \"Predator-prooirelatie: de predator (roofdier, bv. wolf) jaagt op de prooi (bv. konijn). Bij veel predatoren daalt de prooi-populatie; bij weinig predatoren groeit de prooi-populatie.\"",
+    "nieuw": "q: \"Wat is het verschil tussen prooi en predator?\", options: [\"Prooi en predator zijn altijd van dezelfde soort\", \"Prooi is het roofdier; predator is het slachtoffer\", \"Prooi en predator eten allebei alleen planten\", \"Predator is het roofdier dat jaagt; prooi is het dier dat gevangen wordt\"], answer: 3, explanation: \"Predator-prooirelatie: de predator (roofdier, bv. wolf) jaagt op de prooi (bv. konijn). Bij veel predatoren daalt de prooi-populatie; bij weinig predatoren groeit de prooi-populatie.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[0]",
+    "oud": "q: \"Wat is het verschil tussen weer en klimaat?\", options: [\"Weer is altijd warm\", \"Klimaat is korte termijn\", \"Weer is korte termijn, klimaat lange termijn\", \"Klimaat is korte termijn of Weer is altijd warm\"], answer: 2, explanation: \"Weer = nu; klimaat = gemiddeld over 30+ jaar.\"",
+    "nieuw": "q: \"Wat is het verschil tussen weer en klimaat?\", options: [\"Weer is altijd warm\", \"Klimaat is korte termijn\", \"Weer is korte termijn, klimaat lange termijn\", \"Weer en klimaat betekenen hetzelfde\"], answer: 2, explanation: \"Weer = nu; klimaat = gemiddeld over 30+ jaar.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[2]",
+    "oud": "q: \"Wat is een voedselweb?\", options: [\"Een kookboek\", \"Een recept\", \"Netwerk van voedselrelaties in een ecosysteem\", \"Een spinnenweb van voedsel onder bepaalde omstandigheden\"], answer: 2, explanation: \"Een voedselweb toont alle eetrelaties in een ecosysteem.\"",
+    "nieuw": "q: \"Wat is een voedselweb?\", options: [\"Een kookboek\", \"Een recept\", \"Netwerk van voedselrelaties in een ecosysteem\", \"Een spinnenweb vol voedsel\"], answer: 2, explanation: \"Een voedselweb toont alle eetrelaties in een ecosysteem.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[7]",
+    "oud": "q: \"Wat is een adaptatie?\", options: [\"Een uitsterven of Een migratie\", \"Een aanpassing aan de omgeving\", \"Een migratie\", \"Een uitsterven\"], answer: 1, explanation: \"Adaptaties zijn eigenschappen die soorten helpen overleven.\"",
+    "nieuw": "q: \"Wat is een adaptatie?\", options: [\"Een ziekte\", \"Een aanpassing aan de omgeving\", \"Een migratie\", \"Een uitsterven\"], answer: 1, explanation: \"Adaptaties zijn eigenschappen die soorten helpen overleven.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[11]",
+    "oud": "q: \"Wat is een fossiel?\", options: [\"Een kristal\", \"Een oud gesteente onder bepaalde omstandigheden\", \"Resten van levende wezens in gesteente\", \"Een mineraal\"], answer: 2, explanation: \"Fossielen zijn versteende resten van dieren of planten.\"",
+    "nieuw": "q: \"Wat is een fossiel?\", options: [\"Een kristal\", \"Een stuk lava\", \"Resten van levende wezens in gesteente\", \"Een mineraal\"], answer: 2, explanation: \"Fossielen zijn versteende resten van dieren of planten.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[12]",
+    "oud": "q: \"Wat is de snelheid van licht?\", options: [\"30.000 km/s of 3.000 km/s\", \"30.000 km/s\", \"300.000 km/s\", \"3.000 km/s\"], answer: 2, explanation: \"Lichtsnelheid: ca. 300.000 km/s in vacuüm.\"",
+    "nieuw": "q: \"Wat is de snelheid van licht?\", options: [\"3.000.000 km/s\", \"30.000 km/s\", \"300.000 km/s\", \"3.000 km/s\"], answer: 2, explanation: \"Lichtsnelheid: ca. 300.000 km/s in vacuüm.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[13]",
+    "oud": "q: \"Wat is een parasiet?\", options: [\"Een producent\", \"Een rottingsorganisme onder bepaalde omstandigheden\", \"Een nuttig organisme\", \"Een organisme dat ten koste van een ander leeft\"], answer: 3, explanation: \"Parasieten schaden hun gastheer.\"",
+    "nieuw": "q: \"Wat is een parasiet?\", options: [\"Een producent\", \"Een opruimer van dode planten\", \"Een nuttig organisme\", \"Een organisme dat ten koste van een ander leeft\"], answer: 3, explanation: \"Parasieten schaden hun gastheer.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[14]",
+    "oud": "q: \"Wat is gravitatie?\", options: [\"Magnetisme\", \"Elektrische kracht in de praktijk\", \"Wrijving\", \"Aantrekkingskracht tussen massa's\"], answer: 3, explanation: \"Gravitatie = zwaartekracht tussen massa's.\"",
+    "nieuw": "q: \"Wat is gravitatie?\", options: [\"Magnetisme\", \"Elektrische kracht\", \"Wrijving\", \"Aantrekkingskracht tussen massa's\"], answer: 3, explanation: \"Gravitatie = zwaartekracht tussen massa's.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[15]",
+    "oud": "q: \"Wat is een atoom?\", options: [\"Een molecuul onder bepaalde omstandigheden\", \"Een proton\", \"Een cel\", \"De kleinste eenheid van materie\"], answer: 3, explanation: \"Atomen zijn de bouwstenen van materie.\"",
+    "nieuw": "q: \"Wat is een atoom?\", options: [\"Een molecuul\", \"Een proton\", \"Een cel\", \"Een piepklein bouwsteentje van alle stoffen\"], answer: 3, explanation: \"Atomen zijn de bouwstenen van alle stoffen. Ze bestaan zelf weer uit nog kleinere deeltjes, zoals protonen.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; 'kleinste eenheid van materie' botste met optie 'proton' (een proton is kleiner dan een atoom)"
+  },
+  {
+    "waar": "natuur.groep7[19]",
+    "oud": "q: \"Wat is het verschil tussen een plant- en diercel?\", options: [\"Diercel heeft chloroplasten\", \"Plantencel heeft geen kern\", \"Plantencel heeft celwand en chloroplasten\", \"Diercel heeft chloroplasten of Plantencel heeft geen kern\"], answer: 2, explanation: \"Plantencellen hebben celwand en chloroplasten voor fotosynthese.\"",
+    "nieuw": "q: \"Wat is het verschil tussen een plant- en diercel?\", options: [\"Diercel heeft chloroplasten\", \"Plantencel heeft geen kern\", \"Plantencel heeft celwand en chloroplasten\", \"Diercel heeft een celwand\"], answer: 2, explanation: \"Plantencellen hebben celwand en chloroplasten voor fotosynthese.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[20]",
+    "oud": "q: \"Wat is een predator-prooirelatie?\", options: [\"Beide dieren helpen elkaar\", \"Dieren concurreren om voedsel\", \"Een roofdier jaagt op en eet een prooidier\", \"Dieren concurreren om voedsel of Beide dieren helpen elkaar\"], answer: 2, explanation: \"In een predator-prooirelatie eet het roofdier de prooi. Bv: wolf (predator) – schaap (prooi).\"",
+    "nieuw": "q: \"Wat is een predator-prooirelatie?\", options: [\"Beide dieren helpen elkaar\", \"Dieren concurreren om voedsel\", \"Een roofdier jaagt op en eet een prooidier\", \"Twee dieren wonen samen in één hol\"], answer: 2, explanation: \"In een predator-prooirelatie eet het roofdier de prooi. Bv: wolf (predator) – schaap (prooi).\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[24]",
+    "oud": "q: \"Wat is zwaartekracht?\", options: [\"Wrijving tussen objecten onder bepaalde omstandigheden\", \"Een elektrische kracht\", \"De aantrekkingskracht die massa's op elkaar uitoefenen\", \"Een magnetische kracht\"], answer: 2, explanation: \"Zwaartekracht: alle objecten met massa trekken elkaar aan. De aarde trekt ons naar beneden.\"",
+    "nieuw": "q: \"Wat is zwaartekracht?\", options: [\"Wrijving tussen objecten\", \"Een elektrische kracht\", \"De aantrekkingskracht die massa's op elkaar uitoefenen\", \"Een magnetische kracht\"], answer: 2, explanation: \"Zwaartekracht: alle objecten met massa trekken elkaar aan. De aarde trekt ons naar beneden.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[30]",
+    "oud": "q: \"Wat is de pH-schaal?\", options: [\"Een schaal voor de hardheid van materialen\", \"Een maat voor de elektrische lading van atomen\", \"Een maat voor de elektrische lading van atomen of Een schaal voor de hardheid van materialen\", \"Een logaritmische schaal van 0-14 die de zuurgraad van een oplossing aangeeft\"], answer: 3, explanation: \"pH: 0-6 = zuur (bv. maagzuur pH 2), 7 = neutraal (water), 8-14 = basisch (bv. zeep pH 10). Elke pH-eenheid is factor 10 verschil in H+-concentratie.\"",
+    "nieuw": "q: \"Wat is de pH-schaal?\", options: [\"Een schaal voor de hardheid van materialen\", \"Een maat voor de elektrische lading van atomen\", \"Een schaal voor de temperatuur van water\", \"Een logaritmische schaal van 0-14 die de zuurgraad van een oplossing aangeeft\"], answer: 3, explanation: \"pH: 0-6 = zuur (bv. maagzuur pH 2), 7 = neutraal (water), 8-14 = basisch (bv. zeep pH 10). Elke pH-eenheid is factor 10 verschil in H+-concentratie.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[32]",
+    "oud": "q: \"Wat is een elektrisch circuit?\", options: [\"Een magneet die stroom aantrekt\", \"Een magneet die stroom aantrekt of Een apparaat dat stroom opwekt\", \"Een gesloten pad waarlangs elektrische stroom kan vloeien\", \"Een apparaat dat stroom opwekt\"], answer: 2, explanation: \"Een circuit: gesloten lus van geleiders, stroombron (batterij) en verbruikers (lamp). Stroom stroomt van + naar - (conventioneel). Zonder gesloten circuit stroomt er geen stroom.\"",
+    "nieuw": "q: \"Wat is een elektrisch circuit?\", options: [\"Een magneet die stroom aantrekt\", \"Een schakelaar die altijd aan staat\", \"Een gesloten pad waarlangs elektrische stroom kan vloeien\", \"Een apparaat dat stroom opwekt\"], answer: 2, explanation: \"Een circuit: gesloten lus van geleiders, stroombron (batterij) en verbruikers (lamp). Stroom stroomt van + naar - (conventioneel). Zonder gesloten circuit stroomt er geen stroom.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[33]",
+    "oud": "q: \"Wat is het verschil tussen geleiders en isolatoren?\", options: [\"Geleiders houden stroom tegen; isolatoren laten stroom door\", \"Geleiders houden stroom tegen; isolatoren laten stroom door of Geleiders zijn altijd metalen; isolatoren altijd plastics\", \"Geleiders zijn altijd metalen; isolatoren altijd plastics\", \"Geleiders laten elektriciteit goed door; isolatoren houden stroom tegen\"], answer: 3, explanation: \"Geleiders (koper, ijzer, grafiet): vrije elektronen die stroom doorgeven. Isolatoren (rubber, hout, plastic, glas): elektronen gebonden, geen geleiding. Gebruikt in bedrading en isolatie.\"",
+    "nieuw": "q: \"Wat is het verschil tussen geleiders en isolatoren?\", options: [\"Geleiders houden stroom tegen; isolatoren laten stroom door\", \"Geleiders en isolatoren laten allebei geen stroom door\", \"Geleiders zijn altijd metalen; isolatoren altijd plastics\", \"Geleiders laten elektriciteit goed door; isolatoren houden stroom tegen\"], answer: 3, explanation: \"Geleiders (koper, ijzer, grafiet): vrije elektronen die stroom doorgeven. Isolatoren (rubber, hout, plastic, glas): elektronen gebonden, geen geleiding. Gebruikt in bedrading en isolatie.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[35]",
+    "oud": "q: \"Wat is het verschil tussen serie- en parallelschakeling?\", options: [\"Bij serie zijn verbruikers achter elkaar (1 pad); bij parallel staan ze naast elkaar (meerdere paden)\", \"Serieschakeling heeft meer verbruikers dan parallel of Serieschakeling is veiliger dan parallelschakeling\", \"Serieschakeling is veiliger dan parallelschakeling\", \"Serieschakeling heeft meer verbruikers dan parallel\"], answer: 0, explanation: \"Serie: verbruikers achter elkaar, stroom is overal gelijk, spanning verdeeld. Parallel: stroom splitst, spanning overal gelijk. Thuis altijd parallel (uitvallen lamp stoort anderen niet).\"",
+    "nieuw": "q: \"Wat is het verschil tussen serie- en parallelschakeling?\", options: [\"Bij serie zijn verbruikers achter elkaar (1 pad); bij parallel staan ze naast elkaar (meerdere paden)\", \"Serieschakeling werkt alleen met batterijen\", \"Serieschakeling is veiliger dan parallelschakeling\", \"Serieschakeling heeft meer verbruikers dan parallel\"], answer: 0, explanation: \"Serie: verbruikers achter elkaar, stroom is overal gelijk, spanning verdeeld. Parallel: stroom splitst, spanning overal gelijk. Thuis altijd parallel (uitvallen lamp stoort anderen niet).\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[38]",
+    "oud": "q: \"Wat is het verschil tussen organische en anorganische stoffen?\", options: [\"Anorganisch komt alleen voor in levende wezens\", \"Organisch is alleen in planten; anorganisch in dieren\", \"Organische stoffen bevatten koolstof-waterstofbindingen; anorganische stoffen meestal niet\", \"Organisch is alleen in planten; anorganisch in dieren of Anorganisch komt alleen voor in levende wezens\"], answer: 2, explanation: \"Organische chemie: koolstofverbindingen (glucose, eiwitten, vetten, DNA). Anorganisch: mineralen, zouten, water, metalen. Grens is niet absoluut (CO2 = anorganisch ondanks C).\"",
+    "nieuw": "q: \"Wat is het verschil tussen organische en anorganische stoffen?\", options: [\"Anorganisch komt alleen voor in levende wezens\", \"Organisch is alleen in planten; anorganisch in dieren\", \"Organische stoffen bevatten koolstof-waterstofbindingen; anorganische stoffen meestal niet\", \"Organische stoffen zijn altijd vloeibaar; anorganische altijd vast\"], answer: 2, explanation: \"Organische chemie: koolstofverbindingen (glucose, eiwitten, vetten, DNA). Anorganisch: mineralen, zouten, water, metalen. Grens is niet absoluut (CO2 = anorganisch ondanks C).\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[40]",
+    "oud": "q: \"Wat is de kringloop van water?\", options: [\"Waterreserves in de oceaan die niet circuleren\", \"Transport van water door planten van wortel naar blad of Waterreserves in de oceaan die niet circuleren\", \"Continue cyclus van verdamping, condensatie, neerslag en afvoer door rivieren en grondwater\", \"Transport van water door planten van wortel naar blad\"], answer: 2, explanation: \"Waterkringloop: verdamping (zee/land) → condensatie (wolken) → neerslag (regen/sneeuw) → afvoer (rivieren/grondwater) → zee → verdamping. Zon drijft het proces.\"",
+    "nieuw": "q: \"Wat is de kringloop van water?\", options: [\"Waterreserves in de oceaan die niet circuleren\", \"Het bevriezen van water in de winter\", \"Continue cyclus van verdamping, condensatie, neerslag en afvoer door rivieren en grondwater\", \"Transport van water door planten van wortel naar blad\"], answer: 2, explanation: \"Waterkringloop: verdamping (zee/land) → condensatie (wolken) → neerslag (regen/sneeuw) → afvoer (rivieren/grondwater) → zee → verdamping. Zon drijft het proces.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[41]",
+    "oud": "q: \"Wat is biodiversiteit?\", options: [\"De hoeveelheid biomassa in een voedselketen of Het aantal dieren in een ecosysteem\", \"Het aantal dieren in een ecosysteem\", \"De hoeveelheid biomassa in een voedselketen\", \"De verscheidenheid aan soorten, genen en ecosystemen in een bepaald gebied\"], answer: 3, explanation: \"Biodiversiteit: soortenrijkdom, genetische diversiteit binnen soorten, en variëteit aan ecosystemen. Hoge biodiversiteit maakt ecosystemen veerkrachtiger tegen verstoringen.\"",
+    "nieuw": "q: \"Wat is biodiversiteit?\", options: [\"Het aantal planten in een tuin\", \"Het aantal dieren in een ecosysteem\", \"De hoeveelheid biomassa in een voedselketen\", \"De verscheidenheid aan soorten, genen en ecosystemen in een bepaald gebied\"], answer: 3, explanation: \"Biodiversiteit: soortenrijkdom, genetische diversiteit binnen soorten, en variëteit aan ecosystemen. Hoge biodiversiteit maakt ecosystemen veerkrachtiger tegen verstoringen.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[42]",
+    "oud": "q: \"Wat is de ozonlaag en waarom is ze belangrijk?\", options: [\"Een laag vochtige lucht boven de oceaan\", \"Een laag CO2 die de aarde beschermt tegen zonnewind of Een laag vochtige lucht boven de oceaan\", \"Een laag ozon (O3) in de stratosfeer die schadelijke UV-straling absorbeert\", \"Een laag CO2 die de aarde beschermt tegen zonnewind\"], answer: 2, explanation: \"De ozonlaag (15-35 km hoogte) absorbeert 97-99% van de schadelijke UV-B straling. Aantasting door CFK's (chloorfluorkoolwaterstoffen) veroorzaakte het 'gat' boven Antarctica.\"",
+    "nieuw": "q: \"Wat is de ozonlaag en waarom is ze belangrijk?\", options: [\"Een laag vochtige lucht boven de oceaan\", \"Een laag stof die de aarde warm houdt\", \"Een laag ozon (O3) in de stratosfeer die schadelijke UV-straling absorbeert\", \"Een laag CO2 die de aarde beschermt tegen zonnewind\"], answer: 2, explanation: \"De ozonlaag (15-35 km hoogte) absorbeert 97-99% van de schadelijke UV-B straling. Aantasting door CFK's (chloorfluorkoolwaterstoffen) veroorzaakte het 'gat' boven Antarctica.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[46]",
+    "oud": "q: \"Wat is het effect van luchtvervuiling op mensen?\", options: [\"Luchtvervuiling is alleen schadelijk bij direct contact\", \"Luchtvervuiling is alleen schadelijk bij direct contact of Luchtvervuiling beïnvloedt alleen planten, niet mensen\", \"Luchtvervuiling beïnvloedt alleen planten, niet mensen\", \"Fijnstof en giftige gassen kunnen luchtwegen beschadigen, longziekten veroorzaken en de levensduur verkorten\"], answer: 3, explanation: \"Luchtvervuiling: fijnstof (PM2.5/PM10), stikstofdioxide (NO2), ozon (O3) op laagte veroorzaken astma, COPD, hart-vaatproblemen. WHO schat 7 miljoen vroegtijdige doden per jaar.\"",
+    "nieuw": "q: \"Wat is het effect van luchtvervuiling op mensen?\", options: [\"Luchtvervuiling is alleen schadelijk bij direct contact\", \"Luchtvervuiling is alleen schadelijk in de zomer\", \"Luchtvervuiling beïnvloedt alleen planten, niet mensen\", \"Fijnstof en giftige gassen kunnen luchtwegen beschadigen, longziekten veroorzaken en de levensduur verkorten\"], answer: 3, explanation: \"Luchtvervuiling: fijnstof (PM2.5/PM10), stikstofdioxide (NO2), ozon (O3) op laagte veroorzaken astma, COPD, hart-vaatproblemen. WHO schat 7 miljoen vroegtijdige doden per jaar.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "natuur.groep7[48]",
+    "oud": "q: \"Wat is symbiose?\", options: [\"Een duurzame interactie tussen twee verschillende soorten waarbij minstens één baat heeft\", \"Het uitbuiten van een gastheersoort door een parasiet\", \"Concurrentie tussen twee soorten om dezelfde hulpbron\", \"Het uitbuiten van een gastheersoort door een parasiet of Concurrentie tussen twee soorten om dezelfde hulpbron\"], answer: 0, explanation: \"Symbiose: mutualisme (beide hebben baat: bij + bloem), commensalisme (één heeft baat, de ander merkt niets), parasitisme (één heeft baat, de ander nadeel: vlo op hond). Vaak evolutionair ontwikkeld.\"",
+    "nieuw": "q: \"Wat is symbiose?\", options: [\"Een duurzame interactie tussen twee verschillende soorten waarbij minstens één baat heeft\", \"Het opeten van een prooi door een roofdier\", \"Concurrentie tussen twee soorten om dezelfde hulpbron\", \"Twee soorten die in verschillende gebieden leven\"], answer: 0, explanation: \"Symbiose: mutualisme (beide hebben baat: bij + bloem), commensalisme (één heeft baat, de ander merkt niets), parasitisme (één heeft baat, de ander nadeel: vlo op hond). Vaak evolutionair ontwikkeld.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; optie 2 (parasitisme) is zelf een vorm van symbiose, dus ook goed"
+  },
+  {
+    "waar": "natuur.groep7[49]",
+    "oud": "q: \"Wat is het verschil tussen een kernreactie en een chemische reactie?\", options: [\"Ze zijn identiek, alleen de energievrij-making verschilt\", \"Chemische reacties zijn altijd exotherm; kernreacties altijd endotherm\", \"Bij een kernreactie verandert de kern van een atoom; bij een chemische reactie veranderen alleen de elektronenbindingen\", \"Chemische reacties zijn altijd exotherm; kernreacties altijd endotherm of Ze zijn identiek, alleen de energievrij-making verschilt\"], answer: 2, explanation: \"Kernreactie: kern van atoom verandert (splitsing of fusie), enorme hoeveelheid energie (E=mc²). Chemische reactie: atomen hergroeperen via elektronenbindingen, minder energie. Kernenergie en atoombommen: kernreacties.\"",
+    "nieuw": "q: \"Wat is het verschil tussen een kernreactie en een chemische reactie?\", options: [\"Ze zijn identiek, alleen de energievrij-making verschilt\", \"Chemische reacties zijn altijd exotherm; kernreacties altijd endotherm\", \"Bij een kernreactie verandert de kern van een atoom; bij een chemische reactie veranderen alleen de elektronenbindingen\", \"Kernreacties gebeuren alleen in planten\"], answer: 2, explanation: \"Kernreactie: kern van atoom verandert (splitsing of fusie), enorme hoeveelheid energie (E=mc²). Chemische reactie: atomen hergroeperen via elektronenbindingen, minder energie. Kernenergie en atoombommen: kernreacties.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep5[23]",
+    "oud": "q: \"What is the English word for 'school'?\", options: [\"House\", \"House of Store\", \"School\", \"Store\"], answer: 2, explanation: \"'School' is hetzelfde in het Engels.\"",
+    "nieuw": "q: \"What is the English word for 'school'?\", options: [\"House\", \"Church\", \"School\", \"Store\"], answer: 2, explanation: \"'School' is hetzelfde in het Engels.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep5[29]",
+    "oud": "q: \"What is 'vliegtuig' in English?\", options: [\"Airplane\", \"Train of Boat\", \"Train\", \"Boat\"], answer: 0, explanation: \"'Airplane' = vliegtuig.\"",
+    "nieuw": "q: \"What is 'vliegtuig' in English?\", options: [\"Airplane\", \"Car\", \"Train\", \"Boat\"], answer: 0, explanation: \"'Airplane' = vliegtuig.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep5[33]",
+    "oud": "q: \"What animal has a trunk?\", options: [\"Tiger\", \"Giraffe\", \"Elephant\", \"Giraffe of Tiger\"], answer: 2, explanation: \"An elephant has a trunk = slurf.\"",
+    "nieuw": "q: \"What animal has a trunk?\", options: [\"Tiger\", \"Giraffe\", \"Elephant\", \"Lion\"], answer: 2, explanation: \"An elephant has a trunk = slurf.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[1]",
+    "oud": "q: \"Which sentence is correct?\", options: [\"He doesn't like it\", \"He don't like it of He not like it\", \"He don't like it\", \"He not like it\"], answer: 0, explanation: \"He doesn't like it — bij he/she/it: doesn't.\"",
+    "nieuw": "q: \"Which sentence is correct?\", options: [\"He doesn't like it\", \"He doesn't likes it\", \"He don't like it\", \"He not like it\"], answer: 0, explanation: \"He doesn't like it — bij he/she/it: doesn't.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[4]",
+    "oud": "q: \"What does 'however' mean?\", options: [\"Tenzij\", \"Bovendien of Tenzij\", \"Bovendien\", \"Echter/maar\"], answer: 3, explanation: \"'However' = echter, maar.\"",
+    "nieuw": "q: \"What does 'however' mean?\", options: [\"Tenzij\", \"Daarom\", \"Bovendien\", \"Echter/maar\"], answer: 3, explanation: \"'However' = echter, maar.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[10]",
+    "oud": "q: \"What does 'meanwhile' mean?\", options: [\"Ondertussen\", \"Eerder\", \"Daarna\", \"Eerder of Daarna\"], answer: 0, explanation: \"'Meanwhile' = ondertussen.\"",
+    "nieuw": "q: \"What does 'meanwhile' mean?\", options: [\"Ondertussen\", \"Eerder\", \"Daarna\", \"Nooit\"], answer: 0, explanation: \"'Meanwhile' = ondertussen.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[12]",
+    "oud": "q: \"What does 'nevertheless' mean?\", options: [\"Toch/desondanks\", \"Bovendien\", \"Bovendien of Wanneer\", \"Wanneer\"], answer: 0, explanation: \"'Nevertheless' = desondanks, toch.\"",
+    "nieuw": "q: \"What does 'nevertheless' mean?\", options: [\"Toch/desondanks\", \"Bovendien\", \"Daarom\", \"Wanneer\"], answer: 0, explanation: \"'Nevertheless' = desondanks, toch.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[13]",
+    "oud": "q: \"Fill in: They ___ football when I arrived.\", options: [\"have played\", \"played\", \"have played of played\", \"were playing\"], answer: 3, explanation: \"Past continuous: were playing (actie bezig toen...).\"",
+    "nieuw": "q: \"Fill in: They ___ football when I arrived.\", options: [\"have played\", \"plays\", \"are playing\", \"were playing\"], answer: 3, explanation: \"Past continuous: were playing (actie bezig toen...).\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; 'played' was ook grammaticaal mogelijk"
+  },
+  {
+    "waar": "engels.groep7[17]",
+    "oud": "q: \"Fill in: By tomorrow, she ___ the report.\", options: [\"will have finished\", \"will finish\", \"has finished of will finish\", \"has finished\"], answer: 0, explanation: \"Future perfect: will have finished (klaar vóór een tijdstip in de toekomst).\"",
+    "nieuw": "q: \"Fill in: By tomorrow, she ___ the report.\", options: [\"will have finished\", \"will finish\", \"had finished\", \"has finished\"], answer: 0, explanation: \"Future perfect: will have finished (klaar vóór een tijdstip in de toekomst).\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[18]",
+    "oud": "q: \"What is a 'metaphor'?\", options: [\"A direct comparison without 'like'\", \"A comparison using 'like' of An exaggeration\", \"A comparison using 'like'\", \"An exaggeration\"], answer: 0, explanation: \"A metaphor: 'Life is a journey' (geen 'like').\"",
+    "nieuw": "q: \"What is a 'metaphor'?\", options: [\"A direct comparison without 'like'\", \"A word that sounds like its meaning\", \"A comparison using 'like'\", \"An exaggeration\"], answer: 0, explanation: \"A metaphor: 'Life is a journey' (geen 'like').\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[22]",
+    "oud": "q: \"What does 'despite' mean?\", options: [\"Totdat\", \"Tenzij\", \"Ondanks\", \"Totdat of Tenzij\"], answer: 2, explanation: \"'Despite' = ondanks.\"",
+    "nieuw": "q: \"What does 'despite' mean?\", options: [\"Totdat\", \"Tenzij\", \"Ondanks\", \"Omdat\"], answer: 2, explanation: \"'Despite' = ondanks.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[29]",
+    "oud": "q: \"What is a 'clause'?\", options: [\"Een zinsdeel met onderwerp en werkwoord\", \"Een zelfstandig naamwoord\", \"Een bijvoeglijk naamwoord\", \"Een zelfstandig naamwoord of Een bijvoeglijk naamwoord\"], answer: 0, explanation: \"A clause contains a subject and a verb (bv. 'when she arrived').\"",
+    "nieuw": "q: \"What is a 'clause'?\", options: [\"Een zinsdeel met onderwerp en werkwoord\", \"Een zelfstandig naamwoord\", \"Een bijvoeglijk naamwoord\", \"Een werkwoord\"], answer: 0, explanation: \"A clause contains a subject and a verb (bv. 'when she arrived').\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[35]",
+    "oud": "q: \"What does 'tentative' mean?\", options: [\"Moedig\", \"Definitief\", \"Voorlopig/aarzelend\", \"Definitief of Moedig\"], answer: 2, explanation: \"'Tentative' = voorlopig, aarzelend, voorzichtig.\"",
+    "nieuw": "q: \"What does 'tentative' mean?\", options: [\"Moedig\", \"Definitief\", \"Voorlopig/aarzelend\", \"Gespannen\"], answer: 2, explanation: \"'Tentative' = voorlopig, aarzelend, voorzichtig.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[36]",
+    "oud": "q: \"What is the third conditional?\", options: [\"If + past perfect + would have + PP\", \"If + present perfect + will have of If + present + will\", \"If + present perfect + will have\", \"If + present + will\"], answer: 0, explanation: \"Third conditional: If I had studied, I would have passed.\"",
+    "nieuw": "q: \"What is the third conditional?\", options: [\"If + past perfect + would have + PP\", \"If + past + would\", \"If + present perfect + will have\", \"If + present + will\"], answer: 0, explanation: \"Third conditional: If I had studied, I would have passed.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[37]",
+    "oud": "q: \"What does 'coherent' mean?\", options: [\"Gedetailleerd of Verward\", \"Verward\", \"Gedetailleerd\", \"Logisch samenhangend\"], answer: 3, explanation: \"'Coherent' = logisch samenhangend, consistent.\"",
+    "nieuw": "q: \"What does 'coherent' mean?\", options: [\"Kort\", \"Verward\", \"Gedetailleerd\", \"Logisch samenhangend\"], answer: 3, explanation: \"'Coherent' = logisch samenhangend, consistent.\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[41]",
+    "oud": "q: \"What is the difference between 'less' and 'fewer'?\", options: [\"'Less' = ontelbaar; 'fewer' = telbaar\", \"'Fewer' = ontelbaar of Beide zijn identiek\", \"'Fewer' = ontelbaar\", \"Beide zijn identiek\"], answer: 0, explanation: \"'Less water' (ontelbaar). 'Fewer people' (telbaar).\"",
+    "nieuw": "q: \"What is the difference between 'less' and 'fewer'?\", options: [\"'Less' = ontelbaar; 'fewer' = telbaar\", \"'Less' is formeler dan 'fewer'\", \"'Fewer' = ontelbaar\", \"Beide zijn identiek\"], answer: 0, explanation: \"'Less water' (ontelbaar). 'Fewer people' (telbaar).\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[45]",
+    "oud": "q: \"What does 'mitigate' mean?\", options: [\"Verzachten/verminderen\", \"Verplaatsen\", \"Verwijderen\", \"Verplaatsen of Verwijderen\"], answer: 0, explanation: \"'Mitigate' = verzachten, verminderen (van een probleem).\"",
+    "nieuw": "q: \"What does 'mitigate' mean?\", options: [\"Verzachten/verminderen\", \"Verplaatsen\", \"Verwijderen\", \"Versnellen\"], answer: 0, explanation: \"'Mitigate' = verzachten, verminderen (van een probleem).\"",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "engels.groep7[49]",
+    "oud": "{ q: \"What does 'substantiate' mean?\", options: [\"Tegenspreken of Samenvatten\", \"Samenvatten\", \"Onderbouwen/bewijzen\", \"Tegenspreken\"], answer: 2, explanation: \"'Substantiate' = onderbouwen, bewijs leveren voor.\" },",
+    "nieuw": "{ q: \"What does 'substantiate' mean?\", options: [\"Vervangen\", \"Samenvatten\", \"Onderbouwen/bewijzen\", \"Tegenspreken\"], answer: 2, explanation: \"'Substantiate' = onderbouwen, bewijs leveren voor.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep5[12]",
+    "oud": "{ q: \"Hoe zeg je 'goeiemorgen' in het Duits?\", options: [\"Gute Nacht\", \"Guten Abend of Gute Nacht\", \"Guten Abend\", \"Guten Morgen\"], answer: 3, explanation: \"'Guten Morgen' = goedemorgen.\" },",
+    "nieuw": "{ q: \"Hoe zeg je 'goeiemorgen' in het Duits?\", options: [\"Gute Nacht\", \"Tschüss\", \"Guten Abend\", \"Guten Morgen\"], answer: 3, explanation: \"'Guten Morgen' = goedemorgen.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep5[23]",
+    "oud": "{ q: \"Wat betekent 'Mutter'?\", options: [\"Moeder\", \"Broer of Vader\", \"Broer\", \"Vader\"], answer: 0, explanation: \"'Mutter' = moeder.\" },",
+    "nieuw": "{ q: \"Wat betekent 'Mutter'?\", options: [\"Moeder\", \"Zus\", \"Broer\", \"Vader\"], answer: 0, explanation: \"'Mutter' = moeder.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep5[38]",
+    "oud": "{ q: \"Wat betekent 'trinken'?\", options: [\"Kopen of Koken\", \"Kopen\", \"Koken\", \"Drinken\"], answer: 3, explanation: \"'Trinken' = drinken.\" },",
+    "nieuw": "{ q: \"Wat betekent 'trinken'?\", options: [\"Eten\", \"Kopen\", \"Koken\", \"Drinken\"], answer: 3, explanation: \"'Trinken' = drinken.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep5[40]",
+    "oud": "{ q: \"Wat betekent 'schreiben'?\", options: [\"Tekenen\", \"Spreken\", \"Schrijven\", \"Tekenen of Spreken\"], answer: 2, explanation: \"'Schreiben' = schrijven.\" },",
+    "nieuw": "{ q: \"Wat betekent 'schreiben'?\", options: [\"Tekenen\", \"Spreken\", \"Schrijven\", \"Lezen\"], answer: 2, explanation: \"'Schreiben' = schrijven.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep5[48]",
+    "oud": "{ q: \"Wat betekent 'Nummer'?\", options: [\"Datum\", \"Datum of Adres\", \"Adres\", \"Nummer\"], answer: 3, explanation: \"'Nummer' = nummer (zelfde als Nederlands).\" },",
+    "nieuw": "{ q: \"Wat betekent 'Nummer'?\", options: [\"Datum\", \"Naam\", \"Adres\", \"Nummer\"], answer: 3, explanation: \"'Nummer' = nummer (zelfde als Nederlands).\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep7[2]",
+    "oud": "{ q: \"Wat betekent 'Entschuldigung'?\", options: [\"Alsjeblieft\", \"Alsjeblieft of Dank je wel\", \"Sorry/excuseer\", \"Dank je wel\"], answer: 2, explanation: \"'Entschuldigung' = sorry / neem me niet kwalijk.\" },",
+    "nieuw": "{ q: \"Wat betekent 'Entschuldigung'?\", options: [\"Alsjeblieft\", \"Goedemorgen\", \"Sorry/excuseer\", \"Dank je wel\"], answer: 2, explanation: \"'Entschuldigung' = sorry / neem me niet kwalijk.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep7[7]",
+    "oud": "{ q: \"Wat betekent 'lernen'?\", options: [\"Luisteren\", \"Lachen\", \"Leren/studeren\", \"Luisteren of Lachen\"], answer: 2, explanation: \"'Lernen' = leren.\" },",
+    "nieuw": "{ q: \"Wat betekent 'lernen'?\", options: [\"Luisteren\", \"Lachen\", \"Leren/studeren\", \"Lopen\"], answer: 2, explanation: \"'Lernen' = leren.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep7[9]",
+    "oud": "{ q: \"Wat is de vertaling van 'Ich habe Hunger'?\", options: [\"Ik heb honger\", \"Ik heb pijn\", \"Ik heb dorst of Ik heb pijn\", \"Ik heb dorst\"], answer: 0, explanation: \"'Hunger haben' = honger hebben.\" },",
+    "nieuw": "{ q: \"Wat is de vertaling van 'Ich habe Hunger'?\", options: [\"Ik heb honger\", \"Ik heb pijn\", \"Ik ben moe\", \"Ik heb dorst\"], answer: 0, explanation: \"'Hunger haben' = honger hebben.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep7[12]",
+    "oud": "{ q: \"Wat betekent 'Ich verstehe nicht'?\", options: [\"Ik weet het niet of Ik hoor het niet\", \"Ik weet het niet\", \"Ik begrijp het niet\", \"Ik hoor het niet\"], answer: 2, explanation: \"'Verstehen' = begrijpen.\" },",
+    "nieuw": "{ q: \"Wat betekent 'Ich verstehe nicht'?\", options: [\"Ik zie het niet\", \"Ik weet het niet\", \"Ik begrijp het niet\", \"Ik hoor het niet\"], answer: 2, explanation: \"'Verstehen' = begrijpen.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep7[18]",
+    "oud": "{ q: \"Hoe zeg je 'Ik ben 12 jaar oud' in het Duits?\", options: [\"Ich habe zwölf Jahre.\", \"Ich habe zwölf Jahre. of Mein Alter ist zwölf.\", \"Mein Alter ist zwölf.\", \"Ich bin zwölf Jahre alt.\"], answer: 3, explanation: \"'Ich bin... Jahre alt' = ik ben... jaar oud.\" },",
+    "nieuw": "{ q: \"Hoe zeg je 'Ik ben 12 jaar oud' in het Duits?\", options: [\"Ich habe zwölf Jahre.\", \"Ich heiße zwölf Jahre.\", \"Mein Alter ist zwölf.\", \"Ich bin zwölf Jahre alt.\"], answer: 3, explanation: \"'Ich bin... Jahre alt' = ik ben... jaar oud.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep7[33]",
+    "oud": "{ q: \"Hoe zeg je 'het gaat goed' in het Duits?\", options: [\"Ich fühle gut.\", \"Mir geht super.\", \"Es geht mir gut.\", \"Mir geht super. of Ich fühle gut.\"], answer: 2, explanation: \"'Es geht mir gut.' = het gaat goed met mij.\" },",
+    "nieuw": "{ q: \"Hoe zeg je 'het gaat goed' in het Duits?\", options: [\"Ich fühle gut.\", \"Mir geht super.\", \"Es geht mir gut.\", \"Es ist gut.\"], answer: 2, explanation: \"'Es geht mir gut.' = het gaat goed met mij.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep7[41]",
+    "oud": "{ q: \"Wat betekent 'rennen'?\", options: [\"Lopen/rennen\", \"Fietsen\", \"Zwemmen\", \"Fietsen of Zwemmen\"], answer: 0, explanation: \"'Rennen' = rennen, hard lopen.\" },",
+    "nieuw": "{ q: \"Wat betekent 'rennen'?\", options: [\"Lopen/rennen\", \"Fietsen\", \"Zwemmen\", \"Springen\"], answer: 0, explanation: \"'Rennen' = rennen, hard lopen.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "duits.groep7[44]",
+    "oud": "{ q: \"Hoe zeg je 'ik heb zin in...' in het Duits?\", options: [\"Ich brauche...\", \"Ich brauche... of Ich möchte...\", \"Ich möchte...\", \"Ich habe Lust auf...\"], answer: 3, explanation: \"'Ich habe Lust auf...' = ik heb zin in...\" },",
+    "nieuw": "{ q: \"Hoe zeg je 'ik heb zin in...' in het Duits?\", options: [\"Ich brauche...\", \"Ich muss...\", \"Ich möchte...\", \"Ich habe Lust auf...\"], answer: 3, explanation: \"'Ich habe Lust auf...' = ik heb zin in...\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "frans.groep5[4]",
+    "oud": "{ q: \"Comment dit-on 'au revoir'?\", options: [\"Dank je of Hallo\", \"Dank je\", \"Tot ziens\", \"Hallo\"], answer: 2, explanation: \"'Au revoir' = tot ziens.\" },",
+    "nieuw": "{ q: \"Comment dit-on 'au revoir'?\", options: [\"Goedemorgen\", \"Dank je\", \"Tot ziens\", \"Hallo\"], answer: 2, explanation: \"'Au revoir' = tot ziens.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "frans.groep5[11]",
+    "oud": "{ q: \"Comment dit-on 'merci beaucoup'?\", options: [\"Heel erg bedankt\", \"Graag gedaan\", \"Graag gedaan of Alsjeblieft\", \"Alsjeblieft\"], answer: 0, explanation: \"'Merci beaucoup' = heel erg bedankt.\" },",
+    "nieuw": "{ q: \"Comment dit-on 'merci beaucoup'?\", options: [\"Heel erg bedankt\", \"Graag gedaan\", \"Tot morgen\", \"Alsjeblieft\"], answer: 0, explanation: \"'Merci beaucoup' = heel erg bedankt.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "frans.groep5[17]",
+    "oud": "{ q: \"Comment dit-on 's'il vous plaît'?\", options: [\"Goedendag\", \"Goedendag of Excuseer\", \"Excuseer\", \"Alsjeblieft\"], answer: 3, explanation: \"'S'il vous plaît' = alsjeblieft (formeel).\" },",
+    "nieuw": "{ q: \"Comment dit-on 's'il vous plaît'?\", options: [\"Goedendag\", \"Dank je\", \"Excuseer\", \"Alsjeblieft\"], answer: 3, explanation: \"'S'il vous plaît' = alsjeblieft (formeel).\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "frans.groep5[30]",
+    "oud": "{ q: \"Que signifie 'mère'?\", options: [\"Vader of Broer\", \"Moeder\", \"Vader\", \"Broer\"], answer: 1, explanation: \"'Mère' = moeder.\" },",
+    "nieuw": "{ q: \"Que signifie 'mère'?\", options: [\"Zus\", \"Moeder\", \"Vader\", \"Broer\"], answer: 1, explanation: \"'Mère' = moeder.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "frans.groep5[33]",
+    "oud": "{ q: \"Comment dit-on 'tête'?\", options: [\"Been of Neus\", \"Been\", \"Neus\", \"Hoofd\"], answer: 3, explanation: \"'Tête' = hoofd.\" },",
+    "nieuw": "{ q: \"Comment dit-on 'tête'?\", options: [\"Hand\", \"Been\", \"Neus\", \"Hoofd\"], answer: 3, explanation: \"'Tête' = hoofd.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "frans.groep7[13]",
+    "oud": "{ q: \"Comment dit-on 'quel âge as-tu'?\", options: [\"Hoe oud ben je?\", \"Hoe heet je?\", \"Waar woon je?\", \"Waar woon je? of Hoe heet je?\"], answer: 0, explanation: \"'Quel âge as-tu?' = hoe oud ben je?\" },",
+    "nieuw": "{ q: \"Comment dit-on 'quel âge as-tu'?\", options: [\"Hoe oud ben je?\", \"Hoe heet je?\", \"Waar woon je?\", \"Hoe gaat het?\"], answer: 0, explanation: \"'Quel âge as-tu?' = hoe oud ben je?\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[1]",
+    "oud": "{ q: \"Wat is een grondwet?\", options: [\"Een Europese wet\", \"Een gemeentewet\", \"Een Europese wet of Een gemeentewet\", \"De belangrijkste wet van een land\"], answer: 3, explanation: \"De grondwet bevat de basisregels en rechten van een land.\" },",
+    "nieuw": "{ q: \"Wat is een grondwet?\", options: [\"Een Europese wet\", \"Een gemeentewet\", \"Een schoolregel\", \"De belangrijkste wet van een land\"], answer: 3, explanation: \"De grondwet bevat de basisregels en rechten van een land.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[4]",
+    "oud": "{ q: \"Wat is de Tweede Kamer?\", options: [\"De gemeente\", \"De Senaat\", \"Een rechtbank onder bepaalde omstandigheden\", \"Het lagerhuis van het Nederlandse parlement\"], answer: 3, explanation: \"De Tweede Kamer is de volksvertegenwoordiging.\" },",
+    "nieuw": "{ q: \"Wat is de Tweede Kamer?\", options: [\"De gemeente\", \"De Senaat\", \"Een rechtbank\", \"Het lagerhuis van het Nederlandse parlement\"], answer: 3, explanation: \"De Tweede Kamer is de volksvertegenwoordiging.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[7]",
+    "oud": "{ q: \"Wat betekent 'verkiezingen houden'?\", options: [\"Burgers kiezen hun vertegenwoordigers\", \"Een rechtszaak\", \"Een belasting betalen\", \"Een belasting betalen of Een rechtszaak\"], answer: 0, explanation: \"Verkiezingen: burgers stemmen op politieke vertegenwoordigers.\" },",
+    "nieuw": "{ q: \"Wat betekent 'verkiezingen houden'?\", options: [\"Burgers kiezen hun vertegenwoordigers\", \"Een rechtszaak\", \"Een belasting betalen\", \"Een nieuwe wet maken\"], answer: 0, explanation: \"Verkiezingen: burgers stemmen op politieke vertegenwoordigers.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[9]",
+    "oud": "{ q: \"Wat doet de politie?\", options: [\"Scholen besturen of Belasting innen\", \"Scholen besturen\", \"De openbare orde handhaven\", \"Belasting innen\"], answer: 2, explanation: \"De politie handhaaft wetten en beschermt burgers.\" },",
+    "nieuw": "{ q: \"Wat doet de politie?\", options: [\"Wetten maken\", \"Scholen besturen\", \"De openbare orde handhaven\", \"Belasting innen\"], answer: 2, explanation: \"De politie handhaaft wetten en beschermt burgers.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[12]",
+    "oud": "{ q: \"Wat is belasting?\", options: [\"Verplichte betaling aan de overheid\", \"Een gift aan de staat of Een subsidie\", \"Een subsidie\", \"Een gift aan de staat\"], answer: 0, explanation: \"Belasting is een verplichte bijdrage die burgers betalen.\" },",
+    "nieuw": "{ q: \"Wat is belasting?\", options: [\"Verplichte betaling aan de overheid\", \"Spaargeld op de bank\", \"Een subsidie\", \"Een gift aan de staat\"], answer: 0, explanation: \"Belasting is een verplichte bijdrage die burgers betalen.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[13]",
+    "oud": "{ q: \"Wie kiest de Tweede Kamer?\", options: [\"De minister-president of De gemeenten\", \"De minister-president\", \"De gemeenten\", \"De burgers via verkiezingen\"], answer: 3, explanation: \"Burgers kiezen de leden van de Tweede Kamer.\" },",
+    "nieuw": "{ q: \"Wie kiest de Tweede Kamer?\", options: [\"De koning\", \"De minister-president\", \"De gemeenten\", \"De burgers via verkiezingen\"], answer: 3, explanation: \"Burgers kiezen de leden van de Tweede Kamer.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[14]",
+    "oud": "{ q: \"Wat is een gemeente?\", options: [\"Een nationaal bestuursniveau\", \"Een nationaal bestuursniveau of Een Europees begrip\", \"Een Europees begrip\", \"Het kleinste bestuursniveau in Nederland\"], answer: 3, explanation: \"Nederland heeft drie bestuursniveaus: Rijk, provincie, gemeente.\" },",
+    "nieuw": "{ q: \"Wat is een gemeente?\", options: [\"Een nationaal bestuursniveau\", \"Een provincie\", \"Een Europees begrip\", \"Het kleinste bestuursniveau in Nederland\"], answer: 3, explanation: \"Nederland heeft drie bestuursniveaus: Rijk, provincie, gemeente.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[15]",
+    "oud": "{ q: \"Wat is vrijheid van meningsuiting?\", options: [\"Een recht voor politici\", \"Je mag alles zeggen zonder regels\", \"Het recht om je mening te uiten (met grenzen)\", \"Je mag alles zeggen zonder regels of Een recht voor politici\"], answer: 2, explanation: \"Vrijheid van meningsuiting = recht om je mening te uiten (binnen grenzen van de wet).\" },",
+    "nieuw": "{ q: \"Wat is vrijheid van meningsuiting?\", options: [\"Een recht voor politici\", \"Je mag alles zeggen zonder regels\", \"Het recht om je mening te uiten (met grenzen)\", \"Het recht om te stemmen\"], answer: 2, explanation: \"Vrijheid van meningsuiting = recht om je mening te uiten (binnen grenzen van de wet).\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[16]",
+    "oud": "{ q: \"Wat is pluriformiteit in de media?\", options: [\"Eén grote zender onder bepaalde omstandigheden\", \"Betaald nieuws\", \"Verscheidenheid aan meningen en media\", \"Staatsmedia\"], answer: 2, explanation: \"Pluriformiteit: meerdere perspectieven en bronnen in de media.\" },",
+    "nieuw": "{ q: \"Wat is pluriformiteit in de media?\", options: [\"Eén grote zender\", \"Betaald nieuws\", \"Verscheidenheid aan meningen en media\", \"Staatsmedia\"], answer: 2, explanation: \"Pluriformiteit: meerdere perspectieven en bronnen in de media.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[17]",
+    "oud": "{ q: \"Wat is een kabinet?\", options: [\"De Senaat\", \"Een kast\", \"Het parlement onder bepaalde omstandigheden\", \"Het college van ministers dat regeert\"], answer: 3, explanation: \"Het kabinet = de ministers die samen de regering vormen.\" },",
+    "nieuw": "{ q: \"Wat is een kabinet?\", options: [\"De Senaat\", \"De gemeenteraad\", \"Het parlement\", \"Het college van ministers dat regeert\"], answer: 3, explanation: \"Het kabinet = de ministers die samen de regering vormen.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; \"Een kast\" vervangen omdat kabinet ook een (verouderd) woord voor een kast is, dus ook goed te rekenen"
+  },
+  {
+    "waar": "maatschappijleer.groep5[19]",
+    "oud": "{ q: \"Wat is de oppositie?\", options: [\"Het bestuur\", \"De Eerste Kamer\", \"Partijen die het kabinet steunen onder bepaalde omstandigheden\", \"Partijen die niet in het kabinet zitten en kritiek leveren\"], answer: 3, explanation: \"Oppositie = partijen buiten de coalitie die controleren en bekritiseren.\" },",
+    "nieuw": "{ q: \"Wat is de oppositie?\", options: [\"Het bestuur\", \"De Eerste Kamer\", \"Partijen die het kabinet steunen\", \"Partijen die niet in het kabinet zitten en kritiek leveren\"], answer: 3, explanation: \"Oppositie = partijen buiten de coalitie die controleren en bekritiseren.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[20]",
+    "oud": "{ q: \"Wat is een provincie?\", options: [\"Een regio zonder bestuur onder bepaalde omstandigheden\", \"Een gemeente\", \"Een bestuursniveau tussen Rijk en gemeente in\", \"Een stadsdeel\"], answer: 2, explanation: \"Nederland heeft 12 provincies, bestuurd door provinciale staten en gedeputeerde staten.\" },",
+    "nieuw": "{ q: \"Wat is een provincie?\", options: [\"Een regio zonder bestuur\", \"Een gemeente\", \"Een bestuursniveau tussen Rijk en gemeente in\", \"Een stadsdeel\"], answer: 2, explanation: \"Nederland heeft 12 provincies, bestuurd door provinciale staten en gedeputeerde staten.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[22]",
+    "oud": "{ q: \"Wat is een grondrecht?\", options: [\"Een basisrecht vastgelegd in de grondwet\", \"Een privilege\", \"Een lokale wet\", \"Een Europees recht onder bepaalde omstandigheden\"], answer: 0, explanation: \"Grondrechten (bv. vrijheid van meningsuiting) zijn vastgelegd in de grondwet.\" },",
+    "nieuw": "{ q: \"Wat is een grondrecht?\", options: [\"Een basisrecht vastgelegd in de grondwet\", \"Een privilege\", \"Een lokale wet\", \"Een verkeersregel\"], answer: 0, explanation: \"Grondrechten (bv. vrijheid van meningsuiting) zijn vastgelegd in de grondwet.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie (geen \"Europees recht\": grondrechten staan deels ook in Europese verdragen)"
+  },
+  {
+    "waar": "maatschappijleer.groep5[24]",
+    "oud": "{ q: \"Wat is een advocaat?\", options: [\"Een politieagent onder bepaalde omstandigheden\", \"Een aanklager\", \"Een rechter\", \"Iemand die anderen juridisch bijstaat\"], answer: 3, explanation: \"Een advocaat verdedigt of adviseert een cliënt in juridische zaken.\" },",
+    "nieuw": "{ q: \"Wat is een advocaat?\", options: [\"Een politieagent\", \"Een aanklager\", \"Een rechter\", \"Iemand die anderen juridisch bijstaat\"], answer: 3, explanation: \"Een advocaat verdedigt of adviseert een cliënt in juridische zaken.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[27]",
+    "oud": "{ q: \"Wat is de Europese Unie?\", options: [\"Een verdrag\", \"Een wereldorganisatie onder bepaalde omstandigheden\", \"Een samenwerkingsverband van Europese landen\", \"Een land\"], answer: 2, explanation: \"De EU is een politieke en economische samenwerking van 27 landen.\" },",
+    "nieuw": "{ q: \"Wat is de Europese Unie?\", options: [\"Een verdrag\", \"Een wereldorganisatie\", \"Een samenwerkingsverband van Europese landen\", \"Een land\"], answer: 2, explanation: \"De EU is een politieke en economische samenwerking van 27 landen.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[29]",
+    "oud": "{ q: \"Wat is inkomstenbelasting?\", options: [\"Belasting op producten of Belasting op erfenis\", \"Belasting op producten\", \"Belasting op erfenis\", \"Belasting die je betaalt over je inkomen\"], answer: 3, explanation: \"Inkomstenbelasting: je betaalt een deel van wat je verdient aan de overheid.\" },",
+    "nieuw": "{ q: \"Wat is inkomstenbelasting?\", options: [\"Belasting op auto's\", \"Belasting op producten\", \"Belasting op erfenis\", \"Belasting die je betaalt over je inkomen\"], answer: 3, explanation: \"Inkomstenbelasting: je betaalt een deel van wat je verdient aan de overheid.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[30]",
+    "oud": "{ q: \"Wat is de functie van de Tweede Kamer?\", options: [\"Wetten goedkeuren als Senaat\", \"Wetten goedkeuren als Senaat of Wetten uitvoeren\", \"Wetten uitvoeren\", \"Wetten maken en de regering controleren\"], answer: 3, explanation: \"De Tweede Kamer maakt wetten en controleert het kabinet.\" },",
+    "nieuw": "{ q: \"Wat is de functie van de Tweede Kamer?\", options: [\"Wetten goedkeuren als Senaat\", \"Rechtspreken\", \"Wetten uitvoeren\", \"Wetten maken en de regering controleren\"], answer: 3, explanation: \"De Tweede Kamer maakt wetten en controleert het kabinet.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[33]",
+    "oud": "{ q: \"Wat is een referendum?\", options: [\"Een directe volksraadpleging over een specifiek onderwerp\", \"Een verkiezing voor parlement of Een enquête voor politici\", \"Een enquête voor politici\", \"Een verkiezing voor parlement\"], answer: 0, explanation: \"Bij een referendum stemmen burgers direct over een specifieke vraag.\" },",
+    "nieuw": "{ q: \"Wat is een referendum?\", options: [\"Een directe volksraadpleging over een specifiek onderwerp\", \"Een vergadering van de gemeenteraad\", \"Een enquête voor politici\", \"Een verkiezing voor parlement\"], answer: 0, explanation: \"Bij een referendum stemmen burgers direct over een specifieke vraag.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[35]",
+    "oud": "{ q: \"Wat is het Europees parlement?\", options: [\"De EU-rechtbank\", \"De Europese Commissie onder bepaalde omstandigheden\", \"De EU-ministerraad\", \"De gekozen volksvertegenwoordiging van de EU\"], answer: 3, explanation: \"Het Europees Parlement wordt direct gekozen door EU-burgers.\" },",
+    "nieuw": "{ q: \"Wat is het Europees parlement?\", options: [\"De EU-rechtbank\", \"De Europese Commissie\", \"De EU-ministerraad\", \"De gekozen volksvertegenwoordiging van de EU\"], answer: 3, explanation: \"Het Europees Parlement wordt direct gekozen door EU-burgers.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep5[43]",
+    "oud": "{ q: \"Wat is pluriformiteit?\", options: [\"Staatsmedia\", \"Eén mening in de media onder bepaalde omstandigheden\", \"Verscheidenheid aan meningen, culturen en media\", \"Censuur\"], answer: 2, explanation: \"Pluriformiteit is een pijler van de democratie: meerdere perspectieven naast elkaar.\" },",
+    "nieuw": "{ q: \"Wat is pluriformiteit?\", options: [\"Staatsmedia\", \"Eén mening in de media\", \"Verscheidenheid aan meningen, culturen en media\", \"Censuur\"], answer: 2, explanation: \"Pluriformiteit is een pijler van de democratie: meerdere perspectieven naast elkaar.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[3]",
+    "oud": "{ q: \"Wat is de rechtsstaat?\", options: [\"Een staat geregeerd door rechters\", \"Een staat geregeerd door rechters of Hetzelfde als democratie\", \"Een staat waarbij de overheid gebonden is aan rechtsregels\", \"Hetzelfde als democratie\"], answer: 2, explanation: \"Rechtsstaat: ook de overheid moet zich aan de wet houden.\" },",
+    "nieuw": "{ q: \"Wat is de rechtsstaat?\", options: [\"Een staat geregeerd door rechters\", \"Een staat zonder wetten\", \"Een staat waarbij de overheid gebonden is aan rechtsregels\", \"Hetzelfde als democratie\"], answer: 2, explanation: \"Rechtsstaat: ook de overheid moet zich aan de wet houden.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[5]",
+    "oud": "{ q: \"Wat is economische ongelijkheid?\", options: [\"Verschillen in inkomen en vermogen tussen mensen\", \"Iedereen verdient hetzelfde\", \"Iedereen verdient hetzelfde of Belasting betalen\", \"Belasting betalen\"], answer: 0, explanation: \"Economische ongelijkheid = inkomensverschillen in de samenleving.\" },",
+    "nieuw": "{ q: \"Wat is economische ongelijkheid?\", options: [\"Verschillen in inkomen en vermogen tussen mensen\", \"Iedereen verdient hetzelfde\", \"Hoge prijzen in winkels\", \"Belasting betalen\"], answer: 0, explanation: \"Economische ongelijkheid = inkomensverschillen in de samenleving.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[8]",
+    "oud": "{ q: \"Wat is een referendum?\", options: [\"Directe volksstemming over een specifiek onderwerp\", \"Een parlementaire stemming onder bepaalde omstandigheden\", \"Verkiezingen\", \"Een enquête\"], answer: 0, explanation: \"Bij een referendum stemmen burgers direct over een vraagstuk.\" },",
+    "nieuw": "{ q: \"Wat is een referendum?\", options: [\"Directe volksstemming over een specifiek onderwerp\", \"Een parlementaire stemming\", \"Verkiezingen\", \"Een enquête\"], answer: 0, explanation: \"Bij een referendum stemmen burgers direct over een vraagstuk.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[9]",
+    "oud": "{ q: \"Wat is de verzorgingsstaat?\", options: [\"Een dictatuur\", \"Een democratie\", \"Een economisch systeem onder bepaalde omstandigheden\", \"Staat die basisbehoeften van burgers garandeert\"], answer: 3, explanation: \"Verzorgingsstaat: sociale zekerheid, gezondheidszorg, onderwijs voor iedereen.\" },",
+    "nieuw": "{ q: \"Wat is de verzorgingsstaat?\", options: [\"Een dictatuur\", \"Een democratie\", \"Een land zonder belasting\", \"Staat die basisbehoeften van burgers garandeert\"], answer: 3, explanation: \"Verzorgingsstaat: sociale zekerheid, gezondheidszorg, onderwijs voor iedereen.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[12]",
+    "oud": "{ q: \"Wat is integratie in de context van migratie?\", options: [\"Meedoen aan de samenleving met behoud van eigen cultuur\", \"Assimilatie\", \"Terugkeer naar land van herkomst onder bepaalde omstandigheden\", \"Isolatie\"], answer: 0, explanation: \"Integratie: deelnemen aan de samenleving én eigen identiteit behouden.\" },",
+    "nieuw": "{ q: \"Wat is integratie in de context van migratie?\", options: [\"Meedoen aan de samenleving met behoud van eigen cultuur\", \"Assimilatie\", \"Terugkeer naar land van herkomst\", \"Isolatie\"], answer: 0, explanation: \"Integratie: deelnemen aan de samenleving én eigen identiteit behouden.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[16]",
+    "oud": "{ q: \"Wat is een ideologie?\", options: [\"Een grondwet\", \"Een wet\", \"Een politieke partij onder bepaalde omstandigheden\", \"Een samenhangend stelsel van politieke denkbeelden\"], answer: 3, explanation: \"Ideologie: samenhangend systeem van ideeën over hoe de samenleving moet zijn.\" },",
+    "nieuw": "{ q: \"Wat is een ideologie?\", options: [\"Een grondwet\", \"Een wet\", \"Een politieke partij\", \"Een samenhangend stelsel van politieke denkbeelden\"], answer: 3, explanation: \"Ideologie: samenhangend systeem van ideeën over hoe de samenleving moet zijn.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[18]",
+    "oud": "{ q: \"Wat is burgerparticipatie?\", options: [\"Actieve deelname van burgers aan het politieke proces\", \"Lid zijn van een partij onder bepaalde omstandigheden\", \"Stemmen\", \"Belasting betalen\"], answer: 0, explanation: \"Burgerparticipatie: burgers die actief meedenken en meebeslissen.\" },",
+    "nieuw": "{ q: \"Wat is burgerparticipatie?\", options: [\"Actieve deelname van burgers aan het politieke proces\", \"Een uitkering aanvragen\", \"Stemmen\", \"Belasting betalen\"], answer: 0, explanation: \"Burgerparticipatie: burgers die actief meedenken en meebeslissen.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie (lid zijn van een partij is zelf ook een vorm van participatie)"
+  },
+  {
+    "waar": "maatschappijleer.groep7[19]",
+    "oud": "{ q: \"Wat is een democratisch deficit?\", options: [\"Tekort aan stemmen onder bepaalde omstandigheden\", \"Corruptie\", \"Gebrek aan democratische controle (bv. in de EU)\", \"Te veel democratie\"], answer: 2, explanation: \"Democratisch deficit: besluiten worden genomen zonder voldoende democratische controle.\" },",
+    "nieuw": "{ q: \"Wat is een democratisch deficit?\", options: [\"Tekort aan stemmen\", \"Corruptie\", \"Gebrek aan democratische controle (bv. in de EU)\", \"Te veel democratie\"], answer: 2, explanation: \"Democratisch deficit: besluiten worden genomen zonder voldoende democratische controle.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[34]",
+    "oud": "{ q: \"Wat is het kiesrecht?\", options: [\"Het recht om kandidaat te zijn\", \"Het recht om te demonstreren\", \"Het recht om te stemmen bij verkiezingen\", \"Het recht om kandidaat te zijn of Het recht om te demonstreren\"], answer: 2, explanation: \"Actief kiesrecht: stemrecht. Passief kiesrecht: het recht om gekozen te worden.\" },",
+    "nieuw": "{ q: \"Wat is het actief kiesrecht?\", options: [\"Het recht om kandidaat te zijn\", \"Het recht om te demonstreren\", \"Het recht om te stemmen bij verkiezingen\", \"Het recht om te werken\"], answer: 2, explanation: \"Actief kiesrecht: stemrecht. Passief kiesrecht: het recht om gekozen te worden.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; vraag aangescherpt tot actief kiesrecht, want \"recht om kandidaat te zijn\" (passief kiesrecht) is ook kiesrecht"
+  },
+  {
+    "waar": "maatschappijleer.groep7[36]",
+    "oud": "{ q: \"Wat is een eenpartijstaat?\", options: [\"Een staat waar slechts één partij is toegestaan\", \"Een federale staat\", \"Een staat met één politicus of Een federale staat\", \"Een staat met één politicus\"], answer: 0, explanation: \"Bv. Noord-Korea, China: slechts één partij — tegenstelling van democratisch pluralisme.\" },",
+    "nieuw": "{ q: \"Wat is een eenpartijstaat?\", options: [\"Een staat waar slechts één partij is toegestaan\", \"Een federale staat\", \"Een staat zonder leger\", \"Een staat met één politicus\"], answer: 0, explanation: \"Bv. China en Noord-Korea: één partij heeft alle macht — het tegenovergestelde van democratisch pluralisme.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; uitleg feitelijk precieser (in China/Noord-Korea bestaan formeel kleine partijen, maar één partij heeft alle macht)"
+  },
+  {
+    "waar": "maatschappijleer.groep7[38]",
+    "oud": "{ q: \"Wat is een federatie?\", options: [\"Een staat met één centraal gezag onder bepaalde omstandigheden\", \"Een confederatie\", \"Een staat waarbij deelstaten eigen bevoegdheden hebben\", \"Een monarchie\"], answer: 2, explanation: \"Bv. VS: 50 staten met eigen wetten, maar één federale overheid.\" },",
+    "nieuw": "{ q: \"Wat is een federatie?\", options: [\"Een staat met één centraal gezag\", \"Een confederatie\", \"Een staat waarbij deelstaten eigen bevoegdheden hebben\", \"Een monarchie\"], answer: 2, explanation: \"Bv. VS: 50 staten met eigen wetten, maar één federale overheid.\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie"
+  },
+  {
+    "waar": "maatschappijleer.groep7[40]",
+    "oud": "{ q: \"Wat is een ambtenaar?\", options: [\"Een parlementslid onder bepaalde omstandigheden\", \"Een rechter\", \"Een politicus\", \"Iemand die werkzaam is bij de overheid\"], answer: 3, explanation: \"Ambtenaren voeren het beleid van de overheid uit (gemeenteambtenaren, politie, leraren).\" },",
+    "nieuw": "{ q: \"Wat is een ambtenaar?\", options: [\"Een parlementslid\", \"Een rechter\", \"Een politicus\", \"Iemand die werkzaam is bij de overheid\"], answer: 3, explanation: \"Ambtenaren voeren het beleid van de overheid uit (bv. bij de gemeente, de Belastingdienst of de politie).\" },",
+    "reden": "plaksel-afleider vervangen door korte plausibele foute optie; uitleg: leraren zijn sinds 2020 meestal geen ambtenaar meer (alleen openbaar onderwijs)"
+  },
+  {
+    "waar": "levensbeschouwing.klas1[2]",
+    "oud": "{ q: \"Wat betekent 'humanisme'?\", options: [\"Een geloof in goden\", \"Een levensovertuiging waarbij de mens en zijn waarden centraal staan, zonder godsdienst\", \"Een stroming binnen het christendom\", \"Het geloof in de natuur\"], answer: 1, explanation: \"Humanisme = seculiere levensovertuiging. Centrale waarden: menselijke waardigheid, rede, vrijheid, verantwoordelijkheid.\" },",
+    "nieuw": "{ q: \"Wat betekent 'humanisme'?\", options: [\"Een geloof in goden\", \"Een levensovertuiging met de mens centraal, zonder god\", \"Een stroming binnen het christendom\", \"Het geloof in de natuur\"], answer: 1, explanation: \"Humanisme = seculiere levensovertuiging. Centrale waarden: menselijke waardigheid, rede, vrijheid, verantwoordelijkheid.\" },",
+    "reden": "goede optie was opvallend veel langer dan de rest (staart verraadde het antwoord); ingekort"
+  },
+  {
+    "waar": "levensbeschouwing.klas3[5]",
+    "oud": "{ q: \"Wat is het verschil tussen theïsme en atheïsme?\", options: [\"Theïsme = geloof in meerdere goden; atheïsme = geloof in één god\", \"Theïsme = geloof in god(en); atheïsme = ontkenning of afwezigheid van geloof in god(en)\", \"Atheïsme = geloof in de natuur\", \"Theïsme is hetzelfde als humanisme\"], answer: 1, explanation: \"Theïsme: geloof in het bestaan van (een) god. Atheïsme: geen geloof in god(en). Agnosticisme: het is onbekend/onkenbaar.\" },",
+    "nieuw": "{ q: \"Wat is het verschil tussen theïsme en atheïsme?\", options: [\"Theïsme = geloof in meerdere goden; atheïsme = geloof in één god\", \"Theïsme = geloof in god(en); atheïsme = ontkenning of afwezigheid van geloof in god(en)\", \"Theïsme = geloof in de natuur; atheïsme = geloof in god(en)\", \"Theïsme = twijfel over god(en); atheïsme = geloof in de mens\"], answer: 1, explanation: \"Theïsme: geloof in het bestaan van (een) god. Atheïsme: geen geloof in god(en). Agnosticisme: het is onbekend/onkenbaar.\" },",
+    "reden": "afleiders anders van vorm dan het goede antwoord (alleen het goede antwoord noemde beide begrippen): parallel gemaakt"
+  }
+]

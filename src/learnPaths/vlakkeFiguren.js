@@ -105,9 +105,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Elke afstand werkt niet als definitie. Specifiek: de loodrechte (kortste) afstand.",
-          "Een lijn heeft geen 'beginpunt' (in wiskunde gaat hij oneindig door). Het gaat om de loodrechte afstand.",
-          "Diagonaal is een vorm van schuin — die is langer dan loodrecht.",
+          "Van P naar de lijn kun je heel veel verschillende lijnstukken tekenen. Welke daarvan bedoelen we met 'de' afstand?",
+          "Een lijn heeft geen 'beginpunt' (in wiskunde gaat hij oneindig door). Welk lijnstuk van P naar de lijn is het kortst?",
+          "Een schuine verbinding is niet de kortste. Onder welke hoek moet je de lijn raken om zo kort mogelijk te zijn?",
         ],
         uitlegPad: {
           stappen: [{ titel: "Loodrecht = kortst", tekst: "Afstand P → lijn = loodrechte (haakse) afstand van P naar de lijn." }],
@@ -199,14 +199,14 @@ const steps = [
           "P ligt even ver van A als van B",
           "P ligt dichterbij A dan B",
           "P ligt verder van A dan van B",
-          "P ligt op de lijn AB zelf",
+          "P ligt altijd op de lijn AB zelf",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Dat zou betekenen dat P **niet** op de middelloodlijn ligt. Dichterbij A is de andere kant.",
-          "Andersom — verder van A betekent dichterbij B. Op de middelloodlijn is het gelijk.",
-          "P ligt op de middelloodlijn (loodrecht erop), niet op AB zelf.",
+          "Als P dichter bij A ligt, ligt P aan de kant van A. Ligt de middelloodlijn aan één kant, of precies ertussen?",
+          "Verder van A betekent dichter bij B. Denk aan de middelloodlijn als spiegel-as: trekt die één kant voor?",
+          "Alleen het midden van AB ligt op allebei de lijnen. Geldt dat voor elk punt P op de middelloodlijn?",
         ],
         uitlegPad: {
           stappen: [{ titel: "|PA| = |PB|", tekst: "Elk punt op de middelloodlijn ligt even ver van A als van B." }],
@@ -291,14 +291,14 @@ const steps = [
         options: [
           "40° elk",
           "80° elk",
-          "180° en -100°",
+          "160° elk",
           "20° en 60°",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Wat doet een bissectrice? Bekijk de definitie: hij deelt een hoek in welke verhouding?",
-          "180° is een rechte lijn — past dat bij een hoek-deler?",
+          "Je hebt de hoek verdubbeld. Maakt een hoekdeler de hoeken groter of kleiner?",
           "Bissectrice deelt de hoek in **gelijke** stukken — niet ongelijk. Welke twee getallen zijn dan logisch?",
         ],
         uitlegPad: {
@@ -346,7 +346,7 @@ const steps = [
           null,
           "Dat zou betekenen dat P op een zijde ligt, niet op de bissectrice (die zit ertussen).",
           "Op de top zou alleen kloppen voor één punt. P is een willekeurig punt op de bissectrice.",
-          "Dat is het tegenovergestelde — op de bissectrice zijn de afstanden juist gelijk.",
+          "Een bissectrice is de spiegel-as van de hoek. Wat betekent dat voor de afstanden tot de twee zijden?",
         ],
         uitlegPad: {
           stappen: [{ titel: "|PF₁| = |PF₂|", tekst: "Elk punt op bissectrice ligt even ver (loodrecht) van beide zijden." }],
@@ -389,8 +389,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Middelloodlijnen geven het middelpunt van de **omgeschreven** cirkel (rond de hoeken). Voor ingeschreven (binnen): bissectrices.",
-          "Zwaartepunt is iets anders — daar komen we straks op. Voor ingeschreven cirkel: bissectrices.",
+          "Middelloodlijnen geven het middelpunt van de **omgeschreven** cirkel (door de hoekpunten). De ingeschreven cirkel moet de zijden raken — welke lijnen liggen overal even ver van twee zijden?",
+          "Het zwaartepunt is het balanspunt — dat ligt niet altijd even ver van de drie zijden. Welke lijnen hebben die eigenschap wél?",
           "De ingeschreven cirkel zit binnen de driehoek, niet op een hoek.",
         ],
         uitlegPad: {
@@ -436,7 +436,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Niet willekeurig — specifiek de **overstaande** zijde (zonder hoek A).",
+          "Niet willekeurig — er is precies één zijde die hoek A níet als eindpunt heeft. Welke?",
           "Een lijn van A naar het midden van een zijde naast A loopt langs die zijde zelf — dat is geen zwaartelijn.",
           "Een zwaartelijn eindigt op een midden, niet op een hoek.",
         ],
@@ -475,7 +475,7 @@ const steps = [
       {
         q: "Hoe deelt het zwaartepunt een zwaartelijn?",
         options: [
-          "In een verhouding 2:1 (2 vanaf hoek, 1 vanaf midden zijde)",
+          "In de verhouding 2 : 1, vanaf de hoek gerekend",
           "Precies in tweeën (1:1)",
           "In drie gelijke delen",
           "Niet — Z ligt aan een uiteinde",
@@ -483,8 +483,8 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Z deelt **niet** in tweeën — wel in 2:1 (twee delen vanaf hoek, één vanaf midden).",
-          "Z is één punt op de zwaartelijn, niet drie. De verhouding is 2:1.",
+          "Z ligt niet precies in het midden van de zwaartelijn. Ligt Z dichter bij de hoek of dichter bij het midden van de zijde?",
+          "Z is één punt, dus het verdeelt de zwaartelijn in twee stukken, niet drie. Zijn die twee stukken even lang?",
           "Z ligt **binnen** de driehoek, op het kruispunt — niet op een uiteinde.",
         ],
         uitlegPad: {
@@ -529,7 +529,7 @@ const steps = [
         wrongHints: [
           null,
           "Niet hetzelfde — ze raken vaak een ander punt op de overstaande zijde.",
-          "Andersom — hoogtelijn is loodrecht, zwaartelijn naar het midden.",
+          "Kijk naar de namen: welke van de twee heeft met 'hoogte' te maken — en hoe meet je een hoogte?",
           "Een hoek delen is een **bissectrice**, niet zwaartelijn.",
         ],
         uitlegPad: {
@@ -607,7 +607,7 @@ const steps = [
         wrongHints: [
           null,
           "Controleer de formule voor de ruit — er ontbreekt een stap vóór de vermenigvuldiging.",
-          "Je hebt 10 + 6 gedaan. Maar het is vermenigvuldigen, niet optellen — én × ½.",
+          "Je hebt 10 + 6 gedaan. Bij oppervlakte tel je de diagonalen niet op — kijk nog eens naar de formule voor een ruit.",
           "Het getal klopt, maar oppervlakte heeft eenheid cm² (niet cm).",
         ],
         uitlegPad: {
@@ -646,7 +646,7 @@ const steps = [
         wrongHints: [
           null,
           "Heb je BEIDE evenwijdige zijden meegenomen — 6 én 10?",
-          "Controleer je berekening: eerst 6 + 10, dan × 4, dan ÷ 2.",
+          "Je hebt 6 × 10 gedaan. De twee evenwijdige zijden vermenigvuldig je niet met elkaar — wat doe je er wél mee?",
           "Niet alleen één zijde — een trapezium gebruikt het GEMIDDELDE van beide evenwijdige zijden.",
         ],
         uitlegPad: {
@@ -743,7 +743,7 @@ const steps = [
         wrongHints: [
           null,
           "Heb je de ½ uit de formule meegenomen? Kijk nog eens naar de stappen van ½ × (a + b) × h.",
-          "Je hebt 12 × 5 gedaan. Maar je moet eerst de twee evenwijdige zijden optellen, dan × hoogte, dan × ½.",
+          "Je hebt 12 × 5 gedaan. Maar een trapezium heeft twee evenwijdige zijden — gebruik je ze allebei?",
           "Je hebt de twee zijden opgeteld, maar de berekening is nog niet klaar — wat moet er nog na het optellen?",
         ],
         uitlegPad: {
@@ -764,7 +764,7 @@ const steps = [
   // ─── G. Examenstijl — VMBO-GT CSE ─────────────────────────
   {
     title: "CSE-vraag — speeltuin met grasveld en zandbak",
-    explanation: "Op het CSE krijg je vaak een **combinatie-figuur**: een rechthoekige tuin met daarin een rond/half-rond stuk dat anders is. Examen-stijl probeer-vraag:\n\n> **Een speeltuin is rechthoekig** met afmetingen 12,0 m × 8,0 m. Daarin ligt een **halfronde zandbak** met diameter 6,0 m langs één lange zijde van de tuin. De rest is grasveld.\n\n**Aanpak in 3 stappen:**\n1. **Hele tuin** = 12,0 × 8,0 = **96 m²**.\n2. **Zandbak** = ½ × π × r². Diameter 6,0 → straal 3,0. Oppervlakte = ½ × π × 3² = ½ × π × 9 ≈ **14,1 m²**.\n3. **Grasveld** = hele tuin − zandbak = 96 − 14,1 ≈ **81,9 m²**.\n\n**Examen-tips**:\n• Lees goed: diameter of straal? **r = d / 2**.\n• Een **halfronde** vorm = **½ × π × r²**.\n• Rond af volgens de instructie (vaak 1 decimaal).",
+    explanation: "Op het CSE krijg je vaak een **combinatie-figuur**: een rechthoekige tuin met daarin een rond/half-rond stuk dat anders is. Examen-stijl probeer-vraag:\n\n> **Een speeltuin is rechthoekig** met afmetingen 12,0 m × 8,0 m. Daarin ligt een **halfronde zandbak** met diameter 6,0 m langs één lange zijde van de tuin. De rest is grasveld.\n\n**Aanpak in 3 stappen:**\n1. **Hele tuin** = lengte × breedte.\n2. **Zandbak** = ½ × π × r². Haal eerst de straal uit de diameter.\n3. **Grasveld** = hele tuin − zandbak.\n\n**Oefenvoorbeeld met andere maten**: tuin 10 m × 6 m, halfronde zandbak met diameter 4 m.\n• Hele tuin = 10 × 6 = **60 m²**.\n• Zandbak: r = 2, dus ½ × 3,14 × 2² = ½ × 3,14 × 4 ≈ **6,3 m²**.\n• Grasveld = 60 − 6,3 ≈ **53,7 m²**.\n\n**Examen-tips**:\n• Lees goed: diameter of straal? **r = d / 2**.\n• Een **halfronde** vorm = **½ × π × r²**.\n• Rond af volgens de instructie (vaak 1 decimaal).",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="40" y="40" width="220" height="120" fill="rgba(0,200,83,0.18)" stroke="${COLORS.curve}" stroke-width="2"/>
 <path d="M 100 40 A 50 50 0 0 1 200 40 Z" fill="rgba(255,213,79,0.45)" stroke="${COLORS.point}" stroke-width="2"/>
@@ -802,9 +802,9 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Dat is een hele cirkel (π × r²). Voor halfrond moet je nog ÷ 2.",
-          "Je hebt waarschijnlijk de diameter ipv straal gebruikt, of × ½ vergeten.",
-          "Je bent dichtbij, maar ergens zit een fout. Heb je de straal correct berekend vanuit de diameter, en de ½ voor halfrond meegenomen?",
+          "Dat is de oppervlakte van een hele cirkel. Is de zandbak een hele cirkel?",
+          "Je hebt π × r gedaan. Bij oppervlakte moet de straal in het kwadraat.",
+          "Je hebt π × d gedaan — dat is de omtrek van een hele cirkel, geen oppervlakte.",
         ],
         uitlegPad: {
           stappen: [{ titel: "½ × π × r²", tekst: "r = 6÷2 = 3. ½ × 3,14 × 9 ≈ 14,1 m²." }],
@@ -821,12 +821,12 @@ const steps = [
       },
       {
         q: "Wat is de oppervlakte van het **grasveld** (de rest)?",
-        options: ["≈ 81,9 m²", "≈ 96,0 m²", "≈ 110,1 m²", "≈ 67,8 m²"],
+        options: ["≈ 81,9 m²", "≈ 96,0 m²", "≈ 110,1 m²", "≈ 67,7 m²"],
         answer: 0,
         wrongHints: [
           null,
           "Dat is de hele tuin. Vergeet niet de zandbak ervan af te trekken.",
-          "Je hebt de zandbak erbij OPgeteld — moet aftrekken.",
+          "Je hebt de zandbak erbij opgeteld. Wordt het grasveld groter of kleiner door de zandbak?",
           "Je hebt waarschijnlijk een hele cirkel afgetrokken ipv halfrond.",
         ],
         uitlegPad: {
@@ -842,12 +842,12 @@ const steps = [
           },
         },
       },
-      { q: "Oppervlakte parallellogram met basis 6 en hoogte 4 = ?", options: ["24","10","12","20"], answer: 0, wrongHints: [null, "Niet — niet optellen.", "Niet — dat is de helft.", "Niet."] },
-      { q: "Een **ruit** heeft hoeveel gelijke zijden?", options: ["4","2","3","Geen"], answer: 0, wrongHints: [null, "Niet — alle 4.", "Niet.", "Niet."] },
-      { q: "Omtrek cirkel met straal 5 = ?", options: ["10π","5π","25π","π/5"], answer: 0, wrongHints: [null, "Niet — diameter.", "Dat is oppervlakte.", "Niet."] },
-      { q: "Oppervlakte cirkel met straal 3 = ?", options: ["9π","6π","3π","12π"], answer: 0, wrongHints: [null, "Dat is omtrek.", "Niet.", "Niet."] },
-      { q: "Een **trapezium** heeft minimaal hoeveel parallelle zijden?", options: ["2","4","0","1"], answer: 0, wrongHints: [null, "Dat is parallellogram.", "Niet — wel parallel.", "Te weinig."] },
-      { q: "Oppervlakte driehoek basis 10, hoogte 6 = ?", options: ["30","60","16","20"], answer: 0, wrongHints: [null, "Vergeet ÷2.", "Niet — geen optellen.", "Niet."] },
+      { q: "Oppervlakte parallellogram met basis 6 en hoogte 4 = ?", options: ["24","10","12","20"], answer: 0, wrongHints: [null, "Je hebt 6 + 4 gedaan. Bij oppervlakte tel je niet op.", "Je hebt ook nog ÷ 2 gedaan. Hoort dat bij een parallellogram of bij een driehoek?", "Hoe kom je aan 20? Kijk nog eens naar de formule: wat doe je met basis en hoogte?"] },
+      { q: "Een **ruit** heeft hoeveel gelijke zijden?", options: ["4","2","3","Geen"], answer: 0, wrongHints: [null, "Een ruit lijkt op een scheef geduwd vierkant. Zijn er zijden die langer zijn dan de andere?", "Een ruit heeft vier zijden. Is er één die afwijkt?", "Een ruit heeft juist wel gelijke zijden. Hoeveel?"] },
+      { q: "Omtrek cirkel met straal 5 = ?", options: ["10π","5π","25π","π/5"], answer: 0, wrongHints: [null, "Omtrek = π × diameter. Wat is de diameter bij straal 5?", "Dat is de oppervlakte (π × r²), niet de omtrek.", "Je hebt π gedeeld door de straal. Bij de omtrek vermenigvuldig je."] },
+      { q: "Oppervlakte cirkel met straal 3 = ?", options: ["9π","6π","3π","12π"], answer: 0, wrongHints: [null, "Dat is de omtrek (2 × π × r), niet de oppervlakte.", "Je hebt π × r gedaan. De straal moet in het kwadraat.", "Hoe kom je aan 12? Reken r² nog eens na."] },
+      { q: "Een **trapezium** heeft minimaal hoeveel parallelle zijden?", options: ["2","4","0","1"], answer: 0, wrongHints: [null, "Twee paar evenwijdige zijden heeft een parallellogram. Een trapezium heeft er minimaal…?", "Een trapezium heeft wel evenwijdige zijden. Hoeveel minimaal?", "Evenwijdig zijn gaat altijd over twee zijden samen. Kan één zijde in z'n eentje evenwijdig zijn?"] },
+      { q: "Oppervlakte driehoek basis 10, hoogte 6 = ?", options: ["30","60","16","20"], answer: 0, wrongHints: [null, "Je hebt basis × hoogte gedaan. Bij een driehoek is er nog een stap.", "Je hebt 10 + 6 gedaan. Bij oppervlakte vermenigvuldig je.", "Hoe kom je aan 20? Kijk nog eens naar de formule voor een driehoek."] },
     ],
   },
 ];

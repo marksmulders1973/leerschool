@@ -138,19 +138,19 @@ const steps = [
       },
       {
         q: "Welk woord is **geen** signaalwoord voor een argument?",
-        options: ["maar", "want", "omdat", "doordat"],
+        options: ["maar", "want", "omdat", "aangezien"],
         answer: 0,
         wrongHints: [
           null,
           "Want is juist een klassiek signaal voor een argument.",
           "Omdat is een klassiek signaal voor een argument.",
-          "Doordat geeft een oorzaak — dat is een argument.",
+          "Aangezien geeft een reden — ook een klassiek signaal voor een argument.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "'Maar' = tegenstelling", tekst: "Want/omdat/doordat = argument. Maar = tegenstelling." }],
+          stappen: [{ titel: "'Maar' = tegenstelling", tekst: "Want/omdat/aangezien = argument. Maar = tegenstelling." }],
           woorden: [{ woord: "tegenstelling", uitleg: "maar, echter, hoewel" }],
           theorie: "Niet alle signaalwoorden zijn argumentatie-signalen.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "want/omdat/doordat/immers = argument" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "want/omdat/aangezien/immers = argument" }],
           basiskennis: [{ onderwerp: "tegen ≠ argument", uitleg: "maar geeft contrast, niet reden" }],
           niveaus: { basis: "Maar.", simpeler: "Maar = tegenstelling.", nogSimpeler: "Maar (geen argument)." },
         },
@@ -381,7 +381,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Standpunt: \"We moeten meer slapen.\" Argument: \"Onderzoek van het slaaponderzoeksinstituut UMC Utrecht laat zien dat tieners 9 uur nodig hebben.\"* — Welk type?",
+        q: "*Standpunt: \"We moeten meer slapen.\" Argument: \"Slaaponderzoekers van het UMC Utrecht stellen dat tieners zo'n 9 uur slaap nodig hebben.\"* — Welk type?",
         options: [
           "Autoriteitsargument",
           "Kenmerk-argument",
@@ -391,12 +391,12 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Een kenmerk-argument benoemt een eigenschap van iets. Hier wordt een onderzoeksinstituut aangehaald — wat is dat?",
+          "Een kenmerk-argument benoemt een eigenschap van iets. Hier worden onderzoekers aangehaald — wat zijn dat?",
           "Een vergelijking trekt parallel tussen twee dingen. Hier wordt een bron aangehaald.",
           "Oorzaak-gevolg legt een directe relatie tussen X en Y. Hier wordt een bron aangehaald die iets stelt.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Autoriteit = deskundige bron", tekst: "UMC Utrecht = deskundig op slaap → autoriteitsargument." }],
+          stappen: [{ titel: "Autoriteit = deskundige bron", tekst: "Slaaponderzoekers = deskundig op slaap → autoriteitsargument." }],
           woorden: [{ woord: "autoriteit", uitleg: "deskundige bron/persoon/instantie" }],
           theorie: "Type 5: volgens X (bron) → conclusie.",
           voorbeelden: [{ type: "voorbeeld", tekst: "volgens..., onderzoek toont, WHO/CBS stelt" }],
@@ -617,7 +617,7 @@ const steps = [
         },
       },
       {
-        q: "*\"Mensen denken dat het belangrijk is om gezond te eten.\"* — Welke drogreden?",
+        q: "*\"Je moet gezond eten, want mensen zeggen dat het belangrijk is.\"* — Welke drogreden?",
         options: [
           "Vals beroep op autoriteit (vage bron: 'mensen')",
           "Overhaaste generalisatie",
@@ -632,7 +632,7 @@ const steps = [
           "Er is wel degelijk iets mis: \"mensen\" is geen specifieke, deskundige bron. Dat maakt het een vals autoriteitsberoep.",
         ],
         uitlegPad: {
-          stappen: [{ titel: "Vage bron = drogreden", tekst: "'Mensen denken' = geen specifieke deskundige." }],
+          stappen: [{ titel: "Vage bron = drogreden", tekst: "'Mensen zeggen' = geen specifieke deskundige." }],
           woorden: [{ woord: "vals autoriteit", uitleg: "vage of onbevoegde bron" }],
           theorie: "Echte autoriteit = specifiek + deskundig op thema.",
           voorbeelden: [{ type: "voorbeeld", tekst: "'Iedereen weet', 'experts zeggen'" }],
@@ -724,7 +724,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*\"Het is bewezen dat een latere starttijd op school beter is voor tieners. De Nederlandse Vereniging voor Slaaponderzoek concludeerde in 2024 dat tieners een biologische klok hebben die later loopt dan die van volwassenen.\"* — Welk type argument?",
+        q: "*\"Het is bewezen dat een latere starttijd op school beter is voor tieners. Slaaponderzoekers van de Nederlandse Vereniging voor Slaap-Waakonderzoek wijzen erop dat tieners een biologische klok hebben die later loopt dan die van volwassenen.\"* — Welk type argument?",
         options: [
           "Autoriteitsargument",
           "Vergelijkingsargument",
@@ -736,13 +736,13 @@ const steps = [
           null,
           "Er wordt geen vergelijking met iets anders gemaakt. Wel wordt een specifieke bron aangehaald.",
           "Oorzaak-gevolg verbindt twee dingen direct. Hier wordt een onderzoeksuitspraak aangehaald — wat is dat?",
-          "De bron is specifiek (Nederlandse Vereniging voor Slaaponderzoek) en deskundig op het onderwerp. Dat maakt het een geldig autoriteitsargument, geen drogreden.",
+          "De bron is specifiek (Nederlandse Vereniging voor Slaap-Waakonderzoek) en deskundig op het onderwerp. Dat maakt het een geldig autoriteitsargument, geen drogreden.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Echte autoriteit", tekst: "Specifieke deskundige organisatie = geldig autoriteitsargument." }],
           woorden: [{ woord: "geldige autoriteit", uitleg: "specifiek + deskundig + relevant" }],
           theorie: "Niet elke autoriteitsverwijzing = drogreden.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Nederlandse Vereniging voor Slaaponderzoek = geldig" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Nederlandse Vereniging voor Slaap-Waakonderzoek = geldig" }],
           basiskennis: [{ onderwerp: "vs drogreden", uitleg: "'experts zeggen' (vaag) = drogreden" }],
           niveaus: { basis: "Autoriteitsargument.", simpeler: "Echte bron.", nogSimpeler: "Geldig autoriteit." },
         },
@@ -807,7 +807,7 @@ const steps = [
         wrongHints: [
           null,
           "Nevenschikkend = meerdere onafhankelijke argumenten. Hier staat één hoofdargument, dat verder wordt onderbouwd.",
-          "Enkelvoudig = standpunt + één argument zonder verdere onderbouwing. Hier wordt het argument *waarom dat een drempel is* nog uitgelegd.",
+          "Enkelvoudig = standpunt + één argument zonder verdere onderbouwing. Hier wordt het argument nog onderbouwd: *waarom die drempel weg moet*.",
           "Er is duidelijk argumentatie: standpunt (meer geld) → argument (drempel) → subargument (gelijke kansen).",
         ],
         uitlegPad: {

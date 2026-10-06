@@ -416,7 +416,7 @@ const steps = [
       { q: "Wanneer is mediaan zinvoller dan gemiddelde?", options: ["Bij grote uitschieters","Bij weinig getallen","Bij even aantal","Bij oneven aantal"], answer: 0, wrongHints: [null, "Niet — beide werken bij elk aantal.", "Niet — speelt geen rol.", "Niet — speelt geen rol."] },
       { q: "5 toetsen gemiddeld 7. Som = ?", options: ["35","12","7","75"], answer: 0, wrongHints: [null, "Niet — optellen ipv vermenigvuldigen.", "Gem zelf.", "Verkeerde berekening."] },
       { q: "Frequentie van 4 in [4,5,4,6,4,7,5]?", options: ["3","2","1","4"], answer: 0, wrongHints: [null, "Niet — tel zorgvuldig.", "Niet — tel nog eens.", "Niet."] },
-      { q: "Staafdiagram-hoogte staat voor?", options: ["Frequentie","Waarde","Som","Modus"], answer: 0, wrongHints: [null, "Niet — waarde op x-as.", "Niet.", "Modus = HOOGSTE staaf, niet hoogte zelf."] },
+      { q: "Een dobbelsteen is 60 keer gegooid. In het staafdiagram staan de ogen 1 t/m 6 onder de staven. Waar staat de hoogte van een staaf voor?", options: ["Frequentie","Waarde","Som","Modus"], answer: 0, wrongHints: [null, "Niet — waarde op x-as.", "Niet.", "Modus = HOOGSTE staaf, niet hoogte zelf."] },
       { q: "5, 5, 5, 5, 5 — bereik?", options: ["0","5","25","1"], answer: 0, wrongHints: [null, "Dat is de waarde, niet bereik.", "Dat is de som.", "Niet."] },
       { q: "Modus van 3, 4, 5, 7, 8 (alle verschillend)?", options: ["Geen modus","3","8","5"], answer: 0, wrongHints: [null, "Niet — 3 komt 1× voor (zoals alle).", "Niet — zelfde frequentie.", "Niet."] },
       { q: "6 cijfers gem 7. Eén cijfer is 4. Som overige 5?", options: ["38","42","32","7"], answer: 0, wrongHints: [null, "Dat is totaal-som, niet 'overige 5'.", "Te laag.", "Niet."] },

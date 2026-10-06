@@ -27,7 +27,7 @@ const steps = [
   {
     title: "Scannen + skim — sneller lezen",
     explanation:
-      "Het **VMBO-GT-eindexamen Engels** = uitsluitend **leesvaardigheid**. ~50 vragen over ~10 teksten in 90 min. Tijdmanagement is alles.\n\n**3 lees-snelheden** (verschillende doelen):\n\n**1. Scan-lezen** (snelste):\n• Zoek 1 specifiek woord/getal/naam.\n• Voorbeeld: 'In which year did X happen?' → scan voor jaar-getallen.\n• Gebruik je oog als spotlight — kijk niet naar alle woorden.\n\n**2. Skim-lezen** (snel):\n• Krijg overzicht: waar gaat de tekst over?\n• Lees: titel + eerste zin elke alinea + laatste zin.\n• Doel: weten welke alinea relevant is voor welke vraag.\n\n**3. Detail-lezen** (langzamer):\n• Lees zin voor zin, begrijp ieder woord.\n• Gebruik alleen voor relevante alinea — niet hele tekst!\n\n**CSE-Engels-strategie**:\n1. **Lees eerst de vragen** (sneak peek).\n2. **Skim de tekst** (1 minuut overzicht).\n3. Per vraag: **scan** naar trefwoord uit vraag → vind relevante alinea → **detail-lees** alleen die alinea.\n4. Niet vastlopen — moeilijke vraag overslaan + later terug.\n\n**Tijdsbudget VMBO-CSE Engels** (90 min, ~50 vragen):\n• ~1,5 min per vraag gemiddeld.\n• Eerste tekst-overzicht: ~3 min.\n• Reserveer 10 min op het eind voor terugcheck + open vragen.\n\n**Toets-feit**: meeste leerlingen verliezen punten door **tijdsdruk + onbekende woorden + valstrikken**. Strategie scheelt ~10-15% in score.",
+      "Het **VMBO-GT-eindexamen Engels** = uitsluitend **leesvaardigheid**. ~40 vragen over ~10-12 teksten in 120 min. Tijdmanagement is alles.\n\n**3 lees-snelheden** (verschillende doelen):\n\n**1. Scan-lezen** (snelste):\n• Zoek 1 specifiek woord/getal/naam.\n• Voorbeeld: 'In which year did X happen?' → scan voor jaar-getallen.\n• Gebruik je oog als spotlight — kijk niet naar alle woorden.\n\n**2. Skim-lezen** (snel):\n• Krijg overzicht: waar gaat de tekst over?\n• Lees: titel + eerste zin elke alinea + laatste zin.\n• Doel: weten welke alinea relevant is voor welke vraag.\n\n**3. Detail-lezen** (langzamer):\n• Lees zin voor zin, begrijp ieder woord.\n• Gebruik alleen voor relevante alinea — niet hele tekst!\n\n**CSE-Engels-strategie**:\n1. **Lees eerst de vragen** (sneak peek).\n2. **Skim de tekst** (1 minuut overzicht).\n3. Per vraag: **scan** naar trefwoord uit vraag → vind relevante alinea → **detail-lees** alleen die alinea.\n4. Niet vastlopen — moeilijke vraag overslaan + later terug.\n\n**Tijdsbudget VMBO-CSE Engels** (120 min, ~40 vragen):\n• ~3 min per vraag gemiddeld (inclusief lezen van de tekst).\n• Eerste tekst-overzicht: ~3 min.\n• Reserveer 10 min op het eind voor terugcheck + open vragen.\n\n**Toets-feit**: meeste leerlingen verliezen punten door **tijdsdruk + onbekende woorden + valstrikken**. Strategie scheelt ~10-15% in score.",
     checks: [
       {
         q: "Welke lees-strategie gebruik je om **1 jaartal** te vinden in een lange tekst?",
@@ -54,14 +54,14 @@ const steps = [
         },
       },
       {
-        q: "Wat is het beste **tijdsbudget** per VMBO-CSE-vraag (90 min / ~50 vragen)?",
-        options: ["~1,5 minuut","30 seconden","5 minuten","Geen tijd budgetteren"],
+        q: "Wat is het beste **tijdsbudget** per VMBO-CSE-vraag (120 min / ~40 vragen)?",
+        options: ["~3 minuten","30 seconden","8 minuten","Geen tijd budgetteren"],
         answer: 0,
         wrongHints: [null, "Te snel — leesvaardigheid heeft tijd nodig.", "Te langzaam — kom je niet door.", "Niet — tijdsdruk is hoog."],
         uitlegPad: {
-          stappen: [{ titel: "90 / 50 ≈ 1,5 min", tekst: "**90 min ÷ 50 vragen = 1,8 min**. Trek af: 3 min tekst-overzicht-tijd + 5 min eind-check = 90-8=82 min / 50 = **1,5-1,6 min per vraag**. Gebruik als richtlijn — sommige vragen sneller, andere langzamer." }],
+          stappen: [{ titel: "120 / 40 = 3 min", tekst: "**120 min ÷ 40 vragen = 3 min**. Trek af: ~3 min tekst-overzicht + ~10 min eind-check = 120 − 13 = 107 min / 40 ≈ **2,7 min per vraag**. Dus reken op **ongeveer 3 minuten**, inclusief het lezen van de tekst. Gebruik als richtlijn — sommige vragen sneller, andere langzamer." }],
           theorie: "Toets-strategie-tip: stel **timer per pagina** (~10 min) zodat je weet of je achterloopt.",
-          niveaus: { basis: "1,5 min — A.", simpeler: "VMBO-Engels = 1,5 min/vraag", nogSimpeler: "1,5 min" },
+          niveaus: { basis: "~3 min — A.", simpeler: "VMBO-Engels = ongeveer 3 min/vraag", nogSimpeler: "3 min" },
         },
       },
       {

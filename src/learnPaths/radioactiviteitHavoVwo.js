@@ -138,7 +138,7 @@ const steps = [
         q: "Welke straling wordt gestopt door **een vel papier**?",
         options: ["α", "β⁻", "γ", "Geen — alle gaan erdoorheen"],
         answer: 0,
-        wrongHints: [null, "Niet — β gaat door papier, vereist dun aluminium.", "Niet — γ vereist dik lood/beton.", "Niet — α stopt wel."],
+        wrongHints: [null, "Niet — β gaat door papier, vereist dun aluminium.", "Niet — γ vereist dik lood/beton.", "Niet — één soort straling heeft zo weinig doordringvermogen dat papier genoeg is."],
         uitlegPad: {
           stappen: [{ titel: "α heeft lage doordringkracht", tekst: "α-deeltjes zijn relatief zwaar (He-kern) + dubbel geladen → veel botsingen met materie → snel afgeremd. Papier of paar cm lucht stopt α. β gaat door tot dunne metaalplaat; γ door dikke loodlaag." }],
           basiskennis: [{ onderwerp: "Maar gevaarlijk in lichaam", uitleg: "α buiten lichaam = onschuldig. INGEADEMD of GEGETEN (zoals radon-gas) = zeer gevaarlijk: alle energie afgeleverd in klein volume weefsel." }],

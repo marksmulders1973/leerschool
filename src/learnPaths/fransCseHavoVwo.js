@@ -27,36 +27,36 @@ const steps = [
   {
     title: "Examen-format Frans CSE",
     explanation:
-      "**Centraal Schriftelijk Examen Frans (CSE)** voor HAVO/VWO test alleen **leesvaardigheid**. Geen luistervaardigheid, geen schrijven, geen spreken op CSE — die heten schoolexamens (SE).\n\n**Tijdsduur**:\n• HAVO: 2,5 uur.\n• VWO: 3 uur.\n\n**Aantal teksten**:\n• ~10 teksten van wisselende lengte.\n• Totaal ~3500-4500 woorden Frans.\n• ~40-45 vragen totaal.\n\n**Tekstsoorten**:\n• Nieuws/actualiteit (uit Le Monde, Le Figaro, Le Parisien).\n• Reportage of profiel.\n• Reisverhaal / cultureel artikel.\n• Wetenschap/techniek populair.\n• Maatschappij-debat.\n• Interview.\n• Persoonlijk verhaal/memoire.\n• Soms recensie of advertorial.\n\n**Tekst-niveau**:\n• HAVO: B1-niveau (zelfstandig taalgebruiker).\n• VWO: B2-niveau (vaardig taalgebruiker).\n• Onbekende woorden mogen voorkomen — context-strategie nodig.\n\n**Vraagtypes** (meestal in Nederlands gesteld, soms Frans):\n• **Multiple choice** (4 opties).\n• **Open vraag** (kort antwoord in NL of korte zin Frans).\n• **Citaat geven** uit tekst (specifieke regels).\n• **'Welke alinea bevat...'**.\n• **'Wat bedoelt de auteur met...'** (interpretatie).\n• **'Wat is de hoofdgedachte van alinea X'**.\n• **'Welke uitspraak past bij personage Y'**.\n\n**Hulpmiddelen toegestaan**:\n• **Eentalig Frans woordenboek** (Larousse, Petit Robert, Le Robert).\n• **Tweetalig Frans-Nederlands woordenboek**.\n• Beide tegelijk = handig.\n• Niet toegestaan: digitale hulpmiddelen, vertaal-apps, telefoon.\n\n**Strategie tijdverdeling**:\n• 2,5 uur HAVO ÷ 10 teksten = ~15 min per tekst.\n• Eerste 5 min: tekst doorlezen (globaal).\n• Volgende 8-10 min: vragen + scanning.\n• Laatste 2 min: check antwoorden.\n\n**Examenkalender** (jaarlijks):\n• 1e tijdvak: mei (HAVO + VWO).\n• 2e tijdvak: juni (herkansing + ziek/persoonlijke omstandigheden).\n• 3e tijdvak: juli/aug (uitzonderlijke gevallen).\n\n**Score + cijfer**:\n• Antwoorden gepubliceerd na examen op www.examenblad.nl.\n• Normering (N-term) bepaalt cijfer: lichte normering bij moeilijk examen.\n• Examen-cijfer + SE-cijfer (gemiddeld 50/50) = eindcijfer.\n• Slagen vergt o.a. gemiddeld 5,5+ voor je centrale examens + maximaal één 5 bij de kernvakken (Nederlands, Engels, wiskunde).",
+      "**Centraal Schriftelijk Examen Frans (CSE)** voor HAVO/VWO test alleen **leesvaardigheid**. Geen luistervaardigheid, geen schrijven, geen spreken op CSE — die heten schoolexamens (SE).\n\n**Tijdsduur**:\n• HAVO: 2,5 uur.\n• VWO: 2,5 uur.\n\n**Aantal teksten**:\n• ~10 teksten van wisselende lengte.\n• Totaal ~3500-4500 woorden Frans.\n• ~40-45 vragen totaal.\n\n**Tekstsoorten**:\n• Nieuws/actualiteit (uit Le Monde, Le Figaro, Le Parisien).\n• Reportage of profiel.\n• Reisverhaal / cultureel artikel.\n• Wetenschap/techniek populair.\n• Maatschappij-debat.\n• Interview.\n• Persoonlijk verhaal/memoire.\n• Soms recensie of advertorial.\n\n**Tekst-niveau**:\n• HAVO: B1-niveau (zelfstandig taalgebruiker).\n• VWO: B2-niveau (vaardig taalgebruiker).\n• Onbekende woorden mogen voorkomen — context-strategie nodig.\n\n**Vraagtypes** (meestal in Nederlands gesteld, soms Frans):\n• **Multiple choice** (4 opties).\n• **Open vraag** (kort antwoord in NL of korte zin Frans).\n• **Citaat geven** uit tekst (specifieke regels).\n• **'Welke alinea bevat...'**.\n• **'Wat bedoelt de auteur met...'** (interpretatie).\n• **'Wat is de hoofdgedachte van alinea X'**.\n• **'Welke uitspraak past bij personage Y'**.\n\n**Hulpmiddelen toegestaan**:\n• **Tweetalig woordenboek** Frans-Nederlands / Nederlands-Frans (papier).\n• Een eentalig Frans woordenboek (Larousse, Le Robert) is bij het CSE Frans níét toegestaan — handig om mee te oefenen, niet op het examen.\n• Niet toegestaan: digitale hulpmiddelen, vertaal-apps, telefoon.\n\n**Strategie tijdverdeling**:\n• 2,5 uur HAVO ÷ 10 teksten = ~15 min per tekst.\n• Eerste 5 min: tekst doorlezen (globaal).\n• Volgende 8-10 min: vragen + scanning.\n• Laatste 2 min: check antwoorden.\n\n**Examenkalender** (jaarlijks):\n• 1e tijdvak: mei (HAVO + VWO).\n• 2e tijdvak: juni (herkansing + ziek/persoonlijke omstandigheden).\n• 3e tijdvak: juli/aug (uitzonderlijke gevallen).\n\n**Score + cijfer**:\n• Antwoorden gepubliceerd na examen op www.examenblad.nl.\n• Normering (N-term) bepaalt cijfer: lichte normering bij moeilijk examen.\n• Examen-cijfer + SE-cijfer (gemiddeld 50/50) = eindcijfer.\n• Slagen vergt o.a. gemiddeld 5,5+ voor je centrale examens + maximaal één 5 bij de kernvakken (Nederlands, Engels, wiskunde).",
     checks: [
       {
         q: "Het **CSE Frans** test:",
         options: ["Alleen leesvaardigheid","Lees + luister + spreek","Alleen luistervaardigheid","Alleen schrijfvaardigheid"],
         answer: 0,
-        wrongHints: [null, "Andere staan op SE.", "Niet — leesvaardigheid.", "Niet."],
+        wrongHints: [null, "Andere staan op SE.", "Niet — luistervaardigheid hoort bij het schoolexamen.", "Niet."],
         uitlegPad: {
           stappen: [{ titel: "Lezen op CSE, rest op SE", tekst: "**CSE Frans** = alleen leesvaardigheid. Luistervaardigheid, spreekvaardigheid, schrijfvaardigheid worden in **SE (schoolexamen)** getest tijdens jaar." }],
           niveaus: { basis: "Lezen.", simpeler: "CSE = lezen", nogSimpeler: "Lezen" },
         },
       },
       {
-        q: "Welke woordenboeken zijn **toegestaan** bij CSE Frans?",
-        options: ["Eentalig FR + tweetalig FR-NL","Alleen tweetalig","Alleen eentalig","Geen"],
+        q: "Welk woordenboek is **toegestaan** bij CSE Frans?",
+        options: ["Tweetalig Frans-Nederlands / Nederlands-Frans","Alleen een eentalig Frans woordenboek","Eentalig én tweetalig tegelijk","Geen enkel woordenboek"],
         answer: 0,
-        wrongHints: [null, "Niet — beide mogen.", "Niet — beide mogen.", "Wel toegestaan."],
+        wrongHints: [null, "Niet — een eentalig woordenboek mag bij Frans niet.", "Niet — dat is meer dan is toegestaan.", "Niet — er mag wél een hulpmiddel."],
         uitlegPad: {
-          stappen: [{ titel: "Twee tegelijk = sterk", tekst: "Bij CSE Frans **beide toegestaan**: eentalig Frans (Larousse) + tweetalig Frans-NL. **Beide tegelijk gebruiken** = handig: tweetalig snel voor onbekend woord, eentalig voor nuance + uitleg uit context." }],
-          theorie: "Tip: koop ze voor 4e/5e klas. Vraag school of Open Boek-pool ze leent.",
-          niveaus: { basis: "Beide.", simpeler: "Eentalig + tweetalig", nogSimpeler: "Beide" },
+          stappen: [{ titel: "Woordenboek naar en van de doeltaal", tekst: "Bij het CSE Frans mag je een **tweetalig woordenboek** gebruiken: Frans-Nederlands en Nederlands-Frans (papier). Een eentalig Frans woordenboek is niet toegestaan (alleen bij Engels mag op verzoek een Engels-Engels woordenboek)." }],
+          theorie: "Tip: oefen al in de 4e/5e klas met hetzelfde woordenboek, dan zoek je op het examen sneller.",
+          niveaus: { basis: "Tweetalig.", simpeler: "Frans-Nederlands woordenboek", nogSimpeler: "Tweetalig" },
         },
       },
       {
         q: "Tijdsduur **CSE Frans HAVO**?",
         options: ["2,5 uur","2 uur","3 uur","4 uur"],
         answer: 0,
-        wrongHints: [null, "Te kort.", "Niet — VWO.", "Te lang."],
+        wrongHints: [null, "Te kort.", "Te lang.", "Veel te lang."],
         uitlegPad: {
-          stappen: [{ titel: "HAVO 2,5 / VWO 3", tekst: "**HAVO: 2,5 uur**. VWO: 3 uur. Bij dyslexie-/dyscalculie-verklaring 30 min extra toegestaan." }],
+          stappen: [{ titel: "HAVO en VWO: 2,5 uur", tekst: "**HAVO: 2,5 uur** (150 minuten). VWO ook 2,5 uur. Bij dyslexie-/dyscalculie-verklaring 30 min extra toegestaan." }],
           niveaus: { basis: "2,5 uur.", simpeler: "HAVO=2,5 uur", nogSimpeler: "2,5" },
         },
       },
@@ -75,7 +75,7 @@ const steps = [
         q: "Geschatte tijd per tekst (HAVO 2,5u, 10 teksten)?",
         options: ["~15 min","~5 min","~30 min","~1 uur"],
         answer: 0,
-        wrongHints: [null, "Te kort om grondig.", "Veel te lang.", "Belachelijk lang."],
+        wrongHints: [null, "Te kort om grondig.", "Veel te lang.", "Veel te lang — dan haal je maar 2-3 teksten."],
         uitlegPad: {
           stappen: [{ titel: "Tijdverdeling", tekst: "2,5 uur = 150 min ÷ 10 teksten = **~15 min per tekst**. Verdeel: 5 min globaal lezen, 8 min vragen, 2 min controle. Bij twijfel volgende → kom terug." }],
           niveaus: { basis: "~15 min.", simpeler: "150/10=15 min", nogSimpeler: "15" },
@@ -115,7 +115,7 @@ const steps = [
         q: "*Il ne lit **que** des romans*. Betekent:",
         options: ["Hij leest alleen romans","Hij leest geen romans","Hij leest soms romans","Hij wil romans lezen"],
         answer: 0,
-        wrongHints: [null, "Faux! *ne...que* = alleen maar (positief!).", "Niet correct.", "Niet correct."],
+        wrongHints: [null, "Pas op! *ne...que* is geen gewone ontkenning.", "Niet correct.", "Niet correct."],
         uitlegPad: {
           stappen: [{ titel: "ne...que ≠ ontkenning", tekst: "**ne...que** = alleen maar = beperking, **niet** ontkenning. *Il ne lit que des romans* = Hij leest **alleen** romans (= Hij leest niets anders dan romans).\n\nVerwarrend omdat *ne* meestal ontkenning is. Toets-favoriete val." }],
           theorie: "Andere ne-constructies: ne...pas (niet), ne...jamais (nooit), ne...rien (niets), ne...personne (niemand) — die zijn wel ontkenning.",
@@ -134,7 +134,7 @@ const steps = [
       },
       {
         q: "Bij 'Waarnaar verwijst *cela* in regel 24?' — kijk je:",
-        options: ["Vooraf in zinnen vlak voor","Aan het eind van tekst","In titel","In voetnoot"],
+        options: ["In de zinnen er vlak vóór","Aan het eind van tekst","In titel","In voetnoot"],
         answer: 0,
         wrongHints: [null, "Niet — referentie meestal terug.", "Niet primair.", "Zelden in CSE."],
         uitlegPad: {
@@ -176,7 +176,7 @@ const steps = [
         q: "*Ce n'est pas mal* (litote) betekent:",
         options: ["Het is best goed","Het is slecht","Het is verboden","Het is normaal"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld bedoeld.", "Niet — figuurlijk.", "Niet — emotionele uitspraak."],
+        wrongHints: [null, "Tegenovergesteld bedoeld.", "Niet — 'mal' betekent hier niet 'verboden'.", "Niet — de spreker bedoelt méér dan 'gewoon'."],
         uitlegPad: {
           stappen: [{ titel: "Litote = onderschatting", tekst: "**Litote**: zegt minder dan bedoeld voor effect. 'Ce n'est pas mal' = letterlijk 'het is niet slecht' = bedoeld als **'het is goed/best aardig'** (positieve waardering). Voorbeelden litote: 'Pas bête!' = 'slim!'. 'Pas mauvais' = 'lekker'." }],
           niveaus: { basis: "Best goed.", simpeler: "Litote = onderschatten", nogSimpeler: "Goed" },
@@ -194,13 +194,13 @@ const steps = [
         },
       },
       {
-        q: "Welke functie kan **alinea 3** in argumentatieve tekst hebben?",
+        q: "Een alinea midden in een betoog begint met *certes, il est vrai que...* Welke functie heeft die alinea waarschijnlijk?",
         options: ["Tegenargument (concession)","Inleiding","Conclusie","Geen functie"],
         answer: 0,
-        wrongHints: [null, "Niet — komt alinea 1.", "Niet — komt aan eind.", "Wel functie."],
+        wrongHints: [null, "Niet — die staat aan het begin.", "Niet — die staat aan het eind.", "Wel functie."],
         uitlegPad: {
           stappen: [{ titel: "Concession-alinea", tekst: "In argumentatieve teksten komt vaak een **tegenargument-alinea** (concession): 'sommigen zeggen X, maar...'. Auteur erkent kritisch geluid, weerlegt het, versterkt eigen positie. Signaal-woorden: *certes, il est vrai que, on pourrait dire que*." }],
-          niveaus: { basis: "Tegenargument.", simpeler: "Alinea 3 = concession", nogSimpeler: "A." },
+          niveaus: { basis: "Tegenargument.", simpeler: "Certes... = concession", nogSimpeler: "A." },
         },
       },
     ],
@@ -210,7 +210,7 @@ const steps = [
   {
     title: "Cultuur + actualiteit-context",
     explanation:
-      "CSE Frans-teksten gaan vaak over Franse maatschappij, cultuur, politiek of Europese actualiteit. **Context-kennis** helpt enorm.\n\n**Frankrijk in een notendop**:\n• Bevolking: ~68 mln.\n• Hoofdstad: Paris.\n• President: bestaat sinds Vijfde Republiek (1958, De Gaulle).\n• Huidig: Emmanuel Macron (sinds 2017, herkozen 2022).\n• Parlement: Assemblée Nationale + Sénat.\n• Premier: door president benoemd.\n• EU + euro + Schengen-zone.\n• Lid VN-Veiligheidsraad (vetorecht).\n• Kernmacht.\n\n**Belangrijke Franse media** (vaak bron voor CSE-teksten):\n• Le Monde (kwaliteits-krant, links-liberaal).\n• Le Figaro (rechts-liberaal).\n• Libération (links).\n• Le Parisien (populair).\n• Mediapart (digitaal, onderzoeksjournalistiek).\n• Courrier International (buitenlands nieuws-overzicht).\n\n**Franse politieke partijen** (recente):\n• **Renaissance** (Macron, centrum).\n• **Rassemblement National** (Le Pen, extreem-rechts).\n• **La France Insoumise** (Mélenchon, extreem-links).\n• **Les Républicains** (klassiek rechts).\n• **Parti Socialiste** (PS, traditioneel links).\n• **Europe Écologie Les Verts** (groenen).\n\n**Recente Franse + Europese onderwerpen** (CSE 2024-25):\n• Gele Hesjes (Gilets jaunes 2018-).\n• Pensioenhervorming + protesten 2023.\n• Klimaatbeleid + Europese Green Deal.\n• Russisch-Oekraïense oorlog + EU-respons.\n• Energiecrisis + kernenergie-keuze (FR is grote kernenergie-producent).\n• Immigratie + integratie-debat.\n• Banlieues-spanningen (voorsteden Parijs).\n• Vaccinatie-debat post-COVID.\n• AI-regulering (EU AI Act 2024).\n• Olympische Spelen Paris 2024.\n\n**Frankrijk-specifieke begrippen**:\n• **Laïcité** = staats-secularisme (sinds wet 1905). Belangrijk: openbare ruimte religieus-neutraal. Geen hoofddoek in openbare scholen, geen kruisen in stadhuizen.\n• **Banlieue** = voorstad. Vaak negatieve connotatie (sociaal kwetsbare wijken rond Parijs).\n• **Brevet** = einde-onderbouw-examen (~3e klas).\n• **Baccalauréat** = einddiploma middelbare school.\n• **Grandes écoles** = elite-hogescholen (Polytechnique, ENA-opvolger, HEC).\n• **Sécurité sociale (sécu)** = sociaal zekerheidssysteem.\n• **SMIC** = minimumloon.\n• **TGV** = hoge-snelheidstrein.\n• **TVA** = BTW.\n• **EHPAD** = verpleeghuis ouderen.\n• **HLM** = sociale-woningbouw (vergelijkbaar met NL-corporatie).\n\n**Franse cultuur-iconen**:\n• Schrijvers: Victor Hugo, Albert Camus, Marcel Proust, Simone de Beauvoir, Annie Ernaux (Nobelprijs 2022).\n• Filosofen: Sartre, Foucault, Beauvoir, Camus.\n• Kunstenaars: Monet, Cézanne, Picasso (geboren in Spanje, woonde FR).\n• Muziek: Edith Piaf, Charles Aznavour, Daft Punk, Stromae (Belg), Aya Nakamura.\n• Film: Truffaut, Godard, Audiard, recente: Houda Benyamina, Céline Sciamma.\n• Sport: Zinedine Zidane, Kylian Mbappé, Antoine Griezmann.\n\n**Franse + Europese cijfers** (vaak in CSE):\n• EU-leden: 27 sinds Brexit (2020).\n• EU-bevolking: ~448 mln.\n• Euro-zone: 21 landen (Bulgarije erbij sinds 2026).\n• Klimaat: EU-doel 55% CO₂-reductie 2030 vs 1990.\n• Frankrijk kernenergie: ~70% elektriciteit.\n\n**Tips voor algemeen actualiteits-bewustzijn**:\n• Lees soms NL-krant over Frans/EU-nieuws.\n• Volg podcast 'Inside Europe' of YouTube-kanaal France 24.\n• Bekijk recente examens (examenblad.nl) — terugkerende thema's herkennen.\n\n**Toets-patroon**: vragen over **achtergrond of cultureel begrip** zonder dat het in tekst zelf staat. Iemand die Macron niet kent of Olympische Spelen Paris niet, mist context-clue.",
+      "CSE Frans-teksten gaan vaak over Franse maatschappij, cultuur, politiek of Europese actualiteit. **Context-kennis** helpt enorm.\n\n**Frankrijk in een notendop**:\n• Bevolking: ~68 mln.\n• Hoofdstad: Paris.\n• President: bestaat sinds Vijfde Republiek (1958, De Gaulle).\n• Huidig: Emmanuel Macron (sinds 2017, herkozen 2022).\n• Parlement: Assemblée Nationale + Sénat.\n• Premier: door president benoemd.\n• EU + euro + Schengen-zone.\n• Lid VN-Veiligheidsraad (vetorecht).\n• Kernmacht.\n\n**Belangrijke Franse media** (vaak bron voor CSE-teksten):\n• Le Monde (kwaliteits-krant, links-liberaal).\n• Le Figaro (rechts-liberaal).\n• Libération (links).\n• Le Parisien (populair).\n• Mediapart (digitaal, onderzoeksjournalistiek).\n• Courrier International (buitenlands nieuws-overzicht).\n\n**Franse politieke partijen** (recente):\n• **Renaissance** (Macron, centrum).\n• **Rassemblement National** (Le Pen, extreem-rechts).\n• **La France Insoumise** (Mélenchon, extreem-links).\n• **Les Républicains** (klassiek rechts).\n• **Parti Socialiste** (PS, traditioneel links).\n• **Les Écologistes** (groenen, voorheen EELV).\n\n**Recente Franse + Europese onderwerpen** (CSE 2024-25):\n• Gele Hesjes (Gilets jaunes 2018-).\n• Pensioenhervorming + protesten 2023.\n• Klimaatbeleid + Europese Green Deal.\n• Russisch-Oekraïense oorlog + EU-respons.\n• Energiecrisis + kernenergie-keuze (FR is grote kernenergie-producent).\n• Immigratie + integratie-debat.\n• Banlieues-spanningen (voorsteden Parijs).\n• Vaccinatie-debat post-COVID.\n• AI-regulering (EU AI Act 2024).\n• Olympische Spelen Paris 2024.\n\n**Frankrijk-specifieke begrippen**:\n• **Laïcité** = staats-secularisme (sinds wet 1905). Belangrijk: openbare ruimte religieus-neutraal. Geen hoofddoek in openbare scholen, geen kruisen in stadhuizen.\n• **Banlieue** = voorstad. Vaak negatieve connotatie (sociaal kwetsbare wijken rond Parijs).\n• **Brevet** = einde-onderbouw-examen (~3e klas).\n• **Baccalauréat** = einddiploma middelbare school.\n• **Grandes écoles** = elite-hogescholen (Polytechnique, ENA-opvolger, HEC).\n• **Sécurité sociale (sécu)** = sociaal zekerheidssysteem.\n• **SMIC** = minimumloon.\n• **TGV** = hoge-snelheidstrein.\n• **TVA** = BTW.\n• **EHPAD** = verpleeghuis ouderen.\n• **HLM** = sociale-woningbouw (vergelijkbaar met NL-corporatie).\n\n**Franse cultuur-iconen**:\n• Schrijvers: Victor Hugo, Albert Camus, Marcel Proust, Simone de Beauvoir, Annie Ernaux (Nobelprijs 2022).\n• Filosofen: Sartre, Foucault, Beauvoir, Camus.\n• Kunstenaars: Monet, Cézanne, Picasso (geboren in Spanje, woonde FR).\n• Muziek: Edith Piaf, Charles Aznavour, Daft Punk, Stromae (Belg), Aya Nakamura.\n• Film: Truffaut, Godard, Audiard, recente: Houda Benyamina, Céline Sciamma.\n• Sport: Zinedine Zidane, Kylian Mbappé, Antoine Griezmann.\n\n**Franse + Europese cijfers** (vaak in CSE):\n• EU-leden: 27 sinds Brexit (2020).\n• EU-bevolking: ~448 mln.\n• Euro-zone: 21 landen (Bulgarije erbij sinds 2026).\n• Klimaat: EU-doel 55% CO₂-reductie 2030 vs 1990.\n• Frankrijk kernenergie: ~70% elektriciteit.\n\n**Tips voor algemeen actualiteits-bewustzijn**:\n• Lees soms NL-krant over Frans/EU-nieuws.\n• Volg podcast 'Inside Europe' of YouTube-kanaal France 24.\n• Bekijk recente examens (examenblad.nl) — terugkerende thema's herkennen.\n\n**Toets-patroon**: vragen over **achtergrond of cultureel begrip** zonder dat het in tekst zelf staat. Iemand die Macron niet kent of Olympische Spelen Paris niet, mist context-clue.",
     checks: [
       {
         q: "Wat is **laïcité**?",
@@ -227,7 +227,7 @@ const steps = [
         q: "**Le Monde** is welke krant?",
         options: ["Kwaliteits-krant, links-liberaal","Rechts-extreem","Sport-krant","Tabloid"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — algemeen nieuws.", "Niet — kwaliteits-krant."],
+        wrongHints: [null, "Niet relevant.", "Niet — algemeen nieuws.", "Niet — Le Monde is geen sensatiekrant."],
         uitlegPad: {
           stappen: [{ titel: "Krant van referentie", tekst: "**Le Monde** = belangrijkste kwaliteits-krant Frankrijk. Centrum-links, oprichting 1944. Internationale invloed. CSE-bron-favoriet. Tegenstellingen: Le Figaro (rechts), Libération (links)." }],
           niveaus: { basis: "Kwaliteits-krant.", simpeler: "Le Monde = kwaliteitskrant", nogSimpeler: "A." },
@@ -259,7 +259,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — weinig olie-stroom.", "Niet — uitgefaseerd.", "Wel groeiend maar niet 70%."],
         uitlegPad: {
-          stappen: [{ titel: "Kern = Franse keuze", tekst: "**Frankrijk: ~70% elektriciteit uit kernenergie** (56 reactoren). Sinds jaren '70 strategische keuze. Pro: lage CO₂, energie-onafhankelijk. Con: afval, ontmanteling-kosten, Fukushima-zorgen. Macron heeft pro-kern-koers; nieuwe EPR-reactoren in aanbouw." }],
+          stappen: [{ titel: "Kern = Franse keuze", tekst: "**Frankrijk: ~70% elektriciteit uit kernenergie** (57 reactoren, incl. Flamanville 3 sinds 2024). Sinds jaren '70 strategische keuze. Pro: lage CO₂, energie-onafhankelijk. Con: afval, ontmanteling-kosten, Fukushima-zorgen. Macron heeft pro-kern-koers; nieuwe EPR-reactoren in aanbouw." }],
           theorie: "Toets-actueel: klimaat-debat + energie-onafhankelijkheid sinds Oekraïne-oorlog → Europa heroverweegt kern.",
           niveaus: { basis: "Kernenergie.", simpeler: "FR 70% = kern", nogSimpeler: "Kern" },
         },
@@ -297,7 +297,7 @@ const steps = [
         q: "**Annie Ernaux** is:",
         options: ["Frans schrijfster, Nobelprijs 2022","Politica","Zangeres","Sportster"],
         answer: 0,
-        wrongHints: [null, "Ernaux werd wereldberoemd met werk dat je leest, niet met een zetel in het parlement — welk vak hoort daarbij?", "Ze staat bekend om wat ze op papier zette, niet om liedjes — past 'zangeres' daarbij?", "Haar bekendste prijs gaat over taal en teksten, niet over een sportprestatie — welk beroep past dan?"],
+        wrongHints: [null, "Niet — ze zat nooit in de politiek.", "Niet — ze is niet bekend van muziek.", "Niet — ze is niet bekend van sport."],
         uitlegPad: {
           stappen: [{ titel: "Recent Nobel", tekst: "**Annie Ernaux** (geb. 1940) won **Nobelprijs Literatuur 2022**. Autobiografische romans over werkende klasse, vrouwelijke ervaring. Bekendste werken: *La Place*, *Les Années*, *L'Événement*. Vaak in CSE-teksten over hedendaagse Franse literatuur." }],
           niveaus: { basis: "Schrijfster Nobel.", simpeler: "Ernaux = schrijver-Nobel", nogSimpeler: "A." },
@@ -305,19 +305,19 @@ const steps = [
       },
       {
         q: "Tijdens **CSE** mag je:",
-        options: ["Beide woordenboeken gebruiken (geen eigen aantekeningen)","Telefoon","Vertaal-app","Internet"],
+        options: ["Een tweetalig woordenboek gebruiken (geen eigen aantekeningen)","Telefoon","Vertaal-app","Internet"],
         answer: 0,
         wrongHints: [null, "Een telefoon kan online en foto's opslaan — zou dat eerlijk zijn bij een examen dat jóuw kennis toetst?", "Een vertaal-app doet het denkwerk voor je — mag zoiets dan bij een táálexamen?", "Met internet kun je alles opzoeken — blijft een examen dan nog een eerlijke test?"],
         uitlegPad: {
-          stappen: [{ titel: "Alleen woordenboeken", tekst: "**Toegestaan**: papieren woordenboeken (eentalig + tweetalig). **Verboden**: telefoon, smartwatch, tablet, internet, vertaal-app, eigen aantekeningen, andere boeken. Bij overtreding: examen ongeldig." }],
-          niveaus: { basis: "Beide woordenboeken.", simpeler: "Alleen woordenboeken", nogSimpeler: "A." },
+          stappen: [{ titel: "Alleen woordenboeken", tekst: "**Toegestaan**: een papieren tweetalig woordenboek (Frans-Nederlands / Nederlands-Frans). **Verboden**: telefoon, smartwatch, tablet, internet, vertaal-app, eigen aantekeningen, andere boeken. Bij overtreding: examen ongeldig." }],
+          niveaus: { basis: "Tweetalig woordenboek.", simpeler: "Alleen een woordenboek", nogSimpeler: "A." },
         },
       },
       {
         q: "Bij **lange tekst** verdeel je tijd voor:",
-        options: ["Globaal lezen + vragen + check","Alleen vragen lezen","Alleen tekst lezen","Verkoper toespreken"],
+        options: ["Globaal lezen + vragen + check","Alleen vragen lezen","Alleen tekst lezen","Woorden tellen"],
         answer: 0,
-        wrongHints: [null, "Onvoldoende.", "Onvoldoende.", "Niet — eenzaam examen."],
+        wrongHints: [null, "Onvoldoende.", "Onvoldoende.", "Niet — dat helpt je niet de tekst te begrijpen."],
         uitlegPad: {
           stappen: [{ titel: "Drie-fasen-strategie", tekst: "**Strategie**: (1) 5 min globaal lezen voor structuur. (2) 8 min vragen + scanning. (3) 2 min antwoorden checken. Bij lange teksten ietsje meer voor stap 1. Bij twijfel-vraag: ga door, kom terug." }],
           niveaus: { basis: "3 fasen.", simpeler: "Lezen+vragen+check", nogSimpeler: "3" },
@@ -342,7 +342,7 @@ const fransCseHavoVwo = {
     { id: "werkwoordsvervoeging-frans", title: "Werkwoordsvervoeging Frans", niveau: "klas2-3" },
   ],
   intro:
-    "Frans HAVO/VWO CSE leesvaardigheid-strategie. Examen-format (2,5/3u, ~10 teksten, B1/B2), vraagsoorten + scanning + faux amis (librairie/sans doute/actuellement) + ne...que-val, lange teksten + register (formeel/informeel/argot/verlan) + tijden, Franse cultuur + actualiteit (laïcité/banlieue/Macron/Le Monde). ~15-20 min.",
+    "Frans HAVO/VWO CSE leesvaardigheid-strategie. Examen-format (2,5 uur, ~10 teksten, B1/B2), vraagsoorten + scanning + faux amis (librairie/sans doute/actuellement) + ne...que-val, lange teksten + register (formeel/informeel/argot/verlan) + tijden, Franse cultuur + actualiteit (laïcité/banlieue/Macron/Le Monde). ~15-20 min.",
   triggerKeywords: [
     "Frans CSE", "centraal examen Frans",
     "leesvaardigheid Frans",
