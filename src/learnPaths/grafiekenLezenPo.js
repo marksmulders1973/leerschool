@@ -222,7 +222,7 @@ const steps = [
           theorie: "Toets-grafiek-keuze:\n• Tijd-verloop → LIJN\n• Vergelijken groepen → STAAF\n• Deel van geheel → CIRKEL\n• Exacte getallen → TABEL\nKern: bij vragen over 'percentage' of 'deel-van' → altijd cirkel.",
           voorbeelden: [
             { type: "stap", tekst: "Sport-keuze in klas (voetbal 50%, hockey 25%, zwemmen 25%) = cirkel." },
-            { type: "stap", tekst: "Verkiezingsuitslag per partij (PVV 24%, GroenLinks-PvdA 16%, etc.) = cirkel." },
+            { type: "stap", tekst: "Verkiezingsuitslag per partij (partij A 24%, partij B 16%, enzovoort) = cirkel." },
             { type: "stap", tekst: "Budget gezin (eten 30%, wonen 40%, vrije tijd 10%, sparen 20%) = cirkel." },
           ],
           basiskennis: [{ onderwerp: "Truc", uitleg: "Vraag 'welk deel?' of 'welk percentage?' → cirkeldiagram is altijd de beste keuze." }],
@@ -285,7 +285,7 @@ const steps = [
         q: "Klas: ma 22, di 18, wo 26, do 30, vr 24 kinderen. **Hoeveel kinderen meer** op **donderdag** dan op **dinsdag**?",
         options: ["12 kinderen", "6 kinderen", "8 kinderen", "48 kinderen"],
         answer: 0,
-        wrongHints: [null, "Te weinig — dat is do − vr. Pak do − di.", "Te weinig — dat is do − ma. Pak do − di.", "Te veel — heb je opgeteld? De vraag is 'hoeveel meer' = aftrekken."],
+        wrongHints: [null, "Te weinig — dat is donderdag min vrijdag. Welke twee dagen noemt de vraag?", "Te weinig — dat is donderdag min maandag. Welke twee dagen noemt de vraag?", "Te veel — heb je opgeteld? De vraag is 'hoeveel meer' = aftrekken."],
         uitlegPad: {
           stappen: [
             { titel: "Verschil = aftrekken", tekst: "Donderdag 30 kinderen − dinsdag 18 kinderen = 12 kinderen meer." },
@@ -408,7 +408,7 @@ const steps = [
         q: "Zelfde grafiek. Hoeveel **graden warmer** om 14u dan om 8u?",
         options: ["10 °C", "12 °C", "22 °C", "8 °C"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is alleen 8u. Pak 22 − 12.", "Te veel — dat is alleen 14u. Pak verschil.", "Te weinig — controleer 22 − 12."],
+        wrongHints: [null, "Dat is de temperatuur om 8u zelf. Je zoekt het verschil.", "Dat is de temperatuur om 14u zelf. Je zoekt het verschil.", "Te weinig — lees beide temperaturen nog eens goed af."],
         uitlegPad: {
           stappen: [
             { titel: "Verschil = aftrekken", tekst: "14u = 22 °C. 8u = 12 °C. Verschil = 22 − 12 = 10 °C." },
@@ -489,7 +489,7 @@ const steps = [
   {
     title: "Cirkeldiagram (taartdiagram) lezen",
     explanation:
-      "Een **cirkeldiagram** is een **taart**. De hele taart = **100%** = alles. Elk stuk is een groep en heeft een **percentage**.\n\n**Voorbeeld**: een klas van 20 leerlingen — hun favoriete sport.\n• Voetbal: 50% van de leerlingen = 10 leerlingen.\n• Hockey: 25% = 5 leerlingen.\n• Zwemmen: 15% = 3 leerlingen.\n• Anders: 10% = 2 leerlingen.\n\n**Toets-stappenplan**:\n1. Zoek het stuk dat de vraag bedoelt *(via kleur of label)*.\n2. Lees het **percentage** af *(of meet hoe groot het stuk is)*.\n3. **Reken om naar aantal** als nodig: percentage × totaal ÷ 100.\n\n**Slimme percentage-trucs voor 8-jarigen**:\n• 50% = de helft (÷ 2).\n• 25% = een kwart (÷ 4).\n• 10% = een tiende (÷ 10).\n• 75% = drie kwart.\n\n**Voorbeeld omrekenen**:\n*'Van 40 leerlingen kiest 25% voor zwemmen. Hoeveel zwemmers?'*\n• 25% = ¼.\n• ¼ van 40 = 40 ÷ 4 = **10 zwemmers**.\n\n**Check**: alle stukken van de taart **samen = 100%** altijd! Als de getallen niet kloppen, heb je iets gemist.",
+      "Een **cirkeldiagram** is een **taart**. De hele taart = **100%** = alles. Elk stuk is een groep en heeft een **percentage**.\n\n**Voorbeeld**: een klas van 20 leerlingen — hun favoriete sport.\n• Voetbal: 50% van de leerlingen = 10 leerlingen.\n• Hockey: 25% = 5 leerlingen.\n• Zwemmen: 15% = 3 leerlingen.\n• Anders: 10% = 2 leerlingen.\n\n**Toets-stappenplan**:\n1. Zoek het stuk dat de vraag bedoelt *(via kleur of label)*.\n2. Lees het **percentage** af *(of meet hoe groot het stuk is)*.\n3. **Reken om naar aantal** als nodig: percentage × totaal ÷ 100.\n\n**Slimme percentage-trucs**:\n• 50% = de helft (÷ 2).\n• 25% = een kwart (÷ 4).\n• 10% = een tiende (÷ 10).\n• 75% = drie kwart.\n\n**Voorbeeld omrekenen**:\n*'Van 40 leerlingen kiest 25% voor zwemmen. Hoeveel zwemmers?'*\n• 25% = ¼.\n• ¼ van 40 = 40 ÷ 4 = **10 zwemmers**.\n\n**Check**: alle stukken van de taart **samen = 100%** altijd! Als de getallen niet kloppen, heb je iets gemist.",
     svg: cirkelSvg(
       [
         { l: "Voetbal 50%", v: 50, c: "#69f0ae" },
@@ -703,7 +703,7 @@ const steps = [
         q: "Staafdiagram regen-mm: jan 60, feb 80, mrt 40, apr 50. **Totaal regen-mm** in deze 4 maanden?",
         options: ["230 mm", "180 mm", "210 mm", "190 mm"],
         answer: 0,
-        wrongHints: [null, "Te weinig — controleer 60+80+40+50.", "Te weinig — kom je 20 tekort?", "Te weinig — controleer optelling."],
+        wrongHints: [null, "Te weinig — controleer 60+80+40+50.", "Te weinig — heb je elke maand meegeteld?", "Te weinig — controleer optelling."],
         uitlegPad: {
           stappen: [
             { titel: "'Totaal' = alle balken bij elkaar optellen", tekst: "Het woord **'totaal'** is een **signaalwoord voor +** (optellen). Bij staafdiagram: **alle balken bij elkaar** = totaal." },
@@ -732,7 +732,7 @@ const steps = [
         q: "Lijngrafiek baby-gewicht: bij geboorte 3 kg, na 3 maanden 6 kg. **Hoeveel kg aangekomen**?",
         options: ["3 kg", "6 kg", "9 kg", "2 kg"],
         answer: 0,
-        wrongHints: [null, "Te veel — dat is alleen het eind-gewicht.", "Te veel — dat is opgeteld.", "Te weinig — controleer 6 − 3."],
+        wrongHints: [null, "Te veel — dat is alleen het eind-gewicht.", "Te veel — dat is opgeteld.", "Te weinig — lees het begin- en eindgewicht nog eens af."],
         uitlegPad: {
           stappen: [
             { titel: "'Aangekomen' = verschil = aftrekken", tekst: "Het woord **'aangekomen'** betekent: hoeveel ERBIJ gekomen sinds het begin. Dat is een **verschil-vraag** → aftrekken." },
@@ -867,7 +867,7 @@ const steps = [
       { q: "Een taartdiagram laat zien: 50% rood, 25% blauw, 25% geel. Welke kleur heeft de grootste taartpunt?", options: ["Rood","Blauw","Geel","Allemaal even groot"], answer: 0, wrongHints: [null, "Dat is maar een kwart.", "Dat is ook maar een kwart.", "25% en 50% zijn verschillend."] },
       { q: "Een **staafdiagram** is best voor?", options: ["Vergelijken van categorieën","Verloop in tijd","Verdeling van een geheel","Patroon"], answer: 0, wrongHints: [null, "Dat is lijngrafiek.", "Dat is taart.", "Dat is grafiek-trend."] },
       { q: "Een **lijngrafiek** is best voor?", options: ["Verloop in tijd","Categorieën","Verdeling","Aantal per type"], answer: 0, wrongHints: [null, "Dat is staaf.", "Dat is taart.", "Dat is staaf."] },
-      { q: "Een **taartdiagram** is best voor?", options: ["Verdeling van een geheel (%)","Verloop in tijd","Categorieën los","Patroon"], answer: 0, wrongHints: [null, "Dat is lijn.", "Dat is staaf.", "Niet."] },
+      { q: "Een **taartdiagram** is best voor?", options: ["Verdeling van een geheel","Verloop in tijd","Categorieën los","Patroon"], answer: 0, wrongHints: [null, "Dat is lijn.", "Dat is staaf.", "Niet."] },
       { q: "Op de **x-as** staan meestal?", options: ["Tijd of categorie","Aantal","Frequentie","Totaal"], answer: 0, wrongHints: [null, "Dat is y-as.", "Y-as.", "Y-as."] },
       { q: "Op de **y-as** staat meestal?", options: ["Aantal / hoeveelheid","Tijd","Categorie","Titel"], answer: 0, wrongHints: [null, "Op x-as.", "Op x-as.", "Niet."] },
       { q: "Een **legenda** in grafiek toont?", options: ["Wat de kleuren/lijnen betekenen","De titel","Totaal","Schaal"], answer: 0, wrongHints: [null, "Niet legenda.", "Niet.", "Niet."] },
@@ -878,7 +878,7 @@ const steps = [
       { q: "In een **tabel** met cijferresultaten: hoeveel cellen heeft 'naam + 3 vakken' voor 1 leerling?", options: ["4","3","1","2"], answer: 0, wrongHints: [null, "Vergeet naam.", "Te weinig.", "Te weinig."] },
       { q: "Een **x-as-titel** beschrijft wat?", options: ["Welke variabele op x-as","Het totaal","De legenda","De schaal"], answer: 0, wrongHints: [null, "Niet titel.", "Niet.", "Niet."] },
       { q: "Bij **schaal-aanpassing** kun je een grafiek?", options: ["Misleiden door verandering schaal","Onmogelijk maken","Mooier maken alleen","Niet veranderen"], answer: 0, wrongHints: [null, "Niet — wel mogelijk.", "Niet alleen mooi.", "Niet — wel verandering."] },
-      { q: "**Trend** in lijngrafiek = ?", options: ["Algemene richting (omhoog/omlaag)","1 punt","Titel","Schaal"], answer: 0, wrongHints: [null, "Niet de richting.", "Niet inhoud.", "Niet richting."] },
+      { q: "**Trend** in lijngrafiek = ?", options: ["Algemene richting","1 punt","Titel","Schaal"], answer: 0, wrongHints: [null, "Niet de richting.", "Niet inhoud.", "Niet richting."] },
       { q: "Welk grafiek-type voor **'sterren-positie'** verspreid op vlak?", options: ["Verspreidingsdiagram","Lijn","Taart","Tabel"], answer: 0, wrongHints: [null, "Niet — geen lijn.", "Niet.", "Geen grafiek."] },
     ],
   },

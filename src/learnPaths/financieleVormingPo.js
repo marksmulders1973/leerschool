@@ -72,7 +72,7 @@ const steps = [
             { woord: "rekeneenheid", uitleg: "Om prijzen te vergelijken." },
             { woord: "spaarmiddel", uitleg: "Om waarde te bewaren." },
           ],
-          theorie: "Toets-tip: onthoud de 3 R's: Ruilen, Rekenen, (op)spaRen (sparen). Drie functies, drie woorden die met R beginnen.",
+          theorie: "Toets-tip: onthoud de drie werkwoorden: ruilen, rekenen, sparen. Drie functies, drie woorden.",
           voorbeelden: [
             { type: "stap", tekst: "Je koopt een boek met €10 = ruilen. Je vergelijkt prijs van 2 boeken = rekenen. Je legt €10 opzij = sparen." },
           ],
@@ -131,13 +131,13 @@ const steps = [
   {
     title: "Zakgeld + zelf verdienen",
     explanation:
-      "**Zakgeld** is geld dat je ouders je geven om zelf te beheren.\n\n**Wat is gewoon in NL?**\n• **Groep 5** *(8-9 jr)*: ~€2,50-5 per week.\n• **Groep 6**: ~€3-5 per week.\n• **Groep 7**: ~€4-7 per week.\n• **Groep 8**: ~€5-10 per week.\n• Per familie verschillend — niet stressen of vergelijken!\n\n**Waarom zakgeld?**\n• Leren **kiezen** *(wel/niet kopen)*.\n• Leren **wachten** *(sparen voor groter)*.\n• Leren **prioriteit** *(wat is echt belangrijk?)*.\n• Verantwoordelijkheid.\n\n**Soms gekoppeld aan klusjes**:\n• Stofzuigen.\n• Vaatwasser uit.\n• Hond uitlaten.\n• Tafel dekken.\n\n**Pas op — niet té veel klusjes verplicht**:\nSommige ouders willen dat zakgeld 'altijd verdiend' wordt. Voordeel: leert werken. Nadeel: alledaagse hulp lijkt op betaald werk.\n\n**Zelf verdienen op latere leeftijd**:\n\n**Wat mag in NL (qua leeftijd)?**\n• **13-14 jaar**: licht werk voor familie/buren *(oppassen, hondje uitlaten)*. Geen 'echte baan'.\n• **15 jaar**: **vakantiewerk** *(max 7 uur per dag, geen avond)*.\n• **16-17 jaar**: weekend + avondwerk *(max 9 uur/dag, geen werk na 23.00 uur)*.\n• **18+**: alle banen, volwassen werknemer.\n\n**Klusjes voor extra zakgeld**:\n• **Oppassen op buurkinderen**: ~€5-8 per uur.\n• **Hond uitlaten**: ~€3-5 per keer.\n• **Krant bezorgen** *(13+ in NL)*: ~€30-50 per week.\n• **Folders/reclames bezorgen**: ~€20-30 per zaterdag.\n• **Auto wassen** voor opa/oma: ~€5-10.\n• **Gras maaien** voor buren: ~€10-15.\n\n**Statiegeld** 🍾\n• Lege flessen + blikjes inleveren = geld terug.\n• Statiegeld plastic fles 0,5L = €0,15.\n• Statiegeld grote plastic fles (1L of meer) = €0,25.\n• Statiegeld glazen bierflesje = €0,10.\n• Statiegeld blikje = €0,15.\n• Bij Albert Heijn + Jumbo via automaat.\n\n**Tip — geld leren beheren**:\n• Houd een **boekje** bij: wat krijg je + waar geef je het uit?\n• **Doelen** stellen: 'Ik spaar voor een speelconsole van €300'.\n• **Niet impulsief** kopen: wacht 1 dag, wil je het dan nog?\n\n**Toets-feitje**:\nVolgens NIBUD *(Nationaal Instituut voor Budgetvoorlichting)* sparen kinderen die zakgeld krijgen vaker dan kinderen die alles vragen.\n\n**toetsvragen**:\n*'Vanaf welke leeftijd vakantiewerk?'* → 15 jaar.\n*'Wat is statiegeld?'* → geld dat je terugkrijgt bij inleveren flessen/blikjes.\n*'Hoe leer je geld beheren?'* → boekje bijhouden, doelen stellen, niet impulsief.",
+      "**Zakgeld** is geld dat je ouders je geven om zelf te beheren.\n\n**Wat is gewoon in NL?**\n• **Groep 5** *(8-9 jr)*: ~€2,50-5 per week.\n• **Groep 6**: ~€3-5 per week.\n• **Groep 7**: ~€4-7 per week.\n• **Groep 8**: ~€5-10 per week.\n• Per familie verschillend — niet stressen of vergelijken!\n\n**Waarom zakgeld?**\n• Leren **kiezen** *(wel/niet kopen)*.\n• Leren **wachten** *(sparen voor groter)*.\n• Leren **prioriteit** *(wat is echt belangrijk?)*.\n• Verantwoordelijkheid.\n\n**Soms gekoppeld aan klusjes**:\n• Stofzuigen.\n• Vaatwasser uit.\n• Hond uitlaten.\n• Tafel dekken.\n\n**Pas op — niet té veel klusjes verplicht**:\nSommige ouders willen dat zakgeld 'altijd verdiend' wordt. Voordeel: leert werken. Nadeel: alledaagse hulp lijkt op betaald werk.\n\n**Zelf verdienen op latere leeftijd**:\n\n**Wat mag in NL (qua leeftijd)?**\n• **13-14 jaar**: **licht werk** *(krant bezorgen, oppassen, hondje uitlaten)*. In de vakantie max 7 uur per dag.\n• **15 jaar**: meer soorten werk; in de vakantie max 8 uur per dag, geen avondwerk.\n• **16-17 jaar**: weekend + avondwerk *(max 9 uur/dag, geen werk na 23.00 uur)*.\n• **18+**: alle banen, volwassen werknemer.\n\n**Klusjes voor extra zakgeld**:\n• **Oppassen op buurkinderen**: ~€5-8 per uur.\n• **Hond uitlaten**: ~€3-5 per keer.\n• **Krant bezorgen** *(13+ in NL)*: ~€30-50 per week.\n• **Folders/reclames bezorgen**: ~€20-30 per zaterdag.\n• **Auto wassen** voor opa/oma: ~€5-10.\n• **Gras maaien** voor buren: ~€10-15.\n\n**Statiegeld** 🍾\n• Lege flessen + blikjes inleveren = geld terug.\n• Statiegeld plastic fles 0,5L = €0,15.\n• Statiegeld grote plastic fles (meer dan 1 liter) = €0,25.\n• Statiegeld glazen bierflesje = €0,10.\n• Statiegeld blikje = €0,15.\n• Bij Albert Heijn + Jumbo via automaat.\n\n**Tip — geld leren beheren**:\n• Houd een **boekje** bij: wat krijg je + waar geef je het uit?\n• **Doelen** stellen: 'Ik spaar voor een speelconsole van €300'.\n• **Niet impulsief** kopen: wacht 1 dag, wil je het dan nog?\n\n**Toets-feitje**:\nVolgens NIBUD *(Nationaal Instituut voor Budgetvoorlichting)* sparen kinderen die zakgeld krijgen vaker dan kinderen die alles vragen.\n\n**toetsvragen**:\n*'Vanaf welke leeftijd licht vakantiewerk?'* → 13 jaar.\n*'Wat is statiegeld?'* → geld dat je terugkrijgt bij inleveren flessen/blikjes.\n*'Hoe leer je geld beheren?'* → boekje bijhouden, doelen stellen, niet impulsief.",
     checks: [
       {
-        q: "Vanaf welke leeftijd **vakantiewerk** in NL?",
-        options: ["15 jaar", "12 jaar", "18 jaar", "16 jaar"],
+        q: "Vanaf welke leeftijd mag je in NL in de vakantie **licht werk** doen?",
+        options: ["13 jaar", "12 jaar", "18 jaar", "16 jaar"],
         answer: 0,
-        wrongHints: [null, "Te jong.", "Te oud.", "Iets later."],
+        wrongHints: [null, "Te jong.", "Te oud.", "Dat mag al eerder."],
       },
       {
         q: "Wat is **statiegeld**?",
@@ -148,7 +148,7 @@ const steps = [
           stappen: [
             { titel: "Wat is statiegeld?", tekst: "Statiegeld is een **extra bedrag** dat je betaalt bij aankoop van een fles of blikje. Je krijgt dit geld TERUG als je de lege verpakking inlevert." },
             { titel: "Waarom?", tekst: "Statiegeld stimuleert mensen om flessen + blikjes IN TE LEVEREN (niet weg te gooien). Zo recycle je beter en minder zwerfafval." },
-            { titel: "Hoeveel?", tekst: "Plastic fles 0,5L = €0,15. Plastic fles 1L+ = €0,25. Glazen bierflesje = €0,10. Blikje (sinds 2023) = €0,15." },
+            { titel: "Hoeveel?", tekst: "Plastic fles tot en met 1L = €0,15. Plastic fles groter dan 1L = €0,25. Glazen bierflesje = €0,10. Blikje (sinds 2023) = €0,15." },
           ],
           woorden: [
             { woord: "statiegeld", uitleg: "Bedrag op fles/blikje dat je terug krijgt." },
@@ -169,7 +169,7 @@ const steps = [
       },
       {
         q: "**€0,25** statiegeld is voor:",
-        options: ["Grote plastic fles (1 liter of meer)", "Kleine plastic fles", "Blikje", "Niets"],
+        options: ["Grote plastic fles (meer dan 1 liter)", "Kleine plastic fles", "Blikje", "Niets"],
         answer: 0,
         wrongHints: [null, "0,15 voor plastic 0,5L.", "0,15 voor blikje.", "Wel iets."],
       },
@@ -248,9 +248,9 @@ const steps = [
       },
       {
         q: "Wat is **samengestelde rente**?",
-        options: ["Rente over rente (sneeuwbal-effect)", "Eenmalige bonus", "Belasting", "Korting"],
+        options: ["Rente over rente", "Eenmalige bonus", "Belasting", "Korting"],
         answer: 0,
-        wrongHints: [null, "Wel jaarlijks meer.", "Niet belasting.", "Niet korting."],
+        wrongHints: [null, "Komt het maar één keer, of groeit het elk jaar door?", "Niet belasting.", "Niet korting."],
       },
       {
         q: "Beste moment om **te sparen**?",
@@ -293,9 +293,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **50/30/20-regel**?",
-        options: ["50% nodig, 30% leuk, 20% sparen", "50% sparen, 30% leuk, 20% nodig", "Geen regel", "Iets anders"],
+        options: ["50% nodig, 30% leuk, 20% sparen", "50% sparen, 30% leuk, 20% nodig", "Geen regel", "50% leuk, 30% sparen, 20% nodig"],
         answer: 0,
-        wrongHints: [null, "Andersom.", "Wel echte regel.", "Wel dit."],
+        wrongHints: [null, "Andersom.", "Wel echte regel.", "Welk deel moet het grootst zijn: wat je écht nodig hebt of wat leuk is?"],
       },
       {
         q: "Bij **€100 zakgeld** met 50/30/20 — hoeveel sparen?",
@@ -322,13 +322,13 @@ const steps = [
   {
     title: "Lenen + reclame-trucs",
     explanation:
-      "**Lenen** = geld krijgen dat je later moet **terugbetalen**.\n\n**Waarom lenen?**\n• Voor **groot iets** dat je nu niet kunt betalen *(auto, huis)*.\n• Maar: lenen **kost geld** *(rente)*.\n• Daarom: **alleen lenen voor lange-termijn nodige dingen**.\n\n**Soorten lenen** *(voor volwassenen — kinderen lenen meestal niet)*:\n\n**1. Persoonlijke lening** 💵\n• Vast bedrag *(bv. €5.000)*.\n• Vaste rente.\n• Vaste looptijd *(2-5 jaar)*.\n• Voor: auto, verbouwing.\n\n**2. Hypotheek** 🏠\n• Lening voor **huis**.\n• Looptijd 20-30 jaar.\n• Huis = **onderpand** *(kun je niet betalen → bank pakt huis)*.\n\n**3. Krediet / rood staan** 💳\n• Op de bank **negatief**.\n• Heel duur — 10-15% rente.\n• **Vermijden**.\n\n**4. Studielening (DUO)** 📚\n• Voor universiteit / hbo.\n• Lage rente.\n• Terugbetalen na afstuderen.\n\n**Pas op — verleidingen**:\n\n**A. 'Koop nu, betaal later' (BNPL)**:\n• Klarna, Afterpay, Riverty, Tinka.\n• 14-30 dagen om te betalen — lijkt fijn.\n• Maar: te laat = boete + rente.\n• Veel jongeren komen in schulden door BNPL.\n• Eigenlijk **gewoon lenen**, vermomd als 'gratis'.\n\n**B. Reclame voor 'kleine leningen'**:\n• 'Snel €500 op je rekening!'\n• Hoge rente *(soms 15-20% per jaar)*.\n• Voor noodgevallen → wegblijven.\n\n**C. Credit cards**:\n• In NL minder gebruikt dan VS.\n• Als je niet maandelijks betaalt → hoge rente.\n\n**Reclame-trucs herkennen** *(voor kinderen + volwassenen)*:\n\n**1. 'Vandaag korting!'**\n• Vaak nep-druk — geen echte korting.\n• Vergelijk prijs met andere winkels.\n\n**2. 'Iedereen heeft 't'**\n• Druk om bij groep te horen.\n• Niet altijd waar.\n\n**3. 'Speciaal voor jou!'**\n• Niet echt voor jou — iedereen krijgt dezelfde 'persoonlijke' mail.\n\n**4. Influencers + sociale media**\n• Krijgen geld om iets aan te prijzen.\n• Niet hun echte mening.\n\n**5. Gratis = niet altijd gratis**\n• Gratis app vraagt later om premium.\n• Gratis proefles = abonnement opzeggen lastig.\n\n**6. Verlies-aversie**\n• 'Mis dit aanbod niet!'\n• Mensen kopen om verlies te voorkomen, niet omdat ze willen.\n\n**Schulden vermijden**:\n• **Niet lenen** voor 'leuke dingen' *(reis, nieuwe telefoon)*.\n• **Eerst sparen**, dan kopen.\n• **Bij twijfel**: vraag ouders / volwassene om advies.\n• Bij echte problemen: **schuldhulpverlening** *(Hulplijn van NIBUD, sociale dienst)*.\n\n**Tip — vragen om geld bij ouders**:\n• Eerlijk uitleggen waarvoor je het wilt.\n• Tonen dat je al iets gespaard hebt.\n• Voorstellen om iets terug te doen *(klusjes, deel zelf)*.\n\n**Toets-feitje**:\nVolgens NIBUD heeft **1 op 5 jongeren tussen 18-25** schulden, vaak door BNPL of slimme reclame. Daarom is **financiële educatie** belangrijk.\n\n**toetsvragen**:\n*'Wat is BNPL?'* → buy now pay later — uitgesteld betalen.\n*'Hoe schulden vermijden?'* → niet lenen voor 'leuke dingen', eerst sparen.\n*'Welke reclame-truc?'* → 'iedereen heeft 't' / 'mis dit niet!' / influencer-pushen.",
+      "**Lenen** = geld krijgen dat je later moet **terugbetalen**.\n\n**Waarom lenen?**\n• Voor **groot iets** dat je nu niet kunt betalen *(auto, huis)*.\n• Maar: lenen **kost geld** *(rente)*.\n• Daarom: **alleen lenen voor lange-termijn nodige dingen**.\n\n**Soorten lenen** *(voor volwassenen — kinderen lenen meestal niet)*:\n\n**1. Persoonlijke lening** 💵\n• Vast bedrag *(bv. €5.000)*.\n• Vaste rente.\n• Vaste looptijd *(2-5 jaar)*.\n• Voor: auto, verbouwing.\n\n**2. Hypotheek** 🏠\n• Lening voor **huis**.\n• Looptijd 20-30 jaar.\n• Huis = **onderpand** *(kun je niet betalen → bank pakt huis)*.\n\n**3. Krediet / rood staan** 💳\n• Op de bank **negatief**.\n• Heel duur — 10-15% rente.\n• **Vermijden**.\n\n**4. Studielening (DUO)** 📚\n• Voor universiteit / hbo.\n• Lage rente.\n• Terugbetalen na afstuderen.\n\n**Pas op — verleidingen**:\n\n**A. 'Koop nu, betaal later' (BNPL)**:\n• Klarna, Afterpay, Riverty, Tinka.\n• 14-30 dagen om te betalen — lijkt fijn.\n• Maar: te laat = boete + rente.\n• Veel jongeren komen in schulden door BNPL.\n• Eigenlijk **gewoon lenen**, vermomd als 'gratis'.\n\n**B. Reclame voor 'kleine leningen'**:\n• 'Snel €500 op je rekening!'\n• Hoge rente *(soms 15-20% per jaar)*.\n• Voor noodgevallen → wegblijven.\n\n**C. Credit cards**:\n• In NL minder gebruikt dan VS.\n• Als je niet maandelijks betaalt → hoge rente.\n\n**Reclame-trucs herkennen** *(voor kinderen + volwassenen)*:\n\n**1. 'Vandaag korting!'**\n• Vaak nep-druk — geen echte korting.\n• Vergelijk prijs met andere winkels.\n\n**2. 'Iedereen heeft 't'**\n• Druk om bij groep te horen.\n• Niet altijd waar.\n\n**3. 'Speciaal voor jou!'**\n• Niet echt voor jou — iedereen krijgt dezelfde 'persoonlijke' mail.\n\n**4. Influencers + sociale media**\n• Krijgen geld om iets aan te prijzen.\n• Niet hun echte mening.\n\n**5. Gratis = niet altijd gratis**\n• Gratis app vraagt later om premium.\n• Gratis proefles = abonnement opzeggen lastig.\n\n**6. Verlies-aversie**\n• 'Mis dit aanbod niet!'\n• Mensen kopen om verlies te voorkomen, niet omdat ze willen.\n\n**Schulden vermijden**:\n• **Niet lenen** voor 'leuke dingen' *(reis, nieuwe telefoon)*.\n• **Eerst sparen**, dan kopen.\n• **Bij twijfel**: vraag ouders / volwassene om advies.\n• Bij echte problemen: **schuldhulpverlening** *(via je gemeente)*.\n\n**Tip — vragen om geld bij ouders**:\n• Eerlijk uitleggen waarvoor je het wilt.\n• Tonen dat je al iets gespaard hebt.\n• Voorstellen om iets terug te doen *(klusjes, deel zelf)*.\n\n**Toets-feitje**:\nVolgens NIBUD heeft **1 op 5 jongeren tussen 18-25** schulden, vaak door BNPL of slimme reclame. Daarom is **financiële educatie** belangrijk.\n\n**toetsvragen**:\n*'Wat is BNPL?'* → buy now pay later — uitgesteld betalen.\n*'Hoe schulden vermijden?'* → niet lenen voor 'leuke dingen', eerst sparen.\n*'Welke reclame-truc?'* → 'iedereen heeft 't' / 'mis dit niet!' / influencer-pushen.",
     checks: [
       {
         q: "Wat is **BNPL**?",
-        options: ["Buy Now Pay Later — uitgesteld betalen", "Bank Naast Park Lijn", "Belasting", "Spaarproduct"],
+        options: ["Buy Now Pay Later — uitgesteld betalen", "Korting bij online winkels", "Belasting", "Spaarproduct"],
         answer: 0,
-        wrongHints: [null, "Bestaat niet.", "Geen belasting.", "Tegenovergesteld."],
+        wrongHints: [null, "Krijg je korting, of betaal je pas later?", "Geen belasting.", "Tegenovergesteld."],
       },
       {
         q: "Hoe **schulden vermijden**?",
@@ -344,7 +344,7 @@ const steps = [
       },
       {
         q: "Wat is een **hypotheek**?",
-        options: ["Lening voor huis (20-30 jr)", "Spaarrekening", "Belasting", "Lening voor auto"],
+        options: ["Lening voor een huis", "Spaarrekening", "Belasting", "Lening voor auto"],
         answer: 0,
         wrongHints: [null, "Niet lenen.", "Niet hypotheek.", "Persoonlijke lening."],
       },
@@ -371,13 +371,13 @@ const steps = [
       },
       {
         q: "Wat is **rente**?",
-        options: ["Beloning voor sparen (%)", "Belasting", "Korting", "Boete"],
+        options: ["Beloning voor sparen", "Belasting", "Korting", "Boete"],
         answer: 0,
         wrongHints: [null, "Niet hetzelfde.", "Niet hetzelfde.", "Niet rente."],
       },
       {
         q: "**50/30/20** — wat is **30%** voor?",
-        options: ["Leuk (uitgaan, snoep)", "Nodig", "Sparen", "Belasting"],
+        options: ["Leuk", "Nodig", "Sparen", "Belasting"],
         answer: 0,
         wrongHints: [null, "Dat is 50%.", "Dat is 20%.", "Niet in regel."],
       },
@@ -393,11 +393,11 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Reclame-truc.", "Schulden.", "Niet primair."],
       },
-      { q: "**50/30/20** — wat is **50%** voor?", options: ["Nodig (huur, eten)","Leuk","Sparen","Belasting"], answer: 0, wrongHints: [null, "Dat is 30%.", "Dat is 20%.", "Niet in regel."] },
+      { q: "**50/30/20** — wat is **50%** voor?", options: ["Nodig","Leuk","Sparen","Belasting"], answer: 0, wrongHints: [null, "Dat is 30%.", "Dat is 20%.", "Niet in regel."] },
       { q: "**50/30/20** — wat is **20%** voor?", options: ["Sparen","Leuk","Nodig","Belasting"], answer: 0, wrongHints: [null, "Dat is 30%.", "Dat is 50%.", "Niet in regel."] },
       { q: "€10 zakgeld × 4 weken = totaal in 1 maand?", options: ["€40","€14","€10","€100"], answer: 0, wrongHints: [null, "Som.", "Per week.", "Te veel."] },
       { q: "Spaar €5/week. Hoeveel na 10 weken?", options: ["€50","€5","€15","€100"], answer: 0, wrongHints: [null, "Per week.", "Niet.", "Te veel."] },
-      { q: "**Reclame** wil je vooral?", options: ["Iets kopen","Niets","Spelen","Spreken"], answer: 0, wrongHints: [null, "Wel — doel.", "Soms ook, niet hoofd.", "Niet primair."] },
+      { q: "Wat wil **reclame** vooral dat je doet?", options: ["Iets kopen","Niets","Spelen","Spreken"], answer: 0, wrongHints: [null, "Wel — doel.", "Soms ook, niet hoofd.", "Niet primair."] },
       { q: "Wat doe je als je iets duurs wilt kopen?", options: ["Sparen tot je het zelf kan betalen","Direct lenen","Vrienden vragen","Vergeten"], answer: 0, wrongHints: [null, "Riskant.", "Niet primair.", "Niet relevant."] },
       { q: "**BNPL** (Buy Now Pay Later) is?", options: ["Vorm van lenen","Spaarrekening","Reclame-truc","Statiegeld"], answer: 0, wrongHints: [null, "Niet sparen.", "Reclame hoort erbij, maar wat gebeurt er met je geld als je pas later betaalt?", "Niet."] },
       { q: "Welke 3 **functies** heeft geld?", options: ["Ruil + reken + spaar","Ruil + reken","Ruil + reclame","Spaar + lenen + reclame"], answer: 0, wrongHints: [null, "Mist sparen.", "Niet — reclame is geen functie.", "Niet 3 functies."] },

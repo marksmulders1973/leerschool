@@ -117,7 +117,7 @@ const steps = [
         },
       },
       {
-        q: "Een **kamer 5 × 4 m** wordt geverfd. Hoeveel **m² vloer**?",
+        q: "Een **kamer 5 × 4 m** krijgt een nieuwe vloer. Hoeveel **m² vloer**?",
         options: ["20 m²","18 m","9 m","20 m"],
         answer: 0,
         wrongHints: [null,"Dat is omtrek, niet oppervlakte.","Klopt niet — onjuiste eenheid en getal.","Klopt qua getal maar oppervlakte = m²."],
@@ -268,7 +268,7 @@ const steps = [
         q: "Rechthoek **20 × 5 m** — omtrek?",
         options: ["50 m","100 m","25 m","40 m"],
         answer: 0,
-        wrongHints: [null,"Dat is oppervlakte (20×5).","Te weinig — heb je niet ALLE zijden geteld?","Te weinig — heb je 1 zijde overgeslagen?"],
+        wrongHints: [null,"Dat is oppervlakte (20×5).","Te weinig — heb je niet ALLE zijden geteld?","Te weinig — tel je de korte zijden ook mee?"],
         uitlegPad: {
           stappen: [{ titel: "2(L+B)", tekst: "2 × (20+5) = 2 × 25 = 50 m omtrek." }],
           woorden: [{ woord: "rechthoek-omtrek", uitleg: "2 × (lengte + breedte)." }],
@@ -372,7 +372,7 @@ const steps = [
         q: "Hoeveel **vierkante tegels van 30 cm** passen op een vloer van **3 m × 2,4 m**?",
         options: ["80","24","800","72"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je niet 1 rij × 1 rij gerekend?", "Veel te veel — je rekent oppervlakte in cm² niet in tegels.", "Niet — controleer 10 × 8."],
+        wrongHints: [null, "Te weinig — reken beide maten eerst om naar centimeters.", "Veel te veel — je rekent oppervlakte in cm² niet in tegels.", "Niet — reken per richting uit hoeveel tegels er passen."],
         uitlegPad: {
           stappen: [
             { titel: "Aantal tegels per richting", tekst: "Tegel = 30 cm. Vloer 3 m = 300 cm → 300 ÷ 30 = **10 tegels lang**. Vloer 2,4 m = 240 cm → 240 ÷ 30 = **8 tegels breed**." },
@@ -403,8 +403,8 @@ const steps = [
       { q: "Hoeveel **gelijke zijden** heeft een vierkant?", options: ["4","2","3","1"], answer: 0, wrongHints: [null, "Tel álle zijden van een vierkant — het zijn er meer dan 2.", "3 gelijke zijden hoort bij een driehoek.", "Een vierkant heeft meerdere even lange zijden — tel ze."] },
       { q: "Omtrek van driehoek met zijden 3, 4, 5?", options: ["12","60","11","9"], answer: 0, wrongHints: [null, "Niet — som, geen ×.", "Niet.", "Niet."] },
       { q: "Oppervlakte vierkant 5 m bij 5 m?", options: ["25 m²","20 m²","10 m²","100 m²"], answer: 0, wrongHints: [null, "Omtrek.", "Niet.", "Niet."] },
-      { q: "Tegel 50 cm × 50 cm. Oppervlakte?", options: ["2500 cm² (= 0,25 m²)","100 cm²","250 cm²","1 m²"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
-      { q: "Een **cirkel** heeft hoeveel zijden?", options: ["0 (één gebogen lijn)","1","2","4"], answer: 0, wrongHints: [null, "Bijna — de lijn is 1 rondgaand.", "Niet.", "Niet."] },
+      { q: "Tegel 50 cm × 50 cm. Oppervlakte?", options: ["2.500 cm²","100 cm²","250 cm²","1 m²"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Te veel."] },
+      { q: "Een **cirkel** heeft hoeveel **hoeken**?", options: ["0","1","2","4"], answer: 0, wrongHints: [null, "Een cirkel is één rondlopende gebogen lijn — zit daar ergens een punt in?", "Niet.", "Niet."] },
       { q: "Een **gelijkzijdige** driehoek heeft hoeveel gelijke zijden?", options: ["3","2","1","0"], answer: 0, wrongHints: [null, "Dat is gelijkbenig.", "Niet.", "Niet."] },
       { q: "Een **rechte hoek** = hoeveel graden?", options: ["90°","45°","180°","360°"], answer: 0, wrongHints: [null, "Halve rechte.", "Gestrekt.", "Volle cirkel."] },
       { q: "Som van 3 hoeken in een driehoek?", options: ["180°","90°","360°","270°"], answer: 0, wrongHints: [null, "Eén hoek.", "Cirkel.", "Niet."] },
