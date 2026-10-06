@@ -45,7 +45,7 @@ const steps = [
         q: "Wat regelde het **Kinderwetje van Van Houten** in 1874?",
         options: ["Kinderen onder 12 mogen niet in fabrieken","Recht op schoolonderwijs","Kinderbijslag","Gratis ziekenhuis"],
         answer: 0,
-        wrongHints: [null, "Leerplicht kwam pas 1900.", "Veel later (na WO2).", "Niet — geen gezondheidszorg in 1874."],
+        wrongHints: [null, "Leerplicht kwam pas 1900.", "Veel later (pas in de 20e eeuw).", "Niet — gratis zorg regelde de staat in 1874 niet."],
         uitlegPad: {
           stappen: [{ titel: "1874 = einde kinderarbeid (deels)", tekst: "**Kinderwetje** (officiële naam: 'Wet houdende maatregelen tot het tegengaan van overmatigen arbeid en verwaarloozing van kinderen') van **Samuel van Houten** (liberaal). Verbood loonarbeid voor kinderen onder 12, maar landwerk + huishouden bleven toegestaan. Handhaving was zwak — dwong wel het debat." }],
           woorden: [{ woord: "kinderarbeid", uitleg: "Werken in loondienst onder een bepaalde leeftijd (vroeger soms vanaf 6)." }],
@@ -70,7 +70,7 @@ const steps = [
         q: "Vóór 1945 was hulp bij armoede vooral een zaak van:",
         options: ["Familie + kerk + liefdadigheid","De overheid","Werkgevers","Niemand"],
         answer: 0,
-        wrongHints: [null, "Niet — overheid bemoeide zich nauwelijks.", "Soms wel, maar geen verplichting.", "Wel hulp, maar via familie/kerk."],
+        wrongHints: [null, "Niet — overheid bemoeide zich nauwelijks.", "Soms wel, maar geen verplichting.", "Wel — er waren wel mensen en groepen die hielpen. Welke?"],
         uitlegPad: {
           stappen: [{ titel: "Particuliere zorg = traditie", tekst: "Vóór WO2 sterk **verzuild**: katholieken hielpen katholieken (parochiale armenzorg), protestanten via **diaconie**, joden via joodse gemeente. Plus rijke filantropen + werkhuizen. Overheid bemoeide zich amper — armoede zag men als 'individueel falen'." }],
           woorden: [{ woord: "verzuiling", uitleg: "NL-systeem waarbij katholieken/protestanten/socialisten/liberalen in aparte 'zuilen' leefden — eigen scholen/kranten/sportclubs/ziekenhuizen." }],
@@ -194,7 +194,7 @@ const steps = [
         q: "Wat is **Slochteren** (1959)?",
         options: ["Aardgasveld in Groningen","Stad in Limburg","Politieke partij","Sociale wet"],
         answer: 0,
-        wrongHints: [null, "Niet — Slochteren ligt in Groningen.", "Niet — geen partij.", "Niet — geen wet."],
+        wrongHints: [null, "Niet — Slochteren ligt niet in Limburg.", "Niet — geen partij.", "Niet — geen wet."],
         uitlegPad: {
           stappen: [{ titel: "Slochteren = aardgas-bonanza", tekst: "**1959**: NAM ontdekt **grootste aardgasveld van Europa** bij Slochteren (Groningen). Leverde NL honderden miljarden euro's op. Maar: ook aardbevingen sinds '80 → gaswinning gestopt (2023-2024). Schadefonds voor Groningers blijft heet politiek thema." }],
           woorden: [{ woord: "Slochteren", uitleg: "Dorp in Groningen, naamgever van het grote aardgasveld." }],
@@ -206,7 +206,7 @@ const steps = [
         q: "Wat is het **poldermodel**?",
         options: ["Compromis tussen werkgevers + werknemers + regering","Type irrigatiesysteem","Politiek systeem zonder oppositie","Belastingsysteem"],
         answer: 0,
-        wrongHints: [null, "De naam komt van de polder, maar het woord staat voor overleg-cultuur.", "Niet — NL heeft wel oppositie.", "Niet relevant."],
+        wrongHints: [null, "De naam komt van de polder, maar het gaat hier niet om water.", "Niet — NL heeft wel oppositie.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Polderen = overleggen tot consensus", tekst: "**Poldermodel** = NL-overleg-cultuur waarbij werkgevers (VNO-NCW), vakbonden (FNV/CNV) en regering samen polderen voor compromis. Belangrijke instelling: **SER (Sociaal-Economische Raad)** sinds 1950. Toonbeeld: **Akkoord van Wassenaar 1982** = loonmatiging + werktijdverkorting." }],
           woorden: [{ woord: "poldermodel", uitleg: "NL-overleg- en compromis-cultuur in sociaal-economisch beleid." }, { woord: "SER", uitleg: "Sociaal-Economische Raad, adviesorgaan regering." }],
@@ -333,9 +333,9 @@ const steps = [
       },
       {
         q: "Vergrijzing betekent:",
-        options: ["Meer ouderen, minder jongeren in bevolking","Meer mensen worden grijs","Klimaatverandering","Inflatie"],
+        options: ["Meer ouderen, minder jongeren in bevolking","Meer jongeren, minder ouderen in bevolking","Klimaatverandering","Inflatie"],
         answer: 0,
-        wrongHints: [null, "Letterlijk wel, maar in context van bevolking belangrijker.", "Niet relevant — andere term.", "Niet relevant."],
+        wrongHints: [null, "Andersom — kijk naar wat er met de leeftijd van de bevolking gebeurt.", "Niet relevant — andere term.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Demografische vergrijzing", tekst: "Vergrijzing = **demografie**: aandeel 65+ groeit, aandeel jongeren krimpt. NL: 1900 ~5% boven 65, 2025 ~20%, 2050 verwacht ~25%. Gevolgen: meer AOW + zorg, minder werkenden per gepensioneerde." }],
           niveaus: { basis: "Meer ouderen — A.", simpeler: "Vergrijzing = meer 65+", nogSimpeler: "Meer ouderen" },
@@ -345,7 +345,7 @@ const steps = [
         q: "Wanneer trad **kabinet Rutte III** af door de **Toeslagenaffaire**?",
         options: ["15 januari 2021","2 juli 2024","17 augustus 2010","11 september 2001"],
         answer: 0,
-        wrongHints: [null, "Niet — toen trad Rutte IV af.", "Niet — toen vorming Rutte I.", "Niet — VS-aanslagen, geen NL-kabinet."],
+        wrongHints: [null, "Niet — toen nam kabinet-Schoof het over.", "Niet — toen vorming Rutte I.", "Niet — VS-aanslagen, geen NL-kabinet."],
         uitlegPad: {
           stappen: [{ titel: "Rutte III viel jan 2021", tekst: "Na rapport parlementaire onderzoekscommissie Toeslagenaffaire ('Ongekend onrecht') in december 2020 trad **kabinet Rutte III** af op **15 januari 2021** (daarna demissionair). Rutte zelf bleef premier in IV." }],
           theorie: "Toets-actueel: na demissionair kabinet kwamen verkiezingen maart 2021. Rutte IV gevormd januari 2022.",
