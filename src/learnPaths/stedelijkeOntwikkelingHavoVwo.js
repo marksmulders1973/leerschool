@@ -179,10 +179,10 @@ const steps = [
           "Grootste krottenwijk Azië (~1 mln inwoners)",
           "Luxe wijk",
           "Toeristische plek alleen",
-          "Industriële zone"
+          "Bedrijventerrein zonder bewoners"
         ],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Te beperkt.", "Wel deels."],
+        wrongHints: [null, "Tegenovergesteld.", "Te beperkt.", "Er wordt veel gewerkt, maar er wonen ook heel veel mensen — wat voor wijk is het dan?"],
         uitlegPad: {
           stappen: [
             { titel: "Slum-economie", tekst: "1-2 mln mensen op 2 km². Verbazend economisch actief: ~$1 mld jaaromzet uit pottenbakkerijen, recycling, kledingindustrie. Geen formele woningen, slecht sanitair. Bekend uit film 'Slumdog Millionaire'. Indiase overheid plant herontwikkeling." },
