@@ -176,7 +176,7 @@ const steps = [
         "natuurlijke en passieve immunisatie",
       ],
       answer: 3,
-      wrongHints: ["Kunstmatig = via prik/medicijn. Moedermelk is NIET kunstmatig.", "Kunstmatig = injectie/serum. Moedermelk is natuurlijk.", "Actief = lichaam MAAKT zelf antistoffen. Hier worden ze GEKREGEN via melk = passief.", null],
+      wrongHints: ["Kunstmatig = via prik/medicijn. Moedermelk is NIET kunstmatig.", "Kunstmatig = injectie/serum. Moedermelk is natuurlijk.", "Actief = lichaam MAAKT zelf antistoffen. Maakt de baby de antistoffen uit de moedermelk zelf?", null],
       explanation: "**4 typen immunisatie** (2×2-tabel): NATUURLIJK-ACTIEF (zelf ziek geweest), NATUURLIJK-PASSIEF (antistoffen van moeder via placenta/melk), KUNSTMATIG-ACTIEF (vaccinatie — lichaam maakt zelf), KUNSTMATIG-PASSIEF (serum-injectie met kant-en-klare antistoffen). Moedermelk = natuurlijk + passief (krijgt het, maakt niet zelf).",
       examenBron: BRON_LABEL(42),
       bronLink: BRON_LINK,

@@ -106,7 +106,7 @@ const steps = [
             { titel: "Mannetje = XY", tekst: "Een mannelijke fruitvlieg (en mens) heeft een X- én een Y-chromosoom. Vrouwtje heeft XX." },
             { titel: "Wat zit op X en Y?", tekst: "Oogkleur-gen zit op X. Y heeft GEEN oogkleur-gen. Dat is een belangrijk feit voor deze vraag." },
             { titel: "Meiose splitst XY in spermacellen", tekst: "Bij vorming van spermacellen worden chromosomen verdeeld. De helft krijgt X (mét oogkleur-gen), de helft krijgt Y (zonder oogkleur-gen). Dus 50/50." },
-            { titel: "Conclusie", tekst: "Alleen de X-spermacellen dragen het rode-ogen-DNA. Dat is 50% van zijn spermacellen → antwoord B." },
+            { titel: "Conclusie", tekst: "Alleen de X-spermacellen dragen het rode-ogen-DNA. Dat is 50% van zijn spermacellen." },
           ],
           woorden: [
             { woord: "X-chromosoom", uitleg: "Een van de geslachtschromosomen — draagt veel genen. Vrouwen hebben er 2, mannen 1." },
@@ -123,7 +123,7 @@ const steps = [
             { onderwerp: "Onthouden", uitleg: "Y heeft geen oogkleur-gen → Y-spermacellen NOOIT met rode ogen-DNA. X-spermacellen WEL. Dus 50%." },
           ],
           niveaus: {
-            basis: "X-sperma heeft rode-ogen-DNA, Y-sperma niet. 50/50 → antwoord B.",
+            basis: "X-sperma heeft rode-ogen-DNA, Y-sperma niet. 50/50 → in 50% van de spermacellen.",
             simpeler: "Stel je voor 100 spermacellen van dit mannetje. 50 zijn X (met oogkleur-gen), 50 zijn Y (zonder). Dus in 50% zit het stukje DNA voor rode ogen.",
             nogSimpeler: "50% (alleen de X-helft)",
           },
@@ -301,7 +301,7 @@ const steps = [
           ],
           niveaus: {
             basis: "Ureum ontstaat in de lever (bij eiwit-afbraak).",
-            simpeler: "Eiwitten worden afgebroken tot aminozuren. De lever verwerkt aminozuren en maakt daarbij ureum (een afvalstof). De nieren halen het ureum daarna uit het bloed. Antwoord B: lever.",
+            simpeler: "Eiwitten worden afgebroken tot aminozuren. De lever verwerkt aminozuren en maakt daarbij ureum (een afvalstof). De nieren halen het ureum daarna uit het bloed. Antwoord: lever.",
             nogSimpeler: "Lever maakt ureum",
           },
         },
@@ -446,7 +446,7 @@ const steps = [
           "Finn heeft het mis — het hart pompt BLOED, niet lymfe. Lymfe stroomt door spier-bewegingen + kleppen.",
           "Finn heeft het mis — de pomp-werking van het hart gaat door BLOEDvaten, niet door lymfevaten.",
         ],
-        explanation: "Het hart pompt BLOED door de slag- en aderen. De lymfevaten hebben geen aansluiting op de hart-pomp. Lymfe stroomt door (1) druk uit weefsels + (2) spier-bewegingen (skeletspieren knijpen lymfe vooruit) en wordt door (3) KLEPPEN in de juiste richting gehouden. Alleen Julia heeft dus gelijk: B.",
+        explanation: "Het hart pompt BLOED door de slag- en aderen. De lymfevaten hebben geen aansluiting op de hart-pomp. Lymfe stroomt door (1) druk uit weefsels + (2) spier-bewegingen (skeletspieren knijpen lymfe vooruit) en wordt door (3) KLEPPEN in de juiste richting gehouden. Alleen Julia heeft dus gelijk.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 33",
         bronLink: "https://www.examenblad.nl/system/files/exam-document/2024-07/gt-0191-a-24-1-o-spr.pdf",
         leerpadLink: { id: "mens-biologie-vmbo", title: "Mens-biologie (VMBO)" },
@@ -500,7 +500,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Rode bloedcellen zijn te groot voor lymfevaten en blijven in de bloedbaan.",
+          "Rode bloedcellen kunnen niet door de haarvatwand en blijven in de bloedbaan.",
           "Bloedplaatjes (voor stolling) zitten ook alleen in bloed — niet in lymfe.",
         ],
         explanation: "Alleen WITTE BLOEDCELLEN kunnen door de wanden van haarvaten heen (ze persen zich er doorheen — diapedese). Zo komen ze in weefselvocht en daarmee in lymfe terecht. Rode bloedcellen en bloedplaatjes blijven in de bloedbaan.",
@@ -572,7 +572,7 @@ const steps = [
           stappen: [
             { titel: "Waar wordt wat verteerd?", tekst: "**Mond** (speeksel): koolhydraten beginnen.\n**Maag** (maagsap = zoutzuur + pepsine): eiwitten.\n**Dunne darm** (galsap + alvleeskliersap): alle 3 (koolhydraten, eiwitten, vetten) volledig afgebroken.\n**Dikke darm**: water-opname + vezels gefermenteerd door bacteriën." },
             { titel: "Maagsap = pepsine + HCl", tekst: "Maagsap bestaat uit:\n• Zoutzuur (HCl) — doodt bacteriën + activeert pepsine\n• **Pepsine** — eiwit-afbrekend enzym\n\nGeen koolhydraat- of vet-enzymen. Daarom alleen eiwit-vertering." },
-            { titel: "Antwoord", tekst: "Maagsap verteert eiwitten → antwoord A." },
+            { titel: "Antwoord", tekst: "Maagsap verteert eiwitten." },
           ],
           woorden: [
             { woord: "maagsap", uitleg: "Vloeistof gemaakt door maagwand: zoutzuur + pepsine." },

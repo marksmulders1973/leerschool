@@ -80,12 +80,12 @@ function tijdSvg() {
 const steps = [
   {
     title: "Wat is de Doorstroomtoets?",
-    explanation: "Aan het einde van groep 8 maak je de **Doorstroomtoets** (vroeger heette dit de 'Eindtoets'). Sinds 2024 zijn er meerdere aanbieders: **Cito** (meest gebruikt), IEP, ROUTE 8, AMN. Je school kiest welke toets jullie maken.\n\nDeze toets:\n\n• **Test wat je in 8 jaar basisschool hebt geleerd** — rekenen, taal, soms ook wereldoriëntatie.\n• **Geeft een toetsadvies** voor je vervolg-niveau (vmbo / havo / vwo).\n• Wordt op **alle reguliere basisscholen** afgenomen.\n• Duurt **meerdere dagdelen**, in februari (hoeveel precies verschilt per toets).\n\n**Belangrijk — regels sinds 2024**:\n\nJouw schooladvies wordt eerst gegeven (uiterlijk **eind januari**). Daarna maak je de Doorstroomtoets in de **eerste of tweede week van februari**. Vervolgens geldt:\n\n• Toetsadvies **hoger** dan schooladvies → school **moet** het schooladvies heroverwegen (niet 'kan'). Vaak gaat advies dan omhoog.\n• Toetsadvies **lager** dan schooladvies → schooladvies blijft staan.\n\nDus: **toets kan alleen helpen, niet schaden**. Geen reden om bang te zijn dat je 'omlaag valt'.\n\n**Wat je niet hoeft te kunnen**:\n• Geen rekenmachine — alles uit het hoofd of op papier.\n• Kladpapier mag meestal wel — gebruik het!\n• Geen heel diepgaande wereldkennis — wel **basis**.\n\n**Wat je WEL moet kunnen**:\n• **Tekst lezen + samenvatten** in eigen woorden.\n• **Rekenen** met breuken, procenten, oppervlakte, volume, schaal, snelheid.\n• **Spellen + grammatica** — werkwoordsvormen, leestekens, hoofdletters.\n• **Studievaardigheden** — kaart aflezen, grafiek interpreteren, woordenboek-zoeken.\n\n**Stress over de toets?**\nVeel kinderen vinden het spannend. Tip: zie 't als een kans om te laten zien wat je kunt — niet als een examen waarvoor je kunt slagen of zakken. **Iedereen 'haalt' de toets** — er is geen zakken.\n\n**Goed nieuws**: je hoeft niet alles goed te hebben. Iedereen maakt fouten — dat is normaal.",
+    explanation: "Aan het einde van groep 8 maak je de **Doorstroomtoets** (vroeger heette dit de 'Eindtoets'). Sinds 2024 zijn er meerdere aanbieders: **Cito** (meest gebruikt), IEP, ROUTE 8, AMN. Je school kiest welke toets jullie maken.\n\nDeze toets:\n\n• **Test wat je in 8 jaar basisschool hebt geleerd** — rekenen, taal, soms ook wereldoriëntatie.\n• **Geeft een toetsadvies** voor je vervolg-niveau (vmbo / havo / vwo).\n• Wordt op **alle reguliere basisscholen** afgenomen.\n• Duurt **meerdere dagdelen**, in februari (hoeveel precies verschilt per toets).\n\n**Belangrijk — regels sinds 2024**:\n\nJouw schooladvies wordt eerst gegeven (uiterlijk **eind januari**). Daarna maak je de Doorstroomtoets in de **eerste of tweede week van februari**. Vervolgens geldt:\n\n• Toetsadvies **hoger** dan schooladvies → school **moet** het schooladvies heroverwegen (niet 'kan'). Vaak gaat advies dan omhoog.\n• Toetsadvies **lager** dan schooladvies → schooladvies blijft staan.\n\nDus: **toets kan alleen helpen, niet schaden**. Geen reden om bang te zijn dat je 'omlaag valt'.\n\n**Wat je niet hoeft te kunnen**:\n• Geen rekenmachine — alles uit het hoofd of op papier.\n• Kladpapier mag meestal wel — gebruik het!\n• Geen heel diepgaande wereldkennis — wel **basis**.\n\n**Wat je WEL moet kunnen**:\n• **Tekst lezen + samenvatten** in eigen woorden.\n• **Rekenen** met breuken, procenten, oppervlakte, volume, schaal, snelheid.\n• **Spellen + grammatica** — werkwoordsvormen, leestekens, hoofdletters.\n• **Informatie opzoeken** — tabellen, grafieken en kaarten lezen; dat komt terug in lees- en rekenvragen.\n\n**Stress over de toets?**\nVeel kinderen vinden het spannend. Tip: zie 't als een kans om te laten zien wat je kunt — niet als een examen waarvoor je kunt slagen of zakken. **Iedereen 'haalt' de toets** — er is geen zakken.\n\n**Goed nieuws**: je hoeft niet alles goed te hebben. Iedereen maakt fouten — dat is normaal.",
     svg: onderdelenSvg(),
     checks: [
       {
         q: "Wat is de Doorstroomtoets?",
-        options: ["Een toets aan het einde van groep 8 die advies geeft voor de middelbare school","Een toets om groep 8 over te doen","Een wereldwijd examen","Een huiswerktoets"],
+        options: ["Een toets aan het einde van groep 8 die advies geeft voor de middelbare school","Een toets die bepaalt of je groep 8 moet overdoen","Een examen dat in alle landen tegelijk wordt gemaakt","Een toets die je thuis als huiswerk maakt"],
         answer: 0,
         wrongHints: [null,"Wat denk je: zakt iemand voor de Doorstroomtoets, of mag iedereen door?","Wordt deze toets ook in andere landen afgenomen?","Wie maakt deze toets — alleen jij thuis, of iedereen op school?"],
         uitlegPad: {
@@ -139,10 +139,10 @@ const steps = [
     svg: onderdelenSvg(),
     checks: [
       {
-        q: "Hoeveel hoofdonderdelen heeft de Doorstroomtoets meestal?",
-        options: ["3 (lezen, taalverzorging, rekenen)","1 (allemaal samen)","5","2"],
+        q: "Hoeveel verplichte onderdelen heeft de Doorstroomtoets?",
+        options: ["3","1","5","2"],
         answer: 0,
-        wrongHints: [null,"Worden rekenen en taal echt samen op één blaadje gezet, of apart?","Tel eens de hoofdvakken: rekenen, taal, en wat is dat derde ook alweer?","Er is meer dan alleen rekenen + taal — wat hoort daar nog bij?"],
+        wrongHints: [null,"Worden rekenen en taal echt samen in één onderdeel getoetst, of apart?","Dat zijn er te veel — welke onderdelen zijn voor iedereen verplicht?","Taal wordt in twee aparte onderdelen getoetst — tel je die allebei mee?"],
       },
       {
         q: "Wat hoort bij **studievaardigheden**?",
@@ -169,7 +169,7 @@ const steps = [
           ],
           woorden: [{ woord: "skippen", uitleg: "Overslaan om later terug te komen." }],
           theorie: "Toets-tijd is strak. Liever 50 vragen aanraken dan 30 met perfectionisme. Aan einde tijd voor twijfels.",
-          voorbeelden: [{ type: "tijdverdeling", tekst: "75 min, 50 vragen = 1.5 min/vraag. Vastlopen op 1 vraag mag niet meer dan 2 min." }],
+          voorbeelden: [{ type: "tijdverdeling", tekst: "75 min, 50 vragen = 1,5 min/vraag. Vastlopen op 1 vraag mag niet meer dan 2 min." }],
           basiskennis: [{ onderwerp: "Markeer skip", uitleg: "Onderlijn vraagnummer op kladpapier zodat je 'm later terugvindt." }],
           niveaus: {
             basis: "Vastloop = skip + later terug.",
@@ -194,7 +194,7 @@ const steps = [
           basiskennis: [{ onderwerp: "Tijd-bewustzijn", uitleg: "Een klok in zicht = essentieel voor pacing." }],
           niveaus: {
             basis: "~1 min per vraag.",
-            simpeler: "75 min ÷ 50 vragen = 1.5 min per vraag. Reken iets minder voor controle = ~1 min per vraag goed gemiddelde.",
+            simpeler: "75 min ÷ 50 vragen = 1,5 min per vraag. Reken iets minder voor controle = ~1 min per vraag goed gemiddelde.",
             nogSimpeler: "1 min per vraag",
           },
         },
@@ -229,7 +229,7 @@ const steps = [
     checks: [
       {
         q: "Wat doe je VOORDAT je naar de antwoordopties kijkt?",
-        options: ["Bedenk zelf wat je denkt dat het antwoord is","Direct gokken","Vraag overslaan","Leerkracht vragen"],
+        options: ["Bedenk zelf wat je denkt dat het antwoord is","Meteen een antwoord gokken","De vraag direct overslaan","Je leerkracht om het antwoord vragen"],
         answer: 0,
         wrongHints: [null,"Als je gokt zonder eerst te denken: hoe groot is je kans dan?","Wat als je het antwoord eigenlijk al weet — sla je dat dan over?","Mag dat tijdens een toets? Wat kun je wél zelf doen?"],
         uitlegPad: {
@@ -273,7 +273,7 @@ const steps = [
       },
       {
         q: "Welke woorden in een optie maken hem **verdacht fout**?",
-        options: ["'altijd' of 'nooit' (te absoluut)","'meestal'","'vaak'","'soms'"],
+        options: ["'altijd' of 'nooit'","'meestal'","'vaak'","'soms'"],
         answer: 0,
         wrongHints: [null,"Zijn er uitzonderingen op iets dat 'meestal' gebeurt? En klinkt dat dan verdacht?","Geeft 'vaak' ruimte voor uitzonderingen, of sluit het ze uit?","Klinkt 'soms' streng of voorzichtig — en wat is verdachter in een toets?"],
         uitlegPad: {
@@ -304,7 +304,7 @@ const steps = [
     checks: [
       {
         q: "Wat doe je **EERST** bij een begrijpend-lezen-vraag?",
-        options: ["Tekst skimmen + vragen lezen voordat je hele tekst leest","Hele tekst woord-voor-woord lezen","Direct antwoorden gokken","Leerkracht vragen"],
+        options: ["Tekst skimmen + vragen lezen voordat je hele tekst leest","De hele tekst woord voor woord lezen","Meteen een antwoord gokken zonder te lezen","Je leerkracht om uitleg over de tekst vragen"],
         answer: 0,
         wrongHints: [null,"Hoeveel tijd verlies je als je elk woord leest van een lange tekst?","Kun je een goed antwoord geven zónder de tekst te bekijken?","Mag dat tijdens een toets — en wat helpt je het meest?"],
         uitlegPad: {
@@ -325,9 +325,9 @@ const steps = [
       },
       {
         q: "Het antwoord op een begrijpend-lezen-vraag staat altijd...",
-        options: ["In de tekst (niet in je eigen kennis)","In je rugzak","Bij de uitleg achter","Bij de leerkracht"],
+        options: ["In de tekst","In je eigen kennis","In je eigen mening","Achter in het toetsboekje"],
         answer: 0,
-        wrongHints: [null,"Heb je je rugzak nodig om antwoord te vinden, of staat het ergens anders?","Staan de antwoorden in de vraag zelf, of moet je nog ergens kijken?","Mag dat tijdens een toets — en is dat hier de bron?"],
+        wrongHints: [null,"Test begrijpend lezen wat jij al weet, of wat er in de tekst staat?","Telt bij begrijpend lezen wat jij vindt, of wat de schrijver schrijft?","Staan de antwoorden ergens achterin, of moet je ze zelf vinden?"],
         uitlegPad: {
           stappen: [
             { titel: "Antwoord komt uit TEKST", tekst: "Niet uit je eigen kennis, mening, ervaring — alleen uit wat in de tekst staat." },
@@ -346,7 +346,7 @@ const steps = [
       },
       {
         q: "Wat doe je bij een **NIET-vraag** ('Wat staat NIET in de tekst?')",
-        options: ["Markeer 'NIET' om niet te missen","Skip 'm","Vraag toelichting","Gokken"],
+        options: ["Markeer 'NIET' om niet te missen","Sla de vraag altijd over","Vraag de leerkracht om uitleg","Kies zomaar een antwoord"],
         answer: 0,
         wrongHints: [null,"Lever je punten in als je 'm overslaat? Wat kan je doen om de NIET niet te missen?","Mag dat tijdens een toets? Hoe pak je 'm zelf aan?","Werkt gokken op een NIET-vraag goed, of is er een slimmer trucje?"],
         uitlegPad: {
@@ -369,7 +369,7 @@ const steps = [
   },
   {
     title: "Rekenen — slim aanpakken",
-    explanation: "Bij **rekenen-vragen** zit de truc vaak in **lezen wat er gevraagd wordt** + **schatten voordat je rekent**.\n\n**De 4-stappen-aanpak**:\n\n**Stap 1: Lees de vraag 2× rustig**\nWat staat er? Wat wordt gevraagd? Welke getallen zijn relevant?\n\n**Stap 2: Schat een redelijk antwoord**\nVoorbeeld: '12% van 85 = ?' \n• 10% van 85 = 8,5 \n• 12% is iets meer → ~10\n• Dus antwoord is rond 10. Optie '€95,20' (12% er bovenop) komt dichterbij dan '€97,00'.\n\nSchatten helpt **dom-foute antwoorden** uit te sluiten.\n\n**Stap 3: Reken zorgvuldig**\nGebruik kladpapier — niet uit het hoofd voor lastige sommen.\nSchrijf elke stap uit:\n```\n12% × 85\n= 0,12 × 85\n= 0,1 × 85 + 0,02 × 85\n= 8,5 + 1,7\n= 10,2\n85 + 10,2 = €95,20\n```\n\n**Stap 4: Check de eenheid**\n• Cm? Liter? Procent? Euro? Jaren?\n• Soms is het antwoord goed maar de **eenheid fout**.\n\n**Veelvoorkomende valkuilen**:\n\n**1. Verschil tussen 'is' en 'wordt'**\n*\"Een prijs is €100. Hij wordt 20% **goedkoper**.\"* → -20%, nieuwe prijs €80.\n*\"Een prijs is €100. Hij **werd** met 20% verhoogd.\"* → +20%, nieuwe prijs €120.\n\n**2. Eenheden omrekenen**\n• 1 km = 1.000 m\n• 1 m = 100 cm = 1.000 mm\n• 1 m³ = 1.000 liter\n• 1 uur = 60 min = 3.600 sec\n• 1 jaar = 12 maand = 365 dag = ~52 week\n\n**3. Schaalberekening**\nKaart 1:50.000 betekent: 1 cm = 50.000 cm = 500 m = 0,5 km in werkelijkheid.\n• 4 cm op kaart = 4 × 0,5 = 2 km echt.\n• 8 cm = 4 km echt.\n\n**4. Procent uitrekenen**\n• 'X% van Y' = X/100 × Y\n• 10% van iets = deel door 10\n• 25% = deel door 4\n• 50% = de helft\n• 'X is hoeveel procent van Y' = X/Y × 100%\n\n**5. Snelheid (km/u)**\nSnelheid = afstand ÷ tijd\n• 150 km in 1,5 uur = 150 ÷ 1,5 = 100 km/u\n• 60 km in 30 min = 60 ÷ 0,5 = 120 km/u\n\n**Lastig met tijd**: minuten omzetten naar uren!\n• 30 min = 0,5 uur\n• 15 min = 0,25 uur\n• 45 min = 0,75 uur\n• 1 uur 15 min = 1,25 uur",
+    explanation: "Bij **rekenen-vragen** zit de truc vaak in **lezen wat er gevraagd wordt** + **schatten voordat je rekent**.\n\n**De 4-stappen-aanpak**:\n\n**Stap 1: Lees de vraag 2× rustig**\nWat staat er? Wat wordt gevraagd? Welke getallen zijn relevant?\n\n**Stap 2: Schat een redelijk antwoord**\nVoorbeeld: '12% van 85 = ?' \n• 10% van 85 = 8,5 \n• 12% is iets meer → ~10\n• Dus antwoord is rond 10. Vraagt de som de prijs mét 12% erbovenop? Dan ligt het antwoord rond €95.\n\nSchatten helpt **dom-foute antwoorden** uit te sluiten.\n\n**Stap 3: Reken zorgvuldig**\nGebruik kladpapier — niet uit het hoofd voor lastige sommen.\nSchrijf elke stap uit:\n```\n12% × 85\n= 0,12 × 85\n= 0,1 × 85 + 0,02 × 85\n= 8,5 + 1,7\n= 10,2\n85 + 10,2 = €95,20\n```\n\n**Stap 4: Check de eenheid**\n• Cm? Liter? Procent? Euro? Jaren?\n• Soms is het antwoord goed maar de **eenheid fout**.\n\n**Veelvoorkomende valkuilen**:\n\n**1. Verschil tussen 'is' en 'wordt'**\n*\"Een prijs is €100. Hij wordt 20% **goedkoper**.\"* → -20%, nieuwe prijs €80.\n*\"Een prijs is €100. Hij **werd** met 20% verhoogd.\"* → +20%, nieuwe prijs €120.\n\n**2. Eenheden omrekenen**\n• 1 km = 1.000 m\n• 1 m = 100 cm = 1.000 mm\n• 1 m³ = 1.000 liter\n• 1 uur = 60 min = 3.600 sec\n• 1 jaar = 12 maand = 365 dag = ~52 week\n\n**3. Schaalberekening**\nKaart 1:50.000 betekent: 1 cm = 50.000 cm = 500 m = 0,5 km in werkelijkheid.\n• 4 cm op kaart = 4 × 0,5 = 2 km echt.\n• 8 cm = 4 km echt.\n\n**4. Procent uitrekenen**\n• 'X% van Y' = X/100 × Y\n• 10% van iets = deel door 10\n• 25% = deel door 4\n• 50% = de helft\n• 'X is hoeveel procent van Y' = X/Y × 100%\n\n**5. Snelheid (km/u)**\nSnelheid = afstand ÷ tijd\n• 150 km in 1,5 uur = 150 ÷ 1,5 = 100 km/u\n• 60 km in 30 min = 60 ÷ 0,5 = 120 km/u\n\n**Lastig met tijd**: minuten omzetten naar uren!\n• 30 min = 0,5 uur\n• 15 min = 0,25 uur\n• 45 min = 0,75 uur\n• 1 uur 15 min = 1,25 uur",
     svg: tijdSvg(),
     checks: [
       {
@@ -383,7 +383,7 @@ const steps = [
             { titel: "Waarom?", tekst: "Schatting helpt je dom-foute antwoorden uit te sluiten. Als je antwoord ver van schatting ligt = check je rekenfout." },
           ],
           woorden: [{ woord: "schatten", uitleg: "Grof berekenen — niet exact, wel ongeveer." }],
-          theorie: "Schatten via afronding: 12% van 85 → 10% van 85 = 8.5, +20% extra = ~10. Bij optie €1.000 = onmogelijk fout, bij €10 = goed.",
+          theorie: "Schatten via afronding: 12% van 85 → 10% van 85 = 8,5, +20% extra = ~10. Bij optie €1.000 = onmogelijk fout, bij €10 = goed.",
           voorbeelden: [{ type: "schatting", tekst: "Vraag: 19 × 21. Schat: 20 × 20 = 400. Echt antwoord moet rond 400 liggen. Optie 800 = fout, 399 = OK." }],
           basiskennis: [{ onderwerp: "Afronden helpt", uitleg: "Naar tientallen of vijftallen ronden = snel schatten." }],
           niveaus: {
@@ -420,7 +420,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen 'hij is 25% goedkoper' en 'hij werd met 25% verhoogd'?",
-        options: ["Eerste = -25% (omlaag), tweede = +25% (omhoog)","Geen verschil","Beide = -25%","Beide = +25%"],
+        options: ["Eerste = -25% (omlaag), tweede = +25% (omhoog)","Geen verschil: allebei betekenen ze hetzelfde","Allebei = -25%: de prijs gaat omlaag","Allebei = +25%: de prijs gaat omhoog"],
         answer: 0,
         wrongHints: [null,"Lees de twee zinnen nog eens. Betekenen 'goedkoper' en 'verhoogd' echt hetzelfde?","Wat doet de prijs als iets goedkoper wordt — gaat hij omhoog of omlaag?","Wat doet de prijs als hij verhoogd wordt — omhoog of omlaag?"],
         uitlegPad: {
@@ -454,7 +454,7 @@ const steps = [
     checks: [
       {
         q: "Wat is de **veiligste** strategie als je tijd hebt voor maar 1 controle-ronde?",
-        options: ["Markeer twijfels tijdens, controleer aan einde","Direct alle antwoorden checken","Niets controleren","Volledig herlezen vanaf vraag 1"],
+        options: ["Markeer twijfels tijdens, controleer aan einde","Na elke vraag meteen alles checken","Helemaal niets meer controleren","Alles herlezen vanaf vraag 1"],
         answer: 0,
         wrongHints: [null,"Heb je tijd om alles opnieuw na te lopen — ook de makkelijke?","Wat als je dit doet en geen tijd meer hebt voor de twijfels?","Hoef je vragen die je zeker wist nog eens te bekijken?"],
         uitlegPad: {
@@ -496,7 +496,7 @@ const steps = [
       },
       {
         q: "Doorstroomtoets: wat krijg je als resultaat?",
-        options: ["Advies voor vervolg-niveau (vmbo/havo/vwo)","Een eindcijfer als 7,5","Een tijdsregistratie","Niets"],
+        options: ["Een advies voor je niveau op de middelbare school","Een eindcijfer, zoals een 7,5","Een lijst met hoe snel je was","Helemaal geen uitslag"],
         answer: 0,
         wrongHints: [null,"Krijg je bij de Doorstroomtoets hetzelfde soort cijfer als op je rapport?","Telt hoe snel je was, of vooral wat je antwoordde?","Krijg je echt niets terug, of wel een soort uitkomst?"],
         uitlegPad: {
@@ -520,7 +520,7 @@ const steps = [
       },
       {
         q: "Wat is het verschil tussen schooladvies en toetsadvies (sinds 2024)?",
-        options: ["Schooladvies komt eerst; bij hoger toetsadvies moet school heroverwegen","Toetsadvies leidend, schooladvies onbelangrijk","Beide gelijk","Geen verschil"],
+        options: ["Schooladvies komt eerst; bij hoger toetsadvies moet school heroverwegen","Toetsadvies is leidend; het schooladvies telt niet mee","Ze tellen allebei precies even zwaar mee","Geen verschil: het is hetzelfde advies"],
         answer: 0,
         wrongHints: [null,"Wat is jaren leerkracht-observatie waard versus één toetsdag?","Welk advies krijg je het eerst in groep 8?","Wat zou er gebeuren als één toets meer telt dan jouw hele schoolervaring?"],
         uitlegPad: {
@@ -565,32 +565,32 @@ const steps = [
       },
       {
         q: "Wat doe je 's **avonds voor de Doorstroomtoets**?",
-        options: ["Rustige avond, vroeg slapen — geen last-minute studeren","Tot 1 uur 's nachts blokken","Niets — toets is morgen","Veel koffie drinken om wakker te blijven"],
+        options: ["Rustige avond, vroeg slapen — geen last-minute studeren","Tot 1 uur 's nachts blokken","Laat opblijven en gamen tot je moe bent","Veel koffie drinken om wakker te blijven"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — last-minute werkt averechts, brein moet rusten.", "Klopt deels maar 'niets' is te passief — bedoeling is bewust uitrusten.", "Cafeïne stoort slaap = brein werkt slechter."],
+        wrongHints: [null, "Tegenovergesteld — last-minute werkt averechts, brein moet rusten.", "Schermen en laat naar bed — helpt dat je brein om uit te rusten?", "Cafeïne stoort slaap = brein werkt slechter."],
         uitlegPad: {
           stappen: [
             { titel: "Slaap = brein-prestatie", tekst: "Wetenschappers tonen: **goede nachtrust voor toets** = beter resultaat dan extra studeren. Brein verwerkt geleerde stof tijdens slaap. 10-12-jarigen hebben **9-10 uur** slaap nodig." },
             { titel: "Avond-routine voor toets", tekst: "**Wel doen**:\n• Vroeg eten (geen zwaar maal)\n• Spullen klaar leggen (potlood, gum, bril, lunch)\n• Iets ontspannends — boek, tekenen, wandeling\n• In bed uiterlijk 21:00\n• Telefoon NIET in slaapkamer (blauw licht verstoort slaap)\n\n**Niet doen**:\n• Tot middernacht oefenen\n• Stress-gesprekken\n• Cafeïne (cola, ijskoffie)\n• Beeldscherm 1 uur voor slapen" },
-            { titel: "Toets-feit: prestatie + slaap", tekst: "Onderzoek Universiteit Tilburg: kinderen die <8 uur slapen vóór toets scoorden **15% lager** dan goed-uitgeruste klasgenoten. Studeer-uren < slaap-uren in prestatie-impact. Daarom: **voorbereiding gebeurt WEKEN vooraf, niet avond ervoor**." },
+            { titel: "Toets-feit: prestatie + slaap", tekst: "Uitgeruste kinderen kunnen zich beter concentreren en halen geleerde stof makkelijker terug. Een nacht doorleren levert minder op dan goed slapen. Daarom: **voorbereiding gebeurt WEKEN vooraf, niet avond ervoor**." },
           ],
           woorden: [
             { woord: "consolidatie", uitleg: "Brein-proces waarbij dagelijkse kennis wordt vastgezet in lange-termijn-geheugen. Gebeurt vooral in slaap." },
-            { woord: "REM-slaap", uitleg: "Diepe slaap-fase waarin brein leren verwerkt. Cruciaal voor geheugen." },
+            { woord: "REM-slaap", uitleg: "Droomslaap-fase waarin het brein ook leerstof verwerkt. Belangrijk voor geheugen." },
           ],
           theorie: "Doorstroomtoets-week aanpak:\n• **Week ervoor**: rustige routine, voldoende slaap, lichte herhaling\n• **Avond ervoor**: NIET studeren, vroeg slapen, ontspanning\n• **Ochtend zelf**: gezond ontbijt, op tijd zijn, mentaal rustig\n• **Tijdens toets**: ademen, niet panieken, plan tijd\n\nOuder-tip: maak avond ervoor rustig + warm. Geen druk-makende gesprekken.",
           voorbeelden: [
-            { type: "stap", tekst: "Goed scenario: 19:00 eten, 20:00 boek/spel, 20:45 tanden poetsen + slapen-routine, 21:15 in bed. 7:00 wakker = 9u45 slaap." },
+            { type: "stap", tekst: "Goed scenario: 19:00 eten, 20:00 boek/spel, 20:30 tanden poetsen + slapen-routine, 21:00 in bed. 7:00 wakker = 10 uur slaap." },
           ],
-          basiskennis: [{ onderwerp: "Niet stressen", uitleg: "Stress remt brein. Toets is NIET einde van wereld — bij twijfel kunt u (ouder) doorstroomtoets-advies aanvechten." }],
+          basiskennis: [{ onderwerp: "Niet stressen", uitleg: "Stress remt brein. Toets is NIET einde van wereld — het schooladvies blijft leidend en een lager toetsadvies verlaagt het niet." }],
           niveaus: { basis: "Rustig + vroeg slapen.", simpeler: "Avond voor Doorstroomtoets: niet meer studeren, ontspannen, vroeg slapen (9-10 uur). Uitgerust brein scoort beter dan vermoeid brein.", nogSimpeler: "Slapen" },
         },
       },
       {
         q: "Wat doe je bij een **lastige rekenvraag** in de Doorstroomtoets als je echt vast loopt?",
-        options: ["Slimme schatting + markeren (later terug)","Lang doorrekenen — moet kloppen","Volgende vraag overslaan zonder iets","Foutief antwoord opzettelijk"],
+        options: ["Schatten, een antwoord kiezen en de vraag markeren","Blijven doorrekenen tot het precies klopt","Overslaan zonder iets in te vullen of te markeren","Het eerste antwoord nemen zonder te kijken"],
         answer: 0,
-        wrongHints: [null, "Tijdverlies — kost te veel andere vragen.", "Beter: SCHAT + markeer dan helemaal niets.", "Onzin — bewust fout is dom."],
+        wrongHints: [null, "Hoeveel andere vragen kost dat je aan tijd?", "Hoe vind je de vraag later terug — en wat als je tijd dan op is?", "Kun je met een snelle schatting niet een paar opties wegstrepen?"],
         uitlegPad: {
           stappen: [
             { titel: "De 'schat + markeer + door'-truc", tekst: "Bij lastige vraag (>1 min vast):\n1. **Schat** een redelijk antwoord (vergelijk met opties: welke past qua orde van grootte?)\n2. **Markeer** vraag (rondje om vraag-nummer)\n3. **Ga door** naar volgende\n4. **Kom terug** in laatste 5 minuten als er tijd over is\n\nNooit leeg laten — geschat antwoord = 25% kans op punt vs 0% bij leeg." },
@@ -628,7 +628,7 @@ const steps = [
           ],
           theorie: "Wiskundige logica gokken:\n• 25% per vraag bij willekeur\n• 40 vragen × 25% = 10 punten gemiddeld zonder kennis\n• Met half-eliminatie: ~50% × N = veel meer punten\n\nBijdrage aan totaal-score: niet onderschatten.",
           voorbeelden: [
-            { type: "stap", tekst: "Vraag: 'Wat is Doorstroomtoets-datum 2027?' Opties: 1) jan, 2) april, 3) juni, 4) sept. De toets is altijd februari → elimineer 3+4. Gok 1 of 2 = 50% kans." },
+            { type: "stap", tekst: "Vraag: 'Wat is Doorstroomtoets-datum 2027?' Opties: 1) januari, 2) februari, 3) juni, 4) september. Je weet zeker: niet in de zomer of het nieuwe schooljaar → elimineer 3+4. Gok 1 of 2 = 50% kans." },
           ],
           basiskennis: [{ onderwerp: "Nooit blanco bij MC", uitleg: "Bij multiple-choice + geen strafpunten: gokken altijd beter dan blanco. Math achter de logica." }],
           niveaus: { basis: "Gok tussen 2.", simpeler: "Bij MC: weet je 2 opties zeker fout, gok tussen overgebleven 2 = 50% kans op punt. Beter dan leeg (0%).", nogSimpeler: "Gokken" },
@@ -636,13 +636,13 @@ const steps = [
       },
       {
         q: "Stress vlak voor de toets — wat helpt **direct** om rustig te worden?",
-        options: ["Diep ademhalen (4-7-8 techniek)","Veel cafeïne","Klagen tegen klasgenoten","Nog snel studeren"],
+        options: ["Een paar keer rustig en diep ademhalen","Veel cola of koffie drinken","Klagen tegen je klasgenoten","Nog snel alles doorlezen"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld — cafeïne verhoogt hartslag = meer stress-gevoel.", "Niet — stress overdraagbaar op anderen.", "Geen tijd meer — vergroot stress."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is examen-stress?", tekst: "**Examen-stress** is normaal — lichaam maakt **adrenaline + cortisol** klaar voor 'vechten of vluchten'. Helpt wel scherp + alert. Te veel = verlamt + concentreert slecht.\n\nSymptomen:\n• Hart bonst snel\n• Zwetende handen\n• Maag-gevoel ('vlinders')\n• Gedachten malen\n• Vergeten wat je wist" },
-            { titel: "4-7-8 ademhalingstruc", tekst: "**4-7-8 techniek** (1 keer = 30 sec):\n1. Adem **4 sec** rustig in door neus\n2. Houd **7 sec** vast\n3. Adem **8 sec** uit door mond\n4. Herhaal 3-4×\n\nWaarom werkt het: vertraagt hartslag, kalmeert zenuwstelsel, verlaagt cortisol. Brein schakelt van 'paniek' naar 'denken'." },
+            { titel: "4-7-8 ademhalingstruc", tekst: "**4-7-8 techniek** (1 ronde ≈ 20 sec):\n1. Adem **4 sec** rustig in door neus\n2. Houd **7 sec** vast\n3. Adem **8 sec** uit door mond\n4. Herhaal 3-4×\n\nWaarom werkt het: vertraagt hartslag, kalmeert zenuwstelsel, verlaagt cortisol. Brein schakelt van 'paniek' naar 'denken'." },
             { titel: "Andere tips bij examen-stress", tekst: "**Direct vóór toets**:\n• 4-7-8 ademhaling\n• Schouders rondschudden\n• Korte wandeling buiten (frisse lucht)\n• Glas water (niet veel)\n• Positieve zelfspraak ('ik kan dit')\n• Klasgenoten vermijden die piekeren\n\n**Langere termijn**:\n• Voldoende slaap\n• Sport tijdens leerweek\n• Niet alles op laatste moment\n• Praten met ouder/leerkracht over zorgen" },
           ],
           woorden: [
@@ -662,16 +662,16 @@ const steps = [
       { q: "Bij een **meerkeuze-vraag** met 4 opties: hoeveel kans bij gokken zonder eliminatie?", options: ["25%","50%","100%","0%"], answer: 0, wrongHints: [null, "Bij 2 opties.", "Niet — alleen bij weten.", "Wel kans."] },
       { q: "Bij eliminatie van 2 foute opties, hoeveel kans wordt het?", options: ["50%","25%","100%","0%"], answer: 0, wrongHints: [null, "Niet — beter dan dat.", "Niet — geen zekerheid.", "Wel kans."] },
       { q: "Wat **niet** doen tijdens Doorstroomtoets?", options: ["Antwoorden vergelijken met buurman","Diep ademhalen","Skippen van moeilijke vraag","Pacing controleren"], answer: 0, wrongHints: [null, "Tegen stress = juist prima.", "Slimme strategie — eerst makkelijke, terug bij de moeilijke.", "Tempo bewaken hoort erbij."] },
-      { q: "Wat is **pacing**?", options: ["Tempo bewaken zodat je op tijd klaar bent","Snel doorbladeren","Stil zitten","Eten"], answer: 0, wrongHints: [null, "Niet alleen kijken.", "Niet relevant.", "Niet relevant."] },
-      { q: "Bij **begrijpend lezen-vraag**: wat doe je eerst?", options: ["Vraag lezen, dan tekst doorzoeken","Tekst hardop lezen","Random kiezen","Skippen"], answer: 0, wrongHints: [null, "Te traag.", "Niet — denk na.", "Eerst proberen."] },
+      { q: "Wat is **pacing**?", options: ["Tempo bewaken zodat je op tijd klaar bent","Zo snel mogelijk door alle vragen bladeren","Rustig blijven zitten tot de tijd om is","Halverwege de toets een pauze nemen"], answer: 0, wrongHints: [null, "Gaat pacing over zo snel mogelijk, of over je tempo goed verdelen?", "Heeft pacing te maken met wachten, of met je tempo?", "Gaat het om pauzeren, of om je tempo in de gaten houden?"] },
+      { q: "Bij **begrijpend lezen-vraag**: wat doe je eerst?", options: ["Vraag lezen, dan tekst doorzoeken","De hele tekst hardop voorlezen","Zomaar een antwoord kiezen","De vraag meteen overslaan"], answer: 0, wrongHints: [null, "Te traag.", "Niet — denk na.", "Eerst proberen."] },
       { q: "Bij **rekensom met %**: wat doe je eerst?", options: ["Lezen wat gevraagd wordt","Direct rekenen","Antwoord raden","Stoppen"], answer: 0, wrongHints: [null, "Niet zonder vraag goed te begrijpen.", "Eerst proberen.", "Doorgaan."] },
-      { q: "Welke **nacht** voor de toets is belangrijk?", options: ["Goed slapen","Tot laat leren","Tot laat gamen","Niet eten"], answer: 0, wrongHints: [null, "Niet — overmatig leren werkt slecht.", "Vermoeidheid.", "Energie nodig."] },
-      { q: "Wat eet je voor de toets?", options: ["Goed ontbijt (volkorenbrood/fruit)","Niets","Veel suiker","Energy-drink"], answer: 0, wrongHints: [null, "Niet — laag energie.", "Crash later.", "Te veel cafeïne."] },
-      { q: "Bij **twijfel tussen 2 opties**: wat doe je?", options: ["Kies de eerste ingeving en ga door","Lang twijfelen","Beide aanstrepen","Niet kiezen"], answer: 0, wrongHints: [null, "Tijd weg.", "Werkt niet.", "Verlies."] },
-      { q: "Wat is een **strikvraag**?", options: ["Vraag die zo geschreven is dat je makkelijk fout antwoordt","Vraag over touw","Vraag over magie","Geen vraag"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet relevant.", "Wel vraag."] },
-      { q: "Bij **negatieve vraag** ('niet'/'behalve') wat doe je extra?", options: ["Onderstreep 'niet' / 'behalve'","Sla over","Random","Stop"], answer: 0, wrongHints: [null, "Niet zomaar.", "Risico.", "Niet — doorgaan."] },
+      { q: "Wat is belangrijk in de **nacht** voor de toets?", options: ["Goed slapen","Tot laat leren","Tot laat gamen","Niet eten"], answer: 0, wrongHints: [null, "Niet — overmatig leren werkt slecht.", "Vermoeidheid.", "Energie nodig."] },
+      { q: "Wat eet je voor de toets?", options: ["Een goed ontbijt","Helemaal niets","Een zak snoep","Een blikje energydrank"], answer: 0, wrongHints: [null, "Niet — laag energie.", "Crash later.", "Te veel cafeïne."] },
+      { q: "Bij **twijfel tussen 2 opties**: wat doe je?", options: ["Kies het beste antwoord, markeer en ga door","Lang twijfelen","Beide aanstrepen","Niet kiezen"], answer: 0, wrongHints: [null, "Tijd weg.", "Werkt niet.", "Verlies."] },
+      { q: "Wat is een **strikvraag**?", options: ["Vraag die zo geschreven is dat je makkelijk fout antwoordt","Een vraag die je altijd mag overslaan","Een vraag die extra punten oplevert","Een vraag zonder goed antwoord"], answer: 0, wrongHints: [null, "Gaat 'strik' over overslaan, of over erin trappen?", "Levert een strikvraag meer op, of is hij vooral lastig?", "Heeft een strikvraag wél een goed antwoord?"] },
+      { q: "Bij **negatieve vraag** ('niet'/'behalve') wat doe je extra?", options: ["Onderstreep 'niet' / 'behalve'","De vraag altijd overslaan","Zomaar een antwoord kiezen","Stoppen met de toets"], answer: 0, wrongHints: [null, "Niet zomaar.", "Risico.", "Niet — doorgaan."] },
       { q: "Hoe **controleer** je je antwoorden achteraf?", options: ["Doe de berekening anders / lees vraag opnieuw","Niet — eerste poging is altijd goed","Vraag aan buurman","Random aanpassen"], answer: 0, wrongHints: [null, "Niet altijd.", "Niet — spieken.", "Slechtste manier."] },
-      { q: "Wat is een **mind-blank** tijdens toets?", options: ["Tijdelijk niet meer weten — diep ademhalen helpt","Defect papier","Stroomstoring","Eind toets"], answer: 0, wrongHints: [null, "Mind-blank zit in je hoofd, niet op je papier.", "Stroomstoring stopt het lokaal, niet je hoofd.", "Een mind-blank is een moment in de toets, geen einde."] },
+      { q: "Wat is een **mind-blank** tijdens toets?", options: ["Even helemaal niets meer weten","Een kapot of leeg toetsblad","Een stroomstoring in het lokaal","Het einde van de toetstijd"], answer: 0, wrongHints: [null, "Mind-blank zit in je hoofd, niet op je papier.", "Stroomstoring stopt het lokaal, niet je hoofd.", "Een mind-blank is een moment in de toets, geen einde."] },
       { q: "Waar gaat de Doorstroomtoets in **groep 8** over?", options: ["Lezen + taalverzorging + rekenen","Alleen rekenen","Alleen geschiedenis","Engels"], answer: 0, wrongHints: [null, "Niet alleen rekenen.", "Niet hoofdvak.", "Geen Engels-onderdeel."] },
     ],
   },

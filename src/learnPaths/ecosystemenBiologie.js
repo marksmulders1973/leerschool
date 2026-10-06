@@ -65,21 +65,21 @@ const steps = [
     checks: [
       {
         q: "Wat is een **ecosysteem**?",
-        options: ["Alle levende + niet-levende delen van een gebied die op elkaar inwerken", "Een soort dier", "Een park", "Een dierenpopulatie"],
+        options: ["Alle levende + niet-levende delen van een gebied die op elkaar inwerken", "Alle dieren die samen in een bepaald gebied leven", "Alle planten en dieren van een gebied, zonder water en bodem", "Alle individuen van één soort die in een gebied leven"],
         answer: 0,
-        wrongHints: [null, "Te beperkt.", "Een park kan ecosysteem zijn, maar definitie is breder.", "Te beperkt — populatie is 1 soort."],
+        wrongHints: [null, "Alleen dieren? Waar blijven de planten, het water en de grond?", "Hoort de niet-levende omgeving er bij een ecosysteem ook bij?", "Dat is een populatie — een ecosysteem omvat veel meer."],
       },
       {
-        q: "Wat is een **abiotische factor**?",
-        options: ["Niet-levend (water, lucht, grond)", "Een dier", "Een plant", "Een bacterie"],
+        q: "Welke is een **abiotische factor**?",
+        options: ["Zonlicht", "Een dier", "Een plant", "Een bacterie"],
         answer: 0,
         wrongHints: [null, "Beweegt + eet + ademt — leeft dus.", "Groeit + maakt voedsel — leeft.", "Eencellig — maar wel een levend organisme."],
       },
       {
         q: "Wat is een **populatie**?",
-        options: ["Alle individuen van 1 soort in een gebied", "Alle dieren", "Hele bos", "1 plant"],
+        options: ["Alle individuen van 1 soort in een gebied", "Alle dieren in een gebied", "Alle soorten in een bos samen", "Eén plant of dier"],
         answer: 0,
-        wrongHints: [null, "Te ruim.", "Dat is levensgemeenschap+.", "Dat is individu."],
+        wrongHints: [null, "Te ruim — alle dieren zijn meerdere soorten.", "Dat is een levensgemeenschap.", "Dat is een individu."],
       },
       {
         q: "Welke is een **biotische** factor?",
@@ -89,15 +89,15 @@ const steps = [
       },
       {
         q: "Een **populatie** is?",
-        options: ["Alle organismen van 1 soort in 1 gebied", "1 soort wereldwijd", "Alle dieren samen", "Eén dier"],
+        options: ["Alle organismen van 1 soort in 1 gebied", "Alle organismen van 1 soort op de hele aarde", "Alle dieren van alle soorten in 1 gebied", "Eén organisme van 1 soort in 1 gebied"],
         answer: 0,
-        wrongHints: [null, "Veel breder dan populatie.", "Te ruim — dat zijn meerdere soorten.", "Te specifiek."],
+        wrongHints: [null, "Een populatie hoort bij één gebied — niet bij de hele aarde.", "Te ruim — dat zijn meerdere soorten.", "Te specifiek — één organisme is een individu."],
       },
       {
         q: "Een **levensgemeenschap** is?",
-        options: ["Alle populaties (verschillende soorten) in 1 gebied", "1 populatie", "1 dier", "Een dierentuin"],
+        options: ["Alle populaties van verschillende soorten in 1 gebied", "Alle individuen van 1 soort in 1 gebied", "Alle levende en niet-levende delen van 1 gebied", "Alle dieren die in een dierentuin wonen"],
         answer: 0,
-        wrongHints: [null, "Onvolledig — meerdere populaties.", "Te specifiek.", "Geen natuurlijke levensgemeenschap."],
+        wrongHints: [null, "Dat is één populatie — een levensgemeenschap is meer.", "Telt de niet-levende omgeving mee bij een levensgemeenschap?", "Leven die soorten daar natuurlijk samen?"],
       },
     ],
   },
@@ -122,13 +122,13 @@ const steps = [
       },
       {
         q: "Een **leeuw** eet zebra's. Wat is een leeuw?",
-        options: ["Carnivoor (vleeseter)", "Herbivoor", "Producent", "Afbreker"],
+        options: ["Carnivoor", "Herbivoor", "Producent", "Afbreker"],
         answer: 0,
         wrongHints: [null, "Eet vlees, geen planten.", "Geen plant.", "Geen afbreker."],
       },
       {
         q: "Wat is een **autotroof**?",
-        options: ["Wezen dat zelf voedsel maakt (producent)", "Vleeseter", "Plant-eter", "Afbreker"],
+        options: ["Wezen dat zelf voedsel maakt", "Wezen dat andere dieren eet", "Wezen dat planten eet", "Wezen dat dode resten afbreekt"],
         answer: 0,
         wrongHints: [null, "Eet andere dieren — maakt geen eigen voedsel.", "Eet planten — maakt zelf niets.", "Eet dode resten — geen eigen productie."],
         uitlegPad: {
@@ -162,7 +162,7 @@ const steps = [
         wrongHints: [null, "Te veel.", "Onmogelijk.", "Te weinig — dat is 2 niveaus."],
       },
       {
-        q: "Welk dier is **meest zeldzaam** in ecosysteem?",
+        q: "Welk organisme is meestal het **zeldzaamst** in een ecosysteem?",
         options: ["Toproofdier", "Plant", "Herbivoor", "Insect"],
         answer: 0,
         wrongHints: [null, "Vaak juist meest aanwezig.", "Talrijker dan toproofdier.", "Talrijker dan toproofdier."],
@@ -187,15 +187,15 @@ const steps = [
       },
       {
         q: "Een **consument** is een organisme dat?",
-        options: ["Andere organismen eet", "Zonlicht eet", "Niets eet", "Bodem eet"],
+        options: ["Andere organismen eet", "Zelf voedsel maakt met zonlicht", "Alleen water en mineralen opneemt", "Geen voedsel nodig heeft"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is producent.", "Onmogelijk.", "Niet primair."],
+        wrongHints: [null, "Zelf voedsel maken met zonlicht — is dat een producent of een consument?", "Haalt een organisme daar al zijn energie uit?", "Kan een organisme leven zonder energie?"],
       },
       {
         q: "**Reducenten** (afbrekers) doen wat?",
-        options: ["Dode organismen afbreken naar voedingsstoffen", "Planten eten", "Zonlicht omzetten", "Niets"],
+        options: ["Dode organismen afbreken naar voedingsstoffen", "Levende planten opeten", "Zonlicht omzetten in suiker", "Andere dieren vangen en opeten"],
         answer: 0,
-        wrongHints: [null, "Niet — consumenten doen dat.", "Niet — producenten doen dat.", "Wel iets."],
+        wrongHints: [null, "Niet — consumenten doen dat.", "Niet — producenten doen dat.", "Dat doen roofdieren (carnivoren)."],
       },
     ],
   },
@@ -220,9 +220,9 @@ const steps = [
       },
       {
         q: "Wat is de **stikstofkringloop**?",
-        options: ["N₂ uit lucht → bacterie → nitraten → plant → terug", "Water-cyclus", "CO₂-cyclus", "Energie-stroom"],
+        options: ["N₂ uit lucht → bacterie → nitraten → plant → terug", "Water → waterdamp → wolk → regen → zee", "CO₂ → plant → dier → afbreker → CO₂", "Zon → plant → dier → warmte → ruimte"],
         answer: 0,
-        wrongHints: [null, "Dat is water.", "Dat is C.", "Geen kringloop."],
+        wrongHints: [null, "Dat is de waterkringloop.", "Dat is de koolstofkringloop.", "Dat is een energiestroom — geen kringloop."],
       },
       {
         q: "Verschil tussen **materie** en **energie**?",
@@ -262,7 +262,7 @@ const steps = [
       },
       {
         q: "Wat is de **grootste oorzaak** van soorten-uitsterven?",
-        options: ["Habitat-vernieling (bos kappen, droogleggen)", "Jacht alleen", "Vervuiling alleen", "Klimaatverandering alleen"],
+        options: ["Habitat-vernieling", "Jacht alleen", "Vervuiling alleen", "Klimaatverandering alleen"],
         answer: 0,
         wrongHints: [null, "Doet schade, maar veel soorten worden niet bejaagd.", "Geeft druk, maar zonder leefgebied lukt het sowieso niet.", "Snelgroeiend probleem, maar nog geen #1 in cijfers (2024)."],
       },
@@ -274,7 +274,7 @@ const steps = [
       },
       {
         q: "Wat is **endemisch**?",
-        options: ["Uniek voor 1 gebied (bv. panda voor China)", "Veel voorkomend", "Ziek", "Uitgestorven"],
+        options: ["Komt alleen in 1 gebied voor", "Veel voorkomend", "Ziek", "Uitgestorven"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Endemisch ≠ ziekte (al betekent pandemie wél 'over de hele wereld').", "Endemisch betekent juist nog wél bestaan."],
       },
@@ -285,11 +285,11 @@ const steps = [
   {
     title: "Eindopdracht — ecosystemen mix",
     explanation:
-      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: producent/consument, voedselweb, energiepiramide, kringlopen, biodiversiteit.\n\nVeel succes!",
+      "Mix-toets. Door elkaar: producent/consument, voedselweb, energiepiramide, kringlopen, biodiversiteit.\n\nVeel succes!",
     checks: [
       {
         q: "Wat is een **producent**?",
-        options: ["Plant of alg (maakt voedsel via fotosynthese)", "Vleeseter", "Aaseter", "Plant-eter"],
+        options: ["Plant of alg", "Vleeseter", "Aaseter", "Plant-eter"],
         answer: 0,
         wrongHints: [null, "Verteert vlees — maakt geen nieuw voedsel.", "Verteert dood materiaal — geen productie.", "Verteert plant — geen eigen productie."],
       },
@@ -319,7 +319,7 @@ const steps = [
       },
       {
         q: "Wat is de rol van **schimmels** in ecosysteem?",
-        options: ["Afbreker (decompositie)", "Producent", "Toproofdier", "Carnivoor"],
+        options: ["Afbreker", "Producent", "Toproofdier", "Carnivoor"],
         answer: 0,
         wrongHints: [null, "Geen plant.", "Geen vleeseter.", "Geen vleeseter."],
       },

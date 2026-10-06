@@ -199,7 +199,7 @@ const steps = [
         wrongHints: [
           null,
           "Buikspieren bewegen je romp en zijn bewust (kun je aanspannen) — weeën zijn onbewust.",
-          "Middenrif zit bij ademhaling, niet bij geboorte.",
+          "Het middenrif is vooral een ademspier en helpt pas bij het (bewuste) persen — weeën zijn onbewust.",
           "De vagina (geboortekanaal) heeft geen sterke spieren die het kind eruit duwen — dat doet de baarmoeder.",
         ],
         explanation: "Weeën zijn ONBEWUSTE samentrekkingen van de baarmoederspieren (myometrium — dikke gladde spierlaag in de baarmoederwand). Door deze samentrekkingen wordt het kind richting baarmoederhals geduwd, opent de baarmoedermond, en wordt het kind later via vagina naar buiten geperst. Ze worden gestuurd door het hormoon oxytocine.",
@@ -271,7 +271,7 @@ const steps = [
           stappen: [
             { titel: "Soorten prikkels", tekst: "Een prikkel is een SIGNAAL dat een reactie veroorzaakt:\n• **Uitwendige prikkel** = van BUITEN (licht, geluid, warmte, aanraking, geur)\n• **Inwendige prikkel** = van BINNEN (hormoon-niveau, bloedsuiker, lichaamstemp)\n• **Adequate prikkel** = de soort waarvoor een zintuig speciaal gemaakt is (licht voor oog, geluid voor oor)" },
             { titel: "Hormoon = van binnenuit", tekst: "Hormonen worden gemaakt door klieren in JOUW lichaam (hypofyse, schildklier, eierstokken). Ze komen NIET van buitenaf. Dus: hormoon-prikkel = INWENDIGE prikkel." },
-            { titel: "Antwoord", tekst: "Antwoord B: inwendige prikkels." },
+            { titel: "Antwoord", tekst: "Antwoord: inwendige prikkels." },
           ],
           woorden: [
             { woord: "inwendige prikkel", uitleg: "Signaal van binnen het lichaam (bv. hormoon-niveau)." },

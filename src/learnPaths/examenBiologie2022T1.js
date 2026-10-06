@@ -34,7 +34,7 @@ const steps = [
         "op het moment van innesteling",
       ],
       answer: 2,
-      wrongHints: ["Geslachtscellen ontstaan continu — losse eicellen + zaadcellen hebben nog geen kind-geslacht.", "Geslachtsgemeenschap = handeling — bepaalt niet welk van de miljoenen zaadcellen wint.", null, "Innesteling = veel later, na bevruchting + reis door eileider."],
+      wrongHints: ["Bij het ontstaan van geslachtscellen is nog niet bekend wélke zaadcel straks de eicel bevrucht.", "Geslachtsgemeenschap = handeling — bepaalt niet welk van de miljoenen zaadcellen wint.", null, "Innesteling = veel later, na bevruchting + reis door eileider."],
       explanation: "**Geslacht wordt bepaald bij BEVRUCHTING** — het moment dat zaadcel + eicel samenkomen. De eicel heeft een X-chromosoom. De zaadcel heeft X of Y. X-zaadcel + X-eicel → XX → meisje. Y-zaadcel + X-eicel → XY → jongen. Alle latere stappen (innesteling, ontwikkeling) zijn dan al voorbestemd.",
       examenBron: BRON_LABEL(10),
       bronLink: BRON_LINK,
@@ -101,7 +101,7 @@ const steps = [
         { id: "cel-biologie", title: "Cellen", niveau: "VMBO klas 1-2", why: "celkern = waar DNA zit — rode bloedcellen zijn uitzondering (geen kern)" },
       ],
       uitlegPad: compact(
-        "DNA + chromosomen zitten in de celkern. Bloeddeeltjes: bloedplaatjes (geen kern), rode bloedcellen (kernloos bij mensen — uniek!), witte bloedcellen (wel kern).",
+        "DNA + chromosomen zitten in de celkern. Bloeddeeltjes: bloedplaatjes (geen kern), rode bloedcellen (kernloos bij mensen en andere zoogdieren), witte bloedcellen (wel kern).",
         { basis: "Witte bloedcellen (hebben kern).", simpeler: "Alleen witte bloedcellen hebben een kern → chromosomen → DNA.", nogSimpeler: "Witte" },
         [{ woord: "celkern", uitleg: "Waar het DNA zit." }, { woord: "leukocyt", uitleg: "Witte bloedcel — verdedigt tegen ziekten." }],
       ),
@@ -130,7 +130,7 @@ const steps = [
         { id: "lichaam-gezondheid-po", title: "Lichaam + gezondheid", niveau: "groep 6-8", why: "organen + functies spijsvertering" },
       ],
       uitlegPad: compact(
-        "Water wordt opgenomen in het bloed via de darmwand (vooral dikke darm). Lever ontgift, maag verteert, nier filtert (water naar URINE).",
+        "Water wordt opgenomen in het bloed via de darmwand (in de dunne én de dikke darm). Lever ontgift, maag verteert, nier filtert (water naar URINE).",
         { basis: "De darm.", simpeler: "Darm neemt water op uit voedsel naar bloed.", nogSimpeler: "Darm" },
       ),
     }],
