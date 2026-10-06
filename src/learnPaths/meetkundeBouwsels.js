@@ -98,7 +98,7 @@ const steps = [
   {
     title: "Wat is volume?",
     explanation:
-      "**Volume** is hoeveel ruimte een ding inneemt — of hoeveel er IN past.\n\n**Voorbeelden in het echt**:\n• Een melkpak: inhoud 1 liter.\n• Een aquarium: kan bv. 40 liter water bevatten.\n• Een schoenendoos: heeft een bepaald volume aan ruimte voor schoenen.\n\n**De eenheden voor volume**:\n• **kubieke centimeter** (cm³) — klein, voor kleine voorwerpen.\n• **kubieke decimeter** (dm³) — gelijk aan **1 liter**.\n• **kubieke meter** (m³) — heel groot, voor kamers/zwembaden.\n• **liter** (L) en **milliliter** (mL) gebruik je voor vloeistoffen.\n\n**Belangrijke afspraken** *(uit je hoofd leren!)*:\n• 1 liter = 1000 mL\n• 1 liter = 1 dm³ = 1000 cm³\n• 1 m³ = 1000 liter\n\n**Plaatje om te onthouden**:\nStel je een melkpak van 1 liter voor. Dat is precies een kubus van **10 cm bij 10 cm bij 10 cm**. Dus 10 × 10 × 10 = 1000 cm³ = 1 liter.",
+      "**Volume** is hoeveel ruimte een ding inneemt — of hoeveel er IN past.\n\n**Voorbeelden in het echt**:\n• Een melkpak: inhoud 1 liter.\n• Een aquarium: kan bv. 40 liter water bevatten.\n• Een schoenendoos: heeft een bepaald volume aan ruimte voor schoenen.\n\n**De eenheden voor volume**:\n• **kubieke centimeter** (cm³) — klein, voor kleine voorwerpen.\n• **kubieke decimeter** (dm³) — gelijk aan **1 liter**.\n• **kubieke meter** (m³) — heel groot, voor kamers/zwembaden.\n• **liter** (L) en **milliliter** (mL) gebruik je voor vloeistoffen.\n\n**Belangrijke afspraken** *(uit je hoofd leren!)*:\n• 1 liter = 1000 mL\n• 1 liter = 1 dm³ = 1000 cm³\n• 1 m³ = 1000 liter\n\n**Plaatje om te onthouden**:\nStel je een kubus voor van **10 cm bij 10 cm bij 10 cm**. Daar past precies 1 liter in — net zoveel als in een melkpak. Want 10 × 10 × 10 = 1000 cm³ = 1 liter.",
     svg: eenhedenSvg(),
     checks: [
       {
@@ -321,7 +321,7 @@ const steps = [
         q: "Een **emmer** van **50 cm × 30 cm × 40 cm**. Hoeveel **liter**?",
         options: ["60 liter", "120 liter", "600 liter", "12 liter"],
         answer: 0,
-        wrongHints: [null, "Te veel — controleer 60.000 ÷ 1000.", "Te veel — komma 1 plek verkeerd.", "Te weinig — heb je 60.000 ÷ 1000 gedaan?"],
+        wrongHints: [null, "Te veel — reken het volume in cm³ nog eens na en deel dan door 1000.", "Te veel — komma 1 plek verkeerd.", "Te weinig — hoeveel cm³ gaan er in 1 liter? Deel het volume daardoor."],
         uitlegPad: {
           stappen: [
             { titel: "Eerst cm³", tekst: "50 × 30 × 40 = 60.000 cm³." },
@@ -406,7 +406,7 @@ const steps = [
       { q: "Aquarium 50×30×40 cm. Volume in cm³?", options: ["60.000","12.000","120","6000"], answer: 0, wrongHints: [null, "Te weinig — controleer 50 × 30 × 40.", "Veel te weinig — vergeet je een nul?", "Komma 1 plek verkeerd."] },
       { q: "1 m³ = hoeveel L?", options: ["1000","100","10","10.000"], answer: 0, wrongHints: [null, "Te weinig — komma verkeerd.", "Veel te weinig — denk groot, 1 m³ = veel liters.", "Te veel — komma 1 plek verkeerd."] },
       { q: "Een **kubus** heeft hoeveel hoekpunten?", options: ["8","6","4","12"], answer: 0, wrongHints: [null, "Vlakken.", "Niet.", "Ribben."] },
-      { q: "Volume formule **balk**?", options: ["lengte × breedte × hoogte","l + b + h","l × b","l × h"], answer: 0, wrongHints: [null, "Som = niet volume.", "2 dimensies.", "2 dimensies."] },
+      { q: "Volume formule **balk**?", options: ["l × b × h","l + b + h","l × b","l × h"], answer: 0, wrongHints: [null, "Som = niet volume.", "2 dimensies.", "2 dimensies."] },
       { q: "Een **doos** 10 × 10 × 10 cm. Volume?", options: ["1000 cm³","100 cm³","10 cm³","10.000 cm³"], answer: 0, wrongHints: [null, "Vlak.", "Ribbe.", "Te veel."] },
       { q: "Volume in **liters** voor 8000 cm³?", options: ["8 L","800 L","80 L","0,8 L"], answer: 0, wrongHints: [null, "Te veel.", "Te veel.", "Te weinig."] },
       { q: "**Inhoud** is een ander woord voor?", options: ["Volume","Lengte","Oppervlakte","Massa"], answer: 0, wrongHints: [null, "Niet.", "Niet 3D.", "Gewicht."] },
