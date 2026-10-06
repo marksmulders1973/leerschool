@@ -78,10 +78,10 @@ const steps = [
         },
       },
       {
-        q: "Wat is de **hoofdstad** van Nederlands-Indië?",
+        q: "Wat was de **hoofdstad** van Nederlands-Indië?",
         options: ["Batavia","Jakarta","Singapore","Manilla"],
         answer: 0,
-        wrongHints: [null, "Bijna — Jakarta is moderne naam (sinds 1949).", "Britse kolonie, nu eigen staat.", "Filipijns — geen Nederlandse kolonie."],
+        wrongHints: [null, "Bijna — zelfde plek, maar die naam hoort bij de tijd na de Nederlanders.", "Britse kolonie, nu eigen staat.", "Filipijns — geen Nederlandse kolonie."],
         uitlegPad: {
           stappen: [{ titel: "Batavia = oud, Jakarta = nieuw", tekst: "1619: J.P. Coen sticht **Batavia** op locatie van Jakarta-stad. Naam blijft tot 1942 (Japanse bezetting). 1949: officiële naam **Jakarta** voor onafhankelijke hoofdstad Indonesië." }],
           theorie: "Toets-truc: zelfde plek, twee namen. Batavia = NL-tijd. Jakarta = onafhankelijk Indonesië.",
@@ -112,7 +112,7 @@ const steps = [
         q: "Wat is het **batig slot**?",
         options: ["Overschot uit Indonesië voor de Nederlandse staat","Cultuurstelsel-handboek","Indonesische muziek-stijl","Belasting-categorie"],
         answer: 0,
-        wrongHints: [null, "Niet — geen handboek.", "Niet — geen muziek.", "Bijna — gerelateerd maar specifieker dan algemene belasting."],
+        wrongHints: [null, "Niet — geen handboek.", "Niet — geen muziek.", "Niet — het is geen soort belasting, maar een uitkomst van de koloniale boekhouding."],
         uitlegPad: {
           stappen: [{ titel: "Batig slot = winst", tekst: "**Batig slot** = boekhoud-term voor 'wat overblijft' (overschot) na aftrek van kosten. In NL-koloniale context: het Indonesische geld dat overbleef nadat de kolonie-overheid haar kosten betaald had — ging naar Den Haag." }],
           woorden: [{ woord: "batig slot", uitleg: "Overschot in een begroting/kassa — positief saldo." }],
@@ -139,7 +139,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Geen speerpunten ethische politiek.", "Niet — ethische politiek wilde juist niet meer geweld.", "Cultuurstelsel-producten, niet ethische politiek."],
         uitlegPad: {
-          stappen: [{ titel: "OIE — onthoud O-I-E", tekst: "Speerpunten ethische politiek volgens **koningin Wilhelmina** (troonrede 1901):\n• **O**nderwijs: scholen voor inheemse bevolking\n• **I**rrigatie: betere waterwerken voor landbouw\n• **E**migratie: Javaanse boeren overplaatsen naar minder-bevolkte eilanden (Sumatra, Sulawesi)" }],
+          stappen: [{ titel: "OIE — onthoud O-I-E", tekst: "Speerpunten ethische politiek (uitgewerkt door o.a. C.Th. van Deventer; de koers begon met de troonrede van **koningin Wilhelmina**, 1901):\n• **O**nderwijs: scholen voor inheemse bevolking\n• **I**rrigatie: betere waterwerken voor landbouw\n• **E**migratie: Javaanse boeren overplaatsen naar minder-bevolkte eilanden (Sumatra, Sulawesi)" }],
           woorden: [{ woord: "ethische politiek", uitleg: "Nieuwe koloniale koers 1901: NL als 'voogd' die welvaart in Indië moet bevorderen." }],
           theorie: "Toets-criticus: ethische politiek was deels propaganda — in praktijk bleef het meeste geld naar NL gaan + slechts ~1% Indonesiërs kreeg onderwijs.",
           niveaus: { basis: "Onderwijs Irrigatie Emigratie.", simpeler: "OIE = ethische politiek", nogSimpeler: "OIE" },
@@ -180,7 +180,7 @@ const steps = [
         q: "Wie waren de **leiders** van de Indonesische onafhankelijkheidsbeweging?",
         options: ["Soekarno + Hatta","Multatuli + Coen","Wilhelmina + Drees","Mahatma + Nehru"],
         answer: 0,
-        wrongHints: [null, "Tegenstanders van koloniale onderdrukking maar uit eerdere/andere context.", "NL-koningin + premier — geen onafhankelijkheidsleiders.", "Indiase onafhankelijkheid (1947) — andere kolonie."],
+        wrongHints: [null, "Een criticus en een stichter van het koloniale bewind — allebei uit een veel eerdere tijd.", "NL-koningin + premier — geen onafhankelijkheidsleiders.", "Indiase onafhankelijkheid (1947) — andere kolonie."],
         uitlegPad: {
           stappen: [{ titel: "Duo: Soekarno + Hatta", tekst: "**Ir. Soekarno** (1901-1970) = charismatische voorman, civiel ingenieur, oprichter PNI 1927. **Mohammad Hatta** (1902-1980) = econoom, mede-strijder. Tegenovergestelde karakters maar een effectief duo. Beide werden door NL meermaals verbannen." }],
           woorden: [{ woord: "Soekarno", uitleg: "Eerste president van onafhankelijk Indonesië (1945-1967)." }, { woord: "Hatta", uitleg: "Eerste vicepresident van Indonesië (1945-1956)." }],
@@ -191,7 +191,7 @@ const steps = [
         q: "Wat zijn **romusha** in de Japanse bezetting?",
         options: ["Gedwongen Indonesische dwangarbeiders","Japanse soldaten","Indonesische ambtenaren","NL-krijgsgevangenen"],
         answer: 0,
-        wrongHints: [null, "Niet — de uitbuiters.", "Niet — ambtenaren werden grotendeels behouden.", "Bijna — die zaten in aparte kampen, niet 'romusha'."],
+        wrongHints: [null, "Niet — de uitbuiters.", "Niet — ambtenaren werden grotendeels behouden.", "Niet — krijgsgevangenen zaten in aparte kampen en heetten geen 'romusha'."],
         uitlegPad: {
           stappen: [{ titel: "Romusha = dwangarbeider", tekst: "**Romusha** = Japans voor 'arbeider'. Tijdens Japanse bezetting werden ~4 miljoen Indonesiërs gedwongen voor de Japanners te werken (oa Birma-spoorweg, kustverdediging). ~2 miljoen kwamen om. Een **vergeten genocide** in NL-geschiedenisles." }],
           woorden: [{ woord: "romusha", uitleg: "Indonesische dwangarbeider tijdens Japanse bezetting WO2." }],
@@ -214,7 +214,7 @@ const steps = [
         q: "Welk effect had Japanse bezetting op **NL-koloniale prestige**?",
         options: ["Doorbroken — Aziaten konden Europeanen verslaan","Versterkt","Geen","Verdwenen volledig"],
         answer: 0,
-        wrongHints: [null, "Niet — Japanse overmacht was juist een schok.", "Veel effect — psychologische omslag.", "Niet helemaal verdwenen, maar wel doorbroken."],
+        wrongHints: [null, "Niet — Japanse overmacht was juist een schok.", "Veel effect — psychologische omslag.", "Te sterk — Nederland probeerde na 1945 zelfs nog terug te keren."],
         uitlegPad: {
           stappen: [{ titel: "Mythe van witte overmacht", tekst: "Vóór 1942: koloniale ideologie dat 'witte mensen' van nature heersers zijn. **Japans snelle overwinning** doorbrak die mythe — Aziaten konden Europeanen verslaan. Dit gaf nationalistische bewegingen overal in Azië (Indonesië, Vietnam, Maleisië, Birma) extra kracht na 1945." }],
           theorie: "Toets-link: deze 'doorbroken mythe' verklaart waarom dekolonisatie in heel Azië versnelde na 1945.",
@@ -277,7 +277,7 @@ const steps = [
         },
       },
       {
-        q: "Welke koning bood **excuses** aan voor het Nederlandse koloniale geweld in 2020?",
+        q: "Welk **staatshoofd** bood in 2020 **excuses** aan voor het Nederlandse koloniale geweld?",
         options: ["Willem-Alexander","Beatrix","Juliana","Wilhelmina"],
         answer: 0,
         wrongHints: [null, "Niet — Beatrix bezocht Indonesië 1995, geen excuses.", "Juliana tekende soevereiniteitsoverdracht, geen excuses.", "Niet — Wilhelmina overleed 1962, lang vóór 2020."],
