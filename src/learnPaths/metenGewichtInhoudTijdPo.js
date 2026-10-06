@@ -107,7 +107,7 @@ const steps = [
         q: "**750 g** is hoeveel kilo?",
         options: ["0,75 kg", "7,5 kg", "0,075 kg", "75 kg"],
         answer: 0,
-        wrongHints: [null, "Dat zou 7500 g zijn — dat is veel te zwaar.", null, "Onmogelijk: 75 kg is zwaarder dan jij."],
+        wrongHints: [null, "Dat zou 7500 g zijn — dat is veel te zwaar.", null, "Te zwaar: 75 kg weegt zoveel als een volwassene, en 750 g is nog geen kilo."],
         uitlegPad: {
           stappen: [
             { titel: "Terug naar kilo", tekst: "Van gram naar kilo ga je naar een grotere eenheid, dus je moet delen: deel door 1000." },
@@ -189,7 +189,7 @@ const steps = [
           woorden: [{ woord: "pond", uitleg: "Een gewichtsmaat van 500 gram, vaak gebruikt bij groente, fruit en vlees." }],
           theorie: "Bij pond-sommen reken je vaak in stappen van 500 gram. Twee pond is samen altijd een hele kilo, omdat 2 × 500 g precies 1000 g is.",
           voorbeelden: [
-            { type: "winkel", tekst: "Een pak rijst van 1 kg staat vaak ook aangeduid als 2 pond op de verpakking." },
+            { type: "winkel", tekst: "Een pak suiker van 1 kg weegt precies evenveel als 2 pond." },
             { type: "thuis", tekst: "Een brood van ongeveer een pond weegt zo'n 500 gram." },
           ],
           basiskennis: [{ onderwerp: "Verdubbelen", uitleg: "Verdubbelen betekent een getal keer 2 nemen, ofwel het twee keer bij elkaar optellen." }],
@@ -557,7 +557,7 @@ const steps = [
         q: "Een wedstrijd duurt **1,5 uur**. Hoeveel minuten is dat?",
         options: ["90 min", "150 min", "60 min", "100 min"],
         answer: 0,
-        wrongHints: [null, "Let op: 1,5 is niet hetzelfde als 1 uur en 50 minuten.", "Dat is maar 1 uur — het halve uur telt nog mee.", "Tijd rekent met 60, niet met 100."],
+        wrongHints: [null, "Let op: je rekent hier alsof een uur 100 minuten heeft — het zijn er maar 60.", "Dat is maar 1 uur — het halve uur telt nog mee.", "Tijd rekent met 60, niet met 100."],
         uitlegPad: {
           stappen: [
             { titel: "Splits het kommagetal", tekst: "1,5 uur bestaat uit 1 heel uur plus een half uur." },
@@ -670,7 +670,7 @@ const steps = [
         q: "Een reis duurt **2 uur 15 min** heen en **1 uur 50 min** terug. Hoeveel tijd in totaal?",
         options: ["4 uur 5 min", "4 uur 25 min", "3 uur 65 min", "4 uur 15 min"],
         answer: 0,
-        wrongHints: [null, null, "Bijna — maar 65 minuten bestaat niet, dat is een uur en 5 min.", null],
+        wrongHints: [null, null, "Bijna — maar meer dan 59 minuten schrijf je niet zo. Hoeveel uur en minuten is 65 minuten?", null],
         uitlegPad: {
           stappen: [
             { titel: "Tel uren en minuten apart", tekst: "Tel eerst de hele uren bij elkaar op (2 + 1), en apart de minuten (15 + 50)." },

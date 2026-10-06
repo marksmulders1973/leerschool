@@ -100,7 +100,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **gemiddelde**?",
-        options: ["Een berekening die laat zien wat 'in het midden' ligt", "Het hoogste getal in een groep", "Het laagste getal", "Het getal dat het meest voorkomt"],
+        options: ["Een berekening die laat zien wat 'in het midden' ligt", "Het hoogste getal dat in de groep voorkomt", "Het laagste getal dat in de groep voorkomt", "Het getal dat in de groep het vaakst voorkomt"],
         answer: 0,
         wrongHints: [null, "Dat is het maximum, niet het gemiddelde.", "Dat is het minimum.", "Dat is de modus, niet het gemiddelde."],
       },
@@ -144,7 +144,7 @@ const steps = [
         q: "Cijfers: **6, 7, 8, 7**. Wat is het **gemiddelde**?",
         options: ["7", "6", "8", "28"],
         answer: 0,
-        wrongHints: [null, "Te weinig — heb je goed gedeeld? 28 ÷ 4.", "Te veel — controleer de optelling.", "Dat is de som, niet het gemiddelde. Nog door 4 delen."],
+        wrongHints: [null, "Te weinig — controleer je optelling én je deling.", "Te veel — controleer de optelling.", "Dat is de som, niet het gemiddelde. Nog door 4 delen."],
         uitlegPad: {
           stappen: [
             { titel: "Som / aantal", tekst: "Som = 6+7+8+7 = 28. Aantal = 4 cijfers. Gemiddelde = 28 ÷ 4 = 7." },
@@ -238,7 +238,7 @@ const steps = [
         q: "Wat is de **modus** van: **3, 5, 4, 5, 6, 5, 7**?",
         options: ["5", "4", "6", "Geen modus"],
         answer: 0,
-        wrongHints: [null, "Tel hoe vaak elk getal voorkomt. 5 komt 3× voor, 4 maar 1×.", "Tel opnieuw — 5 komt het vaakst.", "Er is wél een modus. Welk getal komt het vaakst voor?"],
+        wrongHints: [null, "Tel hoe vaak elk getal voorkomt — komt 4 echt het vaakst voor?", "Tel opnieuw — komt 6 vaker voor dan de andere getallen?", "Er is wél een modus. Welk getal komt het vaakst voor?"],
         uitlegPad: {
           stappen: [
             { titel: "Tel hoe vaak", tekst: "3: 1×. 4: 1×. **5: 3×**. 6: 1×. 7: 1×. → De 5 komt het vaakst voor." },
@@ -279,7 +279,7 @@ const steps = [
         q: "Cijfers klas: 6, 7, 8, 7, 6, 7, 5. **Modus**?",
         options: ["7", "6", "8", "5"],
         answer: 0,
-        wrongHints: [null, "6 komt 2× voor — 7 komt 3× voor. Meer.", "Dat is maar 1×.", "Dat is maar 1× — minst."],
+        wrongHints: [null, "6 komt 2× voor — is er een cijfer dat nog vaker voorkomt?", "Dat is maar 1×.", "Dat is maar 1× — minst."],
         uitlegPad: {
           stappen: [
             { titel: "Tel hoe vaak", tekst: "5: 1×. 6: 2×. **7: 3×**. 8: 1×. → 7 wint." },
@@ -322,7 +322,7 @@ const steps = [
         q: "**Mediaan** van: 4, 8, 6, 10 (op volgorde zetten!)?",
         options: ["7", "6", "8", "28"],
         answer: 0,
-        wrongHints: [null, "Dat is één van de 2 middelste; bij een even aantal pak je het gemiddelde van die twee.", "Dat is het andere middelste; pak het gemiddelde van 6 en 8.", "Dat is de som, niet de mediaan."],
+        wrongHints: [null, "Dat is één van de 2 middelste; bij een even aantal pak je het gemiddelde van die twee.", "Dat is het andere middelste getal — wat doe je bij een even aantal met de twee middelste?", "Dat is de som, niet de mediaan."],
         uitlegPad: {
           stappen: [
             { titel: "Op volgorde", tekst: "4, 6, 8, 10. Op volgorde gezet." },
@@ -382,10 +382,10 @@ const steps = [
         wrongHints: [null, "Gemiddelde geeft een uitkomst zoals 'maat 38,5'. Niemand draagt dat. We willen weten welke maat het VAAKST verkocht is.", "Mediaan zou het middelste zijn van alle verkopen. Geeft niet aan welke maat 'het populairst' is.", "Som is alleen het totaal aantal verkopen."],
       },
       {
-        q: "Vraag: *'Wat is het **gemiddelde** rapportcijfer van de klas?'* Welk begrip?",
+        q: "Vraag: *'Je telt alle rapportcijfers van de klas op en deelt door het aantal leerlingen.'* Welk begrip reken je dan uit?",
         options: ["Gemiddelde", "Modus", "Mediaan", "Maximum"],
         answer: 0,
-        wrongHints: [null, "De vraag zegt letterlijk 'gemiddeld' — er is een specifieke maat met die naam.", "Mediaan is het middelste getal, niet wat de vraag vraagt.", "Maximum is het hoogste, niet wat de vraag vraagt."],
+        wrongHints: [null, "Modus is het cijfer dat het vaakst voorkomt — daarvoor hoef je niet op te tellen en te delen.", "Mediaan is het middelste getal, niet wat de vraag vraagt.", "Maximum is het hoogste, niet wat de vraag vraagt."],
       },
       {
         q: "Bij **inkomens** met 1 superrijk persoon — welk getal geeft het **eerlijkst beeld** van een 'gewone' inwoner?",
@@ -412,7 +412,7 @@ const steps = [
         q: "Cijfers: 7, 8, 9, 6, 5 *(5 toetsen)*. **Gemiddeld**?",
         options: ["7", "8", "35", "5"],
         answer: 0,
-        wrongHints: [null, "Te veel — controleer (7+8+9+6+5) ÷ 5.", "Dat is de som — nog ÷ 5.", "Dat is de laagste."],
+        wrongHints: [null, "Te veel — 8 is maar één van de cijfers. Reken som ÷ aantal.", "Dat is de som — nog ÷ 5.", "Dat is de laagste."],
       },
       {
         q: "Schoenen verkocht: maat 38, 39, 38, 40, 38, 41, 39. **Modus**?",
@@ -439,8 +439,8 @@ const steps = [
         wrongHints: [null, "Controleer welk getal het vaakst voorkomt (modus) en welk getal in het midden staat na sortering (mediaan).", "Niet beide 8 — 8 komt maar 1× voor.", "Ze zijn hier toch gelijk — bereken modus (meest voorkomend) en mediaan (midden na sortering) nog eens."],
       },
       {
-        q: "**Wanneer kan een gemiddelde geen geheel getal zijn**?",
-        options: ["Vrijwel altijd kan dat — bv. cijfers 6 en 7 → gem 6,5", "Nooit", "Alleen bij negatieve getallen", "Alleen bij heel veel getallen"],
+        q: "Kan een gemiddelde een **kommagetal** zijn (dus geen heel getal)?",
+        options: ["Ja, bijvoorbeeld bij 6 en 7", "Nooit", "Alleen bij negatieve getallen", "Alleen bij heel veel getallen"],
         answer: 0,
         wrongHints: [null, "Wél — probeer twee cijfers bij elkaar op te tellen en te delen, kan het uitkomen op een kommagetal?", "Dat is niet de regel — gemiddeldes met decimalen komen super vaak voor.", "Ook bij weinig getallen kan een gemiddelde decimaal zijn."],
       },
@@ -448,17 +448,17 @@ const steps = [
       { q: "Modus van 4, 7, 4, 9, 4, 7, 2?", options: ["4","7","9","2"], answer: 0, wrongHints: [null, "2 keer.", "1 keer.", "1 keer."] },
       { q: "Mediaan van 5, 2, 8, 1, 4?", options: ["4","2","8","5"], answer: 0, wrongHints: [null, "Niet zonder sorteren.", "Niet.", "Niet zonder sorteren."] },
       { q: "Mediaan van 4, 6, 8, 10?", options: ["7","6","8","9"], answer: 0, wrongHints: [null, "Een midden.", "Een midden.", "Niet."] },
-      { q: "Gem van 10, 20, 30, 40?", options: ["25","30","100","40"], answer: 0, wrongHints: [null, "Niet — reken (10+20+30+40) ÷ 4.", "Som.", "Max."] },
+      { q: "Gem van 10, 20, 30, 40?", options: ["25","30","100","40"], answer: 0, wrongHints: [null, "Te veel — 30 is maar één van de getallen. Reken som ÷ aantal.", "Som.", "Max."] },
       { q: "5 toetsen, gemiddelde 7. Som?", options: ["35","12","7","75"], answer: 0, wrongHints: [null, "Niet — som = aantal × gem.", "Gem.", "Te veel."] },
-      { q: "Bereik van 12, 5, 18, 9, 3?", options: ["15","18","12","3"], answer: 0, wrongHints: [null, "Max alleen.", "Niet.", "Min alleen."] },
+      { q: "Bereik (grootste min kleinste getal) van 12, 5, 18, 9, 3?", options: ["15","18","12","3"], answer: 0, wrongHints: [null, "Max alleen.", "Niet.", "Min alleen."] },
       { q: "Modus van 1,2,3,4,5 (alle 1×)?", options: ["Geen modus","1","5","3"], answer: 0, wrongHints: [null, "Niet — vaakst is niemand.", "Niet.", "Niet."] },
       { q: "Welk getal in een rij komt **vaakst** voor: 3, 5, 5, 5, 7, 7, 9?", options: ["5","7","3","9"], answer: 0, wrongHints: [null, "2 keer.", "1 keer.", "1 keer."] },
       { q: "Wanneer is mediaan zinvoller dan gemiddelde?", options: ["Bij uitschieters","Bij weinig getallen","Nooit","Altijd"], answer: 0, wrongHints: [null, "Niet.", "Wel soms.", "Niet altijd."] },
-      { q: "Een **uitschieter** is?", options: ["Extreem hoog/laag getal dat van rest afwijkt","Een wedstrijd","Een spel","Niet relevant"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet.", "Wel."] },
+      { q: "Een **uitschieter** is?", options: ["Een getal dat ver van de rest afligt","Het getal dat het vaakst voorkomt","Het middelste getal na sorteren","Het gemiddelde van alle getallen"], answer: 0, wrongHints: [null, "Dat is de modus.", "Dat is de mediaan.", "Dat is het gemiddelde zelf."] },
       { q: "Welke maat verandert het meest als je 1 grote uitschieter toevoegt?", options: ["Gemiddelde","Mediaan","Modus","Geen"], answer: 0, wrongHints: [null, "Mediaan verschuift maar weinig — de middelste blijft bijna gelijk.", "Modus blijft meestal hetzelfde — vaakste-getal verandert niet vlug.", "Eén van deze maten reageert wél sterk op een uitschieter."] },
-      { q: "5 keer gegooid: 3, 5, 5, 6, 6. Mediaan?", options: ["5","6","4","3"], answer: 0, wrongHints: [null, "Te hoog — pak het 3e getal van de 5 (ze staan al op volgorde).", "Te laag.", "Te laag."] },
+      { q: "5 keer gegooid: 3, 5, 5, 6, 6. Mediaan?", options: ["5","6","4","3"], answer: 0, wrongHints: [null, "Te hoog — welk getal staat precies in het midden van de 5? (Ze staan al op volgorde.)", "Te laag.", "Te laag."] },
       { q: "Gem van 4 en 8?", options: ["6","12","4","2"], answer: 0, wrongHints: [null, "Niet — dat is som.", "Klein.", "Niet."] },
-      { q: "Gemiddelde 5, modus 5 én mediaan 5 — kan dat?", options: ["Ja — vooral bij symmetrische data","Nooit","Alleen bij 1 getal","Alleen bij 2 getallen"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
+      { q: "Gemiddelde 5, modus 5 én mediaan 5 — kan dat?", options: ["Ja, dat kan","Nooit","Alleen bij 1 getal","Alleen bij 2 getallen"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
     ],
   },
 ];

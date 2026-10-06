@@ -514,7 +514,7 @@ const steps = [
         q: "Welke is het grootst: 0,7 of 65% of ¾?",
         options: ["¾", "0,7", "65%", "ze zijn gelijk"],
         answer: 0,
-        wrongHints: [null, "Reken alles om naar hetzelfde soort getal en vergelijk.", "Zet ook de breuk om naar procent — is dat meer of minder?", "65% is de kleinste."],
+        wrongHints: [null, "Reken alles om naar hetzelfde soort getal en vergelijk.", "Zet ook de breuk om naar procent — is dat meer of minder?", "Ze zijn niet gelijk — reken ze alle drie om naar procent."],
         uitlegPad: {
           stappen: [
             { titel: "Maak alles dezelfde soort", tekst: "Zet alle drie de getallen om naar procenten, zodat je ze eerlijk kunt vergelijken." },
@@ -576,12 +576,12 @@ const steps = [
       },
       {
         q: "Welk antwoord klopt? 30% is groter dan …",
-        options: ["¼ (= 25%)", "½ (= 50%)", "0,4 (= 40%)", "¾ (= 75%)"],
+        options: ["¼", "½", "0,4", "¾"],
         answer: 0,
         wrongHints: [null, "50% > 30%, dus 30% is niet groter dan ½.", "40% > 30%, dus 30% is niet groter dan 0,4.", "75% > 30%, dus 30% is niet groter dan ¾."],
         uitlegPad: {
           stappen: [
-            { titel: "Reken elke optie om naar procent", tekst: "Elke optie is al een breuk of kommagetal mét het percentage erbij. Vergelijk die percentages met 30%." },
+            { titel: "Reken elke optie om naar procent", tekst: "Reken elke breuk en elk kommagetal om naar procent. Vergelijk die percentages met 30%." },
             { titel: "Zoek het kleinste percentage", tekst: "30% is alleen groter dan percentages die lager zijn dan 30. Welke optie heeft het laagste percentage?" },
           ],
           woorden: [{ woord: "vergelijken met een lijst", uitleg: "Meerdere getallen naast elkaar leggen om te zien welke groter of kleiner zijn dan een bepaald getal." }],

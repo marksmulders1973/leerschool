@@ -66,9 +66,9 @@ const steps = [
       },
       {
         q: "Wat betekent de 'rest' in een deelsom?",
-        options: ["wat overblijft na eerlijk verdelen", "het hele antwoord", "de deler", "het dubbele"],
+        options: ["wat overblijft na eerlijk verdelen", "hoe vaak de deler er helemaal in past", "het getal waardoor je deelt", "het getal dat je verdeelt"],
         answer: 0,
-        wrongHints: [null, "Dat is het quotiënt, niet de rest.", "De deler is waardoor je deelt.", "Dat klopt niet."],
+        wrongHints: [null, "Dat is het hele antwoord van de deelsom, niet de rest.", "Dat is de deler.", "Dat is het deeltal."],
         uitlegPad: {
           stappen: [
             { titel: "Denk aan eerlijk verdelen", tekst: "Bij een deelsom probeer je een hoeveelheid zo eerlijk mogelijk te verspreiden over een aantal groepjes." },
@@ -150,9 +150,9 @@ const steps = [
       },
       {
         q: "Mag de rest bij 19 ÷ 4 gelijk zijn aan 4?",
-        options: ["Nee, de rest moet kleiner zijn dan 4", "Ja, dat mag", "De rest mag gelijk zijn aan de deler", "Dat hangt af van de som"],
+        options: ["Nee", "Ja, dat mag", "Alleen bij grote getallen", "Dat hangt af van de som"],
         answer: 0,
-        wrongHints: [null, "Kijk eens: als er nog 4 overblijven, kun je nog één keer verdelen.", "Als de rest gelijk is aan de deler, kun je nog een keer verdelen — dan is je antwoord fout.", "De rest is altijd kleiner dan de deler."],
+        wrongHints: [null, "Kijk eens: als er nog 4 overblijven, kun je nog één keer verdelen.", "Ook bij grote getallen geldt: is de rest even groot als de deler, dan kun je nog een keer verdelen.", "De rest is altijd kleiner dan de deler."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent 'gelijk aan de deler'?", tekst: "Als er nog precies zo veel over is als de deler zelf, kun je daarmee eigenlijk nog een keer een groep vormen." },
@@ -374,7 +374,7 @@ const steps = [
         q: "Je hebt 100 cm lint. Je knipt er stukken van 30 cm af. Hoeveel hele stukken krijg je?",
         options: ["3", "4", "10", "3,3"],
         answer: 0,
-        wrongHints: [null, "Na 3 stukken is er nog 10 cm — te weinig voor een 4e stuk van 30.", "Dat is de rest in cm, geen aantal stukken.", "Een aantal stukken is een heel getal."],
+        wrongHints: [null, "Reken na: hoeveel cm lint heb je nodig voor 4 hele stukken van 30 cm? Heb je dat?", "Dat is de rest in cm, geen aantal stukken.", "Een aantal stukken is een heel getal."],
         uitlegPad: {
           stappen: [
             { titel: "Hoe vaak past een heel stuk van dertig centimeter?", tekst: "Reken uit hoe vaak dertig centimeter helemaal past in honderd centimeter, zonder eroverheen te gaan." },
@@ -395,7 +395,7 @@ const steps = [
         q: "In een verhaaltje staat: 'Hoeveel hele weken zitten er in 45 dagen?' (1 week = 7 dagen)",
         options: ["6 weken", "7 weken", "6 rest 3", "45"],
         answer: 0,
-        wrongHints: [null, "Na 6 weken (42 dagen) blijven er 3 dagen over — geen hele week.", "Dat is de rest, geen aantal weken.", "Dat is het aantal dagen, niet weken."],
+        wrongHints: [null, "Reken na: hoeveel dagen zijn 7 hele weken? Heb je die?", "Dat is de rest, geen aantal weken.", "Dat is het aantal dagen, niet weken."],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel hele weken zitten er in de dagen?", tekst: "Eén week heeft 7 dagen. Reken uit hoe vaak 7 dagen helemaal past in 45 dagen." },
@@ -580,7 +580,7 @@ const steps = [
         q: "Een klas van 29 leerlingen maakt duo's. Hoeveel duo's zijn er, en hoeveel leerlingen blijven over?",
         options: ["14 duo's, 1 over", "14 duo's, 0 over", "15 duo's, 0 over", "13 duo's, 3 over"],
         answer: 0,
-        wrongHints: [null, "29 is een oneven getal — er blijft er altijd één over.", "15 duo's zijn 30 leerlingen — te veel.", "Reken 29 ÷ 2 nog eens."],
+        wrongHints: [null, "Controleer: blijft er bij 29 leerlingen echt niemand over?", "15 duo's zijn 30 leerlingen — te veel.", "Reken 29 ÷ 2 nog eens."],
         uitlegPad: {
           stappen: [
             { titel: "Hoeveel duo's kun je maken?", tekst: "Een duo bestaat uit twee leerlingen. Reken uit hoe vaak twee helemaal past in negenentwintig." },
