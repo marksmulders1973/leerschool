@@ -178,7 +178,7 @@ const steps = [
       },
       {
         q: "Welk woord helpt herkennen dat een tekst **betogend** is?",
-        options: ["bijvoorbeeld","'fantastisch' of 'verschrikkelijk'","gisteren","de man"],
+        options: ["'bijvoorbeeld' of 'zoals'","'fantastisch' of 'verschrikkelijk'","'gisteren' of 'daarna'","'de man' of 'het huis'"],
         answer: 1,
         wrongHints: ["Komt 'bijvoorbeeld' alleen voor als iemand je wil overtuigen, of ook bij gewone uitleg?",null,"Wijst 'gisteren' naar een mening, of vooral naar wanneer iets gebeurde?","Vertelt 'de man' iets over de toon van een tekst, of is het neutraal?"],
         uitlegPad: {
@@ -369,7 +369,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **skimmen**?",
-        options: ["Snel overzicht krijgen door titels en eerste zinnen","Heel langzaam woord-voor-woord","Tekst overslaan","Gokken op vragen"],
+        options: ["Snel overzicht krijgen door titels en eerste zinnen","Heel langzaam woord-voor-woord","De hele tekst overslaan","Vragen beantwoorden zonder de tekst te lezen"],
         answer: 0,
         wrongHints: [null,"Hoort 'snel overzicht' bij langzaam alles lezen of bij iets anders?","Sla je bij skimmen alles over, of pak je juist de hoofdpunten?","Heeft skimmen te maken met lezen of met kansberekening?"],
         uitlegPad: {
@@ -470,7 +470,7 @@ const steps = [
       },
       {
         q: "Hoe vind je antwoord op een **inferentie-vraag** (tussen de regels)?",
-        options: ["Letten op emoties en signaalwoorden in tekst","Letterlijk woord opzoeken","Gokken","Niet beantwoorden"],
+        options: ["Letten op emoties en signaalwoorden in tekst","Letterlijk woord opzoeken","Gokken zonder de tekst te bekijken","De vraag overslaan en niets invullen"],
         answer: 0,
         wrongHints: [null,"Staat het antwoord van een 'tussen-de-regels' vraag letterlijk in de tekst?","Werkt gokken zonder de tekst te bekijken bij dit soort vragen?","Levert een leeg antwoord punten op?"],
         uitlegPad: {
@@ -494,7 +494,7 @@ const steps = [
       },
       {
         q: "Wat is een **strikvraag**?",
-        options: ["Bedoeld om je af te leiden van het juiste antwoord","Een grappige vraag","Een korte vraag","Een vraag in dialect"],
+        options: ["Bedoeld om je af te leiden van het juiste antwoord","Een grappige vraag om je aan het lachen te maken","Een heel korte vraag van een paar woorden","Een vraag die in dialect is geschreven"],
         answer: 0,
         wrongHints: [null,"Is een strikvraag bedoeld om je te laten lachen, of om je in de val te lokken?","Heeft een strikvraag iets met de lengte te maken, of met de inhoud?","Hoort dialect bij een strikvraag, of is het iets anders?"],
         uitlegPad: {
@@ -521,7 +521,7 @@ const steps = [
   },
   {
     title: "Eindopdracht — alles samen",
-    explanation: "**Snelle samenvatting**:\n\n**3 tekstsoorten**:\n• Informatief — feiten\n• Betogend — overtuigen\n• Verhalend — vermaken\n\n**6 signaalwoord-groepen**:\n• Tijd, oorzaak/gevolg, opsomming, tegenstelling, voorbeeld, conclusie\n\n**Tekst-opbouw**: inleiding + kern + slot. Hoofdgedachte vaak in 1e of laatste alinea.\n\n**Slim lezen**: skim eerst, scan voor antwoorden.\n\n**Vraagsoorten**: letterlijk, inferentie, hoofdgedachte, woordbetekenis, opbouw — elk een eigen aanpak.\n\n**5 grote tips voor de Doorstroomtoets**:\n1. **Lees de vragen vóór de tekst** — weet wat je zoekt.\n2. **Skim** de tekst eerst — 30 seconden voor overzicht.\n3. **Scan** gericht voor het antwoord — niet alles herlezen.\n4. **Onderstreep 'NIET'** in NIET-vragen.\n5. **Skip** moeilijke vragen + kom later terug.\n\n**Veel succes!**\n\n*\"Begrijpend lezen is geen ijsschots — je hoeft niet alles te begrijpen, je moet de juiste delen vinden.\"*",
+    explanation: "**Snelle samenvatting**:\n\n**3 tekstsoorten**:\n• Informatief — feiten\n• Betogend — overtuigen\n• Verhalend — vermaken\n\n**6 signaalwoord-groepen**:\n• Tijd, oorzaak/gevolg, opsomming, tegenstelling, voorbeeld, conclusie\n\n**Tekst-opbouw**: inleiding + kern + slot. Hoofdgedachte vaak in 1e of laatste alinea.\n\n**Slim lezen**: skim eerst, scan voor antwoorden.\n\n**Vraagsoorten**: letterlijk, inferentie, hoofdgedachte, woordbetekenis, opbouw — elk een eigen aanpak.\n\n**5 grote tips voor de Doorstroomtoets**:\n1. **Lees de vragen vóór je gaat zoeken** — weet wat je zoekt.\n2. **Skim** de tekst eerst — 30 seconden voor overzicht.\n3. **Scan** gericht voor het antwoord — niet alles herlezen.\n4. **Onderstreep 'NIET'** in NIET-vragen.\n5. **Skip** moeilijke vragen + kom later terug.\n\n**Veel succes!**\n\n*\"Begrijpend lezen is geen ijsschots — je hoeft niet alles te begrijpen, je moet de juiste delen vinden.\"*",
     svg: signaalwoordenSvg(),
     checks: [
       {
@@ -606,7 +606,7 @@ const steps = [
           woorden: [
             { woord: "tijdsdruk", uitleg: "Het gevoel dat je moet opschieten om alle vragen op tijd te beantwoorden." },
           ],
-          theorie: "Doorstroomtoets is timed. Begrijpend lezen heeft ~50 vragen totaal in ~75 min. Per vraag ~1,5 min — bij 5 vragen per tekst = 7,5 min per tekst.",
+          theorie: "De Doorstroomtoets heeft een tijdslimiet. Reken op ongeveer 1 tot 1,5 minuut per vraag — bij 4 à 5 vragen per tekst kom je zo op zo'n 5-7 minuten per tekst.",
           voorbeelden: [{ type: "verdeling", tekst: "Tekst met 4 vragen: 30s skim + 30s vragen + 4×1min scan = 5 min. Past." }],
           basiskennis: [{ onderwerp: "Skip moeilijke vraag", uitleg: "Vraag te lastig? Skip + kom later terug. Niet vastlopen." }],
           niveaus: {
@@ -664,12 +664,12 @@ const steps = [
       },
       {
         q: "Hoe lees je een lastige zin écht goed?",
-        options: ["Stuk voor stuk + woorden snappen + verband zien","Snel scannen voor sleutelwoorden","Letterlijk lezen","Lange-zin-overslaan"],
+        options: ["Stuk voor stuk + woorden snappen + verband zien","Snel scannen voor sleutelwoorden","Alleen de eerste en laatste woorden lezen","De lange zin gewoon overslaan"],
         answer: 0,
-        wrongHints: [null, "Scannen werkt voor overzicht, niet voor begrip.", "Te oppervlakkig — 'letterlijk' is half-lezen.", "Tegenovergesteld — overslaan kan veel betekenis kosten."],
+        wrongHints: [null, "Scannen is handig om iets op te zoeken — maar snap je zo de hele zin?", "Weet je wat een zin betekent als je het middenstuk mist?", "Wat mis je als je juist die lastige zin overslaat?"],
         uitlegPad: {
           stappen: [
-            { titel: "Goed lezen vs scannen", tekst: "Twee technieken:\n• **Scannen** = ogen snel over tekst voor sleutelwoorden (zoals 'wanneer' / 'jaartal' opzoeken)\n• **Goed lezen** = stuk voor stuk + alle woorden snappen + verband leggen\n\nBij **Toets-detail-vragen** ('wat staat in alinea 2?') = goed lezen. Bij **algemene vragen** ('waar gaat tekst over?') = scannen + globaal lezen genoeg." },
+            { titel: "Goed lezen vs scannen", tekst: "Twee technieken:\n• **Scannen** = ogen snel over tekst voor sleutelwoorden (zoals 'wanneer' / 'jaartal' opzoeken)\n• **Goed lezen** = stuk voor stuk + alle woorden snappen + verband leggen\n\nBij **Toets-detail-vragen** ('wat staat in alinea 2?') = goed lezen. Bij **algemene vragen** ('waar gaat tekst over?') = skimmen + globaal lezen genoeg." },
             { titel: "Goed-lezen stappenplan", tekst: "1. **Lees zin tot komma/punt**\n2. **Snap alle woorden** (onbekend? raad uit context)\n3. **Wat zegt de zin?** Eigen woorden in hoofd herhalen\n4. **Verbind met vorige zin** (en/maar/dus?)\n5. **Volgende zin**\n\nDuurt langer maar je 'krijgt' de tekst echt." },
             { titel: "Toets-tip: gemarkeerd onthouden", tekst: "Tijdens lezen MAG je markeren in Toets-boekje:\n• **Onderstreep** belangrijke zinnen\n• **Cirkel** sleutelwoorden\n• **Schrijf in marge** vraagtekens bij niet-begrip\n\nMaakt later terug-vinden makkelijker. Brein onthoudt ook beter wat je actief markeert dan passief leest." },
           ],
@@ -702,9 +702,9 @@ const steps = [
             { woord: "PISA", uitleg: "Internationaal onderzoek dat leesvaardigheid van 15-jarigen meet per land." },
             { woord: "DEAR", uitleg: "Drop Everything And Read — vast lees-moment op school." },
           ],
-          theorie: "Lezen-trainings­advies:\n• **Begin klein**: 10 min/dag, bouw op naar 30 min\n• **Kies wat JIJ leuk vindt** (geen gedwongen literatuur)\n• **Lees voor slapen**: combineert + ontspant\n• **Wissel fictie + non-fictie** voor variatie\n• **Praat over wat je leest** met ouder/vriend (versterkt onthouden)\n\nBijproduct: lezers slapen vaak beter (zonder schermtijd vóór slapen).",
+          theorie: "Lezen-trainingsadvies:\n• **Begin klein**: 10 min/dag, bouw op naar 30 min\n• **Kies wat JIJ leuk vindt** (geen gedwongen literatuur)\n• **Lees voor slapen**: combineert + ontspant\n• **Wissel fictie + non-fictie** voor variatie\n• **Praat over wat je leest** met ouder/vriend (versterkt onthouden)\n\nBijproduct: lezers slapen vaak beter (zonder schermtijd vóór slapen).",
           voorbeelden: [
-            { type: "feit", tekst: "Onderzoek Universiteit Leiden: leerlingen die thuis 5+ boeken lezen per jaar scoren ~1 jaar voor op Toets-niveau." },
+            { type: "feit", tekst: "Internationaal leesonderzoek (zoals PISA) laat zien: kinderen die vaak voor hun plezier lezen, scoren gemiddeld hoger op begrijpend lezen." },
           ],
           basiskennis: [{ onderwerp: "Niet alleen voor toets", uitleg: "Lezen voor levenslange vaardigheid — niet alleen de toets. Hoogopgeleide volwassenen lezen gemiddeld meer dan laagopgeleide." }],
           niveaus: { basis: "Veel lezen.", simpeler: "Leesvaardigheid groeit door VEEL lezen — boeken + tijdschriften + jeugd-encyclopedie. 30 min/dag = grote sprong.", nogSimpeler: "Lezen" },
@@ -721,7 +721,7 @@ const steps = [
       { q: "Bij welk **woord** weet je 'het komt eraan': de schrijver gaat **iets opsommen**?", options: ["ten eerste","echter","daarom","kortom"], answer: 0, wrongHints: [null, "Tegenstelling.", "Reden.", "Conclusie."] },
       { q: "*'Kortom: lezen is belangrijk.'* — welk soort zin?", options: ["Conclusie","Vraag","Opsomming","Tegenstelling"], answer: 0, wrongHints: [null, "Geen vraagteken.", "Geen lijst.", "Geen 'maar'."] },
       { q: "Welke **alinea** bevat meestal de hoofdgedachte van de hele tekst?", options: ["Inleiding of slot","De middelste alinea","Een random alinea","Geen"], answer: 0, wrongHints: [null, "Niet altijd.", "Niet random — er is patroon.", "Wel — vaak duidelijk."] },
-      { q: "Welke **tekstsoort** is een dagboek?", options: ["Verhalend (persoonlijk)","Informatief","Betogend","Schoolboek"], answer: 0, wrongHints: [null, "Geen feiten-uitleg.", "Geen overtuiging.", "Niet schoolboek."] },
+      { q: "Welke **tekstsoort** is een dagboek?", options: ["Verhalend","Informatief","Betogend","Schoolboek"], answer: 0, wrongHints: [null, "Geen feiten-uitleg.", "Geen overtuiging.", "Niet schoolboek."] },
       { q: "Wat is een **kernzin**?", options: ["Zin met hoofdpunt van alinea","Eerste zin altijd","Laatste zin altijd","Langste zin"], answer: 0, wrongHints: [null, "Vaak wel, niet altijd.", "Soms wel, niet altijd.", "Niet relevant."] },
       { q: "Welk woord betekent ongeveer hetzelfde als **bovendien**?", options: ["daarnaast","echter","want","kortom"], answer: 0, wrongHints: [null, "Tegenstelling.", "Reden.", "Conclusie."] },
       { q: "Wat is een **alinea**?", options: ["Stukje tekst met 1 onderwerp/idee","Hele bladzijde","1 zin","Titel"], answer: 0, wrongHints: [null, "Te groot.", "Te klein — meerdere zinnen.", "Niet hetzelfde."] },

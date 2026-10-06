@@ -746,7 +746,7 @@ const steps = [
         wrongHints: [
           null,
           "Niet de boodschap — de tekst veroordeelt Sara niet voor het vergeten.",
-          "Wel iets in het verhaal, maar niet de hoofdboodschap.",
+          "Gaat het verhaal over hoe brood smaakt, of over wat Toms gebaar betekende?",
           "Leraren komen niet voor in het verhaal.",
         ],
         uitlegPad: {
@@ -781,7 +781,7 @@ const steps = [
   // ── Stap 5 — Eindopdracht ──────────────────────────────────
   {
     title: "Eindopdracht — vier teksten gemixt",
-    explanation: "**Vier vragen, één over elke tekst-soort.** Test of je het verschil tussen tekstsoorten en vraagtypen onder de knie hebt.\n\nBij de eindtoets krijg je deze mix: zakelijke + instructieve + betogende + verhalende teksten. Soms heel kort, soms langer.\n\n*Veel succes!*",
+    explanation: "**Vier vragen, één over elke tekst-soort.** Test of je het verschil tussen tekstsoorten en vraagtypen onder de knie hebt.\n\nBij de Doorstroomtoets krijg je deze mix: zakelijke + instructieve + betogende + verhalende teksten. Soms heel kort, soms langer.\n\n*Veel succes!*",
     checks: [
       {
         // van tekst 1 — zakelijke
@@ -861,7 +861,7 @@ const steps = [
         // van tekst 3 — betoog
         q: "Welke is een ARGUMENT in een betogende tekst (uit de telefoon-tekst)?",
         options: [
-          "Notificaties zorgen voor minutenlange afleiding (onderzoek)",
+          "Notificaties zorgen voor minutenlange afleiding",
           "Telefoons hebben gladde randen",
           "Iedereen heeft een eigen mening",
           "Er bestaan ook tablets",
@@ -908,7 +908,7 @@ const steps = [
           null,
           "Een hartje is hier dankbaarheid, geen romantiek — let op de context.",
           "Geen boosheid in het verhaal — moeder reageert juist warm.",
-          "Niet het hoofdpunt — moeder kent Tom niet en wil 'm niet ontmoeten in dit verhaal.",
+          "Niet het hoofdpunt — moeder vraagt nergens om Tom te ontmoeten, ze stuurt alleen een briefje mee.",
         ],
         uitlegPad: {
           stappen: [
@@ -976,14 +976,14 @@ const steps = [
         options: [
           "De woorden eromheen lezen om het te raden via context",
           "De vraag overslaan",
-          "Een woordenboek pakken (mag niet bij de Doorstroomtoets)",
+          "Een woordenboek pakken en het woord opzoeken",
           "Nooit antwoord invullen — die vraag laat je leeg",
         ],
         answer: 0,
         wrongHints: [
           null,
           "Nooit overslaan — er is altijd een gok-kans van 25%.",
-          "Bij de Doorstroomtoets mag dat inderdaad niet — context is je beste vriend.",
+          "Mag je bij de Doorstroomtoets een woordenboek gebruiken? Wat heb je wél altijd bij de hand?",
           "Beter een gok dan leeg — geen punten af voor fout.",
         ],
         uitlegPad: {
@@ -1009,9 +1009,9 @@ const steps = [
       },
       {
         q: "Tekst: 'De jongen rende WANHOPIG naar zijn moeder.' Wat betekent **wanhopig**?",
-        options: ["Heel verdrietig + bang, geen hoop","Heel vrolijk","Snel maar rustig","Slaapt"],
+        options: ["Zonder hoop en heel bang","Heel vrolijk en opgewekt","Snel maar heel rustig","Moe en slaperig"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — geen vrolijk gevoel.", "Snel past wel bij rennen, maar 'wanhopig' gaat over een gevoel — kijk welke optie emotie beschrijft.", "Niet — een rennende jongen slaapt niet."],
+        wrongHints: [null, "Tegenovergesteld — geen vrolijk gevoel.", "Snel past wel bij rennen, maar 'wanhopig' gaat over een gevoel — kijk welke optie emotie beschrijft.", "Past moe en slaperig bij iemand die hard naar zijn moeder rent?"],
         uitlegPad: {
           stappen: [
             { titel: "Context-aanpak", tekst: "Onbekend woord 'wanhopig' in zin 'De jongen rende **wanhopig** naar zijn moeder.' Wat helpt:\n• **Actie**: rennen → snelheid, urgentie\n• **Doel**: naar moeder → wellicht behoefte, troost, redding\n• **Combinatie**: rennen + naar moeder = situatie van nood\n\nDus 'wanhopig' = **zonder hoop, in nood**. Het bijwoord versterkt de emotionele lading." },
@@ -1055,7 +1055,7 @@ const steps = [
       },
       {
         q: "Een tekst over **fietsen** begint: 'Vroeger waren fietsen veel zwaarder dan nu.' Wat verwacht je in het VERVOLG?",
-        options: ["Hoe fietsen lichter werden / wat er nu beter is","Recept voor pannenkoeken","Geschiedenis van auto's","Niet te zeggen"],
+        options: ["Hoe fietsen in de loop der tijd lichter werden","Een recept voor pannenkoeken","De geschiedenis van de auto","Dat is nog niet te zeggen"],
         answer: 0,
         wrongHints: [null, "Niet — past niet bij thema fietsen.", "Niet — over auto's, niet fietsen.", "Wel — eerste zin GEEFT richting."],
         uitlegPad: {
@@ -1077,17 +1077,17 @@ const steps = [
           niveaus: { basis: "Vervolg over fietsen vroeger/nu.", simpeler: "Eerste zin geeft thema (fietsen vroeger zwaar). Vervolg gaat erover door: hoe ze lichter werden, welke materialen, etc.", nogSimpeler: "Past bij thema" },
         },
       },
-      { q: "Welke vraag stel je het eerst bij een tekst om de **structuur** te zien?", options: ["Hoeveel alinea's heeft de tekst?","Hoe lang is de tekst?","Wat is de kleur van het papier?","Wie heeft de tekst gedrukt?"], answer: 0, wrongHints: [null, "Lengte zegt niets over structuur.", "Niet inhoudelijk.", "Niet relevant."] },
+      { q: "Welke vraag stel je het eerst bij een tekst om de **structuur** te zien?", options: ["Waar gaat elke alinea over?","Hoe lang is de tekst?","Wat is de kleur van het papier?","Wie heeft de tekst gedrukt?"], answer: 0, wrongHints: [null, "Lengte zegt niets over structuur.", "Niet inhoudelijk.", "Niet relevant."] },
       { q: "*'Veel kinderen kijken te veel TV.'* — welke tekstsoort past hierbij?", options: ["Betogend","Verhalend","Instructief","Recept"], answer: 0, wrongHints: [null, "Geen verhaal.", "Geen stappen.", "Geen recept."] },
-      { q: "*'Eerst de pan opzetten, dan de boter erin.'* — welke tekstsoort?", options: ["Instructief","Betogend","Verhalend","Zakelijk"], answer: 0, wrongHints: [null, "Geen mening.", "Geen verhaal.", "Niet alleen feiten."] },
+      { q: "*'Eerst de pan opzetten, dan de boter erin.'* — welke tekstsoort?", options: ["Instructief","Betogend","Verhalend","Informatief"], answer: 0, wrongHints: [null, "Geen mening.", "Geen verhaal.", "Geeft deze zin feiten, of vertelt hij wat je moet doen?"] },
       { q: "Welke **alinea** geeft meestal de conclusie?", options: ["De laatste","De eerste","De middelste","Geen"], answer: 0, wrongHints: [null, "Inleiding.", "Kern, geen conclusie.", "Wel — vaak in slot."] },
-      { q: "Welke vraag is een **inferentievraag**?", options: ["Waarom zou de schrijver dit voorbeeld kiezen?","Hoeveel alinea's heeft de tekst?","Welk woord betekent X?","Hoe heet de schrijver?"], answer: 0, wrongHints: [null, "Telling.", "Letterlijk.", "Letterlijk."] },
-      { q: "*'Dieren zijn slim, want ze leren snel.'* Welk woord signaleert de reden?", options: ["want","ze","leren","snel"], answer: 0, wrongHints: [null, "Niet — verwijswoord.", "Werkwoord.", "Bijvoeglijk."] },
+      { q: "Welke vraag is een **inferentievraag**?", options: ["Waarom zou de schrijver dit voorbeeld kiezen?","Hoeveel alinea's heeft de tekst?","Welk woord betekent X?","Hoe heet de schrijver?"], answer: 0, wrongHints: [null, "Telling.", "Gaat dit over één woord, of over waarom de schrijver iets doet?", "Letterlijk."] },
+      { q: "*'Dieren zijn slim, want ze leren snel.'* Welk woord signaleert de reden?", options: ["want","ze","leren","snel"], answer: 0, wrongHints: [null, "Niet — verwijswoord.", "Werkwoord.", "Bijwoord — zegt hoe ze leren."] },
       { q: "Een **tekstdoel** wijst aan?", options: ["Waarom de tekst geschreven is","Hoe oud de tekst is","Het aantal woorden","De schrijver"], answer: 0, wrongHints: [null, "Niet relevant.", "Niet doel.", "Niet hetzelfde."] },
-      { q: "Bij **woordbetekenis-vragen** kijk je naar?", options: ["De context (omringende zinnen)","De letters van het woord","Hoe het klinkt","De lengte"], answer: 0, wrongHints: [null, "Soms helpt, maar context is sterker.", "Niet relevant.", "Niet relevant."] },
+      { q: "Bij **woordbetekenis-vragen** kijk je naar?", options: ["De zinnen rondom het woord","Hoeveel letters het woord heeft","Hoe het klinkt","Of het woord vetgedrukt is"], answer: 0, wrongHints: [null, "Zegt het aantal letters iets over wat een woord betekent?", "Niet relevant.", "Niet relevant."] },
       { q: "Welk **soort vraag** is dit: 'Wat staat in regel 3?'", options: ["Letterlijk","Inferentie","Mening","Voorspelling"], answer: 0, wrongHints: [null, "Inferentie vraagt nadenken.", "Geen mening.", "Niet voorspellen."] },
       { q: "*'Hoewel het regende, gingen ze door.'* Welk soort signaalwoord?", options: ["Tegenstelling","Reden","Opsomming","Conclusie"], answer: 0, wrongHints: [null, "Niet — geen want.", "Geen lijst.", "Geen samenvatting."] },
-      { q: "Wat is een **citaat** in een tekst?", options: ["Letterlijk overgenomen stukje (vaak met aanhalingstekens)","Eigen mening","Lange zin","De titel"], answer: 0, wrongHints: [null, "Niet — citaat = van iemand anders.", "Niet relevant.", "Niet."] },
+      { q: "Wat is een **citaat** in een tekst?", options: ["Letterlijk overgenomen woorden van iemand","Je eigen mening over de tekst","Een extra lange zin","De titel van de tekst"], answer: 0, wrongHints: [null, "Niet — citaat = van iemand anders.", "Niet relevant.", "Niet."] },
       { q: "*'Volgens experts is de aarde steeds warmer.'* Welk woord toont een **bron**?", options: ["volgens","is","de","steeds"], answer: 0, wrongHints: [null, "Werkwoord.", "Lidwoord.", "Bijwoord."] },
       { q: "Welke alinea-functie heeft een **voorbeeld-alinea**?", options: ["Hoofdgedachte concreet maken","Mening geven","Nieuwe regel beginnen","Tellen"], answer: 0, wrongHints: [null, "Mening = aparte rol.", "Niet inhoudelijk.", "Niet relevant."] },
       { q: "Welke tekst is meest **objectief**?", options: ["Encyclopedie","Reclame","Mening-column","Persoonlijke brief"], answer: 0, wrongHints: [null, "Veel mening.", "Mening = subjectief.", "Persoonlijk = subjectief."] },

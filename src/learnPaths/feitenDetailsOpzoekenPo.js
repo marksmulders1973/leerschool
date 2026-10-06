@@ -34,7 +34,7 @@ Midden in het stadspark staat het Uilenfort: een oud fort dat is omgebouwd tot o
 
 **Openingstijden.** Het Uilenfort is open van dinsdag tot en met zondag, van tien uur 's ochtends tot vijf uur 's middags. Op maandag is het museum gesloten.
 
-**Prijzen.** Een toegangsbewijs kost vijf euro voor kinderen en acht euro voor volwassenen. Kinderen tot vier jaar mogen gratis naar binnen.
+**Prijzen.** Een toegangsbewijs kost vijf euro voor kinderen en acht euro voor volwassenen. Kinderen jonger dan vier jaar mogen gratis naar binnen.
 
 **Wat is er te doen?** Op de begane grond ontdek je hoe het fort vroeger werd verdedigd. Op de eerste verdieping vind je de uilenzaal, met opgezette uilen en een echt uilennest achter glas. Op de zolder doe je zelf proefjes in het Ontdeklab: bouw een brug van papier of laat een ei zweven.
 
@@ -429,7 +429,7 @@ Let op: in deze tekst staan meerdere getallen (twee, dertigduizend, veertien, dr
           niveaus: {
             basis: "Scan op het woord 'bloemenstrook'. In welke alinea en welke zin staat het — en welke groep wordt daar genoemd?",
             simpeler: "In de tweede alinea staat een zin die begint met 'De kinderen van groep...'. Welk groepsnummer staat erin?",
-            nogSimpeler: "Zoek het woord 'gezaaid' in de tekst en lees het getal in diezelfde zin.",
+            nogSimpeler: "Zoek het woord 'gezaaid' in de tekst en lees het groepsnummer in de zin vlak ervóór.",
           },
         },
       },
@@ -633,12 +633,12 @@ Kortom: scannen mag snel, maar het overnemen van het antwoord doe je traag en pr
         },
       },
       {
-        q: "*\"De bibliotheek is van maandag tot en met vrijdag open van negen tot zes.\"* — Vraag: 'Op welke dag is de bibliotheek dicht?' Welk antwoord is juist?",
+        q: "*\"De bibliotheek is van maandag tot en met vrijdag open van negen tot zes.\"* — Vraag: 'Op welke dagen is de bibliotheek dicht?' Welk antwoord is juist?",
         options: [
           "Zaterdag en zondag",
-          "Maandag",
-          "Vrijdag",
-          "Woensdag",
+          "Maandag en dinsdag",
+          "Vrijdag en zaterdag",
+          "Woensdag en donderdag",
         ],
         answer: 0,
         wrongHints: [
@@ -913,7 +913,7 @@ Pak bij elke vraag de vaste strategie erbij: **vraag lezen → zoekwoord kiezen 
         uitlegPad: {
           stappen: [
             { titel: "Zoekwoord", tekst: "De vraag gaat over gratis toegang. Scan op 'gratis' onder het kopje 'Prijzen'." },
-            { titel: "Precies lezen", tekst: "De zin luidt: 'Kinderen tot vier jaar mogen gratis naar binnen.' De grens voor gratis is dus: jonger dan vier. Wie vier jaar óf ouder is, betaalt." },
+            { titel: "Precies lezen", tekst: "De zin luidt: 'Kinderen jonger dan vier jaar mogen gratis naar binnen.' De grens voor gratis is dus: jonger dan vier. Wie vier jaar óf ouder is, betaalt." },
             { titel: "Begrijp 'tot'", tekst: "'Tot vier jaar' = jonger dan vier. Op de verjaardag dat je vier wordt, is de gratis-periode voorbij. Dat is de leeftijdsgrens die de vraag bedoelt." },
           ],
           niveaus: {

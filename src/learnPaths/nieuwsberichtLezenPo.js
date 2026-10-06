@@ -973,7 +973,7 @@ Pak bij elke vraag je vaste aanpak erbij: **bedenk** welke gouden vraag het is, 
       {
         q: "De kop zegt: *\"Heel Zandhoven in de ban van ontsnapte alpaca\"*. Wat kun je hierover zeggen na het lezen van de tekst?",
         options: [
-          "De kop overdrijft een beetje: veel dorpsbewoners waren betrokken, maar niet letterlijk iedereen",
+          "De kop overdrijft: veel mensen hielpen, maar niet letterlijk iedereen",
           "Elke inwoner van Zandhoven heeft meegezocht naar Berry",
           "De kop klopt niet, want niemand in het dorp wist van de ontsnapping",
           "De kop gaat eigenlijk over de storm van het weekend",
