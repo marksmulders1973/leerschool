@@ -31,7 +31,7 @@ const steps = [
     checks: [
       {
         q: "**WTO** = ?",
-        options: ["World Trade Organization (handelsregels wereld)","Western Travel Office","World Tourism Organization","Wereld-Tech-Officie"],
+        options: ["World Trade Organization","Western Travel Office","World Tourism Organization","World Transport Organization"],
         answer: 0,
         wrongHints: [null, "Niet relevant.", "Bestaat wel maar niet bedoeld.", "Niet relevant."],
         uitlegPad: {
@@ -41,7 +41,7 @@ const steps = [
       },
       {
         q: "Welke gebeurtenis **versnelde globalisering** vooral?",
-        options: ["China-WTO-toetreding 2001","Steenkooluitvinding","WW2","Brexit"],
+        options: ["China-WTO-toetreding 2001","Val van het Romeinse Rijk","WW2","Brexit"],
         answer: 0,
         wrongHints: [null, "Veel eerder.", "Wel impact maar andere.", "Tegenovergesteld — anti-globalisering."],
         uitlegPad: {
@@ -51,9 +51,9 @@ const steps = [
       },
       {
         q: "Wat is **glokalisering**?",
-        options: ["Globaal product met lokale aanpassing","Alleen globaal","Alleen lokaal","Geen woord"],
+        options: ["Globaal product met lokale aanpassing","Alleen globaal","Alleen lokaal","Lokaal product dat onveranderd wereldwijd wordt verkocht"],
         answer: 0,
-        wrongHints: [null, "Niet — combinatie.", "Niet — combinatie.", "Wel woord."],
+        wrongHints: [null, "Niet — combinatie.", "Niet — combinatie.", "Waar zit dan de lokale aanpassing?"],
         uitlegPad: {
           stappen: [{ titel: "Global + local", tekst: "**Glokalisering** = globalisatie met lokale aanpassing. **Voorbeelden**:\n• McDonald's: Big Mac wereldwijd, maar McKroket NL, Maharaja Mac India (geen rund vanwege hindoeïsme), Teriyaki Burger Japan.\n• Netflix: globaal platform, lokale producties (NL-series, K-drama).\n• Wereld-merken passen verpakking, smaak, marketing aan." }],
           niveaus: { basis: "Globaal + lokaal.", simpeler: "Glokal = G+L", nogSimpeler: "Wereldmerk, lokaal aangepast." },
@@ -61,7 +61,7 @@ const steps = [
       },
       {
         q: "Wat zorgt voor **transport-revolutie** in globalisering?",
-        options: ["Containerschepen (sinds 1956)","Trein","Helikopters","Boten in oude tijd"],
+        options: ["Containerschepen","Trein","Helikopters","Boten in oude tijd"],
         answer: 0,
         wrongHints: [null, "Wel rol — eerder.", "Niet voor grote goederen.", "Lange tijd duur."],
         uitlegPad: {
@@ -71,7 +71,7 @@ const steps = [
       },
       {
         q: "Welk **antiglobalisering**-fenomeen?",
-        options: ["Re-shoring (bedrijven terug naar westen)","Containerschepen","Internet","Vliegreis"],
+        options: ["Re-shoring","Containerschepen","Internet","Vliegreis"],
         answer: 0,
         wrongHints: [null, "Containerschepen brengen juist goedkope goederen de hele wereld over — versterkt dat globalisering of remt het die?", "Het internet verbindt de wereld en maakt handel over grenzen makkelijker — past dat bij ánti-globalisering?", "Vliegreizen brengen landen en mensen dichter bij elkaar — wijst dat op méér of minder globalisering?"],
         uitlegPad: {
@@ -90,7 +90,7 @@ const steps = [
     checks: [
       {
         q: "Welke index combineert **BBP + onderwijs + levensverwachting**?",
-        options: ["HDI (Human Development Index)","Gini-coëfficiënt","BBP per cap","Big Mac Index"],
+        options: ["HDI","Gini-coëfficiënt","BBP per cap","Big Mac Index"],
         answer: 0,
         wrongHints: [null, "Niet — interne ongelijkheid.", "Alleen economie.", "Niet relevant."],
         uitlegPad: {
@@ -131,7 +131,7 @@ const steps = [
       },
       {
         q: "Wereld-armoede (<$2,15/dag) is sinds 1990:",
-        options: ["Sterk afgenomen (1,9 mld → ~700 mln)","Verdubbeld","Stabiel","Verviervoudigd"],
+        options: ["Sterk afgenomen","Verdubbeld","Stabiel","Verviervoudigd"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet stabiel — denk aan wat de groei van China en India sinds 1990 deed.", "Niet relevant."],
         uitlegPad: {
@@ -150,7 +150,7 @@ const steps = [
     checks: [
       {
         q: "**Demografische uitdaging Sub-Sahara**:",
-        options: ["Snelle bevolkingsgroei (2,5%/jaar)","Vergrijzing","Bevolkingsdaling","Stabiel"],
+        options: ["Snelle bevolkingsgroei","Vergrijzing","Bevolkingsdaling","Stabiel"],
         answer: 0,
         wrongHints: [null, "Niet — westers probleem.", "Tegenovergesteld.", "Niet — wel verandering."],
         uitlegPad: {
@@ -170,7 +170,7 @@ const steps = [
       },
       {
         q: "Wat is **Sahel-regio**?",
-        options: ["Zone tussen Sahara + savanne (Mali, Niger, Tsjaad)","Sahara zelf","Zuid-Afrika","Hoorn van Afrika"],
+        options: ["Overgangszone tussen Sahara en savanne","Sahara zelf","Zuid-Afrika","Hoorn van Afrika"],
         answer: 0,
         wrongHints: [null, "Niet — apart.", "Niet relevant.", "Hoorn = oost (Somalië, Ethiopië)."],
         uitlegPad: {
@@ -190,7 +190,7 @@ const steps = [
       },
       {
         q: "Welke is **success-story Sub-Sahara** sinds 1994?",
-        options: ["Rwanda (post-genocide wederopbouw)","Sudan (oorlog)","DRC (instabiel)","Centraal-Afrika"],
+        options: ["Rwanda (post-genocide wederopbouw)","Sudan (oorlog)","DRC (instabiel)","Centraal-Afrikaanse Republiek (conflict)"],
         answer: 0,
         wrongHints: [null, "Een land dat in oorlog verkeert, is lastig een succesverhaal te noemen — past 'oorlog' bij wederopbouw en groei?", "'Instabiel' betekent onrust en wisselende macht — kan zo'n land een voorbeeld van geslaagd herstel zijn?", "De Centraal-Afrikaanse Republiek kampt zelf met conflict en armoede — staat dat land bekend om succesvolle wederopbouw?"],
         uitlegPad: {
@@ -251,7 +251,7 @@ const steps = [
       },
       {
         q: "**Hong Kong**-statuut sinds 1997:",
-        options: ["'One country two systems' (geërodeerd na 2020)","Volledig China","Onafhankelijk","Brits"],
+        options: ["'One country, two systems'","Gewone Chinese provincie zonder eigen regels","Onafhankelijk","Brits"],
         answer: 0,
         wrongHints: [null, "In de praktijk bijna, formeel niet.", "Niet — al lang in China.", "Niet — 1997 overgedragen."],
         uitlegPad: {
@@ -290,7 +290,7 @@ const steps = [
       },
       {
         q: "**Nigeria** is rijk aan grondstoffen maar:",
-        options: ["Veel armoede + corruptie ('resource curse')","Heel welvarend","Stabiele democratie","Industrieleider"],
+        options: ["Veel armoede + corruptie","Heel welvarend","Stabiele democratie","Industrieleider"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet stabiel.", "Niet primair industrie."],
         uitlegPad: {
@@ -310,9 +310,9 @@ const steps = [
       },
       {
         q: "**SDG's** (Sustainable Development Goals) van VN gaan over:",
-        options: ["17 doelen voor 2030 (armoede/klimaat/onderwijs/etc.)","Olympische Spelen","Vredesakkoorden","Belastingen"],
+        options: ["Doelen voor duurzame ontwikkeling in 2030","Regels voor de wereldhandel","Vredesakkoorden","Belastingafspraken tussen landen"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet primair.", "Niet relevant."],
+        wrongHints: [null, "Dat is de taak van de WTO — waar staat de D van SDG voor?", "Niet primair.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "VN 2015", tekst: "**SDG's** (Sustainable Development Goals) = VN-doelen 2015-2030. **17 doelen** met 169 targets:\n1. Geen armoede\n2. Geen honger\n3. Goede gezondheid\n4. Onderwijs\n5. Gendergelijkheid\n...\n13. Klimaat\n...\n17. Partnerschap.\n\nVoortgang: gedeeltelijk + COVID/oorlog vertraagden. Veel onhaalbaar tegen 2030." }],
           niveaus: { basis: "17 doelen 2030.", simpeler: "SDG = VN-doelen 2030", nogSimpeler: "17 VN-doelen." },

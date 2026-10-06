@@ -22,7 +22,7 @@ const steps = [
     checks: [
       {
         q: "**Verstedelijking** wereldwijd in 2024 is ongeveer:",
-        options: ["57% in steden", "30%", "75%", "10%"],
+        options: ["57%", "30%", "75%", "10%"],
         answer: 0,
         wrongHints: [null, "Te weinig — was 1950.", "Te veel.", "Veel te weinig."],
         uitlegPad: {
@@ -35,7 +35,7 @@ const steps = [
         options: [
           "Trek van stadscentrum naar voorsteden / rand",
           "Migratie van platteland naar centrum",
-          "Vertrek uit stad",
+          "Vertrek uit het hele stedelijke gebied naar het platteland",
           "Verdichting binnenstad"
         ],
         answer: 0,
@@ -51,12 +51,12 @@ const steps = [
         q: "**Gentrification** = ?",
         options: [
           "Hoogopgeleide jongeren trekken naar oude wijken → huren stijgen → oude bewoners verdrongen",
-          "Nieuwe wijken bouwen",
-          "Migratie naar platteland",
-          "Stad afbreken"
+          "Nieuwe woonwijken bouwen aan de rand van de stad voor jonge gezinnen",
+          "Rijke bewoners verlaten de stad → huizen in oude wijken worden goedkoper",
+          "Oude wijken slopen → bewoners verhuizen naar nieuwbouw in voorsteden"
         ],
         answer: 0,
-        wrongHints: [null, "Te beperkt.", "Tegenovergesteld.", "Niet."],
+        wrongHints: [null, "Dat is uitbreiding van de stad (suburbanisatie), geen verandering in een bestaande wijk.", "Bij gentrification wordt een wijk juist duurder — wie komt er dan wonen?", "Bij gentrification blijven de oude panden juist staan en worden ze opgeknapt."],
         uitlegPad: {
           stappen: [
             { titel: "Verhitting woningmarkt", tekst: "Voorbeelden: Brooklyn (NYC) ooit arbeiderswijk, nu hipster-paradijs. Amsterdam-Noord ooit volkswijk, nu yuppie-buurt. Voordeel: investering + leefbaarheid. Nadeel: oorspronkelijke bewoners kunnen de huur niet meer betalen en moeten hun wijk uit." },
@@ -67,7 +67,7 @@ const steps = [
       {
         q: "Welke regio heeft de **explosiefste verstedelijking** vandaag?",
         options: [
-          "Sub-Sahara Afrika (Nigeria, Kenia, Ethiopië)",
+          "Afrika ten zuiden van de Sahara",
           "Nederland",
           "Japan",
           "Duitsland"
@@ -110,13 +110,13 @@ const steps = [
       {
         q: "**CBD** staat voor:",
         options: [
-          "Central Business District — kantoren-centrum stad",
+          "Central Business District",
           "Centraal Bestuur Departement",
-          "Cleaning + Buildings Done",
-          "Geen betekenis"
+          "Centrale Bouw Dienst",
+          "City Bus Depot"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Onzin.", "Wel betekenis."],
+        wrongHints: [null, "Het is een Engelse term uit de stadsgeografie — over welk deel van de stad gaat het?", "Denk aan het zakelijke hart van de stad, niet aan een overheidsdienst.", "Het gaat om een deel van de stad met kantoren en winkels, niet om vervoer."],
         uitlegPad: {
           stappen: [{ titel: "Zakelijk centrum", tekst: "Centrum met hoofdkantoren, grote winkels, restaurants. Hoge grondprijzen → hoogbouw. NL: Zuidas (A'dam-zuid), Beurs/Damrak (binnenstad). Londen: City + Canary Wharf. NYC: Manhattan-zuid." }],
           niveaus: { basis: "Central Business District.", simpeler: "Centrum kantoren.", nogSimpeler: "CBD" },
@@ -159,13 +159,13 @@ const steps = [
       {
         q: "**Donut-effect** in westerse steden:",
         options: [
-          "Stadscentrum verliest bewoners (vooral 's nachts) terwijl rand groeit",
+          "Stadscentrum loopt leeg terwijl de rand groeit",
           "Hoogbouw in centrum",
-          "Volle markt",
-          "Tijdsverschil"
+          "Centrum en rand groeien even hard",
+          "Rand loopt leeg terwijl het centrum groeit"
         ],
         answer: 0,
-        wrongHints: [null, "Niet.", "Niet relevant.", "Niet."],
+        wrongHints: [null, "Hoogbouw is juist een teken van drukte in het centrum — denk aan het gat in een donut.", "Bij een donut zit er een gat in het midden — groeit alles dan even hard?", "Andersom: waar zit het gat van de donut?"],
         uitlegPad: {
           stappen: [
             { titel: "Leeg gat in midden", tekst: "Naoorlogs: gezinnen verhuizen naar voorsteden. Centrum verliest woningen, alleen kantoor + winkel. Avond: centrum LEEG. Vandaag deels omgekeerd door gentrification + re-urbanisatie." },
@@ -176,7 +176,7 @@ const steps = [
       {
         q: "**Dharavi** (Mumbai) is een:",
         options: [
-          "Grootste krottenwijk Azië (~1 mln inwoners)",
+          "Een van de grootste krottenwijken van Azië",
           "Luxe wijk",
           "Toeristische plek alleen",
           "Bedrijventerrein zonder bewoners"
@@ -212,7 +212,7 @@ const steps = [
       {
         q: "Wat is een **'global city'** (Sassen)?",
         options: [
-          "Stad die wereldeconomie aanstuurt (NYC, Londen, Tokyo, etc.)",
+          "Stad die de wereldeconomie aanstuurt",
           "Toeristische topbestemming",
           "Stad >5 mln",
           "Hoofdstad van groot land"
@@ -228,7 +228,7 @@ const steps = [
       },
       {
         q: "Welke is **grootste metropolitan area** ter wereld?",
-        options: ["Tokyo-Yokohama (~37 mln)", "Mumbai", "New York", "Londen"],
+        options: ["Tokyo-Yokohama", "Mumbai", "New York", "Londen"],
         answer: 0,
         wrongHints: [null, "Niet — kleiner.", "Veel kleiner.", "Veel kleiner."],
         uitlegPad: {
@@ -239,13 +239,13 @@ const steps = [
       {
         q: "**Lagos** (Nigeria) is bijzonder door:",
         options: [
-          "Snelst-groeiende megacity wereldwijd",
+          "Een van de snelst groeiende megacities ter wereld",
           "Oudste stad",
           "Hoogste BBP",
           "Beste OV"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — relatief nieuw.", "Niet — laag BBP/capita.", "Niet — files zijn extreem."],
+        wrongHints: [null, "Niet — er zijn veel oudere steden.", "Niet — laag BBP/capita.", "Niet — files zijn extreem."],
         uitlegPad: {
           stappen: [
             { titel: "Van 200k naar 21 mln in 70 jaar", tekst: "1950: 200 000 inwoners. 2024: ~21 mln. Prognose 2050: 35 mln (in 2100 mss 100 mln). Een van de snelst groeiende steden ter wereld. Mix van miljardairs en grootste krottenwijken. Olie + nieuwe industrie + Nigeriaanse film (Nollywood) trekken instroom." },
@@ -282,7 +282,7 @@ const steps = [
       {
         q: "**Heat-island-effect** in steden:",
         options: [
-          "Stad 2-5°C warmer dan platteland door beton + minder groen",
+          "Stad warmer dan platteland",
           "Stad kouder dan platteland",
           "Geen verschil",
           "Alleen 's nachts warmer"
@@ -311,11 +311,11 @@ const steps = [
         options: [
           "Alle dagelijkse voorzieningen binnen 15 min lopen/fietsen",
           "Auto-verbod",
-          "Snel-stad",
-          "Tijdelijke woonplaats"
+          "Elke wijk een bus die om de 15 minuten rijdt",
+          "Maximaal 15 minuten met de auto naar je werk"
         ],
         answer: 0,
-        wrongHints: [null, "Niet hoofdidee.", "Niet relevant.", "Onzin."],
+        wrongHints: [null, "Niet hoofdidee.", "Het gaat niet om hoe vaak de bus rijdt, maar om wat er dichtbij is.", "Het idee is juist mínder autoritten — hoe kom je dan bij je voorzieningen?"],
         uitlegPad: {
           stappen: [
             { titel: "Burgemeester Hidalgo 2020", tekst: "Concept: school, dokter, winkel, park, werk binnen 15 min van huis. Minder verkeer en klimaat-impact, meer sociale binding. Parijs leidende stad. Vergelijkbaar: 'Superblocks' Barcelona (verkeers-luwe wijken)." },
@@ -382,12 +382,12 @@ const steps = [
         q: "Het concept **'donut-economy'** in Amsterdam:",
         options: [
           "Balans tussen menselijke behoeften (basis) + planetaire grenzen (plafond)",
-          "Veel donuts",
-          "Mond-vorm",
-          "Sport"
+          "Zo veel mogelijk economische groei, zonder grenzen",
+          "Bedrijven verhuizen van het centrum naar de rand",
+          "Alle winkels concentreren in de binnenstad"
         ],
         answer: 0,
-        wrongHints: [null, "De naam komt van de donut-vórm van het model, niet van het gebak zelf — waar staat die ronde vorm voor?", "Het gaat niet om een mond maar om een ronde ring-vorm die een economisch idee weergeeft.", "Donut-economy heeft niets met sport te maken — het is een model over de grenzen aan economische groei."],
+        wrongHints: [null, "Het model stelt juist een plafond aan wat de aarde aankan — mag groei dan onbeperkt?", "Dat is het donut-effect in de stad, iets anders dan de donut-economie.", "Het gaat om een model met een ondergrens en een bovengrens, niet om waar winkels staan."],
         uitlegPad: {
           stappen: [
             { titel: "Kate Raworth 2017", tekst: "Donut-vorm: binnenste cirkel = sociale ondergrens (geen mens zonder onderdak, eten, gezondheid, etc.). Buitenste = planetaire grens (klimaat, biodiversiteit). Economie moet TUSSEN beide ringen opereren. Amsterdam eerste stad die dit officieel omarmde (2020) als beleidskader." },
@@ -416,12 +416,12 @@ const steps = [
         q: "**'Circulaire economie'** in stad betekent:",
         options: [
           "Afval = grondstof voor iets anders (recycling op industrieel niveau)",
-          "Rondrijden",
+          "Een ringweg rond de stad aanleggen",
           "Niet recyclen",
-          "Alleen kopen"
+          "Producten sneller vervangen door nieuwe"
         ],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "'Circulair' slaat hier niet op een rondweg — wat gaat er rond?", "Tegenovergesteld.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
             { titel: "Geen lineair (maken-gebruiken-weggooien)", tekst: "In plaats van afval naar stortplaats: hergebruik, repareer, recycle. NL voorop: PET-flessen met statiegeld grotendeels gerecycled, oude kleren naar second-hand. Doel NL 2050: volledig circulaire economie." },
