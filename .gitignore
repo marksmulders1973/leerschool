@@ -17,3 +17,9 @@ tmp-*.mjs
 
 logs/
 docs/rapporten/*.pdf
+
+# Android-sleutels nooit in git (6 okt 2026)
+*.jks
+*.keystore
+android/build/
+android/.gradle/
