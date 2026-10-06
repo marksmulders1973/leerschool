@@ -32,7 +32,7 @@ const steps = [
         q: "Welk decimaal getal is het binaire getal **1101**?",
         options: ["13", "11", "26", "1101"],
         answer: 0,
-        wrongHints: [null, "Je hebt een plaatswaarde gemist — let op de 8.", "Dat is het dubbele; je telde een plaats te hoog.", "Binair lees je niet als 'duizendhonderdéén'."],
+        wrongHints: [null, "Let op de richting: de plaatswaarden lopen van rechts (1) naar links.", "Dat is het dubbele; je telde een plaats te hoog.", "Binair lees je niet als 'duizendhonderdéén'."],
         uitlegPad: {
           stappen: [{ titel: "Plaatswaarden optellen", tekst: "Zet de plaatswaarden erboven (van rechts naar links: 1, 2, 4, 8):\n```\n 8  4  2  1\n 1  1  0  1\n```\nTel op waar een **1** staat: 8 + 4 + 0 + 1 = **13**." }],
           niveaus: { basis: "8+4+0+1 = 13.", simpeler: "1101 = 8+4+1 = 13", nogSimpeler: "A." },
