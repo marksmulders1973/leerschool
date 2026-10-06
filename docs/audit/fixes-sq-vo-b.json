@@ -1,0 +1,1574 @@
+[
+  {
+    "waar": "aardrijkskunde.klas1[1]",
+    "oud": "options: [\"Kanteling aardas\", \"Zonnevlekken\", \"Afstand tot zon of Zonnevlekken\", \"Afstand tot zon\"]",
+    "nieuw": "options: [\"Kanteling aardas\", \"Zonnevlekken\", \"Draaiing van de aarde om haar as\", \"Afstand tot zon\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[2]",
+    "oud": "options: [\"Een woestijn\", \"Een eiland\", \"Een riviermonding\", \"Een woestijn of Een eiland\"]",
+    "nieuw": "options: [\"Een woestijn\", \"Een eiland\", \"Een riviermonding\", \"Een bergketen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[3]",
+    "oud": "options: [\"Een opening in de aardkorst\", \"Een erosiegebied\", \"Een erosiegebied of Een bergmeer\", \"Een gletsjer\"]",
+    "nieuw": "options: [\"Een opening in de aardkorst\", \"Een erosiegebied\", \"Een bergmeer\", \"Een gletsjer\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[5]",
+    "oud": "options: [\"Eén gewas op grote schaal\", \"Meerdere gewassen\", \"Biologische landbouw\", \"Biologische landbouw of Meerdere gewassen\"]",
+    "nieuw": "options: [\"Eén gewas op grote schaal\", \"Meerdere gewassen\", \"Biologische landbouw\", \"Wisselteelt\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[6]",
+    "oud": "options: [\"Klimaatverandering of Ontbossing\", \"Ontbossing\", \"Verplaatsing van mensen\", \"Klimaatverandering\"]",
+    "nieuw": "options: [\"Groei van de bevolking\", \"Ontbossing\", \"Verplaatsing van mensen\", \"Klimaatverandering\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[7]",
+    "oud": "options: [\"Een tropisch bos met veel neerslag\", \"Een bos in droge gebieden of Een naaldbos\", \"Een bos in droge gebieden\", \"Een naaldbos\"]",
+    "nieuw": "options: [\"Een tropisch bos met veel neerslag\", \"Een gemengd loofbos\", \"Een bos in droge gebieden\", \"Een naaldbos\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[8]",
+    "oud": "options: [\"De kern van de aarde of De atmosfeer\", \"De kern van de aarde\", \"De atmosfeer\", \"De buitenste laag van de aarde\"]",
+    "nieuw": "options: [\"De aardmantel\", \"De kern van de aarde\", \"De atmosfeer\", \"De buitenste laag van de aarde\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[9]",
+    "oud": "options: [\"Gebied dat afwatert op één rivier\", \"Een stuwmeer\", \"Gebied rond een stad\", \"Gebied rond een stad of Een stuwmeer\"]",
+    "nieuw": "options: [\"Gebied dat afwatert op één rivier\", \"Een stuwmeer\", \"Gebied rond een stad\", \"Een overstromingsvlakte\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[10]",
+    "oud": "options: [\"Vulkaanuitbarsting\", \"Afslijting van gesteente door wind/lucht\", \"Aardbevingsschade\", \"Afslijting van gesteente door wind/water\"]",
+    "nieuw": "options: [\"Vulkaanuitbarsting\", \"Afzetting van zand door een rivier\", \"Aardbevingsschade\", \"Afslijting van gesteente door wind/water\"]",
+    "reden": "afleider 'door wind/lucht' was half goed (wind veroorzaakt ook erosie) en bijna-kopie"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[11]",
+    "oud": "options: [\"Grasland met verspreide bomen\", \"Toendra\", \"Regenwoud onder bepaalde omstandigheden\", \"Woestijn\"]",
+    "nieuw": "options: [\"Grasland met verspreide bomen\", \"Toendra\", \"Regenwoud\", \"Woestijn\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[12]",
+    "oud": "options: [\"Een breedtegraad\", \"Een breedtegraad, De keerkring en De poolcirkel van de aarde\", \"De poolcirkel\", \"De denkbeeldige lijn rond het midden van de aarde\"]",
+    "nieuw": "options: [\"De nulmeridiaan\", \"De noorderkeerkring\", \"De poolcirkel\", \"De denkbeeldige lijn rond het midden van de aarde\"]",
+    "reden": "'Een breedtegraad' was ook goed (evenaar = 0° breedte) + plaksel"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[13]",
+    "oud": "options: [\"Verticale lijn op de globe of Een hoogtecurve\", \"Verticale lijn op de globe\", \"Horizontale lijn op de globe\", \"Een hoogtecurve\"]",
+    "nieuw": "options: [\"Een windrichting\", \"Verticale lijn op de globe\", \"Horizontale lijn op de globe\", \"Een hoogtecurve\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[14]",
+    "oud": "options: [\"Biologische landbouw\", \"Trek naar het platteland of Biologische landbouw\", \"Trek naar het platteland\", \"Overgang naar fabrieksproductie\"]",
+    "nieuw": "options: [\"Biologische landbouw\", \"Ontbossing voor landbouw\", \"Trek naar het platteland\", \"Overgang naar fabrieksproductie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[15]",
+    "oud": "options: [\"Een warme of koude zeestroom\", \"Een windstroom\", \"Een windstroom of Een getijde\", \"Een getijde\"]",
+    "nieuw": "options: [\"Een warme of koude zeestroom\", \"Een windstroom\", \"Een stroomversnelling\", \"Een getijde\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[16]",
+    "oud": "options: [\"Vloeibaar gesteente\", \"Gas in de bodem\", \"Afzettingsmateriaal (zand, slib)\", \"Vloeibaar gesteente of Gas in de bodem\"]",
+    "nieuw": "options: [\"Vloeibaar gesteente\", \"Gas in de bodem\", \"Afzettingsmateriaal (zand, slib)\", \"Grondwater\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[18]",
+    "oud": "options: [\"Toenemende wereldwijde verbondenheid\", \"Isolationisme onder bepaalde omstandigheden\", \"Lokale handel\", \"Nationalisme\"]",
+    "nieuw": "options: [\"Toenemende wereldwijde verbondenheid\", \"Isolationisme\", \"Lokale handel\", \"Nationalisme\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[19]",
+    "oud": "options: [\"Verticale lijn op de globe\", \"Een windrichting\", \"Een windrichting of Horizontale lijn\", \"Horizontale lijn\"]",
+    "nieuw": "options: [\"Verticale lijn op de globe\", \"Een windrichting\", \"Een hoogtelijn\", \"Horizontale lijn\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[20]",
+    "oud": "options: [\"Een aaneengesloten stedelijk gebied van meerdere steden\", \"Een industriegebied\", \"Een dunbevolkt gebied\", \"Een industriegebied, Een dunbevolkt gebied en Een haven van meerdere steden\"]",
+    "nieuw": "options: [\"Een aaneengesloten stedelijk gebied van meerdere steden\", \"Een industriegebied\", \"Een dunbevolkt gebied\", \"Een haven\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[22]",
+    "oud": "options: [\"Een kaart die hoogteverschillen en landkenmerken toont\", \"Een kaart met klimaatgegevens onder bepaalde omstandigheden\", \"Een politieke kaart\", \"Een satellietfoto\"]",
+    "nieuw": "options: [\"Een kaart die hoogteverschillen en landkenmerken toont\", \"Een kaart met klimaatgegevens\", \"Een politieke kaart\", \"Een satellietfoto\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[23]",
+    "oud": "options: [\"Het gebied rondom een stad\", \"Een overstromingsgebied\", \"Het totale gebied waarvan regenwater afwatert via één riviernetwerk naar zee\", \"Het gebied rondom een stad, Een overstromingsgebied en Een stuwmeer naar zee\"]",
+    "nieuw": "options: [\"Het gebied rondom een stad\", \"Een overstromingsgebied\", \"Het totale gebied waarvan regenwater afwatert via één riviernetwerk naar zee\", \"Een stuwmeer\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[24]",
+    "oud": "options: [\"Een klimaat met droge en natte seizoenen door seizoensgebonden winden\", \"Een gematigd klimaat met droge en natte seizoenen door seizoensgebonden winden\", \"Een droog klimaat\", \"Een gematigd klimaat\"]",
+    "nieuw": "options: [\"Een klimaat met droge en natte seizoenen door seizoensgebonden winden\", \"Een poolklimaat\", \"Een droog klimaat\", \"Een gematigd klimaat\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[25]",
+    "oud": "options: [\"Gebied met veel vulkanen en aardbevingen rond de Stille Oceaan\", \"Een vulkaan in Afrika\", \"Een koraalkust\", \"Een vulkaan in Afrika met veel vulkanen en aardbevingen rond de Stille Oceaan\"]",
+    "nieuw": "options: [\"Gebied met veel vulkanen en aardbevingen rond de Stille Oceaan\", \"Een vulkaan in Afrika\", \"Een koraalkust\", \"Een woestijn in Australië\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[27]",
+    "oud": "options: [\"Een depressie\", \"Een orkaan\", \"Een hogedrukgebied met stabiel, droog weer\", \"Een lagedrukgebied onder bepaalde omstandigheden\"]",
+    "nieuw": "options: [\"Een depressie\", \"Een orkaan\", \"Een hogedrukgebied met stabiel, droog weer\", \"Een lagedrukgebied\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[28]",
+    "oud": "options: [\"Het aantal inwoners per km²\", \"De urbanisatiegraad\", \"Het totale aantal inwoners\", \"Het totale aantal inwoners of De urbanisatiegraad\"]",
+    "nieuw": "options: [\"Het aantal inwoners per km²\", \"De urbanisatiegraad\", \"Het totale aantal inwoners\", \"Het aantal geboorten per jaar\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[29]",
+    "oud": "options: [\"Tropisch\", \"Poolklimaat\", \"Warme droge zomers en milde natte winters\", \"Droog en koud onder bepaalde omstandigheden\"]",
+    "nieuw": "options: [\"Tropisch\", \"Poolklimaat\", \"Warme droge zomers en milde natte winters\", \"Droog en koud\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[30]",
+    "oud": "options: [\"Zeeklimaat: gematigder door nabijheid zee; landklimaat: grotere temperatuurverschillen\", \"landklimaat: grotere temperatuurverschillen; Zeeklimaat: gematigder door nabijheid zee\", \"Landklimaat: gematigder\", \"Zeeklimaat: extremer\"]",
+    "nieuw": "options: [\"Zeeklimaat: gematigder door nabijheid zee; landklimaat: grotere temperatuurverschillen\", \"Zeeklimaat: altijd kouder dan een landklimaat\", \"Landklimaat: gematigder\", \"Zeeklimaat: extremer\"]",
+    "reden": "tweede (half) goede optie (omgedraaide kopie)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[31]",
+    "oud": "options: [\"Schoon water achter consumptie, gewonnen uit grondwater, rivieren of ontzilting\", \"Fabriekswater\", \"Schoon water voor consumptie, gewonnen uit grondwater, rivieren of ontzilting\", \"Regenwater alleen\"]",
+    "nieuw": "options: [\"Zout zeewater dat je direct kunt drinken\", \"Fabriekswater\", \"Schoon water voor consumptie, gewonnen uit grondwater, rivieren of ontzilting\", \"Regenwater alleen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[32]",
+    "oud": "options: [\"Een stedelijk gebied onder bepaalde omstandigheden\", \"Een recreatiegebied\", \"Een gebied met landbouw, veeteelt of tuinbouw\", \"Een industriegebied\"]",
+    "nieuw": "options: [\"Een stedelijk gebied\", \"Een recreatiegebied\", \"Een gebied met landbouw, veeteelt of tuinbouw\", \"Een industriegebied\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[33]",
+    "oud": "options: [\"De kleur van een kaart\", \"De kleur van een kaart, Een legenda en Een coördinatensysteem op kaart en werkelijke afstand\", \"Een coördinatensysteem\", \"De verhouding tussen afstand op kaart en werkelijke afstand\"]",
+    "nieuw": "options: [\"De kleur van een kaart\", \"Een legenda\", \"Een coördinatensysteem\", \"De verhouding tussen afstand op kaart en werkelijke afstand\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[34]",
+    "oud": "options: [\"Een industrieel gas dat warmte vasthoudt in de atmosfeer (bv. CO2, methaan)\", \"Een industrieel gas\", \"Een schoon gas\", \"Een gas dat warmte vasthoudt in de atmosfeer (bv. CO2, methaan)\"]",
+    "nieuw": "options: [\"Een gas dat de aarde afkoelt\", \"Een industrieel gas\", \"Een schoon gas\", \"Een gas dat warmte vasthoudt in de atmosfeer (bv. CO2, methaan)\"]",
+    "reden": "tweede (half) goede optie ('industrieel gas dat warmte vasthoudt' was ook goed)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[35]",
+    "oud": "options: [\"Eiland: volledig door lucht omringd; schiereiland: aan drie kanten water\", \"Eiland: aan drie kanten\", \"Schiereiland: volledig omringd\", \"Eiland: volledig door water omringd; schiereiland: aan drie kanten water\"]",
+    "nieuw": "options: [\"Eiland: ligt altijd in een meer; schiereiland: in zee\", \"Eiland: aan drie kanten\", \"Schiereiland: volledig omringd\", \"Eiland: volledig door water omringd; schiereiland: aan drie kanten water\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[36]",
+    "oud": "options: [\"Een reliëfmodel\", \"Een reliëfmodel, Een luchtfoto en Een satellietfoto van de aarde of een deel ervan op een plat vlak\", \"Een grafische weergave van de aarde of een deel ervan op een plat vlak\", \"Een satellietfoto\"]",
+    "nieuw": "options: [\"Een reliëfmodel\", \"Een luchtfoto\", \"Een grafische weergave van de aarde of een deel ervan op een plat vlak\", \"Een satellietfoto\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[37]",
+    "oud": "options: [\"Tropisch klimaat\", \"Tropisch klimaat met vier seizoenen, matige temperaturen en regelmatige neerslag\", \"Klimaat met vier seizoenen, matige temperaturen en regelmatige neerslag\", \"Woestijnklimaat\"]",
+    "nieuw": "options: [\"Tropisch klimaat\", \"Poolklimaat\", \"Klimaat met vier seizoenen, matige temperaturen en regelmatige neerslag\", \"Woestijnklimaat\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[38]",
+    "oud": "options: [\"De gaslaag rondom de aarde (stikstof, zuurstof, CO2 e.a.)\", \"Het magnetisch veld\", \"De mantel van de aarde\", \"De gaslaag rondom de aarde (stikstof, waterstof, CO2 e.a.)\"]",
+    "nieuw": "options: [\"De gaslaag rondom de aarde (stikstof, zuurstof, CO2 e.a.)\", \"Het magnetisch veld\", \"De mantel van de aarde\", \"De ijskappen op de polen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[39]",
+    "oud": "options: [\"Een rivier, Een veranda en Een plateau op een hellend terrein, gevormd door erosie of mensenhanden\", \"Een veranda\", \"Een plateau\", \"Een vlak stuk land op een hellend terrein, gevormd door erosie of mensenhanden\"]",
+    "nieuw": "options: [\"Een rivierbedding\", \"Een veranda\", \"Een plateau\", \"Een vlak stuk land op een hellend terrein, gevormd door erosie of mensenhanden\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[40]",
+    "oud": "options: [\"Oost = boven, Oost = links, West = rechts en Geen verschil op een standaard kaart (noord boven)\", \"Oost = links, West = rechts\", \"Oost = rechts, West = links op een standaard kaart (noord boven)\", \"Geen verschil\"]",
+    "nieuw": "options: [\"Oost = onder, West = boven\", \"Oost = links, West = rechts\", \"Oost = rechts, West = links op een standaard kaart (noord boven)\", \"Geen verschil\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[41]",
+    "oud": "options: [\"Een grafiek die de gemiddelde temperatuur en neerslag per maand toont\", \"Een topografische kaart die de gemiddelde temperatuur en neerslag per maand toont\", \"Een topografische kaart\", \"Een windroosdiagram\"]",
+    "nieuw": "options: [\"Een grafiek die de gemiddelde temperatuur en neerslag per maand toont\", \"Een kaart met hoogtelijnen\", \"Een topografische kaart\", \"Een windroosdiagram\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[42]",
+    "oud": "options: [\"Computersoftware achter ruimtelijke data-analyse en kaartproductie\", \"Een satellietsysteem\", \"Een navigatietool\", \"Computersoftware voor ruimtelijke data-analyse en kaartproductie\"]",
+    "nieuw": "options: [\"Een programma om satellieten te besturen\", \"Een satellietsysteem\", \"Een navigatietool\", \"Computersoftware voor ruimtelijke data-analyse en kaartproductie\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[43]",
+    "oud": "options: [\"Een economisch systeem gericht op hergebruik en geen afval\", \"Een digitale economie\", \"Een economisch systeem gericht op hergebruik en alle afval\", \"Een regionale economie\"]",
+    "nieuw": "options: [\"Een economisch systeem gericht op hergebruik en geen afval\", \"Een digitale economie\", \"Een economie gericht op zoveel mogelijk nieuwe producten\", \"Een regionale economie\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[44]",
+    "oud": "options: [\"Grondwaterprobleem\", \"Het wegspoelen van de bovenste vruchtbare bodemlaag door wind of lucht\", \"Bodemvervuiling\", \"Het wegspoelen van de bovenste vruchtbare bodemlaag door wind of water\"]",
+    "nieuw": "options: [\"Grondwaterprobleem\", \"Het verzakken van de bodem\", \"Bodemvervuiling\", \"Het wegspoelen van de bovenste vruchtbare bodemlaag door wind of water\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord) ('wind of lucht' half goed)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[45]",
+    "oud": "options: [\"Geologische opheffing\", \"Grondverzakking door water van de grond, bv. door gaswinning of veenoxidatie\", \"Grondverzakking door water\", \"Het zakken van de grond, bv. door gaswinning of veenoxidatie\"]",
+    "nieuw": "options: [\"Geologische opheffing\", \"Afslijting van de bodem door wind\", \"Het onderlopen van land bij hoogwater\", \"Het zakken van de grond, bv. door gaswinning of veenoxidatie\"]",
+    "reden": "plaksel-afleider vervangen; 'Grondverzakking door water' was half goed"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[46]",
+    "oud": "options: [\"Handelssubsidie\", \"EU-handelsverdrag waarbij producenten in ontwikkelingslanden een eerlijke prijs krijgen\", \"Handelssysteem waarbij producenten in ontwikkelingslanden een eerlijke prijs krijgen\", \"EU-handelsverdrag\"]",
+    "nieuw": "options: [\"Handelssubsidie\", \"Handel zonder invoerrechten\", \"Handelssysteem waarbij producenten in ontwikkelingslanden een eerlijke prijs krijgen\", \"EU-handelsverdrag\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[47]",
+    "oud": "options: [\"Sociale banden die migratie vergemakkelijken via bestaande diasporagemeenschappen\", \"Reisbureau voor migranten\", \"Een vluchtelingenkamp\", \"Reisbureau voor migranten die migratie vergemakkelijken via bestaande diasporagemeenschappen\"]",
+    "nieuw": "options: [\"Sociale banden die migratie vergemakkelijken via bestaande diasporagemeenschappen\", \"Reisbureau voor migranten\", \"Een vluchtelingenkamp\", \"Een grenscontrolesysteem\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[48]",
+    "oud": "options: [\"Natural hazard = potentieel gevaar; disaster = wanneer mensen worden getroffen en schade optreedt\", \"Disaster = groter gevaar\", \"disaster = wanneer mensen worden getroffen en schade optreedt; Natural hazard = potentieel gevaar\", \"Hazard = altijd een ramp\"]",
+    "nieuw": "options: [\"Natural hazard = potentieel gevaar; disaster = wanneer mensen worden getroffen en schade optreedt\", \"Disaster = groter gevaar\", \"Hazard = alleen door mensen veroorzaakt\", \"Hazard = altijd een ramp\"]",
+    "reden": "tweede (half) goede optie (omgedraaide kopie)"
+  },
+  {
+    "waar": "aardrijkskunde.klas1[49]",
+    "oud": "options: [\"Een industriegebied\", \"Een verbindingszone achter verkeer, natuur of migratie\", \"Een verbindingszone voor verkeer, natuur of migratie\", \"Een grensgebied\"]",
+    "nieuw": "options: [\"Een industriegebied\", \"Een afgesloten militair gebied\", \"Een verbindingszone voor verkeer, natuur of migratie\", \"Een grensgebied\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[1]",
+    "oud": "options: [\"Oceaanstromen\", \"Wolkenformaties\", \"Wolkenformaties of Oceaanstromen\", \"Stukken aardkorst\"]",
+    "nieuw": "options: [\"Oceaanstromen\", \"Wolkenformaties\", \"Lagen in de atmosfeer\", \"Stukken aardkorst\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[2]",
+    "oud": "options: [\"Model van migratie onder bepaalde omstandigheden\", \"Economisch model\", \"Model van bevolkingsgroei naar stabilisatie\", \"Klimaatmodel\"]",
+    "nieuw": "options: [\"Model van migratie\", \"Economisch model\", \"Model van bevolkingsgroei naar stabilisatie\", \"Klimaatmodel\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[3]",
+    "oud": "options: [\"Een stad met > 1 miljoen of Elke grote stad\", \"Elke grote stad\", \"Een stad met > 1 miljoen\", \"Een stad met > 10 miljoen inwoners\"]",
+    "nieuw": "options: [\"Een stad met veel hoogbouw\", \"Elke grote stad\", \"Een stad met > 1 miljoen\", \"Een stad met > 10 miljoen inwoners\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[5]",
+    "oud": "options: [\"Betere kansen elders of Familiebanden\", \"Familiebanden\", \"Betere kansen elders\", \"Reden om een land te verlaten\"]",
+    "nieuw": "options: [\"Lagere belastingen elders\", \"Familiebanden\", \"Betere kansen elders\", \"Reden om een land te verlaten\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[6]",
+    "oud": "options: [\"Handelsverdrag of Migratiepact\", \"Handelsverdrag\", \"Migratiepact\", \"Internationaal klimaatverdrag\"]",
+    "nieuw": "options: [\"Vredesverdrag\", \"Handelsverdrag\", \"Migratiepact\", \"Internationaal klimaatverdrag\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[7]",
+    "oud": "options: [\"Meer mensen naar steden\", \"Plattelandsontwikkeling\", \"Trek vanuit steden naar randgemeenten\", \"Meer mensen naar steden of Plattelandsontwikkeling\"]",
+    "nieuw": "options: [\"Meer mensen naar steden\", \"Plattelandsontwikkeling\", \"Trek vanuit steden naar randgemeenten\", \"Groei van industrie op het platteland\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[8]",
+    "oud": "options: [\"Een omslagpunt zonder terug\", \"Een klimaatverdrag of Een weersextreem\", \"Een weersextreem\", \"Een klimaatverdrag\"]",
+    "nieuw": "options: [\"Een omslagpunt zonder terug\", \"Een klimaatmodel\", \"Een weersextreem\", \"Een klimaatverdrag\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[9]",
+    "oud": "options: [\"Een vliegveld\", \"Een winkelcentrum\", \"Knooppunt achter wereldwijde goederenstromen\", \"Knooppunt voor wereldwijde goederenstromen\"]",
+    "nieuw": "options: [\"Een vliegveld\", \"Een winkelcentrum\", \"Een fabriek voor exportproducten\", \"Knooppunt voor wereldwijde goederenstromen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[10]",
+    "oud": "options: [\"Benodigde oppervlakte achter levensstijl\", \"Maat voor biodiversiteit\", \"Benodigde oppervlakte voor levensstijl\", \"CO2-uitstoot per persoon\"]",
+    "nieuw": "options: [\"Hoeveelheid afval per huishouden\", \"Maat voor biodiversiteit\", \"Benodigde oppervlakte voor levensstijl\", \"CO2-uitstoot per persoon\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[11]",
+    "oud": "options: [\"Een milieu-activist\", \"Een milieu-activist of Iemand op vakantie\", \"Iemand op vakantie\", \"Iemand gedwongen te vluchten door klimaat\"]",
+    "nieuw": "options: [\"Een milieu-activist\", \"Een klimaatwetenschapper\", \"Iemand op vakantie\", \"Iemand gedwongen te vluchten door klimaat\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[12]",
+    "oud": "options: [\"Een stad met mondiale economische invloed\", \"Een toeristische stad onder bepaalde omstandigheden\", \"Een VN-stad\", \"Elke grote stad\"]",
+    "nieuw": "options: [\"Een stad met mondiale economische invloed\", \"Een toeristische stad\", \"Een VN-stad\", \"Elke grote stad\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[13]",
+    "oud": "options: [\"Verdwijnen van woestijnen of IJsvorming\", \"Verdwijnen van woestijnen\", \"Uitbreiding van woestijnen\", \"IJsvorming\"]",
+    "nieuw": "options: [\"Smelten van gletsjers\", \"Verdwijnen van woestijnen\", \"Uitbreiding van woestijnen\", \"IJsvorming\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[14]",
+    "oud": "options: [\"Geen\", \"Weer = globaal\", \"Klimaat = lange termijn gemiddelde, weer = actueel\", \"Klimaat = lokaal in de moderne taal- en letterkunde\"]",
+    "nieuw": "options: [\"Geen\", \"Weer = globaal\", \"Klimaat = lange termijn gemiddelde, weer = actueel\", \"Klimaat = alleen de temperatuur\"]",
+    "reden": "onzin-afleider ('in de moderne taal- en letterkunde')"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[15]",
+    "oud": "options: [\"Een ontwikkelingsland of Een eilandstaat\", \"Een eilandstaat\", \"Een snel groeiende economie\", \"Een ontwikkelingsland\"], answer: 2, explanation: \"BRICS: Brazilië, Rusland, India, China, Zuid-Afrika — opkomende economieën.\"",
+    "nieuw": "options: [\"Een EU-land in West-Europa\", \"Een eilandstaat\", \"Een snel groeiende economie\", \"Een ontwikkelingsland\"], answer: 2, explanation: \"BRICS begon met Brazilië, Rusland, India, China en Zuid-Afrika — opkomende economieën. Sinds 2024 zijn er meer landen bij gekomen (o.a. Egypte, Ethiopië, Iran, de Verenigde Arabische Emiraten en Indonesië).\"",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[16]",
+    "oud": "options: [\"Migratieverdrag\", \"Handelsverdrag\", \"Klimaatverdrag (2015) max. 1,5°C opwarming\", \"Veiligheidsverdrag onder bepaalde omstandigheden\"]",
+    "nieuw": "options: [\"Migratieverdrag\", \"Handelsverdrag\", \"Klimaatverdrag (2015) max. 1,5°C opwarming\", \"Veiligheidsverdrag\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[17]",
+    "oud": "options: [\"Menselijke draagkracht\", \"Technologische capaciteit\", \"Technologische capaciteit of Menselijke draagkracht\", \"Productiviteit van een ecosysteem\"]",
+    "nieuw": "options: [\"Menselijke draagkracht\", \"Technologische capaciteit\", \"Opslagcapaciteit van batterijen\", \"Productiviteit van een ecosysteem\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[18]",
+    "oud": "options: [\"Stikstof\", \"Gassen in een kas onder bepaalde omstandigheden\", \"Schone lucht\", \"CO2, methaan e.a. die warmte vasthouden\"]",
+    "nieuw": "options: [\"Stikstof\", \"Edelgassen zoals helium\", \"Schone lucht\", \"CO2, methaan e.a. die warmte vasthouden\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[19]",
+    "oud": "options: [\"Een industriepark onder bepaalde omstandigheden\", \"Een snelweg\", \"Overgangsgebied tussen twee klimaatzones\", \"Een kustgebied\"]",
+    "nieuw": "options: [\"Een industriepark\", \"Een snelweg\", \"Overgangsgebied tussen twee klimaatzones\", \"Een kustgebied\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[20]",
+    "oud": "options: [\"Binnenland vs. kust\", \"Binnenland vs. kust, Noord vs. Zuid en Stadscentrum vs. buitenwijk tussen ontwikkelde kernen en afhankelijke randgebieden\", \"Ongelijke machtsverhouding tussen ontwikkelde kernen en afhankelijke randgebieden\", \"Stadscentrum vs. buitenwijk\"]",
+    "nieuw": "options: [\"Binnenland vs. kust\", \"Laagland vs. hoogland\", \"Ongelijke machtsverhouding tussen ontwikkelde kernen en afhankelijke randgebieden\", \"Stadscentrum vs. buitenwijk\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[21]",
+    "oud": "options: [\"Een irrigatiesysteem, Een landbouwinstrument en Een rivier in Afrika van landbouw\", \"Een landbouwinstrument\", \"Historisch vruchtbaar gebied in het Midden-Oosten, wieg van landbouw\", \"Een rivier in Afrika\"]",
+    "nieuw": "options: [\"Een irrigatiesysteem\", \"Een landbouwinstrument\", \"Historisch vruchtbaar gebied in het Midden-Oosten, wieg van landbouw\", \"Een rivier in Afrika\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[22]",
+    "oud": "options: [\"Steden zijn warmer dan omliggend platteland door bebouwing en industrie\", \"Opwarming door vulkanen\", \"Hittegolven in woestijnen\", \"Steden zijn kouder dan omliggend platteland door bebouwing en industrie\"]",
+    "nieuw": "options: [\"Steden zijn warmer dan omliggend platteland door bebouwing en industrie\", \"Opwarming door vulkanen\", \"Hittegolven in woestijnen\", \"Een effect van zeewind op eilanden\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[23]",
+    "oud": "options: [\"Push = drijft mensen weg; pull = trekt mensen aan\", \"Pull = armoede, push = welvaart\", \"Beide zijn economisch\", \"Pull = armoede, push = welvaart of Beide zijn economisch\"]",
+    "nieuw": "options: [\"Push = drijft mensen weg; pull = trekt mensen aan\", \"Pull = armoede, push = welvaart\", \"Beide zijn economisch\", \"Push en pull betekenen hetzelfde\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[24]",
+    "oud": "options: [\"De invloed van geografie op politieke macht en internationale betrekkingen\", \"Economische geografie\", \"Interne politiek\", \"Economische geografie van geografie op politieke macht en internationale betrekkingen\"]",
+    "nieuw": "options: [\"De invloed van geografie op politieke macht en internationale betrekkingen\", \"Economische geografie\", \"Interne politiek\", \"Buitenlandse handel\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[25]",
+    "oud": "options: [\"Biodiversiteitsbehoud van broeikasgasuitstoot door geïndustrialiseerde landen\", \"Biodiversiteitsbehoud\", \"Reductie van broeikasgasuitstoot door geïndustrialiseerde landen\", \"Oceaanvervuiling\"]",
+    "nieuw": "options: [\"Bescherming van de ozonlaag\", \"Biodiversiteitsbehoud\", \"Reductie van broeikasgasuitstoot door geïndustrialiseerde landen\", \"Oceaanvervuiling\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[26]",
+    "oud": "options: [\"Een polaire baan\", \"Een laag-aardse baan waarbij de satelliet gelijke omlooptijd heeft als de aardrotatie\", \"Een laag-aardse baan\", \"Een satellietbaan waarbij de satelliet gelijke omlooptijd heeft als de aardrotatie\"]",
+    "nieuw": "options: [\"Een polaire baan\", \"Een baan om de maan\", \"Een laag-aardse baan\", \"Een satellietbaan waarbij de satelliet gelijke omlooptijd heeft als de aardrotatie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[27]",
+    "oud": "options: [\"Ontwikkeling die voldoet aan huidige behoeften zonder toekomstige generaties te benadelen\", \"Economische groei ten koste van milieu die voldoet aan huidige behoeften zonder toekomstige generaties te benadelen\", \"Energiebesparing alleen\", \"Economische groei ten koste van milieu\"]",
+    "nieuw": "options: [\"Ontwikkeling die voldoet aan huidige behoeften zonder toekomstige generaties te benadelen\", \"Zo snel mogelijk bouwen\", \"Energiebesparing alleen\", \"Economische groei ten koste van milieu\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[28]",
+    "oud": "options: [\"Economisch voordeel wanneer de werkzame bevolking kleiner is dan afhankelijken\", \"Hoge bevolkingsgroei\", \"Dalende kindersterfte\", \"Economisch voordeel wanneer de werkzame bevolking groter is dan afhankelijken\"]",
+    "nieuw": "options: [\"Economisch nadeel door vergrijzing\", \"Hoge bevolkingsgroei\", \"Dalende kindersterfte\", \"Economisch voordeel wanneer de werkzame bevolking groter is dan afhankelijken\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[29]",
+    "oud": "options: [\"Industrie die niet gebonden is aan grondstoffen of markten en zich vrij kan vestigen\", \"Een zwevende industrie\", \"Een zwevende industrie die niet gebonden is aan grondstoffen of markten en zich vrij kan vestigen\", \"Een agrarische sector\"]",
+    "nieuw": "options: [\"Industrie die niet gebonden is aan grondstoffen of markten en zich vrij kan vestigen\", \"Een zwevende industrie\", \"Een mijnbouwsector\", \"Een agrarische sector\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[30]",
+    "oud": "options: [\"Centraal geplande productie\", \"Centraal geplande productie, Massaproductie en Industriële revolutie van bedrijven\", \"Industriële revolutie\", \"Flexibele, gespecialiseerde productie in netwerken van bedrijven\"]",
+    "nieuw": "options: [\"Centraal geplande productie\", \"Massaproductie aan de lopende band\", \"Industriële revolutie\", \"Flexibele, gespecialiseerde productie in netwerken van bedrijven\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[31]",
+    "oud": "options: [\"Suburbanisatie\", \"Stadsuitbreiding\", \"De opwaardering van een stadswijk waardoor de prijzen stijgen en oorspronkelijke bewoners worden verdreven\", \"Stadsuitbreiding van een stadswijk waardoor de prijzen stijgen en oorspronkelijke bewoners worden verdreven\"]",
+    "nieuw": "options: [\"Suburbanisatie\", \"Stadsuitbreiding\", \"De opwaardering van een stadswijk waardoor de prijzen stijgen en oorspronkelijke bewoners worden verdreven\", \"Krimp van een stad\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[32]",
+    "oud": "options: [\"Een lokaal productienetwerk waarbij verschillende landen bijdragen aan een product\", \"Een vrijhandelszone\", \"Een lokaal productienetwerk\", \"Internationale netwerken waarbij verschillende landen bijdragen aan een product\"]",
+    "nieuw": "options: [\"Een nationale wegenkaart\", \"Een vrijhandelszone\", \"Een lokaal productienetwerk\", \"Internationale netwerken waarbij verschillende landen bijdragen aan een product\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[33]",
+    "oud": "options: [\"Groeiende steden met structurele bevolkings- en economische krimp\", \"Satellietsteden\", \"Steden met structurele bevolkings- en economische krimp\", \"Groeiende steden\"]",
+    "nieuw": "options: [\"Steden zonder groen\", \"Satellietsteden\", \"Steden met structurele bevolkings- en economische krimp\", \"Groeiende steden\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[34]",
+    "oud": "options: [\"Geografische coördinaten\", \"Geografische coördinaten, Eigendomsrechten en Vestigingsplaatsfactoren van mensen aan een bepaalde plek\", \"Vestigingsplaatsfactoren\", \"De emotionele en culturele binding van mensen aan een bepaalde plek\"]",
+    "nieuw": "options: [\"Geografische coördinaten\", \"Eigendomsrechten\", \"Vestigingsplaatsfactoren\", \"De emotionele en culturele binding van mensen aan een bepaalde plek\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[35]",
+    "oud": "options: [\"Zwaartekracht als metafoor voor ruimte\", \"Migratie neemt toe naarmate steden kleiner zijn en dichter bij elkaar liggen\", \"Bevolkingsdichtheidsmodel\", \"Migratie neemt toe naarmate steden groter zijn en dichter bij elkaar liggen\"]",
+    "nieuw": "options: [\"Zwaartekracht als metafoor voor ruimte\", \"Migratie hangt alleen af van het klimaat\", \"Bevolkingsdichtheidsmodel\", \"Migratie neemt toe naarmate steden groter zijn en dichter bij elkaar liggen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[36]",
+    "oud": "options: [\"Een technologisch bedrijvenpark\", \"Een geplande stad\", \"Een stad die digitale technologie gebruikt achter efficiënt bestuur en duurzaamheid\", \"Een stad die digitale technologie gebruikt voor efficiënt bestuur en duurzaamheid\"]",
+    "nieuw": "options: [\"Een technologisch bedrijvenpark\", \"Een geplande stad\", \"Een stad zonder auto's\", \"Een stad die digitale technologie gebruikt voor efficiënt bestuur en duurzaamheid\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[37]",
+    "oud": "options: [\"Renewable: kolen\", \"non-renewable: eindige voorraad (fossiele brandstoffen); Renewable: hernieuwbaar (zon, wind)\", \"Non-renewable: zon\", \"Renewable: hernieuwbaar (zon, wind); non-renewable: eindige voorraad (fossiele brandstoffen)\"]",
+    "nieuw": "options: [\"Renewable: kolen\", \"Renewable: olie; non-renewable: wind\", \"Non-renewable: zon\", \"Renewable: hernieuwbaar (zon, wind); non-renewable: eindige voorraad (fossiele brandstoffen)\"]",
+    "reden": "tweede (half) goede optie (omgedraaide kopie)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[38]",
+    "oud": "options: [\"Het paradoxale verschijnsel dat grondstofrijke landen vaak arm blijven door corruptie en conflict\", \"Een exportoverschot, Milieuschade door mijnbouw en Rijkdom door grondstoffen dat grondstofrijke landen vaak arm blijven door corruptie en conflict\", \"Milieuschade door mijnbouw\", \"Rijkdom door grondstoffen\"]",
+    "nieuw": "options: [\"Het paradoxale verschijnsel dat grondstofrijke landen vaak arm blijven door corruptie en conflict\", \"Een exportoverschot\", \"Milieuschade door mijnbouw\", \"Rijkdom door grondstoffen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[40]",
+    "oud": "options: [\"Voedselveiligheid (hygiëne)\", \"Voedselreserves van een land\", \"De toestand waarbij alle mensen altijd toegang hebben tot genoeg veilig en voedzaam voedsel\", \"Voedselreserves van een land waarbij alle mensen altijd toegang hebben tot genoeg veilig en voedzaam voedsel\"]",
+    "nieuw": "options: [\"Voedselveiligheid (hygiëne)\", \"Voedselreserves van een land\", \"De toestand waarbij alle mensen altijd toegang hebben tot genoeg veilig en voedzaam voedsel\", \"Voedselprijzen in de supermarkt\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[41]",
+    "oud": "options: [\"Een nationale economie\", \"Een industrieterrein\", \"Een afgebakend gebied met gunstigere economische regelgeving om investering te trekken\", \"Een nationale economie met gunstigere economische regelgeving om investering te trekken\"]",
+    "nieuw": "options: [\"Een nationale economie\", \"Een industrieterrein\", \"Een afgebakend gebied met gunstigere economische regelgeving om investering te trekken\", \"Een belastingparadijs op een eiland\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[42]",
+    "oud": "options: [\"Stadsvernieuwing\", \"Gentrification\", \"Ongecontroleerde uitbreiding van steden in de omliggende gebieden\", \"Stadsvernieuwing, Gentrification en Densificatie van steden in de omliggende gebieden\"]",
+    "nieuw": "options: [\"Stadsvernieuwing\", \"Gentrification\", \"Ongecontroleerde uitbreiding van steden in de omliggende gebieden\", \"Densificatie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[43]",
+    "oud": "options: [\"Een parallelle valuta\", \"Zwarte markt alleen\", \"Een parallelle valuta, Zwarte markt alleen en De nachteconomie die niet geregistreerd worden bij belasting of overheid\", \"Economische activiteiten die niet geregistreerd worden bij belasting of overheid\"]",
+    "nieuw": "options: [\"Een parallelle valuta\", \"Zwarte markt alleen\", \"De nachteconomie\", \"Economische activiteiten die niet geregistreerd worden bij belasting of overheid\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[44]",
+    "oud": "options: [\"Waterverontreiniging waarbij de watervraag de beschikbare watervoorraden overstijgt\", \"Stressvol zwemmen\", \"Waterverontreiniging\", \"Een situatie waarbij de watervraag de beschikbare watervoorraden overstijgt\"]",
+    "nieuw": "options: [\"Te veel regen in een gebied\", \"Stressvol zwemmen\", \"Waterverontreiniging\", \"Een situatie waarbij de watervraag de beschikbare watervoorraden overstijgt\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[45]",
+    "oud": "options: [\"Vluchtelingen kiezen bewust\", \"vluchtelingen: gedwongen door geweld, vervolging of ramp; Migratie: vrije keuze\", \"Migratie: vrije keuze; vluchtelingen: gedwongen door geweld, vervolging of ramp\", \"Migranten zijn gedwongen\"]",
+    "nieuw": "options: [\"Vluchtelingen kiezen bewust\", \"Er is geen verschil\", \"Migratie: vrije keuze; vluchtelingen: gedwongen door geweld, vervolging of ramp\", \"Migranten zijn gedwongen\"]",
+    "reden": "tweede (half) goede optie (omgedraaide kopie)"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[46]",
+    "oud": "options: [\"Het vermogen van een systeem (stad, ecosysteem) om te herstellen van verstoringen\", \"Weerstand tegen verandering\", \"Geografische stabiliteit\", \"Weerstand tegen verandering van een systeem (stad, ecosysteem) om te herstellen van verstoringen\"]",
+    "nieuw": "options: [\"Het vermogen van een systeem (stad, ecosysteem) om te herstellen van verstoringen\", \"Weerstand tegen verandering\", \"Geografische stabiliteit\", \"Snelle bevolkingsgroei\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[47]",
+    "oud": "options: [\"Theorie over hoe steden hiërarchisch zijn gerangschikt op basis van verzorgingsgebied\", \"Industrievestiging\", \"Migratiepatroon\", \"Industrievestiging over hoe steden hiërarchisch zijn gerangschikt op basis van verzorgingsgebied\"]",
+    "nieuw": "options: [\"Theorie over hoe steden hiërarchisch zijn gerangschikt op basis van verzorgingsgebied\", \"Industrievestiging\", \"Migratiepatroon\", \"Theorie over de ligging van havens\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[48]",
+    "oud": "options: [\"Terugkeer van migranten of Buitenlandse hulp\", \"Terugkeer van migranten\", \"Geld dat migranten naar hun thuisland sturen\", \"Buitenlandse hulp\"]",
+    "nieuw": "options: [\"Belasting op import\", \"Terugkeer van migranten\", \"Geld dat migranten naar hun thuisland sturen\", \"Buitenlandse hulp\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "aardrijkskunde.klas3[49]",
+    "oud": "options: [\"Een demografische curve\", \"Een demografische curve dat milieuvervuiling eerst toeneemt bij economische groei, daarna afneemt\", \"De theorie dat milieuvervuiling eerst toeneemt bij economische groei, daarna afneemt\", \"Een klimaatgrafiek\"]",
+    "nieuw": "options: [\"Een demografische curve\", \"Een bevolkingspiramide\", \"De theorie dat milieuvervuiling eerst toeneemt bij economische groei, daarna afneemt\", \"Een klimaatgrafiek\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[1]",
+    "oud": "options: [\"Verzetsheldin\", \"Schrijfster na de oorlog\", \"Schrijfster na de oorlog of Verzetsheldin\", \"Joods meisje dat een dagboek schreef\"]",
+    "nieuw": "options: [\"Verzetsheldin\", \"Schrijfster na de oorlog\", \"Een koningin\", \"Joods meisje dat een dagboek schreef\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[2]",
+    "oud": "options: [\"Filosofische stroming 18e eeuw\", \"Industriële revolutie\", \"Uitvinding elektriciteit\", \"Uitvinding elektriciteit of Industriële revolutie\"]",
+    "nieuw": "options: [\"Filosofische stroming 18e eeuw\", \"Industriële revolutie\", \"Uitvinding elektriciteit\", \"Een kunststroming uit de middeleeuwen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[4]",
+    "oud": "options: [\"Een handelsoorlog\", \"Letterlijk een koude oorlog of Een handelsoorlog\", \"Letterlijk een koude oorlog\", \"Ideologische strijd VS vs USSR\"]",
+    "nieuw": "options: [\"Een handelsoorlog\", \"Een oorlog op de Noordpool\", \"Letterlijk een koude oorlog\", \"Ideologische strijd VS vs USSR\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[5]",
+    "oud": "options: [\"Wetenschappelijk onderzoek\", \"Wetenschappelijk onderzoek van gebieden door Europese mogendheden\", \"Handelsovereenkomsten\", \"Bezetting en exploitatie van gebieden door Europese mogendheden\"]",
+    "nieuw": "options: [\"Wetenschappelijk onderzoek\", \"Samenwerking tussen gelijke landen\", \"Handelsovereenkomsten\", \"Bezetting en exploitatie van gebieden door Europese mogendheden\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[6]",
+    "oud": "options: [\"Eerste internationale vredesconferentie (1899)\", \"WO2-vredesoverleg\", \"NATO-oprichting\", \"laatste internationale vredesconferentie (1899)\"]",
+    "nieuw": "options: [\"Eerste internationale vredesconferentie (1899)\", \"WO2-vredesoverleg\", \"NATO-oprichting\", \"Oprichting van de Volkenbond (1920)\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[7]",
+    "oud": "options: [\"Kolonies worden onafhankelijk (na WO2)\", \"Nieuwe kolonies stichten of Volksverhuizing\", \"Nieuwe kolonies stichten\", \"Volksverhuizing\"]",
+    "nieuw": "options: [\"Kolonies worden onafhankelijk (na WO2)\", \"Ontdekking van nieuwe werelddelen\", \"Nieuwe kolonies stichten\", \"Volksverhuizing\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[9]",
+    "oud": "options: [\"Nazi-Duitsland of Oost-Duitsland\", \"Nazi-Duitsland\", \"Democratisch Duitsland 1919-1933\", \"Oost-Duitsland\"]",
+    "nieuw": "options: [\"Het Duitse keizerrijk vóór 1914\", \"Nazi-Duitsland\", \"Democratisch Duitsland 1919-1933\", \"Oost-Duitsland\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[10]",
+    "oud": "options: [\"Eerste zwarte president van Noord-Afrika\", \"Nigeriaanse president\", \"Eerste zwarte president van Zuid-Afrika\", \"VN-secretaris-generaal\"]",
+    "nieuw": "options: [\"Leider van de Amerikaanse burgerrechtenbeweging\", \"Nigeriaanse president\", \"Eerste zwarte president van Zuid-Afrika\", \"VN-secretaris-generaal\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[14]",
+    "oud": "options: [\"Een constitutionele monarchie\", \"Een parlementaire democratie\", \"Absolute staatsmacht over geen levensgebieden\", \"Absolute staatsmacht over alle levensgebieden\"]",
+    "nieuw": "options: [\"Een constitutionele monarchie\", \"Een parlementaire democratie\", \"Bestuur door een gekozen parlement\", \"Absolute staatsmacht over alle levensgebieden\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[15]",
+    "oud": "options: [\"Een politiek akkoord\", \"Militaire hulp tijdens WO2\", \"Economische hulp van VS aan West-Europa na WO2\", \"Economische hulp van VS aan Oost-Europa na WO2\"]",
+    "nieuw": "options: [\"Een politiek akkoord\", \"Militaire hulp tijdens WO2\", \"Economische hulp van VS aan West-Europa na WO2\", \"Een Amerikaanse lening aan Japan\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[17]",
+    "oud": "options: [\"Kruistochten\", \"Inquisitie\", \"Spaanse veroveringen in Amerika onder bepaalde omstandigheden\", \"Herovering van het Iberisch schiereiland op de Moren\"]",
+    "nieuw": "options: [\"Kruistochten\", \"Inquisitie\", \"Spaanse veroveringen in Amerika\", \"Herovering van het Iberisch schiereiland op de Moren\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[18]",
+    "oud": "options: [\"Een kerkelijk document of Eerste Britse grondwet\", \"Eerste Britse grondwet\", \"Een handvest van de VN\", \"Overeenkomst tussen koning en adel (1215)\"]",
+    "nieuw": "options: [\"Een kerkelijk document\", \"Eerste Britse grondwet\", \"Een handvest van de VN\", \"Overeenkomst tussen koning en adel (1215)\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[20]",
+    "oud": "options: [\"Begin van de Burgeroorlog\", \"Einde van de onafhankelijkheidsoorlog of Begin van de Burgeroorlog\", \"Einde van de onafhankelijkheidsoorlog\", \"Verklaring waarbij de 13 kolonies zich afscheidden van Engeland\"]",
+    "nieuw": "options: [\"Begin van de Burgeroorlog\", \"Een vredesverdrag met Frankrijk\", \"Einde van de onafhankelijkheidsoorlog\", \"Verklaring waarbij de 13 kolonies zich afscheidden van Engeland\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[21]",
+    "oud": "options: [\"Het einde van de Eerste Wereldoorlog\", \"De Russische Revolutie\", \"De Tweede Wereldoorlog\", \"Het einde van de laatste Wereldoorlog\"]",
+    "nieuw": "options: [\"Het einde van de Eerste Wereldoorlog\", \"De Russische Revolutie\", \"De Tweede Wereldoorlog\", \"De Frans-Duitse Oorlog van 1870\"]",
+    "reden": "tweede (half) goede optie ('einde van de laatste Wereldoorlog' = WO2, dubbelzinnig)"
+  },
+  {
+    "waar": "geschiedenis.klas1[22]",
+    "oud": "options: [\"Sovjet-dictator die de USSR met terreur regeerde\", \"Leider van de Russische Revolutie of Russische generaal in WO1\", \"Leider van de Russische Revolutie\", \"Russische generaal in WO1\"]",
+    "nieuw": "options: [\"Sovjet-dictator die de USSR met terreur regeerde\", \"Laatste tsaar van Rusland\", \"Leider van de Russische Revolutie\", \"Russische generaal in WO1\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[23]",
+    "oud": "options: [\"Een oorlog, Een epidemie en Een politieke crisis na beurskrach Wall Street\", \"Een epidemie\", \"Mondiale economische crisis (1929-1939) na beurskrach Wall Street\", \"Een politieke crisis\"]",
+    "nieuw": "options: [\"Een oorlog\", \"Een epidemie\", \"Mondiale economische crisis (1929-1939) na beurskrach Wall Street\", \"Een politieke crisis\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[25]",
+    "oud": "options: [\"Hitlers zelfmoord in de bunker\", \"De aanval op Polen\", \"De Duitse invasie van de Sovjet-Unie (1941)\", \"Hitlers zelfmoord in de bunker of De aanval op Polen\"]",
+    "nieuw": "options: [\"Hitlers zelfmoord in de bunker\", \"De aanval op Polen\", \"De Duitse invasie van de Sovjet-Unie (1941)\", \"De landing in Normandië\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[26]",
+    "oud": "options: [\"Geschiedkundig experiment\", \"Een astronomische ontdekking\", \"Otto von Guericke's demonstratie van luchtdruk (1654)\", \"Een astronomische ontdekking of Geschiedkundig experiment\"]",
+    "nieuw": "options: [\"Geschiedkundig experiment\", \"Een astronomische ontdekking\", \"Otto von Guericke's demonstratie van luchtdruk (1654)\", \"De eerste stoommachine\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[27]",
+    "oud": "options: [\"Eerste beursgenoteerde naamloze vennootschap ter wereld (1602)\", \"Eerste internationale organisatie\", \"Eerste handelsvloot\", \"laatste beursgenoteerde naamloze vennootschap ter wereld (1602)\"]",
+    "nieuw": "options: [\"Eerste beursgenoteerde naamloze vennootschap ter wereld (1602)\", \"Eerste internationale organisatie\", \"Eerste handelsvloot\", \"Eerste nationale bank\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[28]",
+    "oud": "options: [\"WO2-slag\", \"WO1-slag\", \"Beslissende slag van de Amerikaanse Burgeroorlog (1863)\", \"Slag in de Mexicaans-Amerikaanse Oorlog als uitzondering\"]",
+    "nieuw": "options: [\"WO2-slag\", \"WO1-slag\", \"Beslissende slag van de Amerikaanse Burgeroorlog (1863)\", \"Slag in de Mexicaans-Amerikaanse Oorlog\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[29]",
+    "oud": "options: [\"Een Belgische overgangsregering\", \"De Gaulle's regeringseenheden in ballingschap\", \"De collaborerende Franse regering onder Pétain in onbezet Noord-Frankrijk\", \"De collaborerende Franse regering onder Pétain in onbezet Zuid-Frankrijk\"]",
+    "nieuw": "options: [\"Een Belgische overgangsregering\", \"De Gaulle's regeringseenheden in ballingschap\", \"Een Franse koloniale regering in Algerije\", \"De collaborerende Franse regering onder Pétain in onbezet Zuid-Frankrijk\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[30]",
+    "oud": "options: [\"1821-1829\", \"1870 of 1848\", \"1848\", \"1789\"]",
+    "nieuw": "options: [\"1821-1829\", \"1870\", \"1848\", \"1789\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[31]",
+    "oud": "options: [\"Politieke integratie van Europa\", \"Militaire herbewapening\", \"Economisch herstel van West-Europa om communisme te weren\", \"Economisch herstel van Oost-Europa om communisme te weren\"]",
+    "nieuw": "options: [\"Politieke integratie van Europa\", \"Militaire herbewapening\", \"Economisch herstel van West-Europa om communisme te weren\", \"Herstel van de Japanse industrie\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[32]",
+    "oud": "options: [\"Een reeks oorlogen tussen Engeland en Frankrijk (1337-1453)\", \"Een burgeroorlog in Engeland of Een Russisch-Turks conflict\", \"Een Russisch-Turks conflict\", \"Een burgeroorlog in Engeland\"]",
+    "nieuw": "options: [\"Een reeks oorlogen tussen Engeland en Frankrijk (1337-1453)\", \"Een oorlog tussen Spanje en Portugal\", \"Een Russisch-Turks conflict\", \"Een burgeroorlog in Engeland\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[33]",
+    "oud": "options: [\"Een vulkaanuitbarsting\", \"Een hongersnood\", \"Pest die 30-60% van de bevolking doodde en Europa sociaal en economisch transformeerde\", \"Een vulkaanuitbarsting die 30-60% van de bevolking doodde en Europa sociaal en economisch transformeerde\"]",
+    "nieuw": "options: [\"Een vulkaanuitbarsting\", \"Een hongersnood\", \"Pest die 30-60% van de bevolking doodde en Europa sociaal en economisch transformeerde\", \"Een grote overstroming\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[34]",
+    "oud": "options: [\"Een door de nazi's georganiseerde pogrom waarbij Joodse winkels en synagogen werden verwoest\", \"Een joodse religieuze dag\", \"Een joodse religieuze dag door de nazi's georganiseerde pogrom waarbij Joodse winkels en synagogen werden verwoest\", \"Een militaire operatie\"]",
+    "nieuw": "options: [\"Een door de nazi's georganiseerde pogrom waarbij Joodse winkels en synagogen werden verwoest\", \"Een joodse religieuze dag\", \"Een Duits volksfeest\", \"Een militaire operatie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[35]",
+    "oud": "options: [\"Alleen Frans, Leidde alleen tot Napoleons oorlogen en Versterkte het absolutisme door heel Europa\", \"Leidde alleen tot Napoleons oorlogen\", \"Versterkte het absolutisme\", \"Inspireerde liberale en nationalistische revoluties door heel Europa\"]",
+    "nieuw": "options: [\"Had alleen invloed op Frankrijk zelf\", \"Leidde alleen tot Napoleons oorlogen\", \"Versterkte het absolutisme\", \"Inspireerde liberale en nationalistische revoluties door heel Europa\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[36]",
+    "oud": "options: [\"Nederlandse boerenopstand\", \"Boerenopstand in WO1\", \"Conflict tussen Groot-Brittannië en de Boerenrepublieken in Noord-Afrika\", \"Conflict tussen Groot-Brittannië en de Boerenrepublieken in Zuid-Afrika\"]",
+    "nieuw": "options: [\"Nederlandse boerenopstand\", \"Boerenopstand in WO1\", \"Een opstand van boeren in Nederland-Indië\", \"Conflict tussen Groot-Brittannië en de Boerenrepublieken in Zuid-Afrika\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[37]",
+    "oud": "options: [\"Een handelsoorlog tussen China en Japan\", \"Een handelsoorlog tussen China en Japan of Een rebellie van Chinese boeren\", \"Een rebellie van Chinese boeren\", \"Engeland dwong China de opiumhandel te accepteren via militaire macht\"]",
+    "nieuw": "options: [\"Een handelsoorlog tussen China en Japan\", \"Een oorlog tussen China en Rusland\", \"Een rebellie van Chinese boeren\", \"Engeland dwong China de opiumhandel te accepteren via militaire macht\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[38]",
+    "oud": "options: [\"Schafte belastingen af van de Engelse koning ten gunste van de adel\", \"Schafte belastingen af\", \"Gaf iedereen stemrecht\", \"Beperkte de macht van de Engelse koning ten gunste van de adel\"]",
+    "nieuw": "options: [\"Gaf de koning meer macht\", \"Schafte belastingen af\", \"Gaf iedereen stemrecht\", \"Beperkte de macht van de Engelse koning ten gunste van de adel\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[39]",
+    "oud": "options: [\"Einde Tachtigjarige Oorlog voor Spanje-Republiek\", \"Beide a en d zijn correct\", \"Einde WO1\", \"Einde Dertigjarige Oorlog, basis van moderne staatsoevereiniteit\"]",
+    "nieuw": "options: [\"Einde van de Spaanse Successieoorlog\", \"Einde van de Dertigjarige én de Tachtigjarige Oorlog\", \"Einde WO1\", \"Begin van de Tachtigjarige Oorlog\"]",
+    "reden": "'Beide a en d zijn correct' werkt niet als opties geschud worden; nu één eenduidig goed antwoord"
+  },
+  {
+    "waar": "geschiedenis.klas1[40]",
+    "oud": "options: [\"Democratie en mensenrechten in Noord-Afrika en het Midden-Oosten\", \"autocratie en mensenrechten in Noord-Afrika en het Midden-Oosten\", \"Economische hervorming alleen\", \"Anti-westers sentiment\"]",
+    "nieuw": "options: [\"Democratie en mensenrechten in Noord-Afrika en het Midden-Oosten\", \"Meer macht voor het leger\", \"Economische hervorming alleen\", \"Anti-westers sentiment\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[41]",
+    "oud": "options: [\"5 jaar bezetting, Holocaust van 100.000+ Joden, Hongerwinter en grote schade\", \"Alleen economisch\", \"Alleen economisch, Minimaal en Alleen militair van 100.000+ Joden, Hongerwinter en grote schade\", \"Alleen militair\"]",
+    "nieuw": "options: [\"5 jaar bezetting, Holocaust van 100.000+ Joden, Hongerwinter en grote schade\", \"Alleen economisch\", \"Minimaal\", \"Alleen militair\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[42]",
+    "oud": "options: [\"Einde van de industriële revolutie van Europa op basis van machtsevenwicht en restauratie\", \"Einde van de industriële revolutie\", \"Herordening van Europa op basis van machtsevenwicht en restauratie\", \"Begin van de democratie\"]",
+    "nieuw": "options: [\"Oprichting van de Europese Unie\", \"Einde van de industriële revolutie\", \"Herordening van Europa op basis van machtsevenwicht en restauratie\", \"Begin van de democratie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[43]",
+    "oud": "options: [\"Mao's beweging (1966-1976) om kapitalistische en traditionele elementen te vernietigen\", \"Een economische hervorming\", \"Een anti-Japanse campagne\", \"Een economische hervorming om kapitalistische en traditionele elementen te vernietigen\"]",
+    "nieuw": "options: [\"Mao's beweging (1966-1976) om kapitalistische en traditionele elementen te vernietigen\", \"Een economische hervorming\", \"Een anti-Japanse campagne\", \"Een ruimtevaartprogramma\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[44]",
+    "oud": "options: [\"Neutrale informatie\", \"Staatsmedia\", \"Neutrale informatie, Staatsmedia en Nepnieuws om publieke opinie te sturen\", \"Doelbewuste verspreiding van informatie om publieke opinie te sturen\"]",
+    "nieuw": "options: [\"Neutrale informatie\", \"Staatsmedia\", \"Reclame voor producten\", \"Doelbewuste verspreiding van informatie om publieke opinie te sturen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[45]",
+    "oud": "options: [\"Systematische uitroeiing van Armeniërs (1915-1923) door het Ottomaanse Rijk\", \"Een epidemie, Een toevallige ramp en Een oorlogsslachting van Armeniërs (1915-1923) door het Ottomaanse Rijk\", \"Een toevallige ramp\", \"Een oorlogsslachting\"]",
+    "nieuw": "options: [\"Systematische uitroeiing van Armeniërs (1915-1923) door het Ottomaanse Rijk\", \"Een epidemie\", \"Een toevallige ramp\", \"Een oorlogsslachting\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[46]",
+    "oud": "options: [\"Systeem van grensbewaking, muren en prikkeldraad dat West en Oost-Europa scheidde\", \"Een diplomatiek akkoord\", \"Systeem van grensbewaking, muren en prikkeldraad dat West en west-Europa scheidde\", \"Een handelsbarrière\"]",
+    "nieuw": "options: [\"Systeem van grensbewaking, muren en prikkeldraad dat West en Oost-Europa scheidde\", \"Een diplomatiek akkoord\", \"Een verdedigingslinie langs de Franse grens\", \"Een handelsbarrière\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[47]",
+    "oud": "options: [\"Alleen militair aanwezig\", \"Alleen militair aanwezig die Europa hielp herbouwen, NATO oprichtte en de Koude Oorlog leidde\", \"Terugtrekking uit Europa\", \"Supermacht die Europa hielp herbouwen, NATO oprichtte en de Koude Oorlog leidde\"]",
+    "nieuw": "options: [\"Alleen militair aanwezig\", \"Neutraal blijven buiten de wereldpolitiek\", \"Terugtrekking uit Europa\", \"Supermacht die Europa hielp herbouwen, NATO oprichtte en de Koude Oorlog leidde\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas1[48]",
+    "oud": "options: [\"Symbool van het einde van de Koude Oorlog en de hereniging van Duitsland\", \"Symbool van het begin van de Koude Oorlog en de hereniging van Duitsland\", \"Einde van communisme in China\", \"Begin van de EU\"]",
+    "nieuw": "options: [\"Symbool van het einde van de Koude Oorlog en de hereniging van Duitsland\", \"Begin van de Tweede Wereldoorlog\", \"Einde van communisme in China\", \"Begin van de EU\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas1[49]",
+    "oud": "options: [\"Strijd achter gelijke rechten van vrouwen, arbeiders en minderheden\", \"Economische hervorming\", \"Religieuze vernieuwing\", \"Strijd voor gelijke rechten van vrouwen, arbeiders en minderheden\"]",
+    "nieuw": "options: [\"Strijd voor meer macht van de kerk\", \"Economische hervorming\", \"Religieuze vernieuwing\", \"Strijd voor gelijke rechten van vrouwen, arbeiders en minderheden\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[0]",
+    "oud": "options: [\"Uitvinding elektriciteit\", \"Uitvinding elektriciteit of Industriële revolutie\", \"18e-eeuwse filosofische stroming\", \"Industriële revolutie\"]",
+    "nieuw": "options: [\"Uitvinding elektriciteit\", \"Een kunststroming uit de middeleeuwen\", \"18e-eeuwse filosofische stroming\", \"Industriële revolutie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[2]",
+    "oud": "options: [\"Artistiek debat\", \"Wetenschappelijk debat over historische interpretaties\", \"Archeologisch onderzoek over historische interpretaties\", \"Archeologisch onderzoek\"]",
+    "nieuw": "options: [\"Artistiek debat\", \"Wetenschappelijk debat over historische interpretaties\", \"Politiek debat in het parlement\", \"Archeologisch onderzoek\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[3]",
+    "oud": "options: [\"Begin WO1\", \"Oprichting VN als uitzondering\", \"Einde WO2\", \"Herordening Europa na Napoleon\"]",
+    "nieuw": "options: [\"Begin WO1\", \"Oprichting VN\", \"Einde WO2\", \"Herordening Europa na Napoleon\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[4]",
+    "oud": "options: [\"Een bron uit de tijd zelf\", \"Een recent boek\", \"Een encyclopedie\", \"Een encyclopedie of Een recent boek\"]",
+    "nieuw": "options: [\"Een bron uit de tijd zelf\", \"Een recent boek\", \"Een encyclopedie\", \"Een spreekbeurt over de oudheid\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[5]",
+    "oud": "options: [\"Isolationisme, Aanvalsbeleid en Vredesverdrag om oorlog te vermijden\", \"Aanvalsbeleid\", \"Toegeven aan Hitlers eisen om oorlog te vermijden\", \"Vredesverdrag\"]",
+    "nieuw": "options: [\"Isolationisme\", \"Aanvalsbeleid\", \"Toegeven aan Hitlers eisen om oorlog te vermijden\", \"Vredesverdrag\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[7]",
+    "oud": "options: [\"Ottomaanse expansie\", \"Ottomaanse expansie, Westerse expansie en Russische expansie naar oostelijke territoria\", \"Russische expansie\", \"Duits/Duitstalig streven naar oostelijke territoria\"]",
+    "nieuw": "options: [\"Ottomaanse expansie\", \"Westerse expansie\", \"Russische expansie\", \"Duits/Duitstalig streven naar oostelijke territoria\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[8]",
+    "oud": "options: [\"Correcte datering of Historische bron\", \"Correcte datering\", \"Historische bron\", \"Iets plaatsen in een verkeerde tijd\"]",
+    "nieuw": "options: [\"Een tijdlijn\", \"Correcte datering\", \"Historische bron\", \"Iets plaatsen in een verkeerde tijd\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[9]",
+    "oud": "options: [\"Keerpunt aan het Oostfront WO2 (1942-43)\", \"Slag in de Stille Oceaan of D-Day landing\", \"D-Day landing\", \"Slag in de Stille Oceaan\"]",
+    "nieuw": "options: [\"Keerpunt aan het Oostfront WO2 (1942-43)\", \"Slag om Arnhem\", \"D-Day landing\", \"Slag in de Stille Oceaan\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[10]",
+    "oud": "options: [\"VS-steun aan landen bedreigd door communisme\", \"Economische hulp onder bepaalde omstandigheden\", \"Isolationisme\", \"Nucleair beleid\"]",
+    "nieuw": "options: [\"VS-steun aan landen bedreigd door communisme\", \"Beleid om Duitsland te verdelen\", \"Isolationisme\", \"Nucleair beleid\"]",
+    "reden": "plaksel-afleider vervangen; 'Economische hulp' was half goed (Truman-doctrine gaf ook economische steun)"
+  },
+  {
+    "waar": "geschiedenis.klas3[11]",
+    "oud": "options: [\"Sovjet-ruimteprogramma\", \"Braziliaans industrialisatieplan of Sovjet-ruimteprogramma\", \"Mao's catastrofaal industrialisatieplan in China\", \"Braziliaans industrialisatieplan\"]",
+    "nieuw": "options: [\"Sovjet-ruimteprogramma\", \"Een Japans spoorwegplan\", \"Mao's catastrofaal industrialisatieplan in China\", \"Braziliaans industrialisatieplan\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[12]",
+    "oud": "options: [\"Niet-aanvalsverdrag Duitsland-Sovjet-Unie (1939)\", \"Handelsverdrag\", \"NATO-oprichting\", \"Vredesverdrag na WO1 onder bepaalde omstandigheden\"]",
+    "nieuw": "options: [\"Niet-aanvalsverdrag Duitsland-Sovjet-Unie (1939)\", \"Handelsverdrag\", \"NATO-oprichting\", \"Vredesverdrag na WO1\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[13]",
+    "oud": "options: [\"Dekolonisatie\", \"Imperialisme\", \"Kolonialisme\", \"Imperialisme of Kolonialisme\"]",
+    "nieuw": "options: [\"Dekolonisatie\", \"Imperialisme\", \"Kolonialisme\", \"Migratie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[14]",
+    "oud": "options: [\"Militair plan WO2\", \"NATO-strategie\", \"Plan om Duitsland herstelbetalingen WO1 te laten betalen\", \"Militair plan WO2 om Duitsland herstelbetalingen WO1 te laten betalen\"]",
+    "nieuw": "options: [\"Militair plan WO2\", \"NATO-strategie\", \"Plan om Duitsland herstelbetalingen WO1 te laten betalen\", \"Plan voor de wederopbouw na WO2\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[15]",
+    "oud": "options: [\"Keizerlijk China\", \"Nationalistisch China of Keizerlijk China\", \"Communistisch China na 1949\", \"Nationalistisch China\"]",
+    "nieuw": "options: [\"Keizerlijk China\", \"Japans bezet China\", \"Communistisch China na 1949\", \"Nationalistisch China\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[16]",
+    "oud": "options: [\"De builenpest (14e eeuw)\", \"Vulkaanramp of Hongersnood\", \"Vulkaanramp\", \"Hongersnood\"]",
+    "nieuw": "options: [\"De builenpest (14e eeuw)\", \"Een overstroming\", \"Vulkaanramp\", \"Hongersnood\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[17]",
+    "oud": "options: [\"Politieke organisatie\", \"Wetenschapsinstituut\", \"Politieke organisatie of Wetenschapsinstituut\", \"Internationale rechtsinstelling\"]",
+    "nieuw": "options: [\"Politieke organisatie\", \"Wetenschapsinstituut\", \"Militaire school\", \"Internationale rechtsinstelling\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[18]",
+    "oud": "options: [\"Biografisch onderzoek of Economische analyse\", \"Economische analyse\", \"Indelen van de geschiedenis in tijdperken\", \"Biografisch onderzoek\"]",
+    "nieuw": "options: [\"Bronnenkritiek\", \"Economische analyse\", \"Indelen van de geschiedenis in tijdperken\", \"Biografisch onderzoek\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[19]",
+    "oud": "options: [\"Viking-inval\", \"Honderdjarige Oorlog onder bepaalde omstandigheden\", \"Normandische verovering van Engeland (1066)\", \"Kruistocht\"]",
+    "nieuw": "options: [\"Viking-inval\", \"Honderdjarige Oorlog\", \"Normandische verovering van Engeland (1066)\", \"Kruistocht\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[21]",
+    "oud": "options: [\"Begon de revolutie door gebrek aan politieke macht en door economische nood\", \"Was onverschillig\", \"Ondersteunde de koning\", \"Ondersteunde de koning door gebrek aan politieke macht en economische nood\"]",
+    "nieuw": "options: [\"Begon de revolutie door gebrek aan politieke macht en door economische nood\", \"Was onverschillig\", \"Ondersteunde de koning\", \"Steunde de adel\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[22]",
+    "oud": "options: [\"Militaire alliantie van Europese machtsbalans en diplomatie na Napoleon\", \"Militaire alliantie\", \"Systeem van Europese machtsbalans en diplomatie na Napoleon\", \"Handelsverdrag\"]",
+    "nieuw": "options: [\"Een Europees muziekfestival\", \"Militaire alliantie\", \"Systeem van Europese machtsbalans en diplomatie na Napoleon\", \"Handelsverdrag\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[23]",
+    "oud": "options: [\"Chinese nationalistische opstand tegen buitenlandse invloed\", \"Japanse invasie, Russisch-Chinese oorlog en Boerenopstand in China tegen buitenlandse invloed\", \"Russisch-Chinese oorlog\", \"Boerenopstand in China\"]",
+    "nieuw": "options: [\"Chinese nationalistische opstand tegen buitenlandse invloed\", \"Japanse invasie\", \"Russisch-Chinese oorlog\", \"Opstand in Korea\"]",
+    "reden": "plaksel-afleider vervangen; 'Boerenopstand in China' was half goed (Boxers waren vooral boeren)"
+  },
+  {
+    "waar": "geschiedenis.klas3[24]",
+    "oud": "options: [\"Schafte de monarchie af\", \"Voerde parlementaire democratie in of Schafte de monarchie af\", \"Voerde parlementaire democratie in\", \"Beperkte de macht van de koning en legde rechten vast\"]",
+    "nieuw": "options: [\"Schafte de monarchie af\", \"Gaf alle Engelsen stemrecht\", \"Voerde parlementaire democratie in\", \"Beperkte de macht van de koning en legde rechten vast\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[25]",
+    "oud": "options: [\"Kolonialisme alleen\", \"Militaire expansie\", \"Het beleid om andere landen te veroveren en te beheersen voor economisch/politiek gewin\", \"Het beleid om andere landen te veroveren en te beheersen achter economisch/politiek gewin\"]",
+    "nieuw": "options: [\"Kolonialisme alleen\", \"Militaire expansie\", \"Het beleid om andere landen te veroveren en te beheersen voor economisch/politiek gewin\", \"Een land dat zich afsluit van de wereld\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[26]",
+    "oud": "options: [\"Versnelde verspreiding van ideeën, bijbels en wetenschappelijke kennis\", \"Vertraging van kennisverspreiding\", \"Verdwijning van handschriften\", \"Vertraging van kennisverspreiding van ideeën, bijbels en wetenschappelijke kennis\"]",
+    "nieuw": "options: [\"Versnelde verspreiding van ideeën, bijbels en wetenschappelijke kennis\", \"Vertraging van kennisverspreiding\", \"Verdwijning van handschriften\", \"Minder mensen leerden lezen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[27]",
+    "oud": "options: [\"Een Scandinavisch koninkrijk\", \"Een Scandinavisch koninkrijk, Een Oosters keizerrijk en Een Italiaanse stadsstaat dat over meerdere eeuwen grote invloed had\", \"Een Centraal-Europees keizerrijk dat over meerdere eeuwen grote invloed had\", \"Een Italiaanse stadsstaat\"]",
+    "nieuw": "options: [\"Een Scandinavisch koninkrijk\", \"Een Oosters keizerrijk\", \"Een Centraal-Europees keizerrijk dat over meerdere eeuwen grote invloed had\", \"Een Italiaanse stadsstaat\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[28]",
+    "oud": "options: [\"Alleen de moord op Franz Ferdinand van nationalisme, allianties, imperialisme en de moord op Franz Ferdinand\", \"Alleen de moord op Franz Ferdinand\", \"Samenloop van nationalisme, allianties, imperialisme en de moord op Franz Ferdinand\", \"De aanval op Polen\"]",
+    "nieuw": "options: [\"Een conflict over kolonies in Amerika\", \"Alleen de moord op Franz Ferdinand\", \"Samenloop van nationalisme, allianties, imperialisme en de moord op Franz Ferdinand\", \"De aanval op Polen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[29]",
+    "oud": "options: [\"Intentionalisten: Hitler had het altijd gepland; functionalisten: het groeide door bureaucratische dynamiek\", \"Alleen over de schaal\", \"Alleen over de uitvoering\", \"functionalisten: het groeide door bureaucratische dynamiek; Intentionalisten: Hitler had het altijd gepland\"]",
+    "nieuw": "options: [\"Intentionalisten: Hitler had het altijd gepland; functionalisten: het groeide door bureaucratische dynamiek\", \"Alleen over de schaal\", \"Alleen over de uitvoering\", \"Een debat over wie de oorlog won\"]",
+    "reden": "tweede (half) goede optie (omgedraaide kopie)"
+  },
+  {
+    "waar": "geschiedenis.klas3[30]",
+    "oud": "options: [\"Enorme rijkdom achter Europese handelshuizen, banken en koloniale mogendheden\", \"Alleen voor Engeland\", \"Alleen verlies\", \"Enorme rijkdom voor Europese handelshuizen, banken en koloniale mogendheden\"]",
+    "nieuw": "options: [\"Geen enkel effect\", \"Alleen voor Engeland\", \"Alleen verlies\", \"Enorme rijkdom voor Europese handelshuizen, banken en koloniale mogendheden\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[31]",
+    "oud": "options: [\"Een koloniale overeenkomst met Turkije\", \"Een koloniale overeenkomst met Turkije om het Midden-Oosten na WO1 te verdelen\", \"Een vredesverdrag\", \"Geheim verdrag tussen Groot-Brittannië en Frankrijk om het Midden-Oosten na WO1 te verdelen\"]",
+    "nieuw": "options: [\"Een koloniale overeenkomst met Turkije\", \"Een handelsverdrag met Rusland\", \"Een vredesverdrag\", \"Geheim verdrag tussen Groot-Brittannië en Frankrijk om het Midden-Oosten na WO1 te verdelen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[32]",
+    "oud": "options: [\"Luthers geschriften konden massaal worden verspreid, wat de Reformatie versnelde\", \"De kerk controleerde de drukpers\", \"Luthers geschriften konden massaal worden verspreid, wat de verlichting versnelde\", \"Alleen Bijbels werden gedrukt\"]",
+    "nieuw": "options: [\"Luthers geschriften konden massaal worden verspreid, wat de Reformatie versnelde\", \"De kerk controleerde de drukpers\", \"Luther verbood het drukken van zijn teksten\", \"Alleen Bijbels werden gedrukt\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[33]",
+    "oud": "options: [\"Traditionele Europese geschiedenis\", \"Geschiedenis van voormalige kolonies\", \"Historische benadering die koloniale perspectieven deconstrueert en andere stemmen centraal stelt\", \"Geschiedenis van voormalige kolonies die koloniale perspectieven deconstrueert en andere stemmen centraal stelt\"]",
+    "nieuw": "options: [\"Traditionele Europese geschiedenis\", \"Geschiedenis van voormalige kolonies\", \"Historische benadering die koloniale perspectieven deconstrueert en andere stemmen centraal stelt\", \"Geschiedenis zonder bronnen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[34]",
+    "oud": "options: [\"Democratisering van Duitsland\", \"Democratisering van Duitsland van Duitsland → economische crisis → opkomst van het nationaal-socialisme\", \"Vernedering van Duitsland → economische crisis → opkomst van het nationaal-socialisme\", \"Economische bloei\"]",
+    "nieuw": "options: [\"Democratisering van Duitsland\", \"Herstel van de Duitse keizer\", \"Vernedering van Duitsland → economische crisis → opkomst van het nationaal-socialisme\", \"Economische bloei\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[35]",
+    "oud": "options: [\"Prehistorische geschiedenis\", \"Mondelinge overlevering\", \"Het gebruik van getuigenissen en interviews als historische bron\", \"Prehistorische geschiedenis van getuigenissen en interviews als historische bron\"]",
+    "nieuw": "options: [\"Prehistorische geschiedenis\", \"Geschiedenis uit oude boeken\", \"Het gebruik van getuigenissen en interviews als historische bron\", \"Geschiedenis van muziek\"]",
+    "reden": "plaksel-afleider vervangen; 'Mondelinge overlevering' was half goed"
+  },
+  {
+    "waar": "geschiedenis.klas3[36]",
+    "oud": "options: [\"Symbool van het begin van het einde van apartheid en transitie naar democratie\", \"Politiek machtsvacuüm\", \"Einde van apartheid\", \"Symbool van het einde van het einde van apartheid en transitie naar democratie\"]",
+    "nieuw": "options: [\"Symbool van het begin van het einde van apartheid en transitie naar democratie\", \"Politiek machtsvacuüm\", \"Einde van apartheid\", \"Begin van de apartheid\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[37]",
+    "oud": "options: [\"Een religieuze oorlog\", \"Een religieuze oorlog, WO3 en Een economisch conflict met genocide in Bosnië en Kosovo\", \"Oorlogen na het uiteenvallen van Joegoslavië, met genocide in Bosnië en Kosovo\", \"Een economisch conflict\"]",
+    "nieuw": "options: [\"Een religieuze oorlog\", \"Een Derde Wereldoorlog\", \"Oorlogen na het uiteenvallen van Joegoslavië, met genocide in Bosnië en Kosovo\", \"Een economisch conflict\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[38]",
+    "oud": "options: [\"Politieke geschiedenis centraal\", \"Politieke geschiedenis centraal, Militaire geschiedenis en Biografische benadering op langetermijnstructuren, geografie en dagelijks leven\", \"Biografische benadering\", \"Nadruk op langetermijnstructuren, geografie en dagelijks leven\"]",
+    "nieuw": "options: [\"Politieke geschiedenis centraal\", \"Militaire geschiedenis\", \"Biografische benadering\", \"Nadruk op langetermijnstructuren, geografie en dagelijks leven\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[39]",
+    "oud": "options: [\"Periode van ontspanning tussen VS en USSR in de jaren 1970\", \"Einde van de Koude Oorlog\", \"Nucleaire crisis\", \"Einde van de Koude Oorlog van ontspanning tussen VS en USSR in de jaren 1970\"]",
+    "nieuw": "options: [\"Periode van ontspanning tussen VS en USSR in de jaren 1970\", \"Einde van de Koude Oorlog\", \"Nucleaire crisis\", \"Een nieuwe wapenwedloop\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[40]",
+    "oud": "options: [\"Wettelijke uitsluiting van Joden uit het Duitse staatsburgerschap en sociale leven\", \"Economisch beleid\", \"Economisch beleid, Militaire regels en Religieuze wetgeving van Joden uit het Duitse staatsburgerschap en sociale leven\", \"Religieuze wetgeving\"]",
+    "nieuw": "options: [\"Wettelijke uitsluiting van Joden uit het Duitse staatsburgerschap en sociale leven\", \"Economisch beleid\", \"Militaire regels\", \"Religieuze wetgeving\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[41]",
+    "oud": "options: [\"Een anti-oorlogs verhaal dat Duitsland WO1 verloor door verraad van socialisten en Joden aan het thuisfront\", \"Een anti-oorlogs verhaal\", \"De mythe dat Duitsland WO1 verloor door verraad van socialisten en Joden aan het thuisfront\", \"Een militaire strategie\"]",
+    "nieuw": "options: [\"Een spionageverhaal\", \"Een anti-oorlogs verhaal\", \"De mythe dat Duitsland WO1 verloor door verraad van socialisten en Joden aan het thuisfront\", \"Een militaire strategie\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[42]",
+    "oud": "options: [\"VS steunde altijd kolonies\", \"USSR was anti-dekolonisatie\", \"VS en USSR steunden rivaliserende bevrijdingsbewegingen voor eigen invloed\", \"VS en USSR steunden rivaliserende bevrijdingsbewegingen achter eigen invloed\"]",
+    "nieuw": "options: [\"VS steunde altijd kolonies\", \"USSR was anti-dekolonisatie\", \"VS en USSR steunden rivaliserende bevrijdingsbewegingen voor eigen invloed\", \"Dekolonisatie stopte volledig\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[43]",
+    "oud": "options: [\"Het protestantisme ondermijnde de loyaliteit aan de katholieke Spaanse Habsburgers\", \"Calvinisme ondersteunde Spanje\", \"Religie speelde geen rol\", \"Calvinisme ondersteunde Spanje, Religie speelde geen rol en Geen relatie aan de katholieke Spaanse Habsburgers\"]",
+    "nieuw": "options: [\"Het protestantisme ondermijnde de loyaliteit aan de katholieke Spaanse Habsburgers\", \"Calvinisme ondersteunde Spanje\", \"Religie speelde geen rol\", \"Geen relatie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[44]",
+    "oud": "options: [\"Historische empathie\", \"Chronologisch denken\", \"Het besef dat mensen gevormd worden door het toekomende en dat het verleden anders was\", \"Het besef dat mensen gevormd worden door het verleden en dat het verleden anders was\"]",
+    "nieuw": "options: [\"Historische empathie\", \"Chronologisch denken\", \"Het onthouden van jaartallen\", \"Het besef dat mensen gevormd worden door het verleden en dat het verleden anders was\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "geschiedenis.klas3[45]",
+    "oud": "options: [\"Vermindering van handel\", \"Versterking van het feodalisme van Arabische kennis, handel en goederen → bijdrage aan de Renaissance\", \"Introductie van Arabische kennis, handel en goederen → bijdrage aan de Renaissance\", \"Versterking van het feodalisme\"]",
+    "nieuw": "options: [\"Vermindering van handel\", \"Einde van de handel met Azië\", \"Introductie van Arabische kennis, handel en goederen → bijdrage aan de Renaissance\", \"Versterking van het feodalisme\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[46]",
+    "oud": "options: [\"De vreedzame overgang naar constitutionele monarchie in Engeland\", \"De Amerikaanse onafhankelijkheid\", \"De Amerikaanse onafhankelijkheid, Een burgeroorlog en Een Franse revolutie naar constitutionele monarchie in Engeland\", \"Een Franse revolutie\"]",
+    "nieuw": "options: [\"De vreedzame overgang naar constitutionele monarchie in Engeland\", \"De Amerikaanse onafhankelijkheid\", \"Een burgeroorlog\", \"Een Franse revolutie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[47]",
+    "oud": "options: [\"Begin van de Contra-Reformatie\", \"Einde van de Italiaanse Oorlogen dat de hugenoten godsdienstvrijheid gaf in Frankrijk\", \"Einde van de Italiaanse Oorlogen\", \"Edict van Hendrik IV dat de hugenoten godsdienstvrijheid gaf in Frankrijk\"]",
+    "nieuw": "options: [\"Begin van de Contra-Reformatie\", \"Verdrijving van alle protestanten\", \"Einde van de Italiaanse Oorlogen\", \"Edict van Hendrik IV dat de hugenoten godsdienstvrijheid gaf in Frankrijk\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "geschiedenis.klas3[49]",
+    "oud": "options: [\"Verbond Oost en West via handel, kennisuitwisseling en culturele contacten\", \"Alleen goederentransport\", \"Een koloniale handelsroute\", \"Verbond west en West via handel, kennisuitwisseling en culturele contacten\"]",
+    "nieuw": "options: [\"Verbond Oost en West via handel, kennisuitwisseling en culturele contacten\", \"Alleen goederentransport\", \"Een koloniale handelsroute\", \"Verbond Amerika en Europa\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[0]",
+    "oud": "options: [\"Een vitamine\", \"Een type cel\", \"Erfelijk materiaal\", \"Een vitamine of Een type cel\"]",
+    "nieuw": "options: [\"Een vitamine\", \"Een type cel\", \"Erfelijk materiaal\", \"Een eiwit\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[2]",
+    "oud": "options: [\"neutronen en neutronen\", \"Alleen protonen\", \"Elektronen\", \"Protonen en neutronen\"]",
+    "nieuw": "options: [\"Protonen en elektronen\", \"Alleen protonen\", \"Elektronen\", \"Protonen en neutronen\"]",
+    "reden": "typefout/onzin ('neutronen en neutronen')"
+  },
+  {
+    "waar": "natuur.klas1[3]",
+    "oud": "options: [\"Afkorting van stoffen met elementsymbolen\", \"Een tabel\", \"Een vergelijking onder bepaalde omstandigheden\", \"Een recept\"]",
+    "nieuw": "options: [\"Afkorting van stoffen met elementsymbolen\", \"Een tabel\", \"Een vergelijking\", \"Een recept\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[4]",
+    "oud": "options: [\"Een wiskundig schema\", \"Een biologiediagram\", \"Overzicht van geen chemische elementen\", \"Overzicht van alle chemische elementen\"]",
+    "nieuw": "options: [\"Een wiskundig schema\", \"Een biologiediagram\", \"Overzicht van alle planeten\", \"Overzicht van alle chemische elementen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[5]",
+    "oud": "options: [\"Celsterfte\", \"DNA-reparatie\", \"Één cel deelt zich in twee gelijke dochtercellen\", \"Eiwitproductie onder bepaalde omstandigheden\"]",
+    "nieuw": "options: [\"Celsterfte\", \"DNA-reparatie\", \"Één cel deelt zich in twee gelijke dochtercellen\", \"Eiwitproductie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[10]",
+    "oud": "options: [\"Positief deeltje in kern\", \"positief deeltje rond kern\", \"Neutraal deeltje in kern\", \"Negatief deeltje rond kern\"]",
+    "nieuw": "options: [\"Positief deeltje in kern\", \"Lichtdeeltje zonder massa\", \"Neutraal deeltje in kern\", \"Negatief deeltje rond kern\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[11]",
+    "oud": "options: [\"Afbreken fructose voor energie\", \"Eiwitvorming\", \"Fotosynthese\", \"Afbreken glucose voor energie\"]",
+    "nieuw": "options: [\"Opslaan van glucose als zetmeel\", \"Eiwitvorming\", \"Fotosynthese\", \"Afbreken glucose voor energie\"]",
+    "reden": "tweede (half) goede optie (fructose afbreken levert ook energie)"
+  },
+  {
+    "waar": "natuur.klas1[12]",
+    "oud": "options: [\"Dichtheid onder bepaalde omstandigheden\", \"Gewicht\", \"Hoeveelheid materie in een object\", \"Volume\"]",
+    "nieuw": "options: [\"Dichtheid\", \"Gewicht\", \"Hoeveelheid materie in een object\", \"Volume\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[15]",
+    "oud": "options: [\"Element = molecuul\", \"Geen verschil\", \"Verbinding = één soort atoom onder bepaalde omstandigheden\", \"Element = één soort atoom, verbinding = meerdere elementen\"]",
+    "nieuw": "options: [\"Element = molecuul\", \"Geen verschil\", \"Verbinding = één soort atoom\", \"Element = één soort atoom, verbinding = meerdere elementen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[16]",
+    "oud": "options: [\"Zwaartekrachtsveld onder bepaalde omstandigheden\", \"Geluidsgolf\", \"Ruimte rondom magneet met magnetische kracht\", \"Elektrisch veld\"]",
+    "nieuw": "options: [\"Zwaartekrachtsveld\", \"Geluidsgolf\", \"Ruimte rondom magneet met magnetische kracht\", \"Elektrisch veld\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[17]",
+    "oud": "options: [\"Brekingsindex = terugkaatsing\", \"Reflectie = doorgang\", \"reflectie = terugkaatsing; Brekingsindex = lichtafbuiging in medium\", \"Brekingsindex = lichtafbuiging in medium; reflectie = terugkaatsing\"]",
+    "nieuw": "options: [\"Brekingsindex = terugkaatsing\", \"Reflectie = doorgang\", \"Brekingsindex = kleur van het licht\", \"Brekingsindex = lichtafbuiging in medium; reflectie = terugkaatsing\"]",
+    "reden": "tweede (half) goede optie (omgedraaide kopie)"
+  },
+  {
+    "waar": "natuur.klas1[19]",
+    "oud": "options: [\"Een waterbeweging onder bepaalde omstandigheden\", \"Een kracht\", \"Een deeltje\", \"Overdracht van energie door trillingen\"]",
+    "nieuw": "options: [\"Een stroming van water\", \"Een kracht\", \"Een deeltje\", \"Overdracht van energie door trillingen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[21]",
+    "oud": "options: [\"Een ordening van alle elementen op atoomnummer\", \"Een lijst van moleculen\", \"Een kalender van scheikunde\", \"Een ordening van geen elementen op atoomnummer\"]",
+    "nieuw": "options: [\"Een ordening van alle elementen op atoomnummer\", \"Een lijst van moleculen\", \"Een kalender van scheikunde\", \"Een ordening van elementen op ontdekkingsjaar\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[23]",
+    "oud": "options: [\"De frequentie van een golf of De snelheid van een golf\", \"De frequentie van een golf\", \"De afstand tussen twee opeenvolgende golven\", \"De snelheid van een golf\"]",
+    "nieuw": "options: [\"De hoogte van een golf\", \"De frequentie van een golf\", \"De afstand tussen twee opeenvolgende golven\", \"De snelheid van een golf\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[24]",
+    "oud": "options: [\"Plantencel heeft celwand, vacuole en chloroplasten; diercel niet\", \"diercel niet; Plantencel heeft celwand, vacuole en chloroplasten\", \"Diercel heeft celwand\", \"Plantencel heeft geen celkern\"]",
+    "nieuw": "options: [\"Plantencel heeft celwand, vacuole en chloroplasten; diercel niet\", \"Diercel heeft chloroplasten\", \"Diercel heeft celwand\", \"Plantencel heeft geen celkern\"]",
+    "reden": "tweede (half) goede optie (omgedraaide kopie)"
+  },
+  {
+    "waar": "natuur.klas1[25]",
+    "oud": "options: [\"Hertz (Hz)\", \"Newton of Joule\", \"Meter\", \"Newton\"]",
+    "nieuw": "options: [\"Hertz (Hz)\", \"Joule\", \"Meter\", \"Newton\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[26]",
+    "oud": "options: [\"Steen aan de oppervlakte\", \"Steen aan de oppervlakte of Een bergketen\", \"Een laag in de aardkorst, mantel of kern\", \"Een bergketen\"]",
+    "nieuw": "options: [\"Steen aan de oppervlakte\", \"Een rivierdal\", \"Een laag in de aardkorst, mantel of kern\", \"Een bergketen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[27]",
+    "oud": "options: [\"Zuren geven H⁺-radicalen af; basen nemen H⁺ op of geven OH⁻ af\", \"Zuren geven OH⁻\", \"Basen geven H⁺\", \"Zuren geven H⁺-ionen af; basen nemen H⁺ op of geven OH⁻ af\"]",
+    "nieuw": "options: [\"Zuren nemen elektronen op; basen geven elektronen af\", \"Zuren geven OH⁻\", \"Basen geven H⁺\", \"Zuren geven H⁺-ionen af; basen nemen H⁺ op of geven OH⁻ af\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[28]",
+    "oud": "options: [\"Perfect isolator dat onder bepaalde omstandigheden stroom geleidt\", \"Perfect isolator\", \"Een materiaal dat onder bepaalde omstandigheden stroom geleidt\", \"Perfect geleider\"]",
+    "nieuw": "options: [\"Een supergeleider zonder weerstand\", \"Perfect isolator\", \"Een materiaal dat onder bepaalde omstandigheden stroom geleidt\", \"Perfect geleider\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[29]",
+    "oud": "options: [\"Energie opslaan en doorgeven voor celprocessen\", \"Energie opslaan en doorgeven achter celprocessen\", \"Eiwitten aanmaken\", \"Afval verwijderen\"]",
+    "nieuw": "options: [\"Energie opslaan en doorgeven voor celprocessen\", \"Zuurstof vervoeren door het bloed\", \"Eiwitten aanmaken\", \"Afval verwijderen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[30]",
+    "oud": "options: [\"Ecotoerisme\", \"Gratis voordelen van ecosystemen achter de mens (schone lucht, water, bestuiving)\", \"Gratis voordelen van ecosystemen voor de mens (schone lucht, water, bestuiving)\", \"Een overheidsplan\"]",
+    "nieuw": "options: [\"Ecotoerisme\", \"Een dienst die natuurgebieden schoonmaakt\", \"Gratis voordelen van ecosystemen voor de mens (schone lucht, water, bestuiving)\", \"Een overheidsplan\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[31]",
+    "oud": "options: [\"Windenergie, Kernenergie en Een hernieuwbare energiebron dat miljoenen jaren geleden leefde\", \"Kernenergie\", \"Een hernieuwbare energiebron\", \"Energie opgeslagen in organisch materiaal dat miljoenen jaren geleden leefde\"]",
+    "nieuw": "options: [\"Windenergie\", \"Kernenergie\", \"Een hernieuwbare energiebron\", \"Energie opgeslagen in organisch materiaal dat miljoenen jaren geleden leefde\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[32]",
+    "oud": "options: [\"lucht en opgeloste stoffen opslaan en de cel stevig houden\", \"Fotosynthese\", \"Water en opgeloste stoffen opslaan en de cel stevig houden\", \"Eiwitsynthese\"]",
+    "nieuw": "options: [\"Energie opwekken uit glucose\", \"Fotosynthese\", \"Water en opgeloste stoffen opslaan en de cel stevig houden\", \"Eiwitsynthese\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[33]",
+    "oud": "options: [\"Wanneer producten gelijk zijn aan reactanten\", \"Wanneer producten gelijk zijn aan reactanten, Een gestopte reactie en Wanneer een reactie klaar is is aan de teruggaande reactie\", \"Wanneer de snelheid van de heenreactie gelijk is aan de teruggaande reactie\", \"Wanneer een reactie klaar is\"]",
+    "nieuw": "options: [\"Wanneer producten gelijk zijn aan reactanten\", \"Een gestopte reactie\", \"Wanneer de snelheid van de heenreactie gelijk is aan de teruggaande reactie\", \"Wanneer een reactie klaar is\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[34]",
+    "oud": "options: [\"Een geslachtscel (ei- of zaadcel) met de helft van het chromosoomaantal\", \"Een lichaamscel\", \"Een lichaamscel, Een stamcel en Een bloedcel met de helft van het chromosoomaantal\", \"Een bloedcel\"]",
+    "nieuw": "options: [\"Een geslachtscel (ei- of zaadcel) met de helft van het chromosoomaantal\", \"Een lichaamscel\", \"Een stamcel\", \"Een bloedcel\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[35]",
+    "oud": "options: [\"Het gehele bereik van elektromagnetische straling van radiogolven tot gammastraling\", \"Een geluidsspectrum\", \"Een geluidsspectrum van elektromagnetische straling van radiogolven tot gammastraling\", \"Een lichtspectrum\"]",
+    "nieuw": "options: [\"Het gehele bereik van elektromagnetische straling van radiogolven tot gammastraling\", \"Een geluidsspectrum\", \"Een reeks radiozenders\", \"Een lichtspectrum\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[36]",
+    "oud": "options: [\"Een fenotype\", \"Het uiterlijk van een organisme als begrip in de taalkunde\", \"Een chromosoom\", \"De genetische samenstelling — welke allelen een organisme heeft\"]",
+    "nieuw": "options: [\"Een fenotype\", \"Het aantal cellen van een organisme\", \"Een chromosoom\", \"De genetische samenstelling — welke allelen een organisme heeft\"]",
+    "reden": "onzin-afleider ('als begrip in de taalkunde')"
+  },
+  {
+    "waar": "natuur.klas1[37]",
+    "oud": "options: [\"Verharding van metalen\", \"Een chemische verbinding van metalen door chemische reactie met de omgeving (roesten)\", \"Aantasting van metalen door chemische reactie met de omgeving (roesten)\", \"Een chemische verbinding\"]",
+    "nieuw": "options: [\"Verharding van metalen\", \"Het smelten van metalen\", \"Aantasting van metalen door chemische reactie met de omgeving (roesten)\", \"Een chemische verbinding\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[39]",
+    "oud": "options: [\"Warmte produceren\", \"Warmte produceren, Bacteriën doden en Voedsel opslaan die opgenomen kunnen worden\", \"Grote voedingsmoleculen afbreken in kleinere die opgenomen kunnen worden\", \"Voedsel opslaan\"]",
+    "nieuw": "options: [\"Warmte produceren\", \"Bacteriën doden\", \"Grote voedingsmoleculen afbreken in kleinere die opgenomen kunnen worden\", \"Voedsel opslaan\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[40]",
+    "oud": "options: [\"Elektrische lading van een elektrische stroom door een veranderend magneetveld\", \"Een schakelaar\", \"Het opwekken van een elektrische stroom door een veranderend magneetveld\", \"Elektrische lading\"]",
+    "nieuw": "options: [\"Een soort isolatiemateriaal\", \"Een schakelaar\", \"Het opwekken van een elektrische stroom door een veranderend magneetveld\", \"Elektrische lading\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[41]",
+    "oud": "options: [\"De aardmantel\", \"Het aardmagneetveld\", \"Het aardmagneetveld van gassen rondom de aarde (troposfeer, stratosfeer, etc.)\", \"De laag van gassen rondom de aarde (troposfeer, stratosfeer, etc.)\"]",
+    "nieuw": "options: [\"De aardmantel\", \"Het aardmagneetveld\", \"De ozonlaag alleen\", \"De laag van gassen rondom de aarde (troposfeer, stratosfeer, etc.)\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[42]",
+    "oud": "options: [\"Een vergelijking\", \"Een afkorting die de soorten en aantallen moleculen in een molecuul weergeeft\", \"Een diagram\", \"Een afkorting die de soorten en aantallen atomen in een molecuul weergeeft\"]",
+    "nieuw": "options: [\"Een vergelijking\", \"Een lijst met smeltpunten van stoffen\", \"Een diagram\", \"Een afkorting die de soorten en aantallen atomen in een molecuul weergeeft\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas1[44]",
+    "oud": "options: [\"Een uitwendig skelet aan de buitenkant van het lichaam\", \"Een spier, Een inwendig skelet en Een orgaan van het lichaam\", \"Een inwendig skelet\", \"Een orgaan\"]",
+    "nieuw": "options: [\"Een uitwendig skelet aan de buitenkant van het lichaam\", \"Een spier\", \"Een inwendig skelet\", \"Een orgaan\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[45]",
+    "oud": "options: [\"Zwaartekracht\", \"Zwaartekracht, F=ma en Energiebehoud heeft een even grote maar tegengestelde reactiekracht\", \"Energiebehoud\", \"Elke actiekracht heeft een even grote maar tegengestelde reactiekracht\"]",
+    "nieuw": "options: [\"Zwaartekracht\", \"F = m × a\", \"Energiebehoud\", \"Elke actiekracht heeft een even grote maar tegengestelde reactiekracht\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[46]",
+    "oud": "options: [\"Stoffen met verschillende eigenschappen van elkaar scheiden (filtreren, destilleren)\", \"Een chemische reactie met verschillende eigenschappen van elkaar scheiden (filtreren, destilleren)\", \"Een verbinding maken\", \"Een chemische reactie\"]",
+    "nieuw": "options: [\"Stoffen met verschillende eigenschappen van elkaar scheiden (filtreren, destilleren)\", \"Twee stoffen samenvoegen\", \"Een verbinding maken\", \"Een chemische reactie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[47]",
+    "oud": "options: [\"Hernieuwbaar: wordt voortdurend aangevuld (zon, wind). Niet-hernieuwbaar: raakt op (fossiel)\", \"Hernieuwbaar = steenkool wordt voortdurend aangevuld (zon, wind). Niet-hernieuwbaar: raakt op (fossiel)\", \"Niet-hernieuwbaar = zon\", \"Hernieuwbaar = steenkool\"]",
+    "nieuw": "options: [\"Hernieuwbaar: wordt voortdurend aangevuld (zon, wind). Niet-hernieuwbaar: raakt op (fossiel)\", \"Hernieuwbaar: alles wat je kunt verbranden\", \"Niet-hernieuwbaar = zon\", \"Hernieuwbaar = steenkool\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[48]",
+    "oud": "options: [\"Een eencellig organisme met celkern dat niet plant, dier of schimmel is\", \"Een bacterie\", \"Een bacterie, Een virus en Een schimmel dat niet plant, dier of schimmel is\", \"Een schimmel\"]",
+    "nieuw": "options: [\"Een eencellig organisme met celkern dat niet plant, dier of schimmel is\", \"Een bacterie\", \"Een virus\", \"Een schimmel\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas1[49]",
+    "oud": "options: [\"Bacteriën zijn levende cellen; virussen zijn niet-levend en hebben een gastheercel nodig om zich te vermenigvuldigen\", \"Bacteriën kunnen alleen ziekten veroorzaken; virussen nooit\", \"Bacteriën zijn levende weefsels; virussen zijn niet-levend en hebben een gastheercel nodig om zich te vermenigvuldigen\", \"Virussen zijn groter dan bacteriën\"]",
+    "nieuw": "options: [\"Bacteriën zijn levende cellen; virussen zijn niet-levend en hebben een gastheercel nodig om zich te vermenigvuldigen\", \"Bacteriën kunnen alleen ziekten veroorzaken; virussen nooit\", \"Virussen zijn levende cellen; bacteriën niet\", \"Virussen zijn groter dan bacteriën\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[1]",
+    "oud": "options: [\"Energie ontstaat uit niets of Energie neemt toe\", \"Energie ontstaat uit niets\", \"Energie verdwijnt\", \"Energie verandert van vorm, gaat niet verloren\"]",
+    "nieuw": "options: [\"Energie neemt altijd toe\", \"Energie ontstaat uit niets\", \"Energie verdwijnt\", \"Energie verandert van vorm, gaat niet verloren\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[2]",
+    "oud": "options: [\"Celdeling in planten\", \"Gewone celdeling\", \"Reductiedeling achter geslachtscellen\", \"Reductiedeling voor geslachtscellen\"]",
+    "nieuw": "options: [\"Celdeling in planten\", \"Gewone celdeling\", \"Celdeling van bacteriën\", \"Reductiedeling voor geslachtscellen\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[3]",
+    "oud": "options: [\"Een enzym\", \"Stukje rna dat codeert voor een eiwit\", \"Stukje DNA dat codeert voor een eiwit\", \"Een chromosoom\"]",
+    "nieuw": "options: [\"Een enzym\", \"Een stukje celwand\", \"Stukje DNA dat codeert voor een eiwit\", \"Een chromosoom\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[4]",
+    "oud": "options: [\"Celademhaling\", \"Spierkracht\", \"Elektrisch signaal in een zenuwcel\", \"Hormoonproductie onder bepaalde omstandigheden\"]",
+    "nieuw": "options: [\"Celademhaling\", \"Spierkracht\", \"Elektrisch signaal in een zenuwcel\", \"Hormoonproductie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[5]",
+    "oud": "options: [\"Een product\", \"Stof die reageert\", \"Stof die reactie remt onder bepaalde omstandigheden\", \"Stof die reactie versnelt zonder zelf te veranderen\"]",
+    "nieuw": "options: [\"Een product\", \"Stof die reageert\", \"Stof die reactie remt\", \"Stof die reactie versnelt zonder zelf te veranderen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[7]",
+    "oud": "options: [\"Een versie van een gen\", \"Een chromosoom\", \"Een chromosoom of Een eiwit\", \"Een eiwit\"]",
+    "nieuw": "options: [\"Een versie van een gen\", \"Een chromosoom\", \"Een celkern\", \"Een eiwit\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[8]",
+    "oud": "options: [\"Een elektron in de praktijk\", \"Een proton\", \"Een foton\", \"Een bijna massaloos deeltje\"]",
+    "nieuw": "options: [\"Een elektron\", \"Een proton\", \"Een foton\", \"Een bijna massaloos deeltje\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[9]",
+    "oud": "options: [\"Selectieve doorgang van lucht door membraan\", \"Diffusie van ionen\", \"Diffusie van alle stoffen\", \"Selectieve doorgang van water door membraan\"]",
+    "nieuw": "options: [\"Actief transport met energie\", \"Diffusie van ionen\", \"Diffusie van alle stoffen\", \"Selectieve doorgang van water door membraan\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[10]",
+    "oud": "options: [\"Energie beschikbaar voor nuttig werk\", \"Potentiële energie\", \"Energie beschikbaar achter nuttig werk\", \"Kinetische energie\"]",
+    "nieuw": "options: [\"Energie beschikbaar voor nuttig werk\", \"Potentiële energie\", \"Warmte-energie\", \"Kinetische energie\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[11]",
+    "oud": "options: [\"mRNA gemaakt op basis van rna-template\", \"Een chromosoom\", \"mRNA gemaakt op basis van DNA-template\", \"Een DNA-kopie\"]",
+    "nieuw": "options: [\"Een eiwit\", \"Een chromosoom\", \"mRNA gemaakt op basis van DNA-template\", \"Een DNA-kopie\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[12]",
+    "oud": "options: [\"Golflengten die door een stof worden geabsorbeerd\", \"Kleurspectrumanalyse\", \"Licht dat wordt uitgezonden of Kleurspectrumanalyse\", \"Licht dat wordt uitgezonden\"]",
+    "nieuw": "options: [\"Golflengten die door een stof worden geabsorbeerd\", \"Kleurspectrumanalyse\", \"Een kleurstof\", \"Licht dat wordt uitgezonden\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[13]",
+    "oud": "options: [\"Studie van gedrag van deeltjes op atoomschaal\", \"Klassieke mechanica\", \"Relativiteitstheorie onder bepaalde omstandigheden\", \"Golftheorie\"]",
+    "nieuw": "options: [\"Studie van gedrag van deeltjes op atoomschaal\", \"Klassieke mechanica\", \"Relativiteitstheorie\", \"Golftheorie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[14]",
+    "oud": "options: [\"Entropie neemt toe in een gesloten systeem\", \"Energiebehoud\", \"Koeling\", \"Druk-volume relatie onder bepaalde omstandigheden\"]",
+    "nieuw": "options: [\"Entropie neemt toe in een gesloten systeem\", \"Energiebehoud\", \"Koeling\", \"Druk-volume relatie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[16]",
+    "oud": "options: [\"Spontane chemische reactie of Batterijwerking\", \"Spontane chemische reactie\", \"Chemische reactie door elektrische stroom\", \"Batterijwerking\"]",
+    "nieuw": "options: [\"Smelten van metalen\", \"Spontane chemische reactie\", \"Chemische reactie door elektrische stroom\", \"Batterijwerking\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[17]",
+    "oud": "options: [\"Vervallingsenergie\", \"Tijd om 100% radioactief te vervallen of Vervallingsenergie\", \"Tijd om helft radioactief materiaal te vervallen\", \"Tijd om 100% radioactief te vervallen\"]",
+    "nieuw": "options: [\"Vervallingsenergie\", \"Tijd tot de straling verdubbelt\", \"Tijd om helft radioactief materiaal te vervallen\", \"Tijd om 100% radioactief te vervallen\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[18]",
+    "oud": "options: [\"DNA-overdracht via virus of vectoren\", \"Eiwitsynthese\", \"rna-overdracht via virus of vectoren\", \"Celmigratie\"]",
+    "nieuw": "options: [\"DNA-overdracht via virus of vectoren\", \"Eiwitsynthese\", \"Overdracht van eiwitten tussen cellen\", \"Celmigratie\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[19]",
+    "oud": "options: [\"Verandering van frequentie door beweging bron/ontvanger\", \"Reflectie van geluid van frequentie door beweging bron/ontvanger\", \"Reflectie van geluid\", \"Relativiteitseffect\"]",
+    "nieuw": "options: [\"Verandering van frequentie door beweging bron/ontvanger\", \"Afbuiging van licht door een lens\", \"Reflectie van geluid\", \"Relativiteitseffect\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[20]",
+    "oud": "options: [\"Een molecuul dat bindt aan een receptor\", \"Een hormoon\", \"Een DNA-streng onder bepaalde omstandigheden\", \"Een enzym\"]",
+    "nieuw": "options: [\"Een molecuul dat bindt aan een receptor\", \"Een hormoon\", \"Een DNA-streng\", \"Een enzym\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[21]",
+    "oud": "options: [\"pH = log([HA]/[A⁻])\", \"pH = -log[H⁺] + pOH\", \"pH = log([HA]/[A⁻]) of pH = -log[H⁺] + pOH\", \"pH = pKa + log([A⁻]/[HA])\"]",
+    "nieuw": "options: [\"pH = log([HA]/[A⁻])\", \"pH = -log[H⁺] + pOH\", \"pH = pKa × [A⁻]/[HA]\", \"pH = pKa + log([A⁻]/[HA])\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[22]",
+    "oud": "options: [\"SN2: één stap, backside attack; SN1: twee stappen, carbokation-tussenproduct\", \"SN1: één stap\", \"SN2: twee stappen\", \"SN1: twee stappen, carbokation-tussenproduct; SN2: één stap, backside attack\"]",
+    "nieuw": "options: [\"SN1 en SN2 verlopen allebei in één stap\", \"SN1: één stap\", \"SN2: twee stappen\", \"SN1: twee stappen, carbokation-tussenproduct; SN2: één stap, backside attack\"]",
+    "reden": "tweede (half) goede optie (omgedraaide kopie)"
+  },
+  {
+    "waar": "natuur.klas3[23]",
+    "oud": "options: [\"Na⁺ stroomt naar binnen (depolarisatie) dan K⁺ naar buiten (repolarisatie)\", \"Cl⁻ veroorzaakt depolarisatie\", \"Cl⁻ veroorzaakt depolarisatie, K⁺ stroomt naar binnen en Na⁺ stroomt naar buiten naar binnen (depolarisatie) dan K⁺ naar buiten (repolarisatie)\", \"Na⁺ stroomt naar buiten\"]",
+    "nieuw": "options: [\"Na⁺ stroomt naar binnen (depolarisatie) dan K⁺ naar buiten (repolarisatie)\", \"Cl⁻ veroorzaakt depolarisatie\", \"K⁺ stroomt naar binnen\", \"Na⁺ stroomt naar buiten\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[25]",
+    "oud": "options: [\"Een RNA-molecuul\", \"Een eiwit dat rna-transcriptie reguleert door aan promotors te binden\", \"Een eiwit dat DNA-transcriptie reguleert door aan promotors te binden\", \"Een enzym dat DNA kopieert\"]",
+    "nieuw": "options: [\"Een RNA-molecuul\", \"Een eiwit dat aminozuren aan elkaar koppelt\", \"Een eiwit dat DNA-transcriptie reguleert door aan promotors te binden\", \"Een enzym dat DNA kopieert\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[26]",
+    "oud": "options: [\"Een object met zulke sterke zwaartekracht dat zelfs licht niet kan ontsnappen\", \"Een planeet zonder zon\", \"Een gat in de atmosfeer\", \"Een gat in de atmosfeer met zulke sterke zwaartekracht dat zelfs licht niet kan ontsnappen\"]",
+    "nieuw": "options: [\"Een object met zulke sterke zwaartekracht dat zelfs licht niet kan ontsnappen\", \"Een planeet zonder zon\", \"Een gat in de atmosfeer\", \"Een leeg gebied tussen sterrenstelsels\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[27]",
+    "oud": "options: [\"Thermodynamische entropie\", \"Klassieke baanbeweging\", \"Thermodynamische entropie of Klassieke baanbeweging\", \"De kwantumtoestand en golfkarakter van deeltjes\"]",
+    "nieuw": "options: [\"Thermodynamische entropie\", \"Klassieke baanbeweging\", \"Elektrische weerstand\", \"De kwantumtoestand en golfkarakter van deeltjes\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[28]",
+    "oud": "options: [\"Een genbewerkingstechniek die DNA gericht knipt en aanpast\", \"Een genbewerkingstechniek die rna gericht knipt en aanpast\", \"Een eiwitsynthesemethode\", \"Een virustechniek\"]",
+    "nieuw": "options: [\"Een genbewerkingstechniek die DNA gericht knipt en aanpast\", \"Een vaccin tegen virussen\", \"Een eiwitsynthesemethode\", \"Een virustechniek\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[29]",
+    "oud": "options: [\"Aeroob: met zuurstof, veel ATP. Anaeroob: zonder zuurstof, weinig ATP.\", \"Anaeroob: meer ATP\", \"Aeroob: met waterstof, veel ATP. Anaeroob: zonder zuurstof, weinig ATP.\", \"Aeroob: zonder zuurstof\"]",
+    "nieuw": "options: [\"Aeroob: met zuurstof, veel ATP. Anaeroob: zonder zuurstof, weinig ATP.\", \"Anaeroob: meer ATP\", \"Aeroob en anaeroob leveren evenveel ATP\", \"Aeroob: zonder zuurstof\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[30]",
+    "oud": "options: [\"Elektronen clusteren in de kern als onderdeel van de grammaticale analyse\", \"Atomen zijn ondeelbaar\", \"Geen twee elektronen in een atoom kunnen dezelfde vier kwantumgetallen hebben\", \"Elektronen bewegen in cirkels\"]",
+    "nieuw": "options: [\"Elektronen clusteren in de kern\", \"Atomen zijn ondeelbaar\", \"Geen twee elektronen in een atoom kunnen dezelfde vier kwantumgetallen hebben\", \"Elektronen bewegen in cirkels\"]",
+    "reden": "onzin-staart ('als onderdeel van de grammaticale analyse')"
+  },
+  {
+    "waar": "natuur.klas3[31]",
+    "oud": "options: [\"Celbeschadiging of Celdeling\", \"Celbeschadiging\", \"Geprogrammeerde celdood\", \"Celdeling\"]",
+    "nieuw": "options: [\"Celgroei\", \"Celbeschadiging\", \"Geprogrammeerde celdood\", \"Celdeling\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[32]",
+    "oud": "options: [\"Titratie gebaseerd op elektron-overdracht om concentratie te bepalen\", \"Zuur-base titratie\", \"Precipitatie-reactie\", \"Zuur-base titratie, Precipitatie-reactie en Zoutvorming om concentratie te bepalen\"]",
+    "nieuw": "options: [\"Titratie gebaseerd op elektron-overdracht om concentratie te bepalen\", \"Zuur-base titratie\", \"Precipitatie-reactie\", \"Zoutvorming\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[33]",
+    "oud": "options: [\"De potentiaal waarbij een actie-potentiaal onvermijdelijk ontstaat\", \"De repolarisatiepiek\", \"De maximale depolarisatie waarbij een actie-potentiaal onvermijdelijk ontstaat\", \"De maximale depolarisatie\"]",
+    "nieuw": "options: [\"De potentiaal waarbij een actie-potentiaal onvermijdelijk ontstaat\", \"De repolarisatiepiek\", \"De rustpotentiaal\", \"De maximale depolarisatie\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[34]",
+    "oud": "options: [\"Activeringsenergie-principe\", \"Activeringsenergie-principe, Wet van massawerking en Hoe concentratie pH beïnvloedt om een verandering te compenseren\", \"Een systeem in evenwicht verschuift om een verandering te compenseren\", \"Hoe concentratie pH beïnvloedt\"]",
+    "nieuw": "options: [\"Activeringsenergie-principe\", \"Wet van massawerking\", \"Een systeem in evenwicht verschuift om een verandering te compenseren\", \"Hoe concentratie pH beïnvloedt\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[35]",
+    "oud": "options: [\"Een RNA-virus dat zijn RNA omzet in DNA via reverse transcriptase\", \"Een DNA-virus\", \"Een RNA-virus dat zijn RNA omzet in rna via reverse transcriptase\", \"Een bacteriofaag\"]",
+    "nieuw": "options: [\"Een RNA-virus dat zijn RNA omzet in DNA via reverse transcriptase\", \"Een DNA-virus\", \"Een RNA-virus dat alleen planten besmet\", \"Een bacteriofaag\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[36]",
+    "oud": "options: [\"Beta: heliumkern; alfa: elektron\", \"Gamma: deeltjesstraling\", \"beta: elektron/positron; gamma: elektromagnetische straling; Alfa: heliumkern\", \"Alfa: heliumkern; beta: elektron/positron; gamma: elektromagnetische straling\"]",
+    "nieuw": "options: [\"Beta: heliumkern; alfa: elektron\", \"Gamma: deeltjesstraling\", \"Alle drie zijn elektromagnetische straling\", \"Alfa: heliumkern; beta: elektron/positron; gamma: elektromagnetische straling\"]",
+    "reden": "tweede (half) goede optie (zelfde inhoud in andere volgorde)"
+  },
+  {
+    "waar": "natuur.klas3[37]",
+    "oud": "options: [\"Een activator\", \"Een substraat\", \"Een activator dat de enzymwerking vermindert of blokkeert\", \"Een molecuul dat de enzymwerking vermindert of blokkeert\"]",
+    "nieuw": "options: [\"Een activator\", \"Een substraat\", \"Een co-enzym\", \"Een molecuul dat de enzymwerking vermindert of blokkeert\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[38]",
+    "oud": "options: [\"F = GMm/r²\", \"F = GMm/r² of F = qvB\", \"F = k × q₁q₂/r²\", \"F = qvB\"]",
+    "nieuw": "options: [\"F = GMm/r²\", \"F = m × a\", \"F = k × q₁q₂/r²\", \"F = qvB\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[39]",
+    "oud": "options: [\"Verandering in genexpressie zonder rna-sequentie te wijzigen\", \"Chromosoomafwijking\", \"Verandering in genexpressie zonder DNA-sequentie te wijzigen\", \"Mutatie in DNA-sequentie\"]",
+    "nieuw": "options: [\"Een virus dat genen inbouwt\", \"Chromosoomafwijking\", \"Verandering in genexpressie zonder DNA-sequentie te wijzigen\", \"Mutatie in DNA-sequentie\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[41]",
+    "oud": "options: [\"Een reeks van drie basen in mRNA die voor een aminozuur coderen\", \"Een exon\", \"Een allel\", \"Een reeks van drie basen in mRNA die achter een aminozuur coderen\"]",
+    "nieuw": "options: [\"Een reeks van drie basen in mRNA die voor een aminozuur coderen\", \"Een exon\", \"Een allel\", \"Een stuk DNA dat niet codeert\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[42]",
+    "oud": "options: [\"Celbewegingen aansturen of Eiwitten aanmaken\", \"Celbewegingen aansturen\", \"Eiwitten aanmaken\", \"ATP produceren via cellulaire ademhaling\"]",
+    "nieuw": "options: [\"Vet opslaan\", \"Celbewegingen aansturen\", \"Eiwitten aanmaken\", \"ATP produceren via cellulaire ademhaling\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[43]",
+    "oud": "options: [\"E = IR, P = I²R en F = BIL is evenredig met de veranderingssnelheid van de magnetische flux\", \"P = I²R\", \"F = BIL\", \"De geïnduceerde EMK is evenredig met de veranderingssnelheid van de magnetische flux\"]",
+    "nieuw": "options: [\"E = I × R\", \"P = I²R\", \"F = BIL\", \"De geïnduceerde EMK is evenredig met de veranderingssnelheid van de magnetische flux\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[44]",
+    "oud": "options: [\"Een reeks verbindingen die elk één CH₂-groep minder hebben dan de vorige\", \"Polymeren\", \"Een reeks verbindingen die elk één CH₂-groep meer hebben dan de vorige\", \"Aromatische verbindingen\"]",
+    "nieuw": "options: [\"Een reeks verbindingen met dezelfde molecuulformule\", \"Polymeren\", \"Een reeks verbindingen die elk één CH₂-groep meer hebben dan de vorige\", \"Aromatische verbindingen\"]",
+    "reden": "tweede (half) goede optie ('één CH₂ minder' is ook juist)"
+  },
+  {
+    "waar": "natuur.klas3[45]",
+    "oud": "options: [\"Een genregulatiesysteem in E. coli achter lactosemetabolisme\", \"Een viraal DNA-stuk\", \"Een bacteriële flagel\", \"Een genregulatiesysteem in E. coli voor lactosemetabolisme\"]",
+    "nieuw": "options: [\"Een gen dat lactose aanmaakt\", \"Een viraal DNA-stuk\", \"Een bacteriële flagel\", \"Een genregulatiesysteem in E. coli voor lactosemetabolisme\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[46]",
+    "oud": "options: [\"Deeltjes zijn golfachtig\", \"Deeltjes zijn golfachtig van een deeltje kunnen niet tegelijk exact bekend zijn\", \"Positie en impuls van een deeltje kunnen niet tegelijk exact bekend zijn\", \"Energie is behouden\"]",
+    "nieuw": "options: [\"Deeltjes zijn golfachtig\", \"Licht bestaat uit deeltjes\", \"Positie en impuls van een deeltje kunnen niet tegelijk exact bekend zijn\", \"Energie is behouden\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[47]",
+    "oud": "options: [\"Een hormoon in het bloed\", \"Een elektrisch signaal\", \"Een chemische boodschapper die signalen overdraagt tussen neuronen\", \"Een hormoon in het bloed, Een elektrisch signaal en Een zenuwcel die signalen overdraagt tussen neuronen\"]",
+    "nieuw": "options: [\"Een hormoon in het bloed\", \"Een elektrisch signaal\", \"Een chemische boodschapper die signalen overdraagt tussen neuronen\", \"Een zenuwcel\"]",
+    "reden": "plaksel-afleider vervangen"
+  },
+  {
+    "waar": "natuur.klas3[48]",
+    "oud": "options: [\"Inwendige energie\", \"Een maat achter de wanorde of het aantal micro-toestanden van een systeem\", \"Beschikbare energie voor werk\", \"Een maat voor de wanorde of het aantal micro-toestanden van een systeem\"]",
+    "nieuw": "options: [\"Inwendige energie\", \"De temperatuur van een systeem\", \"Beschikbare energie voor werk\", \"Een maat voor de wanorde of het aantal micro-toestanden van een systeem\"]",
+    "reden": "afleider was bijna-kopie van het goede antwoord (verraadt het antwoord)"
+  },
+  {
+    "waar": "natuur.klas3[49]",
+    "oud": "options: [\"Het membraan is alleen voor water\", \"Het membraan is ondoorlaatbaar\", \"Het membraan laat selectief stoffen door op basis van grootte, lading en vetoplosbaarheid\", \"Het membraan is alleen voor water, Het membraan is ondoorlaatbaar en Het membraan laat alles door van grootte, lading en vetoplosbaarheid\"]",
+    "nieuw": "options: [\"Het membraan is alleen voor water\", \"Het membraan is ondoorlaatbaar\", \"Het membraan laat selectief stoffen door op basis van grootte, lading en vetoplosbaarheid\", \"Het membraan laat alles door\"]",
+    "reden": "plaksel-afleider vervangen"
+  }
+]
