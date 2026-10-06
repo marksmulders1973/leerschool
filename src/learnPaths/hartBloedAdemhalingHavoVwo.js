@@ -66,7 +66,7 @@ const steps = [
           "Longen"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — daar AV-knoop voor kamers.", "Hersens controleren WEL.", "Niet."],
+        wrongHints: [null, "Niet — daar AV-knoop voor kamers.", "Hersenen kunnen het tempo bijsturen, maar de impuls ontstaat in het hart zelf.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Eigen ritme", tekst: "Sinusknoop genereert elektrische impuls 60-100/min spontaan. Impuls → boezems samentrekken → AV-knoop vertraging 0,1 s → kamers samentrekken. Bij defect: pacemaker-implantaat met batterij in borstkas geeft elektrische pulsen." },
@@ -208,11 +208,11 @@ const steps = [
         options: [
           "Universele donor — kan aan iedereen gegeven worden",
           "Universele ontvanger",
-          "Zeldzaam in NL",
+          "Alleen geschikt voor mensen met bloedgroep O",
           "Krimpt"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — dat is AB+.", "Niet zo zeldzaam.", "Onzin."],
+        wrongHints: [null, "Niet — dat is AB+.", "Denk aan welke antigenen O-negatief bloed mist.", "Onzin."],
         uitlegPad: {
           stappen: [
             { titel: "Geen antigenen → geen reactie", tekst: "O = geen A/B-antigenen. Negatief = geen Rh-antigen. Lichaam ontvanger ziet niets vreemds → geen afweer. Daarom gebruikt men het in noodgevallen als de bloedgroep onbekend is. NL: ~6% bevolking. Bloedbanken doen continu campagne voor O-negatief donoren." },
@@ -269,7 +269,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet — geen uitwisseling daar.", "Niet — geen.", "Niet — alleen geleiding."],
         uitlegPad: {
-          stappen: [{ titel: "~300 mln longblaasjes", tekst: "Alveoli zijn eindstation: wand 1 cel dik, omgeven door haarvaten. O₂ diffundeert in, CO₂ uit. Totaal oppervlak ~70 m² per persoon (tennisbaan). Daarom enorme efficiëntie." }],
+          stappen: [{ titel: "~300 mln longblaasjes", tekst: "Alveoli zijn eindstation: wand 1 cel dik, omgeven door haarvaten. O₂ diffundeert in, CO₂ uit. Totaal oppervlak ~70 m² per persoon (ongeveer een halve tennisbaan). Daarom enorme efficiëntie." }],
           niveaus: { basis: "Alveoli.", simpeler: "Longblaasjes.", nogSimpeler: "Alveoli" },
         },
       },
