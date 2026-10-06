@@ -27,7 +27,7 @@ const steps = [
           "Rechters oordelen over wetten en misdrijven — niet over politieke verantwoording.",
           "Ministers ZIJN onderdeel van de regering — kunnen niet aan zichzelf verantwoording afleggen.",
           null,
-          "Vóór 1848 wel: aan koning. NA 1848: koning is 'onschendbaar' en ministers leggen verantwoording af aan het parlement.",
+          "Vóór 1848 klopte dat. Maar in 1848 werd de koning 'onschendbaar' — wie controleert de ministers dan wél?",
         ],
         explanation: "Vóór 1848 was de koning verantwoordelijk voor het regeren. Met de nieuwe Grondwet (Thorbecke, 1848) werd de KONING onschendbaar verklaard — maar dat betekende dat de MINISTERS verantwoording moesten afleggen, en wel aan het PARLEMENT (Tweede en Eerste Kamer). Dit is het begin van de constitutionele monarchie + parlementaire democratie in NL.",
         examenBron: BRON(1),
