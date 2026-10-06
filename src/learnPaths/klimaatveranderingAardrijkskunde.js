@@ -254,11 +254,11 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "**Klimaat** vs **weer**?", options: ["Klimaat = gemiddelde jaren, weer = nu", "Geen verschil", "Beide hetzelfde", "Andersom"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Niet."] },
-      { q: "Wat is **CO₂**?", options: ["Belangrijkste broeikasgas", "Zuurstof", "Stikstof", "Water"], answer: 0, wrongHints: [null, "Geen broeikas.", "Geen broeikas.", "Wel maar niet primair."] },
+      { q: "Wat is **CO₂**?", options: ["Belangrijkste broeikasgas door de mens", "Zuurstof", "Stikstof", "Water"], answer: 0, wrongHints: [null, "Geen broeikas.", "Geen broeikas.", "Water is H₂O — welke letters staan er in CO₂?"] },
       { q: "**1,5 °C** doel komt uit?", options: ["Parijs-akkoord 2015", "Kyoto", "EU-wet", "NASA"], answer: 0, wrongHints: [null, "Eerder.", "Volgt op Parijs.", "Niet."] },
       { q: "Wat is **kantelpunt** in klimaat?", options: ["Onomkeerbare verandering", "Tijdmeter", "Berg", "Klok"], answer: 0, wrongHints: [null, "Geen meting van tijd.", "Geen landschap — een drempel.", "Geen uurwerk — een grens-punt."] },
       { q: "Welke is **hernieuwbare energie**?", options: ["Zonnepaneel + windmolen", "Kolen", "Olie", "Gas"], answer: 0, wrongHints: [null, "Uit oude mijnen — raakt op.", "Pomp je op uit putten — eindig.", "Uit ondergrond — voorraad eindig."] },
-      { q: "Wat doet **smelten poolijs**?", options: ["Zeespiegel stijgt", "Niets", "Verkoelt aarde", "Maakt zoetwater"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Wel maar primair stijging."] },
+      { q: "Wat doet **smelten van landijs** (Groenland + Antarctica)?", options: ["Zeespiegel stijgt", "Niets", "Verkoelt aarde", "Zeespiegel daalt"], answer: 0, wrongHints: [null, "Wel.", "Niet.", "Waar blijft al dat smeltwater?"] },
     ],
   },
 ];
