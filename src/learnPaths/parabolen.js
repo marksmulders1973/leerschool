@@ -460,7 +460,7 @@ ${gridSvg}
     checks: [
       {
         q: "Welke vorm krijg je als je de punten verbindt met een vloeiende lijn?",
-        options: ["Een U-vorm (parabool)", "Een rechte lijn", "Een cirkel", "Een driehoek"],
+        options: ["Een U-vorm", "Een rechte lijn", "Een cirkel", "Een driehoek"],
         answer: 0,
         wrongHints: [
           null,
@@ -994,9 +994,9 @@ ${gridSvg}
         answer: 0,
         wrongHints: [
           null,
-          "Bij een parabool is er maar één uiterste punt. Hoe vaak zie je in het plaatje een hoogste/laagste punt?",
+          "Kijk naar het plaatje: hoe vaak zie je een hoogste of laagste punt?",
           "0 zou betekenen dat de parabool nergens een uiterste heeft. Maar elke parabool heeft een laagste of hoogste punt.",
-          "Oneindig veel zou betekenen dat overal hetzelfde is. Maar we zien duidelijk één punt waar het kantelt.",
+          "Oneindig veel zou betekenen dat de parabool overal even hoog of laag is. Is dat zo bij een U-vorm?",
         ],
         uitlegPad: {
           stappen: [{ titel: "1 top per parabool", tekst: "Elke parabool heeft precies één top — het uiterste punt waar het kantelt van dalen naar stijgen (of omgekeerd)." }],

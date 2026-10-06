@@ -586,7 +586,7 @@ const steps = [
         q: "Welk getal is **rationaal**?",
         options: ["⅖", "√2", "π", "Geen van deze"],
         answer: 0,
-        wrongHints: [null, "Kan je √2 als gewone breuk schrijven? Of gaat zijn decimale schrijfwijze oneindig door zonder herhalend patroon?", "Kan je π als gewone breuk schrijven? Of gaat zijn decimale schrijfwijze oneindig door zonder herhalend patroon?", "Is ⅖ al geschreven als een breuk? Wat zegt de definitie van rationaal over breuken?"],
+        wrongHints: [null, "Kan je √2 als gewone breuk schrijven? Of gaat zijn decimale schrijfwijze oneindig door zonder herhalend patroon?", "Kan je π als gewone breuk schrijven? Of gaat zijn decimale schrijfwijze oneindig door zonder herhalend patroon?", "Bekijk elke optie nog eens: kun je er één als gewone breuk (teller/noemer) schrijven?"],
         uitlegPad: {
           stappen: [{ titel: "⅖ = breuk = rationaal", tekst: "Rationaal = te schrijven als breuk a/b. ⅖ = 2/5 al een breuk → rationaal. √2 + π = oneindige niet-herhalende decimalen → irrationaal." }],
           woorden: [{ woord: "ℚ rationaal", uitleg: "Te schrijven als breuk teller/noemer." }, { woord: "irrationaal", uitleg: "NIET als breuk te schrijven. Oneindig + niet-herhalend." }],
@@ -657,7 +657,7 @@ const steps = [
         q: "Een vierkante kamer heeft oppervlakte 81 m². Hoe lang zijn de zijden?",
         options: ["9 m", "40,5 m", "81 m", "8 m"],
         answer: 0,
-        wrongHints: [null, "Dat is de oppervlakte gedeeld door twee. Maar de formule voor de zijde is: zijde = wortel van de oppervlakte.", "Dat is de oppervlakte zelf, niet de zijde. Welke bewerking geeft je de zijde vanuit de oppervlakte?", "Dat kwadraat geeft niet de gegeven oppervlakte. Probeer een getal hoger."],
+        wrongHints: [null, "Dat is de oppervlakte gedeeld door twee. Maar de formule voor de zijde is: zijde = wortel van de oppervlakte.", "Dat is de oppervlakte zelf, niet de zijde. Welke bewerking geeft je de zijde vanuit de oppervlakte?", "Reken 8 × 8 uit: is dat de gegeven oppervlakte?"],
         uitlegPad: {
           stappen: [{ titel: "zijde = √opp", tekst: "Vierkant: opp = zijde². Andersom: zijde = √opp. Hier: zijde = √81 = 9 m." }],
           woorden: [{ woord: "vierkant", uitleg: "Alle 4 zijden gelijk. Opp = zijde × zijde = zijde²." }],
@@ -700,7 +700,7 @@ const steps = [
         },
       },
       { q: "Bereken: 6² = ?", options: ["36","12","18","30"], answer: 0, wrongHints: [null, "Niet — niet 2×6.", "Niet — niet 3×6.", "Niet."] },
-      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null, "Dat kwadraat geeft 64, niet 81 — welk getal maal zichzelf komt wél op 81 uit?", "Dat kwadraat geeft 49, nog verder ervan — probeer een getal dichter bij tien.", "Je zoekt een getal dat mét zichzelf vermenigvuldigd 81 geeft, niet een verdubbeling."] },
+      { q: "Bereken: √81 = ?", options: ["9","8","7","18"], answer: 0, wrongHints: [null, "Dat kwadraat geeft 64, niet 81 — welk getal maal zichzelf komt wél op 81 uit?", "Reken 7 × 7 uit: kom je dan op 81?", "Je zoekt een getal dat mét zichzelf vermenigvuldigd 81 geeft, niet een verdubbeling."] },
       { q: "Bereken: √144 = ?", options: ["12","11","14","72"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Helft."] },
       { q: "Wat is **√2** ongeveer?", options: ["1,41","1,5","2","1"], answer: 0, wrongHints: [null, "Te hoog.", "Wortel ≠ getal.", "Te laag."] },
       { q: "Is **π** rationaal of irrationaal?", options: ["Irrationaal","Rationaal","Geheel","Natuurlijk"], answer: 0, wrongHints: [null, "Niet — kun je π als een breuk schrijven, of gaan de decimalen oneindig door zonder patroon?", "Niet.", "Niet."] },
