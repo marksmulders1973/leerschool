@@ -53,3 +53,11 @@ Niet gewijzigd; nakijkers vonden ze verdedigbaar maar discutabel. Per regel: pad
 
 ## Dubbel
 - rekenen.groep4[8]=[48] (5×5); aardrijkskunde.groep7[30]/[32] = [14]/[25]; duits.groep7[49]=[39]; frans.groep5[48]/[49]; Doorstroomtoets rekenen: 4 dubbele sommen (stap 1 v17/v44, 2 v14/v30, 3 v13/v22, 4 v13/v21).
+
+# Ronde 3 (6 okt) — aanvullingen
+- **99 twijfelpunten uit de cloud** staan per deel in `docs/audit/VERSLAG-cloud-1.md` (A: 65, B examens: 27 — o.a. antwoorden die tegen het correctievoorschrift gecheckt moeten worden, C: 7).
+- Examens biologie (lokaal): 2024-t1 V17 tandzenuwen (ook tandbeen?), 2025-t2 V15 meerling-kans zonder brondata, 2024-t1 V33 lymfe; 3 checks zonder leerpadLink. Tip: correctievoorschrift-PDF's lezen maakt dit hard.
+- VO exact (lokaal, 15 punten): exponentieel.jsx + kansrekening.js gebruiken bestandsbreed de punt als decimaalteken; patroon "juiste optie is de enige mét toelichting en staat op index 0"; radioactiviteit Fe-56 vs Ni-62; cse-vmbo "CSE 120 min" geldt niet voor BB; organische-chemie "rotte eieren" bij aardgas-odorant.
+- VO talen: conditionals Type 0/1-afleiders grammaticaal correct; "I saw that film three times" (AE) als fout.
+- Oefenbank VO B (14 punten): Parijs-akkoord "max. 1,5 °C"; Schengen "29 landen" (veroudert); Koude Oorlog "formeel 1947"; vak "natuur" klas3 bevat bovenbouwstof (Nernst, SN1/SN2) onder een klas-3-label; engels.groep7/maatschappijleer.groep7 = VO-niveau.
+- **Structureel:** in de oefenbank-VO klas1/3-sets had ~85% van de vragen een plaksel-afleider (nu hersteld, 492+8). De PO-sets (groep 5/7) hebben hetzelfde patroon maar milder (~15 per set) → bulk-ronde in de cloud (~$30).

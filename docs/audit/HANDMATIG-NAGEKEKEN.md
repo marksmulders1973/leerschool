@@ -1,5 +1,7 @@
 # Handmatig nagekeken — per leerpad
 
+**Ronde 3 (6 okt, v924) — groepsgewijs:** ✅ alle VO-zaakvakpaden (74, cloud-1) · ✅ alle examen-* (48: biologie lokaal, rest cloud-1; alleen uitleg/hints) · ✅ oefenbank VO klas1-6 voor natuur/ak/gs/maatschappijleer/biologie/economie/rekenen/kleine vakken (cloud-1 + lokaal B) · 🟡 VO exact 37 van 50 paden volledig (lokaal; rest + klaargezette edits in routine audit3-rest) · 🟡 VO talen 7 van 32 (comparatives, conditionals, present/past tenses, onregelmatige ww ×2, woordenschat-engels) · ⏳ oefenbank VO deel A (taal/nederlands/engels/duits/frans/spaans/latijn/grieks/wiskunde/natuurkunde/scheikunde/nask klas1-6). Per-pad-rijen hieronder zijn voor ronde 1-2 bijgewerkt; ronde 3 staat in `VERSLAG-cloud-1.md`.
+
 Bijhouden bij elke audit-ronde (docs/AUDIT-PLAN-OKT-2026.md). Status: ✅ nagekeken (datum) · 🔄 bezig · ⏳ nog niet · 🔴 offline.
 Aantal = vragen in het pad (`steps[].checks`), geteld 5 okt 2026. Paden met .jsx-import laden niet in het auditscript maar wel in de app.
 
