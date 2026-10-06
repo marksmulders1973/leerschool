@@ -60,7 +60,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Een tekst legt stap voor stap uit hoe een hybride-motor werkt, zonder oordeel of voorkeur.* — Welke tekstsoort?",
+        q: "*Een tekst legt stap voor stap uit hoe een hybride motor werkt, zonder oordeel of voorkeur.* — Welke tekstsoort?",
         options: ["Uiteenzetting", "Betoog", "Beschouwing", "Reportage"],
         answer: 0,
         wrongHints: [
@@ -284,7 +284,7 @@ const steps = [
         wrongHints: [
           null,
           "Het sterkste argument helemaal vooraan zetten betekent dat het slot anti-climactisch wordt. Wat blijft het meest hangen bij de lezer?",
-          "Volgorde maakt wel degelijk uit voor overtuigingskracht.  Welke positie krijgt het beste argument?",
+          "Volgorde maakt wel degelijk uit voor overtuigingskracht. Welke positie krijgt het beste argument?",
           "Een betoog verdedigt één standpunt — pro/contra-structuur is meer iets voor een beschouwing.",
         ],
       },
@@ -467,7 +467,7 @@ const steps = [
 </svg>`,
     checks: [
       {
-        q: "*Op het examen heb je 70 minuten voor de schrijfopdracht. Hoe verdeel je de tijd het beste?*",
+        q: "*Voor een schrijfopdracht (toets) heb je 70 minuten. Hoe verdeel je de tijd het beste?*",
         options: [
           "10 min plan + 50 min schrijven + 10 min revisie",
           "70 min schrijven, geen revisie nodig",
