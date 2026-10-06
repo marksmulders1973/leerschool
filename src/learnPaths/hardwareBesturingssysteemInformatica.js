@@ -168,9 +168,9 @@ const steps = [
       },
       {
         q: "Wat is een **driver**?",
-        options: ["Software waarmee het OS met een apparaat (printer, GPU) kan praten", "Iemand die de computer bestuurt", "Een bestand met foto's", "Het werkgeheugen"],
+        options: ["Software die een apparaat laat samenwerken met het systeem", "Iemand die de computer bestuurt", "Software die virussen opspoort", "Het werkgeheugen van de computer"],
         answer: 0,
-        wrongHints: [null, "Het is software, geen persoon.", "Het is geen fotobestand.", "RAM is iets heel anders."],
+        wrongHints: [null, "Het is software, geen persoon.", "Dat is een virusscanner — die beschermt, maar laat geen apparaat werken.", "RAM is iets heel anders."],
         uitlegPad: {
           stappen: [{ titel: "Vertaler naar hardware", tekst: "Een **driver** is een stukje software dat het **OS leert praten met een specifiek apparaat** (printer, grafische kaart, webcam). Zonder de juiste driver herkent of gebruikt het besturingssysteem het apparaat niet goed." }],
           niveaus: { basis: "Software voor een apparaat.", simpeler: "Driver = hardware-vertaler", nogSimpeler: "Software voor een apparaat" },

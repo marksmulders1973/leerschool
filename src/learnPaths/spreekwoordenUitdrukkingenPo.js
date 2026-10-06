@@ -260,7 +260,7 @@ const steps = [
       },
       {
         q: "Tom kocht 6 paar goedkope schoenen — alle 6 binnen 2 maanden kapot. Spreekwoord?",
-        options: ["Goedkoop is duurkoop", "Vele vrienden", "Op rozen", "Vele handen"],
+        options: ["Goedkoop is duurkoop", "Beter een goede buur dan een verre vriend", "Op rozen zitten", "Vele handen maken licht werk"],
         answer: 0,
         wrongHints: [null, "Gaat dit verhaal over vrienden? Kijk wat Tom overkomt met zijn géld.", "Zit Tom lekker op rozen, of gaat het juist mis? Zoek het spreekwoord over kopen.", "Er helpt hier niemand mee — het gaat over goedkoop kopen en wat dat kost."],
       },

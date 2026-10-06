@@ -1,0 +1,5 @@
+[
+{"waar":"topics.js:TOPIC_QUESTIONS.seksuele voorlichting[7]","oud":">Wederzijdse toestemming<","nieuw":">Wat is toestemming?<","reden":"weggegeven: het plaatje noemde het antwoord (wederzijdse toestemming)"},
+{"waar":"topics.js:TOPIC_QUESTIONS.seksuele voorlichting[10]","oud":">Geslachtshormonen sturen ontwikkeling<","nieuw":">Wat doen deze stoffen?<","reden":"weggegeven: het plaatje beschreef het antwoord (hormonen sturen geslachtsontwikkeling)"},
+{"waar":"topics.js:TOPIC_QUESTIONS.seksuele voorlichting[37]","oud":">Spontaan verlies van de zwangerschap<","nieuw":">Wat is een miskraam?<","reden":"weggegeven: het plaatje gaf letterlijk de definitie (= het goede antwoord)"}
+]

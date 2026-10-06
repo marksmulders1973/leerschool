@@ -215,7 +215,7 @@ const steps = [
     checks: [
       {
         q: "Wanneer **viel de Berlijnse Muur**?",
-        options: ["9 november 1989", "1961", "2001", "2022"],
+        options: ["1989", "1961", "2001", "2022"],
         answer: 0,
         wrongHints: [null, "Toen gebouwd.", "9/11.", "Oekraïne."],
       },

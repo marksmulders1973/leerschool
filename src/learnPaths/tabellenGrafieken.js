@@ -581,7 +581,7 @@ const steps = [
       { q: "Een **frequentietabel** toont?", options: ["Hoe vaak elke waarde voorkomt","Tijd-verloop","Verhouding","Som"], answer: 0, wrongHints: [null, "Lijngrafiek.", "Niet.", "Niet enkel."] },
       { q: "Bij grafiek-vraag: **eerst** doen?", options: ["Titel + assen lezen","Direct antwoord raden","Telling totaal","Naam tellen"], answer: 0, wrongHints: [null, "Niet — fout.", "Soms maar niet eerst.", "Niet."] },
       { q: "Welke vraag bij **tabel** is moeilijkst?", options: ["Optellen meerdere cellen + interpreteren","Naam zoeken","Datum lezen","Titel lezen"], answer: 0, wrongHints: [null, "Te makkelijk.", "Niet.", "Niet."] },
-      { q: "Een **histogram** lijkt op?", options: ["Staafdiagram (voor frequentie)","Lijn","Taart","Tijdslijn"], answer: 0, wrongHints: [null, "Een lijn = lijngrafiek (verloop tijd), iets anders.", "Taart = cirkeldiagram (verdeling), iets anders.", "Tijdslijn = historische volgorde, iets anders."] },
+      { q: "Een **histogram** lijkt op?", options: ["Staafdiagram","Lijn","Taart","Tijdslijn"], answer: 0, wrongHints: [null, "Een lijn = lijngrafiek (verloop tijd), iets anders.", "Taart = cirkeldiagram (verdeling), iets anders.", "Tijdslijn = historische volgorde, iets anders."] },
     ],
   },
 ];
