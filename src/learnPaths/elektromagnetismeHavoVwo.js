@@ -139,7 +139,7 @@ const steps = [
           "Alleen massa"
         ],
         answer: 0,
-        wrongHints: [null, "Onvolledig.", "Onvolledig.", "Niets dan massa is fout."],
+        wrongHints: [null, "Onvolledig.", "Onvolledig.", "Onvolledig — ook andere grootheden tellen mee."],
         uitlegPad: {
           stappen: [{ titel: "r = mv/(qB)", tekst: "Lorentzkracht = centripetaal: qvB = mv²/r → **r = mv/(qB)**. Zwaarder of sneller → grotere cirkel; sterker veld of meer lading → kleinere cirkel. Massa-spectrometer scheidt isotopen via verschillende r." }],
           niveaus: { basis: "r = mv/(qB).", simpeler: "Vier grootheden bepalen r.", nogSimpeler: "Alle 4" },
@@ -157,7 +157,7 @@ const steps = [
         wrongHints: [null, "Niet — sneller draait door, geen omkering.", "Niet — sterker veld, geen omkering.", "Niet — massa irrelevant."],
         uitlegPad: {
           stappen: [{ titel: "F = B·I·L — omkeren I of B → omkeren F", tekst: "Lorentzkracht-richting volgt FBI-regel. Omkeren van stroom OF veld geeft tegenovergestelde kracht → omgekeerd koppel → motor draait andere kant op. Beide omkeren: zelfde richting." }],
-          niveaus: { basis: "I omkeren of B omkeren.", simpeler: "Stroom-richting of magneet-pool omdraaien.", nogSimpeler: "I of B → A." },
+          niveaus: { basis: "I omkeren of B omkeren.", simpeler: "Stroom-richting of magneet-pool omdraaien.", nogSimpeler: "I of B omkeren" },
         },
       },
     ],
@@ -171,7 +171,7 @@ const steps = [
     checks: [
       {
         q: "Een magneet ligt **stil** binnen een spoel. Inductie-stroom?",
-        options: ["Nul — flux verandert niet", "Maximum", "Klein maar aanwezig", "Hangt af van magneet-grootte"],
+        options: ["Nul", "Maximum", "Klein maar aanwezig", "Hangt af van magneet-grootte"],
         answer: 0,
         wrongHints: [null, "Niet — geen flux-verandering = geen spanning.", "Niet — nul = nul.", "Maakt niet uit zonder beweging."],
         uitlegPad: {
@@ -257,10 +257,10 @@ const steps = [
         q: "Een ideale trafo: U_p·I_p = ?",
         options: ["U_s·I_s", "U_s/I_s", "N_p·I_s", "I_p²·R"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is geen vermogen.", "Niet — zou wel kunnen, maar verkeerde grootheden.", "Niet — dat is verlies-formule."],
+        wrongHints: [null, "Niet — dat is geen vermogen.", "Niet — N_p is een aantal windingen, geen spanning.", "Niet — dat is verlies-formule."],
         uitlegPad: {
           stappen: [{ titel: "Energiebehoud", tekst: "Ideale trafo verliest geen energie → P_p = P_s → U_p·I_p = U_s·I_s. Hoge spanning gaat samen met lage stroom (en omgekeerd)." }],
-          niveaus: { basis: "P_p = P_s = U_s·I_s.", simpeler: "Vermogen in = vermogen uit.", nogSimpeler: "= A." },
+          niveaus: { basis: "P_p = P_s = U_s·I_s.", simpeler: "Vermogen in = vermogen uit.", nogSimpeler: "U_s·I_s" },
         },
       },
       {
@@ -293,7 +293,7 @@ const steps = [
       {
         q: "Werkt een trafo op **gelijkstroom**?",
         options: [
-          "Nee — geen flux-verandering, geen inductie",
+          "Nee",
           "Ja, even goed als op wisselstroom",
           "Alleen bij batterij-spanning hoger dan 100 V",
           "Alleen bij stroom >5 A"
@@ -316,7 +316,7 @@ const steps = [
     checks: [
       {
         q: "Een **rechte stroomdraad** in B-veld is **parallel** aan B. Lorentzkracht?",
-        options: ["Nul — F=BIL·sin(0)=0", "BIL", "Maximaal", "Loodrecht op draad"],
+        options: ["Nul", "BIL", "Maximaal", "Loodrecht op draad"],
         answer: 0,
         wrongHints: [null, "Niet — wat levert de formule F=BIL·sin(θ) op als de draad parallel aan het veld staat?", "Niet — geen veld-loodrechte component.", "Niet — geen kracht hier."],
         uitlegPad: {
@@ -351,10 +351,10 @@ const steps = [
       {
         q: "Wat horen tot **elektromagnetische golven**?",
         options: [
-          "Radio + microgolf + zichtbaar licht + röntgen — alle EM",
+          "Radio, microgolf, zichtbaar licht en röntgen",
           "Alleen zichtbaar licht",
           "Alleen radio + microgolven",
-          "Alle hierboven + geluid"
+          "Radio, licht, röntgen én geluid"
         ],
         answer: 0,
         wrongHints: [null, "Niet — radio is ook EM.", "Niet — röntgen + UV ook.", "Niet — geluid is GEEN EM (drukgolf in lucht)."],

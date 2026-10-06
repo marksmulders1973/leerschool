@@ -215,7 +215,7 @@ ${sinusGraph({ a: 1, b: 1, c: 0, color: COLORS.good, xMin: 0, xMax: 720 })}
   },
   {
     title: "Amplitude (a)",
-    explanation: "De **amplitude** is de **maximale uitslag** van een periodieke functie vanaf de evenwichtslijn.\n\n**Voor y = sin(x)** (basis): amplitude = **1**.\n• Maximum: 1, minimum: -1, evenwicht: 0.\n• Verschil tussen evenwicht en max = 1.\n\n**Voor y = a · sin(x)**: amplitude = **|a|** (absolute waarde).\n\n**Voorbeelden**:\n• y = 2·sin(x): amplitude = 2 (max +2, min -2).\n• y = 5·sin(x): amplitude = 5 (max +5, min -5).\n• y = 0.5·sin(x): amplitude = 0.5 (max +0.5, min -0.5).\n• y = -3·sin(x): amplitude = 3 (max +3, min -3 — minteken keert de grafiek om).\n\n**Lezen uit grafiek**: meet de **halve afstand** tussen het hoogste en het laagste punt:\n\n**$\\text{Amplitude} = \\dfrac{\\text{max} - \\text{min}}{2}$**\n\n• Max = 5, min = -5 → amplitude = (5 - (-5))/2 = 5.\n• Max = 8, min = 2 → amplitude = (8 - 2)/2 = 3 (en evenwicht ligt op 5).\n\n**Toepassing**: bij geluidsgolven hangt de **luidheid** samen met de amplitude — grote amplitude = harde toon, kleine amplitude = zachte toon.\n\nBij **golven in water**: amplitude is de hoogte van een golftop boven het rustige wateroppervlak.\n\n**Belangrijk**: amplitude is altijd **positief** (er kan geen \"negatieve uitslag\" zijn). Een negatieve coëfficiënt -a spiegelt de grafiek, maar de amplitude blijft |a|.",
+    explanation: "De **amplitude** is de **maximale uitslag** van een periodieke functie vanaf de evenwichtslijn.\n\n**Voor y = sin(x)** (basis): amplitude = **1**.\n• Maximum: 1, minimum: -1, evenwicht: 0.\n• Verschil tussen evenwicht en max = 1.\n\n**Voor y = a · sin(x)**: amplitude = **|a|** (absolute waarde).\n\n**Voorbeelden**:\n• y = 2·sin(x): amplitude = 2 (max +2, min -2).\n• y = 5·sin(x): amplitude = 5 (max +5, min -5).\n• y = 0,5·sin(x): amplitude = 0,5 (max +0,5, min -0,5).\n• y = -3·sin(x): amplitude = 3 (max +3, min -3 — minteken keert de grafiek om).\n\n**Lezen uit grafiek**: meet de **halve afstand** tussen het hoogste en het laagste punt:\n\n**$\\text{Amplitude} = \\dfrac{\\text{max} - \\text{min}}{2}$**\n\n• Max = 5, min = -5 → amplitude = (5 - (-5))/2 = 5.\n• Max = 8, min = 2 → amplitude = (8 - 2)/2 = 3 (en evenwicht ligt op 5).\n\n**Toepassing**: bij geluidsgolven hangt de **luidheid** samen met de amplitude — grote amplitude = harde toon, kleine amplitude = zachte toon.\n\nBij **golven in water**: amplitude is de hoogte van een golftop boven het rustige wateroppervlak.\n\n**Belangrijk**: amplitude is altijd **positief** (er kan geen \"negatieve uitslag\" zijn). Een negatieve coëfficiënt -a spiegelt de grafiek, maar de amplitude blijft |a|.",
     svg: `<svg viewBox="0 0 200 200">
 ${baseAxesPeriodic()}
 ${sinusGraph({ a: 0.6, b: 1, c: 0, color: COLORS.good })}
@@ -223,7 +223,7 @@ ${sinusGraph({ a: 1, b: 1, c: 0, color: COLORS.warm })}
 <line x1="170" y1="60" x2="170" y2="100" stroke="${COLORS.warm}" stroke-width="1.5"/>
 <text x="170" y="56" text-anchor="middle" fill="${COLORS.warm}" font-size="9" font-family="Arial">a=1</text>
 <line x1="185" y1="76" x2="185" y2="100" stroke="${COLORS.good}" stroke-width="1.5"/>
-<text x="185" y="71" text-anchor="middle" fill="${COLORS.good}" font-size="9" font-family="Arial">a=0.6</text>
+<text x="185" y="71" text-anchor="middle" fill="${COLORS.good}" font-size="9" font-family="Arial">a=0,6</text>
 <text x="100" y="195" text-anchor="middle" fill="${COLORS.muted}" font-size="9" font-family="Arial">amplitude = uitslag vanaf evenwicht</text>
 </svg>`,
     checks: [
@@ -233,7 +233,7 @@ ${sinusGraph({ a: 1, b: 1, c: 0, color: COLORS.warm })}
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de totale uitslag (max - min). Maar amplitude is de halve uitslag — deel dat door 2.",
+          "Dat is de totale uitslag (max − min). Is de amplitude de hele uitslag, of de uitslag vanaf de evenwichtslijn?",
           "Dat geldt als de coëfficiënt twee is. Kijk naar de coëfficiënt in deze functie — is die anders?",
           "1 is de amplitude van y = sin(x). Hier vermenigvuldigen we met 4.",
         ],
@@ -266,8 +266,8 @@ ${sinusGraph({ a: 1, b: 1, c: 0.5, color: COLORS.good })}
         wrongHints: [
           null,
           "Nul klopt alleen als max en min spiegelbeeldig rond 0 liggen — is dat hier zo?",
-          "Je hebt het verschil gedeeld — maar evenwicht is het gemiddelde, niet de halve afstand. Probeer (max + min)/2.",
-          "Dat is de amplitude (halve afstand). Evenwicht = gemiddelde van max en min: tel ze op en deel door 2.",
+          "Je hebt max en min opgeteld — maar het gemiddelde vraagt nog één stap. Welke?",
+          "Dat is de amplitude (halve afstand). De evenwichtslijn is het gemiddelde van max en min.",
         ],
         uitlegPad: {
           stappen: [{ titel: "Evenwicht = (max + min)/2", tekst: "Max = 8, min = -2. Gemiddelde: (8 + (-2))/2 = 6/2 = 3. Evenwichtslijn ligt op y = 3." }],
@@ -314,7 +314,7 @@ ${sinusGraph({ a: 0.5, b: 2, c: 0.3, color: COLORS.good })}
   },
   {
     title: "Effect van de parameter b (periode)",
-    explanation: "De parameter **b** bepaalt **hoe vaak** de sinusoïde herhaalt — dat noemen we de **periode**.\n\n**$\\text{Periode } T = \\dfrac{360^\\circ}{b}$**\n\n**Voorbeelden**:\n• y = sin(x) → b = 1 → T = 360°\n• y = sin(2x) → b = 2 → T = 180° (twee keer zo snel)\n• y = sin(3x) → b = 3 → T = 120° (drie keer zo snel)\n• y = sin(½x) → b = 0.5 → T = 720° (twee keer zo langzaam)\n• y = sin(0.1x) → b = 0.1 → T = 3600° (heel langzaam)\n\n**Grafiek-effect**:\n• **b > 1**: grafiek wordt **horizontaal samengedrukt** — méér slingertjes per 360°.\n• **b < 1**: grafiek wordt **horizontaal uitgerekt** — minder slingertjes.\n• **b = 1**: standaard sinus.\n\n**Hoe vind ik b uit grafiek?**\n1. Meet de periode T (van top tot top, of van nul-stijgend tot volgende nul-stijgend).\n2. Bereken: **b = 360° / T**.\n\n**Voorbeeld**: een grafiek heeft top op 30°, volgende top op 90°.\n• Periode T = 90 - 30 = 60°.\n• b = 360 / 60 = 6.\n• Functie: y = sin(6x).\n\n**Toepassing in echt leven**:\n• Geluidsgolven: hogere toon = grotere b = kortere periode = hogere frequentie.\n• Wisselspanning Nederland: 50 Hz = 50 perioden per seconde. Bij T-meting in graden: b = 50 · 360 = 18 000 (per seconde).",
+    explanation: "De parameter **b** bepaalt **hoe vaak** de sinusoïde herhaalt — dat noemen we de **periode**.\n\n**$\\text{Periode } T = \\dfrac{360^\\circ}{b}$**\n\n**Voorbeelden**:\n• y = sin(x) → b = 1 → T = 360°\n• y = sin(2x) → b = 2 → T = 180° (twee keer zo snel)\n• y = sin(3x) → b = 3 → T = 120° (drie keer zo snel)\n• y = sin(½x) → b = 0,5 → T = 720° (twee keer zo langzaam)\n• y = sin(0,1x) → b = 0,1 → T = 3600° (heel langzaam)\n\n**Grafiek-effect**:\n• **b > 1**: grafiek wordt **horizontaal samengedrukt** — méér slingertjes per 360°.\n• **b < 1**: grafiek wordt **horizontaal uitgerekt** — minder slingertjes.\n• **b = 1**: standaard sinus.\n\n**Hoe vind ik b uit grafiek?**\n1. Meet de periode T (van top tot top, of van nul-stijgend tot volgende nul-stijgend).\n2. Bereken: **b = 360° / T**.\n\n**Voorbeeld**: een grafiek heeft top op 30°, volgende top op 90°.\n• Periode T = 90 - 30 = 60°.\n• b = 360 / 60 = 6.\n• Functie: y = sin(6x).\n\n**Toepassing in echt leven**:\n• Geluidsgolven: hogere toon = grotere b = kortere periode = hogere frequentie.\n• Wisselspanning Nederland: 50 Hz = 50 perioden per seconde. Bij T-meting in graden: b = 50 · 360 = 18 000 (per seconde).",
     svg: `<svg viewBox="0 0 200 200">
 ${baseAxesPeriodic()}
 ${sinusGraph({ a: 0.6, b: 1, c: 0, color: COLORS.good })}
@@ -338,7 +338,7 @@ ${sinusGraph({ a: 0.6, b: 2, c: 0, color: COLORS.alt })}
           stappen: [{ titel: "b = 360°/T", tekst: "Gegeven: periode T = 60°. Dan b = 360°/60° = 6. Functie: y = sin(6x)." }],
           woorden: [{ woord: "frequentie-coëfficiënt", uitleg: "b — hoe vaak per 360°" }],
           theorie: "Omkeren van T = 360°/b: b = 360°/T.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "T = 90° → b = 4. T = 720° → b = 0.5" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "T = 90° → b = 4. T = 720° → b = 0,5" }],
           basiskennis: [{ onderwerp: "delen, niet vermenigvuldigen", uitleg: "360 delen door T" }],
           niveaus: { basis: "b = 6.", simpeler: "360/60 = 6.", nogSimpeler: "Zes keer in 360°." },
         },
@@ -362,7 +362,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0.4, color: COLORS.good })}
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de amplitude (halve afstand tussen top en dal). Maar evenwicht = gemiddelde — probeer (max+min)/2.",
+          "Dat is de amplitude (halve afstand tussen top en dal). De evenwichtslijn is het gemiddelde van max en min.",
           "8 = max - 1 of min + 7 — geen logische berekening.",
           "9 is de max-waarde, niet het evenwicht.",
         ],
@@ -419,13 +419,13 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
   },
   {
     title: "Toepassingen — geluid, getij, slinger",
-    explanation: "Sinusoïden komen overal in de natuur en techniek voor.\n\n**1. Geluidsgolven**\n• Een **toon** = sinusoïde van luchtdruk in de tijd.\n• Amplitude = luidheid (in dB).\n• Periode bepaalt de toonhoogte (440 Hz = de A van een stemvork).\n• Een **akkoord** = som van meerdere sinusoïden.\n\n**2. Getijden** (eb en vloed)\n• Periode ≈ 12 uur 25 minuten (twee keer per dag).\n• Amplitude varieert per locatie (Nederland: ~1-2 m, Bay of Fundy: 16 m).\n• Evenwichtslijn = gemiddeld zee-niveau.\n• Faseverschuiving hangt af van locatie en tijd.\n\n**3. Slinger**\n• Een slinger zwaait periodiek heen en weer.\n• Periode T = 2π·√(L/g) (formule, waarbij L = lengte, g = zwaartekracht).\n• Amplitude = maximale uitslag vanuit rust.\n\n**4. Wisselspanning** (elektriciteit)\n• Stopcontact in NL: 230V wisselspanning, 50Hz.\n• Periode = 1/50 sec = 20 milliseconden.\n• Amplitude = 325V (= 230 · √2, want 230V is de \"effectieve\" waarde).\n\n**5. Biologische cycli**\n• Hartslag (~60 BPM = periode 1 sec).\n• Slaap-waak ritme (24h periode = circadiaan).\n• Menstruatiecyclus (~28 dagen).\n• Seizoenen in dier-populaties.\n\n**6. Trillingen**\n• Een vleugel die trilt → sinusoïdale beweging.\n• Een snaar van een gitaar → sinusoïdale luchtdruk.\n• Aardbevingen → sinusoïdale schok-golven (in eerste benadering).\n\n**Voorbeeld berekening**: temperatuur in Maastricht over een jaar.\n• Gemiddelde: ~10°C → c = 10\n• Verschil zomer/winter: ~16°C → amplitude a = 8\n• Periode: 365 dagen → b = 360°/365 ≈ 0.987° per dag\n• Faseverschuiving: warmste dag rond 21 juli ≈ dag 202 → d = 202\n• Formule: T(dag) = 8·sin(0.987·(dag − 202 + 91)) + 10\n  *(de +91 corrigeert zodat warmste dag de top is, niet de eerste opgaande nuldoorgang)*\n\nIngewikkeld? Ja — daarom geven examenvragen meestal de formule, en moet je 'm interpreteren of er een vraag mee oplossen.",
+    explanation: "Sinusoïden komen overal in de natuur en techniek voor.\n\n**1. Geluidsgolven**\n• Een **toon** = sinusoïde van luchtdruk in de tijd.\n• Amplitude = luidheid (in dB).\n• Periode bepaalt de toonhoogte (440 Hz = de A van een stemvork).\n• Een **akkoord** = som van meerdere sinusoïden.\n\n**2. Getijden** (eb en vloed)\n• Periode ≈ 12 uur 25 minuten (twee keer per dag).\n• Amplitude varieert per locatie (Nederland: ~1-2 m, Bay of Fundy: 16 m).\n• Evenwichtslijn = gemiddeld zee-niveau.\n• Faseverschuiving hangt af van locatie en tijd.\n\n**3. Slinger**\n• Een slinger zwaait periodiek heen en weer.\n• Periode T = 2π·√(L/g) (formule, waarbij L = lengte, g = zwaartekracht).\n• Amplitude = maximale uitslag vanuit rust.\n\n**4. Wisselspanning** (elektriciteit)\n• Stopcontact in NL: 230V wisselspanning, 50Hz.\n• Periode = 1/50 sec = 20 milliseconden.\n• Amplitude = 325V (= 230 · √2, want 230V is de \"effectieve\" waarde).\n\n**5. Biologische cycli**\n• Hartslag (~60 BPM = periode 1 sec).\n• Slaap-waak ritme (24h periode = circadiaan).\n• Menstruatiecyclus (~28 dagen).\n• Seizoenen in dier-populaties.\n\n**6. Trillingen**\n• Een vleugel die trilt → sinusoïdale beweging.\n• Een snaar van een gitaar → sinusoïdale luchtdruk.\n• Aardbevingen → sinusoïdale schok-golven (in eerste benadering).\n\n**Voorbeeld berekening**: temperatuur in Maastricht over een jaar.\n• Gemiddelde: ~10°C → c = 10\n• Verschil zomer/winter: ~16°C → amplitude a = 8\n• Periode: 365 dagen → b = 360°/365 ≈ 0,987° per dag\n• Faseverschuiving: warmste dag rond 21 juli ≈ dag 202 → d = 202\n• Formule: T(dag) = 8·sin(0,987·(dag − 202 + 91)) + 10\n  *(de +91 corrigeert zodat warmste dag de top is, niet de eerste opgaande nuldoorgang)*\n\nIngewikkeld? Ja — daarom geven examenvragen meestal de formule, en moet je 'm interpreteren of er een vraag mee oplossen.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">sinusoïden in echt leven</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="35" y="76" fill="${COLORS.text}" font-size="11" font-family="Arial">🔊 geluid (toonhoogte = freq)</text>
-<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">🌊 getij (~12.5h periode)</text>
+<text x="35" y="92" fill="${COLORS.text}" font-size="11" font-family="Arial">🌊 getij (~12,5 h periode)</text>
 <text x="35" y="108" fill="${COLORS.text}" font-size="11" font-family="Arial">⏰ slinger (T = 2π·√(L/g))</text>
 <text x="35" y="124" fill="${COLORS.text}" font-size="11" font-family="Arial">⚡ stopcontact (50Hz)</text>
 <text x="35" y="140" fill="${COLORS.text}" font-size="11" font-family="Arial">❤️ hartslag, slaap-cyclus</text>
@@ -438,7 +438,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         options: [
           "1 seconde",
           "60 seconden",
-          "0.5 seconden",
+          "0,5 seconden",
           "30 seconden",
         ],
         answer: 0,
@@ -452,7 +452,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
           stappen: [{ titel: "60 BPM = 1 slag per seconde", tekst: "60 slagen per minuut = 60 slagen per 60 sec = 1 slag per seconde. Periode (tijd voor 1 slag) = 1 seconde." }],
           woorden: [{ woord: "BPM", uitleg: "beats per minute" }],
           theorie: "Periode = tijd voor 1 cyclus. Frequentie = aantal cycli per tijdseenheid.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "120 BPM = 2/sec → T = 0.5 sec" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "120 BPM = 2/sec → T = 0,5 sec" }],
           basiskennis: [{ onderwerp: "minuut = 60 seconden", uitleg: "delen door 60" }],
           niveaus: { basis: "1 seconde.", simpeler: "60/60 = 1.", nogSimpeler: "1 slag per sec." },
         },
@@ -477,7 +477,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "Dat is alleen de amplitude. Max = evenwicht + amplitude — tel c en a bij elkaar op.",
+          "Dat is alleen de amplitude. Waar ligt de evenwichtslijn, en hoe ver komt de grafiek daarboven?",
           "2·5 heeft geen vaste betekenis hier. Hoe bereken je de maximumwaarde uit c en a?",
           "2 is de evenwichtslijn, niet de max. Hoe hoog komt de grafiek boven de evenwichtslijn uit?",
         ],
@@ -498,7 +498,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
           null,
           "Dat is bij b gelijk aan één. Welke waarde heeft b hier? Deel 360° door b.",
           "Dat zou bij b gelijk aan twee zijn. Maar hier staat een andere coëfficiënt voor x — wat is die?",
-          "Pas op: je deelt 360° door b, niet andersom. Welke kant deel je op?",
+          "Pas op: je hebt 360° met b vermenigvuldigd. Hoe hangen periode en b samen?",
         ],
         uitlegPad: {
           stappen: [{ titel: "T = 360°/b", tekst: "Bij y = 3·sin(4x): b = 4 (coëfficiënt vóór x). T = 360°/4 = 90°. De 3 is amplitude, telt niet voor periode." }],
@@ -515,7 +515,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de totale uitslag (max - min). Amplitude = halve uitslag — deel je antwoord door 2.",
+          "Dat is de totale uitslag (max − min). Is de amplitude de hele uitslag, of de uitslag vanaf de evenwichtslijn?",
           "Dat is de evenwichtslijn (gemiddelde van max en min), niet de amplitude.",
           "Dat is de max-waarde zelf. Amplitude = uitslag vanaf het midden — hoever reikt de grafiek boven de evenwichtslijn?",
         ],
@@ -584,25 +584,25 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         },
       },
       {
-        q: "*\"Geluidsgolf: y = 2·sin(360·x). x in seconden. Wat is de frequentie?\"*",
+        q: "*\"Trilling: y = 2·sin(360·x). x in seconden. Wat is de frequentie?\"*",
         options: [
           "1 Hz",
           "360 Hz",
           "2 Hz",
-          "0.001 Hz",
+          "0,001 Hz",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "Dat is de coëfficiënt b, niet de frequentie. Deel 360° door b voor de periode; frequentie is dan 1 gedeeld door die periode.",
-          "2 is de amplitude (luidheid).",
+          "Dat is de coëfficiënt b, niet de frequentie. Hoe hangen b, de periode en de frequentie samen?",
+          "2 is de amplitude.",
           "Veel te laag — 0,001 Hz betekent één trilling per 1000 seconden.",
         ],
         uitlegPad: {
           stappen: [{ titel: "f = 1/T", tekst: "y = 2·sin(360·x): b = 360°/sec. T = 360°/360 = 1 sec. Frequentie f = 1/T = 1 Hz." }],
           woorden: [{ woord: "Hertz (Hz)", uitleg: "aantal trillingen per seconde" }],
           theorie: "Hz = 1/sec. Bij b = 360°/sec → één cyclus per seconde.",
-          voorbeelden: [{ type: "voorbeeld", tekst: "Stopcontact NL: 50 Hz = 50 trillingen/sec → T = 0.02 sec" }],
+          voorbeelden: [{ type: "voorbeeld", tekst: "Stopcontact NL: 50 Hz = 50 trillingen/sec → T = 0,02 sec" }],
           basiskennis: [{ onderwerp: "frequentie ↔ periode", uitleg: "f en T zijn omgekeerd" }],
           niveaus: { basis: "1 Hz.", simpeler: "1 per seconde.", nogSimpeler: "1 trilling/sec." },
         },
@@ -618,7 +618,7 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
         answer: 0,
         wrongHints: [
           null,
-          "sin(x − 90°) is niet hetzelfde als cos(x − 90°): cos(x − 90°) = sin(x).",
+          "sin(x − 90°) = −cos(x) — is dat hetzelfde als cos(x − 90°)?",
           "cos(x+90°) = -sin(x), niet hetzelfde als cos(x-90°).",
           "Niet juist — een minteken keert de grafiek om.",
         ],
@@ -670,15 +670,15 @@ ${sinusGraph({ a: 0.6, b: 1, c: 0, d: 60, color: COLORS.alt })}
       {
         q: "*\"Een slinger met periode 2 seconden. Wat is b in de sinus-formule (in graden per seconde)?\"*",
         options: [
-          "b = 180 (graden per sec)",
+          "b = 180",
           "b = 2",
           "b = 360",
-          "b = 0.5",
+          "b = 0,5",
         ],
         answer: 0,
         wrongHints: [
           null,
-          "De periode is twee seconden, niet b — deel 360° door de periode om b te vinden.",
+          "De periode is twee seconden, niet b — hoe hangen b en de periode samen?",
           "Dat geldt bij T gelijk aan één seconde. Hier is de periode anders — pas de formule aan.",
           "Dat is de frequentie (1/T) in Hz, niet b in graden per seconde.",
         ],

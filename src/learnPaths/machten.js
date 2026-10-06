@@ -261,7 +261,7 @@ const steps = [
         q: "*Versimpel: (x²)⁵.*",
         options: ["x¹⁰", "x⁷", "x⁵", "x³²"],
         answer: 0,
-        wrongHints: [null, "x⁷ = x² · x⁵ (regel 1, optellen). Maar (x²)⁵ is macht-van-macht: 2 · 5.", "Vergeet de exponent 2 binnen de haakjes niet: (x²)⁵ = x^(2·5).", "x³² is veel te groot. (x²)⁵ = x^(2·5) = x¹⁰."],
+        wrongHints: [null, "x⁷ = x² · x⁵ (regel 1, optellen). Maar (x²)⁵ is een macht van een macht — wat doe je dan met de exponenten?", "Vergeet de exponent 2 binnen de haakjes niet — die doet ook mee.", "Te groot. Schrijf (x²)⁵ eens uit als x² · x² · x² · x² · x² en tel hoeveel factoren x je krijgt."],
         uitlegPad: {
           stappen: [{ titel: "Regel 3: vermenigvuldigen", tekst: "(x²)⁵ = x^(2·5) = x¹⁰. Bij macht-van-macht: exponenten vermenigvuldigen." }],
           woorden: [{ woord: "machtsmacht", uitleg: "(a^m)^n = a^(m·n). Exponenten KEER." }],
@@ -353,14 +353,14 @@ const steps = [
   },
   {
     title: "Negatieve exponenten — a^(−n) = 1/a^n",
-    explanation: "Wat betekent een **negatieve exponent**?\n\n**Definitie**: $a^{-n} = \\dfrac{1}{a^n}$ (voor a ≠ 0)\n\n**Bewijs (intuïtief)**:\nVolgens regel 2 (delen): a⁰ / a^n = a^(0−n) = a^(−n).\nMaar a⁰ = 1, dus a^(−n) = 1 / a^n.\n\n**Voorbeelden**:\n• 2⁻¹ = 1/2¹ = 1/2 = 0.5\n• 5⁻² = 1/5² = 1/25 = 0.04\n• 10⁻³ = 1/1000 = 0.001\n• x⁻⁴ = 1/x⁴\n\n**Vuistregel**: een minteken in de exponent = de macht naar de **andere kant** van een breuk verhuizen.\n• 2⁻¹ = 1/2¹ = 1/2\n• 1/3⁻² = 3² = 9\n• x⁻³ / y⁻² = y² / x³\n\n**Combinatie met de andere machtsregels werkt gewoon**:\n• a³ · a⁻⁵ = a^(3+(-5)) = a⁻² = 1/a²\n• a² / a⁻³ = a^(2−(-3)) = a⁵\n\n**Vraag uit examen**: \"Schrijf 1/4 als macht van 2.\"\n• 1/4 = 1/2² = 2⁻²\n\n**Negatieve exponent in praktijk**:\n• Bij wetenschap: 10⁻⁹ m = 0,000000001 m (nano)\n• Bij zwaartekracht: kracht ~ 1/r² oftewel r⁻²\n• Bij verval: aantal radioactieve deeltjes per seconde halveert exponentieel.\n\n## 📋 Spiekbriefje — alle machtsregels op een rij\n\n| Regel | Formule | Voorbeeld |\n| --- | --- | --- |\n| Vermenigvuldigen | $a^m \\cdot a^n = a^{m+n}$ | $2^3 \\cdot 2^4 = 2^7$ |\n| Delen | $\\dfrac{a^m}{a^n} = a^{m-n}$ | $\\dfrac{5^6}{5^2} = 5^4$ |\n| Macht van macht | $(a^m)^n = a^{m \\cdot n}$ | $(3^2)^4 = 3^8$ |\n| Macht van product | $(a \\cdot b)^n = a^n \\cdot b^n$ | $(2x)^3 = 8x^3$ |\n| Macht van breuk | $\\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n}$ | $\\left(\\dfrac{2}{3}\\right)^2 = \\dfrac{4}{9}$ |\n\nZelfde grondtal? Dan reken je met de **exponenten**. Macht over een product of breuk? Dan krijgt **elk deel** de exponent.",
+    explanation: "Wat betekent een **negatieve exponent**?\n\n**Definitie**: $a^{-n} = \\dfrac{1}{a^n}$ (voor a ≠ 0)\n\n**Bewijs (intuïtief)**:\nVolgens regel 2 (delen): a⁰ / a^n = a^(0−n) = a^(−n).\nMaar a⁰ = 1, dus a^(−n) = 1 / a^n.\n\n**Voorbeelden**:\n• 2⁻¹ = 1/2¹ = 1/2 = 0,5\n• 5⁻² = 1/5² = 1/25 = 0,04\n• 10⁻³ = 1/1000 = 0,001\n• x⁻⁴ = 1/x⁴\n\n**Vuistregel**: een minteken in de exponent = de macht naar de **andere kant** van een breuk verhuizen.\n• 2⁻¹ = 1/2¹ = 1/2\n• 1/3⁻² = 3² = 9\n• x⁻³ / y⁻² = y² / x³\n\n**Combinatie met de andere machtsregels werkt gewoon**:\n• a³ · a⁻⁵ = a^(3+(-5)) = a⁻² = 1/a²\n• a² / a⁻³ = a^(2−(-3)) = a⁵\n\n**Vraag uit examen**: \"Schrijf 1/4 als macht van 2.\"\n• 1/4 = 1/2² = 2⁻²\n\n**Negatieve exponent in praktijk**:\n• Bij wetenschap: 10⁻⁹ m = 0,000000001 m (nano)\n• Bij zwaartekracht: kracht ~ 1/r² oftewel r⁻²\n• Bij verval: aantal radioactieve deeltjes per seconde halveert exponentieel.\n\n## 📋 Spiekbriefje — alle machtsregels op een rij\n\n| Regel | Formule | Voorbeeld |\n| --- | --- | --- |\n| Vermenigvuldigen | $a^m \\cdot a^n = a^{m+n}$ | $2^3 \\cdot 2^4 = 2^7$ |\n| Delen | $\\dfrac{a^m}{a^n} = a^{m-n}$ | $\\dfrac{5^6}{5^2} = 5^4$ |\n| Macht van macht | $(a^m)^n = a^{m \\cdot n}$ | $(3^2)^4 = 3^8$ |\n| Macht van product | $(a \\cdot b)^n = a^n \\cdot b^n$ | $(2x)^3 = 8x^3$ |\n| Macht van breuk | $\\left(\\dfrac{a}{b}\\right)^n = \\dfrac{a^n}{b^n}$ | $\\left(\\dfrac{2}{3}\\right)^2 = \\dfrac{4}{9}$ |\n\nZelfde grondtal? Dan reken je met de **exponenten**. Macht over een product of breuk? Dan krijgt **elk deel** de exponent.",
     svg: `<svg viewBox="0 0 300 200">
 <rect x="20" y="22" width="260" height="160" rx="10" fill="${COLORS.paper}" stroke="${COLORS.axis}" stroke-width="1"/>
 <text x="150" y="42" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">a⁻ⁿ = 1 / aⁿ</text>
 <line x1="30" y1="52" x2="270" y2="52" stroke="${COLORS.axis}" stroke-width="0.5"/>
-<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">2⁻¹ = 1/2 = 0.5</text>
-<text x="35" y="100" fill="${COLORS.text}" font-size="13" font-family="monospace">5⁻² = 1/25 = 0.04</text>
-<text x="35" y="120" fill="${COLORS.text}" font-size="13" font-family="monospace">10⁻³ = 0.001</text>
+<text x="35" y="78" fill="${COLORS.text}" font-size="14" font-family="monospace">2⁻¹ = 1/2 = 0,5</text>
+<text x="35" y="100" fill="${COLORS.text}" font-size="13" font-family="monospace">5⁻² = 1/25 = 0,04</text>
+<text x="35" y="120" fill="${COLORS.text}" font-size="13" font-family="monospace">10⁻³ = 0,001</text>
 <text x="35" y="140" fill="${COLORS.text}" font-size="13" font-family="monospace">x⁻⁴ = 1/x⁴</text>
 <line x1="30" y1="155" x2="270" y2="155" stroke="${COLORS.axis}" stroke-width="0.5"/>
 <text x="150" y="178" text-anchor="middle" fill="${COLORS.muted}" font-size="10" font-family="Arial" font-style="italic">minteken = de macht naar andere kant van breuk</text>
@@ -424,14 +424,14 @@ const steps = [
         q: "*Hoeveel is 10⁵?*",
         options: ["100.000", "10.000", "1.000.000", "50"],
         answer: 0,
-        wrongHints: [null, "Één nul te weinig — hoeveel nullen heeft 10^5?", "Één nul te veel — hoeveel nullen heeft 10^5?", "Vermenigvuldigen met 5 is iets anders dan een macht van 10. Hoeveel keer zet je een 10 neer bij 10^5?"],
+        wrongHints: [null, "Eén nul te weinig — hoeveel nullen heeft 10^5?", "Eén nul te veel — hoeveel nullen heeft 10^5?", "Vermenigvuldigen met 5 is iets anders dan een macht van 10. Hoeveel keer zet je een 10 neer bij 10^5?"],
         uitlegPad: {
           stappen: [{ titel: "5 nullen achter de 1", tekst: "10⁵ = 10·10·10·10·10 = 100.000. Vuistregel: 10^n = 1 met n nullen. 10⁵ = 1 + 5 nullen." }],
           woorden: [{ woord: "10^n", uitleg: "10 tot de n-de macht. Snel: 1 + n nullen." }],
           theorie: "Patroon: 10¹=10, 10²=100, 10³=1000, 10⁴=10.000, 10⁵=100.000. Steeds 0 erbij.",
           voorbeelden: [{ type: "tabel", tekst: "10²=100. 10⁶=1 mln. 10⁹=1 mrd. Krachtig voor wetenschappelijke notatie." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "10.000=10⁴. 1mln=10⁶. 50=optellen i.p.v. machten." }],
-          niveaus: { basis: "100.000.", simpeler: "10⁵ = 1 met 5 nullen = 100.000.", nogSimpeler: "100k" },
+          niveaus: { basis: "100.000.", simpeler: "10⁵ = 1 met 5 nullen = 100.000.", nogSimpeler: "100.000" },
         },
       },
     ],
@@ -598,7 +598,7 @@ const steps = [
         q: "*Versimpel: (a²b³)⁴.*",
         options: ["a⁸b¹²", "a⁶b⁷", "a⁸b³", "a²b¹²"],
         answer: 0,
-        wrongHints: [null, "Bij macht-van-macht worden de exponenten vermenigvuldigd, niet opgeteld. (a²)⁴ = a⁸ en (b³)⁴ = b¹².", "Ook b³ krijgt de macht 4.", "Ook a² krijgt de macht 4."],
+        wrongHints: [null, "Bij macht-van-macht worden de exponenten vermenigvuldigd, niet opgeteld. Wat geeft dat voor a en voor b?", "Ook b³ krijgt de macht 4.", "Ook a² krijgt de macht 4."],
         uitlegPad: {
           stappen: [{ titel: "Beide gevierd", tekst: "(a²b³)⁴ = (a²)⁴ · (b³)⁴ = a⁸ · b¹² = a⁸b¹². Macht over product + machtsmacht." }],
           woorden: [{ woord: "combo", uitleg: "(ab)^n = a^n·b^n + (a^m)^n = a^(mn)." }],
@@ -612,7 +612,7 @@ const steps = [
       { q: "5² = ?", options: ["25","10","20","52"], answer: 0, wrongHints: [null,"Niet — niet 5+5.","Niet — niet 5×4.","Niet — niet cijfers samen."] },
       { q: "**a⁰** = ? (a ≠ 0)", options: ["1","0","a","Niet bepaald"], answer: 0, wrongHints: [null,"Niet bij a≠0.","Andere macht.","Wel bepaald."] },
       { q: "**a^1** = ?", options: ["a","1","0","a²"], answer: 0, wrongHints: [null,"Dat is a⁰.","Dat is a · 0.","Hogere macht."] },
-      { q: "**a^(−1)** = ?", options: ["1/a","−a","a²","Bestaat niet"], answer: 0, wrongHints: [null,"Niet — negatief teken in waarde.","Tegenovergesteld.","Bestaat wel."] },
+      { q: "**a^(−1)** = ?", options: ["1/a","−a","a²","Bestaat niet"], answer: 0, wrongHints: [null,"Niet — de min in de exponent maakt het getal niet negatief.","Dat is a · a, exponent +2.","Bestaat wel (als a ≠ 0)."] },
       { q: "**a^m · a^n** = ?", options: ["a^(m+n)","a^(m·n)","a^(m−n)","2a^m"], answer: 0, wrongHints: [null,"Macht van macht.","Delen.","Niet."] },
       { q: "**(a^m)^n** = ?", options: ["a^(m·n)","a^(m+n)","a^(m−n)","m·n·a"], answer: 0, wrongHints: [null,"Vermenigvuldigen.","Delen.","Niet."] },
       { q: "**(ab)^n** = ?", options: ["a^n · b^n","a^n + b^n","(a+b)^n","ab^n"], answer: 0, wrongHints: [null,"Niet — vermenigvuldigen.","Geen relatie.","Onvolledig."] },
