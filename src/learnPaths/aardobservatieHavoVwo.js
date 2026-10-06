@@ -221,7 +221,7 @@ const steps = [
         answer: 0,
         wrongHints: [null, "Niet voldoende — gevolg ook nodig.", "Niet alleen — ook kans.", "Niet — wel berekenbaar."],
         uitlegPad: {
-          stappen: [{ titel: "Drievoudige formule", tekst: "**Risico = kans × gevolg × kwetsbaarheid**. Hoge kans + lage kwetsbaarheid (NL aardbeving via gas-winning, lichte huizen) = matig risico. Hoge kans + hoge kwetsbaarheid (Bangladesh moesson + dichte bevolking) = zeer hoog risico." }],
+          stappen: [{ titel: "Drievoudige formule", tekst: "**Risico = kans × gevolg × kwetsbaarheid**. Hoge kans + lage kwetsbaarheid (Japan: vaak bevingen, maar bevingsbestendige bouw) = beperkt risico. Hoge kans + hoge kwetsbaarheid (Bangladesh moesson + dichte bevolking) = zeer hoog risico." }],
           theorie: "Toets-favoriet: vergelijk landen met gelijke fysieke dreiging maar verschillende kwetsbaarheid → verschil in uitkomst.",
           niveaus: { basis: "Kans × gevolg × kwetsbaarheid.", simpeler: "3-componenten", nogSimpeler: "Drie" },
         },
@@ -282,7 +282,7 @@ const steps = [
         q: "Bij **welke plaatgrens** ontstaan hoge bergen + zware aardbevingen, maar geen vulkanen?",
         options: ["Continentale botsing (Himalaya)","Subductie","Divergent","Transform"],
         answer: 0,
-        wrongHints: [null, "Niet — wel vulkanen.", "Niet — wel vulkanen.", "Niet — geen tsunami's primair."],
+        wrongHints: [null, "Niet — wel vulkanen.", "Niet — wel vulkanen.", "Wel zware bevingen zonder vulkanen — maar duwen platen die langs elkaar schuiven bergen omhoog?"],
         uitlegPad: {
           stappen: [{ titel: "Continent vs continent", tekst: "Bij **continentale botsing** (India tegen Azië → Himalaya): beide platen licht → opheffen tot bergen + zware bevingen. Geen subductie diep genoeg voor smelten → geen vulkanen. Tsunami's vooral subductie-grenzen (onderzeese verstoring)." }],
           niveaus: { basis: "Continentale botsing.", simpeler: "Cont. botsing = berg+beving", nogSimpeler: "A." },
