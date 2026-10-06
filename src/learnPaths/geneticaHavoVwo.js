@@ -211,7 +211,7 @@ const steps = [
         q: "**Hemofilie** is een __ aandoening.",
         options: ["Geslachtsgebonden recessieve","Autosomaal dominante","Autosomaal recessieve","Mitochondriale"],
         answer: 0,
-        wrongHints: [null, "Niet — wel mogelijk maar hemofilie zit op X.", "Niet — wel mogelijk maar hemofilie zit op X.", "Niet — hemofilie is nucleair, niet mitochondriaal."],
+        wrongHints: [null, "Niet — bij een dominante aandoening zouden draagsters zelf ziek zijn.", "Niet — kijk waarom hemofilie bijna alleen bij jongens voorkomt.", "Niet — hemofilie is nucleair, niet mitochondriaal."],
         uitlegPad: {
           stappen: [{ titel: "Hemofilie op X-chromosoom", tekst: "**Hemofilie** = bloedstollings-stoornis. Gen voor stollingsfactor zit op X-chromosoom. **Recessief**, dus vrouwen alleen ziek bij XcXc (zeldzaam), mannen al ziek bij XcY (1 X). Beroemd: Russische tsaren-familie (Romanovs), Engelse koningshuis (via koningin Victoria)." }],
           theorie: "Andere voorbeelden geslachtsgebonden recessief: Duchenne, kleurenblindheid, Lesch-Nyhan-syndroom.",
@@ -229,7 +229,7 @@ const steps = [
     checks: [
       {
         q: "In een stamboom: **2 gezonde ouders** krijgen een **aangedaan kind**. Wat zegt dit?",
-        options: ["Aandoening is recessief (ouders zijn dragers)","Dominant","Geslachtsgebonden","Geen erfelijke aandoening"],
+        options: ["Aandoening is recessief (verborgen bij de ouders)","Dominant","Geslachtsgebonden","Geen erfelijke aandoening"],
         answer: 0,
         wrongHints: [null, "Niet — dominant zou minstens 1 ouder aangedaan zijn.", "Niet noodzakelijk — kan autosomaal recessief zijn.", "Wel — patroon past bij erfelijkheid."],
         uitlegPad: {
@@ -296,7 +296,7 @@ const steps = [
         q: "Kruising Aa × aa levert genotypes:",
         options: ["50% Aa, 50% aa","75% Aa, 25% aa","100% Aa","100% aa"],
         answer: 0,
-        wrongHints: [null, "Niet — testcross is 1:1.", "Niet — Aa geeft de helft van de keren a door.", "Niet — Aa geeft de helft van de keren A door."],
+        wrongHints: [null, "Niet — maak het Punnett-vierkant: hoeveel vakjes zijn aa?", "Niet — Aa geeft de helft van de keren a door.", "Niet — Aa geeft de helft van de keren A door."],
         uitlegPad: {
           stappen: [{ titel: "Testcross = 1:1", tekst: "Aa geeft 50% A, 50% a. aa geeft alleen a. F1: 50% Aa + 50% aa. **Klassieke testcross-uitkomst**." }],
           niveaus: { basis: "50:50.", simpeler: "Aa × aa = 1:1", nogSimpeler: "50:50" },
@@ -306,7 +306,7 @@ const steps = [
         q: "Een vrouw met bloedgroep **A** krijgt kind met bloedgroep **O**. Welk genotype heeft de moeder?",
         options: ["AO (heterozygoot)","AA","BB","OO"],
         answer: 0,
-        wrongHints: [null, "Niet — AA × OO zou alleen AO geven, geen O.", "Niet — geen B in moeder.", "Niet — dan was moeder ook O, niet A."],
+        wrongHints: [null, "Niet — een AA-moeder kan geen O-allel doorgeven.", "Niet — geen B in moeder.", "Niet — dan was moeder ook O, niet A."],
         uitlegPad: {
           stappen: [{ titel: "Genotype-puzzel", tekst: "Kind is OO (alleen OO geeft fenotype O). Kind krijgt 1 allel van elk. Dus moeder MOET een O-allel hebben. Moeder is A-fenotype → genotype AO (heterozygoot). AA zou nooit O-kind kunnen krijgen." }],
           theorie: "Toets-patroon: 'bepaal genotype ouder op basis van kind-fenotype' — vooral als kind recessief is.",
@@ -327,7 +327,7 @@ const steps = [
         q: "Welk celdelingstype geeft **haploïde** dochtercellen?",
         options: ["Meiose","Mitose","Beide","Geen"],
         answer: 0,
-        wrongHints: [null, "Niet — mitose maakt diploïde kopieën.", "Niet — verschillen wel.", "Niet — meiose doet het."],
+        wrongHints: [null, "Niet — mitose maakt diploïde kopieën.", "Niet — verschillen wel.", "Niet — er is wel een deling die het aantal chromosomen halveert."],
         uitlegPad: {
           stappen: [{ titel: "Meiose = halveren", tekst: "**Meiose**: diploïde cel (2n=46) → 4 haploïde geslachtscellen (n=23). Voor sperma/eicel-productie. **Mitose**: diploïd → diploïd kopieën voor groei + reparatie." }],
           theorie: "Toets-tip: meiose alleen in geslachtsklieren (testis + ovarium). Mitose overal in lichaam.",
