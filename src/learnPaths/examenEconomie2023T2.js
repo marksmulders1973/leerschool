@@ -168,10 +168,10 @@ const steps = [
             { woord: "vermogensrendementsheffing", uitleg: "Belasting op je vermogen (spaargeld + beleggingen) boven de vrijstelling (~€57.000 in 2024). Berekend op fictief rendement." },
             { woord: "fictief rendement", uitleg: "Een door de overheid AANGENOMEN opbrengst — los van wat je echt verdient. Soms hoger dan de echte rente." },
           ],
-          theorie: "**Box 3 (vermogensrendementsheffing):**\n\n• Vrijstelling: ~€57.000 per persoon (2024). Daaronder = geen heffing.\n• Daarboven: Belastingdienst gaat uit van fictief rendement (bv. 6%) en heft daar 36% belasting over.\n• Echte rente doet er niet toe — ook bij 0% rente betaal je belasting alsof je 6% verdiende.\n\nDit was politiek omstreden — Hoge Raad heeft het in 2021 ook deels onterecht verklaard.",
+          theorie: "**Box 3 (vermogensrendementsheffing):**\n\n• Vrijstelling: ~€57.000 per persoon (2024). Daaronder = geen heffing.\n• Daarboven: Belastingdienst gaat uit van een fictief rendement (2024: ~1,4% op spaargeld, ~6% op beleggingen) en heft daar 36% belasting over.\n• Echte rente doet er in principe niet toe — ook bij 0% rente reken je met het fictieve rendement (sinds 2024 mag je wel aantonen dat je echte rendement lager was).\n\nDit was politiek omstreden — Hoge Raad heeft het in 2021 ook deels onterecht verklaard.",
           voorbeelden: [
             { type: "weinig spaargeld", tekst: "Spaargeld €30.000 → onder vrijstelling → 0 vermogensrendementsheffing." },
-            { type: "veel spaargeld", tekst: "Spaargeld €157.000 → €100.000 boven vrijstelling → fictief rendement 6% × €100.000 = €6.000 → 36% belasting = €2.160." },
+            { type: "veel spaargeld", tekst: "Spaargeld €157.000 → €100.000 boven vrijstelling → fictief rendement ~1,4% × €100.000 = €1.400 → 36% belasting = €504." },
           ],
           basiskennis: [
             { onderwerp: "Box 1, 2, 3 in IB", uitleg: "Box 1 = inkomen uit arbeid + huis. Box 2 = aanmerkelijk belang in bedrijf. Box 3 = vermogen (spaargeld + beleggingen)." },
@@ -317,8 +317,8 @@ const steps = [
         wrongHints: [
           "Tegendeel — invoerrechten maken Chinees staal DUURDER, niet goedkoper.",
           null,
-          "Tegendeel op beide punten.",
-          "Inconsistent — als import duurder wordt, kopen ze meer eigen, niet minder.",
+          "Wat doet een extra heffing met de prijs van Chinees staal voor een Amerikaans bedrijf?",
+          "De prijs-kant klopt. Maar waar koopt een bedrijf liever als het buitenlandse staal duurder wordt?",
         ],
         explanation: "Invoerrechten op Chinees staal = Chinees staal wordt duurder (importprijs stijgt door heffing). Amerikaanse bedrijven gaan dan kopen bij eigen Amerikaanse staalproducenten — die zijn relatief goedkoper geworden. Dat is precies het doel van protectionisme: eigen industrie beschermen.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2023 tijdvak 2, vraag 28",
@@ -374,7 +374,7 @@ const steps = [
         ],
         answer: 1,
         wrongHints: [
-          "Hoge VRAAG = duurder, niet goedkoper.",
+          "Wat gebeurt er met de prijs van iets als heel veel mensen het tegelijk willen kopen?",
           null,
           "China KOOPT dollars (vraag) — geen aanbod.",
           "China KOOPT dollars (vraag) — geen aanbod.",
