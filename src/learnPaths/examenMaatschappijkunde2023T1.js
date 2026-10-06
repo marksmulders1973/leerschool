@@ -128,7 +128,7 @@ const steps = [
           null,
           "Burgers worden vertegenwoordigd door GEKOZEN Kamerleden, niet door ambtenaren (die zijn niet gekozen).",
           "Ambtenaren werken voor de OVERHEID, niet voor politieke partijen.",
-          "Uitvoering van beleid doen verschillende uitvoeringsorganisaties (politie, Belastingdienst, gemeentes). Beleidsambtenaren BEREIDEN voor.",
+          "Uitvoering van beleid doen vooral uitvoeringsorganisaties (politie, Belastingdienst, gemeentes). Wat doen beleidsambtenaren op een ministerie dan wél?",
         ],
         explanation: "**Beleidsambtenaren** werken op ministeries en bereiden wetten + beleid VOOR (analyse, schrijven, advies aan ministers). Dat is fase 2: beleidsvoorbereiding. Ze besluiten niet zelf — dat doen ministers + parlement (fase 3) — en voeren ook niet uit (fase 4).",
         examenBron: BRON_LABEL(14),
