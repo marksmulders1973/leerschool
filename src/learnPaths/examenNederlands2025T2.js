@@ -63,7 +63,7 @@ const steps = [
       wrongHints: [
         "Adviseren = 'doe dit, doe dat'. Tekst beschrijft — geeft geen voorschrift aan de horeca.",
         "Adviseren = 'doe dit, doe dat'. Tekst is over wat RESTAURANTS doen, niet wat KLANTEN moeten doen.",
-        "Te smal — tekst noemt geen pro/contra standpunten, maar concrete ACTIES + tegenvallers.",
+        "Worden er in de tekst echt verschillende standpunten tegenover elkaar gezet?",
         null,
       ],
       explanation: "Tekst beschrijft AANPAK-voorbeelden (vegetarische ceviche, hergebruik schillen, samenwerking met boeren) + tegenvallers (financieel niet altijd haalbaar). Geen voorschrift, geen mening — INFORMATIE over wat MOGELIJK is.",
@@ -102,7 +102,7 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Te smal — trainingen/apps zijn 1 paragraaf. De KERN is de afweging snellezen wel of niet.",
+        "Te smal — trainingen en apps worden genoemd, maar gaat de hele tekst daarover?",
         null,
         "Overtuigen = mening + aansporing. Tekst NUANCEERT — laat juist zien wat WEL/NIET werkt.",
         "Overtuigen vraagt mening. Fictie-stuk is INFO, geen pleidooi.",
@@ -144,7 +144,7 @@ const steps = [
       answer: 0,
       wrongHints: [
         null,
-        "Bezorgers zelf hoeven zichzelf niet te bedanken. Doelgroep = mensen die hun bezorger willen bedanken.",
+        "Bezorgers hoeven zichzelf niet te bedanken. Wie wordt er in de advertentie met 'uw' aangesproken?",
         "Te indirect — advertentie zegt 'UW bezorger', niet 'kennen iemand die'.",
         "Voor wervings-advertentie zou je iets anders verwachten — hier wordt om bedankje gevraagd, niet om sollicitanten.",
       ],
@@ -187,7 +187,7 @@ const steps = [
         "Activeren = oproep doen. Tekst bevat geen 'jij moet stoppen'-boodschap.",
         "Activeren = oproep. Tekst noemt Opschoondag, maar roept lezer niet op mee te doen.",
         null,
-        "Te smal — verantwoordelijkheids-discussie is 1 deel (alinea 7-8). Hele tekst gaat over álle problemen.",
+        "Te smal — de verantwoordelijkheids-discussie is 1 deel (alinea 7-8). Waar gaat de héle tekst over?",
       ],
       explanation: "Tekst schetst HET PROBLEEM: oprapen werkt deels, statiegeld helpt, overheid vs bedrijven, EU-regels, lobby — allemaal HORDEN bij zwerfafval-bestrijding. = informeren over PROBLEMEN bij aanpak.",
       examenBron: BRON_LABEL(32),
@@ -225,7 +225,7 @@ const steps = [
       ],
       answer: 1,
       wrongHints: [
-        "Opsomming = 'A én B én C' op dezelfde lijn. Alinea 7 zegt overheid; 8 zegt JUIST OOK bedrijven (contrast).",
+        "Opsomming = 'A én B én C' op dezelfde lijn. Lees het begin van alinea 8: gaat die gewoon in dezelfde lijn verder?",
         null,
         "Conclusie = 'dus...'. Alinea 8 is geen samengevat oordeel, maar ander standpunt.",
         "Gevolg = 'A → B'. Alinea 8 is geen automatisch gevolg, maar een aanvulling/correctie.",
@@ -268,7 +268,7 @@ const steps = [
       wrongHints: [
         "Te eenzijdig — tekst noemt ÓÓK burgers + EU-regels, niet alleen overheid+bedrijven.",
         "Te smal — gemakzucht is 1 stukje. Hoofdgedachte dekt heel het probleem.",
-        "Te smal — EU-regels zijn 1 instrument. Hoofdgedachte erkent dat NIETS volledig werkt.",
+        "Te smal — EU-regels zijn 1 instrument. Pleit de tekst echt vooral voor méér Europese regels?",
         null,
       ],
       explanation: "Hoofdgedachte = boodschap van HELE tekst. Tekst beschrijft burger-acties + overheid + bedrijven + EU-regels — ALLE pogingen, MAAR ondanks alles blijft het PROBLEEM. Antwoord D dekt precies die nuance: 'moeilijk aan te pakken ondanks X, Y, Z'.",
