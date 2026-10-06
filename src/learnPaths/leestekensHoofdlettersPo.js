@@ -464,7 +464,7 @@ const steps = [
           "Mama riep: Het eten is klaar!",
         ],
         answer: 0,
-        wrongHints: [null, "Het eerste woord binnen de aanhalingstekens hoort groot.", "De aanhalingstekens om de woorden missen.", "De aanhalingstekens missen."],
+        wrongHints: [null, "Het eerste woord binnen de aanhalingstekens hoort groot.", "De dubbele punt vóór de woorden mist.", "De aanhalingstekens missen."],
         uitlegPad: {
           stappen: [{ titel: "Alles samen goed", tekst: "Dubbele punt na 'riep', aanhalingstekens om de woorden, hoofdletter bij 'Het', en het uitroepteken binnen de aanhalingstekens." }],
           niveaus: {

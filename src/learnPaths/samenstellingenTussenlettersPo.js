@@ -203,7 +203,7 @@ const steps = [
         q: "Hoeveel lettergrepen heeft het woord 'bloemenwinkel'?",
         options: ["4", "3", "5", "2"],
         answer: 0,
-        wrongHints: [null, "Klap mee: bloe-men-win-kel, dat zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan twee."],
+        wrongHints: [null, "Klap nog eens mee en tel — het zijn er meer.", "Zo veel zijn het er niet.", "Het zijn er meer dan twee."],
         uitlegPad: {
           stappen: [{ titel: "bloe-men-win-kel", tekst: "Bloe (1), men (2), win (3), kel (4): vier klappen, dus 4 lettergrepen." }],
           niveaus: {
@@ -319,7 +319,7 @@ const steps = [
     explanation:
       "Bij de Doorstroomtoets moet je samenstellingen **herkennen** en goed **spellen**. Twee stappen:\n\n" +
       "1. **Knip** het woord in twee echte woorden (voetbal → voet + bal).\n" +
-      "2. **Tussenletter?** Spreek het hardop uit: hoor je een **-en-** (pan→pannen → pannenkoek) of een **-s-** (dorps­plein)? Soms hoor je niets — dan schrijf je gewoon de twee woorden aan elkaar (voetbalveld, fietspad).\n\n" +
+      "2. **Tussenletter?** Spreek het hardop uit: hoor je een **-en-** (pan→pannen → pannenkoek) of een **-s-** (dorpsplein)? Soms hoor je niets — dan schrijf je gewoon de twee woorden aan elkaar (voetbalveld, fietspad).\n\n" +
       "Twijfel je over -en-? Maak het eerste woord meervoud: kan dat met -en, dan komt dat -en- meestal in het woord.",
     checks: [
       {
