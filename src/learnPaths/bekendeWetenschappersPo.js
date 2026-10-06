@@ -19,10 +19,10 @@ const steps = [
       "Vóór 1500 dachten mensen dat **aarde middelpunt** van heelal was *(geocentrisch)*. Kerk + Aristoteles zeiden zo.\n\n**Nicolaas Copernicus** *(1473-1543, Pools astronoom)*:\n• Stelde dat **zon middelpunt** is *(heliocentrisch)*.\n• Aarde + planeten draaien om de zon.\n• Boek: 'De revolutionibus orbium coelestium' *(1543, op sterfbed)*.\n• Niet bewezen — alleen idee.\n\n**Galileo Galilei** *(1564-1642, Italiaans)*:\n• Maakte zelf **telescoop** *(1609)*.\n• Zag manen rond **Jupiter** → bewijs dat niet alles om aarde draait.\n• Zag **fasen van Venus** → bewijs heliocentrisch model.\n• Schreef boeken die geocentrisch model belachelijk maakten.\n• **Inquisitie** *(katholieke rechtbank)* veroordeelde hem in **1633**.\n• Werd gedwongen zijn idee te herroepen.\n• Bracht de rest van zijn leven door onder huisarrest.\n• Beroemd citaat *('eppur si muove' — 'en toch beweegt zij'),* misschien gezegd na veroordeling.\n• Kerk gaf in **1992** officieel toe dat ze ongelijk hadden.\n\n**Andere astronomie-pioniers**:\n\n**Johannes Kepler** *(1571-1630, Duits)*:\n• Wiskundige.\n• Ontdekte dat **planeten in ellipsen** *(ovaal)* bewegen, niet cirkels.\n• Drie wetten van Kepler.\n\n**Tycho Brahe** *(1546-1601, Deens)*:\n• Beroemd astronoom van vóór de telescoop.\n• Verloor neus in duel, droeg gouden neus.\n• Werkte samen met Kepler.\n\n**William Herschel** *(1738-1822, Brits)*:\n• Ontdekte **Uranus** *(1781)* — eerste nieuwe planeet sinds oudheid.\n• Bouwde grootste telescoop van zijn tijd.\n\n**Wat is heliocentrisch model?**\n• **Helio** = zon, **centrisch** = middelpunt.\n• Zon staat in middelpunt zonnestelsel.\n• 8 planeten (Mercurius/Venus/Aarde/Mars/Jupiter/Saturnus/Uranus/Neptunus) draaien er omheen.\n• Pluto sinds 2006 'dwergplaneet' *(officieel niet meer planeet)*.\n\n**Toets-feitje**:\nDe **astronaut Neil Armstrong** zette in 1969 voet op de maan. Zijn beroemde woorden: *'Dit is een kleine stap voor de mens, een grote sprong voor de mensheid.'*",
     checks: [
       {
-        q: "Wie stelde dat **zon middelpunt** is?",
-        options: ["Copernicus (1543)", "Aristoteles", "Galileo eerst", "Newton"],
+        q: "Wie stelde in 1543 voor dat de **zon in het middelpunt** staat?",
+        options: ["Copernicus", "Aristoteles", "Darwin", "Newton"],
         answer: 0,
-        wrongHints: [null, "Geocentrisch.", "Galileo bewees het.", "Later."],
+        wrongHints: [null, "Aristoteles dacht juist dat de aarde in het midden stond.", "Darwin onderzocht dieren, geen planeten.", "Newton leefde pas later."],
         uitlegPad: {
           stappen: [
             { titel: "Wereldbeeld vóór Copernicus", tekst: "Eeuwenlang dacht iedereen dat de **aarde** in het middelpunt stond, en zon/sterren/planeten draaiden eromheen. Dat heet **geocentrisch** (geo = aarde)." },
@@ -49,21 +49,21 @@ const steps = [
       },
       {
         q: "Wat ontdekte **Galileo** met telescoop?",
-        options: ["Manen rond Jupiter + fasen Venus", "Niets", "Sterren in melkweg alleen", "Geen telescoop"],
+        options: ["Manen rond Jupiter + fasen Venus", "Ringen rond Uranus + Neptunus", "De dwergplaneet Pluto", "Zwarte gaten in de Melkweg"],
         answer: 0,
-        wrongHints: [null, "Wel.", "Wel maar specifiek genoemd.", "Wel."],
+        wrongHints: [null, "Uranus en Neptunus waren in zijn tijd nog niet eens ontdekt.", "Pluto werd pas in 1930 ontdekt.", "Zwarte gaten kon je met zijn telescoop niet zien."],
       },
       {
         q: "Wie veroordeelde **Galileo**?",
-        options: ["Inquisitie (katholieke rechtbank)", "Niemand", "Volk", "Wetenschappers"],
+        options: ["De Inquisitie", "De koning van Spanje", "Een Nederlandse rechtbank", "De universiteit van Pisa"],
         answer: 0,
-        wrongHints: [null, "Wel.", "Niet officieel.", "Niet."],
+        wrongHints: [null, "Kijk in de uitleg: wie veroordeelde hem in 1633?", "Kijk in de uitleg: wie veroordeelde hem in 1633?", "Kijk in de uitleg: wie veroordeelde hem in 1633?"],
       },
       {
         q: "Wat is een **heliocentrisch model**?",
-        options: ["Zon in middelpunt", "Aarde in middelpunt", "Maan in middelpunt", "Niets"],
+        options: ["Zon in middelpunt", "Aarde in middelpunt", "Maan in middelpunt", "Melkweg in middelpunt"],
         answer: 0,
-        wrongHints: [null, "Geocentrisch.", "Niet.", "Wel."],
+        wrongHints: [null, "Geocentrisch.", "Niet.", "Niet."],
       },
     ],
   },
@@ -102,21 +102,21 @@ const steps = [
       },
       {
         q: "Wat is **Newton's eerste wet**?",
-        options: ["Traagheid: voorwerp blijft tot kracht werkt", "F=ma", "Actie=reactie", "Energiebehoud"],
+        options: ["Traagheid", "F = m × a", "Actie = reactie", "Energiebehoud"],
         answer: 0,
-        wrongHints: [null, "2e.", "3e.", "Niet."],
+        wrongHints: [null, "Dat is de 2e wet.", "Dat is de 3e wet.", "Dat is geen wet van Newton."],
       },
       {
         q: "Wat is een **Newton (N)**?",
-        options: ["Eenheid van kracht", "Eenheid van afstand", "Eenheid van tijd", "Niet bestaand"],
+        options: ["Eenheid van kracht", "Eenheid van afstand", "Eenheid van tijd", "Eenheid van temperatuur"],
         answer: 0,
-        wrongHints: [null, "Meter.", "Seconde.", "Wel."],
+        wrongHints: [null, "Meter.", "Seconde.", "Graden Celsius."],
       },
       {
         q: "Wat ontdekte Newton **over licht**?",
-        options: ["Wit licht bestaat uit kleuren (prisma)", "Niets", "Snelheid", "Bestaat niet"],
+        options: ["Wit licht bestaat uit kleuren", "Hoe een gloeilamp werkt", "Hoe snel licht gaat", "Waarom het 's nachts donker is"],
         answer: 0,
-        wrongHints: [null, "Wel.", "De lichtsnelheid werd door een ander gemeten: de Deen Ole Rømer (1676).", "Wel."],
+        wrongHints: [null, "De gloeilamp kwam pas zo'n 150 jaar later.", "De lichtsnelheid werd door een ander gemeten: de Deen Ole Rømer (1676).", "Daar ging zijn bekendste lichtproef niet over."],
       },
     ],
   },
@@ -127,7 +127,7 @@ const steps = [
     checks: [
       {
         q: "Wat bedacht **Darwin**?",
-        options: ["Evolutietheorie + natuurlijke selectie", "Zwaartekracht", "Penicilline", "Relativiteit"],
+        options: ["Evolutietheorie", "Zwaartekracht", "Penicilline", "Relativiteit"],
         answer: 0,
         wrongHints: [null, "Newton.", "Fleming.", "Einstein."],
         uitlegPad: {
@@ -155,19 +155,19 @@ const steps = [
       },
       {
         q: "Welk schip nam Darwin?",
-        options: ["HMS Beagle", "Titanic", "Eendracht", "Sail Amsterdam"],
+        options: ["HMS Beagle", "Titanic", "Eendracht", "Santa Maria"],
         answer: 0,
-        wrongHints: [null, "Veel later.", "Niet.", "Niet expeditie."],
+        wrongHints: [null, "Veel later.", "Niet.", "Dat was het schip van Columbus."],
       },
       {
         q: "Wie is **vader van genetica**?",
-        options: ["Gregor Mendel (erwten)", "Darwin", "Newton", "Curie"],
+        options: ["Gregor Mendel", "Darwin", "Newton", "Curie"],
         answer: 0,
         wrongHints: [null, "Evolutie.", "Niet.", "Radioactiviteit."],
       },
       {
         q: "Wie ontdekte **penicilline**?",
-        options: ["Alexander Fleming (1928)", "Pasteur", "Darwin", "Curie"],
+        options: ["Alexander Fleming", "Pasteur", "Darwin", "Curie"],
         answer: 0,
         wrongHints: [null, "Vaccins.", "Niet.", "Radium."],
       },
@@ -237,7 +237,7 @@ const steps = [
       },
       {
         q: "Wie brak **Enigma-code**?",
-        options: ["Alan Turing (WO2)", "Einstein", "Bohr", "Curie"],
+        options: ["Alan Turing", "Einstein", "Bohr", "Curie"],
         answer: 0,
         wrongHints: [null, "Natuurkundige, niet code-breker.", "Atoom-onderzoeker.", "Radioactiviteit."],
         uitlegPad: {
@@ -266,7 +266,7 @@ const steps = [
       },
       {
         q: "Wie ontdekten **DNA-structuur**?",
-        options: ["Watson + Crick (1953)", "Darwin", "Mendel", "Curie"],
+        options: ["Watson + Crick", "Darwin", "Mendel", "Curie"],
         answer: 0,
         wrongHints: [null, "Evolutie.", "Erfelijkheid algemeen.", "Niet."],
       },
@@ -276,15 +276,15 @@ const steps = [
     title: "Eind-toets — wetenschap mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wie werd beroemd door zijn **telescoop**-ontdekkingen?", options: ["Galileo (1609)", "Newton", "Einstein", "Edison"], answer: 0, wrongHints: [null, "Later.", "Veel later.", "Gloeilamp."] },
-      { q: "**Heliocentrisch** model = ?", options: ["Zon in midden", "Aarde in midden", "Maan in midden", "Niets"], answer: 0, wrongHints: [null, "Geocentrisch.", "Niet.", "Wel."] },
+      { q: "Wie werd beroemd door zijn **telescoop**-ontdekkingen?", options: ["Galileo", "Newton", "Einstein", "Edison"], answer: 0, wrongHints: [null, "Later.", "Veel later.", "Gloeilamp."] },
+      { q: "**Heliocentrisch** model = ?", options: ["Zon in midden", "Aarde in midden", "Maan in midden", "Melkweg in midden"], answer: 0, wrongHints: [null, "Geocentrisch.", "Niet.", "Niet."] },
       { q: "Hoeveel **wetten van Newton**?", options: ["3", "1", "5", "10"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."] },
-      { q: "Wie schreef '**Over het ontstaan van soorten**'?", options: ["Darwin (1859)", "Mendel", "Newton", "Pasteur"], answer: 0, wrongHints: [null, "Erfelijkheid.", "Niet.", "Bacteriën."] },
-      { q: "Wie ontdekte **penicilline**?", options: ["Fleming (1928)", "Darwin", "Curie", "Einstein"], answer: 0, wrongHints: [null, "Darwin = evolutie + Galápagos.", "Curie = radioactiviteit.", "Einstein = natuurkunde + relativiteit."] },
+      { q: "Wie schreef '**Over het ontstaan van soorten**'?", options: ["Darwin", "Mendel", "Newton", "Pasteur"], answer: 0, wrongHints: [null, "Erfelijkheid.", "Niet.", "Bacteriën."] },
+      { q: "Wie ontdekte **penicilline**?", options: ["Fleming", "Darwin", "Curie", "Einstein"], answer: 0, wrongHints: [null, "Darwin = evolutie + Galápagos.", "Curie = radioactiviteit.", "Einstein = natuurkunde + relativiteit."] },
       { q: "Wie kreeg **2 Nobelprijzen**?", options: ["Marie Curie", "Einstein", "Newton", "Darwin"], answer: 0, wrongHints: [null, "Slechts 1.", "Geen Nobel (leefde vóór die bestond).", "Geen."] },
       {
         q: "Wie ontwikkelde de **theorie van de relativiteit** (E=mc²)?",
-        options: ["Albert Einstein (1905, 1915)", "Isaac Newton", "Charles Darwin", "Marie Curie"],
+        options: ["Albert Einstein", "Isaac Newton", "Charles Darwin", "Marie Curie"],
         answer: 0,
         wrongHints: [null, "Newton vóór Einstein — andere natuurkunde.", "Darwin = evolutie, geen natuurkunde.", "Curie = radioactiviteit."],
         uitlegPad: {
@@ -309,7 +309,7 @@ const steps = [
       },
       {
         q: "Wie ontdekte **zwaartekracht** door appel-verhaal?",
-        options: ["Isaac Newton (rond 1666)", "Galileo", "Einstein", "Aristoteles"],
+        options: ["Isaac Newton", "Galileo", "Einstein", "Aristoteles"],
         answer: 0,
         wrongHints: [null, "Galileo werkte aan vallende voorwerpen, niet appel-verhaal.", "Einstein later, andere theorie zwaartekracht.", "Veel ouder, beschreef niet zwaartekracht zo."],
         uitlegPad: {
@@ -361,13 +361,13 @@ const steps = [
       { q: "Wie was **eerste programmeur**?", options: ["Ada Lovelace","Charles Babbage","Newton","Einstein"], answer: 0, wrongHints: [null, "Maakte machine.", "Niet.", "Niet."] },
       { q: "Wie ontwierp de **gloeilamp**?", options: ["Thomas Edison","Tesla","Newton","Einstein"], answer: 0, wrongHints: [null, "Wisselstroom.", "Niet.", "Niet."] },
       { q: "Wie ontwikkelde **wisselstroom (AC)**?", options: ["Nikola Tesla","Edison","Curie","Bell"], answer: 0, wrongHints: [null, "DC.", "Niet.", "Telefoon."] },
-      { q: "Wie ontdekten de **DNA-structuur** (samen)?", options: ["Watson + Crick (met Rosalind Franklin)","Einstein","Newton","Galileo"], answer: 0, wrongHints: [null, "Niet biologie.", "Niet.", "Niet."] },
+      { q: "Wie ontdekten de **DNA-structuur** (samen)?", options: ["Watson + Crick","Einstein","Newton","Galileo"], answer: 0, wrongHints: [null, "Niet biologie.", "Niet.", "Niet."] },
       { q: "Wie was bekend van **chimpansee-onderzoek**?", options: ["Jane Goodall","Curie","Newton","Einstein"], answer: 0, wrongHints: [null, "Niet biologie.", "Niet.", "Niet."] },
       { q: "Wie bedacht de **telefoon**?", options: ["Alexander Graham Bell","Edison","Tesla","Newton"], answer: 0, wrongHints: [null, "Andere uitvindingen.", "Wisselstroom.", "Niet."] },
       { q: "Wie kraakte de **enigma-code** in WO2?", options: ["Alan Turing","Einstein","Curie","Newton"], answer: 0, wrongHints: [null, "Einstein deed natuurkunde, niet codekraken.", "Curie was scheikundige, geen codekraker.", "Newton leefde ruim 200 jaar vóór WO2."] },
       { q: "Wie was de **eerste mens op de maan**?", options: ["Neil Armstrong","Yuri Gagarin","Buzz Aldrin","Curie"], answer: 0, wrongHints: [null, "Eerste in ruimte.", "Met Armstrong, niet eerste.", "Niet."] },
       { q: "Wie schreef *Origin of Species*?", options: ["Charles Darwin","Newton","Einstein","Curie"], answer: 0, wrongHints: [null, "Newton = natuurkunde + zwaartekracht.", "Einstein = relativiteit, natuurkunde.", "Curie = radioactiviteit."] },
-      { q: "Wie ontwikkelde de **fiets** (eerste vorm)?", options: ["Karl Drais (Duits)","Edison","Tesla","Newton"], answer: 0, wrongHints: [null, "Edison = gloeilamp + fonograaf.", "Tesla = wisselstroom + elektriciteit.", "Newton = zwaartekracht, geen voertuig."] },
+      { q: "Wie ontwikkelde de **fiets** (eerste vorm)?", options: ["Karl Drais","Edison","Tesla","Newton"], answer: 0, wrongHints: [null, "Edison = gloeilamp + fonograaf.", "Tesla = wisselstroom + elektriciteit.", "Newton = zwaartekracht, geen voertuig."] },
       { q: "Welke NL-er ontdekte **micro-organismen** met microscoop?", options: ["Anton van Leeuwenhoek","Huygens","Erasmus","Boyan Slat"], answer: 0, wrongHints: [null, "Astronoom.", "Filosoof.", "Plastic uit zee."] },
       { q: "Wie ontwierp de **slingerklok**?", options: ["Christiaan Huygens","Newton","Leeuwenhoek","Erasmus"], answer: 0, wrongHints: [null, "Niet uurwerk.", "Microscoop.", "Filosofie."] },
       { q: "Wat was het vakgebied van Marie **Curie**?", options: ["Radioactiviteit","Astronomie","Biologie","Wiskunde"], answer: 0, wrongHints: [null, "Astronomie = sterren, ander vakgebied.", "Biologie = leven (Darwin).", "Wiskunde = getallen, geen lab-werk."] },

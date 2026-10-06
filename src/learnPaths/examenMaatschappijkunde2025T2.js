@@ -38,7 +38,7 @@ const BRON_LINK = "https://www.examenblad.nl/2025/vmbo-gl/documenten/cse-2/gt-11
 const compact = (kern, niveaus, woorden = []) => ({
   stappen: [{ titel: "Kern", tekst: kern }],
   woorden,
-  theorie: "Toets-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Beleidsfasen? 4 fasen (agenda→voorbereiding→bepaling→uitvoering). Rechtszitting-onderdelen? 5 (tenlastelegging→verhoor→requisitoir→pleidooi+laatste woord→vonnis). Kamer-rechten? 5 (amendement/initiatief/budget/interpellatie + motie).",
+  theorie: "Toets-truc maatschappij: zoek SLEUTELBEGRIP + match definitie. Beleidsfasen? 4 fasen (agenda→voorbereiding→bepaling→uitvoering). Rechtszitting-onderdelen? tenlastelegging→verhoor→requisitoir→pleidooi→laatste woord→vonnis. Kamer-rechten? o.a. initiatief/amendement/motie/budget/interpellatie/enquête/vragen.",
   voorbeelden: [],
   basiskennis: [],
   niveaus,
@@ -123,7 +123,7 @@ const steps = [
         "het recht van enquête",
       ],
       answer: 1,
-      wrongHints: ["Budget = Rijksbegroting goedkeuren. Niet specifiek een oproep doen.", null, "Amendement = wet WIJZIGEN. Hier is geen wet — alleen een OPROEP aan regering.", "Enquête = onderzoekscommissie instellen om iets uit te pluizen. Geen oproep tot beleid."],
+      wrongHints: ["Budget = Rijksbegroting goedkeuren. Niet specifiek een oproep doen.", null, "Amendement = een wetsvoorstel WIJZIGEN. Hier is geen wetsvoorstel — alleen een OPROEP aan regering.", "Enquête = onderzoekscommissie instellen om iets uit te pluizen. Geen oproep tot beleid."],
       explanation: "**Motie** = formele oproep van Kamerlid aan de regering om iets WEL of NIET te doen. Eerdmans roept op tot verzorgingshuizen — typische motie. Andere rechten: amendement (wet wijzigen), initiatief (eigen wetsvoorstel), budget (begroting), enquête (parlementair onderzoek), interpellatie (minister verantwoording vragen).",
       examenBron: BRON_LABEL(13),
       bronLink: BRON_LINK,
@@ -134,7 +134,7 @@ const steps = [
         { id: "nederlandse-staat-maatschappijleer", title: "Nederlandse staat", niveau: "VMBO-GT eindexamen", why: "Tweede Kamer-rechten — kern" },
       ],
       uitlegPad: compact(
-        "MOTIE = oproep aan regering ('doe iets'/'doe iets niet'). AMENDEMENT = bestaande wet wijzigen. INITIATIEF = NIEUWE wet maken. BUDGET = begroting OK. ENQUÊTE = onderzoek. INTERPELLATIE = minister ondervragen. Eerdmans roept regering OP → motie.",
+        "MOTIE = oproep aan regering ('doe iets'/'doe iets niet'). AMENDEMENT = ingediend wetsvoorstel wijzigen. INITIATIEF = NIEUWE wet maken. BUDGET = begroting OK. ENQUÊTE = onderzoek. INTERPELLATIE = minister ondervragen. Eerdmans roept regering OP → motie.",
         { basis: "Oproep aan regering = motie.", simpeler: "Motie = formele tekst die zegt 'regering, ga dit doen'.", nogSimpeler: "Motie" },
         [{ woord: "motie", uitleg: "Formele oproep aan regering om iets wel/niet te doen." }, { woord: "enquêterecht", uitleg: "Recht van Kamer om onderzoek te doen via parlementaire enquête." }],
       ),

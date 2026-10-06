@@ -165,7 +165,7 @@ const steps = [
         q: "Hoeveel planeten heeft ons zonnestelsel?",
         options: ["8","9","7","12"],
         answer: 0,
-        wrongHints: [null,"Pluto telde mee tot 2006 — toen 9. Nu 8.","Te weinig — 8 is correct.","Veel te veel."],
+        wrongHints: [null,"Pluto telde mee tot 2006 — telt hij nu nog mee?","Te weinig.","Veel te veel."],
         uitlegPad: {
           stappen: [{ titel: "8 planeten sinds 2006", tekst: "Sinds Pluto in 2006 dwergplaneet werd, tellen we 8 planeten: Mercurius, Venus, Aarde, Mars, Jupiter, Saturnus, Uranus, Neptunus." }],
           woorden: [{ woord: "ezelsbruggetje", uitleg: "M-V-A-M-J-S-U-N" }],
@@ -261,9 +261,9 @@ const steps = [
     checks: [
       {
         q: "Wat veroorzaakt **eb en vloed** op Aarde?",
-        options: ["Zwaartekracht van de Maan","Wind","Onderzeese aardbevingen","De zon"],
+        options: ["Zwaartekracht van de Maan","Wind","Onderzeese aardbevingen","Regen"],
         answer: 0,
-        wrongHints: [null,"Wind veroorzaakt golven, niet eb en vloed.","Aardbevingen geven tsunami's, geen eb en vloed.","De zon helpt iets mee, maar de maan is de hoofdoorzaak."],
+        wrongHints: [null,"Wind veroorzaakt golven, niet eb en vloed.","Aardbevingen geven tsunami's, geen eb en vloed.","Regen laat de zee niet twee keer per dag stijgen en dalen."],
         uitlegPad: {
           stappen: [{ titel: "Maan trekt aan water", tekst: "Door de zwaartekracht van de Maan wordt zeewater 'opgetrokken' naar de Maan-kant. Twee keer per dag een vloedgolf rondom Aarde." }],
           woorden: [{ woord: "getijden", uitleg: "eb + vloed cyclus" }],
@@ -310,9 +310,9 @@ const steps = [
     checks: [
       {
         q: "Waarom heet Mars de **rode planeet**?",
-        options: ["IJzer-oxide (roest) op het oppervlak","Vulkanen die rood gloeien","Door speciaal zonlicht","Hij is roodbruin gekleurd door bevroren bloed"],
+        options: ["Er zit veel roest in de bodem","Vulkanen die rood gloeien","Door speciaal zonlicht","Door rood ijs op de polen"],
         answer: 0,
-        wrongHints: [null,"De vulkaan Olympus Mons is wel actief geweest maar dat geeft geen rode kleur.","Niet door zonlicht.","Geen bloed — geen leven daar."],
+        wrongHints: [null,"De vulkaan Olympus Mons is wel actief geweest maar dat geeft geen rode kleur.","Niet door zonlicht.","De polen van Mars zijn juist wit van ijs."],
         uitlegPad: {
           stappen: [{ titel: "IJzer-oxide = roest", tekst: "Mars-bodem bevat veel ijzer dat oxideert (roest, Fe₂O₃) → rode kleur. Hele planeet ziet eruit als een grote roestbruine woestijn." }],
           woorden: [{ woord: "oxidatie", uitleg: "reactie met zuurstof → roest" }],
@@ -338,9 +338,9 @@ const steps = [
       },
       {
         q: "Hoeveel manen heeft **Mars**?",
-        options: ["2 (Phobos + Deimos)","1","0","20"],
+        options: ["2","1","0","20"],
         answer: 0,
-        wrongHints: [null,"Mars heeft er twee.","Niet géén — er zijn er 2.","Veel te veel — Jupiter heeft er ~95!"],
+        wrongHints: [null,"Dat is het aantal van de Aarde — Mars heeft er meer.","Mars heeft wél manen.","Veel te veel — zulke aantallen horen bij de reuzenplaneten."],
         uitlegPad: {
           stappen: [{ titel: "2 manen: Phobos + Deimos", tekst: "Mars heeft 2 kleine manen, klompvormig (niet rond). Vermoedelijk gevangen asteroïden uit de gordel ertussen." }],
           woorden: [{ woord: "Phobos/Deimos", uitleg: "Griekse namen voor angst + paniek" }],
@@ -373,9 +373,9 @@ const steps = [
       },
       {
         q: "Wat is bijzonder aan **Saturnus**?",
-        options: ["Mooie ringen van ijs + steen","Eet asteroïden","Is vierkant","Heeft geen manen"],
+        options: ["Mooie ringen van ijs + steen","Heeft de Grote Rode Vlek","Is vierkant","Heeft geen manen"],
         answer: 0,
-        wrongHints: [null,"Geen eten in de ruimte.","Alle planeten zijn rond.","Saturnus heeft veel manen!"],
+        wrongHints: [null,"Die storm zit op Jupiter.","Alle planeten zijn rond.","Saturnus heeft veel manen!"],
         uitlegPad: {
           stappen: [{ titel: "Saturnus = ringen", tekst: "Saturnus heeft prachtige ringen — duizenden subringen van ijs + steentjes + stof. 273.000 km breed maar slechts tientallen meters dun!" }],
           woorden: [{ woord: "ringen", uitleg: "platte schijven om planeet" }],
@@ -457,9 +457,9 @@ const steps = [
     checks: [
       {
         q: "Waarom is **Pluto geen planeet meer** sinds 2006?",
-        options: ["Te klein + deelt z'n baan met andere objecten","Hij is gevallen","Hij explodeerde","Wetenschappers vergaten 'm"],
+        options: ["Te klein + deelt z'n baan met andere objecten","Hij staat te ver weg om goed te zien","Hij draait om Neptunus in plaats van om de zon","Hij is gemaakt van ijs in plaats van steen"],
         answer: 0,
-        wrongHints: [null,"Niet gevallen — hij draait nog gewoon.","Niet geëxplodeerd.","Niet vergeten — bewust geherclassificeerd."],
+        wrongHints: [null,"Ver weg is geen reden — Neptunus staat ook heel ver.","Pluto draait wel degelijk om de zon.","Waar hij van gemaakt is, telt niet mee voor de regel."],
         uitlegPad: {
           stappen: [{ titel: "Pluto te klein + niet 'schoon'", tekst: "Pluto is sinds 2006 'dwergplaneet'. Te klein, en deelt baan met veel andere Kuipergordel-objecten. Officiële definitie planeet vereist 'baan vrij van andere objecten'." }],
           woorden: [{ woord: "Kuipergordel", uitleg: "ringvormig gebied achter Neptunus met dwergplaneten" }],
@@ -536,7 +536,7 @@ const steps = [
         q: "Hoeveel **lichtjaren** is **Proxima Centauri** (dichtstbijzijnde ster na zon) weg?",
         options: ["~4,2 lichtjaar","~1 lichtjaar","~100 lichtjaar","~1 miljoen lichtjaar"],
         answer: 0,
-        wrongHints: [null,"Iets verder weg dan 1.","Te ver — die zou bijna onzichtbaar zijn.","Andromeda-stelsel is zo ver."],
+        wrongHints: [null,"Iets verder weg dan 1.","Te ver — die zou bijna onzichtbaar zijn.","Zo ver weg liggen pas andere sterrenstelsels."],
         uitlegPad: {
           stappen: [{ titel: "Proxima Centauri 4,2 lichtjaar", tekst: "Onze dichtstbijzijnde ster (na de zon) is Proxima Centauri. Licht doet 4,2 jaar over de reis. Met huidige raketten zou het 70.000 jaar duren." }],
           woorden: [{ woord: "lichtjaar", uitleg: "afstand die licht in 1 jaar aflegt" }],
@@ -548,9 +548,9 @@ const steps = [
       },
       {
         q: "Wat veroorzaakt **eb en vloed** op Aarde?",
-        options: ["Zwaartekracht van de maan","De zon","Wind","Vulkanisme"],
+        options: ["Zwaartekracht van de maan","Regen","Wind","Vulkanisme"],
         answer: 0,
-        wrongHints: [null,"Zon helpt iets, maar maan is veruit grootste invloed.","Wind veroorzaakt golven, geen eb/vloed.","Geen verband."],
+        wrongHints: [null,"Regen laat de zee niet twee keer per dag stijgen en dalen.","Wind veroorzaakt golven, geen eb/vloed.","Geen verband."],
         uitlegPad: {
           stappen: [{ titel: "Maan-zwaartekracht", tekst: "De zwaartekracht van de maan trekt aan zeewater → vloed. Twee per dag (één aan maan-kant, één aan tegenoverkant)." }],
           woorden: [{ woord: "zwaartekracht", uitleg: "aantrekkende kracht tussen massa's" }],
@@ -562,9 +562,9 @@ const steps = [
       },
       {
         q: "Wat is een **lichtjaar**?",
-        options: ["Afstand die licht in 1 jaar aflegt (~9.500 miljard km)","Hoe lang het licht is","Een soort jaartelling","De tijd dat de zon schijnt per jaar"],
+        options: ["Afstand die licht in 1 jaar aflegt","Hoe lang het licht is","Een soort jaartelling","De tijd dat de zon schijnt per jaar"],
         answer: 0,
-        wrongHints: [null,"Lichtjaar = afstand, niet eigenschap van licht.","Niet een jaartelling.","Niet zo eenvoudig."],
+        wrongHints: [null,"Lichtjaar = afstand, niet eigenschap van licht.","Niet een jaartelling.","Het heeft niets met zonneschijn te maken."],
         uitlegPad: {
           stappen: [{ titel: "Lichtjaar = afstand", tekst: "Een lichtjaar is de AFSTAND die licht in 1 jaar aflegt: ~9.500 miljard km. Geen tijdseenheid maar een afstandseenheid voor astronomische afstanden." }],
           woorden: [{ woord: "lichtsnelheid", uitleg: "300.000 km per seconde" }],
@@ -578,13 +578,13 @@ const steps = [
       { q: "Welke planeet is **dichtst bij de zon**?", options: ["Mercurius","Venus","Aarde","Mars"], answer: 0, wrongHints: [null, "Tweede.", "Derde.", "Vierde."] },
       { q: "Welke planeet noemen we de **rode planeet**?", options: ["Mars","Venus","Jupiter","Saturnus"], answer: 0, wrongHints: [null, "Heet, geel.", "Reuzenplaneet.", "Ringen."] },
       { q: "Welke planeet is **grootst**?", options: ["Jupiter","Saturnus","Neptunus","Aarde"], answer: 0, wrongHints: [null, "Tweede.", "Vierde.", "Klein."] },
-      { q: "**Maan** van de aarde — hoeveel?", options: ["1","2","0","5"], answer: 0, wrongHints: [null, "Niet.", "Wel een.", "Niet."] },
+      { q: "**Maan** van de aarde — hoeveel?", options: ["1","2","0","5"], answer: 0, wrongHints: [null, "Niet.", "Kijk maar eens 's nachts naar de lucht.", "Niet."] },
       { q: "Welke planeet heeft veel **ringen**?", options: ["Saturnus","Mars","Venus","Mercurius"], answer: 0, wrongHints: [null, "Mars is rood, geen ringen.", "Venus is heet, geen ringen.", "Mercurius is klein en dicht bij de zon."] },
       { q: "Hoeveel dagen duurt een **jaar** op aarde?", options: ["365","100","30","1000"], answer: 0, wrongHints: [null, "Niet.", "Maand.", "Te veel."] },
       { q: "Hoe lang duurt 1 **dag** op aarde?", options: ["24 uur","12 uur","365 dagen","1 jaar"], answer: 0, wrongHints: [null, "Halve dag.", "Jaar.", "Niet."] },
-      { q: "Wat veroorzaakt **dag en nacht**?", options: ["Aarde draait om as","Zon beweegt","Wolken","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wat veroorzaakt **seizoenen**?", options: ["Schuine stand aarde + draai om zon","Maan","Zon dichterbij","Niet relevant"], answer: 0, wrongHints: [null, "Niet primair.", "Bijna onveranderd.", "Wel."] },
-      { q: "Wat is een **zonsverduistering**?", options: ["Maan tussen zon en aarde","Aarde tussen zon en maan","Wolk","Niet relevant"], answer: 0, wrongHints: [null, "Maansverduistering.", "Niet astronomie.", "Wel."] },
+      { q: "Wat veroorzaakt **dag en nacht**?", options: ["Aarde draait om as","Zon beweegt","Wolken","Maan schuift voor de zon"], answer: 0, wrongHints: [null, "Het lijkt alsof de zon beweegt — maar wie draait er echt?", "Niet.", "Dat gebeurt maar heel soms: een zonsverduistering."] },
+      { q: "Wat veroorzaakt **seizoenen**?", options: ["Schuine stand aarde + draai om zon","Maan","Zon dichterbij","Wolken"], answer: 0, wrongHints: [null, "Niet primair.", "Bijna onveranderd.", "Wolken veranderen het weer, niet de seizoenen."] },
+      { q: "Wat is een **zonsverduistering**?", options: ["Maan tussen zon en aarde","Aarde tussen zon en maan","Wolk","Zon gaat even uit"], answer: 0, wrongHints: [null, "Maansverduistering.", "Niet astronomie.", "De zon blijft gewoon branden."] },
     ],
   },
 ];
