@@ -17,13 +17,13 @@ const steps = [
   {
     title: "Wat is energie?",
     explanation:
-      "**Energie** = wat je nodig hebt om iets te **laten werken**.\n\n**Voorbeelden van energie thuis**:\n• Lamp brandt → **elektrische energie**.\n• Verwarming aan → **warmte-energie**.\n• Auto rijdt → **bewegings-energie**.\n• Telefoon werkt → **elektrische energie** (uit accu).\n• Eten koken → **warmte-energie** (uit gas of elektriciteit).\n\n**Waar komt energie vandaan?**\nEnergie moet ergens uit komen — uit **energiebronnen**.\n\n**Soorten energiebronnen**:\n\n**1. Fossiele brandstoffen** *(ouderwets)*:\n• **Aardolie** *(benzine, diesel, kerosine)*.\n• **Aardgas** *(verwarming, koken)*.\n• **Steenkool** *(elektriciteits-centrales)*.\n• Heten 'fossiel' omdat ze ontstaan uit dode planten + dieren van **miljoenen jaren** geleden.\n• **Probleem**: raken op + verontreinigen *(CO₂)*.\n\n**2. Duurzame / hernieuwbare energie** *(modern)*:\n• **Zon** → zonnepanelen.\n• **Wind** → windmolens.\n• **Water** → waterkracht-centrales.\n• **Aardwarmte** → geothermisch.\n• **Biomassa** → houtige planten / mest.\n• Worden **niet op** + veroorzaken weinig CO₂.\n\n**3. Kernenergie** *(omstreden)*:\n• Uit splijten van **uranium**.\n• Geen CO₂, maar wel **radioactief afval**.\n\n**Energie kun je niet maken**:\nEnergie 'maken' bestaat eigenlijk niet — je kunt het alleen **omzetten** van de ene vorm in de andere. Een windmolen zet bewegings-energie van wind om in elektrische energie.\n\n**Toets-feitje**:\nEen mens heeft per dag **ongeveer 2000-2500 kcal** aan voedings-energie nodig. Dat is veel minder dan een huishouden aan elektriciteit gebruikt *(gemiddeld huishouden = energie van ongeveer 1000 mensen-dagen)*.",
+      "**Energie** = wat je nodig hebt om iets te **laten werken**.\n\n**Voorbeelden van energie thuis**:\n• Lamp brandt → **elektrische energie**.\n• Verwarming aan → **warmte-energie**.\n• Auto rijdt → **bewegings-energie**.\n• Telefoon werkt → **elektrische energie** (uit accu).\n• Eten koken → **warmte-energie** (uit gas of elektriciteit).\n\n**Waar komt energie vandaan?**\nEnergie moet ergens uit komen — uit **energiebronnen**.\n\n**Soorten energiebronnen**:\n\n**1. Fossiele brandstoffen** *(ouderwets)*:\n• **Aardolie** *(benzine, diesel, kerosine)*.\n• **Aardgas** *(verwarming, koken)*.\n• **Steenkool** *(elektriciteits-centrales)*.\n• Heten 'fossiel' omdat ze ontstaan uit dode planten + dieren van **miljoenen jaren** geleden.\n• **Probleem**: raken op + verontreinigen *(CO₂)*.\n\n**2. Duurzame / hernieuwbare energie** *(modern)*:\n• **Zon** → zonnepanelen.\n• **Wind** → windmolens.\n• **Water** → waterkracht-centrales.\n• **Aardwarmte** → geothermisch.\n• **Biomassa** → houtige planten / mest.\n• Worden **niet op** + veroorzaken weinig CO₂.\n\n**3. Kernenergie** *(omstreden)*:\n• Uit splijten van **uranium**.\n• Geen CO₂, maar wel **radioactief afval**.\n\n**Energie kun je niet maken**:\nEnergie 'maken' bestaat eigenlijk niet — je kunt het alleen **omzetten** van de ene vorm in de andere. Een windmolen zet bewegings-energie van wind om in elektrische energie.\n\n**Toets-feitje**:\nEen mens heeft per dag **ongeveer 2000-2500 kcal** aan voedings-energie nodig. Dat is veel minder dan een huishouden aan elektriciteit gebruikt *(een gemiddeld huishouden gebruikt per jaar evenveel elektrische energie als ongeveer 1000 mensen-dagen aan eten)*.",
     checks: [
       {
         q: "Wat is **energie**?",
-        options: ["Wat nodig is om iets te laten werken", "Voedsel", "Een soort stof", "Niet bestaand"],
+        options: ["Wat nodig is om iets te laten werken", "Voedsel", "Een soort stof", "Een soort licht"],
         answer: 0,
-        wrongHints: [null, "Wel een vorm van energie.", "Niet primair.", "Wel."],
+        wrongHints: [null, "Voedsel bevat energie, maar is het zelf niet.", "Niet primair.", "Licht is maar één vorm van energie."],
       },
       {
         q: "Welke is **fossiel**?",
@@ -136,7 +136,7 @@ const steps = [
       },
       {
         q: "Hoeveel jaar **aardolie** nog?",
-        options: ["~50 jaar", "100", "1000", "Oneindig"],
+        options: ["~50 jaar", "~100 jaar", "~1000 jaar", "Oneindig"],
         answer: 0,
         wrongHints: [null, "Te veel.", "Te veel.", "Niet — eindig."],
       },
@@ -145,7 +145,7 @@ const steps = [
   {
     title: "Duurzame energie",
     explanation:
-      "**Duurzame energie** = bronnen die **niet opraken**.\nOok wel **hernieuwbare** of **groene** energie.\n\n**1. Zonne-energie** ☀️\n• **Zonnepanelen** vangen zonlicht op.\n• Maken er **elektriciteit** van *(fotovoltaïsch)*.\n• Werkt ook bij bewolkt weer *(minder)*.\n• Wereld-leider: China *(80% van panelen-productie)*.\n• In NL: 1 op de 4 huizen heeft panelen *(2024)*.\n• **Probleem**: 's nachts geen stroom → opslag nodig.\n\n**2. Windenergie** 🌬️\n• **Windmolens** zetten wind om in stroom.\n• Op land **of** op zee *(offshore — meer wind)*.\n• In NL: **Noordzee** heeft enorme windparken *(Borssele, Hollandse Kust)*.\n• Eén grote windmolen kan ~1500 huishoudens van stroom voorzien.\n• **Probleem**: wind is niet altijd, mensen klagen over geluid + horizonvervuiling.\n\n**3. Waterkracht** 💧\n• **Stuwdammen** of getijdencentrales.\n• In NL: weinig *(plat land, geen bergen)*.\n• Wereld: China *(Drie-Klovendam)*, Brazilië *(Itaipu)*, Noorwegen.\n• Voordeel: stabiel.\n\n**4. Biomassa** 🌳\n• Verbranden van planten / hout / mest.\n• **Houtsnippers** in centrales *(omstreden — bossen kappen tegenstrijdig met klimaatdoel)*.\n• **Biogas** uit koeienmest.\n• Niet 100% CO₂-vrij maar uit hernieuwbare bron.\n\n**5. Geothermie** 🔥\n• Warmte uit de **aarde**.\n• In NL: bij tuinders + voor verwarmen woonwijken.\n• Boren tot 2-3 km diep waar het 80-90°C is.\n\n**6. Getijde + golven** 🌊\n• Energie uit eb + vloed of golfslag.\n• In NL: getijdencentrale Brouwersdam test.\n• Nog kleine schaal wereldwijd.\n\n**Voordelen duurzaam**:\n• **Raken niet op**.\n• **Geen of weinig CO₂**.\n• **Minder afhankelijk** van andere landen.\n• Steeds **goedkoper** *(zonnepaneel kost nu 90% minder dan in 2010)*.\n\n**Nadelen duurzaam**:\n• **Weer-afhankelijk** *(geen zon, geen wind)*.\n• **Opslag nodig** *(grote batterijen)*.\n• **Ruimte nodig** *(landschap)*.\n• **Hoge investering** vooraf.\n• Sommige materialen schaars *(lithium, kobalt voor batterijen)*.\n\n**NL transitie**:\nDoel 2030: 70% van NL-elektriciteit uit duurzaam.\nIn 2023: ~46% al duurzaam — snelle groei.\n\n**Toets-feitje**:\nDe **grootste windmolen ter wereld** *(China)* heeft wieken van **131 meter** — bijna 3x het Vrijheidsbeeld. Eén draai kan 16.000 huishoudens van stroom voorzien.",
+      "**Duurzame energie** = bronnen die **niet opraken**.\nOok wel **hernieuwbare** of **groene** energie.\n\n**1. Zonne-energie** ☀️\n• **Zonnepanelen** vangen zonlicht op.\n• Maken er **elektriciteit** van *(fotovoltaïsch)*.\n• Werkt ook bij bewolkt weer *(minder)*.\n• Wereld-leider: China *(80% van panelen-productie)*.\n• In NL: 1 op de 4 huizen heeft panelen *(2024)*.\n• **Probleem**: 's nachts geen stroom → opslag nodig.\n\n**2. Windenergie** 🌬️\n• **Windmolens** zetten wind om in stroom.\n• Op land **of** op zee *(offshore — meer wind)*.\n• In NL: **Noordzee** heeft enorme windparken *(Borssele, Hollandse Kust)*.\n• Eén grote windmolen kan ~1500 huishoudens van stroom voorzien.\n• **Probleem**: wind is niet altijd, mensen klagen over geluid + horizonvervuiling.\n\n**3. Waterkracht** 💧\n• **Stuwdammen** of getijdencentrales.\n• In NL: weinig *(plat land, geen bergen)*.\n• Wereld: China *(Drie-Klovendam)*, Brazilië *(Itaipu)*, Noorwegen.\n• Voordeel: stabiel.\n\n**4. Biomassa** 🌳\n• Verbranden van planten / hout / mest.\n• **Houtsnippers** in centrales *(omstreden — bossen kappen tegenstrijdig met klimaatdoel)*.\n• **Biogas** uit koeienmest.\n• Niet 100% CO₂-vrij maar uit hernieuwbare bron.\n\n**5. Geothermie** 🔥\n• Warmte uit de **aarde**.\n• In NL: bij tuinders + voor verwarmen woonwijken.\n• Boren tot 2-3 km diep waar het 80-90°C is.\n\n**6. Getijde + golven** 🌊\n• Energie uit eb + vloed of golfslag.\n• In NL: getijdencentrale Brouwersdam test.\n• Nog kleine schaal wereldwijd.\n\n**Voordelen duurzaam**:\n• **Raken niet op**.\n• **Geen of weinig CO₂**.\n• **Minder afhankelijk** van andere landen.\n• Steeds **goedkoper** *(zonnepaneel kost nu 90% minder dan in 2010)*.\n\n**Nadelen duurzaam**:\n• **Weer-afhankelijk** *(geen zon, geen wind)*.\n• **Opslag nodig** *(grote batterijen)*.\n• **Ruimte nodig** *(landschap)*.\n• **Hoge investering** vooraf.\n• Sommige materialen schaars *(lithium, kobalt voor batterijen)*.\n\n**NL transitie**:\nDoel 2030: 70% van NL-elektriciteit uit duurzaam.\nIn 2023: ~46% al duurzaam — snelle groei.\n\n**Toets-feitje**:\nDe **grootste windmolen ter wereld** *(China)* heeft wieken van **131 meter** — bijna 3x het Vrijheidsbeeld. Eén zo'n molen kan duizenden huishoudens van stroom voorzien.",
     checks: [
       {
         q: "Wat is **duurzame** energie?",
@@ -178,7 +178,7 @@ const steps = [
       },
       {
         q: "**Waterkracht** in NL?",
-        options: ["Weinig — plat land", "Veel", "Hoofdbron", "Niet bekend"],
+        options: ["Weinig", "Veel", "Hoofdbron", "Niet bekend"],
         answer: 0,
         wrongHints: [null, "Niet.", "Niet hoofd.", "Wel."],
       },
@@ -213,16 +213,16 @@ const steps = [
       },
       {
         q: "Probleem **zonne-energie**?",
-        options: ["'s Nachts geen stroom", "Heel duur", "Bestaat niet", "Werkt nooit"],
+        options: ["'s Nachts geen stroom", "Maakt veel lawaai", "Bestaat niet", "Werkt nooit"],
         answer: 0,
-        wrongHints: [null, "Steeds goedkoper.", "Bestaat wel.", "Wel."],
+        wrongHints: [null, "Zonnepanelen zijn stil.", "Bestaat wel.", "Wel."],
       },
     ],
   },
   {
     title: "Kernenergie",
     explanation:
-      "**Kernenergie** = energie uit het **splijten van atomen**.\nOmstreden — voor- en tegenstanders.\n\n**Hoe werkt het?**\n• In een **kernreactor** wordt **uranium** *(zwaar metaal)* gesplitst.\n• Bij splijting komt **enorm veel warmte** vrij.\n• Die warmte verwarmt water → stoom → drijft turbine → elektriciteit.\n• Eén kerncentrale: **1000 MW** = 1 miljoen huishoudens.\n\n**Voordelen**:\n• **Geen CO₂** *(klimaatvriendelijk)*.\n• **Veel energie** per gram brandstof *(1 kg uranium = 2,7 miljoen kg kolen)*.\n• **Stabiel** *(24/7, onafhankelijk van weer)*.\n• **Klein land-gebruik** *(kleine centrale = veel stroom)*.\n\n**Nadelen**:\n• **Radioactief afval** *(blijft 1000+ jaar gevaarlijk)*.\n• **Ongelukken** *(zeldzaam maar erg)*:\n  - **Tsjernobyl 1986** *(Oekraïne, ex-Sovjet)*.\n  - **Fukushima 2011** *(Japan, na tsunami)*.\n• **Kernwapens-risico** *(zelfde technologie)*.\n• **Hoge bouwkosten** *(€10+ miljard per centrale)*.\n• **Lange bouwtijd** *(10-15 jaar)*.\n\n**In Nederland**:\n• 1 werkende kerncentrale: **Borssele** *(Zeeland, sinds 1973)*.\n• Levert ~3% van NL-elektriciteit.\n• Politiek: kabinet plant **2 nieuwe** kerncentrales *(Borssele 2 + 3)*.\n• Discussie: voorstanders = klimaat-oplossing; tegenstanders = afval-probleem + duur.\n\n**Internationale verschillen**:\n• **Frankrijk**: 70% kernenergie — meest van EU.\n• **Duitsland**: alle kerncentrales **uit** *(2023, na Fukushima-paniek)*.\n• **China**: bouwt heel veel nieuwe centrales.\n• **VS**: ~20% kernenergie.\n\n**Toekomst: kernfusie**:\n• **Splijting** *(huidige reactors)*: atoom uit elkaar halen.\n• **Fusie** *(toekomst)*: atomen samenvoegen *(zoals in de zon)*.\n• Fusie zou **veel veiliger** + **geen afval** zijn.\n• Test-reactor **ITER** in Frankrijk — werkt 2035.\n• Commercieel pas vanaf **2050+**.\n\n**Toets-feitje**:\nDe **kernramp in Tsjernobyl** *(26 april 1986)* maakte een gebied groter dan de hele provincie Utrecht voor lange tijd onbewoonbaar. De 'verboden zone' (30 km rondom) is er nog steeds.",
+      "**Kernenergie** = energie uit het **splijten van atomen**.\nOmstreden — voor- en tegenstanders.\n\n**Hoe werkt het?**\n• In een **kernreactor** wordt **uranium** *(zwaar metaal)* gesplitst.\n• Bij splijting komt **enorm veel warmte** vrij.\n• Die warmte verwarmt water → stoom → drijft turbine → elektriciteit.\n• Eén kerncentrale: **1000 MW** = 1 miljoen huishoudens.\n\n**Voordelen**:\n• **Geen CO₂** *(klimaatvriendelijk)*.\n• **Veel energie** per gram brandstof *(1 kg uranium = 2,7 miljoen kg kolen)*.\n• **Stabiel** *(24/7, onafhankelijk van weer)*.\n• **Klein land-gebruik** *(kleine centrale = veel stroom)*.\n\n**Nadelen**:\n• **Radioactief afval** *(blijft 1000+ jaar gevaarlijk)*.\n• **Ongelukken** *(zeldzaam maar erg)*:\n  - **Tsjernobyl 1986** *(Oekraïne, ex-Sovjet)*.\n  - **Fukushima 2011** *(Japan, na tsunami)*.\n• **Kernwapens-risico** *(zelfde technologie)*.\n• **Hoge bouwkosten** *(€10+ miljard per centrale)*.\n• **Lange bouwtijd** *(10-15 jaar)*.\n\n**In Nederland**:\n• 1 werkende kerncentrale: **Borssele** *(Zeeland, sinds 1973)*.\n• Levert ~3% van NL-elektriciteit.\n• Politiek: kabinet plant **2 nieuwe** kerncentrales *(Borssele 2 + 3)*.\n• Discussie: voorstanders = klimaat-oplossing; tegenstanders = afval-probleem + duur.\n\n**Internationale verschillen**:\n• **Frankrijk**: 70% kernenergie — meest van EU.\n• **Duitsland**: alle kerncentrales **uit** *(2023, na Fukushima-paniek)*.\n• **China**: bouwt heel veel nieuwe centrales.\n• **VS**: ~20% kernenergie.\n\n**Toekomst: kernfusie**:\n• **Splijting** *(huidige reactors)*: atoom uit elkaar halen.\n• **Fusie** *(toekomst)*: atomen samenvoegen *(zoals in de zon)*.\n• Fusie zou **veel veiliger** + **veel minder afval** geven.\n• Test-reactor **ITER** in Frankrijk — werkt 2035.\n• Commercieel pas vanaf **2050+**.\n\n**Toets-feitje**:\nDe **kernramp in Tsjernobyl** *(26 april 1986)* maakte een gebied groter dan de hele provincie Utrecht voor lange tijd onbewoonbaar. De 'verboden zone' (30 km rondom) is er nog steeds.",
     checks: [
       {
         q: "Hoe werkt **kernenergie**?",
@@ -255,9 +255,9 @@ const steps = [
       },
       {
         q: "**NL kerncentrale**?",
-        options: ["Borssele (Zeeland)", "Amsterdam", "Schiphol", "Geen"],
+        options: ["Borssele", "Amsterdam", "Schiphol", "Geen"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Geen.", "Wel — Borssele."],
+        wrongHints: [null, "Niet.", "Een vliegveld — geen centrale.", "Nederland heeft er wel één."],
       },
       {
         q: "Welk land is **kernenergie-koploper**?",
@@ -267,7 +267,7 @@ const steps = [
       },
       {
         q: "**Probleem** kernenergie?",
-        options: ["Radioactief afval (1000+ jr)", "Geen probleem", "Te goedkoop", "Te veel CO₂"],
+        options: ["Radioactief afval", "Geen probleem", "Te goedkoop", "Te veel CO₂"],
         answer: 0,
         wrongHints: [null, "Wel.", "Niet.", "Geen CO₂."],
       },
@@ -280,25 +280,25 @@ const steps = [
     checks: [
       {
         q: "**Grootste post** in NL energiemix?",
-        options: ["Aardgas + aardolie samen ~60%", "Zon", "Wind", "Kern"],
+        options: ["Aardgas en aardolie", "Zon en wind", "Kernenergie", "Steenkool"],
         answer: 0,
-        wrongHints: [null, "Veel minder.", "Veel minder.", "Slechts 3%."],
+        wrongHints: [null, "Groeit snel, maar is nog veel kleiner.", "Slechts ~3%.", "Nog maar een klein deel."],
       },
       {
         q: "Sinds welk jaar **geen gasaansluiting** in nieuwbouw NL?",
         options: ["2018", "2024", "1990", "Nooit"],
         answer: 0,
-        wrongHints: [null, "Later.", "Te vroeg.", "Wel."],
+        wrongHints: [null, "Te laat — het gebeurde eerder.", "Te vroeg.", "Wel."],
       },
       {
         q: "Wat bedoelen we met **energiearmoede**?",
-        options: ["Gezinnen die energie niet kunnen betalen", "Geen elektriciteit", "Veel besparen", "Niet bestaand"],
+        options: ["Gezinnen die energie niet kunnen betalen", "Geen elektriciteit", "Veel besparen", "Gratis energie voor iedereen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Tegenovergesteld.", "Wel."],
+        wrongHints: [null, "Niet primair.", "Tegenovergesteld.", "Dat is juist het omgekeerde van armoede."],
       },
       {
         q: "**Grootste energie-post** in huishouden?",
-        options: ["Verwarming + warm water (~80%)", "Verlichting", "Wifi", "Tv"],
+        options: ["Verwarming en warm water", "Verlichting", "Wifi", "Tv"],
         answer: 0,
         wrongHints: [null, "Klein.", "Heel klein.", "Klein."],
       },
@@ -311,23 +311,23 @@ const steps = [
       { q: "Welke is **fossiel**?", options: ["Aardgas", "Zon", "Wind", "Water"], answer: 0, wrongHints: [null, "Schijnt vanaf de zon — geen brandstof.", "Lucht in beweging — niets te verbranden.", "Stroomt op aarde — niet diep gegraven."] },
       { q: "Welke is **duurzaam**?", options: ["Zonnepaneel", "Steenkool", "Aardolie", "Aardgas"], answer: 0, wrongHints: [null, "Uit de mijn — raakt op.", "Pomp je op uit putten — eindig.", "Groningen-veld sloot in 2024 — voorraad eindig."] },
       { q: "Wat is **uranium** voor?", options: ["Kernenergie", "Olie", "Gas", "Niets"], answer: 0, wrongHints: [null, "Fossiel.", "Fossiel.", "Wel."] },
-      { q: "Wat is **CCS**?", options: ["CO₂ afvangen + opslaan", "Bus", "Stoom", "Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Wat is **CCS**?", options: ["CO₂ afvangen + opslaan", "Een soort bus", "Een stoommachine", "Een zonnepaneel"], answer: 0, wrongHints: [null, "Geen vervoermiddel — denk aan het klimaat.", "Geen machine — denk aan het klimaat.", "Een zonnepaneel maakt stroom; CCS doet iets anders."] },
       { q: "**Borssele** is wat?", options: ["NL kerncentrale", "Provincie", "Bedrijf", "Politicus"], answer: 0, wrongHints: [null, "Borssele ligt IN een provincie (Zeeland).", "Geen merknaam — een specifieke locatie.", "Geen persoon — een gebouw."] },
       { q: "**Energie maken** = ?", options: ["Bestaat niet — alleen omzetten", "Uit niets", "Door wetenschap", "Door pc"], answer: 0, wrongHints: [null, "Tegen de natuurwet.", "Wetenschap ontdekt + zet om — maakt geen nieuwe energie.", "Een pc VERBRUIKT energie."] },
       { q: "Welke is **hernieuwbaar**?", options: ["Zon","Aardolie","Aardgas","Steenkool"], answer: 0, wrongHints: [null, "Pomp je op uit de grond — raakt op.", "Eindig — Groningen-veld sloot.", "Uit oude mijnen — wordt niet aangevuld."] },
       { q: "Welke energie levert een **windturbine**?", options: ["Elektriciteit","Olie","Aardgas","Kolen"], answer: 0, wrongHints: [null, "Olie pomp je op — geen wind.", "Gas komt uit de grond, niet uit de lucht.", "Kolen graaf je — een windmolen graaft niet."] },
       { q: "Wat zit er in **zonnepanelen**?", options: ["Cellen die licht → stroom omzetten","Olie","Kolen","Water"], answer: 0, wrongHints: [null, "Een zonnepaneel verbrandt niets.", "Geen brandstof binnenin.", "Geen vloeistof — vaste cellen op het glas."] },
-      { q: "Welk type elektriciteit uit een **stopcontact** in NL?", options: ["230 V wisselstroom","12 V","gelijkstroom","Niet relevant"], answer: 0, wrongHints: [null, "Auto-accu.", "DC = batterij.", "Wel."] },
-      { q: "Wat is een **kerncentrale**?", options: ["Maakt stroom met kernsplijting","Wind","Zon","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wat doet een **batterij**?", options: ["Slaat energie op","Maakt elektriciteit uit niets","Verwarmt","Niet relevant"], answer: 0, wrongHints: [null, "Niet — opslag.", "Niet primair.", "Wel."] },
-      { q: "Welke energie uit **gas-fornuis**?", options: ["Warmte (uit chemische energie)","Elektrisch","Mechanisch","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wat is **isolatie** thuis?", options: ["Materiaal dat warmte vasthoudt","Verwarming","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Andere functie.", "Wel.", "Niet."] },
-      { q: "Welke energie heeft **stromend water** (rivier)?", options: ["Bewegingsenergie","Warmte","Licht","Niet relevant"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Wel."] },
-      { q: "Wat is een **kWh**?", options: ["Eenheid voor elektrisch verbruik","Eenheid gewicht","Eenheid tijd","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Welk type elektriciteit uit een **stopcontact** in NL?", options: ["230 V wisselstroom", "12 V gelijkstroom", "230 V gelijkstroom", "12 V wisselstroom"], answer: 0, wrongHints: [null, "Dat is ongeveer een auto-accu.", "Gelijkstroom komt uit een batterij.", "Veel te weinig spanning voor een stopcontact."] },
+      { q: "Wat is een **kerncentrale**?", options: ["Maakt stroom met kernsplijting", "Wind", "Zon", "Gebruikt steenkool"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Steenkool verbrand je in een kolencentrale."] },
+      { q: "Wat doet een **batterij**?", options: ["Slaat energie op", "Maakt elektriciteit uit niets", "Verwarmt", "Maakt licht"], answer: 0, wrongHints: [null, "Niet — opslag.", "Niet primair.", "Een lamp maakt licht; de batterij levert de energie."] },
+      { q: "Welke energie uit **gas-fornuis**?", options: ["Warmte", "Elektrisch", "Mechanisch", "Magnetisch"], answer: 0, wrongHints: [null, "Er gaat geen stroom door de gasvlam.", "Er beweegt niets dat iets aandrijft.", "Er zit geen magneet in een gasfornuis."] },
+      { q: "Wat is **isolatie** thuis?", options: ["Materiaal dat warmte vasthoudt", "Verwarming", "Een soort zonnepaneel", "Reclame"], answer: 0, wrongHints: [null, "Andere functie.", "Isolatie maakt geen energie.", "Niet."] },
+      { q: "Welke energie heeft **stromend water** (rivier)?", options: ["Bewegingsenergie", "Warmte", "Licht", "Elektrische energie"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Pas in een waterkrachtcentrale wordt het stroom."] },
+      { q: "Wat is een **kWh**?", options: ["Eenheid voor elektrisch verbruik", "Eenheid gewicht", "Eenheid tijd", "Eenheid temperatuur"], answer: 0, wrongHints: [null, "Gewicht meet je in kilogram.", "Tijd alleen meet je in uren of seconden.", "Temperatuur meet je in graden."] },
       { q: "Welke energiebron is **gratis** maar afhankelijk van weer?", options: ["Zon + wind","Olie","Kolen","Gas"], answer: 0, wrongHints: [null, "Moet je oppompen + raffineren.", "Moet je delven + transporteren.", "Via pijpleiding of importeren."] },
       { q: "Welk percentage NL-stroom uit duurzaam (2024+)?", options: ["~50%+","5%","100%","20%"], answer: 0, wrongHints: [null, "Te weinig.", "Niet helemaal.", "Te weinig."] },
       { q: "Welke energiebron heeft de **laagste CO₂-uitstoot**?", options: ["Duurzame energie","Kolen","Olie","Gas"], answer: 0, wrongHints: [null, "Hoogste.", "Hoog.", "Lager dan kolen, niet duurzaam."] },
-      { q: "Welke energievorm **zit in voedsel**?", options: ["Chemische energie","Elektrisch","Magnetisch","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Welke energievorm **zit in voedsel**?", options: ["Chemische energie", "Elektrisch", "Magnetisch", "Geluidsenergie"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Voedsel geeft geen geluid af."] },
     ],
   },
 ];
