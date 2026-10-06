@@ -155,7 +155,7 @@ const steps = [
         q: "Wat is **'brood en spelen'**?",
         options: ["Gratis eten + gladiatoren om volk rustig te houden", "Een gerecht", "Een spel", "Een feest"],
         answer: 0,
-        wrongHints: [null, "Letterlijk klopt maar het is politiek concept.", "Niet alleen spel.", "Niet alleen feest."],
+        wrongHints: [null, "Niet één gerecht — het is een politiek begrip.", "Niet alleen spel.", "Niet alleen feest."],
       },
       {
         q: "Waarheen verplaatste Constantijn de hoofdstad?",
@@ -192,7 +192,7 @@ const steps = [
       },
       {
         q: "Wat zijn **aquaducten**?",
-        options: ["Stenen bruggen die water naar steden brengen", "Romeinse schepen", "Soort wapens", "Tempels"],
+        options: ["Waterleidingen die water naar steden brengen", "Romeinse schepen", "Soort wapens", "Tempels"],
         answer: 0,
         wrongHints: [null, "Schepen heten anders.", "Geen wapens.", "Tempels zijn aparte gebouwen."],
       },
@@ -227,7 +227,7 @@ const steps = [
         q: "Welk **deel van Rome** bleef nog 1000 jaar bestaan?",
         options: ["Oostromeinse / Byzantijnse Rijk", "West-Rome", "Geen", "Egypte"],
         answer: 0,
-        wrongHints: [null, "Viel in 476.", "Wel — Oost bleef.", "Geen Romeinse deelstaat meer."],
+        wrongHints: [null, "Viel in 476.", "Wel — kijk naar de splitsing van 395.", "Geen Romeinse deelstaat meer."],
       },
     ],
   },
