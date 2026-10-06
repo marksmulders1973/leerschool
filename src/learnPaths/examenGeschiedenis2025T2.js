@@ -147,7 +147,7 @@ const steps = [
           "Het distributiesysteem (rantsoenering) was het GEVOLG van de tekorten, niet de oorzaak. Vraag staat omgekeerd.",
           "De Russische Revolutie (1917) raakte vooral Oost-Europa, niet de aanvoer naar Nederland.",
         ],
-        explanation: "Hoewel Nederland tijdens WO1 (1914-1918) neutraal was, raakte het wel verzeild in de **handelsblokkades** tussen Duitsland en de geallieerden. Britse marine blokkeerde Duitse aanvoer; Duitsland gebruikte onbeperkte duikbootoorlog tegen koopvaardij. Nederlandse handel zat tussen beide kampen klem. Resultaat: de import viel weg → tekort aan kolen, voedsel, grondstoffen. Pas eind 1918 (na het einde van de oorlog) verdwenen de blokkades.",
+        explanation: "Hoewel Nederland tijdens WO1 (1914-1918) neutraal was, raakte het wel verzeild in de **handelsblokkades** tussen Duitsland en de geallieerden. Britse marine blokkeerde Duitse aanvoer; Duitsland gebruikte onbeperkte duikbootoorlog tegen koopvaardij. Nederlandse handel zat tussen beide kampen klem. Resultaat: de import viel weg → tekort aan kolen, voedsel, grondstoffen. Pas na het einde van de oorlog (november 1918) werden de blokkades geleidelijk opgeheven.",
         examenBron: BRON_LABEL(10),
         bronLink: BRON_LINK,
         leerpadLink: { id: "tijdvakken-geschiedenis", title: "Tijdvakken geschiedenis" },
