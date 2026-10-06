@@ -228,7 +228,7 @@ const steps = [
       },
       {
         q: "Th-klank in 'think' is:",
-        options: ["Stemloos (tongtip tussen tanden)","Stemhebbend","Niet bestaand","Gelijk aan 's'"],
+        options: ["Stemloos","Stemhebbend","Niet bestaand","Gelijk aan 's'"],
         answer: 0,
         wrongHints: [null, "Niet — dat is 'this'.", "Bestaat wel.", "Anders dan s."],
         uitlegPad: {
