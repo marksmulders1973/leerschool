@@ -42,7 +42,7 @@ const steps = [
         },
       },
       {
-        q: "Welk woord is **goed** geschreven?",
+        q: "Hoe schrijf je het woord voor dit voertuig: 🚌?",
         options: ["bus", "buss", "bas", "pus"],
         answer: 0,
         wrongHints: [null, "Hoor je twee s'en aan het einde?", "Luister naar de middelste klank: u of a?", "Luister naar de eerste klank: b of p?"],
@@ -172,7 +172,7 @@ const steps = [
         q: "Hoe schrijf je de plek waar je elke dag leert?",
         options: ["school", "sgool", "chool", "skool"],
         answer: 0,
-        wrongHints: [null, "Bijna — het begint met sch, met een c erin.", "Er mist een letter aan het begin.", "Bijna — het is geen k maar ch."],
+        wrongHints: [null, "Bijna — welke letters schrijf je aan het begin van dit woord?", "Er mist een letter aan het begin.", "Bijna — kijk nog eens naar de letters na de s."],
         uitlegPad: {
           stappen: [{ titel: "sch-woord", tekst: "**sch**-oo-l → school. Onthoud: s + c + h aan het begin." }],
           niveaus: { basis: "School begint met sch.", simpeler: "s-c-h: school.", nogSimpeler: "school" },
@@ -182,7 +182,7 @@ const steps = [
         q: "Hoe schrijf je het woord voor wat je aan je voet draagt: 👟?",
         options: ["schoen", "sgoen", "schun", "soen"],
         answer: 0,
-        wrongHints: [null, "Bijna — het begint met sch, met een c erin.", "Luister naar de klank in het midden: oe.", "Er missen letters aan het begin: sch."],
+        wrongHints: [null, "Bijna — welke letters schrijf je aan het begin van dit woord?", "Luister naar de klank in het midden.", "Er missen letters aan het begin."],
         uitlegPad: {
           stappen: [{ titel: "sch-woord", tekst: "**sch**-oe-n → schoen. Weer s + c + h aan het begin." }],
           niveaus: { basis: "Schoen begint met sch.", simpeler: "sch + oen.", nogSimpeler: "schoen" },
@@ -218,10 +218,10 @@ const steps = [
       "De laatste ronde! Alles wat je leerde komt nog één keer langs:\n\n• Schrijf wat je hoort: k-a-t → kat\n• Lange klanken met twee letters: maan, boom\n• Twee letters, één klank: boek, fiets, huis\n• sch- en -ng: school, ring\n\nDoe je best — en weet je het even niet? Zeg het woord langzaam hardop. Je oren helpen je!",
     checks: [
       {
-        q: "Welk woord is **goed** geschreven?",
+        q: "Hoe schrijf je het woord voor dit dier: 🐑?",
         options: ["schaap", "sgaap", "schap", "scaap"],
         answer: 0,
-        wrongHints: [null, "Het begint met s + c + h.", "Luister: is de a kort of lang?", "Er mist een letter: s-c-h."],
+        wrongHints: [null, "Kijk goed naar het begin: welke drie letters horen daar?", "Luister: is de a kort of lang?", "Er mist een letter aan het begin."],
         uitlegPad: {
           stappen: [{ titel: "Twee dingen tegelijk", tekst: "**sch** aan het begin + lange **aa** in het midden = schaap. 🐑" }],
           niveaus: { basis: "sch + aa + p = schaap.", simpeler: "sch... aaa... p.", nogSimpeler: "schaap" },

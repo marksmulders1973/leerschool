@@ -69,13 +69,13 @@ const steps = [
     checks: [
       {
         q: "Wat is een **pure stof**?",
-        options: ["Bevat 1 type deeltje, vaste eigenschappen", "Mengsel van veel dingen", "Vloeistof altijd", "Onbekend"],
+        options: ["Bevat maar 1 soort deeltje", "Mengsel van veel dingen", "Is altijd een vloeistof", "Kun je niet zien"],
         answer: 0,
-        wrongHints: [null, "Dat is mengsel.", "Pure stof kan ook vast of gas zijn.", "Wel bekend."],
+        wrongHints: [null, "Dat is mengsel.", "Pure stof kan ook vast of gas zijn.", "Niet — ijzer en goud zie je ook gewoon."],
       },
       {
         q: "Welke is een **pure stof**?",
-        options: ["Water (H₂O)", "Soep", "Lucht", "Brons"],
+        options: ["Zuiver water", "Soep", "Lucht", "Brons"],
         answer: 0,
         wrongHints: [null, "Mengsel veel dingen.", "Mengsel gassen.", "Mengsel metalen."],
       },
@@ -87,9 +87,9 @@ const steps = [
       },
       {
         q: "Verschil **element** en **verbinding**?",
-        options: ["Element = niet ontleed, verbinding = 2+ elementen samen", "Geen verschil", "Verbinding is kleiner", "Element is groter"],
+        options: ["Element kun je niet ontleden, verbinding wel", "Element is een mengsel, verbinding niet", "Element is vloeibaar, verbinding vast", "Element is groter dan een verbinding"],
         answer: 0,
-        wrongHints: [null, "Wel verschil.", "Andersom soms.", "Niet over grootte."],
+        wrongHints: [null, "Niet — beide zijn pure stoffen.", "Niet — het gaat niet om vast of vloeibaar.", "Niet over grootte."],
       },
     ],
   },
@@ -102,25 +102,25 @@ const steps = [
     checks: [
       {
         q: "Wat is een **oplossing**?",
-        options: ["Stof helemaal opgelost in vloeistof (helder)", "Vaste deeltjes zweven", "Twee vloeistoffen", "Gas in vloeistof"],
+        options: ["Stof helemaal opgelost in vloeistof", "Vaste deeltjes zweven in vloeistof", "Twee vloeistoffen die niet mengen", "Gasbelletjes in een vloeistof"],
         answer: 0,
         wrongHints: [null, "Dat is suspensie.", "Dat is emulsie.", "Dat is schuim."],
       },
       {
         q: "Melk is een ... ?",
-        options: ["Emulsie (vet in water)", "Oplossing", "Suspensie", "Pure stof"],
+        options: ["Emulsie", "Oplossing", "Suspensie", "Pure stof"],
         answer: 0,
-        wrongHints: [null, "Niet — melk niet helder.", "Wel troebel, maar specifiek emulsie.", "Mengsel, geen pure stof."],
+        wrongHints: [null, "Niet — melk niet helder.", "Niet — zweven er vaste deeltjes of vetdruppels in melk?", "Mengsel, geen pure stof."],
       },
       {
         q: "Wat is **brons**?",
-        options: ["Legering (mengsel metalen)", "Pure stof", "Emulsie", "Schuim"],
+        options: ["Legering", "Pure stof", "Emulsie", "Schuim"],
         answer: 0,
         wrongHints: [null, "Mengsel.", "Niet vloeibaar normaal.", "Niet schuim."],
       },
       {
         q: "Wat is **mist**?",
-        options: ["Aerosol (water-druppels in lucht)", "Oplossing", "Emulsie", "Schuim"],
+        options: ["Aerosol", "Oplossing", "Emulsie", "Schuim"],
         answer: 0,
         wrongHints: [null, "Niet vloeibaar primair.", "Niet 2 vloeistoffen.", "Niet gas in vloeistof."],
       },
@@ -141,7 +141,7 @@ const steps = [
       },
       {
         q: "Hoe haal je **zout uit zeewater**?",
-        options: ["Indampen (verdampen)", "Filtreren", "Bezinken", "Chromatografie"],
+        options: ["Indampen", "Filtreren", "Bezinken", "Chromatografie"],
         answer: 0,
         wrongHints: [null, "Zout zit opgelost.", "Opgelost zout zakt niet vanzelf naar de bodem.", "Geen kleuren."],
       },
@@ -168,7 +168,7 @@ const steps = [
       },
       {
         q: "Wat is **chromatografie** voor?",
-        options: ["Kleurstoffen scheiden", "Zout uit water halen", "Alcohol distilleren", "Vaste stof filteren"],
+        options: ["Kleurstoffen scheiden", "Zout uit water halen", "Alcohol destilleren", "Vaste stof filteren"],
         answer: 0,
         wrongHints: [null, "Indampen.", "Destilleren.", "Filtreren."],
       },
@@ -183,7 +183,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **dichtheid**?",
-        options: ["Massa per volume (g/cm³)", "Hoogte van stof", "Kleur", "Smeltpunt"],
+        options: ["Massa per volume", "Hoogte van stof", "Kleur", "Smeltpunt"],
         answer: 0,
         wrongHints: [null, "Hoogte zegt niets over de stof zelf — waarom zinkt lood en drijft kurk?", "Kleur zie je met je ogen — dichtheid vóél je: wat is zwaarder, een blokje lood of een blokje kurk van dezelfde grootte?", "Smeltpunt gaat over temperatuur — dichtheid over hoeveel massa er in een bepaalde ruimte zit."],
       },
@@ -216,27 +216,27 @@ const steps = [
     checks: [
       {
         q: "Wat betekent het **vlam-symbool**?",
-        options: ["Ontvlambaar (brandt makkelijk)", "Giftig", "Corrosief", "Milieu"],
+        options: ["Ontvlambaar", "Giftig", "Corrosief", "Milieu"],
         answer: 0,
         wrongHints: [null, "Ander symbool (schedel).", "Ander symbool.", "Ander symbool."],
       },
       {
         q: "Symbool voor **zoutzuur**?",
-        options: ["Corrosief (vreet weg)", "Ontvlambaar", "Explosief", "Milieu"],
+        options: ["Corrosief", "Ontvlambaar", "Explosief", "Milieu"],
         answer: 0,
         wrongHints: [null, "Brandt niet.", "Explodeert niet.", "Niet primair milieu."],
       },
       {
-        q: "Wat doe je bij **chemicalie in oog**?",
+        q: "Wat doe je als er een **chemische stof in je oog** spat?",
         options: ["15 minuten spoelen met water", "Drogen", "Afvegen", "Wachten"],
         answer: 0,
         wrongHints: [null, "Maakt erger.", "Maakt erger.", "Wachten gevaarlijk."],
       },
       {
         q: "Mag je **bleekmiddel + ammoniak** mengen?",
-        options: ["Nee — vormt giftig gas", "Ja, geen probleem", "Soms", "Maakt sterker"],
+        options: ["Nee, nooit", "Ja, geen probleem", "Soms", "Ja, dan werkt het sterker"],
         answer: 0,
-        wrongHints: [null, "Heel gevaarlijk.", "Altijd nee.", "Tegenovergesteld — gevaarlijk."],
+        wrongHints: [null, "Heel gevaarlijk.", "Niet — het risico is er elke keer.", "Tegenovergesteld — gevaarlijk."],
       },
     ],
   },
@@ -261,7 +261,7 @@ const steps = [
       },
       {
         q: "Mayonaise is een ... ?",
-        options: ["Emulsie (olie in eigeel)", "Oplossing", "Pure stof", "Schuim"],
+        options: ["Emulsie", "Oplossing", "Pure stof", "Schuim"],
         answer: 0,
         wrongHints: [null, "Niet helder.", "Mengsel.", "Geen gas."],
       },
@@ -273,9 +273,9 @@ const steps = [
       },
       {
         q: "Welk gevaarssymbool voor **benzine**?",
-        options: ["Vlam (ontvlambaar)", "Schedel", "Corrosief", "Milieu"],
+        options: ["Vlam", "Schedel", "Corrosief", "Gasfles"],
         answer: 0,
-        wrongHints: [null, "Niet acuut giftig.", "Niet corrosief.", "Niet primair milieu."],
+        wrongHints: [null, "Niet acuut giftig.", "Niet corrosief.", "Niet — benzine is een vloeistof, geen gas onder druk."],
       },
       {
         q: "Hoeveel **elementen** in periodiek systeem?",
