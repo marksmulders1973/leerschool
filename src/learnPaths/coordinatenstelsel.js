@@ -78,7 +78,7 @@ const steps = [
           stappen: [{ titel: "X = horizontaal", tekst: "X-as = horizontaal (links-rechts). Y-as = verticaal (omhoog-omlaag). Standaard 2D-assenstelsel. Conventie van Descartes (17e eeuw)." }],
           woorden: [{ woord: "x-as", uitleg: "Horizontale as." }, { woord: "y-as", uitleg: "Verticale as." }, { woord: "z-as", uitleg: "Derde dimensie (3D), bv. diepte." }],
           theorie: "Onthoud-truc: X = 'kruis' = horizon = horizontaal. Y reikt omhoog naar de hemel. Werkt in de hele wiskunde + natuurkunde.",
-          voorbeelden: [{ type: "praktijk", tekst: "Schaakbord: A-H = x-as. 1-8 = y-as. Battleship: letter = x. Cijfer = y." }],
+          voorbeelden: [{ type: "praktijk", tekst: "Schaakbord: A-H = x-as. 1-8 = y-as." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "y = verticaal. z = 3D. h-as bestaat niet." }],
           niveaus: { basis: "x-as.", simpeler: "Horizontaal = x-as.", nogSimpeler: "x" },
         },
@@ -188,7 +188,7 @@ const steps = [
   },
   {
     title: "Punt opzoeken in het assenstelsel",
-    explanation: "Andersom: je krijgt een **paar coördinaten** en moet het **punt vinden** of plotten.\n\n**Stappenplan**:\n1. Kijk naar de **eerste** coördinaat (x). Ga vanuit de oorsprong **rechts** (positief) of **links** (negatief).\n2. Vanaf daar: kijk naar de **tweede** coördinaat (y). Ga **omhoog** (positief) of **omlaag** (negatief).\n3. Daar is je punt — zet er een dik puntje neer.\n\n**Voorbeeld**: zoek het punt **(-2, 4)**.\n• x = -2 → ga 2 stappen naar **links** vanaf de oorsprong.\n• y = 4 → vandaar 4 stappen **omhoog**.\n• Daar zet je het punt.\n\n**Voorbeeld**: zoek het punt **(3, -2)**.\n• x = 3 → 3 stappen rechts.\n• y = -2 → 2 stappen omlaag.\n\n**Truc**: lees eerst alleen de x-as alsof je naar een straat zoekt, daarna pas de y-as alsof je naar een huisnummer zoekt.",
+    explanation: "Andersom: je krijgt een **paar coördinaten** en moet het **punt vinden** of plotten.\n\n**Stappenplan**:\n1. Kijk naar de **eerste** coördinaat (x). Ga vanuit de oorsprong **rechts** (positief) of **links** (negatief).\n2. Vanaf daar: kijk naar de **tweede** coördinaat (y). Ga **omhoog** (positief) of **omlaag** (negatief).\n3. Daar is je punt — zet er een dik puntje neer.\n\n**Voorbeeld**: zoek het punt **(-2, 4)**.\n• x = -2 → ga 2 stappen naar **links** vanaf de oorsprong.\n• y = 4 → vandaar 4 stappen **omhoog**.\n• Daar zet je het punt.\n\n**Voorbeeld**: zoek het punt **(4, -1)**.\n• x = 4 → 4 stappen rechts.\n• y = -1 → 1 stap omlaag.\n\n**Truc**: lees eerst alleen de x-as alsof je naar een straat zoekt, daarna pas de y-as alsof je naar een huisnummer zoekt.",
     svg: (() => {
       const { grid, axes, toX, toY } = baseAxes();
       // Markeer route naar (-2, 4)
@@ -223,7 +223,7 @@ const steps = [
   },
   {
     title: "Een punt met negatieve coördinaten plotten",
-    explanation: "Negatieve coördinaten geven aan dat je in de **andere richting** moet vanaf de oorsprong:\n\n• **Negatieve x**: naar **links**.\n• **Negatieve y**: naar **omlaag**.\n\n**Voorbeelden**:\n• (-4, -3) → 4 links en 3 omlaag\n• (-2, 4) → 2 links en 4 omhoog\n• (3, -1) → 3 rechts en 1 omlaag\n\n**Punten op de assen**:\n• (5, 0) → 5 rechts, helemaal **op** de x-as (geen omhoog/omlaag).\n• (0, -3) → recht onder de oorsprong, op de y-as.\n• (0, 0) → de oorsprong zelf.\n\n**Vergeet niet**: vier mogelijke combinaties van tekens:\n• **(+ , +)** → rechtsboven\n• **(- , +)** → linksboven\n• **(- , -)** → linksonder\n• **(+ , -)** → rechtsonder\n\nDie vier 'gebieden' heten **kwadranten** — daar gaan we het volgende hoofdstuk over hebben.",
+    explanation: "Negatieve coördinaten geven aan dat je in de **andere richting** moet vanaf de oorsprong:\n\n• **Negatieve x**: naar **links**.\n• **Negatieve y**: naar **omlaag**.\n\n**Voorbeelden**:\n• (-2, -5) → 2 links en 5 omlaag\n• (-2, 4) → 2 links en 4 omhoog\n• (3, -1) → 3 rechts en 1 omlaag\n\n**Punten op de assen**:\n• (5, 0) → 5 rechts, helemaal **op** de x-as (geen omhoog/omlaag).\n• (0, -3) → recht onder de oorsprong, op de y-as.\n• (0, 0) → de oorsprong zelf.\n\n**Vergeet niet**: vier mogelijke combinaties van tekens:\n• **(+ , +)** → rechtsboven\n• **(- , +)** → linksboven\n• **(- , -)** → linksonder\n• **(+ , -)** → rechtsonder\n\nDie vier 'gebieden' heten **kwadranten** — daar gaan we het volgende hoofdstuk over hebben.",
     svg: (() => {
       const { grid, axes, toX, toY } = baseAxes();
       const points = [
@@ -244,7 +244,7 @@ const steps = [
         q: "*Het punt (-4, -2) ligt:*",
         options: ["linksonder de oorsprong","rechtsboven de oorsprong","linksboven de oorsprong","rechtsonder de oorsprong"],
         answer: 0,
-        wrongHints: [null, "Beide getallen zijn negatief = links én omlaag, niet rechts en omhoog.", "x is negatief = links (klopt), maar y is ook negatief = omlaag (niet omhoog).", "x is negatief = links (niet rechts)."],
+        wrongHints: [null, "Kijk naar de tekens: zijn de getallen positief of negatief? Welke richtingen horen daarbij?", "De richting naar links klopt. Kijk nog eens naar het teken van y: omhoog of omlaag?", "De richting omlaag klopt. Kijk nog eens naar het teken van x: links of rechts?"],
         uitlegPad: {
           stappen: [{ titel: "Beide negatief = linksonder", tekst: "(-4, -2): x negatief → links. y negatief → omlaag. Samen: linksonder de oorsprong (= kwadrant III)." }],
           woorden: [{ woord: "linksonder", uitleg: "Onder de x-as + links van de y-as. Kwadrant III." }],
@@ -275,9 +275,9 @@ const steps = [
     checks: [
       {
         q: "*In welke richting worden de kwadranten genummerd?*",
-        options: ["Tegen de klok in, vanaf rechtsboven (I → II → III → IV)","Met de klok mee","Van linksonder naar rechtsboven","Willekeurig"],
+        options: ["Tegen de klok in, vanaf rechtsboven","Met de klok mee, vanaf rechtsboven","Van linksonder naar rechtsboven","Willekeurig, per boek anders"],
         answer: 0,
-        wrongHints: [null, "Andersom — kwadranten worden tegen de klok in genummerd.", "De richting is rotatie, niet diagonaal. Kwadrant I = rechtsboven.", "Het is een vaste volgorde — niet willekeurig."],
+        wrongHints: [null, "Kwadrant I ligt rechtsboven. Ligt kwadrant II daarna rechtsonder of linksboven?", "De richting is rotatie, niet diagonaal. Kwadrant I = rechtsboven.", "Het is een vaste volgorde — niet willekeurig."],
         uitlegPad: {
           stappen: [{ titel: "I → II → III → IV", tekst: "Kwadranten genummerd I (rechtsboven) → II (linksboven) → III (linksonder) → IV (rechtsonder). TEGEN de klok in. Internationale wiskunde-conventie." }],
           woorden: [{ woord: "kwadrant", uitleg: "Een van 4 vakken in assenstelsel. Latijn 'quadrans' = vierde." }, { woord: "tegen de klok in", uitleg: "Andersom dan klokwijzer. Begint bij 12 uur, gaat naar 9, dan 6, dan 3." }],
@@ -291,7 +291,7 @@ const steps = [
   },
   {
     title: "Welke tekens horen bij welk kwadrant?",
-    explanation: "Elk kwadrant heeft een **vaste combinatie** van + en - voor x en y:\n\n| Kwadrant | x | y | Voorbeeld |\n|---|---|---|---|\n| I | + | + | (3, 4) |\n| II | − | + | (-2, 5) |\n| III | − | − | (-1, -3) |\n| IV | + | − | (4, -2) |\n\n**Truc om snel te bepalen in welk kwadrant een punt ligt**:\n1. Kijk naar de **tekens** van x en y.\n2. Combineer:\n   • Beide + → kwadrant I (rechtsboven)\n   • x neg, y pos → kwadrant II (linksboven)\n   • Beide − → kwadrant III (linksonder)\n   • x pos, y neg → kwadrant IV (rechtsonder)\n\n**Examen-vraag**: \"In welk kwadrant ligt het punt (-3, 4)?\" → x = -3 (neg), y = 4 (pos) → kwadrant **II**.",
+    explanation: "Elk kwadrant heeft een **vaste combinatie** van + en - voor x en y:\n\n| Kwadrant | x | y | Voorbeeld |\n|---|---|---|---|\n| I | + | + | (3, 4) |\n| II | − | + | (-2, 5) |\n| III | − | − | (-1, -3) |\n| IV | + | − | (4, -2) |\n\n**Truc om snel te bepalen in welk kwadrant een punt ligt**:\n1. Kijk naar de **tekens** van x en y.\n2. Combineer:\n   • Beide + → kwadrant I (rechtsboven)\n   • x neg, y pos → kwadrant II (linksboven)\n   • Beide − → kwadrant III (linksonder)\n   • x pos, y neg → kwadrant IV (rechtsonder)\n\n**Examen-vraag**: \"In welk kwadrant ligt het punt (-5, 2)?\" → x = -5 (neg), y = 2 (pos) → kwadrant **II**.",
     svg: (() => {
       const { grid, axes, toX, toY } = baseAxes();
       const labels = `
@@ -486,7 +486,7 @@ const steps = [
   // ─── E. Eindopdracht ──────────────────────────────────
   {
     title: "Toepassingen — coördinaten in het echt",
-    explanation: "Coördinaten zijn niet alleen voor wiskunde-toetsen. In het echt:\n\n**1. Plattegronden en kaarten**\nGoogle Maps gebruikt coördinaten (latitude + longitude) om elke plek op aarde te vinden. De Eiffeltoren = ongeveer (48.85°N, 2.29°O).\n\n**2. Schaakbord**\nElk vakje heeft een coördinaat: A1, A2, ..., H8. Letter = x-as, cijfer = y-as. Ook hier eerst x, dan y.\n\n**3. Computer-graphics**\nElke pixel op je scherm heeft een (x, y). Bij een Full HD scherm: 1920 pixels breed, 1080 hoog. Pixel (0, 0) zit linksboven, (1919, 1079) rechtsonder.\n*Let op: bij computers loopt de y-as vaak omgekeerd (omlaag is positief)!*\n\n**4. GPS in de auto**\nDe auto weet de coördinaten van waar je nu bent. De route is een lange reeks coördinaten die de auto volgt.\n\n**5. Natuurkunde — beweging**\nEen voorwerp dat beweegt heeft op elk moment een (x, y) — als je die op een grafiek zet, krijg je de **baan** van het voorwerp.\n\n**6. Spelletjes — Slagschip / Battleship**\nJe roept coördinaten als 'B5' om je tegenstander te raken.\n\nKortom: coördinatenstelsels zitten overal. Wat je hier leert, gebruik je in heel veel andere vakken.",
+    explanation: "Coördinaten zijn niet alleen voor wiskunde-toetsen. In het echt:\n\n**1. Plattegronden en kaarten**\nGoogle Maps gebruikt coördinaten (latitude + longitude) om elke plek op aarde te vinden. De Eiffeltoren = ongeveer (48,85° NB, 2,29° OL).\n\n**2. Schaakbord**\nElk vakje heeft een coördinaat: A1, A2, ..., H8. Letter = x-as, cijfer = y-as. Ook hier eerst x, dan y.\n\n**3. Computer-graphics**\nElke pixel op je scherm heeft een (x, y). Bij een Full HD scherm: 1920 pixels breed, 1080 hoog. Pixel (0, 0) zit linksboven, (1919, 1079) rechtsonder.\n*Let op: bij computers loopt de y-as vaak omgekeerd (omlaag is positief)!*\n\n**4. GPS in de auto**\nDe auto weet de coördinaten van waar je nu bent. De route is een lange reeks coördinaten die de auto volgt.\n\n**5. Natuurkunde — beweging**\nEen voorwerp dat beweegt heeft op elk moment een (x, y) — als je die op een grafiek zet, krijg je de **baan** van het voorwerp.\n\n**6. Spelletjes — Slagschip / Battleship**\nJe roept coördinaten als 'B5' om je tegenstander te raken.\n\nKortom: coördinatenstelsels zitten overal. Wat je hier leert, gebruik je in heel veel andere vakken.",
     svg: (() => {
       const { grid, axes, toX, toY } = baseAxes();
       // Schaakbord-stijl labels
@@ -504,17 +504,17 @@ const steps = [
     })(),
     checks: [
       {
-        q: "*In Battleship wordt een coördinaat opgegeven als \"B5\". Wat staat de letter B voor?*",
-        options: ["De x-as (horizontaal)","De y-as (verticaal)","De diepte","De kleur"],
+        q: "*In een spreadsheet (zoals Excel) heet een cel \"B5\". Welke richting geeft de letter B aan?*",
+        options: ["Horizontaal (zoals de x-as)","Verticaal (zoals de y-as)","De diepte","De kleur"],
         answer: 0,
-        wrongHints: [null, "Het cijfer 5 staat juist voor de y-as.", "Battleship is een 2D-spel, geen diepte.", "Letters in Battleship duiden positie aan, geen kleur."],
+        wrongHints: [null, "Kijk naar de bovenkant van een spreadsheet: daar staan de letters A, B, C … Staan die naast elkaar of onder elkaar?", "Een spreadsheet is plat (2D) — er is geen diepte.", "De letter geeft een plek aan, geen kleur."],
         uitlegPad: {
-          stappen: [{ titel: "Letter = kolom = x-as", tekst: "Battleship-veld 10×10: letters A-J bovenaan (kolom = x-as horizontaal). Cijfers 1-10 links (rij = y-as verticaal). 'B5' = kolom B + rij 5." }],
-          woorden: [{ woord: "Battleship", uitleg: "Spel met bord 10×10 + verborgen schepen. Roep coördinaat → tegenstander zegt 'mis' of 'raak'." }],
-          theorie: "Net als schaakbord: letter = x, cijfer = y. Wereldwijde afspraak voor 2D-roosters met benoemde assen.",
-          voorbeelden: [{ type: "andere", tekst: "Schaak: 'e4' = veld in kolom e, rij 4. Excel-cellen: A1, B2, C3 hetzelfde principe." }],
-          basiskennis: [{ onderwerp: "Praktisch", uitleg: "Letters voor x makkelijker uitspreken dan getallen. 'B5' duidelijker dan '(2, 5)' in spel-context." }],
-          niveaus: { basis: "X-as.", simpeler: "Letter B in Battleship = kolom = x-as.", nogSimpeler: "X" },
+          stappen: [{ titel: "Letter = kolom = x-richting", tekst: "In een spreadsheet staan de letters A, B, C … naast elkaar bovenaan (kolommen, horizontaal — zoals de x-as). De cijfers 1, 2, 3 … staan onder elkaar aan de zijkant (rijen, verticaal — zoals de y-as). 'B5' = kolom B, rij 5." }],
+          woorden: [{ woord: "kolom", uitleg: "Verticale strook cellen. De letter zegt hoe ver naar rechts je gaat." }],
+          theorie: "Net als bij een schaakbord: letter = x, cijfer = y. Eerst de horizontale plek, dan de verticale.",
+          voorbeelden: [{ type: "andere", tekst: "Schaak: 'e4' = veld in kolom e, rij 4. Bij Zeeslag verschilt het per spel aan welke kant de letters staan." }],
+          basiskennis: [{ onderwerp: "Praktisch", uitleg: "Letters voor de kolommen en cijfers voor de rijen voorkomen verwarring: 'B5' is duidelijker dan '(2, 5)'." }],
+          niveaus: { basis: "Horizontaal (x-as).", simpeler: "Letter B in een spreadsheet = kolom = horizontale plek, zoals de x-as.", nogSimpeler: "Horizontaal" },
         },
       },
     ],
@@ -588,20 +588,20 @@ const steps = [
           niveaus: { basis: "Ja, constant.", simpeler: "Y-verschillen constant (+4) → rechte lijn.", nogSimpeler: "Ja" },
         },
       },
-      { q: "Punt (3, 5) ligt in welk **kwadrant**?", options: ["I (rechtsboven)","II (linksboven)","III (linksonder)","IV (rechtsonder)"], answer: 0, wrongHints: [null, "Niet — x is +.", "Niet — beide +.", "Niet — y is +."] },
-      { q: "Welk punt ligt op de **x-as**?", options: ["(4, 0)","(0, 4)","(4, 4)","(−1, 2)"], answer: 0, wrongHints: [null, "Dat is y-as.", "Niet — beide niet 0.", "Niet — geen 0."] },
+      { q: "Punt (3, 5) ligt in welk **kwadrant**?", options: ["I (rechtsboven)","II (linksboven)","III (linksonder)","IV (rechtsonder)"], answer: 0, wrongHints: [null, "Kwadrant II ligt links van de y-as. Is x hier negatief?", "Kwadrant III ligt linksonder. Zijn x en y hier negatief?", "Kwadrant IV ligt onder de x-as. Is y hier negatief?"] },
+      { q: "Welk punt ligt op de **x-as**?", options: ["(4, 0)","(0, 4)","(4, 4)","(−1, 2)"], answer: 0, wrongHints: [null, "(0, 4) heeft x = 0. Op welke as ligt het dan?", "Op de x-as is één van de coördinaten 0. Is dat hier zo?", "Op de x-as is één van de coördinaten 0. Welke moet dat zijn?"] },
       { q: "Welk punt is de **oorsprong**?", options: ["(0, 0)","(1, 1)","(0, 1)","(−1, 0)"], answer: 0, wrongHints: [null, "(1, 1) ligt 1 stap naar rechts én 1 omhoog — de oorsprong ligt op het kruispunt zelf, hoeveel stappen is dat?", "(0, 1) ligt 1 stap omhoog op de y-as. Staat het kruispunt hoger dan de x-as?", "(−1, 0) ligt 1 stap naar links op de x-as. Ligt het kruispunt links van de y-as?"] },
-      { q: "Punt (−2, −3) ligt in welk kwadrant?", options: ["III (linksonder)","I","II","IV"], answer: 0, wrongHints: [null, "Niet — beide +.", "Niet — y negatief.", "Niet — x negatief."] },
-      { q: "Welk punt ligt op de **y-as**?", options: ["(0, 7)","(7, 0)","(7, 7)","(1, 2)"], answer: 0, wrongHints: [null, "X-as.", "Niet.", "Niet."] },
-      { q: "Welk punt ligt op lijn y = 2x?", options: ["(3, 6)","(2, 3)","(6, 3)","(1, 3)"], answer: 0, wrongHints: [null, "Niet — vul de x-waarde in de formule in en kijk of y klopt.", "Niet — andersom.", "Niet — controleer of y twee keer de x-waarde is."] },
-      { q: "**Helling** = verandering in y per verandering in x. Van (0,1) naar (3,7) is helling?", options: ["2","1/2","3","6"], answer: 0, wrongHints: [null, "Andersom.", "Verschil x.", "Verschil y."] },
-      { q: "Welke as is **horizontaal**?", options: ["x-as","y-as","z-as","Geen"], answer: 0, wrongHints: [null,"Verticaal.","3D.","Wel."] },
-      { q: "Welke coördinaat staat **eerst** in (3, 5)?", options: ["x = 3","y = 3","x = 5","y = 5"], answer: 0, wrongHints: [null,"Niet — x is eerst.","Tweede.","Tweede."] },
-      { q: "Lijn **y = x + 2** snijdt y-as in punt?", options: ["(0, 2)","(2, 0)","(0, 0)","(1, 3)"], answer: 0, wrongHints: [null,"X-as snijpunt.","Oorsprong.","Niet snijpunt y-as."] },
-      { q: "**Punt (5, 2)** ligt in kwadrant?", options: ["I (rechtsboven)","II","III","IV"], answer: 0, wrongHints: [null,"X moet negatief.","Beide negatief.","Y moet negatief."] },
-      { q: "Een **rechte lijn** door (0,0) en (1,3) heeft welke vergelijking?", options: ["y = 3x","y = x + 3","y = 3","y = x/3"], answer: 0, wrongHints: [null,"Niet door oorsprong.","Horizontaal.","Andere helling."] },
-      { q: "**Helling 0** betekent welke lijn?", options: ["Horizontaal","Verticaal","Schuin omhoog","Schuin omlaag"], answer: 0, wrongHints: [null,"Helling onbestaanbaar.","Helling >0.","Helling <0."] },
-      { q: "Tussen punten (1,2) en (5,2) is de **afstand**?", options: ["4","2","6","√4"], answer: 0, wrongHints: [null,"Niet — alleen x verschilt 4.","Te veel.","Pythagoras niet nodig — y gelijk."] },
+      { q: "Punt (−2, −3) ligt in welk kwadrant?", options: ["III","I","II","IV"], answer: 0, wrongHints: [null, "Kwadrant I ligt rechtsboven. Zijn x en y hier positief?", "Kwadrant II ligt linksboven. Is y hier positief?", "Kwadrant IV ligt rechtsonder. Is x hier positief?"] },
+      { q: "Welk punt ligt op de **y-as**?", options: ["(0, 7)","(7, 0)","(7, 7)","(1, 2)"], answer: 0, wrongHints: [null, "(7, 0) heeft y = 0. Op welke as ligt het dan?", "Op de y-as is één van de coördinaten 0. Is dat hier zo?", "Op de y-as is één van de coördinaten 0. Welke moet dat zijn?"] },
+      { q: "Welk punt ligt op lijn y = 2x?", options: ["(3, 6)","(2, 3)","(6, 3)","(1, 3)"], answer: 0, wrongHints: [null, "Vul de x-waarde in de formule in en kijk of y klopt.", "Vul x = 6 in de formule in. Welke y hoort daar dan bij?", "Controleer of y twee keer de x-waarde is."] },
+      { q: "**Helling** = verandering in y per verandering in x. Van (0,1) naar (3,7) is helling?", options: ["2","1/2","3","6"], answer: 0, wrongHints: [null, "Je hebt de verandering in x gedeeld door die in y. Welke hoort boven de deelstreep?", "3 is alleen hoeveel x verandert. Kijk ook naar y.", "6 is alleen hoeveel y verandert. Deel je dat nog ergens door?"] },
+      { q: "Welke as is **horizontaal**?", options: ["x-as","y-as","z-as","Geen"], answer: 0, wrongHints: [null,"De y-as staat rechtop (verticaal).","Een z-as gebruik je alleen in 3D.","Er is wel een horizontale as. Welke van de twee ligt plat?"] },
+      { q: "Welke coördinaat staat **eerst** in (3, 5)?", options: ["x = 3","y = 3","x = 5","y = 5"], answer: 0, wrongHints: [null,"Het getal 3 klopt, maar welke letter hoort bij de eerste plek: x of y?","5 staat op de tweede plek. Welk getal staat vooraan?","y = 5 klopt wel, maar staat y eerst of tweede?"] },
+      { q: "Lijn **y = x + 2** snijdt y-as in punt?", options: ["(0, 2)","(2, 0)","(0, 0)","(1, 3)"], answer: 0, wrongHints: [null,"(2, 0) ligt op de x-as. Op de y-as is x altijd 0.","Ligt (0, 0) op de lijn? Vul x = 0 in de formule in.","(1, 3) ligt wel op de lijn, maar niet op de y-as. Welke x-waarde hoort bij de y-as?"] },
+      { q: "**Punt (5, 2)** ligt in kwadrant?", options: ["I","II","III","IV"], answer: 0, wrongHints: [null,"Kwadrant II ligt links van de y-as. Is x hier negatief?","Kwadrant III ligt linksonder. Zijn x en y hier negatief?","Kwadrant IV ligt onder de x-as. Is y hier negatief?"] },
+      { q: "Een **rechte lijn** door (0,0) en (1,3) heeft welke vergelijking?", options: ["y = 3x","y = x + 3","y = 3","y = x/3"], answer: 0, wrongHints: [null,"Vul x = 0 in: kom je dan uit op (0, 0)?","y = 3 is een horizontale lijn. Gaat die door (0, 0)?","Vul x = 1 in: krijg je dan y = 3?"] },
+      { q: "**Helling 0** betekent welke lijn?", options: ["Horizontaal","Verticaal","Schuin omhoog","Schuin omlaag"], answer: 0, wrongHints: [null,"Bij een verticale lijn verandert x helemaal niet — dan kun je geen helling uitrekenen.","Schuin omhoog hoort bij een positieve helling.","Schuin omlaag hoort bij een negatieve helling."] },
+      { q: "Tussen punten (1,2) en (5,2) is de **afstand**?", options: ["4","2","6","5"], answer: 0, wrongHints: [null,"2 is de y-waarde van beide punten, niet de afstand. Kijk naar de x-waarden.","6 krijg je als je 1 en 5 optelt. Je zoekt hoeveel stappen ertussen zitten.","5 is de x-waarde van het tweede punt. Vanaf welke x begin je te tellen?"] },
       { q: "**Open vraag**: in welk kwadrant ligt punt (-3, -4)?", kind: "open", acceptedAnswers: ["III", "3", "iii", "kwadrant III"], explanation: "Beide negatief → linksonder = kwadrant III." },
       { q: "**Open vraag**: wat is de **helling** van lijn y = 4x − 1?", kind: "open", acceptedAnswers: ["4"], numericTolerance: 0, explanation: "Bij y = ax + b is a de helling. Hier a = 4." },
     ],
