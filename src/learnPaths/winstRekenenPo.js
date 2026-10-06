@@ -59,20 +59,22 @@ const steps = [
     svg: winstSvg(),
     checks: [
       {
-        q: "Wat is **winst**?",
+        // 6 okt 2026 (melding 4 okt): "winst" is strikt verkoop − álle kosten; wat hier wordt
+        // geoefend is de brutowinst (verkoop − inkoop). Zo heet het dan ook.
+        q: "Wat is **brutowinst**?",
         options: ["De verkoopprijs min de inkoopprijs", "De inkoopprijs min de verkoopprijs", "De verkoopprijs plus de inkoopprijs", "Alleen de verkoopprijs"],
         answer: 0,
         wrongHints: [null, "Andersom — dan krijg je bij winst een negatief getal.", "Optellen klopt niet; winst is wat je overhoudt.", "De inkoop telt ook mee — die ben je kwijtgeraakt."],
         uitlegPad: {
           stappen: [
-            { titel: "Wat houd je over?", tekst: "Je verkoopt iets en krijgt de verkoopprijs. Maar het kostte jou eerst de inkoopprijs. Wat overblijft is de winst." },
-            { titel: "De som", tekst: "Winst = verkoopprijs − inkoopprijs. Je trekt af wat het jou kostte van wat je ervoor kreeg." },
+            { titel: "Wat houd je over?", tekst: "Je verkoopt iets en krijgt de verkoopprijs. Maar het kostte jou eerst de inkoopprijs. Wat overblijft is de brutowinst." },
+            { titel: "De som", tekst: "Brutowinst = verkoopprijs − inkoopprijs. Je trekt af wat het jou kostte van wat je ervoor kreeg. (Trek je ook andere kosten af, zoals huur of loon, dan houd je de nettowinst over.)" },
             { titel: "Voorbeeld", tekst: "Verkoop €7, inkoop €4. Winst = €7 − €4 = €3. Die €3 is voor jou." },
           ],
           woorden: [
             { woord: "inkoopprijs", uitleg: "Wat het jou kost om iets te kopen of te maken." },
             { woord: "verkoopprijs", uitleg: "Het bedrag waarvoor jij het aan een ander verkoopt." },
-            { woord: "winst", uitleg: "Wat je overhoudt: verkoop − inkoop." },
+            { woord: "brutowinst", uitleg: "Wat je overhoudt: verkoop − inkoop (vóór andere kosten)." },
           ],
           theorie: "Toets-kern: Winst = Verkoop − Inkoop. Truc: 'Wat je KRIJGT' min 'wat het je KOSTTE'. Het antwoord moet positief zijn als je boven je inkoop verkoopt.",
           voorbeelden: [
