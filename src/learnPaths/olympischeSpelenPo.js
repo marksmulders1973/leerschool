@@ -18,13 +18,13 @@ const steps = [
     checks: [
       {
         q: "Waar begonnen **moderne OS**?",
-        options: ["Athene 1896", "Olympia oudtijds", "Parijs", "Rome"],
+        options: ["Athene", "Olympia oudtijds", "Parijs", "Rome"],
         answer: 0,
         wrongHints: [null, "Oude OS.", "Later.", "Later."],
       },
       {
         q: "Hoeveel **olympische ringen**?",
-        options: ["5 (continenten)", "4", "6", "7"],
+        options: ["5", "4", "6", "7"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."],
       },
@@ -36,9 +36,9 @@ const steps = [
       },
       {
         q: "Wat is **olympisch motto**?",
-        options: ["Citius/Altius/Fortius (sneller/hoger/sterker)", "Veni Vidi Vici", "Niets", "Olympic Glory"],
+        options: ["Citius, Altius, Fortius", "Veni, vidi, vici", "Carpe diem", "Olympic Glory"],
         answer: 0,
-        wrongHints: [null, "Romeins.", "Wel.", "Niet officieel."],
+        wrongHints: [null, "Romeins.", "Betekent 'pluk de dag'.", "Niet officieel."],
       },
     ],
   },
@@ -49,7 +49,7 @@ const steps = [
     checks: [
       {
         q: "Hoeveel **sporten** op zomer-OS 2024?",
-        options: ["~32 sporten", "5", "100", "10"],
+        options: ["~32", "5", "100", "10"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
       },
@@ -61,13 +61,13 @@ const steps = [
       },
       {
         q: "Wat is **doping**?",
-        options: ["Verboden stoffen voor betere prestatie", "Sport", "Medaille", "Niet bestaand"],
+        options: ["Verboden stoffen voor betere prestatie", "Sport", "Medaille", "Een soort sportschoen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet.", "Wel."],
+        wrongHints: [null, "Niet primair.", "Niet.", "Niet."],
       },
       {
         q: "**Meeste medailles ooit** door?",
-        options: ["Michael Phelps (28 medailles)", "Tom Daley", "Latynina", "Sven Kramer"],
+        options: ["Michael Phelps", "Tom Daley", "Latynina", "Sven Kramer"],
         answer: 0,
         wrongHints: [null, "Niet.", "Tweede.", "NL-schaatser, niet meeste."],
       },
@@ -80,7 +80,7 @@ const steps = [
     checks: [
       {
         q: "Wie is de **meest gedecoreerde NL-atleet** ooit?",
-        options: ["Ireen Wüst (13 medailles)", "Sven Kramer", "Phelps", "Femke Bol"],
+        options: ["Ireen Wüst", "Sven Kramer", "Phelps", "Femke Bol"],
         answer: 0,
         wrongHints: [null, "9 medailles.", "Geen NL.", "Nog meer komen mogelijk."],
       },
@@ -98,7 +98,7 @@ const steps = [
       },
       {
         q: "**Oranje** komt van?",
-        options: ["Oranje-Nassau koninklijke familie", "Sinaasappel", "Vlag", "Olympisch"],
+        options: ["Oranje-Nassau koninklijke familie", "De kleur van sinaasappels", "De kleur van de vlag", "Een olympische afspraak"],
         answer: 0,
         wrongHints: [null, "Letterlijk niet.", "Niet primair.", "Niet."],
       },
@@ -112,12 +112,12 @@ const steps = [
       { q: "Hoeveel **olympische ringen**?", options: ["5", "4", "6", "7"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te veel."] },
       { q: "**Marathon** lengte?", options: ["42 km", "10 km", "100 km", "5 km"], answer: 0, wrongHints: [null, "Te kort.", "Te lang.", "Te kort."] },
       { q: "**Meeste medailles** NL ooit?", options: ["Ireen Wüst", "Sven Kramer", "Phelps", "Femke Bol"], answer: 0, wrongHints: [null, "Iets minder.", "Geen NL.", "Nog actief."] },
-      { q: "**Goud** medaille voor?", options: ["1e plaats", "2e", "3e", "Doping"], answer: 0, wrongHints: [null, "Zilver.", "Brons.", "Niet."] },
+      { q: "**Goud** medaille voor?", options: ["1e plaats", "2e", "3e", "4e"], answer: 0, wrongHints: [null, "Zilver.", "Brons.", "Dan krijg je een diploma."] },
       { q: "Wat is **WADA**?", options: ["Anti-Doping-Agency", "Sportbond", "NL-team", "Stadion"], answer: 0, wrongHints: [null, "Niet primair.", "Niet.", "Niet."] },
       { q: "Welke kleuren hebben de **olympische ringen**?", options: ["Blauw, geel, zwart, groen, rood", "Alleen blauw", "Wit en zwart", "Regenboog"], answer: 0, wrongHints: [null, "Te weinig.", "Te weinig.", "Niet primair olympisch."] },
       { q: "Wanneer waren **Olympische Spelen Amsterdam**?", options: ["1928", "1900", "2000", "2020"], answer: 0, wrongHints: [null, "Parijs.", "Sydney.", "Tokio (uitgesteld)."] },
       { q: "Welke **NL-sporter** wint vaak op de **schaats**?", options: ["Ireen Wüst, Sven Kramer", "Lionel Messi", "Usain Bolt", "Michael Phelps"], answer: 0, wrongHints: [null, "Voetbal.", "Atletiek.", "Zwemmen."] },
-      { q: "**Paralympische Spelen** zijn voor ___?", options: ["Sporters met een handicap", "Alleen kinderen", "Niet bestaand", "Alleen NL"], answer: 0, wrongHints: [null, "Volwassenen ook.", "Wel bestaand.", "Internationaal."] },
+      { q: "**Paralympische Spelen** zijn voor ___?", options: ["Sporters met een handicap", "Alleen kinderen", "Alleen oud-olympiërs", "Alleen NL"], answer: 0, wrongHints: [null, "Volwassenen ook.", "Niet.", "Internationaal."] },
       { q: "Welke kleur heeft de **2e plaats**-medaille?", options: ["Zilver", "Goud", "Brons", "Wit"], answer: 0, wrongHints: [null, "1e plaats.", "3e plaats.", "Niet bestaand."] },
       { q: "Hoeveel jaar tussen **Zomerspelen**?", options: ["4 jaar", "1 jaar", "2 jaar", "10 jaar"], answer: 0, wrongHints: [null, "Te vaak.", "Te vaak.", "Te zelden."] },
     ],

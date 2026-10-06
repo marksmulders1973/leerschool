@@ -14,7 +14,7 @@ const steps = [
   {
     title: "Annie M.G. Schmidt + klassieke kinderboeken",
     explanation:
-      "**Annie M.G. Schmidt** *(1911-1995)* = beroemdste **kinderboekenschrijfster** van NL.\n\n**Wie was zij?**\n• Voluit: **Anna Maria Geertruida Schmidt**.\n• Geboren in **Kapelle** *(Zeeland)*.\n• Werkte eerst als **bibliothecaris**.\n• Begon met schrijven voor radio + tijdschriften.\n• Schreef ook **toneelstukken** + **musicals**.\n• Won veel prijzen, o.a. **Hans Christian Andersen Prijs** *(1988, hoogste internationale kinderboek-prijs)*.\n• Stierf in 1995, een dag na haar 84e verjaardag.\n\n**Beroemdste boeken**:\n\n**Jip en Janneke** *(1953-1960)*:\n• Korte verhaaltjes over twee kleuters: buurjongen en buurmeisje.\n• Eerst in tijdschriften, later in boeken.\n• Tekeningen van **Fiep Westendorp**.\n• 6 delen — verkocht miljoenen.\n• Vertaald in 20+ talen.\n\n**Pluk van de Petteflet** *(1971)*:\n• Jongetje Pluk woont in de torenflat 'De Petteflet'.\n• Heeft een rood kraanwagentje.\n• Maakt vrienden: het torteltje, de Stampertjes, meneer Penseel. Tegenstander: mevrouw Helderder.\n• Tekeningen Fiep Westendorp.\n\n**Otje** *(1980)*:\n• Meisje Otje en haar papa Tos *(kok)*.\n• Otje kan dieren verstaan.\n• Familieverhaal met avontuur.\n\n**Andere Schmidt-boeken**:\n• Floddertje *(meisje dat alles vies maakt)*.\n• Wiplala *(klein wezen)*.\n• Minoes *(kat die mens wordt — verfilmd in 2001 met Carice van Houten)*.\n• Abeltje *(liftjongen in een vliegende lift)*.\n\n**Liedjes + gedichten**:\n• Schreef ~200 liedjes, vele beroemd.\n• 'Dikkertje Dap' *(over giraffe)*.\n• 'De Lapjeskat'.\n• 'Sebastiaan de spin'.\n• Hele generaties NL-kinderen zingen ze nog.\n\n**Fiep Westendorp** *(1916-2004)*:\n• **Illustratrice** van Schmidts boeken.\n• Eenvoudige zwarte lijntjes.\n• Iconisch — niet te verwarren.\n\n**Andere klassieke NL-kinderschrijvers**:\n\n**Paul Biegel** *(1925-2006)*:\n• Sprookjesachtige verhalen.\n• 'De koning van de Kopermijnen'.\n• '12 Sloeg de Klok'.\n\n**Tonke Dragt** *(1930-2024)*:\n• Fantasy-jeugdboeken.\n• 'De Brief voor de Koning' *(1962)* — verfilmd op Netflix.\n• 'Geheimen van het Wilde Woud'.\n\n**Guus Kuijer** *(1942+)*:\n• Realistisch, herkenbaar.\n• 'Het Boek van Alle Dingen'.\n• 'Polleke' *(serie van 5)*.\n• Won Astrid Lindgren Award *(2012)*.\n\n**Joke van Leeuwen** *(1952+)*:\n• Humoristisch + filosofisch.\n• 'Iep!', 'Toen mijn vader een struik werd'.\n\n**Internationaal beroemd**:\n• **Roald Dahl** *(Brits, 'Sjakie + chocoladefabriek', 'Matilda', 'BFG')*.\n• **J.K. Rowling** *(Brits, Harry Potter)*.\n• **Astrid Lindgren** *(Zweeds, Pippi Langkous)*.\n• **Tove Jansson** *(Fins, Moemins)*.\n\n**Toets-feitje**:\nDe **Gouden Griffel** is sinds 1971 jaarlijkse prijs voor beste NL-jeugdboek. **Annie M.G. Schmidt** won 'm meerdere keren — 'Pluk van de Petteflet' werd in 2007 verkozen tot **beste NL-jeugdboek van de 20e eeuw**.",
+      "**Annie M.G. Schmidt** *(1911-1995)* = beroemdste **kinderboekenschrijfster** van NL.\n\n**Wie was zij?**\n• Voluit: **Anna Maria Geertruida Schmidt**.\n• Geboren in **Kapelle** *(Zeeland)*.\n• Werkte eerst als **bibliothecaris**.\n• Begon met schrijven voor radio + tijdschriften.\n• Schreef ook **toneelstukken** + **musicals**.\n• Won veel prijzen, o.a. **Hans Christian Andersen Prijs** *(1988, hoogste internationale kinderboek-prijs)*.\n• Stierf in 1995, een dag na haar 84e verjaardag.\n\n**Beroemdste boeken**:\n\n**Jip en Janneke** *(1953-1960)*:\n• Korte verhaaltjes over twee kleuters: buurjongen en buurmeisje.\n• Eerst in tijdschriften, later in boeken.\n• Tekeningen van **Fiep Westendorp**.\n• 6 delen — verkocht miljoenen.\n• Vertaald in 20+ talen.\n\n**Pluk van de Petteflet** *(1971)*:\n• Jongetje Pluk woont in de torenflat 'De Petteflet'.\n• Heeft een rood kraanwagentje.\n• Maakt vrienden: het torteltje, de Stampertjes, meneer Penseel. Tegenstander: mevrouw Helderder.\n• Tekeningen Fiep Westendorp.\n\n**Otje** *(1980)*:\n• Meisje Otje en haar papa Tos *(kok)*.\n• Otje kan dieren verstaan.\n• Familieverhaal met avontuur.\n\n**Andere Schmidt-boeken**:\n• Floddertje *(meisje dat alles vies maakt)*.\n• Wiplala *(klein wezen)*.\n• Minoes *(kat die mens wordt — verfilmd in 2001 met Carice van Houten)*.\n• Abeltje *(liftjongen in een vliegende lift)*.\n\n**Liedjes + gedichten**:\n• Schreef ~200 liedjes, vele beroemd.\n• 'Dikkertje Dap' *(over giraffe)*.\n• 'De Lapjeskat'.\n• 'Sebastiaan de spin'.\n• Hele generaties NL-kinderen zingen ze nog.\n\n**Fiep Westendorp** *(1916-2004)*:\n• **Illustratrice** van Schmidts boeken.\n• Eenvoudige zwarte lijntjes.\n• Iconisch — niet te verwarren.\n\n**Andere klassieke NL-kinderschrijvers**:\n\n**Paul Biegel** *(1925-2006)*:\n• Sprookjesachtige verhalen.\n• 'De koning van de Kopermijnen'.\n• '12 Sloeg de Klok'.\n\n**Tonke Dragt** *(1930-2024)*:\n• Fantasy-jeugdboeken.\n• 'De Brief voor de Koning' *(1962)* — verfilmd op Netflix.\n• 'Geheimen van het Wilde Woud'.\n\n**Guus Kuijer** *(1942+)*:\n• Realistisch, herkenbaar.\n• 'Het Boek van Alle Dingen'.\n• 'Polleke' *(serie van 5)*.\n• Won Astrid Lindgren Award *(2012)*.\n\n**Joke van Leeuwen** *(1952+)*:\n• Humoristisch + filosofisch.\n• 'Iep!', 'Toen mijn vader een struik werd'.\n\n**Internationaal beroemd**:\n• **Roald Dahl** *(Brits, 'Sjakie + chocoladefabriek', 'Matilda', 'BFG')*.\n• **J.K. Rowling** *(Brits, Harry Potter)*.\n• **Astrid Lindgren** *(Zweeds, Pippi Langkous)*.\n• **Tove Jansson** *(Fins, Moemins)*.\n\n**Toets-feitje**:\nDe **Gouden Griffel** is sinds 1971 jaarlijkse prijs voor beste NL-jeugdboek. **Annie M.G. Schmidt** won 'm in **1981** met **'Otje'**.",
     checks: [
       {
         q: "Wie schreef **Jip en Janneke**?",
@@ -88,7 +88,7 @@ const steps = [
             { woord: "Pluk", uitleg: "Jongetje hoofd-personage van Schmidt's boek." },
             { woord: "Petteflet", uitleg: "Verzonnen flat-naam waar Pluk woont." },
           ],
-          theorie: "Toets-feit: 'Pluk van de Petteflet' werd in **2007 verkozen tot beste NL-jeugdboek van de 20e eeuw**. Klassieker dus. Niet verwarren met andere Schmidt-boeken: Minoes = kat-die-mens-wordt, Otje = meisje-dat-dieren-verstaat, Wiplala = klein wezentje.",
+          theorie: "Toets-feit: 'Pluk van de Petteflet' is een van de **meest voorgelezen** Nederlandse kinderboeken. Klassieker dus. Niet verwarren met andere Schmidt-boeken: Minoes = kat-die-mens-wordt, Otje = meisje-dat-dieren-verstaat, Wiplala = klein wezentje.",
           voorbeelden: [
             { type: "stap", tekst: "Het boek werd in 2004 verfilmd. Ook musical-versie." },
             { type: "stap", tekst: "'Petteflet' is een Schmidt-bedacht woord, geen echt Nederlands. Hoort bij haar speelse stijl." },
@@ -124,11 +124,11 @@ const steps = [
         q: "**Achtste-groepers Huilen Niet** door?",
         options: ["Jacques Vriens", "Schmidt", "Carry Slee", "Roald Dahl"],
         answer: 0,
-        wrongHints: [null, "Zij schreef vooral voor kleuters — dit boek gaat over groep 8.", "Zij schrijft over pesten en scheiding (Spijt!), niet over het afscheid van groep 8.", "Brits — dit is een oer-Nederlands schoolverhaal."],
+        wrongHints: [null, "Zij schreef klassiekers als Jip en Janneke — dit boek gaat over groep 8.", "Zij schrijft over pesten en scheiding (Spijt!), niet over het afscheid van groep 8.", "Brits — dit is een oer-Nederlands schoolverhaal."],
       },
       {
         q: "Wanneer **Kinderboekenweek**?",
-        options: ["Oktober (2 wkn)", "Februari", "Mei", "Geen vaste tijd"],
+        options: ["Oktober", "Februari", "Mei", "Geen vaste tijd"],
         answer: 0,
         wrongHints: [null, "Niet.", "Niet.", "Wel."],
         uitlegPad: {
@@ -157,7 +157,7 @@ const steps = [
       },
       {
         q: "Hoeveel **Harry Potter-boeken**?",
-        options: ["7 delen", "1", "100", "3"],
+        options: ["7", "1", "100", "3"],
         answer: 0,
         wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."],
       },
@@ -170,7 +170,7 @@ const steps = [
     checks: [
       {
         q: "Wanneer **gestorven** Anne Frank?",
-        options: ["Februari/maart 1945 (Bergen-Belsen)", "1944", "1950", "Overleefd"],
+        options: ["1945", "1944", "1950", "Overleefd"],
         answer: 0,
         wrongHints: [null, "Te vroeg.", "Te laat.", "Helaas niet."],
         uitlegPad: {
@@ -228,7 +228,7 @@ const steps = [
       },
       {
         q: "Waar is **Anne Frank Huis**?",
-        options: ["Prinsengracht 263, Amsterdam", "Bergen-Belsen", "Den Haag", "Rotterdam"],
+        options: ["Amsterdam", "Bergen-Belsen", "Den Haag", "Rotterdam"],
         answer: 0,
         wrongHints: [null, "Daar overleed ze.", "Niet.", "Niet."],
       },
@@ -246,15 +246,15 @@ const steps = [
     checks: [
       { q: "Wie schreef **Jip en Janneke**?", options: ["Annie M.G. Schmidt", "Roald Dahl", "Vriens", "Slee"], answer: 0, wrongHints: [null, "Brits.", "Modern.", "Realistisch."] },
       { q: "Wie tekende **bij Schmidt**?", options: ["Fiep Westendorp", "Bruna", "Pieck", "Rembrandt"], answer: 0, wrongHints: [null, "Nijntje.", "Efteling.", "Veel ouder."] },
-      { q: "**Anne Frank** zat ondergedoken in?", options: ["Achterhuis Prinsengracht 263 Amsterdam", "Den Haag", "Rotterdam", "Frankfurt"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Vluchtte daaruit."] },
-      { q: "Wie schreef **Max Havelaar**?", options: ["Multatuli (1860)", "Mulisch", "Vriens", "Schmidt"], answer: 0, wrongHints: [null, "Andere.", "Niet.", "Niet."] },
+      { q: "**Anne Frank** zat ondergedoken in?", options: ["Amsterdam", "Den Haag", "Rotterdam", "Frankfurt"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Vluchtte daaruit."] },
+      { q: "Wie schreef **Max Havelaar**?", options: ["Multatuli", "Mulisch", "Vriens", "Schmidt"], answer: 0, wrongHints: [null, "Andere.", "Niet.", "Niet."] },
       { q: "**Kinderboekenweek** = welke maand?", options: ["Oktober", "Januari", "Mei", "Geen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel vast."] },
       { q: "**Harry Potter** = aantal delen?", options: ["7", "1", "100", "3"], answer: 0, wrongHints: [null, "Te weinig.", "Te veel.", "Te weinig."] },
       {
         q: "**Kruistocht in Spijkerbroek** (Thea Beckman) — wat is het thema?",
-        options: ["Tijdreis terug naar de Middeleeuwen", "Voetbal", "Eerste Wereldoorlog", "Sprookje"],
+        options: ["Tijdreis terug naar de Middeleeuwen", "Een voetbalteam op wereldreis", "Een soldaat in de Eerste Wereldoorlog", "Een prinses in een sprookjesland"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Andere tijd.", "Realistisch, geen sprookje."],
+        wrongHints: [null, "Niet.", "Andere tijd.", "Het speelt in een échte periode uit de geschiedenis."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was Thea Beckman?", tekst: "**Thea Beckman** *(1923-2004)* was een **Nederlandse kinderboekenschrijfster**. Schreef vooral **historische romans** voor 10+ kinderen. Won meerdere Kinderboeken-prijzen." },
@@ -300,7 +300,7 @@ const steps = [
       },
       {
         q: "**Bibliotheek** = waar?",
-        options: ["Plek waar je boeken kunt lenen (gratis voor kinderen)", "Boekenwinkel waar je koopt", "School-bibliotheek alleen", "Online video-platform"],
+        options: ["Plek waar je boeken kunt lenen", "Boekenwinkel waar je koopt", "School-bibliotheek alleen", "Online video-platform"],
         answer: 0,
         wrongHints: [null, "Niet kopen — LENEN.", "Niet alleen school — ook publieke bibliotheek in dorp/stad.", "Niet video — boeken."],
         uitlegPad: {
@@ -326,22 +326,22 @@ const steps = [
       { q: "Wie schreef **Jip en Janneke**?", options: ["Annie M.G. Schmidt","Roald Dahl","Tonke Dragt","Anne Frank"], answer: 0, wrongHints: [null, "Engelse schrijver.", "Andere kinderboeken (De brief voor de koning).", "Schreef dagboek, geen kinderboeken."] },
       { q: "Wie tekende de illustraties bij **Jip en Janneke**?", options: ["Fiep Westendorp","Vincent van Gogh","Rembrandt","Dick Bruna"], answer: 0, wrongHints: [null, "Schilder, geen illustrator.", "Schilder Gouden Eeuw.", "Tekende Nijntje."] },
       { q: "**Anne Frank** schreef tijdens?", options: ["Tweede Wereldoorlog","Eerste Wereldoorlog","Middeleeuwen","Gouden Eeuw"], answer: 0, wrongHints: [null, "Niet — andere periode.", "Veel eerder.", "Veel eerder."] },
-      { q: "Wat wordt elk jaar in oktober **gevierd** in scholen?", options: ["Kinderboekenweek","Voorleeswedstrijd","Boekenmarkt","Schrijfdag"], answer: 0, wrongHints: [null, "Andere activiteit.", "Niet jaarlijks zelfde week.", "Geen schoolfeest."] },
+      { q: "Wat wordt elk jaar in oktober **gevierd** in scholen?", options: ["Kinderboekenweek","Koningsdag","Boekenmarkt","Schrijfdag"], answer: 0, wrongHints: [null, "Dat is in april.", "Niet jaarlijks zelfde week.", "Geen schoolfeest."] },
       { q: "Wie schreef *Harry Potter*?", options: ["J.K. Rowling","Roald Dahl","Annie M.G. Schmidt","Tonke Dragt"], answer: 0, wrongHints: [null, "Andere kinderboeken.", "NL.", "NL."] },
       { q: "Wie schreef *Pluk van de Petteflet*?", options: ["Annie M.G. Schmidt","Tonke Dragt","Jacques Vriens","Carry Slee"], answer: 0, wrongHints: [null, "Andere boeken.", "Andere.", "Andere."] },
       { q: "*De brief voor de koning* is van?", options: ["Tonke Dragt","Annie M.G. Schmidt","Roald Dahl","J.K. Rowling"], answer: 0, wrongHints: [null, "Schmidt schreef vooral korte, grappige boeken (Jip en Janneke) — dit is een dik ridderavontuur.", "Dahl was Brits — dit ridderboek is oer-Nederlands (en op Netflix verfilmd).", "Rowling schreef Harry Potter — zoek een Néderlandse schrijfster."] },
       { q: "Wie schreef *Sjakie en de Chocoladefabriek*?", options: ["Roald Dahl","Annie M.G. Schmidt","Tonke Dragt","Anne Frank"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet kinderboek."] },
-      { q: "Wat is **proza**?", options: ["Gewone tekst (geen poëzie)","Gedicht","Spel","Niet bestaand"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Wel."] },
-      { q: "**Multatuli** schreef beroemd boek over?", options: ["Koloniale uitbuiting (Max Havelaar)","Liefde","Sport","Eten"], answer: 0, wrongHints: [null, "Niet hoofdthema.", "Niet.", "Niet."] },
+      { q: "Wat is **proza**?", options: ["Gewone tekst, zoals een verhaal","Tekst op rijm in versregels","Tekst om op toneel te spelen","Een woord dat niet bestaat"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Wel."] },
+      { q: "**Multatuli** schreef beroemd boek over?", options: ["Koloniale uitbuiting","Liefde","Sport","Eten"], answer: 0, wrongHints: [null, "Niet hoofdthema.", "Niet.", "Niet."] },
       { q: "Wie tekende **Nijntje**?", options: ["Dick Bruna","Fiep Westendorp","Annie M.G. Schmidt","Roald Dahl"], answer: 0, wrongHints: [null, "Andere.", "Schrijver.", "Niet."] },
       { q: "Wie schreef *Het Achterhuis*?", options: ["Anne Frank","Multatuli","Tonke Dragt","Annie M.G. Schmidt"], answer: 0, wrongHints: [null, "Andere periode.", "Niet.", "Niet."] },
       { q: "**Gouden Griffel** is prijs voor?", options: ["Beste NL-kinderboek","Beste film","Beste spel","Beste recept"], answer: 0, wrongHints: [null, "Films winnen een Oscar of Kalf — waarmee schríjf je met een griffel?", "Voor spellen bestaan andere prijzen — een griffel is oud schrijfgerei. Wat maak je daarmee?", "Geen kookprijs — denk aan schrijven en lezen."] },
-      { q: "Wie is **Carry Slee**?", options: ["NL-jeugdboek-schrijfster","Tekenaar","Acteur","Componist"], answer: 0, wrongHints: [null, "Ze tekent niet — haar naam staat op de kaft van boeken als Spijt! en Afblijven.", "Niet op het toneel — haar werk lees je. Wat doet ze dus?", "Geen muziek — denk aan de boekenplank op school."] },
-      { q: "Wat is een **strip**?", options: ["Verhaal met tekeningen + tekstballonnen","Lang boek","Gedicht","Niet relevant"], answer: 0, wrongHints: [null, "Niet specifiek.", "Niet.", "Wel."] },
+      { q: "Wie is **Carry Slee**?", options: ["NL-jeugdboek-schrijfster","Tekenaar","Acteur","Componist"], answer: 0, wrongHints: [null, "Ze tekent niet — denk aan Spijt! en Afblijven.", "Niet op het toneel — denk aan Spijt! en Afblijven.", "Geen muziek — denk aan de boekenplank op school."] },
+      { q: "Wat is een **strip**?", options: ["Verhaal met tekeningen + tekstballonnen","Dik boek zonder plaatjes","Gedicht op rijm","Boek met alleen foto's"], answer: 0, wrongHints: [null, "Wat heeft een strip juist wél?", "Niet.", "Wat zeggen de figuren in een strip?"] },
       { q: "Wie schreef **fantasy** *De Hobbit*?", options: ["J.R.R. Tolkien","Roald Dahl","C.S. Lewis","Tonke Dragt"], answer: 0, wrongHints: [null, "Andere boeken.", "Narnia.", "Niet."] },
-      { q: "Wat is een **leescommissie** of **leesclub**?", options: ["Groep mensen die samen lezen + bespreken","Een uitgeverij","Een boekwinkel","Niet bestaand"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Wat doet een **bibliothecaris**?", options: ["Bibliotheek beheren + lezers helpen","Boeken schrijven","Boeken drukken","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Welke 2 belangrijke NL-jeugdboeken-prijzen zijn er?", options: ["Gouden + Zilveren Griffel","Pulitzer + Booker","Niet bestaand","Niet relevant"], answer: 0, wrongHints: [null, "Andere taal.", "Wel.", "Niet."] },
+      { q: "Wat is een **leesclub**?", options: ["Groep mensen die samen lezen + bespreken","Een uitgeverij","Een boekwinkel","Een school voor schrijvers"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Het gaat om lezen, niet om schrijven leren."] },
+      { q: "Wat doet een **bibliothecaris**?", options: ["Bibliotheek beheren + lezers helpen","Boeken schrijven","Boeken drukken","Boeken verkopen in een winkel"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "In een bibliotheek koop je niets."] },
+      { q: "Welke 2 belangrijke NL-jeugdboeken-prijzen zijn er?", options: ["Gouden + Zilveren Griffel","Pulitzer + Booker","Oscar + Gouden Kalf","Nobelprijs + Edison"], answer: 0, wrongHints: [null, "Andere taal.", "Dat zijn filmprijzen.", "Dat zijn geen jeugdboekenprijzen."] },
     ],
   },
 ];

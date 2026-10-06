@@ -35,11 +35,11 @@ const steps = [
     title: "Historische Nederlanders",
     illustrationComponent: PortrettenA,
     explanation:
-      "**Beroemde Nederlanders door de eeuwen** — De toets vraagt vaak wie wat deed.\n\n**Middeleeuwen + Gouden Eeuw**:\n\n**Erasmus van Rotterdam** *(1466-1536)*:\n• Beroemd **humanist + filosoof**.\n• Schreef **'Lof der Zotheid'** *(1511)* — kritisch op kerk + maatschappij.\n• Reisde door Europa, woonde in Engeland.\n• Beschouwd als **Vader van het humanisme**.\n• Universiteit van Rotterdam heet **Erasmus Universiteit** naar hem.\n• Toets-feit: in 2025 = **490 jaar geleden** dat hij stierf.\n\n**Willem van Oranje (Willem de Zwijger)** *(1533-1584)*:\n• Leider van **Tachtigjarige Oorlog** *(1568-1648)* tegen Spanje.\n• Stamvader **koninklijke familie** *(Oranje-Nassau)*.\n• Vermoord 1584 in Delft door Balthasar Gerards.\n• Inspireerde **Wilhelmus** *(volkslied)* — geschreven over hem.\n• Wordt vaak **Vader des Vaderlands** genoemd.\n\n**Michiel de Ruyter** *(1607-1676)*:\n• **Beroemde admiraal** *(vlootleider)* in 17e eeuw.\n• Versloeg Engelse + Franse vloten.\n• Beroemde tocht: **Naar Chatham** *(1667)* — overweldigde Engelse vloot in eigen haven.\n• Stierf in slag bij Sicilië.\n• Standbeeld in Vlissingen.\n\n**Hugo de Groot** *(1583-1645)*:\n• **Vader van internationaal recht**.\n• Schreef boeken die nog steeds basis zijn voor wereldrecht.\n• Gevangen in **Slot Loevestein** *(1619-1621)*.\n• **Ontsnapt in boekenkist**! *(beroemd verhaal)*.\n• Standbeeld in Delft.\n\n**Jacob van Lennep, Cats, Vondel** — schrijvers.\n\n**Schilders Gouden Eeuw**:\n• **Rembrandt, Vermeer, Frans Hals, Jan Steen** *(zie ander pad)*.\n\n**Wetenschap + uitvindingen**:\n\n**Antoni van Leeuwenhoek** *(1632-1723)*:\n• Uit Delft.\n• Maakte **microscoop** + zag eerst **bacteriën + cellen**.\n• 'Vader van de microbiologie'.\n• Brieven naar Engelse Royal Society.\n\n**Christiaan Huygens** *(1629-1695)*:\n• Astronoom + wiskundige.\n• Vond **slingerklok** uit *(1656)* — eerste nauwkeurige klok.\n• Bedacht **golftheorie** van licht.\n• Zag ringen Saturnus + maan Titan.\n\n**Eise Eisinga** *(1744-1828)*:\n• Bouwde **planetarium** in **woonkamer** *(Franeker)* in 1781!\n• Toont planeten-bewegingen.\n• Nog steeds werkend — oudste planetarium ter wereld + UNESCO.\n\n**Eduard Douwes Dekker / Multatuli** *(1820-1887)*:\n• **'Max Havelaar'** *(1860)* — boek tegen NL-koloniaal beleid.\n• Veranderde publieke opinie over Nederlands-Indië.\n\n**Anne Frank** *(1929-1945)*:\n• Bekendste joods slachtoffer van WO2 in NL.\n• Dagboek vertaald in 70+ talen.\n• Achterhuis Prinsengracht 263 = museum.\n\n**Anton Mussert** *(1894-1946)*:\n• Leider van **NSB** *(pro-nazi-partij)* tijdens WO2.\n• Veroordeeld + geëxecuteerd na oorlog.\n• Geschiedenis-vraag — kant van **bezetters/foute keuze**.\n\n**Soekarno, Hatta** *(Indonesische leiders)*:\n• Niet NL maar belangrijk voor NL-geschiedenis.\n• Riepen onafhankelijkheid Indonesië uit *(1945)* — NL erkende pas 1949.\n\n**Staat + rechten** *(19e eeuw)*:\n\n**Johan Rudolph Thorbecke** *(1798-1872)*:\n• Schreef de **Grondwet van 1848** — begin van onze **democratie**.\n• Sindsdien: ministers verantwoording aan de **Tweede Kamer**, niet alleen aan de koning.\n• Grondlegger van Nederland als **parlementaire monarchie**.\n\n**Aletta Jacobs** *(1854-1929)*:\n• **Eerste vrouw** die in NL mocht studeren + de **eerste vrouwelijke arts**.\n• Streed voor **vrouwenkiesrecht** — vrouwen mochten stemmen vanaf **1919**.\n• Voorbeeld van gelijke kansen voor jongens én meisjes.\n\n**Toets-feitje**:\nNederlandse **Nobelprijs-winnaars**: **20+** door geschiedenis. Bekende: **Christiaan Eijkman** *(geneeskunde 1929, ontdekking vitamine B1)*, **Jan Tinbergen** *(economie 1969)*, **Frits Zernike** *(natuurkunde 1953, fasecontrastmicroscoop)*.",
+      "**Beroemde Nederlanders door de eeuwen** — De toets vraagt vaak wie wat deed.\n\n**Middeleeuwen + Gouden Eeuw**:\n\n**Erasmus van Rotterdam** *(1466-1536)*:\n• Beroemd **humanist + filosoof**.\n• Schreef **'Lof der Zotheid'** *(1511)* — kritisch op kerk + maatschappij.\n• Reisde door Europa, woonde in Engeland.\n• Beschouwd als **Vader van het humanisme**.\n• Universiteit van Rotterdam heet **Erasmus Universiteit** naar hem.\n• Toets-feit: in 2026 = **490 jaar geleden** dat hij stierf.\n\n**Willem van Oranje (Willem de Zwijger)** *(1533-1584)*:\n• Leider van **Tachtigjarige Oorlog** *(1568-1648)* tegen Spanje.\n• Stamvader **koninklijke familie** *(Oranje-Nassau)*.\n• Vermoord 1584 in Delft door Balthasar Gerards.\n• Inspireerde **Wilhelmus** *(volkslied)* — geschreven over hem.\n• Wordt vaak **Vader des Vaderlands** genoemd.\n\n**Michiel de Ruyter** *(1607-1676)*:\n• **Beroemde admiraal** *(vlootleider)* in 17e eeuw.\n• Versloeg Engelse + Franse vloten.\n• Beroemde tocht: **Naar Chatham** *(1667)* — overweldigde Engelse vloot in eigen haven.\n• Stierf in slag bij Sicilië.\n• Standbeeld in Vlissingen.\n\n**Hugo de Groot** *(1583-1645)*:\n• **Vader van internationaal recht**.\n• Schreef boeken die nog steeds basis zijn voor wereldrecht.\n• Gevangen in **Slot Loevestein** *(1619-1621)*.\n• **Ontsnapt in boekenkist**! *(beroemd verhaal)*.\n• Standbeeld in Delft.\n\n**Jacob van Lennep, Cats, Vondel** — schrijvers.\n\n**Schilders Gouden Eeuw**:\n• **Rembrandt, Vermeer, Frans Hals, Jan Steen** *(zie ander pad)*.\n\n**Wetenschap + uitvindingen**:\n\n**Antoni van Leeuwenhoek** *(1632-1723)*:\n• Uit Delft.\n• Maakte **microscoop** + zag als eerste **bacteriën**.\n• 'Vader van de microbiologie'.\n• Brieven naar Engelse Royal Society.\n\n**Christiaan Huygens** *(1629-1695)*:\n• Astronoom + wiskundige.\n• Vond **slingerklok** uit *(1656)* — eerste nauwkeurige klok.\n• Bedacht **golftheorie** van licht.\n• Zag ringen Saturnus + maan Titan.\n\n**Eise Eisinga** *(1744-1828)*:\n• Bouwde **planetarium** in **woonkamer** *(Franeker)* in 1781!\n• Toont planeten-bewegingen.\n• Nog steeds werkend — oudste planetarium ter wereld + UNESCO.\n\n**Eduard Douwes Dekker / Multatuli** *(1820-1887)*:\n• **'Max Havelaar'** *(1860)* — boek tegen NL-koloniaal beleid.\n• Veranderde publieke opinie over Nederlands-Indië.\n\n**Anne Frank** *(1929-1945)*:\n• Bekendste joods slachtoffer van WO2 in NL.\n• Dagboek vertaald in 70+ talen.\n• Achterhuis Prinsengracht 263 = museum.\n\n**Anton Mussert** *(1894-1946)*:\n• Leider van **NSB** *(pro-nazi-partij)* tijdens WO2.\n• Veroordeeld + geëxecuteerd na oorlog.\n• Geschiedenis-vraag — kant van **bezetters/foute keuze**.\n\n**Soekarno, Hatta** *(Indonesische leiders)*:\n• Niet NL maar belangrijk voor NL-geschiedenis.\n• Riepen onafhankelijkheid Indonesië uit *(1945)* — NL erkende pas 1949.\n\n**Staat + rechten** *(19e eeuw)*:\n\n**Johan Rudolph Thorbecke** *(1798-1872)*:\n• Schreef de **Grondwet van 1848** — begin van onze **democratie**.\n• Sindsdien: ministers verantwoording aan de **Tweede Kamer**, niet alleen aan de koning.\n• Grondlegger van Nederland als **parlementaire monarchie**.\n\n**Aletta Jacobs** *(1854-1929)*:\n• **Eerste vrouw** die in NL mocht studeren + de **eerste vrouwelijke arts**.\n• Streed voor **vrouwenkiesrecht** — vrouwen mochten stemmen vanaf **1919**.\n• Voorbeeld van gelijke kansen voor jongens én meisjes.\n\n**Toets-feitje**:\nNederlandse **Nobelprijs-winnaars**: **20+** door geschiedenis. Bekende: **Christiaan Eijkman** *(geneeskunde 1929, ontdekking vitamine B1)*, **Jan Tinbergen** *(economie 1969)*, **Frits Zernike** *(natuurkunde 1953, fasecontrastmicroscoop)*.",
     checks: [
       {
         q: "Wie is **Erasmus**?",
-        options: ["Beroemde humanist + filosoof Rotterdam", "Schilder", "Voetballer", "Politicus"],
+        options: ["Filosoof", "Schilder", "Voetballer", "Politicus"],
         answer: 0,
         wrongHints: [null, "Rembrandt.", "Modern.", "Niet."],
         uitlegPad: {
@@ -67,14 +67,14 @@ const steps = [
       },
       {
         q: "Wie was **Willem van Oranje**?",
-        options: ["Leider Tachtigjarige Oorlog + Vader des Vaderlands", "Voetballer", "Schilder", "Astronaut"],
+        options: ["Leider van de opstand", "Voetballer", "Schilder", "Astronaut"],
         answer: 0,
         wrongHints: [null, "Modern.", "Niet.", "Niet."],
         uitlegPad: {
           stappen: [
             { titel: "Wie was hij?", tekst: "**Willem van Oranje** (1533-1584) was een edelman die de leiding nam in de **opstand tegen Spanje** (1568-1648, ook bekend als de Tachtigjarige Oorlog)." },
             { titel: "Waarom 'Vader des Vaderlands'?", tekst: "Hij begon de Nederlandse onafhankelijkheidsstrijd. Daarom zien Nederlanders hem als oprichter van NL als zelfstandig land. Het Wilhelmus (volkslied) gaat over hem." },
-            { titel: "Vermoord 1584", tekst: "In **Delft** werd hij doodgeschoten door **Balthasar Gerards**. Eerste politieke moord met vuurwapen ter wereld. Hij werd begraven in de **Nieuwe Kerk Delft** — waar nu nog de koninklijke familie begraven wordt." },
+            { titel: "Vermoord 1584", tekst: "In **Delft** werd hij doodgeschoten door **Balthasar Gerards**. Een van de eerste politieke moorden met een vuurwapen. Hij werd begraven in de **Nieuwe Kerk Delft** — waar nu nog de koninklijke familie begraven wordt." },
           ],
           woorden: [
             { woord: "Willem van Oranje", uitleg: "Leider opstand tegen Spanje, Vader des Vaderlands." },
@@ -96,7 +96,7 @@ const steps = [
       },
       {
         q: "Wie zag **bacteriën** als eerste?",
-        options: ["Antoni van Leeuwenhoek (microscoop, Delft)", "Huygens", "Cruijff", "Mussert"],
+        options: ["Van Leeuwenhoek", "Huygens", "Cruijff", "Mussert"],
         answer: 0,
         wrongHints: [null, "Astronoom.", "Niet.", "Niet."],
         uitlegPad: {
@@ -124,7 +124,7 @@ const steps = [
       },
       {
         q: "Wie ontsnapte uit **boekenkist Slot Loevestein**?",
-        options: ["Hugo de Groot (1621)", "Erasmus", "Vondel", "Mussert"],
+        options: ["Hugo de Groot", "Erasmus", "Vondel", "Mussert"],
         answer: 0,
         wrongHints: [null, "Filosoof, ander tijdperk.", "Toneeldichter, geen gevangene.", "WO2-tijdperk, anders."],
         uitlegPad: {
@@ -160,7 +160,7 @@ const steps = [
     checks: [
       {
         q: "Wie is **grootste NL-voetballer** ooit?",
-        options: ["Johan Cruijff (3x Gouden Bal)", "Verstappen", "Cruyff junior", "Memphis"],
+        options: ["Johan Cruijff", "Verstappen", "Cruyff junior", "Memphis"],
         answer: 0,
         wrongHints: [null, "F1.", "Niet zo bekend.", "Modern."],
         uitlegPad: {
@@ -194,13 +194,13 @@ const steps = [
       },
       {
         q: "**4x wereldkampioen F1** Nederlander?",
-        options: ["Max Verstappen (2021-2024)", "Jos Verstappen", "Cruijff", "Geen"],
+        options: ["Max Verstappen", "Jos Verstappen", "Cruijff", "Geen"],
         answer: 0,
         wrongHints: [null, "Vader, geen titel.", "Voetbal.", "Wel."],
       },
       {
         q: "**Meeste medailles** NL ooit?",
-        options: ["Ireen Wüst (13 schaatsen)", "Verstappen", "Cruijff", "Sven Kramer"],
+        options: ["Ireen Wüst", "Verstappen", "Cruijff", "Sven Kramer"],
         answer: 0,
         wrongHints: [null, "F1 wel maar geen OS-medaille.", "Niet.", "Iets minder."],
       },
@@ -209,17 +209,17 @@ const steps = [
   {
     title: "Moderne bekendheden — politiek + cultuur",
     explanation:
-      "**Politici** *(moderne tijd)*:\n\n**Koning Willem-Alexander** *(1967+)*:\n• Sinds **30 april 2013** koning.\n• Eerste man-koning sinds 1890.\n• Studeerde geschiedenis Leiden.\n• Vliegt soms zelf KLM-vluchten als hobby-piloot.\n\n**Koningin Máxima** *(1971+)*:\n• Uit **Argentinië**.\n• Trouwde Willem-Alexander 2002.\n• Werkt actief voor financiële inclusie (VN).\n\n**Mark Rutte** *(1967+)*:\n• Premier NL **2010-2024** *(langste regerend premier ooit, 14 jaar)*.\n• VVD-leider.\n• 4 kabinetten Rutte.\n• Bekend om sobere stijl *(eet appel op werk, fiets naar Binnenhof)*.\n• Stopte 2024 om **NAVO-secretaris-generaal** te worden.\n\n**Dick Schoof** *(1957+)*:\n• Premier vanaf **juli 2024**.\n• Eerst NCTV-baas *(terrorismebestrijding)*.\n• Niet uit politieke partij.\n\n**Geert Wilders** *(1963+)*:\n• PVV-leider.\n• Won verkiezingen **2023** met 37 zetels.\n• Bekend om strenge migratie-standpunten.\n\n**Frans Timmermans** *(1961+)*:\n• Was leider van GroenLinks-PvdA *(2023-2025)*.\n• Was Eurocommissaris Klimaat.\n\n**Eerdere premiers**:\n• **Wim Kok** *(1994-2002, PvdA)*.\n• **Jan Peter Balkenende** *(2002-2010, CDA)*.\n• **Ruud Lubbers** *(1982-1994, CDA, 12 jaar)*.\n\n**Acteurs + films**:\n\n**Carice van Houten** *(1976+)*:\n• Bekend door **Game of Thrones** *(Melisandre)*.\n• Vele NL-films + internationale rollen.\n\n**Famke Janssen** *(1964+)*:\n• Hollywood-actrice.\n• **X-Men** *(Jean Grey)*, **GoldenEye** *(Bond-vrouw)*.\n\n**Anne-Marie van Bemmel, Theo Maassen, Najib Amhali** — cabaret.\n\n**Paul Verhoeven** *(1938+)*:\n• Regisseur *(Hollywood)*.\n• **Robocop, Total Recall, Basic Instinct, Starship Troopers**.\n• Recent **'Elle'** *(Frans, met Isabelle Huppert)*.\n\n**Anton Corbijn** *(1955+)*:\n• Fotograaf + regisseur.\n• Foto's van U2, Depeche Mode, Joy Division.\n• Films 'Control' + 'A Most Wanted Man'.\n\n**Muziek (modern)**:\n\n**André Hazes Sr.** *(1951-2004)*:\n• 'Bloed, Zweet en Tranen', 'Een Beetje Verliefd'.\n• Stierf jong na alcoholisme.\n\n**André Hazes Jr.** *(1994+)*:\n• Zoon.\n• Volgt voetstappen vader.\n\n**Marco Borsato, Anouk, Davina Michelle**.\n\n**Volendam-erfgoed**: Jan Smit, Nick & Simon, Karin & Kim.\n\n**DJ's** *(NL wereldtop)*:\n• **Tiësto, Armin van Buuren, Hardwell, Martin Garrix, Afrojack** — wereldwijd top-10 lijsten.\n• Nederland is **DJ-grootmacht** door Amsterdam Music Festival + electronic-cultuur.\n\n**TV-bekendheden**:\n• **Linda de Mol** *(presentator, eigen tijdschrift)*.\n• **Matthijs van Nieuwkerk** *(DWDD-presentator)*.\n• **Jeroen Pauw + Eva Jinek** *(talkshows)*.\n\n**Influencers + youtubers**:\n• **Enzo Knol** *(YouTube-gamer)*.\n• **NikkieTutorials** *(make-up)*.\n• **StukTV, Concentrate**.\n\n**Bekende NL-bedrijfsoprichters**:\n• **Anton Philips** *(Philips, gloeilampen, Eindhoven)*.\n• **Gerard Heineken** *(bier)*.\n• **Albert Heijn** *(supermarkten)*.\n• **Ben Verwaayen** *(BT)*.\n• **Boyan Slat** *(jong, Ocean Cleanup — opruimen plastic in zee)*.\n\n**Boyan Slat** *(1994+)*:\n• Bedacht systeem om plastic uit oceaan op te ruimen.\n• Begon op zijn 16e met het idee.\n• Nu wereldwijd actief.\n• Echt cool — laat zien dat jongeren grote impact kunnen hebben.\n\n**Toets-feitje**:\nIn **2024** was er **wereldwijd** veel aandacht voor NL door **Eurovisie-finale Malmö** *(Joost Klein vertegenwoordigde NL met 'Europapa' maar werd gediskwalificeerd door incident)*. Spannende editie.",
+      "**Politici** *(moderne tijd)*:\n\n**Koning Willem-Alexander** *(1967+)*:\n• Sinds **30 april 2013** koning.\n• Eerste man-koning sinds 1890.\n• Studeerde geschiedenis Leiden.\n• Vliegt soms zelf KLM-vluchten als hobby-piloot.\n\n**Koningin Máxima** *(1971+)*:\n• Uit **Argentinië**.\n• Trouwde Willem-Alexander 2002.\n• Werkt actief voor financiële inclusie (VN).\n\n**Mark Rutte** *(1967+)*:\n• Premier NL **2010-2024** *(langste regerend premier ooit, 14 jaar)*.\n• VVD-leider.\n• 4 kabinetten Rutte.\n• Bekend om sobere stijl *(eet appel op werk, fiets naar Binnenhof)*.\n• Stopte 2024 om **NAVO-secretaris-generaal** te worden.\n\n**Dick Schoof** *(1957+)*:\n• Premier vanaf **juli 2024**.\n• Eerst NCTV-baas *(terrorismebestrijding)*.\n• Niet uit politieke partij.\n\n**Geert Wilders** *(1963+)*:\n• PVV-leider.\n• Won verkiezingen **2023** met 37 zetels.\n• Bekend om strenge migratie-standpunten.\n\n**Frans Timmermans** *(1961+)*:\n• Was leider van GroenLinks-PvdA *(2023-2025)*.\n• Was Eurocommissaris Klimaat.\n\n**Eerdere premiers**:\n• **Wim Kok** *(1994-2002, PvdA)*.\n• **Jan Peter Balkenende** *(2002-2010, CDA)*.\n• **Ruud Lubbers** *(1982-1994, CDA, 12 jaar)*.\n\n**Acteurs + films**:\n\n**Carice van Houten** *(1976+)*:\n• Bekend door **Game of Thrones** *(Melisandre)*.\n• Vele NL-films + internationale rollen.\n\n**Famke Janssen** *(1964+)*:\n• Hollywood-actrice.\n• **X-Men** *(Jean Grey)*, **GoldenEye** *(Bond-vrouw)*.\n\n**Youp van 't Hek, Theo Maassen, Najib Amhali** — cabaret.\n\n**Paul Verhoeven** *(1938+)*:\n• Regisseur *(Hollywood)*.\n• **Robocop, Total Recall, Basic Instinct, Starship Troopers**.\n• Recent **'Elle'** *(Frans, met Isabelle Huppert)*.\n\n**Anton Corbijn** *(1955+)*:\n• Fotograaf + regisseur.\n• Foto's van U2, Depeche Mode, Joy Division.\n• Films 'Control' + 'A Most Wanted Man'.\n\n**Muziek (modern)**:\n\n**André Hazes Sr.** *(1951-2004)*:\n• 'Bloed, Zweet en Tranen', 'Een Beetje Verliefd'.\n• Stierf jong na alcoholisme.\n\n**André Hazes Jr.** *(1994+)*:\n• Zoon.\n• Volgt voetstappen vader.\n\n**Marco Borsato, Anouk, Davina Michelle**.\n\n**Volendam-erfgoed**: Jan Smit, Nick & Simon, Karin & Kim.\n\n**DJ's** *(NL wereldtop)*:\n• **Tiësto, Armin van Buuren, Hardwell, Martin Garrix, Afrojack** — wereldwijd top-10 lijsten.\n• Nederland is **DJ-grootmacht** door Amsterdam Music Festival + electronic-cultuur.\n\n**TV-bekendheden**:\n• **Linda de Mol** *(presentator, eigen tijdschrift)*.\n• **Matthijs van Nieuwkerk** *(DWDD-presentator)*.\n• **Jeroen Pauw + Eva Jinek** *(talkshows)*.\n\n**Influencers + youtubers**:\n• **Enzo Knol** *(YouTube-gamer)*.\n• **NikkieTutorials** *(make-up)*.\n• **StukTV, Concentrate**.\n\n**Bekende NL-bedrijfsoprichters**:\n• **Anton Philips** *(Philips, gloeilampen, Eindhoven)*.\n• **Gerard Heineken** *(bier)*.\n• **Albert Heijn** *(supermarkten)*.\n• **Willem Vroom + Anton Dreesmann** *(V&D, warenhuizen)*.\n• **Boyan Slat** *(jong, Ocean Cleanup — opruimen plastic in zee)*.\n\n**Boyan Slat** *(1994+)*:\n• Bedacht systeem om plastic uit oceaan op te ruimen.\n• Begon op zijn 16e met het idee.\n• Nu wereldwijd actief.\n• Echt cool — laat zien dat jongeren grote impact kunnen hebben.\n\n**Toets-feitje**:\nIn **2024** was er **wereldwijd** veel aandacht voor NL door **Eurovisie-finale Malmö** *(Joost Klein vertegenwoordigde NL met 'Europapa' maar werd gediskwalificeerd door incident)*. Spannende editie.",
     checks: [
       {
         q: "Wie was **premier 2010-2024**?",
-        options: ["Mark Rutte (VVD, langste ooit)", "Dick Schoof", "Wim Kok", "Balkenende"],
+        options: ["Mark Rutte", "Dick Schoof", "Wim Kok", "Balkenende"],
         answer: 0,
         wrongHints: [null, "Sinds juli 2024.", "Eerder.", "Eerder."],
       },
       {
         q: "Sinds welk jaar **Willem-Alexander** koning?",
-        options: ["30 april 2013", "2000", "2020", "1980"],
+        options: ["2013", "2000", "2020", "1980"],
         answer: 0,
         wrongHints: [null, "Niet.", "Niet.", "Beatrix."],
       },
@@ -231,7 +231,7 @@ const steps = [
       },
       {
         q: "Wie begon **Ocean Cleanup**?",
-        options: ["Boyan Slat (16 jr begin)", "Mark Rutte", "Verstappen", "Cruijff"],
+        options: ["Boyan Slat", "Mark Rutte", "Verstappen", "Cruijff"],
         answer: 0,
         wrongHints: [null, "Politicus.", "F1.", "Voetbal."],
         uitlegPad: {
@@ -264,14 +264,14 @@ const steps = [
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
       { q: "Wie was **Vader des Vaderlands**?", options: ["Willem van Oranje", "Erasmus", "Cruijff", "Rutte"], answer: 0, wrongHints: [null, "Humanist.", "Voetbal.", "Modern."] },
-      { q: "Wie maakte **microscoop** als eerste?", options: ["Antoni van Leeuwenhoek", "Huygens", "Eisinga", "Mussert"], answer: 0, wrongHints: [null, "Andere wetenschap.", "Andere wetenschap.", "Niet."] },
+      { q: "Wie zag met een zelfgebouwde **microscoop** als eerste bacteriën?", options: ["Antoni van Leeuwenhoek", "Huygens", "Eisinga", "Mussert"], answer: 0, wrongHints: [null, "Andere wetenschap.", "Andere wetenschap.", "Niet."] },
       { q: "**Grootste voetballer** NL ooit?", options: ["Johan Cruijff", "Verstappen", "Rutte", "Erasmus"], answer: 0, wrongHints: [null, "F1.", "Politiek.", "Filosoof."] },
-      { q: "**Premier NL** 2010-2024?", options: ["Mark Rutte (langste ooit)", "Wim Kok", "Lubbers", "Balkenende"], answer: 0, wrongHints: [null, "Premier in 1994-2002 (PvdA).", "Premier in 1982-1994 (CDA).", "Premier in 2002-2010 (CDA)."] },
+      { q: "**Premier NL** 2010-2024?", options: ["Mark Rutte", "Wim Kok", "Lubbers", "Balkenende"], answer: 0, wrongHints: [null, "Premier in 1994-2002 (PvdA).", "Premier in 1982-1994 (CDA).", "Premier in 2002-2010 (CDA)."] },
       { q: "Wie ontwierp **Fokker-vliegtuigen**?", options: ["Anthony Fokker", "Slat", "Cruijff", "Verstappen"], answer: 0, wrongHints: [null, "Ocean Cleanup.", "Voetbal.", "F1."] },
-      { q: "Wie was **eerste man-koning** NL sinds 1890?", options: ["Willem-Alexander (2013)", "Beatrix", "Juliana", "Wilhelmina"], answer: 0, wrongHints: [null, "Koningin vóór Willem-Alexander.", "Eerder maar nog steeds een koningin.", "Begin 20e eeuw."] },
+      { q: "Wie was **eerste man-koning** NL sinds 1890?", options: ["Willem-Alexander", "Beatrix", "Juliana", "Wilhelmina"], answer: 0, wrongHints: [null, "Koningin vóór Willem-Alexander.", "Eerder maar nog steeds een koningin.", "Begin 20e eeuw."] },
       {
         q: "Wie schreef **Max Havelaar** (1860) — boek tegen koloniale uitbuiting?",
-        options: ["Multatuli (Eduard Douwes Dekker)", "Anne Frank", "Willem Frederik Hermans", "Annie M.G. Schmidt"],
+        options: ["Multatuli", "Anne Frank", "Willem Frederik Hermans", "Annie M.G. Schmidt"],
         answer: 0,
         wrongHints: [null, "Andere periode — 2e Wereldoorlog dagboek.", "Andere generatie — na 1945.", "Kinderboeken (Jip & Janneke)."],
         uitlegPad: {
@@ -301,7 +301,7 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Wie is Boyan Slat?", tekst: "Boyan Slat (geboren **1994**) is een **Nederlandse uitvinder**. Begon **The Ocean Cleanup** op zijn 18e — bedrijf dat plastic uit oceanen verwijdert met grote drijvende systemen." },
-            { titel: "Wat doet The Ocean Cleanup?", tekst: "• In **oceanen** (vooral Great Pacific Garbage Patch) — drijvende U-vormige systemen die plastic verzamelen\n• In **rivieren** — Interceptors vangen plastic voordat het de zee bereikt\n• 100+ rivieren wereldwijd in actie sinds 2019" },
+            { titel: "Wat doet The Ocean Cleanup?", tekst: "• In **oceanen** (vooral Great Pacific Garbage Patch) — drijvende U-vormige systemen die plastic verzamelen\n• In **rivieren** — Interceptors vangen plastic voordat het de zee bereikt\n• Sinds 2019 actief in rivieren in verschillende landen" },
             { titel: "Toets-feitje", tekst: "Slat is een **moderne Nederlandse held** — wordt vaak in Toets-onderwijs genoemd als voorbeeld van milieu-innovatie. Zijn TED-talk in 2012 (toen 18 jaar) ging viraal. In 2022 NL-Onderscheiding ontvangen." },
           ],
           woorden: [
@@ -318,7 +318,7 @@ const steps = [
       },
       {
         q: "**Anne Frank** — wat is ze beroemd door?",
-        options: ["Haar dagboek uit de onderduiktijd WO2", "Schilderingen", "Politiek leider", "Sport-prestaties"],
+        options: ["Haar dagboek", "Schilderingen", "Politiek leider", "Sport-prestaties"],
         answer: 0,
         wrongHints: [null, "Niet — was schoolmeisje.", "Niet — was joods slachtoffer, geen politicus.", "Niet."],
         uitlegPad: {
@@ -342,7 +342,7 @@ const steps = [
       },
       {
         q: "**Max Verstappen** — beroemd om?",
-        options: ["F1-coureur (wereldkampioen 2021-2024)", "Voetballer", "Tennisser", "Schaatser"],
+        options: ["F1-coureur", "Voetballer", "Tennisser", "Schaatser"],
         answer: 0,
         wrongHints: [null, "Geen balsport — zit achter een stuur.", "Geen rackets — een auto.", "Geen ijs — een asfaltcircuit."],
         uitlegPad: {
@@ -363,24 +363,24 @@ const steps = [
           niveaus: { basis: "F1.", simpeler: "Max Verstappen = Nederlandse F1-coureur, 4× wereldkampioen 2021-2024.", nogSimpeler: "F1" },
         },
       },
-      { q: "**Willem van Oranje** leefde tijdens?", options: ["Tachtigjarige Oorlog (16e eeuw)","Tweede Wereldoorlog","Gouden Eeuw","Romeinen"], answer: 0, wrongHints: [null, "Veel later.", "Iets later — Gouden Eeuw is 17e eeuw.", "Veel eerder."] },
+      { q: "**Willem van Oranje** leefde tijdens?", options: ["Tachtigjarige Oorlog","Tweede Wereldoorlog","Gouden Eeuw","Romeinen"], answer: 0, wrongHints: [null, "Veel later.", "Iets later — Gouden Eeuw is 17e eeuw.", "Veel eerder."] },
       { q: "Welke Nederlander is bekend van de **microscoop**?", options: ["Anton van Leeuwenhoek","Christiaan Huygens","Erasmus","Boyan Slat"], answer: 0, wrongHints: [null, "Astronoom en klokmaker.", "Filosoof.", "Plastic-soep-opruimer."] },
       { q: "**Boyan Slat** is bekend om?", options: ["Plastic uit oceanen halen","F1-races","Schaatsen","Politiek"], answer: 0, wrongHints: [null, "Verstappen-territorium.", "Sport, geen milieu-werk.", "Geen politicus — een ondernemer."] },
       { q: "Wie is huidige koning van NL (2026)?", options: ["Willem-Alexander","Beatrix","Juliana","Willem I"], answer: 0, wrongHints: [null, "Vorige.", "Eerder.", "Eerste."] },
       { q: "Waar is **koningin Máxima** geboren?", options: ["Argentinië","Nederland","Duitsland","België"], answer: 0, wrongHints: [null, "Daar woont ze nu.", "Niet.", "Niet."] },
-      { q: "**Erasmus** was een?", options: ["Humanistische filosoof (1466-1536)","Politicus","Schilder","Atleet"], answer: 0, wrongHints: [null, "Schreef boeken, geen wetten.", "Geen schilderwerk — geen Rembrandt.", "Geen sporter — een denker."] },
+      { q: "**Erasmus** was een?", options: ["Filosoof","Politicus","Schilder","Atleet"], answer: 0, wrongHints: [null, "Schreef boeken, geen wetten.", "Geen schilderwerk — geen Rembrandt.", "Geen sporter — een denker."] },
       { q: "Wie schreef *Max Havelaar*?", options: ["Multatuli","Vondel","Anne Frank","Annie M.G. Schmidt"], answer: 0, wrongHints: [null, "Andere periode.", "Andere.", "Niet."] },
-      { q: "**Rembrandt** schilderde welk beroemd werk?", options: ["De Nachtwacht","Mona Lisa","Sterrennacht","Niet bekend"], answer: 0, wrongHints: [null, "Da Vinci.", "Van Gogh.", "Wel."] },
-      { q: "**Vincent van Gogh** is bekend om welk werk?", options: ["De Zonnebloemen / Sterrennacht","Nachtwacht","Niet bekend","Anna Karenina"], answer: 0, wrongHints: [null, "Rembrandt.", "Wel beroemd.", "Niet schilder."] },
+      { q: "**Rembrandt** schilderde welk beroemd werk?", options: ["De Nachtwacht","Mona Lisa","Sterrennacht","De Schreeuw"], answer: 0, wrongHints: [null, "Da Vinci.", "Van Gogh.", "Edvard Munch."] },
+      { q: "**Vincent van Gogh** is bekend om welk werk?", options: ["De Zonnebloemen","Nachtwacht","Meisje met de parel","Anna Karenina"], answer: 0, wrongHints: [null, "Rembrandt.", "Vermeer.", "Dat is een boek."] },
       { q: "**Cruijff** was beroemde NL-?", options: ["Voetballer","Politicus","Wetenschapper","Schaker"], answer: 0, wrongHints: [null, "Geen politiek — sport.", "Geen lab-werk — een veld.", "Geen schaakbord — een gras-veld."] },
-      { q: "Wie was **Annie M.G. Schmidt**?", options: ["NL kinderboeken-schrijfster","Voetbalspeelster","Politicus","Niet bekend"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Wie was **Annie M.G. Schmidt**?", options: ["NL kinderboeken-schrijfster","Voetbalspeelster","Politicus","Zangeres"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Ze schreef wel liedjes, maar zong ze niet zelf."] },
       { q: "**Marga Klompé** was eerste vrouwelijke wat in NL?", options: ["Minister","Premier","Koningin","Bibliothecaris"], answer: 0, wrongHints: [null, "Die heeft NL nog nooit gehad.", "Er waren al eerder koninginnen.", "Niet."] },
       { q: "Wie was van 2010 tot 2024 **premier** (minister-president) van Nederland?", options: ["Mark Rutte","Dick Schoof","Geert Wilders","Wim Kok"], answer: 0, wrongHints: [null, "Die kwam pas ná 2024.", "Wel politicus, maar nooit premier.", "Die was veel eerder premier."] },
       { q: "Welke beroemde NL-schaatser?", options: ["Sven Kramer / Ireen Wüst","Cruijff","Rembrandt","Erasmus"], answer: 0, wrongHints: [null, "Voetbal.", "Schilder.", "Filosoof."] },
-      { q: "**Vermeer** is bekend om?", options: ["Schilderij 'Meisje met de parel'","Wetenschap","Politiek","Sport"], answer: 0, wrongHints: [null, "Niet in lab — in atelier.", "Niet in regering — Gouden Eeuw-tijd.", "Niet op veld — bij ezel."] },
-      { q: "**Mata Hari** was een?", options: ["NL-danseres / spionne in WO1","Schilder","Wetenschapper","Politicus"], answer: 0, wrongHints: [null, "Geen ezel — een dansvloer.", "Geen lab — een bühne.", "Geen regering — een spion-leven."] },
-      { q: "Welke NL-zanger had hit *Bloed, Zweet en Tranen*?", options: ["André Hazes","Hazes jr.","Niet bekend","Niet bestaand"], answer: 0, wrongHints: [null, "Wel ook bekend.", "Wel.", "Wel."] },
-      { q: "Wie won 2010 **Tour de France** (NL'er)?", options: ["Niet NL — wel Jan Janssen 1968","Cruijff","Niemand","Verstappen"], answer: 0, wrongHints: [null, "Voetbal.", "Wel.", "F1."] },
+      { q: "**Vermeer** is bekend om?", options: ["Schilderen","Wetenschap","Politiek","Sport"], answer: 0, wrongHints: [null, "Niet in lab — in atelier.", "Niet in regering — Gouden Eeuw-tijd.", "Niet op veld — bij ezel."] },
+      { q: "**Mata Hari** was een?", options: ["Danseres en spionne","Schilder","Wetenschapper","Politicus"], answer: 0, wrongHints: [null, "Geen ezel — een dansvloer.", "Geen lab — een bühne.", "Geen regering — een spion-leven."] },
+      { q: "Welke NL-zanger had hit *Bloed, Zweet en Tranen*?", options: ["André Hazes","Marco Borsato","Jan Smit","Frans Bauer"], answer: 0, wrongHints: [null, "Bekend van 'Dromen zijn bedrog'.", "Volendammer van een latere generatie.", "Bekend van 'Heb je even voor mij'."] },
+      { q: "Welke Nederlander won in **1968** de **Tour de France**?", options: ["Jan Janssen","Cruijff","Joop Zoetemelk","Verstappen"], answer: 0, wrongHints: [null, "Voetbal.", "Hij won de Tour later, in 1980.", "F1."] },
     ],
   },
 ];

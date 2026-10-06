@@ -120,7 +120,7 @@ const steps = [
   {
     title: "Leven en school vroeger — geen licht-knopje!",
     explanation:
-      "Zo'n **honderd jaar geleden** was het leven heel anders:\n\n• Veel huizen hadden **geen elektriciteit**: 's avonds brandde een olielamp of kaars.\n• **Water** kwam vaak uit een pomp, niet uit de kraan.\n• Kleren werden met de **hand gewassen**.\n\nEn op school?\n• Kinderen schreven op een **lei** met een **griffel** (een soort krijtpennetje; de lei is een zwart plankje).\n• Klassen waren groot en de meester of juf was vaak streng.\n• Veel kinderen moesten na school **meehelpen** thuis of op het land.",
+      "Zo'n **honderd jaar geleden** was het leven heel anders:\n\n• Veel huizen hadden **geen elektriciteit**: 's avonds brandde een olielamp of kaars.\n• **Water** kwam vaak uit een pomp, niet uit de kraan.\n• Kleren werden met de **hand gewassen**.\n\nEn op school?\n• Kinderen schreven op een **lei** met een **griffel** (een schrijfstiftje van steen; de lei is een zwart plankje).\n• Klassen waren groot en de meester of juf was vaak streng.\n• Veel kinderen moesten na school **meehelpen** thuis of op het land.",
     checks: [
       {
         q: "Waarop schreven kinderen ongeveer honderd jaar geleden op school?",
@@ -183,9 +183,9 @@ const steps = [
       },
       {
         q: "Waarom hadden kastelen **dikke muren**?",
-        options: ["om de mensen binnen te beschermen tegen vijanden", "omdat dat mooier stond", "om de warmte binnen te houden", "omdat dunne stenen niet bestonden"],
+        options: ["om de mensen binnen te beschermen tegen vijanden", "omdat dat mooier stond", "om er schilderijen aan te hangen", "omdat dunne stenen niet bestonden"],
         answer: 0,
-        wrongHints: [null, "Mooi was meegenomen — maar er was een belangrijkere reden.", "Warm werd het er nooit echt.", "Dunne muren konden ze best bouwen — maar wilden ze dat?"],
+        wrongHints: [null, "Mooi was meegenomen — maar er was een belangrijkere reden.", "Daarvoor was een dunne muur ook goed genoeg.", "Dunne muren konden ze best bouwen — maar wilden ze dat?"],
         uitlegPad: {
           stappen: [{ titel: "Een veilig fort", tekst: "Een kasteel was een **verdedigingsgebouw**. Dikke, hoge muren hielden vijanden buiten. Hoe dikker de muur, hoe veiliger de mensen erachter." }],
           niveaus: { basis: "Dikke muren = bescherming tegen vijanden.", simpeler: "Dikke muur, vijand komt er niet door.", nogSimpeler: "bescherming" },
@@ -232,7 +232,7 @@ const steps = [
       },
       {
         q: "Van 1925 tot 2025 is precies…",
-        options: ["één eeuw (100 jaar)", "tien jaar", "duizend jaar", "een maand"],
+        options: ["één eeuw", "tien jaar", "duizend jaar", "een maand"],
         answer: 0,
         wrongHints: [null, "Reken maar: 2025 min 1925.", "Reken maar: 2025 min 1925.", "Dat is véél te kort."],
         uitlegPad: {

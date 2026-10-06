@@ -81,9 +81,9 @@ const steps = [
       },
       {
         q: "Waarom **'j'aime'** en niet **'je aime'**?",
-        options: ["Voor klinker wordt je → j'", "Spelling fout", "Beide goed", "Alleen poëzie"],
+        options: ["Voor een klinker wordt je → j'", "Omdat aimer onregelmatig is", "Omdat 'aime' vrouwelijk is", "Alleen in gedichten"],
         answer: 0,
-        wrongHints: [null, "Wel correct.", "Niet allebei.", "Algemene regel."],
+        wrongHints: [null, "aimer is een gewoon -er-werkwoord.", "Werkwoorden hebben geen geslacht.", "Het is een algemene regel."],
       },
     ],
   },
@@ -189,7 +189,7 @@ const steps = [
       },
       {
         q: "Wanneer gebruik je **Imparfait**?",
-        options: ["Beschrijven hoe het was + gewoontes in verleden", "Eenmalige actie verleden", "Toekomst", "Tegenwoordig"],
+        options: ["Beschrijven hoe het was of een gewoonte", "Een eenmalige, afgeronde actie", "Iets wat nog moet gebeuren", "Iets wat nu gebeurt"],
         answer: 0,
         wrongHints: [null, "Dat is Passé composé.", "Niet verleden.", "Présent."],
       },
