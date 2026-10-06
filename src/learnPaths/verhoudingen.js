@@ -403,7 +403,7 @@ const steps = [
           "1 cm op de kaart komt overeen met 25.000 cm in werkelijkheid",
           "1 cm op de kaart komt overeen met 25.000 m in werkelijkheid",
           "25.000 cm op de kaart komt overeen met 1 cm in werkelijkheid",
-          "1 km op de kaart komt overeen met 25.000 km in werkelijkheid",
+          "1 cm op de kaart komt overeen met 25.000 km in werkelijkheid",
         ],
         answer: 0,
         wrongHints: [

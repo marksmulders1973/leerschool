@@ -334,7 +334,7 @@ const steps = [
     checks: [
       {
         q: "*Wat is volgens het standaard-stappenplan de eerste stap bij 4(x + 2) = 16?*",
-        options: ["Haakjes openen → 4x + 8 = 16","Beide kanten delen door 4","Beide kanten −2","Beide kanten ·4"],
+        options: ["Haakjes openen","Beide kanten delen door 4","Beide kanten −2","Beide kanten ·4"],
         answer: 0,
         wrongHints: [null, "Pas wel mogelijk maar niet de eerste stap. Wat zit er om de x aan de linkerkant?", "Aftrekken werkt niet zolang er nog haakjes om x staan.", "Vermenigvuldigen maakt het juist groter — niet de standaard eerste stap."],
         uitlegPad: {
