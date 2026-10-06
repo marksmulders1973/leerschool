@@ -85,9 +85,9 @@ const steps = [
     checks: [
       {
         q: "Waar is de zonkracht het grootst?",
-        options: ["Bij de evenaar", "Bij de Noordpool", "Bij de Zuidpool", "Op grote hoogte"],
+        options: ["Bij de evenaar", "Bij de Noordpool", "Bij de Zuidpool", "In Nederland"],
         answer: 0,
-        wrongHints: [null, "Pool = schuine zoninval = minder warmte.", "Zelfde verhaal — pool = koud.", "Hoogte = juist kouder."],
+        wrongHints: [null, "Pool = schuine zoninval = minder warmte.", "Zelfde verhaal — pool = koud.", "Nederland ligt op 52° NB — valt het zonlicht hier recht of schuin?"],
         uitlegPad: {
           stappen: [{ titel: "Evenaar = recht onder zon", tekst: "Bij de evenaar (0° breedte) valt zonlicht RECHT op aarde. Maximum kracht per m². Bij polen schuin → verspreid over groter oppervlak → minder kracht per plek. Vandaar evenaar = warmst, polen = koudst." }],
           woorden: [{ woord: "evenaar", uitleg: "Denkbeeldige cirkel rond aarde, 0° breedte. Verdeelt aarde in noordelijk + zuidelijk halfrond." }, { woord: "zoninval", uitleg: "Hoek waarin zonlicht op aarde valt. Recht = sterk. Schuin = zwak." }],
@@ -228,7 +228,7 @@ const steps = [
         uitlegPad: {
           stappen: [{ titel: "Golfstroom + westenwind", tekst: "Atlantische Oceaan + Golfstroom voert warm zeewater + lucht aan vanaf Mexicaanse Golf naar Europa. Westenwind blaast die warme lucht naar binnenland. Resultaat: NL veel zachter dan zelfde breedte zonder zee (bv. Canada centraal-binnenland)." }],
           woorden: [{ woord: "Golfstroom", uitleg: "Warme zeestroming Caribische Zee → Atlantische Oceaan → Noordwest-Europa. Brengt warmte." }, { woord: "westenwind", uitleg: "Wind die uit het westen blaast. In NL dominant door rotatie aarde + drukverschillen." }],
-          theorie: "Zonder Golfstroom: NL winter ~-15°C (zoals Canada-binnenland zelfde breedte). Door Golfstroom: +3°C gemiddeld. Verschil van 18°C dankzij zee.",
+          theorie: "Zonder de invloed van de zee zou NL veel koudere winters hebben, zoals Canada-binnenland op dezelfde breedte (Calgary ~-10°C in januari). Nu: +3°C gemiddeld — dat verschil komt door de zee.",
           voorbeelden: [{ type: "vergelijk", tekst: "Canada zelfde breedte (Calgary 52° N): januari -10°C. Amsterdam 52° N: januari +3°C. Atlantische Oceaan effect." }],
           basiskennis: [{ onderwerp: "Niet anders", uitleg: "NL ligt ver van de evenaar (52°N). Steden = klein effect. Sneeuw = juist kou, niet zacht." }],
           niveaus: { basis: "Zee + westenwind.", simpeler: "NL zacht 's winters door warme zee + westenwind uit Atlantische Oceaan.", nogSimpeler: "Zee warm" },
@@ -292,7 +292,7 @@ const steps = [
         q: "Wat is **permafrost**?",
         options: ["Bodem die altijd bevroren is","Een soort sneeuwvlok","Een berg op de pool","Een ijsbeer"],
         answer: 0,
-        wrongHints: [null, "Permafrost is een bodemkenmerk.", "Niets met bergen.", "Een dier — niet de bodem."],
+        wrongHints: [null, "Sneeuw valt uit de lucht — 'perma' betekent blijvend. Wat kan er altijd bevroren blijven?", "Niets met bergen.", "Een ijsbeer is een dier — 'frost' betekent vorst. Wat kan blijvend bevroren zijn?"],
         uitlegPad: {
           stappen: [{ titel: "Permanent bevroren grond", tekst: "Permafrost = bodem die minstens 2 jaar achter elkaar onder 0°C blijft. Dus altijd bevroren, ook 's zomers. Vooral in poolgebieden (Siberië, noord-Canada, Alaska, Antarctica). Bovenlaag kan in zomer ontdooien, maar dieper blijft ijs." }],
           woorden: [{ woord: "permafrost", uitleg: "'Permanent' + 'frost' (vorst). Permanent bevroren bodem." }, { woord: "toendra", uitleg: "Vlak gebied met permafrost. Korte zomer, geen bomen, mossen + grassen." }],
@@ -408,11 +408,11 @@ const steps = [
 
   {
     title: "Eindopdracht — klimaat herkennen",
-    explanation: "Tijd om alles toe te passen. Bij elke beschrijving: welk klimaat is het?\n\n**Snelle samenvatting**:\n\n| Klimaat | Kenmerk | Voorbeeld |\n|---|---|---|\n| Tropisch (A) | Warm, veel regen, bij evenaar | Brazilië, Congo |\n| Subtropisch (B) | Veel zon, weinig regen, woestijn | Sahara, Spanje (mediterraan) |\n| Gematigd (C) | 4 seizoenen, zacht | Nederland (zee), Polen (land) |\n| Koud / pool (E) | Heel koud, weinig groei | Antarctica, IJsland |\n| Hoogte (H) | Koud door hoogte | Andes, Himalaya |\n\nVeel succes!",
+    explanation: "Tijd om alles toe te passen. Bij elke beschrijving: welk klimaat is het?\n\n**Snelle samenvatting**:\n\n| Klimaat | Kenmerk | Voorbeeld |\n|---|---|---|\n| Tropisch (A) | Warm, veel regen, bij evenaar | Brazilië, Congo |\n| Droog (B) | Veel zon, weinig regen, woestijn | Sahara, Atacama |\n| Gematigd (C) | 4 seizoenen, zacht | Nederland (zee), Spanje (mediterraan) |\n| Landklimaat (D) | Koude winters, warme zomers | Polen, Rusland |\n| Koud / pool (E) | Heel koud, weinig groei | Antarctica, IJsland |\n| Hoogte (H) | Koud door hoogte | Andes, Himalaya |\n\nVeel succes!",
     svg: `<svg viewBox="0 0 300 180">
 <text x="150" y="22" text-anchor="middle" fill="${COLORS.warm}" font-size="13" font-family="Arial" font-weight="bold">A B C D E + H</text>
 <text x="20" y="50" fill="${COLORS.trop}" font-size="11" font-family="Arial">A = tropisch (evenaar)</text>
-<text x="20" y="70" fill="${COLORS.subtrop}" font-size="11" font-family="Arial">B = woestijn / mediterraan</text>
+<text x="20" y="70" fill="${COLORS.subtrop}" font-size="11" font-family="Arial">B = droog (woestijn / steppe)</text>
 <text x="20" y="90" fill="${COLORS.gematigd}" font-size="11" font-family="Arial">C = gematigd (NL!)</text>
 <text x="20" y="110" fill="${COLORS.landkl}" font-size="11" font-family="Arial">D = landklimaat</text>
 <text x="20" y="130" fill="${COLORS.pool}" font-size="11" font-family="Arial">E = pool (heel koud)</text>
@@ -479,12 +479,12 @@ const steps = [
         q: "Wat is een **moesson**?",
         options: ["Seizoens-wind met droog/nat-wisseling (vooral Azië)","Stevige storm","Bergwind","Soort regenboog"],
         answer: 0,
-        wrongHints: [null, "Niet — wel kan moesson stormen geven, maar fenomeen ≠ storm.", "Niet — andere wind-soort (föhn bv.).", "Niet — geen weersfenomeen."],
+        wrongHints: [null, "Niet — wel kan moesson stormen geven, maar fenomeen ≠ storm.", "Niet — andere wind-soort (föhn bv.).", "Niet — een regenboog is licht, geen wind."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een moesson?", tekst: "**Moesson** is een **seizoens-wind** die elke 6 maanden van richting verandert. Veroorzaakt twee duidelijke seizoenen:\n• **Droge moesson** — wind uit binnenland, geen regen\n• **Natte moesson** — wind uit zee, veel regen + overstromingen" },
             { titel: "Waar?", tekst: "Vooral **Zuid-Azië**: India, Bangladesh, Pakistan, Sri Lanka, Myanmar, Thailand, Vietnam, China-zuid.\n\nIn India duurt natte moesson **juni-september**. Mumbai kan in die maanden 1.500-2.000 mm regen krijgen (NL: ~800 mm per heel jaar!). Cyclus is voorspelbaar — boeren plannen oogst eromheen." },
-            { titel: "Toets-feit: klimaat + economie", tekst: "Moesson = levensader Azië:\n• Rijst-bouw afhankelijk van regen\n• Half miljard mensen afhankelijk van moesson\n• Te weinig regen = droogte/honger\n• Te veel regen = overstromingen + ziektes\n• Klimaatverandering maakt moesson onvoorspelbaarder" },
+            { titel: "Toets-feit: klimaat + economie", tekst: "Moesson = levensader Azië:\n• Rijst-bouw afhankelijk van regen\n• Miljarden mensen afhankelijk van moesson\n• Te weinig regen = droogte/honger\n• Te veel regen = overstromingen + ziektes\n• Klimaatverandering maakt moesson onvoorspelbaarder" },
           ],
           woorden: [
             { woord: "moesson", uitleg: "Seizoens-wind met droog/nat-wisseling. Vooral Azië." },
@@ -557,7 +557,7 @@ const steps = [
       { q: "Waarvan is het **smelten van poolijs** een gevolg?", options: ["Klimaatopwarming","Maan","Industrie alleen","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Onderdeel daarvan, niet alleen.", "Wel."] },
       { q: "In welke klimaatzone vind je **toendra**?", options: ["Subpolair / koud","Tropisch","Woestijn","Gematigd"], answer: 0, wrongHints: [null, "Tegengestelde.", "Niet.", "Niet."] },
       { q: "Wat is een **moesson**?", options: ["Seizoenswind met regen (vooral Azië)","Storm","Aardbeving","Niet relevant"], answer: 0, wrongHints: [null, "Niet specifiek.", "Niet relevant.", "Wel."] },
-      { q: "Op welk continent ligt het **Amazone-regenwoud**?", options: ["Zuid-Amerika","Afrika","Azië","Australië"], answer: 0, wrongHints: [null, "Heeft Congo-regenwoud.", "Heeft Borneo-regenwoud.", "Niet primair."] },
+      { q: "Op welk continent ligt het **Amazone-regenwoud**?", options: ["Zuid-Amerika","Afrika","Azië","Australië"], answer: 0, wrongHints: [null, "Heeft Congo-regenwoud.", "Heeft Borneo-regenwoud.", "Australië is vooral woestijn en savanne."] },
       { q: "Wat is een **gevolg** van klimaatopwarming?", options: ["Zeespiegel-stijging","Lagere temperatuur","Meer ijs","Minder droogte"], answer: 0, wrongHints: [null, "Opwarming betekent dat het gemiddeld juist warmer wordt — daalt de temperatuur dan?", "Als het warmer wordt smelt het ijs op de polen — komt er dan meer of minder ijs?", "Door hogere temperaturen verdampt er meer water en worden sommige gebieden juist droger — klopt 'minder' dan?"] },
       { q: "Welk type **regen** komt door bergen?", options: ["Stuwingsregen","Convectieregen","Frontale regen","Geen regen"], answer: 0, wrongHints: [null, "Door warmte.", "Door front.", "Wel regen."] },
       { q: "Wat doet de **Golfstroom**?", options: ["Transporteert warm water van de tropen naar Europa","Koud water","Niet relevant","Niet bestaand"], answer: 0, wrongHints: [null, "Niet primair.", "Wel.", "Wel."] },
