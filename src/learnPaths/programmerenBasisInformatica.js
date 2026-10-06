@@ -42,7 +42,7 @@ const steps = [
         q: "Wat is in Python de uitkomst van **`\"3\" + \"4\"`** (let op de aanhalingstekens)?",
         options: ["\"34\" (tekst geplakt)", "7", "12", "Een foutmelding"],
         answer: 0,
-        wrongHints: [null, "7 zou het zijn bij getallen: 3 + 4.", "12 is vermenigvuldigen, en het zijn geen getallen.", "Het mag gewoon — strings plakken aan elkaar."],
+        wrongHints: [null, "7 zou het zijn bij getallen: 3 + 4.", "12 is vermenigvuldigen, en het zijn geen getallen.", "Het mag gewoon — wat doet + met twee stukken tekst?"],
         uitlegPad: {
           stappen: [{ titel: "Tekst plakt, getallen rekenen", tekst: "Met aanhalingstekens zijn `\"3\"` en `\"4\"` **strings (tekst)**. `+` plakt tekst aan elkaar → **\"34\"**. Zónder aanhalingstekens (`3 + 4`) zijn het getallen → **7**. Daarom is het **datatype** zo belangrijk." }],
           niveaus: { basis: "\"34\".", simpeler: "Tekst + tekst = plakken", nogSimpeler: "Tekst plakken." },
@@ -62,7 +62,7 @@ const steps = [
         q: "Wat geeft `input(\"Naam? \")` terug?",
         options: ["Tekst — een string", "Altijd een getal", "Een boolean", "Niets"],
         answer: 0,
-        wrongHints: [null, "Ook als je een cijfer typt, komt het als tekst binnen.", "input geeft geen True/False.", "Het geeft juist de ingetypte invoer terug."],
+        wrongHints: [null, "Ook als je een cijfer typt — in welke vorm komt de invoer binnen?", "input geeft geen True/False.", "Het geeft juist de ingetypte invoer terug."],
         uitlegPad: {
           stappen: [{ titel: "Invoer = altijd tekst", tekst: "`input(...)` geeft de invoer **altijd als string (tekst)** terug — óók als je een getal typt. Wil je ermee rekenen, dan moet je het eerst omzetten, bv. `int(input(...))`. Vergeten leidt tot de fout `\"3\" + \"4\"` = `\"34\"`." }],
           niveaus: { basis: "Een string.", simpeler: "input = tekst", nogSimpeler: "Altijd tekst." },
@@ -81,7 +81,7 @@ const steps = [
         q: "Wat is het verschil tussen **`=`** en **`==`** in code?",
         options: ["= kent toe, == vergelijkt", "Ze zijn hetzelfde", "= vergelijkt, == kent toe", "== is alleen voor tekst"],
         answer: 0,
-        wrongHints: [null, "Ze doen echt iets verschillends.", "Net andersom.", "== werkt voor getallen én tekst."],
+        wrongHints: [null, "Ze doen echt iets verschillends.", "Kijk welke van de twee je in een if-voorwaarde gebruikt.", "== werkt voor getallen én tekst."],
         uitlegPad: {
           stappen: [{ titel: "Toekennen vs vergelijken", tekst: "**`=`** kent een waarde **toe** (`x = 5`). **`==`** **vergelijkt** en geeft een boolean (`x == 5` → True/False). In een `if` gebruik je dus `==`. Per ongeluk `=` schrijven in een vergelijking is een klassieke beginnersfout." }],
           niveaus: { basis: "= toekennen, == vergelijken.", simpeler: "== is vergelijken", nogSimpeler: "= is toekennen." },
@@ -160,7 +160,7 @@ const steps = [
         q: "Wat gebeurt er als je in een while-loop de **teller niet ophoogt**?",
         options: ["Een oneindige lus — het stopt nooit", "Het programma gaat sneller", "De loop draait precies één keer", "Niets, dat mag gewoon"],
         answer: 0,
-        wrongHints: [null, "Sneller? Nee — het loopt juist eindeloos.", "Hij draait juist eindeloos, niet één keer.", "Het is een echte bug."],
+        wrongHints: [null, "Sneller? Nee — wordt de voorwaarde ooit False?", "Wordt de voorwaarde na één ronde ineens False?", "Het is een echte bug."],
         uitlegPad: {
           stappen: [{ titel: "Voorwaarde wordt nooit False", tekst: "Als de teller niet verandert, blijft de while-voorwaarde **altijd waar** → een **oneindige lus**: het programma stopt nooit (en loopt vast). Zorg dus dat er in de loop iets gebeurt waardoor de voorwaarde ooit **False** wordt." }],
           niveaus: { basis: "Oneindige lus.", simpeler: "Geen ophoging = eeuwig", nogSimpeler: "Stopt nooit." },
@@ -209,7 +209,7 @@ const steps = [
         q: "Wat doet **`return`** in een functie?",
         options: ["Geeft een waarde terug om verder te gebruiken", "Print iets op het scherm", "Stopt de computer", "Maakt een variabele"],
         answer: 0,
-        wrongHints: [null, "Tonen is `print` — return geeft een waarde terug (zonder per se te tonen).", "Het stopt alleen de functie, niet de computer.", "Een variabele maken doe je met `=`."],
+        wrongHints: [null, "Tonen is `print` — return doet iets anders. Wat kun je daarna met de uitkomst?", "Het stopt alleen de functie, niet de computer.", "Een variabele maken doe je met `=`."],
         uitlegPad: {
           stappen: [{ titel: "Teruggeven ≠ printen", tekst: "**return** geeft een **uitkomst terug** uit de functie, die je daarna kunt opslaan of verder gebruiken (`resultaat = kwadraat(5)`). Dat is anders dan **print**, dat alleen iets op het scherm toont en geen waarde teruggeeft." }],
           niveaus: { basis: "Geeft een waarde terug.", simpeler: "return = waarde terug", nogSimpeler: "Waarde terug." },
