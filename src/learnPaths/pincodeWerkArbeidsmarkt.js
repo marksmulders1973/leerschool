@@ -61,7 +61,7 @@ const steps = [
       },
       {
         q: "Wat is een **zzp'er**?",
-        options: ["Zelfstandige zonder personeel — werkt voor opdrachtgevers", "Vaste werknemer", "Iemand die uitzendwerk doet", "Werkloze"],
+        options: ["Zelfstandige zonder personeel", "Vaste werknemer", "Iemand die uitzendwerk doet", "Werkloze"],
         answer: 0,
         wrongHints: [null, "Vast = werknemer.", "Uitzend valt onder uitzendbureau.", "Zzp werkt juist actief."],
         uitlegPad: {
@@ -75,7 +75,7 @@ const steps = [
       },
       {
         q: "Welk contract geeft de **meeste zekerheid**?",
-        options: ["Vast (onbepaalde tijd)", "Oproep", "Uitzend", "Tijdelijk 6 maanden"],
+        options: ["Vast", "Oproep", "Uitzend", "Tijdelijk 6 maanden"],
         answer: 0,
         wrongHints: [null, "Oproep = werken als baas belt.", "Uitzend = via bureau, snel klaar.", "Tijdelijk eindigt na 6 mnd."],
         uitlegPad: {
@@ -89,9 +89,9 @@ const steps = [
       },
       {
         q: "Hoeveel **tijdelijke contracten** mag een werkgever in 3 jaar maximaal geven?",
-        options: ["3 contracten in 3 jaar (daarna vast)", "1 contract", "Onbeperkt", "10 contracten"],
+        options: ["3 contracten", "1 contract", "Onbeperkt", "10 contracten"],
         answer: 0,
-        wrongHints: [null, "Te beperkend.", "Niet onbeperkt — wettelijke regel.", "Veel te veel — 3 max."],
+        wrongHints: [null, "Te beperkend.", "Niet onbeperkt — wettelijke regel.", "Veel te veel — de wet wil eeuwige tijdelijke contracten juist voorkomen."],
         uitlegPad: {
           stappen: [{ titel: "Ketenregeling 3×3×3", tekst: "Ketenregeling (sinds 2020): max 3 tijdelijke contracten in 3 jaar bij dezelfde werkgever. Daarna AUTOMATISCH vast contract. Doel: voorkomen 'eeuwige tijdelijken'." }],
           woorden: [{ woord: "ketenregeling", uitleg: "Wet die opeenvolgende tijdelijke contracten beperkt: 3 contracten / 3 jaar / 6 mnd pauze tussen ketens." }],
@@ -103,7 +103,7 @@ const steps = [
       },
       {
         q: "Je bent 14 en hebt een bijbaan: hoeveel uur mag je op een schooldag maximaal werken?",
-        options: ["2 uur (jeugd-arbeidsregels)", "8 uur", "12 uur", "Onbeperkt"],
+        options: ["2 uur", "8 uur", "12 uur", "Onbeperkt"],
         answer: 0,
         wrongHints: [null, "Zoveel mag pas vanaf 16.", "Niet voor jeugd.", "Wel beperkingen."],
         uitlegPad: {
@@ -170,7 +170,7 @@ const steps = [
       },
       {
         q: "Wat is een **transitievergoeding**?",
-        options: ["Vergoeding bij ontslag (~1/3 maandloon per dienstjaar)", "Reiskostenvergoeding", "Vakantietoeslag", "Bonus voor harde werkers"],
+        options: ["Vergoeding bij ontslag", "Reiskostenvergoeding", "Vakantietoeslag", "Bonus voor harde werkers"],
         answer: 0,
         wrongHints: [null, "Reiskosten zijn iets anders.", "Vakantiegeld is iets anders.", "Geen prestatiebonus."],
         uitlegPad: {
@@ -212,7 +212,7 @@ const steps = [
       },
       {
         q: "Met **wederzijds goedvinden** ontslag: wat is dat?",
-        options: ["Werkgever en werknemer maken samen afspraken (vaststellingsovereenkomst)", "Werkgever besluit eenzijdig", "Werknemer besluit eenzijdig", "Rechter besluit"],
+        options: ["Werkgever en werknemer maken samen afspraken", "Werkgever besluit eenzijdig", "Werknemer besluit eenzijdig", "Rechter besluit"],
         answer: 0,
         wrongHints: [null, "Eenzijdig zou geen 'wederzijds' zijn.", "Idem.", "Rechter kan ook nodig zijn, maar 'wederzijds' = samen."],
         uitlegPad: {
@@ -228,7 +228,7 @@ const steps = [
         q: "Bij een **contract korter dan 6 maanden**, mag er een proeftijd in?",
         options: ["Nee, dat is wettelijk niet toegestaan", "Ja, altijd 1 maand", "Ja, 2 maanden", "Alleen voor jongeren"],
         answer: 0,
-        wrongHints: [null, "Verboden door de wet.", "Verboden.", "Geldt voor iedereen."],
+        wrongHints: [null, "Bij welke contractduur hoort 1 maand proeftijd?", "2 maanden hoort bij contracten van 2 jaar of langer.", "Geldt voor iedereen."],
         uitlegPad: {
           stappen: [{ titel: "Geen proeftijd < 6 mnd", tekst: "Wet: bij contract < 6 maanden mag GEEN proeftijd worden afgesproken. Reden: contract is sowieso al kort, proeftijd zou onevenredig veel beschermingstijd weghalen." }],
           woorden: [{ woord: "proeftijd-verbod", uitleg: "Bij contract korter dan 6 mnd: geen proeftijd toegestaan, ook niet schriftelijk afgesproken." }],
@@ -275,7 +275,7 @@ const steps = [
       },
       {
         q: "Wat is **krapte** op de arbeidsmarkt?",
-        options: ["Meer vraag dan aanbod (te weinig werknemers)", "Iedereen werkt", "Lonen dalen", "Veel werklozen"],
+        options: ["Meer vraag dan aanbod", "Iedereen werkt", "Lonen dalen", "Veel werklozen"],
         answer: 0,
         wrongHints: [null, "Dat heet volledige werkgelegenheid.", "Krapte = lonen stijgen.", "Dat is ruim."],
         uitlegPad: {
@@ -303,7 +303,7 @@ const steps = [
       },
       {
         q: "Wat is een **vakbond**?",
-        options: ["Organisatie die opkomt voor werknemers (FNV, CNV)", "Een groep werkgevers", "Een uitzendbureau", "Belastingdienst-afdeling"],
+        options: ["Organisatie die opkomt voor werknemers", "Een groep werkgevers", "Een uitzendbureau", "Belastingdienst-afdeling"],
         answer: 0,
         wrongHints: [null, "Werkgevers hebben eigen organisaties (VNO-NCW).", "Uitzendbureau is iets anders.", "Vakbond is onafhankelijk."],
         uitlegPad: {
@@ -317,7 +317,7 @@ const steps = [
       },
       {
         q: "Wat gebeurt op een **ruime arbeidsmarkt**?",
-        options: ["Veel zoekers, weinig vacatures, lonen blijven laag", "Lonen stijgen", "Iedereen heeft werk", "Geen werknemers beschikbaar"],
+        options: ["Lonen blijven laag", "Lonen stijgen", "Iedereen heeft werk", "Geen werknemers beschikbaar"],
         answer: 0,
         wrongHints: [null, "Lonen stijgen bij krapte, niet ruim.", "Tegendeel.", "Tegendeel."],
         uitlegPad: {
@@ -331,7 +331,7 @@ const steps = [
       },
       {
         q: "Een **staking** is een actiemiddel van wie?",
-        options: ["Werknemers (via vakbond) — drukmiddel op werkgever", "Werkgevers", "De overheid", "De Belastingdienst"],
+        options: ["Werknemers", "Werkgevers", "De overheid", "De Belastingdienst"],
         answer: 0,
         wrongHints: [null, "Werkgever-equivalent is lock-out.", "Overheid stakt niet.", "Geen actiemiddel van Belastingdienst."],
         uitlegPad: {
@@ -380,9 +380,9 @@ const steps = [
       },
       {
         q: "Bij **hoger loon** willen ... mensen werken.",
-        options: ["Meer", "Minder", "Net zoveel", "Niemand"],
+        options: ["Meer", "Minder", "Net zoveel", "Alleen wie nu geen werk heeft"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Wel een effect.", "Onzin-antwoord."],
+        wrongHints: [null, "Tegendeel.", "Wel een effect.", "Ook mensen met werk willen bij hoger loon soms meer uren maken."],
         uitlegPad: {
           stappen: [{ titel: "Hoger loon = meer aanbod", tekst: "Hoger loon = aantrekkelijker om te werken. Werknemers willen meer uren, anderen die niet werkten (huisvrouw, gepensioneerd, student) gaan ook werken. Aanbod stijgt." }],
           woorden: [{ woord: "aanbod van arbeid", uitleg: "Hoeveel mensen willen werken. Stijgt bij hoger loon." }],
@@ -394,7 +394,7 @@ const steps = [
       },
       {
         q: "Wat is het **evenwichtsloon**?",
-        options: ["Loon waarbij vraag = aanbod (markt klikt)", "Het hoogste loon", "Het minimumloon", "Het gemiddelde"],
+        options: ["Loon waarbij vraag = aanbod", "Het hoogste loon", "Het minimumloon", "Het gemiddelde"],
         answer: 0,
         wrongHints: [null, "Hoogste niet automatisch evenwicht.", "Minimumloon is wettelijke ondergrens.", "Gemiddelde is iets anders."],
         uitlegPad: {
@@ -410,7 +410,7 @@ const steps = [
         q: "Tijdens **vergrijzing** verschuift het aanbod van arbeid:",
         options: ["Naar links (minder mensen werken)", "Naar rechts (meer)", "Niet", "Wisselend"],
         answer: 0,
-        wrongHints: [null, "Tegendeel — meer pensioen, minder aanbod.", "Wel verschuiving.", "Vergrijzing is structureel."],
+        wrongHints: [null, "Gaan er door vergrijzing meer of minder mensen met pensioen?", "Wel verschuiving.", "Vergrijzing is structureel."],
         uitlegPad: {
           stappen: [{ titel: "Meer pensioen = minder werkers", tekst: "Vergrijzing = meer ouderen, meer mensen met pensioen. Wie de pensioenleeftijd bereikt, verlaat de werkende bevolking → aanbod van arbeid daalt → aanbodcurve schuift NAAR LINKS." }],
           woorden: [{ woord: "vergrijzing", uitleg: "Demografische trend: groter aandeel ouderen in samenleving. NL al jaren bezig." }, { woord: "verschuiving aanbodcurve", uitleg: "Hele curve schuift naar links (minder aanbod) of rechts (meer)." }],
@@ -422,9 +422,9 @@ const steps = [
       },
       {
         q: "Een **chirurg** verdient veel meer dan een **caissière** vooral door:",
-        options: ["Schaarste — weinig mensen kunnen het", "Toeval", "Geluk", "Het ziekenhuis bepaalt willekeurig"],
+        options: ["Schaarste", "Toeval", "Het aantal uren dat ze werken", "Het ziekenhuis bepaalt willekeurig"],
         answer: 0,
-        wrongHints: [null, "Geen toeval — markt-mechanisme.", "Idem.", "Volgt vraag/aanbod-logica."],
+        wrongHints: [null, "Geen toeval — markt-mechanisme.", "Ook per uur verdient een chirurg veel meer.", "Volgt vraag/aanbod-logica."],
         uitlegPad: {
           stappen: [{ titel: "Schaarste van vaardigheden", tekst: "Chirurg = 12+ jaar opleiding, weinig mensen kunnen het. Beperkt AANBOD + hoge VRAAG → hoog loon. Caissière = veel mensen kunnen het → ruim aanbod → lager loon." }],
           woorden: [{ woord: "schaarste van vaardigheden", uitleg: "Specialistische skill die slechts weinigen hebben. Markt-mechanisme drijft loon op." }, { woord: "opleidingsinvestering", uitleg: "Lange + dure studie compenseert later via hoger loon." }],
@@ -436,7 +436,7 @@ const steps = [
       },
       {
         q: "Wat zijn **secundaire arbeidsvoorwaarden**?",
-        options: ["Extra's bovenop loon: auto, telefoon, opleiding, thuiswerken", "Het brutoloon", "De vakantiedagen alleen", "De CAO"],
+        options: ["Extra's bovenop het loon", "Het brutoloon", "De vakantiedagen alleen", "De CAO"],
         answer: 0,
         wrongHints: [null, "Brutoloon is primair.", "Te beperkt.", "CAO bevat zowel primair als secundair."],
         uitlegPad: {
@@ -502,7 +502,7 @@ const steps = [
         q: "**100.000 werklozen**, beroepsbevolking **5.000.000**. Werkloosheidspercentage?",
         options: ["2%", "20%", "0,2%", "5%"],
         answer: 0,
-        wrongHints: [null, "Veel te hoog.", "Te laag.", "Deel de werklozen door de totale beroepsbevolking en zet het om naar een percentage."],
+        wrongHints: [null, "Veel te hoog.", "Te laag.", "Te hoog — welk deel van 5.000.000 is 100.000?"],
         uitlegPad: {
           stappen: [{ titel: "Formule toepassen", tekst: "Werkloosheidspercentage = werklozen / beroepsbevolking × 100%. 100.000 / 5.000.000 = 0,02 = 2%." }],
           woorden: [{ woord: "werkloosheidspercentage", uitleg: "Werklozen als % van beroepsbevolking. CBS-cijfer." }],
@@ -514,7 +514,7 @@ const steps = [
       },
       {
         q: "Door **recessie** verliezen veel mensen hun baan. Welk type werkloosheid?",
-        options: ["Conjuncturele werkloosheid", "Frictie", "Structureel", "Seizoens"],
+        options: ["Conjunctureel", "Frictie", "Structureel", "Seizoens"],
         answer: 0,
         wrongHints: [null, "Frictie ontstaat niet door recessie.", "Structureel is mismatch.", "Seizoens is jaargetijde."],
         uitlegPad: {
@@ -528,7 +528,7 @@ const steps = [
       },
       {
         q: "Een **skileraar zonder werk in de zomer** — welk type?",
-        options: ["Seizoenswerkloosheid", "Conjunctureel", "Frictie", "Structureel"],
+        options: ["Seizoens", "Conjunctureel", "Frictie", "Structureel"],
         answer: 0,
         wrongHints: [null, "Niet door slechte economie.", "Niet 'tussen banen' maar terugkerend per jaar.", "Niet vaardigheden-mismatch."],
         uitlegPad: {
@@ -542,9 +542,9 @@ const steps = [
       },
       {
         q: "Wat is **verborgen werkloosheid**?",
-        options: ["Mensen die wel willen werken maar geen vertrouwen meer hebben en niet zoeken", "Mensen met een tweede baan", "Buitenlanders zonder verblijfsstatus", "Pensioenbeleid"],
+        options: ["Mensen die willen werken maar niet meer zoeken", "Mensen met een tweede baan", "Buitenlanders zonder verblijfsstatus", "Mensen die tijdelijk ziek thuis zitten"],
         answer: 0,
-        wrongHints: [null, "Tweede baan = wel werken.", "Dat gaat over verblijfsrecht, niet over deze definitie.", "Pensioenbeleid is ander onderwerp."],
+        wrongHints: [null, "Tweede baan = wel werken.", "Dat gaat over verblijfsrecht, niet over deze definitie.", "Wie ziek is, is niet beschikbaar — dat telt niet als werkloos."],
         uitlegPad: {
           stappen: [{ titel: "Niet meer zoekend", tekst: "Verborgen werklozen = mensen die ZOUDEN willen werken maar opgegeven hebben en niet meer zoeken. Tellen niet officieel als werkloos (te weinig actief). Onderschatting werkelijk probleem." }],
           woorden: [{ woord: "verborgen werkloosheid", uitleg: "Mensen zonder werk die wel zouden werken maar gestopt met zoeken — niet in officiële cijfers." }, { woord: "ontmoediging-effect", uitleg: "Na lange werkloosheid stoppen mensen met solliciteren — vertrouwen weg." }],
@@ -579,7 +579,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **productiviteit**?",
-        options: ["Output per ingezette eenheid (per uur of per persoon)", "Hoe lang je werkt", "Salaris per maand", "Aantal vakantiedagen"],
+        options: ["Hoeveel je per uur produceert", "Hoe lang je werkt", "Salaris per maand", "Aantal vakantiedagen"],
         answer: 0,
         wrongHints: [null, "Lang werken ≠ productief.", "Salaris is iets anders.", "Vakantie is geen productie."],
         uitlegPad: {
@@ -635,9 +635,9 @@ const steps = [
       },
       {
         q: "Wat is de **productiviteitsparadox**?",
-        options: ["Ondanks computers stijgt productiviteit langzamer dan verwacht", "Productiviteit is altijd hoog", "Niemand werkt productief", "Computers slechter dan handmatig"],
+        options: ["Ondanks computers stijgt productiviteit langzamer dan verwacht", "Productiviteit is altijd hoog", "Computers maakten werk veel sneller productief dan verwacht", "Computers slechter dan handmatig"],
         answer: 0,
-        wrongHints: [null, "Niet altijd hoog.", "Onzin-antwoord.", "Computers wel beter, maar niet zoveel als gehoopt."],
+        wrongHints: [null, "Niet altijd hoog.", "Zie je die snelle groei terug in de cijfers?", "Computers wel beter, maar niet zoveel als gehoopt."],
         uitlegPad: {
           stappen: [{ titel: "Verwacht versus werkelijk", tekst: "Sinds de jaren 90: computers, internet, smartphones. Verwacht: enorme productiviteitsstijging. Werkelijk: slechts ~1-2% per jaar — minder dan voorgaande decennia. PARADOX." }],
           woorden: [{ woord: "productiviteitsparadox", uitleg: "Discrepantie tussen verwachte (door technologie) en werkelijke productiviteitsstijging." }, { woord: "Solow-paradox", uitleg: "Robert Solow 1987: 'Je ziet computers overal, behalve in productiviteitscijfers'." }],
@@ -684,7 +684,7 @@ const steps = [
     checks: [
       {
         q: "Bij welke uitkering geldt: **alleen voor werknemers, betaald uit premies**?",
-        options: ["WW (Werkloosheidswet)", "AOW", "Bijstand", "Kinderbijslag"],
+        options: ["WW", "AOW", "Bijstand", "Kinderbijslag"],
         answer: 0,
         wrongHints: [null, "AOW = volksverzekering.", "Bijstand = vangnet, geen verzekering.", "Kinderbijslag = volksverzekering."],
         uitlegPad: {
@@ -698,7 +698,7 @@ const steps = [
       },
       {
         q: "Wie krijgt **AOW**?",
-        options: ["Iedereen die in NL gewoond heeft, vanaf pensioenleeftijd", "Alleen werknemers", "Alleen ondernemers", "Alleen wie veel verdient"],
+        options: ["Iedereen vanaf de pensioenleeftijd", "Alleen werknemers", "Alleen ondernemers", "Alleen wie veel verdient"],
         answer: 0,
         wrongHints: [null, "Niet alleen werknemers.", "Niet alleen ondernemers.", "Niet inkomensafhankelijk."],
         uitlegPad: {
@@ -712,7 +712,7 @@ const steps = [
       },
       {
         q: "Wat is **bijstand**?",
-        options: ["Vangnet via gemeente als geen ander inkomen", "Salaris", "Toeslag", "Zorgverzekering"],
+        options: ["Een vangnet via de gemeente", "Salaris", "Toeslag", "Zorgverzekering"],
         answer: 0,
         wrongHints: [null, "Niet hetzelfde als loon.", "Toeslag is iets anders.", "Verzekering is iets anders."],
         uitlegPad: {
@@ -728,7 +728,7 @@ const steps = [
         q: "**WW-uitkering** is in de eerste 2 maanden ongeveer:",
         options: ["75% van laatste loon", "100%", "30%", "Vast bedrag €500"],
         answer: 0,
-        wrongHints: [null, "Niet 100%.", "Te laag — 75%.", "Geen vast bedrag."],
+        wrongHints: [null, "Niet 100%.", "Te laag — WW moet je echt helpen overbruggen.", "Geen vast bedrag."],
         uitlegPad: {
           stappen: [{ titel: "75% eerste 2 maanden", tekst: "WW eerste 2 maanden: 75% van laatste loon. Daarna 70% tot einde uitkering. Boven een maximumloon wordt afgekapt." }],
           woorden: [{ woord: "WW-uitkering", uitleg: "Tijdelijke uitkering bij ontslag, gebaseerd op laatste loon." }, { woord: "dagloon", uitleg: "Maatstaf voor WW-hoogte. Gebaseerd op gemiddeld loon laatste jaar." }],
@@ -740,7 +740,7 @@ const steps = [
       },
       {
         q: "Wat is een **belangrijk verschil** verzekering vs voorziening?",
-        options: ["Bij verzekering heb je premie betaald → recht; voorziening = vangnet zonder bijdrage", "Geen verschil", "Verzekering is alleen voor rijken", "Voorziening is alleen voor 65+"],
+        options: ["Bij een verzekering heb je zelf premie betaald", "Geen verschil", "Verzekering is alleen voor rijken", "Voorziening is alleen voor 65+"],
         answer: 0,
         wrongHints: [null, "Wel verschil.", "Voor iedereen.", "Niet leeftijdsgebonden."],
         uitlegPad: {
@@ -754,9 +754,9 @@ const steps = [
       },
       {
         q: "Waarom staat sociale zekerheid **onder druk**?",
-        options: ["Vergrijzing: meer ontvangers, minder werkende premiebetalers", "Te veel jongeren", "Iedereen wordt rijker", "Geen reden"],
+        options: ["Vergrijzing", "Te veel jongeren", "Iedereen wordt rijker", "Er zijn te weinig ouderen"],
         answer: 0,
-        wrongHints: [null, "Tegendeel.", "Tegendeel.", "Vergrijzing is wel echt."],
+        wrongHints: [null, "Tegendeel.", "Tegendeel.", "Tegendeel — het aantal ouderen groeit juist."],
         uitlegPad: {
           stappen: [{ titel: "Demografische onbalans", tekst: "Vergrijzing = meer ouderen, minder jongeren. Meer mensen krijgen AOW + zorg, minder mensen betalen premies. Sociale zekerheid raakt onder druk: ofwel premies omhoog, ofwel uitkeringen omlaag, ofwel pensioenleeftijd omhoog." }],
           woorden: [{ woord: "vergrijzing", uitleg: "Demografische trend: groter % ouderen. NL is sinds jaren bezig." }, { woord: "i/a-ratio", uitleg: "Inactieven (gepensioneerden/uitkeringsontvangers) / actieven (werkenden). Hoog = druk op systeem." }],

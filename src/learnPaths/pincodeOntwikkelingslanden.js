@@ -162,7 +162,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **welvaart in enge zin**?",
-        options: ["Alleen materiële zaken (geld, spullen)", "Alleen geluk", "Alleen gezondheid", "Alles"],
+        options: ["Alleen materiële zaken", "Alleen geluk", "Alleen gezondheid", "Alles"],
         answer: 0,
         wrongHints: [null, "Geluk = ruime zin.", "Gezondheid = ruime zin.", "Te breed."],
         uitlegPad: {
@@ -176,7 +176,7 @@ const steps = [
       },
       {
         q: "Welke landen scoren typisch **hoog op geluksindex**?",
-        options: ["Finland, Denemarken, Noorwegen, NL", "Saoedi-Arabië", "Rusland", "Noord-Korea"],
+        options: ["Finland", "Saoedi-Arabië", "Rusland", "Noord-Korea"],
         answer: 0,
         wrongHints: [null, "Niet automatisch met olierijkdom.", "Politieke onrust drukt geluk.", "Geen vrijheid → geen geluk-meting."],
         uitlegPad: {
@@ -218,7 +218,7 @@ const steps = [
       },
       {
         q: "Bhutan meet **Gross National Happiness** (GNH) ipv:",
-        options: ["BBP — om welzijn ipv welvaart te benadrukken", "Inflatie", "Belasting", "Niets"],
+        options: ["BBP", "Inflatie", "Belasting", "Niets"],
         answer: 0,
         wrongHints: [null, "Inflatie meet nog steeds.", "Wel belasting.", "Wel iets."],
         uitlegPad: {
@@ -270,7 +270,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **vicieuze cirkel van armoede**?",
-        options: ["Armoede veroorzaakt zichzelf — bv. geen geld voor scholen, dus geen opgeleide werkers", "Willekeurige situatie", "Alleen externe oorzaken", "Iedereen gelijk arm"],
+        options: ["Armoede die zichzelf in stand houdt", "Willekeurige situatie", "Alleen externe oorzaken", "Iedereen gelijk arm"],
         answer: 0,
         wrongHints: [null, "Vicieuze cirkel ≠ willekeurig.", "Interne feedback-loop.", "Geen gelijkheid-claim."],
         uitlegPad: {
@@ -298,7 +298,7 @@ const steps = [
       },
       {
         q: "Welk land is een **succesverhaal** van armoede naar welvaart?",
-        options: ["Zuid-Korea (1960 armer dan Ghana, nu rijk)", "Niger", "Tsjaad", "Mali"],
+        options: ["Zuid-Korea", "Niger", "Tsjaad", "Mali"],
         answer: 0,
         wrongHints: [null, "Niger is nog arm.", "Tsjaad is nog arm.", "Mali is nog arm."],
         uitlegPad: {
@@ -312,9 +312,9 @@ const steps = [
       },
       {
         q: "**Kolonisatie-erfenis** als oorzaak armoede betekent:",
-        options: ["Grenzen + economische structuur door koloniale machten gemaakt zonder oog voor volkeren", "Te veel kolonies", "Een soort belasting", "Niet relevant"],
+        options: ["Grenzen en economie zijn door koloniale machten bepaald", "Te veel kolonies", "Ze betalen nog steeds belasting aan Europa", "Niet relevant"],
         answer: 0,
-        wrongHints: [null, "Niet aantal.", "Geen belasting.", "Wel relevant."],
+        wrongHints: [null, "Niet aantal.", "Die betalingen stopten bij de onafhankelijkheid.", "Wel relevant."],
         uitlegPad: {
           stappen: [{ titel: "Erfenis: kunstmatige grenzen + mono-cultuur", tekst: "Europese koloniale machten (UK/FR/NL/BE) trokken in 19e eeuw landgrenzen door Afrika willekeurig op kaart — geen rekening met volkeren/talen. Bv. Nigeria heeft 250+ etnische groepen samen. Economie gericht op 1 grondstof voor moederland (cacao Ghana, koffie Ivoorkust, koper Zambia, olie Nigeria). Bij onafhankelijkheid (jaren '60) erfden de landen deze problemen." }],
           woorden: [{ woord: "kolonisatie", uitleg: "Land neemt vreemd gebied in voor eigen voordeel. Westerse mogendheden deden dit massaal 16e-20e eeuw." }, { woord: "mono-cultuur", uitleg: "Land hangt van 1 product af. Kwetsbaar bij prijsdaling." }, { woord: "Scramble for Africa", uitleg: "1881-1914. Europese mogendheden verdeelden Afrika in 30 jaar. Grenzen nu nog steeds koloniaal." }],
@@ -326,9 +326,9 @@ const steps = [
       },
       {
         q: "Waarom zijn **schulden** zo slecht voor arme landen?",
-        options: ["Rente eet jaarlijks geld op dat anders naar onderwijs/zorg ging", "Schulden zijn altijd te groot", "Rente is altijd 0%", "Schulden bestaan niet"],
+        options: ["Rente kost geld dat naar onderwijs of zorg kon", "Schulden zijn altijd te groot", "Rente is altijd 0%", "Ze moeten alles binnen een jaar terugbetalen"],
         answer: 0,
-        wrongHints: [null, "Soms haalbaar — opofferingen wel.", "Rente is juist hoog.", "Wel reëel."],
+        wrongHints: [null, "Soms haalbaar — opofferingen wel.", "Rente is juist hoog.", "Staatsschulden lopen vaak tientallen jaren."],
         uitlegPad: {
           stappen: [{ titel: "Rente vreet onderwijs-budget op", tekst: "Veel arme landen leenden in jaren '70-'80 bij Wereldbank + IMF (vaak gepusht). Door hoge rentes + crisissen werden schulden onbetaalbaar. Voorbeeld: Mozambique besteedde in 1995 25%+ overheidsbudget aan rente. Geld dat NIET naar scholen + ziekenhuizen + wegen ging. 'Schuldenval'." }],
           woorden: [{ woord: "staatsschuld", uitleg: "Wat overheid schuldig is aan binnen- of buitenland." }, { woord: "Schuldenval", uitleg: "Rente jaarlijks zo hoog dat land niet kan investeren in ontwikkeling. Vicieuze cyclus." }, { woord: "Highly Indebted Poor Countries (HIPC)", uitleg: "IMF/Wereldbank-programma 1996+ dat 36 armste landen schuld kwijtschold mits hervormingen." }],
@@ -340,7 +340,7 @@ const steps = [
       },
       {
         q: "Wat verklaart het **succes van China sinds 1980**?",
-        options: ["Hervormingen, openheid, exportgroei, ~800 mln uit armoede", "Toeval", "Geen verandering", "Communisme onveranderd"],
+        options: ["Hervormingen, openheid en export", "Toeval", "Geen verandering", "Communisme onveranderd"],
         answer: 0,
         wrongHints: [null, "Niet toeval — beleid.", "Wel verandering.", "Communistisch label maar markteconomie."],
         uitlegPad: {
@@ -375,7 +375,7 @@ const steps = [
     checks: [
       {
         q: "**Multilaterale hulp** is:",
-        options: ["Via VN, EU, Wereldbank — meerdere landen samen", "Direct van NL naar Mali", "Particuliere hulp", "Noodhulp"],
+        options: ["Hulp via internationale organisaties", "Direct van NL naar Mali", "Particuliere hulp", "Noodhulp"],
         answer: 0,
         wrongHints: [null, "Dat is bilateraal.", "Particulier = NGO.", "Noodhulp = bij rampen."],
         uitlegPad: {
@@ -417,7 +417,7 @@ const steps = [
       },
       {
         q: "Wat is **NL ontwikkelingsbudget** als % BBP?",
-        options: ["~0,5% (onder de UN-norm van 0,7%)", "~5%", "~50%", "~10%"],
+        options: ["Minder dan 1%", "~5%", "~50%", "~10%"],
         answer: 0,
         wrongHints: [null, "Te hoog.", "Veel te hoog.", "Te hoog."],
         uitlegPad: {
@@ -431,7 +431,7 @@ const steps = [
       },
       {
         q: "Wat is **Fair Trade**?",
-        options: ["Eerlijke prijs voor boeren in arme landen, hoger dan minimum", "Gratis producten", "Geen handel", "Alleen Europese handel"],
+        options: ["Eerlijke prijs voor boeren in arme landen", "Gratis producten", "Geen handel", "Alleen Europese handel"],
         answer: 0,
         wrongHints: [null, "Wel handel, eerlijker.", "Tegendeel.", "Wereldwijd."],
         uitlegPad: {
@@ -445,7 +445,7 @@ const steps = [
       },
       {
         q: "**Remittances** — wat zijn dat?",
-        options: ["Geld dat migranten naar familie thuis sturen — wereldwijd $700 mrd/jaar", "Een soort belasting", "Toeristisch geld", "Ontwikkelingshulp van overheden"],
+        options: ["Geld dat migranten naar familie thuis sturen", "Een soort belasting", "Toeristisch geld", "Ontwikkelingshulp van overheden"],
         answer: 0,
         wrongHints: [null, "Niet belasting.", "Niet toerisme.", "Niet overheid."],
         uitlegPad: {
@@ -483,9 +483,9 @@ const steps = [
     checks: [
       {
         q: "Wat zijn **SDG's**?",
-        options: ["Sustainable Development Goals — 17 VN-doelen voor 2030", "Sociale Druk Geld", "Schoolse Doelen Groep", "Subsidie Donatie Geld"],
+        options: ["17 doelen van de VN voor 2030", "Doelen van de EU voor schone lucht", "Regels van de Wereldbank voor leningen", "Een keurmerk voor eerlijke handel"],
         answer: 0,
-        wrongHints: [null, "Internationale Engelse afkorting.", "Niet onderwijs-specifiek.", "Geen donaties."],
+        wrongHints: [null, "Het gaat om de hele wereld, niet alleen de EU.", "Het zijn doelen, geen leenregels.", "Dat is Fair Trade."],
         uitlegPad: {
           stappen: [{ titel: "17 doelen voor 2030", tekst: "SDG = Sustainable Development Goals. 17 doelen door VN vastgesteld in 2015. Voor 2030 te behalen door ALLE landen. Bv. geen armoede (1), geen honger (2), gezondheid (3), onderwijs (4), gendergelijkheid (5), klimaatactie (13), enz." }],
           woorden: [{ woord: "SDG", uitleg: "Sustainable Development Goals. Engels voor 'Duurzame Ontwikkelingsdoelen'." }, { woord: "VN", uitleg: "Verenigde Naties. 193 landen samenwerkend voor wereldvrede + ontwikkeling." }, { woord: "2030", uitleg: "Deadline voor SDG's. Halverwege nu — voortgang gemengd." }],
@@ -497,9 +497,9 @@ const steps = [
       },
       {
         q: "Wat zijn de **3 P's** van duurzaamheid?",
-        options: ["People, Planet, Profit", "Pro, Plus, Premium", "Plant, Plant, Plant", "Plan, Pay, Promote"],
+        options: ["People, Planet, Profit", "Prijs, Personeel, Pensioen", "Product, Plaats, Promotie", "Plan, Pay, Promote"],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Onzin.", "Niet 3 P's."],
+        wrongHints: [null, "Dat zijn begrippen uit loon en werk.", "Dat zijn P's van de marketingmix.", "Dat zijn geen begrippen uit duurzaamheid."],
         uitlegPad: {
           stappen: [{ titel: "Mensen + planeet + winst", tekst: "3 P's = People (mensen — sociaal goed), Planet (planeet — milieu/klimaat), Profit (winst — economisch duurzaam). Concept van John Elkington (1994). Bedrijven moeten op ALLE drie scoren, niet alleen winst." }],
           woorden: [{ woord: "Triple Bottom Line", uitleg: "Engels voor '3 P's'. Bedrijven meten succes op 3 lijnen: sociaal + ecologisch + economisch." }, { woord: "Brundtland", uitleg: "Noors politica (1987). Definieerde duurzame ontwikkeling: 'voldoen aan behoeften NU zonder toekomstige generaties te belasten'." }],
@@ -539,7 +539,7 @@ const steps = [
       },
       {
         q: "**Leapfrogging** is:",
-        options: ["Arme landen slaan stappen over (geen vaste tel → mobiel)", "Een kinderspel", "Belastingontwijking", "Soort hulp"],
+        options: ["Arme landen slaan ontwikkelingsstappen over", "Een kinderspel", "Belastingontwijking", "Soort hulp"],
         answer: 0,
         wrongHints: [null, "Niet relevant hier.", "Niet hetzelfde.", "Geen specifieke hulpvorm."],
         uitlegPad: {
@@ -553,9 +553,9 @@ const steps = [
       },
       {
         q: "**Klimaat en arme landen**:",
-        options: ["Veroorzaken weinig CO2 maar lijden meest (droogtes, zeespiegel)", "Geen verband", "Profiteren van klimaat", "Weten van niets"],
+        options: ["Ze stoten weinig CO2 uit maar lijden het meest", "Geen verband", "Profiteren van klimaat", "Ze stoten het meeste CO2 uit"],
         answer: 0,
-        wrongHints: [null, "Wel sterk verband.", "Tegendeel.", "Velen weten goed."],
+        wrongHints: [null, "Wel sterk verband.", "Tegendeel.", "Kijk naar de uitstoot: wie stoten historisch het meest uit?"],
         uitlegPad: {
           stappen: [{ titel: "Onrechtvaardige verdeling", tekst: "Klimaat-paradox: rijke landen (VS, EU) en China veroorzaakten samen het grootste deel van de historische CO2-uitstoot. Maar arme landen lijden meeste klimaatschade: droogtes (Sahel), overstromingen (Bangladesh), zeespiegel-stijging (eilandstaten zoals Malediven, Tuvalu)." }],
           woorden: [{ woord: "klimaat-rechtvaardigheid", uitleg: "Idee dat veroorzakers (rijke landen) moeten betalen voor schade in slachtoffer-landen (arme)." }, { woord: "loss and damage", uitleg: "VN-fonds (sinds 2022) waarin rijke landen geld storten voor klimaatschade arme landen." }],
@@ -591,7 +591,7 @@ const steps = [
     checks: [
       {
         q: "Wat doet **Fair Trade** voor boeren?",
-        options: ["Eerlijke prijs (hoger dan minimum) + premie voor sociale projecten", "Gratis goederen", "Korting voor consument", "Belasting"],
+        options: ["Eerlijke prijs plus een premie", "Gratis goederen", "Korting voor consument", "Belasting"],
         answer: 0,
         wrongHints: [null, "Niet gratis.", "Tegendeel.", "Geen belasting."],
         uitlegPad: {
@@ -619,9 +619,9 @@ const steps = [
       },
       {
         q: "Wat is **greenwashing**?",
-        options: ["Bedrijven doen zich groener voor dan ze zijn", "Wassen met groen wasmiddel", "Een soort belasting", "Echt duurzaam beleid"],
+        options: ["Bedrijven doen zich groener voor dan ze zijn", "Wassen met groen wasmiddel", "Afval scheiden en recyclen", "Echt duurzaam beleid"],
         answer: 0,
-        wrongHints: [null, "Niet letterlijk wassen.", "Geen belasting.", "Tegendeel."],
+        wrongHints: [null, "Niet letterlijk wassen.", "Dat is echt milieugedrag, geen misleiding.", "Tegendeel."],
         uitlegPad: {
           stappen: [{ titel: "Vals duurzaam-imago", tekst: "Greenwashing = bedrijven gebruiken DUURZAAMHEIDS-marketing terwijl ze niet echt duurzaam zijn. Bv. olie-bedrijven met 'wij investeren in groene energie!'-reclames (terwijl 95% nog steeds olie is). Of supermarkt met 'duurzaam!'-stempel op product dat amper verschilt." }],
           woorden: [{ woord: "greenwashing", uitleg: "Letterlijk 'groen-wassen'. Misleidende duurzaamheids-claims." }, { woord: "Shell-paradox", uitleg: "Shell-reclame benadrukt zonne-energie, terwijl ~95% van haar omzet uit fossiele brandstoffen komt. Klassiek voorbeeld greenwashing." }],
@@ -633,9 +633,9 @@ const steps = [
       },
       {
         q: "Wat is een **flexitariër**?",
-        options: ["Iemand die minder vlees eet, maar niet helemaal geen", "Veganist", "Vleeseter", "Iemand die alleen vis eet"],
+        options: ["Iemand die minder vlees eet, maar niet helemaal geen", "Veganist", "Vegetariër", "Iemand die alleen vis eet"],
         answer: 0,
-        wrongHints: [null, "Veganist eet helemaal geen dierlijke producten.", "Niet hetzelfde.", "Dat is een pescatariër."],
+        wrongHints: [null, "Veganist eet helemaal geen dierlijke producten.", "Een vegetariër eet helemaal geen vlees.", "Dat is een pescatariër."],
         uitlegPad: {
           stappen: [{ titel: "Tussen vleeseter en vegetariër", tekst: "Flexitariër = letterlijk 'flexibele vegetariër'. Eet WEL vlees, maar BEWUST minder (bv. 2-3× per week ipv elke dag). Doel: milieu-impact verlagen + gezondheid + dierenwelzijn — zonder rigoureus al het vlees op te geven. Populairste 'duurzame eet-stijl' in NL." }],
           woorden: [{ woord: "flexitariër", uitleg: "Eet minder vlees, niet helemaal geen. Compromis." }, { woord: "vegetariër", uitleg: "Eet GEEN vlees + GEEN vis. Wel zuivel + eieren." }, { woord: "veganist", uitleg: "Eet GEEN dierlijke producten. Geen vlees/vis/zuivel/eieren/honing." }, { woord: "pescatariër", uitleg: "Eet WEL vis, GEEN vlees. Tussen vegetariër + vleeseter." }],
@@ -661,9 +661,9 @@ const steps = [
       },
       {
         q: "**'Stem met je portemonnee'** betekent:",
-        options: ["Wat je koopt beïnvloedt wat bedrijven produceren", "Letterlijk stemmen met geld", "Onzin", "Niets"],
+        options: ["Wat je koopt beïnvloedt wat bedrijven produceren", "Letterlijk stemmen met geld", "Alleen wie belasting betaalt mag stemmen", "Rijke mensen krijgen meer stemmen"],
         answer: 0,
-        wrongHints: [null, "Metafoor.", "Wel betekenis.", "Wel betekenis."],
+        wrongHints: [null, "Metafoor.", "Het gaat om kopen, niet om verkiezingen.", "Bij verkiezingen heeft iedereen één stem — het gaat hier om kopen."],
         uitlegPad: {
           stappen: [{ titel: "Consument heeft macht", tekst: "'Stem met je portemonnee' = elke aankoop is een keuze. Wie koopt, bepaalt indirect wat bedrijven maken. Koop je Fair Trade-koffie → bedrijven zien vraag → meer Fair Trade-aanbod. Koop je goedkoop vlees → bedrijven zien vraag → meer goedkoop vlees. Geld = invloed." }],
           woorden: [{ woord: "consumenten-macht", uitleg: "Invloed die kopers samen hebben op markt. Bedrijven volgen wat verkoopt." }, { woord: "boycot", uitleg: "Bewust NIET kopen van bedrijf/product om druk uit te oefenen. Sterke vorm consumenten-actie." }],
@@ -698,9 +698,9 @@ const steps = [
     checks: [
       {
         q: "Wat zal in arme landen vooral het **MEEST** helpen?",
-        options: ["Onderwijs (vooral voor meisjes)", "Meer wapens", "Meer luxe-import", "Geen verandering"],
+        options: ["Onderwijs", "Meer wapens", "Meer luxe-import", "Steeds gratis voedsel blijven sturen"],
         answer: 0,
-        wrongHints: [null, "Wapens vergroten conflict.", "Luxe-import niet basis.", "Wel verandering nodig."],
+        wrongHints: [null, "Wapens vergroten conflict.", "Luxe-import niet basis.", "Denk aan het risico van gratis hulp voor lokale boeren."],
         uitlegPad: {
           stappen: [{ titel: "Onderwijs vrouwen = #1 effect", tekst: "Onderzoek (Wereldbank, UNESCO) wijst aan: onderwijs is de KRACHTIGSTE ontwikkelings-hefboom. Vooral voor meisjes. Een meisje met 12 jaar scholing krijgt later: minder kinderen, latere zwangerschap, gezondere kinderen, hoger inkomen, meer politieke participatie. Het effect reikt over 2 generaties." }],
           woorden: [{ woord: "demografisch dividend", uitleg: "Economische bonus van beter onderwijs + kleinere gezinnen + meer werkende vrouwen." }, { woord: "Malala", uitleg: "Pakistaans meisje (geb. 1997). Werd neergeschoten door Taliban (2012) omdat ze naar school ging. Won Nobelprijs Vrede 2014. Symbool meisjes-onderwijs." }],
@@ -740,9 +740,9 @@ const steps = [
       },
       {
         q: "Hoeveel mensen leefden in **extreme armoede** in 1990 vs 2020?",
-        options: ["1,9 mrd → ~700 mln (sterke daling)", "Geen verandering", "Toename", "Onbekend"],
+        options: ["Van 1,9 miljard naar ~700 miljoen", "Geen verandering", "Toename", "Van 1,9 miljard naar ~10 miljoen"],
         answer: 0,
-        wrongHints: [null, "Wel verandering.", "Tegendeel.", "Wel cijfers."],
+        wrongHints: [null, "Wel verandering.", "Tegendeel.", "Zo snel ging het niet — er zijn nog honderden miljoenen mensen extreem arm."],
         uitlegPad: {
           stappen: [{ titel: "Daling van 1,9 mrd naar 700 mln", tekst: "In 1990: 1,9 miljard mensen extreem arm (37% wereldbevolking). In 2020: ~700 miljoen (9%). DALING van 1,2 miljard mensen in 30 jaar. Grootste reductie in geschiedenis. Vooral door China (800 mln uit armoede) + India (~200 mln). Sub-Sahara Afrika blijft achter." }],
           woorden: [{ woord: "extreme armoede", uitleg: "Wereldbank: <$2,15/dag/persoon. Daaronder kun je niet in je basisbehoeften voorzien." }, { woord: "Wereldbank", uitleg: "Internationale organisatie die armoede meet + monitort." }],
@@ -754,9 +754,9 @@ const steps = [
       },
       {
         q: "Een **uitdaging** voor de toekomst is:",
-        options: ["Klimaatverandering — arme landen meest geraakt", "Te weinig technologie", "Geen ongelijkheid meer", "Geen problemen"],
+        options: ["Klimaatverandering", "Te weinig technologie", "Te snelle krimp van de bevolking in Afrika", "Een tekort aan landbouwgrond in Europa"],
         answer: 0,
-        wrongHints: [null, "Tech overal.", "Ongelijkheid bestaat.", "Wel uitdagingen."],
+        wrongHints: [null, "Tech overal.", "Afrika's bevolking groeit juist snel.", "Kijk naar wat arme landen het hardst raakt."],
         uitlegPad: {
           stappen: [{ titel: "Klimaat = #1 uitdaging", tekst: "Komende decennia grootste ontwikkelings-uitdaging: klimaatverandering. Treft arme landen MEER dan rijke (zie eerdere check). Droogtes Sahel, overstromingen Bangladesh, zeespiegel-stijging eilandstaten. Migratie-druk: 100+ miljoen klimaat-vluchtelingen verwacht 2050." }],
           woorden: [{ woord: "klimaat-vluchteling", uitleg: "Iemand die thuisland verlaat door klimaatschade (droogte, overstroming, zeespiegel)." }, { woord: "energietransitie", uitleg: "Overschakeling van fossiele brandstoffen (kolen/olie/gas) naar duurzame (zon/wind/water)." }],
@@ -768,9 +768,9 @@ const steps = [
       },
       {
         q: "Wat is een tip voor jouw **rol als toekomstige burger**?",
-        options: ["Levenslang leren + internationaal denken + bewuste keuzes", "Niet stemmen", "Niet werken", "Geen interesse"],
+        options: ["Levenslang leren + internationaal denken + bewuste keuzes", "Alleen op je eigen land letten", "Na je diploma stoppen met leren", "Altijd het goedkoopste kopen"],
         answer: 0,
-        wrongHints: [null, "Stemmen heeft impact.", "Werken levert bijdrage.", "Interesse helpt."],
+        wrongHints: [null, "Problemen als klimaat stoppen niet bij de grens.", "De wereld verandert snel — is één opleiding genoeg?", "Wat zeg je dan met je portemonnee?"],
         uitlegPad: {
           stappen: [{ titel: "3 vaardigheden voor 21e eeuw", tekst: "Voor de wereld van 2030-2080: (1) Levenslang leren — tech verandert te snel voor 1 opleiding-voor-leven. (2) Internationaal denken — problemen overschrijden grenzen (klimaat, AI, pandemie). (3) Bewuste keuzes — als consument, kiezer, professional." }],
           woorden: [{ woord: "levenslang leren", uitleg: "Nooit stoppen met nieuwe kennis opdoen. Nodig in snel veranderende wereld." }, { woord: "wereldburger", uitleg: "Iemand die zich verantwoordelijk voelt voor wereldwijde problemen, niet alleen eigen land." }],

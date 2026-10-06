@@ -151,7 +151,7 @@ const steps = [
       },
       {
         q: "Waarom kiezen veel **zzp'ers** voor een eenmanszaak?",
-        options: ["Snel, goedkoop op te richten (KvK, geen notaris) en startersvoordelen", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan naar de beurs kunnen", "Omdat een eenmanszaak geen belasting betaalt"],
+        options: ["Snel en goedkoop op te richten, met belastingvoordelen", "Omdat het hun privé-vermogen het best beschermt", "Omdat ze dan naar de beurs kunnen", "Omdat een eenmanszaak geen belasting betaalt"],
         answer: 0,
         wrongHints: [null, "Een eenmanszaak beschermt je privé-vermogen juist niet.", "Naar de beurs kan alleen een NV.", "Een eenmanszaak betaalt wél belasting (IB)."],
         uitlegPad: {
@@ -198,7 +198,7 @@ const steps = [
       },
       {
         q: "Een aandeelhouder van een BV wil zijn aandelen verkopen. Wat geldt meestal?",
-        options: ["Hij moet ze eerst aan de andere aandeelhouders aanbieden (blokkeringsregeling)", "Hij verkoopt ze direct op de beurs", "Hij mag ze aan een willekeurige vreemde verkopen zonder regels", "Hij mag ze nooit verkopen"],
+        options: ["Hij moet ze eerst aan de mede-aandeelhouders aanbieden", "Hij verkoopt ze direct op de beurs", "Hij mag ze aan een willekeurige vreemde verkopen zonder regels", "Hij mag ze nooit verkopen"],
         answer: 0,
         wrongHints: [null, "Een BV staat niet op de beurs.", "Bij een BV zijn aandelen juist niet vrij verhandelbaar.", "Verkopen mag wel — maar met regels."],
         uitlegPad: {
@@ -250,7 +250,7 @@ const steps = [
     checks: [
       {
         q: "Waarom heet een NV een **Naamloze** Vennootschap?",
-        options: ["De aandelen kunnen aan toonder zijn — de naam van de eigenaar hoeft niet vast te liggen", "Het bedrijf heeft geen naam", "Er werkt niemand met een naam", "De eigenaar blijft altijd geheim voor de Belastingdienst"],
+        options: ["De naam van de aandeelhouder hoeft niet vast te liggen", "Het bedrijf hoeft geen officiële naam te hebben", "Er werkt niemand met een naam", "De eigenaar blijft altijd geheim voor de Belastingdienst"],
         answer: 0,
         wrongHints: [null, "Een NV heeft natuurlijk gewoon een bedrijfsnaam (Heineken NV).", "Het gaat om de aandelen, niet om het personeel.", "Het slaat op de verhandelbaarheid van aandelen, niet op belasting ontwijken."],
         uitlegPad: {
@@ -264,7 +264,7 @@ const steps = [
       },
       {
         q: "Welk bedrijf is een typische **NV**?",
-        options: ["Een groot beursgenoteerd bedrijf zoals Heineken of ASML", "De plaatselijke tandartspraktijk", "Een eenmanszaak van een fietsenmaker", "Een marktkraam"],
+        options: ["Een groot bedrijf als ASML", "De plaatselijke tandartspraktijk", "Een eenmanszaak van een fietsenmaker", "Een marktkraam"],
         answer: 0,
         wrongHints: [null, "Een kleine praktijk is meestal een BV of eenmanszaak, niet beursgenoteerd.", "Een eenmanszaak is geen rechtspersoon met vrij verhandelbare aandelen.", "Een marktkraam is veel te klein voor een NV."],
         uitlegPad: {
@@ -278,7 +278,7 @@ const steps = [
       },
       {
         q: "Wat is de belangrijkste reden om voor een **NV** te kiezen in plaats van een BV?",
-        options: ["Veel kapitaal ophalen door aandelen aan een groot publiek te verkopen", "Geen belasting hoeven betalen", "Geen notaris nodig hebben", "De eigenaar privé aansprakelijk maken"],
+        options: ["Veel kapitaal ophalen bij een groot publiek", "Geen belasting hoeven betalen", "Geen notaris nodig hebben", "De eigenaar privé aansprakelijk maken"],
         answer: 0,
         wrongHints: [null, "Een NV betaalt net als een BV gewoon VPB.", "Ook een NV wordt via de notaris opgericht.", "Bij een NV is de aandeelhouder juist beperkt aansprakelijk, niet privé."],
         uitlegPad: {
