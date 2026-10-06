@@ -62,7 +62,7 @@ const steps = [
       },
       {
         q: "Wat is een **comparatief voordeel**?",
-        options: ["Elk land is RELATIEF goed in iets — handel loont", "Een land heeft meer mensen", "Goedkoopste producten", "Beste hoogleraren"],
+        options: ["Elk land is RELATIEF goed in iets — handel loont", "Een land heeft meer inwoners dan een ander", "Een land maakt alles het goedkoopst", "Een land heeft de beste hoogleraren"],
         answer: 0,
         wrongHints: [null, "Bevolking ≠ comparatief voordeel.", "Goedkoopste = absoluut voordeel.", "Onderwijs is factor, geen definitie."],
         uitlegPad: {
@@ -90,11 +90,11 @@ const steps = [
       },
       {
         q: "Waarom is NL een uitgesproken **handelsland**?",
-        options: ["Grote havens (Rotterdam) + Schiphol + ligging Europa", "Veel goud", "Laagste belasting wereldwijd", "Geen import nodig"],
+        options: ["Grote havens (Rotterdam) + Schiphol + ligging Europa", "Er wordt veel goud gevonden in NL", "NL heeft de laagste belasting ter wereld", "NL hoeft zelf niets te importeren"],
         answer: 0,
         wrongHints: [null, "Geen goud van betekenis.", "Belasting is normaal.", "NL importeert juist heel veel (olie!)."],
         uitlegPad: {
-          stappen: [{ titel: "Logistiek = sleutel", tekst: "Rotterdam = grootste haven Europa. Schiphol = top-5 vrachtluchthaven. NL ligt midden in Europa." }],
+          stappen: [{ titel: "Logistiek = sleutel", tekst: "Rotterdam = grootste haven Europa. Schiphol = een van de grootste vrachtluchthavens van Europa. NL ligt midden in Europa." }],
           woorden: [{ woord: "handelsland", uitleg: "Land waar veel handel doorheen gaat — niet per se eigen productie." }],
           theorie: "Geografie + infrastructuur maken NL aantrekkelijk als doorvoerland. ~50% van export = re-export (binnen-uit doorgevoerd).",
           voorbeelden: [{ type: "feit", tekst: "Rotterdam ~440 mln ton goederen/jaar. Bloemen Aalsmeer = wereldhandel." }],
@@ -104,7 +104,7 @@ const steps = [
       },
       {
         q: "Wat is **re-export**?",
-        options: ["Goederen komen NL binnen + gaan door naar ander land", "2x exporteren hetzelfde", "Export buiten Europa", "Belastingvoordeel"],
+        options: ["Goederen komen NL binnen + gaan door naar ander land", "Hetzelfde product twee keer exporteren", "Export naar landen buiten Europa", "Een belastingvoordeel voor exporteurs"],
         answer: 0,
         wrongHints: [null, "Niet '2x' — wel doorvoer.", "Niet beperkt buiten EU.", "Geen belasting — handelsstroom."],
         uitlegPad: {
@@ -118,7 +118,7 @@ const steps = [
       },
       {
         q: "Welk **risico** brengt internationale afhankelijkheid?",
-        options: ["Bij verstoring (corona, oorlog): tekort aan essentiële goederen (medicijnen, chips)", "Geen risico", "Lagere prijzen", "Meer toeristen"],
+        options: ["Tekorten bij verstoringen zoals corona of oorlog", "Er is helemaal geen risico", "De prijzen worden altijd lager", "Er komen meer toeristen"],
         answer: 0,
         wrongHints: [null, "Wel reëel risico.", "Onzeker.", "Niet relevant voor handel."],
         uitlegPad: {
@@ -156,7 +156,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **invoerheffing**?",
-        options: ["Belasting op importproducten aan de grens", "Een soort BTW", "Loonbelasting", "Subsidie"],
+        options: ["Belasting op importproducten aan de grens", "Een soort BTW op alle producten", "Belasting op je loon", "Geld van de overheid voor bedrijven"],
         answer: 0,
         wrongHints: [null, "Vergelijkbaar maar specifiek voor import.", "Niets met loon.", "Tegendeel."],
         uitlegPad: {
@@ -170,7 +170,7 @@ const steps = [
       },
       {
         q: "Wat is een **quotum**?",
-        options: ["Maximum aantal dat geïmporteerd mag worden", "Importbelasting", "Kwaliteitslabel", "Een handelsverdrag"],
+        options: ["Maximum aantal dat geïmporteerd mag worden", "Een belasting op importproducten", "Een label voor goede kwaliteit", "Een verdrag tussen twee landen"],
         answer: 0,
         wrongHints: [null, "Quotum = aantal, heffing = geld.", "Niet kwaliteit.", "Niet verdrag."],
         uitlegPad: {
@@ -184,7 +184,7 @@ const steps = [
       },
       {
         q: "Een **subsidie** voor eigen bedrijven:",
-        options: ["Maakt hun producten goedkoper, internationaal concurrerender", "Maakt ze duurder", "Heeft geen effect", "Verboden door WTO altijd"],
+        options: ["Maakt hun producten goedkoper, internationaal concurrerender", "Maakt hun producten duurder", "Heeft geen enkel effect op prijzen", "Is door de WTO altijd verboden"],
         answer: 0,
         wrongHints: [null, "Tegendeel.", "Wel groot effect.", "Niet altijd verboden — vaak geregeld."],
         uitlegPad: {
@@ -198,7 +198,7 @@ const steps = [
       },
       {
         q: "Welke organisatie regelt globale handelsregels?",
-        options: ["WTO (World Trade Organization)", "EU", "VN", "ECB"],
+        options: ["WTO (Wereldhandelsorganisatie)", "EU (Europese Unie)", "VN (Verenigde Naties)", "ECB (Europese Centrale Bank)"],
         answer: 0,
         wrongHints: [null, "EU = regionaal.", "VN = breder, niet handel-specifiek.", "ECB = euro."],
         uitlegPad: {
@@ -226,7 +226,7 @@ const steps = [
       },
       {
         q: "Voor- en nadeel protectionisme:",
-        options: ["VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument", "Alleen voordelen", "Alleen nadelen", "Geen effect"],
+        options: ["VOORDEEL: eigen banen beschermd. NADEEL: duurder voor consument", "Alleen voordelen, geen nadelen", "Alleen nadelen, geen voordelen", "Geen effect op banen of prijzen"],
         answer: 0,
         wrongHints: [null, "Beide kanten zijn er.", "Beide kanten zijn er.", "Wel groot effect."],
         uitlegPad: {
@@ -300,7 +300,7 @@ const steps = [
       },
       {
         q: "Wat is de **Europese Commissie**?",
-        options: ["'Regering' van de EU — maakt voorstellen, voert beleid uit", "Het parlement", "De rechter", "De centrale bank"],
+        options: ["'Regering' van de EU — maakt voorstellen, voert beleid uit", "Het parlement dat door burgers gekozen wordt", "De rechter die over EU-wetten beslist", "De centrale bank die over de euro gaat"],
         answer: 0,
         wrongHints: [null, "Parlement is iets anders.", "Hof van Justitie.", "ECB is centrale bank."],
         uitlegPad: {
@@ -314,7 +314,7 @@ const steps = [
       },
       {
         q: "Wat was **Brexit**?",
-        options: ["UK verliet de EU (2020)", "UK trad toe", "Een nieuw land in EU", "Een handelsverdrag"],
+        options: ["UK verliet de EU", "UK trad toe tot de EU", "Een nieuw land kwam bij de EU", "Een nieuw handelsverdrag"],
         answer: 0,
         wrongHints: [null, "Tegendeel.", "Niet nieuw land.", "Geen verdrag — vertrek."],
         uitlegPad: {
@@ -328,13 +328,13 @@ const steps = [
       },
       {
         q: "Voordeel **euro voor toerist**:",
-        options: ["Geen wisselkosten of -koersrisico in eurozone", "Hogere prijzen in andere landen", "Lagere belasting", "Gratis hotelkamer"],
+        options: ["Geen wisselkosten of -koersrisico in eurozone", "Hogere prijzen in andere eurolanden", "Lagere belasting op je vakantie", "Gratis hotelkamers in eurolanden"],
         answer: 0,
         wrongHints: [null, "Niet door euro.", "Niet door munteenheid.", "Vakantie kost geld."],
         uitlegPad: {
           stappen: [{ titel: "Geen wissel = geen kosten", tekst: "Met euro hoef je in 21 landen niets te wisselen — geen kosten, geen koersrisico." }],
           woorden: [{ woord: "wisselkosten", uitleg: "Bank/wisselkantoor neemt commissie + slechtere koers." }],
-          theorie: "Vóór euro (1999): toerist NL→IT moest guldens → lires wisselen, kostte 5-10%. Nu: zelfde euro overal in eurozone.",
+          theorie: "Vóór de euro (tot 2002): toerist NL→IT moest guldens → lires wisselen, kostte 5-10%. Nu: zelfde euro overal in eurozone.",
           voorbeelden: [{ type: "praktijk", tekst: "Vakantie Spanje: euro in portemonnee werkt direct, geen extra kosten." }],
           basiskennis: [{ onderwerp: "Buiten eurozone", uitleg: "Buiten eurozone (UK, Polen, US, Thailand) wel wisselen nodig." }],
           niveaus: { basis: "Geen wisselkosten.", simpeler: "Met euro hoef je in 21 EU-landen niet te wisselen — bespaart kosten + koersrisico.", nogSimpeler: "Geen wissel" },
@@ -364,7 +364,7 @@ const steps = [
         q: "Koers **€1 = $1,10**. Je wilt **$220** kopen. Hoeveel euro nodig?",
         options: ["€200", "€220", "€242", "€110"],
         answer: 0,
-        wrongHints: [null, "1 euro = $1,10. Reken $220 / 1,10.", "Te veel.", "Onjuist."],
+        wrongHints: [null, "Een euro is méér waard dan een dollar. Heb je dan meer of minder euro's nodig dan dollars?", "Te veel.", "Onjuist."],
         uitlegPad: {
           stappen: [{ titel: "Delen door koers", tekst: "$220 ÷ $1,10 per euro = €200." }],
           woorden: [{ woord: "wisselkoers", uitleg: "Prijs van valuta in andere valuta. €1 = $1,10 betekent: voor 1 euro krijg je $1,10." }],
@@ -376,7 +376,7 @@ const steps = [
       },
       {
         q: "De euro is **sterk** geworden. Effect voor NL-exporteur?",
-        options: ["Exporteren naar VS wordt duurder voor Amerikanen", "Goedkoper", "Geen effect", "Fabriek sluiten"],
+        options: ["Exporteren naar VS wordt duurder voor Amerikanen", "Exporteren naar VS wordt goedkoper voor Amerikanen", "Geen effect op de export", "De fabriek moet meteen sluiten"],
         answer: 0,
         wrongHints: [null, "Andersom.", "Wel effect.", "Te extreme conclusie."],
         uitlegPad: {
@@ -404,7 +404,7 @@ const steps = [
       },
       {
         q: "Wat is een **'safe haven'-valuta**?",
-        options: ["Valuta waar mensen naar vluchten in onzekere tijden (CHF, USD)", "Goedkoopste valuta", "Nieuwste valuta", "Crypto-valuta"],
+        options: ["Valuta waar mensen naar vluchten in onzekere tijden", "De goedkoopste valuta van de wereld", "De nieuwste valuta van de wereld", "Een cryptovaluta zoals bitcoin"],
         answer: 0,
         wrongHints: [null, "Niet over prijs.", "Niet over leeftijd.", "Crypto is iets anders."],
         uitlegPad: {
@@ -418,7 +418,7 @@ const steps = [
       },
       {
         q: "Voor een **toerist**: waar wisselen meestal slechtste koers?",
-        options: ["Op de luchthaven (commissie + slechte koers)", "Bij pinnen ter plaatse", "Bij eigen bank vooraf", "Online"],
+        options: ["Bij een wisselkantoor op de luchthaven", "Bij pinnen ter plaatse", "Bij je eigen bank vooraf", "Online bij je bank"],
         answer: 0,
         wrongHints: [null, "Pinnen geeft betere koers.", "Eigen bank ook redelijk.", "Online vaak goed."],
         uitlegPad: {
@@ -432,7 +432,7 @@ const steps = [
       },
       {
         q: "Wat is een **vrije zwevende koers**?",
-        options: ["Markt bepaalt — overheid grijpt niet in", "Overheid bepaalt vast", "Geen koers", "Crypto"],
+        options: ["Markt bepaalt — overheid grijpt niet in", "Overheid zet de koers vast", "Er is helemaal geen koers", "Een koers voor cryptovaluta"],
         answer: 0,
         wrongHints: [null, "Als de overheid de koers vastzet, heet dat een vaste koers.", "Wel een koers.", "Iets anders."],
         uitlegPad: {
@@ -467,7 +467,7 @@ const steps = [
     checks: [
       {
         q: "Wat is **globalisering**?",
-        options: ["Wereld wordt steeds meer verbonden — handel, communicatie, reizen", "Een handelsverdrag", "Belasting wereldwijd", "Eén regering"],
+        options: ["Wereld wordt steeds meer verbonden — handel, communicatie, reizen", "Een handelsverdrag tussen twee landen", "Een belasting die wereldwijd geldt", "Eén regering voor de hele wereld"],
         answer: 0,
         wrongHints: [null, "Specifieker dan dat.", "Niet specifiek belasting.", "Niet 1 regering."],
         uitlegPad: {
@@ -481,9 +481,9 @@ const steps = [
       },
       {
         q: "Een Nederlandse **multinational** is bv:",
-        options: ["Shell, ASML, Heineken, Unilever", "Albert Heijn alleen", "Bakker bij jou op de hoek", "Provinciale overheid"],
+        options: ["Shell, ASML, Heineken, Unilever", "Een webwinkel die alleen in NL verkoopt", "Bakker bij jou op de hoek", "Provinciale overheid"],
         answer: 0,
-        wrongHints: [null, "AH is binnenlands.", "Niet internationaal.", "Geen bedrijf."],
+        wrongHints: [null, "Niet internationaal — alleen in NL.", "Niet internationaal.", "Geen bedrijf."],
         uitlegPad: {
           stappen: [{ titel: "Vestigingen wereldwijd", tekst: "NL multinationals: Shell (energie), ASML (chips), Heineken (bier), Unilever (voedsel/huishouden)." }],
           woorden: [{ woord: "multinational", uitleg: "Bedrijf met vestigingen in meerdere landen." }],
@@ -495,7 +495,7 @@ const steps = [
       },
       {
         q: "Wie is een **verliezer** van globalisering?",
-        options: ["Westerse fabrieksarbeider — banen weg naar lage-loon-landen", "Multinationals", "Consument", "Hoogopgeleide werkers"],
+        options: ["Westerse fabrieksarbeider — banen weg naar lage-loon-landen", "Multinationals die wereldwijd verkopen", "Consumenten die goedkoper kunnen kopen", "Hoogopgeleiden die wereldwijd kunnen werken"],
         answer: 0,
         wrongHints: [null, "Winnaar.", "Winnaar (goedkope producten).", "Vaak winnaar."],
         uitlegPad: {
@@ -523,7 +523,7 @@ const steps = [
       },
       {
         q: "**Containers** waren cruciaal voor globalisering omdat:",
-        options: ["Gestandaardiseerd → veel goederen snel + goedkoop transporteren", "Mooi", "Klein en licht", "Verboden"],
+        options: ["Gestandaardiseerd → veel goederen snel + goedkoop transporteren", "Ze zien er mooi uit in de haven", "Ze zijn klein en licht", "Ze waren in veel landen verboden"],
         answer: 0,
         wrongHints: [null, "Uiterlijk maakt voor transport niets uit.", "Containers zijn juist groot en zwaar — waar zit het voordeel dan?", "Niet verboden."],
         uitlegPad: {
@@ -537,7 +537,7 @@ const steps = [
       },
       {
         q: "Klimaat en globalisering:",
-        options: ["Veel CO2 door transport + productie verplaatst naar landen met lakse regels", "Geen effect", "Globalisering helpt klimaat altijd", "Klimaat is geen issue"],
+        options: ["Veel CO2 door transport + productie verplaatst naar landen met lakse regels", "Globalisering heeft geen effect op het klimaat", "Globalisering helpt het klimaat altijd", "Klimaat speelt bij handel geen enkele rol"],
         answer: 0,
         wrongHints: [null, "Wel groot effect.", "Vaak negatief.", "Wel issue."],
         uitlegPad: {
@@ -572,7 +572,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **multinational**?",
-        options: ["Bedrijf met vestigingen in meerdere landen", "Een soort belasting", "Een land", "Een vakbond"],
+        options: ["Bedrijf met vestigingen in meerdere landen", "Een soort belasting op handel", "Een land met veel inwoners", "Een vakbond voor werknemers"],
         answer: 0,
         wrongHints: [null, "Niet belasting.", "Niet land.", "Niet vakbond."],
         uitlegPad: {
@@ -600,7 +600,7 @@ const steps = [
       },
       {
         q: "Een **voordeel** van multinationals voor NL:",
-        options: ["Banen + belastingopbrengst + innovatie", "Geen voordeel", "Alleen voor rijken", "Alleen voor arme landen"],
+        options: ["Banen + belastingopbrengst + innovatie", "Er is geen enkel voordeel", "Alleen voordeel voor rijke mensen", "Alleen voordeel voor arme landen"],
         answer: 0,
         wrongHints: [null, "Wel voordelen.", "Banen voor iedereen.", "Voor NL ook."],
         uitlegPad: {
@@ -614,7 +614,7 @@ const steps = [
       },
       {
         q: "Een **nadeel** van multinationals:",
-        options: ["Belastingontwijking via internationale structuren", "Te veel banen", "Te veel innovatie", "Geen nadeel"],
+        options: ["Belastingontwijking via internationale structuren", "Ze zorgen voor te veel banen", "Ze doen te veel aan innovatie", "Er zijn helemaal geen nadelen"],
         answer: 0,
         wrongHints: [null, "Banen zijn goed.", "Innovatie is goed.", "Wel nadelen."],
         uitlegPad: {
@@ -628,7 +628,7 @@ const steps = [
       },
       {
         q: "**ASML** is bekend om:",
-        options: ["Chipmachines (monopolie EUV-technologie)", "Auto's", "Bier", "Voedsel"],
+        options: ["Chipmachines", "Auto's", "Bier", "Voedsel"],
         answer: 0,
         wrongHints: [null, "Niet auto's.", "Heineken = bier.", "Unilever = voedsel."],
         uitlegPad: {
@@ -679,7 +679,7 @@ const steps = [
     checks: [
       {
         q: "Wat doet de **ECB**?",
-        options: ["Beheert de euro: rente, geldhoeveelheid, inflatie", "Belasting innen", "Wetten maken", "Ontwikkelingshulp"],
+        options: ["Beheert de euro: rente, geldhoeveelheid, inflatie", "Belasting innen in de eurolanden", "Wetten maken voor de EU", "Ontwikkelingshulp geven aan arme landen"],
         answer: 0,
         wrongHints: [null, "Belastingdienst.", "Parlement.", "Andere organisaties."],
         uitlegPad: {
@@ -693,7 +693,7 @@ const steps = [
       },
       {
         q: "Wat is het **inflatiedoel** van de ECB?",
-        options: ["~2%", "0%", "5%", "10%"],
+        options: ["2%", "0%", "5%", "10%"],
         answer: 0,
         wrongHints: [null, "Te krap.", "Te hoog.", "Hyperinflatie-niveau."],
         uitlegPad: {
@@ -707,7 +707,7 @@ const steps = [
       },
       {
         q: "ECB **verhoogt rente**. Wat is meestal de reden?",
-        options: ["Hoge inflatie bestrijden", "Recessie", "Toerisme bevorderen", "Verkiezingen"],
+        options: ["Hoge inflatie bestrijden", "Een recessie bestrijden", "Toerisme bevorderen", "Verkiezingen winnen"],
         answer: 0,
         wrongHints: [null, "Tegendeel — bij recessie verlaagt.", "Niets met toerisme.", "ECB is onafhankelijk van verkiezingen."],
         uitlegPad: {
@@ -721,7 +721,7 @@ const steps = [
       },
       {
         q: "Wat is **QE (Quantitative Easing)**?",
-        options: ["Veel geld bijdrukken om economie te helpen", "Belasting verhogen", "Banken sluiten", "Spaargeld in beslag"],
+        options: ["Veel geld bijdrukken om economie te helpen", "Belastingen flink verhogen", "Banken laten sluiten", "Spaargeld in beslag nemen"],
         answer: 0,
         wrongHints: [null, "Geen belasting.", "Tegendeel.", "Niet wat het is."],
         uitlegPad: {
@@ -735,7 +735,7 @@ const steps = [
       },
       {
         q: "Effect ECB-rente OMHOOG voor jouw **spaarrekening**:",
-        options: ["Bank betaalt jou meestal meer rente", "Minder rente", "Geen effect", "Spaargeld weg"],
+        options: ["Bank betaalt jou meestal meer rente", "Bank betaalt jou meestal minder rente", "Geen effect op je spaarrente", "Je spaargeld verdwijnt"],
         answer: 0,
         wrongHints: [null, "Tegendeel.", "Wel effect.", "Niet 'weg'."],
         uitlegPad: {
@@ -749,7 +749,7 @@ const steps = [
       },
       {
         q: "Waarom is de ECB **onafhankelijk** van politici?",
-        options: ["Politici willen rente vaak verlagen voor verkiezingen, ten koste van inflatie", "ECB hoort dat zo", "Toeval", "Politici weten te veel"],
+        options: ["Politici willen rente vaak verlagen voor verkiezingen, ten koste van inflatie", "Omdat de ECB dat zelf zo wil", "Dat is gewoon toeval", "Omdat politici te veel weten"],
         answer: 0,
         wrongHints: [null, "Wel een reden.", "Geen toeval.", "Onzin."],
         uitlegPad: {

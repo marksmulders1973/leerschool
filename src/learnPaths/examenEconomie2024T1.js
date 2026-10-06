@@ -51,7 +51,7 @@ const steps = [
         ],
         answer: 2,
         wrongHints: [
-          "Niet elk EU-land gebruikt de euro. Zweden hoort er niet bij — denk waarom.",
+          "Niet elk EU-land gebruikt de euro. Met welk geld betaal je in een Zweedse winkel?",
           "Kun je in een Zweedse winkel wettig met euro's betalen? Welke munt gebruikt Zweden?",
           null,
           "Is de euro in Zweden eigenlijk wel een wettig betaalmiddel?",
@@ -87,7 +87,7 @@ const steps = [
             { onderwerp: "Wat is een wisselkoers?", uitleg: "De waarde van vreemde valuta in eigen geld. Bv. €1 = 11 SEK = ~$1,08 (2024)." },
           ],
           niveaus: {
-            basis: "Zweden is EU maar geen EMU → eigen munt = kroon → antwoord C.",
+            basis: "Zweden is EU maar geen EMU → eigen munt = kroon.",
             simpeler: "Niet elk EU-land heeft de euro. Zweden was er bij vanaf 1995 (EU) maar wilde de eigen kroon houden. Een land heeft 1 wettig betaalmiddel — Zweden = kroon, geen euro.",
             nogSimpeler: "Zweden = EU + kroon, geen euro.",
           },
@@ -232,7 +232,7 @@ const steps = [
           null,
           "Meer inkomsten bij gelijke uitgaven maakt een tekort juist kleiner. Is dat een reden dat de schuld blijft stijgen?",
         ],
-        explanation: "Staatsschuld stijgt als de overheid jaar na jaar méér uitgeeft dan ze binnenkrijgt (begrotingstekort). Dat tekort moet bijgeleend worden — dus de schuld groeit. Italië heeft al jaren een groot tekort + hoge schuld (~140% BBP, ver boven de EMU-norm van 60%).",
+        explanation: "Staatsschuld stijgt als de overheid jaar na jaar méér uitgeeft dan ze binnenkrijgt (begrotingstekort). Dat tekort moet bijgeleend worden — dus de schuld groeit. Italië heeft al jaren een groot tekort + hoge schuld (~135% BBP, ver boven de EMU-norm van 60%).",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2024 tijdvak 1, vraag 30",
         leerpadLink: { id: "pincode-overheid", title: "De overheid" },
         voorkennisKeten: [
@@ -303,7 +303,7 @@ const steps = [
           stappen: [
             { titel: "Welke 3 soorten uitgaven onderscheiden we?", tekst: "(1) Vaste lasten = elke maand hetzelfde (huur, abo's). (2) Dagelijkse huishoudelijke = wisselend per dag (boodschappen). (3) Incidenteel = onverwacht (fiets kapot, dokter)." },
             { titel: "Wat zegt het Nibud-citaat?", tekst: "'Reparatie van de fiets' = INCIDENTEEL. 'Lunch en koffie' = DAGELIJKS HUISHOUDELIJK." },
-            { titel: "Loop opties langs", tekst: "Vaste lasten worden NIET genoemd in het citaat. Dus opties C en D vallen af. Optie B: incidenteel + dagelijks huishoudelijk = past." },
+            { titel: "Loop opties langs", tekst: "Vaste lasten worden NIET genoemd in het citaat. Dus de opties met vaste lasten vallen af. Incidenteel + dagelijks huishoudelijk = past." },
           ],
           woorden: [
             { woord: "vaste lasten", uitleg: "Uitgaven die elke maand HETZELFDE bedrag zijn: huur, zorgverzekering, abonnementen. Bekend, dus zelden vergeten." },
@@ -344,8 +344,8 @@ const steps = [
         ],
         answer: 2,
         wrongHints: [
-          "Conjunctureel = door slechte economie / recessie. Hier verdwijnen bedrijven structureel.",
-          "Conjunctureel = door slechte economie. Hier is het structureel.",
+          "Conjunctureel = door slechte economie / recessie. Is het vertrek van bedrijven naar het buitenland tijdelijk?",
+          "Conjunctureel = door een tijdelijke dip. Komen deze banen terug als de economie weer aantrekt?",
           null,
           "Bedrijven die vertrekken = minder productie in NL. Gaat dat over de vraagkant of de aanbodkant van de economie?",
         ],

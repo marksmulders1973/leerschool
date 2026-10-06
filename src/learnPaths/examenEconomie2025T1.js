@@ -90,7 +90,7 @@ const steps = [
           stappen: [
             { titel: "Wat moet je vergelijken?", tekst: "In de tabel: 'waarde export' vs 'waarde import' per jaar (2010, 2016, 2017)." },
             { titel: "Reken per jaar", tekst: "2010: export 854 vs import 847 → export HOGER. 2016: 1.046 vs 1.014 → export HOGER. 2017: 835 vs 921 → import HOGER." },
-            { titel: "Welke optie past?", tekst: "Optie C zegt 'in 2017 export lager dan import' = correct ✓. Andere opties spreken de tabel tegen." },
+            { titel: "Welke optie past?", tekst: "De optie 'in 2017 export lager dan import' = correct ✓. Andere opties spreken de tabel tegen." },
           ],
           woorden: [
             { woord: "export", uitleg: "Goederen + diensten die een land VERKOOPT aan buitenland → geld komt binnen." },
@@ -106,7 +106,7 @@ const steps = [
             { onderwerp: "Tabel-lezen", uitleg: "Bovenste rij = kolom-koppen (jaren). Linker kolom = rij-titels. Snijpunt = de waarde." },
           ],
           niveaus: {
-            basis: "2017: export 835 < import 921 → C.",
+            basis: "2017: export 835 < import 921 → export lager dan import.",
             simpeler: "Vergelijk in elk jaar export en import. 2017 is het enige jaar waar import hoger was — daar valt Sint-Maarten in een tekort.",
             nogSimpeler: "Alleen 2017: export < import",
           },
@@ -545,9 +545,9 @@ const steps = [
           null,
           "Tegendeel — als besparing lager was dan rente, zou sparen juist beter zijn.",
           "Germaine zegt iets over het terugverdienen via energie-besparing, niet vergelijking lening vs warmtepomp-prijs.",
-          "Net als C — niet de kern van Germaines redenering.",
+          "Net als bij de andere lening-optie: dit is niet de kern van Germaines redenering.",
         ],
-        explanation: "Germaines redenering: spaarrente is laag → een investering die jaarlijks méér bespaart dan die rente, levert per saldo meer op. Antwoord A vat dat precies samen: besparing energie > rente op spaargeld.",
+        explanation: "Germaines redenering: spaarrente is laag → een investering die jaarlijks méér bespaart dan die rente, levert per saldo meer op. De juiste optie vat dat precies samen: besparing energie > rente op spaargeld.",
         examenBron: "🎓 Echt examen VMBO-GL/TL 2025 tijdvak 1, vraag 37",
         leerpadLink: { id: "pincode-geld-sparen-lenen", title: "Geld, sparen en lenen" },
         voorkennisKeten: [

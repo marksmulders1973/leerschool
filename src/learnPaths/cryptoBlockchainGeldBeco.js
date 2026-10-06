@@ -22,7 +22,7 @@ const steps = [
     checks: [
       {
         q: "Waarom is een briefje van €10 echt iets waard?",
-        options: ["Omdat we met z'n allen afspreken en vertrouwen dat het 10 euro waard is", "Omdat het papier zelf 10 euro kost", "Omdat er goud in het briefje zit", "Omdat de winkel het briefje maakt"],
+        options: ["Omdat we met z'n allen afspreken en vertrouwen dat het 10 euro waard is", "Omdat het papier en de inkt samen 10 euro kosten", "Omdat er een klein beetje goud in het briefje zit", "Omdat de winkel het briefje zelf maakt en goedkeurt"],
         answer: 0,
         wrongHints: [null, "Een briefje maken kost maar een paar cent.", "Er zit geen goud in een bankbiljet.", "Winkels maken geen geld."],
         uitlegPad: {
@@ -45,7 +45,7 @@ const steps = [
     checks: [
       {
         q: "Er komt heel veel extra geld bij, maar er zijn niet meer spullen te koop. Wat gebeurt er meestal?",
-        options: ["De prijzen stijgen: alles wordt duurder (inflatie)", "Alles wordt goedkoper", "Er verandert helemaal niets", "Iedereen wordt er echt rijker van"],
+        options: ["De prijzen stijgen: alles wordt duurder", "Alles wordt goedkoper", "Er verandert helemaal niets", "Iedereen wordt er echt rijker van"],
         answer: 0,
         wrongHints: [null, "Meer geld op dezelfde spullen duwt prijzen juist omhoog.", "Er gebeurt wel degelijk iets met de prijzen.", "Als alles duurder wordt, koop je per euro juist minder."],
         uitlegPad: {
@@ -68,7 +68,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een belangrijk verschil tussen crypto (zoals Bitcoin) en het geld op je bankrekening?",
-        options: ["Crypto wordt niet door een bank/overheid beheerd, maar door een netwerk van computers", "Crypto is gemaakt van speciaal papier", "Crypto werkt alleen in Nederland", "Crypto is precies hetzelfde als sparen bij de bank"],
+        options: ["Crypto wordt niet door een bank/overheid beheerd, maar door een netwerk van computers", "Crypto is gemaakt van speciaal papier met een geheime code erop", "Crypto werkt alleen in Nederland en niet in andere landen", "Crypto is precies hetzelfde als sparen bij de bank"],
         answer: 0,
         wrongHints: [null, "Crypto is digitaal, er is geen papieren vorm.", "Een wereldwijd netwerk kent geen landsgrenzen.", "Bij de bank is er juist wél een bank die de baas is."],
         uitlegPad: {
@@ -91,7 +91,7 @@ const steps = [
     checks: [
       {
         q: "Waarom is het zo moeilijk om vals te spelen met een blockchain?",
-        options: ["Heel veel computers houden dezelfde kopie bij, dus geknoei valt meteen op", "Er staat een echte bewaker naast de computer", "De overheid keurt elke betaling eerst goed", "Je hebt er een wachtwoord van de bank voor nodig"],
+        options: ["Heel veel computers houden dezelfde kopie bij, dus geknoei valt meteen op", "Er staat een echte bewaker naast elke computer die meekijkt", "De overheid keurt elke betaling eerst goed voordat hij doorgaat", "Je hebt er een wachtwoord van de bank voor nodig"],
         answer: 0,
         wrongHints: [null, "Het is geen fysieke bewaking, maar heel veel kopieën.", "Juist de overheid is er níét de baas over.", "Er komt geen bank aan te pas."],
         uitlegPad: {
