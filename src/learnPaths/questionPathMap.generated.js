@@ -6635,15 +6635,15 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tabellen-grafieken",
     "stepIdx": 0
   },
-  "Bekijk de voetbalstand. Welk team staat bovenaan?": {
-    "pathId": "sterren-planeten",
+  "Bekijk de competitiestand. Hoe vaak speelde Dynamo gelijk?": {
+    "pathId": "tafels-po",
     "stepIdx": 0
   },
   "Hoeveel regendagen zijn er die week volgens de weersvoorspelling?": {
     "pathId": "kalender-rekenen-po",
     "stepIdx": 0
   },
-  "Bekijk de tabel. Hoeveel stickers heeft Pieter meer dan Sara?": {
+  "Bekijk de tabel. Hoeveel stickerkaarten heeft Pieter meer dan Sara?": {
     "pathId": "tabellen-grafieken",
     "stepIdx": 0
   },
@@ -6723,33 +6723,33 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tabellen-grafieken",
     "stepIdx": 3
   },
-  "Bekijk het cirkeldiagram. Hoeveel procent van de schooltijd gaat naar Rekenen?": {
+  "Bekijk het cirkeldiagram. Hoeveel procent van de schooltijd gaat naar Taal en Lezen samen?": {
     "pathId": "procenten-po",
-    "stepIdx": 2
+    "stepIdx": 4
   },
   "Bekijk het cirkeldiagram. Er zijn 20 leerlingen in de klas. Hoeveel hebben een kat?": {
     "pathId": "tabellen-grafieken",
     "stepIdx": 4
   },
   "Bekijk het cirkeldiagram. Welk seizoen is het populairst?": {
-    "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 6
+    "pathId": "grafieken-lezen-po",
+    "stepIdx": 3
   },
-  "Bekijk het cirkeldiagram. Hoeveel procent fietst naar school?": {
+  "Bekijk het cirkeldiagram. Op deze school zitten 200 leerlingen. Hoeveel van hen gaan met de bus naar school?": {
+    "pathId": "tabellen-grafieken",
+    "stepIdx": 4
+  },
+  "Bekijk het cirkeldiagram. Welk deel van het aardoppervlak is ongeveer bedekt met water?": {
+    "pathId": "grafieken-lezen-po",
+    "stepIdx": 3
+  },
+  "Bekijk het cirkeldiagram. Hoeveel procent is NIET tegen huiswerk?": {
     "pathId": "procenten-po",
     "stepIdx": 1
   },
-  "Bekijk het cirkeldiagram. Hoeveel procent van de aarde is bedekt met water?": {
-    "pathId": "procenten-po",
-    "stepIdx": 1
-  },
-  "Bekijk het cirkeldiagram. Hoeveel procent is TEGEN huiswerk?": {
-    "pathId": "procenten-po",
-    "stepIdx": 1
-  },
-  "Bekijk de tijdlijn. In welk jaar werd Nederland bevrijd?": {
+  "Bekijk de tijdlijn. Hoeveel jaar was Nederland bezet?": {
     "pathId": "kalender-rekenen-po",
-    "stepIdx": 0
+    "stepIdx": 2
   },
   "Bekijk de tijdlijn. Hoe oud was Anne Frank toen ze zich verstopte?": {
     "pathId": "tijdvakken-nederland-po",
@@ -6763,15 +6763,15 @@ export const QUESTION_PATH_MAP = {
     "pathId": "tijdvakken-nederland-po",
     "stepIdx": 4
   },
-  "Bekijk de tijdlijn. Hoe oud was hij toen zijn eerste kind werd geboren?": {
+  "Bekijk de tijdlijn van het leven van een man. Hoe oud was hij toen zijn eerste kind werd geboren?": {
     "pathId": "kalender-rekenen-po",
     "stepIdx": 2
   },
-  "Bekijk de kaartlegenda. Welk symbool staat voor een ziekenhuis?": {
-    "pathId": "negatieve-getallen-po",
+  "Bekijk de kaart en de legenda. Hoeveel ziekenhuizen staan er op de kaart?": {
+    "pathId": "kaartlezen-po",
     "stepIdx": 3
   },
-  "Bekijk de stadskaart. Hoeveel metrostops zijn er van Station Noord naar het Ziekenhuis?": {
+  "Bekijk de metrokaart. Je stapt in bij Station Noord. Bij de hoeveelste halte stap je uit voor het Ziekenhuis?": {
     "pathId": "kaartlezen-po",
     "stepIdx": 0
   },
@@ -6780,8 +6780,8 @@ export const QUESTION_PATH_MAP = {
     "stepIdx": 0
   },
   "Bekijk de hoogtekaart. Welk punt ligt het hoogst?": {
-    "pathId": "verhoudingen-po",
-    "stepIdx": 4
+    "pathId": "interpunctie-po",
+    "stepIdx": 2
   },
   "Bekijk het rooster. Welk vak heeft Anna op woensdag in het 3e uur?": {
     "pathId": "tijdsduur-rekenen-po",
@@ -6835,9 +6835,9 @@ export const QUESTION_PATH_MAP = {
     "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 4
   },
-  "220.009 − 6.099 − 4.987 ≈ ?": {
-    "pathId": "rekenen-tot-20-nieuwkomers",
-    "stepIdx": 0
+  "220.009 − 6.099 − 4.987 ≈ ? (rond af op duizendtallen)": {
+    "pathId": "schatten-afronden",
+    "stepIdx": 1
   },
   "Een fietspad heeft een oppervlakte van 6.000 m² en een breedte van 4 m. Hoe lang is het pad?": {
     "pathId": "vlakke-figuren-po",
@@ -6875,7 +6875,7 @@ export const QUESTION_PATH_MAP = {
     "pathId": "klokkijken",
     "stepIdx": 2
   },
-  "De afstand tussen 2 bruggen is op een kaart 4 cm. De schaal is 1:200.000. Hoeveel km?": {
+  "De afstand tussen 2 bruggen is op een kaart 4 cm. De schaal is 1:200.000. Hoeveel km is dat in werkelijkheid?": {
     "pathId": "maten-omtrek-oppervlakte-po",
     "stepIdx": 0
   },
@@ -6921,7 +6921,7 @@ export const QUESTION_PATH_MAP = {
   },
   "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWat is de hoofdgedachte van deze tekst?": {
     "pathId": "dieren-seizoenen-natuur",
-    "stepIdx": 9
+    "stepIdx": 0
   },
   "Lees de tekst:\n\n\"Plastic soep is een verzamelnaam voor kleine stukjes plastic die in zee drijven. Elk jaar belanden miljoenen tonnen plastic in de oceanen. Dit plastic breekt af tot steeds kleinere stukjes, maar verdwijnt nooit volledig. Vissen en vogels eten de deeltjes, waarna het plastic ook in de voedselketen van de mens terechtkomt. Wetenschappers zoeken naar oplossingen, maar zijn het er niet over eens of opruimen of voorkomen van nieuw plastic de beste aanpak is.\"\n\nWaarom is plastic soep gevaarlijk voor mensen?": {
     "pathId": "dieren-seizoenen-natuur",
