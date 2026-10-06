@@ -78,7 +78,7 @@ const steps = [
         answer: 0,
         wrongHints: [
           null,
-          "Beschrijvend zegt hoe iets *is*. Hier wordt gezegd hoe iets *zou moeten* zijn.",
+          "Beschrijvend zegt hoe iets *is*. Wat doet deze zin: iets beschrijven, of iets anders?",
           "Waarderend gaat over hoe goed/mooi iets is. Hier gaat het over een actie die ondernomen moet worden.",
           "Het bevat een mening (\"moet\") — geen toetsbaar feit. Wat zegt deze zin over wat er zou moeten gebeuren?",
         ],
@@ -467,7 +467,7 @@ const steps = [
       {
         q: "*\"Studenten moeten een gratis OV-kaart krijgen. Dat is goed voor het milieu, het bespaart studenten geld én het zorgt dat ze breder kunnen studeren.\"* — Welke structuur?",
         options: [
-          "Nevenschikkend (3 gelijkwaardige argumenten)",
+          "Nevenschikkend",
           "Enkelvoudig",
           "Onderschikkend",
           "Geen argumentatie",
@@ -508,7 +508,7 @@ const steps = [
       {
         q: "*\"Vaccinatie moet verplicht zijn, want het beschermt kwetsbare mensen. Kwetsbare mensen lopen extra risico, want hun afweersysteem is zwakker.\"* — Welke structuur?",
         options: [
-          "Onderschikkend (subargument ondersteunt argument)",
+          "Onderschikkend",
           "Nevenschikkend",
           "Enkelvoudig",
           "Geen argumentatie",
@@ -550,7 +550,7 @@ const steps = [
       {
         q: "Wat is het verschil tussen een drogreden en een zwak argument?",
         options: [
-          "Een zwak argument is wél een argument, een drogreden niet (de redenering deugt niet).",
+          "Bij een drogreden deugt de redenering zelf niet.",
           "Een drogreden is altijd een leugen.",
           "Er is geen verschil.",
           "Een drogreden komt alleen voor in reclames.",
@@ -595,7 +595,7 @@ const steps = [
       {
         q: "*\"Mevrouw De Vries pleit voor strengere milieuregels, maar zij vliegt zelf elk jaar naar Bali. Daar kun je dus niet serieus naar luisteren.\"* — Welke drogreden?",
         options: [
-          "Persoonlijke aanval (ad hominem)",
+          "Persoonlijke aanval",
           "Vals beroep op autoriteit",
           "Overhaaste generalisatie",
           "Vals dilemma",
@@ -619,7 +619,7 @@ const steps = [
       {
         q: "*\"Je moet gezond eten, want mensen zeggen dat het belangrijk is.\"* — Welke drogreden?",
         options: [
-          "Vals beroep op autoriteit (vage bron: 'mensen')",
+          "Vals beroep op autoriteit",
           "Overhaaste generalisatie",
           "Persoonlijke aanval",
           "Geen drogreden",
@@ -688,7 +688,7 @@ const steps = [
       {
         q: "*\"Ik kreeg griep nadat ik de griepprik had gehad. Die prik veroorzaakt dus griep.\"* — Welke drogreden?",
         options: [
-          "Overhaaste generalisatie (één geval, geen oorzakelijk verband)",
+          "Overhaaste generalisatie",
           "Vals dilemma",
           "Vals beroep op autoriteit",
           "Persoonlijke aanval",
@@ -750,7 +750,7 @@ const steps = [
       {
         q: "*\"Kunst-onderwijs moet behouden blijven. Het stimuleert creativiteit, het bevordert culturele vorming, én het biedt scholieren een uitlaatklep voor stress.\"* — Welke argumentatiestructuur?",
         options: [
-          "Nevenschikkend (drie gelijkwaardige argumenten)",
+          "Nevenschikkend",
           "Onderschikkend",
           "Enkelvoudig",
           "Geen argumentatie",
@@ -774,7 +774,7 @@ const steps = [
       {
         q: "*\"Mensen die voor windmolens zijn, hebben er natuurlijk zelf geen in hun achtertuin staan. Anders zouden ze wel anders piepen.\"* — Welke drogreden?",
         options: [
-          "Persoonlijke aanval (ad hominem)",
+          "Persoonlijke aanval",
           "Overhaaste generalisatie",
           "Vals dilemma",
           "Geen drogreden — geldig argument",
@@ -798,7 +798,7 @@ const steps = [
       {
         q: "*\"Het schoolbestuur moet meer geld vrijmaken voor schoolboeken. Dure boeken zijn een drempel voor kinderen uit gezinnen met weinig geld, en die drempel moet weg om gelijke kansen te garanderen.\"* — Welke argumentatiestructuur?",
         options: [
-          "Onderschikkend (subargument ondersteunt het hoofdargument)",
+          "Onderschikkend",
           "Nevenschikkend",
           "Enkelvoudig",
           "Geen argumentatie",
@@ -819,13 +819,13 @@ const steps = [
           niveaus: { basis: "Onderschikkend.", simpeler: "Reden onder reden.", nogSimpeler: "Onderschikkend." },
         },
       },
-      { q: "*'Je bent dom, dus je hebt ongelijk.'* Welke drogreden?", options: ["Ad hominem (op de man)","Vals dilemma","Cirkelredenering","Vergelijking"], answer: 0, wrongHints: [null, "Niet — geen 2 opties.", "Niet — geen herhaling.", "Niet — geen vergelijking."] },
+      { q: "*'Je bent dom, dus je hebt ongelijk.'* Welke drogreden?", options: ["Ad hominem","Vals dilemma","Cirkelredenering","Vergelijking"], answer: 0, wrongHints: [null, "Niet — geen 2 opties.", "Niet — geen herhaling.", "Niet — geen vergelijking."] },
       { q: "*'Je bent vóór de regering óf je bent een verrader.'* = ?", options: ["Vals dilemma","Ad hominem","Autoriteit","Vergelijking"], answer: 0, wrongHints: [null, "Geen persoonsaanval.", "Geen expert genoemd.", "Geen vergelijking."] },
       { q: "Welk woord signaleert een **argument**?", options: ["want","maar","echter","ondanks"], answer: 0, wrongHints: [null, "Tegenstellings-woord.", "Tegenstelling.", "Tegenstelling."] },
       { q: "*'Iedereen doet het, dus jij moet het ook doen.'* Welke drogreden?", options: ["Beroep op meerderheid","Cirkelredenering","Ad hominem","Vals dilemma"], answer: 0, wrongHints: [null, "Geen herhaling.", "Geen aanval op persoon.", "Geen 2 opties."] },
       { q: "*'Professor X zegt het, dus het is waar.'* = ?", options: ["Beroep op autoriteit","Cirkelredenering","Vals dilemma","Vergelijking"], answer: 0, wrongHints: [null, "Niet herhaling.", "Niet 2 opties.", "Niet vergelijking."] },
       { q: "Wat is een **standpunt**?", options: ["Mening die je verdedigt","Een vraag","Een feit","Een citaat"], answer: 0, wrongHints: [null, "Geen mening.", "Een feit kun je controleren — daar valt niet over te discussiëren.", "Niet eigen mening."] },
-      { q: "Een **subargument** ondersteunt?", options: ["Een ander argument","Het standpunt direct","Niets","Een tegenargument"], answer: 0, wrongHints: [null, "Dat is hoofdargument.", "Wel iets.", "Niet primair."] },
+      { q: "Een **subargument** ondersteunt?", options: ["Een ander argument","Het standpunt direct","Niets","Een tegenargument"], answer: 0, wrongHints: [null, "Dat is hoofdargument.", "Wel iets.", "Een subargument ondersteunt iets, het gaat er niet tegenin."] },
       { q: "Een **tegenargument** is?", options: ["Argument tegen je standpunt","Argument voor je standpunt","Geen argument","Een vraag"], answer: 0, wrongHints: [null, "Pro-argument.", "Wel argument.", "Geen vraag."] },
       { q: "*'De fiets is rood want de fiets is rood.'* Welke drogreden?", options: ["Cirkelredenering","Ad hominem","Vals dilemma","Vergelijking"], answer: 0, wrongHints: [null, "Geen persoon.", "Geen 2 opties.", "Geen vergelijking."] },
       { q: "Welk signaalwoord wijst op een **conclusie**?", options: ["dus","want","omdat","ondanks"], answer: 0, wrongHints: [null, "Reden.", "Reden.", "Tegenstelling."] },

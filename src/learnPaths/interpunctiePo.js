@@ -118,7 +118,7 @@ const steps = [
         q: "Welke zin is **goed**?",
         options: ["Vandaag ga ik naar Amsterdam.", "vandaag ga ik naar Amsterdam.", "Vandaag ga ik naar amsterdam.", "VANDAAG ga ik naar amsterdam."],
         answer: 0,
-        wrongHints: [null, "Begin zin mist hoofdletter.", "Plaatsnaam mist hoofdletter.", "Begin niet in CAPS — gewoon hoofdletter is genoeg."],
+        wrongHints: [null, "Begin zin mist hoofdletter.", "Plaatsnaam mist hoofdletter.", "Een heel woord in hoofdletters hoeft niet. Kijk ook naar de plaatsnaam."],
       },
       {
         q: "Welke krijgt **wél een hoofdletter** in een zin?",
@@ -165,7 +165,7 @@ const steps = [
         q: "Welk leesteken **mist** er in: *'Wat een mooie auto'*?",
         options: ["! (uitroepteken)", ". (punt)", "? (vraagteken)", ", (komma)"],
         answer: 0,
-        wrongHints: [null, "Punt mist de emotie. Beter !.", "Geen vraag.", "Komma sluit geen zin af."],
+        wrongHints: [null, "Is dit een rustige mededeling, of zit er gevoel in?", "Geen vraag.", "Komma sluit geen zin af."],
       },
       {
         q: "*'Heb je je tanden gepoetst'* — welk leesteken?",
@@ -222,7 +222,7 @@ const steps = [
         q: "Welke zin heeft komma's op de **juiste plek**?",
         options: ["Ik kocht appels, peren en druiven.", "Ik kocht appels peren, en druiven.", "Ik kocht appels, peren, en druiven.", "Ik, kocht appels peren en druiven."],
         answer: 0,
-        wrongHints: [null, "De komma hoort tussen appels en peren, niet vóór 'en'.", "Geen komma vóór het laatste 'en'.", "Geen komma na werkwoord zonder reden."],
+        wrongHints: [null, "Kijk waar de komma staat: tussen twee dingen uit het lijstje, of vlak vóór 'en'?", "Geen komma vóór het laatste 'en'.", "Geen komma na werkwoord zonder reden."],
         uitlegPad: {
           stappen: [
             { titel: "Regel voor opsommingen", tekst: "Bij een opsomming (3 of meer items achter elkaar) zet je **komma's tussen de items**. MAAR: **vóór het laatste 'en' GEEN komma** — dat is de Nederlandse regel." },
@@ -369,7 +369,7 @@ const steps = [
       { q: "Welk **leesteken** sluit een vraag af?", options: ["Vraagteken (?)","Punt (.)","Komma (,)","Uitroepteken (!)"], answer: 0, wrongHints: [null, "Niet vraag.", "Niet einde.", "Uitroep."] },
       { q: "Welk **leesteken** voor een uitroep?", options: ["!","?",".",","], answer: 0, wrongHints: [null, "Vraag.", "Mededeling.", "Niet einde."] },
       { q: "Wanneer **hoofdletter** in midden van zin?", options: ["Bij namen (van personen/plaatsen)","Altijd","Nooit","Alleen na komma"], answer: 0, wrongHints: [null, "Niet altijd.", "Wel soms.", "Niet alleen daar."] },
-      { q: "Welke zin is **fout**?", options: ["mijn naam is anna.","Mijn naam is Anna.","Wat heet jij?","Hallo!"], answer: 0, wrongHints: [null, "Deze klopt qua hoofdletters. Welke zin mist een hoofdletter aan het begin?", "Hoofdletter én vraagteken zitten goed. Zoek de zin zónder hoofdletter.", "Deze is goed. Welke zin begint niet met een hoofdletter?"] },
+      { q: "Welke zin is **fout**?", options: ["mijn naam is anna.","Mijn naam is Anna.","Hoe heet jij?","Hallo!"], answer: 0, wrongHints: [null, "Deze klopt qua hoofdletters. Welke zin mist een hoofdletter aan het begin?", "Hoofdletter én vraagteken zitten goed. Zoek de zin zónder hoofdletter.", "Deze is goed. Welke zin begint niet met een hoofdletter?"] },
       { q: "Een **dubbele punt (:)** zet je vóór?", options: ["Een opsomming of citaat","Vraag","Einde","Komma's"], answer: 0, wrongHints: [null, "Vraagteken.", "Punt.", "Niet."] },
       { q: "Een **puntkomma (;)** verbindt?", options: ["Twee verwante zinnen","Een opsomming","Niets","Vraag en antwoord"], answer: 0, wrongHints: [null, "Komma's doen dat.", "Wel functie.", "Niet."] },
       { q: "Welke zin heeft **goede aanhalingstekens**?", options: ["Hij zei: \"Kom!\"","Hij zei: Kom!","\"Hij zei kom!\"","Hij zei \"kom!"], answer: 0, wrongHints: [null, "Aanhalingstekens missen.", "Aanhalingstekens fout.", "Niet gesloten."] },
@@ -378,7 +378,7 @@ const steps = [
       { q: "Welke zin heeft een **fout vraagteken**?", options: ["Ik ga slapen?","Ga je mee?","Hoe heet je?","Waar is mijn boek?"], answer: 0, wrongHints: [null, "Dit is een échte vraag — het vraagteken klopt. Welke zin vraagt eigenlijk niets?", "Een echte vraag; vraagteken hoort hier. Zoek de zin die een mededeling is.", "Dit is een vraag. Welke zin vraagt niets maar eindigt tóch met een vraagteken?"] },
       { q: "Welke **hoofdletter** is fout?", options: ["Ik Eet brood","Ik eet brood","Ik eet brood.","Eet jij brood?"], answer: 0, wrongHints: [null, "Hier staan de hoofdletters goed. Zoek de zin met een hoofdletter midden in de zin.", "Deze klopt. Welke zin heeft een hoofdletter waar dat niet hoort?", "Hoofdletter aan het begin is goed. Zoek de verkeerd geplaatste hoofdletter."] },
       { q: "Wat staat tussen **haakjes ()**?", options: ["Extra info / verduidelijking","Vraag","Naam","Niet relevant"], answer: 0, wrongHints: [null, "Vraagteken.", "Niet specifiek.", "Wel."] },
-      { q: "Welke zin heeft de **juiste komma's** rond de extra informatie?", options: ["Mijn opa, die 80 is, fietst nog elke dag.","Mijn opa die 80 is, fietst nog elke dag.","Mijn opa die 80 is fietst nog elke dag.","Mijn opa, die 80 is fietst nog elke dag."], answer: 0, wrongHints: [null, "Mist de komma vóór de extra informatie.", "De extra informatie ('die 80 is') hoort tussen komma's.", "Mist de komma ná de extra informatie."] },
+      { q: "Welke zin heeft de **juiste komma's** rond de extra informatie?", options: ["Mijn opa, die 80 is, fietst nog elke dag.","Mijn opa die 80 is, fietst nog elke dag.","Mijn opa die 80 is fietst nog elke dag.","Mijn opa, die 80 is fietst nog elke dag."], answer: 0, wrongHints: [null, "Mist de komma vóór de extra informatie.", "Hier staan helemaal geen komma's. Welke woorden vertellen iets extra's over opa?", "Mist de komma ná de extra informatie."] },
       { q: "Welke afkorting krijgt **geen** hoofdletter?", options: ["bv.","NL","EU","VS"], answer: 0, wrongHints: [null, "Land = hoofdletter.", "Land/instituut.", "Land."] },
       { q: "Welke zin heeft de **juiste interpunctie**?", options: ["Wat een mooie dag!","Wat een mooie dag.","wat een mooie dag!","Wat een mooie dag?"], answer: 0, wrongHints: [null, "Niet emotie.", "Begin-hoofdletter mist.", "Geen vraag."] },
     ],

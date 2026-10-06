@@ -73,7 +73,7 @@ const steps = [
       },
       {
         q: "In welke volgorde staat de inhoudsopgave?",
-        options: ["op volgorde van het boek (hoofdstuk 1, 2, 3…)", "op alfabet", "van duur naar goedkoop", "willekeurig"],
+        options: ["op volgorde van het boek", "op alfabet", "van duur naar goedkoop", "willekeurig"],
         answer: 0,
         wrongHints: [null, "Alfabetisch is het register, niet de inhoudsopgave.", "Een boek heeft geen prijs-volgorde.", "Het is juist netjes op hoofdstuk-volgorde."],
         uitlegPad: {
@@ -331,7 +331,7 @@ const steps = [
   {
     title: "In het echt — snel opzoeken",
     explanation:
-      "Bij de Doorstroomtoets (en bij een spreekbeurt of werkstuk) bespaar je veel tijd door slim op te zoeken:\n\n" +
+      "Bij een spreekbeurt of werkstuk bespaar je veel tijd door slim op te zoeken:\n\n" +
       "1. **Heel hoofdstuk / thema?** → kijk vooraan in de **inhoudsopgave** en ga naar de juiste pagina.\n" +
       "2. **Eén onderwerp / woord?** → kijk achteraan in het **register** (op alfabet) en ga naar de genoemde pagina('s).\n\n" +
       "Zo hoef je nooit het hele boek door te bladeren.",
@@ -353,7 +353,7 @@ const steps = [
       {
         q: "Waarom is een register handig?",
         options: [
-          "je vindt snel een onderwerp zonder het hele boek te lezen",
+          "je vindt snel een onderwerp",
           "het maakt het boek dikker",
           "het vertelt het einde van het verhaal",
           "het staat er voor de sier",

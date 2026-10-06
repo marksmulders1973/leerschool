@@ -22,7 +22,7 @@ const steps = [
       {
         q: "Wat is een plattegrond?",
         options: [
-          "een tekening van een gebouw of gebied, van bovenaf",
+          "een tekening van bovenaf",
           "een foto van de voorkant",
           "een lijst met namen",
           "een verhaal over een gebouw",
@@ -107,7 +107,7 @@ const steps = [
       {
         q: "Een plattegrond lijkt nog het meest op...",
         options: [
-          "een foto recht van bovenaf (vanuit een drone)",
+          "een foto recht van bovenaf",
           "een selfie",
           "een filmpje",
           "een geschilderd portret",
@@ -454,12 +454,12 @@ const steps = [
         q: "Wat zijn de 3 slimme stappen om iets te vinden op een plattegrond?",
         options: [
           "je startplek zoeken, je doel via de legenda, dan de route bepalen",
-          "de kaart omdraaien en gokken",
-          "alleen de titel lezen",
-          "de schaal opmeten",
+          "de kaart omdraaien, gokken en dan maar gaan lopen",
+          "de titel lezen, de maker zoeken, dan de schaal meten",
+          "eerst de route lopen, dan je doel zoeken, dan je startplek",
         ],
         answer: 0,
-        wrongHints: [null, "Omdraaien en gokken is geen plan.", "De titel helpt je niet de weg te vinden.", "De schaal gaat over afstanden, niet over de route."],
+        wrongHints: [null, "Omdraaien en gokken is geen plan.", "Titel, maker en schaal helpen je niet de weg te vinden.", "Kijk naar de volgorde: kun je een route lopen als je nog niet weet waar je staat?"],
         uitlegPad: {
           stappen: [{ titel: "Start → doel → route", tekst: "1) Zoek de 'je bent hier'-stip. 2) Zoek je doel met de legenda. 3) Bepaal de route ernaartoe." }],
           niveaus: {

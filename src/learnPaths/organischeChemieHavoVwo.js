@@ -118,9 +118,9 @@ const steps = [
       },
       {
         q: "**Octaangetal** in benzine verwijst naar:",
-        options: ["Verbrandingseigenschap (anti-klopcapaciteit)","Aantal octaan-moleculen","Octopus-uitvinding","Olie-prijs"],
+        options: ["Klopvastheid van de benzine","Aantal octaan-moleculen","Aantal C-atomen per molecuul","Energie-inhoud per liter"],
         answer: 0,
-        wrongHints: [null, "Niet — geen rechtstreeks aantal.", "Niet — irrelevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — geen rechtstreeks aantal.", "Niet — benzine is een mengsel van moleculen met verschillende lengtes.", "Niet — benzine 98 bevat niet merkbaar meer energie dan benzine 95."],
         uitlegPad: {
           stappen: [{ titel: "Octaangetal = brandeigenschap", tekst: "**Octaangetal** geeft hoe **goed brandstof presteert** in motor. Schaal: iso-octaan (zeer goed) = 100, heptaan (slecht, klopt) = 0. Benzine 95 = vergelijkbaar met mix van 95% iso-octaan + 5% heptaan." }],
           theorie: "Toets-actueel: Euro 95 / 98 verwijst naar octaangetal. Hoger octaangetal = duurder + nodig voor motoren met hoge compressie.",
@@ -205,9 +205,9 @@ const steps = [
       },
       {
         q: "Een **amine** is basisch omdat:",
-        options: ["N-atoom kan H⁺ opnemen","H-atomen vrijgeven","Geen reactie","Wel zuur"],
+        options: ["Het N-atoom een H⁺ kan opnemen","Het H⁺-ionen afstaat","Het een -OH-groep bevat","Het een C=O-groep heeft"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is juist zuur.", "Niet — wel reactie.", "Niet — basisch."],
+        wrongHints: [null, "Niet — dat doet juist een zuur.", "Niet — een amine heeft geen -OH-groep.", "Niet — kijk naar de groep die een amine kenmerkt."],
         uitlegPad: {
           stappen: [{ titel: "Amine = ammoniak-derivaat", tekst: "**Amines** (-NH₂) zijn afgeleid van ammoniak (NH₃). N heeft 1 vrij elektronenpaar — kan H⁺ opnemen → basisch. pH > 7 in water." }],
           theorie: "Toets-patroon: amines kleuren rood lakmoes BLAUW (basisch), carbonzuren omgekeerd.",
@@ -221,7 +221,7 @@ const steps = [
   {
     title: "Reacties + verbranding",
     explanation:
-      "Organische verbindingen ondergaan diverse reacties. Belangrijkste voor HAVO/VWO:\n\n**1. Verbranding (oxidatie)**:\n\n**Volledige verbranding** (genoeg zuurstof):\n• Alkaan + O₂ → **CO₂ + H₂O** + warmte.\n• Bv. propaan: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O.\n• **Balansvergelijking**: tel C, H, O links + rechts. Moet kloppen.\n\n**Onvolledige verbranding** (te weinig zuurstof):\n• Alkaan + minder O₂ → **CO** (koolmonoxide) + H₂O + roet.\n• Gevaarlijk: CO is reukloos + dodelijk (CO-vergiftiging).\n• Zwart roet zichtbaar.\n• Gebeurt in slecht geventileerde geisers, oude open haarden.\n\n**Energie-vergelijking**:\n• Verbrandingsreactie is **exotherm** = geeft energie af (warmte + licht).\n• Brandstof-waarde: hoeveel J energie per gram of mol.\n• Methaan ~890 kJ/mol bij volledige verbranding.\n\n**2. Substitutie (alkanen + halogeen)**:\n• CH₄ + Cl₂ → CH₃Cl + HCl (met UV-licht).\n• 1 H vervangen door Cl.\n• Klassieke HAVO-reactie.\n\n**3. Additie (alkenen + alkynen)**:\n• Dubbele binding kan reageren met H₂, X₂ (halogeen), HX, etc.\n• Bv: etheen + waterstof → ethaan: C₂H₄ + H₂ → C₂H₆.\n• Bv: etheen + broom → 1,2-dibroomethaan: C₂H₄ + Br₂ → C₂H₄Br₂.\n• Onverzadigd → verzadigd.\n\n**4. Polymerisatie**:\n• Vele kleine monomeren → polymeer (lange keten).\n• Voorbeeld plastics: etheen (C₂H₄) → poly-etheen (PE, plastic-zak).\n• Andere: PVC (uit chloor-etheen), PET (frisdrank-flessen).\n\n**5. Verestering** (zie stap C):\n• Alcohol + zuur → ester + water.\n\n**6. Hydrolyse**:\n• Omgekeerd van verestering: ester + water → alcohol + zuur.\n• Ook eiwit-verbindingen, vetten, koolhydraten kunnen hydrolyseren.\n\n**Brandstoffen** (Toets-actueel):\n• Aardgas (methaan): lang de belangrijkste energiebron van NL.\n• Benzine: mix van C₅-C₁₂ alkanen.\n• Diesel: mix van C₁₀-C₂₀.\n• LPG: butaan + propaan.\n• Biobrandstoffen: ethanol uit maïs/suikerriet, biodiesel uit plantaardige olie.\n• Waterstof: schoon (alleen H₂O bij verbranding), maar duur.\n\n**Klimaat-context**: bij elke verbranding van koolstof-verbindingen komt **CO₂** vrij. Hoofdoorzaak antropogene klimaatverandering. Oplossingen: minder fossiele brandstof, meer hernieuwbaar.",
+      "Organische verbindingen ondergaan diverse reacties. Belangrijkste voor HAVO/VWO:\n\n**1. Verbranding (oxidatie)**:\n\n**Volledige verbranding** (genoeg zuurstof):\n• Alkaan + O₂ → **CO₂ + H₂O** + warmte.\n• Bv. propaan: C₃H₈ + 5 O₂ → 3 CO₂ + 4 H₂O.\n• **Balansvergelijking**: tel C, H, O links + rechts. Moet kloppen.\n\n**Onvolledige verbranding** (te weinig zuurstof):\n• Alkaan + minder O₂ → **CO** (koolmonoxide) + H₂O + roet.\n• Gevaarlijk: CO is reukloos + dodelijk (CO-vergiftiging).\n• Zwart roet zichtbaar.\n• Gebeurt in slecht geventileerde geisers, oude open haarden.\n\n**Energie-vergelijking**:\n• Verbrandingsreactie is **exotherm** = geeft energie af (warmte + licht).\n• Brandstof-waarde: hoeveel J energie per gram of mol.\n• Methaan ~890 kJ/mol bij volledige verbranding.\n\n**2. Substitutie (alkanen + halogeen)**:\n• CH₄ + Cl₂ → CH₃Cl + HCl (met UV-licht).\n• 1 H vervangen door Cl.\n• Klassieke HAVO-reactie.\n\n**3. Additie (alkenen + alkynen)**:\n• Dubbele binding kan reageren met H₂, X₂ (halogeen), HX, etc.\n• Bv: etheen + waterstof → ethaan: C₂H₄ + H₂ → C₂H₆.\n• Bv: etheen + broom → 1,2-dibroomethaan: C₂H₄ + Br₂ → C₂H₄Br₂.\n• Onverzadigd → verzadigd.\n\n**4. Polymerisatie**:\n• Vele kleine monomeren → polymeer (lange keten).\n• Voorbeeld plastics: etheen (C₂H₄) → poly-etheen (PE, plastic-zak).\n• Andere: PVC (uit chloor-etheen), PET (frisdrank-flessen).\n\n**5. Verestering** (zie stap 3):\n• Alcohol + zuur → ester + water.\n\n**6. Hydrolyse**:\n• Omgekeerd van verestering: ester + water → alcohol + zuur.\n• Ook eiwit-verbindingen, vetten, koolhydraten kunnen hydrolyseren.\n\n**Brandstoffen** (Toets-actueel):\n• Aardgas (methaan): lang de belangrijkste energiebron van NL.\n• Benzine: mix van C₅-C₁₂ alkanen.\n• Diesel: mix van C₁₀-C₂₀.\n• LPG: butaan + propaan.\n• Biobrandstoffen: ethanol uit maïs/suikerriet, biodiesel uit plantaardige olie.\n• Waterstof: schoon (alleen H₂O bij verbranding), maar duur.\n\n**Klimaat-context**: bij elke verbranding van koolstof-verbindingen komt **CO₂** vrij. Hoofdoorzaak antropogene klimaatverandering. Oplossingen: minder fossiele brandstof, meer hernieuwbaar.",
     checks: [
       {
         q: "Bij **volledige verbranding** van methaan ontstaat:",
@@ -236,9 +236,9 @@ const steps = [
       },
       {
         q: "**Koolmonoxide (CO)** is gevaarlijk omdat:",
-        options: ["Het is reukloos + dodelijk","Het ruikt slecht","Het maakt veel rook","Het is brandbaar"],
+        options: ["Het is reukloos + dodelijk","Het ruikt slecht","Het maakt veel rook","Het tast de ozonlaag aan"],
         answer: 0,
-        wrongHints: [null, "Niet — zou je CO dan op tijd opmerken?", "Niet — onzichtbaar.", "Wel brandbaar maar dat is niet hoofd-gevaar."],
+        wrongHints: [null, "Niet — zou je CO dan op tijd opmerken?", "Niet — onzichtbaar.", "Niet — het gevaar zit in wat CO in je lichaam doet."],
         uitlegPad: {
           stappen: [{ titel: "CO bindt aan hemoglobine", tekst: "**CO** bindt 200× sterker aan hemoglobine dan zuurstof. Hemoglobine kan geen O₂ meer vervoeren → verstikking. **Reukloos + smaakloos** → slachtoffer merkt niets, valt in slaap, sterft. Slecht geventileerde geisers = klassieke oorzaak." }],
           theorie: "Toets-actueel: een CO-melder wordt sterk aangeraden in elke woning met een gasapparaat. In NL overlijden elk jaar mensen aan CO-vergiftiging.",
@@ -310,9 +310,9 @@ const steps = [
       },
       {
         q: "Wat zijn **isomeren**?",
-        options: ["Zelfde formule, andere structuur","Verschillende formule","Onbestaand","Polymeer"],
+        options: ["Zelfde formule, andere structuur","Verschillende formule","Atomen met een ander aantal neutronen","Polymeer"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Wel bestaand.", "Niet relevant."],
+        wrongHints: [null, "Niet.", "Niet — dat zijn isotopen.", "Niet relevant."],
         uitlegPad: {
           stappen: [{ titel: "Iso = gelijk, meros = deel", tekst: "**Isomeren** = verbindingen met dezelfde **molecuulformule** maar verschillende **structuur**. Voorbeeld: butaan (rechte keten) en 2-methylpropaan (vertakt) = beide C₄H₁₀." }],
           niveaus: { basis: "Zelfde formule.", simpeler: "Iso = zelfde formule, andere bouw", nogSimpeler: "Iso" },
@@ -320,9 +320,9 @@ const steps = [
       },
       {
         q: "Welk product ontstaat bij **ethanol + azijnzuur**?",
-        options: ["Ester (ethylacetaat) + water","Methaan","Aldehyde","Alcohol"],
+        options: ["Een ester en water","Methaan en koolstofdioxide","Een aldehyde en water","Een alcohol en zuurstof"],
         answer: 0,
-        wrongHints: [null, "Niet relevant.", "Niet — geen oxidatie hier.", "Niet — wel uitgangsstof."],
+        wrongHints: [null, "Niet — er wordt hier niets verbrand.", "Niet — geen oxidatie hier.", "Niet — de alcohol is juist een uitgangsstof."],
         uitlegPad: {
           stappen: [{ titel: "Verestering", tekst: "**Alcohol + zuur → ester + water**. Ethanol (C₂H₅OH) + azijnzuur (CH₃COOH) → **ethylacetaat (CH₃COOC₂H₅) + H₂O**." }],
           niveaus: { basis: "Ester.", simpeler: "Alc + zuur = ester (+water)", nogSimpeler: "Ester" },
@@ -330,9 +330,9 @@ const steps = [
       },
       {
         q: "Wat is **bio-ethanol**?",
-        options: ["Ethanol uit plantaardige bron (maïs, suikerriet)","Synthetische alcohol","Een nieuw vak","Methaan-derivaat"],
+        options: ["Ethanol uit planten","Synthetische alcohol","Ethanol die niet kan branden","Methaan-derivaat"],
         answer: 0,
-        wrongHints: [null, "Niet — waar wijst het voorvoegsel 'bio' op?", "Niet relevant.", "Niet — bio-ethanol wordt niet uit aardgas gemaakt."],
+        wrongHints: [null, "Niet — waar wijst het voorvoegsel 'bio' op?", "Niet — bio-ethanol wordt juist als brandstof gebruikt.", "Niet — bio-ethanol wordt niet uit aardgas gemaakt."],
         uitlegPad: {
           stappen: [{ titel: "Bio = uit levende organismen", tekst: "**Bio-ethanol** = ethanol gemaakt door **fermentatie** van suikers (uit maïs, suikerriet, etc.) door gist. Hernieuwbaar maar nadeel: concurreert met voedsel-landbouw. Gebruikt als brandstof-bijmenging (E10, E85)." }],
           niveaus: { basis: "Uit planten.", simpeler: "Bio-ethanol = uit plant-suiker", nogSimpeler: "Plant" },

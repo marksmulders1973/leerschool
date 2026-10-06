@@ -22,14 +22,9 @@ const steps = [
     checks: [
       {
         q: "Wat was het **drieslagstelsel**?",
-        options: [
-          "Landbouw-systeem: 3 akkers, één braak liggend",
-          "Belasting van 3 standen",
-          "Driemachten-staat",
-          "Loonstandaard"
-        ],
+        options: ["Akkerbouw met 3 delen, 1 deel braak", "Belasting van 3 standen", "Verdeling in 3 machten", "Veeteelt met 3 soorten dieren"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is politiek.", "Niet — dat is bestuur.", "Onzin."],
+        wrongHints: [null, "Niet — dat is politiek/belasting.", "Niet — dat is bestuur.", "Het ging niet om vee, maar om het gebruik van grond."],
         uitlegPad: {
           stappen: [{ titel: "Wintergraan/zomergraan/braak", tekst: "Driehoeks-vruchtwisseling: 1) wintergraan (rogge/tarwe). 2) zomergraan (haver/gerst). 3) braak (rust voor bodem). 1/3 grond produceerde dus NIETS. Vruchtwisseling met klaver verving braak → klaver bindt N → bodem rijker zonder rust." }],
           niveaus: { basis: "Driedeling akkers.", simpeler: "Een derde liet je rusten.", nogSimpeler: "Drieslag" },
@@ -55,14 +50,9 @@ const steps = [
       },
       {
         q: "**Mercantilisme** was:",
-        options: [
-          "Economisch beleid: handelsoverschot opbouwen voor goud/zilver",
-          "Vrije markt-theorie",
-          "Communisme",
-          "Religieus systeem"
-        ],
+        options: ["Handelsoverschot opbouwen voor goud", "Vrije markt-theorie", "Communisme", "Religieus economisch systeem"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld — kwam later.", "Niet — kwam pas 19e eeuw.", "Onzin."],
+        wrongHints: [null, "Tegenovergesteld — kwam later.", "Niet — kwam pas 19e eeuw.", "Niet — mercantilisme had niets met geloof te maken."],
         uitlegPad: {
           stappen: [{ titel: "Goud = welvaart", tekst: "Pre-1776 dominant: zoveel mogelijk export, zo weinig mogelijk import = handelsbalans positief → goud-instroom. Staat reguleert handel + ondersteunt monopolies (VOC, WIC)." }],
           theorie: "Adam Smith's 'Wealth of Nations' (1776) bekritiseerde mercantilisme: vrije ruil → meer welvaart voor alle landen.",
@@ -71,14 +61,9 @@ const steps = [
       },
       {
         q: "Waarom begon de industriële revolutie in **Engeland** en niet bv. in Frankrijk?",
-        options: [
-          "Combinatie: kolen + ijzer + kolonies + stabiele politiek + kanaal-netwerk",
-          "Engelsen werkten harder",
-          "Het regende meer",
-          "Frans onderwijs was slechter"
-        ],
+        options: ["Samenloop van kolen, kolonies en stabiele politiek", "Engelsen werkten harder dan anderen", "Engeland had meer inwoners", "Frans onderwijs was slechter"],
         answer: 0,
-        wrongHints: [null, "Niet — stereotype, niet feit.", "Niet relevant.", "Niet relevant."],
+        wrongHints: [null, "Niet — stereotype, niet feit.", "Frankrijk had juist veel meer inwoners dan Engeland.", "Niet relevant."],
         uitlegPad: {
           stappen: [
             { titel: "Meerdere factoren", tekst: "Steenkool-rijkdom + grote afzetmarkt (Brits Rijk) + politieke stabiliteit sinds 1688 (Glorious Revolution) + sterke maritieme handel + Inclosure-arbeidsoverschot + Verlichtings-cultuur. Frankrijk had revolutie 1789 + napoleontische oorlogen → industrialisatie pas vanaf 1830." },
@@ -107,7 +92,7 @@ const steps = [
     checks: [
       {
         q: "De **stoommachine** van wie maakte de Industriële Revolutie mogelijk?",
-        options: ["James Watt (1769)", "Thomas Edison", "Karl Marx", "Henry Ford"],
+        options: ["James Watt", "Thomas Edison", "Karl Marx", "Henry Ford"],
         answer: 0,
         wrongHints: [null, "Niet — elektriciteit, later.", "Niet — filosoof.", "Niet — lopende band, 1913."],
         uitlegPad: {
@@ -120,12 +105,7 @@ const steps = [
       },
       {
         q: "Engelse stad Manchester groeide tussen 1750-1850:",
-        options: [
-          "Van ~17 000 naar ~300 000 inwoners (~18× zoveel)",
-          "Bleef gelijk",
-          "Halveerde",
-          "Verdubbelde"
-        ],
+        options: ["Werd zo'n 18× zo groot", "Bleef gelijk", "Halveerde", "Verdubbelde"],
         answer: 0,
         wrongHints: [null, "Niet — explosief gegroeid.", "Onjuist.", "Te weinig."],
         uitlegPad: {
@@ -135,12 +115,7 @@ const steps = [
       },
       {
         q: "Wat is het **fabriekssysteem**?",
-        options: [
-          "Productie geconcentreerd op één locatie met machines + arbeiders + vaste uren",
-          "Werkdag van 8 uur",
-          "Ambachtswerk thuis",
-          "Slavernij in fabrieken"
-        ],
+        options: ["Productie met machines in één gebouw", "Werkdag van 8 uur", "Ambachtswerk thuis", "Slavernij in fabrieken"],
         answer: 0,
         wrongHints: [null, "Niet — kwam pas in de 20e eeuw.", "Tegenovergesteld.", "Niet — vrije loonarbeid, niet slavernij."],
         uitlegPad: {
@@ -150,7 +125,7 @@ const steps = [
       },
       {
         q: "**Eerste trein** in Nederland reed in:",
-        options: ["1839 (Amsterdam-Haarlem)", "1825", "1880", "1900"],
+        options: ["1839", "1825", "1880", "1900"],
         answer: 0,
         wrongHints: [null, "Niet — dat was eerste UK-trein (Stockton-Darlington).", "Te laat.", "Te laat."],
         uitlegPad: {
@@ -161,9 +136,9 @@ const steps = [
       },
       {
         q: "**Spinning Jenny** (Hargreaves 1764) was uitvinding in welke sector?",
-        options: ["Textiel — spinnen van garen", "Mijnbouw", "Transport", "Landbouw"],
+        options: ["Textiel", "Mijnbouw", "Transport", "Landbouw"],
         answer: 0,
-        wrongHints: [null, "Niet — andere uitvindingen daar.", "Niet — Stephenson.", "Niet — eerder."],
+        wrongHints: [null, "Niet — andere uitvindingen daar.", "Niet — Stephenson.", "Niet — denk aan wat 'spinning' betekent."],
         uitlegPad: {
           stappen: [{ titel: "Vroege spin-machine", tekst: "Spinning Jenny: één arbeider bedient 8 spillen tegelijk i.p.v. 1 traditioneel. Tienvoud van productiviteit. Textiel was eerste gemechaniseerde sector — vandaar dat industriële revolutie er begon." }],
           niveaus: { basis: "Textiel.", simpeler: "Garen spinnen.", nogSimpeler: "Textiel" },
@@ -180,14 +155,9 @@ const steps = [
     checks: [
       {
         q: "Wat regelde **'Kinderwetje van Van Houten' (1874)**?",
-        options: [
-          "Verbod kinderarbeid onder 12 jaar in fabrieken",
-          "Leerplicht",
-          "Kinderbijslag",
-          "Adoptie-regels"
-        ],
+        options: ["Verbod op kinderarbeid", "Leerplicht", "Kinderbijslag", "Adoptie-regels"],
         answer: 0,
-        wrongHints: [null, "Niet — leerplicht kwam 1900.", "Veel later (1939).", "Onzin."],
+        wrongHints: [null, "Niet — leerplicht kwam 1900.", "Veel later (1939).", "Niet — adoptie werd pas in 1956 wettelijk geregeld."],
         uitlegPad: {
           stappen: [
             { titel: "Beperkt maar mijlpaal", tekst: "Eerste NL sociale wet. Verbood kinderarbeid in fabrieken — maar NIET in landbouw + huishouden. Handhaving zwak (geen inspectie). Toch begin van 'sociale wetgeving' in NL. Samuel van Houten was liberaal Tweede Kamerlid." },
@@ -208,12 +178,7 @@ const steps = [
       },
       {
         q: "Liberalisme volgens Adam Smith:",
-        options: [
-          "Vrije markt + minimale staats-rol (laissez-faire)",
-          "Sterke staat met centrale planning",
-          "Productiemiddelen in gemeenschap",
-          "Religieus geleide economie"
-        ],
+        options: ["Vrije markt + minimale staats-rol", "Sterke staat met centrale planning", "Productiemiddelen in gemeenschap", "Religieus geleide economie"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet — dat is socialisme.", "Niet — laat religie buiten."],
         uitlegPad: {
@@ -223,27 +188,17 @@ const steps = [
       },
       {
         q: "**Robert Owen** stichtte 'New Lanark' als voorbeeld van:",
-        options: [
-          "Utopisch socialisme — fabriek met goede voorwaarden",
-          "Kapitalistische fabriek",
-          "Religieuze gemeente",
-          "Militaire kazerne"
-        ],
+        options: ["Utopisch socialisme", "Kapitalistische fabriek", "Religieuze gemeente", "Militaire kazerne"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — sociaal experiment.", "Onzin."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet — sociaal experiment.", "Niet — New Lanark was een fabrieksdorp."],
         uitlegPad: {
-          stappen: [{ titel: "Pre-Marx socialisme", tekst: "Owen kocht textielfabriek in New Lanark (Schotland), 1810s. Verkortte werkdag, bouwde scholen voor kinderen, verbood kinderarbeid <10, betaalde betere lonen. Toch winstgevend. Bewees: humane fabriek kan. Inspireerde latere socialistische bewegingen." }],
+          stappen: [{ titel: "Pre-Marx socialisme", tekst: "Owen kocht rond 1800 een textielfabriek in New Lanark (Schotland). Verkortte werkdag, bouwde scholen voor kinderen, verbood kinderarbeid <10, betaalde betere lonen. Toch winstgevend. Bewees: humane fabriek kan. Inspireerde latere socialistische bewegingen." }],
           niveaus: { basis: "Utopisch socialisme.", simpeler: "Sociale fabriek met goede voorwaarden.", nogSimpeler: "Owen" },
         },
       },
       {
         q: "**Vakbond** is een organisatie die:",
-        options: [
-          "Arbeiders verenigt om collectief loon + voorwaarden af te dwingen",
-          "Werkgevers verenigt",
-          "Religieuze gemeenschap",
-          "Politieke partij"
-        ],
+        options: ["Arbeiders verenigt voor betere lonen", "Werkgevers verenigt", "Gelovigen verenigt", "Politieke partijen verenigt"],
         answer: 0,
         wrongHints: [null, "Niet — dat is werkgeversorganisatie.", "Niet — niet religieus.", "Niet — vakbond ≠ partij (al gelieerd)."],
         uitlegPad: {
@@ -262,7 +217,7 @@ const steps = [
     checks: [
       {
         q: "**Lopende band** voor auto-productie was door:",
-        options: ["Henry Ford (1913)", "Karl Benz", "Thomas Edison", "James Watt"],
+        options: ["Henry Ford", "Karl Benz", "Thomas Edison", "James Watt"],
         answer: 0,
         wrongHints: [null, "Niet — Benz vond de auto uit, niet de lopende band.", "Niet — Edison gloeilamp.", "Niet — stoom-machine, eerder."],
         uitlegPad: {
@@ -283,12 +238,7 @@ const steps = [
       },
       {
         q: "**Meiji-restauratie** (1868) in Japan:",
-        options: [
-          "Razendsnelle modernisering — eerste niet-westerse industrieland",
-          "Boeren-revolutie",
-          "Religieuze hervorming",
-          "Oorlog tegen China"
-        ],
+        options: ["Snelle modernisering van Japan", "Boeren-revolutie in Japan", "Religieuze hervorming", "Oorlog tegen China"],
         answer: 0,
         wrongHints: [null, "Niet — keizer-restauratie.", "Niet — niet religieus.", "Niet — kwam later (1894)."],
         uitlegPad: {
@@ -308,7 +258,7 @@ const steps = [
           "Olympische Spelen-overleg"
         ],
         answer: 0,
-        wrongHints: [null, "Niet — die was 1919.", "Onzin.", "Onzin."],
+        wrongHints: [null, "Niet — die was 1919.", "Niet — het ging om macht en grondgebied.", "Niet — de moderne Olympische Spelen begonnen pas in 1896."],
         uitlegPad: {
           stappen: [{ titel: "'Scramble for Africa'", tekst: "Bismarck bracht 14 landen (vooral Europese) samen om koloniaal Afrika-verdeling te formaliseren. Lijnen op kaart getrokken zonder rekening met inheemse etnische groepen. Veel huidige conflicten hebben hier wortels (Rwanda, Soedan, etc.)." }],
           theorie: "1914: 90% Afrika in Europese handen (uitzondering: Liberia + Ethiopië).",
@@ -317,7 +267,7 @@ const steps = [
       },
       {
         q: "**Wisselstroom** voor elektriciteits-net door:",
-        options: ["Nikola Tesla (~1888)", "Thomas Edison", "Albert Einstein", "Maxwell"],
+        options: ["Nikola Tesla", "Thomas Edison", "Albert Einstein", "Maxwell"],
         answer: 0,
         wrongHints: [null, "Niet — Edison voorstander gelijkstroom (en verloor stroom-oorlog).", "Niet — relativiteit.", "Niet — theorie EM, niet praktische generator."],
         uitlegPad: {
@@ -338,12 +288,7 @@ const steps = [
     checks: [
       {
         q: "Marx voorspelde dat de arbeiders-revolutie zou plaatsvinden in:",
-        options: [
-          "Geïndustrialiseerde landen (UK, Duitsland) — gebeurde NIET",
-          "Rusland — gebeurde wel",
-          "China",
-          "Latijns-Amerika"
-        ],
+        options: ["Geïndustrialiseerde landen zoals Engeland", "Agrarisch Rusland", "China", "Latijns-Amerika"],
         answer: 0,
         wrongHints: [null, "Niet — Marx zag Rusland niet als rijp (te agrarisch).", "Wel 1949, na Marx.", "Niet — daar waren in Marx' tijd nauwelijks fabrieken."],
         uitlegPad: {
@@ -355,12 +300,7 @@ const steps = [
       },
       {
         q: "Wat is **meerwaarde** volgens Marx?",
-        options: [
-          "Verschil tussen de waarde die arbeid produceert + het loon dat de arbeider krijgt",
-          "Belasting",
-          "Overuren betaling",
-          "Rente op kapitaal"
-        ],
+        options: ["Waarde van het werk min het loon", "Belasting op loon", "Betaling voor overuren", "Rente op kapitaal"],
         answer: 0,
         wrongHints: [null, "Niet — staats-element.", "Niet — bonus op uren.", "Verwant maar niet identiek."],
         uitlegPad: {
@@ -372,14 +312,9 @@ const steps = [
       },
       {
         q: "Welvaartsstaat in Nederland kwam vooral tot stand:",
-        options: [
-          "Na WO2 (1945-1970)",
-          "Vóór WO1",
-          "In de jaren 1830",
-          "Nooit"
-        ],
+        options: ["Na WO2", "Vóór WO1", "In de jaren 1830", "In de crisis van de jaren 1930"],
         answer: 0,
-        wrongHints: [null, "Niet — toen begon het pas (Kinderwet 1874).", "Niet — toen geen sociaal stelsel.", "Onjuist."],
+        wrongHints: [null, "Niet — toen begon het pas (Kinderwet 1874).", "Niet — toen geen sociaal stelsel.", "Toen waren er alleen noodregelingen, nog geen breed stelsel."],
         uitlegPad: {
           stappen: [
             { titel: "Naoorlogse opbouw", tekst: "Drees AOW 1957, Algemene Bijstandswet 1965, ziektewet/WW uitgebreid, onderwijs gratis. Sterke economische groei + brede politieke consensus. Vanaf 1980s: terugtrekking (geprivatiseerd, versoberd, sancties)." },
@@ -389,7 +324,7 @@ const steps = [
       },
       {
         q: "CO₂-concentratie atmosfeer veranderde van **280 ppm** (preindustrieel) naar:",
-        options: ["~420 ppm (2024)", "~300 ppm", "~600 ppm", "~250 ppm"],
+        options: ["~420 ppm", "~300 ppm", "~600 ppm", "~250 ppm"],
         answer: 0,
         wrongHints: [null, "Veel hoger.", "Nog niet zo hoog.", "Onjuist — stijgt, niet daalt."],
         uitlegPad: {

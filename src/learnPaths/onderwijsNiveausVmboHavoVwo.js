@@ -71,7 +71,7 @@ const steps = [
   {
     title: "De drie niveaus — vmbo, havo en vwo in het kort",
     explanation:
-      "Na groep 8 ga je naar de **middelbare school** (ook wel 'voortgezet onderwijs' genoemd). Daar zijn **drie niveaus**. Ze verschillen vooral in **hoe snel** en **hoe theoretisch** de stof gaat — niet in 'slim' of 'dom'. Voor elk niveau is er een mooie route.\n\n**1. vmbo** 🔧 *(spreek uit: vee-em-bee-oo)*\n• Staat voor **voorbereidend middelbaar beroepsonderwijs**.\n• Duurt **4 jaar**.\n• Mix van **leren én praktijk** — je doet ook met je handen.\n• Daarna ga je meestal naar het **mbo** *(beroepsopleiding)*.\n\n**2. havo** 🎓 *(spreek uit: haa-voo)*\n• Staat voor **hoger algemeen voortgezet onderwijs**.\n• Duurt **5 jaar**.\n• Meer **theorie** dan vmbo, uit boeken.\n• Daarna ga je meestal naar het **hbo** *(hogeschool)*.\n\n**3. vwo** 🚀 *(spreek uit: vee-wee-oo)*\n• Staat voor **voorbereidend wetenschappelijk onderwijs**.\n• Duurt **6 jaar**.\n• De **meeste theorie**, in het hoogste tempo.\n• Daarna kun je naar de **universiteit**.\n\n**Belangrijk om te onthouden**:\n• Geen niveau is 'beter' — ze passen bij **verschillende mensen**.\n• Houd je van **doen en maken**? Dan past vmbo vaak goed.\n• Leer je graag uit **boeken** en wil je veel uitzoeken? Dan past havo of vwo.\n• En: je kunt later nog **switchen** *(daarover gaat stap E)*.\n\n**Hoe word je ingedeeld?**\nJe krijgt in groep 8 een **schooladvies** van je juf of meester. De **Doorstroomtoets** *(vroeger de eindtoets)* helpt daarbij: scoor je hoger dan je advies, dan kan het advies omhoog.",
+      "Na groep 8 ga je naar de **middelbare school** (ook wel 'voortgezet onderwijs' genoemd). Daar zijn **drie niveaus**. Ze verschillen vooral in **hoe snel** en **hoe theoretisch** de stof gaat — niet in 'slim' of 'dom'. Voor elk niveau is er een mooie route.\n\n**1. vmbo** 🔧 *(spreek uit: vee-em-bee-oo)*\n• Staat voor **voorbereidend middelbaar beroepsonderwijs**.\n• Duurt **4 jaar**.\n• Mix van **leren én praktijk** — je doet ook met je handen.\n• Daarna ga je meestal naar het **mbo** *(beroepsopleiding)*.\n\n**2. havo** 🎓 *(spreek uit: haa-voo)*\n• Staat voor **hoger algemeen voortgezet onderwijs**.\n• Duurt **5 jaar**.\n• Meer **theorie** dan vmbo, uit boeken.\n• Daarna ga je meestal naar het **hbo** *(hogeschool)*.\n\n**3. vwo** 🚀 *(spreek uit: vee-wee-oo)*\n• Staat voor **voorbereidend wetenschappelijk onderwijs**.\n• Duurt **6 jaar**.\n• De **meeste theorie**, in het hoogste tempo.\n• Daarna kun je naar de **universiteit**.\n\n**Belangrijk om te onthouden**:\n• Geen niveau is 'beter' — ze passen bij **verschillende mensen**.\n• Houd je van **doen en maken**? Dan past vmbo vaak goed.\n• Leer je graag uit **boeken** en wil je veel uitzoeken? Dan past havo of vwo.\n• En: je kunt later nog **switchen** *(daarover gaat de laatste stap)*.\n\n**Hoe word je ingedeeld?**\nJe krijgt in groep 8 een **schooladvies** van je juf of meester. De **Doorstroomtoets** *(vroeger de eindtoets)* helpt daarbij: scoor je hoger dan je advies, dan kan het advies omhoog.",
     svg: niveausSvg(),
     checks: [
       {
@@ -88,7 +88,7 @@ const steps = [
       },
       {
         q: "Welk niveau is **'beter'**?",
-        options: ["Geen — ze passen bij verschillende mensen", "vwo altijd", "havo altijd", "vmbo altijd"],
+        options: ["Geen — ze passen bij verschillende mensen", "vwo, want dat is het moeilijkst", "havo, want dat zit in het midden", "vmbo, want daar doe je het meest"],
         answer: 0,
         wrongHints: [null, "Is een timmerman minder dan een dokter? Denk aan wat 'passen bij iemand' betekent.", "Waarom zou uitgerekend het middelste niveau 'het beste' zijn — beste voor wíé?", "Vmbo past bij veel mensen supergoed — maar geldt dat voor íédereen?"],
       },
@@ -168,7 +168,7 @@ const steps = [
       },
       {
         q: "Naar welke vervolgopleiding leidt de **havo** meestal?",
-        options: ["Het hbo (hogeschool)", "De universiteit", "Het vmbo", "De basisschool"],
+        options: ["Het hbo", "De universiteit", "Het vmbo", "De basisschool"],
         answer: 0,
         wrongHints: [null, "Dat is meer de vwo-route.", "Dat is een lager niveau.", "Die heb je gehad."],
       },
@@ -185,7 +185,7 @@ const steps = [
         wrongHints: [null, "Dat is havo.", "Dat is vmbo.", "Te kort."],
       },
       {
-        q: "Welk profiel kies je als je later **arts of bioloog** wil worden?",
+        q: "Welk profiel past het best als je later **arts of bioloog** wil worden?",
         options: ["Natuur & Gezondheid (N&G)", "Cultuur & Maatschappij (C&M)", "Economie & Maatschappij (E&M)", "Natuur & Techniek (N&T)"],
         answer: 0,
         wrongHints: [null, "C&M gaat over talen en kunst — minder wis- en scheikunde.", "E&M gaat over economie en maatschappij — niet over biologie of geneeskunde.", "N&T is meer gericht op techniek en wiskunde; N&G heeft als extra de nadruk op biologie en gezondheid."],
@@ -211,7 +211,7 @@ const steps = [
       },
       {
         q: "Na de **havo** ga je meestal naar...",
-        options: ["Het hbo (hogeschool)", "Het mbo", "De basisschool", "Direct met pensioen"],
+        options: ["Het hbo", "Het mbo", "De basisschool", "Direct met pensioen"],
         answer: 0,
         wrongHints: [null, "Dat is meer de vmbo-route.", "Die heb je gehad.", "Nog veel te vroeg!"],
       },
@@ -249,7 +249,7 @@ const steps = [
       },
       {
         q: "Je begint op het **vmbo**. Kun je later op de universiteit komen?",
-        options: ["Ja, via stapelen (mbo → hbo → universiteit)", "Nee, dat is onmogelijk", "Alleen met vwo vanaf het begin", "Alleen in het buitenland"],
+        options: ["Ja, via stapelen", "Nee, dat is onmogelijk", "Alleen met vwo vanaf het begin", "Alleen in het buitenland"],
         answer: 0,
         wrongHints: [null, "Het kan juist wel.", "Niet de enige weg.", "Gewoon in Nederland."],
       },

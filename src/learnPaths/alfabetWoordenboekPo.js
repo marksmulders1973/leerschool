@@ -215,7 +215,7 @@ const steps = [
     checks: [
       {
         q: "Welk woord komt eerst: bal of boom?",
-        options: ["bal", "boom", "ze zijn gelijk", "boom, want korter"],
+        options: ["bal", "boom", "ze zijn gelijk", "boom, want langer"],
         answer: 0,
         wrongHints: [null, "Tweede letter o komt ná a.", "Ze verschillen bij de tweede letter.", "De lengte bepaalt de volgorde niet."],
         uitlegPad: {

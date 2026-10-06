@@ -22,12 +22,7 @@ const steps = [
     checks: [
       {
         q: "**Socrates** geloofde dat:",
-        options: [
-          "Vragen stellen leidt tot waarheid ('socratische methode')",
-          "Boeken schrijven essentieel",
-          "Geld is doel van leven",
-          "Wetenschap belangrijker dan filosofie"
-        ],
+        options: ["Vragen stellen leidt tot inzicht", "Boeken schrijven is essentieel", "Geld is het doel van het leven", "Wetenschap is belangrijker dan filosofie"],
         answer: 0,
         wrongHints: [null, "Schreef niets zelf.", "Tegenovergesteld.", "Filosofie + wetenschap waren één."],
         uitlegPad: {
@@ -37,14 +32,9 @@ const steps = [
       },
       {
         q: "**Plato's grot-allegorie** symboliseert:",
-        options: [
-          "Onze zintuigen tonen schaduwen; ware werkelijkheid is in ideeën",
-          "Mensen in grot leven",
-          "Donker is beter",
-          "Geen filosofie nodig"
-        ],
+        options: ["Wat we zien is maar een schaduw van de ideeën", "Je moet je terugtrekken uit de samenleving", "Onze zintuigen tonen de ware werkelijkheid", "Kennis krijg je alleen van leraren"],
         answer: 0,
-        wrongHints: [null, "Letterlijk verkeerd.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "De grot is een beeld, geen advies om je terug te trekken.", "Tegenovergesteld.", "De bevrijde gevangene ontdekt het zelf."],
         uitlegPad: {
           stappen: [
             { titel: "'Politeia' boek 7", tekst: "Vastgebonden mensen in grot zien alleen schaduwen op muur (= zintuiglijke wereld). Filosoof bevrijdt zichzelf, ziet zon (= waarheid/Goed). Teruggekeerd worden ze niet geloofd. Plato's punt: filosofische waarheid is verborgen + ongemakkelijk." },
@@ -54,12 +44,7 @@ const steps = [
       },
       {
         q: "**Aristoteles** stond voor:",
-        options: [
-          "Observatie + empirisme — leren door waarnemen",
-          "Pure ideeën-wereld",
-          "Goden bestuderen alleen",
-          "Geen wetenschap"
-        ],
+        options: ["Leren door waarnemen", "Een pure ideeën-wereld", "Alleen goden bestuderen", "Kennis is aangeboren"],
         answer: 0,
         wrongHints: [null, "Niet — dat is Plato.", "Niet primair.", "Tegenovergesteld."],
         uitlegPad: {
@@ -71,14 +56,9 @@ const steps = [
       },
       {
         q: "**Stoïcisme** leert:",
-        options: [
-          "Aanvaard wat je niet kunt veranderen; beheers wat je WEL kunt",
-          "Vermijd alle gevoelens",
-          "Zoek zoveel mogelijk genot",
-          "Materialisme"
-        ],
+        options: ["Aanvaard wat je niet kunt veranderen", "Vermijd alle gevoelens", "Zoek zoveel mogelijk genot", "Streef naar zoveel mogelijk bezit"],
         answer: 0,
-        wrongHints: [null, "Niet vermijden — beheersen.", "Niet — dat lijkt meer op hedonisme.", "Tegenovergesteld."],
+        wrongHints: [null, "Niet vermijden — beheersen.", "Niet — dat lijkt meer op hedonisme.", "Bezit ligt buiten je macht, zeggen de stoïcijnen."],
         uitlegPad: {
           stappen: [
             { titel: "Stoa-school Athene", tekst: "Marcus Aurelius (Romeinse keizer): 'Meditaties' — dagboek met stoïsche reflecties. Epictetus: 'Wat in onze macht ligt: oordeel, neiging. Buiten onze macht: lichaam, bezit, reputatie.' Vandaag heropleving als 'modern stoicism' + self-help (Tim Ferriss e.a.)." },
@@ -88,14 +68,9 @@ const steps = [
       },
       {
         q: "Wat is **metafysica**?",
-        options: [
-          "Filosofie over wat 'IS' — werkelijkheid, God, ziel",
-          "Filosofie over taal",
-          "Filosofie over kunst",
-          "Wiskunde"
-        ],
+        options: ["Filosofie over wat er IS", "Filosofie over taal", "Filosofie over kunst", "Filosofie over goed handelen"],
         answer: 0,
-        wrongHints: [null, "Niet — taalfilosofie.", "Niet — esthetiek.", "Niet — apart vak."],
+        wrongHints: [null, "Niet — taalfilosofie.", "Niet — esthetiek.", "Niet — dat is ethiek."],
         uitlegPad: {
           stappen: [{ titel: "Naar fysica + verder", tekst: "Aristoteles' boek 'na de fysica' = metafysica. Onderzoekt fundamentele aard werkelijkheid: bestaat God? Wat is ziel? Vrije wil? Wat is 'zijn'? Klassiek filosofisch onderwerp." }],
           niveaus: { basis: "Wat is.", simpeler: "Werkelijkheid + God-vragen.", nogSimpeler: "Meta" },
@@ -108,18 +83,13 @@ const steps = [
   {
     title: "Middeleeuwen + Verlichting — Augustinus tot Kant-voorlopers",
     explanation:
-      "**Middeleeuwen** (500-1500): filosofie gedomineerd door **religie** (Christendom in West, Islam in Midden-Oosten).\n\n**Christelijke filosofie**:\n• **Augustinus** (354-430): zonde-doctrine, vrije wil, predestinatie. 'Bekentenissen' = klassieke autobiografie.\n• **Thomas Aquinas** (1225-1274): combineerde Aristoteles + Christendom. Vijf bewijzen voor Gods bestaan ('Summa Theologica'). Officieel-katholieke filosoof.\n\n**Islamitische filosofie**:\n• **Al-Farabi**, **Avicenna (Ibn Sina)**, **Averroës (Ibn Rushd)** — bewaarden + ontwikkelden Griekse filosofie tijdens Europese 'donkere middeleeuwen'.\n• Via vertaalbeweging Toledo (12e eeuw) keerde Aristoteles via Arabisch terug naar Europa.\n\n**Renaissance** (1300-1600):\n• Herontdekking klassieke teksten.\n• **Humanisme**: focus op mens, niet alleen God.\n• Erasmus (Rotterdam, 1466-1536): 'Lof der Zotheid' — kritiek op kerk.\n• Machiavelli: 'De Vorst' — politiek realisme, doel heiligt middel.\n\n**Wetenschappelijke revolutie** (1500-1700):\n• Galileo, Newton, Kepler.\n• Brak met aristoteliaanse middeleeuwse fysica.\n• Filosofie + wetenschap nog één vak.\n\n**Verlichting** (1650-1800) = **Filosofie van de Rede**:\n\n**Rationalisme** (kennis komt uit rede):\n• **Descartes** (1596-1650, Frans-NL): 'Cogito ergo sum' (Ik denk, dus ik ben). Methodische twijfel. Dualisme lichaam/geest.\n• **Spinoza** (1632-1677, NL): God = Natuur. Determinisme. 'Ethica'.\n• **Leibniz** (1646-1716): monaden-theorie, optimisme ('beste van alle mogelijke werelden' — Voltaire bespotte dit in 'Candide').\n\n**Empirisme** (kennis komt uit ervaring):\n• **Locke** (1632-1704, Brits): mens geboren als 'tabula rasa' (lege lei). Natuurrechten: leven, vrijheid, eigendom. Inspireerde Amerikaanse Onafhankelijkheid 1776.\n• **Berkeley** (1685-1753): radicaal idealisme — 'esse est percipi' (bestaan = waargenomen worden).\n• **Hume** (1711-1776, Schots): twijfel aan oorzakelijkheid + zelf. Inspireerde Kant.\n\n**Verlichtingsidealen**:\n• Vrijheid van denken.\n• Tolerantie.\n• Wetenschappelijke methode.\n• Mensenrechten.\n• Scheiding kerk + staat.\n• Democratie.\n\n**Voltaire** (1694-1778): satirische auteur, kritisch op kerk + monarchie. 'Écrasez l'infâme' (vernietig het schandelijke).\n**Rousseau** (1712-1778): 'Du contrat social' — soevereiniteit van het volk. 'De mens is geboren vrij, maar overal in ketens.' Inspireerde Franse Revolutie.\n**Diderot** + d'Alembert: Encyclopédie — eerste algemene-kennis-werk om volk te onderwijzen.\n\n**Kant** (1724-1804): synthese rationalisme + empirisme.\n• 'Kritik der reinen Vernunft' (1781).\n• Kennis = rede STRUCTUREERT zintuiglijke data.\n• Plicht-ethiek: categorische imperatief.\n• Verlichting = 'Habe Mut, dich deines eigenen Verstandes zu bedienen!' (Heb moed om eigen verstand te gebruiken).",
+      "**Middeleeuwen** (500-1500): filosofie gedomineerd door **religie** (Christendom in West, Islam in Midden-Oosten).\n\n**Christelijke filosofie**:\n• **Augustinus** (354-430): zonde-doctrine, vrije wil, predestinatie. 'Bekentenissen' = klassieke autobiografie.\n• **Thomas Aquinas** (1225-1274): combineerde Aristoteles + Christendom. Vijf bewijzen voor Gods bestaan ('Summa Theologica'). Officieel-katholieke filosoof.\n\n**Islamitische filosofie**:\n• **Al-Farabi**, **Avicenna (Ibn Sina)**, **Averroës (Ibn Rushd)** — bewaarden + ontwikkelden Griekse filosofie tijdens Europese 'donkere middeleeuwen'.\n• Via vertaalbeweging Toledo (12e eeuw) keerde Aristoteles via Arabisch terug naar Europa.\n\n**Renaissance** (1300-1600):\n• Herontdekking klassieke teksten.\n• **Humanisme**: focus op mens, niet alleen God.\n• Erasmus (Rotterdam, 1466-1536): 'Lof der Zotheid' — kritiek op kerk.\n• Machiavelli: 'De Vorst' — politiek realisme, doel heiligt middel.\n\n**Wetenschappelijke revolutie** (1500-1700):\n• Galileo, Newton, Kepler.\n• Brak met aristoteliaanse middeleeuwse fysica.\n• Filosofie + wetenschap nog één vak.\n\n**Verlichting** (1650-1800) = **Filosofie van de Rede**:\n\n**Rationalisme** (kennis komt uit rede):\n• **Descartes** (1596-1650, Frans-NL): 'Cogito ergo sum' (Ik denk, dus ik ben). Methodische twijfel. Dualisme lichaam/geest.\n• **Spinoza** (1632-1677, NL): God = Natuur. Determinisme. 'Ethica'.\n• **Leibniz** (1646-1716): monaden-theorie, optimisme ('beste van alle mogelijke werelden' — Voltaire bespotte dit in 'Candide').\n\n**Empirisme** (kennis komt uit ervaring):\n• **Locke** (1632-1704, Brits): mens geboren als 'tabula rasa' (lege lei). Natuurrechten: leven, vrijheid, eigendom. Inspireerde Amerikaanse Onafhankelijkheid 1776.\n• **Berkeley** (1685-1753): radicaal idealisme — 'esse est percipi' (bestaan = waargenomen worden).\n• **Hume** (1711-1776, Schots): twijfel aan oorzakelijkheid + zelf. Inspireerde Kant.\n\n**Verlichtingsidealen**:\n• Vrijheid van denken.\n• Tolerantie.\n• Wetenschappelijke methode.\n• Mensenrechten.\n• Scheiding kerk + staat.\n• Democratie.\n\n**Voltaire** (1694-1778): satirische auteur, kritisch op kerk + monarchie. 'Écrasez l'infâme' (vernietig het schandelijke).\n**Rousseau** (1712-1778): 'Du contrat social' — soevereiniteit van het volk. 'De mens is geboren vrij, maar overal in ketens.' Inspireerde Franse Revolutie.\n**Diderot** + d'Alembert: Encyclopédie — groot algemene-kennis-werk om het volk te onderwijzen.\n\n**Kant** (1724-1804): synthese rationalisme + empirisme.\n• 'Kritik der reinen Vernunft' (1781).\n• Kennis = rede STRUCTUREERT zintuiglijke data.\n• Plicht-ethiek: categorische imperatief.\n• Verlichting = 'Habe Mut, dich deines eigenen Verstandes zu bedienen!' (Heb moed om eigen verstand te gebruiken).",
     checks: [
       {
         q: "**Descartes'** beroemde uitspraak:",
-        options: [
-          "'Cogito ergo sum' — Ik denk, dus ik ben",
-          "'God is dood'",
-          "'Het is wat het is'",
-          "'Ik weet dat ik niets weet'"
-        ],
+        options: ["'Ik denk, dus ik ben'", "'God is dood'", "'Alles stroomt'", "'Ik weet dat ik niets weet'"],
         answer: 0,
-        wrongHints: [null, "Niet — Nietzsche.", "Onzin.", "Niet — Socrates."],
+        wrongHints: [null, "Niet — Nietzsche.", "Niet — Heraclitus.", "Niet — Socrates."],
         uitlegPad: {
           stappen: [
             { titel: "Onbetwijfelbaar startpunt", tekst: "Descartes begon met alles te twijfelen (kan ik mijn zintuigen vertrouwen? mijn gedachten? misschien is alles droom of demon-bedrog?). Maar als hij denkt, MOET hij bestaan om te denken. 'Ik denk dus ik ben' = onwrikbaar fundament voor verdere kennis." },
@@ -129,14 +99,9 @@ const steps = [
       },
       {
         q: "**Tabula rasa** (Locke) betekent:",
-        options: [
-          "Mens geboren als 'lege lei' — kennis komt uit ervaring",
-          "Tafel met gerechten",
-          "Aangeboren kennis bestaat",
-          "Aristoteles"
-        ],
+        options: ["Mens wordt geboren als 'lege lei'", "Alle mensen zijn van nature goed", "Aangeboren kennis bestaat", "Kennis komt alleen uit de rede"],
         answer: 0,
-        wrongHints: [null, "Onzin.", "Tegenovergesteld.", "Niet."],
+        wrongHints: [null, "Dat is een ander idee (denk aan Rousseau).", "Tegenovergesteld.", "Dat is rationalisme."],
         uitlegPad: {
           stappen: [
             { titel: "Empirisme-fundament", tekst: "Locke: bij geboorte kent baby NIETS. Alle kennis komt uit zintuiglijke ervaring. Tegen-Plato's aangeboren ideeën. Implicatie: onderwijs cruciaal, mensen vormbaar. Inspireerde Amerikaanse + Franse Revolutie (gelijke kansen vanaf geboorte)." },
@@ -146,14 +111,9 @@ const steps = [
       },
       {
         q: "**Spinoza** vereenzelvigde:",
-        options: [
-          "God met de Natuur (pantheïsme)",
-          "Wetenschap met religie",
-          "Kunst met filosofie",
-          "Niets"
-        ],
+        options: ["God met de Natuur", "Wetenschap met religie", "Kunst met filosofie", "De staat met de kerk"],
         answer: 0,
-        wrongHints: [null, "Niet — apart.", "Niet specifiek.", "Wel."],
+        wrongHints: [null, "Niet — apart.", "Niet specifiek.", "Niet — Spinoza verdedigde juist vrij denken tegenover de kerk."],
         uitlegPad: {
           stappen: [
             { titel: "Deus sive Natura", tekst: "Spinoza: God = Natuur. Geen apart wezen buiten universum, maar het universum ZELF is goddelijk. Werd om deze visie vervloekt door joodse gemeenschap Amsterdam (cherem 1656). Vandaag invloedrijke filosoof, Einstein noemde hem zijn voorbeeld." },
@@ -163,14 +123,9 @@ const steps = [
       },
       {
         q: "**Verlichting**-motto van Kant:",
-        options: [
-          "'Heb moed om eigen verstand te gebruiken' (Sapere aude!)",
-          "'God dient'",
-          "'Geld is alles'",
-          "'Geen denken'"
-        ],
+        options: ["'Sapere aude' — durf te denken", "'Ik denk, dus ik ben'", "'Alles stroomt'", "'God is dood'"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Onzin.", "Tegenovergesteld."],
+        wrongHints: [null, "Niet — Descartes.", "Niet — Heraclitus.", "Niet — Nietzsche."],
         uitlegPad: {
           stappen: [
             { titel: "1784 'Was ist Aufklärung?'", tekst: "Kant: Verlichting = uitgaan uit zelf-veroorzaakte onmondigheid. Niet anderen (priester, autoriteit) laten denken voor jou. SAPERE AUDE = durf te weten. Kernidee Verlichting + zelfontwikkeling tot vandaag." },
@@ -180,14 +135,9 @@ const steps = [
       },
       {
         q: "**Thomas Aquinas** combineerde:",
-        options: [
-          "Aristoteles met Christendom",
-          "Plato met Boeddhisme",
-          "Wetenschap met magie",
-          "Niets"
-        ],
+        options: ["Aristoteles met Christendom", "Plato met Boeddhisme", "Wetenschap met magie", "Plato met Christendom"],
         answer: 0,
-        wrongHints: [null, "Onjuist.", "Niet zijn werk.", "Wel."],
+        wrongHints: [null, "Onjuist.", "Niet zijn werk.", "Dat deed eerder Augustinus."],
         uitlegPad: {
           stappen: [
             { titel: "Synthese 13e eeuw", tekst: "Toen Aristoteles' werken terugkwamen via Arabische vertalingen → conflict met kerk. Aquinas (Dominicaanse monnik) integreerde Aristoteles' logica + observatie in katholieke theologie. 'Summa Theologica' = grote werk. Vijf bewijzen voor Gods bestaan. Officieel katholiek filosoof." },
@@ -206,12 +156,7 @@ const steps = [
     checks: [
       {
         q: "Kants **categorische imperatief**:",
-        options: [
-          "Handel zo dat je actie tot algemene wet kan worden — soort 'Gouden Regel'",
-          "Doe wat je wil",
-          "Volg God",
-          "Maximaliseer plezier"
-        ],
+        options: ["Handel zo dat je regel een algemene wet kan worden", "Doe wat je wil", "Volg God", "Maximaliseer plezier"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet — Kant baseert de plicht op de rede, niet op geloof.", "Niet — utilitarisme."],
         uitlegPad: {
@@ -223,14 +168,9 @@ const steps = [
       },
       {
         q: "**Marx** zag geschiedenis als:",
-        options: [
-          "Klassenstrijd tussen onderdrukten + onderdrukkers",
-          "Goddelijke wil",
-          "Toeval",
-          "Geen patroon"
-        ],
+        options: ["Klassenstrijd", "Goddelijke wil", "Toeval", "Ontvouwing van de Geest"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet — patroon.", "Wel patroon."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet — patroon.", "Niet — dat is Hegel; Marx draaide dat om."],
         uitlegPad: {
           stappen: [
             { titel: "Historisch materialisme", tekst: "Marx: door tijd heen klassenstrijd: meester vs slaaf → adel vs boer → kapitalist vs arbeider. Klassenstrijd drijft historische verandering. Voorspelling: arbeiders revolutioneren → klasseloze maatschappij. Praktijk-implementatie (Stalin, Mao) liep slecht af." },
@@ -242,7 +182,7 @@ const steps = [
         q: "**'God is dood'** is uitspraak van:",
         options: ["Nietzsche", "Kant", "Marx", "Spinoza"],
         answer: 0,
-        wrongHints: [null, "Niet — religieus.", "Niet — economie.", "Niet — God = Natuur."],
+        wrongHints: [null, "Niet — Kant schreef over plicht en rede.", "Niet — economie.", "Niet — God = Natuur."],
         uitlegPad: {
           stappen: [
             { titel: "Diagnose, niet juich-kreet", tekst: "Nietzsche bedoelde: christelijke God + traditionele waarden verliezen autoriteit door wetenschap + secularisatie. Niemand gelooft echt meer. Probleem: hoe nu morele basis? Antwoord: Übermensch creëert eigen waarden. Veel-misbegrepen als atheïsme-overwinning; meer als crisis-vaststelling." },
@@ -252,14 +192,9 @@ const steps = [
       },
       {
         q: "**Utilitarisme** (Bentham/Mill):",
-        options: [
-          "Grootste geluk voor grootste aantal mensen",
-          "Plicht boven gevolg",
-          "Individu boven groep",
-          "Niets"
-        ],
+        options: ["Grootste geluk voor het grootste aantal", "Plicht boven gevolg", "Individu boven groep", "Leef volgens de deugden"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is Kant.", "Tegenovergesteld.", "Wel filosofie."],
+        wrongHints: [null, "Niet — dat is Kant.", "Tegenovergesteld.", "Niet — dat is deugdethiek."],
         uitlegPad: {
           stappen: [
             { titel: "Gevolgen-ethiek", tekst: "Bentham (1789): meet geluk + pijn voor alle betrokkenen, kies actie met meeste netto-geluk. Mill verfijnde: kwalitatieve verschillen (Socrates ontevreden > varken tevreden). Praktisch: veel beleid (kosten-baten-analyse) impliciet utilitaristisch. Kritiek: kan minderheden offeren voor meerderheid." },
@@ -269,14 +204,9 @@ const steps = [
       },
       {
         q: "Hegels **dialectiek**:",
-        options: [
-          "These → antithese → synthese (oppositie + samenkomst)",
-          "Argumenten in cirkel",
-          "Geen patroon",
-          "Wiskundig bewijs"
-        ],
+        options: ["These → antithese → synthese", "Argumenten in een cirkel", "Twijfel aan alles", "Wiskundig bewijs"],
         answer: 0,
-        wrongHints: [null, "Niet — vooruitgang.", "Wel patroon.", "Niet specifiek."],
+        wrongHints: [null, "Niet — vooruitgang.", "Niet — dat is Descartes' methode.", "Niet specifiek."],
         uitlegPad: {
           stappen: [
             { titel: "Drie-staps-beweging", tekst: "Een idee (these) roept tegenoverstelling op (antithese). Conflict resulteert in nieuwe synthese die deels beide bevat. Synthese wordt nieuwe these → cyclus herhaalt. Marx draaide om: niet ideeën maar economische klassen drijven dialectiek." },
@@ -307,31 +237,21 @@ const steps = [
       },
       {
         q: "**Rawls'** 'veil of ignorance' vraagt:",
-        options: [
-          "Ontwerp samenleving zonder te weten welke positie je zelf krijgt",
-          "Sluit ogen voor onrecht",
-          "Negeer geschiedenis",
-          "Geen oordeel"
-        ],
+        options: ["Kies regels zonder je eigen positie te kennen", "Sluit je ogen voor onrecht", "Negeer de geschiedenis", "Kies regels die jou het meeste opleveren"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Niet."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet.", "Tegenovergesteld — je weet je positie juist niet."],
         uitlegPad: {
           stappen: [
-            { titel: "Hypothetische start-positie", tekst: "Stel: je gaat samenleving ontwerpen + weet niet of je rijk/arm, man/vrouw, wit/zwart, gezond/ziek, hoog/laag-opgeleid wordt. Welke regels kies je? Rawls: meeste mensen zouden basisinkomen + gezondheidszorg + onderwijs zekerstellen (je zou tot 'onderkant' kunnen behoren). Beroemd liberaal-progressief argument." },
+            { titel: "Hypothetische start-positie", tekst: "Stel: je gaat samenleving ontwerpen + weet niet of je rijk/arm, man/vrouw, wit/zwart, gezond/ziek, hoog/laag-opgeleid wordt. Welke regels kies je? Rawls: je zou dan een vangnet, gezondheidszorg en onderwijs voor de zwaksten zekerstellen (je zou tot 'onderkant' kunnen behoren). Beroemd liberaal-progressief argument." },
           ],
           niveaus: { basis: "Onbekende positie.", simpeler: "Ontwerp rechtvaardig zonder eigenbelang.", nogSimpeler: "Veil" },
         },
       },
       {
         q: "**Foucault** stelde dat:",
-        options: [
-          "Macht is overal, ook in 'neutrale' kennis + instituties",
-          "Macht alleen bij koningen",
-          "Geen macht",
-          "Macht alleen via geweld"
-        ],
+        options: ["Macht zit overal, ook in kennis", "Macht zit alleen bij koningen", "Macht verdwijnt in een democratie", "Macht werkt alleen via geweld"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Wel macht.", "Niet exclusief."],
+        wrongHints: [null, "Tegenovergesteld.", "Niet — ook daar ziet hij macht.", "Niet exclusief."],
         uitlegPad: {
           stappen: [
             { titel: "Power/knowledge", tekst: "Foucault: scholen, ziekenhuizen, gevangenissen, psychiatrie disciplineren mensen subtieler dan direct geweld. Wetenschap (seksualiteit, criminaliteit) zelf creëert categorieën die mensen beheersen. Panopticon (Bentham-design): cel-ontwerp waar bewaker iedereen kan zien zonder zelf gezien te worden → mensen disciplineren zichzelf." },
@@ -341,14 +261,9 @@ const steps = [
       },
       {
         q: "**Hannah Arendts** 'banaliteit van het kwaad':",
-        options: [
-          "Holocaust-uitvoerder Eichmann was gewone ambtenaar, geen monster",
-          "Kwaad is altijd spectaculair",
-          "Geen kwaad in moderne tijd",
-          "Geen filosofie hierover"
-        ],
+        options: ["Gewone mensen kunnen groot kwaad doen", "Kwaad is altijd spectaculair", "Alleen monsters plegen groot kwaad", "Kwaad bestaat niet echt"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Wel."],
+        wrongHints: [null, "Tegenovergesteld.", "Tegenovergesteld.", "Niet — ze nam het kwaad juist serieus."],
         uitlegPad: {
           stappen: [
             { titel: "'Eichmann in Jerusalem' 1963", tekst: "Arendt volgde proces tegen Eichmann (Holocaust-bureaucraat). Zag geen demonisch monster maar bureaucratische middelmaat die orders volgde zonder na te denken. Kwaad ontstaat door gedachtenloosheid + conformisme, niet alleen door bewust kwaad. Controversieel: critici vonden dat ze Eichmann te zacht beoordeelde." },
@@ -358,14 +273,9 @@ const steps = [
       },
       {
         q: "**Peter Singer** is bekend om:",
-        options: [
-          "Dier-rechten + effectief altruïsme (utilitarist)",
-          "Existentialisme",
-          "Tegen vegetarisme",
-          "Anti-wetenschap"
-        ],
+        options: ["Opkomen voor dierenrechten", "Existentialisme", "Tegen vegetarisme", "Plichtethiek zoals Kant"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld stroming.", "Tegenovergesteld.", "Tegenovergesteld."],
+        wrongHints: [null, "Niet zijn stroming.", "Tegenovergesteld.", "Niet — hij is utilitarist."],
         uitlegPad: {
           stappen: [
             { titel: "'Animal Liberation' 1975", tekst: "Singer: morele cirkel uitbreiden naar dieren (ze voelen pijn). 'Speciesisme' (zoals racisme of seksisme) is onhoudbaar. Argumenteert tegen vee-industrie. Effectief altruïsme: geef aan organisaties die meeste levens redden per euro. Controversieel: ook standpunt over zwaar-gehandicapte baby's." },
@@ -380,18 +290,13 @@ const steps = [
   {
     title: "Eindopdracht — Toegepaste ethiek (AI, klimaat, abortus)",
     explanation:
-      "**Toegepaste ethiek** = filosofie op concrete dilemma's.\n\n**Drie hoofdbenaderingen** (uit eerdere stappen):\n• **Deontologie** (Kant): regels + plichten. Sommige dingen NOOIT, ongeacht gevolgen.\n• **Utilitarisme** (Bentham/Mill): wat maximaliseert totaal welzijn?\n• **Deugd-ethiek** (Aristoteles): wat zou een goed mens doen? Karakter > regels.\n\n**Hedendaagse dilemma's**:\n\n**1. Klimaat-ethiek**:\n• Verantwoordelijkheid huidige naar toekomstige generaties.\n• Rijke landen veroorzaken meer CO₂, arme landen lijden meer.\n• Individuele actie vs systemische (wat zin?).\n• Eco-modernisme vs degrowth.\n\n**2. AI-ethiek**:\n• Bias in algoritmen (gezichtsherkenning werkt slechter bij mensen met een donkere huid).\n• Werkloosheid door automatisering.\n• Privacy + surveillance.\n• Autonoom rijden + 'trolley-probleem' op weg.\n• AGI (artificial general intelligence): risico voor mensheid?\n• ChatGPT + creatief werk + onderwijs.\n\n**3. Bio-ethiek**:\n• **Abortus**: vs leven-vanaf-conceptie OF vrouwelijk-zelfbeschikkingsrecht.\n• **Euthanasie**: NL toegestaan onder strikte voorwaarden (wet sinds 2002).\n• Stamcellen + IVF + embryo-selectie.\n• Genetische manipulatie (CRISPR): designer-baby's?\n• Orgaandonatie (NL: actief donor-systeem sinds 2020 — iedereen donor tenzij anders aangegeven).\n\n**4. Vlees-ethiek**:\n• 70+ mld dieren per jaar geslacht.\n• Klimaatimpact (livestock 14% global CO₂).\n• Gezondheids-impact.\n• Trolley-vergelijking: zou je iets eten dat lijdt voor klein plezier?\n\n**5. Migratie-ethiek**:\n• Recht op vrij bewegen?\n• Rijke landen morele plicht arme te helpen?\n• Conflict tussen nationale soevereiniteit + universele mensenrechten.\n\n**6. Werk + AI**:\n• Universal Basic Income — werkloosheid in AI-tijdperk opvangen.\n• Recht op werk vs recht op vrijheid van werk.\n\n**Klassiek dilemma — trolley-probleem** (Philippa Foot 1967):\nEen tram rijdt op 5 mensen af. Je kan wissel omzetten → tram doodt 1 ander mens. Doe je het?\n• Utilitarist: ja, 5 > 1.\n• Deontoloog: nee, je VERMOORDT actief 1 onschuldig (verschilt van 'laten sterven').\n• Andere variant: duw dikke man van brug om tram te stoppen → meeste mensen weigeren. Waarom anders? Iets met DIRECTE actie + handelen.\n\n**Drogredenen** in ethische debatten:\n• **Hellend vlak**: 'als A toelaat, dan ook B, dan Z'.\n• **Ad hominem**: persoon aanvallen ipv argument.\n• **Stropop**: standpunt van de tegenstander verzwakt of verdraaid weergeven.\n• **Beroep op natuur**: 'natuurlijk dus goed'.\n\n**Hoe ethisch denken?**:\n1. Identificeer dilemma + betrokkenen.\n2. Wat zegt elke benadering (deontoloog/utilitarist/deugd)?\n3. Welke waarden conflicteren? (vrijheid vs gelijkheid? individu vs gemeenschap?)\n4. Hellend vlak echt of bangmakerij?\n5. Maak eigen positie + onderbouw met argumenten.\n6. Sta open voor andere posities.\n\n**Vier hoofdwaarden Westerse ethiek**:\n• Vrijheid.\n• Gelijkheid.\n• Solidariteit.\n• Verantwoordelijkheid.\n\nSpanning daartussen drijft veel politiek debat.\n\n**Praktisch advies**:\n• Vorm eigen mening + lees diverse bronnen.\n• Praat met mensen die anders denken.\n• Onderbouw je standpunt — niet 'omdat ik het voel'.\n• Sta open voor revisie bij nieuw bewijs.",
+      "**Toegepaste ethiek** = filosofie op concrete dilemma's.\n\n**Drie hoofdbenaderingen** (uit eerdere stappen):\n• **Deontologie** (Kant): regels + plichten. Sommige dingen NOOIT, ongeacht gevolgen.\n• **Utilitarisme** (Bentham/Mill): wat maximaliseert totaal welzijn?\n• **Deugd-ethiek** (Aristoteles): wat zou een goed mens doen? Karakter > regels.\n\n**Hedendaagse dilemma's**:\n\n**1. Klimaat-ethiek**:\n• Verantwoordelijkheid huidige naar toekomstige generaties.\n• Rijke landen veroorzaken meer CO₂, arme landen lijden meer.\n• Individuele actie vs systemische (wat zin?).\n• Eco-modernisme vs degrowth.\n\n**2. AI-ethiek**:\n• Bias in algoritmen (gezichtsherkenning werkt slechter bij mensen met een donkere huid).\n• Werkloosheid door automatisering.\n• Privacy + surveillance.\n• Autonoom rijden + 'trolley-probleem' op weg.\n• AGI (artificial general intelligence): risico voor mensheid?\n• ChatGPT + creatief werk + onderwijs.\n\n**3. Bio-ethiek**:\n• **Abortus**: vs leven-vanaf-conceptie OF vrouwelijk-zelfbeschikkingsrecht.\n• **Euthanasie**: NL toegestaan onder strikte voorwaarden (wet sinds 2002).\n• Stamcellen + IVF + embryo-selectie.\n• Genetische manipulatie (CRISPR): designer-baby's?\n• Orgaandonatie (NL: actief donor-systeem sinds 2020 — iedereen donor tenzij anders aangegeven).\n\n**4. Vlees-ethiek**:\n• 70+ mld dieren per jaar geslacht.\n• Klimaatimpact (veehouderij ±14,5% van de wereldwijde broeikasgassen).\n• Gezondheids-impact.\n• Trolley-vergelijking: zou je iets eten dat lijdt voor klein plezier?\n\n**5. Migratie-ethiek**:\n• Recht op vrij bewegen?\n• Rijke landen morele plicht arme te helpen?\n• Conflict tussen nationale soevereiniteit + universele mensenrechten.\n\n**6. Werk + AI**:\n• Universal Basic Income — werkloosheid in AI-tijdperk opvangen.\n• Recht op werk vs recht op vrijheid van werk.\n\n**Klassiek dilemma — trolley-probleem** (Philippa Foot 1967):\nEen tram rijdt op 5 mensen af. Je kan wissel omzetten → tram doodt 1 ander mens. Doe je het?\n• Utilitarist: ja, 5 > 1.\n• Deontoloog: nee, je VERMOORDT actief 1 onschuldig (verschilt van 'laten sterven').\n• Andere variant: duw dikke man van brug om tram te stoppen → meeste mensen weigeren. Waarom anders? Iets met DIRECTE actie + handelen.\n\n**Drogredenen** in ethische debatten:\n• **Hellend vlak**: 'als A toelaat, dan ook B, dan Z'.\n• **Ad hominem**: persoon aanvallen ipv argument.\n• **Stropop**: standpunt van de tegenstander verzwakt of verdraaid weergeven.\n• **Beroep op natuur**: 'natuurlijk dus goed'.\n\n**Hoe ethisch denken?**:\n1. Identificeer dilemma + betrokkenen.\n2. Wat zegt elke benadering (deontoloog/utilitarist/deugd)?\n3. Welke waarden conflicteren? (vrijheid vs gelijkheid? individu vs gemeenschap?)\n4. Hellend vlak echt of bangmakerij?\n5. Maak eigen positie + onderbouw met argumenten.\n6. Sta open voor andere posities.\n\n**Vier hoofdwaarden Westerse ethiek**:\n• Vrijheid.\n• Gelijkheid.\n• Solidariteit.\n• Verantwoordelijkheid.\n\nSpanning daartussen drijft veel politiek debat.\n\n**Praktisch advies**:\n• Vorm eigen mening + lees diverse bronnen.\n• Praat met mensen die anders denken.\n• Onderbouw je standpunt — niet 'omdat ik het voel'.\n• Sta open voor revisie bij nieuw bewijs.",
     checks: [
       {
         q: "**Trolley-probleem**: wissel omzetten dood 1, anders sterven 5. Wat zegt utilitarist?",
-        options: [
-          "Doe het — 5 redden is meer welzijn dan 1 doden",
-          "Niet doen — actief doden is verbod",
-          "Geen mening",
-          "Vraag iemand anders"
-        ],
+        options: ["Doe het — 5 redden levert meer welzijn op", "Niet doen — actief doden is verboden", "Doe het alleen als die ene persoon instemt", "Laat het lot beslissen"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is deontoloog.", "Wel een filosofisch antwoord.", "Niet."],
+        wrongHints: [null, "Niet — dat is deontoloog.", "Instemming is niet waar de utilitarist naar kijkt — wat telt?", "Niet — de utilitarist kiest bewust."],
         uitlegPad: {
           stappen: [
             { titel: "Reken-ethiek", tekst: "Utilitarist telt geluk + ellende. 5 levens > 1 leven → schakelen is moreel verplicht (volgens deze school). Maar bij 'dikke man van brug duwen': intuïtief verzet — directere actie voelt slechter. Filosofen blijven discussiëren of dit consistent is." },
@@ -401,29 +306,19 @@ const steps = [
       },
       {
         q: "**Deontologie** (Kant) zou bij trolley-probleem zeggen:",
-        options: [
-          "Niet doen — actief doden van onschuldige is altijd verkeerd",
-          "Doen — 5>1",
-          "Geen mening",
-          "Doe wat je wil"
-        ],
+        options: ["Niet doen — actief een onschuldige doden mag niet", "Doen — 5>1", "Doen, als de meerderheid dat wil", "Doe wat je wil"],
         answer: 0,
-        wrongHints: [null, "Niet — dat is utilitarist.", "Wel mening.", "Tegenovergesteld."],
+        wrongHints: [null, "Niet — dat is utilitarist.", "Niet — een meerderheid is geen plicht-argument.", "Tegenovergesteld."],
         uitlegPad: {
           stappen: [
-            { titel: "Geen middel-doel-rechtvaardiging", tekst: "Kant: behandel mensen nooit ALLEEN als middel. Actief de tram doorsturen → gebruik je 1 persoon als instrument om 5 te redden → ongeoorloofd. Verschil tussen: laten sterven (5 niet redden) en actief doden (1 doodrijden). Veel mensen voelen dit verschil intuïtief." },
+            { titel: "Geen middel-doel-rechtvaardiging", tekst: "Kant: behandel mensen nooit ALLEEN als middel. Kant-aanhangers redeneren vaak: actief een onschuldige doden mag niet, ook niet om er 5 te redden (bij de 'dikke man van de brug' gebruik je iemand zelfs letterlijk als middel). Verschil tussen: laten sterven (5 niet redden) en actief doden (1 doodrijden). Veel mensen voelen dit verschil intuïtief." },
           ],
           niveaus: { basis: "Niet doden.", simpeler: "Actief doden = nooit.", nogSimpeler: "Niet doen" },
         },
       },
       {
         q: "**Drogreden 'hellend vlak'** is:",
-        options: [
-          "'Als A toelaten, dan ook B, dan Z' — onbewezen domino-redenering",
-          "Logische argumentatie",
-          "Wiskundig bewijs",
-          "Persoonlijke voorkeur"
-        ],
+        options: ["Onbewezen kettingredenering van A naar Z", "Logische argumentatie", "Wiskundig bewijs", "Persoonlijke voorkeur"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Niet.", "Niet specifiek."],
         uitlegPad: {
@@ -435,12 +330,7 @@ const steps = [
       },
       {
         q: "**NL euthanasie-wet** vereist:",
-        options: [
-          "Strikte voorwaarden + arts-beoordeling + lijden zonder uitzicht",
-          "Alleen patiënt-aanvraag",
-          "Verboden",
-          "Iedereen kan euthanasie krijgen"
-        ],
+        options: ["Uitzichtloos lijden + toetsing door artsen", "Alleen een verzoek van de patiënt", "Euthanasie is verboden", "Iedereen kan euthanasie krijgen"],
         answer: 0,
         wrongHints: [null, "Onvolledig.", "Niet — toegestaan.", "Niet — strikt."],
         uitlegPad: {

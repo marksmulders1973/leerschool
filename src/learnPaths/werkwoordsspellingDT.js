@@ -85,7 +85,7 @@ const steps = [
         q: "Wat is de **stam** van **werken**?",
         options: ["werk","werken","wer","wert"],
         answer: 0,
-        wrongHints: [null,"Dat is het hele werkwoord (infinitief).","Klinker is fout — werk niet wer.","-t hoort er niet bij."],
+        wrongHints: [null,"Dat is het hele werkwoord (infinitief).","Er mist een letter — haal alléén -en weg.","-t hoort er niet bij."],
         uitlegPad: {
           stappen: [
             { titel: "Stam vinden", tekst: "Hele werkwoord 'werken' minus -en = 'werk'. Klinker blijft kort want lettergreep blijft gesloten." },
@@ -101,7 +101,7 @@ const steps = [
         q: "Wat is de **stam** van **maken**?",
         options: ["maak","mak","make","maken"],
         answer: 0,
-        wrongHints: [null,"Klinker te kort — moet 'maak' worden.","-e hoort er niet bij.","Dat is het hele werkwoord."],
+        wrongHints: [null,"Klinker te kort — hoor je in ma-ken een korte of een lange a?","-e hoort er niet bij.","Dat is het hele werkwoord."],
         uitlegPad: {
           stappen: [
             { titel: "Stam met klinker-verlengen", tekst: "Maken − en = mak. Maar 'mak' heeft korte a, terwijl 'ma-ken' lange a heeft. Verleng: maak." },
@@ -176,7 +176,7 @@ const steps = [
   },
   {
     title: "Stam eindigt op d (worden, vinden)",
-    explanation: "Wanneer de **stam eindigt op d**, krijgt 'ie bij hij/zij/het **nog een -t erachter**. Resultaat: **dt**!\n\n**Regel**: stam **+ t** = uitgang. Dus:\n• Stam **word** + t = **wordt** (hij wordt)\n• Stam **vind** + t = **vindt** (hij vindt)\n• Stam **houd** + t = **houdt** (hij houdt)\n\n**Vergelijk**:\n\n| Werkwoord | Stam | Hij/zij |\n|---|---|---|\n| werken | werk | werk**t** |\n| lopen | loop | loop**t** |\n| **worden** | word | wor**dt** ← extra t na d! |\n| **vinden** | vind | vin**dt** |\n| **houden** | houd | hou**dt** |\n\n**Veelvoorkomende fouten**:\n\n*\"Hij word boos\"* ❌ — mist de -t (alleen stam, niet vervoegd voor hij)\n*\"Hij wordt boos\"* ✓ — stam (word) + t = wordt\n\n*\"Hij wordd boos\"* ❌ — d-d bestaat niet, het is d-t\n*\"Hij wort boos\"* ❌ — t-t mist de d van de stam\n*\"Hij wordt boos\"* ✓\n\n**Trucje** om te checken:\n1. Vind de stam (haal -en weg).\n2. Eindigt de stam op **d**? Voeg dan **t** toe → **dt**.\n\n**Belangrijk**: de **d** is van de stam, de **t** is van de vervoeging. Beide schrijf je apart — vandaar **dt**.\n\n**Trucje voor twijfel** (de '**lopen-test**'):\nVervang het werkwoord door **lopen** in dezelfde zin:\n• Hij wordt → vervang: hij loopt. Eindigt op t? Ja → dus 'wordt' eindigt ook op t. ✓\n\n**Voorbeelden om te oefenen**:\n• De man (worden) heel oud. → De man **wordt** heel oud.\n• Zij (vinden) een schat. → Zij **vinden** een schat (= meervoud, geen t-toevoeging).\n• Hij (houden) van haar. → Hij **houdt** van haar.",
+    explanation: "Wanneer de **stam eindigt op d**, krijgt 'ie bij hij/zij/het **nog een -t erachter**. Resultaat: **dt**!\n\n**Regel**: stam **+ t** = uitgang. Dus:\n• Stam **word** + t = **wordt** (hij wordt)\n• Stam **vind** + t = **vindt** (hij vindt)\n• Stam **houd** + t = **houdt** (hij houdt)\n\n**Vergelijk**:\n\n| Werkwoord | Stam | Hij/zij |\n|---|---|---|\n| werken | werk | werk**t** |\n| lopen | loop | loop**t** |\n| **worden** | word | wor**dt** ← extra t na d! |\n| **vinden** | vind | vin**dt** |\n| **houden** | houd | hou**dt** |\n\n**Veelvoorkomende fouten**:\n\n*\"Hij word boos\"* ❌ — mist de -t (alleen stam, niet vervoegd voor hij)\n*\"Hij wordt boos\"* ✓ — stam (word) + t = wordt\n\n*\"Hij wordd boos\"* ❌ — een woord eindigt nooit op dd, het is d-t\n*\"Hij wort boos\"* ❌ — t-t mist de d van de stam\n*\"Hij wordt boos\"* ✓\n\n**Trucje** om te checken:\n1. Vind de stam (haal -en weg).\n2. Eindigt de stam op **d**? Voeg dan **t** toe → **dt**.\n\n**Belangrijk**: de **d** is van de stam, de **t** is van de vervoeging. Beide schrijf je apart — vandaar **dt**.\n\n**Trucje voor twijfel** (de '**lopen-test**'):\nVervang het werkwoord door **lopen** in dezelfde zin:\n• Hij wordt → vervang: hij loopt. Eindigt op t? Ja → dus 'wordt' eindigt ook op t. ✓\n\n**Voorbeelden om te oefenen**:\n• De man (worden) heel oud. → De man **wordt** heel oud.\n• Zij (vinden) een schat. → Zij **vinden** een schat (= meervoud, geen t-toevoeging).\n• Hij (houden) van haar. → Hij **houdt** van haar.",
     svg: vervoegingTabelSvg("worden", "word", [
       { persoon: "ik", vorm: "word", persoonKleur: COLORS.ik, uitleg: "alleen stam" },
       { persoon: "jij", vorm: "wordt", persoonKleur: COLORS.jij, uitleg: "stam + t = dt" },
@@ -188,14 +188,14 @@ const steps = [
         q: "**'Hij ____ boos'** — kies juiste vorm van **worden**:",
         options: ["wordt","word","wort","wordd"],
         answer: 0,
-        wrongHints: [null,"Mist de t van vervoeging — bij hij/zij altijd t.","Mist de d van de stam.","Dubbel-d komt niet voor in NL spelling."],
+        wrongHints: [null,"Mist de t van vervoeging — bij hij/zij altijd t.","Mist de d van de stam.","Een woord eindigt nooit op dd — welke letter hoort bij hij achter de stam?"],
         uitlegPad: {
           stappen: [
             { titel: "Stam = word", tekst: "Worden − en = word (eindigt op d)." },
             { titel: "Hij = stam + t", tekst: "Word + t = wordt. Beide letters apart: d van stam, t van vervoeging = dt." },
           ],
           woorden: [{ woord: "dt-combinatie", uitleg: "Bij stam-op-d + hij/zij vervoeging = dt schrijven." }],
-          theorie: "Word (stam) + t (hij) = wordt. Niet 'wort' (mist d), niet 'wordd' (dubbel-d bestaat niet).",
+          theorie: "Word (stam) + t (hij) = wordt. Niet 'wort' (mist d), niet 'wordd' (een woord eindigt nooit op dd).",
           voorbeelden: [{ type: "dt", tekst: "worden → hij wordt. Vinden → hij vindt. Houden → hij houdt." }],
           basiskennis: [{ onderwerp: "Lopen-test", uitleg: "Hij wordt = hij loopt. Beide eindigen op t. ✓" }],
           niveaus: { basis: "Hij = stam + t = wordt.", simpeler: "Stam van worden = word. Bij hij +t. Word + t = wordt. Niet 'word' (mist t), niet 'wort' (mist d).", nogSimpeler: "Word + t = wordt" },
@@ -203,9 +203,9 @@ const steps = [
       },
       {
         q: "**'Zij (meervoud) ____ een schat'** — kies juiste vorm van **vinden**:",
-        options: ["vinden","vindt","vinden t","vindt t"],
+        options: ["vinden","vindt","vind","vint"],
         answer: 0,
-        wrongHints: [null,"Bij meervoud (zij = meerdere mensen) gebruik je 'vinden'.","Geen Nederlandse vorm.","Geen Nederlandse vorm."],
+        wrongHints: [null,"Dat is de vorm voor één persoon (hij of zij enkelvoud).","Dat is de ik-vorm: alleen de stam.","Mist de d van de stam."],
         uitlegPad: {
           stappen: [{ titel: "Meervoud = +en", tekst: "Zij meervoud = vinden (hele werkwoord)." }],
           woorden: [{ woord: "meervoud", uitleg: "Meer personen = werkwoord op -en." }],
@@ -275,14 +275,14 @@ const steps = [
   },
   {
     title: "Verleden tijd zwakke werkwoorden — 't kofschip",
-    explanation: "**Verleden tijd** vorm je bij **zwakke werkwoorden** (95% van alle werkwoorden) door **-de of -te** achter de stam te zetten.\n\nWELKE? Dat hangt af van de **laatste medeklinker van de stam**:\n\n**Geheugenezel: 't kofschip**\nAls de stam eindigt op een van deze medeklinkers — **t, k, f, s, ch, p** — dan krijgt 'ie **-te** of **-ten**.\n\nAlle andere medeklinkers (en klinkers) → **-de** of **-den**.\n\n*\"'t kofschip\"* is een woord-trucje om de letters te onthouden:\n• 't = t\n• k\n• o (klinker, telt niet)\n• f\n• s\n• ch\n• i (klinker, telt niet)\n• p\n\nDe **klinkers o + i tellen NIET** — alleen de medeklinkers.\n\n**Voorbeelden** (eindigt op t-kofschip-letter → -te/-ten):\n\n| Werkwoord | Stam | Verleden tijd |\n|---|---|---|\n| werken | werk (k) | werk**te** / werk**ten** |\n| stoppen | stop (p) | stop**te** / stop**ten** |\n| fietsen | fiets (s) | fiets**te** / fiets**ten** |\n| straffen | straf (f) | straf**te** / straf**ten** |\n| lachen | lach (ch) | lach**te** / lach**ten** |\n\n**Voorbeelden** (eindigt NIET op kofschip-letter → -de/-den):\n\n| Werkwoord | Stam | Verleden tijd |\n|---|---|---|\n| leren | leer (r) | leer**de** / leer**den** |\n| spelen | speel (l) | speel**de** / speel**den** |\n| dromen | droom (m) | droom**de** / droom**den** |\n| reizen | reis... wacht, eindigt op **z**? Nee, op **s** | reis**de** / reis**den** ❌ MOEILIJK |\n\n**Pas op met 'verzen' (z) vs 'reizen' (z)**: bij 'reizen' is stam **reis** (NIET met z, want eind-z wordt s). Maar de oorspronkelijke z telt voor 't kofschip — dus reisde (-de) niet reiste.\n\n**Lastige gevallen** met geluid-trucje:\nLuister wat de stam eindigt OP IN HET WERKWOORDSGELUID. Niet de geschreven letter — de uitspraak.\n• 'verhuizen' → uitspraak eindigt op 'z'-klank → **verhuisde**\n• 'leven' → uitspraak eindigt op 'v' → **leefde** (let op: f komt van v in geluid)\n• 'beloven' → uitspraak eindigt op 'v' → **beloofde**",
+    explanation: "**Verleden tijd** vorm je bij **zwakke werkwoorden** (95% van alle werkwoorden) door **-de of -te** achter de stam te zetten.\n\nWELKE? Dat hangt af van de **laatste medeklinker van de stam**:\n\n**Geheugenezel: 't kofschip**\nAls de stam eindigt op een van deze medeklinkers — **t, k, f, s, ch, p** — dan krijgt 'ie **-te** of **-ten**.\n\nAlle andere medeklinkers (en klinkers) → **-de** of **-den**.\n\n*\"'t kofschip\"* is een woord-trucje om de letters te onthouden:\n• 't = t\n• k\n• o (klinker, telt niet)\n• f\n• s\n• ch\n• i (klinker, telt niet)\n• p\n\nDe **klinkers o + i tellen NIET** — alleen de medeklinkers.\n\n**Voorbeelden** (eindigt op t-kofschip-letter → -te/-ten):\n\n| Werkwoord | Stam | Verleden tijd |\n|---|---|---|\n| werken | werk (k) | werk**te** / werk**ten** |\n| stoppen | stop (p) | stop**te** / stop**ten** |\n| fietsen | fiets (s) | fiets**te** / fiets**ten** |\n| straffen | straf (f) | straf**te** / straf**ten** |\n| lachen | lach (ch) | lach**te** / lach**ten** |\n\n**Voorbeelden** (eindigt NIET op kofschip-letter → -de/-den):\n\n| Werkwoord | Stam | Verleden tijd |\n|---|---|---|\n| leren | leer (r) | leer**de** / leer**den** |\n| spelen | speel (l) | speel**de** / speel**den** |\n| dromen | droom (m) | droom**de** / droom**den** |\n| reizen | reis (z in reizen) | reis**de** / reis**den** |\n\n**Pas op bij 'reizen'**: de stam schrijf je als **reis** (een z aan het eind wordt s). Maar voor 't kofschip kijk je naar de letter in het hele werkwoord: reizen heeft een **z**, en die zit niet in 't kofschip — dus reisde (-de), niet reiste.\n\n**Lastige gevallen** met geluid-trucje:\nLuister wat de stam eindigt OP IN HET WERKWOORDSGELUID. Niet de geschreven letter — de uitspraak.\n• 'verhuizen' → uitspraak eindigt op 'z'-klank → **verhuisde**\n• 'leven' → uitspraak eindigt op 'v' → **leefde** (let op: f komt van v in geluid)\n• 'beloven' → uitspraak eindigt op 'v' → **beloofde**",
     svg: tKofschipSvg(),
     checks: [
       {
         q: "Welke medeklinkers zitten in **'t kofschip**?",
-        options: ["t, k, f, s, ch, p","t, k, o, f, s, ch, i, p","b, d, g, v, z, l","Het is een trein"],
+        options: ["t, k, f, s, ch, p","t, k, o, f, s, ch, i, p","b, d, g, v, z, l","t, k, f, s, g, p"],
         answer: 0,
-        wrongHints: [null,"Klinkers o, i tellen niet mee.","Niet alfabetisch — specifieke letters.","Het is een spelling-truc!"],
+        wrongHints: [null,"Klinkers o, i tellen niet mee.","Bij deze letters krijg je juist -de.","Eén letter klopt niet — zeg 't kofschip nog eens langzaam."],
         uitlegPad: {
           stappen: [
             { titel: "'t kofschip", tekst: "Geheugenezel: 't k o f s ch i p. Klinkers (o, i) tellen NIET. Medeklinkers: t, k, f, s, ch, p (de ch telt als één klank)." },
@@ -296,9 +296,9 @@ const steps = [
       },
       {
         q: "Verleden tijd van **werken**:",
-        options: ["werkte","werkde","werken","werkte t"],
+        options: ["werkte","werkde","werken","werkt"],
         answer: 0,
-        wrongHints: [null,"k zit in 't kofschip — dus -te.","Dat is tegenwoordige tijd meervoud.","Geen NL vorm."],
+        wrongHints: [null,"k zit in 't kofschip — dus -te.","Dat is tegenwoordige tijd meervoud.","Dat is tegenwoordige tijd (hij werkt)."],
         uitlegPad: {
           stappen: [
             { titel: "Stam check", tekst: "Werken → werk. Eindigt op K. K zit in 't kofschip → -te." },
@@ -313,9 +313,9 @@ const steps = [
       },
       {
         q: "Verleden tijd van **leren**:",
-        options: ["leerde","leerte","leren","leerts"],
+        options: ["leerde","leerte","leren","leert"],
         answer: 0,
-        wrongHints: [null,"r zit NIET in 't kofschip — dus -de niet -te.","Dat is tegenwoordige tijd meervoud.","Geen NL vorm."],
+        wrongHints: [null,"r zit NIET in 't kofschip — dus -de niet -te.","Dat is tegenwoordige tijd meervoud.","Dat is tegenwoordige tijd (hij leert)."],
         uitlegPad: {
           stappen: [
             { titel: "Stam check", tekst: "Leren → leer. Eindigt op R. R zit NIET in 't kofschip → -de." },
@@ -384,7 +384,7 @@ const steps = [
         q: "Kies de juiste: **'____ jij vandaag jarig?'**",
         options: ["Word","Wordt","Wordd","Worden"],
         answer: 0,
-        wrongHints: [null,"Bij 'jij ACHTER het werkwoord' valt de t weg.","Dubbel-d komt niet voor.","Meervoud past niet bij jij."],
+        wrongHints: [null,"Bij 'jij ACHTER het werkwoord' valt de t weg.","Een woord eindigt nooit op dd.","Meervoud past niet bij jij."],
         uitlegPad: {
           stappen: [
             { titel: "Jij ACHTER", tekst: "'Word jij...' = jij staat ACHTER werkwoord. T valt weg. Word (geen t)." },
@@ -400,7 +400,7 @@ const steps = [
         q: "Kies de juiste: **'Hij ____ boos.'**",
         options: ["wordt","word","wordd","worden"],
         answer: 0,
-        wrongHints: [null,"Mist de -t van vervoeging bij hij.","Dubbel-d bestaat niet.","Meervoud — niet bij hij."],
+        wrongHints: [null,"Mist de -t van vervoeging bij hij.","Een woord eindigt nooit op dd.","Meervoud — niet bij hij."],
         uitlegPad: {
           stappen: [{ titel: "Hij = stam + t", tekst: "Word + t = wordt. d (stam) + t (vervoeging) = dt." }],
           woorden: [{ woord: "dt-regel", uitleg: "Stam-op-d + hij/zij = dt." }],
@@ -414,7 +414,7 @@ const steps = [
         q: "Kies de juiste: **'Ik ____ ziek.'**",
         options: ["word","wordt","wordd","worden"],
         answer: 0,
-        wrongHints: [null,"Bij ik geen extra t.","Dubbel-d bestaat niet.","Meervoud past niet bij ik."],
+        wrongHints: [null,"Bij ik geen extra t.","Een woord eindigt nooit op dd.","Meervoud past niet bij ik."],
         uitlegPad: {
           stappen: [{ titel: "Ik = alleen stam", tekst: "Bij 'ik' alleen de stam — geen extra letters. Stam = word. Ik word." }],
           woorden: [{ woord: "ik-vorm", uitleg: "Bij ik altijd ALLEEN de stam, nooit +t." }],
@@ -428,7 +428,7 @@ const steps = [
   },
   {
     title: "Eindopdracht — alle d/t-regels samen",
-    explanation: "Alle regels op een rij:\n\n**1. Tegenwoordige tijd**:\n• ik = stam (geen t)\n• jij/hij/zij/het (vóór wkw) = stam + t\n• jij ACHTER wkw = stam (t valt weg!)\n• wij/jullie/zij = stam + en\n• Stam op d → bij hij wordt = dt\n• Stam op t → blijft t (geen dubbele t)\n\n**2. Verleden tijd zwakke werkwoorden**:\n• Stam eindigt op **t-k-f-s-ch-h-p** ('t kofschip) → -te / -ten\n• Anders → -de / -den\n\n**3. Voltooid deelwoord**:\n• ge-stam-**t** (kofschip-stam)\n• ge-stam-**d** (anders)\n\n**4. Lopen-test**:\nBij twijfel: vervang werkwoord door 'lopen'. Eindigt 'lopen' op t? Dan ook jouw werkwoord. Eindigt op n? Idem.\n\nVeel succes!",
+    explanation: "Alle regels op een rij:\n\n**1. Tegenwoordige tijd**:\n• ik = stam (geen t)\n• jij/hij/zij/het (vóór wkw) = stam + t\n• jij ACHTER wkw = stam (t valt weg!)\n• wij/jullie/zij = stam + en\n• Stam op d → bij hij wordt = dt\n• Stam op t → blijft t (geen dubbele t)\n\n**2. Verleden tijd zwakke werkwoorden**:\n• Stam eindigt op **t-k-f-s-ch-p** ('t kofschip) → -te / -ten\n• Anders → -de / -den\n\n**3. Voltooid deelwoord**:\n• ge-stam-**t** (kofschip-stam)\n• ge-stam-**d** (anders)\n\n**4. Lopen-test**:\nBij twijfel: vervang werkwoord door 'lopen'. Eindigt 'lopen' op t? Dan ook jouw werkwoord. Eindigt op n? Idem.\n\nVeel succes!",
     svg: vervoegingTabelSvg("worden + werken", "word/werk", [
       { persoon: "ik werk", vorm: "stam", persoonKleur: COLORS.ik, uitleg: "" },
       { persoon: "hij werkt", vorm: "+ t", persoonKleur: COLORS.hij, uitleg: "" },
@@ -545,7 +545,7 @@ const steps = [
           woorden: [
             { woord: "wordt", uitleg: "TT 3e persoon van worden. Stam (word) + t = wordt. Dubbele letter dt." },
           ],
-          theorie: "Andere stam-op-d werkwoorden:\n• Vinden (vind) → vindt\n• Houden (houd) → houdt\n• Rijden (rijd) → rijdt\n• Snijden (snijd) → snijdt\n\nAllemaal dt-eindiging bij hij-vorm. Engel-stijl: één t — fout.",
+          theorie: "Andere stam-op-d werkwoorden:\n• Vinden (vind) → vindt\n• Houden (houd) → houdt\n• Rijden (rijd) → rijdt\n• Snijden (snijd) → snijdt\n\nAllemaal dt-eindiging bij hij-vorm. Alleen een t schrijven ('wort') is fout.",
           voorbeelden: [
             { type: "stap", tekst: "Stam 'word'. Hij + stam + t. Word + t = wordt." },
           ],
@@ -559,9 +559,9 @@ const steps = [
       { q: "Verleden tijd: 'Wij ___ vrolijk.' (spelen)", options: ["speelden","speelde","speelten","spelen"], answer: 0, wrongHints: [null, "Enkelvoud.", "Niet.", "Tegenwoordige tijd."] },
       { q: "Voltooid deelwoord van 'werken'?", options: ["gewerkt","gewerkd","werkte","werkten"], answer: 0, wrongHints: [null, "Niet — k in kofschip = t.", "Verleden tijd.", "Niet."] },
       { q: "Voltooid deelwoord van 'leren'?", options: ["geleerd","geleert","leerde","leren"], answer: 0, wrongHints: [null, "Niet — r → d.", "Verleden tijd.", "Hele werkwoord."] },
-      { q: "Vul: 'Hij ___ niet wat hij wil.' (weten)", options: ["weet","weett","weeten","wist"], answer: 0, wrongHints: [null, "Dubbel — niet.", "Hele werkwoord.", "Verleden tijd."] },
+      { q: "Vul: 'Hij ___ niet wat hij wil.' (weten, tegenwoordige tijd)", options: ["weet","weett","weeten","wist"], answer: 0, wrongHints: [null, "Dubbel — niet.", "Bij hij geen -en, en let op de spelling.", "Verleden tijd."] },
       { q: "Vul: 'Ik ___ dat ik gelijk heb.' (vinden)", options: ["vind","vindt","vindde","vinden"], answer: 0, wrongHints: [null, "Niet — dat is hij-vorm.", "Niet.", "Hele."] },
-      { q: "Vul: 'Zij ___ snel.' (rennen, hij/zij-vorm)", options: ["rent","rend","rennen","rende"], answer: 0, wrongHints: [null, "Niet — kofschip-regel niet voor ww-stam.", "Hele.", "Verleden."] },
+      { q: "Vul: 'Zij ___ snel.' (rennen, hij/zij-vorm)", options: ["rent","rend","rennen","rende"], answer: 0, wrongHints: [null, "Stam van rennen is ren — waar komt die d vandaan?", "Hele.", "Verleden."] },
       { q: "Voltooid deelwoord van 'spelen'?", options: ["gespeeld","gespelt","speelde","gespeelde"], answer: 0, wrongHints: [null, "Niet — l geen kofschip.", "Verleden tijd.", "Niet."] },
       { q: "Vul in: 'Hij ___ niet boos.' (worden)", options: ["wordt","word","wordtt","worden"], answer: 0, wrongHints: [null, "Niet — d-stam + t = dt.", "Niet — dubbele t.", "Hele."] },
       { q: "Vul in: 'Wij ___ het verhaal.' (horen)", options: ["horen","hoort","horede","horeden"], answer: 0, wrongHints: [null, "Dat is hij/zij/het.", "Niet bestaand.", "Niet."] },

@@ -2101,7 +2101,7 @@ const steps = [
           niveaus: {
             basis: "Komma tussen items, geen komma vóór 'en'.",
             simpeler: "Bij een opsomming: appels, peren en druiven. Tussen losse items komma, vóór 'en' geen komma.",
-            nogSimpeler: "Optie a",
+            nogSimpeler: "Geen komma vóór 'en'.",
           },
         },
       },
@@ -2169,7 +2169,7 @@ const steps = [
         q: "Wat is het **onderwerp** in 'De kat slaapt'?",
         options: ["De kat", "Slaapt", "De", "Slaapt de kat"],
         answer: 0,
-        wrongHints: [null, "Dat is het werkwoord.", "Lidwoord alleen.", "Niet."],
+        wrongHints: [null, "Dat is het werkwoord.", "Lidwoord alleen.", "Dat is de hele zin — welk deel doet de actie?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is het onderwerp?", tekst: "Het onderwerp is **wie of wat de actie doet**. Vraag: 'Wie/wat slaapt?' → de kat." },
@@ -2226,7 +2226,7 @@ const steps = [
         q: "Wat is het **lijdend voorwerp** in 'Ik eet een appel'?",
         options: ["een appel", "Ik", "eet", "Geen"],
         answer: 0,
-        wrongHints: [null, "Onderwerp.", "Werkwoord.", "Wel."],
+        wrongHints: [null, "Onderwerp.", "Werkwoord.", "Er is wel een woordgroep die de actie ondergaat — zoek verder."],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een lijdend voorwerp?", tekst: "Het lijdend voorwerp is het ding WAAROP de actie van het werkwoord gericht is. Met andere woorden: WAT wordt er gegeten/gezien/gepakt?" },
@@ -2252,9 +2252,9 @@ const steps = [
       },
       {
         q: "Welke zin heeft een **bijvoeglijk naamwoord**?",
-        options: ["De rode auto.", "De auto rijdt.", "Auto staat.", "Auto auto."],
+        options: ["De rode auto rijdt.", "De auto rijdt.", "Papa wast de auto.", "De auto staat in de garage."],
         answer: 0,
-        wrongHints: [null, "Geen beschrijving.", "Geen beschrijving.", "Geen NL."],
+        wrongHints: [null, "Zegt een woord hier hoe de auto eruitziet?", "Zegt een woord hier hoe de auto eruitziet?", "Zegt een woord hier hoe de auto eruitziet?"],
         uitlegPad: {
           stappen: [
             { titel: "Wat is een bijvoeglijk naamwoord?", tekst: "Een bijvoeglijk naamwoord beschrijft HOE iets is. Het staat meestal vóór een ander woord en geeft een kenmerk." },
@@ -2337,7 +2337,7 @@ const steps = [
         q: "*Welk leesteken hoort op de plek? '* **Wat doe je daar___'** *'*",
         options: ["?", ".", "!", ","],
         answer: 0,
-        wrongHints: [null, "Een vraag eindigt op vraagteken.", "Past niet voor een vraag.", "Komma sluit geen zin af."],
+        wrongHints: [null, "Is dit een mededeling, of wil iemand iets weten?", "Roept iemand dit uit, of wil hij iets weten?", "Komma sluit geen zin af."],
       },
       {
         q: "Welke zin staat **goed** geschreven (directe rede)?",
@@ -2354,7 +2354,7 @@ const steps = [
           voorbeelden: [{ type: "stap", tekst: "Indirect: 'Mama zei dat ik moest komen eten.' (geen aanhalingstekens nodig)." }],
           basiskennis: [{ onderwerp: "Verschil", uitleg: "Indirecte rede = navertellen. Geen aanhalingstekens. Directe rede = letterlijk citeren. Wel aanhalingstekens." }],
           niveaus: {
-            basis: "Mama zei: 'Kom eten.' A.",
+            basis: "Mama zei: 'Kom eten.'",
             simpeler: "Zei + dubbele punt + 'Kom eten.'",
             nogSimpeler: "Aanhalingstekens om citaat",
           },
@@ -2406,13 +2406,13 @@ const steps = [
         q: "Wat is het **meervoud** van 'leerling'?",
         options: ["leerlingen", "leerlinges", "leerling", "leerlingens"],
         answer: 0,
-        wrongHints: [null, "Engels meervoud, niet NL.", "Enkelvoud.", "Dubbel meervoud."],
+        wrongHints: [null, "Zeg het hardop: 'twee leerling...' — welk meervoud hoor je?", "Enkelvoud.", "Dubbel meervoud."],
       },
       {
-        q: "*'Ik vind ___ ijs lekker.'* Welk **lidwoord**?",
+        q: "*'Ik vind ___ ijs lekker.'* Welk **bepaald lidwoord** past?",
         options: ["het", "de", "een", "die"],
         answer: 0,
-        wrongHints: [null, "Niet — 'ijs' is een 'het'-woord.", "'Een' is onbepaald — hier gaat het om één bepaald ijsje. Welk bepaald lidwoord hoort bij 'ijs'?", "Aanwijzend, geen lidwoord."],
+        wrongHints: [null, "Zeg het hardop: klinkt 'de ijs' goed?", "'Een' is een onbepaald lidwoord — de vraag zoekt een bepaald lidwoord.", "Aanwijzend, geen lidwoord."],
       },
       {
         q: "*'De kat ___ van Marieke.'* Welk werkwoord (tegenwoordig)?",
@@ -2428,11 +2428,11 @@ const steps = [
         uitlegPad: {
           stappen: [
             { titel: "Dubbele punt leidt een opsomming in", tekst: "Een dubbele punt (`:`) gebruik je om aan te kondigen wat komt: een opsomming, een citaat, een uitleg." },
-            { titel: "Voorbeelden", tekst: "'Tom kookte: pasta, pizza.' (lijst) — 'Hij zei: kom hier.' (citaat) — 'Dit is mijn idee: we gaan zwemmen.' (uitleg)." },
+            { titel: "Voorbeelden", tekst: "'Tom kookte: pasta, pizza.' (lijst) — Hij zei: 'Kom hier.' (citaat) — 'Dit is mijn idee: we gaan zwemmen.' (uitleg)." },
           ],
           woorden: [{ woord: "dubbele punt", uitleg: "`:` — kondigt iets aan na de zin." }],
           theorie: "Toets-truc: dubbele punt staat bijna altijd VOOR iets dat komt, niet midden in een zin als 'gewone' pauze.",
-          voorbeelden: [{ type: "stap", tekst: "Recept: '500g meel, 2 eieren'. De dubbele punt kondigt de lijst aan." }],
+          voorbeelden: [{ type: "stap", tekst: "'Je hebt nodig: 500 gram meel en 2 eieren.' De dubbele punt kondigt de lijst aan." }],
           basiskennis: [{ onderwerp: "Andere tekens", uitleg: "Komma = pauze. Punt = einde. Vraagteken = vraag. Uitroepteken = nadruk/emotie." }],
           niveaus: {
             basis: "Dubbele punt.",
@@ -2460,7 +2460,7 @@ const steps = [
         wrongHints: [null, "Geen reden hier.", "Geen gevolg.", "Geen reden."],
       },
       {
-        q: "*'Tom rent. Hij rent **snel**.'* — Welk **bijwoord**?",
+        q: "*'Tom rent. Hij rent snel.'* — Welk woord is een **bijwoord**?",
         options: ["snel", "Tom", "rent", "Hij"],
         answer: 0,
         wrongHints: [null, "Eigennaam, geen bijwoord.", "Werkwoord.", "Persoonlijk voornaamwoord."],
@@ -2470,7 +2470,7 @@ const steps = [
             { titel: "Toets-truc", tekst: "Vraag bij elk woord: 'beschrijft het de actie?' Zo ja → bijwoord. Beschrijft het een ding/persoon → bijvoeglijk nw." },
           ],
           woorden: [{ woord: "bijwoord", uitleg: "Woord dat HOE/WAAR/WANNEER een actie gebeurt aanduidt." }],
-          theorie: "De toets test bijwoorden meestal als 'welk woord beschrijft de manier?' Antwoord: bijwoord eindigt vaak op -lijk of -ig.",
+          theorie: "De toets test bijwoorden meestal als 'welk woord beschrijft de manier?' Antwoord: het woord dat zegt hoe, waar of wanneer iets gebeurt.",
           voorbeelden: [
             { type: "stap", tekst: "Hij schrijft mooi. (bijwoord = mooi)" },
             { type: "stap", tekst: "Ze loopt vlug. (bijwoord = vlug)" },
@@ -2514,7 +2514,7 @@ const steps = [
         wrongHints: [null, "Werkwoord.", "Past bij actie, niet bij huis.", "Voornaamwoord."],
       },
       {
-        q: "*'Open vraag*': hoe schrijf je 'paardenstaart' (zonder spatie of streepje)?",
+        q: "*'Open vraag*': plak 'paard' en 'staart' aan elkaar tot één woord (een staart zoals bij een paard). Hoe schrijf je dat woord (zonder spatie of streepje)?",
         kind: "open",
         acceptedAnswers: ["paardenstaart"],
         explanation: "Samenstelling met tussen-n: paard + (en) + staart = paardenstaart.",
@@ -2558,7 +2558,7 @@ const steps = [
       {
         q: "*'Lisa zei **...** ik kom morgen langs.'* Welke leestekens horen op de puntjes?",
         ref: "S",
-        options: ["Dubbele punt en aanhalingstekens (: “…”)", "Alleen een komma", "Een puntkomma", "Niets"],
+        options: ["Dubbele punt en aanhalingstekens (: “…”)", "Alleen een komma (,)", "Een puntkomma (;)", "Geen leestekens ( )"],
         answer: 0,
         wrongHints: [null, "Bij iemand die létterlijk iets zegt, is een komma alleen niet genoeg.", "Een puntkomma verbindt twee zinnen — hier kondig je gesproken woorden aan.", "Zonder leestekens zie je niet waar het citaat begint."],
         explanation: "Voor een **citaat** (letterlijke woorden) gebruik je een dubbele punt + aanhalingstekens: Lisa zei: “Ik kom morgen langs.”",
@@ -2614,11 +2614,11 @@ const steps = [
         ref: "1F",
         options: ["Drie", "Eén", "Twee", "Vier"],
         answer: 0,
-        wrongHints: [null, "Kijk ook naar namen van dierentuinen en steden.", "Tel nog eens: zinsbegin + twee namen.", "'Zaterdag' en 'broertje' krijgen er geen — tel alleen wat echt moet."],
+        wrongHints: [null, "Kijk ook naar namen van dierentuinen en steden.", "Tel nog eens: kijk naar het begin van de zin én naar álle namen.", "'Zaterdag' en 'broertje' krijgen er geen — tel alleen wat echt moet."],
         explanation: "Drie: **M**ijn (zinsbegin), **A**rtis (naam) en **A**msterdam (plaatsnaam). Dagen van de week krijgen géén hoofdletter.",
       },
       {
-        q: "Welke zin zegt dat het **misschien** gaat gebeuren?",
+        q: "Welke zin zegt dat het feest **misschien** niet doorgaat?",
         ref: "S",
         options: ["Het feest gaat mogelijk niet door.", "Het feest gaat zeker niet door.", "Het feest gaat nooit door.", "Het feest ging niet door."],
         answer: 0,

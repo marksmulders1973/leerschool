@@ -21,9 +21,9 @@ const steps = [
     checks: [
       {
         q: "Wat is **democratie**?",
-        options: ["Volk beslist", "Eén leider beslist", "Niets beslist", "Koning beslist"],
+        options: ["Volk beslist", "Eén leider beslist", "Rechters beslissen", "Koning beslist"],
         answer: 0,
-        wrongHints: [null, "Dictatuur.", "Geen besluit.", "Niet meer."],
+        wrongHints: [null, "Dictatuur.", "Rechters spreken recht — maar wie heeft in een democratie de macht?", "Niet meer."],
         uitlegPad: {
           stappen: [
             { titel: "Wat betekent democratie?", tekst: "Het woord **democratie** komt uit het Grieks: 'demos' = volk, 'kratia' = macht. Dus letterlijk: **het volk heeft de macht**." },
@@ -134,13 +134,13 @@ const steps = [
       },
       {
         q: "Wie **straft** misdaad?",
-        options: ["Rechter (rechterlijke macht)", "Minister", "Burgemeester", "Iedereen"],
+        options: ["Rechter", "Minister", "Burgemeester", "Iedereen"],
         answer: 0,
         wrongHints: [null, "Uitvoerend.", "Lokaal niet primair.", "Niet."],
       },
       {
         q: "Hoeveel zetels voor **meerderheid** Tweede Kamer?",
-        options: ["76 (van 150)", "150", "50", "100"],
+        options: ["76", "150", "50", "100"],
         answer: 0,
         uitlegPad: {
           stappen: [
@@ -257,10 +257,10 @@ const steps = [
         },
       },
       {
-        q: "Wie kiest **burgemeester**?",
-        options: ["Benoemd door Koning op voordracht", "Inwoners", "Wethouders", "Niemand"],
+        q: "Wie benoemt de **burgemeester**?",
+        options: ["De Koning", "De inwoners", "De wethouders", "De Tweede Kamer"],
         answer: 0,
-        wrongHints: [null, "In NL niet.", "Niet primair.", "Wel."],
+        wrongHints: [null, "In NL niet.", "Wethouders werken juist sámen met de burgemeester — wie benoemt hem of haar?", "De Tweede Kamer benoemt geen burgemeesters."],
       },
       {
         q: "Wanneer **euro** ingevoerd?",
@@ -270,9 +270,9 @@ const steps = [
       },
       {
         q: "Wat doet **waterschap**?",
-        options: ["Dijken + water-niveau + schoon water", "Wegen", "Belasting", "Scholen"],
+        options: ["Dijken en water beheren", "Treinen laten rijden", "Paspoorten maken", "Scholen bouwen"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Wel maar specifiek dit.", "Niet."],
+        wrongHints: [null, "Treinen hebben niets met het waterschap te maken — kijk naar de naam.", "Paspoorten haal je bij de gemeente.", "Niet."],
       },
     ],
   },
@@ -289,15 +289,15 @@ const steps = [
       },
       {
         q: "Wat is een **klassiek grondrecht**?",
-        options: ["Wat je MAG (vrijheid)", "Wat je MOET (verplichting)", "Belasting", "Toets"],
+        options: ["Wat je MAG (vrijheid)", "Wat je MOET (verplichting)", "Wat de staat MOET regelen (zorg)", "Wat je MOET betalen (belasting)"],
         answer: 0,
-        wrongHints: [null, "Niet primair.", "Niet.", "Niet."],
+        wrongHints: [null, "Niet primair.", "Dat is een sociaal grondrecht — wat is dan een klassiek grondrecht?", "Belasting is geen grondrecht."],
       },
       {
         q: "Wat is **briefgeheim**?",
-        options: ["Post + email niet zomaar lezen door anderen", "Geheime brief", "Niet schrijven", "Code"],
+        options: ["Je post mag niet zomaar gelezen worden", "Een brief in geheimschrift", "Een verbod om brieven te schrijven", "Een brief zonder afzender"],
         answer: 0,
-        wrongHints: [null, "Niet.", "Tegenovergesteld.", "Niet."],
+        wrongHints: [null, "Het gaat niet om een soort brief, maar om een recht dat jij hebt.", "Tegenovergesteld.", "Het gaat om een grondrecht — wie mag jouw post lezen?"],
       },
       {
         q: "Sinds welk jaar **algemeen mannenkiesrecht**?",
@@ -311,26 +311,26 @@ const steps = [
     title: "Eind-toets — politiek mix",
     explanation: "Mix-toets in Doorstroomtoets-stijl.\n\nVeel succes!",
     checks: [
-      { q: "Wat is **democratie**?", options: ["Volk beslist", "Eén leider", "Geen besluit", "Koning beslist"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Niet meer."] },
+      { q: "Wat is **democratie**?", options: ["Volk beslist", "Eén leider", "Rechters beslissen", "Koning beslist"], answer: 0, wrongHints: [null, "Niet.", "Rechters spreken recht — maar wie heeft in een democratie de macht?", "Niet meer."] },
       { q: "Hoeveel **Tweede Kamerleden**?", options: ["150", "75", "300", "10"], answer: 0, wrongHints: [null, "Eerste Kamer.", "Te veel.", "Te weinig."] },
       { q: "Wat is **Prinsjesdag**?", options: ["Troonrede 3e dinsdag sept", "Koningsdag", "Verkiezing", "Feest"], answer: 0, wrongHints: [null, "Andere dag.", "Niet.", "Niet specifiek."] },
       { q: "Hoeveel **provincies**?", options: ["12", "11", "13", "16"], answer: 0, wrongHints: [null, "Iets meer.", "Iets minder.", "Te veel."] },
       { q: "**Artikel 1 Grondwet** = ?", options: ["Verbod op discriminatie", "Recht op auto", "Vrijheid", "Onderwijs"], answer: 0, wrongHints: [null, "Niet.", "Wel maar niet artikel 1.", "Sociaal."] },
       { q: "Wanneer **euro** in NL?", options: ["2002", "1957", "1980", "1990"], answer: 0, wrongHints: [null, "Toen begon de EEG.", "Te vroeg.", "Te vroeg."] },
-      { q: "Wat is **Trias Politica**?", options: ["3 machten gescheiden (wetgevend/uitvoerend/rechterlijk)","2 partijen","1 koning","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
-      { q: "Welke macht maakt **wetten**?", options: ["Wetgevende (parlement)","Uitvoerende (regering)","Rechterlijke (rechters)","Niet relevant"], answer: 0, wrongHints: [null, "Voert uit.", "Beoordeelt.", "Wel."] },
-      { q: "Welke macht **voert wetten uit**?", options: ["Uitvoerende (regering/kabinet)","Wetgevende","Rechterlijke","Niet relevant"], answer: 0, wrongHints: [null, "Maakt wetten.", "Beoordeelt.", "Wel."] },
-      { q: "Wat doet de **Eerste Kamer**?", options: ["Wetten goedkeuren / verwerpen","Wetten maken","Voert uit","Beoordeelt"], answer: 0, wrongHints: [null, "Tweede Kamer.", "Regering.", "Rechters."] },
+      { q: "Wat is **Trias Politica**?", options: ["3 machten gescheiden","2 partijen die samenwerken","1 koning met alle macht","3 grote politieke partijen"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Trias betekent drie, maar het gaat niet om partijen. Waarover gaat het wel?"] },
+      { q: "Welke macht maakt **wetten**?", options: ["Wetgevende (parlement)","Uitvoerende (regering)","Rechterlijke (rechters)","Kerkelijke (kerk)"], answer: 0, wrongHints: [null, "Voert uit.", "Beoordeelt.", "In Nederland zijn kerk en staat gescheiden."] },
+      { q: "Welke macht **voert wetten uit**?", options: ["Uitvoerende (regering)","Wetgevende (parlement)","Rechterlijke (rechters)","Kerkelijke (kerk)"], answer: 0, wrongHints: [null, "Maakt wetten.", "Beoordeelt.", "In Nederland zijn kerk en staat gescheiden."] },
+      { q: "Wat doet de **Eerste Kamer**?", options: ["Wetten goedkeuren / verwerpen","Wetten voorstellen","Voert uit","Beoordeelt"], answer: 0, wrongHints: [null, "Voorstellen komen van de regering of de Tweede Kamer — wat doet de Eerste Kamer daarna?", "Regering.", "Rechters."] },
       { q: "Vanaf welke leeftijd mag je **stemmen** in NL?", options: ["18","16","21","12"], answer: 0, wrongHints: [null, "Niet algemeen.", "Eerder verlaagd.", "Te jong."] },
-      { q: "Wat is een **coalitie**?", options: ["Samenwerking partijen voor meerderheid","Eén partij","Oppositie","Niet bestaand"], answer: 0, wrongHints: [null, "Niet — geen meerderheid alleen.", "Tegengestelde.", "Wel."] },
-      { q: "Wat is **oppositie**?", options: ["Partijen NIET in regering","Regering","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Tegengestelde.", "Wel.", "Niet."] },
-      { q: "Wat is een **grondrecht**?", options: ["Recht in grondwet beschermd","Een belasting","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Niet.", "Wel.", "Niet."] },
-      { q: "Wat doet de **Koning** politiek (NL)?", options: ["Ceremonieel + ondertekent wetten","Beslist alles","Maakt wetten","Niet relevant"], answer: 0, wrongHints: [null, "Niet — kabinet.", "Parlement.", "Wel."] },
-      { q: "Wat is **Binnenhof**?", options: ["Gebouwen van het parlement (Den Haag)","Koningsverblijf","Niet relevant","Reclame"], answer: 0, wrongHints: [null, "Paleis Noordeinde.", "Wel.", "Niet."] },
-      { q: "Wat is een **referendum**?", options: ["Volk stemt direct over één onderwerp","Verkiezing kandidaten","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "Niet — kandidaten.", "Wel.", "Niet."] },
-      { q: "Welke is een **EU-instelling**?", options: ["Europees Parlement","NL Tweede Kamer","Niet bestaand","Reclame"], answer: 0, wrongHints: [null, "NL nationaal.", "Wel.", "Niet."] },
+      { q: "Wat is een **coalitie**?", options: ["Samenwerking partijen voor meerderheid","Eén partij","Oppositie","Een verkiezingsuitslag"], answer: 0, wrongHints: [null, "Niet — geen meerderheid alleen.", "Tegengestelde.", "Ná de uitslag gaan partijen pas samenwerken — hoe heet dat?"] },
+      { q: "Wat is **oppositie**?", options: ["Partijen NIET in regering","Regering","Koningshuis","Rechters"], answer: 0, wrongHints: [null, "Tegengestelde.", "Het koningshuis staat boven de politiek.", "Rechters horen bij de rechterlijke macht, niet bij de partijen."] },
+      { q: "Wat is een **grondrecht**?", options: ["Recht in grondwet beschermd","Een belasting","Een verkeersregel","Een schoolregel"], answer: 0, wrongHints: [null, "Niet.", "Een verkeersregel is een gewone regel — welk recht staat in de belangrijkste wet?", "Een schoolregel geldt alleen op school — waar staan grondrechten?"] },
+      { q: "Wat doet de **Koning** politiek (NL)?", options: ["Ceremonieel + ondertekent wetten","Beslist alles","Maakt wetten","Stemt in de Tweede Kamer"], answer: 0, wrongHints: [null, "Niet — kabinet.", "Parlement.", "De Koning stemt nooit — hij staat boven de politiek."] },
+      { q: "Wat is **Binnenhof**?", options: ["Gebouwen van het parlement","Paleis van de koning","Gebouw van de Hoge Raad","Een plein in Amsterdam"], answer: 0, wrongHints: [null, "Paleis Noordeinde.", "Rechters zitten elders — wie vergadert op het Binnenhof?", "Het Binnenhof ligt in Den Haag."] },
+      { q: "Wat is een **referendum**?", options: ["Volk stemt direct over één onderwerp","Verkiezing van kandidaten","Peiling door een krant","Toespraak van de koning"], answer: 0, wrongHints: [null, "Niet — kandidaten.", "Een peiling is een vragenlijst, geen echte stemming.", "Dat is de Troonrede."] },
+      { q: "Welke is een **EU-instelling**?", options: ["Europees Parlement","Tweede Kamer","Provinciale Staten","Gemeenteraad"], answer: 0, wrongHints: [null, "NL nationaal.", "Provinciaal — binnen Nederland.", "Lokaal — binnen Nederland."] },
       { q: "Wat is een **minister**?", options: ["Hoofd van een ministerie","Burgemeester","Koning","Rechter"], answer: 0, wrongHints: [null, "Lokaal.", "Niet.", "Niet."] },
-      { q: "Wat is een **burgemeester**?", options: ["Hoofd van een gemeente","Minister","Koning","Niet relevant"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Wel."] },
+      { q: "Wat is een **burgemeester**?", options: ["Hoofd van een gemeente","Minister","Koning","Commissaris van de Koning"], answer: 0, wrongHints: [null, "Niet.", "Niet.", "Die leidt een provincie, geen gemeente."] },
     ],
   },
 ];

@@ -73,7 +73,7 @@ const steps = [
         },
       },
       {
-        q: "Zuur + base → ?",
+        q: "Zuur + base (bv. HCl + NaOH) → ?",
         options: ["Zout + water","Niets","Gas","Vlam"],
         answer: 0,
         wrongHints: [null, "Wel reactie.", "Soms (bv. CO₂), niet altijd.", "Niet algemeen."],
@@ -155,7 +155,7 @@ const steps = [
     checks: [
       {
         q: "**Zwak zuur** dissocieert:",
-        options: ["Gedeeltelijk (evenwicht)","Volledig","Niet","Alleen bij hitte"],
+        options: ["Gedeeltelijk","Volledig","Niet","Alleen bij hitte"],
         answer: 0,
         wrongHints: [null, "Dat is sterk zuur.", "Wel — een beetje.", "Niet temperatuur-cruciaal hier."],
         uitlegPad: {
@@ -175,9 +175,9 @@ const steps = [
       },
       {
         q: "Wat is een **buffer**?",
-        options: ["Mengsel zwak zuur + zijn geconj. base","Sterk zuur","Volledig neutraal water","Vaste stof"],
+        options: ["Mengsel zwak zuur + geconjugeerde base","Mengsel sterk zuur + sterke base","Volledig neutraal water","Mengsel van twee sterke zuren"],
         answer: 0,
-        wrongHints: [null, "Niet — sterk zuur geen buffer.", "Niet — geen weerstand.", "Niet relevant."],
+        wrongHints: [null, "Niet — die neutraliseren elkaar gewoon.", "Niet — geen weerstand.", "Niet — een sterk zuur kan geen H⁺ opvangen."],
         uitlegPad: {
           stappen: [{ titel: "Zwak-zuur-paar = buffer", tekst: "**Buffer** = oplossing met **zwak zuur + zijn geconjugeerde base** (of zwakke base + geconj. zuur). Weerstaat pH-verandering bij toevoegen klein beetje zuur/base. Voorbeeld: azijnzuur + acetaat-zout." }],
           niveaus: { basis: "Zwak zuur + geconj.base.", simpeler: "Buffer = zwak-paar", nogSimpeler: "Zwak zuur + base" },
@@ -195,7 +195,7 @@ const steps = [
       },
       {
         q: "Welke buffer is **cruciaal** voor bloed?",
-        options: ["Bicarbonaat (H₂CO₃/HCO₃⁻)","Azijnzuur","Zoutzuur","Geen — bloed is gewoon water"],
+        options: ["Bicarbonaat","Azijnzuur","Zoutzuur","Geen — bloed is gewoon water"],
         answer: 0,
         wrongHints: [null, "Niet — niet in bloed.", "Niet — sterk zuur, geen buffer.", "Niet — bloed-pH zeer nauw gereguleerd."],
         uitlegPad: {
@@ -215,7 +215,7 @@ const steps = [
     checks: [
       {
         q: "Wat is het **equivalentiepunt** in een titratie?",
-        options: ["Punt waarop zuur en base in gelijkwaardige hoeveelheden zijn toegevoegd","Begin van titratie","Bij pH 7 altijd","Bij omslagpunt indicator"],
+        options: ["Punt waar zuur en base gelijkwaardig zijn","Het moment waarop de titratie begint","Het punt waar de pH altijd 7 is","Het punt waar de indicator omslaat"],
         answer: 0,
         wrongHints: [null, "Niet — aan het begin is er nog niets toegevoegd.", "Niet — alleen bij sterk-sterk.", "Eindpunt — niet hetzelfde."],
         uitlegPad: {
@@ -245,7 +245,7 @@ const steps = [
       },
       {
         q: "Een **buret** wordt gebruikt voor:",
-        options: ["Variabel volume druppelen + aflezen","Vast volume meten","Verhitten","Mengen"],
+        options: ["Variabel volume toevoegen","Vast volume meten","Verhitten","Mengen"],
         answer: 0,
         wrongHints: [null, "Niet — dat is pipet.", "Niet — geen verhitter.", "Niet primair."],
         uitlegPad: {
@@ -295,7 +295,7 @@ const steps = [
       },
       {
         q: "Bloed-pH = 7,4. **Hyperventilatie** doet pH:",
-        options: ["Stijgen (basisch worden)","Dalen","Geen invloed","Onmogelijk te zeggen"],
+        options: ["Stijgen","Dalen","Geen invloed","Onmogelijk te zeggen"],
         answer: 0,
         wrongHints: [null, "Tegenovergesteld.", "Wel — CO₂ minder.", "Wel duidelijke richting."],
         uitlegPad: {
@@ -306,7 +306,7 @@ const steps = [
       },
       {
         q: "Mengsel **CH₃COOH + CH₃COONa** = ?",
-        options: ["Buffer (zwak zuur + geconj.base)","Sterk zuur","Sterke base","Geen reactie"],
+        options: ["Buffer","Sterk zuur","Sterke base","Geen reactie"],
         answer: 0,
         wrongHints: [null, "Niet — beide zwak.", "Niet primair.", "Wel werking."],
         uitlegPad: {
@@ -316,9 +316,9 @@ const steps = [
       },
       {
         q: "Cola heeft pH ≈ 2,5 (door koolzuur + fosforzuur). Tandglazuur lost op bij pH < 5,5. Wat te doen?",
-        options: ["Minder vaak drinken + water spoelen + niet meteen poetsen","Direct na cola heel hard poetsen","Niet relevant","Suikers blokkeren met spoelmiddel"],
+        options: ["Minder vaak drinken en water spoelen","Direct na cola heel hard poetsen","Cola zo langzaam mogelijk drinken","Suikers blokkeren met spoelmiddel"],
         answer: 0,
-        wrongHints: [null, "Niet — verergert schade.", "Wel relevant.", "Niet primair (suikers zijn ander mechanisme)."],
+        wrongHints: [null, "Niet — verergert schade.", "Niet — hoe lang staan je tanden dan in het zuur?", "Niet primair (suikers zijn ander mechanisme)."],
         uitlegPad: {
           stappen: [{ titel: "Glazuur kwetsbaar", tekst: "Cola pH 2,5 → veel onder 5,5 → glazuur lost op. Tips: minder drinken, **water spoelen** na om pH te verhogen, **niet direct poetsen** (glazuur is verzacht — poetsen schuurt het weg). Wacht 30 min." }],
           theorie: "Toets-toepassing: zuur-base-chemie in dagelijks leven. Tandarts-advies = direct uit chemie.",

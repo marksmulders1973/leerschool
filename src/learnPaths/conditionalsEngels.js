@@ -57,7 +57,7 @@ const steps = [
     checks: [
       {
         q: "Welk type conditional bij **algemene waarheid**?",
-        options: ["Type 0 (if + present, present)", "Type 1", "Type 2", "Type 3"],
+        options: ["Type 0", "Type 1", "Type 2", "Type 3"],
         answer: 0,
         wrongHints: [null, "Type 1 = toekomst.", "Type 2 = onreëel nu.", "Type 3 = verleden."],
       },
@@ -95,7 +95,7 @@ const steps = [
         wrongHints: [null, "Niet 'will' in if-clause!", "Type 2.", "Type 2."],
       },
       {
-        q: "**'If you study hard, you ___ (pass).'**",
+        q: "**'If you study hard, you ___ (pass) the test tomorrow.'**",
         options: ["will pass", "pass", "passes", "would pass"],
         answer: 0,
         wrongHints: [null, "Geen toekomst.", "'You' krijgt geen -s, en er mist 'will'.", "Type 2."],
@@ -122,7 +122,7 @@ const steps = [
         },
       },
       {
-        q: "**'If you don't sleep, you ___ tired.'**",
+        q: "**'If you don't sleep tonight, you ___ tired tomorrow.'**",
         options: ["will be", "are", "would be", "were"],
         answer: 0,
         wrongHints: [null, "Niet alleen present — toekomst.", "Type 2.", "Type 2."],
@@ -248,7 +248,7 @@ const steps = [
   {
     title: "Eind-opdracht — conditionals mix",
     explanation:
-      "Mix-toets in Doorstroomtoets-stijl. Door elkaar: Type 1, 2, 3 + unless.\n\nVeel succes!",
+      "Mix-toets in toets-stijl. Door elkaar: Type 1, 2, 3 + unless.\n\nVeel succes!",
     checks: [
       {
         q: "**'If it ___ (rain) tomorrow, we will stay home.'**",
@@ -272,7 +272,7 @@ const steps = [
         q: "**'___ you study harder, you will pass.'**",
         options: ["If", "Unless", "Were", "Despite"],
         answer: 0,
-        wrongHints: [null, "Tegenovergesteld.", "Inversion — formeel, ongewoon hier.", "Na 'despite' komt geen hele zin, en het is geen voorwaarde."],
+        wrongHints: [null, "Tegenovergesteld.", "'Were you study' is geen correcte zin — inversie met were hoort bij Type 2.", "Na 'despite' komt geen hele zin, en het is geen voorwaarde."],
       },
       {
         q: "**'If I ___ you, I would tell the truth.'**",
@@ -281,17 +281,17 @@ const steps = [
         wrongHints: [null, "Type 1.", "Geen vervoegde vorm — na 'I' hoort een verleden tijd.", "Type 3."],
       },
       {
-        q: "**'Unless you sleep, you ___ tired.'**",
+        q: "**'Unless you sleep tonight, you ___ tired tomorrow.'**",
         options: ["will be", "would be", "are", "had been"],
         answer: 0,
         wrongHints: [null, "Type 2.", "Niet conditional.", "Niet matchend."],
       },
-      { q: "**Zero conditional** wordt gebruikt voor?", options: ["Algemene waarheden (If you heat ice, it melts)","Hypotheses","Verleden","Toekomst"], answer: 0, wrongHints: [null,"Type 2.","Type 3.","Type 1."] },
+      { q: "**Zero conditional** wordt gebruikt voor?", options: ["Algemene waarheden","Hypotheses","Verleden","Toekomst"], answer: 0, wrongHints: [null,"Type 2.","Type 3.","Type 1."] },
       { q: "**'If it ___, I will stay home.'** (rain) — Type 1?", options: ["rains","rained","had rained","would rain"], answer: 0, wrongHints: [null,"Type 2.","Type 3.","Niet matchend."] },
       { q: "**'If I ___ rich, I would travel.'** Type 2?", options: ["were","will be","am","had been"], answer: 0, wrongHints: [null,"Geen 'will' in de if-clause.","Type 1.","Type 3."] },
       { q: "**'If she ___ harder, she would have passed.'** Type 3?", options: ["had studied","studied","would study","studies"], answer: 0, wrongHints: [null,"Type 2.","Niet.","Type 1."] },
       { q: "**'If I won the lottery, I ___ a house.'**", options: ["would buy","will buy","bought","buy"], answer: 0, wrongHints: [null,"Type 1.","Verleden.","Type 0."] },
-      { q: "**Type 1** wordt gebruikt voor?", options: ["Reëel toekomstig (waarschijnlijk)","Hypothetisch","Verleden","Wetenschap"], answer: 0, wrongHints: [null,"Type 2.","Type 3.","Type 0."] },
+      { q: "**Type 1** wordt gebruikt voor?", options: ["Reëel toekomstig","Hypothetisch","Verleden","Wetenschap"], answer: 0, wrongHints: [null,"Type 2.","Type 3.","Type 0."] },
       { q: "**Type 2** beschrijft?", options: ["Onwaarschijnlijk / hypothetisch heden","Reëel heden","Verleden","Toekomst zeker"], answer: 0, wrongHints: [null,"Type 1.","Type 3.","Type 1."] },
       { q: "**Open vraag**: complete the sentence — 'If I __ you, I would apologise.' (typ 1 woord)", kind: "open", acceptedAnswers: ["were", "was"], explanation: "Type 2: 'If I were you' (formeel) of 'If I was you' (spreektaal)." },
       { q: "**Open vraag**: what tense is used in the if-clause of Type 3 conditional?", kind: "open", acceptedAnswers: ["past perfect", "voltooid verleden tijd", "past-perfect"], explanation: "Type 3: 'If + past perfect, would have + V3.'" },

@@ -72,9 +72,9 @@ const steps = [
       },
       {
         q: "Wat **redde** de tweelingen volgens de legende?",
-        options: ["Een wolvin (die hen zoogde)", "Een adelaar", "Een vissersboot", "Een herder"],
+        options: ["Een wolvin", "Een adelaar", "Een vissersboot", "Een beer"],
         answer: 0,
-        wrongHints: [null, "Geen adelaar.", "Niet direct.", "Herder kwam later — eerst de wolvin."],
+        wrongHints: [null, "Geen adelaar.", "Niet direct.", "Geen beer — het dier staat nog steeds als beeld in Rome."],
       },
       {
         q: "Welk volk woonde **vóór de Romeinen** in Midden-Italië?",
@@ -93,27 +93,27 @@ const steps = [
     checks: [
       {
         q: "Wat was de **Romeinse Republiek**?",
-        options: ["Staat zonder koning, met senaat + consuls", "Koninkrijk", "Stadstaat met dictator", "Provincie van Egypte"],
+        options: ["Staat zonder koning", "Koninkrijk", "Stadstaat met dictator", "Provincie van Egypte"],
         answer: 0,
         wrongHints: [null, "Niet meer — verdreven 509 v.Chr.", "Soms dictator (tijdelijk), maar normaal niet.", "Andere richting — Rome veroverde Egypte."],
       },
       {
         q: "Wie waren de **2 consuls** in de Republiek?",
-        options: ["Hoogste leiders, gekozen voor 1 jaar", "Lijfwachten", "Slaven", "Boeren"],
+        options: ["Hoogste leiders", "Lijfwachten", "Slaven", "Boeren"],
         answer: 0,
-        wrongHints: [null, "Lijfwachten bewaken iemand, maar consuls stónden juist aan het hóófd van de Republiek — wie had de macht?", "Slaven hadden in Rome geen enkele macht; consuls hadden juist de hoogste positie.", "Boeren bewerkten het land; de consuls bestuurden de hele Republiek — een heel andere rol."],
+        wrongHints: [null, "Lijfwachten bewaakten iemand — maar wat deden de consuls?", "Slaven hadden in Rome geen enkele macht.", "Boeren bewerkten het land — wat deden de consuls?"],
       },
       {
         q: "Wie veroverde **Gallië** *(huidige Frankrijk)*?",
-        options: ["Julius Caesar (58-51 v.Chr.)", "Augustus", "Hannibal", "Cleopatra"],
+        options: ["Julius Caesar", "Augustus", "Hannibal", "Cleopatra"],
         answer: 0,
         wrongHints: [null, "Augustus kwam erna.", "Hannibal was tegenstander uit Carthago.", "Cleopatra was Egyptische koningin."],
       },
       {
         q: "Wat gebeurde met **Julius Caesar** in **44 v.Chr.**?",
-        options: ["Vermoord in de Senaat op de Ides van Maart", "Werd koning", "Vluchtte naar Egypte", "Stierf in oorlog"],
+        options: ["Vermoord in de Senaat", "Werd koning", "Vluchtte naar Egypte", "Stierf in oorlog"],
         answer: 0,
-        wrongHints: [null, "Wilde wel, maar werd vermoord.", "Niet gevlucht.", "Niet in oorlog."],
+        wrongHints: [null, "Hij werd geen koning — wat gebeurde er op 15 maart?", "Niet gevlucht.", "Niet in oorlog."],
         uitlegPad: {
           stappen: [
             { titel: "Wat gebeurde", tekst: "Op 15 maart 44 v.Chr. (de 'Ides van Maart') werd Julius Caesar in de Senaat doodgestoken door een groep samenzweerders, waaronder zijn vriend Brutus." },
@@ -141,25 +141,25 @@ const steps = [
     checks: [
       {
         q: "Wie was de **eerste Romeinse keizer**?",
-        options: ["Augustus (27 v.Chr.)", "Julius Caesar", "Nero", "Constantijn"],
+        options: ["Augustus", "Julius Caesar", "Nero", "Constantijn"],
         answer: 0,
         wrongHints: [null, "Caesar werd vermoord vóór keizerrijk begon.", "Veel later.", "Veel later."],
       },
       {
         q: "Wat was **Pax Romana**?",
-        options: ["Romeinse vrede — ~200 jaar relatieve rust", "Een wet", "Een straf", "Een god"],
+        options: ["Een lange periode van vrede", "Een Romeinse wet", "Een Romeinse straf", "Een Romeinse god"],
         answer: 0,
         wrongHints: [null, "Geen wet.", "Geen straf.", "Geen god."],
       },
       {
         q: "Wat is **'brood en spelen'**?",
-        options: ["Gratis eten + gladiatoren om volk rustig te houden", "Een gerecht", "Een spel", "Een feest"],
+        options: ["Volk rustig houden met eten en spelen", "Een Romeins gerecht", "Een kinderspel", "Een religieus feest"],
         answer: 0,
         wrongHints: [null, "Niet één gerecht — het is een politiek begrip.", "Niet alleen spel.", "Niet alleen feest."],
       },
       {
         q: "Waarheen verplaatste Constantijn de hoofdstad?",
-        options: ["Naar Constantinopel (330 n.Chr.)", "Naar Athene", "Naar Carthago", "Bleef Rome"],
+        options: ["Naar Constantinopel", "Naar Athene", "Naar Carthago", "Bleef Rome"],
         answer: 0,
         wrongHints: [null, "Niet Athene.", "Niet Carthago.", "Wel verplaatst."],
       },
@@ -170,11 +170,11 @@ const steps = [
   {
     title: "Romeinen in Nederland — de Limes",
     explanation:
-      "Het **Romeinse Rijk strekte zich uit tot in Nederland** — voor ~400 jaar!\n\n**De Limes**:\n• **Limes** = grens van het Romeinse Rijk.\n• In Nederland liep de Limes langs de **Rijn** *(toen 'Renus')*.\n• Vanaf **Katwijk** *(Romeinse Lugdunum)* in het westen, via **Utrecht** *(Traiectum)*, **Nijmegen** *(Noviomagus)*, tot **Duitsland**.\n• Aan deze kant Romeinse Rijk; aan andere kant 'vrije' Germaanse volkeren *(Friezen, Bataven, etc.)*.\n\n**Romeinen kwamen** *(rond 50 v.Chr.-15 n.Chr.)*:\n• **Julius Caesar** vocht al rond 54 v.Chr. tegen de Eburonen.\n• Rond 12 v.Chr. begon serieuze militaire bezetting.\n• Rond 47 n.Chr.: Limes-strategie — niet verder naar het noorden, defensief.\n\n**Wat brachten Romeinen naar Nederland?**\n• **Wegen** *(harde, verharde wegen)*.\n• **Stenen huizen** *(in plaats van houten hutten)*.\n• **Centrale verwarming** *(hypocaust — onder vloeren)*.\n• **Aquaducten** + **baden**.\n• **Wijn + olijfolie** *(door handel)*.\n• **Latijn** *(taal, schrift)*.\n• **Romeins recht** + bestuur.\n\n**Castella (Romeinse forten)**:\n• Vooral langs de Limes-rivier.\n• Bekendste: **Nijmegen** *(legioen-vestiging)*, **Vechten** (bij Utrecht), **Valkenburg**.\n• In sommige plaatsen nog **ruïnes + opgravingen** te zien.\n\n**Bataven en Friezen**:\n• **Bataven** = Germaans volk in Nederland *(Betuwe-streek)*. Bondgenoot van Rome, leverden soldaten.\n• **Friezen** = noordelijker, deels onafhankelijk gebleven.\n• **Bataafse Opstand** (69-70 n.Chr.) onder **Julius Civilis** — tegen Romeinen.\n\n**De ondergang van Romeinen in Nederland**:\n• Vanaf **3e eeuw**: Germaanse volken trekken Limes over.\n• **4e eeuw**: chaos — Saksen + Franken vallen binnen.\n• **Rond 406 n.Chr.**: Romeinen verlaten Nederland.\n\n**Nu nog steeds zichtbaar**:\n• Nijmegen heeft nog Romeinse fundamenten.\n• Het **Limes-tracé** is UNESCO werelderfgoed sinds 2021.\n• Vondsten: munten, helmen, scherven, dakpannen.\n\n**Toets-feitje**:\nDe stad **Maastricht** dankt zijn naam aan Romeinen — 'Mosae Trajectum' = 'doorwaadplaats van de Maas'. Andere Nederlandse Romeinse plaatsen: **Heerlen** (Coriovallum), **Voorburg** (Forum Hadriani), **Bunnik** (Fectio).",
+      "Het **Romeinse Rijk strekte zich uit tot in Nederland** — voor ~400 jaar!\n\n**De Limes**:\n• **Limes** = grens van het Romeinse Rijk.\n• In Nederland liep de Limes langs de **Rijn** *(toen 'Renus')*.\n• Vanaf **Katwijk** *(Romeinse Lugdunum)* in het westen, via **Utrecht** *(Traiectum)*, **Nijmegen** *(Noviomagus)*, tot **Duitsland**.\n• Aan deze kant Romeinse Rijk; aan andere kant 'vrije' Germaanse volkeren *(Friezen, Chauken, etc.)*.\n\n**Romeinen kwamen** *(rond 50 v.Chr.-15 n.Chr.)*:\n• **Julius Caesar** vocht al rond 54 v.Chr. tegen de Eburonen.\n• Rond 12 v.Chr. begon serieuze militaire bezetting.\n• Rond 47 n.Chr.: Limes-strategie — niet verder naar het noorden, defensief.\n\n**Wat brachten Romeinen naar Nederland?**\n• **Wegen** *(harde, verharde wegen)*.\n• **Stenen huizen** *(in plaats van houten hutten)*.\n• **Centrale verwarming** *(hypocaust — onder vloeren)*.\n• **Aquaducten** + **baden**.\n• **Wijn + olijfolie** *(door handel)*.\n• **Latijn** *(taal, schrift)*.\n• **Romeins recht** + bestuur.\n\n**Castella (Romeinse forten)**:\n• Vooral langs de Limes-rivier.\n• Bekendste: **Nijmegen** *(legioen-vestiging)*, **Vechten** (bij Utrecht), **Valkenburg**.\n• In sommige plaatsen nog **ruïnes + opgravingen** te zien.\n\n**Bataven en Friezen**:\n• **Bataven** = Germaans volk in Nederland *(Betuwe-streek)*. Bondgenoot van Rome, leverden soldaten.\n• **Friezen** = noordelijker, deels onafhankelijk gebleven.\n• **Bataafse Opstand** (69-70 n.Chr.) onder **Julius Civilis** — tegen Romeinen.\n\n**De ondergang van Romeinen in Nederland**:\n• Vanaf **3e eeuw**: Germaanse volken trekken Limes over.\n• **4e eeuw**: chaos — Saksen + Franken vallen binnen.\n• **Rond 406 n.Chr.**: Romeinen verlaten Nederland.\n\n**Nu nog steeds zichtbaar**:\n• Nijmegen heeft nog Romeinse fundamenten.\n• Het **Limes-tracé** is UNESCO werelderfgoed sinds 2021.\n• Vondsten: munten, helmen, scherven, dakpannen.\n\n**Toets-feitje**:\nDe stad **Maastricht** dankt zijn naam aan Romeinen — 'Mosae Trajectum' = 'doorwaadplaats van de Maas'. Andere Nederlandse Romeinse plaatsen: **Heerlen** (Coriovallum), **Voorburg** (Forum Hadriani), **Bunnik** (Fectio).",
     checks: [
       {
         q: "Wat is de **Limes**?",
-        options: ["Grens van het Romeinse Rijk (in NL langs de Rijn)", "Een Romeins fort", "Een wapen", "Een god"],
+        options: ["Grens van het Romeinse Rijk", "Een Romeins fort", "Een wapen", "Een god"],
         answer: 0,
         wrongHints: [null, "Castellum = fort.", "Geen wapen.", "Geen god."],
       },
@@ -186,13 +186,13 @@ const steps = [
       },
       {
         q: "Welke Nederlandse stad is **gesticht door Romeinen** rond 19 v.Chr.?",
-        options: ["Nijmegen (Noviomagus)", "Amsterdam", "Den Haag", "Eindhoven"],
+        options: ["Nijmegen", "Amsterdam", "Den Haag", "Eindhoven"],
         answer: 0,
         wrongHints: [null, "Amsterdam pas in 13e eeuw.", "Den Haag is later.", "Eindhoven middeleeuws."],
       },
       {
         q: "Wat zijn **aquaducten**?",
-        options: ["Waterleidingen die water naar steden brengen", "Romeinse schepen", "Soort wapens", "Tempels"],
+        options: ["Romeinse waterleidingen", "Romeinse schepen", "Soort wapens", "Tempels"],
         answer: 0,
         wrongHints: [null, "Schepen heten anders.", "Geen wapens.", "Tempels zijn aparte gebouwen."],
       },
@@ -240,7 +240,7 @@ const steps = [
     checks: [
       {
         q: "Wat is een **Romaanse taal**?",
-        options: ["Taal afgeleid van Latijn (Frans, Spaans, Italiaans)", "Romaanse architectuur", "Een Roman", "Romeinse stijl"],
+        options: ["Taal die van het Latijn afstamt", "Romaanse architectuur", "Een Roman", "Romeinse stijl"],
         answer: 0,
         wrongHints: [null, "Stijl, geen taal.", "Boek-soort, niet taal.", "Stijl, niet taal."],
       },
@@ -285,9 +285,9 @@ const steps = [
       },
       {
         q: "Wat is **Latijn** vandaag de dag?",
-        options: ["Dode taal, nog gebruikt in wetenschap + kerk", "Spaanse spreektaal", "Een dialect", "Niet meer bekend"],
+        options: ["Een dode taal", "Spaanse spreektaal", "Een Italiaans dialect", "Een geheimtaal"],
         answer: 0,
-        wrongHints: [null, "Spaans is afgeleide.", "Geen dialect.", "Wel bekend — wetenschappers gebruiken het."],
+        wrongHints: [null, "Spaans is afgeleide.", "Geen dialect.", "Geen geheimtaal — wetenschappers en de kerk gebruiken het nog."],
       },
     ],
   },

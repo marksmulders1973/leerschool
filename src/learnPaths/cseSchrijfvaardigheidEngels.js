@@ -131,7 +131,7 @@ const steps = [
       },
       {
         q: "Welke afsluiting past bij een **informeel berichtje aan een vriend**?",
-        options: ["Cheers / See you / Take care", "Yours sincerely", "Yours faithfully", "Best regards"],
+        options: ["Take care", "Yours sincerely", "Yours faithfully", "Best regards"],
         answer: 0,
         wrongHints: [null, "Formeel.", "Formeel.", "Half-formeel."],
       },
@@ -301,7 +301,7 @@ const steps = [
         q: "**Their** vs **There** — welke is van bezit?",
         options: ["Their", "There", "Beide", "Geen"],
         answer: 0,
-        wrongHints: [null, "Plek (daar).", "Verschillende functies.", "Wel — their."],
+        wrongHints: [null, "Plek (daar).", "Verschillende functies.", "Eén van de twee is wél bezittelijk."],
       },
       {
         q: "Een **samenvatting** is ... ?",

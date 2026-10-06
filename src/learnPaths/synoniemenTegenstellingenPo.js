@@ -154,7 +154,7 @@ const steps = [
           stappen: [
             { titel: "Snel betekent...", tekst: "**Snel** = hoge snelheid, in korte tijd. Een snelle auto, snel rennen, snel praten." },
             { titel: "Welk woord lijkt op snel?", tekst: "**Vlug** is een Nederlands woord dat exact hetzelfde betekent als snel. *'Vlug naar binnen!'* = *'Snel naar binnen!'*" },
-            { titel: "Andere synoniemen", tekst: "Gauw, rap, kwiek, in een snelheid. Allemaal woorden voor hoge snelheid." },
+            { titel: "Andere synoniemen", tekst: "Gauw, rap, kwiek, in een flits. Allemaal woorden voor hoge snelheid." },
           ],
           woorden: [
             { woord: "snel", uitleg: "Hoge snelheid." },
