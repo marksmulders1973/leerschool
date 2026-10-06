@@ -120,7 +120,7 @@ const steps = [
         q: "Welke is **goed**?",
         options: ["I have eaten breakfast.", "I has eaten breakfast.", "I am eaten breakfast.", "I have eat breakfast."],
         answer: 0,
-        wrongHints: [null, "I → have, niet has.", "Be is geen hulpwerkwoord voor perfect.", "Na 'have' moet V3 = eaten, niet eat."],
+        wrongHints: [null, "I → have, niet has.", "Be is geen hulpwerkwoord voor perfect.", "Na 'have' hoort de 3e vorm (V3), niet de basisvorm."],
         uitlegPad: {
           stappen: [{ titel: "I have + V3", tekst: "I have eaten breakfast. Have + V3." }],
           woorden: [{ woord: "V3", uitleg: "past participle (eaten, gone, seen)" }],
@@ -162,9 +162,9 @@ const steps = [
     checks: [
       {
         q: "Welke is **goed**? — *I ___ that film three times.* (see)",
-        options: ["have seen", "saw", "have see", "saw three times"],
+        options: ["have seen", "saw", "have see", "have saw"],
         answer: 0,
-        wrongHints: [null, "'Three times' = ervaring → perfect.", "Na 'have' moet V3.", "Geen geldige vorm."],
+        wrongHints: [null, "'Three times' = ervaring → perfect.", "Na 'have' moet V3.", "V2 past niet na 'have'."],
         uitlegPad: {
           stappen: [{ titel: "Three times = ervaring", tekst: "I have seen that film three times. Ervaring → perfect." }],
           woorden: [{ woord: "frequentie", uitleg: "X times = aantal keer in ervaring" }],
@@ -206,9 +206,9 @@ const steps = [
     checks: [
       {
         q: "Welke is **goed**?",
-        options: ["I have already eaten.", "I already have eaten.", "I have eaten already at start.", "Already I have eaten."],
+        options: ["I have already eaten.", "I already have eaten.", "I have eaten yet.", "Already I have eaten."],
         answer: 0,
-        wrongHints: [null, "Engelse zinsvolgorde plaatst already binnenin.", "Beetje raar geformuleerd.", "'Already' niet vooraan."],
+        wrongHints: [null, "Engelse zinsvolgorde plaatst already binnenin.", "'Yet' hoort bij een vraag of ontkenning, niet bij een positieve zin.", "'Already' niet vooraan."],
         uitlegPad: {
           stappen: [{ titel: "have + already + V3", tekst: "I have already eaten. Already tussen have en V3." }],
           woorden: [{ woord: "already", uitleg: "al, midden in de zin" }],
@@ -468,10 +468,10 @@ const steps = [
         },
       },
       {
-        q: "*I ___ my homework. Can I go now?*",
+        q: "*I ___ my homework already. Can I go now?*",
         options: ["have finished", "finished", "did finish", "finishing"],
         answer: 0,
-        wrongHints: [null, "Simple kan, maar perfect drukt 'gevolg nu' beter uit; in deze context is perfect natuurlijker.", "Did finish past minder, perfect drukt 'klaar nu' uit.", "Geen werkwoordvorm."],
+        wrongHints: [null, "'Already' is een signaalwoord — bij welke tijd hoort dat?", "'Did finish' is alleen voor nadruk; en let op het signaalwoord.", "Geen werkwoordvorm."],
         uitlegPad: {
           stappen: [{ titel: "Gevolg nu = perfect", tekst: "I have finished my homework. Can I go now? Gevolg in heden → perfect." }],
           woorden: [{ woord: "gevolg", uitleg: "actie heeft effect nu" }],
