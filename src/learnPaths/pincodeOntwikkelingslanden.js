@@ -604,7 +604,7 @@ const steps = [
         },
       },
       {
-        q: "Welk **keurmerk** gaat over koffie/cacao?",
+        q: "Welk **keurmerk** gaat over eerlijke handel in koffie/cacao?",
         options: ["Max Havelaar / Fairtrade / UTZ", "EU-bio", "MSC", "Energy Star"],
         answer: 0,
         wrongHints: [null, "EU-bio = biologisch.", "MSC = vis.", "Niet voedsel."],
